@@ -56,13 +56,9 @@ ru:
   okay: Хорошо
   or: или
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Добавить учителя:'
       placeholder: Код раздела (ABCDEF)
-      instructions: Введите код, выданный учителем. Это 6-буквенный код вида «ABCDEF».
-      instructions_short: Введите ваши 6 букв кода класса
-    submit: Добавить учителя
   add_hint_form:
     placeholder: Введите подсказку здесь
     submit: Добавить подсказку

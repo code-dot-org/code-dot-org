@@ -27,10 +27,6 @@ ur:
   next_page: اگلا صفحہ
   cancel: "منسوخ کریں"
   or: "یا"
-  add_teacher_form:
-    code:
-      label: 'ٹیچر شامل کریں:'
-    submit: 'استاد شامل کریں'
   add_hint_form:
     placeholder: 'براے مہربانی اپنا اشارہ یہاں enter کریں'
     submit: 'اشارہ شامل کریں'

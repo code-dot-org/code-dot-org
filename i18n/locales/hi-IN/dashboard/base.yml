@@ -46,13 +46,9 @@ hi:
   okay: "ठीक है"
   or: "या"
   heading_x_of_y: "%{heading}(पेज %{x} के लिए %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'शिक्षक जोड़ें:'
       placeholder: "अनुभाग कोड (ABCDEF)"
-      instructions: "कृपया आपके अध्यापक द्वारा आपके साथ साझा किया कोड दर्ज करें। यह \"ABCDEF” जैसा 6 अक्षर का कोड है।"
-      instructions_short: "अपने 6 पत्र अनुभाग कोड दर्ज करें"
-    submit: 'शिक्षक जोड़ें'
   add_hint_form:
     placeholder: 'कृपया अपने सुझाव यहाँ दर्ज करें'
     submit: 'जोड़ने के संकेत'

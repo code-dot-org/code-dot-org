@@ -129,6 +129,13 @@ sk-SK:
           **Riešenie:**
 
           <xml><block type="when_run" deletable="false" movable="false"><next><block type="controls_for_counter" inline="true"><mutation counter="counter"></mutation><value name="FROM"><block type="math_number"><title name="NUM">1</title></block></value><value name="TO"><block type="math_number"><title name="NUM">8</title></block></value><value name="BY"><block type="math_number"><title name="NUM">1</title></block></value><statement name="DO"><block type="controls_repeat_ext" inline="true"><value name="TIMES"><block type="variables_get"><title name="VAR">counter</title></block></value><statement name="DO"><block type="procedures_callnoreturn" inline="true"><mutation name="draw"><arg name="binary"></arg></mutation><value name="ARG0"><block type="text"><title name="TEXT">1</title></block></value></block></statement><next><block type="controls_repeat_ext" inline="true"><value name="TIMES"><block type="math_arithmetic" inline="true"><title name="OP">MINUS</title><value name="A"><block type="math_number"><title name="NUM">16</title></block></value><value name="B"><block type="math_arithmetic" inline="true"><title name="OP">MULTIPLY</title><value name="A"><block type="variables_get"><title name="VAR">counter</title></block></value><value name="B"><block type="math_number"><title name="NUM">2</title></block></value></block></value></block></value><statement name="DO"><block type="procedures_callnoreturn" inline="true"><mutation name="draw"><arg name="binary"></arg></mutation><value name="ARG0"><block type="text"><title name="TEXT">0</title></block></value></block></statement><next><block type="controls_repeat_ext" inline="true"><value name="TIMES"><block type="variables_get"><title name="VAR">counter</title></block></value><statement name="DO"><block type="procedures_callnoreturn" inline="true"><mutation name="draw"><arg name="binary"></arg></mutation><value name="ARG0"><block type="text"><title name="TEXT">1</title></block></value></block></statement></block></next></block></next></block></statement><next><block type="controls_for_counter" inline="true"><mutation counter="counter"></mutation><value name="FROM"><block type="math_number"><title name="NUM">8</title></block></value><value name="TO"><block type="math_number"><title name="NUM">1</title></block></value><value name="BY"><block type="math_number"><title name="NUM">1</title></block></value><statement name="DO"><block type="controls_repeat_ext" inline="true"><value name="TIMES"><block type="variables_get"><title name="VAR">counter</title></block></value><statement name="DO"><block type="procedures_callnoreturn" inline="true"><mutation name="draw"><arg name="binary"></arg></mutation><value name="ARG0"><block type="text"><title name="TEXT">1</title></block></value></block></statement><next><block type="controls_repeat_ext" inline="true"><value name="TIMES"><block type="math_arithmetic" inline="true"><title name="OP">MINUS</title><value name="A"><block type="math_number"><title name="NUM">16</title></block></value><value name="B"><block type="math_arithmetic" inline="true"><title name="OP">MULTIPLY</title><value name="A"><block type="variables_get"><title name="VAR">counter</title></block></value><value name="B"><block type="math_number"><title name="NUM">2</title></block></value></block></value></block></value><statement name="DO"><block type="procedures_callnoreturn" inline="true"><mutation name="draw"><arg name="binary"></arg></mutation><value name="ARG0"><block type="text"><title name="TEXT">0</title></block></value></block></statement><next><block type="controls_repeat_ext" inline="true"><value name="TIMES"><block type="variables_get"><title name="VAR">counter</title></block></value><statement name="DO"><block type="procedures_callnoreturn" inline="true"><mutation name="draw"><arg name="binary"></arg></mutation><value name="ARG0"><block type="text"><title name="TEXT">1</title></block></value></block></statement></block></next></block></next></block></statement></block></next></block></next></block></xml>
+      Course 4 Artist For Loops 4:
+        Course_4_Artist_For_Loops_4_a: |-
+          **Aké je najmenšíe čislo, ktoré potrebuješ?\
+          Aké je najväčšie číslo?\
+          Aký veľký je prírastok v každom kroku?**
+
+          Toto sú otázky, ktoré potrebuješ zodpovedať, aby si vyplnil prázdne miesta v cykle `for`.
       Course 4 Artist For Loops inspire:
         Course_4_Artist_For_Loops_inspire_d: |-
           **Riešenie:**
@@ -9343,24 +9350,225 @@ sk-SK:
           Vieš nakresliť niečo takéto?
 
           ![](https://images.code.org/efee6df2a8840c89fa535bef72e9e45f-image-1530131926453.png)
+      courseF_artist_for2:
+        courseF_artist_for2_a: |-
+          Použi `počítadlo` pre dĺžku tvojich trojuholníkov vo vnútri tvojho cyklu `opakuj`.
+
+          <xml><block type="draw_move" inline="true">
+                <title name="DIR">moveForward</title>
+                <value name="VALUE">
+                  <block type="variables_get">
+                    <title name="VAR">counter</title>
+                  </block>
+                </value>
+              </block>
+              </xml>
+        courseF_artist_for2_b: Nezabudni pripočítavať 10 v tvojom cykle.
+        courseF_artist_for2_c: |-
+          Toto je vzor, ktorého sa bude držať umelec:
+
+          ![](<https://images.code.org/a2569b7732cf02a12263607c9e355d19-image-1503676269436.3_hint 2.gif>)
+      courseF_artist_for2_2018:
+        courseF_artist_for2_a: |-
+          Použi `počítadlo` pre dĺžku tvojich trojuholníkov vo vnútri tvojho cyklu `opakuj`.
+
+          <xml><block type="draw_move" inline="true">
+                <title name="DIR">moveForward</title>
+                <value name="VALUE">
+                  <block type="variables_get">
+                    <title name="VAR">counter</title>
+                  </block>
+                </value>
+              </block>
+              </xml>
+        courseF_artist_for2_b: Nezabudni pripočítavať 10 v tvojom cykle.
+        courseF_artist_for2_c: |-
+          Toto je vzor, ktorého sa bude držať umelec:
+
+          ![](<https://images.code.org/a2569b7732cf02a12263607c9e355d19-image-1503676269436.3_hint 2.gif>)
+      courseF_artist_for2_2019:
+        courseF_artist_for2_a: |-
+          Použi `počítadlo` pre dĺžku tvojich trojuholníkov vo vnútri tvojho cyklu `opakuj`.
+
+          <xml><block type="draw_move" inline="true">
+                <title name="DIR">moveForward</title>
+                <value name="VALUE">
+                  <block type="variables_get">
+                    <title name="VAR">counter</title>
+                  </block>
+                </value>
+              </block>
+              </xml>
+        courseF_artist_for2_b: Nezabudni pripočítavať 10 v tvojom cykle.
+        courseF_artist_for2_c: |-
+          Toto je vzor, ktorého sa bude držať umelec:
+
+          ![](<https://images.code.org/a2569b7732cf02a12263607c9e355d19-image-1503676269436.3_hint 2.gif>)
       courseF_artist_for3:
+        courseF_artist_for3_a: |-
+          Aby cyklus `for` riadil tvoj pohyb, tak sa uisti, že používaš `počítadlo` ako tvoju vzdialenosť v bloku `posuň sa dopredu`.
+
+          <xml>
+          <block type="draw_move" inline="true">
+                <title name="DIR">moveForward</title>
+                <value name="VALUE">
+                  <block type="variables_get">
+                    <title name="VAR">counter</title>
+                  </block>
+                </value>
+              </block>
+          </xml>
         courseF_artist_for3_b: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
           kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú úlohu.
       courseF_artist_for3_2018:
+        courseF_artist_for3_a: |-
+          Aby cyklus `for` riadil tvoj pohyb, tak sa uisti, že používaš `počítadlo` ako tvoju vzdialenosť v bloku `posuň sa dopredu`.
+
+          <xml>
+          <block type="draw_move" inline="true">
+                <title name="DIR">moveForward</title>
+                <value name="VALUE">
+                  <block type="variables_get">
+                    <title name="VAR">counter</title>
+                  </block>
+                </value>
+              </block>
+          </xml>
         courseF_artist_for3_b: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
           kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú úlohu.
       courseF_artist_for3_2019:
+        courseF_artist_for3_a: |-
+          Aby cyklus `for` riadil tvoj pohyb, tak sa uisti, že používaš `počítadlo` ako tvoju vzdialenosť v bloku `posuň sa dopredu`.
+
+          <xml>
+          <block type="draw_move" inline="true">
+                <title name="DIR">moveForward</title>
+                <value name="VALUE">
+                  <block type="variables_get">
+                    <title name="VAR">counter</title>
+                  </block>
+                </value>
+              </block>
+          </xml>
         courseF_artist_for3_b: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
           kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú úlohu.
       courseF_artist_for4:
+        courseF_artist_for4_a: |-
+          **Aké je najmenšíe čislo, ktoré potrebuješ?\
+          Aké je najväčšie číslo?\
+          Aký veľký je prírastok v každom kroku?**
+
+          Toto sú otázky, ktoré potrebuješ zodpovedať, aby si vyplnil prázdne miesta v cykle `for`.
+        courseF_artist_for4_b: Tvoj kód bude veľmi podobný tomu, čo si napísal v predošlej
+          úlohe, ale tentokrát nezabudni nakresliť štvorec!
         courseF_artist_for4_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
           kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú úlohu.
       courseF_artist_for4_2018:
+        courseF_artist_for4_a: |-
+          **Aké je najmenšíe čislo, ktoré potrebuješ?\
+          Aké je najväčšie číslo?\
+          Aký veľký je prírastok v každom kroku?**
+
+          Toto sú otázky, ktoré potrebuješ zodpovedať, aby si vyplnil prázdne miesta v cykle `for`.
+        courseF_artist_for4_b: Tvoj kód bude veľmi podobný tomu, čo si napísal v predošlej
+          úlohe, ale tentokrát nezabudni nakresliť štvorec!
         courseF_artist_for4_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
           kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú úlohu.
       courseF_artist_for4_2019:
+        courseF_artist_for4_a: |-
+          **Aké je najmenšíe čislo, ktoré potrebuješ?\
+          Aké je najväčšie číslo?\
+          Aký veľký je prírastok v každom kroku?**
+
+          Toto sú otázky, ktoré potrebuješ zodpovedať, aby si vyplnil prázdne miesta v cykle `for`.
+        courseF_artist_for4_b: Tvoj kód bude veľmi podobný tomu, čo si napísal v predošlej
+          úlohe, ale tentokrát nezabudni nakresliť štvorec!
         courseF_artist_for4_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
           kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú úlohu.
+      courseF_artist_for5:
+        courseF_artist_for5_a: Nepotrebuješ cyklus `opakuj` vo vnútri, keď kreslíš
+          túto špirálu!
+        courseF_artist_for5_b: Tvoj cyklus `for`, pohyb aj otočenia môžu ostať presne
+          také, aké sú.
+      courseF_artist_for5_2018:
+        courseF_artist_for5_a: Nepotrebuješ cyklus `opakuj` vo vnútri, keď kreslíš
+          túto špirálu!
+        courseF_artist_for5_b: Tvoj cyklus `for`, pohyb aj otočenia môžu ostať presne
+          také, aké sú.
+      courseF_artist_for5_2019:
+        courseF_artist_for5_a: Nepotrebuješ cyklus `opakuj` vo vnútri, keď kreslíš
+          túto špirálu!
+        courseF_artist_for5_b: Tvoj cyklus `for`, pohyb aj otočenia môžu ostať presne
+          také, aké sú.
+      courseF_artist_for6:
+        courseF_artist_for6_a: Tvoj cyklus `for` bude počítať od 15 do 300 po 15.
+        courseF_artist_for6_b: Vlož bloky `posuň sa dopredu` a `otoč sa` do tohto
+          cyklu `for`.
+        courseF_artist_for6_c: Všetko, čo musíš zmeniť, je počet stupňov v bloku `otoč
+          sa`.
+      courseF_artist_for6_2018:
+        courseF_artist_for6_a: Tvoj cyklus `for` bude počítať od 15 do 300 po 15.
+        courseF_artist_for6_b: Vlož bloky `posuň sa dopredu` a `otoč sa` do tohto
+          cyklu `for`.
+        courseF_artist_for6_c: Všetko, čo musíš zmeniť, je počet stupňov v bloku `otoč
+          sa`.
+      courseF_artist_for6_2019:
+        courseF_artist_for6_a: Tvoj cyklus `for` bude počítať od 15 do 300 po 15.
+        courseF_artist_for6_b: Vlož bloky `posuň sa dopredu` a `otoč sa` do tohto
+          cyklu `for`.
+        courseF_artist_for6_c: Všetko, čo musíš zmeniť, je počet stupňov v bloku `otoč
+          sa`.
+      courseF_artist_for7:
+        courseF_artist_for7_a: Pero v tejto úlohe je užšie. Potrebuješ ho nastaviť
+          na `1` predtým než začneš.
+        courseF_artist_for7_b: Všimni si, že táto špirála sa toči doprava namiesto
+          doľava!
+        courseF_artist_for7_c: Cyklus `for` v tejto úlohe ide od 15 do 300 po 2.
+        courseF_artist_for7_d: Tento obrázok je spravený otáčaním o 89 stupňov.
+      courseF_artist_for7_2018:
+        courseF_artist_for7_a: Pero v tejto úlohe je užšie. Potrebuješ ho nastaviť
+          na `1` predtým než začneš.
+        courseF_artist_for7_b: Všimni si, že táto špirála sa toči doprava namiesto
+          doľava!
+        courseF_artist_for7_c: Cyklus `for` v tejto úlohe ide od 15 do 300 po 2.
+        courseF_artist_for7_d: Tento obrázok je spravený otáčaním o 89 stupňov.
+      courseF_artist_for7_2019:
+        courseF_artist_for7_a: Pero v tejto úlohe je užšie. Potrebuješ ho nastaviť
+          na `1` predtým než začneš.
+        courseF_artist_for7_b: Všimni si, že táto špirála sa toči doprava namiesto
+          doľava!
+        courseF_artist_for7_c: Cyklus `for` v tejto úlohe ide od 15 do 300 po 2.
+        courseF_artist_for7_d: Tento obrázok je spravený otáčaním o 89 stupňov.
+      courseF_artist_for8:
+        courseF_artist_for8_a: Všetko ostatné nechaj rovnaké v tvojom kóde, iba uhol
+          otočenia sa musí zmeniť.
+        courseF_artist_for8_b: Ak chceš, tak si môžeš vybrať inú farbu pre tvoju špirálu!
+      courseF_artist_for8_2018:
+        courseF_artist_for8_a: Všetko ostatné nechaj rovnaké v tvojom kóde, iba uhol
+          otočenia sa musí zmeniť.
+        courseF_artist_for8_b: Ak chceš, tak si môžeš vybrať inú farbu pre tvoju špirálu!
+      courseF_artist_for8_2019:
+        courseF_artist_for8_a: Všetko ostatné nechaj rovnaké v tvojom kóde, iba uhol
+          otočenia sa musí zmeniť.
+        courseF_artist_for8_b: Ak chceš, tak si môžeš vybrať inú farbu pre tvoju špirálu!
+      courseF_artist_for9:
+        courseF_artist_for9_a: Ak vložíš blok `nastav alfa` do vnútra tvojho cyklu
+          `for` a použiješ premennú `počítadlo` na jeho zmenu, tak môžeš vytvoriť
+          takýto dizajn.
+        courseF_artist_for9_b: Blok `nastav alfa` mení nepriehľadnosť farby. Čim menšia
+          hodnota, tým je farba priehľadnejšia.
+      courseF_artist_for9_2018:
+        courseF_artist_for9_a: Ak vložíš blok `nastav alfa` do vnútra tvojho cyklu
+          `for` a použiješ premennú `počítadlo` na jeho zmenu, tak môžeš vytvoriť
+          takýto dizajn.
+        courseF_artist_for9_b: Blok `nastav alfa` mení nepriehľadnosť farby. Čim menšia
+          hodnota, tým je farba priehľadnejšia.
+      courseF_artist_for9_2019:
+        courseF_artist_for9_a: Ak vložíš blok `nastav alfa` do vnútra tvojho cyklu
+          `for` a použiješ premennú `počítadlo` na jeho zmenu, tak môžeš vytvoriť
+          takýto dizajn.
+        courseF_artist_for9_b: Blok `nastav alfa` mení nepriehľadnosť farby. Čim menšia
+          hodnota, tým je farba priehľadnejšia.
       courseF_artist_for_challenge1:
         courseF_artist_for_challenge1_d: |-
           **Riešenie:**

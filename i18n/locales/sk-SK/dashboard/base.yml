@@ -46,13 +46,9 @@ sk:
   okay: "Dobre"
   or: "alebo"
   heading_x_of_y: "%{heading} (strana %{x} z %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Pridať učiteľa:'
       placeholder: "Kód sekcie (ABCDEF)"
-      instructions: "Zadaj prosím kód, ktorý si dostal od tvojho učiteľa. Je to 6 písmenový kód, niečo ako \"ABCDEF\"."
-      instructions_short: "Zadaj 6-miestný kód triedy"
-    submit: 'Pridať učiteľa'
   add_hint_form:
     placeholder: 'Prosím zadaj sem svoj tip'
     submit: 'Pridať tip'

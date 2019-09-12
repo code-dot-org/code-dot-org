@@ -702,6 +702,25 @@ ja-JP:
         <xml><block type="controls_repeat_simplified_dropdown" block-text="repeat"><title name="TIMES" config="2-6">5</title></block></xml> ループを つかって、５かい せんを かいてみよう！
 
         ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
+      courseA_artist_loops5: "## 7かい せんを ひきます。まっすぐな せんに なるよ。"
+      courseA_artist_loops5_2018: "## 7かい せんを ひきます。まっすぐな せんに なるよ。"
+      courseA_artist_loops5_2019: "## 7かい せんを ひきます。まっすぐな せんに なるよ。"
+      courseA_artist_loops6: |-
+        ## 小さな山をかいてみよう。
+
+        ![expandable](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
+      courseA_artist_loops6_2018: |-
+        ## 小さな山をかいてみよう。
+
+        ![expandable](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
+      courseA_artist_loops6_2019: |-
+        ## 小さな山をかいてみよう。
+
+        ![expandable](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
+      courseA_artist_loops7: <xml><block type="controls_repeat_simplified_dropdown"><title
+        name="TIMES" config="3-10">???</title></block></xml> をつかって なみをかいてみよう。
+      courseA_artist_loops7_2018: <xml><block type="controls_repeat_simplified_dropdown"><title
+        name="TIMES" config="3-10">???</title></block></xml> をつかって なみをかいてみよう。
       courseA_artist_loops8: |-
         ## ボートまで はしごが ひつようです。
 
