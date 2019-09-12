@@ -341,4 +341,14 @@ class Section < ActiveRecord::Base
   def unused_random_code
     CodeGeneration.random_unique_code length: 6, model: Section
   end
+
+  # Drops unicode characters not supported by utf8mb3 strings (most commonly emoji)
+  # from the section name.
+  # We make a best-effort to make the name usable without the removed characters.
+  # We can remove this once our database has utf8mb4 support everywhere.
+  def strip_emoji_from_name
+    self.name = name&.gsub(/[\u{10000}-\u{10FFFF}]/, '')&.strip
+    self.name = I18n.t('sections.default_name', default: 'Untitled Section') unless name.present?
+  end
+  before_validation :strip_emoji_from_name
 end
