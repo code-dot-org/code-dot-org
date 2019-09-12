@@ -2,21 +2,20 @@
 %div{ style: "color: white; text-align: center; padding-top: 30px; background: url(#{asset_path('dashboard_footer-cropped.png')}); background-size: cover; min-height: 340px;" }
   %h1{ style: 'color: white; margin-bottom: 24px;' }
     Code.org thanks our donors
-  %p{ style: 'color: white; margin-bottom: 0px;' }
-    Our vision is that every student in every school should have the opportunity to learn computer science.
-  %p{ style: 'color: white; margin-top: 0px; margin-bottom: 22px;' }
-    The impact of our work is amplified and made possible with help from our amazing partners.
-  %h3{ style: 'margin-bottom: 4px;' }
-    - if current_user.teacher?
-      %strong
+  %p{ style: 'color: white; margin-bottom: 22px; max-width: 670px; display: inline-block ' }
+    Our vision is that every student in every school should have the opportunity to learn computer science. The impact of our work is amplified and made possible with help from our amazing partners.
+  %h3{ style: 'margin-bottom: 20px;' }
+    %strong
+      - if current_user.teacher?
         Your classroom's free use of Code.org is made possible by:
-    - else
-      Your free education on Code.org is made possible by:
+      - else
+        Your free education on Code.org is made possible by:
   - Dir.glob("app/assets/images/donor_logos/#{current_user.donor_school.name}/*").sort.each do |logo|
-    %div{ style: "max-width: 288px; max-height: 64px; display: inline-block; margin-right: 50px" }
+    %div{ style: "max-width: 235px; max-height: 64px; display: inline-block; margin-left: 20px; margin-right: 20px" }
       = image_tag "donor_logos/#{current_user.donor_school.name}/#{logo.split('/').last}"
   - if current_user.donor_school.name == "Amazon"
-    %p{ style: 'margin-top: 8px; margin-bottom: 36px' }
+    %p{ style: 'margin-top: 20px; margin-bottom: 36px' }
       Amazon is offering free resources for Code.org classrooms.
       %a{ href: CDO.code_org_url('amazon-future-engineer'), style: 'color: #ffb81d'}
-        Learn more
+        %strong
+          Learn more
