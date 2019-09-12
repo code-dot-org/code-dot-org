@@ -83,37 +83,6 @@ class User < ActiveRecord::Base
   include UserPermissionGrantee
   include PartialRegistration
   include Rails.application.routes.url_helpers
-  # races: array of strings, the races that a student has selected.
-  # Allowed values for race are:
-  #   white: "White"
-  #   black: "Black or African American"
-  #   hispanic: "Hispanic or Latino"
-  #   asian: "Asian"
-  #   hawaiian: "Native Hawaiian or other Pacific Islander"
-  #   american_indian: "American Indian/Alaska Native"
-  #   other: "Other"
-  #   opt_out: "Prefer not to say" (but selected this value and hit "Submit")
-  #
-  # Depending on the user's actions, the following values may also be applied:
-  #   closed_dialog: This is a special value indicating that the user closed the
-  #     dialog rather than selecting a race.
-  #   nonsense: This is a special value indicating that the user chose
-  #     (strictly) more than five races.
-  DISPLAY_RACES = %w(
-    white
-    black
-    hispanic
-    asian
-    hawaiian
-    american_indian
-    other
-    opt_out
-  ).freeze
-
-  VALID_RACES = DISPLAY_RACES + %w(
-    closed_dialog
-    nonsense
-  ).freeze
 
   # Notes:
   #   data_transfer_agreement_source: Indicates the source of the data transfer
@@ -408,15 +377,6 @@ class User < ActiveRecord::Base
     find_or_create_teacher(params, invited_by_user, UserPermission::FACILITATOR)
   end
 
-  GENDER_OPTIONS = [
-    [nil, ''],
-    ['gender.male', 'm'],
-    ['gender.female', 'f'],
-    ['gender.non_binary', 'n'],
-    ['gender.not_listed', 'o'],
-    ['gender.none', '-'],
-  ].freeze
-
   DATA_TRANSFER_AGREEMENT_SOURCE_TYPES = [
     ACCOUNT_SIGN_UP = 'ACCOUNT_SIGN_UP'.freeze,
     ACCEPT_DATA_TRANSFER_DIALOG = 'ACCEPT_DATA_TRANSFER_DIALOG'.freeze
@@ -543,40 +503,12 @@ class User < ActiveRecord::Base
     self.hashed_email = User.hash_email(email)
   end
 
-  # @return [Boolean, nil] Whether the the list of races stored in the `races` column represents an
-  # under-represented minority.
-  #   - true: Yes, a URM user.
-  #   - false: No, not a URM user.
-  #   - nil: Don't know, may or may not be a URM user.
-  def urm_from_races
-    return nil unless races
-
-    races_as_list = races.split ','
-    return nil if races_as_list.empty?
-    return nil if (races_as_list & ['opt_out', 'nonsense', 'closed_dialog']).any?
-    return true if (races_as_list & ['black', 'hispanic', 'hawaiian', 'american_indian']).any?
-    false
-  end
-
   def sanitize_race_data_set_urm
-    return true unless races_changed?
+    return unless races_changed?
 
-    if races
-      races_as_list = races.split ','
-      if races_as_list.include? 'closed_dialog'
-        self.races = 'closed_dialog'
-      elsif races_as_list.length > 5
-        self.races = 'nonsense'
-      else
-        races_as_list.each do |race|
-          self.races = 'nonsense' unless VALID_RACES.include? race
-        end
-      end
-    end
-
-    self.urm = urm_from_races
-
-    true
+    self.races = Policies::Races.sanitized(races).join(',')
+    self.races = nil if races.empty?
+    self.urm = Policies::Races.any_urm?(races)
   end
 
   def fix_by_user_type
@@ -722,22 +654,6 @@ class User < ActiveRecord::Base
     email_and_hashed_email_must_be_unique # Always check email uniqueness
   end
 
-  def self.normalize_gender(v)
-    return nil if v.blank?
-    case v.downcase
-    when 'f', 'female'
-      'f'
-    when 'm', 'male'
-      'm'
-    when 'o', 'notlisted'
-      'o'
-    when 'n', 'nonbinary', 'non-binary'
-      'n'
-    else
-      nil
-    end
-  end
-
   def self.name_from_omniauth(raw_name)
     return raw_name if raw_name.blank? || raw_name.is_a?(String) # some services just give us a string
     # clever returns a hash instead of a string for name
@@ -798,7 +714,7 @@ class User < ActiveRecord::Base
       user.birthday = nil
       user.age = user_age
     end
-    user.gender = normalize_gender auth.info.gender
+    user.gender = Policies::Gender.normalize auth.info.gender
   end
 
   def oauth?

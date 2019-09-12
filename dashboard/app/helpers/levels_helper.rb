@@ -651,7 +651,7 @@ module LevelsHelper
         :iframe,
         '',
         {
-          src: url_for(level_id: level.id, controller: :levels, action: :embed_level).strip,
+          src: url_for(id: level.id, controller: :levels, action: :embed_level).strip,
           width: (width ? width.strip : '100%'),
           scrolling: 'no',
           seamless: 'seamless',

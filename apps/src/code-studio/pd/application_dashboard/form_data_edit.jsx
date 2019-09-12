@@ -128,22 +128,26 @@ export default class FormDataEdit extends React.Component {
         </ButtonToolbar>
 
         {(this.state.parseError || this.state.saveErrors) && (
-          <Panel
-            style={styles.error}
-            header={<div style={styles.error}>Error</div>}
-          >
-            {this.state.parseError}
+          <Panel style={styles.error}>
+            <Panel.Heading>
+              <Panel.Title>
+                <div style={styles.error}>Error</div>
+              </Panel.Title>
+            </Panel.Heading>
+            <Panel.Body>
+              {this.state.parseError}
 
-            {this.state.saveErrors && (
-              <div>
-                Missing or invalid fields:
-                <ul>
-                  {this.state.saveErrors.map(e => (
-                    <li key={e}>{e}</li>
-                  ))}
-                </ul>
-              </div>
-            )}
+              {this.state.saveErrors && (
+                <div>
+                  Missing or invalid fields:
+                  <ul>
+                    {this.state.saveErrors.map(e => (
+                      <li key={e}>{e}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </Panel.Body>
           </Panel>
         )}
 

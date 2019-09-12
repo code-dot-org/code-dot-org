@@ -8,6 +8,7 @@ import wrappedSortable from '../tables/wrapped_sortable';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import Immutable from 'immutable';
 import {orderBy, compact} from 'lodash';
+import {getVisibleSections} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import Button from '../Button';
 import BaseDialog from '../BaseDialog';
 import DialogFooter from '../teacherDashboard/DialogFooter';
@@ -107,7 +108,7 @@ class MoveStudents extends Component {
     }),
 
     // redux provided
-    sections: PropTypes.objectOf(
+    sections: PropTypes.arrayOf(
       PropTypes.shape({
         name: PropTypes.string.isRequired,
         id: PropTypes.number.isRequired,
@@ -469,7 +470,7 @@ export const UnconnectedMoveStudents = MoveStudents;
 
 export default connect(
   state => ({
-    sections: state.teacherSections.sections,
+    sections: getVisibleSections(state),
     currentSectionId: state.sectionData.section.id
   }),
   dispatch => ({

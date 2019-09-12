@@ -339,7 +339,7 @@
   map_legend_title: 'Legend'
   map_legend_hoc_events: 'Hour of Code Event'
   map_legend_cs_tech_jam: 'Special Event'
-  map_warning: "The Hour of Code map only shows the first 200,000 registered events. All registered events with a valid address can be viewed on the <a href='%{events_url}'>events page.</a>"
+  map_warning: "A full list of the events can be viewed on the <a href='%{events_url}'>events page.</a>"
 
   meta_tag_og_title: 'Hour of Code: Join the Movement'
   meta_tag_og_description: 'The Hour of Code is a global movement reaching tens of millions of students of all ages in 180+ countries and over 45 languages.'
