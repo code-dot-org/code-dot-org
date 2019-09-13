@@ -29,11 +29,11 @@ module Pd::SurveyPipeline
     # Create single-workshop survey summary report to send to client.
     #
     # @param data [Hash] a hash contains pieces of information from previous steps in the pipeline
-    # @option data [Array<Hash>] :summaries an array of summary results.
-    # @option data [Hash] :parsed_questions question data get from DailySurveyParser.
-    # @option data [Hash] :parsed_submissions submission data get from DailySurveyParser.
-    # @option data [User] :current_user user making survey report request.
-    # @option data [Array<String>] :errors non-fatal errors from previous steps.
+    # @option data [Array<Hash>] :summaries survey result summaries
+    # @option data [Hash] :parsed_questions questions parsed from Pd::SurveyQuestion
+    # @option data [Hash] :parsed_submissions submission parsed from Pd::Workshop(Facilitator)DailySurvey
+    # @option data [User] :current_user user requesting survey report
+    # @option data [Array<String>] :errors non-fatal errors from previous steps
     #
     # @return [Hash] a hash report contains 4 keys.
     #   :course_name [String]
