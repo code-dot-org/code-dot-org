@@ -857,10 +857,10 @@
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/@code-dot-org/artist/-/artist-0.2.1.tgz#fcfe7ea5cfb3f19ddb6b912e70e922ba4b7ef0b1"
 
-"@code-dot-org/blockly@3.5.1":
-  version "3.5.1"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-3.5.1.tgz#480d4b2d7c83a148f206d6269cea06dcc3c62f79"
-  integrity sha512-RHpm5wIOaaaNvQOAqrpLNnIyct8jGQ+GLXdpZUUbogcPgxnuDyFiZrBraqnj8tpygfjMVal/Xo93TJIhgW9pwA==
+"@code-dot-org/blockly@3.5.2":
+  version "3.5.2"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-3.5.2.tgz#cd66c0cb4d3a82829851f979440ad1e6f5e1db3f"
+  integrity sha512-gt96yIML+safB53pevqPWqFMgFy7ong+z/IBL/GkN8Y2L4+sU1/cyVeyuUGhelrEk8Rchi4yG7NtQWJ2aTApQw==
 
 "@code-dot-org/bramble@0.1.26":
   version "0.1.26"
