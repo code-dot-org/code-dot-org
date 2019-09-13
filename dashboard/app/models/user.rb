@@ -816,11 +816,11 @@ class User < ActiveRecord::Base
     end
   end
 
-  def google_oauth_email_matches?
+  def has_google_oauth_matching_primary_email?
     if migrated?
-      authentication_options.any?(&:google_oauth?) && authentication_options.find(&:google_oauth?).email == email
+      authentication_options.any? {|ao| ao.google_oauth? && ao.email == email}
     else
-      OAUTH_PROVIDERS.include?(&:google_oauth) == email
+      provider == 'google_oauth2'
     end
   end
 

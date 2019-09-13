@@ -22,10 +22,13 @@ class ZendeskSessionController < ApplicationController
 
   def allow_zendesk_signin?(user)
     if user.age && user.under_13?
-      @error = I18n.t('zendesk_too_young_message', support_url: "support.code.org", markdown: true)
+      @error = I18n.t('zendesk_too_young_message_md', support_url: "support.code.org", markdown: true)
       return false
     end
-    if user.email && Mail::Address.new(user.email).domain == "code.org" && !user.google_oauth_email_matches?
+    # Prevent a vulnerability where a user can sign up with a code.org email and then see tickets that
+    # that employee has been CC'ed on (or has responded to). Effectively, this is requiring email
+    # verification for Code.org employees accessing Zendesk.
+    if user.email && Mail::Address.new(user.email).domain == "code.org" && !user.has_google_oauth_matching_primary_email?
       @error = I18n.t('zendesk_unverified_codeorg_account_message')
       return false
     end
