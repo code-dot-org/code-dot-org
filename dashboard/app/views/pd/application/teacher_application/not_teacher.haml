@@ -2,10 +2,10 @@
   = stylesheet_link_tag 'css/pd', media: 'all'
 
 %p
-  != I18n.t('pd.not_teacher.body', user_settings: '/users/edit')
+  != I18n.t('pd.not_teacher.body_markdown', user_settings: '/users/edit', markdown: true)
 
 %p
-  != I18n.t('pd.not_teacher.more', pl_overview: CDO.code_org_url('/educate/professional-learning'))
+  != I18n.t('pd.not_teacher.more_markdown', pl_overview: CDO.code_org_url('/educate/professional-learning'), markdown: true)
 
 - ga_link = "/pd/application/teacher/not_teacher"
 - ga_link += "?nominated=true" if params[:nominated]
