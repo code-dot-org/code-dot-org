@@ -51,6 +51,7 @@ class Applab < Blockly
     makerlab_enabled
     helper_libraries
     widget_mode
+    starter_assets
   )
 
   # List of possible skins, the first is used as a default.
@@ -135,5 +136,25 @@ class Applab < Blockly
 
   def self.palette
     SharedConstants::APPLAB_BLOCKS
+  end
+
+  # Add a starter asset to the level and save it in properties.
+  # Starter assets are stored as an object, where the key is the
+  # friendly filename and the value is the UUID filename stored in S3:
+  # {
+  #   # friendly_name => uuid_name
+  #   "welcome.png" => "123-abc-456.png"
+  # }
+  def add_starter_asset!(friendly_name, uuid_name)
+    self.starter_assets ||= {}
+    self.starter_assets[friendly_name] = uuid_name
+    save!
+  end
+
+  # Remove a starter asset by its key (friendly_name) from the level's properties.
+  def remove_starter_asset!(friendly_name)
+    return true unless starter_assets
+    starter_assets.delete(friendly_name)
+    save!
   end
 end

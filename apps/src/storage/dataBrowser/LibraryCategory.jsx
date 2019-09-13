@@ -67,6 +67,7 @@ class LibraryCategory extends React.Component {
                 key={dataset.name}
                 name={dataset.name}
                 description={dataset.description}
+                current={dataset.current}
               />
             ))}
           </div>

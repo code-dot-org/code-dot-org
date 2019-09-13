@@ -35,8 +35,8 @@
           = link_to image_tag(@script.banner_image), path, class: 'uitest-script-next-banner'
 
       - if @script.beta?
-        %p.lightgreytext
-          != t('landing.prerelease_hoc2014')
+        .betacontainer
+          != t('landing.prerelease_tutorial', markdown: true)
 
     #stats
       .user-stats-block
@@ -51,7 +51,7 @@
         %br/
         %br/
 
-  - if current_user && current_user.permission?(UserPermission::LEVELBUILDER)
+  - if can? :edit, @script
     -# Show all the levels, their names, and instructions in the extra links box.
     = render layout: 'shared/extra_links' do
       %strong= @script.name

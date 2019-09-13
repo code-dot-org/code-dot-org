@@ -843,13 +843,6 @@ function setupReduxSubscribers(store) {
   };
 
   if (store.getState().pageConstants.hasDataMode) {
-    if (experiments.isEnabled(experiments.APPLAB_DATASETS)) {
-      subscribeToTable(
-        getSharedDatabase().child('counters/tables'),
-        tableType.SHARED
-      );
-    }
-
     subscribeToTable(
       getProjectDatabase().child('counters/tables'),
       tableType.PROJECT
