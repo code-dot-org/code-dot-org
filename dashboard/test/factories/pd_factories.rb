@@ -78,60 +78,6 @@ FactoryGirl.define do
     end
   end
 
-  factory :pd_teacher_application, class: 'Pd::TeacherApplication' do
-    association :user, factory: :teacher, strategy: :create
-    transient do
-      application_hash {build :pd_teacher_application_hash, user: user}
-    end
-    application {application_hash.to_json}
-    primary_email {application_hash['primaryEmail']}
-    secondary_email {application_hash['secondaryEmail']}
-  end
-
-  # The raw attributes as returned by the teacher application form, and saved in Pd::TeacherApplication.application.
-  factory :pd_teacher_application_hash, class: 'Hash' do
-    transient do
-      user nil
-      association :school, factory: :public_school, strategy: :build
-      association :school_district, strategy: :build
-      course 'csd'
-    end
-
-    initialize_with do
-      {
-        school: school.id,
-        'school-district' => school_district.id,
-        firstName: 'Rubeus',
-        lastName: 'Hagrid',
-        primaryEmail: user ? user.email : 'rubeus@hogwarts.co.uk',
-        secondaryEmail: 'rubeus+also@hogwarts.co.uk',
-        principalPrefix: 'Mrs.',
-        principalFirstName: 'Minerva',
-        principalLastName: 'McGonagall',
-        principalEmail: 'minerva@hogwarts.co.uk',
-        selectedCourse: course,
-        phoneNumber: '555-555-5555',
-        gradesAtSchool: [10],
-        genderIdentity: 'Male',
-        grades2016: [7, 8],
-        subjects2016: ['Math', 'Care of Magical Creatures'],
-        grades2017: [10, 11],
-        subjects2017: ['Computer Science', 'Care of Magical Creatures'],
-        committedToSummer: 'Yes',
-        ableToAttendAssignedSummerWorkshop: 'Yes',
-        allStudentsShouldLearn: '4',
-        allStudentsCanLearn: '4',
-        newApproaches: '4',
-        allAboutContent: '4',
-        allAboutProgramming: '4',
-        csCreativity: '4',
-        currentCsOpportunities: ['lunch clubs'],
-        whyCsIsImportant: 'robots',
-        whatTeachingSteps: 'learn and practice'
-      }.stringify_keys
-    end
-  end
-
   factory :pd_payment_term, class: 'Pd::PaymentTerm' do
     start_date {Date.current}
     fixed_payment 50
