@@ -1350,7 +1350,13 @@ a.download-video {
     #heading {
       width: 700px;
     }
-    .betatext {
+
+    /**
+     * betatext can be used to style a span directly, or betacontainer can be
+     * used on a node containing markdown to apply the beta styling to all
+     * **strong** nodes in the markdown
+     */
+    .betatext, .betacontainer strong {
       background: $white;
       color: $cyan;
       padding: 2px 4px;
