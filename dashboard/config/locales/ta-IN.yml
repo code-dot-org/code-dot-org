@@ -37,8 +37,6 @@ ta:
   next_page: அடுத்த பக்கம்
   cancel: ரத்து செய்
   or: அல்லது
-  add_teacher_form:
-    submit: ஆசிரியரை சேர்
   add_hint_form:
     placeholder: உங்கள் குறிப்பை இங்கே உள்ளிடவும்
     submit: உதவிக்குறிப்பு சேர்

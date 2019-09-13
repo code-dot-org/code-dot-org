@@ -5648,3 +5648,33 @@ ka:
           stages:
             new stage:
               name: ახალი დონე
+        csd4-pilot:
+          stages:
+            What is a Computer?:
+              name: რა არის კომპიუტერი?
+            Input and Output:
+              name: შეყვანილი და მიღებული ინფორმაცია
+            Processing:
+              name: დამუშავება
+            Project - Propose an App:
+              name: პროექტი - შემოგვთავაზეთ აპლიკაცია
+        csp2-pilot:
+          stages:
+            new stage:
+              name: ახალი დონე
+        peru-2019:
+          stages:
+            new stage:
+              name: ახალი დონე
+            Introduction:
+              name: შესავალი
+            Debugging in Collector:
+              name: გამართვა შემგროვებელში
+            'Loops: My Loopy Robotic Friends':
+              name: 'ციკლები: ჩემი ციკლური რობოტისებრი მეგობრები'
+            Loops in Artist:
+              name: ციკლები მხატვარში
+            Nested Loops:
+              name: ჩასმული ციკლები
+            Events in Star Wars:
+              name: მოვლენები ვარსკვლავურ ომებში

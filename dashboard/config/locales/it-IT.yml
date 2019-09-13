@@ -45,6 +45,7 @@ it:
           <strong>%{email}</strong>.
         error:
           future: non può essere in futuro
+  beta: versione provvisoria
   hello: Ciao a tutti
   welcome_back: Bentornato, %{name}
   your_professional_learning_plan: Your Professional Learning Plan
@@ -58,14 +59,9 @@ it:
   okay: Ok!
   or: o
   heading_x_of_y: "%{heading} (pagina %{x} su %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Aggiungi un insegnante:'
       placeholder: Codice Classe (ABCDEF)
-      instructions: Inserisci il codice condiviso con te dal tuo insegnante. È un
-        codice di 6 lettere come "ABCDEF".
-      instructions_short: Inserisci il codice di 6 lettere della tua classe
-    submit: Aggiungi insegnante
   add_hint_form:
     placeholder: Scrivi qui il tuo suggerimento
     submit: Aggiungi un suggerimento
@@ -1078,7 +1074,7 @@ it:
     practice: Pratiche d'insegnante
     peer_review: Valutazioni dei parigrado
     ramp_up: Introduzione
-    end_of_course_project: Progetto di Fine Corso
+    end_of_course_project: Progetto di fine corso
     main_course: Corso principale
     extra_course_content: Contenuti supplementari
     csf_e_1: Introduzione al Corso E (facoltativo - per chi non ha svolto i corsi

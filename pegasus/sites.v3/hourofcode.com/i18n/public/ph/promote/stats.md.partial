@@ -1,13 +1,12 @@
 ---
-title: <%= hoc_s(:title_stats).inspect %>
+title: Blurbs and useful stats
 layout: wide
 nav: promote_nav
 ---
 
-
 <a id="blurb"></a>
 
-<%= view :signup_button %>
+{{ signup_button }}
 
 # Blurbs and useful stats
 
@@ -41,7 +40,7 @@ Ang teknolohiya ay binabago ang bawat industriya sa planeta. Sa 2015, 7 milyon a
 
 #### Tungkol sa Code.org
 
-Code.org ay isang 501c3 na pampubliko na hindi pwedeng pagkakitaan na inilaan upang palawakin ng partisipasyon sa computer science at pataasin ang partisipasyon ng mga kababaihan at mga kulang sa pagkatawan na mga estudyante na iba't ibang kulay. Its vision is that every student in every school has the opportunity to learn computer programming. Pagkatapos ilunsad noong 2013, ang Code.org nag-organize ng kampanya ng Hour of Code – kung saan ipinakilala sa higit 100 milyon na mga estudyante ang computer science hanggang ngayon – at nakisosyo sa 70 distritong pampublikong paaralan sa buong bansa upang palawakin ang mga programa ng computer science. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. Para sa karagdagang impormasyon, mangyaring bisitahin ang:[<%= resolve_url('code.org') %>](%= resolve_url('https://code.org') %).
+Code.org ay isang 501c3 na pampubliko na hindi pwedeng pagkakitaan na inilaan upang palawakin ng partisipasyon sa computer science at pataasin ang partisipasyon ng mga kababaihan at mga kulang sa pagkatawan na mga estudyante na iba't ibang kulay. Its vision is that every student in every school has the opportunity to learn computer programming. Pagkatapos ilunsad noong 2013, ang Code.org nag-organize ng kampanya ng Hour of Code – kung saan ipinakilala sa higit 100 milyon na mga estudyante ang computer science hanggang ngayon – at nakisosyo sa 70 distritong pampublikong paaralan sa buong bansa upang palawakin ang mga programa ng computer science. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ codeorg_link }}).
 
 ## Share these on social media and in emails
 
@@ -51,6 +50,6 @@ Code.org ay isang 501c3 na pampubliko na hindi pwedeng pagkakitaan na inilaan up
 
 ## Infographics
 
-<%= view :stats_carousel %>
+{{ stats_carousel }}
 
-<%= view :signup_button %>
+{{ signup_button }}

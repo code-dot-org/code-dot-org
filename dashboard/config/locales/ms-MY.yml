@@ -18,16 +18,15 @@ ms:
         edit_header: Edit Maklumat Akaun
         error:
           future: tidak boleh ada di masa depan
+  beta: beta
   hello: Helo dunia
   welcome_back: Selamat datang kembali, % {nama}
   submit: Hantar
   cancel: Batal
   or: atau
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Tambahkan guru:'
       placeholder: Kod Seksyen (ABCDEF)
-    submit: Tambah guru
   add_hint_form:
     placeholder: Sila masukkan petunjuk anda di sini
     submit: Tambah petunjuk

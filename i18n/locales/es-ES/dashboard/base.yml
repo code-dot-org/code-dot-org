@@ -32,6 +32,7 @@ es:
         finish_sign_up_subheader_provider: 'Llena la siguiente información para terminar de crear una cuenta de Code.org con <strong>%{provider}</strong> para <strong>%{email}</strong>.'
         error:
           future: No puede ser en el futuro
+  beta: "beta"
   hello: "Hola mundo"
   welcome_back: "Bienvenido, %{name}"
   your_professional_learning_plan: "Tu Plan de aprendizaje profesional"
@@ -45,13 +46,9 @@ es:
   okay: "De acuerdo"
   or: "o"
   heading_x_of_y: "%{heading} (página %{x} de %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Agregar un maestro:'
       placeholder: "Código de sección (ABCDEF)"
-      instructions: "Introduce el código que tu profesor ha compartido contigo. Es un código de seis letras como \"ABCDEF\"."
-      instructions_short: "Ingresa tu código de sección de 6 letras"
-    submit: 'Añadir maestro'
   add_hint_form:
     placeholder: 'Introduce aquí tu pista'
     submit: 'Agregar pista'

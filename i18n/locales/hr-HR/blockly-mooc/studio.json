@@ -878,7 +878,7 @@
   "failedChainCharactersTimeout": "Moraš uhvatiti 8 Mynocka. Možeš li stvoriti dva (ili više) Mynocka svaki put kada uhvatiš Tauntauna? Olakšaj si dodavanjem više Mynocka.",
   "failedChainCharactersTimeoutGotSome": "Čestitam, napisao si program za stvaranje Mynocka. Možeš ići na sljedeću razinu ili ponovno pokušati uhvatiti njih 8.",
   "failedMultiplyCharactersTimeout": "Moraš uhvatiti 20 Miš Droida. Vodi računa o tome da dodaš dva ili više Miš Droida svaki put kad jednog uhvatiš.",
-  "failedMultiplyCharactersTimeoutBlockly": "Trebaš uhvatiti 20 Miš Droida. Upotrijebi naredbu \"dodaj Miš Droida\" unutar događaja \"kad uhvatiš Miš Droida\" kako bi dodao\/la dva ili više Miš Droida svaki put kad jednog uhvatiš.",
+  "failedMultiplyCharactersTimeoutBlockly": "Trebaš uhvatiti 20 Miš Droida. Upotrijebi naredbu \"dodaj Miš Droida\" unutar događaja \"kad uhvatiš Miš Droida\" kako bi dodao/la dva ili više Miš Droida svaki put kad jednog uhvatiš.",
   "failedMultiplyCharactersTimeoutGotSome": "Čestitamo, programirao si stvaranje Miš Droida. Možeš prijeći na iduću igru ili pokušati ponovno doći do 20 Miš Droida. Olakšaj si tako što ćeš ih napraviti više droida odjednom! (Kada držiš pritisnutu tipku sa strelicom tada se krećeš brže.)",
   "failedChangeSettingTimeout": "Uhvati tri pobunjenička pilota za nastavak.",
   "failedChangeSettingSettings": "Igru trebaš napraviti na svoj način. Da bi riješio zadatak, trebaš promijeniti svog droida i podesiti mu brzinu."

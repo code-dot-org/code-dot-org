@@ -2178,10 +2178,6 @@ zh-CN:
         behavior hint: |-
           尝试编辑行为！
           \*哪个值控制每个精灵的速度？
-      behaviors 7:
-        behavior hint: |-
-          尝试编辑行为！
-          \*哪个值控制每个精灵的速度？
       comment_intro_maze_2018:
         courseC_maze_programming4_a: 当其他人试图读取您的代码时，注释也很有用。
         courseC_maze_programming4_b: 当你更改方向时，增加一条注释 - 如果转向另一条路，会发生什么情况？
@@ -6278,6 +6274,18 @@ zh-CN:
 
           **弹球游戏**- 使用箭头键让一个人物移动（使用`当上方向键按下时`，`当下方向键按下时`模块），然后当与屏幕上的其他人物相撞的时候播放随机声音。
       courseC_PlayLab_eventsFP_2019:
+        idea1: |-
+          _需要一点提示?_
+
+          **谁在那里?** 让随机的人物显示在图片中， 这样没人知道下一次会显示谁？
+
+          <img src= "https://images.code.org/dbd6ece9d0fb213039ea5dccb91fc425-image-1563577859889.gif" style="width: 200px">
+        idea2: |-
+          _需要一点提示?_
+
+          **一起去探险** - 修改背景，然后让所有的演员谈谈他们的冒险之地。
+
+          <img src= "https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif" style="width: 200px">
         idea3: |-
           _需要一个想法？_
 

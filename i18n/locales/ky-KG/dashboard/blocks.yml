@@ -198,11 +198,6 @@ ky:
           CONDITION:
             '"when"': качан
             '"while"': болуп турганда
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': туура
-            'false': жалган
       gamelab_getProp:
         options:
           PROPERTY:
@@ -269,13 +264,6 @@ ky:
             '"left"': солго
             '"right"': оңго
             '"space"': космос
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": өйдө
-            "'down'": ылдый
-            "'left'": солго
-            "'right'": оңго
       gamelab_whileKey:
         options:
           KEY:

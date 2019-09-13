@@ -582,11 +582,6 @@ et:
           CONDITION:
             '"when"': kui
             '"while"': tingimusel
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': tõene
-            'false': väär
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -657,7 +652,6 @@ et:
             '"x"': x asukoht
             '"y"': y asukoht
             '"direction"': liikumise suund
-            '"tint"': toon
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -687,13 +681,6 @@ et:
             '"w"': w
             '"s"': s
             '"d"': d
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": üles
-            "'down'": alla
-            "'left'": vasakule
-            "'right'": paremale
       gamelab_whileKey:
         options:
           KEY:

@@ -8639,7 +8639,55 @@ fil:
           stages:
             Deeper Learning Overview:
               name: Buod ng Mas Malalim na Pag-aaral
+        dlp19-csd-mod-w1:
+          stages:
+            Deeper Learning Overview:
+              name: Buod ng Mas Malalim na Pag-aaral
         dlp19-csd-mod-w2:
           stages:
             new stage:
               name: bagong yugto
+            Deeper Learning Overview:
+              name: Buod ng Mas Malalim na Pag-aaral
+        dlp19-csp-mod-w1:
+          stages:
+            Deeper Learning Overview:
+              name: Buod ng Mas Malalim na Pag-aaral
+        dlp19-csp-mod-w2:
+          stages:
+            Deeper Learning Overview:
+              name: Buod ng Mas Malalim na Pag-aaral
+        csd4-pilot:
+          stages:
+            What is a Computer?:
+              name: Ano ang isang Kompyuter?
+            Input and Output:
+              name: Input at Output
+            Processing:
+              name: Pagproseso
+            Project - Propose an App:
+              name: Proyekto - Pagmungkahi ng App
+        csp2-pilot:
+          stages:
+            new stage:
+              name: bagong yugto
+            Routers and Redundancy:
+              name: Mga Routers at Redundancy
+        peru-2019:
+          stages:
+            new stage:
+              name: bagong yugto
+            Introduction:
+              name: Panimula
+            Debugging in Collector:
+              name: Pagde-debug sa Kolektor
+            'Loops: My Loopy Robotic Friends':
+              name: 'Mga Loop: Ang aking Loopy na Robotik na mga Kaibigan'
+            Nested Loops:
+              name: Mga Loops na naka-nest
+            Nested Loops Project in Frozen:
+              name: Naka-Nest na Mga Loop na Proyekto sa Frozen
+            Events in Star Wars:
+              name: Mga Pangyayari sa Star Wars
+            Nested Loops in Frozen:
+              name: Naka-nest na mga Loop sa Frozen

@@ -722,6 +722,7 @@ ja-JP:
         courseA_artist_loops_challenge2_c: このもんだいをとくには、ループ内にたくさんのブロックがいるよ。
       course1_collector_loops_challenge1:
         courseA_collector_loops_challenge1_a: うまくうごかなかったところの「くりかえし」の数をかえてみよう！
+        courseA_collector_loops_challenge1_b: １かいだけ やるときは、くりかえしは いりません。
         courseA_collector_loops_challenge1_c: どうくつの右はしには6つのジェムがあるけど、5回うごいてあつめるだけでいいよね。
           なんでかわかるかな？
       course1_collector_loops_challenge2:
@@ -884,6 +885,112 @@ ja-JP:
           「前にすすむ」を使ってたどり、4回だけまがる、2つのクリア方法があります。「くりかえし」ブロックを使うと、もっとたくさんの方法があります。
 
           ![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)
+      courseA_artist_loops2:
+        courseA_artist_loops2_a: どうやって せんを かくか わからない？ <xml><block type="when_run"/></xml>
+          ブロックに ブロックをくっつけて、ためしてみてください。
+        courseA_artist_loops2_b: この <xml><block type="simple_move_right"/></xml> ブロックを
+          つかって、パズルをクリアします。
+      courseA_artist_loops2_2018:
+        courseA_artist_loops2_a: どうやって せんを かくか わからない？ <xml><block type="when_run"/></xml>
+          ブロックに ブロックをくっつけて、ためしてみてください。
+        courseA_artist_loops2_b: この <xml><block type="simple_move_right"/></xml> ブロックを
+          つかって、パズルをクリアします。
+      courseA_artist_loops2_2019:
+        courseA_artist_loops2_a: どうやって せんを かくか わからない？ <xml><block type="when_run"/></xml>
+          ブロックに ブロックをくっつけて、ためしてみてください。
+        courseA_artist_loops2_b: この <xml><block type="simple_move_right"/></xml> ブロックを
+          つかって、パズルをクリアします。
+      courseA_artist_loops3:
+        courseA_artist_loops3_a: ゆびで プログラムを ゆっくり なぞって、まちがいを さがしてください。
+        courseA_artist_loops3_b: |-
+          パズルをクリアするには、このブロックが ひつようかも。
+
+          ![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)
+      courseA_artist_loops3_2018:
+        courseA_artist_loops3_a: ゆびで プログラムを ゆっくり なぞって、まちがいを さがしてください。
+        courseA_artist_loops3_b: |-
+          パズルをクリアするには、このブロックが ひつようかも。
+
+          ![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)
+      courseA_artist_loops3_2019:
+        courseA_artist_loops3_a: ゆびで プログラムを ゆっくり なぞって、まちがいを さがしてください。
+        courseA_artist_loops3_b: |-
+          パズルをクリアするには、このブロックが ひつようかも。
+
+          ![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)
+      courseA_artist_loops4:
+        courseA_artist_loops4_a: ４かい いじょう もっと くりかえしたい ときは、ブロックの うえにある すうじを かえます。
+        courseA_artist_loops4_b: <xml><block type="simple_move_right"/></xml> ブロックを、
+          <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES"
+          config="2-6">5</title></block></xml> のなかに いれて ください。
+      courseA_artist_loops4_2018:
+        courseA_artist_loops4_a: ４かい いじょう もっと くりかえしたい ときは、ブロックの うえにある すうじを かえます。
+        courseA_artist_loops4_b: <xml><block type="simple_move_right"/></xml> ブロックを、
+          <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES"
+          config="2-6">5</title></block></xml> のなかに いれて ください。
+      courseA_artist_loops4_2019:
+        courseA_artist_loops4_a: ４かい いじょう もっと くりかえしたい ときは、ブロックの うえにある すうじを かえます。
+        courseA_artist_loops4_b: <xml><block type="simple_move_right"/></xml> ブロックを、
+          <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES"
+          config="2-6">5</title></block></xml> のなかに いれて ください。
+      courseA_artist_loops5:
+        courseA_artist_loops5_a: <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> をつかって このパズルをクリアしよう！
+        courseA_artist_loops5_b: ４かい いじょう もっと くりかえしたい ときは、ブロックの うえにある すうじを かえます。
+        courseA_artist_loops5_c: <xml><block type="simple_move_right"/></xml> を<xml><block
+          type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+          の中に入れてみよう。
+      courseA_artist_loops5_2018:
+        courseA_artist_loops5_a: <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> をつかって このパズルをクリアしよう！
+        courseA_artist_loops5_b: ４かい いじょう もっと くりかえしたい ときは、ブロックの うえにある すうじを かえます。
+        courseA_artist_loops5_c: <xml><block type="simple_move_right"/></xml> を<xml><block
+          type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+          の中に入れてみよう。
+      courseA_artist_loops5_2019:
+        courseA_artist_loops5_a: <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> をつかって このパズルをクリアしよう！
+        courseA_artist_loops5_b: ４かい いじょう もっと くりかえしたい ときは、ブロックの うえにある すうじを かえます。
+        courseA_artist_loops5_c: <xml><block type="simple_move_right"/></xml> を<xml><block
+          type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+          の中に入れてみよう。
+      courseA_artist_loops6:
+        courseA_artist_loops6_a: うまくいかないときは、どんなふうにかける ブロックをうごかして ためしてみよう。
+        courseA_artist_loops6_b: ちがう ほうこうに うごくブロック を ２つ つかってみよう。
+      courseA_artist_loops6_2018:
+        courseA_artist_loops6_a: うまくいかないときは、どんなふうにかける ブロックをうごかして ためしてみよう。
+        courseA_artist_loops6_b: ちがう ほうこうに うごくブロック を ２つ つかってみよう。
+      courseA_artist_loops6_2019:
+        courseA_artist_loops6_a: うまくいかないときは、どんなふうにかける ブロックをうごかして ためしてみよう。
+        courseA_artist_loops6_b: ちがう ほうこうに うごくブロック を ２つ つかってみよう。
+      courseA_artist_loops7:
+        courseA_artist_loops7_a: 一本一本せんをかいて くりかえしのパターンを見つけよう。
+        courseA_artist_loops7_b: １つなみをかいたら、それをくりかえして のこりの２つをかいてみよう
+        courseA_artist_loops7_c: <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> ブロックのなかにブロックを なにか いれてください。
+      courseA_artist_loops7_2018:
+        courseA_artist_loops7_a: 一本一本せんをかいて くりかえしのパターンを見つけよう。
+        courseA_artist_loops7_b: １つなみをかいたら、それをくりかえして のこりの２つをかいてみよう
+        courseA_artist_loops7_c: |-
+          <xml><block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="3-10">???</title>
+            </block></xml> ブロックのなかにブロックを なにか いれてください。
+      courseA_artist_loops7_2019:
+        courseA_artist_loops7_a: 一本一本せんをかいて くりかえしのパターンを見つけよう。
+        courseA_artist_loops7_b: １つなみをかいたら、それをくりかえして のこりの２つをかいてみよう
+        courseA_artist_loops7_c: |-
+          <xml><block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="3-10">???</title>
+            </block></xml> ブロックのなかにブロックを なにか いれてください。
+      courseA_artist_loops8:
+        courseA_artist_loops8_a: 実行して どうなるかみてみよう。
+        courseA_artist_loops8_b: コードをどのように かえればよいか 考えてみよう
+      courseA_artist_loops8_2018:
+        courseA_artist_loops8_a: 実行して どうなるかみてみよう。
+        courseA_artist_loops8_b: コードをどのように かえればよいか 考えてみよう
+      courseA_artist_loops8_2019:
+        courseA_artist_loops8_a: 実行して どうなるかみてみよう。
+        courseA_artist_loops8_b: コードをどのように かえればよいか 考えてみよう
       courseA_collector_loops1:
         courseA_collector_loops1_a: |-
           たからものの ところまで きたら、このブロックで たからものを ゲットします。
@@ -1002,11 +1109,92 @@ ja-JP:
         courseA_collector_loops8_b: もんだいを ３つに わけて、それぞれ くりかえしを つかって プログラムしよう。
         courseA_collector_loops8_c: すこし プログラムを かいたら、すぐに 実行（じっこう）してみよう。ちょっとづつ ためしながら
           プログラムを つくっていこう。
+      courseA_collector_loops9:
+        courseA_collector_loops9_a: 'どこでループするのがいいか わからないときは、いろいろ すこしずつ ためして、パターンをさがしてみてください。 '
+        courseA_collector_loops9_b: くりかえし のなかに、２つの <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> くりかえし をいれると、プログラムが
+          かんたんになるよ！
+      courseA_collector_loops9_2018:
+        courseA_collector_loops9_a: 'どこでループするのがいいか わからないときは、いろいろ すこしずつ ためして、パターンをさがしてみてください。 '
+        courseA_collector_loops9_b: くりかえし のなかに、２つの <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> くりかえし をいれると、プログラムが
+          かんたんになるよ！
+      courseA_collector_loops9_2019:
+        courseA_collector_loops9_a: 'どこでループするのがいいか わからないときは、いろいろ すこしずつ ためして、パターンをさがしてみてください。 '
+        courseA_collector_loops9_b: くりかえし のなかに、２つの <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> くりかえし をいれると、プログラムが
+          かんたんになるよ！
+      courseA_collector_loops_challenge1:
+        courseA_collector_loops_challenge1_a: うまく うごかなかったら、「くりかえし」の かずを かえてみて。
+        courseA_collector_loops_challenge1_b: １かいだけ やるときは、くりかえしは いりません。
+        courseA_collector_loops_challenge1_c: どうくつの みぎには、6つの ほうせきが あるけど、5かい 南に うごけばいいよね。なぜだか
+          わかるかな？
+        courseA_collector_loops_challenge1_d: |-
+          さいしょの プログラムは、さいごの 2つの ほうせきを とれません。さいごに このブロックを くわえて みて ください：
+
+          <xml><block type="maze_moveEast">
+                                  <next>
+                                    <block type="collector_collect_simplified">
+                                      <next>
+                                        <block type="maze_moveSouth">
+                                          <next>
+                                            <block type="collector_collect"/>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block></xml>
+      courseA_collector_loops_challenge1_2018:
+        courseA_collector_loops_challenge1_a: うまく うごかなかったら、「くりかえし」の かずを かえてみて。
+        courseA_collector_loops_challenge1_b: １かいだけ やるときは、くりかえしは いりません。
+        courseA_collector_loops_challenge1_c: どうくつの みぎには、6つの ほうせきが あるけど、5かい 南に うごけばいいよね。なぜだか
+          わかるかな？
+        courseA_collector_loops_challenge1_d: |-
+          さいしょの プログラムは、さいごの 2つの ほうせきを とれません。さいごに このブロックを くわえて みて ください：
+
+          <xml><block type="maze_moveEast">
+                                  <next>
+                                    <block type="collector_collect_simplified">
+                                      <next>
+                                        <block type="maze_moveSouth">
+                                          <next>
+                                            <block type="collector_collect"/>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block></xml>
+      courseA_collector_loops_challenge1_2019:
+        courseA_collector_loops_challenge1_a: うまく うごかなかったら、「くりかえし」の かずを かえてみて。
+        courseA_collector_loops_challenge1_b: １かいだけ やるときは、くりかえしは いりません。
+        courseA_collector_loops_challenge1_c: どうくつの みぎには、6つの ほうせきが あるけど、5かい 南に うごけばいいよね。なぜだか
+          わかるかな？
+        courseA_collector_loops_challenge1_d: |-
+          さいしょの プログラムは、さいごの 2つの ほうせきを とれません。さいごに このブロックを くわえて みて ください：
+
+          <xml><block type="maze_moveEast">
+                                  <next>
+                                    <block type="collector_collect_simplified">
+                                      <next>
+                                        <block type="maze_moveSouth">
+                                          <next>
+                                            <block type="collector_collect"/>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block></xml>
       courseA_collector_loops_challenge2kp:
+        courseA_collector_loops_challenge2kp_b: この みちを ためしてみて。
         courseA_collector_loops_challenge2kp_a: くりかえしを つかって パズルを クリア できるかな？
       courseA_collector_loops_challenge2kp_2018:
+        courseA_collector_loops_challenge2kp_b: この みちを ためしてみて。
         courseA_collector_loops_challenge2kp_a: くりかえしを つかって パズルを クリア できるかな？
       courseA_collector_loops_challenge2kp_2019:
+        courseA_collector_loops_challenge2kp_b: この みちを ためしてみて。
         courseA_collector_loops_challenge2kp_a: くりかえしを つかって パズルを クリア できるかな？
       courseA_collector_preLoops7:
         courseA_collector_loops2_b: |-
@@ -1122,6 +1310,18 @@ ja-JP:
         courseA_maze_seq_challenge2_a: なんこ いけば いいか、ゆびを つかって かぞえて みよう！
       courseA_maze_seq_challenge2_2019:
         courseA_maze_seq_challenge2_a: なんこ いけば いいか、ゆびを つかって かぞえて みよう！
+      courseB_artist_loops2:
+        courseB_artist_loops2_a: ４かい いじょう もっと くりかえしたい ときは、ブロックの うえにある すうじを かえます。
+      courseB_artist_loops2_2018:
+        courseB_artist_loops2_a: ４かい いじょう もっと くりかえしたい ときは、ブロックの うえにある すうじを かえます。
+      courseB_artist_loops2_2019:
+        courseB_artist_loops2_a: ４かい いじょう もっと くりかえしたい ときは、ブロックの うえにある すうじを かえます。
+      courseB_artist_loops9:
+        courseB_artist_loops9_c: 一本一本せんをかいて くりかえしのパターンを見つけよう。
+      courseB_artist_loops9_2018:
+        courseB_artist_loops9_c: 一本一本せんをかいて くりかえしのパターンを見つけよう。
+      courseB_artist_loops9_2019:
+        courseB_artist_loops9_c: 一本一本せんをかいて くりかえしのパターンを見つけよう。
       courseB_collector_loops2:
         courseB_collector_loops2_a: たからものを とるまえに うごいて ください。
       courseB_collector_loops2_2018:
@@ -1175,6 +1375,18 @@ ja-JP:
         courseC_maze_debugging3_b: どこが わるいか わからない？なんども プログラムを うごかして みてみよう。
       courseC_maze_debugging3_2019:
         courseC_maze_debugging3_b: どこが わるいか わからない？なんども プログラムを うごかして みてみよう。
+      courseC_maze_programming1:
+        courseC_maze_programming1_0: すべてのブロックがきちんとつながっているかをかくにんして、もういちど「実行」をクリックしてみよう。
+      courseC_maze_programming1_2018:
+        courseC_maze_programming1_0: すべてのブロックがきちんとつながっているかをかくにんして、もういちど「実行」をクリックしてみよう。
+      courseC_maze_programming1_2019:
+        courseC_maze_programming1_0: すべてのブロックがきちんとつながっているかをかくにんして、もういちど「実行」をクリックしてみよう。
+      courseC_maze_programming2:
+        courseC_maze_programming2_b: すべてのブロックがきちんとつながっているかをかくにんして、もういちど「実行」をクリックしてみよう。
+      courseC_maze_programming2_2018:
+        courseC_maze_programming2_b: すべてのブロックがきちんとつながっているかをかくにんして、もういちど「実行」をクリックしてみよう。
+      courseC_maze_programming2_2019:
+        courseC_maze_programming2_b: すべてのブロックがきちんとつながっているかをかくにんして、もういちど「実行」をクリックしてみよう。
       courseC_maze_programming6:
         courseC_maze_programming6_a: このパズルの解き方は二通りあるよ。
       courseC_maze_programming6_2018:

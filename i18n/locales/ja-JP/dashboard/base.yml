@@ -30,6 +30,7 @@ ja:
         finish_sign_up_header: 'アカウントの作成を完了します'
         error:
           future: 現在までの日付にする
+  beta: "ベータ版"
   hello: "Hello world"
   welcome_back: "Welcome Back, %{name}"
   your_professional_learning_plan: "プロフェッショナル学習計画"
@@ -43,13 +44,9 @@ ja:
   okay: "オッケー"
   or: "または"
   heading_x_of_y: "%{heading} (%{y} ページ中 %{x} ページ目)"
-  add_teacher_form:
+  join_section:
     code:
-      label: '先生を追加：'
       placeholder: "セクション ・ コード (ABCDEF)"
-      instructions: "先生によって与えられたコードを入力してください。\"ABCDEF\"のような 6 文字のコードです。"
-      instructions_short: "6 文字のセクションコードを入力してください"
-    submit: '先生を追加'
   add_hint_form:
     placeholder: 'ここにあなたのヒントを入力してください'
     submit: 'ヒントを追加する'

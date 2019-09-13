@@ -30,7 +30,7 @@ de:
   front_intro_default_2: 'Eine weltweite Bewegung in über 180 Ländern.'
   front_watch_video: 'Sieh dir das neue Video an'
   front_watch_regular_video: 'Video ansehen'
-  front_volunteers: 'Technische Volontäre gesucht'
+  front_volunteers: 'Technische Freiwillige gesucht'
   front_start_learning: 'Beginnen sie jetzt'
   gdpr_dialog_heading: 'Stimmst du zu, eine Website zu nutzen, die ihren Sitz in den USA hat?'
   gdpr_dialog_message: 'Daten aus deiner Nutzung dieser Site können in die USA geschickt werden und dort gespeichert und verarbeitet werden.'
@@ -271,7 +271,7 @@ de:
   signup_email_preference_privacy: '(Siehe unsere Datenschutzerklärung)'
   signup_email_preference_yes: 'Ja'
   signup_email_preference_no: 'Nein'
-  signup_email_preference_error: 'E-Mail Präferenz ist erforderlich'
+  signup_email_preference_error: 'E-Mail-Adresseinstellung ist erforderlich'
   signup_multiple_event_warning: "Sollten Sie mehrere Veranstaltungen anbieten, dann geben Sie bitte jeder einen eigenen Namen oder eine eigene E-Mail-Adresse. Wir können nur eine Veranstaltung pro Name und E-Mail zählen."
   signup_registration_deadline: "Die Anmeldung für die Hour of Code schliesst am 12. Dezember."
   signup_name_placeholder: 'Dein Name'
@@ -297,9 +297,9 @@ de:
   social_hoc2018_dance_party: "Hour of Code: Tanzparty"
   social_hoc2018_dance_what_create: "Mit Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara und 25 weiteren!"
   social_hoc2018_every_student: "Jeder Schüler hat ein Recht darauf seine Kreativität durch Informatik auszudrücken."
-  social_hoc2018_every_student_try_what_create: "Jeder Schüler hat ein Recht darauf seine Kreativität durch Informatik auszudrücken. Versuche diese Tutorials. Was wirst du erschaffen?"
+  social_hoc2018_every_student_try_what_create: "Jeder Schüler sollte die Möglichkeit haben, seine Kreativität in der Informatik auszudrücken. Versuche diese Tutorials. Was wirst du erschaffen?"
   social_hoc2018_hoc_coming_create: "Die Hour of Code kommt. Was wirst du erschaffen?"
-  social_hoc2018_hoc_here: "Die Hour of Code ist hier!"
+  social_hoc2018_hoc_here: "Die Hour of Code ist da!"
   social_hoc2018_join: "Die Hour of Code kommt"
   social_hoc2018_mc: "Minecraft is back for the Hour of Code, and you’re the hero! Write code to journey through Minecraft biomes."
   social_hoc2018_mc_creativity: "Use your creativity and problem solving skills to explore and build underwater worlds with code."
@@ -543,9 +543,9 @@ de:
   tutorial_tynkercq_name: "Candy Quest"
   tutorial_cmgame_name: "CodeMonkey's Game Builder"
   tutorial_codesters_name: "Codesters"
-  tutorial_qrm_name: "Zugängliche Programmierung (mit Screen-Reader-Unterstützung)"
+  tutorial_qrm_name: "Barrierefreie Programmierung (mit Screen-Reader-Unterstützung)"
   tutorial_texas-instruments_name: "10 Minuten Code"
-  tutorial_cajava_name: "Fahnen-Malen mit JavaScript"
+  tutorial_cajava_name: "Fahnen malen mit JavaScript"
   tutorial_codehs_name: "Lerne Programmieren mit Karel dem Hund"
   tutorial_hopemo_name: "Emoji zeichnen"
   tutorial_tynkercm_name: "Code Monsters"
@@ -746,7 +746,7 @@ de:
   tutorial_gpp_name: "Programmieren auf Millimeterpapier"
   tutorial_foosgame_name: "codeSpark Academy with the Foos - GameMaker"
   tutorial_solopython_name: "My First Python Code"
-  tutorial_kodableint_name: "Einführung in die Programmation"
+  tutorial_kodableint_name: "Einführung in Programmieren"
   tutorial_kodableadv_name: "Advanced Programming Concepts"
   tutorial_tynkertj_name: "Giftiger Dschungel"
   tutorial_wolframa_name: "Alter in Tagen"
@@ -1679,7 +1679,7 @@ de:
   tutorial_inf_longdescription: "Verwende das Spiel-Labor, um eine Geschichte oder ein Spiel mit Disney Infinity-Figuren zu kreieren."
   tutorial_tynkersol_longdescription: "Program an interactive model of our Solar System. This project comes with step-by-step instructions that guide you through creating a simulation with planets orbiting the Sun. Then add facts about each planet that pop up when clicked."
   tutorial_itchg_longdescription: "Name-IT has you create a game of recognition! \n\nThe ending project has students creating a game to name the States of Australia!\n\nYou'll first walk through an and follow directions to create a game to label the three phases of the water cycle. You'll make a fully functioning game, including scoring!\n\nFrom the coding side you'll learn about variables, conditionals, lists, concatenating strings and much, much more. These are coding techniques you'll be able to re-use in other projects as you progress on to build your new coding skills!\n\nYou can take the activity even further by adding your own image and labels (along with many other extra project options, the fun never ends). Headphones are recommended."
-  tutorial_como_longdescription: "In 200 Story-Modus- und Skill-Modus-Herausforderungen helfen die User dem Affen, Bananen durch Lernen und Schreiben von Code zu fangen. Coding Adventure Teil I lehrt Objekte, Schleifen, Variablen, Array-Indizierung, Funktionen und vieles mehr. In Teil II werden Boolesche Logik (if-else, UND, ODER und NICHT), Vergleiche, Funktionsrückgabewerte und Triggerereignisse mit der Maus und der Tastatur gelehrt."
+  tutorial_como_longdescription: "Hilf einem süßen Affen, in 30 lustigen Programmier-Herausforderungen Bananen zu fangen! Während du spielst, wirst du verschiedene Tiere treffen, die dich auf deinem Weg begleiten. Du wirst Code verwenden und über den Tellerrand schauen, um so viele Sterne wie möglich zu gewinnen. Viel Glück!"
   tutorial_processfound_longdescription: "What does it mean to write software to do the things that you often do with your hands, with paper, with pencil with paint? Could you use a computer to create drawings? To create animations? To create images?"
   tutorial_tynkerhomo_longdescription: "You'll follow step-by-step instructions to animate an interactive story with a lot of homophones in it! Each time a character says a word that is a homophone, ask the player which homophone is the correct word for that context. The player better know their homophones, or else the dialog won't make any sense!"
   tutorial_art_longdescription: "Zeichne coole Bilder und Designs mit dem Künstler!"

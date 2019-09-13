@@ -44,6 +44,7 @@ ro:
           a finaliza crearea unui cont Code.org cu <strong>%{provider}</strong> pentru<strong>%{email}</strong>.
         error:
           future: nu poate fi în viitor
+  beta: beta
   hello: Salutare lume
   welcome_back: Bine ai revenit, %{name}
   your_professional_learning_plan: Planul tău prifesional de învățare
@@ -57,14 +58,9 @@ ro:
   okay: Bine
   or: sau
   heading_x_of_y: "%{heading} (pagina%{x} din %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Adaugă un profesor:'
       placeholder: Secțiune Cod (ABCDEF)
-      instructions: Te rugăm să introduci codul atribuit ție de profesorul tău. Acesta
-        este un cod din 6 litere ca "ABCDEF".
-      instructions_short: Introdu codul clasei tale din 6 litere
-    submit: Adaugă profesor
   add_hint_form:
     placeholder: Te rugăm să introduci indiciul tău aici
     submit: Adaugă sugestie

@@ -44,6 +44,7 @@ pt-BR:
           para <strong>%{email}</strong>.
         error:
           future: não pode estar no futuro
+  beta: beta
   hello: Olá, mundo
   welcome_back: Bem-vindo de volta, %{name}
   your_professional_learning_plan: Seu plano de aprendizagem profissional
@@ -58,14 +59,9 @@ pt-BR:
   okay: Ok
   or: ou
   heading_x_of_y: "%{heading} (página %{x} de %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Adicionar professor:'
       placeholder: Código da seção (ABCDEF)
-      instructions: Insira o código que seu professor compartilhou com você. É um
-        código de 6 letras, como "ABCDEF".
-      instructions_short: Digite seu código de seção de 6 letras
-    submit: Adicionar professor
   add_hint_form:
     placeholder: Digite sua dica aqui
     submit: Adicionar dica

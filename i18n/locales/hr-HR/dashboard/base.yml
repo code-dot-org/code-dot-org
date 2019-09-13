@@ -21,6 +21,7 @@ hr:
         edit_header: 'Uredi podatke o računu'
         error:
           future: ne može biti u budućnosti
+  beta: "beta"
   hello: "Pozdrav svima"
   welcome_back: "Dobrodošao natrag, %{name}"
   submit: Pošalji
@@ -30,11 +31,9 @@ hr:
   cancel: "Odustani"
   okay: "U redu"
   or: "ili"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Dodajte učitelja:'
       placeholder: "Šifra odjeljenja (ABCDEF)"
-    submit: 'Dodaj učitelja'
   add_hint_form:
     placeholder: 'Molimo unesite vaš prijedlog'
     submit: 'Dodaj pomoć'

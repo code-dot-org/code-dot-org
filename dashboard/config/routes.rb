@@ -221,12 +221,14 @@ Dashboard::Application.routes.draw do
   resources :libraries
 
   resources :levels do
-    get 'get_rubric', to: 'levels#get_rubric'
-    get 'edit_blocks/:type', to: 'levels#edit_blocks', as: 'edit_blocks'
-    get 'embed_level', to: 'levels#embed_level', as: 'embed_level'
-    post 'update_blocks/:type', to: 'levels#update_blocks', as: 'update_blocks'
-    post 'update_properties'
-    post 'clone', to: 'levels#clone'
+    member do
+      get 'get_rubric'
+      get 'embed_level'
+      get 'edit_blocks/:type', to: 'levels#edit_blocks', as: 'edit_blocks'
+      post 'update_properties'
+      post 'update_blocks/:type', to: 'levels#update_blocks', as: 'update_blocks'
+      post 'clone'
+    end
   end
 
   post 'level_assets/upload', to: 'level_assets#upload'
@@ -392,6 +394,7 @@ Dashboard::Application.routes.draw do
           post :end
           post :reopen
           get  :summary
+          get  :potential_organizers
         end
         resources :enrollments, controller: 'workshop_enrollments', only: [:index, :destroy, :create]
 
@@ -613,6 +616,7 @@ Dashboard::Application.routes.draw do
 
       post 'users/:user_id/postpone_census_banner', to: 'users#postpone_census_banner'
       post 'users/:user_id/dismiss_census_banner', to: 'users#dismiss_census_banner'
+      post 'users/:user_id/dismiss_donor_teacher_banner', to: 'users#dismiss_donor_teacher_banner'
 
       get 'school-districts/:state', to: 'school_districts#index', defaults: {format: 'json'}
       get 'schools/:school_district_id/:school_type', to: 'schools#index', defaults: {format: 'json'}
@@ -649,6 +653,7 @@ Dashboard::Application.routes.draw do
   resources :feedback, controller: 'teacher_feedbacks'
 
   get '/dashboardapi/v1/users/:user_id/contact_details', to: 'api/v1/users#get_contact_details'
+  get '/dashboardapi/v1/users/:user_id/donor_teacher_banner_details', to: 'api/v1/users#get_donor_teacher_banner_details'
   post '/dashboardapi/v1/users/accept_data_transfer_agreement', to: 'api/v1/users#accept_data_transfer_agreement'
   get '/dashboardapi/v1/school-districts/:state', to: 'api/v1/school_districts#index', defaults: {format: 'json'}
   get '/dashboardapi/v1/schools/:school_district_id/:school_type', to: 'api/v1/schools#index', defaults: {format: 'json'}
