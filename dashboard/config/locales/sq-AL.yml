@@ -58,14 +58,9 @@ sq:
   okay: Në rregull
   or: ose
   heading_x_of_y: "%{heading} (faqja %{x} nga %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Shto një mësues:'
       placeholder: Kodi i Seksionit (ABCDEF)
-      instructions: Ju lutemi shtypni kodin e ndarë me ju nga mësuesi/ja juaj. Është
-        një kod 6-shkronjësh si për shembull "ABCDEF".
-      instructions_short: Fut kodin e seksionit me 6 shkronja
-    submit: Shto mësues
   add_hint_form:
     placeholder: Të lutem fut udhëzimin tënd këtu
     submit: Shto udhëzim

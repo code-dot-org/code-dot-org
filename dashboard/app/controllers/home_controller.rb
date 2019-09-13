@@ -104,6 +104,7 @@ class HomeController < ApplicationController
       @force_race_interstitial = params[:forceRaceInterstitial]
       @force_school_info_confirmation_dialog = params[:forceSchoolInfoConfirmationDialog]
       @force_school_info_interstitial = params[:forceSchoolInfoInterstitial]
+      @force_donor_teacher_banner = params[:forceDonorTeacherBanner]
       @sections = current_user.sections.map(&:summarize_without_students)
       @student_sections = current_user.sections_as_student.map(&:summarize_without_students)
 

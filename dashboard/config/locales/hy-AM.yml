@@ -34,13 +34,9 @@ hy:
   okay: Լավ
   or: կամ
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Ավելացնել ուսուցչին:'
       placeholder: Բաժին օրենսգրքի (abcdef)
-      instructions: Please enter the code shared with you by your teacher. Its a 6
-        letter code like ABCDEF.
-    submit: Ավելացնել ուսուցիչ
   add_hint_form:
     placeholder: Խնդրում ենք մուտքագրել Ձեր ակնարկ այստեղ
     submit: Ավելացնել ակնարկ

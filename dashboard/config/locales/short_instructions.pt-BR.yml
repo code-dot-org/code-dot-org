@@ -2054,12 +2054,26 @@ pt-BR:
         alguns bugs?"_
       courseA_collector_loops_challenge1_2019: _"Você pode me ajudar a identificar
         alguns bugs?"_
+      courseA_collector_loops_challenge2: 'Pegue todo o tesouro! '
       courseA_collector_loops_challenge2kp: Colete pelo menos **3** peças do tesouro
         para passar este nível.
       courseA_collector_loops_challenge2kp_2018: Colete pelo menos **3** peças do
         tesouro para passar este nível.
       courseA_collector_loops_challenge2kp_2019: Colete pelo menos **3** peças do
         tesouro para passar este nível.
+      courseA_collector_preLoops1: |-
+        Esta é Laurel, a Aventureira!
+
+        Pressione "Executar" para vê-la andar até o tesouro e pegá-lo.
+      courseA_collector_preLoops2: "Ótimo! Agora você pode adicionar código você mesmo!
+        \n\nEncaixe um bloco `pegar tesouro` na parte inferior do programa e clique
+        em \"Executar \"."
+      courseA_collector_preLoops3: Encaixe dois blocos `E -->` e um bloco `pegar tesouro`
+        na parte inferior do programa, depois clique em "Executar".
+      courseA_collector_preLoops4: Você consegue descobrir como resolver esse quebra-cabeças?
+      courseA_collector_preLoops5: Pegue 1 destas 2 gemas para resolver este quebra-cabeças.
+      courseA_collector_preLoops6: Pegue ambas as peças do tesouro para resolver este
+        quebra-cabeças.
       courseA_collector_preLoops7: Pegue todas as três pilhas para passar esse nível.
       courseA_harvester_loops1: Ajude a colheitadeira a pegar todo o milho!
       courseA_harvester_loops10: Ajude a colheitadeira a pegar todas as cinco espigas

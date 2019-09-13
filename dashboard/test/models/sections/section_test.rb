@@ -152,6 +152,16 @@ class SectionTest < ActiveSupport::TestCase
     assert_equal ['Name is required'], section.errors.full_messages
   end
 
+  test 'emoji is dropped from section name' do
+    section = create :section, name: "\u{1F600} Test Section A \u{1F600}"
+    assert_equal 'Test Section A', section.name
+  end
+
+  test 'section gets a default name if it is empty after emoji removal' do
+    section = create :section, name: "\u{1F600} \u{1F600} \u{1F600}"
+    assert_equal 'Untitled Section', section.name
+  end
+
   test 'user is required' do
     section = build :section, user: nil
     refute section.valid?

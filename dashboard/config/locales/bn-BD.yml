@@ -32,11 +32,9 @@ bn:
   cancel: বাতিল করুন
   okay: ঠিক আছে
   or: অথবা
-  add_teacher_form:
+  join_section:
     code:
-      label: 'শিক্ষক যুক্ত করুন:'
       placeholder: অংশের কোড (ABCDEF)
-    submit: শিক্ষক যুক্ত করুন
   add_hint_form:
     placeholder: আপনার সংকেত দিন
     submit: সংকেত যুক্ত করুন
