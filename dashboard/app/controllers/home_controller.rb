@@ -138,12 +138,12 @@ class HomeController < ApplicationController
       end
 
       if current_user.teacher?
-        donor_banner_name ||= params[:forceDonorTeacherBanner]
-        show_census_banner = !!(!donor_banner_name && current_user.show_census_teacher_banner?)
-
         unless current_user.donor_teacher_banner_dismissed
           donor_banner_name = current_user.donor_teacher_banner_name
         end
+
+        donor_banner_name ||= params[:forceDonorTeacherBanner]
+        show_census_banner = !!(!donor_banner_name && current_user.show_census_teacher_banner?)
 
         @homepage_data[:isTeacher] = true
         @homepage_data[:hocLaunch] = DCDO.get('hoc_launch', CDO.default_hoc_launch)
