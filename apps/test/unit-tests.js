@@ -6,7 +6,7 @@ import {
   throwOnConsoleWarningsEverywhere
 } from './util/throwOnConsole';
 import {clearTimeoutsBetweenTests} from './util/clearTimeoutsBetweenTests';
-import Adapter from 'enzyme-adapter-react-15.4';
+import Adapter from 'enzyme-adapter-react-15';
 import enzyme from 'enzyme';
 enzyme.configure({adapter: new Adapter()});
 
