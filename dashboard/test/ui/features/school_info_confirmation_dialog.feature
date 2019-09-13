@@ -27,9 +27,9 @@ Scenario: School Info Confirmation Dialog
   And element "#school-type" is visible
   And I select the "Public" option in dropdown "school-type"
   And I wait until element "#nces_school" is visible
-  Then I press keys "A Seattle Public School - Seattle, " for element "#nces_school"
-  Then I wait until element ".VirtualizedSelectOption:contains('A Seattle Public School - Seattle, WA 98122')" is visible
-  Then I press ".VirtualizedSelectOption:contains('A Seattle Public School - Seattle, WA 98122')" using jQuery
+  Then I press keys "Alakanuk School" for element "#nces_school"
+  Then I wait until element ".VirtualizedSelectOption:contains('Alakanuk School - Alakanuk, AK 99554')" is visible
+  Then I press ".VirtualizedSelectOption:contains('Alakanuk School - Alakanuk, AK 99554')" using jQuery
   Then I press "#save-button" using jQuery
 
   # One week later, the teacher does not see the prompt
