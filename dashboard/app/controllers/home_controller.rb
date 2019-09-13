@@ -60,7 +60,7 @@ class HomeController < ApplicationController
   # Signed in: render home page
   # Signed out: redirect to sign in
   def home
-    if current_user.donor_school
+    if current_user&.donor_school
       view_options(above_footer_content: 'home/donor_footer')
     end
     authenticate_user!

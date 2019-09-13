@@ -2186,7 +2186,9 @@ class User < ActiveRecord::Base
   end
 
   def donor_school
-    DonorSchool.where(nces_id: school_info.id).first
+    if school_info
+      DonorSchool.find_by(nces_id: school_info.id)
+    end
   end
 
   # Called before_destroy.
