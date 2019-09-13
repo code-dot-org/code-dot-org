@@ -12568,6 +12568,14 @@ react-style-proptype@^3.0.0:
   dependencies:
     prop-types "^15.5.4"
 
+react-test-renderer@~15.6:
+  version "15.6.2"
+  resolved "https://registry.yarnpkg.com/react-test-renderer/-/react-test-renderer-15.6.2.tgz#d0333434fc2c438092696ca770da5ed48037efa8"
+  integrity sha1-0DM0NPwsQ4CSaWyncNpe1IA376g=
+  dependencies:
+    fbjs "^0.8.9"
+    object-assign "^4.1.0"
+
 react-tether@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/react-tether/-/react-tether-1.0.4.tgz#a1f0973391ba4c3c2b5c38d5be16c42f0fd96759"
