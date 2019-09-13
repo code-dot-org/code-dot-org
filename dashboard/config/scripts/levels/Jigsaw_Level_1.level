@@ -1,16 +1,15 @@
 <Blockly>
   <config><![CDATA[{
-  "game_id": 26,
-  "created_at": "2014-09-20T02:48:43.000Z",
-  "level_num": "playlab_1",
+  "game_id": 27,
+  "created_at": "2014-09-20T02:48:46.000Z",
+  "level_num": "1",
   "properties": {
-    "skin": "studio",
-    "video_key": "playlab_intro",
+    "skin": "jigsaw",
     "preload_asset_list": null
   },
   "published": false,
   "level_concept_difficulty": {
-    "sequencing": 3
+    "sequencing": 1
   }
 }]]></config>
   <blocks/>
