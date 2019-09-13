@@ -58,14 +58,9 @@ nl:
   okay: Oké
   or: of
   heading_x_of_y: "%{heading} (pagina %{x} van %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Voeg een leraar toe:'
       placeholder: Sectiecode (ABCDEF)
-      instructions: Voer hier de code in die je van je leraar hebt gekregen. De code
-        bestaat uit 6 letters zoals "ABCDEF".
-      instructions_short: Voer je code van 6 letters van de sectie in
-    submit: voeg leraar toe
   add_hint_form:
     placeholder: Voer hier uw hint
     submit: Hint toevoegen

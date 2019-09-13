@@ -22,6 +22,7 @@ ReactDOM.render(
       projectTypes={projectTypes}
       sectionId={viewer.section_id}
       userId={viewer.user_id}
+      showStageExtrasWarning={viewer.show_stage_extras_warning}
     />
   </Provider>,
   document.querySelector('#stage-extras')

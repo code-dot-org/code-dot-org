@@ -46,13 +46,9 @@ vi:
   okay: "Đồng ý"
   or: "hoặc"
   heading_x_of_y: "%{heading} (trang %{x} của %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Thêm một giáo viên:'
       placeholder: "Phần mã (ABCDEF)"
-      instructions: "Vui lòng nhập mã được chia sẻ với bạn bởi giáo viên của bạn. Đó là mã 6 chữ như \"ABCDEF\"."
-      instructions_short: "Nhập mã 6 chữ cái của bạn"
-    submit: 'Thêm giáo viên'
   add_hint_form:
     placeholder: 'Vui lòng nhập gợi ý của bạn ở đây'
     submit: 'Thêm gợi ý'

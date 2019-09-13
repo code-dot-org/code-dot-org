@@ -26,11 +26,9 @@ mt:
   welcome_back: Merħba lura, %{name}
   unsubmit: Unsubmit
   or: jew
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Żid Għalliem:'
       placeholder: Sezzjoni kodiċi (ABCDEF)
-    submit: Żid għalliem
   add_hint_form:
     placeholder: Daħħal suġġeriment tiegħek hawn
     submit: Żid suġġeriment

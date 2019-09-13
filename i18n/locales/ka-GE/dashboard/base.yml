@@ -43,13 +43,9 @@ ka:
   okay: "კარგი"
   or: "ან"
   heading_x_of_y: "%{heading} (გვერდი %{x} %{y}-ის)"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'მასწავლებლის დამატება:'
       placeholder: "სექციის კოდი (ABCDEF)"
-      instructions: "გთხოვთ შეიყვანეთ კოდი, რომელიც მოგაწოდათ თქვენმა მასწავლებელმა. ის არის 6–ნიშნა და გამოიყურება ასე \"ABCDEF\"."
-      instructions_short: "შეიყვანეთ თქვენი 6-ასოიანი განყოფილების კოდი"
-    submit: 'მასწავლებლის დამატება'
   add_hint_form:
     placeholder: 'თუ შეიძლება, თქვენი მინიშნება შეიყვანეთ აქ'
     submit: 'მინიშნების დამატება'
