@@ -22,7 +22,7 @@ class Api::V1::UserSchoolInfosController < ApplicationController
       school_info_params[:country] = 'US'
     end
 
-    existing_school_info = current_user.last_complete_school_info
+    existing_school_info = Queries::UserSchoolInfo.by_user(current_user).last_complete.school_info
     existing_school_info&.assign_attributes school_info_params
     if existing_school_info.nil? || existing_school_info.changed?
       submitted_school_info =

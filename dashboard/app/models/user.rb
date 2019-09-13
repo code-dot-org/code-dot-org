@@ -287,19 +287,6 @@ class User < ActiveRecord::Base
     end
   end
 
-  # Most recently created user_school_info referring to a complete school_info entry
-  def last_complete_user_school_info
-    user_school_infos.
-      includes(:school_info).
-      select {|usi| usi.school_info.complete?}.
-      sort_by(&:created_at).
-      last
-  end
-
-  def last_complete_school_info
-    last_complete_user_school_info&.school_info
-  end
-
   belongs_to :invited_by, polymorphic: true
 
   validate :admins_must_be_teachers_without_followeds
