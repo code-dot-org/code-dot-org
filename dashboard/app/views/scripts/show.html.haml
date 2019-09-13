@@ -35,8 +35,8 @@
           = link_to image_tag(@script.banner_image), path, class: 'uitest-script-next-banner'
 
       - if @script.beta?
-        %p.lightgreytext
-          != t('landing.prerelease_hoc2014')
+        .betacontainer
+          != t('landing.prerelease_tutorial', markdown: true)
 
     #stats
       .user-stats-block
