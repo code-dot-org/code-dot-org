@@ -49,3 +49,8 @@ en:
           description_short: An introductory computer science course that empowers students to create authentic artifacts.
           description_student: Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
           description_teacher: Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
+        csd-pilot:
+          title: CSD Pilot Course
+          description_short: "(Pilot Version) An introductory computer science course that empowers students to create authentic artifacts."
+          description_student: Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
+          description_teacher: "(Pilot Version) Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun."
