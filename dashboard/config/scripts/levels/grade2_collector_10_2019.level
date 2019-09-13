@@ -38,7 +38,11 @@
     "preload_asset_list": null
   },
   "published": true,
-  "notes": "P9: Efficacy Repairing Puzzle"
+  "notes": "P9: Efficacy Repairing Puzzle",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>
