@@ -4,7 +4,6 @@ module ViewOptionsHelper
     :no_header,
     :no_footer,
     :small_footer,
-    :above_footer_content,
     :code_studio_logo,
     :has_i18n,
     :white_background,
