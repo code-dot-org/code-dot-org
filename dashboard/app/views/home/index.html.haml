@@ -3,6 +3,9 @@
   = tag 'meta', property: 'og:image', content: CDO.studio_url(CDO.shared_image_url('share/girl_cropped.jpg'), 'https:')
   = tag 'meta', property: 'og:description', content: t('share.description')
 
+- content_for :above_footer_content do
+  -if current_user&.donor_school
+    = render partial: 'home/donor_footer'
 
 -# Student modal
 - if RaceInterstitialHelper.show?(current_user) || @force_race_interstitial
