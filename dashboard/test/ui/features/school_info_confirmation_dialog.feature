@@ -17,8 +17,8 @@ Scenario: School Info Confirmation Dialog
   # The date of the teacher's account is updated to 7 days ago to simulate time travel
   # This enables the condition (see school_info_interstitial helper.rb) that checks
   # the age of the account to determine when to show the school info interstitial.
-  And I update user "Teacher_Chuba" created_at timestamp
-  # One week later, the teacher sees the prompt to complete the school info interstitial
+  And eight days pass for user "Teacher_Chuba"
+  # One week after account creation, the teacher sees the prompt to complete the school info interstitial
   Then I reload the page
   And I wait to see ".modal"
 
@@ -27,17 +27,17 @@ Scenario: School Info Confirmation Dialog
   And element "#school-type" is visible
   And I select the "Public" option in dropdown "school-type"
   And I wait until element "#nces_school" is visible
-  Then I press keys "Alakanuk School" for element "#nces_school"
+  # Then I press keys "Alakanuk School" for element "#nces_school"
   Then I wait until element ".VirtualizedSelectOption:contains('Alakanuk School - Alakanuk, AK 99554')" is visible
   Then I press ".VirtualizedSelectOption:contains('Alakanuk School - Alakanuk, AK 99554')" using jQuery
   Then I press "#save-button" using jQuery
 
   # One week later, the teacher does not see the prompt
-  And I update user "Teacher_Chuba" last_seen_school_info_interstitial
+  And eight days pass for user "Teacher_Chuba"
   Then I reload the page
   And element ".modal" is not visible
 
   # One year later, the teacher sees the school info confirmation dialog
-  And I update user "Teacher_Chuba" last_confirmation_date and last_seen_school_info_interstitial
+  And one year passes for user "Teacher_Chuba"
   Then I reload the page
   And element ".modal-body" is visible

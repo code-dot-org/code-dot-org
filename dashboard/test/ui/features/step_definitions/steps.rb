@@ -1712,24 +1712,22 @@ Then /^page text does (not )?contain "([^"]*)"$/ do |negation, text|
   expect(body_text.include?(text)).to eq(negation.nil?)
 end
 
-And(/^I update user "([^"]*)" created_at timestamp$/) do |name|
+def pass_time_for_user(name, amount_of_time)
   require_rails_env
   user = User.find_by_email_or_hashed_email(@users[name][:email])
-  user.created_at = 8.days.ago
+  user.created_at = amount_of_time
+  user.last_seen_school_info_interstitial = amount_of_time if user.last_seen_school_info_interstitial
   user.save!
+  user.user_school_infos.each do |info|
+    info.last_confirmation_date = amount_of_time
+    info.save!
+  end
 end
 
-And(/^I update user "([^"]*)" last_seen_school_info_interstitial$/) do |name|
-  require_rails_env
-  user = User.find_by_email_or_hashed_email(@users[name][:email])
-  user.last_seen_school_info_interstitial = 8.days.ago
-  user.save!
+And(/^eight days pass for user "([^"]*)"$/) do |name|
+  pass_time_for_user name, 8.days.ago
 end
 
-And(/^I update user "([^"]*)" last_confirmation_date and last_seen_school_info_interstitial$/) do |name|
-  require_rails_env
-  user = User.find_by_email_or_hashed_email(@users[name][:email])
-  user.last_seen_school_info_interstitial = 7.days.ago
-  user.save!
-  user.user_school_infos.last.update(last_confirmation_date: 1.year.ago)
+And(/^one year passes for user "([^"]*)"$/) do |name|
+  pass_time_for_user name, 1.year.ago
 end
