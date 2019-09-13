@@ -85,10 +85,6 @@ module Pd::SurveyPipeline
             }
           }
         },
-        # all_my_workshops: {},
-        # facilitators: {},
-        # facilitator_averages: {},
-        # facilitator_response_counts: {},
         errors: []
       }
 
@@ -155,10 +151,6 @@ module Pd::SurveyPipeline
             facilitator: {}
           }
         },
-        # all_my_workshops: {},
-        # facilitators: {},
-        # facilitator_averages: {},
-        # facilitator_response_counts: {},
         errors: []
       }
 
