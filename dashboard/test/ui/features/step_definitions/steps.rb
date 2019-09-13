@@ -1712,9 +1712,24 @@ Then /^page text does (not )?contain "([^"]*)"$/ do |negation, text|
   expect(body_text.include?(text)).to eq(negation.nil?)
 end
 
-And (/^I update user "([^"]*)" account creation date$/) do |name|
+And(/^I update user "([^"]*)" created_at timestamp$/) do |name|
   require_rails_env
   user = User.find_by_email_or_hashed_email(@users[name][:email])
-  user.created_at = 7.days.ago
+  user.created_at = 8.days.ago
   user.save!
+end
+
+And(/^I update user "([^"]*)" last_seen_school_info_interstitial$/) do |name|
+  require_rails_env
+  user = User.find_by_email_or_hashed_email(@users[name][:email])
+  user.last_seen_school_info_interstitial = 8.days.ago
+  user.save!
+end
+
+And(/^I update user "([^"]*)" last_confirmation_date and last_seen_school_info_interstitial$/) do |name|
+  require_rails_env
+  user = User.find_by_email_or_hashed_email(@users[name][:email])
+  user.last_seen_school_info_interstitial = 7.days.ago
+  user.save!
+  user.user_school_infos.last.update(last_confirmation_date: 1.year.ago)
 end
