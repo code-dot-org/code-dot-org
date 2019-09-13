@@ -1,0 +1,278 @@
+# Modified from https://s3.amazonaws.com/aurorabenchmark/labstack.yml
+AWSTemplateFormatVersion: 2010-09-09
+Description: 'Amazon Aurora Benchmark'
+Parameters:
+  Edition:
+    Description: 'The edition of Aurora MySQL to deploy'
+    Type: 'String'
+    AllowedValues:
+      - '5.6'
+      - '5.7'
+    Default: '5.6'
+  KeyName:
+    Description: 'The name of the EC2 key pair used to SSH to the bastion host'
+    Type: 'AWS::EC2::KeyPair::KeyName'
+  BastionAmi:
+    Description: 'The AMI used to create the bastion host'
+    Type: 'String'
+    Default: 'ami-0f873d4d3a8b11b74'
+  SourceDBClusterId:
+    Description: 'The identifier of the existing Aurora Cluster to clone into this load testing stack'
+    Type: 'String'
+    Default: 'production-aurora-cluster'
+  DBClusterParameterGroup:
+    Description: 'The physical id of the existing DB Cluster Parameter Group to configure on the load testing cluster.'
+    Type: 'String'
+    Default: 'data-production-auroraclusterdbparameters-1ro7z13zvf15w'
+  DBClusterParameterGroup:
+    Description: 'The physical id of the DB Cluster Parameter Group to configure on the load testing cluster.'
+    Type: 'String'
+    Default: 'data-production-auroraclusterdbparameters-1ro7z13zvf15w'
+  DBWriterInstanceParameterGroup:
+    Description: 'The physical id of the DB Instance Parameter Group to configure on the load testing writer instance.'
+    Type: 'String'
+    Default: 'data-production-aurorawriterdbparameters-co9yma5rv7vo'
+Conditions:
+  Is57: !Equals [ !Ref Edition, "5.7" ]
+Resources:
+  ## Create VPC
+  LabVpc:
+    Type: 'AWS::EC2::VPC'
+    Properties:
+      CidrBlock: 172.31.0.0/16
+      EnableDnsSupport: 'true'
+      EnableDnsHostnames: 'true'
+      InstanceTenancy: default
+      Tags:
+        - Key: Name
+          Value: !Join ['-', [!Ref 'AWS::StackName', Aurora Lab VPC]]
+  ## Create Internet Gateway
+  LabInternetGateway:
+    Type: 'AWS::EC2::InternetGateway'
+    Properties:
+      Tags:
+        - Key: Name
+          Value: !Join ['-', [!Ref 'AWS::StackName', InternetGateway]]
+  ## Attach Internet Gateway to VPC
+  LabAttachGateway:
+    Type: 'AWS::EC2::VPCGatewayAttachment'
+    Properties:
+      VpcId: !Ref LabVpc
+      InternetGatewayId: !Ref LabInternetGateway
+  ## Create Public Subnets
+  PublicSubnet01:
+    Type: 'AWS::EC2::Subnet'
+    Properties:
+      VpcId: !Ref LabVpc
+      MapPublicIpOnLaunch: 'true'
+      CidrBlock: 172.31.0.0/24
+      AvailabilityZone: !Sub ${AWS::Region}a
+      Tags:
+        - Key: Name
+          Value: !Join ['-', [!Ref 'AWS::StackName', Aurora Lab Subnet 1 - Public]]
+  ## Create Private Subnets
+  PrivateSubnet01:
+    Type: 'AWS::EC2::Subnet'
+    Properties:
+      VpcId: !Ref LabVpc
+      MapPublicIpOnLaunch: 'false'
+      CidrBlock: 172.31.24.0/24
+      AvailabilityZone: !Sub ${AWS::Region}a
+      Tags:
+        - Key: Name
+          Value: !Join ['-', [!Ref 'AWS::StackName', Aurora Lab Subnet 4 - Private]]
+  PrivateSubnet02:
+    Type: 'AWS::EC2::Subnet'
+    Properties:
+      VpcId: !Ref LabVpc
+      MapPublicIpOnLaunch: 'false'
+      CidrBlock: 172.31.32.0/24
+      AvailabilityZone: !Sub ${AWS::Region}b
+      Tags:
+        - Key: Name
+          Value: !Join ['-', [!Ref 'AWS::StackName', Aurora Lab Subnet 5 - Private]]
+  PrivateSubnet03:
+    Type: 'AWS::EC2::Subnet'
+    Properties:
+      VpcId: !Ref LabVpc
+      MapPublicIpOnLaunch: 'false'
+      CidrBlock: 172.31.40.0/24
+      AvailabilityZone: !Sub ${AWS::Region}c
+      Tags:
+        - Key: Name
+          Value: !Join ['-', [!Ref 'AWS::StackName', Aurora Lab Subnet 6 - Private]]
+  ## Create Public Route Table
+  AuroraLabPublicRouteTable:
+    Type: 'AWS::EC2::RouteTable'
+    Properties:
+      VpcId: !Ref LabVpc
+      Tags:
+        - Key: Name
+          Value: !Join ['-', [!Ref 'AWS::StackName', Aurora Lab Public Route Table]]
+  ## Define the public route
+  LabPublicRoute:
+    Type: 'AWS::EC2::Route'
+    Properties:
+      RouteTableId: !Ref AuroraLabPublicRouteTable
+      DestinationCidrBlock: 0.0.0.0/0
+      GatewayId: !Ref LabInternetGateway
+  ## Associate route tables with public subnets
+  PublicSubnet01RouteTableAssociation:
+    Type: 'AWS::EC2::SubnetRouteTableAssociation'
+    Properties:
+      SubnetId: !Ref PublicSubnet01
+      RouteTableId: !Ref AuroraLabPublicRouteTable
+  ## Create DB Subnet Group
+  AuroraDbSubnetGroup:
+    Type: 'AWS::RDS::DBSubnetGroup'
+    Properties:
+      DBSubnetGroupDescription: DMS DB Subnet Group
+      SubnetIds:
+        - !Ref PrivateSubnet01
+        - !Ref PrivateSubnet02
+        - !Ref PrivateSubnet03
+      Tags:
+        - Key: Name
+          Value: !Join
+            - '-'
+            - - !Ref 'AWS::StackName'
+              - AuroraDbSubnetGroup
+  ## Create SSH Security Group
+  SshSecurityGroup:
+    Type: 'AWS::EC2::SecurityGroup'
+    Properties:
+      VpcId: !Ref LabVpc
+      GroupName: !Join ['-', [!Ref 'AWS::StackName', SshSecurityGroup]]
+      GroupDescription: Aurora Lab SSH Security Group
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: '22'
+          ToPort: '22'
+          CidrIp: 0.0.0.0/0
+          Description: Allows SSH Access from anywhere
+  ## Create MySQL Security Group
+  MySqlSecurityGroup:
+    Type: 'AWS::EC2::SecurityGroup'
+    Properties:
+      VpcId: !Ref LabVpc
+      GroupName: !Join ['-', [!Ref 'AWS::StackName', MySqlSecurityGroup]]
+      GroupDescription: Aurora Lab MySQL Security Group
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: '3306'
+          ToPort: '3306'
+          SourceSecurityGroupId: !Ref SshSecurityGroup
+          Description: Allows MySQL Access from bastion host
+  ## Create IAM Role for EC2
+  RootRole:
+    Type: "AWS::IAM::Role"
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: "Allow"
+            Principal:
+              Service:
+                - "ec2.amazonaws.com"
+            Action:
+              - "sts:AssumeRole"
+      Path: "/"
+      PermissionsBoundary: !ImportValue IAM-DevPermissions
+      Policies:
+        - PolicyName: "root"
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: "Allow"
+                Action: "*"
+                Resource: "*"
+  RootInstanceProfile:
+    Type: "AWS::IAM::InstanceProfile"
+    Properties:
+      Path: "/"
+      Roles:
+        - Ref: "RootRole"
+  ## Create S3 bucket
+  LabBucket:
+    Type: AWS::S3::Bucket
+  ## Create the bastion host
+  BastionHost:
+    Type: 'AWS::EC2::Instance'
+    Properties:
+      SubnetId: !Ref PublicSubnet01
+      InstanceType: c5.18xlarge
+      Monitoring: True
+      SecurityGroupIds: [!Ref SshSecurityGroup]
+      KeyName: !Ref KeyName
+      Tags:
+        - Key: Name
+          Value: !Join ['-', [!Ref 'AWS::StackName', Bastion Host]]
+      ImageId: !Ref BastionAmi
+      IamInstanceProfile: !Ref RootInstanceProfile
+  ## Create Cluster
+  AuroraDestinationDBCluster:
+    Type: 'AWS::RDS::DBCluster'
+    Properties:
+      DatabaseName: sysbench
+      DBClusterIdentifier: !Sub '${AWS::StackName}'
+      DBClusterParameterGroupName: !Ref DBClusterParameterGroup
+      DBSubnetGroupName: !Ref AuroraDbSubnetGroup
+      Engine: !If [Is57, aurora-mysql, aurora ]
+      EngineVersion: !If [Is57, 5.7.mysql_aurora.2.04.4, 5.6.mysql_aurora.1.19.0 ]
+      VpcSecurityGroupIds: [!GetAtt MySqlSecurityGroup.GroupId]
+      SourceDBClusterIdentifier: !Ref SourceDBClusterId
+      RestoreType: copy-on-write
+    DependsOn: MySqlSecurityGroup
+    DeletionPolicy: "Delete"
+  ## Create First Aurora Instance
+  AuroraInstance01:
+    Type: 'AWS::RDS::DBInstance'
+    Properties:
+      AvailabilityZone: 'us-east-1a'
+      DBClusterIdentifier: !Ref AuroraDestinationDBCluster
+      DBInstanceClass: db.r4.8xlarge
+      DBInstanceIdentifier: !Join ['-', [!Ref 'AWS::StackName', 'Instance01']]
+      DBParameterGroupName: !Ref DBWriterInstanceParameterGroup
+      DBSubnetGroupName: !Ref AuroraDbSubnetGroup
+      #EnablePerformanceInsights: 'true'
+      EnablePerformanceInsights: 'true'
+      Engine: !If [Is57, aurora-mysql, aurora ]
+      EngineVersion: !If [Is57, 5.7.mysql_aurora.2.04.4, 5.6.mysql_aurora.1.19.0 ]
+      LicenseModel: general-public-license
+      PubliclyAccessible: 'false'
+  ## Create CloudWatch Dashboard
+  LabDashboard:
+    Type: AWS::CloudWatch::Dashboard
+    Properties:
+      DashboardName: !Join ['-', [!Ref 'AWS::StackName', 'Dashboard']]
+      DashboardBody: !Sub
+        - '{"widgets":[{"type":"metric","x":0,"y":0,"width":9,"height":6,"properties":{"metrics":[["AWS/RDS","Queries","DBClusterIdentifier","${loadtest}"],["AWS/RDS","SelectThroughput","DBClusterIdentifier","${loadtest}",{"color":"#2ca02c"}],["AWS/RDS","InsertThroughput","DBClusterIdentifier","${loadtest}",{"color":"#9467bd"}],["AWS/RDS","DatabaseConnections","DBClusterIdentifier","${loadtest}",{"yAxis":"right","color":"#ff7f0e"}],["AWS/RDS","UpdateThroughput","DBClusterIdentifier","${loadtest}",{"color":"#c7c7c7"}],["AWS/RDS","DeleteThroughput","DBClusterIdentifier","${loadtest}",{"color":"#d62728"}]],"view":"singleValue","stacked":false,"region":"us-east-1","stat":"Average","period":60,"legend":{"position":"bottom"},"title":"Connections & Throughput","yAxis":{"left":{"showUnits":true},"right":{"showUnits":true}}}},{"type":"metric","x":0,"y":6,"width":9,"height":6,"properties":{"metrics":[["AWS/RDS","Queries","DBClusterIdentifier","${loadtest}"],["AWS/RDS","SelectThroughput","DBClusterIdentifier","${loadtest}",{"color":"#2ca02c"}],["AWS/RDS","InsertThroughput","DBClusterIdentifier","${loadtest}",{"color":"#9467bd"}],["AWS/RDS","DatabaseConnections","DBClusterIdentifier","${loadtest}",{"yAxis":"right","color":"#ff7f0e"}],["AWS/RDS","UpdateThroughput","DBClusterIdentifier","${loadtest}",{"color":"#c7c7c7"}],["AWS/RDS","DeleteThroughput","DBClusterIdentifier","${loadtest}",{"color":"#d62728"}]],"view":"timeSeries","stacked":false,"region":"us-east-1","stat":"Average","period":60,"legend":{"position":"bottom"},"title":"Connections & Throughput","yAxis":{"left":{"showUnits":true},"right":{"showUnits":true}}}}]}'
+        - { loadtest: !Sub '${AWS::StackName}' }
+Outputs:
+  BastionHostEndpoint:
+    Description: Bastion Host Endpoint
+    Value: !GetAtt BastionHost.PublicDnsName
+  ClusterEndpoint:
+    Description: Aurora Cluster Endpoint
+    Value: !GetAtt AuroraDestinationDBCluster.Endpoint.Address
+  DashboardUrl:
+    Description: URL to dashboard
+    Value: !Sub
+      - 'https://console.aws.amazon.com/cloudwatch/home?region=${region}#dashboards:name=${dashboard}'
+      - { region: { "Ref": "AWS::Region" }, dashboard: !Ref LabDashboard}
+  ## Copy the runload.sh bash file from AWS to local S3 bucket - the source may be modified for a different workload
+  StageWorkload:
+    Description: Execute First - Stage Workload
+    Value: !Sub
+      - 'aws s3 cp s3://aurorabenchmark/runload.sh s3://${bucket}/runload.sh'
+      - { bucket: { "Ref": "LabBucket" }}
+  WorkloadCommandReader:
+    Description: Execute Reader Workload
+    Value: !Sub
+      - 'aws ssm send-command --document-name "AWS-RunShellScript" --region us-east-1 --output text --instance-ids "${instance}" --parameters commands=["sudo aws s3 mv s3://${bucket}/runload.sh /home/ec2-user/runload.sh","bash /home/ec2-user/runload.sh ${endpoint} oltp_read_only.lua"],executionTimeout=172800'
+      - { instance: { "Ref": "BastionHost" }, bucket: { "Ref": "LabBucket" }, endpoint: !GetAtt AuroraDestinationDBCluster.Endpoint.Address}
+  WorkloadCommandWriter:
+    Description: Execute Writer Workload
+    Value: !Sub
+      - 'aws ssm send-command --document-name "AWS-RunShellScript" --region us-east-1 --output text --instance-ids "${instance}" --parameters commands=["sudo aws s3 mv s3://${bucket}/runload.sh /home/ec2-user/runload.sh","bash /home/ec2-user/runload.sh ${endpoint} oltp_insert.lua"],executionTimeout=172800'
+      - { instance: { "Ref": "BastionHost" }, bucket: { "Ref": "LabBucket" }, endpoint: !GetAtt AuroraDestinationDBCluster.Endpoint.Address}
