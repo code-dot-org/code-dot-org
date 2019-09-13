@@ -1,22 +1,23 @@
-# This decorator combines pieces of survey roll-up data from previous steps of the survey pipeline
+# SurveyRollupDecorator combines pieces of survey roll-up data from previous steps of the survey pipeline
 # and organize them in a format that the client view can consume.
 
 module Pd::SurveyPipeline
   class SurveyRollupDecorator
+    # TODO: update comments following daily_survey_decorator
     # Create roll-up report to send to client view.
     #
     # @param [Hash] data a hash contains pieces of information from previous steps in the pipeline.
     #
-    # @return [Hash] a hash report contains following keys
-    #   :facilitators => {factilitator_id => facilitator_name}
-    #   :current_workshop => Integer
-    #   :related_workshops: {facilitator_id => Array<Integer>}
-    #   :facilitator_averages => a hash with following keys
+    # @return [Hash] a hash report contains 6 keys.
+    #   :facilitators [Hash] {factilitator_id => facilitator_name}
+    #   :current_workshop [Integer]
+    #   :related_workshops [Hash] {facilitator_id => Array<Integer>}
+    #   :facilitator_averages [Hash] with following keys
     #     :questions => {question_name => question_text}
     #     facilitator_name => {question_name_or_category => {workshop_scope => score}}
-    #   :facilitator_response_counts =>
-    #     {workshop_scope => {factilitator_id => {submission_type => count}}}
-    #   :errors => Array
+    #   :facilitator_response_counts [Hash]
+    #     {workshop_scope => {factilitator_id => {submission_type => Integer}}}
+    #   :errors [Array<String>]
     #
     def self.decorate_facilitator_rollup(data)
       report = {
@@ -67,6 +68,7 @@ module Pd::SurveyPipeline
           get_submission_counts(
             data[:question_answer_joined], data[:question_categories], data[:current_workshop_id]
           )
+
         report[:facilitator_response_counts][:all_my_workshops][facilitator_id][submission_type] =
           get_submission_counts data[:question_answer_joined], data[:question_categories]
       end
