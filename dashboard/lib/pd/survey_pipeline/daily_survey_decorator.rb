@@ -28,7 +28,7 @@ module Pd::SurveyPipeline
 
     # Create single-workshop survey summary report to send to client.
     #
-    # @param [Hash] data a hash contains pieces of information from previous steps in the pipeline
+    # @param data [Hash] a hash contains pieces of information from previous steps in the pipeline
     # @option data [Array<Hash>] :summaries an array of summary results.
     # @option data [Hash] :parsed_questions question data get from DailySurveyParser.
     # @option data [Hash] :parsed_submissions submission data get from DailySurveyParser.
@@ -65,7 +65,7 @@ module Pd::SurveyPipeline
         next unless workshop_id && form_id
 
         # Check if the current user can see specific data
-        next unless data_visible_to_user?(data[:current_user], summary)
+        next unless summary_visible_to_user?(data[:current_user], summary)
 
         day, facilitator_id = summary.values_at(:day, :facilitator_id)
         context_name = get_survey_context(workshop_id, day, facilitator_id, form_id)
@@ -103,29 +103,31 @@ module Pd::SurveyPipeline
       report
     end
 
-    def self.data_visible_to_user?(user, data)
+    # Check if an user can see a summary result.
+    # @param user [User] current user requesting this report
+    # @param summary [Hash] a summary result from previous steps in the survey pipeline
+    # @return [Boolean]
+    def self.summary_visible_to_user?(user, summary)
       return false unless user
 
-      # Can user see this facilitator-specific data?
-      if data[:facilitator_id]
+      # Can user see this facilitator-specific summary?
+      if summary[:facilitator_id]
         return false unless user.program_manager? ||
           user.workshop_organizer? ||
           user.workshop_admin? ||
-          user.id == data[:facilitator_id]
+          user.id == summary[:facilitator_id]
       end
 
       true
     end
 
-    # Given metadata of a survey submission, returns context of that submission.
-    # Example return values: Pre Workshop, Post Workshop, Day <number>, and Facilitator.
+    # Return context of a survey submissions given its metadata.
     #
-    # @param workshop_id [Number] must be valid workshop id
-    # @param day [Number]
-    # @param facilitator_id [Number]
-    # @param form_id [Number]
-    #
-    # @return [String] context name
+    # @param workshop_id [Integer] must be valid workshop id
+    # @param day [Integer]
+    # @param facilitator_id [Integer]
+    # @param form_id [Integer]
+    # @return [String] context name such as Pre Workshop, Post Workshop, Day [number], and Facilitator.
     #
     def self.get_survey_context(workshop_id, day, facilitator_id, form_id)
       workshop = Pd::Workshop.find_by_id(workshop_id)
@@ -157,11 +159,10 @@ module Pd::SurveyPipeline
 
     # Index question collection by form id and question name.
     #
-    # @param questions [Hash{form_id => {question_id => question_content}}]
-    #   question_content is Hash{:type, :name, :text, :order, :hidden}.
-    #   @see DailySurveyParser parse_survey function to see how questions data is created.
-    #
-    # @return [Hash{form_id => {question_name => question_content}}]
+    # @param questions [Hash] {form_id => {question_id => question_content}}.
+    # @return [Hash] {form_id => {question_name => question_content}}
+    # @note question_content is Hash{:type, :name, :text, :order, :hidden => String}.
+    # @see DailySurveyParser parse_survey function to see how questions data is created.
     #
     def self.index_question_by_names(questions)
       q_indexes = {}

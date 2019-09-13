@@ -27,7 +27,7 @@ module Pd::SurveyPipeline
       parsed_questions = {
         form_id => {
           '1' => {type: 'radio', name: 'importance', text: 'CS is important?', order: 1,
-            options: ['Disagree', 'Neutral', 'Agree'],
+            options: %w(Disagree Neutral Agree),
             option_map: {'Disagree': 1, 'Neutral': 2, 'Agree': 3}, answer_type: 'singleSelect'},
           '2' => {type: 'textarea', name: 'feedback', text: 'Free-format feedback', order: 2,
             answer_type: 'text'}
@@ -200,17 +200,17 @@ module Pd::SurveyPipeline
       data = @summary_data_permission_test
       user = @facilitators.first
 
-      assert_equal true, DailySurveyDecorator.data_visible_to_user?(user, data[0])
-      assert_equal false, DailySurveyDecorator.data_visible_to_user?(user, data[1])
-      assert_equal true, DailySurveyDecorator.data_visible_to_user?(user, data[2])
+      assert_equal true, DailySurveyDecorator.summary_visible_to_user?(user, data[0])
+      assert_equal false, DailySurveyDecorator.summary_visible_to_user?(user, data[1])
+      assert_equal true, DailySurveyDecorator.summary_visible_to_user?(user, data[2])
     end
 
-    test 'program mamager and workshop admin see all facilitator results' do
+    test 'program manager and workshop admin see all facilitator results' do
       data = @summary_data_permission_test
       users = [@program_manager, @workshop_admin]
 
       users.product(data).each do |user, data_row|
-        assert_equal true, DailySurveyDecorator.data_visible_to_user?(user, data_row)
+        assert_equal true, DailySurveyDecorator.summary_visible_to_user?(user, data_row)
       end
     end
 
@@ -220,6 +220,7 @@ module Pd::SurveyPipeline
       form_id = '1122334455'.to_i
 
       survey_metadata_to_context = {
+        # Array<workshop_id, day, facilitator_id, form_id> => context_name
         [workshop.id, 0, facilitator.id, form_id] => 'Facilitators',
         [workshop.id, 0, nil, form_id] => 'Pre Workshop',
         [workshop.id, 1, nil, form_id] => 'Post Workshop',
@@ -239,6 +240,7 @@ module Pd::SurveyPipeline
       form_id = '1122334455'.to_i
 
       survey_metadata_to_context = {
+        # Array<workshop_id, day, facilitator_id, form_id> => context_name
         [workshop.id, 0, nil, form_id] => 'Pre Workshop',
         [workshop.id, 1, nil, form_id] => 'Day 1',
         [workshop.id, 1, facilitator.id, form_id] => 'Day 1'
@@ -257,6 +259,7 @@ module Pd::SurveyPipeline
       post_ws_form_id = '82115646319154'.to_i
 
       survey_metadata_to_context = {
+        # Array<workshop_id, day, facilitator_id, form_id> => context_name
         [workshop.id, 0, nil, daily_form_id] => 'Invalid',
         [workshop.id, 1, nil, daily_form_id] => 'Day 1',
         [workshop.id, 1, facilitator.id, daily_form_id] => 'Day 1',
