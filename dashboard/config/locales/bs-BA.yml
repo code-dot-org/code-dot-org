@@ -43,13 +43,9 @@ bs:
   okay: U redu
   or: ili
   heading_x_of_y: "%{heading} (strana %{x} od %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Dodaj učitelja:'
       placeholder: Šifra Odjeljenja (ABCDEF)
-      instructions: Molimo unesite kôd koji je sa vama podijelio vaš učitelj. To je
-        kôd od 6 slova tipa "ABCDEF".
-    submit: Dodaj učitelja
   add_hint_form:
     placeholder: Molimo unesite vaš prijedlog
     submit: Dodaj pomoć

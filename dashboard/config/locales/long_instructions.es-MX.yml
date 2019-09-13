@@ -15413,7 +15413,7 @@ es-MX:
       Dance_Party_02: |-
         ¡Hagamos bailar a este alce!
 
-        Arrastra el bloque \<<xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> al espacio de trabajo. Conéctalo debajo del bloque <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> Tu bailarín debería empezar a moverse después del cuarto compás.
+        Arrastra el bloque \<<xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> al espacio de trabajo. Conéctalo debajo del bloque <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> Tu bailarín debería empezar a moverse después del cuarto compás.
 
         Los **compases** se usan para contar el tiempo en la música. En este tutorial, un compás tiene cuatro tiempos.
       Dance_Party_03: |-

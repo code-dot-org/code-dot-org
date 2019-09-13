@@ -41,14 +41,9 @@ km:
   okay: អូខេ
   or: ឬ
   heading_x_of_y: "%{heading}​ (ទំព័រទី %{x} នៃ %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: បន្ថែម​គ្រូ​ម្នាក់៖
       placeholder: ផ្នែកនៃការសរសេរកូដ (ABCDEF)
-      instructions: សូមវាយបញ្ចូលនូវកូដដែលគ្រូរបស់អ្នកបានចែកអោយ។ ហើយវាគឺជាកូដដែលមាន៦តួរអក្សរ
-        ដូចជា "ABCDEF" ។
-      instructions_short: សូមធ្វើការវាយបញ្ចូលនូវផ្នែកកូដ៦ខ្ទង់។
-    submit: បន្ថែម​គ្រូ
   add_hint_form:
     placeholder: សូមវាយបញ្ចូលនូវតម្រុយនៃកូដរបស់អ្នក។
     submit: ដាក់តម្រុយសម្រាបសម្កាល់

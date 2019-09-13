@@ -432,6 +432,12 @@ sk-SK:
         v binárnom kóde v prvom riadku.
       Course 4 Artist For Loops 1: Použite blok s opakovaním pre nakreslenie tohto
         trojuholníka, ktorý je 50 pixelov široký.
+      Course 4 Artist For Loops 6a: Sprav tri malé zmeny v kóde z predošlého levelu,
+        aby si vytvoril toto!
+      Course 4 Artist For Loops 8: |-
+        Len jedná malá zmena v kóde z posledného obrázku dokáže vytvoriť takýto obrázok. Vieš zistiť aká je to zmena?
+
+        Nápoveda: Potrebuješ niečo odstrániť!
       Course 4 Artist Functions Inspiration: Kliknite sem pre opakované zobrazenie
         nápovedy.
       Course 4 Artist Functions challenge: Kliknite sem pre opakované zobrazenie nápovedy.
@@ -2308,6 +2314,53 @@ sk-SK:
       courseF_artist_for1: Experimentuj s cyklom `for` a s premennou `počítadlo`.
       courseF_artist_for1_2018: Experimentuj s cyklom `for` a s premennou `počítadlo`.
       courseF_artist_for1_2019: Experimentuj s cyklom `for` a s premennou `počítadlo`.
+      courseF_artist_for2: Vytvor túto kopu trojuholníkov, ktoré majú strany dlhé
+        od 50 do 100 pixelov.
+      courseF_artist_for2_2018: Vytvor túto kopu trojuholníkov, ktoré majú strany
+        dlhé od 50 do 100 pixelov.
+      courseF_artist_for2_2019: Vytvor túto kopu trojuholníkov, ktoré majú strany
+        dlhé od 50 do 100 pixelov.
+      courseF_artist_for3: 'Tieto trojuholníky majú strany od 20 pixelov do 200 pixelov
+        a každý trojuholník je o 20 pixelov väčší ako predošĺý. '
+      courseF_artist_for3_2018: 'Tieto trojuholníky majú strany od 20 pixelov do 200
+        pixelov a každý trojuholník je o 20 pixelov väčší ako predošĺý. '
+      courseF_artist_for3_2019: 'Tieto trojuholníky majú strany od 20 pixelov do 200
+        pixelov a každý trojuholník je o 20 pixelov väčší ako predošĺý. '
+      courseF_artist_for4: 'Tieto štvorce zaćínajú na dlźke 15 pixelov. Najväčší štvorec
+        je dlhý 300 pixelov a kaźdý štvorec je o 15 pixelov väčší ako predošlý. '
+      courseF_artist_for4_2018: 'Tieto štvorce zaćínajú na dlźke 15 pixelov. Najväčší
+        štvorec je dlhý 300 pixelov a kaźdý štvorec je o 15 pixelov väčší ako predošlý. '
+      courseF_artist_for4_2019: 'Tieto štvorce zaćínajú na dlźke 15 pixelov. Najväčší
+        štvorec je dlhý 300 pixelov a kaźdý štvorec je o 15 pixelov väčší ako predošlý. '
+      courseF_artist_for5: Len jedná malá zmena v kóde z posledného obrázku dokáže
+        vytvoriť takýto obrázok. Vieš zistiť aká je to zmena?
+      courseF_artist_for5_2018: Len jedná malá zmena v kóde z posledného obrázku dokáže
+        vytvoriť takýto obrázok. Vieš zistiť aká je to zmena?
+      courseF_artist_for5_2019: Len jedná malá zmena v kóde z posledného obrázku dokáže
+        vytvoriť takýto obrázok. Vieš zistiť aká je to zmena?
+      courseF_artist_for6: Pretvor tvoj kód z predošlej úlohy, ale teraz sa otoč o
+        89 stupňov, aby si vytvoril takúto pokrútenú štvorcovú špirálu.
+      courseF_artist_for6_2018: Pretvor tvoj kód z predošlej úlohy, ale teraz sa otoč
+        o 89 stupňov, aby si vytvoril takúto pokrútenú štvorcovú špirálu.
+      courseF_artist_for6_2019: Pretvor tvoj kód z predošlej úlohy, ale teraz sa otoč
+        o 89 stupňov, aby si vytvoril takúto pokrútenú štvorcovú špirálu.
+      courseF_artist_for7: Sprav tri malé zmeny v kóde z predošlého levelu, aby si
+        vytvoril toto!
+      courseF_artist_for7_2018: Sprav tri malé zmeny v kóde z predošlého levelu, aby
+        si vytvoril toto!
+      courseF_artist_for7_2019: Sprav tri malé zmeny v kóde z predošlého levelu, aby
+        si vytvoril toto!
+      courseF_artist_for8: Zníž uhol na 72 stupňov, aby si dostal špirálovitý päťuholník.
+      courseF_artist_for8_2018: Zníž uhol na 72 stupňov, aby si dostal špirálovitý
+        päťuholník.
+      courseF_artist_for8_2019: Zníž uhol na 72 stupňov, aby si dostal špirálovitý
+        päťuholník.
+      courseF_artist_for9: "**Inšpirácia:** Použi počítadlo vo vnútri bloku `nastav
+        alfa`, aby si dostal niečo ako tento vyblednutý stred."
+      courseF_artist_for9_2018: "**Inšpirácia:** Použi počítadlo vo vnútri bloku `nastav
+        alfa`, aby si dostal niečo ako tento vyblednutý stred."
+      courseF_artist_for9_2019: "**Inšpirácia:** Použi počítadlo vo vnútri bloku `nastav
+        alfa`, aby si dostal niečo ako tento vyblednutý stred."
       courseF_artist_for_challenge1: Viete zistiť, ako znova nakresliť túto kresbu?
       courseF_artist_for_challenge1_2018: Viete zistiť, ako znova nakresliť túto kresbu?
       courseF_artist_for_challenge1_2019: Viete zistiť, ako znova nakresliť túto kresbu?

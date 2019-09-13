@@ -104,6 +104,7 @@ class User < ActiveRecord::Base
     oauth_token_expiration
     sharing_disabled
     next_census_display
+    donor_teacher_banner_dismissed
     data_transfer_agreement_accepted
     data_transfer_agreement_request_ip
     data_transfer_agreement_source
@@ -1259,6 +1260,10 @@ class User < ActiveRecord::Base
     name.split.first # 'first name'
   end
 
+  def second_name
+    name.split.second # 'second name'
+  end
+
   def initial
     UserHelpers.initial(name)
   end
@@ -1966,6 +1971,14 @@ class User < ActiveRecord::Base
     # Must have an NCES school to show the banner
     users_school = try(:school_info).try(:school)
     teacher? && users_school && (next_census_display.nil? || Date.today >= next_census_display.to_date)
+  end
+
+  # Returns the name of the donor for the donor teacher banner, or nil if none.
+  def donor_teacher_banner_name
+    school_id = last_complete_school_info&.school&.id
+    donor_name = DonorSchool.find_by(nces_id: school_id)&.name if school_id
+
+    donor_name
   end
 
   # Removes PII and other information from the user and marks the user as having been purged.

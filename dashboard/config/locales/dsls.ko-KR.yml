@@ -1063,6 +1063,16 @@ ko-KR:
         content1: 설명 입력
       Terminology Recap:
         content1: 설명 입력
+      Unit 1 Lesson 2 Overview:
+        markdown: |
+          # Overview
+
+          이 단원에서는 여러분이 다양한 문제에 대한 접근 방식을 구성하는 데 도움이 되는 공식적인 문제 해결 과정을 배우게 됩니다.
+
+
+          ## Resources
+
+          * [문제해결과정 – 활동 가이드](https://docs.google.com/document/d/1xEPMYIDy70fWCgyLymBNmxkE-6uJ7BYOXSmV8Vyt-SQ/export?format=pdf)
       behaviors 1 predict:
         questions:
         - {}
@@ -1719,6 +1729,15 @@ ko-KR:
         - {}
         - {}
         - {}
+      csd-pre-survey-2017-levelgroup:
+        markdown: |
+          # Overview
+
+          이 수업은 가능한 한 많은 동전을 담을 수 있는 알루미늄 호일 보트를 설계하기 위해 그룹으로 진행됩니다. 수업이 끝나면 그룹은 이 활동을 통한 자신의 경험을 회상하고 코스의 나머지  수업에 필요한 문제 해결 유형과 연관 지어 봅니다.
+
+          ## Resources
+
+          * [알루미늄 보트](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - Activity Guide (copy as [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))
       grade2_multi_collector_A_predict1:
         questions:
         - {}
