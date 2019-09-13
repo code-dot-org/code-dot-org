@@ -3,10 +3,19 @@
 
 module Pd::SurveyPipeline
   class SurveyRollupDecorator
-    # TODO: update comments following daily_survey_decorator
     # Create roll-up report to send to client view.
     #
-    # @param [Hash] data a hash contains pieces of information from previous steps in the pipeline.
+    # @param data [Hash] a hash contains pieces of information from previous steps in the pipeline.
+    # @option data [Integer] :current_workshop_id the main workshop user is requesting survey results for
+    # @option data [Array<Integer>] :related_workshop_ids workshops related to the main workshop
+    # @option data [Integer] :facilitator_id a facilitator in the main workshop
+    # @option data [Hash] :parsed_questions questions parsed from Pd::SurveyQuestion
+    # @option data [Array<String>] :question_categories categories for roll-up results
+    # @option data [Array<Pd::WorkshopDailySurvey>] :workshop_submissions general workshop survey submissions
+    # @option data [Array<Pd::WorkshopFacilitatorDailySurvey>] :facilitator_submissions facilitator-specific survey submissions
+    # @option data [Array<Hash>] :question_answer_joined questions & answers joined together
+    # @option data [Array<Hash>] :summaries survey result summaries
+    # @option data [Array<String>] :errors non-fatal errors from previous steps
     #
     # @return [Hash] a hash report contains 6 keys.
     #   :facilitators [Hash] {factilitator_id => facilitator_name}
