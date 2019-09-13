@@ -12720,6 +12720,8 @@ tr:
                 içeriyor olacak. Ders sonunda öğrenciler tamamladıkları oyunları sınıf
                 arkadaşlarıyla paylaşacaklardır. Bu proje birden fazla sınıfı kapsayacak
                 ve 3-5 sınıf döneminden herhangi bir yeri kolayca alabilecektir.
+            Sprite Properties:
+              name: Nesne özellikleri
         maddie-test:
           stages:
             new stage:
@@ -12740,7 +12742,53 @@ tr:
           stages:
             Deeper Learning Overview:
               name: Derin Öğrenime Genel Bakış
+        dlp19-csd-mod-w1:
+          stages:
+            Deeper Learning Overview:
+              name: Derin Öğrenime Genel Bakış
         dlp19-csd-mod-w2:
           stages:
             new stage:
               name: yeni kademe
+            Deeper Learning Overview:
+              name: Derin Öğrenime Genel Bakış
+        dlp19-csp-mod-w1:
+          stages:
+            Deeper Learning Overview:
+              name: Derin Öğrenime Genel Bakış
+        dlp19-csp-mod-w2:
+          stages:
+            Deeper Learning Overview:
+              name: Derin Öğrenime Genel Bakış
+        csd4-pilot:
+          stages:
+            What is a Computer?:
+              name: Bilgisayar nedir?
+            Input and Output:
+              name: Girdiler ve çıktılar
+            Processing:
+              name: İşleme
+            Project - Propose an App:
+              name: Proje - bir uygulama önermek
+        csp2-pilot:
+          stages:
+            new stage:
+              name: yeni kademe
+            Routers and Redundancy:
+              name: Yönlendiriciler ve yedeklilik
+        peru-2019:
+          stages:
+            new stage:
+              name: yeni kademe
+            Introduction:
+              name: Giriş
+            Debugging in Collector:
+              name: Toplayıcıda Hata Ayıklama
+            'Loops: My Loopy Robotic Friends':
+              name: 'Döngüler: Loopy robot dostlarım'
+            Loops in Artist:
+              name: Sanatçı- Döngüler
+            Nested Loops:
+              name: İç İçe Döngüler
+            Nested Loops in Frozen:
+              name: Frozen'da İç İçe Döngüler

@@ -1,5 +1,5 @@
 name 'U4L10 CFU Conditionals Psuedocode'
-title 'Multiple Choice: Coordination and Binary Messages'
+title 'AP Pseudocode: Conditionals'
 description ''
 wrong 'Perfect Game!'
 right 'You Win!'
@@ -7,7 +7,7 @@ wrong 'You Lose!'
 wrong 'Nothing will be displayed'
 
 markdown <<MARKDOWN
-## AP Pseudocode
+## AP Reference Sheet 
 
 The AP Reference Sheet shows how Conditional-type questions will be represented on the exam. Read through these sections of the Reference Sheet and answer the question below. 
 

@@ -23,6 +23,7 @@ az:
         edit_header: Hesab Detallarına düzəliş edin
         error:
           future: gələcəkdə ola bilməz
+  beta: beta versiya
   hello: Salam, dünya
   welcome_back: Bir daha xoş gəldiniz, %{name}
   your_professional_learning_plan: Sizin peşəkar öyrənmə planınız
@@ -35,12 +36,6 @@ az:
   cancel: İmtina et
   okay: Oldu
   or: və ya
-  add_teacher_form:
-    code:
-      label: 'Müəllim əlavə edin:'
-      instructions: Xahiş edirik, sizin müəlliminiz tərəfindən sizin ilə paylaşılmış
-        kodu daxil edin. ABCDEF kimi 6 hərfli koddur.
-    submit: Müəllim əlavə edin
   add_hint_form:
     placeholder: Xahiş olunur ip-ucunu bura daxil edesiniz
     submit: Məsləhət əlavə et

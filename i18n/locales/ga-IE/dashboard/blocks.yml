@@ -198,11 +198,6 @@ ga:
           CONDITION:
             '"when"': nuair
             '"while"': chomh fada is atá
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': fíor
-            'false': bréagach
       gamelab_getProp:
         options:
           PROPERTY:
@@ -269,13 +264,6 @@ ga:
             '"left"': ar chlé
             '"right"': ar dheis
             '"space"': spás
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": ag an mbarr
-            "'down'": ag an mbun
-            "'left'": ar chlé
-            "'right'": ar dheis
       gamelab_whileKey:
         options:
           KEY:

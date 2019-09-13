@@ -170,11 +170,6 @@ pt:
           CONDITION:
             '"when"': quando
             '"while"': enquanto
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': verdadeiro
-            'false': falso
       gamelab_getProp:
         options:
           PROPERTY:
@@ -242,13 +237,6 @@ pt:
             '"left"': para a esquerda
             '"right"': para a direita
             '"space"': espaço
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": para cima
-            "'down'": para baixo
-            "'left'": para a esquerda
-            "'right'": para a direita
       gamelab_whileKey:
         options:
           KEY:

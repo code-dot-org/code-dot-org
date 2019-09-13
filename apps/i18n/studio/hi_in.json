@@ -100,6 +100,8 @@
   "elseCode": "remaining",
   "finalLevel": "बधाइयाँ! आपने अंतिम पहेली हल कर दी है।",
   "for": "के साथ गिनती करें ",
+  "playlab_lastLevel_continueText": "हो गया",
+  "hoc2015_lastLevel_continueText": "हो गया",
   "hoc2015_shareGame": "अपनी गेम साझा करें:",
   "ifSprite": "अभिनेता",
   "incrementPlayerScore": "स्कोर पोइन्ट",

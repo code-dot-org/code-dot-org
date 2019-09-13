@@ -670,16 +670,8 @@ fr:
         text: quand on clique sur {SPRITE}
       gamelab_comment:
         text: 'commentaire : {COMMENT}'
-      gamelab_debugSprite:
-        text: débogage {SPRITE} {VAL}
-        options:
-          VAL:
-            'true': vrai
-            'false': faux
       gamelab_destroy:
         text: enlever {THIS}
-      gamelab_displace:
-        text: "{THIS} empêche {SPRITE} de bouger"
       gamelab_edgesDisplace:
         text: les bords empêchent {SPRITE} de bouger
       gamelab_getProp:
@@ -796,7 +788,6 @@ fr:
             '"x"': position x
             '"y"': position y
             '"direction"': direction du mouvement
-            '"tint"': nuance
       gamelab_setSizes:
         text: définir {SPRITE} {PROPERTY} à {N} %
         options:
@@ -834,17 +825,6 @@ fr:
             '"d"': d
       gamelab_whenLeftArrow:
         text: quand on appuie sur la flèche de gauche
-      gamelab_whenPressedAndReleased:
-        text: |-
-          quand on appuie sur {DIR}
-          {STATEMENT1}quand lâché
-          {STATEMENT2}
-        options:
-          DIR:
-            "'up'": vers le haut
-            "'down'": vers le bas
-            "'left'": vers la gauche
-            "'right'": vers la droite
       gamelab_whenRightArrow:
         text: quand on appuie sur la flèche de droite
       gamelab_whileKey:

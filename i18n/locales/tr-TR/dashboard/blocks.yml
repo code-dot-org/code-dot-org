@@ -570,11 +570,6 @@ tr:
           CONDITION:
             '"when"': Ne zaman
             '"while"': sürece
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': doğru
-            'false': 'false'
       gamelab_getProp:
         options:
           PROPERTY:
@@ -648,7 +643,6 @@ tr:
             '"x"': x konumu
             '"y"': y konumu
             '"direction"': hareket yönü
-            '"tint"': renk tonu
       gamelab_setSizes:
         text: "{SPRITE} {PROPERTY}‘yi %{N} olarak ayarla"
         options:
@@ -679,13 +673,6 @@ tr:
             '"space"': uzay
       gamelab_whenLeftArrow:
         text: sol ok basıldığında
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": yukarı
-            "'down'": aşağı
-            "'left'": sol
-            "'right'": sağ
       gamelab_whileKey:
         options:
           KEY:

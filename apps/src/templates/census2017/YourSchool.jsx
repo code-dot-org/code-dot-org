@@ -13,6 +13,8 @@ import {SpecialAnnouncementActionBlock} from '../studioHomepages/TwoColumnAction
 import i18n from '@cdo/locale';
 import SchoolAutocompleteDropdown from '../SchoolAutocompleteDropdown';
 import CensusMap from './CensusMap';
+import CensusMapReplacement from './CensusMapReplacement';
+import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
   heading: {
@@ -143,11 +145,20 @@ class YourSchool extends Component {
               schoolFilter={this.hasLocation}
             />
             <br />
-            <CensusMap
-              fusionTableId={this.props.fusionTableId}
-              school={schoolForMap}
-              onTakeSurveyClick={this.handleTakeSurveyClick}
-            />
+            {experiments.isEnabled('censusMapOnMapbox') && (
+              <CensusMapReplacement
+                fusionTableId={this.props.fusionTableId}
+                school={schoolForMap}
+                onTakeSurveyClick={this.handleTakeSurveyClick}
+              />
+            )}
+            {!experiments.isEnabled('censusMapOnMapbox') && (
+              <CensusMap
+                fusionTableId={this.props.fusionTableId}
+                school={schoolForMap}
+                onTakeSurveyClick={this.handleTakeSurveyClick}
+              />
+            )}
           </div>
         )}
         <CensusForm

@@ -381,14 +381,19 @@ pt-BR:
         title: Múltipla Escolha
         content1: "/script_assets/4-5_images/unplugged/songwriting_1_q.png"
         questions:
-        - {}
+        - text: Qual é o maior trecho dessa música que você pode definir como refrão
+            para que seja repetido de forma exata a cada vez que for chamado?
         answers:
         - text: Lou, Lou, skip to my Lou,
         - text: Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou,
             Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.
           correct: true
-        - {}
-        - {}
+        - text: Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou,
+            Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's
+            in the buttermilk, <br/>Shoo, fly, shoo,
+        - text: Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
+            <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
+            <br/>Skip to my Lou, my darlin.
       4-5 Suncatchers Match 1:
         title: Associação
         content1: Associe cada programa à palavra que ele produz, usando o grupo de
@@ -521,9 +526,75 @@ pt-BR:
       Begin planning your project:
         title: título
         content1: descrição aqui
+        markdown: "# O Processo de Design\nProjetar software significa resolver vários
+          pequenos problemas o tempo todo. O maior problema em design de software
+          é o que criar primeiro.\n\nEsse processo é útil para todo os tipos de coisas,
+          mas nós vamos focar em usar isso para design de apps.\n\n<!-- Translate
+          the terms \"Define\", \"Prepare\", \"Try\", \"Reflect\" and change font
+          size and positioning as needed-->\n<div style=\"position: relative; text-align:
+          center; font-size: 1em\">\n  <img src=\"https://images.code.org/a157e5f67444573e19e980a507db16fb-image-1563319667694.png\"
+          alt=\"Design Process\" style=\"width: 50%;\">\n  <div style=\"position:
+          absolute; top: 24%; left: 49.8%; transform: translateX(-49.8%); font-weight:
+          bold;\">Defina</div> \n  <div style=\"position: absolute; top: 52%; left:
+          61%; transform: translateX(-61%); font-weight: bold;\">Prepare</div>\n  <div
+          style=\"position: absolute; top: 79%; left: 49.8%; transform: translateX(-49.8%);
+          font-weight: bold;\">Teste</div>\n  <div style=\"position: absolute; top:
+          52%; left: 39%; transform: translateX(-39%); font-weight: bold;\">Reflita</div>\n</div>\n\n*
+          **Defina**\n  * Que tipo de app você gostaria de criar?\n  * Quais as suas
+          restrições?\n  * O que é sucesso para você?\n* **Prepare**\n  * Junte ideias
+          / Pesquise elementos possíveis\n  * Compare os prós e contras\n  * Faça
+          um plano\n* **Teste**\n  * Coloque seu plano em ação\n* **Reflita**\n  *
+          Como os seus resultados se assemelham com os objetivos definidos anteriormente?\n
+          \ * O que você pode aprender com isso e melhorar na próxima vez?\n  * Quais
+          novos problemas você descobriu?\n\n# Com o que se parece\nNas próximas semanas,
+          você terá a oportunidade de explorar alguns jogos existentes e projetar
+          o seu próprio jogo baseado no que você aprendeu. Após criar o seu jogo,
+          você terá a chance de apresentá-lo para sua turma e ouvir suas opiniões.
+          Esses passos são muito importantes na indústria de software, e ter prática
+          com elementos do processo de design lhe ajudara a criar produtos melhores
+          e mais eficientes. \n\nAqui está o que aguardar das próximas semanas à medida
+          que aprendemos mais sobre o processo de design:\n\n1. **Defina & Prepare**\n
+          \  * Jogue jogos existentes para ter ideias e entender sobre limitações\n
+          \  * Junte ideias e planeje seu app novo ou modificado\n2. **Teste**\n   *
+          Siga seu plano para desenvolver o app\n3. **Reflita & Edite**\n   * Troque
+          seu app com outro grupo para melhorar os projetos\n4. **Apresente**\n   *
+          Mostre seu produto final!\n"
       Begin planning your project_2018:
         title: Comece planejando seu projeto
         content1: descrição aqui
+        markdown: "# O Processo de Design\nProjetar software significa resolver vários
+          pequenos problemas o tempo todo. O maior problema em design de software
+          é o que criar primeiro.\n\nEsse processo é útil para todo os tipos de coisas,
+          mas nós vamos focar em usar isso para design de apps.\n\n<!-- Translate
+          the terms \"Define\", \"Prepare\", \"Try\", \"Reflect\" and change font
+          size and positioning as needed-->\n<div style=\"position: relative; text-align:
+          center; font-size: 1em\">\n  <img src=\"https://images.code.org/a157e5f67444573e19e980a507db16fb-image-1563319667694.png\"
+          alt=\"Design Process\" style=\"width: 50%;\">\n  <div style=\"position:
+          absolute; top: 24%; left: 49.8%; transform: translateX(-49.8%); font-weight:
+          bold;\">Defina</div> \n  <div style=\"position: absolute; top: 52%; left:
+          61%; transform: translateX(-61%); font-weight: bold;\">Prepare</div>\n  <div
+          style=\"position: absolute; top: 79%; left: 49.8%; transform: translateX(-49.8%);
+          font-weight: bold;\">Teste</div>\n  <div style=\"position: absolute; top:
+          52%; left: 39%; transform: translateX(-39%); font-weight: bold;\">Reflita</div>\n</div>\n\n*
+          **Defina**\n  * Que tipo de app você gostaria de criar?\n  * Quais as suas
+          restrições?\n  * O que é sucesso para você?\n* **Prepare**\n  * Junte ideias
+          / Pesquise elementos possíveis\n  * Compare os prós e contras\n  * Faça
+          um plano\n* **Teste**\n  * Coloque seu plano em ação\n* **Reflita**\n  *
+          Como os seus resultados se assemelham com os objetivos definidos anteriormente?\n
+          \ * O que você pode aprender com isso e melhorar na próxima vez?\n  * Quais
+          novos problemas você descobriu?\n\n# Com o que se parece\nNas próximas semanas,
+          você terá a oportunidade de explorar alguns jogos existentes e projetar
+          o seu próprio jogo baseado no que você aprendeu. Após criar o seu jogo,
+          você terá a chance de apresentá-lo para sua turma e ouvir suas opiniões.
+          Esses passos são muito importantes na indústria de software, e ter prática
+          com elementos do processo de design lhe ajudara a criar produtos melhores
+          e mais eficientes. \n\nAqui está o que aguardar das próximas semanas à medida
+          que aprendemos mais sobre o processo de design:\n\n1. **Defina & Prepare**\n
+          \  * Jogue jogos existentes para ter ideias e entender sobre limitações\n
+          \  * Junte ideias e planeje seu app novo ou modificado\n2. **Teste**\n   *
+          Siga seu plano para desenvolver o app\n3. **Reflita & Edite**\n   * Troque
+          seu app com outro grupo para melhorar os projetos\n4. **Apresente**\n   *
+          Mostre seu produto final!\n"
       Begin planning your project_2018_2019:
         title: Comece planejando seu projeto
         content1: descrição aqui
@@ -760,6 +831,23 @@ pt-BR:
           class=\"btn btn-large btn-success\" href=\"/s/csd-post-survey/stage/1/puzzle/1/page/1\"
           target=\"top\"> Clique aqui para completar as CS Descobertas Pesquisa pós-curso!!!</a>\n\n(abre
           em uma nova aba)\n\n<br>\n\n\n\n\n\n"
+      CSD U2 L12 Overview:
+        markdown: |
+          # Visão global
+
+          Depois de concluir uma caçada ao tesouro da pesquisa na Web, a classe aprende sobre o funcionamento interno dos mecanismos de pesquisa e tem a oportunidade de flexibilizar suas habilidades analíticas na busca por animais estranhos e improváveis.
+          ## Vocabulário
+
+          * ** Algoritmo ** - Uma sequência precisa de instruções para processos que podem ser executados por um computador
+          * ** Relevante ** - intimamente conectado ou adequado ao assunto em questão.
+          * ** Ferramenta de Busca ** - Um programa que pesquisa e identifica itens em um banco de dados que correspondem a palavras-chave ou caracteres especificados pelo usuário, usados ​​especialmente para encontrar sites específicos na World Wide Web.
+          * ** Confiável ** - capaz de ser considerado honesto ou verdadeiro.
+
+
+          ## Recursos
+
+          * [Internet Scavenger Hunt - Guia de atividades] (https://docs.google.com/document/d/14sOf5YZ5iTvB0jzlm7X-18HE6S_KEG3IcrsFHN7OeCk/export?format=pdf)
+          * [Animais estranhos, porém verdadeiros - Guia de atividades] (https://docs.google.com/document/d/1t7gmFWj0fneGzJbPRHk0eq3hz-kRQ_xwnVbKwdL3tEw/export?format=pdf)
       CSD U2 L2 Overview:
         title: título
         content1: descrição aqui
@@ -843,8 +931,44 @@ pt-BR:
           * ** [Item da Lista] (//docs.code.org/weblab/li/)** - `<li></li>`
           * ** [Lista ordenada] (//docs.code.org/weblab/ol/)** - `<ol></ol>`
 
+      CSD U2 L7 Overview:
+        markdown: |
+          # Visão global
+
+          Esta lição aborda como usar o conteúdo criado por outras pessoas em um site, respeitando os direitos do criador original desse conteúdo. Depois de estudar primeiro o licenciamento do Creative Commons, a turma aprende como adicionar imagens às páginas da web e atribuir a devida atribuição ao fazê-lo.
+
+          ## Vocabulário
+
+          * ** Citação ** - Uma citação ou referência a um livro, artigo ou autor, especialmente em um trabalho acadêmico.
+          * ** Direito autoral ** - o direito legal exclusivo, concedido a um remetente ou um cessionário para imprimir, publicar, executar, filmar ou gravar material literário, artístico ou musical e autorizar outros a fazer o mesmo.
+          * ** Creative Commons ** - Licenças públicas de direitos autorais que permitem a distribuição gratuita de uma obra protegida por direitos autorais. Uma licença CC é usada quando um autor deseja conceder às pessoas o direito de compartilhar, usar e desenvolver um trabalho que elas criaram.
+          * ** Propriedade Intelectual ** - Uma obra ou invenção que é o resultado da criatividade, como um manuscrito ou um design, ao qual se tem direitos e para o qual se pode solicitar uma patente, direitos autorais, marca comercial etc.
+
+          ## Código Introduzido
+
+          *  **[Image](//docs.code.org/weblab/img/)** - `<img />`
+
+          ## Recursos
+
+          * [Visão geral do Creative Commons] (https://www.youtube.com/watch?v=HKfqoPYJdVc) - Vídeo
+          * [Licenciando seu trabalho - Guia de atividades] (https://docs.google.com/document/d/1twenNK2xrjc4bhIXuKfMXFA2yocLsR7MK8ZPvi-HckI/export?format=pdf)
       CSD U2 Lesson 6 Overview:
         content1: descrição aqui
+        markdown: |
+          # Visão global
+
+          Nesta lição, abordamos problemas comuns que surgem ao criar páginas da Web em HTML. A classe corrigirá os erros em uma sequência de páginas da Web cada vez mais complexas encontradas no Code Studio e aprenderá a importância dos comentários, espaço em branco e recuo como ferramentas para facilitar a leitura das páginas da Web.
+          ## Vocabulário
+
+          * ** Bug ** - Parte de um programa que não funciona corretamente.
+          * ** Comentário ** - Um comentário é uma nota legível por programador no código fonte de um programa de computador.
+          * ** Depuração ** - Encontrando e corrigindo problemas no seu algoritmo ou programa.
+          * ** Recuo ** - A colocação do texto mais à direita ou esquerda, para separá-lo do texto circundante, o que ajuda a transmitir a estrutura do programa.
+          * ** Espaço em branco ** - Espaço em branco refere-se a qualquer caractere que aparece como um espaço em branco na tela, como um espaço, uma guia ou uma nova linha. O espaço em branco ajuda a separar diferentes partes do documento para facilitar a leitura.
+
+          ## Código Introduzido
+
+          *  **[Comment](//curriculum.code.org/documentation/weblab/comment/)** - `<!-- -->`
       CSD U2 Lesson 9 Overview:
         markdown: |
           # Visão global
@@ -863,6 +987,111 @@ pt-BR:
           * [Site pessoal - Guia do projeto] (https://docs.google.com/document/d/1sPdFBq1nrwG9742tu3sXQ93xWbCWmNdCgo0dv3eYfXY/export?format=pdf)
           * [Site pessoal - Revisão por pares] (https://docs.google.com/document/d/1B5QXF0ASAy3vHcFQilQo3Q3J3GiiuQxBxnZFg8WDYaw/export?format=pdf)
           * [Site Pessoal - Rubrica] (https://docs.google.com/document/d/16ddR5r96qvv_Ti5gWN-AcjvCx0-SP6B7shSp-caKuDI/export?format=pdf)
+      CSD U2 PSP Programming:
+        markdown: |+
+          # O Processo de Solução de Problemas para Programação
+
+          ## Defina
+          <img src="https://images.code.org/4684a4cd531d3750d2a11051f6e0729f-image-1493396308445.png" style="float:right; width: 250px;">
+
+          * Leia as instruções com cuidado para certificar-se de entender os objetivos
+          * Interprete o problema com suas próprias palavras
+          * Identifique qualquer nova habilidade que está sendo pedido para aplicar
+          * Procure pros problemas que você já resolveu que são similares a esse
+          * Se existir um código inicial, leia-o para entender o que ele faz.
+
+          ## Se prepare
+          * Escreva uma ideia por extenso em português ou pseudo código
+          * Escreva sua ideia em um rascunho
+          * Liste o que você já sabe como fazer e como não fazer ainda
+          * Descreva sua ideia a um colega de classe
+          * Revise programas similares que você já escreveu no passado
+
+          ## Tente
+          * Escreva de pouco em pouco
+          * Teste seu programa com frequência
+          * Utilize comentários para documentar o que seu código faz
+          * Aplique estratégias de depuração apropriadas
+          * Volte aos passos anteriores se ficar agarrado ou não souber se já resolveu o problema
+
+          ## Reflita
+          * Compare seu programa finalizado ao problema definido para ter certeza que resolveu todas as partes do problema
+          * Peça a um colega de classe para testar seu programa e verifique onde eles estão com dificuldade ou confusos
+          * Peça a um colega de classe para ler seu código para ter certeza de que sua documentação está clara e precisa
+          * Tente "quebrar" seu programa para verificar tipos de interações ou e entrada de dados que você poderia ter lidado melhor
+          * Identifique algumas alterações incrementais que você poderia fazer na próxima interação
+
+
+      CSD U2 PSP Programming_2018:
+        markdown: |+
+          # O Processo de Solução de Problemas para Programação
+
+          ## Defina
+          <img src="https://images.code.org/4684a4cd531d3750d2a11051f6e0729f-image-1493396308445.png" style="float:right; width: 250px;">
+
+          * Leia as instruções com cuidado para certificar-se de entender os objetivos
+          * Interprete o problema com suas próprias palavras
+          * Identifique qualquer nova habilidade que está sendo pedido para aplicar
+          * Procure pros problemas que você já resolveu que são similares a esse
+          * Se existir um código inicial, leia-o para entender o que ele faz.
+
+          ## Se prepare
+          * Escreva uma ideia por extenso em português ou pseudo código
+          * Escreva sua ideia em um rascunho
+          * Liste o que você já sabe como fazer e como não fazer ainda
+          * Descreva sua ideia a um colega de classe
+          * Revise programas similares que você já escreveu no passado
+
+          ## Tente
+          * Escreva de pouco em pouco
+          * Teste seu programa com frequência
+          * Utilize comentários para documentar o que seu código faz
+          * Aplique estratégias de depuração apropriadas
+          * Volte aos passos anteriores se ficar agarrado ou não souber se já resolveu o problema
+
+          ## Reflita
+          * Compare seu programa finalizado ao problema definido para ter certeza que resolveu todas as partes do problema
+          * Peça a um colega de classe para testar seu programa e verifique onde eles estão com dificuldade ou confusos
+          * Peça a um colega de classe para ler seu código para ter certeza de que sua documentação está clara e precisa
+          * Tente "quebrar" seu programa para verificar tipos de interações ou e entrada de dados que você poderia ter lidado melhor
+          * Identifique algumas alterações incrementais que você poderia fazer na próxima interação
+
+
+      CSD U2 PSP Programming_2018_2019:
+        markdown: |+
+          # O Processo de Solução de Problemas para Programação
+
+          ## Defina
+          <img src="https://images.code.org/4684a4cd531d3750d2a11051f6e0729f-image-1493396308445.png" style="float:right; width: 250px;">
+
+          * Leia as instruções com cuidado para certificar-se de entender os objetivos
+          * Interprete o problema com suas próprias palavras
+          * Identifique qualquer nova habilidade que está sendo pedido para aplicar
+          * Procure pros problemas que você já resolveu que são similares a esse
+          * Se existir um código inicial, leia-o para entender o que ele faz.
+
+          ## Se prepare
+          * Escreva uma ideia por extenso em português ou pseudo código
+          * Escreva sua ideia em um rascunho
+          * Liste o que você já sabe como fazer e como não fazer ainda
+          * Descreva sua ideia a um colega de classe
+          * Revise programas similares que você já escreveu no passado
+
+          ## Tente
+          * Escreva de pouco em pouco
+          * Teste seu programa com frequência
+          * Utilize comentários para documentar o que seu código faz
+          * Aplique estratégias de depuração apropriadas
+          * Volte aos passos anteriores se ficar agarrado ou não souber se já resolveu o problema
+
+          ## Reflita
+          * Compare seu programa finalizado ao problema definido para ter certeza que resolveu todas as partes do problema
+          * Peça a um colega de classe para testar seu programa e verifique onde eles estão com dificuldade ou confusos
+          * Peça a um colega de classe para ler seu código para ter certeza de que sua documentação está clara e precisa
+          * Tente "quebrar" seu programa para verificar tipos de interações ou e entrada de dados que você poderia ter lidado melhor
+          * Identifique algumas alterações incrementais que você poderia fazer na próxima interação
+
+
       CSD U2 Top Websites:
         markdown: |
           # Melhores sites nos EUA
@@ -1144,46 +1373,46 @@ pt-BR:
         content1: Combine a expressão booleana com a descrição em inglês.
         questions:
         - text: A rotação da sprite do cachorro é menor que a do gato?
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: A sprite x do cachorro é igual ao x da sprite do gato?
+        - text: A escala do sprite do cachorro é maior que a do gato?
+        - text: O x da escala do cachorro é maior que o x do gato?
+        - text: A sprite x do cachorro é igual ao x da sprite do gato?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: cachorro.rotacao &lt; gato.rotacao
+        - text: cachorro.x &lt; gato.x
+        - text: cachorro.escala &gt; gato.escala
+        - text: cachorro.x &gt; gato.x
+        - text: cachorro.x == gato.x
       CSD U3 - conditionals - Matching_2018:
         title: 'Combinando: operadores de comparação'
         content1: Combine a expressão booleana com a descrição em inglês.
         questions:
         - text: A rotação da sprite do cachorro é menor que a do gato?
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: A sprite x do cachorro é igual ao x da sprite do gato?
+        - text: A escala do sprite do cachorro é maior que a do gato?
+        - text: O x da escala do cachorro é maior que o x do gato?
+        - text: A sprite x do cachorro é igual ao x da sprite do gato?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: cachorro.rotacao &lt; gato.rotacao
+        - text: cachorro.x &lt; gato.x
+        - text: cachorro.escala &gt; gato.escala
+        - text: cachorro.x &gt; gato.x
+        - text: cachorro.x == gato.x
       CSD U3 - conditionals - Matching_2018_2019:
         title: 'Combinando: operadores de comparação'
         content1: Combine a expressão booleana com a descrição em inglês.
         questions:
         - text: A rotação da sprite do cachorro é menor que a do gato?
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: A sprite x do cachorro é igual ao x da sprite do gato?
+        - text: A escala do sprite do cachorro é maior que a do gato?
+        - text: O x da escala do cachorro é maior que o x do gato?
+        - text: A sprite x do cachorro é igual ao x da sprite do gato?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: cachorro.rotacao &lt; gato.rotacao
+        - text: cachorro.x &lt; gato.x
+        - text: cachorro.escala &gt; gato.escala
+        - text: cachorro.x &gt; gato.x
+        - text: cachorro.x == gato.x
       CSD U3 AnimationsMulti STOP project guide:
         markdown: |
           # Pare
@@ -1299,6 +1528,27 @@ pt-BR:
           ## Recursos
 
           * [Guia do Projeto - Jogo Defensor - Guia do Projeto] (https://docs.google.com/document/d/10tgS4d9feduPveRZSMzWV0TdyL6AL5VHHGFy_-m2XNQ/export?format=pdf)
+      CSD U3 Entertainment:
+        markdown: |+
+          # Iniciando sua pesquisa
+
+          Para saber mais sobre como a ciência da computação e a programação desempenham um papel no entretenimento, você precisará fazer algumas pesquisas. Tente pesquisar por "Ciência da Computação e &#95;&#95;&#95;&#95;&#95;&#95;" e experimentar diferentes tipos de entretenimento, como cinema, televisão, música, jogos, animação, moda, etc.
+
+
+      CSD U3 Entertainment_2018:
+        markdown: |+
+          # Iniciando sua pesquisa
+
+          Para saber mais sobre como a ciência da computação e a programação desempenham um papel no entretenimento, você precisará fazer algumas pesquisas. Tente pesquisar por "Ciência da Computação e &#95;&#95;&#95;&#95;&#95;&#95;" e experimentar diferentes tipos de entretenimento, como cinema, televisão, música, jogos, animação, moda, etc.
+
+
+      CSD U3 Entertainment_2018_2019:
+        markdown: |+
+          # Iniciando sua pesquisa
+
+          Para saber mais sobre como a ciência da computação e a programação desempenham um papel no entretenimento, você precisará fazer algumas pesquisas. Tente pesquisar por "Ciência da Computação e &#95;&#95;&#95;&#95;&#95;&#95;" e experimentar diferentes tipos de entretenimento, como cinema, televisão, música, jogos, animação, moda, etc.
+
+
       CSD U3 Functions Prediction define first:
         answers:
         - text: O quadrado vermelho será desenhado, mas o verde não. Você não pode
@@ -1311,11 +1561,14 @@ pt-BR:
           feedback: Funções poderão ser criadas em qualquer lugar no seu código. Ainda
             é uma boa ideia mantê-las agrupadas na parte inferior para que fiquem
             organizadas!
-        - correct: true
+        - text: Ambos os quadrados serão desenhados. Você pode criar funções em qualquer
+            lugar que você preferir no seu código.
+          correct: true
           feedback: Funções poderão ser criadas em qualquer lugar no seu código. Ainda
             é uma boa ideia mantê-las agrupadas na parte inferior para que fiquem
             organizadas!
-        - feedback: Funções poderão ser criadas em qualquer lugar no seu código. Ainda
+        - text: Nenhum quadrado será desenhado. Há um erro no código.
+          feedback: Funções poderão ser criadas em qualquer lugar no seu código. Ainda
             é uma boa ideia mantê-las agrupadas na parte inferior para que fiquem
             organizadas!
       CSD U3 Functions Prediction define first_2018:
@@ -1330,11 +1583,14 @@ pt-BR:
           feedback: Funções poderão ser criadas em qualquer lugar no seu código. Ainda
             é uma boa ideia mantê-las agrupadas na parte inferior para que fiquem
             organizadas!
-        - correct: true
+        - text: Ambos os quadrados serão desenhados. Você pode criar funções em qualquer
+            lugar que você preferir no seu código.
+          correct: true
           feedback: Funções poderão ser criadas em qualquer lugar no seu código. Ainda
             é uma boa ideia mantê-las agrupadas na parte inferior para que fiquem
             organizadas!
-        - feedback: Funções poderão ser criadas em qualquer lugar no seu código. Ainda
+        - text: Nenhum quadrado será desenhado. Há um erro no código.
+          feedback: Funções poderão ser criadas em qualquer lugar no seu código. Ainda
             é uma boa ideia mantê-las agrupadas na parte inferior para que fiquem
             organizadas!
       CSD U3 Functions Prediction define first_2018_2019:
@@ -1349,11 +1605,14 @@ pt-BR:
           feedback: Funções poderão ser criadas em qualquer lugar no seu código. Ainda
             é uma boa ideia mantê-las agrupadas na parte inferior para que fiquem
             organizadas!
-        - correct: true
+        - text: Ambos os quadrados serão desenhados. Você pode criar funções em qualquer
+            lugar que você preferir no seu código.
+          correct: true
           feedback: Funções poderão ser criadas em qualquer lugar no seu código. Ainda
             é uma boa ideia mantê-las agrupadas na parte inferior para que fiquem
             organizadas!
-        - feedback: Funções poderão ser criadas em qualquer lugar no seu código. Ainda
+        - text: Nenhum quadrado será desenhado. Há um erro no código.
+          feedback: Funções poderão ser criadas em qualquer lugar no seu código. Ainda
             é uma boa ideia mantê-las agrupadas na parte inferior para que fiquem
             organizadas!
       CSD U3 Functions SFLP:
@@ -1372,30 +1631,39 @@ pt-BR:
 
       CSD U3 Keypress Matching:
         title: 'Combinando: Respondendo a teclas pressionadas'
+        content1: Combine o bloco de pressionamento de tecla com a descrição de como
+          ele funciona. Sinta-se à vontade para voltar à bolha anterior se precisar
+          experimentar.
         questions:
-        - {}
-        - {}
-        - {}
+        - text: É verdade apenas uma vez quando a tecla é pressionada.
+        - text: É verdade apenas uma vez quando a tecla é liberada.
+        - text: É verdade enquanto a tecla é pressionada ou segurada.
         answers:
         - text: keyWentDown()
         - text: keyWentUp()
         - text: keyDown()
       CSD U3 Keypress Matching_2018:
         title: 'Combinando: Respondendo a teclas pressionadas'
+        content1: Combine o bloco de pressionamento de tecla com a descrição de como
+          ele funciona. Sinta-se à vontade para voltar à bolha anterior se precisar
+          experimentar.
         questions:
-        - {}
-        - {}
-        - {}
+        - text: É verdade apenas uma vez quando a tecla é pressionada.
+        - text: É verdade apenas uma vez quando a tecla é liberada.
+        - text: É verdade enquanto a tecla é pressionada ou segurada.
         answers:
         - text: keyWentDown()
         - text: keyWentUp()
         - text: keyDown()
       CSD U3 Keypress Matching_2018_2019:
         title: 'Combinando: Respondendo a teclas pressionadas'
+        content1: Combine o bloco de pressionamento de tecla com a descrição de como
+          ele funciona. Sinta-se à vontade para voltar à bolha anterior se precisar
+          experimentar.
         questions:
-        - {}
-        - {}
-        - {}
+        - text: É verdade apenas uma vez quando a tecla é pressionada.
+        - text: É verdade apenas uma vez quando a tecla é liberada.
+        - text: É verdade enquanto a tecla é pressionada ou segurada.
         answers:
         - text: keyWentDown()
         - text: keyWentUp()
@@ -1605,6 +1873,18 @@ pt-BR:
           * Volte ao [nível 12](12) para continuar trabalhando na animação dos peixes. Tente alterar aleatoriamente a rotação dos peixes para fazer parecer que eles estão nadando.
           * Volte ao [nível 13](13) para continuar trabalhando na animação das engrenagens. Tente adicionar mais engrenagens de tamanhos diferentes e aprimore a velocidade de cada rotação para garantir que as engrenagens se encaixem corretamente
           * Vá para [Laboratório Completos de Jogos] (/projects/gamelab/new) para criar uma nova animação do zero.
+      CSD U3 Project Build a Game SFLP:
+        markdown: |
+          # Visão global
+
+          A turma planeja e constrói jogos originais usando o guia do projeto das duas lições anteriores. Trabalhando individualmente ou em pares, a turma planeja, desenvolve e dá feedback sobre os jogos. Depois de incorporar o feedback dos colegas, a classe compartilha os jogos concluídos.
+
+
+          ## Recursos
+
+          * [Crie seu próprio jogo - Guia do projeto] (https://docs.google.com/document/d/1SBye25XfdnytxCrc6a_OtpcS02YsT99nyJ9Vjwp_zeo/export?format=pdf)
+          * [Faça o seu próprio jogo - Rubrica] (https://docs.google.com/document/d/1WChOizSb4gZsEbdER5KwYXj9c6Ogpeuv0AzegJ5HD8A/export?format=pdf)
+          * [Faça seu próprio jogo - Revisão por pares] (https://docs.google.com/document/d/1ORjDuRep39xwiFaz20_jF74eWB63FVtK2FIQhq7Wecg/export?format=pdf)
       CSD U3 SFLP Velocity:
         markdown: |
           # Visão global
@@ -1618,7 +1898,8 @@ pt-BR:
           * [sprite.rotationSpeed](//docs.code.org/gamelab/rotationSpeed/)
       CSD U3 Sprite Movement Predict Multi:
         questions:
-        - {}
+        - text: Leia este programa e especifique quais das seguintes animações serão
+            produzidas.
         answers:
         - text: "<img src='https://images.code.org/649915789345f5958475cd2b91e0630c-image-1491939133180.gif'
             style='border: 1px solid #ccc'>"
@@ -1631,7 +1912,8 @@ pt-BR:
             style='border: 1px solid #ccc'>"
       CSD U3 Sprite Movement Predict Multi_2018:
         questions:
-        - {}
+        - text: Leia este programa e especifique quais das seguintes animações serão
+            produzidas.
         answers:
         - text: "<img src='https://images.code.org/649915789345f5958475cd2b91e0630c-image-1491939133180.gif'
             style='border: 1px solid #ccc'>"
@@ -1644,7 +1926,8 @@ pt-BR:
             style='border: 1px solid #ccc'>"
       CSD U3 Sprite Movement Predict Multi_2018_2019:
         questions:
-        - {}
+        - text: Leia este programa e especifique quais das seguintes animações serão
+            produzidas.
         answers:
         - text: "<img src='https://images.code.org/649915789345f5958475cd2b91e0630c-image-1491939133180.gif'
             style='border: 1px solid #ccc'>"
@@ -1657,7 +1940,7 @@ pt-BR:
             style='border: 1px solid #ccc'>"
       CSD U3 Sprites intro predict multi:
         questions:
-        - {}
+        - text: Quando executado, onde o sprite <code> minhaSprite </code> será localizado?
         answers:
         - text: '<img src="https://images.code.org/9fe7b64b9f4f566213a02ce2fcc78af3-image-1491255143541.png"
             style="width: 150px; border: 1px solid">'
@@ -1670,7 +1953,7 @@ pt-BR:
             style="width: 150px; border: 1px solid">'
       CSD U3 Sprites intro predict multi_2018:
         questions:
-        - {}
+        - text: Quando executado, onde o sprite <code> minhaSprite </code> será localizado?
         answers:
         - text: '<img src="https://images.code.org/9fe7b64b9f4f566213a02ce2fcc78af3-image-1491255143541.png"
             style="width: 150px; border: 1px solid">'
@@ -1683,7 +1966,7 @@ pt-BR:
             style="width: 150px; border: 1px solid">'
       CSD U3 Sprites intro predict multi_2018_2019:
         questions:
-        - {}
+        - text: Quando executado, onde o sprite <code> minhaSprite </code> será localizado?
         answers:
         - text: '<img src="https://images.code.org/9fe7b64b9f4f566213a02ce2fcc78af3-image-1491255143541.png"
             style="width: 150px; border: 1px solid">'
@@ -1721,9 +2004,31 @@ pt-BR:
       CSD U3 combining rep_2018:
         title: título
         content1: descrição aqui
+        markdown: |+
+          ## Você pode decodificar essa string binária?
+
+
+
+          ![](https://images.code.org/3aa6cac930e44cdc71b8fdcb7b1babe9-image-1531247036544.23.16 AM.png)
+
+
+
+          ### Que informações você precisa para ajudá-lo a decodificá-lo?
+
       CSD U3 combining rep_2018_2019:
         title: título
         content1: descrição aqui
+        markdown: |+
+          ## Você pode decodificar essa string binária?
+
+
+
+          ![](https://images.code.org/3aa6cac930e44cdc71b8fdcb7b1babe9-image-1531247036544.23.16 AM.png)
+
+
+
+          ### Que informações você precisa para ajudá-lo a decodificá-lo?
+
       CSD U3 complex sprite movement SFLP:
         markdown: |+
           # Visão global
@@ -1732,6 +2037,8 @@ pt-BR:
 
 
       CSD U3 drawSprites placement match:
+        title: drawSprites
+        content1: Combine o código com a imagem que será produzida.
         questions:
         - text: <img src="https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08
             AM.png">
@@ -1751,6 +2058,8 @@ pt-BR:
         - text: <img src="https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28
             AM.png">
       CSD U3 drawSprites placement match_2019:
+        title: drawSprites
+        content1: Combine o código com a imagem que será produzida.
         questions:
         - text: <img src="https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08
             AM.png">
@@ -2043,21 +2352,72 @@ pt-BR:
       CSD U5 Encryption 1:
         title: título
         content1: descrição aqui
+        markdown: |
+          # Decodificando cadeias binárias
+
+          ![](https://images.code.org/6d8dcf1c1e6c2955fa767e9839af820e-image-1505420730035.24.20 PM.png)
+
+          ## Sistema de codificação:
+
+          ![](https://images.code.org/df5db2027cac3c16c4ef4b2b8f940d5d-image-1505420957117.28.48 PM.png) ![](https://images.code.org/4de0035c9053477fa6f5484800dc8140-image-1505420957118.28.39 PM.png)
+
+          ![](https://images.code.org/8335bef013e9655291fcfecf2c60fcd3-image-1505420957118.28.30 PM.png)  &nbsp;&nbsp; ![](https://images.code.org/ab3337f5b0848557c37fd114fe0d65b7-image-1505420957116.28.56 PM.png)
       CSD U5 Encryption 1_2018:
         title: título
         content1: descrição aqui
+        markdown: |
+          # Decodificando cadeias binárias
+
+          ![](https://images.code.org/6d8dcf1c1e6c2955fa767e9839af820e-image-1505420730035.24.20 PM.png)
+
+          ## Sistema de codificação:
+
+          ![](https://images.code.org/df5db2027cac3c16c4ef4b2b8f940d5d-image-1505420957117.28.48 PM.png) ![](https://images.code.org/4de0035c9053477fa6f5484800dc8140-image-1505420957118.28.39 PM.png)
+
+          ![](https://images.code.org/8335bef013e9655291fcfecf2c60fcd3-image-1505420957118.28.30 PM.png)  &nbsp;&nbsp; ![](https://images.code.org/ab3337f5b0848557c37fd114fe0d65b7-image-1505420957116.28.56 PM.png)
       CSD U5 Encryption 1_2018_2019:
         title: título
         content1: descrição aqui
+        markdown: |
+          # Decodificando cadeias binárias
+
+          ![](https://images.code.org/6d8dcf1c1e6c2955fa767e9839af820e-image-1505420730035.24.20 PM.png)
+
+          ## Sistema de codificação:
+
+          ![](https://images.code.org/df5db2027cac3c16c4ef4b2b8f940d5d-image-1505420957117.28.48 PM.png) ![](https://images.code.org/4de0035c9053477fa6f5484800dc8140-image-1505420957118.28.39 PM.png)
+
+          ![](https://images.code.org/8335bef013e9655291fcfecf2c60fcd3-image-1505420957118.28.30 PM.png)  &nbsp;&nbsp; ![](https://images.code.org/ab3337f5b0848557c37fd114fe0d65b7-image-1505420957116.28.56 PM.png)
       CSD U5 Encryption 2:
         title: Decodificando mensagens binárias
         content1: descrição aqui
+        markdown: |
+          # Decodificando cadeias binárias
+
+          ![](https://images.code.org/8d98818a95a736974cb4e6e5ab3717f4-image-1514928554045.24.20 PM.png)
+
+          * Você pode decodificar essa string binária?
+          * O que você precisa saber antes de decodificá-lo?
       CSD U5 Encryption 2_2018:
         title: Decodificando mensagens binárias
         content1: descrição aqui
+        markdown: |
+          # Decodificando cadeias binárias
+
+          ![](https://images.code.org/8d98818a95a736974cb4e6e5ab3717f4-image-1514928554045.24.20 PM.png)
+
+          * Você pode decodificar essa string binária?
+          * O que você precisa saber antes de decodificá-lo?
       CSD U5 Encryption 2_2018_2019:
         title: Decodificando mensagens binárias
         content1: descrição aqui
+        markdown: |
+          # Decodificando cadeias binárias
+
+          ![](https://images.code.org/8d98818a95a736974cb4e6e5ab3717f4-image-1514928554045.24.20 PM.png)
+
+          * Você pode decodificar essa string binária?
+          * O que você precisa saber antes de decodificá-lo?
       CSD U5 L13 SFLP Interpreting Data:
         title: título
         content1: descrição aqui
@@ -2082,33 +2442,265 @@ pt-BR:
       CSD U5 data visualization:
         title: título
         content1: descrição aqui
+        markdown: |
+          ## Melhor animal de estimação de Classe
+          ### Aqui estão três maneiras diferentes de mostrar os resultados de uma votação para o melhor animal de estimação de classe.
+
+          ![](https://images.code.org/7c9f4de7b0028ab929a3a10494535525-image-1488389767180.png) ![](https://images.code.org/7e14d63776050e7aad994ee2e47cb7ce-image-1488389776283.png) ![](https://images.code.org/cf0dd06d2e0ccdf9573e204d24aad90a-image-1488389830915.png)
+
+          ### Qual deles torna mais fácil para um humano tomar uma decisão sobre qual animal de estimação é o mais popular?
+          ### Qual deles torna mais fácil para um computador tomar uma decisão?
       CSD U5 data visualization_2018:
         title: título
         content1: descrição aqui
+        markdown: |
+          ## Melhor animal de estimação de Classe
+          ### Aqui estão três maneiras diferentes de mostrar os resultados de uma votação para o melhor animal de estimação de classe.
+
+          ![](https://images.code.org/7c9f4de7b0028ab929a3a10494535525-image-1488389767180.png) ![](https://images.code.org/7e14d63776050e7aad994ee2e47cb7ce-image-1488389776283.png) ![](https://images.code.org/cf0dd06d2e0ccdf9573e204d24aad90a-image-1488389830915.png)
+
+          ### Qual deles torna mais fácil para um humano tomar uma decisão sobre qual animal de estimação é o mais popular?
+          ### Qual deles torna mais fácil para um computador tomar uma decisão?
       CSD U5 data visualization_2018_2019:
         title: título
         content1: descrição aqui
+        markdown: |
+          ## Melhor animal de estimação de Classe
+          ### Aqui estão três maneiras diferentes de mostrar os resultados de uma votação para o melhor animal de estimação de classe.
+
+          ![](https://images.code.org/7c9f4de7b0028ab929a3a10494535525-image-1488389767180.png) ![](https://images.code.org/7e14d63776050e7aad994ee2e47cb7ce-image-1488389776283.png) ![](https://images.code.org/cf0dd06d2e0ccdf9573e204d24aad90a-image-1488389830915.png)
+
+          ### Qual deles torna mais fácil para um humano tomar uma decisão sobre qual animal de estimação é o mais popular?
+          ### Qual deles torna mais fácil para um computador tomar uma decisão?
       CSD U5 student record:
         title: título
         content1: descrição aqui
+        markdown: "# Registro de estudante\n\n<div style=\"float: right; height:209px;
+          width: 456px; background-color: black;\">\n  <div style=\"float:left; height:52px;
+          width: 40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">0</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  \n  <div style=\"float:left; height:52px;
+          width: 40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">1</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  \n  <div style=\"float:left; height:52px;
+          width: 40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">2</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  \n  <div style=\"float:left; height:53px;
+          width: 40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">3</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n</div>\n\n## O registro do aluno contém informações
+          de acordo com as seguintes regras:\n\n * <h4>Os primeiros oito bits armazenam
+          a nota do aluno como um número binário. </h4>\n * <h4>O segundo oito armazena
+          a idade do aluno como um número binário. </h4>\n * <h4>Os próximos oito
+          armazenam a primeira inicial do aluno em ASCII. </h4>\n * <h4>Os últimos
+          oito armazenam a última inicial do aluno em ASCII. </h4>\n\n<br/>\n<br/>\n"
       CSD U5 student record_2018:
         title: título
         content1: descrição aqui
+        markdown: "# Registro de estudante\n\n<div style=\"float: right; height:209px;
+          width: 456px; background-color: black;\">\n  <div style=\"float:left; height:52px;
+          width: 40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">0</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  \n  <div style=\"float:left; height:52px;
+          width: 40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">1</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  \n  <div style=\"float:left; height:52px;
+          width: 40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">2</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  \n  <div style=\"float:left; height:53px;
+          width: 40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">3</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n</div>\n\n## O registro do aluno contém informações
+          de acordo com as seguintes regras:\n\n * <h4>Os primeiros oito bits armazenam
+          a nota do aluno como um número binário. </h4>\n * <h4>O segundo oito armazena
+          a idade do aluno como um número binário. </h4>\n * <h4>Os próximos oito
+          armazenam a primeira inicial do aluno em ASCII. </h4>\n * <h4>Os últimos
+          oito armazenam a última inicial do aluno em ASCII. </h4>\n\n<br/>\n<br/>\n"
       CSD U5 student record_2018_2019:
         title: título
         content1: descrição aqui
+        markdown: "# Registro de estudante\n\n<div style=\"float: right; height:209px;
+          width: 456px; background-color: black;\">\n  <div style=\"float:left; height:52px;
+          width: 40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">0</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  \n  <div style=\"float:left; height:52px;
+          width: 40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">1</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  \n  <div style=\"float:left; height:52px;
+          width: 40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">2</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  \n  <div style=\"float:left; height:53px;
+          width: 40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">3</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n</div>\n\n## O registro do aluno contém informações
+          de acordo com as seguintes regras:\n\n * <h4>Os primeiros oito bits armazenam
+          a nota do aluno como um número binário. </h4>\n * <h4>O segundo oito armazena
+          a idade do aluno como um número binário. </h4>\n * <h4>Os próximos oito
+          armazenam a primeira inicial do aluno em ASCII. </h4>\n * <h4>Os últimos
+          oito armazenam a última inicial do aluno em ASCII. </h4>\n\n<br/>\n<br/>\n"
       CSD U5L02 autoSFLP_2019:
         markdown: "# Esta pesquisa ainda está em desenvolvimento\n"
       CSD U6 LED create intro:
         title: Faça um aplicativo usando o LED
         content1: descrição aqui
+        markdown: |
+          # Aplicativos LED
+
+          No último nível, você criou um aplicativo para controlar o LED com diferentes botões na tela. Nos próximos dois níveis, você verá outros exemplos de aplicativos e poderá criar um de seus próprios.
+
+          Ao examinar os exemplos, pense em qual código pode ser útil para o aplicativo que você e seu parceiro desejam criar.
       CSD U6 LED create intro_2018:
         title: Faça um aplicativo usando o LED
         content1: descrição aqui
+        markdown: |
+          # Aplicativos LED
+
+          No último nível, você criou um aplicativo para controlar o LED com diferentes botões na tela. Nos próximos dois níveis, você verá outros exemplos de aplicativos e poderá criar um de seus próprios.
+
+          Ao examinar os exemplos, pense em qual código pode ser útil para o aplicativo que você e seu parceiro desejam criar.
       CSD U6 LED create intro_2018_2019:
         title: Faça um aplicativo usando o LED
         content1: descrição aqui
+        markdown: |
+          # Aplicativos LED
+
+          No último nível, você criou um aplicativo para controlar o LED com diferentes botões na tela. Nos próximos dois níveis, você verá outros exemplos de aplicativos e poderá criar um de seus próprios.
+
+          Ao examinar os exemplos, pense em qual código pode ser útil para o aplicativo que você e seu parceiro desejam criar.
       CSD U6 array multi:
+        title: Usando Vetores
         questions:
         - {}
         answers:
@@ -2122,6 +2714,7 @@ pt-BR:
             PM.png" width="200px"
           correct: true
       CSD U6 array multi_2018:
+        title: Usando Vetores
         questions:
         - {}
         answers:
@@ -2135,6 +2728,7 @@ pt-BR:
             PM.png" width="200px"
           correct: true
       CSD U6 array multi_2018_2019:
+        title: Usando Vetores
         questions:
         - {}
         answers:
@@ -2147,6 +2741,21 @@ pt-BR:
         - text: <img src="https://images.code.org/d220337a4cd1ec31b0a5bb70eaf6bffe-image-1512686800364.42.00
             PM.png" width="200px"
           correct: true
+      CSD U6 circuit smart bike blinker build:
+        markdown: |
+          # Construa seu pisca-pisca
+
+          Usando o circuito que você acabou de construir, retorne ao seu protótipo de bicicleta inteligente e adicione o pisca-pisca.
+      CSD U6 circuit smart bike blinker build_2018:
+        markdown: |
+          # Construa seu pisca-pisca
+
+          Usando o circuito que você acabou de construir, retorne ao seu protótipo de bicicleta inteligente e adicione o pisca-pisca.
+      CSD U6 circuit smart bike blinker build_2018_2019:
+        markdown: |
+          # Construa seu pisca-pisca
+
+          Usando o circuito que você acabou de construir, retorne ao seu protótipo de bicicleta inteligente e adicione o pisca-pisca.
       CSD U6 final intro:
         content1: descrição aqui
       CSD U6 final intro_2018:
@@ -2171,7 +2780,7 @@ pt-BR:
       CSD U6 setProperty predict multi:
         title: Faça uma Predição
         questions:
-        - {}
+        - text: Leia o código e preveja como esse aplicativo será quando executar.
         answers:
         - text: '<img src="https://images.code.org/f1bc9eacc1144bee60b1f04373e583e3-image-1507311692368.png"
             style="max-width: 100px;">'
@@ -2185,7 +2794,7 @@ pt-BR:
       CSD U6 setProperty predict multi_2018:
         title: Faça uma Predição
         questions:
-        - {}
+        - text: Leia o código e preveja como esse aplicativo será quando executar.
         answers:
         - text: '<img src="https://images.code.org/f1bc9eacc1144bee60b1f04373e583e3-image-1507311692368.png"
             style="max-width: 100px;">'
@@ -2366,6 +2975,111 @@ pt-BR:
 
           * [Fazer uma recomendação] (https://docs.google.com/document/d/1pKeFH1OkWzfg3MFTPCezhK_r4p8xu7QUkPKSf5vV41c/export?format=pdf) - Guia do projeto
           * [Faça uma recomendação] (https://docs.google.com/document/d/1ZdA-VIdyPZLONBFr7ojFeNfHCHYmacbrrphiR31k6Bk/export?format=pdf) - Revisão por pares
+      CSDU6 Innovation:
+        markdown: |+
+          # Pesquisa em Inovação
+
+          Escolha um dos tópicos a seguir para investigar. Você terá que encontrar informações sobre alguns dos mais recentes dispositivos de computação inovadores relacionados à sua categoria.
+
+          ## Tecnologia utilizável
+          A tecnologia utilizável inclui qualquer forma de computação projetada para ser usada pelo usuário, seja ela incorporada na roupa ou usada como acessório. Muitos utilizáveis, como pedômetros inteligentes, se sobrepõem um pouco com a saúde e a segurança, pois o dispositivo é tanto usável como destinado a ajudar a melhorar sua saúde pessoal.
+
+          ## Saúde e segurança
+          O amplo tópico inclui tanto a tecnologia do consumidor (coisas que você pode usar para melhorar sua saúde ou segurança) quanto a tecnologia profissional (equipamento que um médico ou outro profissional pode usar).
+
+          ## Agricultura
+          A agricultura pode não ser um assunto óbvio, mas as inovações tecnológicas tiveram um impacto enorme na maneira como abordamos a agricultura. Isso inclui incorporar computadores aos equipamentos agrícolas existentes, usar sensores e robótica para monitorar culturas e analisar dados para melhorar a eficiência e a sustentabilidade.
+
+          ## Manufacturing
+          Avanços em prototipagem rápida, robótica industrial e automação tiveram um grande impacto sobre como as mercadorias são produzidas. Quer seja a tecnologia para permitir a produção em pequena escala acessível (como impressoras 3D e cortadores a laser) ou a integração de computadores no trabalho de fábrica, há muitas áreas interessantes para pesquisar aqui.
+
+          ## Arte e Design
+          A interseção entre expressão artística e computação pode produzir resultados impressionantes e inesperados. Embora seja menos provável que você encontre produtos disponíveis comercialmente relacionados à arte e ao design, você encontrará uma grande variedade de criações caseiras que usam todas as maneiras de dispositivos de computação de maneiras criativas e expressivas.
+
+          ## Lar inteligente
+          O sonho de uma casa que compreende e até antecipa as suas necessidades está mais perto do que nunca. Se controlado explicitamente através de comandos de voz, ou usando sensores para monitorar e responder às condições de mudança, os dispositivos domésticos inteligentes cuidam de qualquer número de tarefas mundanas ou repetitivas em casa.
+
+
+          # Considerações sobre pesquisa
+
+          Ao pesquisar dispositivos no seu tópico, tenha as seguintes considerações em mente:
+
+          * Foco em soluções baseadas em hardware sobre programas de software
+          * Concentre-se em inovações recentes sobre notícias antigas
+          * Siga o que te interessa
+
+          Além dos sites recomendados listados para cada tópico, considere olhar para os vários sites de financiamento colaborativo (como Kickstarter e Indiegogo) para ver os produtos que ainda não chegaram ao mercado.
+
+      CSDU6 Innovation_2018:
+        markdown: |+
+          # Pesquisa em Inovação
+
+          Escolha um dos tópicos a seguir para investigar. Você terá que encontrar informações sobre alguns dos mais recentes dispositivos de computação inovadores relacionados à sua categoria.
+
+          ## Tecnologia utilizável
+          A tecnologia utilizável inclui qualquer forma de computação projetada para ser usada pelo usuário, seja ela incorporada na roupa ou usada como acessório. Muitos utilizáveis, como pedômetros inteligentes, se sobrepõem um pouco com a saúde e a segurança, pois o dispositivo é tanto usável como destinado a ajudar a melhorar sua saúde pessoal.
+
+          ## Saúde e segurança
+          O amplo tópico inclui tanto a tecnologia do consumidor (coisas que você pode usar para melhorar sua saúde ou segurança) quanto a tecnologia profissional (equipamento que um médico ou outro profissional pode usar).
+
+          ## Agricultura
+          A agricultura pode não ser um assunto óbvio, mas as inovações tecnológicas tiveram um impacto enorme na maneira como abordamos a agricultura. Isso inclui incorporar computadores aos equipamentos agrícolas existentes, usar sensores e robótica para monitorar culturas e analisar dados para melhorar a eficiência e a sustentabilidade.
+
+          ## Manufacturing
+          Avanços em prototipagem rápida, robótica industrial e automação tiveram um grande impacto sobre como as mercadorias são produzidas. Quer seja a tecnologia para permitir a produção em pequena escala acessível (como impressoras 3D e cortadores a laser) ou a integração de computadores no trabalho de fábrica, há muitas áreas interessantes para pesquisar aqui.
+
+          ## Arte e Design
+          A interseção entre expressão artística e computação pode produzir resultados impressionantes e inesperados. Embora seja menos provável que você encontre produtos disponíveis comercialmente relacionados à arte e ao design, você encontrará uma grande variedade de criações caseiras que usam todas as maneiras de dispositivos de computação de maneiras criativas e expressivas.
+
+          ## Lar inteligente
+          O sonho de uma casa que compreende e até antecipa as suas necessidades está mais perto do que nunca. Se controlado explicitamente através de comandos de voz, ou usando sensores para monitorar e responder às condições de mudança, os dispositivos domésticos inteligentes cuidam de qualquer número de tarefas mundanas ou repetitivas em casa.
+
+
+          # Considerações sobre pesquisa
+
+          Ao pesquisar dispositivos no seu tópico, tenha as seguintes considerações em mente:
+
+          * Foco em soluções baseadas em hardware sobre programas de software
+          * Concentre-se em inovações recentes sobre notícias antigas
+          * Siga o que te interessa
+
+          Além dos sites recomendados listados para cada tópico, considere olhar para os vários sites de financiamento colaborativo (como Kickstarter e Indiegogo) para ver os produtos que ainda não chegaram ao mercado.
+
+      CSDU6 Innovation_2018_2019:
+        markdown: |+
+          # Pesquisa em Inovação
+
+          Escolha um dos tópicos a seguir para investigar. Você terá que encontrar informações sobre alguns dos mais recentes dispositivos de computação inovadores relacionados à sua categoria.
+
+          ## Tecnologia utilizável
+          A tecnologia utilizável inclui qualquer forma de computação projetada para ser usada pelo usuário, seja ela incorporada na roupa ou usada como acessório. Muitos utilizáveis, como pedômetros inteligentes, se sobrepõem um pouco com a saúde e a segurança, pois o dispositivo é tanto usável como destinado a ajudar a melhorar sua saúde pessoal.
+
+          ## Saúde e segurança
+          O amplo tópico inclui tanto a tecnologia do consumidor (coisas que você pode usar para melhorar sua saúde ou segurança) quanto a tecnologia profissional (equipamento que um médico ou outro profissional pode usar).
+
+          ## Agricultura
+          A agricultura pode não ser um assunto óbvio, mas as inovações tecnológicas tiveram um impacto enorme na maneira como abordamos a agricultura. Isso inclui incorporar computadores aos equipamentos agrícolas existentes, usar sensores e robótica para monitorar culturas e analisar dados para melhorar a eficiência e a sustentabilidade.
+
+          ## Manufacturing
+          Avanços em prototipagem rápida, robótica industrial e automação tiveram um grande impacto sobre como as mercadorias são produzidas. Quer seja a tecnologia para permitir a produção em pequena escala acessível (como impressoras 3D e cortadores a laser) ou a integração de computadores no trabalho de fábrica, há muitas áreas interessantes para pesquisar aqui.
+
+          ## Arte e Design
+          A interseção entre expressão artística e computação pode produzir resultados impressionantes e inesperados. Embora seja menos provável que você encontre produtos disponíveis comercialmente relacionados à arte e ao design, você encontrará uma grande variedade de criações caseiras que usam todas as maneiras de dispositivos de computação de maneiras criativas e expressivas.
+
+          ## Lar inteligente
+          O sonho de uma casa que compreende e até antecipa as suas necessidades está mais perto do que nunca. Se controlado explicitamente através de comandos de voz, ou usando sensores para monitorar e responder às condições de mudança, os dispositivos domésticos inteligentes cuidam de qualquer número de tarefas mundanas ou repetitivas em casa.
+
+
+          # Considerações sobre pesquisa
+
+          Ao pesquisar dispositivos no seu tópico, tenha as seguintes considerações em mente:
+
+          * Foco em soluções baseadas em hardware sobre programas de software
+          * Concentre-se em inovações recentes sobre notícias antigas
+          * Siga o que te interessa
+
+          Além dos sites recomendados listados para cada tópico, considere olhar para os vários sites de financiamento colaborativo (como Kickstarter e Indiegogo) para ver os produtos que ainda não chegaram ao mercado.
+
       ConditionalsWithCards-Unplugged:
         markdown: |
           # Condicionais com Cartas
@@ -2384,6 +3098,44 @@ pt-BR:
           foi feito em um nível anterior ou combine conceitos entre os projetos. Experimente
           todos, escolha o seu favorito e gaste seu tempo trabalhando para que este
           projeto se torne o seu\n"
+      Design a Screen for your App_2018:
+        markdown: |
+          # Simulando seu App
+
+          Agora que você tem um pouco de experiência movendo elementos no App Lab, você pode começar a trabalhar com a simulação do seu próprio app. Com o seu grupo, divida as telas para que todos estejam trabalhando em telas diferentes.
+
+          Já que você estará dividindo o trabalho, você vai querer realizar um planejamento a frente para decidir em um visual e funcionamento comum a todas suas páginas. Por exemplo, você irá querer acordar em coisas como:
+
+          * Onde os botões de navegação serão colocados?
+          * Quais cores irão ser utilizadas para fundos de tela, textos e botões
+          * Qual o estilo e layout padrão?
+
+          # Espaçamento
+
+          Na próxima aula você irá irá combinar todas as telas dos membros do seu time em apenas um app. Para ter certeza de que os IDs de uma página não entrem em conflito com o de outra, você precisará incluir um único _espaçamento_ para sua página. Isso será algo que você irá adicionar no início de cada id para que seu elemento não entre em conflito com outros quando você juntar todas as telas. Seu espaçamento deve ser o ID da sua tela com um sublinhado no final. Por exemplo, se você estiver fazendo a página inicial, você pode utilizar "home_" como seu espaçamento - o que gerará IDs como:
+
+          * "home_title"
+          * "home_loginButton"
+          * "home_logo"
+      Design a Screen for your App_2018_2019:
+        markdown: |
+          # Simulando seu App
+
+          Agora que você tem um pouco de experiência movendo elementos no App Lab, você pode começar a trabalhar com a simulação do seu próprio app. Com o seu grupo, divida as telas para que todos estejam trabalhando em telas diferentes.
+
+          Já que você estará dividindo o trabalho, você vai querer realizar um planejamento a frente para decidir em um visual e funcionamento comum a todas suas páginas. Por exemplo, você irá querer acordar em coisas como:
+
+          * Onde os botões de navegação serão colocados?
+          * Quais cores irão ser utilizadas para fundos de tela, textos e botões
+          * Qual o estilo e layout padrão?
+
+          # Espaçamento
+
+          Na próxima aula você irá irá combinar todas as telas dos membros do seu time em apenas um app. Para ter certeza de que os IDs de uma página não entrem em conflito com o de outra, você precisará incluir um único _espaçamento_ para sua página. Isso será algo que você irá adicionar no início de cada id para que seu elemento não entre em conflito com outros quando você juntar todas as telas. Seu espaçamento deve ser o ID da sua tela com um sublinhado no final. Por exemplo, se você estiver fazendo a página inicial, você pode utilizar "home_" como seu espaçamento - o que gerará IDs como:
+
+          * "home_title"
+          * "home_loginButton"
+          * "home_logo"
       DesigningForAccessibilityMarkdownLevel_2019:
         markdown: |
           # Desenhando para Acessibilidade
@@ -2413,6 +3165,40 @@ pt-BR:
         markdown: "# Envelopes de Variáveis\n\nVariáveis nos dão muita liberdade em
           ciências da computação. Esta aula ajuda a explicar o que são variáveis e
           como nós podemos usá-las de muitas formas diferentes. \n"
+      Example App Types_2018:
+        markdown: |
+          # Exemplos de tipos de aplicativos
+
+          Nos níveis a seguir, você vê vários aplicativos de exemplo diferentes. Eles darão uma idéia de como seria a UI (interface do usuário) para aplicativos com objetivos diferentes.
+
+          Para cada aplicativo de exemplo:
+
+          * Clique no exemplo para ter uma ideia de como ele funciona.
+          * No guia de atividades, anote todos os recursos ou elementos da interface do usuário que encontrar e para que são usados.
+          * Discuta com seus grupos como esse aplicativo e qualquer um dos recursos da interface do usuário podem ser aplicados ao tópico escolhido.
+
+          # Uma observação sobre funcionalidade
+
+          Esses aplicativos são _protótipos_; eles permitem que o usuário interaja com o design sem se preocupar com a funcionalidade subjacente. Por exemplo, quando você usa o aplicativo Quiz, cada pergunta sempre responde da mesma maneira, independentemente de qual resposta você escolher.
+
+          Concentrando-se primeiro em um protótipo interativo, você pode aprender muito sobre como os usuários podem usar seu aplicativo antes de investir muita energia para fazê-lo realmente funcionar.
+      Example App Types_2018_2019:
+        markdown: |
+          # Exemplos de tipos de aplicativos
+
+          Nos níveis a seguir, você vê vários aplicativos de exemplo diferentes. Eles darão uma idéia de como seria a UI (interface do usuário) para aplicativos com objetivos diferentes.
+
+          Para cada aplicativo de exemplo:
+
+          * Clique no exemplo para ter uma ideia de como ele funciona.
+          * No guia de atividades, anote todos os recursos ou elementos da interface do usuário que encontrar e para que são usados.
+          * Discuta com seus grupos como esse aplicativo e qualquer um dos recursos da interface do usuário podem ser aplicados ao tópico escolhido.
+
+          # Uma observação sobre funcionalidade
+
+          Esses aplicativos são _protótipos_; eles permitem que o usuário interaja com o design sem se preocupar com a funcionalidade subjacente. Por exemplo, quando você usa o aplicativo Quiz, cada pergunta sempre responde da mesma maneira, independentemente de qual resposta você escolher.
+
+          Concentrando-se primeiro em um protótipo interativo, você pode aprender muito sobre como os usuários podem usar seu aplicativo antes de investir muita energia para fazê-lo realmente funcionar.
       ForLoopFun-Unplugged:
         markdown: |
           # Divirta-se com Laços For
@@ -2480,7 +3266,7 @@ pt-BR:
           correct: true
         - text: "/script_assets/k_1_images/artist_images/E-S-W-N.png"
         - text: "/script_assets/k_1_images/artist_images/N-E-S-W.png"
-        - text: "/script_assets/k_1_images/artist_images/N-E-S-W.png"
+        - text: "/script_assets/k_1_images/artist_images/N|E|S|W.png"
       K-1 Artist 2 Match 2:
         title: Associação
         content2: Associe as formas com base no tipo.
@@ -2744,9 +3530,61 @@ pt-BR:
           Depois de um tempo brincando com isso, você deve juntar com alguém - dupla, um grupo ou a classe inteira - para discutir o que você encontrou e mostrar que você sabe o que está acontecendo e as várias maneiras de usar a ferramenta.
 
 
+      OPD-K5 About:
+        markdown: |
+          # Vamos começar: Sobre este Curso
+
+          ## Visão Geral do Curso
+
+          Este curso tem como objetivo apresentar o currículo e os recursos de Fundamentos de Ciências da Computação da Code.org para professores. Através de leituras, visualização de vídeos, solução de quebra-cabeças interativos e reflexões sobre o aprendizado, você irá desenvolver seu próprio entendimento enquanto se prepara para ensinar ciências da computação em sua sala de aula.
+
+          ## Objetivos de Aprendizagem
+
+          Ao completarem este curso on-line, os participantes irão:
+
+          - Aprender os fundamentos básicos de ciências da computação
+          - Rever as melhores práticas para ensinar estes fundamentos aos estudantes
+          - Acessar currículo e recursos gratuitos para professores
+          - Planejar como começar a ensinar os Fundamentos de Ciências da Computação
+          - Conectar-se a uma comunidade de educadores que estão trazendo mudanças positivas às suas salas de aula através da codificação
+
+          ## Pré-requisitos
+
+          Nenhuma experiência prévia com codificação ou ensino de ciências da computação é presumida. Este é um curso para iniciantes.
+
+          > **Uma Observação sobre Audiência:** Este curso é focado no currículo gratuito de Fundamentos de Ciências da Computação da Code.org, no contexto dos estudantes de ensino fundamental. Embora muitos conceitos podem ser aplicados a qualquer curso de CC, se você quiser ensinar um currículo de ciências da computação mais avançado (por exemplo, um de nossos cursos [Middle](https://code.org/educate/csd) ou [High school](https://code.org/educate/csp)), recomendamos que você conheça também [oportunidades de desenvolvimento profissional avançadas](https://code.org/educate/professional-learning/middle-high).
+
+          ## Duração do Curso
+
+          A conclusão deste curso on-line deve levar entre 3-7 horas, dependendo do seu conhecimento prévio e do quão profundo nos recursos do Code.org você deseja ir.
+      OPD-K5 PreSurvey:
+        markdown: |+
+          # Vamos começar -> Responda à pesquisa preliminar
+
+          Nós queremos que você obtenha o máximo de benefícios deste desenvolvimento profissional. Por este motivo, pedimos para você responder [esta rápida pesquisa](https://form.jotform.com/90556900301146). A pesquisa irá fazê-lo refletir nos seus objetivos para este curso, e irá nos dizer um pouco sobre quem você é e como poderemos ajudá-lo.
+
+
+          <a class="btn btn-large btn-primary" href="https://form.jotform.com/90556900301146?user_id=<user_id/>">Responder à pesquisa preliminar</a>
+
       OPD-K5 Stage3aGo:
         title: título
         content1: descrição aqui
+      OPD-K5 Welcome 2:
+        markdown: |+
+          # Vamos começar > Cursos Fundamentais de Ciências da Computação
+
+          O objetivo do desenvolvimento profissional do Code.org é preparar professores como você a integrar ciências da computação às atividades de sala de aula, além de suportar seu crescimento como professores. Após concluir este curso on-line, você estará apto a lecionar um ou mais dos seguintes cursos de Fundamentos em Ciências da Computação da Code.org em sua sala de aula:
+
+           - **[Curso A](http://studio.code.org/s/coursea)**: aproximadamente 12 horas (Preparatório)
+           - **[Curso B](http://studio.code.org/s/courseb)**: aproximadamente 12 horas (Ano 1)
+           - **[Curso C](http://studio.code.org/s/coursec)**: aproximadamente 18 horas (Ano 2)
+           - **[Curso D](http://studio.code.org/s/coursed)**: aproximadamente 18 horas (Ano 3)
+           - **[Curso E](http://studio.code.org/s/coursee)**: aproximadamente 18 horas (Ano 4)
+           - **[Curso F](http://studio.code.org/s/coursef)**: aproximadamente 20 horas (Ano 5)
+           - **[Fundamentos em Ciências da Computação (CC) Espresso](http://studio.code.org/s/express)**: aproximadamente 20 horas (Idades 8+)
+           - **[Fundamentos em Ciências da Computação (CC) Pré-espresso](http://studio.code.org/s/pre-express)**: aproximadamente 20 horas (Idades 4-8)
+
+
       PicturingData-Unplugged:
         markdown: |
           # Retratando Dados
@@ -2801,6 +3639,96 @@ pt-BR:
           # Simão Diz
 
           Jogue um jogo e pense sobre quais comandos são necessários para obter o resultado certo.
+      Social Sleuth:
+        markdown: |+
+          # Investigação Social
+
+          Você vai precisar da <a href="https://docs.google.com/document/d/1A9q31rwrBA7tZZcZ3KZqjMb30UncM-eycwMvYgj9os4/edit#">Planilha de investigação social</a> para completar essa atividade.
+
+          ## Perfis
+
+          Clique na foto de cada perfil para abrir-lo.
+
+          ### FaceSpace
+
+          | FaceSpace: Lizzie Dell  |  FaceSpace: John T | FaceSpace: Haley G.  |
+          | ---------  | ------ |  ------ |
+          | <a href="https://codeprojects.org/F-S5X0IfPmaq09YxGCbOFt3yo4N4PibaA1FBsc4iSdU/" target="_blank">  <img src="https://images.code.org/178adb09adb079a9cf8f465453f9da34-image-1480624941354.42.11 PM.png" style="width:400px"> </a> | <a href="https://codeprojects.org/6qyeEpRZRNkkrkkEduW8G_VO0Y-W2Z6B2Xn5pbLsUpw/" target="_blank"><img src="https://images.code.org/5d141433497fc107a60f0c2e3c63cca8-image-1480624947223.41.59 PM.png" style="width:400px"></a>  |<a href="https://codeprojects.org/7vPoGl6YA2bop1bPaIwpYX4_ubrkEBBFau_8s3JGMoo/" target="_blank">  <img src="https://images.code.org/ced7e2ae3c4fc17b6e278de8339e9498-image-1480626229324.02.56 PM.png" style="width:400px"> </a> |
+
+
+          ### Chirpr
+
+          | Chirpr: @johnsnow  |  Chirpr:@flyinghail | Chirpr: @lillizard |
+          | ---------  | ------ |  ------ |
+          | <a href="https://codeprojects.org/F-CPrGMcIPZF27RUX8Z_0Qb4KFSCvlU96VSWV7IBD98/" target="_blank">  <img src="https://images.code.org/3a5e7e1136382288f1122354cf494783-image-1480625415782.49.59 PM.png" style="width:400px"> </a> | <a href="https://codeprojects.org/Kff1I24rG71I-TnC--Uw5hTqZUAWO3iTzzHRHQ3h90U/" target="_blank">  <img src="https://images.code.org/c4ae8d208cfd5cb211d74f1ca4259210-image-1480627944701.31.37 PM.png" style="width:400px"> </a> |<a href="https://codeprojects.org/c4e3JuM-nCcmYF4XbbxpJ4pX51wyClVZCDYr6HiMyHg/" target="_blank">  <img src="https://images.code.org/42fc1b77b07fbcb4d143a32f1208296f-image-1493301869142.03.52 AM.png" style="width:400px"> </a> |
+
+
+          ### instantframe
+
+          | instantframe: johnsnow  | instantframe: @photolizzie | instantframe:@desertrider |
+          | ---------  | ------ |  ------ |
+          | <a href="https://codeprojects.org/5Zw4FvstrOYxANYH2HFbV_mVuY-QWfrsdgga9S3DGxs/" target="_blank">  <img src="https://images.code.org/290cb1409343d57ab5ab9be93085004d-image-1480625573589.51.31 PM.png" style="width:400px"> </a> | <a href="https://codeprojects.org/JXB8ULbAJJHzC-hHoiiZFxZBT4S32HwF0krGoXSzdE8/" target="_blank">  <img src="https://images.code.org/8e7de383b0747275a075ed9839a118d0-image-1480625641547.53.30 PM.png" style="width:400px"> </a> |<a href="https://codeprojects.org/xnZk6nZxi0FKMVkwKrsQjvbGWDIwqBW9zDmuCCseMpc/" target="_blank">  <img src="https://images.code.org/c52c51816ce248336a86e3e7f6ec2209-image-1480626143808.01.54 PM.png" style="width:400px"> </a> |
+
+      Social Sleuth_2018:
+        markdown: |+
+          # Investigação Social
+
+          Você vai precisar da <a href="https://docs.google.com/document/d/1A9q31rwrBA7tZZcZ3KZqjMb30UncM-eycwMvYgj9os4/edit#">Planilha de investigação social</a> para completar essa atividade.
+
+          ## Perfis
+
+          Clique na foto de cada perfil para abrir-lo.
+
+          ### FaceSpace
+
+          | FaceSpace: Lizzie Dell  |  FaceSpace: John T | FaceSpace: Haley G.  |
+          | ---------  | ------ |  ------ |
+          | <a href="https://codeprojects.org/F-S5X0IfPmaq09YxGCbOFt3yo4N4PibaA1FBsc4iSdU/" target="_blank">  <img src="https://images.code.org/178adb09adb079a9cf8f465453f9da34-image-1480624941354.42.11 PM.png" style="width:400px"> </a> | <a href="https://codeprojects.org/6qyeEpRZRNkkrkkEduW8G_VO0Y-W2Z6B2Xn5pbLsUpw/" target="_blank"><img src="https://images.code.org/5d141433497fc107a60f0c2e3c63cca8-image-1480624947223.41.59 PM.png" style="width:400px"></a>  |<a href="https://codeprojects.org/7vPoGl6YA2bop1bPaIwpYX4_ubrkEBBFau_8s3JGMoo/" target="_blank">  <img src="https://images.code.org/ced7e2ae3c4fc17b6e278de8339e9498-image-1480626229324.02.56 PM.png" style="width:400px"> </a> |
+
+
+          ### Chirpr
+
+          | Chirpr: @johnsnow  |  Chirpr:@flyinghail | Chirpr: @lillizard |
+          | ---------  | ------ |  ------ |
+          | <a href="https://codeprojects.org/F-CPrGMcIPZF27RUX8Z_0Qb4KFSCvlU96VSWV7IBD98/" target="_blank">  <img src="https://images.code.org/3a5e7e1136382288f1122354cf494783-image-1480625415782.49.59 PM.png" style="width:400px"> </a> | <a href="https://codeprojects.org/Kff1I24rG71I-TnC--Uw5hTqZUAWO3iTzzHRHQ3h90U/" target="_blank">  <img src="https://images.code.org/c4ae8d208cfd5cb211d74f1ca4259210-image-1480627944701.31.37 PM.png" style="width:400px"> </a> |<a href="https://codeprojects.org/c4e3JuM-nCcmYF4XbbxpJ4pX51wyClVZCDYr6HiMyHg/" target="_blank">  <img src="https://images.code.org/42fc1b77b07fbcb4d143a32f1208296f-image-1493301869142.03.52 AM.png" style="width:400px"> </a> |
+
+
+          ### instantframe
+
+          | instantframe: johnsnow  | instantframe: @photolizzie | instantframe:@desertrider |
+          | ---------  | ------ |  ------ |
+          | <a href="https://codeprojects.org/5Zw4FvstrOYxANYH2HFbV_mVuY-QWfrsdgga9S3DGxs/" target="_blank">  <img src="https://images.code.org/290cb1409343d57ab5ab9be93085004d-image-1480625573589.51.31 PM.png" style="width:400px"> </a> | <a href="https://codeprojects.org/JXB8ULbAJJHzC-hHoiiZFxZBT4S32HwF0krGoXSzdE8/" target="_blank">  <img src="https://images.code.org/8e7de383b0747275a075ed9839a118d0-image-1480625641547.53.30 PM.png" style="width:400px"> </a> |<a href="https://codeprojects.org/xnZk6nZxi0FKMVkwKrsQjvbGWDIwqBW9zDmuCCseMpc/" target="_blank">  <img src="https://images.code.org/c52c51816ce248336a86e3e7f6ec2209-image-1480626143808.01.54 PM.png" style="width:400px"> </a> |
+
+      Social Sleuth_2018_2019:
+        markdown: |+
+          # Investigação Social
+
+          Você vai precisar da <a href="https://docs.google.com/document/d/1A9q31rwrBA7tZZcZ3KZqjMb30UncM-eycwMvYgj9os4/edit#">Planilha de investigação social</a> para completar essa atividade.
+
+          ## Perfis
+
+          Clique na foto de cada perfil para abrir-lo.
+
+          ### FaceSpace
+
+          | FaceSpace: Lizzie Dell  |  FaceSpace: John T | FaceSpace: Haley G.  |
+          | ---------  | ------ |  ------ |
+          | <a href="https://codeprojects.org/F-S5X0IfPmaq09YxGCbOFt3yo4N4PibaA1FBsc4iSdU/" target="_blank">  <img src="https://images.code.org/178adb09adb079a9cf8f465453f9da34-image-1480624941354.42.11 PM.png" style="width:400px"> </a> | <a href="https://codeprojects.org/6qyeEpRZRNkkrkkEduW8G_VO0Y-W2Z6B2Xn5pbLsUpw/" target="_blank"><img src="https://images.code.org/5d141433497fc107a60f0c2e3c63cca8-image-1480624947223.41.59 PM.png" style="width:400px"></a>  |<a href="https://codeprojects.org/7vPoGl6YA2bop1bPaIwpYX4_ubrkEBBFau_8s3JGMoo/" target="_blank">  <img src="https://images.code.org/ced7e2ae3c4fc17b6e278de8339e9498-image-1480626229324.02.56 PM.png" style="width:400px"> </a> |
+
+
+          ### Chirpr
+
+          | Chirpr: @johnsnow  |  Chirpr:@flyinghail | Chirpr: @lillizard |
+          | ---------  | ------ |  ------ |
+          | <a href="https://codeprojects.org/F-CPrGMcIPZF27RUX8Z_0Qb4KFSCvlU96VSWV7IBD98/" target="_blank">  <img src="https://images.code.org/3a5e7e1136382288f1122354cf494783-image-1480625415782.49.59 PM.png" style="width:400px"> </a> | <a href="https://codeprojects.org/Kff1I24rG71I-TnC--Uw5hTqZUAWO3iTzzHRHQ3h90U/" target="_blank">  <img src="https://images.code.org/c4ae8d208cfd5cb211d74f1ca4259210-image-1480627944701.31.37 PM.png" style="width:400px"> </a> |<a href="https://codeprojects.org/c4e3JuM-nCcmYF4XbbxpJ4pX51wyClVZCDYr6HiMyHg/" target="_blank">  <img src="https://images.code.org/42fc1b77b07fbcb4d143a32f1208296f-image-1493301869142.03.52 AM.png" style="width:400px"> </a> |
+
+
+          ### instantframe
+
+          | instantframe: johnsnow  | instantframe: @photolizzie | instantframe:@desertrider |
+          | ---------  | ------ |  ------ |
+          | <a href="https://codeprojects.org/5Zw4FvstrOYxANYH2HFbV_mVuY-QWfrsdgga9S3DGxs/" target="_blank">  <img src="https://images.code.org/290cb1409343d57ab5ab9be93085004d-image-1480625573589.51.31 PM.png" style="width:400px"> </a> | <a href="https://codeprojects.org/JXB8ULbAJJHzC-hHoiiZFxZBT4S32HwF0krGoXSzdE8/" target="_blank">  <img src="https://images.code.org/8e7de383b0747275a075ed9839a118d0-image-1480625641547.53.30 PM.png" style="width:400px"> </a> |<a href="https://codeprojects.org/xnZk6nZxi0FKMVkwKrsQjvbGWDIwqBW9zDmuCCseMpc/" target="_blank">  <img src="https://images.code.org/c52c51816ce248336a86e3e7f6ec2209-image-1480626143808.01.54 PM.png" style="width:400px"> </a> |
+
       Songwriting-Unplugged:
         markdown: |
           # Composição Musical
@@ -2890,6 +3818,69 @@ pt-BR:
           ## Recursos
 
           * [O que é um Computador - Guia de Atividade](https://docs.google.com/document/d/1g4dPcsx2xADEZI0FiMYApLr0hh3_-89NDWd2y86sS6I/export?format=pdf)
+      Unit 2 Lesson 10 Overview:
+        markdown: |
+          # Visão global
+
+          Esta lição aborda classes CSS e cores personalizadas. Os alunos primeiro aprendem a especificar cores personalizadas usando valores RGB (vermelho, verde, azul) e depois aplicam essas cores a uma nova página da web do Four Seasons, que usa aulas de CSS. Nas aulas, os alunos adicionam mais estilos à página da web do Four Seasons e os usam para estilizar seus sites pessoais.
+          ## Vocabulário
+
+          * ** Classe HTML ** - Permite definir estilos iguais para elementos, dando a todos o mesmo nome de classe.
+
+          ## Código Introduzido
+
+          * [Cor RGB] (// docs.code.org/weblab/rgb-color/)
+
+          ## Recursos
+
+          * [Cores RGB - Guia de atividades] (https://docs.google.com/document/d/1zTamyJ71sVJ2JM2A2meX6kwPu4FS82KA_TJEliTPIFo/export?format=pdf)
+      Unit 2 Lesson 16 Overview:
+        markdown: |
+          # Visão global
+
+          Nos últimos dias da unidade, a turma finaliza seus sites pessoais, trabalhando com colegas para obter feedback, revisar a rubrica e dar os retoques finais no site. Para encerrar a unidade, todos compartilham seus projetos e como foram desenvolvidos.
+
+
+          ## Recursos
+
+          * [Site pessoal final - Revisão por pares] (https://docs.google.com/document/d/1YMcd2-oBmcjJkW7sADlRKXnGqLdy7A3hxwm74dZlGPE/export?format=pdf)
+          * [Site pessoal final - Guia do projeto] (https://docs.google.com/document/d/15hP1rbdhWaOvcbN-KHCl3rgcNBoa0Wg2D1ZUVnkwNo0/export?format=pdf)
+          * [Site pessoal final - Rubrica] (https://docs.google.com/document/d/1SmZaZymJbMQL04j3evH4O0PYkbtZ_l6W_6rvddB1alg/export?format=pdf)
+      Unit 2 Lesson 7 Overview:
+        markdown: |+
+          # Visão global
+
+          Esta lição apresenta o CSS como uma maneira de estilizar elementos na página. A classe aprende a sintaxe básica dos conjuntos de regras CSS e explora propriedades que afetam os elementos de texto HTML. Por fim, todos aplicam estilos de texto a seus sites pessoais.
+          ## Vocabulário
+
+          * ** CSS ** - CSS significa Cascading Style Sheets. O CSS permite que cada elemento HTML seja estilizado de acordo com determinado conjunto de regras.
+          * ** Seletor de CSS ** - Especifica a parte do código à qual o estilo deve ser aplicado.
+
+          ## Código Introduzido
+
+          *  **[Color](//docs.code.org/weblab/color/)** - `color: value;`
+          *  **[Text Align](//docs.code.org/weblab/text-align/)** - `text-align: value;`
+          *  **[Text Decoration](//docs.code.org/weblab/Text-Dec/)** - `text-decoration: value;`
+          *  **[Font Family](//docs.code.org/weblab/font-family/)** - `font-family:value;`
+          *  **[Font Size](//docs.code.org/weblab/font-size/)** - `font-size:value;`
+
+      Unit 2 Lesson 8 Overview:
+        markdown: |+
+          # Visão global
+
+          Esta lição continua a introdução às propriedades de estilo CSS, desta vez focando mais em elementos que não são de texto. A aula começa investigando e modificando os novos estilos CSS na página Sobremesas do mundo. Depois, todos aplicam esse novo conhecimento a seus sites pessoais.
+
+          ## Código Introduzido
+
+          *  **[Background Color](//docs.code.org/weblab/background-color/)** - `background-color: value;`
+          *  **[Float](//docs.code.org/weblab/float/)** - `float: value;`
+          *  **[Margin](//docs.code.org/weblab/margin/)** - `margin: value;`
+          *  **[Width](//docs.code.org/weblab/width/)** - `width: value;`
+          *  **[Height](//docs.code.org/weblab/height/)** - `height: value;`
+          *  **[Border Style](//docs.code.org/weblab/border-style/)** - `border-style: value;`
+          *  **[Border Width](//docs.code.org/weblab/border-width/)** - `border-width: value;`
+          *  **[Border Color](//docs.code.org/weblab/border-color/)** - `border-color: value;`
+
       behaviors 1 predict:
         questions:
         - text: Clique em "editar" para ver como o 'comportamento misterioso' funciona.
@@ -2906,7 +3897,8 @@ pt-BR:
           feedback: Incorreto
       behaviors 4 predict:
         questions:
-        - {}
+        - text: Tente adivinhar! Por qual caminho o satélite irá se mover em direção
+            ao sistema solar?
         answers:
         - text: À esquerda e para baixo
           feedback: Incorreto.
@@ -3021,6 +4013,8 @@ pt-BR:
           correct: true
           feedback: Correto!
         - text: Scrat dá poucos passos e acaba com a bolota.
+          feedback: Incorreta. Dar apenas alguns passos acontece depois que Scrat
+            vira na direção errada.
         - text: Eu não sei.
           feedback: 'O primeiro erro é que o Scrat segue o caminho errado após a sua
             volta final. '
@@ -3035,6 +4029,8 @@ pt-BR:
           correct: true
           feedback: Correto!
         - text: Scrat dá poucos passos e acaba com a bolota.
+          feedback: Incorreta. Dar apenas alguns passos acontece depois que Scrat
+            vira na direção errada.
         - text: Eu não sei.
           feedback: 'O primeiro erro é que o Scrat segue o caminho errado após a sua
             volta final. '
@@ -3049,6 +4045,8 @@ pt-BR:
           correct: true
           feedback: Correto!
         - text: Scrat dá poucos passos e acaba com a bolota.
+          feedback: Incorreta. Dar apenas alguns passos acontece depois que Scrat
+            vira na direção errada.
         - text: Eu não sei.
           feedback: 'O primeiro erro é que o Scrat segue o caminho errado após a sua
             volta final. '
@@ -3288,7 +4286,10 @@ pt-BR:
             em um círculo.
       courseD_multi_bee_conditionals1_predict1:
         questions:
-        - {}
+        - text: A nuvem está bloqueando a vista. Poderia haver uma flor sob esta nuvem.
+            Se houver uma flor, a abelha precisará coletar néctar uma vez. Se não
+            houver uma flor, a abelha não deve fazer nada. Dê uma boa olhada no código
+            abaixo. O que você acha que acontecerá depois que você clicar em "Executar"?
         answers:
         - text: 'A abelha se moverá para a nuvem e tentará obter o néctar, não importa
             o que aconteça. '
@@ -3306,7 +4307,10 @@ pt-BR:
             se houver uma flor embaixo da nuvem.
       courseD_multi_bee_conditionals1_predict1_2018:
         questions:
-        - {}
+        - text: A nuvem está bloqueando a vista. Poderia haver uma flor sob esta nuvem.
+            Se houver uma flor, a abelha precisará coletar néctar uma vez. Se não
+            houver uma flor, a abelha não deve fazer nada. Dê uma boa olhada no código
+            abaixo. O que você acha que acontecerá depois que você clicar em "Executar"?
         answers:
         - text: 'A abelha se moverá para a nuvem e tentará obter o néctar, não importa
             o que aconteça. '
@@ -3324,7 +4328,10 @@ pt-BR:
             se houver uma flor embaixo da nuvem.
       courseD_multi_bee_conditionals1_predict1_2018_2019:
         questions:
-        - {}
+        - text: A nuvem está bloqueando a vista. Poderia haver uma flor sob esta nuvem.
+            Se houver uma flor, a abelha precisará coletar néctar uma vez. Se não
+            houver uma flor, a abelha não deve fazer nada. Dê uma boa olhada no código
+            abaixo. O que você acha que acontecerá depois que você clicar em "Executar"?
         answers:
         - text: 'A abelha se moverá para a nuvem e tentará obter o néctar, não importa
             o que aconteça. '
@@ -3342,7 +4349,9 @@ pt-BR:
             se houver uma flor embaixo da nuvem.
       courseD_multi_bee_conditionals7_predict2:
         questions:
-        - {}
+        - text: 'Veja atentamente o código abaixo. O que você acha que acontecerá
+            depois que você clicar em "Executar"? Lembre-se: sempre haverá *um* favo
+            de mel ou *uma* flor atrás de cada nuvem.'
         answers:
         - text: A abelha terá néctar em cada flor e mel em cada favo de mel.
           correct: true
@@ -3358,7 +4367,9 @@ pt-BR:
             flor e mel em cada favo de mel.
       courseD_multi_bee_conditionals7_predict2_2018:
         questions:
-        - {}
+        - text: 'Veja atentamente o código abaixo. O que você acha que acontecerá
+            depois que você clicar em "Executar"? Lembre-se: sempre haverá *um* favo
+            de mel ou *uma* flor atrás de cada nuvem.'
         answers:
         - text: A abelha terá néctar em cada flor e mel em cada favo de mel.
           correct: true
@@ -3374,7 +4385,9 @@ pt-BR:
             flor e mel em cada favo de mel.
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         questions:
-        - {}
+        - text: 'Observe atentamente o código abaixo. O que você acha que acontecerá
+            depois que você clicar em "Executar"? Lembre-se: sempre haverá *um* favo
+            de mel ou *uma* flor atrás de cada nuvem.'
         answers:
         - text: A abelha terá néctar em cada flor e mel em cada favo de mel.
           correct: true
@@ -3445,36 +4458,65 @@ pt-BR:
             clicar em "Executar"?
         answers:
         - text: '4'
+          feedback: Incorreta. A abelha recolhe 2 néctar em um laço de repetição avançando,
+            depois 2 néctar em um loop para baixo. Isso tudo ocorre dentro de outro
+            laço de repetição que acontece duas vezes. 4 vezes 2 é 8!
         - text: '8'
           correct: true
           feedback: Correto!
         - text: '12'
+          feedback: Incorreta. A abelha recolhe 2 néctar em um laço de repetição avançando,
+            depois 2 néctar em um loop para baixo. Isso tudo ocorre dentro de outro
+            laço de repetição que acontece duas vezes. 4 vezes 2 é 8!
         - text: Eu não sei.
+          feedback: A abelha recolhe 2 néctar em um laço de repetição avançando, depois
+            2 néctar em um laço de repetição para baixo. Isso tudo ocorre dentro de
+            outro laço de repetição que acontece duas vezes. 4 vezes 2 é 8!
       courseD_multi_bee_nestedLoops9_predict2_2018:
         questions:
         - text: Observe atentamente o código abaixo. Quanto mel a abelha fará quando
             clicar em "Executar"?
         answers:
         - text: '4'
+          feedback: Incorreta. A abelha recolhe 2 néctar em um laço de repetição avançando,
+            depois 2 néctar em um loop para baixo. Isso tudo ocorre dentro de outro
+            laço de repetição que acontece duas vezes. 4 vezes 2 é 8!
         - text: '8'
           correct: true
           feedback: Correto!
         - text: '12'
+          feedback: Incorreta. A abelha recolhe 2 néctar em um laço de repetição avançando,
+            depois 2 néctar em um loop para baixo. Isso tudo ocorre dentro de outro
+            laço de repetição que acontece duas vezes. 4 vezes 2 é 8!
         - text: Eu não sei.
+          feedback: A abelha recolhe 2 néctar em um laço de repetição avançando, depois
+            2 néctar em um laço de repetição para baixo. Isso tudo ocorre dentro de
+            outro laço de repetição que acontece duas vezes. 4 vezes 2 é 8!
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         questions:
         - text: Observe atentamente o código abaixo. Quanto mel a abelha fará quando
             clicar em "Executar"?
         answers:
         - text: '4'
+          feedback: Incorreta. A abelha recolhe 2 néctar em um laço de repetição avançando,
+            depois 2 néctar em um loop para baixo. Isso tudo ocorre dentro de outro
+            laço de repetição que acontece duas vezes. 4 vezes 2 é 8!
         - text: '8'
           correct: true
           feedback: Correto!
         - text: '12'
+          feedback: Incorreta. A abelha recolhe 2 néctar em um laço de repetição avançando,
+            depois 2 néctar em um loop para baixo. Isso tudo ocorre dentro de outro
+            laço de repetição que acontece duas vezes. 4 vezes 2 é 8!
         - text: Eu não sei.
+          feedback: A abelha recolhe 2 néctar em um laço de repetição avançando, depois
+            2 néctar em um laço de repetição para baixo. Isso tudo ocorre dentro de
+            outro laço de repetição que acontece duas vezes. 4 vezes 2 é 8!
       courseD_multi_collector_debugging10_predict1:
         questions:
-        - {}
+        - text: 'Observe atentamente o código abaixo. Por que Laurel não coleciona
+            todo o tesouro quando você clica em "Executar"? Aviso: Esta é uma pergunta
+            complicada, leia todas as opções antes de responder!'
         answers:
         - text: Laurel vai virar para o caminho errado ao fazer um quadrado.
           feedback: Incorreto. Isso foi parcialmente correto, mas o laço também não
@@ -3498,10 +4540,16 @@ pt-BR:
           feedback: Incorreto. Não há código aqui para coletar a abóbora.
         - text: A colheitadeira não coletará nenhuma das colheitas no caminho que
             ela está indo.
+          feedback: Incorreta. O código fará com que a colheitadeira faça repetidamente
+            um padrão de escada e colete tanto milho ou alface quanto ela se deparar.
+            Ela não vai colher a abóbora.
         - text: A colheitadeira recolherá todas as colheitas, exceto a abóbora.
           correct: true
           feedback: Correto!
         - text: Eu não sei.
+          feedback: O código fará com que a colheitadeira faça repetidamente um padrão
+            de escada e colete tanto milho ou alface quanto ela se deparar. Ela não
+            vai colher a abóbora.
       courseD_multi_farmer_condLoops9_predict1_2018:
         questions:
         - text: Observe atentamente o código abaixo. O que acontecerá depois que você
@@ -3511,10 +4559,16 @@ pt-BR:
           feedback: Incorreto. Não há código aqui para pegar a abóbora.
         - text: A colheitadeira não pegará nenhuma das colheitas com o caminho que
             ela está tomando.
+          feedback: Incorreto. O código fará com que a agricultora faça repetidamente
+            um padrão de degrau e colha o máximo possível de alface e milho que ela
+            encontrar no caminho. Ela não irá colher a abóbora.
         - text: A colheitadeira pegará todas as colheitas, exceto a abóbora.
           correct: true
           feedback: Correto!
         - text: Eu não sei.
+          feedback: O código fará com que a agricultora faça repetidamente um padrão
+            de degrau e colha o máximo possível de alface e milho que ela encontrar
+            no caminho. Ela não irá colher a abóbora.
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
         questions:
         - text: Observe atentamente o código abaixo. O que acontecerá depois que você
@@ -3524,20 +4578,32 @@ pt-BR:
           feedback: Incorreto. Não há código aqui para pegar a abóbora.
         - text: A colheitadeira não pegará nenhuma das colheitas com o caminho que
             ela está tomando.
+          feedback: Incorreto. O código fará com que a agricultora faça repetidamente
+            um padrão de degrau e colha o máximo possível de alface e milho que ela
+            encontrar no caminho. Ela não irá colher a abóbora.
         - text: A colheitadeira pegará todas as colheitas, exceto a abóbora.
           correct: true
           feedback: Correto!
         - text: Eu não sei.
+          feedback: O código fará com que a agricultora faça repetidamente um padrão
+            de degrau e colha o máximo possível de alface e milho que ela encontrar
+            no caminho. Ela não irá colher a abóbora.
       courseD_multi_farmer_ramp13:
         questions:
         - {}
         answers:
         - text: O fazendeiro vai andar até o final do caminho e colher a abóbora.
+          feedback: Incorreta. O bloco 'colher abóbora' está dentro do laço de repetição,
+            então o fazendeiro tentará colher abóboras a cada passo, em vez de apenas
+            no final.
         - text: O fazendeiro tentará colher abóboras em cada praça, mas nunca chegará
             à abóbora.
           correct: true
           feedback: Correto!
         - text: O fazendeiro vai andar quatro espaços, e então tentar pegar uma abóbora.
+          feedback: Incorreta. O bloco 'colher abóbora' está dentro do laço de repetição,
+            então o fazendeiro tentará colher abóboras a cada passo, em vez de apenas
+            no final.
         - text: Eu não sei.
           feedback: O bloco `pegar abóbora` está dentro do laço, então o agricultor
             tentará colher abóboras em cada etapa, em vez de apenas no final.
@@ -3652,8 +4718,12 @@ pt-BR:
           correct: true
           feedback: Correto!
         - text: O zumbi chegará até o girassol.
+          feedback: Incorreta. Neste código, ele procura uma curva à direita *antes*
+            de ver se pode seguir em frente. Por causa disso, o quebra-cabeça falha.
         - text: O zumbi vai virar à direita no primeiro caminho e ficar andando em
             círculos para sempre.
+          feedback: Incorreta. O zumbi procura apenas uma curva à direita ou um caminho
+            reto. Ele nunca parece virar à esquerda e fica preso quase imediatamente.
         - text: Eu não sei.
           feedback: Nesse código, ele procura por uma virada a direita *antes* para
             ver se ele pode ir reto. Por causa disso, o quebra-cabeça falha.
@@ -3701,10 +4771,14 @@ pt-BR:
             quando você clicar em "Executar"?
         answers:
         - text: O pássaro não se moverá de forma alguma.
+          feedback: Incorreta. O código faz o pássaro avançar enquanto houver um caminho,
+            depois vira à esquerda. Ele continua fazendo isso até atingir o porco!
         - text: O pássaro chegará até o porco.
           correct: true
           feedback: Correto!
         - text: O pássaro vai avançar e correr em direção ao TNT.
+          feedback: Incorreta. O código faz o pássaro avançar enquanto houver um caminho
+            seguro, depois vira à esquerda. Continua fazendo isso até atingir o porco!
         - text: Eu não sei.
           feedback: "? Incorreto. O código faz a ave avançar enquanto há um caminho
             e depois virar à esquerda. Isso continua acontecendo até chegar ao porco!."
@@ -3714,10 +4788,14 @@ pt-BR:
             quando você clicar em "Executar"?
         answers:
         - text: O pássaro não se moverá de forma alguma.
+          feedback: Incorreta. O código faz o pássaro avançar enquanto houver um caminho,
+            depois vira à esquerda. Ele continua fazendo isso até atingir o porco!
         - text: O pássaro chegará até o porco.
           correct: true
           feedback: Correto!
         - text: O pássaro vai avançar e correr em direção ao TNT.
+          feedback: Incorreta. O código faz o pássaro avançar enquanto houver um caminho
+            seguro, depois vira à esquerda. Continua fazendo isso até atingir o porco!
         - text: Eu não sei.
           feedback: "? Incorreto. O código faz a ave avançar enquanto há um caminho
             e depois virar à esquerda. Isso continua acontecendo até chegar ao porco!."
@@ -3727,10 +4805,14 @@ pt-BR:
             quando você clicar em "Executar"?
         answers:
         - text: O pássaro não se moverá de forma alguma.
+          feedback: Incorreta. O código faz o pássaro avançar enquanto houver um caminho,
+            depois vira à esquerda. Ele continua fazendo isso até atingir o porco!
         - text: O pássaro chegará até o porco.
           correct: true
           feedback: Correto!
         - text: O pássaro vai avançar e correr em direção ao TNT.
+          feedback: Incorreta. O código faz o pássaro avançar enquanto houver um caminho
+            seguro, depois vira à esquerda. Continua fazendo isso até atingir o porco!
         - text: Eu não sei.
           feedback: "? Incorreto. O código faz a ave avançar enquanto há um caminho
             e depois virar à esquerda. Isso continua acontecendo até chegar ao porco!."
@@ -3750,9 +4832,14 @@ pt-BR:
           feedback: Incorreto. Colocando o bloco "mover para frente" dentro do bloco
             "repetir" fará Scrat se mover para frente três vezes.
         - text: Eu não sei.
+          feedback: Colocando o bloco 'ande para frente' dentro do bloco 'repetir'
+            fará com que Scrat se mova para frente três vezes. Então ele vira e move
+            para frente mais três vezes, chegando ao milho!
       courseE_multi_bee_functions_predict1:
         questions:
-        - {}
+        - text: Aqui está exatamente o mesmo programa do último quebra-cabeça, mas
+            a quantidade de mel para coletar nesse quebra-cabeça aumentou. O que acontecerá
+            quando você clicar em "Rodar"?
         answers:
         - text: O mesmo programa também irá funcionar para esse desafio.
           correct: true
@@ -3899,6 +4986,8 @@ pt-BR:
           feedback: Incorreta. A variável é ajustada para 0 antes das últimas duas
             chamadas de função.
         - text: Eu não sei.
+          feedback: A variável volta a ser 0 antes das duas últimas chamadas de função,
+            onde 1 é adicionado a cada vez. A abelha recolhe 2 unidades de néctar.
       courseF_bee_variables_8a_2018_2019:
         questions:
         - text: Veja o código abaixo. Quantas unidades de néctar a abelha coletará
@@ -3914,6 +5003,41 @@ pt-BR:
           feedback: Incorreta. A variável é ajustada para 0 antes das últimas duas
             chamadas de função.
         - text: Eu não sei.
+          feedback: A variável volta a ser 0 antes das duas últimas chamadas de função,
+            onde 1 é adicionado a cada vez. A abelha recolhe 2 unidades de néctar.
+      courseF_external_variableConstant:
+        markdown: |+
+          <h2>Mais sobre Variáveis</h2>
+
+
+          <img src="https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png" style="padding-left: 30px; width:300px; float:right;"/>
+          <h3>Você acaba de aprender um ótimo jeito de usar uma variável... Como uma constante!
+          Quando você usa uma variável como uma constante, você configura o valor uma vez e então usa o *mesmo* valor várias vezes no seu programa sem mudá-lo após clicar em "Executar".</h3>
+          <br/><hr/>
+          <h3>Nas próximas etapas, você vai escrever códigos com variáveis que *mudam* dentro do programa.</h3>
+
+      courseF_external_variableConstant_2018:
+        markdown: |+
+          <h2>Mais sobre Variáveis</h2>
+
+
+          <img src="https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png" style="padding-left: 30px; width:300px; float:right;"/>
+          <h3>Você acaba de aprender um ótimo jeito de usar uma variável... Como uma constante!
+          Quando você usa uma variável como uma constante, você configura o valor uma vez e então usa o *mesmo* valor várias vezes no seu programa sem mudá-lo após clicar em "Executar".</h3>
+          <br/><hr/>
+          <h3>Nas próximas etapas, você vai escrever códigos com variáveis que *mudam* dentro do programa.</h3>
+
+      courseF_external_variableConstant_2018_2019:
+        markdown: |+
+          <h2>Mais sobre Variáveis</h2>
+
+
+          <img src="https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png" style="padding-left: 30px; width:300px; float:right;"/>
+          <h3>Você acaba de aprender um ótimo jeito de usar uma variável... Como uma constante!
+          Quando você usa uma variável como uma constante, você configura o valor uma vez e então usa o *mesmo* valor várias vezes no seu programa sem mudá-lo após clicar em "Executar".</h3>
+          <br/><hr/>
+          <h3>Nas próximas etapas, você vai escrever códigos com variáveis que *mudam* dentro do programa.</h3>
+
       courseF_markdown_algorithms_end:
         title: Teste a Página da Apostila de Markdown
         content1: Teste a Página da Apostila de Markdown
@@ -3946,6 +5070,15 @@ pt-BR:
       courseF_markdown_conditionals_end:
         title: Teste a Página da Apostila de Markdown
         content1: Teste a Página da Apostila de Markdown
+        markdown: "# **Você acabou de aprender sobre \"condicionais\"!**\n\n### Condicionais
+          são muito úteis em ciência da computação. Imagine que você vai entrar no
+          seu site favorito e digitar sua senha. O site precisa usar condicionais
+          para verificar *se* a senha que você digitou é igual à senha que ele guardou
+          para o seu usuário. \n\n### `Se` a senha for igual, entra no site! \n\n###
+          `Senão`, mostra ao usuário uma mensagem de erro.  \n\n---\n\n## **Vocabulário
+          para conhecer**\n\n* ### **Condição** - Algo que o programa verifica antes
+          de permitir uma ação\n\n* ### **Condicionais** - Comandos que são executados
+          em condições específicas\n\n"
       courseF_markdown_conditionals_intro:
         title: Teste a Página da Apostila de Markdown
         content1: Teste a Página da Apostila de Markdown
@@ -3984,15 +5117,55 @@ pt-BR:
       courseF_markdown_forloops_end:
         title: Teste a Página da Apostila de Markdown
         content1: Teste a Página da Apostila de Markdown
+        markdown: "# **Você acabou de aprender sobre as \"repetições para\"!**\n\n###
+          **Repetições \"para\" são repetições onde você configura o início, a parada
+          e valores das repetições.**\n\n### Esse novo tipo de repetição dá mais controle
+          sobre quando a repetição começa, quando ela termina, e de quanto em quanto
+          sua repetição deve aumentar toda vez que é executada.\n\n### Mais controle
+          significa que você pode resolver os desafios muito mais rápido! \n\n---\n\n##
+          **Vocabulário para conhecer**\n\n### **Repetição \"para\"** - Repetições
+          \"para\" são laços de repetição com inícios, paradas e incrementações (intervalos
+          entre cada volta) predefinidos\n\n"
       courseF_markdown_forloops_end_2019:
         title: Teste a Página da Apostila de Markdown
         content1: Teste a Página da Apostila de Markdown
+        markdown: "# **Você acabou de aprender sobre as \"repetições para\"!**\n\n###
+          **Repetições \"para\" são repetições onde você configura o início, a parada
+          e valores das repetições.**\n\n### Esse novo tipo de repetição dá mais controle
+          sobre quando a repetição começa, quando ela termina, e de quanto em quanto
+          sua repetição deve aumentar toda vez que é executada.\n\n### Mais controle
+          significa que você pode resolver os desafios muito mais rápido! \n\n---\n\n##
+          **Vocabulário para conhecer**\n\n### **Repetição \"para\"** - Repetições
+          \"para\" são laços de repetição com inícios, paradas e incrementações (intervalos
+          entre cada volta) predefinidos\n\n"
       courseF_markdown_forloops_intro:
         title: Teste a Página da Apostila de Markdown
         content1: Teste a Página da Apostila de Markdown
+        markdown: |+
+          # **Nesta fase...**
+
+          ### Hoje você vai aprender sobre um novo tipo de laço de repetição. Aqui está uma prévia do bloco que você usará:
+
+          ![](https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)
+
+          ### *Para* a sua sorte, essa nova repetição vai tornar bem fácil a resolução de desafios como esse!
+
+          ![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)
+
       courseF_markdown_forloops_intro_2019:
         title: Teste a Página da Apostila de Markdown
         content1: Teste a Página da Apostila de Markdown
+        markdown: |+
+          # **Nesta fase...**
+
+          ### Hoje você vai aprender sobre um novo tipo de laço de repetição. Aqui está uma prévia do bloco que você usará:
+
+          ![](https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)
+
+          ### *Para* a sua sorte, essa nova repetição vai tornar bem fácil a resolução de desafios como esse!
+
+          ![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)
+
       courseF_markdown_loops_end:
         title: Teste a Página da Apostila de Markdown
         content1: Teste a Página da Apostila de Markdown
@@ -4024,6 +5197,13 @@ pt-BR:
       courseF_markdown_nestedloops_end:
         title: Teste a Página da Apostila de Markdown
         content1: Teste a Página da Apostila de Markdown
+        markdown: "# **Você acabou de aprender \"laços de repetição aninhados\"!**\n\n###
+          **Uma repetição aninhada é uma repetição dentro de uma repetição.** Imagine
+          um laço de repetição exterior, com uma repetição que está confortável, aconchegada
+          e aninhada dentro dele. \n\n### Laços de repetição são ótimos para repetir
+          padrões de padrões. Eles podem ser muito poderosos se usados corretamente!\n\n---\n\n##
+          **Vocabulário para conhecer**\n\n### __Laços de repetição aninhados__ -
+          Um laço de repetição dentro de um laço de repetição\n\n"
       courseF_markdown_nestedloops_intro:
         title: Teste a Página da Apostila de Markdown
         content1: Teste a Página da Apostila de Markdown
@@ -4044,15 +5224,53 @@ pt-BR:
       courseF_markdown_variables_end:
         title: Teste a Página da Apostila de Markdown
         content1: Teste a Página da Apostila de Markdown
+        markdown: "# **Você acabou de aprender \"variáveis\"!**\n\n### Para usar uma
+          variável, esta precisa de um nome e um valor. O nome não muda, mas o valor
+          pode mudar. Desta forma você pode usar o nome da variável como um espaço
+          reservado aonde você quiser no seu programa! \n\n---\n\n## **Vocabulário
+          a conhecer**\n\n### **Variável** - Um espaço reservado para uma parte da
+          informação que pode mudar\n\n"
       courseF_markdown_variables_end_2019:
         title: Teste a Página da Apostila de Markdown
         content1: Teste a Página da Apostila de Markdown
+        markdown: "# **Você acabou de aprender \"variáveis\"!**\n\n### Para usar uma
+          variável, esta precisa de um nome e um valor. O nome não muda, mas o valor
+          pode mudar. Desta forma você pode usar o nome da variável como um espaço
+          reservado aonde você quiser no seu programa! \n\n---\n\n## **Vocabulário
+          a conhecer**\n\n### **Variável** - Um espaço reservado para uma parte da
+          informação que pode mudar\n\n"
       courseF_markdown_variables_intro:
         title: Teste a Página da Apostila de Markdown
         content1: Teste a Página da Apostila de Markdown
+        markdown: |+
+          # **Nesta fase...**
+
+          ### *Variáveis* são campos reservados para informações que podem mudar. Ter uma variável torna possível a escrita de um programa, mesmo quando você só saberá os valores mais tarde.
+
+
+          ---
+
+          ## **Blocos para conhecer**
+
+          ![](https://images.code.org/2e5804ee6783390a6b86b7b2d7153594-image-1524772405748.png)
+
+
       courseF_markdown_variables_intro_2019:
         title: Teste a Página da Apostila de Markdown
         content1: Teste a Página da Apostila de Markdown
+        markdown: |+
+          # **Nesta fase...**
+
+          ### *Variáveis* são campos reservados para informações que podem mudar. Ter uma variável torna possível a escrita de um programa, mesmo quando você só saberá os valores mais tarde.
+
+
+          ---
+
+          ## **Blocos para conhecer**
+
+          ![](https://images.code.org/2e5804ee6783390a6b86b7b2d7153594-image-1524772405748.png)
+
+
       courseF_multi_artist_for10_predict1:
         questions:
         - text: O que acontecerá quando você clicar em "Executar"?
@@ -4141,6 +5359,9 @@ pt-BR:
           feedback: Incorreto. A variável comprimento precisaria ser usada no bloco
             'virar' para isso acontecer.
         - text: Eu não sei.
+          feedback: A variável `tamanho` está com o valor de 50 e está sendo utilizada
+            no bloco `avance`, para que o artista consiga desenhar um triângulo de
+            50 pixels laterais.
       courseF_multi_artist_variables3a_predict1_2018:
         questions:
         - text: Colocamos o valor variável comprimento como 50. O que irá acontecer
@@ -4156,6 +5377,9 @@ pt-BR:
           feedback: Incorreto. A variável comprimento precisaria ser usada no bloco
             'virar' para isso acontecer.
         - text: Eu não sei.
+          feedback: A variável `tamanho` está com o valor de 50 e está sendo utilizada
+            no bloco `avance`, para que o artista consiga desenhar um triângulo de
+            50 pixels laterais.
       courseF_multi_artist_variables3a_predict1_2018_2019:
         questions:
         - text: Colocamos o valor variável comprimento como 50. O que irá acontecer
@@ -4171,9 +5395,14 @@ pt-BR:
           feedback: Incorreto. A variável comprimento precisaria ser usada no bloco
             'virar' para isso acontecer.
         - text: Eu não sei.
+          feedback: A variável `tamanho` está com o valor de 50 e está sendo utilizada
+            no bloco `avance`, para que o artista consiga desenhar um triângulo de
+            50 pixels laterais.
       courseF_multi_bee_conditionals1_predict1:
         questions:
-        - {}
+        - text: Se não houver flor, a abelha não deveria fazer nada. De uma boa olhada
+            no código abaixo. O que você acha que irá acontecer depois de clicar em
+            "Rodar"?
         answers:
         - text: 'A abelha se moverá para a nuvem e tentará obter o néctar, não importa
             o que aconteça. '
@@ -4199,6 +5428,9 @@ pt-BR:
           correct: true
           feedback: Correto!
         - text: A abelha tentará obter o néctar das flores e do favo de mel.
+          feedback: Incorreto. O bloco `se na flor` permite que a abelha colete nectar
+            em cada flor e faça mel se não houver uma flor (consequentemente há um
+            colmeia).
         - text: A abelha tentará obter mel de ambas as flores e do favo de mel.
           feedback: Incorreta. Incorreta. O bloco 'se em flor' permite que a abelha
             obtenha néctar em cada flor e mel em cada favo de mel.
@@ -4276,11 +5508,14 @@ pt-BR:
           feedback: Incorreto. A função está definida para coletar quantos néctares
             ou méis forem passados por parâmetro.
         - text: Eu não sei.
+          feedback: Clicando para olhar dentro da função mostra que está programada
+            para coletar a quantidade de nectar ou mel que for passada por parâmetro.
       courseF_multi_playlab_variables4c_predictive1:
         questions:
         - text: O que aconteceria se você digitasse o nome "Ali" no prompt?
         answers:
-        - correct: true
+        - text: O pirata diria, "Prazer em te conhecer, Ali." e isso é tudo.
+          correct: true
           feedback: 'Correto. '
         - text: O pirata irá dizer, "Prazer em conhecer você." e apenas isto.
           feedback: Incorreta. Observe que o bloco `juntar` insere o nome fornecido
@@ -4377,7 +5612,8 @@ pt-BR:
           * [Barcos de Alumínio](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - Guai de atividade (copiar como [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))
       grade2_multi_collector_A_predict1:
         questions:
-        - {}
+        - text: Observe atentamente o código abaixo. Se o código fosse executado até
+            o fim (ignorando quaisquer erros), quantas peças do tesouro Laurel coletaria?
         answers:
         - text: Laurel irá coletar 4 peças do tesouro usando este código.
           feedback: Incorreta. Laurel tenta recolher o tesouro onde não há nenhum

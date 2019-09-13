@@ -28,6 +28,7 @@ tr:
         edit_header: 'Hesap Bilgilerini Düzenle'
         error:
           future: gelecekte olması mümkün değil
+  beta: "beta"
   hello: "Merhaba dünya"
   welcome_back: "Hoş geldiniz %{name}"
   your_professional_learning_plan: "Profesyonel Eğitim Planın"
@@ -41,13 +42,9 @@ tr:
   okay: "Tamam"
   or: "veya"
   heading_x_of_y: "%{heading} (sayfa %{x}, %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Öğretmen ekleyin:'
       placeholder: "Bölüm kodu (ABCDEF)"
-      instructions: "Lütfen öğretmeninizin sizinle paylaştığı kodu girin. Bu kod, \"ABCDEF\" örneğindeki gibi 6 harf içerir."
-      instructions_short: "6 harfli bölüm kodunuzu girin"
-    submit: 'Öğretmeni ekle'
   add_hint_form:
     placeholder: 'Lütfen ipucunu buraya girin'
     submit: 'İpucu ekle'

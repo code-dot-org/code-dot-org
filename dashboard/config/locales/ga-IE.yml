@@ -36,6 +36,7 @@ ga:
         edit_header: Cuir Sonraí an Chuntais in Eagar
         error:
           future: earráid - dáta sa todhchaí
+  beta: béite
   hello: Dia dhuit a dhomhain
   welcome_back: Fáilte ar ais a %{name}
   your_professional_learning_plan: Do phlean foghlamtha proifisiúnta
@@ -49,14 +50,9 @@ ga:
   okay: Ceart go leor
   or: nó
   heading_x_of_y: "%{heading} (leathanach %{x} as %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Cuir múinteoir leis:'
       placeholder: Cód an Rannáin (ABCDEF)
-      instructions: Cuir isteach an cód a thug do mhúinteoir duit. Cód sé litir atá
-        ann, cosúil le "ABCDEF".
-      instructions_short: Cuir isteach cód an rannáin le 6 litir
-    submit: Cuir múinteoir leis
   add_hint_form:
     placeholder: Cuir do leid isteach anseo
     submit: Cuir leid leis

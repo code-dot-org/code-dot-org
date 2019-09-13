@@ -623,13 +623,6 @@ he:
         text: כאשר {SPRITE} נלחץ
       gamelab_comment:
         text: 'הערה: {COMMENT}'
-      gamelab_console.log:
-        text: הודעת לוג {MESSAGE}
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': נכון
-            'false': שגוי
       gamelab_destroy:
         text: הסר את {THIS}
       gamelab_getProp:
@@ -716,7 +709,6 @@ he:
             '"x"': מיקום בציר x
             '"y"': מיקום בציר y
             '"direction"': כיוון תנועה
-            '"tint"': גוון
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -748,13 +740,6 @@ he:
             '"w"': w
             '"s"': s
             '"d"': d
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": למעלה
-            "'down'": למטה
-            "'left'": שמאלה
-            "'right'": ימינה
       gamelab_whileKey:
         options:
           KEY:

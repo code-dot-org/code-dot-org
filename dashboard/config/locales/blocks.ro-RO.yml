@@ -663,11 +663,6 @@ ro:
           CONDITION:
             '"when"': când
             '"while"': în timp ce
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': adevărat
-            'false': fals
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -762,7 +757,6 @@ ro:
             '"x"': poziţia x
             '"y"': poziţia y
             '"direction"': direcţie de mişcare
-            '"tint"': tentă
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -796,13 +790,6 @@ ro:
             '"d"': d
       gamelab_whenLeftArrow:
         text: când săgeata stânga este apăsată
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": sus
-            "'down'": jos
-            "'left'": stânga
-            "'right'": dreapta
       gamelab_whenRightArrow:
         text: când săgeata dreapta este apăsată
       gamelab_whenUpArrow:

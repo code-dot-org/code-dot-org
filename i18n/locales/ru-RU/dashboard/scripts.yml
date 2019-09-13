@@ -2887,9 +2887,23 @@ ru:
               name: Скорость
             Functions:
               name: функции
+            Random Numbers:
+              name: Случайные числа
         csl-vn:
           stages:
             Loops in Ice Age:
               name: Циклы в ледниковом периоде
             Ocean Scene with Loops:
               name: Циклы в исполнителе Художник
+        csp2-pilot:
+          stages:
+            Routers and Redundancy:
+              name: Маршрутизаторы и резервирование
+        peru-2019:
+          stages:
+            Introduction:
+              name: Введение
+            Loops in Artist:
+              name: Циклы в исполнителе Художник
+            Nested Loops:
+              name: Вложенные циклы

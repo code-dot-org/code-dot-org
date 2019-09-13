@@ -1634,3 +1634,9 @@ da:
               name: Betingelser
             Functions:
               name: Funktioner
+        peru-2019:
+          stages:
+            Introduction:
+              name: Introduktion
+            Nested Loops:
+              name: Indlejret Løkker

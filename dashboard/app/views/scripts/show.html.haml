@@ -51,7 +51,7 @@
         %br/
         %br/
 
-  - if current_user && current_user.permission?(UserPermission::LEVELBUILDER)
+  - if can? :edit, @script
     -# Show all the levels, their names, and instructions in the extra links box.
     = render layout: 'shared/extra_links' do
       %strong= @script.name

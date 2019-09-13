@@ -2809,10 +2809,6 @@ pt-BR:
         behavior hint: |-
           Tente editar os comportamentos!
           \*Qual valor controla a velocidade de cada sprite?
-      behaviors 7:
-        behavior hint: |-
-          Tente editar os comportamentos!
-          \*Qual valor controla a velocidade de cada sprite?
       comment_intro_maze_2018:
         courseC_maze_programming4_a: Comentários também são úteis quando outras pessoas
           tentam ler seu código.
@@ -3354,6 +3350,14 @@ pt-BR:
           </block>
           </xml>
       course3_collector_debugging_challenge2:
+        courseD_collector_debugging_challenge2_a: "Inicie focando-se em coletar DUAS
+          pedras preciosas de cada uma das duas primeiras pilhas.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04
+          AM copy.png>)\nUse estes blocos.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block
+          type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n
+          \ </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title
+          name=\"DIR\">moveForward</title>\n                  </block>\n                  \n
+          \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n
+          \   <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
         courseD_collector_debugging_challenge2_b: |-
           Em seguida, colete as gemas restantes nessa linha.
 
@@ -4481,6 +4485,11 @@ pt-BR:
         courseA_collector_loops_challenge1_d: |-
           O programa inicial não coleta as ultimas 2 gemas. Tente adicionar esse code ao final:
           <xml><block type="maze_moveEast"> <next> <block type="collector_collect_simplified"> <next> <block type="maze_moveSouth"> <next> <block type="collector_collect"/> </next> </block> </next> </block> </next> </block></xml>
+      courseA_collector_loops_challenge2:
+        courseA_collector_loops_challenge2_b: Você precisa usar apenas 1 bloco para
+          resolver isso.
+        courseA_collector_loops_challenge2_a: Você pode se mover para trás sobre o
+          caminho uma segunda vez antes de se mover para o sul.
       courseA_collector_loops_challenge2kp:
         courseA_collector_loops_challenge2kp_b: Tente esse caminho para chegar a solução.
         courseA_collector_loops_challenge2kp_a: Você consegue usar laços para resolver
@@ -4493,6 +4502,16 @@ pt-BR:
         courseA_collector_loops_challenge2kp_b: Tente esse caminho para chegar a solução.
         courseA_collector_loops_challenge2kp_a: Você consegue usar laços para resolver
           esse problema?
+      courseA_collector_preLoops4:
+        courseA_collector_preLoops4_a: Para pegar o tesouro, encaixe dois blocos ![](https://images.code.org/2df8a25d7e96207f57d1a6b504950b70-image-1508906116743.34.37.png)
+          e um bloco ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)
+          na parte inferior do programa e clique em "Executar"!
+      courseA_collector_preLoops5:
+        courseA_collector_preLoops5_a: Você vai precisar ir em duas direções diferentes
+          até para pegar uma gema!
+      courseA_collector_preLoops6:
+        courseA_collector_preLoops6_a: Vai vai precisar usar dois blocos ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)
+          para resolver este quebra-cabeças.
       courseA_collector_preLoops7:
         courseA_collector_loops2_b: |-
           Após você ter se movido para um quadrado com tesouro, use esse bloco para pegá-lo.
@@ -14164,6 +14183,10 @@ pt-BR:
           de cada iteração. '
         courseF_artist_fwp_challenge1_e: Tanto a cor de cada octógono como a largura
           da caneta são controladas pela variável 'contador'.
+        courseF_artist_fwp_challenge1_f: |-
+          **Solução:**
+
+          ![Bloco de Soluções](https://images.code.org/a82cfea836b95ce6625b08afcc3b7b37-image-1469727289590.png)
       courseF_artist_variables10:
         courseF_artist_variables10_a: Divirta-se com este nível! Veja o que as pequenas
           alterações podem fazer no seu código.

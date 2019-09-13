@@ -32,6 +32,7 @@ cs:
         finish_sign_up_subheader_provider: 'Vyplňte následující informace pro vytvoření účtu Code.org prostřednictvím poskytovatele <strong>%{provider}</strong> pro <strong>%{email}</strong>.'
         error:
           future: nemůže být v budoucnosti
+  beta: "beta"
   hello: "Ahoj světe"
   welcome_back: "Vítej zpět, %{name}"
   your_professional_learning_plan: "Tvůj profesionální vzdělávací plán"
@@ -45,13 +46,9 @@ cs:
   okay: "Dobře"
   or: "nebo"
   heading_x_of_y: "%{heading} (stránky %{x} %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Přidat učitele:'
       placeholder: "Kód sekce (ABCDEF)"
-      instructions: "Prosím, vložte kód, který vám dal váš učitel. Je to šestipísmenný kód, jako například \"ABCDEF\"."
-      instructions_short: "Zadejte svůj 6 písmenný kód oddílu"
-    submit: 'Přidat učitele'
   add_hint_form:
     placeholder: 'Zadej zde svůj tip'
     submit: 'Přidat tip'

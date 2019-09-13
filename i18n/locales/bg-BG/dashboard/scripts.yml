@@ -2359,3 +2359,11 @@ bg:
               name: Скорост
             Functions:
               name: Функции
+            Sprite Properties:
+              name: Свойства на Спрайта
+        peru-2019:
+          stages:
+            Introduction:
+              name: Въведение
+            Nested Loops:
+              name: Вмъкнати цикли

@@ -28,6 +28,7 @@ fil:
         edit_header: 'Palitan ang Account Details'
         error:
           future: hindi maaari sa hinaharap
+  beta: "beta"
   hello: "Mabuhay!"
   welcome_back: "Maligayang pagbabalik, %{name}"
   your_professional_learning_plan: "Iyong Propersyonal na Plano sa Pag-aaral"
@@ -41,13 +42,9 @@ fil:
   okay: "Okey"
   or: "o"
   heading_x_of_y: "%{heading} (pahina %{x} ng %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Magdagdag ng guro:'
       placeholder: "Section Code (ABCDEF)"
-      instructions: "Pakipasok ang code na ibinahagi sa iyo ng iyong guro. Ito ay 6 na letrang code tulad ng \"ABCDEF\"."
-      instructions_short: "Ilagay ang iyong 6 na letra na section code"
-    submit: 'Magdagdag ng guro'
   add_hint_form:
     placeholder: 'Maaaring ilagay ang iyong hint dito'
     submit: 'Magdagdag ng hint'

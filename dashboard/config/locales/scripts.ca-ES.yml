@@ -1494,3 +1494,9 @@ ca:
               name: Condicionals
             Functions:
               name: Funcions
+        peru-2019:
+          stages:
+            Introduction:
+              name: Introducció
+            Nested Loops:
+              name: Bucles imbricats

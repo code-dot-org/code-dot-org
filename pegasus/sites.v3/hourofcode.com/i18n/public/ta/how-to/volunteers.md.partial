@@ -4,7 +4,7 @@ layout: wide
 nav: how_to_nav
 ---
 
-{{ signup_button }}
+{{signup_button}}
 
 # எப்படி தொண்டர்கள் வழிகாட்டி
 
@@ -255,5 +255,5 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
                         </p>
                         
                         <p>
-                          {{ signup_button }}
+                          {{signup_button}}
                         </p>

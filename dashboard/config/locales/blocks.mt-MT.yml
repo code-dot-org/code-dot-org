@@ -76,11 +76,6 @@ mt:
             '4': very fast
             '0.5': slow
             '0.25': very slow
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': veru/minnu
-            'false': falz
       gamelab_randColor:
         text: kulur bl-addoċċ
       gamelab_randomColor:

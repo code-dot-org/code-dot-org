@@ -6229,6 +6229,12 @@ pt-BR:
               name: Projeto - Projetar um Jogo
             Post-Project Test:
               name: Teste pós-projeto
+            Shapes and Parameters:
+              name: Formas e Parâmetros
+            Random Numbers:
+              name: Números Aleatórios
+            Sprite Properties:
+              name: Propriedades do Sprite
         maddie-test:
           stages:
             new stage:
@@ -6249,3 +6255,27 @@ pt-BR:
           stages:
             new stage:
               name: nova fase
+        csd4-pilot:
+          stages:
+            Processing:
+              name: Processando
+            Post-Project Test:
+              name: Teste pós-projeto
+        csp2-pilot:
+          stages:
+            new stage:
+              name: nova fase
+            Routers and Redundancy:
+              name: Roteadores e redundância
+            Unit 2 Assessment:
+              name: Unidade 2 Avaliação
+        peru-2019:
+          stages:
+            new stage:
+              name: nova fase
+            Introduction:
+              name: Introdução
+            'Loops: My Loopy Robotic Friends':
+              name: 'Repetições: Meus amigos robôs esquisitos'
+            Nested Loops:
+              name: Laços aninhados

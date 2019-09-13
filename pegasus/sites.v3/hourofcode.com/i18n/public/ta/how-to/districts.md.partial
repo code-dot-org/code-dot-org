@@ -4,7 +4,7 @@ layout: wide
 nav: how_to_nav
 ---
 
-{{ signup_button }}
+{{signup_button}}
 
 # உங்கள் முழு பள்ளி மாவட்டத்தில் எப்படி தொடர்பு கொள்ளலாம்
 
@@ -41,4 +41,4 @@ See our [event how to guide]({{ urls/how_to_events }}) for a sample run of show,
 - Encourage students to continue to [learn online]({{ urls/learn_beyond }}).
 - [Attend]({{ urls/professional_development_workshops }}) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
-{{ signup_button }}
+{{signup_button}}

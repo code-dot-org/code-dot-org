@@ -32,6 +32,7 @@ lt:
         edit_header: Keisti paskyros duomenis
         error:
           future: negali būti ateitis
+  beta: beta
   hello: Sveikas, pasauli
   welcome_back: Sveiki sugrįžę, %{name}
   your_professional_learning_plan: Tavo Profesionalus Mokymosi planas
@@ -45,13 +46,9 @@ lt:
   okay: Gerai
   or: arba
   heading_x_of_y: "%{heading} (%{x} puslapis iš %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Pridėti mokytoją:'
       placeholder: Grupės kodas (ABCDEF)
-      instructions: Įrašyk kodą, kurį tau davė mokytojas. Tai yra 6 raidžių kodas,
-        pavyzdžiui "ABCDEF".
-    submit: Pridėk mokytoją
   add_hint_form:
     placeholder: Įvesk savo suflerį čia
     submit: Pridėk suflerį

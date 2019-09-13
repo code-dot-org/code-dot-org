@@ -20,6 +20,7 @@ kk:
         edit_header: 'Жеке парақша мәліметтерін өзгерту'
         error:
           future: болашақта болуы мүмкін емес
+  beta: "бета"
   hello: "Сәлем, әлем"
   welcome_back: "Қайта оралуыңызбен, %{name}"
   submit: Жіберу
@@ -30,12 +31,9 @@ kk:
   cancel: "Болдырмау"
   okay: "Жақсы"
   or: "немесе"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Мұғалімді қосу:'
       placeholder: "Бөлім Коды (ABCDEF)"
-      instructions: "Мұғалімің бөліскен кодты жаз. Ол \"ABCDEF\" сияқты 6 әріптен тұратын код."
-    submit: 'Мұғалімді қосу'
   add_hint_form:
     placeholder: 'Өтінеміз, мұнда көмек сөзін қосыңыз'
     submit: 'Көмек сөзін қосу'
