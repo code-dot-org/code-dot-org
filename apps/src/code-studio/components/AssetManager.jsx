@@ -258,11 +258,13 @@ export default class AssetManager extends React.Component {
   };
 
   getAssetRows = () => {
+    const api = this.props.useFilesApi ? filesApi : assetsApi;
+
     return this.state.assets.map(asset => {
       return (
         <AssetRow
           {...this.defaultAssetProps(asset)}
-          useFilesApi={this.props.useFilesApi}
+          api={api}
           onChoose={
             this.props.assetChosen &&
             (() => this.props.assetChosen(asset.filename, asset.timestamp))
