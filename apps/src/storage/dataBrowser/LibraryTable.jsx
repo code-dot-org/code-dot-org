@@ -79,10 +79,7 @@ class LibraryTable extends React.Component {
         </a>
         {!this.state.collapsed && (
           <div style={styles.collapsibleContainer}>
-            <div>
-              <span style={styles.lastUpdated}>{msg.lastUpdatedNoTime()}</span>
-              <span style={styles.lastUpdatedTime}> 8 hours ago</span>
-            </div>
+            {/* TODO: Add last updated time */}
             <div>{this.props.description}</div>
             <div>
               <button
