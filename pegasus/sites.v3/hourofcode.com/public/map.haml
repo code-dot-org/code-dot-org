@@ -3,12 +3,12 @@ title: <%= hoc_s(:map_title) %>
 layout: wide_index
 ---
 
-%script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=false&libraries=places,geometry&v=3.7"}
+%script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=false&libraries=places,geometry&v=3.37"}
 %script{type: "text/javascript", src: "/js/jquery.geocomplete.min.js"}
 
   = view :header
 %h2.center-text= view :hoc_events_counter
-- use_mapbox = DCDO.get("use_mapbox", false) || params[:use_mapbox]
+- use_mapbox = DCDO.get("use_mapbox", true) || params[:use_mapbox]
 - if use_mapbox
   = view :hoc_events_map_replacement
 - else

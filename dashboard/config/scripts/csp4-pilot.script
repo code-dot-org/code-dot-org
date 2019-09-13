@@ -1,6 +1,8 @@
 login_required true
 hideable_stages true
 has_verified_resources true
+has_lesson_plan true
+curriculum_path 'https://curriculum.code.org/{LOCALE}/cspilot/unit4/{LESSON}'
 pilot_experiment 'csp-piloters'
 curriculum_umbrella 'CSP'
 
@@ -18,7 +20,6 @@ level 'U4 L02 Thermostat App v1 Code', progression: 'Thermostat App v1'
 level 'U4 L02 Thermostat App v2', progression: 'Thermostat App v2'
 level 'U4 L02 Thermostat App v3', progression: 'Thermostat App v3'
 level 'U4 L02 Thermostat App v3 pt2', progression: 'Thermostat App v3'
-level 'U4 L02 Thermostat App v3 pt3', progression: 'Thermostat App v3'
 level 'U4 L02 CYU Exit Ticket', progression: 'Check For Understanding', assessment: true
 
 stage 'Variables Practice', flex_category: 'csp_variables'
@@ -33,6 +34,7 @@ level 'U4 L03 Variables operator practice 6', progression: 'Variables and Operat
 level 'U4 L03 Variable Scope: Local vs. Global', progression: 'Debugging Scope Issues'
 level 'U4 L03 Scope Issue', progression: 'Debugging Scope Issues'
 level 'U4 L03 Variables operator practice 4', progression: 'Putting it Together'
+level 'U4L3 CFU Variables Psuedocode', progression: 'Check For Understanding: AP Practice', assessment: true
 
 stage 'Variables Make', flex_category: 'csp_variables'
 level 'CSP U4L4 SFLP 20-21', progression: 'Lesson Overview'
@@ -50,17 +52,14 @@ level 'U4 L05 CYU Exit Ticket', progression: 'Check For Understanding', assessme
 stage 'Conditionals Investigate', flex_category: 'csp_conditionals'
 level 'CSP U4L6 SFLP 20-21', progression: 'Lesson Overview'
 level 'U4L06 Introduction to Conditionals: if Statements', progression: 'If-Statements', named: true
-level 'U4 L06 Thermostat App v4', progression: 'If-Statements'
-level 'U4 L06 Thermostat App v4 Code', progression: 'If-Statements'
+level 'U4 L06 Lemon Hunter App v1 Code', progression: 'If-Statements'
 level 'U4L06 Introduction to Conditionals: if-else Statements', progression: 'If-Else Statements'
 level 'U4L06 Introduction to Conditionals: if-else-if Statements', progression: 'If-Else Statements'
-level 'U4 L06 Thermostat App v5', progression: 'If-Else Statements'
-level 'U4 L06 Thermostat App v5 Code', progression: 'If-Else Statements'
+level 'U4 L06 Lemon Hunter App v2 Code', progression: 'If-Else Statements'
 level 'U4L06 Introduction to Conditionals: Compound Boolean Expressions', progression: 'Logical Operators: AND OR'
-level 'U4 L06 Thermostat App v6', progression: 'Logical Operators: AND OR'
-level 'U4 L06 Thermostat App v6 Code', progression: 'Logical Operators: AND OR'
+level 'U4 L06 Lemon Hunter App v3 Code', progression: 'Logical Operators: AND OR'
 level 'Checking Multiple Conditions with If-elseif', progression: 'Patterns: If-else-if'
-level 'U4 L06 CYU Exit Ticket', progression: 'Check For Understanding', assessment: true
+level 'U4 L06 CYU Exit Ticket', progression: 'Check Your Understanding', assessment: true
 
 stage 'Conditionals Practice', flex_category: 'csp_conditionals'
 level 'CSP U4L7 SFLP 20-21', progression: 'Lesson Overview'
@@ -73,7 +72,6 @@ level 'U4 L07 Conditionals Practice 5', progression: 'If-Statements'
 level 'U4 L07 Conditionals Practice 6', progression: 'If-Statements'
 level 'U4 L07 Conditionals Practice 7', progression: 'Logical Operators'
 level 'U4 L07 Conditionals Practice 8', progression: 'Logical Operators'
-level 'U4 L07 Conditionals Practice 9', progression: 'Logical Operators'
 level 'U4L10 CFU Conditionals Psuedocode', progression: 'Check For Understanding: AP Practice', assessment: true
 
 stage 'Conditional Make', flex_category: 'csp_conditionals'
@@ -92,6 +90,7 @@ level 'U4L09 Intro to Functions Video', progression: 'Declaring and Calling Func
 level 'U4 L09 Score Clicker Investigate', progression: 'Declaring and Calling Functions'
 level 'U4 L09 Thermostat App v7', progression: 'Declaring and Calling Functions'
 level 'updateScreen Pattern', progression: 'Update Screen Pattern'
+level 'CSP U4 L09 CFU Exit Ticket_2020', progression: 'Check Your Understanding', assessment: true
 
 stage 'Functions Practice', flex_category: 'csp_functions'
 level 'CSP U4L10 SFLP 20-21', progression: 'Lesson Overview'
@@ -104,6 +103,7 @@ level 'Debugging Variable Scope and Functions', progression: 'Function Scope'
 level 'U4 L10 Functions Scope Practice 1 v2', progression: 'Function Scope'
 level 'When to Make Functions Map', progression: 'When to Declare Functions'
 level 'U4 L10 Making Functions Practice', progression: 'When to Declare Functions'
+level 'U4L10 CFU Functions Psuedocode', progression: 'Check For Understanding: AP Practice', assessment: true
 
 stage 'Functions Make', flex_category: 'csp_functions'
 level 'CSP U4L11 SFLP 20-21', progression: 'Lesson Overview'
@@ -136,9 +136,3 @@ level 'U4 L14 Practice PT 2', progression: 'Submit Your Decision Maker App', ass
 stage 'Lesson 15: Unit 4 Assessment', lockable: true
 level 'CSP U4L15 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP 20-21 Unit 4 Assessment', assessment: true
-
-stage 'Student Survey (Conditionals)', lockable: true, flex_category: 'required'
-level 'Pilot Student Survey Conditionals', progression: 'Student Survey (Conditionals)', assessment: true
-
-stage 'Teacher Surveys (Conditionals)', lockable: true, flex_category: 'required'
-level 'Pilot Teacher Surveys Conditionals CSP2021', progression: 'Teacher Surveys (Conditionals)', assessment: true

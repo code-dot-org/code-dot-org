@@ -9,7 +9,6 @@ project_widget_visible true
 project_widget_types ["gamelab", "weblab"]
 pilot_experiment 'csd-piloters'
 project_sharing true
-curriculum_umbrella 'CSD'
 
 stage 'Programming for Entertainment', flex_category: 'csd3_1'
 level 'CSD U3L01 TFMD_pilot', named: true

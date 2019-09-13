@@ -1,12 +1,19 @@
 =inline_css 'forum-banner.css'
 
 .announcement
-  .left
-    %p.title
-      2018 State of Computer Science Report
-    %p.details
-      Includes national momentum, policy trends, maps, state summaries, and implementation data.
-  .right
-    %a{href: "http://bit.ly/2018stateofcs", target: "_blank"}
-      %button
-        Download Report
+  .left.col-80
+    .announcement-thumbnail
+      %img{src: "/images/report-cover-2019.png"}
+    .title
+      2019 State of Computer Science Report
+    .details
+      Includes diversity data, national momentum, policy trends, maps, state summaries, and implementation data.
+  .right.col-20
+    %a{href: "/2019_state_of_cs.pdf", target: "_blank"}
+      %button.large_button
+        Download
+    &nbsp;
+    %a{href: "https://smile.amazon.com/2019-State-Computer-Science-Report/dp/B07XFH3Y1Z", target: "_blank"}
+      %button.small_button
+        Order
+

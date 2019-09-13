@@ -24,7 +24,7 @@ social:
 -twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
 -twitter[:hashtags] = 'HourOfCode' unless hoc_s(:front_header_banner).include? '#HourOfCode'
 
-%script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=false&libraries=places,geometry&v=3.7"}
+%script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=false&libraries=places,geometry&v=3.37"}
 %script{type: "text/javascript", src: "/js/jquery.geocomplete.min.js"}
 - js_locale = request.locale.to_s.downcase.tr('-', '_')
 %script{src: asset_path("js/#{js_locale}/common_locale.js")}
@@ -123,7 +123,7 @@ social:
 
   -# Map
   - unless @country == 'ma' # Hide map for Morocco because of sensitive border disputes misrepresented in map
-    - use_mapbox = DCDO.get("use_mapbox", false)
+    - use_mapbox = DCDO.get("use_mapbox", true)
     #maparea.full-width
       -# During pre-Hour of Code season, show the embedded gmap.
       -# All other times show a picture of the map.
