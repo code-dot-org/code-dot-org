@@ -54,10 +54,10 @@ module Pd::SurveyPipeline
         questions: {},
         this_workshop: {},
         # TODO: test CSF 201 workshop w/o these fields
-        # all_my_workshops: {},
-        # facilitators: {},
-        # facilitator_averages: {},
-        # facilitator_response_counts: {},
+        all_my_workshops: {},
+        facilitators: {},
+        facilitator_averages: {},
+        facilitator_response_counts: {},
         errors: data[:errors] || []
       }
 
