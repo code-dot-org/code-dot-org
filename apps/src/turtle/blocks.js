@@ -53,6 +53,16 @@ const POSITION_VALUES = [
   [commonMsg.positionBottomRight(), Position.BOTTOMRIGHT.toString()]
 ];
 
+const JUMP_BY_DIRECTION_VALUES = [
+  [msg.jumpForward(), 'jumpForward'],
+  [msg.jumpBackward(), 'jumpBackward']
+];
+
+const JUMP_DIRECTION_VALUES = [
+  [msg.forward(), 'jumpForward'],
+  [msg.backward(), 'jumpBackward']
+];
+
 const MOVE_BY_DIRECTION_VALUES = [
   [msg.moveForward(), 'moveForward'],
   [msg.moveBackward(), 'moveBackward']
@@ -740,13 +750,17 @@ exports.install = function(blockly, blockInstallOptions) {
     helpUrl: '',
     init: function() {
       this.setHSV(184, 1.0, 0.74);
-      this.appendValueInput('VALUE')
-        .setCheck(blockly.BlockValueType.NUMBER)
-        .appendTitle(
-          new blockly.FieldDropdown(blockly.Blocks.jump.DIRECTIONS),
-          'DIR'
-        );
-      this.appendDummyInput().appendTitle(msg.dots());
+      this.interpolateMsg(
+        msg.jumpByDirection(),
+        () => {
+          this.appendDummyInput().appendTitle(
+            new blockly.FieldDropdown(JUMP_DIRECTION_VALUES),
+            'DIR'
+          );
+        },
+        ['VALUE', 'Number', blockly.ALIGN_RIGHT],
+        blockly.ALIGN_RIGHT
+      );
       this.setInputsInline(true);
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -1019,11 +1033,6 @@ exports.install = function(blockly, blockInstallOptions) {
 
   SimpleMove.generateBlocksForAllDirections();
 
-  blockly.Blocks.jump.DIRECTIONS = [
-    [msg.jumpForward(), 'jumpForward'],
-    [msg.jumpBackward(), 'jumpBackward']
-  ];
-
   generator.jump = function() {
     // Generate JavaScript for jumping forward or backwards.
     var value =
@@ -1046,7 +1055,7 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       this.setHSV(184, 1.0, 0.74);
       this.appendDummyInput().appendTitle(
-        new blockly.FieldDropdown(blockly.Blocks.jump.DIRECTIONS),
+        new blockly.FieldDropdown(JUMP_BY_DIRECTION_VALUES),
         'DIR'
       );
       this.appendDummyInput()
@@ -1072,7 +1081,7 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       this.setHSV(184, 1.0, 0.74);
       this.appendDummyInput().appendTitle(
-        new blockly.FieldDropdown(blockly.Blocks.jump.DIRECTIONS),
+        new blockly.FieldDropdown(JUMP_BY_DIRECTION_VALUES),
         'DIR'
       );
       this.appendDummyInput()
