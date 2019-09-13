@@ -66,6 +66,8 @@ function showHomepage() {
             ncesSchoolId={homepageData.ncesSchoolId}
             censusQuestion={homepageData.censusQuestion}
             showCensusBanner={homepageData.showCensusBanner}
+            donorBannerName={homepageData.donorBannerName}
+            donorTeacherBannerOptions={homepageData.donorTeacherBannerOptions}
             teacherName={homepageData.teacherName}
             teacherId={homepageData.teacherId}
             teacherEmail={homepageData.teacherEmail}
