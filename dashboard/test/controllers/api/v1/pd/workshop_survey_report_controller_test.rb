@@ -261,7 +261,6 @@ module Api::V1::Pd
         "course_name" => nil,
         "questions" => {},
         "this_workshop" => {},
-        "all_my_workshops" => {},
         "facilitators" => {
           f_id => f_name
         },
