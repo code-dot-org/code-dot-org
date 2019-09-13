@@ -25,7 +25,8 @@ CURRENT_HOC_SIGNUP = "HocSignup#{DCDO.get('hoc_year', 2017)}".freeze
 def main
   return unless only_one_running?(__FILE__)
 
-  geojson = JSON.parse('{ "type": "FeatureCollection", "features": [] }')
+  events_geojson = JSON.parse('{ "type": "FeatureCollection", "features": [] }')
+  special_events_geojson = JSON.parse('{ "type": "FeatureCollection", "features": [] }')
 
   DB_READONLY[:forms].where(kind: CURRENT_HOC_SIGNUP).paged_each(rows_per_fetch: 10_000) do |form|
     data = JSON.parse(form[:data])
@@ -48,30 +49,41 @@ def main
     coordinates = processed_data['location_p'].split(',')
     long = coordinates[1].to_f
     lat = coordinates[0].to_f
-    geojson["features"] <<
-      {
-        geometry: {
-          coordinates: [long, lat],
-          type: "Point"
-        },
-        properties: {
-          organization_name: organization_name,
-          description: data['special_event_details_s'],
-          city: processed_data['location_city_s'],
-          review: form[:review]
-        },
-        type: "Feature"
-      }
+    event = {
+      geometry: {
+        coordinates: [long, lat],
+        type: "Point"
+      },
+      properties: {
+        organization_name: organization_name,
+        description: data['special_event_details_s'],
+        city: processed_data['location_city_s'],
+        review: form["review"]
+      },
+      type: "Feature"
+    }
+
+    if form["review"] == 'approved'
+      special_events_geojson["features"] << event
+    end
+    # TODO(bethany): only add other events when the map code is updated
+    events_geojson["features"] << event
   end
-  file = Tempfile.new(['hocevents', 'geojson'])
+  events_file = Tempfile.new(['hocevents', 'geojson'])
+  special_events_file = Tempfile.new(['hocspecialevents', 'geojson'])
+  events_tiles = Tempfile.new(['hoceventstiles', 'mbtiles'])
+  special_events_tiles = Tempfile.new(['hocspecialeventstiles', 'mbtiles'])
   tiles = Tempfile.new(['hoctiles', 'mbtiles'])
-  file.write(JSON.pretty_generate(geojson))
+  events_file.write(JSON.pretty_generate(events_geojson))
+  special_events_file.write(JSON.pretty_generate(special_events_geojson))
   _stdout, stderr, tippecanoe_status = Open3.capture3(
     # Tippecanoe will generate a map that has a min zoom of 1 (approx the whole world),
     # clusters points that are approximately 2 pixels apart, and drops points to make them fit if they can't.
-    # The layer is called "hoc". DO NOT change the layer name without changing the map
-    # in the Mapbox UI.
-    "tippecanoe -Z 1 -rg --cluster-distance=2 -o #{tiles.path} -l \"hoc\" --force #{file.path}"
+    # The layer is called "hoc". DO NOT change the layer names without changing the map
+    # on the hourofcode home page.
+    "tippecanoe -Z 1 -rg --cluster-distance=2 -o #{events_tiles.path} -l \"hoc\" --force #{events_file.path} && " \
+    "tippecanoe -Z 1 -rg --cluster-distance=1 -o #{special_events_tiles.path} -l \"hocspecialevents\" --force #{special_events_file.path} && " \
+    "tile-join -o #{tiles.path} -pk #{events_tiles.path} #{special_events_tiles.path}"
   )
   upload_successful = false
   if tippecanoe_status.success?
