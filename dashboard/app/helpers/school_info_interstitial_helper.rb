@@ -8,7 +8,7 @@ module SchoolInfoInterstitialHelper
     # Interstitial should pop up the first time for the teacher if it has been at least 30 days since the teacher signed
     # up for an account AND the teacher hasn’t previously filled out all the fields already (e.g. as part
     # of workshop registration).
-    return false if Queries::UserSchoolInfo.by_user(user).last_complete.school_info
+    return false if Queries::UserSchoolInfo.by_user(user).last_complete&.school_info
 
     if user.last_seen_school_info_interstitial
       days_since_interstitial_seen = (DateTime.now - user.last_seen_school_info_interstitial.to_datetime).to_i

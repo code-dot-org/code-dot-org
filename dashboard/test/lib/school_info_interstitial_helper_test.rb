@@ -51,7 +51,7 @@ class SchoolInfoInterstitialHelperTest < ActiveSupport::TestCase
     )
 
     refute user.school_info.complete?
-    assert_nil Queries::UserSchoolInfo.by_user(user).last_complete.school_info
+    assert_nil Queries::UserSchoolInfo.by_user(user).last_complete
 
     refute SchoolInfoInterstitialHelper.show_confirmation_dialog? user
     assert SchoolInfoInterstitialHelper.show? user
