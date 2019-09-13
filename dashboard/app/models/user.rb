@@ -2186,8 +2186,8 @@ class User < ActiveRecord::Base
   end
 
   def donor_school
-    if school_info
-      DonorSchool.find_by(nces_id: school_info.id)
+    if last_complete_school_info&.school
+      DonorSchool.find_by(nces_id: last_complete_school_info.school.id)
     end
   end
 
