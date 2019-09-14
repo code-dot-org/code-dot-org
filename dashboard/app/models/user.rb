@@ -2114,12 +2114,6 @@ class User < ActiveRecord::Base
     )
   end
 
-  def donor_school
-    if last_complete_school_info&.school
-      DonorSchool.find_by(nces_id: last_complete_school_info.school.id)
-    end
-  end
-
   # Called before_destroy.
   # Soft-deletes any projects and other channel-backed progress belonging to
   # this user.  Unfeatures any featured projects belonging to this user.
