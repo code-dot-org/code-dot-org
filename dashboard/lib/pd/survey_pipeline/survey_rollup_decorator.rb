@@ -1,22 +1,32 @@
-# This decorator combines pieces of survey roll-up data from previous steps of the survey pipeline
+# SurveyRollupDecorator combines pieces of survey roll-up data from previous steps of the survey pipeline
 # and organize them in a format that the client view can consume.
 
 module Pd::SurveyPipeline
   class SurveyRollupDecorator
     # Create roll-up report to send to client view.
     #
-    # @param [Hash] data a hash contains pieces of information from previous steps in the pipeline.
+    # @param data [Hash] a hash contains pieces of information from previous steps in the pipeline.
+    # @option data [Integer] :facilitator_id a facilitator in the current workshop
+    # @option data [Integer] :current_workshop_id the main workshop user is requesting survey results for
+    # @option data [Array<Integer>] :related_workshop_ids workshops related to the current workshop and the selected facilitator
+    # @option data [Hash] :parsed_questions questions parsed from Pd::SurveyQuestion
+    # @option data [Array<String>] :question_categories categories for roll-up results
+    # @option data [Array<Pd::WorkshopDailySurvey>] :workshop_submissions general workshop survey submissions
+    # @option data [Array<Pd::WorkshopFacilitatorDailySurvey>] :facilitator_submissions facilitator-specific survey submissions
+    # @option data [Array<Hash>] :question_answer_joined questions & answers joined together
+    # @option data [Array<Hash>] :summaries survey result summaries
+    # @option data [Array<String>] :errors non-fatal errors from previous steps
     #
-    # @return [Hash] a hash report contains following keys
-    #   :facilitators => {factilitator_id => facilitator_name}
-    #   :current_workshop => Integer
-    #   :related_workshops: {facilitator_id => Array<Integer>}
-    #   :facilitator_averages => a hash with following keys
+    # @return [Hash] a hash report contains 6 keys.
+    #   :facilitators [Hash] {factilitator_id => facilitator_name}
+    #   :current_workshop [Integer]
+    #   :related_workshops [Hash] {facilitator_id => Array<Integer>}
+    #   :facilitator_averages [Hash] with following keys
     #     :questions => {question_name => question_text}
     #     facilitator_name => {question_name_or_category => {workshop_scope => score}}
-    #   :facilitator_response_counts =>
-    #     {workshop_scope => {factilitator_id => {submission_type => count}}}
-    #   :errors => Array
+    #   :facilitator_response_counts [Hash]
+    #     {workshop_scope => {factilitator_id => {submission_type => Integer}}}
+    #   :errors [Array<String>]
     #
     def self.decorate_facilitator_rollup(data)
       report = {
@@ -67,6 +77,7 @@ module Pd::SurveyPipeline
           get_submission_counts(
             data[:question_answer_joined], data[:question_categories], data[:current_workshop_id]
           )
+
         report[:facilitator_response_counts][:all_my_workshops][facilitator_id][submission_type] =
           get_submission_counts data[:question_answer_joined], data[:question_categories]
       end
@@ -175,9 +186,11 @@ module Pd::SurveyPipeline
 
         result[category] = {}
         result[category][:this_workshop] =
-          (this_workshop_scores.sum * 1.0 / this_workshop_scores.length).round(2)
+          this_workshop_scores.present? ?
+            (this_workshop_scores.sum * 1.0 / this_workshop_scores.length).round(2) : nil
         result[category][:all_my_workshops] =
-          (all_workshop_scores.sum * 1.0 / all_workshop_scores.length).round(2)
+          all_workshop_scores.present? ?
+            (all_workshop_scores.sum * 1.0 / all_workshop_scores.length).round(2) : nil
       end
 
       result
