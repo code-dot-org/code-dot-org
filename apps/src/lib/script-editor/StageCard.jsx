@@ -5,7 +5,13 @@ import {connect} from 'react-redux';
 import {borderRadius, levelTokenMargin, ControlTypes} from './constants';
 import OrderControls from './OrderControls';
 import LevelToken from './LevelToken';
-import {reorderLevel, addLevel, setStageLockable} from './editorRedux';
+import {
+  reorderLevel,
+  addLevel,
+  setStageLockable,
+  setFlexCategory
+} from './editorRedux';
+import FlexCategorySelector from './FlexCategorySelector';
 
 const styles = {
   checkbox: {
@@ -27,12 +33,15 @@ const styles = {
     fontSize: 13,
     marginTop: 3
   },
+  bottomControls: {
+    height: 30
+  },
   addLevel: {
     fontSize: 14,
     background: '#eee',
     border: '1px solid #ddd',
     boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.8)',
-    margin: '5px 0'
+    margin: '0 5px 0 0'
   }
 };
 
@@ -42,7 +51,8 @@ export class UnconnectedStageCard extends Component {
     addLevel: PropTypes.func.isRequired,
     setStageLockable: PropTypes.func.isRequired,
     stagesCount: PropTypes.number.isRequired,
-    stage: PropTypes.object.isRequired
+    stage: PropTypes.object.isRequired,
+    setFlexCategory: PropTypes.func.isRequired
   };
 
   /**
@@ -57,7 +67,8 @@ export class UnconnectedStageCard extends Component {
     initialPageY: null,
     initialScroll: null,
     newPosition: null,
-    startingPositions: null
+    startingPositions: null,
+    editingFlexCategory: false
   };
 
   handleDragStart = (position, {pageY}) => {
@@ -124,6 +135,23 @@ export class UnconnectedStageCard extends Component {
     this.props.addLevel(this.props.stage.position);
   };
 
+  handleEditFlexCategory = () => {
+    this.setState({
+      editingFlexCategory: true
+    });
+  };
+
+  handleSetFlexCategory = newFlexCategory => {
+    this.setState({editingFlexCategory: false});
+    if (this.props.stage.flex_category !== newFlexCategory) {
+      this.props.setFlexCategory(this.props.stage.position, newFlexCategory);
+    }
+  };
+
+  hideFlexCategorySelector = () => {
+    this.setState({editingFlexCategory: false});
+  };
+
   toggleLockable = () => {
     this.props.setStageLockable(
       this.props.stage.position,
@@ -178,15 +206,38 @@ export class UnconnectedStageCard extends Component {
             handleDragStart={this.handleDragStart}
           />
         ))}
-        <button
-          onMouseDown={this.handleAddLevel}
-          className="btn"
-          style={styles.addLevel}
-          type="button"
-        >
-          <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-          Add Level
-        </button>
+        <div style={styles.bottomControls}>
+          {!this.state.editingFlexCategory && (
+            <span>
+              <button
+                onMouseDown={this.handleAddLevel}
+                className="btn"
+                style={styles.addLevel}
+                type="button"
+              >
+                <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+                Add Level
+              </button>
+              <button
+                onMouseDown={this.handleEditFlexCategory}
+                className="btn"
+                style={styles.addLevel}
+                type="button"
+              >
+                <i style={{marginRight: 7}} className="fa fa-pencil" />
+                Edit Flex Category
+              </button>
+            </span>
+          )}
+          {this.state.editingFlexCategory && (
+            <FlexCategorySelector
+              labelText="Flex Category"
+              confirmButtonText="Save"
+              onConfirm={this.handleSetFlexCategory}
+              onCancel={this.hideFlexCategorySelector}
+            />
+          )}
+        </div>
       </div>
     );
   }
@@ -203,6 +254,9 @@ export default connect(
     },
     setStageLockable(stage, lockable) {
       dispatch(setStageLockable(stage, lockable));
+    },
+    setFlexCategory(stage, flexCategory) {
+      dispatch(setFlexCategory(stage, flexCategory));
     }
   })
 )(UnconnectedStageCard);

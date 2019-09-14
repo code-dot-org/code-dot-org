@@ -6,7 +6,8 @@ import reducers, {
   addStage,
   moveStage,
   setActiveVariant,
-  setField
+  setField,
+  setFlexCategory
 } from '@cdo/apps/lib/script-editor/editorRedux';
 
 const getInitialState = () => ({
@@ -136,6 +137,34 @@ describe('editorRedux reducer tests', () => {
         state.stages,
         'third move changes group but not position'
       );
+    });
+
+    describe('set flex category', () => {
+      it('moves unique flex category to the end of the script', () => {
+        let state = reducer(initialState, setFlexCategory(2, 'Z'));
+        assert.deepEqual(
+          [
+            {flex_category: 'X', id: 101, position: 1, relativePosition: 1},
+            {flex_category: 'Y', id: 103, position: 2, relativePosition: 2},
+            {flex_category: 'Y', id: 104, position: 3, relativePosition: 3},
+            {flex_category: 'Z', id: 102, position: 4, relativePosition: 4}
+          ],
+          state.stages
+        );
+      });
+
+      it('groups with others in same flex category', () => {
+        const newState = reducer(initialState, setFlexCategory(4, 'X'));
+        assert.deepEqual(
+          [
+            {flex_category: 'X', id: 101, position: 1, relativePosition: 1},
+            {flex_category: 'X', id: 102, position: 2, relativePosition: 2},
+            {flex_category: 'X', id: 104, position: 3, relativePosition: 3},
+            {flex_category: 'Y', id: 103, position: 4, relativePosition: 4}
+          ],
+          newState.stages
+        );
+      });
     });
   });
 });

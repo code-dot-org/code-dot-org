@@ -6,6 +6,9 @@ import AssetRow from '@cdo/apps/code-studio/components/AssetRow';
 const DEFAULT_PROPS = {
   name: "foo's.bar",
   type: 'image',
+  api: {
+    basePath: name => `/path/to/${name}`
+  },
   onDelete: () => {}
 };
 

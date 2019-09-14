@@ -69,7 +69,7 @@ export default class SchoolNotFound extends Component {
     showRequiredIndicators: PropTypes.bool,
     schoolNameLabel: PropTypes.string,
     // Note: Google location search requires the following line to be present in the haml where this component is used:
-    // %script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=true&libraries=places,geometry&v=3.7"}
+    // %script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=true&libraries=places,geometry&v=3.37"}
     useGoogleLocationSearch: PropTypes.bool
   };
 

@@ -35,6 +35,7 @@ module Cdo
         mock_started = $?.exitstatus == 0
       end
       `curl -s -X POST #{LOCALHOST}:#{DASHBOARD_PORT}/__admin/mappings/new -d '#{{request: {method: 'GET', url: '/'}, response: {status: 200}}.to_json}'`
+      `curl -s -X POST #{LOCALHOST}:#{DASHBOARD_PORT}/__admin/mappings/new -d '#{{request: {method: 'GET', url: '/health_check'}, response: {status: 200}}.to_json}'`
       `sleep 1` until system("curl -sf #{LOCALHOST}:#{VARNISH_PORT}/health_check.dashboard")
       puts 'setup finished'
       [pid, ngrok_pid]
@@ -250,7 +251,7 @@ module HttpCacheTest
       end
 
       it 'Handles Accept-Language behaviors' do
-        skip 'Not implemented in Rack yet' unless environment == 'integration'
+        skip 'Not implemented in Rack yet' unless environment.to_s == 'integration'
         # URL contains whitelisted 'Accept-Language' header
         url = build_url 's/starwars/stage/1/puzzle'
         text_en = 'Hello World!'
