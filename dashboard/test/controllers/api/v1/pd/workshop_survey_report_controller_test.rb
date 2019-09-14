@@ -317,11 +317,7 @@ module Api::V1::Pd
       expected_result = {
         "course_name" => nil,
         "questions" => {},
-        "this_workshop" => {},
-        "all_my_workshops" => {},
-        "facilitators" => {},
-        "facilitator_averages" => {},
-        "facilitator_response_counts" => {}
+        "this_workshop" => {}
       }
 
       sign_in @admin
