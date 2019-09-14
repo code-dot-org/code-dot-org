@@ -14,19 +14,38 @@
     - homepage_data[:isTeacher] = true
     - homepage_data[:joined_sections] = @student_sections
     - homepage_data[:announcement] = DCDO.get('announcement_override', nil)
-    - show_census_banner = !!(current_user.show_census_teacher_banner?)
+    - if !current_user.donor_teacher_banner_dismissed
+      - donor_banner_name = current_user.donor_teacher_banner_name
+    - donor_banner_name ||= @force_donor_teacher_banner
+    - show_census_banner = !!(!donor_banner_name && current_user.show_census_teacher_banner?)
     - homepage_data[:showCensusBanner] = show_census_banner
     - homepage_data[:hiddenScripts] = current_user.get_hidden_script_ids
+    - homepage_data[:donorBannerName] = donor_banner_name
     - if show_census_banner
-      %script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=true&libraries=places,geometry&v=3.7"}
+      %script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=true&libraries=places,geometry&v=3.37"}
       - teachers_school = current_user.school_info.school
       - school_stats = SchoolStatsByYear.where(school_id: teachers_school.id).order(school_year: :desc).first
       - homepage_data[:ncesSchoolId] = teachers_school.id
       - homepage_data[:censusQuestion] = school_stats.try(:has_high_school_grades?) ? "how_many_20_hours" : "how_many_10_hours"
+      - homepage_data[:currentSchoolYear] = current_census_year
       - homepage_data[:teacherName] = current_user.name
       - homepage_data[:teacherId] = current_user.id
       - homepage_data[:teacherEmail] = current_user.email
-      - homepage_data[:currentSchoolYear] = current_census_year
+    - elsif donor_banner_name
+      - teachers_school = current_user.last_complete_school_info.school
+      - donor_teacher_banner_options = {}
+      - donor_teacher_banner_options[:teacherFirstName] = current_user.short_name
+      - donor_teacher_banner_options[:teacherSecondName] = current_user.second_name
+      - donor_teacher_banner_options[:teacherEmail] = current_user.email
+      - donor_teacher_banner_options[:ncesSchoolId] = teachers_school.id
+      - donor_teacher_banner_options[:schoolAddress1] = teachers_school.address_line1
+      - donor_teacher_banner_options[:schoolAddress2] = teachers_school.address_line2
+      - donor_teacher_banner_options[:schoolAddress3] = teachers_school.address_line3
+      - donor_teacher_banner_options[:schoolCity] = teachers_school.city
+      - donor_teacher_banner_options[:schoolState] = teachers_school.state
+      - donor_teacher_banner_options[:schoolZip] = teachers_school.zip
+      - homepage_data[:donorTeacherBannerOptions] = donor_teacher_banner_options
+      - homepage_data[:teacherId] = current_user.id
   - else
     - homepage_data[:sections] = @student_sections
     - homepage_data[:isTeacher] = false

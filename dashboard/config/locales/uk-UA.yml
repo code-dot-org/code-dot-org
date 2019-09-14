@@ -56,14 +56,9 @@ uk:
   okay: Добре
   or: або
   heading_x_of_y: "%{heading} (сторінка %{x} з %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Додати учителя:'
       placeholder: Код групи (ABCDEF)
-      instructions: Будь ласка, введіть код, виданий вчителем. Це 6 літерний код,
-        накшталт "ABCDEF".
-      instructions_short: Введіть ваші 6 букв коду класу
-    submit: Додати викладача
   add_hint_form:
     placeholder: Будь ласка, введіть сюди підказку
     submit: Додати підказку

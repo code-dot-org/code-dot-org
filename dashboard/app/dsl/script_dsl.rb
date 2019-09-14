@@ -310,9 +310,9 @@ class ScriptDSL < BaseDSL
   def self.serialize_stages(script)
     s = []
     script.stages.each do |stage|
-      t = "stage '#{stage.name}'"
+      t = "stage '#{escape(stage.name)}'"
       t += ', lockable: true' if stage.lockable
-      t += ", flex_category: '#{stage.flex_category}'" if stage.flex_category
+      t += ", flex_category: '#{escape(stage.flex_category)}'" if stage.flex_category
       s << t
       stage.script_levels.each do |sl|
         type = 'level'
@@ -366,15 +366,19 @@ class ScriptDSL < BaseDSL
 
       s << "level_concept_difficulty '#{level.summarize_concept_difficulty}'" if level.level_concept_difficulty
     end
-    l = "#{type} '#{level.key.gsub("'") {"\\'"}}'"
+    l = "#{type} '#{escape(level.key)}'"
     l += ', active: false' if experiments.empty? && active == false
     l += ', active: true' if experiments.any? && (active == true || active.nil?)
     l += ", experiments: #{experiments.to_json}" if experiments.any?
-    l += ", progression: '#{progression}'" if progression
+    l += ", progression: '#{escape(progression)}'" if progression
     l += ', named: true' if named
     l += ', assessment: true' if assessment
     l += ', challenge: true' if challenge
     s << l
     s
+  end
+
+  def self.escape(str)
+    str.gsub("'") {"\\'"}
   end
 end

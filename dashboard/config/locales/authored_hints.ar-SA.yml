@@ -973,6 +973,251 @@ ar-SA:
           قريبا، سوف تنجح!"
       courseB_maze_seq8:
         courseB_maze_seq8_b: هناك طريقتان لحل هذا اللغز!
+      courseC_PlayLab_eventsFP_2019:
+        idea1: |-
+          _تحتاج فكرة؟_
+
+          **من هناك؟** أجعل الشخصيات تظهر بصوة عشوائية, لكي لا يستطيع أحد معرفة من سيظهر.
+
+          <img src= "https://images.code.org/dbd6ece9d0fb213039ea5dccb91fc425-image-1563577859889.gif" style="width: 200px">
+        idea2: |-
+          **الذهاب إلى مغامرة**- غير الخلفية, ومن ثم أجعل الشخصية تتكلم عن إين مكانها الآن.
+
+          <img src= "https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif" style="width: 200px">
+      courseC_PlayLab_events_challenge1:
+        courseC_PlayLab_events_challenge_a: |-
+          يمكنك استخدام هذه البلوكة لتحرك اللاعب إلى مكان آخر في مساحة اللعب
+
+          <xml> <block type="studio_setSpritePosition">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">12</title>
+            </block></xml>
+        courseC_PlayLab_events_challenge_b: جرب استخدام "تعيين الممثل 1 إلى الموضع
+          الأوسط الأيسر" عندما يلامس أحد اللاعبين الآخرين. هذا الخيار سوف يعيد إعدادات
+          اللعبة ليتمكن اللاعب من المحاولة مرة أخرى!
+        courseC_PlayLab_events_challenge_c: |-
+          يمكنك أيضاً تغيير سرعة الاعب الآخر لتجعل اللعبة أسهل أو أكثر تحدياً!
+
+          <xml>  <block type="studio_setSpriteSpeed">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">Studio.SpriteSpeed.FAST</title>
+            </block></xml>
+      courseC_PlayLab_events_challenge1_2018:
+        courseC_PlayLab_events_challenge_a: |-
+          يمكنك استخدام هذه البلوكة لتحرك اللاعب إلى مكان آخر في مساحة اللعب
+
+          <xml> <block type="studio_setSpritePosition">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">12</title>
+            </block></xml>
+        courseC_PlayLab_events_challenge_b: جرب استخدام "تعيين الممثل 1 إلى الموضع
+          الأوسط الأيسر" عندما يلامس أحد اللاعبين الآخرين. هذا الخيار سوف يعيد إعدادات
+          اللعبة ليتمكن اللاعب من المحاولة مرة أخرى!
+        courseC_PlayLab_events_challenge_c: |-
+          يمكنك أيضاً تغيير سرعة الاعب الآخر لتجعل اللعبة أسهل أو أكثر تحدياً!
+
+          <xml>  <block type="studio_setSpriteSpeed">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">Studio.SpriteSpeed.FAST</title>
+            </block></xml>
+      courseC_PlayLab_events_challenge1_2019:
+        courseC_PlayLab_events_challenge_a: |-
+          يمكنك استخدام هذه البلوكة لتحرك اللاعب إلى مكان آخر في مساحة اللعب
+
+          <xml> <block type="studio_setSpritePosition">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">12</title>
+            </block></xml>
+        courseC_PlayLab_events_challenge_b: جرب استخدام "تعيين الممثل 1 إلى الموضع
+          الأوسط الأيسر" عندما يلامس أحد اللاعبين الآخرين. هذا الخيار سوف يعيد إعدادات
+          اللعبة ليتمكن اللاعب من المحاولة مرة أخرى!
+        courseC_PlayLab_events_challenge_c: |-
+          يمكنك أيضاً تغيير سرعة الاعب الآخر لتجعل اللعبة أسهل أو أكثر تحدياً!
+
+          <xml>  <block type="studio_setSpriteSpeed">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">Studio.SpriteSpeed.FAST</title>
+            </block></xml>
+      courseC_artist_loops1b_2019:
+        courseC_artist_loops1b_a: |-
+          هذه البلوكة الأولى التي سوف تحتاجها:
+
+          <xml>
+            <block type="draw_turn_by_constant_dropdown">
+              <title name="DIR">???</title>
+              <title name="VALUE" config="45,60,90,120,180">???</title>
+            </block>
+          </xml>
+
+          يمكنك استخدام اليمين أو اليسار بالإضافة إلىرقم درجة الدوران.
+      courseC_artist_loops2a_2019:
+        courseC_artist_loops2a_a: داخل التكرار, يجب عليك القفز إلى المنتصف, ومن ثم
+          الالتفاف, ومن ثم رسم الملصق.
+      courseC_artist_loops3a_2019:
+        courseC_artist_loops3a_a: يجب عليك إضافة بلوكة واحدة داخر التكرار, بعد الملصق
+          الأول.
+        courseC_artist_loops3a_b: |-
+          يجب أنيكون برنامجك كالتالي!
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">???</title>
+                  <statement name="DO">
+                    <block type="jump_to">
+                      <title name="VALUE">13</title>
+                      <next>
+                        <block type="draw_turn_by_constant_dropdown">
+                          <title name="DIR">???</title>
+                          <title name="VALUE" config="1,2,5,10,12,20,30,45,60,90,120,180">???</title>
+                          <next>
+                            <block type="sticker">
+                              <title name="VALUE">Cat</title>
+                              <next>
+                                <block type="sticker">
+                                  <title name="VALUE">Dog</title>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </xml>
+
+          يمكنك استخدام أي ملصق يعجبك!
+      courseC_artist_loops4a_2019:
+        courseC_artist_loops4a_b: |-
+          يجب أن يظهر برنامجك كالتالي!
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">???</title>
+                  <statement name="DO">
+                    <block type="jump_to">
+                      <title name="VALUE">13</title>
+                      <next>
+                        <block type="draw_turn_by_constant_dropdown">
+                          <title name="DIR">???</title>
+                          <title name="VALUE" config="1,2,5,10,12,20,30,45,60,90,120,180">???</title>
+                          <next>
+                            <block type="sticker">
+                              <title name="VALUE">Cat</title>
+                              <next>
+                                <block type="jump_by_constant">
+                                  <title name="DIR">jumpForward</title>
+                                  <title name="VALUE">???</title>
+                                  <next>
+                                    <block type="sticker">
+                                      <title name="VALUE">Dog</title>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseC_artist_loops5b_2019:
+        courseC_artist_loops5b_c: |-
+          يجب أن يظهر برنامجك كالتالي!
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="draw_line_style_pattern">
+                  <title name="VALUE">rainbowLine</title>
+                  <next>
+                    <block type="controls_repeat">
+                      <title name="TIMES">4</title>
+                      <statement name="DO">
+                        <block type="jump_to">
+                          <title name="VALUE">13</title>
+                          <next>
+                            <block type="draw_move_by_constant">
+                              <title name="DIR">moveForward</title>
+                              <title name="VALUE">???</title>
+                              <next>
+                                <block type="draw_move_by_constant">
+                                  <title name="DIR">moveBackward</title>
+                                  <title name="VALUE">???</title>
+                                  <next>
+                                    <block type="draw_turn_by_constant_dropdown">
+                                      <title name="DIR">???</title>
+                                      <title name="VALUE" config="1,2,5,10,12,20,30,45,60,90,120,180">???</title>
+                                      <next>
+                                        <block type="sticker">
+                                          <title name="VALUE">Cat</title>
+                                          <next>
+                                            <block type="jump_by_constant">
+                                              <title name="DIR">jumpForward</title>
+                                              <title name="VALUE">???</title>
+                                              <next>
+                                                <block type="sticker">
+                                                  <title name="VALUE">Dog</title>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseC_artist_loopsPrePre1a_2018:
+        courseC_artist_loopsPrePre1a_a: |-
+          البلوكة الاولى التي تحتاجها هي:
+
+          <xml>  <block type="jump_to_xy" id="callMe">
+              <title name="XPOS">200</title>
+              <title name="YPOS">200</title>
+            </block></xml>
+        courseC_artist_loopsPrePre1a_b: |-
+          لتتقدم إلى الامام بمقدار 50 بكسل استخدم:
+
+          <xml><block type="draw_move_by_constant">
+              <title name="DIR">moveForward</title>
+              <title name="VALUE">50</title>
+            </block></xml>
+      courseC_artist_loopsPrePre1a_2019:
+        courseC_artist_loopsPrePre1a_a: |-
+          البلوكة الاولى التي تحتاجها هي:
+
+          <xml>  <block type="jump_to_xy" id="callMe">
+              <title name="XPOS">200</title>
+              <title name="YPOS">200</title>
+            </block></xml>
+        courseC_artist_loopsPrePre1a_b: |-
+          لتتقدم إلى الامام بمقدار 50 بكسل استخدم:
+
+          <xml><block type="draw_move_by_constant">
+              <title name="DIR">moveForward</title>
+              <title name="VALUE">50</title>
+            </block></xml>
       courseC_artist_prog2:
         courseC_artist_prog2_a: '*"إذا استخدمت كتلة <xml><block type="draw_move_by_constant"><title
           name="DIR">تحرك إلى الأمام</title><title name="VALUE">100</title></block></xml>
@@ -994,18 +1239,355 @@ ar-SA:
         courseC_artist_prog2_b: هل تواجه صعوبة في الاستدارة عند الزوايا؟ استخدم كتلة
           <xml><block type="draw_turn_by_constant_dropdown"><title name="DIR">اتجه
           إلى اليمين</title><title name="VALUE" config="45,60,90,120,180">90</title></block></xml>.
+      courseC_artist_prog5_2018:
+        courseC_artist_prog5_c: يمكنك استخدام القائمة المنسدلة لتغير كيفية استخدامها!
+      courseC_artist_prog5_2019:
+        courseC_artist_prog5_c: يمكنك استخدام القائمة المنسدلة لتغير كيفية استخدامها!
+      courseC_collector_prog1:
+        courseC_collector_prog1_a: عندما تقف في مكان يحتوي على حوهرة استخدم بلوكة
+          <xml><block type="collector_collect"/></xml> لتجمعها.
+        courseC_collector_prog1_b: أسهل حل يمكنك استخدامه هو الاتجاه للامام مره واحدة.
+          ومن ثم جمع الجوهرة.
+      courseC_collector_prog1_2018:
+        courseC_collector_prog1_a: عندما تقف في مكان يحتوي على حوهرة استخدم بلوكة
+          <xml><block type="collector_collect"/></xml> لتجمعها.
+        courseC_collector_prog1_b: أسهل حل يمكنك استخدامه هو الاتجاه للامام مره واحدة.
+          ومن ثم جمع الجوهرة.
+      courseC_collector_prog1_2019:
+        courseC_collector_prog1_a: عندما تقف في مكان يحتوي على حوهرة استخدم بلوكة
+          <xml><block type="collector_collect"/></xml> لتجمعها.
+        courseC_collector_prog1_b: أسهل حل يمكنك استخدامه هو الاتجاه للامام مره واحدة.
+          ومن ثم جمع الجوهرة.
+      courseC_collector_prog2:
+        courseC_collector_prog2_a: يمكنك استخدام 4 بلوكات <xml><block type="maze_move"><title
+          name="DIR">moveForward</title></block></xml> أو استخدم <xml><block type="controls_repeat_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> لتجعل برنامجك قصيراً.
+      courseC_collector_prog2_2018:
+        courseC_collector_prog2_a: يمكنك استخدام 4 بلوكات <xml><block type="maze_move"><title
+          name="DIR">moveForward</title></block></xml> أو استخدم <xml><block type="controls_repeat_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> لتجعل برنامجك قصيراً.
+      courseC_collector_prog2_2019:
+        courseC_collector_prog2_a: يمكنك استخدام 4 بلوكات <xml><block type="maze_move"><title
+          name="DIR">moveForward</title></block></xml> أو استخدم <xml><block type="controls_repeat_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> لتجعل برنامجك قصيراً.
+      courseC_collector_prog3:
+        courseC_collector_prog3_a: البرنامج سوف يشغل البلوكات المتصلة فقط بـ <xml><block
+          type="when_run"/></xml> block.
+        courseC_collector_prog3_b: جرب استخدام زر "خطوة" لتشغل برنامجك سطرا سطرا.
+          هل يمكنك معرفة مكان الخطأ؟
+        courseC_collector_prog3_c: إذا كنت تواجه مشكلة في حل هذا اللغز, حاول كتابة
+          الخطوات في ورقة خارجية.
+      courseC_collector_prog3_2018:
+        courseC_collector_prog3_a: البرنامج سوف يشغل البلوكات المتصلة فقط بـ <xml><block
+          type="when_run"/></xml> block.
+        courseC_collector_prog3_b: جرب استخدام زر "خطوة" لتشغل برنامجك سطرا سطرا.
+          هل يمكنك معرفة مكان الخطأ؟
+        courseC_collector_prog3_c: إذا كنت تواجه مشكلة في حل هذا اللغز, حاول كتابة
+          الخطوات في ورقة خارجية.
+      courseC_collector_prog3_2019:
+        courseC_collector_prog3_a: البرنامج سوف يشغل البلوكات المتصلة فقط بـ <xml><block
+          type="when_run"/></xml> block.
+        courseC_collector_prog3_b: جرب استخدام زر "خطوة" لتشغل برنامجك سطرا سطرا.
+          هل يمكنك معرفة مكان الخطأ؟
+        courseC_collector_prog3_c: إذا كنت تواجه مشكلة في حل هذا اللغز, حاول كتابة
+          الخطوات في ورقة خارجية.
+      courseC_collector_prog4:
+        courseC_collector_prog4_a: إذا عجزت عن الحل, جرب كتابة الخطوات على ورقة.
+        courseC_collector_prog4_c: استخدم هذا الخيار للمسار.
+      courseC_collector_prog4_2018:
+        courseC_collector_prog4_a: إذا عجزت عن الحل, جرب كتابة الخطوات على ورقة.
+        courseC_collector_prog4_c: استخدم هذا الخيار للمسار.
+      courseC_collector_prog4_2019:
+        courseC_collector_prog4_a: إذا عجزت عن الحل, جرب كتابة الخطوات على ورقة.
+        courseC_collector_prog4_c: استخدم هذا الخيار للمسار.
+      courseC_collector_prog5:
+        courseC_collector_prog5_a: |-
+          "هل الخطوة الأولى تعمل؟
+          هل الخطوة الثانية تعمل؟
+          أين هو الخطأ؟"
+        courseC_collector_prog5_b: إذا اصلحت خطأً واحد ولكن البرنامج لازال لايعمل,
+          استخدم الخطوات في الأعلى لتجد أخطاء أخرى.
+        courseC_collector_prog5_c: إذا عجزت عن الحل, جرب كتابة الخطوات على ورقة.
+        courseC_collector_prog5_d: اتبع المسار لتجمع المجوهرات.
+      courseC_collector_prog5_2018:
+        courseC_collector_prog5_a: |-
+          "هل الخطوة الأولى تعمل؟
+          هل الخطوة الثانية تعمل؟
+          أين هو الخطأ؟"
+        courseC_collector_prog5_b: إذا اصلحت خطأً واحد ولكن البرنامج لازال لايعمل,
+          استخدم الخطوات في الأعلى لتجد أخطاء أخرى.
+        courseC_collector_prog5_c: إذا عجزت عن الحل, جرب كتابة الخطوات على ورقة.
+        courseC_collector_prog5_d: اتبع المسار لتجمع المجوهرات.
+      courseC_collector_prog5_2019:
+        courseC_collector_prog5_a: |-
+          "هل الخطوة الأولى تعمل؟
+          هل الخطوة الثانية تعمل؟
+          أين هو الخطأ؟"
+        courseC_collector_prog5_b: إذا اصلحت خطأً واحد ولكن البرنامج لازال لايعمل,
+          استخدم الخطوات في الأعلى لتجد أخطاء أخرى.
+        courseC_collector_prog5_c: إذا عجزت عن الحل, جرب كتابة الخطوات على ورقة.
+        courseC_collector_prog5_d: اتبع المسار لتجمع المجوهرات.
+      courseC_collector_prog6:
+        courseC_collector_prog6_a: |-
+          هل يمكنك معرفة الخطأ؟
+
+          جرب استخدام زر "خطوة" للبحث عن الأخطاء عن طريق تشغيل برنامجك سطراً سطراً.
+        courseC_collector_prog6_b: هل أنت عالق؟ اتبع المسار لتجمع المجوهرات.
+      courseC_collector_prog6_2018:
+        courseC_collector_prog6_a: |-
+          هل يمكنك معرفة الخطأ؟
+
+          جرب استخدام زر "خطوة" للبحث عن الأخطاء عن طريق تشغيل برنامجك سطراً سطراً.
+        courseC_collector_prog6_b: هل أنت عالق؟ اتبع المسار لتجمع المجوهرات.
+      courseC_collector_prog6_2019:
+        courseC_collector_prog6_a: |-
+          هل يمكنك معرفة الخطأ؟
+
+          جرب استخدام زر "خطوة" للبحث عن الأخطاء عن طريق تشغيل برنامجك سطراً سطراً.
+        courseC_collector_prog6_b: هل أنت عالق؟ اتبع المسار لتجمع المجوهرات.
+      courseC_collector_prog7:
+        courseC_collector_prog7_a: 'يوجد العديد من الأكواد البرمجية الجيدة في مساحة
+          العمل. لايجب عليك حذف أيمنها لتحل اللغز.  '
+        courseC_collector_prog7_b: لايمكنك رؤية البلوكة التي تحتاجها لتنقل المغامر
+          إلى الاتجاه الصحيح؟ اسحب واحدة م صندوق الأدوات.
+        courseC_collector_prog7_c: هل تواجه مشكلة في معرفة الطريق لجمع كل المجوهرات؟
+          جرب استخدام هذا الطريق!
+      courseC_collector_prog7_2018:
+        courseC_collector_prog7_a: 'يوجد العديد من الأكواد البرمجية الجيدة في مساحة
+          العمل. لايجب عليك حذف أيمنها لتحل اللغز.  '
+        courseC_collector_prog7_b: لايمكنك رؤية البلوكة التي تحتاجها لتنقل المغامر
+          إلى الاتجاه الصحيح؟ اسحب واحدة م صندوق الأدوات.
+        courseC_collector_prog7_c: هل تواجه مشكلة في معرفة الطريق لجمع كل المجوهرات؟
+          جرب استخدام هذا الطريق!
+      courseC_collector_prog7_2019:
+        courseC_collector_prog7_a: 'يوجد العديد من الأكواد البرمجية الجيدة في مساحة
+          العمل. لايجب عليك حذف أيمنها لتحل اللغز.  '
+        courseC_collector_prog7_b: لايمكنك رؤية البلوكة التي تحتاجها لتنقل المغامر
+          إلى الاتجاه الصحيح؟ اسحب واحدة م صندوق الأدوات.
+        courseC_collector_prog7_c: هل تواجه مشكلة في معرفة الطريق لجمع كل المجوهرات؟
+          جرب استخدام هذا الطريق!
+      courseC_collector_prog_challenge1:
+        courseC_collector_prog_challenge1_a: يمكنك استخدام بلوكة "اجمع" أكثر من مرة
+          لتجمع المجوهرات الإضافية.
+      courseC_collector_prog_challenge1_2018:
+        courseC_collector_prog_challenge1_a: يمكنك استخدام بلوكة "اجمع" أكثر من مرة
+          لتجمع المجوهرات الإضافية.
+      courseC_collector_prog_challenge1_2019:
+        courseC_collector_prog_challenge1_a: يمكنك استخدام بلوكة "اجمع" أكثر من مرة
+          لتجمع المجوهرات الإضافية.
+      courseC_collector_prog_challenge2:
+        courseC_collector_prog_challenge1_a: يمكنك استخدام من بلوكة "اجمع"أكثر من
+          مرة في نفس المكان.
+        courseC_collector_prog_challenge1_b: أضعت الطريق؟ استخدم هذا المسار لحل اللغز!
+      courseC_collector_prog_challenge2_2018:
+        courseC_collector_prog_challenge1_a: يمكنك استخدام من بلوكة "اجمع"أكثر من
+          مرة في نفس المكان.
+        courseC_collector_prog_challenge1_b: أضعت الطريق؟ استخدم هذا المسار لحل اللغز!
+      courseC_collector_prog_challenge2_2019:
+        courseC_collector_prog_challenge1_a: يمكنك استخدام من بلوكة "اجمع"أكثر من
+          مرة في نفس المكان.
+        courseC_collector_prog_challenge1_b: أضعت الطريق؟ استخدم هذا المسار لحل اللغز!
       courseC_flappy_events1:
         courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseC_flappy_events1_2018:
         courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseC_flappy_events1_2019:
         courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseC_maze_debugging5_2018:
+        courseC_maze_debugging5_c: يمكن أن تغير اتجاه الالتفاف عن طريق الضغط على القائمة
+          المنسدلة.
+      courseC_maze_debugging5_2019:
+        courseC_maze_debugging5_c: يمكن أن تغير اتجاه الالتفاف عن طريق الضغط على القائمة
+          المنسدلة.
+      courseC_maze_programming1:
+        courseC_maze_programming1_0: تأكد من أن جميع البلوكات ملتصقة ببعضها ومن ثم
+          اضغط على زر " تشغيل" مرة اخرى.
+      courseC_maze_programming1_2018:
+        courseC_maze_programming1_0: تأكد من أن جميع البلوكات ملتصقة ببعضها ومن ثم
+          اضغط على زر " تشغيل" مرة اخرى.
+      courseC_maze_programming1_2019:
+        courseC_maze_programming1_0: تأكد من أن جميع البلوكات ملتصقة ببعضها ومن ثم
+          اضغط على زر " تشغيل" مرة اخرى.
+      courseC_maze_programming2:
+        courseC_maze_programming2_a: لتستخدم <xml><block type="maze_moveForward"/></xml>
+          اسحبها من صندوق الادوات والصقها ببلوكة <xml><block type="when_run"/></xml>.
+        courseC_maze_programming2_b: تأكد من أن جميع البلوكات ملتصقة ببعضها ومن ثم
+          اضغط على زر " تشغيل" مرة اخرى.
+      courseC_maze_programming2_2018:
+        courseC_maze_programming2_a: لتستخدم <xml><block type="maze_moveForward"/></xml>
+          اسحبها من صندوق الادوات والصقها ببلوكة <xml><block type="when_run"/></xml>.
+        courseC_maze_programming2_b: تأكد من أن جميع البلوكات ملتصقة ببعضها ومن ثم
+          اضغط على زر " تشغيل" مرة اخرى.
+      courseC_maze_programming2_2019:
+        courseC_maze_programming2_a: لتستخدم <xml><block type="maze_moveForward"/></xml>
+          اسحبها من صندوق الادوات والصقها ببلوكة <xml><block type="when_run"/></xml>.
+        courseC_maze_programming2_b: تأكد من أن جميع البلوكات ملتصقة ببعضها ومن ثم
+          اضغط على زر " تشغيل" مرة اخرى.
+      courseC_maze_programming3:
+        courseC_maze_programming3_a: جرب تشغيل الكود البرمجي أولاً لتحدد مكان الخطأ.
+        courseC_maze_programming3_b: |-
+          ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
+
+          لتحذف بلوكة من منتصف الكود البرمجي, اسحب جميع البلوكات إلى أي مكان في منطقة العمل.
+
+          ومن ثم اسحب البلوكة التي تريد حذفها إلى صندوق الادوات.
+
+          أخيرا, أعد البلوكات إلى مكانها.
+      courseC_maze_programming3_2018:
+        courseC_maze_programming3_a: جرب تشغيل الكود البرمجي أولاً لتحدد مكان الخطأ.
+        courseC_maze_programming3_b: |-
+          ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
+
+          لتحذف بلوكة من منتصف الكود البرمجي, اسحب جميع البلوكات إلى أي مكان في منطقة العمل.
+
+          ومن ثم اسحب البلوكة التي تريد حذفها إلى صندوق الادوات.
+
+          أخيرا, أعد البلوكات إلى مكانها.
+      courseC_maze_programming3_2019:
+        courseC_maze_programming3_a: جرب تشغيل الكود البرمجي أولاً لتحدد مكان الخطأ.
+        courseC_maze_programming3_b: |-
+          ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
+
+          لتحذف بلوكة من منتصف الكود البرمجي, اسحب جميع البلوكات إلى أي مكان في منطقة العمل.
+
+          ومن ثم اسحب البلوكة التي تريد حذفها إلى صندوق الادوات.
+
+          أخيرا, أعد البلوكات إلى مكانها.
+      courseC_maze_programming4:
+        courseC_maze_programming4_a: تذكر أنه عند الالتفاف فانك تتجه من وجهة نظر الطائر,
+          إذا اتجهت لليمين سيتجه الطائر إلى أسفل.
+        courseC_maze_programming4_b: |-
+          لتتبع الطريق:
+
+          -   تحرك غلى الأمام
+          -   اتجه إلى أحد الجهات
+          -   تحرك إلى الأمام
+              اتجه إلى عكس الجهة السابقة
+          -   تحرك إلى الأمام
+      courseC_maze_programming4_2018:
+        courseC_maze_programming4_a: تذكر أنه عند الالتفاف فانك تتجه من وجهة نظر الطائر,
+          إذا اتجهت لليمين سيتجه الطائر إلى أسفل.
+        courseC_maze_programming4_b: |-
+          لتتبع الطريق:
+
+          -   تحرك غلى الأمام
+          -   اتجه إلى أحد الجهات
+          -   تحرك إلى الأمام
+              اتجه إلى عكس الجهة السابقة
+          -   تحرك إلى الأمام
+      courseC_maze_programming4_2019:
+        courseC_maze_programming4_a: تذكر أنه عند الالتفاف فانك تتجه من وجهة نظر الطائر,
+          إذا اتجهت لليمين سيتجه الطائر إلى أسفل.
+        courseC_maze_programming4_b: |-
+          لتتبع الطريق:
+
+          -   تحرك غلى الأمام
+          -   اتجه إلى أحد الجهات
+          -   تحرك إلى الأمام
+              اتجه إلى عكس الجهة السابقة
+          -   تحرك إلى الأمام
+      courseC_maze_programming5:
+        courseC_maze_programming5_b: يحتاج الطائر إلى الاتجاه ليكمل حل اللغز. هل يمكنك
+          معرفة أي اتجاه؟
+        courseC_maze_programming5_c: الحل سوف يشمل بلوكتين من " تحرك إلى الامام" و
+          بلوكة "اتجه إلى" بالاضافة إلى بلوكتين "تحرك إلى الامام".
+      courseC_maze_programming5_2018:
+        courseC_maze_programming5_b: يحتاج الطائر إلى الاتجاه ليكمل حل اللغز. هل يمكنك
+          معرفة أي اتجاه؟
+        courseC_maze_programming5_c: الحل سوف يشمل بلوكتين من " تحرك إلى الامام" و
+          بلوكة "اتجه إلى" بالاضافة إلى بلوكتين "تحرك إلى الامام".
+      courseC_maze_programming5_2019:
+        courseC_maze_programming5_b: يحتاج الطائر إلى الاتجاه ليكمل حل اللغز. هل يمكنك
+          معرفة أي اتجاه؟
+        courseC_maze_programming5_c: الحل سوف يشمل بلوكتين من " تحرك إلى الامام" و
+          بلوكة "اتجه إلى" بالاضافة إلى بلوكتين "تحرك إلى الامام".
       courseC_maze_programming6:
         courseC_maze_programming6_a: هناك طريقتان لحل هذا اللغز!
+        courseC_maze_programming6_b: تتبع باصبعك الطريق من الطائر إلى الخنزير, ماهي
+          الخطوات التي استخدمتها؟
+        courseC_maze_programming6_c: تذكر يجب عليك الالتفاف أولاً, بما أن الطائر أصبح
+          مواجها للجدار.
+        courseC_maze_programming6_d: هل علقت؟ انظر إلى هذا الطريق!
       courseC_maze_programming6_2018:
         courseC_maze_programming6_a: هناك طريقتان لحل هذا اللغز!
+        courseC_maze_programming6_b: تتبع باصبعك الطريق من الطائر إلى الخنزير, ماهي
+          الخطوات التي استخدمتها؟
+        courseC_maze_programming6_c: تذكر يجب عليك الالتفاف أولاً, بما أن الطائر أصبح
+          مواجها للجدار.
+        courseC_maze_programming6_d: هل علقت؟ انظر إلى هذا الطريق!
       courseC_maze_programming6_2019:
         courseC_maze_programming6_a: هناك طريقتان لحل هذا اللغز!
+        courseC_maze_programming6_b: تتبع باصبعك الطريق من الطائر إلى الخنزير, ماهي
+          الخطوات التي استخدمتها؟
+        courseC_maze_programming6_c: تذكر يجب عليك الالتفاف أولاً, بما أن الطائر أصبح
+          مواجها للجدار.
+        courseC_maze_programming6_d: هل علقت؟ انظر إلى هذا الطريق!
+      courseC_maze_programming7:
+        courseC_maze_programming7_a: لاتنسى أن تستخدم زر " الخطوة" لتراجع الكود البرمجي
+          بلوكة بلوكة لتكتشف الخطأ.
+        courseC_maze_programming7_b: إذا كنت تواجه مشكلة في حل هذا اللغز, حاول كتابة
+          الخطوات في ورقة خارجية.
+      courseC_maze_programming7_2018:
+        courseC_maze_programming7_a: لاتنسى أن تستخدم زر " الخطوة" لتراجع الكود البرمجي
+          بلوكة بلوكة لتكتشف الخطأ.
+        courseC_maze_programming7_b: إذا كنت تواجه مشكلة في حل هذا اللغز, حاول كتابة
+          الخطوات في ورقة خارجية.
+      courseC_maze_programming7_2019:
+        courseC_maze_programming7_a: لاتنسى أن تستخدم زر " الخطوة" لتراجع الكود البرمجي
+          بلوكة بلوكة لتكتشف الخطأ.
+        courseC_maze_programming7_b: إذا كنت تواجه مشكلة في حل هذا اللغز, حاول كتابة
+          الخطوات في ورقة خارجية.
+      courseC_maze_programming8:
+        courseC_maze_programming8_a: تذكر يمكنك استخدام زر " الخطوة" لتتبع كودك البرمجي
+          سطرا سطرا في حال واجهتك مشكلة.
+      courseC_maze_programming8_2018:
+        courseC_maze_programming8_a: تذكر يمكنك استخدام زر " الخطوة" لتتبع كودك البرمجي
+          سطرا سطرا في حال واجهتك مشكلة.
+      courseC_maze_programming8_2019:
+        courseC_maze_programming8_a: تذكر يمكنك استخدام زر " الخطوة" لتتبع كودك البرمجي
+          سطرا سطرا في حال واجهتك مشكلة.
+      courseC_maze_programming_challenge1:
+        courseC_maze_programming_challenge1_a: يوجد هناك العديد من الطرق للوصول إلى
+          الخنزير. تتبع باصبعك الطريق الصحيح ومن ثم برمج!
+      courseC_maze_programming_challenge1_2018:
+        courseC_maze_programming_challenge1_a: يوجد هناك العديد من الطرق للوصول إلى
+          الخنزير. تتبع باصبعك الطريق الصحيح ومن ثم برمج!
+      courseC_maze_programming_challenge1_2019:
+        courseC_maze_programming_challenge1_a: يوجد هناك العديد من الطرق للوصول إلى
+          الخنزير. تتبع باصبعك الطريق الصحيح ومن ثم برمج!
+      courseC_maze_programming_challenge2:
+        courseC_maze_programming_challenge2_a: _" إذا ارسلتني للخلف, كن حذراً واجعلني
+          اتتخذ الاتجاه الصحيح"_
+        courseC_maze_programming_challenge2_b: |-
+          الحل الأقصر سوف يستخدم 5 بلوكات فقط, لكنه سيستخدم هذه البلوكة:
+
+          <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+      courseC_maze_programming_challenge2_2018:
+        courseC_maze_programming_challenge2_a: _" إذا ارسلتني للخلف, كن حذراً واجعلني
+          اتتخذ الاتجاه الصحيح"_
+        courseC_maze_programming_challenge2_b: |-
+          الحل الأقصر سوف يستخدم 5 بلوكات فقط, لكنه سيستخدم هذه البلوكة:
+
+          <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+      courseC_maze_programming_challenge2_2019:
+        courseC_maze_programming_challenge2_a: _" إذا ارسلتني للخلف, كن حذراً واجعلني
+          اتتخذ الاتجاه الصحيح"_
+        courseC_maze_programming_challenge2_b: |-
+          الحل الأقصر سوف يستخدم 5 بلوكات فقط, لكنه سيستخدم هذه البلوكة:
+
+          <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+      courseC_starWars_loops4:
+        courseC_starWars_loops4_a: استخدم اثنان من بلوكات "كرر".
+        courseC_starWars_loops4_b: 'كل حلقة تكرار "كرر" سوف تحوي على أمر واحد داخلها
+          وهو: "تحرك غلى الامام".'
+      courseC_starWars_loops4_2018:
+        courseC_starWars_loops4_a: استخدم اثنان من بلوكات "كرر".
+        courseC_starWars_loops4_b: 'كل حلقة تكرار "كرر" سوف تحوي على أمر واحد داخلها
+          وهو: "تحرك غلى الامام".'
+      courseC_starWars_loops4_2019:
+        courseC_starWars_loops4_a: استخدم اثنان من بلوكات "كرر".
+        courseC_starWars_loops4_b: 'كل حلقة تكرار "كرر" سوف تحوي على أمر واحد داخلها
+          وهو: "تحرك غلى الامام".'
       courseD_artist_nestedLoops3:
         courseD_artist_nestedLoops3_a: "حاول أن تستخدم الكتلة \"القفز إلى الأمام\"
           للانتقال من أعلى مربع إلى المكان الذي سوف تبدأ منه رسم المربع التالي. \n\nإذا
@@ -1035,8 +1617,14 @@ ar-SA:
           هذا التحدي."
       courseD_maze_ramp6:
         courseC_maze_programming6_a: هناك طريقتان لحل هذا اللغز!
+      courseD_maze_ramp7:
+        courseD_maze_ramp7_b: لاتنسى أن تستخدم زر " الخطوة" لتراجع الكود البرمجي بلوكة
+          بلوكة لتكتشف الخطأ.
       courseD_scrat_ramp7:
         courseD_scrat_programming6_a: هناك طريقتان لحل هذا اللغز!
+      courseD_scrat_ramp8:
+        courseD_maze_ramp7_b: لاتنسى أن تستخدم زر " الخطوة" لتراجع الكود البرمجي بلوكة
+          بلوكة لتكتشف الخطأ.
       courseE_artist_concept_challenge1:
         courseE_artist_concept_challenge1_a: 'يمتلك نصف السداسي **طول 30** ويستدير
           يميناً بمقدار **60 درجة**.  '

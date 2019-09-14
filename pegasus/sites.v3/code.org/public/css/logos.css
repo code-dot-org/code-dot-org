@@ -1,0 +1,16 @@
+/* Settings for tablet and mobile screen sizes */
+
+@media screen and (min-width: 513px) and (max-width: 970px) {
+  /* Show 3 columns */
+  .col-mobile-30 { width: 30%; float: left; }
+}
+
+@media screen and (min-width: 351px) and (max-width: 512px) {
+  /* Show 2 columns */
+  .col-mobile-30 { width: 50%; float: left; }
+}
+
+@media screen and (max-width: 350px) {
+  /* Show 1 column */
+  .col-mobile-30 { width: 100%; float: left; }
+}

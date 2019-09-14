@@ -31,12 +31,9 @@ lv:
   cancel: "Atcelt"
   okay: "Labi"
   or: "vai"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Pievienot skolotāju:'
       placeholder: "Izvēles kods (ABCDEF)"
-      instructions: "Lūdzu, ievadiet kodu, ko jums piešķīra skolotājs. Tas ir 6 burtu kods, kā piemēram \"ABCDEF\"."
-    submit: 'Pievieno skolotāju'
   add_hint_form:
     placeholder: 'Lūdzu, ievadi šeit savu mājienu'
     submit: 'Pievieno mājienu'

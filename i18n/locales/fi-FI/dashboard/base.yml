@@ -46,13 +46,9 @@ fi:
   okay: "Selvä"
   or: "tai"
   heading_x_of_y: "%{heading} (sivu %{x} %{y}) sivusta"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Lisää opettaja:'
       placeholder: "Osion koodi (ABCDEF)"
-      instructions: "Kirjoita opettajasi sinulle jakama koodi. Se on 6 kirjaiminen koodi, kuten \"ABCDEF\"."
-      instructions_short: "Kirjoita 6-kirjaiminen ryhmäkoodisi"
-    submit: 'Lisää opettaja'
   add_hint_form:
     placeholder: 'Syötä vihjeesi tähän'
     submit: 'Lisää vihje'

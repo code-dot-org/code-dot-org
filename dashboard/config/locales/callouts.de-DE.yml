@@ -183,6 +183,27 @@ de-DE:
       courseA_collector_loops3_2019:
         gradek_adventurer_loops2_1: Diese Zahl gibt an, wie viele dieser Blöcke in
           diesem Puzzle verwendet werden können.
+      courseA_maze_seq1:
+        courseA_maze_seq1_1: Klicke auf die Glühbirne wenn du einen Tipp brauchst!
+      courseA_maze_seq1_2018:
+        courseA_maze_seq1_1: Klicke auf die Glühbirne wenn du einen Tipp brauchst!
+      courseA_maze_seq1_2019:
+        courseA_maze_seq1_1: Klicke auf die Glühbirne wenn du einen Tipp brauchst!
+      courseA_maze_seq2:
+        courseA_maze_seqA_callout1: Klicke auf die Schritt Schaltfläche um Schritt-für-Schritt
+          durch das Programm zu gehen. Das wird dir helfen, den Fehler zu finden!
+      courseA_maze_seq4:
+        made_of_stone: Diese Blöcke sind aus Stein. Du kannst sie entfernen, aber
+          du kannst sie nicht löschen!
+      courseB_maze_seq1:
+        courseB_maze_seq1: Klicke auf die Glühbirne wenn du einen Tipp brauchst!
+      courseB_maze_seq1_2018:
+        courseB_maze_seq1: Klicke auf die Glühbirne wenn du einen Tipp brauchst!
+      courseB_maze_seq1_2019:
+        courseB_maze_seq1: Klicke auf die Glühbirne wenn du einen Tipp brauchst!
+      courseB_maze_seq2:
+        courseB_maze_seq2_callout1: Klicke auf die Schritt Schaltfläche um Schritt-für-Schritt
+          durch das Programm zu gehen. Das wird dir helfen, den Fehler zu finden!
       courseD_bee_conditionals2:
         4_5_Bee_Conditionals_2_1: Denk daran zu überprüfen ob JEDE Wolke eine Blume
           hat. Du musst überhaupt nicht auf Honigwaben prüfen.

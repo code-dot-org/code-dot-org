@@ -42,12 +42,9 @@ si:
   okay: "හරි"
   or: "හෝ"
   heading_x_of_y: "%{heading} (පිටුව %{y} න් %{x})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'ගුරුවරයෙක් එකතු කරන්න:'
       placeholder: "Code එකෙහි කණ්ඩය (ABCDEF)"
-      instructions: "ඔබේ ගුරුවරයා විසින් ඔබ හට ලබා දුන් අකුරු 6ක් ඇති කේතය සඳහන් කරන්න."
-    submit: 'ගුරුවරයෙක් එකතු කරන්න'
   add_hint_form:
     placeholder: 'කරුණාකර ඔබේ ඉඟිය මෙහි ඇතුලත් කරන්න'
     submit: 'ඉඟියක් එකතු කරන්න'

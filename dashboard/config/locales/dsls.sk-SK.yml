@@ -742,27 +742,47 @@ sk-SK:
       CSD U3 combining rep_2018_2019:
         title: nadpis
       CSD U3 drawSprites placement match:
+        title: drawSprites
+        content1: Spoj kód s obrázkom, ktorý vytvorí.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: <img src="https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08
+            AM.png">
+        - text: <img src="https://images.code.org/653dff2d49f07341b2f2552747212b34-image-1523901253222.59.21
+            AM.png">
+        - text: <img src="https://images.code.org/db71e0cde6861faabc0b5a55d67c739e-image-1523901253227.58.12
+            AM.png">
+        - text: <img src="https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34
+            AM.png">
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: <img width="300px" src="https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48
+            AM.png">
+        - text: <img src="https://images.code.org/2fbe4029dc47f6f048e7c9f90ac99cac-image-1523902103485.25.09
+            AM.png">
+        - text: <img src="https://images.code.org/c4cb49e00f7087765865da87cff37549-image-1523902103477.58.00
+            AM.png">
+        - text: <img src="https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28
+            AM.png">
       CSD U3 drawSprites placement match_2019:
+        title: drawSprites
+        content1: Spoj kód s obrázkom, ktorý vytvorí.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: <img src="https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08
+            AM.png">
+        - text: <img src="https://images.code.org/653dff2d49f07341b2f2552747212b34-image-1523901253222.59.21
+            AM.png">
+        - text: <img src="https://images.code.org/db71e0cde6861faabc0b5a55d67c739e-image-1523901253227.58.12
+            AM.png">
+        - text: <img src="https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34
+            AM.png">
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: <img width="300px" src="https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48
+            AM.png">
+        - text: <img src="https://images.code.org/2fbe4029dc47f6f048e7c9f90ac99cac-image-1523902103485.25.09
+            AM.png">
+        - text: <img src="https://images.code.org/c4cb49e00f7087765865da87cff37549-image-1523902103477.58.00
+            AM.png">
+        - text: <img src="https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28
+            AM.png">
       CSD U3 game intro:
         markdown: "# Vytvor svoju vlastnú hru\n\nKeď si sa naučil/a všetko, čo potrebuješ,
           je čas urobiť si vlastnú hru! S partnerom popremýšľajte nad rôznymi nápadmi.

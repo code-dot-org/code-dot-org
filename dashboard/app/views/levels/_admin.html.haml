@@ -1,4 +1,4 @@
-- if current_user && (current_user.levelbuilder? || current_user.project_validator?)
+- if current_user && (current_user.levelbuilder? || current_user.project_validator? || Experiment.get_editor_experiment(current_user))
   = render layout: 'shared/extra_links' do
     %strong= @level.name
     %ul
@@ -8,29 +8,33 @@
       %li= link_to "see callouts (#{@level.available_callouts(@script_level).count})", show_callouts: '1'
       - if @level.is_a? Gamelab
         %li= link_to 'view animation JSON', '', onclick: 'window.viewExportableAnimationList(); return false'
-      - if can? :edit, @level
-        - if Rails.application.config.levelbuilder_mode
+      - if Rails.application.config.levelbuilder_mode
+        - if can? :edit, @level
           %li
             = link_to '[E]dit', edit_level_path(@level), { accesskey: 'e', title: "Edit this level. Can use the browser-dependent accesskey shortcut for quick access." }
             - if @level.is_a? Blockly
               %ul
-                %li= link_to "[s]tart (#{Blockly.count_xml_blocks(@level.start_blocks)})", level_edit_blocks_path(@level, :start_blocks), { accesskey: 's' }
+                %li= link_to "[s]tart (#{Blockly.count_xml_blocks(@level.start_blocks)})", edit_blocks_level_path(@level, :start_blocks), { accesskey: 's' }
                 - unless @level.uses_droplet?
-                  %li= link_to 's[o]lution', level_edit_blocks_path(@level, :solution_blocks), { accesskey: 'o' }
-                  %li= link_to '[t]oolbox', level_edit_blocks_path(@level, :toolbox_blocks), { accesskey: 't' }
-                  %li= link_to "required (#{Blockly.count_xml_blocks(@level.required_blocks)})", level_edit_blocks_path(@level, :required_blocks)
-                  %li= link_to "recommended (#{Blockly.count_xml_blocks(@level.recommended_blocks)})", level_edit_blocks_path(@level, :recommended_blocks)
-                  %li= link_to "initialization (#{Blockly.count_xml_blocks(@level.initialization_blocks)})", level_edit_blocks_path(@level, :initialization_blocks)
+                  %li= link_to 's[o]lution', edit_blocks_level_path(@level, :solution_blocks), { accesskey: 'o' }
+                  %li= link_to '[t]oolbox', edit_blocks_level_path(@level, :toolbox_blocks), { accesskey: 't' }
+                  %li= link_to "required (#{Blockly.count_xml_blocks(@level.required_blocks)})", edit_blocks_level_path(@level, :required_blocks)
+                  %li= link_to "recommended (#{Blockly.count_xml_blocks(@level.recommended_blocks)})", edit_blocks_level_path(@level, :recommended_blocks)
+                  %li= link_to "initialization (#{Blockly.count_xml_blocks(@level.initialization_blocks)})", edit_blocks_level_path(@level, :initialization_blocks)
                 - if @level.is_a? Artist
-                  %li= link_to 'pre-draw', level_edit_blocks_path(@level, :predraw_blocks)
+                  %li= link_to 'pre-draw', edit_blocks_level_path(@level, :predraw_blocks)
               - unless @level.uses_droplet?
                 %button{type: 'button', onclick: 'window.levelbuilder.copyWorkspaceToClipboard()', class: 'btn btn-default btn-sm'}
                   Copy workspace to clipboard
+        - else
+          %li (Cannot edit)
+        - if can? :delete, @level
           %li= link_to 'delete', level_path(@level), method: :delete, data: { confirm: t('crud.confirm') }, style: 'color: red'
+        - if can? :clone, @level
           %li
             = link_to 'clone', '', onclick: "$('#clone_#{@level.id}').toggle(); return false;"
             %div{class: 'clone_level', id: "clone_#{@level.id}", style: 'display: none;'}
-              = form_tag level_clone_path(@level), method: :post, remote: true do
+              = form_tag clone_level_path(@level), method: :post, remote: true do
                 = label_tag 'New name:'
                 = text_field_tag :name, @level.name
                 = hidden_field_tag :authenticity_token, form_authenticity_token
@@ -39,32 +43,31 @@
               %script{src: minifiable_asset_path('js/levelbuilder.js')}
             :javascript
               window.levelbuilder.ajaxSubmit('.clone_level');
-          -if @level.is_a? LevelGroup
-            %li
-              sublevels
-              %ol
-                - @level.properties['pages'].each do |page|
-                  - page['levels'].each do |level_name|
-                    %li= link_to level_name, level_path(Level.find_by_name(level_name))
-          - if contained_level_names = @level.properties['contained_level_names']
-            %li
-              contained levels
-              %ol
-                - contained_level_names.each do |contained_level_name|
-                  - contained_level = Level.find_by_name(contained_level_name)
-                  %li
-                    = link_to contained_level_name, level_path(contained_level)
-                    = link_to '[E]', edit_level_path(contained_level)
-          - if project_template_level_name = @level.properties['project_template_level_name']
-            - project_template_level = Level.find_by_name(project_template_level_name)
-            %li
-              = 'template: '
-              = link_to project_template_level_name, level_path(project_template_level)
-              = link_to '[E]', edit_level_path(project_template_level)
-        - elsif @script_level
-          %li= link_to 'edit on levelbuilder', URI.join("https://levelbuilder-studio.code.org/", build_script_level_path(@script_level)).to_s
-      - else
-        %li (Cannot edit)
+        -if @level.is_a? LevelGroup
+          %li
+            sublevels
+            %ol
+              - @level.properties['pages'].each do |page|
+                - page['levels'].each do |level_name|
+                  %li= link_to level_name, level_path(Level.find_by_name(level_name))
+        - if contained_level_names = @level.properties['contained_level_names']
+          %li
+            contained levels
+            %ol
+              - contained_level_names.each do |contained_level_name|
+                - contained_level = Level.find_by_name(contained_level_name)
+                %li
+                  = link_to contained_level_name, level_path(contained_level)
+                  = link_to '[E]', edit_level_path(contained_level)
+        - if project_template_level_name = @level.properties['project_template_level_name']
+          - project_template_level = Level.find_by_name(project_template_level_name)
+          %li
+            = 'template: '
+            = link_to project_template_level_name, level_path(project_template_level)
+            = link_to '[E]', edit_level_path(project_template_level)
+
+      - elsif @script_level
+        %li= link_to 'edit on levelbuilder', URI.join("https://levelbuilder-studio.code.org/", build_script_level_path(@script_level)).to_s
 
     -# Include any BubbleChoice parent script_levels in script_level list.
     - parent_levels = BubbleChoice.parent_levels(@level.name)

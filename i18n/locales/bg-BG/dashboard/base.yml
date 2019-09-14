@@ -45,10 +45,6 @@ bg:
   okay: "Добре"
   or: "или"
   heading_x_of_y: "%{heading} (page %{x} на %{y})"
-  add_teacher_form:
-    code:
-      label: 'Добавете учител:'
-    submit: 'Добавяне на учител'
   appname: "Code.org"
   stage: "Етап"
   stage_number: "Урок %{number}"
