@@ -43,6 +43,10 @@ const styles = {
     height: 18,
     justifyContent: 'center',
     width: 18
+  },
+  tableWrapper: {
+    flexGrow: 1,
+    overflow: 'scroll'
   }
 };
 
@@ -236,61 +240,63 @@ class DataTable extends React.Component {
             label={msg.paginationLabel()}
           />
         </div>
-        <table>
-          <tbody>
-            <tr>
-              {columnNames.map(columnName => (
-                <ColumnHeader
-                  key={columnName}
-                  coerceColumn={this.coerceColumn}
-                  columnName={columnName}
+        <div style={styles.tableWrapper}>
+          <table style={styles.table}>
+            <tbody>
+              <tr>
+                {columnNames.map(columnName => (
+                  <ColumnHeader
+                    key={columnName}
+                    coerceColumn={this.coerceColumn}
+                    columnName={columnName}
+                    columnNames={columnNames}
+                    deleteColumn={this.deleteColumn}
+                    editColumn={this.editColumn}
+                    /* hide gear icon if an operation is pending on another column */
+                    isEditable={
+                      columnName !== 'id' &&
+                      !(
+                        this.state.pendingColumn &&
+                        this.state.pendingColumn !== columnName
+                      ) &&
+                      !this.state.pendingAdd
+                    }
+                    isEditing={editingColumn === columnName}
+                    isPending={this.state.pendingColumn === columnName}
+                    renameColumn={this.renameColumn}
+                  />
+                ))}
+                <th style={styles.addColumnHeader}>
+                  {this.state.pendingAdd ? (
+                    <FontAwesome icon="spinner" className="fa-spin" />
+                  ) : (
+                    <FontAwesome
+                      id="addColumnButton"
+                      icon="plus"
+                      style={styles.plusIcon}
+                      onClick={this.addColumn}
+                    />
+                  )}
+                </th>
+                <th style={dataStyles.headerCell}>Actions</th>
+              </tr>
+
+              <AddTableRow
+                tableName={this.props.tableName}
+                columnNames={columnNames}
+              />
+
+              {Object.keys(rows).map(id => (
+                <EditTableRow
                   columnNames={columnNames}
-                  deleteColumn={this.deleteColumn}
-                  editColumn={this.editColumn}
-                  /* hide gear icon if an operation is pending on another column */
-                  isEditable={
-                    columnName !== 'id' &&
-                    !(
-                      this.state.pendingColumn &&
-                      this.state.pendingColumn !== columnName
-                    ) &&
-                    !this.state.pendingAdd
-                  }
-                  isEditing={editingColumn === columnName}
-                  isPending={this.state.pendingColumn === columnName}
-                  renameColumn={this.renameColumn}
+                  tableName={this.props.tableName}
+                  record={JSON.parse(rows[id])}
+                  key={id}
                 />
               ))}
-              <th style={styles.addColumnHeader}>
-                {this.state.pendingAdd ? (
-                  <FontAwesome icon="spinner" className="fa-spin" />
-                ) : (
-                  <FontAwesome
-                    id="addColumnButton"
-                    icon="plus"
-                    style={styles.plusIcon}
-                    onClick={this.addColumn}
-                  />
-                )}
-              </th>
-              <th style={dataStyles.headerCell}>Actions</th>
-            </tr>
-
-            <AddTableRow
-              tableName={this.props.tableName}
-              columnNames={columnNames}
-            />
-
-            {Object.keys(rows).map(id => (
-              <EditTableRow
-                columnNames={columnNames}
-                tableName={this.props.tableName}
-                record={JSON.parse(rows[id])}
-                key={id}
-              />
-            ))}
-          </tbody>
-        </table>
+            </tbody>
+          </table>
+        </div>
       </div>
     );
   }
