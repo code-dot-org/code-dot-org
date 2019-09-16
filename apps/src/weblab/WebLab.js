@@ -18,6 +18,8 @@ import {TestResults} from '../constants';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {makeEnum} from '../utils';
 import logToCloud from '../logToCloud';
+import firehoseClient from '../lib/util/firehose';
+import {getCurrentId} from '../code-studio/initApp/project';
 
 export const WEBLAB_FOOTER_HEIGHT = 30;
 
@@ -112,6 +114,18 @@ WebLab.prototype.init = function(config) {
               resolve();
             }
           }, true);
+          firehoseClient.putRecord(
+            {
+              study: 'weblab_loading_investigation',
+              study_group: 'empty_manifest',
+              event: 'clear_puzzle_success',
+              project_id: getCurrentId(),
+              data_json: JSON.stringify({
+                responseText: xhr.responseText
+              })
+            },
+            {includeUserId: true}
+          );
         },
         xhr => {
           console.warn(`WebLab: error deleteAll failed: ${xhr.status}`);
