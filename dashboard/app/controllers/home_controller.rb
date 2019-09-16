@@ -139,7 +139,7 @@ class HomeController < ApplicationController
 
       if current_user.teacher?
         unless current_user.donor_teacher_banner_dismissed
-          donor_banner_name = current_user.donor_teacher_banner_name
+          donor_banner_name = current_user.school_donor_name
         end
 
         donor_banner_name ||= params[:forceDonorTeacherBanner]
@@ -188,10 +188,10 @@ class HomeController < ApplicationController
         @homepage_data[:studentId] = current_user.id
       end
 
-      if current_user.donor_teacher_banner_name
+      if current_user.school_donor_name
         donor_footer_options = {}
-        donor_footer_options[:donorName] = current_user.donor_teacher_banner_name
-        donor_footer_options[:logos] = Dir.glob("app/assets/images/donor_logos/#{current_user.donor_teacher_banner_name}/*").sort
+        donor_footer_options[:donorName] = current_user.school_donor_name
+        donor_footer_options[:logos] = Dir.glob("app/assets/images/donor_logos/#{current_user.school_donor_name}/*").sort
 
         @homepage_data[:donorFooterOptions] = donor_footer_options
       end
