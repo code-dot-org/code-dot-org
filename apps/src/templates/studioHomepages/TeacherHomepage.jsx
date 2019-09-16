@@ -263,6 +263,7 @@ export default class TeacherHomepage extends Component {
               <DonorTeacherBanner
                 options={donorTeacherBannerOptions}
                 onDismiss={() => this.dismissDonorTeacherBanner()}
+                showPegasusLink={true}
               />
               <div style={styles.clear} />
             </div>
