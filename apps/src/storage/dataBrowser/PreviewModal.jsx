@@ -5,14 +5,22 @@ import {hidePreview} from '../redux/data';
 import {getDatasetInfo} from './dataUtils';
 import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
 import DataTable from './DataTable';
+import msg from '@cdo/locale';
 
 class PreviewModal extends React.Component {
   static propTypes = {
+    importTable: PropTypes.func.isRequired,
     // Provided via Redux
     isPreviewOpen: PropTypes.bool.isRequired,
     tableName: PropTypes.string.isRequired,
-    onClose: PropTypes.func.isRequired
+    onClose: PropTypes.func.isRequired,
+    onImport: PropTypes.func.isRequired
   };
+
+  importTable(datasetInfo) {
+    this.props.importTable(datasetInfo);
+    this.props.onImport();
+  }
 
   render() {
     if (!this.props.isPreviewOpen) {
@@ -24,6 +32,9 @@ class PreviewModal extends React.Component {
         <h1>{this.props.tableName}</h1>
         <p>{datasetInfo.description}</p>
         <DataTable getColumnNames={(records, columns) => columns} />
+        <button type="button" onClick={() => this.importTable(datasetInfo)}>
+          {msg.import()}
+        </button>
       </BaseDialog>
     );
   }
@@ -36,6 +47,9 @@ export default connect(
   }),
   dispatch => ({
     onClose() {
+      dispatch(hidePreview());
+    },
+    onImport() {
       dispatch(hidePreview());
     }
   })
