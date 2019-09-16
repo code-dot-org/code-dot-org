@@ -187,6 +187,14 @@ class HomeController < ApplicationController
         @homepage_data[:sections] = student_sections
         @homepage_data[:studentId] = current_user.id
       end
+
+      if current_user.donor_teacher_banner_name
+        donor_footer_options = {}
+        donor_footer_options[:donorName] = current_user.donor_teacher_banner_name
+        donor_footer_options[:logos] = Dir.glob("app/assets/images/donor_logos/#{current_user.donor_teacher_banner_name}/*").sort
+
+        @homepage_data[:donorFooterOptions] = donor_footer_options
+      end
     end
   end
 end

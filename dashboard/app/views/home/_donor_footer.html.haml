@@ -9,10 +9,10 @@
         Your classroom's free use of Code.org is made possible by:
       - else
         Your free education on Code.org is made possible by:
-  - Dir.glob("app/assets/images/donor_logos/#{current_user.donor_teacher_banner_name}/*").sort.each do |logo|
+  - @homepage_data[:donorFooterOptions][:logos].each do |logo|
     .logo
       = image_tag asset_path("donor_logos/#{current_user.donor_teacher_banner_name}/#{logo.split('/').last}")
-  - if current_user.teacher? && current_user.donor_teacher_banner_name == "Amazon"
+  - if current_user.teacher? && @homepage_data[:donorFooterOptions][:donorName] == "Amazon"
     %p.resources
       Amazon is offering free resources for Code.org classrooms.
       %a.learn-more{ href: CDO.code_org_url('amazon-future-engineer') }
