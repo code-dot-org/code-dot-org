@@ -212,7 +212,7 @@ Resources:
   AuroraInstance01:
     Type: 'AWS::RDS::DBInstance'
     Properties:
-      AvailabilityZone: 'us-east-1a'
+      AvailabilityZone: 'us-east-1c'
       DBClusterIdentifier: !Ref AuroraDestinationDBCluster
       DBInstanceClass: db.r4.8xlarge
       DBInstanceIdentifier: !Join ['-', [!Ref 'AWS::StackName', 'Instance01']]
