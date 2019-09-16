@@ -85,16 +85,16 @@ Resources:
       Tags:
         - Key: Name
           Value: !Join ['-', [!Ref 'AWS::StackName', Aurora Lab Subnet 6 - Private]]
-    PrivateSubnet04:
-      Type: 'AWS::EC2::Subnet'
-      Properties:
-        VpcId: !Ref LabVpc
-        MapPublicIpOnLaunch: 'false'
-        CidrBlock: 172.31.48.0/24
-        AvailabilityZone: !Sub ${AWS::Region}e
-        Tags:
-          - Key: Name
-            Value: !Join ['-', [!Ref 'AWS::StackName', Aurora Lab Subnet 7 - Private]]
+  PrivateSubnet04:
+    Type: 'AWS::EC2::Subnet'
+    Properties:
+      VpcId: !Ref LabVpc
+      MapPublicIpOnLaunch: 'false'
+      CidrBlock: 172.31.48.0/24
+      AvailabilityZone: !Sub ${AWS::Region}e
+      Tags:
+        - Key: Name
+          Value: !Join ['-', [!Ref 'AWS::StackName', Aurora Lab Subnet 7 - Private]]
   ## Create Public Route Table
   AuroraLabPublicRouteTable:
     Type: 'AWS::EC2::RouteTable'
