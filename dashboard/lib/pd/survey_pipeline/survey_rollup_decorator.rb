@@ -64,6 +64,8 @@ module Pd::SurveyPipeline
       report[:facilitator_averages][facilitator_name].merge! category_averages
 
       # Count number of submissions contributed to category average scores.
+      # Only one of data[:facilitator_submissions] or data[:workshop_submissions] has data
+      # because we roll up facilitator surveys and general workshop surveys independently.
       report[:facilitator_response_counts] = {
         this_workshop: {facilitator_id => {}},
         all_my_workshops: {facilitator_id => {}}

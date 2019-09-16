@@ -3,12 +3,12 @@ require 'pd/survey_pipeline/survey_rollup_decorator.rb'
 
 module Pd::SurveyPipeline
   class SurveyRollupDecoratorTest < ActiveSupport::TestCase
-    test 'decorate empty roll-up results' do
+    test 'decorate empty survey roll-up results' do
       facilitator = create :facilitator
       workshop_id = 1
       related_workshop_ids = [workshop_id]
 
-      # There is no survey submission for this workshop and facilitator combination
+      # There is no survey submission for this combination of workshop and facilitator
       input_data = {
         current_workshop_id: workshop_id,
         related_workshop_ids: related_workshop_ids,
@@ -46,56 +46,62 @@ module Pd::SurveyPipeline
       assert_equal expected_result, result
     end
 
-    test 'decorate basic roll-up results' do
+    test 'decorate simple non-empty survey roll-up results' do
       facilitator = create :facilitator
-      workshop_id = 1
-      related_workshop_ids = [workshop_id]
+      workshop = create :csp_academic_year_workshop
+      # Both workshops are of the same kind and (implicitly) have the same facilitator
+      related_workshop = create :csp_academic_year_workshop
+      related_workshop_ids = [workshop.id, related_workshop.id]
       form_id = 1
 
+      # Create 2 general workshop survey submissions for each workshop
+      workshop_survey_submissions =
+        create_list :pd_workshop_daily_survey, 2, pd_workshop: workshop, day: 1
+      workshop_survey_submissions +=
+        create_list :pd_workshop_daily_survey, 2, pd_workshop: related_workshop, day: 1
+
       input_data = {
-        current_workshop_id: workshop_id,
+        current_workshop_id: workshop.id,
         related_workshop_ids: related_workshop_ids,
         facilitator_id: facilitator.id,
+        # @see DailySurveyParser.parse_questions for data format of parsed_questions
         parsed_questions:
           {form_id => {
-            1 => {name: 'overall_success_hash1'},
-            2 => {name: 'teacher_engagement_hash1'},
-            3 => {name: 'facilitator_effectiveness_hash1'}
-          }}, #TODO
-        question_categories: %w(overall_success teacher_engagement facilitator_effectiveness),
-        workshop_submissions: [], #TODO
-        facilitator_submissions: [], #TODO
-        question_answer_joined: [], #TODO
+            1 => {name: 'overall_success_hash1', text: 'Overall Success Sub-question 1'},
+          }},
+        question_categories: ['overall_success'],
+        workshop_submissions: workshop_survey_submissions,
+        facilitator_submissions: [],
+        # @see DailySurveyJoiner for data format of question_answer_joined
+        question_answer_joined: [
+          {name: 'overall_success_hash1', answer: 5.0, workshop_id: workshop.id, submission_id: 1},
+          {name: 'overall_success_hash1', answer: 5.0, workshop_id: workshop.id, submission_id: 2},
+          {name: 'overall_success_hash1', answer: 7.0, workshop_id: related_workshop.id, submission_id: 3},
+          {name: 'overall_success_hash1', answer: 7.0, workshop_id: related_workshop.id, submission_id: 4},
+        ],
         summaries: [
-          {name: 'overall_success_hash1', reducer_result: 5.0},
-          {name: 'teacher_engagement_hash1', reducer_result: 6.0},
-          {name: 'facilitator_effectiveness_hash1', reducer_result: 7.0},
-        ], #TODO
+          {name: 'overall_success_hash1', workshop_id: workshop.id, reducer_result: 5.0},
+          {name: 'overall_success_hash1', reducer_result: 6.0},
+        ],
         errors: []
       }
 
       expected_result = {
         facilitators: {facilitator.id => facilitator.name},
-        current_workshop: workshop_id,
+        current_workshop: workshop.id,
         related_workshops: {facilitator.id => related_workshop_ids},
         facilitator_averages: {
           questions: {
-            "overall_success_0" => nil,
-            "teacher_engagement_0" => nil,
-            "facilitator_effectiveness_0" => nil
+            "overall_success_0" => 'Overall Success Sub-question 1',
           },
           facilitator.name => {
-            "overall_success_0" => {all_my_workshops: 5.0},
-            "overall_success" => {this_workshop: nil, all_my_workshops: 5.0},
-            "teacher_engagement_0" => {all_my_workshops: 6.0},
-            "teacher_engagement" => {this_workshop: nil, all_my_workshops: 6.0},
-            "facilitator_effectiveness_0" => {all_my_workshops: 7.0},
-            "facilitator_effectiveness" => {this_workshop: nil, all_my_workshops: 7.0},
+            "overall_success_0" => {this_workshop: 5.0, all_my_workshops: 6.0},
+            "overall_success" => {this_workshop: 5.0, all_my_workshops: 6.0},
           }
         },
         facilitator_response_counts: {
-          this_workshop: {facilitator.id => {}},
-          all_my_workshops: {facilitator.id => {}}
+          this_workshop: {facilitator.id => {'Workshop submissions' => 2}},
+          all_my_workshops: {facilitator.id => {'Workshop submissions' => 4}}
         },
         errors: []
       }
