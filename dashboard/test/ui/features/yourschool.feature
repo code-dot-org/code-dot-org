@@ -1,6 +1,7 @@
 @no_ie
 Feature: Using the YourSchool census page
 
+  @skip
   Scenario: Loading yourschool and fill out form
     Given I am on "http://code.org/yourschool"
     Then I see "#map"
