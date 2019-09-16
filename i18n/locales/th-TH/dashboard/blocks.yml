@@ -596,11 +596,6 @@ th:
           CONDITION:
             '"when"': เมื่อ (สัมผัสกัน)
             '"while"': ในขณะที่
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': จริง
-            'false': เท็จ
       gamelab_getProp:
         options:
           PROPERTY:
@@ -653,7 +648,6 @@ th:
             '"x"': อยู่ที่แกน X
             '"y"': อยู่ที่แกน Y
             '"direction"': ทิศทางการเคลื่อนไหว
-            '"tint"': ระดับอ่อนสี
       gamelab_setSizes:
         text: ตั้งค่า {SPRITE} {PROPERTY} เป็น {N}%
         options:
@@ -680,13 +674,6 @@ th:
             '"left"': ซ้าย
             '"right"': ขวา
             '"space"': อวกาศ
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": ขึ้นข้างบน
-            "'down'": เป็นตำแหน่ง
-            "'left'": ซ้าย
-            "'right'": ขวา
       gamelab_whileKey:
         options:
           KEY:

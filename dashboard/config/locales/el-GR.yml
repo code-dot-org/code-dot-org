@@ -41,6 +41,7 @@ el:
         finish_sign_up_header: Ολοκληρώστε τη δημιουργία του λογαριασμού σας
         error:
           future: δεν μπορεί να είναι στο μέλλον
+  beta: βήτα
   hello: Γεια σου κόσμε
   welcome_back: Καλώς ήρθες, %{name}
   your_professional_learning_plan: Το επαγγελματικό σας πλάνο εκμάθησης
@@ -54,14 +55,9 @@ el:
   okay: Εντάξει
   or: ή
   heading_x_of_y: "%{heading} (σελίδα %{x} του %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Προσθέστε ένα δάσκαλο:'
       placeholder: Τμήμα κώδικα (ABCDEF)
-      instructions: Παρακαλώ να εισάγεις τον κωδικό που μοιράστηκε μαζί σου ο δάσκαλός
-        σου. Πρόκειται για έναν κωδικό 6 γραμμάτων όπως "ΑΒΓΔΕΖ".
-      instructions_short: Εισάγετε τον 6-ψήφιο κωδικό τάξης σας
-    submit: Προσθήκη δασκαλου
   add_hint_form:
     placeholder: Παρακαλούμε εισάγετε την υπόδειξή σας εδώ
     submit: Προσθέστε υπόδειξη

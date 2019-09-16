@@ -673,21 +673,11 @@ hi:
         text: "{SPRITE} पर क्लिक किया"
       gamelab_comment:
         text: 'टिप्पणी: {COMMENT}'
-      gamelab_console.log:
-        text: लॉग संदेश {MESSAGE}
       gamelab_createNewSprite:
         text: " {LOCATION} पर कॉस्ट्यूम  {COSTUME} के साथ{NAME} नामक एक नया स्प्राइट
           बनाएं"
-      gamelab_debugSprite:
-        text: "{SPRITE} {VAL} को डीबग करें"
-        options:
-          VAL:
-            'true': 'सही '
-            'false': 'गलत '
       gamelab_destroy:
         text: "{THIS} को हटाएं"
-      gamelab_displace:
-        text: "{THIS} {SPRITE} को मूव होने से रोकता है"
       gamelab_draggable:
         text: ड्रैग करने योग्य हो रहा है
       gamelab_edgesDisplace:
@@ -785,7 +775,6 @@ hi:
             '"scale"': आकार
             '"rotation"': आवर्तन
             '"direction"': गतिविधि की दिशा
-            '"tint"': रंगत
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -815,13 +804,6 @@ hi:
             '"w"': w
             '"s"': s
             '"d"': d
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": ऊपर
-            "'down'": नीचे
-            "'left'": बाएं
-            "'right'": सही
       gamelab_whileKey:
         options:
           KEY:

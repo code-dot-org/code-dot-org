@@ -149,11 +149,6 @@ sq:
           CONDITION:
             '"when"': kur
             '"while"': ndërsa
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': e saktë
-            'false': e gabuar
       gamelab_getProp:
         options:
           PROPERTY:
@@ -215,13 +210,6 @@ sq:
             '"left"': majtas
             '"right"': djathtas
             '"space"': hapësirë
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": lart
-            "'down'": poshtë
-            "'left'": majtas
-            "'right'": djathtas
       gamelab_whileKey:
         options:
           KEY:

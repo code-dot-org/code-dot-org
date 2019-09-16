@@ -482,11 +482,6 @@ bg:
           CONDITION:
             '"when"': когато
             '"while"': докато
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': вярно
-            'false': грешно
       gamelab_draggable:
         text: може да се мести
       gamelab_getProp:
@@ -549,7 +544,6 @@ bg:
             '"x"': x позиция
             '"y"': y позиция
             '"direction"': посока на движение
-            '"tint"': оттенък
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -578,13 +572,6 @@ bg:
             '"w"': w
             '"s"': s
             '"d"': d
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": нагоре
-            "'down'": надолу
-            "'left'": наляво
-            "'right'": надясно
       gamelab_whileKey:
         options:
           KEY:

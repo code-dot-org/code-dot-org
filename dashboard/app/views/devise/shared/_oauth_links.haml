@@ -7,9 +7,9 @@
     %br/
 
   - if controller_name == 'sessions'
-    = t('add_teacher_form.code.instructions_short')
+    = t('join_section.code.instructions_short')
     = form_tag(student_user_new_path, method: :get, class: 'section-sign-in') do
-      = text_field_tag :section_code, params[:section_code], placeholder: t('add_teacher_form.code.placeholder')
+      = text_field_tag :section_code, params[:section_code], placeholder: t('join_section.code.placeholder')
       %button= 'Go'
 
   - if devise_mapping.omniauthable?

@@ -149,11 +149,6 @@ bn:
           CONDITION:
             '"when"': যখন
             '"while"': যখন
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': সত্যি
-            'false': মিথ্যা
       gamelab_getProp:
         options:
           PROPERTY:
@@ -216,13 +211,6 @@ bn:
             '"left"': বামে
             '"right"': ডানে
             '"space"': স্থান
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": উপরে
-            "'down'": নিচে
-            "'left'": বামে
-            "'right'": ডানে
       gamelab_whileKey:
         options:
           KEY:

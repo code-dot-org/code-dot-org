@@ -149,11 +149,6 @@ sr:
           CONDITION:
             '"when"': када
             '"while"': док је
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': тачно
-            'false': нетачно
       gamelab_getProp:
         options:
           PROPERTY:
@@ -215,13 +210,6 @@ sr:
             '"left"': лево
             '"right"': десно
             '"space"': Простор
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": горе
-            "'down'": доле
-            "'left'": лево
-            "'right'": десно
       gamelab_whileKey:
         options:
           KEY:

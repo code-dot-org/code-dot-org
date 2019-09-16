@@ -4,7 +4,7 @@ layout: wide
 nav: promote_nav
 ---
 
-{{ signup_button }}
+{{signup_button}}
 
 # Past Hour of Code Posters
 
@@ -16,4 +16,4 @@ nav: promote_nav
 
 {{ promote_posters }}
 
-{{ signup_button }}
+{{signup_button}}

@@ -161,11 +161,6 @@ mi:
           CONDITION:
             '"when"': ina
             '"while"': i te
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': pono
-            'false': hē
       gamelab_getProp:
         options:
           PROPERTY:
@@ -227,13 +222,6 @@ mi:
             '"left"': mauī
             '"right"': matau
             '"space"': tuarangi
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": runga
-            "'down'": raro
-            "'left'": mauī
-            "'right'": matau
       gamelab_whileKey:
         options:
           KEY:

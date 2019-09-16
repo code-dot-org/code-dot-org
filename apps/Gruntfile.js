@@ -35,7 +35,7 @@ module.exports = function(grunt) {
 // Auto-generated from Gruntfile.js
 import 'babel-polyfill';
 import 'whatwg-fetch';
-import Adapter from 'enzyme-adapter-react-15.4';
+import Adapter from 'enzyme-adapter-react-15';
 import enzyme from 'enzyme';
 enzyme.configure({adapter: new Adapter()});
 import { throwOnConsoleErrorsEverywhere, throwOnConsoleWarningsEverywhere } from './util/throwOnConsole';
@@ -605,8 +605,8 @@ describe('entry tests', () => {
       './src/sites/hourofcode.com/pages/public/index.js',
     'hourofcode.com/views/theme_common_head_after':
       './src/sites/hourofcode.com/pages/views/theme_common_head_after.js',
-    'hourofcode.com/views/hoc_events_map_replacement':
-      './src/sites/hourofcode.com/pages/views/hoc_events_map_replacement.js',
+    'hourofcode.com/views/hoc_events_map':
+      './src/sites/hourofcode.com/pages/views/hoc_events_map.js',
 
     // shared between code.org and hourofcode.com
     tutorialExplorer: './src/tutorialExplorer/tutorialExplorer.js'
@@ -686,6 +686,8 @@ describe('entry tests', () => {
 
     regionalPartnerMiniContact:
       './src/regionalPartnerMiniContact/regionalPartnerMiniContact',
+
+    donorTeacherBanner: './src/donorTeacherBanner/donorTeacherBanner',
 
     cookieBanner: './src/cookieBanner/cookieBanner.js'
   };
@@ -854,6 +856,14 @@ describe('entry tests', () => {
                   )
                 );
               }
+            },
+            p5lab: {
+              name: 'p5-dependencies',
+              priority: 10,
+              minChunks: 2,
+              chunks: chunk =>
+                ['spritelab', 'gamelab', 'dance'].includes(chunk.name),
+              test: module => /p5/.test(module.resource)
             }
           }
         }
@@ -1011,7 +1021,8 @@ describe('entry tests', () => {
         'common',
         'tutorialExplorer',
         'regionalPartnerSearch',
-        'regionalPartnerMiniContact'
+        'regionalPartnerMiniContact',
+        'donorTeacherBanner'
       )
       .map(function(item) {
         var localeType = item === 'common' ? 'locale' : 'appLocale';

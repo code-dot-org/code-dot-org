@@ -793,7 +793,10 @@ class Script < ActiveRecord::Base
       Script::CSD2_2019_NAME,
       Script::CSD3_2019_NAME,
       Script::CSD4_2019_NAME,
-      Script::CSD6_2019_NAME
+      Script::CSD6_2019_NAME,
+      Script::CSD1_PILOT_NAME,
+      Script::CSD2_PILOT_NAME,
+      Script::CSD3_PILOT_NAME
     ].include?(name)
   end
 
@@ -824,6 +827,11 @@ class Script < ActiveRecord::Base
 
   def text_to_speech_enabled?
     csf_tts_level? || csd_tts_level? || csp_tts_level? || hoc_tts_level? || name == Script::TTS_NAME
+  end
+
+  # Generates TTS files for each level in a script.
+  def tts_update
+    levels.each(&:tts_update)
   end
 
   def hint_prompt_enabled?

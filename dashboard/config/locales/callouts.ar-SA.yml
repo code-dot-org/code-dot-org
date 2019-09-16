@@ -134,6 +134,80 @@ ar-SA:
         craft_what_is_iron: الحفر لاستخراج كتلة حديدية!
       Underground Iron_2019:
         craft_what_is_iron: الحفر لاستخراج كتلة حديدية!
+      course3_playLab_challenge1:
+        courseC_PlayLab_events_challenge1_1: هذه البلوكة تحرك اللاعب إلى أماكن اخرى
+          في ساحة اللعب.
+      courseC_PlayLab_events8:
+        courseC_PlayLab_events8_callout1: استخدم هذه البلوكة عندما يتامس البطريق مع
+          التمساح!
+      courseC_PlayLab_events8_2018:
+        courseC_PlayLab_events8_callout1: استخدم هذه البلوكة عندما يتامس البطريق مع
+          التمساح!
+      courseC_PlayLab_events8_2019:
+        courseC_PlayLab_events8_callout1: استخدم هذه البلوكة عندما يتامس البطريق مع
+          التمساح!
+      courseC_PlayLab_events_challenge1:
+        courseC_PlayLab_events_challenge1_1: هذه البلوكة تحرك اللاعب إلى أماكن اخرى
+          في ساحة اللعب.
+      courseC_PlayLab_events_challenge1_2018:
+        courseC_PlayLab_events_challenge1_1: هذه البلوكة تحرك اللاعب إلى أماكن اخرى
+          في ساحة اللعب.
+      courseC_PlayLab_events_challenge1_2019:
+        courseC_PlayLab_events_challenge1_1: هذه البلوكة تحرك اللاعب إلى أماكن اخرى
+          في ساحة اللعب.
+      courseC_artist_loops1a_2019:
+        jumpto_callout: هذه البلوكة مهمة لبرنامجك. احرص على استخدامها!
+      courseC_artist_loops1b_2019:
+        sticker2: أضف هذه في منتصفبرنامجك.
+      courseC_collector_prog1_2018:
+        courseC_collector_prog1_1: هل ترى بلوكات جديدة في صندوق الأدوات؟ لا تقلق,
+          سنريك كيفية استخدامها في دروس قادمة.
+      courseC_collector_prog1_2019:
+        courseC_collector_prog1_1: هل ترى بلوكات جديدة في صندوق الأدوات؟ لا تقلق,
+          سنريك كيفية استخدامها في دروس قادمة.
+      courseC_collector_prog7:
+        courseC_collector_prog7_1: يمكنك استخدام بعض من البلوكات الموجودة في صندوق
+          الأدوات في حال احتجت إليهم!
+      courseC_collector_prog7_2018:
+        courseC_collector_prog7_1: يمكنك استخدام بعض من البلوكات الموجودة في صندوق
+          الأدوات في حال احتجت إليهم!
+      courseC_collector_prog7_2019:
+        courseC_collector_prog7_1: يمكنك استخدام بعض من البلوكات الموجودة في صندوق
+          الأدوات في حال احتجت إليهم!
+      courseC_maze_debugging5_2018:
+        courseC_maze_debugging5_1: هذه البلوكات الرمادية مقفلة ولا يمكنك تغيرها!
+      courseC_maze_debugging5_2019:
+        courseC_maze_debugging5_1: هذه البلوكات مغلقة ولايمكن حذفها!
+      courseC_maze_debugging9_2019:
+        courseC_maze_debugging9_2019_1: اسحب البلوكات من صندوق الأدوات إلى مساحة العمل
+          الخاصة بك.
+      courseC_maze_programming3:
+        courseC_maze_programming3_3: هذي البلوكات مقفلة ولا يمكن حذفها.
+      courseC_maze_programming3_2018:
+        courseC_maze_programming3_3: هذي البلوكات مقفلة ولا يمكن حذفها.
+      courseC_maze_programming3_2019:
+        courseC_maze_programming3_3: هذي البلوكات مقفلة ولا يمكن حذفها.
+      courseC_maze_programming7:
+        courseC_maze_programming7_1: هذا تحدي لغزك الاول! لا تقلق من المفترض ان يكون
+          صعباً ويحتاج العديد من المحاولات لحلها.
+        courseC_maze_programming7_2: هذه البلوكات ثابتة ولايمكن حذفها.
+      courseC_maze_programming7_2018:
+        courseC_maze_programming7_1: هذا تحدي لغزك الاول! لا تقلق من المفترض ان يكون
+          صعباً ويحتاج العديد من المحاولات لحلها.
+        courseC_maze_programming7_2: هذه البلوكات ثابتة ولايمكن حذفها.
+      courseC_maze_programming7_2019:
+        courseC_maze_programming7_1: هذا تحدي لغزك الاول! لا تقلق من المفترض ان يكون
+          صعباً ويحتاج العديد من المحاولات لحلها.
+        courseC_maze_programming7_2: هذه البلوكات ثابتة ولايمكن حذفها.
+      courseD_scrat_ramp8:
+        courseD_maze_ramp7_1: هذا تحدي لغزك الاول! لا تقلق من المفترض ان يكون صعباً
+          ويحتاج العديد من المحاولات لحلها.
+      courseE_playLab_challenge1:
+        courseC_PlayLab_events_challenge1_1: هذه البلوكة تحرك اللاعب إلى أماكن اخرى
+          في ساحة اللعب.
+      express_maze_debugging9_2019:
+        express_maze_debugging9_2019_1: اسحب البلوكات من صندوق الأدوات إلى مساحة العمل
+          الخاصة بك.
       frozen circle function with parameter:
         frozen_circle_function_with_parameter_circle: إستخدم القطعة "إنشاء دائرة"
           و غيّر الحجم.

@@ -3,3 +3,10 @@ display_name 'Creating sprites and animations'
 description 'Use your new sprite and animation skills to complete these levels.'
 
 sublevels
+
+level 'CSD U3 Sprites missing_pilot'
+level 'CSD U3 Sprites names_pilot'
+level 'CSD U3 Sprites name sprite_pilot'
+level 'CSD U3 Sprites order_pilot'
+level 'CSD U3 Sprites fish_pilot'
+level 'CSD U3 Sprites sprite draw_pilot'

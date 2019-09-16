@@ -597,11 +597,6 @@ ko:
           CONDITION:
             '"when"': "~할 때"
             '"while"': '반복(~인 동안):'
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': 참
-            'false': 거짓
       gamelab_getProp:
         options:
           PROPERTY:
@@ -655,7 +650,6 @@ ko:
             '"x"': x 좌표
             '"y"': y 좌표
             '"direction"': 움직임 방향
-            '"tint"': 색조
       gamelab_setSizes:
         text: "{SPRITE} {PROPERTY}을(를) {N}%로 설정"
         options:
@@ -682,13 +676,6 @@ ko:
             '"left"': 왼쪽으로
             '"right"': 오른쪽으로
             '"space"': 우주
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": 위로
-            "'down'": 아래로
-            "'left'": 왼쪽으로
-            "'right'": 오른쪽으로
       gamelab_whileKey:
         options:
           KEY:

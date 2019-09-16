@@ -1638,3 +1638,9 @@ pt:
               name: Condicionais
             Functions:
               name: Funções
+        peru-2019:
+          stages:
+            Introduction:
+              name: Introdução
+            Nested Loops:
+              name: Laços aninhados

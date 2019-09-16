@@ -32,6 +32,7 @@ hi:
         finish_sign_up_subheader_provider: '< div वर्ग के लिए एक Code.org खाता बनाना समाप्त करने के लिए निम्न जानकारी भरें <strong>%{provider}</strong>के लिये<strong>%{email}</strong>'
         error:
           future: भविष्य में नहीं किया जा सकता
+  beta: "बीटा"
   hello: "हैलो वर्ल्ड"
   welcome_back: "वापस, %{name} में आपका स्वागत है"
   your_professional_learning_plan: "आपका व्यावसायिक शिक्षण योजना"
@@ -45,13 +46,9 @@ hi:
   okay: "ठीक है"
   or: "या"
   heading_x_of_y: "%{heading}(पेज %{x} के लिए %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'शिक्षक जोड़ें:'
       placeholder: "अनुभाग कोड (ABCDEF)"
-      instructions: "कृपया आपके अध्यापक द्वारा आपके साथ साझा किया कोड दर्ज करें। यह \"ABCDEF” जैसा 6 अक्षर का कोड है।"
-      instructions_short: "अपने 6 पत्र अनुभाग कोड दर्ज करें"
-    submit: 'शिक्षक जोड़ें'
   add_hint_form:
     placeholder: 'कृपया अपने सुझाव यहाँ दर्ज करें'
     submit: 'जोड़ने के संकेत'
@@ -137,6 +134,7 @@ hi:
     additional_information: "हम कुछ अतिरिक्त जानकारी की आवश्यकता आप साइन अप करने के लिए जारी रखने के लिए ।"
     user_type_button: "खाता प्रकार अद्यतन करें"
     user_type_label: "खाता प्रकार"
+    user_type_teacher: "अध्यापक"
     user_type_student: "छात्र"
     field_is_required: "की आवश्यकता है"
     accept_terms: "खाता बनाने के लिए आपको सहमति देनी होगी।"
@@ -155,6 +153,7 @@ hi:
     public: 'सार्वजनिक'
     homeschool: 'होमस्कूल'
     after_school: 'आफ्टर स्कूल'
+    other: 'अन्य'
     state: 'राज्य'
     district: 'जिला'
     other_district_not_listed: 'अन्य जिला ऊपर सूचीबद्ध नहीं है'
@@ -277,10 +276,15 @@ hi:
       professional_learning: "पेशेवर प्रशिक्षण"
       documentation: "दस्तावेजीकरण"
       tutorials: "ट्यूटोरियल"
+      app_lab_documentation: "ऐप लैब दस्तावेज"
+      app_lab_tutorials: "ऐप लैब ट्यूटोरियल्स"
+      game_lab_documentation: "गेम लैब दस्तावेज"
+      game_lab_tutorials: "गेम लैब ट्यूटोरियल्स"
       educate_overview: "शिक्षक रूपरेखा"
       educate_elementary: "प्राथमिक स्कूल"
       educate_middle: "मिडल स्कूल"
       educate_high: "हाई स्कूल"
+      educate_hoc: "आवर ऑफ़ कोड"
       educate_partner: "हमारे साथ साझेदारी करें"
       educate_beyond: "Code.org से परे"
       educate_inspire: "किसी छात्र को प्रेरित करें"
@@ -297,13 +301,16 @@ hi:
       about_contact: "हमें संपर्क करें"
       about_faqs: "अकसर पूछे जाने वाले सवाल"
       learn: "सीखें"
+      stats: "आंकड़े"
       help_us: "हमारी मदद करें"
       teach: "पढ़ाएं"
       about: "के बारे में"
     user:
+      classroom: 'अध्यापक संबंधी मुख्य पृष्ठ'
       district_dashboard: 'डिस्ट्रिक्ट डैशबोर्ड'
       label: 'हेलो %{username}'
       stats: 'कोड स्टूडियो'
+      my_projects: 'मेरे प्रोजेक्ट'
       settings: 'खाता सेटिंग्स'
       logout: 'साइन आउट करें'
       signin: 'दाखिल करना'
@@ -320,8 +327,11 @@ hi:
       dance: 'डांस पार्टी'
       frozen: 'Frozen'
       gamelab_jr: 'गेम लैब (बीटा)'
+      gumball: 'गम्बॉल की अद्भुत दुनिया'
+      iceage: 'हिम युग'
       infinity: 'अनंत'
       makerlab: 'मेकर टूलकिट'
+      minecraft_adventurer: 'Minecraft एडवेंचरर'
       minecraft_aquatic: 'Minecraft जलचर'
       minecraft_codebuilder: 'Minecraft: कोड कनेक्शन'
       minecraft_designer: 'Minecraft'
@@ -329,7 +339,10 @@ hi:
       playlab_k1: 'प्ले लैब (आरंभिक-पाठक)'
       scratch: 'Scratch'
       starwars: 'Star Wars'
+      starwarsblocks: 'Star Wars (ब्लॉक्स)'
+      starwarsblocks_hour: 'Star Wars (ब्लॉक्स)'
       weblab: 'वेब लैब'
+      view_all: 'सभी प्रोजेक्ट देखें...'
     popup:
       progress_for_user: "%{Name} की प्रगति"
       progress: 'आपकी प्रगति'
@@ -359,6 +372,7 @@ hi:
       student: 'छात्र'
       viewing_solution: 'समाधान देखना'
       try_it_yourself: 'इसे खुद आजमाएं'
+      section: 'अनुभाग'
       example: 'उदाहरण समाधान'
       example_with_number: 'उदाहरण समाधान %{solution_number}'
       submitted_on: 'इस तारीख को प्रस्तुत किया गया:'
@@ -465,6 +479,7 @@ hi:
     none: 'जवाब नहीं देना चाहते'
   user_type:
     student: 'छात्र'
+    teacher: 'अध्यापक'
   footer:
     thank_you: 'हम अपने कोड स्टूडियो बनाने में <a href="https://code.org/about/donors">दानियों</a>, <a href="https://code.org/about/partners">साझेदारों</a>, हमारी <a href="https://code.org/about/team">विस्तृत टीम</a>, हमारी वीडियो कास्ट और हमारे <a href="https://code.org/about/advisors">शिक्षा सलाहकारों</a> का उनके सहयोग के लिए धन्यवाद करते हैं।'
     help_from_html: 'विशेष रूप से हम Amazon, Google, और Microsoft के इंजीनियरों को मान्यता देना चाहते हैं, जिन्होंने इन सामग्रियों को तैयार करने में मदद की।'
@@ -571,6 +586,7 @@ hi:
       audience: "आयु 13+"
       cta: "जानें कैसे"
     hoc-encryption:
+      title: "साधारण कूटलेखन"
       body: "छात्र कूट किए गए संदेश बनाने और उन्हें सुलझाने की तकनीकें सीखेंगे।"
     weblab:
       title: "वेब लैब (बीटा)"
@@ -722,6 +738,7 @@ hi:
       asian: "एशियाई"
       hawaiian: "मूल हवाईयन या अन्य पेसिफिक आईलैंडर"
       american_indian: "अमेरिकी भारतीय/अलास्का मूल"
+      other: "अन्य"
       opt_out: "नहीं बताना चाहते"
     submit: "सबमिट करें"
     decline: "बंद करें"
@@ -783,6 +800,7 @@ hi:
           harassment: 'धमकियां, साइबर दादागिरी, उत्पीड़न'
           offensive: 'अपमानजनक सामग्री'
           infringement: 'कॉपीराइट उल्लंघन'
+          other: 'अन्य'
         detail: 'कृपया उस सामग्री के संबंध में अधिक से अधिक विवरण प्रदान करें, जिसकी आप रिपोर्ट कर रहे हैं'
         acknowledge: 'यह जानकारी प्रस्तुत करके, आप स्वीकार करके हैं कि इसे %{link_start_privacy}Privacy Policy%{link_end} और %{link_start_tos}Terms of Service%{link_end} की शर्तों के अनुसार निपटाया जाएगा।'
   peer_review:
@@ -799,6 +817,7 @@ hi:
     peer_feedback: 'सहपाठी की प्रक्रिया'
     outdated: 'यह प्रतिक्रिया पिछले प्रस्तुत किए संस्करण के लिए जोड़ी गई थी'
   flex_category:
+    required: 'रूपरेखा'
     ramp_up: 'रैम्प-अप'
     main_course: 'मुख्य पाठ्यक्रम'
     extra_course_content: 'अतिरिक्त पाठ्यक्रम सामग्री'
@@ -806,6 +825,7 @@ hi:
     csf_e_2: 'पाठ्यक्रम E की सामग्री'
     csf_f_1: 'रैम्प अप से पाठ्यक्रम F (वैकल्पिक)'
     csf_f_2: 'पाठ्यक्रम F की सामग्री'
+    csf_digcit: 'डिजीटल नागरिकता'
     csf_sequencing: 'अनुक्रमण'
     csf_loops: 'फंदे'
     csf_events: 'घटनाएँ'
@@ -813,6 +833,7 @@ hi:
     csf_conditionals: 'शर्तें'
     csf_functions: 'कार्य'
     csf_variables: 'चर'
+    csf_internet: 'इंटरनेट'
     csf_warmup: 'तैयारी करें'
     csd1_1: 'अध्याय 1: प्रश्न हल करने की प्रक्रिया'
     csd1_2: 'अध्याय 2: कंप्यूटर और प्रश्न हल करना'
@@ -927,6 +948,7 @@ hi:
   return_unit_overview: 'इकाई की रूपरेखा पर जाएं'
   return_course_overview: 'पाठ्यक्रम की रूपरेखा पर जाएं'
   view_all_units: 'सभी इकाईयां देखें'
+  view_teacher_guide: 'अध्यापक गाइड देखें'
   pd:
     form_labels:
       first_name: 'पहला नाम'

@@ -31,6 +31,7 @@ bg:
         finish_sign_up_subheader_provider: 'Попълнете следната информация, за да приключите създаването на Code.org акаунт с <strong>%{provider}</strong> за <strong>%{email}</strong>.'
         error:
           future: не може да бъде в бъдещето
+  beta: "бета"
   hello: "Здравей, свят"
   welcome_back: "Добре дошли отново, %{name}"
   your_professional_learning_plan: "Вашият план за професионално обучение"
@@ -44,10 +45,6 @@ bg:
   okay: "Добре"
   or: "или"
   heading_x_of_y: "%{heading} (page %{x} на %{y})"
-  add_teacher_form:
-    code:
-      label: 'Добавете учител:'
-    submit: 'Добавяне на учител'
   appname: "Code.org"
   stage: "Етап"
   stage_number: "Урок %{number}"

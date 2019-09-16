@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import $ from 'jquery';
-import {Button, Alert, FormGroup, Pagination} from 'react-bootstrap';
+import {Button, Alert, FormGroup} from 'react-bootstrap';
+import {Pagination} from '@react-bootstrap/pagination';
 import i18n from '@cdo/locale';
 
 const styles = {

@@ -1,6 +1,6 @@
 ---
 title: Jak poprowadzić Godzinę Kodowania - firmy
-layout: szeroki
+layout: wide
 nav: how_to_nav
 ---
 

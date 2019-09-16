@@ -2467,9 +2467,6 @@ fr-FR:
       behaviors 6:
         behavior hint: "Essaie de modifier les comportements ! \n\n-   Quelle valeur
           contrôle la vitesse de chaque sprite ?"
-      behaviors 7:
-        behavior hint: "Essaie de modifier les comportements ! \n\n-   Quelle valeur
-          contrôle la vitesse de chaque sprite ?"
       comment_intro_maze_2018:
         courseC_maze_programming4_a: Les commentaires sont aussi utiles lorsque d’autres
           personnes essaient de lire ton code.

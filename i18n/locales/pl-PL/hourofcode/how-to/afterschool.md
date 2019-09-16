@@ -1,6 +1,6 @@
 ---
 title: Porady
-layout: szeroki
+layout: wide
 nav: how_to_nav
 ---
 

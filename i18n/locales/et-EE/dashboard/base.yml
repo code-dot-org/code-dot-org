@@ -26,6 +26,7 @@ et:
         edit_header: 'Muuda kasutajakonto üksikasju'
         error:
           future: ei saa olla tulevikus
+  beta: "beeta"
   hello: "Tere maailm"
   welcome_back: "Tere tulemast tagasi, %{name}"
   your_professional_learning_plan: "Sinu professionaalne õppeplaan"
@@ -39,13 +40,9 @@ et:
   okay: "Olgu"
   or: "või"
   heading_x_of_y: "%{heading} (leht %{x} of %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Lisa õpetaja:'
       placeholder: "Üksuse kood (ABCDEF)"
-      instructions: "Palun sisesta kood, mille andis sulle su õpetaja. See on 6-kohaline tähtedest koosnev kood, näiteks \"ABCDEF\"."
-      instructions_short: "Sisestage oma 6-täheline sektsiooni kood"
-    submit: 'Lisa õpetaja'
   add_hint_form:
     placeholder: 'Palun sisesta oma vihje siia'
     submit: 'Lisa vihje'
