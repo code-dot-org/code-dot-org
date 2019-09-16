@@ -23,6 +23,9 @@ const styles = {
   tableName: {
     fontFamily: '"Gotham 5r", sans-serif',
     color: color.cyan
+  },
+  collapsibleContainer: {
+    paddingLeft: '16px'
   }
 };
 
@@ -47,7 +50,7 @@ class LibraryCategory extends React.Component {
     return (
       <div>
         <a style={styles.categoryName} onClick={this.toggleCollapsed}>
-          <FontAwesome icon={icon} />
+          <FontAwesome className="fa fa-fw" icon={icon} />
           <span>{this.props.name}</span>
           <span style={styles.tableNumber}>
             {this.props.datasets.length}{' '}
@@ -55,7 +58,7 @@ class LibraryCategory extends React.Component {
           </span>
         </a>
         {!this.state.collapsed && (
-          <div>
+          <div style={styles.collapsibleContainer}>
             <span style={styles.categoryDescription}>
               {this.props.description}
             </span>
