@@ -264,6 +264,7 @@ export default class TeacherHomepage extends Component {
                 options={donorTeacherBannerOptions}
                 onDismiss={() => this.dismissDonorTeacherBanner()}
               />
+              <div style={styles.clear} />
             </div>
           )}
         <TeacherSections queryStringOpen={queryStringOpen} locale={locale} />

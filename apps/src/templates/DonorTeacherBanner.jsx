@@ -6,13 +6,23 @@ import color from '@cdo/apps/util/color';
 import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 
 const styles = {
+  heading: {
+    marginTop: 25
+  },
   button: {
     marginLeft: 7,
     marginRight: 7,
     marginTop: 15
   },
   checkbox: {
-    margin: '0 7px 0 0'
+    margin: '0 7px 4px 0',
+    cursor: 'pointer',
+    verticalAlign: 'middle'
+  },
+  checkboxDisabled: {
+    margin: '0 7px 4px 0',
+    cursor: 'not-allowed',
+    verticalAlign: 'middle'
   },
   clear: {
     clear: 'both'
@@ -44,9 +54,14 @@ const styles = {
   paragraph: {
     marginBottom: 10
   },
+  label: {
+    fontFamily: '"Gotham 4r", sans-serif',
+    cursor: 'pointer'
+  },
   radio: {
     verticalAlign: 'top',
-    marginRight: 10
+    marginRight: 10,
+    cursor: 'pointer'
   },
   permissionEnabled: {},
   permissionDisabled: {
@@ -134,7 +149,9 @@ export default class DonorTeacherBanner extends Component {
     return (
       <div style={styles.main}>
         <div style={styles.message}>
-          <h2>Free stuff from Amazon for your classroom</h2>
+          <h2 style={styles.heading}>
+            Free stuff from Amazon for your classroom
+          </h2>
           <div style={styles.paragraph}>
             Amazon Future Engineer offers free support for participating
             Code.org classrooms, including posters, free CSTA+ membership,
@@ -147,7 +164,7 @@ export default class DonorTeacherBanner extends Component {
           </div>
           <div>
             <div>
-              <label>
+              <label style={styles.label}>
                 <input
                   type="radio"
                   id="participateYes"
@@ -161,7 +178,7 @@ export default class DonorTeacherBanner extends Component {
               </label>
             </div>
             <div>
-              <label>
+              <label style={styles.label}>
                 <input
                   type="radio"
                   id="participateNo"
@@ -177,13 +194,17 @@ export default class DonorTeacherBanner extends Component {
           </div>
           <hr />
           <div style={permissionStyle}>
-            <label>
+            <label style={styles.label}>
               <input
                 type="checkbox"
                 name={name}
                 checked={this.state.permission}
                 onChange={this.onPermissionChange}
-                style={styles.checkbox}
+                style={
+                  this.state.participate
+                    ? styles.checkbox
+                    : styles.checkboxDisabled
+                }
                 disabled={this.state.participate !== true}
               />
               I give Code.org permission to share my name, email address, and
