@@ -8,7 +8,7 @@ Parameters:
     AllowedValues:
       - '5.6'
       - '5.7'
-    Default: '5.6'
+    Default: '5.7'
   KeyName:
     Description: 'The name of the EC2 key pair used to SSH to the bastion host'
     Type: 'AWS::EC2::KeyPair::KeyName'
@@ -61,7 +61,7 @@ Resources:
       VpcId: !Ref LabVpc
       MapPublicIpOnLaunch: 'false'
       CidrBlock: 172.31.24.0/24
-      AvailabilityZone: !Sub ${AWS::Region}a
+      AvailabilityZone: !Sub ${AWS::Region}b
       Tags:
         - Key: Name
           Value: !Join ['-', [!Ref 'AWS::StackName', Aurora Lab Subnet 4 - Private]]
@@ -71,7 +71,7 @@ Resources:
       VpcId: !Ref LabVpc
       MapPublicIpOnLaunch: 'false'
       CidrBlock: 172.31.32.0/24
-      AvailabilityZone: !Sub ${AWS::Region}b
+      AvailabilityZone: !Sub ${AWS::Region}c
       Tags:
         - Key: Name
           Value: !Join ['-', [!Ref 'AWS::StackName', Aurora Lab Subnet 5 - Private]]
@@ -81,10 +81,20 @@ Resources:
       VpcId: !Ref LabVpc
       MapPublicIpOnLaunch: 'false'
       CidrBlock: 172.31.40.0/24
-      AvailabilityZone: !Sub ${AWS::Region}c
+      AvailabilityZone: !Sub ${AWS::Region}d
       Tags:
         - Key: Name
           Value: !Join ['-', [!Ref 'AWS::StackName', Aurora Lab Subnet 6 - Private]]
+    PrivateSubnet04:
+      Type: 'AWS::EC2::Subnet'
+      Properties:
+        VpcId: !Ref LabVpc
+        MapPublicIpOnLaunch: 'false'
+        CidrBlock: 172.31.48.0/24
+        AvailabilityZone: !Sub ${AWS::Region}e
+        Tags:
+          - Key: Name
+            Value: !Join ['-', [!Ref 'AWS::StackName', Aurora Lab Subnet 7 - Private]]
   ## Create Public Route Table
   AuroraLabPublicRouteTable:
     Type: 'AWS::EC2::RouteTable'
@@ -115,6 +125,7 @@ Resources:
         - !Ref PrivateSubnet01
         - !Ref PrivateSubnet02
         - !Ref PrivateSubnet03
+        - !Ref PrivateSubnet04
       Tags:
         - Key: Name
           Value: !Join
@@ -202,7 +213,7 @@ Resources:
       DBClusterParameterGroupName: !Ref AuroraClusterParameterGroup
       DBSubnetGroupName: !Ref AuroraDbSubnetGroup
       Engine: !If [Is57, aurora-mysql, aurora ]
-      EngineVersion: !If [Is57, 5.7.mysql_aurora.2.04.1, 5.6.mysql_aurora.1.19.0 ]
+      EngineVersion: !If [Is57, 5.7.mysql_aurora.2.04.4, 5.6.mysql_aurora.1.19.0 ]
       MasterUsername: masteruser
       MasterUserPassword: Password1
       VpcSecurityGroupIds: [!GetAtt MySqlSecurityGroup.GroupId]
@@ -221,7 +232,7 @@ Resources:
       #EnablePerformanceInsights: 'true'
       EnablePerformanceInsights: !If [Is57, 'false', 'true' ]
       Engine: !If [Is57, aurora-mysql, aurora ]
-      EngineVersion: !If [Is57, 5.7.mysql_aurora.2.04.1, 5.6.mysql_aurora.1.19.0 ]
+      EngineVersion: !If [Is57, 5.7.mysql_aurora.2.04.4, 5.6.mysql_aurora.1.19.0 ]
       LicenseModel: general-public-license
       PubliclyAccessible: 'false'
   AuroraClusterParameterGroup:
