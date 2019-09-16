@@ -1,20 +1,20 @@
-%div.donor-footer{ style: "color: white; text-align: center; padding-top: 30px; background: url(#{asset_path('dashboard_footer-cropped.png')}); background-size: cover; min-height: 340px;" }
-  %h1{ style: 'color: white; margin-bottom: 24px;' }
+#donor-footer{ style: "background: url(#{asset_path('dashboard_footer-cropped.png')})" }
+  %h1
     Code.org thanks our donors
-  %p{ style: 'color: white; margin-bottom: 22px; max-width: 670px; display: inline-block ' }
+  %p
     Our vision is that every student in every school should have the opportunity to learn computer science. The impact of our work is amplified and made possible with help from our amazing partners.
-  %h3{ style: 'margin-bottom: 20px;' }
+  %h3
     %strong
       - if current_user.teacher?
         Your classroom's free use of Code.org is made possible by:
       - else
         Your free education on Code.org is made possible by:
   - Dir.glob("app/assets/images/donor_logos/#{current_user.donor_teacher_banner_name}/*").sort.each do |logo|
-    %div{ style: "max-width: 235px; max-height: 64px; display: inline-block; margin-left: 20px; margin-right: 20px" }
+    .logo
       = image_tag asset_path("donor_logos/#{current_user.donor_teacher_banner_name}/#{logo.split('/').last}")
   - if current_user.teacher? && current_user.donor_teacher_banner_name == "Amazon"
-    %p{ style: 'margin-top: 20px; margin-bottom: 36px' }
+    %p.resources
       Amazon is offering free resources for Code.org classrooms.
-      %a{ href: CDO.code_org_url('amazon-future-engineer'), style: 'color: #ffb81d'}
+      %a.learn-more{ href: CDO.code_org_url('amazon-future-engineer') }
         %strong
           Learn more
