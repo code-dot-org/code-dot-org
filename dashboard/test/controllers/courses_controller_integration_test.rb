@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class CoursesControllerTest < ActionDispatch::IntegrationTest
+class CoursesControllerIntegrationTest < ActionDispatch::IntegrationTest
   self.use_transactional_test_case = true
 
   test "show: plc courses get sent to user_course_enrollments_controller" do
