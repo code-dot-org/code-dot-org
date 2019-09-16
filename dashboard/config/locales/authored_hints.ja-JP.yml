@@ -869,7 +869,7 @@ ja-JP:
           \ </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title
           name=\"DIR\">moveForward</title>\n                  </block>\n                  \n
           \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n
-          \   <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>"
+          \   <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
       course3_farmer_condLoops_challenge1:
         courseD_farmer_condLoops_challenge1_a: このパズルでは「ステップ」ボタンが役立ちます。
       course3_farmer_condLoops_challenge2:
@@ -934,11 +934,63 @@ ja-JP:
           <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES"
           config="2-6">5</title></block></xml> のなかに いれて ください。
       courseA_artist_loops5:
+        courseA_artist_loops5_a: <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> をつかって このパズルをクリアしよう！
         courseA_artist_loops5_b: ４かい いじょう もっと くりかえしたい ときは、ブロックの うえにある すうじを かえます。
+        courseA_artist_loops5_c: <xml><block type="simple_move_right"/></xml> を<xml><block
+          type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+          の中に入れてみよう。
       courseA_artist_loops5_2018:
+        courseA_artist_loops5_a: <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> をつかって このパズルをクリアしよう！
         courseA_artist_loops5_b: ４かい いじょう もっと くりかえしたい ときは、ブロックの うえにある すうじを かえます。
+        courseA_artist_loops5_c: <xml><block type="simple_move_right"/></xml> を<xml><block
+          type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+          の中に入れてみよう。
       courseA_artist_loops5_2019:
+        courseA_artist_loops5_a: <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> をつかって このパズルをクリアしよう！
         courseA_artist_loops5_b: ４かい いじょう もっと くりかえしたい ときは、ブロックの うえにある すうじを かえます。
+        courseA_artist_loops5_c: <xml><block type="simple_move_right"/></xml> を<xml><block
+          type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+          の中に入れてみよう。
+      courseA_artist_loops6:
+        courseA_artist_loops6_a: うまくいかないときは、どんなふうにかける ブロックをうごかして ためしてみよう。
+        courseA_artist_loops6_b: ちがう ほうこうに うごくブロック を ２つ つかってみよう。
+      courseA_artist_loops6_2018:
+        courseA_artist_loops6_a: うまくいかないときは、どんなふうにかける ブロックをうごかして ためしてみよう。
+        courseA_artist_loops6_b: ちがう ほうこうに うごくブロック を ２つ つかってみよう。
+      courseA_artist_loops6_2019:
+        courseA_artist_loops6_a: うまくいかないときは、どんなふうにかける ブロックをうごかして ためしてみよう。
+        courseA_artist_loops6_b: ちがう ほうこうに うごくブロック を ２つ つかってみよう。
+      courseA_artist_loops7:
+        courseA_artist_loops7_a: 一本一本せんをかいて くりかえしのパターンを見つけよう。
+        courseA_artist_loops7_b: １つなみをかいたら、それをくりかえして のこりの２つをかいてみよう
+        courseA_artist_loops7_c: <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> ブロックのなかにブロックを なにか いれてください。
+      courseA_artist_loops7_2018:
+        courseA_artist_loops7_a: 一本一本せんをかいて くりかえしのパターンを見つけよう。
+        courseA_artist_loops7_b: １つなみをかいたら、それをくりかえして のこりの２つをかいてみよう
+        courseA_artist_loops7_c: |-
+          <xml><block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="3-10">???</title>
+            </block></xml> ブロックのなかにブロックを なにか いれてください。
+      courseA_artist_loops7_2019:
+        courseA_artist_loops7_a: 一本一本せんをかいて くりかえしのパターンを見つけよう。
+        courseA_artist_loops7_b: １つなみをかいたら、それをくりかえして のこりの２つをかいてみよう
+        courseA_artist_loops7_c: |-
+          <xml><block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="3-10">???</title>
+            </block></xml> ブロックのなかにブロックを なにか いれてください。
+      courseA_artist_loops8:
+        courseA_artist_loops8_a: 実行して どうなるかみてみよう。
+        courseA_artist_loops8_b: コードをどのように かえればよいか 考えてみよう
+      courseA_artist_loops8_2018:
+        courseA_artist_loops8_a: 実行して どうなるかみてみよう。
+        courseA_artist_loops8_b: コードをどのように かえればよいか 考えてみよう
+      courseA_artist_loops8_2019:
+        courseA_artist_loops8_a: 実行して どうなるかみてみよう。
+        courseA_artist_loops8_b: コードをどのように かえればよいか 考えてみよう
       courseA_collector_loops1:
         courseA_collector_loops1_a: |-
           たからものの ところまで きたら、このブロックで たからものを ゲットします。
@@ -1264,6 +1316,12 @@ ja-JP:
         courseB_artist_loops2_a: ４かい いじょう もっと くりかえしたい ときは、ブロックの うえにある すうじを かえます。
       courseB_artist_loops2_2019:
         courseB_artist_loops2_a: ４かい いじょう もっと くりかえしたい ときは、ブロックの うえにある すうじを かえます。
+      courseB_artist_loops9:
+        courseB_artist_loops9_c: 一本一本せんをかいて くりかえしのパターンを見つけよう。
+      courseB_artist_loops9_2018:
+        courseB_artist_loops9_c: 一本一本せんをかいて くりかえしのパターンを見つけよう。
+      courseB_artist_loops9_2019:
+        courseB_artist_loops9_c: 一本一本せんをかいて くりかえしのパターンを見つけよう。
       courseB_collector_loops2:
         courseB_collector_loops2_a: たからものを とるまえに うごいて ください。
       courseB_collector_loops2_2018:

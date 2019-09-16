@@ -44,13 +44,9 @@ fa:
   okay: باشه
   or: یا
   heading_x_of_y: "%{heading} (%{x} صفحه %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'افزودن یک معلم:'
       placeholder: انتخاب کد (ABCDEF)
-      instructions: لطفا کد با شما معلم خود را به اشتراک گذاشته. 6 حرف کد مانند "ABCDEF"
-        است.
-    submit: افزودن معلم
   add_hint_form:
     placeholder: لطفا پیشنهادتان را اینجا وارد کنید
     submit: افزودن پیشنهاد

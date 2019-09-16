@@ -48,13 +48,9 @@ zh-CN:
   okay: 好吧
   or: 或
   heading_x_of_y: "%{heading} (第%{x} 页 共%{y} 页)"
-  add_teacher_form:
+  join_section:
     code:
-      label: 添加一个老师：
       placeholder: 小组代码（ABCDEF）
-      instructions: 请输入与你的老师共享的代码。这是一个像“ABCDEF”的6位字母代码。
-      instructions_short: 输入你的6位小组代码
-    submit: 添加老师
   add_hint_form:
     placeholder: 请在这里输入您的密码提示
     submit: 添加密码提示

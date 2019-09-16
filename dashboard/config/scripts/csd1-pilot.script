@@ -8,7 +8,6 @@ has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/csd-20/unit1/{LESSON}'
 pilot_experiment 'csd-piloters'
 project_sharing true
-curriculum_umbrella 'CSD'
 
 stage 'CS Discoveries Pre-survey', lockable: true, flex_category: 'cspSurvey'
 level 'csd-pre-survey-2017-levelgroup_2018_2019_pilot', assessment: true

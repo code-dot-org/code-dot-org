@@ -463,6 +463,148 @@ de-DE:
         mc_8_b: Nutze `wiederholen`-Schleifen um dein Code zu vereinfachen.
       Overworld Avoid Monsters_2019:
         mc_8_b: Nutze `wiederholen`-Schleifen um dein Code zu vereinfachen.
+      courseA_harvester_loops5:
+        courseA_harvester_loops5_a: 'Wenn Du nicht mehr weiter kommst, teile die Aufgabe
+          in 2 Teile und löse sie nacheinander: Der eine Teil ist vor der Ecke und
+          der zweite nach der Ecke.'
+      courseA_harvester_loops5_2019:
+        courseA_harvester_loops5_a: 'Wenn Du nicht mehr weiter kommst, teile die Aufgabe
+          in 2 Teile und löse sie nacheinander: Der eine Teil ist vor der Ecke und
+          der zweite nach der Ecke.'
+      courseA_harvester_seq2:
+        courseA_harvester_seq2_b: Versuche einmal, die einzelnen Schritte auf ein
+          Blatt Papier zu schreiben um eine Lösung zu finden!
+      courseA_harvester_seq2_2019:
+        courseA_harvester_seq2_b: Versuche einmal, die einzelnen Schritte auf ein
+          Blatt Papier zu schreiben um eine Lösung zu finden!
+      courseA_maze_seq1:
+        courseA_maze_seq1_a: |-
+          Wenn der Vogel sich nicht bewegt, dann überprüfe ob die Blöcke richtig unter <xml>
+            <block type="when_run"/>
+          </xml> eingerastet sind
+        courseA_maze_seq1_b: |-
+          Der Vogel muss sich 3 mal in Richtung Westen bewegen. Nimm diesen Block:
+
+          <xml><block type="maze_moveWest"/></xml>
+      courseA_maze_seq10:
+        courseA_maze_seq10_a: Wenn Du nicht mehr weiter weißt, versuche zuerst einmal
+          die einzelnen Schritte auf ein Blatt Papier zu schreiben.
+        courseA_maze_seq10_b: Du musst in 3 Richtungen gehen um diese Aufgabe zu lösen.
+      courseA_maze_seq10_2018:
+        courseA_maze_seq10_a: Wenn Du nicht mehr weiter weißt, versuche zuerst einmal
+          die einzelnen Schritte auf ein Blatt Papier zu schreiben.
+      courseA_maze_seq10_2019:
+        courseA_maze_seq10_a: Wenn Du nicht mehr weiter weißt, versuche zuerst einmal
+          die einzelnen Schritte auf ein Blatt Papier zu schreiben.
+      courseA_maze_seq13:
+        courseA_maze_seq13_a: Wenn dir der Pfad, den du brauchst, nicht klar ist,
+          fahre mit deinem Finger den Weg vom Vogel zum Schwein nach.
+        courseA_maze_seq13_b: Hab keine Angst davor, Fehler zu machen! Füge Blöcke
+          hinzu und versuche dann den Code auszuführen um zu sehen, was passiert.
+        courseA_maze_seq13_c: Diese <xml><block type="maze_moveNorth"/></xml><xml><block
+          type="maze_moveEast"/></xml> Blöcke helfen dir näher an das Schwein zu kommen.
+      courseA_maze_seq13_2018:
+        courseA_maze_seq13_a: Wenn dir der Pfad, den du brauchst, nicht klar ist,
+          fahre mit deinem Finger den Weg vom Vogel zum Schwein nach.
+        courseA_maze_seq13_b: Hab keine Angst davor, Fehler zu machen! Füge Blöcke
+          hinzu und versuche dann den Code auszuführen um zu sehen, was passiert.
+        courseA_maze_seq13_c: Diese <xml><block type="maze_moveNorth"/></xml><xml><block
+          type="maze_moveEast"/></xml> Blöcke helfen dir näher an das Schwein zu kommen.
+      courseA_maze_seq13_2019:
+        courseA_maze_seq13_a: Wenn dir der Pfad, den du brauchst, nicht klar ist,
+          fahre mit deinem Finger den Weg vom Vogel zum Schwein nach.
+        courseA_maze_seq13_b: Hab keine Angst davor, Fehler zu machen! Füge Blöcke
+          hinzu und versuche dann den Code auszuführen um zu sehen, was passiert.
+      courseA_maze_seq1_2018:
+        courseA_maze_seq1_a: |-
+          Wenn der Vogel sich nicht bewegt, dann überprüfe ob die Blöcke richtig unter <xml>
+            <block type="when_run"/>
+          </xml> eingerastet sind
+        courseA_maze_seq1_b: |-
+          Der Vogel muss sich 3 mal in Richtung Westen bewegen. Nimm diesen Block:
+
+          <xml><block type="maze_moveWest"/></xml>
+      courseA_maze_seq1_2019:
+        courseA_maze_seq1_a: |-
+          Wenn der Vogel sich nicht bewegt, dann überprüfe ob die Blöcke richtig unter <xml>
+            <block type="when_run"/>
+          </xml> eingerastet sind
+        courseA_maze_seq1_b: |-
+          Der Vogel muss sich 3 mal in Richtung Westen bewegen. Nimm diesen Block:
+
+          <xml><block type="maze_moveWest"/></xml>
+      courseA_maze_seq2:
+        courseA_maze_seq2_a: In diesem Programm fehlt ein Block. Findest du heraus,
+          welcher?
+        courseA_maze_seq2_b: Versuche zuerst einmal den Code auszuführen um zu sehen,
+          wo der Vogel landet. Wohin muss er dann von dort aus noch gehen?
+      courseA_maze_seq3:
+        courseA_maze_seq3_a: Einer der Blöcke bewegt den Vogel in die falsche Richtung.
+          Kannst Du herausfinden welcher und ihn mit dem richtigen Block ersetzen?
+        courseA_maze_seq3_b: Versuche auf Schritt zu klicken um herauszufinden, an
+          welcher Stelle das Programm schief läuft. Ist es beim ersten Schritt? Beim
+          zweiten?
+        courseA_maze_seq3_c: Dieser <xml><block type="maze_moveNorth"/></xml> Block
+          scheint den Vogel nicht in die richtige Richtung zu bewegen. Kannst du ihn
+          mit einem anderen Block ersetzen?
+      courseA_maze_seq4:
+        courseA_maze_seq4_a: Wenn du Schwierigkeiten hast, versuche den richtigen
+          Weg herauszufinden und entfernen dann den Block der nicht passt.
+        courseA_maze_seq4_b: Versuche den Code auszuführen so wie er jetzt ist. Funktioniert
+          etwas nicht? Welchen Block kannst du entfernen? Wie kannst du es in Ordnung
+          bringen?
+      courseA_maze_seq5:
+        courseA_maze_seq5_a: Versuche einmal, die einzelnen Schritte auf ein Blatt
+          Papier zu schreiben um eine Lösung zu finden!
+        courseA_maze_seq5_b: Du brauchst 2 Blöcke, die in verschiedene Richtungen
+          zeigen.
+      courseA_maze_seq5_2018:
+        '1': Versuche einmal, die einzelnen Schritte auf ein Blatt Papier zu schreiben
+          um eine Lösung zu finden!
+      courseA_maze_seq5_2019:
+        '1': Versuche einmal, die einzelnen Schritte auf ein Blatt Papier zu schreiben
+          um eine Lösung zu finden!
+      courseA_maze_seq6:
+        courseA_maze_seq6_a: In deinem fertigen Code sollten 3 Bewegung-Blöcke sein.
+        courseA_maze_seq6_b: 'Wenn Du nicht mehr weiter kommst, teile die Aufgabe
+          in 2 Teile und löse sie nacheinander: Der eine Teil ist vor der Ecke und
+          der zweite nach der Ecke.'
+      courseA_maze_seq6_2018:
+        courseA_maze_seq6_a: In deinem fertigen Code sollten 3 Bewegung-Blöcke sein.
+        courseA_maze_seq6_b: 'Wenn Du nicht mehr weiter kommst, teile die Aufgabe
+          in 2 Teile und löse sie nacheinander: Der eine Teil ist vor der Ecke und
+          der zweite nach der Ecke.'
+      courseA_maze_seq6_2019:
+        courseA_maze_seq6_a: In deinem fertigen Code sollten 3 Bewegung-Blöcke sein.
+        courseA_maze_seq6_b: 'Wenn Du nicht mehr weiter kommst, teile die Aufgabe
+          in 2 Teile und löse sie nacheinander: Der eine Teil ist vor der Ecke und
+          der zweite nach der Ecke.'
+      courseA_maze_seq7:
+        courseA_maze_seq7_a: Es gibt einen Block den du noch hinzufügen musst um den
+          Vogel zum Schwein zu bringen.
+        courseA_maze_seq7_b: |-
+          Wenn du nicht herausfindest was zu tun ist, versuche doch folgendes:
+          Male die Aufgabe auf ein Papier und fahre mit den Fingern den Weg nach, um zu sehen in welche Richtung du dich bewegen musst.
+      courseA_maze_seq8:
+        courseA_maze_seq8_a: Wenn Du nicht mehr weiter weißt, versuche einmal das
+          Bild auf ein Blatt Papier zu malen, um zu sehen in welche Richtung sich
+          der Vogel bewegen muss.
+      courseA_maze_seq8_2018:
+        courseA_maze_seq8_a: Wenn Du nicht mehr weiter weißt, versuche einmal das
+          Bild auf ein Blatt Papier zu malen, um zu sehen in welche Richtung sich
+          der Vogel bewegen muss.
+      courseA_maze_seq8_2019:
+        courseA_maze_seq8_a: Wenn Du nicht mehr weiter weißt, versuche einmal das
+          Bild auf ein Blatt Papier zu malen, um zu sehen in welche Richtung sich
+          der Vogel bewegen muss.
+      courseA_maze_seq9:
+        courseA_maze_seq9_a: Du kommst nicht weiter? Fahre den Weg, den der Vogel
+          nehmen muss, mit deinem Finger nach.
+        courseA_maze_seq9_b: |-
+          Wenn du dir nicht sicher bist was zu tun ist, versuche Folgendes:
+          Drücke "Zurücksetzen" und lass dann den Code nochmals ausführen um zu sehen, was schief läuft.
+        courseA_maze_seq9_c: Du musst dich in 3 Richtungen bewegen um diese Aufgabe
+          zu lösen.
       courseB_maze_seq8:
         courseB_maze_seq8_b: Es gibt zwei Möglichkeiten um dieses Puzzle zu lösen!
       courseC_maze_programming6:

@@ -41,13 +41,9 @@ eu:
   cancel: Ezeztatu
   okay: Ongi da
   or: edo
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Irakaslea gehitu:'
       placeholder: Atal Kodea (ABCDEF)
-      instructions: Mesedez, sartu zure irakasleak zurekin partekatutako kodea. 6
-        letrako kodea da, "ABCDEF" bezalakoa.
-    submit: Gehitu irakaslea
   add_hint_form:
     placeholder: Mesedez sartu hemen zure pista
     submit: Gehitu pista

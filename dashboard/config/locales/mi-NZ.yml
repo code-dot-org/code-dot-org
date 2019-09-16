@@ -46,13 +46,9 @@ mi:
   okay: Āe
   or: rānei
   heading_x_of_y: "%{heading} (whārangi %{x} o %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Tāpiritia he pouako:'
       placeholder: Wāhanga Waehere (ABCDEF)
-      instructions: Tēnā tāurutia te waehere nā tō pouako i tiri ki a koe. He waehere
-        e 6 ōna pū pēnei i "AEIOUU".
-    submit: Tāpiri pouako
   add_hint_form:
     placeholder: Tēnā tāurutia tō tīwhiri i konei
     submit: Tāpiri tīwhiri

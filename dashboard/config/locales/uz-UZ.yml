@@ -27,11 +27,9 @@ uz:
   submit: Taqdim qilmoq
   cancel: Bekor qilish
   or: yoki
-  add_teacher_form:
+  join_section:
     code:
-      label: 'O`qituvchi qo`shing:'
       placeholder: Bo`lim kodi
-    submit: O`qituchi qo`shish
   add_hint_form:
     placeholder: Iltimos, ko`makchi so`zni shu yerga kiriting
     submit: Ko`makchi so`z qo`shing

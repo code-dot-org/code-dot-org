@@ -59,14 +59,9 @@ pt:
   okay: Ok
   or: ou
   heading_x_of_y: "%{heading} (página %{x} de %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Adiciona um professor:'
       placeholder: Código (ABCDEF)
-      instructions: Por favor, digita o código partilhado entre ti e o teu professor.
-        O código tem 6 letras como, por exemplo, "ABCDEF".
-      instructions_short: Digite a sua secção de código de 6 letras
-    submit: Adicionar professor
   add_hint_form:
     placeholder: Por favor, digite a sua pista aqui
     submit: Adicionar pista

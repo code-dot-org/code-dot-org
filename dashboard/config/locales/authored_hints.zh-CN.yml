@@ -905,7 +905,7 @@ zh-CN:
         Course_4_SCFL_1_a: |-
           看看这个移动选项:
 
-          !\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
+          \!\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
         Course_4_SCFL_1_b: '试着用两个 "计数" 循环: 一个用于攀爬和抓取花蜜, 另一种用于攀爬和制作蜂蜜。'
         Course_4_SCFL_1_c: |-
           注意，一个`计数循环`里需要几个普通的循环来重复`counter`（计数器）次数来增加楼梯图案。
@@ -972,7 +972,7 @@ zh-CN:
         Course_4_SCFL_1a_b: |-
           看看这个移动选项:
 
-          !\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
+          \!\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
         Course_4_SCFL_1a_c: "`计数循环` 将帮助您执行相同的模式，但步骤数不断变化。请注意，所需步骤的数量从7开始，每次减1，直到 5。"
         Course_4_SCFL_1a_d: |-
           \*\* 解决方案: \*
@@ -1035,7 +1035,7 @@ zh-CN:
         Course_4_SCFL_1b_b: |-
           看看这个移动选项:
 
-          !\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
+          \!\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
         Course_4_SCFL_1b_c: |-
           \*\* 解决方案: \*
 
@@ -1096,7 +1096,7 @@ zh-CN:
         Course_4_SCFL_2_a: |-
           看看这个移动选项:
 
-          !\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
+          \!\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
         Course_4_SCFL_2_b: 请注意，在`计数循环` 的每次迭代中，在你停止与目标互动后，都有3个点。
         Course_4_SCFL_2_c: 在`计数循环`的每次迭代中，每个对象的数字都与 `counter`（计数器）变量有某种关联。
         Course_4_SCFL_2_d: |-
@@ -1581,7 +1581,7 @@ zh-CN:
         Course_4_SCV_4_c: |-
           看看这个移动选项:
 
-          !\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
+          \!\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
         Course_4_SCV_4_d: |-
           \*\* 解决方案: \*
 
@@ -2175,10 +2175,6 @@ zh-CN:
         target hint: 你可以选择这四个玩具中的任何一个。宠物想要哪一个?
         behavior hint: 编辑行为来解决这个难题。宠物小精灵需要在两个不同的方向移动，以结束对角线移动。
       behaviors 6:
-        behavior hint: |-
-          尝试编辑行为！
-          \*哪个值控制每个精灵的速度？
-      behaviors 7:
         behavior hint: |-
           尝试编辑行为！
           \*哪个值控制每个精灵的速度？
@@ -12295,7 +12291,7 @@ zh-CN:
         courseF_bee_for_challenge2_a: |-
           看看这个移动选项:
 
-          !\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
+          \!\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
         courseF_bee_for_challenge2_b: '试着用两个 "计数" 循环: 一个用于攀爬和抓取花蜜, 另一种用于攀爬和制作蜂蜜。'
         courseF_bee_for_challenge2_c: |-
           注意，一个`计数循环`里需要几个普通的循环来重复`counter`（计数器）次数来增加楼梯图案。
@@ -12438,7 +12434,7 @@ zh-CN:
         courseF_bee_for_challenge2_a: |-
           看看这个移动选项:
 
-          !\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
+          \!\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
         courseF_bee_for_challenge2_b: '试着用两个 "计数" 循环: 一个用于攀爬和抓取花蜜, 另一种用于攀爬和制作蜂蜜。'
         courseF_bee_for_challenge2_c: |-
           注意，一个`计数循环`里需要几个普通的循环来重复`counter`（计数器）次数来增加楼梯图案。
@@ -12504,7 +12500,7 @@ zh-CN:
         courseF_bee_for_challenge2_a: |-
           看看这个移动选项:
 
-          !\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
+          \!\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
         courseF_bee_for_challenge2_b: '试着用两个 "计数" 循环: 一个用于攀爬和抓取花蜜, 另一种用于攀爬和制作蜂蜜。'
         courseF_bee_for_challenge2_c: |-
           注意，一个`计数循环`里需要几个普通的循环来重复`counter`（计数器）次数来增加楼梯图案。

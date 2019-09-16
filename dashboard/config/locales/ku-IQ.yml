@@ -46,10 +46,6 @@ ku:
   previous_page: لاپەرەی پێشوو
   next_page: لاپەرەی دواتر
   or: یان
-  add_teacher_form:
-    code:
-      label: 'زیادکردنی مامۆستایەک:'
-    submit: زیادکردنی مامۆستا
   appname: Code.org
   stage: قۆناغ
   stage_number: قۆناغی %{number}

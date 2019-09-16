@@ -46,13 +46,9 @@ de:
   okay: "Okay"
   or: "oder"
   heading_x_of_y: "%{heading} (page %{x} von %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Lehrer hinzufügen:'
       placeholder: "Code für diesen Abschnitt (ABCDEF)"
-      instructions: "Bitte gib den Code ein, den du von deinem Lehrer erhalten hast. Es ist ein Code mit 6 Buchstaben, z.\_B. wie \"ABCDEF\""
-      instructions_short: "Geb die 6 Buchstaben deines Sektionscodes ein"
-    submit: 'Lehrer hinzufügen'
   add_hint_form:
     placeholder: 'Gebe hier deinen Hinweis ein'
     submit: 'Hinweis hinzufügen'
