@@ -11,7 +11,7 @@
         Your free education on Code.org is made possible by:
   - @homepage_data[:donorFooterOptions][:logos].each do |logo|
     .logo
-      = image_tag asset_path("donor_logos/#{current_user.donor_teacher_banner_name}/#{logo.split('/').last}")
+      = image_tag asset_path("donor_logos/#{current_user.school_donor_name}/#{logo.split('/').last}")
   - if current_user.teacher? && @homepage_data[:donorFooterOptions][:donorName] == "Amazon"
     %p.resources
       Amazon is offering free resources for Code.org classrooms.

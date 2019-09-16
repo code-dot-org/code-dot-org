@@ -1973,8 +1973,9 @@ class User < ActiveRecord::Base
     teacher? && users_school && (next_census_display.nil? || Date.today >= next_census_display.to_date)
   end
 
-  # Returns the name of the donor for the donor teacher banner, or nil if none.
-  def donor_teacher_banner_name
+  # Returns the name of the donor for the donor teacher banner and donor footer, or nil if none.
+  # Donors are associated with certain schools, captured in DonorSchool and populated from a Pegasus gsheet
+  def school_donor_name
     school_id = last_complete_school_info&.school&.id
     donor_name = DonorSchool.find_by(nces_id: school_id)&.name if school_id
 
