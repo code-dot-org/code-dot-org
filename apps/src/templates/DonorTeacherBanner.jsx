@@ -4,6 +4,7 @@ import React, {Component} from 'react';
 import Button from './Button';
 import color from '@cdo/apps/util/color';
 import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 const styles = {
   heading: {
@@ -88,7 +89,8 @@ export const donorTeacherBannerOptionsShape = PropTypes.shape({
 export default class DonorTeacherBanner extends Component {
   static propTypes = {
     options: donorTeacherBannerOptionsShape,
-    onDismiss: PropTypes.func
+    onDismiss: PropTypes.func,
+    showPegasusLink: PropTypes.bool
   };
 
   initialState = {
@@ -160,7 +162,12 @@ export default class DonorTeacherBanner extends Component {
           </div>
           <div style={styles.paragraph}>
             Would you like to participate in the Amazon Future Engineer Program?
-            Learn more
+            {this.props.showPegasusLink && (
+              <span>
+                &nbsp;
+                <a href={pegasus('/amazon-future-engineer')}>Learn more</a>
+              </span>
+            )}
           </div>
           <div>
             <div>
