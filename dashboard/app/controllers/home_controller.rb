@@ -128,6 +128,7 @@ class HomeController < ApplicationController
       if script
         script_level = current_user.next_unpassed_progression_level(script)
       end
+      @homepage_data[:topCourse] = nil
       if script && script_level
         @homepage_data[:topCourse] = {
           assignableName: data_t_suffix('script.name', script[:name], 'title'),
