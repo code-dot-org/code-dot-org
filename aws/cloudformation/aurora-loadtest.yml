@@ -16,22 +16,6 @@ Parameters:
     Description: 'The AMI used to create the bastion host'
     Type: 'String'
     Default: 'ami-0f873d4d3a8b11b74'
-  SourceDBClusterId:
-    Description: 'The identifier of the existing Aurora Cluster to clone into this load testing stack'
-    Type: 'String'
-    Default: 'production-aurora-cluster'
-  DBClusterParameterGroup:
-    Description: 'The physical id of the existing DB Cluster Parameter Group to configure on the load testing cluster.'
-    Type: 'String'
-    Default: 'data-production-auroraclusterdbparameters-1ro7z13zvf15w'
-  DBClusterParameterGroup:
-    Description: 'The physical id of the DB Cluster Parameter Group to configure on the load testing cluster.'
-    Type: 'String'
-    Default: 'data-production-auroraclusterdbparameters-1ro7z13zvf15w'
-  DBWriterInstanceParameterGroup:
-    Description: 'The physical id of the DB Instance Parameter Group to configure on the load testing writer instance.'
-    Type: 'String'
-    Default: 'data-production-aurorawriterdbparameters-co9yma5rv7vo'
 Conditions:
   Is57: !Equals [ !Ref Edition, "5.7" ]
 Resources:
@@ -215,14 +199,13 @@ Resources:
     Properties:
       DatabaseName: sysbench
       DBClusterIdentifier: !Sub '${AWS::StackName}'
-      DBClusterParameterGroupName: !Ref DBClusterParameterGroup
+      DBClusterParameterGroupName: !Ref AuroraClusterParameterGroup
       DBSubnetGroupName: !Ref AuroraDbSubnetGroup
       Engine: !If [Is57, aurora-mysql, aurora ]
-      EngineVersion: !If [Is57, 5.7.mysql_aurora.2.04.4, 5.6.mysql_aurora.1.19.0 ]
+      EngineVersion: !If [Is57, 5.7.mysql_aurora.2.04.1, 5.6.mysql_aurora.1.19.0 ]
+      MasterUsername: masteruser
+      MasterUserPassword: Password1
       VpcSecurityGroupIds: [!GetAtt MySqlSecurityGroup.GroupId]
-      SourceDBClusterIdentifier: !Ref SourceDBClusterId
-      UseLatestRestorableTime: true
-      RestoreType: copy-on-write
     DependsOn: MySqlSecurityGroup
     DeletionPolicy: "Delete"
   ## Create First Aurora Instance
@@ -233,14 +216,32 @@ Resources:
       DBClusterIdentifier: !Ref AuroraDestinationDBCluster
       DBInstanceClass: db.r4.8xlarge
       DBInstanceIdentifier: !Join ['-', [!Ref 'AWS::StackName', 'Instance01']]
-      DBParameterGroupName: !Ref DBWriterInstanceParameterGroup
+      DBParameterGroupName: !Ref AuroraInstanceParameterGroup
       DBSubnetGroupName: !Ref AuroraDbSubnetGroup
       #EnablePerformanceInsights: 'true'
-      EnablePerformanceInsights: 'true'
+      EnablePerformanceInsights: !If [Is57, 'false', 'true' ]
       Engine: !If [Is57, aurora-mysql, aurora ]
-      EngineVersion: !If [Is57, 5.7.mysql_aurora.2.04.4, 5.6.mysql_aurora.1.19.0 ]
+      EngineVersion: !If [Is57, 5.7.mysql_aurora.2.04.1, 5.6.mysql_aurora.1.19.0 ]
       LicenseModel: general-public-license
       PubliclyAccessible: 'false'
+  AuroraClusterParameterGroup:
+    Type: AWS::RDS::DBClusterParameterGroup
+    Properties:
+      Description: !Join ['-', [!Ref 'AWS::StackName', 'Cluster Parameter Group']]
+      Family: !If [Is57, aurora-mysql5.7, aurora5.6 ]
+      Parameters:
+        innodb_flush_log_at_trx_commit: 0
+        innodb_sync_array_size: 1024
+        max_connections: 16000
+        max_user_connections: 16000
+        table_definition_cache: 524288
+        table_open_cache: 524288
+        table_open_cache_instances: 64
+  AuroraInstanceParameterGroup:
+    Type: AWS::RDS::DBParameterGroup
+    Properties:
+      Description: !Join ['-', [!Ref 'AWS::StackName', 'Instance Parameter Group']]
+      Family: !If [Is57, aurora-mysql5.7, aurora5.6 ]
   ## Create CloudWatch Dashboard
   LabDashboard:
     Type: AWS::CloudWatch::Dashboard
