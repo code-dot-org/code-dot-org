@@ -482,6 +482,24 @@ WebLab.prototype.onIsRunningChange = function() {};
 WebLab.prototype.loadFileEntries = function() {
   filesApi.getFiles(
     result => {
+      // Gather information when the weblab manifest is empty but should
+      // contain references to files (i.e. after changes have been made to the project)
+      if (
+        result.filesVersionId &&
+        result.filesVersionId !== '' &&
+        result.files &&
+        result.files.length === 0
+      ) {
+        firehoseClient.putRecord(
+          {
+            study: 'weblab_loading_investigation',
+            study_group: 'empty_manifest',
+            event: 'get_empty_manifest',
+            project_id: getCurrentId()
+          },
+          {includeUserId: true}
+        );
+      }
       assetListStore.reset(result.files);
       this.fileEntries = assetListStore.list().map(fileEntry => ({
         name: fileEntry.filename,
