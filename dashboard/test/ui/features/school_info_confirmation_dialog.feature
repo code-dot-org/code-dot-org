@@ -1,5 +1,6 @@
 @dashboard_db_access
 @no_ie
+@no_mobile
 Feature: School Info Confirmation Dialog
 
 # This test checks three relevant states of the user in the school info confirmation
