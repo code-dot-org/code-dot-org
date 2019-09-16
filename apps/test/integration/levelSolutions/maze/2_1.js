@@ -1,5 +1,5 @@
 import {TestResults} from '@cdo/apps/constants';
-import ReactTestUtils from 'react-dom/test-utils';
+import ReactTestUtils from 'react-addons-test-utils';
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
 import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
 
