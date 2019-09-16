@@ -4,7 +4,9 @@ import SoundList from './SoundList';
 import SoundCategory from './SoundCategory';
 import * as color from '../../util/color';
 import Sounds from '../../Sounds';
+import SearchBar from '@cdo/apps/templates/SearchBar';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import i18n from '@cdo/locale';
 
 const SOUND_CATEGORIES = {
   category_accent: 'Accent',
@@ -46,24 +48,6 @@ const SOUND_CATEGORIES = {
 };
 
 const styles = {
-  searchArea: {
-    float: 'right',
-    position: 'relative',
-    margin: '10px 0'
-  },
-  input: {
-    width: 300,
-    border: '1px solid ' + color.light_gray,
-    borderRadius: 4,
-    padding: '3px 7px'
-  },
-  sound: {
-    position: 'absolute',
-    right: 5,
-    top: 5,
-    fontSize: 16,
-    color: color.light_gray
-  },
   button: {
     float: 'right',
     margin: '20px 0px'
@@ -87,6 +71,11 @@ const styles = {
   },
   categoryText: {
     fontSize: 14
+  },
+  searchBarContainer: {
+    width: '300px',
+    float: 'right',
+    marginBottom: 10
   }
 };
 
@@ -171,13 +160,11 @@ export default class SoundLibrary extends React.Component {
             </span>
           )}
         </div>
-        <div style={styles.searchArea}>
-          <input
+        <div style={styles.searchBarContainer}>
+          <SearchBar
             onChange={this.search}
-            style={styles.input}
-            placeholder={'Search for a sound...'}
+            placeholderText={i18n.soundSearchPlaceholder()}
           />
-          <i className="fa fa-search" style={styles.sound} />
         </div>
         {this.state.category === '' && this.state.search === '' && (
           <div style={styles.categoryArea}>

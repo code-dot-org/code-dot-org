@@ -87,18 +87,12 @@ Looking for resources specifically for AP Computer Science Principles A in Java?
 | [Swift CSP](https://www.makeschool.com/online-courses/swift-computer-science-principles) | Full year course, plus tons of extra advanced curriculum for differentiation, FREE | Three day in-person workshop, with materials and curriculum supplied before the training. In-person training costs $250, to support costs for running PD.  Any online support, resources, and/or online-PD is free. |
 | [TEALS](http://www.tealsk12.org/schools/) | 3 courses, including AP CS A, FREE | Program implemented by TEALS volunteers, $5000 |
 | [UC Davis C-STEM Center](http://c-stem.ucdavis.edu/) | 14 year-long CS, robotics,  Algebra 1, Geometry, and Algebra 2 with computing and robotics, Arduino, Raspberry Pi courses for grades 9-12. Coding in Blockly and user-friendly C/C++ Interpreter Ch. Free teaching resources available  including PDF textbooks.  School site licenses  only $1,000. | Nearly 100 free interactive and video tutorials. $150/day training held at UC Davis campus and nationwide. Costs vary for custom-tailored on-site training. |
-| [UTeach CS Principles](https://cs.uteach.utexas.edu/) | Developed by the UTeach Institute at The University of Texas at Austin, the UTeach AP CS Principles course encourages computational thinking through an engaging, student-centered and project-based curriculum. Developed by experts in STEM teaching and learning, UTeach CS Principles is comprehensive and classroom-ready, including detailed project-based lesson plans, AP-style test banks, pacing guides, and more. Scratch and Processing are the primary programming languages. Curriclum and year-round, on-demand support is $1,200/teacher for one year. Renewals are $300/year. | UTeach offers five-day in-person professional learning workshops or a six-week online course to prepare teachers to implement the course. Texas teachers may be eligible to receive two years of curriculum, PD, and support free of charge. See our website for details. 5-day, in-person PD is available for $1,200/teacher. Online is available for $600/teacher. |
+| [UTeach CS Principles](https://cs.uteach.utexas.edu/) | Developed by the UTeach Institute at The University of Texas at Austin, UTeach CS offers engaging, project-based curriculum for AP CS Principles and AP CS A courses. UTeach CS was designed to engage all students in computing, with an emphasis on young women and historically underrepresented minorities. Classroom-tested activities, comprehensive teacher materials, AP-style test banks, and pacing guides, plus access to a robust teacher professional learning community help ensure successful implementation by teachers with a variety of content backgrounds and levels of expertise. Scratch and Processing are the primary programming languages for CS Principles, while CS A is Java-based. Licenses for curriculum and year-round, on-demand support are $1,200 per teacher for the first year, and $600 for renewals. See our website for current funding opportunities. | UTeach CS offers 5-day in-person professional learning workshops and 6- or 10-week, self-paced online workshops for current and future teachers of CS Principles and CS A. Teachers will leave the workshop ready to successfully implement the UTeach CS curriculum and prepared to meet AP course requirements. 5-day, in-person PD is available for $1,200/teacher. Online PD is available for $600/teacher. See our website for current funding opportunities. |
 | [Vidcode](https://www.vidcode.com/) | First course and teacher resources are free. Over 12 creative coding courses, 10 hours each, that teach JavaScript and computational thinking. Includes cross-disciplinary, interaction design, and game design courses. Unlimited classroom accounts starting at $299/year [https://www.vidcode.com/pay](https://www.vidcode.com/pay) | Free onboarding call, animated online PD course, $250/webinar, $3500/onsite PD |
 
 
 <br />
 <a target="_blank" href="https://docs.google.com/spreadsheets/d/1-lbIKCkcVWWTFhcmpZkw8AcGv0iPj-hEqvO0Eu0N1hU/pubhtml?gid=705822074&single=true"><button>See full details and comparison</button></a>
-
-## For school counselors and administrators
-[NCWIT Counselors for Computing (C4C)](https://www.ncwit.org/project/counselors-computing-c4c) provides school counselors with
-up-to-date information and resources they can use to guide students toward education and
-careers in computing. Free professional development webinars and 1-day workshops are available
-across the US.   
 
 ## Funding for computer science programs
 
@@ -108,28 +102,10 @@ Your school or district may be able to use Title I or Title II funds, and other 
 
 The National Science Foundation (NSF) has several existing funding opportunities to support CS for All initiatives. The NSF outlined invitations for proposals in a [Dear Colleague Letter](http://www.nsf.gov/publications/pub_summ.jsp?ods_key=nsf16057) issued in March 2016. If you are an organization focused on the learning of computer science and computational thinking for all students, consider [submitting a proposal](http://www.nsf.gov/publications/pub_summ.jsp?ods_key=nsf16057).
 
-## Scholarship opportunities for students
-Raise.me is a college preparedness platform empowering millions of high school students to reach their full potential by helping them earn scholarship dollars from colleges for all the things that set them up to succeed - whether that’s getting good grades, volunteering in the community, or joining extracurriculars.
-
- <p>
-Click below to learn more about how Raise.me can help your students earn scholarships to stay motivated and pursue computer science education in preparation for college.
-</p>
-
-[<button>Learn more</button>](/educate/scholarships)
-
 ## More resources &mdash; for classrooms, afterschool clubs or learning online
-
-### [Khan Academy](http://khanacademy.org/cs/programming)
-Online curriculum that teaches JavaScript programming, HTML/CSS, and SQL, in an interactive online environment, plus courses on Algorithms and Cryptography. Includes teaching tools to track student progress.
-
-### [Kodu](http://www.kodugamelab.com/)
-Create games on the PC and XBox via a simple visual programming language. Can be used to teach creativity, problem solving, storytelling, as well as programming.
 
 ### [Alice](http://www.alice.org/)
 3D programming environment that makes it easy to create an animation for telling a story, playing an interactive game, or a video to share on the web.
-
-### [Pencil Code](//pencilcode.net)
-Pencil Code lets beginners be real web real developers, starting with turtle graphics and moving on to HTML5, CSS, and jQuery.  Create art, music, games, and stories in Coffeescript and Javascript using a unique switchable editor that lets you work in either blocks or text.
 
 ### [Codecademy](https://www.codecademy.com/learn)
 Codecademy is an online interactive platform that offers free coding classes in 12 different programming languages
@@ -140,12 +116,17 @@ Fun classroom exercises to teach computer science principles, no computers neede
 ### [CS First](http://cs-first.com/)
 Free curriculum from Google that uses online, project-based tutorials for elementary and middle school students and offers free club plans and resources to create an easy computer science entry point for educators and students alike.
 
+### [Khan Academy](http://khanacademy.org/cs/programming)
+Online curriculum that teaches JavaScript programming, HTML/CSS, and SQL, in an interactive online environment, plus courses on Algorithms and Cryptography. Includes teaching tools to track student progress.
+
+### [Kodu](http://www.kodugamelab.com/)
+Create games on the PC and XBox via a simple visual programming language. Can be used to teach creativity, problem solving, storytelling, as well as programming.
+
+### [Pencil Code](//pencilcode.net)
+Pencil Code lets beginners be real web real developers, starting with turtle graphics and moving on to HTML5, CSS, and jQuery.  Create art, music, games, and stories in Coffeescript and Javascript using a unique switchable editor that lets you work in either blocks or text.
+
 ### [Teaching Kids Programming ](http://teachingkidsprogramming.org)
 Build the next generation of creators using free, open-source Java courseware.
-
-## Other lists of resources for curriculum or PD
-- AskATeacher's [Hour of Code suggestions by grade level](https://askatechteacher.com/hour-of-code-websites-by-grade/)
-- [LeadCS.org](http://www.leadcs.org) - a list of many resources for schools to embrace CS
 
 ## Frequently Asked Questions
 

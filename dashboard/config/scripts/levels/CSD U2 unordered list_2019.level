@@ -8,7 +8,7 @@
     "instructions_important": "false",
     "hide_share_and_remix": "true",
     "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html>\\r\\n<html>\\r\\n  <head>\\r\\n  <\\/head>\\r\\n  <body>\\r\\n    <h2>Best Desserts<\\/h2>\\r\\n    \\r\\n    scotcheroos\\r\\n    snickerdoodle cookies\\r\\n    chocolate pie\\r\\n   \\r\\n  <\\/body>\\r\\n<\\/html>\"\r\n    }\r\n  ]\r\n}",
-    "encrypted_examples": "WoRJyYjwq7jx2W2aiQnDs3qDh8aea1tZ6XjosHiw0H3ACpczhYlC8MxQtFDy\nLs101xtK8LWDC1mS6CUNhEWX0Q==\n",
+    "encrypted_examples": "1bQeJ7GYQfOsjaw2xTi8XTmwtf1VdH+d0BcFCI5hYbO4qcaI7v0ENr+18Vaa\n24KLnRwBykf52ETR8e+6njZ9rA==\n",
     "submittable": "false",
     "parent_level_id": 11498,
     "name_suffix": "_2019",
@@ -17,10 +17,14 @@
       "/docs/concepts/html/html-tags/",
       "/docs/concepts/html/headings-and-paragraphs/"
     ],
-    "map_reference": "/docs/concepts/html/lists/"
+    "map_reference": "/docs/concepts/html/lists/",
+    "encrypted": "false",
+    "mini_rubric": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-05-11 04:31:24 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-06-20 21:58:02 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-02-09 02:46:46 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2018-09-20 16:08:26 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-12-10 22:16:35 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2019-01-30 02:32:05 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-05-11 04:31:24 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-06-20 21:58:02 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-02-09 02:46:46 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2018-09-20 16:08:26 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-12-10 22:16:35 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2019-01-30 02:32:05 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-09-06 21:55:00 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </Weblab>

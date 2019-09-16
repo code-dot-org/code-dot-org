@@ -12,6 +12,7 @@ import {
   fixFirebaseKey,
   getRecordsRef,
   getProjectDatabase,
+  getSharedDatabase,
   resetConfigForTesting,
   isInitialized,
   validateFirebaseKey
@@ -453,6 +454,33 @@ FirebaseStorage.resetForTesting = function() {
   getProjectDatabase().set(null);
 
   resetConfigForTesting();
+};
+
+FirebaseStorage.copyStaticTable = function(tableName, onSuccess, onError) {
+  return incrementRateLimitCounters()
+    .then(loadConfig)
+    .then(config => {
+      return enforceTableCount(config, tableName);
+    })
+    .then(() => {
+      return getSharedDatabase()
+        .child(`counters/tables/${tableName}`)
+        .once('value');
+    })
+    .then(snapshot => {
+      getProjectDatabase()
+        .child(`counters/tables/${tableName}`)
+        .set(snapshot.val());
+    })
+    .then(() => {
+      return getSharedDatabase()
+        .child(`storage/tables/${tableName}/records`)
+        .once('value');
+    })
+    .then(snapshot => {
+      getRecordsRef(tableName).set(snapshot.val());
+    })
+    .then(onSuccess, onError);
 };
 
 /**

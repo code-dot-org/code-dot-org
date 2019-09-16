@@ -13,12 +13,12 @@ It’s important to note that the tool itself doesn't teach these concepts, but 
 ### Teaching with the Internet Simulator
 The Internet Simulator was designed to be used in a classroom with students working collaboratively to solve problems. Perhaps ironically, the Internet Simulator is not as useful or fun to use on your own.  The purpose of its design was to allow students to work together in a simulated environment to explore and solve problems.  Often these problems involve inventing a communication protocol, or inventing ways to encode information in a structured way that makes transporting it over the Internet feasible.  If you are using the Internet Simulator for the first time, consider watching some of the “Teaching Tips” videos that show what the classroom environment should look like and how students should be interacting (for example, [check out this video](https://www.youtube.com/watch?v=Acp48OaZ7Uc&feature=youtu.be), which is from the first lessons where the simulator is used).
 
->We typically structure lessons and activities that use the Internet Simulator in the following way:<br>
-
->- **First** Present students with a challenge( E.g. The physical internet is inherently unreliable and can drop messages) 
-- **Then,** Give an opportunity to experiment with the simulator to get a sense of issues (E.g. Look at the router logs to discover that 10-20% of all messages are dropped and packets can be routed out of order) 
-- **Next** Give an opportunity to invent their own solution to the challenge (E.g. Invent their own protocol for how to reliably send messages on this unreliable network)
-- **Finally,** students research how that protocol or invention works "in the real world" (E.g. Research how TCP really works and watch a video)
+>We typically structure lessons and activities that use the Internet Simulator in the following way:
+>
+> - **First** Present students with a challenge (E.g. The physical internet is inherently unreliable and can drop messages)
+> - **Then,** Give an opportunity to experiment with the simulator to get a sense of issues (E.g. Look at the router logs to discover that 10-20% of all messages are dropped and packets can be routed out of order)
+> - **Next** Give an opportunity to invent their own solution to the challenge (E.g. Invent their own protocol for how to reliably send messages on this unreliable network)
+> - **Finally,** students research how that protocol or invention works "in the real world" (E.g. Research how TCP really works and watch a video)
 
 
 MARKDOWN

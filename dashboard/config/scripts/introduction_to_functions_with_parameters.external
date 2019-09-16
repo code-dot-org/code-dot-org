@@ -8,7 +8,7 @@ markdown <<MARKDOWN
 Writing functions with parameters is a simple idea, but it traditionally has some devilish details for new programmers. The basic idea is that you often want to write a function that takes some input and performs some action based on that input. For example, the turtle function moveForward is much more useful when you can specify how much to move forward (e.g., `moveForward(100)`), rather than just a fixed amount every time.  
 
 ## Functions with Parameters in the Curriculum 
-Students will practice *using* parameterized functions in <a href = “https://curriculum.code.org/csp/unit3/7/” target=_blank> lesson 7 </a>.  This lesson supports students in discovering how parameterized functions work, and situations in which they may be useful.  After considering those situations, in <a href = “https://curriculum.code.org/csp/unit3/8/” target=_blank> lesson 8 </a>students will begin to identify portions of their own programs that could be turned in to parameterized function to improve efficiency and human readability.
+Students will practice *using* parameterized functions in <a href = "https://curriculum.code.org/csp/unit3/7/" target=_blank> lesson 7 </a>.  This lesson supports students in discovering how parameterized functions work, and situations in which they may be useful.  After considering those situations, in <a href = "https://curriculum.code.org/csp/unit3/8/" target=_blank> lesson 8 </a>students will begin to identify portions of their own programs that could be turned in to parameterized function to improve efficiency and human readability.
 
 
 ## When to Use Functions with Parameters

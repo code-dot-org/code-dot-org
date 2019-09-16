@@ -18,6 +18,8 @@ import {TestResults} from '../constants';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {makeEnum, reload} from '../utils';
 import logToCloud from '../logToCloud';
+import firehoseClient from '../lib/util/firehose';
+import {getCurrentId} from '../code-studio/initApp/project';
 
 export const WEBLAB_FOOTER_HEIGHT = 30;
 
@@ -98,12 +100,23 @@ WebLab.prototype.init = function(config) {
     return new Promise((_, reject) => {
       // Delete everything from the service and restart the initial sync
       filesApi.deleteAll(
-        _ => {
+        xhr => {
           this.fileEntries = null;
-          if (!this.brambleHost) {
-            reject(new Error('no bramble host'));
-            return;
-          }
+          firehoseClient.putRecord(
+            {
+              study: 'weblab_loading_investigation',
+              study_group: 'empty_manifest',
+              event: 'clear_puzzle_success',
+              project_id: getCurrentId(),
+              data_json: JSON.stringify({
+                responseText: xhr.responseText
+              })
+            },
+            {includeUserId: true}
+          );
+          // The project has been reset, reload() the page now - don't resolve
+          // the promise, because that will lead to a project.save() that we
+          // don't want or need in this scenario.
           reload();
           reject(
             new Error(
@@ -465,6 +478,19 @@ WebLab.prototype.onIsRunningChange = function() {};
  */
 WebLab.prototype.loadFileEntries = function() {
   const onFilesReady = (files, filesVersionId) => {
+    // Gather information when the weblab manifest is empty but should
+    // contain references to files (i.e. after changes have been made to the project)
+    if (filesVersionId && files && files.length === 0) {
+      firehoseClient.putRecord(
+        {
+          study: 'weblab_loading_investigation',
+          study_group: 'empty_manifest',
+          event: 'get_empty_manifest',
+          project_id: getCurrentId()
+        },
+        {includeUserId: true}
+      );
+    }
     assetListStore.reset(files);
     this.fileEntries = assetListStore.list().map(fileEntry => ({
       name: fileEntry.filename,

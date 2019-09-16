@@ -2,14 +2,13 @@ login_required true
 hideable_stages true
 exclude_csf_column_in_legend true
 student_detail_progress_view true
-teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-19/unit3/"], ["teacherForum", "https://forum.code.org/c/csd3"], ["vocabulary", "https://curriculum.code.org/csd-19/unit3/vocab/"], ["standardMappings", "https://curriculum.code.org/csd-19/unit3/standards/"], ["codeIntroduced", "https://curriculum.code.org/csd-19/unit3/code/"]]
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-20/unit3/"], ["teacherForum", "https://forum.code.org/c/csd3"], ["vocabulary", "https://curriculum.code.org/csd-20/unit3/vocab/"], ["standardMappings", "https://curriculum.code.org/csd-20/unit3/standards/"], ["codeIntroduced", "https://curriculum.code.org/csd-20/unit3/code/"]]
 has_verified_resources true
 has_lesson_plan true
 project_widget_visible true
 project_widget_types ["gamelab", "weblab"]
 pilot_experiment 'csd-piloters'
 project_sharing true
-curriculum_umbrella 'CSD'
 
 stage 'Programming for Entertainment', flex_category: 'csd3_1'
 level 'CSD U3L01 TFMD_pilot', named: true
