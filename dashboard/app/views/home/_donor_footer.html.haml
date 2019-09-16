@@ -13,8 +13,9 @@
     .logo
       = image_tag asset_path("donor_logos/#{current_user.school_donor_name}/#{logo.split('/').last}")
   - if current_user.teacher? && @homepage_data[:donorFooterOptions][:donorName] == "Amazon"
-    %p.resources
-      Amazon is offering free resources for Code.org classrooms.
-      %a.learn-more{ href: CDO.code_org_url('amazon-future-engineer') }
-        %strong
-          Learn more
+    %div
+      %p.resources
+        Amazon is offering free resources for Code.org classrooms.
+        %a.learn-more{ href: CDO.code_org_url('amazon-future-engineer') }
+          %strong
+            Learn more
