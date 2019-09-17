@@ -1143,60 +1143,57 @@ class User < ActiveRecord::Base
   def next_unpassed_visible_progression_level(script)
     # If all levels in the script are complete, no need to find the next level,
     # will be redirected to /congrats.
-    unless completed?(script)
-      visible_sls = visible_script_levels(script).reject {|sl| sl.bonus || sl.level.unplugged? || sl.locked?(self)}
+    return nil if completed?(script)
 
-      sl_level_ids = visible_sls.map(&:level_ids).flatten
+    visible_sls = visible_script_levels(script).reject {|sl| sl.bonus || sl.level.unplugged? || sl.locked?(self)}
 
-      # Levels the user made progress in
-      ul_level_ids = user_levels_by_level(script).keys
+    sl_level_ids = visible_sls.map(&:level_ids).flatten
 
-      visible_completed_level_ids = sl_level_ids & ul_level_ids
-      visible_incomplete_level_ids = sl_level_ids - ul_level_ids
+    # Levels the user made progress in
+    ul_level_ids = user_levels_by_level(script).keys
 
-      first_visible_level = visible_sls.min_by(&:chapter)
+    visible_completed_level_ids = sl_level_ids & ul_level_ids
+    visible_incomplete_level_ids = sl_level_ids - ul_level_ids
 
-      completed_all_visible_levels = visible_incomplete_level_ids.empty?
+    first_visible_level = visible_sls.min_by(&:chapter)
 
-      # The user has not made any progress or has completed all visible levels
-      # but not the entire script, return the first visible script_level
-      if ul_level_ids.empty? || completed_all_visible_levels
-        return first_visible_level
-      end
+    completed_all_visible_levels = visible_incomplete_level_ids.empty?
 
-      # Find the user_levels associated with visible script_levels
-      visible_user_levels = user_levels.where(level_id: visible_completed_level_ids)
+    # Find the user_levels associated with visible script_levels
+    visible_user_levels = user_levels.where(level_id: visible_completed_level_ids)
 
-      # Most recently completed user_level of the visible subset
-      most_recent_ul = visible_user_levels.max_by(&:created_at)
+    # The user has not made any visible progress or has completed all visible
+    # levels but not the entire script, return the first visible script_level
+    return first_visible_level if visible_user_levels.empty? || completed_all_visible_levels
 
-      # Find the script_level that goes with the most recent user_level
-      most_recent_sl = visible_sls.find {|sl| sl.level_id == most_recent_ul.level_id}
+    # Most recently completed user_level of the visible subset
+    most_recent_ul = visible_user_levels.max_by(&:created_at)
 
-      last_visible_level = visible_sls.max_by(&:chapter)
+    # Find the script_level that goes with the most recent user_level
+    most_recent_sl = visible_sls.find {|sl| sl.level_id == most_recent_ul.level_id}
 
-      visible_incomplete_sls = visible_sls.find_all {|sl| visible_incomplete_level_ids.include?(sl.level_id)}
+    last_visible_level = visible_sls.max_by(&:chapter)
 
-      first_visible_incomplete_level = visible_incomplete_sls.min_by(&:chapter)
+    visible_incomplete_sls = visible_sls.find_all {|sl| visible_incomplete_level_ids.include?(sl.level_id)}
 
-      # The user has completed the last level in the progress, but not all
-      # previous levels, return the first visible incomplete script_level
-      if most_recent_sl == last_visible_level
-        return first_visible_incomplete_level ? first_visible_incomplete_level : first_visible_level
-      end
+    first_visible_incomplete_level = visible_incomplete_sls.min_by(&:chapter)
 
-      # Find the chapter for the script_level that goes with the most recent user_level
-      most_recent_completed_chapter = most_recent_sl.chapter
+    # The user has completed the last level in the progress, but not all
+    # previous levels, return the first visible incomplete script_level
+    return first_visible_incomplete_level || first_visible_level if
+      most_recent_sl == last_visible_level
 
-      # Find the script_level that has the next highest chapter level from the one above and is not complete
-      later_unpassed_visible_sls = visible_incomplete_sls.select do |sl|
-        sl.chapter > most_recent_completed_chapter
-      end
+    # Find the chapter for the script_level that goes with the most recent user_level
+    most_recent_completed_chapter = most_recent_sl.chapter
 
-      next_unpassed_visible_progression_sl = later_unpassed_visible_sls.min_by(&:chapter)
-
-      next_unpassed_visible_progression_sl
+    # Find the script_level that has the next highest chapter level from the one above and is not complete
+    later_unpassed_visible_sls = visible_incomplete_sls.select do |sl|
+      sl.chapter > most_recent_completed_chapter
     end
+
+    next_unpassed_visible_progression_sl = later_unpassed_visible_sls.min_by(&:chapter)
+
+    next_unpassed_visible_progression_sl
   end
 
   # Returns the next script_level for the next progression level in the given
