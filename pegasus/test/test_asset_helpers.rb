@@ -19,10 +19,10 @@ class AssetHelpersTest < Minitest::Test
 
   def test_asset_map_pretty
     CDO.stubs(:pretty_js).returns(true)
-    assert_equal UNMINIFIED_ASSET_PATH, @asset_map.asset_path(UNMINIFIED_ASSET_NAME),
+    assert_equal UNDIGESTED_ASSET_PATH, @asset_map.asset_path(UNMINIFIED_ASSET_NAME),
       "incorrect unminifiable asset path"
     # Should return the unminified path because pretty_js is true
-    assert_equal UNMINIFIED_ASSET_PATH, @asset_map.minifiable_asset_path(UNMINIFIED_ASSET_NAME),
+    assert_equal UNDIGESTED_ASSET_PATH, @asset_map.minifiable_asset_path(UNMINIFIED_ASSET_NAME),
       "incorrect minifiable asset path"
   end
 
