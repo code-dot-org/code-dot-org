@@ -37,7 +37,7 @@ function showDonorTeacherBanner() {
     .complete(() => {
       ReactDOM.render(
         <Provider store={getStore()}>
-          <DonorTeacherBanner options={options} />
+          <DonorTeacherBanner options={options} showPegasusLink={false} />
         </Provider>,
         donorTeacherBannerElement[0]
       );
