@@ -40,7 +40,7 @@
   "devDependencies": {
     "@cdo/interpreted": "link:../dashboard/config/libraries",
     "@code-dot-org/artist": "0.2.1",
-    "@code-dot-org/blockly": "3.5.1",
+    "@code-dot-org/blockly": "3.5.2",
     "@code-dot-org/bramble": "0.1.26",
     "@code-dot-org/craft": "0.2.2",
     "@code-dot-org/dance-party": "0.0.42",
