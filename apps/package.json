@@ -217,6 +217,7 @@
     "webpack-dev-server": "^3.2.1",
     "webpack-hot-middleware": "^2.10.0",
     "webpack-livereload-plugin": "^0.8.1",
+    "webpack-manifest-plugin": "^2.0.4",
     "webpack-notifier": "^1.4.1",
     "webpack-stats-plugin": "^0.2.1"
   },
