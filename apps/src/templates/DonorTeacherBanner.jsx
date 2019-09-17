@@ -175,11 +175,15 @@ export default class DonorTeacherBanner extends Component {
             computing resources.
           </div>
           <div style={styles.paragraph}>
-            Would you like to participate in the Amazon Future Engineer Program?
+            Would you like to participate in the{' '}
+            {!this.props.showPegasusLink && (
+              <span>Amazon Future Engineer Program?</span>
+            )}
             {this.props.showPegasusLink && (
               <span>
-                &nbsp;
-                <a href={pegasus('/amazon-future-engineer')}>Learn more</a>
+                <a href={pegasus('/amazon-future-engineer')}>
+                  Amazon Future Engineer Program? Learn more
+                </a>
               </span>
             )}
           </div>
