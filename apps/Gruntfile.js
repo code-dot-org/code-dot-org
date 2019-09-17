@@ -10,6 +10,7 @@ var {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer');
 var {StatsWriterPlugin} = require('webpack-stats-plugin');
 var sass = require('node-sass');
 var UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+var ManifestPlugin = require('webpack-manifest-plugin');
 
 module.exports = function(grunt) {
   process.env.mocha_entry = grunt.option('entry') || '';
@@ -878,6 +879,9 @@ describe('entry tests', () => {
           : []),
         new StatsWriterPlugin({
           fields: ['assetsByChunkName', 'assets']
+        }),
+        new ManifestPlugin({
+          basePath: 'js/'
         })
       ],
       minify: minify,
