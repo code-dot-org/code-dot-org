@@ -4,7 +4,7 @@ require_relative '../helpers/asset_helpers'
 class AssetHelpersTest < Minitest::Test
   UNMINIFIED_ASSET_NAME = 'js/public/abcxyz/index.js'.freeze
   UNDIGESTED_ASSET_PATH = "/assets/js/public/abcxyz/index.js".freeze
-  UNMINIFIED_ASSET_PATH = "/assets/js/public/abcxyz/"\
+  DIGESTED_ASSET_PATH = "/assets/js/public/abcxyz/"\
     'index-ef90e2acd9003ff8b8bac522e6ce107da641d3b85aba5f58c77d5d28f77a496a.js'.freeze
   MINIFIED_DIGESTED_ASSET_PATH = "/assets/js/public/abcxyz/"\
     'index.min-5bb3b68c6f92cf8409eb7d0649cf572ffa0c66fca1b02b887b4454cab553daef.js'.freeze
@@ -28,7 +28,7 @@ class AssetHelpersTest < Minitest::Test
 
   def test_asset_map_ugly
     CDO.stubs(:pretty_js).returns(false)
-    assert_equal UNMINIFIED_ASSET_PATH, @asset_map.asset_path(UNMINIFIED_ASSET_NAME),
+    assert_equal DIGESTED_ASSET_PATH, @asset_map.asset_path(UNMINIFIED_ASSET_NAME),
       "incorrect unminifiable asset path"
     assert_equal MINIFIED_DIGESTED_ASSET_PATH, @asset_map.minifiable_asset_path(UNMINIFIED_ASSET_NAME),
       "incorrect minifiable asset path"
