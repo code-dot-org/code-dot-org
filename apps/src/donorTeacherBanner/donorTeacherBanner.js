@@ -14,33 +14,40 @@ $(document).ready(initRegionalPartnerSearch);
 
 function showDonorTeacherBanner() {
   const donorTeacherBannerElement = $('#donor-teacher-banner-container');
-  let options;
+  let options = {};
+  let dismissed = false;
 
   $.ajax({
     type: 'GET',
     url: '/dashboardapi/v1/users/me/donor_teacher_banner_details'
   })
     .done(results => {
-      options = {
-        teacherFirstName: results.teacher_first_name,
-        teacherSecondName: results.teacher_second_name,
-        teacherEmail: results.teacher_email,
-        ncesSchoolId: results.nces_school_id,
-        schoolAddress1: results.school_address_1,
-        schoolAddress2: results.school_address_2,
-        schoolAddress3: results.school_address_2,
-        schoolCity: results.school_city,
-        schoolState: results.school_state,
-        schoolZip: results.school_zip
-      };
+      if (results.dismissed) {
+        dismissed = true;
+      } else {
+        options = {
+          teacherFirstName: results.teacher_first_name,
+          teacherSecondName: results.teacher_second_name,
+          teacherEmail: results.teacher_email,
+          ncesSchoolId: results.nces_school_id,
+          schoolAddress1: results.school_address_1,
+          schoolAddress2: results.school_address_2,
+          schoolAddress3: results.school_address_2,
+          schoolCity: results.school_city,
+          schoolState: results.school_state,
+          schoolZip: results.school_zip
+        };
+      }
     })
     .complete(() => {
-      ReactDOM.render(
-        <Provider store={getStore()}>
-          <DonorTeacherBanner options={options} showPegasusLink={false} />
-        </Provider>,
-        donorTeacherBannerElement[0]
-      );
+      if (!dismissed) {
+        ReactDOM.render(
+          <Provider store={getStore()}>
+            <DonorTeacherBanner options={options} showPegasusLink={false} />
+          </Provider>,
+          donorTeacherBannerElement[0]
+        );
+      }
     });
 }
 
