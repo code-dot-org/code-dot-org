@@ -13,7 +13,7 @@ registerReducers({isRtl, responsive});
 $(document).ready(initRegionalPartnerSearch);
 
 function showDonorTeacherBanner() {
-  const donorTeacherBannerElement = $('#donor-teacher-banner-container');
+  const donorTeacherBannerElements = $('.donor-teacher-banner-container');
   let options = {};
   let dismissed = false;
 
@@ -41,12 +41,14 @@ function showDonorTeacherBanner() {
     })
     .complete(() => {
       if (!dismissed) {
-        ReactDOM.render(
-          <Provider store={getStore()}>
-            <DonorTeacherBanner options={options} showPegasusLink={false} />
-          </Provider>,
-          donorTeacherBannerElement[0]
-        );
+        donorTeacherBannerElements.each((index, donorTeacherBannerElement) => {
+          ReactDOM.render(
+            <Provider store={getStore()}>
+              <DonorTeacherBanner options={options} showPegasusLink={false} />
+            </Provider>,
+            donorTeacherBannerElement
+          );
+        });
       }
     });
 }
