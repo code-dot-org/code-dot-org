@@ -13,13 +13,12 @@ class PreviewModal extends React.Component {
     // Provided via Redux
     isPreviewOpen: PropTypes.bool.isRequired,
     tableName: PropTypes.string.isRequired,
-    onClose: PropTypes.func.isRequired,
-    onImport: PropTypes.func.isRequired
+    onClose: PropTypes.func.isRequired
   };
 
   importTable(datasetInfo) {
     this.props.importTable(datasetInfo);
-    this.props.onImport();
+    this.props.onClose();
   }
 
   render() {
@@ -47,9 +46,6 @@ export default connect(
   }),
   dispatch => ({
     onClose() {
-      dispatch(hidePreview());
-    },
-    onImport() {
       dispatch(hidePreview());
     }
   })
