@@ -13,38 +13,13 @@ style_min: true
 
 Computer Science Principles introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. More than a traditional introduction to programming, it is a rigorous, engaging, and approachable course that explores many of the foundational ideas of computing so all students understand how these concepts are transforming the world we live in.
 
-<br>
 This year-long course can be taught as an AP or non-AP course - no prerequisites required for students or for teachers new to computer science! In addition, our curriculum is available at no cost for anyone, anywhere to teach. For more information about our goals and approach to our courses, please see our [curriculum values](/educate/curriculum/values) and our [professional learning values](/educate/professional-learning/values).
-
-<br>
-<div class="col-50" style="padding-right: 20px;">
-
-<%=view :display_video_thumbnail, id: "intro_csp", video_code: "DMr1iFYacGQ", play_button: 'center', letterbox: 'false' %>
-<i>Interested in teaching the course? <a href="https://youtu.be/jQm0z894CG0" target="_blank">Find out more!</a></i>
-
-</div>
-
-[col-50]
-
-<%= view :course_wide_block, cta_link: CDO.studio_url('/courses/csp-2019'), cta_text: 'View course', lesson_plans: 'https://curriculum.code.org/csp', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Computer Science Principles', ages: 'Recommended for Grades 9 - 12', description: 'Computer Science Principles is a course designed to prepare students (and teachers) who are new to computer science for the AP CS Principles exam. The course covers many topics including the Internet, Big Data and Privacy, and Programming and Algorithms.'%>
-
-[/col-50]
-
-<div style="clear: both;"></div>
 
 <hr/>
 
-## <a name="pl"></a>Professional Learning
-
-Code.org offers hands-on workshops and online support. Over 80,000 teachers have been through our professional development workshops and thousands more attend every month. This year, we even have virtual professional learning options available! 
-
-Whether you’re brand new to computer science or an experienced tech teacher looking for the best way to use the Code.org curriculum, our Professional Learning Program is a great way to get started. And teachers love it! Over 90% rank it the best professional development ever.
-
-[<button>Learn about professional learning</button>](/educate/professional-learning/middle-high)
-
 ## Code.org's AP CS Principles Curriculum
 
-<img src="../files/apcsp_providerbadge_sm_alpha.png" style="float: right; width: 100px" alt="Code.org AP CSP Endorsed Badge">Code.org is recognized by the [College Board](http://collegeboard.org/APCSP) as an endorsed provider of curriculum and professional development for AP® Computer Science Principles. This endorsement affirms that all components of Code.org CS Principles’s offerings are aligned to the AP Curriculum Framework standards and the AP CS Principles assessment. Using an endorsed provider affords schools access to resources including an AP CS Principles syllabus pre-approved by the College Board’s AP Course Audit, and officially recognized professional development that prepares teachers to teach this course.
+<img src="../files/apcsp_providerbadge_sm_alpha.png" style="float: right; width: 100px" alt="Code.org AP CSP Endorsed Badge">Code.org is recognized by the [College Board](http://collegeboard.org/APCSP) as an endorsed provider of curriculum and professional development for AP® Computer Science Principles. This endorsement affirms that all components of Code.org's CS Principles offerings are aligned to the AP Curriculum Framework standards and the AP CS Principles assessment. This affords schools access to resources including an AP CS Principles syllabus pre-approved by the College Board’s AP Course Audit, and officially recognized professional development that prepares teachers to teach this course.
 
  * [Code.org 2019-20 AP CS Principles Endorsed Syllabus](/files/CSPSyllabus2019.pdf)
 
@@ -112,70 +87,9 @@ Whether you’re brand new to computer science or an experienced tech teacher lo
 - <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfV5ljCxR8BZWJRT_m_6CpB", target=_"blank">**CS Principles Video Library**
 - [**Code.org Video Library**](/educate/resources/videos)
 
+## Coming Soon! - CS Principles 2020-21
 
-## <a name="lessons"></a>Unit Overview
-
-<div class="col-50" style="padding-right: 20px">
-
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csp1-2019'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csp-19/unit1/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 1', ages: 'The Internet', description: "Students learn how the multi-layered systems of the Internet function as they collaboratively solve problems and puzzles about encoding and transmitting data, both 'unplugged' and using Code.org's Internet Simulator."%>
-
-</div>
-
-[col-50]
-
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csp2-2019'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csp-19/unit2/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 2', ages: 'Digital Information', description: 'Students learn how complex information like text and images is stored in a computer and the way compression helps reduce the size of those files.'%>
-
-[/col-50]
-
-<div style="clear:both"></div>
-
-<div class="col-50" style="padding-right: 20px">
-
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csp3-2019'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csp-19/unit3/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 3', ages: 'Algorithms and Programming', description: "In this unit, students learn the JavaScript language with turtle programming in Code.org's App Lab. Students are introduced the general principles of algorithms and program design that are applicapble to any programming language."%>
-
-</div>
-
-[col-50]
-
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csp4-2019'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csp-19/unit4/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 4', ages: 'Big Data and Privacy', description: 'Students research current events around the complex questions related to public policy, law, ethics, and societal impact. Students are also introduced to the basics of how and why modern encryption works.'%>
-
-[/col-50]
-
-<div style="clear:both"></div>
-
-<div class="col-50" style="padding-right: 20px">
-
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csp-explore-2019'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csp-19/csp-explore/', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'AP Explore Performance Task', ages: 'Explore - Impact of Computing Innovations', description: 'This unit provides activities and resources for students to prepare for and complete the AP Explore Performance Task, which requires students to identify a computing innovation, explore its impact, and create a related digital artifact.'%>
-
-</div>
-
-[col-50]
-
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csp5-2019'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csp-19/unit5/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 5', ages: 'Building Apps', description: "Students continue learning how to program in the JavaScript language. Using Code.org's App Lab environment, students create a series of applications that live on the web. Each app highlights a core concept of programming."%>
-
-[/col-50]
-
-<div style="clear:both"></div>
-
-<div class="col-50" style="padding-right: 20px">
-
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csp-create-2019'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csp-19/csp-create/', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'AP Create Performance Task', ages: 'Create - Applications from Ideas', description: 'This unit provides activities and resources for students to prepare for and complete the AP Create Performance Task, which asks students to develop a program on a topic that interests them or one that solves a problem.'%>
-
-</div>
-
-[col-50]
-
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csppostap-2019'), cta_text: 'View unit', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'Post-AP', ages: 'Making Data-backed Apps', description: "After the AP Test, students learn how to analyze data using spreadsheets and use App Lab's database capabilities to create apps that store data in the cloud.
-<br><br>"%>
-
-[/col-50]
-
-<div style="clear:both"></div>
-
-
-*Use, share, and customize the resources, as they are distributed under a Creative Commons Attribution Non-Commerical ShareAlike License see our [Terms of Service](https://code.org/tos). If you are interested in licensing Code.org materials for commercial purposes, [contact us](https://code.org/contact).*
-
-<hr/>
+We're planning some very exciting updates to CS Principles 2020-21! We look forward to sharing these updates, which will strengthen the curriculum and align with the College Board's plans for the 2020-21 CS Principles Framework and Assessment. <a href="https://code.org/files/2020-21_CSPrinciples_1-pager.pdf", target=_"blank">Check out our 1-pager</a> for an overview of what's in store for the 2020-21 version of the course, and stay tuned!
 
 ## Keep up with CS Principles
 
@@ -259,6 +173,29 @@ We have forums for educators to discuss and trade ideas about CS Principles and 
 
 <hr/>
 
+## <a name="pl"></a>Professional Learning
+
+<div class="col-50" style="padding-right: 20px;">
+
+<%=view :display_video_thumbnail, id: "intro_csp", video_code: "DMr1iFYacGQ", play_button: 'center', letterbox: 'false' %>
+<i>Interested in teaching the course? <a href="https://youtu.be/jQm0z894CG0" target="_blank">Find out more!</a></i>
+
+</div>
+
+[col-50]
+
+Looking for an in-depth program to help you implement CS Principles? Apply to join a Professional Learning Program in your region! Code.org's Regional Partners offer hands-on, Code.org-designed workshops to thousands of eachers across the country each year.
+
+Whether you’re brand new to computer science or an experienced teacher looking for the best way to use the Code.org curriculum, our Professional Learning Program is a great way to get started. And teachers love it! Over 90% rank it the best professional development ever.
+
+[<button>Learn about professional learning</button>](/educate/professional-learning/middle-high)
+
+[/col-50]
+
+<div style="clear: both;"></div>
+
+<hr/>
+
 ## Frequently Asked Questions
 
 ### <a name="materials"></a>What materials do I need for this course?
@@ -328,32 +265,3 @@ We send out monthly updates! [Sign up for future emails](http://code.org/educate
 Please see this page about [CS Principles Inspirations](/educate/csp/inspirations) to read about the influential works in computer science education that form some of the course's philosophical underpinnings.
 
 AP® is a registered trademark of the College Board.
-
-<!--
-## <a name="what"></a>Professional Learning - Applications now available!
-
-Our middle and high school programs offer year-round support. The program kicks off with a 5-day summer workshop where you'll have an opportunity to work hands-on with the curriculum and meet other teachers from your area. Throughout the year, we offer online support for upcoming units, forum support, and 1-day quarterly workshops. You don't need any prior computer science experience to get started. And teachers love it! 90% rank it the best professional development ever.
-
-**Applications for the [CS Principles Professional Learning Program](/educate/professional-learning/cs-principles) are now available!**
-
-[col-50]
-
-<center><img src="/images/recruitment_banner.png" width="90%"></center>
-
-[/col-50]
-
-<div class="col-50" style="padding-top:15px">
-  <a href="/educate/professional-learning/cs-principles">
-    <button>Learn more and apply now!</button>
-  <a>
-</div>
-
-<div style="clear:both"></div>
-
-<hr/>
-
-### Professional Learning 
-Our middle and high school programs offer year-round support. The program kicks off with a 5-day summer workshop where you'll have an opportunity to work hands-on with the curriculum and meet other teachers from your area. Throughout the year, we offer online support for upcoming units, forum support, and 1-day quarterly workshops. You don't need any prior computer science experience to get started. And teachers love it! 90% rank it the best professional development ever. Want to get notified when applications open for the 2019-2020 school year? Provide your contact information to a Regional Partner.
-
-[<button>Tell me when applications open</button>](https://studio.code.org/pd/regional_partner_contact/new)
--->
