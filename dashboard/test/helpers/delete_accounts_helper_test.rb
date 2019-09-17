@@ -1024,40 +1024,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
-  # Table: dashboard.pd_teacher_applications
-  #
-
-  test "clears primary_email from pd_teacher_applications" do
-    application = create :pd_teacher_application
-    refute_empty application.primary_email
-
-    purge_user application.user
-
-    application.reload
-    assert_empty application.primary_email
-  end
-
-  test "clears secondary_email from pd_teacher_applications" do
-    application = create :pd_teacher_application
-    refute_empty application.secondary_email
-
-    purge_user application.user
-
-    application.reload
-    assert_empty application.secondary_email
-  end
-
-  test "clears application from pd_teacher_applications" do
-    application = create :pd_teacher_application
-    refute_empty application.application
-
-    purge_user application.user
-
-    application.reload
-    assert_empty application.application
-  end
-
-  #
   # Table: dashboard.pd_workshop_surveys
   # Associated via enrollment
   #
