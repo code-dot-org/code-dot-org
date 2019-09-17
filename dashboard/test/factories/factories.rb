@@ -739,6 +739,13 @@ FactoryGirl.define do
         csf_script_level.save
       end
     end
+
+    factory :bonus_script_level do
+      after(:create) do |bonus_script_level|
+        bonus_script_level.bonus = true
+        bonus_script_level.save
+      end
+    end
   end
 
   factory :stage do

@@ -63,9 +63,13 @@ class StageTest < ActiveSupport::TestCase
     level2 = create :level
     stage2 = create :stage, script: script, stage_extras_disabled: true
     create :script_level, script: script, stage: stage2, levels: [level2]
+    level3 = create :level
+    stage3 = create :stage, script: script
+    create :bonus_script_level, script: script, stage: stage3, levels: [level3]
 
-    assert_match /extras$/, stage.summarize[:stage_extras_level_url]
+    assert_nil stage.summarize[:stage_extras_level_url]
     assert_nil stage2.summarize[:stage_extras_level_url]
+    assert_match /extras$/, stage3.summarize[:stage_extras_level_url]
   end
 
   test "summary for stage with extras where include_bonus_levels is true" do
