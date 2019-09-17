@@ -277,13 +277,15 @@ export default class DonorTeacherBanner extends Component {
             disabled={buttonDisabled}
           />
 
-          <Button
-            href={pegasus('/amazon-future-engineer')}
-            style={styles.button}
-            color={Button.ButtonColor.gray}
-            size="large"
-            text="Learn more"
-          />
+          {this.props.showPegasusLink && (
+            <Button
+              href={pegasus('/amazon-future-engineer')}
+              style={styles.button}
+              color={Button.ButtonColor.gray}
+              size="large"
+              text="Learn more"
+            />
+          )}
         </div>
         <div style={styles.clear} />
       </div>
