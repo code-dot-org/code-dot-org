@@ -1,5 +1,6 @@
 @dashboard_db_access
 @no_ie
+@no_mobile
 Feature: School Info Confirmation Dialog
 
 # This test checks three relevant states of the user in the school info confirmation
@@ -29,6 +30,7 @@ Scenario: School Info Confirmation Dialog
   And I select the "Public" option in dropdown "school-type"
   And I wait until element "#nces_school" is visible
   Then I press keys "Alakanuk School" for element "#nces_school"
+  Then I wait until element ".VirtualizedSelectOption:contains('Alakanuk School - Alakanuk, AK 99554')" is visible
   Then I press ".VirtualizedSelectOption:contains('Alakanuk School - Alakanuk, AK 99554')" using jQuery
   Then I press "#save-button" using jQuery
 
