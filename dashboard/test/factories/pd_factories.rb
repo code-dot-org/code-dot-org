@@ -389,13 +389,6 @@ FactoryGirl.define do
     end
   end
 
-  factory :pd_accepted_program, class: 'Pd::AcceptedProgram' do
-    workshop_name '2017: workshop'
-    course 'csd'
-    association :user, factory: :teacher, strategy: :create
-    association :teacher_application, factory: :pd_teacher_application, strategy: :create
-  end
-
   factory :pd_facilitator_teachercon_attendance, class: 'Pd::FacilitatorTeacherconAttendance' do
     association :user, factory: :facilitator, strategy: :create
     tc1_arrive {Date.new(2017, 8, 23)}
