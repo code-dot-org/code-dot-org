@@ -321,16 +321,17 @@ function create(options) {
   var optimization = options.optimization;
   var mode = options.mode;
 
+  // When debugging minified code, use the .js suffix (rather than .min.js)
+  // to allow the application to load minified js locally without running it
+  // through the rails asset pipeline. This is much simpler than hacking the
+  // application to load .min.js locally.
+  const suffix = minify && !debugMinify ? '.min.js' : '.js';
+
   var config = _.extend({}, baseConfig, {
     output: {
       path: outputDir,
       publicPath: '/assets/js/',
-
-      // When debugging minified code, use the .js suffix (rather than .min.js)
-      // to allow the application to load minified js locally without running it
-      // through the rails asset pipeline. This is much simpler than hacking the
-      // application to load .min.js locally.
-      filename: '[name].' + (minify && !debugMinify ? 'min.' : '') + 'js'
+      filename: `[name]${suffix}`
     },
     devtool: !process.env.CI && options.minify ? 'source-map' : devtool,
     entry: entries,
