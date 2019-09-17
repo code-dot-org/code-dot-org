@@ -13,7 +13,6 @@ class AssetHelpersTest < Minitest::Test
   UNDIGESTED_ASSET_PATH_NOT_IN_MAP = "/assets/foo.js".freeze
 
   def setup
-    CDO.stubs(:pegasus_skip_asset_map).returns(false)
     CDO.stubs(:dashboard_assets_dir).returns('./test/fixtures/dashboard_assets')
     @asset_map = AssetMap.clone.instance
   end
@@ -58,7 +57,6 @@ class AssetHelpersTest < Minitest::Test
     # Update the asset map to be nil.
     CDO.stubs(:dashboard_assets_dir).returns('./test/fixtures/')
     @asset_map = AssetMap.clone.instance
-    CDO.stubs(:pegasus_skip_asset_map).returns(true)
     CDO.stubs(:pretty_js).returns(true)
     assert_equal UNDIGESTED_ASSET_PATH, @asset_map.asset_path(UNMINIFIED_ASSET_NAME),
       "should recover gracefully when no asset map for unminifiable asset"
@@ -81,7 +79,6 @@ class AssetHelpersTest < Minitest::Test
   end
 
   def test_skip_flag_when_asset_not_in_map
-    CDO.stubs(:pegasus_skip_asset_map).returns(true)
     CDO.stubs(:pretty_js).returns(true)
     assert_equal UNDIGESTED_ASSET_PATH_NOT_IN_MAP, @asset_map.asset_path(UNMINIFIED_ASSET_NOT_IN_MAP),
       "should recover gracefully when unminifiable asset is not found"
