@@ -162,6 +162,11 @@ export default class DonorTeacherBanner extends Component {
       schoolZip: 'school-zip'
     };
 
+    const schoolLink =
+      'https://support.code.org/hc/en-us/articles/360031291431-What-does-school-information-refer-to-';
+    const amazonLink =
+      'https://www.amazon.com/gp/help/customer/display.html?ie=UTF8&nodeId=468496';
+
     return (
       <div style={styles.main}>
         <div style={styles.message}>
@@ -232,12 +237,17 @@ export default class DonorTeacherBanner extends Component {
                 }
                 disabled={this.state.participate !== true}
               />
-              I give Code.org permission to share my name, email address, and
-              school information with Amazon.com (required to participate). Use
-              of your personal information by Amazon is subject to Amazon’s
-              Privacy Policy. You may be required to agree to additional terms
-              and conditions with Amazon directly.{' '}
-              <span style={styles.red}>*</span>
+              I give Code.org permission to share my name, email address, and{' '}
+              <a href={schoolLink} target="_blank">
+                school name and ID
+              </a>{' '}
+              with Amazon.com (required to participate). Use of your personal
+              information by Amazon is subject to{' '}
+              <a href={amazonLink} target="_blank">
+                Amazon’s Privacy Policy
+              </a>
+              . You may be required to agree to additional terms and conditions
+              with Amazon directly. <span style={styles.red}>*</span>
             </label>
           </div>
 
