@@ -89,7 +89,6 @@ export const donorTeacherBannerOptionsShape = PropTypes.shape({
 export default class DonorTeacherBanner extends Component {
   static propTypes = {
     options: donorTeacherBannerOptionsShape,
-    onDismiss: PropTypes.func,
     showPegasusLink: PropTypes.bool
   };
 
@@ -121,10 +120,25 @@ export default class DonorTeacherBanner extends Component {
 
     this.setState({submitted: true});
 
-    if (this.props.onDismiss) {
-      this.props.onDismiss();
-    }
+    this.dismiss();
   };
+
+  dismissWithCallbacks(onSuccess, onFailure) {
+    $.ajax({
+      url: '/dashboardapi/v1/users/me/dismiss_donor_teacher_banner',
+      type: 'post'
+    })
+      .done(onSuccess)
+      .fail(onFailure);
+  }
+
+  logDismissError = xhr => {
+    console.log(`Failed to dismiss donor teacher banner! ${xhr.responseText}`);
+  };
+
+  dismiss() {
+    this.dismissWithCallbacks(null, this.logDismissError);
+  }
 
   renderDonorForm() {
     const permissionStyle = this.state.participate
