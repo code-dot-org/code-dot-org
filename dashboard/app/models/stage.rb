@@ -164,7 +164,7 @@ class Stage < ActiveRecord::Base
         stage_data[:finishText] = I18n.t('nav.header.finished_hoc')
       end
 
-      if !unplugged? && !stage_extras_disabled
+      if !unplugged? && !stage_extras_disabled && !script.get_bonus_script_levels(self).empty?
         stage_data[:stage_extras_level_url] = script_stage_extras_url(script.name, stage_position: relative_position)
       end
 
