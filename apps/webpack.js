@@ -309,7 +309,7 @@ var karmaConfig = _.extend({}, baseConfig, {
  * @param {Array} options.externals - list of webpack externals
  */
 function create(options) {
-  var outputDir = options.output;
+  var outputDir = options.outputDir;
   var entries = options.entries;
   var minify = options.minify;
   var watch = options.watch;

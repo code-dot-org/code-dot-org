@@ -699,7 +699,7 @@ describe('entry tests', () => {
     var watch = options.watch;
 
     return webpackConfig.create({
-      output: path.resolve(__dirname, OUTPUT_DIR),
+      outputDir: path.resolve(__dirname, OUTPUT_DIR),
       entries: _.mapValues(
         _.extend(
           {},
