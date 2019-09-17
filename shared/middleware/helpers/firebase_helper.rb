@@ -1,4 +1,5 @@
 require 'csv'
+require 'json'
 require 'firebase'
 
 # A wrapper around the firebase gem. For gem documentation, see
@@ -7,7 +8,7 @@ class FirebaseHelper
   def initialize(channel_id)
     raise "channel_id must be non-empty" if channel_id.nil? || channel_id.empty?
     @firebase = FirebaseHelper.create_client
-    @channel_id = channel_id + CDO.firebase_channel_id_suffix
+    @channel_id = channel_id == 'shared' ? channel_id : channel_id + CDO.firebase_channel_id_suffix
   end
 
   # @param [String] table_name The name of the table to query.
@@ -24,6 +25,16 @@ class FirebaseHelper
 
     records.map! {|record| JSON.parse(record)}
     table_to_csv(records, column_order: ['id'])
+  end
+
+  def delete_shared_table(table_name)
+    response = @firebase.delete("/v3/channels/#{@channel_id}/storage/tables/#{table_name}/records")
+    puts response.code
+  end
+
+  def upload_shared_table(table_name, records)
+    response = @firebase.set("/v3/channels/#{@channel_id}/storage/tables/#{table_name}/records", records)
+    puts response.code
   end
 
   def self.delete_channel(encrypted_channel_id)

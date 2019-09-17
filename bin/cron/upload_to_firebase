@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+
+# This script uploads a CSV to the shared firebase channel.
+require_relative '../../deployment'
+require 'cdo/only_one'
+require 'net/http'
+require 'json'
+require_relative '../../shared/middleware/helpers/firebase_helper'
+
+def main
+  # 14 day forecast for Seattle. TODO: Add more cities
+  url = 'https://api.weather.gov/gridpoints/SEW/124,68/forecast'
+  uri = URI(url)
+  response = Net::HTTP.get(uri)
+  parsed = JSON.parse(response)
+  records = parsed["properties"]["periods"]
+  FirebaseHelper.new('shared').upload_shared_table('weather', records)
+end
+
+main if only_one_running?(__FILE__)
