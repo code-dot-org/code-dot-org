@@ -21,22 +21,21 @@ def get_weather_data
   records = []
   id = 1
   forecast_offices.each do |office|
-    puts office
     url = "http://api.openweathermap.org/data/2.5/forecast?zip=#{office.zip},us&units=imperial&appid=c719e74bc77b787d940386405e0cbb83"
     response = Net::HTTP.get_response(URI(url))
     next unless response.code == '200'
     measurements = JSON.parse(response.body)["list"]
-    measurements.each do |m|
+    measurements.each do |measurement|
       row = WeatherRecord.new(
         id,
         office.city,
         office.state,
-        m["dt_txt"],
-        m["main"]["temp_min"],
-        m["main"]["temp_max"],
-        m["weather"][0]["description"],
-        m["weather"][0]["icon"],
-        m["wind"]["speed"]
+        measurement["dt_txt"],
+        measurement["main"]["temp_min"],
+        measurement["main"]["temp_max"],
+        measurement["weather"][0]["description"],
+        measurement["weather"][0]["icon"],
+        measurement["wind"]["speed"]
       )
       records.push(row.to_h.to_json)
       id += 1
@@ -48,7 +47,6 @@ end
 def main
   fb = FirebaseHelper.new('shared')
   weather_records = get_weather_data
-  fb.delete_shared_table('openweathermap')
   fb.upload_shared_table('openweathermap', weather_records)
 end
 
