@@ -32,6 +32,7 @@ ru:
         finish_sign_up_subheader_provider: 'Заполните следующую информацию для завершения создания учетной записи в Code.org с <strong>%{provider}</strong> <strong>%{email}</strong>.'
         error:
           future: не может быть в будущем
+  beta: "бета-версия"
   hello: "Привет, мир!"
   welcome_back: "С возвращением, %{name}"
   your_professional_learning_plan: "Ваш профессиональный план обучения"
@@ -45,13 +46,9 @@ ru:
   okay: "Хорошо"
   or: "или"
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Добавить учителя:'
       placeholder: "Код раздела (ABCDEF)"
-      instructions: "Введите код, выданный учителем. Это 6-буквенный код вида «ABCDEF»."
-      instructions_short: "Введите ваши 6 букв кода класса"
-    submit: 'Добавить учителя'
   add_hint_form:
     placeholder: 'Введите подсказку здесь'
     submit: 'Добавить подсказку'

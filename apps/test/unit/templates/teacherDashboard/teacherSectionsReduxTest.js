@@ -36,6 +36,7 @@ import reducer, {
   sectionName,
   sectionProvider,
   isSectionProviderManaged,
+  getVisibleSections,
   isSaveInProgress,
   sectionsNameAndId,
   getSectionRows,
@@ -1698,6 +1699,54 @@ describe('teacherSectionsRedux', () => {
         ])
       );
       expect(isSectionProviderManaged(getState(), 11)).to.be.true;
+    });
+  });
+
+  describe('getVisibleSections', () => {
+    it('filters out hidden sections', () => {
+      const expectedVisibleSections = {
+        11: {id: 11, hidden: false},
+        1: {id: 1, hidden: null}
+      };
+      const state = {
+        teacherSections: {
+          sections: {
+            2: {id: 2, hidden: true},
+            ...expectedVisibleSections
+          }
+        }
+      };
+      const actualVisibleSections = getVisibleSections(state);
+
+      assert.deepEqual(
+        Object.values(expectedVisibleSections),
+        actualVisibleSections
+      );
+    });
+
+    it('returns an empty array if there are no visible sections', () => {
+      const state = {
+        teacherSections: {
+          sections: {
+            2: {id: 2, hidden: true},
+            1: {id: 1, hidden: true}
+          }
+        }
+      };
+      const visibleSections = getVisibleSections(state);
+
+      expect(visibleSections.length).to.equal(0);
+    });
+
+    it('does not error if there are no sections', () => {
+      const state = {
+        teacherSections: {
+          sections: {}
+        }
+      };
+      const visibleSections = getVisibleSections(state);
+
+      expect(visibleSections.length).to.equal(0);
     });
   });
 

@@ -197,11 +197,6 @@ fil:
           CONDITION:
             '"when"': kelan
             '"while"': habang
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': tama
-            'false': mali
       gamelab_getProp:
         options:
           PROPERTY:
@@ -271,13 +266,6 @@ fil:
             '"left"': kaliwa
             '"right"': kanan
             '"space"': space
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": taas
-            "'down'": baba
-            "'left'": kaliwa
-            "'right'": kanan
       gamelab_whileKey:
         options:
           KEY:

@@ -23,6 +23,7 @@ sv:
         edit_header: 'Redigera kontouppgifter'
         error:
           future: kan inte vara i framtiden
+  beta: "beta"
   hello: "Hej världen"
   welcome_back: "Välkommen tillbaka, %{name}"
   your_professional_learning_plan: "Din professionella utbildningsplan"
@@ -36,12 +37,9 @@ sv:
   okay: "Okej"
   or: "eller"
   heading_x_of_y: "%{heading} (sida %{x} av %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Lägg till lärare:'
       placeholder: "Avsnitt kod (ABCDEF)"
-      instructions: "Var snäll och skriv in koden som du har fått av din lärare. Det är en 6 bokstäver lång kod som \"ABCDEF\"."
-    submit: 'Lägg till lärare'
   add_hint_form:
     placeholder: 'Skriv in ditt tips här'
     submit: 'Lägg till tips'

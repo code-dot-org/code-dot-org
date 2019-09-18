@@ -632,12 +632,6 @@ cs:
         text: 'komentář: {COMMENT}'
       gamelab_createNewSprite:
         text: "vytvořit novou postavu \n nazvanou {NAME} \n s kostýmem {COSTUME} \n kde {LOCATION}"
-      gamelab_debugSprite:
-        text: ladit {SPRITE} {VAL}
-        options:
-          VAL:
-            'true': pravda
-            'false': záporné
       gamelab_destroy:
         text: odstranit {THIS}
       gamelab_getProp:
@@ -715,7 +709,6 @@ cs:
             '"x"': souřadnice X
             '"y"': souřadnice Y
             '"direction"': směr pohybu
-            '"tint"': odstín
       gamelab_setSizes:
         text: nastavit {SPRITE} {PROPERTY} na {N}%
         options:
@@ -746,17 +739,6 @@ cs:
             '"w"': w
             '"s"': s
             '"d"': d
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": nahoru
-            "'down'": dolů
-            "'left'": vlevo
-            "'right'": vpravo
-      gamelab_whenStartAndStopTouching:
-        text: |-
-          když {SPRITE1} se začne dotýkat {SPRITE2} {STATEMENT1}když se přestanou dotýkat
-          {STATEMENT2}
       gamelab_whileKey:
         options:
           KEY:

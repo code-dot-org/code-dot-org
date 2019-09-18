@@ -615,11 +615,6 @@ sv:
           CONDITION:
             '"when"': när
             '"while"': medan
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': sant
-            'false': falskt
       gamelab_getProp:
         options:
           PROPERTY:
@@ -672,7 +667,6 @@ sv:
             '"x"': x-position
             '"y"': y-position
             '"direction"': rörelseriktning
-            '"tint"': färgton
       gamelab_setSizes:
         text: ställ in {SPRITE} {PROPERTY} till {N} %
         options:
@@ -699,13 +693,6 @@ sv:
             '"left"': vänster
             '"right"': höger
             '"space"': rymden
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": upp
-            "'down'": ner
-            "'left'": vänster
-            "'right'": höger
       gamelab_whileKey:
         options:
           KEY:

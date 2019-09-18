@@ -43,6 +43,7 @@ is:
           fyrir <strong>%{email}</strong>.
         error:
           future: má ekki vera í framtíð
+  beta: beta
   hello: Halló heimur
   welcome_back: Velkomin/n aftur, %{name}
   your_professional_learning_plan: Námsáætlun þín í faginu
@@ -56,14 +57,9 @@ is:
   okay: Allt í lagi
   or: eða
   heading_x_of_y: "%{heading} (síða %{x} af %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Bæta við kennara:'
       placeholder: Hópkóði (ABCDEF)
-      instructions: Vinsamlegast færðu inn kóðann sem kennarinn lét þig hafa. Það
-        er 6 stafa kóði líkur "ABCDEF".
-      instructions_short: Sláðu inn 6 stafa kóða hópsins
-    submit: Bæta við kennara
   add_hint_form:
     placeholder: Færðu vísbendingu þína inn hér
     submit: Bæta við vísbendingu

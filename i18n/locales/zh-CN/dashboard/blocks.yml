@@ -694,20 +694,10 @@ zh-CN:
         text: 点击 {SPRITE}
       gamelab_comment:
         text: 注释： {COMMENT}
-      gamelab_console.log:
-        text: 日志消息 {MESSAGE}
       gamelab_createNewSprite:
         text: "制作一个新的精灵 \n 叫做 {NAME} \n 服装为 {COSTUME} \n 位于 {LOCATION}"
-      gamelab_debugSprite:
-        text: 调试 {SPRITE} {VAL}
-        options:
-          VAL:
-            'true': 真
-            'false': 错
       gamelab_destroy:
         text: 移除 {THIS}
-      gamelab_displace:
-        text: "{THIS} 模块阻止了 {SPRITE} 移动"
       gamelab_draggable:
         text: 可拖拽
       gamelab_edgesDisplace:
@@ -855,7 +845,6 @@ zh-CN:
             '"x"': x位置
             '"y"': y位置
             '"direction"': 移动方向
-            '"tint"': 色调
       gamelab_setSizes:
         text: 设置 {SPRITE} {PROPERTY} 为 {N}%
         options:
@@ -903,20 +892,8 @@ zh-CN:
             '"d"': d
       gamelab_whenLeftArrow:
         text: 当按左方向键时
-      gamelab_whenPressedAndReleased:
-        text: "当 {DIR} 按下\n{STATEMENT1} 当释放 \n{STATEMENT2}"
-        options:
-          DIR:
-            "'up'": 向上
-            "'down'": 向下
-            "'left'": 向左
-            "'right'": 向右
       gamelab_whenRightArrow:
         text: 当按右方向键时
-      gamelab_whenStartAndStopTouching:
-        text: |-
-          当 {SPRITE1} 开始碰到 {SPRITE2} {STATEMENT1} 当它们不再接触
-          {STATEMENT2}
       gamelab_whenTouching:
         text: 当 {SPRITE1} 碰到 {SPRITE2}
       gamelab_whenUpArrow:

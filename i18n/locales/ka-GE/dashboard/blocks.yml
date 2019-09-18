@@ -286,11 +286,6 @@ ka:
           CONDITION:
             '"when"': როდის
             '"while"': სანამ
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': ჭეშმარიტი
-            'false': მცდარი
       gamelab_getProp:
         options:
           PROPERTY:
@@ -368,7 +363,6 @@ ka:
             '"x"': x პოზიცია
             '"y"': y პოზიცია
             '"direction"': მოძრაობის მიმართულება
-            '"tint"': შეფერადება
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -401,13 +395,6 @@ ka:
             '"d"': d
       gamelab_whenLeftArrow:
         text: როცა დაჭერილია ისარი მარცხნივ
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": ზემოთ
-            "'down'": ქვემოთ
-            "'left'": მარცხნივ
-            "'right'": მარჯვნივ
       gamelab_whenRightArrow:
         text: როცა დაჭერილია ისარი მარჯვნივ
       gamelab_whenUpArrow:

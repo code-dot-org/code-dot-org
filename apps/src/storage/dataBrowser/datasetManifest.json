@@ -1,0 +1,110 @@
+{
+  "categories": [
+    {
+      "name": "Test Data",
+      "description": "datasets that are in the shared channel in dev firebase",
+      "datasets": [
+        {
+          "name": "cities",
+          "description": "description",
+          "current": false
+        },
+        {
+          "name": "history",
+          "description": "description",
+          "current": false
+        },
+        {
+          "name": "sports",
+          "description": "description",
+          "current": true
+        },
+        {
+          "name": "spotify",
+          "description": "description",
+          "current": true
+        }
+      ]
+    },
+    {
+      "name": "Animals",
+      "description": "description",
+      "datasets": [
+        {
+          "name": "one",
+          "description": "description one",
+          "current": false
+        },
+        {
+          "name": "two",
+          "description": "description two",
+          "current": false
+        }
+      ]
+    },
+    {
+      "name": "Arts & Entertainment",
+      "description": "description",
+      "datasets": [
+        {
+          "name": "three",
+          "description": "description three",
+          "current": false
+        },
+        {
+          "name": "four",
+          "description": "description four",
+          "current": false
+        }
+      ]
+    },
+    {
+      "name": "Business & Money",
+      "description": "description",
+      "datasets": [
+        {
+          "name": "five",
+          "description": "description five",
+          "current": false
+        },
+        {
+          "name": "six",
+          "description": "description six",
+          "current": false
+        }
+      ]
+    },
+    {
+      "name": "Education",
+      "description": "description",
+      "datasets": [
+        {
+          "name": "seven",
+          "description": "description seven",
+          "current": false
+        },
+        {
+          "name": "eight",
+          "description": "description eight",
+          "current": false
+        },
+        {
+          "name": "nine",
+          "description": "description nine",
+          "current": false
+        }
+      ]
+    },
+    {
+      "name": "Health & Medicine",
+      "description": "description",
+      "datasets": [
+        {
+          "name": "ten",
+          "description": "description ten",
+          "current": false
+        }
+      ]
+    }
+  ]
+}

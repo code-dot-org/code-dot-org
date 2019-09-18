@@ -1021,11 +1021,6 @@ id-ID:
           Coba edit perilaku!
 
           \-Nilai yang mana yang mengontrol kecepatan setiap peri?
-      behaviors 7:
-        behavior hint: |-
-          Coba edit perilaku!
-
-          \-Nilai yang mana yang mengontrol kecepatan setiap peri?
       course1_artist_loops_challenge1:
         courseA_artist_loops_challenge1_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         courseA_artist_loops_challenge1_c: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"

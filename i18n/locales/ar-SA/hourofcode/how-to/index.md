@@ -6,11 +6,11 @@ nav: how_to_nav
 
 {{ signup_button }}
 
-# How to teach one Hour of Code with your class
+# كيف تدرس ساعة البرمجة مع قسمك
 
-### انضم للحراك وقدم لمجموعة من طلابك ساعتهم الأولى من علوم الحاسب بهذه الخطوات. "ساعة من البرمجة" سهلة العمل - حتى للمبتدئين! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your class.
+### انضم للحراك وقدم لمجموعة من طلابك ساعتهم الأولى من علوم الحاسب بهذه الخطوات. "ساعة من البرمجة" سهلة العمل - حتى للمبتدئين! اذا احببت أن تقدم لك يد المساعدة في هذا الشأن، يمكنك أن تجد [متطوع محلي]({{ urls/volunteer_local }}) لمساعدتك على إجراء ساعة البرمجة في فصلك الدراسي.
 
-### Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}).
+### ألق نظرة على [دليل المشاركة إن بقيت لديك أسئلة]({{ localized_files/participation_guide }}).
 
 * * *
 
@@ -18,11 +18,11 @@ nav: how_to_nav
 
 ## ٢. اختر درساً تدريبياً لساعتك
 
-We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for all age groups and experience levels. Students do the activities on their own, though many activities include lesson plans for teachers (you'll see the link when you click the activity) to guide discussion or extend the activity. [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
+نوفر تشكيلة من المرح، [دورات دليل الطالب](%= resolve_url('/learn') %) لجميع الفئات العمرية ومستويات الخبرة. ينجز الطلاب الأنشطة بأنفسهم، رغم ذلك تتضمن العديد من الأنشطة خطط دروس للمدرسين (سوف ترى الرابط عندما تنقر على النشاط) لتوجيه المناقشة أو للتوسع في النشاط. [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
 ## ٣. عزّز ساعة البرمجة لديك
 
-Promote your Hour of Code [with these tools]({{ urls/promote_resources }}) and encourage others to host their own events.
+روج لساعة البرمجة[ بواسطة هذه الأداة]({{ urls/promote_resources }})وشجع الآخرين على استضافتها.
 
 ## ٤. حدد احتياجاتك من التقنية - أجهزة الحاسب الآلي اختيارية
 
@@ -38,35 +38,35 @@ Promote your Hour of Code [with these tools]({{ urls/promote_resources }}) and e
 
 ## ٥. ابدأ ساعة برمجة الخاصة بك بمتحدث ملهم او فيديو
 
-**Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
+**قم بدعوة [متطوع محلي]({{ urls/volunteer_local }})لإلهام الطلاب بالحديث عن تعدد الإمكانات في علوم الكمبيوتر.** هناك الآلاف من المتطوعين حول العالم مستعدون لمساعدتك في حدثك لساعة البرمجة من خلال زيارة صفية أو محادثة فيديو مع طلابك!
 
 **اعرض احد الفيديوهات المُلهِمة:**
 
 - فيديو البداية الأصلي على موقع Code.org، يبرز بيل قيتس، مارك زكربيرق، ونجم السلة الامريكية كريس بوش. (هنالك [دقيقة واحدة](https://www.youtube.com/watch?v=qYZF6oIZtfc)، [٥ دقائق](https://www.youtube.com/watch?v=nKIu9yen5nc)، و ٩ دقائق من النسخ المتوفرة)</li> 
     
-    - Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).</ul> 
+    - اطلع على المزيد من [الموارد الملهمة]({{ urls/inspire }}) و[الفيديوهات](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).</ul> 
     
-    **It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
+    **لا بأس ان تكون انت او طلابك حديثي العهد بعلم الكمبيوتر. هذه بعض الافكار للتعريف بنشاطك لساعة البرمجة:**
     
     - اشرح كيف ان التكنلوجيا تؤثر على حياتنا بأكثر من طريقة، مع ذكر أمثلة تهم البنات والأولاد (تكلم عن انقاذ حياتنا، مساعدة الناس، التواصل بينهم، الخ.).
     - بمشاركة الفصل، اسرد الاشياء التي نستخدم فيها البرمجة في حياتنا اليومية.
-    - See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+    - هذه بعض التوجيهات لجعل الفتيات يهتمن بعلوم الكمبيوتر[هنا]({{ urls/girls }}).
     
     ## ٦- برمج!
     
-    **Direct students to the activity**
+    **وجه الطلاب إلى النشاط**
     
-    - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+    - اكتب رابط الدرس التعليمي على السبورة. ابحث عن الرابط المدرج على [معلومات لدورتك التعليمية المختارة]({{ urls/learn }}) تحت عدد المشاركين.
     
-    **When your students come across difficulties it's okay to respond:**
+    **في حال واجه طلابك صعوبات فلا بأس ان تجيب:**
     
     - "لا أعرف، دعنا نكتشف سوياً."
     - "لا تعمل التقنية كما نحب دائما."
     - "تعلم البرمجة مثل تعلم لغة جديدة، لن تتحدث بطلاقة مباشرة."
     
-    **What if a student finishes early?**
+    **ماذا لو انتهى احد الطلاب مبكرا؟**
     
-    - Students can see all tutorials and [try another Hour of Code activity]({{ urls/learn }}).
+    - يمكن للطلاب ان يشاهدوا كل الدروس التعليمية و [يجربوا نشاطا آخر لساعة البرمجة ](%= resolve_url('/learn')%).
     - أو اطلب من الطالب الذي انتهى مبكرا ان يساعد زملاء صفه الذين يواجهون صعوبة في النشاط.
     
     [col-33]
@@ -86,8 +86,8 @@ Promote your Hour of Code [with these tools]({{ urls/promote_resources }}) and e
     
     [/col-33]
     
-    - [Print certificates]({{ urls/certificates }}) for your students.
-    - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
+    - [اطبع الشهادات](%= codeorg_url('/certificates')%) لطلابك.
+    - [اطبع "أجريت ساعة البرمجة"]({{ urls/promote_stickers }}) ملصقات لطلابك.
     - [اطلب قمصان خاصة](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) لمدرستك.
     - شارك صور وفيديوهات حدث ساعة برمجة الذي قمت به على وسائل التواصل الاجتماعي. استخدم #HourOfCode و @codeorg حتى نسلط الضوء على نجاحك ايضا!
     
@@ -109,7 +109,7 @@ Promote your Hour of Code [with these tools]({{ urls/promote_resources }}) and e
     
     ترميز الوقت هو مجرد خطوه اولي في الرحلة لمعرفه كيفيه عمل التكنولوجيا وكيفيه التطبيقات البرمجيات القيام به. لمواصله هذه الرحلة:
     
-    - Encourage students to continue to [learn online]({{ urls/learn_beyond }}).
-    - [Attend]({{ urls/professional_development_workshops }}) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+    - شجع الطلاب ليستمروا [في التعلم على الأنترنت]({{ urls/learn_beyond }}).
+    - [احضر]({{ urls/professional_development_workshops }}) شخصيا يوما واحدا، ورشة عمل لتلقي التعليمات من ميسري علوم الكمبيوتر ذوي تجربة. 'مدرسو US فقط)
     
     {{ signup_button }}

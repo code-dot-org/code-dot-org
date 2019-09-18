@@ -13,6 +13,7 @@ import AudioRecorder from './AudioRecorder';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import AddAssetButtonRow from './AddAssetButtonRow';
 import i18n from '@cdo/locale';
+import {STARTER_ASSET_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
 
 export const AudioErrorType = {
   NONE: 'none',
@@ -76,7 +77,7 @@ export default class AssetManager extends React.Component {
     };
   }
 
-  componentWillMount() {
+  componentDidMount() {
     if (this.props.levelName) {
       starterAssetsApi.getStarterAssets(
         this.props.levelName,
@@ -101,28 +102,16 @@ export default class AssetManager extends React.Component {
     }
   }
 
-  componentDidMount() {
-    this._isMounted = true;
-  }
-
-  componentWillUnmount() {
-    this._isMounted = false;
-  }
-
   onStarterAssetsReceived = result => {
     const response = JSON.parse(result.response);
-    if (this._isMounted) {
-      this.setState({starterAssets: response.starter_assets});
-    }
+    this.setState({starterAssets: response.starter_assets});
   };
 
   onStarterAssetsFailure = xhr => {
-    if (this._isMounted) {
-      this.setState({
-        statusMessage:
-          'Error loading starter assets: ' + getErrorMessage(xhr.status)
-      });
-    }
+    this.setState({
+      statusMessage:
+        'Error loading starter assets: ' + getErrorMessage(xhr.status)
+    });
   };
 
   /**
@@ -132,11 +121,9 @@ export default class AssetManager extends React.Component {
    */
   onAssetListReceived = result => {
     assetListStore.reset(result.files);
-    if (this._isMounted) {
-      this.setState({
-        assets: assetListStore.list(this.props.allowedExtensions)
-      });
-    }
+    this.setState({
+      assets: assetListStore.list(this.props.allowedExtensions)
+    });
   };
 
   /**
@@ -145,12 +132,9 @@ export default class AssetManager extends React.Component {
    * @param xhr
    */
   onAssetListFailure = xhr => {
-    if (this._isMounted) {
-      this.setState({
-        statusMessage:
-          'Error loading asset list: ' + getErrorMessage(xhr.status)
-      });
-    }
+    this.setState({
+      statusMessage: 'Error loading asset list: ' + getErrorMessage(xhr.status)
+    });
   };
 
   onUploadStart = data => {
@@ -214,7 +198,17 @@ export default class AssetManager extends React.Component {
 
     this.setState({
       assets: assetListStore.list(this.props.allowedExtensions),
-      statusMessage: 'File "' + name + '" successfully deleted!'
+      statusMessage: `File "${name}" successfully deleted!`
+    });
+  };
+
+  deleteStarterAssetRow = name => {
+    let starterAssets = [...this.state.starterAssets].filter(
+      asset => asset.filename !== name
+    );
+    this.setState({
+      starterAssets,
+      statusMessage: `File "${name}" successfully deleted!`
     });
   };
 
@@ -247,22 +241,33 @@ export default class AssetManager extends React.Component {
         <AssetRow
           {...this.defaultAssetProps(asset)}
           api={boundApi}
-          onChoose={() => console.log('choose!')}
-          onDelete={() => console.log('delete!')}
+          onChoose={
+            this.props.assetChosen &&
+            (() =>
+              this.props.assetChosen(
+                STARTER_ASSET_PREFIX + asset.filename,
+                asset.timestamp
+              ))
+          }
+          onDelete={() => this.deleteStarterAssetRow(asset.filename)}
           levelName={this.props.levelName}
+          hideDelete={!this.props.isStartMode}
         />
       );
     });
   };
 
   getAssetRows = () => {
+    const api = this.props.useFilesApi ? filesApi : assetsApi;
+
     return this.state.assets.map(asset => {
       return (
         <AssetRow
           {...this.defaultAssetProps(asset)}
-          useFilesApi={this.props.useFilesApi}
-          onChoose={() =>
-            this.props.assetChosen(asset.filename, asset.timestamp)
+          api={api}
+          onChoose={
+            this.props.assetChosen &&
+            (() => this.props.assetChosen(asset.filename, asset.timestamp))
           }
           onDelete={() => this.deleteAssetRow(asset.filename)}
         />

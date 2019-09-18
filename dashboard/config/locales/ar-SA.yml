@@ -42,6 +42,7 @@ ar:
           على Code.org مع <strong>%{provider}</strong> لـ <strong>%{email}</strong>.
         error:
           future: لا يمكن أن يكون في المستقبل
+  beta: تجريبي
   hello: مرحباً بالعالم
   welcome_back: أهلاً بكم من جديد، %{name}
   your_professional_learning_plan: خطة التعلم الاحترافية الخاصة بك
@@ -55,14 +56,9 @@ ar:
   okay: حسناً
   or: أو
   heading_x_of_y: "%{heading} (صفحة %{x} من %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'إضافة معلِّماً:'
       placeholder: مقطع التعليمات البرمجية (ABCDEF)
-      instructions: الرجاء إدخال الشفرة التي أعطاك إياها معلمك. إنها مكونة من 6 حروف
-        مثل "ABCDEF".
-      instructions_short: أدخل الحروف الست لشفرة القسم
-    submit: إضافة معلِّم
   add_hint_form:
     placeholder: الرجاء إدخال التلميح الخاص بك هنا
     submit: إضافة تلميح

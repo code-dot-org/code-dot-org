@@ -349,7 +349,7 @@ class FilesApi extends CollectionsApi {
   }
 
   /*
-   * Delete all files in project (always creates a new version)
+   * Delete all files in project
    * @param success {Function} callback when successful (includes xhr parameter)
    * @param error {Function} callback when failed (includes xhr parameter)
    */
@@ -357,18 +357,7 @@ class FilesApi extends CollectionsApi {
     // Note: just reset the _beforeFirstWriteHook, but don't call it
     // since we're deleting everything:
     this._beforeFirstWriteHook = null;
-    return ajaxInternal(
-      'DELETE',
-      this.basePath('*'),
-      xhr => {
-        var response = JSON.parse(xhr.response);
-        project().filesVersionId = response.filesVersionId;
-        if (success) {
-          success(xhr, project().filesVersionId);
-        }
-      },
-      error
-    );
+    return ajaxInternal('DELETE', this.basePath('*'), success, error);
   }
 
   /*
@@ -473,9 +462,7 @@ class StarterAssetsApi {
   }
 
   deleteFile(filename, success, error) {
-    throw new Error('not yet implemented');
-    // TODO (madelynkasula): implement this endpoint and method
-    // return ajaxInternal('DELETE', this.basePath(filename), success, error);
+    return ajaxInternal('DELETE', this.basePath(filename), success, error);
   }
 }
 

@@ -18,7 +18,7 @@ Code.org offers the opportunity for your employees to [connect]({{ urls/voluntee
 
 [<button>Sign up to volunteer!</button>]({{ urls/volunteer }}) <br /> <br />
 
-For more instructions on encouraging employees and connecting your employees with classrooms, check out our [guide for corporate partners]({{ localized_files/hoc_corporate_toolkit }}).
+Um mehr darüber zu erfahren, wie Sie Ihre Mitarbeiter ermutigen können und wie der Kontakt zwischen Ihren Mitarbeitern und den örtlichen Klassen hergestellt werden kann, schauen Sie sich unseren [Leitfaden für Firmenpartner](%= localized_file('/files/hoc-corporate-toolkit. pdf') %) an.
 
 ## Weitere Möglichkeiten, als Unternehmen die Hour of Code zu unterstützen
 

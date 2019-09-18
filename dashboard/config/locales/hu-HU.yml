@@ -43,6 +43,7 @@ hu:
           felhasználó fiókod befejezéséhez <strong>%{provider}</strong><strong>%{email}</strong>.
         error:
           future: nem lehet a jövőben
+  beta: béta
   hello: Helló világ
   welcome_back: Üdv újra, %{name}
   your_professional_learning_plan: Saját Profi Tanulmányi Terv
@@ -56,14 +57,9 @@ hu:
   okay: Oké
   or: vagy
   heading_x_of_y: "%{heading} (oldal %{x} %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Tanár hozzáadása:'
       placeholder: Szakasz kód (ABCDEF)
-      instructions: Kélek, írd be a tanárod által megadott kódot. Ez egy 6 betűs kód
-        - például "ABCDEF".
-      instructions_short: Add meg a 6 karakteres szakasz kódod
-    submit: Tanár hozzáadása
   add_hint_form:
     placeholder: Kérjük, írd ide a javaslatod
     submit: Írja le a véleményét

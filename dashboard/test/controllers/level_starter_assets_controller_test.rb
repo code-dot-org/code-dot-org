@@ -36,7 +36,7 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
       'ty.png' => uuid_name_1,
       'welcome.jpg' => uuid_name_2
     }
-    level = create(:level, starter_assets: level_starter_assets)
+    level = create(:applab, starter_assets: level_starter_assets)
 
     get :show, params: {level_name: level.name}
     starter_assets = JSON.parse(response.body)['starter_assets']
@@ -62,7 +62,7 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
     level_starter_assets = {
       'ty.png' => @uuid_name
     }
-    level = create(:level, starter_assets: level_starter_assets)
+    level = create(:applab, starter_assets: level_starter_assets)
 
     get :file, params: {level_name: level.name, filename: 'ty', format: 'png'}
 
@@ -73,14 +73,14 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
 
   test 'upload: forbidden for non-levelbuilders' do
     sign_in create(:student)
-    post :upload, params: {level_name: create(:level).name, files: []}
+    post :upload, params: {level_name: create(:applab).name, files: []}
     assert_response :forbidden
   end
 
   test 'upload: forbidden if not in levelbuilder_mode' do
     Rails.application.config.stubs(:levelbuilder_mode).returns(false)
     sign_in create(:levelbuilder)
-    post :upload, params: {level_name: create(:level).name, files: []}
+    post :upload, params: {level_name: create(:applab).name, files: []}
     assert_response :forbidden
   end
 
@@ -88,7 +88,7 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
     sign_in create(:levelbuilder)
 
     e = assert_raises do
-      post :upload, params: {level_name: create(:level).name, files: ['file-1', 'file-2']}
+      post :upload, params: {level_name: create(:applab).name, files: ['file-1', 'file-2']}
     end
     assert_equal 'One file upload expected. Actual: 2', e.message
   end
@@ -102,7 +102,7 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
     invalid_file = fixture_file_upload(invalid_filename, 'image/jpg')
 
     sign_in create(:levelbuilder)
-    post :upload, params: {level_name: create(:level).name, files: [invalid_file]}
+    post :upload, params: {level_name: create(:applab).name, files: [invalid_file]}
 
     assert_response :unprocessable_entity
 
@@ -117,7 +117,7 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
     @file_obj.expects(:upload_file).returns(false)
 
     sign_in create(:levelbuilder)
-    post :upload, params: {level_name: create(:level).name, files: [@file]}
+    post :upload, params: {level_name: create(:applab).name, files: [@file]}
 
     assert_response :unprocessable_entity
   end
@@ -131,7 +131,7 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
 
     sign_in create(:levelbuilder)
     assert_raises ActiveRecord::RecordInvalid do
-      post :upload, params: {level_name: create(:level).name, files: [@file]}
+      post :upload, params: {level_name: create(:applab).name, files: [@file]}
     end
   end
 
@@ -142,7 +142,7 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
     @file_obj.expects(:upload_file).returns(true)
 
     sign_in create(:levelbuilder)
-    level = create :level
+    level = create :applab
     post :upload, params: {level_name: level.name, files: [@file]}
 
     level.reload
@@ -160,7 +160,7 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
       returns(@file_obj)
     @file_obj.expects(:upload_file).twice.returns(true)
     sign_in create(:levelbuilder)
-    level = create :level
+    level = create :applab
 
     single_quote_filename = "my-'file'.jpg"
     FileUtils.touch(single_quote_filename)
@@ -179,6 +179,49 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
     summary = JSON.parse(response.body)
     assert_equal double_quote_filename, summary['filename']
     File.delete(double_quote_filename)
+  end
+
+  test 'destroy: forbidden for non-levelbuilders' do
+    sign_in create(:student)
+    delete :destroy, params: {level_name: create(:applab).name, filename: 'my-file.png'}
+
+    assert_response :forbidden
+  end
+
+  test 'destroy: forbidden if not in levelbuilder_mode' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns(false)
+
+    sign_in create(:levelbuilder)
+    delete :destroy, params: {level_name: create(:applab).name, filename: 'my-file.png'}
+
+    assert_response :forbidden
+  end
+
+  test 'destroy: returns no_content if starter asset successfully deleted' do
+    level = create :applab, starter_assets: {'my-file.png' => '123-abc.png'}
+
+    sign_in create(:levelbuilder)
+    delete :destroy, params: {level_name: level.name, filename: 'my-file.png'}
+
+    assert_response :no_content
+  end
+
+  test 'destroy: returns no_content if starter asset does not exist' do
+    level = create :applab, starter_assets: {'my-file.png' => '123-abc.png'}
+
+    sign_in create(:levelbuilder)
+    delete :destroy, params: {level_name: level.name, filename: 'my-other-file.png'}
+
+    assert_response :no_content
+  end
+
+  test 'destroy: raises if starter asset fails to be deleted' do
+    Level.any_instance.expects(:valid?).returns(false)
+
+    sign_in create(:levelbuilder)
+    assert_raises ActiveRecord::RecordInvalid do
+      delete :destroy, params: {level_name: create(:applab).name, filename: 'my-file.png'}
+    end
   end
 end
 

@@ -1371,3 +1371,9 @@ lv:
               name: Ātrums
             Functions:
               name: Funkcijas
+        peru-2019:
+          stages:
+            Introduction:
+              name: Ievads
+            Nested Loops:
+              name: Cikls ciklā

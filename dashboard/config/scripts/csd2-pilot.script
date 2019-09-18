@@ -2,13 +2,12 @@ login_required true
 hideable_stages true
 exclude_csf_column_in_legend true
 student_detail_progress_view true
-teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-19/unit2/"], ["teacherForum", "https://forum.code.org/c/csd2"], ["vocabulary", "https://curriculum.code.org/csd-19/unit2/vocab/"], ["standardMappings", "https://curriculum.code.org/csd-19/unit2/standards/"], ["codeIntroduced", "https://curriculum.code.org/csd-19/unit2/code/"]]
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-20/unit2/"], ["teacherForum", "https://forum.code.org/c/csd"]]
 has_verified_resources true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/csd-20/unit2/{LESSON}'
 pilot_experiment 'csd-piloters'
 project_sharing true
-curriculum_umbrella 'CSD'
 
 stage 'Exploring Web Pages', flex_category: 'csd2_1'
 level 'CSD U2L01 TFMD_pilot', named: true

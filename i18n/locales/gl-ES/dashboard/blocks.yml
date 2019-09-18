@@ -150,11 +150,6 @@ gl:
           CONDITION:
             '"when"': cando
             '"while"': mentras
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': verdadeiro
-            'false': falso
       gamelab_getProp:
         options:
           PROPERTY:
@@ -219,13 +214,6 @@ gl:
             '"left"': esquerda
             '"right"': dereita
             '"space"': espazo
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": arriba
-            "'down'": abaixo
-            "'left'": esquerda
-            "'right'": dereita
       gamelab_whileKey:
         options:
           KEY:

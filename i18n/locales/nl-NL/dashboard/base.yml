@@ -32,6 +32,7 @@ nl:
         finish_sign_up_subheader_provider: 'Vul de volgende informatie in om het aanmaken van een Code.org-account met <strong>%{provider}</strong> voor <strong>%{email}</strong> te voltooien.'
         error:
           future: kan niet in de toekomst
+  beta: "beta"
   hello: "Hallo wereld"
   welcome_back: "Welkom terug, %{name}"
   your_professional_learning_plan: "Jouw professionele leerplan"
@@ -45,13 +46,9 @@ nl:
   okay: "Oké"
   or: "of"
   heading_x_of_y: "%{heading} (pagina %{x} van %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Voeg een leraar toe:'
       placeholder: "Sectiecode (ABCDEF)"
-      instructions: "Voer hier de code in die je van je leraar hebt gekregen. De code bestaat uit 6 letters zoals \"ABCDEF\"."
-      instructions_short: "Voer je code van 6 letters van de sectie in"
-    submit: 'voeg leraar toe'
   add_hint_form:
     placeholder: 'Voer hier uw hint'
     submit: 'Hint toevoegen'

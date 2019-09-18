@@ -42,6 +42,7 @@
           opprettelsen av en Code.org konto med <strong>%{provider}</strong> for <strong>%{email}</strong>.
         error:
           future: ikke mulig å være i framtiden
+  beta: beta
   hello: Hei, verden
   welcome_back: Velkommen tilbake, %{name}
   your_professional_learning_plan: Læringsplanen din
@@ -55,14 +56,9 @@
   okay: OK
   or: eller
   heading_x_of_y: "%{heading} (side %{x} av %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Legg til en lærer:'
       placeholder: Seksjonskode (ABCDEF)
-      instructions: Skriv inn koden som læreren din har gitt deg. Det er en kode med
-        6 bokstaver, som "ABCDEF".
-      instructions_short: Angi din seksjons kode (6 tegn)
-    submit: Legg til lærer
   add_hint_form:
     placeholder: Skriv inn et hint her
     submit: Legg til hint

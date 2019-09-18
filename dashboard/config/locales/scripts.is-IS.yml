@@ -5342,6 +5342,8 @@ is:
                 til að betrumbæta leikinn að vild.
             Using the Game Design Process:
               name: Notkun leikjahönnunarferlisins
+            Sprite Properties:
+              name: Eiginleikar kvika
         maddie-test:
           stages:
             new stage:
@@ -5354,3 +5356,25 @@ is:
           stages:
             new stage:
               name: nýr áfangi
+        csd4-pilot:
+          stages:
+            Input and Output:
+              name: Inntak og Úttak
+            Processing:
+              name: Vinnsla
+            Project - Propose an App:
+              name: Verkefni - Tillaga að Appi
+        csp2-pilot:
+          stages:
+            new stage:
+              name: nýr áfangi
+            Routers and Redundancy:
+              name: Netbeinar og umfremd
+        peru-2019:
+          stages:
+            new stage:
+              name: nýr áfangi
+            Introduction:
+              name: Kynning
+            Nested Loops:
+              name: Innri lykkjur
