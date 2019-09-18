@@ -18,8 +18,4 @@ class Plc::Course < ActiveRecord::Base
   belongs_to :course, class_name: '::Course', foreign_key: 'course_id', dependent: :destroy, required: true
 
   delegate :name, to: :course
-
-  def get_url_name
-    name.downcase.tr(' ', '-')
-  end
 end
