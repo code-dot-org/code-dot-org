@@ -4,15 +4,26 @@ import React, {Component} from 'react';
 import Button from './Button';
 import color from '@cdo/apps/util/color';
 import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 const styles = {
+  heading: {
+    marginTop: 25
+  },
   button: {
     marginLeft: 7,
     marginRight: 7,
     marginTop: 15
   },
   checkbox: {
-    margin: '0 7px 0 0'
+    margin: '0 7px 4px 0',
+    cursor: 'pointer',
+    verticalAlign: 'middle'
+  },
+  checkboxDisabled: {
+    margin: '0 7px 4px 0',
+    cursor: 'not-allowed',
+    verticalAlign: 'middle'
   },
   clear: {
     clear: 'both'
@@ -44,9 +55,14 @@ const styles = {
   paragraph: {
     marginBottom: 10
   },
+  label: {
+    fontFamily: '"Gotham 4r", sans-serif',
+    cursor: 'pointer'
+  },
   radio: {
     verticalAlign: 'top',
-    marginRight: 10
+    marginRight: 10,
+    cursor: 'pointer'
   },
   permissionEnabled: {},
   permissionDisabled: {
@@ -73,7 +89,7 @@ export const donorTeacherBannerOptionsShape = PropTypes.shape({
 export default class DonorTeacherBanner extends Component {
   static propTypes = {
     options: donorTeacherBannerOptionsShape,
-    onDismiss: PropTypes.func
+    showPegasusLink: PropTypes.bool
   };
 
   initialState = {
@@ -104,10 +120,25 @@ export default class DonorTeacherBanner extends Component {
 
     this.setState({submitted: true});
 
-    if (this.props.onDismiss) {
-      this.props.onDismiss();
-    }
+    this.dismiss();
   };
+
+  dismissWithCallbacks(onSuccess, onFailure) {
+    $.ajax({
+      url: '/dashboardapi/v1/users/me/dismiss_donor_teacher_banner',
+      type: 'post'
+    })
+      .done(onSuccess)
+      .fail(onFailure);
+  }
+
+  logDismissError = xhr => {
+    console.log(`Failed to dismiss donor teacher banner! ${xhr.responseText}`);
+  };
+
+  dismiss() {
+    this.dismissWithCallbacks(null, this.logDismissError);
+  }
 
   renderDonorForm() {
     const permissionStyle = this.state.participate
@@ -131,10 +162,17 @@ export default class DonorTeacherBanner extends Component {
       schoolZip: 'school-zip'
     };
 
+    const schoolLink =
+      'https://support.code.org/hc/en-us/articles/360031291431-What-does-school-information-refer-to-';
+    const amazonLink =
+      'https://www.amazon.com/gp/help/customer/display.html?ie=UTF8&nodeId=468496';
+
     return (
       <div style={styles.main}>
         <div style={styles.message}>
-          <h2>Free stuff from Amazon for your classroom</h2>
+          <h2 style={styles.heading}>
+            Free stuff from Amazon for your classroom
+          </h2>
           <div style={styles.paragraph}>
             Amazon Future Engineer offers free support for participating
             Code.org classrooms, including posters, free CSTA+ membership,
@@ -142,12 +180,21 @@ export default class DonorTeacherBanner extends Component {
             computing resources.
           </div>
           <div style={styles.paragraph}>
-            Would you like to participate in the Amazon Future Engineer Program?
-            Learn more
+            Would you like to participate in the{' '}
+            {!this.props.showPegasusLink && (
+              <span>Amazon Future Engineer Program?</span>
+            )}
+            {this.props.showPegasusLink && (
+              <span>
+                <a href={pegasus('/amazon-future-engineer')}>
+                  Amazon Future Engineer Program? Learn more
+                </a>
+              </span>
+            )}
           </div>
           <div>
             <div>
-              <label>
+              <label style={styles.label}>
                 <input
                   type="radio"
                   id="participateYes"
@@ -161,7 +208,7 @@ export default class DonorTeacherBanner extends Component {
               </label>
             </div>
             <div>
-              <label>
+              <label style={styles.label}>
                 <input
                   type="radio"
                   id="participateNo"
@@ -177,21 +224,30 @@ export default class DonorTeacherBanner extends Component {
           </div>
           <hr />
           <div style={permissionStyle}>
-            <label>
+            <label style={styles.label}>
               <input
                 type="checkbox"
                 name={name}
                 checked={this.state.permission}
                 onChange={this.onPermissionChange}
-                style={styles.checkbox}
+                style={
+                  this.state.participate
+                    ? styles.checkbox
+                    : styles.checkboxDisabled
+                }
                 disabled={this.state.participate !== true}
               />
-              I give Code.org permission to share my name, email address, and
-              school information with Amazon.com (required to participate). Use
-              of your personal information by Amazon is subject to Amazon’s
-              Privacy Policy. You may be required to agree to additional terms
-              and conditions with Amazon directly.{' '}
-              <span style={styles.red}>*</span>
+              I give Code.org permission to share my name, email address, and{' '}
+              <a href={schoolLink} target="_blank">
+                school name and ID
+              </a>{' '}
+              with Amazon.com (required to participate). Use of your personal
+              information by Amazon is subject to{' '}
+              <a href={amazonLink} target="_blank">
+                Amazon’s Privacy Policy
+              </a>
+              . You may be required to agree to additional terms and conditions
+              with Amazon directly. <span style={styles.red}>*</span>
             </label>
           </div>
 
@@ -220,6 +276,16 @@ export default class DonorTeacherBanner extends Component {
             text="Submit"
             disabled={buttonDisabled}
           />
+
+          {this.props.showPegasusLink && (
+            <Button
+              href={pegasus('/amazon-future-engineer')}
+              style={styles.button}
+              color={Button.ButtonColor.gray}
+              size="large"
+              text="Learn more"
+            />
+          )}
         </div>
         <div style={styles.clear} />
       </div>

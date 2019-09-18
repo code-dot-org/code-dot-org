@@ -77,8 +77,6 @@ cs:
     continue_with: 'Pokračujte s %{provider}'
     sign_in_with: 'Přihlásit se přes %{provider}'
     signed_in: 'Přihlášen!'
-    signed_out: 'Jste odhlášeni z <a href="%{url}"> Code.org</a>.'
-    sign_out_of: 'Použili jste %{provider} při registraci. <a href="%{url}"> Klepnutím sem</a> se odhlásíte ze služby %{provider}.'
     already_signedup: 'Již jsi zaregistrován?'
     notyet_signedup: "Ještě ses nepřidal?"
     google_oauth2: 'Google účet'
@@ -124,13 +122,10 @@ cs:
     valid_password: "Platné heslo!"
     invalid_password: "Heslo musí obsahovat nejméně 6 znaků"
     mismatch_password: "Zadaná dvě hesla se neshodují"
-    agree_tos_privacy: "Souhlasím tímto s <a href='http://code.org/tos'>Podmínkami poskytování služeb</a> a se <a href='http://code.org/privacy'>Zásadami ochrany osobních údajů</a>."
     under_13_consent: "Pokud jsem mladší 13 let, mohu potvrdit, že mám souhlas svého rodiče nebo zákonného zástupce k používání služeb Code.org."
     student_consent: "Potvrzuji, že mám od svých rodičů nebo zákonného zástupce dovoleno používat Code.org."
     agree_us_website: "Souhlasím s používáním webových stránek provozovaných ve Spojených státech."
     my_data_to_us: "Informace ohledně mého používání těchto stránek mohou být posílány do Spojených států a tamtéž i uchovávány."
-    student_terms: "Souhlasím, že budu dodržovat <a href='http://code.org/tos'>podmínky služeb</a>. Pokud jsem mladší 13 let, přihlášením potvrzuji souhlas rodičů nebo mého zákonného zástupce s používáním služeb Code.org.<br/><br/> E-mailové adresy se neukládají. Studenti nebudou dostávat e-maily od Code.org s výjimkou obnovení hesla. Pro více informací navštivte<a href='http://code.org/privacy'>zásady ochrany osobních údajů</a>."
-    teacher_terms: "Souhlasím, že budu dodržovat podmínky služeb Code.org. Více informací najdete na <a href='http://code.org/privacy'>Zásady ochrany osobních údajů</a>."
     additional_information: "Potřebujeme další informace pro pokračování vaši registrace."
     user_type_button: "Aktualizovat typ účtu"
     user_type_label: "Typ účtu"
@@ -184,7 +179,6 @@ cs:
     login: 'Přihlásit'
     invalid_login: 'Neplatné přihlašovací jméno, zkuste to prosím znovu'
     pair_programming: 'Mám partnera u počítače'
-    student_privacy: "Další informace o tom, proč se nezobrazuje celé vaše jméno najdete <a href='%{student_privacy_blog}' target='_blank'> zde</a>."
   password:
     reset_form:
       title: 'Zapomněl jsi heslo?'
@@ -418,9 +412,6 @@ cs:
     tried: 'Vyzkoušeno'
   home:
     title: "Code studio"
-    description: 'Code Studio je místem pro on-line kurzy vytvořené Code.org'
-    lines_of_code: "%{lines_count} ŘÁDKY KÓDU NAPSANÝCH STUDENTY"
-    lines_of_code_linebreak: "ŘÁDKY KÓDU, %{lines_count} <br/> NAPSANÉ %{students_count} MILIONY STUDENTŮ"
     all_courses: "Přehled kurzů 1, 2 a 3"
     lesson_plans: "Plány hodin"
     signin_message: "Nejsi už zaregistrován? %{link}"
@@ -450,11 +441,6 @@ cs:
     test_videos_help: 'Vyzkoušejte náš nový video přehrávač ve vaší škole'
     try_beta_courses: 'Novinka! Vyzkoušejte naše beta kurzy pro žáky 1. stupně ZŠ'
     use_as_teacher: 'Použijte jako učitel tento web'
-    heading_hoc2014: "<h2>Hodina kódu pro</h2> <h1>všechny věkové kategorie</h1>"
-    heading_elementary: "<h2>20 hodinové kurzy pro</h2> <h1>Základy počítačové vědy (všechny věkové kategorie)</h1>"
-    heading_apps: "<h2>Zábava pro</h2> <h1>kohokoliv</h1>"
-    heading_tools: "<h2>Připraven na další krok?</h2><h1>JavaScriptové nástroje pro střední školy</h1>"
-    heading_legacy: "<h2>Náš všeobecný kurz pro</h2><h1>Všechny věkové kategorie</h1>"
     your_gallery: Galerie
     no_primary_course: "Zkuste Code Studio kurz"
     choose_next_course: "Zkuste kurz Code Studio výběrem níže"
@@ -628,8 +614,6 @@ cs:
     header_artist: "Umělec"
     report_abuse: "Ohlásit urážlivý příspěvek"
   landing:
-    prerelease: "Tento kurz je v <span class='betatext'> beta verzi</span>.  To znamená, že to není finální verze kurzu a je předmětem úprav podle zpětné vazby a vylepšeních."
-    prerelease_hoc2014: "Tento výukový kurz je v <span class='betatext'> beta verzi</span>.  To je předmětem uprav po obdržení zpětné vazby a vylepšeních."
     report_bug: "Nahlásit chybu"
     support: "Získat pomoc"
     support_url: "//support.code.org"
@@ -696,8 +680,6 @@ cs:
   age_interstitial:
     age: Váš věk
     header: Aktualizace informací účtu
-    message: "Jsme v procesu aktualizace naší zkušenosti, abychom poskytli ještě silnější ochranu soukromí. K tomu potřebujeme, aby stávající uživatelé zadávali svůj věk. <br/> Jako vždy code.org nikdy nepronajme, neprodá nebo nebude sdílet informace s třetími stranami."
-    sign_out: 'Když si nepřeješ poskytovat svůj věk můžeš <a href="%{url}"> se odhlásit</a>.'
   terms_interstitial:
     title: "Aktualizované podmínky služeb a ochrana osobních údajů"
     intro_desc: "Aktualizovali jsme naše smluvní podmínky a ochranu osobních údajů. Změny jsou platné od 24. srpna 2016. Největší změnou je, že <i> už více nebudeme uchovávat e-mailové adresy studentských účtů na Studiu kódu. </i> Je to pro nás velký krok a doufáme, že jsme nastavili nový standard pro soukromí studentů v technologiích ve vzdělávání. Souhrn změn sme vám poslali e-mailem."
@@ -787,10 +769,8 @@ cs:
   peer_review:
     accepted:
       name: 'Přijato'
-      description: '<strong>Ano</strong>, toto podání <strong>splňuje</strong> požadavky'
     rejected:
       name: 'Odmítnuto'
-      description: '<strong>Ne</strong>, toto podání <strong>nesplňuje</strong> požadavky'
     escalated:
       name: 'Předáno k rozhodnutí'
       description: 'Rád bych, aby toto podání zkontroloval instruktor'

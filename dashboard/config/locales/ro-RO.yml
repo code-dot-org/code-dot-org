@@ -89,9 +89,6 @@ ro:
     continue_with: Continuă cu %{provider}
     sign_in_with: Loghează-te cu %{provider}
     signed_in: Înregistrat!
-    signed_out: Te-ai delogat de pe <a href="%{url}">Code.org</a>.
-    sign_out_of: Ai folosit %{provider} pentru a te loga. <a href="%{url}">Fă clic
-      aici</a> pentru ate deloga de pe %{provider}.
     already_signedup: Te-ai înscris deja?
     notyet_signedup: Nu te-ai alăturat încă?
     google_oauth2: Google
@@ -154,9 +151,6 @@ ro:
     valid_password: Parolă validă!
     invalid_password: Parola trebuie să conţină cel puțin 6 caractere
     mismatch_password: Cele două parole introduse nu se potrivesc
-    agree_tos_privacy: Sunt de acord cu <a href='http://code.org/tos'>Termenii și
-      condițiile de utilizare</a> şi <a href='http://code.org/privacy'>Politica de
-      confidențialitate</a>.
     under_13_consent: Dacă am vârsta sub 13 ani, confirm că am permisiunea părintelui
       sau tutorelui meu legal de a utiliza serviciile Code.org.
     student_consent: Confirm că am permisiunea părintelui sau tutorelui meu legal
@@ -164,16 +158,6 @@ ro:
     agree_us_website: Sunt de acord să folosesc un site web din Statele Unite.
     my_data_to_us: Datele obținute în urma utilizării de către mine a acestui site
       pot fi trimise și stocate sau prelucrate în Statele Unite.
-    student_terms: Sunt de acord să respect Code.org <a href='http://code.org/tos'>
-      termenii de serviciu</a>. Dacă am sub vârsta de 13 ani, confirm prin trimiterea
-      acestui formular că am părinte sau tutore legal și permisiunea de a utiliza
-      serviciile Code.org. <br/> <br/> Adresele de e-mail nu sunt stocate într-o formă
-      care permite să contactăm studenţii. Elevii nu vor primi niciodată e-mailuri
-      de la Code.org cu excepţia de recuperare a parolei. A se vedea termenii noștrii<a
-      href='http://code.org/privacy'> de confidentialitate</a> pentru mai multe informaţii.
-    teacher_terms: Sunt de acord să respect termenii Code.org de serviciu. Pentru
-      mai multe informaţii despre confidenţialitate, consultaţi <a href='http://code.org/privacy'>
-      politica noastră de confidenţialitate</a>.
     additional_information: Mai avem nevoie de câteva informaţii adiționale pentru
       a te putea înscrie.
     user_type_button: Actualizaţi tipul de contul
@@ -229,8 +213,6 @@ ro:
     login: Loghează-te
     invalid_login: Logare invalidă, vă rugam să reîncercați
     pair_programming: Am un partener la calculatorul meu
-    student_privacy: Aflați mai multe despre motivul pentru care nu vă vedeți numele
-      complet <a href='%{student_privacy_blog}' target='_blank'>aici</a>.
   password:
     reset_form:
       title: Ai uitat parola?
@@ -502,10 +484,6 @@ ro:
     tried: Încercat
   home:
     title: Studio-ul Code
-    description: Studio-ul Code este gazda cursurilor online create de Code.org
-    lines_of_code: "%{lines_count} LINII DE COD SCRISE DE ELEVI"
-    lines_of_code_linebreak: "%{lines_count} LINII DE COD<br/>SCRISE DE %{students_count}
-      MILIOANE DE ELEVI"
     all_courses: Prezentare generală a cursurilor 1, 2 și 3
     lesson_plans: Planuri de lecție
     signin_message: Deja înregistrat? %{link}
@@ -545,12 +523,6 @@ ro:
     try_beta_courses: Nou! Încearcă cursurile noastre beta pentru elevi de clasele
       1-5
     use_as_teacher: Foloseşte acest site în calitate de profesor
-    heading_hoc2014: "<h2>Ora de Programare pentru</h2><h1>toate vârstele</h1>"
-    heading_elementary: "<h2>cursuri de 20 ore pentru</h2><h1>începători(toate vârstele)</h1>"
-    heading_apps: "<h2>Distracţie pentru</h2><h1>Toată lumea</h1>"
-    heading_tools: "<h2>Gata pentru următorul pas?</h2> <h1>Instrumente JavaScript
-      pentru liceu</h1>"
-    heading_legacy: "<h2>Cursul nostru intensiv pentru</h2><h1>Toate vârstele</h1>"
     your_gallery: Galerie
     no_primary_course: Încearcă un curs cu Atelierul de programare
     choose_next_course: Încearcă un curs cu Atelierul de programare alegând unul de
@@ -817,11 +789,6 @@ ro:
     header_artist: Artist
     report_abuse: Raportează abuz
   landing:
-    prerelease: Acest curs este în <span class='betatext'>versiune beta</span>. Asta
-      înseamnă că aceasta nu este versiunea finală a cursului şi el poate fi revizuit
-      în momentul în care se primește feedback şi se fac îmbunătățiri.
-    prerelease_hoc2014: Acest tutorial este în <span class='betatext'> versiune beta</span>.  Acesta
-      face obiectul revizuirii pe măsură ce se primește feedback şi sunt făcute îmbunătăţiri.
     report_bug: Raporteazã eroare
     support: Obţine ajutor
     support_url: "//support.code.org"
@@ -900,12 +867,6 @@ ro:
   age_interstitial:
     age: Vârsta ta
     header: Actualizare Informaţii Cont
-    message: Suntem pe cale de a ne actualiza experienţa pentru a vă oferi o protecţie
-      a informaţiilor private mult mai puternică. Pentru a face aceasta, avem nevoie
-      ca utilizatorii existenţi să îşi introducă vârsta aici.<br/>Ca întotdeauna,
-      code.org nu va închiria, vinde sau distribui aceste informaţii nici unei alte
-      părți terțe.
-    sign_out: Dacă nu doreşti să îţi dezvălui vârsta, poţi să te<a href="%{url}">deloghezi</a>.
   terms_interstitial:
     title: Actualizeaza termenii de serviciu şi politica de confidenţialitate
     intro_desc: 'Am actualizat termenii şi politica de confidenţialitate, aşa cum
@@ -1048,12 +1009,8 @@ ro:
   peer_review:
     accepted:
       name: Acceptat
-      description: "<strong>Da</strong>, această prezentare <strong>îndeplineşte</strong>
-        cerinţele"
     rejected:
       name: Respins
-      description: "<strong>Nu</strong>, această prezentare <strong>nu îndeplineşte</strong>
-        cerinţele"
     escalated:
       name: Escaladat
       description: Aş dori un instructor pentru a revizui această prezentare
@@ -1245,29 +1202,12 @@ ro:
         internaționali Code.org și 2) sunteți de acord cu utilizarea informațiilor
         dvs. de către partenerul nostru internațional în țara dvs., pentru a ca acesta
         să vă poată ajuta și sprijini în călătoria dumneavoastră ca profesor de informatică.
-      thanks: Vă mulțumim că ați trimis! Așteptăm cu nerăbdare să vă susținem pe măsură
-        ce vă familiarizați cu curriculumul și instrumentele Code.org. Vă rugăm să
-        continuați să ne faceți cunoscute întrebările și feedback-ul dvs. scriindu-ne
-        la <a href='%{support_email_url}'>support@code.org</a> sau prin postarea pe
-        <a href='%{teacher_forum_url}' target='_blank'>forumul profesorilor</a>!
     logged_out:
       heading: Vă mulțumim pentru interesul acordat Programului profesional de învățare!
       body: Pentru a începe, trebuie mai întâi să vă conectați la contul Code.org.
         Dacă doriți mai multe informații despre program înainte de a vă începe aplicația,
         vă rugăm consultați <a href="%{url}">Prezentarea generală a programului de
         învățare profesională</a>.
-    not_teacher:
-      body: Vă mulțumim pentru interesul acordat Programului de învățare profesională
-        Code.org. Momentan sunteți conectat(ă) la un cont de elev. Vă rugăm să creați
-        un cont de profesor sau <a href="%{user_settings}">accesați setările dvs de
-        utilizator</a> pentru a vă upgrada contul de la elev la profesor.
-      more: Dacă doriți mai multe informații despre program înainte de a vă începe
-        aplicația, vă rugăm să consultați <a href="%{pl_overview}">Prezentarea generală
-        a programului de învățare profesională</a>.
-    no_teacher_email:
-      body: Contul dvs. nu are o adresă de e-mail. Vă rugăm <a href="%{user_registration}">vizitați
-        setările contului dvs</a> pentru a vă adăuga adresa de e-mail înainte de a
-        completa acest formular.
   courses_category: Toate cursurile
   cookie_banner:
     message: Dacă continuați să navigați site-ul nostru sau faceți clic pe " Sunt

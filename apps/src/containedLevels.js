@@ -67,6 +67,11 @@ export function postContainedLevelAttempt({
   // Track the fact that we're currently submitting
   postState = PostState.Started;
 
+  /**
+   * Get report info for our contained level. *Note:* If we are currently editing blocks,
+   * some of the report info will be overwritten in onAttempt() in order to allow levelbuilders
+   * to update blocks (rather than submit the contained level).
+   */
   const reportInfo = getContainedLevelResultInfo();
   onAttempt({
     ...reportInfo,

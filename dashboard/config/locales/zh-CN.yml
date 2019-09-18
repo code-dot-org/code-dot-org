@@ -79,8 +79,6 @@ zh-CN:
     continue_with: 用%{provider}继续
     sign_in_with: 用%{provider}登录
     signed_in: 登录成功！
-    signed_out: 您已注销 <a href="%{url}"> Code.org</a>。
-    sign_out_of: '%{provider} 用于登录 <a href="%{url}"> 点击这里</a> 来注销 %{provider}.'
     already_signedup: 已经注册了吗？
     notyet_signedup: 还未注册吗？
     google_oauth2: 谷歌
@@ -129,15 +127,10 @@ zh-CN:
     valid_password: 有效的密码 ！
     invalid_password: 密码必须至少为 6 个字符
     mismatch_password: 您输入的两个密码不匹配
-    agree_tos_privacy: 我同意 <a href='http://code.org/tos'>服务条款</a> 和 <a href='http://code.org/privacy'>隐私策略</a>。
     under_13_consent: 如果我未满 13 岁，我确认在使用 Code.org 服务时已征得父母或法定监护人的同意。
     student_consent: 我确认我的父母或法定监护人同意我使用 Code.org 的服务。
     agree_us_website: 我同意使用美国的网站。
     my_data_to_us: 我使用本网站产生的数据可能会被传输至美国并在美国存储或处理。
-    student_terms: 电子邮箱不会用来与学生进行联系。除了密码恢复的邮件，学生永远不会收到从 Code.org 寄来的任何邮件。更多信息请查看<a
-      href='http://code.org/privacy'>隐私政策</a>。
-    teacher_terms: 我同意 Code.org 的服务条款。有关隐私的详细信息，请参阅我们的 <a href='http://code.org/privacy'>
-      隐私政策</a>。
     additional_information: 我们需要一些额外的信息来继续为你注册.
     user_type_button: 更新帐户类型
     user_type_label: 帐户类型
@@ -191,7 +184,6 @@ zh-CN:
     login: 登录
     invalid_login: 登录无效，请重试
     pair_programming: 我在我的电脑上有伙伴
-    student_privacy: 了解更多：<a href='%{student_privacy_blog}' target='_blank'>为什么你看不到你的名字？</a>
   password:
     reset_form:
       title: 忘记了您的密码吗？
@@ -442,9 +434,6 @@ zh-CN:
     tried: 试过了
   home:
     title: 代码工作室
-    description: 代码工作室是 Code.org 创办的在线课程的家园
-    lines_of_code: 由学生编写了 %{lines_count} 行代码
-    lines_of_code_linebreak: 有 %{students_count} 百万学生编写了<br/>%{lines_count} 行程序代码。
     all_courses: 课程1、 2 和 3 的概要
     lesson_plans: 课程计划
     signin_message: 已经注册了吗？%{link}
@@ -474,11 +463,6 @@ zh-CN:
     test_videos_help: 在你的学校测试我们新的视频。
     try_beta_courses: 新增功能！尝试我们为 K-5 学生准备的 beta 版课程
     use_as_teacher: 做为教师来使用本网站
-    heading_hoc2014: "<h2>编程一小时</h2>适合<h1>所有年龄</h1>"
-    heading_elementary: "<h2>20 小时课程</h2><h1>初学者 （所有年龄）</h1>"
-    heading_apps: "<h1>为每个人</h1><h2>的乐趣</h2>"
-    heading_tools: "<h2>准备好进行下一步了吗？</h2><h1>高中的 JavaScript 工具</h1>"
-    heading_legacy: "<h1>为所有年龄</h1><h2>的加速课程</h2>"
     your_gallery: 作品
     no_primary_course: 试试代码工作室的课程
     choose_next_course: 从下面代码工作室的课程中选一个体验
@@ -686,8 +670,6 @@ zh-CN:
     header_artist: 艺术家
     report_abuse: 举报滥用
   landing:
-    prerelease: 本课程是 <span class='betatext'>beta 版</span>中。这表示它不是最终版本。它会根据反馈而被修订和改善
-    prerelease_hoc2014: 本教程是<span class='betatext'> beta 版</span>。它会根据反馈而被修订和改善。
     report_bug: 报告错误
     support: 获取帮助
     support_url: "//support.code.org"
@@ -757,9 +739,6 @@ zh-CN:
   age_interstitial:
     age: 你的年龄
     header: 帐户信息更新
-    message: 我们正在更新我们的经验，为您提供更强的隐私保护。要做到这一点，我们需要现有用户在这里输入自己的年龄。<br/>一如往常，code.org
-      将永远不会出租、 出售或与任何第三方共享此信息。
-    sign_out: 如果你不想提供你的年龄你可以 <a href="%{url}">注销</a>。
   terms_interstitial:
     title: 更新的服务条款和隐私政策
     intro_desc: 我们更新了我们的服务条款和隐私政策，如下所示。这些变化自 2016 年 8 月 24 日起生效。 最大的变化是︰ 我们将 <i>不再将学生帐户的电子邮件地址存储在代码工作室。</i>这是对我们来说，一个大改变，我们希望它在教育技术中设置学生隐私的新标准。我们已经通过电子邮件给你发送了其它更改的摘要。
@@ -858,10 +837,8 @@ zh-CN:
   peer_review:
     accepted:
       name: 已接受
-      description: "<strong>是的</strong>，这个提交<strong>符合</strong>要求"
     rejected:
       name: 已拒绝
-      description: "<strong>不</strong>，这个提交<strong>不能满足</strong> 要求"
     escalated:
       name: 升级
       description: 我想让老师来审查此提交
@@ -1003,7 +980,6 @@ zh-CN:
     download_in_Vietnamese: 下载越南语版本︰
     windows: Windows（64位）
     mac: Mac OS X
-  stage_extras_teacher_message: 您已经关闭了一些小组的课程附加内容。除非重新打开，否则您的学生将看不到此页。可以通过访问<a href='http://code.org/teacher-dashboard'>教师控制台</a>来打开课程附加内容。
   locked_stage: 这一阶段的内容不可见是因为这一阶段当前已锁定。在你需要工作或审查你的答案的时候，你的老师可以解锁这一阶段。
   hidden_stage: 你的老师没有预料到你来到这里。请询问你的老师你应该上什么课。
   hidden_script: 你的老师不期待你来这里。请询问你的老师应该上哪个单元。
@@ -1100,16 +1076,9 @@ zh-CN:
       title: 工作坊参与者
       intro: 非常感谢您抽出时间接受 Code.org 的培训课程。没有像您这样的人的帮助，我们让世界各地所有学校的孩子们都能有机会学习计算机科学知识的使命或许永远也不会成功。
       instructions: 请填写下方的表格，表明 1) 你参加了一个由 Code.org 的国际合作伙伴运作的培训研讨班，并且 2) 你同意我们将你的情况告知我们在你所在国家的国际合作伙伴，以便他们支持你作为计算机科学教师的工作。
-      thanks: 感谢您的提交！我们期待着能帮助您熟悉 Code.org 的课程及教学工具。请与我们分享你的问题和反馈，可发邮件至<a href='%{support_email_url}'>support@code.org</a>，或在<a
-        href='%{teacher_forum_url}' target='_blank'>教师论坛</a>上发帖！
     logged_out:
       heading: 感谢您对专业学习计划的兴趣！
       body: 开始前，首先需要登录到 Code.org 帐户。如果希望在启动应用程序之前了解有关该程序的更多信息，请查看 <a href="%{url}">专业学习计划概述</a>。
-    not_teacher:
-      body: 感谢对 Code.org 专业学习项目的兴趣。现在已经注册了一个学生账户，请创建教师账户或<a href="%{user_settings}">转到用户设置</a>将账户升级为教师账户。
-      more: 如果在开始申请前希望看到更多信息，点击 <a href="%{pl_overview}">专业学习计划概述</a>。
-    no_teacher_email:
-      body: 账号还没有填写电子邮件地址。请<a href="%{user_registration}">访问帐户设置</a>以在完成表单前添加电子邮件地址。
   courses_category: 完整课程
   cookie_banner:
     message: 通过继续浏览我们的网站或单击"我同意"，您同意在你的计算机或设备上存储 cookies。

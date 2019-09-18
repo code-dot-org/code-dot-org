@@ -28,6 +28,10 @@ ja-JP:
         set_length: このブロックを使い、「長さ」を適切な値にセットします。
       Course 4 Artist Vars 6:
         degrees_per_side: 360度を辺の数で割って、各角度の大きさを度で求めます。
+      Course 4 Bee 1:
+        if_bee_nectar: '"if"ブロックを使用してミツバチが花の蜜をとるかどうかを決めます。'
+      Course 4 Bee 3:
+        if_else_bee: "「if/else」ブロックをつかって、はなからみつをとったり、はちみつをつくったりしましょう。"
       Course 4 Bee Params 2:
         edit_get_nectar: 関数を編集し、はちが みつを集めるために方向を変えるには、このボタンを使います。
       Course 4 Maze 4:
@@ -140,6 +144,18 @@ ja-JP:
         courseA_artist_loops4_1: いくつのブロックが つかえるか、この すうじを みてください。
       courseA_artist_loops4_2019:
         courseA_artist_loops4_1: いくつのブロックが つかえるか、この すうじを みてください。
+      courseA_artist_loops7:
+        courseA_artist_loops7_1: ブロックの左上のかずは このブロックをつかう かいすうです。
+      courseA_artist_loops7_2018:
+        courseA_artist_loops7_1: ブロックの左上のかずは このブロックをつかう かいすうです。
+      courseA_artist_loops7_2019:
+        courseA_artist_loops7_1: ブロックの左上のかずは このブロックをつかう かいすうです。
+      courseA_artist_loops8:
+        courseA_artist_loops8_1: ライン上を いったり きたりすることが できます。
+      courseA_artist_loops8_2018:
+        courseA_artist_loops8_1: ライン上を いったり きたりすることが できます。
+      courseA_artist_loops8_2019:
+        courseA_artist_loops8_1: ライン上を いったり きたりすることが できます。
       courseA_collector_loops1:
         courseA_collector_loops1_1: ツールボックスに あたらしい ブロックが ありますよ。あとで せつめいを するので、まっててね。
       courseA_collector_loops3:
@@ -168,6 +184,24 @@ ja-JP:
         courseA_maze_seqA_callout1: ステップ ボタンを つかうと プログラムが ひとつずつ うごきます。これで バグを みつけよう！
       courseA_maze_seq4:
         made_of_stone: このブロックは いしで できてます。うごかす ことは できるけど、けす ことは できません！
+      courseA_playLab_events4:
+        courseA_playlab_events4_callout1: これは吹き出し
+      courseA_playLab_events4_2018:
+        courseA_playlab_events4_callout1: これは吹き出し
+      courseA_playLab_events4_2019:
+        courseA_playlab_events4_callout1: これは吹き出し
+      courseA_playLab_events5:
+        courseA_playLab_events5_1: やじるしのほうこうをかえるには、やじるしをおしてください。
+      courseA_playLab_events5_2018:
+        courseA_playLab_events5_1: やじるしのほうこうをかえるには、やじるしをおしてください。
+      courseA_playLab_events5_2019:
+        courseA_playLab_events5_1: やじるしのほうこうをかえるには、やじるしをおしてください。
+      courseA_playLab_events6:
+        courseA_playLab_events6_1: '"ランダム"をえらぶと 音がランダムでかわります。'
+      courseA_playLab_events6_2018:
+        courseA_playLab_events6_1: '"ランダム"をえらぶと 音がランダムでかわります。'
+      courseA_playLab_events6_2019:
+        courseA_playLab_events6_1: '"ランダム"をえらぶと 音がランダムでかわります。'
       courseB_Scrat_ramp1_2018:
         grade2_CaringForNewPet_0_1: すべてのブロックをつなげたら「実行」を押してプログラムを開始してください。
       courseB_Scrat_ramp1_2019:
@@ -190,6 +224,12 @@ ja-JP:
         grade2_CaringForNewPet_0_1: すべてのブロックをつなげたら「実行」を押してプログラムを開始してください。
       courseC_maze_programming1_2019:
         grade2_CaringForNewPet_0_1: すべてのブロックをつなげたら「実行」を押してプログラムを開始してください。
+      courseC_maze_programming3:
+        courseC_maze_programming3_3: はい色のブロックをけすことができません。
+      courseC_maze_programming3_2018:
+        courseC_maze_programming3_3: はい色のブロックをけすことができません。
+      courseC_maze_programming3_2019:
+        courseC_maze_programming3_3: はい色のブロックをけすことができません。
       courseD_maze_ramp1:
         grade2_CaringForNewPet_0_1: すべてのブロックをつなげたら「実行」を押してプログラムを開始してください。
       courseD_maze_ramp1_2018:

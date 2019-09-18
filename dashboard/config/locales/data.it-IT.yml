@@ -857,6 +857,7 @@ it:
         CSF_Spritelab_MakeSprite_v2: Come fare un Personaggio
         CSF_SpriteLab_SpritesInAction_v2: Personaggi in azione
         csd_debugging: Correzione errori (debugging)
+        csd_applab_designmode_short: Sviluppo App - Modalità Interfaccia
     callout:
       text:
         drag_blocks: Prendi qui a sinistra il blocco "vai avanti" ed attaccalo sotto

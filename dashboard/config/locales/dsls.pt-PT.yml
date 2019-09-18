@@ -1079,6 +1079,13 @@ pt-PT:
         content1: descrição
       Terminology Recap:
         content1: descrição
+      Unit 1 Lesson 2 Overview:
+        markdown: |
+          Nesta lição irá aprender um processo formal de resolução de problemas que o irá ajudar a estruturar uma abordagem a uma larga variadade de problemas.
+
+          ## Recursos
+
+          * [O Processo de Resolução de Problemas - Guia de Actividade](https://docs.google.com/document/d/1xEPMYIDy70fWCgyLymBNmxkE-6uJ7BYOXSmV8Vyt-SQ/export?format=pdf)
       behaviors 1 predict:
         questions:
         - {}
@@ -1198,7 +1205,7 @@ pt-PT:
         - {}
         - {}
         - {}
-        - {}
+        - text: Eu não sei
       courseC_multi_starWars_predict1_2018:
         questions:
         - {}
@@ -1206,7 +1213,7 @@ pt-PT:
         - {}
         - {}
         - {}
-        - {}
+        - text: Eu não sei
       courseC_multi_starWars_predict1_2018_2019:
         questions:
         - {}
@@ -1214,7 +1221,7 @@ pt-PT:
         - {}
         - {}
         - {}
-        - {}
+        - text: Eu não sei
       courseC_multi_starWars_predict2:
         questions:
         - {}
@@ -1735,6 +1742,13 @@ pt-PT:
         - {}
         - {}
         - {}
+      csd-pre-survey-2017-levelgroup:
+        markdown: |
+          Os alunos trabalham em grupos de modo a desenharem barcos em folha de alumínio que deverão suportar o máximo de cêntimos possível. No fim da aula os grupos discutem as suas experiências sobre esta actividade e efetuam ligações sobre os tipos de resolução de problemas que irão ter de fazer para o resto to curso.
+
+          ## Recursos
+
+          * [Barcos de Alumínio](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - Guia de Actividade (copiar como [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))
       grade2_multi_collector_A_predict1:
         questions:
         - {}

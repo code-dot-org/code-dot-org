@@ -83,9 +83,6 @@ he:
     continue_with: המשך באמצעות %{provider}
     sign_in_with: היכנס באמצעות %{provider}
     signed_in: נכנסת!
-    signed_out: התנתקת מ<a href="%{url}">Code.org</a>.
-    sign_out_of: השתמשת ב- %{provider} להכנס. in. <a href="%{url}"> לחץ כאן</a> כדי
-      לצאת מ- %{provider}.
     already_signedup: כבר נרשמת?
     notyet_signedup: לא הצטרפת עדיין?
     google_oauth2: חשבון גוגל
@@ -141,18 +138,11 @@ he:
     valid_password: סיסמה תקינה!
     invalid_password: הסיסמא חייבת להכיל לפחות 6 תווים
     mismatch_password: שתי הסיסמאות שהזנת אינן תואמות
-    agree_tos_privacy: אני מסכים ל-<a href='http://code.org/tos'>תנאי השימוש</a> ו-<a
-      href='http://code.org/privacy'>תנאי הפרטיות</a>.
     under_13_consent: אני תחת גיל 13, אני מאשר שהורי או האפוטרופוסים החוקיים שלי מאשרים
       לי להשתמש בשירותי Code.org.
     student_consent: אני מאשר שיש לי אישור הורה או אפוטרופוס להשתמש בשירותי Code.org.
     agree_us_website: אני מאשר להשתמש באתר אינטרנט אשר נמצא בארצות הברית.
     my_data_to_us: יתכן כי נתוני השימוש שלי ישלחו או ישמרו או יעובדו בארצות הברית.
-    student_terms: כתובות דוא"ל אינם נשמרים בצורה המאפשרת לנו ליצור קשר עם תלמידים.
-      תלמידים לעולם לא יקבלו דוא"ל מCode.org למעט עבור שחזור סיסמא. צפה ב<a href='http://code.org/privacy'>מדיניות
-      הפרטיות</a> לפרטים נוספים.
-    teacher_terms: אני מסכים להיות מחויב לתנאי השירות של Code.org. לקבלת מידע נוסף
-      אודות פרטיות, עיין ב-<a href='http://code.org/privacy'>מדיניות הפרטיות</a>.
     additional_information: יש צורך במידע נוסף כדי להמשיך ביצירת החשבון שלך.
     user_type_button: עדכן סוג חשבון
     user_type_label: סוג חשבון
@@ -207,8 +197,6 @@ he:
     login: התחבר
     invalid_login: נתוני חיבור שגויים, אנא נסה שנית
     pair_programming: אני יחד עם שותף במחשב שלי
-    student_privacy: למד עוד מדוע אינך רואה את שמך המלא <a href='%{student_privacy_blog}'
-      target='_blank'>כאן</a>.
   password:
     reset_form:
       title: שכחת את הסיסמא שלך?
@@ -465,10 +453,6 @@ he:
     tried: נוסה
   home:
     title: ההתקדמות שלי
-    description: ב"code studio"  נמצאים קורסים אינטרנטיים שמיוצרים על ידי code.org
-    lines_of_code: "%{lines_count} שורות קוד נכתבו על ידי תלמידים"
-    lines_of_code_linebreak: "%{lines_count} שורות של קוד<br/>נכתבו על ידי %{students_count}
-      מיליון תלמידים"
     all_courses: סקירה של קורסים 1, 2 ו- 3
     lesson_plans: מערכי שיעור
     signin_message: כבר רשום?  %{link}
@@ -502,11 +486,6 @@ he:
     test_videos_help: נסה את נגן הוידאו החדש שלנו בבית ספרך
     try_beta_courses: חדש! נסה את קורסי הבטה שלנו לגילאי גן חובה-כיתה ה'
     use_as_teacher: השתמש באתר הזה כמורה
-    heading_hoc2014: "<h2>שעת הקוד עבור</h2><h1>כל הגילאים</h1>"
-    heading_elementary: "<h2>20 שעות קורסים עבור</h2><h1>יסודות מדעי המחשב (כל הגילאים)</h1>"
-    heading_apps: "<h2>כיף</h1><h2>לכולם</h1>"
-    heading_tools: "<h2>מוכן לשלב הבא?</h2><h1>כלים לחטיבות והתיכונים</h1>"
-    heading_legacy: "<h2>הקורס המואץ שלנו עבור</h2><h1>כל הגילאים</h1>"
     your_gallery: גלריה
     no_primary_course: נסה קורס קוד סטודיו
     choose_next_course: נסה קורס מסטודיו קוד ע"י בחירת אחד מטה
@@ -717,11 +696,6 @@ he:
     header_artist: אמן
     report_abuse: דווח על התעללות
   landing:
-    prerelease: קורס זה נמצא בגרסת <span class='betatext'>ביטא</span>. זה אומר שזו
-      לא גירסה סופית של הקורס, והוא נמצא בפוטנציאל לשינויים בהתאם לתגובות שיתקבלו
-      ושיפורים שיעשו.
-    prerelease_hoc2014: הדרכה זו נמצא בגרסת <span class='betatext'>ביטא</span>. היא
-      בפוטנציאל לשינויים בהתאם לתגובות שיתקבלו ושיפורים שיבוצעו בה.
     report_bug: דווח על באג
     support: קבל עזרה
     help_resources: עזרה ומשאבים
@@ -794,7 +768,6 @@ he:
   age_interstitial:
     age: הגיל שלך
     header: פרטי החשבון עודכנו
-    sign_out: אם אינך מעוניין לציין את הגיל שלך, ניתן <a href="%{url}">להתנתק מהמשתמש</a>.
   terms_interstitial:
     title: תנאי השירות ותנאי הפרטיות עודכנו
     intro_desc: 'עדכנו את תנאי השירות ותנאי הפרטיות שלנו כפי שמופיע מטה. השינויים
@@ -919,10 +892,8 @@ he:
   peer_review:
     accepted:
       name: אושר
-      description: "<strong>כן</strong>, השליחה הזו <strong>עונה</strong> על הדרישות"
     rejected:
       name: נדחה
-      description: "<strong>לא</strong>, השליחה הזו <strong>לא עונה</strong> על הדרישות"
     escalated:
       name: הועבר לאישור
       description: אני מבקש שמדריך יבדוק את הטופס
@@ -1037,10 +1008,6 @@ he:
     download_in_Vietnamese: 'הורד בוייטנאמית:'
     windows: חלונות (64-סיביות)
     mac: Mac OS X
-  stage_extras_teacher_message: כיבית את האפשרות לתוספות לשיעור עבור חלק מהקבוצות
-    שלך. התלמידים שלך לא יוכלו לראות את הדפים האלו אלא אם כן תאפשר זאת. תוכל לאפשר
-    את התוספות לשיעור ע"י ניווט ל <a href='http://code.org/teacher-dashboard'>לוח
-    הבקרה למורה</a> שלך.
   locked_stage: התכנים בשלב זה אינם ניתנים לשימוש מכיוון ששלב זה נעול כרגע. המורה
     שלך יכול לשחרר את הנעילה של השלב ברגע שיגיע הזמן לעבוד עליו או הזמן לבדוק את תשובותיך.
   hidden_stage: המורה שלך לא ציפה לראות אותך כאן. אנא בקש עזרה מהמורה שלך שיכוון אותך

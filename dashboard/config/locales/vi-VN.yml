@@ -88,9 +88,6 @@ vi:
     continue_with: Tiếp tục với %{provider}
     sign_in_with: Đăng nhập bằng %{provider}
     signed_in: Đăng nhập!
-    signed_out: Bạn đã đăng xuất khỏi <a href="%{url}"> Code.org</a>.
-    sign_out_of: Bạn sử dụng %{provider} để đăng nhập. <a href="%{url}"> Click vào
-      đây</a> để đăng xuất khỏi %{provider}.
     already_signedup: Đã đăng ký?
     notyet_signedup: Chưa tham gia?
     google_oauth2: Tài khoản Google
@@ -158,8 +155,6 @@ vi:
     valid_password: Mật khẩu hợp lệ!
     invalid_password: Mật khẩu phải có ít nhất 6 ký tự
     mismatch_password: Hai mật khẩu bạn nhập không khớp
-    agree_tos_privacy: Tôi đồng ý với <a href='http://code.org/tos'>Điều khoản Dịch
-      vụ</a> và <a href='http://code.org/privacy'>Chính sách Bảo mật</a>.
     under_13_consent: Nếu dưới 13 tuổi, tôi xác nhận rằng tôi đã được cha mẹ hoặc
       người giám hộ hợp pháp cho phép sử dụng các dịch vụ trên Code.org.
     student_consent: Tôi xác nhận rằng tôi có bố mẹ hoặc người giám hộ hợp pháp cho
@@ -167,16 +162,6 @@ vi:
     agree_us_website: Tôi đồng ý với việc sử dụng trang web đặt tại Hoa Kỳ.
     my_data_to_us: Dữ liệu từ việc tôi sử dụng trang web này có thể được gửi đến và
       lưu trữ hoặc xử lý tại Hoa Kỳ.
-    student_terms: Tôi đồng ý tuân theo <a href='http://code.org/tos'>các điều khoản
-      dịch vụ</a> của Code.org. Nếu tôi dưới 13 tuổi, tôi xác nhận bằng cách nộp bản
-      đơn này với sự đồng ý cho phép sử dụng dịch vụ của Code.org của phụ huynh hoặc
-      người giám hộ.<br/><br/>Chúng tôi sẽ không lưu giữ các địa chỉ email dưới bất
-      kì hình thức nào để nhằm vào việc liên lạc các học viên. Các học viên sẽ không
-      bao giờ nhận được email từ Code.org trừ việc khôi phục lại mật khẩu. Hãy xem
-      <a href='http://code.org/privacy'>quyền riêng tư</a> để biết thêm các chi tiết.
-    teacher_terms: Tôi đồng ý tuân theo các điều khoản dịch vụ của Code.org. Mọi chi
-      tiết về quyền riêng tư, xin vui lòng xem <a href='http://code.org/privacy'>quyền
-      riêng tư</a>.
     additional_information: Chúng tôi cần một số thông tin bổ sung để tiếp tục đăng
       ký cho bạn.
     user_type_button: Cập nhật tài khoản
@@ -233,8 +218,6 @@ vi:
     login: Đăng nhập
     invalid_login: Đăng nhập không hợp lệ, xin vui lòng thử lại
     pair_programming: Tôi có một đối tác sử dụng máy tính của tôi
-    student_privacy: Tìm hiểu thêm về việc bạn không nhìn thấy tên đầy đủ <a href='%{student_privacy_blog}'
-      target='_blank'>tại đây</a>.
   password:
     reset_form:
       title: Quên mật khẩu?
@@ -485,10 +468,6 @@ vi:
     tried: thử lại
   home:
     title: TIến trình của bạn
-    description: Code Studio là nơi có các khóa học trực tuyến được tạo bởi Code.org
-    lines_of_code: "%{lines_count} DÒNG MÃ ĐƯỢC VIẾT BỞI HỌC SINH/SINH VIÊN"
-    lines_of_code_linebreak: "%{lines_count} dòng mã <br/> được viết bởi %{students_count}
-      hàng triêu học viên"
     all_courses: Tổng quan về các khóa học 1, 2 và 3
     lesson_plans: Giáo án
     signin_message: Đã đăng ký? %{link}
@@ -529,13 +508,6 @@ vi:
     try_beta_courses: Tính năng mới! Hãy thử nghiệm các khóa học phiên bản beta cho
       học sinh lớp 5
     use_as_teacher: Sử dụng trang web này với tư cách là giáo viên
-    heading_hoc2014: "<h2> Giờ Lập Trình</h2><h1>Mọi lứa tuổi</h1>"
-    heading_elementary: "<h2>các khóa học 20 giờ cho</h2> <h1>Người nhập môn (mọi
-      lứa tuổi)</h1>"
-    heading_apps: "<h2>Thú vị cho</h2><h1>Tất cả mọi người</h1>"
-    heading_tools: "<h2>Sẵn sàng cho bước tiếp theo?</h2> <h1>Công cụ JavaScript cho
-      học sinh trung học</h1>"
-    heading_legacy: "<h2>Khóa học cơ bản của chúng tôi</h2><h1>Mọi lứa tuổi</h1>"
     your_gallery: Bộ sưu tập
     no_primary_course: Hãy thử một khóa học ở Code Studio
     choose_next_course: Thử một khóa Xưởng Mã bằng cách chọn một khóa bên dưới
@@ -789,12 +761,6 @@ vi:
     header_artist: Nghệ sĩ
     report_abuse: Báo cáo lạm dụng
   landing:
-    prerelease: Khóa học này là <span class='betatext'> phiên bản beta</span>.  Điều
-      này có nghĩa là nó không phải là phiên bản cuối cùng của khóa học, và có thể
-      sửa đổi từ việc thu nhận thông tin phản hồi và thực hiện các cải tiến.
-    prerelease_hoc2014: Lớp học này là  <span class='betatext'>phiên bản beta</span>.
-      Nó có thể được sửa đổi từ việc thu nhận thông tin phản hồi và thực hiện các
-      cải tiến.
     report_bug: Báo cáo lỗi
     support: Nhận trợ giúp
     help_resources: Trợ giúp và tài nguyên
@@ -872,12 +838,6 @@ vi:
   age_interstitial:
     age: Tuổi của bạn
     header: Cập nhật thông tin tài khoản
-    message: Chúng tôi đang trong quá trình thu thập thêm kinh nghiệm để bảo vệ quyền
-      riêng tư cho ban mạnh hơn nữa. Để làm được điều đó, chúng tôi cần người dùng
-      nhập tuổi của họ vào đây <br/> Như mọi khi, code.org sẽ không thê, bán hoặc
-      chia sẻ thông tìn này với bất kì bên thứ 3 nào.
-    sign_out: Nếu bạn không muốn cung cấp tuổi của mình, bạn có thể đăng nhập vào
-      <a href="%{url}">sign out</a>
   terms_interstitial:
     title: Cập nhật các điều khoản của dịch vụ và chính sách bảo mật
     intro_desc: 'Chúng tôi đã cập nhật Điều khoản Dịch vụ và Chính sách Bảo mật của
@@ -1015,12 +975,8 @@ vi:
   peer_review:
     accepted:
       name: Đã chấp nhận
-      description: "<strong>Vâng</strong>, bài nộp này <strong>đáp ứng</strong> các
-        yêu cầu"
     rejected:
       name: Bị từ chối
-      description: "<strong>Không</strong>, bài nộp này <strong>không đáp ứng</strong>
-        các yêu cầu"
     escalated:
       name: Đã tăng cấp
   flex_category:

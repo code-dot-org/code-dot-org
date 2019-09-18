@@ -1041,7 +1041,7 @@
     "callouts": {
       "behavior_callout": "Why isn't this behavior working for the middle star?",
       "star2_callout": "Remove this costume block and use the \"this sprite\" block instead.",
-      "this_sprite_callout": "Testing"
+      "this_sprite_callout": "Replace the costume block below with this."
     }
   },
   "https://studio.code.org/s/coursef-2019/stage/15/puzzle/5": {
