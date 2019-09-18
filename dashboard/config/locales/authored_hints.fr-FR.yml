@@ -3336,6 +3336,8 @@ fr-FR:
           dans une boucle <xml><block type="controls_repeat_simplified_dropdown"><title
           name="TIMES" config="3-10">???</title></block></xml>.
       courseA_collector_loops3_2019:
+        courseA_collector_loops3_a: "Essayez d'utiliser une boucle \n\n<xml><block
+          type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\n!"
         courseA_collector_loops3_b: N’oublie pas que tu peux mettre plus d’1 bloc
           dans une boucle <xml><block type="controls_repeat_simplified_dropdown"><title
           name="TIMES" config="3-10">???</title></block></xml>.
