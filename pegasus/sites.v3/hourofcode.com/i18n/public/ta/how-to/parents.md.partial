@@ -4,7 +4,7 @@ layout: wide
 nav: how_to_nav
 ---
 
-{{ signup_button }}
+{{signup_button}}
 
 # உங்கள் குழந்தைடன் எப்படி ஒரு கோட் ஆப் செய்ய வேண்டும்
 
@@ -76,4 +76,4 @@ We provide a variety of fun, hour-long tutorials for students of all ages, creat
 - Encourage your child to continue [to learn online]({{ urls/learn_beyond }}).
 - Help [promote]({{ urls/promote }}) computer science education in your child’s school district.
 
-{{ signup_button }}
+{{signup_button}}

@@ -2,7 +2,7 @@ import {ApplabInterfaceMode} from '../../applab/constants';
 import {DataView} from '../constants';
 import DataOverview from './DataOverview';
 import DataProperties from './DataProperties';
-import DataTable from './DataTable';
+import DataTableView from './DataTableView';
 import Dialog from '../../templates/Dialog';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -91,7 +91,7 @@ class DataWorkspace extends React.Component {
         <div id="data-mode-container" style={styles.container}>
           <DataOverview />
           <DataProperties />
-          <DataTable />
+          <DataTableView />
         </div>
         <Dialog
           body={this.props.warningMsg}
