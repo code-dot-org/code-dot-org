@@ -1160,6 +1160,7 @@ de-DE:
         answers:
         - {}
         - correct: true
+          feedback: Richtig!
         - {}
         - feedback: Falsch
       behaviors 4 predict:
@@ -1168,6 +1169,7 @@ de-DE:
         answers:
         - {}
         - correct: true
+          feedback: Richtig!
         - {}
         - feedback: Falsch
       courseC_multi_artist_prog6_predict1:
@@ -1177,7 +1179,8 @@ de-DE:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Richtig!
+        - text: Ich weiß es nicht.
       courseC_multi_artist_prog6_predict1_2018:
         questions:
         - {}
@@ -1185,7 +1188,8 @@ de-DE:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Richtig!
+        - text: Ich weiß es nicht.
       courseC_multi_artist_prog6_predict1_2018_2019:
         questions:
         - {}
@@ -1193,7 +1197,8 @@ de-DE:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Richtig!
+        - text: Ich weiß es nicht.
       courseC_multi_harvester_loops11_predict1:
         questions:
         - {}
@@ -1201,8 +1206,9 @@ de-DE:
         - text: '4'
         - text: '12'
           correct: true
+          feedback: Richtig!
         - text: '15'
-        - {}
+        - text: Ich weiß es nicht.
       courseC_multi_harvester_loops11_predict1_2018:
         questions:
         - {}
@@ -1210,8 +1216,9 @@ de-DE:
         - text: '4'
         - text: '12'
           correct: true
+          feedback: Richtig!
         - text: '15'
-        - {}
+        - text: Ich weiß es nicht.
       courseC_multi_harvester_loops11_predict1_2018_2019:
         questions:
         - {}
@@ -1219,56 +1226,105 @@ de-DE:
         - text: '4'
         - text: '12'
           correct: true
+          feedback: Richtig!
         - text: '15'
-        - {}
+        - text: Ich weiß es nicht.
       courseC_multi_maze_debugging8_predict1:
         questions:
-        - {}
+        - text: 'Schau dir den Code unten genau an. Was ist der erste Fehler, der
+            dieses Programm scheitern lässt? '
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Das Programm funktioniert. Scrat wird zur Eichel gelangen.
+          feedback: Falsch. Nach seiner letzten Drehung geht Scrat in die falsche
+            Richtung.
+        - text: Nach seiner letzten Drehung geht Scrat in die falsche Richtung.
+          correct: true
+          feedback: Richtig!
+        - text: Scrat geht einen Schritt zu wenig und wird einen Schritt vor der Eichel
+            stoppen.
+          feedback: Falsch. Dass Scrat einen Schritt zu wenig nimmt, passiert erst
+            nachdem er sich in die falsche Richtung gedreht hat.
+        - text: Ich weiß es nicht.
+          feedback: 'Der erste Fehler ist, dass Scrat nach seiner letzen Drehung in
+            die falsche Richtung geht. '
       courseC_multi_maze_debugging8_predict1_2018:
         questions:
-        - {}
+        - text: 'Schau dir den Code unten genau an. Was ist der erste Fehler, der
+            dieses Programm scheitern lässt? '
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Das Programm funktioniert. Scrat wird zur Eichel gelangen.
+          feedback: Falsch. Nach seiner letzten Drehung geht Scrat in die falsche
+            Richtung.
+        - text: Nach seiner letzten Drehung geht Scrat in die falsche Richtung.
+          correct: true
+          feedback: Richtig!
+        - text: Scrat geht einen Schritt zu wenig und wird einen Schritt vor der Eichel
+            stoppen.
+          feedback: Falsch. Dass Scrat einen Schritt zu wenig nimmt, passiert erst
+            nachdem er sich in die falsche Richtung gedreht hat.
+        - text: Ich weiß es nicht.
+          feedback: 'Der erste Fehler ist, dass Scrat nach seiner letzen Drehung in
+            die falsche Richtung geht. '
       courseC_multi_maze_debugging8_predict1_2018_2019:
         questions:
-        - {}
+        - text: 'Schau dir den Code unten genau an. Was ist der erste Fehler, der
+            dieses Programm scheitern lässt? '
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Das Programm funktioniert. Scrat wird zur Eichel gelangen.
+          feedback: Falsch. Nach seiner letzten Drehung geht Scrat in die falsche
+            Richtung.
+        - text: Nach seiner letzten Drehung geht Scrat in die falsche Richtung.
+          correct: true
+          feedback: Richtig!
+        - text: Scrat geht einen Schritt zu wenig und wird einen Schritt vor der Eichel
+            stoppen.
+          feedback: Falsch. Dass Scrat einen Schritt zu wenig nimmt, passiert erst
+            nachdem er sich in die falsche Richtung gedreht hat.
+        - text: Ich weiß es nicht.
+          feedback: 'Der erste Fehler ist, dass Scrat nach seiner letzen Drehung in
+            die falsche Richtung geht. '
       courseC_multi_maze_programming8_predict1:
         questions:
-        - {}
+        - text: Lies dir den Code unten sorgfältig durch. Was passiert, wenn du auf
+            "Ausführen" klickst?
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Der Vogel wird einen Schritt vor dem Schwein stoppen.
+          feedback: Falsch. Dieser Code wird den Vogel genau zum Schwein bringen.
+        - text: Der Vogel wird bis zum Schwein kommen.
+          correct: true
+          feedback: Richtig!
+        - text: Der Vogel wird in das TNT laufen.
+          feedback: Falsch. Dieser Code wird den Vogel genau zum Schwein bringen.
+        - text: Ich weiß es nicht.
+          feedback: Dieser Code bringt den Vogel genau zum Schwein.
       courseC_multi_maze_programming8_predict1_2018:
         questions:
-        - {}
+        - text: Lies dir den Code unten sorgfältig durch. Was passiert, wenn du auf
+            "Ausführen" klickst?
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Der Vogel wird einen Schritt vor dem Schwein stoppen.
+          feedback: Falsch. Dieser Code wird den Vogel genau zum Schwein bringen.
+        - text: Der Vogel wird bis zum Schwein kommen.
+          correct: true
+          feedback: Richtig!
+        - text: Der Vogel wird in das TNT laufen.
+          feedback: Falsch. Dieser Code wird den Vogel genau zum Schwein bringen.
+        - text: Ich weiß es nicht.
+          feedback: Dieser Code bringt den Vogel genau zum Schwein.
       courseC_multi_maze_programming8_predict1_2018_2019:
         questions:
-        - {}
+        - text: Lies dir den Code unten sorgfältig durch. Was passiert, wenn du auf
+            "Ausführen" klickst?
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Der Vogel wird einen Schritt vor dem Schwein stoppen.
+          feedback: Falsch. Dieser Code wird den Vogel genau zum Schwein bringen.
+        - text: Der Vogel wird bis zum Schwein kommen.
+          correct: true
+          feedback: Richtig!
+        - text: Der Vogel wird in das TNT laufen.
+          feedback: Falsch. Dieser Code wird den Vogel genau zum Schwein bringen.
+        - text: Ich weiß es nicht.
+          feedback: Dieser Code bringt den Vogel genau zum Schwein.
       courseC_multi_starWars_predict1:
         questions:
         - {}
@@ -1276,6 +1332,7 @@ de-DE:
         - {}
         - {}
         - correct: true
+          feedback: Richtig!
         - text: Ich weiß nicht
       courseC_multi_starWars_predict1_2018:
         questions:
@@ -1284,6 +1341,7 @@ de-DE:
         - {}
         - {}
         - correct: true
+          feedback: Richtig!
         - text: Ich weiß nicht
       courseC_multi_starWars_predict1_2018_2019:
         questions:
@@ -1292,6 +1350,7 @@ de-DE:
         - {}
         - {}
         - correct: true
+          feedback: Richtig!
         - text: Ich weiß nicht
       courseC_multi_starWars_predict2:
         questions:
@@ -1299,24 +1358,27 @@ de-DE:
         answers:
         - {}
         - correct: true
+          feedback: Richtig!
         - {}
-        - {}
+        - text: Ich weiß es nicht.
       courseC_multi_starWars_predict2_2018:
         questions:
         - {}
         answers:
         - {}
         - correct: true
+          feedback: Richtig!
         - {}
-        - {}
+        - text: Ich weiß es nicht.
       courseC_multi_starWars_predict2_2018_2019:
         questions:
         - {}
         answers:
         - {}
         - correct: true
+          feedback: Richtig!
         - {}
-        - {}
+        - text: Ich weiß es nicht.
       courseD_multi_artist_binary8_predict1:
         questions:
         - {}
@@ -1326,6 +1388,7 @@ de-DE:
         - text: C
         - text: D
           correct: true
+          feedback: Richtig!
       courseD_multi_artist_binary8_predict1_2018:
         questions:
         - {}
@@ -1335,6 +1398,7 @@ de-DE:
         - text: C
         - text: D
           correct: true
+          feedback: Richtig!
       courseD_multi_artist_binary8_predict1_2018_2019:
         questions:
         - {}
@@ -1344,81 +1408,91 @@ de-DE:
         - text: C
         - text: D
           correct: true
+          feedback: Richtig!
       courseD_multi_artist_nestedLoops9_predict1:
         questions:
         - {}
         answers:
         - text: A
           correct: true
+          feedback: Richtig!
         - text: B
         - text: C
-        - {}
+        - text: Ich weiß es nicht.
       courseD_multi_artist_nestedLoops9_predict1_2018:
         questions:
         - {}
         answers:
         - text: A
           correct: true
+          feedback: Richtig!
         - text: B
         - text: C
-        - {}
+        - text: Ich weiß es nicht.
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         questions:
         - {}
         answers:
         - text: A
           correct: true
+          feedback: Richtig!
         - text: B
         - text: C
-        - {}
+        - text: Ich weiß es nicht.
       courseD_multi_bee_conditionals1_predict1:
         questions:
         - {}
         answers:
         - {}
         - correct: true
+          feedback: Richtig!
         - {}
-        - {}
+        - text: Ich weiß es nicht.
       courseD_multi_bee_conditionals1_predict1_2018:
         questions:
         - {}
         answers:
         - {}
         - correct: true
+          feedback: Richtig!
         - {}
-        - {}
+        - text: Ich weiß es nicht.
       courseD_multi_bee_conditionals1_predict1_2018_2019:
         questions:
         - {}
         answers:
         - {}
         - correct: true
+          feedback: Richtig!
         - {}
-        - {}
+        - text: Ich weiß es nicht.
       courseD_multi_bee_conditionals7_predict2:
         questions:
         - {}
         answers:
         - correct: true
+          feedback: Richtig!
         - {}
         - {}
-        - {}
+        - text: Ich weiß es nicht.
       courseD_multi_bee_conditionals7_predict2_2018:
         questions:
         - {}
         answers:
         - correct: true
+          feedback: Richtig!
         - {}
         - {}
-        - {}
+        - text: Ich weiß es nicht.
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         questions:
         - {}
         answers:
         - correct: true
+          feedback: Richtig!
         - {}
         - {}
-        - {}
+        - text: Ich weiß es nicht.
       courseD_multi_bee_nestedLoops2_predict1:
         questions:
         - {}
@@ -1426,7 +1500,8 @@ de-DE:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Richtig!
+        - text: Ich weiß es nicht.
       courseD_multi_bee_nestedLoops2_predict1_2018:
         questions:
         - {}
@@ -1434,7 +1509,8 @@ de-DE:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Richtig!
+        - text: Ich weiß es nicht.
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
         questions:
         - {}
@@ -1442,7 +1518,8 @@ de-DE:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Richtig!
+        - text: Ich weiß es nicht.
       courseD_multi_bee_nestedLoops9_predict2:
         questions:
         - {}
@@ -1450,8 +1527,9 @@ de-DE:
         - text: '4'
         - text: '8'
           correct: true
+          feedback: Richtig!
         - text: '12'
-        - {}
+        - text: Ich weiß es nicht.
       courseD_multi_bee_nestedLoops9_predict2_2018:
         questions:
         - {}
@@ -1459,8 +1537,9 @@ de-DE:
         - text: '4'
         - text: '8'
           correct: true
+          feedback: Richtig!
         - text: '12'
-        - {}
+        - text: Ich weiß es nicht.
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         questions:
         - {}
@@ -1468,8 +1547,9 @@ de-DE:
         - text: '4'
         - text: '8'
           correct: true
+          feedback: Richtig!
         - text: '12'
-        - {}
+        - text: Ich weiß es nicht.
       courseD_multi_collector_debugging10_predict1:
         questions:
         - {}
@@ -1477,7 +1557,8 @@ de-DE:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Richtig!
+        - text: Ich weiß es nicht.
       courseD_multi_farmer_condLoops9_predict1:
         questions:
         - {}
@@ -1485,7 +1566,8 @@ de-DE:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Richtig!
+        - text: Ich weiß es nicht.
       courseD_multi_farmer_condLoops9_predict1_2018:
         questions:
         - {}
@@ -1493,7 +1575,8 @@ de-DE:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Richtig!
+        - text: Ich weiß es nicht.
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
         questions:
         - {}
@@ -1501,39 +1584,44 @@ de-DE:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Richtig!
+        - text: Ich weiß es nicht.
       courseD_multi_farmer_ramp13:
         questions:
         - {}
         answers:
         - {}
         - correct: true
+          feedback: Richtig!
         - {}
-        - {}
+        - text: Ich weiß es nicht.
       courseD_multi_farmer_while10_predict2:
         questions:
         - {}
         answers:
         - {}
         - correct: true
+          feedback: Richtig!
         - {}
-        - {}
+        - text: Ich weiß es nicht.
       courseD_multi_farmer_while10_predict2_2018:
         questions:
         - {}
         answers:
         - {}
         - correct: true
+          feedback: Richtig!
         - {}
-        - {}
+        - text: Ich weiß es nicht.
       courseD_multi_farmer_while10_predict2_2018_2019:
         questions:
         - {}
         answers:
         - {}
         - correct: true
+          feedback: Richtig!
         - {}
-        - {}
+        - text: Ich weiß es nicht.
       courseD_multi_farmer_while4_predict1:
         questions:
         - {}
@@ -1541,7 +1629,8 @@ de-DE:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Richtig!
+        - text: Ich weiß es nicht.
       courseD_multi_farmer_while4_predict1_2018:
         questions:
         - {}
@@ -1549,7 +1638,8 @@ de-DE:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Richtig!
+        - text: Ich weiß es nicht.
       courseD_multi_farmer_while4_predict1_2018_2019:
         questions:
         - {}
@@ -1557,63 +1647,74 @@ de-DE:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Richtig!
+        - text: Ich weiß es nicht.
       courseD_multi_maze_until10_predict2:
         questions:
         - {}
         answers:
         - correct: true
+          feedback: Richtig!
         - {}
         - {}
-        - {}
+        - text: Ich weiß es nicht.
       courseD_multi_maze_until10_predict2_2018:
         questions:
         - {}
         answers:
         - correct: true
+          feedback: Richtig!
         - {}
         - {}
-        - {}
+        - text: Ich weiß es nicht.
       courseD_multi_maze_until10_predict2_2018_2019:
         questions:
         - {}
         answers:
         - correct: true
+          feedback: Richtig!
         - {}
         - {}
-        - {}
+        - text: Ich weiß es nicht.
       courseD_multi_maze_until2_predict1:
         questions:
         - {}
         answers:
         - {}
-        - correct: true
+        - text: Der Vogel wird bis zum Schwein kommen.
+          correct: true
+          feedback: Richtig!
         - {}
-        - {}
+        - text: Ich weiß es nicht.
       courseD_multi_maze_until2_predict1_2018:
         questions:
         - {}
         answers:
         - {}
-        - correct: true
+        - text: Der Vogel wird bis zum Schwein kommen.
+          correct: true
+          feedback: Richtig!
         - {}
-        - {}
+        - text: Ich weiß es nicht.
       courseD_multi_maze_until2_predict1_2018_2019:
         questions:
         - {}
         answers:
         - {}
-        - correct: true
+        - text: Der Vogel wird bis zum Schwein kommen.
+          correct: true
+          feedback: Richtig!
         - {}
-        - {}
+        - text: Ich weiß es nicht.
       courseD_multi_scrat_predict1:
         questions:
         - {}
         answers:
         - {}
         - correct: true
+          feedback: Richtig!
         - {}
-        - {}
+        - text: Ich weiß es nicht.
       courseE_multi_bee_functions_predict1:
         questions:
         - {}
@@ -1621,7 +1722,7 @@ de-DE:
         - correct: true
         - {}
         - {}
-        - {}
+        - text: Ich weiß es nicht.
       courseE_multi_farmer_functions11_predict:
         questions:
         - {}
@@ -1630,6 +1731,7 @@ de-DE:
         - {}
         - {}
         - correct: true
+          feedback: Richtig!
       courseE_multi_farmer_functions11_predict_2018:
         questions:
         - {}
@@ -1637,6 +1739,7 @@ de-DE:
         - {}
         - {}
         - correct: true
+          feedback: Richtig!
         - {}
       courseE_multi_farmer_functions11_predict_2018_2019:
         questions:
@@ -1645,6 +1748,7 @@ de-DE:
         - {}
         - {}
         - correct: true
+          feedback: Richtig!
         - {}
       courseE_prediction_artistFunction1:
         questions:
@@ -1676,16 +1780,18 @@ de-DE:
         answers:
         - {}
         - correct: true
+          feedback: Richtig!
         - {}
-        - {}
+        - text: Ich weiß es nicht.
       courseF_bee_variables_8a_2018_2019:
         questions:
         - {}
         answers:
         - {}
         - correct: true
+          feedback: Richtig!
         - {}
-        - {}
+        - text: Ich weiß es nicht.
       courseF_multi_artist_for10_predict1:
         questions:
         - {}
@@ -1693,7 +1799,8 @@ de-DE:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Richtig!
+        - text: Ich weiß es nicht.
       courseF_multi_artist_for10_predict1_2018:
         questions:
         - {}
@@ -1701,7 +1808,8 @@ de-DE:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Richtig!
+        - text: Ich weiß es nicht.
       courseF_multi_artist_for10_predict1_2018_2019:
         questions:
         - {}
@@ -1709,61 +1817,69 @@ de-DE:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Richtig!
+        - text: Ich weiß es nicht.
       courseF_multi_artist_fwp2_predict1:
         questions:
         - {}
         answers:
         - correct: true
+          feedback: Richtig!
         - {}
         - {}
-        - {}
+        - text: Ich weiß es nicht.
       courseF_multi_artist_variables3a_predict1:
         questions:
         - {}
         answers:
         - correct: true
+          feedback: Richtig!
         - {}
         - {}
-        - {}
+        - text: Ich weiß es nicht.
       courseF_multi_artist_variables3a_predict1_2018:
         questions:
         - {}
         answers:
         - correct: true
+          feedback: Richtig!
         - {}
         - {}
-        - {}
+        - text: Ich weiß es nicht.
       courseF_multi_artist_variables3a_predict1_2018_2019:
         questions:
         - {}
         answers:
         - correct: true
+          feedback: Richtig!
         - {}
         - {}
-        - {}
+        - text: Ich weiß es nicht.
       courseF_multi_bee_conditionals1_predict1:
         questions:
         - {}
         answers:
         - {}
         - correct: true
+          feedback: Richtig!
         - {}
-        - {}
+        - text: Ich weiß es nicht.
       courseF_multi_bee_conditionals7_predict2:
         questions:
         - {}
         answers:
         - correct: true
+          feedback: Richtig!
         - {}
         - {}
-        - {}
+        - text: Ich weiß es nicht.
       courseF_multi_bee_for3_predict1:
         questions:
         - {}
         answers:
         - {}
         - correct: true
+          feedback: Richtig!
         - {}
         - {}
       courseF_multi_bee_for3_predict1_2018:
@@ -1772,6 +1888,7 @@ de-DE:
         answers:
         - {}
         - correct: true
+          feedback: Richtig!
         - {}
         - {}
       courseF_multi_bee_for3_predict1_2018_2019:
@@ -1780,6 +1897,7 @@ de-DE:
         answers:
         - {}
         - correct: true
+          feedback: Richtig!
         - {}
         - {}
       courseF_multi_bee_fwp9_predict1:
@@ -1789,7 +1907,7 @@ de-DE:
         - {}
         - correct: true
         - {}
-        - {}
+        - text: Ich weiß es nicht.
       courseF_multi_playlab_variables4c_predictive1:
         questions:
         - {}
@@ -1797,13 +1915,14 @@ de-DE:
         - correct: true
         - {}
         - {}
-        - {}
+        - text: Ich weiß es nicht.
       coursee_prediction_artistfunction2:
         questions:
         - {}
         answers:
         - {}
         - correct: true
+          feedback: Richtig!
         - {}
         - {}
       coursee_prediction_artistfunction2_2018:
@@ -1812,6 +1931,7 @@ de-DE:
         answers:
         - {}
         - correct: true
+          feedback: Richtig!
         - {}
         - {}
       coursee_prediction_artistfunction2_2018_2019:
@@ -1820,6 +1940,7 @@ de-DE:
         answers:
         - {}
         - correct: true
+          feedback: Richtig!
         - {}
         - {}
       grade2_multi_collector_A_predict1:
@@ -1828,21 +1949,24 @@ de-DE:
         answers:
         - {}
         - correct: true
+          feedback: Richtig!
         - {}
-        - {}
+        - text: Ich weiß es nicht.
       grade2_multi_collector_A_predict1_2018:
         questions:
         - {}
         answers:
         - {}
         - correct: true
+          feedback: Richtig!
         - {}
-        - {}
+        - text: Ich weiß es nicht.
       grade2_multi_collector_A_predict1_2018_2019:
         questions:
         - {}
         answers:
         - {}
         - correct: true
+          feedback: Richtig!
         - {}
-        - {}
+        - text: Ich weiß es nicht.

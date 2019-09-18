@@ -1073,6 +1073,23 @@ ko-KR:
           ## Resources
 
           * [문제해결과정 – 활동 가이드](https://docs.google.com/document/d/1xEPMYIDy70fWCgyLymBNmxkE-6uJ7BYOXSmV8Vyt-SQ/export?format=pdf)
+      Unit 1 Lesson 3 Overview:
+        markdown: |
+          # Overview
+          이 단원에서는 문제해결 과정을 다양한 문제에 적용하여 각 단계가 문제에 대한 해결책을 개발하고 개선하는데 어떻게 도움이 되는지 살펴봅니다.
+
+          ## Resources
+
+          * [문제해결 - 활동가이드](https://docs.google.com/document/d/1cym5lMuy41CbvXYe7F57N2XfI6Afp0hJsHovhR0GD2M/export?format=pdf)
+      Unit 1 Lesson 4 Overview:
+        markdown: |
+          # Overview
+
+          이 단원에서는 컴퓨터가 특정 종류의 문제를 해결하고 일반 컴퓨터의 주요 기능을 배우는 데 어떻게 도움이 되는지에 대해 생각하게 됩니다.
+
+          ## Resources
+
+          * [컴퓨터는 무엇인가? - 활동가이드](https://docs.google.com/document/d/1g4dPcsx2xADEZI0FiMYApLr0hh3_-89NDWd2y86sS6I/export?format=pdf)
       behaviors 1 predict:
         questions:
         - {}
@@ -1737,7 +1754,7 @@ ko-KR:
 
           ## Resources
 
-          * [알루미늄 보트](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - Activity Guide (copy as [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))
+          * [알루미늄 보트](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - 활동가이드 (copy as [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))
       grade2_multi_collector_A_predict1:
         questions:
         - {}

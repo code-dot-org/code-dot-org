@@ -49,7 +49,6 @@ ur:
   auth:
     sign_in_with: '%{provider} کے ساتھ sign in'
     signed_in: '!!Signed in'
-    signed_out: 'آپ<a href="%{url}">Code.org</a>سے sign out ہو چکے ہیں.'
     already_signedup: 'sign up کر چکے ہیں؟'
     notyet_signedup: "ابھی جوائن نہیں کیا؟"
     google_oauth2: 'گوگل اکاؤنٹ'

@@ -666,6 +666,7 @@
   "leaveSection": "Opustit oddíl",
   "less": "Méně",
   "lesson": "Lekce",
+  "lessonExtrasButton": "Přejít na přehled učitele",
   "lessonName": "Název lekce",
   "lessonNumber": "Číslo lekce",
   "lessonNumbered": "Lekce {lessonNumber}: {lessonName}",

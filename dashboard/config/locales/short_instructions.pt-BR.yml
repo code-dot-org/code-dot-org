@@ -695,6 +695,15 @@ pt-BR:
         -   Chame a função 'moverAviao(nome)' dentro do bloco do evento, tal que ele só se move quando a sua caixa de seleção está marcada.
 
         _Desafio: Neste momento, os aviões se movem rápido demais. Você consegue descobrir como alterar o código para que eles se movam mais lentamente?_
+      CSDU4 - Design Mode - 16: Adicione um manipulador de eventos para o botão usando
+        o link "Inserir e mostrar" na guia Eventos do modo de design. (Clique para
+        ver instruções completas).
+      CSDU4 - Design Mode - 17: Atualize os nomes de ID e as mensagens de `console.log`
+        para associar com o botão correto. (Clique para ver as instruções completas.)
+      CSDU4 - Design Mode - 18: Corrija o layout do jogo alvo. (Clique para ver instruções
+        completas)
+      CSDU4 - Design Mode - 4: Melhore o botão escolhendo um ID descritivo e significativo.
+        (Clique para ver instruções completas)
       CSDU6 arrays select rainbow: Mostre o conteúdo da lista na tela em ordem numérica.
         (Clique aqui para ver todas as instruções)
       CSDU6 arrays select rainbow_2018: Mostre o conteúdo da lista na tela em ordem
@@ -1569,6 +1578,35 @@ pt-BR:
         néctares?
       NEW Course 4 Play Lab Params 11: 'É hora de atividade livre! Divirta-se com
         todos os blocos de sua caixa de ferramentas. '
+      NetSim Standalone Broadcast: Nesta versão do Simulador de Internet, você pode
+        conectar-se a até 5 outras pessoas em uma sala. Quando você envia mensagens
+        na sala, todo mundo as recebe. Quais são alguns dos desafios desse sistema
+        e como você pode resolvê-los?
+      NetSim Standalone Freeplay: Nesta configuração, a maioria das opções está ativada
+        e você pode brincar com elas. Divirta-se!
+      NetSim Standalone Manual DNS: Nesta versão do simulador, você não pode ver os
+        endereços dos outros alunos. Em vez disso, um de vocês deve atuar como um
+        serviço de nomes, para ajudar a compartilhar endereços.
+      NetSim Standalone Packets TCP: 'As mensagens na Internet podem seguir vários
+        caminhos para chegar ao seu destino e, às vezes, ao longo do caminho em que
+        a mensagem é descartada. Nesta versão do Simulador de Internet, há 10% de
+        chance de um pacote ser descartado, vários pacotes podem seguir caminhos diferentes
+        para o destino e o tamanho máximo padrão do pacote é definido como 6 caracteres
+        adicionais. '
+      NetSim Standalone SendAB: Você e seu parceiro compartilham um único fio que
+        só pode estar no estado A ou B. Você pode definir o fio para qualquer estado
+        a qualquer momento e pode ler o estado do fio a qualquer momento. Você consegue
+        descobrir uma maneira de se comunicar efetivamente com apenas esse sistema?
+      NetSim Standalone Sending Numbers: 'Agora você e seu parceiro podem enviar e
+        receber mensagens de forma confiável, sem coordenação extra! Enquanto você
+        está sempre enviando bits para frente e para trás, também pode representá-los
+        como números decimais. Que tipo de informação você pode representar com este
+        sistema? '
+      NetSim Standalone Sending Numbers Ascii: 'Agora que você transmitiu informações
+        representadas como números decimais, é possível mapear esses números para
+        caracteres de texto para enviar e receber informações baseadas em texto. Com
+        um protocolo baseado em texto, você pode representar e comunicar com facilidade
+        todos os tipos de informações. '
       Overworld Avoid Monsters: Não é uma boa ideia topar com um Creeper. Passe com
         cuidado pelos Creepers e chegue na sua casa em segurança.
       Overworld Avoid Monsters_2019: Não é uma boa ideia topar com um Creeper. Passe

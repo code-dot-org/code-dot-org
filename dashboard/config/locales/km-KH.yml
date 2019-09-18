@@ -70,9 +70,6 @@ km:
   auth:
     sign_in_with: ចូល​គណនី​ជាមួយ %{provider}
     signed_in: បាន​ចូល​គណនី!
-    signed_out: អ្នក​បាន​ចាកចេញ​ពី  <a href="%{url}">Code.org</a>។
-    sign_out_of: អ្នក​បាន​ប្រើ %{provider} ដើម្បី​ចូល។ <a href="%{url}">ចុច​ទីនេះ</a>
-      ដើម្បី​ចេញ​ពី %{provider}។
     already_signedup: បាន​ចុះ​ឈ្មោះ​រួច​ហើយ?
     notyet_signedup: មិន​បាន​ចូលរួម​ទេ?
     google_oauth2: គណនី Google
@@ -161,8 +158,6 @@ km:
     login: ចូល​គណនី
     invalid_login: ការចូលទៅកាន់គណនីយរបស់អ្នកមិនត្រឹមត្រូវ សូមព្យាយាមម្តងទៀត
     pair_programming: នៅក្នុងកុំព្យូទ័ររបស់ខ្ញុំមានដៃគូរប្រកួតប្រជែង
-    student_privacy: ស្វែងយល់បន្ថែមហេតុអ្វីបានជាពុំមានឈ្មោះពេញរបស់អ្នកតាមការណែនាំ<a
-      href='%{student_privacy_blog}' target='_blank'>ត្រង់នេះ</a>។
   password:
     reset_form:
       title: បាន​ភ្លេច​ពាក្យ​សម្ងាត់​របស់​អ្នក?

@@ -50,9 +50,6 @@ uz:
   auth:
     sign_in_with: "%{provider} orqali kirish"
     signed_in: Kirgansiz!
-    signed_out: Siz <a href="%{url}">saytidan</a> chiqdingiz.
-    sign_out_of: Siz saytga kirish uchun %{provider} dan foydalandingiz. %{provider}
-      dan chiqish uchun <a href="%{url}">bu yerni</a> bosing.
     twitter: Twitter
     facebook: Facebook
     windowslive: Microsoft akkaunti

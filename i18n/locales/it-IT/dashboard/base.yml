@@ -48,7 +48,11 @@ it:
   heading_x_of_y: "%{heading} (pagina %{x} su %{y})"
   join_section:
     code:
+      title: 'Iscrivi una classe su Code.org'
       placeholder: "Codice Classe (ABCDEF)"
+      instructions: "Inserisci il codice di 6 lettere (per esempio: \"ABCDEF\") che il tuo insegnante ha condiviso per farti aggiungere alla sua classe."
+      instructions_short: "Inserisci il codice di 6 lettere della tua classe"
+      submit: 'Partecipa'
   add_hint_form:
     placeholder: 'Scrivi qui il tuo suggerimento'
     submit: 'Aggiungi un suggerimento'
@@ -77,8 +81,6 @@ it:
     continue_with: 'Continua con %{provider}'
     sign_in_with: 'Accedi usando %{provider}'
     signed_in: 'Hai effettuato l''accesso!'
-    signed_out: 'Hai cancellato la tua iscrizione a <a href="%{url}">Code.org</a>.'
-    sign_out_of: 'Hai usato %{provider} per iscriverti. <a href="%{url}">Clicca qua</a> per cancellare la tua iscrizione a %{provider}.'
     already_signedup: 'Già iscritto?'
     notyet_signedup: "Non ti sei ancora iscritto?"
     google_oauth2: 'Google'
@@ -124,13 +126,10 @@ it:
     valid_password: "Password valida!"
     invalid_password: "La password deve essere lunga almeno 6 caratteri"
     mismatch_password: "Le due password che hai inserito non corrispondono"
-    agree_tos_privacy: "Accetto i <a href='http://code.org/tos'>Termini di Servizio</a> e l'<a href='http://code.org/privacy'>Informativa sulla Privacy</a>."
     under_13_consent: "Se ho meno di 13 anni, confermo di avere l’autorizzazione dei miei genitori o del mio tutore legale all’utilizzo dei servizi di Code.org."
     student_consent: "Confermo che i miei genitori o chi ne fa le veci mi hanno dato il permesso di utilizzare i servizi di Code.org."
     agree_us_website: "Accetto di utilizzare un sito Web con sede negli Stati Uniti."
     my_data_to_us: "I dati relativi al mio utilizzo di questo sito Web possono essere inviati e archiviati o elaborati negli Stati Uniti."
-    student_terms: "Accetto di essere legato ai <a href='http://code.org/tos'> Termini di Servizio </a> di Code.org. Se ho meno di 13 anni, confermo, sottoscrivendo a questo modulo che ho il permesso da parte di un genitore o di un tutore legale di usare i servizi di Code.org. <br/><br/>Gli indirizzi email non sono salvati in un modo che ci permetta di contattare gli studenti. Gli studenti non riceveranno mai email da Code.org se non per il recupero della password. Per più informazioni, leggere la nostra <a href='http://code.org/privacy'>Informativa sulla Privacy</a>."
-    teacher_terms: "Accetto di essere vincolato ai <a href='http://code.org/tos'>Termini di Servizio</a> di Code.org. Per ulteriori informazioni sulla privacy, leggi la nostra <a href='http://code.org/privacy'>Informativa sulla Privacy</a>."
     additional_information: "Abbiamo bisogno di alcune informazioni aggiuntive per continuare la tua iscrizione."
     user_type_button: "Aggiorna Tipologia di Account"
     user_type_label: "Tipo di account"
@@ -184,7 +183,6 @@ it:
     login: 'Accedi'
     invalid_login: 'Accesso non valido, per favore riprova'
     pair_programming: 'Sto lavorando in coppia'
-    student_privacy: "Clicca <a href='%{student_privacy_blog}' target='_blank'>qui</a> per ulteriori informazioni (in inglese) sul perché non stai visualizzando il tuo nome completo."
   password:
     reset_form:
       title: 'Hai dimenticato la tua password?'
@@ -429,9 +427,6 @@ it:
     tried: 'Provato'
   home:
     title: "Officina del Codice"
-    description: 'Code Studio è la base di partenza per i corsi online creati da Code.org'
-    lines_of_code: "%{lines_count} LINEE DI CODICE SCRITTE DAGLI STUDENTI"
-    lines_of_code_linebreak: "%{lines_count} di linee di codice <br/> scritte da %{students_count} milioni di studenti"
     all_courses: "Panoramica dei corsi 1, 2, 3 e 4 (in inglese)"
     lesson_plans: "Piani di lavoro delle lezioni"
     signin_message: "Già iscritto? %{link}"
@@ -461,11 +456,6 @@ it:
     test_videos_help: 'Prova nella tua scuola  il nostro nuovo visualizzatore di video'
     try_beta_courses: 'Novità! Prova i nostri corsi specifici per studenti delle scuole elementari (in versione provvisoria)'
     use_as_teacher: 'Guarda questo sito come insegnante'
-    heading_hoc2014: "<h2>L'Ora del Codice</h2><h1>per iniziare</h1> (a qualunque età)"
-    heading_elementary: "<h2>Corsi di 20 ore</h2><h1>per approfondire</h1> (a qualunque età)"
-    heading_apps: "<h2>Divertimento per</h2><h1>tutti</h1>"
-    heading_tools: "<h2>Pronto per il prossimo passo?</h2><h1>Strumenti JavaScript per la Scuola Superiore</h1>"
-    heading_legacy: "<h2>Corso rapido</h2> per <h1>i più grandi</h1>"
     your_gallery: La tua collezione
     no_primary_course: "Prova un corso di Code Studio"
     choose_next_course: "Prova un corso di Code Studio scegliendone uno qui sotto"
@@ -661,8 +651,6 @@ it:
     header_artist: "Artista"
     report_abuse: "Segnala un abuso"
   landing:
-    prerelease: "Questo corso è in <span class='betatext'>versione provvisoria</span>.  Significa che non è la versione finale ed è soggetto a revisioni man mano che arrivano osservazioni e vengono fatti miglioramenti."
-    prerelease_hoc2014: "Questo corso è in <span class='betatext'>versione provvisoria</span>. È soggetto a revisione man mano che arrivano osservazioni in modo da migliorarlo."
     report_bug: "Report Bug"
     support: "Ottieni aiuto"
     support_url: "//programmailfuturo.it/aiuto"
@@ -730,8 +718,6 @@ it:
   age_interstitial:
     age: La tua età
     header: Aggiornamento delle informazioni di iscrizione
-    message: "Siamo in fase di aggiornamento del nostro sito per fornire una protezione ancora maggiore della vostra privacy. Per far questo, abbiamo bisogno che gli utenti già iscritti inseriscano qui la loro età. <br/>Come sempre, code.org non affitterà, venderà o condividerà mai queste informazioni con terze parti."
-    sign_out: 'Se non desideri fornire la tua età puoi <a href="%{url}">uscire</a>.'
   terms_interstitial:
     title: "Aggiornati i termini e le condizioni della privacy"
     intro_desc: "Abbiamo aggiornato i nostri Termini di Servizio e la nostra Informativa sulla Privacy, come mostrato di seguito. I cambiamenti saranno effettivi a partire dal 24 agosto 2016. La modifica più importante: noi <i>non memorizzeremo più le e-mail degli account degli studenti su Code studio.</i> Questo è molto importante per noi e speriamo che stabilisca un nuovo standard per la privacy degli studenti nella tecnologia di formazione. Ti abbiamo inviato un riassunto delle altre modifiche via e-mail."
@@ -827,10 +813,8 @@ it:
   peer_review:
     accepted:
       name: 'Accettato'
-      description: '<strong>Sì</strong>, questa presentazione <strong>soddisfa</strong> i requisiti'
     rejected:
       name: 'Rifiutato'
-      description: '<strong>No</strong>, questa presentazione <strong>non soddisfa</strong> i requisiti'
     escalated:
       name: 'Aumentato'
       description: 'Vorrei che un istruttore esaminasse questa presentazione'
@@ -970,7 +954,6 @@ it:
     download_in_Vietnamese: 'Scarica in vietnamita:'
     windows: 'Windows (64 bit)'
     mac: 'Mac OS X'
-  stage_extras_teacher_message: "In alcune delle tue classi, gli Esercizi Supplementari sono disabilitati. Se non li abiliti, i tuoi studenti non potranno vedere queste pagine. Puoi gestire queste abilitazioni dalla tua <a href='http://code.org/teacher-dashboard'>pagina di controllo</a>."
   locked_stage: 'I contenuti di questa fase non sono visibili perché questa fase è al momento bloccata. Il/La tuo/a insegnante può sbloccare questa fase quando è il momento di lavorarci su o revisionare le tue risposte.'
   hidden_stage: "Il/La tuo/a insegnante non ti aspettava qui. Per favore chiedi al/alla tuo/a insegnante su quale lezione dovresti essere."
   hidden_script: "Il tuo insegnante non si aspettava che tu arrivassi qui. Per favore, chiedigli in quale lezione dovresti essere."
@@ -1065,15 +1048,9 @@ it:
       title: 'Partecipazione a Seminari'
       intro: "Grazie per aver dedicato tempo nella formazione sui materiali didattici di Code.org. La nostra missione di rendere disponibile l'apprendimento dell'informatica a tutti i bambini in tutte le scuole del mondo non sarebbe possibile senza di te."
       instructions: "Per favore, compila il seguente modulo per indicare che 1) hai partecipato ad un seminario di formazione gestito da uno dei partner internazionali di Code.org e 2) accetti di condividere i tuoi dati con il nostro partner internazionale nel tuo paese (in Italia: Programma il Futuro) in modo che possa aiutarti a sostenere il tuo viaggio come insegnante di informatica."
-      thanks: "Grazie per esserti iscritto! Aspettiamo di supportarti mentre conosci corsi e strumenti di Code.org. Perfavore continua a condividere le tue domande ed i tuoi feedback con noi scrivendoci a <a href='%{support_email_url}'>support@code.org</a> o postando sul <a href='%{teacher_forum_url}' target='_blank'>forum insegnanti</a>!"
     logged_out:
       heading: 'Grazie per il tuo interesse nel Programma di apprendimento professionale!'
       body: 'Per iniziare, devi prima accedere al tuo account Code.org. Se desideri ulteriori informazioni sul programma prima di avviare la tua candidatura, consulta la <a href="%{url}"> panoramica del programma di apprendimento professionale </a>.'
-    not_teacher:
-      body: 'Grazie per l''interesse dimostrato nel programma di apprendimento professionale di Code.org! Al momento sei collegato a un account studente. Crea un account insegnante o <a href="%{user_settings}"> vai alle impostazioni utente </a> per aggiornare il tuo account da studente a insegnante.'
-      more: 'Se desideri ulteriori informazioni sul programma prima di avviare la tua candidatura, consulta la <a href="%{pl_overview}"> panoramica del programma di apprendimento professionale </a>.'
-    no_teacher_email:
-      body: 'Al tuo account non è associato alcun indirizzo email. Per favore, prima di completare questo modulo, <a href="%{user_registration}">vai alle impostazioni del tuo account</a> per aggiungere i tuoi indirizzi email.'
   courses_category: 'Corsi Avanzati'
   cookie_banner:
     message: 'Continuando a navigare nel nostro sito o cliccando su "Accetto", accetti la memorizzazione dei cookie sul tuo computer o dispositivo.'

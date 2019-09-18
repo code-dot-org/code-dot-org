@@ -664,6 +664,7 @@
   "leaveSection": "सेक्शन छोड़ें",
   "less": "कम",
   "lesson": "पाठ",
+  "lessonExtrasButton": "अध्यापक डैशबोर्ड पर जाएं",
   "lessonName": "पाठ का नाम",
   "lessonNumber": "पाठ संख्या",
   "lessonNumbered": "पाठ {lessonNumber}: {lessonName}",
