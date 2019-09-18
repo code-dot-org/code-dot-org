@@ -36,6 +36,7 @@ ko:
           밑에 있는 빈 곳에 정보들을 입력 하세요."
         error:
           future: 오늘 이전 날짜만 가능합니다.
+  beta: 베타
   hello: Hello world
   welcome_back: "%{name} 님, 어서오세요. "
   your_professional_learning_plan: 전문적인 학습 계획
@@ -49,13 +50,9 @@ ko:
   okay: 알겠어
   or: 이거나
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: '선생님 추가:'
       placeholder: 섹션 코드(ABCDEF)
-      instructions: 당신의 선생님과 공유하고 있는 문자를 입력해주세요. 그 문자는 "ABCDEF" 와 같은 6개의 영어 문자입니다.
-      instructions_short: 6자리의 섹션 코드를 입력하세요.
-    submit: 선생님 추가하기
   add_hint_form:
     placeholder: 도움내용을 입력하세요.
     submit: 도움말 추가하기

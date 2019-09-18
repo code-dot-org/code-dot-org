@@ -32,6 +32,7 @@ id:
         finish_sign_up_subheader_provider: 'Mengisi informasi berikut untuk menyelesaikan membuat akun Code.org dengan <strong>%{provider}</strong> untuk <strong>%{email}</strong>.'
         error:
           future: tidak mungkin di masa depan
+  beta: "Percobaan"
   hello: "Halo dunia"
   welcome_back: "Selamat datang kembali, %{name}"
   your_professional_learning_plan: "Rencana Pembelajaran Profesional Anda"
@@ -45,13 +46,9 @@ id:
   okay: "Oke"
   or: "atau"
   heading_x_of_y: "%{heading} (halaman %{x} dari %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Tambahkan seorang guru:'
       placeholder: "Kode Bagian (ABCDEF)"
-      instructions: "Tolong masukkan kode yang dibagikan oleh gurumu. Kode tersebut adalah sebuah kode 6 huruf seperti \"ABCDEF\"."
-      instructions_short: "Masukkan 6 huruf bagian kode anda"
-    submit: 'Cantumkan nama guru'
   add_hint_form:
     placeholder: 'Masukkan pentunjuk anda disini'
     submit: 'tambah petunjuk'

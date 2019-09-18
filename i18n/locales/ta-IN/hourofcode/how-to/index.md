@@ -4,7 +4,7 @@ layout: wide
 nav: how_to_nav
 ---
 
-{{ signup_button }}
+{{signup_button}}
 
 # ஒரு வகுப்பின் ஒரு மணி நேரத்தை உங்கள் வகுப்பில் எப்படி கற்பிக்க வேண்டும்
 
@@ -111,4 +111,4 @@ Promote your Hour of Code [with these tools]({{ urls/promote_resources }}) and e
     - Encourage students to continue to [learn online]({{ urls/learn_beyond }}).
     - [Attend]({{ urls/professional_development_workshops }}) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
     
-    {{ signup_button }}
+    {{signup_button}}

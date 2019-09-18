@@ -577,11 +577,6 @@ vi:
           CONDITION:
             '"when"': khi nào
             '"while"': Lặp khi
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': đúng
-            'false': sai
       gamelab_getProp:
         text: "{PROPERTY} {SPRITE}"
         options:
@@ -635,7 +630,6 @@ vi:
             '"x"': hoành độ
             '"y"': tung độ
             '"direction"': phương hướng chuyển động
-            '"tint"': sắc thái
       gamelab_setSizes:
         text: thiết lập {PROPERTY} {SPRITE} thành {N}%
         options:
@@ -662,13 +656,6 @@ vi:
             '"left"': trái
             '"right"': phải
             '"space"': vũ trụ
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": trên
-            "'down'": xuống
-            "'left'": trái
-            "'right'": phải
       gamelab_whileKey:
         options:
           KEY:

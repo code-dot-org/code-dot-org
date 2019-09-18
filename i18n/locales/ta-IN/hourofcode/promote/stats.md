@@ -6,7 +6,7 @@ nav: promote_nav
 
 <a id="blurb"></a>
 
-{{ signup_button }}
+{{signup_button}}
 
 # Blurbs and useful stats
 
@@ -52,4 +52,4 @@ Code.org என்பது ஒரு 501c3 பொது லாபமல்ல�
 
 {{ stats_carousel }}
 
-{{ signup_button }}
+{{signup_button}}

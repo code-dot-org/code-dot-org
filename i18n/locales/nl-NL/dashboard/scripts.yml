@@ -2105,3 +2105,9 @@ nl:
               name: Snelheid
             Functions:
               name: Functies
+        peru-2019:
+          stages:
+            Introduction:
+              name: Introductie
+            Nested Loops:
+              name: Genestelde lussen

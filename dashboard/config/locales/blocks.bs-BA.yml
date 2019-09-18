@@ -648,11 +648,6 @@ bs:
           CONDITION:
             '"when"': kada
             '"while"': dok
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': istinito
-            'false': neistinito
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -721,7 +716,6 @@ bs:
             '"scale"': veličina
             '"rotation"': rotacija
             '"direction"': smijer kretanja
-            '"tint"': nijanse
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -751,13 +745,6 @@ bs:
             '"w"': w
             '"s"': s
             '"d"': d
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": gore
-            "'down'": dolje
-            "'left'": lijevo
-            "'right'": desno
       gamelab_whileKey:
         options:
           KEY:

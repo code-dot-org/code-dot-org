@@ -32,16 +32,16 @@ var msg = i18n;
 
 // 9 possible positions in playspace (+ random):
 var POSITION_VALUES = [
-  [commonMsg.positionRandom(), RANDOM_VALUE],
-  [commonMsg.positionTopLeft(), Position.TOPLEFT.toString()],
-  [commonMsg.positionTopCenter(), Position.TOPCENTER.toString()],
-  [commonMsg.positionTopRight(), Position.TOPRIGHT.toString()],
-  [commonMsg.positionMiddleLeft(), Position.MIDDLELEFT.toString()],
-  [commonMsg.positionMiddleCenter(), Position.MIDDLECENTER.toString()],
-  [commonMsg.positionMiddleRight(), Position.MIDDLERIGHT.toString()],
-  [commonMsg.positionBottomLeft(), Position.BOTTOMLEFT.toString()],
-  [commonMsg.positionBottomCenter(), Position.BOTTOMCENTER.toString()],
-  [commonMsg.positionBottomRight(), Position.BOTTOMRIGHT.toString()]
+  [commonMsg.random(), RANDOM_VALUE],
+  [commonMsg.topLeft(), Position.TOPLEFT.toString()],
+  [commonMsg.topCenter(), Position.TOPCENTER.toString()],
+  [commonMsg.topRight(), Position.TOPRIGHT.toString()],
+  [commonMsg.middleLeft(), Position.MIDDLELEFT.toString()],
+  [commonMsg.middleCenter(), Position.MIDDLECENTER.toString()],
+  [commonMsg.middleRight(), Position.MIDDLERIGHT.toString()],
+  [commonMsg.bottomLeft(), Position.BOTTOMLEFT.toString()],
+  [commonMsg.bottomCenter(), Position.BOTTOMCENTER.toString()],
+  [commonMsg.bottomRight(), Position.BOTTOMRIGHT.toString()]
 ];
 
 // Still a slightly reduced set of 17 out of 25 possible positions (+ random):
@@ -965,14 +965,22 @@ exports.install = function(blockly, blockInstallOptions) {
       dropdown.setValue(this.VALUES[1][1]); // default to top-left
       this.setHSV(184, 1.0, 0.74);
       if (spriteCount > 1) {
-        this.appendDummyInput().appendTitle(
-          spriteNumberTextDropdown(msg.setSpriteN),
-          'SPRITE'
+        this.interpolateMsg(
+          msg.setSpritePosition(),
+          () => {
+            this.appendValueInput('SPRITE').appendTitle({spriteIndex: ''});
+          },
+          blockly.ALIGN_RIGHT
         );
       } else {
-        this.appendDummyInput().appendTitle(msg.setSprite());
+        this.interpolateMsg(
+          msg.setPosition(),
+          () => {
+            this.appendDummyInput().appendTitle(dropdown, 'VALUE');
+          },
+          blockly.ALIGN_RIGHT
+        );
       }
-      this.appendDummyInput().appendTitle(dropdown, 'VALUE');
       this.setPreviousStatement(true);
       this.setInputsInline(true);
       this.setNextStatement(true);
@@ -998,12 +1006,17 @@ exports.install = function(blockly, blockInstallOptions) {
       var dropdown = new blockly.FieldDropdown(POSITION_VALUES);
       dropdown.setValue(POSITION_VALUES[1][1]); // default to top-left
       this.setHSV(184, 1.0, 0.74);
+      this.interpolateMsg(
+        msg.setSpritePosition(),
+        () => {
+          this.appendValueInput('SPRITE').appendTitle({spriteIndex: ''});
+        },
+        () => {
+          this.appendDummyInput().appendTitle(dropdown, 'VALUE');
+        },
+        blockly.ALIGN_RIGHT
+      );
 
-      this.appendValueInput('SPRITE')
-        .setCheck(blockly.BlockValueType.NUMBER)
-        .appendTitle(msg.setSpriteN({spriteIndex: ''}));
-
-      this.appendDummyInput().appendTitle(dropdown, 'VALUE');
       this.setPreviousStatement(true);
       this.setInputsInline(true);
       this.setNextStatement(true);
@@ -1076,8 +1089,13 @@ exports.install = function(blockly, blockInstallOptions) {
       var dropdown = new blockly.FieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[1][1]); // default to top-left
       this.setHSV(184, 1.0, 0.74);
-      this.appendDummyInput().appendTitle(msg.addGoal());
-      this.appendDummyInput().appendTitle(dropdown, 'VALUE');
+      this.interpolateMsg(
+        msg.addGoalPosition(),
+        () => {
+          this.appendDummyInput().appendTitle(dropdown, 'VALUE');
+        },
+        blockly.ALIGN_RIGHT
+      );
       this.setPreviousStatement(true);
       this.setInputsInline(true);
       this.setNextStatement(true);

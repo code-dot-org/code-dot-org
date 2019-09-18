@@ -48,10 +48,10 @@
       .field
         %label
           = f.radio_button :status, :accepted, disabled: reviewed, checked: ['accepted', nil].include?(@peer_review.status)
-          != t('peer_review.accepted.description')
+          != t('peer_review.accepted.description_markdown', markdown: true)
         %label
           = f.radio_button :status, :rejected, disabled: reviewed
-          != t('peer_review.rejected.description')
+          != t('peer_review.rejected.description_markdown', markdown: true)
     .field
       %p Review notes:
       = f.text_area :data, rows: 7, placeholder: 'Type your peer review here', style: 'width: 100%; box-sizing: border-box;', disabled: reviewed

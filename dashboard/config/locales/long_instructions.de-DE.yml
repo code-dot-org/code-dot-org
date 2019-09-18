@@ -439,13 +439,65 @@ de-DE:
       course4_artist_fwp_challenge1: Versuche, dieses Programm auszuführen und verändere
         es, um zu sehen, was passiert. Kannst du herausfinden, wie es funktioniert?
         (Oder lösche es und ersetze es durch etwas ganz anderes)
-      courseA_maze_seq13_2019: Hole das Schwein auf irgendeinem Weg!
-      courseA_maze_seq6_2018: Gehe einen Weg und dann einen anderen, um den Vogel
-        zum Schwein zu bringen!
-      courseA_maze_seq6_2019: Gehe einen Weg und dann einen anderen, um den Vogel
-        zum Schwein zu bringen!
+      courseA_maze_seq1: _"Nimm diese Blöcke zu Hilfe und versuche, mich zum Schwein
+        zu führen!"_
+      courseA_maze_seq10: |-
+        **Herausforderung:** Geh um das TNT herum, um den Vogel zum Schwein zu bringen!
+
+        ![expandable](https://images.code.org/a656e421bc90e530a7e1ce636e507752-image-1497996976195.gif)
+      courseA_maze_seq11: |-
+        Es ist zeit für eine kleinere Aufgabe! Gehe zuerst in eine Richtung und dann in eine andere, um den Vogel zum Schwein zu bringen.
+
+        ![expandable](https://images.code.org/bb4571384fc56702704a0c9395ee3695-image-1497996380902.gif)
+      courseA_maze_seq12: |-
+        Hole dir das Schwein!
+
+        ![expandable](https://images.code.org/c6ae5024441e2305db82d06679e5a281-image-1497997160569.gif)
+      courseA_maze_seq13_2019: Hole dir das Schwein auf irgendeine Art und Weise!
+      courseA_maze_seq1_2018: _"Nimm diese Blöcke zu Hilfe und versuche, mich zum
+        Schwein zu führen!"_
+      courseA_maze_seq1_2019: _"Nimm diese Blöcke zu Hilfe und versuche, mich zum
+        Schwein zu führen!"_
+      courseA_maze_seq2: |-
+        _"Ein Fehler! Bring den Code in Ordnung um mich zum Schwein zu bringen."_
+
+        ![expandable](https://images.code.org/4af4959874b3ca1fdd3008dc4f77add4-image-1497994904322.gif)
+      courseA_maze_seq3: |-
+        _"Bring den Code in Ordnung um mich zum Schwein zu bringen!"_
+
+        ![expandable](https://images.code.org/4adca88dc6df7378846a91d0fb0e59d1-image-1497995239069.gif)
+      courseA_maze_seq4: |-
+        _"Irgendwas stimmt hier nicht."_
+
+        ENTFERNE einen Block um den Vogel zum Schwein zu bringen!
+
+        ![expandable](https://images.code.org/6af44fb0ba5ac5dd5502e2538f51fb9c-image-1497996162453.gif)
+      courseA_maze_seq5: |-
+        Versuche diese Aufgabe von Anfang an allein zu schaffen.
+
+        ![expandable](https://images.code.org/e4ef591b4580db478330c298d1af756f-image-1497997080163.gif)
+      courseA_maze_seq6: |-
+        Gehe zuerst in eine Richtung und dann in eine andere, um den Vogel zum Schwein zu bringen!
+
+        ![expandable](https://images.code.org/8f71c406afa60c6898937d950c670205-image-1497996506419.gif)
+      courseA_maze_seq6_2018: Gehe zuerst in eine Richtung und dann in eine andere,
+        um den Vogel zum Schwein zu bringen!
+      courseA_maze_seq6_2019: Gehe zuerst in eine Richtung und dann in eine andere,
+        um den Vogel zum Schwein zu bringen!
+      courseA_maze_seq7: |-
+        Finde heraus was fehlt, und füge dann Blöcke hinzu, um den Vogel zum Schwein zu bringen!
+
+        ![expandable](https://images.code.org/35bdb628dabd4259b581286b071c02f3-image-1497996651260.gif)
+      courseA_maze_seq8: |-
+        Löse dieses Level und bring den Vogel zum Schwein!
+
+        ![expandable](https://images.code.org/fb4735244f74a4e001d1fa7b5c6028f9-image-1497998330218.gif)
       courseA_maze_seq8_2018: Löse dieses Level und bring den Vogel zum Schwein!
       courseA_maze_seq8_2019: Löse dieses Level und bring den Vogel zum Schwein!
+      courseA_maze_seq9: |-
+        **Herausforderung:**Repariere dieses Level, indem Du Blöcke hinzufügst um den Vogel zum Schwein zu bewegen!
+
+        ![expandable](https://images.code.org/3f35068dd3cf51c420a536fa078f854d-image-1497996843105.gif)
       courseB_artist_loops3_2019: Hilfe dem Künstler, eine Linie siebenmal zu zeichnen,
         um eine Gartenmauer zu bauen.
       courseB_artist_loops7: "**Aufgabe:** Es ist ein versteckter Garten! Lauf ein
