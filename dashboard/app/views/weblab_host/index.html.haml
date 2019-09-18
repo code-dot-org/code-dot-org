@@ -5,5 +5,5 @@
     #bramble{style: 'height: 100vh;overflow: hidden;'}
     -# webpack-runtime.js must appear exactly once on any page containing webpack entries
     %script{src: asset_path('js/webpack-runtime.js')}
-    %script{src: asset_path('js/bramble/thirdparty/require.min.js'), 'data-main': asset_path('js/brambleHost.js')}
-    =# DEVMODE: %script{src: asset_path('http://127.0.0.1:8000/src/thirdparty/require.min.js'), 'data-main': asset_path('js/brambleHost.js')}
+    %script{src: asset_path('js/bramble/thirdparty/require.min.js'), 'data-main': minifiable_asset_path('js/brambleHost.js')}
+    =# DEVMODE: %script{src: asset_path('http://127.0.0.1:8000/src/thirdparty/require.min.js'), 'data-main': minifiable_asset_path('js/brambleHost.js')}
