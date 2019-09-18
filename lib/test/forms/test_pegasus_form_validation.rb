@@ -171,6 +171,29 @@ class PegasusFormValidationTest < Minitest::Test
     assert_equal({key: ['error']}, e.errors)
   end
 
+  def test_escaping_html_entities
+    special_chars = '<>&"\''
+    html_entities = '&lt;&gt;&amp;&quot;&#39;'
+    not_supported_data_type = Set[2, 3]
+
+    input = [
+      "string of #{special_chars}",
+      ['array', 'of', "strings of #{special_chars}"],
+      {key1: 'hash', key2: 'of', key3: "string values with #{special_chars}"},
+      not_supported_data_type
+    ]
+
+    expected_output = [
+      "string of #{html_entities}",
+      ['array', 'of', "strings of #{html_entities}"],
+      {key1: 'hash', key2: 'of', key3: "string values with #{html_entities}"},
+      not_supported_data_type
+    ]
+
+    output = FormValidationMethods.escape_html_entities(input)
+    assert_equal expected_output, output
+  end
+
   private
 
   def assert_field_error(error_params, error)

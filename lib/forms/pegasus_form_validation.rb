@@ -136,4 +136,30 @@ module PegasusFormValidation
 
     data
   end
+
+  # Recursively replace special characters with HTML entities for string content in the input.
+  # This function can be called before saving user input to database or before returning user input
+  # from database to client for presentation.
+  #
+  # @param [String, Hash, Array] input
+  # @return [String, Hash, Array] a modified copy of the input if it is one of the specified data types.
+  #   Otherwise, return the same input.
+  def escape_html_entities(input)
+    return CGI.escapeHTML(input) if input.is_a? String
+
+    if input.is_a? Array
+      return input.map {|sub_item| escape_html_entities(sub_item)}
+    end
+
+    if input.is_a? Hash
+      return {}.tap do |output|
+        input.keys.each do |key|
+          output[key] = escape_html_entities(input[key])
+        end
+      end
+    end
+
+    # Input is not one of the types this function knows how to process. Return input as-is.
+    input
+  end
 end

@@ -191,12 +191,14 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
       Forms.json('processed_data.location_p').as(:location_p),
       :id
     ).limit(rows).to_a
+
     docs.each do |doc|
       doc[:location_flexibility_ss] = JSON.parse(doc[:location_flexibility_ss])
     end
+
     {
       facet_counts: {facet_fields: {}},
-      response: {docs: docs}
+      response: {docs: escape_html_entities(docs)}
     }.to_json
   end
 end
