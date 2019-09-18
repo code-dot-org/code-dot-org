@@ -20,7 +20,7 @@ class AssetMap
 
   def asset_path(asset)
     # Don't require developers or unit tests to precompile assets.
-    return "/assets/#{asset}" if CDO.pegasus_skip_asset_map
+    return "/assets/#{asset}" if CDO.pretty_js
     raise "Asset map not initialized" unless @asset_map
     asset_path = @asset_map[asset]
     raise "Asset not found in asset map: '#{asset}'" unless asset_path
