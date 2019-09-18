@@ -23,6 +23,11 @@
           "name": "spotify",
           "description": "description",
           "current": true
+        },
+        {
+          "name": "openweathermap",
+          "description": "5 day 3 hour forecast from 5 cities",
+          "current": false
         }
       ]
     },

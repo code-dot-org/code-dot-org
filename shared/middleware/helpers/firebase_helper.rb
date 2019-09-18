@@ -1,5 +1,4 @@
 require 'csv'
-require 'json'
 require 'firebase'
 
 # A wrapper around the firebase gem. For gem documentation, see
@@ -28,13 +27,13 @@ class FirebaseHelper
   end
 
   def delete_shared_table(table_name)
-    response = @firebase.delete("/v3/channels/#{@channel_id}/storage/tables/#{table_name}/records")
-    puts response.code
+    @firebase.delete("/v3/channels/shared/counters/tables/#{table_name}")
+    @firebase.delete("/v3/channels/shared/storage/tables/#{table_name}/records")
   end
 
   def upload_shared_table(table_name, records)
-    response = @firebase.set("/v3/channels/#{@channel_id}/storage/tables/#{table_name}/records", records)
-    puts response.code
+    @firebase.set("/v3/channels/shared/counters/tables/#{table_name}", {"lastId": records.length, "rowCount": records.length})
+    @firebase.set("/v3/channels/shared/storage/tables/#{table_name}/records", records)
   end
 
   def self.delete_channel(encrypted_channel_id)
