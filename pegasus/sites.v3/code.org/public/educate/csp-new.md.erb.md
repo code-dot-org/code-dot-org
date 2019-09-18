@@ -9,7 +9,7 @@ style_min: true
 
 # Computer Science Principles
 
-## <a name="whatis"></a>What is CS Principles?
+## What is CS Principles?
 
 Computer Science Principles introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. More than a traditional introduction to programming, it is a rigorous, engaging, and approachable course that explores many of the foundational ideas of computing so all students understand how these concepts are transforming the world we live in.
 
@@ -89,7 +89,9 @@ This year-long course can be taught as an AP or non-AP course - no prerequisites
 
 ## Coming Soon! - CS Principles 2020-21
 
-We're planning some very exciting updates to CS Principles 2020-21! We look forward to sharing these updates, which will strengthen the curriculum and align with the College Board's plans for the 2020-21 CS Principles Framework and Assessment. <a href="https://code.org/files/2020-21_CSPrinciples_1-pager.pdf", target=_"blank">Check out our 1-pager</a> for an overview of what's in store for the 2020-21 version of the course, and stay tuned!
+As with all of our courses, we are committed to making regular updates to our CS Principles curriculum to make sure we continue to meet students’ and teachers’ needs, while supporting the best classroom experience possible. We’re planning some very exciting updates to CS Principles 2020-21, which will align with the new AP framework and incorporate the invaluable feedback we receive from our teachers and students!
+
+<a href="https://code.org/files/2020-21_CSPrinciples_1-pager.pdf", target=_"blank">Check out our 1-pager</a> for an overview of what's in store for the 2020-21 version of the course, and stay tuned!
 
 ## Keep up with CS Principles
 
@@ -119,7 +121,7 @@ Sign up for our monthly emails, which contain the latest news about tools, video
 
 <h4>Chat about CS Principles in the forum</h4>
 
-We have forums for educators to discuss and trade ideas about CS Principles and talk about the curriculum. Code.org forums are used for all of our courses, K-12.
+We have forums for educators to discuss and trade ideas about the CS Principles curriculum. Code.org forums are used for all of our courses, K-12.
 <br><br>
 
 <a href="http://forum.code.org/c/csp"> <button>Visit the forum</button></a>
@@ -134,8 +136,8 @@ We have forums for educators to discuss and trade ideas about CS Principles and 
 
 ### Hand out these fliers around your school and consider sending home to parents.
 
-[![image](/images/fit-200/csp/CSPrinciples_1-pager.png)](/files/CSPrinciples_1-pager.pdf)
 [![image](/images/fit-200/csp/csp-recruitment-poster.png)](/files/programs/csp-recruitment-poster.pdf)
+[![image](/images/fit-200/csp/csp-student-flyer.png)](/files/programs/csp-student-flyer.pdf)
 
 ### Hang these posters in your classroom and around your school:
 
@@ -170,6 +172,7 @@ We have forums for educators to discuss and trade ideas about CS Principles and 
 
 <div style="clear: both;"></div>
 
+[![image](/images/fit-200/csp/CSPrinciples_1-pager.png)](/files/CSPrinciples_1-pager.pdf)
 
 <hr/>
 
