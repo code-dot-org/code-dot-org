@@ -7,6 +7,7 @@ import msg from '@cdo/locale';
 import color from '../../util/color';
 import {showPreview} from '../redux/data';
 import PreviewModal from './PreviewModal';
+import {getDatasetInfo} from './dataUtils';
 
 const styles = {
   tableName: {
@@ -55,8 +56,6 @@ const styles = {
 class LibraryTable extends React.Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    current: PropTypes.bool.isRequired,
 
     // from redux dispatch
     onShowPreview: PropTypes.func.isRequired
@@ -66,13 +65,15 @@ class LibraryTable extends React.Component {
     collapsed: true
   };
 
+  datasetInfo = getDatasetInfo(this.props.name);
+
   toggleCollapsed = () =>
     this.setState({
       collapsed: !this.state.collapsed
     });
 
   importTable = () => {
-    if (this.props.current) {
+    if (this.datasetInfo.current) {
       // TODO: Implement current tables (see STAR-615)
     } else {
       FirebaseStorage.copyStaticTable(
@@ -89,6 +90,7 @@ class LibraryTable extends React.Component {
 
   render() {
     const icon = this.state.collapsed ? 'caret-right' : 'caret-down';
+
     return (
       <div>
         <a style={styles.tableName} onClick={this.toggleCollapsed}>
@@ -98,7 +100,7 @@ class LibraryTable extends React.Component {
         {!this.state.collapsed && (
           <div style={styles.collapsibleContainer}>
             {/* TODO: Add last updated time */}
-            <div>{this.props.description}</div>
+            <div>{this.datasetInfo.description}</div>
             <div>
               <button
                 style={styles.preview}
