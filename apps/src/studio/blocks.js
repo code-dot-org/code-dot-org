@@ -965,14 +965,22 @@ exports.install = function(blockly, blockInstallOptions) {
       dropdown.setValue(this.VALUES[1][1]); // default to top-left
       this.setHSV(184, 1.0, 0.74);
       if (spriteCount > 1) {
-        this.appendDummyInput().appendTitle(
-          spriteNumberTextDropdown(msg.setSpriteN),
-          'SPRITE'
+        this.interpolateMsg(
+          msg.setSpritePosition(),
+          () => {
+            this.appendValueInput('SPRITE').appendTitle({spriteIndex: ''});
+          },
+          blockly.ALIGN_RIGHT
         );
       } else {
-        this.appendDummyInput().appendTitle(msg.setSprite());
+        this.interpolateMsg(
+          msg.setPosition(),
+          () => {
+            this.appendDummyInput().appendTitle(dropdown, 'VALUE');
+          },
+          blockly.ALIGN_RIGHT
+        );
       }
-      this.appendDummyInput().appendTitle(dropdown, 'VALUE');
       this.setPreviousStatement(true);
       this.setInputsInline(true);
       this.setNextStatement(true);
@@ -998,12 +1006,17 @@ exports.install = function(blockly, blockInstallOptions) {
       var dropdown = new blockly.FieldDropdown(POSITION_VALUES);
       dropdown.setValue(POSITION_VALUES[1][1]); // default to top-left
       this.setHSV(184, 1.0, 0.74);
+      this.interpolateMsg(
+        msg.setSpritePosition(),
+        () => {
+          this.appendValueInput('SPRITE').appendTitle({spriteIndex: ''});
+        },
+        () => {
+          this.appendDummyInput().appendTitle(dropdown, 'VALUE');
+        },
+        blockly.ALIGN_RIGHT
+      );
 
-      this.appendValueInput('SPRITE')
-        .setCheck(blockly.BlockValueType.NUMBER)
-        .appendTitle(msg.setSpriteN({spriteIndex: ''}));
-
-      this.appendDummyInput().appendTitle(dropdown, 'VALUE');
       this.setPreviousStatement(true);
       this.setInputsInline(true);
       this.setNextStatement(true);
@@ -1076,8 +1089,13 @@ exports.install = function(blockly, blockInstallOptions) {
       var dropdown = new blockly.FieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[1][1]); // default to top-left
       this.setHSV(184, 1.0, 0.74);
-      this.appendDummyInput().appendTitle(msg.addGoal());
-      this.appendDummyInput().appendTitle(dropdown, 'VALUE');
+      this.interpolateMsg(
+        msg.addGoalPosition(),
+        () => {
+          this.appendDummyInput().appendTitle(dropdown, 'VALUE');
+        },
+        blockly.ALIGN_RIGHT
+      );
       this.setPreviousStatement(true);
       this.setInputsInline(true);
       this.setNextStatement(true);
