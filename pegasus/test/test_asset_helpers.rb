@@ -34,7 +34,7 @@ class AssetHelpersTest < Minitest::Test
       "incorrect minifiable asset path"
   end
 
-  def test_no_asset_map
+  def test_missing_asset_map_without_pretty_js_raises
     # This directory does not have a manifest file in it.
     # Update the asset map to be nil.
     CDO.stubs(:dashboard_assets_dir).returns('./test/fixtures/')
@@ -52,7 +52,7 @@ class AssetHelpersTest < Minitest::Test
     assert_equal 'Asset map not initialized', e.message
   end
 
-  def test_skip_flag_when_no_asset_map
+  def test_missing_asset_map_with_pretty_js_succeeds
     # This directory does not have a manifest file in it.
     # Update the asset map to be nil.
     CDO.stubs(:dashboard_assets_dir).returns('./test/fixtures/')
@@ -64,7 +64,7 @@ class AssetHelpersTest < Minitest::Test
       "should recover gracefully when no asset map for minifiable asset"
   end
 
-  def test_asset_not_in_map
+  def test_asset_not_in_map_without_pretty_js_raises
     CDO.stubs(:pretty_js).returns(false)
 
     e = assert_raises RuntimeError do
@@ -78,7 +78,7 @@ class AssetHelpersTest < Minitest::Test
     assert_equal "Asset not found in asset map: '#{MINIFIED_ASSET_NOT_IN_MAP}'", e.message
   end
 
-  def test_skip_flag_when_asset_not_in_map
+  def test_asset_not_in_map_with_pretty_js_succeeds
     CDO.stubs(:pretty_js).returns(true)
     assert_equal ASSET_PATH_NOT_IN_MAP, @asset_map.asset_path(ASSET_NOT_IN_MAP),
       "should recover gracefully when unminifiable asset is not found"
