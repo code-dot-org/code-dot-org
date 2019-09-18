@@ -218,6 +218,10 @@ ja-JP:
         draw head: あたまを かく
       Standalone_Artist_7:
         draw a flower: 花 を かく
+      Standalone_Artist_9:
+        my function: my function
+      course1_artist_loops_challenge1:
+        '"simple" solution': 解答例
       course3_artist_functions_challenge1:
         do something: 何かしてください
       course3_artist_functions_challenge2:
@@ -235,6 +239,8 @@ ja-JP:
       course4_artist_fwp_challenge1:
         draw a polygon: 多角形を描く
         do something: 何かしてください
+      courseA_artist_loops_challenge1:
+        '"simple" solution': 解答例
       courseC_data wizard:
         do something: 何かしてください
       courseD_artist_binary1:

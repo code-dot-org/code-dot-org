@@ -435,10 +435,243 @@ de-DE:
         sich wiederholen). Trage die Muster die du findest in das Wörterbuch rechts
         ein. Wenn du einen Eintrag in das Wörterbuch machst, wird das Symbol des Eintrags
         die Muster im Text ersetzen.
+      course1_maze_debugging_challenge1: Beseitige die Fehler in diesem Level. Entferne
+        die Blöcke, welche nicht passen, und füge die fehlenden Blöcke hinzu. Bring
+        den Vogel zum Schwein!
+      course2_maze_programming_challenge2: Manchmal gibt es mehr als eine Lösung für
+        ein Problem. Manchmal ist es schneller, rückwärts zu gehen, als vorwärts!
       course3_maze_debugging_challenge1: _"Gehe ich hier nur immer im Kreis herum?"_
       course4_artist_fwp_challenge1: Versuche, dieses Programm auszuführen und verändere
         es, um zu sehen, was passiert. Kannst du herausfinden, wie es funktioniert?
         (Oder lösche es und ersetze es durch etwas ganz anderes)
+      courseA_artist_loops10: |-
+        ## Zeit um wieder an Land zu gehen. Hilf mir Steine abzulegen, so dass ich nicht ins Wasser falle!
+
+        ![expandable](https://images.code.org/d3213d375d0271e114aa4313cdeb34be-image-1498064942606.gif)
+      courseA_artist_loops10_2018: |-
+        ## Zeit um wieder an Land zu gehen. Hilf mir Steine abzulegen, so dass ich nicht ins Wasser falle!
+
+        ![expandable](https://images.code.org/d3213d375d0271e114aa4313cdeb34be-image-1498064942606.gif)
+      courseA_artist_loops10_2019: |-
+        ## Zeit um wieder an Land zu gehen. Hilf mir Steine abzulegen, so dass ich nicht ins Wasser falle!
+
+        ![expandable](https://images.code.org/d3213d375d0271e114aa4313cdeb34be-image-1498064942606.gif)
+      courseA_artist_loops11: |-
+        ## Hilf mir Stufen zu bauen, um zu sehen, wie das Schiff davon segelt.
+
+        ![expandable](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)
+      courseA_artist_loops11_2018: |-
+        ## Hilf mir Stufen zu bauen, um zu sehen, wie das Schiff davon segelt.
+
+        ![expandable](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)
+      courseA_artist_loops11_2019: |-
+        ## Hilf mir Stufen zu bauen, um zu sehen, wie das Schiff davon segelt.
+
+        ![expandable](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)
+      courseA_artist_loops12: |-
+        Der Zeichner sah etwas Lustiges in der Ferne. Zeichne, was Du denkst, was er sah!
+
+        * * *
+
+        ### Ideen
+
+        ![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)
+        ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)
+        ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)
+        ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
+      courseA_artist_loops12_2018: |-
+        Der Zeichner sah etwas Lustiges in der Ferne. Zeichne, was Du denkst, was er sah!
+
+        * * *
+
+        ### Ideen
+
+        ![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)
+        ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)
+        ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)
+        ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
+      courseA_artist_loops12_2019: |-
+        Der Zeichner sah etwas Lustiges in der Ferne. Zeichne, was Du denkst, was er sah!
+
+        * * *
+
+        ### Ideen
+
+        ![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)
+        ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)
+        ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)
+        ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
+      courseA_artist_loops2: |-
+        Hilf dem Künstler diese Linie 2 mal vorwärts zu zeichnen.
+
+        ![](https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif)
+      courseA_artist_loops2_2018: |-
+        Hilf dem Künstler diese Linie 2 mal vorwärts zu zeichnen.
+
+        ![](https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif)
+      courseA_artist_loops2_2019: |-
+        Hilf dem Künstler diese Linie 2 mal vorwärts zu zeichnen.
+
+        ![](https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif)
+      courseA_artist_loops3: |-
+        Unser Künstler versucht 5 mal eine Linie zu zeichnen, aber er schafft es nicht. Kannst du helfen?
+
+        ![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
+      courseA_artist_loops3_2018: |-
+        Unser Künstler versucht 5 mal eine Linie zu zeichnen, aber er schafft es nicht. Kannst du helfen?
+
+        ![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
+      courseA_artist_loops3_2019: |-
+        Unser Künstler versucht 5 mal eine Linie zu zeichnen, aber er schafft es nicht. Kannst du helfen?
+
+        ![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
+      courseA_artist_loops4: |-
+        Verwende jetzt eine <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml> Schleife um die Linie 5 mal zu zeichnen!
+
+        ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
+      courseA_artist_loops4_2018: |-
+        Verwende jetzt eine <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml> Schleife um die Linie 5 mal zu zeichnen!
+
+        ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
+      courseA_artist_loops4_2019: |-
+        Verwende jetzt eine <xml><block type="controls_repeat_simplified_dropdown" block-text="repeat"><title name="TIMES" config="2-6">5</title></block></xml> Schleife um die Linie 5 mal zu zeichnen!
+
+        ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
+      courseA_artist_loops5: |-
+        ## Zeichne eine Linie, welche 5 Schritte lang ist. Das wird unser Horizont.
+
+        ![expandable](https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
+      courseA_artist_loops5_2018: |-
+        ## Zeichne eine Linie, welche 5 Schritte lang ist. Das wird unser Horizont.
+
+        ![expandable](https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
+      courseA_artist_loops5_2019: |-
+        ## Zeichne eine Linie, welche 5 Schritte lang ist. Das wird unser Horizont.
+
+        ![expandable](https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
+      courseA_artist_loops6: |-
+        ## Lass uns einen schönen Hügel in den Hintergrund zeichnen.
+
+        ![expandable](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
+      courseA_artist_loops6_2018: |-
+        ## Lass uns einen schönen Hügel in den Hintergrund zeichnen.
+
+        ![expandable](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
+      courseA_artist_loops6_2019: |-
+        ## Lass uns einen schönen Hügel in den Hintergrund zeichnen.
+
+        ![expandable](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
+      courseA_artist_loops7: |-
+        ## Benutze die <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> Schleife um Wellen zum Wasser hinzuzufügen.
+
+        ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
+      courseA_artist_loops7_2018: |-
+        ## Benutze die <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> Schleife um Wellen zum Wasser hinzuzufügen.
+
+        ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
+      courseA_artist_loops8: |-
+        ## Wir brauchen eine Leiter hinauf aufs Boot.
+
+        ![expandable](https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)
+      courseA_artist_loops8_2018: |-
+        ## Wir brauchen eine Leiter hinauf aufs Boot.
+
+        ![expandable](https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)
+      courseA_artist_loops8_2019: |-
+        ## Wir brauchen eine Leiter hinauf aufs Boot.
+
+        ![expandable](https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)
+      courseA_artist_loops9: |-
+        ## **Herausforderung:** Die Treppe zum Dock ist kaputt. Hilf mir, die Treppe zu reparieren.
+
+        ![expandable](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
+      courseA_artist_loops9_2018: |-
+        ## **Herausforderung:** Die Treppe zum Dock ist kaputt. Hilf mir, die Treppe zu reparieren.
+
+        ![expandable](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
+      courseA_artist_loops9_2019: |-
+        ## **Herausforderung:** Die Treppe zum Dock ist kaputt. Hilf mir, die Treppe zu reparieren.
+
+        ![expandable](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
+      courseA_artist_loops_challenge1: |-
+        Du kannst eine Schleife nehmen um viele Linien hintereinander zu zeichnen.
+
+        Kannst du ein Haus zeichnen? Mach es so, wie es dir gefällt! Versuche Muster zu finden, die sich wiederholen!
+
+        Hier sind ein paar Ideen:
+
+        ![](https://images.code.org/6e59e881e0aa1d31186e81a203655a0b-image-1501785654664.png)
+      courseA_artist_loops_challenge1_2018: |-
+        Du kannst eine Schleife nehmen um viele Linien hintereinander zu zeichnen.
+
+        Kannst du ein Haus zeichnen? Mach es so, wie es dir gefällt! Versuche Muster zu finden, die sich wiederholen!
+
+        Hier sind ein paar Ideen:
+
+        ![](https://images.code.org/6e59e881e0aa1d31186e81a203655a0b-image-1501785654664.png)
+      courseA_artist_loops_challenge1_2019: |-
+        Du kannst eine Schleife nehmen um viele Linien hintereinander zu zeichnen.
+
+        Kannst du ein Haus zeichnen? Mach es so, wie es dir gefällt! Versuche Muster zu finden, die sich wiederholen!
+
+        Hier sind ein paar Ideen:
+
+        ![](https://images.code.org/6e59e881e0aa1d31186e81a203655a0b-image-1501785654664.png)
+      courseA_artist_loops_challenge2a: |-
+        _"Hilf mir den Zeltplatz fertigzustellen!"_
+
+        Benutze die Blöcke im Werkzeugkasten um diese drei Zelte zu zeichnen.
+      courseA_artist_loops_challenge2a_2018: |-
+        _"Hilf mir den Zeltplatz fertigzustellen!"_
+
+        Benutze die Blöcke im Werkzeugkasten um diese drei Zelte zu zeichnen.
+      courseA_artist_loops_challenge2a_2019: |-
+        _"Hilf mir den Zeltplatz fertigzustellen!"_
+
+        Benutze die Blöcke im Werkzeugkasten um diese drei Zelte zu zeichnen.
+      courseA_collector_loops1: |-
+        **Freies Spiel:** Das ist Laurel, die Abenteurerin! Bewege sie umher und sammle so viele Schätze wie du kannst.
+
+        Ziehe Blöcke in den Arbeitsbereich und versuche herauszufinden, wie du einen Schatz einsammeln kannst. Du brauchst mindestens einen Diamant um dieses Level zu bestehen.
+      courseA_collector_loops12: |-
+        _"Heureka!  Hol dir so viele Schätze wie möglich!"_\
+        (Du musst nicht alle einsammeln.)
+      courseA_collector_loops12_2018: |-
+        _"Heureka!  Hol dir so viele Schätze wie möglich!"_\
+        (Du musst nicht alle einsammeln.)
+      courseA_collector_loops12_2019: |-
+        _"Heureka!  Hol dir so viele Schätze wie möglich!"_\
+        (Du musst nicht alle einsammeln.)
+      courseA_collector_loops1_2018: |-
+        **Freies Spiel:** Das ist Laurel, die Abenteurerin! Bewege sie umher und sammle so viele Schätze wie du kannst.
+
+        Ziehe Blöcke in den Arbeitsbereich und versuche herauszufinden, wie du einen Schatz einsammeln kannst. Du brauchst mindestens einen Diamant um dieses Level zu bestehen.
+      courseA_collector_loops1_2019: |-
+        **Freies Spiel:** Das ist Laurel, die Abenteurerin! Bewege sie umher und sammle so viele Schätze wie du kannst.
+
+        Ziehe Blöcke in den Arbeitsbereich und versuche herauszufinden, wie du einen Schatz einsammeln kannst. Du brauchst mindestens einen Diamant um dieses Level zu bestehen.
+      courseA_collector_loops2: |-
+        Sammle alle Schätze ein! Bewege Laurel zu jedem Edelstein und benutze dann diesen Block:
+        <xml><block type="collector_collect"/></xml>
+      courseA_collector_loops3: Wie kann Laurel alle fünf Schätze einsammeln, wenn
+        sie nur einen <xml><block type="maze_moveEast"/></xml> Block benutzt?
+      courseA_collector_loops3_2018: Wie kann Laurel alle fünf Schätze einsammeln,
+        wenn sie nur einen <xml><block type="maze_moveEast"/></xml> Block benutzt?
+      courseA_collector_loops3_2019: Wie kann Laurel alle fünf Schätze einsammeln,
+        wenn sie nur einen <xml><block type="maze_moveEast" block-text="move east"/></xml>
+        Block benutzt?
+      courseA_collector_loops_challenge1: _"Kannst du mir helfen Fehler im Code zu
+        finden? Ich weiß, welchen Weg ich gehen will, aber ich bin mir nicht sicher,
+        wieviel Schritte ich machen muss."_
+      courseA_collector_loops_challenge1_2018: _"Kannst du mir helfen Fehler im Code
+        zu finden? Ich weiß, welchen Weg ich gehen will, aber ich bin mir nicht sicher,
+        wieviel Schritte ich machen muss."_
+      courseA_collector_loops_challenge1_2019: _"Kannst du mir helfen Fehler im Code
+        zu finden? Ich weiß, welchen Weg ich gehen will, aber ich bin mir nicht sicher,
+        wieviel Schritte ich machen muss."_
+      courseA_collector_preLoops7: |-
+        Sammle alle Schätze ein! Bewege Laurel zu jedem Edelstein und benutze dann diesen Block:
+        <xml><block type="collector_collect"/></xml>
       courseA_maze_seq1: _"Nimm diese Blöcke zu Hilfe und versuche, mich zum Schwein
         zu führen!"_
       courseA_maze_seq10: |-
@@ -498,6 +731,93 @@ de-DE:
         **Herausforderung:**Repariere dieses Level, indem Du Blöcke hinzufügst um den Vogel zum Schwein zu bewegen!
 
         ![expandable](https://images.code.org/3f35068dd3cf51c420a536fa078f854d-image-1497996843105.gif)
+      courseA_maze_seq_challenge1: Beseitige die Fehler in diesem Level. Entferne
+        die Blöcke, welche nicht passen, und füge die fehlenden Blöcke hinzu. Bring
+        den Vogel zum Schwein!
+      courseA_maze_seq_challenge1_2018: Beseitige die Fehler in diesem Level. Entferne
+        die Blöcke, welche nicht passen, und füge die fehlenden Blöcke hinzu. Bring
+        den Vogel zum Schwein!
+      courseA_maze_seq_challenge1_2019: Beseitige die Fehler in diesem Level. Entferne
+        die Blöcke, welche nicht passen, und füge die fehlenden Blöcke hinzu. Bring
+        den Vogel zum Schwein!
+      courseA_maze_seq_challenge2_2019: Folge dem Weg, der den Vogel zum Schwein bringt.
+        Vermeide das TNT, sonst fliegen die Federn!
+      courseA_playLab_events3: |-
+        Hilf Jorge, dem Hund, sich zu bewegen indem du den <xml><block type="studio_move">
+            <title name="SPRITE">1</title>
+            <title name="DIR">8</title>
+          </block></xml> Block mit dem <xml><block type="studio_whenArrow">
+            <title name="VALUE">left</title>
+          </block></xml> Ereignis-Block, der schon im Arbeitsbereich ist, verbindest.
+
+        Bring Jorge zur Fahne um dieses Level zu beenden!
+      courseA_playLab_events3_2018: |-
+        Hilf Jorge, dem Hund, sich zu bewegen indem du den <xml><block type="studio_move">
+            <title name="SPRITE">1</title>
+            <title name="DIR">8</title>
+          </block></xml> Block mit dem <xml><block type="studio_whenArrow">
+            <title name="VALUE">left</title>
+          </block></xml> Ereignis-Block, der schon im Arbeitsbereich ist, verbindest.
+
+        Bring Jorge zur Fahne um dieses Level zu beenden!
+      courseA_playLab_events3_2019: |-
+        Hilf Jorge, dem Hund, sich zu bewegen indem du den <xml><block type="studio_move" block-text="move dog west">
+            <title name="SPRITE">1</title>
+            <title name="DIR">8</title>
+          </block></xml> Block mit dem <xml><block type="studio_whenArrow" block-text="when left arrow">
+            <title name="VALUE">left</title>
+          </block></xml> Ereignis-Block, der schon im Arbeitsbereich ist, verbindest.
+
+        Bring Jorge zur Fahne um dieses Level zu beenden!
+      courseA_playLab_events4: Füge jetzt mehr Blöcke hinzu, um Jorge nach rechts
+        zu bewegen wenn die Pfeiltaste nach 'rechts' gedrückt wird.
+      courseA_playLab_events5: Füge Ereignisse hinzu um Jorge nach oben und unten
+        zu bewegen, wenn die 'oben' und 'unten' Pfeiltasten gedrückt werden.
+      courseA_playLab_events5_2018: Füge Ereignisse hinzu um Jorge nach oben und unten
+        zu bewegen, wenn die 'oben' und 'unten' Pfeiltasten gedrückt werden.
+      courseA_playLab_events5_2019: Füge Ereignisse hinzu um Jorge nach oben und unten
+        zu bewegen, wenn die 'oben' und 'unten' Pfeiltasten gedrückt werden.
+      courseA_playLab_events6_2019: Mach das Ganze noch interessanter indem du den
+        Hintergrund änderst oder einen zufälligen Ton abspielst, wenn auf Jorge geklickt
+        wird.
+      courseA_playlab_events_challenge1: |-
+        Wenn du auf Olive klickst wird Robin erscheinen! Kannst du einen Code schreiben, damit auch die anderen Figuren erscheinen?
+
+        Denk in dieser Aufgabe unbedingt daran, auf die Tipps zu klicken! Die Tipps werden dir helfen dieses Projekt Schritt-für-Schritt zu schaffen!
+
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
+      courseA_playlab_events_challenge1_2018: |-
+        Wenn du auf Olive klickst wird Robin erscheinen! Kannst du einen Code schreiben, damit auch die anderen Figuren erscheinen?
+
+        Denk in dieser Aufgabe unbedingt daran, auf die Tipps zu klicken! Die Tipps werden dir helfen dieses Projekt Schritt-für-Schritt zu schaffen!
+
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
+      courseA_playlab_events_challenge1_2019: |-
+        Wenn du auf Olive klickst wird Robin erscheinen! Kannst du einen Code schreiben, damit auch die anderen Figuren erscheinen?
+
+        Denk in dieser Aufgabe unbedingt daran, auf die Tipps zu klicken! Die Tipps werden dir helfen dieses Projekt Schritt-für-Schritt zu schaffen!
+
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
+      courseA_playlab_events_challenge2: |-
+        Gib jeder Figur etwas zu tun, wenn du auf sie klickst. Was werden die Tiere sagen? Was wird ich passieren?
+
+        Denk in dieser Aufgabe unbedingt daran, auf die Tipps zu klicken. In den Tipps gibt es lustige Vorschläge zum Ausprobieren!
+
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
+      courseA_playlab_events_challenge2_2018: |-
+        Gib jeder Figur etwas zu tun, wenn du auf sie klickst. Was werden die Tiere sagen? Was wird ich passieren?
+
+        Denk in dieser Aufgabe unbedingt daran, auf die Tipps zu klicken. In den Tipps gibt es lustige Vorschläge zum Ausprobieren!
+
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
+      courseA_playlab_events_challenge2_2019: |-
+        Gib jeder Figur etwas zu tun, wenn du auf sie klickst. Was werden die Tiere sagen? Was wird ich passieren?
+
+        Denk in dieser Aufgabe unbedingt daran, auf die Tipps zu klicken. In den Tipps gibt es lustige Vorschläge zum Ausprobieren!
+
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
+      courseB_artist_loops1_2019: Dies ist eine neue Art von Aufgabe, sie hießt "Künstler".
+        Spiele in diesem Level und zeichne etwas lustiges.
       courseB_artist_loops3_2019: Hilfe dem Künstler, eine Linie siebenmal zu zeichnen,
         um eine Gartenmauer zu bauen.
       courseB_artist_loops7: "**Aufgabe:** Es ist ein versteckter Garten! Lauf ein
@@ -506,8 +826,20 @@ de-DE:
         ein bisschen herum."
       courseB_artist_loops7_2019: "**Aufgabe:** Es ist ein versteckter Garten! Lauf
         ein bisschen herum."
-      courseB_collector_loops10_2019: Hilf Laurel, alles Gold aus der Höhle zu holen!
+      courseB_collector_loops1: |-
+        **Freies Spiel:** Das ist Laurel, die Abenteurerin! Bewege sie umher und sammle so viele Schätze wie du kannst.
+
+        Ziehe Blöcke in den Arbeitsbereich und versuche herauszufinden, wie du einen Schatz einsammeln kannst. Du brauchst mindestens einen Diamant um dieses Level zu bestehen.
+      courseB_collector_loops10_2019: Hilf Laurel, alle Schätze aus dieser Höhle zu
+        holen.
       courseB_collector_loops11_2019: Heureka!  Hol dir so viele Schätze wie möglich!
+      courseB_collector_loops3: Wie kann Laurel alle fünf Schätze einsammeln, wenn
+        sie nur einen <xml><block type="maze_moveEast"/></xml> Block benutzt?
+      courseB_collector_loops3_2018: Wie kann Laurel alle fünf Schätze einsammeln,
+        wenn sie nur einen <xml><block type="maze_moveEast"/></xml> Block benutzt?
+      courseB_collector_loops3_2019: Wie kann Laurel alle fünf Schätze einsammeln,
+        wenn sie nur einen <xml><block type="maze_moveEast" block-text="move east"/></xml>
+        Block benutzt?
       courseB_collector_loops4_2019: Repariere Laurels Weg, um alles Gold zu bekommen!
       courseB_collector_loops6_2019: Finden sie den Code heraus, um Laurel zu helfen
         und all das Gold zu kassieren!
@@ -516,8 +848,101 @@ de-DE:
         herunter! Schreibe den Code um Laurel zu helfen, alles zu bekommen."
       courseB_collector_loops9_2019: _"Hilf mir all das Gold aus diesen tiefen Tal
         zu bekommen."_
+      courseB_collector_loops_challenge2a: |-
+        _"Lass uns den Schatz holen!"_
+
+        Hilf Laurel mindestens **5** Schätze einzusammeln um diese Aufgabe zu beenden.
+      courseB_collector_loops_challenge2a_2018: |-
+        _"Lass uns den Schatz holen!"_
+
+        Hilf Laurel mindestens **5** Schätze einzusammeln um diese Aufgabe zu beenden.
+      courseB_collector_loops_challenge2a_2019: |-
+        _"Lass uns den Schatz holen!"_
+
+        Hilf Laurel mindestens **5** Schätze einzusammeln um diese Aufgabe zu beenden.
       courseB_maze_seq12_2019: Jetzt bekomme das Schwein auf irgendeine Art und Weise!
       courseB_maze_seq3: _"Repariere den Code, damit ich das Schwein bekomme!_"
+      courseC_maze_programming1: Für diese Aufgabe musst du alle Blöcke zusammensetzen,
+        auf 'Ausführen' klicken und zusehen, wie es läuft!
+      courseC_maze_programming1_2018: Für diese Aufgabe musst du alle Blöcke zusammensetzen,
+        auf 'Ausführen' klicken und zusehen, wie es läuft!
+      courseC_maze_programming1_2019: Für diese Aufgabe musst du alle Blöcke zusammensetzen,
+        auf 'Ausführen' klicken und zusehen, wie es läuft!
+      courseC_maze_programming2: Ziehe einen weiteren <xml><block type="maze_moveForward"/></xml>
+        Block aus dem Werkzeugkasten um deinen Code fertigzustellen.
+      courseC_maze_programming2_2018: Ziehe einen weiteren <xml><block type="maze_moveForward"/></xml>
+        Block aus dem Werkzeugkasten um deinen Code fertigzustellen.
+      courseC_maze_programming2_2019: Ziehe einen weiteren <xml><block type="maze_moveForward"
+        block-text="move forward"/></xml> Block aus dem Werkzeugkasten um deinen Code
+        fertigzustellen.
+      courseC_maze_programming3: |-
+        _"Dieses Schwein ärgert mich."_
+
+        Hier ist ein Block, der den Vogel gegen etwas krachen läßt.\
+        Wirf es weg indem du es von den grauen Blöcken losmachst und in den Werkzeugkasten zurückziehst.
+      courseC_maze_programming3_2018: |-
+        _"Dieses Schwein ärgert mich."_
+
+        Hier ist ein Block, der den Vogel gegen etwas krachen läßt.\
+        Wirf es weg indem du es von den grauen Blöcken losmachst und in den Werkzeugkasten zurückziehst.
+      courseC_maze_programming3_2019: |-
+        _"Dieses Schwein ärgert mich."_
+
+        Hier ist ein Block, der den Vogel gegen etwas krachen läßt.\
+        Wirf es weg indem du es von den grauen Blöcken losmachst und in den Werkzeugkasten zurückziehst.
+      courseC_maze_programming6: |-
+        _"Bleib ruhig und hilf mir das böse Schwein zu finden. Sonst könnte ich wütend werden!"_
+
+        Bring den Vogel zum Schwein und vermeide das TNT.
+      courseC_maze_programming6_2018: |-
+        _"Bleib ruhig und hilf mir das böse Schwein zu finden. Sonst könnte ich wütend werden!"_
+
+        Bring den Vogel zum Schwein und vermeide das TNT.
+      courseC_maze_programming6_2019: |-
+        _"Bleib ruhig und hilf mir das böse Schwein zu finden. Sonst könnte ich wütend werden!"_
+
+        Bring den Vogel zum Schwein und vermeide das TNT.
+      courseC_maze_programming7: |-
+        _"Es ist Zeit wütend zu werden!"_
+
+        **Herausforderung:** In diesem Code stecken viele Fehler. Du musst einige Blöcke entfernen und andere hinzufügen.
+      courseC_maze_programming7_2018: |-
+        _"Es ist Zeit wütend zu werden!"_
+
+        **Herausforderung:** In diesem Code stecken viele Fehler. Du musst einige Blöcke entfernen und andere hinzufügen.
+      courseC_maze_programming7_2019: |-
+        _"Es ist Zeit wütend zu werden!"_
+
+        **Herausforderung:** In diesem Code stecken viele Fehler. Du musst einige Blöcke entfernen und andere hinzufügen.
+      courseC_maze_programming8: _"Bleib ruhig und hilf mir das böse Schwein zu finden."_
+      courseC_maze_programming8_2018: _"Bleib ruhig und hilf mir das böse Schwein
+        zu finden."_
+      courseC_maze_programming8_2019: _"Bleib ruhig und hilf mir das böse Schwein
+        zu finden."_
+      courseC_maze_programming8_predict1: _"Bleib ruhig und hilf mir das böse Schwein
+        zu finden."_
+      courseC_maze_programming8_predict1_2018: _"Bleib ruhig und hilf mir das böse
+        Schwein zu finden."_
+      courseC_maze_programming8_predict1_2019: _"Bleib ruhig und hilf mir das böse
+        Schwein zu finden."_
+      courseC_maze_programming9: _"Und jetzt, hilf mir mich zum Schwein zu schleichen,
+        egal auf welchem Weg!"_
+      courseC_maze_programming9_2018: _"Und jetzt, hilf mir mich zum Schwein zu schleichen,
+        egal auf welchem Weg!"_
+      courseC_maze_programming9_2019: _"Und jetzt, hilf mir mich zum Schwein zu schleichen,
+        egal auf welchem Weg!"_
+      courseC_maze_programming_challenge1: 'Der Vogel braucht deine Hilfe! Das Schwein
+        versteckt sich und das Ziel ist es, es zu finden. '
+      courseC_maze_programming_challenge1_2018: 'Der Vogel braucht deine Hilfe! Das
+        Schwein versteckt sich und das Ziel ist es, es zu finden. '
+      courseC_maze_programming_challenge1_2019: 'Der Vogel braucht deine Hilfe! Das
+        Schwein versteckt sich und das Ziel ist es, es zu finden. '
+      courseC_maze_programming_challenge2: Manchmal gibt es mehr als eine Lösung für
+        ein Problem. Manchmal ist es schneller, rückwärts zu gehen, als vorwärts!
+      courseC_maze_programming_challenge2_2018: Manchmal gibt es mehr als eine Lösung
+        für ein Problem. Manchmal ist es schneller, rückwärts zu gehen, als vorwärts!
+      courseC_maze_programming_challenge2_2019: Manchmal gibt es mehr als eine Lösung
+        für ein Problem. Manchmal ist es schneller, rückwärts zu gehen, als vorwärts!
       courseD_bee_nestedLoops8: Sammle den gesamten Nektar jeder Blüte und erzeuge
         Honig bei jeder Honigwabe. Benutze eine verschachtelte Schleife.
       courseD_bee_nestedLoops8_2018: Sammle den gesamten Nektar jeder Blüte und erzeuge

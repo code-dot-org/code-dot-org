@@ -77,8 +77,6 @@ da:
     continue_with: 'Fortsæt med %{provider}'
     sign_in_with: 'Log ind med %{provider}'
     signed_in: 'Logget ind!'
-    signed_out: 'Du har logget dig af <a href="%{url}"> Code.org</a>.'
-    sign_out_of: 'Du brugte %{provider} til at logge ind. <a href="%{url}"> Klik her</a> logge af %{provider}.'
     already_signedup: 'Allerede tilmeldt?'
     notyet_signedup: "Ikke tilmeldt endnu?"
     google_oauth2: 'Google-konto'
@@ -178,7 +176,6 @@ da:
     login: 'Log ind'
     invalid_login: 'Ugyldig login, prøv igen'
     pair_programming: 'Jeg har en partner på min computer'
-    student_privacy: "Læs mere om hvorfor du ikke kan se dit fulde navn <a href='%{student_privacy_blog}' target='_blank'> her</a>."
   password:
     reset_form:
       title: 'Glemt din adgangskode?'
@@ -373,9 +370,6 @@ da:
     tried: 'Forsøgt'
   home:
     title: "Kode Værktøj"
-    description: 'Code Studio er hjem for online kurser lavet af Code.org'
-    lines_of_code: "%{lines_count} LINJER KODE SKREVET AF ELEVER"
-    lines_of_code_linebreak: "%{lines_count} LINJER KODE <br/> SKREVET AF %{students_count} MILLIONER STUDERENDE"
     all_courses: "Oversigt over kursus 1, 2 og 3"
     lesson_plans: "Lektionsplaner"
     signin_message: "Allerede registreret? %{link}"
@@ -405,11 +399,6 @@ da:
     test_videos_help: 'Teste vores nye video-afspiller på din skole'
     try_beta_courses: 'Nyt! Prøv vores beta kurser for K-5 elever'
     use_as_teacher: 'Bruge dette websted som en lærer'
-    heading_hoc2014: "<h2>Hour of Code for</h2><h1>Alle - uanset alder</h1>"
-    heading_elementary: "<h2>20 timers kurser for</h2><h1>Begyndere (alle aldre)</h1>"
-    heading_apps: "<h2>Sjov for</h2><h1>Alle</h1>"
-    heading_tools: "<h2>Klar til det næste trin?</h2> <h1>JavaScript-værktøj til gymnasiet</h1>"
-    heading_legacy: "<h2>Vores generelle kursus for</h2><h1>Alle aldre</h1>"
     your_gallery: Galleri
     no_primary_course: "Prøv et kursusforløb på Code Studio"
     choose_next_course: "Prøv en Code Studio kursus ved at vælge en nedenfor"
@@ -559,8 +548,6 @@ da:
     header_artist: "Kunstner"
     report_abuse: "Rapporter misbrug"
   landing:
-    prerelease: "Dette kursus er i <span class='betatext'> beta</span>.  Dette betyder, at det ikke er den endelige version af kurset, men at ændringer vil forekomme efterhånden som feedback modtages og forbedringer foretages."
-    prerelease_hoc2014: "Denne øvelse er i <span class='betatext'> beta</span>.  Det er undergivet revision så feedback modtages og der arbejdes på forbedringer."
     report_bug: "Rapporter fejl"
     support: "Få hjælp"
     support_url: "Support.Code.org"
@@ -610,8 +597,6 @@ da:
   age_interstitial:
     age: Din alder
     header: Opdater konto oplysninger
-    message: "Vi er i færd med at opdatere vores erfaring for at give dig endnu større privat beskyttelse. For at gøre dette, har vi brug for at eksisterende brugere indtaster deres alder her. <br/>Som altid, vil code.org aldrig leje, sælge eller dele disse oplysninger med tredjepart."
-    sign_out: 'Hvis du ikke ønsker at give din alder kan <a href="%{url}"> logge ud</a>.'
   terms_interstitial:
     tos: "Termer"
     privacy: "Privatlivspolitik"

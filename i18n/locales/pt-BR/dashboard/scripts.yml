@@ -14,6 +14,7 @@ pt-BR:
         full_course_category_name: Cursos Completos
         hoc_category_name: Hora do Código
         math_category_name: Matemática
+        research_studies_category_name: Trabalhos de Investigação
       name:
         course1:
           title: Curso 1

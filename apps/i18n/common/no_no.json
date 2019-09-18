@@ -627,6 +627,7 @@
   "leaveSection": "Forlat seksjon",
   "less": "Mindre",
   "lesson": "Leksjon",
+  "lessonExtrasButton": "Gå til lærer-oversikten",
   "lessonName": "Leksjonnavn",
   "lessonNumbered": "Leksjon {lessonNumber}: {lessonName}",
   "lessonPlans": "Oppgaveplaner",

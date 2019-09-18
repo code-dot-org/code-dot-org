@@ -164,6 +164,7 @@ pt-PT:
         snowflake_dropdown: Use este menu suspenso para criar diferentes flocos de
           neve!
       frozen line:
+        run: Clica em "Correr" para experimentares o teu programa!
         move_elsa_forward: Arrasta o bloco "mover para a frente" e encaixa-o debaixo
           do bloco "quando executar" para que a Elsa avance
       frozen perpendicular:
