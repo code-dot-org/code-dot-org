@@ -24,7 +24,7 @@ namespace :build do
       RakeUtils.npm_rebuild 'phantomjs-prebuilt'
 
       ChatClient.log 'Building <b>apps</b>...'
-      npm_target = (rack_env?(:development) || ENV['CI']) ? 'build' : 'build:dist'
+      npm_target = (rack_env?(:development)) ? 'build' : 'build:dist'
       RakeUtils.system "npm run #{npm_target}"
       File.write(commit_hash, calculate_apps_commit_hash)
     end
@@ -97,7 +97,7 @@ namespace :build do
 
       # Skip asset precompile in development where `config.assets.digest = false`.
       # Also skip on CI services (e.g. Circle) where we will precompile assets later, right before UI tests.
-      unless rack_env?(:development) || ENV['CI']
+      unless rack_env?(:development)
         ChatClient.log 'Cleaning <b>dashboard</b> assets...'
         RakeUtils.rake 'assets:clean'
         ChatClient.log 'Precompiling <b>dashboard</b> assets...'
