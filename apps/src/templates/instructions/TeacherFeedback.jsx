@@ -329,11 +329,11 @@ export class TeacherFeedback extends Component {
                 </div>
               )}
               {this.state.latestFeedback.length > 0 && (
-                <TimeAgo
-                  style={timeStyle}
-                  dateString={latestFeedback.created_at}
-                  id="ui-test-feedback-time"
-                />
+                <div id="ui-test-feedback-time" style={timeStyle}>
+                  {i18n.feedbackLastUpdated()}
+                  {` `}
+                  <TimeAgo dateString={latestFeedback.created_at} />
+                </div>
               )}
             </div>
           </div>
