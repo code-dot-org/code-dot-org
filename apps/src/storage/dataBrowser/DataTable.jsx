@@ -237,7 +237,7 @@ class DataTable extends React.Component {
             label={msg.paginationLabel()}
           />
         </div>
-        <table>
+        <table style={styles.table}>
           <tbody>
             <tr>
               {columnNames.map(columnName => (

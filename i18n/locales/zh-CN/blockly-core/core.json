@@ -312,7 +312,7 @@
     "PROCEDURES_MUTATORARG_TITLE": "输入名称：",
     "PROCEDURES_MUTATORCONTAINER_TITLE": "输入",
     "REMOVE_COMMENT": "删除注释",
-    "RENAME_ALL": "",
+    "RENAME_ALL": "重命名全部%1",
     "RENAME_PARAMETER": "重命名参数...",
     "RENAME_PARAMETER_TITLE": "将所有的“%1”参数命名为：",
     "RENAME_THIS": "",

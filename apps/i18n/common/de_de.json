@@ -661,6 +661,7 @@
   "leaveSection": "Bereich verlassen",
   "less": "Weniger",
   "lesson": "Unterricht",
+  "lessonExtrasButton": "Gehe zum Lehrer-Dashboard!",
   "lessonName": "Stundenname",
   "lessonNumbered": "Lektion {lessonNumber}: {lessonName}",
   "lessonPlans": "Stundenpläne",

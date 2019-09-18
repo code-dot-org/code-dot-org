@@ -1048,6 +1048,64 @@ class User < ActiveRecord::Base
     user_levels.attempted.exists?
   end
 
+  # Returns the next visible script_level for the next progression level in the # given script that hasn't yet been passed, starting at the last level the
+  # the user most recently submitted
+  def next_unpassed_visible_progression_level(script)
+    # If all levels in the script are complete, no need to find the next level,
+    # will be redirected to /congrats.
+    return nil if completed?(script)
+
+    visible_sls = visible_script_levels(script).reject {|sl| sl.bonus || sl.level.unplugged? || sl.locked?(self)}
+
+    sl_level_ids = visible_sls.map(&:level_ids).flatten
+
+    # Levels the user made progress in
+    ul_level_ids = user_levels_by_level(script).keys
+
+    visible_completed_level_ids = sl_level_ids & ul_level_ids
+    visible_incomplete_level_ids = sl_level_ids - ul_level_ids
+
+    first_visible_level = visible_sls.min_by(&:chapter)
+
+    completed_all_visible_levels = visible_incomplete_level_ids.empty?
+
+    # Find the user_levels associated with visible script_levels
+    visible_user_levels = user_levels.where(level_id: visible_completed_level_ids)
+
+    # The user has not made any visible progress or has completed all visible
+    # levels but not the entire script, return the first visible script_level
+    return first_visible_level if visible_user_levels.empty? || completed_all_visible_levels
+
+    # Most recently completed user_level of the visible subset
+    most_recent_ul = visible_user_levels.max_by(&:created_at)
+
+    # Find the script_level that goes with the most recent user_level
+    most_recent_sl = visible_sls.find {|sl| sl.level_id == most_recent_ul.level_id}
+
+    last_visible_level = visible_sls.max_by(&:chapter)
+
+    visible_incomplete_sls = visible_sls.find_all {|sl| visible_incomplete_level_ids.include?(sl.level_id)}
+
+    first_visible_incomplete_level = visible_incomplete_sls.min_by(&:chapter)
+
+    # The user has completed the last level in the progress, but not all
+    # previous levels, return the first visible incomplete script_level
+    return first_visible_incomplete_level || first_visible_level if
+      most_recent_sl == last_visible_level
+
+    # Find the chapter for the script_level that goes with the most recent user_level
+    most_recent_completed_chapter = most_recent_sl.chapter
+
+    # Find the script_level that has the next highest chapter level from the one above and is not complete
+    later_unpassed_visible_sls = visible_incomplete_sls.select do |sl|
+      sl.chapter > most_recent_completed_chapter
+    end
+
+    next_unpassed_visible_progression_sl = later_unpassed_visible_sls.min_by(&:chapter)
+
+    next_unpassed_visible_progression_sl
+  end
+
   # Returns the next script_level for the next progression level in the given
   # script that hasn't yet been passed, starting its search at the last level we submitted
   def next_unpassed_progression_level(script)
@@ -1140,6 +1198,12 @@ class User < ActiveRecord::Base
       # if we have no sections matching this script id, we consider a stage hidden if any of the sections we're in
       # hide it
       sections.any? {|s| script_level.hidden_for_section?(s.id)}
+    end
+  end
+
+  def visible_script_levels(script)
+    script.script_levels.select do |sl|
+      !script_level_hidden?(sl)
     end
   end
 
@@ -1973,8 +2037,9 @@ class User < ActiveRecord::Base
     teacher? && users_school && (next_census_display.nil? || Date.today >= next_census_display.to_date)
   end
 
-  # Returns the name of the donor for the donor teacher banner, or nil if none.
-  def donor_teacher_banner_name
+  # Returns the name of the donor for the donor teacher banner and donor footer, or nil if none.
+  # Donors are associated with certain schools, captured in DonorSchool and populated from a Pegasus gsheet
+  def school_donor_name
     school_id = last_complete_school_info&.school&.id
     donor_name = DonorSchool.find_by(nces_id: school_id)&.name if school_id
 

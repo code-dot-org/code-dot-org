@@ -148,9 +148,13 @@ export function setupApp(appOptions) {
           lastSavedProgram
         );
       }
-      // report.callback will already have the correct milestone post URL in
-      // the contained level case, unless we're editing blocks
+      // Our report will already have the correct callback and program
+      // in the contained level case, unless we're editing blocks.
       if (appOptions.level.edit_blocks || !appOptions.hasContainedLevels) {
+        if (appOptions.hasContainedLevels) {
+          var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+          report.program = Blockly.Xml.domToText(xml);
+        }
         report.callback = appOptions.report.callback;
       }
       trackEvent('Activity', 'Lines of Code', window.script_path, report.lines);

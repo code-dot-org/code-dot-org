@@ -73,9 +73,6 @@ sl:
   auth:
     sign_in_with: Vpiši se z %{provider}
     signed_in: Vpisan si!
-    signed_out: Trenutno nisi prijavljen/a v <a href="%{url}"> Code.org</a>.
-    sign_out_of: Vpisani ste z %{provider}, <a href="%{url}"> Kliknite tukaj</a> za
-      izpis iz %{provider}.
     already_signedup: Si se že vpisal?
     notyet_signedup: Se nam še nisi pridružil?
     google_oauth2: Google račun
@@ -313,10 +310,6 @@ sl:
     tried: Poskus
   home:
     title: Studio za kodiranje
-    description: Code Studio je dom spletnih tečajev, ki jih je ustvaril Code.org
-    lines_of_code: ŠTUDENTJE SO NAPISALI %{lines_count} VRSTIC KODE
-    lines_of_code_linebreak: "%{students_count} MILIJONOV ŠTUDENTOV JE NAPISALO<br/>%{lines_count}
-      VRSTIC KODE"
     all_courses: Pregled tečajev 1, 2 in 3
     lesson_plans: Učni načrti
     signin_message: Že registrirani? %{link}
@@ -355,12 +348,6 @@ sl:
     try_beta_courses: Novo! Poskusite naše beta tečaje za učence prvih dveh triad
       na ameriških šolah
     use_as_teacher: Uporabi to stran kot učitelj
-    heading_hoc2014: "<h2>Ura kodiranja za</h2><h1>vse starosti</h1>"
-    heading_elementary: "<h2>20 urni tečaji za</h2><h1>začetnike (vseh starosti)</h1>"
-    heading_apps: "<h2>Zabavno učenje za</h2><h1>vsakogar</h1>"
-    heading_tools: "<h2>Pripravljen na naslednji korak?</h2><h1>JavaScript Orodja
-      za Srednjo Šolo</h1>"
-    heading_legacy: "<h2>Naš tečaj za</h2><h1>vse starosti</h1>"
     your_gallery: Galerija
     no_primary_course: Poskusite Code Studio smer
     choose_next_course: Poskusi Code Studio tečaj z izbiro enga spodaj
@@ -531,10 +518,6 @@ sl:
     header_playlab: Zgodbe in igre
     report_abuse: Prijavi zlorabo
   landing:
-    prerelease: Ta tečaj je <span class='betatext'>beta</span>.  To pomeni, da ni
-      končna različica in ga bomo z vašo pomočjo še izboljševali.
-    prerelease_hoc2014: Ta priročnik je <span class='betatext'>beta</span>.  To pomeni,
-      da ni končna različica in ga bomo z vašo pomočjo še izboljševali.
     report_bug: Sporoči napako
     support: Pomoč
     support_url: "//support.code.org"
@@ -581,10 +564,6 @@ sl:
   age_interstitial:
     age: Tvoja starost
     header: Posodobitev podatkov o računu
-    message: Želimo zagotoviti še boljšo zaščito zasebnosti, zato potrebujemo podatek
-      o starosti učencev. <br/>Kot vedno, code.org podatkov ne bo nikoli posodil,
-      prodal ali delil s tretjimi osebami.
-    sign_out: Če podatka o starosti ne želite vnesti, se lahko <a href="%{url}">izpišete</a>.
   terms_interstitial:
     tos: Pogoje storitve
     privacy: Izjava o zasebnosti

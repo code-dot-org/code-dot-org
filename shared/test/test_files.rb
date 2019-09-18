@@ -15,11 +15,7 @@ class FilesTest < FilesApiTestBase
   def teardown
     # Require that tests delete the assets they upload
     get "v3/files/#{@channel_id}"
-    expected_empty_files = {
-      'files' => [],
-      'filesVersionId' => ''
-    }
-    assert_equal(expected_empty_files, JSON.parse(last_response.body))
+    assert not_found?
     delete_channel(@channel_id)
     @channel_id = nil
   end
@@ -393,9 +389,8 @@ class FilesTest < FilesApiTestBase
   def test_bad_channel_id
     bad_channel_id = 'undefined'
     api = FilesApiTestHelper.new(current_session, 'files', bad_channel_id)
-    file_infos = api.list_objects
-    assert_equal '', file_infos['filesVersionId']
-    assert_equal [], file_infos['files']
+    api.list_objects
+    assert not_found?
     assert_newrelic_metrics []
   end
 

@@ -51,9 +51,6 @@ ms:
   auth:
     sign_in_with: Daftar Masuk dengan % {pembekal}
     signed_in: Daftar masuk!
-    signed_out: Anda telah mendaftar keluar daripada <a href="%{url}">Code.org</a>.
-    sign_out_of: Anda telah mengunakkan %{provider} untuk mendaftar masuk. <a href="%{url}">Klik
-      di sini</a> untuk mendaftar keluar daripada %{provider}.
     already_signedup: Sudah mendaftar?
     notyet_signedup: Belum menyertai lagi?
     google_oauth2: Akaun Google
