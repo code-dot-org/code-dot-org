@@ -26,17 +26,13 @@ describe('RecentCourses', () => {
     expect(wrapper.find('SeeMoreCourses').exists()).to.be.false;
   });
 
-  it('SetUpCourses has no course when courses is empty and topCourse is null', () => {
-    const wrapper = shallow(
-      <RecentCourses isTeacher={false} courses={[]} topCourse={null} />
-    );
+  it('SetUpCourses has no course when topCourse is null', () => {
+    const wrapper = shallow(<RecentCourses topCourse={null} />);
     expect(wrapper.find('SetUpCourses').prop('hasCourse')).to.be.false;
   });
 
-  it('SetUpCourses has no course when courses is empty and topCourse is undefined', () => {
-    const wrapper = shallow(
-      <RecentCourses isTeacher={false} courses={[]} topCourse={undefined} />
-    );
+  it('SetUpCourses has no course when topCourse is undefined', () => {
+    const wrapper = shallow(<RecentCourses topCourse={undefined} />);
     expect(wrapper.find('SetUpCourses').prop('hasCourse')).to.be.false;
   });
 
