@@ -380,7 +380,7 @@
     "TEXT_TRIM_OPERATOR_RIGHT": "réduire les espaces du côté droit",
     "TEXT_TRIM_TOOLTIP": "Renvoyer une copie du texte avec les espaces supprimés d’un côté ou des deux.",
     "UNUSED_CODE": "Code non utilisé",
-    "VARIABLE": "",
+    "VARIABLE": "variable",
     "VARIABLES_DEFAULT_NAME": "élément",
     "VARIABLES_GET_CREATE_SET": "Créer «&#160;fixer %1&#160;»",
     "VARIABLES_GET_HELPURL": "http://code.google.com/p/blockly/wiki/Variables#Get",

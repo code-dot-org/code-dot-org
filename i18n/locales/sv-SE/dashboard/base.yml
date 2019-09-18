@@ -66,8 +66,6 @@ sv:
   auth:
     sign_in_with: 'Logga in med %{provider}'
     signed_in: 'Inloggad!'
-    signed_out: 'Du har loggat ut från <a href="%{url}">Code.org</a>.'
-    sign_out_of: 'Du använde %{provider} för att logga in. <a href="%{url}"> Klicka här</a> för att logga ut från %{provider}.'
     already_signedup: 'Redan registrerad?'
     notyet_signedup: "Har du inte gått  med ännu?"
     google_oauth2: 'Google-konto'
@@ -104,8 +102,6 @@ sv:
     under_13_consent: "Om jag är under 13 år bekräftar jag härmed att jag har min förälders eller målsmans tillåtelse att använda tjänsterna på Code.org."
     agree_us_website: "Jag samtycker till att använda en webbplats baserad i USA."
     my_data_to_us: "När jag använder denna webbplats kan information om detta skickas till och lagras eller bearbetas i USA."
-    student_terms: "Jag har läst och godkänner Code.org <a href='http://code.org/tos'>användarvillkor</a>. Om jag är under 13 år gammal, så bekräftar jag, genom att skicka in det här formuläret, att jag har min vårdnadshavares godkännande för att använda mig utav siten code.org. <br/><br/> Mejladresser sparas inte på ett sådant sätt att vi kan kontakta elever. Elever kommer aldrig att få mejl utav oss, om det inte gäller lösenordsåterställande. Se vår <a href='http://code.org/privacy'>sekretesspolicy</a> för mer information."
-    teacher_terms: "Jag godkänner Code.orgs användarvillkor. För mer information, se vår <a href='http://code.org/privacy'>sekretesspolicy</a>."
     additional_information: "Vi behöver  ytterligare information att fortsätta registrera dig."
     user_type_label: "Kontotyp"
     user_type_teacher: "Lärare"
@@ -323,9 +319,6 @@ sv:
     tried: 'Försökte'
   home:
     title: "Code Studio"
-    description: 'Code Studio är basen för onlinekurser skapade av Code.org'
-    lines_of_code: "%{lines_count} RADER KOD SKRIVEN AV STUDENTER"
-    lines_of_code_linebreak: "%{lines_count} rader kod <br/> skrivna av %{students_count} miljoner studenter"
     all_courses: "Översikt över kurser 1, 2 och 3"
     lesson_plans: "Lektionsplaneringar"
     signin_message: "Redan registrerad? %{link}"
@@ -355,11 +348,6 @@ sv:
     test_videos_help: 'Testa vår nya video-spelare på din skola'
     try_beta_courses: 'Nytt! Prova våra beta-kurser för elever från förskoleklass till åk 5'
     use_as_teacher: 'Använda denna webbplats som lärare'
-    heading_hoc2014: "<h2>Timmen med kod för</h2><h1>Alla åldrar</h1>"
-    heading_elementary: "<h2>20 timmars kurser för</h2><h1>Nybörjare (alla åldrar)</h1>"
-    heading_apps: "<h2>Kul för</h2><h1>Alla</h1>"
-    heading_tools: "<h2>Är du redo för nästa steg?</h2> <h1>JavaScript verktyg för gymnasiet</h1>"
-    heading_legacy: "<h2>Vår allmänna kurs för</h2><h1>Alla åldrar</h1>"
     your_gallery: Galleri
     no_primary_course: "Prova en kurs på Code Studio"
     choose_next_course: "Prova en Code Studio kurs genom att välja en nedan"
@@ -532,8 +520,6 @@ sv:
     header_artist: "Konstnären"
     report_abuse: "Rapportera missbruk"
   landing:
-    prerelease: "Denna kurs är i <span class='betatext'> beta</span>.  Detta innebär att det inte är den slutliga versionen av kursen, och är föremål för översyn allt eftersom feedback tas emot och förbättringar görs."
-    prerelease_hoc2014: "Den här övningen är en <span class='betatext'>betaversion</span>.  Den revideras allteftersom synpunkter kommer in och förbättringar görs."
     report_bug: "Rapportera bugg"
     support: "Få hjälp"
     support_url: "//support.code.org"
@@ -599,8 +585,6 @@ sv:
   age_interstitial:
     age: Din ålder
     header: Kontoinformation uppdatering
-    message: "Vi håller på att uppdatera vår erfarenhet för att ge dig ännu starkare sekretess-skydd. För att göra detta, behöver vi be befintliga användare att ange sin ålder här. <br/>Som alltid, kommer code.org aldrig hyra ut, sälja eller dela denna information med tredje part."
-    sign_out: 'Om du inte vill ange din ålder kan du <a href="%{url}"> logga ut</a>.'
   terms_interstitial:
     title: "Uppdaterade användarvillkor och Sekretesspolicy"
     intro_desc: "Vi har uppdaterat våra användarvillkor och sekretesspolicy, som visas nedan. Förändringarna träder i kraft from den 24 Augusti, 2016.  Den största förändringen: vi kommer <i>inte längre att lagra e-postadresser för elevkonton på kod Studio.</i> Detta är en stor sak för oss, och vi hoppas att det sätter en ny standard för elevernas sekretess i teknisk utbildning. Vi har skickat Er en sammanfattning av de övriga förändringarna via e-post."
@@ -683,10 +667,8 @@ sv:
   peer_review:
     accepted:
       name: 'Godkänd'
-      description: '<strong>Ja</strong>, denna inlämning <strong>uppfyller</strong> kraven'
     rejected:
       name: 'Ej godkänd'
-      description: '<strong>Nej</strong>, denna inlämning <strong>uppfyller inte</strong> kraven'
     escalated:
       name: 'Upptrappad'
       description: 'Jag skulle vilja att en instruktör granskar denna inlämning'

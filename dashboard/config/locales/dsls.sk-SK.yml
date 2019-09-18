@@ -614,10 +614,12 @@ sk-SK:
         - {}
         - {}
       CSD U3 Card Examples_2018:
+        title: Vytvorenie interaktívnej pohľadnice
         markdown: "# Tvoja interaktívna pohľadnica\n\nV nasledujúcich cvičeniach dokonči
           vlastnú interaktívnu pohľadnicu. Príklady pohľadníc si pozri nižšie. Nezabudni
           sa pozrieť aj na kód, aby si zistil/a ako funguje. \n\n## Príklady\n\n[![](https://images.code.org/7bbdbbb01c354a7c09bb4b9b5182a951-image-1522780803299.png)](https://studio.code.org/projects/gamelab/OzdFqrZ4oHPYsTddaRWaZxtTvdj9NzZVwCq6NkyONXM/edit)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/ed307e22854e4958a006d8023636cfd5-image-1522780803295.png)](https://studio.code.org/projects/gamelab/fmFrWsocELzP19CfbGI5P_hsgxN5ewVaB5f0Bw5S1_E/edit)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/ae0eca1dab46f13fcb21d4d0e264d637-image-1522780803298.png)](https://studio.code.org/projects/gamelab/z4XDrC0lsqoRY0xzYaXdJfChmyCl5O6YM-EOByecscc/edit)\n"
       CSD U3 Card Examples_2018_2019:
+        title: Vytvorenie interaktívnej pohľadnice
         markdown: "# Tvoja interaktívna pohľadnica\n\nV nasledujúcich cvičeniach dokonči
           vlastnú interaktívnu pohľadnicu. Príklady pohľadníc si pozri nižšie. Nezabudni
           sa pozrieť aj na kód, aby si zistil/a ako funguje. \n\n## Príklady\n\n[![](https://images.code.org/7bbdbbb01c354a7c09bb4b9b5182a951-image-1522780803299.png)](https://studio.code.org/projects/gamelab/OzdFqrZ4oHPYsTddaRWaZxtTvdj9NzZVwCq6NkyONXM/edit)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/ed307e22854e4958a006d8023636cfd5-image-1522780803295.png)](https://studio.code.org/projects/gamelab/fmFrWsocELzP19CfbGI5P_hsgxN5ewVaB5f0Bw5S1_E/edit)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/ae0eca1dab46f13fcb21d4d0e264d637-image-1522780803298.png)](https://studio.code.org/projects/gamelab/z4XDrC0lsqoRY0xzYaXdJfChmyCl5O6YM-EOByecscc/edit)\n"
@@ -1944,27 +1946,39 @@ sk-SK:
 
       courseF_multi_artist_for10_predict1:
         questions:
-        - {}
+        - text: Čo sa stane, ked stlačíš "Spustiť"?
         answers:
-        - {}
-        - {}
-        - feedback: Správne!
+        - text: Umelec nakreslí rovnú čiaru, ktorá zväčšuje svoju šírku ako ide z
+            jednej strany hracej plochy ku druhej.
+        - text: 'Umelec nakreslí špirálu a vždy, keď prejde cez cyklus `for`, tak
+            čiara bude dlhšia a tenšía. '
+        - text: Umelec nakreslí špirálu a vždy, keď prejde cez cyklus `for`, tak čiara
+            bude dlhšia a hrubšia.
+          feedback: Správne!
         - text: Neviem.
       courseF_multi_artist_for10_predict1_2018:
         questions:
-        - {}
+        - text: Čo sa stane, ked stlačíš "Spustiť"?
         answers:
-        - {}
-        - {}
-        - feedback: Správne!
+        - text: Umelec nakreslí rovnú čiaru, ktorá zväčšuje svoju šírku ako ide z
+            jednej strany hracej plochy ku druhej.
+        - text: 'Umelec nakreslí špirálu a vždy, keď prejde cez cyklus `for`, tak
+            čiara bude dlhšia a tenšía. '
+        - text: Umelec nakreslí špirálu a vždy, keď prejde cez cyklus `for`, tak čiara
+            bude dlhšia a hrubšia.
+          feedback: Správne!
         - text: Neviem.
       courseF_multi_artist_for10_predict1_2018_2019:
         questions:
-        - {}
+        - text: Čo sa stane, ked stlačíš "Spustiť"?
         answers:
-        - {}
-        - {}
-        - feedback: Správne!
+        - text: Umelec nakreslí rovnú čiaru, ktorá zväčšuje svoju šírku ako ide z
+            jednej strany hracej plochy ku druhej.
+        - text: 'Umelec nakreslí špirálu a vždy, keď prejde cez cyklus `for`, tak
+            čiara bude dlhšia a tenšía. '
+        - text: Umelec nakreslí špirálu a vždy, keď prejde cez cyklus `for`, tak čiara
+            bude dlhšia a hrubšia.
+          feedback: Správne!
         - text: Neviem.
       courseF_multi_artist_fwp2_predict1:
         questions:
@@ -2059,7 +2073,7 @@ sk-SK:
         - text: 'Neviem. '
       courseF_multi_bee_fwp9_predict1:
         questions:
-        - {}
+        - text: Čo sa stane, ked stlačíš "Spustiť"?
         answers:
         - {}
         - {}
