@@ -208,7 +208,6 @@
     "sprintf-js": "^1.0.3",
     "style-loader": "^0.13.1",
     "uglifyjs-webpack-plugin": "^2.1.1",
-    "unminified-webpack-plugin": "^2.0.0",
     "url-loader": "^0.5.7",
     "video.js": "4.5.2",
     "vmsg": "^0.3.6",
