@@ -1088,10 +1088,10 @@ class User < ActiveRecord::Base
 
     first_visible_incomplete_level = visible_incomplete_sls.min_by(&:chapter)
 
-    # The user has completed the last level in the progress, but not all
+    # The user has completed the last level in the progression, but not all
     # previous levels, return the first visible incomplete script_level
     return first_visible_incomplete_level || first_visible_level if
-      most_recent_sl == last_visible_level
+      (most_recent_sl == last_visible_level) || most_recent_sl.nil?
 
     # Find the chapter for the script_level that goes with the most recent user_level
     most_recent_completed_chapter = most_recent_sl.chapter
