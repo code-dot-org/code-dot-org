@@ -48,10 +48,14 @@ module Pd::SurveyPipeline
 
     test 'decorate simple non-empty survey roll-up results' do
       facilitator = create :facilitator
-      workshop = create :csp_academic_year_workshop
-      # Both workshops are of the same kind and (implicitly) have the same facilitator
-      related_workshop = create :csp_academic_year_workshop
+
+      # Create 2 workshops are of the same kind and have the same facilitator
+      workshop = create :csp_academic_year_workshop, num_facilitators: 0
+      workshop.facilitators << facilitator
+      related_workshop = create :csp_academic_year_workshop, num_facilitators: 0
+      related_workshop.facilitators << facilitator
       related_workshop_ids = [workshop.id, related_workshop.id]
+
       form_id = 1
 
       # Create 2 general workshop survey submissions for each workshop
