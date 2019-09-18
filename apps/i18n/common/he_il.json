@@ -647,6 +647,7 @@
   "leaveSection": "עזוב קבוצה",
   "less": "פחות",
   "lesson": "שיעור",
+  "lessonExtrasButton": "לגשת לתצגת המורה",
   "lessonName": "שם השיעור",
   "lessonNumbered": "שיעור {lessonNumber}: {lessonName}",
   "lessonPlans": "תוכנית לימודים",

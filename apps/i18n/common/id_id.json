@@ -721,6 +721,7 @@
   "leaveSection": "Meninggalkan bagian",
   "less": "Kurang",
   "lesson": "Pelajaran",
+  "lessonExtrasButton": "Pergi ke Dashboard Guru",
   "lessonName": "Nama Pelajaran",
   "lessonNumber": "Jumlah pelajaran",
   "lessonNumbered": "Pelajaran {lessonNumber}: {lessonName}",
