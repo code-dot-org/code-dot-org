@@ -77,8 +77,6 @@ gl:
     continue_with: 'Continúa con %{provider}'
     sign_in_with: 'Entre con %{provider}'
     signed_in: 'Sesión iniciada!'
-    signed_out: 'Vostede saiu da <a href="%{url}">Code.org</a>.'
-    sign_out_of: 'Vostede usou %{provider} para entrar. <a href="%{url}">Clique aquí</a> para saír de %{provider}.'
     already_signedup: 'Xa estás rexistrado?'
     notyet_signedup: "Aínda non creaches unha conta?"
     google_oauth2: 'Conta do Google'
@@ -122,12 +120,9 @@ gl:
     valid_password: "Contrasinal válido!"
     invalid_password: "O contrasinal  ten que ter, polo menos, 6 caracteres"
     mismatch_password: "Os dous contrasinais que metiches non se corresponden"
-    agree_tos_privacy: "Acepto os <a href='http://code.org/tos'> termos de servicio</a> e <a href='http://code.org/privacy'> a Política de privacidade."
     under_13_consent: "De ter menos de 13 anos, confirmo que teño autorización de meus pais ou titores legais para empregar os servizos de Code.org."
     student_consent: "Confirmo que teño autorización de meus pais ou titores legais para empregrar os servizos de Code.org."
     agree_us_website: "Estou de acordo en usar un sitio web localizado nos Estados Unidos."
-    student_terms: "Acepto os <a href='http://code.org/tos'>Termos de uso</a> de Code.org. Se son menor de 13 anos, declaro neste formulario que teño autorización de meus pais para usar os servizos de Code.org.<br/><br/>Os enderezos de correo non son gardados, o que impide a Code.org contactar cos alumnos, exceto cando para recuperar o contrasinal. Consulta a nosa <a href='http://code.org/privacy'>Política de privacidade</a> para saber máis."
-    teacher_terms: "Acepto os Termos de Servizo de Code.org. Para máis información sobre privacidade, consulte a nosa <a href='http://code.org/privacy'>política de privacidade</a>."
     additional_information: "Necesitamos máis informacións para continuarmos o proceso de creacción da conta."
     user_type_button: "Actualizar tipo de conta"
     user_type_label: "Tipo de conta"
@@ -181,7 +176,6 @@ gl:
     login: 'Iniciar Sesión'
     invalid_login: 'Inicio de sesión non válido; por favor, tente de novo'
     pair_programming: 'Estou traballando a medias no ordenador'
-    student_privacy: "Saiba máis sobre por que non está vendo o seu nome completo <a href='%{student_privacy_blog}' target='_blank'>aquí</a>."
   password:
     reset_form:
       title: 'Esqueceu o seu contrasinal?'
@@ -380,9 +374,6 @@ gl:
     tried: 'Probado'
   home:
     title: "Code Studio"
-    description: 'No Code Studio podes atopar os cursos online da Code.org'
-    lines_of_code: "%{lines_count} LIÑAS DE CÓDIGO ESCRITAS POR ALUMNOS"
-    lines_of_code_linebreak: "%{lines_count} LIÑAS DE CÓDIGO<br/>ESCRITAS %{students_count} MILLÓNS DE ALUMNOS"
     all_courses: "Visión xeral dos cursos 1, 2 e 3"
     lesson_plans: "Plan de estudo"
     signin_message: "Xa estás rexistrado? %{link}"
@@ -412,10 +403,6 @@ gl:
     test_videos_help: 'Probe o noso novo reprodutor de vídeo na súa escola'
     try_beta_courses: 'Novo! Coñeza os nosos cursos experimentais para alumnos do pré ao 5º ano'
     use_as_teacher: 'Use este sitio Web como profesor'
-    heading_hoc2014: "<h2>A Hora de Código para</h2><h1>Todas as idades</h1>"
-    heading_elementary: "<h2>Cursos de 20 horas para</h2><h1>Principiantes (todas as idades)</h1>"
-    heading_apps: "<h2>Diversión para</h2><h1>todos</h1>"
-    heading_legacy: "<h2>O noso curso acelerado para</h2><h1>Todas as idades</h1>"
     your_gallery: Galería
     no_primary_course: "Faga un curso no Code Studio"
     choose_next_course: "Experimenta un dos seguintes cursos do Code Studio"
@@ -558,8 +545,6 @@ gl:
     header_artist: "Artista"
     report_abuse: "Reportar abuso"
   landing:
-    prerelease: "Este curso está na súa versión <span class='betatext'>beta</span>. Isto significa que esta non é a versión final do curso, e está suxeito a revisións segundo imos recibindo comentarios e se fan melloras."
-    prerelease_hoc2014: "Este titorial está na versión <span class='betatext'>beta</span>. Está suxeito a revisións segundo imos recibindo comentarios e se fan melloras."
     report_bug: "Comunicar erro"
     support: "Obter axuda"
   multi:
@@ -608,8 +593,6 @@ gl:
   age_interstitial:
     age: A súa idade
     header: Actualización de informacións da conta
-    message: "Estamos actualizando nosa experiencia para que vostede teña proteccións de privacidade aínda máis fortes. Para iso, precisamos que os usunrios nos informem da súa idade.<br/>Como sempre, a code.org nunca vai alugar, vender ou compartir esta información con terceiros."
-    sign_out: 'Se vostede non quere informar a súa idade, vostede pode <a href="%{url}">saír</a>.'
   terms_interstitial:
     tos: "Termos de Servizo"
     privacy: "Política de Privacidade"

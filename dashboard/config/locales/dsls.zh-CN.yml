@@ -524,6 +524,8 @@ zh-CN:
 
           ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
       CSD Header Size MC:
+        title: 快速检查标题
+        content1: 查看下面的代码，预测标题的显示方式，从右侧选项中选择一个选项。
         answers:
         - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
             AM.png
@@ -535,6 +537,8 @@ zh-CN:
         - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
             AM.png
       CSD Header Size MC_2018:
+        title: 快速检查标题
+        content1: 查看下面的代码，预测标题的显示方式，从右侧选项中选择一个选项。
         answers:
         - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
             AM.png
@@ -546,6 +550,8 @@ zh-CN:
         - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
             AM.png
       CSD Header Size MC_2018_2019:
+        title: 快速检查标题
+        content1: 查看下面的代码，预测标题的显示方式，从右侧选项中选择一个选项。
         answers:
         - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
             AM.png
@@ -612,9 +618,37 @@ zh-CN:
       CSD U2 L2 Overview:
         title: 标题
         content1: 描述
+        markdown: |
+          # 课程预览
+          本课程以通俗的方式介绍了网站。首先讨论了人们表达和分享他们的兴趣与观点的几种方式；然后展示了几个上堂课学生制作的示意网站；最后进行了头脑风暴，每个人都分享了话题和兴趣列表，准备在接下来的课程单元里用于开发个人网站所需要的资源。
+
+          ## 参考词汇
+          ***网页内容** - 在网页中呈现的文字、图片以及其它元素。
+
+          ## 资源
+          * [个人网站草图 - 课堂活动指南](https://docs.google.com/document/d/1wnK0ntxFWvUyuEB6SksiTtUDqrEhZZn3VPLWynz-fV4/export?format=pdf)
       CSD U2 L3 Overview:
         title: 标题
         content1: 描述
+        markdown: |
+          # 课程预览
+
+          本课程介绍了HTML，HTML是实现网站的内容与结构和电脑进行传输呈现的一个解决方案。开始先进行了一个简短的课堂活动，展示了有效传输呈现网页结构的挑战。学生们在WEB试验台看HTML网页，讨论HTML的标签是如何解决问题的，然后使用HTML完成本单元的一个网页。
+
+          ## 词汇参考
+          * **HTML** - 超文本标记语言，一种用于创建网页的语言
+          * **HTML Element** - 网页元素，通常由开头标签标记，一般也有一个结束标签
+          * **HTML Tag** - 一组特殊字符，用于指示HTML元素的开头和结尾以及该元素的类型
+          * **Website Content** - 网页中包含的文本，图像和其他元素
+          * **Website Structure** - 网页中用于帮助计算机确定应如何显示内容的不同内容块
+
+          ## 已学代码
+
+          * **[HTML](//docs.code.org/weblab/html/)** - `<html></html>`
+          * **[Doctype](//docs.code.org/weblab/doctype/)** - `<!DOCTYPE>`
+          * **[Paragraph](//docs.code.org/weblab/P/)** - `<p></p>`
+          * **[Body](//docs.code.org/weblab/body/)** - `<body></body>`
+          * **[Head](//docs.code.org/weblab/head/)** - `<head></head>`
       CSD U2 L4 Overview:
         title: 标题
         content1: 描述
@@ -667,6 +701,7 @@ zh-CN:
             PM.png">
       CSD U2 lists match:
         title: 快速检查列表
+        content1: 匹配列表和相对应的代码。
         questions:
         - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
             PM.png
@@ -691,6 +726,7 @@ zh-CN:
             PM.png
       CSD U2 lists match_2018:
         title: 快速检查列表
+        content1: 匹配列表和相对应的代码。
         questions:
         - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
             PM.png
@@ -715,6 +751,7 @@ zh-CN:
             PM.png
       CSD U2 lists match_2018_2019:
         title: 快速检查列表
+        content1: 匹配列表和相对应的代码。
         questions:
         - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
             PM.png

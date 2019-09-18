@@ -463,6 +463,537 @@ de-DE:
         mc_8_b: Nutze `wiederholen`-Schleifen um dein Code zu vereinfachen.
       Overworld Avoid Monsters_2019:
         mc_8_b: Nutze `wiederholen`-Schleifen um dein Code zu vereinfachen.
+      course1_collector_loops_challenge1:
+        courseA_collector_loops_challenge1_b: Du brauchst keine Schleife verwenden,
+          wenn du etwas nur einmal machst.
+      course1_maze_seq_challenge1:
+        courseA_maze_seq_challenge2_a: 'Versuche die Felder mit deinem Finger nachzuzählen.
+          Denke daran: Das Feld von dem du startest musst du nicht mitzählen!'
+      course1_playlab_events_challenge1:
+        courseA_playlab_events_challenge1_a: "Mach, dass Waddles, der Pinguin, erscheint,
+          wenn du auf Robin klickst!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_b: "Mach, dass Buu, der Geist, erscheint,
+          wenn du auf Waddles klickst!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_c: "Mach, dass Jayden, das wuschelige Monster,
+          erscheint, wenn du auf Buu klickst!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_d: "Mach, dass Spiff, der Roboter, erscheint,
+          wenn du auf das Monster klickst!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+      course1_playlab_events_challenge2:
+        courseA_playlab_events_challenge2_a: "Du kannst einen Vogel zum singen bringen.\n\n<xml>
+          \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n
+          \   <next>\n          <block type=\"studio_saySprite\">\n            <title
+          name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n
+          \         </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_b: "Du kannst den Roboter piepsen lassen.\n\n<xml>\n
+          \ <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n
+          \   <next>\n      \n          <block type=\"studio_playSound\">\n            <title
+          name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_c: |-
+          Du kannst das grantige Monster knurren lassen.
+
+          <xml>  <block type="studio_whenSpriteClicked">
+              <title name="SPRITE">5</title>
+              <next>
+                <block type="studio_setSpriteEmotion">
+                  <title name="SPRITE">5</title>
+                  <title name="VALUE">2</title>
+                  <next>
+                    <block type="studio_saySprite">
+                      <title name="SPRITE">5</title>
+                      <title name="TEXT">Roar!</title>
+                      <next>
+                        <block type="studio_setSpriteEmotion">
+                          <title name="SPRITE">5</title>
+                          <title name="VALUE">0</title>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block></xml>
+      courseA_artist_loops2:
+        courseA_artist_loops2_a: Du weißt nicht, wie man Linien zeichnet? Beginne
+          damit, Blöcke zum <xml><block type="when_run"/></xml> Block anzufügen um
+          zu sehen, was passiert.
+        courseA_artist_loops2_b: Benutze diesen <xml><block type="simple_move_right"/></xml>
+          Block um die Aufgabe zu lösen.
+      courseA_artist_loops2_2018:
+        courseA_artist_loops2_a: Du weißt nicht, wie man Linien zeichnet? Beginne
+          damit, Blöcke zum <xml><block type="when_run"/></xml> Block anzufügen um
+          zu sehen, was passiert.
+        courseA_artist_loops2_b: Benutze diesen <xml><block type="simple_move_right"/></xml>
+          Block um die Aufgabe zu lösen.
+      courseA_artist_loops2_2019:
+        courseA_artist_loops2_a: Du weißt nicht, wie man Linien zeichnet? Beginne
+          damit, Blöcke zum <xml><block type="when_run"/></xml> Block anzufügen um
+          zu sehen, was passiert.
+        courseA_artist_loops2_b: Benutze diesen <xml><block type="simple_move_right"/></xml>
+          Block um die Aufgabe zu lösen.
+      courseA_artist_loops3:
+        courseA_artist_loops3_a: Fahre langsam mit deinem Finger das Programm entlang
+          um zu sehen, wo es schief läuft.
+        courseA_artist_loops3_b: |-
+          Du wirst einen solchen Block brauchen, um die Aufgabe lösen zu können:
+
+          ![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)
+      courseA_artist_loops3_2018:
+        courseA_artist_loops3_a: Fahre langsam mit deinem Finger das Programm entlang
+          um zu sehen, wo es schief läuft.
+        courseA_artist_loops3_b: |-
+          Du wirst einen solchen Block brauchen, um die Aufgabe lösen zu können:
+
+          ![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)
+      courseA_artist_loops3_2019:
+        courseA_artist_loops3_a: Fahre langsam mit deinem Finger das Programm entlang
+          um zu sehen, wo es schief läuft.
+        courseA_artist_loops3_b: |-
+          Du wirst einen solchen Block brauchen, um die Aufgabe lösen zu können:
+
+          ![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)
+      courseA_artist_loops4:
+        courseA_artist_loops4_a: Wenn du die Schleife mehr als 4 mal wiederholen möchtest,
+          kannst du die Zahl oben im Block ändern.
+        courseA_artist_loops4_b: Da du nur einen <xml><block type="simple_move_right"/></xml>
+          benutzen darfst, versuche ihn in die <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="2-6">5</title></block></xml> Schleife zu setzen.
+      courseA_artist_loops4_2018:
+        courseA_artist_loops4_a: Wenn du die Schleife mehr als 4 mal wiederholen möchtest,
+          kannst du die Zahl oben im Block ändern.
+        courseA_artist_loops4_b: Da du nur einen <xml><block type="simple_move_right"/></xml>
+          benutzen darfst, versuche ihn in die <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="2-6">5</title></block></xml> Schleife zu setzen.
+      courseA_artist_loops4_2019:
+        courseA_artist_loops4_a: Wenn du die Schleife mehr als 4 mal wiederholen möchtest,
+          kannst du die Zahl oben im Block ändern.
+        courseA_artist_loops4_b: Da du nur einen <xml><block type="simple_move_right"/></xml>
+          benutzen darfst, versuche ihn in die <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="2-6">5</title></block></xml> Schleife zu setzen.
+      courseA_artist_loops5:
+        courseA_artist_loops5_a: Benutze, was du über <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> Blöcke gelernt hast,
+          um diese Aufgabe zu lösen!
+        courseA_artist_loops5_b: Wenn du die Schleife mehr als 4 mal wiederholen möchtest,
+          kannst du die Zahl oben im Block ändern.
+        courseA_artist_loops5_c: "Da du nur einen <xml><block type=\"simple_move_right\"/></xml>
+          benutzen darfst, versuche ihn in die \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title
+          name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\nSchleife zu
+          setzen."
+      courseA_artist_loops5_2018:
+        courseA_artist_loops5_a: Benutze, was du über <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> Blöcke gelernt hast,
+          um diese Aufgabe zu lösen!
+        courseA_artist_loops5_b: Wenn du die Schleife mehr als 4 mal wiederholen möchtest,
+          kannst du die Zahl oben im Block ändern.
+        courseA_artist_loops5_c: "Da du nur einen <xml><block type=\"simple_move_right\"/></xml>
+          benutzen darfst, versuche ihn in die \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title
+          name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\nSchleife zu
+          setzen."
+      courseA_artist_loops5_2019:
+        courseA_artist_loops5_a: Benutze, was du über <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> Blöcke gelernt hast,
+          um diese Aufgabe zu lösen!
+        courseA_artist_loops5_b: Wenn du die Schleife mehr als 4 mal wiederholen möchtest,
+          kannst du die Zahl oben im Block ändern.
+        courseA_artist_loops5_c: "Da du nur einen <xml><block type=\"simple_move_right\"/></xml>
+          benutzen darfst, versuche ihn in die \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title
+          name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\nSchleife zu
+          setzen."
+      courseA_artist_loops6:
+        courseA_artist_loops6_a: Du weisst nicht, wie du einen Hügel zeichnen kannst?
+          Spiele eine wenig mit allen Blöcken um zu sehen, was jeder einzelne zeichnet.
+        courseA_artist_loops6_b: Du brauchst 2 Blöcke in 2 verschiedene Richtungen
+          um diese Aufgabe zu lösen.
+      courseA_artist_loops6_2018:
+        courseA_artist_loops6_a: Du weisst nicht, wie du einen Hügel zeichnen kannst?
+          Spiele eine wenig mit allen Blöcken um zu sehen, was jeder einzelne zeichnet.
+        courseA_artist_loops6_b: Du brauchst 2 Blöcke in 2 verschiedene Richtungen
+          um diese Aufgabe zu lösen.
+      courseA_artist_loops6_2019:
+        courseA_artist_loops6_a: Du weisst nicht, wie du einen Hügel zeichnen kannst?
+          Spiele eine wenig mit allen Blöcken um zu sehen, was jeder einzelne zeichnet.
+        courseA_artist_loops6_b: Du brauchst 2 Blöcke in 2 verschiedene Richtungen
+          um diese Aufgabe zu lösen.
+      courseA_artist_loops7:
+        courseA_artist_loops7_a: Du weißt nicht, wohin du die Schleife setzen musst?
+          Versuche den Code Schritt-für-Schritt zu schreiben und suche dann ein Muster.
+        courseA_artist_loops7_b: Schreibe zuerst den Code für eine Welle und wiederhole
+          das dann, um die anderen beiden Wellen zu zeichnen.
+        courseA_artist_loops7_c: Vergiss nicht, du kannst mehr als einen Block in
+          eine <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES"
+          config="3-10">???</title></block></xml> Schleife setzen.
+      courseA_artist_loops7_2018:
+        courseA_artist_loops7_a: Du weißt nicht, wohin du die Schleife setzen musst?
+          Versuche den Code Schritt-für-Schritt zu schreiben und suche dann ein Muster.
+        courseA_artist_loops7_b: Schreibe zuerst den Code für eine Welle und wiederhole
+          das dann, um die anderen beiden Wellen zu zeichnen.
+        courseA_artist_loops7_c: |-
+          Vergiss nicht, du kannst mehr als einen Block in eine <xml><block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="3-10">???</title>
+            </block></xml> Schleife setzen.
+      courseA_artist_loops7_2019:
+        courseA_artist_loops7_a: Du weißt nicht, wohin du die Schleife setzen musst?
+          Versuche den Code Schritt-für-Schritt zu schreiben und suche dann ein Muster.
+        courseA_artist_loops7_b: Schreibe zuerst den Code für eine Welle und wiederhole
+          das dann, um die anderen beiden Wellen zu zeichnen.
+        courseA_artist_loops7_c: |-
+          Vergiss nicht, du kannst mehr als einen Block in eine <xml><block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="3-10">???</title>
+            </block></xml> Schleife setzen.
+      courseA_artist_loops8:
+        courseA_artist_loops8_a: Führe den Code aus um zu sehen, was schon für dich
+          geschrieben wurde.
+        courseA_artist_loops8_b: Wie würdest du in diesem Code am besten Schleifen
+          verwenden?
+        courseA_artist_loops8_c: |-
+          Was macht der Code?\
+          Was soll der Code machen?\
+          Was sagt dir das?
+      courseA_artist_loops8_2018:
+        courseA_artist_loops8_a: Führe den Code aus um zu sehen, was schon für dich
+          geschrieben wurde.
+        courseA_artist_loops8_b: Wie würdest du in diesem Code am besten Schleifen
+          verwenden?
+        courseA_artist_loops8_c: |-
+          Was macht der Code?\
+          Was soll der Code machen?\
+          Was sagt dir das?
+      courseA_artist_loops8_2019:
+        courseA_artist_loops8_a: Führe den Code aus um zu sehen, was schon für dich
+          geschrieben wurde.
+        courseA_artist_loops8_b: Wie würdest du in diesem Code am besten Schleifen
+          verwenden?
+        courseA_artist_loops8_c: |-
+          Was macht der Code?\
+          Was soll der Code machen?\
+          Was sagt dir das?
+      courseA_artist_loops9:
+        courseA_artist_loops9_a: Füge noch einen Block zum Code hinzu um die restlichen
+          Stufen zu zeichnen.
+        courseA_artist_loops9_b: "Der Block, den du hinzufügst, soll in die \n\n<xml><block
+          type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>\n\n
+          Schleife gesetzt werden."
+        courseA_artist_loops9_c: Wenn du nicht weißt, wohin du die Schleife setzen
+          sollst, versuche den Code Schritt-für-Schritt zu schreiben und suche dann
+          nach Mustern.
+      courseA_artist_loops9_2018:
+        courseA_artist_loops9_a: Füge noch einen Block zum Code hinzu um die restlichen
+          Stufen zu zeichnen.
+        courseA_artist_loops9_c: Wenn du nicht weißt, wohin du die Schleife setzen
+          sollst, versuche den Code Schritt-für-Schritt zu schreiben und suche dann
+          nach Mustern.
+      courseA_artist_loops9_2019:
+        courseA_artist_loops9_a: Füge noch einen Block zum Code hinzu um die restlichen
+          Stufen zu zeichnen.
+        courseA_artist_loops9_b: "Der Block, den du hinzufügst, soll in die \n\n<xml><block
+          type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>\n\n
+          Schleife gesetzt werden."
+        courseA_artist_loops9_c: Wenn du nicht weißt, wohin du die Schleife setzen
+          sollst, versuche den Code Schritt-für-Schritt zu schreiben und suche dann
+          nach Mustern.
+      courseA_artist_loops_challenge2a:
+        courseA_artist_loops_challenge2_a: Blöcke wie dieser <xml>  <block type="simple_move_up_left"/></xml>
+          lassen deinen Künstler schräg gehen!
+        courseA_artist_loops_challenge2_b: Wenn du ein Zelt fertig hast, 'springe'
+          zweimal nach oben um zum nächsten zu kommen!
+        courseA_artist_loops_challenge2_c: Alle deine Blöcke müssen innerhalb einer
+          Schleife sein, dass du die Aufgabe lösen kannst.
+      courseA_artist_loops_challenge2a_2018:
+        courseA_artist_loops_challenge2_a: Blöcke wie dieser <xml>  <block type="simple_move_up_left"/></xml>
+          lassen deinen Künstler schräg gehen!
+        courseA_artist_loops_challenge2_b: Wenn du ein Zelt fertig hast, 'springe'
+          zweimal nach oben um zum nächsten zu kommen!
+        courseA_artist_loops_challenge2_c: Alle deine Blöcke müssen innerhalb einer
+          Schleife sein, dass du die Aufgabe lösen kannst.
+      courseA_artist_loops_challenge2a_2019:
+        courseA_artist_loops_challenge2_a: Blöcke wie dieser <xml>  <block type="simple_move_up_left"/></xml>
+          lassen deinen Künstler schräg gehen!
+        courseA_artist_loops_challenge2_b: Wenn du ein Zelt fertig hast, 'springe'
+          zweimal nach oben um zum nächsten zu kommen!
+        courseA_artist_loops_challenge2_c: Alle deine Blöcke müssen innerhalb einer
+          Schleife sein, dass du die Aufgabe lösen kannst.
+      courseA_collector_loops1:
+        courseA_collector_loops1_a: |-
+          Nachdem du auf ein Feld mit einem Schatz gelangt bist, nimm diesen Block um ihn einzusammeln.
+
+          <xml>  <block type="collector_collect"/></xml>
+        courseA_collector_loops1_b: Eine einfache Lösung wäre 2 mal nach Osten zu
+          gehen und dann den Schatz einzusammeln.
+      courseA_collector_loops1_2018:
+        courseA_collector_loops1_a: |-
+          Nachdem du auf ein Feld mit einem Schatz gelangt bist, nimm diesen Block um ihn einzusammeln.
+
+          <xml>  <block type="collector_collect"/></xml>
+        courseA_collector_loops1_b: Eine einfache Lösung wäre 2 mal nach Osten zu
+          gehen und dann den Schatz einzusammeln.
+      courseA_collector_loops1_2019:
+        courseA_collector_loops1_a: |-
+          Nachdem du auf ein Feld mit einem Schatz gelangt bist, nimm diesen Block um ihn einzusammeln.
+
+          <xml>  <block type="collector_collect"/></xml>
+        courseA_collector_loops1_b: Eine einfache Lösung wäre 2 mal nach Osten zu
+          gehen und dann den Schatz einzusammeln.
+      courseA_collector_loops2:
+        courseA_collector_loops2_a: Du musst dich zuerst bewegen, dann kannst du die
+          Schätze einsammeln.
+        courseA_collector_loops2_b: |-
+          Nachdem du auf ein Feld mit einem Schatz gelangt bist, nimm diesen Block um ihn einzusammeln.
+
+          <xml>  <block type="collector_collect"/></xml>
+      courseA_collector_loops2_2018:
+        courseA_collector_loops2_a: Du musst dich zuerst bewegen, dann kannst du die
+          Schätze einsammeln.
+        courseA_collector_loops2_b: |-
+          Nachdem du auf ein Feld mit einem Schatz gelangt bist, nimm diesen Block um ihn einzusammeln.
+
+          <xml>  <block type="collector_collect"/></xml>
+      courseA_collector_loops2_2019:
+        courseA_collector_loops2_a: Du musst dich zuerst bewegen, dann kannst du die
+          Schätze einsammeln.
+        courseA_collector_loops2_b: |-
+          Nachdem du auf ein Feld mit einem Schatz gelangt bist, nimm diesen Block um ihn einzusammeln.
+
+          <xml>  <block type="collector_collect"/></xml>
+      courseA_collector_loops3:
+        courseA_collector_loops3_a: Versuche eine <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> Schleife zu verwenden!
+        courseA_collector_loops3_b: Vergiß nicht, du kannst mehr als 1 Block in eine
+          <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES"
+          config="3-10">???</title></block></xml> Schleife setzen.
+      courseA_collector_loops3_2018:
+        courseA_collector_loops3_a: Versuche eine <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> Schleife zu verwenden!
+        courseA_collector_loops3_b: Vergiß nicht, du kannst mehr als 1 Block in eine
+          <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES"
+          config="3-10">???</title></block></xml> Schleife setzen.
+      courseA_collector_loops3_2019:
+        courseA_collector_loops3_b: Vergiß nicht, du kannst mehr als 1 Block in eine
+          <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES"
+          config="3-10">???</title></block></xml> Schleife setzen.
+      courseA_collector_loops4:
+        courseA_collector_loops4_a: Wenn Du verändern möchtest, wie weit Laurel geht,
+          dann ändere die Zahl der Wiederholungen in der Schleife.
+        courseA_collector_loops4_b: Vergiss nicht, dass Laurel nach Beenden der <xml><block
+          type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+          Schleife noch nach unten gehen muss, um den letzten Schatz zu nehmen!
+      courseA_collector_loops4_2018:
+        courseA_collector_loops4_a: Wenn Du verändern möchtest, wie weit Laurel geht,
+          dann ändere die Zahl der Wiederholungen in der Schleife.
+        courseA_collector_loops4_b: Vergiss nicht, dass Laurel nach Beenden der <xml><block
+          type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+          Schleife noch nach unten gehen muss, um den letzten Schatz zu nehmen!
+      courseA_collector_loops4_2019:
+        courseA_collector_loops4_a: Wenn Du verändern möchtest, wie weit Laurel geht,
+          dann ändere die Zahl der Wiederholungen in der Schleife.
+        courseA_collector_loops4_b: Vergiss nicht, dass Laurel nach Beenden der <xml><block
+          type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+          Schleife noch nach unten gehen muss, um den letzten Schatz zu nehmen!
+      courseA_collector_loops5:
+        courseA_collector_loops5_a: Wenn du nicht sofort eine Lösung findest, nimm
+          doch ein Blatt Papier, zeichne darauf alle Pfeile die du für den Weg brauchst
+          und suche dann darin ein Muster.
+        courseA_collector_loops5_b: 'Versuche, die Aufgabe in 2 Teile zu zerlegen:
+          Zuerst seitwärts bewegen und dann nach unten.'
+        courseA_collector_loops5_c: Du solltest mit einer <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> Schleife beginnen,
+          die Laurel nach Westen bewegt und die Schätze einsammelt.
+      courseA_collector_loops5_2018:
+        courseA_collector_loops5_a: Wenn du nicht sofort eine Lösung findest, nimm
+          doch ein Blatt Papier, zeichne darauf alle Pfeile die du für den Weg brauchst
+          und suche dann darin ein Muster.
+        courseA_collector_loops5_b: 'Versuche, die Aufgabe in 2 Teile zu zerlegen:
+          Zuerst seitwärts bewegen und dann nach unten.'
+        courseA_collector_loops5_c: Du solltest mit einer <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> Schleife beginnen,
+          die Laurel nach Westen bewegt und die Schätze einsammelt.
+      courseA_collector_loops5_2019:
+        courseA_collector_loops5_a: Wenn du nicht sofort eine Lösung findest, nimm
+          doch ein Blatt Papier, zeichne darauf alle Pfeile die du für den Weg brauchst
+          und suche dann darin ein Muster.
+        courseA_collector_loops5_b: 'Versuche, die Aufgabe in 2 Teile zu zerlegen:
+          Zuerst seitwärts bewegen und dann nach unten.'
+        courseA_collector_loops5_c: Du solltest mit einer <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> Schleife beginnen,
+          die Laurel nach Westen bewegt und die Schätze einsammelt.
+      courseA_collector_loops6:
+        courseA_collector_loops6_a: Du findest nicht heraus, was schief läuft? Führe
+          den Code ein paar mal aus um zu sehen, was passiert.
+        courseA_collector_loops6_b: Die kürzeste Lösung hat 2 <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> Schleifen, eine nach
+          der anderen.
+      courseA_collector_loops6_2018:
+        courseA_collector_loops6_a: Du findest nicht heraus, was schief läuft? Führe
+          den Code ein paar mal aus um zu sehen, was passiert.
+        courseA_collector_loops6_b: Die kürzeste Lösung hat 2 <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> Schleifen, eine nach
+          der anderen.
+      courseA_collector_loops6_2019:
+        courseA_collector_loops6_a: Du findest nicht heraus, was schief läuft? Führe
+          den Code ein paar mal aus um zu sehen, was passiert.
+        courseA_collector_loops6_b: Die kürzeste Lösung hat 2 <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> Schleifen, eine nach
+          der anderen.
+      courseA_collector_loops7:
+        courseA_collector_loops7_a: Wenn Du nicht herausfindest, was als nächstes
+          kommt, führe den Code aus und schau wo Laurel landet.
+      courseA_collector_loops7_2018:
+        courseA_collector_loops7_a: Wenn Du nicht herausfindest, was als nächstes
+          kommt, führe den Code aus und schau wo Laurel landet.
+      courseA_collector_loops7_2019:
+        courseA_collector_loops7_a: Wenn Du nicht herausfindest, was als nächstes
+          kommt, führe den Code aus und schau wo Laurel landet.
+      courseA_collector_loops8:
+        courseA_collector_loops8_a: Wenn du Probleme hast, diese Aufgabe zu lösen,
+          versuche alle Bewegungen auf ein Blatt Papier zu zeichnen und dann ein Muster
+          zu finden.
+        courseA_collector_loops8_b: Versuche, diese Aufgabe in 3 einzelne Schritte
+          aufzuteilen und für jeden eine eigene Schleife zu schreiben.
+        courseA_collector_loops8_c: Vergiss nicht, du kannst einen Teil des Codes
+          nach dem anderen schreiben, jedesmal auf "Ausführen" klicken, um zu sehen,
+          wie du von dort weitermachen musst.
+      courseA_collector_loops8_2018:
+        courseA_collector_loops8_a: Wenn du Probleme hast, diese Aufgabe zu lösen,
+          versuche alle Bewegungen auf ein Blatt Papier zu zeichnen und dann ein Muster
+          zu finden.
+        courseA_collector_loops8_b: Versuche, diese Aufgabe in 3 einzelne Schritte
+          aufzuteilen und für jeden eine eigene Schleife zu schreiben.
+        courseA_collector_loops8_c: Vergiss nicht, du kannst einen Teil des Codes
+          nach dem anderen schreiben, jedesmal auf "Ausführen" klicken, um zu sehen,
+          wie du von dort weitermachen musst.
+      courseA_collector_loops8_2019:
+        courseA_collector_loops8_a: Wenn du Probleme hast, diese Aufgabe zu lösen,
+          versuche alle Bewegungen auf ein Blatt Papier zu zeichnen und dann ein Muster
+          zu finden.
+        courseA_collector_loops8_b: Versuche, diese Aufgabe in 3 einzelne Schritte
+          aufzuteilen und für jeden eine eigene Schleife zu schreiben.
+        courseA_collector_loops8_c: Vergiss nicht, du kannst einen Teil des Codes
+          nach dem anderen schreiben, jedesmal auf "Ausführen" klicken, um zu sehen,
+          wie du von dort weitermachen musst.
+      courseA_collector_loops9:
+        courseA_collector_loops9_a: 'Wenn du nicht gleich die besten Stellen für Schleifen
+          findest, versuche den Code Schritt-für-Schritt zu schreiben und suche dann
+          nach einem Muster. '
+        courseA_collector_loops9_b: Versuche 2 deiner <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> Schleifen in eine andere
+          Schleife zu setzen um deinen Code kürzer zu machen!
+      courseA_collector_loops9_2018:
+        courseA_collector_loops9_a: 'Wenn du nicht gleich die besten Stellen für Schleifen
+          findest, versuche den Code Schritt-für-Schritt zu schreiben und suche dann
+          nach einem Muster. '
+        courseA_collector_loops9_b: Versuche 2 deiner <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> Schleifen in eine andere
+          Schleife zu setzen um deinen Code kürzer zu machen!
+      courseA_collector_loops9_2019:
+        courseA_collector_loops9_a: 'Wenn du nicht gleich die besten Stellen für Schleifen
+          findest, versuche den Code Schritt-für-Schritt zu schreiben und suche dann
+          nach einem Muster. '
+        courseA_collector_loops9_b: Versuche 2 deiner <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> Schleifen in eine andere
+          Schleife zu setzen um deinen Code kürzer zu machen!
+      courseA_collector_loops_challenge1:
+        courseA_collector_loops_challenge1_a: Versuche die Zahlen in den Schleifen
+          zu ändern, wenn etwas falsch zu sein scheint.
+        courseA_collector_loops_challenge1_b: Du brauchst keine Schleife verwenden,
+          wenn du etwas nur einmal machst.
+        courseA_collector_loops_challenge1_c: Wenn du anfängst, gibt es 6 Diamanten
+          auf der rechten Seite der Höhle, aber du brauchst die Schätze dort nur 5
+          mal einzusammeln, wenn du nach Süden gehst. Weißt du warum?
+        courseA_collector_loops_challenge1_d: |-
+          Das erste Programm sammelt die letzten 2 Diamanten nicht ein. Versuche einmal, ganz am Ende diesen Code einzusetzen:
+
+          <xml><block type="maze_moveEast">
+                                  <next>
+                                    <block type="collector_collect_simplified">
+                                      <next>
+                                        <block type="maze_moveSouth">
+                                          <next>
+                                            <block type="collector_collect"/>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block></xml>
+      courseA_collector_loops_challenge1_2018:
+        courseA_collector_loops_challenge1_a: Versuche die Zahlen in den Schleifen
+          zu ändern, wenn etwas falsch zu sein scheint.
+        courseA_collector_loops_challenge1_b: Du brauchst keine Schleife verwenden,
+          wenn du etwas nur einmal machst.
+        courseA_collector_loops_challenge1_c: Wenn du anfängst, gibt es 6 Diamanten
+          auf der rechten Seite der Höhle, aber du brauchst die Schätze dort nur 5
+          mal einzusammeln, wenn du nach Süden gehst. Weißt du warum?
+        courseA_collector_loops_challenge1_d: |-
+          Das erste Programm sammelt die letzten 2 Diamanten nicht ein. Versuche einmal, ganz am Ende diesen Code einzusetzen:
+
+          <xml><block type="maze_moveEast">
+                                  <next>
+                                    <block type="collector_collect_simplified">
+                                      <next>
+                                        <block type="maze_moveSouth">
+                                          <next>
+                                            <block type="collector_collect"/>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block></xml>
+      courseA_collector_loops_challenge1_2019:
+        courseA_collector_loops_challenge1_a: Versuche die Zahlen in den Schleifen
+          zu ändern, wenn etwas falsch zu sein scheint.
+        courseA_collector_loops_challenge1_b: Du brauchst keine Schleife verwenden,
+          wenn du etwas nur einmal machst.
+        courseA_collector_loops_challenge1_c: Wenn du anfängst, gibt es 6 Diamanten
+          auf der rechten Seite der Höhle, aber du brauchst die Schätze dort nur 5
+          mal einzusammeln, wenn du nach Süden gehst. Weißt du warum?
+        courseA_collector_loops_challenge1_d: |-
+          Das erste Programm sammelt die letzten 2 Diamanten nicht ein. Versuche einmal, ganz am Ende diesen Code einzusetzen:
+
+          <xml><block type="maze_moveEast">
+                                  <next>
+                                    <block type="collector_collect_simplified">
+                                      <next>
+                                        <block type="maze_moveSouth">
+                                          <next>
+                                            <block type="collector_collect"/>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block></xml>
+      courseA_collector_loops_challenge2kp:
+        courseA_collector_loops_challenge2kp_b: Versuche diesen Weg um zu einer Lösung
+          zu kommen.
+        courseA_collector_loops_challenge2kp_a: Kannst du Schleifen verwenden um diese
+          Aufgabe zu lösen?
+      courseA_collector_loops_challenge2kp_2018:
+        courseA_collector_loops_challenge2kp_b: Versuche diesen Weg um zu einer Lösung
+          zu kommen.
+        courseA_collector_loops_challenge2kp_a: Kannst du Schleifen verwenden um diese
+          Aufgabe zu lösen?
+      courseA_collector_loops_challenge2kp_2019:
+        courseA_collector_loops_challenge2kp_b: Versuche diesen Weg um zu einer Lösung
+          zu kommen.
+        courseA_collector_loops_challenge2kp_a: Kannst du Schleifen verwenden um diese
+          Aufgabe zu lösen?
+      courseA_collector_preLoops7:
+        courseA_collector_loops2_b: |-
+          Nachdem du auf ein Feld mit einem Schatz gelangt bist, nimm diesen Block um ihn einzusammeln.
+
+          <xml>  <block type="collector_collect"/></xml>
       courseA_harvester_loops5:
         courseA_harvester_loops5_a: 'Wenn Du nicht mehr weiter kommst, teile die Aufgabe
           in 2 Teile und löse sie nacheinander: Der eine Teil ist vor der Ecke und
@@ -605,20 +1136,748 @@ de-DE:
           Drücke "Zurücksetzen" und lass dann den Code nochmals ausführen um zu sehen, was schief läuft.
         courseA_maze_seq9_c: Du musst dich in 3 Richtungen bewegen um diese Aufgabe
           zu lösen.
+      courseA_maze_seq_challenge1:
+        courseA_maze_seq_challenge1_a: Es gibt zwei Möglichkeiten um diese Aufgabe
+          zu lösen.
+      courseA_maze_seq_challenge1_2018:
+        courseA_maze_seq_challenge1_a: Es gibt zwei Möglichkeiten um diese Aufgabe
+          zu lösen.
+      courseA_maze_seq_challenge1_2019:
+        courseA_maze_seq_challenge1_a: Es gibt zwei Möglichkeiten um diese Aufgabe
+          zu lösen.
+      courseA_maze_seq_challenge2:
+        courseA_maze_seq_challenge2_a: 'Versuche die Felder mit deinem Finger nachzuzählen.
+          Denke daran: Das Feld von dem du startest musst du nicht mitzählen!'
+      courseA_maze_seq_challenge2_2018:
+        courseA_maze_seq_challenge2_a: 'Versuche die Felder mit deinem Finger nachzuzählen.
+          Denke daran: Das Feld von dem du startest musst du nicht mitzählen!'
+      courseA_maze_seq_challenge2_2019:
+        courseA_maze_seq_challenge2_a: 'Versuche die Felder mit deinem Finger nachzuzählen.
+          Denke daran: Das Feld von dem du startest musst du nicht mitzählen!'
+      courseA_playLab_events2:
+        courseA_playLab_events2_a: Suche einen Block mit dem der Hund etwas sagen
+          kann.
+        courseA_playLab_events2_b: |-
+          Das ist der Code, den du brauchst um die Aufgabe zu lösen:
+
+          <xml>
+          <block type="when_run" movable="false" deletable="false">
+          <next>
+          <block type="studio_saySpriteChoices">
+              <title name="SPRITE">1</title>
+              <title name="VALUE">Hi there.</title>
+            </block>
+          </next>
+          </block>
+          </xml>
+      courseA_playLab_events2_2018:
+        courseA_playLab_events2_a: Suche einen Block mit dem der Hund etwas sagen
+          kann.
+        courseA_playLab_events2_b: |-
+          Das ist der Code, den du brauchst um die Aufgabe zu lösen:
+
+          <xml>
+          <block type="when_run" movable="false" deletable="false">
+          <next>
+          <block type="studio_saySpriteChoices">
+              <title name="SPRITE">1</title>
+              <title name="VALUE">Hi there.</title>
+            </block>
+          </next>
+          </block>
+          </xml>
+      courseA_playLab_events2_2019:
+        courseA_playLab_events2_a: Suche einen Block mit dem der Hund etwas sagen
+          kann.
+        courseA_playLab_events2_b: |-
+          Das ist der Code, den du brauchst um die Aufgabe zu lösen:
+
+          <xml>
+          <block type="when_run" movable="false" deletable="false">
+          <next>
+          <block type="studio_saySpriteChoices">
+              <title name="SPRITE">1</title>
+              <title name="VALUE">Hi there.</title>
+            </block>
+          </next>
+          </block>
+          </xml>
+      courseA_playLab_events3:
+        courseA_playLab_events3_a: |-
+          Ziehe diesen Block <xml><block type="studio_move">
+              <title name="SPRITE">1</title>
+              <title name="DIR">8</title>
+            </block></xml> in den Arbeitsbereich und lass ihn am Ende von <xml><block type="studio_whenArrow">
+              <title name="VALUE">left</title>
+            </block></xml> einschnappen
+        courseA_playLab_events3_b: Wenn du dein Programm geschrieben hast, vergiss
+          nicht die Pfeiltaste nach links zu drücken um Jorge zur Fahne zu bewegen.
+          Wenn die Fahne grün wird bist du angekommen!
+      courseA_playLab_events3_2018:
+        courseA_playLab_events3_a: |-
+          Ziehe diesen Block <xml><block type="studio_move">
+              <title name="SPRITE">1</title>
+              <title name="DIR">8</title>
+            </block></xml> in den Arbeitsbereich und lass ihn am Ende von <xml><block type="studio_whenArrow">
+              <title name="VALUE">left</title>
+            </block></xml> einschnappen
+        courseA_playLab_events3_b: Wenn du dein Programm geschrieben hast, vergiss
+          nicht die Pfeiltaste nach links zu drücken um Jorge zur Fahne zu bewegen.
+          Wenn die Fahne grün wird bist du angekommen!
+      courseA_playLab_events3_2019:
+        courseA_playLab_events3_a: |-
+          Ziehe diesen Block <xml><block type="studio_move">
+              <title name="SPRITE">1</title>
+              <title name="DIR">8</title>
+            </block></xml> in den Arbeitsbereich und lass ihn am Ende von <xml><block type="studio_whenArrow">
+              <title name="VALUE">left</title>
+            </block></xml> einschnappen
+        courseA_playLab_events3_b: Wenn du dein Programm geschrieben hast, vergiss
+          nicht die Pfeiltaste nach links zu drücken um Jorge zur Fahne zu bewegen.
+          Wenn die Fahne grün wird bist du angekommen!
+      courseA_playLab_events4:
+        courseA_playLab_events4_a: |-
+          Dies ist der Ereignis-Block, den du brauchen wirst, um Jorge nach rechts zu bewegen:
+
+          <xml><block type="studio_move">
+              <title name="SPRITE">1</title>
+              <title name="DIR">2</title>
+            </block></xml>
+        courseA_playLab_events4_b: |-
+          Das ist der Code, den du brauchen wirst um diese Aufgabe zu lösen:
+
+          <xml><block type="studio_whenArrow">
+              <title name="VALUE">right</title>
+              <next>
+            <block type="studio_move">
+              <title name="SPRITE">1</title>
+              <title name="DIR">2</title>
+            </block></next></block></xml>
+      courseA_playLab_events4_2018:
+        courseA_playLab_events4_a: |-
+          Dies ist der Ereignis-Block, den du brauchen wirst, um Jorge nach rechts zu bewegen:
+
+          <xml><block type="studio_move">
+              <title name="SPRITE">1</title>
+              <title name="DIR">2</title>
+            </block></xml>
+        courseA_playLab_events4_b: |-
+          Das ist der Code, den du brauchen wirst um diese Aufgabe zu lösen:
+
+          <xml><block type="studio_whenArrow">
+              <title name="VALUE">right</title>
+              <next>
+            <block type="studio_move">
+              <title name="SPRITE">1</title>
+              <title name="DIR">2</title>
+            </block></next></block></xml>
+      courseA_playLab_events4_2019:
+        courseA_playLab_events4_a: |-
+          Dies ist der Ereignis-Block, den du brauchen wirst, um Jorge nach rechts zu bewegen:
+
+          <xml><block type="studio_move">
+              <title name="SPRITE">1</title>
+              <title name="DIR">2</title>
+            </block></xml>
+        courseA_playLab_events4_b: |-
+          Das ist der Code, den du brauchen wirst um diese Aufgabe zu lösen:
+
+          <xml><block type="studio_whenArrow">
+              <title name="VALUE">right</title>
+              <next>
+            <block type="studio_move">
+              <title name="SPRITE">1</title>
+              <title name="DIR">2</title>
+            </block></next></block></xml>
+      courseA_playLab_events5:
+        courseA_playLab_events5_a: "Dies sind die Ereignis-Blöcke, die du brauchen
+          wirst, um Jorge nach oben und unten zu bewegen:\n\n<xml><block type=\"studio_whenArrow\">\n
+          \   <title name=\"VALUE\">up</title>\n  </block></xml>\n\nund \n\n<xml><block
+          type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n  </block></xml>"
+        courseA_playLab_events5_b: |-
+          Weißt du, dass du die Taste für den Pfeil im Ereignis-Block ändern kannst, indem du auf das Bild im Block klickst und eine andere Taste auswählst?
+
+          ![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)
+      courseA_playLab_events5_2018:
+        courseA_playLab_events5_a: "Dies sind die Ereignis-Blöcke, die du brauchen
+          wirst, um Jorge nach oben und unten zu bewegen:\n\n<xml><block type=\"studio_whenArrow\">\n
+          \   <title name=\"VALUE\">up</title>\n  </block></xml>\n\nund \n\n<xml><block
+          type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n  </block></xml>"
+        courseA_playLab_events5_b: |-
+          Weißt du, dass du die Taste für den Pfeil im Ereignis-Block ändern kannst, indem du auf das Bild im Block klickst und eine andere Taste auswählst?
+
+          ![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)
+      courseA_playLab_events5_2019:
+        courseA_playLab_events5_a: "Dies sind die Ereignis-Blöcke, die du brauchen
+          wirst, um Jorge nach oben und unten zu bewegen:\n\n<xml><block type=\"studio_whenArrow\">\n
+          \   <title name=\"VALUE\">up</title>\n  </block></xml>\n\nund \n\n<xml><block
+          type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n  </block></xml>"
+        courseA_playLab_events5_b: |-
+          Weißt du, dass du die Taste für den Pfeil im Ereignis-Block ändern kannst, indem du auf das Bild im Block klickst und eine andere Taste auswählst?
+
+          ![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)
+      courseA_playLab_events6:
+        courseA_playLab_events6_a: |-
+          Dies ist der Ereignis-Block, den du brauchst um Jorge etwas machen zu lassen, wenn du auf ihn klickst:
+
+          <xml><block type="studio_whenSpriteClicked">
+              <title name="SPRITE">1</title>
+            </block></xml>
+        courseA_playLab_events6_b: |-
+          Das ist der Block, den du brauchst um den Hintergrund zu ändern:
+
+          <xml><block type="studio_setBackground">
+              <title name="VALUE">random</title>
+            </block></xml>
+        courseA_playLab_events6_c: |-
+          Das ist der Block, den du brauchst um einen zufälligen Ton abzuspielen:
+
+          <xml><block type="studio_playSound">
+              <title name="SOUND">random</title>
+            </block></xml>
+      courseA_playLab_events6_2018:
+        courseA_playLab_events6_a: |-
+          Dies ist der Ereignis-Block, den du brauchst um Jorge etwas machen zu lassen, wenn du auf ihn klickst:
+
+          <xml><block type="studio_whenSpriteClicked">
+              <title name="SPRITE">1</title>
+            </block></xml>
+        courseA_playLab_events6_b: |-
+          Das ist der Block, den du brauchst um den Hintergrund zu ändern:
+
+          <xml><block type="studio_setBackground">
+              <title name="VALUE">random</title>
+            </block></xml>
+        courseA_playLab_events6_c: |-
+          Das ist der Block, den du brauchst um einen zufälligen Ton abzuspielen:
+
+          <xml><block type="studio_playSound">
+              <title name="SOUND">random</title>
+            </block></xml>
+      courseA_playLab_events6_2019:
+        courseA_playLab_events6_a: |-
+          Dies ist der Ereignis-Block, den du brauchst um Jorge etwas machen zu lassen, wenn du auf ihn klickst:
+
+          <xml><block type="studio_whenSpriteClicked">
+              <title name="SPRITE">1</title>
+            </block></xml>
+        courseA_playLab_events6_b: |-
+          Das ist der Block, den du brauchst um den Hintergrund zu ändern:
+
+          <xml><block type="studio_setBackground">
+              <title name="VALUE">random</title>
+            </block></xml>
+        courseA_playLab_events6_c: |-
+          Das ist der Block, den du brauchst um einen zufälligen Ton abzuspielen:
+
+          <xml><block type="studio_playSound">
+              <title name="SOUND">random</title>
+            </block></xml>
+      courseA_playLab_events7:
+        courseA_playLab_events7_a: |-
+          Nimm diesen Block um zu regeln was passiert, wenn die Figuren kollidieren.
+
+          <xml><block type="studio_whenSpriteCollided">
+              <title name="SPRITE1">1</title>
+              <title name="SPRITE2">0</title>
+            </block></xml>
+      courseA_playLab_events7_2018:
+        courseA_playLab_events7_a: |-
+          Nimm diesen Block um zu regeln was passiert, wenn die Figuren kollidieren.
+
+          <xml><block type="studio_whenSpriteCollided">
+              <title name="SPRITE1">1</title>
+              <title name="SPRITE2">0</title>
+            </block></xml>
+      courseA_playLab_events7_2019:
+        courseA_playLab_events7_a: |-
+          Nimm diesen Block um zu regeln was passiert, wenn die Figuren kollidieren.
+
+          <xml><block type="studio_whenSpriteCollided">
+              <title name="SPRITE1">1</title>
+              <title name="SPRITE2">0</title>
+            </block></xml>
+      courseA_playlab_events_challenge1:
+        courseA_playlab_events_challenge1_a: "Mach, dass Waddles, der Pinguin, erscheint,
+          wenn du auf Robin klickst!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_b: "Mach, dass Buu, der Geist, erscheint,
+          wenn du auf Waddles klickst!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_c: "Mach, dass Jayden, das wuschelige Monster,
+          erscheint, wenn du auf Buu klickst!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_d: "Mach, dass Spiff, der Roboter, erscheint,
+          wenn du auf das Monster klickst!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_e: "Und zuletzt, mach, dass Wendel, der
+          Zauberer, erscheint, wenn du auf Spiff klickst!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+      courseA_playlab_events_challenge1_2018:
+        courseA_playlab_events_challenge1_a: "Mach, dass Waddles, der Pinguin, erscheint,
+          wenn du auf Robin klickst!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_b: "Mach, dass Buu, der Geist, erscheint,
+          wenn du auf Waddles klickst!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_c: "Mach, dass Jayden, das wuschelige Monster,
+          erscheint, wenn du auf Buu klickst!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_d: "Mach, dass Spiff, der Roboter, erscheint,
+          wenn du auf das Monster klickst!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_e: "Und zuletzt, mach, dass Wendel, der
+          Zauberer, erscheint, wenn du auf Spiff klickst!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+      courseA_playlab_events_challenge1_2019:
+        courseA_playlab_events_challenge1_a: "Mach, dass Waddles, der Pinguin, erscheint,
+          wenn du auf Robin klickst!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_b: "Mach, dass Buu, der Geist, erscheint,
+          wenn du auf Waddles klickst!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_c: "Mach, dass Jayden, das wuschelige Monster,
+          erscheint, wenn du auf Buu klickst!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_d: "Mach, dass Spiff, der Roboter, erscheint,
+          wenn du auf das Monster klickst!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_e: "Und zuletzt, mach, dass Wendel, der
+          Zauberer, erscheint, wenn du auf Spiff klickst!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+      courseA_playlab_events_challenge2:
+        courseA_playlab_events_challenge2_a: "Du kannst einen Vogel zum singen bringen.\n\n<xml>
+          \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n
+          \   <next>\n          <block type=\"studio_saySprite\">\n            <title
+          name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n
+          \         </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_b: "Du kannst den Roboter piepsen lassen.\n\n<xml>\n
+          \ <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n
+          \   <next>\n      \n          <block type=\"studio_playSound\">\n            <title
+          name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_c: |-
+          Du kannst das grantige Monster knurren lassen.
+
+          <xml>  <block type="studio_whenSpriteClicked">
+              <title name="SPRITE">5</title>
+              <next>
+                <block type="studio_setSpriteEmotion">
+                  <title name="SPRITE">5</title>
+                  <title name="VALUE">2</title>
+                  <next>
+                    <block type="studio_saySprite">
+                      <title name="SPRITE">5</title>
+                      <title name="TEXT">Roar!</title>
+                      <next>
+                        <block type="studio_setSpriteEmotion">
+                          <title name="SPRITE">5</title>
+                          <title name="VALUE">0</title>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block></xml>
+      courseA_playlab_events_challenge2_2018:
+        courseA_playlab_events_challenge2_a: "Du kannst einen Vogel zum singen bringen.\n\n<xml>
+          \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n
+          \   <next>\n          <block type=\"studio_saySprite\">\n            <title
+          name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n
+          \         </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_b: "Du kannst den Roboter piepsen lassen.\n\n<xml>\n
+          \ <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n
+          \   <next>\n      \n          <block type=\"studio_playSound\">\n            <title
+          name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_c: |-
+          Du kannst das grantige Monster knurren lassen.
+
+          <xml>  <block type="studio_whenSpriteClicked">
+              <title name="SPRITE">5</title>
+              <next>
+                <block type="studio_setSpriteEmotion">
+                  <title name="SPRITE">5</title>
+                  <title name="VALUE">2</title>
+                  <next>
+                    <block type="studio_saySprite">
+                      <title name="SPRITE">5</title>
+                      <title name="TEXT">Roar!</title>
+                      <next>
+                        <block type="studio_setSpriteEmotion">
+                          <title name="SPRITE">5</title>
+                          <title name="VALUE">0</title>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block></xml>
+      courseA_playlab_events_challenge2_2019:
+        courseA_playlab_events_challenge2_a: "Du kannst einen Vogel zum singen bringen.\n\n<xml>
+          \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n
+          \   <next>\n          <block type=\"studio_saySprite\">\n            <title
+          name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n
+          \         </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_b: "Du kannst den Roboter piepsen lassen.\n\n<xml>\n
+          \ <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n
+          \   <next>\n      \n          <block type=\"studio_playSound\">\n            <title
+          name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_c: |-
+          Du kannst das grantige Monster knurren lassen.
+
+          <xml>  <block type="studio_whenSpriteClicked">
+              <title name="SPRITE">5</title>
+              <next>
+                <block type="studio_setSpriteEmotion">
+                  <title name="SPRITE">5</title>
+                  <title name="VALUE">2</title>
+                  <next>
+                    <block type="studio_saySprite">
+                      <title name="SPRITE">5</title>
+                      <title name="TEXT">Roar!</title>
+                      <next>
+                        <block type="studio_setSpriteEmotion">
+                          <title name="SPRITE">5</title>
+                          <title name="VALUE">0</title>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block></xml>
+      courseB_artist_loops2:
+        courseB_artist_loops2_a: Wenn du die Schleife mehr als 4 mal wiederholen möchtest,
+          kannst du die Zahl oben im Block ändern.
+      courseB_artist_loops2_2018:
+        courseB_artist_loops2_a: Wenn du die Schleife mehr als 4 mal wiederholen möchtest,
+          kannst du die Zahl oben im Block ändern.
+      courseB_artist_loops2_2019:
+        courseB_artist_loops2_a: Wenn du die Schleife mehr als 4 mal wiederholen möchtest,
+          kannst du die Zahl oben im Block ändern.
+      courseB_artist_loops9:
+        courseB_artist_loops9_c: Du weißt nicht, wohin du die Schleife setzen musst?
+          Versuche den Code Schritt-für-Schritt zu schreiben und suche dann ein Muster.
+      courseB_artist_loops9_2018:
+        courseB_artist_loops9_c: Du weißt nicht, wohin du die Schleife setzen musst?
+          Versuche den Code Schritt-für-Schritt zu schreiben und suche dann ein Muster.
+      courseB_artist_loops9_2019:
+        courseB_artist_loops9_c: Du weißt nicht, wohin du die Schleife setzen musst?
+          Versuche den Code Schritt-für-Schritt zu schreiben und suche dann ein Muster.
+      courseB_collector_loops2:
+        courseB_collector_loops2_a: Du musst dich zuerst bewegen, dann kannst du die
+          Schätze einsammeln.
+      courseB_collector_loops2_2018:
+        courseB_collector_loops2_a: Du musst dich zuerst bewegen, dann kannst du die
+          Schätze einsammeln.
+      courseB_collector_loops2_2019:
+        courseB_collector_loops2_a: Du musst dich zuerst bewegen, dann kannst du die
+          Schätze einsammeln.
+      courseB_collector_loops4:
+        courseB_collector_loops4_b: Wenn Du verändern möchtest, wie weit Laurel geht,
+          dann ändere die Zahl der Wiederholungen in der Schleife.
+      courseB_collector_loops4_2018:
+        courseB_collector_loops4_b: Wenn Du verändern möchtest, wie weit Laurel geht,
+          dann ändere die Zahl der Wiederholungen in der Schleife.
+      courseB_collector_loops4_2019:
+        courseB_collector_loops4_b: Wenn Du verändern möchtest, wie weit Laurel geht,
+          dann ändere die Zahl der Wiederholungen in der Schleife.
+      courseB_collector_loops_challenge2a:
+        courseB_collector_loops_challenge2a_a: Wenn etwas schief läuft, versuche die
+          Fehler zu finden und zu beseitigen. Gib nicht auf!
+        courseB_collector_loops_challenge2a_b: Schau dir diese Möglichkeit an um durch
+          das Labyrinth zu kommen. Siehst du ein Muster, das du wiederholen kannst?
+        courseB_collector_loops_challenge2a_c: Um alle Schätze einzusammeln musst
+          du entweder zwei <xml> <block type="collector_collect"/></xml> Blöcke in
+          deine Schleife setzen oder den Block in einen eigenen 'Wiederholen' Block
+          setzen.
+      courseB_collector_loops_challenge2a_2018:
+        courseB_collector_loops_challenge2a_a: Wenn etwas schief läuft, versuche die
+          Fehler zu finden und zu beseitigen. Gib nicht auf!
+        courseB_collector_loops_challenge2a_b: Schau dir diese Möglichkeit an um durch
+          das Labyrinth zu kommen. Siehst du ein Muster, das du wiederholen kannst?
+        courseB_collector_loops_challenge2a_c: Um alle Schätze einzusammeln musst
+          du entweder zwei <xml> <block type="collector_collect"/></xml> Blöcke in
+          deine Schleife setzen oder den Block in einen eigenen 'Wiederholen' Block
+          setzen.
+      courseB_collector_loops_challenge2a_2019:
+        courseB_collector_loops_challenge2a_a: Wenn etwas schief läuft, versuche die
+          Fehler zu finden und zu beseitigen. Gib nicht auf!
+        courseB_collector_loops_challenge2a_b: Schau dir diese Möglichkeit an um durch
+          das Labyrinth zu kommen. Siehst du ein Muster, das du wiederholen kannst?
+        courseB_collector_loops_challenge2a_c: Um alle Schätze einzusammeln musst
+          du entweder zwei <xml> <block type="collector_collect"/></xml> Blöcke in
+          deine Schleife setzen oder den Block in einen eigenen 'Wiederholen' Block
+          setzen.
       courseB_maze_seq8:
         courseB_maze_seq8_b: Es gibt zwei Möglichkeiten um dieses Puzzle zu lösen!
+      courseC_collector_prog3:
+        courseC_collector_prog3_c: Wenn du Probleme hast diese Aufgabe zu lösen, versuche
+          alle Bewegungen auf ein Blatt Papier zu schreiben.
+      courseC_collector_prog3_2018:
+        courseC_collector_prog3_c: Wenn du Probleme hast diese Aufgabe zu lösen, versuche
+          alle Bewegungen auf ein Blatt Papier zu schreiben.
+      courseC_collector_prog3_2019:
+        courseC_collector_prog3_c: Wenn du Probleme hast diese Aufgabe zu lösen, versuche
+          alle Bewegungen auf ein Blatt Papier zu schreiben.
+      courseC_data wizard:
+        courseA_playLab_events7_a: |-
+          Nimm diesen Block um zu regeln was passiert, wenn die Figuren kollidieren.
+
+          <xml><block type="studio_whenSpriteCollided">
+              <title name="SPRITE1">1</title>
+              <title name="SPRITE2">0</title>
+            </block></xml>
+      courseC_maze_debugging2:
+        courseC_maze_debugging2_c: Du findest nicht heraus, was schief läuft? Führe
+          den Code ein paar mal aus um zu sehen, was passiert.
+      courseC_maze_debugging2_2018:
+        courseC_maze_debugging2_c: Du findest nicht heraus, was schief läuft? Führe
+          den Code ein paar mal aus um zu sehen, was passiert.
+      courseC_maze_debugging2_2019:
+        courseC_maze_debugging2_c: Du findest nicht heraus, was schief läuft? Führe
+          den Code ein paar mal aus um zu sehen, was passiert.
+      courseC_maze_debugging3:
+        courseC_maze_debugging3_b: Du findest nicht heraus, was schief läuft? Führe
+          den Code ein paar mal aus um zu sehen, was passiert.
+      courseC_maze_debugging3_2018:
+        courseC_maze_debugging3_b: Du findest nicht heraus, was schief läuft? Führe
+          den Code ein paar mal aus um zu sehen, was passiert.
+      courseC_maze_debugging3_2019:
+        courseC_maze_debugging3_b: Du findest nicht heraus, was schief läuft? Führe
+          den Code ein paar mal aus um zu sehen, was passiert.
+      courseC_maze_programming1:
+        courseC_maze_programming1_0: Überprüfe, ob alle Blöcke richtig zusammengeschnappt
+          sind und klicke dann nochmals auf 'Ausführen'.
+      courseC_maze_programming1_2018:
+        courseC_maze_programming1_0: Überprüfe, ob alle Blöcke richtig zusammengeschnappt
+          sind und klicke dann nochmals auf 'Ausführen'.
+      courseC_maze_programming1_2019:
+        courseC_maze_programming1_0: Überprüfe, ob alle Blöcke richtig zusammengeschnappt
+          sind und klicke dann nochmals auf 'Ausführen'.
+      courseC_maze_programming2:
+        courseC_maze_programming2_a: Um einen <xml><block type="maze_moveForward"/></xml>
+          Block zu benutzen, ziehe ihn aus dem Werkzeugkasten und lass ihn beim <xml><block
+          type="when_run"/></xml> einschnappen.
+        courseC_maze_programming2_b: Überprüfe, ob alle Blöcke richtig zusammengeschnappt
+          sind und klicke dann nochmals auf 'Ausführen'.
+      courseC_maze_programming2_2018:
+        courseC_maze_programming2_a: Um einen <xml><block type="maze_moveForward"/></xml>
+          Block zu benutzen, ziehe ihn aus dem Werkzeugkasten und lass ihn beim <xml><block
+          type="when_run"/></xml> einschnappen.
+        courseC_maze_programming2_b: Überprüfe, ob alle Blöcke richtig zusammengeschnappt
+          sind und klicke dann nochmals auf 'Ausführen'.
+      courseC_maze_programming2_2019:
+        courseC_maze_programming2_a: Um einen <xml><block type="maze_moveForward"/></xml>
+          Block zu benutzen, ziehe ihn aus dem Werkzeugkasten und lass ihn beim <xml><block
+          type="when_run"/></xml> einschnappen.
+        courseC_maze_programming2_b: Überprüfe, ob alle Blöcke richtig zusammengeschnappt
+          sind und klicke dann nochmals auf 'Ausführen'.
+      courseC_maze_programming3:
+        courseC_maze_programming3_a: Versuche zuerst einmal den Code auszuführen,
+          um zu sehen was falsch läuft.
+        courseC_maze_programming3_b: |-
+          ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
+
+          Um einen Block aus der Mitte deines Codes zu löschen, ziehe alle Blöcke darunter in einen anderen Teil des Arbeitsbereiches.
+
+          Ziehe den Block, den du löschen möchtest, zurück in den Werkzeugkasten.
+
+          Danach setzt du die anderen Blöcke wieder dorthin wo sie hingehören.
+      courseC_maze_programming3_2018:
+        courseC_maze_programming3_a: Versuche zuerst einmal den Code auszuführen,
+          um zu sehen was falsch läuft.
+        courseC_maze_programming3_b: |-
+          ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
+
+          Um einen Block aus der Mitte deines Codes zu löschen, ziehe alle Blöcke darunter in einen anderen Teil des Arbeitsbereiches.
+
+          Ziehe den Block, den du löschen möchtest, zurück in den Werkzeugkasten.
+
+          Danach setzt du die anderen Blöcke wieder dorthin wo sie hingehören.
+      courseC_maze_programming3_2019:
+        courseC_maze_programming3_a: Versuche zuerst einmal den Code auszuführen,
+          um zu sehen was falsch läuft.
+        courseC_maze_programming3_b: |-
+          ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
+
+          Um einen Block aus der Mitte deines Codes zu löschen, ziehe alle Blöcke darunter in einen anderen Teil des Arbeitsbereiches.
+
+          Ziehe den Block, den du löschen möchtest, zurück in den Werkzeugkasten.
+
+          Danach setzt du die anderen Blöcke wieder dorthin wo sie hingehören.
+      courseC_maze_programming4:
+        courseC_maze_programming4_a: Vergiss nicht, dass du dich in die Richtung vom
+          _Vogel_ aus gesehen drehst. Wenn du nach rechts drehst, wird der Vogel nach
+          unten schauen.
+        courseC_maze_programming4_b: |-
+          Um dem Weg zu folgen:
+
+          -   vorwärts bewegen
+          -   in eine Richtung drehen
+          -   vorwärts bewegen
+          -   in die andere Richtung drehen
+          -   vorwärts bewegen
+      courseC_maze_programming4_2018:
+        courseC_maze_programming4_a: Vergiss nicht, dass du dich in die Richtung vom
+          _Vogel_ aus gesehen drehst. Wenn du nach rechts drehst, wird der Vogel nach
+          unten schauen.
+        courseC_maze_programming4_b: |-
+          Um dem Weg zu folgen:
+
+          -   vorwärts bewegen
+          -   in eine Richtung drehen
+          -   vorwärts bewegen
+          -   in die andere Richtung drehen
+          -   vorwärts bewegen
+      courseC_maze_programming4_2019:
+        courseC_maze_programming4_a: Vergiss nicht, dass du dich in die Richtung vom
+          _Vogel_ aus gesehen drehst. Wenn du nach rechts drehst, wird der Vogel nach
+          unten schauen.
+        courseC_maze_programming4_b: |-
+          Um dem Weg zu folgen:
+
+          -   vorwärts bewegen
+          -   in eine Richtung drehen
+          -   vorwärts bewegen
+          -   in die andere Richtung drehen
+          -   vorwärts bewegen
+      courseC_maze_programming5:
+        courseC_maze_programming5_b: Der Vogel muss sich einmal drehen um die Aufgabe
+          zu lösen. Findest du heraus in welche Richtung?
+        courseC_maze_programming5_c: In der Lösung werden zwei 'vorwärts bewegen'
+          Blöcke, eine Drehung und zwei weitere 'vorwärts bewegen' Blöcke sein.
+      courseC_maze_programming5_2018:
+        courseC_maze_programming5_b: Der Vogel muss sich einmal drehen um die Aufgabe
+          zu lösen. Findest du heraus in welche Richtung?
+        courseC_maze_programming5_c: In der Lösung werden zwei 'vorwärts bewegen'
+          Blöcke, eine Drehung und zwei weitere 'vorwärts bewegen' Blöcke sein.
+      courseC_maze_programming5_2019:
+        courseC_maze_programming5_b: Der Vogel muss sich einmal drehen um die Aufgabe
+          zu lösen. Findest du heraus in welche Richtung?
+        courseC_maze_programming5_c: In der Lösung werden zwei 'vorwärts bewegen'
+          Blöcke, eine Drehung und zwei weitere 'vorwärts bewegen' Blöcke sein.
       courseC_maze_programming6:
         courseC_maze_programming6_a: Es gibt zwei Möglichkeiten um dieses Puzzle zu
           lösen!
+        courseC_maze_programming6_b: Verfolge mit dem Finger den Weg vom Vogel zum
+          Schwein. Welche Schritte hast du gemacht?
+        courseC_maze_programming6_c: Vergiss nicht, dich zuerst zu drehen, weil der
+          Vogel am Anfang genau auf eine Wand schaut.
+        courseC_maze_programming6_d: Steckst du fest? Schau dir diesen Weg an!
       courseC_maze_programming6_2018:
         courseC_maze_programming6_a: Es gibt zwei Möglichkeiten um dieses Puzzle zu
           lösen!
+        courseC_maze_programming6_b: Verfolge mit dem Finger den Weg vom Vogel zum
+          Schwein. Welche Schritte hast du gemacht?
+        courseC_maze_programming6_c: Vergiss nicht, dich zuerst zu drehen, weil der
+          Vogel am Anfang genau auf eine Wand schaut.
+        courseC_maze_programming6_d: Steckst du fest? Schau dir diesen Weg an!
       courseC_maze_programming6_2019:
         courseC_maze_programming6_a: Es gibt zwei Möglichkeiten um dieses Puzzle zu
           lösen!
+        courseC_maze_programming6_b: Verfolge mit dem Finger den Weg vom Vogel zum
+          Schwein. Welche Schritte hast du gemacht?
+        courseC_maze_programming6_c: Vergiss nicht, dich zuerst zu drehen, weil der
+          Vogel am Anfang genau auf eine Wand schaut.
+        courseC_maze_programming6_d: Steckst du fest? Schau dir diesen Weg an!
+      courseC_maze_programming7:
+        courseC_maze_programming7_a: Vergiss nicht, die "Schritt" Taste zu benutzen
+          um Block für Block die Fehler zu suchen.
+        courseC_maze_programming7_b: Wenn du Probleme hast diese Aufgabe zu lösen,
+          versuche alle Bewegungen auf ein Blatt Papier zu schreiben.
+      courseC_maze_programming7_2018:
+        courseC_maze_programming7_a: Vergiss nicht, die "Schritt" Taste zu benutzen
+          um Block für Block die Fehler zu suchen.
+        courseC_maze_programming7_b: Wenn du Probleme hast diese Aufgabe zu lösen,
+          versuche alle Bewegungen auf ein Blatt Papier zu schreiben.
+      courseC_maze_programming7_2019:
+        courseC_maze_programming7_a: Vergiss nicht, die "Schritt" Taste zu benutzen
+          um Block für Block die Fehler zu suchen.
+        courseC_maze_programming7_b: Wenn du Probleme hast diese Aufgabe zu lösen,
+          versuche alle Bewegungen auf ein Blatt Papier zu schreiben.
+      courseC_maze_programming8:
+        courseC_maze_programming8_a: Vergiss nicht, dass du die "Schritt" Taste benutzen
+          kannst falls du stecken bleibst, um deinen Code Zeile für Zeile zu prüfen.
+      courseC_maze_programming8_2018:
+        courseC_maze_programming8_a: Vergiss nicht, dass du die "Schritt" Taste benutzen
+          kannst falls du stecken bleibst, um deinen Code Zeile für Zeile zu prüfen.
+      courseC_maze_programming8_2019:
+        courseC_maze_programming8_a: Vergiss nicht, dass du die "Schritt" Taste benutzen
+          kannst falls du stecken bleibst, um deinen Code Zeile für Zeile zu prüfen.
+      courseC_maze_programming_challenge1:
+        courseC_maze_programming_challenge1_a: Es gibt viele Möglichkeiten, zum Schwein
+          zu kommen. Benutze deinen Finger um einen Weg zu finden und dann programmiere
+          ihn!
+      courseC_maze_programming_challenge1_2018:
+        courseC_maze_programming_challenge1_a: Es gibt viele Möglichkeiten, zum Schwein
+          zu kommen. Benutze deinen Finger um einen Weg zu finden und dann programmiere
+          ihn!
+      courseC_maze_programming_challenge1_2019:
+        courseC_maze_programming_challenge1_a: Es gibt viele Möglichkeiten, zum Schwein
+          zu kommen. Benutze deinen Finger um einen Weg zu finden und dann programmiere
+          ihn!
+      courseC_maze_programming_challenge2:
+        courseC_maze_programming_challenge2_a: _"Pass sehr gut auf, dass ich mich
+          in die richtige Richtung drehe, wenn du mich rückwärts laufen lässt!"_
+        courseC_maze_programming_challenge2_b: |-
+          Die kürzeste Lösung braucht nur 5 Blöcke, aber dieser Block wird benötigt:
+
+          <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+      courseC_maze_programming_challenge2_2018:
+        courseC_maze_programming_challenge2_a: _"Pass sehr gut auf, dass ich mich
+          in die richtige Richtung drehe, wenn du mich rückwärts laufen lässt!"_
+        courseC_maze_programming_challenge2_b: |-
+          Die kürzeste Lösung braucht nur 5 Blöcke, aber dieser Block wird benötigt:
+
+          <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+      courseC_maze_programming_challenge2_2019:
+        courseC_maze_programming_challenge2_a: _"Pass sehr gut auf, dass ich mich
+          in die richtige Richtung drehe, wenn du mich rückwärts laufen lässt!"_
+        courseC_maze_programming_challenge2_b: |-
+          Die kürzeste Lösung braucht nur 5 Blöcke, aber dieser Block wird benötigt:
+
+          <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
       courseD_maze_ramp6:
         courseC_maze_programming6_a: Es gibt zwei Möglichkeiten um dieses Puzzle zu
           lösen!
+      courseD_maze_ramp7:
+        courseD_maze_ramp7_b: Vergiss nicht, die "Schritt" Taste zu benutzen um Block
+          für Block die Fehler zu suchen.
       courseD_scrat_ramp7:
         courseD_scrat_programming6_a: Es gibt zwei Möglichkeiten um dieses Puzzle
           zu lösen!
+      courseD_scrat_ramp8:
+        courseD_maze_ramp7_b: Vergiss nicht, die "Schritt" Taste zu benutzen um Block
+          für Block die Fehler zu suchen.

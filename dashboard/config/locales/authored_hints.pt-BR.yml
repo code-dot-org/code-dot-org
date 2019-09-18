@@ -2809,6 +2809,9 @@ pt-BR:
         behavior hint: |-
           Tente editar os comportamentos!
           \*Qual valor controla a velocidade de cada sprite?
+      behaviors 7:
+        behaviors_hint1: Voce pode criar um novo comportamento que usa duas ações
+          diferentes ou juntar dois comportamentos existentes.
       comment_intro_maze_2018:
         courseC_maze_programming4_a: Comentários também são úteis quando outras pessoas
           tentam ler seu código.

@@ -322,6 +322,7 @@
   "languages": "Мови",
   "learnMore": "Дізнайтеся більше",
   "less": "Менше",
+  "lessonExtrasButton": "Перейти до панелі керування вчителя",
   "lessonName": "Назва уроку",
   "lessonNumbered": "Урок {lessonNumber}: {lessonName}",
   "lessonPlans": "Плани уроків",

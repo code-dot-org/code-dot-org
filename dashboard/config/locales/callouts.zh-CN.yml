@@ -261,7 +261,6 @@ zh-CN:
       behaviors 3a:
         behavior_callout: 为什么该行为对中间的星星不生效？
         star2_callout: 用”精灵“模块替换装饰模块
-        this_sprite_callout: 正在测试
       behaviors 4:
         behaviors_edit: 点这里发现如何工作。
       behaviors 5:
