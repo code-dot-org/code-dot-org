@@ -736,6 +736,9 @@ describe('entry tests', () => {
       optimization: {
         minimizer: [
           new UglifyJsPlugin({
+            // Excludes these from minification to avoid breaking functionality,
+            // but still adds .min to the output filename suffix.
+            exclude: [/\/blockly.js$/, /\/brambleHost.js$/],
             cache: true,
             parallel: true,
             sourceMap: envConstants.DEBUG_MINIFIED
