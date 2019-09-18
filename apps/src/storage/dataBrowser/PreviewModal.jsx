@@ -2,7 +2,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import {hidePreview} from '../redux/data';
+import {getDatasetInfo} from './dataUtils';
 import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
+import DataTable from './DataTable';
 
 class PreviewModal extends React.Component {
   static propTypes = {
@@ -16,9 +18,12 @@ class PreviewModal extends React.Component {
     if (!this.props.isPreviewOpen) {
       return null;
     }
+    const datasetInfo = getDatasetInfo(this.props.tableName);
     return (
       <BaseDialog isOpen handleClose={this.props.onClose} fullWidth>
         <h1>{this.props.tableName}</h1>
+        <p>{datasetInfo.description}</p>
+        <DataTable getColumnNames={(records, columns) => columns} />
       </BaseDialog>
     );
   }

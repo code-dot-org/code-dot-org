@@ -31,7 +31,7 @@ const styles = {
     overflow: 'scroll'
   },
   pagination: {
-    marginBottom: 20
+    overflow: 'auto'
   },
   plusIcon: {
     alignItems: 'center',

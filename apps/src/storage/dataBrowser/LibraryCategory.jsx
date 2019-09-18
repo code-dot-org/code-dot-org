@@ -32,7 +32,7 @@ const styles = {
 class LibraryCategory extends React.Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
-    datasets: PropTypes.arrayOf(PropTypes.object).isRequired,
+    datasets: PropTypes.arrayOf(PropTypes.string).isRequired,
     description: PropTypes.string.isRequired
   };
 
@@ -62,13 +62,8 @@ class LibraryCategory extends React.Component {
             <span style={styles.categoryDescription}>
               {this.props.description}
             </span>
-            {this.props.datasets.map(dataset => (
-              <LibraryTable
-                key={dataset.name}
-                name={dataset.name}
-                description={dataset.description}
-                current={dataset.current}
-              />
+            {this.props.datasets.map(tableName => (
+              <LibraryTable key={tableName} name={tableName} />
             ))}
           </div>
         )}
