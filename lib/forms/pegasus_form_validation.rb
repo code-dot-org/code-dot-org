@@ -138,8 +138,9 @@ module PegasusFormValidation
   end
 
   # Recursively replace special characters with HTML entities for string content in the input.
-  # This function can be called before saving user input to database or before returning user input
-  # from database to client for presentation.
+  # This function can be called either before saving user input to database or before returning user
+  # input from database to client for presentation.
+  # @note Calling it on already-escaped string may return malformed content. See unit test for example.
   #
   # @param [String, Hash, Array] input
   # @return [String, Hash, Array] a modified copy of the input if it is one of the specified data types.
@@ -148,7 +149,7 @@ module PegasusFormValidation
     return CGI.escapeHTML(input) if input.is_a? String
 
     if input.is_a? Array
-      return input.map {|sub_item| escape_html_entities(sub_item)}
+      return input.map {|item| escape_html_entities(item)}
     end
 
     if input.is_a? Hash
