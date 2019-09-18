@@ -8,7 +8,6 @@ var envConstants = require('./envConstants');
 var checkEntryPoints = require('./script/checkEntryPoints');
 var {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer');
 var {StatsWriterPlugin} = require('webpack-stats-plugin');
-var UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
 var sass = require('node-sass');
 
 module.exports = function(grunt) {
@@ -879,10 +878,7 @@ describe('entry tests', () => {
           : []),
         new StatsWriterPlugin({
           fields: ['assetsByChunkName', 'assets']
-        }),
-        // Needed because our production environment relies on an unminified
-        // (but digested) version of certain files such as blockly.js.
-        new UnminifiedWebpackPlugin()
+        })
       ],
       minify: minify,
       watch: watch,
