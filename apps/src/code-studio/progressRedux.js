@@ -8,7 +8,10 @@ import {mergeActivityResult, activityCssClass} from './activityUtils';
 import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
 import {TestResults} from '@cdo/apps/constants';
 import {ViewType, SET_VIEW_TYPE} from './viewAsRedux';
-import {processedLevel} from '@cdo/apps/templates/progress/progressHelpers';
+import {
+  processedLevel,
+  lessonIsVisible
+} from '@cdo/apps/templates/progress/progressHelpers';
 import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
 import {authorizeLockable} from './stageLockRedux';
 
@@ -306,7 +309,7 @@ export function processedStages(stages, isPlc) {
       stageNumber = numberOfNonLockableStages;
     }
     return {
-      ..._.omit(stage, 'hidden'),
+      ...stage,
       stageNumber
     };
   });
@@ -495,8 +498,10 @@ const lessonFromStage = stage =>
     'stageNumber',
     'lesson_plan_html_url',
     'description_student',
-    'description_teacher'
+    'description_teacher',
+    'hidden'
   ]);
+
 export const lessons = state =>
   state.stages.map((_, index) => lessonFromStageAtIndex(state, index));
 
@@ -691,6 +696,12 @@ export const categorizedLessons = (state, includeBonusLevels = false) => {
 
     byCategory[category].lessons.push(lesson);
     byCategory[category].levels.push(stageLevels);
+
+    var visibleLessons = byCategory[category].lessons.filter(lesson =>
+      lessonIsVisible(lesson, state, ViewType.Student)
+    );
+
+    byCategory[category].hidden = !visibleLessons.length;
   });
 
   // Peer reviews get their own category, but these levels/lessson are stored

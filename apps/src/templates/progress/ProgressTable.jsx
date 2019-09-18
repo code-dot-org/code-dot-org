@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import {categorizedLessons} from '@cdo/apps/code-studio/progressRedux';
+import {lessonIsVisible} from '@cdo/apps/templates/progress/progressHelpers';
 import SummaryProgressTable from './SummaryProgressTable';
 import DetailProgressTable from './DetailProgressTable';
 import ProgressGroup from './ProgressGroup';
@@ -23,7 +24,8 @@ class ProgressTable extends React.Component {
         lessons: PropTypes.arrayOf(lessonType).isRequired,
         levels: PropTypes.arrayOf(PropTypes.arrayOf(levelType)).isRequired
       })
-    ).isRequired
+    ).isRequired,
+    lessonIsVisible: PropTypes.func
   };
 
   componentDidMount() {
@@ -40,6 +42,12 @@ class ProgressTable extends React.Component {
       paddingRight: padding
     });
   }
+
+  // Make this more clever. I don't need to find all of them, I just need to know if there is at least ONE visible lesson.
+  checkVisibility = lessons => {
+    lessons.filter(lesson => this.props.lessonIsVisible(lesson, 'Student'))
+      .length;
+  };
 
   render() {
     const {isSummaryView, isPlc, categorizedLessons} = this.props;
@@ -74,6 +82,7 @@ class ProgressTable extends React.Component {
               isSummaryView={isSummaryView}
               lessons={category.lessons}
               levelsByLesson={category.levels}
+              hidden={this.checkVisibility(category.lessons)}
             />
           ))}
         </div>
@@ -86,5 +95,6 @@ export const UnconnectedProgressTable = ProgressTable;
 export default connect(state => ({
   isPlc: state.progress.professionalLearningCourse,
   isSummaryView: state.progress.isSummaryView,
-  categorizedLessons: categorizedLessons(state.progress)
+  categorizedLessons: categorizedLessons(state.progress),
+  lessonIsVisible: (lesson, viewAs) => lessonIsVisible(lesson, state, viewAs)
 }))(ProgressTable);

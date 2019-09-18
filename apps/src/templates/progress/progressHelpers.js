@@ -24,7 +24,9 @@ export function lessonIsVisible(lesson, state, viewAs) {
   }
 
   const hiddenStageState = state.hiddenStage;
-  const sectionId = state.teacherSections.selectedSectionId;
+  const sectionId = state.teacherSections
+    ? state.teacherSections.selectedSectionId
+    : 'STUDENT';
 
   const isHidden = isStageHiddenForSection(
     hiddenStageState,
