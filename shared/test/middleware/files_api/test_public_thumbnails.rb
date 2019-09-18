@@ -171,11 +171,7 @@ class PublicThumbnailsTest < FilesApiTestBase
 
     # Require that tests delete the assets they upload
     get "v3/files/#{channel_id}"
-    expected_empty_files = {
-      'files' => [],
-      'filesVersionId' => ''
-    }
-    assert_equal(expected_empty_files, JSON.parse(last_response.body))
+    assert not_found?
 
     delete_channel(channel_id)
   end
