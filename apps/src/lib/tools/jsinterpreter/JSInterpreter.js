@@ -5,6 +5,7 @@ import acorn from '@code-dot-org/js-interpreter/acorn';
 import {getStore} from '../../../redux';
 import CustomMarshalingInterpreter from './CustomMarshalingInterpreter';
 import CustomMarshaler from './CustomMarshaler';
+import {generateAST} from '@code-dot-org/js-interpreter';
 
 import {setIsDebuggerPaused} from '../../../redux/runState';
 
@@ -136,6 +137,7 @@ export default class JSInterpreter {
    *        debugging (default 0)
    */
   parse(options) {
+    // debugger;
     this.calculateCodeInfo(options);
 
     if (!this.studioApp.hideSource && this.studioApp.editor) {
@@ -236,6 +238,7 @@ export default class JSInterpreter {
       // code to override globals of the same names)
 
       // Now append the user code:
+      // debugger;
       this.interpreter.appendCode(options.code);
       // And repopulate scope since appendCode() doesn't do this automatically:
       this.interpreter.populateScope_(this.interpreter.ast, this.globalScope);
@@ -243,6 +246,81 @@ export default class JSInterpreter {
       this.executionError = err;
       this.handleError();
     }
+  }
+
+  /**
+   * Builds a list of objects that contain all metadata about any functions in
+   * the gived code string. Each object in the returned list has the following
+   * properties:
+   * functionName - the name of the function
+   * parameters - the names of the parameters passed into the function
+   * comment - the comment describing the function. This could be in a JSDoc,
+   * multiline, singleline, or multiple singlelines format.
+   *
+   * @param {string} code - The code to be parsed for functions
+   */
+  static getFunctionsWithComments(code) {
+    let functionsWithComments = [];
+    function getPreviousComment(allComments, startingLocation) {
+      return allComments.find(comment => {
+        return comment.endLocation === startingLocation - 1;
+      });
+    }
+
+    let comments = [];
+    let options = {
+      onComment: (isBlockComment, text, startLocation, endLocation) => {
+        comments.push({isBlockComment, text, startLocation, endLocation});
+      }
+    };
+
+    // trim whitespace from the end of lines to ensure we correctly detect comments
+    code = code
+      .split('\n')
+      .map(line => {
+        // The regex /\s+$/gm detects whitespace at the end of a line
+        return line.replace(/\s+$/gm, '');
+      })
+      .join('\n');
+    let ast = generateAST(code, options);
+    let codeFunctions = ast.body.filter(node => {
+      return node.type === 'FunctionDeclaration';
+    });
+
+    codeFunctions.forEach(codeFunction => {
+      let fullComment = '';
+      let comment = getPreviousComment(comments, codeFunction.start);
+      if (comment && comment.isBlockComment) {
+        fullComment = comment.text;
+        if (fullComment[0] === '*') {
+          // For a JSDoc style comment, acorn doesn't strip the * that starts
+          // each line, so we do that here.
+          fullComment = fullComment
+            .substr(1)
+            .split('\n * ')
+            .join('\n');
+        }
+      } else {
+        while (comment) {
+          // Find all adjacent singleline comments preceding the function
+          fullComment = comment.text.trim() + '\n' + fullComment;
+          comment = getPreviousComment(comments, comment.startLocation);
+        }
+      }
+      fullComment = fullComment.trim();
+
+      let params = codeFunction.params.map(param => {
+        return param.name;
+      });
+
+      functionsWithComments.push({
+        functionName: codeFunction.id.name,
+        parameters: params,
+        comment: fullComment
+      });
+    });
+
+    return functionsWithComments;
   }
 
   /**
