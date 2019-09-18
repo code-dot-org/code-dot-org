@@ -450,6 +450,11 @@ fr-FR:
         content1: description ici
       Begin planning your project_2018_2019:
         content1: description ici
+      BigEvent-Unplugged:
+        markdown: |
+          # Le grand événement
+
+          En informatique, les événements sont des actions que l'ordinateur surveille. Dans cette leçon vous serez différemment selon le bouton qui est préssé.
       CSD Header Size MC:
         answers:
         - {}
@@ -861,6 +866,33 @@ fr-FR:
         - {}
         - {}
         - {}
+      DigitalFootprint-Unplugged:
+        markdown: |
+          # Votre Empreinte Digital
+
+          Ajouter des informations à propos de vous en ligne crée une empreinte digital.
+      GettingLoopy-Unplugged:
+        markdown: |
+          # Faire le plain de boucles
+
+          Cette leçon présente le concept de programmation des boucles à travers une activité de danse.
+      GoingPlacesSafely-unplugged:
+        markdown: 'L''internet est formidable, mais parfois c''est un endroit dangereux.
+          Soyez prudent lorsque vous naviguez sue internet!
+
+'
+      HappyLoops-Unplugged:
+        markdown: |
+          # Joyeuses boucles
+
+          Dans cette leçon, vous allez apprendre les boucles!
+
+          ![](https://images.code.org/6aac7f675f0c69033f42ccac6a733f68-image-1557769673400.png)
+      HappyMaps-Unplugged:
+        markdown: |
+          # Joyeuse carte
+
+          Crée un algorithme pour déplacer ton personnage à travers un labyrinthe.
       Internet Simulator Setup:
         content1: description ici
       Internet Simulator Setup 2:
@@ -1065,6 +1097,11 @@ fr-FR:
         - text: ENSEMBLE
         - {}
         - text: SUD
+      MoveItMoveIt-Unplugged:
+        markdown: |
+          # Bougé, Bougé
+
+          Utiliser une carte et donner les commandes pour atteindre le but.
       Multi-Screen Apps:
         title: titre
         content1: description ici
@@ -1081,6 +1118,13 @@ fr-FR:
         content1: description ici
       Terminology Recap:
         content1: description ici
+      TheRightAppMarkdownLevel_2019:
+        markdown: "# La bonne application\n\n* Tout le monde utilise des ordinateurs
+          de nos jours, surtout des smartphones. \n* Les applications de smartphone
+          aident les gens à faire des chose tels que parles à leurs amis, écouter
+          de la musique, ou juste naviguer sur internet.\n* C'est important pour les
+          programmeurs de comprendre les besoins des autres et de concevoir des applications
+          dans cet esprit!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)\n"
       behaviors 1 predict:
         questions:
         - {}

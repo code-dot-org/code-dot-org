@@ -645,6 +645,24 @@ es-MX:
       CSD U2 Design Project_2018_2019:
         title: Título
         content1: descripción aquí
+      CSD U2 Expression Exemplars:
+        markdown: |
+          # Ejemplares de sitios web personales
+
+          Haga clic en los sitios web a continuación para ver los sitios web personales que otros estudiantes han creado.
+
+          <a href="https://codeprojects.org/SYRw7CQJzSmAErCEF-mMXQ" target="_blank"> <img src = "https://images.code.org/25b7284a4cd3d26f9b989a5c3bba6485-image-14937606092. = "ancho: 200px; flotante: izquierda"> </a>
+
+          <a href="https://codeprojects.org/y6u1W372PZh2MfzxwHQBKA" target="_blank"> <img src = "https://images.code.org/5929f61d14370a72e2e3b77c1948d5ed-image-149394324" 92.png335.png ancho: 200 px; flotante: izquierda "> </a>
+      CSD U2 Expression Exemplars_2018:
+        markdown: |
+          # Ejemplares de sitios web personales
+
+          Haga clic en los sitios web a continuación para ver los sitios web personales que otros estudiantes han creado.
+
+          <a href="https://codeprojects.org/SYRw7CQJzSmAErCEF-mMXQ" target="_blank"> <img src = "https://images.code.org/25b7284a4cd3d26f9b989a5c3bba6485-image-14937606092. = "ancho: 200px; flotante: izquierda"> </a>
+
+          <a href="https://codeprojects.org/y6u1W372PZh2MfzxwHQBKA" target="_blank"> <img src = "https://images.code.org/5929f61d14370a72e2e3b77c1948d5ed-image-149394324" 92.png335.png ancho: 200 px; flotante: izquierda "> </a>
       CSD U2 L1 Overview:
         markdown: |+
           # Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
@@ -835,6 +853,30 @@ es-MX:
           4. Amazon.com: sitios de compra en línea de todo tipo de bienes
           4. Yahoo.com: motor de búsqueda, proveedor de correo electrónico y fuente de noticias
           5. Wikipedia.org: enciclopedia gratuita con contenido generado por los usuarios
+      CSD U2 Top Websites_2018:
+        markdown: "# Mejores sitios web en los EE. UU.\n\nLos siguientes son algunos
+          de los sitios web más visitados en los Estados Unidos. Cada uno incluye
+          una breve descripción de la función principal del sitio web.\n\n\n* Google.com:
+          motor de búsqueda de sitios web, imágenes, videos y otros medios\n* Youtube.com:
+          sitio de videos enviados por el usuario con calificaciones y comentarios\n*
+          Facebook.com: comunidad de redes sociales que permite a los usuarios compartir
+          información con amigos\n* Amazon.com: sitios de compras en línea para todo
+          tipo de productos\n* Yahoo.com: un motor de búsqueda, proveedor de correo
+          electrónico y fuente de noticias\n* Wikipedia.org: una enciclopedia gratuita
+          con contenido generado por los usuarios\n \nhttps://studio.code.org/s/csd2-2018/stage/1/puzzle/2
+          -> dsls -> markdown\n"
+      CSD U2 Top Websites_2018_2019:
+        markdown: "# Mejores sitios web en los EE. UU.\n\nLos siguientes son algunos
+          de los sitios web más visitados en los Estados Unidos. Cada uno incluye
+          una breve descripción de la función principal del sitio web.\n\n\n* Google.com:
+          motor de búsqueda de sitios web, imágenes, videos y otros medios\n* Youtube.com:
+          sitio de videos enviados por el usuario con calificaciones y comentarios\n*
+          Facebook.com: comunidad de redes sociales que permite a los usuarios compartir
+          información con amigos\n* Amazon.com: sitios de compras en línea para todo
+          tipo de productos\n* Yahoo.com: un motor de búsqueda, proveedor de correo
+          electrónico y fuente de noticias\n* Wikipedia.org: una enciclopedia gratuita
+          con contenido generado por los usuarios\n \nhttps://studio.code.org/s/csd2-2018/stage/1/puzzle/2
+          -> dsls -> markdown\n"
       CSD U2 expand project:
         title: Título
         content1: descripción aquí

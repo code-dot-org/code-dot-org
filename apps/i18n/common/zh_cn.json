@@ -714,6 +714,7 @@
   "leaveSection": "离开小组",
   "less": "更少",
   "lesson": "课程",
+  "lessonExtrasButton": "去教师管理面板",
   "lessonName": "课程名称",
   "lessonNumber": "课程代码",
   "lessonNumbered": "第{lessonNumber}课：{lessonName}",

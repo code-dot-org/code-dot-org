@@ -209,8 +209,6 @@ ka-GE:
         craft_what_is_iron: მოიპოვეთ ეს რკინა!
       Underground Iron_2019:
         craft_what_is_iron: მოიპოვეთ ეს რკინა!
-      behaviors 3a:
-        this_sprite_callout: გატესტვა
       course2_bee_conditionals_challenge2:
         courseD_bee_conditionals_challenge2_1: გამოიყენეთ ეს ციკლი, რათა შეაგროვოთ
           მთელი ნექტარი (ან თაფლი) ყვავილიდან (ან ფიჭიდან).

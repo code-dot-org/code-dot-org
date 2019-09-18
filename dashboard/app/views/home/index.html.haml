@@ -3,7 +3,7 @@
   = tag 'meta', property: 'og:image', content: CDO.studio_url(CDO.shared_image_url('share/girl_cropped.jpg'), 'https:')
   = tag 'meta', property: 'og:description', content: t('share.description')
 
--if current_user&.school_donor_name && Experiment.enabled?(current_user, nil, nil, 'donor-footer')
+-if current_user&.school_donor_name && Experiment.enabled?(user: current_user, experiment_name: 'donor-footer')
   - content_for :above_footer_content do
     = render partial: 'home/donor_footer'
 
