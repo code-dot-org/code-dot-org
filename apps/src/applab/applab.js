@@ -28,7 +28,9 @@ import * as apiTimeoutList from '../lib/util/timeoutList';
 import designMode from './designMode';
 import applabTurtle from './applabTurtle';
 import applabCommands from './commands';
-import JSInterpreter from '../lib/tools/jsinterpreter/JSInterpreter';
+import JSInterpreter, {
+  getFunctionsWithComments
+} from '../lib/tools/jsinterpreter/JSInterpreter';
 import JsInterpreterLogger from '../JsInterpreterLogger';
 import * as elementUtils from './designElements/elementUtils';
 import {shouldOverlaysBeVisible} from '../templates/VisualizationOverlay';
@@ -345,6 +347,10 @@ Applab.setLevelHtml = function(html) {
   // screen is visible.
   designMode.loadDefaultScreen();
   designMode.serializeToLevelHtml();
+};
+
+Applab.getFunctions = function() {
+  return getFunctionsWithComments(Applab.getCode());
 };
 
 Applab.onTick = function() {
