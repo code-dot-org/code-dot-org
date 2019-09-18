@@ -2,19 +2,57 @@ ku:
   data:
     unplugged:
       Unplug1:
-        title: پێسەكی زانستی كۆمپیتەر
+        title: پێشەكیەک بۆ زانستی کۆمپیوتەر
         desc: ئەم وانەیە پێشەکییەکت پێدەدات لەبارەی تێگەیشتنی زانستی کۆمپیوتەر و بۆتی روون دەکاتەوە زانستی کۆمپیوتەر چی دەکات. هەروەها دەرفەتێک بە قوتابیان دەدات بۆ ئەوەی بزانن کاریگەری زانستی کۆمپیوتەر چییە، لە کۆتایی چالاکییەکە هەر قوتابییەک ئەرکێکی وەبیرهێنانەی پێدەدرێت بۆ ئەوەی لە ماڵەوەی ئەنجامی بدات سەبارەت بەو شتەی فێری بووە. لەوانەیە تۆش حەز بکەیت منداڵە بچووکان قێری وشەی تایبەت بە کۆمپیوتەر بکەیت، بەڵام دەبێت ئاگادار بیت بە شێوازێک ئەم کارە بکەیت کە چێژ و خۆشیان پێ ببەخشیت بۆ ئەوەی زیاتر لەوەی چاوەڕوان دەکەیت هەڵی زیاتر ببەخشیت.
+      Unplug2:
+        title: بیرکردنەوەی ژمارەیی
+      Unplug3:
+        title: بەرنامەڕێژی پەڕەی هێڵکاری
+      Unplug4:
+        title: خوارزمیەکان
+      Unplug5:
+        title: فرمانەکان
       Unplug6:
         title: مەرجەکان
       Unplug7:
         title: گۆرانی نووسین
+      Unplug8:
+        title: پوختە
+      Unplug9:
+        title: بەرنامەڕێژی بە پێشبڕکێ
       Unplug10:
-        title: ئینترنێت
+        title: ئینتەرنێت
       UnplugHappyMaps:
         title: نەخشەی دڵخۆش
+      RelayProgramming:
+        title: بەرنامەڕێژی بە پێشبڕکێ
+      Conditionals:
+        title: مەرجیەکان
+      GraphPaperProgramming:
+        title: بەرنامەڕێژی پەڕەی هێڵکاری
+      ComputationalThinking:
+        title: بیرکردنەوەی ژمارەیی
       courseA_unplugged_happyMaps:
         title: نەخشەی دڵخۆش
+      courseD_unplugged_graphPaperProgramming:
+        title: بەرنامەڕێژی پەڕەی هێڵکاری
+      courseD_unplugged_relayProgramming:
+        title: بەرنامەڕێژی بە پێشبڕکێ
       UnplugHappyMaps_2018:
         title: نەخشەی دڵخۆش
+      GraphPaperProgramming_2018:
+        title: بەرنامەڕێژی پەڕەی هێڵکاری
+      Conditionals_2018:
+        title: مەرجیەکان
+      RelayProgramming_2018:
+        title: بەرنامەڕێژی بە پێشبڕکێ
+      Conditionals_2019:
+        title: مەرجیەکان
+      GraphPaperProgramming_2019:
+        title: بەرنامەڕێژی پەڕەی هێڵکاری
+      RelayProgramming_2018_2019:
+        title: بەرنامەڕێژی بە پێشبڕکێ
       UnplugHappyMaps_2019:
         title: نەخشەی دڵخۆش
+      timeforcs_demo_conditionals:
+        title: مەرجیەکان
