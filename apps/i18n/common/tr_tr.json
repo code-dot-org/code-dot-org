@@ -702,6 +702,7 @@
   "leaveSection": "Bölümü bırak",
   "less": "Daha az",
   "lesson": "Ders",
+  "lessonExtrasButton": "Öğretmen Panosuna Git",
   "lessonName": "Ders adı",
   "lessonNumber": "Ders Numarası",
   "lessonNumbered": "Ders {lessonNumber}: {lessonName}",

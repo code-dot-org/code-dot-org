@@ -142,28 +142,6 @@ export default class TeacherHomepage extends Component {
     this.hideCensusBanner();
   };
 
-  dismissDonorTeacherBannerWithCallbacks(onSuccess, onFailure) {
-    $.ajax({
-      url: `/api/v1/users/${this.props.teacherId}/dismiss_donor_teacher_banner`,
-      type: 'post'
-    })
-      .done(onSuccess)
-      .fail(onFailure);
-  }
-
-  logDismissDonorTeacherBannerError = xhr => {
-    console.error(
-      `Failed to dismiss donor teacher banner! ${xhr.responseText}`
-    );
-  };
-
-  dismissDonorTeacherBanner() {
-    this.dismissDonorTeacherBannerWithCallbacks(
-      null,
-      this.logDismissDonorTeacherBannerError
-    );
-  }
-
   componentDidMount() {
     // The component used here is implemented in legacy HAML/CSS rather than React.
     $('#teacher_reminders')
@@ -262,7 +240,6 @@ export default class TeacherHomepage extends Component {
             <div>
               <DonorTeacherBanner
                 options={donorTeacherBannerOptions}
-                onDismiss={() => this.dismissDonorTeacherBanner()}
                 showPegasusLink={true}
               />
               <div style={styles.clear} />

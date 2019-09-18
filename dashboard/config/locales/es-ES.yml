@@ -89,9 +89,6 @@ es:
     continue_with: Conectate con %{provider}
     sign_in_with: Iniciar sesión con %{provider}
     signed_in: "¡Sesión iniciada!"
-    signed_out: Has finalizado tu sesión en <a href="%{url}">Code.org</a>.
-    sign_out_of: Has utilizado %{provider} para entrar. <a href="%{url}">Toca aquí</a>
-      para salir de %{provider}.
     already_signedup: "¿Ya estás registrado?"
     notyet_signedup: "¿Aún no te has unido?"
     google_oauth2: Cuenta de Google
@@ -152,8 +149,6 @@ es:
     valid_password: Contraseña válida!
     invalid_password: La Contraseña debe tener al menos 6 caracteres
     mismatch_password: Las dos contraseñas  introducidas no coinciden
-    agree_tos_privacy: Acepto los <a href='http://code.org/tos'>Términos de Servicio</a>
-      y la <a href='http://code.org/privacy'>Política de Privacidad</a>.
     under_13_consent: Si soy menor de 13 años, confirmo que tengo la autorización
       de mis padres o tutores legales para utilizar los servicios de Code.org.
     student_consent: Confirmo que tengo la autorización de mis padres o guardianes
@@ -162,17 +157,6 @@ es:
       Estados Unidos.
     my_data_to_us: Los datos de mi uso de este sitio pueden ser enviados y almacenados
       o procesados en los Estados Unidos.
-    student_terms: Estoy de acuerdo a regirme por los <a href='http://code.org/tos'>términos
-      de servicio</a> de Code.org. Si tengo menos de 13 años, confirmo al enviar este
-      formulario que tengo el permiso de mi padre o tutor legal para usar los servicios
-      de Code.org. <br/><br/>Las direcciones de correo electrónico no se almacenan
-      de forma que nos permita contactar a los alumnos. Los alumnos nunca recibirán
-      correos electrónicos de Code.org excepto para la recuperación de su contraseña.
-      Vea nuestra <a href='http://code.org/privacy'>política de privacidad</a> para
-      mayor información.
-    teacher_terms: Estoy de acuerdo en regirme por los términos de servicio de Code.org.
-      Para más información acerca de la privacidad, vea nuestra <a href='http://code.org/privacy'>política
-      de privacidad</a>.
     additional_information: Necesitamos alguna información adicional para continuar
       con tu registro.
     user_type_button: Actualizar tipo de cuenta de usuario
@@ -229,8 +213,6 @@ es:
     login: Iniciar Sesión
     invalid_login: Inicio de sesión no válido, por favor intente de nuevo
     pair_programming: Tengo a mi pareja en mi ordenador
-    student_privacy: Aprende más acerca de por qué no estás viendo tu nombre completo
-      <a href='%{student_privacy_blog}' target='_blank'>aquí</a>.
   password:
     reset_form:
       title: "¿Olvidaste tu contraseña?"
@@ -505,11 +487,6 @@ es:
     tried: Prueba
   home:
     title: Code Studio
-    description: Code Studio es la página principal de los cursos en línea creados
-      por Code.org
-    lines_of_code: "%{lines_count} LÍNEAS DE CÓDIGO ESCRITAS POR ESTUDIANTES"
-    lines_of_code_linebreak: "%{lines_count} LÍNEAS DE CÓDIGO<br/>ESCRITAS POR %{students_count}
-      MILLONES DE ALUMNOS"
     all_courses: Resumen de los cursos 1, 2 y 3
     lesson_plans: Plan de estudio
     signin_message: "¿Ya estás registrado? %{link}"
@@ -549,13 +526,6 @@ es:
     try_beta_courses: "¡Nuevo! Prueba nuestros cursos en beta para estudiantes de
       6 a 11 años K-5"
     use_as_teacher: Utilizar sitio como profesor
-    heading_hoc2014: "<h2>La Hora de Code para</h2><h1>Todas las edades</h1>"
-    heading_elementary: "<h2>Cursos de 20 horas sobre</h2><h1>Fundamentos de la Ciencia
-      de la Computación (todas las edades)</h1>"
-    heading_apps: "<h2>Diversión para</h2><h1>Todos</h1>"
-    heading_tools: "<h2>¿Listo para el siguiente paso?</h2><h1>Herramientas JavaScript
-      para la escuela secundaria</h1>"
-    heading_legacy: "<h2>Nuestro curso acelerado para</h2><h1>Todas las edades</h1>"
     your_gallery: Galería
     no_primary_course: Prueba un curso de Code Studio
     choose_next_course: Prueba un curso de Código Studio eligiendo uno a continuación
@@ -821,11 +791,6 @@ es:
     header_artist: Artista
     report_abuse: Reportar Abuso
   landing:
-    prerelease: Este curso está en fase <span class='betatext'>beta</span>. Esto significa
-      que no es la versión final del curso y está sujeta a revisión conforme recibimos
-      comentarios y hacemos mejoras.
-    prerelease_hoc2014: Este tutorial está en <span class='betatext'> beta</span>.
-      Es objeto de revisión a medida que se reciben comentarios y se hacen mejoras.
     report_bug: Informar sobre un error
     support: Obtener ayuda
     support_url: "//support.code.org"
@@ -903,12 +868,6 @@ es:
   age_interstitial:
     age: Tu edad
     header: Actualización de la información de tu cuenta
-    message: 'Estamos actualizando nuestro servicio para ofrecerte una mayor protección
-      de privacidad. Para hacerlo, necesitamos que los usuarios introduzcan aquí su
-      edad. <br/>Como siempre, code.org nunca alquilará, venderá o compartirá esta
-      información con terceros. '
-    sign_out: Si no quieres indicar tu edad, puedes <a heref="%{url}">finalizar tu
-      sesión</a>.
   terms_interstitial:
     title: Términos de Servicio y Política de Privacidad actualizados
     intro_desc: 'Hemos actualizado nuestros Términos de Servicio y Política de Privacidad,
@@ -1047,12 +1006,8 @@ es:
   peer_review:
     accepted:
       name: Aceptado/a
-      description: "<strong>Sí</strong>, esta presentación <strong>cumple</strong>
-        con los requisitos"
     rejected:
       name: Rechazado/a
-      description: "<strong>No</strong>, esta presentación <strong>no cumple</strong>
-        con los requisitos"
     escalated:
       name: Escalado
       description: Me gustaría un instructor para revisar esta presentación.
@@ -1203,10 +1158,6 @@ es:
     download_in_Vietnamese: 'Descargar en vietnamita:'
     windows: Windows (64-bit)
     mac: Mac OS X
-  stage_extras_teacher_message: Tienes lecciones extras des-habilitadas para algunas
-    de tus secciones. tus estudiantes no pueden verlas amenos que las habilites. puedes
-    habilitarlas visitando tu<a href='http://code.org/teacher-dashboard'> panel de
-    profesor</a>.
   locked_stage: Los contenidos de esta etapa no son visibles ya que se encuentra actualmente
     bloqueada. Tu maestro puede desbloquear esta etapa cuando sea tiempo de trabajar
     en ella o para revisar tus respuestas.
@@ -1327,28 +1278,11 @@ es:
         a un taller asistido por uno de nuestros socios internacionales, y 2) estas
         de acuerdo en compartir tu información con nuestros socios internacionales
         en tu país así ellos puedan ayudarte en tu viaje como un profesor de informática.
-      thanks: Gracias por enviarnos su solicitud! buscaremos brindarle apoyo y le
-        haremos saber sobre el curriculum de Code.org y herramientas. Por favor comparte
-        tus dadas y retroalimentacion con nosotros escribiéndonos a <a href='%{support_email_url}'>support@code.org</a>
-        o publicando en el <a href='%{teacher_forum_url}' target='_blank'>foro de
-        profesores</a>!
     logged_out:
       heading: Gracias por su interés en el programa de aprendizaje profesional!
       body: Para empezar, primero que nada necesitas entrar en tu cuenta de Code.org.
         si quieres mas información sobre el programa antes de empezar tu solicitud,
         por favor revisa el<a href="%{url}">resume des programa</a>.
-    not_teacher:
-      body: Gracias por su interés en el programa de aprendizaje profesional de Code.org!
-        actualmente estas dentro de una cuenta de estudiante. si quiere una cuenta
-        de profesor ir a su<a href="%{user_settings}"> configuracion </a> de usuario
-        para darse de alta como profesor.
-      more: Si te gustaría mas información sobre el programa antes de comenzar tu
-        solicitud, por favor revisa la <a href="%{pl_overview}"> descripción de programa
-        de aprendizaje profesional</a>.
-    no_teacher_email:
-      body: Tu cuenta no tiene una dirección de correo electrónico. por favor<a href="%{user_registration}">visita
-        la configuración de tu cuenta</a> y agrega tu Email antes de completar este
-        formulario.
   courses_category: Cursos Completos
   cookie_banner:
     message: Si continúas navegando en nuestro sitio web o haces clic en "Acepto",
