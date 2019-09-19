@@ -16,11 +16,11 @@ const NO_PREDICTION = -1;
 const defaultState = {
   classes: [
     {
-      name: "Dogs",
+      name: "Smile",
       examples: 0
     },
     {
-      name: "Cats",
+      name: "Not smile",
       examples: 0
     },
   ],
@@ -29,13 +29,34 @@ const defaultState = {
 };
 
 const activityImages = [
-  {guid: "a", url: "images/dog1.png"},
-  {guid: "b", url: "images/dog2.png"},
-  {guid: "c", url: "images/dog3.png"},
-  {guid: "d", url: "images/cat1.jpg"},
-  {guid: "e", url: "images/cat2.jpg"},
-  {guid: "f", url: "images/cat3.jpg"},
+  {guid: "a", url: "smiley-images/11.42.23.png"},
+  {guid: "b", url: "smiley-images/11.42.43.png"},
+  {guid: "c", url: "smiley-images/11.43.01.png"},
+  {guid: "d", url: "smiley-images/11.43.17.png"},
+  {guid: "e", url: "smiley-images/11.43.32.png"},
+  {guid: "f", url: "smiley-images/11.43.46.png"},
+  {guid: "g", url: "smiley-images/11.43.59.png"},
+  {guid: "h", url: "smiley-images/11.44.15.png"},
+  {guid: "i", url: "smiley-images/11.44.32.png"},
+  {guid: "j", url: "smiley-images/11.44.50.png"},
+  {guid: "k", url: "smiley-images/11.45.05.png"},
+  {guid: "l", url: "smiley-images/11.45.19.png"},
+  {guid: "m", url: "smiley-images/11.42.35.png"},
+  {guid: "n", url: "smiley-images/11.42.50.png"},
+  {guid: "o", url: "smiley-images/11.43.08.png"},
+  {guid: "p", url: "smiley-images/11.43.25.png"},
+  {guid: "q", url: "smiley-images/11.43.40.png"},
 ];
+
+const testingImages = [
+  {guid: "r", url: "smiley-images/11.43.53.png"},
+  {guid: "s", url: "smiley-images/11.44.07.png"},
+  {guid: "t", url: "smiley-images/11.44.26.png"},
+  {guid: "u", url: "smiley-images/11.44.41.png"},
+  {guid: "v", url: "smiley-images/11.44.57.png"},
+  {guid: "w", url: "smiley-images/11.45.13.png"},
+];
+
 
 const IMAGE_SIZE = 227;
 
@@ -113,8 +134,8 @@ module.exports = class ImageRecognition extends React.Component {
                         style={{
                           display: 'inline-block'
                         }}
-                        width={100}
-                        height={100}
+                        width={150}
+                        height={150}
                       />
                     </Draggable>
                   );
@@ -194,7 +215,7 @@ module.exports = class ImageRecognition extends React.Component {
           <Col style={{textAlign: 'center'}} xs={12}>
             <h3>Tap an image to classify it</h3>
             {
-              activityImages.map((image, i) => {
+              testingImages.map((image, i) => {
                 return (
                   <img
                     key={i}
