@@ -7,6 +7,7 @@ var webpackConfig = require('./webpack');
 var envConstants = require('./envConstants');
 var checkEntryPoints = require('./script/checkEntryPoints');
 var {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer');
+var CopyPlugin = require('copy-webpack-plugin');
 var {StatsWriterPlugin} = require('webpack-stats-plugin');
 var sass = require('node-sass');
 var UglifyJsPlugin = require('uglifyjs-webpack-plugin');
@@ -880,6 +881,7 @@ describe('entry tests', () => {
         new StatsWriterPlugin({
           fields: ['assetsByChunkName', 'assets']
         }),
+        new CopyPlugin([]),
         new ManifestPlugin({
           basePath: 'js/'
         })
