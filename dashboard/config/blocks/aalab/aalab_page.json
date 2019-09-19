@@ -1,0 +1,20 @@
+{
+  "category": "Events",
+  "config": {
+    "color": [
+      140,
+      1,
+      0.74
+    ],
+    "func": "page",
+    "blockText": "page {PAGE}",
+    "args": [
+      {
+        "name": "PAGE",
+        "type": "Number",
+        "defer": true
+      }
+    ],
+    "eventBlock": true
+  }
+}
