@@ -72,12 +72,12 @@ class LibraryTable extends React.Component {
       collapsed: !this.state.collapsed
     });
 
-  importTable = () => {
-    if (this.datasetInfo.current) {
+  importTable = datasetInfo => {
+    if (datasetInfo.current) {
       // TODO: Implement current tables (see STAR-615)
     } else {
       FirebaseStorage.copyStaticTable(
-        this.props.name,
+        datasetInfo.name,
         () => {
           console.log('success');
         },
@@ -112,14 +112,17 @@ class LibraryTable extends React.Component {
               <button
                 style={styles.import}
                 type="button"
-                onClick={this.importTable}
+                onClick={() => this.importTable(this.datasetInfo)}
               >
                 {msg.import()}
               </button>
             </div>
           </div>
         )}
-        <PreviewModal tableName={this.props.name} />
+        <PreviewModal
+          tableName={this.props.name}
+          importTable={this.importTable}
+        />
       </div>
     );
   }
