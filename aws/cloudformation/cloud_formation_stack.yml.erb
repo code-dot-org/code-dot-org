@@ -135,6 +135,10 @@ Resources:
           - Effect: Allow
             Action: 'firehose:PutRecord'
             Resource: !Sub "arn:aws:firehose:${AWS::Region}:${AWS::AccountId}:deliverystream/analysis-events"
+          # S3 access for student-libraries bucket
+          - Effect: Allow
+            Action: 's3:*'
+            Resource: !Sub "arn:aws:s3:::cdo-v3-libraries/libraries_<%=environment%>*"
           # General s3 access.
           # TODO: Further restrict permissions to grant least privilege.
           - Effect: Allow
