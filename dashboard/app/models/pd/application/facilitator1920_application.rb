@@ -123,7 +123,7 @@ module Pd::Application
       end
 
       # email_type maps to the mailer action
-      FacilitatorApplicationMailer.send(email.email_type, self).deliver_now
+      Facilitator1920ApplicationMailer.send(email.email_type, self).deliver_now
     end
 
     def log_status
