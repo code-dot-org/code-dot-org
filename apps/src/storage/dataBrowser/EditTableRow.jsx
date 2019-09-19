@@ -19,7 +19,8 @@ class EditTableRow extends React.Component {
   static propTypes = {
     columnNames: PropTypes.array.isRequired,
     tableName: PropTypes.string.isRequired,
-    record: PropTypes.object.isRequired
+    record: PropTypes.object.isRequired,
+    readOnly: PropTypes.bool
   };
 
   componentDidMount() {
@@ -107,39 +108,41 @@ class EditTableRow extends React.Component {
           </td>
         ))}
 
-        <td style={dataStyles.cell} />
+        {!this.props.readOnly && <td style={dataStyles.cell} />}
 
-        <td style={dataStyles.editButtonCell}>
-          {!this.state.isDeleting &&
-            (this.state.isEditing ? (
+        {!this.props.readOnly && (
+          <td style={dataStyles.editButtonCell}>
+            {!this.state.isDeleting &&
+              (this.state.isEditing ? (
+                <PendingButton
+                  isPending={this.state.isSaving}
+                  onClick={this.handleSave}
+                  pendingText="Saving..."
+                  style={dataStyles.saveButton}
+                  text="Save"
+                />
+              ) : (
+                <button
+                  type="button"
+                  style={dataStyles.editButton}
+                  onClick={this.handleEdit}
+                >
+                  Edit
+                </button>
+              ))}
+
+            {!this.state.isSaving && (
               <PendingButton
-                isPending={this.state.isSaving}
-                onClick={this.handleSave}
-                pendingText="Saving..."
-                style={dataStyles.saveButton}
-                text="Save"
+                isPending={this.state.isDeleting}
+                onClick={this.handleDelete}
+                pendingStyle={{float: 'right'}}
+                pendingText="Deleting..."
+                style={dataStyles.redButton}
+                text="Delete"
               />
-            ) : (
-              <button
-                type="button"
-                style={dataStyles.editButton}
-                onClick={this.handleEdit}
-              >
-                Edit
-              </button>
-            ))}
-
-          {!this.state.isSaving && (
-            <PendingButton
-              isPending={this.state.isDeleting}
-              onClick={this.handleDelete}
-              pendingStyle={{float: 'right'}}
-              pendingText="Deleting..."
-              style={dataStyles.redButton}
-              text="Delete"
-            />
-          )}
-        </td>
+            )}
+          </td>
+        )}
       </tr>
     );
   }
