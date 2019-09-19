@@ -3117,19 +3117,18 @@ h2.danger {
 #donor-footer {
   color: $white;
   text-align: center;
-  padding-top: 30px;
-  padding-bottom: 36px;
+  padding: 30px 10px 36px 10px;
 
   h1 {
     color: $white;
     margin-bottom: 24px;
     margin-top: 0;
-    font-family: "Gotham 5r";
+    font-family: "Gotham 5r", sans-serif;
     font-size: 38px;
   }
 
   h3 {
-    font-family: "Gotham 5r";
+    font-family: "Gotham 5r", sans-serif;
     font-size: 20px;
     line-height: normal;
   }
