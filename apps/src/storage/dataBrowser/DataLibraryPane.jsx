@@ -3,6 +3,8 @@ import React from 'react';
 import LibraryCategory from './LibraryCategory';
 import SearchBar from '@cdo/apps/templates/SearchBar';
 import {categories} from './datasetManifest.json';
+import PreviewModal from './PreviewModal';
+import FirebaseStorage from '../firebaseStorage';
 import color from '../../util/color';
 import msg from '@cdo/locale';
 
@@ -24,6 +26,22 @@ const styles = {
 };
 
 class DataLibraryPane extends React.Component {
+  importTable = datasetInfo => {
+    if (datasetInfo.current) {
+      // TODO: Implement current tables (see STAR-615)
+    } else {
+      FirebaseStorage.copyStaticTable(
+        datasetInfo.name,
+        () => {
+          console.log('success');
+        },
+        err => {
+          console.log(err);
+        }
+      );
+    }
+  };
+
   render() {
     return (
       <div style={styles.container}>
@@ -39,8 +57,10 @@ class DataLibraryPane extends React.Component {
             name={category.name}
             datasets={category.datasets}
             description={category.description}
+            importTable={this.importTable}
           />
         ))}
+        <PreviewModal importTable={this.importTable} />
       </div>
     );
   }

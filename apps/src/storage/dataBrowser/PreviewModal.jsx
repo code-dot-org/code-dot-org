@@ -46,7 +46,7 @@ class PreviewModal extends React.Component {
 export default connect(
   state => ({
     isPreviewOpen: state.data.isPreviewOpen,
-    tableName: state.data.tableName
+    tableName: state.data.tableName || ''
   }),
   dispatch => ({
     onClose() {
