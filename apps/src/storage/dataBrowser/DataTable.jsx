@@ -31,7 +31,7 @@ const styles = {
     overflow: 'scroll'
   },
   pagination: {
-    marginBottom: 20
+    overflow: 'auto'
   },
   plusIcon: {
     alignItems: 'center',
@@ -57,6 +57,7 @@ const INITIAL_STATE = {
 class DataTable extends React.Component {
   static propTypes = {
     getColumnNames: PropTypes.func.isRequired,
+    readOnly: PropTypes.bool,
     // from redux state
     tableColumns: PropTypes.arrayOf(PropTypes.string).isRequired,
     tableName: PropTypes.string.isRequired,
@@ -258,28 +259,35 @@ class DataTable extends React.Component {
                   }
                   isEditing={editingColumn === columnName}
                   isPending={this.state.pendingColumn === columnName}
+                  readOnly={this.props.readOnly}
                   renameColumn={this.renameColumn}
                 />
               ))}
-              <th style={styles.addColumnHeader}>
-                {this.state.pendingAdd ? (
-                  <FontAwesome icon="spinner" className="fa-spin" />
-                ) : (
-                  <FontAwesome
-                    id="addColumnButton"
-                    icon="plus"
-                    style={styles.plusIcon}
-                    onClick={this.addColumn}
-                  />
-                )}
-              </th>
-              <th style={dataStyles.headerCell}>Actions</th>
+              {!this.props.readOnly && (
+                <th style={styles.addColumnHeader}>
+                  {this.state.pendingAdd ? (
+                    <FontAwesome icon="spinner" className="fa-spin" />
+                  ) : (
+                    <FontAwesome
+                      id="addColumnButton"
+                      icon="plus"
+                      style={styles.plusIcon}
+                      onClick={this.addColumn}
+                    />
+                  )}
+                </th>
+              )}
+              {!this.props.readOnly && (
+                <th style={dataStyles.headerCell}>Actions</th>
+              )}
             </tr>
 
-            <AddTableRow
-              tableName={this.props.tableName}
-              columnNames={columnNames}
-            />
+            {!this.props.readOnly && (
+              <AddTableRow
+                tableName={this.props.tableName}
+                columnNames={columnNames}
+              />
+            )}
 
             {Object.keys(rows).map(id => (
               <EditTableRow
@@ -287,6 +295,7 @@ class DataTable extends React.Component {
                 tableName={this.props.tableName}
                 record={JSON.parse(rows[id])}
                 key={id}
+                readOnly={this.props.readOnly}
               />
             ))}
           </tbody>
