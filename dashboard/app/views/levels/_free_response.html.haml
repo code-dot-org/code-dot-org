@@ -45,4 +45,4 @@
 
   -# Don't render the dialog partial if we're inside a LevelGroup.
   = render partial: 'levels/dialog', locals: {app: 'free_response'} unless in_level_group
-  = render partial: 'levels/teacher_markdown', locals: {data: {'teacher_markdown' => level.solution}}
+  = render partial: 'levels/teacher_markdown', locals: {data: {'teacher_markdown' => level.solution}} unless is_contained_level
