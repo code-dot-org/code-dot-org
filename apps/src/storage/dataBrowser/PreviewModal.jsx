@@ -30,7 +30,11 @@ class PreviewModal extends React.Component {
       <BaseDialog isOpen handleClose={this.props.onClose} fullWidth>
         <h1>{this.props.tableName}</h1>
         <p>{datasetInfo.description}</p>
-        <DataTable getColumnNames={(records, columns) => columns} readOnly />
+        <DataTable
+          getColumnNames={(records, columns) => columns}
+          rowsPerPage={5}
+          readOnly
+        />
         <button type="button" onClick={() => this.importTable(datasetInfo)}>
           {msg.import()}
         </button>
