@@ -36,7 +36,7 @@
 
       - level_class = contained_level.class.to_s.underscore
       - if level_class == "multi"
-        = render partial: 'levels/multi_answer', locals: {data: contained_level.properties, height: height, unchecked_class: unchecked_class, checked_class: checked_class, cross_class: cross_class, level: contained_level, standalone: false}
+        = render partial: 'levels/multi_answer', locals: {data: contained_level.properties, height: height, unchecked_class: unchecked_class, checked_class: checked_class, cross_class: cross_class, level: contained_level, standalone: false, contained_mode: true}
         = render partial: 'levels/teacher_markdown', locals: {data: contained_level.properties}
       - elsif level_class == "text_match"
         = render partial: 'levels/teacher_markdown', locals: {data: data}
