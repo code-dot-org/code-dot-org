@@ -9,6 +9,7 @@ import TeacherOnlyMarkdown from './TeacherOnlyMarkdown';
 import TeacherFeedback from './TeacherFeedback';
 import InlineAudio from './InlineAudio';
 import ContainedLevel from '../ContainedLevel';
+import ContainedLevelAnswer from '../ContainedLevelAnswer';
 import PaneHeader, {PaneButton} from '../../templates/PaneHeader';
 import InstructionsTab from './InstructionsTab';
 import HelpTabContents from './HelpTabContents';
@@ -628,7 +629,8 @@ class TopInstructions extends Component {
                 )}
               {isCSF &&
                 this.props.viewAs === ViewType.Teacher &&
-                this.props.teacherMarkdown && (
+                (this.props.teacherMarkdown ||
+                  this.props.hasContainedLevels) && (
                   <InstructionsTab
                     className="uitest-teacherOnlyTab"
                     onClick={this.handleTeacherOnlyTabClick}
@@ -725,9 +727,16 @@ class TopInstructions extends Component {
             )}
             {isCSF &&
               this.props.viewAs === ViewType.Teacher &&
-              this.props.teacherMarkdown &&
-              this.state.tabSelected === TabType.TEACHER_ONLY && (
-                <TeacherOnlyMarkdown ref="teacherOnlyTab" />
+              (this.props.hasContainedLevels ||
+                (this.props.teacherMarkdown &&
+                  this.state.tabSelected === TabType.TEACHER_ONLY)) && (
+                <div>
+                  <TeacherOnlyMarkdown ref="teacherOnlyTab" />
+                  <ContainedLevelAnswer
+                    ref="teacherOnlyTab"
+                    hidden={this.state.tabSelected !== TabType.TEACHER_ONLY}
+                  />
+                </div>
               )}
           </div>
           {!this.props.isEmbedView && (

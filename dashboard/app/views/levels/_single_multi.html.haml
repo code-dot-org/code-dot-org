@@ -89,8 +89,9 @@
         = render partial: 'levels/dialog', locals: {app: app}
 
   .clear
-  = render partial: 'levels/multi_answer', locals: {data: level.properties, height: height, unchecked_class: unchecked_class, checked_class: checked_class, cross_class: cross_class, level: level, standalone: standalone}
-  = render partial: 'levels/teacher_markdown', locals: {data: level.properties}
+  -unless contained_mode
+    = render partial: 'levels/multi_answer', locals: {data: level.properties, height: height, unchecked_class: unchecked_class, checked_class: checked_class, cross_class: cross_class, level: level, standalone: standalone}
+    = render partial: 'levels/teacher_markdown', locals: {data: level.properties}
 
   %br/
   - if standalone
