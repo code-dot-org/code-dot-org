@@ -1053,10 +1053,8 @@ describe('entry tests', () => {
     'newer:messages',
     'exec:convertScssVars',
     'exec:generateSharedConstants',
-    'newer:copy:src',
     'newer:copy:lib',
-    'locales',
-    'ejs'
+    'locales'
   ]);
 
   grunt.registerTask('check-entry-points', function() {
