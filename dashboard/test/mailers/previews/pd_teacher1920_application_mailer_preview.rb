@@ -1,5 +1,5 @@
 # This can be viewed on non-production environments at /rails/mailers/pd/teacher_application_mailer
-class Pd::Teacher1920ApplicationMailerPreview < ActionMailer::Preview
+class Pd::TeacherApplicationMailerPreview < ActionMailer::Preview
   include FactoryGirl::Syntax::Methods
 
   %w(
@@ -14,13 +14,13 @@ class Pd::Teacher1920ApplicationMailerPreview < ActionMailer::Preview
     waitlisted
   ).each do |mail_type|
     define_method "#{mail_type}__with_partner".to_sym do
-      Pd::Application::Teacher1920ApplicationMailer.send mail_type, build_application(matched: true)
+      Pd::Application::TeacherApplicationMailer.send mail_type, build_application(matched: true)
     end
     define_method "#{mail_type}__with_partner_no_contact".to_sym do
-      Pd::Application::Teacher1920ApplicationMailer.send mail_type, build_application(matched: true, partner_contact_info: false)
+      Pd::Application::TeacherApplicationMailer.send mail_type, build_application(matched: true, partner_contact_info: false)
     end
     define_method "#{mail_type}__without_partner".to_sym do
-      Pd::Application::Teacher1920ApplicationMailer.send mail_type, build_application(matched: false)
+      Pd::Application::TeacherApplicationMailer.send mail_type, build_application(matched: false)
     end
   end
 
