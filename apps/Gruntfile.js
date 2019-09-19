@@ -139,16 +139,6 @@ describe('entry tests', () => {
   };
 
   config.copy = {
-    src: {
-      files: [
-        {
-          expand: true,
-          cwd: 'src/',
-          src: ['**/*.js', '**/*.jsx'],
-          dest: 'build/js'
-        }
-      ]
-    },
     static: {
       files: [
         {
@@ -353,13 +343,6 @@ describe('entry tests', () => {
           dest: 'build/package/js/'
         }
       ]
-    }
-  };
-
-  config.ejs = {
-    all: {
-      srcBase: 'src',
-      destBase: 'build/js'
     }
   };
 
