@@ -1024,6 +1024,78 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
+  # Table: dashboard.pd_teacher_applications
+  #
+
+  test "clears primary_email from pd_teacher_applications" do
+    user = create :teacher
+    secondary_email = 'secondary@email.com'
+
+    ActiveRecord::Base.connection.exec_query(
+      "INSERT INTO `pd_teacher_applications` (user_id, primary_email, secondary_email, created_at, updated_at, application) VALUES (#{user.id}, '#{user.email}', '#{secondary_email}', '#{Time.now.to_s(:db)}', '#{Time.now.to_s(:db)}', '{}')"
+    )
+
+    application = ActiveRecord::Base.connection.exec_query(
+      "SELECT * from `pd_teacher_applications` WHERE `pd_teacher_applications`.`user_id` = #{user.id}"
+    ).first
+
+    refute_empty application["primary_email"]
+
+    purge_user user
+
+    application = ActiveRecord::Base.connection.exec_query(
+      "SELECT * from `pd_teacher_applications` WHERE `pd_teacher_applications`.`user_id` = #{user.id}"
+    ).first
+
+    assert_empty application["primary_email"]
+  end
+
+  test "clears secondary_email from pd_teacher_applications" do
+    user = create :teacher
+    secondary_email = 'secondary@email.com'
+
+    ActiveRecord::Base.connection.exec_query(
+      "INSERT INTO `pd_teacher_applications` (user_id, primary_email, secondary_email, created_at, updated_at, application) VALUES (#{user.id}, '#{user.email}', '#{secondary_email}', '#{Time.now.to_s(:db)}', '#{Time.now.to_s(:db)}', '{}')"
+    )
+
+    application = ActiveRecord::Base.connection.exec_query(
+      "SELECT * from `pd_teacher_applications` WHERE `pd_teacher_applications`.`user_id` = #{user.id}"
+    ).first
+
+    refute_empty application["secondary_email"]
+
+    purge_user user
+
+    application = ActiveRecord::Base.connection.exec_query(
+      "SELECT * from `pd_teacher_applications` WHERE `pd_teacher_applications`.`user_id` = #{user.id}"
+    ).first
+
+    assert_empty application["secondary_email"]
+  end
+
+  test "clears application from pd_teacher_applications" do
+    user = create :teacher
+    secondary_email = 'secondary@email.com'
+
+    ActiveRecord::Base.connection.exec_query(
+      "INSERT INTO `pd_teacher_applications` (user_id, primary_email, secondary_email, created_at, updated_at, application) VALUES (#{user.id}, '#{user.email}', '#{secondary_email}', '#{Time.now.to_s(:db)}', '#{Time.now.to_s(:db)}', '{\"primaryEmail\": \"#{user.email}\"}')"
+    )
+
+    application = ActiveRecord::Base.connection.exec_query(
+      "SELECT * from `pd_teacher_applications` WHERE `pd_teacher_applications`.`user_id` = #{user.id}"
+    ).first
+
+    refute_empty application["application"]
+
+    purge_user user
+
+    application = ActiveRecord::Base.connection.exec_query(
+      "SELECT * from `pd_teacher_applications` WHERE `pd_teacher_applications`.`user_id` = #{user.id}"
+    ).first
+    assert_empty application["application"]
+  end
+
+  #
   # Table: dashboard.pd_workshop_surveys
   # Associated via enrollment
   #
