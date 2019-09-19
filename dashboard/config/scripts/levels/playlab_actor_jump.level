@@ -49,15 +49,17 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-09-18 18:49:21 +0000\",\"changed\":[\"notes\",\"maze_data\",\"failure_condition\",\"success_condition\",\"timeout_after_when_run\",\"preload_asset_list\"],\"changed_by_id\":803,\"changed_by_email\":\"nkiru.onwuneme@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2019-09-18 18:49:21 +0000\",\"changed\":[\"notes\",\"maze_data\",\"failure_condition\",\"success_condition\",\"timeout_after_when_run\",\"preload_asset_list\"],\"changed_by_id\":803,\"changed_by_email\":\"nkiru.onwuneme@code.org\"},{\"changed_at\":\"2019-09-18 19:19:00 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\",\"toolbox_blocks\"],\"changed_by_id\":803,\"changed_by_email\":\"nkiru.onwuneme@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <toolbox_blocks>
-      <block type="studio_addGoal">
-        <title name="VALUE">7</title>
-      </block>
+      <xml>
+        <block type="studio_addGoal">
+          <title name="VALUE">7</title>
+        </block>
+      </xml>
     </toolbox_blocks>
   </blocks>
 </Studio>
