@@ -11,10 +11,16 @@ export default class Results extends React.Component {
     questions: PropTypes.object.isRequired,
     thisWorkshop: PropTypes.object.isRequired,
     sessions: PropTypes.arrayOf(PropTypes.string).isRequired,
-    facilitators: PropTypes.object.isRequired,
-    facilitatorAverages: PropTypes.object.isRequired,
-    facilitatorResponseCounts: PropTypes.object.isRequired,
+    facilitators: PropTypes.object,
+    facilitatorAverages: PropTypes.object,
+    facilitatorResponseCounts: PropTypes.object,
     courseName: PropTypes.string.isRequired
+  };
+
+  static defaultProps = {
+    facilitators: {},
+    facilitatorAverages: {},
+    facilitatorResponseCounts: {}
   };
 
   state = {
@@ -111,28 +117,26 @@ export default class Results extends React.Component {
   }
 
   renderFacilitatorAverages() {
-    return Object.keys(this.props.facilitators || {}).map(
-      (facilitator_id, i) => (
-        <Tab
-          eventKey={this.props.sessions.length + i + 1}
-          key={i}
-          title={this.props.facilitators[facilitator_id]}
-        >
-          <FacilitatorAveragesTable
-            facilitatorAverages={
-              this.props.facilitatorAverages[
-                this.props.facilitators[facilitator_id]
-              ]
-            }
-            facilitatorId={parseInt(facilitator_id, 10)}
-            facilitatorName={this.props.facilitators[facilitator_id]}
-            questions={this.props.facilitatorAverages['questions']}
-            courseName={this.props.courseName}
-            facilitatorResponseCounts={this.props.facilitatorResponseCounts}
-          />
-        </Tab>
-      )
-    );
+    return Object.keys(this.props.facilitators).map((facilitator_id, i) => (
+      <Tab
+        eventKey={this.props.sessions.length + i + 1}
+        key={i}
+        title={this.props.facilitators[facilitator_id]}
+      >
+        <FacilitatorAveragesTable
+          facilitatorAverages={
+            this.props.facilitatorAverages[
+              this.props.facilitators[facilitator_id]
+            ]
+          }
+          facilitatorId={parseInt(facilitator_id, 10)}
+          facilitatorName={this.props.facilitators[facilitator_id]}
+          questions={this.props.facilitatorAverages['questions']}
+          courseName={this.props.courseName}
+          facilitatorResponseCounts={this.props.facilitatorResponseCounts}
+        />
+      </Tab>
+    ));
   }
 
   render() {
