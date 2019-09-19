@@ -137,7 +137,6 @@ export default class JSInterpreter {
    *        debugging (default 0)
    */
   parse(options) {
-    // debugger;
     this.calculateCodeInfo(options);
 
     if (!this.studioApp.hideSource && this.studioApp.editor) {
@@ -238,7 +237,6 @@ export default class JSInterpreter {
       // code to override globals of the same names)
 
       // Now append the user code:
-      // debugger;
       this.interpreter.appendCode(options.code);
       // And repopulate scope since appendCode() doesn't do this automatically:
       this.interpreter.populateScope_(this.interpreter.ast, this.globalScope);
