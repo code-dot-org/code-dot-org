@@ -17,7 +17,6 @@ module CdoApps
     }
     execute "setup-#{app_name}" do
       command "bundle exec rake #{app_name}:setup_db --trace"
-      #command "echo setup-#{app_name}"
       cwd app_root
       environment env.merge(node['cdo-apps']['bundle_env'])
       live_stream true
