@@ -3,7 +3,7 @@
 # Table name: channel_tokens
 #
 #  id             :integer          not null, primary key
-#  storage_app_id :integer
+#  storage_app_id :integer          not null
 #  level_id       :integer          not null
 #  created_at     :datetime
 #  updated_at     :datetime
