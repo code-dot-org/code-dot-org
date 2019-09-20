@@ -2959,6 +2959,17 @@ $width: 400px;
   box-shadow: 0 0 7px 2px $shadow;
 }
 
+#assumed_identity_tag {
+  position: fixed;
+  top: 0;
+  right: 0;
+  color: $white;
+  background-color: $red;
+  padding: 3px;
+  z-index: 200;
+  box-shadow: 0 0 7px 2px $shadow;
+}
+
 #level-body {
   height: 100%;
 }
