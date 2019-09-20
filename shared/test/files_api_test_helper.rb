@@ -32,7 +32,7 @@ class FilesApiTestHelper
 
   def list_objects
     get "/v3/#{@endpoint}/#{@channel_id}"
-    JSON.parse(last_response.body) unless last_response.body.empty?
+    JSON.parse(last_response.body)
   end
 
   def get_object(filename, body = '', headers = {})
