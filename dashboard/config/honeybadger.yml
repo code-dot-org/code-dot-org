@@ -3,3 +3,5 @@ api_key: <%=CDO.dashboard_honeybadger_api_key%>
 exceptions:
   ignore: <%= %w(Sinatra StorageApps).map{|x| "#{x}::NotFound"}.to_json%>
   notify_at_exit: false
+breadcrumbs:
+  enabled: true
