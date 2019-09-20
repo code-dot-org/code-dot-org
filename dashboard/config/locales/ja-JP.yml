@@ -33,6 +33,7 @@ ja:
         finish_sign_up_header: アカウントの作成を完了します
         error:
           future: 現在までの日付にする
+  beta: ベータ版
   hello: Hello world
   welcome_back: Welcome Back, %{name}
   your_professional_learning_plan: プロフェッショナル学習計画
@@ -46,13 +47,10 @@ ja:
   okay: オッケー
   or: または
   heading_x_of_y: "%{heading} (%{y} ページ中 %{x} ページ目)"
-  add_teacher_form:
+  join_section:
     code:
-      label: 先生を追加：
       placeholder: セクション ・ コード (ABCDEF)
-      instructions: 先生によって与えられたコードを入力してください。"ABCDEF"のような 6 文字のコードです。
-      instructions_short: 6 文字のセクションコードを入力してください
-    submit: 先生を追加
+      submit: 参加
   add_hint_form:
     placeholder: ここにあなたのヒントを入力してください
     submit: ヒントを追加する
@@ -81,8 +79,6 @@ ja:
     continue_with: "%{provider} で続きます"
     sign_in_with: "%{provider} を使用してサインインする"
     signed_in: サインイン！
-    signed_out: <a href="%{url}"> Code.org</a> からサインアウトしました
-    sign_out_of: '%{provider}を使ってサインインしたので、 <a href="%{url}"> ここをクリックして</a> %{provider}からサインアウトする'
     already_signedup: もうサインアップしましたか？
     notyet_signedup: まだサインアップしていないですか？
     google_oauth2: Google アカウント
@@ -119,6 +115,7 @@ ja:
     age: 年齢
     user_type: あなたは先生ですか？生徒ですか？
     submit: 入会
+    go_to_account: 自分のアカウントへ
     teacher: あなたは先生ですか？
     valid_username: 利用可能 ！
     invalid_username: ユーザー名は 5 文字以上である必要があります。
@@ -126,16 +123,9 @@ ja:
     valid_password: 有効なパスワード ！
     invalid_password: パスワードを%d文字以上で入力
     mismatch_password: 入力した 2 つのパスワードが一致しません
-    agree_tos_privacy: "<a href='http://code.org/tos'>利用規約</a>および<a href='http://code.org/privacy'>プライバシーポリシー</a>に同意します。"
     under_13_consent: 13歳未満の場合、Code.orgのサービスを利用することについて、親または保護者の許可を得ていることを確認します。
     agree_us_website: 米国に拠点を置くウェブサイトを使用することに同意します。
     my_data_to_us: 当サイトの利用に関する私の情報は、米国に送信され、米国にて保管または処理される場合があります。
-    student_terms: Code.org <a href='http://code.org/tos'> サービス利用規約</a> に拘束されることに同意します。13
-      才未満の場合、私は親または法定後見人による Code.org サービス使用の許可を得て、フォームを提出することを確認します <br/> <br/>。メール
-      アドレスは、私たちが学生に連絡することができる形式では保存されません。パスワード回復のため以外では、学生がCode.org からメールを受け取ることはありません。詳しくは、
-      <a href='http://code.org/privacy'> プライバシー ポリシー</a> を参照してください。
-    teacher_terms: Code.org 利用規約に拘束されることに同意します。プライバシーの詳細については、 <a href='http://code.org/privacy'>
-      プライバシー ポリシー</a> を参照してください。
     additional_information: サインアップを続けるために、私たちはさらにいくつかの情報が必要です。
     user_type_button: アカウントタイプを更新
     user_type_label: アカウントの種類
@@ -189,8 +179,6 @@ ja:
     login: サインイン
     invalid_login: ログインに失敗（しっぱい）しました。もう一度（いちど）入力してください。
     pair_programming: このコンピューターで、パートナーがいます
-    student_privacy: あなたのフルネームが表示されない理由について、詳しくは <a href='%{student_privacy_blog}'
-      target='_blank'> こちら</a>。
   password:
     reset_form:
       title: パスワードをお忘れですか？
@@ -339,6 +327,9 @@ ja:
       gumball: おかしなガムボール
       iceage: アイス・エイジ
       infinity: インフィニティ
+      makerlab: 'Makerツールキット
+
+'
       minecraft_adventurer: Minecraftアドベンチャー
       minecraft_designer: マインクラフト
       playlab: プレイラボ
@@ -419,9 +410,6 @@ ja:
     tried: 試してみました
   home:
     title: コード・スタジオ
-    description: コード スタジオは Code.org によって作成されたオンライン ホームコースです。
-    lines_of_code: 生徒が書いた行数：%{lines_count}
-    lines_of_code_linebreak: "%{lines_count} 行のコードが<br/> %{students_count} 万人の学生によって書かれました。"
     all_courses: コース1、2、3の概要
     lesson_plans: 授業計画
     signin_message: 既に登録されていますか？% {リンク}
@@ -454,11 +442,6 @@ ja:
     test_videos_help: 学校で新しいビデオプレイヤーを試す
     try_beta_courses: New! K-5生徒用のベータコースを試してみましょう
     use_as_teacher: このサイトを教師として使用
-    heading_hoc2014: "<h2>Hour of Code（アワー オブ コード）</h2> <h1>全ねんれい向け</h1>"
-    heading_elementary: "<h2>20時間コース</h2> <h1>コンピュータサイエンス入門 (全ねんれい)</h1>"
-    heading_apps: "<h2>お楽しみ</h2><h1>みんなの</h1>"
-    heading_tools: "<h2>次のステップへの準備はできましたか?</h2><h1> JavaScript ツール （高校生向け）</h1>"
-    heading_legacy: "<h1>全年齢対象のコース</h1>"
     your_gallery: ギャラリー
     no_primary_course: コード スタジオ でコースを見る
     choose_next_course: Code Studio コースを以下のリストから一つ試す
@@ -538,6 +521,8 @@ ja:
     notes_coming_soon: このビデオのノートがもうすぐ公開されます
     autoplay_option: 動画の自動再生
     download: ビデオのダウンロード
+    show_notes: コードの表示
+    show_video: 写真・動画
   compatibility:
     upgrade:
       unsupported_message: お使いのブラウザーはサポートされていません。お使いのブラウザーを<a href='%{supported_browsers_url}',
@@ -666,8 +651,6 @@ ja:
     header_artist: アーティスト
     report_abuse: 不正を報告
   landing:
-    prerelease: このコースはまだ<span class='betatext'>ベータ版</span>です。今後改善と変更が行われる可能性があります。
-    prerelease_hoc2014: このチュートリアルは<span class='betatext'>ベータ版</span>です。フィードバックによって改善と変更が行われることが想定されます。
     report_bug: バグを報告
     support: 説明を見る
     help_resources: ヘルプとリソース
@@ -735,9 +718,6 @@ ja:
   age_interstitial:
     age: 年齢
     header: アカウント情報の更新
-    message: ユーザーにより良い体験をしてもらうために、プライバシー保護を強化しながら現在も更新中です。そのため、こちらからみなさんの年齢データの入力にご協力ください。cord.org
-      は決して第三者に情報を販売、共有、貸与はいたしません。
-    sign_out: 年齢を公表しくない場合は、<a href="%{url}"> サインアウト</a> してください。
   terms_interstitial:
     title: 最新の利用規約とプライバシー ポリシー
     intro_desc: '下記の通りサービス利用規約、およびプライバシー ポリシーを更新しました。変更は、2016 年 8 月 24 日現在有効です。 最大の変更:
@@ -839,10 +819,8 @@ ja:
   peer_review:
     accepted:
       name: 承認済
-      description: "<strong>はい</strong>、この提出は要件を <strong>満たします</strong>"
     rejected:
       name: 却下
-      description: "<strong>いいえ</strong>、この提出は要件を <strong>満たしません</strong>"
     escalated:
       name: エスカレート
       description: この提出を評価するためのインストラクターが欲しい
@@ -854,6 +832,7 @@ ja:
     content: 内容
     practice: 授業実践
     peer_review: ピア ・ レビュー
+    ramp_up: ランアップ
     main_course: メイン コース
     extra_course_content: 追加のコース内容
     csf_e_1: コースEへの強化（オプション）
@@ -861,6 +840,7 @@ ja:
     csf_f_1: コースFへの強化（オプション）
     csf_f_2: コースFの内容
     csf_jigsaw: ジグソーパズル
+    csf_sequencing: シークエンス
     csf_loops: くりかえし
     csf_events: イベント
     csf_binary: ２しんすう
@@ -870,6 +850,7 @@ ja:
     csf_variables: 変数（へんすう）
     csf_for_loops: ループ用
     csf_internet: インターネット
+    csf_warmup: ウォームアップ
     csd1_1: '第 1章: 問題解決プロセス'
     csd1_2: 第 2 章コンピューターと問題解決
     csd2_1: 第 1 章： Web コンテンツと HTML

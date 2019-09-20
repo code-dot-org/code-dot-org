@@ -3,8 +3,10 @@ pt:
   data:
     script:
       category:
+        csf_category_name: Fundamentos
         hoc_category_name: Hora de Código
         math_category_name: Matemática
+        research_studies_category_name: Trabalhos de Investigação
       name:
         course1:
           title: Curso 1
@@ -63,6 +65,7 @@ pt:
             compartilhar com outras pessoas. Este curso é recomendado para alunos
             de 2º-5º ano.
           description_short: O curso 2 é destinado aos alunos que já sabem ler.
+          description_audience: Mais de 6 anos (leitura necessária)
           stages:
             'Artist: Debugging':
               name: 'Artista: Depuração'
@@ -279,10 +282,18 @@ pt:
               name: variáveis
         algebra:
           stages:
+            'Eval: Boolean Operators':
+              name: Operadores Booleanos
             'Eval: Conditionals':
               name: Condicionais
+            'Eval: Defining Functions':
+              name: Funções Compostas
             'Eval: Strings and Images':
               name: Cadeias de caracteres e imagens
+            'Eval: Writing Contracts':
+              name: Escrever Contratos
+            'Play Lab: Booleans':
+              name: Morcego Sam
             'Unplugged: Conditionals and Piecewise Functions':
               name: 'Offline: condicionais e funções definidas por partes'
             'Unplugged: The Design Recipe':
@@ -308,10 +319,17 @@ pt:
               name: A receita do design
         K5PD:
           stages:
+            K-5 Courses:
+              name: Cursos Ensino Primário e Básico
+            Next Steps:
+              name: Próximos Passos
             Teacher Dashboard:
               name: Painel do Professor
         netsim:
           title: Simulador de internet
+          stages:
+            Manual DNS:
+              name: DNS Manual
         20-hour:
           title: Curso de introdução acelerada ao CS
           description: Este curso de 20 horas apresenta o informática de núcleo e
@@ -411,11 +429,39 @@ pt:
           stages:
             Hour of Code 2013:
               name: Hora de Código 2013
+        CodeStudioPuzzleChallenge:
+          stages:
+            Puzzles:
+              name: Puzzles
+        Tutorial Video - Code Studio Puzzle Challenge:
+          stages:
+            Puzzles:
+              name: Puzzles
         cspunit1:
           description_short: Programação
           stages:
+            Binary Numbers:
+              name: Números Binários
+            Bytes and File Sizes:
+              name: Bytes e tamanhos de ficheiros
+            Number Systems:
+              name: Sistemas de Numeração
+            Personal Innovations:
+              name: Inovação Pessoal
+            Sending Binary Messages:
+              name: Enviar Mensagens Binárias
+            Sending Binary Messages with the Internet Simulator:
+              name: Enviar Mensagens Binárias com o Simulador de Internet
+            Sending Bits in the Real World:
+              name: Enviar Bits no Mundo Real
+            Sending Complex Messages:
+              name: Enviar Mensagens Complexas
+            Sending Formatted Text:
+              name: Enviar Texto Formatado
             Sending Numbers:
               name: Enviando números
+            Text Compression:
+              name: Compressão de Texto
         algebraPD:
           stages:
             Course Overview:
@@ -430,8 +476,29 @@ pt:
               name: Booleanos
             Evaluation Blocks:
               name: Blocos de cálculo
+            Sam the Bat:
+              name: Morcego Sam
             Strings and Images:
               name: Cadeias de caracteres e imagens
+        text-compression:
+          title: Compressão de Texto
+          stages:
+            Text Compression:
+              name: Compressão de Texto
+        CSPLessonSamples:
+          stages:
+            Lesson 14:
+              name: Lição 14
+            Lesson 15:
+              name: Lição 15
+        sciencePD:
+          stages:
+            The Tutorial:
+              name: O Tutorial
+        rbo-reference:
+          stages:
+            reference:
+              name: referência
         cspunit3:
           description_short: Programação
           stages:
@@ -445,6 +512,8 @@ pt:
               name: Visão geral do curso
             Evaluation Blocks:
               name: Blocos de cálculo
+            Next Steps:
+              name: Próximos Passos
             Strings and Images:
               name: Cadeias de caracteres e imagens
             Teacher Dashboard:
@@ -467,6 +536,14 @@ pt:
               name: Blocos de cálculo
             Teacher Dashboard:
               name: Painel do Professor
+        sciencePD-NexTech:
+          stages:
+            The Tutorial:
+              name: O Tutorial
+        sciencePD-iZone:
+          stages:
+            The Tutorial:
+              name: O Tutorial
         sciencePD2:
           description: 'Fase 2 Online: combinado de estudos de verão'
           description_short: 'Fase 2 Online: combinado de estudos de verão'
@@ -492,6 +569,8 @@ pt:
               name: Blocos de cálculo
             Free Play:
               name: Atividade livre
+            Sam the Bat:
+              name: Morcego Sam
             Strings and Images:
               name: Cadeias de caracteres e imagens
             The Design Recipe:
@@ -519,6 +598,8 @@ pt:
               name: Multi
             Odometer:
               name: Odómetro
+            Text Compression:
+              name: Compressão de Texto
         algebraPD2b:
           description: 'Fase 2 Online: combinado de estudos de verão'
           description_short: 'Fase 2 Online: combinado de estudos de verão'
@@ -535,10 +616,14 @@ pt:
               name: 'Eval: Condicionais'
             Evaluation Blocks:
               name: Blocos de cálculo
+            Next Steps:
+              name: Próximos Passos
             Strings and Images:
               name: Cadeias de caracteres e imagens
             Teacher Dashboard:
               name: Painel do Professor
+            Writing Contracts:
+              name: Escrever Contratos
         cspfacilitator:
           stages:
             App Lab:
@@ -547,6 +632,10 @@ pt:
               name: Simulador de internet
             Welcome!:
               name: Olá!
+        K5-OnlinePD:
+          stages:
+            Next Steps:
+              name: Próximos Passos
         ECSPD2:
           description: 'Fase 2 Online: combinado de estudos de verão'
           description_short: 'Fase 2 Online: combinado de estudos de verão'
@@ -587,6 +676,10 @@ pt:
               name: Olá!
             Wrap-Up:
               name: Resumo
+        Equity-OnlinePD:
+          stages:
+            Next Steps:
+              name: Próximos Passos
         sciencePD2b-iZone:
           description: 'Fase 2 Online: combinado de estudos de verão'
           description_short: 'Fase 2 Online: combinado de estudos de verão'
@@ -760,10 +853,26 @@ pt:
               name: Painel do Professor
         csp1-2017:
           stages:
+            Binary Numbers:
+              name: Números Binários
+            Number Systems:
+              name: Sistemas de Numeração
+            Personal Innovations:
+              name: Inovação Pessoal
+            Sending Binary Messages:
+              name: Enviar Mensagens Binárias
+            Sending Binary Messages with the Internet Simulator:
+              name: Enviar Mensagens Binárias com o Simulador de Internet
             Sending Numbers:
               name: Enviando números
             The Internet:
               name: A Internet
+        csp2-2017:
+          stages:
+            Bytes and File Sizes:
+              name: Bytes e tamanhos de ficheiros
+            Text Compression:
+              name: Compressão de Texto
         csp3-2017:
           description_short: Programação
           stages:
@@ -778,6 +887,10 @@ pt:
           stages:
             Functions:
               name: Funções
+        2016_sciencePD_phase1:
+          stages:
+            The Tutorial:
+              name: O Tutorial
         TEMP CSD Unit 3:
           description_short: Programação
         CSF_Secret_Sample:
@@ -788,6 +901,14 @@ pt:
               name: Blocos de cálculo
             Teacher Dashboard:
               name: Painel do Professor
+        sciencePD1:
+          stages:
+            The Tutorial:
+              name: O Tutorial
+        cspunit1-support:
+          stages:
+            Sending Binary Messages:
+              name: Enviar Mensagens Binárias
         MikeTest:
           stages:
             Artist Functions:
@@ -1260,6 +1381,10 @@ pt:
           stages:
             Creating Functions:
               name: Criando funções
+        pwc:
+          stages:
+            Personal Innovations:
+              name: Inovação Pessoal
         hero:
           stages:
             Minecraft Hour of Code:
@@ -1442,10 +1567,26 @@ pt:
               name: Condicionais com cartas
         csp1-2018:
           stages:
+            Personal Innovations:
+              name: Inovação Pessoal
+            Sending Binary Messages:
+              name: Enviar Mensagens Binárias
+            Sending Binary Messages with the Internet Simulator:
+              name: Enviar Mensagens Binárias com o Simulador de Internet
+            Number Systems:
+              name: Sistemas de Numeração
+            Binary Numbers:
+              name: Números Binários
             Sending Numbers:
               name: Enviando números
             The Internet:
               name: A Internet
+        csp2-2018:
+          stages:
+            Bytes and File Sizes:
+              name: Bytes e tamanhos de ficheiros
+            Text Compression:
+              name: Compressão de Texto
         csp3-2018:
           description_short: Programação
           stages:
@@ -1600,10 +1741,26 @@ pt:
               name: Funções com parâmetros
         csp1-2019:
           stages:
+            Personal Innovations:
+              name: Inovação Pessoal
+            Sending Binary Messages:
+              name: Enviar Mensagens Binárias
+            Sending Binary Messages with the Internet Simulator:
+              name: Enviar Mensagens Binárias com o Simulador de Internet
+            Number Systems:
+              name: Sistemas de Numeração
+            Binary Numbers:
+              name: Números Binários
             Sending Numbers:
               name: Enviando números
             The Internet:
               name: A Internet
+        csp2-2019:
+          stages:
+            Bytes and File Sizes:
+              name: Bytes e tamanhos de ficheiros
+            Text Compression:
+              name: Compressão de Texto
         csp3-2019:
           description_short: Programação
           stages:
@@ -1613,6 +1770,16 @@ pt:
           stages:
             While Loops:
               name: Laços enquanto
+        csp1-pilot:
+          stages:
+            Number Systems:
+              name: Sistemas de Numeração
+            Sending Binary Messages:
+              name: Enviar Mensagens Binárias
+            Sending Binary Messages with the Internet Simulator:
+              name: Enviar Mensagens Binárias com o Simulador de Internet
+            Binary Numbers:
+              name: Números Binários
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -1638,3 +1805,9 @@ pt:
               name: Condicionais
             Functions:
               name: Funções
+        peru-2019:
+          stages:
+            Introduction:
+              name: Introdução
+            Nested Loops:
+              name: Laços aninhados

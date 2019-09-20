@@ -36,6 +36,7 @@ ga:
         edit_header: Cuir Sonraí an Chuntais in Eagar
         error:
           future: earráid - dáta sa todhchaí
+  beta: béite
   hello: Dia dhuit a dhomhain
   welcome_back: Fáilte ar ais a %{name}
   your_professional_learning_plan: Do phlean foghlamtha proifisiúnta
@@ -49,14 +50,9 @@ ga:
   okay: Ceart go leor
   or: nó
   heading_x_of_y: "%{heading} (leathanach %{x} as %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Cuir múinteoir leis:'
       placeholder: Cód an Rannáin (ABCDEF)
-      instructions: Cuir isteach an cód a thug do mhúinteoir duit. Cód sé litir atá
-        ann, cosúil le "ABCDEF".
-      instructions_short: Cuir isteach cód an rannáin le 6 litir
-    submit: Cuir múinteoir leis
   add_hint_form:
     placeholder: Cuir do leid isteach anseo
     submit: Cuir leid leis
@@ -86,9 +82,6 @@ ga:
   auth:
     sign_in_with: Logáil isteach trí %{provider}
     signed_in: Logáilte isteach!
-    signed_out: Tá tú logáilte amach as <a href="%{url}">Code.org</a> anois.
-    sign_out_of: Bhain tú úsáid as %{provider} le logáil isteach. <a href="%{url}">Cliceáil
-      anseo</a> chun logáil amach as %{provider}.
     already_signedup: Cláraithe cheana?
     notyet_signedup: Níl cuntas agat?
     google_oauth2: Cuntas Google
@@ -142,15 +135,6 @@ ga:
     valid_password: Focal faire bailí!
     invalid_password: Ní mór ar a laghad 6 charachtar a bheith i bhfocal faire
     mismatch_password: Ní ionann an dá fhocal faire a chuir tú isteach
-    student_terms: Glacaim le <a href='http://code.org/tos'>téarmaí seirbhíse</a>
-      Code.org. Má tá mé níos óige ná 13 bliain d'aois, deimhním gur thug tuismitheoir
-      nó caomhnóir cead dom seirbhísí Code.org a úsáid.<br/><br/>Ní stórálaimid seoltaí
-      ríomhphoist in aon fhoirm a ligfeadh dúinn dul i dteagmháil le daltaí. Ní bhfaighidh
-      daltaí ríomhphost ó Code.org seachas teachtaireachtaí chun focal faire a athshocrú.
-      Léigh an <a href='http://code.org/privacy'>polasaí príobháideachais</a> chun
-      tuilleadh eolais a fháil.
-    teacher_terms: Glacaim le téarmaí seirbhíse Code.org. Féach an <a href='http://code.org/privacy'>polasaí
-      príobháideachais</a> chun tuilleadh eolais a fháil.
     additional_information: Teastaíonn tuilleadh eolais uainn sular féidir linn tú
       a chlárú.
     user_type_label: Sórt cuntais
@@ -203,8 +187,6 @@ ga:
     login: Logáil isteach
     invalid_login: Theip ar an logáil isteach, bain triail eile as
     pair_programming: Tá comhpháirtí in éineacht liom anseo
-    student_privacy: Foghlaim cén fáth nach bhfeiceann tú d'ainm iomlán <a href='%{student_privacy_blog}'
-      target='_blank'>anseo</a>.
   password:
     reset_form:
       title: Focal faire dearmadta?
@@ -456,10 +438,6 @@ ga:
     tried: Iarracht déanta
   home:
     title: An Stiúideo Códála
-    description: Sa Stiúideo Códála a gheobhaidh tú cúrsaí ar líne de chuid Code.org
-    lines_of_code: "%{lines_count} LÍNE CHÓID SCRÍOFA AG DALTAÍ"
-    lines_of_code_linebreak: "%{lines_count} LÍNE CHÓID<br/>SCRÍOFA AG %{students_count}
-      MILLIÚN DALTA"
     all_courses: Foramharc ar Chúrsaí 1, 2, agus 3
     lesson_plans: Pleananna ceachta
     signin_message: Cláraithe cheana? %{link}
@@ -497,13 +475,6 @@ ga:
     test_videos_help: Bain triail as ár seinnteoir nua físeán i do scoil
     try_beta_courses: Úrnua! Bain triail as na cúrsaí béite dírithe ar dhaltaí bunscoile
     use_as_teacher: Úsáid an suíomh seo mar mhúinteoir
-    heading_hoc2014: "<h2>An Uair Chódála</h2><h1>ó Liath go Leanbh</h1>"
-    heading_elementary: "<h2>Cúrsaí 20 uair an chloig ar</h2><h1>Bhuntús na Ríomheolaíochta
-      (gach aois)</h1>"
-    heading_apps: "<h2>Craic</h2><h1>do Chách</h1>"
-    heading_tools: "<h2>Réidh don chéad chéim eile?</h2><h1>Uirlisí do scoileanna
-      dara leibhéil</h1>"
-    heading_legacy: "<h2>Ár gcúrsa luathaithe</h2><h1>Ó liath go leanbh</h1>"
     your_gallery: Gailearaí
     no_primary_course: Bain triail as cúrsa sa Stiúideo Códála
     choose_next_course: Bain triail as cúrsa sa Stiúideo Códála ón liosta thíos
@@ -761,11 +732,6 @@ ga:
     header_artist: Ealaín chódála
     report_abuse: Déan Tuairisc ar Mhí-Úsáid
   landing:
-    prerelease: Is cúrsa <span class='betatext'>béite</span> é seo.  Ciallaíonn sé
-      sin nach bhfuil sé go hiomlán snasta fós, agus seans go bhfeabhsófar é amach
-      anseo, bunaithe ar aiseolas ón phobal.
-    prerelease_hoc2014: Is cúrsa teagaisc <span class='betatext'>béite</span> é seo.
-      Seans go bhfeabhsófar é amach anseo, bunaithe ar aiseolas ón phobal.
     report_bug: Déan Tuairisc ar Fhadhb
     support: Cabhair
     help_resources: Cabhair agus Acmhainní
@@ -843,12 +809,6 @@ ga:
   age_interstitial:
     age: Cén aois thú?
     header: Nuashonrú an Chuntais
-    message: Táimid ag iarraidh an suíomh seo a nuashonrú faoi láthair chun cosaint
-      níos fearr a dhéanamh ar do phríobháideachas. Dá bharr seo, caithfidh tú d'aois
-      a chur isteach anseo.<br/>Mar is gnáth, ní dhíolfaidh ná ní chomhroinnfidh code.org
-      an fhaisnéis seo le haon tríú páirtí, ná í a chur ar cíos.
-    sign_out: Mura bhfuil tú sásta d'aois a nocht, fáilte romhat <a href="%{url}">logáil
-      amach</a> anois.
   terms_interstitial:
     title: Téarmaí Seirbhíse agus Polasaí Príobháideachais Nua
     intro_desc: 'Táimid tar éis na Téarmaí Seirbhíse agus an Polasaí Príobháideachais
@@ -985,10 +945,8 @@ ga:
   peer_review:
     accepted:
       name: Glactha
-      description: "<strong>Comhlíonann</strong> sé seo na riachtanais"
     rejected:
       name: Diúltaithe
-      description: "<strong>Ní chomhlíonann</strong> sé seo na riachtanais"
     escalated:
       name: Ardaithe
       description: Ba mhaith liom é seo a chur faoi bhráid múinteora

@@ -179,10 +179,6 @@ class ScriptLevelsController < ApplicationController
   def stage_extras
     authorize! :read, ScriptLevel
 
-    if current_user&.teacher? && !current_user&.sections&.all?(&:stage_extras)
-      flash[:info] = I18n.t(:stage_extras_teacher_message).html_safe
-    end
-
     if current_user&.teacher?
       if params[:section_id]
         @section = current_user.sections.find_by(id: params[:section_id])
@@ -192,6 +188,7 @@ class ScriptLevelsController < ApplicationController
         @section = current_user.sections[0]
         @user = @section&.students&.find_by(id: params[:user_id])
       end
+      @show_stage_extras_warning = !@section&.stage_extras
     end
 
     # Explicitly return 404 here so that we don't get a 5xx in get_from_cache.
@@ -218,6 +215,7 @@ class ScriptLevelsController < ApplicationController
     @stage = Script.get_from_cache(params[:script_id]).stage_by_relative_position(params[:stage_position].to_i)
     @script = @stage.script
     @stage_extras = {
+      next_stage_number: @stage.next_level_number_for_stage_extras(current_user),
       stage_number: @stage.relative_position,
       next_level_path: @stage.next_level_path_for_stage_extras(current_user),
       bonus_levels: @script.get_bonus_script_levels(@stage),
@@ -282,7 +280,7 @@ class ScriptLevelsController < ApplicationController
 
   def user_or_session_level
     if current_user
-      current_user.next_unpassed_progression_level(@script).try(:or_next_progression_level)
+      current_user.next_unpassed_visible_progression_level(@script)
     else
       find_next_level_for_session(@script)
     end

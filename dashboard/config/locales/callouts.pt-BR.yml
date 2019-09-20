@@ -524,7 +524,7 @@ pt-BR:
           do meio?
         star2_callout: Remova este bloco de fantasia e use o bloco "esta figura" em
           seu lugar.
-        this_sprite_callout: Testando
+        this_sprite_callout: Substitua o item com a fantasia abaixo com isto.
       behaviors 4:
         behaviors_edit: Clique aqui para ver como funciona esse comportamento.
       behaviors 5:
@@ -604,6 +604,8 @@ pt-BR:
       courseA_collector_loops3_2019:
         gradek_adventurer_loops2_1: Este número te diz quantos destes blocos você
           pode usar neste quebra-cabeças.
+      courseA_collector_preLoops1:
+        courseA_collector_preLoops1_1: Clique aqui para ver o código sendo executado!
       courseA_collector_preLoops2:
         courseA_collector_loops1_1: Você vê alguns novos blocos na caixa de ferramentas?  Não
           se preocupe, mostraremos como usá-los mais tarde no palco.

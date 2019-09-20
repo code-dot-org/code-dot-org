@@ -32,6 +32,7 @@ hu:
         finish_sign_up_subheader_provider: 'Töltsd ki az alábbi adatokat a Code.org felhasználó fiókod befejezéséhez <strong>%{provider}</strong><strong>%{email}</strong>.'
         error:
           future: nem lehet a jövőben
+  beta: "béta"
   hello: "Helló világ"
   welcome_back: "Üdv újra, %{name}"
   your_professional_learning_plan: "Saját Profi Tanulmányi Terv"
@@ -45,13 +46,9 @@ hu:
   okay: "Oké"
   or: "vagy"
   heading_x_of_y: "%{heading} (oldal %{x} %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Tanár hozzáadása:'
       placeholder: "Szakasz kód (ABCDEF)"
-      instructions: "Kélek, írd be a tanárod által megadott kódot. Ez egy 6 betűs kód - például \"ABCDEF\"."
-      instructions_short: "Add meg a 6 karakteres szakasz kódod"
-    submit: 'Tanár hozzáadása'
   add_hint_form:
     placeholder: 'Kérjük, írd ide a javaslatod'
     submit: 'Írja le a véleményét'
@@ -80,8 +77,6 @@ hu:
     continue_with: 'Bejelentkezés ezzel: %{provider}'
     sign_in_with: 'Bejelentkezés ezzel a fiókkal:  %{provider}'
     signed_in: 'Bejelentkezve!'
-    signed_out: 'Kijelentkezett a <a href="%{url}"> Code.org</a> - ról.'
-    sign_out_of: '%{provider} segítségével jelentkeztél be. <a href="%{url}">Kattints ide</a>  a kijelentkezéshez ebből a fiókból: %{provider}.'
     already_signedup: 'Már regisztrált?'
     notyet_signedup: "Még nem csatlakozott?"
     google_oauth2: 'Google fiók'
@@ -127,12 +122,10 @@ hu:
     valid_password: "Érvényes jelszó!"
     invalid_password: "A jelszónak legalább 6 karakter hosszúnak kell lennie"
     mismatch_password: "A megadott két jelszó nem egyezik"
-    agree_tos_privacy: "Egyetértek a <a href='http://code.org/tos'> Általános Szerződési Feltételek </a> és a <a href='http://code.org/privacy'> adatvédelmi irányelvekkel </a>."
     under_13_consent: "Ha 13 éves kor alatti vagyok, megerősítem, hogy a szülőm vagy törvényes gondviselőm engedélyt adott, hogy használjam Code.org szolgáltatásait."
     student_consent: "Megerősítem, hogy a szülőm vagy törvényes gondviselőm engedélyt adott, hogy használjam Code.org szolgáltatásait."
     agree_us_website: "Elfogadom, hogy egy Egyesült Államokban létrejött weboldalt használok."
     my_data_to_us: "A weboldal használatából keletkező adatok tárolása és feldolgozása esetlegesen az Egyesült Államokban történik."
-    student_terms: "Megjegyzés: a tanulók e-mail címeit olyan módon tároljuk, hogy az nem teszi lehetővé számunkra a kapcsolatfelvételt. A tanulók a jelszóemlékeztető kivételével soha nem fognak e-mailt kapni a Code.org-tól. További információt az <a href='http://code.org/privacy'>adatvédelem</a> részben találsz."
     additional_information: "Még szükségünk van néhány adatra  a regisztráció folytatásához."
     user_type_button: "Felhasználói fiók-típus módosítása"
     user_type_label: "Fióktípus"
@@ -181,7 +174,6 @@ hu:
     login: 'Bejelentkezés'
     invalid_login: 'Érvénytelen bejelentkezés, kérjük próbáld meg újra'
     pair_programming: 'Van egy társam a számítógépnél'
-    student_privacy: "Tudjon meg többet, hogy miért nem jelenik meg a teljes neve <a href='%{student_privacy_blog}' target='_blank'> itt</a>."
   password:
     reset_form:
       title: 'Elfelejtette jelszavát?'
@@ -382,9 +374,6 @@ hu:
     tried: 'Próbáltam'
   home:
     title: "Kód stúdió"
-    description: 'A Kód stúdió az online tanfolyamok otthona, melyet a Code.org készített'
-    lines_of_code: "%{lines_count} sor kódot írtak eddig a diákok"
-    lines_of_code_linebreak: "%{lines_count} sor kódot<br/>írt %{students_count} MILLIÓ TANULÓ"
     all_courses: "1., 2. és 3. tanfolyam áttekintése"
     lesson_plans: "Óravázlatok"
     signin_message: "Már regisztráltál? %{link}"
@@ -414,11 +403,6 @@ hu:
     test_videos_help: 'Teszteld az új videó lejátszót az iskolában'
     try_beta_courses: 'ÚJ! Próbáld ki a béta kurzusokat alsó tagozatos diákoknak'
     use_as_teacher: 'használd ezt az oldalt tanárként'
-    heading_hoc2014: "<h2>A Kódolás Órája</h2><h1>Minden korosztálynak</h1>"
-    heading_elementary: "<h2>20 órás tanfolyamok</h2><h1>Számítástechnika alapjai (minden korosztálynak)</h1>"
-    heading_apps: "<h2>Vidámság </h2><h1>Mindenkinek</h1>"
-    heading_tools: "<h2>Kész vagy a következő képésre?</h2><h1>JavaScript Eszközök középiskoláknak</h1>"
-    heading_legacy: "<h2>Általános kurzus </h2><h1>Minden Korosztálynak</h1>"
     your_gallery: Galéria
     no_primary_course: "Próbálj ki egy tanfolyamot a Kód stúdióban"
     choose_next_course: "Próbáld ki a Kód Stúdiót, válassz egyet az alábbi tanfolyamok közül"
@@ -576,8 +560,6 @@ hu:
     header_artist: "Művész"
     report_abuse: "Visszaélés jelentése"
   landing:
-    prerelease: "Ez a tananyag <span class='betatext'> béta állapotban van</span>.  Ez azt jelenti, hogy ez nem a tananyag végleges változata, és a visszajelzések beérkezése után felülvizsgálat alá kerül, és további fejlesztés várható."
-    prerelease_hoc2014: "Ez a tananyag <span class='betatext'> béta állapotban van</span>. A visszajelzések beérkezése után felülvizsgálat alá kerül, és további fejlesztés várható."
     report_bug: "Hiba bejelentése"
     support: "Segítség kérés"
     support_url: "//support.code.org"
@@ -637,8 +619,6 @@ hu:
   age_interstitial:
     age: Korod
     header: Felhasználói adatok frissítése
-    message: "Folyamatosan megreformáljuk a gyakorlati eljárásainkat azért, hogy az Ön számára még szigorúbb személyiség védelmet biztosíthassunk. Ehhez szükségünk van arra, hogy a meglévő felhasználóink megadják az életkorukat itt. <br/>Ugyanúgy mint eddig, a code.org soha nem fogja harmadik félnek bérbeadni, eladni vagy továbbadni ezt az információt."
-    sign_out: 'Ha nem szeretnéd megadni az életkorod, <a href="%{url}">Jelentkezz ki</a>.'
   terms_interstitial:
     tos: "Feltételek"
     privacy: "Adatvédelmi Elvek"
@@ -780,8 +760,6 @@ hu:
       email_opt_in:
         opt_in_yes: 'Igen'
         opt_in_no: 'Nem'
-    no_teacher_email:
-      body: 'A fiókodhoz nem tartozik e-mail cím. Kérünk, <a href="%{user_registration}">tekintsd át a beállításokat</a>, és add meg az e-mail címed, mielőtt kitöltöd ezt az űrlapot.'
   cookie_banner:
     accept: 'Egyetértek'
   gdpr_dialog:

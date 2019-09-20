@@ -1,5 +1,5 @@
 {
-  "danceFeedbackNeedNewDancer": "Vous devez faire un danseur.",
+  "danceFeedbackNeedNewDancer": "Vous devez créer un danseur.",
   "danceFeedbackNoDancers": "Vous n’avez aucun danseur.",
   "danceFeedbackNoBackground": "Vous devez ajouter un effet de fond.",
   "danceFeedbackTooManyDancers": "Attention ! Si vous placez le bloc « créer un nouveau » dans « toutes les 2 mesures », vous créerez beaucoup de danseurs.",
@@ -10,5 +10,6 @@
   "danceFeedbackNeedDifferentDance": "Vous devez utiliser une danse différente.",
   "danceFeedbackNeedEveryTwoMeasures": "Assurez-vous que vous utilisez le bloc « toutes les 2 mesures »",
   "danceFeedbackNeedMakeANewDancer": "Utilisez le bloc de « créer un nouveau » pour créer un second danseur.",
+  "danceFeedbackKeyEvent": "Assurez vous d'avoir attribué du code au block \"quand une touche\" et pressez une touche pendant que votre danse s'exécute.",
   "measure": "Mesure:"
 }

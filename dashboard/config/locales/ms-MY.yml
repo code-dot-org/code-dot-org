@@ -18,16 +18,15 @@ ms:
         edit_header: Edit Maklumat Akaun
         error:
           future: tidak boleh ada di masa depan
+  beta: beta
   hello: Helo dunia
   welcome_back: Selamat datang kembali, % {nama}
   submit: Hantar
   cancel: Batal
   or: atau
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Tambahkan guru:'
       placeholder: Kod Seksyen (ABCDEF)
-    submit: Tambah guru
   add_hint_form:
     placeholder: Sila masukkan petunjuk anda di sini
     submit: Tambah petunjuk
@@ -52,9 +51,6 @@ ms:
   auth:
     sign_in_with: Daftar Masuk dengan % {pembekal}
     signed_in: Daftar masuk!
-    signed_out: Anda telah mendaftar keluar daripada <a href="%{url}">Code.org</a>.
-    sign_out_of: Anda telah mengunakkan %{provider} untuk mendaftar masuk. <a href="%{url}">Klik
-      di sini</a> untuk mendaftar keluar daripada %{provider}.
     already_signedup: Sudah mendaftar?
     notyet_signedup: Belum menyertai lagi?
     google_oauth2: Akaun Google

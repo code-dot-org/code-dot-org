@@ -1580,3 +1580,9 @@ si:
               name: කන්ඩිෂනලස්
             Functions:
               name: ශ්‍රිතයන්
+        peru-2019:
+          stages:
+            Introduction:
+              name: හැදින්වීම
+            Nested Loops:
+              name: නැවත නැවත සිදුවන ලුප

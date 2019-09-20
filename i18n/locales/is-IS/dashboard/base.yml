@@ -32,6 +32,7 @@ is:
         finish_sign_up_subheader_provider: 'Færðu inn eftirfarandi upplýsingar til að ljúka við að stofna Code.org aðgang hjá <strong>%{provider}</strong> fyrir <strong>%{email}</strong>.'
         error:
           future: má ekki vera í framtíð
+  beta: "beta"
   hello: "Halló heimur"
   welcome_back: "Velkomin/n aftur, %{name}"
   your_professional_learning_plan: "Námsáætlun þín í faginu"
@@ -45,13 +46,9 @@ is:
   okay: "Allt í lagi"
   or: "eða"
   heading_x_of_y: "%{heading} (síða %{x} af %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Bæta við kennara:'
       placeholder: "Hópkóði (ABCDEF)"
-      instructions: "Vinsamlegast færðu inn kóðann sem kennarinn lét þig hafa. Það er 6 stafa kóði líkur \"ABCDEF\"."
-      instructions_short: "Sláðu inn 6 stafa kóða hópsins"
-    submit: 'Bæta við kennara'
   add_hint_form:
     placeholder: 'Færðu vísbendingu þína inn hér'
     submit: 'Bæta við vísbendingu'
@@ -80,8 +77,6 @@ is:
     continue_with: 'Halda áfram hjá %{provider}'
     sign_in_with: 'Innskrá með %{provider}'
     signed_in: 'Skráð(ur) inn!'
-    signed_out: 'Þú hefur skráð þig út af <a href="%{url}">Code.org</a>.'
-    sign_out_of: 'Þú notaðir %{provider} til að skrá þig inn. <a href="%{url}">Smelltu hér</a> til að skrá þig út af %{provider}.'
     already_signedup: 'Búin/n að skrá þig?'
     notyet_signedup: "Ekki skráð þig enn?"
     google_oauth2: 'Google'
@@ -127,13 +122,10 @@ is:
     valid_password: "Gilt lykilorð!"
     invalid_password: "Lykilorð verður að vera að minnsta kosti 6 stafir"
     mismatch_password: "Lykilorðin tvö sem þú slóst inn eru ekki eins"
-    agree_tos_privacy: "Ég samþykki <a href='http://code.org/tos'>Þjónustuskilmálana</a> og <a href='http://code.org/privacy'>Persónuverndarstefnuna</a>."
     under_13_consent: "Ef ég er undir 13 ára aldri, staðfesti ég hér með að ég hef samþykki foreldris eða forráðamanns til að nota þjónustur Code.org."
     student_consent: "Ég staðfesti að ég hef leyfi foreldris eða löglegs forráðamanns til að nota þjónustur Code.org."
     agree_us_website: "Ég samþykki að nota vef sem er staðsettur í Bandaríkjunum."
     my_data_to_us: "Gögn sem verða til með notkun minni á þessum vef kunna að verða send til og geymd eða greind í Bandaríkjunum."
-    student_terms: "Netföng eru ekki geymd á sniði sem gerir okkur kleift að hafa samband við nemendur. Nemendur munu aldrei fá póst frá Code.org nema til að endurstilla aðgangsorð. Sjá nánar um þetta í <a href='http://code.org/privacy'>persónuverndarstefnu</a> okkar."
-    teacher_terms: "Ég samþykki að hlíta þjónustuskilmálum Code.org. Nánari upplýsingar um persónuvernd má finna í <a href='http://code.org/privacy'>persónuverndarstefnu</a> okkar."
     additional_information: "Við þurfum viðbótarupplýsingar til að geta haldið áfram að skrá þig."
     user_type_button: "Uppfæra tegund aðgangs"
     user_type_label: "Tegund aðgangs"
@@ -186,7 +178,6 @@ is:
     login: 'Innskráning'
     invalid_login: 'Innskráning tókst ekki. Reyndu aftur.'
     pair_programming: 'Ég er með félaga við tölvuna'
-    student_privacy: "Nánar um ástæðuna fyrir því að þú sérð ekki fullt nafn þitt <a href='%{student_privacy_blog}' target='_blank'>here</a>."
   password:
     reset_form:
       title: 'Gleymdir þú lykilorðinu þínu ?'
@@ -429,9 +420,6 @@ is:
     tried: 'Reynt'
   home:
     title: "Kóðastúdíó"
-    description: 'Í Kóðastúdíóinu er að finna netnámskeið frá Code.org'
-    lines_of_code: "%{lines_count} LÍNUR AF KÓÐA SKRIFAÐAR AF NEMENDUM"
-    lines_of_code_linebreak: "%{lines_count} LÍNUR AF KÓÐA<br/>SKRIFAÐAR AF %{students_count} MILJÓNUM NEMENDA"
     all_courses: "Yfirlit yfir námskeið 1, 2 og 3"
     lesson_plans: "Námsáætlun"
     signin_message: "Þegar skráð(ur)? %{link}"
@@ -461,11 +449,6 @@ is:
     test_videos_help: 'Prófaðu nýja myndbandaspilarann okkar í skólanum þínum'
     try_beta_courses: 'Nýtt! Prófaðu beta námskeiðin okkar fyrir K-5 nemendur'
     use_as_teacher: 'Nota þennan vef sem kennari'
-    heading_hoc2014: "<h2>Klukkustund kóðunar fyrir</h2><h1>alla aldurshópa</h1>"
-    heading_elementary: "<h2>20 stunda námskeið í</h2><h1>Undirstöðuatriðum tölvunarfræði (fyrir alla aldurshópa)</h1>"
-    heading_apps: "<h2>Skemmtun fyrir</h2><h1>alla</h1>"
-    heading_tools: "<h2>Viltu fara í næsta áfanga?</h2><h1>Verkfæri fyrir mið- og framhaldsskóla</h1>"
-    heading_legacy: "<h2>Hraðnámskeiðið okkar fyrir</h2><h1>alla aldurshópa</h1>"
     your_gallery: Safn
     no_primary_course: "Prófaðu námskeið í Kóðastúdíóinu"
     choose_next_course: "Prófaðu Kóðastúdíóið með því að velja námskeið hér fyrir neðan"
@@ -661,8 +644,6 @@ is:
     header_artist: "Listamaður"
     report_abuse: "Tilkynna misnotkun"
   landing:
-    prerelease: "Þetta námskeið er á <span class='betatext'>beta stigi</span>.  Það þýðir að þetta er ekki endanleg útgáfa af námskeiðinu og það getur breyst þegar athugasemdir koma frá notendum og endurbætur eru gerðar."
-    prerelease_hoc2014: "Þetta kennsluefni er <span class='betatext'>beta útgáfa</span>.  Það getur breyst eftir því sem ábendingar berast og endurbætur eru gerðar."
     report_bug: "Tilkynna galla"
     support: "Fá hjálp"
     support_url: "//support.code.org"
@@ -730,8 +711,6 @@ is:
   age_interstitial:
     age: Aldur þinn
     header: Uppfæra reikningsupplýsingar
-    message: "Við erum að uppfæra gögn okkar til að geta veitt þér enn betri persónuvernd. Til að geta það þurfum við að biðja núverandi notendur að gefa upp aldur sinn hér.<br/>Sem fyrr mun code.org aldrei leigja, selja eða deila þessum upplýsingum með nokkrum þriðja aðila."
-    sign_out: 'Viljir þú ekki gefa upp aldur getur þú <a href="%{url}">skráð þig út</a>.'
   terms_interstitial:
     title: "Nýjungar í þjónustuskilmálum og persónuverndarstefnu"
     intro_desc: "Frá og með 24. ágúst 2016 hafa gilt nýir þjónustuskilmálar og persónuverndarstefna hjá okkur, sbr. hér fyrir neðan. Stærsta breytingin er að við munum <i>ekki lengur geyma netföng nemenda sem skráðir eru í Kóðastúdíóið.</i> Fyrir okkur er þetta stórmál og við vonum að þetta verði nýtt viðmið í persónuverndun nemenda þar sem tölvutækni er notuð við kennslu. Við höfum sent þér yfirlit annarra breytinga í tölvupósti."
@@ -827,10 +806,8 @@ is:
   peer_review:
     accepted:
       name: 'Samþykkt'
-      description: '<strong>Já</strong>, þetta innlegg <strong>uppfyllir</strong> kröfurnar'
     rejected:
       name: 'Hafnað'
-      description: '<strong>Nei</strong>, þetta innlegg <strong>uppfyllir ekki</strong> kröfurnar'
     escalated:
       name: 'Fá álit'
       description: 'Ég vil að leiðbeinandi gefi álit á þessu innleggi'
@@ -971,7 +948,6 @@ is:
     download_in_Vietnamese: 'Hlaða niður á víetnömsku:'
     windows: 'Windows (64-bita)'
     mac: 'Mac OS X'
-  stage_extras_teacher_message: "Þú hefur slökkt á Aukaefni (Lesson Extras) fyrir suma hópa þína. Nemendur þínir sjá ekki þessa síðu nema þú gerir það virkt. Þú getur virkjað Aukaefni með því að heimsækja þitt <a href='http://code.org/teacher-dashboard'>Stjórnborð kennara</a>."
   locked_stage: 'Innihald þessa áfanga er ekki sýnilegt eins og er vegna þess að áfanginn er læstur. Kennarinn þinn getur aflæst áfanganum þegar tími er kominn til að vinna með hann eða til að fara yfir svörin.'
   hidden_stage: "Kennarinn þinn bjóst ekki við að þú værir hér. Vinsamlegast spurðu kennarann í hvaða verkefni þú ættir að vera."
   hidden_script: "Kennarinn þinn bjóst ekki við að þú værir hér. Vinsamlegast spurðu kennarann í hvaða verkefni þú ættir að vera."
@@ -1069,15 +1045,9 @@ is:
       title: 'Aðsókn að Smiðju'
       intro: "Takk fyrir að gefa þér tíma til að fá þjálfun í námsefni Code.org. Markmið okkar er að veita börnum í skólum um allan heim tækifæri til að nema tölvunarfræði og það væri ekki hægt án þín."
       instructions: "Vinsamlegast fylltu út formið hér fyrir neðan til að láta vita að 1) þú hafir sótt þjálfunarsmiðju sem haldin var af einum af alþjóðlegum samstarfsaðilum Code.org og 2) þú samþykkir að deila upplýsingum þínum með alþjóðlegum samstarfsaðila okkar í þínu landi svo þeir geti hjálpað til að styðja þig í vegferð þinni sem tölvunarfræðikennari."
-      thanks: "Takk fyrir þessar upplýsingar! Við hlökkum til að styðja þig í að kynnast námsefni og verkfærum Code.org. Vinsamlegast haltu áfram að deila spurningum þínum og endurgjöf með okkur með því að skrifa til okkar á <a href='%{support_email_url}'>support@code.org</a> eða með innlögnum á <a href='%{teacher_forum_url}' target='_blank'>spjallvef kennara</a>!"
     logged_out:
       heading: 'Takk fyrir áhuga inn á Fagkennsluverkefninu (Professional Learning Program)!'
       body: 'Áður en þú getur byrjað þarftu að skrá þig inn á Code.org aðganginn þinn. Ef þú vilt fá meiri upplýsingar áður en þú sækir um getur fundið þær á <a href="%{url}">Professional Learning Program overview</a>.'
-    not_teacher:
-      body: 'Takk fyrir áhuga þinn á Fagkennsluverkefni Code.org (Professional Learning Program)! Þú ert nú skráð/ur inn sem nemandi. Vinsamlegast stofnaðu sérstakan kennaraaðgang eða <a href="%{user_settings}">farðu í notendastillingar þínar</a> til að uppfæra aðganginn frá nemanda til kennara.'
-      more: 'Vanti þig meiri upplýsingar um verkefnið áður en þú sækir um er þær að finna á <a href="%{pl_overview}">Professional Learning Program overview</a>.'
-    no_teacher_email:
-      body: 'Það er ekkert netfang skráð á aðgang þinn. Vinsamlegast <a href="%{user_registration}">farðu í notendastillingar þínar</a> til að bæta við netfangi áður en þú fyllir út þetta form.'
   courses_category: 'Heil námskeið'
   cookie_banner:
     message: 'Með því að halda áfram að vafra á vef okkar eða smella á "Ég samþykki" samþykkir þú vistun fótspora (cookies) á tölvu þinni eða tæki.'

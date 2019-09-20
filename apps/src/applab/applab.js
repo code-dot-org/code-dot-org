@@ -814,6 +814,12 @@ function setupReduxSubscribers(store) {
       );
     }
 
+    const lastIsPreview = lastState.data && lastState.data.isPreviewOpen;
+    const isPreview = state.data && state.data.isPreviewOpen;
+    if (isDataMode && isPreview && !lastIsPreview) {
+      onDataPreview(state.data.tableName);
+    }
+
     if (
       !lastState.runState ||
       state.runState.isRunning !== lastState.runState.isRunning
@@ -843,13 +849,6 @@ function setupReduxSubscribers(store) {
   };
 
   if (store.getState().pageConstants.hasDataMode) {
-    if (experiments.isEnabled(experiments.APPLAB_DATASETS)) {
-      subscribeToTable(
-        getSharedDatabase().child('counters/tables'),
-        tableType.SHARED
-      );
-    }
-
     subscribeToTable(
       getProjectDatabase().child('counters/tables'),
       tableType.PROJECT
@@ -1287,6 +1286,18 @@ function onInterfaceModeChange(mode) {
     }
   }
   requestAnimationFrame(() => showHideWorkspaceCallouts());
+}
+
+function onDataPreview(tableName) {
+  onColumnNames(getSharedDatabase(), tableName, columnNames => {
+    getStore().dispatch(updateTableColumns(tableName, columnNames));
+  });
+
+  getSharedDatabase()
+    .child(`storage/tables/${tableName}/records`)
+    .once('value', snapshot => {
+      getStore().dispatch(updateTableRecords(tableName, snapshot.val()));
+    });
 }
 
 /**

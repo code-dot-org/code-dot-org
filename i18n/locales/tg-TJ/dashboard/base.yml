@@ -12,8 +12,6 @@ tg:
         edit_header: 'Таҳрир кардани тафсилоти ҳисоб'
   hello: "Салом ҷаҳон"
   submit: Пешниҳод кардан
-  add_teacher_form:
-    submit: 'Илова кардани муаллим'
   stage: "Давра"
   puzzle: "Муаммо"
   trophies: "Ҷомҳо"

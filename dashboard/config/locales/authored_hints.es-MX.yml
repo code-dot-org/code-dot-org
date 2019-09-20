@@ -4268,11 +4268,6 @@ es-MX:
           ¡Intenta editar los comportamientos!
 
           -   ¿Qué valor controla la velocidad de cada sprite?
-      behaviors 7:
-        behavior hint: |-
-          ¡Intenta editar los comportamientos!
-
-          -   ¿Qué valor controla la velocidad de cada sprite?
       comment_intro_maze_2018:
         courseC_maze_programming4_a: Los comentarios también son útiles cuando otras
           personas intentan leer su código.

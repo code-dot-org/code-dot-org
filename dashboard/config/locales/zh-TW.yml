@@ -33,6 +33,7 @@ zh-TW:
         finish_sign_up_subheader: 填妥下面的資料以完成 <strong>%{email}</strong> 的帳戶申請。
         error:
           future: 不能選擇將來的時間
+  beta: 測試版
   hello: Hello world
   welcome_back: 歡迎回來，%{name}
   your_professional_learning_plan: 你的專業學習計畫
@@ -46,13 +47,9 @@ zh-TW:
   okay: OK！
   or: 或
   heading_x_of_y: "%{heading} （%{x} / %{y} 頁）"
-  add_teacher_form:
+  join_section:
     code:
-      label: 新增一個教師：
       placeholder: 學習小組代碼 (ABCDEF)
-      instructions: 請輸入老師給你的代碼。它是由 6 個字母所組成的代碼，像「ABCDEF」。
-      instructions_short: 輸入您的學習小組代碼（6字元）
-    submit: 新增教師
   add_hint_form:
     placeholder: 請在此處輸入您的提示
     submit: 添加提示
@@ -81,8 +78,6 @@ zh-TW:
     continue_with: 用 %{provider} 登入
     sign_in_with: 用 %{provider} 登入
     signed_in: 已成功登入！
-    signed_out: 您已登出 <a href="%{url}"> Code.org</a>。
-    sign_out_of: 您正在使用 %{provider} 登入。<a href="%{url}">點這裡</a>登出 %{provider}。
     already_signedup: 已經註冊了？
     notyet_signedup: 還沒加入？
     google_oauth2: Google 帳戶
@@ -129,15 +124,10 @@ zh-TW:
     valid_password: 密碼有效！
     invalid_password: 密碼必須要 6 個字元以上
     mismatch_password: 你輸入的兩次密碼不一致
-    agree_tos_privacy: 我同意<a href='http://code.org/tos'>服務條款</a>以及<a href='http://code.org/privacy'>隱私政策</a>。
     under_13_consent: 如果我未滿 13 歲，我確認已獲得我的父母或法定監護人的同意來使用 Code.org 服務。
     student_consent: '我確定我的監護人已允許我使用 Code.org 提供的服務。 '
     agree_us_website: 我同意使用位於美國境內的網站。
     my_data_to_us: 我在使用此網站時產生的數據資料可能會被系統傳送至並儲存在美國境內，或在美國境內進行處理。
-    student_terms: 我同意接受Code.org<a href='http://code.org/tos'>服務條款</a>的約束。如果我未滿13歲，我透過這份文件，保證我有取得我的父母或是法律監護人的同意使用Code.org。<br/><br/>Code.org不會利用電子郵件主動與學生聯繫接觸，除了忘記密碼的時候。更多的詳細資訊，請見<a
-      href='http://code.org/privacy'>隱私權政策</a>。
-    teacher_terms: 我同意 Code.org 的服務條款約束。有關隱私的詳細資訊，請參閱我們的 <a href='Http://code.org/privacy'>
-      隱私政策</a>。
     additional_information: 我們還需要一些其他資訊來完成你的註冊。
     user_type_button: 更新帳戶類型
     user_type_label: 帳戶類型
@@ -191,7 +181,6 @@ zh-TW:
     login: 登入
     invalid_login: 登入失敗，請再試一次。
     pair_programming: 我在我的電腦上有夥伴
-    student_privacy: 若要進一步瞭解為何你無法看到你的全名，請<a href='%{student_privacy_blog}' target='_blank'>點擊此處</a>。
   password:
     reset_form:
       title: 忘了密碼？
@@ -432,9 +421,6 @@ zh-TW:
     tried: 已體驗
   home:
     title: Code Studio
-    description: Code.org 建立的所有線上課程，通通放在 Code Studio 中。
-    lines_of_code: 學生們已寫了 %{lines_count} 行程式碼
-    lines_of_code_linebreak: "%{students_count} 百萬學生參與，共寫了 <br/>%{lines_count} 行程式碼"
     all_courses: 課程 1、2、3 概覽
     lesson_plans: 教學計畫
     signin_message: 已經註冊過了？%{link}
@@ -465,11 +451,6 @@ zh-TW:
     test_videos_help: 在你的學校測試我們新的影片播放器
     try_beta_courses: 新課程！試試我們為 K-5 學生設計的課程（測試版）。
     use_as_teacher: 以教師身份使用此站
-    heading_hoc2014: "<h2>一小時玩程式</h2> - <h1>所有年齡</h1>"
-    heading_elementary: "<h2>20 小時課程</h2> - <h1>計算機科學基本原理（所有年齡）</h1>"
-    heading_apps: "<h2>把樂趣</h2><h1>帶給每個人</h1>"
-    heading_tools: "<h2>準備要進行下個階段了嗎？</h2><h1>給國高中生的學習工具</h1>"
-    heading_legacy: "<h2>我們的速成課程</h2>-<h1>所有年齡</h1>"
     your_gallery: 藝廊
     no_primary_course: 體驗 Code Studio 的課程
     choose_next_course: 從下方的 Code Studio 課程中選一個體驗
@@ -675,8 +656,6 @@ zh-TW:
     header_artist: 代碼藝術
     report_abuse: 檢舉濫用
   landing:
-    prerelease: 此課程還在 <span class='betatext'>beta（測試）</span>階段。意思是它不是這個課程的最後版本，它會依據收到的回饋，作出修訂與改善。
-    prerelease_hoc2014: 這個教程還在 <span class='betatext'>beta（測試）</span>階段。它會依據收到的回饋，作出修訂與改善。
     report_bug: 臭蟲回報
     support: 取得協助
     support_url: "//support.code.org"
@@ -743,9 +722,6 @@ zh-TW:
   age_interstitial:
     age: 你的年齡
     header: 帳戶資訊更新
-    message: 我們正在更新我們的經驗，為你提供更強的隱私保護，要做到這一點，我們需要現有用戶在這裡輸入自己的年齡。<br/>和以前一樣，Code.org
-      絕不會出租、販售或分享這些資訊給任何第三方。
-    sign_out: 如果您不想提供年齡，您可以選擇<a href="%{url}">登出</a>。
   terms_interstitial:
     title: 更新後的服務條款和隱私政策
     intro_desc: 我們已更新了服務條款和隱私政策，如下所示。這些改更自 2016 年 8 月 24 日起生效。最大的變化是：我們將<strong>不再把學生帳戶使用的電子信箱儲存在
@@ -845,10 +821,8 @@ zh-TW:
   peer_review:
     accepted:
       name: 已接受
-      description: "<strong>同意</strong> ，這個提交 <strong>符合</strong> 要求"
     rejected:
       name: 已拒絕
-      description: "<strong>否決</strong>，這個提交<strong>不符</strong> 要求"
     escalated:
       name: 升級
       description: 我需要一個指導者來審查此提交
@@ -1047,8 +1021,6 @@ zh-TW:
     international_opt_in:
       title: 工作坊參與人
       intro: 感謝你參與 Code.org 的訓練課程，有了你，我們就能更容易把計算機科學教育普及給世界上的所有孩子。
-      thanks: 感謝你的提交！我們期待能幫助你熟悉 Code.org 上的課程與教學用工具，有任何問題，都歡迎你反應給我們。你可以透過 <a href='%{support_email_url}'>
-        support@code.org</a>或是<a href='%{teacher_forum_url}' target='_blank'>教師論壇</a>來聯絡我們！
     logged_out:
       heading: 感謝你對專業學習計劃感興趣！
       body: 在開始前，請先登入你在 Code.org 的帳戶，如果你希望在啟動前瞭解該應用程式的更多訊息，請檢視<a href="%{url}">專業學習計畫概述</a>。

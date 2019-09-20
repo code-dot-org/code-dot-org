@@ -349,6 +349,8 @@ ja-JP:
         Course_4_Artist_11_b: '前にうごく80ピクセル、右にまがる80度を使って、三角形の3分の2を書いてみてね。 '
       Course 4 Artist 12:
         Course_4_Artist_12_b: 'それぞれの形は、前のパズルとほとんど同じですが、6角形を少し大きくします。 '
+        Course_4_Artist_12_c: "1.  始めの3回は60ピクセルの長さで、60 度まがります\n2.  次の 2 回は 80 ピクセルの長さで、120
+          度まがります "
       Course 4 Artist Functions challenge:
         Course_4_Artist_Functions_challenge_a: どの関数を使えばいいか考えて、ひとつ決めてください。
         Course_4_Artist_Functions_challenge_b: "「カウントする」ブロックを置いて、その中に「 `counter` 回くりかえす」ブロックを入れ、入れ子のループにします。"
@@ -722,6 +724,7 @@ ja-JP:
         courseA_artist_loops_challenge2_c: このもんだいをとくには、ループ内にたくさんのブロックがいるよ。
       course1_collector_loops_challenge1:
         courseA_collector_loops_challenge1_a: うまくうごかなかったところの「くりかえし」の数をかえてみよう！
+        courseA_collector_loops_challenge1_b: １かいだけ やるときは、くりかえしは いりません。
         courseA_collector_loops_challenge1_c: どうくつの右はしには6つのジェムがあるけど、5回うごいてあつめるだけでいいよね。
           なんでかわかるかな？
       course1_collector_loops_challenge2:
@@ -758,11 +761,59 @@ ja-JP:
       course1_maze_seq_challenge2:
         courseB_maze_seq_challenge1_b: まずは西へいこう。
       course1_playlab_events_challenge1:
+        courseA_playlab_events_challenge1_a: "<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n
+          \     </block>\n    </next>\n  </block></xml> で とりをクリックしたとき、ペンギンを表示（ひょうじ）します。"
+        courseA_playlab_events_challenge1_b: "<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n
+          \     </block>\n    </next>\n  </block></xml> で ペンギンをクリックしたとき、おばけを表示（ひょうじ）します。"
+        courseA_playlab_events_challenge1_c: "<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n
+          \     </block>\n    </next>\n  </block></xml> で おばけをクリックしたとき、かいじゅうを表示（ひょうじ）します。"
+        courseA_playlab_events_challenge1_d: "モンスターをクリックしたとき、スピッフ ロボットを表示させる!\n<xml>
+          \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n
+          \   <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n
+          \       <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n
+          \ </block></xml>"
         courseA_playlab_events_challenge1_e: "一番さいごは、ロボットをクリックすると、まほうつかいが見つかります！\n\n<xml>
           \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n
           \   <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n
           \       <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n
           \ </block></xml>"
+      course1_playlab_events_challenge2:
+        courseA_playlab_events_challenge2_a: "<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n
+          \           <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n
+          \         </block>\n    </next>\n  </block></xml> で とりをしゃべらせることができます。"
+        courseA_playlab_events_challenge2_b: "おとをならすには、<xml>\n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block
+          type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n
+          \         </block>\n        </next>\n  </block></xml> をつかいます。"
+        courseA_playlab_events_challenge2_c: |-
+          <xml>  <block type="studio_whenSpriteClicked">
+              <title name="SPRITE">5</title>
+              <next>
+                <block type="studio_setSpriteEmotion">
+                  <title name="SPRITE">5</title>
+                  <title name="VALUE">2</title>
+                  <next>
+                    <block type="studio_saySprite">
+                      <title name="SPRITE">5</title>
+                      <title name="TEXT">Roar!</title>
+                      <next>
+                        <block type="studio_setSpriteEmotion">
+                          <title name="SPRITE">5</title>
+                          <title name="VALUE">0</title>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block></xml> をつかえば、かおをかえることができます。
       course2_artist_nestedLoops_challenge1:
         courseD_artist_nestedLoops_challenge1_a: 入れ子のループを作って、4つの八角形をかくことから始めましょう。
           八角形は45度回転してかきます。八角形をかいたら、ジャンプして、90度回転しましょう。
@@ -884,6 +935,151 @@ ja-JP:
           「前にすすむ」を使ってたどり、4回だけまがる、2つのクリア方法があります。「くりかえし」ブロックを使うと、もっとたくさんの方法があります。
 
           ![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)
+      courseA_artist_loops2:
+        courseA_artist_loops2_a: どうやって せんを かくか わからない？ <xml><block type="when_run"/></xml>
+          ブロックに ブロックをくっつけて、ためしてみてください。
+        courseA_artist_loops2_b: この <xml><block type="simple_move_right"/></xml> ブロックを
+          つかって、パズルをクリアします。
+      courseA_artist_loops2_2018:
+        courseA_artist_loops2_a: どうやって せんを かくか わからない？ <xml><block type="when_run"/></xml>
+          ブロックに ブロックをくっつけて、ためしてみてください。
+        courseA_artist_loops2_b: この <xml><block type="simple_move_right"/></xml> ブロックを
+          つかって、パズルをクリアします。
+      courseA_artist_loops2_2019:
+        courseA_artist_loops2_a: どうやって せんを かくか わからない？ <xml><block type="when_run"/></xml>
+          ブロックに ブロックをくっつけて、ためしてみてください。
+        courseA_artist_loops2_b: この <xml><block type="simple_move_right"/></xml> ブロックを
+          つかって、パズルをクリアします。
+      courseA_artist_loops3:
+        courseA_artist_loops3_a: ゆびで プログラムを ゆっくり なぞって、まちがいを さがしてください。
+        courseA_artist_loops3_b: |-
+          パズルをクリアするには、このブロックが ひつようかも。
+
+          ![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)
+      courseA_artist_loops3_2018:
+        courseA_artist_loops3_a: ゆびで プログラムを ゆっくり なぞって、まちがいを さがしてください。
+        courseA_artist_loops3_b: |-
+          パズルをクリアするには、このブロックが ひつようかも。
+
+          ![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)
+      courseA_artist_loops3_2019:
+        courseA_artist_loops3_a: ゆびで プログラムを ゆっくり なぞって、まちがいを さがしてください。
+        courseA_artist_loops3_b: |-
+          パズルをクリアするには、このブロックが ひつようかも。
+
+          ![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)
+      courseA_artist_loops4:
+        courseA_artist_loops4_a: ４かい いじょう もっと くりかえしたい ときは、ブロックの うえにある すうじを かえます。
+        courseA_artist_loops4_b: <xml><block type="simple_move_right"/></xml> ブロックを、
+          <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES"
+          config="2-6">5</title></block></xml> のなかに いれて ください。
+      courseA_artist_loops4_2018:
+        courseA_artist_loops4_a: ４かい いじょう もっと くりかえしたい ときは、ブロックの うえにある すうじを かえます。
+        courseA_artist_loops4_b: <xml><block type="simple_move_right"/></xml> ブロックを、
+          <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES"
+          config="2-6">5</title></block></xml> のなかに いれて ください。
+      courseA_artist_loops4_2019:
+        courseA_artist_loops4_a: ４かい いじょう もっと くりかえしたい ときは、ブロックの うえにある すうじを かえます。
+        courseA_artist_loops4_b: <xml><block type="simple_move_right"/></xml> ブロックを、
+          <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES"
+          config="2-6">5</title></block></xml> のなかに いれて ください。
+      courseA_artist_loops5:
+        courseA_artist_loops5_a: <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> をつかって このパズルをクリアしよう！
+        courseA_artist_loops5_b: ４かい いじょう もっと くりかえしたい ときは、ブロックの うえにある すうじを かえます。
+        courseA_artist_loops5_c: <xml><block type="simple_move_right"/></xml> を<xml><block
+          type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+          の中に入れてみよう。
+      courseA_artist_loops5_2018:
+        courseA_artist_loops5_a: <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> をつかって このパズルをクリアしよう！
+        courseA_artist_loops5_b: ４かい いじょう もっと くりかえしたい ときは、ブロックの うえにある すうじを かえます。
+        courseA_artist_loops5_c: <xml><block type="simple_move_right"/></xml> を<xml><block
+          type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+          の中に入れてみよう。
+      courseA_artist_loops5_2019:
+        courseA_artist_loops5_a: <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> をつかって このパズルをクリアしよう！
+        courseA_artist_loops5_b: ４かい いじょう もっと くりかえしたい ときは、ブロックの うえにある すうじを かえます。
+        courseA_artist_loops5_c: <xml><block type="simple_move_right"/></xml> を<xml><block
+          type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+          の中に入れてみよう。
+      courseA_artist_loops6:
+        courseA_artist_loops6_a: うまくいかないときは、どんなふうにかける ブロックをうごかして ためしてみよう。
+        courseA_artist_loops6_b: ちがう ほうこうに うごくブロック を ２つ つかってみよう。
+      courseA_artist_loops6_2018:
+        courseA_artist_loops6_a: うまくいかないときは、どんなふうにかける ブロックをうごかして ためしてみよう。
+        courseA_artist_loops6_b: ちがう ほうこうに うごくブロック を ２つ つかってみよう。
+      courseA_artist_loops6_2019:
+        courseA_artist_loops6_a: うまくいかないときは、どんなふうにかける ブロックをうごかして ためしてみよう。
+        courseA_artist_loops6_b: ちがう ほうこうに うごくブロック を ２つ つかってみよう。
+      courseA_artist_loops7:
+        courseA_artist_loops7_a: 一本一本せんをかいて くりかえしのパターンを見つけよう。
+        courseA_artist_loops7_b: １つなみをかいたら、それをくりかえして のこりの２つをかいてみよう
+        courseA_artist_loops7_c: <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> ブロックのなかにブロックを なにか いれてください。
+      courseA_artist_loops7_2018:
+        courseA_artist_loops7_a: 一本一本せんをかいて くりかえしのパターンを見つけよう。
+        courseA_artist_loops7_b: １つなみをかいたら、それをくりかえして のこりの２つをかいてみよう
+        courseA_artist_loops7_c: |-
+          <xml><block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="3-10">???</title>
+            </block></xml> ブロックのなかにブロックを なにか いれてください。
+      courseA_artist_loops7_2019:
+        courseA_artist_loops7_a: 一本一本せんをかいて くりかえしのパターンを見つけよう。
+        courseA_artist_loops7_b: １つなみをかいたら、それをくりかえして のこりの２つをかいてみよう
+        courseA_artist_loops7_c: |-
+          <xml><block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="3-10">???</title>
+            </block></xml> ブロックのなかにブロックを なにか いれてください。
+      courseA_artist_loops8:
+        courseA_artist_loops8_a: 実行して どうなるかみてみよう。
+        courseA_artist_loops8_b: コードをどのように かえればよいか 考えてみよう
+        courseA_artist_loops8_c: |-
+          コードを実行（じっこう）して、どうなるかみてみよう。
+          はじごをかんせいさせるには、あとなにをすればよいかよかんがえてみよう。
+      courseA_artist_loops8_2018:
+        courseA_artist_loops8_a: 実行して どうなるかみてみよう。
+        courseA_artist_loops8_b: コードをどのように かえればよいか 考えてみよう
+        courseA_artist_loops8_c: |-
+          コードを実行（じっこう）して、どうなるかみてみよう。
+          はじごをかんせいさせるには、あとなにをすればよいかよかんがえてみよう。
+      courseA_artist_loops8_2019:
+        courseA_artist_loops8_a: 実行して どうなるかみてみよう。
+        courseA_artist_loops8_b: コードをどのように かえればよいか 考えてみよう
+        courseA_artist_loops8_c: |-
+          コードを実行（じっこう）して、どうなるかみてみよう。
+          はじごをかんせいさせるには、あとなにをすればよいかよかんがえてみよう。
+      courseA_artist_loops9:
+        courseA_artist_loops9_a: 水へいなところをかくコードに もうひとつブロックをついかしてみよう。
+        courseA_artist_loops9_b: |-
+          <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">5</title></block>
+          </xml> の中に ブロックを入れてみよう。
+        courseA_artist_loops9_c: 一本一本せんをかいて くりかえしのパターンを見つけよう。
+      courseA_artist_loops9_2018:
+        courseA_artist_loops9_a: 水へいなところをかくコードに もうひとつブロックをついかしてみよう。
+        courseA_artist_loops9_c: 一本一本せんをかいて くりかえしのパターンを見つけよう。
+      courseA_artist_loops9_2019:
+        courseA_artist_loops9_a: 水へいなところをかくコードに もうひとつブロックをついかしてみよう。
+        courseA_artist_loops9_b: |-
+          <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">5</title></block>
+          </xml> の中に ブロックを入れてみよう。
+        courseA_artist_loops9_c: 一本一本せんをかいて くりかえしのパターンを見つけよう。
+      courseA_artist_loops_challenge2a:
+        courseA_artist_loops_challenge2_a: <xml>  <block type="simple_move_up_left"/></xml>
+          をつかうと ななめにすすむことができるよ！
+        courseA_artist_loops_challenge2_b: テントを１つかいたら ’ジャンプする’ を２かい つかって つぎのテントをかいてね！
+        courseA_artist_loops_challenge2_c: すべてのブロックをくりかえしの中にいれることで このパズルを クリアすることができるよ。
+      courseA_artist_loops_challenge2a_2018:
+        courseA_artist_loops_challenge2_a: <xml>  <block type="simple_move_up_left"/></xml>
+          をつかうと ななめにすすむことができるよ！
+        courseA_artist_loops_challenge2_b: テントを１つかいたら ’ジャンプする’ を２かい つかって つぎのテントをかいてね！
+        courseA_artist_loops_challenge2_c: すべてのブロックをくりかえしの中にいれることで このパズルを クリアすることができるよ。
+      courseA_artist_loops_challenge2a_2019:
+        courseA_artist_loops_challenge2_a: <xml>  <block type="simple_move_up_left"/></xml>
+          をつかうと ななめにすすむことができるよ！
+        courseA_artist_loops_challenge2_b: テントを１つかいたら ’ジャンプする’ を２かい つかって つぎのテントをかいてね！
+        courseA_artist_loops_challenge2_c: すべてのブロックをくりかえしの中にいれることで このパズルを クリアすることができるよ。
       courseA_collector_loops1:
         courseA_collector_loops1_a: |-
           たからものの ところまで きたら、このブロックで たからものを ゲットします。
@@ -1002,11 +1198,92 @@ ja-JP:
         courseA_collector_loops8_b: もんだいを ３つに わけて、それぞれ くりかえしを つかって プログラムしよう。
         courseA_collector_loops8_c: すこし プログラムを かいたら、すぐに 実行（じっこう）してみよう。ちょっとづつ ためしながら
           プログラムを つくっていこう。
+      courseA_collector_loops9:
+        courseA_collector_loops9_a: 'どこでループするのがいいか わからないときは、いろいろ すこしずつ ためして、パターンをさがしてみてください。 '
+        courseA_collector_loops9_b: くりかえし のなかに、２つの <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> くりかえし をいれると、プログラムが
+          かんたんになるよ！
+      courseA_collector_loops9_2018:
+        courseA_collector_loops9_a: 'どこでループするのがいいか わからないときは、いろいろ すこしずつ ためして、パターンをさがしてみてください。 '
+        courseA_collector_loops9_b: くりかえし のなかに、２つの <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> くりかえし をいれると、プログラムが
+          かんたんになるよ！
+      courseA_collector_loops9_2019:
+        courseA_collector_loops9_a: 'どこでループするのがいいか わからないときは、いろいろ すこしずつ ためして、パターンをさがしてみてください。 '
+        courseA_collector_loops9_b: くりかえし のなかに、２つの <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> くりかえし をいれると、プログラムが
+          かんたんになるよ！
+      courseA_collector_loops_challenge1:
+        courseA_collector_loops_challenge1_a: うまく うごかなかったら、「くりかえし」の かずを かえてみて。
+        courseA_collector_loops_challenge1_b: １かいだけ やるときは、くりかえしは いりません。
+        courseA_collector_loops_challenge1_c: どうくつの みぎには、6つの ほうせきが あるけど、5かい 南に うごけばいいよね。なぜだか
+          わかるかな？
+        courseA_collector_loops_challenge1_d: |-
+          さいしょの プログラムは、さいごの 2つの ほうせきを とれません。さいごに このブロックを くわえて みて ください：
+
+          <xml><block type="maze_moveEast">
+                                  <next>
+                                    <block type="collector_collect_simplified">
+                                      <next>
+                                        <block type="maze_moveSouth">
+                                          <next>
+                                            <block type="collector_collect"/>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block></xml>
+      courseA_collector_loops_challenge1_2018:
+        courseA_collector_loops_challenge1_a: うまく うごかなかったら、「くりかえし」の かずを かえてみて。
+        courseA_collector_loops_challenge1_b: １かいだけ やるときは、くりかえしは いりません。
+        courseA_collector_loops_challenge1_c: どうくつの みぎには、6つの ほうせきが あるけど、5かい 南に うごけばいいよね。なぜだか
+          わかるかな？
+        courseA_collector_loops_challenge1_d: |-
+          さいしょの プログラムは、さいごの 2つの ほうせきを とれません。さいごに このブロックを くわえて みて ください：
+
+          <xml><block type="maze_moveEast">
+                                  <next>
+                                    <block type="collector_collect_simplified">
+                                      <next>
+                                        <block type="maze_moveSouth">
+                                          <next>
+                                            <block type="collector_collect"/>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block></xml>
+      courseA_collector_loops_challenge1_2019:
+        courseA_collector_loops_challenge1_a: うまく うごかなかったら、「くりかえし」の かずを かえてみて。
+        courseA_collector_loops_challenge1_b: １かいだけ やるときは、くりかえしは いりません。
+        courseA_collector_loops_challenge1_c: どうくつの みぎには、6つの ほうせきが あるけど、5かい 南に うごけばいいよね。なぜだか
+          わかるかな？
+        courseA_collector_loops_challenge1_d: |-
+          さいしょの プログラムは、さいごの 2つの ほうせきを とれません。さいごに このブロックを くわえて みて ください：
+
+          <xml><block type="maze_moveEast">
+                                  <next>
+                                    <block type="collector_collect_simplified">
+                                      <next>
+                                        <block type="maze_moveSouth">
+                                          <next>
+                                            <block type="collector_collect"/>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block></xml>
       courseA_collector_loops_challenge2kp:
+        courseA_collector_loops_challenge2kp_b: この みちを ためしてみて。
         courseA_collector_loops_challenge2kp_a: くりかえしを つかって パズルを クリア できるかな？
       courseA_collector_loops_challenge2kp_2018:
+        courseA_collector_loops_challenge2kp_b: この みちを ためしてみて。
         courseA_collector_loops_challenge2kp_a: くりかえしを つかって パズルを クリア できるかな？
       courseA_collector_loops_challenge2kp_2019:
+        courseA_collector_loops_challenge2kp_b: この みちを ためしてみて。
         courseA_collector_loops_challenge2kp_a: くりかえしを つかって パズルを クリア できるかな？
       courseA_collector_preLoops7:
         courseA_collector_loops2_b: |-
@@ -1122,6 +1399,369 @@ ja-JP:
         courseA_maze_seq_challenge2_a: なんこ いけば いいか、ゆびを つかって かぞえて みよう！
       courseA_maze_seq_challenge2_2019:
         courseA_maze_seq_challenge2_a: なんこ いけば いいか、ゆびを つかって かぞえて みよう！
+      courseA_playLab_events2:
+        courseA_playLab_events2_a: 犬が”言う”ブロックをつかってみよう。
+        courseA_playLab_events2_b: |-
+          <xml>
+          <block type="when_run" movable="false" deletable="false">
+          <next>
+          <block type="studio_saySpriteChoices">
+              <title name="SPRITE">1</title>
+              <title name="VALUE">Hi there.</title>
+            </block>
+          </next>
+          </block>
+          </xml> のようにブロックをならべてみよう。
+      courseA_playLab_events2_2018:
+        courseA_playLab_events2_a: 犬が”言う”ブロックをつかってみよう。
+        courseA_playLab_events2_b: |-
+          <xml>
+          <block type="when_run" movable="false" deletable="false">
+          <next>
+          <block type="studio_saySpriteChoices">
+              <title name="SPRITE">1</title>
+              <title name="VALUE">Hi there.</title>
+            </block>
+          </next>
+          </block>
+          </xml> のようにブロックをならべてみよう。
+      courseA_playLab_events2_2019:
+        courseA_playLab_events2_a: 犬が”言う”ブロックをつかってみよう。
+        courseA_playLab_events2_b: |-
+          <xml>
+          <block type="when_run" movable="false" deletable="false">
+          <next>
+          <block type="studio_saySpriteChoices">
+              <title name="SPRITE">1</title>
+              <title name="VALUE">Hi there.</title>
+            </block>
+          </next>
+          </block>
+          </xml> のようにブロックをならべてみよう。
+      courseA_playLab_events3:
+        courseA_playLab_events3_a: |-
+          <xml><block type="studio_whenArrow">
+              <title name="VALUE">left</title>
+            </block></xml> の下に<xml><block type="studio_move">
+              <title name="SPRITE">1</title>
+              <title name="DIR">8</title>
+            </block></xml> をつけてみよう。
+        courseA_playLab_events3_b: 左やじるしキーをおしたとき 犬が左に行くようにできたかな。犬が はたにさわれば、はたは みどりにかわるよ。
+      courseA_playLab_events3_2018:
+        courseA_playLab_events3_a: |-
+          <xml><block type="studio_whenArrow">
+              <title name="VALUE">left</title>
+            </block></xml> の下に<xml><block type="studio_move">
+              <title name="SPRITE">1</title>
+              <title name="DIR">8</title>
+            </block></xml> をつけてみよう。
+        courseA_playLab_events3_b: 左やじるしキーをおしたとき 犬が左に行くようにできたかな。犬が はたにさわれば、はたは みどりにかわるよ。
+      courseA_playLab_events3_2019:
+        courseA_playLab_events3_a: |-
+          <xml><block type="studio_whenArrow">
+              <title name="VALUE">left</title>
+            </block></xml> の下に<xml><block type="studio_move">
+              <title name="SPRITE">1</title>
+              <title name="DIR">8</title>
+            </block></xml> をつけてみよう。
+        courseA_playLab_events3_b: 左やじるしキーをおしたとき 犬が左に行くようにできたかな。犬が はたにさわれば、はたは みどりにかわるよ。
+      courseA_playLab_events4:
+        courseA_playLab_events4_a: |-
+          犬を右に動かすには、<xml><block type="studio_move">
+              <title name="SPRITE">1</title>
+              <title name="DIR">2</title>
+            </block></xml> をつかいます。
+        courseA_playLab_events4_b: |-
+          <xml><block type="studio_whenArrow">
+              <title name="VALUE">right</title>
+              <next>
+            <block type="studio_move">
+              <title name="SPRITE">1</title>
+              <title name="DIR">2</title>
+            </block></next></block></xml> をつかってみよう。
+      courseA_playLab_events4_2018:
+        courseA_playLab_events4_a: |-
+          犬を右に動かすには、<xml><block type="studio_move">
+              <title name="SPRITE">1</title>
+              <title name="DIR">2</title>
+            </block></xml> をつかいます。
+        courseA_playLab_events4_b: |-
+          <xml><block type="studio_whenArrow">
+              <title name="VALUE">right</title>
+              <next>
+            <block type="studio_move">
+              <title name="SPRITE">1</title>
+              <title name="DIR">2</title>
+            </block></next></block></xml> をつかってみよう。
+      courseA_playLab_events4_2019:
+        courseA_playLab_events4_a: |-
+          犬を右に動かすには、<xml><block type="studio_move">
+              <title name="SPRITE">1</title>
+              <title name="DIR">2</title>
+            </block></xml> をつかいます。
+        courseA_playLab_events4_b: |-
+          <xml><block type="studio_whenArrow">
+              <title name="VALUE">right</title>
+              <next>
+            <block type="studio_move">
+              <title name="SPRITE">1</title>
+              <title name="DIR">2</title>
+            </block></next></block></xml> をつかってみよう。
+      courseA_playLab_events5:
+        courseA_playLab_events5_a: "<xml><block type=\"studio_whenArrow\">\n    <title
+          name=\"VALUE\">up</title>\n  </block></xml>\n\nと \n\n<xml><block type=\"studio_whenArrow\">\n
+          \   <title name=\"VALUE\">down</title>\n  </block></xml>\n\nで、犬を上や下にうごかしてみよう。"
+        courseA_playLab_events5_b: |-
+          ブロックのやじるしをおせば、やじるしのほうこうをかえることができます。
+
+          ![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)
+      courseA_playLab_events5_2018:
+        courseA_playLab_events5_a: "<xml><block type=\"studio_whenArrow\">\n    <title
+          name=\"VALUE\">up</title>\n  </block></xml>\n\nと \n\n<xml><block type=\"studio_whenArrow\">\n
+          \   <title name=\"VALUE\">down</title>\n  </block></xml>\n\nで、犬を上や下にうごかしてみよう。"
+        courseA_playLab_events5_b: |-
+          ブロックのやじるしをおせば、やじるしのほうこうをかえることができます。
+
+          ![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)
+      courseA_playLab_events5_2019:
+        courseA_playLab_events5_a: "<xml><block type=\"studio_whenArrow\">\n    <title
+          name=\"VALUE\">up</title>\n  </block></xml>\n\nと \n\n<xml><block type=\"studio_whenArrow\">\n
+          \   <title name=\"VALUE\">down</title>\n  </block></xml>\n\nで、犬を上や下にうごかしてみよう。"
+        courseA_playLab_events5_b: |-
+          ブロックのやじるしをおせば、やじるしのほうこうをかえることができます。
+
+          ![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)
+      courseA_playLab_events6:
+        courseA_playLab_events6_a: |-
+          犬がクリックされたときは、<xml><block type="studio_whenSpriteClicked">
+              <title name="SPRITE">1</title>
+            </block></xml> をつかいます。
+        courseA_playLab_events6_b: |-
+          <xml><block type="studio_setBackground">
+              <title name="VALUE">random</title>
+            </block></xml> で はいけいをかえることができます。
+        courseA_playLab_events6_c: |-
+          <xml><block type="studio_playSound">
+              <title name="SOUND">random</title>
+            </block></xml> で ランダムに音をならすことをできます。
+      courseA_playLab_events6_2018:
+        courseA_playLab_events6_a: |-
+          犬がクリックされたときは、<xml><block type="studio_whenSpriteClicked">
+              <title name="SPRITE">1</title>
+            </block></xml> をつかいます。
+        courseA_playLab_events6_b: |-
+          <xml><block type="studio_setBackground">
+              <title name="VALUE">random</title>
+            </block></xml> で はいけいをかえることができます。
+        courseA_playLab_events6_c: |-
+          <xml><block type="studio_playSound">
+              <title name="SOUND">random</title>
+            </block></xml> で ランダムに音をならすことをできます。
+      courseA_playLab_events6_2019:
+        courseA_playLab_events6_a: |-
+          犬がクリックされたときは、<xml><block type="studio_whenSpriteClicked">
+              <title name="SPRITE">1</title>
+            </block></xml> をつかいます。
+        courseA_playLab_events6_b: |-
+          <xml><block type="studio_setBackground">
+              <title name="VALUE">random</title>
+            </block></xml> で はいけいをかえることができます。
+        courseA_playLab_events6_c: |-
+          <xml><block type="studio_playSound">
+              <title name="SOUND">random</title>
+            </block></xml> で ランダムに音をならすことをできます。
+      courseA_playLab_events7:
+        courseA_playLab_events7_a: |-
+          ぶつかったしらべるには、<xml><block type="studio_whenSpriteCollided">
+              <title name="SPRITE1">1</title>
+              <title name="SPRITE2">0</title>
+            </block></xml> をつかいます。
+      courseA_playLab_events7_2018:
+        courseA_playLab_events7_a: |-
+          ぶつかったしらべるには、<xml><block type="studio_whenSpriteCollided">
+              <title name="SPRITE1">1</title>
+              <title name="SPRITE2">0</title>
+            </block></xml> をつかいます。
+      courseA_playLab_events7_2019:
+        courseA_playLab_events7_a: |-
+          ぶつかったしらべるには、<xml><block type="studio_whenSpriteCollided">
+              <title name="SPRITE1">1</title>
+              <title name="SPRITE2">0</title>
+            </block></xml> をつかいます。
+      courseA_playlab_events_challenge1:
+        courseA_playlab_events_challenge1_a: "<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n
+          \     </block>\n    </next>\n  </block></xml> で とりをクリックしたとき、ペンギンを表示（ひょうじ）します。"
+        courseA_playlab_events_challenge1_b: "<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n
+          \     </block>\n    </next>\n  </block></xml> で ペンギンをクリックしたとき、おばけを表示（ひょうじ）します。"
+        courseA_playlab_events_challenge1_c: "<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n
+          \     </block>\n    </next>\n  </block></xml> で おばけをクリックしたとき、かいじゅうを表示（ひょうじ）します。"
+        courseA_playlab_events_challenge1_d: "モンスターをクリックしたとき、スピッフ ロボットを表示させる!\n<xml>
+          \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n
+          \   <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n
+          \       <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n
+          \ </block></xml>"
+        courseA_playlab_events_challenge1_e: "最後に、スピッフをクリックしたとき、ワイルズを表示する!\n<xml>
+          \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n
+          \   <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n
+          \       <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n
+          \ </block></xml>"
+      courseA_playlab_events_challenge1_2018:
+        courseA_playlab_events_challenge1_a: "<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n
+          \     </block>\n    </next>\n  </block></xml> で とりをクリックしたとき、ペンギンを表示（ひょうじ）します。"
+        courseA_playlab_events_challenge1_b: "<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n
+          \     </block>\n    </next>\n  </block></xml> で ペンギンをクリックしたとき、おばけを表示（ひょうじ）します。"
+        courseA_playlab_events_challenge1_c: "<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n
+          \     </block>\n    </next>\n  </block></xml> で おばけをクリックしたとき、かいじゅうを表示（ひょうじ）します。"
+        courseA_playlab_events_challenge1_d: "モンスターをクリックしたとき、スピッフ ロボットを表示させる!\n<xml>
+          \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n
+          \   <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n
+          \       <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n
+          \ </block></xml>"
+        courseA_playlab_events_challenge1_e: "最後に、スピッフをクリックしたとき、ワイルズを表示する!\n<xml>
+          \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n
+          \   <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n
+          \       <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n
+          \ </block></xml>"
+      courseA_playlab_events_challenge1_2019:
+        courseA_playlab_events_challenge1_a: "<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n
+          \     </block>\n    </next>\n  </block></xml> で とりをクリックしたとき、ペンギンを表示（ひょうじ）します。"
+        courseA_playlab_events_challenge1_b: "<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n
+          \     </block>\n    </next>\n  </block></xml> で ペンギンをクリックしたとき、おばけを表示（ひょうじ）します。"
+        courseA_playlab_events_challenge1_c: "<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n
+          \     </block>\n    </next>\n  </block></xml> で おばけをクリックしたとき、かいじゅうを表示（ひょうじ）します。"
+        courseA_playlab_events_challenge1_d: "モンスターをクリックしたとき、スピッフ ロボットを表示させる!\n<xml>
+          \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n
+          \   <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n
+          \       <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n
+          \ </block></xml>"
+        courseA_playlab_events_challenge1_e: "最後に、スピッフをクリックしたとき、ワイルズを表示する!\n<xml>
+          \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n
+          \   <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n
+          \       <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n
+          \ </block></xml>"
+      courseA_playlab_events_challenge2:
+        courseA_playlab_events_challenge2_a: "<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n
+          \           <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n
+          \         </block>\n    </next>\n  </block></xml> で とりをしゃべらせることができます。"
+        courseA_playlab_events_challenge2_b: "おとをならすには、<xml>\n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block
+          type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n
+          \         </block>\n        </next>\n  </block></xml> をつかいます。"
+        courseA_playlab_events_challenge2_c: |-
+          <xml>  <block type="studio_whenSpriteClicked">
+              <title name="SPRITE">5</title>
+              <next>
+                <block type="studio_setSpriteEmotion">
+                  <title name="SPRITE">5</title>
+                  <title name="VALUE">2</title>
+                  <next>
+                    <block type="studio_saySprite">
+                      <title name="SPRITE">5</title>
+                      <title name="TEXT">Roar!</title>
+                      <next>
+                        <block type="studio_setSpriteEmotion">
+                          <title name="SPRITE">5</title>
+                          <title name="VALUE">0</title>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block></xml> をつかえば、かおをかえることができます。
+      courseA_playlab_events_challenge2_2018:
+        courseA_playlab_events_challenge2_a: "<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n
+          \           <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n
+          \         </block>\n    </next>\n  </block></xml> で とりをしゃべらせることができます。"
+        courseA_playlab_events_challenge2_b: "おとをならすには、<xml>\n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block
+          type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n
+          \         </block>\n        </next>\n  </block></xml> をつかいます。"
+        courseA_playlab_events_challenge2_c: |-
+          <xml>  <block type="studio_whenSpriteClicked">
+              <title name="SPRITE">5</title>
+              <next>
+                <block type="studio_setSpriteEmotion">
+                  <title name="SPRITE">5</title>
+                  <title name="VALUE">2</title>
+                  <next>
+                    <block type="studio_saySprite">
+                      <title name="SPRITE">5</title>
+                      <title name="TEXT">Roar!</title>
+                      <next>
+                        <block type="studio_setSpriteEmotion">
+                          <title name="SPRITE">5</title>
+                          <title name="VALUE">0</title>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block></xml> をつかえば、かおをかえることができます。
+      courseA_playlab_events_challenge2_2019:
+        courseA_playlab_events_challenge2_a: "<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n
+          \           <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n
+          \         </block>\n    </next>\n  </block></xml> で とりをしゃべらせることができます。"
+        courseA_playlab_events_challenge2_b: "おとをならすには、<xml>\n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block
+          type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n
+          \         </block>\n        </next>\n  </block></xml> をつかいます。"
+        courseA_playlab_events_challenge2_c: |-
+          <xml>  <block type="studio_whenSpriteClicked">
+              <title name="SPRITE">5</title>
+              <next>
+                <block type="studio_setSpriteEmotion">
+                  <title name="SPRITE">5</title>
+                  <title name="VALUE">2</title>
+                  <next>
+                    <block type="studio_saySprite">
+                      <title name="SPRITE">5</title>
+                      <title name="TEXT">Roar!</title>
+                      <next>
+                        <block type="studio_setSpriteEmotion">
+                          <title name="SPRITE">5</title>
+                          <title name="VALUE">0</title>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block></xml> をつかえば、かおをかえることができます。
+      courseB_artist_loops2:
+        courseB_artist_loops2_a: ４かい いじょう もっと くりかえしたい ときは、ブロックの うえにある すうじを かえます。
+      courseB_artist_loops2_2018:
+        courseB_artist_loops2_a: ４かい いじょう もっと くりかえしたい ときは、ブロックの うえにある すうじを かえます。
+      courseB_artist_loops2_2019:
+        courseB_artist_loops2_a: ４かい いじょう もっと くりかえしたい ときは、ブロックの うえにある すうじを かえます。
+      courseB_artist_loops9:
+        courseB_artist_loops9_c: 一本一本せんをかいて くりかえしのパターンを見つけよう。
+      courseB_artist_loops9_2018:
+        courseB_artist_loops9_c: 一本一本せんをかいて くりかえしのパターンを見つけよう。
+      courseB_artist_loops9_2019:
+        courseB_artist_loops9_c: 一本一本せんをかいて くりかえしのパターンを見つけよう。
       courseB_collector_loops2:
         courseB_collector_loops2_a: たからものを とるまえに うごいて ください。
       courseB_collector_loops2_2018:
@@ -1163,6 +1803,18 @@ ja-JP:
       courseC_artist_prog2_2019:
         courseC_artist_prog2_a: ブロックを使って僕に「100ピクセル前に進む」ことを教えて。そうすれば自動的に線を引いてあげるよ。
         courseC_artist_prog2_b: カドをまがるのが、むずかしい？「90度まがる」ブロックを使ってみて。
+      courseC_collector_prog3:
+        courseC_collector_prog3_c: わからない ときは、かみに かいて パターンを さがしてみよう。
+      courseC_collector_prog3_2018:
+        courseC_collector_prog3_c: わからない ときは、かみに かいて パターンを さがしてみよう。
+      courseC_collector_prog3_2019:
+        courseC_collector_prog3_c: わからない ときは、かみに かいて パターンを さがしてみよう。
+      courseC_data wizard:
+        courseA_playLab_events7_a: |-
+          ぶつかったしらべるには、<xml><block type="studio_whenSpriteCollided">
+              <title name="SPRITE1">1</title>
+              <title name="SPRITE2">0</title>
+            </block></xml> をつかいます。
       courseC_maze_debugging2:
         courseC_maze_debugging2_c: どこが わるいか わからない？なんども プログラムを うごかして みてみよう。
       courseC_maze_debugging2_2018:
@@ -1175,12 +1827,147 @@ ja-JP:
         courseC_maze_debugging3_b: どこが わるいか わからない？なんども プログラムを うごかして みてみよう。
       courseC_maze_debugging3_2019:
         courseC_maze_debugging3_b: どこが わるいか わからない？なんども プログラムを うごかして みてみよう。
+      courseC_maze_programming1:
+        courseC_maze_programming1_0: すべてのブロックがきちんとつながっているかをかくにんして、もういちど「実行」をクリックしてみよう。
+      courseC_maze_programming1_2018:
+        courseC_maze_programming1_0: すべてのブロックがきちんとつながっているかをかくにんして、もういちど「実行」をクリックしてみよう。
+      courseC_maze_programming1_2019:
+        courseC_maze_programming1_0: すべてのブロックがきちんとつながっているかをかくにんして、もういちど「実行」をクリックしてみよう。
+      courseC_maze_programming2:
+        courseC_maze_programming2_a: ツールボックスから<xml><block type="maze_moveForward"/></xml>
+          をとり出して、 <xml><block type="when_run"/></xml> にくっつけてみよう。
+        courseC_maze_programming2_b: すべてのブロックがきちんとつながっているかをかくにんして、もういちど「実行」をクリックしてみよう。
+      courseC_maze_programming2_2018:
+        courseC_maze_programming2_a: ツールボックスから<xml><block type="maze_moveForward"/></xml>
+          をとり出して、 <xml><block type="when_run"/></xml> にくっつけてみよう。
+        courseC_maze_programming2_b: すべてのブロックがきちんとつながっているかをかくにんして、もういちど「実行」をクリックしてみよう。
+      courseC_maze_programming2_2019:
+        courseC_maze_programming2_a: ツールボックスから<xml><block type="maze_moveForward"/></xml>
+          をとり出して、 <xml><block type="when_run"/></xml> にくっつけてみよう。
+        courseC_maze_programming2_b: すべてのブロックがきちんとつながっているかをかくにんして、もういちど「実行」をクリックしてみよう。
+      courseC_maze_programming3:
+        courseC_maze_programming3_a: さいしょにコードを実行して、追加する必要があるものを調べてみてください。
+        courseC_maze_programming3_b: |-
+          ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
+          まん中にあるブロックをけすには、そのブロックから下にあるブロックごとをはずします。
+          そこからいらないブロックをツールボックスにドラックして
+          のこったブロックをもとにもどします。
+      courseC_maze_programming3_2018:
+        courseC_maze_programming3_a: さいしょにコードを実行して、追加する必要があるものを調べてみてください。
+        courseC_maze_programming3_b: |-
+          ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
+          まん中にあるブロックをけすには、そのブロックから下にあるブロックごとをはずします。
+          そこからいらないブロックをツールボックスにドラックして
+          のこったブロックをもとにもどします。
+      courseC_maze_programming3_2019:
+        courseC_maze_programming3_a: さいしょにコードを実行して、追加する必要があるものを調べてみてください。
+        courseC_maze_programming3_b: |-
+          ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
+          まん中にあるブロックをけすには、そのブロックから下にあるブロックごとをはずします。
+          そこからいらないブロックをツールボックスにドラックして
+          のこったブロックをもとにもどします。
+      courseC_maze_programming4:
+        courseC_maze_programming4_a: |-
+          トリさんがまがるほうこうは、トリさんがむいているほうこうできまります。
+          右にまがるで、トリさんは下にうごきます。
+        courseC_maze_programming4_b: |-
+          下のようにブロックをおいてみよう。
+
+          -   前にすすむ
+          -   どちらかにまがる
+          -   前にすすむ
+          -   さっきとはべつのほうこうにまがる
+          -   前にすすむ
+      courseC_maze_programming4_2018:
+        courseC_maze_programming4_a: |-
+          トリさんがまがるほうこうは、トリさんがむいているほうこうできまります。
+          右にまがるで、トリさんは下にうごきます。
+        courseC_maze_programming4_b: |-
+          下のようにブロックをおいてみよう。
+
+          -   前にすすむ
+          -   どちらかにまがる
+          -   前にすすむ
+          -   さっきとはべつのほうこうにまがる
+          -   前にすすむ
+      courseC_maze_programming4_2019:
+        courseC_maze_programming4_a: |-
+          トリさんがまがるほうこうは、トリさんがむいているほうこうできまります。
+          右にまがるで、トリさんは下にうごきます。
+        courseC_maze_programming4_b: |-
+          下のようにブロックをおいてみよう。
+
+          -   前にすすむ
+          -   どちらかにまがる
+          -   前にすすむ
+          -   さっきとはべつのほうこうにまがる
+          -   前にすすむ
+      courseC_maze_programming5:
+        courseC_maze_programming5_b: |-
+          トリさんを一回だけまがらせて、このパズルをクリアしよう。
+          どこでまがればいいかな？
+        courseC_maze_programming5_c: ２回前に進んで、まがって。また２回前に進もう。
+      courseC_maze_programming5_2018:
+        courseC_maze_programming5_b: |-
+          トリさんを一回だけまがらせて、このパズルをクリアしよう。
+          どこでまがればいいかな？
+        courseC_maze_programming5_c: ２回前に進んで、まがって。また２回前に進もう。
+      courseC_maze_programming5_2019:
+        courseC_maze_programming5_b: |-
+          トリさんを一回だけまがらせて、このパズルをクリアしよう。
+          どこでまがればいいかな？
+        courseC_maze_programming5_c: ２回前に進んで、まがって。また２回前に進もう。
       courseC_maze_programming6:
         courseC_maze_programming6_a: このパズルの解き方は二通りあるよ。
+        courseC_maze_programming6_b: どんな行き方があるのか、ゆびでなぞってみよう。
+        courseC_maze_programming6_c: かべの方をむいているので、さいしょにまがってみよう。
+        courseC_maze_programming6_d: 赤い道を行ってみよう！
       courseC_maze_programming6_2018:
         courseC_maze_programming6_a: このパズルの解き方は二通りあるよ。
+        courseC_maze_programming6_b: どんな行き方があるのか、ゆびでなぞってみよう。
+        courseC_maze_programming6_c: かべの方をむいているので、さいしょにまがってみよう。
+        courseC_maze_programming6_d: 赤い道を行ってみよう！
       courseC_maze_programming6_2019:
         courseC_maze_programming6_a: このパズルの解き方は二通りあるよ。
+        courseC_maze_programming6_b: どんな行き方があるのか、ゆびでなぞってみよう。
+        courseC_maze_programming6_c: かべの方をむいているので、さいしょにまがってみよう。
+        courseC_maze_programming6_d: 赤い道を行ってみよう！
+      courseC_maze_programming7:
+        courseC_maze_programming7_a: "”ステップ”を使うと ブロックが １つづつ 実行（じっこう）されて どこがまちがっているのか
+          すぐに見つけることができます。"
+        courseC_maze_programming7_b: わからない ときは、かみに かいて パターンを さがしてみよう。
+      courseC_maze_programming7_2018:
+        courseC_maze_programming7_a: "”ステップ”を使うと ブロックが １つづつ 実行（じっこう）されて どこがまちがっているのか
+          すぐに見つけることができます。"
+        courseC_maze_programming7_b: わからない ときは、かみに かいて パターンを さがしてみよう。
+      courseC_maze_programming7_2019:
+        courseC_maze_programming7_a: "”ステップ”を使うと ブロックが １つづつ 実行（じっこう）されて どこがまちがっているのか
+          すぐに見つけることができます。"
+        courseC_maze_programming7_b: わからない ときは、かみに かいて パターンを さがしてみよう。
+      courseC_maze_programming8:
+        courseC_maze_programming8_a: わからなくなったら、"ステップ"ボタンで コードを １行づつ 実行（じっこう）させてみよう。
+      courseC_maze_programming8_2018:
+        courseC_maze_programming8_a: わからなくなったら、"ステップ"ボタンで コードを １行づつ 実行（じっこう）させてみよう。
+      courseC_maze_programming8_2019:
+        courseC_maze_programming8_a: わからなくなったら、"ステップ"ボタンで コードを １行づつ 実行（じっこう）させてみよう。
+      courseC_maze_programming_challenge1:
+        courseC_maze_programming_challenge1_a: ブタのところへ行く道をゆびでなぞって、それをプログラムしてみよう！
+      courseC_maze_programming_challenge1_2018:
+        courseC_maze_programming_challenge1_a: ブタのところへ行く道をゆびでなぞって、それをプログラムしてみよう！
+      courseC_maze_programming_challenge1_2019:
+        courseC_maze_programming_challenge1_a: ブタのところへ行く道をゆびでなぞって、それをプログラムしてみよう！
+      courseC_maze_programming_challenge2:
+        courseC_maze_programming_challenge2_a: 後ろに行くときは、まがる方向（ほうこう）に気をつけよう。
+        courseC_maze_programming_challenge2_b: さいたんルートは5ブロックでクリアできます。<xml><block type="controls_repeat_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> ブロックを使います！
+      courseC_maze_programming_challenge2_2018:
+        courseC_maze_programming_challenge2_a: 後ろに行くときは、まがる方向（ほうこう）に気をつけよう。
+        courseC_maze_programming_challenge2_b: さいたんルートは5ブロックでクリアできます。<xml><block type="controls_repeat_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> ブロックを使います！
+      courseC_maze_programming_challenge2_2019:
+        courseC_maze_programming_challenge2_a: 後ろに行くときは、まがる方向（ほうこう）に気をつけよう。
+        courseC_maze_programming_challenge2_b: さいたんルートは5ブロックでクリアできます。<xml><block type="controls_repeat_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> ブロックを使います！
       courseD_artist_nestedLoops3:
         courseD_artist_nestedLoops3_a: |-
           「前にジャンプ」ブロックを使って、1つの四角形の上部から次に描き始めるところまで移動させてみてください。
@@ -1198,8 +1985,12 @@ ja-JP:
           正方形の高さが20ピクセルでそれぞれが20ピクセル離れているとすると、どれだけジャンプすればよいでしょう？
       courseD_maze_ramp6:
         courseC_maze_programming6_a: このパズルの解き方は二通りあるよ。
+      courseD_maze_ramp7:
+        courseD_maze_ramp7_b: "”ステップ”を使うと ブロックが １つづつ 実行（じっこう）されて どこがまちがっているのか すぐに見つけることができます。"
       courseD_scrat_ramp7:
         courseD_scrat_programming6_a: このパズルの解き方は二通りあるよ。
+      courseD_scrat_ramp8:
+        courseD_maze_ramp7_b: "”ステップ”を使うと ブロックが １つづつ 実行（じっこう）されて どこがまちがっているのか すぐに見つけることができます。"
       courseE_artist_concept_challenge1:
         courseE_artist_concept_challenge1_a: '前にうごく30ピクセル、右にまがる60度を使って、六角形の半分を書いてみてね。  '
         courseE_artist_concept_challenge1_b: '前にうごく80ピクセル、右にまがる80度を使って、三角形の3分の2を書いてみてね。 '

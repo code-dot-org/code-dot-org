@@ -1902,3 +1902,15 @@ th:
               name: ใช้ลูปกับยุคน้ำแข็ง(Ice Age)
             Ocean Scene with Loops:
               name: ฉากมหาสมุทรกับลูป
+        peru-2019:
+          stages:
+            Introduction:
+              name: บทเกริ่นนำ
+            Debugging in Collector:
+              name: 'การดีบั๊ก: กับเรื่องนักสะสม'
+            Loops in Artist:
+              name: ลูปกับศิลปิน
+            Nested Loops:
+              name: ลูปซ้อนลูป
+            Nested Loops in Frozen:
+              name: ลูปซ้อนลูป ในเกม Frozen

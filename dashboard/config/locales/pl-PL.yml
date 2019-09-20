@@ -37,6 +37,7 @@ pl:
           tworzenie konta Code.org z <strong>%{provider}</strong> <strong>%{email}</strong>.
         error:
           future: nie może być w przyszłości
+  beta: beta
   hello: Witaj świecie
   welcome_back: Witaj z powrotem, %{name}
   your_professional_learning_plan: Twój profesjonalny program nauczania
@@ -50,14 +51,9 @@ pl:
   okay: OK
   or: lub
   heading_x_of_y: "%{heading} (strona %{x} z%{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Dodaj nauczyciela:'
       placeholder: Kod sekcji (ABCDEF)
-      instructions: Wprowadź kod, który udostępnił Ci Twój nauczyciel. Ten kod składa
-        się z 6 liter, np. ABCDEF.
-      instructions_short: Wprowadź swój 6-literowy kod sekcji
-    submit: Dodaj nauczyciela
   add_hint_form:
     placeholder: Wprowadź tutaj swoją wskazówkę
     submit: Dodaj wskazówkę
@@ -85,9 +81,6 @@ pl:
   auth:
     sign_in_with: Zaloguj się przez %{provider}
     signed_in: Zalogowany!
-    signed_out: Wylogowałeś się z <a href="%{url}"> Code.org</a>.
-    sign_out_of: Używałeś %{provider} do zalogowania się . <a href="%{url}"> Kliknij
-      tutaj,</a> aby wylogować się z %{provider}.
     already_signedup: Czy masz już założone konto?
     notyet_signedup: Jeszcze nie dołączyłeś?
     google_oauth2: Konto Google
@@ -149,17 +142,6 @@ pl:
       się w Stanach Zjednoczonych.
     my_data_to_us: Dane gromadzone podczas korzystania przeze mnie z tej witryny mogą
       być wysyłane i przechowywane lub przetwarzane w Stanach Zjednoczonych.
-    student_terms: Zgadzam się na ograniczenia wynikające <a href='http://code.org/tos'>
-      z warunków korzystania z usług </a> oferowanych przez Code.org. Jeśli mam mniej
-      niż 13 lat, to potwierdzam przesyłając ten formularz, że mam zgodę moich rodziców
-      lub prawnego opiekuna na korzystanie z usług Code.org. <br/> <br/> Adresy mailowe
-      nie są przechowywane w postaci, która umożliwiałaby kontakt z uczniami. Uczniowie
-      nie otrzymają maili z Code.org, z wyjątkiem służących do odzyskania hasła. Zobacz
-      nasze <a href='http://code.org/privacy'> zasady ochrony prywatności</a>, aby
-      uzyskać więcej informacji.
-    teacher_terms: Zgadzam się na ograniczenia wynikające z warunków korzystania z
-      usług oferowanych przez Code.org. Aby uzyskać więcej informacji na temat prywatności,
-      zobacz naszą <a href='http://code.org/privacy'> politykę prywatności</a>.
     additional_information: Potrzebujemy dodatkowych informacji, aby móc Ciebie zarejestrować.
     user_type_label: Typ konta
     user_type_teacher: Nauczyciel
@@ -213,8 +195,6 @@ pl:
     login: Zaloguj się
     invalid_login: Nieprawidłowy login, proszę spróbować ponownie
     pair_programming: Mam partnera przy moim komputerze
-    student_privacy: Dowiedz się więcej o tym, dlaczego nie widzisz swojego pełnego
-      imienia <a href='%{student_privacy_blog}' target='_blank'>tutaj</a>.
   password:
     reset_form:
       title: Nie pamiętasz hasła?
@@ -471,11 +451,6 @@ pl:
     tried: Próbowano
   home:
     title: Studio Kodowania (Code Studio)
-    description: Studio Kodowania jest miejscem dla kursów online utworzonych przez
-      Code.org
-    lines_of_code: "%{lines_count} LINIE KODU NAPISANEGO PRZEZ UCZNIÓW"
-    lines_of_code_linebreak: "%{lines_count} LINII KODU<br/> NAPISANYCH PRZEZ %{students_count}
-      MILIONÓW UCZNIÓW"
     all_courses: Streszczenie Kursów 1, 2 i 3
     lesson_plans: Plany lekcji
     signin_message: Jesteś już zarejestrowany? %{link}
@@ -513,12 +488,6 @@ pl:
     test_videos_help: Sprawdź nasz nowy odtwarzacz wideo w swojej szkole
     try_beta_courses: Nowość! Wypróbuj nasze beta kursy dla uczniów w K-5
     use_as_teacher: Korzystaj z tej strony jako nauczyciel
-    heading_hoc2014: "<h2>Godzina kodowania dla</h2><h1>Wszystkich grup wiekowych</h1>"
-    heading_elementary: "<h2>20-godzinne kursy z</h2><h1>Podstaw informatyki (w każdym
-      wieku)</h1>"
-    heading_apps: "<h2>Zabawy dla</h2><h1>Wszystkich</h1>"
-    heading_tools: "<h2>Gotowy na następny krok?</h2><h1>JavaScript dla Szkół Średnich</h1>"
-    heading_legacy: "<h2>Nasz przyspieszony kurs dla</h2><h1>Wszystkich grup wiekowych</h1>"
     your_gallery: Galeria
     no_primary_course: Wypróbuj kurs w Code Studio
     choose_next_course: Wypróbuj jeden z poniższych kursów w Code Studio
@@ -779,11 +748,6 @@ pl:
     header_artist: Sztuka kodu
     report_abuse: Zgłoś nadużycie
   landing:
-    prerelease: Ten kurs jest w <span class='betatext'> wersji beta</span>.  Oznacza
-      to, że to nie jest ostateczna jego wersja, podlega on rewizji na podstawie otrzymanych
-      opinii, jak i jest ulepszany.
-    prerelease_hoc2014: Ten poradnik jest w <span class='betatext'> wersji beta</span>.
-      Podlega on rewizji na podstawie otrzymanych opinii, jak i jest ulepszany.
     report_bug: Zgłoś błędy
     support: Uzyskaj pomoc
     support_url: "//support.Code.org"
@@ -862,12 +826,6 @@ pl:
   age_interstitial:
     age: Twój wiek
     header: Aktualizacja informacji o koncie
-    message: Jesteśmy w trakcie aktualizacji naszych doświadczeń, aby zapewnić Państwu
-      jeszcze silniejszą ochronę prywatności. Aby to zrobić, prosimy obecnych użytkowników
-      o podanie tutaj ich wieku. <br/>Jak zawsze Code.org nigdy nie wypożycza, sprzedaje
-      lub udostępnia tych informacji osobom trzecim.
-    sign_out: Jeśli nie chcesz podać swojego wieku, to możesz się <a href="%{url}">
-      wylogować</a>.
   terms_interstitial:
     title: Zaktualizowano Warunki usług i Politykę prywatności
     intro_desc: 'Zaktualizowaliśmy nasze Warunki Użytkowania i Politykę Prywatności,
@@ -1004,11 +962,8 @@ pl:
   peer_review:
     accepted:
       name: Zaakceptowane
-      description: "<strong>Tak</strong>, to zgłoszenie <strong>spełnia</strong> wymagania"
     rejected:
       name: Odrzucone
-      description: "<strong>Nie</strong>, to zgłoszenie <strong>nie spełnia</strong>
-        wymagań"
     escalated:
       name: Poszerzony
       description: Chciałbym, aby instruktor przejrzał to zgłoszenie

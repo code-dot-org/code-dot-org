@@ -183,9 +183,7 @@ module Pd::SurveyPipeline::Helper
 
     Pd::SurveyPipeline::DailySurveyModifier.augment_questions_for_display context[:parsed_questions]
 
-    Pd::SurveyPipeline::DailySurveyDecorator.process_data context
-
-    context[:decorated_summaries]
+    Pd::SurveyPipeline::DailySurveyDecorator.decorate_single_workshop context
   end
 
   private

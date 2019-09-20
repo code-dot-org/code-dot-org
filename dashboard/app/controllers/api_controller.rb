@@ -75,6 +75,7 @@ class ApiController < ApplicationController
   end
 
   def google_classrooms
+    return head :forbidden unless current_user
     query_google_classroom_service do |service|
       response = service.list_courses(teacher_id: 'me')
       render json: response.to_h
@@ -82,6 +83,7 @@ class ApiController < ApplicationController
   end
 
   def import_google_classroom
+    return head :forbidden unless current_user
     course_id = params[:courseId].to_s
     course_name = params[:courseName].to_s
 

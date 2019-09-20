@@ -32,6 +32,7 @@
         finish_sign_up_subheader_provider: 'Fyll ut følgende informasjon for å fullføre opprettelsen av en Code.org konto med <strong>%{provider}</strong> for <strong>%{email}</strong>.'
         error:
           future: ikke mulig å være i framtiden
+  beta: "beta"
   hello: "Hei, verden"
   welcome_back: "Velkommen tilbake, %{name}"
   your_professional_learning_plan: "Læringsplanen din"
@@ -45,13 +46,9 @@
   okay: "OK"
   or: "eller"
   heading_x_of_y: "%{heading} (side %{x} av %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Legg til en lærer:'
       placeholder: "Seksjonskode (ABCDEF)"
-      instructions: "Skriv inn koden som læreren din har gitt deg. Det er en kode med 6 bokstaver, som \"ABCDEF\"."
-      instructions_short: "Angi din seksjons kode (6 tegn)"
-    submit: 'Legg til lærer'
   add_hint_form:
     placeholder: 'Skriv inn et hint her'
     submit: 'Legg til hint'
@@ -80,8 +77,6 @@
     continue_with: 'Fortsett med %{provider}'
     sign_in_with: 'Logg inn med %{provider}'
     signed_in: 'Logget inn!'
-    signed_out: 'Du har logget ut av <a href="%{url}">Code.org</a>.'
-    sign_out_of: 'Du brukte %{provider} for å logge inn. <a href="%{url}">Trykk her</a> for å logge ut fra %{provider}.'
     already_signedup: 'Allerede registrert?'
     notyet_signedup: "Har du ikke blitt medlem ennå?"
     google_oauth2: 'Google-konto'
@@ -125,8 +120,6 @@
     student_consent: "Jeg bekrefter at jeg har mine foreldre eller foresattes tillatelse til å bruke tjenestene fra Code.org."
     agree_us_website: "Jeg aksepterer å bruke et nettsted som er basert i USA."
     my_data_to_us: "Mine data fra bruken av dette nettstedet kan sendes til, lagres eller behandles i USA."
-    student_terms: "Epost-adresser lagres ikke i en form som gjør at vi kan kontakte elever. Elever vil aldr motta epost fra Code.org bortsett fra oppretting av nytt passord. Se våre <a href='http://code.org/privacy'>retningslinjer for personvern</a> for mer informasjon."
-    teacher_terms: "Jeg aksepterer brukerbetingelsene til Code.org. Se våre <a href='http://code.org/privacy'>personvernbetingelser</a> for mer informasjon om personvern."
     additional_information: "Vi trenger noen flere opplysninger for å fortsette registreringen din."
     user_type_button: "Oppdater kontotype"
     user_type_label: "Kontotype"
@@ -180,7 +173,6 @@
     login: 'Logg inn'
     invalid_login: 'Feil ved innlogging, vennligst prøv igjen'
     pair_programming: 'Jeg sitter ved datamaskinen sammen med en partner'
-    student_privacy: "Les mer om hvorfor du ikke ser ditt fulle navn <a href='%{student_privacy_blog}' target='_blank'>her</a>."
   password:
     reset_form:
       title: 'Har du glemt passordet ditt?'
@@ -416,9 +408,6 @@
     tried: 'Forsøkt'
   home:
     title: "Kodestudio"
-    description: 'Code Studio er hjemmet til nettbaserte kurs av Code.org'
-    lines_of_code: "%{lines_count} LINJER MED KODE SKREVET AV ELEVER"
-    lines_of_code_linebreak: "%{lines_count} LINJER KODE<br/>SKREVET AV %{students_count} MILLIONER ELEVER"
     all_courses: "Oversikt over kurs 1, 2 og 3"
     lesson_plans: "Oppgaveplaner"
     signin_message: "Allerede registrert? %{link}"
@@ -448,11 +437,6 @@
     test_videos_help: 'Test vår nye videospiller på skolen din'
     try_beta_courses: 'Nyhet! Prøv våre betakurs for barneskoleelever'
     use_as_teacher: 'Bruk denne nettsiden som lærer'
-    heading_hoc2014: "<h2>Kodetimen for</h2><h1>Alle aldre</h1>"
-    heading_elementary: "<h2>20-timers kurs for</h2><h1>Nybegynnere (alle aldre)</h1>"
-    heading_apps: "<h2>Moro for</h2><h1>Alle</h1>"
-    heading_tools: "<h2>Klar for neste trinn?</h2><h1>JavaScript-verktøy for videregående skole</h1>"
-    heading_legacy: "<h2>Våre introduksjonskurs for</h2><h1>Alle aldre</h1>"
     your_gallery: Galleri
     no_primary_course: "Prøv et kurs på Code Studio"
     choose_next_course: "Prøv et av Code Studio kursene ved å velge nedenfor"
@@ -645,8 +629,6 @@
     header_artist: "Kunstner"
     report_abuse: "Rapporter misbruk"
   landing:
-    prerelease: "Dette kurset er i <span class='betatext'> beta</span>.  Det betyr at det ikke er den endelige versjonen av kurset, men at det blir endret når vi får tilbakemeldinger og forbedringer er laget."
-    prerelease_hoc2014: "Denne veiledningen er i <span class='betatext'> beta</span>.  Den vil kunne endres ettersom vi mottar tilbakemeldinger og gjør forbedringer."
     report_bug: "Rapporter feil"
     support: "Få hjelp"
     support_url: "//support.code.org"
@@ -713,8 +695,6 @@
   age_interstitial:
     age: Din alder
     header: Oppdatering av kontoinformasjon
-    message: "Vi er i ferd med å oppdatere våre erfaringer for å gi deg enda sterkere personvern. Derfor må eksisterende brukere skriver inn sin alder her. <br/>Code.org vil aldri leie ut, selge eller dele denne informasjonen med noen andre."
-    sign_out: 'Hvis du ikke ønsker å oppgi din alder, kan du <a href="%{url}"> avslutte</a>.'
   terms_interstitial:
     title: "Oppdaterte tjenestebetingelser og personvernbetingelser"
     intro_desc: "Vi har oppdatert våre tjenestebetingelser og personvernbetingelser, som du kan se nedenunder. Endringene gjelder fra 24 august 2016. Den største endringen: Vi vil <i>ikke lenger lagre epost-adressene til elevenes kontoer på Code Studio</i>. Dette er viktig for oss, og vi håper det setter en ny personvernstandard for elever i opplæringsteknologi. Vi har sendt deg en oppsummering av øvrige endringer via epost."
@@ -810,10 +790,8 @@
   peer_review:
     accepted:
       name: 'Godkjent'
-      description: '<strong>Ja</strong>, dette bidraget <strong>oppfyller</strong> kravene'
     rejected:
       name: 'Avvist'
-      description: '<strong>Nei</strong>, dette bidraget <strong>oppfyller ikke</strong> kravene'
     escalated:
       name: 'Eskalert'
       description: 'Jeg vil gjerne at en instruktør skal vurdere dette bidraget'

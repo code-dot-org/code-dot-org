@@ -1,0 +1,20 @@
+#donor-footer{ style: "background: url(#{asset_path('donor-footer-background.png')}); background-size: cover" }
+  %h1
+    Code.org thanks our donors
+  %p
+    Our vision is that every student in every school should have the opportunity to learn computer science. The impact of our work is amplified and made possible with help from our amazing partners.
+  %h3
+    - if current_user.teacher?
+      Your classroom's free use of Code.org is made possible by:
+    - else
+      Your free education on Code.org is made possible by:
+  - @homepage_data[:donorFooterOptions][:logos].each do |logo|
+    .logo
+      = image_tag asset_path("donor_logos/#{current_user.school_donor_name}/#{logo.split('/').last}")
+  - if current_user.teacher? && @homepage_data[:donorFooterOptions][:donorName] == "Amazon"
+    %div
+      %p.resources
+        Amazon is offering free resources for Code.org classrooms.
+        %a.learn-more{ href: CDO.code_org_url('amazon-future-engineer') }
+          %strong
+            Learn more

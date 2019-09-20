@@ -9837,6 +9837,8 @@ es-MX:
               name: PT de práctica Parte 3
             Unit 4 Assessment:
               name: Evaluación de la Unidad 4
+            'Lesson 15: Unit 4 Assessment':
+              name: 'Lección 15: evaluación de la unidad 4'
           title: 'Unidad 4: Variables, condicionales, funciones'
         csp1-2019:
           title: CSP Unidad 1 - Internet ('19-'20)
@@ -10144,6 +10146,12 @@ es-MX:
               name: Encuesta de la Unidad 1 de Principios de Ciencias de la Computación
             Unit 1 Survey:
               name: Encuesta de la Unidad 1
+            'Lesson 15: Unit Assessment':
+              name: 'Lección 15: evaluación de la unidad'
+            Unit 1 STUDENT Survey:
+              name: Encuesta de la Unidad 1 para ESTUDIANTES
+            Unit 1 TEACHER Survey:
+              name: Encuesta de la Unidad 1 para DOCENTES
           title: Piloto de la Unidad 1 de CSP
         csd-tests:
           stages:
@@ -11201,6 +11209,16 @@ es-MX:
               name: 'Proyecto: comparte tu aplicación'
             The Need for Programming Languages:
               name: La necesidad de lenguajes de programación
+            'Project: Finish Your App':
+              name: 'Proyecto: finalizar tu aplicación'
+            Programs Explore:
+              name: Explorar programas
+            Unit 3 STUDENT Survey:
+              name: Encuesta de la Unidad 3 para ESTUDIANTES
+            Unit 3 TEACHER Survey:
+              name: Encuesta de la Unidad 3 para DOCENTES
+            'Lesson 11: Unit Assessment':
+              name: 'Lección 11: evaluación de la unidad'
           title: 'Unidad 3: Introducción al diseño de aplicaciones'
         csl-vn:
           stages:
@@ -11268,6 +11286,12 @@ es-MX:
               name: nueva etapa
             CS Discoveries Deeper Learning Module 2:
               name: Módulo 2 de Aprendizaje Profundo de Descubrimientos de Ciencias de la Computación
+            Deeper Learning Overview:
+              name: Resumen del aprendizaje profundo
+            'Step 1: Develop Understanding':
+              name: 'Paso 1: desarrollar la comprensión'
+            'Step 2: Demonstrate Understanding':
+              name: 'Paso 2: demostrar la comprensión'
           title: Módulo 2 de Aprendizaje Profundo de Descubrimientos de Ciencias de la Computación
           description_audience: Facilitadores de Descubrimientos de las Ciencias de la Computación en período de formación 2019
         dlp19-csd-mod-w3:
@@ -11297,6 +11321,12 @@ es-MX:
           stages:
             CS Principles Deeper Learning Module 2:
               name: Módulo 2 de Aprendizaje Profundo de Principios de Ciencias de la Computación
+            Deeper Learning Overview:
+              name: Resumen del aprendizaje profundo
+            'Step 1: Develop Understanding':
+              name: 'Paso 1: desarrollar la comprensión'
+            'Step 2: Demonstrate Understanding':
+              name: 'Paso 2: demostrar la comprensión'
           title: Módulo 2 de Aprendizaje Profundo de Principios de Ciencias de la Computación
         dlp19-csp-mod-w3:
           stages:
@@ -11402,10 +11432,27 @@ es-MX:
               name: El crecimiento de Internet
             Internet Dilemmas pt 1:
               name: Dilemas de Internet, parte 1
+            Internet Dilemmas, pt 2:
+              name: Dilemas de Internet, parte 2
             Unit 2 Assessment:
               name: Evaluación de la Unidad 2
             Unit Assessment:
               name: Evaluación de la unidad
+            'Lesson 8: Unit Assessment':
+              name: 'Lección 8: evaluación de la unidad'
+            Unit 2 STUDENT Survey:
+              name: Encuesta de la Unidad 2 para ESTUDIANTES
+            Unit 2 TEACHER Survey:
+              name: Encuesta de la Unidad 2 para DOCENTES
+        denny-science:
+          stages:
+            Earthquake Detector:
+              name: Detector de terremotos
+            'Earthquake Detector: Designing Screens':
+              name: 'Detector de terremotos: diseño de pantallas'
+            'Earthquake Detector: Processing with Events':
+              name: 'Detector de terremotos: procesamiento con eventos'
+          title: Denny Science
         peru-2019:
           stages:
             new stage:
@@ -11428,3 +11475,4 @@ es-MX:
               name: Introducción a la depuración
             Nested Loops in Frozen:
               name: Bucles anidados en Frozen
+          title: Hora del Código Perú 2019

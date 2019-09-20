@@ -5340,8 +5340,22 @@ fr-FR:
         treasure, then use this block:\\\r\n  <xml><block type=\"collector_collect\"/></xml>"
       courseA_collector_loops2_2018: "Get all three piles! Move\nLaurel to each piece
         of treasure, then use this block:\\\r\n  <xml><block type=\"collector_collect\"/></xml>"
+      courseA_collector_loops2_2019: 'Ramasse les trois tas! Déplace Laurel jusqu''à
+        chaque partie du trésor, puis utilise le <xml><block type="collector_collect"
+        block-text="get treasure"/></xml> bloc. '
       courseA_collector_preLoops7: "Get all three piles! Move\nLaurel to each piece
         of treasure, then use this block:\\\r\n  <xml><block type=\"collector_collect\"/></xml>"
+      courseA_harvester_seq2_2019: 'Utilisez **trois** blocs <xml><block type="maze_moveWest"
+        block-text="move west"/></xml> pour amener la moissonneuse jusqu''aux maïs! '
+      courseA_harvester_seq3_2019: Utilisez **trois** blocs <xml><block type="maze_moveNorth"
+        block-text="move north"/></xml> pour amener la moissonneuse jusqu'aux maïs!
+        Ne pas oublier de ramasser le maïs à la fin.
+      courseA_maze_ramp2_2019: Lier les deux blocs <xml><block type="maze_moveEast"
+        block-text="move east"/></xml> au bloc <xml><block type="when_run" block-text="when
+        run"/></xml> pour finaliser votre code, puis cliquer sur "▶ Lancer".
+      courseA_maze_ramp3a_2019: Attrape un <xml><block type="maze_moveNorth" block-text="move
+        north"/></xml> bloc depuis la barre d'outils et ajoute le à la suite des autres
+        blocs pour finaliser ce code, puis clique "▶ Lancer".
       courseA_maze_seq10: "**Challenge:** Go around the TNT\nto get the bird to the
         pig!\\\r\n\\\r\n![expandable](https://images.code.org/a656e421bc90e530a7e1ce636e507752-image-1497996976195.gif)"
       courseA_maze_seq11: "Time for a shorter puzzle!  Move\none way, then another
@@ -5363,6 +5377,9 @@ fr-FR:
       courseA_maze_seq8: "Solve this level and get the bird\nto the pig!\\\r\n\\\r\n![expandable](https://images.code.org/fb4735244f74a4e001d1fa7b5c6028f9-image-1497998330218.gif)"
       courseA_maze_seq9: "**Challenge:** Debug this level by\nadding blocks to get
         the bird to the pig!\\\r\n\\\r\n![expandable](https://images.code.org/3f35068dd3cf51c420a536fa078f854d-image-1497996843105.gif)"
+      courseA_playLab_events1_2019: Ceci est un niveau de Play Lab. Déplace des blocs
+        vers l'espace de travail et regarde ce qui se passe!
+      courseA_playLab_events2_2019: Jorge le chien veut dire "Salut." Peux-tu l'aider?
       courseA_playLab_events3: "Help Jorge the Dog get moving\nby connecting the <xml><block
         type=\"studio_move\">\\\r\n    <title name=\"SPRITE\">1</title>\\\r\n    <title\nname=\"DIR\">8</title>\\\r\n
         \ </block></xml> block to the <xml><block type=\"studio_whenArrow\">\\\r\n
@@ -5408,6 +5425,9 @@ fr-FR:
         something to do when you click or tap them.\"_\\\r\n\\\r\nWhat\nwill the animals
         say? What else will happen?\\\r\n\\\r\n\\\r\n\\\r\nIn this puzzle,\nmake sure
         to click for hints! The hints will give you fun things to try!\\\r\n\\\r\n![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png>)"
+      courseB_Scrat_ramp3a_2019: Attrape un <xml><block type="maze_moveNorth" block-text="move
+        north"/></xml> bloc depuis la barre d'outils et ajoute le à la suite des autres
+        blocs pour finaliser ce code, puis clique "▶ Lancer".
       courseB_artist_loops10: "Use what you have learned to\ndraw a picture of what
         you think the artist saw when he got home.\\\r\n\\\r\n\\_\\_\\_\\\r\n\n###
         \n\nIdeas\\\r\n\\\r\n![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)\\\r\n![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)\\\r\n![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)\\\r\n![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)"
@@ -5417,6 +5437,9 @@ fr-FR:
       courseB_artist_loops10_2019: "Use what you have learned to\ndraw a picture of
         what you think the artist saw when he got home.\\\r\n\\\r\n\\_\\_\\_\\\r\n\n###
         \n\nIdeas\\\r\n\\\r\n![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)\\\r\n![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)\\\r\n![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)\\\r\n![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)"
+      courseB_artist_loops4_2019: Maintenant on a besoin que la terre soit prêt à
+        être planté. Trouvez les bugs dans le code et aidez l'artiste à préparer le
+        sol.
       courseB_collector_loops1: "**Free Play:** This is Laurel\nthe Adventurer! Move
         her around and get as much treasure as you can.\\\r\n\\\r\nDrag\nblocks into
         the workspace and try to figure out how to get treasure.  Get\nat least one

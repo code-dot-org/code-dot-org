@@ -20,15 +20,14 @@ mt:
         edit_header: 'Editja id-dettalji tal-Account'
         error:
           future: ma tistax tkun fil-futur
+  beta: "verzjoni beta"
   hello: "Haw Lilly"
   welcome_back: "Merħba lura, %{name}"
   unsubmit: Unsubmit
   or: "jew"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Żid Għalliem:'
       placeholder: "Sezzjoni kodiċi (ABCDEF)"
-    submit: 'Żid għalliem'
   add_hint_form:
     placeholder: 'Daħħal suġġeriment tiegħek hawn'
     submit: 'Żid suġġeriment'
@@ -54,8 +53,6 @@ mt:
   auth:
     sign_in_with: 'Idħol bl-%{provider}'
     signed_in: 'Dhalt!'
-    signed_out: 'Inti hrigt mis-sit <a href="%{url}">Code.org</a>.'
-    sign_out_of: 'Inti użajt %{provider} biex tidhol fis sit. <a href="%{url}"> Ikklikkja hawnhekk</a> biex toħroġ minn %{provider}.'
     already_signedup: 'Diga miktub bhala user?'
     notyet_signedup: "Ghadek ma inghaqadx?"
     google_oauth2: 'Account tal-Google'
@@ -203,9 +200,6 @@ mt:
     tried: 'Ppruvat'
   home:
     title: "Code Stuwdjo"
-    description: 'Code Studio huwa id-dar tal-korsijiet online maħluqa mill-Code.org'
-    lines_of_code: "%{lines_count} LINJI TAL-KODIĊI MIKTUBA MILL-ISTUDENTI"
-    lines_of_code_linebreak: "%{lines_count} linji tal-Kodiċi <br/> miktuba minn %{students_count} MILJUNI ta ' studenti"
     all_courses: "Ħarsa ġenerali tal-korsijiet 1, 2 u 3"
     lesson_plans: "Pjanijiet tal-Lezzjoni"
     signin_message: "Diġà rreġistrat? %{link}"
@@ -234,10 +228,6 @@ mt:
     test_videos_help: 'Ittestja il-Video Plyer il-gdid taghna flis-skola tieghek'
     try_beta_courses: 'Ġodda! Ipprova korsijiet beta tagħna għall-istudenti tal-primarja'
     use_as_teacher: 'Uża dan is-sit bħala għalliem'
-    heading_hoc2014: "<h2>Is-siegħa tal-Kodiċi għall-</h2> <h1>L-etajiet kollha</h1>"
-    heading_elementary: "<h2> korsijiet t-20 siegħa għall-</h2> <h1>fundamenti tax-Xjenza fil-Kompjuter (etajiet kollha)</h1>"
-    heading_apps: "<h2>Gost għal</h2> <h1>Kulħadd.</h1>"
-    heading_legacy: "<h2>Il-kors aċċellerata għall-</h2> <h1>L-etajiet kollha</h1>"
     your_gallery: Gallery
     no_primary_course: "Ipprova kors tal-Code Studio"
     choose_next_course: "Ipprova kors mill-Course Studio billi tagħżel wieħed minn hawn taħt"

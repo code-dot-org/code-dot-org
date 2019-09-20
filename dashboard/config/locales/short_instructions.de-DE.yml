@@ -612,108 +612,255 @@ de-DE:
         hüpfen, bis er das Ziel trifft.
       bounce_7_sports: Hänge Bausteine an beide „Sobald“-Bausteine. Lass den Ball
         hüpfen, bis er das Ziel trifft.
+      course2_maze_programming_challenge2: Manchmal gibt es mehr als eine Lösung für
+        ein Problem. Manchmal ist es schneller, rückwärts zu gehen, als vorwärts!
       course3_maze_debugging_challenge1: _"Gehe ich hier nur immer im Kreis herum?"_
       course4_artist_fwp_challenge1: Versuche, dieses Programm auszuführen und verändere
         es, um zu sehen, was passiert. Kannst du herausfinden, wie es funktioniert?
         (Oder lösche es und ersetze es durch etwas ganz anderes)
-      courseA_artist_loops10: Hilf mir, Stein abzulegen, so das ich nicht hineinfalle!
-      courseA_artist_loops10_2018: Hilf mir, Stein abzulegen, so das ich nicht hineinfalle!
-      courseA_artist_loops10_2019: Hilf mir, Stein abzulegen, so das ich nicht hineinfalle!
-      courseA_artist_loops11: Hilf mir, Stufen zu bauen, um das Schiff davonsegeln
-        zu sehen.
-      courseA_artist_loops11_2018: Hilf mir, Stufen zu bauen, um das Schiff davonsegeln
-        zu sehen.
-      courseA_artist_loops11_2019: Hilf mir, Stufen zu bauen, um das Schiff davonsegeln
-        zu sehen.
+      courseA_artist_loops1: Dies ist eine neue Art von Aufgabe, sie hießt "Künstler".
+        Spiele in diesem Level und zeichne etwas lustiges.
+      courseA_artist_loops10: Hilf mir Steine abzulegen, so dass ich nicht ins Wasser
+        falle!
+      courseA_artist_loops10_2018: Hilf mir Steine abzulegen, so dass ich nicht ins
+        Wasser falle!
+      courseA_artist_loops10_2019: Hilf mir Steine abzulegen, so dass ich nicht ins
+        Wasser falle!
+      courseA_artist_loops11: Hilf mir Stufen zu bauen, um zu sehen, wie das Schiff
+        davon segelt.
+      courseA_artist_loops11_2018: Hilf mir Stufen zu bauen, um zu sehen, wie das
+        Schiff davon segelt.
+      courseA_artist_loops11_2019: Hilf mir Stufen zu bauen, um zu sehen, wie das
+        Schiff davon segelt.
       courseA_artist_loops12: Der Zeichner sah etwas Lustiges in der Ferne. Zeichne,
         was Du denkst, was er sah!
       courseA_artist_loops12_2018: Der Zeichner sah etwas Lustiges in der Ferne. Zeichne,
         was Du denkst, was er sah!
       courseA_artist_loops12_2019: Der Zeichner sah etwas Lustiges in der Ferne. Zeichne,
         was Du denkst, was er sah!
+      courseA_artist_loops1_2018: Dies ist eine neue Art von Aufgabe, sie hießt "Künstler".
+        Spiele in diesem Level und zeichne etwas lustiges.
+      courseA_artist_loops1_2019: Dies ist eine neue Art von Aufgabe, sie hießt "Künstler".
+        Spiele in diesem Level und zeichne etwas lustiges.
+      courseA_artist_loops2: Hilf dem Künstler diese Linie 2 mal vorwärts zu zeichnen.
+      courseA_artist_loops2_2018: Hilf dem Künstler diese Linie 2 mal vorwärts zu
+        zeichnen.
+      courseA_artist_loops2_2019: Hilf dem Künstler diese Linie 2 mal vorwärts zu
+        zeichnen.
       courseA_artist_loops3: Zeichne eine Linie fünfmal geradeaus.
       courseA_artist_loops3_2018: Zeichne eine Linie fünfmal geradeaus.
       courseA_artist_loops3_2019: Zeichne eine Linie fünfmal geradeaus.
+      courseA_artist_loops4: Verwende jetzt eine `wiederholen` Schleife um die Linie
+        5 mal zu zeichnen!
+      courseA_artist_loops4_2018: Verwende jetzt eine `wiederholen` Schleife um die
+        Linie 5 mal zu zeichnen!
+      courseA_artist_loops4_2019: Verwende jetzt eine `wiederholen` Schleife um die
+        Linie 5 mal zu zeichnen!
+      courseA_artist_loops5: Zeichne eine Linie, welche 5 Schritte lang ist. Das wird
+        unser Horizont.
+      courseA_artist_loops5_2018: Zeichne eine Linie, welche 5 Schritte lang ist.
+        Das wird unser Horizont.
+      courseA_artist_loops5_2019: Zeichne eine Linie, welche 5 Schritte lang ist.
+        Das wird unser Horizont.
+      courseA_artist_loops6: Lass uns einen schönen Hügel in den Hintergrund zeichnen.
+      courseA_artist_loops6_2018: Lass uns einen schönen Hügel in den Hintergrund
+        zeichnen.
+      courseA_artist_loops6_2019: Lass uns einen schönen Hügel in den Hintergrund
+        zeichnen.
       courseA_artist_loops7: Benutze die 'Wiederholen' Schleife um Wellen zum Wasser
         hinzuzufügen.
       courseA_artist_loops7_2018: Benutze die 'Wiederholen' Schleife um Wellen zum
         Wasser hinzuzufügen.
       courseA_artist_loops7_2019: Benutze die 'Wiederholen' Schleife um Wellen zum
         Wasser hinzuzufügen.
-      courseA_artist_loops9: 'Herausforderung: Repariere die Treppe!'
-      courseA_artist_loops9_2018: 'Herausforderung: Repariere die Treppe!'
-      courseA_artist_loops9_2019: 'Herausforderung: Repariere die Treppe!'
-      courseA_collector_loops1: Bewege Laurel umher und sammle so viel Gold, wie Du
-        kannst!
-      courseA_collector_loops11: Hilf Laurel, alles Gold aus der Höhle zu holen!
-      courseA_collector_loops11_2018: Hilf Laurel, alles Gold aus der Höhle zu holen!
-      courseA_collector_loops11_2019: Hilf Laurel, alles Gold aus der Höhle zu holen!
-      courseA_collector_loops12: Heureka!  Hol dir so viele Schätze wie möglich!
-      courseA_collector_loops12_2018: Heureka!  Hol dir so viele Schätze wie möglich!
-      courseA_collector_loops12_2019: Heureka!  Hol dir so viele Schätze wie möglich!
-      courseA_collector_loops1_2018: Bewege Laurel umher und sammle so viel Gold,
+      courseA_artist_loops8: Wir brauchen eine Leiter hinauf aufs Boot.
+      courseA_artist_loops8_2018: Wir brauchen eine Leiter hinauf aufs Boot.
+      courseA_artist_loops8_2019: Wir brauchen eine Leiter hinauf aufs Boot.
+      courseA_artist_loops9: 'Herausforderung: Repariere die Treppe.'
+      courseA_artist_loops9_2018: 'Herausforderung: Repariere die Treppe.'
+      courseA_artist_loops9_2019: 'Herausforderung: Repariere die Treppe.'
+      courseA_artist_loops_challenge1: Kannst du ein Haus zeichnen? Mach es so, wie
+        es dir gefällt!
+      courseA_artist_loops_challenge1_2018: Kannst du ein Haus zeichnen? Mach es so,
+        wie es dir gefällt!
+      courseA_artist_loops_challenge1_2019: Kannst du ein Haus zeichnen? Mach es so,
+        wie es dir gefällt!
+      courseA_artist_loops_challenge2a: _"Hilf mir diese drei Zelte aufzubauen!"_
+      courseA_artist_loops_challenge2a_2018: _"Hilf mir diese drei Zelte aufzubauen!"_
+      courseA_artist_loops_challenge2a_2019: _"Hilf mir diese drei Zelte aufzubauen!"_
+      courseA_collector_loops1: Bewege Laurel umher und sammle so viele Schätze, wie
+        Du kannst!
+      courseA_collector_loops10: Hilf Laurel alle Schätze entlang des Weges einzusammeln.
+      courseA_collector_loops10_2018: Hilf Laurel alle Schätze entlang des Weges einzusammeln.
+      courseA_collector_loops10_2019: Hilf Laurel alle Schätze entlang des Weges einzusammeln.
+      courseA_collector_loops11: Hilf Laurel, alle Schätze aus dieser Höhle zu holen.
+      courseA_collector_loops11_2018: Hilf Laurel, alle Schätze aus dieser Höhle zu
+        holen.
+      courseA_collector_loops11_2019: Hilf Laurel, alle Schätze aus dieser Höhle zu
+        holen.
+      courseA_collector_loops12: _"Heureka!  Hol dir so viele Schätze wie möglich!"_
+      courseA_collector_loops12_2018: _"Heureka!  Hol dir so viele Schätze wie möglich!"_
+      courseA_collector_loops12_2019: _"Heureka!  Hol dir so viele Schätze wie möglich!"_
+      courseA_collector_loops1_2018: Bewege Laurel umher und sammle so viele Schätze,
         wie Du kannst!
-      courseA_collector_loops1_2019: Bewege Laurel umher und sammle so viel Gold,
+      courseA_collector_loops1_2019: Bewege Laurel umher und sammle so viele Schätze,
         wie Du kannst!
-      courseA_collector_loops2: Da sind drei Stapel Gold. Sammle Sie alle ein!
-      courseA_collector_loops2_2018: Da sind drei Stapel Gold. Sammle Sie alle ein!
-      courseA_collector_loops4: Repariere Laurels Weg, um zu dem Gold zu kommen!
-      courseA_collector_loops4_2018: Repariere Laurels Weg, um zu dem Gold zu kommen!
-      courseA_collector_loops4_2019: Repariere Laurels Weg, um zu dem Gold zu kommen!
-      courseA_collector_loops6: Füge Blöcke zu diesem Code hinzu, um alle Münzen einzusammeln!
-      courseA_collector_loops6_2018: Füge Blöcke zu diesem Code hinzu, um alle Münzen
-        einzusammeln!
-      courseA_collector_loops6_2019: Füge Blöcke zu diesem Code hinzu, um alle Münzen
-        einzusammeln!
-      courseA_collector_loops8: Schreibe den Code um den ganzen Schatz zu erhalten.
-      courseA_collector_loops8_2018: Schreibe den Code um den ganzen Schatz zu erhalten.
-      courseA_collector_loops8_2019: Schreibe den Code um den ganzen Schatz zu erhalten.
-      courseA_collector_loops9: "**Aufgabe:** Das Gold liegt die ganze Treppe herauf.
-        Schreibe Code, um mir zu helfen, alles einzusammeln!"
-      courseA_collector_loops9_2018: "**Aufgabe:** Das Gold liegt die ganze Treppe
-        herauf. Schreibe Code, um mir zu helfen, alles einzusammeln!"
-      courseA_collector_loops9_2019: "**Aufgabe:** Das Gold liegt die ganze Treppe
-        herauf. Schreibe Code, um mir zu helfen, alles einzusammeln!"
-      courseA_collector_preLoops7: Da sind drei Stapel Gold. Sammle Sie alle ein!
+      courseA_collector_loops2: Hier sind drei Stapel mit Schätzen. Sammle Sie alle
+        ein!
+      courseA_collector_loops2_2018: Hier sind drei Stapel mit Schätzen. Sammle Sie
+        alle ein!
+      courseA_collector_loops4: Behebe den Fehler in Laurels Weg, um alle Schätze
+        zu bekommen.
+      courseA_collector_loops4_2018: Behebe den Fehler in Laurels Weg, um alle Schätze
+        zu bekommen.
+      courseA_collector_loops4_2019: Behebe den Fehler in Laurels Weg, um alle Schätze
+        zu bekommen.
+      courseA_collector_loops5: Nutze alles, was du bis jetzt gelernt hast, um alle
+        Schätze einzusammeln.
+      courseA_collector_loops5_2018: Nutze alles, was du bis jetzt gelernt hast, um
+        alle Schätze einzusammeln.
+      courseA_collector_loops5_2019: Nutze alles, was du bis jetzt gelernt hast, um
+        alle Schätze einzusammeln.
+      courseA_collector_loops6: Füge Blöcke zu diesem Code hinzu, um alle Schätze
+        einzusammeln.
+      courseA_collector_loops6_2018: Füge Blöcke zu diesem Code hinzu, um alle Schätze
+        einzusammeln.
+      courseA_collector_loops6_2019: Füge Blöcke zu diesem Code hinzu, um alle Schätze
+        einzusammeln.
+      courseA_collector_loops7: Was musst du diesem Code noch hinzufügen um alle Schätze
+        einzusammeln?
+      courseA_collector_loops7_2018: Was musst du diesem Code noch hinzufügen um alle
+        Schätze einzusammeln?
+      courseA_collector_loops7_2019: Was musst du diesem Code noch hinzufügen um alle
+        Schätze einzusammeln?
+      courseA_collector_loops8: Schreibe einen Code um alle Schätze einzusammeln.
+      courseA_collector_loops8_2018: Schreibe einen Code um alle Schätze einzusammeln.
+      courseA_collector_loops8_2019: Schreibe einen Code um alle Schätze einzusammeln.
+      courseA_collector_loops9: "**Herausforderung:** Die Schätze liegen den ganzen
+        Weg nach oben auf dieser Treppe! Schreibe Code, um Laurel zu helfen alle einzusammeln."
+      courseA_collector_loops9_2018: "**Herausforderung:** Die Schätze liegen den
+        ganzen Weg nach oben auf dieser Treppe! Schreibe Code, um Laurel zu helfen
+        alle einzusammeln."
+      courseA_collector_loops9_2019: "**Herausforderung:** Die Schätze liegen den
+        ganzen Weg nach oben auf dieser Treppe! Schreibe Code, um Laurel zu helfen
+        alle einzusammeln."
+      courseA_collector_loops_challenge1: _"Kannst du mir helfen Fehler im Code zu
+        finden?"_
+      courseA_collector_loops_challenge1_2018: _"Kannst du mir helfen Fehler im Code
+        zu finden?"_
+      courseA_collector_loops_challenge1_2019: _"Kannst du mir helfen Fehler im Code
+        zu finden?"_
+      courseA_collector_loops_challenge2kp: Sammle mindestens **3** Schätze ein um
+        dieses Level zu bestehen.
+      courseA_collector_loops_challenge2kp_2018: Sammle mindestens **3** Schätze ein
+        um dieses Level zu bestehen.
+      courseA_collector_loops_challenge2kp_2019: Sammle mindestens **3** Schätze ein
+        um dieses Level zu bestehen.
+      courseA_collector_preLoops7: Hier sind drei Stapel mit Schätzen. Sammle Sie
+        alle ein!
       courseA_maze_seq1: Bring den Vogel zum bösen Schwein!
       courseA_maze_seq10: 'Herausforderung: Geh um das TNT herum, um den Vogel zum
         Schwein zu bringen! '
-      courseA_maze_seq11: Gehe den einen Weg, dann den anderen, um den Vogel zum Schwein
-        zu bringen!
-      courseA_maze_seq11_2018: Gehe den einen Weg, dann den anderen, um den Vogel
-        zum Schwein zu bringen!
-      courseA_maze_seq11_2019: Gehe den einen Weg, dann den anderen, um den Vogel
-        zum Schwein zu bringen!
+      courseA_maze_seq11: Gehe zuerst in eine Richtung und dann in eine andere, um
+        den Vogel zum Schwein zu bringen.
+      courseA_maze_seq11_2018: Gehe zuerst in eine Richtung und dann in eine andere,
+        um den Vogel zum Schwein zu bringen.
+      courseA_maze_seq11_2019: Gehe zuerst in eine Richtung und dann in eine andere,
+        um den Vogel zum Schwein zu bringen.
       courseA_maze_seq12: Hole das Schwein!
       courseA_maze_seq12_2018: Hole das Schwein!
       courseA_maze_seq12_2019: Hole das Schwein!
-      courseA_maze_seq13: Hole das Schwein auf irgendeinem Weg!
-      courseA_maze_seq13_2018: Hole das Schwein auf irgendeinem Weg!
-      courseA_maze_seq13_2019: Hole das Schwein auf irgendeinem Weg!
+      courseA_maze_seq13: Hole dir das Schwein auf irgendeine Art und Weise!
+      courseA_maze_seq13_2018: Hole dir das Schwein auf irgendeine Art und Weise!
+      courseA_maze_seq13_2019: Hole dir das Schwein auf irgendeine Art und Weise!
       courseA_maze_seq1_2018: Bring den Vogel zum bösen Schwein!
       courseA_maze_seq1_2019: Bring den Vogel zum bösen Schwein!
       courseA_maze_seq2: Bring mich zum Schwein, indem du den Code änderst.
       courseA_maze_seq3: Repariere den Code, um den Vogel zum Schwein zu bringen!
       courseA_maze_seq4: ENTFERNE einen Block, um den Vogel zum Schwein zu bringen!
-      courseA_maze_seq6: Gehe einen Weg und dann einen anderen, um den Vogel zum Schwein
-        zu bringen!
-      courseA_maze_seq6_2018: Gehe einen Weg und dann einen anderen, um den Vogel
-        zum Schwein zu bringen!
-      courseA_maze_seq6_2019: Gehe einen Weg und dann einen anderen, um den Vogel
-        zum Schwein zu bringen!
-      courseA_maze_seq7: Finde heraus, was fehlt, und füge dann Blöcke hinzu, um den
+      courseA_maze_seq5: Versuche diese Aufgabe von Anfang an allein zu schaffen.
+      courseA_maze_seq6: Gehe zuerst in eine Richtung und dann in eine andere, um
+        den Vogel zum Schwein zu bringen!
+      courseA_maze_seq6_2018: Gehe zuerst in eine Richtung und dann in eine andere,
+        um den Vogel zum Schwein zu bringen!
+      courseA_maze_seq6_2019: Gehe zuerst in eine Richtung und dann in eine andere,
+        um den Vogel zum Schwein zu bringen!
+      courseA_maze_seq7: Finde heraus was fehlt, und füge dann Blöcke hinzu, um den
         Vogel zum Schwein zu bringen!
       courseA_maze_seq8: Löse dieses Level und bring den Vogel zum Schwein!
       courseA_maze_seq8_2018: Löse dieses Level und bring den Vogel zum Schwein!
       courseA_maze_seq8_2019: Löse dieses Level und bring den Vogel zum Schwein!
-      courseA_maze_seq9: Repariere dieses Level, indem Du Blöcke hinzufügst, um den
-        Vogel zum Schwein zu kriegen!
+      courseA_maze_seq9: Repariere dieses Level, indem Du Blöcke hinzufügst um den
+        Vogel zum Schwein zu bewegen!
+      courseA_maze_seq_challenge1: Hier ist etwas falsch. Hilf dabei den Code zu korrigieren,
+        um den Vogel zum Schwein zu bringen!
+      courseA_maze_seq_challenge1_2018: Hier ist etwas falsch. Hilf dabei den Code
+        zu korrigieren, um den Vogel zum Schwein zu bringen!
+      courseA_maze_seq_challenge1_2019: Hier ist etwas falsch. Hilf dabei den Code
+        zu korrigieren, um den Vogel zum Schwein zu bringen!
+      courseA_maze_seq_challenge2: Folge dem Weg, der den Vogel zum Schwein bringt.
+        Vermeide das TNT, sonst fliegen die Federn!
+      courseA_maze_seq_challenge2_2018: Folge dem Weg, der den Vogel zum Schwein bringt.
+        Vermeide das TNT, sonst fliegen die Federn!
+      courseA_maze_seq_challenge2_2019: Folge dem Weg, der den Vogel zum Schwein bringt.
+        Vermeide das TNT, sonst fliegen die Federn!
+      courseA_playLab_events1: Das ist ein Spiel-Labor Level. Bewege Blöcke in den
+        Arbeitsbereich und schau was passiert!
+      courseA_playLab_events1_2018: Das ist ein Spiel-Labor Level. Bewege Blöcke in
+        den Arbeitsbereich und schau was passiert!
+      courseA_playLab_events2: Jorge, der Hund, will "Hallo." sagen. Kannst du ihm
+        helfen?
+      courseA_playLab_events2_2018: Jorge, der Hund, will "Hallo." sagen. Kannst du
+        ihm helfen?
       courseA_playLab_events3: Verbinde den "nach links bewegen"-Block mit dem "wenn
         links"-Ereignisblock, den Du bereits auf der Arbeitsfläche vorfindest!
       courseA_playLab_events3_2018: Verbinde den "nach links bewegen"-Block mit dem
         "wenn links"-Ereignisblock, den Du bereits auf der Arbeitsfläche vorfindest!
       courseA_playLab_events3_2019: Verbinde den "nach links bewegen"-Block mit dem
         "wenn links"-Ereignisblock, den Du bereits auf der Arbeitsfläche vorfindest!
+      courseA_playLab_events4: Füge Blöcke hinzu, für eine Bewegung nach rechts wenn
+        die Pfeiltaste nach 'rechts' gedrückt wird.
+      courseA_playLab_events5: Füge Ereignisse hinzu um Jorge nach oben und unten
+        zu bewegen, wenn die 'oben' und 'unten' Tasten gedrückt werden.
+      courseA_playLab_events5_2018: Füge Ereignisse hinzu um Jorge nach oben und unten
+        zu bewegen, wenn die 'oben' und 'unten' Tasten gedrückt werden.
+      courseA_playLab_events5_2019: Füge Ereignisse hinzu um Jorge nach oben und unten
+        zu bewegen, wenn die 'oben' und 'unten' Tasten gedrückt werden.
+      courseA_playLab_events6: Mach das Ganze noch interessanter indem du den Hintergrund
+        änderst oder einen zufälligen Ton abspielst, wenn auf Jorge geklickt wird.
+      courseA_playLab_events6_2018: Mach das Ganze noch interessanter indem du den
+        Hintergrund änderst oder einen zufälligen Ton abspielst, wenn auf Jorge geklickt
+        wird.
+      courseA_playLab_events6_2019: Mach das Ganze noch interessanter indem du den
+        Hintergrund änderst oder einen zufälligen Ton abspielst, wenn auf Jorge geklickt
+        wird.
+      courseA_playLab_events7: Füge alles Mögliche, was du möchtest zu diesem Spiel
+        hinzu. Schaffst du es, dass der Dinosaurier verschwindet, wenn Jorge in ihn
+        hineinläuft?
+      courseA_playlab_events_challenge1: Kannst du einen Code schreiben, damit auch
+        meine anderen Freunde erscheinen? Die Tipps werden dir helfen dieses Projekt
+        Schritt-für-Schritt zu schaffen.
+      courseA_playlab_events_challenge1_2018: Kannst du einen Code schreiben, damit
+        auch meine anderen Freunde erscheinen? Die Tipps werden dir helfen dieses
+        Projekt Schritt-für-Schritt zu schaffen.
+      courseA_playlab_events_challenge1_2019: Kannst du einen Code schreiben, damit
+        auch meine anderen Freunde erscheinen? Die Tipps werden dir helfen dieses
+        Projekt Schritt-für-Schritt zu schaffen.
+      courseA_playlab_events_challenge2: Gib jeder Figur etwas zu tun, wenn du auf
+        sie klickst.
+      courseA_playlab_events_challenge2_2018: Gib jeder Figur etwas zu tun, wenn du
+        auf sie klickst.
+      courseA_playlab_events_challenge2_2019: Gib jeder Figur etwas zu tun, wenn du
+        auf sie klickst.
+      courseA_video_events: Es braucht eine bessere Playlab/Ereignis Kombination
+      courseA_video_events_2018: Es braucht eine bessere Playlab/Ereignis Kombination
+      courseA_video_events_2019: Es braucht eine bessere Playlab/Ereignis Kombination
+      courseB_artist_loops1: Dies ist eine neue Art von Aufgabe, sie hießt "Künstler".
+        Spiele in diesem Level und zeichne etwas lustiges.
+      courseB_artist_loops1_2018: Dies ist eine neue Art von Aufgabe, sie hießt "Künstler".
+        Spiele in diesem Level und zeichne etwas lustiges.
+      courseB_artist_loops1_2019: Dies ist eine neue Art von Aufgabe, sie hießt "Künstler".
+        Spiele in diesem Level und zeichne etwas lustiges.
       courseB_artist_loops3: Hilfe dem Künstler, eine Linie siebenmal zu zeichnen,
         um eine Gartenmauer zu bauen.
       courseB_artist_loops3_2018: Hilfe dem Künstler, eine Linie siebenmal zu zeichnen,
@@ -729,9 +876,11 @@ de-DE:
         ein bisschen herum."
       courseB_artist_loops7_2019: "**Aufgabe:** Es ist ein versteckter Garten! Lauf
         ein bisschen herum."
-      courseB_collector_loops10: Hilf Laurel, alles Gold aus der Höhle zu holen!
-      courseB_collector_loops10_2018: Hilf Laurel, alles Gold aus der Höhle zu holen!
-      courseB_collector_loops10_2019: Hilf Laurel, alles Gold aus der Höhle zu holen!
+      courseB_collector_loops10: Hilf Laurel, alle Schätze aus dieser Höhle zu holen.
+      courseB_collector_loops10_2018: Hilf Laurel, alle Schätze aus dieser Höhle zu
+        holen.
+      courseB_collector_loops10_2019: Hilf Laurel, alle Schätze aus dieser Höhle zu
+        holen.
       courseB_collector_loops11: Heureka!  Hol dir so viele Schätze wie möglich!
       courseB_collector_loops11_2018: Heureka!  Hol dir so viele Schätze wie möglich!
       courseB_collector_loops11_2019: Heureka!  Hol dir so viele Schätze wie möglich!
@@ -763,13 +912,19 @@ de-DE:
         zu bekommen."_
       courseB_collector_loops9_2019: _"Hilf mir all das Gold aus diesen tiefen Tal
         zu bekommen."_
+      courseB_collector_loops_challenge2a: Hilf Laurel mindestens **5** Schätze einzusammeln
+        um diese Aufgabe zu beenden.
+      courseB_collector_loops_challenge2a_2018: Hilf Laurel mindestens **5** Schätze
+        einzusammeln um diese Aufgabe zu beenden.
+      courseB_collector_loops_challenge2a_2019: Hilf Laurel mindestens **5** Schätze
+        einzusammeln um diese Aufgabe zu beenden.
       courseB_maze_seq12: Jetzt bekomme das Schwein auf irgendeine Art und Weise!
       courseB_maze_seq12_2018: Jetzt bekomme das Schwein auf irgendeine Art und Weise!
       courseB_maze_seq12_2019: Jetzt bekomme das Schwein auf irgendeine Art und Weise!
       courseB_maze_seq2: _"Ein Fehler! Repariere den Code, damit ich das Schwein bekomme."_
-      courseB_maze_seq6: Gehe einen Weg und dann einen anderen, um den Vogel zum Schwein
-        zu bringen!
-      courseB_maze_seq7: Finde heraus, was fehlt, und füge dann Blöcke hinzu, um den
+      courseB_maze_seq6: Gehe zuerst in eine Richtung und dann in eine andere, um
+        den Vogel zum Schwein zu bringen!
+      courseB_maze_seq7: Finde heraus was fehlt, und füge dann Blöcke hinzu, um den
         Vogel zum Schwein zu bringen!
       courseB_maze_seq8: Du bist dran! Was musst du machen um den Vogel zum Schwein
         zu bringen?
@@ -791,6 +946,65 @@ de-DE:
         alle drei Seiten sind gleich lang.'
       courseC_artist_prog5_2019: 'Dieses Haus braucht ein Dach! Zeichne das Dreieck.  Hinweis:
         alle drei Seiten sind gleich lang.'
+      courseC_collector_prog1: Spiel mit den Blöcken und schau, ob du Laurel helfen
+        kannst, die Schätze einzusammeln.
+      courseC_collector_prog1_2018: Spiel mit den Blöcken und schau, ob du Laurel
+        helfen kannst, die Schätze einzusammeln.
+      courseC_collector_prog1_2019: Spiel mit den Blöcken und schau, ob du Laurel
+        helfen kannst, die Schätze einzusammeln.
+      courseC_maze_programming1: Für diese Aufgabe musst du alle Blöcke zusammensetzen,
+        auf 'Ausführen' klicken und zusehen, wie es läuft!
+      courseC_maze_programming1_2018: Für diese Aufgabe musst du alle Blöcke zusammensetzen,
+        auf 'Ausführen' klicken und zusehen, wie es läuft!
+      courseC_maze_programming1_2019: Für diese Aufgabe musst du alle Blöcke zusammensetzen,
+        auf 'Ausführen' klicken und zusehen, wie es läuft!
+      courseC_maze_programming2: Ziehe einen weiteren 'vorwärts bewegen' Block aus
+        dem Werkzeugkasten um deinen Code fertigzustellen.
+      courseC_maze_programming2_2018: Ziehe einen weiteren 'vorwärts bewegen' Block
+        aus dem Werkzeugkasten um deinen Code fertigzustellen.
+      courseC_maze_programming2_2019: Ziehe einen weiteren 'vorwärts bewegen' Block
+        aus dem Werkzeugkasten um deinen Code fertigzustellen.
+      courseC_maze_programming6: '"Bleib ruhig und hilf mir das böse Schwein zu finden.
+        Sonst könnte ich wütend werden!"'
+      courseC_maze_programming6_2018: '"Bleib ruhig und hilf mir das böse Schwein
+        zu finden. Sonst könnte ich wütend werden!"'
+      courseC_maze_programming6_2019: '"Bleib ruhig und hilf mir das böse Schwein
+        zu finden. Sonst könnte ich wütend werden!"'
+      courseC_maze_programming7: "**Herausforderung:** In diesem Code stecken viele
+        Fehler. Du musst einige Blöcke entfernen und andere hinzufügen."
+      courseC_maze_programming7_2018: "**Herausforderung:** In diesem Code stecken
+        viele Fehler. Du musst einige Blöcke entfernen und andere hinzufügen."
+      courseC_maze_programming7_2019: "**Herausforderung:** In diesem Code stecken
+        viele Fehler. Du musst einige Blöcke entfernen und andere hinzufügen."
+      courseC_maze_programming8: _"Bleib ruhig und hilf mir das böse Schwein zu finden."_
+      courseC_maze_programming8_2018: _"Bleib ruhig und hilf mir das böse Schwein
+        zu finden."_
+      courseC_maze_programming8_2019: _"Bleib ruhig und hilf mir das böse Schwein
+        zu finden."_
+      courseC_maze_programming8_predict1: _"Bleib ruhig und hilf mir das böse Schwein
+        zu finden."_
+      courseC_maze_programming8_predict1_2018: _"Bleib ruhig und hilf mir das böse
+        Schwein zu finden."_
+      courseC_maze_programming8_predict1_2019: _"Bleib ruhig und hilf mir das böse
+        Schwein zu finden."_
+      courseC_maze_programming9: _"Und jetzt, hilf mir mich zum Schwein zu schleichen,
+        egal auf welchem Weg!"_
+      courseC_maze_programming9_2018: _"Und jetzt, hilf mir mich zum Schwein zu schleichen,
+        egal auf welchem Weg!"_
+      courseC_maze_programming9_2019: _"Und jetzt, hilf mir mich zum Schwein zu schleichen,
+        egal auf welchem Weg!"_
+      courseC_maze_programming_challenge1: 'Das Schwein versteckt sich und das Ziel
+        ist es, es zu finden. '
+      courseC_maze_programming_challenge1_2018: 'Das Schwein versteckt sich und das
+        Ziel ist es, es zu finden. '
+      courseC_maze_programming_challenge1_2019: 'Das Schwein versteckt sich und das
+        Ziel ist es, es zu finden. '
+      courseC_maze_programming_challenge2: Manchmal gibt es mehr als eine Lösung für
+        ein Problem. Manchmal ist es schneller, rückwärts zu gehen, als vorwärts!
+      courseC_maze_programming_challenge2_2018: Manchmal gibt es mehr als eine Lösung
+        für ein Problem. Manchmal ist es schneller, rückwärts zu gehen, als vorwärts!
+      courseC_maze_programming_challenge2_2019: Manchmal gibt es mehr als eine Lösung
+        für ein Problem. Manchmal ist es schneller, rückwärts zu gehen, als vorwärts!
       courseD_artist_binary1: |-
         Bei der binären Schreibweise werden Informationen mit nur zwei Optionen repräsentiert.  Hier nutzen wir die Option „aus“ (dargestellt durch die Nummer 0) und „an“ (dargestellt durch die Nummer 1).
 
@@ -845,6 +1059,8 @@ de-DE:
       courseD_maze_nestedLoops6: Bring mich zu der Sonnenblume!
       courseD_maze_nestedLoops6_2018: Bring mich zu der Sonnenblume!
       courseD_maze_nestedLoops6_2019: Bring mich zu der Sonnenblume!
+      courseD_maze_ramp6: '"Bleib ruhig und hilf mir das böse Schwein zu finden. Sonst
+        könnte ich wütend werden!"'
       courseE_artist_functions1: 'Hallo. Ich Zombie-Künstler. Ich zeichnen liebe!
         Hilf mir, die quadratischen Gläser zu zeichnen.  Hinweis: Die Brücke zwischen
         den Gläsern ist 25 Pixel kürzer als die Länge der Quadrate.'

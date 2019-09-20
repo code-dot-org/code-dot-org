@@ -43,6 +43,7 @@ sk:
           vytvorenia Code.org účtu s <strong>%{provider}</strong> pre <strong>%{email}</strong>.
         error:
           future: nemôže byť v budúcnosti
+  beta: beta
   hello: Ahoj svet
   welcome_back: Vitaj späť, %{name}
   your_professional_learning_plan: Tvoj profesionálny učebný plán
@@ -56,14 +57,9 @@ sk:
   okay: Dobre
   or: alebo
   heading_x_of_y: "%{heading} (strana %{x} z %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Pridať učiteľa:'
       placeholder: Kód sekcie (ABCDEF)
-      instructions: Zadaj prosím kód, ktorý si dostal od tvojho učiteľa. Je to 6 písmenový
-        kód, niečo ako "ABCDEF".
-      instructions_short: Zadaj 6-miestný kód triedy
-    submit: Pridať učiteľa
   add_hint_form:
     placeholder: Prosím zadaj sem svoj tip
     submit: Pridať tip
@@ -92,9 +88,6 @@ sk:
     continue_with: Pokračovať s %{provider}
     sign_in_with: Prihlásiť sa cez %{provider}
     signed_in: Prihlásený!
-    signed_out: Úspešne si sa odhlásil z <a href="%{url}">Code.org</a>.
-    sign_out_of: Prihlásenie prebehlo cez %{provider}. <a href="%{url}">Kliknutím
-      sem</a> sa odhlásiš z %{provider}.
     already_signedup: Už ste zaregistrovaní?
     notyet_signedup: Ešte ste sa nepridali?
     google_oauth2: Google
@@ -155,9 +148,6 @@ sk:
     valid_password: Platné heslo!
     invalid_password: Heslo musí obsahovať aspoň 6 znakov
     mismatch_password: Zadané dve heslá sa nezhodujú
-    agree_tos_privacy: Súhlasím s <a href='http://code.org/tos'>Podmienkami používania
-      služby</a> a so <a href='http://code.org/privacy'>Zásadami ochrany osobných
-      údajov</a>.
     under_13_consent: Ak mám menej ako 13 rokov potvrdzujem že mám súhlas rodiča alebo
       zákonného zástupcu používať stránku a služby Code.org.
     student_consent: Potvrdzujem, že mám súhlas rodiča alebo zákonného zástupcu používať
@@ -166,13 +156,6 @@ sk:
       štátov amerických (USA).
     my_data_to_us: Údaje z používania tejto stránky môžu byť zaslané a uložené alebo
       spracované v Spojených štátoch amerických (USA).
-    student_terms: Emailové adresy nie sú ukladané vo forme, ktorá by nám umožňovala
-      kontaktovať študentov. Študenti nikdy nedostanú emaily od Code.org okrem emailov
-      na obnovenie hesla. Pre viac informácií si pozrite naše <a href='http://code.org/privacy'>
-      Zásady ochrany osobných údajov</a>.
-    teacher_terms: Súhlasím, že budem dodržiavať Podmienky používania služby. Pre
-      viac informácií o ochrane súkromia, kliknite na <a href='http://code.org/privacy'>
-      Zásady ochrany osobných údajov</a>.
     additional_information: Potrebujeme niektoré ďalšie informácie pre pokračovanie
       vášho prihlásenia/registrácie.
     user_type_button: Zmeniť typ účtu
@@ -229,8 +212,6 @@ sk:
     login: Prihlásiť sa
     invalid_login: Neplatné prihlasovacie meno, prosím, skús to ešte raz
     pair_programming: Mám partnera pri počítači
-    student_privacy: Zisti, prečo nevidíš tvoje plné meno <a href='%{student_privacy_blog}'
-      target='_blank'>na tomto odkaze</a>.
   password:
     reset_form:
       title: Zabudli ste heslo?
@@ -504,10 +485,6 @@ sk:
     tried: Vyskúšaný
   home:
     title: Štúdio kódu
-    description: Code Studio je domov pre online kurzy vytvorené Code.org
-    lines_of_code: "%{lines_count} RIADKOV KÓDU BOLO NAPÍSANÝCH ŠTUDENTAMI"
-    lines_of_code_linebreak: "%{lines_count} RIADKOV KÓDU<br/>NAPÍSANÉ %{students_count}
-      MILIÓNMI ŠTUDENTOV"
     all_courses: Prehľad kurzov 1, 2 a 3
     lesson_plans: Plány lekcií
     signin_message: Máte účet? %{link}
@@ -545,13 +522,6 @@ sk:
     test_videos_help: Otestujte naše nové video prehrávače na vašej škole
     try_beta_courses: Novinka! Vyskúšajte naše beta kurzy pre žiakov 1. stupňa ZŠ
     use_as_teacher: Použiť túto stránku ako učiteľ
-    heading_hoc2014: "<h2>Hodina Kódu pre</h2><h1>všetky vekové kategórie</h1>"
-    heading_elementary: "<h2>20 hodinové kurzy pre </h2><h1> Základy informatiky (všetky
-      vekové kategórie)</h1>"
-    heading_apps: "<h2>Zábava pre</h2><h1>všetkých</h1>"
-    heading_tools: "<h2>Pripravený na ďalší krok?</h2> <h1> Nástroje pre 2. stupeň
-      základných škôl a stredné školy</h1>"
-    heading_legacy: "<h2>Náš zrýchlený kurz pre</h2><h1>všetky vekové kategórie</h1>"
     your_gallery: Galéria
     no_primary_course: Vyskúšaj kurz v Code Studiu
     choose_next_course: Vyskúšaj kurz Code Štúdia výberom niektorého z kurzov nižšie
@@ -809,11 +779,6 @@ sk:
     header_artist: Code umenie
     report_abuse: Nahlásenie zneužitia
   landing:
-    prerelease: Tento kurz je v <span class='betatext'> beta verzii</span>.  To znamená,
-      že to nie je finálna verzia kurzu a kurz môže byť zmenený na základe prijatých
-      pripomienok a následných vylepšení.
-    prerelease_hoc2014: Tento tutoriál je v <span class='betatext'> beta verzii</span>
-      a je predmetom revízie na základe pripomienok a vylepšení, ktoré sú vykonané.
     report_bug: Nahlásiť chybu
     support: Získať pomoc
     support_url: support.code.org
@@ -890,11 +855,6 @@ sk:
   age_interstitial:
     age: Váš vek
     header: Aktualizácia údajov na účte
-    message: Sme v procese aktualizácie našich skúseností, ktoré vám poskytnú ešte
-      silnejšiu ochranu súkromia. K tomu potrebujeme aby existujúci používatelia zadali
-      ich vek. <br/> Ako vždy, code.org nikdy neprenajme, nepredá alebo nezdieľa tieto
-      informácie s tretími stranami.
-    sign_out: Ak si neželáte poskytnúť váš vek, môžete sa <a href="%{url}"> odhlásiť</a>.
   terms_interstitial:
     title: Aktualizované podmienky poskytovania služby a ochrany súkromia
     intro_desc: Aktualizovali sme naše Zmluvné podmienky a Zásady ochrany osobných
@@ -1028,10 +988,8 @@ sk:
   peer_review:
     accepted:
       name: Prijaté
-      description: "<strong>Áno</strong>, toto zadanie<strong>spĺňa</strong> požiadavky"
     rejected:
       name: Odmietnuté
-      description: "<strong>Nie</strong>, toto zadanie<strong>nespĺňa</strong> požiadavky"
     escalated:
       name: Vyriešené
       description: Chcel by som, aby inštruktor preskúmal tento návrh
@@ -1177,10 +1135,6 @@ sk:
     download_in_Vietnamese: 'Stiahnuť vo vietnamčine:'
     windows: Windows (64-bitová verzia)
     mac: Mac OS X
-  stage_extras_teacher_message: Pre niektoré z vašich tried máte vypnuté Extra úrovne.
-    Vaši študenti neuvidia túto stránku až kým ich nezapnete. Extra úrovne môžete
-    zapnúť navštívením vášho <a href='http://code.org/teacher-dashboard'>hlavného
-    panelu učiteľa</a>.
   locked_stage: Obsah tejto úrovne nie je viditeľný, pretože táto úroveň je momentálne
     zamknutá. Tvoj učiteľ odomkne túto úroveň, keď sa na nej bude pracovať, alebo
     keď bude kontrolovať tvoje odpovede.
@@ -1297,27 +1251,11 @@ sk:
         Code.org partnerov, a 2) súhlasíte so zdieľaním Vašich údajov s naším medzinárodným
         Code.org partnerom vo vašej krajine, aby sme vám mohli pomôcť pri vašej práci
         - výučbe informatiky.
-      thanks: Ďakujeme za odoslanie! Tešíme sa, že Vás budeme môcť podporovať pri
-        spoznávaní Code.org a našich nástrojov. Dajte nám prosím vedieť Vaše nápady,
-        otázky a postrehy emailom na <a href='%{support_email_url}'>support@code.org</a>
-        alebo príspevkom na <a href='%{teacher_forum_url}' target='_blank'>fóre pre
-        učiteľov</a>!
     logged_out:
       heading: Ďakujeme vám za prejavený záujem o Vzdelávací program pre profesionálov!
       body: Ak chcete začať, musíte sa najprv prihlásiť do vášho účtu na Code.org.
         Pre viac informácií o programe predtým, než začnete vypĺňať prihlášku, navštívte
         <a href="%{url}">Prehľad Vzdelávacieho programu pre profesionálov</a>.
-    not_teacher:
-      body: Ďakujeme vám za záujem o Profesionálny vzdelávací program Code.org! Momentálne
-        ste prihlásený ako študent. Vytvorte si prosím konto pre učiteľa alebo prejdite
-        do <a href="%{user_settings}">nastavení užívateľa</a> pre zmenu typu vášho
-        konta zo študentského na učiteľské.
-      more: Pre viac informácií o programe predtým, než začnete vypĺňať prihlášku,
-        navštívte <a href="%{pl_overview}">Prehľad Vzdelávacieho programu pre profesionálov</a>.
-    no_teacher_email:
-      body: Váš účet nemá priradenú emailovú adresu. Navštívte prosím <a href="%{user_registration}">stránku
-        s nastaveniami vášho účtu</a> pre pridanie emailovej adresy predtým, než vyplníte
-        tento formulár.
   courses_category: Všetky kurzy
   cookie_banner:
     message: Prehliadaním našej stránky alebo kliknutím na "Súhlasím" súhlasite s

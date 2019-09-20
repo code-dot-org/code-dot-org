@@ -38,6 +38,7 @@ fil:
         edit_header: Palitan ang Account Details
         error:
           future: hindi maaari sa hinaharap
+  beta: beta
   hello: Mabuhay!
   welcome_back: Maligayang pagbabalik, %{name}
   your_professional_learning_plan: Iyong Propersyonal na Plano sa Pag-aaral
@@ -51,14 +52,9 @@ fil:
   okay: Okey
   or: o
   heading_x_of_y: "%{heading} (pahina %{x} ng %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Magdagdag ng guro:'
       placeholder: Section Code (ABCDEF)
-      instructions: Pakipasok ang code na ibinahagi sa iyo ng iyong guro. Ito ay 6
-        na letrang code tulad ng "ABCDEF".
-      instructions_short: Ilagay ang iyong 6 na letra na section code
-    submit: Magdagdag ng guro
   add_hint_form:
     placeholder: Maaaring ilagay ang iyong hint dito
     submit: Magdagdag ng hint
@@ -87,9 +83,6 @@ fil:
   auth:
     sign_in_with: Mag sign in gamit ang %{provider}
     signed_in: Signed in!
-    signed_out: Nag-sign out ka sa <a href="%{url}"> Code.org </a>.
-    sign_out_of: Gumamit ka ng %{provider} para mag sign-in ka. <a href="%{url}">Pindutin
-      ito</a> para ma sign out ka kay %{provider}.
     already_signedup: Naka signed up na?
     notyet_signedup: Hindi pa nakakasali?
     google_oauth2: Account sa Google
@@ -145,18 +138,6 @@ fil:
     valid_password: Mali ang na-type na password!
     invalid_password: Ang Password ay dapat may at least 6 characters
     mismatch_password: Ang passwords na iyong inenter ay hindi tugma sa isa't isa
-    student_terms: Ako ay sumang-ayon na mapailalim sa Code.org na <a href='http://code.org/tos'>mga
-      palatuntunin</a>. Kung ako ay mas bata pa 13 taong gulang, kinokompirma ko ito
-      sa pamamagitan ng pagpasa ng form na ito na nagpapakita na mayroon akong pahintulot
-      mula sa aking mga magulang o legal na tagapangalaga na gumamit sa mga serbisyo
-      ng Code.org.<br/><br/>Ang mga email address ay hindi naka-store sa isang form
-      na magbibigay paraan sa amin na makipag-ugnayan sa mga estudyante. Ang mga estudyante
-      ay hindi makakatanggap ng mga email mula sa Code.org maliban sa password na
-      recovery. Tingnan ang aming <a href='http://code.org/privacy'>patakaran sa privacy</a>
-      para sa karagdagang impormasyon.
-    teacher_terms: Ako ay sumang-ayon na mapailalim sa Code.org na mga palatuntunin.
-      Para sa karagdagang impormasyon tungkol sa privacy, tingnan ang aming <a href='http://code.org/privacy'>patakaran
-      sa privacy</a>.
     additional_information: Kailangan namin ng karagdagang impormasyon para maituloy
       ang pag-sign up sa iyo.
     user_type_label: Uri ng Account
@@ -207,8 +188,6 @@ fil:
     login: Sign in
     invalid_login: Imbalidong login, pakisubukang muli
     pair_programming: May partner ako sa aking kompyuter
-    student_privacy: Alamin pa kung bakit hindi mo nakikita ang buo mong pangalan
-      <a href='%{student_privacy_blog}' target='_blank'>dito</a>.
   password:
     reset_form:
       title: Hindi matandaan ang password?
@@ -465,11 +444,6 @@ fil:
     tried: Sinubukan
   home:
     title: Code Studio
-    description: Ang Code Studio ay ang tahanan para makahapap ka ng mga kurso na
-      nalikha ni Code.org
-    lines_of_code: "%{lines_count} MGA LINYA NG CODE NA SINULAT NG MGA ESTUDYANTE"
-    lines_of_code_linebreak: "%{lines_count} NA MGA LINYA NG CODE<br/>SINULAT NG %{students_count}
-      MILYON NA MGA ESTUDYANTE"
     all_courses: Buod ng mga Kursong 1, 2, at 3
     lesson_plans: Banghay-aralin
     signin_message: Nakarehistro na? %{link}
@@ -511,13 +485,6 @@ fil:
     try_beta_courses: Bago! Subukan ang aming mga beta na mga kurso para sa mga K-5
       na mga estudyante
     use_as_teacher: Gamitin ang site na 'to biliang isang guro
-    heading_hoc2014: "<h2>Ang Hour of Code para sa</h2><h1>Lahat ng Edad</h1>"
-    heading_elementary: "<h2>20 oras na mga kurso para sa</h2><h1>Pangunahing Kaalaman
-      sa Computer Science (lahat ng edad)</h1>"
-    heading_apps: "<h2>Masaya para sa</h2><h1>Lahat</h1>"
-    heading_tools: "<h2>Handa na ba para sa susunod na hakbang?</h2><h1>JavaScript
-      Tools para sa mga High School</h1>"
-    heading_legacy: "<h2>Ang aming pinabilis na kurso para sa</h2><h1>Lahat ng Edad</h1>"
     your_gallery: Galeriya
     no_primary_course: Subukan ang Code Studio na kurso
     choose_next_course: Subukan ang isang Code Studio na kurso sa pagpili ng isa sa
@@ -789,12 +756,6 @@ fil:
     header_artist: Code ng sining
     report_abuse: I-report ang pag-abuso
   landing:
-    prerelease: Ang kursong ito ay nasa <span class='betatext'>beta</span>. Ibig sabihin
-      nito na hindi ito ang huling bersyon ng kurso, at ito ay nakatakdang babaguhin
-      habang makakatanggap pa ng mga feedback at ang pagpapabuti ay ginagawa pa.
-    prerelease_hoc2014: Ang tutorial na ito ay nasa <span class='betatext'>beta</span>.
-      Ito ay nakasakop sa mga rebisyon habang nakakatanggap ng feedback at ang pagpapabuti
-      ay ginagawa pa.
     report_bug: I-report ang Bug
     support: Humingi ng Tulong
     help_resources: Mga Tulong at mga Pag-aaring Yaman
@@ -874,13 +835,6 @@ fil:
   age_interstitial:
     age: Ang iyong edad
     header: Update sa Impormasyon ng Account
-    message: Kami ay kasalukuyang nag-update sa aming "experience" para mabigyan kayo
-      ng mas pinalakas pa na proteksyon sa iyong privacy. Para magawa ito, kailangan
-      namin ang mga umiiral na users na maglagay sa kanilang edad dito.<br/>Gaya ng
-      dati, ang code.org ay hinding-hindi parentahan, magbenta o magbahagi ng mga
-      impormasyong ito sa kahit na anong mga third party.
-    sign_out: Kung hindi mo nais magbigay ng edad mo maari kang <a href="%{url}">mag-sign
-      out</a>.
   terms_interstitial:
     title: Binago ang mga Palatuntunan at ang Privacy Policy
     intro_desc: 'Binago namin ang aming mga palatuntunan at privacy policy, gaya ng
@@ -1023,12 +977,8 @@ fil:
   peer_review:
     accepted:
       name: Tinanggap
-      description: "<strong>Oo</strong>, ang submission na ito ay <strong>umabot</strong>
-        sa mga kinakailangan"
     rejected:
       name: Tinanggihan
-      description: "<strong>Hindi</strong>, ang submission na ito ay <strong>hindi
-        umabot</strong> sa mga kinakailangan"
     escalated:
       name: Pinaalam
       description: Gusto ko na guro ang magrepasu sa aking isinumite

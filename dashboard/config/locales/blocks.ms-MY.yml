@@ -133,11 +133,6 @@ ms:
           CONDITION:
             '"when"': apabila
             '"while"': semasa
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': benar
-            'false': palsu
       gamelab_getProp:
         options:
           PROPERTY:
@@ -202,13 +197,6 @@ ms:
             '"left"': kiri
             '"right"': kanan
             '"space"': angkasa
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": atas
-            "'down'": bawah
-            "'left'": kiri
-            "'right'": kanan
       gamelab_whileKey:
         options:
           KEY:

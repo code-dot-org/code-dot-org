@@ -23,6 +23,7 @@ hr:
         edit_header: Uredi podatke o računu
         error:
           future: ne može biti u budućnosti
+  beta: beta
   hello: Pozdrav svima
   welcome_back: Dobrodošao natrag, %{name}
   submit: Pošalji
@@ -32,11 +33,9 @@ hr:
   cancel: Odustani
   okay: U redu
   or: ili
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Dodajte učitelja:'
       placeholder: Šifra odjeljenja (ABCDEF)
-    submit: Dodaj učitelja
   add_hint_form:
     placeholder: Molimo unesite vaš prijedlog
     submit: Dodaj pomoć
@@ -63,9 +62,6 @@ hr:
   auth:
     sign_in_with: Prijavi se s %{provider}
     signed_in: Prijavljen!
-    signed_out: Odjavili ste se iz<a href="%{url}">Code.org</a>.
-    sign_out_of: Koristili ste %{provider} da biste se prijavili. <a href="%{url}">Kliknite
-      ovdje</a> da biste se odjavili %{provider}.
     already_signedup: Jesi li već prijavljen?
     notyet_signedup: Još se niste pridružili?
     google_oauth2: Google račun
@@ -250,11 +246,6 @@ hr:
     tried: Pokušan
   home:
     title: Code Studio
-    description: Code Studio je početna stranica online tečajeva koje su stvorili
-      Code.org
-    lines_of_code: "%{lines_count} LINIJA KODA KOJE SU NAPISALI UČENICI"
-    lines_of_code_linebreak: "%{lines_count} LINIJA KODA <br/> KOJE JE NAPISALO %{students_count}
-      MILIJUNA UČENIKA"
     all_courses: Pregled tečajeva 1, 2 i 3
     lesson_plans: Nastavni planovi
     signin_message: Jeste li već registrirani? %{link}
@@ -293,10 +284,6 @@ hr:
     test_videos_help: Isprobajte naš novi video player u školi
     try_beta_courses: Novo! Isprobaj naše beta tečajeve za učenike razredne nastave
     use_as_teacher: Koristite ovo sjedište kao učitelj
-    heading_hoc2014: "<h2>Sat Kodiranja za</h2><h1>sve uzraste</h1>"
-    heading_elementary: "<h2>20-satni tečajevi za</h2><h1>početnike (svih uzrasta)</h1>"
-    heading_apps: "<h2>Zabava za</h2><h1>sve</h1>"
-    heading_legacy: "<h2>Naš općeniti tečaj za</h2><h1>sve uzraste</h1>"
     your_gallery: Galerija
     no_primary_course: Probajte Code Studio tečaj
     choose_next_course: Probajte Code Studio tečaj odabirom sljedećih opcija niže
@@ -464,11 +451,6 @@ hr:
     header_artist: Umjetnik
     report_abuse: Prijava zloupotrebe
   landing:
-    prerelease: Ovaj tečaj je u <span class='betatext'> beta fazi</span>. To znači
-      da ovo nije konačna verzija tečaja, te da podliježe izmjenama u skladu s primljenim
-      povratnim informacijama i napravljenim poboljšanjima.
-    prerelease_hoc2014: Ovaj tutorial je u <span class='betatext'> beta fazi</span>.  Podliježe
-      izmjenama u skladu s primljenim povratnim informacijama i napravljenim poboljšanjima.
     report_bug: Prijavi grešku
     support: Dobivanje pomoći
     support_url: "//support.code.org"
@@ -525,11 +507,6 @@ hr:
   age_interstitial:
     age: Tvoja dob
     header: Ažuriranje informacija o računu
-    message: Mi smo u procesu nadogradnje da bismo vam pružili još jaču zaštitu privatnosti.
-      Da bismo to učinili, trebamo da postojeći korisnici da unesu svoju dob. <br/>Kao
-      i uvijek, code.org neće nikada iznajmiti, prodati ili podijeliti te informacije
-      s drugim stranama.
-    sign_out: Ako ne želite unijeti svoju dob možete se<a href="%{url}">odjaviti</a>.
   terms_interstitial:
     tos: Uvjeti
     privacy: Pravila privatnosti

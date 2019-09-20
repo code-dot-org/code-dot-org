@@ -28,6 +28,7 @@ tr:
         edit_header: 'Hesap Bilgilerini Düzenle'
         error:
           future: gelecekte olması mümkün değil
+  beta: "beta"
   hello: "Merhaba dünya"
   welcome_back: "Hoş geldiniz %{name}"
   your_professional_learning_plan: "Profesyonel Eğitim Planın"
@@ -41,13 +42,9 @@ tr:
   okay: "Tamam"
   or: "veya"
   heading_x_of_y: "%{heading} (sayfa %{x}, %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Öğretmen ekleyin:'
       placeholder: "Bölüm kodu (ABCDEF)"
-      instructions: "Lütfen öğretmeninizin sizinle paylaştığı kodu girin. Bu kod, \"ABCDEF\" örneğindeki gibi 6 harf içerir."
-      instructions_short: "6 harfli bölüm kodunuzu girin"
-    submit: 'Öğretmeni ekle'
   add_hint_form:
     placeholder: 'Lütfen ipucunu buraya girin'
     submit: 'İpucu ekle'
@@ -75,8 +72,6 @@ tr:
   auth:
     sign_in_with: '%{provider} ile giriş yapın'
     signed_in: 'Giriş yapıldı!'
-    signed_out: '<a href="%{url}">Code.org</a> dan çıkış yaptınız.'
-    sign_out_of: '%{provider} aracılığıyla giriş yaptınız. %{provider} sağlayıcısından çıkış yapmak için lütfen <a href="%{url}">buraya tıklayın</a>.'
     already_signedup: 'Zaten kayıtlı mısınız?'
     notyet_signedup: "Henüz kaydolmadınız mı?"
     google_oauth2: 'Google Hesabı'
@@ -117,8 +112,6 @@ tr:
     under_13_consent: "Eğer 13 yaşından küçüksem, Code.org hizmetlerini kullanmam için ebeveynlerimin veya yasal vasimin izni olduğunu onaylıyorum."
     agree_us_website: "Amerika Birleşik Devletleri merkezli bir web sitesi kullanmayı kabul ediyorum."
     my_data_to_us: "Bu siteyi kullanımıma ilişkin veriler Amerika Birleşik Devletleri’ne gönderilebilir ve Amerika Birleşik Devletleri’nde depolanabilir veya işlenebilir."
-    student_terms: "Code.org <a href='http://code.org/tos'> hizmet şartlarına</a> bağlı olmayı kabul edersiniz. Eğer ben 13 yaşını altında isem, ebeveyn veya yasal velimin Code.org Hizmetlerini kullanma izni verdiğini bu formu göndererek onaylıyorum. <br/> <br/> E-posta adresleri öğrencilerle bağlantı kurmamız için herhangi bir formda depolanmaz. Öğrenciler şifre kurtarma dışında Code.org'dan herhangi bir e-posta almaz. Daha fazla bilgi için <a href='http://code.org/privacy'> Gizlilik Politikamıza</a> bakınız."
-    teacher_terms: "Code.org sitesinin Hizmet ve Gizlilik politikalarını kabul ediyorum. Daha fazla bilgi için, <a href='http://code.org/privacy'> Hizmet ve Gizlilik politikamıza göz atın</a>."
     additional_information: "Giriş işleminize devam edebilmek için ek bilgilere ihtiyaç duymaktayız."
     user_type_label: "Hesap Türü"
     user_type_teacher: "Öğretmen"
@@ -170,7 +163,6 @@ tr:
     login: 'Giriş Yap'
     invalid_login: 'Geçersiz oturum açma adı, lütfen yeniden deneyin'
     pair_programming: 'Bilgisayarı başka biriyle kullanıyorum.'
-    student_privacy: "Adınızı neden görmediğiniz ile ilgili bilgi <a href='%{student_privacy_blog}' target='_blank'> burada</a>."
   password:
     reset_form:
       title: 'Şifrenizi mi unuttunuz?'
@@ -396,9 +388,6 @@ tr:
     tried: 'Denenmiş'
   home:
     title: "Code Studio"
-    description: 'Code.org tarafından Code Studio evinizde online kurslar oluşturur'
-    lines_of_code: "%{lines_count}öğrenci tarafından yazılan kod satırları"
-    lines_of_code_linebreak: "KOD SATIRLARI %{lines_count}<br/> %{students_count} milyon öğrenci tarafından yazıldı"
     all_courses: "1, 2 ve 3 nolu derslere Genel Bakış"
     lesson_plans: "Ders planları"
     signin_message: "Zaten üye misiniz? % {link}"
@@ -428,11 +417,6 @@ tr:
     test_videos_help: 'Okulunuzda yeni video oynatıcımızı deneyin'
     try_beta_courses: 'Yeni! K-5 öğrencileri için beta kurslarımızı deneyin'
     use_as_teacher: 'Siteyi öğretmen profiliyle kullan'
-    heading_hoc2014: "<h2>Kod Saati </h2><h1> her yaş için</h1>"
-    heading_elementary: "<h2>20 saat ders</h2><h1> Bilgisayar Bilimleri Temeli (bütün yaşlar için) </h1>"
-    heading_apps: "<h1>Herkes</h1> için <h2>eğlence</h2>"
-    heading_tools: "<h2>Bir sonraki adım için hazır mısın?</h2> <h1>Ortaokul ve Lise için araçlar</h1>"
-    heading_legacy: "<h1>Tüm yaş</h1> grupları için <h2>genel kurslarımız</h2>"
     your_gallery: Galeri
     no_primary_course: "Code Studio'daki kurslardan birisini deneyin"
     choose_next_course: "Aşağıdaki Code Studio derslerinden birini seçerek deneyin"
@@ -624,8 +608,6 @@ tr:
     header_artist: "Aktör"
     report_abuse: "Hata Rapor Et"
   landing:
-    prerelease: "Bu ders, <span class='betatext'> beta</span> versiyonundadır.  Bu demek oluyor ki bu dersin son hali değildir, geribildirimler alındıkça içeriğinde düzeltme ve değişiklikler olabilir."
-    prerelease_hoc2014: "Bu öğretici <span class='betatext'>beta</span>dır. Geri dönüşler aldıkça ve geliştirildikçe düzenlenmeye açıktır."
     report_bug: "Hata bildir"
     support: "Yardım Al"
     support_url: "//support.code.org"
@@ -697,8 +679,6 @@ tr:
   age_interstitial:
     age: Yaşın
     header: Hesap Bilgileri Güncelleme
-    message: "Size daha güçlü gizlilik koruması sağlamak konusunda güncellemelerimizi sürdürmekteyiz. Bunu yapabilmek için mevcut kullanıcıların buraya yaşlarını girmesi gerekmektedir.<br/>Herzaman olduğu gibi code.org özel bilgilerinizi asla kiralamaz, satmaz veya üçüncü partilerle paylaşmaz."
-    sign_out: 'Eğer yaşınızı girmek istemiyorsanız <a href="%{url}">buraya tıklayarak</a> çıkış yapabilirsiniz.'
   terms_interstitial:
     title: "Güncellenen Hizmet ve Gizlilik Politikası şartları"
     intro_desc: "Kullanıcı sözleşmesini aşağıdaki gibi güncelledik. Değişiklikler 24 Ağustos 2016'dan itibaren uygulanıyor. En büyük değişiklik: <i>Artık Code Studio'daki öğrencilerin email adreslerini artık arşivlemiyoruz.</i> Bu bizim için büyük bir şey, ve umuyoruz eğitim teknolojilerindeki öğrenci mahremiyetine yeni bir standart getirir. Diğer değişikliklerin özetini de size mail olarak gönderdik."
@@ -794,10 +774,8 @@ tr:
   peer_review:
     accepted:
       name: 'Kabul edildi'
-      description: '<strong>Evet</strong>, bu öneri gereksinimleri karşılıyor'
     rejected:
       name: 'Reddedildi'
-      description: '<strong>Hayır</strong>, bu öneri gereksinimleri karşılamıyor'
     escalated:
       name: 'Yükseltilmiş'
       description: 'Bu gönderiyi gözden geçirmek için bir eğitmen istiyorum'

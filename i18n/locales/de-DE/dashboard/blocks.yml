@@ -680,11 +680,6 @@ de:
         text: wenn {SPRITE} angeklickt
       gamelab_createNewSprite:
         text: "erstelle neuen Sprite\n genannt {NAME} \n mit Kostüm {COSTUME} \n in {LOCATION}"
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': wahr
-            'false': falsch
       gamelab_destroy:
         text: entferne {THIS}
       gamelab_getProp:
@@ -772,7 +767,6 @@ de:
             '"x"': x-Position
             '"y"': y-Position
             '"direction"': Bewegungsrichtung
-            '"tint"': Farbton
       gamelab_setSizes:
         text: stellen Sie {SPRITE} {PROPERTY} auf {N}%
         options:
@@ -803,13 +797,6 @@ de:
             '"w"': w
             '"s"': s
             '"d"': d
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": hoch
-            "'down'": runter
-            "'left'": links
-            "'right'": rechts
       gamelab_whileKey:
         options:
           KEY:

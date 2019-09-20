@@ -21,16 +21,13 @@ ur:
         edit_header: اکاؤنٹ کی تفصیلات میں ترمیم کیجیے
         error:
           future: مستقبل میں نہیں ہو سکتا
+  beta: beta
   hello: hello dunia
   welcome_back: خوش آمدید، %{name}
   submit: جمع کرائیں
   next_page: اگلا صفحہ
   cancel: منسوخ کریں
   or: یا
-  add_teacher_form:
-    code:
-      label: 'ٹیچر شامل کریں:'
-    submit: استاد شامل کریں
   add_hint_form:
     placeholder: براے مہربانی اپنا اشارہ یہاں enter کریں
     submit: اشارہ شامل کریں
@@ -54,7 +51,6 @@ ur:
   auth:
     sign_in_with: "%{provider} کے ساتھ sign in"
     signed_in: "!!Signed in"
-    signed_out: آپ<a href="%{url}">Code.org</a>سے sign out ہو چکے ہیں.
     already_signedup: sign up کر چکے ہیں؟
     notyet_signedup: ابھی جوائن نہیں کیا؟
     google_oauth2: گوگل اکاؤنٹ

@@ -1,5 +1,6 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import {mount} from 'enzyme';
+import {StickyContainer} from 'react-sticky';
 import {expect} from '../../util/configuredChai';
 import FilterHeader from '@cdo/apps/tutorialExplorer/filterHeader';
 import BackButton from '@cdo/apps/tutorialExplorer/backButton';
@@ -24,8 +25,10 @@ const DEFAULT_PROPS = {
 
 describe('FilterHeader', () => {
   it('renders simplest mobile view', () => {
-    const wrapper = shallow(
-      <FilterHeader {...DEFAULT_PROPS} mobileLayout={true} />
+    const wrapper = mount(
+      <StickyContainer>
+        <FilterHeader {...DEFAULT_PROPS} mobileLayout={true} />
+      </StickyContainer>
     );
     expect(wrapper).to.containMatchingElement(
       <span>{i18n.filterHeaderTutorialCountPlural({tutorial_count: 5})}</span>
@@ -38,12 +41,14 @@ describe('FilterHeader', () => {
   });
 
   it('renders open modal filters on mobile view', () => {
-    const wrapper = shallow(
-      <FilterHeader
-        {...DEFAULT_PROPS}
-        mobileLayout={true}
-        showingModalFilters={true}
-      />
+    const wrapper = mount(
+      <StickyContainer>
+        <FilterHeader
+          {...DEFAULT_PROPS}
+          mobileLayout={true}
+          showingModalFilters={true}
+        />
+      </StickyContainer>
     );
     expect(wrapper).to.containMatchingElement(
       <span>{i18n.filterHeaderTutorialCountPlural({tutorial_count: 5})}</span>
@@ -56,41 +61,49 @@ describe('FilterHeader', () => {
   });
 
   it('adds a back button if requested', () => {
-    const wrapper = shallow(
-      <FilterHeader {...DEFAULT_PROPS} backButton={true} />
+    const wrapper = mount(
+      <StickyContainer>
+        <FilterHeader {...DEFAULT_PROPS} backButton={true} />
+      </StickyContainer>
     );
     expect(wrapper).to.containMatchingElement(<BackButton />);
   });
 
   it('pluralizes result summary correctly', () => {
-    const noResults = shallow(
-      <FilterHeader
-        {...DEFAULT_PROPS}
-        mobileLayout={true}
-        filteredTutorialsCount={0}
-      />
+    const noResults = mount(
+      <StickyContainer>
+        <FilterHeader
+          {...DEFAULT_PROPS}
+          mobileLayout={true}
+          filteredTutorialsCount={0}
+        />
+      </StickyContainer>
     );
     expect(noResults).to.containMatchingElement(
       <span>{i18n.filterHeaderTutorialCountPlural({tutorial_count: 0})}</span>
     );
 
-    const oneResult = shallow(
-      <FilterHeader
-        {...DEFAULT_PROPS}
-        filteredTutorialsCount={1}
-        mobileLayout={true}
-      />
+    const oneResult = mount(
+      <StickyContainer>
+        <FilterHeader
+          {...DEFAULT_PROPS}
+          filteredTutorialsCount={1}
+          mobileLayout={true}
+        />
+      </StickyContainer>
     );
     expect(oneResult).to.containMatchingElement(
       <span>{i18n.filterHeaderTutorialCountSingle()}</span>
     );
 
-    const twoResults = shallow(
-      <FilterHeader
-        {...DEFAULT_PROPS}
-        filteredTutorialsCount={2}
-        mobileLayout={true}
-      />
+    const twoResults = mount(
+      <StickyContainer>
+        <FilterHeader
+          {...DEFAULT_PROPS}
+          filteredTutorialsCount={2}
+          mobileLayout={true}
+        />
+      </StickyContainer>
     );
     expect(twoResults).to.containMatchingElement(
       <span>{i18n.filterHeaderTutorialCountPlural({tutorial_count: 2})}</span>

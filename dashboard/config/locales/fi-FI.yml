@@ -43,6 +43,7 @@ fi:
           Code.org -tilin luomisen <strong>%{provider}</strong> -tunnuksella <strong>%{email}</strong>.
         error:
           future: ei voi olla tulevaisuudessa
+  beta: beta
   hello: Hei maailma
   welcome_back: Tervetuloa takaisin, %{name}
   your_professional_learning_plan: Ammattimainen oppimissuunnitelmasi
@@ -56,14 +57,9 @@ fi:
   okay: Selvä
   or: tai
   heading_x_of_y: "%{heading} (sivu %{x} %{y}) sivusta"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Lisää opettaja:'
       placeholder: Osion koodi (ABCDEF)
-      instructions: Kirjoita opettajasi sinulle jakama koodi. Se on 6 kirjaiminen
-        koodi, kuten "ABCDEF".
-      instructions_short: Kirjoita 6-kirjaiminen ryhmäkoodisi
-    submit: Lisää opettaja
   add_hint_form:
     placeholder: Syötä vihjeesi tähän
     submit: Lisää vihje
@@ -92,9 +88,6 @@ fi:
     continue_with: Jatka %{provider}-tunnuksella
     sign_in_with: Kirjaudu %{provider} -tunnuksella
     signed_in: Kirjautunut!
-    signed_out: Olet kirjautunut ulos palvelusta <a href="%{url}">Code.org</a>.
-    sign_out_of: Olet kirjautuneena sisään palvelun %{provider} kautta. <a href="%{url}">Kirjaudu
-      ulos</a> palvelusta %{provider}.
     already_signedup: Jo rekisteröitynyt?
     notyet_signedup: Etkö ole vielä rekisteröitynyt?
     google_oauth2: Google-tili
@@ -140,15 +133,6 @@ fi:
     valid_password: Salasana kelpaa!
     invalid_password: Salasanan tulee olla vähintään 6 merkkiä pitkä
     mismatch_password: Antamasi salasanat eivät täsmää
-    student_terms: Hyväksyn Code.org <a href='http://code.org/tos'> käyttöehdot</a>.
-      Jos olen alle 13-vuotiaat, vahvistan lähettämällä tämän lomakkeen, että minulla
-      on minun vanhemman tai laillisen huoltajan lupaa käyttää Code.org. <br/> <br/>
-      Sähköpostiosoitteita ei tallenneta millään tavalla, jonka avulla voimme ottaa
-      yhteyttä opiskelijoiden. Opiskelijat eivät tule saamaan ikinä sähköpostia Code.org:ilta
-      paitsi unohtuneen salasanan takaisin saamisessa. Katso meidän <a href='http://code.org/privacy'>
-      yksityisyydensuoja</a> lisätietoja.
-    teacher_terms: Hyväksyn Code.org käyttöehdot sitovat. Saat lisätietoja meidän
-      tietosuojasta <a href='http://code.org/privacy'> yksityisyydensuoja</a>.
     additional_information: Tarvitsemme joitakin lisätietoja voidaksesi jatkaa kirjautumista.
     user_type_label: Tilin tyyppi
     user_type_teacher: Opettaja
@@ -197,8 +181,6 @@ fi:
     login: Kirjaudu sisään
     invalid_login: Virheellinen kirjautuminen, yritä uudelleen
     pair_programming: Minulla on kumppani minun tietokoneellani
-    student_privacy: Lisätietoja siitä, miksi et näe koko nimeäsi on <a href='%{student_privacy_blog}'
-      target='_blank'>täällä</a>.
   password:
     reset_form:
       title: Unohditko salasanasi?
@@ -409,10 +391,6 @@ fi:
     tried: Kokeili
   home:
     title: Code Studio
-    description: Code Studio on paikka josta löydät Code.org:in verkkokurssit.
-    lines_of_code: "%{lines_count} OPPILAIDEN KIRJOITTAMAA KOODIRIVIÄ"
-    lines_of_code_linebreak: "%{lines_count} KIRJOITETTUA KOODIRIVIÄ<br/>%{students_count}
-      MILJOONAA OPISKELIJAA"
     all_courses: Katsaus kursseihin 1, 2 ja 3
     lesson_plans: Tuntisuunnitelmat
     signin_message: Jo rekisteröitynyt? %{link}
@@ -449,12 +427,6 @@ fi:
     test_videos_help: Testaa uutta videosoitintamme koulussasi
     try_beta_courses: Uutta! Kokeile beta-kurssejamme K-5 oppilaille
     use_as_teacher: Käytä sivustoa opettajana
-    heading_hoc2014: "<h2>Koodaustunti</h2><h1>kaikille ikäryhmille</h1>"
-    heading_elementary: "<h2>20 tunnin kurssit</h2><h1>aloittelijoille (kaikki ikäryhmät)</h1>"
-    heading_apps: "<h2>Hauskaa</h2><h1>kaikille</h1>"
-    heading_tools: "<h2>Valmis seuraavaan vaiheeseen?</h2><h1>JavaScript työkaluja
-      lukioon</h1>"
-    heading_legacy: "<h2>Yleinen kurssimme</h2><h1>kaiken ikäisille</h1>"
     your_gallery: Galleria
     no_primary_course: Kokeile kurssia Code Studiossa
     choose_next_course: Kokeile jotakin allaolevista Code Studion kursseista
@@ -645,11 +617,6 @@ fi:
     header_artist: Taiteilija
     report_abuse: Ilmoita väärinkäytöksestä
   landing:
-    prerelease: Tämä kurssi on <span class='betatext'>beta</span>.  Tämä tarkoittaa,
-      että kurssin verso ei ole lopullinen ja siitä saattaa tulla uusia paranneltuja
-      versioita reaktiona saatuun palautteeseen.
-    prerelease_hoc2014: Tämä opetusohjelma on <span class='betatext'>beta</span>.
-      Sitä muutetaan palautteen mukaisesti sen parantamiseksi.
     report_bug: Raportoi ongelma
     support: Katso ohjeet
     support_url: "//support.code.org"
@@ -719,10 +686,6 @@ fi:
   age_interstitial:
     age: Ikäsi
     header: Käyttäjätilin tietojen päivitys
-    message: Olemme päivittämässä käyttökokemustamme luodaksemme sinulle vahvemman
-      yksityisyyden suojan. Tämän vuoksi nykyisten käyttäjien tulee antaa ikänsä.<br/>Kuten
-      aina, code.org ei koskaan vuokraa, myy tai jaa tätä tietoa kolmansille osapuolille.
-    sign_out: Jos et halua kertoa ikääsi voit <a href="%{url}">kirjautua ulos</a>.
   terms_interstitial:
     title: Päivitetyt käyttöehdot ja Tietosuojakäytäntö
     tos: Ehdot
@@ -821,11 +784,8 @@ fi:
   peer_review:
     accepted:
       name: Hyväksytty
-      description: "<strong>Kyllä</strong>, tämä raportti <strong>täyttää</strong>
-        vaatimukset"
     rejected:
       name: Hylätty
-      description: "<strong>Ei</strong>, tämä raportti <strong>ei täytä</strong> vaatimuksia"
     escalated:
       description: Haluaisin ohjaajan tarkistavan tämän raportin
     instructor_feedback: Ohjaajan palaute

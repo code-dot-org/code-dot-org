@@ -2,10 +2,12 @@
   hour_of_code: "كاژێری كۆدنووسی"
   hello: "چۆنی جیهان"
   select_language: "تکایە زمانەکەت هەڵبژێرە"
+  upgrade_ie_message: "Code.org بەم زووانە پاڵپشتیکردنی ئینتەرنێت ئێکسپڵۆرەر 8، 9، 10 لادەدات. تکایە وێبگەڕەکەت بۆ وەشانێکی تازە ئەپدەیت بکە."
+  upgrade_ie_message_csedweek: "CSEdWeek.org بەم زووانە پاڵپشتیکردنی ئینتەرنێت ئێکسپڵۆرەر 8، 9، 10 لادەدات. تکایە وێبگەڕەکەت بۆ وەشانێکی تازە ئەپدەیت بکە."
   upgrade_ie_link: "زیاتر فێرببە"
-  en: "زانستی كۆپیتەر"
+  en: "زانستی كۆمپیوتەر"
   computer_science_edweek: "هەفتەی فێربوونی زانستی کۆمپیوتەر"
-  csedweek_dates: "لە ٨ تا ١٤ ی مانگی ١٢ ساڵی ٢٠١٢"
+  csedweek_dates: "٣-٩ کانوونی دووەم، 2018"
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">یەك کاژێری کۆد نووسی</a> نزیك بوەتەوە. , بانگەشەیەك بۆ هەموو مامۆستا و رێکخەران<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">پلانی یەك کاتژێری کۆدنووسی خۆت داڕێژە</a>'
   csedweek_banner_teachers: "<a href=\"/csteacher\" style=\"color: white; text-decoration: none; font-weight: 400\">\nئایا تۆ مامۆستای زانستی کۆمپیوتەری؟ تکایە سەیری سەرچاوەی تری هەفتەی فێرکاری زانستی کۆمپیوتەر\n</a>"
   n_have_learned_an_hoc: "<h1>Try an</h1>\n<h2>كاژێری كۆدنووسی</h2>\n<h3> # تەواوبووە </h3>"
@@ -14,6 +16,7 @@
   petition_message: "هەموو قوتابیەك لە هەر قوتابخانەیەك دەبێ دەرفەتی فێربوونی زانستی کۆمپیوتەری بدرێتێ"
   petition_sign_message: 'ئەگەر ڕەزامەندی، ناوت واژووبکە. بەشداربە لەگەڵ # کەسی تر.'
   petition_sign_message_support: 'ئەگەر پاڵپشتیمان لێدەكەی، ناوت واژووبکە. بەشداربە لەگەڵ # کەسی تر.'
+  petition_join_others: 'بەشداری # کەسی تر بە'
   name: "ناو"
   email: "ئیمەیڵ"
   zipcode: "ژمارەی پۆستە یان وولات"
@@ -164,7 +167,7 @@
   homepage_action_text_codevideo: "ڤیدیۆکە ببینە"
   homepage_action_text_teachervideo: "ڤیدیۆکە ببینە"
   homepage_action_text_watchvideo: "ڤیدیۆکە ببینە"
-  homepage_action_text_learn: "Start learning"
+  homepage_action_text_learn: "دەست بە فێربوون بکە"
   homepage_action_text_signpetition: "داواکە واژووبکە"
   homepage_signpetition_dropdown: "داواکەمان واژوو بکە &#x25BE;"
   homepage_banner_text_link: "زیاتر فێرببە"
@@ -248,9 +251,11 @@
   dashboard_navigation_manage_students: "بەڕێوەبردنی قوتابییەکان"
   dashboard_navigation_student: 'قوتابی: %{student_name}'
   dashboard_sections_table_students: "خوێندکارەکان"
+  dashboard_sections_close: "داخستن"
   dashboard_students_name: 'ناو'
   dashboard_students_male: "نێر"
   dashboard_students_female: "مێ"
+  dashboard_sequence: "زنجیرە"
   dashboard_grade_other: "هی تر"
   dashboard_login_none: "ئیمەیڵ"
   dashboard_stage: "قۆناغ"
@@ -264,6 +269,8 @@
   teachers_notes: "تێبینییەکانی مامۆستا"
   blockly_name: "بلۆکلی"
   course1_name: "Ders 1"
+  applab_name: "تاقیگەی ئاپ"
+  gamelab_name: "تاقیگەی یاری"
   lightbot_gradelevel: "هەموو تەمەنەكان"
   thinkersmith_gradelevel: "هەموو تەمەنەكان"
   lightbotintl_gradelevel: "هەموو تەمەنەكان"
@@ -302,6 +309,7 @@
   user_header_settings: "هەژمارەکەم"
   user_header_logout: "دەرچوون"
   user_header_signin: "چوونەژوورەوە"
+  user_header_gamelab: "تاقیگەی یاری"
   applab_tile_start_tutorial: "دەستپێبکە"
   hoc_overview_start_tutorial: "دەستپێبکە"
   hoc2018_creativity_create: "ez"

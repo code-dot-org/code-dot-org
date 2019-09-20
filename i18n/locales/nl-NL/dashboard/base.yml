@@ -32,6 +32,7 @@ nl:
         finish_sign_up_subheader_provider: 'Vul de volgende informatie in om het aanmaken van een Code.org-account met <strong>%{provider}</strong> voor <strong>%{email}</strong> te voltooien.'
         error:
           future: kan niet in de toekomst
+  beta: "beta"
   hello: "Hallo wereld"
   welcome_back: "Welkom terug, %{name}"
   your_professional_learning_plan: "Jouw professionele leerplan"
@@ -45,13 +46,9 @@ nl:
   okay: "Oké"
   or: "of"
   heading_x_of_y: "%{heading} (pagina %{x} van %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Voeg een leraar toe:'
       placeholder: "Sectiecode (ABCDEF)"
-      instructions: "Voer hier de code in die je van je leraar hebt gekregen. De code bestaat uit 6 letters zoals \"ABCDEF\"."
-      instructions_short: "Voer je code van 6 letters van de sectie in"
-    submit: 'voeg leraar toe'
   add_hint_form:
     placeholder: 'Voer hier uw hint'
     submit: 'Hint toevoegen'
@@ -80,8 +77,6 @@ nl:
     continue_with: 'Ga verder met %{provider}'
     sign_in_with: 'Meld je aan met %{provider}'
     signed_in: 'Ingelogd!'
-    signed_out: 'Je bent nu uitgelogd uit <a href="%{url}">Code.org</a>.'
-    sign_out_of: 'Je hebt %{provider} gebruikt om in te loggen. <a href="%{url}">Klik hier </a> om je af te melden bij %{provider}.'
     already_signedup: 'Al aangemeld?'
     notyet_signedup: "nog niet aangesloten?"
     google_oauth2: 'Google Account'
@@ -172,7 +167,6 @@ nl:
     login: 'Aanmelden'
     invalid_login: 'Onjuiste login, probeer opnieuw'
     pair_programming: 'Ik werk met een partner achter de computer'
-    student_privacy: "Meer informatie over waarom u niet uw volledige naam ziet vindt u <a href='%{student_privacy_blog}' target='_blank'> hier</a>."
   password:
     reset_form:
       title: 'Wachtwoord vergeten?'
@@ -379,9 +373,6 @@ nl:
     tried: 'Geprobeerd'
   home:
     title: "Code Studio"
-    description: 'Code Studio is de basis voor online cursussen gemaakt door code.org'
-    lines_of_code: "%{lines_count} REGELS CODE DIE GESCHREVEN DOOR STUDENTEN"
-    lines_of_code_linebreak: "%{lines_count} REGELS CODE<br/>GESCHREVEN DOOR %{students_count} MILJOEN LEERLINGEN"
     all_courses: "Overzicht van cursussen 1, 2 en 3"
     lesson_plans: "Lesplannen"
     signin_message: "Al aangemeld? %{link}"
@@ -411,11 +402,6 @@ nl:
     test_videos_help: 'Test de nieuwe video-speler op uw school'
     try_beta_courses: 'Nieuw! Probeer cursussen die nog in ontwikkeling zijn voor basisschoolleerlingen'
     use_as_teacher: 'Gebruik de site als leerkracht'
-    heading_hoc2014: "<h2>Uur Code voor</h2><h1>Alle leeftijden</h1>"
-    heading_elementary: "<h2>20 uur cursussen voor</h2><h1>Beginners (alle leeftijden)</h1>"
-    heading_apps: "<h2>Leuk voor</h2><h1>Iedereen</h1>"
-    heading_tools: "<h2>Klaar voor de volgende stap?</h2><h1>JavaScript Tools voor de Middelbare School</h1>"
-    heading_legacy: "<h2>Onze algemene cursus voor</h2><h1>Alle Leeftijden</h1>"
     your_gallery: Galerij
     no_primary_course: "Probeer een cursus bij Code Studio"
     choose_next_course: "Probeer een Code Studio cursus door er hier onder één te kiezen"
@@ -591,8 +577,6 @@ nl:
     header_artist: "Kunstenaar"
     report_abuse: "Misbruik Melden"
   landing:
-    prerelease: "Deze cursus is in <span class='betatext'>beta</span>. Dat betekent dat het nog niet de uiteindelijke versie van de cursus is, en nog zal worden aangepast wanneer we feedback krijgen en verbeteringen doorvoeren."
-    prerelease_hoc2014: "Deze handleiding is in <span class='betatext'>beta</span>. Deze handleiding wordt bijgewerkt afhankelijk van ontvangen feedback en er worden verbeteringen aan aangebracht."
     report_bug: "Meld Bug"
     support: "Help"
     support_url: "//support.code.org"
@@ -658,8 +642,6 @@ nl:
   age_interstitial:
     age: Je leeftijd
     header: Update Account Informatie
-    message: "We zijn bezig onze ervaring te verbeteren zodat je privacy nog beter wordt gewaarborgd. Hiervoor moeten we bestaande gebruikers vragen hier hun leeftijd in te vullen.<br/>Zoals altijd zal code.org deze informatie nooit uitlenen, verkopen of delen met anderen."
-    sign_out: 'Als je je leeftijd niet wilt geven kun je <a href="%{url}">uitloggen</a>.'
   terms_interstitial:
     tos: "Gebruiksvoorwaarden"
     privacy: "Privacybeleid"
@@ -739,10 +721,8 @@ nl:
   peer_review:
     accepted:
       name: 'Geaccepteerd'
-      description: '<strong>Ja</strong>, deze inschrijving <strong>voldoet aan</strong> de eisen'
     rejected:
       name: 'Afgewezen'
-      description: '<strong>Nee</strong>, deze inschrijving <strong>voldoet niet aan</strong> de eisen'
     escalated:
       name: 'Gëscaleerd'
       description: 'Ik wil dat een instructeur deze inschrijving herziet'

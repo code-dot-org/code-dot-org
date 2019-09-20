@@ -473,7 +473,7 @@ is:
   highlights_constant_ny_heading: After an epic battle, 80% of Brooklyn schools did the Hour of Code vs. 60% in Chicago. Not bad!
   highlights_constant_ny_short_heading: Brooklyn beats Chicago
   highlights_constant_athletes_heading: Champions and gold medalists Serena Williams, Neymar Jr, Carmelo Anthony and more inspire students to push themselves.
-  highlights_constant_athletes_short_heading: Push yourself
+  highlights_constant_athletes_short_heading: Ögraðu þér
   footer_copyright_message: 'Höfundarréttur 2015 Code.org. Öll réttindi áskilin.'
   footer_trademark_message: 'Hour of Code™ er vörumerki Code.org.'
   footer_menu_partners: 'Samstarfsaðilar'
@@ -488,7 +488,7 @@ is:
   learn_robotics_banner_heading: 'Þjarkar og rafrásir'
   learn_robotics_banner_blurb: 'Eru til vélmenni eða sett fyrir forritun vélbúnaðar? Notaðu þennan búnað með verkefnunum hér fyrir neðan og búðu til áþreifanlega Klukkustund kóðunar fyrir nemendur á öllum aldri! Sum verkefnin eru meira að segja með herma svo það er hægt að byrja án nokkurs vélbúnaðar.'
   tutorial_danceparty_name: "Danspartý"
-  tutorial_chibitronics_name: "Chibitronics: Illuminated Story"
+  tutorial_chibitronics_name: "Chibitronics: Ljómandi saga"
   tutorial_athlete_name: "Code your own sports game"
   tutorial_moana_name: "Moana: Wayfinding with Code"
   tutorial_star-wars_name: "Star Wars: Building a Galaxy with Code"
@@ -498,12 +498,12 @@ is:
   tutorial_kodable-pre_name: "Kodable (pre-readers welcome)"
   tutorial_highseas_name: "Adventure on the High Seas"
   tutorial_capython_name: "Python Turtle Graphics"
-  tutorial_frzn_name: "Code with Anna and Elsa"
-  tutorial_cocom_name: "CodeCombat: Escape the Dungeon!"
-  tutorial_play-lab_name: "Play Lab"
+  tutorial_frzn_name: "Kóðað með Önnu og Elsu"
+  tutorial_cocom_name: "CodeCombat: Flýðu úr dýflissunni!"
+  tutorial_play-lab_name: "Leikjasmiðjan"
   tutorial_boxisland_name: "Box Island"
-  tutorial_textcomp_name: "Text Compression"
-  tutorial_encryption_name: "Simple Encryption"
+  tutorial_textcomp_name: "Þjöppun texta"
+  tutorial_encryption_name: "Einföld dulkóðun"
   tutorial_kanopixel_name: "Kano Pixel Hack"
   tutorial_foos_name: "codeSpark Academy with The Foos"
   tutorial_tynkerdd_name: "Dragon Dash"
@@ -517,10 +517,10 @@ is:
   tutorial_tinspire_name: "10 Minutes of Code for the TI-Nspire CX"
   tutorial_itchbounceball_name: "ITCH Bouncing Ball (in Scratch)"
   tutorial_vidclim_name: "Vidcode: Climate Science & Code"
-  tutorial_matlab_name: "Learn to Code with MATLAB"
-  tutorial_flap_name: "Make a Flappy game"
+  tutorial_matlab_name: "Lærðu að kóða með MATLAB"
+  tutorial_flap_name: "Búðu til Flappy leik"
   tutorial_galaxy_name: "Galaxy Game Jam"
-  tutorial_inf_name: "Infinity Play Lab"
+  tutorial_inf_name: "Infinity Leikjasmiðja"
   tutorial_tynkersol_name: "Solar System STEM Kit"
   tutorial_itchg_name: "ITCH Name IT - Geography"
   tutorial_como_name: "Coding Adventure"
@@ -722,7 +722,7 @@ is:
   tutorial_minecraft-2016_name: "Minecraft Hour of Code"
   tutorial_thinkersmith-es_name: "Mis Amigos Roboticos"
   tutorial_pixie_name: "PIXIE Challenges"
-  tutorial_play_name: "Play Lab"
+  tutorial_play_name: "Leikjasmiðjan"
   tutorial_robomind-nl_name: "Program a virtual robot"
   tutorial_spheroi_name: "Blocks 1: Intro"
   tutorial_spherol_name: "Blocks 3: Lights"
