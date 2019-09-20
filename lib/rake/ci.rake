@@ -17,6 +17,9 @@ namespace :ci do
         end
       end
     elsif CDO.daemon && CDO.chef_managed
+      # Temporarily disable automatic chef cookbook updates for Ubuntu upgrade
+      next
+
       ChatClient.log('Updating Chef cookbooks...')
       RakeUtils.with_bundle_dir(cookbooks_dir) do
         # Automatically update Chef cookbook versions in staging environment.
