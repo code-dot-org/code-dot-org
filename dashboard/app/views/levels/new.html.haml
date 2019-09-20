@@ -69,7 +69,7 @@
     = link_to t('crud.show'), level_path(level)
     = link_to t('crud.edit'), edit_level_path(level)
     = link_to t('crud.delete'), level_path(level, redirect: new_level_path), method: :delete
-    = link_to 'Clone', level_clone_path(level), method: :post
+    = link_to 'Clone', clone_level_path(level), method: :post
 
 %h2 All levels
 %ul

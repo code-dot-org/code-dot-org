@@ -11,7 +11,6 @@ import {ViewType, SET_VIEW_TYPE} from './viewAsRedux';
 import {processedLevel} from '@cdo/apps/templates/progress/progressHelpers';
 import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
 import {authorizeLockable} from './stageLockRedux';
-import i18n from '@cdo/locale';
 
 // Action types
 export const INIT_PROGRESS = 'progress/INIT_PROGRESS';
@@ -677,7 +676,7 @@ export const categorizedLessons = (state, includeBonusLevels = false) => {
   const allLevels = levelsByLesson(state);
 
   state.stages.forEach((stage, index) => {
-    const category = stage.flex_category || i18n.flexCategoryContent();
+    const category = stage.flex_category;
     const lesson = lessonFromStageAtIndex(state, index);
     let stageLevels = allLevels[index];
     if (!includeBonusLevels) {

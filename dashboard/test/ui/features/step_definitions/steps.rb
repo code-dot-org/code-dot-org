@@ -1215,10 +1215,13 @@ And(/^I save the section url$/) do
   @section_url = "http://studio.code.org/join/#{section_code}"
 end
 
-And(/^I navigate to the section url$/) do
-  steps %Q{
-    Given I am on "#{@section_url}"
-  }
+And(/^I join the section$/) do
+  page_load(true) do
+    steps %Q{
+      Given I am on "#{@section_url}"
+      And I click selector ".btn.btn-primary" once I see it
+    }
+  end
 end
 
 And(/^I wait until I am on the join page$/) do
@@ -1707,4 +1710,24 @@ end
 Then /^page text does (not )?contain "([^"]*)"$/ do |negation, text|
   body_text = @browser.execute_script('return document.body && document.body.textContent;').to_s
   expect(body_text.include?(text)).to eq(negation.nil?)
+end
+
+def pass_time_for_user(name, amount_of_time)
+  require_rails_env
+  user = User.find_by_email_or_hashed_email(@users[name][:email])
+  user.created_at = amount_of_time
+  user.last_seen_school_info_interstitial = amount_of_time if user.last_seen_school_info_interstitial
+  user.save!
+  user.user_school_infos.each do |info|
+    info.last_confirmation_date = amount_of_time
+    info.save!
+  end
+end
+
+And(/^eight days pass for user "([^"]*)"$/) do |name|
+  pass_time_for_user name, 8.days.ago
+end
+
+And(/^one year passes for user "([^"]*)"$/) do |name|
+  pass_time_for_user name, 1.year.ago
 end

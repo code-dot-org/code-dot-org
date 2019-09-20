@@ -14,5 +14,5 @@ teacher_markdown <<MARKDOWN
 MARKDOWN
 
 markdown <<MARKDOWN
-![](https://images.code.org/bf1d76977330095d7e39a7eddcf8f74c-image-1566493963722.png)
+<img src="https://images.code.org/3b8ba187e80107246e73f95255ca0c90-image-1566577844940.png" width=300px>
 MARKDOWN

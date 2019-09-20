@@ -10,7 +10,7 @@
 #  updated_at       :datetime
 #  best_result      :integer
 #  script_id        :integer
-#  level_source_id  :integer
+#  level_source_id  :integer          unsigned
 #  submitted        :boolean
 #  readonly_answers :boolean
 #  unlocked_at      :datetime

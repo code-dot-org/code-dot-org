@@ -13,11 +13,13 @@ import ManageStudentsTable, {
   sortRows
 } from '@cdo/apps/templates/manageStudents/ManageStudentsTable';
 import ManageStudentsActionsCell from '@cdo/apps/templates/manageStudents/ManageStudentsActionsCell';
+import ManageStudentNameCell from '@cdo/apps/templates/manageStudents/ManageStudentsNameCell';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import manageStudents, {
   RowType,
   setLoginType,
-  setStudents
+  setStudents,
+  startEditingStudent
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import teacherSections, {
   setSections
@@ -141,6 +143,41 @@ describe('ManageStudentsTable', () => {
           }
         />
       );
+    });
+
+    it('renders an editable name field', async () => {
+      const wrapper = mount(
+        <Provider store={getStore()}>
+          <ManageStudentsTable />
+        </Provider>
+      );
+      // Begin editing the student
+      // (Using redux directly to do this requires us to trigger a manual update)
+      getStore().dispatch(startEditingStudent(fakeStudent.id));
+      wrapper.update();
+
+      const manageStudentNameCell = () =>
+        wrapper
+          .find(ManageStudentNameCell)
+          .findWhere(w => w.prop('id') === fakeStudent.id)
+          .first();
+
+      // Check for a name cell with expecting initial editing props
+      expect(manageStudentNameCell().exists()).to.be.true;
+      expect(manageStudentNameCell().prop('isEditing')).to.be.true;
+
+      // Find the name input
+      const nameInput = () =>
+        manageStudentNameCell()
+          .find('input')
+          .first();
+      expect(nameInput().prop('value')).to.equal(fakeStudent.name);
+
+      // Simulate a name change
+      nameInput().simulate('change', {target: {value: fakeStudent.name + 'z'}});
+
+      // Expect the input box value to have changed
+      expect(nameInput().prop('value')).to.equal(fakeStudent.name + 'z');
     });
   });
 });

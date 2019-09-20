@@ -70,9 +70,9 @@ class Level < ActiveRecord::Base
     rubric_performance_level_4
     mini_rubric
     encrypted
+    editor_experiment
     teacher_markdown
     bubble_choice_description
-    starter_assets
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495
@@ -553,11 +553,14 @@ class Level < ActiveRecord::Base
   # Create a copy of this level named new_name, and store the id of the original
   # level in parent_level_id.
   # @param [String] new_name
+  # @param [String] editor_experiment
   # @raise [ActiveRecord::RecordInvalid] if the new name already is taken.
-  def clone_with_name(new_name)
+  def clone_with_name(new_name, editor_experiment: nil)
     level = dup
     # specify :published to make should_write_custom_level_file? return true
-    level.update!(name: new_name, parent_level_id: id, published: true)
+    level_params = {name: new_name, parent_level_id: id, published: true}
+    level_params[:editor_experiment] = editor_experiment if editor_experiment
+    level.update!(level_params)
     level
   end
 
@@ -573,24 +576,27 @@ class Level < ActiveRecord::Base
   # @param [String] new_suffix The suffix to append to the name of the original
   #   level when choosing a name for the new level, replacing any existing
   #   name_suffix if one exists.
-  def clone_with_suffix(new_suffix)
+  # @param [String] editor_experiment Optional value to set the
+  #   editor_experiment property to on the newly-created level.
+  def clone_with_suffix(new_suffix, editor_experiment: nil)
     # Make sure we don't go over the 70 character limit.
     new_name = "#{base_name[0..64]}#{new_suffix}"
 
     return Level.find_by_name(new_name) if Level.find_by_name(new_name)
 
-    level = clone_with_name(new_name)
+    level = clone_with_name(new_name, editor_experiment: editor_experiment)
 
     update_params = {name_suffix: new_suffix}
+    update_params[:editor_experiment] = editor_experiment if editor_experiment
 
     if project_template_level
-      new_template_level = project_template_level.clone_with_suffix(new_suffix)
+      new_template_level = project_template_level.clone_with_suffix(new_suffix, editor_experiment: editor_experiment)
       update_params[:project_template_level_name] = new_template_level.name
     end
 
     unless contained_levels.empty?
       update_params[:contained_level_names] = contained_levels.map do |contained_level|
-        contained_level.clone_with_suffix(new_suffix).name
+        contained_level.clone_with_suffix(new_suffix, editor_experiment: editor_experiment).name
       end
     end
 

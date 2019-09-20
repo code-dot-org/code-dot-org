@@ -1,11 +1,11 @@
 name 'csp-u1-exam1-overflow-error_2020'
 height 'auto'
 
-question 'When visiting a museum Lian takes a photo of a painting with a smartphone which stores the photo as an image file. Which of the following best describes the differences between the painting itself and the photo of the painting stored on the smartphone.'
-wrong ‘Both the painting and the photo are analog.’
-right ‘The photo is a digital representation of the analog painting’
-wrong ‘Sampling can be used to determine whether the analog image is an accurate representation of the painting’
-wrong ‘The phone can represent the photo in either digital or analog formats depending on the sampling technique that is used’
+question 'Your computer uses 4 bits to represent decimal numbers (0, 1, 2, 3 and so on) in binary. What is the SMALLEST number for which an overflow error occur?’
+wrong ‘14’
+wrong ‘15’
+right ‘16’
+wrong ‘17’
 
 teacher_markdown <<MARKDOWN
 

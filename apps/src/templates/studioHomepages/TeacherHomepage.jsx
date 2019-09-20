@@ -14,6 +14,10 @@ import shapes from './shapes';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import i18n from '@cdo/locale';
 import CensusTeacherBanner from '../census2017/CensusTeacherBanner';
+import DonorTeacherBanner, {
+  donorTeacherBannerOptionsShape
+} from '@cdo/apps/templates/DonorTeacherBanner';
+import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
   clear: {
@@ -32,9 +36,11 @@ export default class TeacherHomepage extends Component {
     queryStringOpen: PropTypes.string,
     canViewAdvancedTools: PropTypes.bool,
     isEnglish: PropTypes.bool.isRequired,
+    ncesSchoolId: PropTypes.string,
     locale: PropTypes.string,
     showCensusBanner: PropTypes.bool.isRequired,
-    ncesSchoolId: PropTypes.string,
+    donorBannerName: PropTypes.string,
+    donorTeacherBannerOptions: donorTeacherBannerOptionsShape,
     censusQuestion: PropTypes.oneOf(['how_many_10_hours', 'how_many_20_hours']),
     teacherName: PropTypes.string,
     teacherId: PropTypes.number,
@@ -43,7 +49,8 @@ export default class TeacherHomepage extends Component {
   };
 
   state = {
-    showCensusBanner: this.props.showCensusBanner
+    showCensusBanner: this.props.showCensusBanner,
+    donorBannerName: this.props.donorBannerName
   };
 
   bindCensusBanner = banner => {
@@ -155,6 +162,7 @@ export default class TeacherHomepage extends Component {
       ncesSchoolId,
       censusQuestion,
       schoolYear,
+      donorTeacherBannerOptions,
       teacherId,
       teacherName,
       teacherEmail,
@@ -168,7 +176,7 @@ export default class TeacherHomepage extends Component {
     const showSpecialAnnouncement = false;
 
     // Hide the regular announcement/notification for now.
-    const showAnnouncement = false;
+    const showAnnouncement = true;
 
     return (
       <div>
@@ -226,6 +234,17 @@ export default class TeacherHomepage extends Component {
             <br />
           </div>
         )}
+        {experiments.isEnabled('donorTeacherBanner') &&
+          isEnglish &&
+          this.state.donorBannerName && (
+            <div>
+              <DonorTeacherBanner
+                options={donorTeacherBannerOptions}
+                showPegasusLink={true}
+              />
+              <div style={styles.clear} />
+            </div>
+          )}
         <TeacherSections queryStringOpen={queryStringOpen} locale={locale} />
         <RecentCourses
           courses={courses}

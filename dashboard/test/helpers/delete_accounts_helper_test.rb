@@ -1028,33 +1028,80 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "clears primary_email from pd_teacher_applications" do
-    application = create :pd_teacher_application
-    refute_empty application.primary_email
+    user = create :teacher
+    secondary_email = 'secondary@email.com'
 
-    purge_user application.user
+    ActiveRecord::Base.connection.exec_query(
+      <<-SQL
+        INSERT INTO `pd_teacher_applications` (user_id, primary_email, secondary_email, created_at, updated_at, application)
+        VALUES (#{user.id}, '#{user.email}', '#{secondary_email}', '#{Time.now.to_s(:db)}', '#{Time.now.to_s(:db)}', '{}')
+      SQL
+    )
 
-    application.reload
-    assert_empty application.primary_email
+    application = ActiveRecord::Base.connection.exec_query(
+      "SELECT * from `pd_teacher_applications` WHERE `pd_teacher_applications`.`user_id` = #{user.id}"
+    ).first
+
+    refute_empty application["primary_email"]
+
+    purge_user user
+
+    application = ActiveRecord::Base.connection.exec_query(
+      "SELECT * from `pd_teacher_applications` WHERE `pd_teacher_applications`.`user_id` = #{user.id}"
+    ).first
+
+    assert_empty application["primary_email"]
   end
 
   test "clears secondary_email from pd_teacher_applications" do
-    application = create :pd_teacher_application
-    refute_empty application.secondary_email
+    user = create :teacher
+    secondary_email = 'secondary@email.com'
 
-    purge_user application.user
+    ActiveRecord::Base.connection.exec_query(
+      <<-SQL
+        INSERT INTO `pd_teacher_applications` (user_id, primary_email, secondary_email, created_at, updated_at, application)
+        VALUES (#{user.id}, '#{user.email}', '#{secondary_email}', '#{Time.now.to_s(:db)}', '#{Time.now.to_s(:db)}', '{}')
+      SQL
+    )
 
-    application.reload
-    assert_empty application.secondary_email
+    application = ActiveRecord::Base.connection.exec_query(
+      "SELECT * from `pd_teacher_applications` WHERE `pd_teacher_applications`.`user_id` = #{user.id}"
+    ).first
+
+    refute_empty application["secondary_email"]
+
+    purge_user user
+
+    application = ActiveRecord::Base.connection.exec_query(
+      "SELECT * from `pd_teacher_applications` WHERE `pd_teacher_applications`.`user_id` = #{user.id}"
+    ).first
+
+    assert_empty application["secondary_email"]
   end
 
   test "clears application from pd_teacher_applications" do
-    application = create :pd_teacher_application
-    refute_empty application.application
+    user = create :teacher
+    secondary_email = 'secondary@email.com'
 
-    purge_user application.user
+    ActiveRecord::Base.connection.exec_query(
+      <<-SQL
+        INSERT INTO `pd_teacher_applications` (user_id, primary_email, secondary_email, created_at, updated_at, application)
+        VALUES (#{user.id}, '#{user.email}', '#{secondary_email}', '#{Time.now.to_s(:db)}', '#{Time.now.to_s(:db)}', '{\"primaryEmail\": \"#{user.email}\"}')
+      SQL
+    )
 
-    application.reload
-    assert_empty application.application
+    application = ActiveRecord::Base.connection.exec_query(
+      "SELECT * from `pd_teacher_applications` WHERE `pd_teacher_applications`.`user_id` = #{user.id}"
+    ).first
+
+    refute_empty application["application"]
+
+    purge_user user
+
+    application = ActiveRecord::Base.connection.exec_query(
+      "SELECT * from `pd_teacher_applications` WHERE `pd_teacher_applications`.`user_id` = #{user.id}"
+    ).first
+    assert_empty application["application"]
   end
 
   #
@@ -1937,33 +1984,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     unsafe_purge_user program_manager
 
     refute_nil program_manager.purged_at
-  end
-
-  test 'refuses to delete a RegionalPartner.contact account in normal conditions' do
-    regional_partner = create :regional_partner
-    contact = regional_partner.contact
-
-    err = assert_raises DeleteAccountsHelper::SafetyConstraintViolation do
-      purge_user contact
-    end
-
-    assert_equal <<~MESSAGE, err.message
-      Automated purging of an account listed as the contact for a regional partner is not supported at this time.
-      If you are a developer attempting to manually purge this account, run
-
-        DeleteAccountsHelper.new(bypass_safety_constraints: true).purge_user(user)
-
-      to bypass this constraint and purge the user from our system.
-    MESSAGE
-  end
-
-  test 'can delete a RegionalPartner.contact account if bypassing safety constraints' do
-    regional_partner = create :regional_partner
-    contact = regional_partner.contact
-
-    unsafe_purge_user contact
-
-    refute_nil contact.purged_at
   end
 
   test 'refuses to delete a RegionalPartner.program_managers account in normal conditions' do
