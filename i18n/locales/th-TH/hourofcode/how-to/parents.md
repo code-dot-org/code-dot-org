@@ -1,9 +1,10 @@
 ---
-title: <%= hoc_s(:title_how_to_parents).inspect %>
+title: How-to guide for parents
 layout: wide
 nav: how_to_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # How to do an Hour of Code with your child
 
@@ -15,11 +16,11 @@ nav: how_to_nav
 
 ## 2) Choose a tutorial
 
-We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
+We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
 
 **All Hour of Code tutorials are self-guided - allowing your child to work at their own pace and skill level**
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
+[![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
 ## 3) วางแผนเทคโนโลยีที่จำเป็น
 
@@ -36,13 +37,13 @@ The best Hour of Code experience will be with Internet-connected computers. But 
 - วิดีโอเปิดตัวเดิมของ Code.org มี Bill Gates, Mark Zuckerberg เเละ NBA star Chris Bosh (มีแบบ [1 นาที](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 นาที](https://www.youtube.com/watch?v=nKIu9yen5nc) เเละ [ 9 นาที](https://www.youtube.com/watch?v=dU1xS07N-FA))
 - The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A).
 - [ประธานาธิบดี Obama เชิญชวนให้นักเรียนทุกคนเรียนวิชาวิทยาการคอมพิวเตอร์](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-- หา[แหล่ง](%= codeorg_url('/inspire') %)และ[วิดีโอ](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP)สร้างแรงบันดาลใจอื่นๆ
+- Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 มันโอเคถ้าทั้งคุณและลูกของคุณเป็นมือใหม่ในวิชาวิทยาการคอมพิวเตอร์ นี่เป็นแนวคิดสำหรับแนะนำกิจกรรม Hour of Code ของคุณ:
 
 - Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
-- เขียนรายชื่อสิ่งที่ใช้โปรแกรมในชีวิตประจำวัน
-- ดูเคล็ดลับในการทำให้เด็กผู้หญิงสนใจวิชาวิทยาการคอมพิวเตอร์[ที่นี่](%= codeorg_url('/girls') %)
+- เขียนรายชื่อของสิ่งที่ใช้โปรแกรมคอมพิวเตอร์ในชีวิตประจำวัน
+- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
 
 ต้องการแนวคิดอื่นๆอีกหรือไม่? ลองดู[แผ่นแบบการสอน](/files/AfterschoolEducatorLessonPlanOutline.docx)ของเราสำหรับกิจกรรมที่ดีที่สุดจากนักการศึกษาที่มีประสบการณ์
 
@@ -62,7 +63,7 @@ The best Hour of Code experience will be with Internet-connected computers. But 
 
 ## 6) ฉลอง
 
-[พิมพ์ประกาศนียบัตร](%= codeorg_url('/certificates') %)สำหรับลูกของคุณ (และตัวคุณเองด้วย!)
+[Print certificates]({{ urls/certificates }}) for your child (and yourself!).
 
 แชร์รูปถ่ายและวิดีโอของกิจกรรม Hour of Code ของคุณลงในโซเชียลมีเดีย ใช้ #HourOfCode และ @codeorg เพื่อที่เราจะสามารถเห็นความสำเร็จของคุณด้วยเช่นกัน!
 
@@ -72,7 +73,7 @@ Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/20014
 
 The Hour of Code is just the first step in a journey to learn more about how technology works and how to create software applications. To continue this journey:
 
-- Encourage your child to continue [to learn online](%= codeorg_url('/learn/beyond') %).
-- Help [promote](%= resolve_url('/promote') %) computer science education in your child’s school district.
+- Encourage your child to continue [to learn online]({{ urls/learn_beyond }}).
+- Help [promote]({{ urls/promote }}) computer science education in your child’s school district.
 
-<%= view :signup_button %>
+{{ signup_button }}

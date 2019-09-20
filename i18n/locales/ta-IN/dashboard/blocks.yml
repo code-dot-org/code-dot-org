@@ -114,11 +114,6 @@ ta:
           CONDITION:
             '"when"': எப்போது
             '"while"': எப்பொழுது
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': மெய்
-            'false': தவறு
       gamelab_keyPressed:
         options:
           CONDITION:

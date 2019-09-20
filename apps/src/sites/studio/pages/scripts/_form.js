@@ -17,6 +17,7 @@ export default function initPage(scriptEditorData) {
     .filter(stage => stage.id)
     .map(stage => ({
       position: stage.position,
+      relativePosition: stage.relative_position,
       flex_category: stage.flex_category,
       lockable: stage.lockable,
       name: stage.name,
@@ -39,10 +40,11 @@ export default function initPage(scriptEditorData) {
         }))
     }));
   const locales = scriptEditorData.locales;
+  const flexCategoryMap = scriptEditorData.flex_category_map;
 
   registerReducers({...reducers, isRtl});
   const store = getStore();
-  store.dispatch(init(stages, scriptEditorData.levelKeyList));
+  store.dispatch(init(stages, scriptEditorData.levelKeyList, flexCategoryMap));
 
   const teacherResources = (scriptData.teacher_resources || []).map(
     ([type, link]) => ({type, link})
@@ -73,6 +75,7 @@ export default function initPage(scriptEditorData) {
         hasLessonPlan={scriptData.has_lesson_plan}
         curriculumPath={scriptData.curriculum_path}
         pilotExperiment={scriptData.pilot_experiment}
+        editorExperiment={scriptData.editor_experiment}
         announcements={announcements}
         supportedLocales={scriptData.supported_locales}
         locales={locales}
@@ -82,6 +85,7 @@ export default function initPage(scriptEditorData) {
         versionYear={scriptData.version_year}
         scriptFamilies={scriptEditorData.script_families}
         versionYearOptions={scriptEditorData.version_year_options}
+        isLevelbuilder={scriptEditorData.is_levelbuilder}
       />
     </Provider>,
     document.querySelector('.edit_container')

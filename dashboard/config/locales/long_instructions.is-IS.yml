@@ -534,7 +534,7 @@ is-IS:
       CSD Problem Solving Process Video: |-
         ## Spurningar til að hugleiða
 
-        -   Hvernig notaðir þú ferlið við að leysa þrautir í síðustu kennslustund?
+        -   Hvernig notaðir þú þrautarlausnarferlið í síðustu kennslustund?
         -   Hvernig gætir þú notað þetta ferli til að leysa vandamál í þínu daglega lífi?
       CSD U2 CSS explore CSS: |-
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"markdown="1">
@@ -5662,10 +5662,10 @@ is-IS:
 
         _Vísbending: "hidden" eiginleiki með boole gildi. Ef við notum `false` tl að láta hnappinn sjást, hvað ættum við þá að nota til að fela hann aftur?_
       CSD What Makes a Computer a Computer Video_2019: |-
-        ## Spurningar til að hugsa um
+        ## Hugvekjur
 
-        -   Hvað var það sem gerði tölvur ólíkar þeim vélum sem komu áður?
-        -   Hugsaðu þér eitthvað sem þú gerir í tölvu. Hvers konar inntak, úttak, geymsla og úrvinnsla fer fram?
+        -   Hvaða greinarmunur er á tölvum og frá eldri gerðum véla?
+        -   Hugsaðu þér eitthvað sem þú gerir á tölvu. Hvers konar inntak, úttak, geymsla og úrvinnsla fer fram?
       'CSD: Animating Sprite Movement_2019': |-
         ## Spurningar til að íhuga
 
@@ -6725,9 +6725,9 @@ is-IS:
 
         Ef þessi mynd gefur þér hugmyndir, gætir þú glímt við eitthvað svipað. Annars bara eitthvað sem þér dettur í hug.
       Intro to Web Lab - Part 1_2019: |-
-        ## Spurning til að hugleiða:
+        ## Hugleiðing:
 
-        -   Hverjir eru mismunandi hlutar Vefsmiðjunnar og til hvers eru þeir notaðir?
+        -   Í hvaða ólíku hluta greinist Vefsmiðjan, og til hvers eru þeir notaðir?
       Intro to Web Lab - Part 2_2019: |-
         ## Spurningar til að hugleiða
 

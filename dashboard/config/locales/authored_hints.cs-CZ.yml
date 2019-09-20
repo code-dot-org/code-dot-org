@@ -661,6 +661,16 @@ cs-CZ:
           Pokud je hádanka příliš složitá, zkuste budovat svou funkci po částech.
 
           Přidejte pár bloků a vyzkoušejte to. Přidejte další a zkuste to znovu. Brzy se vám to podaří!
+      courseA_harvester_seq2:
+        courseA_harvester_seq2_b: Zkus sepsat kroky na papír, aby jsi našel řešení!
+      courseA_harvester_seq2_2019:
+        courseA_harvester_seq2_b: Zkus sepsat kroky na papír, aby jsi našel řešení!
+      courseA_maze_seq5:
+        courseA_maze_seq5_a: Zkus sepsat kroky na papír, aby jsi našel řešení!
+      courseA_maze_seq5_2018:
+        '1': Zkus sepsat kroky na papír, aby jsi našel řešení!
+      courseA_maze_seq5_2019:
+        '1': Zkus sepsat kroky na papír, aby jsi našel řešení!
       courseB_maze_seq6:
         courseB_maze_seq5_c: Tuto hádanku lze vyřešit dvěma způsoby.
       courseB_maze_seq6_2018:

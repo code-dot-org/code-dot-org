@@ -9837,6 +9837,8 @@ es-MX:
               name: PT de práctica Parte 3
             Unit 4 Assessment:
               name: Evaluación de la Unidad 4
+            'Lesson 15: Unit 4 Assessment':
+              name: 'Lección 15: evaluación de la unidad 4'
           title: 'Unidad 4: Variables, condicionales, funciones'
         csp1-2019:
           title: CSP Unidad 1 - Internet ('19-'20)
@@ -10140,6 +10142,16 @@ es-MX:
               name: Números binarios
             Overflow and Rounding:
               name: Desbordamiento y redondeo
+            CS Principles Unit 1 Survey:
+              name: Encuesta de la Unidad 1 de Principios de Ciencias de la Computación
+            Unit 1 Survey:
+              name: Encuesta de la Unidad 1
+            'Lesson 15: Unit Assessment':
+              name: 'Lección 15: evaluación de la unidad'
+            Unit 1 STUDENT Survey:
+              name: Encuesta de la Unidad 1 para ESTUDIANTES
+            Unit 1 TEACHER Survey:
+              name: Encuesta de la Unidad 1 para DOCENTES
           title: Piloto de la Unidad 1 de CSP
         csd-tests:
           stages:
@@ -10915,7 +10927,7 @@ es-MX:
               name: 'Proceso de resolución de problemas: ejemplo de actividades'
           title: Ejemplo de actividades en línea de Descubrimientos de Ciencias de la Computación
         csd1-pilot:
-          title: CSD Unidad 1 - La resolución de problemas y la computación ('19-'20)
+          title: CSD Unidad 1 - La resolución de problemas y la computación (versión piloto)
           description: "La unidad sobre la resolución de problemas y la computación es una introducción muy interactiva y colaborativa al campo de las ciencias de la computación, enmarcada dentro de una búsqueda más amplia orientada a resolver problemas. Practicarás el uso de un proceso de resolución de problemas para abordar una serie de desafíos y escenarios del mundo real. A continuación, aprenderás cómo las computadoras toman, generan, almacenan y procesan información para ayudar a las personas a resolver problemas. La unidad concluye con un proyecto en el que diseñas una aplicación que ayuda a resolver un problema de tu elección.\\r\n"
           description_short: "Aprende cómo los humanos trabajan con computadoras para resolver problemas."
           stages:
@@ -11038,6 +11050,20 @@ es-MX:
               name: Búsqueda e investigación
             Sources and Research:
               name: Fuentes e investigación
+            Team Problem Solving:
+              name: Resolución de problemas en equipo
+            Wireframes and Planning:
+              name: Wireframes y planificación
+            Linking Pages:
+              name: Enlaces entre páginas
+            Planning a Multi-page Website:
+              name: Planificación de un sitio con varias páginas
+            Linking and Navigation:
+              name: Enlaces y navegación
+            Peer Review and Final Touches:
+              name: Revisión de compañeros y ajustes finales
+            Project - Website for a Purpose:
+              name: Proyecto - Sitio web para un propósito específico
         csd3-pilot:
           title: CSD Unidad 3 - Animaciones y juegos ('19-'20)
           description: " En la Unidad 3, desarrollarás tu experiencia de programación a medida que programes animaciones, arte interactivo y juegos en el Laboratorio de juegos. La unidad comienza con formas simples y, a partir de los mismos conceptos de programación y el proceso de diseño que usan los científicos informáticos a diario, añade juegos más sofisticados basados en sprites. En el proyecto final, desarrollarás un programa personalizado e interactivo."
@@ -11138,6 +11164,18 @@ es-MX:
               name: Prueba posterior al proyecto
             CS Discoveries Post Course survey:
               name: Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
+            Shapes and Parameters:
+              name: Formas y parámetros
+            Random Numbers:
+              name: Números aleatorios
+            Sprites and Animations:
+              name: Sprites y animaciones
+            Create a Scene:
+              name: Crear una escena
+            Text and Captioned Scenes:
+              name: Texto y escenas con subtítulos
+            Sprite Properties:
+              name: Propiedades de Sprite
         csd-bugs:
           stages:
             Game Lab Bugs:
@@ -11171,6 +11209,16 @@ es-MX:
               name: 'Proyecto: comparte tu aplicación'
             The Need for Programming Languages:
               name: La necesidad de lenguajes de programación
+            'Project: Finish Your App':
+              name: 'Proyecto: finalizar tu aplicación'
+            Programs Explore:
+              name: Explorar programas
+            Unit 3 STUDENT Survey:
+              name: Encuesta de la Unidad 3 para ESTUDIANTES
+            Unit 3 TEACHER Survey:
+              name: Encuesta de la Unidad 3 para DOCENTES
+            'Lesson 11: Unit Assessment':
+              name: 'Lección 11: evaluación de la unidad'
           title: 'Unidad 3: Introducción al diseño de aplicaciones'
         csl-vn:
           stages:
@@ -11227,6 +11275,8 @@ es-MX:
               name: 'Paso 1: desarrollar la comprensión'
             'Step 2: Demonstrate Understanding':
               name: 'Paso 2: demostrar la comprensión'
+            Deeper Learning Overview:
+              name: Resumen del aprendizaje profundo
           title: 'Módulo 1 de Aprendizaje Profundo de Descubrimientos de Ciencias de la Computación - Muy pronto'
           description_audience: Facilitadores de Descubrimientos de las Ciencias de la Computación en período de formación 2019
           description_short: Taller 1 del año académico
@@ -11236,6 +11286,12 @@ es-MX:
               name: nueva etapa
             CS Discoveries Deeper Learning Module 2:
               name: Módulo 2 de Aprendizaje Profundo de Descubrimientos de Ciencias de la Computación
+            Deeper Learning Overview:
+              name: Resumen del aprendizaje profundo
+            'Step 1: Develop Understanding':
+              name: 'Paso 1: desarrollar la comprensión'
+            'Step 2: Demonstrate Understanding':
+              name: 'Paso 2: demostrar la comprensión'
           title: Módulo 2 de Aprendizaje Profundo de Descubrimientos de Ciencias de la Computación
           description_audience: Facilitadores de Descubrimientos de las Ciencias de la Computación en período de formación 2019
         dlp19-csd-mod-w3:
@@ -11258,11 +11314,19 @@ es-MX:
               name: 'Paso 1: desarrollar la comprensión'
             'Step 2: Demonstrate Understanding':
               name: 'Paso 2: demostrar la comprensión'
+            Deeper Learning Overview:
+              name: Resumen del aprendizaje profundo
           title: Módulo 1 de Aprendizaje Profundo de Principios de Ciencias de la Computación
         dlp19-csp-mod-w2:
           stages:
             CS Principles Deeper Learning Module 2:
               name: Módulo 2 de Aprendizaje Profundo de Principios de Ciencias de la Computación
+            Deeper Learning Overview:
+              name: Resumen del aprendizaje profundo
+            'Step 1: Develop Understanding':
+              name: 'Paso 1: desarrollar la comprensión'
+            'Step 2: Demonstrate Understanding':
+              name: 'Paso 2: demostrar la comprensión'
           title: Módulo 2 de Aprendizaje Profundo de Principios de Ciencias de la Computación
         dlp19-csp-mod-w3:
           stages:
@@ -11278,4 +11342,137 @@ es-MX:
           stages:
             Pilot Information:
               name: Información del curso piloto
+            Pilot Information 1:
+              name: Información del curso piloto 1
+            Pilot Information 2:
+              name: Información del curso piloto 2
+            Pilot Information 3:
+              name: Información del curso piloto 3
+            Pilot Information 4:
+              name: Información del curso piloto 4
+            Pilot Information 5:
+              name: Información del curso piloto 5
+            Pilot Information 6:
+              name: Información del curso piloto 6
+            Pilot Information 7:
+              name: Información del curso piloto 7
+            Pilot Information 8:
+              name: Información del curso piloto 8
+            Pilot Information 9:
+              name: Información del curso piloto 9
+            Pilot Information 10:
+              name: Información del curso piloto 10
+            Pilot Information 11:
+              name: Información del curso piloto 11
+            Pilot Information 12:
+              name: Información del curso piloto 12
+            Pilot Information 13:
+              name: Información del curso piloto 13
+            Pilot Information 14:
+              name: Información del curso piloto 14
+            Pilot Information 15:
+              name: Información del curso piloto 15
+            Pilot Information 16:
+              name: Información del curso piloto 16
+            Pilot Information 17:
+              name: Información del curso piloto 17
+            Pilot Information 18:
+              name: Información del curso piloto 18
+            Pilot Information 19:
+              name: Información del curso piloto 19
+            Pilot Information 20:
+              name: Información del curso piloto 20
+            Pilot Information 21:
+              name: Información del curso piloto 21
+            Pilot Information 22:
+              name: Información del curso piloto 22
+            Pilot Information 23:
+              name: Información del curso piloto 23
+            Pilot Information 24:
+              name: Información del curso piloto 24
+            Pilot Information 25:
+              name: Información del curso piloto 25
+            Pilot Information 26:
+              name: Información del curso piloto 26
+            Pilot Information 27:
+              name: Información del curso piloto 27
+            Pilot Information 28:
+              name: Información del curso piloto 28
+            Pilot Information 29:
+              name: Información del curso piloto 29
           title: Curso piloto de CSD
+        csd4-pilot:
+          stages:
+            What is a Computer?:
+              name: '¿Qué es una computadora?'
+            Input and Output:
+              name: Entrada y salida
+            Processing:
+              name: Procesamiento
+            Apps and Storage:
+              name: Aplicaciones y almacenamiento
+            Project - Propose an App:
+              name: Proyecto - Propuesta de aplicación
+            Post-Project Test:
+              name: Prueba posterior al proyecto
+          title: La computación y la resolución de problemas
+        csp2-pilot:
+          stages:
+            new stage:
+              name: nueva etapa
+            Building a Network:
+              name: Crear una red
+            IP Addresses:
+              name: Direcciones IP
+            Routers and Redundancy:
+              name: Enrutadores y redundancia
+            Packets:
+              name: Paquetes
+            The Growing Internet:
+              name: El crecimiento de Internet
+            Internet Dilemmas pt 1:
+              name: Dilemas de Internet, parte 1
+            Internet Dilemmas, pt 2:
+              name: Dilemas de Internet, parte 2
+            Unit 2 Assessment:
+              name: Evaluación de la Unidad 2
+            Unit Assessment:
+              name: Evaluación de la unidad
+            'Lesson 8: Unit Assessment':
+              name: 'Lección 8: evaluación de la unidad'
+            Unit 2 STUDENT Survey:
+              name: Encuesta de la Unidad 2 para ESTUDIANTES
+            Unit 2 TEACHER Survey:
+              name: Encuesta de la Unidad 2 para DOCENTES
+        denny-science:
+          stages:
+            Earthquake Detector:
+              name: Detector de terremotos
+            'Earthquake Detector: Designing Screens':
+              name: 'Detector de terremotos: diseño de pantallas'
+            'Earthquake Detector: Processing with Events':
+              name: 'Detector de terremotos: procesamiento con eventos'
+          title: Denny Science
+        peru-2019:
+          stages:
+            new stage:
+              name: nueva etapa
+            Introduction:
+              name: Introducción
+            Debugging in Collector:
+              name: Depuración en Recolector
+            'Loops: My Loopy Robotic Friends':
+              name: 'Bucles: Mis amigos robóticos y repetitivos'
+            Loops in Artist:
+              name: Loops en Artista
+            Nested Loops:
+              name: Bucles anidados
+            Nested Loops Project in Frozen:
+              name: Proyecto de bucles anidados en Frozen
+            Events in Star Wars:
+              name: Eventos en Star Wars
+            Introduction to Debugging:
+              name: Introducción a la depuración
+            Nested Loops in Frozen:
+              name: Bucles anidados en Frozen
+          title: Hora del Código Perú 2019

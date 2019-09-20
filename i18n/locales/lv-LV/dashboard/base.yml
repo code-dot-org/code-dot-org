@@ -23,6 +23,7 @@ lv:
         edit_header: 'Rediģēt konta detaļas'
         error:
           future: nevar būt nākotnē
+  beta: "beta"
   hello: "Sveika, pasaule"
   welcome_back: "Laipni lūdzu atpakaļ, %{name}"
   submit: Iesniegt
@@ -30,12 +31,9 @@ lv:
   cancel: "Atcelt"
   okay: "Labi"
   or: "vai"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Pievienot skolotāju:'
       placeholder: "Izvēles kods (ABCDEF)"
-      instructions: "Lūdzu, ievadiet kodu, ko jums piešķīra skolotājs. Tas ir 6 burtu kods, kā piemēram \"ABCDEF\"."
-    submit: 'Pievieno skolotāju'
   add_hint_form:
     placeholder: 'Lūdzu, ievadi šeit savu mājienu'
     submit: 'Pievieno mājienu'
@@ -62,8 +60,6 @@ lv:
   auth:
     sign_in_with: 'Pieraksīties %{provider}'
     signed_in: 'Pierakstījies!'
-    signed_out: 'Izrakstījies <a href="%{url}">Code.org</a>.'
-    sign_out_of: 'Izmantoji %{provider} ,lai pierakstītos <a href="%{url}">Spied šeit</a> , lai izrakstītos %{provider}.'
     already_signedup: 'Jau pierakstījies?'
     notyet_signedup: "Neesi pievienojies?"
     google_oauth2: 'Google konts'
@@ -264,9 +260,6 @@ lv:
     tried: 'Mēģināts'
   home:
     title: "Kodu studija"
-    description: 'Code Studio ir vietne Code.org izstrādātiem tiešsaistes kursiem'
-    lines_of_code: "%{lines_count} koda rindiņas ir uzrakstījuši skolēni"
-    lines_of_code_linebreak: "%{lines_count} KODA RINDIŅAS<br/> IR UZRAKSTĪJUŠI %{students_count} MILJONI SKOLĒNU"
     all_courses: "Pārskats par kursiem, 1, 2 un 3"
     lesson_plans: "Nodarbību plāni"
     signin_message: "Jau reģistrējies? %{link}"
@@ -296,10 +289,6 @@ lv:
     test_videos_help: 'Izmēģinat mūsu jauno video atskaņotāju savā skolā'
     try_beta_courses: 'Jaunums! Izmēģinat mūsu BETA kursus K-5 (sākumskolas) skolēniem'
     use_as_teacher: 'Izmantojiet šo vietni, kā skolotājs'
-    heading_hoc2014: "<h2>Programmēšanas stunda</h2><h1>visiem vecumiem</h1>"
-    heading_elementary: "<h2>20 stundu kurss</h2><h1>visu vecumu iesācējiem</h1>"
-    heading_apps: "<h2>Izklaide </h2><h1>visiem</h1>"
-    heading_legacy: "<h2>Mūsu galvenais kurss ir </h2><h1>visiem vecumiem</h1>"
     your_gallery: Galerija
     no_primary_course: "Izmēģināt Code Studio kursu"
     choose_next_course: "Izmēģini kādu no Code Studio kursiem izvēloties zemāk"
@@ -419,8 +408,6 @@ lv:
     header_playlab: "Spēles laboratorija"
     header_artist: "Mākslinieks"
   landing:
-    prerelease: "Šis kurss ir <span class='betatext'>BETA stadijā</span>.  Tas nozīmē, ka tā nav kursa pēdējā versija un var tikt pakļauta pārskatam pēc atsauksmju saņemšanas, jo informācija ir saņemta un uzlabojumi tiek veikti."
-    prerelease_hoc2014: "Šī pamācība ir <span class='betatext'>beta</span >stadijā. Tā tiks pārskatīta un uzlabota, ņemot vērā lietotāju atsauksmes."
     report_bug: "Kļūdas ziņojums"
     support: "Saņemt palīdzību"
     support_url: "//support.code.org"
@@ -465,8 +452,6 @@ lv:
   age_interstitial:
     age: Tavs vecums
     header: Konta informācijas atjaunināšana
-    message: "Mēs esam procesā, kas atjaunina mūsu pieredzi, lai nodrošinātu jūs ar vēl lielāku konfidencialitātes aizsardzību. Lai to paveiktu, mums ir nepieciešams esošiem lietotājiem ievadīt šeit viņu vecumu. <br/>Kā vienmēr, code.org nekad iznomāt, pārdot vai koplietot šo informāciju ar trešajām pusēm."
-    sign_out: 'Ja nevēlaties sniegt savu vecumu, jūs varat <a href="%{url}">izrakstīties</a>.'
   terms_interstitial:
     tos: "Nosacījumi"
     privacy: "Privātuma politika"

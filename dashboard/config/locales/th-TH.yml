@@ -36,6 +36,7 @@ th:
         finish_sign_up_header: เสร็จสิ้นการสร้างบัญชีผู้ใช้ของคุณ
         error:
           future: ไม่สามารถทำได้ในอนาคต
+  beta: Beta
   hello: สวัสดีชาวโลก
   welcome_back: ยินดีต้อนรับอีกครั้ง, % {name}
   your_professional_learning_plan: แผนการเรียนของคุณ
@@ -49,13 +50,9 @@ th:
   okay: ตกลง
   or: หรือ
   heading_x_of_y: "%{heading} (หน้า %{x} จาก %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'เพิ่มครู:'
       placeholder: ส่วนรหัส (ABCDEF)
-      instructions: กรุณาใส่รหัสที่คุณครูมอบให้กับคุณ รหัสนี้ประกอบด้วยตัวอักษร 6
-        ตัว เช่น “ABCDEF”
-    submit: เพิ่มครู
   add_hint_form:
     placeholder: กรุณาป้อนคำแนะนำของคุณที่นี่
     submit: เพิ่มคำแนะนำ
@@ -84,8 +81,6 @@ th:
     continue_with: ดำเนินการต่อด้วย %{provider}
     sign_in_with: ลงทะเบียนด้วย %{provider}
     signed_in: ลงชื่อเข้าใช้
-    signed_out: คุณได้ลงทะเบียนออกจาก <a href="%{url}">Code.org</a>.
-    sign_out_of: คุณใช้ %{provider} ในการเข้าสู่ระบบ <a href="%{url}">คลิกที่นี่</a>เพื่อลงชื่อออกจาก%{provider}.
     already_signedup: พร้อมที่จะสมัครแล้วหรือยัง.
     notyet_signedup: สมัครใช้งานหรือยัง?
     google_oauth2: บัญชี Google
@@ -130,13 +125,6 @@ th:
     mismatch_password: รหัสผ่านที่คุณป้อนไม่ตรงกัน
     under_13_consent: ถ้าฉันมีอายุต่ำกว่า 13 ปี ฉันยืนยันว่าฉันได้รับอนุญาตจากผู้ปกครองหรือผู้พิทักษ์ตามกฏหมายเพื่อใช้บริการของ
       Code.org แล้ว
-    student_terms: ข้าพเจ้ายอมรับผูกพันตาม<a href='http://code.org/tos'>เงื่อนไขการให้บริการ</a>ของ
-      Code.org ถ้าหากข้าพเจ้าอายุต่ำกว่า 13 ปี ข้าพเจ้ายืนยัน โดยส่งแบบฟอร์มนี้ว่า
-      มีคุณพ่อคุณแม่หรือผู้ปกครองตามกฎหมายอนุญาตให้ใช้บริการ Code.org. <br/> <br/>
-      ไม่มีการจัดเก็บที่อยู่อีเมล์ในแบบฟอร์มที่ให้เราได้ติดต่อนักเรียน นักเรียนจะไม่รับอีเมล์จาก
-      Code.org ยกเว้นการกู้คืนรหัสผ่าน ดูข้อมูลเพิ่มเติมจาก <a href='http://code.org/privacy'>นโยบายความเป็นส่วนตัว</a>ของเรา
-    teacher_terms: ข้าพเจ้ายอมรับผูกพันตามเงื่อนไขการให้บริการของ Code.org สำหรับข้อมูลเพิ่มเติมเกี่ยวกับความเป็นส่วนตัว
-      ดูได้จาก<a href='http://code.org/privacy'>นโยบายความเป็นส่วนตัว</a>ของเรา
     additional_information: เราต้องการข้อมูลบางอย่างเพิ่มเติมเพื่อดำเนินการสมัครต่อ
     user_type_label: ประเภทบัญชี
     user_type_teacher: ครู

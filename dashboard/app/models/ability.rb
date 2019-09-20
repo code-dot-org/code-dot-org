@@ -9,6 +9,7 @@ class Ability
     # Abilities for all users, signed in or not signed in.
     can :read, :all
     cannot :read, [
+      TeacherFeedback,
       Script, # see override below
       ScriptLevel, # see override below
       :reports,
@@ -31,7 +32,6 @@ class Ability
       :pd_teacher_attendance_report,
       :pd_workshop_summary_report,
       Pd::CourseFacilitator,
-      Pd::TeacherApplication,
       :workshop_organizer_survey_report,
       :pd_workshop_user_management,
       :pd_workshop_admins,
@@ -47,6 +47,17 @@ class Ability
       Pd::InternationalOptIn,
       :maker_discount
     ]
+    cannot :index, Level
+
+    # If you can see a level, you can also do these things:
+    can [:embed_level, :get_rubric], Level do |level|
+      can? :read, level
+    end
+
+    # If you can update a level, you can also do these things:
+    can [:edit_blocks, :update_blocks, :update_properties], Level do |level|
+      can? :update, level
+    end
 
     if user.persisted?
       can :manage, user
@@ -61,7 +72,6 @@ class Ability
       can :destroy, Follower, student_user_id: user.id
       can :read, UserPermission, user_id: user.id
       can [:show, :pull_review, :update], PeerReview, reviewer_id: user.id
-      can :create, Pd::TeacherApplication, user_id: user.id
       can :create, Pd::RegionalPartnerProgramRegistration, user_id: user.id
       can :read, Pd::Session
       can :manage, Pd::Enrollment, user_id: user.id
@@ -147,7 +157,6 @@ class Ability
         can :manage, :workshop_organizer_survey_report
         can :manage, :pd_workshop_summary_report
         can :manage, :pd_teacher_attendance_report
-        can :manage, Pd::TeacherApplication
         can :manage, :pd_workshop_user_management
         can :manage, :pd_workshop_admins
         can :manage, RegionalPartner
@@ -220,8 +229,22 @@ class Ability
       ]
 
       # Only custom levels are editable.
-      cannot [:update, :destroy], Level do |level|
+      cannot [:clone, :update, :destroy], Level do |level|
         !level.custom?
+      end
+
+      # Ability for LevelStarterAssetsController. Since the controller does not have
+      # a corresponding model, use lower/snake-case symbol instead of class name.
+      can [:upload, :destroy], :level_starter_asset
+    end
+
+    if user.persisted?
+      editor_experiment = Experiment.get_editor_experiment(user)
+      if editor_experiment
+        can :index, Level
+        can :clone, Level, &:custom?
+        can :manage, Level, editor_experiment: editor_experiment
+        can [:edit, :update], Script, editor_experiment: editor_experiment
       end
     end
 

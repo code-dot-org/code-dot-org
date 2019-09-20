@@ -24,6 +24,7 @@ fa:
         edit_header: 'ویرایش اطلاعات کاربری'
         error:
           future: نمیتوان در آینده بود
+  beta: "بتا"
   hello: "سلام دنیا"
   welcome_back: "%{name}، خوش آمدید"
   your_professional_learning_plan: "برنامه آموزش حرفه ای"
@@ -37,12 +38,9 @@ fa:
   okay: "باشه"
   or: "یا"
   heading_x_of_y: "%{heading} (%{x} صفحه %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'افزودن یک معلم:'
       placeholder: "انتخاب کد (ABCDEF)"
-      instructions: "لطفا کد با شما معلم خود را به اشتراک گذاشته. 6 حرف کد مانند \"ABCDEF\" است."
-    submit: 'افزودن معلم'
   add_hint_form:
     placeholder: 'لطفا پیشنهادتان را اینجا وارد کنید'
     submit: 'افزودن پیشنهاد'
@@ -69,8 +67,6 @@ fa:
   auth:
     sign_in_with: 'ورود از طریق %{provider}'
     signed_in: 'وارد شدید!'
-    signed_out: 'شما از <a href="%{url}"> Code.org</a> خارج شده اید.'
-    sign_out_of: 'شما استفاده کردید  %{provider} برای ورود  <a href="%{url}">     اینجا را کلیک کنید </a> برای خروج %{provider}.'
     already_signedup: 'قبلا ثبت نام کرده‌اید؟'
     notyet_signedup: "تا به حال شرکت نکرده‌اید؟"
     google_oauth2: 'حساب Google'
@@ -277,9 +273,6 @@ fa:
     tried: 'سعی شد'
   home:
     title: "کد استودیو"
-    description: 'کارگاه کد محلی برای دوره های آنلاین است که توسط Code.org ایجاد شده است'
-    lines_of_code: "%{lines_count} خط کد توسط دانش آموزان نوشته شده است"
-    lines_of_code_linebreak: "%{lines_count} خط کد<br/>نوشته شده توسط %{students_count} میلیون دانش آموز"
     all_courses: "بررسی اجمالی دوره های 1 و 2 و 3"
     lesson_plans: "طرح درس"
     signin_message: "قبلا ثبت نام کرده‌اید؟ %{link}"
@@ -309,11 +302,6 @@ fa:
     test_videos_help: 'در مدرسه خود پخش کننده جدید ویدئو ما را امتحان کنید '
     try_beta_courses: 'جدید! درسهای در حال آماده سازی ما برای کلاس پنجمی ها را امتحان کنید'
     use_as_teacher: 'استفاده از این سایت به عنوان یک معلم'
-    heading_hoc2014: "<h2> ساعت کد نویسی برای </h2><h1> تمام سنین </h1>"
-    heading_elementary: "<h2> دوره 20 ساعته برای </h2><h1> مبتدیان (تمام سنین) </h1>"
-    heading_apps: "<h2>سرگرم کننده برای</h2><h1>برای همه</h1>"
-    heading_tools: "<h2>برای مرحله بعد آماده ای؟ </h2><h1> ابزارجاوا اسکریپت برای دوره راهنمائی</h1>"
-    heading_legacy: "<h2> دوره عمومی ما </h2><h1>همه سنین</h1>"
     your_gallery: گالری
     no_primary_course: "یک کلاس را در کد استدیو امتحان کنید"
     choose_next_course: "یک دوره ی استودیو ی کد را با انتخاب آن در پایین امتحان کنید"
@@ -468,8 +456,6 @@ fa:
     header_artist: "هنرمند"
     report_abuse: "گزارش سوء استفاده"
   landing:
-    prerelease: "این دوره <span class='betatext'> بتا</span> است.  یعنی نسخه نهایی نبوده بر مبنای بازخورد دریافت شده مورد تجدید نظر واقع شده و بهتر می گردد."
-    prerelease_hoc2014: "این آموزش <span class='betatext'> در مرحله بتا</span> است.  بر اساس بازخورد دریافت شده مورد بهینه سازی قرار گرفته."
     report_bug: "گزارش اشکال"
     support: "کمک گرفتن"
     support_url: "support.code.org"
@@ -526,8 +512,6 @@ fa:
   age_interstitial:
     age: سن شما
     header: بروز رسانی اطلاعات حساب کاربری
-    message: "ما در حال انجام بروزرسانی  حمایت از حریم خصوصی قویتری هستیم . برای انجام این کار، ما نیاز داریم کاربران موجود سن خود را این قسمت وارد کنند. <br/>مثل همیشه هرگز code.org این اطلاعات را ، اجاره،  فروخته  یا با هیچ شخص ثالثی به اشتراک نمی گذارد ."
-    sign_out: 'اگر شما نمی خواهید سن خود را اعلام کنید میتوانید <a href="%{url}"> خارج شوید</a>.'
   terms_interstitial:
     tos: "شرایط"
     privacy: "قوانین حفظ حریم خصوصی"

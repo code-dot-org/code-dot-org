@@ -25,6 +25,7 @@ eu:
         edit_header: 'Aldatu kontuaren xehetasunak'
         error:
           future: ezin du izan etorkizunean
+  beta: "beta"
   hello: "Kaixo, mundua"
   welcome_back: "Ongi etorria berriro, %{name}"
   submit: Bidali
@@ -34,12 +35,9 @@ eu:
   cancel: "Ezeztatu"
   okay: "Ongi da"
   or: "edo"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Irakaslea gehitu:'
       placeholder: "Atal Kodea (ABCDEF)"
-      instructions: "Mesedez, sartu zure irakasleak zurekin partekatutako kodea. 6 letrako kodea da, \"ABCDEF\" bezalakoa."
-    submit: 'Gehitu irakaslea'
   add_hint_form:
     placeholder: 'Mesedez sartu hemen zure pista'
     submit: 'Gehitu pista'
@@ -66,8 +64,6 @@ eu:
   auth:
     sign_in_with: 'Sartu  %{provider}ekin'
     signed_in: 'Barruan zaude!'
-    signed_out: 'Saioa amaitu duzu  <a href="%{url}">Code.org</a>-n.'
-    sign_out_of: '%{provider} erabili duzu. <a href="%{url}">Klikatu hemen</a> saioa amaitzeko %{provider}.'
     already_signedup: 'Dagoeneko izena eman duzu?'
     notyet_signedup: "Ez zara batu oraindik?"
     google_oauth2: 'Google kontua'
@@ -259,9 +255,6 @@ eu:
     tried: 'Saiatua'
   home:
     title: "Kode Estudioa"
-    description: 'Code Studio Code.org-ek sortutako online kurtsoen hasiera da'
-    lines_of_code: "%{lines_count} KODE LERRO IKASLEEK IDATZITA"
-    lines_of_code_linebreak: "%{lines_count} KODE LERRO<br/> %{students_count} MILIOI IKASLEK IDATZITA"
     all_courses: "1., 2. eta 3. Kurtsoen laburpena"
     lesson_plans: "Ikasketa plana"
     signin_message: "Jadanik erregistratuta? %{link}"
@@ -291,10 +284,6 @@ eu:
     test_videos_help: 'Probatu gure bideo irakurgailu berria zure eskolan'
     try_beta_courses: 'Berria! proba itzazu LH5 ikasleentzako beta ikastaroak'
     use_as_teacher: 'Erabili gune hau irakasle gisa'
-    heading_hoc2014: "<h2>Kode Ordua</h2><h1>Adin guztietarako</h1>"
-    heading_elementary: "<h2>20 orduko ikastaroak</h2><h1>informatikaren oinarriei buruz (adin guztiak)</h1>"
-    heading_apps: "<h2>Dibertsioa</h2><h1>Guztiontzat</h1>"
-    heading_legacy: "<h2>Gure kurtso azkarra</h2><h1>adin guztietarako</h1>"
     your_gallery: Galeria
     no_primary_course: "Probatu Code Studioko ikastaro bat"
     choose_next_course: "Probatu Code Studioko ikastaro bat hauetako bat aukeratuta"
@@ -430,8 +419,6 @@ eu:
     header_artist: "Arte kodea"
     report_abuse: "Erabilera okerra jakinarazi"
   landing:
-    prerelease: "Kurtso hau <span class='betatext'>beta</span> bertsioa da. Horrek esan nahi du ez dela azken bertsioa eta iruzkinak iritsi ahala berrikusi eta hobekuntzak egingo direla."
-    prerelease_hoc2014: "Tutorial hau <span class='betatext'>beta</span> bertsioa da. Iruzkinak iritsi ahala berrikusi eta hobekuntzak egingo dira."
     report_bug: "Akatsa jakinarazi"
     support: "Lortu laguntza"
   multi:
@@ -480,8 +467,6 @@ eu:
   age_interstitial:
     age: Zure adina
     header: Kontuaren Informazioa Eguneratu
-    message: "Gure zerbitzua eguneratzen ari gara pribatasun babes handiagoa eskaintzeko. Horretarako, erabiltzaileek adina sar dezaten behar dugu.<br/>Betiko legez, code.org-ek ez die sekula informazio hori bitartekoei alokatuko, ez salduko eta ez konpartituko."
-    sign_out: 'Zure adina eman nahi ez baduzu <a href="%{url}">deskonektatu</a> zaitezke.'
   terms_interstitial:
     tos: "Erabilera baldintzak"
     privacy: "Pribatutasun politika"

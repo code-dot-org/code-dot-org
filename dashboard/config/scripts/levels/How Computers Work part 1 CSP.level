@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 566,
   "properties": {
-    "video_key": "csd_concept_how_computers_work",
+    "video_key": "csd_concept_computer",
     "instructions_important": "false",
     "skip_dialog": true,
     "skip_sound": true,
@@ -15,7 +15,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-06-18 15:13:51 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2019-06-18 15:13:51 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-09-13 14:38:29 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

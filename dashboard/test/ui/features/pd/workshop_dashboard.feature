@@ -1,6 +1,5 @@
 @dashboard_db_access
 @eyes
-
 Feature: Workshop Dashboard
 
 Scenario: New workshop: CSF intro

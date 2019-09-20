@@ -54,6 +54,7 @@ en:
         error:
           future: can't be in the future
 
+  beta: "beta"
   hello: "Hello world"
   welcome_back: "Welcome back, %{name}"
   your_professional_learning_plan: "Your Professional Learning Plan"
@@ -68,13 +69,13 @@ en:
   okay: "Okay"
   or: "or"
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Add a teacher:'
+      title: 'Join a section on Code.org'
       placeholder: "Section Code (ABCDEF)"
-      instructions: "Please enter the code shared with you by your teacher. It's a 6 letter code like \"ABCDEF\"."
+      instructions: "Please enter the 6 letter code your teacher shared with you (example: \"ABCDEF\") to join their section."
       instructions_short: "Enter your 6 letter section code"
-    submit: 'Add teacher'
+      submit: 'Join'
   add_hint_form:
     placeholder: 'Please enter your hint here'
     submit: 'Add hint'
@@ -103,8 +104,8 @@ en:
     continue_with: 'Continue with %{provider}'
     sign_in_with: 'Sign in with %{provider}'
     signed_in: 'Signed in!'
-    signed_out: 'You have signed out of <a href="%{url}">Code.org</a>.'
-    sign_out_of: 'You used %{provider} to sign in. <a href="%{url}">Click here</a> to sign out of %{provider}.'
+    signed_out_markdown: '### You have signed out of [Code.org](%{url}).'
+    sign_out_of_markdown: '#### You used %{provider} to sign in. [Click here](%{url}) to sign out of %{provider}.'
     already_signedup: 'Already signed up?'
     notyet_signedup: "Haven't joined yet?"
     google_oauth2: 'Google'
@@ -150,13 +151,11 @@ en:
     valid_password: "Valid password!"
     invalid_password: "Password must be at least 6 characters"
     mismatch_password: "The two passwords you entered do not match"
-    agree_tos_privacy: "I agree to the <a href='http://code.org/tos'>Terms of Service</a> and <a href='http://code.org/privacy'>Privacy Policy</a>."
     under_13_consent: "If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services."
     student_consent: "I confirm that I have my parent or legal guardian's permission to use the Code.org services."
     agree_us_website: "I agree to using a website based in the United States."
     my_data_to_us: "Data from my use of this site may be sent to and stored or processed in the United States."
-    student_terms: "Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href='http://code.org/privacy'>privacy policy</a> for more information."
-    teacher_terms: "I agree to be bound by the Code.org terms of service. For more information on privacy, see our <a href='http://code.org/privacy'>privacy policy</a>."
+    student_terms_markdown: "Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our [privacy policy](http://code.org/privacy) for more information."
     additional_information: "We need some additional information to continue signing you up."
     user_type_button: "Update Account Type"
     user_type_label: "Account Type"
@@ -210,7 +209,7 @@ en:
     login: 'Sign in'
     invalid_login: 'Invalid login, please try again'
     pair_programming: 'I have a partner at my computer'
-    student_privacy: "Learn more about why you're not seeing your full name <a href='%{student_privacy_blog}' target='_blank'>here</a>."
+    student_privacy_markdown: "Learn more about why you're not seeing your full name [here](%{student_privacy_blog})."
   password:
     reset_form:
       title: 'Forgot your password?'
@@ -461,9 +460,6 @@ en:
     tried: 'Tried'
   home:
     title: "Code Studio"
-    description: 'Code Studio is home to online courses created by Code.org'
-    lines_of_code: "%{lines_count} LINES OF CODE WRITTEN BY STUDENTS"
-    lines_of_code_linebreak: "%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS"
     all_courses: "Overview of Courses 1, 2, and 3"
     lesson_plans: "Lesson plans"
     signin_message: "Already registered? %{link}"
@@ -493,11 +489,7 @@ en:
     test_videos_help: 'Test our new video player at your school'
     try_beta_courses: 'New! Try our beta courses for K-5 students'
     use_as_teacher: 'Use this site as a teacher'
-    heading_hoc2014: "<h2>The Hour of Code for</h2><h1>All Ages</h1>"
-    heading_elementary: "<h2>20 hour courses for</h2><h1>Computer Science Fundamentals (all ages)</h1>"
-    heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
-    heading_tools: "<h2>Ready for the next step?</h2><h1>Tools for Middle and High School</h1>"
-    heading_legacy: "<h2>Our accelerated course for</h2><h1>All Ages</h1>"
+    heading_elementary_markdown: "## 20 hour courses for\n\n# Computer Science Fundamentals (all ages)"
     your_gallery: Gallery
     no_primary_course: "Try a Code Studio course"
     choose_next_course: "Try a Code Studio course by choosing one below"
@@ -693,8 +685,7 @@ en:
     header_artist: "Code art"
     report_abuse: "Report Abuse"
   landing:
-    prerelease: "This course is in <span class='betatext'>beta</span>.  This means it is not the final version of the course, and is subject to revision as feedback is received and improvements are made."
-    prerelease_hoc2014: "This tutorial is in <span class='betatext'>beta</span>.  It is subject to revision as feedback is received and improvements are made."
+    prerelease_tutorial: "This tutorial is in **beta**.  It is subject to revision as feedback is received and improvements are made."
     report_bug: "Report Bug"
     support: "Get Help"
     support_url: "//support.code.org"
@@ -766,8 +757,9 @@ en:
   age_interstitial:
     age: Your age
     header: Account Information Update
-    message: "We're in the process of updating our experience to provide you with even stronger privacy protections. To do this, we need existing users to enter their age here.<br/>As always, code.org will never rent, sell or share this information with any third parties."
-    sign_out: 'If you do not wish to provide your age you may <a href="%{url}">sign out</a>.'
+    warning: "We're in the process of updating our experience to provide you with even stronger privacy protections. To do this, we need existing users to enter their age here."
+    disclaimer: "As always, code.org will never rent, sell or share this information with any third parties."
+    sign_out_markdown: 'If you do not wish to provide your age you may [sign out](%{url}).'
   terms_interstitial:
     title: "Updated Terms of Service and Privacy Policy"
     intro_desc: "We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will <i>no longer store email addresses for student accounts on Code Studio.</i> This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We've sent you a summary of the other changes via email."
@@ -863,10 +855,10 @@ en:
   peer_review:
     accepted:
       name: 'Accepted'
-      description: '<strong>Yes</strong>, this submission <strong>meets</strong> the requirements'
+      description_markdown: '**Yes**, this submission **meets** the requirements'
     rejected:
       name: 'Rejected'
-      description: '<strong>No</strong>, this submission <strong>does not meet</strong> the requirements'
+      description_markdown: '**No**, this submission **does not meet** the requirements'
     escalated:
       name: 'Escalated'
       description: 'I would like an instructor to review this submission'
@@ -1027,7 +1019,6 @@ en:
       choose_different_focus_area: 'You can choose a different focus area if you think that it would help you better prepare to teach.'
       other_focus_areas_available: 'No matter what focus area you choose, all other resources will still be available for reference.'
       confirm_focus_areas: 'Confirm Focus Areas'
-  stage_extras_teacher_message: "You have Lesson Extras turned off for some of your sections. Your students won’t see this page unless you turn them on. You can turn Lesson Extras on by visiting your <a href='http://code.org/teacher-dashboard'>Teacher Dashboard</a>."
   locked_stage: 'The contents of this stage are not visible because this stage is currently locked. Your teacher can unlock this stage when it is time to work on it or review your answers.'
   hidden_stage: "Your teacher didn't expect you to be here. Please ask your teacher which lesson you should be on."
   hidden_script: "Your teacher didn't expect you to be here. Please ask your teacher which unit you should be on."
@@ -1151,15 +1142,15 @@ en:
       title: 'Workshop Attendance'
       intro: "Thank you for taking time to receive training on Code.org’s curriculum. Our mission to bring computer science education opportunities to all children in all schools around the world would not be possible without you."
       instructions: "Please fill out the form below to indicate that 1) you attended a training workshop run by one of Code.org’s international partners, and 2) you agree to share your information with our international partner in your country so that they can help to support your journey as a computer science teacher."
-      thanks: "Thank you for submitting! We look forward to supporting you as you get to know Code.org’s curriculum and tools. Please keep sharing your questions and feedback with us by writing to us at <a href='%{support_email_url}'>support@code.org</a> or by posting on the <a href='%{teacher_forum_url}' target='_blank'>teacher forum</a>!"
+      thanks_markdown: "Thank you for submitting! We look forward to supporting you as you get to know Code.org’s curriculum and tools. Please keep sharing your questions and feedback with us by writing to us at [support@code.org](%{support_email_url}) or by posting on the [teacher forum](%{teacher_forum_url})!"
     logged_out:
       heading: 'Thanks for your interest in the Professional Learning Program!'
       body: 'To get started, you first need to be logged into your Code.org account. If you’d like more information about the program before you start your application, please check out the <a href="%{url}">Professional Learning Program overview</a>.'
     not_teacher:
-      body: 'Thanks for your interest in Code.org’s Professional Learning Program! You’re currently signed into a student account. Please either create a teacher account or <a href="%{user_settings}">go to your user settings</a> to upgrade your account from student to teacher.'
-      more: 'If you’d like more information about the program before you start your application, please check out the <a href="%{pl_overview}">Professional Learning Program overview</a>.'
+      body_markdown: 'Thanks for your interest in Code.org’s Professional Learning Program! You’re currently signed into a student account. Please either create a teacher account or [go to your user settings](%{user_settings}) to upgrade your account from student to teacher.'
+      more_markdown: 'If you’d like more information about the program before you start your application, please check out the [Professional Learning Program overview](%{pl_overview}).'
     no_teacher_email:
-      body: 'Your account doesn’t have an email address. Please <a href="%{user_registration}">visit your account settings</a> to add your email address before completing this form.'
+      body_markdown: 'Your account doesn’t have an email address. Please [visit your account settings](%{user_registration}) to add your email address before completing this form.'
   courses_category: 'Full Courses'
   cookie_banner:
     message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'

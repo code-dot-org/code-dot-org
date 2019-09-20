@@ -26,6 +26,7 @@ et:
         edit_header: 'Muuda kasutajakonto üksikasju'
         error:
           future: ei saa olla tulevikus
+  beta: "beeta"
   hello: "Tere maailm"
   welcome_back: "Tere tulemast tagasi, %{name}"
   your_professional_learning_plan: "Sinu professionaalne õppeplaan"
@@ -39,13 +40,9 @@ et:
   okay: "Olgu"
   or: "või"
   heading_x_of_y: "%{heading} (leht %{x} of %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Lisa õpetaja:'
       placeholder: "Üksuse kood (ABCDEF)"
-      instructions: "Palun sisesta kood, mille andis sulle su õpetaja. See on 6-kohaline tähtedest koosnev kood, näiteks \"ABCDEF\"."
-      instructions_short: "Sisestage oma 6-täheline sektsiooni kood"
-    submit: 'Lisa õpetaja'
   add_hint_form:
     placeholder: 'Palun sisesta oma vihje siia'
     submit: 'Lisa vihje'
@@ -73,8 +70,6 @@ et:
   auth:
     sign_in_with: 'Logige sisse %{provider}'
     signed_in: 'Olete sisse logitud!'
-    signed_out: 'Olete välja loginud <a href="%{url}">Code.org</a>.'
-    sign_out_of: 'Kasutasid %{provider} sisselogimiseks. <a href="%{url}">Vajuta siia</a> et logida välja%{provider}.'
     already_signedup: 'Oled juba registreerunud?'
     notyet_signedup: "Pole veel liitunud?"
     google_oauth2: 'Google''i konto'
@@ -110,8 +105,6 @@ et:
     valid_password: "Sobilik salasõna!"
     invalid_password: "Salasõna peab olema vähemalt 6 tähemärgi pikkune"
     mismatch_password: "Sinu poolt sisestatud salasõnad ei ühti"
-    student_terms: "Nõustun Code.org<a href='http://code.org/tos'>teenusetingimustega</a>. Kui ma olen alla 13 aasta vana, kinnitan ma käesoleva vormi esitamisega, et mul on enda vanema või seadusliku eestkostja luba Code.org teenuseid kasutada.<br/><br/>E-posti aadresse ei salvestata viisil, mis lubaks meil õpilastega ühendust võtta. Õpilased ei saa Code.org'ilt e-kirju v.a parooli seadistamiseks. Vaata meie<a href='http://code.org/privacy'>privaatsuspoliitikat</a>, et saada rohkem informatsiooni."
-    teacher_terms: "Nõustun Code.org teenusetingimustega. Vaata meie<a href='http://code.org/privacy'>privaatsuspoliitikat</a>, et saada rohkem informatsiooni."
     additional_information: "Meil on vaja täiendavat teavet, et sind registreerida."
     user_type_label: "Konto tüüp"
     user_type_teacher: "Õpetaja"
@@ -310,9 +303,6 @@ et:
     tried: 'Proovisin'
   home:
     title: "Code Studio"
-    description: 'Code Stuudio on koduks online kursustele, mis on loodud Code.org poolt.'
-    lines_of_code: "%{lines_count} RIDA KOODI ON ÕPILASTE POOLT KIRJUTATUD"
-    lines_of_code_linebreak: "%{lines_count} koodiread <br/> kirjutatud %{students_count} miljonite õpilaste poolt"
     all_courses: "Kursuste 1, 2 ja 3 ülevaade"
     lesson_plans: "Tunnikavad"
     signin_message: "Oled juba registreerunud? %{link}"
@@ -342,11 +332,6 @@ et:
     test_videos_help: 'Proovige meie uut videomängijat enda koolis'
     try_beta_courses: 'Uus! Proovi meie beta kursuseid õpilastele kuni 5. klassini'
     use_as_teacher: 'Kasuta seda lehte kui õpetaja'
-    heading_hoc2014: "<h2>Koodi Tund </h2><h1>Kõikidele vanustele</h1>"
-    heading_elementary: "<h2>20-tunnised kursused </h2><h1> Arvutiteaduse Põhialused (kõik vanused)</h1>"
-    heading_apps: "<h2>Lõbu</h2> <h1>Kõigile</h1>"
-    heading_tools: "<h2>Valmis järgmiseks sammuks?</h2><h1>Tööriistad keskkoolile</h1>"
-    heading_legacy: "<h2>Meie kiirendatud kursus</h2> <h1>Igas vanuses</h1>"
     your_gallery: Galerii
     no_primary_course: "Proovige Code Studio kursust"
     choose_next_course: "Proovige Code Studio kursuseid. Selleks valige üks altpoolt"
@@ -520,8 +505,6 @@ et:
     header_artist: "Kunstnik"
     report_abuse: "Teata rikkumisest"
   landing:
-    prerelease: "See kursus on <span class='betatext'> beeta</span>.  See tähendab, et see ei ole  lõplik versioon ja  tuleb läbi vaadata, kui saadakse tagasisidet ja parandused on tehtud."
-    prerelease_hoc2014: "See õpetus on <span class='betatext'> Beta</span>.  Tuleb läbi vaadata, kui on saabunud tagasiside ja parandused on tehtud."
     report_bug: "Raporteeri veast"
     support: "Abi saamine"
     help_resources: "Abiinfo ja ressursid"
@@ -586,8 +569,6 @@ et:
   age_interstitial:
     age: Sinu vanus
     header: Konto teabe värskendamine
-    message: "Me uuendame praegu oma kogemust, et tagada teie turvalisus veel suuremal määral. Selle jaoks vajame me, et kasutajad sisestaks siia oma vanuse.<br/>Nagu alati, code.org ei rendi, müü ega jaga kasutajalt saadud informatsiooni kolmanda osapoolega."
-    sign_out: 'Kui te ei soovi oma vanust avaldada, võite <a href="%{url}">välja logida</a>.'
   terms_interstitial:
     title: "Uuendatud teenusetingimused ja privaatsustingimused"
     intro_desc: "Oleme uuendanud oma Teenusetingimusi ja Privaatsustingimusi. Muudatused kehtivad alates 24. augustist 2016. Suurim muutus: me ei salvesta enam Code Studios <i> õpilaste kasutajakontode jaoks nende e-posti aadresse. </i> See on meile oluline ja me loodame, et sellest saab haridustehnoloogias õpilaste privaatsuse uus standard. Kokkuvõtte teistest muudatustest saatsime teile e-posti aadressile."
@@ -675,10 +656,8 @@ et:
   peer_review:
     accepted:
       name: 'Nõustutud'
-      description: '<strong>Jah</strong>, esitatud töö <strong>vastab</strong> vastab nõuetele'
     rejected:
       name: 'Tagasi lükatud'
-      description: '<strong>Ei</strong>, esitatud töö <strong>ei vasta</strong> nõuetele'
     escalated:
       name: 'Hoogustus'
       description: 'Ma tahaksin, et juhendaja esitatud töö üle vaataks'

@@ -261,7 +261,6 @@ module Api::V1::Pd
         "course_name" => nil,
         "questions" => {},
         "this_workshop" => {},
-        "all_my_workshops" => {},
         "facilitators" => {
           f_id => f_name
         },
@@ -284,16 +283,10 @@ module Api::V1::Pd
         },
         "facilitator_response_counts" => {
           "this_workshop" => {
-            f_id => {
-              "Facilitator" => 0,
-              "Workshop" => 0
-            }
+            f_id => {}
           },
           "all_my_workshops" => {
-            f_id => {
-              "Facilitator" => 0,
-              "Workshop" => 0
-            }
+            f_id => {}
           }
         },
         "experiment" => true
@@ -324,11 +317,7 @@ module Api::V1::Pd
       expected_result = {
         "course_name" => nil,
         "questions" => {},
-        "this_workshop" => {},
-        "all_my_workshops" => {},
-        "facilitators" => {},
-        "facilitator_averages" => {},
-        "facilitator_response_counts" => {}
+        "this_workshop" => {}
       }
 
       sign_in @admin
@@ -360,18 +349,6 @@ module Api::V1::Pd
 
       sign_in @admin
       get :generic_survey_report, params: {workshop_id: local_summer_ws.id}
-
-      assert_response :success
-    end
-
-    test 'generic_survey_report: academic-year workshop uses old pipeline' do
-      new_academic_ws = create :academic_year_workshop, started_at: Date.new(2019, 8, 1)
-
-      WorkshopSurveyReportController.any_instance.expects(:create_csf_survey_report).never
-      WorkshopSurveyReportController.any_instance.expects(:local_workshop_daily_survey_report)
-
-      sign_in @admin
-      get :generic_survey_report, params: {workshop_id: new_academic_ws.id}
 
       assert_response :success
     end

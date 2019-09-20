@@ -36,6 +36,7 @@ ko:
           밑에 있는 빈 곳에 정보들을 입력 하세요."
         error:
           future: 오늘 이전 날짜만 가능합니다.
+  beta: 베타
   hello: Hello world
   welcome_back: "%{name} 님, 어서오세요. "
   your_professional_learning_plan: 전문적인 학습 계획
@@ -49,13 +50,9 @@ ko:
   okay: 알겠어
   or: 이거나
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: '선생님 추가:'
       placeholder: 섹션 코드(ABCDEF)
-      instructions: 당신의 선생님과 공유하고 있는 문자를 입력해주세요. 그 문자는 "ABCDEF" 와 같은 6개의 영어 문자입니다.
-      instructions_short: 6자리의 섹션 코드를 입력하세요.
-    submit: 선생님 추가하기
   add_hint_form:
     placeholder: 도움내용을 입력하세요.
     submit: 도움말 추가하기
@@ -83,8 +80,6 @@ ko:
   auth:
     sign_in_with: "%{provider} 로그인"
     signed_in: 로그인 됨
-    signed_out: <a href="%{url}">Code.org</a> 을 로그아웃하였습니다.
-    sign_out_of: '%{provider} 를 사용해 로그인하였습니다. %{provider}<a href="%{url}">로그아웃하기</a>.'
     already_signedup: 이미 가입했나요?
     notyet_signedup: 가입하시겠습니까?
     google_oauth2: 구글 계정
@@ -132,18 +127,10 @@ ko:
     valid_password: 사용 가능한 비밀번호!
     invalid_password: 비밀번호는 최소 6 문자 이상이어야 합니다
     mismatch_password: 입력한 비밀번호가 일치하지 않습니다.
-    agree_tos_privacy: 난 <a href='http://code.org/tos'>서비스 약관</a> <a href='http://code.org/privacy'>및</a>
-      개인 정보 보호 정책 동의합니다.
     under_13_consent: 본인이 13세 미만일 경우, 본인은 본인의 부모 또는 법적 보호자로부터 Code.org 서비스 사용을 허락받았음을
       확인합니다.
     agree_us_website: 본인은 미국에 기반을 두고 있는 웹사이트 사용에 동의합니다.
     my_data_to_us: 본인의 본 사이트 사용에 따른 데이터는 미국으로 전송되어 보관 또는 처리될 수 있습니다.
-    student_terms: 나는 Code.org <a href='http://code.org/tos'>서비스 약관</a>을 준수하는 것에 동의합니다.
-      13세 미만일 경우 Code.org 서비스를 이용하기 위해 부모님이나 법적 보호자의 허락을 받은 양식을 제출하여 확인합니다.<br/><br/>학생들과
-      연락하기 위해 허용된 양식에 이메일은 저장되지 않습니다. 학생들은 비밀번호 복구를 제외한 어떠한 이메일도 Code.org로 부터 받지 않습니다.
-      자세한 내용은 <a href='http://code.org/privacy'>개인정보 보호정책</a>을 참조하세요.
-    teacher_terms: Code.org 서비스 약관을 준수할 것을 동의합니다. 개인정보보호에 대한 자세한 내용은 <a href='http://code.org/privacy'>개인정보
-      보호정책</a>을 참조하세요.
     additional_information: 가입하기 위해서는 추가적인 정보가 필요합니다.
     user_type_button: 계정 유형 변경
     user_type_label: 계정 유형
@@ -198,8 +185,6 @@ ko:
     login: 로그인
     invalid_login: 잘못된 로그인입니다. 다시 시도하세요.
     pair_programming: 나는 컴퓨터 안에 파트너가 있습니다.
-    student_privacy: 여러분의 전체 이름을 볼 수 없는지에 대해서 궁금하시면 <a href='%{student_privacy_blog}'
-      target='_blank'>여기</a>를 클릭하세요.
   password:
     reset_form:
       title: 비밀번호를 잊으셨나요?
@@ -426,10 +411,6 @@ ko:
     tried: 시도함
   home:
     title: 코드 스튜디오
-    description: Code Studio는 Code.org에서 만든, 집에서 온라인으로 학습하는 과정입니다.
-    lines_of_code: 학생들에 의해 %{lines_count} 줄의 코드가 작성되었습니다.
-    lines_of_code_linebreak: "%{lines_count} 줄의 코드가 <br/> %{students_count} 백만의 학생들에
-      의해 작성되었습니다."
     all_courses: 코스1, 2, 3 살펴보기
     lesson_plans: 레슨 계획
     signin_message: 이미 등록되어있나요? %{link}
@@ -462,11 +443,6 @@ ko:
     test_videos_help: 새로 만든 비디오 플레이어를 테스트해 보세요.
     try_beta_courses: K-5(~초등5학년) 학생들을 위한 새로운 시범 코스들을 경험해 보세요.
     use_as_teacher: 선생님으로 사이트 사용하기
-    heading_hoc2014: "<h1>어떠한 나이에도 가능한</h1> <h2>Hour of Code</h2>"
-    heading_elementary: "<h1>처음하는 모든 사람들을 위한</h1> <h2>20시간짜리 과정</h2>"
-    heading_apps: "<h1> 누구나 </h1><h2> 재미있게 </h2>"
-    heading_tools: "<h2>다음 단계로의 준비가 되었나요?</h2><h1>고등학생들을 위한 자바스크립트 도구</h1>"
-    heading_legacy: "<h1>모든 연령대를 위한 </h1><h2>일반 코스</h2>"
     your_gallery: 갤러리
     no_primary_course: Code Studio 과정들을 해보세요.
     choose_next_course: 아래의 Code Studio 과정을 해보세요.
@@ -669,10 +645,6 @@ ko:
     header_artist: 화가
     report_abuse: 악용 사례 신고
   landing:
-    prerelease: 이 코스는 <span class='betatext'>beta</span> 테스트 중입니다. 이 코스는 최종 완성 버전의
-      코스가 아니며, 여러가지 피드백과 개선작업이 이루어집니다.
-    prerelease_hoc2014: 이 튜토리얼은 <span class='betatext'>beta</span> 테스트 중입니다. 여러분들의
-      피드백을 통해 개선됩니다.
     report_bug: 버그(오류) 신고하기
     support: 도움 받기
     support_url: "//support.code.org"
@@ -745,9 +717,6 @@ ko:
   age_interstitial:
     age: 나이
     header: 계정 정보 업데이트
-    message: 개인 정보 보호 정책에 따라 서비스를 제공합니다. 나이를 입력해 주세요.<br/> code.org 는 제출한 정보를 제3자에게
-      대여/판매/공유하지 않습니다.
-    sign_out: 나이 정보를 제출하기 원하지 않으시면 <a href="%{url}">탈퇴</a>를 하실 수 있습니다.
   terms_interstitial:
     title: 업데이트 된 서비스약관 및 개인정보 보호정책
     intro_desc: '아래와 같이 서비스 약관과 개인보호 보호정책을 업데이트 했습니다. 업데이트 내역은 2016년 8월 24일 부터 적용됩니다.
@@ -855,10 +824,8 @@ ko:
   peer_review:
     accepted:
       name: 승인됨
-      description: "<strong>네</strong>, 제출 요구 사항을 <strong>만족</strong>합니다."
     rejected:
       name: 거절됨
-      description: "<strong>아니오</strong>, 제출 요구 사항을 <strong>만족하지않습니다.</strong>"
     escalated:
       name: 상부에 보고됨
       description: 제출 내용을 검토해 주세요.

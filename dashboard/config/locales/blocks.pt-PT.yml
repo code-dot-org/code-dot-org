@@ -10,11 +10,15 @@ pt:
         options:
           GROUP:
             sprites: tudo
+          MOVE:
+            MOVES.Rest: Nenhum
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
         options:
+          MOVE:
+            MOVES.Rest: Nenhum
           DIR:
             '1': "→"
             "-1": "←"
@@ -27,11 +31,15 @@ pt:
         options:
           GROUP:
             sprites: tudo
+          MOVE:
+            MOVES.Rest: Nenhum
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
         options:
+          MOVE:
+            MOVES.Rest: Nenhum
           DIR:
             '1': "→"
             "-1": "←"
@@ -48,6 +56,10 @@ pt:
         options:
           UNIT:
             '"seconds"': segundos
+      Dancelab_ifDanceIs:
+        options:
+          DANCE:
+            MOVES.Rest: Nenhum
       Dancelab_ifTime:
         options:
           UNIT:
@@ -96,6 +108,14 @@ pt:
             '"random"': aleatório
       Dancelab_randomColor:
         text: cor aleatória
+      Dancelab_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': Nenhum
+      Dancelab_setBackgroundEffectWithPalette:
+        options:
+          EFFECT:
+            '"none"': Nenhum
       Dancelab_setDanceSpeed:
         options:
           SPEED:
@@ -114,6 +134,14 @@ pt:
             '4': very fast
             '0.5': slow
             '0.25': very slow
+      Dancelab_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': Nenhum
+      Dancelab_setForegroundEffectExtended:
+        options:
+          EFFECT:
+            '"none"': Nenhum
       Dancelab_setProp:
         options:
           PROPERTY:
@@ -170,11 +198,6 @@ pt:
           CONDITION:
             '"when"': quando
             '"while"': enquanto
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': verdadeiro
-            'false': falso
       gamelab_getProp:
         options:
           PROPERTY:
@@ -242,13 +265,6 @@ pt:
             '"left"': para a esquerda
             '"right"': para a direita
             '"space"': espaço
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": para cima
-            "'down'": para baixo
-            "'left'": para a esquerda
-            "'right'": para a direita
       gamelab_whileKey:
         options:
           KEY:
@@ -325,6 +341,10 @@ pt:
         options:
           SELECT:
             '"all"': tudo
+      Mikelab_ifDanceIs:
+        options:
+          DANCE:
+            MOVES.Rest: Nenhum
       Mikelab_randomColor:
         text: cor aleatória
       Mikelab_setBG:

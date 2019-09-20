@@ -29,16 +29,13 @@ ku:
         edit_header: 'دەستکاریکردنی وردەکارییەکانی هەژمار'
         error:
           future: ناکرێت لە داهاتوو بێت
+  beta: "تاقیکاری"
   hello: "چۆنی جیهان"
   welcome_back: "بەخێربێیەوە، %{name}"
   submit: بنێرە
   previous_page: لاپەرەی پێشوو
   next_page: لاپەرەی دواتر
   or: "یان"
-  add_teacher_form:
-    code:
-      label: 'زیادکردنی مامۆستایەک:'
-    submit: 'زیادکردنی مامۆستا'
   appname: "Code.org"
   stage: "قۆناغ"
   stage_number: "قۆناغی %{number}"
@@ -102,6 +99,9 @@ ku:
       signin: 'چوونەژوورەوە'
       already_registered: 'پێشوو تۆمارکراویت؟'
       create: 'ez'
+      applab: 'تاقیگەی ئاپ'
+      bounce: 'هەڵبەزینەوە'
+      gamelab: 'تاقیگەی یاری'
     popup:
       close: 'داخستن'
       puzzle_map: 'قۆناغەکان'
@@ -134,6 +134,13 @@ ku:
       link: "زیاتر فێرببە"
   next_stage: 'تەواوبوو! بەردەوامبە بۆ قۆناغی دواتر'
   pdf_download: 'داگرتنی PDF'
+  upsell:
+    applab:
+      title: 'تاقیگەی ئاپ'
+    gamelab:
+      title: "تاقیگەی یاری"
+    unplugged_conditionals:
+      title: "مەرجیەکان"
   dialog:
     startover_title: "ئایا تۆ دڵنیای دەتەوێت دووبارە دەست پێ بکەیتەوە؟"
     startover_ok: "دەست پێبکەوە"
@@ -145,6 +152,7 @@ ku:
     races:
       other: "هی تر"
     submit: "بنێرە"
+    decline: "داخستن"
   project:
     name: "ناو"
     abuse:
@@ -152,9 +160,14 @@ ku:
         abuse_type:
           other: 'هی تر'
   flex_category:
+    csf_jigsaw: 'مەتەڵە وێنە'
     csf_loops: 'گرێکان'
+    csf_conditionals: 'مەرجیەکان'
+    csf_functions: 'فرمانەکان'
     csf_variables: 'گۆڕاوەکان'
     csp_variables: 'گۆڕاوەکان'
+    csp_conditionals: 'مەرجیەکان'
+    csp_functions: 'فرمانەکان'
     csp_lists: 'لیستەکان'
     csp_loops: 'گرێکان'
   pd:
@@ -165,7 +178,7 @@ ku:
         male: 'نێر'
         female: 'مێ'
       subjects:
-        cs: 'زانستی كۆپیتەر'
+        cs: 'زانستی كۆمپیوتەر'
         math: 'بیرکاری'
   cookie_banner:
     accept: 'من ڕازیم'

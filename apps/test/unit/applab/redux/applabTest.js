@@ -1,5 +1,5 @@
 /** @file Tests for App Lab redux module */
-import {expect} from '../../../util/configuredChai';
+import {expect, assert} from '../../../util/configuredChai';
 import {
   getStore,
   registerReducers,
@@ -127,6 +127,20 @@ describe('App Lab redux module', () => {
         expect(store.getState().interfaceMode).to.equal(
           ApplabInterfaceMode.CODE
         );
+      });
+    });
+  });
+
+  describe('level', () => {
+    describe('setLevelData', () => {
+      it('sets given data on the level', () => {
+        let data = {name: 'Favorite Level!', isStartMode: true};
+        store.dispatch(actions.setLevelData(data));
+        assert.deepEqual(data, store.getState().level);
+        // Only update level name, make sure other data is unaffected.
+        data.name = 'New Name!';
+        store.dispatch(actions.setLevelData({name: data.name}));
+        assert.deepEqual(data, store.getState().level);
       });
     });
   });

@@ -44,6 +44,7 @@ pt-BR:
           para <strong>%{email}</strong>.
         error:
           future: não pode estar no futuro
+  beta: beta
   hello: Olá, mundo
   welcome_back: Bem-vindo de volta, %{name}
   your_professional_learning_plan: Seu plano de aprendizagem profissional
@@ -58,14 +59,14 @@ pt-BR:
   okay: Ok
   or: ou
   heading_x_of_y: "%{heading} (página %{x} de %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Adicionar professor:'
+      title: Adira a uma secção em Code.org
       placeholder: Código da seção (ABCDEF)
-      instructions: Insira o código que seu professor compartilhou com você. É um
-        código de 6 letras, como "ABCDEF".
-      instructions_short: Digite seu código de seção de 6 letras
-    submit: Adicionar professor
+      instructions: 'Por favor insira o código de 6 letras que o seu professor lhe
+        deu. (por exemplo: "ABCDEF") para que se possa juntar à sua secção.'
+      instructions_short: Insira o seu código de secção de 6 letras
+      submit: Aderir
   add_hint_form:
     placeholder: Digite sua dica aqui
     submit: Adicionar dica
@@ -96,9 +97,6 @@ pt-BR:
     continue_with: Continuar com %{provider}
     sign_in_with: Entre com %{provider}
     signed_in: Sessão iniciada!
-    signed_out: Você saiu da <a href="%{url}">Code.org</a>.
-    sign_out_of: Você usou %{provider} para entrar. <a href="%{url}">Clique aqui</a>
-      para sair de %{provider}.
     already_signedup: Já se cadastrou?
     notyet_signedup: Ainda não faz parte?
     google_oauth2: Conta do Google
@@ -161,8 +159,6 @@ pt-BR:
     valid_password: Senha válida!
     invalid_password: A senha deve ter pelo menos 6 caracteres
     mismatch_password: As duas senhas que você digitou são diferentes
-    agree_tos_privacy: Eu concordo com os <a href='http://code.org/tos'>Termos de
-      Serviço</a> e <a href='http://code.org/privacy'>Política de Privacidade</a>.
     under_13_consent: Caso eu tenha menos de 13 anos de idade, confirmo que tenho
       autorização dos meus pais ou do meu tutor legal para usar os serviços do Code.org.
     student_consent: Confirmo que tenho autorização dos meus pais ou do tutor legal
@@ -170,13 +166,6 @@ pt-BR:
     agree_us_website: Concordo em usar um site situado nos Estados Unidos.
     my_data_to_us: Os dados gerados pelo meu uso deste site podem ser enviados e armazenados
       ou processados nos Estados Unidos.
-    student_terms: Os endereços de e-mail não são armazenados em um formulário que
-      nos permita entrar em contato com os alunos. Os alunos nunca receberão e-mails
-      da Code.org, exceto em caso de recuperação de senha. Consulte nossa <a href='http://code.org/privacy'>Política
-      de Privacidade</a> para ver outras informações.
-    teacher_terms: Eu aceito os Termos de Serviço da Code.org. Para ver mais informações
-      sobre privacidade, consulte nossa <a href='http://code.org/privacy'>Política
-      de Privacidade</a>.
     additional_information: Precisamos de mais informações para continuar com o processo
       de inscrição.
     user_type_button: Atualizar Tipo de Conta
@@ -233,8 +222,6 @@ pt-BR:
     login: Entrar
     invalid_login: Login incorreto, tente novamente
     pair_programming: Estou trabalhando em parceria no computador
-    student_privacy: Saiba mais sobre por que você não está vendo o seu nome completo
-      <a href='%{student_privacy_blog}' target='_blank'>aqui</a>.
   password:
     reset_form:
       title: Esqueceu sua senha?
@@ -512,11 +499,6 @@ pt-BR:
     tried: Provado
   home:
     title: Code Studio
-    description: No Code Studio você pode encontrar os cursos on-line criados pela
-      Code.org
-    lines_of_code: "%{lines_count} LINHAS DE CÓDIGO ESCRITAS POR ALUNOS"
-    lines_of_code_linebreak: "%{lines_count} LINHAS DE CÓDIGO<br/>ESCRITAS POR %{students_count}
-      MILHÕES DE ESTUDANTES"
     all_courses: Visão geral dos cursos 1, 2 e 3
     lesson_plans: Planos de aula
     signin_message: Já se registrou? %{link}
@@ -556,13 +538,6 @@ pt-BR:
     try_beta_courses: Novo! Conheça nossos cursos experimentais para alunos do pré
       ao 5º ano
     use_as_teacher: Use este site como um professor
-    heading_hoc2014: "<h2>A Hora do Código para</h2><h1>Todas as idades</h1>"
-    heading_elementary: "<h2>Cursos de 20 horas sobre</h2><h1>Fundamentos de Ciência
-      da Computação (todas as idades)</h1>"
-    heading_apps: "<h2>Diversão para</h2><h1>todos</h1>"
-    heading_tools: "<h2>Pronto para o próximo passo?</h2> <h1>Ferramentas para o Ensino
-      Fundamental Ii e Ensino Médio</h1>"
-    heading_legacy: "<h2>Nosso curso acelerado para</h2><h1>todas as idades</h1>"
     your_gallery: Galeria
     no_primary_course: Faça um curso no Code Studio
     choose_next_course: Experimente um dos seguintes cursos do Code Studio
@@ -831,12 +806,6 @@ pt-BR:
     header_artist: Artista
     report_abuse: Reportar abuso
   landing:
-    prerelease: Este curso está em sua versão <span class='betatext'>beta</span>.
-      Isso significa que esta não é a versão final do curso, e ele está sujeito a
-      revisões conforme os feedbacks são recebidos e as melhorias são feitas.
-    prerelease_hoc2014: Este tutorial está na versão <span class='betatext'>beta</span>.
-      Ele está sujeito a revisões, conforme são recebidos feedbacks e melhorias são
-      feitas.
     report_bug: Reportar erro
     support: Obter ajuda
     support_url: "//support.code.org"
@@ -914,11 +883,6 @@ pt-BR:
   age_interstitial:
     age: Sua idade
     header: Atualização de informações da conta
-    message: Estamos atualizando nossa experiência para que você tenha proteções de
-      privacidade ainda mais fortes. Para isso, precisamos que os usuários nos informem
-      sua idade.<br/>Como sempre, a code.org nunca vai locar, vender ou compartilhar
-      essa informação com terceiros.
-    sign_out: Se você não quer informar sua idade, você pode <a href="%{url}">sair</a>.
   terms_interstitial:
     title: Termos de Serviço e Política de Privacidade atualizados
     intro_desc: 'Atualizamos nossos Termos de Serviço e Política de Privacidade, conforme
@@ -1054,11 +1018,8 @@ pt-BR:
   peer_review:
     accepted:
       name: Aceito
-      description: "<strong>Sim</strong>, este envio <strong>atende</strong> aos requisitos"
     rejected:
       name: Rejeitado
-      description: "<strong>Não</strong>, este envio <strong>não atende</strong> aos
-        requisitos"
     escalated:
       name: Encaminhado
       description: Eu gostaria que um instrutor revisasse este envio
@@ -1209,10 +1170,6 @@ pt-BR:
     download_in_Vietnamese: 'Baixar em Vietnamita:'
     windows: Windows (64 bits)
     mac: Mac OS X
-  stage_extras_teacher_message: Você possui Aulas Extras desativadas para algumas
-    de suas seções. Seus alunos não irão ver esta página a menos que você ative as
-    Aulas Extras. Você pode ativar as Aulas Extras visitando o seu <a href='http://code.org/teacher-dashboard'>Painel
-    do Professor</a>.
   locked_stage: O conteúdo desta fase não pode ser visto, pois ela está bloqueada
     no momento. Seu professor pode desbloquear esta fase quando chegar a hora de trabalhar
     com ela ou quando for revisar suas respostas.
@@ -1335,28 +1292,12 @@ pt-BR:
         Code.org, e 2) você concorda em compartilhar suas informações com o nosso
         parceiro international em seu país para que nós possamos ajudar a apoiar a
         sua jornada como um professor de ciência da computação.
-      thanks: Obrigado por enviar! Aguardamos com expectativa o seu apoio quando você
-        tiver conhecimento dos currículos e ferramentas da Code.org. Por favor, continue
-        compartilhando suas perguntas e feedback conosco escrevendo para <a href='%{support_email_url}'>support@code.org</a>
-        ou postando no <a href='%{teacher_forum_url}' target='_blank'>fórum de professores</a>!
     logged_out:
       heading: Obrigado pelo seu interesse no Programa de Aprendizagem Profissional!
       body: Para começar, primeiro você precisa estar logado em sua conta do Code.org.
         Se você quiser mais informações sobre o programa antes de iniciar sua aplicação,
         por favor verifique a <a href="%{url}">visão geral do Programa de Aprendizagem
         Profissional</a>.
-    not_teacher:
-      body: Obrigado pelo seu interesse no Programa de Aprendizagem Profissional da
-        Code.org! Você está atualmente logado em uma conta do aluno. Por favor, crie
-        uma conta de professor ou <a href="%{user_settings}">vá para suas configurações
-        de usuário</a> para atualizar sua conta do aluno para professor.
-      more: Caso você queira mais informações sobre o programa antes de iniciar sua
-        aplicação, por favor verifique a <a href="%{pl_overview}">visão geral do Programa
-        de Aprendizagem Profissional</a>.
-    no_teacher_email:
-      body: Sua conta não possui um endereço de email. Por favor <a href="%{user_registration}">visite
-        as configurações de sua conta</a> para adicionar um endereço de email antes
-        de completar este formulário.
   courses_category: Cursos Completos
   cookie_banner:
     message: Ao continuar a navegar em nosso site ou ao clicar em "Eu concordo", você

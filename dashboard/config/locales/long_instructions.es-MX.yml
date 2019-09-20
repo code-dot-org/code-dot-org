@@ -329,10 +329,10 @@ es-MX:
         `\"azul\"`.\n\n**¿No puedes avanzar? Haz clic aquí:** ![expandable](https://images.code.org/2d5d46a03082af3b01847aad6602e2ea-image-1511280140482.gif)"
       AppLab Intro 7 - Full Text: "<div style=\"float:right\">\n<img src=\"https://images.code.org/1e81d5bcdd69172f4127de55d045225f-image-1507565161167.05.19
         AM.png\" style=\"height:200px\">\n</div>\n\n**Objetivo:** hacer que los botones
-        sean `\"rojo\"` y `\"azul\"`. Luego, cambiar el texto en la etiqueta naranja
+        sean `\"red\"` y `\"blue\"`. Luego, cambiar el texto en la etiqueta naranja
         grande.\n\n**Cómo:** \n\n-   Recuerda que puedes pasar sobre los elementos
-        para ver sus `\"id\"`.\n-   Establece el `\"color-de-fondo\"` de los botones
-        como `\"rojo\"` y `\"azul\"`.\n-   Cambia la propiedad `\"texto\"` de la etiqueta
+        para ver sus `\"id\"`.\n-   Establece el `\"background-color\"` de los botones
+        como `\"red\"` y `\"blue\"`.\n-   Cambia la propiedad `\"text\"` de la etiqueta
         a lo que quieras, por ejemplo, `\"¡Bienvenido a mi aplicación!\"`.\n\n**¿No
         puedes avanzar? Haz clic aquí:** ![expandable](https://images.code.org/4bf99e7352e7c17a5bf73ced80171f6a-image-1511280628092.gif)"
       AppLab Intro 7 - onEvent intro: |-
@@ -340,7 +340,7 @@ es-MX:
 
         **Objetivo:** la pantalla comienza siendo azul. Agrega código para que pase a ser verde cuando haces clic en el botón "Green-ify".
 
-        **Cómo:** agregar código dentro de `enEvento` para establecer el `"color-de-fondo"` de la pantalla como `"verde"`.
+        **Cómo:** agregar código dentro de `enEvento` para establecer el `"background-color"` de la pantalla como `"green"`.
 
         **¿No puedes avanzar? Haz clic aquí:** ![expandable](https://images.code.org/5ddf6b129bc04b79839b3661ccef788b-image-1511281012076.gif)
       AppLab Intro 7 - onEvent twoButtons: |-
@@ -348,7 +348,7 @@ es-MX:
 
         **Objetivo:** ayudar a terminar esta aplicación de linterna. El botón "Encendido" hace que la pantalla se vuelva blanca. Ejecuta la aplicación y pruébala. Luego, escribe código para que el botón "Apagado" haga que la pantalla vuelva a ser negra.
 
-        **Cómo:** agregar código dentro del bloque `enEvento()` vacío que establezca el `"color-de-fondo"` de la pantalla como `"negro"` y el `"color-de-texto"` de la etiqueta como `"blanco"`.
+        **Cómo:** agregar código dentro del bloque `enEvento()` vacío que establezca el `"background-color"` de la pantalla como `"black"` y el `"text-color"` de la etiqueta como `"white"`.
 
         **¿No puedes avanzar? Haz clic aquí:** ![expandable](https://images.code.org/020b1d9b465aaf35967a528a92961c13-image-1511281772276.gif)
       AppLab Intro 7 - playSound: "<img src=\"https://images.code.org/28176329f15dea1a863564b069e72aab-image-1511282702534.44.52
@@ -367,7 +367,7 @@ es-MX:
 
         **Objetivo:** agregar un segundo botón a la pantalla que diga "¡Derecha!" con un `"id"` de `"botónDerecho"`.
 
-        **Cómo:** arrastra un nuevo botón en el Modo Diseño. Elige una posición y cambia su tamaño. Luego, establece su `"id"`, `"texto"`, `"color de fondo"` y `"tamaño de fuente"`.
+        **Cómo:** arrastra un nuevo botón en el Modo Diseño. Elige una posición y cambia su tamaño. Luego, establece su `"id"`, `"text"`, `"background color"` y `"font size"`.
 
         **¿No puedes avanzar? Haz clic aquí:** ![expandable](https://images.code.org/7035ad0445984cf889b159cf5682e35a-image-1508383186447.gif)
       AppLab Intro 7 - thisOrThatAddScreen: |-
@@ -984,7 +984,7 @@ es-MX:
 
         </summary>
 
-        Los párrafos están marcados con etiquetas de apertura (`<p>`) y cierre (`</p>`. Los párrafos de texto en HTML pueden tener cualquier longitud, desde una palabra hasta un grupo de oraciones. Agrupan conjuntos de oraciones y ponen un espacio entre ese grupo de texto y el siguiente.
+        Los párrafos están marcados con etiquetas de apertura (`<p>`) y cierre (`</p>`). Los párrafos de texto en HTML pueden tener cualquier longitud, desde una palabra hasta un grupo de oraciones. Agrupan conjuntos de oraciones y ponen un espacio entre ese grupo de texto y el siguiente.
 
         </details>
         <details>
@@ -1018,7 +1018,7 @@ es-MX:
         <strong>¿Qué es un párrafo?</strong>
         </summary>
 
-        Los párrafos están marcados con etiquetas de apertura (`<p>`) y cierre (`</p>`. Los párrafos de texto en HTML pueden tener cualquier longitud, desde una palabra hasta un grupo de oraciones. Agrupan conjuntos de oraciones y ponen un espacio entre ese grupo de texto y el siguiente.
+        Los párrafos están marcados con etiquetas de apertura (`<p>`) y cierre (`</p>`). Los párrafos de texto en HTML pueden tener cualquier longitud, desde una palabra hasta un grupo de oraciones. Agrupan conjuntos de oraciones y ponen un espacio entre ese grupo de texto y el siguiente.
 
         </details>
         <details>
@@ -1105,7 +1105,7 @@ es-MX:
 
         </summary>
 
-        Los párrafos están marcados con etiquetas de apertura (`<p>`) y cierre (`</p>`. Los párrafos de texto en HTML pueden tener cualquier longitud, desde una palabra hasta un grupo de oraciones. Agrupan conjuntos de oraciones y ponen un espacio entre ese grupo de texto y el siguiente.
+        Los párrafos están marcados con etiquetas de apertura (`<p>`) y cierre (`</p>`). Los párrafos de texto en HTML pueden tener cualquier longitud, desde una palabra hasta un grupo de oraciones. Agrupan conjuntos de oraciones y ponen un espacio entre ese grupo de texto y el siguiente.
 
         </details>
         <details>
@@ -4418,7 +4418,7 @@ es-MX:
         Hemos cargado el programa de coches de carrera que escribiste anteriormente aquí.
 
         -   Agrega una sentencia `si` después de actualizar la posición del coche de carrera.
-        -   Mueve la expresión booleana de la sentencia registro.consola a la condición de la sentencia si.
+        -   Mueve la expresión booleana de la sentencia console.log a la condición de la sentencia si.
         -   Agrega una sentencia para dibujar texto en la pantalla que diga "Ganador" dentro de la sentencia `si`.
       CSD U3 - conditionals - first conditional 2: |-
         <img src="https://images.code.org/abd459d8d1477ac2f582417f4334cdaa-image-1466107090414.gif" style="width:200px;float:right">
@@ -4432,12 +4432,12 @@ es-MX:
         ¡Haz explotar el globo cuando toque el borde del área de juego!
 
         -   Agrega una sentencia `si` que compruebe si el globo ha tocado el borde.
-            -   Usa un observador en `escala.globo` como ayuda.
+            -   Usa un observador en `globo.escala` como ayuda.
         -   Crea un sprite que utilice el elemento visual "explotar" en la pestaña de animaciones.
         -   Establece la propiedad `visible` de explotar como `falsa` al inicio.
         -   Agrega dos sentencias dentro de `si`.
             -   Una que establezca la propiedad `visible` para ocultar el sprite del globo.
-            -   Una que establezca la propiedad `visible` para ocultar el sprite de explotar.
+            -   Una que establezca la propiedad `visible` para mostrar el sprite de explotar.
       CSD U3 - conditionals - first conditional_2018: |-
         <img src="https://images.code.org/36c5543076622c96f7dabce8bc37f995-image-1468425774455.54.03 PM.png" style="float:right;width:100px">
 
@@ -4452,7 +4452,7 @@ es-MX:
         Hemos cargado el programa de coches de carrera que escribiste anteriormente aquí.
 
         -   Agrega una sentencia `si` después de actualizar la posición del coche de carrera.
-        -   Mueve la expresión booleana de la sentencia registro.consola a la condición de la sentencia si.
+        -   Mueve la expresión booleana de la sentencia console.log a la condición de la sentencia si.
         -   Agrega una sentencia para dibujar texto en la pantalla que diga "Ganador" dentro de la sentencia `si`.
       CSD U3 - conditionals - first conditional_2019: |-
         <img src="https://images.code.org/36c5543076622c96f7dabce8bc37f995-image-1468425774455.54.03 PM.png" style="float:right;width:100px">
@@ -4468,7 +4468,7 @@ es-MX:
         Hemos cargado el programa de coches de carrera que escribiste anteriormente aquí.
 
         -   Agrega una sentencia `si` después de actualizar la posición del coche de carrera.
-        -   Mueve la expresión booleana de la sentencia registro.consola a la condición de la sentencia si.
+        -   Mueve la expresión booleana de la sentencia console.log a la condición de la sentencia si.
         -   Agrega una sentencia para dibujar texto en la pantalla que diga "Ganador" dentro de la sentencia `si`.
       CSD U3 - conditionals - transition: |-
         # Expresiones booleanas
@@ -4479,7 +4479,7 @@ es-MX:
 
         El programa dibuja un coche de carreras y una línea de meta. Vamos a descubrir cuándo el coche de carreras cruza la línea de meta. Los sprites han sido creados para ti.
 
-        -   Agrega una sentencia `registro.consola` dentro del bucle dibujar. ( [Show me where](#triggercallout=callout) )
+        -   Agrega una sentencia `console.log` dentro del bucle dibujar. ( [Muéstrame dónde](#triggercallout=callout) )
         -   Agrega una expresión booleana dentro de `registro.consola` que pregunte: "¿La posición x del coche de carreras es menor que la posición x de la línea de meta?".
         -   Observa el resultado que genera el programa a medida que el coche se mueve. ¿Cuándo cambia? ¿Por qué?
       CSD U3 - conditionals - transition_2018: |-
@@ -4491,7 +4491,7 @@ es-MX:
 
         El programa dibuja un coche de carreras y una línea de meta. Vamos a descubrir cuándo el coche de carreras cruza la línea de meta. Los sprites han sido creados para ti.
 
-        -   Agrega una sentencia `registro.consola` dentro del bucle dibujar. ( [Show me where](#triggercallout=callout) )
+        -   Agrega una sentencia `console.log` dentro del bucle dibujar. ( [Muéstrame dónde](#triggercallout=callout) )
         -   Agrega una expresión booleana dentro de `registro.consola` que pregunte: "¿La posición x del coche de carreras es menor que la posición x de la línea de meta?".
         -   Observa el resultado que genera el programa a medida que el coche se mueve. ¿Cuándo cambia? ¿Por qué?
       CSD U3 - conditionals - transition_2019: |-
@@ -4503,7 +4503,7 @@ es-MX:
 
         El programa dibuja un coche de carreras y una línea de meta. Vamos a descubrir cuándo el coche de carreras cruza la línea de meta. Los sprites han sido creados para ti.
 
-        -   Agrega una sentencia `registro.consola` dentro del bucle dibujar. ( [Show me where](#triggercallout=callout) )
+        -   Agrega una sentencia `console.log` dentro del bucle dibujar. ( [Muéstrame dónde](#triggercallout=callout) )
         -   Agrega una expresión booleana dentro de `registro.consola` que pregunte: "¿La posición x del coche de carreras es menor que la posición x de la línea de meta?".
         -   Observa el resultado que genera el programa a medida que el coche se mueve. ¿Cuándo cambia? ¿Por qué?
       CSD U3 AnimationsMulti Play Defender: |-
@@ -4553,7 +4553,7 @@ es-MX:
 
         -   En la pestaña Animación hay animaciones para cada uno de tus sprites. Échales un vistazo.
         -   Asigna a cada sprite la animación apropiada en tu código. **Utiliza aquellas que te hemos provisto por ahora** pero luego podrás cambiarlas.
-        -   Puedes ir a [Level 4](/s/csd3-2017/stage/20/puzzle/4) si necesitas ayuda para recordar cómo hacerlo.
+        -   Puedes ir a [Nivel 4](/s/csd3-2017/stage/20/puzzle/4) si necesitas ayuda para recordar cómo hacerlo.
       CSD U3 AnimationsMulti defender animate cake enemies_2018: |-
         # Primeros pasos: establecer animaciones
 
@@ -4565,7 +4565,7 @@ es-MX:
 
         -   En la pestaña Animación hay animaciones para cada uno de tus sprites. Échales un vistazo.
         -   Asigna a cada sprite la animación apropiada en tu código. **Utiliza aquellas que te hemos provisto por ahora** pero luego podrás cambiarlas.
-        -   Puedes ir a [Level 4](/s/csd3-2018/stage/20/puzzle/4) si necesitas ayuda para recordar cómo hacerlo.
+        -   Puedes ir a [Nivel 4](/s/csd3-2018/stage/20/puzzle/4) si necesitas ayuda para recordar cómo hacerlo.
       CSD U3 AnimationsMulti defender animate cake enemies_2019: |-
         # Primeros pasos: establecer animaciones
 
@@ -4577,7 +4577,7 @@ es-MX:
 
         -   En la pestaña Animación hay animaciones para cada uno de tus sprites. Échales un vistazo.
         -   Asigna a cada sprite la animación apropiada en tu código. **Utiliza aquellas que te hemos provisto por ahora** pero luego podrás cambiarlas.
-        -   Puedes ir a [Level 4](../../20/puzzle/4) si necesitas ayuda para recordar cómo hacerlo.
+        -   Puedes ir a [Nivel 4](../../20/puzzle/4) si necesitas ayuda para recordar cómo hacerlo.
       CSD U3 AnimationsMulti defender animate player: |-
         # Cambiar las animaciones del jugador
 
@@ -4924,7 +4924,7 @@ es-MX:
         Para este nivel, escribirás código dentro de la función `moverJugador`.
 
         -   Usa un bloque `si` junto con `teclaAbajo` para detectar cuando se presiona la flecha "arriba".
-        -   Usa `sprite.x` para aumentar la posición y del jugador en 3 con el patrón del contador.
+        -   Usa `sprite.y` para aumentar la posición y del jugador en 3 con el patrón del contador.
         -   Usa otro bloque `si` para mover al jugador hacia abajo cuando se presiona la flecha "abajo".
 
         Prueba tu código. Tu personaje ahora debería moverse en las 4 direcciones.
@@ -5107,7 +5107,7 @@ es-MX:
         \  Lee todo el programa para ver cómo se crean `sprite1` y `sprite2`, y qué
         propiedades se comparan.\n-   Identifica las propiedades del sprite que se
         comparan en cada una de las expresiones booleanas.\n-   Cambia el código _solo
-        en las primeras **11** líneas_ para que cada una de las sentencias `registro.consola()`
+        en las primeras **11** líneas_ para que cada una de las sentencias `console.log()`
         imprima `verdadero`."
       CSD U3 Complex Movement counter prediction: |-
         # La velocidad y el patrón del contador
@@ -5159,10 +5159,10 @@ es-MX:
 
         # Haz esto
 
-        Hay un sprite de manzana que crece creado para ti. Comienza siendo verde y debería volverse rojo cuando llega a una escala de 2. Aún no nos preocuparemos por hacerlo rojo; solo usamos el comando `registro.consola` para comprobar si la escala sigue siendo 2.
+        Hay un sprite de manzana que crece creado para ti. Comienza siendo verde y debería volverse rojo cuando llega a una escala de 2. Aún no nos preocuparemos por hacerlo rojo; solo usamos el comando `console.log` para comprobar si la escala sigue siendo 2.
 
-        -   Agrega una sentencia `registro.consola`.
-        -   Agrega una expresión booleana dentro de `registro.consola` que compruebe si `escala.manzana` es mayor que 2.
+        -   Agrega una sentencia `console.log`.
+        -   Agrega una expresión booleana dentro de `console.log` que compruebe si `escala.manzana` es mayor que 2.
       CSD U3 Conditionals Apple 2: |-
         # Cambiar a rojo
 
@@ -7638,7 +7638,7 @@ es-MX:
 
         # Haz esto
 
-        -   Usa el patrón del contador con la velocidad y del sprite para que la roca vaya más rápido a medida que cae.  ( [Show me where](#triggercallout=code_triggered) )
+        -   Usa el patrón del contador con la velocidad y del sprite para que la roca vaya más rápido a medida que cae.  ( [Muéstrame dónde](#triggercallout=code_triggered) )
 
         _Desafío: ¿puedes hacer que la roca gire mientras cae?_
       CSD U3 abstraction accelerateY up: |-
@@ -7672,7 +7672,7 @@ es-MX:
 
         # Haz esto
 
-        -   Usa el patrón del contador con la velocidad y del sprite para que la roca vaya más rápido a medida que cae.  ( [Show me where](#triggercallout=code_triggered) )
+        -   Usa el patrón del contador con la velocidad y del sprite para que la roca vaya más rápido a medida que cae.  ( [Muéstrame dónde](#triggercallout=code_triggered) )
 
         _Desafío: ¿puedes hacer que la roca gire mientras cae?_
       CSD U3 abstraction accelerateY_2019: |-
@@ -7682,7 +7682,7 @@ es-MX:
 
         # Haz esto
 
-        -   Usa el patrón del contador con la velocidad y del sprite para que la roca vaya más rápido a medida que cae.  ( [Show me where](#triggercallout=code_triggered) )
+        -   Usa el patrón del contador con la velocidad y del sprite para que la roca vaya más rápido a medida que cae.  ( [Muéstrame dónde](#triggercallout=code_triggered) )
 
         _Desafío: ¿puedes hacer que la roca gire mientras cae?_
       CSD U3 abstraction add coin: |-
@@ -7787,16 +7787,16 @@ es-MX:
 
         ¡Ahora tienes todos los bloques que necesitas para que tu sprite salte!
 
-        Al igual que verificaste si tu pez estaba en el borde izquierdo, deberás verificar si la rana está en el suelo. Si es así, podría saltar o quedarse quieta, por lo que necesitarás un bloque `si` más para comprobar si el usuario ha presionado la flecha hacia arriba ( [Show me where](#triggercallout=code_triggered1) ).
+        Al igual que verificaste si tu pez estaba en el borde izquierdo, deberás verificar si la rana está en el suelo. Si es así, podría saltar o quedarse quieta, por lo que necesitarás un bloque `si` más para comprobar si el usuario ha presionado la flecha hacia arriba ( [Muéstrame dónde](#triggercallout=code_triggered1) ).
 
         También deberás comprobar si la rana ha alcanzado su punto más alto y, en ese caso, enviarla hacia abajo.
 
         # Haz esto
 
-        -   Encuentra la sentencia `si` que verifica si el sprite está en el suelo, y observa la declaración `si` dentro de él que verifica si el usuario ha presionado la tecla de flecha hacia "arriba". ( [Show me where](#triggercallout=code_triggered1) )
+        -   Encuentra la sentencia `si` que verifica si el sprite está en el suelo, y observa la declaración `si` dentro de él que verifica si el usuario ha presionado la tecla de flecha hacia "arriba". ( [Muéstrame dónde](#triggercallout=code_triggered1) )
             -   Usa el bloque `velocidadY` para que la rana salte si el usuario presiona la tecla de flecha.
             -   Usa el bloque `velocidadY` para que la rana deje de moverse.
-        -   Agrega una sentencia `si` que haga lo siguiente:  ( [Show me where](#triggercallout=code_triggered2) )
+        -   Agrega una sentencia `si` que haga lo siguiente:  ( [Muéstrame dónde](#triggercallout=code_triggered2) )
             -   Verifica si el sprite de la rana ha llegado a su punto más alto.
             -   Si es así, usa el bloque `velocidadY` para que el sprite vuelva a caer.
       CSD U3 abstraction jumping: |-
@@ -7808,7 +7808,7 @@ es-MX:
 
         Ya se ha creado un sprite que cae porque su velocidad y aumenta dentro del bucle dibujar. Tendrás que hacer que este sprite parezca que salta.
 
-        -   Establece la velocidad y del sprite en -5 dentro del bloque `si` que comprueba si se ha presionado la flecha hacia arriba. ( [Show me where](#triggercallout=callout1) )
+        -   Establece la velocidad y del sprite en -5 dentro del bloque `si` que comprueba si se ha presionado la flecha hacia arriba. ( [Muéstrame dónde](#triggercallout=callout1) )
         -   Habla con tu compañero de al lado: ¿por qué este código se ejecuta de la manera en que lo hace? ¿Qué efecto tendría el uso de un número que no sea -5 en la forma en que funciona el código? ¿Cómo podrías saltar más alto o más bajo?
       CSD U3 abstraction jumping_2018: |-
         # Saltar
@@ -7819,7 +7819,7 @@ es-MX:
 
         Ya se ha creado un sprite que cae porque su velocidad y aumenta dentro del bucle dibujar. Tendrás que hacer que este sprite parezca que salta.
 
-        -   Establece la velocidad y del sprite en -5 dentro del bloque `si` que comprueba si se ha presionado la flecha hacia arriba. ( [Show me where](#triggercallout=callout1) )
+        -   Establece la velocidad y del sprite en -5 dentro del bloque `si` que comprueba si se ha presionado la flecha hacia arriba. ( [Muéstrame dónde](#triggercallout=callout1) )
         -   Habla con tu compañero de al lado: ¿por qué este código se ejecuta de la manera en que lo hace? ¿Qué efecto tendría el uso de un número que no sea -5 en la forma en que funciona el código? ¿Cómo podrías saltar más alto o más bajo?
       CSD U3 abstraction jumping_2019: |-
         # Saltar
@@ -7830,7 +7830,7 @@ es-MX:
 
         Ya se ha creado un sprite que cae porque su velocidad y aumenta dentro del bucle dibujar. Tendrás que hacer que este sprite parezca que salta.
 
-        -   Establece la velocidad y del sprite en -5 dentro del bloque `si` que comprueba si se ha presionado la flecha hacia arriba. ( [Show me where](#triggercallout=callout1) )
+        -   Establece la velocidad y del sprite en -5 dentro del bloque `si` que comprueba si se ha presionado la flecha hacia arriba. ( [Muéstrame dónde](#triggercallout=callout1) )
         -   Habla con tu compañero de al lado: ¿por qué este código se ejecuta de la manera en que lo hace? ¿Qué efecto tendría el uso de un número que no sea -5 en la forma en que funciona el código? ¿Cómo podrías saltar más alto o más bajo?
       CSD U3 abstraction left right counter: |-
         # Flotar a la derecha
@@ -7914,7 +7914,7 @@ es-MX:
 
         # Haz esto
 
-        -   Encuentra la sentencia `si` que verifica si el hongo se ha movido más allá del borde izquierdo. ( [Show me where](#triggercallout=code_triggered1) )
+        -   Encuentra la sentencia `si` que verifica si el hongo se ha movido más allá del borde izquierdo. ( [Muéstrame dónde](#triggercallout=code_triggered1) )
         -   Si es así, usa el bloque `sprite.x` para volver a poner el hongo en el borde derecho.
       CSD U3 abstraction looping_2018: |-
         # Bucle
@@ -7923,7 +7923,7 @@ es-MX:
 
         # Haz esto
 
-        -   Encuentra la sentencia `si` que verifica si el hongo se ha movido más allá del borde izquierdo. ( [Show me where](#triggercallout=code_triggered1) )
+        -   Encuentra la sentencia `si` que verifica si el hongo se ha movido más allá del borde izquierdo. ( [Muéstrame dónde](#triggercallout=code_triggered1) )
         -   Si es así, usa el bloque `sprite.x` para volver a poner el hongo en el borde derecho.
       CSD U3 abstraction looping_2019: |-
         # Bucle
@@ -7932,7 +7932,7 @@ es-MX:
 
         # Haz esto
 
-        -   Encuentra la sentencia `si` que verifica si el hongo se ha movido más allá del borde izquierdo. ( [Show me where](#triggercallout=code_triggered1) )
+        -   Encuentra la sentencia `si` que verifica si el hongo se ha movido más allá del borde izquierdo. ( [Muéstrame dónde](#triggercallout=code_triggered1) )
         -   Si es así, usa el bloque `sprite.x` para volver a poner el hongo en el borde derecho.
       CSD U3 abstraction make it your own: |-
         # Añade tu toque personal
@@ -8006,7 +8006,7 @@ es-MX:
 
         # Haz esto
 
-        Usa el bloque `velocidadRotación` para que el sol gire 3 grados cada vez. ( [Show me where](#triggercallout=callout1) )
+        Usa el bloque `velocidadRotación` para que el sol gire 3 grados cada vez. ( [Muéstrame dónde](#triggercallout=callout1) )
       CSD U3 abstraction rotation control: |-
         # Controlar la velocidad
 
@@ -8014,7 +8014,7 @@ es-MX:
 
         # Haz esto
 
-        -   Observa la instrucción `si` dentro del bucle dibujar que comprueba si se ha presionado la barra espaciadora. ( [Show me where](#triggercallout=code_triggered1) )
+        -   Observa la instrucción `si` dentro del bucle dibujar que comprueba si se ha presionado la barra espaciadora. ( [Muéstrame dónde](#triggercallout=code_triggered1) )
         -   Usa el bloque `velocidadRotación` para que la rueda de colores comience a girar si el usuario presiona la barra espaciadora.
       CSD U3 abstraction rotation control_2018: |-
         # Controlar la velocidad
@@ -8023,7 +8023,7 @@ es-MX:
 
         # Haz esto
 
-        -   Observa la instrucción `si` dentro del bucle dibujar que comprueba si se ha presionado la barra espaciadora. ( [Show me where](#triggercallout=code_triggered1) )
+        -   Observa la instrucción `si` dentro del bucle dibujar que comprueba si se ha presionado la barra espaciadora. ( [Muéstrame dónde](#triggercallout=code_triggered1) )
         -   Usa el bloque `velocidadRotación` para que la rueda de colores comience a girar si el usuario presiona la barra espaciadora.
       CSD U3 abstraction rotation control_2019: |-
         # Controlar la velocidad
@@ -8032,7 +8032,7 @@ es-MX:
 
         # Haz esto
 
-        -   Observa la instrucción `si` dentro del bucle dibujar que comprueba si se ha presionado la barra espaciadora. ( [Show me where](#triggercallout=code_triggered1) )
+        -   Observa la instrucción `si` dentro del bucle dibujar que comprueba si se ha presionado la barra espaciadora. ( [Muéstrame dónde](#triggercallout=code_triggered1) )
         -   Usa el bloque `velocidadRotación` para que la rueda de colores comience a girar si el usuario presiona la barra espaciadora.
       CSD U3 abstraction rotation_2018: |-
         # velocidadRotación
@@ -8043,7 +8043,7 @@ es-MX:
 
         # Haz esto
 
-        Usa el bloque `velocidadRotación` para que el sol gire 3 grados cada vez. ( [Show me where](#triggercallout=callout1) )
+        Usa el bloque `velocidadRotación` para que el sol gire 3 grados cada vez. ( [Muéstrame dónde](#triggercallout=callout1) )
       CSD U3 abstraction rotation_2019: |-
         # velocidadRotación
 
@@ -8053,7 +8053,7 @@ es-MX:
 
         # Haz esto
 
-        Usa el bloque `velocidadRotación` para que el sol gire 3 grados cada vez. ( [Show me where](#triggercallout=callout1) )
+        Usa el bloque `velocidadRotación` para que el sol gire 3 grados cada vez. ( [Muéstrame dónde](#triggercallout=callout1) )
       CSD U3 abstraction tumbleweed: |-
         # Hongo
 
@@ -8091,7 +8091,7 @@ es-MX:
 
         # Haz esto
 
-        -   Arrastra un bloque `sprite.velocidadX` justo debajo de donde se creó tu sprite.       ( [Show me where](#triggercallout=code_triggered) )
+        -   Arrastra un bloque `sprite.velocidadX` justo debajo de donde se creó tu sprite.       ( [Muéstrame dónde](#triggercallout=code_triggered) )
         -   Escribe el nombre de tu sprite en el bloque.
         -   Asigna un valor de 1 a la propiedad `velocidadX`.
         -   Ejecuta el código. ¿Qué ocurre?
@@ -8205,7 +8205,7 @@ es-MX:
 
         # Haz esto
 
-        -   Arrastra un bloque `sprite.velocidadX` justo debajo de donde se creó tu sprite.       ( [Show me where](#triggercallout=code_triggered) )
+        -   Arrastra un bloque `sprite.velocidadX` justo debajo de donde se creó tu sprite.       ( [Muéstrame dónde](#triggercallout=code_triggered) )
         -   Escribe el nombre de tu sprite en el bloque.
         -   Asigna un valor de 1 a la propiedad `velocidadX`.
         -   Ejecuta el código. ¿Qué ocurre?
@@ -8217,7 +8217,7 @@ es-MX:
 
         # Haz esto
 
-        -   Arrastra un bloque `sprite.velocidadX` justo debajo de donde se creó tu sprite.       ( [Show me where](#triggercallout=code_triggered) )
+        -   Arrastra un bloque `sprite.velocidadX` justo debajo de donde se creó tu sprite.       ( [Muéstrame dónde](#triggercallout=code_triggered) )
         -   Escribe el nombre de tu sprite en el bloque.
         -   Asigna un valor de 1 a la propiedad `velocidadX`.
         -   Ejecuta el código. ¿Qué ocurre?
@@ -9202,7 +9202,7 @@ es-MX:
 
         # Haz esto
 
-        -   Cambia el bloque `desplazar` por los bloques `sprite.chocar()`, `sprite.rebotar()` y `sprite.rebotarEn()`. ( [Show me where](#triggercallout=code_triggered) )
+        -   Cambia el bloque `desplazar` por los bloques `sprite.chocar()`, `sprite.rebotar()` y `sprite.rebotarEn()`. ( [Muéstrame dónde](#triggercallout=code_triggered) )
             -   _Te damos una pista: si tienes problemas para hacer esto con los bloques, entonces cambia al modo texto._
         -   Habla con tu compañero de al lado: ¿cuál es la diferencia entre las cuatro interacciones con los sprites? ¿Cuál crees que es el propósito de cada bloque?
 
@@ -9216,7 +9216,7 @@ es-MX:
 
         # Haz esto
 
-        -   Cambia el bloque `desplazar` por los bloques `sprite.chocar()`, `sprite.rebotar()` y `sprite.rebotarEn()`. ( [Show me where](#triggercallout=code_triggered) )
+        -   Cambia el bloque `desplazar` por los bloques `sprite.chocar()`, `sprite.rebotar()` y `sprite.rebotarEn()`. ( [Muéstrame dónde](#triggercallout=code_triggered) )
             -   _Te damos una pista: si tienes problemas para hacer esto con los bloques, entonces cambia al modo texto._
         -   Habla con tu compañero de al lado: ¿cuál es la diferencia entre las cuatro interacciones con los sprites? ¿Cuál crees que es el propósito de cada bloque?
 
@@ -9230,7 +9230,7 @@ es-MX:
 
         # Haz esto
 
-        -   Cambia el bloque `desplazar` por los bloques `sprite.chocar()`, `sprite.rebotar()` y `sprite.rebotarEn()`. ( [Show me where](#triggercallout=code_triggered) )
+        -   Cambia el bloque `desplazar` por los bloques `sprite.chocar()`, `sprite.rebotar()` y `sprite.rebotarEn()`. ( [Muéstrame dónde](#triggercallout=code_triggered) )
             -   _Te damos una pista: si tienes problemas para hacer esto con los bloques, entonces cambia al modo texto._
         -   Habla con tu compañero de al lado: ¿cuál es la diferencia entre las cuatro interacciones con los sprites? ¿Cuál crees que es el propósito de cada bloque?
 
@@ -9296,7 +9296,7 @@ es-MX:
 
         # Haz esto
 
-        Elige el bloque más adecuado para crear el balón de baloncesto que rebota en el suelo. ( [Show me where](#triggercallout=code_triggered) )
+        Elige el bloque más adecuado para crear el balón de baloncesto que rebota en el suelo. ( [Muéstrame dónde](#triggercallout=code_triggered) )
 
         [//]: # "https://images.code.org/24355fc6377cfafdce3ce2b3568a33c3-image-1470343728940.png"
 
@@ -9324,7 +9324,7 @@ es-MX:
 
         # Haz esto
 
-        Elige el bloque más adecuado para crear el balón de baloncesto que rebota en el suelo. ( [Show me where](#triggercallout=code_triggered) )
+        Elige el bloque más adecuado para crear el balón de baloncesto que rebota en el suelo. ( [Muéstrame dónde](#triggercallout=code_triggered) )
 
         [//]: # "https://images.code.org/24355fc6377cfafdce3ce2b3568a33c3-image-1470343728940.png"
 
@@ -9529,50 +9529,50 @@ es-MX:
 
         A continuación, crearás todas las funciones del fondo que necesitas para tu juego. Algunos juegos solo tienen un fondo, y otros tienen más de uno, que se elige de acuerdo con la puntuación del usuario u otro aspecto del juego. Tendrás que crear una función para cada fondo por separado en tu juego. Escribirás el código para elegir el fondo correcto en el siguiente nivel.
 
-        -   [Show me the block to create a new function](#triggercallout=callout1)
-        -   [Show me the area in the code to put my function](#triggercallout=callout2)
+        -   [Muéstrame el bloque para crear una nueva función](#triggercallout=callout1)
+        -   [Muéstrame el área en el código para poner mi función](#triggercallout=callout2)
 
         Después de crear tus funciones, debes llamarlas dentro del bucle dibujar, para probar los fondos de a uno.
 
-        -   [Show me the block to call my function](#triggercallout=callout3)
+        -   [Muéstrame el bloque para llamar mi función](#triggercallout=callout3)
       CSD U3 game backgrounds_2018: |-
         # Crear tus fondos
 
         A continuación, crearás todas las funciones del fondo que necesitas para tu juego. Algunos juegos solo tienen un fondo, y otros tienen más de uno, que se elige de acuerdo con la puntuación del usuario u otro aspecto del juego. Tendrás que crear una función para cada fondo por separado en tu juego. Escribirás el código para elegir el fondo correcto en el siguiente nivel.
 
-        -   [Show me the block to create a new function](#triggercallout=callout1)
-        -   [Show me the area in the code to put my function](#triggercallout=callout2)
+        -   [Muéstrame el bloque para crear una nueva función](#triggercallout=callout1)
+        -   [Muéstrame el área en el código para poner mi función](#triggercallout=callout2)
 
         Después de crear tus funciones, debes llamarlas dentro del bucle dibujar, para probar los fondos de a uno.
 
-        -   [Show me the block to call my function](#triggercallout=callout3)
+        -   [Muéstrame el bloque para llamar mi función](#triggercallout=callout3)
       CSD U3 game backgrounds_2019: |-
         # Crear tus fondos
 
         A continuación, crearás todas las funciones del fondo que necesitas para tu juego. Algunos juegos solo tienen un fondo, y otros tienen más de uno, que se elige de acuerdo con la puntuación del usuario u otro aspecto del juego. Tendrás que crear una función para cada fondo por separado en tu juego. Escribirás el código para elegir el fondo correcto en el siguiente nivel.
 
-        -   [Show me the block to create a new function](#triggercallout=callout1)
-        -   [Show me the area in the code to put my function](#triggercallout=callout2)
+        -   [Muéstrame el bloque para crear una nueva función](#triggercallout=callout1)
+        -   [Muéstrame el área en el código para poner mi función](#triggercallout=callout2)
 
         Después de crear tus funciones, debes llamarlas dentro del bucle dibujar, para probar los fondos de a uno.
 
-        -   [Show me the block to call my function](#triggercallout=callout3)
+        -   [Muéstrame el bloque para llamar mi función](#triggercallout=callout3)
       CSD U3 game choose background: |-
         # Elige tus fondos
 
-        Ahora que tienes los fondos que necesitas, escribirás el código para elegir el fondo correcto. Has visto esto en [Lesson 19 Level 11](/s/csd3-2017/stage/19/puzzle/11).
+        Ahora que tienes los fondos que necesitas, escribirás el código para elegir el fondo correcto. Has visto esto en [Lección 19 Nivel 11](/s/csd3-2017/stage/19/puzzle/11).
 
         Una vez que hayas escrito el código, para probarlo puedes cambiar el valor de inicio de tus variables y asegurarte de que aparece el fondo correcto.
       CSD U3 game choose background_2018: |-
         # Elige tus fondos
 
-        Ahora que tienes los fondos que necesitas, escribirás el código para elegir el fondo correcto. Has visto esto en [Lesson 19 Level 11](../../19/puzzle/11).
+        Ahora que tienes los fondos que necesitas, escribirás el código para elegir el fondo correcto. Has visto esto en [Lección 19 Nivel 11](../../19/puzzle/11).
 
         Una vez que hayas escrito el código, para probarlo puedes cambiar el valor de inicio de tus variables y asegurarte de que aparece el fondo correcto.
       CSD U3 game choose background_2019: |-
         # Elige tus fondos
 
-        Ahora que tienes los fondos que necesitas, escribirás el código para elegir el fondo correcto. Has visto esto en [Lesson 19 Level 11](../../19/puzzle/11).
+        Ahora que tienes los fondos que necesitas, escribirás el código para elegir el fondo correcto. Has visto esto en [Lección 19 Nivel 11](../../19/puzzle/11).
 
         Una vez que hayas escrito el código, para probarlo puedes cambiar el valor de inicio de tus variables y asegurarte de que aparece el fondo correcto.
       CSD U3 game create sprites: |-
@@ -9591,7 +9591,7 @@ es-MX:
       CSD U3 game display boards: |-
         # Tablero de información
 
-        Ahora que tus fondos están funcionando, puedes agregar tus tableros de información. La mayoría de los juegos tienen un tablero de puntuación, pero es posible que también desees mostrar información sobre el nivel del jugador o las vidas restantes. Mira [Lesson 16 Puzzle 9](/s/csd3-2017/stage/16/puzzle/9) para ver un ejemplo de cómo crear un marcador.
+        Ahora que tus fondos están funcionando, puedes agregar tus tableros de información. La mayoría de los juegos tienen un tablero de puntuación, pero es posible que también desees mostrar información sobre el nivel del jugador o las vidas restantes. Mira [Lección 16 Desafío 9](/s/csd3-2017/stage/16/puzzle/9) para ver un ejemplo de cómo crear un marcador.
 
         Para cada tablero:
 
@@ -9602,7 +9602,7 @@ es-MX:
       CSD U3 game display boards_2018: |-
         # Tablero de información
 
-        Ahora que tus fondos están funcionando, puedes agregar tus tableros de información. La mayoría de los juegos tienen un tablero de puntuación, pero es posible que también desees mostrar información sobre el nivel del jugador o las vidas restantes. Mira [Lesson 16 Puzzle 9](../../16/puzzle/9) para ver un ejemplo de cómo crear un marcador.
+        Ahora que tus fondos están funcionando, puedes agregar tus tableros de información. La mayoría de los juegos tienen un tablero de puntuación, pero es posible que también desees mostrar información sobre el nivel del jugador o las vidas restantes. Mira [Lección 16 Desafío 9](../../16/puzzle/9) para ver un ejemplo de cómo crear un marcador.
 
         Para cada tablero:
 
@@ -9613,7 +9613,7 @@ es-MX:
       CSD U3 game display boards_2019: |-
         # Tablero de información
 
-        Ahora que tus fondos están funcionando, puedes agregar tus tableros de información. La mayoría de los juegos tienen un tablero de puntuación, pero es posible que también desees mostrar información sobre el nivel del jugador o las vidas restantes. Mira [Lesson 16 Puzzle 9](../../16/puzzle/9) para ver un ejemplo de cómo crear un marcador.
+        Ahora que tus fondos están funcionando, puedes agregar tus tableros de información. La mayoría de los juegos tienen un tablero de puntuación, pero es posible que también desees mostrar información sobre el nivel del jugador o las vidas restantes. Mira [Lección 16 Desafío 9](../../16/puzzle/9) para ver un ejemplo de cómo crear un marcador.
 
         Para cada tablero:
 
@@ -9624,7 +9624,7 @@ es-MX:
       CSD U3 game interactions: |-
         # Interacciones con los sprites
 
-        El último paso es crear las funciones que hacen que tus sprites interactúen de la manera correcta. Necesitarás una función para cada tipo de interacción con los sprites. Puedes utilizar las funciones `recogerElementos` en [Lesson 21 Puzzle 17](/s/csd3-2017/stage/21/puzzle/17) y `desplazarEnemigos` en [Lesson 20 Puzzle 15](/s/csd3-2017/stage/20/puzzle/15) como ejemplos.
+        El último paso es crear las funciones que hacen que tus sprites interactúen de la manera correcta. Necesitarás una función para cada tipo de interacción con los sprites. Puedes utilizar las funciones `recogerElementos` en [Lección 21 Desafío 17](/s/csd3-2017/stage/21/puzzle/17) y `desplazarEnemigos` en [Lección 20 Desafío 15](/s/csd3-2017/stage/20/puzzle/15) como ejemplos.
 
         Para cada interacción:
 
@@ -9635,7 +9635,7 @@ es-MX:
       CSD U3 game interactions_2018: |-
         # Interacciones con los sprites
 
-        El último paso es crear las funciones que hacen que tus sprites interactúen de la manera correcta. Necesitarás una función para cada tipo de interacción con los sprites. Puedes utilizar las funciones `recogerElementos` en [Lesson 21 Puzzle 17](/s/csd3-2018/stage/21/puzzle/17) y `desplazarEnemigos` en [Lesson 20 Puzzle 15](/s/csd3-2018/stage/20/puzzle/15) como ejemplos.
+        El último paso es crear las funciones que hacen que tus sprites interactúen de la manera correcta. Necesitarás una función para cada tipo de interacción con los sprites. Puedes utilizar las funciones `recogerElementos` en [Lección 21 Desafío 17](/s/csd3-2018/stage/21/puzzle/17) y `desplazarEnemigos` en [Lección 20 Desafío 15](/s/csd3-2018/stage/20/puzzle/15) como ejemplos.
 
         Para cada interacción:
 
@@ -9646,7 +9646,7 @@ es-MX:
       CSD U3 game interactions_2019: |-
         # Interacciones con los sprites
 
-        El último paso es crear las funciones que hacen que tus sprites interactúen de la manera correcta. Necesitarás una función para cada tipo de interacción con los sprites. Puedes utilizar las funciones `recogerElementos` en [Lesson 21 Puzzle 17](../../21/puzzle/17) y `desplazarEnemigos` en [Lesson 20 Puzzle 15](../../20/puzzle/15) como ejemplos.
+        El último paso es crear las funciones que hacen que tus sprites interactúen de la manera correcta. Necesitarás una función para cada tipo de interacción con los sprites. Puedes utilizar las funciones `recogerElementos` en [Lección 21 Desafío 17](../../21/puzzle/17) y `desplazarEnemigos` en [Lección 20 Desafío 15](../../20/puzzle/15) como ejemplos.
 
         Para cada interacción:
 
@@ -9657,49 +9657,49 @@ es-MX:
       CSD U3 game sprite movement: |-
         # Funciones de movimiento de los sprites
 
-        Ahora crearás las funciones que hacen que el sprite se mueva de diferentes maneras mientras avanza el juego. Algunos ejemplos de funciones que has escrito son `retornarPlataformas` en [Lesson 21 Puzzle 9](/s/csd3-2017/stage/21/puzzle/9) y `jugadorCae` en [Lesson 21 Puzzle 14](/s/csd3-2017/stage/21/puzzle/14).
+        Ahora crearás las funciones que hacen que el sprite se mueva de diferentes maneras mientras avanza el juego. Algunos ejemplos de funciones que has escrito son `loopPlatforms` en [Lección 21 Desafío 9](/s/csd3-2017/stage/21/puzzle/9) y `playerFall` en [Lección 21 Desafío 14](/s/csd3-2017/stage/21/puzzle/14).
 
         Para cada movimiento:
 
         -   Crea una función que haga que el sprite se mueva de esa manera.
-        -   Llama a la función dentro del bucle dibujar.
+        -   Llama a la función dentro del bucle dibujar
       CSD U3 game sprite movement_2018: |-
         # Funciones de movimiento de los sprites
 
-        Ahora crearás las funciones que hacen que el sprite se mueva de diferentes maneras mientras avanza el juego. Algunos ejemplos de funciones que has escrito son `retornarPlataformas` en [Lesson 21 Puzzle 9](../../../stage/21/puzzle/9) y `jugadorCae` en [Lesson 21 Puzzle 14](../../../stage/21/puzzle/14).
+        Ahora crearás las funciones que hacen que el sprite se mueva de diferentes maneras mientras avanza el juego. Algunos ejemplos de funciones que has escrito son `loopPlatforms` en [Lección 21 Desafío 9](../../../stage/21/puzzle/9) y `playerFall` en [Lección 21 Desafío 14](../../../stage/21/puzzle/14).
 
         Para cada movimiento:
 
         -   Crea una función que haga que el sprite se mueva de esa manera.
-        -   Llama a la función dentro del bucle dibujar.
+        -   Llama a la función dentro del bucle dibujar
       CSD U3 game sprite movement_2019: |-
         # Funciones de movimiento de los sprites
 
-        Ahora crearás las funciones que hacen que el sprite se mueva de diferentes maneras mientras avanza el juego. Algunos ejemplos de funciones que has escrito son `retornarPlataformas` en [Lesson 21 Puzzle 9](../../../stage/21/puzzle/9) y `jugadorCae` en [Lesson 21 Puzzle 14](../../../stage/21/puzzle/14).
+        Ahora crearás las funciones que hacen que el sprite se mueva de diferentes maneras mientras avanza el juego. Algunos ejemplos de funciones que has escrito son `loopPlatforms` en [Lección 21 Desafío 9](../../../stage/21/puzzle/9) y `playerFall` en [Lección 21 Desafío 14](../../../stage/21/puzzle/14).
 
         Para cada movimiento:
 
         -   Crea una función que haga que el sprite se mueva de esa manera.
-        -   Llama a la función dentro del bucle dibujar.
+        -   Llama a la función dentro del bucle dibujar
       CSD U3 game user controls: |-
         # Controles de usuario
 
-        A continuación, querrás asegurarte de que los controles de usuario estén funcionando. Crea una función que haga que tus sprites respondan a los controles de usuario tal como se define en tu guía del proyecto. Puedes usar la función de [Lesson 20 Puzzle 13](/s/csd3-2017/stage/20/puzzle/13) como ejemplo.
+        A continuación, querrás asegurarte de que los controles de usuario estén funcionando. Crea una función que haga que tus sprites respondan a los controles de usuario tal como se define en tu guía del proyecto. Puedes usar la función de [Lección 20 Desafío 13](/s/csd3-2017/stage/20/puzzle/13) como ejemplo.
       CSD U3 game user controls_2018: |-
         # Controles de usuario
 
-        A continuación, querrás asegurarte de que los controles de usuario estén funcionando. Crea una función que haga que tus sprites respondan a los controles de usuario tal como se define en tu guía del proyecto. Puedes usar la función de [Lesson 20 Puzzle 13](../../20/puzzle/13) como ejemplo.
+        A continuación, querrás asegurarte de que los controles de usuario estén funcionando. Crea una función que haga que tus sprites respondan a los controles de usuario tal como se define en tu guía del proyecto. Puedes usar la función de [Lección 20 Desafío 13](../../20/puzzle/13) como ejemplo.
       CSD U3 game user controls_2019: |-
         # Controles de usuario
 
-        A continuación, querrás asegurarte de que los controles de usuario estén funcionando. Crea una función que haga que tus sprites respondan a los controles de usuario tal como se define en tu guía del proyecto. Puedes usar la función de [Lesson 20 Puzzle 13](../../20/puzzle/13) como ejemplo.
+        A continuación, querrás asegurarte de que los controles de usuario estén funcionando. Crea una función que haga que tus sprites respondan a los controles de usuario tal como se define en tu guía del proyecto. Puedes usar la función de [Lección 20 Desafío 13](../../20/puzzle/13) como ejemplo.
       CSD U3 game variables: |-
         # Crear tus variables
 
         Primero, deberás crear todas tus variables y colocarlas en el área de variables de tu código.
 
-        -   [Show me the block](#triggercallout=callout1)
-        -   [Show me the area in the code](#triggercallout=callout2)
+        -   [Muéstrame el bloque](#triggercallout=callout1)
+        -   [Muéstrame el área en el código](#triggercallout=callout2)
 
         No olvides que cada variable necesita una etiqueta (nombre) y un valor de inicio. Puedes cambiar el valor de la variable más adelante en tu código.
       CSD U3 game variables_2018: |-
@@ -9707,8 +9707,8 @@ es-MX:
 
         Primero, deberás crear todas tus variables y colocarlas en el área de variables de tu código.
 
-        -   [Show me the block](#triggercallout=callout1)
-        -   [Show me the area in the code](#triggercallout=callout2)
+        -   [Muéstrame el bloque](#triggercallout=callout1)
+        -   [Muéstrame el área en el código](#triggercallout=callout2)
 
         No olvides que cada variable necesita una etiqueta (nombre) y un valor de inicio. Puedes cambiar el valor de la variable más adelante en tu código.
       CSD U3 game variables_2019: |-
@@ -9716,8 +9716,8 @@ es-MX:
 
         Primero, deberás crear todas tus variables y colocarlas en el área de variables de tu código.
 
-        -   [Show me the block](#triggercallout=callout1)
-        -   [Show me the area in the code](#triggercallout=callout2)
+        -   [Muéstrame el bloque](#triggercallout=callout1)
+        -   [Muéstrame el área en el código](#triggercallout=callout2)
 
         No olvides que cada variable necesita una etiqueta (nombre) y un valor de inicio. Puedes cambiar el valor de la variable más adelante en tu código.
       CSD U3 keydown conditional: |-
@@ -9755,11 +9755,11 @@ es-MX:
       CSD U3 platform background1: |-
         # Fondo
 
-        Lo primero que crearás para tu juego es el fondo. El juego de ejemplo tenía dos fondos diferentes que fueron elegidos de acuerdo con la puntuación del usuario. El primer fondo ya ha sido creado para ti. Mira la función `fondo1` en el código de abajo para ver cómo funciona. ([Show me where](#triggercallout=code_triggered1))
+        Lo primero que crearás para tu juego es el fondo. El juego de ejemplo tenía dos fondos diferentes que fueron elegidos de acuerdo con la puntuación del usuario. El primer fondo ya ha sido creado para ti. Mira la función `fondo1` en el código de abajo para ver cómo funciona. ([Muéstrame dónde](#triggercallout=code_triggered1))
 
-        Para que la función de fondo haga algo, debes llamarla dentro del bucle dibujar. ([Show me where](#triggercallout=code_triggered2))
+        Para que la función de fondo haga algo, debes llamarla dentro del bucle dibujar. ([Muéstrame dónde](#triggercallout=code_triggered2))
 
-        También hay una función vacía llamada `fondo2`. ([Show me where](#triggercallout=code_triggered3)) Deberás completar esa función con un nuevo código para crear un fondo diferente, y luego llamar a la función dentro del bucle dibujar para probar el código.
+        También hay una función vacía llamada `fondo2`. ([Muéstrame dónde](#triggercallout=code_triggered3)) Deberás completar esa función con un nuevo código para crear un fondo diferente, y luego llamar a la función dentro del bucle dibujar para probar el código.
 
         # Haz esto
 
@@ -9771,11 +9771,11 @@ es-MX:
       CSD U3 platform background1_2018: |-
         # Fondo
 
-        Lo primero que crearás para tu juego es el fondo. El juego de ejemplo tenía dos fondos diferentes que fueron elegidos de acuerdo con la puntuación del usuario. El primer fondo ya ha sido creado para ti. Mira la función `fondo1` en el código de abajo para ver cómo funciona. ([Show me where](#triggercallout=code_triggered1))
+        Lo primero que crearás para tu juego es el fondo. El juego de ejemplo tenía dos fondos diferentes que fueron elegidos de acuerdo con la puntuación del usuario. El primer fondo ya ha sido creado para ti. Mira la función `fondo1` en el código de abajo para ver cómo funciona. ([Muéstrame dónde](#triggercallout=code_triggered1))
 
-        Para que la función de fondo haga algo, debes llamarla dentro del bucle dibujar. ([Show me where](#triggercallout=code_triggered2))
+        Para que la función de fondo haga algo, debes llamarla dentro del bucle dibujar. ([Muéstrame dónde](#triggercallout=code_triggered2))
 
-        También hay una función vacía llamada `fondo2`. ([Show me where](#triggercallout=code_triggered3)) Deberás completar esa función con un nuevo código para crear un fondo diferente, y luego llamar a la función dentro del bucle dibujar para probar el código.
+        También hay una función vacía llamada `fondo2`. ([Muéstrame dónde](#triggercallout=code_triggered3)) Deberás completar esa función con un nuevo código para crear un fondo diferente, y luego llamar a la función dentro del bucle dibujar para probar el código.
 
         # Haz esto
 
@@ -9787,11 +9787,11 @@ es-MX:
       CSD U3 platform background1_2019: |-
         # Fondo
 
-        Lo primero que crearás para tu juego es el fondo. El juego de ejemplo tenía dos fondos diferentes que fueron elegidos de acuerdo con la puntuación del usuario. El primer fondo ya ha sido creado para ti. Mira la función `fondo1` en el código de abajo para ver cómo funciona. ([Show me where](#triggercallout=code_triggered1))
+        Lo primero que crearás para tu juego es el fondo. El juego de ejemplo tenía dos fondos diferentes que fueron elegidos de acuerdo con la puntuación del usuario. El primer fondo ya ha sido creado para ti. Mira la función `fondo1` en el código de abajo para ver cómo funciona. ([Muéstrame dónde](#triggercallout=code_triggered1))
 
-        Para que la función de fondo haga algo, debes llamarla dentro del bucle dibujar. ([Show me where](#triggercallout=code_triggered2))
+        Para que la función de fondo haga algo, debes llamarla dentro del bucle dibujar. ([Muéstrame dónde](#triggercallout=code_triggered2))
 
-        También hay una función vacía llamada `fondo2`. ([Show me where](#triggercallout=code_triggered3)) Deberás completar esa función con un nuevo código para crear un fondo diferente, y luego llamar a la función dentro del bucle dibujar para probar el código.
+        También hay una función vacía llamada `fondo2`. ([Muéstrame dónde](#triggercallout=code_triggered3)) Deberás completar esa función con un nuevo código para crear un fondo diferente, y luego llamar a la función dentro del bucle dibujar para probar el código.
 
         # Haz esto
 
@@ -9803,7 +9803,7 @@ es-MX:
       CSD U3 platform background2: |-
         # Elegir tu fondo
 
-        Ahora que tienes tu variable de puntuación, puedes usarla para elegir el fondo adecuado para tu juego. Puedes ver un ejemplo de cómo cambiar tu fondo de acuerdo con la puntuación en [Lesson 19 Level 11](/s/csd3-2017/stage/19/puzzle/11)
+        Ahora que tienes tu variable de puntuación, puedes usarla para elegir el fondo adecuado para tu juego. Puedes ver un ejemplo de cómo cambiar tu fondo de acuerdo con la puntuación en [Lección 19 Nivel 11](/s/csd3-2017/stage/19/puzzle/11)
 
         # Haz esto
 
@@ -9814,7 +9814,7 @@ es-MX:
       CSD U3 platform background2_2018: |-
         # Elegir tu fondo
 
-        Ahora que tienes tu variable de puntuación, puedes usarla para elegir el fondo adecuado para tu juego. Puedes ver un ejemplo de cómo cambiar tu fondo de acuerdo con la puntuación en [Lesson 19 Level 11](/s/csd3-2018/stage/19/puzzle/11)
+        Ahora que tienes tu variable de puntuación, puedes usarla para elegir el fondo adecuado para tu juego. Puedes ver un ejemplo de cómo cambiar tu fondo de acuerdo con la puntuación en [Lección 19 Nivel 11](/s/csd3-2018/stage/19/puzzle/11)
 
         # Haz esto
 
@@ -9905,7 +9905,7 @@ es-MX:
 
         # Haz esto
 
-        -   Crea una función `retornarElementos` que use un bloque `si` para verificar si el elemento sprite sale por la parte inferior de la pantalla y, luego, vuelve a enviar el elemento a una posición de x e y aleatoria, tal como lo hiciste cuando creaste el sprite por primera vez.
+        -   Crea una función `loopItems` que use un bloque `si` para verificar si el elemento sprite sale por la parte inferior de la pantalla y, luego, vuelve a enviar el elemento a una posición de x e y aleatoria, tal como lo hiciste cuando creaste el sprite por primera vez.
         -   Llama a la función dentro del bucle dibujar.
         -   Ejecuta el código para probar tu sprite.
       CSD U3 platform items2_2018: |-
@@ -9916,7 +9916,7 @@ es-MX:
 
         # Haz esto
 
-        -   Crea una función `retornarElementos` que use un bloque `si` para verificar si el elemento sprite sale por la parte inferior de la pantalla y, luego, vuelve a enviar el elemento a una posición de x e y aleatoria, tal como lo hiciste cuando creaste el sprite por primera vez.
+        -   Crea una función `loopItems` que use un bloque `si` para verificar si el elemento sprite sale por la parte inferior de la pantalla y, luego, vuelve a enviar el elemento a una posición de x e y aleatoria, tal como lo hiciste cuando creaste el sprite por primera vez.
         -   Llama a la función dentro del bucle dibujar.
         -   Ejecuta el código para probar tu sprite.
       CSD U3 platform items2_2019: |-
@@ -9927,7 +9927,7 @@ es-MX:
 
         # Haz esto
 
-        -   Crea una función `retornarElementos` que use un bloque `si` para verificar si el elemento sprite sale por la parte inferior de la pantalla y, luego, vuelve a enviar el elemento a una posición de x e y aleatoria, tal como lo hiciste cuando creaste el sprite por primera vez.
+        -   Crea una función `loopItems` que use un bloque `si` para verificar si el elemento sprite sale por la parte inferior de la pantalla y, luego, vuelve a enviar el elemento a una posición de x e y aleatoria, tal como lo hiciste cuando creaste el sprite por primera vez.
         -   Llama a la función dentro del bucle dibujar.
         -   Ejecuta el código para probar tu sprite.
       CSD U3 platform items3: |-
@@ -9943,7 +9943,7 @@ es-MX:
 
         -   Copia el código que usaste para crear el sprite del primer elemento (`crearSprite`, `establecerAnimación` y `velocidadY`), y pégalo justo debajo del código original.
         -   Cambia los nombres del sprite en las nuevas líneas. Por ejemplo, si el nombre original del sprite es "estrella", puedes cambiarlo a "estrella2".
-        -   Dentro de tu función `retornarElementos`, copia la sentencia si y pégala directamente debajo del código original, dentro de la función.
+        -   Dentro de tu función `loopItems`, copia la sentencia si y pégala directamente debajo del código original, dentro de la función.
         -   Cambia el nombre del sprite en las nuevas líneas de código.
         -   Ejecuta tu código para probarlo.
       CSD U3 platform items3_2018: |-
@@ -9959,7 +9959,7 @@ es-MX:
 
         -   Copia el código que usaste para crear el sprite del primer elemento (`crearSprite`, `establecerAnimación` y `velocidadY`), y pégalo justo debajo del código original.
         -   Cambia los nombres del sprite en las nuevas líneas. Por ejemplo, si el nombre original del sprite es "estrella", puedes cambiarlo a "estrella2".
-        -   Dentro de tu función `retornarElementos`, copia la sentencia si y pégala directamente debajo del código original, dentro de la función.
+        -   Dentro de tu función `loopItems`, copia la sentencia si y pégala directamente debajo del código original, dentro de la función.
         -   Cambia el nombre del sprite en las nuevas líneas de código.
         -   Ejecuta tu código para probarlo.
       CSD U3 platform items3_2019: |-
@@ -9975,7 +9975,7 @@ es-MX:
 
         -   Copia el código que usaste para crear el sprite del primer elemento (`crearSprite`, `establecerAnimación` y `velocidadY`), y pégalo justo debajo del código original.
         -   Cambia los nombres del sprite en las nuevas líneas. Por ejemplo, si el nombre original del sprite es "estrella", puedes cambiarlo a "estrella2".
-        -   Dentro de tu función `retornarElementos`, copia la sentencia si y pégala directamente debajo del código original, dentro de la función.
+        -   Dentro de tu función `loopItems`, copia la sentencia si y pégala directamente debajo del código original, dentro de la función.
         -   Cambia el nombre del sprite en las nuevas líneas de código.
         -   Ejecuta tu código para probarlo.
       CSD U3 platform platform1: "# Crear el sprite de la plataforma\n\n<img src=\"https://images.code.org/6e5aa80eb72809d761a695fae1b42b81-image-1476210749306.gif\"
@@ -9987,7 +9987,7 @@ es-MX:
         de trabajo y elige el sprite de plataforma que vas a crear.\n-   Crea tu nuevo
         sprite con el bloque `crearSprite` en el área \"Crear sprites\" de la parte
         superior de tu código, y asigna la posición y la etiqueta (nombre) correctas.
-        ([Show me the block](#triggercallout=callout))\n-   Usa los bloques `establecerAnimación`
+        ([Muéstrame el bloque](#triggercallout=callout))\n-   Usa los bloques `establecerAnimación`
         y `velocidadY` para asignar a tu sprite la imagen correcta y reducir su velocidad.\n-
         \  Prueba el sprite para asegurarte de que se mueve de la manera correcta.
         Es posible que necesites ajustar su velocidad.\n\n_Te damos una pista: el
@@ -10003,7 +10003,7 @@ es-MX:
         de trabajo y elige el sprite de plataforma que vas a crear.\n-   Crea tu nuevo
         sprite con el bloque `crearSprite` en el área \"Crear sprites\" de la parte
         superior de tu código, y asigna la posición y la etiqueta (nombre) correctas.
-        ([Show me the block](#triggercallout=callout))\n-   Usa los bloques `establecerAnimación`
+        ([Muéstrame el bloque](#triggercallout=callout))\n-   Usa los bloques `establecerAnimación`
         y `velocidadY` para asignar a tu sprite la imagen correcta y reducir su velocidad.\n-
         \  Prueba el sprite para asegurarte de que se mueve de la manera correcta.
         Es posible que necesites ajustar su velocidad.\n\n_Te damos una pista: el
@@ -10019,7 +10019,7 @@ es-MX:
         de trabajo y elige el sprite de plataforma que vas a crear.\n-   Crea tu nuevo
         sprite con el bloque `crearSprite` en el área \"Crear sprites\" de la parte
         superior de tu código, y asigna la posición y la etiqueta (nombre) correctas.
-        ([Show me the block](#triggercallout=callout))\n-   Usa los bloques `establecerAnimación`
+        ([Muéstrame el bloque](#triggercallout=callout))\n-   Usa los bloques `establecerAnimación`
         y `velocidadY` para asignar a tu sprite la imagen correcta y reducir su velocidad.\n-
         \  Prueba el sprite para asegurarte de que se mueve de la manera correcta.
         Es posible que necesites ajustar su velocidad.\n\n_Te damos una pista: el
@@ -10030,7 +10030,7 @@ es-MX:
 
         <img src="https://images.code.org/6bfe6dd078b2022315a7f54a38c90826-image-1476211068588.gif" style="float: right;">
 
-        En este momento, el sprite de tu plataforma se mueve hacia abajo, pero no vuelve a subir a la parte superior de la pantalla. Puedes mirar [Lesson 15 Level 13](/s/csd3-2017/stage/15/puzzle/13) para ver un ejemplo de un sprite que recorre la pantalla.
+        En este momento, el sprite de tu plataforma se mueve hacia abajo, pero no vuelve a subir a la parte superior de la pantalla. Puedes mirar [Leeción 15 Nivel 13](/s/csd3-2017/stage/15/puzzle/13) para ver un ejemplo de un sprite que recorre la pantalla.
 
         # Haz esto
 
@@ -10045,7 +10045,7 @@ es-MX:
 
         <img src="https://images.code.org/6bfe6dd078b2022315a7f54a38c90826-image-1476211068588.gif" style="float: right;">
 
-        En este momento, el sprite de tu plataforma se mueve hacia abajo, pero no vuelve a subir a la parte superior de la pantalla. Puedes mirar [Lesson 15 Level 13](/s/csd3-2018/stage/15/puzzle/13) para ver un ejemplo de un sprite que recorre la pantalla.
+        En este momento, el sprite de tu plataforma se mueve hacia abajo, pero no vuelve a subir a la parte superior de la pantalla. Puedes mirar [Leeción 15 Nivel 13](/s/csd3-2018/stage/15/puzzle/13) para ver un ejemplo de un sprite que recorre la pantalla.
 
         # Haz esto
 
@@ -10060,7 +10060,7 @@ es-MX:
 
         <img src="https://images.code.org/6bfe6dd078b2022315a7f54a38c90826-image-1476211068588.gif" style="float: right;">
 
-        En este momento, el sprite de tu plataforma se mueve hacia abajo, pero no vuelve a subir a la parte superior de la pantalla. Puedes mirar [Lesson 15 Level 13](../../15/puzzle/13) para ver un ejemplo de un sprite que recorre la pantalla.
+        En este momento, el sprite de tu plataforma se mueve hacia abajo, pero no vuelve a subir a la parte superior de la pantalla. Puedes mirar [Leeción 15 Nivel 13](../../15/puzzle/13) para ver un ejemplo de un sprite que recorre la pantalla.
 
         # Haz esto
 
@@ -10138,7 +10138,7 @@ es-MX:
 
         -   Usa el bloque `crearSprite` para crear el sprite de un jugador con la etiqueta y la posición inicial que pusiste en tu hoja de trabajo.
         -   Usa `establecerAnimación` para asignarle la imagen correcta.
-        -   Crea una función `jugadorCae` que haga que el sprite caiga desde la parte superior de la pantalla. El código dentro de la función debería usar `velocidadY` en un patrón de contador, tal como hiciste con la roca que cae en [Lesson 17 Level 4](/s/csd3-2017/stage/17/puzzle/4).
+        -   Crea una función `jugadorCae` que haga que el sprite caiga desde la parte superior de la pantalla. El código dentro de la función debería usar `velocidadY` en un patrón de contador, tal como hiciste con la roca que cae en [Lección 17 Nivel 4](/s/csd3-2017/stage/17/puzzle/4).
         -   Llama a la función `jugadorCae` dentro del bucle dibujar.
         -   Ejecuta el código para probar tu sprite.
       CSD U3 platform player1_2018: |-
@@ -10152,7 +10152,7 @@ es-MX:
 
         -   Usa el bloque `crearSprite` para crear el sprite de un jugador con la etiqueta y la posición inicial que pusiste en tu hoja de trabajo.
         -   Usa `establecerAnimación` para asignarle la imagen correcta.
-        -   Crea una función `jugadorCae` que haga que el sprite caiga desde la parte superior de la pantalla. El código dentro de la función debería usar `velocidadY` en un patrón de contador, tal como hiciste con la roca que cae en [Lesson 17 Level 4](/s/csd3-2018/stage/17/puzzle/4).
+        -   Crea una función `jugadorCae` que haga que el sprite caiga desde la parte superior de la pantalla. El código dentro de la función debería usar `velocidadY` en un patrón de contador, tal como hiciste con la roca que cae en [Lección 17 Nivel 4](/s/csd3-2018/stage/17/puzzle/4).
         -   Llama a la función `jugadorCae` dentro del bucle dibujar.
         -   Ejecuta el código para probar tu sprite.
       CSD U3 platform player1_2019: |-
@@ -10166,7 +10166,7 @@ es-MX:
 
         -   Usa el bloque `crearSprite` para crear el sprite de un jugador con la etiqueta y la posición inicial que pusiste en tu hoja de trabajo.
         -   Usa `establecerAnimación` para asignarle la imagen correcta.
-        -   Crea una función `jugadorCae` que haga que el sprite caiga desde la parte superior de la pantalla. El código dentro de la función debería usar `velocidadY` en un patrón de contador, tal como hiciste con la roca que cae en [Lesson 17 Level 4](../../17/puzzle/4).
+        -   Crea una función `jugadorCae` que haga que el sprite caiga desde la parte superior de la pantalla. El código dentro de la función debería usar `velocidadY` en un patrón de contador, tal como hiciste con la roca que cae en [Lección 17 Nivel 4](../../17/puzzle/4).
         -   Llama a la función `jugadorCae` dentro del bucle dibujar.
         -   Ejecuta el código para probar tu sprite.
       CSD U3 platform player2: |-
@@ -10221,9 +10221,9 @@ es-MX:
 
         # Haz esto
 
-        -   Crea una función `recogerElementos` y agrégala al área de "funciones" de tu código.
-        -   Usa los bloques `si` y `seTocan` para cambiar la posición x e y de los elementos cuando el jugador los toca. Puedes buscar pistas sobre cómo restablecer la posición del elemento en la función `retornarElemento`.
-        -   Agrega un patrón de contador dentro de tu sentencia `si` para aumentar la puntuación cada vez que el jugador toque un elemento. Mira un ejemplo en [Lesson 16 Puzzle 9](/s/csd3-2017/stage/16/puzzle/9).
+        -   Crea una función `collectItems` y agrégala al área de "funciones" de tu código.
+        -   Usa los bloques `si` y `seTocan` para cambiar la posición x e y de los elementos cuando el jugador los toca. Puedes buscar pistas sobre cómo restablecer la posición del elemento en la función `loopItem`.
+        -   Agrega un patrón de contador dentro de tu sentencia `si` para aumentar la puntuación cada vez que el jugador toque un elemento. Mira un ejemplo en [Lección 16 Desafío 9](/s/csd3-2017/stage/16/puzzle/9).
         -   Llama a la función dentro del bucle dibujar, en el área "actualizar sprites" de tu código.
         -   Ejecuta el código para probar tu función.
       CSD U3 platform player4_2018: |-
@@ -10233,9 +10233,9 @@ es-MX:
 
         # Haz esto
 
-        -   Crea una función `recogerElementos` y agrégala al área de "funciones" de tu código.
-        -   Usa los bloques `si` y `seTocan` para cambiar la posición x e y de los elementos cuando el jugador los toca. Puedes buscar pistas sobre cómo restablecer la posición del elemento en la función `retornarElemento`.
-        -   Agrega un patrón de contador dentro de tu sentencia `si` para aumentar la puntuación cada vez que el jugador toque un elemento. Mira un ejemplo en [Lesson 16 Puzzle 9](/s/csd3-2018/stage/16/puzzle/9).
+        -   Crea una función `collectItems` y agrégala al área de "funciones" de tu código.
+        -   Usa los bloques `si` y `seTocan` para cambiar la posición x e y de los elementos cuando el jugador los toca. Puedes buscar pistas sobre cómo restablecer la posición del elemento en la función `loopItem`.
+        -   Agrega un patrón de contador dentro de tu sentencia `si` para aumentar la puntuación cada vez que el jugador toque un elemento. Mira un ejemplo en [Lección 16 Desafío 9](/s/csd3-2018/stage/16/puzzle/9).
         -   Llama a la función dentro del bucle dibujar, en el área "actualizar sprites" de tu código.
         -   Ejecuta el código para probar tu función.
       CSD U3 platform player4_2019: |-
@@ -10245,9 +10245,9 @@ es-MX:
 
         # Haz esto
 
-        -   Crea una función `recogerElementos` y agrégala al área de "funciones" de tu código.
-        -   Usa los bloques `si` y `seTocan` para cambiar la posición x e y de los elementos cuando el jugador los toca. Puedes buscar pistas sobre cómo restablecer la posición del elemento en la función `retornarElemento`.
-        -   Agrega un patrón de contador dentro de tu sentencia `si` para aumentar la puntuación cada vez que el jugador toque un elemento. Mira un ejemplo en [Lesson 16 Puzzle 9](../../16/puzzle/9).
+        -   Crea una función `collectItems` y agrégala al área de "funciones" de tu código.
+        -   Usa los bloques `si` y `seTocan` para cambiar la posición x e y de los elementos cuando el jugador los toca. Puedes buscar pistas sobre cómo restablecer la posición del elemento en la función `loopItem`.
+        -   Agrega un patrón de contador dentro de tu sentencia `si` para aumentar la puntuación cada vez que el jugador toque un elemento. Mira un ejemplo en [Lección 16 Desafío 9](../../16/puzzle/9).
         -   Llama a la función dentro del bucle dibujar, en el área "actualizar sprites" de tu código.
         -   Ejecuta el código para probar tu función.
       CSD U3 platform sample1: |-
@@ -10336,7 +10336,7 @@ es-MX:
 
         <img src="https://images.code.org/ea490a1915a70676fd3a783adce93cdd-image-1476142534609.png" style="float:right;">
 
-        También necesitarás un marcador para que el jugador pueda llevar un registro de la puntuación. Ya se ha escrito una función `mostrarPuntuación`, pero solo muestra el texto "Puntuación" y no la puntuación real. ([Show me where](#triggercallout=code_triggered)) Puedes ver un ejemplo de un marcador en funcionamiento en [Lesson 16 Level 9](/s/csd3-2017/stage/16/puzzle/9).
+        También necesitarás un marcador para que el jugador pueda llevar un registro de la puntuación. Ya se ha escrito una función `mostrarPuntuación`, pero solo muestra el texto "Puntuación" y no la puntuación real. ([Muéstrame dónde](#triggercallout=code_triggered)) Puedes ver un ejemplo de un marcador en funcionamiento en [Lección 16 Nivel 9](/s/csd3-2017/stage/16/puzzle/9).
 
         # Haz esto
 
@@ -10348,7 +10348,7 @@ es-MX:
 
         <img src="https://images.code.org/ea490a1915a70676fd3a783adce93cdd-image-1476142534609.png" style="float:right;">
 
-        También necesitarás un marcador para que el jugador pueda llevar un registro de la puntuación. Ya se ha escrito una función `mostrarPuntuación`, pero solo muestra el texto "Puntuación" y no la puntuación real. ([Show me where](#triggercallout=code_triggered)) Puedes ver un ejemplo de un marcador en funcionamiento en [Lesson 16 Level 9](../../16/puzzle/9).
+        También necesitarás un marcador para que el jugador pueda llevar un registro de la puntuación. Ya se ha escrito una función `mostrarPuntuación`, pero solo muestra el texto "Puntuación" y no la puntuación real. ([Muéstrame dónde](#triggercallout=code_triggered)) Puedes ver un ejemplo de un marcador en funcionamiento en [Lección 16 Nivel 9](../../16/puzzle/9).
 
         # Haz esto
 
@@ -10360,7 +10360,7 @@ es-MX:
 
         <img src="https://images.code.org/ea490a1915a70676fd3a783adce93cdd-image-1476142534609.png" style="float:right;">
 
-        También necesitarás un marcador para que el jugador pueda llevar un registro de la puntuación. Ya se ha escrito una función `mostrarPuntuación`, pero solo muestra el texto "Puntuación" y no la puntuación real. ([Show me where](#triggercallout=code_triggered)) Puedes ver un ejemplo de un marcador en funcionamiento en [Lesson 16 Level 9](../../16/puzzle/9).
+        También necesitarás un marcador para que el jugador pueda llevar un registro de la puntuación. Ya se ha escrito una función `mostrarPuntuación`, pero solo muestra el texto "Puntuación" y no la puntuación real. ([Muéstrame dónde](#triggercallout=code_triggered)) Puedes ver un ejemplo de un marcador en funcionamiento en [Lección 16 Nivel 9](../../16/puzzle/9).
 
         # Haz esto
 
@@ -10376,7 +10376,7 @@ es-MX:
 
         # Haz esto
 
-        -   Crea una variable de puntuación al comienzo del programa de tu juego. ( [Show me the block](#triggercallout=callout) )
+        -   Crea una variable de puntuación al comienzo del programa de tu juego. ( [Muéstrame el bloque](#triggercallout=callout) )
         -   Establece la puntuación en 0.
       CSD U3 platform variable1_2018: |-
         # Variable de puntuación
@@ -10387,7 +10387,7 @@ es-MX:
 
         # Haz esto
 
-        -   Crea una variable de puntuación al comienzo del programa de tu juego. ( [Show me the block](#triggercallout=callout) )
+        -   Crea una variable de puntuación al comienzo del programa de tu juego. ( [Muéstrame el bloque](#triggercallout=callout) )
         -   Establece la puntuación en 0.
       CSD U3 platform variable1_2019: |-
         # Variable de puntuación
@@ -10398,7 +10398,7 @@ es-MX:
 
         # Haz esto
 
-        -   Crea una variable de puntuación al comienzo del programa de tu juego. ( [Show me the block](#triggercallout=callout) )
+        -   Crea una variable de puntuación al comienzo del programa de tu juego. ( [Muéstrame el bloque](#triggercallout=callout) )
         -   Establece la puntuación en 0.
       CSD U3 rect: "# Explorar el Laboratorio de juegos\n\n¡Bienvenido al Laboratorio
         de juegos, donde puedes crear animaciones y juegos interactivos!   \n\nYa
@@ -11093,7 +11093,7 @@ es-MX:
       CSD U6 LEDs color: |-
         # Agregar más color
 
-        Al usar `Ledsdecolores[0].encendidos()` en el último nivel, probablemente notaste que los LEDs se encendían en color blanco. Si no especificas un color, `encendido()` encenderá las tres partes del LED (rojo, verde y azul) para producir blanco. En la caja de herramientas, verás un nuevo comando llamado `Ledsdecolores[0].color()`, el cual te permite especificar un color, como una cadena como "azul" o un valor RGB usando un comando `color()` de colores.
+        Al usar `LedsDeColores[0].encender()` en el último nivel, probablemente notaste que los LEDs se encendían en color blanco. Si no especificas un color, `encender()` encenderá las tres partes del LED (rojo, verde y azul) para producir blanco. En la caja de herramientas, verás un nuevo comando llamado `LedsDeColores[0].color()`, el cual te permite especificar un color, como una cadena como "azul" o un valor RGB usando un comando `color()` de colores.
 
         # Haz esto
 
@@ -11101,7 +11101,7 @@ es-MX:
       CSD U6 LEDs color_2018: |-
         # Agregar más color
 
-        Al usar `Ledsdecolores[0].encendidos()` en el último nivel, probablemente notaste que los LEDs se encendían en color blanco. Si no especificas un color, `encendido()` encenderá las tres partes del LED (rojo, verde y azul) para producir blanco. En la caja de herramientas, verás un nuevo comando llamado `Ledsdecolores[0].color()`, el cual te permite especificar un color, como una cadena como "azul" o un valor RGB usando un comando `color()` de colores.
+        Al usar `LedsDeColores[0].encender()` en el último nivel, probablemente notaste que los LEDs se encendían en color blanco. Si no especificas un color, `encender()` encenderá las tres partes del LED (rojo, verde y azul) para producir blanco. En la caja de herramientas, verás un nuevo comando llamado `LedsDeColores[0].color()`, el cual te permite especificar un color, como una cadena como "azul" o un valor RGB usando un comando `color()` de colores.
 
         # Haz esto
 
@@ -11109,7 +11109,7 @@ es-MX:
       CSD U6 LEDs color_2019: |-
         # Agregar más color
 
-        Al usar `Ledsdecolores[0].encendidos()` en el último nivel, probablemente notaste que los LEDs se encendían en color blanco. Si no especificas un color, `encendido()` encenderá las tres partes del LED (rojo, verde y azul) para producir blanco. En la caja de herramientas, verás un nuevo comando llamado `Ledsdecolores[0].color()`, el cual te permite especificar un color, como una cadena como "azul" o un valor RGB usando un comando `color()` de colores.
+        Al usar `LedsDeColores[0].encender()` en el último nivel, probablemente notaste que los LEDs se encendían en color blanco. Si no especificas un color, `encender()` encenderá las tres partes del LED (rojo, verde y azul) para producir blanco. En la caja de herramientas, verás un nuevo comando llamado `LedsDeColores[0].color()`, el cual te permite especificar un color, como una cadena como "azul" o un valor RGB usando un comando `color()` de colores.
 
         # Haz esto
 
@@ -11443,7 +11443,7 @@ es-MX:
       CSD U6 analog threshold: |-
         # Umbral de cambio
 
-        En forma predetermianda, el evento "change" de un sensor se dispara cada vez que el valor del sensor cambia, incluso por uno. Los sensores de luz y sonido están constantemente fluctuando, de modo que, probablemente, quieras que el evento "change" sea un poco menos sensible. La propiedad `threshold` te permite establecer cuánto debería cambiar un sensor antes de considerarlo un evento "change", de modo que establecer `soundSensor.threshold = 100` haría que el evento "change" del sensor de sonido solo se dispare si su valor se incrementa o disminuye, al menos, en un valor de 100.
+        En forma predeterminada, el evento "change" de un sensor se dispara cada vez que el valor del sensor cambia, incluso por uno. Los sensores de luz y sonido están constantemente fluctuando, de modo que, probablemente, quieras que el evento "change" sea un poco menos sensible. La propiedad `threshold` te permite establecer cuánto debería cambiar un sensor antes de considerarlo un evento "change", de modo que establecer `soundSensor.threshold = 100` haría que el evento "change" del sensor de sonido solo se dispare si su valor se incrementa o disminuye, al menos, en un valor de 100.
 
         # Haz esto
 
@@ -11617,7 +11617,7 @@ es-MX:
 
         -   Mantén tu LED conectado igual que como estaba antes (conectado al pin 2)
         -   Asegúrate de estar en modo texto, no en modo bloque.
-        -   Arrastra un bloque `parpadeo.led()` debajo del comentario `// Parpadear miLed`.
+        -   Arrastra un bloque `led.parpadeo()` debajo del comentario `// Parpadear miLed`.
         -   Reemplaza el texto `led` con `miLed`.
         -   Prueba tu código.
       CSD U6 circuit createLed_2018: |-
@@ -11633,7 +11633,7 @@ es-MX:
 
         -   Mantén tu LED conectado igual que como estaba antes (conectado al pin 2)
         -   Asegúrate de estar en modo texto, no en modo bloque.
-        -   Arrastra un bloque `parpadeo.led()` debajo del comentario `// Parpadear miLed`.
+        -   Arrastra un bloque `led.parpadeo()` debajo del comentario `// Parpadear miLed`.
         -   Reemplaza el texto `led` con `miLed`.
         -   Prueba tu código.
       CSD U6 circuit createLed_2019: |-
@@ -11649,7 +11649,7 @@ es-MX:
 
         -   Mantén tu LED conectado igual que como estaba antes (conectado al pin 2)
         -   Asegúrate de estar en modo texto, no en modo bloque.
-        -   Arrastra un bloque `parpadeo.led()` debajo del comentario `// Parpadear miLed`.
+        -   Arrastra un bloque `led.parpadeo()` debajo del comentario `// Parpadear miLed`.
         -   Reemplaza el texto `led` con `miLed`.
         -   Prueba tu código.
       CSD U6 circuit multi led: |-
@@ -11664,7 +11664,7 @@ es-MX:
         -   Agrega un bloque `var miLed = crearLed()`.
         -   Reemplaza la etiqueta de variable `miLed` con una etiqueta única.
         -   Asegúrate de que estás en modo texto, no en modo bloque.
-        -   Agrega un comando `parpadear.led()`
+        -   Agrega un comando `led.parpadeo()`
         -   Reemplaza el texto `led` con tu nueva variable LED.
         -   Prueba tu código.
 
@@ -11681,7 +11681,7 @@ es-MX:
         -   Agrega un bloque `var miLed = crearLed()`.
         -   Reemplaza la etiqueta de variable `miLed` con una etiqueta única.
         -   Asegúrate de que estás en modo texto, no en modo bloque.
-        -   Agrega un comando `parpadear.led()`
+        -   Agrega un comando `led.parpadeo()`
         -   Reemplaza el texto `led` con tu nueva variable LED.
         -   Prueba tu código.
 
@@ -11698,7 +11698,7 @@ es-MX:
         -   Agrega un bloque `var miLed = crearLed()`.
         -   Reemplaza la etiqueta de variable `miLed` con una etiqueta única.
         -   Asegúrate de que estás en modo texto, no en modo bloque.
-        -   Agrega un comando `parpadear.led()`
+        -   Agrega un comando `led.parpadeo()`
         -   Reemplaza el texto `led` con tu nueva variable LED.
         -   Prueba tu código.
 
@@ -11759,7 +11759,7 @@ es-MX:
         # Haz esto
 
         -   Agrega controladores de eventos para hacer parpadear la señal de giro izquierda cuando el botón izquierdo esté presionado.
-        -   Agrega controladores de eventos para hacer parpadear la señal de giro izquierda cuando el botón izquierdo esté presionado.
+        -   Agrega controladores de eventos para hacer parpadear la señal de giro derecha cuando el botón derecho esté presionado.
         -   Prueba tu código.
 
         _Sugerencia: deberás estar en modo texto para hacer que los intermitentes funcionen, dado que no hay bloques integrados para los elementos que agregas en el tablero._
@@ -11771,7 +11771,7 @@ es-MX:
         # Haz esto
 
         -   Agrega controladores de eventos para hacer parpadear la señal de giro izquierda cuando el botón izquierdo esté presionado.
-        -   Agrega controladores de eventos para hacer parpadear la señal de giro izquierda cuando el botón izquierdo esté presionado.
+        -   Agrega controladores de eventos para hacer parpadear la señal de giro derecha cuando el botón derecho esté presionado.
         -   Prueba tu código.
 
         _Sugerencia: deberás estar en modo texto para hacer que los intermitentes funcionen, dado que no hay bloques integrados para los elementos que agregas en el tablero._
@@ -11783,7 +11783,7 @@ es-MX:
         # Haz esto
 
         -   Agrega controladores de eventos para hacer parpadear la señal de giro izquierda cuando el botón izquierdo esté presionado.
-        -   Agrega controladores de eventos para hacer parpadear la señal de giro izquierda cuando el botón izquierdo esté presionado.
+        -   Agrega controladores de eventos para hacer parpadear la señal de giro derecha cuando el botón derecho esté presionado.
         -   Prueba tu código.
 
         _Sugerencia: deberás estar en modo texto para hacer que los intermitentes funcionen, dado que no hay bloques integrados para los elementos que agregas en el tablero._
@@ -11946,7 +11946,7 @@ es-MX:
       CSD U6 colorLeds debug: |-
         <img src="https://images.code.org/e055be621221385d3503962bee5aa616-image-1491493475417.44.28.png" style="width:250px; float:right">
 
-        # Depurar: # Ledsdecolores
+        # Depurar: LedsDeColores
 
         ¿Puedes depurar los valores de índice para que el arco iris aparezca en el tablero igual que en la foto?
       CSD U6 colorLeds intensity: |-
@@ -12420,7 +12420,7 @@ es-MX:
       CSD U6 for loop click exit: |-
         # Saber cuándo detenerse
 
-        Si hacías clic en el botón muchas veces, recibías un error. Cada vez que estás escribiendo código que se repite, es importante considerar cómo sabrás que es momento de _detener_ la repetición.
+        Si hacías clic en el botón muchas veces en el último nivel, recibías un error. Cada vez que estás escribiendo código que se repite, es importante considerar cómo sabrás que es momento de _detener_ la repetición.
 
         # Haz esto
 
@@ -12430,7 +12430,7 @@ es-MX:
       CSD U6 for loop click exit_2018: |-
         # Saber cuándo detenerse
 
-        Si hacías clic en el botón muchas veces, recibías un error. Cada vez que estás escribiendo código que se repite, es importante considerar cómo sabrás que es momento de _detener_ la repetición.
+        Si hacías clic en el botón muchas veces en el último nivel, recibías un error. Cada vez que estás escribiendo código que se repite, es importante considerar cómo sabrás que es momento de _detener_ la repetición.
 
         # Haz esto
 
@@ -12440,7 +12440,7 @@ es-MX:
       CSD U6 for loop click exit_2019: |-
         # Saber cuándo detenerse
 
-        Si hacías clic en el botón muchas veces, recibías un error. Cada vez que estás escribiendo código que se repite, es importante considerar cómo sabrás que es momento de _detener_ la repetición.
+        Si hacías clic en el botón muchas veces en el último nivel, recibías un error. Cada vez que estás escribiendo código que se repite, es importante considerar cómo sabrás que es momento de _detener_ la repetición.
 
         # Haz esto
 
@@ -12463,32 +12463,32 @@ es-MX:
         practicado un poco modificando los bucles ´para´ con el fin de procesar arreglos,
         veamos si lo puedes hacer tú solo.\n\n# Haz esto\n\nInicialmente, hemos brindado
         los elementos de diseño y un arreglo, pero el resto depende de ti.\n\n-   Agrega
-        un controlar de eventos para responder a cuando se le hace clic a \"thumbsup\\_button\"
+        un controlador de eventos para responder a cuando se le hace clic a \"thumbsup\\_button\"
         \n-   Coloca un _bucle para_ dentro del controlar de eventos\n-   Modifica
         la condición de salida del _bucle para_ de manera que se ejecute hasta que
         llegue al fin del arreglo `imágenes`\n-   Dentro de tu _bucle para_, cambia
-        la imagen actual a \"icono://fa-pulgares-o-arriba\"\n\n_Desafío: ¿puedes agregar
+        la imagen actual a \"icon://fa-thumbs-o-up\"\n\n_Desafío: ¿puedes agregar
         un segundo botón que gire todas las imágenes de nuevo a pulgares para abajo?_"
       CSD U6 for loop images_2018: "# Crear un bucle ´para´ desde cero\n\nAhora que
         has practicado un poco modificando los bucles ´para´ con el fin de procesar
         arreglos, veamos si lo puedes hacer tú solo.\n\n# Haz esto\n\nInicialmente,
         hemos brindado los elementos de diseño y un arreglo, pero el resto depende
-        de ti.\n\n-   Agrega un controlar de eventos para responder a cuando se le
-        hace clic a \"thumbsup\\_button\" \n-   Coloca un _bucle para_ dentro del
+        de ti.\n\n-   Agrega un controlador de eventos para responder a cuando se
+        le hace clic a \"thumbsup\\_button\" \n-   Coloca un _bucle para_ dentro del
         controlar de eventos\n-   Modifica la condición de salida del _bucle para_
         de manera que se ejecute hasta que llegue al fin del arreglo `imágenes`\n-
-        \  Dentro de tu _bucle para_, cambia la imagen actual a \"icono://fa-pulgares-o-arriba\"\n\n_Desafío:
+        \  Dentro de tu _bucle para_, cambia la imagen actual a \"icon://fa-thumbs-o-up\"\n\n_Desafío:
         ¿puedes agregar un segundo botón que gire todas las imágenes de nuevo a pulgares
         para abajo?_"
       CSD U6 for loop images_2019: "# Crear un bucle ´para´ desde cero\n\nAhora que
         has practicado un poco modificando los bucles ´para´ con el fin de procesar
         arreglos, veamos si lo puedes hacer tú solo.\n\n# Haz esto\n\nInicialmente,
         hemos brindado los elementos de diseño y un arreglo, pero el resto depende
-        de ti.\n\n-   Agrega un controlar de eventos para responder a cuando se le
-        hace clic a \"thumbsup\\_button\" \n-   Coloca un _bucle para_ dentro del
+        de ti.\n\n-   Agrega un controlador de eventos para responder a cuando se
+        le hace clic a \"thumbsup\\_button\" \n-   Coloca un _bucle para_ dentro del
         controlar de eventos\n-   Modifica la condición de salida del _bucle para_
         de manera que se ejecute hasta que llegue al fin del arreglo `imágenes`\n-
-        \  Dentro de tu _bucle para_, cambia la imagen actual a \"icono://fa-pulgares-o-arriba\"\n\n_Desafío:
+        \  Dentro de tu _bucle para_, cambia la imagen actual a \"icon://fa-thumbs-o-up\"\n\n_Desafío:
         ¿puedes agregar un segundo botón que gire todas las imágenes de nuevo a pulgares
         para abajo?_"
       CSD U6 for loop led function: |-
@@ -12706,18 +12706,18 @@ es-MX:
         Con tus funciones definidas, las puedes llamar cuando lo necesites. Revisa tus controladores de eventos, o en cualquier otra parte de tu programa en donde se deba usar tu función, y agrega llamadas a las funciones que creaste.
       CSD U6 game project functions define: "# Define tus funciones\n\nDefine todas
         tus funciones en la parte inferior del programa, en el comentario `//Crea
-        tus funciones aquí`.\n\nEn este momento, solo nos preocupa escribir la función
-        _definiciones_, la parte que se parece a:\n\n    función miFunción() {\n    \t//Cosas
+        tus funciones aquí`.\n\nEn este momento, solo nos preocupa escribir las _definiciones_
+        de la función, la parte que se parece a:\n\n    función miFunción() {\n    \t//Cosas
         que hace mi función \n    }"
       CSD U6 game project functions define_2018: "# Define tus funciones\n\nDefine
         todas tus funciones en la parte inferior del programa, en el comentario `//Crea
-        tus funciones aquí`.\n\nEn este momento, solo nos preocupa escribir la función
-        _definiciones_, la parte que se parece a:\n\n    función miFunción() {\n    \t//Cosas
+        tus funciones aquí`.\n\nEn este momento, solo nos preocupa escribir las _definiciones_
+        de la función, la parte que se parece a:\n\n    función miFunción() {\n    \t//Cosas
         que hace mi función \n    }"
       CSD U6 game project functions define_2019: "# Define tus funciones\n\nDefine
         todas tus funciones en la parte inferior del programa, en el comentario `//Crea
-        tus funciones aquí`.\n\nEn este momento, solo nos preocupa escribir la función
-        _definiciones_, la parte que se parece a:\n\n    función miFunción() {\n    \t//Cosas
+        tus funciones aquí`.\n\nEn este momento, solo nos preocupa escribir las _definiciones_
+        de la función, la parte que se parece a:\n\n    función miFunción() {\n    \t//Cosas
         que hace mi función \n    }"
       CSD U6 game project screen links: |-
         # Eventos de elementos de IU
@@ -12874,7 +12874,7 @@ es-MX:
         # Haz esto
 
         -   Lee el código y los comentarios, y luego ejecuta el programa para ver cómo funciona. (Asegúrate de ingresar tu nombre y el nombre de tu amigo antes de presionar "Enviar").
-        -   Usa el bloque `getProperty` para almacenar la propiedad de texto de *friend\_input* en tu variable "friend\_name". ([Show me where.](#triggercallout=code_triggered))
+        -   Usa el bloque `getProperty` para almacenar la propiedad de texto de *friend\_input* en tu variable "friend\_name". ([Muéstrame dónde.](#triggercallout=code_triggered))
       CSD U6 getProperty input_2018: |-
         # getProperty y variables
 
@@ -12883,7 +12883,7 @@ es-MX:
         # Haz esto
 
         -   Lee el código y los comentarios, y luego ejecuta el programa para ver cómo funciona. (Asegúrate de ingresar tu nombre y el nombre de tu amigo antes de presionar "Enviar").
-        -   Usa el bloque `getProperty` para almacenar la propiedad de texto de *friend\_input* en tu variable "friend\_name". ([Show me where.](#triggercallout=code_triggered))
+        -   Usa el bloque `getProperty` para almacenar la propiedad de texto de *friend\_input* en tu variable "friend\_name". ([Muéstrame dónde.](#triggercallout=code_triggered))
       CSD U6 getProperty input_2019: |-
         # getProperty y variables
 
@@ -12892,7 +12892,7 @@ es-MX:
         # Haz esto
 
         -   Lee el código y los comentarios, y luego ejecuta el programa para ver cómo funciona. (Asegúrate de ingresar tu nombre y el nombre de tu amigo antes de presionar "Enviar").
-        -   Usa el bloque `getProperty` para almacenar la propiedad de texto de *friend\_input* en tu variable "friend\_name". ([Show me where.](#triggercallout=code_triggered))
+        -   Usa el bloque `getProperty` para almacenar la propiedad de texto de *friend\_input* en tu variable "friend\_name". ([Muéstrame dónde.](#triggercallout=code_triggered))
       CSD U6 getters debug: |-
         # Controlador de LED y timbre
 
@@ -12936,27 +12936,27 @@ es-MX:
       CSD U6 interval predict: |-
         # Intervalo
 
-        Ahora usamos el deslizador para modificar el comportamiento del LED.   Igual que como cambiaríamos los valores para la frecuencia y la duración del timbre, podemos cambiar el valor para el intervalo de parpadeo o pulso del LED.
+        Ahora usamos el deslizador para modificar el comportamiento del LED. Igual que como cambiaríamos los valores para la frecuencia y la duración del timbre, podemos cambiar el valor para el intervalo de parpadeo o pulso del LED.
 
         # Haz esto
 
-        -   Lee el código y haz una predicción de lo que hará el programa, luego presiona "Run" para probar tu predicción.
+        -   Lee el código y haz una predicción de lo que hará el programa, luego presiona "Ejecutar" para probar tu predicción.
       CSD U6 interval predict_2018: |-
         # Intervalo
 
-        Ahora usamos el deslizador para modificar el comportamiento del LED.   Igual que como cambiaríamos los valores para la frecuencia y la duración del timbre, podemos cambiar el valor para el intervalo de parpadeo o pulso del LED.
+        Ahora usamos el deslizador para modificar el comportamiento del LED. Igual que como cambiaríamos los valores para la frecuencia y la duración del timbre, podemos cambiar el valor para el intervalo de parpadeo o pulso del LED.
 
         # Haz esto
 
-        -   Lee el código y haz una predicción de lo que hará el programa, luego presiona "Run" para probar tu predicción.
+        -   Lee el código y haz una predicción de lo que hará el programa, luego presiona "Ejecutar" para probar tu predicción.
       CSD U6 interval predict_2019: |-
         # Intervalo
 
-        Ahora usamos el deslizador para modificar el comportamiento del LED.   Igual que como cambiaríamos los valores para la frecuencia y la duración del timbre, podemos cambiar el valor para el intervalo de parpadeo o pulso del LED.
+        Ahora usamos el deslizador para modificar el comportamiento del LED. Igual que como cambiaríamos los valores para la frecuencia y la duración del timbre, podemos cambiar el valor para el intervalo de parpadeo o pulso del LED.
 
         # Haz esto
 
-        -   Lee el código y haz una predicción de lo que hará el programa, luego presiona "Run" para probar tu predicción.
+        -   Lee el código y haz una predicción de lo que hará el programa, luego presiona "Ejecutar" para probar tu predicción.
       CSD U6 interval_2018: Predecir el nivel
       CSD U6 interval_2019: Predecir el nivel
       CSD U6 investigate orientation: "# Cabeceo y balanceo\n\nEste programa muestra
@@ -13742,11 +13742,11 @@ es-MX:
 
         # Haz esto
 
-        Usando un condicional dentro de la función `verificarTriunfo()`, debes verificar si un jugador ha ganado cada vez que hacen clic. Por ahora, puedes usar solo `registro.consola` para informar el ganador.
+        Usando un condicional dentro de la función `verificarTriunfo()`, debes verificar si un jugador ha ganado cada vez que hacen clic. Por ahora, puedes usar solo `console.log` para informar el ganador.
 
         -   Agrega una sentencia si al botón de `verificarTriunfo()`
         -   Para la condición de tu sentencia si, verifica si `jugador_y` es mayor a 350 (o usa la parte inferior del valor de pantalla que has elegido en el último nivel)
-        -   En tu condicional, agrega un `registro.consola` que informar qué jugador ganó
+        -   En tu condicional, agrega un `console.log` que informar qué jugador ganó
         -   Prueba tu programa para asegurarte de que informa un ganador cuando uno de los emojis llega a la parte inferior de la pantalla
       CSD U6 tugowar conditional_2018: |-
         # Buscar un ganador
@@ -13755,11 +13755,11 @@ es-MX:
 
         # Haz esto
 
-        Usando un condicional dentro de la función `verificarTriunfo()`, debes verificar si un jugador ha ganado cada vez que hacen clic. Por ahora, puedes usar solo `registro.consola` para informar el ganador.
+        Usando un condicional dentro de la función `verificarTriunfo()`, debes verificar si un jugador ha ganado cada vez que hacen clic. Por ahora, puedes usar solo `console.log` para informar el ganador.
 
         -   Agrega una sentencia si al botón de `verificarTriunfo()`
         -   Para la condición de tu sentencia si, verifica si `jugador_y` es mayor a 350 (o usa la parte inferior del valor de pantalla que has elegido en el último nivel)
-        -   En tu condicional, agrega un `registro.consola` que informar qué jugador ganó
+        -   En tu condicional, agrega un `console.log` que informar qué jugador ganó
         -   Prueba tu programa para asegurarte de que informa un ganador cuando uno de los emojis llega a la parte inferior de la pantalla
       CSD U6 tugowar conditional_2019: |-
         # Buscar un ganador
@@ -13768,11 +13768,11 @@ es-MX:
 
         # Haz esto
 
-        Usando un condicional dentro de la función `verificarTriunfo()`, debes verificar si un jugador ha ganado cada vez que hacen clic. Por ahora, puedes usar solo `registro.consola` para informar el ganador.
+        Usando un condicional dentro de la función `verificarTriunfo()`, debes verificar si un jugador ha ganado cada vez que hacen clic. Por ahora, puedes usar solo `console.log` para informar el ganador.
 
         -   Agrega una sentencia si al botón de `verificarTriunfo()`
         -   Para la condición de tu sentencia si, verifica si `jugador_y` es mayor a 350 (o usa la parte inferior del valor de pantalla que has elegido en el último nivel)
-        -   En tu condicional, agrega un `registro.consola` que informar qué jugador ganó
+        -   En tu condicional, agrega un `console.log` que informar qué jugador ganó
         -   Prueba tu programa para asegurarte de que informa un ganador cuando uno de los emojis llega a la parte inferior de la pantalla
       CSD U6 tugowar demo: |-
         # ¡Atrapa el error!
@@ -14676,27 +14676,27 @@ es-MX:
       CSDU6 - final project 2: |-
         # Conectar la IU
 
-        Con la interfaz de usuario en funcionamiento, ahora puedes agregar controladores de eventos para tus elementos de interfaz. En este momento, puede que quieras incluir solamente comandos de `registro.consola()` para asegurarte de que tus eventos están funcionando como se espera; puedes agregar el código funcional más tarde.
+        Con la interfaz de usuario en funcionamiento, ahora puedes agregar controladores de eventos para tus elementos de interfaz. En este momento, puede que quieras incluir solamente comandos de `console.log()` para asegurarte de que tus eventos están funcionando como se espera; puedes agregar el código funcional más tarde.
       CSDU6 - final project 2_2018: |-
         # Conectar la IU
 
-        Con la interfaz de usuario en funcionamiento, ahora puedes agregar controladores de eventos para tus elementos de interfaz. En este momento, puede que quieras incluir solamente comandos de `registro.consola()` para asegurarte de que tus eventos están funcionando como se espera; puedes agregar el código funcional más tarde.
+        Con la interfaz de usuario en funcionamiento, ahora puedes agregar controladores de eventos para tus elementos de interfaz. En este momento, puede que quieras incluir solamente comandos de `console.log()` para asegurarte de que tus eventos están funcionando como se espera; puedes agregar el código funcional más tarde.
       CSDU6 - final project 2_2019: |-
         # Conectar la IU
 
-        Con la interfaz de usuario en funcionamiento, ahora puedes agregar controladores de eventos para tus elementos de interfaz. En este momento, puede que quieras incluir solamente comandos de `registro.consola()` para asegurarte de que tus eventos están funcionando como se espera; puedes agregar el código funcional más tarde.
+        Con la interfaz de usuario en funcionamiento, ahora puedes agregar controladores de eventos para tus elementos de interfaz. En este momento, puede que quieras incluir solamente comandos de `console.log()` para asegurarte de que tus eventos están funcionando como se espera; puedes agregar el código funcional más tarde.
       CSDU6 - final project 3: |-
         # Eventos de entrada de tablero
 
-        Ahora puedes agregar los eventos que tomarán entrada del tablero. De nuevo, en este punto, puedes usar solamente las sentencias de `registro.consola()` para garantizar que tus eventos estén funcionando.
+        Ahora puedes agregar los eventos que tomarán entrada del tablero. De nuevo, en este punto, puedes usar solamente las sentencias de `console.log()` para garantizar que tus eventos estén funcionando.
       CSDU6 - final project 3_2018: |-
         # Eventos de entrada de tablero
 
-        Ahora puedes agregar los eventos que tomarán entrada del tablero. De nuevo, en este punto, puedes usar solamente las sentencias de `registro.consola()` para garantizar que tus eventos estén funcionando.
+        Ahora puedes agregar los eventos que tomarán entrada del tablero. De nuevo, en este punto, puedes usar solamente las sentencias de `console.log()` para garantizar que tus eventos estén funcionando.
       CSDU6 - final project 3_2019: |-
         # Eventos de entrada de tablero
 
-        Ahora puedes agregar los eventos que tomarán entrada del tablero. De nuevo, en este punto, puedes usar solamente las sentencias de `registro.consola()` para garantizar que tus eventos estén funcionando.
+        Ahora puedes agregar los eventos que tomarán entrada del tablero. De nuevo, en este punto, puedes usar solamente las sentencias de `console.log()` para garantizar que tus eventos estén funcionando.
       CSDU6 - final project 4: |-
         # Funciones
 
@@ -15040,14 +15040,14 @@ es-MX:
 
         -   Cambia el código para que ambos iconos y sus colores sean seleccionados usando la variable "miÍndice".
       CSDU6 circuit playground piano: "# Piano de circuito\n\nMira el código a continuación.
-        No lo vas a cambiar, pero intentar ver lo que hace. \n\n# Haz esto\n\n-   Ejecuta
+        No lo vas a cambiar, pero intenta ver lo que hace. \n\n# Haz esto\n\n-   Ejecuta
         el programa y juega con el piano en la pantalla."
       CSDU6 circuit playground piano_2018: "# Piano de circuito\n\nMira el código
-        a continuación. No lo vas a cambiar, pero intentar ver lo que hace. \n\n#
-        Haz esto\n\n-   Ejecuta el programa y juega con el piano en la pantalla."
+        a continuación. No lo vas a cambiar, pero intenta ver lo que hace. \n\n# Haz
+        esto\n\n-   Ejecuta el programa y juega con el piano en la pantalla."
       CSDU6 circuit playground piano_2019: "# Piano de circuito\n\nMira el código
-        a continuación. No lo vas a cambiar, pero intentar ver lo que hace. \n\n#
-        Haz esto\n\n-   Ejecuta el programa y juega con el piano en la pantalla."
+        a continuación. No lo vas a cambiar, pero intenta ver lo que hace. \n\n# Haz
+        esto\n\n-   Ejecuta el programa y juega con el piano en la pantalla."
       CSDU6 frequency creation: |-
         # Hacer que el timbre suene
 
@@ -15116,22 +15116,22 @@ es-MX:
         -   Haz que el timbre reproduzca una nota aleatoria de tu arreglo cuando se presione el botón **derecho**.
       CSDU6 piano with notes: "# Notas de piano\n\nEste es el mismo piano que viste
         en el comienzo de la lección, pero hay algunos errores.\n\n# Haz esto\n\n-
-        \  Edita el código para que todas las teclas usen un bloque `nota.timbre()`
+        \  Edita el código para que todas las teclas usen un bloque `timbre.nota()`
         para reproducir la nota correspondiente.\n-   Asegúrate de que todos los valores
-        pasados a `nota.timbre()` sean notas, y no frecuencias. \n\n_Sugerencia: ¡Recuerda
-        colocar comillas entre las notas! P. ej., `nota.timbre(\"A4\", 100);`_"
+        pasados a `timbre.nota()` sean notas, y no frecuencias. \n\n_Sugerencia: ¡Recuerda
+        colocar comillas entre las notas! P. ej., `timbre.nota(\"A4\", 100);`_"
       CSDU6 piano with notes_2018: "# Notas de piano\n\nEste es el mismo piano que
         viste en el comienzo de la lección, pero hay algunos errores.\n\n# Haz esto\n\n-
-        \  Edita el código para que todas las teclas usen un bloque `nota.timbre()`
+        \  Edita el código para que todas las teclas usen un bloque `timbre.nota()`
         para reproducir la nota correspondiente.\n-   Asegúrate de que todos los valores
-        pasados a `nota.timbre()` sean notas, y no frecuencias. \n\n_Sugerencia: ¡Recuerda
-        colocar comillas entre las notas! P. ej., `nota.timbre(\"A4\", 100);`_"
+        pasados a `timbre.nota()` sean notas, y no frecuencias. \n\n_Sugerencia: ¡Recuerda
+        colocar comillas entre las notas! P. ej., `timbre.nota(\"A4\", 100);`_"
       CSDU6 piano with notes_2019: "# Notas de piano\n\nEste es el mismo piano que
         viste en el comienzo de la lección, pero hay algunos errores.\n\n# Haz esto\n\n-
-        \  Edita el código para que todas las teclas usen un bloque `nota.timbre()`
+        \  Edita el código para que todas las teclas usen un bloque `timbre.nota()`
         para reproducir la nota correspondiente.\n-   Asegúrate de que todos los valores
-        pasados a `nota.timbre()` sean notas, y no frecuencias. \n\n_Sugerencia: ¡Recuerda
-        colocar comillas entre las notas! P. ej., `nota.timbre(\"A4\", 100);`_"
+        pasados a `timbre.nota()` sean notas, y no frecuencias. \n\n_Sugerencia: ¡Recuerda
+        colocar comillas entre las notas! P. ej., `timbre.nota(\"A4\", 100);`_"
       CSDU6 play null notes: |-
         # Notas nulas
 
@@ -15413,13 +15413,13 @@ es-MX:
       Dance_Party_02: |-
         ¡Hagamos bailar a este alce!
 
-        Arrastra el bloque <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> al espacio de trabajo. Conéctalo debajo del bloque <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"compases"</title></block></xml>. Tu bailarín debería empezar a moverse después del cuarto compás.
+        Arrastra el bloque \<<xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> al espacio de trabajo. Conéctalo debajo del bloque <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> Tu bailarín debería empezar a moverse después del cuarto compás.
 
         Los **compases** se usan para contar el tiempo en la música. En este tutorial, un compás tiene cuatro tiempos.
       Dance_Party_03: |-
         _¡Ya estamos entrando en ritmo!_
 
-        Añade un bloque <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"compases"</title></block></xml> a tu espacio de trabajo. Haz que el bailarín empiece a moverse después de 6 compases.
+        Añade un bloque <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> a tu espacio de trabajo. Haz que el bailarín empiece a moverse después de 6 compases.
       Dance_Party_04: |-
         \*¡Este baile necesita algunas luces! \*
 
@@ -16575,7 +16575,7 @@ es-MX:
         medida que escribes entradas en el diccionario, el símbolo de la entrada reemplaza
         el patrón en el texto.
       comment_intro_maze_2018: "_\"Estoy confundido. Ayúdame a recordar cómo resolver
-        este laberinto.\"_  \n\n* * *\n\nPara pasar este desafío, resuelve el laberinto
+        este laberinto.\"_    \n\n* * *\n\nPara pasar este desafío, resuelve el laberinto
         y usa el nuevo bloque <xml><block type=\"comment\">\n    <title name=\"TEXT\">
         </title>\n  </block></xml> para dejarte recordatorios rápidos. ¡Pueden ayudarte
         a recordar qué hiciste y por qué!   \n\nSolo **tú** usas estos comentarios;
@@ -16905,9 +16905,8 @@ es-MX:
       courseA_collector_loops2: |-
         ¡Consigue los tres montones! Acerca a Laurel a cada pieza del tesoro y, luego, usa este bloque:
           <xml><block type="collector_collect"/></xml>
-      courseA_collector_loops2_2018: |-
-        ¡Consigue los tres montones! Acerca a Laurel a cada pieza del tesoro y, luego, usa este bloque:
-         <xml><block type="collector_collect"/></xml>
+      courseA_collector_loops2_2018: '¡Consigue los tres montones! Acerca a Laurel
+        a cada pieza del tesoro y, luego, usa este bloque: <xml><block type="collector_collect"/></xml>'
       courseA_collector_loops3: ¿Cómo puede Laurel obtener los cinco montones de tesoros
         con un solo bloque <xml><block type="maze_moveEast"/></xml>?
       courseA_collector_loops3_2018: ¿Cómo puede Laurel obtener los cinco montones
@@ -16957,9 +16956,9 @@ es-MX:
         recoja todo el maíz?"
       courseA_harvester_loops5b_2019: "¿Puedes cambiar tu código para que la cosechadora
         recoja todo el maíz?"
-      courseA_harvester_loops6: ¡Necesitarás **un** bloque <xml><block type="maze_moveWest"></block></xml>
-        y **un** bloque <xml><block type="maze_moveNorth"></block></xml> para terminar
-        este desafío!
+      courseA_harvester_loops6: ¡Necesitarás **un** bloque <xml><block type="maze_moveWest"
+        block-text="move west"></block></xml> y **un** bloque <xml><block type="maze_moveNorth"
+        block-text="move north"></block></xml> para terminar este desafío!
       courseA_harvester_loops6_2019: ¡Necesitarás **un** bloque <xml><block type="maze_moveWest"></block></xml>
         y **un** bloque <xml><block type="maze_moveNorth"></block></xml> para terminar
         este desafío!
@@ -17019,9 +17018,9 @@ es-MX:
       courseA_maze_ramp2_2018: ¡Encaja los dos bloques <xml><block type="maze_moveEast"/></xml>
         en <xml><block type="when_run"/></xml> para finalizar tu código; luego, haz
         click en "▶ Ejecutar".
-      courseA_maze_ramp2_2019: ¡Encaja los dos bloques <xml><block type="maze_moveEast"/></xml>
-        en <xml><block type="when_run"/></xml> para finalizar tu código; luego, haz
-        click en "▶ Ejecutar".
+      courseA_maze_ramp2_2019: ¡Encaja los dos bloques <xml><block type="maze_moveEast"
+        block-text="move east"/></xml> en <xml><block type="when_run" block-text="when
+        run"/></xml> para finalizar tu código; luego, haz click en "▶ Ejecutar".
       courseA_maze_ramp3a_2018: Toma un bloque <xml><block type="maze_moveNorth"/></xml>
         de la caja de herramientas y agrégalo a la parte inferior de los otros bloques
         para finalizar este código; luego haz clic en "▶ Ejecutar".
@@ -17656,7 +17655,7 @@ es-MX:
       courseC_artist_loop1_2018: |-
         _"¡Fantástico!"_
 
-        Cambiemos el pincel y usemos el bloque <xml><block type="draw_line_style_pattern"> <title name="VALUE">PREDETERMINADO</title></block></xml> para agregar algo de estilo antes de que comience nuestro bucle.
+        Cambiemos el pincel y usemos el bloque <xml><block type="draw_line_style_pattern"> <title name="VALUE">DEFAULT</title></block></xml> para agregar algo de estilo antes de que comience nuestro bucle.
       courseC_artist_loop1_2019: |-
         _"¡Fantástico!"_
 
@@ -17857,8 +17856,8 @@ es-MX:
       courseC_artist_loopsPrePre1a_2018: |-
         ### ¡El artista está en la ubicación incorrecta!
 
-        Usa el bloque <xml><block type="jump_to_xy" id="callMe"><title name="XPOS">200</title><title name="YPOS">200</title></block></xml> para llevar al artista hasta el centro del área de juego.
-        Luego dibuja una línea de 50 pixeles de largo con el bloque <xml><block type="draw_move_by_constant"><title name="DIR">ir hacia adelante</title><title name="VALUE">50</title></block></xml>.
+        Usa el bloque <xml><block type="jump_to_xy" id="callMe"><title name="XPOS">200</title><title name="YPOS">200</title></block></xml> para llevar al artista hasta el centro del área de juego.\
+        Luego dibuja una línea de 50 pixeles de largo con el bloque <xml><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">50</title></block></xml>.
       courseC_artist_loopsPrePre1a_2019: |-
         ### ¡El artista está en la ubicación incorrecta!
 
@@ -19512,7 +19511,8 @@ es-MX:
       courseD_iceage_loops3: ¿Puedes llegar a la bellota con sólo un bloque <xml><block
         type="maze_moveForward"/></xml>? ¡Inténtalo usando un bucle!
       courseD_iceage_loops3_2019: ¿Puedes llegar a la bellota con un solo bloque <xml><block
-        type="maze_moveWest"/></xml>? ¡Inténtalo usando un bucle!
+        type="maze_moveForward" block-text="move forward"/></xml>? ¡Inténtalo usando
+        un bucle!
       courseD_iceage_loops4: "¡Añade un bloque más para que Scrat llegue hasta la
         bellota!"
       courseD_iceage_loops4_2019: "¡Añade un bloque más para que Scrat llegue hasta

@@ -2480,11 +2480,6 @@ tr-TR:
           Davranışları düzenlemeyi deneyin!
 
           -   Hangi değer hareket hızını kontrol ediyor?
-      behaviors 7:
-        behavior hint: |-
-          Davranışları düzenlemeyi deneyin!
-
-          -   Hangi değer hareket hızını kontrol ediyor?
       course1_artist_loops_challenge1:
         courseA_artist_loops_challenge1_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         courseA_artist_loops_challenge1_c: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"

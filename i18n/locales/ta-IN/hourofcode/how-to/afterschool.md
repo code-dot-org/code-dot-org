@@ -1,13 +1,14 @@
 ---
-title: <%= hoc_s(:title_how_to).inspect %>
+title: எப்படி வழிநடத்துவதென்று
 layout: wide
 nav: how_to_nav
 ---
-<%= view :signup_button %>
+
+{{signup_button}}
 
 # பள்ளி வகுப்புகள் மற்றும் மன்றத்தில் மணிநேர நிரலாக்கம் கற்பிப்பது எப்படி
 
-### இயக்கத்தில் சேர்ந்து, மாணவர் குழுக்களுக்கு கணினியியல் பற்றிய முதல் படிகளை அறிமுகப்படுத்துங்கள். மணிநேர நிரலாக்கம், புதிதாய் படிப்பவர்க்கும் இயக்க எளிதானது! If you'd like an extra set of hands to help out, you can find a [local volunteer](%= codeorg_url('/volunteer/local') %) to help run an Hour of Code in your after-school class or club.
+### இயக்கத்தில் சேர்ந்து, மாணவர் குழுக்களுக்கு கணினியியல் பற்றிய முதல் படிகளை அறிமுகப்படுத்துங்கள். மணிநேர நிரலாக்கம், புதிதாய் படிப்பவர்க்கும் இயக்க எளிதானது! உதவ கூடுதல் கைகளின் தொகுப்பை நீங்கள் விரும்பினால், உங்கள் பள்ளிக்குப் பிறகு ஒரு மணிநேர குறியீட்டை இயக்க உதவும் [ உள்ளூர் தன்னார்வலரை ](== {url / volunteer_local }==) காணலாம். வகுப்பு அல்லது கிளப்.
 
 * * *
 
@@ -15,17 +16,17 @@ nav: how_to_nav
 
 ## 2. ஒரு பயிற்சியை தேர்ந்தெடுக்க
 
-We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for participants all ages, created by a variety of partners. [ அவற்றை முயற்சிக்கவும்! ](%= resolve_url('/learn') %)
+பங்கேற்பாளர்களுக்காக பல்வேறு வயது கூட்டாளர்களால் உருவாக்கப்பட்ட பலவிதமான [ வேடிக்கையான, மணிநேர பயிற்சிகள் ](== {url / learn }a>) வழங்குகிறோம். [ அவற்றை முயற்சிக்கவும்! ]({{urls/learn }a>)
 
-**All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
+** குறியீட்டு பயிற்சிகளுக்கான அனைத்து மணிநேரமும் </ strong> அமைப்பாளர்களுக்கு குறைந்தபட்ச பிரீஃப்ட்-டைம் தேவை, சுய-வழிகாட்டுதல் தேவை - குழந்தைகள் தங்கள் சொந்த வேகத்தில் மற்றும் திறன் அளவிலான வேலை செய்ய அனுமதிக்கும்.</p> 
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
+[![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
-**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+** கோட்பாட்டின் மணிநேரத்திற்கு ஒரு பாடம் திட்டமிட வேண்டுமா? </ strong> இந்த [ டெம்ப்ளேட்டை ](/files/AfterschoolEducatorLessonPlanOutline.docx) பாருங்கள்!</p> 
 
 ## 3. உங்கள் கோடை மணிநேரத்தை ஊக்குவிக்கவும்
 
-Promote your Hour of Code [with these tools](%= resolve_url('/promote') %) and encourage others to host their own events.
+இந்த கருவிகளைக் கொண்டு உங்கள் மணிநேர குறியீட்டை  ஊக்குவிக்கவும், மற்றவர்கள் தங்கள் சொந்த நிகழ்வுகளை நடத்த ஊக்குவிக்கவும்.</p> 
 
 ## 4. உங்கள் தொழில்நுட்பத் தேவைகளைத் திட்டமிடுங்கள் - கணினிகள் விருப்பமானது
 
@@ -48,38 +49,41 @@ Promote your Hour of Code [with these tools](%= resolve_url('/promote') %) and e
 - [ ஜனாதிபதி ஒபாமா அனைத்து மாணவர்களும் கணினி அறிவியலைக் கற்றுக் கொள்ளுமாறு அழைப்பு விடுத்துள்ளனர்](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - [ இங்கு ](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) மேலும் தூண்டும் வீடியோக்களைக் கண்டறிக.
 
-**It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
+**நீங்கள் கணினி அறிவியல் அனைத்து புதிய என்றால் அது பரவாயில்லை. குறியீட்டு நடவடிக்கையின் உங்கள் மணிநேரத்தை அறிமுகப்படுத்த சில யோசனைகள் இங்கு உள்ளன:**
 
 - உதாரணமாக, சிறுவர்கள் மற்றும் பெண்கள் ஆகிய இரு உதாரணங்களும், வாழ்க்கையை காப்பாற்ற உதவுகிறது, மக்களை உதவுவதற்காக, மக்களை இணைக்க உதவுகிறது.
 - அன்றாட வாழ்க்கையில் குறியீட்டைப் பயன்படுத்தும் பட்டியலைக் குறிப்பிடுக.
-- கணினி அறிவியல் [ இங்கே ](%= resolve_url('https://code.org/girls') %) ஆர்வமுள்ள பெண்கள் பெற உதவிக்குறிப்புகளைப் பார்க்கவும்.
+- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
 
-**Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
+** மேலும் வழிகாட்டல் வேண்டுமா? </ strong> இந்த [ டெம்ப்ளேட் பாடம் திட்டம் ](/files/AfterschoolEducatorLessonPlanOutline.docx) ஐப் பதிவிறக்குக.</p> 
 
 ## 6. கோட்!
 
-**Direct participants to the activity** - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
+** நடவடிக்கைக்கு நேரடி பங்கேற்பாளர்கள் </ strong> - ஒரு whiteboard இல் பயிற்சி இணைப்பை எழுதவும். Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.</p> 
 
-**When someone comes across difficulties it's okay to respond:** - “I don’t know. Let’s figure this out together.” - “Technology doesn’t always work out the way we want.” - “Learning to program is like learning a new language; you won’t be fluent right away.”
+** யாராவது சிரமங்களை எதிர்கொள்கையில் அது பதிலளிக்க வேண்டியது பரவாயில்லை: </ strong> - "எனக்கு தெரியாது. இதை ஒன்றாகச் சேர்த்து விடுவோம். " - "தொழில்நுட்பம் எப்போது வேண்டுமானாலும் வேலை செய்யாது." - "நிரல் கற்றல் ஒரு புதிய மொழியை கற்று போன்ற ஆகிறது; நீங்கள் உடனடியாக சரளமாக மாட்டீர்கள். "</p> 
 
-**What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](%= resolve_url('/learn') %) - Or, ask those who finish early to help others who are having trouble.
+**What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn]({{ urls/learn }}) - Or, ask those who finish early to help others who are having trouble.
 
 ## 7. கொண்டாடுங்கள்
 
-- [Print certificates](%= codeorg_url('/certificates') %) for your students.
-- [ உங்கள் கோடெக்ஸின் ஒரு மணிநேரம் நான் அச்சிட்டுள்ளேன்! ](%= resolve_url('/promote/resources#stickers') %)
-- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for participants.
-- சமூக மீடியாவில் உங்கள் நிகழ்வு நிகழ்வு நிகழ்வுகளின் வீடியோ மற்றும் வீடியோக்களைப் பகிரலாம். #HourOfCode மற்றும் @codeorg பயன்படுத்தவும், எனவே உங்கள் வெற்றியை முன்னிலைப்படுத்தலாம்!
-
-## கல்வியாளர்களுக்கான கோட் வளங்களின் பிற மணி
-
-- Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers.
-- Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
-- Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
-- [ கோட் FAQ இன் மணிநேரத்தை ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) மதிப்பாய்வு செய்யவும். <% end %>
-
-## கோட் ஆஃப் ஹவர் என்ன ஆனது?
-
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](%= codeorg_url('/learn/beyond') %)!
-
-<%= view :signup_button %>
+- [Print certificates]({{ urls/certificates }}) for your students.
+- [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers for your students.
+- பங்கேற்பாளர்களுக்கான  தனிப்பயன் டி-ஷர்டுகளை ஆர்டர் செய்யவும்.</li> 
+    
+    - சமூக மீடியாவில் உங்கள் நிகழ்வு நிகழ்வு நிகழ்வுகளின் வீடியோ மற்றும் வீடியோக்களைப் பகிரலாம். #HourOfCode மற்றும் @codeorg பயன்படுத்தவும், எனவே உங்கள் வெற்றியை முன்னிலைப்படுத்தலாம்!</ul> 
+    
+    ## கல்வியாளர்களுக்கான கோட் வளங்களின் பிற மணி
+    
+    - கோட் அமைப்பாளர்கள் கடந்த மணிநேரத்திலிருந்து [ சிறந்த நடைமுறைகள் ](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) என்பதைப் பார்க்கவும் 
+    - எங்கள்  கல்வியாளரின் வழிகாட்டியின் மணிநேர வலைப்பின்னலின் மணிநேர பதிவுகளின் பதிவுகளைப் பார்க்கவும்.</li> 
+        
+        - மற்ற அமைப்பாளர்களிடமிருந்து ஆலோசனை, நுண்ணறிவு மற்றும் ஆதரவு பெற  கோட் மன்றத்தின் மணிநேரத்தை பார்வையிடவும்.</li> 
+            
+            - [ கோட் FAQ இன் மணிநேரத்தை ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) மதிப்பாய்வு செய்யவும்.</ul> 
+            
+            ## கோட் ஆஃப் ஹவர் என்ன ஆனது?
+            
+            தொழில்நுட்பத்தின் வேலைகள் மற்றும் மென்பொருள் பயன்பாடுகளை எவ்வாறு உருவாக்குவது என்பது பற்றி மேலும் அறிய ஒரு பயணத்தின் முதல் படியாகும். மாணவர்கள் தங்கள் பயணத்தை தொடர மற்றும் [ ஆன்லைனில் அறியவும் ](%= codeorg_url('learn/beyond') %) அவர்களை ஊக்குவிக்க உதவுங்கள்!
+            
+            {{signup_button}}

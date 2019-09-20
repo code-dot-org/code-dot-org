@@ -95,7 +95,7 @@ google_safe_browsing_key: !Secret
 
 # Mapbox
 mapbox_upload_token:
-mapbox_access_token:
+mapbox_access_token:      !Secret
 
 # Crowdin
 crowdin_codeorg_api_key:
@@ -250,6 +250,9 @@ expo_session_secret: !Secret
 firebase_debug:
 pd_teacher_application_list_secret_key:
 
+# Configure CloudFront to serve static, custom, student-friendly page when web application returns error HTTP response.
+custom_error_response: true
+
 # Whether rake:build should rebuild the apps package
 build_apps: false
 
@@ -325,7 +328,6 @@ pegasus_sock:
 pegasus_port: 3000
 pegasus_unicorn_name: pegasus
 pegasus_workers: 8
-pegasus_skip_asset_map: false
 sinatra_session_secret:
 
 # Configures Pegasus `settings.read_only`, which affects some (legacy) routes. Not actively used(?)

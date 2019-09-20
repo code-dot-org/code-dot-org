@@ -506,7 +506,26 @@ zh-CN:
       Begin planning your project_2018_2019:
         title: 开始计划项目
         content1: 描述
+        markdown: |+
+          # 项目案例
+
+          你即将开始你最终的项目。 在开始之前，花一些时间查看示例项目。
+
+          | 饥饿的松鼠Hungry Squirrel |外星人传奇Alien Story |
+          |---|---|
+          | [![Hungry Squirrel (Play Lab)](https://images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG "Hungry Squirrel (Play Lab")](https://studio.code.org/projects/playlab/HN1zAX4Om6zdsxVsBBug9Y8mlzKSWUAXhjzRl-64YRs/view) | [![Alien Story (Play Lab)](https://images.code.org/0bd5ed3674ac9fe3304e27e68974c35f-image-1565115240833.PNG "Alien Story (Play Lab")](https://studio.code.org/projects/playlab/I_8rcKtpLFRAn8flROC15Oc-KnDu-bkKBnSORoIDs0o/view) |
+          | 尝试给这个游戏增加一些声音! | 尝试为这个游戏增加一幕情节! |
+
+      BinaryBracelets-Unplugged:
+        markdown: |
+          # 二进制手镯
+
+          创建一个二进制手镯，在一个计算机能够理解的系统中代表你的名字。
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
       CSD Header Size MC:
+        title: 快速检查标题
+        content1: 查看下面的代码，预测标题的显示方式，从右侧选项中选择一个选项。
         answers:
         - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
             AM.png
@@ -518,6 +537,8 @@ zh-CN:
         - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
             AM.png
       CSD Header Size MC_2018:
+        title: 快速检查标题
+        content1: 查看下面的代码，预测标题的显示方式，从右侧选项中选择一个选项。
         answers:
         - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
             AM.png
@@ -529,6 +550,8 @@ zh-CN:
         - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
             AM.png
       CSD Header Size MC_2018_2019:
+        title: 快速检查标题
+        content1: 查看下面的代码，预测标题的显示方式，从右侧选项中选择一个选项。
         answers:
         - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
             AM.png
@@ -595,9 +618,37 @@ zh-CN:
       CSD U2 L2 Overview:
         title: 标题
         content1: 描述
+        markdown: |
+          # 课程预览
+          本课程以通俗的方式介绍了网站。首先讨论了人们表达和分享他们的兴趣与观点的几种方式；然后展示了几个上堂课学生制作的示意网站；最后进行了头脑风暴，每个人都分享了话题和兴趣列表，准备在接下来的课程单元里用于开发个人网站所需要的资源。
+
+          ## 参考词汇
+          ***网页内容** - 在网页中呈现的文字、图片以及其它元素。
+
+          ## 资源
+          * [个人网站草图 - 课堂活动指南](https://docs.google.com/document/d/1wnK0ntxFWvUyuEB6SksiTtUDqrEhZZn3VPLWynz-fV4/export?format=pdf)
       CSD U2 L3 Overview:
         title: 标题
         content1: 描述
+        markdown: |
+          # 课程预览
+
+          本课程介绍了HTML，HTML是实现网站的内容与结构和电脑进行传输呈现的一个解决方案。开始先进行了一个简短的课堂活动，展示了有效传输呈现网页结构的挑战。学生们在WEB试验台看HTML网页，讨论HTML的标签是如何解决问题的，然后使用HTML完成本单元的一个网页。
+
+          ## 词汇参考
+          * **HTML** - 超文本标记语言，一种用于创建网页的语言
+          * **HTML Element** - 网页元素，通常由开头标签标记，一般也有一个结束标签
+          * **HTML Tag** - 一组特殊字符，用于指示HTML元素的开头和结尾以及该元素的类型
+          * **Website Content** - 网页中包含的文本，图像和其他元素
+          * **Website Structure** - 网页中用于帮助计算机确定应如何显示内容的不同内容块
+
+          ## 已学代码
+
+          * **[HTML](//docs.code.org/weblab/html/)** - `<html></html>`
+          * **[Doctype](//docs.code.org/weblab/doctype/)** - `<!DOCTYPE>`
+          * **[Paragraph](//docs.code.org/weblab/P/)** - `<p></p>`
+          * **[Body](//docs.code.org/weblab/body/)** - `<body></body>`
+          * **[Head](//docs.code.org/weblab/head/)** - `<head></head>`
       CSD U2 L4 Overview:
         title: 标题
         content1: 描述
@@ -650,6 +701,7 @@ zh-CN:
             PM.png">
       CSD U2 lists match:
         title: 快速检查列表
+        content1: 匹配列表和相对应的代码。
         questions:
         - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
             PM.png
@@ -674,6 +726,7 @@ zh-CN:
             PM.png
       CSD U2 lists match_2018:
         title: 快速检查列表
+        content1: 匹配列表和相对应的代码。
         questions:
         - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
             PM.png
@@ -698,6 +751,7 @@ zh-CN:
             PM.png
       CSD U2 lists match_2018_2019:
         title: 快速检查列表
+        content1: 匹配列表和相对应的代码。
         questions:
         - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
             PM.png
@@ -1349,17 +1403,46 @@ zh-CN:
       Multi-Screen Apps:
         title: 标题
         content1: 描述
+      MyLoopyRoboticFriends-Unplugged:
+        markdown: |
+          # 我的循环机器人朋友们Jr.
+
+          将假装您的同学是机器人，但这次使用循环把你的程序变短。
+      MyRoboticFriends-Unplugged:
+        markdown: |
+          # 我的机器人朋友
+
+          将假装您的同学是机器人，并对它们进行编程以构建堆叠杯子的模式。
       New Challenge Introduction:
         title: 标题
         content1: 描述
       OPD-K5 Stage3aGo:
         title: 标题
         content1: 描述
+      PicturingData-Unplugged:
+        markdown: |
+          # 描绘数据
+
+          使用Play Lab 项目，搜集数据并进行预测。
+
+          ![](https://images.code.org/606a78c09a01133a1bbc1aa9c76f3320-image-1557334268558.png)
+      PowerfulPasswords-Unplugged:
+        markdown: |
+          # 强大的密码
+
+          了解人们使用密码的原因， 理解使用密码的好处， 并探索一个策略。用这个策略来创建和保存强大而安全的密码。
+
+          ![](https://images.code.org/9e082a5564a289bccc8e2dd79a2cae9f-image-1557869939256.png)
       Prepare for your presentation:
         title: 标题
         content1: 描述
       Prepare for your presentation_2018:
         title: 准备演示
+      ScreenOutTheMean-Unplugged:
+        markdown: |
+          # 远离网络欺凌
+
+          今天你将学习，如果网络上有些事情使您感到愤怒，悲伤或害怕，该怎么做。
       'Technique: Frequency Analysis':
         title: 如何破解替换密码
         content1: 描述
@@ -2453,3 +2536,6 @@ zh-CN:
         - text: 我不知道。
       gradek1_activity_beNice:
         title: 计算机是你的朋友
+        markdown: "# 在电脑实验室中表现\n  \n<br/><br/>    \n    \n<a href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
+          target=\"_new\">\n<button>\n前往教学计划\n</button> \n</a>\n\n<br/><br/>\n<a class=\"btn
+          btn-large btn-primary next-stage submitButton\">继续</a>\n"

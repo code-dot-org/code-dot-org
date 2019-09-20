@@ -305,19 +305,18 @@ module LevelsHelper
     use_weblab = @level.game == Game.weblab
     use_phaser = @level.game == Game.craft
     use_blockly = !use_droplet && !use_netsim && !use_weblab
-    use_dance = @level.is_a?(Gamelab) && @level.helper_libraries.try(:include?, 'DanceLab')
+    use_p5 = @level.is_a?(Gamelab)
     hide_source = app_options[:hideSource]
     render partial: 'levels/apps_dependencies',
       locals: {
         app: app_options[:app],
         use_droplet: use_droplet,
-        use_netsim: use_netsim,
         use_blockly: use_blockly,
         use_applab: use_applab,
         use_gamelab: use_gamelab,
         use_weblab: use_weblab,
         use_phaser: use_phaser,
-        use_dance: use_dance,
+        use_p5: use_p5,
         hide_source: hide_source,
         preload_asset_list: @level.try(:preload_asset_list),
         static_asset_base_path: app_options[:baseUrl]
@@ -560,6 +559,7 @@ module LevelsHelper
     dev_with_credentials = rack_env?(:development) && (!!CDO.aws_access_key || !!CDO.aws_role) && !!CDO.cloudfront_key_pair_id
     use_restricted_songs = CDO.cdn_enabled || dev_with_credentials || (rack_env?(:test) && ENV['CI'])
     app_options[:useRestrictedSongs] = use_restricted_songs if @game == Game.dance
+    app_options[:isStartMode] = @is_start_mode || false
 
     if params[:blocks]
       level_options[:sharedBlocks] = Block.for(*params[:blocks].split(','))
@@ -651,7 +651,7 @@ module LevelsHelper
         :iframe,
         '',
         {
-          src: url_for(level_id: level.id, controller: :levels, action: :embed_level).strip,
+          src: url_for(id: level.id, controller: :levels, action: :embed_level).strip,
           width: (width ? width.strip : '100%'),
           scrolling: 'no',
           seamless: 'seamless',

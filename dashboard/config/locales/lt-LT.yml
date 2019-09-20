@@ -32,6 +32,7 @@ lt:
         edit_header: Keisti paskyros duomenis
         error:
           future: negali būti ateitis
+  beta: beta
   hello: Sveikas, pasauli
   welcome_back: Sveiki sugrįžę, %{name}
   your_professional_learning_plan: Tavo Profesionalus Mokymosi planas
@@ -45,13 +46,9 @@ lt:
   okay: Gerai
   or: arba
   heading_x_of_y: "%{heading} (%{x} puslapis iš %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Pridėti mokytoją:'
       placeholder: Grupės kodas (ABCDEF)
-      instructions: Įrašyk kodą, kurį tau davė mokytojas. Tai yra 6 raidžių kodas,
-        pavyzdžiui "ABCDEF".
-    submit: Pridėk mokytoją
   add_hint_form:
     placeholder: Įvesk savo suflerį čia
     submit: Pridėk suflerį
@@ -78,9 +75,6 @@ lt:
   auth:
     sign_in_with: Prisijungti naudojant %{provider}
     signed_in: Prisijungta!
-    signed_out: Jūs atsijungėte iš <a href="%{url}">Code.org</a>.
-    sign_out_of: Prisijungimui jūs panaudojote %{provider}. <a href="%{url}">Spauskite
-      čia</a>, kad atsijungtumėte nuo %{provider}.
     already_signedup: Jau užsiregistravote?
     notyet_signedup: Dar nesate užsiregistravę?
     google_oauth2: Google paskyra
@@ -163,8 +157,6 @@ lt:
     login: Prisijungti
     invalid_login: Netinkamas prisijungimas, mėginkite dar kartą
     pair_programming: Kompiuteriu dalinuosi su klasioku
-    student_privacy: Sužinok <a href='%{student_privacy_blog}' target='_blank'>čia</a>,
-      kodėl nematai savo pilno vardo.
   password:
     reset_form:
       title: Užmiršai savo slaptažodį?
@@ -326,10 +318,6 @@ lt:
     tried: Išbandyta
   home:
     title: Code Studio
-    description: "„Code Studio“ yra internetinių kursų puslapis, sukurtas Code.org"
-    lines_of_code: MOKINIAI PARAŠĖ %{lines_count} KODO EILUČIŲ
-    lines_of_code_linebreak: "%{students_count} MILIJONŲ MOKINIŲ <br/>JAU PARAŠĖ %{lines_count}
-      KODO EILUČIŲ"
     all_courses: 1, 2 ir 3 kursų apžvalga
     lesson_plans: Pamokų planai
     signin_message: Jau užsiregistravote? %{link}
@@ -366,12 +354,6 @@ lt:
     test_videos_help: Išbandykite mūsų naują vaizdo grotuvą savo mokykloje
     try_beta_courses: Naujiena! Išmėginkite testuojamus kursus pradinukams
     use_as_teacher: Naudokite šią svetainę kaip mokytojas
-    heading_hoc2014: "<h2>Programavimo valanda</h2><h1>Visoms amžiaus grupėms</h1>"
-    heading_elementary: "<h2>20 valandų kursas</h2><h1>Kompiuterių mokslo pradmenys
-      (visoms amžiaus grupėms)</h1>"
-    heading_apps: "<h2>Smagumynai</h2><h1>visiems</h1>"
-    heading_tools: "<h2>Pasiruošęs kitam žingsniui?</h2><h1>JavaScript įrankiai gimnazijoms</h1>"
-    heading_legacy: "<h2>Pagreitinti kursai</h2><h1>visoms amžių grupėms</h1>"
     your_gallery: Galerija
     no_primary_course: Išmėgink „Code Studio“ kursą
     choose_next_course: Išbandyk „Code Studio“ kursą, pasirink vieną iš pateiktų žemiau
@@ -562,10 +544,6 @@ lt:
     header_artist: Menininkas
     report_abuse: Praneškite apie piktnaudžiavimą
   landing:
-    prerelease: Šis kursas yra <span class='betatext'>beta</span>. Tai reiškia, kad
-      tai nėra galutinis šio kurso variantas ir jis dar yra tobulinamas.
-    prerelease_hoc2014: Šios pamokėlės yra <span class='betatext'>beta versijoje</span>.
-      Į pasiūlymus ir klaidų pranešimus bus atsižvelgta.
     report_bug: Pranešti apie problemą
     support: Pagalba
     support_url: "//support.code.org"
@@ -624,11 +602,6 @@ lt:
   age_interstitial:
     age: Tavo amžius
     header: Paskyros informacijos atnaujinimas
-    message: Šiuo metu mes atnaujiname privatumo apsaugą, kad Jūsų duomenys būtų dar
-      saugesni. Norėdami tai padaryti, mums reikia, kad visi naudotojai įvestų savo
-      amžių.<br/>Kaip ir visuomet, code.org niekada neparduos ir neišduos Jūsų asmeninių
-      duomenų tretiesiems asmenims.
-    sign_out: Jeigu nenori skelbti savo amžiaus, gali <a href="%{url}">atsijungti</a>.
   terms_interstitial:
     tos: Naudojimo taisyklės
     privacy: Privatumo politika
@@ -718,12 +691,8 @@ lt:
   peer_review:
     accepted:
       name: Priimta
-      description: "<strong>Taip</strong>, ši pateiktis <strong>atitinka</strong>
-        reikalavimus"
     rejected:
       name: Atmesta
-      description: "<strong>Ne</strong>, ši pateiktis <strong>neatitinka</strong>
-        reikalavimų"
     escalated:
       description: Norėčiau, kad instruktorius peržiūrėtų šią pateiktį
     instructor_feedback: Instruktoriaus atsiliepimai

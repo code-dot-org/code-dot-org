@@ -1,53 +1,40 @@
 ---
-title: <%= hoc_s(:title_signup_thanks).inspect %>
+title: Täname, et ühinesite Hour of Code'iga!
 layout: wide
 nav: how_to_nav
 social:
-  "og:title": "<%= hoc_s(:meta_tag_og_title) %>"
-  "og:description": "<%= hoc_s(:meta_tag_og_description) %>"
-  "og:image": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
-  "og:image:width": 1440
-  "og:image:height": 900
-  "og:url": "http://<%=request.host%>"
   "twitter:card": player
   "twitter:site": "@codeorg"
-  "twitter:url": "http://<%=request.host%>"
-  "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>"
-  "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
-  "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
 ---
-<% facebook = {:u=>"http://#{request.host}/us"}
-
-twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_donor_text).gsub(/%{random_donor}/, get_random_donor_twitter)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_donor_text).include? '#HourOfCode' %>
 
 # Täname, et ühinesite KoodiTund kampaaniaga!
 
-<br /> **KoodiTund toimub <%= campaign_date('full') %> ning me võtame ühendust, kui uued juhendid valmivad või kui meil on põnevaid uudiseid. Aga mida saaksid kohe teha?**
+<br /> **The Hour of Code runs during {{ campaign_date/full }} and we'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
+
+As a special thank you to Hour of Code organizers, we have a new poster set featuring Malala, Stephen Curry, Shakira and more available to order at a [50% discount from Amazon](https://www.amazon.com/promocode/A3QAYNZUZTSSNQ). This year, each set comes with 6 posters and 126 "I did the Hour of Code" stickers. With the discount you'll get them for less than our cost to make them. Supplies are limited, so order your posters soon. If you're not in the United States, you can [download and print all posters]({{ promote/promote_posters_url }}).
 
 ## 1. Levita infot oma koolis ja kogukonnas
 
-Liitusid just KoodiTund liikumisega. Ütle oma sõpradele ka **#HourOfCode**!
+You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
 
-<%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> Julgusta teisi ka osalema [ meie näidis e-kirjadega.](%= resolve_url('/promote/resources#sample-emails') %) Võta ühendust oma direktoriga ning kutsu kõiki klasse KoodiTund üritust läbi viima. Kutsu ka kohalikke gruppe - skaudid, gaidid, klubid, kirikud, ülikoolid, seenioriteklubid, ametiühingud või isegi sõpruskonnad. Sa ei pea õppima koolis, et uusi oskusi omandada. Kutsu kohalik poliitik või otsustaja oma kooli KoodiTund ürituse ajal. See aitab kaasa arvutiteaduse tutvustamisele laiemalt.
+{{ social_media_hoc }} <br /> Encourage others to participate [with our sample emails.]({{ promote/sample_emails }}) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. Sa ei pea õppima koolis, et uusi oskusi omandada. Invite a local politician or policy maker to visit your school for the Hour of Code. See aitab kaasa arvutiteaduse tutvustamisele laiemalt.
 
-Kasuta neid[ plakateid, kleepekaid, videosid ja muud](%= resolve_url('/promote/resources') %) enda ürituse korraldamisel.
+Use these [posters, banners, stickers, videos and more]({{ promote/resources }}) for your own event.
 
 ## 2. Leia lähedal paiknev vabatahtlik, kes aitaks sind sinu üritusega.
 
-[Otsi vabatahtlikke kaardilt](%= codeorg_url('/volunteer/local') %). Vabatahtlikud võivad su klassi külastada või videolingi abil klassiga suhelda ning kõneleda arvutiteaduse võimalustest.
+[Search our volunteer map]({{ urls/volunteer_local }}) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
 ## 3. Planeeri KoodiTund üritus
 
-Vali [ KoodiTund tegevus](https://hourofcode.com/learn) oma klassi ja oks ja [ tutvu vastava juhendiga](%= resolve_url('/how-to') %).
+Choose an [Hour of Code activity](https://hourofcode.com/learn) for your classroom and [review this how-to guide]({{ urls/how_to_guide }}).
+
+### 4. Stock up on swag
+
+Order materials to help get students excited about your event by heading to the Code.org [Amazon store](https://www.amazon.com/stores/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220). [Order posters](https://www.amazon.com/promocode/A3QAYNZUZTSSNQ) (and get an extra 50% off), Hour of Code kits, stickers, and more! But hurry, supplies are limited.
 
 # Peale KoodiTundi
 
-<% if @country == 'us' %> KoodiTund on alles algus. Sõltumata sellest, kas oled õpetaja või projektijuht, meil on [ tunniplaanid ja materjalid, mis aitavad sinu koolil oma arvutiteaduse alast valikut laiendada.](https://code.org/yourschool) Kui sa juba õpetad arvutiteadusi, siis kasuta Arvutiteaduse hariduse nädalat kui võimalust valdkonda tutvustada ning lapsevanemate ja kogukonna toetust valdkonnale tõsta.
+{{ go_beyond_hoc }}
 
-Teil on palju valikuid vastavalt oma koolile. Enamik organisatsioone pakub KoodiTund materjale koos tunniplaaniga ning võimalustega ametialaseks arenguks. Kui leiad tunni, mis sulle sobib, siis küsi lisainfot. Et aidata teil alustada, oleme välja toonud mitmeid [õppekava pakkujaid, kes aitavad õpilastel peale KoodiTundi valdkonnaga edasi minna.](https://hourofcode.com/beyond)
-
-<% else %> KoodiTund on alles algus. Enamik organisatsioone pakub õppekavasid, mis aitavad valdkonnaga edasi liikuda. Et aidata teil alustada, oleme välja toonud mitmeid [õppekava pakkujaid, kes aitavad õpilastel peale KoodiTundi valdkonnaga edasi minna.](https://hourofcode.com/beyond)
-
-Code.org pakub ka täielikke [ arvutiteaduste sissejuhatavaid kursusi](https://code.org/educate/curriculum/cs-fundamentals-international), mis on tõlgitud enam kui 25 keelde ning mida kool saab kasutada tasuta. <% end %>
-
-<%= view 'popup_window.js' %>
+{{ popup_window.js }}

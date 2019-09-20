@@ -4,6 +4,7 @@ slack_start_build_token: !Secret
 azure_content_moderation_key: !Secret
 saucelabs_authkey: !Secret
 saucelabs_username: !Secret
+zendesk_secret:
 
 # Disable Secrets for CI, unit-test runs,
 # and other non-chef_managed environments (e.g., preloading Spring for Rails tests).
@@ -24,7 +25,6 @@ db_writer: 'mysql://root@localhost/'
 <% end -%>
 
 db_cluster_id: test-cluster
-pegasus_skip_asset_map: <%=ci_test%>
 netsim_enable_metrics: true
 stub_school_data: true
 daemon: true

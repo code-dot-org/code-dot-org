@@ -1,56 +1,55 @@
 ---
-title: <%= hoc_s(:title_stats).inspect %>
+title: ملخصات وإحصائيات مفيدة
 layout: wide
 nav: promote_nav
 ---
 
-
 <a id="blurb"></a>
 
-<%= view :signup_button %>
+{{ signup_button }}
 
-# Blurbs and useful stats
+# ملخصات وإحصائيات مفيدة
 
-### Use the following messaging if you're looking for ways to promote the Hour of Code in your newsletters and communications.
+### استخدم الرسالة التالية إن كنت تبحث عن طريقة للترويج لساعة البرمجة في رسائلك الإخبارية ومراسلاتك.
 
 * * *
 
-## Use this short blurb in newsletters
+## استعمل هذا الملخص القصير في رسالتك الإخبارية
 
-#### Bring computer science to your school. Start with an Hour of Code!
+#### انقل علوم الكمبيوتر إلى مدرستك. ابدأ بساعة البرمجة!
 
-With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skill set. But fewer than half of all schools teach computer science! الخبر السار، أننا في طريقنا لنغير ذلك. If you heard about the Hour of Code last year, you might know it made history. 100 million students have now discovered how accessible and fun computer science can be by doing just one Hour of Code.
+بواسطة التكنولوجيا التي تغير كل الصناعات على الأرض، أصبحت المعرفة المعلوماتية جزءا من مجموعة كاملة من المهارات. لكن أقل من نصف جميع المدارس يدرس علوم الكمبيوتر! الخبر السار، أننا في طريقنا لنغير ذلك. إذا سمعت عن ساعة من البرمجة العام الماضي، يمكن أن تكون قد عرفت أنها صنعت التاريخ. 100 مليون طالب اكتشف الآن مدى سهولة الولوج إلى علوم الكمبيوتر الممتعة فقط بساعة البرمجة.
 
-The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. Learn more at [http://HourOfCode.com](http://HourofCode.com), try an hour yourself, or host an Hour of Code event to introduce others to the world of computing!
+ساعة البرمجة هي ساعة مقدمة لعلوم الكمبيوتر، مصممة لإزالة الغموض عن البرمجة، و تبين أن أي شخص يمكنه أن يتعلم الأساسيات. اقرأ المزيد على [http://HourOfCode.com](http://HourofCode.com)، جرب ساعة واحدة بنفسك، أو استضف ساعة برمجة لتعريف الآخرين بعالم المعلوميات!
 
-## Messaging for frequently asked questions
+## بريد للأسئلة المتكررة
 
-#### Why is your school doing an Hour of Code?
+#### لماذا تنظم مؤسستك ساعة البرمجة؟
 
-While all of us know that it’s important for students to learn how to navigate today’s tech-saturated world, many teachers aren’t experienced in computer science and don’t know where to start. This event is a chance for all of us to see what computer science is about.
+كلنا نعلم اليوم أهمية تعلم التلاميذ كيفية التنقل في علم مشبع بالتكنولوجيا، لكن العديد من المدرسين تنقصهم التجربة في علوم الكمبيوتر ولايعرفون من أين سيبدؤون. هذا الحدث هو فرصة لنا جميعا لمعرفة حول ماذا تدور علوم الكمبيوتر.
 
-We hope it’ll spark interest in students to keep learning. Research also shows that kids can pick up programming concepts before they know how to read and write. In fact, their brains are more receptive to computer languages at a young age, just like foreign languages. <br /> <br />
+نأمل أن يثير هذا اهتمام المتعلمين لمواصلة التعلم. تظهر الأبحاث أن الأطفال يمكنهم استيعاب مفاهيم البرمجة قبل تعلم القراءة والكتابة. في الواقع، أدمغتهم مستعدة أكثر لاستقبال لغات البرمجة في سن مبكرة كالغات الأجنبية. <br /> <br />
 
-#### Why is this important?
+#### لماذا هذا مهم؟
 
-Technology is transforming every industry on the planet. In 2015, 7 million openings in the U.S. were in occupations—including art and design—that value coding skills. But 65 percent of schools in the U.S. don't teach computer science. It’s time for us to catch up to the 21st century. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them confidence and a competitive edge. <br /> <br />
+التكنولوجيا تحول كل الصناعات في الكوكب. في 2015، 7 ملايين منصب مفتوح في الولايات المتحدة -بما فيها الفن والتصميم - التي تعترف بقيمة مهارات البرمجة. لكن 65 بالمئة من مدارس الولايات المتحدة لا تدرس علوم الكمبيوتر. حان الوقت لكي نلحق بالقرن 21. بغض النظر عما سيمارسه الطلبة عندما يكبرون، سواء الطب أو التجارة أو السياسة، فابتكار التكنولوجيا سيمنحهم الثقة والقدرة على التنافسية. <br /> <br />
 
-#### A quote you can use in materials
+#### تقدير يمكناستخدامه في المواد
 
-"The Hour of Code is designed to demystify code and show that computer science is not rocket science—anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. "Over 100 million students worldwide have tried an Hour of Code. The demand for relevant 21st-century computer science education crosses all borders and knows no boundaries." <br /> <br />
+يقول ( Hadi Partovi) مؤسس ورئيس إدارة ( Code.org): "ساعة البرمجة مصممة لتذليل الصعوبات وإظهار كون علوم الكمبيوتر ليست علما صعبا - الجميع يمكنه تعلم الأساسيات". "أكثر من 100 مليون طالب حول العالم جربوا ساعة البرمجة. طلب تدريس فعال للمعلوميات للقرن 21 يتجاوز كل الحدود ولا يعترف بالحدود <br /> <br />
 
-#### About Code.org
+#### ما هو (Code.org)؟
 
-Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school has the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [<%= resolve_url('code.org') %>](%= resolve_url('https://code.org') %).
+(Code.org) منظمة غير ربحية هدفها توسيع المشاركة في علوم الكمبيوتر وزيادة النساء والفئات من الطلاب الممثلين تمثيلا أقل. رؤيتها هي أن كل طالب في كل مدرسة له الفرصة في تعلم الرمجة المعلوماتية. بعد إطلاقها 2013، (Code.org) نظمت حملة ساعى البرمجة - التي عرفت أكثر من 100 مليون طالب بعلوم الكمبيوتر إلى اليوم - وأبرمت شراكات مع 70 مدرسة عمومية فيجميع أنحاء البلاد لنشر برامج علوم الكمبيوتر. Code.org مدعومة بالتبرعات الخيرية من الشركات، والمؤسسات والأفراد الكرماء، بما فيها (Microsoft)، (Facebook)، (Infosys Foundation USA)، (Amazon)، وآخرون. لمزيد من المعلومات المرجو زيارة: [code.org]({{ codeorg_link }}).
 
-## Share these on social media and in emails
+## شارك هذه على مزاقع التواصل الاجتماعي وعبر البريد الالكتروني
 
-[![image](/images/social-media//fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![صورة](/images/social-media//fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![صورة](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![صورة](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <a id="infographics"></a>
 
-## Infographics
+## رسوم بيانية
 
-<%= view :stats_carousel %>
+{{ stats_carousel }}
 
-<%= view :signup_button %>
+{{ signup_button }}

@@ -645,6 +645,24 @@ es-MX:
       CSD U2 Design Project_2018_2019:
         title: Título
         content1: descripción aquí
+      CSD U2 Expression Exemplars:
+        markdown: |
+          # Ejemplares de sitios web personales
+
+          Haga clic en los sitios web a continuación para ver los sitios web personales que otros estudiantes han creado.
+
+          <a href="https://codeprojects.org/SYRw7CQJzSmAErCEF-mMXQ" target="_blank"> <img src = "https://images.code.org/25b7284a4cd3d26f9b989a5c3bba6485-image-14937606092. = "ancho: 200px; flotante: izquierda"> </a>
+
+          <a href="https://codeprojects.org/y6u1W372PZh2MfzxwHQBKA" target="_blank"> <img src = "https://images.code.org/5929f61d14370a72e2e3b77c1948d5ed-image-149394324" 92.png335.png ancho: 200 px; flotante: izquierda "> </a>
+      CSD U2 Expression Exemplars_2018:
+        markdown: |
+          # Ejemplares de sitios web personales
+
+          Haga clic en los sitios web a continuación para ver los sitios web personales que otros estudiantes han creado.
+
+          <a href="https://codeprojects.org/SYRw7CQJzSmAErCEF-mMXQ" target="_blank"> <img src = "https://images.code.org/25b7284a4cd3d26f9b989a5c3bba6485-image-14937606092. = "ancho: 200px; flotante: izquierda"> </a>
+
+          <a href="https://codeprojects.org/y6u1W372PZh2MfzxwHQBKA" target="_blank"> <img src = "https://images.code.org/5929f61d14370a72e2e3b77c1948d5ed-image-149394324" 92.png335.png ancho: 200 px; flotante: izquierda "> </a>
       CSD U2 L1 Overview:
         markdown: |+
           # Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
@@ -835,6 +853,30 @@ es-MX:
           4. Amazon.com: sitios de compra en línea de todo tipo de bienes
           4. Yahoo.com: motor de búsqueda, proveedor de correo electrónico y fuente de noticias
           5. Wikipedia.org: enciclopedia gratuita con contenido generado por los usuarios
+      CSD U2 Top Websites_2018:
+        markdown: "# Mejores sitios web en los EE. UU.\n\nLos siguientes son algunos
+          de los sitios web más visitados en los Estados Unidos. Cada uno incluye
+          una breve descripción de la función principal del sitio web.\n\n\n* Google.com:
+          motor de búsqueda de sitios web, imágenes, videos y otros medios\n* Youtube.com:
+          sitio de videos enviados por el usuario con calificaciones y comentarios\n*
+          Facebook.com: comunidad de redes sociales que permite a los usuarios compartir
+          información con amigos\n* Amazon.com: sitios de compras en línea para todo
+          tipo de productos\n* Yahoo.com: un motor de búsqueda, proveedor de correo
+          electrónico y fuente de noticias\n* Wikipedia.org: una enciclopedia gratuita
+          con contenido generado por los usuarios\n \nhttps://studio.code.org/s/csd2-2018/stage/1/puzzle/2
+          -> dsls -> markdown\n"
+      CSD U2 Top Websites_2018_2019:
+        markdown: "# Mejores sitios web en los EE. UU.\n\nLos siguientes son algunos
+          de los sitios web más visitados en los Estados Unidos. Cada uno incluye
+          una breve descripción de la función principal del sitio web.\n\n\n* Google.com:
+          motor de búsqueda de sitios web, imágenes, videos y otros medios\n* Youtube.com:
+          sitio de videos enviados por el usuario con calificaciones y comentarios\n*
+          Facebook.com: comunidad de redes sociales que permite a los usuarios compartir
+          información con amigos\n* Amazon.com: sitios de compras en línea para todo
+          tipo de productos\n* Yahoo.com: un motor de búsqueda, proveedor de correo
+          electrónico y fuente de noticias\n* Wikipedia.org: una enciclopedia gratuita
+          con contenido generado por los usuarios\n \nhttps://studio.code.org/s/csd2-2018/stage/1/puzzle/2
+          -> dsls -> markdown\n"
       CSD U2 expand project:
         title: Título
         content1: descripción aquí
@@ -1415,10 +1457,10 @@ es-MX:
 
           _Consulta con tu docente antes de abordar algunos de estos desafíos._
 
-          * Volver a [level 15](15) para seguir trabajando en tu propia animación. Deberás retirar primero tu proyecto y volver a enviarlo una vez que hayas terminado de trabajar.
-          * Volver a [level 12](12) para seguir trabajando en la animación del pez. Prueba cambiar la rotación de los peces de forma aleatoria para que parezca que nadan.
-          * Volver a [level 13](13) para seguir trabajando en la animación de los engranajes. Prueba agregar más engranajes de diferentes tamaños y ajustar la velocidad de cada rotación para asegurarte de que los engranajes encajan bien.
-          * Ir a [full Game Lab](/projects/gamelab/new) para crear una nueva animación desde cero.
+          * Volver a [nivel 15](15) para seguir trabajando en tu propia animación. Deberás retirar primero tu proyecto y volver a enviarlo una vez que hayas terminado de trabajar.
+          * Volver a [nivel 12](12) para seguir trabajando en la animación del pez. Prueba cambiar la rotación de los peces de forma aleatoria para que parezca que nadan.
+          * Volver a [nivel 13](13) para seguir trabajando en la animación de los engranajes. Prueba agregar más engranajes de diferentes tamaños y ajustar la velocidad de cada rotación para asegurarte de que los engranajes encajan bien.
+          * Ir a [Laboratorio de juegos](/projects/gamelab/new) para crear una nueva animación desde cero.
       CSD U3 Project Build a Game SFLP:
         markdown: |
           # Resumen
@@ -2147,6 +2189,26 @@ es-MX:
 
           * [Make a Recommendation](https://docs.google.com/document/d/1pKeFH1OkWzfg3MFTPCezhK_r4p8xu7QUkPKSf5vV41c/export?format=pdf) - Project Guide
           * [Make a Recommendation](https://docs.google.com/document/d/1ZdA-VIdyPZLONBFr7ojFeNfHCHYmacbrrphiR31k6Bk/export?format=pdf) - Peer Review
+      Dance_Party_extras_intro:
+        markdown: "# ¡Sigamos bailando!\n\nPara la parte 2, vas a crear tu propio
+          proyecto. Aquí no hay desafíos, sino muchos proyectos que muestran diferentes
+          formas de crear fiestas de baile más complejas.\n\nPuedes hacer estos niveles
+          _en cualquier orden_. Salta para ver cómo se hizo algo en un nivel anterior
+          o combina conceptos entre los proyectos. Pruébalos todos, elige tu favorito
+          y trabaja en la personalización de ese proyecto.\n\n<a class=\"btn btn-large
+          btn-primary next-stage submitButton pull-right\">Continuar</a>\n\n<div class=\"clearfix\"></div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"2\">\n<h2>\nPoner en formación\n</h2>\n\n<img
+          src=\"https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"3\">\n<h2>\n¿A dónde fueron?\n</h2>\n\n<img
+          src=\"https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"4\">\n<h2>\nGrupos de baile\n</h2>\n\n<img
+          src=\"https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"5\">\n<h2>\nNegras\n</h2>\n\n<img
+          src=\"https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"6\">\n<h2>\nBajos, medios
+          y agudos \n</h2>\n\n<img src=\"https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"7\">\n<h2>\nAcelera, reduce
+          la velocidad\n</h2>\n\n<img src=\"https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif\"></a>\n\n</div>\n"
       GoingPlacesSafely-unplugged:
         markdown: |
           # Ir a lugares con seguridad
@@ -2407,6 +2469,26 @@ es-MX:
       New Challenge Introduction:
         title: Título
         content1: descripción aquí
+        markdown: "### Nuevo desafío: descifrar un cifrado de sustitución aleatoria...
+          con un nuevo widget\n\n¿Qué pasaría si, en lugar de desplazar todo el alfabeto,
+          asignamos a cada letra del alfabeto otra letra al azar? Esto se llama cifrado
+          de sustitución aleatoria.**\n\n![](https://images.code.org/7837e7fef2f38659f4bf51a29b6dc4d3-image-1473863470440.gif)\n\nAhora,
+          en lugar de codificar el mensaje secreto con un desplazamiento alfabético
+          simple, verás mensajes codificados con **sustitución aleatoria**.\n\n\nEsto
+          es mucho más difícil de descifrar y requiere una herramienta más sofisticada,
+          así que...\n\nCuando hagas clic en continuar, verás una **versión nueva
+          y más sofisticada de la herramienta de cifrado** que te muestra muchas cosas
+          diferentes.\n\n¡Pero lo que hace es un misterio!\n\n### Tu tarea:\n\n *
+          Descubrir qué está pasando en esta nueva versión de la herramienta\n * ¿Qué
+          información te presenta?\n * Descubrir qué te permite hacer la herramienta\n
+          * Como siempre: no puedes adivinar. Así que haz clic en las cosas e investiga.\n
+          * Si lo descubres, es posible que puedas descifrar un mensaje codificado
+          con sustitución aleatoria.\n \n### Te damos una pista\n\n* ¿Sabías que la
+          letra **E** es la más utilizada en el idioma inglés?\n\n### Volver a reunirse
+          y debatir\nDespués de jugar un tiempo con la herramienta, debes reunirte
+          con alguien (un compañero, un grupo pequeño o toda la clase) para conversar
+          sobre lo que encontraste y verificar que conoces lo que está sucediendo
+          y las diversas formas en que puedes usar la herramienta.\n\n\n"
       OPD-K5 Stage3aGo:
         title: Título
         content1: descripción aquí
@@ -2418,9 +2500,55 @@ es-MX:
       'Technique: Frequency Analysis':
         title: Cómo descifrar un cifrado de sustitución
         content1: descripción aquí
+        markdown: "# Descifrar el cifrado de sustitución\n\nLa mejor técnica para
+          descifrar un cifrado de sustitución aleatoria se conoce como **análisis
+          de frecuencias** \n\nTomado de: [wikipedia](https://es.wikipedia.org/wiki/An%C3%A1lisis_de_frecuencias)\n\n*
+          **Análisis de frecuencias** es una técnica que se basa en *la frecuencia*
+          con que ciertas letras aparecen en inglés frente a otras.\n* Por ejemplo,
+          en una sección de texto en inglés, *E*, *T*, *A* y *O* son las letras más
+          comunes, mientras que *Z*, *Q* y *X* son las menos comunes. Del mismo modo,
+          *TH*, *ER*, *ON* y *AN* son los pares de letras más comunes que se encuentran
+          uno al lado del otro.\n* De hecho, la distribución de letras es casi la
+          misma para casi *todas* las muestras de texto en inglés.\n\n\nLa versión
+          del widget en la página anterior tiene como objetivo ayudarte a **descifrar
+          un cifrado de sustitución a través del análisis de frecuencias**.\n\nAl
+          analizar la frecuencia de las letras en el mensaje cifrado en comparación
+          con la frecuencia de las letras en una prosa típica en inglés, puedes comenzar
+          a definir cuáles podrían ser algunas de las asignaciones de letras.\n\nLa
+          herramienta muestra cómo la frecuencia de las letras en el texto cifrado
+          (naranja) se compara con las frecuencias del inglés típico (azul).\n\n###
+          Te damos una pista para empezar\n\n1. Encuentra las palabras cortas y \"descífralas\"
+          primero. ¿Cuántas palabras en inglés de una letra conoces? (\"a\"). Una
+          palabra muy común de 3 letras es \"the\".\n2. Una vez que hayas hecho eso,
+          tienes sustitutos para algunas de las letras más comunes. Deberías poder
+          usar la intuición para mirar otras palabras con estas sustituciones parciales
+          y hacer buenas suposiciones.\n3. Después de encontrar algunas letras muy
+          difíciles, el resto se resolverá rápidamente.\n4. Al comparar las frecuencias
+          de las letras, tendrás una buena base para hacer suposiciones razonables.\n\n###
+          Intenta esto:\nLa siguiente animación muestra a alguien comenzando. Esto
+          es lo que intentaron.\n\n* Primero ordena los caracteres por frecuencia.\n*
+          Identifica un grupo de caracteres que puedan asignarse a la palabra `the`.\n¡Es
+          un buen comienzo!\n\n![](https://images.code.org/4c188dfb0b284810845285b83ce5bcd4-image-1473787694329.gif)\n\n##
+          ¿Es buena la sustitución aleatoria?\n* Después de un poco de práctica, ¿cuánto
+          tiempo te lleva descifrar un cifrado de sustitución aleatoria?\n* ¿Es algo
+          bueno o no?\n\n\n"
       Terminology Recap:
         title: Eso fue sencillo. ¿Qué sigue?
         content1: descripción aquí
+        markdown: "# Pausa y recapitulación\n\nLos mensajes con **cifrado César**
+          son muy fáciles de descifrar, especialmente con una herramienta informática.
+          Ahora que has practicado cómo descifrar un cifrado de desplazamiento alfabético
+          (resultó fácil, ¿no?), intentemos algo más difícil.\n\n**Recapitulemos la
+          terminología:**\n\n* **Encriptado**: un proceso de codificación de mensajes
+          que los mantiene en secreto para que solo las partes \"autorizadas\" puedan
+          leerlo.\n* **Descifrado**: un proceso que invierte el cifrado al tomar un
+          mensaje secreto y reproducir el texto original\n* **Cifrado**: el término
+          genérico para una técnica (o algoritmo) que realiza el cifrado.\n* **Cifrado
+          César**: una técnica de encriptación que desplaza el alfabeto en una cierta
+          cantidad de caracteres.\n* **Descifrar el encriptado**: cuando intentas
+          decodificar un mensaje secreto *sin* conocer todos los detalles del cifrado,
+          intentas **descifrar** el encriptado.\n\n\nHaz clic en Continuar para ver
+          el **próximo desafío**...\n\n \n"
       Unit 1 Lesson 2 Overview:
         markdown: |
           # Resumen

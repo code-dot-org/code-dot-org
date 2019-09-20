@@ -1,59 +1,60 @@
 ---
-title: <%= hoc_s(:title_proclamation).inspect %>
+title: مثال قرار داعم لأسبوع تدريس علوم الكمبيوتر وساعة البرمجة
 layout: wide
 nav: promote_nav
 ---
-<%= view :signup_button %>
 
-# Sample Computer Science Education Week resolution
+{{ signup_button }}
 
-### Below is language for a sample resolution supportive of Computer Science Education Week and its goals that can be used by state and local legislators.
+# مثال قرار أسبوع تدريس علوم الكمبيوتر
+
+### فيما يلي لغة لمثال قرار داعم لأسبوع تدريس علوم الكمبيوتر وأهدافه الذي يمكن استعماله من طرف المشرعين على الصعيد الجهوي أو الوطني.
 
 * * *
 
-#### **RESOLUTION**  
+#### **القرار**  
 
 
-#### Supporting the goals and ideals of "Computer Science Education Week"
+#### ادعم أهداف وأفكار "أسبوع تدريس علوم الكمبيوتر"
 
-Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
+إن أسبوع تدريس علوم الكمبيوتر يسلط الضوء على الدور الحاسم الذي تلعبه علوم الكمبيوتر في تحويل مجتمعنا وكيف تسمح بالإبداع وإنشاء فرص اقتصادية;
 
-Whereas computing technology is an integral part of modern culture and is transforming how people interact with each other and the world around them;
+تعتبر تكنولوجيا المعلوميات جزءا من الثقافة الحديثة وتحول كيفية تواصل الناس فيما بينهم ومع العالم حولهم;
 
-Whereas computer science is transforming industry, creating new fields of commerce, driving innovation in all fields of science, and bolstering productivity in established economic sectors;
+تحول علوم الكمبيوتر الصناعات، تنشئ مجالات جديدة من التجارة، تقود الإبداع في كل مجالات العلوم، وتعزز الإنتاج في ميادين الاقتصاد؛;
 
-Whereas the field of computer science underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
+يدعم علوم الكمبيوتر مجال تكنولوجبا المعلومات لاقتصادنا، الذي هو مساهم كبير في ناتج الولايات المتحدة;
 
-Whereas the field of computer science is a foundational science for the digital age;
+يعتبر مجال علوم الكمبيوتر علما أساسيا للجيل الرقمي؛;
 
-Whereas the information technology sector is uniquely positioned to help with economic recovery through the research and development of new innovations;
+موقع قطاع تكنولوجيا الإعلام يسمح بمساعدة الانتعاش الاقتصادي من خلال البحص وتطوير إبداعات جديدة;
 
-Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
+توقعات مهن علوم الكمبيوتر مشجعة ب 500000 وظيفة مفتوحة توظف الإعلاميات في أرجاء البلاد;
 
-Whereas providing students the chance to participate in high-quality computer science activities exposes them to the rich opportunities the field offers and provides critical thinking skills that will serve them throughout their lives;
+إن إعطاء الطلاب فرصة المشاركة في أنشطة علوم الكمبيوتر عالية الجودة يجعلهم أمام فرص غنية يوفرها المجال ويتيح لهم مهارات التفكير النقدي الذي يمكن أن يخدمهم في حياتهم؛;
 
-Whereas all students deserve a thorough preparation in computer science education, including access to the qualified teachers, technology, and age-appropriate curriculum needed to learn computer science at the elementary and secondary levels of education;
+كل الطلاب يستحقون عدة شاملة في تدريس علوم الكمبيوتر، تتضمن مدرسين أكفاء، تكنولوجيا، منهاج مكيف حسب السن لتعلم علوم الكمبيوتر في المدارس الابتدائية والثانوية;
 
-Whereas computer science education has challenges to address, including counting computer science classes towards high school graduation requirements, and providing professional development for computer science teachers;
+إن التحدي أمام تدريس علوم الكمبيوتر هو المعالجة، بإدماج أقسام علوم الكمبيوتر في المدارس الثانوية وجعلها من المتطلبات للنجاح، وتوفير تطوير مهني لمدرسي علوم الكمبيوتر;
 
-Whereas participating in an Hour of Code during Computer Science Education Week can serve to demystify the field of computer science and encourage more students to take up further studies of computer science;
+إن المشاركة في ساعة البرمجة خلال أسبوع تدريس علوم الكمبيوتر يمكن أن يزيل الغموض عن مجال علوم الكمبيوتر ويشجع أكثر الطلاب على مواصلة الدراسات في علوم الكمبيوتر;
 
-Whereas the field of computer science has significant equity barriers to address, including attracting more participation by females and underrepresented minorities to all levels and branches;
+إن مجال علوم الكمبيوتر لديه عوائق مهمة في الإنصاف عليه أن يتجاوزها، بما في ذلك جذب الفتيات والمجموعات الأقل تمثيلية في جميع المستويات والشعب;
 
-Whereas Grace Murray Hopper, one of the first females in the field of computer science, engineered new programming languages and pioneered standards for computer systems which laid the foundation for many advancements in computer science; and
+كريس موراي هوبر (Grace Murray Hopper)، من الإناث الأوائل في مجال علوم الكمبيوتر، صممت لغات برمجة جديدة، وأسست لمعايير رائدة في أنظمة الحاسوب التي كانت أساس مجموعة تطورات في علوم الكمبيوتر؛ و
 
-Whereas the week of <%= campaign_date('start-long') %>, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it <br />
+لما كان أسبوع {{ campaign_date/start_long }}، تكريما لعيد ميلاد كريس هوبر (Grace Hopper)، فهو مخصص كأسبوع تدريس علوم الكمبيوتر. الآن، يتم الاحتفال ب <br />
 
-Resolved, That the (HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD) --
+كون (HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD) --
 
-(1) supports the designation of Computer Science Education Week (<%= campaign_date('full') %>);
+(1) تدعم تسمية أسبوع تدريس علوم الكمبيوتر ({{ campaign_date/full }});
 
-(2) encourages schools, educators, parents and policymakers to participate in Computer Science Education Week by enabling their students to participate in the Hour of Code;
+(2) شجع المدارس، المدرسين، الآباء والسياسيين للمشاركة في أسبوع تدريس علوم الكمبيوتر بتمكين طلابهم من المشاركة في ساعة البرمجة;
 
-(3) encourages schools, teachers, researchers, universities, business leaders, and policymakers to identify mechanisms for teachers to receive cutting edge professional development to provide sustainable learning experiences in computer science at all educational levels and encourage students to be exposed to computer science concepts;
+(3) شجع المدارس، المدرسين، الباحثين، الجامعات، التجار، والسياسيين لتحديد آليات حصول المدرسين على تطوير مهني لتوفير خبرات التعلم المستدامة في علوم الكمبيوتر في جميع المستويات وشجع الطلاب للتعرف على مفاهيم علوم الكمبيوتر;
 
-(4) encourages policymakers to remove barriers that prevent computer science classes from being counted as math or science credits toward graduation requirements;
+(4) شجع ذوي القرارات السياسية لإزالة الحواجز التي تمنع أقسام علوم الكمبيوتر لتكون من بين التي تعتمد الرياضيات والعلوم كرصيد من أجل متطلبات التخرج;
 
-(5) encourages opportunities, including through existing programs, for females and underrepresented minorities in computer science.
+(5) شجع الفرص، بما فيها البرامج الحالية، للإناث والمجموعات الأقل تمثيلا في علوم الكمبيوتر.
 
-<%= view :signup_button %>
+{{ signup_button }}

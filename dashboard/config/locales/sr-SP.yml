@@ -30,6 +30,7 @@ sr:
         edit_header: Уреди детаље налога
         error:
           future: не може бити у будућности
+  beta: пробна верзија
   hello: Здраво свете
   welcome_back: Добродошао назад, %{name}
   see_your_learning_plan: Погледај твој план учења
@@ -40,13 +41,9 @@ sr:
   cancel: Откажи
   okay: У реду
   or: или
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Додај наставника:'
       placeholder: Шифра секције(ABCDEF)
-      instructions: Молим вас унесите шифру коју вам је професор доделио. Шифра се
-        састоји од 6 слова као "ABCDEF".
-    submit: Додај наставника
   add_hint_form:
     placeholder: Молимо унесите ваш савет овде
     submit: Додај савет
@@ -73,9 +70,6 @@ sr:
   auth:
     sign_in_with: Пријавите се помоћу %{provider}
     signed_in: Пријављени сте!
-    signed_out: Одјавили сте се са <a href="%{url}">Code.org</a>.
-    sign_out_of: Користили сте %{provider} да би се пријавили. <a href="%{url}">Кликните
-      овде</a> да би се одјавили са %{provider}.
     already_signedup: Већ сте направили налог?
     notyet_signedup: Нисте се придружили?
     google_oauth2: Гугл налог
@@ -269,10 +263,6 @@ sr:
     tried: Покушао
   home:
     title: Мој напредак
-    description: У Студију за кодирање се налазе сви курсеви које је креирао Code.org
-    lines_of_code: "%{lines_count} ЛИНИЈЕ КОДА КОЈЕ СУ НАПИСАЛИ УЧЕНИЦИ"
-    lines_of_code_linebreak: "%{lines_count} ЛИНИЈЕ КОДА<br/>КОЈЕ ЈЕ НАПИСАЛО %{students_count}
-      МИЛИОН УЧЕНИКА"
     all_courses: Преглед Курса 1, 2 и 3
     lesson_plans: План лекција
     signin_message: Већ имаш свој налог? %{link}
@@ -311,13 +301,6 @@ sr:
     test_videos_help: Тестирајте наш нови video player у вашој школи
     try_beta_courses: Ново! Пробајте наше бета курсеве за ученике разредне наставе
     use_as_teacher: Користите овај сајт као наставник
-    heading_hoc2014: "<h2>Сат програмирања за</h2><h1>За све узрасте</h1>"
-    heading_elementary: "<h2>20-сатни курсеви за</h2><h1>Основе компјутерске науке
-      (за све узрасте)</h1>"
-    heading_apps: "<h2>Забава за</h2><h1>Све</h1>"
-    heading_tools: "<h2>Да ли си спреман за следећи корак?</h2><h1>JavaScript алати
-      за средњу школу</h1>"
-    heading_legacy: "<h2>Наш убрзани курс за</h2><h1>За све узрасте</h1>"
     your_gallery: Галерија
     no_primary_course: Испробајте Code Studio курс
     choose_next_course: Испробајте Code Studio курс одабиром једног испод

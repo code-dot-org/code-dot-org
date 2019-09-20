@@ -114,11 +114,6 @@ en-GB:
           CONDITION:
             '"when"': when
             '"while"': while
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': 'true'
-            'false': 'false'
       gamelab_keyPressed:
         options:
           CONDITION:

@@ -1,9 +1,10 @@
 ---
-title: <%= hoc_s(:title_how_to_volunteers).inspect %>
+title: دليل المتطوعين لساعة البرمجة
 layout: wide
 nav: how_to_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # كيف- دليل للمتطوعين
 
@@ -21,33 +22,33 @@ nav: how_to_nav
 
 ## أي شخص يمكن أن يتطوع
 
-### Volunteers and speakers in tech:
+### متطوعون ومتحدثون في التكنولوجيا:
 
-Do you have a connection to CS or tech? إذا كنت تعمل في هندسة البرمجيات، في شركة لتكنولوجيا في أي دور (غير مهندس أو مهندسة)، أو كنتم قد أخذتم دورات علوم الكمبيوتر، يمكنك المساعدة في المهام للطلاب! العديد من الطلاب قد اجتمعوا, البدأ لأي شخص يعمل في صناعة التكنولوجيا ويحب مدرسينا وقادراً على الاتصال بالفصول الدراسية للمهنيين وطلاب الجامعات.
+هل لديك اتصال بعلوم الكمبيوتر أو التكنولوجيا؟ إذا كنت تعمل في هندسة البرمجيات، في شركة لتكنولوجيا في أي دور (غير مهندس أو مهندسة)، أو كنتم قد أخذتم دورات علوم الكمبيوتر، يمكنك المساعدة في المهام للطلاب! العديد من الطلاب قد اجتمعوا, البدأ لأي شخص يعمل في صناعة التكنولوجيا ويحب مدرسينا وقادراً على الاتصال بالفصول الدراسية للمهنيين وطلاب الجامعات.
 
-You can be a guest speaker in a classroom, or help a teacher run the activity. Visit a local classroom to inspire students to keep learning computer science. <br /> <br />
+يمكنك أن تكون ضيفا متحدثاً في فصل دراسي، أو مساعد المدرسين لإنجاز النشاط. قم بزيارة أحد الفصول الدراسية المحلية لإلهام الطلاب ليستمروا في تعلم علوم الكمبيوتر. <br /> <br />
 
-<a href="https://code.org/volunteer"><button>Sign up today to be a tech volunteer!</button> <br /> <br /></p> 
+<a href="https://code.org/volunteer"><button>سجل الدخول اليوم للتتطوع!</button> <br /> <br /></p> 
 
 <h3>
-  Anyone passionate about expanding opportunity:
+  أي شخص يحب أن تتوسع الفكرة:
 </h3>
 
 <p>
-  Do you believe that learning computer science can open doors of opportunity for students? ساعد في أحد الفصول المحلية أو نظم حدثاً بعد المدرسة! لا تحتاج إلى خلفية في علوم الكمبيوتر حتى تستضيف ساعة برمجة. و حتى فقط عرضك للمساعدة غالبا ما يكون كافياً ليقنع معلم طفلك، صديقك، او النادي ليجرب ساعة.
+  هل تعتقد أن تعلم علوم الكمبيوتر يمكن أن يفتح أبواب الفرص للطلاب؟ ساعد في أحد الفصول المحلية أو نظم حدثاً بعد المدرسة! لا تحتاج إلى خلفية في علوم الكمبيوتر حتى تستضيف ساعة برمجة. و حتى فقط عرضك للمساعدة غالبا ما يكون كافياً ليقنع معلم طفلك، صديقك، او النادي ليجرب ساعة.
 </p>
 
 <h3>
-  How do you get started?
+  كيف تبدأ؟
 </h3>
 
 <ol>
   <li>
-    <a href="%= resolve_url('/promote/resources#help-schools') %">Send this email</a> to your child’s teacher offering to help them run an Hour of Code.
+    <a href="%= resolve_url('/promote/resources#help-schools') %">ارسل هذا الايميل</a> لمدرس طفلك تقترح عليه مساعدته للمشاركة في ساعة البرمجة.
   </li>
   
   <li>
-    Offer to host an Hour of Code event after school at a local school. <a href="%= resolve_url('/how-to') %">Use this How-To Guide</a> to help you plan.
+    قدم عرضاً لاستضافة حدث ساعة البرمجة في إحدى المدارس المحلية. <a href="{{ urls/how_to_guide }}">استخدم هذا الدليل</a> لمساعدتك على التخطيط.
   </li>
 </ol>
 
@@ -56,193 +57,193 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
 </h2>
 
 <p>
-  Tell your friends and co-workers about the Hour of Code. Thousands of teachers are looking for volunteers, so ask them to <a href="https://code.org/volunteer">sign up as a volunteer</a>. Ask your employer to get involved. <a href="%= resolve_url('/promote/resources#sample-email') %">Send this email</a> to your manager or the CEO to get everyone on board.
+  أخبر اصدقاءك وزملائك في العمل عن ساعة البرمجة. الاف المدرسين يبحثون عن متطوعين، لذلك اطلب منهم ان <a href="https://code.org/volunteer">يسجلوا الدخول كمتطوعين</a>. اطلب من صاحب عملك المشاركة. <a href="{{ promote/sample_emails }}">أرسل هذا الإيميل</a> إلى المسؤول الكبير أو المدير العام ليشارك الجميع.
 </p>
 
 <h2>
-  How to prepare
+  كيف تستعد
 </h2>
 
 <ul>
   <li>
-    <a href="%= resolve_url('/promote/resources#videos') %">Pick out a video</a> to show to help focus the class and get them excited to do an Hour of Code.
+    <a href="{{ promote/videos }}">اختر فيديو</a> لمساعدة الفصل وتحفيزه على إنجاز ساعة البرمجة.
   </li>
   <li>
-    Check out the <a href="/files/hoc-volunteer-toolkit.pdf">Hour of Code Volunteer Toolkit</a> which includes an overview, timeline, preparation material, and marketing material. Everything you need to be ready for your volunteer experience!
+    اطلع على <a href="/files/hoc-volunteer-toolkit.pdf">أداة متطوعي ساعة البرمجة</a> التي تتضمن نظرة شاملة، وجدول زمني، عُدة الاستعداد وعُدة التسويق. كل ما تحتاجه لتكون جاهزا لتجربة التطوع!
   </li>
   <li>
-    If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one <a href="%= resolve_url('/learn') %">Hour of Code tutorial</a>.
+    إن كنت تفكر في استعمال دورة خلال حصصك، تدرب خلال 30 دقيقة على الأقل عيى <a href="{{ urls/learn }}">دورة ساعة البرمجة</a>.
   </li>
   <li>
-    If you're visiting a school, complete any background checks or required paperwork.
+    إذا كنت في زيارة لمدرسة، فقم بإتمام فحص السوابق ووثائق العمل المطلوبة.
   </li>
   <li>
-    <a href="https://code.org/files/CSTT_Volunteers.pdf">Review these tips</a> about how to interact with students.
+    <a href="https://code.org/files/CSTT_Volunteers.pdf">راجع هذه النصائح</a> حول كيفية التفاعل مع المتعلمين.
   </li>
   <li>
-    Join the conversation on Facebook, Twitter, Instagram, and Tumblr with #HourOfCode.
+    انضم للمحادثة على فايسبوك، تويتر، أنستاغرام، وتامبلر مع #HourOfCode.
   </li>
   <li>
-    Connect with the teacher to discuss what you plan to speak about during your session.
+    تواصل مع المدرس لمناقشة ماذا تخطط للحديث عنه خلال حصتك.
   </li>
   <li>
-    If you are a virtual volunteer, test A/V and screen sharing capabilities beforehand.
+    إن كنت متطوعا افتراضيا، اختبر قدرات الصوت/الصورة (A/V) وتقاسم الشاشة مسبقا.
   </li>
 </ul>
 
 <h2>
-  Day-of Hour of Code Event
+  يوم الحدث حدث ساعة البرمجة
 </h2>
 
 <p>
-  When you're hosting an Hour of Code event, follow the sample agenda below to help guide your day. Before then, make sure you sign into the school and greet the teacher the day of the event. Confirm the agreed schedule for the day and discuss any talking points.
+  عندما تستضيف حدث ساعة البرمجة، اتبع مثال جدول الأعمال أسفله لمساعدتك على توجيه يومك. قبل ذلك، تاكد من تسجيل دخولك إلى المدرسة وحَيِّ المدرس يوم الحدث. أَكِّد التوقيت المتفق عليه لليوم وناقش أية نقط حديث.
 </p>
 
 <h3>
-  Sample agenda:
+  مثال لجدول الأعمال:
 </h3>
 
 <table>
   <tr>
     <th>
-      Time
+      التوقيت
     </th>
     
     <th>
-      Agenda item
+      جدول الأعمال
     </th>
   </tr>
   
   <tr>
     <td>
-      1-5 minutes
+      5-1 دقائق
     </td>
     
     <td>
-      <a href="%= resolve_url('promote/resources#videos') %">Show an inspirational video</a>.
+      <a href="{{ promote/videos }}">اعرض فيديو ملهما</a>.
     </td>
   </tr>
   
   <tr>
     <td>
-      5-10 minutes
+      10-5 دقائق
     </td>
     
     <td>
-      Introduce yourself and learn more about the students: </ul>
+      قدم نفسك وتعرف أكثر على الطلاب: </ul>
       
       <li>
-        What do you work, what do you do, and what do you love most about your job?
+        ما هي مهنتك، ماذا تنجز، ما الذي تحب أكثر في عملك؟
       </li>
       
       <li>
-        What or who inspired you?
+        من أو ما الذي يلهمك؟
       </li>
       
       <li>
-        How did you get interested in computer science?
+        كيف جاء اهتمامك بعلوم الكمبيوتر؟
       </li>
       
       <li>
-        Did you have a mentor?
+        هل لديك مدرس خاص؟
       </li>
       
       <li>
-        Share a story about how tech affects everyone.
+        تقاسم قصة حول كيف تؤثر التكنولوجيا في كل شخص.
       </li>
       
-      <br />Ask the students questions and leave time for Q&A.</br> 
+      <br />اطرح السؤال على الطلاب واترك لهم الوقت للإجابة.</br> 
       
       <li>
-        What jobs are they interested in, what are their favorite tech gadgets or apps, and how do they think they are built?
+        ما هي الوظائف التي يهتمون بها، ما هي الأدوات الذكية أو التطبيقات المفضلة لديهم، وكيف يفكرون كيف صنعت؟
       </li>
       
       <li>
-        Do the students have any questions for you?</ul></td> </tr> <tr>
+        هل للطالب أية أسئلة لك؟</ul></td> </tr> <tr>
           <td>
-            30-60 minutes
+            60-30 دقيقة
           </td>
           
           <td>
-            <strong>Code!</strong> Walk around, answer questions, and guide them through tough puzzles. Try not to give students the solution outright, instead, try asking them questions so they can answer themselves what went wrong, and encourage students to ask each other if they have questions. Learning from each other is a great learning opportunity.
+            <strong>برمج!</strong> تجول، أجب عن الأسئلة، ووجههم من خلال الألغاز الصعبة. حاول ألا تقدم للطلاب الحلول بشكل صريح، حاول بدلا من ذلك، جعلهم يطرحون أسئلة ليجيبوا بأنفسهم على الخطأ، وشجعهم لطرح الأسئلة فيما بينهم إن كانت لديهم أسئلة. التعلم من بعضهم البعض هي فرصة رائعة.
           </td>
         </tr>
         
         <tr>
           <td>
-            1-3 minutes
+            3-1 دقائق
           </td>
           
           <td>
-            Thank everyone and share inspirational parting words. Hand out any of your company swag (stickers are awesome)!
+            اشكر كل واحد وتقاسم كلمات الوداع الملهمة. وزع أيا من هدايا شركتك (الملصقات رائعة)!
           </td>
         </tr>
         
         <tr>
           <td>
-            After
+            بعد
           </td>
           
           <td>
-            <strong>Make a lasting change:</strong> Talk to the teacher about turning the Hour of Code into a full computer science course! Go to <a href="https://code.org/yourschool">code.org/yourschool</a> with your teacher to fill in what this school teaches today and encourage them to pledge to bring ccomputer science to their classroom.
+            <strong>قم بتغيير دائم:</strong> تحدث إلى المدرس حول تحويل ساعة البرمجة إلى درس كامل لعلوم الكمبيوتر! اذهب إلى <a href="https://code.org/yourschool">code.org/yourschool</a> مع مدرسك لتعبئة ما تدرسه هذه المدرسة اليوم وشجعهم على التعهد بجلب علوم الكمبيوتر إلى قسمهم.
           </td>
         </tr></tbody> </table> 
         
         <h3>
-          After the Event:
+          بعد الحدث:
         </h3>
         <ul>
           <li>
-            Share your photos and stories with Code.org at giving@code.org.
+            تقاسم صورك وقصصك بواسطة Code.org على giving@code.org.
           </li>
           <li>
-            Remember to enter in your volunteer hours in your company’s volunteer tracking portal.
+            تذكر إدخال ساعات تطوعك في بوابة تتيع المتطوعين في شركتك.
           </li>
           <li>
-            Share about your experience on social media #HourOfCode!
+            تقاسم تجربتك على مواقع التواصل الاجتماعي #HourOfCode!
           </li>
           <li>
-            If you do take pictures/videos during the event, <strong>especially with students</strong>, make sure you get teacher/parent permission if you would like to post your stories on social media.
+            إذا كنت قد أخذت صورا خلال حدثك، <strong>خصوصا مع طلابك</strong>، تأكد من الحصول على إذن المدرس/الآباء إذا كنت تريد أن تنشرها على مواقع التواصل الاجتماعي.
           </li>
           <li>
-            And, check back in a month: Is the teacher interested in offering a computer science course? Share <a href="https://code.org/yourschool">resources and professional learning opportunities to help them do this</a>.
+            وتحقق بعد شهر: هل المدرس مهتم بتقديم دورة علوم الكمبيوتر؟ تقاسم <a href="https://code.org/yourschool">الموارد وفرص التدريس المهنية لمساعدتهم على القيام بهذا</a>.
           </li>
         </ul>
         <h2>
-          How you get selected as a technical volunteer of guest speaker
+          كيف تم اختيارك متطوعا تقنيا أو ضيفا متحدثا
         </h2>
         <ul>
           <li>
-            Teachers will be searching for volunteers on our <a href="https://code.org/volunteer/local">volunteer map</a>.
+            المدرسون سيبحثون عن متطوعين على <a href="https://code.org/volunteer/local">خريطتنا للمتطوع</a>.
           </li>
           <li>
-            Try to make your profile as complete as possible to increase the chance that a teacher will select you.
+            حاول أن تجعل ملفك التعريفي كاملا أكثر ما يمكن لزيادة فرصة اختيار المدرس لك.
           </li>
           <li>
-            A teacher will contact you through this form (your email address will never be shared with the teacher). <em>If you are receiving too many requests from teachers, you can always update your preferences by clicking the link to edit your information or unsubscribe, provided at the bottom of any email from a teacher.</em>
+            سيتصل بك أحد المدرسين من خلال هذا النموذج (لن يتم أبدا تقاسم بريدك الإلكتروني مع المدرس). <em>إذا كنت تتلقى عدة طلبات من المدرسين، يمكنك دائما تعديل اختياراتك بالنقر على الرابط لتغيير معلوماتك أو إلغاء الاشتراك، الموجود في أسفل أي البريد الإلكتروني من المدرس.</em>
           </li>
         </ul>
         <h2>
-          Volunteering during the Hour of Code FAQ
+          التطوع خلال الأسئلة الشائعة لساعة البرمجة
         </h2>
         <h3>
-          I haven't been contacted by a teacher yet. How can I still volunteer?
+          لم يتم الاتصال بي بعد. كيف سأبقى متطوعا؟
         </h3>
         <p>
-          Try searching for local schools and call the principal/teacher/front office and ask how you can help.
+          حاول البحث عن مدارس محلية واتصل بالمدير/المدرس/مكتب الاستقبال واسأل عن كيفية المساعدة.
         </p>
         <h3>
-          How long do classroom visits last for?
+          كم من الوقت تدوم زيارات الفصل الدراسي؟
         </h3>
         <p>
-          An in-person classroom visit usually lasts 60-90 minutes while a virtual classroom visit usually lasts 20-30 minutes.
+          غالبا ما تستغرق الزيارة الصفية الحضورية 60-90 دقيقة بينما غالبا ما تستغرق الافتراضية منها 20-30 دقيقة.
         </p>
         <h3>
-          What age group is the Hour of Code activity appropriate for?
+          ما العمر الذي تناسبه أنشطة ساعة البرمجة؟
         </h3>
         <p>
-          Code.org and our partners design all the Hour of Code activities to engage students of all grade levels (K-12), boys and girls, from all backgrounds. Everyone, even adults can have fun playing!
+          Code.org وشركاؤنا نصمم كل أنشطة ساعة البرمجة لإشراك جميع تلاميذ المستويات (K-12)، فتيات وفتيان. حتى البالغون يمكن أن يستمتعوا باللعب!
         </p>
         <p>
-          <%= view :signup_button %>
+          {{ signup_button }}
         </p>

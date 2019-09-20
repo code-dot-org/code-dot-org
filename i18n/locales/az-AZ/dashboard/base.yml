@@ -21,6 +21,7 @@ az:
         edit_header: 'Hesab Detallarına düzəliş edin'
         error:
           future: gələcəkdə ola bilməz
+  beta: "beta versiya"
   hello: "Salam, dünya"
   welcome_back: "Bir daha xoş gəldiniz, %{name}"
   your_professional_learning_plan: "Sizin peşəkar öyrənmə planınız"
@@ -33,11 +34,6 @@ az:
   cancel: "İmtina et"
   okay: "Oldu"
   or: "və ya"
-  add_teacher_form:
-    code:
-      label: 'Müəllim əlavə edin:'
-      instructions: "Xahiş edirik, sizin müəlliminiz tərəfindən sizin ilə paylaşılmış kodu daxil edin. ABCDEF kimi 6 hərfli koddur."
-    submit: 'Müəllim əlavə edin'
   add_hint_form:
     placeholder: 'Xahiş olunur ip-ucunu bura daxil edesiniz'
     submit: 'Məsləhət əlavə et'
@@ -267,9 +263,6 @@ az:
     tried: 'Yoxlanıldı'
   home:
     title: "Mənim nəticələrim"
-    description: 'Kod Studiyası "Code.org" tərəfindən hazırlanmış onlayn kursların məskənidir'
-    lines_of_code: "ŞAGİRDLƏR %{lines_count} SƏTİR KOD YAZIB"
-    lines_of_code_linebreak: "%{students_count} MİLYON ŞAGİRD<br/>%{lines_count} SƏTİR KOD YAZIB"
     all_courses: "Kurs 1, 2 və 3-ün icmalı"
     lesson_plans: "Dərs planları"
     signin_message: "Artıq qeydiyyatdan keçmisiniz? %{link}"
@@ -292,11 +285,6 @@ az:
     trynow: 'Elə indi sınaqdan keçirin'
     20hour_overview: 'Bu 20 saatlıq kurs informatikanın əsasları və proqramlaşdırmanın əsas anlayışlarını təqdim edir. Kurs K-8 yaş qrupunda (12-13 yaşlılar) olan siniflərdə istifadə olunmaq üçün hazırlanıb, lakin öyrənmək hər yaşda əyləncəlidir.'
     use_as_teacher: 'Saytı müəllim olaraq istifadə edin'
-    heading_hoc2014: "<h2>Kod Saatı</h2><h1>Bütün yaşlar üçün</h1>"
-    heading_elementary: "<h2>20 saatlıq kurslar</h2><h1>Başlayanlar (bütün yaşlar) üçün</h1>"
-    heading_apps: "<h2>Əyləncə üçün</h2><h1>Hərkəs</h1>"
-    heading_tools: "<h2>Növbəti addım üçün hazırsan?</h2><h1> Universitet üçün JavaScript alətləri</h1>"
-    heading_legacy: "<h2>Bizim ümumi kursumuz</h2><h1>Bütün yaşlar üçün</h1>"
     your_gallery: Qalereya
     no_primary_course: "Code Studiosu kursunu yoxla"
     print_certificate: "Sertifikatı çap edin"

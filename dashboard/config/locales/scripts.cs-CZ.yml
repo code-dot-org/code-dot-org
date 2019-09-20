@@ -1754,3 +1754,11 @@ cs:
               name: Podmínky
             Functions:
               name: Funkce
+            Random Numbers:
+              name: Náhodná čísla
+        peru-2019:
+          stages:
+            Introduction:
+              name: Úvod
+            Nested Loops:
+              name: Vnořené cykly

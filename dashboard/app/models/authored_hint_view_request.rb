@@ -12,15 +12,15 @@
 #  prev_time             :integer
 #  prev_attempt          :integer
 #  prev_test_result      :integer
-#  prev_level_source_id  :integer
+#  prev_level_source_id  :integer          unsigned
 #  next_time             :integer
 #  next_attempt          :integer
 #  next_test_result      :integer
-#  next_level_source_id  :integer
+#  next_level_source_id  :integer          unsigned
 #  final_time            :integer
 #  final_attempt         :integer
 #  final_test_result     :integer
-#  final_level_source_id :integer
+#  final_level_source_id :integer          unsigned
 #  created_at            :datetime         not null
 #  updated_at            :datetime         not null
 #

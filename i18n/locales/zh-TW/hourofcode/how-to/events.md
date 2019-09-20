@@ -1,36 +1,37 @@
 ---
-title: <%= hoc_s(:title_how_to_events).inspect %>
+title: 一小時玩程式活動指引
 layout: wide
 nav: how_to_nav
 ---
-<%= view :signup_button %>
 
-# How to organize an Hour of Code assembly or event
+{{ signup_button }}
 
-### Get your entire school or community involved in an Hour of Code!
+# 如何規劃一場「一小時玩程式」活動
+
+### 邀你的學校、社區一同參與一小時玩程式活動！
 
 * * *
 
 ## 1. 準備你的活動
 
 - 決定場地、日期、與時間。
-- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to your local mayor, member of Congress, governor, or influential business person and invite them to speak. Check out our [how-to toolkit](%=localized_file('/files/elected-official.pdf')%) when hosting an elected official during an Hour of Code for more info.
-- 邀請新聞媒體等，例如地方新聞台、報紙、教育與科技部落客。請參考我們的 [新聞稿](%= resolve_url('/promote/press-kit') %) 。
+- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to your local mayor, member of Congress, governor, or influential business person and invite them to speak. Check out our [how-to toolkit]({{ localized_files/elected_official }}) when hosting an elected official during an Hour of Code for more info.
+- Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit]({{ promote/press_kit_url }}) for help.
 
-## 2) 活動進行時
+## 2. 活動進行時
 
-- 以一個我們的[勵志視頻](%= resolve_url('/promote/resources#videos') %)為你的活動揭開序幕
-- 使用這些[統計資料與圖表](%= resolve_url('/promote/stats') %)，透過概覽來介紹計算機科學的重要性。   
+- Kick off your event with one of our [inspirational videos]({{ promote/videos }}).
+- Give an intro overviewing the importance of computer science, using these [stats and infographics]({{ promote/stats_url }}).   
       
     
-- **Other event ideas**: 
-    - 邀請當地的行業領導者，討論他們涉及到計算機科學的工作。
-    - 邀請當地的官員，讓學生們教他們編程。
-    - 讓學生展示不插電活動。
-    - 讓學生教老師編程。
-    - 如果你的學校已經教授或計算機科學，那麼就讓學生做一下示例項目吧。
+- **其它的活動點子**： 
+    - 邀請當地的產業領袖談論他與計算機科學有關的工作。
+    - 邀請當地的一名政治人物，並由學生教他如何編程。
+    - 組織學生展示不插電活動。
+    - 組織學生教校長或老師如何編程。
+    - 如果你的學校已經在教計算機科學，讓學生來進行演示。
 
-## 3. 分享進度
+## 3. 分享活動的辦理過程
 
 Share pictures of your event on Facebook and Twitter and use the hashtag **#HourOfCode**.
 
@@ -46,7 +47,7 @@ Consider hosting a K-5 evening event and invite parents to join their students f
 
 **Event:** School-wide Computer Science Education Week kick-off assembly
 
-**Date:** <%= campaign_date('start-short') %> (start of Computer Science Education Week)
+**Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
 
 **Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
@@ -54,13 +55,13 @@ Consider hosting a K-5 evening event and invite parents to join their students f
 
 ## 流程演示
 
-| 時間            | 活動                                                                                          |
-| ------------- | ------------------------------------------------------------------------------------------- |
-| 上午10:00-10:05 | Open with one of our [inspirational videos](%= resolve_url('/promote/resources#videos') %). |
-| 上午10:05-11:15 | 校長用[數據和信息圖表](%= resolve_url('/promote/stats') %)就計算機科學的重要性做開場白。                             |
-| 上午10:17-10:30 | 特邀嘉賓談談他們的背景以及科技和計算機科學如何在他們的日常生活中起到重要作用。                                                     |
-| 上午10:30-10:40 | 打破常規，讓學生演示編程一小時，讓他們來教校長，政客或者其他的學生。                                                          |
-| 上午10:40-11:00 | 學生演示不插電活動，如何在沒有電腦的情況下也可以教大家電腦科學。                                                            |
-| 上午11:00-11:05 | 組織學校範圍內活動的老師致閉幕詞。                                                                           |
+| 時間               | 活動                                                                                                                                    |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| 上午 10:00 - 10:05 | Open with one of our [inspirational videos]({{ promote/videos }}).                                                                    |
+| 上午 10:05 - 11:15 | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics]({{ promote/stats_url }}). |
+| 上午 10:17 - 10:30 | 特邀嘉賓談談他們的背景以及科技和計算機科學如何在他們的日常生活中起到重要作用。                                                                                               |
+| 上午 10:30 - 10:40 | 打破常規，讓學生演示編程一小時，讓他們來教校長，政客或者其他的學生。                                                                                                    |
+| 上午 10:40 - 11:00 | 學生演示不插電活動，如何在沒有電腦的情況下也可以教大家計算機科學。                                                                                                     |
+| 上午 11:00 - 11:05 | 幫助帶領全校活動的老師發表閉幕詞。                                                                                                                     |
 
-<%= view :signup_button %>
+{{ signup_button }}

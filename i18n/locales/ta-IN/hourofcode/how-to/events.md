@@ -1,29 +1,30 @@
 ---
-title: <%= hoc_s(:title_how_to_events).inspect %>
+title: Hour of Code Event How-To
 layout: wide
 nav: how_to_nav
 ---
-<%= view :signup_button %>
 
-# How to organize an Hour of Code assembly or event
+{{signup_button}}
 
-### Get your entire school or community involved in an Hour of Code!
+# கோட் சட்டசபை அல்லது நிகழ்வின் ஒரு மணிநேரத்தை எவ்வாறு ஏற்பாடு செய்வது
+
+### உங்கள் முழு பள்ளி அல்லது சமுதாயத்தின் ஒரு மணி நேரத்தில்தான் ஈடுபடுங்கள்!
 
 * * *
 
 ## 1. உங்கள் நிகழ்வை தயார் செய்யுங்கள்
 
 - ஒரு இடம், தேதி, நேரம் ஆகியவற்றை நிர்ணயிக்கவும்.
-- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to your local mayor, member of Congress, governor, or influential business person and invite them to speak. Check out our [how-to toolkit](%=localized_file('/files/elected-official.pdf')%) when hosting an elected official during an Hour of Code for more info.
-- ஊடக / பத்திரிகையை அழை அதாவது உள்ளூர் செய்தி நிலையம், செய்தித்தாள், கல்வி / தொழில்நுட்ப வலைப்பதிவாளர்கள். உதவிக்கு [ பத்திரிகை கிட் ](%= resolve_url('promote/press-kit') %) பார்க்கவும்.
+- உங்கள் உள்ளூர் மேயர், காங்கிரஸ், கவர்னர் அல்லது செல்வாக்குள்ள வணிக நபருக்கு [ ஒரு கடிதம் ](https://hourofcode.com/promote/resources#sample-emails) அனுப்பவும், அவற்றை பேச அழைக்கவும். Check out our [how-to toolkit]({{ localized_files/elected_official }}) when hosting an elected official during an Hour of Code for more info.
+- Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit]({{ promote/press_kit_url }}) for help.
 
 ## 2. உங்கள் நிகழ்வின் போது
 
-- உங்கள் நிகழ்வை எங்கள் [ தூண்டுதல் வீடியோக்களில் ஒன்றுடன் இணைக்கலாம்](%= resolve_url('/promote/resources#videos') %).
-- கணினி அறிவியலின் முக்கியத்துவத்தை மேற்பார்வையிட, இந்த [ புள்ளிவிவரங்கள் மற்றும் இன்போ கிராபிக்ஸ் ](%= resolve_url('/promote/stats') %) ஐ பயன்படுத்தி அறிமுகப்படுத்தவும்.   
+- Kick off your event with one of our [inspirational videos]({{ promote/videos }}).
+- Give an intro overviewing the importance of computer science, using these [stats and infographics]({{ promote/stats_url }}).   
       
     
-- **Other event ideas**: 
+- **பிற நிகழ்வு கருத்துக்கள்**: 
     - கணினி விஞ்ஞானத்தை உள்ளடக்கிய அவரது பணியைப் பற்றி கலந்துரையாடுவதற்கு ஒரு உள்ளூர் தொழிற்துறைத் தலைவரை அழைக்கவும்.
     - ஒரு உள்ளூர் அரசியல்வாதிகளை அழைத்துக் கொண்டு, அவரை எப்படிக் கற்பிக்க வேண்டும் என்பதைக் கற்பிக்க வேண்டும்.
     - ஒரு குழுவாக மாணவர்கள் ஒரு தடையேதும் இல்லாத செயலைக் காட்ட வேண்டும்.
@@ -32,35 +33,35 @@ nav: how_to_nav
 
 ## 3. எப்படி சென்றது என்பதைப் பகிர்ந்து கொள்ளுங்கள்
 
-Share pictures of your event on Facebook and Twitter and use the hashtag **#HourOfCode**.
+பேஸ்புக் மற்றும் ட்விட்டரில் உங்கள் நிகழ்வின் படங்களைப் பகிரலாம் மற்றும் ஹேஸ்டேக் ** #HourOfCode </ strong> ஐப் பயன்படுத்துக.</p> 
 
 * * *
 
 ## கோட் ஹவர் ஒரு குடும்ப கோட் நைட் ஹோஸ்ட் மற்றும் பங்கேற்க பெற்றோர்கள் அழைக்க
 
-Consider hosting a K-5 evening event and invite parents to join their students for an hour of computer science. This is a great way to engage the larger community and encourage parent support for computer science at your school. Our partners at Family Code Night have created an all-in-one event kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints, and more to run your own event. [Click here to download the Event Kit](http://www.familycodenight.org/DownloadCodeDotOrg.html).
+ஒரு K-5 மாலை நிகழ்வைக் கருத்தில் கொள்வதோடு, ஒரு மணி நேரத்திற்கு கணினி அறிவியல் துறையில் தங்கள் மாணவர்களில் சேர பெற்றோர்களை அழைக்கவும். இது பெரிய சமூகத்தை ஈடுபடுத்தி உங்கள் பள்ளியில் கணினி அறிவியலுக்கு பெற்றோர் ஆதரவு ஊக்குவிக்க ஒரு சிறந்த வழியாகும். Family Code Night இல் எங்கள் கூட்டாளர்கள் உங்கள் சொந்த நிகழ்வை இயக்க, பட்டியலிடும் பட்டியல், வழங்குநரின் ஸ்கிரிப்ட், அழைப்பிதழ் மின்னஞ்சல்கள், சுவரொட்டிகள், ஆற்றல் புள்ளிகள் மற்றும் பலவற்றில் திட்டமிடப்பட்ட ஒரு அனைத்து நிகழ்வு நிகழ்வு கிட் உருவாக்கியுள்ளனர். [ நிகழ்வு கிட் பதிவிறக்க இங்கே கிளிக் செய்யவும் ](http://www.familycodenight.org/DownloadCodeDotOrg.html).
 
 * * *
 
-## Example plan for a school assembly or event
+## பள்ளி சட்டசபை அல்லது நிகழ்விற்கான எடுத்துக்காட்டுத் திட்டம்
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+** நிகழ்வு: </ strong> பள்ளி முழுவதும் கணினி அறிவியல் கல்வி வீக் கிக்-ஆஃப் சட்டசபை</p> 
 
-**Date:** <%= campaign_date('start-short') %> (start of Computer Science Education Week)
+**Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+** நேரம்: </ strong> பள்ளி நாட்களில். மிட் காலை கால நிகழ்ச்சி விருப்பம். ஏறத்தாழ 1 மணி நேரம்.</p> 
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)
+** இருப்பிடம்: </ strong> பள்ளி மாநாட்டு மண்டபம் (எ.கா. நாடகம், உடற்பயிற்சி, உணவு விடுதியில்)</p> 
 
 ## காட்டு இயக்கவும்
 
-| நேரம்            | அதிரடி                                                                                                                                                                         |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 10:00 - 10:05 am | Open with one of our [inspirational videos](%= resolve_url('/promote/resources#videos') %).                                                                                    |
-| 10:05 - 10:15 am | கணினி அறிவியலின் முக்கியத்துவத்தை அறிமுகப்படுத்தி முதன்மை அறிமுகப்படுத்துகிறது. இந்த [ புள்ளிவிவரங்களையும் infographics ](%= resolve_url('/promote/stats') %) ஐப் பயன்படுத்துக |
-| 10:15 - 10:30 am | Special guest to talk about their background and how technology and computer science plays an important role in their everyday lives.                                          |
-| 10:30 - 10:40 am | பள்ளிக்கூடம் மாணவர்களின் குறியீடு டெமோ ஒரு மணி நேரம். வேடிக்கை திருப்பம்: அவர்கள் முதன்மை, அரசியல்வாதி அல்லது மற்ற மாணவர்களுக்கு கற்பிக்க வேண்டும்!                            |
-| 10:40 - 11:00 am | மாணவர்கள் டெம்ப் ஒரு unplugged செயல்பாடு மற்றும் கணினி அறிவியல் இல்லாமல் கணினிகள் கற்று எப்படி கற்று.                                                                          |
-| 11:00 - 11:05 am | பாடசாலையில் நிகழ்வைக் கொண்டுவரும் ஆசிரியர், இறுதி உரையை தருகிறார்.                                                                                                             |
+| நேரம்            | அதிரடி                                                                                                                                                                   |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 10:00 - 10:05 am | Open with one of our [inspirational videos]({{ promote/videos }}).                                                                                                       |
+| 10:05 - 10:15 am | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics]({{ promote/stats_url }}).                                    |
+| 10:15 - 10:30 am | அவற்றின் பின்னணியைப் பற்றி பேசுவதற்கான விசேட விருந்தினர் மற்றும் தொழில்நுட்பம் மற்றும் கணினி அறிவியலானது அவற்றின் அன்றாட வாழ்வில் எவ்வாறு ஒரு முக்கிய பங்கை வகிக்கின்றன. |
+| 10:30 - 10:40 am | பள்ளிக்கூடம் மாணவர்களின் குறியீடு டெமோ ஒரு மணி நேரம். வேடிக்கை திருப்பம்: அவர்கள் முதன்மை, அரசியல்வாதி அல்லது மற்ற மாணவர்களுக்கு கற்பிக்க வேண்டும்!                      |
+| 10:40 - 11:00 am | மாணவர்கள் டெம்ப் ஒரு unplugged செயல்பாடு மற்றும் கணினி அறிவியல் இல்லாமல் கணினிகள் கற்று எப்படி கற்று.                                                                    |
+| 11:00 - 11:05 am | பாடசாலையில் நிகழ்வைக் கொண்டுவரும் ஆசிரியர், இறுதி உரையை தருகிறார்.                                                                                                       |
 
-<%= view :signup_button %>
+{{signup_button}}

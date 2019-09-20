@@ -977,7 +977,7 @@ ja-JP:
         - {}
         answers:
         - {}
-        - {}
+        - feedback: 正解です.
         - {}
         - feedback: 不正解
       behaviors 4 predict:
@@ -985,7 +985,7 @@ ja-JP:
         - {}
         answers:
         - {}
-        - {}
+        - feedback: 正解です.
         - {}
         - feedback: 不正解
       courseC_multi_artist_prog6_predict1:
@@ -994,103 +994,115 @@ ja-JP:
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: 正解です.
+        - text: わかりません
       courseC_multi_artist_prog6_predict1_2018:
         questions:
         - {}
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: 正解です.
+        - text: わかりません
       courseC_multi_artist_prog6_predict1_2018_2019:
         questions:
         - {}
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: 正解です.
+        - text: わかりません
       courseC_multi_harvester_loops11_predict1:
         questions:
         - {}
         answers:
         - {}
+        - feedback: 正解です.
         - {}
-        - {}
-        - {}
+        - text: わかりません
       courseC_multi_harvester_loops11_predict1_2018:
         questions:
         - {}
         answers:
         - {}
+        - feedback: 正解です.
         - {}
-        - {}
-        - {}
+        - text: わかりません
       courseC_multi_harvester_loops11_predict1_2018_2019:
         questions:
         - {}
         answers:
         - {}
+        - feedback: 正解です.
         - {}
-        - {}
-        - {}
+        - text: わかりません
       courseC_multi_maze_debugging8_predict1:
         questions:
-        - {}
+        - text: '下のプログラムをじっくり見て、どこがまちがっているのか考えてみよう。 '
         answers:
+        - text: プログラムは間違っていない。リスはドングリにたどりつける。
+        - feedback: 正解です.
         - {}
-        - {}
-        - {}
-        - {}
+        - text: わかりません
       courseC_multi_maze_debugging8_predict1_2018:
         questions:
-        - {}
+        - text: '下のプログラムをじっくり見て、どこがまちがっているのか考えてみよう。 '
         answers:
+        - text: プログラムは間違っていない。リスはドングリにたどりつける。
+        - feedback: 正解です.
         - {}
-        - {}
-        - {}
-        - {}
+        - text: わかりません
       courseC_multi_maze_debugging8_predict1_2018_2019:
         questions:
-        - {}
+        - text: '下のプログラムをじっくり見て、どこがまちがっているのか考えてみよう。 '
         answers:
+        - text: プログラムは間違っていない。リスはドングリにたどりつける。
+        - feedback: 正解です.
         - {}
-        - {}
-        - {}
-        - {}
+        - text: わかりません
       courseC_multi_maze_programming8_predict1:
         questions:
-        - {}
+        - text: プログラムを見て ”実行（じっこう）”ボタンをおしたら どうなるか考えてみよう。
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 鳥はブタの一歩手前まで行くことができる。
+          feedback: ふせいかい。このプログラムで 鳥は ブタのところに 行くことができます。
+        - text: 鳥はブタのところまで行くことができる。
+          feedback: 正解です.
+        - text: 鳥はTNTにつっこんでしまう。
+          feedback: ふせいかい。このプログラムで 鳥は ブタのところに 行くことができます。
+        - text: わかりません
+          feedback: このプログラムで 鳥は ブタのところに 行くことができます。
       courseC_multi_maze_programming8_predict1_2018:
         questions:
-        - {}
+        - text: プログラムを見て ”実行（じっこう）”ボタンをおしたら どうなるか考えてみよう。
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 鳥はブタの一歩手前まで行くことができる。
+          feedback: ふせいかい。このプログラムで 鳥は ブタのところに 行くことができます。
+        - text: 鳥はブタのところまで行くことができる。
+          feedback: 正解です.
+        - text: 鳥はTNTにつっこんでしまう。
+          feedback: ふせいかい。このプログラムで 鳥は ブタのところに 行くことができます。
+        - text: わかりません
+          feedback: このプログラムで 鳥は ブタのところに 行くことができます。
       courseC_multi_maze_programming8_predict1_2018_2019:
         questions:
-        - {}
+        - text: プログラムを見て ”実行（じっこう）”ボタンをおしたら どうなるか考えてみよう。
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 鳥はブタの一歩手前まで行くことができる。
+          feedback: ふせいかい。このプログラムで 鳥は ブタのところに 行くことができます。
+        - text: 鳥はブタのところまで行くことができる。
+          feedback: 正解です.
+        - text: 鳥はTNTにつっこんでしまう。
+          feedback: ふせいかい。このプログラムで 鳥は ブタのところに 行くことができます。
+        - text: わかりません
+          feedback: このプログラムで 鳥は ブタのところに 行くことができます。
       courseC_multi_starWars_predict1:
         questions:
         - {}
         answers:
         - {}
         - {}
-        - {}
+        - feedback: 正解です.
         - text: わかりません
       courseC_multi_starWars_predict1_2018:
         questions:
@@ -1098,7 +1110,7 @@ ja-JP:
         answers:
         - {}
         - {}
-        - {}
+        - feedback: 正解です.
         - text: わかりません
       courseC_multi_starWars_predict1_2018_2019:
         questions:
@@ -1106,32 +1118,32 @@ ja-JP:
         answers:
         - {}
         - {}
-        - {}
+        - feedback: 正解です.
         - text: わかりません
       courseC_multi_starWars_predict2:
         questions:
         - {}
         answers:
         - {}
+        - feedback: 正解です.
         - {}
-        - {}
-        - {}
+        - text: わかりません
       courseC_multi_starWars_predict2_2018:
         questions:
         - {}
         answers:
         - {}
+        - feedback: 正解です.
         - {}
-        - {}
-        - {}
+        - text: わかりません
       courseC_multi_starWars_predict2_2018_2019:
         questions:
         - {}
         answers:
         - {}
+        - feedback: 正解です.
         - {}
-        - {}
-        - {}
+        - text: わかりません
       courseD_multi_artist_binary8_predict1:
         questions:
         - {}
@@ -1140,6 +1152,7 @@ ja-JP:
         - text: B
         - text: C
         - text: D
+          feedback: 正解です.
       courseD_multi_artist_binary8_predict1_2018:
         questions:
         - {}
@@ -1148,6 +1161,7 @@ ja-JP:
         - text: B
         - text: C
         - text: D
+          feedback: 正解です.
       courseD_multi_artist_binary8_predict1_2018_2019:
         questions:
         - {}
@@ -1156,270 +1170,277 @@ ja-JP:
         - text: B
         - text: C
         - text: D
+          feedback: 正解です.
       courseD_multi_artist_nestedLoops9_predict1:
         questions:
         - {}
         answers:
         - text: A
+          feedback: 正解です.
         - text: B
         - text: C
-        - {}
+        - text: わかりません
       courseD_multi_artist_nestedLoops9_predict1_2018:
         questions:
         - {}
         answers:
         - text: A
+          feedback: 正解です.
         - text: B
         - text: C
-        - {}
+        - text: わかりません
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         questions:
         - {}
         answers:
         - text: A
+          feedback: 正解です.
         - text: B
         - text: C
-        - {}
+        - text: わかりません
       courseD_multi_bee_conditionals1_predict1:
         questions:
         - {}
         answers:
         - {}
+        - feedback: 正解です.
         - {}
-        - {}
-        - {}
+        - text: わかりません
       courseD_multi_bee_conditionals1_predict1_2018:
         questions:
         - {}
         answers:
         - {}
+        - feedback: 正解です.
         - {}
-        - {}
-        - {}
+        - text: わかりません
       courseD_multi_bee_conditionals1_predict1_2018_2019:
         questions:
         - {}
         answers:
         - {}
+        - feedback: 正解です.
         - {}
-        - {}
-        - {}
+        - text: わかりません
       courseD_multi_bee_conditionals7_predict2:
         questions:
         - {}
         answers:
+        - feedback: 正解です.
         - {}
         - {}
-        - {}
-        - {}
+        - text: わかりません
       courseD_multi_bee_conditionals7_predict2_2018:
         questions:
         - {}
         answers:
+        - feedback: 正解です.
         - {}
         - {}
-        - {}
-        - {}
+        - text: わかりません
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         questions:
         - {}
         answers:
+        - feedback: 正解です.
         - {}
         - {}
-        - {}
-        - {}
+        - text: わかりません
       courseD_multi_bee_nestedLoops2_predict1:
         questions:
         - {}
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: 正解です.
+        - text: わかりません
       courseD_multi_bee_nestedLoops2_predict1_2018:
         questions:
         - {}
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: 正解です.
+        - text: わかりません
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
         questions:
         - {}
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: 正解です.
+        - text: わかりません
       courseD_multi_bee_nestedLoops9_predict2:
         questions:
         - {}
         answers:
         - {}
+        - feedback: 正解です.
         - {}
-        - {}
-        - {}
+        - text: わかりません
       courseD_multi_bee_nestedLoops9_predict2_2018:
         questions:
         - {}
         answers:
         - {}
+        - feedback: 正解です.
         - {}
-        - {}
-        - {}
+        - text: わかりません
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         questions:
         - {}
         answers:
         - {}
+        - feedback: 正解です.
         - {}
-        - {}
-        - {}
+        - text: わかりません
       courseD_multi_collector_debugging10_predict1:
         questions:
         - {}
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: 正解です.
+        - text: わかりません
       courseD_multi_farmer_condLoops9_predict1:
         questions:
         - {}
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: 正解です.
+        - text: わかりません
       courseD_multi_farmer_condLoops9_predict1_2018:
         questions:
         - {}
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: 正解です.
+        - text: わかりません
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
         questions:
         - {}
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: 正解です.
+        - text: わかりません
       courseD_multi_farmer_ramp13:
         questions:
         - {}
         answers:
         - {}
+        - feedback: 正解です.
         - {}
-        - {}
-        - {}
+        - text: わかりません
       courseD_multi_farmer_while10_predict2:
         questions:
         - {}
         answers:
         - {}
+        - feedback: 正解です.
         - {}
-        - {}
-        - {}
+        - text: わかりません
       courseD_multi_farmer_while10_predict2_2018:
         questions:
         - {}
         answers:
         - {}
+        - feedback: 正解です.
         - {}
-        - {}
-        - {}
+        - text: わかりません
       courseD_multi_farmer_while10_predict2_2018_2019:
         questions:
         - {}
         answers:
         - {}
+        - feedback: 正解です.
         - {}
-        - {}
-        - {}
+        - text: わかりません
       courseD_multi_farmer_while4_predict1:
         questions:
         - {}
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: 正解です.
+        - text: わかりません
       courseD_multi_farmer_while4_predict1_2018:
         questions:
         - {}
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: 正解です.
+        - text: わかりません
       courseD_multi_farmer_while4_predict1_2018_2019:
         questions:
         - {}
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: 正解です.
+        - text: わかりません
       courseD_multi_maze_until10_predict2:
         questions:
         - {}
         answers:
+        - feedback: 正解です.
         - {}
         - {}
-        - {}
-        - {}
+        - text: わかりません
       courseD_multi_maze_until10_predict2_2018:
         questions:
         - {}
         answers:
+        - feedback: 正解です.
         - {}
         - {}
-        - {}
-        - {}
+        - text: わかりません
       courseD_multi_maze_until10_predict2_2018_2019:
         questions:
         - {}
         answers:
+        - feedback: 正解です.
         - {}
         - {}
-        - {}
-        - {}
+        - text: わかりません
       courseD_multi_maze_until2_predict1:
         questions:
         - {}
         answers:
         - {}
+        - text: 鳥はブタのところまで行くことができる。
+          feedback: 正解です.
         - {}
-        - {}
-        - {}
+        - text: わかりません
       courseD_multi_maze_until2_predict1_2018:
         questions:
         - {}
         answers:
         - {}
+        - text: 鳥はブタのところまで行くことができる。
+          feedback: 正解です.
         - {}
-        - {}
-        - {}
+        - text: わかりません
       courseD_multi_maze_until2_predict1_2018_2019:
         questions:
         - {}
         answers:
         - {}
+        - text: 鳥はブタのところまで行くことができる。
+          feedback: 正解です.
         - {}
-        - {}
-        - {}
+        - text: わかりません
       courseD_multi_scrat_predict1:
         questions:
         - {}
         answers:
         - {}
+        - feedback: 正解です.
         - {}
-        - {}
-        - {}
+        - text: わかりません
       courseE_multi_bee_functions_predict1:
         questions:
         - {}
@@ -1427,7 +1448,7 @@ ja-JP:
         - {}
         - {}
         - {}
-        - {}
+        - text: わかりません
       courseE_multi_farmer_functions11_predict:
         questions:
         - {}
@@ -1435,14 +1456,14 @@ ja-JP:
         - {}
         - {}
         - {}
-        - {}
+        - feedback: 正解です.
       courseE_multi_farmer_functions11_predict_2018:
         questions:
         - {}
         answers:
         - {}
         - {}
-        - {}
+        - feedback: 正解です.
         - {}
       courseE_multi_farmer_functions11_predict_2018_2019:
         questions:
@@ -1450,7 +1471,7 @@ ja-JP:
         answers:
         - {}
         - {}
-        - {}
+        - feedback: 正解です.
         - {}
       courseE_prediction_artistFunction1:
         questions:
@@ -1481,95 +1502,95 @@ ja-JP:
         - {}
         answers:
         - {}
+        - feedback: 正解です.
         - {}
-        - {}
-        - {}
+        - text: わかりません
       courseF_bee_variables_8a_2018_2019:
         questions:
         - {}
         answers:
         - {}
+        - feedback: 正解です.
         - {}
-        - {}
-        - {}
+        - text: わかりません
       courseF_multi_artist_for10_predict1:
         questions:
         - {}
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: 正解です.
+        - text: わかりません
       courseF_multi_artist_for10_predict1_2018:
         questions:
         - {}
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: 正解です.
+        - text: わかりません
       courseF_multi_artist_for10_predict1_2018_2019:
         questions:
         - {}
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: 正解です.
+        - text: わかりません
       courseF_multi_artist_fwp2_predict1:
         questions:
         - {}
         answers:
+        - feedback: 正解です.
         - {}
         - {}
-        - {}
-        - {}
+        - text: わかりません
       courseF_multi_artist_variables3a_predict1:
         questions:
         - {}
         answers:
+        - feedback: 正解です.
         - {}
         - {}
-        - {}
-        - {}
+        - text: わかりません
       courseF_multi_artist_variables3a_predict1_2018:
         questions:
         - {}
         answers:
+        - feedback: 正解です.
         - {}
         - {}
-        - {}
-        - {}
+        - text: わかりません
       courseF_multi_artist_variables3a_predict1_2018_2019:
         questions:
         - {}
         answers:
+        - feedback: 正解です.
         - {}
         - {}
-        - {}
-        - {}
+        - text: わかりません
       courseF_multi_bee_conditionals1_predict1:
         questions:
         - {}
         answers:
         - {}
+        - feedback: 正解です.
         - {}
-        - {}
-        - {}
+        - text: わかりません
       courseF_multi_bee_conditionals7_predict2:
         questions:
         - {}
         answers:
+        - feedback: 正解です.
         - {}
         - {}
-        - {}
-        - {}
+        - text: わかりません
       courseF_multi_bee_for3_predict1:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - feedback: 正解です.
         - {}
         - {}
       courseF_multi_bee_for3_predict1_2018:
@@ -1577,7 +1598,7 @@ ja-JP:
         - {}
         answers:
         - {}
-        - {}
+        - feedback: 正解です.
         - {}
         - {}
       courseF_multi_bee_for3_predict1_2018_2019:
@@ -1585,7 +1606,7 @@ ja-JP:
         - {}
         answers:
         - {}
-        - {}
+        - feedback: 正解です.
         - {}
         - {}
       courseF_multi_bee_fwp9_predict1:
@@ -1595,7 +1616,7 @@ ja-JP:
         - {}
         - {}
         - {}
-        - {}
+        - text: わかりません
       courseF_multi_playlab_variables4c_predictive1:
         questions:
         - {}
@@ -1603,13 +1624,13 @@ ja-JP:
         - {}
         - {}
         - {}
-        - {}
+        - text: わかりません
       coursee_prediction_artistfunction2:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - feedback: 正解です.
         - {}
         - {}
       coursee_prediction_artistfunction2_2018:
@@ -1617,7 +1638,7 @@ ja-JP:
         - {}
         answers:
         - {}
-        - {}
+        - feedback: 正解です.
         - {}
         - {}
       coursee_prediction_artistfunction2_2018_2019:
@@ -1625,7 +1646,7 @@ ja-JP:
         - {}
         answers:
         - {}
-        - {}
+        - feedback: 正解です.
         - {}
         - {}
       grade2_multi_collector_A_predict1:
@@ -1633,22 +1654,22 @@ ja-JP:
         - {}
         answers:
         - {}
+        - feedback: 正解です.
         - {}
-        - {}
-        - {}
+        - text: わかりません
       grade2_multi_collector_A_predict1_2018:
         questions:
         - {}
         answers:
         - {}
+        - feedback: 正解です.
         - {}
-        - {}
-        - {}
+        - text: わかりません
       grade2_multi_collector_A_predict1_2018_2019:
         questions:
         - {}
         answers:
         - {}
+        - feedback: 正解です.
         - {}
-        - {}
-        - {}
+        - text: わかりません

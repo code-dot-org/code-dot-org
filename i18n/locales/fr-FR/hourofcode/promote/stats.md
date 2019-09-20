@@ -1,13 +1,12 @@
 ---
-title: <%= hoc_s(:title_stats).inspect %>
+title: Blurbs and useful stats
 layout: wide
 nav: promote_nav
 ---
 
-
 <a id="blurb"></a>
 
-<%= view :signup_button %>
+{{ signup_button }}
 
 # Blurbs and useful stats
 
@@ -41,7 +40,7 @@ La technologie transforme tous les secteurs de la planète. En 2015, 7 millions 
 
 #### À propos de Code.org
 
-Code.org est une organisation à but non lucratif dont le but est d'accroître l'intérêt pour l'informatique ainsi que la participation des femmes et des groupes sociaux sous-représentés. Its vision is that every student in every school has the opportunity to learn computer programming. Après son lancement en 2013, Code.org a organisé une campagne intitulée "l'heure du code" qui a permis a plus de 100 millions d'élèves de mieux comprendre l'informatique à ce jour. Aux Etats-Unis, plus de 70 partenariats avec des écoles publiques ont été mis en place afin détendre les programmes en informatique. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. Pour plus d'information, rendez-vous sur [<%= resolve_url('code.org') %>](%= resolve_url('https://code.org') %).
+Code.org est une organisation à but non lucratif dont le but est d'accroître l'intérêt pour l'informatique ainsi que la participation des femmes et des groupes sociaux sous-représentés. Its vision is that every student in every school has the opportunity to learn computer programming. Après son lancement en 2013, Code.org a organisé une campagne intitulée "l'heure du code" qui a permis a plus de 100 millions d'élèves de mieux comprendre l'informatique à ce jour. Aux Etats-Unis, plus de 70 partenariats avec des écoles publiques ont été mis en place afin détendre les programmes en informatique. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ codeorg_link }}).
 
 ## Share these on social media and in emails
 
@@ -51,6 +50,6 @@ Code.org est une organisation à but non lucratif dont le but est d'accroître l
 
 ## Infographics
 
-<%= view :stats_carousel %>
+{{ stats_carousel }}
 
-<%= view :signup_button %>
+{{ signup_button }}

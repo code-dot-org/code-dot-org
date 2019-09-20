@@ -1,144 +1,41 @@
 ---
-title: <%= hoc_s(:title_partners).inspect %>
+title: الشركاء
 ---
-The Hour of Code is driven by the Hour of Code and Computer Science Education Week Advisory and Review Committees.
 
-The [Advisory Committee](%= resolve_url('/advisory-committee') %) is composed of representatives from K-12, academia, nonprofits, for-profits, and international organizations. This committee guides the strategy for the Hour of Code campaign.
+يدير ساعة البرمجة لجان المراجعة والاستشارة لساعة البرمجة، ولأسبوع تدريس علوم الكمبيوتر.
 
-The [Review Committee](%= resolve_url('/review-committee') %) is composed of 15 educators across K-12 grade bands that assess and recommend activities using the Advisory Committee's rubric. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
+تتألف [لجنة الاستشارة](%= resolve_url('/advisory-committee') %) من ممثلي K-12، والأكاديميين، والمنظمات الدولية الربحية وغير الربحية. هذه اللجنة تضع استراتيجية حملة ساعة البرمجة.
 
-Both committees' work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
+تتكون [لجنة المراجعة](%= resolve_url('/review-committee') %) من 15 مدرس المستويات حتى المستوى K-12 التي تقيم وتوصي بالأنشطة باعتماد نموذج تقييم اللجنة الاستشارية,. يقوم المدرسون بمراجعة أنشطة الطلاب وتخطيط الدروس التي يرسلها مئات الشركاء، لتقييم القيم الممررة، القدرة على إشراك المتعلمين، والجاذبية لكل الطلاب.
 
-<% if @country == 'la' %>
+عمل وإهداء كلا اللجنتين ساهما في نجاح ساعة البرمجة ورؤيتها في توفير مقدمة حول علوم الكمبيوتر لكل الطلاب.
 
-# Latin America Partners
+# الشركاء الرئيسيون و الشركات الداعمة
 
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'la') %>
-
-<% end %>
-
-<% if @country == 'ac' %>
-
-# Africa Partners
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ac') %>
-
-<% end %>
-
-<% if @country == 'au' %>
-
-# Australia Partners
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'au') %>
-
-<% end %>
-
-<% if @country == 'cn' %>
-
-# China Partners
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'cn') %>
-
-<% end %>
-
-<% if @country == 'fr' %>
-
-# France Partners
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'fr') %>
-
-<% end %>
-
-<% if @country == 'id' %>
-
-# Indonesia Partners
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'id') %>
-
-<% end %>
-
-<% if @country == 'ie' %>
-
-# Ireland Partners
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ie') %>
-
-<% end %>
-
-<% if @country == 'in' %>
-
-# India Partners
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'in') %>
-
-<% end %>
-
-<% if @country == 'jp' %>
-
-# Japan Partners
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'jp') %>
-
-<% end %>
-
-<% if @country == 'nl' %>
-
-# Netherlands Partners
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'nl') %>
-
-<% end %>
-
-<% if @country == 'nz' %>
-
-# New Zealand Partners
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'nz') %>
-
-<% end %>
-
-<% if @country == 'uk' %>
-
-# United Kingdom Partners
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'uk') %>
-
-<% end %>
-
-<% if @country == 'ca' %>
-
-# Canada Partners
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ca') %>
-
-<% end %>
-
-# Major Partners and Corporate Supporters
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'major') %>
+{{ partners/major_partners_corporate_supporters }}
 
 * * *
 
-# International Partners
+# الشركاء الدوليون
 
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'international') %>
-
-* * *
-
-# Curriculum and Tutorial Partners
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
+{{ partners/international_partners }}
 
 * * *
 
-# Infrastructure Partners and Tools
+# شركاء المنهاج والدورات
 
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
+{{ partners/curriculum_tutorial_partners }}
 
 * * *
 
-# Additional Partners
+# شركاء وأدوات البنية التحتية
 
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
+{{ partners/infrastructure_partners_tools }}
 
-<%= view :signup_button %>
+* * *
+
+# شركاء إضافيون
+
+{{ partners/additional_partners }}
+
+{{ signup_button }}

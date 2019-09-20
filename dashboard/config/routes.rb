@@ -221,12 +221,14 @@ Dashboard::Application.routes.draw do
   resources :libraries
 
   resources :levels do
-    get 'get_rubric', to: 'levels#get_rubric'
-    get 'edit_blocks/:type', to: 'levels#edit_blocks', as: 'edit_blocks'
-    get 'embed_level', to: 'levels#embed_level', as: 'embed_level'
-    post 'update_blocks/:type', to: 'levels#update_blocks', as: 'update_blocks'
-    post 'update_properties'
-    post 'clone', to: 'levels#clone'
+    member do
+      get 'get_rubric'
+      get 'embed_level'
+      get 'edit_blocks/:type', to: 'levels#edit_blocks', as: 'edit_blocks'
+      post 'update_properties'
+      post 'update_blocks/:type', to: 'levels#update_blocks', as: 'update_blocks'
+      post 'clone'
+    end
   end
 
   post 'level_assets/upload', to: 'level_assets#upload'
@@ -234,6 +236,8 @@ Dashboard::Application.routes.draw do
   resources :level_starter_assets, only: [:show], param: 'level_name' do
     member do
       get '/:filename', to: 'level_starter_assets#file'
+      post '', to: 'level_starter_assets#upload'
+      delete '/:filename', to: 'level_starter_assets#destroy'
     end
   end
 
@@ -289,9 +293,6 @@ Dashboard::Application.routes.draw do
   get '/jigsaw/:chapter', to: 'script_levels#show', script_id: Script::JIGSAW_NAME, as: 'jigsaw_chapter', format: false
 
   get '/weblab/host', to: 'weblab_host#index'
-
-  resources :followers, only: [:create]
-  post '/followers/remove', to: 'followers#remove', as: 'remove_follower'
 
   get '/join(/:section_code)', to: 'followers#student_user_new', as: 'student_user_new'
   post '/join(/:section_code)', to: 'followers#student_register', as: 'student_register'
@@ -393,6 +394,7 @@ Dashboard::Application.routes.draw do
           post :end
           post :reopen
           get  :summary
+          get  :potential_organizers
         end
         resources :enrollments, controller: 'workshop_enrollments', only: [:index, :destroy, :create]
 
@@ -418,9 +420,6 @@ Dashboard::Application.routes.draw do
       delete 'enrollments/:enrollment_code', action: 'cancel', controller: 'workshop_enrollments'
       post 'enrollment/:enrollment_id/scholarship_info', action: 'update_scholarship_info', controller: 'workshop_enrollments'
       post 'enrollments/move', action: 'move', controller: 'workshop_enrollments'
-
-      get :teacher_applications, to: 'teacher_applications#index'
-      post :teacher_applications, to: 'teacher_applications#create'
 
       # persistent namespace for FiT Weekend registrations, can be updated/replaced each year
       post 'fit_weekend_registrations', to: 'fit_weekend_registrations#create'
@@ -468,16 +467,6 @@ Dashboard::Application.routes.draw do
     # React-router will handle sub-routes on the client.
     get 'workshop_dashboard/*path', to: 'workshop_dashboard#index'
     get 'workshop_dashboard', to: 'workshop_dashboard#index'
-
-    get 'teacher_application', to: 'teacher_application#new'
-    get 'teacher_application/international_teachers', to: 'teacher_application#international_teachers'
-    get 'teacher_application/thanks', to: 'teacher_application#thanks'
-    get 'teacher_application/manage', to: 'teacher_application#manage'
-    get 'teacher_application/manage/:teacher_application_id', to: 'teacher_application#edit'
-    patch 'teacher_application/manage/:teacher_application_id', to: 'teacher_application#update'
-    post 'teacher_application/manage/:teacher_application_id/upgrade_to_teacher', to: 'teacher_application#upgrade_to_teacher'
-    get 'teacher_application/manage/:teacher_application_id/email', to: 'teacher_application#construct_email'
-    post 'teacher_application/manage/:teacher_application_id/email', to: 'teacher_application#send_email'
 
     get 'misc_survey/thanks', to: 'misc_survey#thanks'
     get 'misc_survey/:form_tag', to: 'misc_survey#new'
@@ -614,6 +603,7 @@ Dashboard::Application.routes.draw do
 
       post 'users/:user_id/postpone_census_banner', to: 'users#postpone_census_banner'
       post 'users/:user_id/dismiss_census_banner', to: 'users#dismiss_census_banner'
+      post 'users/:user_id/dismiss_donor_teacher_banner', to: 'users#dismiss_donor_teacher_banner'
 
       get 'school-districts/:state', to: 'school_districts#index', defaults: {format: 'json'}
       get 'schools/:school_district_id/:school_type', to: 'schools#index', defaults: {format: 'json'}
@@ -650,6 +640,7 @@ Dashboard::Application.routes.draw do
   resources :feedback, controller: 'teacher_feedbacks'
 
   get '/dashboardapi/v1/users/:user_id/contact_details', to: 'api/v1/users#get_contact_details'
+  get '/dashboardapi/v1/users/:user_id/donor_teacher_banner_details', to: 'api/v1/users#get_donor_teacher_banner_details'
   post '/dashboardapi/v1/users/accept_data_transfer_agreement', to: 'api/v1/users#accept_data_transfer_agreement'
   get '/dashboardapi/v1/school-districts/:state', to: 'api/v1/school_districts#index', defaults: {format: 'json'}
   get '/dashboardapi/v1/schools/:school_district_id/:school_type', to: 'api/v1/schools#index', defaults: {format: 'json'}
@@ -657,6 +648,9 @@ Dashboard::Application.routes.draw do
 
   # Routes used by census
   post '/dashboardapi/v1/census/:form_version', to: 'api/v1/census/census#create', defaults: {format: 'json'}
+
+  # Routes used by donor teacher banner
+  post '/dashboardapi/v1/users/:user_id/dismiss_donor_teacher_banner', to: 'api/v1/users#dismiss_donor_teacher_banner'
 
   # We want to allow searchs with dots, for instance "St. Paul", so we specify
   # the constraint on :q to match anything but a slash.

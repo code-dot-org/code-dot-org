@@ -11,10 +11,11 @@ import spriteCostumeLibrary from '../spritelab/spriteCostumeLibrary.json';
 import ScrollableList from '../AnimationTab/ScrollableList.jsx';
 import styles from './styles';
 import AnimationPickerListItem from './AnimationPickerListItem.jsx';
-import AnimationPickerSearchBar from './AnimationPickerSearchBar.jsx';
+import SearchBar from '@cdo/apps/templates/SearchBar';
 import PaginationWrapper from '@cdo/apps/templates/PaginationWrapper';
 import {searchAssets} from '@cdo/apps/code-studio/assets/searchAssets';
 import {connect} from 'react-redux';
+import i18n from '@cdo/locale';
 
 const MAX_SEARCH_RESULTS = 27;
 const animationPickerStyles = {
@@ -118,14 +119,14 @@ class AnimationPickerBody extends React.Component {
     let hideUploadOption = this.props.spriteLab;
 
     return (
-      <div>
+      <div style={{marginBottom: 10}}>
         <h1 style={styles.title}>{msg.animationPicker_title()}</h1>
         {!this.props.is13Plus && !hideUploadOption && (
           <WarningLabel>{msg.animationPicker_warning()}</WarningLabel>
         )}
-        <AnimationPickerSearchBar
-          value={this.state.searchQuery}
-          onChange={this.onSearchQueryChange}
+        <SearchBar
+          placeholderText={i18n.animationSearchPlaceholder()}
+          onChange={evt => this.onSearchQueryChange(evt.target.value)}
         />
         {(this.state.searchQuery !== '' || this.state.categoryQuery !== '') && (
           <div style={animationPickerStyles.navigation}>

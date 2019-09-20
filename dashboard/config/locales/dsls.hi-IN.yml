@@ -909,7 +909,7 @@ hi-IN:
         - {}
         - correct: true
         - {}
-        - {}
+        - feedback: गलत
       behaviors 4 predict:
         questions:
         - {}
@@ -917,7 +917,7 @@ hi-IN:
         - {}
         - correct: true
         - {}
-        - {}
+        - feedback: गलत
       courseC_multi_artist_prog6_predict1:
         questions:
         - {}

@@ -281,28 +281,29 @@ sk-SK:
         -   Použi ďalší blok `if` pre pohyb hráča doľava, keď je stlačená klávesa šípka "dole“. Tentokrát musíš pozíciu y hráča znížiť.
 
         Otestuj svoj kód. Postavička by sa teraz mala pohybovať všetkými 4 smermi.
-      CSD U3 Boolean Modify_2018: "# Boolovské výrazy\n\nNajjednoduchšie Boolovské
-        výrazy sú tie, na ktoré sa dá odpovedať pravda alebo nepravda. Tieto výrazy
-        sa vytvárajú použitím **porovnávacích znamienok**, ktoré sú uvedené nižšie.\n\n|
-        \                                           Porovnávacie zmamienko                                            |
-        Booleov Výraz |               Význam            ||                                                                     \n\n\\|
-        :---------------------------------------------------------------------------------------------------------------:
-        \\| :----------------: \\| :-------------------: \\|\n\n\\| <img src=\"https://images.code.org/1a0798d75d4242715e7608d825f95101-image-1447271431312.png\"
-        style=\"width: 100px\"> \\| `1 < 9` | Je 1 menšie ako 9? | \n\\|  \\| `1 >
-        9` | Je 1 väčšie ako 9 ? |\n\\| <img src=\"https://images.code.org/a4daa9efccea2278e165592efe343c1a-image-1447271431308.png\"
-        style=\"width: 100px\"> \\| `1 == 9` | Je 1 rovné 9? |\n\n**Poznámka:** Ak
-        by si uvidel/a výrok 3 \\< 2 na matematike, mohol/mohla by si si myslieť,
-        že niekde nastala chyba. Ale toto nie je hodina matematiky. V informatike
-        sa porovnávacie znamienka  **pýtajú otázku**, na ktorú bude počítač odpovedať
-        `true` (pravda) alebo `false` (nepravda). V našom prípade tento výraz čítaj
-        ako otázku: **„Je 3 menšie ako 2?\"** Odpoveď znie nie, čiže `false`.\n\nIná
-        možnosť, ako prečítať tento Booleov výraz je, že `3 < 2` **sa rovná** `false`.\n\n#
-        Urob toto\n\nVedel/a by si upraviť hodnoty atribútov jednotlivých postáv tak,
-        aby bol každý Booleovský výraz `true`?\n\n-   Prejdi si celý program a zisti,
-        ako sú `sprite1` (postava1) a `sprite2` (postava2) vytvorené a ktoré ich vlastnosti
-        sú porovnávané.\n-   Pre každý z Booleovských výrazov urči ich vlastnosti,
-        ktoré sú poronávané.\n-   Zmeň kód _iba v prvých **11-tich** riadkoch_ tak,
-        aby každý výraz v `console.log()` vrátil odpoveď `true`."
+      CSD U3 Boolean Modify_2018: |-
+        # Logické výrazy
+
+        Najjednoduchšie logické výrazy sú tie, na ktoré sa dá odpovedať pravda alebo nepravda. Tieto výrazy sa vytvárajú použitím **porovnávacích znamienok**, ktoré sú uvedené nižšie.
+
+        |                                               Porovnávacie zmamienko                                              | Logický výraz         | Význam              |
+        | :---------------------------------------------------------------------------------------------------------------: | --------------------- | ------------------- |
+        |                                                 :----------------:                                                | :-------------------: |                     |
+        | <img src="https://images.code.org/1a0798d75d4242715e7608d825f95101-image-1447271431312.png" style="width: 100px"> | `1 < 9`               | Je 1 menšie ako 9?  |
+        |                                                                                                                   | `1 > 9`               | Je 1 väčšie ako 9 ? |
+        | <img src="https://images.code.org/a4daa9efccea2278e165592efe343c1a-image-1447271431308.png" style="width: 100px"> | `1 == 9`              | Je 1 rovné 9?       |
+
+        **Poznámka:** Ak by si uvidel/a výrok 3 \< 2 na matematike, mohol/mohla by si si myslieť, že niekde nastala chyba. Ale toto nie je hodina matematiky. V informatike sa porovnávacie znamienka  **pýtajú otázku**, na ktorú bude počítač odpovedať `true` (pravda) alebo `false` (nepravda). V našom prípade tento výraz čítaj ako otázku: **„Je 3 menšie ako 2?"** Odpoveď znie nie, čiže `false`.
+
+        Iná možnosť, ako prečítať tento logickývýraz je, že `3 < 2` **sa rovná** `false`.
+
+        # Urob toto
+
+        Vedel/a by si upraviť hodnoty "sprite" atribútov tak, aby bol každý logický výraz `true`?
+
+        -   Prejdi si celý program a zisti, ako sú `sprite1` a `sprite2` vytvorené a ktoré ich vlastnosti sú porovnávané.
+        -   Pre každý z logických výrazov urči vlastnosti, ktoré sú poronávané.
+        -   Zmeň kód _iba v prvých **11-tich** riadkoch_ tak, aby každý výraz v `console.log()` vrátil odpoveď `true`.
       CSD U3 Compound Nested Challenge_2018: |-
         # Výzva: Kontrola viacerých podmienok
 
@@ -344,7 +345,7 @@ sk-SK:
       CSD U3 Conditionals Apple 2_2018: |-
         # Meniace sa ovocie
 
-        Teraz keď poznáme výroky _ak_, môžeš urobiť viac, ako len overiť, či jablko dosiahlo veľkosť 2. Keď sa tak stane, zmeň jeho animáciu na hrušku.
+        Teraz keď poznáme _podmienkové_ výroky, môžeš urobiť viac, ako len overiť, či jablko dosiahlo veľkosť 2. Keď sa tak stane, zmeň jeho animáciu na hrušku.
 
         # Urob toto
 
@@ -354,7 +355,7 @@ sk-SK:
       CSD U3 Conditionals Apple 2_2018_2019: |-
         # Meniace sa ovocie
 
-        Teraz keď poznáme výroky _ak_, môžeš urobiť viac, ako len overiť, či jablko dosiahlo veľkosť 2. Keď sa tak stane, zmeň jeho animáciu na hrušku.
+        Teraz keď poznáme _podmienkové_ výroky, môžeš urobiť viac, ako len overiť, či jablko dosiahlo veľkosť 2. Keď sa tak stane, zmeň jeho animáciu na hrušku.
 
         # Urob toto
 
@@ -362,23 +363,23 @@ sk-SK:
 
         _Výzva: Vieš zariadiť, aby ovocie prestalo rásť, keď sa z neho stane hruška?_
       CSD U3 Conditionals Apple_2018: |-
-        # Ďalšie precvičenie Booleových výrazov
+        # Ďalšie precvičenie logických výrazov
 
-        Poďme použiť ešte jeden Booleov výraz na kontrolu podmienok postavy. Môžeš použiť `console.log` príkaz na overenie, či jeho škála už dosiahla hodnotu 2.
+        Poďme použiť ešte jeden logický výraz na kontrolu podmienok "sprite" objektu. Môžeš použiť `console.log` príkaz na overenie, či jeho veľkosť už dosiahla hodnotu 2.
 
         # Urob toto
 
         -   Pridaj `console.log` výrok
-        -   Do `console.log` pridaj Booleov výraz, ktorý overuje, či `fruit.scale` je väčšie ako 2.
+        -   Do `console.log` pridaj logický výraz, ktorý overuje, či `fruit.scale` je väčšie ako 2.
       CSD U3 Conditionals Apple_2018_2019: |-
-        # Ďalšie precvičenie Booleových výrazov
+        # Ďalšie precvičenie logických výrazov
 
-        Poďme použiť ešte jeden Booleov výraz na kontrolu podmienok postavy. Môžeš použiť `console.log` príkaz na overenie, či jeho škála už dosiahla hodnotu 2.
+        Poďme použiť ešte jeden logický výraz na kontrolu podmienok "sprite" objektu. Môžeš použiť `console.log` príkaz na overenie, či jeho veľkosť už dosiahla hodnotu 2.
 
         # Urob toto
 
         -   Pridaj `console.log` výrok
-        -   Do `console.log` pridaj Booleov výraz, ktorý overuje, či `fruit.scale` je väčšie ako 2.
+        -   Do `console.log` pridaj logický výraz, ktorý overuje, či `fruit.scale` je väčšie ako 2.
       CSD U3 Diagonal Movement_2018: |-
         <img src="https://images.code.org/f92774863b17074adc85b8f6bbd017f2-image-1492726926884.gif" style="float: right; margin-left: 20px;">
 
@@ -400,25 +401,26 @@ sk-SK:
 
         _Výzva: Vieš nastaviť myšku tak, aby išla rovnakým smerom ako na obrázku?_
       CSD U3 Direction Arrows_2018: "# Posun do všetkých smerov\n\nKeďže už vieš posunúť
-        postavu pomocou príkazu `keyDown` jedným smerom, posun vo všetkých smeroch
+        \"sprite\" pomocou príkazu `keyDown` jedným smerom, posun do všetkých smerov
         by mal byť pre teba viac-menej podobný. Ovládanie klávesnicou, ktoré sa naučíš
         na tomto mieste, sa stane základom pre mnoho hier, ktoré následne naprogramuješ.\n\n#
-        Urob toto\n\nPostava chrobáčika, ktorá reaguje na stlačenie šípky doprava,
-        sa dostala aj do tohto levelu. Pridaj interakcie aj pre ostatné klávesy!\n\n-
+        Urob toto\n\n\"Sprite\" s chrobáčikom, ktorý reaguje na stlačenie šípky doprava,
+        sa dostal aj do tohto levelu. Pridaj mu interakcie aj pre ostatné klávesy!\n\n-
         \  Pridaj tri \"if\" výrazy – jeden pre každú šípku. \n-   Nezabudni pridať
         komentár pre každý výraz!\n-   Každý z výrazov by mal posunúť chrobáčika v
         smere šípky.\n\n_NÁPOVEDA: Nezabudni zhodnotiť pohyb po oboch osiach (x aj
         y) **a tiež to**, či musíš zvýšiť alebo znížiť ich hodnotu._"
       CSD U3 Direction Arrows_2018_2019: "# Posun do všetkých smerov\n\nKeďže už vieš
-        posunúť postavu pomocou príkazu `keyDown` jedným smerom, posun vo všetkých
-        smeroch by mal byť pre teba viac-menej podobný. Ovládanie klávesnicou, ktoré
+        posunúť \"sprite\" pomocou príkazu `keyDown` jedným smerom, posun do všetkých
+        smerov by mal byť pre teba viac-menej podobný. Ovládanie klávesnicou, ktoré
         sa naučíš na tomto mieste, sa stane základom pre mnoho hier, ktoré následne
-        naprogramuješ.\n\n# Urob toto\n\nPostava chrobáčika, ktorá reaguje na stlačenie
-        šípky doprava, sa dostala aj do tohto levelu. Pridaj interakcie aj pre ostatné
-        klávesy!\n\n-   Pridaj tri \"if\" výrazy – jeden pre každú šípku. \n-   Nezabudni
-        pridať komentár pre každý výraz!\n-   Každý z výrazov by mal posunúť chrobáčika
-        v smere šípky.\n\n_NÁPOVEDA: Nezabudni zhodnotiť pohyb po oboch osiach (x
-        aj y) **a tiež to**, či musíš zvýšiť alebo znížiť ich hodnotu._"
+        naprogramuješ.\n\n# Urob toto\n\n\"Sprite\" s chrobáčikom, ktorý reaguje na
+        stlačenie šípky doprava, sa dostal aj do tohto levelu. Pridaj mu interakcie
+        aj pre ostatné klávesy!\n\n-   Pridaj tri \"if\" výrazy – jeden pre každú
+        šípku. \n-   Nezabudni pridať komentár pre každý výraz!\n-   Každý z výrazov
+        by mal posunúť chrobáčika v smere šípky.\n\n_NÁPOVEDA: Nezabudni zhodnotiť
+        pohyb po oboch osiach (x aj y) **a tiež to**, či musíš zvýšiť alebo znížiť
+        ich hodnotu._"
       CSD U3 Drawing Squares to Corners_2018: "# Umiestni štvorce do rohov\n\nDôležitým
         pre používanie Game Lab je pochopiť umiestňovanie tvarov. Nezabudni, že kedykoľvek
         môžeš zapnúť zobrazenie mriežky alebo zistiť x a y súradnice pomocou kurzoru
@@ -492,7 +494,7 @@ sk-SK:
         -   Zvukové efekty (Vedel/a by si, ako?)
         -   Ďalšie možnosti interakcie s tvojou pohľadnicou
       CSD U3 Keypress Boolean embed-2018: |-
-        # Uhádni - keyDown()
+        # Porozmýšľaj - keyDown()
 
         Blok `keyDown()` je prvým z novej skupiny blokov, ktoré umožňujú získať vstupy od užívateľa. Toto je prvý krok na našej ceste k tvorbe hier! Pozrime sa, či uhádneš, ako blok `keyDown()` funguje. Zatiaľ ešte **nepíš** žiaden kód.
 
@@ -504,7 +506,7 @@ sk-SK:
         \*Počas behu programu stlač medzerník na klávesnici.
         \*Uhádol/la si? Bol/a si prekvapený/á? Porozprávaj sa o tom so spolusediacim/spolusediacou.
       CSD U3 Keypress Boolean embed-2018_2019: |-
-        # Uhádni - keyDown()
+        # Porozmýšľaj - keyDown()
 
         Blok `keyDown()` je prvým z novej skupiny blokov, ktoré umožňujú získať vstupy od užívateľa. Toto je prvý krok na našej ceste k tvorbe hier! Pozrime sa, či uhádneš, ako blok `keyDown()` funguje. Zatiaľ ešte **nepíš** žiaden kód.
 
@@ -667,13 +669,13 @@ sk-SK:
         -   Použi blok `randomNumber()` (náhodné číslo) pre parameter Y elipsy tak, aby bol kruh nakreslený aj v náhodnej výške.
         -   Keď sa kruh nakreslí na náhodnej súradnici, môžeš pokračovať ďalej.
       CSD U3 Scene Example_2018: |-
-        # Zostavy postáv
+        # Zostavy "sprite" objektov
 
-        Kombináciou tvarov, postáv a textu môžeš vytvárať jednoduché zostavy, príbehy alebo komiks. Náš príklad je pomerne jednoduchý, ale ty môžeš kombinovať toľko postáv a tvarov, koľko chceš, aby si vytvtoril/a rôzne komplexné obrázky.
+        Kombináciou tvarov, "sprite" objektov a textu môžeš vytvárať jednoduché zostavy, príbehy alebo komiks. Náš príklad je pomerne jednoduchý, ale ty môžeš kombinovať toľko "sprite" objektov a tvarov, koľko chceš, aby si vytvtoril/a rôzne komplexné obrázky.
 
         ## Načrtni si svoj obrázok
 
-        Predtým ako začneš, venuj chvíľku načrtnutiu obrázku, ktorý by si chcel/a vytvoriť. Môžeš použiť jednoduché tvary, ktoré si použil/a v minulosti, rovnako ako rozličné postavy a text. Keď si svoj nápad nakreslíš, naučíme ťa, ako používať blok `text` a ako zostaviť obrázok.
+        Predtým ako začneš, venuj chvíľku načrtnutiu obrázku, ktorý by si chcel/a vytvoriť. Môžeš použiť jednoduché tvary, ktoré si použil/a v minulosti, rovnako ako rozličné "sprite objekty" a text. Keď si svoj nápad nakreslíš, naučíme ťa, ako používať blok `text` a ako zostaviť obrázok.
       CSD U3 Sprites text_2018: "# Pridávanie textu\n\nText môžeš pridať kdekoľvek
         na obrazovke použitím príkazu `text`. \n\n# Urob toto\n\n-   Zmeň zobrazený
         text v kóde\n-   Pridaj ďalší text na inú časť obrazovky.\n\n_Tip: Základná
@@ -685,29 +687,29 @@ sk-SK:
         veľkosť textu je pomerne malá, ale môžeš použiť blok  `textSize` (veľkosť
         textu) na jej zmenu. Môžeš tiež použiť blok `fill` (vyplň) na zmenu jeho farby._"
       CSD U3 UP_ARROW_2018: |-
-        # Pohyb postáv
+        # Pohyb "sprite" objektov
 
-        Pozíciu postavy môžeš meniť na základe stlačených kláves rovnako, ako si menil/a jej obrázok.
+        Pozíciu "sprite" objektu môžeš meniť na základe stlačených kláves rovnako, ako si menil/a jeho obrázok.
 
         # Urob toto
 
         -   Pridaj výraz `if` dovnútra cyklu kreslenia.
         -   Skontroluj, či bola stlačená klávesa „šípka doprava“.
-        -   Pridaj kód do podmieňovacieho príkazu tak, aby sa postava pohla doprava vždy, keď bude sltačená klávesa „šípka doprava“.
+        -   Pridaj kód do podmieňovacieho príkazu tak, aby sa "sprite" objekt pohol doprava vždy, keď bude sltačená klávesa „šípka doprava“.
 
-        _Potrebuješ zmeniť premennú „x“ alebo „y“ svojej postavy na to, aby sa posunula doprava?_
+        _Potrebuješ zmeniť premennú „x“ alebo „y“ svojho "sprite" objektu na to, aby sa posunul doprava?_
       CSD U3 UP_ARROW_2018_2019: |-
-        # Pohyb postáv
+        # Pohyb "sprite" objektov
 
-        Pozíciu postavy môžeš meniť na základe stlačených kláves rovnako, ako si menil/a jej obrázok.
+        Pozíciu "sprite" objektu môžeš meniť na základe stlačených kláves rovnako, ako si menil/a jeho obrázok.
 
         # Urob toto
 
         -   Pridaj výraz `if` dovnútra cyklu kreslenia.
         -   Skontroluj, či bola stlačená klávesa „šípka doprava“.
-        -   Pridaj kód do podmieňovacieho príkazu tak, aby sa postava pohla doprava vždy, keď bude sltačená klávesa „šípka doprava“.
+        -   Pridaj kód do podmieňovacieho príkazu tak, aby sa "sprite" objekt pohol doprava vždy, keď bude sltačená klávesa „šípka doprava“.
 
-        _Potrebuješ zmeniť premennú „x“ alebo „y“ svojej postavy na to, aby sa posunula doprava?_
+        _Potrebuješ zmeniť premennú „x“ alebo „y“ svojho "sprite" objektu na to, aby sa posunul doprava?_
       CSD U3 abstraction decelerateX_2018: |-
         # Spomaľovanie
 
@@ -812,9 +814,9 @@ sk-SK:
         Každú postavu po vytvorení otestuj predtým ako vytvoríš ďaľšiu. Ak  začína mimo obrazovky, najprv ju umiestni na obrazovku, aby si otestoval/a, či vyzerá správne, a následne zmeň nastavenia tak, aby bola mimo obrazovky.
 
         Ak umiestnetnenie niektorej postavy bude potrebovať počas hry reset, zíde sa ti vytvoriť funkciu, ktorá definuje jej umiestnenie, aby si ju vedela použiť neskôr.
-      CSD U3 keydown conditional_2018: "# Zmena postáv\n\nV poslednom leveli sme videli,
-        že `keyDown` vráti hodnotu `true`, ak je klávesa stlačená, a hodnotu `false`,
-        ak klávesa stlačená nie je. Vstupom pre príkaz `keyDown` je anglický názov
+      CSD U3 keydown conditional_2018: "# Zmena \"sprite\" objektov\n\nV poslednom
+        leveli sme videli, že `keyDown` vráti hodnotu `true`, ak je klávesa stlačená,
+        a `false`, ak stlačená nie je. Vstupom pre príkaz `keyDown` je anglický názov
         klávesy, ktorú chceš sledovať, napísaný v úvodzovkách. Napríklad: \"x\", \"up\"
         (hore) alebo \"space\" (medzerník).\n\nPríkaz `keyDown` môžeš použiť ako vstup
         pre výraz `if`, a to na zmenu animácie podľa toho, ktorá klávesa bola stlačená!\n\n#
@@ -822,19 +824,18 @@ sk-SK:
         sa na výraz `if` a zisti, ako funguje kód.\n-   Pridaj blok do tretieho výrazu
         `if`, aby si zmenil/a zvieratko v animácii.\n\n_Výzva: Pri použití `setAnimation`
         bude nová animácia používaná, až kým ju opäť nezmeníš. Vieš upraviť kód tak,
-        aby sa zobrazila žirafa vždy, keď nie je stlačená žiadna klávesa?_"
-      CSD U3 keydown conditional_2018_2019: "# Zmena postáv\n\nV poslednom leveli
-        sme videli, že `keyDown` vráti hodnotu `true`, ak je klávesa stlačená, a hodnotu
-        `false`, ak klávesa stlačená nie je. Vstupom pre príkaz `keyDown` je anglický
-        názov klávesy, ktorú chceš sledovať, napísaný v úvodzovkách. Napríklad: \"x\",
-        \"up\" (hore) alebo \"space\" (medzerník).\n\nPríkaz `keyDown` môžeš použiť
-        ako vstup pre výraz `if`, a to na zmenu animácie podľa toho, ktorá klávesa
-        bola stlačená!\n\n# Urob toto\n\n-   Spusti kód a skús stlačiť klávesy „p“
-        a „h“. \n-   Pozri sa na výraz `if` a zisti, ako funguje kód.\n-   Pridaj
-        blok do tretieho výrazu `if`, aby si zmenil/a zvieratko v animácii.\n\n_Výzva:
-        Pri použití `setAnimation` bude nová animácia používaná, až kým ju opäť nezmeníš.
-        Vieš upraviť kód tak, aby sa zobrazila žirafa vždy, keď nie je stlačená žiadna
-        klávesa?_"
+        aby sa vždy, keď nie je stlačená žiadna klávesa, zobrazila žirafa?_"
+      CSD U3 keydown conditional_2018_2019: "# Zmena \"sprite\" objektov\n\nV poslednom
+        leveli sme videli, že `keyDown` vráti hodnotu `true`, ak je klávesa stlačená,
+        a `false`, ak stlačená nie je. Vstupom pre príkaz `keyDown` je anglický názov
+        klávesy, ktorú chceš sledovať, napísaný v úvodzovkách. Napríklad: \"x\", \"up\"
+        (hore) alebo \"space\" (medzerník).\n\nPríkaz `keyDown` môžeš použiť ako vstup
+        pre výraz `if`, a to na zmenu animácie podľa toho, ktorá klávesa bola stlačená!\n\n#
+        Urob toto\n\n-   Spusti kód a skús stlačiť klávesy „p“ a „h“. \n-   Pozri
+        sa na výraz `if` a zisti, ako funguje kód.\n-   Pridaj blok do tretieho výrazu
+        `if`, aby si zmenil/a zvieratko v animácii.\n\n_Výzva: Pri použití `setAnimation`
+        bude nová animácia používaná, až kým ju opäť nezmeníš. Vieš upraviť kód tak,
+        aby sa vždy, keď nie je stlačená žiadna klávesa, zobrazila žirafa?_"
       CSD U3 platform player2_2018: |-
         # Používateľské rozhranie
 
@@ -886,6 +887,11 @@ sk-SK:
         \*\* Skús spustiť kód, aby si videl ako Umelec použije binárny reťazec na namaľovanie obrazca. \*\*
       Course 4 Artist For Loops 1: Použite blok s opakovaním pre nakreslenie tohto
         trojuholníka, ktorý je 50 pixelov široký.
+      Course 4 Artist For Loops 6a: Sprav tri malé zmeny v kóde z predošlého levelu,
+        aby si vytvoril toto!
+      Course 4 Artist For Loops 8: "Len jedná malá zmena v kóde z posledného obrázku
+        dokáže vytvoriť takýto obrázok. Vieš zistiť aká je to zmena?\n\nNápoveda:
+        Potrebuješ niečo odstrániť!  "
       CourseD_Dance_Party_01: |-
         _Spravme si tanečnú párty!_
 
@@ -1106,6 +1112,16 @@ sk-SK:
         -   Pridaj ďalšiu skupinu tanečníkov
         -   Ukáž a skry tanečníkov so stlačením šípky
         -   Skry všetkých tanečníkov a nastav nejaký zaujímavý efekt pozadia
+      Fish Tank 1-validated: "**Napíš predpoveď:** Čo myslíš, že sa stane, ked spustíš
+        tento kód?"
+      Fish Tank 2-validated: |-
+        Spravme akvárium!
+
+        Zmeň Dustyho (kôpku trávy) na rybu.
+      Fish Tank Predict: "**Napíš predpoveď:** Čo myslíš, že sa stane, ked spustíš
+        tento kód?"
+      Fish Tank Predict_2019: "**Napíš predpoveď:** Čo myslíš, že sa stane, ked spustíš
+        tento kód?"
       Function intro Ryan: "V pracovnom priestore je **funkcia** s názvom 'postav
         most'. Je v nej zabudovaný celý kód, ktorý potrebuješ na prekročenie rieky!\\\r\n
         \\\r\nDvakrát prichyť malý, zelený  <xml> <block type=\"procedures_callnoreturn\"
@@ -1240,6 +1256,9 @@ sk-SK:
         s použitím iba jedného bloku <xml><block type="maze_moveEast"/></xml>?
       courseA_collector_loops3_2019: Ako môze Laurel pozbierať všetkých päť kôp drahokamov
         s použitím iba jedného bloku <xml><block type="maze_moveEast"/></xml>?
+      courseA_maze_ramp2_2018: Aby si dokončil tvoj kód, spoj oba bloky <xml><block
+        type="maze_moveEast"/></xml> a <xml><block type="when_run"/></xml> a potom
+        stlač "▶ Run".
       courseA_maze_ramp3a_2018: Zober <xml><block type="maze_moveNorth"/></xml> z
         panelu nástrojov a pridaj ich na spodok ostatných blokov, aby si dokončíl
         tento kód, potom klikni "▶ Spustiť".
@@ -1257,6 +1276,8 @@ sk-SK:
       courseA_maze_ramp5a_2018: Skús túto úlohu vyriešiť bez pomoci!
       courseA_maze_ramp5a_2019: Skús túto úlohu vyriešiť bez pomoci!
       courseA_maze_seq13_2019: Dostaň sa ku prasiatku akoukoľvek cestou!
+      courseA_maze_seq5_2018: Vyskúšaj si to ešte raz.
+      courseA_maze_seq5_2019: Vyskúšaj si to ešte raz.
       courseA_maze_seq_challenge2_2019: Nájdi cestu a priveď vtáka ku prasiatku. Vyhni
         sa TNT, lebo bude lietať perie!
       courseB_Scrat_ramp1_2018: Aby si dostal Scrata k žaluďu, pripoj blok <xml><block
@@ -3435,6 +3456,81 @@ sk-SK:
         potom sa otoč vľavo **ak** je cesta vľavo, inak sa otoč vpravo.
       courseE_farmer_ramp12g_2019: Posúvaj sa dopredu pokiaľ sa nedostaneš k šalátu,
         potom sa otoč vľavo **ak** je cesta vľavo, inak sa otoč vpravo.
+      courseF_artist_for1: "**Voľná hra:** Experimentuj s cyklom `for` a s premennou
+        `počítadlo`. \n\nVytiahni niekoľko blokov a pozri sa, čo sa stane.  "
+      courseF_artist_for10: |-
+        **Voľná hra:** Skús použiť premennú `počítadlo` spolu s ďalšími kresliacimi blokmi, aby si vytvoril magické obrázky ako tento.
+
+        ![](https://images.code.org/5a4eec10a53aa78ad6b12fb5e48680f8-image-1497991505852.png)
+      courseF_artist_for10_2018: |-
+        **Voľná hra:** Skús použiť premennú `počítadlo` spolu s ďalšími kresliacimi blokmi, aby si vytvoril magické obrázky ako tento.
+
+        ![](https://images.code.org/5a4eec10a53aa78ad6b12fb5e48680f8-image-1497991505852.png)
+      courseF_artist_for10_2019: |-
+        **Voľná hra:** Skús použiť premennú `počítadlo` spolu s ďalšími kresliacimi blokmi, aby si vytvoril magické obrázky ako tento.
+
+        ![](https://images.code.org/5a4eec10a53aa78ad6b12fb5e48680f8-image-1497991505852.png)
+      courseF_artist_for1_2018: "**Voľná hra:** Experimentuj s cyklom `for` a s premennou
+        `počítadlo`. \n\nVytiahni niekoľko blokov a pozri sa, čo sa stane.  "
+      courseF_artist_for1_2019: "**Voľná hra:** Experimentuj s cyklom `for` a s premennou
+        `počítadlo`. \n\nVytiahni niekoľko blokov a pozri sa, čo sa stane.  "
+      courseF_artist_for2: Použi cyklus `opakuj` vo vnútri cyklu `for` na vytvorenie
+        tejto kopy trojuholníkov, ktoré majú strany dlhé od 50 do 100 pixelov.
+      courseF_artist_for2_2018: Použi cyklus `opakuj` vo vnútri cyklu `for` na vytvorenie
+        tejto kopy trojuholníkov, ktoré majú strany dlhé od 50 do 100 pixelov.
+      courseF_artist_for2_2019: Použi cyklus `opakuj` vo vnútri cyklu `for` na vytvorenie
+        tejto kopy trojuholníkov, ktoré majú strany dlhé od 50 do 100 pixelov.
+      courseF_artist_for3: Vytvor tieto trojuholníky, ktoré majú strany od 20 do 200
+        pixelov, a kde každý trojuholník je o 20 pixelov väčší ako ten predošlý.
+      courseF_artist_for3_2018: Vytvor tieto trojuholníky, ktoré majú strany od 20
+        do 200 pixelov, a kde každý trojuholník je o 20 pixelov väčší ako ten predošlý.
+      courseF_artist_for3_2019: Vytvor tieto trojuholníky, ktoré majú strany od 20
+        do 200 pixelov, a kde každý trojuholník je o 20 pixelov väčší ako ten predošlý.
+      courseF_artist_for5: |-
+        Len jedná malá zmena v kóde z posledného obrázku dokáže vytvoriť takýto obrázok. Vieš zistiť aká je to zmena?
+
+        * * *
+
+        Nápoveda: Potrebuješ niečo odstrániť!
+      courseF_artist_for5_2018: |-
+        Len jedná malá zmena v kóde z posledného obrázku dokáže vytvoriť takýto obrázok. Vieš zistiť aká je to zmena?
+
+        * * *
+
+        Nápoveda: Potrebuješ niečo odstrániť!
+      courseF_artist_for5_2019: |-
+        Len jedná malá zmena v kóde z posledného obrázku dokáže vytvoriť takýto obrázok. Vieš zistiť aká je to zmena?
+
+        * * *
+
+        Nápoveda: Potrebuješ niečo odstrániť!
+      courseF_artist_for6: |-
+        Ak sa otočíš o trochu viac alebo menej, ako by si sa normálne, tak to spraví vkusný efekt.
+
+        Pretvor tvoj kód z predošlej úlohy, ale teraz sa otoč o 89 stupňov, aby si vytvoril takúto pokrútenú štvorcovú špirálu.
+      courseF_artist_for6_2018: |-
+        Ak sa otočíš o trochu viac alebo menej, ako by si sa normálne, tak to spraví vkusný efekt.
+
+        Pretvor tvoj kód z predošlej úlohy, ale teraz sa otoč o 89 stupňov, aby si vytvoril takúto pokrútenú štvorcovú špirálu.
+      courseF_artist_for6_2019: |-
+        Ak sa otočíš o trochu viac alebo menej, ako by si sa normálne, tak to spraví vkusný efekt.
+
+        Pretvor tvoj kód z predošlej úlohy, ale teraz sa otoč o 89 stupňov, aby si vytvoril takúto pokrútenú štvorcovú špirálu.
+      courseF_artist_for7: 'Sprav tri malé zmeny v kóde z predošlého levelu, aby si
+        vytvoril toto!  '
+      courseF_artist_for7_2018: 'Sprav tri malé zmeny v kóde z predošlého levelu,
+        aby si vytvoril toto!  '
+      courseF_artist_for7_2019: 'Sprav tri malé zmeny v kóde z predošlého levelu,
+        aby si vytvoril toto!  '
+      courseF_artist_for9: |-
+        **Inšpirácia:** Použi počítadlo vo vnútri bloku `nastav alfa`, aby si dostal niečo ako tento vyblednutý stred.\
+        (Tento šesťuholníkový vzor bol vytvorený otáčaním o 60 stupňov.)
+      courseF_artist_for9_2018: |-
+        **Inšpirácia:** Použi počítadlo vo vnútri bloku `nastav alfa`, aby si dostal niečo ako tento vyblednutý stred.\
+        (Tento šesťuholníkový vzor bol vytvorený otáčaním o 60 stupňov.)
+      courseF_artist_for9_2019: |-
+        **Inšpirácia:** Použi počítadlo vo vnútri bloku `nastav alfa`, aby si dostal niečo ako tento vyblednutý stred.\
+        (Tento šesťuholníkový vzor bol vytvorený otáčaním o 60 stupňov.)
       courseF_artist_variables10: "Tu je tvoj kód z predošlej úlohy. Skús zmeniť premennú
         rôznymi spôsobmi. \n\n-   Čo sa stane, ak začneš s `dĺžka` menšou než 150?\n-
         \  Čo ak zakaždým vynásobiš tvoju premennú číslom 1.25 namiesto pripočítania
@@ -3690,6 +3786,18 @@ sk-SK:
         Teraz skombinujme premennú `počítadlo` s `matematickým` blokom!
 
         Ako môžeš použíť premennú `počítadlo` na prejdenie cez túto záhradu s najmenším počtom blokov?
+      courseF_bee_for_challenge1: |-
+        Môžeš použiť tento `cyklus for` na pozbieranie všetkého nektáru. Neuveriteľné! (Un-bee-lievable)
+
+        Je tam niekoľko akcií, ktoré chceš `zopakovať 'počítadlo' krát`.
+      courseF_bee_for_challenge1_2018: |-
+        Môžeš použiť tento `cyklus for` na pozbieranie všetkého nektáru. Neuveriteľné! (Un-bee-lievable)
+
+        Je tam niekoľko akcií, ktoré chceš `zopakovať 'počítadlo' krát`.
+      courseF_bee_for_challenge1_2019: |-
+        Môžeš použiť tento `cyklus for` na pozbieranie všetkého nektáru. Neuveriteľné! (Un-bee-lievable)
+
+        Je tam niekoľko akcií, ktoré chceš `zopakovať 'počítadlo' krát`.
       courseF_bee_for_challenge2: Vyrieš túto úlohu použitím čo najmenšieho možného
         počtu blokov.
       courseF_bee_for_challenge2_2018: Vyrieš túto úlohu použitím čo najmenšieho možného
@@ -3712,6 +3820,12 @@ sk-SK:
         "Pokračujme!"
 
         Uprav kód, aby fungoval pre túto úlohu.
+      coursea_maze_ramp1_2018: Aby sa vták dostal k prasiatku, pripoj blok <xml><block
+        type="maze_moveEast"/></xml> na spodok bloku <xml><block type="when_run"/></xml>
+        a stlač "▶ Run"!
+      coursea_maze_ramp1_2019: Aby sa vták dostal k prasiatku, pripoj blok <xml><block
+        type="maze_moveEast" block-text="move east"/></xml> na spodok bloku <xml><block
+        type="when_run" block-text="when run"/></xml> a stlač "▶ Run"!
       frozen circle: Kružnica je zvláštny tvar. Dokážeš zistiť, akým číslom treba
         nahradiť otázniky, aby sa nakreslila kružnica?
       frozen circle function: Použi nový blok "Vytvor kružnicu" pre nakreslenie 10
