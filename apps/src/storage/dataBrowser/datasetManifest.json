@@ -21,6 +21,11 @@
       "current": true
     },
     {
+      "name": "openweathermap",
+      "description": "5 day 3 hour forecast from 5 cities",
+      "current": true
+    },
+    {
       "name": "one",
       "description": "description one",
       "current": false
@@ -75,7 +80,7 @@
     {
       "name": "Test Data",
       "description": "datasets that are in the shared channel in dev firebase",
-      "datasets": ["cities", "history", "sports", "spotify"]
+      "datasets": ["cities", "history", "sports", "spotify", "openweathermap"]
     },
     {
       "name": "Animals",
