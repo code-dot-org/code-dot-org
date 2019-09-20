@@ -11,7 +11,6 @@ module Pd
       FACILITATOR_APPLICATION_CLASS = Facilitator1920Application
 
       TEACHER_APPLICATION_MAILER_CLASS = Teacher1920ApplicationMailer
-      FACILITATOR_APPLICATION_MAILER_CLASS = FacilitatorApplicationMailer
 
       TEACHER_APPLICATION_FACTORY = :pd_teacher1920_application
       TEACHER_APPLICATION_HASH_FACTORY = :pd_teacher1920_application_hash
