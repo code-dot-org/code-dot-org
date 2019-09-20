@@ -8,7 +8,7 @@
   - unless correct_answers.empty?
     - localized_answers = level.localized_property(:answers)
     #markdown.teacher.hide-as-student
-      %h3= t('teacher.answer') unless contained_mode
+      %h3= t('teacher.answer')
       .content
         - correct_answers.each do |correct_answer|
           .multi

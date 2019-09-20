@@ -1,0 +1,29 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2019-09-20T18:42:00.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "long_instructions": "My free response markdown instructions",
+    "submittable": "false",
+    "title": "Test Contained Free Response Title",
+    "height": "50",
+    "placeholder": "test placeholder answer",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 4945,
+    "encrypted": "false",
+    "instructions_important": "false",
+    "optional": "false",
+    "encrypted_solution": "2fB3K8tUHBj2RSKjF35+rBM6CXKM5CNG2fVPiNpFz1ejw3IHzkca3r6POsbC\nXZu2HgA+c/XAobzSh9pQC5pIdA==\n"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-09-20 14:42:09 -0400\",\"changed\":[],\"changed_by_id\":26,\"changed_by_email\":\"dev@levelbuilder.com\"},{\"changed_at\":\"2019-09-20 16:07:29 -0400\",\"changed\":[],\"changed_by_id\":26,\"changed_by_email\":\"dev@levelbuilder.com\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

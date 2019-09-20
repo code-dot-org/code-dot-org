@@ -36,11 +36,11 @@
 
       - level_class = contained_level.class.to_s.underscore
       - if level_class == "multi"
-        = render partial: 'levels/multi_answer', locals: {data: contained_level.properties, height: height, unchecked_class: unchecked_class, checked_class: checked_class, cross_class: cross_class, level: contained_level, standalone: false, contained_mode: true}
-        = render partial: 'levels/teacher_markdown', locals: {data: contained_level.properties}
-      - elsif level_class == "text_match"
-        = render partial: 'levels/teacher_markdown', locals: {data: data}
+        .multi{id: "level_#{contained_level.id}", class: "tight contained"}
+          = render partial: 'levels/multi_answer', locals: {data: contained_level.properties, height: height, unchecked_class: unchecked_class, checked_class: checked_class, cross_class: cross_class, level: contained_level, standalone: false, contained_mode: true}
+          = render partial: 'levels/teacher_markdown', locals: {data: contained_level.properties}
       - elsif level_class == "free_response"
-        = render partial: 'levels/teacher_markdown', locals: {data: {'teacher_markdown' => contained_level.solution}}
+        .free-response{class: "left-aligned"}
+          = render partial: 'levels/teacher_markdown', locals: {data: {'teacher_markdown' => contained_level.solution}}
 
 %div{style: 'clear: both;'}

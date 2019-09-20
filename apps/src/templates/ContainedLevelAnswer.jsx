@@ -2,27 +2,10 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import ProtectedStatefulDiv from './ProtectedStatefulDiv';
-import color from '../util/color';
-import i18n from '@cdo/locale';
 
 const styles = {
   hidden: {
     display: 'none'
-  },
-  container: {
-    margin: 20,
-    borderWidth: 5,
-    borderStyle: 'solid',
-    borderColor: color.cyan,
-    backgroundColor: color.lightest_cyan,
-    borderRadius: 5
-  },
-  header: {
-    color: color.white,
-    backgroundColor: color.cyan,
-    padding: 5,
-    fontSize: 18,
-    fontFamily: '"Gotham 7r", sans-serif'
   }
 };
 
@@ -44,11 +27,8 @@ class ContainedLevelAnswer extends Component {
 
   render() {
     return (
-      <div style={this.props.hidden ? styles.hidden : styles.container}>
-        <div style={styles.header}>{i18n.answer()}</div>
-        <div>
-          <ProtectedStatefulDiv />
-        </div>
+      <div style={this.props.hidden ? styles.hidden : null}>
+        <ProtectedStatefulDiv />
       </div>
     );
   }
