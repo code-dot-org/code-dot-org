@@ -889,7 +889,16 @@ describe('entry tests', () => {
           }
         ]),
         new ManifestPlugin({
-          basePath: 'js/'
+          basePath: 'js/',
+          map: file => {
+            if (minify) {
+              // Remove contenthash in manifest key from files generated via
+              // copy-webpack-plugin. See:
+              // https://github.com/webpack-contrib/copy-webpack-plugin/issues/104#issuecomment-370174211
+              file.name = file.name.replace(/\.[a-f0-9]{32}\./, '.');
+            }
+            return file;
+          }
         })
       ],
       minify: minify,
