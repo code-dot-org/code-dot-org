@@ -1,5 +1,5 @@
 module Pd::Application
-  class Facilitator1920ApplicationMailer < ActionMailer::Base
+  class FacilitatorApplicationMailer < ActionMailer::Base
     default from: 'Code.org <facilitators@code.org>'
     default bcc: MailerConstants::PLC_EMAIL_LOG
     helper_method :signed_by, :from
