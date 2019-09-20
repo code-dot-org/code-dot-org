@@ -1,27 +1,34 @@
 import React, { Component } from "react";
-import P5Wrapper from "react-p5-wrapper";
 import sketch from "./sketches/faces";
 
 export default class Canvas extends Component {
   constructor() {
     super();
     this.state = {
-      color: [Math.random() * 255, Math.random() * 255, Math.random() * 255]
+      notes: ""
     };
-    this.randomColor = this.randomColor.bind(this);
+  }
+
+  componentDidMount() {
+    this.canvas = new window.p5(sketch, "app-p5_container");
   }
 
   randomColor() {
-    this.setState({
-      color: [Math.random() * 255, Math.random() * 255, Math.random() * 255]
-    });
+    if (this.canvas) {
+      var color = [Math.random() * 255, Math.random() * 255, Math.random() * 255];
+      this.canvas.setColor(color);
+      this.setState({
+        notes: "color: " + color.toString()
+      });
+    }
   }
 
   render() {
     return (
       <div>
-        <button onClick={this.randomColor}>Random Color</button>
-        <P5Wrapper sketch={sketch} color={this.state.color} />
+        <button onClick={this.randomColor.bind(this)}>Random Color</button>
+        <div id="p5-canvas" />
+        <p>{this.state.notes}</p>
       </div>
     );
   }

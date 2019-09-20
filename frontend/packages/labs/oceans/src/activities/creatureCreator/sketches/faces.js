@@ -11,9 +11,9 @@ export default function sketch(p) {
     p.ellipse(150, 100, 100, 100);
   };
 
-  p.myCustomRedrawAccordingToNewPropsHandler = newProps => {
+  p.setColor = newColor => {
     if (canvas)
       //Make sure the canvas has been created
-      p.fill(newProps.color);
+      p.fill(newColor);
   };
 }

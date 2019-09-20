@@ -46,10 +46,9 @@
     "react": "~15.4.0",
     "react-bootstrap": "0.30.1",
     "react-dom": "~15.4.0",
-    "react-p5-wrapper": "0.0.4",
-    "webpack": "4.29.0",
+    "webpack": "4.19.1",
     "webpack-cli": "^3.3.6",
-    "webpack-dev-server": "^3.2.1"
+    "webpack-dev-server": "^3.1.4"
   },
   "bugs": {
     "url": "https://github.com/code-dot-org/ml-activities/issues"
