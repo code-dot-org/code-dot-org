@@ -228,14 +228,15 @@ describe('entry tests', () => {
           expand: true,
           cwd: './node_modules/@code-dot-org/p5/lib',
           src: ['p5.js'],
-          dest: 'build/package/js/p5play/'
+          dest: 'build/lib/p5play/'
         },
         {
           expand: true,
           cwd: './node_modules/@code-dot-org/p5.play/lib',
           src: ['p5.play.js'],
-          dest: 'build/package/js/p5play/'
+          dest: 'build/lib/p5play/'
         },
+        // Piskel must not be minified or digested in order to work properly.
         {
           expand: true,
           // For some reason, if we provide piskel root as an absolute path here,
@@ -245,6 +246,7 @@ describe('entry tests', () => {
           src: ['**'],
           dest: 'build/package/js/piskel/'
         },
+        // Bramble must not be minified or digested in order to work properly.
         {
           expand: true,
           cwd: './node_modules/@code-dot-org/bramble/dist',
@@ -255,7 +257,7 @@ describe('entry tests', () => {
           expand: true,
           cwd: 'lib/droplet',
           src: ['droplet-full*.js'],
-          dest: 'build/package/js/droplet/'
+          dest: 'build/lib/droplet/'
         },
         {
           expand: true,
@@ -267,19 +269,19 @@ describe('entry tests', () => {
           expand: true,
           cwd: 'lib/tooltipster',
           src: ['*.js'],
-          dest: 'build/package/js/tooltipster/'
+          dest: 'build/lib/tooltipster/'
         },
         {
           expand: true,
           cwd: 'lib/marked',
           src: ['marked*.js'],
-          dest: 'build/package/js/marked/'
+          dest: 'build/lib/marked/'
         },
         {
           expand: true,
           cwd: 'lib/phaser',
           src: ['*.js'],
-          dest: 'build/package/js/phaser/'
+          dest: 'build/lib/phaser/'
         },
         {
           expand: true,
@@ -291,7 +293,7 @@ describe('entry tests', () => {
           expand: true,
           cwd: 'lib/fileupload',
           src: ['*.js'],
-          dest: 'build/package/js/fileupload/'
+          dest: 'build/lib/fileupload/'
         }
       ]
     }
@@ -885,6 +887,11 @@ describe('entry tests', () => {
         new CopyPlugin([
           {
             from: 'build/locales',
+            to: minify ? '[path]/[name].[hash].[ext]' : '[path]/[name].[ext]',
+            toType: 'template'
+          },
+          {
+            from: 'build/lib',
             to: minify ? '[path]/[name].[hash].[ext]' : '[path]/[name].[ext]',
             toType: 'template'
           }
