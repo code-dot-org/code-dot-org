@@ -28,7 +28,7 @@ class ZendeskSessionController < ApplicationController
     # Prevent a vulnerability where a user can sign up with a code.org email and then see tickets that
     # that employee has been CC'ed on (or has responded to). Effectively, this is requiring email
     # verification for Code.org employees accessing Zendesk.
-    if user.email && Mail::Address.new(user.email).domain == "code.org" && !user.has_google_oauth_matching_primary_email?
+    if user.email && Mail::Address.new(user.email).domain == "code.org" && !user.verified_cdo_internal?
       @error = I18n.t('zendesk_unverified_codeorg_account_message')
       return false
     end

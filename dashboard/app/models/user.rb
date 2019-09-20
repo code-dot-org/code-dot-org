@@ -816,12 +816,11 @@ class User < ActiveRecord::Base
     end
   end
 
-  def has_google_oauth_matching_primary_email?
-    if migrated?
-      authentication_options.any? {|ao| ao.google_oauth? && ao.email == email}
-    else
-      provider == 'google_oauth2'
-    end
+  def verified_cdo_internal?
+    return false unless Mail::Address.new(email).domain == "code.org"
+    return false unless migrated?
+    return true if authentication_options.all? {|ao| ao.google_oauth? && ao.email == email}
+    return false
   end
 
   def self.new_with_session(params, session)
