@@ -1032,7 +1032,10 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     secondary_email = 'secondary@email.com'
 
     ActiveRecord::Base.connection.exec_query(
-      "INSERT INTO `pd_teacher_applications` (user_id, primary_email, secondary_email, created_at, updated_at, application) VALUES (#{user.id}, '#{user.email}', '#{secondary_email}', '#{Time.now.to_s(:db)}', '#{Time.now.to_s(:db)}', '{}')"
+      <<-SQL
+        INSERT INTO `pd_teacher_applications` (user_id, primary_email, secondary_email, created_at, updated_at, application)
+        VALUES (#{user.id}, '#{user.email}', '#{secondary_email}', '#{Time.now.to_s(:db)}', '#{Time.now.to_s(:db)}', '{}')
+      SQL
     )
 
     application = ActiveRecord::Base.connection.exec_query(
@@ -1055,7 +1058,10 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     secondary_email = 'secondary@email.com'
 
     ActiveRecord::Base.connection.exec_query(
-      "INSERT INTO `pd_teacher_applications` (user_id, primary_email, secondary_email, created_at, updated_at, application) VALUES (#{user.id}, '#{user.email}', '#{secondary_email}', '#{Time.now.to_s(:db)}', '#{Time.now.to_s(:db)}', '{}')"
+      <<-SQL
+        INSERT INTO `pd_teacher_applications` (user_id, primary_email, secondary_email, created_at, updated_at, application)
+        VALUES (#{user.id}, '#{user.email}', '#{secondary_email}', '#{Time.now.to_s(:db)}', '#{Time.now.to_s(:db)}', '{}')
+      SQL
     )
 
     application = ActiveRecord::Base.connection.exec_query(
@@ -1078,7 +1084,10 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     secondary_email = 'secondary@email.com'
 
     ActiveRecord::Base.connection.exec_query(
-      "INSERT INTO `pd_teacher_applications` (user_id, primary_email, secondary_email, created_at, updated_at, application) VALUES (#{user.id}, '#{user.email}', '#{secondary_email}', '#{Time.now.to_s(:db)}', '#{Time.now.to_s(:db)}', '{\"primaryEmail\": \"#{user.email}\"}')"
+      <<-SQL
+        INSERT INTO `pd_teacher_applications` (user_id, primary_email, secondary_email, created_at, updated_at, application)
+        VALUES (#{user.id}, '#{user.email}', '#{secondary_email}', '#{Time.now.to_s(:db)}', '#{Time.now.to_s(:db)}', '{\"primaryEmail\": \"#{user.email}\"}')
+      SQL
     )
 
     application = ActiveRecord::Base.connection.exec_query(

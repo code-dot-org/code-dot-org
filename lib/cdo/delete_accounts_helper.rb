@@ -114,7 +114,13 @@ class DeleteAccountsHelper
 
     # SQL query to anonymize Pd::TeacherApplication (2017-18 application) because the model no longer exists
     ActiveRecord::Base.connection.exec_query(
-      "UPDATE `pd_teacher_applications` SET `pd_teacher_applications`.`primary_email` = '', `pd_teacher_applications`.`secondary_email` = '', `pd_teacher_applications`.`application` = '' WHERE `pd_teacher_applications`.`user_id` = #{user_id}"
+      <<-SQL
+        UPDATE `pd_teacher_applications`
+        SET `pd_teacher_applications`.`primary_email` = '',
+          `pd_teacher_applications`.`secondary_email` = '',
+          `pd_teacher_applications`.`application` = ''
+        WHERE `pd_teacher_applications`.`user_id` = #{user_id}
+      SQL
     )
     # Peer reviews might be associated with a purged submitter or viewer
     PeerReview.where(submitter_id: user_id).update_all(submitter_id: nil, audit_trail: nil)
