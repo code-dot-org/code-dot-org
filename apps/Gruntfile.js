@@ -227,13 +227,13 @@ describe('entry tests', () => {
           expand: true,
           cwd: './node_modules/@code-dot-org/p5/lib',
           src: ['p5.js'],
-          dest: 'build/lib/p5play/'
+          dest: 'build/minifiable-lib/p5play/'
         },
         {
           expand: true,
           cwd: './node_modules/@code-dot-org/p5.play/lib',
           src: ['p5.play.js'],
-          dest: 'build/lib/p5play/'
+          dest: 'build/minifiable-lib/p5play/'
         },
         // Piskel must not be minified or digested in order to work properly.
         {
@@ -256,7 +256,7 @@ describe('entry tests', () => {
           expand: true,
           cwd: 'lib/droplet',
           src: ['droplet-full*.js'],
-          dest: 'build/lib/droplet/'
+          dest: 'build/minifiable-lib/droplet/'
         },
         {
           expand: true,
@@ -268,19 +268,19 @@ describe('entry tests', () => {
           expand: true,
           cwd: 'lib/tooltipster',
           src: ['*.js'],
-          dest: 'build/lib/tooltipster/'
+          dest: 'build/minifiable-lib/tooltipster/'
         },
         {
           expand: true,
           cwd: 'lib/marked',
           src: ['marked*.js'],
-          dest: 'build/lib/marked/'
+          dest: 'build/minifiable-lib/marked/'
         },
         {
           expand: true,
           cwd: 'lib/phaser',
           src: ['*.js'],
-          dest: 'build/lib/phaser/'
+          dest: 'build/minifiable-lib/phaser/'
         },
         {
           expand: true,
@@ -292,7 +292,7 @@ describe('entry tests', () => {
           expand: true,
           cwd: 'lib/fileupload',
           src: ['*.js'],
-          dest: 'build/lib/fileupload/'
+          dest: 'build/minifiable-lib/fileupload/'
         }
       ]
     }
@@ -893,6 +893,24 @@ describe('entry tests', () => {
             from: 'build/lib',
             to: minify ? '[path]/[name].[hash].[ext]' : '[path]/[name].[ext]',
             toType: 'template'
+          },
+          // Libraries in this directory are assumed to have .js and .min.js
+          // copies of each source file. In development mode, copy only foo.js.
+          // In production mode, copy only foo.min.js and rename it to foo.js.
+          // This allows the manifest to contain a single mapping from foo.js
+          // to a target file with the correct contents given the mode.
+          //
+          // Ideally, the target file would have the .min.js suffix in
+          // production mode. This could be accomplished by nesting these files
+          // within a minifiable-lib directory in the output package so that the
+          // manifest plugin could do special processing on these files.
+          {
+            context: 'build/minifiable-lib/',
+            from: minify ? `**/*.min.js` : '**/*.js',
+            to: minify ? '[path]/[name].[hash].[ext]' : '[path]/[name].[ext]',
+            toType: 'template',
+            ignore: minify ? [] : ['*.min.js'],
+            transformPath: targetPath => targetPath.replace(/\.min\./, '.')
           }
         ]),
         new ManifestPlugin({
@@ -960,8 +978,8 @@ describe('entry tests', () => {
       files: _.fromPairs(
         ['p5play/p5.play.js', 'p5play/p5.js'].map(function(src) {
           return [
-            OUTPUT_DIR + src.replace(/\.js$/, '.min.js'), // dst
-            OUTPUT_DIR + src // src
+            'build/minifiable-lib/' + src.replace(/\.js$/, '.min.js'), // dst
+            'build/minifiable-lib/' + src // src
           ];
         })
       )
@@ -1135,10 +1153,11 @@ describe('entry tests', () => {
 
   grunt.registerTask('build', [
     'prebuild',
+    // For any minifiable libs, generate minified sources if they do not already
+    // exist in our repo. Skip minification in development environment.
+    envConstants.DEV ? 'noop' : 'uglify:lib',
     envConstants.DEV ? 'webpack:build' : 'webpack:uglify',
     'notify:js-build',
-    // Skip minification in development environment.
-    envConstants.DEV ? 'noop' : 'uglify:lib',
     'postbuild'
   ]);
 
