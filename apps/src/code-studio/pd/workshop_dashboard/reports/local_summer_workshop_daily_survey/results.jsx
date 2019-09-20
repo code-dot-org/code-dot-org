@@ -12,16 +12,20 @@ export default class Results extends React.Component {
     questions: PropTypes.object.isRequired,
     thisWorkshop: PropTypes.object.isRequired,
     sessions: PropTypes.arrayOf(PropTypes.string).isRequired,
+    courseName: PropTypes.string.isRequired,
     facilitators: PropTypes.object,
     facilitatorAverages: PropTypes.object,
     facilitatorResponseCounts: PropTypes.object,
-    courseName: PropTypes.string.isRequired
+    workshopRollups: PropTypes.object,
+    facilitatorRollups: PropTypes.object
   };
 
   static defaultProps = {
     facilitators: {},
     facilitatorAverages: {},
-    facilitatorResponseCounts: {}
+    facilitatorResponseCounts: {},
+    workshopRollups: {},
+    facilitatorRollups: {}
   };
 
   state = {
