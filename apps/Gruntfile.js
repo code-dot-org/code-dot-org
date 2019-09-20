@@ -202,7 +202,7 @@ describe('entry tests', () => {
           expand: true,
           cwd: 'lib/blockly',
           src: ['??_??.js'],
-          dest: 'build/package/js',
+          dest: 'build/locales',
           // e.g., ar_sa.js -> ar_sa/blockly_locale.js
           rename: function(dest, src) {
             var outputPath = src.replace(
@@ -353,7 +353,7 @@ describe('entry tests', () => {
           },
           expand: true,
           src: ['i18n/**/*.json'],
-          dest: 'build/package/js/'
+          dest: 'build/locales'
         }
       ]
     }
@@ -882,7 +882,13 @@ describe('entry tests', () => {
         new StatsWriterPlugin({
           fields: ['assetsByChunkName', 'assets']
         }),
-        new CopyPlugin([]),
+        new CopyPlugin([
+          {
+            from: 'build/locales',
+            to: minify ? '[path]/[name].[hash].[ext]' : '[path]/[name].[ext]',
+            toType: 'template'
+          }
+        ]),
         // Unit tests require certain unminified files to have been built.
         new UnminifiedWebpackPlugin({
           include: [/^webpack-runtime/, /^applab-api/, /^gamelab-api/]
@@ -890,7 +896,6 @@ describe('entry tests', () => {
         new ManifestPlugin({
           basePath: 'js/'
         })
-
       ],
       minify: minify,
       watch: watch,
