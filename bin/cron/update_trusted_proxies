@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+require_relative '../../dashboard/config/environment'
+require_relative '../../lib/cdo/only_one'
+require 'cdo/trusted_proxies'
+
+# Automates the updating of Cloudfront proxy server trusted IP ranges
+def main
+  proxy_list = TrustedProxies.generate
+  TrustedProxies.upload(proxy_list)
+end
+
+main if only_one_running?(__FILE__)

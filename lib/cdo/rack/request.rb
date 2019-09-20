@@ -2,12 +2,11 @@ require 'rack/request'
 require 'ipaddr'
 require 'json'
 require 'country_codes'
+require 'cdo/trusted_proxies'
 
 module Cdo
   module RequestExtension
-    TRUSTED_PROXIES = JSON.parse(IO.read(deploy_dir('lib/cdo/trusted_proxies.json')))['ranges'].map do |proxy|
-      IPAddr.new(proxy)
-    end
+    TRUSTED_PROXIES = TrustedProxies.get_from_s3
 
     def trusted_proxy?(ip)
       super(ip) || TRUSTED_PROXIES.any? {|proxy| proxy === ip rescue false}
