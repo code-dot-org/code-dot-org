@@ -230,6 +230,8 @@ Resources:
       Description: !Join ['-', [!Ref 'AWS::StackName', 'Cluster Parameter Group']]
       Family: !If [Is57, aurora-mysql5.7, aurora5.6 ]
       Parameters:
+        # Enable Performance Schema for Percona Monitoring
+        performance_schema: 1
         innodb_flush_log_at_trx_commit: 0
         innodb_sync_array_size: 1024
         max_connections: 16000
