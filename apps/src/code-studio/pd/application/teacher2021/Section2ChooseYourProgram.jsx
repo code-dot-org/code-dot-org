@@ -4,7 +4,7 @@ import {
   PageLabels,
   SectionHeaders,
   TextFields
-} from '@cdo/apps/generated/pd/teacher1920ApplicationConstants';
+} from '@cdo/apps/generated/pd/teacher2021ApplicationConstants';
 import {FormGroup, Row, Col} from 'react-bootstrap';
 import {PROGRAM_CSD, PROGRAM_CSP} from './TeacherApplicationConstants';
 
@@ -27,7 +27,7 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
 
   render() {
     // This should be kept consistent with the calculation logic in
-    // dashboard/app/models/pd/application/teacher1920_application.rb.
+    // dashboard/app/models/pd/application/teacher2021_application.rb.
     const csHowManyMinutes = parseInt(this.props.data.csHowManyMinutes, 10);
     const csHowManyDaysPerWeek = parseInt(
       this.props.data.csHowManyDaysPerWeek,
