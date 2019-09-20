@@ -55,6 +55,7 @@ Given /^I select the "([^"]*)" facilitator at index (\d+)$/ do |name, index|
   facilitator = "#{name} (#{email})"
 
   steps %Q{
+    And I wait until element "#facilitator#{index}" is visible
     And I select the "#{facilitator}" option in dropdown "facilitator#{index}"
   }
 end
