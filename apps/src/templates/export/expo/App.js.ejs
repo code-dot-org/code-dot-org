@@ -1,5 +1,6 @@
 import React from 'react';
 import { Platform, StyleSheet, View, WebView } from 'react-native';
+import { AppLoading } from 'expo';
 
 import CustomAsset from './CustomAsset';
 import DataWarning from './DataWarning';
@@ -55,7 +56,7 @@ export default class App extends React.Component {
     });
   };
 
-  onLoadEnd = () => {
+  onLoad = () => {
     //
     // NOTE: wait for 2 frames after the WebView says it is loaded before we set our state to
     // loaded and remove the "cover" View (without this delay, we see a white flash from the WebView)
@@ -98,6 +99,12 @@ export default class App extends React.Component {
       );
     }
 
+    if (!indexUri) {
+      return (
+        <AppLoading />
+      );
+    }
+
     return (
       <View onLayout={this.onLayout} style={styles.container}>
         {!!height && indexUri && <View style={this.webViewContainerStyle()}>
@@ -112,10 +119,10 @@ export default class App extends React.Component {
             scrollEnabled={false}
             bounces={false}
             scalesPageToFit={Platform.OS === 'ios'}
-            onLoadEnd={this.onLoadEnd}
+            onLoad={this.onLoad}
           />
-          {!loaded && <View style={styles.cover} />}
         </View>}
+        {!loaded && <View style={styles.cover} />}
       </View>
     );
   }
@@ -129,7 +136,7 @@ const styles = StyleSheet.create({
   },
   cover: {
     ...StyleSheet.absoluteFillObject,
-    backgroundColor: 'black',
+    backgroundColor: 'white',
   },
   webViewIOS: {
     backgroundColor: 'black',

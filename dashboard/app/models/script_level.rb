@@ -137,7 +137,7 @@ class ScriptLevel < ActiveRecord::Base
       # next stage)
       level_to_follow = next_progression_level(user)
     else
-      # don't ever continue continue to a locked/hidden level
+      # don't ever continue to a locked/hidden level
       level_to_follow = next_level
       level_to_follow = level_to_follow.next_level while level_to_follow.try(:locked_or_hidden?, user)
     end

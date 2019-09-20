@@ -83,37 +83,6 @@ class User < ActiveRecord::Base
   include UserPermissionGrantee
   include PartialRegistration
   include Rails.application.routes.url_helpers
-  # races: array of strings, the races that a student has selected.
-  # Allowed values for race are:
-  #   white: "White"
-  #   black: "Black or African American"
-  #   hispanic: "Hispanic or Latino"
-  #   asian: "Asian"
-  #   hawaiian: "Native Hawaiian or other Pacific Islander"
-  #   american_indian: "American Indian/Alaska Native"
-  #   other: "Other"
-  #   opt_out: "Prefer not to say" (but selected this value and hit "Submit")
-  #
-  # Depending on the user's actions, the following values may also be applied:
-  #   closed_dialog: This is a special value indicating that the user closed the
-  #     dialog rather than selecting a race.
-  #   nonsense: This is a special value indicating that the user chose
-  #     (strictly) more than five races.
-  DISPLAY_RACES = %w(
-    white
-    black
-    hispanic
-    asian
-    hawaiian
-    american_indian
-    other
-    opt_out
-  ).freeze
-
-  VALID_RACES = DISPLAY_RACES + %w(
-    closed_dialog
-    nonsense
-  ).freeze
 
   # Notes:
   #   data_transfer_agreement_source: Indicates the source of the data transfer
@@ -135,6 +104,7 @@ class User < ActiveRecord::Base
     oauth_token_expiration
     sharing_disabled
     next_census_display
+    donor_teacher_banner_dismissed
     data_transfer_agreement_accepted
     data_transfer_agreement_request_ip
     data_transfer_agreement_source
@@ -407,15 +377,6 @@ class User < ActiveRecord::Base
     find_or_create_teacher(params, invited_by_user, UserPermission::FACILITATOR)
   end
 
-  GENDER_OPTIONS = [
-    [nil, ''],
-    ['gender.male', 'm'],
-    ['gender.female', 'f'],
-    ['gender.non_binary', 'n'],
-    ['gender.not_listed', 'o'],
-    ['gender.none', '-'],
-  ].freeze
-
   DATA_TRANSFER_AGREEMENT_SOURCE_TYPES = [
     ACCOUNT_SIGN_UP = 'ACCOUNT_SIGN_UP'.freeze,
     ACCEPT_DATA_TRANSFER_DIALOG = 'ACCEPT_DATA_TRANSFER_DIALOG'.freeze
@@ -542,40 +503,12 @@ class User < ActiveRecord::Base
     self.hashed_email = User.hash_email(email)
   end
 
-  # @return [Boolean, nil] Whether the the list of races stored in the `races` column represents an
-  # under-represented minority.
-  #   - true: Yes, a URM user.
-  #   - false: No, not a URM user.
-  #   - nil: Don't know, may or may not be a URM user.
-  def urm_from_races
-    return nil unless races
-
-    races_as_list = races.split ','
-    return nil if races_as_list.empty?
-    return nil if (races_as_list & ['opt_out', 'nonsense', 'closed_dialog']).any?
-    return true if (races_as_list & ['black', 'hispanic', 'hawaiian', 'american_indian']).any?
-    false
-  end
-
   def sanitize_race_data_set_urm
-    return true unless races_changed?
+    return unless races_changed?
 
-    if races
-      races_as_list = races.split ','
-      if races_as_list.include? 'closed_dialog'
-        self.races = 'closed_dialog'
-      elsif races_as_list.length > 5
-        self.races = 'nonsense'
-      else
-        races_as_list.each do |race|
-          self.races = 'nonsense' unless VALID_RACES.include? race
-        end
-      end
-    end
-
-    self.urm = urm_from_races
-
-    true
+    self.races = Policies::Races.sanitized(races).join(',')
+    self.races = nil if races.empty?
+    self.urm = Policies::Races.any_urm?(races)
   end
 
   def fix_by_user_type
@@ -721,22 +654,6 @@ class User < ActiveRecord::Base
     email_and_hashed_email_must_be_unique # Always check email uniqueness
   end
 
-  def self.normalize_gender(v)
-    return nil if v.blank?
-    case v.downcase
-    when 'f', 'female'
-      'f'
-    when 'm', 'male'
-      'm'
-    when 'o', 'notlisted'
-      'o'
-    when 'n', 'nonbinary', 'non-binary'
-      'n'
-    else
-      nil
-    end
-  end
-
   def self.name_from_omniauth(raw_name)
     return raw_name if raw_name.blank? || raw_name.is_a?(String) # some services just give us a string
     # clever returns a hash instead of a string for name
@@ -797,7 +714,7 @@ class User < ActiveRecord::Base
       user.birthday = nil
       user.age = user_age
     end
-    user.gender = normalize_gender auth.info.gender
+    user.gender = Policies::Gender.normalize auth.info.gender
   end
 
   def oauth?
@@ -1131,6 +1048,64 @@ class User < ActiveRecord::Base
     user_levels.attempted.exists?
   end
 
+  # Returns the next visible script_level for the next progression level in the # given script that hasn't yet been passed, starting at the last level the
+  # the user most recently submitted
+  def next_unpassed_visible_progression_level(script)
+    # If all levels in the script are complete, no need to find the next level,
+    # will be redirected to /congrats.
+    return nil if completed?(script)
+
+    visible_sls = visible_script_levels(script).reject {|sl| sl.bonus || sl.level.unplugged? || sl.locked?(self)}
+
+    sl_level_ids = visible_sls.map(&:level_ids).flatten
+
+    # Levels the user made progress in
+    ul_level_ids = user_levels_by_level(script).keys
+
+    visible_completed_level_ids = sl_level_ids & ul_level_ids
+    visible_incomplete_level_ids = sl_level_ids - ul_level_ids
+
+    first_visible_level = visible_sls.min_by(&:chapter)
+
+    completed_all_visible_levels = visible_incomplete_level_ids.empty?
+
+    # Find the user_levels associated with visible script_levels
+    visible_user_levels = user_levels.where(level_id: visible_completed_level_ids)
+
+    # The user has not made any visible progress or has completed all visible
+    # levels but not the entire script, return the first visible script_level
+    return first_visible_level if visible_user_levels.empty? || completed_all_visible_levels
+
+    # Most recently completed user_level of the visible subset
+    most_recent_ul = visible_user_levels.max_by(&:created_at)
+
+    # Find the script_level that goes with the most recent user_level
+    most_recent_sl = visible_sls.find {|sl| sl.level_id == most_recent_ul.level_id}
+
+    last_visible_level = visible_sls.max_by(&:chapter)
+
+    visible_incomplete_sls = visible_sls.find_all {|sl| visible_incomplete_level_ids.include?(sl.level_id)}
+
+    first_visible_incomplete_level = visible_incomplete_sls.min_by(&:chapter)
+
+    # The user has completed the last level in the progress, but not all
+    # previous levels, return the first visible incomplete script_level
+    return first_visible_incomplete_level || first_visible_level if
+      most_recent_sl == last_visible_level
+
+    # Find the chapter for the script_level that goes with the most recent user_level
+    most_recent_completed_chapter = most_recent_sl.chapter
+
+    # Find the script_level that has the next highest chapter level from the one above and is not complete
+    later_unpassed_visible_sls = visible_incomplete_sls.select do |sl|
+      sl.chapter > most_recent_completed_chapter
+    end
+
+    next_unpassed_visible_progression_sl = later_unpassed_visible_sls.min_by(&:chapter)
+
+    next_unpassed_visible_progression_sl
+  end
+
   # Returns the next script_level for the next progression level in the given
   # script that hasn't yet been passed, starting its search at the last level we submitted
   def next_unpassed_progression_level(script)
@@ -1223,6 +1198,12 @@ class User < ActiveRecord::Base
       # if we have no sections matching this script id, we consider a stage hidden if any of the sections we're in
       # hide it
       sections.any? {|s| script_level.hidden_for_section?(s.id)}
+    end
+  end
+
+  def visible_script_levels(script)
+    script.script_levels.select do |sl|
+      !script_level_hidden?(sl)
     end
   end
 
@@ -1341,6 +1322,10 @@ class User < ActiveRecord::Base
     return username if name.blank?
 
     name.split.first # 'first name'
+  end
+
+  def second_name
+    name.split.second # 'second name'
   end
 
   def initial
@@ -2050,6 +2035,15 @@ class User < ActiveRecord::Base
     # Must have an NCES school to show the banner
     users_school = try(:school_info).try(:school)
     teacher? && users_school && (next_census_display.nil? || Date.today >= next_census_display.to_date)
+  end
+
+  # Returns the name of the donor for the donor teacher banner and donor footer, or nil if none.
+  # Donors are associated with certain schools, captured in DonorSchool and populated from a Pegasus gsheet
+  def school_donor_name
+    school_id = last_complete_school_info&.school&.id
+    donor_name = DonorSchool.find_by(nces_id: school_id)&.name if school_id
+
+    donor_name
   end
 
   # Removes PII and other information from the user and marks the user as having been purged.

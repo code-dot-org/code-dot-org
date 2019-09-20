@@ -2,6 +2,7 @@ import {expect} from '../../util/configuredChai';
 import {initFirebaseStorage} from '@cdo/apps/storage/firebaseStorage';
 import {
   getProjectDatabase,
+  getSharedDatabase,
   getConfigRef
 } from '@cdo/apps/storage/firebaseUtils';
 
@@ -31,6 +32,25 @@ describe('FirebaseStorage', () => {
         getProjectDatabase().set(null);
       });
   });
+
+  function validateTableData(expectedTableData, done) {
+    const rowCountRef = getProjectDatabase().child(
+      'counters/tables/mytable/rowCount'
+    );
+    rowCountRef
+      .once('value')
+      .then(snapshot => {
+        expect(snapshot.val()).to.equal(Object.keys(expectedTableData).length);
+        const recordsRef = getProjectDatabase().child(
+          'storage/tables/mytable/records'
+        );
+        return recordsRef.once('value');
+      })
+      .then(snapshot => {
+        expect(snapshot.val()).to.deep.equal(expectedTableData);
+        done();
+      });
+  }
 
   describe('setKeyValue', () => {
     it('sets a string value', done => {
@@ -381,6 +401,30 @@ describe('FirebaseStorage', () => {
           }
         );
       }
+    });
+  });
+
+  describe('copyStaticTable', () => {
+    it('Copies the records and counters from shared channel', done => {
+      const expectedTableData = {
+        1: '{"id":1,"name":"alice","age":7,"male":false}',
+        2: '{"id":2,"name":"bob","age":8,"male":true}',
+        3: '{"id":3,"name":"charlie","age":9,"male":true}'
+      };
+      getSharedDatabase()
+        .child('counters/tables/mytable')
+        .set({lastId: 3, rowCount: 3});
+      getSharedDatabase()
+        .child('storage/tables/mytable/records')
+        .set(expectedTableData);
+
+      FirebaseStorage.copyStaticTable(
+        'mytable',
+        () => validateTableData(expectedTableData, done),
+        () => {
+          throw 'error';
+        }
+      );
     });
   });
 
@@ -1087,30 +1131,11 @@ describe('FirebaseStorage', () => {
       FirebaseStorage.importCsv(
         'mytable',
         csvData,
-        validateTableData,
+        () => validateTableData(expectedTableData, done),
         error => {
           throw error;
         }
       );
-
-      function validateTableData() {
-        const rowCountRef = getProjectDatabase().child(
-          'counters/tables/mytable/rowCount'
-        );
-        rowCountRef
-          .once('value')
-          .then(snapshot => {
-            expect(snapshot.val()).to.equal(3);
-            const recordsRef = getProjectDatabase().child(
-              'storage/tables/mytable/records'
-            );
-            return recordsRef.once('value');
-          })
-          .then(snapshot => {
-            expect(snapshot.val()).to.deep.equal(expectedTableData);
-            done();
-          });
-      }
     });
 
     it('overwrites existing data', done => {
@@ -1127,30 +1152,11 @@ describe('FirebaseStorage', () => {
         FirebaseStorage.importCsv(
           'mytable',
           csvData,
-          validateTableData,
+          () => validateTableData(expectedTableData, done),
           error => {
             throw error;
           }
         );
-      }
-
-      function validateTableData() {
-        const rowCountRef = getProjectDatabase().child(
-          'counters/tables/mytable/rowCount'
-        );
-        rowCountRef
-          .once('value')
-          .then(snapshot => {
-            expect(snapshot.val()).to.equal(3);
-            const recordsRef = getProjectDatabase().child(
-              'storage/tables/mytable/records'
-            );
-            return recordsRef.once('value');
-          })
-          .then(snapshot => {
-            expect(snapshot.val()).to.deep.equal(expectedTableData);
-            done();
-          });
       }
     });
 

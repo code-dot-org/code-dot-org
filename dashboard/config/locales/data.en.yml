@@ -575,6 +575,7 @@ en:
         CSF_Spritelab_MakeSprite_v2: How to Make a Sprite
         CSF_SpriteLab_SpritesInAction_v2: Sprites in Action
         csd_debugging: Debugging
+        csd_applab_designmode_short: App Lab Design Mode
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

@@ -4,7 +4,7 @@
 # Scripts that do not have is_stable set to true are used internally, usually
 # as drafts.
 
-require_relative '../../config/environment'
+require_relative '../../../dashboard/config/environment'
 
 def feedbacks_without_script_level_id
   TeacherFeedback.where(script_level_id: nil)
