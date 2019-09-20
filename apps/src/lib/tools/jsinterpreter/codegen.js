@@ -105,6 +105,9 @@ function populateFunctionsIntoScope(
 function populateGlobalFunctions(interpreter, blocks, blockFilter, scope) {
   for (var i = 0; i < blocks.length; i++) {
     var block = blocks[i];
+    if (block.func === 'mySampleLibrary.myCoolFunction') {
+      // debugger;
+    }
     if (
       block.parent &&
       (!blockFilter || typeof blockFilter[block.func] !== 'undefined')
@@ -113,18 +116,25 @@ function populateGlobalFunctions(interpreter, blocks, blockFilter, scope) {
       var funcName = block.func;
       var funcComponents = funcName.split('.');
       if (funcComponents.length === 2) {
+        // debugger;
         // Special accommodation for Object.function syntax (2 components only):
         var objName = funcComponents[0];
         // Find or create global object named 'objName' and make it the scope:
         funcScope = interpreter.getProperty(scope, objName);
         if (interpreter.UNDEFINED === funcScope) {
-          funcScope = interpreter.createObject(interpreter.OBJECT);
+          funcScope = block.scope
+            ? {...interpreter.createObject(interpreter.OBJECT), ...block.scope}
+            : interpreter.createObject(interpreter.OBJECT);
           interpreter.setProperty(scope, objName, funcScope);
         }
         funcName = funcComponents[1];
+        if (block.scope) {
+          block.parent = funcScope;
+        }
       }
       var func = block.parent[funcName];
       const {dontMarshal, nativeIsAsync, nativeCallsBackInterpreter} = block;
+      // debugger;
       var wrapper = interpreter.makeNativeMemberFunction({
         nativeFunc: func,
         nativeParentObj: block.parent,

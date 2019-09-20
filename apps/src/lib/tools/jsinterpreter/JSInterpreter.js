@@ -194,6 +194,7 @@ export default class JSInterpreter {
           this.interpreter = interpreter;
           // Store globalScope on JSInterpreter
           this.globalScope = scope;
+          // debugger;
           codegen.initJSInterpreter(
             interpreter,
             options.blocks,
@@ -235,6 +236,10 @@ export default class JSInterpreter {
       // can be injected before the user code is processed (thus allowing user
       // code to override globals of the same names)
 
+      // Append the libraries first so line numbers are maintained:
+      if (!!options.libraryCode && typeof options.libraryCode === 'string') {
+        this.interpreter.appendCode(options.libraryCode);
+      }
       // Now append the user code:
       this.interpreter.appendCode(options.code);
       // And repopulate scope since appendCode() doesn't do this automatically:
