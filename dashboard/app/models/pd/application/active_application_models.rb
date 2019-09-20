@@ -10,7 +10,6 @@ module Pd
       PRINCIPAL_APPROVAL_APPLICATION_CLASS = PrincipalApproval1920Application
       FACILITATOR_APPLICATION_CLASS = Facilitator1920Application
 
-      TEACHER_APPLICATION_MAILER_CLASS = TeacherApplicationMailer
       FACILITATOR_APPLICATION_MAILER_CLASS = Facilitator1920ApplicationMailer
 
       TEACHER_APPLICATION_FACTORY = :pd_teacher1920_application

@@ -20,11 +20,11 @@ module Api::V1::Pd::Application
     end
 
     setup do
-      TEACHER_APPLICATION_MAILER_CLASS.stubs(:confirmation).returns(
+      Pd::Application::TeacherApplicationMailer.stubs(:confirmation).returns(
         mock {|mail| mail.stubs(:deliver_now)}
       )
 
-      TEACHER_APPLICATION_MAILER_CLASS.stubs(:principal_approval).returns(
+      Pd::Application::TeacherApplicationMailer.stubs(:principal_approval).returns(
         mock {|mail| mail.stubs(:deliver_now)}
       )
     end
@@ -46,7 +46,7 @@ module Api::V1::Pd::Application
       response: :forbidden
 
     test 'sends email on successful create' do
-      TEACHER_APPLICATION_MAILER_CLASS.expects(:confirmation).
+      Pd::Application::TeacherApplicationMailer.expects(:confirmation).
         with(instance_of(TEACHER_APPLICATION_CLASS)).
         returns(mock {|mail| mail.expects(:deliver_now)})
 
@@ -57,7 +57,7 @@ module Api::V1::Pd::Application
     end
 
     test 'do not send principal approval email on successful create if RP has selective principal approval' do
-      TEACHER_APPLICATION_MAILER_CLASS.expects(:confirmation).
+      Pd::Application::TeacherApplicationMailer.expects(:confirmation).
         with(instance_of(TEACHER_APPLICATION_CLASS)).
         returns(mock {|mail| mail.expects(:deliver_now)})
 
@@ -74,8 +74,8 @@ module Api::V1::Pd::Application
     end
 
     test 'does not send confirmation mail on unsuccessful create' do
-      TEACHER_APPLICATION_MAILER_CLASS.expects(:principal_approval).never
-      TEACHER_APPLICATION_MAILER_CLASS.expects(:confirmation).never
+      Pd::Application::TeacherApplicationMailer.expects(:principal_approval).never
+      Pd::Application::TeacherApplicationMailer.expects(:confirmation).never
       Pd::Application::PrincipalApproval1819Application.expects(:create_placeholder_and_send_mail).never
 
       sign_in @applicant
