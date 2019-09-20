@@ -51,21 +51,26 @@ export class ResultsLoader extends React.Component {
       dataType: 'json'
     })
       .done(data => {
-        this.setState({
-          loading: false,
-          questions: data['questions'],
-          thisWorkshop: data['this_workshop'],
-          sessions: Object.keys(data['this_workshop']),
-          facilitators: data['facilitators'],
-          facilitatorAverages: data['facilitator_averages'],
-          facilitatorResponseCounts: data['facilitator_response_counts'],
-          courseName: data['course_name']
-        });
-
         if (inExperiment) {
           this.setState({
+            loading: false,
+            questions: data['questions'],
+            thisWorkshop: data['this_workshop'],
+            sessions: Object.keys(data['this_workshop']),
+            courseName: data['course_name'],
             workshopRollups: data['workshop_rollups'],
             facilitatorRollups: data['facilitator_rollups']
+          });
+        } else {
+          this.setState({
+            loading: false,
+            questions: data['questions'],
+            thisWorkshop: data['this_workshop'],
+            sessions: Object.keys(data['this_workshop']),
+            facilitators: data['facilitators'],
+            facilitatorAverages: data['facilitator_averages'],
+            facilitatorResponseCounts: data['facilitator_response_counts'],
+            courseName: data['course_name']
           });
         }
       })
