@@ -34,6 +34,8 @@
       = tag 'meta', property: 'og:description', content: t('share.description')
     = render partial: 'layouts/javascript_strings'
   %body
+    - if request.cookies[environment_specific_cookie_name('_assumed_identity')] == 'true'
+      #assumed_identity_tag= 'Assumed identity'
     - unless Rails.env.production?
       = render partial: 'layouts/environment_tag'
     - if current_user && current_user.age.nil?
