@@ -566,22 +566,25 @@ class FilesApi < Sinatra::Base
 
     bucket = FileBucket.new
     result = bucket.get(encrypted_channel_id, FileBucket::MANIFEST_FILENAME, env['HTTP_IF_MODIFIED_SINCE'], params['version'])
-    not_found if result[:status] == 'NOT_FOUND'
     not_modified if result[:status] == 'NOT_MODIFIED'
     last_modified result[:last_modified]
 
-    # {
-    #   "filesVersionId": "sadfhkjahfsdj",
-    #   "files": [
-    #     {
-    #       "filename": "name.jpg",
-    #       "category": "image",
-    #       "size": 100,
-    #       "versionId": "asldfklsakdfj"
-    #     }
-    #   ]
-    # }
-    {"filesVersionId": result[:version_id], "files": JSON.load(result[:body])}.to_json
+    if result[:status] == 'NOT_FOUND'
+      {"filesVersionId": "", "files": []}.to_json
+    else
+      # {
+      #   "filesVersionId": "sadfhkjahfsdj",
+      #   "files": [
+      #     {
+      #       "filename": "name.jpg",
+      #       "category": "image",
+      #       "size": 100,
+      #       "versionId": "asldfklsakdfj"
+      #     }
+      #   ]
+      # }
+      {"filesVersionId": result[:version_id], "files": JSON.load(result[:body])}.to_json
+    end
   end
 
   #
@@ -720,12 +723,18 @@ class FilesApi < Sinatra::Base
     # read the manifest
     bucket = FileBucket.new
     manifest_result = bucket.get(encrypted_channel_id, FileBucket::MANIFEST_FILENAME)
-    not_found if manifest_result[:status] == 'NOT_FOUND'
+    return {filesVersionId: ""}.to_json if manifest_result[:status] == 'NOT_FOUND'
     manifest = JSON.load manifest_result[:body]
 
-    # delete the manifest and all of the files it referenced
-    bucket.delete_multiple(encrypted_channel_id, [FileBucket::MANIFEST_FILENAME].concat(manifest.map {|e| e['filename'].downcase})) unless manifest.empty?
-    no_content
+    abuse_score = StorageApps.get_abuse(encrypted_channel_id)
+
+    # overwrite the manifest file with an empty list
+    response = bucket.create_or_replace(encrypted_channel_id, FileBucket::MANIFEST_FILENAME, [].to_json, params['files-version'], abuse_score)
+
+    # delete the files
+    bucket.delete_multiple(encrypted_channel_id, manifest.map {|e| e['filename'].downcase}) unless manifest.empty?
+
+    {filesVersionId: response.version_id}.to_json
   end
 
   #
