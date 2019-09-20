@@ -33,7 +33,11 @@ export class ResultsLoader extends React.Component {
   }
 
   load() {
-    const url = experiments.isEnabled(experiments.ROLLUP_SURVEY_REPORT)
+    const inExperiment = experiments.isEnabled(
+      experiments.ROLLUP_SURVEY_REPORT
+    );
+
+    const url = inExperiment
       ? `/api/v1/pd/workshops/${
           this.props.params['workshopId']
         }/experiment_survey_report`
@@ -57,6 +61,13 @@ export class ResultsLoader extends React.Component {
           facilitatorResponseCounts: data['facilitator_response_counts'],
           courseName: data['course_name']
         });
+
+        if (inExperiment) {
+          this.setState({
+            workshopRollups: data['workshop_rollups'],
+            facilitatorRollups: data['facilitator_rollups']
+          });
+        }
       })
       .fail(jqXHR => {
         this.setState({
