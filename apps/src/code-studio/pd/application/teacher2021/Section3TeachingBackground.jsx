@@ -5,7 +5,7 @@ import {
   PageLabels,
   SectionHeaders,
   TextFields
-} from '@cdo/apps/generated/pd/teacher1920ApplicationConstants';
+} from '@cdo/apps/generated/pd/teacher2021ApplicationConstants';
 import {Row, Col, ControlLabel, FormGroup} from 'react-bootstrap';
 import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
 import {isEmail} from '@cdo/apps/util/formatValidation';
