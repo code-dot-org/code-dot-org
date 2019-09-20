@@ -11,9 +11,6 @@ if has_ssh_key
 end
 
 home_path = node[:home]
-
-Chef::Log.warn("home_path: #{home_path}, chef_environment: #{node.chef_environment}")
-
 git_path = File.join home_path, node.chef_environment
 
 git git_path do
