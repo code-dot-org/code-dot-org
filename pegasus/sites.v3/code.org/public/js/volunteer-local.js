@@ -246,7 +246,8 @@ function compileHTML(index, location) {
   }
 
   if (location.experience_s) {
-    elements.push(createHTMLElement("strong", null, location.experience_s));
+    elements.push(createHTMLElement("strong", null, "Experience:"));
+    elements.push(document.createTextNode(location.experience_s));
   }
 
   if (location.location_flexibility_ss) {
