@@ -220,21 +220,33 @@ function loadMap(locations) {
   gmap.Load(mapOptions);
 }
 
-function compileHTML(index, location) {
-  var lines = [];
-  var line;
+function createHTMLElement(tag, attributes, text) {
+  let elem = document.createElement(tag);
 
-  // Compile HTML.
-  var html = '<h3 class="entry-detail">' + location.name_s + "</h3>";
+  Object.keys(attributes || {}).forEach(key => {
+    elem.setAttribute(key, attributes[key]);
+  });
+
+  if (text) {
+    elem.appendChild(document.createTextNode(text));
+  }
+
+  return elem;
+}
+
+function compileHTML(index, location) {
+  let elements = [];
+
+  elements.push(
+    createHTMLElement("h3", { class: "entry-detail" }, location.name_s)
+  );
 
   if (location.company_s) {
-    line = location.company_s;
-    lines.push(line);
+    elements.push(document.createTextNode(location.company_s));
   }
 
   if (location.experience_s) {
-    line = "<strong>Experience: </strong>" + i18n(location.experience_s);
-    lines.push(line);
+    elements.push(createHTMLElement("strong", null, location.experience_s));
   }
 
   if (location.location_flexibility_ss) {
@@ -242,15 +254,15 @@ function compileHTML(index, location) {
       location.location_flexibility_ss[key] = i18n("location_" + field);
     });
 
-    line =
-      "<strong>How I can help: </strong>" +
-      location.location_flexibility_ss.join(", ");
-    lines.push(line);
+    elements.push(createHTMLElement("strong", null, "How I can help:"));
+    elements.push(
+      document.createTextNode(location.location_flexibility_ss.join(", "))
+    );
   }
 
   if (location.description_s) {
-    line = "<strong>About me: </strong>" + location.description_s;
-    lines.push(line);
+    elements.push(createHTMLElement("strong", null, "About me:"));
+    elements.push(document.createTextNode(location.description_s));
   }
 
   if (location.linkedin_s) {
@@ -258,11 +270,8 @@ function compileHTML(index, location) {
       location.linkedin_s = "http://" + location.linkedin_s;
     }
 
-    line =
-      '<a href="' +
-      location.linkedin_s +
-      '" target="_blank">LinkedIn profile</a>';
-    lines.push(line);
+    elements.push(createHTMLElement("strong", null, "LinkedIn profile:"));
+    elements.push(document.createTextNode(location.linkedin_s));
   }
 
   if (location.facebook_s) {
@@ -270,26 +279,35 @@ function compileHTML(index, location) {
       location.facebook_s = "http://" + location.facebook_s;
     }
 
-    line =
-      '<a href="' +
-      location.facebook_s +
-      '" target="_blank">Facebook profile</a>';
-    lines.push(line);
+    elements.push(createHTMLElement("strong", null, "Facebook profile:"));
+    elements.push(document.createTextNode(location.facebook_s));
   }
 
-  $.each(lines, function(key, field) {
-    html += '<div class="profile-detail entry-detail">' + field + "</div>";
+  let htmlStr = "";
+  elements.forEach(elem => {
+    let div = createHTMLElement("div", {
+      class: "profile-detail entry-detail"
+    });
+    div.appendChild(elem);
+    htmlStr += div.outerHTML;
   });
 
-  return html;
+  return htmlStr;
 }
 
 function compileContact(index, location) {
   var details = location.name_s + " (" + i18n(location.experience_s) + ")";
-  var html = '<div id="addressee-details-' + index + '">' + details + "</div>";
-  $("#allnames").append(html);
+  var htmlStr = createHTMLElement(
+    "div",
+    {
+      id: "addressee-details-" + index
+    },
+    details
+  ).outerHTML;
 
-  return html;
+  $("#allnames").append(htmlStr);
+
+  return htmlStr;
 }
 
 function setContactTrigger(index, location, marker) {
