@@ -85,12 +85,9 @@ module Pd
         replace_which_course: 'If yes, please describe the course it will be replacing and why:'
       },
       section_3_teaching_background:
-        {subjects_teaching: BASE_PAGE_LABELS[:section_2_your_school][:subjects_teaching].gsub('17-18', '18-19')}.merge(
-          BASE_PAGE_LABELS[:section_2_your_school].slice(
-            :taught_in_past,
-            :cs_opportunities_at_school,
-            :previous_yearlong_cdo_pd
-          )
+        BASE_PAGE_LABELS[:section_2_your_school].slice(
+          :cs_opportunities_at_school,
+          :previous_yearlong_cdo_pd
         ),
       section_4_professional_learning_program_requirements:
         {
@@ -163,8 +160,6 @@ module Pd
         cs_how_many_minutes: "How many minutes will your CS Program class last?",
         cs_total_course_hours: "Total course hours",
         replace_existing: "Will this course replace an existing computer science course in the master schedule? (Teacher's response)",
-        subjects_teaching: "What subjects are you teaching this year (2018-19)?",
-        taught_in_past: "Have you taught computer science courses or activities in the past?",
         previous_yearlong_cdo_pd: "Have you participated in previous yearlong Code.org Professional Learning Programs?",
         able_to_attend_multiple: "Please indicate which workshops you are able to attend.",
         willing_to_travel: "How far would you be willing to travel to academic year workshops?",
@@ -275,7 +270,6 @@ module Pd
       # Bonus Points
       csp_how_offer: [2, 0],
       replace_existing: [5, 0],
-      taught_in_past: [2, 0],
       free_lunch_percent: [5, 0],
       underrepresented_minority_percent: [5, 0],
       race: [2, 0]
@@ -286,7 +280,6 @@ module Pd
       bonus_points: [
         :csp_how_offer,
         :replace_existing,
-        :taught_in_past,
         :free_lunch_percent,
         :underrepresented_minority_percent,
         :race,
@@ -386,8 +379,6 @@ module Pd
         :plan_to_teach,
         :replace_existing,
         :replace_which_course,
-        :subjects_teaching,
-        :taught_in_past,
         :previous_yearlong_cdo_pd,
         :committed,
         :able_to_attend_multiple,

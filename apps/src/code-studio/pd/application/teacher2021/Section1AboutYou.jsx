@@ -22,8 +22,8 @@ import queryString from 'query-string';
 import {styles} from './TeacherApplicationConstants';
 import _ from 'lodash';
 
-const CSD_URL = 'https://code.org/educate/professional-learning/cs-discoveries';
-const CSP_URL = 'https://code.org/educate/professional-learning/cs-principles';
+const CSD_URL = 'https://code.org/educate/csd';
+const CSP_URL = 'https://code.org/educate/csp';
 const PD_RESOURCES_URL =
   'https://support.code.org/hc/en-us/articles/115003865532';
 const CS_TEACHERS_URL = 'https://code.org/educate/community';
@@ -159,7 +159,7 @@ export default class Section1AboutYou extends LabeledFormComponent {
         <h3>Need more information? </h3>
         <p>
           If you need more information about the program before you apply,
-          please visit{' '}
+          please visit the{' '}
           <a href={CSD_URL} target="_blank">
             CS Discoveries
           </a>{' '}
@@ -167,15 +167,8 @@ export default class Section1AboutYou extends LabeledFormComponent {
           <a href={CSP_URL} target="_blank">
             CS Principles
           </a>{' '}
-          landing pages. If you’re not sure which program is the right fit for
-          your classroom, we encourage you to{' '}
-          <a
-            href="https://docs.google.com/document/d/1ASRRQ8Cloyp9kXPBtxa8j5xmXQ0SgLyUCGx2h26WrkQ/edit"
-            target="_blank"
-          >
-            check out our course and professional learning options.
-          </a>{' '}
-          For additional questions regarding the program or application, please{' '}
+          landing pages. For additional questions regarding the program or
+          application, please{' '}
           <RegionalPartnerMiniContactPopupLink
             sourcePageId="teacher-application-first-page"
             notes="Please tell me more about the professional learning program for grades 6-12!"

@@ -98,29 +98,9 @@ export default class Section3TeachingBackground extends LabeledFormComponent {
         {this.usPhoneNumberInputFor('principalPhoneNumber', {
           autoComplete: 'never'
         })}
-
         {this.radioButtonsWithAdditionalTextFieldsFor('currentRole', {
           [TextFields.otherPleaseList]: 'other'
         })}
-
-        {this.checkBoxesWithAdditionalTextFieldsFor(
-          'subjectsTeaching',
-          {
-            [TextFields.otherPleaseList]: 'other'
-          },
-          {
-            columnCount: 3
-          }
-        )}
-        {this.checkBoxesWithAdditionalTextFieldsFor(
-          'taughtInPast',
-          {
-            [TextFields.otherPleaseList]: 'other'
-          },
-          {
-            columnCount: 3
-          }
-        )}
         {this.checkBoxesFor('previousYearlongCdoPd')}
       </FormGroup>
     );
