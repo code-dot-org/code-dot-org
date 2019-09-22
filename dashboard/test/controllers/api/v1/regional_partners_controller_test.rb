@@ -278,6 +278,21 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
     assert_equal regional_partner.contact_name, JSON.parse(@response.body)['contact_name']
   end
 
+  test 'find regional partner on second geocoder call' do
+    mock_illinois_object = OpenStruct.new(state_code: "IL")
+
+    # Specify the multiple expects calls in reverse order.  We will fail on the
+    # first geocoder lookup, but succeed on the second one.
+    Geocoder.expects(:search).returns([mock_illinois_object])
+    Geocoder.expects(:search).returns([])
+
+    regional_partner = create :regional_partner_illinois
+
+    get :find, zip_code: 60415
+    assert_response :success
+    assert_equal regional_partner.contact_name, JSON.parse(@response.body)['contact_name']
+  end
+
   test 'find no regional partner summer workshops for a state' do
     mock_washington_object = OpenStruct.new(state_code: "WA")
     Geocoder.expects(:search).returns([mock_washington_object])
@@ -294,6 +309,7 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
   end
 
   test 'find no regional partner summer workshops for non-existent ZIP code' do
+    Geocoder.expects(:search).returns([])
     Geocoder.expects(:search).returns([])
 
     get :find, zip_code: 11111

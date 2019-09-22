@@ -180,6 +180,7 @@ class RegionalPartner < ActiveRecord::Base
   # and we don't find a partner with that ZIP, we geocode that ZIP to get a state and try with that
   # state.
   # @param [String] zip_code
+  # @returns [Array] An array of 2 items: RegionalPartner, state string
   def self.find_by_zip(zip_code)
     partner = nil
     state = nil
@@ -195,7 +196,15 @@ class RegionalPartner < ActiveRecord::Base
             # Geocoder can raise a number of errors including SocketError, with a common base of StandardError
             # See https://github.com/alexreisner/geocoder#error-handling
             Retryable.retryable(on: StandardError) do
-              state = Geocoder.search({zip: zip_code})&.first&.state_code
+              state = Geocoder.search(zip_code)&.first&.state_code
+            end
+
+            unless state
+              Retryable.retryable(on: StandardError) do
+                # Try with a hash and a specific zip key.  For some reason,
+                # this sometimes works when the previous attempt doesn't.
+                state = Geocoder.search({zip: zip_code})&.first&.state_code
+              end
             end
           end
         rescue StandardError => e
