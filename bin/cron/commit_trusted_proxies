@@ -7,5 +7,5 @@ set -e
 dashboard/scripts/archive/generate_trusted_proxies
 
 git add lib/cdo/trusted_proxies.json
-git commit -m "update trusted proxy list for cloudfront servers"
+git commit -m "update trusted proxy list for cloudfront servers" || true
 git push
