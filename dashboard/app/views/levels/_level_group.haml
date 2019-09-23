@@ -61,4 +61,4 @@
   - unless @script_level.nil?
     - init_data = { total_level_count: @total_level_count, page: current_page.to_i || -1, last_attempt: parsed_last_attempt}
 
-  %script{src: minifiable_asset_path('js/levels/_level_group.js'), data: {levelData: data.to_json, initData: init_data.to_json}}
+  %script{src: webpack_asset_path('js/levels/_level_group.js'), data: {levelData: data.to_json, initData: init_data.to_json}}
