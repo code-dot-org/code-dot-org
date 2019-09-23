@@ -240,7 +240,7 @@
     "rosie": "^2.0.1",
     "selectize": "^0.12.4",
     "snack-build": "0.0.1",
-    "snack-sdk": "2.3.1",
+    "snack-sdk": "2.3.4",
     "wgxpath": "^1.2.0",
     "whatwg-fetch": "^2.0.3"
   }
