@@ -2,19 +2,30 @@
 # To run Test Kitchen tests using this EC2 configuration instead of Docker, run (from within the cdo-*/ folder):
 # KITCHEN_LOCAL_YAML=../.kitchen.ec2.yml bundle exec kitchen verify
 transport:
+  name: sftp
   ssh_key: ~/.ssh/server_access_key # Set this to your server_access_key location
 driver:
   name: ec2
   region: us-east-1
   aws_ssh_key_id: server_access_key
-  instance_type: c3.8xlarge
+  instance_type: m5.4xlarge
+<% if ENV['SUBNET_ID'] %>
+  subnet_id: <%= ENV['SUBNET_ID'] %>
+<% end %>
+<% if ENV['IMAGE_ID'] %>
+  image_id: <%= ENV['IMAGE_ID']%>
+<% end %>
+  associate_public_ip: true
   block_device_mappings:
-    - ebs_device_name: /dev/sda1
-      ebs_volume_size: 64
-      ebs_delete_on_termination: true
-      ebs_volume_type: gp2
+    - device_name: /dev/sda1
+      ebs:
+        volume_size: 64
+        delete_on_termination: true
+        volume_type: gp2
 #  duration: 60 # Use a limited-duration spot instance (minutes)
 #  price: 3 # Use spot instance ($/hour bid)
   retryable_tries: 60
   retryable_sleep: 10
   iam_profile_name: <%=ENV['IAM_PROFILE_NAME']%>
+provisioner:
+  name: chef_zero

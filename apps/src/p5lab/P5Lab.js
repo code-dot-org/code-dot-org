@@ -319,7 +319,8 @@ P5Lab.prototype.init = function(config) {
 
     // Store p5specialFunctions in the unusedConfig array so we don't give warnings
     // about these functions not being called:
-    config.unusedConfig = this.p5Wrapper.p5specialFunctions;
+    // Clone p5specialFunctions so we can remove 'setup' from unusedConfig but not p5specialFunctions
+    config.unusedConfig = [...this.p5Wrapper.p5specialFunctions];
     // remove 'setup' from unusedConfig so that we can show a warning for redefining it.
     if (config.unusedConfig.indexOf('setup') !== -1) {
       config.unusedConfig.splice(config.unusedConfig.indexOf('setup'), 1);
