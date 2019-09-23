@@ -1,0 +1,13 @@
+login_required true
+hideable_stages true
+has_verified_resources true
+pilot_experiment 'csp-piloters'
+curriculum_umbrella 'CSP'
+
+stage 'Algorithms Solve Problems'
+level 'CSP U6L1 SFLP 20-21', progression: 'Lesson Overview'
+
+stage 'Algorithm Efficiency'
+level 'CSP U6L2 SFLP 20-21', progression: 'Lesson Overview'
+level 'CSP U6L2 Ticket Generator', progression: 'Widget: Ticket Generator'
+level 'U6L2 CFU Binary Search Steps', progression: 'Check For Understanding', assessment: true
