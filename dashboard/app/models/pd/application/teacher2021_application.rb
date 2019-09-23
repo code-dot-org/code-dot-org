@@ -188,7 +188,7 @@ module Pd::Application
           replace_existing: [
             YES,
             "No, this course will be added to the schedule in addition to an existing computer science course",
-            "No, this course will be added to the existing schedule, but it won't replace an existing computer science course",
+            "No, computer science is new to my school",
             TEXT_FIELDS[:i_dont_know_explain]
           ],
           how_heard: [
@@ -202,14 +202,14 @@ module Pd::Application
             TEXT_FIELDS[:other_with_text]
           ],
           csd_which_grades: (6..12).map(&:to_s) <<
-            'Not sure yet if my school plans to offer CS Discoveries in the 2019-20 school year',
+            'Not sure yet if my school plans to offer CS Discoveries in the 2020-21 school year',
           csp_which_grades: (9..12).map(&:to_s) <<
-            'Not sure yet if my school plans to offer CS Principles in the 2019-20 school year',
+            'Not sure yet if my school plans to offer CS Principles in the 2020-21 school year',
           plan_to_teach: [
-            'Yes, I plan to teach this course this year (2019-20)',
-            'I hope to be able teach this course this year (2019-20)',
-            'No, I don’t plan to teach this course this year (2019-20), but I hope to teach this course the following year (2020-21)',
-            'No, someone else from my school will teach this course this year (2019-20)',
+            'Yes, I plan to teach this course this year (2020-21)',
+            'I hope to teach this course this year (2020-21)',
+            'No, I don’t plan to teach this course this year (2020-21), but I hope to teach this course the following year (2020-21)',
+            'No, someone else from my school will teach this course this year (2020-21)',
             TEXT_FIELDS[:dont_know_if_i_will_teach_explain]
           ],
           travel_to_another_workshop: [
