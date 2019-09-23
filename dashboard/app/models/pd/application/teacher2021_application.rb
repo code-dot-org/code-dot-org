@@ -191,7 +191,6 @@ module Pd::Application
             "No, this course will be added to the existing schedule, but it won't replace an existing computer science course",
             TEXT_FIELDS[:i_dont_know_explain]
           ],
-          cs_terms: COMMON_OPTIONS[:terms_per_year],
           how_heard: [
             'Code.org website',
             'Code.org email',
@@ -250,7 +249,6 @@ module Pd::Application
         cs_how_many_minutes
         cs_how_many_days_per_week
         cs_how_many_weeks_per_year
-        cs_terms
         plan_to_teach
         replace_existing
 
@@ -302,7 +300,6 @@ module Pd::Application
     # @override
     def additional_text_fields
       super.concat [
-        [:cs_terms, TEXT_FIELDS[:other_with_text]],
         [:plan_to_teach, TEXT_FIELDS[:dont_know_if_i_will_teach_explain]],
         [:replace_existing, TEXT_FIELDS[:i_dont_know_explain]],
         [:able_to_attend_multiple, TEXT_FIELDS[:not_sure_explain], :able_to_attend_multiple_not_sure_explain],
@@ -533,7 +530,6 @@ module Pd::Application
         bonus_points_scores[:cs_terms] = responses[:cs_terms] == options[:cs_terms][4] ? 2 : 0
       elsif course == 'csp'
         meets_minimum_criteria_scores[:csp_which_grades] = (responses[:csp_which_grades] & options[:csp_which_grades].first(4)).any? ? YES : NO
-        meets_minimum_criteria_scores[:cs_total_course_hours] = (responses[:cs_total_course_hours]&.>= 100) ? YES : NO
 
         bonus_points_scores[:csp_how_offer] = responses[:csp_how_offer].in?(options[:csp_how_offer].last(2)) ? 2 : 0
       end
