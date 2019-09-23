@@ -1,7 +1,8 @@
-import React from "react";
+import React from 'react';
+import Canvas from './Canvas';
 
 export default class CreatureCreator extends React.Component {
   render() {
-    return <div>Creature Creator placeholder!</div>;
+    return <div> {<Canvas/>} </div>;
   }
 }

@@ -52,7 +52,7 @@ module.exports = {
     "no-new-object": "error",
     "no-trailing-spaces": "error",
     "no-undef": "error",
-    "no-unused-vars": "error",
+    "no-unused-vars": ["error", { args: "none" }],
     "no-with": "error",
     "object-curly-spacing": "off",
     "semi": "error",
