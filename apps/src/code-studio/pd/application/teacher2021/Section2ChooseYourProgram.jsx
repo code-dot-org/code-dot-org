@@ -157,18 +157,6 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
             course in 2020-21.
           </p>
         )}
-        {this.radioButtonsWithAdditionalTextFieldsFor(
-          'csTerms',
-          {
-            [TextFields.otherWithText]: 'other'
-          },
-          {
-            label: PageLabels.section2ChooseYourProgram.csTerms.replace(
-              'program',
-              this.getNameForSelectedProgram()
-            )
-          }
-        )}
         {this.radioButtonsWithAdditionalTextFieldsFor('planToTeach', {
           [TextFields.dontKnowIfIWillTeachExplain]: 'other'
         })}
