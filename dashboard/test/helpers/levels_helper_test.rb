@@ -671,12 +671,12 @@ class LevelsHelperTest < ActionView::TestCase
       "<xml><xml><block type=\"embedded_block\"/></xml></xml>"\
       "<div id=\"codeWorkspace\" style=\"display: none\"></div>"\
       "<style>.blocklySvg { background: none; }</style>"\
-      "<script src=\"/js/blockly.js\"></script>"\
-      "<script src=\"/js/en_us/blockly_locale.js\"></script>"\
-      "<script src=\"#{webpack_asset_path('js/common.js')}\"></script>"\
-      "<script src=\"/js/en_us/maze_locale.js\"></script>"\
-      "<script src=\"#{webpack_asset_path('js/maze.js')}\" data-appoptions=\"{&quot;readonly&quot;:true,&quot;embedded&quot;:true,&quot;locale&quot;:&quot;en_us&quot;,&quot;baseUrl&quot;:&quot;/blockly/&quot;,&quot;blocks&quot;:&quot;\\u003cxml\\u003e\\u003c/xml\\u003e&quot;,&quot;dialog&quot;:{},&quot;nonGlobal&quot;:true}\"></script>"\
-      "<script src=\"#{webpack_asset_path('js/embedBlocks.js')}\"></script>"
+      "<script src=\"/blockly/js/blockly.js\"></script>"\
+      "<script src=\"/blockly/js/en_us/blockly_locale.js\"></script>"\
+      "<script src=\"/blockly/js/common.js\"></script>"\
+      "<script src=\"/blockly/js/en_us/maze_locale.js\"></script>"\
+      "<script src=\"/blockly/js/maze.js\" data-appoptions=\"{&quot;readonly&quot;:true,&quot;embedded&quot;:true,&quot;locale&quot;:&quot;en_us&quot;,&quot;baseUrl&quot;:&quot;/blockly/&quot;,&quot;blocks&quot;:&quot;\\u003cxml\\u003e\\u003c/xml\\u003e&quot;,&quot;dialog&quot;:{},&quot;nonGlobal&quot;:true}\"></script>"\
+      "<script src=\"/blockly/js/embedBlocks.js\"></script>"
 
     unstub(:request)
   end
