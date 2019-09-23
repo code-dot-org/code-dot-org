@@ -91,5 +91,5 @@ end
 service 'rsyslog' do
   subscribes :restart, 'file[99-cdo.conf]', :delayed
   subscribes :restart, 'file[50-default.conf]', :delayed
-  provider Chef::Provider::Service::Upstart
+  provider Chef::Provider::Service::Systemd
 end
