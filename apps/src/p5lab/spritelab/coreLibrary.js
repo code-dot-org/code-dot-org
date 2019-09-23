@@ -17,38 +17,24 @@ export function reset() {
 }
 
 /**
- * Returns a list of all sprites that have the specified animation.
- * Called on each tick of the draw loop because animations can change throughout runtime.
- * @param {string} animation - animation name
- */
-function allSpritesWithAnimation(animation) {
-  let group = [];
-  Object.keys(nativeSpriteMap).forEach(spriteId => {
-    if (nativeSpriteMap[spriteId].getAnimationLabel() === animation) {
-      let sprite = nativeSpriteMap[spriteId];
-      if (sprite) {
-        group.push(sprite);
-      }
-    }
-  });
-  return group;
-}
-
-/**
  * Returns a list of sprites, specified either by id or animation name.
  * @param {(string|number)} spriteOrGroup - Either the id or the animation name
  * @return {[Sprite]} List of sprites that match the parameter. Either a list containing the one sprite
  * the specified id, or a list containing all sprites with the specified animation.
  */
-export function getSpriteArray(spriteOrGroup) {
-  if (typeof spriteOrGroup === 'number') {
-    const sprite = nativeSpriteMap[spriteOrGroup];
-    if (sprite) {
-      return [sprite];
-    }
+export function getSpriteArray(spriteId) {
+  if (spriteId.hasOwnProperty('id')) {
+    return [nativeSpriteMap[spriteId.id]];
   }
-  if (typeof spriteOrGroup === 'string') {
-    return allSpritesWithAnimation(spriteOrGroup);
+  if (spriteId.name) {
+    return Object.values(nativeSpriteMap).filter(
+      sprite => sprite.name === spriteId.name
+    );
+  }
+  if (spriteId.costume) {
+    return Object.values(nativeSpriteMap).filter(
+      sprite => sprite.getAnimationLabel() === spriteId.costume
+    );
   }
   return [];
 }
@@ -102,9 +88,12 @@ export function getSpriteIdsInUse() {
  * @param {Sprite} sprite
  * @returns {Number} A unique id to reference the sprite.
  */
-export function addSprite(sprite) {
+export function addSprite(sprite, name) {
   nativeSpriteMap[spriteId] = sprite;
   sprite.id = spriteId;
+  if (name) {
+    sprite.name = name;
+  }
   spriteId++;
   return sprite.id;
 }
@@ -284,5 +273,5 @@ export function removeBehavior(sprite, behavior) {
 }
 
 export function runBehaviors() {
-  behaviors.forEach(behavior => behavior.func(behavior.sprite.id));
+  behaviors.forEach(behavior => behavior.func({id: behavior.sprite.id}));
 }

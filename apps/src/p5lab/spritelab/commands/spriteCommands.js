@@ -48,7 +48,10 @@ export const commands = {
     }
   },
 
-  makeSprite(animation, location) {
+  makeSprite(opts) {
+    let name = opts.name;
+    let location = opts.location;
+    let animation = opts.animation;
     if (!location) {
       location = {x: 200, y: 200};
     }
@@ -64,7 +67,7 @@ export const commands = {
     sprite.getScale = function() {
       return sprite.scale / sprite.baseScale;
     };
-    let spriteId = coreLibrary.addSprite(sprite);
+    let spriteId = coreLibrary.addSprite(sprite, name);
     if (animation) {
       sprite.setAnimation(animation);
       sprite.scale /= sprite.baseScale;
