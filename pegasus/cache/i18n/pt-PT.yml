@@ -952,6 +952,7 @@ pt-PT:
   iceage_name: Idade do gelo
   minecraft_name: Minecraft
   starwarsblocks_name: Guerra das Estrelas (Blocos)
+  text-compression_name: Compressão de Texto
   applab_name: Laboratório de aplicações
   applab_gradelevel: Maiores de 13 anos
   codeorg_gradelevel: Dos 4 aos 104 anos
@@ -1611,9 +1612,18 @@ pt-PT:
   flappy_shortcode: bater as assas
   header_home: Início
   header_courses: Cursos
+  header_course_catalog: Catálogo de Cursos
   header_project_gallery: Projetos
   header_sections: Turmas
+  header_educate_elementary: Escola primária
+  header_educate_middle: Escola Básica 2. º e/ou 3. º Ciclos
+  header_educate_high: Escola Secundária
   header_educate_hoc: Hora de Código
+  header_educate_partner: Seja nosso parceiro
+  header_educate_beyond: Para além de Code.org
+  header_educate_inspire: Inspire um aluno
+  header_educate_community: Comunidade on-line
+  header_educate_tools: Ferramentas e Videos
   header_about_us: Quem somos
   header_about_leadership: Administração
   header_about_donors: Doadores
@@ -1624,7 +1634,11 @@ pt-PT:
   header_about_jobs: Empregos
   header_about_contact: Contacte-nos
   header_about_faqs: Perguntas frequentes
+  header_learn: Aprender
+  header_teach: Ensine
   header_stats: Estatística
+  header_help_us: Ajude-nos
+  header_about: Sobre
   header_teacher_community: Comunidade de professores
   header_help_support: Ajuda e suporte
   header_report_bug: Comunicar um problema
@@ -1641,6 +1655,9 @@ pt-PT:
   user_header_view_my_projects: Ver os meus projetos
   view_all_sections: Ver todas as turmas
   applab_tile_start_tutorial: Começar
+  account_sign_up_email_opt_in: Podemos enviar-lhe um email sobre as atualizações
+    dos nossos cursos, oportunidades locais ou outras notícias sobre a ciência de
+    computação?(aproximadamente 1 vez por mês)
   hoc_overview_start_tutorial: Começar
   hoc2018_creativity_create: Criar
   hoc2018_creativity_what_will_you_create: O que vais criar?

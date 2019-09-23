@@ -1,0 +1,27 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "game_id": 64,
+  "created_at": "2019-09-17T22:58:24.000Z",
+  "level_num": "custom",
+  "user_id": 833,
+  "properties": {
+    "encrypted": "false",
+    "skin": "gamelab",
+    "show_debug_watch": true,
+    "block_pools": [
+      "gamelab"
+    ],
+    "helper_libraries": [
+      "GameLabJr"
+    ],
+    "use_default_sprites": true,
+    "hide_animation_mode": true,
+    "show_type_hints": true,
+    "include_shared_functions": true,
+    "hide_custom_blocks": true,
+    "preload_asset_list": null
+  },
+  "published": true
+}]]></config>
+  <blocks/>
+</GamelabJr>
