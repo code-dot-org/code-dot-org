@@ -85,7 +85,7 @@ describe('ResourcesEditor', () => {
       const wrapper = mount(<ResourcesEditor {...defaultProps} />);
       const resource = wrapper.find('Resource').at(0);
       assert.equal(resource.find('select').length, 1);
-      assert.equal(resource.find('option').length, 10);
+      assert.equal(resource.find('option').length, 11);
       assert.equal(resource.find('input').length, 1);
     });
   });
