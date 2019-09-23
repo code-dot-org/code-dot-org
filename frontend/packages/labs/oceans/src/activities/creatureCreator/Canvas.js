@@ -26,7 +26,7 @@ export default class Canvas extends Component {
   render() {
     return (
       <div>
-        <button onClick={this.randomColor.bind(this)}>Random Color</button>
+        <button onClick={e => this.randomColor()}>Random Color</button>
         <div id="p5-canvas" />
         <p>{this.state.notes}</p>
       </div>

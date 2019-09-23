@@ -12,8 +12,9 @@ export default function sketch(p) {
   };
 
   p.setColor = newColor => {
-    if (canvas)
+    if (canvas) {
       //Make sure the canvas has been created
       p.fill(newColor);
+    }
   };
 }
