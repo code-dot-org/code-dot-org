@@ -4,7 +4,7 @@ class AssetHelper
   include Singleton
 
   def webpack_manifest_path
-    ''
+    "#{CDO.root_dir}/dashboard/public/blockly/js/manifest.json"
   end
 
   def webpack_manifest
