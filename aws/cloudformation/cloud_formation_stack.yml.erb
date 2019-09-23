@@ -28,6 +28,7 @@ frontends = @frontends = rack_env?(:production) || ENV['FRONTENDS']
 database = @database = [:staging, :test, :levelbuilder, :adhoc].include?(rack_env) || ENV['DATABASE']
 load_balancer = @load_balancer = !rack_env?(:adhoc) || ENV['FRONTENDS']
 alarms = @alarms = !rack_env?(:adhoc) || ENV['ALARMS']
+chef_version = '12.7.2'
 
 unless dry_run
   update_certs.call unless load_balancer
@@ -189,7 +190,8 @@ Resources:
           ],
           commit: commit,
           shutdown: true,
-          daemon: false
+          daemon: false,
+          chef_version: chef_version
         )%>
   AMI<%=ami%>: <%= lambda_fn.call 'AMIManager',
     DependsOn: "AMICreate#{ami}",
@@ -619,7 +621,8 @@ Resources:
           ],
           commit: nil, # track branch
           shutdown: false,
-          daemon: true
+          daemon: true,
+          chef_version: chef_version
         )%>
       NetworkInterfaces:
       - AssociatePublicIpAddress: true

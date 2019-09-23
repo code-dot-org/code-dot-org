@@ -655,6 +655,7 @@
   "leaveSection": "離開學習小組",
   "less": "較少",
   "lesson": "課程",
+  "lessonExtrasButton": "前往教師控制台",
   "lessonName": "階段名稱",
   "lessonNumbered": "階段 {lessonNumber} ：{lessonName}",
   "lessonPlans": "教學計畫",

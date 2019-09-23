@@ -232,6 +232,15 @@ da-DK:
       course4_artist_fwp_challenge1: Prøv at køre dette program, og foretag ændringer
         for at se hvad der sker. Kan du finde ud af hvordan det virker? (Ellers slet
         det og erstat det med noget helt andet)
+      courseA_maze_seq1: '"Leg med blokkene og prøv at få mig hen til den onde gris!"'
+      courseA_maze_seq1_2018: '"Leg med blokkene og prøv at få mig hen til den onde
+        gris!"'
+      courseA_maze_seq1_2019: '"Leg med blokkene og prøv at få mig hen til den onde
+        gris!"'
+      courseA_maze_seq2: |-
+        "En fejl! Fiks koden for at få mig hen til grisen."
+
+        ![expandable](https://images.code.org/4af4959874b3ca1fdd3008dc4f77add4-image-1497994904322.gif)
       courseD_bee_nestedLoops8: 'Indsaml al nektar fra alle blomster, og lav honning
         i alle bikuber. Brug indlejrede løkker. '
       courseD_bee_nestedLoops8_2018: 'Indsaml al nektar fra alle blomster, og lav

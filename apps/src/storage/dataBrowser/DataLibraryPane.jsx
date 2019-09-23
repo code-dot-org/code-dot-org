@@ -2,7 +2,7 @@ import Radium from 'radium';
 import React from 'react';
 import LibraryCategory from './LibraryCategory';
 import SearchBar from '@cdo/apps/templates/SearchBar';
-import datasetManifest from './datasetManifest.json';
+import {categories} from './datasetManifest.json';
 import color from '../../util/color';
 import msg from '@cdo/locale';
 
@@ -33,7 +33,7 @@ class DataLibraryPane extends React.Component {
           onChange={() => console.log('search!')}
         />
         <hr style={styles.divider} />
-        {datasetManifest.categories.map(category => (
+        {categories.map(category => (
           <LibraryCategory
             key={category.name}
             name={category.name}

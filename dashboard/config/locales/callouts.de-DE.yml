@@ -166,23 +166,65 @@ de-DE:
       Underground Iron_2019:
         craft_what_is_iron: Baue dieses Eisen ab!
       courseA_artist_loops4:
-        courseA_artist_loops4_1: Diese Zahl gibt an, wie viele dieser Blöcke in diesem
-          Puzzle verwendet werden können.
+        courseA_artist_loops4_1: Diese Zahl gibt an, wie viele dieser Blöcke in dieser
+          Aufgabe verwendet werden können.
       courseA_artist_loops4_2018:
-        courseA_artist_loops4_1: Diese Zahl gibt an, wie viele dieser Blöcke in diesem
-          Puzzle verwendet werden können.
+        courseA_artist_loops4_1: Diese Zahl gibt an, wie viele dieser Blöcke in dieser
+          Aufgabe verwendet werden können.
       courseA_artist_loops4_2019:
-        courseA_artist_loops4_1: Diese Zahl gibt an, wie viele dieser Blöcke in diesem
-          Puzzle verwendet werden können.
+        courseA_artist_loops4_1: Diese Zahl gibt an, wie viele dieser Blöcke in dieser
+          Aufgabe verwendet werden können.
+      courseA_artist_loops7:
+        courseA_artist_loops7_1: Diese Zahl bedeutet, dass du nur einen dieser Blöcke
+          für die Lösung verwenden darfst.
+      courseA_artist_loops7_2018:
+        courseA_artist_loops7_1: Diese Zahl bedeutet, dass du nur einen dieser Blöcke
+          für die Lösung verwenden darfst.
+      courseA_artist_loops7_2019:
+        courseA_artist_loops7_1: Diese Zahl bedeutet, dass du nur einen dieser Blöcke
+          für die Lösung verwenden darfst.
+      courseA_artist_loops8:
+        courseA_artist_loops8_1: Wußtest du, dass du über eine Linie nochmals darüber
+          zeichnen kannst, wann immer es nötig ist?
+      courseA_artist_loops8_2018:
+        courseA_artist_loops8_1: Wußtest du, dass du über eine Linie nochmals darüber
+          zeichnen kannst, wann immer es nötig ist?
+      courseA_artist_loops8_2019:
+        courseA_artist_loops8_1: Wußtest du, dass du über eine Linie nochmals darüber
+          zeichnen kannst, wann immer es nötig ist?
+      courseA_collector_loops1:
+        courseA_collector_loops1_1: Siehst du einige neue Blöcke in deiner Werkzeugkiste?
+          Mach dir keine Sorgen, wir zeigen dir später noch wofür du sie benutzen
+          kannst.
       courseA_collector_loops3:
         gradek_adventurer_loops2_1: Diese Zahl gibt an, wie viele dieser Blöcke in
-          diesem Puzzle verwendet werden können.
+          dieser Aufgabe verwendet werden können.
       courseA_collector_loops3_2018:
         gradek_adventurer_loops2_1: Diese Zahl gibt an, wie viele dieser Blöcke in
-          diesem Puzzle verwendet werden können.
+          dieser Aufgabe verwendet werden können.
       courseA_collector_loops3_2019:
         gradek_adventurer_loops2_1: Diese Zahl gibt an, wie viele dieser Blöcke in
-          diesem Puzzle verwendet werden können.
+          dieser Aufgabe verwendet werden können.
+      courseA_collector_preLoops2:
+        courseA_collector_loops1_1: Siehst du einige neue Blöcke in deiner Werkzeugkiste?
+          Mach dir keine Sorgen, wir zeigen dir später noch wofür du sie benutzen
+          kannst.
+      courseA_collector_preLoops3:
+        courseA_collector_loops1_1: Siehst du einige neue Blöcke in deiner Werkzeugkiste?
+          Mach dir keine Sorgen, wir zeigen dir später noch wofür du sie benutzen
+          kannst.
+      courseA_collector_preLoops4:
+        courseA_collector_loops1_1: Siehst du einige neue Blöcke in deiner Werkzeugkiste?
+          Mach dir keine Sorgen, wir zeigen dir später noch wofür du sie benutzen
+          kannst.
+      courseA_collector_preLoops5:
+        courseA_collector_loops1_1: Siehst du einige neue Blöcke in deiner Werkzeugkiste?
+          Mach dir keine Sorgen, wir zeigen dir später noch wofür du sie benutzen
+          kannst.
+      courseA_collector_preLoops6:
+        courseA_collector_loops1_1: Siehst du einige neue Blöcke in deiner Werkzeugkiste?
+          Mach dir keine Sorgen, wir zeigen dir später noch wofür du sie benutzen
+          kannst.
       courseA_maze_seq1:
         courseA_maze_seq1_1: Klicke auf die Glühbirne wenn du einen Tipp brauchst!
       courseA_maze_seq1_2018:
@@ -195,6 +237,34 @@ de-DE:
       courseA_maze_seq4:
         made_of_stone: Diese Blöcke sind aus Stein. Du kannst sie entfernen, aber
           du kannst sie nicht löschen!
+      courseA_playLab_events4:
+        courseA_playlab_events4_callout1: Dies ist ein Hinweis
+      courseA_playLab_events4_2018:
+        courseA_playlab_events4_callout1: Dies ist ein Hinweis
+      courseA_playLab_events4_2019:
+        courseA_playlab_events4_callout1: Dies ist ein Hinweis
+      courseA_playLab_events5:
+        courseA_playLab_events5_1: Klicke hier um die Richtung des Pfeils im Ereignis-Block
+          zu ändern.
+      courseA_playLab_events5_2018:
+        courseA_playLab_events5_1: Klicke hier um die Richtung des Pfeils im Ereignis-Block
+          zu ändern.
+      courseA_playLab_events5_2019:
+        courseA_playLab_events5_1: Klicke hier um die Richtung des Pfeils im Ereignis-Block
+          zu ändern.
+      courseA_playLab_events6:
+        courseA_playLab_events6_1: Hier kannst du einen 'zufälligen' Ton auswählen.
+          Das heißt du weißt nicht, welcher Ton es sein wird, bis du ihn hörst!
+      courseA_playLab_events6_2018:
+        courseA_playLab_events6_1: Hier kannst du einen 'zufälligen' Ton auswählen.
+          Das heißt du weißt nicht, welcher Ton es sein wird, bis du ihn hörst!
+      courseA_playLab_events6_2019:
+        courseA_playLab_events6_1: Hier kannst du einen 'zufälligen' Ton auswählen.
+          Das heißt du weißt nicht, welcher Ton es sein wird, bis du ihn hörst!
+      courseB_collector_loops1:
+        courseB_collector_loops1_1: Siehst du einige neue Blöcke in deiner Werkzeugkiste?
+          Mach dir keine Sorgen, wir zeigen dir später noch wofür du sie benutzen
+          kannst.
       courseB_maze_seq1:
         courseB_maze_seq1: Klicke auf die Glühbirne wenn du einen Tipp brauchst!
       courseB_maze_seq1_2018:
@@ -204,6 +274,37 @@ de-DE:
       courseB_maze_seq2:
         courseB_maze_seq2_callout1: Klicke auf die Schritt Schaltfläche um Schritt-für-Schritt
           durch das Programm zu gehen. Das wird dir helfen, den Fehler zu finden!
+      courseC_collector_prog1:
+        courseC_collector_prog1_1: Siehst du einige neue Blöcke in deiner Werkzeugkiste?
+          Mach dir keine Sorgen, wir zeigen dir später noch wofür du sie benutzen
+          kannst.
+      courseC_maze_programming3:
+        courseC_maze_programming3_3: Diese Blöcke sind aus Stein und können nicht
+          weggeworfen werden.
+      courseC_maze_programming3_2018:
+        courseC_maze_programming3_3: Diese Blöcke sind aus Stein und können nicht
+          weggeworfen werden.
+      courseC_maze_programming3_2019:
+        courseC_maze_programming3_3: Diese Blöcke sind aus Stein und können nicht
+          weggeworfen werden.
+      courseC_maze_programming7:
+        courseC_maze_programming7_1: Das hier ist deine erste Herausforderung! Diese
+          Aufgaben sind nicht einfach und du brauchst wahrscheinlich mehrere Versuche,
+          bis du sie gelöst hast.
+        courseC_maze_programming7_2: Diese Blöcke sind aus Stein und können nicht
+          weggeworfen werden.
+      courseC_maze_programming7_2018:
+        courseC_maze_programming7_1: Das hier ist deine erste Herausforderung! Diese
+          Aufgaben sind nicht einfach und du brauchst wahrscheinlich mehrere Versuche,
+          bis du sie gelöst hast.
+        courseC_maze_programming7_2: Diese Blöcke sind aus Stein und können nicht
+          weggeworfen werden.
+      courseC_maze_programming7_2019:
+        courseC_maze_programming7_1: Das hier ist deine erste Herausforderung! Diese
+          Aufgaben sind nicht einfach und du brauchst wahrscheinlich mehrere Versuche,
+          bis du sie gelöst hast.
+        courseC_maze_programming7_2: Diese Blöcke sind aus Stein und können nicht
+          weggeworfen werden.
       courseD_bee_conditionals2:
         4_5_Bee_Conditionals_2_1: Denk daran zu überprüfen ob JEDE Wolke eine Blume
           hat. Du musst überhaupt nicht auf Honigwaben prüfen.
@@ -213,6 +314,10 @@ de-DE:
       courseD_bee_conditionals2_2019:
         4_5_Bee_Conditionals_2_1: Denk daran zu überprüfen ob JEDE Wolke eine Blume
           hat. Du musst überhaupt nicht auf Honigwaben prüfen.
+      courseD_scrat_ramp8:
+        courseD_maze_ramp7_1: Das hier ist deine erste Herausforderung! Diese Aufgaben
+          sind nicht einfach und du brauchst wahrscheinlich mehrere Versuche, bis
+          du sie gelöst hast.
       frozen circle function with parameter:
         frozen_circle_function_with_parameter_circle: Nutze den "Erzeuge einen Kreis"-Baustein
           und ändere die Größe.

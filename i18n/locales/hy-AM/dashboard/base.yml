@@ -62,8 +62,6 @@ hy:
   auth:
     sign_in_with: 'Sign in with %{provider}'
     signed_in: 'Ստորագրվել է!'
-    signed_out: 'Դուք դուրս կգաք <a href=%{url}> Code.org </a>:'
-    sign_out_of: 'You used %{provider} to sign in. <a href="%{url}">Click here</a> to sign out of %{provider}.'
     already_signedup: 'Արդեն ստորագրել:'
     notyet_signedup: "Havent միացել:"
     google_oauth2: 'Google Հաշվի'
@@ -254,9 +252,6 @@ hy:
     tried: 'փորձել'
   home:
     title: "Code Studio"
-    description: 'Կոդ Studio տունն է առցանց դասընթացների ստեղծած Code.org'
-    lines_of_code: "%{lines_count} LINES OF CODE WRITTEN BY STUDENTS"
-    lines_of_code_linebreak: "%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS"
     all_courses: "Ակնարկ դասընթացներ 1, 2, եւ 3-"
     lesson_plans: "դասերի պլաններ"
     signin_message: "Already registered? %{link}"
@@ -286,11 +281,6 @@ hy:
     test_videos_help: 'Test մեր նոր տեսամագնիտոֆոն ձեր դպրոցում'
     try_beta_courses: 'New! Փորձեք մեր բետա դասընթացներ K-5 ուսանողների'
     use_as_teacher: 'Օգտագործեք այս կայքը, որպես ուսուցիչ'
-    heading_hoc2014: "<h2>The Hour of Code for</h2><h1>All Ages</h1>"
-    heading_elementary: "<h2>20 hour courses for</h2><h1>Computer Science Fundamentals (all ages)</h1>"
-    heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
-    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High School</h1>"
-    heading_legacy: "<h2>Our accelerated course for</h2><h1>All Ages</h1>"
     your_gallery: սրահ
     no_primary_course: "Փորձեք մի Code Studio դասընթաց"
     choose_next_course: "Փորձեք մի օրենսգիրք Studio դասընթաց ընտրելով մեկը ստորեւ"
@@ -454,8 +444,6 @@ hy:
     header_artist: "ՕՐԵՆՍԳԻՐՔ, հոդված"
     report_abuse: "Զեկուցել չարաշահման մասին"
   landing:
-    prerelease: "Այս դասընթացը է <span class = betatext> բետա </ span>. Սա նշանակում է, որ դա ոչ թե վերջնական տարբերակը, իհարկե, եւ ենթակա է վերանայման, ինչպես նաեւ հետադարձ ստացել եւ բարելավումներ են կատարվում:"
-    prerelease_hoc2014: "Սա Tutorial է <span class = betatext> բետա </ span>. Այն ենթակա է վերանայման, ինչպես նաեւ հետադարձ ստացել եւ բարելավումներ են կատարվում:"
     report_bug: "Report Bug"
     support: "Օգնություն ստանալ"
     help_resources: "Օգնություն եւ ռեսուրսներ"
@@ -517,8 +505,6 @@ hy:
   age_interstitial:
     age: Ձեր տարիքը
     header: Հաշվի Տեղեկությունների թարմացման
-    message: "Էին գործընթացում թարմացնելու մեր փորձը Ձեզ տրամադրել հետ, նույնիսկ ուժեղ գաղտնիության պաշտպանության. Որպեսզի դա անել, մենք պետք առկա օգտվողներին մուտք գործել իրենց տարիքը Մականուն: <br/> Ինչպես միշտ, code.org երբեք չի վարձակալել, վաճառել կամ կիսվել այս տեղեկատվության հետ որեւէ երրորդ անձանց:"
-    sign_out: 'Եթե ​​դուք չեք ցանկանում ձեր տարիքը, դուք կարող եք <a href=%{url}> դուրս գալ </a>:'
   terms_interstitial:
     tos: "Ծառայությունների մատուցման պայմաններ"
     privacy: "Գաղտնիության քաղաքականություն"
@@ -587,10 +573,8 @@ hy:
   peer_review:
     accepted:
       name: 'ընդունված է'
-      description: '<strong>Yes</strong>, this submission <strong>meets</strong> the requirements'
     rejected:
       name: 'Մերժվել է'
-      description: '<strong>No</strong>, this submission <strong>does not meet</strong> the requirements'
     escalated:
       name: 'փակուղային'
       description: 'Ես կցանկանայի ինստրուկտոր է վերանայել այս ներկայացնելու'

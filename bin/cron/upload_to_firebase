@@ -1,0 +1,53 @@
+#!/usr/bin/env ruby
+
+# This script fetches weather forecast data from api.openweathermap and uploads to the shared firebase channel.
+require_relative '../../deployment'
+require 'cdo/only_one'
+require 'net/http'
+require 'json'
+require_relative '../../shared/middleware/helpers/firebase_helper'
+
+WeatherForecastOffice = Struct.new(:city, :state, :zip)
+WeatherRecord = Struct.new(:id, :city, :state, :timestamp, :temp_min, :temp_max, :weather, :icon, :wind_speed)
+
+def get_weather_data
+  forecast_offices = [
+    WeatherForecastOffice.new("Birmingham", "Alabama", "35040"),
+    WeatherForecastOffice.new("Eureka", "California", "95501"),
+    WeatherForecastOffice.new("Miami", "Florida", "33165"),
+    WeatherForecastOffice.new("St. Louis", "Missouri", "63304"),
+    WeatherForecastOffice.new("Wakefield", "Virginia", "23888")
+  ]
+  records = []
+  id = 1
+  forecast_offices.each do |office|
+    url = "http://api.openweathermap.org/data/2.5/forecast?zip=#{office.zip},us&units=imperial&appid=c719e74bc77b787d940386405e0cbb83"
+    response = Net::HTTP.get_response(URI(url))
+    next unless response.code == '200'
+    measurements = JSON.parse(response.body)["list"]
+    measurements.each do |measurement|
+      row = WeatherRecord.new(
+        id,
+        office.city,
+        office.state,
+        measurement["dt_txt"],
+        measurement["main"]["temp_min"],
+        measurement["main"]["temp_max"],
+        measurement["weather"][0]["description"],
+        measurement["weather"][0]["icon"],
+        measurement["wind"]["speed"]
+      )
+      records.push(row.to_h.to_json)
+      id += 1
+    end
+  end
+  return records
+end
+
+def main
+  fb = FirebaseHelper.new('shared')
+  weather_records = get_weather_data
+  fb.upload_shared_table('openweathermap', weather_records)
+end
+
+main if only_one_running?(__FILE__)

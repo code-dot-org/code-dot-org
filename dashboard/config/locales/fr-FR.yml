@@ -24,11 +24,11 @@ fr:
     attributes:
       user:
         name: Nom à afficher
-        name_example: Afficher nom <br/> (par ex. SuperCodeur ou Jeanne S.)
+        name_example: Afficher le nom<br/>(par ex. SuperCodeur ou Jeanne S.)
         email: E-mail
         parent_email: Email du parent/tuteur
-        personal_email: Email personnel <a href="%{url}">(click here if you don't
-          have an email address)</a>
+        personal_email: Adresse email personnel <a href="%{url}">(cliquez ici si vous
+          n'avez pas d'adresse email)</a>
         username: nom d'utilisateur
         password: Mot de passe
         password_confirmation: Confirmation du mot de passe
@@ -39,9 +39,10 @@ fr:
         edit_header: Modifier les détails du compte
         finish_sign_up_header: Terminez la création de votre profil
         finish_sign_up_subheader: Remplissez les informations suivantes pour finir
-          de créer votre compte Code.org.
+          de créer votre compte Code.org pour <strong>%{email}</strong>.
         finish_sign_up_subheader_provider: Remplissez les informations suivantes pour
-          compléter la création d'un Code.org avec <strong>%{provider}</strong> <strong>%{email}</strong>.
+          compléter la création d'un Code.org avec <strong>%{provider}</strong> de
+          <strong>%{email}</strong>.
         error:
           future: ne peut pas être dans le futur
   beta: beta
@@ -90,9 +91,6 @@ fr:
     continue_with: Continuer avec %{provider}
     sign_in_with: Se connecter avec %{provider}
     signed_in: Connecté!
-    signed_out: Déconnexion de <a href="%{url}">Code.org</a>.
-    sign_out_of: Tu as utilisé  %{provider} pour te connecter. <a href="%{url}">Clique
-      ici</a> pour te déconnecter de %{provider}.
     already_signedup: Déjà inscrit ?
     notyet_signedup: Pas encore inscrit ?
     google_oauth2: Compte Google
@@ -153,7 +151,7 @@ fr:
     age: Age
     user_type: Êtes-vous un élève ou un enseignant ?
     submit: S’inscrire
-    go_to_account: Vers mon compte
+    go_to_account: Se rendre à mon compte
     teacher: Êtes-vous un enseignant?
     valid_username: Disponible !
     invalid_username: Le nom d'utilisateur doit contenir au moins 5 caractères
@@ -161,8 +159,6 @@ fr:
     valid_password: Mot de passe correct !
     invalid_password: Le mot de passe doit comporter au moins 6 caractères.
     mismatch_password: Les deux mots de passe ne sont pas identiques.
-    agree_tos_privacy: Je sui d'accord avec les <a href='http://code.org/tos'> modalités
-      de service</a> et la <a href='http://code.org/privacy'> politique de confidentialité</a>.
     under_13_consent: Si j’ai moins de 13 ans, je confirme que j’ai l’autorisation
       de mes parents ou de mon tuteur légal pour utiliser les services de Code.org.
     student_consent: Je confirme que j’ai l'autorisation de mes parents ou de mon
@@ -170,17 +166,6 @@ fr:
     agree_us_website: J’accepte d’utiliser un site Web basé aux États-Unis.
     my_data_to_us: Des informations sur mon utilisation de ce site peuvent être envoyées
       et enregistrées ou traitées aux États-Unis.
-    student_terms: J'accepte d'être lié aux <a href='http://code.org/tos'>conditions
-      d'utilisation</a> de Code.org. Si je suis âgé de moins de 13 ans, je confirme
-      en soumettant ce formulaire que j'ai la permission de mes parents ou de mon
-      tuteur légal pour utiliser les services Code.org. <br/><br/>Les adresses e-mail
-      ne sont pas stockées sous une forme qui nous permettrait de contacter les élèves.
-      Les élèves ne recevront jamais d'e-mails venant de Code.org sauf pour la récupération
-      du mot de passe. Voir notre <a href='http://code.org/privacy'>politique de confidentialité</a>
-      pour plus d'informations.
-    teacher_terms: J'accepte d'être lié aux conditions d'utilisation de Code.org.
-      Pour plus d'informations sur la vie privée, voir notre <a href='http://code.org/privacy'>politique
-      de confidentialité</a>.
     additional_information: Nous avons besoin de quelques informations supplémentaires
       pour continuer l’inscription.
     user_type_button: Mise à jour du type de compte
@@ -189,7 +174,7 @@ fr:
     user_type_student: Élève
     field_is_required: est obligatoire
     accept_terms: Vous devez accepter les conditions d'utilisation pour créer un compte
-    error: Une erreur est apparue.
+    error: Une erreur est survenue.
     email_preference_question: Pouvons-nous vous envoyer des e-mails d’information
       sur nos formations, des opportunités près de chez vous ou d’autres brèves dans
       le domaine informatique?
@@ -237,8 +222,6 @@ fr:
     login: Connexion
     invalid_login: Erreur d'identifiant, veuillez réessayer
     pair_programming: J'ai un partenaire sur mon ordinateur
-    student_privacy: En savoir plus sur pourquoi vous ne voyez pas votre nom complet
-      <a href='%{student_privacy_blog}' target='_blank'> ici</a>.
   password:
     reset_form:
       title: Mot de passe oublié ?
@@ -517,10 +500,6 @@ fr:
     tried: A essayé
   home:
     title: Code Studio
-    description: Code Studio héberge les cours en ligne créés par Code.org
-    lines_of_code: "%{lines_count} LIGNES DE CODE ÉCRITES PAR DES ÉLÈVES"
-    lines_of_code_linebreak: "%{lines_count} LIGNES DE CODE <br/> ÉCRITES PAR %{students_count}
-      \ MILLIONS D’ÉLÈVES"
     all_courses: Présentation des cours 1, 2 et 3
     lesson_plans: Plans des cours
     signin_message: Déjà enregistré? %{link}
@@ -559,13 +538,6 @@ fr:
     test_videos_help: Essayez notre nouveau lecteur vidéo dans votre école
     try_beta_courses: Nouveau ! Essayez nos cours bêta pour les élèves de CM2
     use_as_teacher: Utiliser ce site en tant qu'enseignant
-    heading_hoc2014: "<h2>L’Heure de Code pour</h2><h1>Tous les âges</h1>"
-    heading_elementary: "<h2>20 heures de cours sur</h2><h1>les Fondamentaux de l’informatique
-      (tout âge)</h1>"
-    heading_apps: "<h2>Amusant pour</h2><h1>Tout le monde</h1>"
-    heading_tools: "<h2>Prêt pour la prochaine étape ?</h2><h1>Outils JavaScript pour
-      le lycée</h1>"
-    heading_legacy: "<h2>Nos cours accélérés pour</h2><h1>Tous les âges</h1>"
     your_gallery: Galerie
     no_primary_course: Essaye un cours Code Studio
     choose_next_course: Essaye un cours Code Studio en le choisissant ci-dessous
@@ -839,13 +811,6 @@ fr:
     header_artist: L’art du code
     report_abuse: Signaler un abus
   landing:
-    prerelease: Ce cours est en <span class= « betatext » >bêta</span>.  Il ne s'agit
-      pas de la version finale du cours qui est susceptible d'être modifié tant que
-      nous recevrons des commentaires à son sujet et que des améliorations seront
-      effectuées.
-    prerelease_hoc2014: Ce tutoriel est en <span class= « betatext » >bêta</span>.  Il
-      est susceptible d'être modifié tant que nous recevrons des commentaires à son
-      sujet et que des améliorations seront effectuées.
     report_bug: Signaler un bogue
     support: Obtenir de l'aide
     support_url: "//support.code.org"
@@ -927,11 +892,6 @@ fr:
   age_interstitial:
     age: Ton âge
     header: Mise à jour des informations du compte
-    message: Nous sommes en train de mettre à jour notre offre afin d’offrir une protection
-      de la vie privée encore plus importante. Pour ce faire, les utilisateurs existants
-      doivent entrer leur âge ici. <br/> Comme toujours, code.org ne louera, vendra
-      ou partagera jamais cette information avec des tiers.
-    sign_out: Si tu ne souhaites pas donner ton âge, tu peux te <a href="%{url}">déconnecter</a>.
   terms_interstitial:
     title: Mise à jour des conditions d’utilisation et de la politique de confidentialité
     intro_desc: Nous avons mis à jour nos conditions d’utilisation et politique de
@@ -1075,12 +1035,8 @@ fr:
   peer_review:
     accepted:
       name: Accepté
-      description: "<strong>Oui</strong>, cette proposition <strong>répond</strong>
-        aux exigences"
     rejected:
       name: Rejeté
-      description: "<strong>Non</strong>, cette proposition <strong>ne répond pas</strong>
-        aux exigences"
     escalated:
       name: Remonté
       description: Je voudrais qu'un instructeur examine cette proposition
@@ -1228,10 +1184,6 @@ fr:
     download_in_Vietnamese: 'Télécharger en Vietnamien:'
     windows: Windows (64 bits)
     mac: Mac OS X
-  stage_extras_teacher_message: Les leçons supplémentaires sont désactivées pour certains
-    de vos espaces. Vos étudiants ne verront pas cette page à moins de les réactiver.
-    Vous pouvez le faire en visitant votre <a href='http://code.org/teacher-dashboard'>Teacher
-    Dashboard</a>.
   locked_stage: Les contenus ne sont pas visibles car cette étape est verrouillée
     pour l'instant. Ton professeur la déverrouillera lorsqu'il sera temps de travailler
     dessus ou pour consulter tes réponses.
@@ -1355,31 +1307,12 @@ fr:
         internationaux de Code.org et 2) vous acceptez de partager vos informations
         avec notre partenaire international dans votre pays agin qu’il puisse vous
         soutenir lors de votre voyage comme professeur d’informatique.
-      thanks: Merci pour votre soumission ! Nous nous réjouissons de vous soutenir
-        pendant que vous apprenez à connaître les programmes d’études et outils de
-        Code.org. Veuillez continuer à partager vos questions et vos commentaires
-        avec nous en nous écrivant à <a href='%{support_email_url}'>support@code.org</a>
-        ou en postant sur le <a href='%{teacher_forum_url}' target='_blank'>forum
-        des enseignants</a> !
     logged_out:
       heading: Merci de votre intérêt pour le programme d’apprentissage professionnel !
       body: Pour commencer, vous devez d’abord être connecté à votre compte de Code.org.
         Si vous désirez plus d’informations sur le programme avant de commencer votre
         demande, veuillez consulter l’<a href="%{url}">aperçu du programme d’apprentissage
         professionnel</a>.
-    not_teacher:
-      body: Merci de votre intérêt pour le programme d’apprentissage professionnel
-        de Code.org ! Vous êtes actuellement connecté à un compte élève. Veuillez
-        soit créer un compte enseignant, soit <a href="%{user_settings}">aller dans
-        vos paramètres utilisateur</a> pour mettre à niveau votre compte d’élève à
-        enseignant.
-      more: Si vous désirez plus d’informations sur le programme avant de commencer
-        votre demande, veuillez consulter l’<a href="%{pl_overview}">aperçu du programme
-        d’apprentissage professionnel</a>.
-    no_teacher_email:
-      body: Votre compte n’est pas associé à une adresse e-mail. Veuillez <a href="%{user_registration}">consulter
-        les paramètres de votre compte</a> pour ajouter votre adresse e-mail avant
-        de remplir ce formulaire.
   courses_category: Cours complets
   cookie_banner:
     message: En poursuivant votre navigation sur ce site ou en cliquant sur « J’accepte »,
