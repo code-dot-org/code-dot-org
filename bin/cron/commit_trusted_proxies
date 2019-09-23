@@ -2,6 +2,7 @@
 
 # Our system uses trusted_proxies.json to distinguish cloudfront IP addresses from end-user IP addresses
 # This is important to correctly geolocate users
+set -e
 
 dashboard/scripts/archive/generate_trusted_proxies
 
