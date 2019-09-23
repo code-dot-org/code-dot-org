@@ -563,6 +563,11 @@ class TopInstructions extends Component {
       return <div />;
     }
 
+    const showContainedLevelAnswer =
+      this.props.hasContainedLevels &&
+      isCSF &&
+      $('#containedLevelAnswer0').length > 0;
+
     return (
       <div style={mainStyle} className="editor-column">
         <PaneHeader
@@ -629,8 +634,7 @@ class TopInstructions extends Component {
                 )}
               {isCSF &&
                 this.props.viewAs === ViewType.Teacher &&
-                (this.props.teacherMarkdown ||
-                  this.props.hasContainedLevels) && (
+                (this.props.teacherMarkdown || showContainedLevelAnswer) && (
                   <InstructionsTab
                     className="uitest-teacherOnlyTab"
                     onClick={this.handleTeacherOnlyTabClick}

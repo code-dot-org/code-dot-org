@@ -19,7 +19,7 @@ class ContainedLevelAnswer extends Component {
   };
 
   componentDidMount() {
-    // dashboard provides us our contained level at #containedLevel0
+    // dashboard provides us our contained level at #containedLevelAnswer0
     // Move it into this component once we mount.
     const container = $(ReactDOM.findDOMNode(this));
     $('#containedLevelAnswer0').appendTo(container);

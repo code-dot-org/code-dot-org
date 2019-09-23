@@ -17,30 +17,37 @@
         = render partial: 'levels/single_text_match', locals: {standalone: false, level: contained_level }
       - elsif level_class == "free_response"
         = render partial: 'levels/free_response', locals: {in_level_group: true, last_attempt: sublevel_last_attempt, level: contained_level, left_align: true, is_contained_level: true }
-    %div{id: "containedLevelAnswer0"}
+
+    - level_class = contained_level.class.to_s.underscore
+    - if level_class == "multi"
       - data = brakeman_no_warn(contained_level.properties)
-      - if data['height'] == 'auto' || data['height'].blank?
-        - height = 'auto'
-      - else
-        - height = "#{data['height']}px"
+      - contained_level_answers = data['answers']
 
-      -# multi2 gets checkboxes; regular multi gets radio buttons.
-      - if data['type'] == 'multi2'
-        - unchecked_class = 'fa-square-o'
-        - checked_class = 'fa-check-square-o'
-        - cross_class = 'fa-times'
-      - else
-        - unchecked_class = 'fa-circle-o'
-        - checked_class = 'fa-dot-circle-o'
-        - cross_class = 'fa-times'
+      - if contained_level_answers || data['teacher_markdown'].present?
+        %div{id: "containedLevelAnswer0"}
+          - if data['height'] == 'auto' || data['height'].blank?
+            - height = 'auto'
+          - else
+            - height = "#{data['height']}px"
 
-      - level_class = contained_level.class.to_s.underscore
-      - if level_class == "multi"
-        .multi{id: "level_#{contained_level.id}", class: "tight contained"}
-          = render partial: 'levels/multi_answer', locals: {data: contained_level.properties, height: height, unchecked_class: unchecked_class, checked_class: checked_class, cross_class: cross_class, level: contained_level, standalone: false, contained_mode: true}
-          = render partial: 'levels/teacher_markdown', locals: {data: contained_level.properties}
-      - elsif level_class == "free_response"
-        .free-response{class: "left-aligned"}
-          = render partial: 'levels/teacher_markdown', locals: {data: {'teacher_markdown' => contained_level.solution}}
+          -# multi2 gets checkboxes; regular multi gets radio buttons.
+          - if data['type'] == 'multi2'
+            - unchecked_class = 'fa-square-o'
+            - checked_class = 'fa-check-square-o'
+            - cross_class = 'fa-times'
+          - else
+            - unchecked_class = 'fa-circle-o'
+            - checked_class = 'fa-dot-circle-o'
+            - cross_class = 'fa-times'
+
+          .multi{id: "level_#{contained_level.id}", class: "tight contained"}
+            = render partial: 'levels/multi_answer', locals: {data: contained_level.properties, height: height, unchecked_class: unchecked_class, checked_class: checked_class, cross_class: cross_class, level: contained_level, standalone: false, contained_mode: true}
+            = render partial: 'levels/teacher_markdown', locals: {data: contained_level.properties}
+
+    - elsif level_class == "free_response"
+      - if contained_level.solution.present?
+        %div{id: "containedLevelAnswer0"}
+          .free-response{class: "left-aligned"}
+            = render partial: 'levels/teacher_markdown', locals: {data: {'teacher_markdown' => contained_level.solution}}
 
 %div{style: 'clear: both;'}
