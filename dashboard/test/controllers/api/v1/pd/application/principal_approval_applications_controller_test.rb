@@ -22,7 +22,7 @@ module Api::V1::Pd::Application
 
     setup do
       PRINCIPAL_APPROVAL_EMAILS.each do |email_type|
-        TEACHER_APPLICATION_MAILER_CLASS.stubs(email_type).returns(
+        Pd::Application::TeacherApplicationMailer.stubs(email_type).returns(
           mock {|mail| mail.stubs(:deliver_now)}
         )
       end
@@ -128,7 +128,7 @@ module Api::V1::Pd::Application
 
     test 'Does not send emails on unsuccessful create' do
       PRINCIPAL_APPROVAL_EMAILS.each do |email_type|
-        TEACHER_APPLICATION_MAILER_CLASS.expects(email_type).never
+        Pd::Application::TeacherApplicationMailer.expects(email_type).never
       end
 
       put :create, params: {form_data: {first_name: ''}, application_guid: 'invalid'}
