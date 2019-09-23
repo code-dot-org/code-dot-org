@@ -920,6 +920,7 @@ describe('entry tests', () => {
         }),
         new ManifestPlugin({
           basePath: 'js/',
+          publicPath: '/blockly/js/',
           map: file => {
             if (minify) {
               // Remove contenthash in manifest key from files generated via
