@@ -157,6 +157,10 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
             course in 2020-21.
           </p>
         )}
+        {this.props.data.program === PROGRAM_CSD &&
+          this.checkBoxesFor('csdWhichUnits')}
+        {this.props.data.program === PROGRAM_CSP &&
+          this.checkBoxesFor('cspWhichUnits')}
         {this.radioButtonsWithAdditionalTextFieldsFor('planToTeach', {
           [TextFields.dontKnowIfIWillTeachExplain]: 'other'
         })}
@@ -176,11 +180,11 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
     const requiredFields = [];
 
     if (data.program === PROGRAM_CSD) {
-      requiredFields.push('csdWhichGrades');
+      requiredFields.push('csdWhichGrades', 'csdWhichUnits');
     }
 
     if (data.program === PROGRAM_CSP) {
-      requiredFields.push('cspWhichGrades', 'cspHowOffer');
+      requiredFields.push('cspWhichGrades', 'csdWhichUnits', 'cspHowOffer');
     }
 
     if (data.replaceExisting === 'Yes') {

@@ -205,6 +205,27 @@ module Pd::Application
             'Not sure yet if my school plans to offer CS Discoveries in the 2020-21 school year',
           csp_which_grades: (9..12).map(&:to_s) <<
             'Not sure yet if my school plans to offer CS Principles in the 2020-21 school year',
+          csd_which_units: [
+            'Unit 0: Problem Solving',
+            'Unit 1: Web Development',
+            'Unit 2: Animations & Games',
+            'Unit 3: What is a Computer?',
+            'Unit 4: The Design Process',
+            'Unit 5: Data & Society',
+            'Unit 6: Physical Computing'
+          ],
+          csp_which_units: [
+            'Unit 1: Digital Information',
+            'Unit 2: Internet',
+            'Unit 3: Intro App Development',
+            'Unit 4:  Variables, Conditionals, and Functions',
+            'Unit 5: Lists and Loops',
+            'Unit 6: Algorithms',
+            'Unit 7: Functions with Parameters, Return Values, and Libraries',
+            'Unit 8: AP Create Performance Task',
+            'Unit 9: Data',
+            'Unit 10: Cybersecurity and Global Impact',
+          ],
           plan_to_teach: [
             'Yes, I plan to teach this course this year (2020-21)',
             'I hope to teach this course this year (2020-21)',
@@ -285,8 +306,10 @@ module Pd::Application
 
         if hash[:program] == PROGRAMS[:csd]
           required << :csd_which_grades
+          required << :csd_which_units
         elsif hash[:program] == PROGRAMS[:csp]
           required << :csp_which_grades
+          required << :csp_which_units
           required << :csp_how_offer
         end
 
@@ -374,12 +397,14 @@ module Pd::Application
       if key == 'csd'
         [
           :csp_which_grades,
+          :csp_which_units,
           :csp_how_offer,
           :csp_ap_exam,
         ]
       else
         [
-          :csd_which_grades
+          :csd_which_grades,
+          :csd_which_units
         ]
       end
       )
@@ -405,6 +430,7 @@ module Pd::Application
         {
           teacher: [
             :csp_which_grades,
+            :csp_which_units,
             :csp_how_offer,
           ],
           principal: [
@@ -416,7 +442,8 @@ module Pd::Application
       else
         {
           teacher: [
-            :csd_which_grades
+            :csd_which_grades,
+            :csd_which_units
           ],
           principal: [
             :replace_which_course_csd,

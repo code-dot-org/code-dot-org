@@ -79,6 +79,8 @@ module Pd
         cs_how_many_days_per_week: 'How many days per week will your CS program class be offered to one section of students?',
         cs_how_many_weeks_per_year: 'How many weeks during the year will this course be taught to one section of students?',
         cs_total_course_hours: 'Computed total course hours',
+        csd_which_units: 'Which CS Discoveries units do you intend to teach in the 2020-21 school year?',
+        csp_which_units: 'Which CS Principles units do you intend to teach in the 2020-21 school year?',
         plan_to_teach: BASE_PAGE_LABELS[:section_3_choose_your_program][:plan_to_teach].sub('18-19', '19-20'),
         replace_existing: 'Will this course replace an existing computer science course in the master schedule? If yes, please list the course(s) that will be replaced.',
         replace_which_course: 'If yes, please describe the course it will be replacing and why:'
