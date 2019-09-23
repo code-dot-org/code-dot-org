@@ -28,7 +28,7 @@ Scenario: Applab with free response contained level
 
 Scenario: Gamelab with multiple choice contained level
   When I open my eyes to test "gamelab contained level"
-  Given I am on "http://studio.code.org/s/allthehiddenthings/stage/2/puzzle/1"
+  Given I am on "http://studio.code.org/s/allthethings/stage/41/puzzle/2"
   And I rotate to landscape
   And I wait for the page to fully load
   Then I see no difference for "initial load"
@@ -38,7 +38,7 @@ Scenario: Gamelab with multiple choice contained level
   And I see no difference for "level run"
   # At this point, we should have submitted our result to the server, do
   # a reload and make sure we have the submission
-  Then I am on "http://studio.code.org/s/allthehiddenthings/stage/2/puzzle/1"
+  Then I am on "http://studio.code.org/s/allthethings/stage/41/puzzle/2"
   And I rotate to landscape
   And I wait for the page to fully load
   And I see no difference for "reloaded with contained level answered"
@@ -47,5 +47,57 @@ Scenario: Gamelab with multiple choice contained level
   And I see no difference for "finished level with contained level"
   And I press "continue-button"
   # Make sure continue takes us to next level
-  And I wait until current URL contains "/stage/2/puzzle/2"
+  And I wait until current URL contains "/stage/41/puzzle/3"
+  Then I close my eyes
+
+@as_teacher
+Scenario: Maze with multiple choice contained level
+  When I open my eyes to test "maze multi contained level"
+  Given I am on "http://studio.code.org/s/allthethings/stage/41/puzzle/1"
+  And I rotate to landscape
+  And I wait for the page to fully load
+  Then I see no difference for "initial load"
+  Then I press "unchecked_0"
+  And I see no difference for "answer entered"
+# Check that answer shows in teacher only tab
+  Then I press the first ".uitest-teacherOnlyTab" element
+  And I wait to see ".editor-column"
+  And element ".editor-column" contains text "Answer"
+  And I see no difference for "multiple choice answer for teacher"
+  Then I press "runButton"
+  And I see no difference for "level run"
+  # At this point, we should have submitted our result to the server, do
+  # a reload and make sure we have the submission
+  Then I am on "http://studio.code.org/s/allthethings/stage/41/puzzle/1"
+  And I rotate to landscape
+  And I wait for the page to fully load
+  And I see no difference for "reloaded with contained level answered"
+  Then I press "runButton"
+  And I press "continue-button"
+  # Make sure continue takes us to next level
+  And I wait until current URL contains "/stage/41/puzzle/2"
+  Then I close my eyes
+
+@as_teacher
+Scenario: Maze with free response contained level
+  When I open my eyes to test "maze free response contained level"
+  Given I am on "http://studio.code.org/s/allthethings/stage/41/puzzle/6"
+  And I rotate to landscape
+  And I wait for the page to fully load
+  Then I see no difference for "initial load"
+  And I press keys "Here is my response!" for element "#level_18333"
+  And I see no difference for "answer entered"
+  # Check that answer shows in teacher only tab
+  Then I press the first ".uitest-teacherOnlyTab" element
+  And I wait to see ".editor-column"
+  And element ".editor-column" contains text "For Teachers Only"
+  And I see no difference for "free response answer for teacher"
+  Then I press "runButton"
+  And I see no difference for "level run"
+  # At this point, we should have submitted our result to the server, do
+  # a reload and make sure we have the submission
+  Then I am on "http://studio.code.org/s/allthethings/stage/41/puzzle/6"
+  And I rotate to landscape
+  And I wait for the page to fully load
+  And I see no difference for "reloaded with contained level answered"
   Then I close my eyes
