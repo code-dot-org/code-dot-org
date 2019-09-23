@@ -740,7 +740,7 @@ describe('entry tests', () => {
             const plugin = new UglifyJsPlugin({
               cache: true,
               parallel: true,
-              sourceMap: envConstants.DEBUG_MINIFIED
+              sourceMap: true
             });
             plugin.apply(compiler);
           }
