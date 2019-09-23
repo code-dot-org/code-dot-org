@@ -5,13 +5,15 @@ module CdoApps
     root = File.join home, node.chef_environment
     app_root = File.join root, app_name
     init_script = "/etc/init.d/#{app_name}"
+    unit_file = "/lib/systemd/system/#{app_name}.service"
 
     utf8 = 'en_US.UTF-8'
     env = {
       'LC_ALL' => utf8,
       'LANGUAGE' => utf8,
       'LANG' => utf8,
-      'RAILS_ENV' => node.chef_environment
+      'RAILS_ENV' => node.chef_environment,
+      'TZ' => 'UTC', # Workaround for lack of zoneinfo directory in docker: https://forums.docker.com/t/synchronize-timezone-from-host-to-container/39116/3
     }
     execute "setup-#{app_name}" do
       command "bundle exec rake #{app_name}:setup_db --trace"
@@ -33,6 +35,17 @@ module CdoApps
 
     socket_path = node['cdo-apps']['nginx_enabled'] && node['cdo-nginx']['socket_path']
 
+    template unit_file do
+      app_server = node['cdo-apps']['app_server']
+
+      user 'root'
+      group 'root'
+      mode '0755'
+
+      variables app_name: app_name
+      source "#{app_server}.service.erb"
+    end
+
     template init_script do
       app_server = node['cdo-apps']['app_server']
       src_file = "#{app_root}/config/#{app_server}.rb"
@@ -42,6 +55,7 @@ module CdoApps
       group 'root'
       mode '0755'
       variables src_file: src_file,
+        app_name: app_name,
         app_root: app_root,
         pid_file: "#{src_file}.pid",
         socket_path: socket_path,
