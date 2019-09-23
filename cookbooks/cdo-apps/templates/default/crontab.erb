@@ -57,6 +57,7 @@
       cronjob at:'0 * * * *', do:deploy_dir('bin', 'cron', 'start_broken_link_checker'), notify:'dev+crontab@code.org'
       cronjob at:'0 19 * * 1-5', do:deploy_dir('bin', 'cron', 'commit_content')
       cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'update_dts')
+      cronjob at:'0 10 * * *', do:deploy_dir('bin', 'cron', 'commit_trusted_proxies')
     end
 
     if node.chef_environment == 'test' && node.name == 'staging-next'
