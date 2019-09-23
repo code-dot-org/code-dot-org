@@ -234,36 +234,64 @@ function createHTMLElement(tag, attributes, text) {
   return elem;
 }
 
-function compileHTML(index, location) {
-  let elements = [];
+function createMapEntryDetail(elements) {
+  let div = createHTMLElement("div", {
+    class: "profile-detail entry-detail"
+  });
 
-  elements.push(
-    createHTMLElement("h3", { class: "entry-detail" }, location.name_s)
+  elements.forEach(elem => {
+    div.appendChild(elem);
+  });
+
+  return div;
+}
+
+function compileHTML(index, location) {
+  let html = createHTMLElement("div");
+
+  html.appendChild(
+    createMapEntryDetail([
+      createHTMLElement("h3", { class: "entry-detail" }, location.name_s)
+    ])
   );
 
   if (location.company_s) {
-    elements.push(document.createTextNode(location.company_s));
+    html.appendChild(
+      createMapEntryDetail([document.createTextNode(location.company_s)])
+    );
   }
 
   if (location.experience_s) {
-    elements.push(createHTMLElement("strong", null, "Experience:"));
-    elements.push(document.createTextNode(location.experience_s));
+    html.appendChild(
+      createMapEntryDetail([
+        createHTMLElement("strong", null, "Experience:"),
+        document.createTextNode(" " + i18n(location.experience_s))
+      ])
+    );
   }
 
   if (location.location_flexibility_ss) {
-    $.each(location.location_flexibility_ss, function(key, field) {
-      location.location_flexibility_ss[key] = i18n("location_" + field);
+    location.location_flexibility_ss.forEach(function(field, index) {
+      location.location_flexibility_ss[index] = i18n("location_" + field);
     });
 
-    elements.push(createHTMLElement("strong", null, "How I can help:"));
-    elements.push(
-      document.createTextNode(location.location_flexibility_ss.join(", "))
+    html.appendChild(
+      createMapEntryDetail([
+        createHTMLElement("strong", null, "How I can help:"),
+        document.createTextNode(
+          " " + location.location_flexibility_ss.join(", ")
+        )
+      ])
     );
   }
 
   if (location.description_s) {
-    elements.push(createHTMLElement("strong", null, "About me:"));
-    elements.push(document.createTextNode(location.description_s));
+    html.appendChild(
+      createMapEntryDetail([
+        createHTMLElement("strong", null, "About me:"),
+        document.createTextNode(" " + location.description_s)
+      ])
+    );
   }
 
   if (location.linkedin_s) {
@@ -271,8 +299,12 @@ function compileHTML(index, location) {
       location.linkedin_s = "http://" + location.linkedin_s;
     }
 
-    elements.push(createHTMLElement("strong", null, "LinkedIn profile:"));
-    elements.push(document.createTextNode(location.linkedin_s));
+    html.appendChild(
+      createMapEntryDetail([
+        createHTMLElement("strong", null, "LinkedIn profile:"),
+        document.createTextNode(" " + location.linkedin_s)
+      ])
+    );
   }
 
   if (location.facebook_s) {
@@ -280,20 +312,15 @@ function compileHTML(index, location) {
       location.facebook_s = "http://" + location.facebook_s;
     }
 
-    elements.push(createHTMLElement("strong", null, "Facebook profile:"));
-    elements.push(document.createTextNode(location.facebook_s));
+    html.appendChild(
+      createMapEntryDetail([
+        createHTMLElement("strong", null, "Facebook profile:"),
+        document.createTextNode(" " + location.facebook_s)
+      ])
+    );
   }
 
-  let htmlStr = "";
-  elements.forEach(elem => {
-    let div = createHTMLElement("div", {
-      class: "profile-detail entry-detail"
-    });
-    div.appendChild(elem);
-    htmlStr += div.outerHTML;
-  });
-
-  return htmlStr;
+  return html.innerHTML;
 }
 
 function compileContact(index, location) {
