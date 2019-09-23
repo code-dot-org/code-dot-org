@@ -1,7 +1,6 @@
 -# inhibit brakeman warning about unescaped model attribute - comes from static data in database, level.properties does not contain XSS attacks
 - data = brakeman_no_warn(level.properties)
 - app = 'text_match'
-- contained_mode = local_assigns.fetch :contained_mode, false
 
 .text-match{id: "level_#{level.id}"}
   .mainblock
@@ -12,7 +11,7 @@
     - if standalone
       = render partial: 'levels/dialog', locals: {app: app}
 
-    = render partial: 'levels/teacher_markdown', locals: {data: data} unless contained_mode
+    = render partial: 'levels/teacher_markdown', locals: {data: data}
 
   .clear
 

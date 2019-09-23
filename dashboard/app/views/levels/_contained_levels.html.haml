@@ -18,6 +18,7 @@
       - elsif level_class == "free_response"
         = render partial: 'levels/free_response', locals: {in_level_group: true, last_attempt: sublevel_last_attempt, level: contained_level, left_align: true, is_contained_level: true }
 
+    -# Check for answers for multi or free response contained levels and then display them
     - level_class = contained_level.class.to_s.underscore
     - if level_class == "multi"
       - data = brakeman_no_warn(contained_level.properties)
