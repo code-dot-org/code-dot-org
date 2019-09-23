@@ -203,4 +203,4 @@
       studentCount: current_user.students.count,
     }.to_json
   }
-%script{src: minifiable_asset_path('js/devise/registrations/edit.js'), data: script_data}
+%script{src: webpack_asset_path('js/devise/registrations/edit.js'), data: script_data}
