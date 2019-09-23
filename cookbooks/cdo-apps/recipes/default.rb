@@ -36,7 +36,7 @@ apt_package %w(
   libbcprov-java
   libcommons-lang3-java
 )
-dpkg_package("pdftk-java") { source pdftk_local_file }
+dpkg_package("pdftk-java") {source pdftk_local_file}
 
 # Used by lesson plan generator.
 apt_package 'enscript'
