@@ -64,33 +64,12 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
       <FormGroup>
         <h3>Section 3: {SectionHeaders.section2ChooseYourProgram}</h3>
         {this.radioButtonsFor('program')}
-        {this.props.data.program === PROGRAM_CSD && (
-          <div>
-            {this.checkBoxesFor('csdWhichGrades')}
-            <p>
-              For teachers to participate in Code.org’s CS Discoveries
-              Professional Learning Program, we require that you offer at
-              minimum 50 instructional hours per section of students for a
-              semester-long course (Units 1 - 3), and at minimum 100 hours for a
-              year-long course (Units 1- 6). We assume a typical school year
-              consists of 180 days (36 weeks) and a typical semester consists of
-              18 weeks.
-            </p>
-          </div>
-        )}
+        {this.props.data.program === PROGRAM_CSD &&
+          this.checkBoxesFor('csdWhichGrades')}
         {this.props.data.program === PROGRAM_CSP && (
           <div>
             {this.checkBoxesFor('cspWhichGrades')}
             {this.radioButtonsFor('cspHowOffer')}
-            <p>
-              For teachers to participate in Code.org’s CS Principles
-              Professional Learning Program, we require that you offer at a
-              minimum 100 instructional hours per section of students for the
-              full-year course. CS Principles is not designed to be taught as a
-              semester unless you are able to offer 100 hours of the course in
-              one semester (usually in a block schedule format). We assume a
-              typical school year consists of 180 days (36 weeks).
-            </p>
           </div>
         )}
         <p>
@@ -101,14 +80,13 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
         <p>
           Please provide information about your course implementation plans.{' '}
           <a
-            href="https://docs.google.com/document/d/1nFp033SuO_BMR-Bkinrlp0Ti_s-XYQDsOc-UjqNdrGw/edit#heading=h.6s62vrpws18"
+            href="https://docs.google.com/document/d/1DhvzoNElJcfGYLrp5sVnnqp0ShvsePUpp3JK7ihjFGM/edit"
             target="_blank"
           >
             Click here
           </a>{' '}
-          for guidance on required number of hours. Your Regional Partner will
-          follow up if your responses below don't meet the requirements, or if
-          they have additional questions.
+          for guidance on our professional development recommendations depending
+          on the number of units you intend to teach.
         </p>
         <br />
         {this.numberInputFor('csHowManyMinutes', {
@@ -168,17 +146,15 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
             participate in the Professional Learning Program, though we will
             consider applications with at least 30 hours for a limited number of
             seats. We suggest checking with your school administration to see if
-            additional time can be allotted for this course in 2019-20.
+            additional time can be allotted for this course in 2020-21.
           </p>
         )}
         {courseNotes === 'csp' && (
           <p style={{color: 'red'}}>
-            Note: 100 or more hours of CS Principles instruction per section are
-            normally required to participate in the Professional Learning
-            Program, though we will consider applications for non-AP classes
-            with at least 50 hours for a limited number of seats. We suggest
-            checking with your school administration to see if additional time
-            can be allotted for this course in 2019-20.
+            Note: 50 or more hours of instruction per CS Principles section are
+            strongly recommended. We suggest checking with your school
+            administration to see if additional time can be allotted for this
+            course in 2020-21.
           </p>
         )}
         {this.radioButtonsWithAdditionalTextFieldsFor(

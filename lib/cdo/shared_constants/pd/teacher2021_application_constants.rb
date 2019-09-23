@@ -51,21 +51,21 @@ module Pd
       ),
       section_2_choose_your_program: {
         program: clean_multiline(
-          'Which professional learning program would you like to join for the 2019-20
+          'Which professional learning program would you like to join for the 2020-21
           school year? Note: this application is only for Computer Science Discoveries and
           Computer Science Principles. If you are interested in teaching Advanced
           Placement CS A (in Java), visit this
-          [AP CS A overview](https://code.org/educate/curriculum/apcsa). Review this
-          [guidance document](https://docs.google.com/document/d/1nFp033SuO_BMR-Bkinrlp0Ti_s-XYQDsOc-UjqNdrGw/edit#heading=h.6s62vrpws18)
-          to make sure your course implementation plans meet program requirements.'
+          [AP CS A overview](https://code.org/educate/curriculum/apcsa). Review our
+          [guidance documents](https://docs.google.com/document/d/1DhvzoNElJcfGYLrp5sVnnqp0ShvsePUpp3JK7ihjFGM/edit)
+          to see whether your course implementation plans meet our program guidelines.'
         ),
         csd_which_grades: clean_multiline(
-          'To which grades does your school plan to offer CS Discoveries in the 2019-20 school year?
+          'To which grades does your school plan to offer CS Discoveries in the 2020-21 school year?
            Please note that the CS Discoveries Professional Learning Program
            is not available for grades K-5. (select all that apply)'
         ),
         csp_which_grades: clean_multiline(
-          'To which grades does your school plan to offer CS Principles in the 2019-20
+          'To which grades does your school plan to offer CS Principles in the 2020-21
           school year? Please note that the CS Principles Professional Learning Program
           is not available for grades K-8. (select all that apply)'
         ),
@@ -119,9 +119,9 @@ module Pd
         native_hawaiian_or_pacific_islander_percent: 'Percentage of student enrollment by race: Native Hawaiian or Pacific Islander',
         white_percent: 'Percentage of student enrollment by race: White',
         other_races_percent: 'Percentage of student enrollment by race: Other',
-        principal_approval: "Do you approve of <Teacher Name> participating in Code.org's 2019-20 Professional Learning Program?",
-        principal_plan_to_teach: 'Is <Teacher Name> planning to teach this course in the 2019-20 school year?',
-        principal_schedule_confirmed: 'Are you committed to including Computer Science <Program> on the master schedule in 2019-20 if <Teacher Name> is accepted into the program?',
+        principal_approval: "Do you approve of <Teacher Name> participating in Code.org's 2020-21 Professional Learning Program?",
+        principal_plan_to_teach: 'Is <Teacher Name> planning to teach this course in the 2020-21 school year?',
+        principal_schedule_confirmed: 'Are you committed to including Computer Science <Program> on the master schedule in 2020-21 if <Teacher Name> is accepted into the program?',
         principal_implementation: "To participate in Code.org's Computer Science <Program> Professional Learning Program, we require that this course be offered in one of the following ways. Please select which option will be implemented at your school.",
         principal_diversity_recruitment: 'Do you commit to recruiting and enrolling a diverse group of students in this course, representative of the overall demographics of your school?',
         contact_invoicing: "Contact name for invoicing",
@@ -155,8 +155,8 @@ module Pd
         school_zip_code: "School zip code",
         current_role: "Current role",
         program: LABEL_OVERRIDES[:program],
-        csd_which_grades: "To which grades does your school plan to offer CS Discoveries in the 2019-20 school year?",
-        csp_which_grades: "To which grades does your school plan to offer CS Principles in the 2019-20 school year?",
+        csd_which_grades: "To which grades does your school plan to offer CS Discoveries in the 2020-21 school year?",
+        csp_which_grades: "To which grades does your school plan to offer CS Principles in the 2020-21 school year?",
         cs_how_many_minutes: "How many minutes will your CS Program class last?",
         cs_total_course_hours: "Total course hours",
         replace_existing: "Will this course replace an existing computer science course in the master schedule? (Teacher's response)",
@@ -175,8 +175,8 @@ module Pd
         email: PAGE_LABELS[:section_1_about_you][:principal_email] + " (provided by principal)",
         school_name: PAGE_LABELS[:section_1_about_you][:school_name] + " (provided by principal)",
         district_name: PAGE_LABELS[:section_1_about_you][:school_district_name] + " (provided by principal)",
-        do_you_approve: "Do you approve of this teacher participating in Code.org's 2019-20 Professional Learning Program?",
-        plan_to_teach: "Is this teacher planning to teach this course in the 2019-20 school year?",
+        do_you_approve: "Do you approve of this teacher participating in Code.org's 2020-21 Professional Learning Program?",
+        plan_to_teach: "Is this teacher planning to teach this course in the 2020-21 school year?",
         total_student_enrollment: "Total student enrollment",
         free_lunch_percent: "Percentage of students who are eligible to receive free or reduced lunch (Principal's response)",
         underrepresented_minority_percent: "Percentage of underrepresented minority students (Principal's response)",
@@ -187,7 +187,7 @@ module Pd
         pacific_islander: "Percentage of student enrollment by race - Native Hawaiian or other Pacific Islander",
         american_indian: "Percentage of student enrollment by race - American Indian or Native Alaskan",
         other: "Percentage of student enrollment by race - Other",
-        committed_to_master_schedule: "Are you committed to including this course on the master schedule in 2019-20 if this teacher is accepted into the program?",
+        committed_to_master_schedule: "Are you committed to including this course on the master schedule in 2020-21 if this teacher is accepted into the program?",
         replace_course: "Will this course replace an existing computer science course in the master schedule? (Principal's response)",
         replace_which_course_csp: "Which existing course or curriculum will CS Principles replace?",
         replace_which_course_csd: "Which existing course or curriculum will CS Discoveries replace?",
@@ -214,7 +214,7 @@ module Pd
     }
 
     LABEL_OVERRIDES = {
-      program: 'Which professional learning program would you like to join for the 2019-20 school year?',
+      program: 'Which professional learning program would you like to join for the 2020-21 school year?',
       cs_how_many_minutes: 'How many minutes will your class last?'
     }.freeze
 
