@@ -354,7 +354,7 @@ module Pd::Application
 
     # @override
     def check_idempotency
-      Teacher1920Application.find_by(user: user)
+      Teacher2021Application.find_by(user: user)
     end
 
     def assigned_workshop
@@ -501,7 +501,7 @@ module Pd::Application
 
     # @override
     def to_csv_row(course)
-      columns_to_exclude = Pd::Application::Teacher1920Application.columns_to_remove(course)
+      columns_to_exclude = Pd::Application::Teacher2021Application.columns_to_remove(course)
       teacher_answers = full_answers
       principal_application = Pd::Application::PrincipalApproval1920Application.where(application_guid: application_guid).first
       principal_answers = principal_application&.csv_data
