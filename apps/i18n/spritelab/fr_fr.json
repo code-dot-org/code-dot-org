@@ -1,3 +1,12 @@
 {
-  "shareGame": "Partager ton jeu :"
+  "errorLoadingAnimation": "Il semble que nous ayons des difficultés à charger votre animation \"{animationName}\". Assurez-vous d'avoir une bonne connexion Internet et essayez de recharger la page. Si ce problème persiste, il est possible que cette animation soit interrompue. Dans ce cas, vous devrez peut-être continuer en supprimant l'animation.",
+  "reinfFeedbackMsg": "Vous avez fini! Cliquez sur \"Continuer\" pour passer au niveau suivant.",
+  "shareGame": "Partager ton jeu :",
+  "spritelabFeedbackCreateFishWithBehavior": "Vous devez créer au moins un sprite poisson et lui donner un comportement.",
+  "spritelabFeedbackMoveFishLeftRight": "Votre sprite poisson doit bouger à gauche ou à droite. Essayez de changer son comportement.",
+  "spritelabFeedbackChangeBackgroundColor": "Vous devez modifier l'arrière-plan en un élément autre que le blanc.",
+  "spritelabFeedbackCreateTwoSprites": "Vous devez créer exactement deux sprites.",
+  "spritelabFeedbackTwoSpritesWithCostumes": "Vos deux sprites ont besoin de costumes différents.",
+  "spritelabFeedbackTwoSpritesWithCostumesAndBehaviors": "Vous devez créer deux sprites avec des costumes différents qui ont chacun un comportement.",
+  "spritelabFeedbackClickSprite": "Assurez-vous de cliquer sur votre sprite après avoir appuyé sur \"courir\""
 }
