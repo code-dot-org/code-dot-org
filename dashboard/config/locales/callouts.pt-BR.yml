@@ -312,6 +312,8 @@ pt-BR:
         CSD_U6_checkWin: Verifique se o jogador ganhou
       CSD U6 tugowar variables 3_2019:
         CSD_U6_checkWin: Verifique se o jogador ganhou
+      CSDU4 - Design Mode - 3:
+        '': Use o bloco definirTexto para alterar o texto do etiquetaTitulo
       Course 4 Artist 4:
         repeat_full_circle: Insira o número de vezes que o zumbi deve se mover para
           fazer um círculo completo
