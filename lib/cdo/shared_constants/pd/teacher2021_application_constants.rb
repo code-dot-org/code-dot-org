@@ -87,7 +87,6 @@ module Pd
       },
       section_3_teaching_background:
         BASE_PAGE_LABELS[:section_2_your_school].slice(
-          :cs_opportunities_at_school,
           :previous_yearlong_cdo_pd
         ),
       section_4_professional_learning_program_requirements:
