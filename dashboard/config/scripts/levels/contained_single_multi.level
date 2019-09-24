@@ -7,8 +7,6 @@
   "properties": {
     "encrypted": "false",
     "skin": "birds",
-    "maze_data": null,
-    "preload_asset_list": null,
     "maze": "[[2,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "contained_level_names": [
       "contained_Happy_Maps_Multi 1"
@@ -27,11 +25,14 @@
     "show_type_hints": "false",
     "start_direction": "0",
     "step_mode": "0",
-    "shape_shift": "false"
+    "shape_shift": "false",
+    "preload_asset_list": null,
+    "maze_data": null,
+    "teacher_markdown": "Teacher markdown for the original level."
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-09-19 15:50:03 -0400\",\"changed\":[\"notes\",\"maze_data\",\"preload_asset_list\"],\"changed_by_id\":26,\"changed_by_email\":\"dev@levelbuilder.com\"}]",
+  "audit_log": "[{\"changed_at\":\"2019-09-19 15:50:03 -0400\",\"changed\":[\"notes\",\"maze_data\",\"preload_asset_list\"],\"changed_by_id\":26,\"changed_by_email\":\"dev@levelbuilder.com\"},{\"changed_at\":\"2019-09-24 09:56:16 -0400\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":26,\"changed_by_email\":\"dev@levelbuilder.com\"},{\"changed_at\":\"2019-09-24 09:56:55 -0400\",\"changed\":[\"preload_asset_list\",\"reference_links\",\"maze_data\"],\"changed_by_id\":26,\"changed_by_email\":\"dev@levelbuilder.com\"},{\"changed_at\":\"2019-09-24 09:59:46 -0400\",\"changed\":[\"preload_asset_list\",\"maze_data\"],\"changed_by_id\":26,\"changed_by_email\":\"dev@levelbuilder.com\"},{\"changed_at\":\"2019-09-24 11:03:57 -0400\",\"changed\":[\"preload_asset_list\",\"maze_data\",\"teacher_markdown\"],\"changed_by_id\":26,\"changed_by_email\":\"dev@levelbuilder.com\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

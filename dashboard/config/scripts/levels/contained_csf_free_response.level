@@ -28,11 +28,12 @@
     "shape_shift": "false",
     "parent_level_id": 18331,
     "preload_asset_list": null,
+    "teacher_markdown": "Original Level Teacher Markdown",
     "maze_data": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-09-20 14:38:45 -0400\",\"changed\":[\"notes\",\"maze_data\",\"preload_asset_list\"],\"changed_by_id\":26,\"changed_by_email\":\"dev@levelbuilder.com\"},{\"changed_at\":\"2019-09-20 14:42:38 -0400\",\"changed\":[\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":26,\"changed_by_email\":\"dev@levelbuilder.com\"}]",
+  "audit_log": "[{\"changed_at\":\"2019-09-20 14:38:45 -0400\",\"changed\":[\"notes\",\"maze_data\",\"preload_asset_list\"],\"changed_by_id\":26,\"changed_by_email\":\"dev@levelbuilder.com\"},{\"changed_at\":\"2019-09-20 14:42:38 -0400\",\"changed\":[\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":26,\"changed_by_email\":\"dev@levelbuilder.com\"},{\"changed_at\":\"2019-09-24 11:01:48 -0400\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":26,\"changed_by_email\":\"dev@levelbuilder.com\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
