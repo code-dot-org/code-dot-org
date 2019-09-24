@@ -17,4 +17,7 @@ Dashboard::Application.initialize!
 # and we won't be migrating it to other environments. However, it shouldn't belong in
 # the schema, and we don't want it to show up when generating the schema on the prod
 # database. This line will ignore that table.
+# It also will ignore tables starting with an underscore, which are temporarily created
+# when we use the gh-ost online migration tool to migrate large tables
+# without significant downtime.
 ActiveRecord::SchemaDumper.ignore_tables = ['overflow_activities', /^_/]
