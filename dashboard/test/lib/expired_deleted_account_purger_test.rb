@@ -192,6 +192,20 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
     refute_includes picked_users, needs_manual_review
   end
 
+  test 'does locate accounts that are queued but also auto-retryable' do
+    autodeleteable = create :student, deleted_at: 3.days.ago
+    autoretryable = create :student, deleted_at: 3.days.ago
+    create :queued_account_purge, :autoretryable, user: autoretryable
+
+    picked_users = ExpiredDeletedAccountPurger.new(
+      deleted_after: 4.days.ago,
+      deleted_before: 2.days.ago
+    ).send :expired_soft_deleted_accounts
+
+    assert_includes picked_users, autodeleteable
+    assert_includes picked_users, autoretryable
+  end
+
   #
   # Tests over full behavior
   #
