@@ -680,10 +680,13 @@ class TopInstructions extends Component {
                     hidden={this.state.tabSelected !== TabType.INSTRUCTIONS}
                   />
                   {!isCSF && (
-                    <ContainedLevelAnswer
-                      ref="teacherOnlyTab"
-                      hidden={this.state.tabSelected !== TabType.INSTRUCTIONS}
-                    />
+                    <div>
+                      <ContainedLevelAnswer
+                        ref="teacherOnlyTab"
+                        hidden={this.state.tabSelected !== TabType.INSTRUCTIONS}
+                      />
+                      <TeacherOnlyMarkdown />
+                    </div>
                   )}
                 </div>
               )}
@@ -739,16 +742,16 @@ class TopInstructions extends Component {
             )}
             {isCSF &&
               this.props.viewAs === ViewType.Teacher &&
-              (this.props.hasContainedLevels ||
-                (this.props.teacherMarkdown &&
-                  this.state.tabSelected === TabType.TEACHER_ONLY)) && (
+              (this.props.hasContainedLevels || this.props.teacherMarkdown) && (
                 <div>
-                  <TeacherOnlyMarkdown ref="teacherOnlyTab" />
                   {this.props.hasContainedLevels && (
                     <ContainedLevelAnswer
                       ref="teacherOnlyTab"
                       hidden={this.state.tabSelected !== TabType.TEACHER_ONLY}
                     />
+                  )}
+                  {this.state.tabSelected === TabType.TEACHER_ONLY && (
+                    <TeacherOnlyMarkdown ref="teacherOnlyTab" />
                   )}
                 </div>
               )}
