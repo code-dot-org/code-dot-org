@@ -5083,24 +5083,6 @@ is-IS:
         <li>Breytuheiti mega ekki byrja á tölustaf.</li>
         <li>Breytuheiti verður alltaf að skrifa nákvæmlega eins, líka há- og lágstafi.</li>
         </ul></details></summary>
-      CSD U3 Variables naming rules v2_2018_2019: |-
-        <img style="float: right" src="https://images.code.org/f4b306422763c84bb924f4f7d3a6dca6-image-1492798058864.06.38 AM.png">
-
-        # Villuleit: Að gefa breytum heiti
-
-        Í þessu forriti eru margar villur sem tengjast röngum breytuheitum.  Villurnar koma í veg fyrir að forritið sé sýnt sem kubbar svo að kóðinn er í texta.
-
-        # Gerðu þetta
-
-        -   Finndu regluna sem hvert breytuheiti er að brjóta.
-        -   **Leiðréttu villurnar með því að gefa breytunum ný heiti sem fylgja reglunum sem þú lærðir um í síðasta áfanga.**
-        -   Ef forritið virkar rétt ætti það að teikna myndina hér til hægri.
-
-        <summary><em>Vísbending: Smelltu á örina til að fá stutta samantekt á reglunum.</em><details><ul>
-        <li>Breytuheiti mega ekki innihalda bil.</li>
-        <li>Breytuheiti mega ekki byrja á tölustaf.</li>
-        <li>Breytuheiti verður alltaf að skrifa nákvæmlega eins, líka há- og lágstafi.</li>
-        </ul></details></summary>
       CSD U3 Variables random with assignment: "<img src=\"https://images.code.org/ba9592e887f52c1a538a0517560cdacf-image-1493913633878.gif\"\nstyle=\"float:right;height:150px\">\\\r\n\\\r\n\n#
         Villuleit: Breytur og slembitölur\\\r\n\n\\\r\nÍ breytu er líka hægt að setja
         tölu valda af handahófi (slembitölu). Þannig er hægt að geyma staka slembitölu
