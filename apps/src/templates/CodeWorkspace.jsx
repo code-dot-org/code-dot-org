@@ -15,6 +15,7 @@ import SettingsCog from '../lib/ui/SettingsCog';
 import ShowCodeToggle from './ShowCodeToggle';
 import {singleton as studioApp} from '../StudioApp';
 import ProjectTemplateWorkspaceIcon from './ProjectTemplateWorkspaceIcon';
+import {queryParams} from '../code-studio/utils';
 
 const styles = {
   headerIcon: {
@@ -119,6 +120,7 @@ class CodeWorkspace extends React.Component {
     const settingsCog = showSettingsCog && (
       <SettingsCog {...{isRunning, runModeIndicators, showMakerToggle}} />
     );
+
     return [
       <PaneSection id="toolbox-header" key="toolbox-header">
         <i
@@ -161,6 +163,9 @@ class CodeWorkspace extends React.Component {
     // is enabled, remove focus while running.
     const hasFocus = !(props.runModeIndicators && props.isRunning);
     const isRtl = this.props.isRtl;
+
+    //TODO: When CSF example solutions are no longer rendered with solution=true in url remove this
+    const inCsfExampleSolution = queryParams('solution') === 'true';
 
     return (
       <span id="codeWorkspaceWrapper" style={props.style}>
@@ -224,7 +229,7 @@ class CodeWorkspace extends React.Component {
             className={this.props.pinWorkspaceToBottom ? 'pin_bottom' : ''}
           />
         )}
-        {this.props.studentHasNotStartedLevel && (
+        {this.props.studentHasNotStartedLevel && !inCsfExampleSolution && (
           <div style={styles.studentNotStartedWarning}>
             {i18n.levelNotStartedWarning()}
           </div>
