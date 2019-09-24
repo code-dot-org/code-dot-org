@@ -32,7 +32,6 @@ class Ability
       :pd_teacher_attendance_report,
       :pd_workshop_summary_report,
       Pd::CourseFacilitator,
-      Pd::TeacherApplication,
       :workshop_organizer_survey_report,
       :pd_workshop_user_management,
       :pd_workshop_admins,
@@ -73,7 +72,6 @@ class Ability
       can :destroy, Follower, student_user_id: user.id
       can :read, UserPermission, user_id: user.id
       can [:show, :pull_review, :update], PeerReview, reviewer_id: user.id
-      can :create, Pd::TeacherApplication, user_id: user.id
       can :create, Pd::RegionalPartnerProgramRegistration, user_id: user.id
       can :read, Pd::Session
       can :manage, Pd::Enrollment, user_id: user.id
@@ -159,7 +157,6 @@ class Ability
         can :manage, :workshop_organizer_survey_report
         can :manage, :pd_workshop_summary_report
         can :manage, :pd_teacher_attendance_report
-        can :manage, Pd::TeacherApplication
         can :manage, :pd_workshop_user_management
         can :manage, :pd_workshop_admins
         can :manage, RegionalPartner

@@ -1,0 +1,22 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: 'S3 Buckets'
+Resources:
+  ## Create S3 bucket for student libraries
+  LibraryBucket:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      BucketName: 'cdo-v3-libraries'
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: 'aws:kms'
+      VersioningConfiguration:
+        Status: 'Enabled'
+      LoggingConfiguration:
+        DestinationBucketName: 'cdo-logs'
+        LogFilePrefix: 's3/cdo-v3-libraries'
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
