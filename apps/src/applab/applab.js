@@ -853,6 +853,28 @@ function setupReduxSubscribers(store) {
       getProjectDatabase().child('counters/tables'),
       tableType.PROJECT
     );
+
+    if (experiments.isEnabled(experiments.APPLAB_DATASETS)) {
+      // /v3/channels/<channel_id>/current_tables tracks which
+      // current tables the project has imported. Here we initialize the
+      // redux list of current tables and keep it in sync
+      let currentTableRef = getProjectDatabase().child('current_tables');
+      currentTableRef.on('child_added', snapshot => {
+        store.dispatch(
+          addTableName(
+            typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key,
+            tableType.SHARED
+          )
+        );
+      });
+      currentTableRef.on('child_removed', snapshot => {
+        store.dispatch(
+          deleteTableName(
+            typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key
+          )
+        );
+      });
+    }
   }
 }
 

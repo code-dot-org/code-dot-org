@@ -31,6 +31,12 @@
 class QueuedAccountPurge < ApplicationRecord
   belongs_to :user
 
+  # Some errors are known to be intermittent, such as external services being temporarily
+  # unavailable. If an account purge was queued for one of these reasons, our system can
+  # automatically retry it on the next run without developer intervention.
+  AUTO_RETRYABLE_REASONS = %w{Pardot::InvalidApiKeyException}
+  scope :needing_manual_review, -> {where.not(reason_for_review: AUTO_RETRYABLE_REASONS)}
+
   # Used by developers to resolve an account purge queued for manual review,
   # after they've investigated the account and decided it's ready to purge.
   def resolve!
