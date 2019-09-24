@@ -856,6 +856,7 @@ ja-JP:
             </block></xml>
       course2_collector_loops_challenge2:
         courseC_maze_loops_challenge2_a: オリジナルのコードはうまくいくでしょう・・・それぞれの山にジェムが1つだけなら！
+        courseC_maze_loops_challenge2_b: くりかえしのなかに `あつめる`を 入れるのを わすれないでね。
       course2_collector_prog_challenge1:
         courseC_collector_prog_challenge1_a: "「あつめる」コマンドをたくさん使うと、たくさんジェムをあつめることができます。"
       course2_collector_prog_challenge2:
@@ -890,6 +891,16 @@ ja-JP:
                     </block>
                   </statement>
                   </block></next></block></xml>
+      course2_harvester_loops_challenge2:
+        courseC_harvester_loops_challenge2_a: ゆっくり考えて！ジグザグに 行く ほうほう や まわりから あつめていく
+          ほうほう など、このパズルを クリアする ほうほうは ほかにも たくさん あります。
+        courseC_harvester_loops_challenge2_b: "`前にすすむ` と `ピック レタス` をひつような回数くりかえして、角まで来たら
+          まがります。"
+        courseC_harvester_loops_challenge2_c: |-
+          ジグザグに行くやり方は、赤い線の行き方を ２回 くりかせば 20ブロックで パズルを クリアできます。
+
+          ![](<https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png>)
+        courseC_harvester_loops_challenge2_d: まわりから あつめていく ほうほう だと、18ブロックですみます！
       course2_maze_loops_challenge1:
         courseC_maze_loops_challenge1_a: 3つのピースでできた道として考えてみましょう。それぞれのピースはくりかえしできるパターンをもってます。
         courseC_maze_loops_challenge1_b: それぞれの「くりかえし」ブロックの間では、「左にまがる」または「右にまがる」をつかって次のくりかえしのためのじゅんびが必要（ひつよう）です。
@@ -1294,6 +1305,10 @@ ja-JP:
         courseA_harvester_loops5_a: うまくいかなかったら、コーナーの まえと、コーナーの あとと、２つにわけて かんがえて みよう。
       courseA_harvester_loops5_2019:
         courseA_harvester_loops5_a: うまくいかなかったら、コーナーの まえと、コーナーの あとと、２つにわけて かんがえて みよう。
+      courseA_harvester_loops6:
+        courseA_harvester_loops6_a: わからなくなったら、すべての動きを紙に書いて くりかえしのパターンを見つけよう。
+      courseA_harvester_loops6_2019:
+        courseA_harvester_loops6_a: わからなくなったら、すべての動きを紙に書いて くりかえしのパターンを見つけよう。
       courseA_harvester_seq2:
         courseA_harvester_seq2_b: かみに ステップを かいて かいけつ しよう！
       courseA_harvester_seq2_2019:
@@ -1794,6 +1809,84 @@ ja-JP:
           <block type="collector_collect"/></xml> ブロックを いれてください。（くりかえしを つかっても よいです）
       courseB_maze_seq8:
         courseB_maze_seq8_b: このパズルの解き方は二通りあるよ。
+      courseC_artist_loop1:
+        courseC_artist_loop1_a: くりかえしのなかは、変えなくても だいじょうぶ、くりかえしの前に ブロックを １つ 入れるだけ。
+        courseC_artist_loop1_b: |-
+          書く線のパターンをかえるには、このブロックを つかいます。
+
+          <xml>
+          <block type="draw_line_style_pattern">
+              <title name="VALUE">DEFAULT</title>
+            </block>
+          </xml>
+
+          好きなパターンを ためしてみて。
+      courseC_artist_loop1_2018:
+        courseC_artist_loop1_a: くりかえしのなかは、変えなくても だいじょうぶ、くりかえしの前に ブロックを １つ 入れるだけ。
+        courseC_artist_loop1_b: |-
+          書く線のパターンをかえるには、このブロックを つかいます。
+
+          <xml>
+          <block type="draw_line_style_pattern">
+              <title name="VALUE">DEFAULT</title>
+            </block>
+          </xml>
+
+          好きなパターンを ためしてみて。
+      courseC_artist_loop1_2019:
+        courseC_artist_loop1_a: くりかえしのなかは、変えなくても だいじょうぶ、くりかえしの前に ブロックを １つ 入れるだけ。
+        courseC_artist_loop1_b: |-
+          書く線のパターンをかえるには、このブロックを つかいます。
+
+          <xml>
+          <block type="draw_line_style_pattern">
+              <title name="VALUE">DEFAULT</title>
+            </block>
+          </xml>
+
+          好きなパターンを ためしてみて。
+      courseC_artist_loops5a:
+        courseC_artist_loops5a_a: "`スタンプ`の 小さな さんかくを おせば、キャラクターを かえることが できます。"
+      courseC_artist_loops5a_2018:
+        courseC_artist_loops5a_a: "`スタンプ`の 小さな さんかくを おせば、キャラクターを かえることが できます。"
+      courseC_artist_loops5a_2019:
+        courseC_artist_loops5a_a: "`スタンプ`の 小さな さんかくを おせば、キャラクターを かえることが できます。"
+      courseC_artist_loops6a:
+        courseC_artist_loops6a_a: 上のようにするには、スタンプとスタンプの間を 75ピクセルより 小さくします。
+      courseC_artist_loops6a_2018:
+        courseC_artist_loops6a_a: 上のようにするには、スタンプとスタンプの間を 75ピクセルより 小さくします。
+      courseC_artist_loops6a_2019:
+        courseC_artist_loops6a_a: 上のようにするには、スタンプとスタンプの間を 75ピクセルより 小さくします。
+      courseC_artist_loops7a:
+        courseC_artist_loops7a_a: |-
+          360をまがる角度でわったものが、くりかえしの回数です。
+          くりかえしの回数は、あってるかな？
+      courseC_artist_loops7a_2018:
+        courseC_artist_loops7a_a: |-
+          360をまがる角度でわったものが、くりかえしの回数です。
+          くりかえしの回数は、あってるかな？
+      courseC_artist_loops7a_2019:
+        courseC_artist_loops7a_a: |-
+          360をまがる角度でわったものが、くりかえしの回数です。
+          くりかえしの回数は、あってるかな？
+      courseC_artist_loopsPre1a:
+        courseC_artist_loopsPre1a_a: くりかえしの中に `まがる` ブロックを入れるのをわすれないで。
+        courseC_artist_loopsPre1a_b: "`くりかえし` のなかに入れるのは、`200ピクセルジャンプして200ピクセル下に行く`、`前に50ピクセルすすむ`、`右に60度まがる`の３つです。"
+      courseC_artist_loopsPre1a_2018:
+        courseC_artist_loopsPre1a_a: くりかえしの中に `まがる` ブロックを入れるのをわすれないで。
+        courseC_artist_loopsPre1a_b: "`くりかえし` のなかに入れるのは、`200ピクセルジャンプして200ピクセル下に行く`、`前に50ピクセルすすむ`、`右に60度まがる`の３つです。"
+      courseC_artist_loopsPre1a_2019:
+        courseC_artist_loopsPre1a_a: くりかえしの中に `まがる` ブロックを入れるのをわすれないで。
+        courseC_artist_loopsPre1a_b: "`くりかえし` のなかに入れるのは、`200ピクセルジャンプして200ピクセル下に行く`、`前に50ピクセルすすむ`、`右に60度まがる`の３つです。"
+      courseC_artist_loopsPrePre1a:
+        courseC_artist_loopsPrePre1a_a: |-
+          さいしょのブロックは、これ。
+
+          ![](<https://images.code.org/60e3354a2e7dd37b64833eac1e8694be-image-1499710228373.08.14 AM.png>)
+        courseC_artist_loopsPrePre1a_b: |-
+          ![](<https://images.code.org/411fca4606a09641e6eedf5069ac4efa-image-1499710237929.08.27 AM.png>)
+
+          で、５０ピクセル前に すすみます。
       courseC_artist_prog2:
         courseC_artist_prog2_a: ブロックを使って僕に「100ピクセル前に進む」ことを教えて。そうすれば自動的に線を引いてあげるよ。
         courseC_artist_prog2_b: カドをまがるのが、むずかしい？「90度まがる」ブロックを使ってみて。
@@ -1803,18 +1896,363 @@ ja-JP:
       courseC_artist_prog2_2019:
         courseC_artist_prog2_a: ブロックを使って僕に「100ピクセル前に進む」ことを教えて。そうすれば自動的に線を引いてあげるよ。
         courseC_artist_prog2_b: カドをまがるのが、むずかしい？「90度まがる」ブロックを使ってみて。
+      courseC_collector_loops_challenge2:
+        courseC_maze_loops_challenge2_b: くりかえしのなかに `あつめる`を 入れるのを わすれないでね。
+      courseC_collector_loops_challenge2_2018:
+        courseC_maze_loops_challenge2_b: くりかえしのなかに `あつめる`を 入れるのを わすれないでね。
+      courseC_collector_loops_challenge2_2019:
+        courseC_maze_loops_challenge2_b: くりかえしのなかに `あつめる`を 入れるのを わすれないでね。
+      courseC_collector_prog1:
+        courseC_collector_prog1_a: たからもののあるばしょに 行ったら、<xml><block type="collector_collect"/></xml>
+          を つかって たからものを あつめよう。
+        courseC_collector_prog1_b: １ばんかんたんなこたえは、一歩前にすすんで、たからものをあつめるだけです。
+      courseC_collector_prog1_2018:
+        courseC_collector_prog1_a: たからもののあるばしょに 行ったら、<xml><block type="collector_collect"/></xml>
+          を つかって たからものを あつめよう。
+        courseC_collector_prog1_b: １ばんかんたんなこたえは、一歩前にすすんで、たからものをあつめるだけです。
+      courseC_collector_prog1_2019:
+        courseC_collector_prog1_a: たからもののあるばしょに 行ったら、<xml><block type="collector_collect"/></xml>
+          を つかって たからものを あつめよう。
+        courseC_collector_prog1_b: １ばんかんたんなこたえは、一歩前にすすんで、たからものをあつめるだけです。
+      courseC_collector_prog2:
+        courseC_collector_prog2_a: <xml><block type="maze_move"><title name="DIR">moveForward</title></block></xml>
+          を４つならべてみましょう。<xml><block type="controls_repeat_dropdown"><title name="TIMES"
+          config="3-10">???</title></block></xml> をつかえば、プログラムをみじかくすることができます。
+      courseC_collector_prog2_2018:
+        courseC_collector_prog2_a: <xml><block type="maze_move"><title name="DIR">moveForward</title></block></xml>
+          を４つならべてみましょう。<xml><block type="controls_repeat_dropdown"><title name="TIMES"
+          config="3-10">???</title></block></xml> をつかえば、プログラムをみじかくすることができます。
+      courseC_collector_prog2_2019:
+        courseC_collector_prog2_a: <xml><block type="maze_move"><title name="DIR">moveForward</title></block></xml>
+          を４つならべてみましょう。<xml><block type="controls_repeat_dropdown"><title name="TIMES"
+          config="3-10">???</title></block></xml> をつかえば、プログラムをみじかくすることができます。
       courseC_collector_prog3:
+        courseC_collector_prog3_a: <xml><block type="when_run"/></xml> に ひっつけた じゅんばんに
+          プログラムが実行（じっこう）されます。
+        courseC_collector_prog3_b: '"ステップ"ボタンで プログラムを１行づつ うごかして まちがいをみつけよう。'
         courseC_collector_prog3_c: わからない ときは、かみに かいて パターンを さがしてみよう。
       courseC_collector_prog3_2018:
+        courseC_collector_prog3_a: <xml><block type="when_run"/></xml> に ひっつけた じゅんばんに
+          プログラムが実行（じっこう）されます。
+        courseC_collector_prog3_b: '"ステップ"ボタンで プログラムを１行づつ うごかして まちがいをみつけよう。'
         courseC_collector_prog3_c: わからない ときは、かみに かいて パターンを さがしてみよう。
       courseC_collector_prog3_2019:
+        courseC_collector_prog3_a: <xml><block type="when_run"/></xml> に ひっつけた じゅんばんに
+          プログラムが実行（じっこう）されます。
+        courseC_collector_prog3_b: '"ステップ"ボタンで プログラムを１行づつ うごかして まちがいをみつけよう。'
         courseC_collector_prog3_c: わからない ときは、かみに かいて パターンを さがしてみよう。
+      courseC_collector_prog4:
+        courseC_collector_prog4_a: こまったときは、紙に書いて考えてみよう。
+        courseC_collector_prog4_c: 赤い線のとおりに やってみよう。
+      courseC_collector_prog4_2018:
+        courseC_collector_prog4_a: こまったときは、紙に書いて考えてみよう。
+        courseC_collector_prog4_c: 赤い線のとおりに やってみよう。
+      courseC_collector_prog4_2019:
+        courseC_collector_prog4_a: こまったときは、紙に書いて考えてみよう。
+        courseC_collector_prog4_c: 赤い線のとおりに やってみよう。
+      courseC_collector_prog5:
+        courseC_collector_prog5_a: |-
+          ”はじめに なにを する？
+          そのつぎは？
+          どこが まちがえているのか わかりましたか？”
+        courseC_collector_prog5_b: まちがっているところは １つだけじゃないよ、ほかにもあるので 見つけてみよう。
+        courseC_collector_prog5_c: こまったときは、紙に書いて考えてみよう。
+        courseC_collector_prog5_d: 赤い線のとおりに動かしてみよう。
+      courseC_collector_prog5_2018:
+        courseC_collector_prog5_a: |-
+          ”はじめに なにを する？
+          そのつぎは？
+          どこが まちがえているのか わかりましたか？”
+        courseC_collector_prog5_b: まちがっているところは １つだけじゃないよ、ほかにもあるので 見つけてみよう。
+        courseC_collector_prog5_c: こまったときは、紙に書いて考えてみよう。
+        courseC_collector_prog5_d: 赤い線のとおりに動かしてみよう。
+      courseC_collector_prog5_2019:
+        courseC_collector_prog5_a: |-
+          ”はじめに なにを する？
+          そのつぎは？
+          どこが まちがえているのか わかりましたか？”
+        courseC_collector_prog5_b: まちがっているところは １つだけじゃないよ、ほかにもあるので 見つけてみよう。
+        courseC_collector_prog5_c: こまったときは、紙に書いて考えてみよう。
+        courseC_collector_prog5_d: 赤い線のとおりに動かしてみよう。
+      courseC_collector_prog6:
+        courseC_collector_prog6_a: |-
+          どこが まちがえているか わかった？
+          ”ステップ”ボタンで プログラムを 1行づつ うごかして どこがまちがっているのか みつけよう。
+        courseC_collector_prog6_b: わからないときは、赤い線のとおりに動かしてみよう。
+      courseC_collector_prog6_2018:
+        courseC_collector_prog6_a: |-
+          どこが まちがえているか わかった？
+          ”ステップ”ボタンで プログラムを 1行づつ うごかして どこがまちがっているのか みつけよう。
+        courseC_collector_prog6_b: わからないときは、赤い線のとおりに動かしてみよう。
+      courseC_collector_prog6_2019:
+        courseC_collector_prog6_a: |-
+          どこが まちがえているか わかった？
+          ”ステップ”ボタンで プログラムを 1行づつ うごかして どこがまちがっているのか みつけよう。
+        courseC_collector_prog6_b: わからないときは、赤い線のとおりに動かしてみよう。
+      courseC_collector_prog7:
+        courseC_collector_prog7_a: 'はじめから プログラムしてある ブロックを けす ひつようはありません。  '
+        courseC_collector_prog7_b: どこかで みぎにまわる ひつようが ないか 考えてみて。
+        courseC_collector_prog7_c: わからないときは、赤い線のとおりに動かしてみよう。
+      courseC_collector_prog7_2018:
+        courseC_collector_prog7_a: 'はじめから プログラムしてある ブロックを けす ひつようはありません。  '
+        courseC_collector_prog7_b: どこかで みぎにまわる ひつようが ないか 考えてみて。
+        courseC_collector_prog7_c: わからないときは、赤い線のとおりに動かしてみよう。
+      courseC_collector_prog7_2019:
+        courseC_collector_prog7_a: 'はじめから プログラムしてある ブロックを けす ひつようはありません。  '
+        courseC_collector_prog7_b: どこかで みぎにまわる ひつようが ないか 考えてみて。
+        courseC_collector_prog7_c: わからないときは、赤い線のとおりに動かしてみよう。
+      courseC_collector_prog_challenge1:
+        courseC_collector_prog_challenge1_a: すべてのたからものを あつめるには １つの ばしょで 何回も ’あつめる’を
+          つかいましょう。
+      courseC_collector_prog_challenge1_2018:
+        courseC_collector_prog_challenge1_a: すべてのたからものを あつめるには １つの ばしょで 何回も ’あつめる’を
+          つかいましょう。
+      courseC_collector_prog_challenge1_2019:
+        courseC_collector_prog_challenge1_a: すべてのたからものを あつめるには １つの ばしょで 何回も ’あつめる’を
+          つかいましょう。
+      courseC_collector_prog_challenge2:
+        courseC_collector_prog_challenge1_a: １つのばしょで 何回も 'あつめる'ブロックを つかってみよう。
+        courseC_collector_prog_challenge1_b: わからないときは、赤い線にそって行ってみよう！
+      courseC_collector_prog_challenge2_2018:
+        courseC_collector_prog_challenge1_a: １つのばしょで 何回も 'あつめる'ブロックを つかってみよう。
+        courseC_collector_prog_challenge1_b: わからないときは、赤い線にそって行ってみよう！
+      courseC_collector_prog_challenge2_2019:
+        courseC_collector_prog_challenge1_a: １つのばしょで 何回も 'あつめる'ブロックを つかってみよう。
+        courseC_collector_prog_challenge1_b: わからないときは、赤い線にそって行ってみよう！
       courseC_data wizard:
         courseA_playLab_events7_a: |-
           ぶつかったしらべるには、<xml><block type="studio_whenSpriteCollided">
               <title name="SPRITE1">1</title>
               <title name="SPRITE2">0</title>
             </block></xml> をつかいます。
+      courseC_flappy_events2:
+        courseC_flappy_events2_a: "`スピードをセットする`が、ひつようです。 "
+        courseC_flappy_events2_b: このパズルをクリアするのは、`実行（じっこう）した時` の下に`スピードをセットする`を ひっつけてください。
+      courseC_flappy_events2_2018:
+        courseC_flappy_events2_a: "`スピードをセットする`が、ひつようです。 "
+        courseC_flappy_events2_b: このパズルをクリアするのは、`実行（じっこう）した時` の下に`スピードをセットする`を ひっつけてください。
+      courseC_flappy_events2_2019:
+        courseC_flappy_events2_a: "`スピードをセットする`が、ひつようです。 "
+        courseC_flappy_events2_b: このパズルをクリアするのは、`実行（じっこう）した時` の下に`スピードをセットする`を ひっつけてください。
+      courseC_flappy_events3:
+        courseC_flappy_events3_a: うまく うごかないときは、ブロックを ひっつけたイベントが 正しいか かくにんしてみよう。
+      courseC_flappy_events3_2018:
+        courseC_flappy_events3_a: うまく うごかないときは、ブロックを ひっつけたイベントが 正しいか かくにんしてみよう。
+      courseC_flappy_events3_2019:
+        courseC_flappy_events3_a: うまく うごかないときは、ブロックを ひっつけたイベントが 正しいか かくにんしてみよう。
+      courseC_flappy_events4:
+        courseC_flappy_events4_a: "`しょうがいぶつに あたったとき` に `ゲームオーバー`をひっつけよう。"
+      courseC_flappy_events4_2018:
+        courseC_flappy_events4_a: "`しょうがいぶつに あたったとき` に `ゲームオーバー`をひっつけよう。"
+      courseC_flappy_events4_2019:
+        courseC_flappy_events4_a: "`しょうがいぶつに あたったとき` に `ゲームオーバー`をひっつけよう。"
+      courseC_harvester_loops1:
+        courseC_harvester_loops1_a: １回だけ前にすすんで、 <xml><block type="harvester_pumpkin"/></xml>
+          でかぼちゃをあつめます。.
+        courseC_harvester_loops1_b: くりかえしのなかに <xml><block type="harvester_pumpkin"/></xml>
+          を入れて、かぼちゃの かずだけ くりかえそう。
+      courseC_harvester_loops1_2018:
+        courseC_harvester_loops1_a: １回だけ前にすすんで、 <xml><block type="harvester_pumpkin"/></xml>
+          でかぼちゃをあつめます。.
+        courseC_harvester_loops1_b: くりかえしのなかに <xml><block type="harvester_pumpkin"/></xml>
+          を入れて、かぼちゃの かずだけ くりかえそう。
+      courseC_harvester_loops1_2019:
+        courseC_harvester_loops1_a: １回だけ前にすすんで、 <xml><block type="harvester_pumpkin"/></xml>
+          でかぼちゃをあつめます。.
+        courseC_harvester_loops1_b: くりかえしのなかに <xml><block type="harvester_pumpkin"/></xml>
+          を入れて、かぼちゃの かずだけ くりかえそう。
+      courseC_harvester_loops2:
+        courseC_harvester_loops2_a: わからなくなったら、すべての動きを紙に書いて くりかえしのパターンを見つけよう。
+        courseC_harvester_loops2_b: くりかえしのあとに、もう一回 `くりかえし` を つかいます。
+        courseC_harvester_loops2_c: １つ目は、`前にすすむ`を くりかえします。もう一つは、 `ピック カボチャ`を かくかえします。
+      courseC_harvester_loops2_2018:
+        courseC_harvester_loops2_a: わからなくなったら、すべての動きを紙に書いて くりかえしのパターンを見つけよう。
+        courseC_harvester_loops2_b: くりかえしのあとに、もう一回 `くりかえし` を つかいます。
+        courseC_harvester_loops2_c: １つ目は、`前にすすむ`を くりかえします。もう一つは、 `ピック カボチャ`を かくかえします。
+      courseC_harvester_loops2_2019:
+        courseC_harvester_loops2_a: わからなくなったら、すべての動きを紙に書いて くりかえしのパターンを見つけよう。
+        courseC_harvester_loops2_b: くりかえしのあとに、もう一回 `くりかえし` を つかいます。
+        courseC_harvester_loops2_c: １つ目は、`前にすすむ`を くりかえします。もう一つは、 `ピック カボチャ`を かくかえします。
+      courseC_harvester_loops3:
+        courseC_harvester_loops3_b: 前のパズルと 同じ やり方で さいしょの かぼちゃを ゲットできます。そのあと、どっちに まがれば
+          いいかな？
+        courseC_harvester_loops3_c: プログラムをシンプルにするのは、くりかえしの中にくりかえしを入れます。これを**くりかえしの入れ子**といいます。
+      courseC_harvester_loops3_2018:
+        courseC_harvester_loops3_b: 前のパズルと 同じ やり方で さいしょの かぼちゃを ゲットできます。そのあと、どっちに まがれば
+          いいかな？
+        courseC_harvester_loops3_c: プログラムをシンプルにするのは、くりかえしの中にくりかえしを入れます。これを**くりかえしの入れ子**といいます。
+      courseC_harvester_loops3_2019:
+        courseC_harvester_loops3_b: 前のパズルと 同じ やり方で さいしょの かぼちゃを ゲットできます。そのあと、どっちに まがれば
+          いいかな？
+        courseC_harvester_loops3_c: プログラムをシンプルにするのは、くりかえしの中にくりかえしを入れます。これを**くりかえしの入れ子**といいます。
+      courseC_harvester_loops4:
+        courseC_harvester_loops4_a: とうもろこしをあつめるには、`ピック トウモロコシ` をつかいます。
+        courseC_harvester_loops4_b: とうもろこし を あつめる くりかえし と かぼちゃ を あつめる くりかえし を プログラムします。
+        courseC_harvester_loops4_c: プログラムをシンプルにするのは、くりかえしの中にくりかえしを入れます。これを**くりかえしの入れ子**といいます。
+      courseC_harvester_loops4_2018:
+        courseC_harvester_loops4_a: とうもろこしをあつめるには、`ピック トウモロコシ` をつかいます。
+        courseC_harvester_loops4_b: とうもろこし を あつめる くりかえし と かぼちゃ を あつめる くりかえし を プログラムします。
+        courseC_harvester_loops4_c: プログラムをシンプルにするのは、くりかえしの中にくりかえしを入れます。これを**くりかえしの入れ子**といいます。
+      courseC_harvester_loops4_2019:
+        courseC_harvester_loops4_a: とうもろこしをあつめるには、`ピック トウモロコシ` をつかいます。
+        courseC_harvester_loops4_b: とうもろこし を あつめる くりかえし と かぼちゃ を あつめる くりかえし を プログラムします。
+        courseC_harvester_loops4_c: プログラムをシンプルにするのは、くりかえしの中にくりかえしを入れます。これを**くりかえしの入れ子**といいます。
+      courseC_harvester_loops5:
+        courseC_harvester_loops5_a: わからなくなったら、すべての動きを紙に書いて くりかえしのパターンを見つけよう。
+        courseC_harvester_loops5_b: ほかのパズルにあった かいだんのパターンに にてない？プログラムは にてるけど、さくもつを
+          あつめるのを わすれないでね。
+      courseC_harvester_loops5_2018:
+        courseC_harvester_loops5_a: わからなくなったら、すべての動きを紙に書いて くりかえしのパターンを見つけよう。
+        courseC_harvester_loops5_b: ほかのパズルにあった かいだんのパターンに にてない？プログラムは にてるけど、さくもつを
+          あつめるのを わすれないでね。
+      courseC_harvester_loops5_2019:
+        courseC_harvester_loops5_a: わからなくなったら、すべての動きを紙に書いて くりかえしのパターンを見つけよう。
+        courseC_harvester_loops5_b: ほかのパズルにあった かいだんのパターンに にてない？プログラムは にてるけど、さくもつを
+          あつめるのを わすれないでね。
+      courseC_harvester_loops6:
+        courseC_harvester_loops6_a: くりかえしの中に ふく数の ブロックを 入れられることを 思い出して。
+        courseC_harvester_loops6_b: とうもろこしの れつを さいごまで 行ったら、ほうこう てんかん しよう。
+      courseC_harvester_loops6_2018:
+        courseC_harvester_loops6_a: くりかえしの中に ふく数の ブロックを 入れられることを 思い出して。
+        courseC_harvester_loops6_b: とうもろこしの れつを さいごまで 行ったら、ほうこう てんかん しよう。
+      courseC_harvester_loops6_2019:
+        courseC_harvester_loops6_a: くりかえしの中に ふく数の ブロックを 入れられることを 思い出して。
+        courseC_harvester_loops6_b: とうもろこしの れつを さいごまで 行ったら、ほうこう てんかん しよう。
+      courseC_harvester_loops7:
+        courseC_harvester_loops7_a: さいしょに とうもろこしを あつめる ほうほうと かぼちゃから あつめるほうほうが あります。
+        courseC_harvester_loops7_b: このパズルをクリアするは、ふくすうの`くりかえし`をつかいます。
+      courseC_harvester_loops7_2018:
+        courseC_harvester_loops7_a: さいしょに とうもろこしを あつめる ほうほうと かぼちゃから あつめるほうほうが あります。
+        courseC_harvester_loops7_b: このパズルをクリアするは、ふくすうの`くりかえし`をつかいます。
+      courseC_harvester_loops7_2019:
+        courseC_harvester_loops7_a: さいしょに とうもろこしを あつめる ほうほうと かぼちゃから あつめるほうほうが あります。
+        courseC_harvester_loops7_b: このパズルをクリアするは、ふくすうの`くりかえし`をつかいます。
+      courseC_harvester_loops8:
+        courseC_harvester_loops8_a: ほかのパズルにあった かいだんのパターンに にてない？プログラムは にてるけど、さくもつを
+          あつめるのを わすれないでね。
+        courseC_harvester_loops8_b: プログラムをシンプルにするのは、くりかえしの中にくりかえしを入れます。これを**くりかえしの入れ子**といいます。
+      courseC_harvester_loops8_2018:
+        courseC_harvester_loops8_a: ほかのパズルにあった かいだんのパターンに にてない？プログラムは にてるけど、さくもつを
+          あつめるのを わすれないでね。
+        courseC_harvester_loops8_b: プログラムをシンプルにするのは、くりかえしの中にくりかえしを入れます。これを**くりかえしの入れ子**といいます。
+      courseC_harvester_loops8_2019:
+        courseC_harvester_loops8_a: ほかのパズルにあった かいだんのパターンに にてない？プログラムは にてるけど、さくもつを
+          あつめるのを わすれないでね。
+        courseC_harvester_loops8_b: プログラムをシンプルにするのは、くりかえしの中にくりかえしを入れます。これを**くりかえしの入れ子**といいます。
+      courseC_harvester_loops_challenge1a:
+        courseC_harvester_loops_challenge1_a: くりかえしを つかわないで クリアするのは、とても たいへん！
+        courseC_harvester_loops_challenge1_b: "`前にすすむ` と `ピック トウモロコシ` をひつような回数くりかえして、角まで来たら、
+          `みぎにまがる`でまがります。"
+        courseC_harvester_loops_challenge1_c: |-
+          一番いい方法は、`くりかえし` のなかで`くりかえし` を つかう やり方です。
+
+          <xml><block type="controls_repeat">
+                  <title name="TIMES">2</title>
+                  <statement name="DO">
+                    <block type="controls_repeat">
+                      <title name="TIMES">4</title>
+                      <statement name="DO">
+                        <block type="maze_move">
+                          <title name="DIR">moveForward</title>
+                          <next>
+                            <block type="harvester_corn"/>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnRight</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  </block></xml>
+      courseC_harvester_loops_challenge1a_2018:
+        courseC_harvester_loops_challenge1_a: くりかえしを つかわないで クリアするのは、とても たいへん！
+        courseC_harvester_loops_challenge1_b: "`前にすすむ` と `ピック トウモロコシ` をひつような回数くりかえして、角まで来たら、
+          `みぎにまがる`でまがります。"
+        courseC_harvester_loops_challenge1_c: |-
+          一番いい方法は、`くりかえし` のなかで`くりかえし` を つかう やり方です。
+
+          <xml><block type="controls_repeat">
+                  <title name="TIMES">2</title>
+                  <statement name="DO">
+                    <block type="controls_repeat">
+                      <title name="TIMES">4</title>
+                      <statement name="DO">
+                        <block type="maze_move">
+                          <title name="DIR">moveForward</title>
+                          <next>
+                            <block type="harvester_corn"/>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnRight</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  </block></xml>
+      courseC_harvester_loops_challenge1a_2019:
+        courseC_harvester_loops_challenge1_a: くりかえしを つかわないで クリアするのは、とても たいへん！
+        courseC_harvester_loops_challenge1_b: "`前にすすむ` と `ピック トウモロコシ` をひつような回数くりかえして、角まで来たら、
+          `みぎにまがる`でまがります。"
+        courseC_harvester_loops_challenge1_c: |-
+          一番いい方法は、`くりかえし` のなかで`くりかえし` を つかう やり方です。
+
+          <xml><block type="controls_repeat">
+                  <title name="TIMES">2</title>
+                  <statement name="DO">
+                    <block type="controls_repeat">
+                      <title name="TIMES">4</title>
+                      <statement name="DO">
+                        <block type="maze_move">
+                          <title name="DIR">moveForward</title>
+                          <next>
+                            <block type="harvester_corn"/>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnRight</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  </block></xml>
+      courseC_harvester_loops_challenge2:
+        courseC_harvester_loops_challenge2_a: ゆっくり考えて！ジグザグに 行く ほうほう や まわりから あつめていく
+          ほうほう など、このパズルを クリアする ほうほうは ほかにも たくさん あります。
+        courseC_harvester_loops_challenge2_b: "`前にすすむ` と `ピック レタス` をひつような回数くりかえして、角まで来たら
+          まがります。"
+        courseC_harvester_loops_challenge2_c: |-
+          ジグザグに行くやり方は、赤い線の行き方を ２回 くりかせば 20ブロックで パズルを クリアできます。
+
+          ![](<https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png>)
+        courseC_harvester_loops_challenge2_d: まわりから あつめていく ほうほう だと、18ブロックですみます！
+      courseC_harvester_loops_challenge2_2018:
+        courseC_harvester_loops_challenge2_a: ゆっくり考えて！ジグザグに 行く ほうほう や まわりから あつめていく
+          ほうほう など、このパズルを クリアする ほうほうは ほかにも たくさん あります。
+        courseC_harvester_loops_challenge2_b: "`前にすすむ` と `ピック レタス` をひつような回数くりかえして、角まで来たら
+          まがります。"
+        courseC_harvester_loops_challenge2_c: |-
+          ジグザグに行くやり方は、赤い線の行き方を ２回 くりかせば 20ブロックで パズルを クリアできます。
+
+          ![](<https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png>)
+        courseC_harvester_loops_challenge2_d: まわりから あつめていく ほうほう だと、18ブロックですみます！
+      courseC_harvester_loops_challenge2_2019:
+        courseC_harvester_loops_challenge2_a: ゆっくり考えて！ジグザグに 行く ほうほう や まわりから あつめていく
+          ほうほう など、このパズルを クリアする ほうほうは ほかにも たくさん あります。
+        courseC_harvester_loops_challenge2_b: "`前にすすむ` と `ピック レタス` をひつような回数くりかえして、角まで来たら
+          まがります。"
+        courseC_harvester_loops_challenge2_c: |-
+          ジグザグに行くやり方は、赤い線の行き方を ２回 くりかせば 20ブロックで パズルを クリアできます。
+
+          ![](<https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png>)
+        courseC_harvester_loops_challenge2_d: まわりから あつめていく ほうほう だと、18ブロックですみます！
       courseC_maze_debugging2:
         courseC_maze_debugging2_c: どこが わるいか わからない？なんども プログラムを うごかして みてみよう。
       courseC_maze_debugging2_2018:
@@ -1827,6 +2265,15 @@ ja-JP:
         courseC_maze_debugging3_b: どこが わるいか わからない？なんども プログラムを うごかして みてみよう。
       courseC_maze_debugging3_2019:
         courseC_maze_debugging3_b: どこが わるいか わからない？なんども プログラムを うごかして みてみよう。
+      courseC_maze_loops_challenge1a:
+        courseC_maze_loops_challenge1_a: ２つにわけて考えてみよう。それぞれに くりかえしの パターンが あります。
+        courseC_maze_loops_challenge1_b: かいだんのパターンのとき、どんなふうにくりかえしをつかったか思い出して。
+      courseC_maze_loops_challenge1a_2018:
+        courseC_maze_loops_challenge1_a: ２つにわけて考えてみよう。それぞれに くりかえしの パターンが あります。
+        courseC_maze_loops_challenge1_b: かいだんのパターンのとき、どんなふうにくりかえしをつかったか思い出して。
+      courseC_maze_loops_challenge1a_2019:
+        courseC_maze_loops_challenge1_a: ２つにわけて考えてみよう。それぞれに くりかえしの パターンが あります。
+        courseC_maze_loops_challenge1_b: かいだんのパターンのとき、どんなふうにくりかえしをつかったか思い出して。
       courseC_maze_programming1:
         courseC_maze_programming1_0: すべてのブロックがきちんとつながっているかをかくにんして、もういちど「実行」をクリックしてみよう。
       courseC_maze_programming1_2018:
@@ -1968,6 +2415,123 @@ ja-JP:
         courseC_maze_programming_challenge2_a: 後ろに行くときは、まがる方向（ほうこう）に気をつけよう。
         courseC_maze_programming_challenge2_b: さいたんルートは5ブロックでクリアできます。<xml><block type="controls_repeat_dropdown"><title
           name="TIMES" config="3-10">???</title></block></xml> ブロックを使います！
+      courseC_starWars_loops1:
+        courseC_starWars_loops1_a: スクラップのうえを とおることで BB-8は スクラップを あつめます。
+        courseC_starWars_loops1_c: このパズルをクリアするには、`前にすすむ` ブロックを ５こ つかいます。
+      courseC_starWars_loops10:
+        courseC_starWars_loops10_a: 大きなかいだんが 見えるかな？今まで やったなかで どのパターンが つかえるか 考えてみよう。
+        courseC_starWars_loops10_b: |-
+          さらに短いプログラムにしたいときは、`くりかえし`のなかで`くりかえし`をつかってみよう。
+          これを**入れ子にする**といいます。
+      courseC_starWars_loops10_2018:
+        courseC_starWars_loops10_a: 大きなかいだんが 見えるかな？今まで やったなかで どのパターンが つかえるか 考えてみよう。
+        courseC_starWars_loops10_b: |-
+          さらに短いプログラムにしたいときは、`くりかえし`のなかで`くりかえし`をつかってみよう。
+          これを**入れ子にする**といいます。
+      courseC_starWars_loops10_2019:
+        courseC_starWars_loops10_a: 大きなかいだんが 見えるかな？今まで やったなかで どのパターンが つかえるか 考えてみよう。
+        courseC_starWars_loops10_b: |-
+          さらに短いプログラムにしたいときは、`くりかえし`のなかで`くりかえし`をつかってみよう。
+          これを**入れ子にする**といいます。
+      courseC_starWars_loops1_2018:
+        courseC_starWars_loops1_a: スクラップのうえを とおることで BB-8は スクラップを あつめます。
+        courseC_starWars_loops1_c: このパズルをクリアするには、`前にすすむ` ブロックを ５こ つかいます。
+      courseC_starWars_loops1_2019:
+        courseC_starWars_loops1_a: スクラップのうえを とおることで BB-8は スクラップを あつめます。
+        courseC_starWars_loops1_c: このパズルをクリアするには、`前にすすむ` ブロックを ５こ つかいます。
+      courseC_starWars_loops2:
+        courseC_starWars_loops2_a: コードをくりかえすには、`くりかえし`ブロックの中に くりかえしたい ブロックを 入れます。
+      courseC_starWars_loops2_2018:
+        courseC_starWars_loops2_a: コードをくりかえすには、`くりかえし`ブロックの中に くりかえしたい ブロックを 入れます。
+      courseC_starWars_loops2_2019:
+        courseC_starWars_loops2_a: コードをくりかえすには、`くりかえし`ブロックの中に くりかえしたい ブロックを 入れます。
+      courseC_starWars_loops4:
+        courseC_starWars_loops4_c: ”ひだりに まがる”ブロックの中にある 小さな やじるしを おすと "みぎに まがる"に なります。
+        courseC_starWars_loops4_a: "`くりかえし` ブロックを２つ つかいましょう。"
+        courseC_starWars_loops4_b: "`くりかえし`ブロックの中に入れるのは、`前に すすむ` だけです。"
+      courseC_starWars_loops4_2018:
+        courseC_starWars_loops4_c: ”ひだりに まがる”ブロックの中にある 小さな やじるしを おすと "みぎに まがる"に なります。
+        courseC_starWars_loops4_a: "`くりかえし` ブロックを２つ つかいましょう。"
+        courseC_starWars_loops4_b: "`くりかえし`ブロックの中に入れるのは、`前に すすむ` だけです。"
+      courseC_starWars_loops4_2019:
+        courseC_starWars_loops4_c: ”ひだりに まがる”ブロックの中にある 小さな やじるしを おすと "みぎに まがる"に なります。
+        courseC_starWars_loops4_a: "`くりかえし` ブロックを２つ つかいましょう。"
+        courseC_starWars_loops4_b: "`くりかえし`ブロックの中に入れるのは、`前に すすむ` だけです。"
+      courseC_starWars_loops5:
+        courseC_starWars_loops5_b: 下に行って まがってから 前にすすもう。
+        courseC_starWars_loops5_a: 向きをかえて １つ`前に すすむ`、また向きをかえて、こんどは、`くりかえし`をつかいます。
+      courseC_starWars_loops5_2018:
+        courseC_starWars_loops5_b: 下に行って まがってから 前にすすもう。
+        courseC_starWars_loops5_a: 向きをかえて １つ`前に すすむ`、また向きをかえて、こんどは、`くりかえし`をつかいます。
+      courseC_starWars_loops5_2019:
+        courseC_starWars_loops5_b: 下に行って まがってから 前にすすもう。
+        courseC_starWars_loops5_a: 向きをかえて １つ`前に すすむ`、また向きをかえて、こんどは、`くりかえし`をつかいます。
+      courseC_starWars_loops6:
+        courseC_starWars_loops6_a: すべてのうごきを紙にかいて、くりかえしのパターンを見つけよう。
+        courseC_starWars_loops6_b: |-
+          さらに短いプログラムにしたいときは、`くりかえし`のなかで`くりかえし`をつかってみよう。
+          これを**入れ子にする**といいます。
+      courseC_starWars_loops6_2018:
+        courseC_starWars_loops6_a: すべてのうごきを紙にかいて、くりかえしのパターンを見つけよう。
+        courseC_starWars_loops6_b: |-
+          さらに短いプログラムにしたいときは、`くりかえし`のなかで`くりかえし`をつかってみよう。
+          これを**入れ子にする**といいます。
+      courseC_starWars_loops6_2019:
+        courseC_starWars_loops6_a: すべてのうごきを紙にかいて、くりかえしのパターンを見つけよう。
+        courseC_starWars_loops6_b: |-
+          さらに短いプログラムにしたいときは、`くりかえし`のなかで`くりかえし`をつかってみよう。
+          これを**入れ子にする**といいます。
+      courseC_starWars_loops7:
+        courseC_starWars_loops7_a: むつかしいかな？かいだん みたいに すすんでみよう。これで すべてのスクラップを あつめることが
+          できるかな？
+        courseC_starWars_loops7_b: わからなくなったら、すべての動きを紙に書いて、くりかえしのパターンをさがそう。
+      courseC_starWars_loops7_2018:
+        courseC_starWars_loops7_a: むつかしいかな？かいだん みたいに すすんでみよう。これで すべてのスクラップを あつめることが
+          できるかな？
+        courseC_starWars_loops7_b: わからなくなったら、すべての動きを紙に書いて、くりかえしのパターンをさがそう。
+      courseC_starWars_loops7_2019:
+        courseC_starWars_loops7_a: むつかしいかな？かいだん みたいに すすんでみよう。これで すべてのスクラップを あつめることが
+          できるかな？
+        courseC_starWars_loops7_b: わからなくなったら、すべての動きを紙に書いて、くりかえしのパターンをさがそう。
+      courseC_starWars_loops8:
+        course_starWars_loops8_a: 少しずつ 考えて やってみよう。ゆっくりやろうよ。いっぱつで クリアしなくて いいだよ。
+        course_starWars_loops8_b: ぜんはんは、かいだんみたいに すすむことを 考えよう。そのあと、どうすれば いいかな？
+        course_starWars_loops8_c: |-
+          こんなふうに行ってみよう。
+
+          ![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)
+      courseC_starWars_loops8_2018:
+        course_starWars_loops8_a: 少しずつ 考えて やってみよう。ゆっくりやろうよ。いっぱつで クリアしなくて いいだよ。
+        course_starWars_loops8_b: ぜんはんは、かいだんみたいに すすむことを 考えよう。そのあと、どうすれば いいかな？
+        course_starWars_loops8_c: |-
+          こんなふうに行ってみよう。
+
+          ![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)
+      courseC_starWars_loops8_2019:
+        course_starWars_loops8_a: 少しずつ 考えて やってみよう。ゆっくりやろうよ。いっぱつで クリアしなくて いいだよ。
+        course_starWars_loops8_b: ぜんはんは、かいだんみたいに すすむことを 考えよう。そのあと、どうすれば いいかな？
+        course_starWars_loops8_c: |-
+          こんなふうに行ってみよう。
+
+          ![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)
+      courseC_starWars_loops9:
+        course_starWars_loops9_b: "`くりかえし`の中には、１ついじょう ブロックを 入れることが できます。"
+        course_starWars_loops9_c: |-
+          このパズルをクリアするのに、ひだりにまがるはつかいません。みぎにまがるだけでOK。
+
+          ![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)
+      courseC_starWars_loops9_2018:
+        course_starWars_loops9_b: "`くりかえし`の中には、１ついじょう ブロックを 入れることが できます。"
+        course_starWars_loops9_c: |-
+          このパズルをクリアするのに、ひだりにまがるはつかいません。みぎにまがるだけでOK。
+
+          ![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)
+      courseC_starWars_loops9_2019:
+        course_starWars_loops9_b: "`くりかえし`の中には、１ついじょう ブロックを 入れることが できます。"
+        course_starWars_loops9_c: |-
+          このパズルをクリアするのに、ひだりにまがるはつかいません。みぎにまがるだけでOK。
+
+          ![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)
       courseD_artist_nestedLoops3:
         courseD_artist_nestedLoops3_a: |-
           「前にジャンプ」ブロックを使って、1つの四角形の上部から次に描き始めるところまで移動させてみてください。
@@ -1983,6 +2547,8 @@ ja-JP:
           「前にジャンプ」ブロックを使って、1つの四角形の上部から次に描き始めるところまで移動させてみてください。
 
           正方形の高さが20ピクセルでそれぞれが20ピクセル離れているとすると、どれだけジャンプすればよいでしょう？
+      courseD_collector_ramp8:
+        courseD_collector_ramp8_b: プログラムをシンプルにするのは、くりかえしの中にくりかえしを入れます。これを**くりかえしの入れ子**といいます。
       courseD_maze_ramp6:
         courseC_maze_programming6_a: このパズルの解き方は二通りあるよ。
       courseD_maze_ramp7:
