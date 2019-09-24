@@ -61,13 +61,6 @@ class ContactRollupsValidation
       max: 500
     },
     {
-      name: "Regional Partner count",
-      query: "SELECT COUNT(*) from contact_rollups_daily where roles
-              LIKE '%Regional Partner%'",
-      min: 25,
-      max: 250
-    },
-    {
       name: "Petition Signer count",
       query: "SELECT COUNT(*) from contact_rollups_daily WHERE roles
               LIKE '%Petition Signer%'",
