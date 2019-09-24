@@ -145,7 +145,7 @@ module Pd::Application
     # Return a string if the principal approval state is complete, in-progress, or not required.
     # Otherwise return nil.
     def principal_approval_state
-      response = Pd::Application::PrincipalApproval1920Application.find_by(application_guid: application_guid)
+      response = Pd::Application::PrincipalApproval2021Application.find_by(application_guid: application_guid)
       return COMPLETE + response.full_answers[:do_you_approve] if response
 
       principal_approval_email = emails.where(email_type: 'principal_approval').order(:created_at).last
@@ -366,7 +366,7 @@ module Pd::Application
     end
 
     def allow_sending_principal_email?
-      response = Pd::Application::PrincipalApproval1920Application.find_by(application_guid: application_guid)
+      response = Pd::Application::PrincipalApproval2021Application.find_by(application_guid: application_guid)
       last_principal_approval_email = emails.where(email_type: 'principal_approval').order(:created_at).last
       last_principal_approval_email_created_at = last_principal_approval_email&.created_at
 
@@ -503,7 +503,7 @@ module Pd::Application
     def to_csv_row(course)
       columns_to_exclude = Pd::Application::Teacher1920Application.columns_to_remove(course)
       teacher_answers = full_answers
-      principal_application = Pd::Application::PrincipalApproval1920Application.where(application_guid: application_guid).first
+      principal_application = Pd::Application::PrincipalApproval2021Application.where(application_guid: application_guid).first
       principal_answers = principal_application&.csv_data
       school_stats = School.find_by_id(school_id)&.school_stats_by_year&.order(school_year: :desc)&.first
       CSV.generate do |csv|
@@ -555,7 +555,7 @@ module Pd::Application
       responses = sanitize_form_data_hash
 
       options = self.class.options
-      principal_options = Pd::Application::PrincipalApproval1920Application.options
+      principal_options = Pd::Application::PrincipalApproval2021Application.options
 
       meets_minimum_criteria_scores = {
         regional_partner_name: regional_partner.presence ? YES : NO

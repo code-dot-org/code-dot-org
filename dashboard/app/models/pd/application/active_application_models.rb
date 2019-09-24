@@ -7,7 +7,7 @@ module Pd
 
       # Active (this year's) application classes and factories
       TEACHER_APPLICATION_CLASS = Teacher2021Application
-      PRINCIPAL_APPROVAL_APPLICATION_CLASS = PrincipalApproval1920Application
+      PRINCIPAL_APPROVAL_APPLICATION_CLASS = PrincipalApproval2021Application
       FACILITATOR_APPLICATION_CLASS = Facilitator1920Application
 
       TEACHER_APPLICATION_MAILER_CLASS = Teacher1920ApplicationMailer
