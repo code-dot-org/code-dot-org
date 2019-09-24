@@ -2111,9 +2111,6 @@ a.download-video {
     .content {
       padding: 10px;
     }
-    .contained {
-      margin: 20px;
-    }
     h3 {
       padding: 5px;
       font-size: 18px;
@@ -2144,10 +2141,9 @@ a.download-video {
   }
 }
 
-.multi.contained {
-  #markdown.teacher {
-    margin: 20px;
-}}
+.multi.contained, .contained.free-response {
+  margin: 20px;
+}
 
 .level-image {
   width: 380px;
@@ -2165,10 +2161,6 @@ a.download-video {
   &.left-aligned {
     margin-left: 0;
   }
-}
-
-.contained.free-response {
-  margin: 20px;
 }
 
 .free-response .response {
@@ -2194,6 +2186,11 @@ a.download-video {
   margin-left: 50px;
   margin-right: 50px;
   max-width: 100%;
+}
+
+.multi.contained #markdown.teacher {
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .text-match #markdown.teacher, .free-response #markdown.teacher {
