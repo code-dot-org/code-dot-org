@@ -258,11 +258,21 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
       return (
         <div>
           <div id="regionalPartnerName">{this.renderRegionalPartnerName()}</div>
-          <p>Teachers in this program are required to participate in both:</p>
+          <p>
+            Teachers in this program are expected to attend the minimum number
+            of workshops that{' '}
+            <a
+              href="https://docs.google.com/document/d/1DhvzoNElJcfGYLrp5sVnnqp0ShvsePUpp3JK7ihjFGM/edit"
+              target="_blank"
+            >
+              correspond to the number of units they intend to teach
+            </a>
+            , including:
+          </p>
           <ul>
-            <li>One five-day, in-person summer workshop in 2019</li>
+            <li>One five-day, in-person summer workshop in 2020</li>
             <li>
-              Up to four one-day, in-person local workshops during the 2019-20
+              Up to four one-day, in-person local workshops during the 2020-21
               school year (typically held on Saturdays)
             </li>
           </ul>
@@ -274,11 +284,13 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
               this.renderAssignedWorkshopList()}
           </div>
           {this.radioButtonsFor('willingToTravel')}
-          We offer a virtual academic year workshop track for those who are
+          We offer a series of virtual academic year workshops for those who are
           unable to commit to traveling to in-person academic year workshops.
-          Please note that this option is only available for the academic year -
-          all participants in the Professional Learning Program must attend an
-          in-person five-day summer workshop.
+          This workshop series consists of eight, 1.5 hour live sessions
+          throughout the academic year, hosted via a video conference tool.{' '}
+          <strong>Please note</strong> that this option is only available for
+          the academic year - all participants in the Professional Learning
+          Program must attend an in-person five-day summer workshop.
           {this.radioButtonsFor('interestedInOnlineProgram')}
           {this.props.data.regionalPartnerId && (
             <div>
@@ -304,13 +316,13 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
               {this.radioButtonsFor('payFee')}
               {showPayFeeNote && (
                 <p style={{color: 'red'}}>
-                  Note: To be eligible for scholarship support, you must plan to
-                  teach this course in the upcoming school year (2019-20). We
-                  suggest checking with your administrators to ensure that the
-                  course will be offered in 2019-20 before updating your answer
-                  to "
+                  Note: To meet our implementation guidance and our scholarship
+                  recommendations, you should plan to teach this course in the
+                  upcoming school year (2020-21). We suggest checking with your
+                  administrators to ensure that the course will be offered in
+                  2020-21 before updating your answer to "
                   <strong>
-                    Do you plan to personally teach this course in the 2019-20
+                    Do you plan to personally teach this course in the 2020-21
                     school year?
                   </strong>
                   " on page 3 and submitting your application.
