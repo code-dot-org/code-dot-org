@@ -226,6 +226,21 @@ module Pd::Application
             'Unit 9: Data',
             'Unit 10: Cybersecurity and Global Impact',
           ],
+          replace_which_course: [
+            'CodeHS',
+            'Codesters',
+            'Computer Applications (ex: using Microsoft programs)',
+            'CS Fundamentals',
+            'Exploring Computer Science',
+            'Globaloria',
+            'My CS',
+            'Project Lead the Way - Computer Science',
+            'Robotics',
+            'ScratchEd',
+            'Typing',
+            'We’ve created our own course',
+            TEXT_FIELDS[:other_please_explain]
+          ],
           plan_to_teach: [
             'Yes, I plan to teach this course this year (2020-21)',
             'I hope to teach this course this year (2020-21)',

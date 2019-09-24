@@ -83,7 +83,7 @@ module Pd
         csp_which_units: 'Which CS Principles units do you intend to teach in the 2020-21 school year?',
         plan_to_teach: BASE_PAGE_LABELS[:section_3_choose_your_program][:plan_to_teach].sub('18-19', '19-20'),
         replace_existing: 'Will this course replace an existing computer science course in the master schedule? If yes, please list the course(s) that will be replaced.',
-        replace_which_course: 'If yes, please describe the course it will be replacing and why:'
+        replace_which_course: 'Which existing course or curriculum will it replace? Mark all that apply.'
       },
       section_3_teaching_background:
         BASE_PAGE_LABELS[:section_2_your_school].slice(
