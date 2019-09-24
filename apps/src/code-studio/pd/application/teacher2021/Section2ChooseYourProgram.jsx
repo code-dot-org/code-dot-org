@@ -139,16 +139,6 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
             </Row>
           </div>
         )}
-        {courseNotes === 'csd' && (
-          <p style={{color: 'red'}}>
-            Note: 50 or more hours of instruction per section for a
-            semester-long CS Discoveries course are normally required to
-            participate in the Professional Learning Program, though we will
-            consider applications with at least 30 hours for a limited number of
-            seats. We suggest checking with your school administration to see if
-            additional time can be allotted for this course in 2020-21.
-          </p>
-        )}
         {courseNotes === 'csp' && (
           <p style={{color: 'red'}}>
             Note: 50 or more hours of instruction per CS Principles section are
