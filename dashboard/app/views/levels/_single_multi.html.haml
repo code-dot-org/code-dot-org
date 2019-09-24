@@ -12,6 +12,27 @@
 - layout_class = use_tight_layout ? "tight" : "default"
 - layout_class += " contained" if contained_mode
 
+- if data['height'] == 'auto' || data['height'].blank?
+  - height = 'auto'
+- else
+  - height = "#{data['height']}px"
+
+  -# multi2 gets checkboxes; regular multi gets radio buttons.
+- if data['type'] == 'multi2'
+  - unchecked_class = 'fa-square-o'
+  - checked_class = 'fa-check-square-o'
+  - cross_class = 'fa-times'
+- else
+  - unchecked_class = 'fa-circle-o'
+  - checked_class = 'fa-dot-circle-o'
+  - cross_class = 'fa-times'
+
+- if contained_mode && (data['answers'].present? || data['teacher_markdown'].present?)
+  %div{id: "containedLevelAnswer0"}
+    .multi.contained{id: "level_#{level.id}", class: layout_class}
+      = render partial: 'levels/multi_answer', locals: {data: level.properties, height: height, unchecked_class: unchecked_class, checked_class: checked_class, cross_class: cross_class, level: level, standalone: standalone, contained_mode: contained_mode}
+      = render partial: 'levels/teacher_markdown', locals: {data: level.properties}
+
 .multi{id: "level_#{level.id}", class: layout_class}
   - question_content_blank = data['content1'].blank? && data['content2'].blank? && data['content3'].blank? && data['markdown'].blank?
   - if question_content_blank
@@ -45,21 +66,6 @@
           =t('submit')
         %a.btn.btn-large.btn-primary.unsubmitButton{style: "display: none", id: "unsubmit_level_#{level.id}"}
           =t('unsubmit')
-
-    - if data['height'] == 'auto' || data['height'].blank?
-      - height = 'auto'
-    - else
-      - height = "#{data['height']}px"
-
-    -# multi2 gets checkboxes; regular multi gets radio buttons.
-    - if data['type'] == 'multi2'
-      - unchecked_class = 'fa-square-o'
-      - checked_class = 'fa-check-square-o'
-      - cross_class = 'fa-times'
-    - else
-      - unchecked_class = 'fa-circle-o'
-      - checked_class = 'fa-dot-circle-o'
-      - cross_class = 'fa-times'
 
     .mainblock
       %form#voteform{onsubmit: 'return false;'}

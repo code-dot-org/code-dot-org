@@ -4,6 +4,11 @@
 - left_align = local_assigns[:left_align]
 - is_contained_level ||= false
 
+- if level.solution.present? && is_contained_level
+  %div{id: "containedLevelAnswer0"}
+    .free-response{class: "contained"}
+      = render partial: 'levels/teacher_markdown', locals: {data: {'teacher_markdown' => level.solution}}
+
 - if in_level_group # The LevelGroup will collect results for each level.
   :javascript
     window.dashboard.codeStudioLevels.registerLevel(#{level.id}, new FreeResponse(#{level.id}, #{!!level.optional}));
