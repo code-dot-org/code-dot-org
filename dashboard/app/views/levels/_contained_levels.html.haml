@@ -48,7 +48,7 @@
     - elsif level_class == "free_response"
       - if contained_level.solution.present?
         %div{id: "containedLevelAnswer0"}
-          .free-response{class: "left-aligned"}
+          .free-response{class: "contained"}
             = render partial: 'levels/teacher_markdown', locals: {data: {'teacher_markdown' => contained_level.solution}}
 
 %div{style: 'clear: both;'}
