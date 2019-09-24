@@ -13321,3 +13321,13 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+        csp6-pilot:
+          stages:
+            Algorithms Solve Problems:
+              name: Algorithms Solve Problems
+            Algorithm Efficiency:
+              name: Algorithm Efficiency
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
