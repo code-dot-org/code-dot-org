@@ -36,11 +36,11 @@
 
 module Pd::Application
   class PrincipalApproval2021Application < PrincipalApprovalApplicationBase
-    include Pd::PrincipalApproval1920ApplicationConstants
+    include Pd::PrincipalApproval2021ApplicationConstants
 
     # @override
     def year
-      YEAR_19_20
+      YEAR_20_21
     end
 
     validates_presence_of :teacher_application
@@ -50,7 +50,7 @@ module Pd::Application
     def self.create_placeholder_and_send_mail(teacher_application)
       teacher_application.queue_email :principal_approval, deliver_now: true
 
-      Pd::Application::PrincipalApproval1920Application.create(
+      Pd::Application::PrincipalApproval2021Application.create(
         form_data: {}.to_json,
         application_guid: teacher_application.application_guid
       )
@@ -58,7 +58,7 @@ module Pd::Application
 
     # @override
     def check_idempotency
-      existing_application = Pd::Application::PrincipalApproval1920Application.find_by(application_guid: application_guid)
+      existing_application = Pd::Application::PrincipalApproval2021Application.find_by(application_guid: application_guid)
 
       (!existing_application || existing_application.placeholder?) ? nil : existing_application
     end
