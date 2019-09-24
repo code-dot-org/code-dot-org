@@ -14,7 +14,7 @@ apt-get -y install python3-pip curl
 test "$(pip3 show awscli)" || pip3 install awscli
 
 STACK=${AWS::StackName}
-CHEF_VERSION=12.7.2
+CHEF_VERSION=<%=chef_version%>
 REGION=${AWS::Region}
 BRANCH=${Branch}
 S3_BUCKET=<%=s3_bucket%>
@@ -138,7 +138,7 @@ cat <<JSON > $FIRST_BOOT
 JSON
 
 # Provision via Chef.
-OPTIONS="<%=local_mode ? '-z ' : ''%> -b $BRANCH -n $NODE_NAME -r '$RUN_LIST' -e $ENVIRONMENT"
+OPTIONS="<%=local_mode ? '-z ' : ''%> -b $BRANCH -n $NODE_NAME -r '$RUN_LIST' -e $ENVIRONMENT -v $CHEF_VERSION"
 sudo -u ubuntu bash -c "aws s3 cp s3://$S3_BUCKET/<%=CHEF_KEY%>/bootstrap-$STACK.sh - | sudo bash -s -- $OPTIONS"
 [ $? -eq 0 ] && STATUS=SUCCESS || STATUS=<%=daemon ? 'SUCCESS' : 'FAILURE'%>
 

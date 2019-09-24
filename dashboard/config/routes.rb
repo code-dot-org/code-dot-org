@@ -421,9 +421,6 @@ Dashboard::Application.routes.draw do
       post 'enrollment/:enrollment_id/scholarship_info', action: 'update_scholarship_info', controller: 'workshop_enrollments'
       post 'enrollments/move', action: 'move', controller: 'workshop_enrollments'
 
-      get :teacher_applications, to: 'teacher_applications#index'
-      post :teacher_applications, to: 'teacher_applications#create'
-
       # persistent namespace for FiT Weekend registrations, can be updated/replaced each year
       post 'fit_weekend_registrations', to: 'fit_weekend_registrations#create'
 
@@ -470,16 +467,6 @@ Dashboard::Application.routes.draw do
     # React-router will handle sub-routes on the client.
     get 'workshop_dashboard/*path', to: 'workshop_dashboard#index'
     get 'workshop_dashboard', to: 'workshop_dashboard#index'
-
-    get 'teacher_application', to: 'teacher_application#new'
-    get 'teacher_application/international_teachers', to: 'teacher_application#international_teachers'
-    get 'teacher_application/thanks', to: 'teacher_application#thanks'
-    get 'teacher_application/manage', to: 'teacher_application#manage'
-    get 'teacher_application/manage/:teacher_application_id', to: 'teacher_application#edit'
-    patch 'teacher_application/manage/:teacher_application_id', to: 'teacher_application#update'
-    post 'teacher_application/manage/:teacher_application_id/upgrade_to_teacher', to: 'teacher_application#upgrade_to_teacher'
-    get 'teacher_application/manage/:teacher_application_id/email', to: 'teacher_application#construct_email'
-    post 'teacher_application/manage/:teacher_application_id/email', to: 'teacher_application#send_email'
 
     get 'misc_survey/thanks', to: 'misc_survey#thanks'
     get 'misc_survey/:form_tag', to: 'misc_survey#new'
