@@ -26,8 +26,8 @@ module Pd
       ).merge(
         {
           phone: 'Home or cell phone',
-          gender_identity: 'Gender Identity',
-          race: 'Race',
+          gender_identity: 'Gender identity',
+          race: 'Race or ethnicity',
           zip_code: 'Home zip code',
           school: 'School',
           school_name: 'School name',
@@ -101,12 +101,12 @@ module Pd
           scholarship_reasons: "Please provide any additional information you'd like to share about why your application should be considered for a scholarship."
         },
       section_5_additional_demographic_information:
-        BASE_PAGE_LABELS[:section_5_submission].slice(:gender_identity, :race).merge(
-          {
-            how_heard: 'How did you hear about this program?',
-            agree: 'By submitting this application, I agree to share this application, my contact information, and overall class information with my local Code.org Regional Partner.'
-          }
-        ),
+        {
+          gender_identity: 'Gender identity:',
+          race: 'Race or ethnicity:',
+          how_heard: 'How did you hear about this program?',
+          agree: 'By submitting this application, I agree to share this application, my contact information, and overall class information with my local Code.org Regional Partner.'
+        },
       school_stats_and_principal_approval_section: {
         title_i_status: 'Title I status',
         school_type: 'School Type',
