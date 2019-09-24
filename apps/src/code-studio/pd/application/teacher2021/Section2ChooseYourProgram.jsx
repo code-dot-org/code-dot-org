@@ -168,7 +168,9 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
           [TextFields.iDontKnowExplain]: 'other'
         })}
         {this.props.data.replaceExisting === 'Yes' &&
-          this.largeInputFor('replaceWhichCourse')}
+          this.checkBoxesWithAdditionalTextFieldsFor('replaceWhichCourse', {
+            [TextFields.otherPleaseExplain]: 'other'
+          })}
       </FormGroup>
     );
   }
@@ -202,11 +204,13 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
 
     if (data.program === PROGRAM_CSD) {
       changes.cspWhichGrades = undefined;
+      changes.cspWhichUnits = undefined;
       changes.cspHowOffer = undefined;
     }
 
     if (data.program === PROGRAM_CSP) {
       changes.csdWhichGrades = undefined;
+      changes.csdWhichUnits = undefined;
     }
 
     if (data.replaceExisting !== 'Yes') {
