@@ -1377,6 +1377,8 @@ en:
         text: aalab move [SPRITE][0] distance [DISTANCE][1] toward [TARGET][2]
       aalab_nameStringSay:
         text: "[NAMESTRING][0] says [MESSAGE][1]"
+      aalab_page:
+        text: page [PAGE][0]
       aalab_prompt:
         text: ask question [MESSAGE][0]
       aalab_randomLocation:
