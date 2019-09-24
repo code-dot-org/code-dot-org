@@ -1,5 +1,6 @@
 import {expect} from '../../util/configuredChai';
 import {initFirebaseStorage} from '@cdo/apps/storage/firebaseStorage';
+import {tableType} from '@cdo/apps/storage/redux/data';
 import {
   getProjectDatabase,
   getSharedDatabase,
@@ -463,9 +464,14 @@ describe('FirebaseStorage', () => {
       );
 
       function deleteTable() {
-        FirebaseStorage.deleteTable('mytable', verifyNoTable, error => {
-          throw error;
-        });
+        FirebaseStorage.deleteTable(
+          'mytable',
+          tableType.PROJECT,
+          verifyNoTable,
+          error => {
+            throw error;
+          }
+        );
       }
 
       function verifyNoTable() {
