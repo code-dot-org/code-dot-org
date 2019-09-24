@@ -4,6 +4,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import Tutorial from './tutorial';
+import TutorialSpecificLocale from './TutorialSpecificLocale';
 import TutorialDetail from './tutorialDetail';
 import shapes from './shapes';
 import i18n from '@cdo/tutorialExplorer/locale';
@@ -21,6 +22,7 @@ export default class TutorialSet extends React.Component {
   static propTypes = {
     tutorials: PropTypes.arrayOf(shapes.tutorial.isRequired).isRequired,
     filters: PropTypes.objectOf(PropTypes.arrayOf(PropTypes.string)).isRequired,
+    specificLocale: PropTypes.bool,
     localeEnglish: PropTypes.bool.isRequired,
     disabledTutorials: PropTypes.arrayOf(PropTypes.string).isRequired,
     grade: PropTypes.string.isRequired
@@ -62,14 +64,23 @@ export default class TutorialSet extends React.Component {
           changeTutorial={this.changeTutorial}
           grade={this.props.grade}
         />
-        {this.props.tutorials.map(item => (
-          <Tutorial
-            item={item}
-            filters={this.props.filters}
-            key={item.code}
-            tutorialClicked={this.tutorialClicked.bind(this, item)}
-          />
-        ))}
+        {this.props.tutorials.map(item =>
+          this.props.specificLocale ? (
+            <TutorialSpecificLocale
+              item={item}
+              filters={this.props.filters}
+              key={item.code}
+              tutorialClicked={this.tutorialClicked.bind(this, item)}
+            />
+          ) : (
+            <Tutorial
+              item={item}
+              filters={this.props.filters}
+              key={item.code}
+              tutorialClicked={this.tutorialClicked.bind(this, item)}
+            />
+          )
+        )}
         {this.props.tutorials.length === 0 && (
           <div style={styles.tutorialSetNoTutorials}>
             {i18n.tutorialSetNoTutorials()}
