@@ -74,16 +74,16 @@ class LibraryTable extends React.Component {
 
   importTable = datasetInfo => {
     if (datasetInfo.current) {
-      // TODO: Implement current tables (see STAR-615)
+      FirebaseStorage.addCurrentTableToProject(
+        datasetInfo.name,
+        () => console.log('success'),
+        err => console.log(err)
+      );
     } else {
       FirebaseStorage.copyStaticTable(
         datasetInfo.name,
-        () => {
-          console.log('success');
-        },
-        err => {
-          console.log(err);
-        }
+        () => console.log('success'),
+        err => console.log(err)
       );
     }
   };
