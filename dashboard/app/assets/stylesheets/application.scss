@@ -2143,6 +2143,10 @@ a.download-video {
 
 .multi.contained, .contained.free-response {
   margin: 20px;
+  max-width: 100%;
+  #markdown.teacher {
+    max-width: 100%;
+  }
 }
 
 .level-image {
