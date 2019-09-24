@@ -16,7 +16,7 @@
 - [spec]()
 - [jira]()
 
-# Testing story
+## Testing story
 
 <!--
   Does your change include appropriate tests?
@@ -33,5 +33,5 @@
 - [ ] New features are translatable or updates will not break translations
 - [ ] Relevant documentation has been added or updated
 - [ ] User impact is well-understood and desirable
-- [ ] Pull Request is tagged appropriately
+- [ ] Pull Request is labeled appropriately
 - [ ] Follow-up work items (including potential tech debt) are tracked and linked
