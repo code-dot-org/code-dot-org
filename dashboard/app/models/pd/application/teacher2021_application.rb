@@ -48,20 +48,6 @@ module Pd::Application
 
     REVIEWING_INCOMPLETE = 'Reviewing Incomplete'
 
-    TAUGHT_IN_PAST_NO_BONUS_POINT_RESPONSES = [
-      "CS Discoveries",
-      "CS Principles (intro or AP-level)",
-      "AP CS A",
-      "Beauty and Joy of Computing",
-      "Code HS",
-      "Edhesive",
-      "Exploring Computer Science",
-      "Mobile CSP",
-      "NMSI",
-      "Project Lead the Way",
-      TEXT_FIELDS[:other_please_list]
-    ]
-
     serialized_attrs %w(
       status_log
       principal_approval_not_required
@@ -288,8 +274,6 @@ module Pd::Application
         plan_to_teach
         replace_existing
 
-        subjects_teaching
-        taught_in_past
         previous_yearlong_cdo_pd
 
         willing_to_travel
@@ -589,8 +573,6 @@ module Pd::Application
       elsif course == 'csp'
         meets_scholarship_criteria_scores[:previous_yearlong_cdo_pd] = responses[:previous_yearlong_cdo_pd].exclude?('CS Principles') ? YES : NO
       end
-
-      bonus_points_scores[:taught_in_past] = (responses[:taught_in_past] & TAUGHT_IN_PAST_NO_BONUS_POINT_RESPONSES).any? ? 0 : 2
 
       # Section 4
       meets_minimum_criteria_scores[:committed] = responses[:committed] == options[:committed].first ? YES : NO
