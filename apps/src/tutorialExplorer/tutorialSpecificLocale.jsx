@@ -1,6 +1,6 @@
-/* A single tutorial shown in TutorialExplorer when viewing in a specific locale,
- # which will be non-English.
- * Displays a thumbnail image, name, provider, and some extra information.
+/* A single tutorial shown in TutorialExplorer when listed for a specific locale,
+ * which will be non-English.
+ * Displays a thumbnail image, name, organization, and some extra information.
  */
 
 import PropTypes from 'prop-types';
