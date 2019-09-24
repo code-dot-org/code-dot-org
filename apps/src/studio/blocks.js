@@ -44,28 +44,6 @@ var POSITION_VALUES = [
   [commonMsg.bottomRight(), Position.BOTTOMRIGHT.toString()]
 ];
 
-// Still a slightly reduced set of 17 out of 25 possible positions (+ random):
-var POSITION_VALUES_EXTENDED = [
-  [commonMsg.positionRandom(), RANDOM_VALUE],
-  [commonMsg.positionOutTopLeft(), Position.OUTTOPLEFT.toString()],
-  [commonMsg.positionOutTopRight(), Position.OUTTOPRIGHT.toString()],
-  [commonMsg.positionTopOutLeft(), Position.TOPOUTLEFT.toString()],
-  [commonMsg.positionTopLeft(), Position.TOPLEFT.toString()],
-  [commonMsg.positionTopCenter(), Position.TOPCENTER.toString()],
-  [commonMsg.positionTopRight(), Position.TOPRIGHT.toString()],
-  [commonMsg.positionTopOutRight(), Position.TOPOUTRIGHT.toString()],
-  [commonMsg.positionMiddleLeft(), Position.MIDDLELEFT.toString()],
-  [commonMsg.positionMiddleCenter(), Position.MIDDLECENTER.toString()],
-  [commonMsg.positionMiddleRight(), Position.MIDDLERIGHT.toString()],
-  [commonMsg.positionBottomOutLeft(), Position.BOTTOMOUTLEFT.toString()],
-  [commonMsg.positionBottomLeft(), Position.BOTTOMLEFT.toString()],
-  [commonMsg.positionBottomCenter(), Position.BOTTOMCENTER.toString()],
-  [commonMsg.positionBottomRight(), Position.BOTTOMRIGHT.toString()],
-  [commonMsg.positionBottomOutRight(), Position.BOTTOMOUTRIGHT.toString()],
-  [commonMsg.positionOutBottomLeft(), Position.OUTBOTTOMLEFT.toString()],
-  [commonMsg.positionOutBottomRight(), Position.OUTBOTTOMRIGHT.toString()]
-];
-
 var generateSetterCode = function(opts) {
   var value = opts.value || opts.ctx.getTitleValue('VALUE');
   if (value === RANDOM_VALUE) {
@@ -989,7 +967,6 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   blockly.Blocks.studio_setSpritePosition.VALUES = POSITION_VALUES;
-  blockly.Blocks.studio_setSpritePosition.VALUES_EXTENDED = POSITION_VALUES_EXTENDED;
 
   generator.studio_setSpritePosition = function() {
     return generateSetterCode({
