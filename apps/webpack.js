@@ -326,7 +326,7 @@ function create(options) {
   // through the rails asset pipeline. This is much simpler than hacking the
   // application to load .min.js locally.
   const suffix = minify && !debugMinify ? '.min.js' : '.js';
-  const hash = minify && !debugMinify ? 'wp[hash:32]' : '';
+  const hash = minify && !debugMinify ? 'wp[contenthash]' : '';
 
   var config = _.extend({}, baseConfig, {
     output: {

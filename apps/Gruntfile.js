@@ -887,7 +887,9 @@ describe('entry tests', () => {
         new CopyPlugin([
           {
             from: 'build/locales',
-            to: minify ? '[path]/[name]wp[hash].[ext]' : '[path]/[name].[ext]',
+            to: minify
+              ? '[path]/[name]wp[contenthash].[ext]'
+              : '[path]/[name].[ext]',
             toType: 'template'
           },
           // Libraries in this directory are assumed to have .js and .min.js
@@ -903,7 +905,9 @@ describe('entry tests', () => {
           {
             context: 'build/minifiable-lib/',
             from: minify ? `**/*.min.js` : '**/*.js',
-            to: minify ? '[path]/[name]wp[hash].[ext]' : '[path]/[name].[ext]',
+            to: minify
+              ? '[path]/[name]wp[contenthash].[ext]'
+              : '[path]/[name].[ext]',
             toType: 'template',
             ignore: minify ? [] : ['*.min.js'],
             transformPath: targetPath => targetPath.replace(/\.min/, '')
