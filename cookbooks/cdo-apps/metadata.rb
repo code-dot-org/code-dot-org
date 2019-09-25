@@ -4,7 +4,7 @@ maintainer_email 'will@code.org'
 license          'All rights reserved'
 description      'Installs/Configures cdo-apps'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '0.2.364'
+version          '0.2.365'
 
 depends 'apt'
 depends 'build-essential'
@@ -21,8 +21,7 @@ depends 'chef_client_updater'
 depends 'cdo-nginx'
 depends 'cdo-nodejs'
 depends 'cdo-java-7'
-depends 'cdo-networking'
-depends 'chef_hostname'
+depends 'chef_hostname', '< 1.0' # 1.0.0 requires Chef Client 12.11+
 depends 'poise-service'
 depends 'cdo-redis'
 depends 'cdo-i18n'

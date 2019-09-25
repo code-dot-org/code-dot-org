@@ -201,6 +201,11 @@ export default class CensusMapReplacement extends Component {
       minZoom: 1,
       center: [-98, 39]
     });
+
+    this.map.dragRotate.disable();
+    this.map.scrollZoom.disable();
+    this.map.dragPan.disable();
+
     var _this = this;
 
     this.map.on('load', function() {
@@ -259,6 +264,24 @@ export default class CensusMapReplacement extends Component {
         new mapboxgl.NavigationControl({showCompass: false}),
         'bottom-right'
       );
+
+      function enableMouseControls() {
+        _this.map.scrollZoom.enable();
+        _this.map.dragPan.enable();
+      }
+
+      // Enable mouse controls when the map is clicked
+      _this.map.on('click', function(e) {
+        enableMouseControls();
+      });
+      // Enable mouse controls when the zoom (+/-) buttons are pressed
+      _this.map.on('zoom', function(e) {
+        enableMouseControls();
+      });
+      // Enable mouse controls when we go full screen
+      _this.map.on('resize', function(e) {
+        enableMouseControls();
+      });
 
       _this.map.on('click', 'census-schools', function(e) {
         _this.onPointClick(_this, e);
