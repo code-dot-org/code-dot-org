@@ -1,5 +1,5 @@
 / Show the correct answer to authorized teachers
-- if can_view_teacher_markdown?
+- if can_view_teacher_markdown? || current_user.try(:should_see_inline_answer?, @script_level)
   - correct_answers = data['answers'].each_with_index.map do |answer, index|
     - next unless answer['correct']
     - letter = standalone ? nil : Multi.value_to_letter(index)
