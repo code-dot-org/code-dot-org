@@ -48,20 +48,6 @@ module Pd::Application
 
     REVIEWING_INCOMPLETE = 'Reviewing Incomplete'
 
-    TAUGHT_IN_PAST_NO_BONUS_POINT_RESPONSES = [
-      "CS Discoveries",
-      "CS Principles (intro or AP-level)",
-      "AP CS A",
-      "Beauty and Joy of Computing",
-      "Code HS",
-      "Edhesive",
-      "Exploring Computer Science",
-      "Mobile CSP",
-      "NMSI",
-      "Project Lead the Way",
-      TEXT_FIELDS[:other_please_list]
-    ]
-
     serialized_attrs %w(
       status_log
       principal_approval_not_required
@@ -139,7 +125,7 @@ module Pd::Application
       end
 
       # email_type maps to the mailer action
-      Teacher1920ApplicationMailer.send(email.email_type, self).deliver_now
+      TeacherApplicationMailer.send(email.email_type, self).deliver_now
     end
 
     # Return a string if the principal approval state is complete, in-progress, or not required.
@@ -255,7 +241,7 @@ module Pd::Application
           ],
           pay_fee: [
             'Yes, my school will be able to pay the full program fee.',
-            TEXT_FIELDS[:no_pay_fee_1920],
+            TEXT_FIELDS[:no_pay_fee_2021],
             "I don't know."
           ],
           willing_to_travel: TeacherApplicationBase.options[:willing_to_travel] << 'I am unable to travel to the school year workshops',
@@ -288,8 +274,6 @@ module Pd::Application
         plan_to_teach
         replace_existing
 
-        subjects_teaching
-        taught_in_past
         previous_yearlong_cdo_pd
 
         willing_to_travel
@@ -310,12 +294,12 @@ module Pd::Application
         end
 
         if hash[:able_to_attend_multiple]
-          if ([TEXT_FIELDS[:not_sure_explain], TEXT_FIELDS[:unable_to_attend_1920]] & hash[:able_to_attend_multiple]).any?
+          if ([TEXT_FIELDS[:not_sure_explain], TEXT_FIELDS[:unable_to_attend_2021]] & hash[:able_to_attend_multiple]).any?
             required << :travel_to_another_workshop
           end
         end
 
-        if hash[:pay_fee] == TEXT_FIELDS[:no_pay_fee_1920]
+        if hash[:pay_fee] == TEXT_FIELDS[:no_pay_fee_2021]
           required << :scholarship_reasons
         end
 
@@ -341,7 +325,7 @@ module Pd::Application
         [:plan_to_teach, TEXT_FIELDS[:dont_know_if_i_will_teach_explain]],
         [:replace_existing, TEXT_FIELDS[:i_dont_know_explain]],
         [:able_to_attend_multiple, TEXT_FIELDS[:not_sure_explain], :able_to_attend_multiple_not_sure_explain],
-        [:able_to_attend_multiple, TEXT_FIELDS[:unable_to_attend_1920], :able_to_attend_multiple_unable_to_attend],
+        [:able_to_attend_multiple, TEXT_FIELDS[:unable_to_attend_2021], :able_to_attend_multiple_unable_to_attend],
         [:travel_to_another_workshop, TEXT_FIELDS[:not_sure_explain], :travel_to_another_workshop_not_sure],
         [:how_heard, TEXT_FIELDS[:other_with_text]]
       ]
@@ -354,7 +338,7 @@ module Pd::Application
 
     # @override
     def check_idempotency
-      Teacher1920Application.find_by(user: user)
+      Teacher2021Application.find_by(user: user)
     end
 
     def assigned_workshop
@@ -501,7 +485,7 @@ module Pd::Application
 
     # @override
     def to_csv_row(course)
-      columns_to_exclude = Pd::Application::Teacher1920Application.columns_to_remove(course)
+      columns_to_exclude = Pd::Application::Teacher2021Application.columns_to_remove(course)
       teacher_answers = full_answers
       principal_application = Pd::Application::PrincipalApproval2021Application.where(application_guid: application_guid).first
       principal_answers = principal_application&.csv_data
@@ -567,9 +551,6 @@ module Pd::Application
       if course == 'csd'
         meets_minimum_criteria_scores[:csd_which_grades] = (responses[:csd_which_grades] & options[:csd_which_grades].first(5)).any? ? YES : NO
 
-        meets_minimum_criteria_scores[:cs_total_course_hours] = responses[:cs_total_course_hours].to_i >= 50 ? YES : NO
-
-        bonus_points_scores[:cs_terms] = responses[:cs_terms] == options[:cs_terms][4] ? 2 : 0
       elsif course == 'csp'
         meets_minimum_criteria_scores[:csp_which_grades] = (responses[:csp_which_grades] & options[:csp_which_grades].first(4)).any? ? YES : NO
 
@@ -589,8 +570,6 @@ module Pd::Application
       elsif course == 'csp'
         meets_scholarship_criteria_scores[:previous_yearlong_cdo_pd] = responses[:previous_yearlong_cdo_pd].exclude?('CS Principles') ? YES : NO
       end
-
-      bonus_points_scores[:taught_in_past] = (responses[:taught_in_past] & TAUGHT_IN_PAST_NO_BONUS_POINT_RESPONSES).any? ? 0 : 2
 
       # Section 4
       meets_minimum_criteria_scores[:committed] = responses[:committed] == options[:committed].first ? YES : NO

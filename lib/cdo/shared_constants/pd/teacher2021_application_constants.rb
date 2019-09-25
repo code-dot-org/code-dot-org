@@ -81,13 +81,12 @@ module Pd
         cs_total_course_hours: 'Computed total course hours',
         csd_which_units: 'Which CS Discoveries units do you intend to teach in the 2020-21 school year?',
         csp_which_units: 'Which CS Principles units do you intend to teach in the 2020-21 school year?',
-        plan_to_teach: BASE_PAGE_LABELS[:section_3_choose_your_program][:plan_to_teach].sub('18-19', '19-20'),
+        plan_to_teach: "Do you plan to personally teach this course in the 2020-21 school year?",
         replace_existing: 'Will this course replace an existing computer science course in the master schedule? If yes, please list the course(s) that will be replaced.',
         replace_which_course: 'Which existing course or curriculum will it replace? Mark all that apply.'
       },
       section_3_teaching_background:
         BASE_PAGE_LABELS[:section_2_your_school].slice(
-          :cs_opportunities_at_school,
           :previous_yearlong_cdo_pd
         ),
       section_4_professional_learning_program_requirements:
@@ -98,6 +97,7 @@ module Pd
           willing_to_travel: BASE_PAGE_LABELS[:section_4_summer_workshop][:willing_to_travel],
           interested_in_online_program: 'Do you want to be considered for the virtual academic year workshop track?',
           pay_fee: BASE_PAGE_LABELS[:section_4_summer_workshop][:pay_fee],
+          understand_fee: "By checking this box, you indicate that you understand there may be a fee for the professional learning program you attend.",
           scholarship_reasons: "Please provide any additional information you'd like to share about why your application should be considered for a scholarship."
         },
       section_5_additional_demographic_information:
