@@ -920,6 +920,7 @@ applabCommands.textLabel = function(opts) {
   newLabel.id = opts.elementId;
   newLabel.style.position = 'relative';
   newLabel.style.borderStyle = 'solid';
+  newLabel.style.textRendering = 'optimizeSpeed';
   elementLibrary.setAllPropertiesToCurrentTheme(
     newLabel,
     Applab.activeScreen()
