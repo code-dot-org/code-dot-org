@@ -563,6 +563,7 @@ class TopInstructions extends Component {
       return <div />;
     }
 
+    /* TODO: When we move CSD and CSP to the Teacher Only tab remove CSF restriction here*/
     const showContainedLevelAnswer =
       this.props.hasContainedLevels &&
       isCSF &&
@@ -632,6 +633,7 @@ class TopInstructions extends Component {
                     isRtl={this.props.isRtl}
                   />
                 )}
+              {/* TODO: When we move CSD and CSP to the Teacher Only tab remove CSF restriction here*/}
               {isCSF &&
                 this.props.viewAs === ViewType.Teacher &&
                 (this.props.teacherMarkdown || showContainedLevelAnswer) && (
@@ -679,6 +681,7 @@ class TopInstructions extends Component {
                     ref="instructions"
                     hidden={this.state.tabSelected !== TabType.INSTRUCTIONS}
                   />
+                  {/* TODO: When we move CSD and CSP to the Teacher Only tab remove this*/}
                   {!isCSF && this.props.viewAs === ViewType.Teacher && (
                     <div>
                       <ContainedLevelAnswer
@@ -739,6 +742,7 @@ class TopInstructions extends Component {
                 token={this.state.token}
               />
             )}
+            {/* TODO: When we move CSD and CSP to the Teacher Only tab remove CSF restriction here*/}
             {isCSF &&
               this.props.viewAs === ViewType.Teacher &&
               (this.props.hasContainedLevels || this.props.teacherMarkdown) && (

@@ -17,5 +17,4 @@
         = render partial: 'levels/single_text_match', locals: {standalone: false, level: contained_level }
       - elsif level_class == "free_response"
         = render partial: 'levels/free_response', locals: {in_level_group: true, last_attempt: sublevel_last_attempt, level: contained_level, left_align: true, is_contained_level: true }
-
 %div{style: 'clear: both;'}
