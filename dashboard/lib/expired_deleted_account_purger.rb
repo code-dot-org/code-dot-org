@@ -221,18 +221,27 @@ class ExpiredDeletedAccountPurger
     " <a href='#{log_url}'>☁ Log on S3</a>"
   end
 
-  # Send error messages to #cron-daily
+  # Send error messages to #cron-daily and #user-accounts
   def yell(message)
     @log.puts message
-    say message, color: 'red', notify: 1
+    say message, 'cron-daily', color: 'red', notify: 1
+    say message, 'user-accounts', color: 'red', notify: 1
+  end
+
+  # Send warning messages to #cron-daily and #user-accounts
+  def notify(message)
+    say message, 'cron-daily', color: 'yellow'
+    say message, 'user-accounts', color: 'yellow'
   end
 
   # Send messages to Slack #cron-daily
-  def say(message, options = {})
-    ChatClient.message 'cron-daily', prefixed(message), options
+  def say(message, channel = 'cron-daily', options = {})
+    ChatClient.message channel, prefixed(message), options
   end
 
   def prefixed(message)
-    "ExpiredDeletedAccountPurger#{@dry_run ? ' (dry-run)' : ''}: #{message}"
+    "*ExpiredDeletedAccountPurger*#{@dry_run ? ' (dry-run)' : ''}" \
+    " <https://github.com/code-dot-org/code-dot-org/blob/production/dashboard/lib/expired_deleted_account_purger.rb|(source)>" \
+    "\n#{message}"
   end
 end
