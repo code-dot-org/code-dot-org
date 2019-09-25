@@ -29,7 +29,7 @@ import designMode from './designMode';
 import applabTurtle from './applabTurtle';
 import applabCommands from './commands';
 import JSInterpreter, {
-  getFunctionsWithComments
+  getFunctionsAndMetadata
 } from '../lib/tools/jsinterpreter/JSInterpreter';
 import JsInterpreterLogger from '../JsInterpreterLogger';
 import * as elementUtils from './designElements/elementUtils';
@@ -350,7 +350,7 @@ Applab.setLevelHtml = function(html) {
 };
 
 Applab.getFunctions = function() {
-  return getFunctionsWithComments(Applab.getCode());
+  return getFunctionsAndMetadata(Applab.getCode());
 };
 
 Applab.onTick = function() {
