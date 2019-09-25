@@ -221,8 +221,8 @@ module Pd
       no_pay_fee: "No, my school or I will not be able to pay the summer workshop program fee.".freeze,
       i_dont_know_explain: "I don't know (Please Explain):",
       no_pay_fee_2021: 'No, my school will not be able to pay the program fee. I would like to be considered for a scholarship.',
-      not_sure_explain: 'Not sure (Please explain):',
-      unable_to_attend_2021: 'I’m not able to attend any of the above workshop dates. (Please explain):'
+      not_sure_explain: 'Not sure (Please Explain):',
+      unable_to_attend_2021: 'I’m not able to attend any of the above workshop dates. (Please Explain):'
     }.freeze
 
     SUBJECTS_TAUGHT_IN_PAST = [
