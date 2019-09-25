@@ -18,11 +18,11 @@
     "encrypted": "false",
     "instructions_important": "false",
     "optional": "false",
-    "encrypted_solution": "2fB3K8tUHBj2RSKjF35+rBM6CXKM5CNG2fVPiNpFz1ejw3IHzkca3r6POsbC\nXZu2HgA+c/XAobzSh9pQC5pIdA==\n"
+    "encrypted_solution": "CQUrEJ7foq9b1l10G1Q+Sb7+e/9WBrFIQCOyA5oJfqsj+cR+E5cTTFxFCHOb\nIIPTJ9z7I4vrRl6r0GT7Qr+pZQ==\n"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-09-20 14:42:09 -0400\",\"changed\":[],\"changed_by_id\":26,\"changed_by_email\":\"dev@levelbuilder.com\"},{\"changed_at\":\"2019-09-20 16:07:29 -0400\",\"changed\":[],\"changed_by_id\":26,\"changed_by_email\":\"dev@levelbuilder.com\"}]",
+  "audit_log": "[{\"changed_at\":\"2019-09-20 14:42:09 -0400\",\"changed\":[],\"changed_by_id\":26,\"changed_by_email\":\"dev@levelbuilder.com\"},{\"changed_at\":\"2019-09-20 16:07:29 -0400\",\"changed\":[],\"changed_by_id\":26,\"changed_by_email\":\"dev@levelbuilder.com\"},{\"changed_at\":\"2019-09-24 12:22:35 -0400\",\"changed\":[\"encrypted_solution\"],\"changed_by_id\":26,\"changed_by_email\":\"dev@levelbuilder.com\"},{\"changed_at\":\"2019-09-25 11:58:54 -0400\",\"changed\":[],\"changed_by_id\":26,\"changed_by_email\":\"dev@levelbuilder.com\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

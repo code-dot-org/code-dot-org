@@ -4,7 +4,7 @@
 - left_align = local_assigns[:left_align]
 - is_contained_level ||= false
 
-- if level.solution.present? && is_contained_level && current_user.try(:should_see_inline_answer?, @script_level)
+- if level.solution.present? && is_contained_level && can_view_teacher_markdown?
   %div{id: "containedLevelAnswer0"}
     .free-response{class: "contained"}
       = render partial: 'levels/teacher_markdown', locals: {data: {'teacher_markdown' => level.solution}}
