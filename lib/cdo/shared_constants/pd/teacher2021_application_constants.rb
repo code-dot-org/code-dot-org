@@ -81,7 +81,7 @@ module Pd
         cs_total_course_hours: 'Computed total course hours',
         csd_which_units: 'Which CS Discoveries units do you intend to teach in the 2020-21 school year?',
         csp_which_units: 'Which CS Principles units do you intend to teach in the 2020-21 school year?',
-        plan_to_teach: BASE_PAGE_LABELS[:section_3_choose_your_program][:plan_to_teach].sub('18-19', '19-20'),
+        plan_to_teach: "Do you plan to personally teach this course in the 2020-21 school year?",
         replace_existing: 'Will this course replace an existing computer science course in the master schedule? If yes, please list the course(s) that will be replaced.',
         replace_which_course: 'Which existing course or curriculum will it replace? Mark all that apply.'
       },
