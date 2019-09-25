@@ -10,8 +10,8 @@ module Pd
       PRINCIPAL_APPROVAL_APPLICATION_CLASS = PrincipalApproval1920Application
       FACILITATOR_APPLICATION_CLASS = Facilitator1920Application
 
-      TEACHER_APPLICATION_FACTORY = :pd_teacher1920_application
-      TEACHER_APPLICATION_HASH_FACTORY = :pd_teacher1920_application_hash
+      TEACHER_APPLICATION_FACTORY = :pd_teacher2021_application
+      TEACHER_APPLICATION_HASH_FACTORY = :pd_teacher2021_application_hash
       PRINCIPAL_APPROVAL_FACTORY = :pd_principal_approval1920_application
       PRINCIPAL_APPROVAL_HASH_FACTORY = :pd_principal_approval1920_application_hash
       FACILITATOR_APPLICATION_FACTORY = :pd_facilitator1920_application
