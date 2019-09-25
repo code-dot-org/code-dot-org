@@ -54,7 +54,7 @@ Rerun `assets:precompile` to regenerate new assets and try again."
   # updated if there are any changes to Sprockets processors.
   module NoDoubleDigest
     def digest_path
-      logical_path.match?(/wp\h{32}/) ? logical_path : super
+      logical_path.match?(/wp\h{20}/) ? logical_path : super
     end
   end
   Sprockets::Asset.prepend NoDoubleDigest
