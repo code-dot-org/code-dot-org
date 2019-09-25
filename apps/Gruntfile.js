@@ -8,8 +8,8 @@ var envConstants = require('./envConstants');
 var checkEntryPoints = require('./script/checkEntryPoints');
 var {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer');
 var {StatsWriterPlugin} = require('webpack-stats-plugin');
-var UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
 var sass = require('node-sass');
+var UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = function(grunt) {
   process.env.mocha_entry = grunt.option('entry') || '';
@@ -735,15 +735,14 @@ describe('entry tests', () => {
       mode: minify ? 'production' : 'development',
       optimization: {
         minimizer: [
-          compiler => {
-            const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-            const plugin = new UglifyJsPlugin({
-              cache: true,
-              parallel: true,
-              sourceMap: envConstants.DEBUG_MINIFIED
-            });
-            plugin.apply(compiler);
-          }
+          new UglifyJsPlugin({
+            // Excludes these from minification to avoid breaking functionality,
+            // but still adds .min to the output filename suffix.
+            exclude: [/\/blockly.js$/, /\/brambleHost.js$/],
+            cache: true,
+            parallel: true,
+            sourceMap: envConstants.DEBUG_MINIFIED
+          })
         ],
 
         // We use a single, named runtimeChunk in order to be able to load
@@ -879,10 +878,7 @@ describe('entry tests', () => {
           : []),
         new StatsWriterPlugin({
           fields: ['assetsByChunkName', 'assets']
-        }),
-        // Needed because our production environment relies on an unminified
-        // (but digested) version of certain files such as blockly.js.
-        new UnminifiedWebpackPlugin()
+        })
       ],
       minify: minify,
       watch: watch,
