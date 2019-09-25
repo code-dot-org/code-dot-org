@@ -3,6 +3,7 @@ import SimpleTrainer from "../../utils/SimpleTrainer";
 import Draggable from "./Draggable";
 import Droppable from "./Droppable";
 import MultiUpload from "./MultiUpload";
+import SingleUpload from "./SingleUpload";
 import Row from "react-bootstrap/lib/Row";
 import Col from "react-bootstrap/lib/Col";
 import Button from 'react-bootstrap/lib/Button';
@@ -209,6 +210,17 @@ module.exports = class ImageRecognition extends React.Component {
       }
       {
         this.state.activityState === ActivityState.Playing &&
+        <div>
+        <Row>
+          <Col style={{textAlign: 'center'}} xs={12}>
+            <SingleUpload predictClass={(img) => {
+                        this.simpleTrainer.predict(img).then((result) => {
+                          this.setState({
+                            trainingResult: result
+                          });
+                        });}}/>
+          </Col>
+        </Row>
         <Row>
           <Col style={{textAlign: 'center'}} xs={12}>
             <h3>Tap an image to classify it</h3>
@@ -240,6 +252,7 @@ module.exports = class ImageRecognition extends React.Component {
             }
           </Col>
         </Row>
+        </div>
       }
       {
         this.state.activityState === ActivityState.Playing &&
