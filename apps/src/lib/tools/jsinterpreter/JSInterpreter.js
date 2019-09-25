@@ -257,68 +257,65 @@ export default class JSInterpreter {
    *
    * @param {string} code - The code to be parsed for functions
    */
-  static getFunctionsWithComments(code) {
-    let functionsWithComments = [];
-    function getPreviousComment(allComments, startingLocation) {
+  static getFunctionsAndMetadata(code) {
+    // Private helper functions
+    function getPrecedingComment(allComments, startingLocation) {
       return allComments.find(comment => {
         return comment.endLocation === startingLocation - 1;
       });
     }
 
-    let comments = [];
-    let options = {
+    function trimWhitespaceFromLineEndings(code) {
+      return code
+        .split('\n')
+        .map(line => {
+          // The regex /\s+$/gm detects whitespace at the end of a line
+          return line.replace(/\s+$/gm, '');
+        })
+        .join('\n');
+    }
+
+    let functionsAndMetadata = [];
+    let allComments = [];
+    let parserOptions = {
+      // Tell the AST parser to push comments into our allComments array
       onComment: (isBlockComment, text, startLocation, endLocation) => {
-        comments.push({isBlockComment, text, startLocation, endLocation});
+        allComments.push({isBlockComment, text, startLocation, endLocation});
       }
     };
 
-    // trim whitespace from the end of lines to ensure we correctly detect comments
-    code = code
-      .split('\n')
-      .map(line => {
-        // The regex /\s+$/gm detects whitespace at the end of a line
-        return line.replace(/\s+$/gm, '');
-      })
-      .join('\n');
-    let ast = generateAST(code, options);
+    // trim whitespace to ensure we correctly detect comments
+    code = trimWhitespaceFromLineEndings(code);
+    let ast = generateAST(code, parserOptions);
     let codeFunctions = ast.body.filter(node => {
       return node.type === 'FunctionDeclaration';
     });
 
     codeFunctions.forEach(codeFunction => {
-      let fullComment = '';
-      let comment = getPreviousComment(comments, codeFunction.start);
-      if (comment && comment.isBlockComment) {
-        fullComment = comment.text;
-        if (fullComment[0] === '*') {
-          // For a JSDoc style comment, acorn doesn't strip the * that starts
-          // each line, so we do that here.
-          fullComment = fullComment
-            .substr(1)
-            .split('\n * ')
-            .join('\n');
-        }
-      } else {
-        while (comment) {
-          // Find all adjacent singleline comments preceding the function
-          fullComment = comment.text.trim() + '\n' + fullComment;
-          comment = getPreviousComment(comments, comment.startLocation);
-        }
+      let comment = getPrecedingComment(allComments, codeFunction.start);
+      let commentText = comment ? comment.text : '';
+      if (comment && comment.isBlockComment && commentText[0] === '*') {
+        // For a JSDoc style comment, acorn doesn't strip the * that starts
+        // each line, so we do that here.
+        commentText = commentText
+          .substr(1)
+          .split('\n * ')
+          .join('\n');
       }
-      fullComment = fullComment.trim();
+      commentText = commentText.trim();
 
       let params = codeFunction.params.map(param => {
         return param.name;
       });
 
-      functionsWithComments.push({
+      functionsAndMetadata.push({
         functionName: codeFunction.id.name,
         parameters: params,
-        comment: fullComment
+        comment: commentText
       });
     });
 
-    return functionsWithComments;
+    return functionsAndMetadata;
   }
 
   /**
