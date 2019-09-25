@@ -49,10 +49,7 @@ const styles = {
   },
   tutorialName: {
     fontFamily: '"Gotham 5r", sans-serif',
-    fontSize: 16,
-    textOverflow: 'ellipsis',
-    whiteSpace: 'nowrap',
-    overflow: 'hidden'
+    fontSize: 18
   },
   tutorialSub: {
     fontFamily: '"Gotham 3r", sans-serif',
