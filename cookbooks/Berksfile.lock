@@ -136,7 +136,7 @@ GRAPH
   cdo-secrets (0.1.8)
   cdo-tippecanoe (0.1.2)
     ark (>= 0.0.0)
-  cdo-users (0.1.26)
+  cdo-users (0.1.27)
     apt (~> 2.6.0)
   cdo-varnish (0.3.243)
     apt (>= 0.0.0)
