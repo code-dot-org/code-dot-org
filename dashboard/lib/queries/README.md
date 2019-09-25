@@ -63,7 +63,7 @@ all_recent_users = Queries::User.new.recently_signed_in
 
 my_students = current_user.students
 my_active_students = Queries::User.new(my_students).recently_signed_in
-my_active_young_students = my_recent_students.where("age < ?", 13)
+my_active_young_students = my_active_students.where("age < ?", 13)
 ```
 
 Your Query Object can also define factory methods for constructing
