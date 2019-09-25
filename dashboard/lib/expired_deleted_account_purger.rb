@@ -19,6 +19,8 @@ require 'cdo/chat_client'
 #
 # @see Technical Spec: Hard-deleting accounts
 # https://docs.google.com/document/d/1l2kB4COz8-NwZfNCGufj7RfdSm-B3waBmLenc6msWVs/edit
+# @see Account Purger Cloudwatch dashboard
+# https://console.aws.amazon.com/cloudwatch/home?region=us-east-1#dashboards:name=Purged-Accounts
 #
 class ExpiredDeletedAccountPurger
   class SafetyConstraintViolation < RuntimeError; end
