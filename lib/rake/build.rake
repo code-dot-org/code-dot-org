@@ -24,7 +24,7 @@ namespace :build do
       RakeUtils.npm_rebuild 'phantomjs-prebuilt'
 
       ChatClient.log 'Building <b>apps</b>...'
-      npm_target = (rack_env?(:development) || ENV['CI']) ? 'build' : 'build:dist'
+      npm_target = (rack_env?(:development)) ? 'build' : 'build:dist'
       RakeUtils.system "npm run #{npm_target}"
       File.write(commit_hash, calculate_apps_commit_hash)
     end
