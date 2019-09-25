@@ -936,9 +936,10 @@
     test262-harness "^2.4.0"
     yargs "^7.0.1"
 
-"@code-dot-org/js-interpreter@^1.3.9":
-  version "1.3.9"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/js-interpreter/-/js-interpreter-1.3.9.tgz#a29b3914f38e1655816d745cea80c24e76758001"
+"@code-dot-org/js-interpreter@1.3.10":
+  version "1.3.10"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/js-interpreter/-/js-interpreter-1.3.10.tgz#642200b69b34c8bc7636b5daddb8aa554930bd57"
+  integrity sha512-KnG9Q4L3f4y8McEBdytVqYQ5P6916SbCCH0VIpdnlCjYG516bPJ3V+6UcoPeZQBDh/NbF4WcYsDSSNontYA5UA==
   dependencies:
     yargs "^7.0.1"
 
