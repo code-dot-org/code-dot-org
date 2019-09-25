@@ -1073,6 +1073,7 @@ exports.createJsWrapperBlockCreator = function(
       }
 
       if (expression) {
+        expression = expression.replace('VALUE', values[0]);
         if (returnType !== undefined) {
           return [
             `${prefix}${expression}`,
