@@ -211,7 +211,7 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
     if (
       this.props.data.planToTeach &&
       !this.props.data.planToTeach.includes(
-        'Yes, I plan to teach this course this year (2019-20)'
+        'Yes, I plan to teach this course this year (2020-21)'
       ) &&
       this.props.data.payFee &&
       this.props.data.payFee.includes('No, ')
