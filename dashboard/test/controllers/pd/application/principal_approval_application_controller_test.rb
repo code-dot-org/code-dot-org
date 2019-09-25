@@ -11,7 +11,6 @@ module Pd::Application
     end
 
     test 'already completed principal application goes to submitted page' do
-      skip 'Implement Principal Approval 2021'
       teacher_application = create TEACHER_APPLICATION_FACTORY
       application_guid = teacher_application.application_guid
 
@@ -24,7 +23,6 @@ module Pd::Application
     end
 
     test 'completed teacher application but no principal application goes to new page' do
-      skip 'Implement Principal Approval 2021'
       teacher_application = create TEACHER_APPLICATION_FACTORY
       application_guid = teacher_application.application_guid
 

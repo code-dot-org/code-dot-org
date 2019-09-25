@@ -536,7 +536,7 @@ module Pd::Application
 
     test 'autoscore with everything getting positive response for csd' do
       options = Pd::Application::Teacher2021Application.options
-      principal_options = Pd::Application::PrincipalApproval1920Application.options
+      principal_options = Pd::Application::PrincipalApproval2021Application.options
 
       application_hash = build :pd_teacher2021_application_hash,
         program: Pd::Application::TeacherApplicationBase::PROGRAMS[:csd],
@@ -590,7 +590,7 @@ module Pd::Application
 
     test 'autoscore with everything getting a positive response for csp' do
       options = Pd::Application::Teacher2021Application.options
-      principal_options = Pd::Application::PrincipalApproval1920Application.options
+      principal_options = Pd::Application::PrincipalApproval2021Application.options
 
       application_hash = build :pd_teacher2021_application_hash,
         program: Pd::Application::TeacherApplicationBase::PROGRAMS[:csp],
@@ -682,7 +682,7 @@ module Pd::Application
 
     test 'autoscore with everything getting negative response for csd' do
       options = Pd::Application::Teacher2021Application.options
-      principal_options = Pd::Application::PrincipalApproval1920Application.options
+      principal_options = Pd::Application::PrincipalApproval2021Application.options
 
       application_hash = build :pd_teacher2021_application_hash,
         program: Pd::Application::TeacherApplicationBase::PROGRAMS[:csd],
@@ -735,7 +735,7 @@ module Pd::Application
 
     test 'autoscore with everything getting negative response for csp' do
       options = Pd::Application::Teacher2021Application.options
-      principal_options = Pd::Application::PrincipalApproval1920Application.options
+      principal_options = Pd::Application::PrincipalApproval2021Application.options
 
       application_hash = build :pd_teacher2021_application_hash,
         program: Pd::Application::TeacherApplicationBase::PROGRAMS[:csp],
@@ -797,7 +797,7 @@ module Pd::Application
 
     test 'principal responses override teacher responses for scoring' do
       options = Pd::Application::Teacher2021Application.options
-      principal_options = Pd::Application::PrincipalApproval1920Application.options
+      principal_options = Pd::Application::PrincipalApproval2021Application.options
 
       application_hash = build :pd_teacher2021_application_hash,
         plan_to_teach: options[:plan_to_teach].third,
@@ -828,7 +828,7 @@ module Pd::Application
 
     test 'nil results when applicable' do
       options = Pd::Application::Teacher2021Application.options
-      principal_options = Pd::Application::PrincipalApproval1920Application.options
+      principal_options = Pd::Application::PrincipalApproval2021Application.options
 
       application_hash = build :pd_teacher2021_application_hash,
         program: Pd::Application::TeacherApplicationBase::PROGRAMS[:csp],
@@ -851,7 +851,6 @@ module Pd::Application
     end
 
     test 'principal_approval_state' do
-      skip 'Implement Principal Approval 2021'
       application = create :pd_teacher2021_application
       assert_nil application.principal_approval_state
 
@@ -950,7 +949,6 @@ module Pd::Application
     private
 
     test 'test allow_sending_principal_email?' do
-      skip 'Implement Principal Approval 2021'
       # By default we can send.
       application = create :pd_teacher2021_application
       assert application.allow_sending_principal_email?
@@ -997,7 +995,6 @@ module Pd::Application
     end
 
     test 'test allow_sending_principal_approval_teacher_reminder_email?' do
-      skip 'Implement Principal Approval 2021'
       # By default we can't send.
       application = create :pd_teacher2021_application
       refute application.allow_sending_principal_approval_teacher_reminder_email?
