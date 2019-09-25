@@ -1,0 +1,29 @@
+{
+  "category": "Events",
+  "config": {
+    "func": "scene",
+    "blockText": "scene {SCENE}",
+    "inline": true,
+    "eventBlock": true,
+    "args": [
+      {
+        "type": "field_dropdown",
+        "name": "SCENE",
+        "options": [
+          [
+            "1",
+            "1"
+          ],
+          [
+            "2",
+            "2"
+          ],
+          [
+            "3",
+            "3"
+          ]
+        ]
+      }
+    ]
+  }
+}
