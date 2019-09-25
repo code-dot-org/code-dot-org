@@ -569,7 +569,6 @@ export default class TutorialExplorer extends React.Component {
               {this.state.filteredTutorialsForLocale.length > 0 && (
                 <TutorialSet
                   tutorials={this.state.filteredTutorialsForLocale}
-                  filters={this.state.filters}
                   specificLocale={true}
                   localeEnglish={false}
                   disabledTutorials={this.props.disabledTutorials}
@@ -635,7 +634,6 @@ export default class TutorialExplorer extends React.Component {
                 {this.shouldShowTutorials() && (
                   <TutorialSet
                     tutorials={this.state.filteredTutorials}
-                    filters={this.state.filters}
                     localeEnglish={this.isLocaleEnglish()}
                     disabledTutorials={this.props.disabledTutorials}
                     grade={grade}
