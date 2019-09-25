@@ -890,11 +890,6 @@ describe('entry tests', () => {
             to: minify ? '[path]/[name].[hash].[ext]' : '[path]/[name].[ext]',
             toType: 'template'
           },
-          {
-            from: 'build/lib',
-            to: minify ? '[path]/[name].[hash].[ext]' : '[path]/[name].[ext]',
-            toType: 'template'
-          },
           // Libraries in this directory are assumed to have .js and .min.js
           // copies of each source file. In development mode, copy only foo.js.
           // In production mode, copy only foo.min.js and rename it to foo.js.
