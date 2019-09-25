@@ -297,6 +297,20 @@ ja-JP:
       4-5 While Loops 3: わたしを山まで動かして、すべての土をかたづけてください。それから穴（あな）のところへ行き、穴をすべてうめてください。ヒント：できるだけ少ないブロックで使ってください。
       4-5 While Loops 4: 'すごく大きい穴（あな）を見つけてびっくりしました。シャベル何はいの土がいるのか、わかりません。地面が平らになるまで穴をうめるプログラムを作れますか？
         ヒント：「以下の間くりかえし（while loop）」を使ってみてください。  '
+      Course 4 Artist 1: '四角形をかくのを手伝ってください。(それぞれの線の長さは300ピクセル) '
+      Course 4 Artist 12: |-
+        自由研究：あなたは、このようなパターンの書き方を、すべて学びました。この絵が気に入ったら、にたデザインを書いてみて。自分のすきなように、作り直してもいいよ。
+        ヒントがほしいときは、ランプをクリックしてね。
+      Course 4 Artist 13: ここに、真っ白なキャンバスがあります。線のかたちや、スタンプを使って、あなたが書きたいものを、自由に書いてください！
+      Course 4 Artist 2: くりかえしを使って、四角形（そとがわの、大きな四角形だけ）を書いてください。(それぞれの辺は300ピクセルです)
+      Course 4 Artist 3: "「くりかえし」を使えば、かんたんに、このデザインが書けるよ。まずはプログラムを動かして(「実行」をクリックして)
+        何が起こるか見てみよう。その後に「くりかえし」を、使ってデザインを完成させよう。"
+      Course 4 Artist 4: くりかえしの回数を入れて、色のついた円を作ってください。ヒント：1回転は何度ですか？
+      Course 4 Artist 5: 図が対称（たいしょう）になるように、下に三角形を3つ書きましょう。正三角形のそれぞれの辺の長さは50ピクセルです。ヒント：少しプログラムをかえたら、実行して、動きをみながら考えましょう。
+      Course 4 Artist 6: 正三角形を3つ書くプログラムを完成（かんせい）させてください。
+      Course 4 Artist 8: 太陽の絵を書いてください。「くりかえし」ブロックを加えて、灰色（はいいろ）のブロック全部を中に入れてみてね。
+      Course 4 Artist 8a: この形を、おぼえてますか？ヒントなしで、これを書いてみよう！
+      Course 4 Artist 9: このデザインを書くには、10 回くりかえします。ヒント：1回書いたら、少しまがりましょう。
       Course 4 Artist For Loops 6a: |-
         さっきのプログラムを、3ヵ所かえるだけで、この絵を書くことが出来ます！
         ヒント：
@@ -304,6 +318,18 @@ ja-JP:
         1.  線の太さは？
         2.  まがる向きは？
         3.  いくつ「ずつ」カウントする？
+      Course 4 Artist Vars 1: 正三角形を書きましょう。それぞれの長さが100ピクセルぴったりの正三角形です。
+      Course 4 Artist Vars 2: 「前に動く"150"ピクセル」のかわりに「前に動く"length"ピクセル」ブロックを使います。"length"は、変数（へんすう）で、あなたの好きな数にできます。この三角形を書くために、"length"に150をセットしてください。
+      Course 4 Artist Vars 4: |-
+        高さが、はばの2倍の四角形を書きます。
+        "width" （ウィドゥス、はばの意味）という変数に100 をセットします。計算ブロックを使ってプログラムを仕上げてください。
+        ヒント：四角形の高さは、width × 2 です。
+      Course 4 Bee 1: |-
+        実行するまで、「？」の下に、何があるかは分かりません！
+        「もし」ブロックを使って、「？」の下に、何があるかチェックしてください。そして、もし花だったら、花のミツをとってください。
+      Course 4 Bee 2: "「もし～」ブロックを使って、全ての「？」をチェックしてください。そのとき、「？」が花なら、花のミツをとり、「？」がハチの巣なら、ハチミツを作ります！"
+      Course 4 Bee 3: "「？」は、花か、ハチの巣か、のどちらかです。「もし～」ブロックを使って、花の時はミツをとって、ちがう (つまりハチの巣)
+        時は、ハチミツを作りましょう。"
       Course 4 Maze 4: 使うブロックの数が少なくてすむように、「くりかえし」ブロックを使ってみて・・
       CourseD_Dance_Party_01: |-
         _ダンスパーティーをしよう！_
@@ -614,9 +640,25 @@ ja-JP:
       MC_HOC_2017_FP20x20: "**自由にプレイ:** ここからはあなたの自由です! Agent のコードを、この世界の探検に役立ててみましょう。"
       MC_HOC_2017_FP20x20_2019: "**自由にプレイ:** ここからはあなたの自由です! Agent のコードを、この世界の探検に役立ててみましょう。"
       NEW Course 4 Artist Params 2: 50 ピクセルの辺を持つ三角形を書く `draw triangle` 関数を作ります。
+      NEW Course 4 Artist Vars 2: 数のブロックを「セット Length は？」と「？回くりかえす」のところに入れて、50ピクセルの長さの三角形を6つ書いてください。
+      NEW Course 4 Artist Vars 4: もう一回やってみよう！このカッコイイ六角形を使ったデザインを書くには、「lengh」変数を60にしてみてね。
+      NEW Course 4 Artist Vars 6: |-
+        100 ピクセルの辺を持つ五角形のパターンを書くよ！
+        「セット length は」に、数のブロックをくっつけて、数は100にします。全部の「前に動く？ピクセル」には「length」ブロックを入れて下さい。
+        「length」に入れた数が、その後のプログラムで、どこでも使えることが分ったかな？
       Overworld Move to Sheep: 羊に近づくには"前進"コマンドを追加します。
       Overworld Move to Sheep_2019: 羊に近づくには"前進"コマンドを追加します。
+      Standalone_Artist_2: "「左に まがる 120度」と「左に まがる 60度」で、ダイヤモンドを書くよ。それぞれ「150ピクセル」うごかしてね。"
+      Standalone_Artist_3: "「前に うごく 100ピクセル」と「右に まがる60度」をつかって、六角形が書けるかな？"
+      Standalone_Artist_4: "「くりかえし」ブロックは、すきな回数プログラムを、くりかえします。ここに出ているプログラムを「くりかえし」ブロックの中に入れて、6回くりかえすと、どうなるかな？"
+      Standalone_Artist_5: ダイヤモンドを書くプログラムがあります。何回くりかえすと花が書けるかな？
       Standalone_Artist_5.5: "「くりかえし」ブロックをつかって、ダイヤモンドが かんたんに書けるようにしてあります。このプログラムを12回くりかえすと花が書けます。ヒント：ひとつのダイヤモンドを書きおえたら、30度まがりましょう。ずっと同じところにダイヤモンドを書いていたらダメだよ。"
+      Standalone_Artist_6: このデザインは、六角形を書くプログラムを 6 回くりかえします。くりかえしのたびに、何度まがればいいかな？ヒント：円の角度を、くりかえしの回数で、わり算すればいいよ。
+      Standalone_Artist_7: '関数（かんすう）は、くりかえしと同じように、べんりです。「draw a flower」は、花を書く関数です。「draw
+        a flower」ブロックをつかえば、いつでも、花を書くことが出来ます。これと「前に ジャンプ」ブロックを組み合わせて、3つ花を書いてください。ヒント:
+        花は 150 ピクセルずつ はなれているよ。'
+      Standalone_Artist_8: "「Draw a shape」は、六角形を書くようにプログラムした関数です。まず実行して、この関数が、どう うごくか、みてみてください。さて、正方形や、三角形や、八角形を書くように、この関数の中のプログラムを書き直すことが出来るかな？"
+      Standalone_Artist_9: さあ、あなたの好きな絵を書いてみて！すきなことが出来る、空っぽの関数もあるから、つかってね！
       course1_artist_loops_challenge2: ゲームをしましょう！ なるべく多くのXをかく！ 3行れんぞくしてXをかけるかな？
       course1_artist_loops_challenge3: 2羽のトリさんの家をつくるのを手伝って！
       course1_maze_debugging_challenge1: デバッグして！トリさんが ブタさんの ところに いけるよう プログラムを なおしてください。
@@ -652,6 +694,9 @@ ja-JP:
         このコードをデバッグしてジェムをすべて手に入れよう！
       course2_collector_prog_challenge2: ジェムはぜんぶで20こあるよ。半分より多く集（あつ）めたいな！
       course2_maze_programming_challenge1: ブタがかくれてる！さがすのをてつだってくれる？
+      course2_maze_programming_challenge2: |-
+        ブタのところに行くには、いろいろなほうほうがあります。
+        前に進むよりも、後ろにもどったほうが、早く行けることもあります。
       course3_bee_debugging_challenge1: ハチが花のミツをどのように集めているか見てください。 同じパターンを使って、すべてのハチミツを作れますか？
       course3_bee_functions_challenge2: チャレンジ問題によくきたね！
       course3_collector_debugging_challenge2: 入れ子のループはマスターしたかな？ これまでに学んだことをいかして、ジェムをすべて集めましょう！
@@ -666,6 +711,63 @@ ja-JP:
       course3_maze_debugging_challenge1: _円をかくように、ぐるりと回ればいいかな？_
       course3_maze_debugging_challenge2: _回りすぎると、めまいがするよ！ 4つの「まがる」ブロックだけでドングリをひろえるようにしてね。_
       course4_artist_fwp_challenge1: このプログラムを実行してみてください、そして何が起こるかを参照し変更をしてください。それがどのように動作するかを理解できますか？(または削除し、完全に別の何かと交換)
+      courseA_artist_loops10: |-
+        ## りくちにもどれるように 石をおいてください！
+
+        ![expandable](https://images.code.org/d3213d375d0271e114aa4313cdeb34be-image-1498064942606.gif)
+      courseA_artist_loops10_2018: |-
+        ## りくちにもどれるように 石をおいてください！
+
+        ![expandable](https://images.code.org/d3213d375d0271e114aa4313cdeb34be-image-1498064942606.gif)
+      courseA_artist_loops10_2019: |-
+        ## りくちにもどれるように 石をおいてください！
+
+        ![expandable](https://images.code.org/d3213d375d0271e114aa4313cdeb34be-image-1498064942606.gif)
+      courseA_artist_loops11: |-
+        ## ふねが見れるよう かいだんをつくってみみよう。
+
+        ![expandable](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)
+      courseA_artist_loops11_2018: |-
+        ## ふねが見れるよう かいだんをつくってみみよう。
+
+        ![expandable](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)
+      courseA_artist_loops11_2019: |-
+        ## ふねが見れるよう かいだんをつくってみみよう。
+
+        ![expandable](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)
+      courseA_artist_loops12: |-
+        じゆうに おもしろいと おもうのもを かいてみよう。
+
+        * * *
+
+        ### アイデア
+
+        ![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)
+        ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)
+        ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)
+        ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
+      courseA_artist_loops12_2018: |-
+        じゆうに おもしろいと おもうのもを かいてみよう。
+
+        * * *
+
+        ### アイデア
+
+        ![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)
+        ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)
+        ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)
+        ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
+      courseA_artist_loops12_2019: |-
+        じゆうに おもしろいと おもうのもを かいてみよう。
+
+        * * *
+
+        ### アイデア
+
+        ![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)
+        ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)
+        ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)
+        ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
       courseA_artist_loops2: |-
         アーティストが、２かい せんを かくよう たすけてください。
 
@@ -733,6 +835,39 @@ ja-JP:
         ## ボートまで はしごが ひつようです。
 
         ![expandable](https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)
+      courseA_artist_loops9: |-
+        **チャレンジ** かいだんをつくって デッキにいってみよう。
+
+        ![expandable](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
+      courseA_artist_loops9_2018: |-
+        **チャレンジ** かいだんをつくって デッキにいってみよう。
+
+        ![expandable](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
+      courseA_artist_loops9_2019: |-
+        **チャレンジ** かいだんをつくって デッキにいってみよう。
+
+        ![expandable](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
+      courseA_artist_loops_challenge1: |-
+        「くりかえし」をつかうと、いちどにたくさんの線を引くことができます。
+
+        家をかくことができるかな？「くりかえし」を使えるところをさがしてみましょう！
+
+        ![](https://images.code.org/6e59e881e0aa1d31186e81a203655a0b-image-1501785654664.png)
+      courseA_artist_loops_challenge1_2018: |-
+        「くりかえし」をつかうと、いちどにたくさんの線を引くことができます。
+
+        家をかくことができるかな？「くりかえし」を使えるところをさがしてみましょう！
+
+        ![](https://images.code.org/6e59e881e0aa1d31186e81a203655a0b-image-1501785654664.png)
+      courseA_artist_loops_challenge1_2019: |-
+        「くりかえし」をつかうと、いちどにたくさんの線を引くことができます。
+
+        家をかくことができるかな？「くりかえし」を使えるところをさがしてみましょう！
+
+        ![](https://images.code.org/6e59e881e0aa1d31186e81a203655a0b-image-1501785654664.png)
+      courseA_artist_loops_challenge2a: ツールボックスにあるブロックをつかって テントを３つかいてみよう。
+      courseA_artist_loops_challenge2a_2018: ツールボックスにあるブロックをつかって テントを３つかいてみよう。
+      courseA_artist_loops_challenge2a_2019: ツールボックスにあるブロックをつかって テントを３つかいてみよう。
       courseA_collector_loops1: |-
         **フリープレイ** ローレルの ぼうけん です！かのじょを うごかして たからものを あつめよう。
 
@@ -824,6 +959,56 @@ ja-JP:
       courseA_maze_seq_challenge1_2018: デバッグして！トリさんが ブタさんの ところに いけるよう プログラムを なおしてください。
       courseA_maze_seq_challenge1_2019: デバッグして！トリさんが ブタさんの ところに いけるよう プログラムを なおしてください。
       courseA_maze_seq_challenge2_2019: みちを たどって トリさんを ブタさんのところに つれてって。ばくだんで はねが とばされないように！
+      courseA_playLab_events3: |-
+        <xml><block type="studio_whenArrow">
+            <title name="VALUE">left</title>
+          </block></xml> event blockの下に <xml><block type="studio_move">
+            <title name="SPRITE">1</title>
+            <title name="DIR">8</title>
+          </block></xml> をつけて 犬をうごかせるようにしよう。
+        犬を はたまで うごかせばクリアです。
+      courseA_playLab_events3_2018: |-
+        <xml><block type="studio_whenArrow">
+            <title name="VALUE">left</title>
+          </block></xml> event blockの下に <xml><block type="studio_move">
+            <title name="SPRITE">1</title>
+            <title name="DIR">8</title>
+          </block></xml> をつけて 犬をうごかせるようにしよう。
+        犬を はたまで うごかせばクリアです。
+      courseA_playLab_events3_2019: |-
+        <xml><block type="studio_whenArrow" block-text="when left arrow">
+            <title name="VALUE">left</title>
+          </block></xml> event blockの下に <xml><block type="studio_move" block-text="move dog west">
+            <title name="SPRITE">1</title>
+            <title name="DIR">8</title>
+          </block></xml> をつけて 犬をうごかせるようにしよう。
+        犬を はたまで うごかせばクリアです。
+      courseA_playLab_events4: 右やじるしキーがおされたとき、犬が右にうごくようにしてみよう。
+      courseA_playLab_events5: 上やじるしキーと下やじるしキーで犬を上下にうごかしてみよう。
+      courseA_playLab_events5_2018: 上やじるしキーと下やじるしキーで犬を上下にうごかしてみよう。
+      courseA_playLab_events5_2019: 上やじるしキーと下やじるしキーで犬を上下にうごかしてみよう。
+      courseA_playLab_events6_2019: はいけいをかえてみよう、犬がクリックされたときランダムに音がなるようにしてみよう。
+      courseA_playlab_events_challenge1: |-
+        Oliveをクリックすると、Robinが表示されるよ！残りの文字を表示するコードも作成できるかな？
+        このパズルでは、ヒントをクリックしてね！このヒントは、このプロジェクトを行うのに役立ちます！
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
+      courseA_playlab_events_challenge1_2018: |-
+        Oliveをクリックすると、Robinが表示されるよ！残りの文字を表示するコードも作成できるかな？
+        このパズルでは、ヒントをクリックしてね！このヒントは、このプロジェクトを行うのに役立ちます！
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
+      courseA_playlab_events_challenge1_2019: |-
+        Oliveをクリックすると、Robinが表示されるよ！残りの文字を表示するコードも作成できるかな？
+        このパズルでは、ヒントをクリックしてね！このヒントは、このプロジェクトを行うのに役立ちます！
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
+      courseA_playlab_events_challenge2: |-
+        キャラクターがクリックされたとき、しゃべらせたり いろんなうごきをさせてみよう。
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>) をクリックして なにができるのかみてみよう。
+      courseA_playlab_events_challenge2_2018: |-
+        キャラクターがクリックされたとき、しゃべらせたり いろんなうごきをさせてみよう。
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>) をクリックして なにができるのかみてみよう。
+      courseA_playlab_events_challenge2_2019: |-
+        キャラクターがクリックされたとき、しゃべらせたり いろんなうごきをさせてみよう。
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>) をクリックして なにができるのかみてみよう。
       courseB_artist_loops1_2019: これは「アーティスト」という あたらしい パズルです。すきなものを かいて ください。（かきおわったら、「おわり」を
         クリックします）
       courseB_collector_loops1: |-
@@ -849,9 +1034,84 @@ ja-JP:
         _"たからものを あつめよう！"_
 
         このパズルをクリアするには、**5** つの たからものを ゲットして ください。
+      courseC_collector_prog1: |-
+        **フリープレイ** ローレルの ぼうけん です！かのじょを うごかして たからものを あつめよう。
+
+        ブロックを ワークスペースに ドラッグして、たからものを あつめよう。このレベルをクリアするには、ひとつ いじょうの アイテムを ゲットしよう。
+      courseC_collector_prog1_2018: |-
+        **フリープレイ** ローレルの ぼうけん です！かのじょを うごかして たからものを あつめよう。
+
+        ブロックを ワークスペースに ドラッグして、たからものを あつめよう。このレベルをクリアするには、ひとつ いじょうの アイテムを ゲットしよう。
+      courseC_collector_prog1_2019: |-
+        **フリープレイ** ローレルの ぼうけん です！かのじょを うごかして たからものを あつめよう。
+
+        ブロックを ワークスペースに ドラッグして、たからものを あつめよう。このレベルをクリアするには、ひとつ いじょうの アイテムを ゲットしよう。
       courseC_maze_programming1: このパズルでは、ブロックをドラッグしてくっつけたら「実行」をクリックして、どうなるか見てみよう！
       courseC_maze_programming1_2018: このパズルでは、ブロックをドラッグしてくっつけたら「実行」をクリックして、どうなるか見てみよう！
       courseC_maze_programming1_2019: このパズルでは、ブロックをドラッグしてくっつけたら「実行」をクリックして、どうなるか見てみよう！
+      courseC_maze_programming2: ツールボックスからもうひとつ <xml><block type="maze_moveForward"/></xml>
+        ブロックをドラッグしてきて、コードをかんせいさせよう。
+      courseC_maze_programming2_2018: ツールボックスからもうひとつ <xml><block type="maze_moveForward"/></xml>
+        ブロックをドラッグしてきて、コードをかんせいさせよう。
+      courseC_maze_programming2_2019: ツールボックスからもうひとつ <xml><block type="maze_moveForward"
+        block-text="move forward"/></xml> ブロックをドラッグしてきて、コードをかんせいさせよう。
+      courseC_maze_programming3: |-
+        _"ブタさんがトリさんのはねをくしゃくしゃにした"_
+
+        よけいなブロックが１つあって、ブタさんのところへ行けません。\
+        はい色のブロックの中から それを取り出して、ツールボックスにもどしましょう。
+      courseC_maze_programming3_2018: |-
+        _"ブタさんがトリさんのはねをくしゃくしゃにした"_
+
+        よけいなブロックが１つあって、ブタさんのところへ行けません。\
+        はい色のブロックの中から それを取り出して、ツールボックスにもどしましょう。
+      courseC_maze_programming3_2019: |-
+        _"ブタさんがトリさんのはねをくしゃくしゃにした"_
+
+        よけいなブロックが１つあって、ブタさんのところへ行けません。\
+        はい色のブロックの中から それを取り出して、ツールボックスにもどしましょう。
+      courseC_maze_programming6: |-
+        _"おちついてブタをいっしょにさがそう。てつだってくれなかったらおこるよ！"_
+        TNTにさわらないように、ブタさんを鳥のところへ連れて行って。
+      courseC_maze_programming6_2018: |-
+        _"おちついてブタをいっしょにさがそう。てつだってくれなかったらおこるよ！"_
+        TNTにさわらないように、ブタさんを鳥のところへ連れて行って。
+      courseC_maze_programming6_2019: |-
+        _"おちついてブタをいっしょにさがそう。てつだってくれなかったらおこるよ！"_
+        TNTにさわらないように、ブタさんを鳥のところへ連れて行って。
+      courseC_maze_programming7: |-
+        _"頭にきたぞ！"_
+        **チャレンジ:** このプログラムには、いくつかのバグがあります。
+        ブロックをけしたり、つかしたりしてみよう。
+      courseC_maze_programming7_2018: |-
+        _"頭にきたぞ！"_
+        **チャレンジ:** このプログラムには、いくつかのバグがあります。
+        ブロックをけしたり、つかしたりしてみよう。
+      courseC_maze_programming7_2019: |-
+        _"頭にきたぞ！"_
+        **チャレンジ:** このプログラムには、いくつかのバグがあります。
+        ブロックをけしたり、つかしたりしてみよう。
+      courseC_maze_programming8: _"おちついて ブタさんをいっしょにさがそう。"_
+      courseC_maze_programming8_2018: _"おちついて ブタさんをいっしょにさがそう。"_
+      courseC_maze_programming8_2019: _"おちついて ブタさんをいっしょにさがそう。"_
+      courseC_maze_programming8_predict1: _"おちついて ブタさんをいっしょにさがそう。"_
+      courseC_maze_programming8_predict1_2018: _"おちついて ブタさんをいっしょにさがそう。"_
+      courseC_maze_programming8_predict1_2019: _"おちついて ブタさんをいっしょにさがそう。"_
+      courseC_maze_programming9: _"じぶんの すきな ほうほうで ブタのところに 行ってみよう！"_
+      courseC_maze_programming9_2018: _"じぶんの すきな ほうほうで ブタのところに 行ってみよう！"_
+      courseC_maze_programming9_2019: _"じぶんの すきな ほうほうで ブタのところに 行ってみよう！"_
+      courseC_maze_programming_challenge1: 'かくれているブタのところへ行けなくて、こまっている鳥を助けてあげよう！ '
+      courseC_maze_programming_challenge1_2018: 'かくれているブタのところへ行けなくて、こまっている鳥を助けてあげよう！ '
+      courseC_maze_programming_challenge1_2019: 'かくれているブタのところへ行けなくて、こまっている鳥を助けてあげよう！ '
+      courseC_maze_programming_challenge2: |-
+        ブタのところに行くには、いろいろなほうほうがあります。
+        前に進むよりも、後ろにもどったほうが、早く行けることもあります。
+      courseC_maze_programming_challenge2_2018: |-
+        ブタのところに行くには、いろいろなほうほうがあります。
+        前に進むよりも、後ろにもどったほうが、早く行けることもあります。
+      courseC_maze_programming_challenge2_2019: |-
+        ブタのところに行くには、いろいろなほうほうがあります。
+        前に進むよりも、後ろにもどったほうが、早く行けることもあります。
       courseD_bee_nestedLoops8: "それぞれの花からすべての花のみつを集めてください。\nそしてそれぞれのハチの巣でハチミツを作ってください。\n入れ子のループ（ネスト・ループ）を使うのです。 "
       courseD_bee_nestedLoops8_2018: "それぞれの花からすべての花のみつを集めてください。\nそしてそれぞれのハチの巣でハチミツを作ってください。\n入れ子のループ（ネスト・ループ）を使うのです。 "
       courseD_bee_nestedLoops8_2019: "それぞれの花からすべての花のみつを集めてください。\nそしてそれぞれのハチの巣でハチミツを作ってください。\n入れ子のループ（ネスト・ループ）を使うのです。 "

@@ -1350,7 +1350,13 @@ a.download-video {
     #heading {
       width: 700px;
     }
-    .betatext {
+
+    /**
+     * betatext can be used to style a span directly, or betacontainer can be
+     * used on a node containing markdown to apply the beta styling to all
+     * **strong** nodes in the markdown
+     */
+    .betatext, .betacontainer strong {
       background: $white;
       color: $cyan;
       padding: 2px 4px;
@@ -3106,4 +3112,49 @@ h2.danger {
 .label-bold {
   font-weight: bold;
   color: $dark_charcoal;
+}
+
+#donor-footer {
+  color: $white;
+  text-align: center;
+  padding: 30px 10px 36px 10px;
+
+  h1 {
+    color: $white;
+    margin-bottom: 24px;
+    margin-top: 0;
+    font-family: "Gotham 5r", sans-serif;
+    font-size: 38px;
+  }
+
+  h3 {
+    font-family: "Gotham 5r", sans-serif;
+    font-size: 20px;
+    line-height: normal;
+  }
+
+  p {
+    color: $white;
+    margin-bottom: 22px;
+    max-width: 720px;
+    display: inline-block;
+    font-size: 14px;
+  }
+
+  .logo {
+    max-width: 235px;
+    max-height: 64px;
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+  }
+
+  .resources {
+    margin-top: 20px;
+  }
+
+  .learn-more {
+    color: $yellow;
+  }
 }

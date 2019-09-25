@@ -1198,6 +1198,7 @@ ku:
         options:
           TYPE:
             "'sand'": لم/وردە بەرد
+            "'darkPrismarine'": پریسمارینی تۆخ
             "'seaLantern'": چرای دەریایی
       craft_log:
         text: نامەی لۆگ {MESSAGE}
@@ -1205,4 +1206,54 @@ ku:
         text: جێگیربکە {blockType}
         options:
           blockType:
+            '"strippedOak"': دارڕێژ
+            '"strippedDarkOak"': دارڕێژی تۆخ
+            '"stoneBricks"': بلۆکی بەردین
+            '"mossyStoneBricks"': بلۆکی بەردی قەوزەدار
+            '"crackedStoneBricks"': بلۆکی بەردی شکاو
+            '"decorativeStoneBricks"': بلۆکی بەردی دیکۆرکراو
+            '"blueCoralBlock"': بلۆکی مەرجانی شین
+            '"pinkCoralBlock"': بلۆکی مەرجانی پەمەیی
+            '"magentaCoralBlock"': بلۆکی مەرجانی ئەرخەوانی
+            '"redCoralBlock"': بلۆکی مەرجانی سوور
+            '"yellowCoralBlock"': بلۆکی مەرجانی زەرد
+            '"blueDeadCoralBlock"': بلۆکی مەرجانی مردووی شین
+            '"pinkDeadCoralBlock"': بلۆکی مەرجانی مردووی پەمەیی
+            '"magentaDeadCoralBlock"': بلۆکی مەرجانی مردووی ئەرخەوانی
+            '"readDeadCoralBlock"': بلۆکی مەرجانی مردووی سوور
+            '"yellowDeadCoralBlock"': بلۆکی مەرجانی مردووی زەرد
+            '"prismarine"': بلۆکی پریسمارین
+            '"darkPrismarine"': پریسمارینی تۆخ
             '"seaLantern"': چرای دەریایی
+            '"packedIce"': بەفری قالبکراو
+            '"blueIce"': بەفری شین
+            '"blackConcrete"': کۆنکریتی ڕەش
+            '"seaGrass"': گیای دەریایی
+            '"kelp"': گژوگیای دەریا
+            '"polishedGranite"': گرانێتی لووس
+      craft_placePrismarine:
+        text: پریسمارین دابنێ
+      craft_repeatUntilConduit:
+        text: |-
+          دووبارە بکەوە تا جۆگەکە تەواو دەبێت
+          {STATEMENT}
+      craft_repeatUntilGoal:
+        text: |-
+          دووبارە بکەوە تا ئامانجەکە
+          {STATEMENT}
+      craft_spawnEntity:
+        text: هێلکە ماسی {ENTITY}
+        options:
+          ENTITY:
+            '"cod"': ماسی کۆد
+            '"dolphin"': دۆلفین
+            '"salmon"': سەلەمۆن
+            '"seaTurtle"': کیسەڵی دەریایی
+            '"squid"': ئەکتاپوس
+            '"tropicalFish"': ماسی کەمەرەیی
+      craft_turn:
+        text: بسوڕێوە {DIR}
+        options:
+          DIR:
+            right: بۆ لای ڕاست ↻
+            left: بۆ لای چەپ ↺

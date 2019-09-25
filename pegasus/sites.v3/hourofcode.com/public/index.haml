@@ -33,7 +33,7 @@ social:
 %link{rel: "stylesheet", type: "text/css", href: "/css/front-page.css"}
 
 :css
-  html, body, #gmap {
+  html, body {
     height: 100%;
     margin: 0px;
     padding: 0px;
@@ -123,15 +123,11 @@ social:
 
   -# Map
   - unless @country == 'ma' # Hide map for Morocco because of sensitive border disputes misrepresented in map
-    - use_mapbox = DCDO.get("use_mapbox", true)
     #maparea.full-width
-      -# During pre-Hour of Code season, show the embedded gmap.
+      -# During pre-Hour of Code season, show the embedded map.
       -# All other times show a picture of the map.
       -if hoc_mode == "pre-hoc"
-        - if use_mapbox
-          = view :hoc_events_map_replacement
-        -else
-          = view :hoc_events_map, max_height_percentage: 1
+        = view :hoc_events_map
         .footnote=hoc_s(:map_warning).gsub(/%{events_url}/, resolve_url('/events'))
       -else
         %a{href: resolve_url('/map')}

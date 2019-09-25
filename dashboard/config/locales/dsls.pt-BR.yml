@@ -2702,7 +2702,8 @@ pt-BR:
       CSD U6 array multi:
         title: Usando Vetores
         questions:
-        - {}
+        - text: O que o laboratório de aplicativos exibirá quando o código à esquerda
+            for executado?
         answers:
         - text: <img src="https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54
             PM.png" width="200px" />
@@ -2716,7 +2717,8 @@ pt-BR:
       CSD U6 array multi_2018:
         title: Usando Vetores
         questions:
-        - {}
+        - text: O que o laboratório de aplicativos exibirá quando o código à esquerda
+            for executado?
         answers:
         - text: <img src="https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54
             PM.png" width="200px" />
@@ -2730,7 +2732,8 @@ pt-BR:
       CSD U6 array multi_2018_2019:
         title: Usando Vetores
         questions:
-        - {}
+        - text: O que o laboratório de aplicativos exibirá quando o código à esquerda
+            for executado?
         answers:
         - text: <img src="https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54
             PM.png" width="200px" />
@@ -3240,6 +3243,14 @@ pt-BR:
       Internet Simulator Setup 3:
         title: Configuração do Simulador de Internet 3
         content1: descrição aqui
+        markdown: |
+          # Internet Simulator: Perguntas frequentes
+
+          #### Onde posso encontrar as atividades que você projetou para usar com o Internet Simulator?
+          As atividades que projetamos para o currículo dos Princípios de Ciência da Computação, incluindo as configurações específicas do Internet Simulator, podem ser encontradas nos planos de aula da Unidade [here](https://code.org/educate/csp). Muitos dos planos de aula têm "Dicas e truques para professores", vídeos de apoio que mostram demonstrações do Simulador de Internet usadas como parte das atividades da sala de aula. Você pode usar essas atividades como está, ou sinta-se à vontade para modificar para melhor se adequar à sua classe!
+
+          #### Posso personalizar o Simulador de Internet para a minha turma?
+          No momento, infelizmente, não temos como pessoas fora do Code.org criar configurações e instruções específicas para o Simulador de Internet. Tentamos expor uma variedade de configurações diferentes que, esperamos, podem funcionar para sua sala de aula e atividade. A longo prazo, adoraríamos ter uma maneira de permitir que outras pessoas configurem a ferramenta.
       Internet-Unplugged:
         markdown: |
           # A Internet
@@ -3557,6 +3568,154 @@ pt-BR:
           ## Duração do Curso
 
           A conclusão deste curso on-line deve levar entre 3-7 horas, dependendo do seu conhecimento prévio e do quão profundo nos recursos do Code.org você deseja ir.
+      OPD-K5 CS:
+        markdown: |
+          # Vamos Começar > Por que Fundamentos de Ciências da Computação (CC)?
+
+          Você irá completar este curso gratuíto, em seu próprio passo, usando a mesma plataforma de aprendizado que você poderá usar em sua sala de aula com seus alunos.
+
+          Vamos começar aprendendo um pouco sobre o que são os Fundamentos de Ciências da Computação (CC), e como eles têm trabalhado para professores e alunos ao redor do mundo. No próximo nível, iremos cobrir como interagir com a plataforma de Fundamentos de CC, que você irá usar para completar o curso.
+
+          <iframe width="640" height="390" src="https://youtubeeducation.com/embed/rNIM1fzJ8u0" frameborder="0" allowfullscreen></iframe>
+
+          **[Não consegue assistir o vídeo? Clique aqui para descarregar.](http://videos.code.org/k5-pd/how-to-k5-workshops.mp4)**
+
+          > ## Reflita
+          Quais são suas primeiras impressões de Fundamentos de CC?
+
+          > [Envie suas impressões pelo Tweeter](https://twitter.com/teachcode) e não se esqueça de usar a tag @teachcode na sua mensagem para que possamos responder.
+
+          > <a href="http://ctt.ec/Bfjw3" target="blank"><button class="default">Compartilhe no Tweeter >></button></a><br><br>
+          Não possui uma conta no Twitter? Você também pode nos encontrar no [Facebook](https://www.facebook.com/Code.org/) ou no [Instagram](https://www.instagram.com/codeorg/).
+      OPD-K5 Outline:
+        markdown: |
+          # Vamos Começar > Linhas Gerais do Curso
+
+          O curso é dividido em onze etapas, e cada etapa é composta de "níveis" ou "desafios". Segue uma visão geral do que você irá aprender caso você faça o curso completo:
+
+          ## Etapa 1: Introdução (10-30 minutos)
+
+          Ao completar a Etapa 1, você irá:
+
+          - Rever os detalhes do curso
+          - Praticar o uso do Code.org como plataforma de aprendizagem
+          - Planejar sua participação no curso
+
+          ## Etapa 2: Fundamentos de Ciências da Computação (10-30 minutos)
+
+          Ao completar a Etapa 2, você irá:
+
+          - Definir ciências da computação e rever o vocabulário essencial
+          - Identificar os benefícios de lecionar e aprender ciências da computação
+          - Diferenciar "codificação" de "ciências da computação"
+          - Explicar os benefícios de começar a escrever código usando programação visual
+
+          ## Etapa 3: Olhando Adiante (10 minutos)
+
+          Ao completar a Etapa 3, você irá:
+
+          - Preparar-se para "dominar o básico" de ciências da computação, ao revisar os próximos tópicos do curso
+
+          ## Etapa 4: Dominando o Básico: Sequenciamento (10-30 minutos)
+
+          Ao completar a Etapa 4, você irá:
+
+          - Definir "programa" e "algorítmo"
+          - Usar o mecanismo de programação visual do Code.org para escrever programas simples
+          - Refletir sobre aplicação em sala de aula
+
+          ## Etapa 5: Dominando o Básico: Laços (20-45 minutos)
+
+          Ao completar a Etapa 5, você irá:
+
+          - Definir "laços" e explicar sua importância
+          - Praticar a codificação de laços simples
+          - Refletir sobre aplicação em sala de aula
+
+          ## Etapa 6: Dominando o Básico: Condicionais (20-45 minutos)
+
+          Ao completar a Etapa 6, você irá:
+
+          - Definir "condicionais" e explicar sua importância
+          - Praticar a codificação de condicionais simples
+          - Refletir sobre aplicação em sala de aula
+
+          ## Etapa 7: Dominando o Básico: Funções (20-45 minutos)
+
+          Ao completar a Etapa 7, você irá:
+
+          - Definir "funções" e explicar sua importância
+          - Praticar a codificação de funções simples
+          - Refletir sobre aplicação em sala de aula
+
+          ## Etapa 8: Dominando o Básico: Eventos (30-60 minutos)
+
+          Ao completar a Etapa 8, você irá:
+
+          - Definir "eventos" e explicar sua importância
+          - Praticar a codificação de eventos simples
+          - Refletir sobre aplicação em sala de aula
+
+          ## Etapa 9: Melhores Práticas para o Ensino de Ciências da Computação (30-60 minutos)
+
+          Ao completar a Etapa 9, você irá:
+
+          - Rever as melhores práticas para ensinar ciências da computação
+
+          ## Etapa 10: Planejamento (30-60 minutos)
+
+          Ao completar a Etapa 10, você irá:
+
+          - Explorar os recursos oferecidos pelo Code.org, incluindo o painel do professos
+          - Planejar como você poderia integrar ciências da computação em sua prática
+
+          ## Etapa 11: Próximos Passos (10-30 minutos)
+
+          Ao completar a Etapa 11, você irá:
+
+          - Refletir sobre seu aprendizado
+          - Planejar os próximos passos que você pode tomar para continuar seu aprendizado
+          - Conectar-se com a comunidade global de educadores interessados no ensino de ciências da computação
+          - Compartilhar os benefícios que você obteve e considerações sobre o curso
+
+          > **Nota**: Os tempos sugeridos são providos acima para ajudá-lo a planejar seu tempo. Por favor veja que você poderá querer gastar mais ou menos tempo em determinada etapa, a depender de seu conhecimento prévio, interesse e disponibilidade. Tenha em mente que o andamento deste curso é totalmente definido por você; você sempre poderá deixar o curso para retomá-lo depois, ou revistar qualquer etapa ou nível a qualquer tempo.
+      OPD-K5 Participation:
+        markdown: |
+          # Vamos começar > Planejando sua participação
+
+          Antes de começar, tome um momento para considerar suas necessidades de aprendizagem, objetivos, e a experiência única que é aprender em um ambiente online, ao seu próprio passo - especialmente se este é seu primeiro curso on-line!
+
+          ## Você é Quem Manda
+
+          Este curso é desenhado para que você se sente ao volante, e assuma o controle sobre seu próprio aprendizado, no seu próprio passo. ***Por favor tome seu tempo e percorra este curso no tempo que for mais conveniente para você. Tempos sugeridos são fornecidos para cada etapa.*** Caso você perceba que está gastando mais ou menos tempo em uma determinada etapa, não se preocupe! Nosso principal objetivo é que você se divirta, aprenda o básico, e aplique o que você aprendeu em sala de aula, da forma como for melhor para você.
+
+          ## Conecte-se
+
+          Uma maneira de manter a motivação e o foco durante o aprendizado é se tornar ativo em nosso fórum <a href="http://forum.code.org/c/plc" target="_new">Comunidade de Aprendizagem para Profissionais (PLC)</a>. Comece apresentando-se no <a href="http://forum.code.org/t/welcome-please-introduce-yourself/410" target="_new">fio de "apresentações"</a>. Durante o curso, você irá usar o fórum para compartilhar de forma assíncrona seus pensamentos, benefícios obtidos e dúvidas com outros que estarão também trabalhando com o conteúdo.
+
+          <a href="http://forum.code.org/t/welcome-please-introduce-yourself/410/1" target="blank"><button class="plc">Apresente-se Agora Mesmo >></button></a><br>
+
+          ## Buscando Ajuda Quando Precisar
+
+          Se você ficar travado a qualquer momento durante o curso, vá para [support.code.org](http://support.comde.org) e verifique [nossos fóruns comunitários](http://support.code.org/hc/communities/public/topics). Você provavelmente irá encontrar a resposta para sua dúvida aqui. Caso você não encontre, ou ainda estiver travado, você pode enviar um e-mail para [teacher@code.org](mailto:teacher@code.org) e um membro do staff do Code.org irá entrar em contato com você o mais rápido possível.
+
+          ## Faça Amigos!
+
+          Tenha em mente que nós somos um time pequeno, e devido à escala dos nossos esforços, não conseguimos responder a todas as solicitações de suporte da forma como um instrutor faria em um curso presencial. Por este motivo, nós encorajamos você a ***percorrer o curso com um parceiro ou um grupo de colegas***.
+
+          A Code.org reconhece a força da aprendizagem aos pares e colaboração. Na verdade, "Programação em Pares" é uma excelente prática da indústria que iremos explorar na Etapa 8 como uma melhor prática em sala de aula. Se você considera que irá aprender melhor com um parceiro ou em um grupo, por que não completar o curso com um amigo ou colega? Se você não conhece ninguém na vida real que esteja interessado em compor com você, vá ao [fórum PLC](http://forum.code.org/t/never-swim-alone-the-find-a-buddy-thread/411), [Twitter](https://twitter.com/teachcode), ou [Facebook](https://www.facebook.com/groups/1457214714576953/) e encontre alguém na comunidade Code.org que possa querer colaborar.
+
+          ## Encontre a experiência de aprendizagem que funciona para Você
+
+          Finalmente, a aprendizagem online não é para todos. Este curso não possui instrutor ou algum mecanismo embutido para comunicação em tempo real com seus colegas. Se você perceber que necesita mais atenção um a um ou souber que você aprende melhor em uma sala de aula real em que existe mais oportunidade para colaboração e engajamento, nós recomendamos que você busque uma de nossas alternativas presenciais para desenvolvimento profissional.
+
+          <a href="http://code.org/professional-development-workshops" target="blank"><button>Encontre um workshop presencial perto de você >></button></a>
+
+          * * *
+
+          ## Qual é o seu plano?
+
+          Tome um momento para considerar como e quando você irá completar este curso online para garantir que você obtenha o benefício máximo desta experiência. Quando você tiver um bom plano esboçado, continue a mergulhar mais profundamente na Etapa 1.
       OPD-K5 PreSurvey:
         markdown: |+
           # Vamos começar -> Responda à pesquisa preliminar
@@ -3583,6 +3742,42 @@ pt-BR:
            - **[Curso F](http://studio.code.org/s/coursef)**: aproximadamente 20 horas (Ano 5)
            - **[Fundamentos em Ciências da Computação (CC) Espresso](http://studio.code.org/s/express)**: aproximadamente 20 horas (Idades 8+)
            - **[Fundamentos em Ciências da Computação (CC) Pré-espresso](http://studio.code.org/s/pre-express)**: aproximadamente 20 horas (Idades 4-8)
+
+
+      'Overview: Images':
+        markdown: |+
+          # Imagens
+
+          ## Digite um URL de uma imagem na web
+
+          <img src="https://images.code.org/acf4542eda586e7b73bc27dd8746848c-image-1477675154724.png" style="width: 250px; float: right">
+
+          Existem várias maneiras de obter o URL de uma imagem.
+
+          Uma técnica comum (mostrada à direita) é encontrar uma imagem que você goste em uma página da Web e, em seguida, clique com o botão direito do mouse (ou clique com a tecla Ctrl pressionada) e escolha uma opção que diga algo como "Copiar endereço da imagem" e cole-a no caixa de texto no Laboratório de Aplicativos.
+
+          Se não tiver certeza, também pode escolher uma opção como "Abrir imagem em uma nova guia", que isola a imagem por si só e a URL será exibida na barra de endereço, que você pode copiar / colar no Laboratório de Aplicativos.
+
+          **Erro comum**: usando a URL de um *site de pesquisa de imagens* em vez de uma URL da própria imagem.
+
+          * Verifique o caminho para um arquivo de imagem real - algo que termine com **.jpg**, **.gif**  ou **.png **.
+          * Uma URL que começa assim: `https://www.google.com/search?q=cat&espv=2&biw=1497....' provavelmente está errada.
+
+
+          ## Carregue suas próprias imagens
+
+          Se você salvou imagens no seu computador, pode carregá-las no **gerenciador de ativos** do laboratório de aplicativos. Basta **clicar em Upload de Arquivo ** e seguir as caixas de diálogo na tela.
+
+          Para imagens, o arquivo deve ser do tipo:  **.jpg**, **.png**,ou **.gif **
+
+          Depois de fazer o upload da imagem, você precisa ** Escolher** para definir a imagem para esse arquivo. Se você adicionar várias imagens, todas elas serão listadas toda vez que você enviar um arquivo e poderá optar por usar * qualquer * arquivo que já tenha carregado.
+
+          ![](https://images.code.org/d64d7e3dadc882897e450b00a0fc6cb2-image-1476896824985.gif)
+
+          ### Clique em Continuar para experimentar!
+
+
+           
 
 
       PicturingData-Unplugged:
@@ -3735,7 +3930,7 @@ pt-BR:
 
           Use o conceito do refrão em uma música para aprender sobre definição e chamada de funções.
       'Technique: Frequency Analysis':
-        title: Como desvendar uma cifra de substituição
+        title: Como quebrar uma cifra de substituição
         content1: descrição aqui
         markdown: "# Decifrando o algoritmo de criptografia por substuição\n\nA melhor
           técnica para decifrar a criptografia de substuição aleatória é conhecida
@@ -3769,22 +3964,21 @@ pt-BR:
           tempo leva para você decifrar uma criptografia de substituição aleatória?\n*
           Isso é bom ou não?\n\n\n"
       Terminology Recap:
-        title: Isso foi fácil, o que vem a seguir?
+        title: Essa foi fácil, qual a próxima?
         content1: descrição aqui
-        markdown: "# Pausar e Recapitular\nMensagens criptografadas com o algoritmo
-          de Caesar são muito fáceis de decifrar, principalmente com um programa de
-          computador. Já que você já praticou um pouco decifrando com letras do alfabeto
-          (bem fácil, hein?), vamos tentar algo mais difícil. \n\n**Significado de
-          palavras:**\n**Criptografia** - processo de modifica mensagens a fim de
-          torná-la secreta, para que apenas pessoas autorizadas possam lê-las.\n**Descriptografia**
-          - processo que decifra a mensagem criptografada, convertendo a mensagem
-          secreta em texto de leitura comum.\n**Cifra** - termo genérico para a técnica
-          (ou algoritmo) que executa a criptografia.\n**Cifra de Caesar** - técnica
-          para criptografia que troca letras do alfabeto por outros caracteres\n**Decifrar
-          criptografia por meio de quebra** - ocorre quando você tenta decifrar uma
-          mensagem sem conhecer o algoritmo de criptografia. Quando realizado, você
-          está **quebrando** a criptografia.\n\nClique em Continuar para ver o **Próximo
-          Desafio**...\n"
+        markdown: "# Pausa e Revisão\nMensagens criptografadas com o algoritmo de
+          César são muito fáceis de decifrar, principalmente com um programa de computador.
+          Como você já praticou um pouco decifrando letras do alfabeto (bem fácil,
+          hein?), vamos tentar algo mais avançado. \n\n**Significado de palavras:**\n**Criptografia**
+          - processo de modificar mensagens a fim de torná-las secreta, para que apenas
+          \"pessoas autorizadas\" possam compreendê-las.\n**Descriptografia** - processo
+          que reverte o processo de criptografia, pega a mensagem secreta e gera a
+          mensagem original em texto não cifrado. \n**Cifra** - termo genérico para
+          a técnica (ou algoritmo) que processa a criptografia.\n**Cifra de César**
+          - técnica de criptografia que troca letras do alfabeto por outros caracteres.\n**Quebrando
+          a criptografia** - quando você tenta decifrar uma mensagem sem conhecer
+          os detalhes do processo de criptografia, você está tentando **quebrar**
+          a criptografia.\n\nClique em Continuar para ver o **Próximo Desafio**...\n"
       TheRightAppMarkdownLevel_2019:
         markdown: |
           # O App Certo

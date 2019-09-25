@@ -524,7 +524,7 @@ pt-BR:
           do meio?
         star2_callout: Remova este bloco de fantasia e use o bloco "esta figura" em
           seu lugar.
-        this_sprite_callout: Testando
+        this_sprite_callout: Substitua o item com a fantasia abaixo com isto.
       behaviors 4:
         behaviors_edit: Clique aqui para ver como funciona esse comportamento.
       behaviors 5:

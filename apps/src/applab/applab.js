@@ -814,6 +814,12 @@ function setupReduxSubscribers(store) {
       );
     }
 
+    const lastIsPreview = lastState.data && lastState.data.isPreviewOpen;
+    const isPreview = state.data && state.data.isPreviewOpen;
+    if (isDataMode && isPreview && !lastIsPreview) {
+      onDataPreview(state.data.tableName);
+    }
+
     if (
       !lastState.runState ||
       state.runState.isRunning !== lastState.runState.isRunning
@@ -843,17 +849,32 @@ function setupReduxSubscribers(store) {
   };
 
   if (store.getState().pageConstants.hasDataMode) {
-    if (experiments.isEnabled(experiments.APPLAB_DATASETS)) {
-      subscribeToTable(
-        getSharedDatabase().child('counters/tables'),
-        tableType.SHARED
-      );
-    }
-
     subscribeToTable(
       getProjectDatabase().child('counters/tables'),
       tableType.PROJECT
     );
+
+    if (experiments.isEnabled(experiments.APPLAB_DATASETS)) {
+      // /v3/channels/<channel_id>/current_tables tracks which
+      // current tables the project has imported. Here we initialize the
+      // redux list of current tables and keep it in sync
+      let currentTableRef = getProjectDatabase().child('current_tables');
+      currentTableRef.on('child_added', snapshot => {
+        store.dispatch(
+          addTableName(
+            typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key,
+            tableType.SHARED
+          )
+        );
+      });
+      currentTableRef.on('child_removed', snapshot => {
+        store.dispatch(
+          deleteTableName(
+            typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key
+          )
+        );
+      });
+    }
   }
 }
 
@@ -1287,6 +1308,18 @@ function onInterfaceModeChange(mode) {
     }
   }
   requestAnimationFrame(() => showHideWorkspaceCallouts());
+}
+
+function onDataPreview(tableName) {
+  onColumnNames(getSharedDatabase(), tableName, columnNames => {
+    getStore().dispatch(updateTableColumns(tableName, columnNames));
+  });
+
+  getSharedDatabase()
+    .child(`storage/tables/${tableName}/records`)
+    .once('value', snapshot => {
+      getStore().dispatch(updateTableRecords(tableName, snapshot.val()));
+    });
 }
 
 /**

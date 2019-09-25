@@ -188,7 +188,7 @@ class ScriptLevelsController < ApplicationController
         @section = current_user.sections[0]
         @user = @section&.students&.find_by(id: params[:user_id])
       end
-      @show_stage_extras_warning = !@section.stage_extras
+      @show_stage_extras_warning = !@section&.stage_extras
     end
 
     # Explicitly return 404 here so that we don't get a 5xx in get_from_cache.
@@ -280,7 +280,7 @@ class ScriptLevelsController < ApplicationController
 
   def user_or_session_level
     if current_user
-      current_user.next_unpassed_progression_level(@script).try(:or_next_progression_level)
+      current_user.next_unpassed_visible_progression_level(@script)
     else
       find_next_level_for_session(@script)
     end

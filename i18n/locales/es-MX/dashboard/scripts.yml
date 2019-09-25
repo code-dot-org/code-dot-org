@@ -9837,6 +9837,8 @@ es-MX:
               name: PT de práctica Parte 3
             Unit 4 Assessment:
               name: Evaluación de la Unidad 4
+            'Lesson 15: Unit 4 Assessment':
+              name: 'Lección 15: evaluación de la unidad 4'
           title: 'Unidad 4: Variables, condicionales, funciones'
         csp1-2019:
           title: CSP Unidad 1 - Internet ('19-'20)
@@ -11215,6 +11217,8 @@ es-MX:
               name: Encuesta de la Unidad 3 para ESTUDIANTES
             Unit 3 TEACHER Survey:
               name: Encuesta de la Unidad 3 para DOCENTES
+            'Lesson 11: Unit Assessment':
+              name: 'Lección 11: evaluación de la unidad'
           title: 'Unidad 3: Introducción al diseño de aplicaciones'
         csl-vn:
           stages:

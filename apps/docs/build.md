@@ -197,11 +197,11 @@ work more like production. Here are the steps to do that:
 
 1. Edit `dashboard/config/environments/development.rb` by changing `config.assets.digest` to
    `true` and `config.assets.compile` to `false`. Edit `locals.yml` by setting `pretty_js` to
-   `false` and `pegasus_skip_asset_map` to `false`. This will make the rails app and pegasus look for minified js files that have
-   already been processed by the rails asset pipeline.
+   `false`. This will make the rails app and pegasus look for minified, digested js files 
+   that have already been processed by the rails asset pipeline.
 
 2. Run `npm build:dist` inside the `apps` directory. This will generate all the
-   production assets used by the dashbaord app.
+   production assets used by the dashboard app.
 
 3. Run `rake assets:precompile` inside the `dashboard` directory. This copy all
    the necessary files into `dashboard/public/assets`.
@@ -209,11 +209,12 @@ work more like production. Here are the steps to do that:
 4. Restart the dashboard server `./bin/dashboard-server` from the root folder.
 
 If you make any changes to the build configuration or the javascript files, you
-will need to redo steps 2-4. Relying on watch mode won't work. If you are having
-a hard time wrapping your head around the minified bundles which get used with
-this configuration, you can try changing `pretty_js` back to `true`
-so that the unminified files get served instead.
+will need to redo steps 2-4. Relying on watch mode won't work.
 
 ### Replicating production behavior locally (short way)
 
-If you believe that the production behavior you are observing has only to do with the js being minified and not with the dashboard asset pipeline, you can quickly build minified JS locally by running `npm run build:dist:debug`. **WARNING** this will output minified js with the `.js` suffix, without the `.min` suffix. If you do this, it's on you to remember to do a regular `npm run build` to get back into a normal state.
+If you believe that the production behavior you are observing has only to do with the js
+being minified and not with the dashboard asset pipeline, you can quickly build minified JS
+locally by running `npm run build:dist:debug`. **WARNING** this will output minified js
+with the `.js` suffix, without the `.min` suffix. If you do this, it's on you to remember
+to do a regular `npm run build` to get back into a normal state.

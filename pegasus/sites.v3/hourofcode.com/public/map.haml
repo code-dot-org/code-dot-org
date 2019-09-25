@@ -8,9 +8,5 @@ layout: wide_index
 
   = view :header
 %h2.center-text= view :hoc_events_counter
-- use_mapbox = DCDO.get("use_mapbox", true) || params[:use_mapbox]
-- if use_mapbox
-  = view :hoc_events_map_replacement
-- else
-  = view :hoc_events_map, max_height_percentage: 1
+= view :hoc_events_map
 .footnote=hoc_s(:map_warning).gsub(/%{events_url}/, resolve_url('/events'))

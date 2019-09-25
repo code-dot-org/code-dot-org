@@ -66,8 +66,6 @@ bs:
   auth:
     sign_in_with: 'Prijavi se sa %{provider}'
     signed_in: 'Prijavljen/a!'
-    signed_out: 'Odjavili ste se iz<a href="%{url}">Code.org</a>.'
-    sign_out_of: 'Koristili ste %{provider} da biste se prijavili. <a href="%{url}">Kliknite ovdje</a> da biste se odjavili %{provider}.'
     already_signedup: 'Jeste li već prijavljeni?'
     notyet_signedup: "Još se nisi pridružio/la?"
     google_oauth2: 'Google Račun'
@@ -134,7 +132,6 @@ bs:
     picture: 'Sada nađite svoju tajnu sliku'
     words: 'Sada unesite vaše tajne riječi'
     login: 'Prijava'
-    student_privacy: "Nauči više o tome zašto ne vidiš svoje puno ime<a href='%{student_privacy_blog}' target='_blank'>ovdje</a>."
   password:
     reset_form:
       title: 'Zaboravio/la si šifru?'
@@ -288,9 +285,6 @@ bs:
     tried: 'Pokušano'
   home:
     title: "Code Studio"
-    description: 'Code Studio je početna stranica online kurseva napravljenih u Code.org'
-    lines_of_code: "%{lines_count} LINIJA KODA KOJE SU NAPISALI UČENICI"
-    lines_of_code_linebreak: "%{lines_count} LINIJA KODA <br/> NAPISANIH OD STRANE %{students_count} MILIONA UČENIKA"
     all_courses: "Pregled kurseva 1, 2 i 3"
     lesson_plans: "Nastavni planovi"
     signin_message: "Jeste li već registrirani? %{link}"
@@ -320,10 +314,6 @@ bs:
     test_videos_help: 'Isprobajte naš novi video player u školi'
     try_beta_courses: 'Novo! Isprobaj naše beta tečajeve za učenike razredne nastave'
     use_as_teacher: 'Koristite ovo sjedište kao učitelj'
-    heading_hoc2014: "<h2>Sat Kodiranja za</h2><h1>sve uzraste</h1>"
-    heading_elementary: "<h2>20-satni tečajevi za</h2><h1>početnike (svih uzrasta)</h1>"
-    heading_apps: "<h2>Zabava za</h2><h1>sve</h1>"
-    heading_legacy: "<h2>Naš opšti kurs za</h2><h1>sve uzraste</h1>"
     your_gallery: Galerija
     no_primary_course: "Probajte Code Studio kurs"
     choose_next_course: "Probajte Code Studio kurs odabirom sljedećih opcija dole"
@@ -462,8 +452,6 @@ bs:
     header_artist: "Umjetnik"
     report_abuse: "Prijava zloupotrebe"
   landing:
-    prerelease: "Ovaj kurs je u <span class='betatext'> beta fazi</span>. To znači da ovo nije konačna verzija kursa, te da podliježe izmjenama u skladu s primljenim povratnim informacijama i napravljenim poboljšanjima."
-    prerelease_hoc2014: "Ovaj tutorial je u <span class='betatext'> beta fazi</span>.  Podliježe izmjenama u skladu s primljenim povratnim informacijama i napravljenim poboljšanjima."
     report_bug: "Prijavi Grešku"
     support: "Potraži Pomoći"
     support_url: "//support.code.org"
@@ -520,8 +508,6 @@ bs:
   age_interstitial:
     age: Tvoja dob
     header: Ažuriranje informacija o računu
-    message: "Mi smo u procesu nadogradnje da bismo vam pružili još jaču zaštitu privatnosti. Da bismo to učinili, tražimo da postojeći korisnici unesu svoju dob. <br/>Kao i uvijek, code.org neće nikada iznajmiti, prodati ili podijeliti te informacije s drugim stranama."
-    sign_out: 'Ako ne želite unijeti svoju dob možete se<a href="%{url}">odjaviti</a>.'
   terms_interstitial:
     tos: "Uvjeti"
     privacy: "Pravila Privatnosti"

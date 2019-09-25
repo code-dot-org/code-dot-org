@@ -89,9 +89,6 @@ id:
     continue_with: Lanjutkan dengan %{provider}
     sign_in_with: Masuk pakai akun %{provider}
     signed_in: Masuk!
-    signed_out: Anda telah sign out dari <a href="%{url}">Code.org</a>.
-    sign_out_of: Anda menggunakan %{provider} untuk sign in. <a href="%{url}">Klik
-      disini</a> untuk sign out dari %{provider}.
     already_signedup: Sudah mendaftar?
     notyet_signedup: Belum bergabung?
     google_oauth2: Akun Google
@@ -154,8 +151,6 @@ id:
     valid_password: Kata sandi valid!
     invalid_password: Kata sandi harus minimal 6 karakter
     mismatch_password: kedua password yang anda masukkan tidak sama
-    agree_tos_privacy: Saya setuju untuk <a href='http://code.org/tos'>Ketentuan Layanan</a>
-      dan <a href='http://code.org/privacy'>kebijakan privasi</a>.
     under_13_consent: Jika saya di bawah usia 13 tahun, saya mengkonfirmasi bahwa
       saya telah saya orang tua atau wali hukum izin untuk menggunakan layanan Code.org.
     student_consent: Saya mengkonfirmasi bahwa saya telah saya orang tua atau wali
@@ -164,17 +159,6 @@ id:
       di Amerika Serikat.
     my_data_to_us: Data dari penggunaan situs ini saya dapat dikirimkan ke dan disimpan
       atau diproses di Amerika Serikat.
-    student_terms: Saya setuju untuk terikat oleh Code.org <a href='http://code.org/tos'>
-      persyaratan layanan </a>. apabila saya berusia di bawah 13 tahun, saya mengonfirmasi
-      dengan mengirimkan formulir ini bahwa saya memiliki izin orang tua atau wali
-      sah untuk menggunakan layanan Code.org. <br/> <br/> Alamat email tidak disimpan
-      dalam formulir yang memungkinkan kami untuk menghubungi siswa. Siswa tidak akan
-      pernah menerima email dari Code.org kecuali untuk pemulihan kata sandi. Lihat
-      <a href='http://code.org/privacy'> kebijakan privasi </a> kami untuk informasi
-      lebih lanjut.
-    teacher_terms: Saya setuju untuk terikat dengan persyaratan layanan Code.org.
-      Untuk informasi yang lebih lanjut tentang privasi, lihat <a href='http://code.org/privacy'>
-      kebijakan privasi </a> kami.
     additional_information: Kami membutuhkan informasi tambahan untuk melanjutkan
       pendaftaran anda
     user_type_button: Perbarui tipe akun
@@ -230,8 +214,6 @@ id:
     login: Masuk
     invalid_login: Login tidak valid, silahkan coba lagi
     pair_programming: Saya mempunyai rekan di komputer saya
-    student_privacy: Pelajari lebih lanjut kenapa anda tidak melihat nama lengkap
-      anda <a href='%{student_privacy_blog}' target='_blank'>disini</a>.
   password:
     reset_form:
       title: Lupa kata sandi?
@@ -506,10 +488,6 @@ id:
     tried: Telah mencoba
   home:
     title: Kode Studio
-    description: Kode Studio adalah rumah untuk kursus online yang dibuat oleh Code.org
-    lines_of_code: "%{lines_count} GARIS KODE DITULIS OLEH PELAJAR"
-    lines_of_code_linebreak: "%{lines_count} baris kode <br/> DITULIS oleh %{students_count}
-      jutaan siswa"
     all_courses: Tinjauan Kursus 1, 2, dan 3
     lesson_plans: Rencana pelajaran
     signin_message: Sudah terdaftar? %{link}
@@ -550,12 +528,6 @@ id:
     test_videos_help: Coba pemutar video baru kami di sekolah anda
     try_beta_courses: Baru! Cobalah kelas percobaan kami untuk siswa K-5
     use_as_teacher: Gunakan situs ini sebagai seorang guru
-    heading_hoc2014: "<h2>The Hour of Code untuk</h2><h1>Segala Usia</h1>"
-    heading_elementary: "<h2>20 jam kursus untuk</h2><h1>Pemula (segala usia)</h1>"
-    heading_apps: "<h2>Menyenagkan bagi</h2><h1>Semua orang</h1>"
-    heading_tools: "<h2>Siap dengan langkah berikutnya?</h2><h1>JavaScript Tools untuk
-      SMA</h1>"
-    heading_legacy: "<h2>Kursus umum kami untuk</h2><h1>Semua Umur</h1>"
     your_gallery: Galeri
     no_primary_course: Coba kursus di Code Studio
     choose_next_course: Coba kursus Code Studio dengan memilih salah satu di bawah
@@ -817,11 +789,6 @@ id:
     header_artist: Artis
     report_abuse: Laporkan penyalahgunaan
   landing:
-    prerelease: Kursus ini dalam <span class='betatext'>beta</span>.  Ini bukan berarti
-      sebuah kursus final dan ditujukan untuk revisi saat usulan diterima dan pengembangan
-      dibuat.
-    prerelease_hoc2014: Pedoman ini adalah dalam <span class='betatext'>versi beta</span>.
-      Pedoman ini dapat direvisi seiring diterimanya masukan dan dibuatnya perbaikan.
     report_bug: Laporkan kesalahan
     support: Dapatkan bantuan
     support_url: "//support.code.org"
@@ -900,12 +867,6 @@ id:
   age_interstitial:
     age: Umur kamu
     header: Update informasi akun
-    message: 'Kami dalam proses updating pengalaman kami untuk memberikan anda proteksi
-      privasi yang lebih aman. Untuk melakukan ini, kami membutuhkan pengguna yang
-      ada untuk memasukkan umur mereka di sini.<br/>Seperti biasanya, code.org tidak
-      pernah menyewa, menjual dan membagi informasi ini terhadap pihak lain. '
-    sign_out: Jika Anda tidak ingin memasukkan umur kamu bisa<a href="%{url}">sign
-      out</a>.
   terms_interstitial:
     title: Ketentuan Layanan dan Kebijakan Privasi yang Diperbarui
     intro_desc: 'Kami memperbarui Syarat dan Ketentuan dan Kebijakan Pribadi kami,
@@ -1044,11 +1005,8 @@ id:
   peer_review:
     accepted:
       name: Diterima
-      description: "<strong>Ya</strong>, pengajuan ini <strong>memenuhi</strong> persyaratan"
     rejected:
       name: Ditolak
-      description: "<strong>Tidak</strong>, pengajuan ini <strong>tidak memenuhi</strong>
-        persyaratan"
     escalated:
       name: Meningkat
       description: Saya ingin seorang instruktur untuk meninjau kiriman ini
@@ -1195,10 +1153,6 @@ id:
     download_in_Vietnamese: 'Unduh dalam bahasa Vietnam:'
     windows: Windows (64-bit)
     mac: Mac OS X
-  stage_extras_teacher_message: Anda memiliki pelajaran tambahan dimatikan untuk beberapa
-    bagian Anda. Siswa Anda tidak akan melihat Halaman ini kecuali Anda hidupkan keduanya.
-    Anda dapat mengaktifkan pelajaran tambahan dengan mengunjungi Anda <a href='http://code.org/teacher-dashboard'>Dashboard
-    guru</a>.
   locked_stage: Isi dari tahap ini tidak terlihat karena tahap ini saat ini terkunci.
     Guru anda dapat membuka tahap ini saat ketika tiba waktu mengerjakannya atau meninjau
     kembali jawaban anda.

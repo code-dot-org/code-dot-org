@@ -690,6 +690,7 @@
   "leaveSection": "Убрать секцию",
   "less": "Меньше",
   "lesson": "Урок",
+  "lessonExtrasButton": "Перейти к панели управления учителя",
   "lessonName": "Название урока",
   "lessonNumbered": "Урок {lessonNumber}: {lessonName}",
   "lessonPlans": "Планы уроков",
