@@ -136,16 +136,22 @@ class ExpiredDeletedAccountPurger
   end
 
   def report_results
-    review_queue_depth = manual_review_queue_depth
-
+    review_queue_depth = QueuedAccountPurge.count
     metrics = build_metrics review_queue_depth
     log_metrics metrics
 
-    summary = build_summary review_queue_depth
+    manual_reviews_needed = QueuedAccountPurge.needing_manual_review.count
+    summary = build_summary manual_reviews_needed
     @log.puts summary
 
     log_link = upload_activity_log
-    say "#{summary} #{log_link}" if rack_env? :production
+    if rack_env? :production
+      if manual_reviews_needed > 0
+        notify "#{summary} #{log_link}"
+      else
+        say "#{summary} #{log_link}"
+      end
+    end
 
     upload_metrics metrics unless @dry_run
   end
@@ -160,7 +166,7 @@ class ExpiredDeletedAccountPurger
       AccountsPurged: @num_accounts_purged,
       # Number of accounts queued for manual review during this run
       AccountsQueued: @num_accounts_queued,
-      # Depth of manual review queue after this run
+      # Depth of review queue after this run (may include auto-retryable entries)
       ManualReviewQueueDepth: review_queue_depth,
     }
   end
@@ -188,12 +194,12 @@ class ExpiredDeletedAccountPurger
     Cdo::Metrics.push('DeletedAccountPurger', aws_metrics)
   end
 
-  def build_summary(review_queue_depth)
+  def build_summary(manual_reviews_needed)
     formatted_duration = Time.at(Time.now.to_i - @start_time.to_i).utc.strftime("%H:%M:%S")
 
     summary = purged_accounts_summary
     summary += "\n" + queued_accounts_summary if @num_accounts_queued > 0
-    summary += "\n#{review_queue_depth} account(s) require review." if review_queue_depth > 0
+    summary += "\n#{manual_reviews_needed} account(s) require review." if manual_reviews_needed > 0
     summary + "\n🕐 #{formatted_duration}"
   end
 
@@ -204,7 +210,7 @@ class ExpiredDeletedAccountPurger
 
   def queued_accounts_summary
     intro = @dry_run ? 'Would have queued' : 'Queued'
-    "#{intro} #{@num_accounts_queued} account(s) for manual review."
+    "#{intro} #{@num_accounts_queued} account(s) for retry or review."
   end
 
   # @return [String] HTML link to view uploaded log
