@@ -7,7 +7,7 @@
 - location = Geocoder.search(request.ip).try(:first)
 -# geocoder sometimes shows localhost's country as RD/Reserved
 - us_ip = location.nil? || ['US', 'RD'].include?(location.country_code.to_s.upcase)
-- current_user_user_school_info = Queries::UserSchoolInfo.by_user(current_user).last_complete
+- current_user_user_school_info = Queries::UserSchoolInfo.last_complete(current_user)
 - current_user_school_info = current_user_user_school_info.school_info
 
 - script_data = {}

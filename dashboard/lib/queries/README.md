@@ -9,9 +9,30 @@ Query Objects declared in this directory should all be declared under the
 `Queries` namespace and should contain non-Rails-specific business logic that
 can be used by our Rails app.
 
-Every Query object should define a constructor which accepts an
-ActiveRecord::Relation scope object as the first argument, and which provides a
-reasonable default. For example:
+
+## Example
+
+Query Objects can define basic class methods which capture complex query logic.
+For example:
+
+```ruby
+class Queries::UserSchoolInfo
+  def self.last_complete(user)
+    user.
+      user_school_infos.
+      includes(:school_info).
+      select {|usi| usi.school_info.complete?}.
+      sort_by(&:created_at).
+      last
+  end
+end
+```
+
+## Advanced Example: Scoping
+
+A more advanced use of Query Objects could define a constructor which accepts
+an ActiveRecord::Relation scope object as the first argument, and which
+provides a reasonable default. For example:
 
 ```ruby
 class Queries::User

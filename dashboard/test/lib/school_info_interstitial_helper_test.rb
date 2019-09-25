@@ -51,7 +51,7 @@ class SchoolInfoInterstitialHelperTest < ActiveSupport::TestCase
     )
 
     refute user.school_info.complete?
-    assert_nil Queries::UserSchoolInfo.by_user(user).last_complete
+    assert_nil Queries::UserSchoolInfo.last_complete(user)
 
     refute SchoolInfoInterstitialHelper.show_confirmation_dialog? user
     assert SchoolInfoInterstitialHelper.show? user
@@ -67,7 +67,7 @@ class SchoolInfoInterstitialHelperTest < ActiveSupport::TestCase
     )
     user.reload
 
-    refute Queries::UserSchoolInfo.by_user(user).last_complete.school_info.usa?
+    refute Queries::SchoolInfo.last_complete(user).usa?
 
     refute SchoolInfoInterstitialHelper.show_confirmation_dialog? user
     refute SchoolInfoInterstitialHelper.show? user
@@ -153,7 +153,7 @@ class SchoolInfoInterstitialHelperTest < ActiveSupport::TestCase
     user.reload
 
     assert_equal 1, user.user_school_infos.count
-    assert_equal user.school_info, Queries::UserSchoolInfo.by_user(user).last_complete.school_info
+    assert_equal user.school_info, Queries::SchoolInfo.last_complete(user)
 
     refute SchoolInfoInterstitialHelper.show_confirmation_dialog? user
     refute SchoolInfoInterstitialHelper.show? user
@@ -166,7 +166,7 @@ class SchoolInfoInterstitialHelperTest < ActiveSupport::TestCase
     user.reload
 
     assert_equal 2, user.user_school_infos.count
-    assert_equal user.school_info, Queries::UserSchoolInfo.by_user(user).last_complete.school_info
+    assert_equal user.school_info, Queries::SchoolInfo.last_complete(user)
 
     refute SchoolInfoInterstitialHelper.show_confirmation_dialog? user
     refute SchoolInfoInterstitialHelper.show? user
