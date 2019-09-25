@@ -2,6 +2,7 @@ import React from "react";
 import SimpleTrainer from "../../utils/SimpleTrainer";
 import Draggable from "./Draggable";
 import Droppable from "./Droppable";
+import MultiUpload from "./MultiUpload";
 import Row from "react-bootstrap/lib/Row";
 import Col from "react-bootstrap/lib/Col";
 import Button from 'react-bootstrap/lib/Button';
@@ -29,12 +30,13 @@ const defaultState = {
 };
 
 const activityImages = [
-  {guid: "a", url: "images/dog1.png"},
-  {guid: "b", url: "images/dog2.png"},
-  {guid: "c", url: "images/dog3.png"},
-  {guid: "d", url: "images/cat1.jpg"},
-  {guid: "e", url: "images/cat2.jpg"},
-  {guid: "f", url: "images/cat3.jpg"},
+  {guid: "a", url: "images/happyvirus1.jpg"},
+  {guid: "b", url: "images/happyvirus2.png"},
+  {guid: "c", url: "images/happyvirus3.png"},
+  {guid: "d", url: "images/meanvirus1.jpg"},
+  {guid: "e", url: "images/meanvirus2.png"},
+  {guid: "f", url: "images/meanvirus3.png"},
+  {guid: "f", url: "images/neutralvirus1.jpg"},
 ];
 
 const IMAGE_SIZE = 227;
@@ -74,6 +76,23 @@ module.exports = class ImageRecognition extends React.Component {
       {
         this.state.activityState === ActivityState.Training &&
         <div>
+          <Row>
+            <Col xs={12}> 
+            {
+              this.state.classes.map((classData, i) => {
+                return (<MultiUpload 
+                    key={i}
+                    className={classData.name}
+                    addTrainingExample={(image) => {
+                          this.simpleTrainer.addExample(image, i);
+                          this.updateExampleCounts(i);
+                      }}
+
+                    /> )
+              })
+            }
+            </Col>
+          </Row>
           <Row>
             <Col style={{width: "100%", textAlign: 'center'}} xs={12}>
               <h2>Drag images to train your machine learning algorithm</h2>
