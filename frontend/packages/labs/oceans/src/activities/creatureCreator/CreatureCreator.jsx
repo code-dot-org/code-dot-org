@@ -4,7 +4,6 @@ import Button from "react-bootstrap/lib/Button";
 const P5 = require("./loadP5");
 
 const CANVAS_ID = "p5-canvas";
-const p5 = new P5(sketch, CANVAS_ID);
 
 const CreatureType = Object.freeze({
   None: 0,
@@ -13,13 +12,17 @@ const CreatureType = Object.freeze({
 });
 
 export default class CreatureCreator extends React.Component {
+  componentDidMount() {
+    this.p5 = new P5(sketch, CANVAS_ID);
+  }
+
   generateCreature = type => {
     switch (type) {
       case CreatureType.Good:
-        p5.setGoodCreature();
+        this.p5.setGoodCreature();
         break;
       case CreatureType.Bad:
-        p5.setBadCreature();
+        this.p5.setBadCreature();
         break;
       default:
         console.error("Unknown CreatureType!");
