@@ -5,22 +5,27 @@ import ChoiceResponses from '../../components/survey_results/choice_responses';
 import FacilitatorAveragesTable from '../../components/survey_results/facilitator_averages_table';
 import TextResponses from '../../components/survey_results/text_responses';
 import _ from 'lodash';
+import experiments from '@cdo/apps/util/experiments';
 
 export default class Results extends React.Component {
   static propTypes = {
     questions: PropTypes.object.isRequired,
     thisWorkshop: PropTypes.object.isRequired,
     sessions: PropTypes.arrayOf(PropTypes.string).isRequired,
+    courseName: PropTypes.string.isRequired,
     facilitators: PropTypes.object,
     facilitatorAverages: PropTypes.object,
     facilitatorResponseCounts: PropTypes.object,
-    courseName: PropTypes.string.isRequired
+    workshopRollups: PropTypes.object,
+    facilitatorRollups: PropTypes.object
   };
 
   static defaultProps = {
     facilitators: {},
     facilitatorAverages: {},
-    facilitatorResponseCounts: {}
+    facilitatorResponseCounts: {},
+    workshopRollups: {},
+    facilitatorRollups: {}
   };
 
   state = {
@@ -139,11 +144,28 @@ export default class Results extends React.Component {
     ));
   }
 
+  renderSurveyRollups() {
+    return [
+      <Tab
+        eventKey={this.props.sessions.length + 1}
+        key={1}
+        title="Workshop Rollups"
+      />,
+      <Tab
+        eventKey={this.props.sessions.length + 2}
+        key={2}
+        title="Facilitator Rollups"
+      />
+    ];
+  }
+
   render() {
     return (
       <Tabs id="SurveyTab">
         {this.renderAllSessionsResults()}
-        {this.renderFacilitatorAverages()}
+        {experiments.isEnabled(experiments.ROLLUP_SURVEY_REPORT)
+          ? this.renderSurveyRollups()
+          : this.renderFacilitatorAverages()}
       </Tabs>
     );
   }

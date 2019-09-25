@@ -966,6 +966,91 @@ FactoryGirl.define do
   end
 
   # default to csp
+  factory :pd_teacher2021_application_hash, parent: :pd_teacher2021_application_hash_common do
+    csp
+  end
+
+  factory :pd_teacher2021_application_hash_common, class: 'Hash' do
+    country 'United States'
+    first_name 'Severus'
+    last_name 'Snape'
+    alternate_email 'ilovepotions@gmail.com'
+    phone '5558675309'
+    gender_identity 'Male'
+    race ['Other']
+    add_attribute :zip_code, '98101'
+    association :school
+    principal_first_name 'Albus'
+    principal_last_name 'Dumbledore'
+    principal_title 'Dr.'
+    principal_email 'socks@hogwarts.edu'
+    principal_confirm_email 'socks@hogwarts.edu'
+    principal_phone_number '5555882300'
+    current_role 'Teacher'
+    previous_yearlong_cdo_pd ['CS in Science']
+    committed 'Yes'
+    willing_to_travel 'Up to 50 miles'
+    agree 'Yes'
+    completing_on_behalf_of_someone_else 'No'
+    cs_how_many_minutes 45
+    cs_how_many_days_per_week 5
+    cs_how_many_weeks_per_year 20
+    cs_total_course_hours 75
+    replace_existing 'No, this course will be added to the schedule in addition to an existing computer science course'
+    pay_fee 'Yes, my school will be able to pay the full program fee.'
+    plan_to_teach 'Yes, I plan to teach this course this year (2020-21)'
+    interested_in_online_program 'Yes'
+
+    initialize_with do
+      attributes.dup.tap do |hash|
+        # School in the form data is meant to be an id, but in the factory it can be provided as a School object
+        # In that case, replace it with the id from the associated model
+        hash[:school] = hash[:school].id if hash[:school].is_a? School
+      end.transform_keys(&ruby_to_js_style_keys)
+    end
+
+    trait :csp do
+      program Pd::Application::TeacherApplicationBase::PROGRAMS[:csp]
+      csp_which_grades ['11', '12']
+      csp_which_units ['Unit 1: Digital Information', 'Unit 2: Internet']
+      csp_how_offer 'As an AP course'
+    end
+
+    trait :csd do
+      program Pd::Application::TeacherApplicationBase::PROGRAMS[:csd]
+      csd_which_grades ['6', '7']
+      csd_which_units ['Unit 0: Problem Solving', 'Unit 1: Web Development']
+    end
+
+    trait :with_custom_school do
+      school(-1)
+      school_name 'Code.org'
+      school_address '1501 4th Ave'
+      school_city 'Seattle'
+      school_state 'Washington'
+      school_zip_code '98101'
+      school_type 'Public school'
+    end
+
+    trait :with_multiple_workshops do
+      able_to_attend_multiple ['December 11-15, 2017 in Indiana, USA']
+
+      after(:build) do |hash|
+        hash.delete 'ableToAttendSingle'
+      end
+    end
+  end
+
+  factory :pd_teacher2021_application, class: 'Pd::Application::Teacher2021Application' do
+    association :user, factory: [:teacher, :with_school_info], strategy: :create
+    course 'csp'
+    transient do
+      form_data_hash {build :pd_teacher2021_application_hash_common, course.to_sym}
+    end
+    form_data {form_data_hash.to_json}
+  end
+
+  # default to csp
   factory :pd_teacher1920_application_hash, parent: :pd_teacher1920_application_hash_common do
     csp
   end
