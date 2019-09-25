@@ -884,6 +884,8 @@ describe('entry tests', () => {
         new StatsWriterPlugin({
           fields: ['assetsByChunkName', 'assets']
         }),
+        // The [contenthash] placeholder generates a 32-character hash when
+        // used within the copy plugin.
         new CopyPlugin([
           {
             from: 'build/locales',
