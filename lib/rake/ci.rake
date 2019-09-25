@@ -32,11 +32,11 @@ namespace :ci do
           end
           RakeUtils.bundle_exec 'berks', 'upload', (rack_env?(:production) ? '' : '--no-freeze')
           RakeUtils.bundle_exec 'berks', 'apply', rack_env
+
+          ChatClient.log 'Applying <b>chef</b> profile...'
+          RakeUtils.sudo '/opt/chef/bin/chef-client'
         end
       end
-
-      ChatClient.log 'Applying <b>chef</b> profile...'
-      RakeUtils.sudo '/opt/chef/bin/chef-client'
     end
   end
 
