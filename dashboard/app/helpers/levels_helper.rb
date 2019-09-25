@@ -631,7 +631,7 @@ module LevelsHelper
       @blockly_loaded = true
       blocks = blocks + content_tag(:div, '', {id: 'codeWorkspace', style: 'display: none'}) +
       content_tag(:style, '.blocklySvg { background: none; }') +
-      content_tag(:script, '', src: minifiable_asset_path('js/blockly.js')) +
+      content_tag(:script, '', src: asset_path('js/blockly.js')) +
       content_tag(:script, '', src: asset_path("js/#{js_locale}/blockly_locale.js")) +
       content_tag(:script, '', src: minifiable_asset_path('js/common.js')) +
       content_tag(:script, '', src: asset_path("js/#{js_locale}/#{app}_locale.js")) +
