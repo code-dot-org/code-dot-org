@@ -921,7 +921,6 @@ module Api::V1::Pd
     end
 
     test 'cohort csv download returns expected columns for teachers' do
-      skip 'Implement Principal Approval 2021'
       application = create TEACHER_APPLICATION_FACTORY, course: 'csp'
       create :pd_principal_approval1920_application, teacher_application: application
       application.update(status: 'accepted_not_notified')
