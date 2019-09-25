@@ -27,7 +27,7 @@
   - checked_class = 'fa-dot-circle-o'
   - cross_class = 'fa-times'
 
-- if contained_mode && (data['answers'].present? || data['teacher_markdown'].present?)
+- if contained_mode && (data['answers'].present? || data['teacher_markdown'].present?) && current_user.try(:should_see_inline_answer?, @script_level)
   %div{id: "containedLevelAnswer0"}
     .multi.contained{id: "level_#{level.id}", class: layout_class}
       = render partial: 'levels/multi_answer', locals: {data: level.properties, height: height, unchecked_class: unchecked_class, checked_class: checked_class, cross_class: cross_class, level: level, standalone: standalone, contained_mode: contained_mode}

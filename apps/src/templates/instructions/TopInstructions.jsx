@@ -679,13 +679,13 @@ class TopInstructions extends Component {
                     ref="instructions"
                     hidden={this.state.tabSelected !== TabType.INSTRUCTIONS}
                   />
-                  {!isCSF && (
+                  {!isCSF && this.props.viewAs === ViewType.Teacher && (
                     <div>
                       <ContainedLevelAnswer
                         ref="teacherOnlyTab"
                         hidden={this.state.tabSelected !== TabType.INSTRUCTIONS}
                       />
-                      <TeacherOnlyMarkdown />
+                      {this.props.teacherMarkdown && <TeacherOnlyMarkdown />}
                     </div>
                   )}
                 </div>
@@ -713,7 +713,6 @@ class TopInstructions extends Component {
                       onResize={this.adjustMaxNeededHeight}
                       inTopPane
                     />
-                    <TeacherOnlyMarkdown />
                   </div>
                 )}
             </div>
