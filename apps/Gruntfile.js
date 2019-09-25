@@ -887,7 +887,7 @@ describe('entry tests', () => {
         new CopyPlugin([
           {
             from: 'build/locales',
-            to: minify ? '[path]/[name].[hash].[ext]' : '[path]/[name].[ext]',
+            to: minify ? '[path]/[name]wp[hash].[ext]' : '[path]/[name].[ext]',
             toType: 'template'
           },
           // Libraries in this directory are assumed to have .js and .min.js
@@ -903,10 +903,10 @@ describe('entry tests', () => {
           {
             context: 'build/minifiable-lib/',
             from: minify ? `**/*.min.js` : '**/*.js',
-            to: minify ? '[path]/[name].[hash].[ext]' : '[path]/[name].[ext]',
+            to: minify ? '[path]/[name]wp[hash].[ext]' : '[path]/[name].[ext]',
             toType: 'template',
             ignore: minify ? [] : ['*.min.js'],
-            transformPath: targetPath => targetPath.replace(/\.min\./, '.')
+            transformPath: targetPath => targetPath.replace(/\.min/, '')
           }
         ]),
         // Unit tests require certain unminified files to have been built.
@@ -915,13 +915,12 @@ describe('entry tests', () => {
         }),
         new ManifestPlugin({
           basePath: 'js/',
-          publicPath: '/blockly/js/',
           map: file => {
             if (minify) {
               // Remove contenthash in manifest key from files generated via
               // copy-webpack-plugin. See:
               // https://github.com/webpack-contrib/copy-webpack-plugin/issues/104#issuecomment-370174211
-              file.name = file.name.replace(/\.[a-f0-9]{32}\./, '.');
+              file.name = file.name.replace(/wp[a-f0-9]{32}\./, '.');
             }
             return file;
           }

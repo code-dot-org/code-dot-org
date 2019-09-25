@@ -118,6 +118,7 @@ module Dashboard
     config.assets.paths << Rails.root.join('../shared/js')
 
     config.assets.precompile += %w(
+      js/*
       css/*.css
       levels/*.css
       jquery.handsontable.full.css
