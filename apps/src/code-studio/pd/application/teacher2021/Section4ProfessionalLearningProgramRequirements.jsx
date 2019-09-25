@@ -159,10 +159,10 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
         workshop => `${workshop.dates} in ${workshop.location}`
       );
       options.push(TextFields.notSureExplain);
-      options.push(TextFields.unableToAttend1920);
+      options.push(TextFields.unableToAttend2021);
       const textFieldMap = {
         [TextFields.notSureExplain]: 'notSureExplain',
-        [TextFields.unableToAttend1920]: 'unableToAttend'
+        [TextFields.unableToAttend2021]: 'unableToAttend'
       };
 
       return (
@@ -173,7 +173,7 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
             textFieldMap
           )}
           {_.intersection(
-            [TextFields.notSureExplain, TextFields.unableToAttend1920],
+            [TextFields.notSureExplain, TextFields.unableToAttend2021],
             this.props.data.ableToAttendMultiple
           ).length > 0 && (
             <div>
@@ -313,6 +313,7 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
                 . Let us know if your school would be able to pay the fee or if
                 you need to be considered for a scholarship.
               </label>
+              {this.singleCheckboxFor('understandFee')}
               {this.radioButtonsFor('payFee')}
               {showPayFeeNote && (
                 <p style={{color: 'red'}}>
@@ -328,7 +329,7 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
                   " on page 3 and submitting your application.
                 </p>
               )}
-              {this.props.data.payFee === TextFields.noPayFee1920 &&
+              {this.props.data.payFee === TextFields.noPayFee2021 &&
                 this.largeInputFor('scholarshipReasons')}
             </div>
           )}
@@ -369,16 +370,16 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
     }
 
     if (data.regionalPartnerId) {
-      requiredFields.push('payFee');
+      requiredFields.push('payFee', 'understandFee');
     }
 
-    if (data.payFee === TextFields.noPayFee1920) {
+    if (data.payFee === TextFields.noPayFee2021) {
       requiredFields.push('scholarshipReasons');
     }
 
     if (
       _.intersection(
-        [TextFields.notSureExplain, TextFields.unableToAttend1920],
+        [TextFields.notSureExplain, TextFields.unableToAttend2021],
         data.ableToAttendMultiple
       ).length > 0
     ) {
@@ -394,13 +395,13 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
   static processPageData(data) {
     const changes = {};
 
-    if (data.payFee !== TextFields.noPayFee1920) {
+    if (data.payFee !== TextFields.noPayFee2021) {
       changes.scholarshipReasons = undefined;
     }
 
     if (
       _.intersection(
-        [TextFields.notSureExplain, TextFields.unableToAttend1920],
+        [TextFields.notSureExplain, TextFields.unableToAttend2021],
         data.ableToAttendMultiple
       ).length === 0
     ) {

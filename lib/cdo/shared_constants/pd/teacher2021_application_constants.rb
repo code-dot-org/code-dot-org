@@ -97,6 +97,7 @@ module Pd
           willing_to_travel: BASE_PAGE_LABELS[:section_4_summer_workshop][:willing_to_travel],
           interested_in_online_program: 'Do you want to be considered for the virtual academic year workshop track?',
           pay_fee: BASE_PAGE_LABELS[:section_4_summer_workshop][:pay_fee],
+          understand_fee: "By checking this box, you indicate that you understand there may be a fee for the professional learning program you attend.",
           scholarship_reasons: "Please provide any additional information you'd like to share about why your application should be considered for a scholarship."
         },
       section_5_additional_demographic_information:
