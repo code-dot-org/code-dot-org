@@ -3,7 +3,7 @@ module Pd
     module ActiveApplicationModels
       include ApplicationConstants
 
-      APPLICATION_CURRENT_YEAR = YEAR_19_20
+      APPLICATION_CURRENT_YEAR = YEAR_20_21
 
       # Active (this year's) application classes and factories
       TEACHER_APPLICATION_CLASS = Teacher2021Application
