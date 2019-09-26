@@ -2,11 +2,9 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import React from 'react';
 import FontAwesome from '../../templates/FontAwesome';
-import FirebaseStorage from '../firebaseStorage';
 import msg from '@cdo/locale';
 import color from '../../util/color';
 import {showPreview} from '../redux/data';
-import PreviewModal from './PreviewModal';
 import {getDatasetInfo} from './dataUtils';
 
 const styles = {
@@ -56,6 +54,7 @@ const styles = {
 class LibraryTable extends React.Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
+    importTable: PropTypes.func.isRequired,
 
     // from redux dispatch
     onShowPreview: PropTypes.func.isRequired
@@ -71,22 +70,6 @@ class LibraryTable extends React.Component {
     this.setState({
       collapsed: !this.state.collapsed
     });
-
-  importTable = datasetInfo => {
-    if (datasetInfo.current) {
-      FirebaseStorage.addCurrentTableToProject(
-        datasetInfo.name,
-        () => console.log('success'),
-        err => console.log(err)
-      );
-    } else {
-      FirebaseStorage.copyStaticTable(
-        datasetInfo.name,
-        () => console.log('success'),
-        err => console.log(err)
-      );
-    }
-  };
 
   render() {
     const icon = this.state.collapsed ? 'caret-right' : 'caret-down';
@@ -112,17 +95,13 @@ class LibraryTable extends React.Component {
               <button
                 style={styles.import}
                 type="button"
-                onClick={() => this.importTable(this.datasetInfo)}
+                onClick={() => this.props.importTable(this.datasetInfo)}
               >
                 {msg.import()}
               </button>
             </div>
           </div>
         )}
-        <PreviewModal
-          tableName={this.props.name}
-          importTable={this.importTable}
-        />
       </div>
     );
   }
