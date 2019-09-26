@@ -1,12 +1,11 @@
 import React from "react";
 import sketch from "./sketches";
-import { generateGoodCreature, generateBadCreature } from "./utils";
 import Button from "react-bootstrap/lib/Button";
 const P5 = require("./loadP5");
 
 const CANVAS_ID = "p5-canvas";
 
-const CreatureType = Object.freeze({
+export const CreatureType = Object.freeze({
   None: 0,
   Good: 1,
   Bad: 2
@@ -18,17 +17,12 @@ export default class CreatureCreator extends React.Component {
   }
 
   setCreature = type => {
-    let creature;
-    if (type === CreatureType.Good) {
-      creature = generateGoodCreature();
-    } else if (type === CreatureType.Bad) {
-      creature = generateBadCreature();
-    } else {
+    if (!Object.values(CreatureType).includes(type)) {
       console.error("Unknown CreatureType!");
       return;
     }
 
-    this.p5.setCreature(creature);
+    this.p5.setCreature(type);
   };
 
   render() {
