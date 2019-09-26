@@ -6,7 +6,7 @@ Feature: Teacher Application
 Scenario: Basic teacher application submission
   Given I create a teacher named "Severus"
     And I am on "http://studio.code.org/pd/application/teacher"
-    And I wait until element "h1" contains text "2019-20 Professional Learning Program Teacher Application"
+    And I wait until element "h1" contains text "2020-21 Professional Learning Program Teacher Application"
     And I open my eyes to test "Teacher Application"
 
   # Section 1
@@ -23,9 +23,6 @@ Scenario: Basic teacher application submission
 
   # Section 2
   Then I wait until element "h3" contains text "Section 2: Teaching Background"
-  And I press "input[name='subjectsTeaching']:first" using jQuery
-  And I press the first "input[name='taughtInPast']" element
-  And I press the first "input[name='previousYearlongCdoPd']" element
 
   And I press keys "nonexistent" for element "#school input"
 
@@ -46,6 +43,7 @@ Scenario: Basic teacher application submission
   And I press keys "socks@hogwarts.edu" for element "input#principalConfirmEmail"
   And I press keys "5555882300" for element "input#principalPhoneNumber"
   And I press the first "input[name='currentRole']" element
+  And I press the first "input[name='previousYearlongCdoPd']" element
 
   Then I see no difference for "Section 2: Teaching Background"
   And I press the first "button#next" element
@@ -58,11 +56,11 @@ Scenario: Basic teacher application submission
   And I press keys "50" for element "input#csHowManyMinutes"
   And I press keys "5" for element "input#csHowManyDaysPerWeek"
   And I press keys "40" for element "input#csHowManyWeeksPerYear"
-  And I press the first "input[name='csTerms']" element
+  And I press the first "input[name='csdWhichUnits']" element
   And I press the first "input[name='planToTeach']" element
   And I press the first "input[name='replaceExisting']" element
-  Then I wait until element "textarea#replaceWhichCourse" is visible
-    And I press keys "Replacing existing CS Course" for element "textarea#replaceWhichCourse"
+  Then I wait until element "input[name='replaceWhichCourse']" is visible
+    And I press the first "input[name='replaceWhichCourse']" element
 
   Then I see no difference for "Section 3: Choose Your Program"
   And I press the first "button#next" element
