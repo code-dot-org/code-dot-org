@@ -331,8 +331,11 @@ module Pd::Application
       ]
     end
 
-    # @override
     def year
+      year
+    end
+
+    def self.year
       YEAR_20_21
     end
 
