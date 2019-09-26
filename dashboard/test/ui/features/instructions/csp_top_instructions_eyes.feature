@@ -37,6 +37,7 @@ Scenario: Resizing CSD and CSP Top Instructions
   Then I save the section id from row 0 of the section table
 
   And I am on "http://studio.code.org/s/csd3-2019/stage/6/puzzle/16"
+  And I wait for the page to fully load
   And I wait until element "#teacher-panel-container" is visible
   And I wait until element ".uitest-sectionselect:contains(Untitled Section)" is visible
   And I wait until element ".student-table" is visible
@@ -45,9 +46,11 @@ Scenario: Resizing CSD and CSP Top Instructions
 
   Then I see no difference for "teacher in feedback tab"
   Then I click selector ".uitest-instructionsTab"
+  And I wait until element ".editor_column" contains text "Create Your Scene - Drawing"
   And I drag element "#ui-test-resizer" 0 horizontally and 100 vertically
   Then I see no difference for "teacher drag instructions tab"
   Then I click selector ".uitest-feedback"
+  And I wait until element ".editor_column" contains text "Teacher Feedback"
   Then I see no difference for "teacher back in feedback tab"
 
   And I close my eyes
