@@ -49,6 +49,7 @@ export const commands = {
   },
 
   makeSprite(opts) {
+    opts = opts || {};
     let name = opts.name;
     let location = opts.location;
     let animation = opts.animation;

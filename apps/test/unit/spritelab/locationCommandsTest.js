@@ -1,13 +1,13 @@
 import {expect} from '../../util/reconfiguredChai';
 import {commands} from '@cdo/apps/p5lab/spritelab/commands/locationCommands';
-import * as coreLibrary from '@cdo/apps/p5lab/spritelab/coreLibrary';
+import {commands as spriteCommands} from '@cdo/apps/p5lab/spritelab/commands/spriteCommands';
 import createP5Wrapper from '../../util/gamelab/TestableP5Wrapper';
 
 describe('Location Commands', () => {
-  let p5Wrapper, createSprite;
+  let p5Wrapper, makeSprite;
   beforeEach(function() {
     p5Wrapper = createP5Wrapper();
-    createSprite = p5Wrapper.p5.createSprite.bind(p5Wrapper.p5);
+    makeSprite = spriteCommands.makeSprite.bind(p5Wrapper.p5);
   });
   it('locationAt', () => {
     expect(commands.locationAt(200, 200)).to.deep.equal({x: 200, y: 200});
@@ -27,12 +27,12 @@ describe('Location Commands', () => {
   });
 
   it('locationOf', () => {
-    let sprite = createSprite();
-    sprite.position.x = 123;
-    sprite.position.y = 321;
-    let id = coreLibrary.addSprite(sprite);
+    makeSprite({name: 'sprite1', location: {x: 123, y: 321}});
 
-    expect(commands.locationOf(id)).to.deep.equal({x: 123, y: 321});
+    expect(commands.locationOf({name: 'sprite1'})).to.deep.equal({
+      x: 123,
+      y: 321
+    });
   });
 
   it('randomLocation', () => {
