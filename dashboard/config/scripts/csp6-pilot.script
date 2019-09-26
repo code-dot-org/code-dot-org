@@ -11,3 +11,11 @@ stage 'Algorithm Efficiency'
 level 'CSP U6L2 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP U6L2 Ticket Generator', progression: 'Widget: Ticket Generator'
 level 'U6L2 CFU Binary Search Steps', progression: 'Check For Understanding', assessment: true
+
+stage 'Unreasonable Time'
+level 'CSP U6L3 SFLP 20-21', progression: 'Lesson Overview'
+
+stage 'Traveling Salesman'
+level 'CSP U6L4 SFLP 20-21', progression: 'Lesson Overview'
+level 'CSP U6L4 Traveling Salesman', progression: 'Widget: Traveling Salesman'
+level 'CSP U6L4 Random Traveling Salesman', progression: 'Widget: Traveling Salesman - Random Nodes'
