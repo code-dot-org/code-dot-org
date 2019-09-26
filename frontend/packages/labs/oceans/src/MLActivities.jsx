@@ -24,7 +24,7 @@ module.exports = class MLActivities extends React.Component {
     return (
       <Grid fluid>
         <Row className="show-grid">
-          <Col xs={2}></Col>
+          <Col xs={2}/>
           <Col xs={8}>
             <h1>ML Activities Playground</h1>
             {this.state.currentActivity !== Activity.None && (
@@ -82,7 +82,7 @@ module.exports = class MLActivities extends React.Component {
               </Panel>
             )}
           </Col>
-          <Col xs={2}></Col>
+          <Col xs={2}/>
         </Row>
       </Grid>
     );

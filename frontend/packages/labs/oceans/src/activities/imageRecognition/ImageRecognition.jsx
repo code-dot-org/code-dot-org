@@ -105,7 +105,7 @@ module.exports = class ImageRecognition extends React.Component {
                     width: '100%',
                     textAlign: 'center'
                   }}
-                ></input>
+                />
               </Col>
             </Row>
             <Row>
