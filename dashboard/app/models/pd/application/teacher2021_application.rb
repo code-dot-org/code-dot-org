@@ -332,7 +332,7 @@ module Pd::Application
     end
 
     def year
-      year
+      self.class.year
     end
 
     def self.year
