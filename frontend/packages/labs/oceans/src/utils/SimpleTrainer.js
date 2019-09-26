@@ -5,8 +5,7 @@ import * as knnClassifier from '@tensorflow-models/knn-classifier';
 const TOPK = 10;
 
 module.exports = class SimpleTrainer {
-  constructor() {
-  }
+  constructor() {}
 
   async initializeClassifiers() {
     this.knn = knnClassifier.create();

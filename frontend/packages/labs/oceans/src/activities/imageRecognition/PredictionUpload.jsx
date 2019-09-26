@@ -1,4 +1,4 @@
-import React, {PropTypes} from "react";
+import React, {PropTypes} from 'react';
 
 module.exports = class SingleUpload extends React.Component {
   static propTypes = {
@@ -6,7 +6,7 @@ module.exports = class SingleUpload extends React.Component {
   };
 
   onUpload() {
-    var file = document.getElementById("predictfile").files[0];
+    var file = document.getElementById('predictfile').files[0];
     if (!file) {
       return;
     }
@@ -14,7 +14,7 @@ module.exports = class SingleUpload extends React.Component {
       img = new Image(); // create a temp. image object
 
     var _this = this;
-    img.onload = function () {
+    img.onload = function() {
       _this.props.predictClass(img);
     };
 

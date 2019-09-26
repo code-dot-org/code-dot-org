@@ -1,4 +1,4 @@
-import React, {PropTypes} from "react";
+import React, {PropTypes} from 'react';
 
 module.exports = class MultiUpload extends React.Component {
   static propTypes = {
@@ -7,7 +7,7 @@ module.exports = class MultiUpload extends React.Component {
   };
 
   onUpload() {
-    var files = document.getElementById(this.props.className + "file").files;
+    var files = document.getElementById(this.props.className + 'file').files;
     for (var i = 0; i < files.length; ++i) {
       var file = files[i];
       if (!file) {
@@ -16,7 +16,7 @@ module.exports = class MultiUpload extends React.Component {
       var url = URL.createObjectURL(file), // create an Object URL
         img = new Image(); // create a temp. image object
       var _this = this;
-      img.onload = function () {
+      img.onload = function() {
         // The height and width doesn't always load so set them if they're 0
         if (!img.width) {
           img.width = 500;
@@ -35,10 +35,10 @@ module.exports = class MultiUpload extends React.Component {
   render() {
     return (
       <div>
-        {"Upload your own " + this.props.className + ":"}
+        {'Upload your own ' + this.props.className + ':'}
         <input
           type="file"
-          id={this.props.className + "file"}
+          id={this.props.className + 'file'}
           onChange={e => this.onUpload()}
           multiple
         />
