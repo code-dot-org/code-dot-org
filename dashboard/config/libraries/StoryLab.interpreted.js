@@ -46,6 +46,6 @@ function draw() {
   	runSetup();
   }
   getCurrentScene().code();
-  getCurrentScene().code = function(){};
+  //getCurrentScene().code = function(){};
   executeDrawLoopAndCallbacks();
 }
