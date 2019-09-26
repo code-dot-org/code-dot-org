@@ -6,9 +6,8 @@
       1,
       0.74
     ],
-    "func": "scene",
-    "blockText": "scene {SCENE}",
-    "eventBlock": true,
+    "func": "goToScene",
+    "blockText": "go to scene {SCENE}",
     "args": [
       {
         "type": "field_dropdown",
