@@ -2,6 +2,8 @@ import React from "react";
 import SimpleTrainer from "../../utils/SimpleTrainer";
 import Draggable from "./Draggable";
 import Droppable from "./Droppable";
+import TrainingImageUpload from "./TrainingImageUpload";
+import PredictionUpload from "./PredictionUpload";
 import Row from "react-bootstrap/lib/Row";
 import Col from "react-bootstrap/lib/Col";
 import Button from 'react-bootstrap/lib/Button';
@@ -74,6 +76,22 @@ module.exports = class ImageRecognition extends React.Component {
       {
         this.state.activityState === ActivityState.Training &&
         <div>
+          <Row>
+            <Col xs={12}>
+              {
+                this.state.classes.map((classData, i) => {
+                  return (<TrainingImageUpload
+                    key={i}
+                    className={classData.name}
+                    addTrainingExample={(image) => {
+                      this.simpleTrainer.addExample(image, i);
+                      this.updateExampleCounts(i);
+                    }}
+                  />);
+                })
+              }
+            </Col>
+          </Row>
           <Row>
             <Col style={{width: "100%", textAlign: 'center'}} xs={12}>
               <h2>Drag images to train your machine learning algorithm</h2>
@@ -190,37 +208,48 @@ module.exports = class ImageRecognition extends React.Component {
       }
       {
         this.state.activityState === ActivityState.Playing &&
-        <Row>
-          <Col style={{textAlign: 'center'}} xs={12}>
-            <h3>Tap an image to classify it</h3>
-            {
-              activityImages.map((image, i) => {
-                return (
-                  <img
-                    key={i}
-                    src={image.url}
-                    className="thumbnail"
-                    style={{
-                      cursor: 'pointer',
-                      display: 'inline-block'
-                    }}
-                    onClick={() => {
-                      loadImage(image.url, IMAGE_SIZE).then((img) => {
-                        this.simpleTrainer.predict(img).then((result) => {
-                          this.setState({
-                            trainingResult: result
+        <div>
+          <Row>
+            <Col style={{textAlign: 'center'}} xs={12}>
+              <PredictionUpload predictClass={(img) => {
+                this.simpleTrainer.predict(img).then((trainingResult) => {
+                  this.setState({trainingResult});
+                });
+              }}/>
+            </Col>
+          </Row>
+          <Row>
+            <Col style={{textAlign: 'center'}} xs={12}>
+              <h3>Tap an image to classify it</h3>
+              {
+                activityImages.map((image, i) => {
+                  return (
+                    <img
+                      key={i}
+                      src={image.url}
+                      className="thumbnail"
+                      style={{
+                        cursor: 'pointer',
+                        display: 'inline-block'
+                      }}
+                      onClick={() => {
+                        loadImage(image.url, IMAGE_SIZE).then((img) => {
+                          this.simpleTrainer.predict(img).then((result) => {
+                            this.setState({
+                              trainingResult: result
+                            });
                           });
                         });
-                      });
-                    }}
-                    width={100}
-                    height={100}
-                  />
-                );
-              })
-            }
-          </Col>
-        </Row>
+                      }}
+                      width={100}
+                      height={100}
+                    />
+                  );
+                })
+              }
+            </Col>
+          </Row>
+        </div>
       }
       {
         this.state.activityState === ActivityState.Playing &&
