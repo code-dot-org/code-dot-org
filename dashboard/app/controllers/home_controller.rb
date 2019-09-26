@@ -129,7 +129,7 @@ class HomeController < ApplicationController
 
     script = current_user.primary_script
     if script
-      script_level = current_user.next_unpassed_progression_level(script)
+      script_level = current_user.next_unpassed_visible_progression_level(script)
     end
     @homepage_data[:topCourse] = nil
     if script && script_level
