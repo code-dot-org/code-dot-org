@@ -51,8 +51,8 @@ const REPLACE_COURSE_FIELDS = [
   'replaceWhichCourseCsp',
   'replaceWhichCourseCsd'
 ];
-const IMPLEMENTATION_FIELDS = ['csdImplementation', 'cspImplementation'];
 const YEAR = '2020-21';
+const YES = 'Yes';
 
 export default class PrincipalApproval2021Component extends LabeledFormComponent {
   static labels = PageLabels;
@@ -60,7 +60,6 @@ export default class PrincipalApproval2021Component extends LabeledFormComponent
   static associatedFields = [
     ...Object.keys(PageLabels),
     ...REPLACE_COURSE_FIELDS,
-    ...IMPLEMENTATION_FIELDS,
     'doYouApprove',
     'committedToMasterSchedule',
     'committedToDiversity',
@@ -177,10 +176,8 @@ export default class PrincipalApproval2021Component extends LabeledFormComponent
         {this.radioButtonsWithAdditionalTextFieldsFor('replaceCourse', {
           [TextFields.dontKnowExplain]: 'other'
         })}
-        {this.props.data.replaceCourse ===
-          TextFields.yesReplaceExistingCourse &&
+        {this.props.data.replaceCourse === YES &&
           this.renderCourseReplacementSection()}
-        {this.renderImplementationSection()}
         {this.radioButtonsWithAdditionalTextFieldsFor(
           'committedToDiversity',
           {
@@ -283,48 +280,6 @@ export default class PrincipalApproval2021Component extends LabeledFormComponent
     }
   }
 
-  renderImplementationSection() {
-    const questionLabel = (
-      <span>
-        To participate in Code.org’s {this.props.teacherApplication.course}{' '}
-        Professional Learning Program, we require that this course be offered in
-        one of the following ways. Please select which option will be
-        implemented at your school. Be sure to{' '}
-        <a
-          href="https://docs.google.com/document/d/1nFp033SuO_BMR-Bkinrlp0Ti_s-XYQDsOc-UjqNdrGw/edit#heading=h.6s62vrpws18"
-          target="_blank"
-        >
-          review the guidance on required number of hours here
-        </a>{' '}
-        prior to answering.
-      </span>
-    );
-    const otherLabel =
-      'We will use a different implementation schedule. (Please Explain):';
-
-    if (
-      this.props.teacherApplication.course === 'Computer Science Discoveries'
-    ) {
-      return this.radioButtonsWithAdditionalTextFieldsFor(
-        'csdImplementation',
-        {
-          [otherLabel]: 'other'
-        },
-        {label: questionLabel}
-      );
-    } else if (
-      this.props.teacherApplication.course === 'Computer Science Principles'
-    ) {
-      return this.radioButtonsWithAdditionalTextFieldsFor(
-        'cspImplementation',
-        {
-          [otherLabel]: 'other'
-        },
-        {label: questionLabel}
-      );
-    }
-  }
-
   render() {
     const courseSuffix =
       this.props.teacherApplication.course === 'Computer Science Discoveries'
@@ -418,15 +373,9 @@ export default class PrincipalApproval2021Component extends LabeledFormComponent
 
     if (data.doYouApprove !== 'No') {
       requiredFields.push(...REQUIRED_SCHOOL_INFO_FIELDS);
-
-      if (data.course === 'Computer Science Discoveries') {
-        requiredFields.push('csdImplementation');
-      } else if (data.course === 'Computer Science Principles') {
-        requiredFields.push('cspImplementation');
-      }
     }
 
-    if (data.replaceCourse === TextFields.yesReplaceExistingCourse) {
+    if (data.replaceCourse === YES) {
       if (data.course === 'Computer Science Discoveries') {
         requiredFields.push('replaceWhichCourseCsd');
       } else if (data.course === 'Computer Science Principles') {
@@ -467,8 +416,7 @@ export default class PrincipalApproval2021Component extends LabeledFormComponent
     if (data.doYouApprove === 'No') {
       fieldsToClear.add([
         ...REQUIRED_SCHOOL_INFO_FIELDS,
-        REPLACE_COURSE_FIELDS,
-        IMPLEMENTATION_FIELDS
+        REPLACE_COURSE_FIELDS
       ]);
     }
 
@@ -478,7 +426,7 @@ export default class PrincipalApproval2021Component extends LabeledFormComponent
     }
 
     // Clear out replaced course if we are not replacing a course
-    if (data.replaceCourse !== TextFields.yesReplaceExistingCourse) {
+    if (data.replaceCourse !== YES) {
       fieldsToClear.add(REPLACE_COURSE_FIELDS);
     }
 

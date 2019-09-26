@@ -73,18 +73,6 @@ module Pd::Application
         school_state: COMMON_OPTIONS[:state],
         school_type: COMMON_OPTIONS[:school_type],
         do_you_approve: [YES, NO, TEXT_FIELDS[:other_with_text]],
-        csd_implementation: [
-          '50+ instructional hours per section of students for a semester-long course (Units 1 - 3)',
-          '100+ instructional hours for a year-long course (Units 1 - 6)',
-          'I don’t know yet which implementation schedule we will use.',
-          'We will use a different implementation schedule. (Please Explain):'
-        ],
-        csp_implementation: [
-          '100+ instructional hours for a year-long course',
-          '100+ instructional hours for a one semester (block schedule) course',
-          'I don’t know yet which implementation schedule we will use.',
-          'We will use a different implementation schedule. (Please Explain):'
-        ],
         committed_to_master_schedule: [
           "Yes, I plan to include this course in the #{year} master schedule",
           "Yes, I plan to include this course in the #{year} master schedule, but not taught by this teacher",
@@ -94,7 +82,7 @@ module Pd::Application
           TEXT_FIELDS[:other_with_text]
         ],
         replace_course: [
-          TEXT_FIELDS[:yes_replace_existing_course],
+          'Yes',
           'No, this course will be added to the schedule in addition to an existing computer science course',
           'No, computer science is new to my school',
           TEXT_FIELDS[:dont_know_explain]
@@ -167,12 +155,6 @@ module Pd::Application
               :pay_fee
             ]
 
-            if teacher_application&.course == 'csd'
-              required << :csd_implementation
-            elsif teacher_application&.course == 'csp'
-              required << :csp_implementation
-            end
-
             if hash[:replace_course] == TEXT_FIELDS[:yes_replace_existing_course]
               if teacher_application&.course == 'csd'
                 required << :replace_which_course_csd
@@ -192,8 +174,6 @@ module Pd::Application
     def additional_text_fields
       [
         [:committed_to_master_schedule],
-        [:csd_implementation],
-        [:csp_implementation],
         [:replace_course, TEXT_FIELDS[:dont_know_explain], :replace_course_other],
         [:committed_to_diversity, TEXT_FIELDS[:other_please_explain], :committed_to_diversity_other],
         [:replace_which_course_csd, TEXT_FIELDS[:other_please_explain], :replace_which_course_csd_other],
