@@ -92,10 +92,24 @@ export function addSprite(sprite, name) {
   nativeSpriteMap[spriteId] = sprite;
   sprite.id = spriteId;
   if (name) {
+    enforceUniqueSpriteName(name);
     sprite.name = name;
   }
   spriteId++;
   return sprite.id;
+}
+
+/**
+ * Enforces that two sprites cannot have the same name. This is enforced by clearing
+ * the name from any existing sprites when a new sprite is created with that name.
+ * @param {String} name
+ */
+function enforceUniqueSpriteName(name) {
+  Object.values(nativeSpriteMap).forEach(sprite => {
+    if (sprite.name === name) {
+      sprite.name = undefined;
+    }
+  });
 }
 
 /**
