@@ -21,6 +21,7 @@ class LevelsHelperTest < ActionView::TestCase
 
     stubs(:current_user).returns nil
     stubs(:storage_decrypt_channel_id).returns([123, 456])
+    CDO.stubs(:pretty_js).returns(true)
   end
 
   test "blockly_options refuses to generate options for non-blockly levels" do
