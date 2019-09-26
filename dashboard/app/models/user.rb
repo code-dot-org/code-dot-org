@@ -1684,7 +1684,8 @@ class User < ActiveRecord::Base
   end
 
   def primary_script
-    working_on_scripts.first.try(:cached)
+    return most_recently_assigned_script if can_access_most_recently_assigned_script?
+    script_with_most_recent_progress
   end
 
   # Returns integer days since account creation, rounded down
