@@ -49,7 +49,9 @@ const styles = {
   },
   tutorialName: {
     fontFamily: '"Gotham 5r", sans-serif',
-    fontSize: 18
+    fontSize: 22,
+    lineHeight: '26px',
+    paddingBottom: 5
   },
   tutorialSub: {
     fontFamily: '"Gotham 3r", sans-serif',
