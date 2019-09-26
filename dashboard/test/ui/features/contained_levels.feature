@@ -78,7 +78,7 @@ Scenario: Authorized Teacher on App Lab with free response contained level
   And I rotate to landscape
   And I wait for the page to fully load
   Then I see no difference for "initial load"
-  And I press keys "Here is my response!" for element "#level_18333"
+  And I press keys "Here is my response!" for element "#level_4653"
   And I see no difference for "answer entered"
 # Check that answer shows in instructions tab
   And element ".uitest-teacherOnlyTab" is not visible
