@@ -35,7 +35,8 @@ const styles = {
     backgroundColor: color.lightest_red,
     height: 20,
     padding: 5,
-    opacity: 0.9
+    opacity: 0.9,
+    position: 'relative'
   }
 };
 
