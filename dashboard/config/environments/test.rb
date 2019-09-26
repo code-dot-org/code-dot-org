@@ -28,7 +28,7 @@ Dashboard::Application.configure do
   # unless it's being used for unit tests.
   ci_test = !!(ENV['UNIT_TEST'] || ENV['CI'])
 
-  unless ci_test
+  # unless ci_test
     # Compress JavaScripts and CSS.
     # webpack handles js compression for us
     # config.assets.js_compressor = :uglifier
@@ -42,7 +42,7 @@ Dashboard::Application.configure do
 
     # Version of your assets, change this if you want to expire all your assets.
     config.assets.version = '1.0'
-  end
+  # end
 
   config.assets.quiet = true
 
