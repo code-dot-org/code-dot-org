@@ -886,35 +886,44 @@ describe('entry tests', () => {
         }),
         // The [contenthash] placeholder generates a 32-character hash when
         // used within the copy plugin.
-        new CopyPlugin([
-          {
-            from: 'build/locales',
-            to: minify
-              ? '[path]/[name]wp[contenthash].[ext]'
-              : '[path]/[name].[ext]',
-            toType: 'template'
-          },
-          // Libraries in this directory are assumed to have .js and .min.js
-          // copies of each source file. In development mode, copy only foo.js.
-          // In production mode, copy only foo.min.js and rename it to foo.js.
-          // This allows the manifest to contain a single mapping from foo.js
-          // to a target file with the correct contents given the mode.
-          //
-          // Ideally, the target file would have the .min.js suffix in
-          // production mode. This could be accomplished by nesting these files
-          // within a minifiable-lib directory in the output package so that the
-          // manifest plugin could do special processing on these files.
-          {
-            context: 'build/minifiable-lib/',
-            from: minify ? `**/*.min.js` : '**/*.js',
-            to: minify
-              ? '[path]/[name]wp[contenthash].[ext]'
-              : '[path]/[name].[ext]',
-            toType: 'template',
-            ignore: minify ? [] : ['*.min.js'],
-            transformPath: targetPath => targetPath.replace(/\.min/, '')
-          }
-        ]),
+        new CopyPlugin(
+          [
+            // Always include unhashed locale files in the package, since unit
+            // tests rely on these in both minified and unminified environments.
+            // The order of these rules is important to ensure that the hashed
+            // locale files appear in the manifest when minifying.
+            {
+              from: 'build/locales',
+              to: '[path]/[name].[ext]',
+              toType: 'template'
+            },
+            minify && {
+              from: 'build/locales',
+              to: '[path]/[name]wp[contenthash].[ext]',
+              toType: 'template'
+            },
+            // Libraries in this directory are assumed to have .js and .min.js
+            // copies of each source file. In development mode, copy only foo.js.
+            // In production mode, copy only foo.min.js and rename it to foo.js.
+            // This allows the manifest to contain a single mapping from foo.js
+            // to a target file with the correct contents given the mode.
+            //
+            // Ideally, the target file would have the .min.js suffix in
+            // production mode. This could be accomplished by nesting these files
+            // within a minifiable-lib directory in the output package so that the
+            // manifest plugin could do special processing on these files.
+            {
+              context: 'build/minifiable-lib/',
+              from: minify ? `**/*.min.js` : '**/*.js',
+              to: minify
+                ? '[path]/[name]wp[contenthash].[ext]'
+                : '[path]/[name].[ext]',
+              toType: 'template',
+              ignore: minify ? [] : ['*.min.js'],
+              transformPath: targetPath => targetPath.replace(/\.min/, '')
+            }
+          ].filter(entry => !!entry)
+        ),
         // Unit tests require certain unminified files to have been built.
         new UnminifiedWebpackPlugin({
           include: [/^webpack-runtime/, /^applab-api/, /^gamelab-api/]
