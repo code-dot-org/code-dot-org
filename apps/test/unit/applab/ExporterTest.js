@@ -686,29 +686,26 @@ describe('Applab Exporter,', function() {
 
           new Function(getAppOptionsFile())();
           setAppOptions(Object.assign(window.APP_OPTIONS, {isExported: true}));
+
+          // load unminified webpack-runtime and applab-api from the webpack
+          // output directory, allowing for any hash that may have been added to
+          // the filename and making sure not to match any minified files.
+
           // webpack-runtime must appear exactly once on any page containing webpack entries.
-          let context = require.context(
-            '../../../build/package/js/',
-            false,
-            /webpack-runtime(wp[a-f0-9]{20})?.js/
+          testUtils.loadContext(
+            require.context(
+              '../../../build/package/js/',
+              false,
+              /webpack-runtime(wp[a-f0-9]{20})?.js/
+            )
           );
-          assert.equal(
-            1,
-            context.keys().length,
-            'could not find webpack-runtime in build/package/js'
+          testUtils.loadContext(
+            require.context(
+              '../../../build/package/js/',
+              false,
+              /applab-api(wp[a-f0-9]{20})?.js/
+            )
           );
-          context.keys().forEach(context);
-          context = require.context(
-            '../../../build/package/js/',
-            false,
-            /applab-api(wp[a-f0-9]{20})?.js/
-          );
-          assert.equal(
-            1,
-            context.keys().length,
-            'could not find applab-api in build/package/js'
-          );
-          context.keys().forEach(context);
 
           new Function(zipFiles['my-app/code.js'])();
           if (globalPromiseName) {
