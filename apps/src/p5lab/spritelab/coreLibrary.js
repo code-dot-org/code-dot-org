@@ -17,23 +17,23 @@ export function reset() {
 }
 
 /**
- * Returns a list of sprites, specified either by id or animation name.
- * @param {(string|number)} spriteOrGroup - Either the id or the animation name
+ * Returns a list of sprites, specified either by id, name, or animation name.
+ * @param {Object} spriteArg - Specifies a sprite or group of sprites by id, name, or animation name.
  * @return {[Sprite]} List of sprites that match the parameter. Either a list containing the one sprite
- * the specified id, or a list containing all sprites with the specified animation.
+ * the specified id/name, or a list containing all sprites with the specified animation.
  */
-export function getSpriteArray(spriteId) {
-  if (spriteId.hasOwnProperty('id')) {
-    return [nativeSpriteMap[spriteId.id]];
+export function getSpriteArray(spriteArg) {
+  if (spriteArg.hasOwnProperty('id')) {
+    return [nativeSpriteMap[spriteArg.id]];
   }
-  if (spriteId.name) {
+  if (spriteArg.name) {
     return Object.values(nativeSpriteMap).filter(
-      sprite => sprite.name === spriteId.name
+      sprite => sprite.name === spriteArg.name
     );
   }
-  if (spriteId.costume) {
+  if (spriteArg.costume) {
     return Object.values(nativeSpriteMap).filter(
-      sprite => sprite.getAnimationLabel() === spriteId.costume
+      sprite => sprite.getAnimationLabel() === spriteArg.costume
     );
   }
   return [];
@@ -41,9 +41,10 @@ export function getSpriteArray(spriteId) {
 
 export function getAnimationsInUse() {
   let animations = new Set();
-  Object.keys(nativeSpriteMap).forEach(spriteId => {
-    animations.add(nativeSpriteMap[spriteId].getAnimationLabel());
-  });
+  Object.values(nativeSpriteMap).filter(sprite =>
+    animations.add(sprite.getAnimationLabel())
+  );
+
   return Array.from(animations);
 }
 
