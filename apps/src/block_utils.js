@@ -1073,14 +1073,14 @@ exports.createJsWrapperBlockCreator = function(
       }
 
       if (expression) {
-        expression = expression.replace('VALUE', values[0]);
+        let newExpression = expression.replace('VALUE', values[0]);
         if (returnType !== undefined) {
           return [
-            `${prefix}${expression}`,
+            `${prefix}${newExpression}`,
             orderPrecedence === undefined ? ORDER_NONE : orderPrecedence
           ];
         } else {
-          return `${prefix}${expression}`;
+          return `${prefix}${newExpression}`;
         }
       }
 
