@@ -156,9 +156,9 @@ different configurations get run. Here is the approximate flow of commands/files
    that is shared between multiple entry point bundles.
 
    All of these files are written to the `apps/build/package/js/` directory. You
-   will fine three files for each bundle: 1) an unminified bundle (like
-   `applab.js`), 2) a minified version of the same bundle (like `applab.min.js`)
-   and 3) a sourcemap for the minified bundle (like `applab.min.js.map`).
+   will fine one file for each bundle: either (1) an unminified bundle (like
+   `applab.js`), or (2) a minified, hashed version of the same bundle (like 
+   `applabwp0123456789abcdef0123.min.js`).
 
    The exact configuration used by webpack is defined in `apps/Gruntfile.js` and
    `apps/webpack.js`.
