@@ -60,7 +60,7 @@ Scenario: Authorized Teacher on Maze with free response contained level
   And I rotate to landscape
   And I wait for the page to fully load
   Then I see no difference for "initial load"
-  And I press keys "Here is my response!" for element "#level_18333"
+  And I press keys "Here is my response!" for element ".response"
   And I see no difference for "answer entered"
   # Check that answer shows in teacher only tab
   Then I press the first ".uitest-teacherOnlyTab" element
@@ -78,9 +78,9 @@ Scenario: Authorized Teacher on App Lab with free response contained level
   And I rotate to landscape
   And I wait for the page to fully load
   Then I see no difference for "initial load"
-  And I press keys "Here is my response!" for element "#level_4653"
+  And I press keys "Here is my response!" for element ".response"
   And I see no difference for "answer entered"
-# Check that answer shows in instructions tab
+  # Check that answer shows in instructions tab
   And element ".uitest-teacherOnlyTab" is not visible
   And element ".editor-column" contains text "For Teachers Only"
   And I see no difference for "free response answer for teacher"
@@ -88,7 +88,7 @@ Scenario: Authorized Teacher on App Lab with free response contained level
   And I see no difference for "level run"
   Then I close my eyes
 
-Scenario: UnAuthorized Teacher on Maze with multiple choice contained level
+Scenario: Unauthorized Teacher on Maze with multiple choice contained level
   When I open my eyes to test "maze multi contained level"
   Given I am a teacher
   And I am on "http://studio.code.org/s/coursee-2019/stage/4/puzzle/2"
