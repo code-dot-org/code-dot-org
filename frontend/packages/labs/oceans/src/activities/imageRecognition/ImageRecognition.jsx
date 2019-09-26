@@ -212,10 +212,8 @@ module.exports = class ImageRecognition extends React.Component {
           <Row>
             <Col style={{textAlign: 'center'}} xs={12}>
               <PredictionUpload predictClass={(img) => {
-                this.simpleTrainer.predict(img).then((result) => {
-                  this.setState({
-                    trainingResult: result
-                  });
+                this.simpleTrainer.predict(img).then((trainingResult) => {
+                  this.setState({trainingResult});
                 });
               }}/>
             </Col>

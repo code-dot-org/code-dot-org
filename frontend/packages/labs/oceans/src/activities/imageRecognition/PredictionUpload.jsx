@@ -1,5 +1,4 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React, {PropTypes} from "react";
 
 module.exports = class SingleUpload extends React.Component {
   static propTypes = {
@@ -25,8 +24,8 @@ module.exports = class SingleUpload extends React.Component {
   render() {
     return (
       <div>
-        {"Upload your own:"}
-        <input type="file" id={"predictfile"} onChange={e => this.onUpload()} />
+        Upload your own:
+        <input type="file" id="predictfile" onChange={e => this.onUpload()} />
       </div>
     );
   }
