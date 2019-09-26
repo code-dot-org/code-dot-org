@@ -880,9 +880,10 @@ describe('entry tests', () => {
         new StatsWriterPlugin({
           fields: ['assetsByChunkName', 'assets']
         }),
-        // Needed because our production environment relies on an unminified
-        // (but digested) version of certain files such as blockly.js.
-        new UnminifiedWebpackPlugin()
+        // Unit tests require certain unminified files to have been built.
+        new UnminifiedWebpackPlugin({
+          include: [/^webpack-runtime/, /^applab-api/, /^gamelab-api/]
+        })
       ],
       minify: minify,
       watch: watch,
