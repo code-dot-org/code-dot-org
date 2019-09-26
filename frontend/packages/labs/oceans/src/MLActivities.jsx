@@ -1,12 +1,12 @@
-import React from "react";
-import RPS from "./activities/rps/RPS";
-import ImageRecognition from "./activities/imageRecognition/ImageRecognition";
-import CreatureCreator from "./activities/creatureCreator/CreatureCreator";
-import Button from "react-bootstrap/lib/Button";
-import Row from "react-bootstrap/lib/Row";
-import Col from "react-bootstrap/lib/Col";
-import Grid from "react-bootstrap/lib/Grid";
-import Panel from "react-bootstrap/lib/Panel";
+import React from 'react';
+import RPS from './activities/rps/RPS';
+import ImageRecognition from './activities/imageRecognition/ImageRecognition';
+import CreatureCreator from './activities/creatureCreator/CreatureCreator';
+import Button from 'react-bootstrap/lib/Button';
+import Row from 'react-bootstrap/lib/Row';
+import Col from 'react-bootstrap/lib/Col';
+import Grid from 'react-bootstrap/lib/Grid';
+import Panel from 'react-bootstrap/lib/Panel';
 
 const Activity = Object.freeze({
   None: 0,
@@ -34,7 +34,7 @@ module.exports = class MLActivities extends React.Component {
                     currentActivity: Activity.None
                   })
                 }
-                style={{ marginBottom: 10 }}
+                style={{marginBottom: 10}}
               >
                 👈 Pick Another Activity
               </Button>
@@ -42,9 +42,7 @@ module.exports = class MLActivities extends React.Component {
             {this.state.currentActivity === Activity.None && (
               <div>
                 <Button
-                  onClick={() =>
-                    this.setState({ currentActivity: Activity.RPS })
-                  }
+                  onClick={() => this.setState({currentActivity: Activity.RPS})}
                 >
                   Pick RPS Activity
                 </Button>

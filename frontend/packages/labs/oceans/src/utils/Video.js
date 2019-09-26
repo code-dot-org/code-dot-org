@@ -24,13 +24,15 @@ module.exports = class Video {
     this.videoElement = video;
     video.setAttribute('autoplay', '');
     video.setAttribute('playsinline', '');
-    navigator.mediaDevices.getUserMedia({video: true, audio: false}).then((stream) => {
-      video.srcObject = stream;
-      video.width = this.imageSize;
-      video.height = this.imageSize;
-      video.addEventListener('playing', () => this.videoPlaying = true);
-      video.addEventListener('paused', () => this.videoPlaying = false);
-    });
+    navigator.mediaDevices
+      .getUserMedia({video: true, audio: false})
+      .then(stream => {
+        video.srcObject = stream;
+        video.width = this.imageSize;
+        video.height = this.imageSize;
+        video.addEventListener('playing', () => (this.videoPlaying = true));
+        video.addEventListener('paused', () => (this.videoPlaying = false));
+      });
   }
 
   getFrameDataURI(size) {
