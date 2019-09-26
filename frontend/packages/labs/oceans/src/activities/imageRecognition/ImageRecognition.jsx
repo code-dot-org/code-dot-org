@@ -31,13 +31,12 @@ const defaultState = {
 };
 
 const activityImages = [
-  {guid: "a", url: "images/happyvirus1.jpg"},
-  {guid: "b", url: "images/happyvirus2.png"},
-  {guid: "c", url: "images/happyvirus3.png"},
-  {guid: "d", url: "images/meanvirus1.jpg"},
-  {guid: "e", url: "images/meanvirus2.png"},
-  {guid: "f", url: "images/meanvirus3.png"},
-  {guid: "f", url: "images/neutralvirus1.jpg"},
+  {guid: "a", url: "images/dog1.png"},
+  {guid: "b", url: "images/dog2.png"},
+  {guid: "c", url: "images/dog3.png"},
+  {guid: "d", url: "images/cat1.jpg"},
+  {guid: "e", url: "images/cat2.jpg"},
+  {guid: "f", url: "images/cat3.jpg"},
 ];
 
 const IMAGE_SIZE = 227;
