@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {Tab, Tabs} from 'react-bootstrap';
 import ChoiceResponses from '../../components/survey_results/choice_responses';
+import SurveyRollupTable from '../../components/survey_results/survey_rollup_table';
 import FacilitatorAveragesTable from '../../components/survey_results/facilitator_averages_table';
 import TextResponses from '../../components/survey_results/text_responses';
 import _ from 'lodash';
@@ -150,12 +151,16 @@ export default class Results extends React.Component {
         eventKey={this.props.sessions.length + 1}
         key={1}
         title="Workshop Rollups"
-      />,
+      >
+        <SurveyRollupTable data={this.props.workshopRollups} />
+      </Tab>,
       <Tab
         eventKey={this.props.sessions.length + 2}
         key={2}
         title="Facilitator Rollups"
-      />
+      >
+        <SurveyRollupTable data={this.props.facilitatorRollups} />
+      </Tab>
     ];
   }
 
