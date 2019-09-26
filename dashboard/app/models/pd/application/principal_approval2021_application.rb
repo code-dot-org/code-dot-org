@@ -48,7 +48,7 @@ module Pd::Application
     end
 
     validates_presence_of :teacher_application
-    belongs_to :teacher_application, class_name: 'Pd::Application::Teacher1920Application',
+    belongs_to :teacher_application, class_name: 'Pd::Application::Teacher2021Application',
       primary_key: :application_guid, foreign_key: :application_guid
 
     def self.create_placeholder_and_send_mail(teacher_application)
@@ -87,6 +87,7 @@ module Pd::Application
         ],
         committed_to_master_schedule: [
           "Yes, I plan to include this course in the #{year} master schedule",
+          "Yes, I plan to include this course in the #{year} master schedule, but not taught by this teacher",
           "I hope to include this course in the #{year} master schedule",
           "No, I do not plan to include this course in the #{year} master schedule but hope to the following year (2021-22)",
           "I don’t know if I will be able to include this course in the #{year} master schedule",
@@ -94,8 +95,8 @@ module Pd::Application
         ],
         replace_course: [
           TEXT_FIELDS[:yes_replace_existing_course],
-          'No, it will not replace an existing computer science course',
-          'No, this course will not be added to the schedule',
+          'No, this course will be added to the schedule in addition to an existing computer science course',
+          'No, computer science is new to my school',
           TEXT_FIELDS[:dont_know_explain]
         ],
         replace_which_course_csp: [
