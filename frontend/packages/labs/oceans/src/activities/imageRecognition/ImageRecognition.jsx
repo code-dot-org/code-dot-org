@@ -78,18 +78,18 @@ module.exports = class ImageRecognition extends React.Component {
         <div>
           <Row>
             <Col xs={12}>
-            {
-              this.state.classes.map((classData, i) => {
-                return (<TrainingImageUpload
+              {
+                this.state.classes.map((classData, i) => {
+                  return (<TrainingImageUpload
                     key={i}
                     className={classData.name}
                     addTrainingExample={(image) => {
-                          this.simpleTrainer.addExample(image, i);
-                          this.updateExampleCounts(i);
-                      }}
-                    />)
-              })
-            }
+                      this.simpleTrainer.addExample(image, i);
+                      this.updateExampleCounts(i);
+                    }}
+                  />);
+                })
+              }
             </Col>
           </Row>
           <Row>
@@ -209,47 +209,48 @@ module.exports = class ImageRecognition extends React.Component {
       {
         this.state.activityState === ActivityState.Playing &&
         <div>
-        <Row>
-          <Col style={{textAlign: 'center'}} xs={12}>
-            <PredictionUpload predictClass={(img) => {
-                        this.simpleTrainer.predict(img).then((result) => {
-                          this.setState({
-                            trainingResult: result
-                          });
-                        });}}/>
-          </Col>
-        </Row>
-        <Row>
-          <Col style={{textAlign: 'center'}} xs={12}>
-            <h3>Tap an image to classify it</h3>
-            {
-              activityImages.map((image, i) => {
-                return (
-                  <img
-                    key={i}
-                    src={image.url}
-                    className="thumbnail"
-                    style={{
-                      cursor: 'pointer',
-                      display: 'inline-block'
-                    }}
-                    onClick={() => {
-                      loadImage(image.url, IMAGE_SIZE).then((img) => {
-                        this.simpleTrainer.predict(img).then((result) => {
-                          this.setState({
-                            trainingResult: result
+          <Row>
+            <Col style={{textAlign: 'center'}} xs={12}>
+              <PredictionUpload predictClass={(img) => {
+                this.simpleTrainer.predict(img).then((result) => {
+                  this.setState({
+                    trainingResult: result
+                  });
+                });
+              }}/>
+            </Col>
+          </Row>
+          <Row>
+            <Col style={{textAlign: 'center'}} xs={12}>
+              <h3>Tap an image to classify it</h3>
+              {
+                activityImages.map((image, i) => {
+                  return (
+                    <img
+                      key={i}
+                      src={image.url}
+                      className="thumbnail"
+                      style={{
+                        cursor: 'pointer',
+                        display: 'inline-block'
+                      }}
+                      onClick={() => {
+                        loadImage(image.url, IMAGE_SIZE).then((img) => {
+                          this.simpleTrainer.predict(img).then((result) => {
+                            this.setState({
+                              trainingResult: result
+                            });
                           });
                         });
-                      });
-                    }}
-                    width={100}
-                    height={100}
-                  />
-                );
-              })
-            }
-          </Col>
-        </Row>
+                      }}
+                      width={100}
+                      height={100}
+                    />
+                  );
+                })
+              }
+            </Col>
+          </Row>
         </div>
       }
       {

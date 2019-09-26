@@ -1,6 +1,4 @@
 import React from "react";
-import $ from "jquery";
-import "jquery-ui/ui/widgets/draggable";
 import PropTypes from "prop-types";
 
 module.exports = class SingleUpload extends React.Component {
@@ -10,12 +8,14 @@ module.exports = class SingleUpload extends React.Component {
 
   onUpload() {
     var file = document.getElementById("predictfile").files[0];
-    if (!file) return;
+    if (!file) {
+      return;
+    }
     var url = URL.createObjectURL(file), // create an Object URL
       img = new Image(); // create a temp. image object
 
     var _this = this;
-    img.onload = function() {
+    img.onload = function () {
       _this.props.predictClass(img);
     };
 
@@ -26,11 +26,7 @@ module.exports = class SingleUpload extends React.Component {
     return (
       <div>
         {"Upload your own:"}
-        <input
-          type="file"
-          id={"predictfile"}
-          onChange={e => this.onUpload()}
-        />
+        <input type="file" id={"predictfile"} onChange={e => this.onUpload()} />
       </div>
     );
   }
