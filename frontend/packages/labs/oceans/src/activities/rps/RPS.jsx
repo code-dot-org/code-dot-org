@@ -27,7 +27,7 @@ const ActivityScreen = Object.freeze({
   TrainClass3: 3,
   PlayRoundInstructions: 4,
   PlayRound: 5,
-  PlayRoundResult: 6,
+  PlayRoundResult: 6
 });
 
 const defaultState = {
@@ -65,86 +65,116 @@ module.exports = class Main extends React.Component {
   }
 
   render() {
-    return <div>
-      {this.state.currentScreen === ActivityScreen.IntroInstructions &&
-      <IntroScreen
-        onClickContinue={() => {
-          this.setState({
-            currentScreen: ActivityScreen.TrainClass1
-          }, null);
-        }}
-      />}
-      {this.trainingScreen(0)}
-      {this.trainingScreen(1)}
-      {this.trainingScreen(2)}
-      {this.state.currentScreen === ActivityScreen.PlayRoundInstructions &&
-      <PlayRoundInstructions
-        onClickContinue={() => {
-          this.setState({
-            currentScreen: ActivityScreen.PlayRound
-          }, null);
-        }}
-      />}
-      {this.state.currentScreen === ActivityScreen.PlayRound &&
-      <PlayRound
-        imageSize={IMAGE_SIZE}
-        onMountVideo={(videoElement) => {
-          this.video.loadVideo(videoElement);
-        }}
-        onPlayRound={() => {
-          this.playRound().then(() => {
-            return this.setState({
-              currentScreen: ActivityScreen.PlayRoundResult
-            }, null);
-          });
-        }}
-      />}
-      {this.state.currentScreen === ActivityScreen.PlayRoundResult &&
-      <PlayRoundResult
-        winner={this.state.roundResult.winner}
-        confidence={this.state.roundPrediction.confidence}
-        playerPlayed={this.state.roundPrediction.playerPlayed}
-        playerPlayedImage={this.state.roundPrediction.playerPlayedImage}
-        computerPlayed={this.state.roundPrediction.computerPlayed}
-        computerPlayedEmoji={this.state.roundPrediction.computerPlayedEmoji}
-        onPlayAgain={() => {
-          this.setState({
-            currentScreen: ActivityScreen.PlayRound
-          }, null);
-        }}
-        onTrainMore={() => {
-          this.setState({
-            currentScreen: ActivityScreen.TrainClass1
-          }, null);
-        }}
-        onContinue={() => {
-          this.setState(defaultState, null);
-        }}
-      />}
-    </div>;
+    return (
+      <div>
+        {this.state.currentScreen === ActivityScreen.IntroInstructions && (
+          <IntroScreen
+            onClickContinue={() => {
+              this.setState(
+                {
+                  currentScreen: ActivityScreen.TrainClass1
+                },
+                null
+              );
+            }}
+          />
+        )}
+        {this.trainingScreen(0)}
+        {this.trainingScreen(1)}
+        {this.trainingScreen(2)}
+        {this.state.currentScreen === ActivityScreen.PlayRoundInstructions && (
+          <PlayRoundInstructions
+            onClickContinue={() => {
+              this.setState(
+                {
+                  currentScreen: ActivityScreen.PlayRound
+                },
+                null
+              );
+            }}
+          />
+        )}
+        {this.state.currentScreen === ActivityScreen.PlayRound && (
+          <PlayRound
+            imageSize={IMAGE_SIZE}
+            onMountVideo={videoElement => {
+              this.video.loadVideo(videoElement);
+            }}
+            onPlayRound={() => {
+              this.playRound().then(() => {
+                return this.setState(
+                  {
+                    currentScreen: ActivityScreen.PlayRoundResult
+                  },
+                  null
+                );
+              });
+            }}
+          />
+        )}
+        {this.state.currentScreen === ActivityScreen.PlayRoundResult && (
+          <PlayRoundResult
+            winner={this.state.roundResult.winner}
+            confidence={this.state.roundPrediction.confidence}
+            playerPlayed={this.state.roundPrediction.playerPlayed}
+            playerPlayedImage={this.state.roundPrediction.playerPlayedImage}
+            computerPlayed={this.state.roundPrediction.computerPlayed}
+            computerPlayedEmoji={this.state.roundPrediction.computerPlayedEmoji}
+            onPlayAgain={() => {
+              this.setState(
+                {
+                  currentScreen: ActivityScreen.PlayRound
+                },
+                null
+              );
+            }}
+            onTrainMore={() => {
+              this.setState(
+                {
+                  currentScreen: ActivityScreen.TrainClass1
+                },
+                null
+              );
+            }}
+            onContinue={() => {
+              this.setState(defaultState, null);
+            }}
+          />
+        )}
+      </div>
+    );
   }
 
   trainingScreen(index) {
     const thisScreen = ActivityScreen[`TrainClass${index + 1}`];
-    const nextScreen = index + 1 >= CLASS_NAMES.length ? ActivityScreen.PlayRoundInstructions : ActivityScreen[`TrainClass${index + 2}`];
-    return this.state.currentScreen === thisScreen &&
-      <TrainingScreen
-        onTrainClicked={() => {
-          this.trainExample(index);
-        }}
-        onContinueClicked={() => {
-          this.setState({
-            currentScreen: nextScreen
-          }, null);
-        }}
-        onMountVideo={(videoElement) => {
-          this.video.loadVideo(videoElement);
-        }}
-        imageSize={IMAGE_SIZE}
-        trainingClass={CLASS_NAMES[index]}
-        exampleCount={this.simpleTrainer.getExampleCount(index)}
-        trainingImages={this.state[`trainingImages${index}`]}
-      />;
+    const nextScreen =
+      index + 1 >= CLASS_NAMES.length
+        ? ActivityScreen.PlayRoundInstructions
+        : ActivityScreen[`TrainClass${index + 2}`];
+    return (
+      this.state.currentScreen === thisScreen && (
+        <TrainingScreen
+          onTrainClicked={() => {
+            this.trainExample(index);
+          }}
+          onContinueClicked={() => {
+            this.setState(
+              {
+                currentScreen: nextScreen
+              },
+              null
+            );
+          }}
+          onMountVideo={videoElement => {
+            this.video.loadVideo(videoElement);
+          }}
+          imageSize={IMAGE_SIZE}
+          trainingClass={CLASS_NAMES[index]}
+          exampleCount={this.simpleTrainer.getExampleCount(index)}
+          trainingImages={this.state[`trainingImages${index}`]}
+        />
+      )
+    );
   }
 
   /**
@@ -167,27 +197,35 @@ module.exports = class Main extends React.Component {
       if (this.simpleTrainer.getNumClasses() > 0) {
         let frameDataURI = this.video.getFrameDataURI(400);
 
-        let predictionResult = await this.simpleTrainer.predict(this.video.getVideoElement());
+        let predictionResult = await this.simpleTrainer.predict(
+          this.video.getVideoElement()
+        );
         let computerChoice = CLASS_NAMES[Math.floor(Math.random() * 3)];
         let playerChoice = CLASS_NAMES[predictionResult.predictedClassId];
         const winner = this.pickWinner(playerChoice, computerChoice);
 
-        this.setState({
-          roundPrediction: {
-            predictedClass: predictionResult.predictedClassId,
-            confidence: predictionResult.confidencesByClassId[predictionResult.predictedClassId],
-            playerPlayedImage: frameDataURI,
+        this.setState(
+          {
+            roundPrediction: {
+              predictedClass: predictionResult.predictedClassId,
+              confidence:
+                predictionResult.confidencesByClassId[
+                  predictionResult.predictedClassId
+                ],
+              playerPlayedImage: frameDataURI,
 
-            playerPlayed: playerChoice,
-            computerPlayed: computerChoice,
-            computerPlayedEmoji: this.rpsToEmoji(computerChoice),
+              playerPlayed: playerChoice,
+              computerPlayed: computerChoice,
+              computerPlayedEmoji: this.rpsToEmoji(computerChoice),
 
-            confidencesByClassId: predictionResult.confidencesByClassId,
+              confidencesByClassId: predictionResult.confidencesByClassId
+            },
+            roundResult: {
+              winner: winner
+            }
           },
-          roundResult: {
-            winner: winner,
-          }
-        }, null);
+          null
+        );
       }
     }
   }
@@ -203,8 +241,6 @@ module.exports = class Main extends React.Component {
       scissors: 'paper'
     };
 
-    return keyBeatsValue[x] === y ? 1 :
-      keyBeatsValue[y] === x ? -1 :
-        0;
+    return keyBeatsValue[x] === y ? 1 : keyBeatsValue[y] === x ? -1 : 0;
   }
 };

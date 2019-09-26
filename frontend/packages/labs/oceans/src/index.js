@@ -1,1 +1,1 @@
-alert("Hello world! -index.jsx");
+alert('Hello world! -index.jsx');
