@@ -902,6 +902,16 @@ describe('entry tests', () => {
               to: '[path]/[name]wp[contenthash].[ext]',
               toType: 'template'
             },
+            // Always include unminified, unhashed p5.js as this is needed by
+            // unit tests. The order of these rules is important to ensure that
+            // the minified, hashed copy of p5.js appears in the manifest when
+            // minifying.
+            {
+              context: 'build/minifiable-lib/',
+              from: '**/p5.js',
+              to: '[path]/[name].[ext]',
+              toType: 'template'
+            },
             // Libraries in this directory are assumed to have .js and .min.js
             // copies of each source file. In development mode, copy only foo.js.
             // In production mode, copy only foo.min.js and rename it to foo.js.
