@@ -11,6 +11,7 @@ var {StatsWriterPlugin} = require('webpack-stats-plugin');
 var UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
 var sass = require('node-sass');
 var UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+var ManifestPlugin = require('webpack-manifest-plugin');
 
 module.exports = function(grunt) {
   process.env.mocha_entry = grunt.option('entry') || '';
@@ -699,7 +700,7 @@ describe('entry tests', () => {
     var watch = options.watch;
 
     return webpackConfig.create({
-      output: path.resolve(__dirname, OUTPUT_DIR),
+      outputDir: path.resolve(__dirname, OUTPUT_DIR),
       entries: _.mapValues(
         _.extend(
           {},
@@ -883,7 +884,11 @@ describe('entry tests', () => {
         // Unit tests require certain unminified files to have been built.
         new UnminifiedWebpackPlugin({
           include: [/^webpack-runtime/, /^applab-api/, /^gamelab-api/]
+        }),
+        new ManifestPlugin({
+          basePath: 'js/'
         })
+
       ],
       minify: minify,
       watch: watch,
