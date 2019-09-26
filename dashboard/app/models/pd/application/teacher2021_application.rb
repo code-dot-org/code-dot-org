@@ -230,7 +230,7 @@ module Pd::Application
           plan_to_teach: [
             'Yes, I plan to teach this course this year (2020-21)',
             'I hope to teach this course this year (2020-21)',
-            'No, I don’t plan to teach this course this year (2020-21), but I hope to teach this course the following year (2020-21)',
+            'No, I don’t plan to teach this course this year (2020-21), but I hope to teach this course the following year (2021-22)',
             'No, someone else from my school will teach this course this year (2020-21)',
             TEXT_FIELDS[:dont_know_if_i_will_teach_explain]
           ],
