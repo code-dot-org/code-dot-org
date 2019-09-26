@@ -373,7 +373,7 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
       requiredFields.push('payFee', 'understandFee');
     }
 
-    if (data.payFee === TextFields.noPayFee2021) {
+    if (data.regionalPartnerId && data.payFee === TextFields.noPayFee2021) {
       requiredFields.push('scholarshipReasons');
     }
 

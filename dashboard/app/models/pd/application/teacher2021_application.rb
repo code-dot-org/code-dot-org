@@ -188,9 +188,9 @@ module Pd::Application
             TEXT_FIELDS[:other_with_text]
           ],
           csd_which_grades: (6..12).map(&:to_s) <<
-            'Not sure yet if my school plans to offer CS Discoveries in the 2020-21 school year',
+            "Not sure yet if my school plans to offer CS Discoveries in the #{year} school year",
           csp_which_grades: (9..12).map(&:to_s) <<
-            'Not sure yet if my school plans to offer CS Principles in the 2020-21 school year',
+            "Not sure yet if my school plans to offer CS Principles in the #{year} school year",
           csd_which_units: [
             'Unit 0: Problem Solving',
             'Unit 1: Web Development',
@@ -228,10 +228,10 @@ module Pd::Application
             TEXT_FIELDS[:other_please_explain]
           ],
           plan_to_teach: [
-            'Yes, I plan to teach this course this year (2020-21)',
-            'I hope to teach this course this year (2020-21)',
-            'No, I don’t plan to teach this course this year (2020-21), but I hope to teach this course the following year (2020-21)',
-            'No, someone else from my school will teach this course this year (2020-21)',
+            "Yes, I plan to teach this course this year (#{year})",
+            "I hope to teach this course this year (#{year})",
+            "No, I don’t plan to teach this course this year (#{year}), but I hope to teach this course the following year (2021-22)",
+            "No, someone else from my school will teach this course this year (#{year})",
             TEXT_FIELDS[:dont_know_if_i_will_teach_explain]
           ],
           travel_to_another_workshop: [
@@ -299,7 +299,7 @@ module Pd::Application
           end
         end
 
-        if hash[:pay_fee] == TEXT_FIELDS[:no_pay_fee_2021]
+        if hash[:regional_partner_id] && hash[:pay_fee] == TEXT_FIELDS[:no_pay_fee_2021]
           required << :scholarship_reasons
         end
 
@@ -331,8 +331,11 @@ module Pd::Application
       ]
     end
 
-    # @override
     def year
+      year
+    end
+
+    def self.year
       YEAR_20_21
     end
 

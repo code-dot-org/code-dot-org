@@ -147,7 +147,7 @@ class Ability
             can :manage, Pd::Application::ApplicationBase, regional_partner_id: group_3_partner_ids
             cannot :delete, Pd::Application::ApplicationBase, regional_partner_id: group_3_partner_ids
           end
-          can [:send_principal_approval, :principal_approval_not_required], Pd::Application::TEACHER_APPLICATION_CLASS, regional_partner_id: user.regional_partners.pluck(:id)
+          can [:send_principal_approval, :principal_approval_not_required], TEACHER_APPLICATION_CLASS, regional_partner_id: user.regional_partners.pluck(:id)
         end
       end
 
