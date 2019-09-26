@@ -40,7 +40,7 @@
 
 # Reviewer Checklist:
 
-- [ ] Tests are passing and seem appropriate
+- [ ] Tests provide adequate coverage
 - [ ] Code is well-commented
 - [ ] New features are translatable or updates will not break translations
 - [ ] Relevant documentation has been added or updated
