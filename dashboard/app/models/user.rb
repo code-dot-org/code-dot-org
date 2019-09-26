@@ -2027,7 +2027,7 @@ class User < ActiveRecord::Base
   # Returns the name of the donor for the donor teacher banner and donor footer, or nil if none.
   # Donors are associated with certain schools, captured in DonorSchool and populated from a Pegasus gsheet
   def school_donor_name
-    school_id = last_complete_school_info&.school&.id
+    school_id = Queries::SchoolInfo.last_complete(self)&.school&.id
     donor_name = DonorSchool.find_by(nces_id: school_id)&.name if school_id
 
     donor_name
