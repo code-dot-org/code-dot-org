@@ -5,7 +5,7 @@ const P5 = require("./loadP5");
 
 const CANVAS_ID = "p5-canvas";
 
-const CreatureType = Object.freeze({
+export const CreatureType = Object.freeze({
   None: 0,
   Good: 1,
   Bad: 2
@@ -16,29 +16,23 @@ export default class CreatureCreator extends React.Component {
     this.p5 = new P5(sketch, CANVAS_ID);
   }
 
-  generateCreature = type => {
-    switch (type) {
-      case CreatureType.Good:
-        this.p5.setGoodCreature();
-        break;
-      case CreatureType.Bad:
-        this.p5.setBadCreature();
-        break;
-      default:
-        console.error("Unknown CreatureType!");
+  setCreature = type => {
+    if (!Object.values(CreatureType).includes(type)) {
+      console.error("Unknown CreatureType!");
+      return;
     }
+
+    this.p5.setCreature(type);
   };
 
   render() {
     return (
       <div>
         <h4>Click a button to generate a good or bad creature.</h4>
-        <Button onClick={() => this.generateCreature(CreatureType.Good)}>
+        <Button onClick={() => this.setCreature(CreatureType.Good)}>
           Good
         </Button>
-        <Button onClick={() => this.generateCreature(CreatureType.Bad)}>
-          Bad
-        </Button>
+        <Button onClick={() => this.setCreature(CreatureType.Bad)}>Bad</Button>
         <br />
         <br />
         <div id={CANVAS_ID} />
