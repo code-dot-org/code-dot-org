@@ -2,8 +2,8 @@ import React from "react";
 import SimpleTrainer from "../../utils/SimpleTrainer";
 import Draggable from "./Draggable";
 import Droppable from "./Droppable";
-import MultiUpload from "./MultiUpload";
-import SingleUpload from "./SingleUpload";
+import TrainingImageUpload from "./TrainingImageUpload";
+import PredictionUpload from "./PredictionUpload";
 import Row from "react-bootstrap/lib/Row";
 import Col from "react-bootstrap/lib/Col";
 import Button from 'react-bootstrap/lib/Button';
@@ -78,18 +78,17 @@ module.exports = class ImageRecognition extends React.Component {
         this.state.activityState === ActivityState.Training &&
         <div>
           <Row>
-            <Col xs={12}> 
+            <Col xs={12}>
             {
               this.state.classes.map((classData, i) => {
-                return (<MultiUpload 
+                return (<TrainingImageUpload
                     key={i}
                     className={classData.name}
                     addTrainingExample={(image) => {
                           this.simpleTrainer.addExample(image, i);
                           this.updateExampleCounts(i);
                       }}
-
-                    /> )
+                    />)
               })
             }
             </Col>
@@ -213,7 +212,7 @@ module.exports = class ImageRecognition extends React.Component {
         <div>
         <Row>
           <Col style={{textAlign: 'center'}} xs={12}>
-            <SingleUpload predictClass={(img) => {
+            <PredictionUpload predictClass={(img) => {
                         this.simpleTrainer.predict(img).then((result) => {
                           this.setState({
                             trainingResult: result
