@@ -996,12 +996,6 @@ class User < ActiveRecord::Base
       )
   end
 
-  def user_levels_by_level(script)
-    user_levels.
-      where(script_id: script.id).
-      index_by(&:level_id)
-  end
-
   # Retrieve all user levels for the designated set of users in the given
   # script, with a single query.
   # @param [Enumerable<User>] users
@@ -1060,7 +1054,7 @@ class User < ActiveRecord::Base
     sl_level_ids = visible_sls.map(&:level_ids).flatten
 
     # Levels the user made progress in
-    ul_level_ids = user_levels_by_level(script).keys
+    ul_level_ids = Queries::UserProgress.user_levels_by_level(self, script).keys
 
     visible_completed_level_ids = sl_level_ids & ul_level_ids
     visible_incomplete_level_ids = sl_level_ids - ul_level_ids
@@ -1116,7 +1110,7 @@ class User < ActiveRecord::Base
     # the script in multiple places (i.e. via level swapping) there's some potential
     # for strange behavior.
     sl_level_ids = script.script_levels.map(&:level_ids).flatten
-    ul_with_sl = user_levels_by_level(script).select do |level_id, _ul|
+    ul_with_sl = Queries::UserProgress.user_levels_by_level(self, script).select do |level_id, _ul|
       sl_level_ids.include? level_id
     end
 
@@ -1142,7 +1136,7 @@ class User < ActiveRecord::Base
   # Returns true if all progression levels in the provided script have a passing
   # result
   def completed_progression_levels?(script)
-    user_levels_by_level = user_levels_by_level(script)
+    user_levels_by_level = Queries::UserProgress.user_levels_by_level(self, script)
 
     script.script_levels.none? do |script_level|
       user_levels = script_level.level_ids.map {|id| user_levels_by_level[id]}
@@ -1655,7 +1649,7 @@ class User < ActiveRecord::Base
   end
 
   def a_level_passed?(script)
-    user_levels_by_level = user_levels_by_level(script)
+    user_levels_by_level = Queries::UserProgress.user_levels_by_level(self, script)
     script.script_levels.detect do |script_level|
       user_level = user_levels_by_level[script_level.level_id]
       is_passed = (user_level && user_level.passing?)
