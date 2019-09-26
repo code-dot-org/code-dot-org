@@ -84,6 +84,7 @@ export default class BaseDialog extends React.Component {
     }
     if (this.props.fullHeight) {
       bodyStyle = {
+        ...bodyStyle,
         height: '80%'
       };
     }
