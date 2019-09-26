@@ -29,7 +29,6 @@ const RACE_LIST = [
   'other'
 ];
 const REQUIRED_SCHOOL_INFO_FIELDS = [
-  'planToTeach',
   'school',
   'totalStudentEnrollment',
   'freeLunchPercent',
@@ -53,7 +52,7 @@ const REPLACE_COURSE_FIELDS = [
   'replaceWhichCourseCsd'
 ];
 const IMPLEMENTATION_FIELDS = ['csdImplementation', 'cspImplementation'];
-const YEAR = '2019-20';
+const YEAR = '2020-21';
 
 export default class PrincipalApproval2021Component extends LabeledFormComponent {
   static labels = PageLabels;
@@ -63,7 +62,6 @@ export default class PrincipalApproval2021Component extends LabeledFormComponent
     ...REPLACE_COURSE_FIELDS,
     ...IMPLEMENTATION_FIELDS,
     'doYouApprove',
-    'planToTeach',
     'committedToMasterSchedule',
     'committedToDiversity',
     'contactInvoicing',
@@ -133,27 +131,13 @@ export default class PrincipalApproval2021Component extends LabeledFormComponent
     let showPayFeeNote =
       this.props.data.committedToMasterSchedule &&
       !this.props.data.committedToMasterSchedule.includes(
-        'Yes, I plan to include this course in the 2019-20 master schedule'
+        `Yes, I plan to include this course in the ${YEAR} master schedule`
       ) &&
       this.props.data.payFee &&
       this.props.data.payFee.includes('No, ');
 
-    const planToTeachOther =
-      'I don’t know if they will teach this course (Please Explain):';
     return (
       <div>
-        {this.radioButtonsWithAdditionalTextFieldsFor(
-          'planToTeach',
-          {
-            [planToTeachOther]: 'other'
-          },
-          {
-            label: `Is ${
-              this.props.teacherApplication.name
-            } planning to teach this course in
-                    the ${YEAR} school year?`
-          }
-        )}
         {this.renderSchoolSection()}
         {this.inputFor('totalStudentEnrollment')}
         {this.numberInputFor('freeLunchPercent', {
@@ -162,7 +146,7 @@ export default class PrincipalApproval2021Component extends LabeledFormComponent
           step: 1
         })}
         <p style={styles.questionText}>
-          Percentage of student enrollment by race
+          Percentage of student enrollment by race or ethnicity
         </p>
         {RACE_LIST.map(race => {
           return this.numberInputFor(race, {
@@ -235,8 +219,8 @@ export default class PrincipalApproval2021Component extends LabeledFormComponent
             <div>
               <p style={styles.red}>
                 Note: To be eligible for scholarship support, your school must
-                commit to including this course in the 2019-20 master schedule.
-                If you are able to commit to offering this course in 2019-20,
+                commit to including this course in the {YEAR} master schedule.
+                If you are able to commit to offering this course in {YEAR} ,
                 please update your answer above before submitting in order to
                 retain scholarship eligibility.
               </p>
@@ -355,14 +339,14 @@ export default class PrincipalApproval2021Component extends LabeledFormComponent
             href="https://code.org/educate/professional-learning-2019"
             target="_blank"
           >
-            Code.org’s Professional Learning Program
+            Code.org's Professional Learning Program
           </a>{' '}
           in order to teach the{' '}
           <a href={`https://code.org/educate/${courseSuffix}`} target="_blank">
             {this.props.teacherApplication.course} curriculum
           </a>{' '}
           during the {YEAR} school year. Your approval is required for the
-          teacher’s application to be considered.
+          teacher's application to be considered.
         </p>
         {this.selectFor('title', {
           required: false,
@@ -371,11 +355,14 @@ export default class PrincipalApproval2021Component extends LabeledFormComponent
         {this.inputFor('firstName')}
         {this.inputFor('lastName')}
         {this.inputFor('email')}
-        <p>Teachers in this program are required to participate in both:</p>
+        <p>
+          Teachers should attend the minimum number of workshops that correspond
+          to the number of units they intend to teach, which include:
+        </p>
         <ul>
-          <li>One five-day, in-person summer workshop in 2019</li>
+          <li>One five-day, in-person summer workshop in 2020</li>
           <li>
-            Up to four one-day, in-person local workshops during the 2019-20
+            Up to four one-day, in-person local workshops during the {YEAR}{' '}
             school year (typically held on Saturdays)
           </li>
         </ul>

@@ -40,6 +40,10 @@ module Pd::Application
 
     # @override
     def year
+      year
+    end
+
+    def self.year
       YEAR_20_21
     end
 
@@ -69,16 +73,9 @@ module Pd::Application
         school_state: COMMON_OPTIONS[:state],
         school_type: COMMON_OPTIONS[:school_type],
         do_you_approve: [YES, NO, TEXT_FIELDS[:other_with_text]],
-        plan_to_teach: [
-          'Yes, they are planning to teach this course this year (2019-20)',
-          'I hope they will be able teach this course this year (2019-20)',
-          'No, they are not planning to teach this course this year (2019-20), but they hope to teach this course the following year (2020-21)',
-          'No, someone else from my school will teach this course this year (2019-20)',
-          'I don’t know if they will teach this course (Please Explain):'
-        ],
         csd_implementation: [
           '50+ instructional hours per section of students for a semester-long course (Units 1 - 3)',
-          '100+ instructional hours for a year-long course (Units 1-  6)',
+          '100+ instructional hours for a year-long course (Units 1 - 6)',
           'I don’t know yet which implementation schedule we will use.',
           'We will use a different implementation schedule. (Please Explain):'
         ],
@@ -89,10 +86,10 @@ module Pd::Application
           'We will use a different implementation schedule. (Please Explain):'
         ],
         committed_to_master_schedule: [
-          'Yes, I plan to include this course in the 2019-20 master schedule',
-          'I hope to include this course in the 2019-20 master schedule',
-          'No, I do not plan to include this course in the 2019-20 master schedule but hope to the following year (2020-21)',
-          'I don’t know if I will be able to include this course in the 2019-20 master schedule',
+          "Yes, I plan to include this course in the #{year} master schedule",
+          "I hope to include this course in the #{year} master schedule",
+          "No, I do not plan to include this course in the #{year} master schedule but hope to the following year (2021-22)",
+          "I don’t know if I will be able to include this course in the #{year} master schedule",
           TEXT_FIELDS[:other_with_text]
         ],
         replace_course: [
@@ -162,7 +159,6 @@ module Pd::Application
               :pacific_islander,
               :american_indian,
               :other,
-              :plan_to_teach,
               :committed_to_master_schedule,
               :replace_course,
               :committed_to_diversity,
@@ -202,7 +198,6 @@ module Pd::Application
         [:replace_which_course_csd, TEXT_FIELDS[:other_please_explain], :replace_which_course_csd_other],
         [:replace_which_course_csp, TEXT_FIELDS[:other_please_explain], :replace_which_course_csp_other],
         [:do_you_approve],
-        [:plan_to_teach],
         [:contact_invoicing],
         [:contact_invoicing_detail]
       ]
