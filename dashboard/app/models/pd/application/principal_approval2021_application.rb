@@ -40,7 +40,7 @@ module Pd::Application
 
     # @override
     def year
-      year
+      self.class.year
     end
 
     def self.year
