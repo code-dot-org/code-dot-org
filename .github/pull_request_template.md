@@ -6,6 +6,18 @@
   If relevant, include a description both of the existing behavior and of the new behavior.
 -->
 
+<!--
+  Other aspects to consider. uncomment and add detail for any that seem necessary:
+-->
+
+<!-- ### Background -->
+<!-- ### Privacy -->
+<!-- ### Security -->
+<!-- ### Caching -->
+<!-- ### Testing -->
+<!-- ### Deployment strategy -->
+<!-- ### Future work -->
+
 ## Links
 
 <!--
