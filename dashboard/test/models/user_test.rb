@@ -1587,7 +1587,7 @@ class UserTest < ActiveSupport::TestCase
     assert user.working_on?(s1.script)
   end
 
-  test 'user is working on scripts' do
+  test 'primary script' do
     user = create :user
     s1 = create :user_script, user: user, started_at: (Time.now - 10.days), last_progress_at: (Time.now - 4.days)
     s2 = create :user_script, user: user, started_at: (Time.now - 50.days), last_progress_at: (Time.now - 3.days)
@@ -1597,20 +1597,20 @@ class UserTest < ActiveSupport::TestCase
     assert_equal [s2, s1, c], user.user_scripts
     assert_equal [s2.script, s1.script, c.script], user.scripts
 
-    # working on scripts
-    assert_equal [s2.script, s1.script], user.working_on_scripts
     # primary script -- most recently progressed in
+    assert_equal s2.script, user.script_with_most_recent_progress
     assert_equal s2.script, user.primary_script
 
     # add an assigned script that's more recent
-    a = create :user_script, user: user, started_at: (Time.now - 1.day)
-    assert_equal [a.script, s2.script, s1.script], user.working_on_scripts
+    a = create :user_script, user: user, assigned_at: (Time.now - 1.day)
+    assert_equal a.script, user.most_recently_assigned_script
     assert_equal a.script, user.primary_script
 
-    # make progress on an older script
+    # make progress on a older script, assignment is still primary
     s1.update_attribute(:last_progress_at, Time.now - 3.hours)
-    assert_equal [s1.script, a.script, s2.script], user.working_on_scripts
-    assert_equal s1.script, user.primary_script
+    assert_equal s1.script, user.script_with_most_recent_progress
+    assert_equal a.script, user.most_recently_assigned_script
+    assert_equal a.script, user.primary_script
   end
 
   test 'user has completed script' do
@@ -3217,26 +3217,24 @@ class UserTest < ActiveSupport::TestCase
       assert_equal ['Computer Science Discoveries', 'Script Other'], courses_and_scripts.map {|cs| cs[:title]}
     end
 
-    test "it optionally does not return primary course in returned courses" do
+    test "it optionally does not return primary script in returned courses and scripts" do
       student = create :student
       teacher = create :teacher
 
-      course = create :course, name: 'testcourse'
-      course_script1 = create :course_script, course: course, script: (create :script, name: 'testscript1'), position: 1
-      create :course_script, course: course, script: (create :script, name: 'testscript2'), position: 2
-      create :user_script, user: student, script: course_script1.script, started_at: (Time.now - 1.day)
-
-      other_script = create :script, name: 'otherscript'
-      create :user_script, user: student, script: other_script, started_at: (Time.now - 1.hour)
-
-      section = create :section, user_id: teacher.id, course: course
+      script1 = create :script, name: 'testscript1'
+      section = create :section, user_id: teacher.id, script: script1
       Follower.create!(section_id: section.id, student_user_id: student.id, user: teacher)
 
-      courses_and_scripts = student.recent_courses_and_scripts(true)
+      assert student.primary_script, script1
 
-      assert_equal 1, courses_and_scripts.length
+      courses_and_scripts_inc_primary = student.recent_courses_and_scripts(false)
 
-      assert_equal ['testcourse'], courses_and_scripts.map {|cs| cs[:name]}
+      assert_equal 1, courses_and_scripts_inc_primary.length
+      assert_equal [script1.name], courses_and_scripts_inc_primary.map {|cs| cs[:name]}
+
+      courses_and_scripts_exc_primary = student.recent_courses_and_scripts(true)
+
+      assert_equal 0, courses_and_scripts_exc_primary.length
     end
   end
 
