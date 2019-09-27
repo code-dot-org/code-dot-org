@@ -46,11 +46,11 @@ Scenario: Resizing CSD and CSP Top Instructions
 
   Then I see no difference for "teacher in feedback tab"
   Then I click selector ".uitest-instructionsTab"
-  And I wait until element ".editor_column" contains text "Do This"
+  And I wait until element ".editor-column" contains text "Do This"
   And I drag element "#ui-test-resizer" 0 horizontally and 100 vertically
   Then I see no difference for "teacher drag instructions tab"
   Then I click selector ".uitest-feedback"
-  And I wait until element ".editor_column" contains text "Teacher Feedback"
+  And I wait until element ".editor-column" contains text "Teacher Feedback"
   Then I see no difference for "teacher back in feedback tab"
 
   And I close my eyes
