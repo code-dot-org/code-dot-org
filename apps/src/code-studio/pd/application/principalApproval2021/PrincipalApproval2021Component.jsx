@@ -295,7 +295,7 @@ export default class PrincipalApproval2021Component extends LabeledFormComponent
           A teacher at your school, {this.props.teacherApplication.name}, has
           applied to be a part of{' '}
           <a
-            href="https://code.org/educate/professional-learning-2019"
+            href="https://code.org/educate/professional-learning/middle-high"
             target="_blank"
           >
             Code.org's Professional Learning Program
