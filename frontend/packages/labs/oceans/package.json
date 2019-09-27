@@ -40,8 +40,6 @@
     "babelify": "^10.0.0",
     "canvas": "^2.6.0",
     "eslint": ">=4.18.2",
-    "eslint-config-prettier": "^3.6.0",
-    "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.11.0",
     "jquery": "1.12.1",
     "jquery-ui": "^1.12.1",
