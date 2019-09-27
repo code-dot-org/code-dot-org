@@ -432,6 +432,7 @@ module Pd::Application
 
     test 'test non course dynamically required fields' do
       application_hash = build :pd_teacher2021_application_hash,
+        regional_partner_id: create(:regional_partner).id,
         completing_on_behalf_of_someone_else: YES,
         pay_fee: TEXT_FIELDS[:no_pay_fee_2021],
         regional_partner_workshop_ids: [1, 2, 3],
@@ -442,20 +443,6 @@ module Pd::Application
 
       refute application.valid?
       assert_equal %w(completingOnBehalfOfName travelToAnotherWorkshop scholarshipReasons), application.errors.messages[:form_data]
-    end
-
-    # We changed the possible answers to this question after opening the application,
-    # including removing some possible answers.  Since we can't reasonably backfill those,
-    # we are clearing them and making this field not required on the server (it's still
-    # required on the client for new applications).
-    test 'does not require pay_fee' do
-      application_hash = build :pd_teacher2021_application_hash,
-        regional_partner_id: create(:regional_partner).id,
-        pay_fee: nil
-      application = build :pd_teacher2021_application, form_data_hash: application_hash
-      assert_nil application.sanitize_form_data_hash[:pay_fee]
-      assert application.valid?
-      assert_equal %w(), application.errors.messages[:form_data]
     end
 
     test 'test csd dynamically required fields' do
