@@ -425,7 +425,10 @@ class TopInstructions extends Component {
 
   handleHelpTabClick = () => {
     this.scrollToTopOfTab();
-    this.setState({tabSelected: TabType.RESOURCES}, this.scrollToTopOfTab);
+    this.setState({tabSelected: TabType.RESOURCES}, () => {
+      this.scrollToTopOfTab();
+      this.adjustMaxNeededHeight();
+    });
     firehoseClient.putRecord({
       study: 'top-instructions',
       event: 'click-help-and-tips-tab'
@@ -434,7 +437,10 @@ class TopInstructions extends Component {
 
   handleInstructionTabClick = () => {
     this.scrollToTopOfTab();
-    this.setState({tabSelected: TabType.INSTRUCTIONS}, this.scrollToTopOfTab);
+    this.setState({tabSelected: TabType.INSTRUCTIONS}, () => {
+      this.scrollToTopOfTab();
+      this.adjustMaxNeededHeight();
+    });
   };
 
   handleCommentTabClick = () => {
@@ -452,7 +458,10 @@ class TopInstructions extends Component {
   };
 
   handleTeacherOnlyTabClick = () => {
-    this.setState({tabSelected: TabType.TEACHER_ONLY}, this.scrollToTopOfTab);
+    this.setState({tabSelected: TabType.TEACHER_ONLY}, () => {
+      this.scrollToTopOfTab();
+      this.adjustMaxNeededHeight();
+    });
     firehoseClient.putRecord({
       study: 'top-instructions',
       event: 'click-teacher-only-tab'
