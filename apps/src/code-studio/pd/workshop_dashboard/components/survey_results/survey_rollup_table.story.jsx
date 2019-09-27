@@ -169,9 +169,7 @@ export default storybook => {
             facilitators={facilitator_rollups.facilitators}
           />
         )
-      }
-    ])
-    .addStoryTable([
+      },
       {
         name: 'Workshop Rollup Table',
         story: () => (

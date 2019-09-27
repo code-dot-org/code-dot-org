@@ -21,15 +21,16 @@ export class SurveyRollupTable extends React.Component {
   }
 
   /**
-   *
+   * Order rows that appear in roll-up table
    * @param {Array} categories
    * @param {Object} questions
-   * @returns {Array}
+   * @returns {Array} Array of {key, label} objects
    */
   createOrderedRows(categories, questions) {
     let orderedRows = [];
 
     categories.forEach(category => {
+      // The order is category name first, then questions in that category
       orderedRows.push({
         key: category,
         label: _.startCase(category)
@@ -46,7 +47,7 @@ export class SurveyRollupTable extends React.Component {
         }
       });
 
-      // Don't keep category without any questions
+      // Don't keep category that doesn't have any questions
       if (!question_found) {
         orderedRows.pop();
       }
@@ -77,6 +78,10 @@ export class SurveyRollupTable extends React.Component {
     return label;
   }
 
+  /**
+   * Order columns that appear in roll-up table
+   * @return {Array} Array of {key, label} objects
+   */
   createOrderedColumns() {
     return Object.keys(this.props.rollups).map(scenario_key => ({
       key: scenario_key,
@@ -92,6 +97,7 @@ export class SurveyRollupTable extends React.Component {
 
   render() {
     let orderedColumns = this.createOrderedColumns();
+
     let orderedRows = this.createOrderedRows(
       questionCategories,
       this.props.questions
