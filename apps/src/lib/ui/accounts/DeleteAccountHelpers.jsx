@@ -11,11 +11,11 @@ export const TeacherWarning = () => {
   return (
     <div>
       <p>
-        <SafeMarkdown markdown={i18n.deleteAccount_teacherWarning1()} />
+        <SafeMarkdown markdown={i18n.deleteAccount_teacherWarning()} />
       </p>
       <p>
         <SafeMarkdown
-          markdown={i18n.deleteAccount_teacherWarning2({
+          markdown={i18n.deleteAccount_personalLoginInstructions({
             explanationUrl: ADD_A_PERSONAL_LOGIN_HELP_URL
           })}
         />
