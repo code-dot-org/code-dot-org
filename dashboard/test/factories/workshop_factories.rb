@@ -215,12 +215,18 @@ FactoryGirl.define do
       # CSP local summer workshop by default
       csp
 
-      location_name 'Greedale Community College'
+      location_name 'Greendale Community College'
       on_map false         # Never on the map
       funded false         # Less than half are funded
       num_facilitators 2   # Most have 2 facilitators
       num_sessions 5       # Most have 5 sessions
       each_session_hours 8 # The most common session length
+      # Schedule it for summer of the current application cycle
+      sessions_from do
+        Date.new(
+          Pd::Application::ActiveApplicationModels::APPLICATION_CURRENT_YEAR.split('-').first.to_i, 7, 4
+        )
+      end
 
       trait :csp do
         course Pd::Workshop::COURSE_CSP
