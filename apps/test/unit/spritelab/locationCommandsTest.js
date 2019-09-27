@@ -5,6 +5,7 @@ import createP5Wrapper from '../../util/gamelab/TestableP5Wrapper';
 
 describe('Location Commands', () => {
   let p5Wrapper, makeSprite;
+  const spriteName = 'sprite1';
   beforeEach(function() {
     p5Wrapper = createP5Wrapper();
     makeSprite = spriteCommands.makeSprite.bind(p5Wrapper.p5);
@@ -27,9 +28,9 @@ describe('Location Commands', () => {
   });
 
   it('locationOf', () => {
-    makeSprite({name: 'sprite1', location: {x: 123, y: 321}});
+    makeSprite({name: spriteName, location: {x: 123, y: 321}});
 
-    expect(commands.locationOf({name: 'sprite1'})).to.deep.equal({
+    expect(commands.locationOf({name: spriteName})).to.deep.equal({
       x: 123,
       y: 321
     });

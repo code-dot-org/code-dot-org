@@ -27,9 +27,10 @@ export function getSpriteArray(spriteArg) {
     return [nativeSpriteMap[spriteArg.id]];
   }
   if (spriteArg.name) {
-    return Object.values(nativeSpriteMap).filter(
+    let sprite = Object.values(nativeSpriteMap).find(
       sprite => sprite.name === spriteArg.name
     );
+    return [sprite];
   }
   if (spriteArg.costume) {
     return Object.values(nativeSpriteMap).filter(

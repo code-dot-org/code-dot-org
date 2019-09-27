@@ -7,6 +7,7 @@ import {commands as spriteCommands} from '@cdo/apps/p5lab/spritelab/commands/spr
 
 describe('SpriteLab Core Library', () => {
   let p5Wrapper, createSprite, animation;
+  const spriteName = 'spriteName';
 
   beforeEach(function() {
     p5Wrapper = createP5Wrapper();
@@ -64,15 +65,15 @@ describe('SpriteLab Core Library', () => {
 
     it('sprite names are unique', () => {
       let sprite1 = createSprite();
-      coreLibrary.addSprite(sprite1, 'name');
+      coreLibrary.addSprite(sprite1, spriteName);
 
-      expect(sprite1.name).to.equal('name');
+      expect(sprite1.name).to.equal(spriteName);
 
       let sprite2 = createSprite();
-      coreLibrary.addSprite(sprite2, 'name');
+      coreLibrary.addSprite(sprite2, spriteName);
 
       expect(sprite1.name).to.equal(undefined);
-      expect(sprite2.name).to.equal('name');
+      expect(sprite2.name).to.equal(spriteName);
     });
   });
 
@@ -114,10 +115,10 @@ describe('SpriteLab Core Library', () => {
       let sprite1 = createSprite();
       let sprite2 = createSprite();
 
-      coreLibrary.addSprite(sprite1, 'name1');
+      coreLibrary.addSprite(sprite1, spriteName);
       coreLibrary.addSprite(sprite2, 'name2');
 
-      expect(coreLibrary.getSpriteArray({name: 'name1'})).to.have.members([
+      expect(coreLibrary.getSpriteArray({name: spriteName})).to.have.members([
         sprite1
       ]);
       expect(coreLibrary.getSpriteArray({name: 'name2'})).to.have.members([
@@ -125,8 +126,8 @@ describe('SpriteLab Core Library', () => {
       ]);
 
       let sprite3 = createSprite();
-      coreLibrary.addSprite(sprite3, 'name1');
-      expect(coreLibrary.getSpriteArray({name: 'name1'})).to.have.members([
+      coreLibrary.addSprite(sprite3, spriteName);
+      expect(coreLibrary.getSpriteArray({name: spriteName})).to.have.members([
         sprite3
       ]);
     });
@@ -287,11 +288,11 @@ describe('SpriteLab Core Library', () => {
         mouseWentDownStub.returns(true);
         mouseIsOverStub.returns(true);
         mousePressedOverStub.returns(true);
-        coreLibrary.addSprite(createSprite(), 'sprite1');
-        coreLibrary.addEvent('whenclick', {sprite: {name: 'sprite1'}}, () =>
+        coreLibrary.addSprite(createSprite(), spriteName);
+        coreLibrary.addEvent('whenclick', {sprite: {name: spriteName}}, () =>
           eventLog.push('when click ran')
         );
-        coreLibrary.addEvent('whileclick', {sprite: {name: 'sprite1'}}, () =>
+        coreLibrary.addEvent('whileclick', {sprite: {name: spriteName}}, () =>
           eventLog.push('while click ran')
         );
 
@@ -351,12 +352,13 @@ describe('SpriteLab Core Library', () => {
 
     describe('Collision Events with individual sprites', () => {
       let eventLog, sprite, target, overlapStub;
+      const targetName = 'targetName';
       beforeEach(function() {
         eventLog = [];
         sprite = createSprite();
-        coreLibrary.addSprite(sprite, 'spriteName');
+        coreLibrary.addSprite(sprite, spriteName);
         target = createSprite();
-        coreLibrary.addSprite(target, 'targetName');
+        coreLibrary.addSprite(target, targetName);
         overlapStub = stub(sprite, 'overlap');
       });
 
@@ -370,8 +372,8 @@ describe('SpriteLab Core Library', () => {
         coreLibrary.addEvent(
           'whentouch',
           {
-            sprite1: {name: 'spriteName'},
-            sprite2: {name: 'targetName'}
+            sprite1: {name: spriteName},
+            sprite2: {name: targetName}
           },
           () => eventLog.push('when touch ran')
         );
@@ -379,8 +381,8 @@ describe('SpriteLab Core Library', () => {
         coreLibrary.addEvent(
           'whiletouch',
           {
-            sprite1: {name: 'spriteName'},
-            sprite2: {name: 'targetName'}
+            sprite1: {name: spriteName},
+            sprite2: {name: targetName}
           },
           () => eventLog.push('while touch ran')
         );
@@ -395,8 +397,8 @@ describe('SpriteLab Core Library', () => {
         coreLibrary.addEvent(
           'whiletouch',
           {
-            sprite1: {name: 'spriteName'},
-            sprite2: {name: 'targetName'}
+            sprite1: {name: spriteName},
+            sprite2: {name: targetName}
           },
           () => eventLog.push('while touch ran')
         );
@@ -415,8 +417,8 @@ describe('SpriteLab Core Library', () => {
         coreLibrary.addEvent(
           'whentouch',
           {
-            sprite1: {name: 'spriteName'},
-            sprite2: {name: 'targetName'}
+            sprite1: {name: spriteName},
+            sprite2: {name: targetName}
           },
           () => eventLog.push('when touch ran')
         );
@@ -436,8 +438,8 @@ describe('SpriteLab Core Library', () => {
         coreLibrary.addEvent(
           'whentouch',
           {
-            sprite1: {name: 'spriteName'},
-            sprite2: {name: 'targetName'}
+            sprite1: {name: spriteName},
+            sprite2: {name: targetName}
           },
           () => eventLog.push('when touch ran')
         );
