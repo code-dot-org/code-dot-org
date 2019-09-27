@@ -33,10 +33,10 @@ const styles = {
   studentNotStartedWarning: {
     zIndex: 99,
     backgroundColor: color.lightest_red,
-    width: '100%',
     height: 20,
     padding: 5,
-    opacity: 0.9
+    opacity: 0.9,
+    position: 'relative'
   }
 };
 

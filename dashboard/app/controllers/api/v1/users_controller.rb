@@ -36,7 +36,7 @@ class Api::V1::UsersController < Api::V1::JsonApiController
   # GET /api/v1/users/<user_id>/get_donor_teacher_banner_details
   def get_donor_teacher_banner_details
     if current_user.teacher?
-      teachers_school = current_user.last_complete_school_info&.school
+      teachers_school = Queries::SchoolInfo.last_complete(current_user)&.school
       render json: {
         teacher_first_name: current_user.short_name,
         teacher_second_name: current_user.second_name,
