@@ -101,8 +101,8 @@ const sketch = p5 => {
     eyes = [[leftEyeXPos, eyeYPos, eyeSize], [rightEyeXPos, eyeYPos, eyeSize]];
 
     drawMouth = () => {
-      const mouthW = randomInt(1, MAX_MOUTH_SIZE);
-      const mouthH = randomInt(1, MAX_MOUTH_SIZE);
+      const mouthW = randomInt(MIN_MOUTH_SIZE, MAX_MOUTH_SIZE);
+      const mouthH = randomInt(MIN_MOUTH_SIZE, MAX_MOUTH_SIZE);
       const yPos = eyeYPos + eyeSize / 2 + MOUTH_TO_EYE_DISTANCE;
       p5.noFill();
 
