@@ -1,5 +1,5 @@
 / Show the correct answer to authorized teachers
-- if current_user.try(:should_see_inline_answer?, @script_level)
+- if Policies::InlineAnswer.visible?(current_user, @script_level)
   #markdown.teacher.hide-as-student
     %h3= t('teacher.answer')
     .content
