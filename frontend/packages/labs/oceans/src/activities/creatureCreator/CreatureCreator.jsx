@@ -19,6 +19,10 @@ export default class CreatureCreator extends React.Component {
     this.p5.setCreature(type);
   };
 
+  download = () => {
+    this.p5.download(CANVAS_ID);
+  };
+
   render() {
     return (
       <div>
@@ -30,6 +34,9 @@ export default class CreatureCreator extends React.Component {
         <br />
         <br />
         <div id={CANVAS_ID} />
+        <br />
+        <br />
+        <Button onClick={() => this.download()}>Download as .png</Button>
       </div>
     );
   }

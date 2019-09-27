@@ -121,6 +121,10 @@ const sketch = p5 => {
 
     draw();
   };
+
+  p5.download = canvasId => {
+    p5.saveCanvas(canvasId, "png");
+  };
 };
 
 export default sketch;
