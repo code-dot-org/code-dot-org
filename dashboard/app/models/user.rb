@@ -1461,16 +1461,6 @@ class User < ActiveRecord::Base
     Experiment.get_all_enabled(user: self).pluck(:name)
   end
 
-  def in_progress_and_completed_scripts
-    user_scripts.compact.reject do |user_script|
-      user_script.script.nil?
-    rescue
-      # Getting user_script.script can raise if the script does not exist
-      # In that case we should also reject this user_script.
-      true
-    end
-  end
-
   # Returns an array of hashes storing data for each unique course assigned to # sections that this user is a part of.
   # @return [Array{CourseData}]
   def assigned_courses
@@ -1622,49 +1612,6 @@ class User < ActiveRecord::Base
   # @return [Section|nil]
   def last_joined_section
     Follower.where(student_user: self).order(created_at: :desc).first.try(:section)
-  end
-
-  def completed?(script)
-    user_script = user_scripts.where(script_id: script.id).first
-    return false unless user_script
-    !!user_script.completed_at || completed_progression_levels?(script)
-  end
-
-  def not_started?(script)
-    !completed?(script) && !a_level_passed?(script)
-  end
-
-  def a_level_passed?(script)
-    user_levels_by_level = user_levels_by_level(script)
-    script.script_levels.detect do |script_level|
-      user_level = user_levels_by_level[script_level.level_id]
-      is_passed = (user_level && user_level.passing?)
-      script_level.valid_progression_level? && is_passed
-    end
-  end
-
-  def working_on?(script)
-    working_on_scripts.include?(script)
-  end
-
-  def working_on_scripts
-    scripts.where('user_scripts.completed_at is null').map(&:cached)
-  end
-
-  # NOTE: Changes to this method should be mirrored in
-  # in_progress_and_completed_scripts.
-  def working_on_user_scripts
-    user_scripts.where('user_scripts.completed_at is null')
-  end
-
-  # NOTE: Changes to this method should be mirrored in
-  # in_progress_and_completed_scripts.
-  def completed_user_scripts
-    user_scripts.where('user_scripts.completed_at is not null')
-  end
-
-  def primary_script
-    working_on_scripts.first.try(:cached)
   end
 
   # Returns integer days since account creation, rounded down
