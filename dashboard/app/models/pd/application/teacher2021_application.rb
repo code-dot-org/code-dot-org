@@ -299,8 +299,11 @@ module Pd::Application
           end
         end
 
-        if hash[:regional_partner_id] && hash[:pay_fee] == TEXT_FIELDS[:no_pay_fee_2021]
-          required << :scholarship_reasons
+        if hash[:regional_partner_id].present?
+          required << :pay_fee
+          if hash[:pay_fee] == TEXT_FIELDS[:no_pay_fee_2021]
+            required << :scholarship_reasons
+          end
         end
 
         if hash[:program] == PROGRAMS[:csd]
