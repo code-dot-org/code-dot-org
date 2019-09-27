@@ -10,6 +10,7 @@ const CANVAS_BG_COLOR = [243, 243, 243];
 const MIN_BODY_SIZE = 100;
 const MIN_EYE_SIZE = 20;
 const MOUTH_TO_EYE_DISTANCE = 20;
+const MIN_MOUTH_SIZE = 5;
 const MAX_MOUTH_SIZE = 80;
 
 /**
@@ -100,22 +101,17 @@ const sketch = p5 => {
     eyes = [[leftEyeXPos, eyeYPos, eyeSize], [rightEyeXPos, eyeYPos, eyeSize]];
 
     drawMouth = () => {
+      const mouthW = randomInt(1, MAX_MOUTH_SIZE);
+      const mouthH = randomInt(1, MAX_MOUTH_SIZE);
       const yPos = eyeYPos + eyeSize / 2 + MOUTH_TO_EYE_DISTANCE;
       p5.noFill();
 
       if (type === CreatureType.Good) {
         // smile
-        p5.arc(CENTER_X, yPos, MAX_MOUTH_SIZE, MAX_MOUTH_SIZE, 0, Math.PI);
+        p5.arc(CENTER_X, yPos, mouthW, mouthH, 0, Math.PI);
       } else if (type === CreatureType.Bad) {
         // frown
-        p5.arc(
-          CENTER_X,
-          yPos,
-          MAX_MOUTH_SIZE,
-          MAX_MOUTH_SIZE,
-          Math.PI,
-          2 * Math.PI
-        );
+        p5.arc(CENTER_X, yPos, mouthW, mouthH, Math.PI, 2 * Math.PI);
       }
     };
 
