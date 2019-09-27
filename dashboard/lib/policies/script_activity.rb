@@ -20,8 +20,4 @@ class Policies::ScriptActivity
   def self.not_started?(user, script)
     !completed?(user, script) && !a_level_passed?(user, script)
   end
-
-  def self.working_on?(user, script)
-    Queries::ScriptActivity.working_on_scripts(user).include?(script)
-  end
 end
