@@ -146,20 +146,29 @@ export default class Results extends React.Component {
   }
 
   renderSurveyRollups() {
+    // TODO: display tab only when data is available
     return [
       <Tab
         eventKey={this.props.sessions.length + 1}
         key={1}
         title="Workshop Rollups"
       >
-        <SurveyRollupTable data={this.props.workshopRollups} />
+        <SurveyRollupTable
+          rollups={this.props.workshopRollups.rollups}
+          questions={this.props.workshopRollups.questions}
+          facilitators={this.props.workshopRollups.facilitators}
+        />
       </Tab>,
       <Tab
         eventKey={this.props.sessions.length + 2}
         key={2}
         title="Facilitator Rollups"
       >
-        <SurveyRollupTable data={this.props.facilitatorRollups} />
+        <SurveyRollupTable
+          rollups={this.props.facilitatorRollups.rollups}
+          questions={this.props.facilitatorRollups.questions}
+          facilitators={this.props.facilitatorRollups.facilitators}
+        />
       </Tab>
     ];
   }
