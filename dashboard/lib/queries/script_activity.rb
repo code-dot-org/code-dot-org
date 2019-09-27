@@ -16,7 +16,7 @@ class Queries::ScriptActivity
   end
 
   def self.primary_script(user)
-    user.working_on_scripts.first.try(:cached)
+    working_on_scripts(user).first.try(:cached)
   end
 
   def self.in_progress_and_completed_scripts(user)
