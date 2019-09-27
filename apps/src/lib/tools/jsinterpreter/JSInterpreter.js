@@ -5,6 +5,7 @@ import acorn from '@code-dot-org/js-interpreter/acorn';
 import {getStore} from '../../../redux';
 import CustomMarshalingInterpreter from './CustomMarshalingInterpreter';
 import CustomMarshaler from './CustomMarshaler';
+import {generateAST} from '@code-dot-org/js-interpreter';
 
 import {setIsDebuggerPaused} from '../../../redux/runState';
 
@@ -243,6 +244,80 @@ export default class JSInterpreter {
       this.executionError = err;
       this.handleError();
     }
+  }
+
+  /**
+   * Builds a list of objects that contain all metadata about any functions in
+   * the given code string. Each object in the returned list has the following
+   * properties:
+   * functionName - the name of the function
+   * parameters - the names of the parameters passed into the function
+   * comment - the comment describing the function. This could be in a JSDoc,
+   * multiline, singleline, or multiple singlelines format.
+   *
+   * @param {string} code - The code to be parsed for functions
+   * @return {array} functionsAndMetadata - all functions from the input 'code'
+   *         along with their relevant metadata
+   */
+  static getFunctionsAndMetadata(code) {
+    // Private helper functions
+    function getPrecedingComment(allComments, startingLocation) {
+      return allComments.find(comment => {
+        return comment.endLocation === startingLocation - 1;
+      });
+    }
+
+    function trimWhitespaceFromLineEndings(code) {
+      return code
+        .split('\n')
+        .map(line => {
+          // The regex /\s+$/gm detects whitespace at the end of a line
+          return line.replace(/\s+$/gm, '');
+        })
+        .join('\n');
+    }
+
+    let functionsAndMetadata = [];
+    let allComments = [];
+    let parserOptions = {
+      // Tell the AST parser to push comments into our allComments array
+      onComment: (isBlockComment, text, startLocation, endLocation) => {
+        allComments.push({isBlockComment, text, startLocation, endLocation});
+      }
+    };
+
+    // trim whitespace to ensure we correctly detect comments
+    code = trimWhitespaceFromLineEndings(code);
+    let ast = generateAST(code, parserOptions);
+    let codeFunctions = ast.body.filter(node => {
+      return node.type === 'FunctionDeclaration';
+    });
+
+    codeFunctions.forEach(codeFunction => {
+      let comment = getPrecedingComment(allComments, codeFunction.start);
+      let commentText = comment ? comment.text : '';
+      if (comment && comment.isBlockComment && commentText[0] === '*') {
+        // For a JSDoc style comment, acorn doesn't strip the * that starts
+        // each line, so we do that here.
+        commentText = commentText
+          .substr(1)
+          .split('\n * ')
+          .join('\n');
+      }
+      commentText = commentText.trim();
+
+      let params = codeFunction.params.map(param => {
+        return param.name;
+      });
+
+      functionsAndMetadata.push({
+        functionName: codeFunction.id.name,
+        parameters: params,
+        comment: commentText
+      });
+    });
+
+    return functionsAndMetadata;
   }
 
   /**
