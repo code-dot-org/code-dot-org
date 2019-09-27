@@ -816,7 +816,7 @@ module LevelsHelper
   # Should the multi calling on this helper function include answers to be rendered into the client?
   # Caller indicates whether the level is standalone or not.
   def include_multi_answers?(standalone)
-    standalone || current_user.try(:should_see_inline_answer?, @script_level)
+    standalone || Policies::InlineAnswer.visible?(current_user, @script_level)
   end
 
   # Finds the existing LevelSourceImage corresponding to the specified level
