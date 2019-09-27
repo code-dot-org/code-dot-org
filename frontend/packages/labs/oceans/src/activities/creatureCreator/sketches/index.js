@@ -119,7 +119,7 @@ const sketch = p5 => {
   };
 
   p5.download = canvasId => {
-    p5.saveCanvas(canvasId, "png");
+    p5.saveCanvas(canvasId, 'png');
   };
 };
 
@@ -138,7 +138,7 @@ const bodyShapeFor = creatureType => {
   } else if (creatureType === CreatureType.Bad) {
     return BodyShape.Ellipse;
   } else {
-    console.error("Unknown CreatureType!");
+    console.error('Unknown CreatureType!');
     return BodyShape.None;
   }
 };

@@ -1,9 +1,9 @@
-import React from "react";
-import sketch, { CreatureType } from "./sketches";
-import Button from "react-bootstrap/lib/Button";
-const P5 = require("./loadP5");
+import React from 'react';
+import sketch, { CreatureType } from './sketches';
+import Button from 'react-bootstrap/lib/Button';
+const P5 = require('./loadP5');
 
-const CANVAS_ID = "p5-canvas";
+const CANVAS_ID = 'p5-canvas';
 
 export default class CreatureCreator extends React.Component {
   componentDidMount() {
@@ -12,7 +12,7 @@ export default class CreatureCreator extends React.Component {
 
   setCreature = type => {
     if (!Object.values(CreatureType).includes(type)) {
-      console.error("Unknown CreatureType!");
+      console.error('Unknown CreatureType!');
       return;
     }
 
