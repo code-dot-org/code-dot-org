@@ -22,7 +22,7 @@ Scenario: Game lab level where student has not started
   And I close my eyes
 
 Scenario: Maze level where student has not started
-  When I open my eyes to test "game lab student has not started"
+  When I open my eyes to test "maze student has not started"
   When I sign in as "Teacher_Sally" and go home
   And I wait until element ".uitest-owned-sections" is visible
 
