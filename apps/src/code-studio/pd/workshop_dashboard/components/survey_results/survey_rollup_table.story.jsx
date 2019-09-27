@@ -9,17 +9,17 @@ const facilitator_rollups = {
   },
   questions: {
     facilitator_effectiveness_1494688268261028618:
-      'During my workshop, {facilitatorName} did the following: -> Demonstrated knowledge of the curriculum.',
+      'Demonstrated knowledge of the curriculum.',
     facilitator_effectiveness_9145365597108923713:
-      'During my workshop, {facilitatorName} did the following: -> Built and sustained an equitable learning environment in our workshop.',
+      'Built and sustained an equitable learning environment in our workshop.',
     facilitator_effectiveness_6627891197594983630:
-      'During my workshop, {facilitatorName} did the following: -> Kept the workshop and participants on track.',
+      'Kept the workshop and participants on track.',
     facilitator_effectiveness_10623511283632440781:
-      'During my workshop, {facilitatorName} did the following: -> Supported productive workshop discussions.',
+      'Supported productive workshop discussions.',
     facilitator_effectiveness_8015784983354522873:
-      'During my workshop, {facilitatorName} did the following: -> Helped me see ways to create and support an equitable learning environment for my students.',
+      'Helped me see ways to create and support an equitable learning environment for my students.',
     facilitator_effectiveness_16129913079128962044:
-      'During my workshop, {facilitatorName} did the following: -> Demonstrated a healthy working relationship with their co-facilitator (if applicable).'
+      'Demonstrated a healthy working relationship with their co-facilitator (if applicable).'
   },
   rollups: {
     facilitator_1124_single_ws: {
@@ -80,23 +80,23 @@ const workshop_rollups = {
   },
   questions: {
     overall_success_2136245491560413670:
-      'How much do you agree or disagree with the following statements about the workshop overall? -\u003e I feel more prepared to teach the material covered in this workshop than before I came.',
+      'I feel more prepared to teach the material covered in this workshop than before I came.',
     overall_success_9121793211174253549:
-      'How much do you agree or disagree with the following statements about the workshop overall? -\u003e I know where to go if I need help preparing to teach this material.',
+      'I know where to go if I need help preparing to teach this material.',
     overall_success_5502876428019550646:
-      'How much do you agree or disagree with the following statements about the workshop overall? -\u003e This professional development was suitable for my level of experience with teaching CS.',
+      'This professional development was suitable for my level of experience with teaching CS.',
     overall_success_3964718812856239438:
-      'How much do you agree or disagree with the following statements about the workshop overall? -\u003e I feel connected to a community of computer science teachers.',
+      'I feel connected to a community of computer science teachers.',
     overall_success_6174705123632039779:
-      'How much do you agree or disagree with the following statements about the workshop overall? -\u003e I would recommend this professional development to others',
+      'I would recommend this professional development to others',
     teacher_engagement_8809902359007963123:
-      'How much do you agree or disagree with the following statements about your level of engagement in the workshop? -\u003e I found the activities we did in this workshop interesting and engaging.',
+      'I found the activities we did in this workshop interesting and engaging.',
     teacher_engagement_12316562461560038168:
-      'How much do you agree or disagree with the following statements about your level of engagement in the workshop? -\u003e I was highly active and participated a lot in the workshop activities.',
+      'I was highly active and participated a lot in the workshop activities.',
     teacher_engagement_8566597854585674670:
-      "How much do you agree or disagree with the following statements about your level of engagement in the workshop? -\u003e When I'm not in Code.org workshops, I frequently talk about ideas or content from the workshop with others.",
+      'I frequently talk about ideas or content from the workshop with others.',
     teacher_engagement_12383077849665641424:
-      'How much do you agree or disagree with the following statements about your level of engagement in the workshop? -\u003e I am definitely planning to make use of ideas and content covered in this workshop in my classroom.'
+      'I am planning to make use of ideas and content covered in this workshop in my classroom.'
   },
   rollups: {
     this_ws: {
