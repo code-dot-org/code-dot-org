@@ -885,19 +885,17 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     sign_in @teacher
 
     fake_last_attempt = 'STUDENT_LAST_ATTEMPT_SOURCE'
-    User.any_instance.
-      expects(:user_level_for).
-      returns(
-        create(:user_level,
-          user: @student,
-          level_source: create(:level_source, data: fake_last_attempt)
-        )
-      )
 
     user_storage_id = storage_id_for_user_id(@student.id)
 
     level = create :applab
     script_level = create :script_level, levels: [level]
+    create(:user_level,
+      user: @student,
+      script: script_level.script,
+      level: script_level.level,
+      level_source: create(:level_source, data: fake_last_attempt)
+    )
 
     create :channel_token, level: level, storage_id: user_storage_id
 
@@ -918,19 +916,17 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     sign_in @project_validator
 
     fake_last_attempt = 'STUDENT_LAST_ATTEMPT_SOURCE'
-    User.any_instance.
-      expects(:user_level_for).
-      returns(
-        create(:user_level,
-          user: @student,
-          level_source: create(:level_source, data: fake_last_attempt)
-        )
-      )
 
     user_storage_id = storage_id_for_user_id(@student.id)
 
     level = create :applab
     script_level = create :script_level, levels: [level]
+    create(:user_level,
+      user: @student,
+      script: script_level.script,
+      level: script_level.level,
+      level_source: create(:level_source, data: fake_last_attempt)
+    )
 
     create :channel_token, level: level, storage_id: user_storage_id
 
@@ -954,17 +950,15 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     user_storage_id = storage_id_for_user_id(other_student.id)
 
     fake_last_attempt = 'STUDENT_LAST_ATTEMPT_SOURCE'
-    User.any_instance.
-      expects(:user_level_for).
-      returns(
-        create(:user_level,
-          user: other_student,
-          level_source: create(:level_source, data: fake_last_attempt)
-        )
-      )
 
     level = create :applab
     script_level = create :script_level, levels: [level]
+    create(:user_level,
+      user: @student,
+      script: script_level.script,
+      level: script_level.level,
+      level_source: create(:level_source, data: fake_last_attempt)
+    )
 
     create :channel_token, level: level, storage_id: user_storage_id
 
@@ -985,17 +979,15 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     sign_in @teacher
 
     fake_last_attempt = 'STUDENT_LAST_ATTEMPT_SOURCE'
-    User.any_instance.
-      expects(:user_level_for).
-      returns(
-        create(:user_level,
-          user: @student,
-          level_source: create(:level_source, data: fake_last_attempt)
-        )
-      )
 
     level = create :applab
     script_level = create :script_level, levels: [level]
+    create(:user_level,
+      user: @student,
+      script: script_level.script,
+      level: script_level.level,
+      level_source: create(:level_source, data: fake_last_attempt)
+    )
 
     get :show, params: {
       script_id: script_level.script,
