@@ -127,7 +127,7 @@ class HomeController < ApplicationController
       student_id: current_user.id
     ).count > 0
 
-    script = current_user.primary_script
+    script = Queries::ScriptActivity.primary_script(current_user)
     if script
       script_level = current_user.next_unpassed_progression_level(script)
     end
