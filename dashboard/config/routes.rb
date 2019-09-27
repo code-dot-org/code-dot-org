@@ -322,6 +322,7 @@ Dashboard::Application.routes.draw do
   get '/admin/lookup_section', to: 'admin_search#lookup_section', as: 'lookup_section'
   post '/admin/lookup_section', to: 'admin_search#lookup_section'
   post '/admin/undelete_section', to: 'admin_search#undelete_section', as: 'undelete_section'
+  get '/admin/pilots/:pilot_name', to: 'admin_search#show_pilot', as: 'show_pilot'
 
   # internal engineering dashboards
   get '/admin/dynamic_config', to: 'dynamic_config#show', as: 'dynamic_config_state'

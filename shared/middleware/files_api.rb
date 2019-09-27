@@ -29,6 +29,8 @@ class FilesApi < Sinatra::Base
       FileBucket
     when 'sources'
       SourceBucket
+    when 'libraries'
+      LibraryBucket
     else
       not_found
     end
@@ -107,7 +109,7 @@ class FilesApi < Sinatra::Base
   end
 
   helpers do
-    %w(core.rb bucket_helper.rb animation_bucket.rb file_bucket.rb asset_bucket.rb source_bucket.rb storage_id.rb auth_helpers.rb profanity_privacy_helper.rb).each do |file|
+    %w(core.rb bucket_helper.rb animation_bucket.rb file_bucket.rb asset_bucket.rb source_bucket.rb storage_id.rb auth_helpers.rb profanity_privacy_helper.rb library_bucket.rb).each do |file|
       load(CDO.dir('shared', 'middleware', 'helpers', file))
     end
   end
@@ -119,11 +121,11 @@ class FilesApi < Sinatra::Base
   end
 
   #
-  # GET /v3/(animations|assets|sources)/<channel-id>
+  # GET /v3/(animations|assets|sources|libraries)/<channel-id>
   #
   # List filenames and sizes.
   #
-  get %r{/v3/(animations|assets|sources)/([^/]+)$} do |endpoint, encrypted_channel_id|
+  get %r{/v3/(animations|assets|sources|libraries)/([^/]+)$} do |endpoint, encrypted_channel_id|
     dont_cache
     content_type :json
 
@@ -135,11 +137,11 @@ class FilesApi < Sinatra::Base
   end
 
   #
-  # GET /v3/(animations|assets|sources|files)/<channel-id>/<filename>?version=<version-id>
+  # GET /v3/(animations|assets|sources|files|libraries)/<channel-id>/<filename>?version=<version-id>
   #
   # Read a file. Optionally get a specific version instead of the most recent.
   #
-  get %r{/v3/(animations|assets|sources|files)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
+  get %r{/v3/(animations|assets|sources|files|libraries)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
     get_file(endpoint, encrypted_channel_id, filename)
   end
 
@@ -394,11 +396,11 @@ class FilesApi < Sinatra::Base
 
   #
   # PUT /v3/(sources)/<channel-id>/<filename>?version=<version-id>
-  # PUT /v3/(assets)/<channel-id>/<filename>
+  # PUT /v3/(assets|libraries)/<channel-id>/<filename>
   #
   # Create or replace a file. For sources endpoint, optionally overwrite a specific version.
   #
-  put %r{/v3/(sources|assets)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
+  put %r{/v3/(sources|assets|libraries)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
     dont_cache
     content_type :json
 
@@ -487,11 +489,11 @@ class FilesApi < Sinatra::Base
   end
 
   #
-  # PATCH /v3/(animations|assets|sources|files)/<channel-id>?abuse_score=<abuse_score>
+  # PATCH /v3/(animations|assets|sources|files|libraries)/<channel-id>?abuse_score=<abuse_score>
   #
   # Update all assets for the given channelId to have the provided abuse score
   #
-  patch %r{/v3/(animations|assets|sources|files)/([^/]+)/$} do |endpoint, encrypted_channel_id|
+  patch %r{/v3/(animations|assets|sources|files|libraries)/([^/]+)/$} do |endpoint, encrypted_channel_id|
     dont_cache
 
     abuse_score = request.GET['abuse_score']
@@ -514,11 +516,11 @@ class FilesApi < Sinatra::Base
   end
 
   #
-  # DELETE /v3/(animations|assets|sources)/<channel-id>/<filename>
+  # DELETE /v3/(animations|assets|sources|libraries)/<channel-id>/<filename>
   #
   # Delete a file.
   #
-  delete %r{/v3/(animations|assets|sources)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
+  delete %r{/v3/(animations|assets|sources|libraries)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
     dont_cache
 
     not_authorized unless owns_channel?(encrypted_channel_id)
@@ -528,12 +530,12 @@ class FilesApi < Sinatra::Base
   end
 
   #
-  # GET /v3/(animations|sources)/<channel-id>/<filename>/versions
+  # GET /v3/(animations|sources|files|libraries)/<channel-id>/<filename>/versions
   #
   # List versions of the given file.
   # NOTE: Not yet implemented for assets.
   #
-  get %r{/v3/(animations|sources|files)/([^/]+)/([^/]+)/versions$} do |endpoint, encrypted_channel_id, filename|
+  get %r{/v3/(animations|sources|files|libraries)/([^/]+)/([^/]+)/versions$} do |endpoint, encrypted_channel_id, filename|
     dont_cache
     content_type :json
 
