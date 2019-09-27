@@ -28,7 +28,9 @@ import * as apiTimeoutList from '../lib/util/timeoutList';
 import designMode from './designMode';
 import applabTurtle from './applabTurtle';
 import applabCommands from './commands';
-import JSInterpreter from '../lib/tools/jsinterpreter/JSInterpreter';
+import JSInterpreter, {
+  getFunctionsAndMetadata
+} from '../lib/tools/jsinterpreter/JSInterpreter';
 import JsInterpreterLogger from '../JsInterpreterLogger';
 import * as elementUtils from './designElements/elementUtils';
 import {shouldOverlaysBeVisible} from '../templates/VisualizationOverlay';
@@ -345,6 +347,10 @@ Applab.setLevelHtml = function(html) {
   // screen is visible.
   designMode.loadDefaultScreen();
   designMode.serializeToLevelHtml();
+};
+
+Applab.getFunctions = function() {
+  return getFunctionsAndMetadata(Applab.getCode());
 };
 
 Applab.onTick = function() {
@@ -723,6 +729,8 @@ Applab.init = function(config) {
     });
   }
 
+  loadLibraryBlocks(config);
+
   // Set the custom set of blocks (may have had maker blocks merged in) so
   // we can later pass the custom set to the interpreter.
   config.level.levelBlocks = config.dropletConfig.blocks;
@@ -775,6 +783,30 @@ Applab.init = function(config) {
   }
   return loader;
 };
+
+function loadLibraryBlocks(config) {
+  if (!level.libraries) {
+    return;
+  }
+
+  level.libraryCode = '';
+  level.libraries.forEach(library => {
+    config.dropletConfig.additionalPredefValues.push(library.name);
+    level.libraryCode += library.source;
+    // TODO: add category management for libraries (blocked on spec)
+    // config.dropletConfig.categories['libraryName'] = {
+    //   id: 'libraryName',
+    //   color: 'colorName',
+    //   rgb: 'colorHexCode',
+    //   blocks: []
+    // };
+
+    library.dropletConfig.forEach(dropletConfig => {
+      config.dropletConfig.blocks.push(dropletConfig);
+      level.codeFunctions[dropletConfig.func] = null;
+    });
+  });
+}
 
 function changedToDataMode(state, lastState) {
   return (
@@ -1236,6 +1268,7 @@ Applab.execute = function() {
     // Initialize the interpreter and parse the student code
     Applab.JSInterpreter.parse({
       code: codeWhenRun,
+      libraryCode: level.libraryCode,
       blocks: level.levelBlocks,
       blockFilter: level.executePaletteApisOnly && level.codeFunctions,
       enableEvents: true
