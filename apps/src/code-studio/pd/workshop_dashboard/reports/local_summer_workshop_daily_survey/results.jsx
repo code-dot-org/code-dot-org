@@ -146,31 +146,44 @@ export default class Results extends React.Component {
   }
 
   renderSurveyRollups() {
-    // TODO: display tab only when data is available
-    return [
-      <Tab
-        eventKey={this.props.sessions.length + 1}
-        key={1}
-        title="Workshop Rollups"
-      >
-        <SurveyRollupTable
-          rollups={this.props.workshopRollups.rollups}
-          questions={this.props.workshopRollups.questions}
-          facilitators={this.props.workshopRollups.facilitators}
-        />
-      </Tab>,
-      <Tab
-        eventKey={this.props.sessions.length + 2}
-        key={2}
-        title="Facilitator Rollups"
-      >
-        <SurveyRollupTable
-          rollups={this.props.facilitatorRollups.rollups}
-          questions={this.props.facilitatorRollups.questions}
-          facilitators={this.props.facilitatorRollups.facilitators}
-        />
-      </Tab>
-    ];
+    let tabs = [];
+    let key = 0;
+
+    if (this.props.workshopRollups) {
+      key += 1;
+      tabs.push(
+        <Tab
+          eventKey={this.props.sessions.length + key}
+          key={key}
+          title="Workshop Rollups"
+        >
+          <SurveyRollupTable
+            rollups={this.props.workshopRollups.rollups}
+            questions={this.props.workshopRollups.questions}
+            facilitators={this.props.workshopRollups.facilitators}
+          />
+        </Tab>
+      );
+    }
+
+    if (this.props.facilitatorRollups) {
+      key += 1;
+      tabs.push(
+        <Tab
+          eventKey={this.props.sessions.length + key}
+          key={key}
+          title="Facilitator Rollups"
+        >
+          <SurveyRollupTable
+            rollups={this.props.facilitatorRollups.rollups}
+            questions={this.props.facilitatorRollups.questions}
+            facilitators={this.props.facilitatorRollups.facilitators}
+          />
+        </Tab>
+      );
+    }
+
+    return tabs;
   }
 
   render() {
