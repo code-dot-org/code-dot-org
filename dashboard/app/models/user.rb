@@ -288,19 +288,6 @@ class User < ActiveRecord::Base
     end
   end
 
-  # Most recently created user_school_info referring to a complete school_info entry
-  def last_complete_user_school_info
-    user_school_infos.
-      includes(:school_info).
-      select {|usi| usi.school_info.complete?}.
-      sort_by(&:created_at).
-      last
-  end
-
-  def last_complete_school_info
-    last_complete_user_school_info&.school_info
-  end
-
   belongs_to :invited_by, polymorphic: true
 
   validate :admins_must_be_teachers_without_followeds
@@ -2040,7 +2027,7 @@ class User < ActiveRecord::Base
   # Returns the name of the donor for the donor teacher banner and donor footer, or nil if none.
   # Donors are associated with certain schools, captured in DonorSchool and populated from a Pegasus gsheet
   def school_donor_name
-    school_id = last_complete_school_info&.school&.id
+    school_id = Queries::SchoolInfo.last_complete(self)&.school&.id
     donor_name = DonorSchool.find_by(nces_id: school_id)&.name if school_id
 
     donor_name

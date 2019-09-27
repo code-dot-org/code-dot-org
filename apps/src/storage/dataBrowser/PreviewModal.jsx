@@ -28,15 +28,18 @@ class PreviewModal extends React.Component {
     }
     const datasetInfo = getDatasetInfo(this.props.tableName);
     return (
-      <BaseDialog isOpen handleClose={this.props.onClose} fullWidth>
+      <BaseDialog isOpen handleClose={this.props.onClose} fullWidth fullHeight>
         <h1>{this.props.tableName}</h1>
         <p>{datasetInfo.description}</p>
-        <DataTable
-          getColumnNames={(records, columns) =>
-            parseColumnsFromRecords(records)
-          }
-          readOnly
-        />
+        <div style={{overflow: 'scroll', maxHeight: '70%'}}>
+          <DataTable
+            getColumnNames={(records, columns) =>
+              parseColumnsFromRecords(records)
+            }
+            readOnly
+            rowsPerPage={100}
+          />
+        </div>
         <button type="button" onClick={() => this.importTable(datasetInfo)}>
           {msg.import()}
         </button>
@@ -48,7 +51,7 @@ class PreviewModal extends React.Component {
 export default connect(
   state => ({
     isPreviewOpen: state.data.isPreviewOpen,
-    tableName: state.data.tableName
+    tableName: state.data.tableName || ''
   }),
   dispatch => ({
     onClose() {
