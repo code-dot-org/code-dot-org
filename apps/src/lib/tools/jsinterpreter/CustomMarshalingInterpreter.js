@@ -525,7 +525,6 @@ export default class CustomMarshalingInterpreter extends Interpreter {
    * @param {Function} intFunc The interpreter supplied callback function
    */
   marshalNativeToInterpreter(nativeVar, nativeParentObj, maxDepth) {
-    // debugger;
     if (maxDepth === 0 || typeof nativeVar === 'undefined') {
       return this.UNDEFINED;
     }
@@ -800,7 +799,6 @@ export default class CustomMarshalingInterpreter extends Interpreter {
       nativeCallsBackInterpreter
     } = opts;
     return (...args) => {
-      // debugger;
       let nativeArgs = [];
       if (dontMarshal) {
         nativeArgs = args;

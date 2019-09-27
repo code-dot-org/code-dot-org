@@ -194,7 +194,6 @@ export default class JSInterpreter {
           this.interpreter = interpreter;
           // Store globalScope on JSInterpreter
           this.globalScope = scope;
-          // debugger;
           codegen.initJSInterpreter(
             interpreter,
             options.blocks,
