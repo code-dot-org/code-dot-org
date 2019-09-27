@@ -1,0 +1,28 @@
+name 'contained_Choose_2_Test_2'
+title ''
+type 'multi2'
+question 'Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers'
+right 'Line 2'
+right 'Line 3'
+wrong 'Line 4'
+wrong 'Line 5'
+markdown <<MARKDOWN
+
+</br>
+Consider the following incorrect program, which is intended to move the robot around the perimeter of the grid below, as indicated by the arrows.
+
+<pre>
+Line 1: REPEAT 4 TIMES
+        {
+Line 2:    Move Forward
+Line 3:    Rotate Right
+Line 4:    REPEAT 4 TIMES
+           {
+Line 5:        Move Forward
+           }
+Line 6:    Rotate Right
+        }
+</pre>
+
+<img src="/script_assets/csp/instruction_gifs/U3L02-rightSquare.png" width ="200" height="200" />
+MARKDOWN
