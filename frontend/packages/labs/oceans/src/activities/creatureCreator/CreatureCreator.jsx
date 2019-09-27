@@ -1,9 +1,15 @@
-import React from "react";
-import sketch, { CreatureType } from "./sketches";
-import Button from "react-bootstrap/lib/Button";
-const P5 = require("./loadP5");
+import React from 'react';
+import sketch from './sketches';
+import Button from 'react-bootstrap/lib/Button';
+const P5 = require('./loadP5');
 
-const CANVAS_ID = "p5-canvas";
+const CANVAS_ID = 'p5-canvas';
+
+export const CreatureType = Object.freeze({
+  None: 0,
+  Good: 1,
+  Bad: 2
+});
 
 export default class CreatureCreator extends React.Component {
   componentDidMount() {
@@ -12,15 +18,11 @@ export default class CreatureCreator extends React.Component {
 
   setCreature = type => {
     if (!Object.values(CreatureType).includes(type)) {
-      console.error("Unknown CreatureType!");
+      console.error('Unknown CreatureType!');
       return;
     }
 
     this.p5.setCreature(type);
-  };
-
-  download = () => {
-    this.p5.download(CANVAS_ID);
   };
 
   render() {
@@ -34,9 +36,6 @@ export default class CreatureCreator extends React.Component {
         <br />
         <br />
         <div id={CANVAS_ID} />
-        <br />
-        <br />
-        <Button onClick={() => this.download()}>Download as .png</Button>
       </div>
     );
   }
