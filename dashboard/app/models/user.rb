@@ -1055,7 +1055,7 @@ class User < ActiveRecord::Base
     # will be redirected to /congrats.
     return nil if completed?(script)
 
-    visible_sls = visible_script_levels(script).reject {|sl| sl.bonus || sl.level.unplugged? || sl.locked?(self)}
+    visible_sls = visible_script_levels(script).reject {|sl| sl.bonus || sl.level.unplugged?}
 
     sl_level_ids = visible_sls.map(&:level_ids).flatten
 
