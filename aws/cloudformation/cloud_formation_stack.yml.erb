@@ -46,8 +46,8 @@ self.log_resource_filter.push 'FrontendLaunchConfig', 'ASGCount'
 if %w(autoscale-prod test staging levelbuilder).include? stack_name
   self.daemon_instance_id = {
     'autoscale-prod' => 'i-436d69dd',
-    'test' => 'i-f85e6666',
-    'staging' => 'i-57a3afc7',
+    'test' => 'i-004727200191f3251',
+    'staging' => 'i-02e6cdc765421ab34',
     'levelbuilder' => 'i-03a540ccf70cc8138'
   }[stack_name]
 else
@@ -253,8 +253,8 @@ Resources:
       ConnectionDrainingPolicy:
         Enabled: true
         Timeout: 300
-<%   if !frontends && daemon -%>
-      Instances: [!Ref <%=daemon%>]
+<%   if !frontends && daemon_instance_id -%>
+      Instances: [<%=daemon_instance_id%>]
 <%   end -%>
 <% end -%>
 
