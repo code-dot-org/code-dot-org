@@ -93,7 +93,8 @@ Scenario: Unauthorized Teacher on Maze with multiple choice contained level
   Given I am a teacher
   And I am on "http://studio.code.org/s/coursee-2019/stage/4/puzzle/2"
   And I rotate to landscape
-  And I wait for the page to fully load
+  When I wait to see "#runButton"
+  And I wait to see ".header_user"
   Then I see no difference for "initial load"
   Then I press "unchecked_0"
   And I see no difference for "answer entered"
