@@ -49,7 +49,8 @@ class AdminUsersController < ApplicationController
     if user
       bypass_sign_in user
       # Set cookie to indicate assumed identity
-      cookies[environment_specific_cookie_name("_assumed_identity")] = {value: "true", domain: :all, httponly: true}
+      session[:assumed_identity] = true
+      # cookies[environment_specific_cookie_name("_assumed_identity")] = {value: "true", domain: :all, httponly: true}
       redirect_to '/'
     else
       flash[:alert] = 'User not found'
