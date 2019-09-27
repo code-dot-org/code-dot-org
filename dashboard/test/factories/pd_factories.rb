@@ -998,7 +998,7 @@ FactoryGirl.define do
     cs_total_course_hours 75
     replace_existing 'No, this course will be added to the schedule in addition to an existing computer science course'
     pay_fee 'Yes, my school will be able to pay the full program fee.'
-    plan_to_teach 'Yes, I plan to teach this course this year (2020-21)'
+    plan_to_teach Pd::Application::Teacher2021Application.options[:plan_to_teach].first
     interested_in_online_program 'Yes'
 
     initialize_with do
