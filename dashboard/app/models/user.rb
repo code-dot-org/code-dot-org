@@ -1024,13 +1024,6 @@ class User < ActiveRecord::Base
     user_levels.where(script: stage.script, level: levels).pluck(:level_id, :best_result).to_h
   end
 
-  def user_level_for(script_level, level)
-    user_levels.find_by(
-      script_id: script_level.script_id,
-      level_id: level.id
-    )
-  end
-
   def has_activity?
     user_levels.attempted.exists?
   end
@@ -2007,15 +2000,6 @@ class User < ActiveRecord::Base
   # Returns the latest major version of the Terms of Service
   def latest_terms_version
     TERMS_OF_SERVICE_VERSIONS.last
-  end
-
-  def should_see_inline_answer?(script_level)
-    return true if Rails.application.config.levelbuilder_mode
-
-    script = script_level.try(:script)
-
-    (authorized_teacher? && script && !script.professional_learning_course?) ||
-      (script_level && UserLevel.find_by(user: self, level: script_level.level).try(:readonly_answers))
   end
 
   def show_census_teacher_banner?
