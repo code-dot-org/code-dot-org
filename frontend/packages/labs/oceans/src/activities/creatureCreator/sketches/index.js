@@ -9,6 +9,8 @@ const CANVAS_BG_COLOR = [243, 243, 243];
 
 const MIN_BODY_SIZE = 100;
 const MIN_EYE_SIZE = 20;
+const MOUTH_TO_EYE_DISTANCE = 20;
+const MAX_MOUTH_SIZE = 80;
 
 /**
  * TYPES
@@ -29,7 +31,7 @@ const BodyShape = Object.freeze({
  * P5
  */
 const sketch = p5 => {
-  let eyes, body, drawBody;
+  let eyes, drawBody, drawMouth;
 
   p5.setup = () => {
     p5.createCanvas(CANVAS_WIDTH, CANVAS_HEIGHT);
@@ -44,10 +46,14 @@ const sketch = p5 => {
       drawBody();
     }
 
+    if (drawMouth) {
+      drawMouth();
+    }
+
     (eyes || []).forEach(drawEye);
   };
 
-  // Draws an eye with a pupil given an eye represented as follows: [xPos, yPos, size]
+  // Draws an eye with a pupil given an eye, represented as follows: [xPos, yPos, size]
   const drawEye = eye => {
     // outer eye
     p5.fill(255, 255, 255);
@@ -63,7 +69,7 @@ const sketch = p5 => {
   p5.setCreature = type => {
     const bodyShape = bodyShapeFor(type);
 
-    body = {
+    let body = {
       width: randomInt(MIN_BODY_SIZE, CANVAS_WIDTH / 2),
       height: randomInt(MIN_BODY_SIZE, CANVAS_HEIGHT / 2)
     };
@@ -86,11 +92,32 @@ const sketch = p5 => {
       }
     };
 
-    const eyeSize = randomInt(MIN_EYE_SIZE, body.width / 2); // TODO: make more accurate
+    // TODO: (madelynkasula) Make eye positioning more accurate for ellipse bodies.
+    const eyeSize = randomInt(MIN_EYE_SIZE, body.width / 2);
     const leftEyeXPos = randomInt(body.minX, CENTER_X - eyeSize / 2);
     const rightEyeXPos = CENTER_X + (CENTER_X - leftEyeXPos);
     const eyeYPos = randomInt(body.minY, body.minY + body.height / 2);
     eyes = [[leftEyeXPos, eyeYPos, eyeSize], [rightEyeXPos, eyeYPos, eyeSize]];
+
+    drawMouth = () => {
+      const yPos = eyeYPos + eyeSize / 2 + MOUTH_TO_EYE_DISTANCE;
+      p5.noFill();
+
+      if (type === CreatureType.Good) {
+        // smile
+        p5.arc(CENTER_X, yPos, MAX_MOUTH_SIZE, MAX_MOUTH_SIZE, 0, Math.PI);
+      } else if (type === CreatureType.Bad) {
+        // frown
+        p5.arc(
+          CENTER_X,
+          yPos,
+          MAX_MOUTH_SIZE,
+          MAX_MOUTH_SIZE,
+          Math.PI,
+          2 * Math.PI
+        );
+      }
+    };
 
     draw();
   };
