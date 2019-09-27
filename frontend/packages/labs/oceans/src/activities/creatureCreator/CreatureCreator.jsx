@@ -1,5 +1,5 @@
 import React from 'react';
-import sketch, { CreatureType } from './sketches';
+import sketch, {CreatureType} from './sketches';
 import Button from 'react-bootstrap/lib/Button';
 const P5 = require('./loadP5');
 
