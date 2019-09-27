@@ -19,6 +19,10 @@ function scene(sceneNumber, code) {
 }
 
 function setupStory(code) {
+  console.log(code.valueOf());
+  for(var i = 0; i < code.length; i++) {
+  	console.log(code[i]);
+  }
   setupCode.push({code: code});
 }
 
