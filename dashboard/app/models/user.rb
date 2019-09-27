@@ -1024,13 +1024,6 @@ class User < ActiveRecord::Base
     user_levels.where(script: stage.script, level: levels).pluck(:level_id, :best_result).to_h
   end
 
-  def user_level_for(script_level, level)
-    user_levels.find_by(
-      script_id: script_level.script_id,
-      level_id: level.id
-    )
-  end
-
   def has_activity?
     user_levels.attempted.exists?
   end
