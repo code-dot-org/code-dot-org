@@ -440,14 +440,20 @@ exports.appendNewFunctions = function(blocksXml, functionsXml) {
   const sharedFunctionsDom = xml.parseElement(functionsXml);
   const functions = [...sharedFunctionsDom.ownerDocument.firstChild.childNodes];
   for (let func of functions) {
-    const name = document.evaluate(
+    let ownerDocument = func.ownerDocument.evaluate
+      ? func.ownerDocument
+      : document;
+    let startBlocksDocument = startBlocksDom.ownerDocument.evaluate
+      ? startBlocksDom.ownerDocument
+      : document;
+    const name = ownerDocument.evaluate(
       'title[@name="NAME"]/text()',
       func,
       null,
       XPathResult.STRING_TYPE,
       null
     ).stringValue;
-    const type = document.evaluate(
+    const type = ownerDocument.evaluate(
       '@type',
       func,
       null,
@@ -455,7 +461,7 @@ exports.appendNewFunctions = function(blocksXml, functionsXml) {
       null
     ).stringValue;
     const alreadyPresent =
-      document.evaluate(
+      startBlocksDocument.evaluate(
         `//block[@type="${type}"]/title[@name="NAME"][text()="${name}"]`,
         startBlocksDom,
         null,
