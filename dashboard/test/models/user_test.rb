@@ -1536,46 +1536,6 @@ class UserTest < ActiveSupport::TestCase
     assert scripts.include?(user_script_1)
   end
 
-  test 'user is working on scripts' do
-    user = create :user
-    s1 = create :user_script, user: user, started_at: (Time.now - 10.days), last_progress_at: (Time.now - 4.days)
-    s2 = create :user_script, user: user, started_at: (Time.now - 50.days), last_progress_at: (Time.now - 3.days)
-    c = create :user_script, user: user, started_at: (Time.now - 10.days), completed_at: (Time.now - 8.days)
-
-    # all scripts
-    assert_equal [s2, s1, c], user.user_scripts
-    assert_equal [s2.script, s1.script, c.script], user.scripts
-
-    # working on scripts
-    assert_equal [s2.script, s1.script], user.working_on_scripts
-    # primary script -- most recently progressed in
-    assert_equal s2.script, user.primary_script
-
-    # add an assigned script that's more recent
-    a = create :user_script, user: user, started_at: (Time.now - 1.day)
-    assert_equal [a.script, s2.script, s1.script], user.working_on_scripts
-    assert_equal a.script, user.primary_script
-
-    # make progress on an older script
-    s1.update_attribute(:last_progress_at, Time.now - 3.hours)
-    assert_equal [s1.script, a.script, s2.script], user.working_on_scripts
-    assert_equal s1.script, user.primary_script
-  end
-
-  test 'user should prefer working on 20hour instead of hoc' do
-    user = create :user
-
-    twenty_hour = Script.twenty_hour_script
-    hoc = Script.find_by(name: 'hourofcode')
-
-    # do a level that is both in script 1 and hoc
-    [twenty_hour, hoc].each do |script|
-      UserScript.create! user: user, script: script
-    end
-
-    assert_equal [twenty_hour, hoc], user.working_on_scripts
-  end
-
   def complete_script_for_user(user, script, completed_date = Time.now)
     # complete all except last level a day earlier
     script.script_levels[0..-2].each do |sl|
