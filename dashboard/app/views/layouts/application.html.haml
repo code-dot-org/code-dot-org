@@ -35,9 +35,13 @@
     = render partial: 'layouts/javascript_strings'
   %body
     - if session[:assumed_identity]
-      #assumed_identity_tag= 'Assumed identity'
-    - unless Rails.env.production?
-      = render partial: 'layouts/environment_tag'
+      - if Rails.env.production?
+        #assumed_identity_tag= 'Assumed identity'
+      - else
+        #assumed_identity_tag= 'Assumed identity (' + Rails.env + ')'
+    - else
+      - unless Rails.env.production?
+        = render partial: 'layouts/environment_tag'
     - if current_user && current_user.age.nil?
       = render partial: 'layouts/age_interstitial'
 
