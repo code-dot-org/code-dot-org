@@ -1033,7 +1033,7 @@ class User < ActiveRecord::Base
   def next_unpassed_visible_progression_level(script)
     # If all levels in the script are complete, no need to find the next level,
     # will be redirected to /congrats.
-    return nil if completed?(script)
+    return nil if Policies::ScriptActivity.completed?(self, script)
 
     visible_sls = visible_script_levels(script).reject {|sl| sl.bonus || sl.level.unplugged? || sl.locked?(self)}
 

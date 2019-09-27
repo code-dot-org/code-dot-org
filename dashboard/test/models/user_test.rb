@@ -1094,51 +1094,6 @@ class UserTest < ActiveSupport::TestCase
     refute next_script_level.nil?
   end
 
-  test 'script with inactive level completed is completed' do
-    user = create :user
-    level = create :maze, name: 'maze 1'
-    level2 = create :maze, name: 'maze 2'
-    script = create :script
-    script_level = create(
-      :script_level,
-      script: script,
-      levels: [level, level2],
-      properties: {'maze 2': {'active': false}}
-    )
-    create :user_script, user: user, script: script
-    UserLevel.create(
-      user: user, level: script_level.levels[1],
-      script: script,
-      attempts: 1,
-      best_result: Activity::MINIMUM_PASS_RESULT
-    )
-
-    assert user.completed?(script)
-  end
-
-  test 'script with active level completed is completed' do
-    user = create :user
-    level = create :maze, name: 'maze 1'
-    level2 = create :maze, name: 'maze 2'
-    script = create :script
-    script_level = create(
-      :script_level,
-      script: script,
-      levels: [level, level2],
-      properties: {'maze 2': {'active': false}}
-    )
-    create :user_script, user: user, script: script
-    UserLevel.create(
-      user: user,
-      level: script_level.levels[0],
-      script: script,
-      attempts: 1,
-      best_result: Activity::MINIMUM_PASS_RESULT
-    )
-
-    assert user.completed?(script)
-  end
-
   test 'user is created with secret picture and word' do
     assert @user.secret_picture
     assert @user.secret_words
@@ -1611,24 +1566,6 @@ class UserTest < ActiveSupport::TestCase
     s1.update_attribute(:last_progress_at, Time.now - 3.hours)
     assert_equal [s1.script, a.script, s2.script], user.working_on_scripts
     assert_equal s1.script, user.primary_script
-  end
-
-  test 'user has completed script' do
-    user = create :user
-    s1 = create :user_script, user: user, started_at: (Time.now - 10.days), completed_at: (Time.now - 4.days)
-    assert user.completed?(s1.script)
-  end
-
-  test 'user has completed script but no completed_at' do
-    # We have some users in our system who have completed all levels but don't have completed_at set.
-    # This test exercises this case by not setting completed_at, but because the script has no levels there
-    # is no next level for the user to go to, and so completed? succeeds using a fallback code path.
-
-    user = create :user
-    s1 = create :user_script, user: user, started_at: (Time.now - 10.days), last_progress_at: (Time.now - 4.days)
-
-    assert s1.completed_at.nil?
-    assert user.completed?(s1.script)
   end
 
   test 'user should prefer working on 20hour instead of hoc' do

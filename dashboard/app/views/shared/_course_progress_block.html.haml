@@ -5,7 +5,7 @@
       .clear
       .smalltext= data_t_suffix('script.name', script.name, 'description_short')
       .clear
-    - if current_user.completed?(script)
+    - if Policies::ScriptActivity.completed?(current_user, script)
       =link_to script_url(script.id) do
         .audiencebar.bottombartext.printcertificatelight= t('home.view_course')
       %a{href: script_certificate_image_url(current_user, script)}
