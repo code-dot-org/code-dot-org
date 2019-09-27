@@ -396,8 +396,7 @@ class FilesApi < Sinatra::Base
 
   #
   # PUT /v3/(sources)/<channel-id>/<filename>?version=<version-id>
-  # PUT /v3/(assets)/<channel-id>/<filename>
-  # PUT /v3/(libraries)/<channel-id>/<filename>
+  # PUT /v3/(assets|libraries)/<channel-id>/<filename>
   #
   # Create or replace a file. For sources endpoint, optionally overwrite a specific version.
   #
