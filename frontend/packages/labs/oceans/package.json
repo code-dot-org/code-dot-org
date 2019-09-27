@@ -54,5 +54,11 @@
   "bugs": {
     "url": "https://github.com/code-dot-org/ml-activities/issues"
   },
-  "homepage": "https://github.com/code-dot-org/ml-activities#readme"
+  "homepage": "https://github.com/code-dot-org/ml-activities#readme",
+  "dependencies": {
+    "canvas": "^2.6.0",
+    "image-js": "^0.21.7",
+    "node-fetch": "^2.6.0",
+    "yargs": "^14.0.0"
+  }
 }
