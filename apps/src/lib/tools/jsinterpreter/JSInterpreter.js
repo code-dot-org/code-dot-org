@@ -248,7 +248,7 @@ export default class JSInterpreter {
 
   /**
    * Builds a list of objects that contain all metadata about any functions in
-   * the gived code string. Each object in the returned list has the following
+   * the given code string. Each object in the returned list has the following
    * properties:
    * functionName - the name of the function
    * parameters - the names of the parameters passed into the function
@@ -256,6 +256,8 @@ export default class JSInterpreter {
    * multiline, singleline, or multiple singlelines format.
    *
    * @param {string} code - The code to be parsed for functions
+   * @return {array} functionsAndMetadata - all functions from the input 'code'
+   *         along with their relevant metadata
    */
   static getFunctionsAndMetadata(code) {
     // Private helper functions
