@@ -90,11 +90,11 @@ Scenario: Authorized Teacher on App Lab with free response contained level
 
 Scenario: Unauthorized Teacher on Maze with multiple choice contained level
   When I open my eyes to test "maze multi contained level"
-  Given I am a teacher
-  And I am on "http://studio.code.org/s/coursee-2019/stage/4/puzzle/2"
+  Given I create a teacher-associated student named "Sally"
+  And I sign in as "Teacher_Sally" and go home
+  Then I am on "http://studio.code.org/s/coursee-2019/stage/4/puzzle/2"
   And I rotate to landscape
-  When I wait to see "#runButton"
-  And I wait to see ".header_user"
+  And I wait for the page to fully load
   Then I see no difference for "initial load"
   Then I press "unchecked_0"
   And I see no difference for "answer entered"
