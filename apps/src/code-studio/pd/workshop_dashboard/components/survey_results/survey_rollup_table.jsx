@@ -117,7 +117,7 @@ export class SurveyRollupTable extends React.Component {
         <tbody>
           {/*First row is response counts*/}
           <tr>
-            <td>Response Count</td>
+            <td>Total responses</td>
             {orderedColumns.map(column => (
               <td>{this.props.rollups[column.key].response_count}</td>
             ))}
