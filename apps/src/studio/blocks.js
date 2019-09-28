@@ -946,7 +946,9 @@ exports.install = function(blockly, blockInstallOptions) {
         this.interpolateMsg(
           msg.setSpritePosition(),
           () => {
-            this.appendValueInput('SPRITE').appendTitle({spriteIndex: ''});
+            this.appendValueInput('SPRITE')
+              .setCheck(blockly.BlockValueType.NUMBER)
+              .appendTitle({spriteIndex: ''});
           },
           blockly.ALIGN_RIGHT
         );
