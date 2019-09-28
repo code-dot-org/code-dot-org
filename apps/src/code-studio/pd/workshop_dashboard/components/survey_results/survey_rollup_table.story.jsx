@@ -164,6 +164,7 @@ export default storybook => {
         name: 'Facilitator Rollup Table',
         story: () => (
           <SurveyRollupTable
+            key={1}
             rollups={facilitator_rollups.rollups}
             questions={facilitator_rollups.questions}
             facilitators={facilitator_rollups.facilitators}
@@ -174,6 +175,7 @@ export default storybook => {
         name: 'Workshop Rollup Table',
         story: () => (
           <SurveyRollupTable
+            key={2}
             rollups={workshop_rollups.rollups}
             questions={workshop_rollups.questions}
             facilitators={workshop_rollups.facilitators}
