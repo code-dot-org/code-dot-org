@@ -102,21 +102,26 @@ export function cleanupCircuitPlaygroundComponents(
   }
 
   if (components.soundSensor) {
-    components.soundSensor.disable();
+    components.soundSensor._events = {};
   }
 
   if (components.lightSensor) {
-    components.lightSensor.disable();
+    components.lightSensor._events = {};
   }
 
   if (components.tempSensor) {
-    components.tempSensor.disable();
+    components.tempSensor._events = {};
   }
 
   if (components.accelerometer) {
-    components.accelerometer.stop();
+    components.accelerometer._events = {};
   }
   if (shouldDestroyComponents) {
+    components.soundSensor.destroy();
+    components.lightSensor.destroy();
+    components.tempSensor.destroy();
+    components.accelerometer.stop();
+
     delete components.colorLeds;
     delete components.led;
     delete components.toggleSwitch;
