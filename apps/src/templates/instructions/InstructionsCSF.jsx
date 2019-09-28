@@ -283,7 +283,6 @@ class InstructionsCSF extends React.Component {
         minHeight
       );
       this.props.setInstructionsRenderedHeight(newHeight);
-      this.props.setInstructionsMaxHeightNeeded(maxHeight);
     }
 
     this.props.adjustMaxNeededHeight();
