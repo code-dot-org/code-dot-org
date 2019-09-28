@@ -109,8 +109,8 @@ export class SurveyRollupTable extends React.Component {
           {/*Column headers*/}
           <tr>
             <th />
-            {orderedColumns.map(column => (
-              <td>{column.label}</td>
+            {orderedColumns.map((column, i) => (
+              <td key={i}>{column.label}</td>
             ))}
           </tr>
         </thead>
@@ -118,17 +118,19 @@ export class SurveyRollupTable extends React.Component {
           {/*First row is response counts*/}
           <tr>
             <td>Total responses</td>
-            {orderedColumns.map(column => (
-              <td>{this.props.rollups[column.key].response_count}</td>
+            {orderedColumns.map((column, i) => (
+              <td key={i}>{this.props.rollups[column.key].response_count}</td>
             ))}
           </tr>
 
           {/*Next rows are average scores of categories and questions*/}
-          {orderedRows.map(row => (
-            <tr>
+          {orderedRows.map((row, i) => (
+            <tr key={i}>
               <td>{row.label}</td>
-              {orderedColumns.map(column => (
-                <td>{this.props.rollups[column.key].averages[row.key]}</td>
+              {orderedColumns.map((column, j) => (
+                <td key={j}>
+                  {this.props.rollups[column.key].averages[row.key]}
+                </td>
               ))}
             </tr>
           ))}
