@@ -948,7 +948,7 @@ exports.install = function(blockly, blockInstallOptions) {
           () => {
             this.appendValueInput('SPRITE')
               .setCheck(blockly.BlockValueType.NUMBER)
-              .appendTitle({spriteIndex: ''});
+              .appendTitle(spriteNumberTextDropdown(msg.setSpriteN));
           },
           blockly.ALIGN_RIGHT
         );
