@@ -455,6 +455,7 @@ en:
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
     update: "Update Account"
     account_successfully_updated: "Account successfully updated."
+    update_email: "Update"
   user_level:
     completed: 'Completed'
     tried: 'Tried'
