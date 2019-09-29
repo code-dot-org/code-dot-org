@@ -40,7 +40,11 @@ function showDonorTeacherBanner() {
       donorTeacherBannerElements.each((index, donorTeacherBannerElement) => {
         ReactDOM.render(
           <Provider store={getStore()}>
-            <DonorTeacherBanner options={options} showPegasusLink={false} />
+            <DonorTeacherBanner
+              options={options}
+              showPegasusLink={false}
+              source="marketing"
+            />
           </Provider>,
           donorTeacherBannerElement
         );
