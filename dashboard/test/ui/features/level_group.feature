@@ -20,6 +20,9 @@ Scenario: Submit three answers.
 
   And I press ".submitButton:first" using jQuery
   And I wait to see ".modal"
+  And element ".modal-body" contains text "You cannot edit your assessment after submitting it."
+  And element ".modal-body" contains text "You left some questions incomplete."
+
   And I press ".modal #ok-button" using jQuery to load a new page
 
   # Go back to the page to see that same options are selected.
