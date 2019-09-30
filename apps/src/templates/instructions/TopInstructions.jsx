@@ -725,6 +725,7 @@ class TopInstructions extends Component {
                       onResize={this.adjustMaxNeededHeight}
                       inTopPane
                     />
+                    {this.props.teacherMarkdown && <TeacherOnlyMarkdown />}
                   </div>
                 )}
             </div>
