@@ -122,11 +122,6 @@ export function cleanupCircuitPlaygroundComponents(
     components.accelerometer._events = {};
   }
   if (shouldDestroyComponents) {
-    components.soundSensor.destroy();
-    components.lightSensor.destroy();
-    components.tempSensor.destroy();
-    components.accelerometer.stop();
-
     delete components.colorLeds;
     delete components.led;
     delete components.toggleSwitch;

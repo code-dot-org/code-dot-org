@@ -834,30 +834,31 @@ describe('Circuit Playground Components', () => {
       const spy = sinon.spy(components.soundSensor, 'disable');
       cleanupCircuitPlaygroundComponents(
         components,
-        true /* shouldDestroyComponents */
+        false /* shouldDestroyComponents */
       );
+      console.log(components.soundSensor._events);
       expect(spy).to.have.been.calledOnce;
-      expect(components.soundSensor._events.length).to.equal(0);
+      expect(components.soundSensor._events).to.be.empty;
     });
 
     it('calls disable on the lightSensor and clears events', () => {
       const spy = sinon.spy(components.lightSensor, 'disable');
       cleanupCircuitPlaygroundComponents(
         components,
-        true /* shouldDestroyComponents */
+        false /* shouldDestroyComponents */
       );
       expect(spy).to.have.been.calledOnce;
-      expect(components.lightSensor._events.length).to.equal(0);
+      expect(components.lightSensor._events).to.be.empty;
     });
 
     it('calls disable on the tempSensor and clears events', () => {
       const spy = sinon.spy(components.tempSensor, 'disable');
       cleanupCircuitPlaygroundComponents(
         components,
-        true /* shouldDestroyComponents */
+        false /* shouldDestroyComponents */
       );
       expect(spy).to.have.been.calledOnce;
-      expect(components.tempSensor._events.length).to.equal(0);
+      expect(components.tempSensor._events).to.be.empty;
     });
 
     it('calls stop on the accelerometer and clears events', () => {
@@ -867,7 +868,7 @@ describe('Circuit Playground Components', () => {
       return createCircuitPlaygroundComponents(board).then(components => {
         cleanupCircuitPlaygroundComponents(
           components,
-          true /* shouldDestroyComponents */
+          false /* shouldDestroyComponents */
         );
 
         let assertionError;
@@ -877,7 +878,7 @@ describe('Circuit Playground Components', () => {
           assertionError = e;
         }
 
-        expect(components.accelerometer._events.length).to.equal(0);
+        expect(components.accelerometer._events).to.be.empty;
 
         spy.restore();
         if (assertionError) {
