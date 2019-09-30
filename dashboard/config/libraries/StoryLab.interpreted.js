@@ -4,25 +4,32 @@ var setupCode = [];
 var currentSceneNumber = 0;
 var scenes = [];
 
-function addBehaviorUntilBoolean(spriteID, behavior, condition) {
-  if (spriteID && behavior) {
-    behavior.checkTerminate = condition;
-    addBehaviorSimple(spriteID, behavior);
+function addBehaviorUntilBoolean(spriteId, behavior, condition) {
+  setProp(spriteId, behavior.name, function() { return condition; });
+  addBehaviorSimple(spriteId, behavior);
+}
+
+function removeInvalidBehaviors() {
+  var spriteIds = getSpriteIdsInUse();
+  for(var i = 0; i < spriteIds.length; i++) {
+  	var behaviors = getBehaviorsForSpriteId(spriteIds[i]);
+    for(var j = 0; j < behaviors.length; j++) {
+      console.log(getProp(spriteIds[i], behaviors[j])());
+      if(getProp(spriteIds[i], "x") >= 250) {
+      //if(getProp(spriteIds[i], behaviors[j])()) {
+        console.log("you got here");
+      	removeBehaviorSimple(spriteIds[i], behaviors[j]);
+        //removeAllBehaviors(spriteIds[i]);
+      }
+    }
   }
 }
 
 function scene(sceneNumber, code) {
-  //code = function() {
-  	//setTimeout(function(){ return waitCode.apply(waitCode); }, 2000);
-  //};
   scenes.push({sceneNumber: sceneNumber, code: code});
 }
 
 function setupStory(code) {
-  console.log(code.valueOf());
-  for(var i = 0; i < code.length; i++) {
-  	console.log(code[i]);
-  }
   setupCode.push({code: code});
 }
 
@@ -35,7 +42,7 @@ function runSetup() {
 
 function goToScene(sceneNumber) {
   getAnimationsInUse().forEach(function(animation) {
-    removeAllBehaviors(animation);
+    //removeAllBehaviors(animation);
   });
   currentSceneNumber = sceneNumber;
 }
@@ -49,10 +56,11 @@ function getCurrentScene() {
 }
 
 function draw() {
-  if(setupCode.length > 0) {
-  	runSetup();
-  }
+  //if(setupCode.length > 0) {
+  	//runSetup();
+  //}
   getCurrentScene().code();
+  removeInvalidBehaviors();
   //getCurrentScene().code = function(){};
   executeDrawLoopAndCallbacks();
 }
