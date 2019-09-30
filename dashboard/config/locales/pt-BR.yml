@@ -61,12 +61,12 @@ pt-BR:
   heading_x_of_y: "%{heading} (página %{x} de %{y})"
   join_section:
     code:
-      title: Adira a uma secção em Code.org
+      title: Entre em uma seção no Code.org
       placeholder: Código da seção (ABCDEF)
-      instructions: 'Por favor insira o código de 6 letras que o seu professor lhe
-        deu. (por exemplo: "ABCDEF") para que se possa juntar à sua secção.'
-      instructions_short: Insira o seu código de secção de 6 letras
-      submit: Aderir
+      instructions: 'Por favor, insira o código de 6 letras que o seu professor lhe
+        deu. (por exemplo: "ABCDEF") para se juntar a sessão deles.'
+      instructions_short: Digite o seu código da sessão de 6 letras
+      submit: Entrar
   add_hint_form:
     placeholder: Digite sua dica aqui
     submit: Adicionar dica

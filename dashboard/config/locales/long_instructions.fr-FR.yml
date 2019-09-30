@@ -2550,18 +2550,6 @@ fr-FR:
         have spaces.</li>\\\r\n    <li>Labels can't start with a number.</li>\\\r\n
         \   <li>Capitalization\n    and spelling must be exactly the same.</li>\\\r\n
         \   </ul></details></summary>"
-      CSD U3 Variables naming rules v2_2018_2019: "<img style=\"float:\nright\" src=\"https://images.code.org/f4b306422763c84bb924f4f7d3a6dca6-image-1492798058864.06.38\nAM.png\">\\\r\n\n#
-        Debug: Naming Variables\\\r\n\n\\\r\nThis program has multiple errors\ncaused
-        by bad label names.  The errors prevent the program from being viewed\nin
-        block mode, so the code is in text.\\\r\n\\\r\n\n# Do This\\\r\n\n\\\r\n\n-
-        \  Find the\n    rule each variable label violates.\\\r\n-   **Correct the
-        errors by picking new\n    names that follow the rules you learned in the
-        last level.**\\\r\n-   If your\n    program works it should draw the image
-        on the right.\\\r\n    \\\r\n    <summary><em>Hint:\n    Click the arrow for
-        a quick review of the rules.</em><details><ul>\\\r\n    <li>Labels\n    can't
-        have spaces.</li>\\\r\n    <li>Labels can't start with a number.</li>\\\r\n
-        \   <li>Capitalization\n    and spelling must be exactly the same.</li>\\\r\n
-        \   </ul></details></summary>"
       CSD U3 Variables random with assignment: "<img src=\"https://images.code.org/ba9592e887f52c1a538a0517560cdacf-image-1493913633878.gif\"\nstyle=\"float:right;height:150px\">\\\r\n\\\r\n\n#
         Debug: Variables and Random Numbers\\\r\n\n\\\r\nVariables\ncan be assigned
         a random number too. This lets you save a single random value\nso that you

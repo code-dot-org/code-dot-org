@@ -241,6 +241,7 @@ export default class TeacherHomepage extends Component {
               <DonorTeacherBanner
                 options={donorTeacherBannerOptions}
                 showPegasusLink={true}
+                source="teacher_home"
               />
               <div style={styles.clear} />
             </div>
