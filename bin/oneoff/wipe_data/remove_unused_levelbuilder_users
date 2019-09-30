@@ -1,0 +1,82 @@
+#!/usr/bin/env ruby
+
+# Logically delete User accounts that have been manually flagged for removal by the team in the following sheet:
+#
+
+require_relative '../../../dashboard/config/environment'
+
+USERS_TO_DELETE = %w(
+  2
+  14
+  15
+  20
+  48
+  53
+  57
+  62
+  63
+  71
+  73
+  105
+  164
+  175
+  183
+  191
+  204
+  206
+  217
+  219
+  220
+  221
+  225
+  255
+  286
+  293
+  294
+  296
+  297
+  299
+  300
+  302
+  305
+  306
+  311
+  312
+  313
+  325
+  340
+  357
+  358
+  529
+  532
+  540
+  541
+  542
+  543
+  544
+  545
+  546
+  547
+  554
+  555
+  556
+  566
+  568
+  653
+  684
+  689
+  692
+  725
+  726
+  739
+  743
+  766
+  772
+  806
+  842
+  896
+).map(&:to_i).freeze
+
+# ActiveRecord model destroy will raise an error if it encounters an error destroying a single item in the
+# array and will not continue destroying the remaining items in the input array.
+User.destroy(USERS_TO_DELETE) if rack_env?(:levelbuilder) && CDO.dashboard_hostname == 'levelbuilder-studio.code.org'
