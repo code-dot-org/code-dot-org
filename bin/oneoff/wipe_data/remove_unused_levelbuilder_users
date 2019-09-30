@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 # Logically delete User accounts that have been manually flagged for removal by the team in the following sheet:
-#
+# https://docs.google.com/spreadsheets/d/1l7kIyOjd6FWhC1-GEtAg7lHFFvfQaYznUa12jzZl4_w/edit#gid=1545381978
 
 require_relative '../../../dashboard/config/environment'
 
