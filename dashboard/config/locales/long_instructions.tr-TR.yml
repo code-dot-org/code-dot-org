@@ -2689,17 +2689,6 @@ tr-TR:
         \   <li>Etiketlerde boşluk bulunamaz.</li>\r\n    <li>Etiketler bir sayı ile
         başlamamalı</li>\r\n    <li>Büyük harf ve imla tam olarak aynı olmalı.</li>\r\n
         \   </ul></details></summary>"
-      CSD U3 Variables naming rules v2_2018_2019: "<img style=\"float:\nright\" src=\"https://images.code.org/f4b306422763c84bb924f4f7d3a6dca6-image-1492798058864.06.38\nAM.png\">\\\r\n\n#
-        Hata Ayıklama: Değişkenleri İsimlendirme\\\r\n\n\\\r\nBu programda kötü etiket
-        isimlerinden dolayı birçok hata var. Hatalar programın blok modunda görüntülenmesini
-        engeller, bu yüzden kod metin şeklindedir.\\\r\n\\\r\n\n# Bunları Yapın\\\r\n\n\\\r\n\n-
-        \  Her değişken etiketinin ihlal ettiği kuralı bulun.\\\r\n-   **Son seviyede
-        öğrendiğiniz kurallara uyarak yeni isimler seçerek hataları düzeltin.**\\\r\n-
-        \  Eğer program çalışırsa, sağdaki resim çizilmeli.\\\r\n    \\\r\n    <summary><em>İpucu:\n
-        \   Hızlıca kuralları gözden geçirmek için oka tıklayın.</em><details><ul>\r\n
-        \   <li>Etiketlerde boşluk bulunamaz.</li>\r\n    <li>Etiketler bir sayı ile
-        başlamamalı</li>\r\n    <li>Büyük harf ve imla tam olarak aynı olmalı.</li>\r\n
-        \   </ul></details></summary>"
       CSD U3 Variables random with assignment: "<img src=\"https://images.code.org/ba9592e887f52c1a538a0517560cdacf-image-1493913633878.gif\"\nstyle=\"float:right;height:150px\">\\\r\n\\\r\n\n#
         Hata Ayıklama: Değişkenler ve Rastgele Sayılar\\\r\n\n\\\r\nDeğişkenlere rastgele
         sayılar da atanabilir. Bu tek bir rastgele değeri kaydetmenizi sağlar böylece

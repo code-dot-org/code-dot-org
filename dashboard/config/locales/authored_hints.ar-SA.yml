@@ -963,6 +963,8 @@ ar-SA:
         courseA_artist_loops_challenge1_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         courseA_artist_loops_challenge1_c: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         courseA_artist_loops_challenge1_d: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      course2_collector_loops_challenge2:
+        courseC_maze_loops_challenge2_b: استخدم دالة كرر لكي لاتنتهي بلوكات "اجمع"!
       course3_bee_functions_challenge1:
         courseE_bee_functions_challenge1_a: "إذا كان اللغز يبدو صعباً، حاول بناء جزء
           من الدالة كل مرة. \n\nأضف بعض القطع، ثم جربها. أضف المزيد، ثم حاول مرة اخرى.
@@ -1038,6 +1040,39 @@ ar-SA:
               <title name="SPRITE">0</title>
               <title name="VALUE">Studio.SpriteSpeed.FAST</title>
             </block></xml>
+      courseC_artist_loop1:
+        courseC_artist_loop1_a: ليس عليك أن تحدث أي تغيرات في دالة كرر, فقط أضف بلوكة
+          واحدة فوقها.
+        courseC_artist_loop1_b: |-
+          <xml>
+          <block type="draw_line_style_pattern">
+              <title name="VALUE">DEFAULT</title>
+            </block>
+          </xml>
+
+          استخدم أي نمط ترغب به!
+      courseC_artist_loop1_2018:
+        courseC_artist_loop1_a: ليس عليك أن تحدث أي تغيرات في دالة كرر, فقط أضف بلوكة
+          واحدة فوقها.
+        courseC_artist_loop1_b: |-
+          <xml>
+          <block type="draw_line_style_pattern">
+              <title name="VALUE">DEFAULT</title>
+            </block>
+          </xml>
+
+          استخدم أي نمط ترغب به!
+      courseC_artist_loop1_2019:
+        courseC_artist_loop1_a: ليس عليك أن تحدث أي تغيرات في دالة كرر, فقط أضف بلوكة
+          واحدة فوقها.
+        courseC_artist_loop1_b: |-
+          <xml>
+          <block type="draw_line_style_pattern">
+              <title name="VALUE">DEFAULT</title>
+            </block>
+          </xml>
+
+          استخدم أي نمط ترغب به!
       courseC_artist_loops1b_2019:
         courseC_artist_loops1b_a: |-
           هذه البلوكة الأولى التي سوف تحتاجها:
@@ -1131,6 +1166,15 @@ ar-SA:
               </next>
             </block>
           </xml>
+      courseC_artist_loops5a:
+        courseC_artist_loops5a_a: استخدم القائمة المنسدلة في بلوكة "ارسم ملصق" لتغير
+          الرسمة.
+      courseC_artist_loops5a_2018:
+        courseC_artist_loops5a_a: استخدم القائمة المنسدلة في بلوكة "ارسم ملصق" لتغير
+          الرسمة.
+      courseC_artist_loops5a_2019:
+        courseC_artist_loops5a_a: استخدم القائمة المنسدلة في بلوكة "ارسم ملصق" لتغير
+          الرسمة.
       courseC_artist_loops5b_2019:
         courseC_artist_loops5b_c: |-
           يجب أن يظهر برنامجك كالتالي!
@@ -1188,6 +1232,39 @@ ar-SA:
               </next>
             </block>
           </xml>
+      courseC_artist_loops6a:
+        courseC_artist_loops6a_a: لتحصل على تصميم مشابه للأعلى, اقفز للامام أقل من
+          مقدار 75 بكسل بين كل ملصق.
+      courseC_artist_loops6a_2018:
+        courseC_artist_loops6a_a: لتحصل على تصميم مشابه للأعلى, اقفز للامام أقل من
+          مقدار 75 بكسل بين كل ملصق.
+      courseC_artist_loops6a_2019:
+        courseC_artist_loops6a_a: لتحصل على تصميم مشابه للأعلى, اقفز للامام أقل من
+          مقدار 75 بكسل بين كل ملصق.
+      courseC_artist_loopsPre1a:
+        courseC_artist_loopsPre1a_a: لا تنسى ان تضع بلوكة" الاتجاه" داخل دالة كرر.
+        courseC_artist_loopsPre1a_b: 'دالة "كرر" يجب ان تحتوي على ثلاث بلوكات داخلها:
+          اقفز إلى 200 فوق و200 للاسفل, اتجه للامام بمقدار 50 بكسل, و اتجه لليمين
+          بمقدار 60 درجة.'
+      courseC_artist_loopsPre1a_2018:
+        courseC_artist_loopsPre1a_a: لا تنسى ان تضع بلوكة" الاتجاه" داخل دالة كرر.
+        courseC_artist_loopsPre1a_b: 'دالة "كرر" يجب ان تحتوي على ثلاث بلوكات داخلها:
+          اقفز إلى 200 فوق و200 للاسفل, اتجه للامام بمقدار 50 بكسل, و اتجه لليمين
+          بمقدار 60 درجة.'
+      courseC_artist_loopsPre1a_2019:
+        courseC_artist_loopsPre1a_a: لا تنسى ان تضع بلوكة" الاتجاه" داخل دالة كرر.
+        courseC_artist_loopsPre1a_b: 'دالة "كرر" يجب ان تحتوي على ثلاث بلوكات داخلها:
+          اقفز إلى 200 فوق و200 للاسفل, اتجه للامام بمقدار 50 بكسل, و اتجه لليمين
+          بمقدار 60 درجة.'
+      courseC_artist_loopsPrePre1a:
+        courseC_artist_loopsPrePre1a_a: |-
+          البلوكة الاولى التي تحتاجها هي:
+
+          ![](<https://images.code.org/60e3354a2e7dd37b64833eac1e8694be-image-1499710228373.08.14 AM.png>)
+        courseC_artist_loopsPrePre1a_b: |-
+          لتتقدم إلى الامام بمقدار 50 بكسل استخدم:
+
+          ![](<https://images.code.org/411fca4606a09641e6eedf5069ac4efa-image-1499710237929.08.27 AM.png>)
       courseC_artist_loopsPrePre1a_2018:
         courseC_artist_loopsPrePre1a_a: |-
           البلوكة الاولى التي تحتاجها هي:
@@ -1243,6 +1320,12 @@ ar-SA:
         courseC_artist_prog5_c: يمكنك استخدام القائمة المنسدلة لتغير كيفية استخدامها!
       courseC_artist_prog5_2019:
         courseC_artist_prog5_c: يمكنك استخدام القائمة المنسدلة لتغير كيفية استخدامها!
+      courseC_collector_loops_challenge2:
+        courseC_maze_loops_challenge2_b: استخدم دالة كرر لكي لاتنتهي بلوكات "اجمع"!
+      courseC_collector_loops_challenge2_2018:
+        courseC_maze_loops_challenge2_b: استخدم دالة كرر لكي لاتنتهي بلوكات "اجمع"!
+      courseC_collector_loops_challenge2_2019:
+        courseC_maze_loops_challenge2_b: استخدم دالة كرر لكي لاتنتهي بلوكات "اجمع"!
       courseC_collector_prog1:
         courseC_collector_prog1_a: عندما تقف في مكان يحتوي على حوهرة استخدم بلوكة
           <xml><block type="collector_collect"/></xml> لتجمعها.
@@ -1393,12 +1476,33 @@ ar-SA:
         courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseC_flappy_events1_2019:
         courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseC_harvester_loops_challenge1a:
+        courseC_harvester_loops_challenge1_a: هذا صعب بدون دالة كرر!
+      courseC_harvester_loops_challenge1a_2018:
+        courseC_harvester_loops_challenge1_a: هذا صعب بدون دالة كرر!
+      courseC_harvester_loops_challenge1a_2019:
+        courseC_harvester_loops_challenge1_a: هذا صعب بدون دالة كرر!
       courseC_maze_debugging5_2018:
         courseC_maze_debugging5_c: يمكن أن تغير اتجاه الالتفاف عن طريق الضغط على القائمة
           المنسدلة.
       courseC_maze_debugging5_2019:
         courseC_maze_debugging5_c: يمكن أن تغير اتجاه الالتفاف عن طريق الضغط على القائمة
           المنسدلة.
+      courseC_maze_loops_challenge1a:
+        courseC_maze_loops_challenge1_a: فكر في هذا المسار على أنه مكون من مسارين.
+          كل واحد منهم له نمط يمكن تكراره.
+        courseC_maze_loops_challenge1_b: هل يمكنك تذكر كيف يمكنك استخدام دالة كرر
+          لتكرر نمط درجة السلم؟
+      courseC_maze_loops_challenge1a_2018:
+        courseC_maze_loops_challenge1_a: فكر في هذا المسار على أنه مكون من مسارين.
+          كل واحد منهم له نمط يمكن تكراره.
+        courseC_maze_loops_challenge1_b: هل يمكنك تذكر كيف يمكنك استخدام دالة كرر
+          لتكرر نمط درجة السلم؟
+      courseC_maze_loops_challenge1a_2019:
+        courseC_maze_loops_challenge1_a: فكر في هذا المسار على أنه مكون من مسارين.
+          كل واحد منهم له نمط يمكن تكراره.
+        courseC_maze_loops_challenge1_b: هل يمكنك تذكر كيف يمكنك استخدام دالة كرر
+          لتكرر نمط درجة السلم؟
       courseC_maze_programming1:
         courseC_maze_programming1_0: تأكد من أن جميع البلوكات ملتصقة ببعضها ومن ثم
           اضغط على زر " تشغيل" مرة اخرى.
@@ -1576,18 +1680,147 @@ ar-SA:
           الحل الأقصر سوف يستخدم 5 بلوكات فقط, لكنه سيستخدم هذه البلوكة:
 
           <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+      courseC_starWars_loops1:
+        courseC_starWars_loops1_a: عندما يتدحرج BB-8 على قطع الحديد فإنه سوف يجمعها
+          تلقائياً.
+        courseC_starWars_loops1_c: يجب عليك أن "تتحرك إلى الامام" خمس مرات لتحل اللغز.
+      courseC_starWars_loops10:
+        courseC_starWars_loops10_a: أليس هذا النمط يبدوا كانه خطوة كبيرة في السلم؟
+          جرب أن تستخدم ماتعلمته من الالغاز السابقة لتقول بكل الاتجاهات.
+        courseC_starWars_loops10_b: إذا اردت استخدام القليل من الكود برمجي, يمكنك
+          أن تضع دالة "كرر" داخل أخرى!/ هذه تسمى \*\* دالة التكرار المتداخلة\*\*.
+      courseC_starWars_loops10_2018:
+        courseC_starWars_loops10_a: أليس هذا النمط يبدوا كانه خطوة كبيرة في السلم؟
+          جرب أن تستخدم ماتعلمته من الالغاز السابقة لتقول بكل الاتجاهات.
+        courseC_starWars_loops10_b: إذا اردت استخدام القليل من الكود برمجي, يمكنك
+          أن تضع دالة "كرر" داخل أخرى!/ هذه تسمى \*\* دالة التكرار المتداخلة\*\*.
+      courseC_starWars_loops10_2019:
+        courseC_starWars_loops10_a: أليس هذا النمط يبدوا كانه خطوة كبيرة في السلم؟
+          جرب أن تستخدم ماتعلمته من الالغاز السابقة لتقول بكل الاتجاهات.
+        courseC_starWars_loops10_b: إذا اردت استخدام القليل من الكود برمجي, يمكنك
+          أن تضع دالة "كرر" داخل أخرى!/ هذه تسمى \*\* دالة التكرار المتداخلة\*\*.
+      courseC_starWars_loops1_2018:
+        courseC_starWars_loops1_a: عندما يتدحرج BB-8 على قطع الحديد فإنه سوف يجمعها
+          تلقائياً.
+        courseC_starWars_loops1_c: يجب عليك أن "تتحرك إلى الامام" خمس مرات لتحل اللغز.
+      courseC_starWars_loops1_2019:
+        courseC_starWars_loops1_a: عندما يتدحرج BB-8 على قطع الحديد فإنه سوف يجمعها
+          تلقائياً.
+        courseC_starWars_loops1_c: يجب عليك أن "تتحرك إلى الامام" خمس مرات لتحل اللغز.
+      courseC_starWars_loops2:
+        courseC_starWars_loops2_a: لتكرر الكود البرمجي, اسحب دالة "كرر" ومن ثم استخدم
+          البلوكات التي تريدها في الداخل.
+      courseC_starWars_loops2_2018:
+        courseC_starWars_loops2_a: لتكرر الكود البرمجي, اسحب دالة "كرر" ومن ثم استخدم
+          البلوكات التي تريدها في الداخل.
+      courseC_starWars_loops2_2019:
+        courseC_starWars_loops2_a: لتكرر الكود البرمجي, اسحب دالة "كرر" ومن ثم استخدم
+          البلوكات التي تريدها في الداخل.
       courseC_starWars_loops4:
+        courseC_starWars_loops4_c: عند الضغط على السهم الصغير الموجود بجانب كلمة "يسار"
+          في بلوكة "اتجه إلى" ستتمكن من تغييرها إلى "يمين".
         courseC_starWars_loops4_a: استخدم اثنان من بلوكات "كرر".
         courseC_starWars_loops4_b: 'كل حلقة تكرار "كرر" سوف تحوي على أمر واحد داخلها
           وهو: "تحرك غلى الامام".'
       courseC_starWars_loops4_2018:
+        courseC_starWars_loops4_c: عند الضغط على السهم الصغير الموجود بجانب كلمة "يسار"
+          في بلوكة "اتجه إلى" ستتمكن من تغييرها إلى "يمين".
         courseC_starWars_loops4_a: استخدم اثنان من بلوكات "كرر".
         courseC_starWars_loops4_b: 'كل حلقة تكرار "كرر" سوف تحوي على أمر واحد داخلها
           وهو: "تحرك غلى الامام".'
       courseC_starWars_loops4_2019:
+        courseC_starWars_loops4_c: عند الضغط على السهم الصغير الموجود بجانب كلمة "يسار"
+          في بلوكة "اتجه إلى" ستتمكن من تغييرها إلى "يمين".
         courseC_starWars_loops4_a: استخدم اثنان من بلوكات "كرر".
         courseC_starWars_loops4_b: 'كل حلقة تكرار "كرر" سوف تحوي على أمر واحد داخلها
           وهو: "تحرك غلى الامام".'
+      courseC_starWars_loops5:
+        courseC_starWars_loops5_b: لتتجه إلى الأسفل عليك أولاً الاتجاه ومن ثم التحرك
+          للامام.
+        courseC_starWars_loops5_a: أفضل حل باستخام الاتجاه ومن ثم التحرك للامام مرة
+          واحدة ومن ثم الاتجاه مرة اخرى واخيرا التكرار.
+      courseC_starWars_loops5_2018:
+        courseC_starWars_loops5_b: لتتجه إلى الأسفل عليك أولاً الاتجاه ومن ثم التحرك
+          للامام.
+        courseC_starWars_loops5_a: أفضل حل باستخام الاتجاه ومن ثم التحرك للامام مرة
+          واحدة ومن ثم الاتجاه مرة اخرى واخيرا التكرار.
+      courseC_starWars_loops5_2019:
+        courseC_starWars_loops5_b: لتتجه إلى الأسفل عليك أولاً الاتجاه ومن ثم التحرك
+          للامام.
+        courseC_starWars_loops5_a: أفضل حل باستخام الاتجاه ومن ثم التحرك للامام مرة
+          واحدة ومن ثم الاتجاه مرة اخرى واخيرا التكرار.
+      courseC_starWars_loops6:
+        courseC_starWars_loops6_a: حاول كتابة كل الحركات على ورقة وابحث عن النمط.
+        courseC_starWars_loops6_b: إذا اردت استخدام القليل من الكود برمجي, يمكنك أن
+          تضع دالة "كرر" داخل أخرى!/ هذه تسمى \*\* دالة التكرار المتداخلة\*\*.
+      courseC_starWars_loops6_2018:
+        courseC_starWars_loops6_a: حاول كتابة كل الحركات على ورقة وابحث عن النمط.
+        courseC_starWars_loops6_b: إذا اردت استخدام القليل من الكود برمجي, يمكنك أن
+          تضع دالة "كرر" داخل أخرى!/ هذه تسمى \*\* دالة التكرار المتداخلة\*\*.
+      courseC_starWars_loops6_2019:
+        courseC_starWars_loops6_a: حاول كتابة كل الحركات على ورقة وابحث عن النمط.
+        courseC_starWars_loops6_b: إذا اردت استخدام القليل من الكود برمجي, يمكنك أن
+          تضع دالة "كرر" داخل أخرى!/ هذه تسمى \*\* دالة التكرار المتداخلة\*\*.
+      courseC_starWars_loops7:
+        courseC_starWars_loops7_a: هذا النمط يبدو صعباً! ابدأ بخطوة في السلم. هل هذه
+          الخطوة تجمع كل قطع الحديد؟
+        courseC_starWars_loops7_b: إذا كنت تواجه مشكلة مع هذا اللغز, حاول كتابة كل
+          الخطوات على ورقة وابحث عن نمط.
+      courseC_starWars_loops7_2018:
+        courseC_starWars_loops7_a: هذا النمط يبدو صعباً! ابدأ بخطوة في السلم. هل هذه
+          الخطوة تجمع كل قطع الحديد؟
+        courseC_starWars_loops7_b: إذا كنت تواجه مشكلة مع هذا اللغز, حاول كتابة كل
+          الخطوات على ورقة وابحث عن نمط.
+      courseC_starWars_loops7_2019:
+        courseC_starWars_loops7_a: هذا النمط يبدو صعباً! ابدأ بخطوة في السلم. هل هذه
+          الخطوة تجمع كل قطع الحديد؟
+        courseC_starWars_loops7_b: إذا كنت تواجه مشكلة مع هذا اللغز, حاول كتابة كل
+          الخطوات على ورقة وابحث عن نمط.
+      courseC_starWars_loops8:
+        course_starWars_loops8_a: حاول التفكير في هذه المشكلة عن طريق تجزيئها. خذ
+          وقتك. لا تحتاج أن تحلها من المرة الاولى!
+        course_starWars_loops8_b: فكر في النصف الاول من المشكلة وكانها درجة في السلم.
+          كيف قمت بحلها سابقاَ؟
+        course_starWars_loops8_c: |-
+          ألقي نظرة على هذا المسار.
+
+          ![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)
+      courseC_starWars_loops8_2018:
+        course_starWars_loops8_a: حاول التفكير في هذه المشكلة عن طريق تجزيئها. خذ
+          وقتك. لا تحتاج أن تحلها من المرة الاولى!
+        course_starWars_loops8_b: فكر في النصف الاول من المشكلة وكانها درجة في السلم.
+          كيف قمت بحلها سابقاَ؟
+        course_starWars_loops8_c: |-
+          ألقي نظرة على هذا المسار.
+
+          ![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)
+      courseC_starWars_loops8_2019:
+        course_starWars_loops8_a: حاول التفكير في هذه المشكلة عن طريق تجزيئها. خذ
+          وقتك. لا تحتاج أن تحلها من المرة الاولى!
+        course_starWars_loops8_b: فكر في النصف الاول من المشكلة وكانها درجة في السلم.
+          كيف قمت بحلها سابقاَ؟
+        course_starWars_loops8_c: |-
+          ألقي نظرة على هذا المسار.
+
+          ![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)
+      courseC_starWars_loops9:
+        course_starWars_loops9_b: يمكنك وضع أكثر من بلوكة داخل دالة "كرر".
+        course_starWars_loops9_c: |-
+          لا تحتاج الاتجاه لليسار لحل هذا اللغز. كل اتجاهاتك يمكن أن تكون لليمين.
+
+          ![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)
+      courseC_starWars_loops9_2018:
+        course_starWars_loops9_b: يمكنك وضع أكثر من بلوكة داخل دالة "كرر".
+        course_starWars_loops9_c: |-
+          لا تحتاج الاتجاه لليسار لحل هذا اللغز. كل اتجاهاتك يمكن أن تكون لليمين.
+
+          ![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)
+      courseC_starWars_loops9_2019:
+        course_starWars_loops9_b: يمكنك وضع أكثر من بلوكة داخل دالة "كرر".
+        course_starWars_loops9_c: |-
+          لا تحتاج الاتجاه لليسار لحل هذا اللغز. كل اتجاهاتك يمكن أن تكون لليمين.
+
+          ![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)
       courseD_artist_nestedLoops3:
         courseD_artist_nestedLoops3_a: "حاول أن تستخدم الكتلة \"القفز إلى الأمام\"
           للانتقال من أعلى مربع إلى المكان الذي سوف تبدأ منه رسم المربع التالي. \n\nإذا

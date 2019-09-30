@@ -89,6 +89,21 @@ export function getNumBehaviorsForSpriteId(spriteId) {
   return numBehaviors;
 }
 
+/**
+ * @param {number} spriteId
+ * @return {[String]} List containing the names of the behaviors associated
+ * with the specified sprite
+ */
+export function getBehaviorsForSpriteId(spriteId) {
+  let spriteBehaviors = [];
+  behaviors.forEach(behavior => {
+    if (behavior.sprite.id === spriteId) {
+      spriteBehaviors.push(behavior.name);
+    }
+  });
+  return spriteBehaviors;
+}
+
 export function getSpriteIdsInUse() {
   let spriteIds = [];
   Object.keys(nativeSpriteMap).forEach(spriteId =>
