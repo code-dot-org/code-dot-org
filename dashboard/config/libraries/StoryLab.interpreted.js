@@ -14,12 +14,8 @@ function removeInvalidBehaviors() {
   for(var i = 0; i < spriteIds.length; i++) {
   	var behaviors = getBehaviorsForSpriteId(spriteIds[i]);
     for(var j = 0; j < behaviors.length; j++) {
-      console.log(getProp(spriteIds[i], behaviors[j])());
-      if(getProp(spriteIds[i], "x") >= 250) {
-      //if(getProp(spriteIds[i], behaviors[j])()) {
-        console.log("you got here");
+      if(getProp(spriteIds[i], behaviors[j])()) {
       	removeBehaviorSimple(spriteIds[i], behaviors[j]);
-        //removeAllBehaviors(spriteIds[i]);
       }
     }
   }
@@ -56,11 +52,13 @@ function getCurrentScene() {
 }
 
 function draw() {
-  //if(setupCode.length > 0) {
-  	//runSetup();
-  //}
-  getCurrentScene().code();
-  removeInvalidBehaviors();
+  /*
+  if(setupCode.length > 0) {
+  	runSetup();
+  }
+  */
+  //getCurrentScene().code();
   //getCurrentScene().code = function(){};
+  removeInvalidBehaviors();
   executeDrawLoopAndCallbacks();
 }
