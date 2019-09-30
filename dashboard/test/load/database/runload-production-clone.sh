@@ -35,7 +35,7 @@ then
 	# Prepare for read-only test
 	/home/ec2-user/sysbench/src/sysbench ./$2 --mysql-host=$1 --mysql-port=3306 --mysql-db=sysbench --mysql-user=db --mysql-password=Password1 --db-driver=mysql --tables=250 --table-size=25000 --threads=250 prepare
 
-	# Launch 250 sysbench clients (16,000 connections)
+	# Launch 800 sysbench clients (16,000 connections)
 	for i in {1..800}
 	do
 		# Execute read-only test
@@ -48,7 +48,7 @@ else
 	# Prepare for write-only test
 	/home/ec2-user/sysbench/src/sysbench ./$2 --mysql-host=$1 --mysql-port=3306 --mysql-db=sysbench --mysql-user=db --mysql-password=Password1 --db-driver=mysql --tables=250 --table-size=25000 --threads=250 --auto-inc=off prepare
 
-	# Launch 250 sysbench clients (16,000 connections)
+	# Launch 800 sysbench clients (16,000 connections)
 	for i in {1..800}
 	do
 		# Execute write-only test
