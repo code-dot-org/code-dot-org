@@ -178,7 +178,7 @@ module Pd::Application
               :pay_fee
             ]
 
-            if hash[:replace_course] == TEXT_FIELDS[:yes_replace_existing_course]
+            if hash[:replace_course] == self.class.options[:replace_course][0]
               if teacher_application&.course == 'csd'
                 required << :replace_which_course_csd
               elsif teacher_application&.course == 'csp'
