@@ -1050,6 +1050,81 @@ FactoryGirl.define do
     form_data {form_data_hash.to_json}
   end
 
+  # default to do_you_approve: other
+  factory :pd_principal_approval2021_application_hash, parent: :pd_principal_approval2021_application_hash_common do
+    approved_other
+  end
+
+  factory :pd_principal_approval2021_application_hash_common, parent: :form_data_hash do
+    title 'Dr.'
+    first_name 'Albus'
+    last_name 'Dumbledore'
+    email 'albus@hogwarts.edu'
+    confirm_principal true
+
+    trait :approved_no do
+      do_you_approve 'No'
+    end
+
+    trait :approved_yes do
+      do_you_approve 'Yes'
+      with_approval_fields
+    end
+
+    trait :approved_other do
+      do_you_approve 'Other:'
+      with_approval_fields
+    end
+
+    trait :with_approval_fields do
+      plan_to_teach Pd::Application::PrincipalApproval2021Application.options[:plan_to_teach][0]
+      school 'Hogwarts Academy of Witchcraft and Wizardry'
+      total_student_enrollment 200
+      free_lunch_percent '50'
+      white '16'
+      black '15'
+      hispanic '14'
+      asian '13'
+      pacific_islander '12'
+      american_indian '11'
+      other '10'
+      committed_to_master_schedule Pd::Application::PrincipalApproval2021Application.options[:committed_to_master_schedule][0]
+      csp_implementation Pd::Application::PrincipalApproval2021Application.options[:csp_implementation][0]
+      replace_course Pd::Application::PrincipalApproval2021Application.options[:replace_course][1]
+      committed_to_diversity 'Yes'
+      understand_fee 'Yes'
+      pay_fee Pd::Application::PrincipalApproval2021Application.options[:pay_fee][0]
+    end
+
+    trait :replace_course_yes_csp do
+      replace_course 'Yes'
+      replace_which_course_csp ['Beauty and Joy of Computing']
+    end
+
+    trait :replace_course_yes_csd do
+      replace_course 'Yes'
+      replace_which_course_csd ['CodeHS']
+    end
+  end
+
+  factory :pd_principal_approval2021_application, class: 'Pd::Application::PrincipalApproval2021Application' do
+    association :teacher_application, factory: :pd_teacher2021_application
+    course 'csp'
+    transient do
+      approved 'Yes'
+      replace_course Pd::Application::PrincipalApproval2021Application.options[:replace_course][1]
+      form_data_hash do
+        build(
+          :pd_principal_approval2021_application_hash_common,
+          "approved_#{approved.downcase}".to_sym,
+          course: course,
+          replace_course: replace_course
+        )
+      end
+    end
+    form_data {form_data_hash.to_json}
+  end
+
   # default to csp
   factory :pd_teacher1920_application_hash, parent: :pd_teacher1920_application_hash_common do
     csp
