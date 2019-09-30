@@ -591,24 +591,6 @@ module Pd::Application
         meets_scholarship_criteria_scores[:principal_diversity_recruitment] =
           responses[:principal_diversity_recruitment] == principal_options[:committed_to_diversity].first ? YES : NO
 
-        meets_minimum_criteria_scores[:plan_to_teach] =
-          if responses[:principal_plan_to_teach]&.in? principal_options[:plan_to_teach].first(2)
-            YES
-          elsif responses[:principal_plan_to_teach]&.in? principal_options[:plan_to_teach].slice(2..3)
-            NO
-          else
-            nil
-          end
-
-        meets_scholarship_criteria_scores[:plan_to_teach] =
-          if responses[:principal_plan_to_teach]&.in? principal_options[:plan_to_teach].first
-            YES
-          elsif responses[:principal_plan_to_teach]&.in? principal_options[:plan_to_teach].slice(1..3)
-            NO
-          else
-            nil
-          end
-
         meets_minimum_criteria_scores[:principal_schedule_confirmed] =
           if responses[:principal_schedule_confirmed]&.in?(principal_options[:committed_to_master_schedule].slice(0..1))
             YES
@@ -635,13 +617,6 @@ module Pd::Application
           else
             nil
           end
-
-        if course == 'csd'
-          meets_minimum_criteria_scores[:principal_implementation] = responses[:principal_implementation]&.in?(principal_options[:csd_implementation].first(2)) ? YES : NO
-          bonus_points_scores[:principal_implementation] = responses[:principal_implementation] == principal_options[:csd_implementation][1] ? 2 : 0
-        elsif course == 'csp'
-          meets_minimum_criteria_scores[:principal_implementation] = responses[:principal_implementation] == principal_options[:csp_implementation].first ? YES : NO
-        end
 
         bonus_points_scores[:free_lunch_percent] = (responses[:principal_free_lunch_percent]&.to_i&.>= 50) ? 5 : 0
         bonus_points_scores[:underrepresented_minority_percent] = ((responses[:principal_underrepresented_minority_percent]).to_i >= 50) ? 5 : 0
@@ -735,7 +710,6 @@ module Pd::Application
       # Sub out :: for : because "I don't know:" has a colon on the end
       replace_course_string = "#{response}#{replaced_courses.present? ? ': ' + replaced_courses : ''}".gsub('::', ':')
 
-      implementation_string = principal_response.values_at("#{course}_implementation".to_sym, "#{course}_implementation_other".to_sym).compact.join(" ")
       principal_school = School.find_by(id: principal_response[:school])
       update_form_data_hash(
         {
@@ -746,9 +720,7 @@ module Pd::Application
           principal_school_type: principal_school.try(:school_type),
           principal_school_district: principal_school.try(:district).try(:name),
           principal_approval: principal_response.values_at(:do_you_approve, :do_you_approve_other).compact.join(" "),
-          principal_plan_to_teach: principal_response.values_at(:plan_to_teach, :plan_to_teach_other).compact.join(" "),
           principal_schedule_confirmed: principal_response.values_at(:committed_to_master_schedule, :committed_to_master_schedule_other).compact.join(" "),
-          principal_implementation: implementation_string,
           principal_total_enrollment: principal_response[:total_student_enrollment],
           principal_diversity_recruitment: principal_response.values_at(:committed_to_diversity, :committed_to_diversity_other).compact.join(" "),
           principal_free_lunch_percent: format("%0.02f%%", principal_response[:free_lunch_percent]),
