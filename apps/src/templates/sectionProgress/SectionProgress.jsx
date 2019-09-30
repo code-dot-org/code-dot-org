@@ -8,7 +8,6 @@ import SectionProgressToggle from '@cdo/apps/templates/sectionProgress/SectionPr
 import VirtualizedDetailView from './VirtualizedDetailView';
 import VirtualizedSummaryView from './VirtualizedSummaryView';
 import SummaryViewLegend from './SummaryViewLegend';
-import SmallChevronLink from '../SmallChevronLink';
 import LessonSelector from './LessonSelector';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
@@ -26,9 +25,11 @@ import {tooltipIdForLessonNumber} from './multiGridConstants';
 import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
 import {
   setScriptId,
-  validScriptPropType
+  validScriptPropType,
+  getSelectedScriptFriendlyName
 } from '@cdo/apps/redux/scriptSelectionRedux';
 import {stageIsAllAssessment} from '@cdo/apps/templates/progress/progressHelpers';
+import color from '../../util/color';
 
 const styles = {
   heading: {
@@ -48,7 +49,13 @@ const styles = {
     paddingRight: 5
   },
   toggle: {
-    margin: '0px 20px'
+    margin: '0px 30px'
+  },
+  tableHeader: {
+    marginBottom: 10
+  },
+  scriptLink: {
+    color: color.teal
   }
 };
 
@@ -69,7 +76,8 @@ class SectionProgress extends Component {
     loadScript: PropTypes.func.isRequired,
     setScriptId: PropTypes.func.isRequired,
     setLessonOfInterest: PropTypes.func.isRequired,
-    isLoadingProgress: PropTypes.bool.isRequired
+    isLoadingProgress: PropTypes.bool.isRequired,
+    scriptFriendlyName: PropTypes.string.isRequired
   };
 
   componentDidMount() {
@@ -119,7 +127,8 @@ class SectionProgress extends Component {
       currentView,
       scriptId,
       scriptData,
-      isLoadingProgress
+      isLoadingProgress,
+      scriptFriendlyName
     } = this.props;
 
     const levelDataInitialized = scriptData && !isLoadingProgress;
@@ -141,22 +150,11 @@ class SectionProgress extends Component {
           </div>
           <div style={styles.toggle}>
             <div style={{...h3Style, ...styles.heading}}>{i18n.viewBy()}</div>
-            <span>
-              <SectionProgressToggle />
-            </span>
+            <SectionProgressToggle />
           </div>
 
           {currentView === ViewType.DETAIL && lessons.length !== 0 && (
             <LessonSelector lessons={lessons} onChange={this.onChangeLevel} />
-          )}
-          {linkToOverview && (
-            <span style={styles.chevronLink}>
-              <SmallChevronLink
-                link={linkToOverview}
-                linkText={i18n.viewCourse()}
-                isRtl={false}
-              />
-            </span>
           )}
         </div>
         <div style={{clear: 'both'}}>
@@ -169,6 +167,14 @@ class SectionProgress extends Component {
           )}
           {levelDataInitialized && currentView === ViewType.SUMMARY && (
             <div id="uitest-summary-view">
+              <div
+                style={{...h3Style, ...styles.heading, ...styles.tableHeader}}
+              >
+                <span>{i18n.lessonsAttempted()}</span>
+                <a href={linkToOverview} style={styles.scriptLink}>
+                  {scriptFriendlyName}
+                </a>
+              </div>
               <VirtualizedSummaryView
                 section={section}
                 scriptData={scriptData}
@@ -181,6 +187,14 @@ class SectionProgress extends Component {
           )}
           {levelDataInitialized && currentView === ViewType.DETAIL && (
             <div id="uitest-detail-view">
+              <div
+                style={{...h3Style, ...styles.heading, ...styles.tableHeader}}
+              >
+                <span>{i18n.levelsAttempted()}</span>
+                <a href={linkToOverview} style={styles.scriptLink}>
+                  {scriptFriendlyName}
+                </a>
+              </div>
               <VirtualizedDetailView
                 section={section}
                 stageExtrasEnabled={section.stageExtras}
@@ -209,7 +223,8 @@ export default connect(
     currentView: state.sectionProgress.currentView,
     scriptData: getCurrentScriptData(state),
     studentLevelProgress: getCurrentProgress(state),
-    isLoadingProgress: state.sectionProgress.isLoadingProgress
+    isLoadingProgress: state.sectionProgress.isLoadingProgress,
+    scriptFriendlyName: getSelectedScriptFriendlyName(state)
   }),
   dispatch => ({
     loadScript(scriptId) {
