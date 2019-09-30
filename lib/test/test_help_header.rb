@@ -29,7 +29,7 @@ class HelpHeaderTest < Minitest::Test
     assert_includes_id contents, "applab-tutorials"
   end
 
-  def test_help_header_content_spritelab
+  def test_help_header_content_spritelab_level
     contents = HelpHeader.get_help_contents({level: LevelSpriteLab.new, script_level: nil, user_type: nil, language: "en"})
     assert_includes_id contents, "spritelab-docs"
     assert_includes_id contents, "spritelab-tutorials"
