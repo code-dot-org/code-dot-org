@@ -16,6 +16,10 @@ class Policies::InlineAnswer
       script &&
       !script.professional_learning_course?
 
+    # For CSF scripts teachers should be able to see teacher only markdown and answers
+    # even if they are not authorized
+    return true if user.try(:teacher?) && script && (script.k5_course? || script.k5_draft_course?)
+
     # Teachers can also put stages into a readonly mode in which students are
     # able to view the answers
     user_level = UserLevel.find_by(user: user, level: script_level.level)
