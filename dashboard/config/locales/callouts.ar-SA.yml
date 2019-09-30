@@ -159,6 +159,15 @@ ar-SA:
         jumpto_callout: هذه البلوكة مهمة لبرنامجك. احرص على استخدامها!
       courseC_artist_loops1b_2019:
         sticker2: أضف هذه في منتصفبرنامجك.
+      courseC_artist_loopsPrePre1a:
+        courseC_artist_loopsPrePre1a_1: ابدأ باستخدام هذه البلوكة لتجعل الرسام في
+          منتصف الشاشة.
+      courseC_artist_loopsPrePre1a_2018:
+        courseC_artist_loopsPrePre1a_1: ابدأ باستخدام هذه البلوكة لتجعل الرسام في
+          منتصف الشاشة.
+      courseC_artist_loopsPrePre1a_2019:
+        courseC_artist_loopsPrePre1a_1: ابدأ باستخدام هذه البلوكة لتجعل الرسام في
+          منتصف الشاشة.
       courseC_collector_prog1_2018:
         courseC_collector_prog1_1: هل ترى بلوكات جديدة في صندوق الأدوات؟ لا تقلق,
           سنريك كيفية استخدامها في دروس قادمة.
@@ -199,6 +208,15 @@ ar-SA:
         courseC_maze_programming7_1: هذا تحدي لغزك الاول! لا تقلق من المفترض ان يكون
           صعباً ويحتاج العديد من المحاولات لحلها.
         courseC_maze_programming7_2: هذه البلوكات ثابتة ولايمكن حذفها.
+      courseC_starWars_loops2:
+        courseC_starWars_loops2: ليس لديك إلا واحدة من هذه البلوكات التي يمكنك استخدامها
+          في هذا اللغز.
+      courseC_starWars_loops2_2018:
+        courseC_starWars_loops2: ليس لديك إلا واحدة من هذه البلوكات التي يمكنك استخدامها
+          في هذا اللغز.
+      courseC_starWars_loops2_2019:
+        courseC_starWars_loops2: ليس لديك إلا واحدة من هذه البلوكات التي يمكنك استخدامها
+          في هذا اللغز.
       courseD_scrat_ramp8:
         courseD_maze_ramp7_1: هذا تحدي لغزك الاول! لا تقلق من المفترض ان يكون صعباً
           ويحتاج العديد من المحاولات لحلها.
