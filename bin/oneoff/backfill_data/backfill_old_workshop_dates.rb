@@ -5,7 +5,7 @@
 # because their states appear to be STATE_NOT_STARTED.
 
 ActiveRecord::Base.transaction do
-  cutoff_date = Date.new(2019, 1, 29)
+  cutoff_date = Date.new(2019, 2, 28)
   total_problems = 0
   total_updated = 0
   total_skipped = 0
