@@ -35,10 +35,12 @@
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Within your loop, make sure the artist jumps backwards and upwards after drawing each line.\",\r\n  \"hint_id\": \"4-5_Artist_11_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "discard_background": "false",
     "hint_prompt_attempts_threshold": 20,
-    "contained_level_names": null
+    "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/8da383d616d24782bffd663237c3b451=levelbuilder/47636.png",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-09-30 14:05:41 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-09-30 14:05:48 +0000\",\"changed\":[\"solution_blocks\",\"solution_image_url\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-09-30 14:07:13 +0000\",\"changed\":[\"solution_blocks\",\"solution_image_url\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 4,
     "repeat_loops": 3
@@ -94,7 +96,7 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="draw_colour" inline="true">
+            <block type="draw_colour">
               <value name="COLOUR">
                 <block type="colour_picker">
                   <title name="COLOUR">#228b22</title>
