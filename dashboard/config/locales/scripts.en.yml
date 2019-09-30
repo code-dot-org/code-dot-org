@@ -13291,7 +13291,7 @@ en:
               name: 'Earthquake Detector: Designing Screens'
             'Earthquake Detector: Processing with Events':
               name: 'Earthquake Detector: Processing with Events'
-          title: Denny Science
+          title: Earthquake Detector
           description_audience: ''
           description_short: ''
           description: ''
@@ -13335,3 +13335,21 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+        denny-science-8:
+          title: Collision Detector
+          description: ''
+          description_short: ''
+          description_audience: ''
+          stages:
+            'Earthquake Detector: Designing Screens':
+              name: 'Earthquake Detector: Designing Screens'
+              description_student: ''
+              description_teacher: ''
+            'Earthquake Detector: Processing with Events':
+              name: 'Earthquake Detector: Processing with Events'
+              description_student: ''
+              description_teacher: ''
+            'Collision Detector: Designing Screens':
+              name: 'Collision Detector: Designing Screens'
+            'Collision Detector: Processing with Events':
+              name: 'Collision Detector: Processing with Events'
