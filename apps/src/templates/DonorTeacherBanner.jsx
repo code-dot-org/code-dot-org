@@ -89,7 +89,8 @@ export const donorTeacherBannerOptionsShape = PropTypes.shape({
 export default class DonorTeacherBanner extends Component {
   static propTypes = {
     options: donorTeacherBannerOptionsShape,
-    showPegasusLink: PropTypes.bool
+    showPegasusLink: PropTypes.bool,
+    source: PropTypes.string.isRequired
   };
 
   initialState = {
@@ -126,7 +127,11 @@ export default class DonorTeacherBanner extends Component {
   dismissWithCallbacks(onSuccess, onFailure) {
     $.ajax({
       url: '/dashboardapi/v1/users/me/dismiss_donor_teacher_banner',
-      type: 'post'
+      type: 'post',
+      data: {
+        participate: this.state.participate,
+        source: this.props.source
+      }
     })
       .done(onSuccess)
       .fail(onFailure);
