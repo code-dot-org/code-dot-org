@@ -1157,6 +1157,8 @@ en:
               name: Externals Optionally Displayed as Unplugged
             Bubble Choice:
               name: Bubble Choice
+            Contained Levels:
+              name: Contained Levels
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
