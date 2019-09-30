@@ -1060,7 +1060,7 @@ class User < ActiveRecord::Base
     sl_level_ids = visible_sls.map(&:level_ids).flatten
 
     # Levels the user made progress in
-    ul_level_ids = user_levels_by_level(script).keys
+    ul_level_ids = user_levels.where(script: script).map(&:level_id)
 
     visible_completed_level_ids = sl_level_ids & ul_level_ids
     visible_incomplete_level_ids = sl_level_ids - ul_level_ids
@@ -1081,6 +1081,9 @@ class User < ActiveRecord::Base
 
     # Find the script_level that goes with the most recent user_level
     most_recent_sl = visible_sls.find {|sl| sl.level_id == most_recent_ul.level_id}
+
+    # If the user started but didn't finish a level, go to that level.
+    return most_recent_sl unless most_recent_ul.passing?
 
     last_visible_level = visible_sls.max_by(&:chapter)
 
