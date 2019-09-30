@@ -89,47 +89,47 @@ Scenario: Basic teacher application submission
   Then I see no difference for "Confirmation"
 
   # Principal approval
-#  Then I sign out
-#  Then I navigate to the principal approval page for "Severus"
-#  Then I wait until element "h1" contains text "2019-2020 Code.org Principal Approval Form"
-#  Then I press the first "input[name='doYouApprove'][value='Yes']" element
-#  Then I press the first "input[name='planToTeach']" element
-#
-#  And I press keys "nonexistent" for element "#nces_school"
-#  Then I wait until element ".VirtualizedSelectOption:contains('Other school not listed below')" is visible
-#  And I press ".VirtualizedSelectOption:contains('Other school not listed below')" using jQuery
-#  Then I wait until element "input#schoolName" is visible
-#  And I press keys "Code.org" for element "input#schoolName"
-#  And I press keys "1501 4th Ave" for element "input#schoolAddress"
-#  And I press keys "Seattle" for element "input#schoolCity"
-#  And I select the "Washington" option in dropdown "schoolState"
-#  And I press keys "98101" for element "input#schoolZipCode"
-#  And I press the first "input[name='schoolType'][value='Other']" element
-#
-#  Then I press keys "1000" for element "#totalStudentEnrollment"
-#  Then I press keys "10" for element "#freeLunchPercent"
-#  Then I press keys "10" for element "#white"
-#  Then I press keys "10" for element "#black"
-#  Then I press keys "10" for element "#hispanic"
-#  Then I press keys "10" for element "#asian"
-#  Then I press keys "10" for element "#pacificIslander"
-#  Then I press keys "10" for element "#americanIndian"
-#  Then I press keys "10" for element "#other"
-#
-#  Then I press the first "input[name='committedToMasterSchedule']" element
-#  Then I press the first "input[name='csdImplementation']" element
-#  Then I press the first "input[name='replaceCourse']" element
-#  Then I press the first "input[name='replaceWhichCourseCsd']" element
-#
-#  Then I press the first "input[name='committedToDiversity']" element
-#  Then I press the first "#understandFee" element
-#  Then I press the first "input[name='payFee']" element
-#  Then I press the first "#confirmPrincipal" element
-#
-#  Then I see no difference for "Principal approval form"
-#
-#  And I press the first "button#submit" element
-#  Then I wait until element "h1" contains text "Thank you. Your teacher's application is now considered complete and will be reviewed."
-#  Then I see no difference for "Principal approval confirmation form"
+  Then I sign out
+  Then I navigate to the principal approval page for "Severus"
+  Then I wait until element "h1" contains text "2019-2020 Code.org Principal Approval Form"
+  Then I press the first "input[name='doYouApprove'][value='Yes']" element
+  Then I press the first "input[name='planToTeach']" element
+
+  And I press keys "nonexistent" for element "#nces_school"
+  Then I wait until element ".VirtualizedSelectOption:contains('Other school not listed below')" is visible
+  And I press ".VirtualizedSelectOption:contains('Other school not listed below')" using jQuery
+  Then I wait until element "input#schoolName" is visible
+  And I press keys "Code.org" for element "input#schoolName"
+  And I press keys "1501 4th Ave" for element "input#schoolAddress"
+  And I press keys "Seattle" for element "input#schoolCity"
+  And I select the "Washington" option in dropdown "schoolState"
+  And I press keys "98101" for element "input#schoolZipCode"
+  And I press the first "input[name='schoolType'][value='Other']" element
+
+  Then I press keys "1000" for element "#totalStudentEnrollment"
+  Then I press keys "10" for element "#freeLunchPercent"
+  Then I press keys "10" for element "#white"
+  Then I press keys "10" for element "#black"
+  Then I press keys "10" for element "#hispanic"
+  Then I press keys "10" for element "#asian"
+  Then I press keys "10" for element "#pacificIslander"
+  Then I press keys "10" for element "#americanIndian"
+  Then I press keys "10" for element "#other"
+
+  Then I press the first "input[name='committedToMasterSchedule']" element
+  Then I press the first "input[name='csdImplementation']" element
+  Then I press the first "input[name='replaceCourse']" element
+  Then I press the first "input[name='replaceWhichCourseCsd']" element
+
+  Then I press the first "input[name='committedToDiversity']" element
+  Then I press the first "#understandFee" element
+  Then I press the first "input[name='payFee']" element
+  Then I press the first "#confirmPrincipal" element
+
+  Then I see no difference for "Principal approval form"
+
+  And I press the first "button#submit" element
+  Then I wait until element "h1" contains text "Thank you. Your teacher's application is now considered complete and will be reviewed."
+  Then I see no difference for "Principal approval confirmation form"
   Then I close my eyes
 
