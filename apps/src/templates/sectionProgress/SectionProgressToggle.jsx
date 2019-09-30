@@ -8,8 +8,9 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const styles = {
   toggleButton: {
-    padding: '3px 10px',
-    height: 34
+    padding: '3px 20px',
+    height: 34,
+    marginBottom: 10
   }
 };
 
