@@ -39,9 +39,6 @@ const styles = {
     alignItems: 'flex-end',
     marginBottom: 10
   },
-  toggle: {
-    margin: '0 10px 5px 10px'
-  },
   chevronLink: {
     display: 'flex',
     flex: 1,
@@ -49,6 +46,9 @@ const styles = {
   },
   icon: {
     paddingRight: 5
+  },
+  toggle: {
+    margin: '0px 20px'
   }
 };
 
@@ -139,9 +139,13 @@ class SectionProgress extends Component {
               onChange={this.onChangeScript}
             />
           </div>
-          <span style={styles.toggle}>
-            <SectionProgressToggle />
-          </span>
+          <div style={styles.toggle}>
+            <div style={{...h3Style, ...styles.heading}}>{i18n.viewBy()}</div>
+            <span>
+              <SectionProgressToggle />
+            </span>
+          </div>
+
           {currentView === ViewType.DETAIL && lessons.length !== 0 && (
             <LessonSelector lessons={lessons} onChange={this.onChangeLevel} />
           )}

@@ -2,14 +2,14 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import ToggleGroup from '../ToggleGroup';
 import color from '@cdo/apps/util/color';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {connect} from 'react-redux';
 import {setCurrentView, ViewType} from './sectionProgressRedux';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const styles = {
   toggleButton: {
-    padding: '3px 10px'
+    padding: '3px 10px',
+    height: 34
   }
 };
 
@@ -80,7 +80,7 @@ class SectionProgressToggle extends React.Component {
           value={ViewType.SUMMARY}
           style={styles.toggleButton}
         >
-          <FontAwesome icon="search-minus" />
+          <div>Lessons</div>
         </button>
         <button
           type="button"
@@ -88,7 +88,7 @@ class SectionProgressToggle extends React.Component {
           value={ViewType.DETAIL}
           style={styles.toggleButton}
         >
-          <FontAwesome icon="search-plus" />
+          <div>Levels</div>
         </button>
       </ToggleGroup>
     );
