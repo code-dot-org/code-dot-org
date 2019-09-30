@@ -862,6 +862,18 @@ de-DE:
         Hilf Laurel mindestens **5** Schätze einzusammeln um diese Aufgabe zu beenden.
       courseB_maze_seq12_2019: Jetzt bekomme das Schwein auf irgendeine Art und Weise!
       courseB_maze_seq3: _"Repariere den Code, damit ich das Schwein bekomme!_"
+      courseC_collector_prog1: |-
+        **Freies Spiel:** Das ist Laurel, die Abenteurerin! Bewege sie und sammle soviel Schätze wie möglich ein. Benutze den 'sammle' Block um die Schätze aufzuheben!
+
+        Ziehe die Blöcke in den Arbeitsbereich und versuche herauszufinden, wie du die Schätze einsammeln kannst. Du brauchst mindestens einen Schatz um dieses Level zu bestehen.
+      courseC_collector_prog1_2018: |-
+        **Freies Spiel:** Das ist Laurel, die Abenteurerin! Bewege sie und sammle soviel Schätze wie möglich ein. Benutze den 'sammle' Block um die Schätze aufzuheben!
+
+        Ziehe die Blöcke in den Arbeitsbereich und versuche herauszufinden, wie du die Schätze einsammeln kannst. Du brauchst mindestens einen Schatz um dieses Level zu bestehen.
+      courseC_collector_prog1_2019: |-
+        **Freies Spiel:** Das ist Laurel, die Abenteurerin! Bewege sie und sammle soviel Schätze wie möglich ein. Benutze den 'sammle' Block um die Schätze aufzuheben!
+
+        Ziehe die Blöcke in den Arbeitsbereich und versuche herauszufinden, wie du die Schätze einsammeln kannst. Du brauchst mindestens einen Schatz um dieses Level zu bestehen.
       courseC_maze_programming1: Für diese Aufgabe musst du alle Blöcke zusammensetzen,
         auf 'Ausführen' klicken und zusehen, wie es läuft!
       courseC_maze_programming1_2018: Für diese Aufgabe musst du alle Blöcke zusammensetzen,

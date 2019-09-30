@@ -14,6 +14,7 @@ en-GB:
         current_password: Current password
         age: Age
         gender: Gender
+  beta: beta
   hello: Hello World
   submit: Submit
   next_page: Next page
