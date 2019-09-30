@@ -830,34 +830,37 @@ describe('Circuit Playground Components', () => {
       });
     });
 
-    it('calls disable on the soundSensor', () => {
+    it('calls disable on the soundSensor and clears events', () => {
       const spy = sinon.spy(components.soundSensor, 'disable');
       cleanupCircuitPlaygroundComponents(
         components,
         true /* shouldDestroyComponents */
       );
       expect(spy).to.have.been.calledOnce;
+      expect(components.soundSensor._events.length).to.equal(0);
     });
 
-    it('calls disable on the lightSensor', () => {
+    it('calls disable on the lightSensor and clears events', () => {
       const spy = sinon.spy(components.lightSensor, 'disable');
       cleanupCircuitPlaygroundComponents(
         components,
         true /* shouldDestroyComponents */
       );
       expect(spy).to.have.been.calledOnce;
+      expect(components.lightSensor._events.length).to.equal(0);
     });
 
-    it('calls disable on the tempSensor', () => {
+    it('calls disable on the tempSensor and clears events', () => {
       const spy = sinon.spy(components.tempSensor, 'disable');
       cleanupCircuitPlaygroundComponents(
         components,
         true /* shouldDestroyComponents */
       );
       expect(spy).to.have.been.calledOnce;
+      expect(components.tempSensor._events.length).to.equal(0);
     });
 
-    it('calls stop on the accelerometer', () => {
+    it('calls stop on the accelerometer and clears events', () => {
       // Spy on the controller template, because stop() ends up readonly on
       // the returned component.
       const spy = sinon.spy(Playground.Accelerometer.stop, 'value');
@@ -873,6 +876,8 @@ describe('Circuit Playground Components', () => {
         } catch (e) {
           assertionError = e;
         }
+
+        expect(components.accelerometer._events.length).to.equal(0);
 
         spy.restore();
         if (assertionError) {
