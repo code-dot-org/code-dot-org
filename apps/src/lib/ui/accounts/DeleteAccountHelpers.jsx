@@ -10,18 +10,13 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 export const TeacherWarning = () => {
   return (
     <div>
-      <p>
-        {i18n.deleteAccount_teacherWarning1()}
-        <strong>{i18n.deleteAccount_teacherWarning2()}</strong>
-        {i18n.deleteAccount_teacherWarning3()}
-      </p>
-      <p>
-        {i18n.deleteAccount_teacherWarning4()}
-        <a href={ADD_A_PERSONAL_LOGIN_HELP_URL} target="_blank">
-          {i18n.deleteAccount_teacherWarning5()}
-        </a>
-        {i18n.deleteAccount_teacherWarning6()}
-      </p>
+      <SafeMarkdown markdown={i18n.deleteAccount_teacherWarning()} />
+
+      <SafeMarkdown
+        markdown={i18n.deleteAccount_personalLoginInstructions({
+          explanationUrl: ADD_A_PERSONAL_LOGIN_HELP_URL
+        })}
+      />
     </div>
   );
 };

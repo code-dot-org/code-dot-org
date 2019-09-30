@@ -12,6 +12,9 @@ function addBehaviorUntilBoolean(spriteID, behavior, condition) {
 }
 
 function scene(sceneNumber, code) {
+  //code = function() {
+  	//setTimeout(function(){ return waitCode.apply(waitCode); }, 2000);
+  //};
   scenes.push({sceneNumber: sceneNumber, code: code});
 }
 
