@@ -10,7 +10,7 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import queryString from 'query-string';
 /* global ga */
 
-export default class Teacher2021Application extends FormController {
+export default class TeacherApplication extends FormController {
   static propTypes = {
     ...FormController.propTypes,
     accountEmail: PropTypes.string.isRequired,
@@ -20,7 +20,7 @@ export default class Teacher2021Application extends FormController {
 
   static submitButtonText = 'Complete and Send';
 
-  static sessionStorageKey = 'Teacher2021Application';
+  static sessionStorageKey = 'TeacherApplication';
 
   /**
    * @override
@@ -89,7 +89,7 @@ export default class Teacher2021Application extends FormController {
       {
         user_id: this.props.userId,
         study: 'application-funnel',
-        event: 'started-teacher2021-application'
+        event: 'started-teacher-application'
       },
       {includeUserId: false}
     );
