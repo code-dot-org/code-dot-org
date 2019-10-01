@@ -26,6 +26,15 @@ sudo make
 cd src
 cd lua
 
+# production-clone-loadtest-cluster writer instance class is db.r4.8xlarge, which defaults to 5000 max connections.
+max_db_connections=5000
+
+# Threads per sysbench client.
+threads=20
+
+# Each sysbench thread opens one database connection.
+let number_of_sysbench_clients=max_db_connections/threads
+
 # Drop / create the sysbench schema
 mysql -h$1 -udb -pPassword1 -e "drop schema if exists sysbench;create schema sysbench;"
 
@@ -35,11 +44,25 @@ then
 	# Prepare for read-only test
 	/home/ec2-user/sysbench/src/sysbench ./$2 --mysql-host=$1 --mysql-port=3306 --mysql-db=sysbench --mysql-user=db --mysql-password=Password1 --db-driver=mysql --tables=250 --table-size=25000 --threads=250 prepare
 
-	# Launch 800 sysbench clients (16,000 connections)
-	for i in {1..800}
+	# Launch multiple sysbench clients
+	for i in {1..$number_of_sysbench_clients}
 	do
 		# Execute read-only test
-		(/home/ec2-user/sysbench/src/sysbench ./$2 --mysql-host=$1 --mysql-port=3306 --mysql-db=sysbench --mysql-user=db --mysql-password=Password1 --db-driver=mysql --tables=250 --table-size=25000 --threads=20 --time=86400 --range_selects=off --db-ps-mode=disable --skip_trx=on run)&
+		(/home/ec2-user/sysbench/src/sysbench ./$2 --mysql-host=$1 --mysql-port=3306 --mysql-db=sysbench --mysql-user=db --mysql-password=Password1 --db-driver=mysql --tables=250 --table-size=25000 --threads=$threads --time=86400 --range_selects=off --db-ps-mode=disable --skip_trx=on run)&
+
+		# Sleep one second
+		sleep 1
+	done
+elif [ "$2" == "oltp_insert.lua" ]
+then
+	# Prepare for write-only test
+	/home/ec2-user/sysbench/src/sysbench ./$2 --mysql-host=$1 --mysql-port=3306 --mysql-db=sysbench --mysql-user=db --mysql-password=Password1 --db-driver=mysql --tables=250 --table-size=25000 --threads=250 --auto-inc=off prepare
+
+	# Launch multiple sysbench clients
+	for i in {1..$number_of_sysbench_clients}
+	do
+		# Execute write-only test
+		(/home/ec2-user/sysbench/src/sysbench ./$2 --mysql-host=$1 --mysql-port=3306 --mysql-db=sysbench --mysql-user=db --mysql-password=Password1 --db-driver=mysql --tables=250 --table-size=25000 --threads=$threads --time=86400 --range_selects=off --db-ps-mode=disable --skip_trx=off --auto-inc=off --mysql-ignore-errors=all run)&
 
 		# Sleep one second
 		sleep 1
@@ -48,11 +71,11 @@ else
 	# Prepare for write-only test
 	/home/ec2-user/sysbench/src/sysbench ./$2 --mysql-host=$1 --mysql-port=3306 --mysql-db=sysbench --mysql-user=db --mysql-password=Password1 --db-driver=mysql --tables=250 --table-size=25000 --threads=250 --auto-inc=off prepare
 
-	# Launch 800 sysbench clients (16,000 connections)
-	for i in {1..800}
+	# Launch multiple sysbench clients
+	for i in {1..$number_of_sysbench_clients}
 	do
 		# Execute write-only test
-		(/home/ec2-user/sysbench/src/sysbench ./$2 --mysql-host=$1 --mysql-port=3306 --mysql-db=sysbench --mysql-user=db --mysql-password=Password1 --db-driver=mysql --tables=250 --table-size=25000 --threads=20 --time=86400 --range_selects=off --db-ps-mode=disable --skip_trx=off --auto-inc=off --mysql-ignore-errors=all run)&
+		(/home/ec2-user/sysbench/src/sysbench ./$2 --mysql-host=$1 --mysql-port=3306 --mysql-db=sysbench --mysql-user=db --mysql-password=Password1 --db-driver=mysql --tables=250 --table-size=25000 --threads=$threads --time=86400 --range_selects=off --db-ps-mode=disable --skip_trx=off --auto-inc=off --mysql-ignore-errors=all run)&
 
 		# Sleep one second
 		sleep 1
