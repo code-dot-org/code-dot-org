@@ -60,14 +60,14 @@ export class SurveyRollupTable extends React.Component {
     let label = '';
 
     if (facilitatorId) {
-      let posessiveName = `${facilitatorLookup[facilitatorId]}' ${
+      let possessiveName = `${facilitatorLookup[facilitatorId]}'${
         _.endsWith(name, 's') ? '' : 's'
       }`;
 
       if (workshopId) {
-        label = `${posessiveName} average for this workshop`;
+        label = `${possessiveName} average for this workshop`;
       } else {
-        label = `Average across all of ${posessiveName} ${courseName} workshops`;
+        label = `Average across all of ${possessiveName} ${courseName} workshops`;
       }
     } else {
       if (workshopId) {
