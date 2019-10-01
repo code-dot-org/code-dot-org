@@ -1,5 +1,10 @@
 module Pd
   module Teacher1819ApplicationConstants
+    # Remove newlines and leading whitespace from multiline strings
+    def self.clean_multiline(string)
+      string.gsub(/\n\s*/, ' ')
+    end
+
     SECTION_HEADERS = {
       section_1_about_you: 'About You',
       section_2_your_school: 'Your School',
@@ -175,5 +180,18 @@ module Pd
 
     ALL_LABELS = PAGE_LABELS.values.reduce(:merge).freeze
     ALL_LABELS_WITH_OVERRIDES = ALL_LABELS.map {|k, v| [k, LABEL_OVERRIDES[k] || v]}.to_h.freeze
+
+    TEXT_FIELDS = {
+      other_with_text: 'Other:'.freeze,
+      other_please_list: 'Other (Please List):'.freeze,
+      other_please_explain: 'Other (Please Explain):'.freeze,
+      not_teaching_this_year: "I'm not teaching this year (Please Explain):".freeze,
+      not_teaching_next_year: "I'm not teaching next year (Please Explain):".freeze,
+      dont_know_if_i_will_teach_explain: "I don't know if I will teach this course (Please Explain):".freeze,
+      unable_to_attend: "No, I'm unable to attend (Please Explain):".freeze,
+      able_to_attend_single: "Yes, I'm able to attend".freeze,
+      no_explain: "No (Please Explain):".freeze,
+      no_pay_fee: "No, my school or I will not be able to pay the summer workshop program fee.".freeze,
+    }.freeze
   end
 end
