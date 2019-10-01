@@ -13353,3 +13353,9 @@ en:
               name: 'Collision Detector: Designing Screens'
             'Collision Detector: Processing with Events':
               name: 'Collision Detector: Processing with Events'
+        denny-science-copy:
+          stages:
+            'Collision Detector: Designing Screens':
+              name: 'Collision Detector: Designing Screens'
+            'Collision Detector: Processing with Events':
+              name: 'Collision Detector: Processing with Events'

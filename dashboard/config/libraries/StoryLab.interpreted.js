@@ -5,7 +5,7 @@ var currentSceneNumber = 0;
 var scenes = [];
 
 function addBehaviorUntilBoolean(spriteId, behavior, condition) {
-  setProp(spriteId, behavior.name, function() { return condition; });
+  setProp(spriteId, behavior.name, function() { return true; });
   addBehaviorSimple(spriteId, behavior);
 }
 
@@ -15,11 +15,8 @@ function removeInvalidBehaviors() {
   	var behaviors = getBehaviorsForSpriteId(spriteIds[i]);
     for(var j = 0; j < behaviors.length; j++) {
       console.log(getProp(spriteIds[i], behaviors[j])());
-      if(getProp(spriteIds[i], "x") >= 250) {
-      //if(getProp(spriteIds[i], behaviors[j])()) {
-        console.log("you got here");
+      if(getProp(spriteIds[i], behaviors[j])()) {
       	removeBehaviorSimple(spriteIds[i], behaviors[j]);
-        //removeAllBehaviors(spriteIds[i]);
       }
     }
   }
@@ -56,11 +53,13 @@ function getCurrentScene() {
 }
 
 function draw() {
-  //if(setupCode.length > 0) {
-  	//runSetup();
-  //}
-  getCurrentScene().code();
-  removeInvalidBehaviors();
+  /*
+  if(setupCode.length > 0) {
+  	runSetup();
+  }
+  */
+  //getCurrentScene().code();
   //getCurrentScene().code = function(){};
+  removeInvalidBehaviors();
   executeDrawLoopAndCallbacks();
 }
