@@ -630,7 +630,7 @@ function getRecordsData(records) {
  */
 FirebaseStorage.populateTable = function(jsonData, overwrite) {
   if (!jsonData || !jsonData.length) {
-    return;
+    return Promise.resolve(true);
   }
   // Ensure rate limit counters have been initialized, so that updates to the
   // counters/tables node will pass type definition checks in the security rules.
