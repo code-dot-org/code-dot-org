@@ -183,8 +183,8 @@ module.exports = p5 => {
 
     // teeth
     p5.fill('white');
-    const startPoint = [mouthStartX, mouthStartY-1];
-    const endPoint = [bottom_lip_start[0], bottom_lip_start[1]-1];
+    const startPoint = [mouthStartX, mouthStartY - 1];
+    const endPoint = [bottom_lip_start[0], bottom_lip_start[1] - 1];
     const topMouthWidth = startPoint[0] - endPoint[0];
     const numTeeth = mouth.teeth.num;
     const toothHeight = mouth.teeth.height;
@@ -199,5 +199,9 @@ module.exports = p5 => {
       p5.vertex(startPoint[0] - i * toothWidth, startPoint[1]);
     }
     p5.endShape();
+  };
+
+  p5.download = canvasId => {
+    p5.saveCanvas(canvasId, 'png');
   };
 };
