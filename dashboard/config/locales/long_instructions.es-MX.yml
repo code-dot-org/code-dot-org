@@ -7496,24 +7496,6 @@ es-MX:
         <li>Las etiquetas no pueden empezar con un número.</li>
         <li>El uso de mayúsculas y la ortografía deben ser exactamente iguales.</li>
         </ul></details></summary>
-      CSD U3 Variables naming rules v2_2018_2019: |-
-        <img style="float: right" src="https://images.code.org/f4b306422763c84bb924f4f7d3a6dca6-image-1492798058864.06.38 AM.png">
-
-        # Depuración: nombres de variables
-
-        Este programa tiene varios errores causados por nombres de etiquetas incorrectos. Los errores impiden que el programa se vea en el modo de bloques, por lo que el código está en texto.
-
-        # Haz esto
-
-        -   Encuentra la regla que infringe cada etiqueta de variable.
-        -   **Selecciona nuevos nombres que sigan las reglas que aprendiste en el último nivel para corregir los errores.**
-        -   Si tu programa funciona, deberías dibujar la imagen de la derecha.
-
-        <summary><em>Te damos una pista: haz clic en la flecha para dar un vistazo rápido a las reglas.</em><details><ul>
-        <li>Las etiquetas no pueden tener espacios.</li>
-        <li>Las etiquetas no pueden empezar con un número.</li>
-        <li>El uso de mayúsculas y la ortografía deben ser exactamente iguales.</li>
-        </ul></details></summary>
       CSD U3 Variables random with assignment: |-
         <img src="https://images.code.org/ba9592e887f52c1a538a0517560cdacf-image-1493913633878.gif" style="float:right;height:150px">
 

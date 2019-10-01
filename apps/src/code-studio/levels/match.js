@@ -51,6 +51,7 @@ export default class Match {
 
   getResult() {
     let wrongAnswer = false;
+    let valid = true;
 
     const elements = $(this.container).find('.match_slots li');
 
@@ -63,6 +64,7 @@ export default class Match {
       if (originalIndex === null) {
         // nothing dragged in this slot yet
         wrongAnswer = true;
+        valid = false;
 
         xmark.hide();
       } else if (originalIndex !== String(index)) {
@@ -80,7 +82,8 @@ export default class Match {
     return {
       response: response,
       result: !wrongAnswer,
-      errorDialog: wrongAnswer ? <MatchErrorDialog /> : null
+      errorDialog: wrongAnswer ? <MatchErrorDialog /> : null,
+      valid
     };
   }
   getAppName() {

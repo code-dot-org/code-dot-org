@@ -215,7 +215,7 @@ FactoryGirl.define do
       # CSP local summer workshop by default
       csp
 
-      location_name 'Greedale Community College'
+      location_name 'Greendale Community College'
       on_map false         # Never on the map
       funded false         # Less than half are funded
       num_facilitators 2   # Most have 2 facilitators
