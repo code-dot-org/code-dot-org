@@ -137,7 +137,7 @@ def main
       source_module: Pd::PrincipalApproval2021ApplicationConstants,
       transform_keys: true
     ),
-    "#{REPO_DIR}/apps/src/generated/pd/principalApproval2021ApplicationConstants.js"
+    "#{REPO_DIR}/apps/src/generated/pd/principalApprovalApplicationConstants.js"
   )
 
   generate_shared_js_file(

@@ -3,7 +3,7 @@ import {FormGroup, Row, Col, ControlLabel} from 'react-bootstrap';
 import {
   PageLabels,
   TextFields
-} from '@cdo/apps/generated/pd/principalApproval2021ApplicationConstants';
+} from '@cdo/apps/generated/pd/principalApprovalApplicationConstants';
 import LabeledFormComponent from '../../form_components/LabeledFormComponent';
 import PrivacyDialog from '../PrivacyDialog';
 import {PrivacyDialogMode} from '../../constants';
@@ -54,7 +54,7 @@ const REPLACE_COURSE_FIELDS = [
 const YEAR = '2020-21';
 const YES = 'Yes';
 
-export default class PrincipalApproval2021Component extends LabeledFormComponent {
+export default class PrincipalApprovalComponent extends LabeledFormComponent {
   static labels = PageLabels;
 
   static associatedFields = [
