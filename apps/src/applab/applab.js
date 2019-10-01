@@ -559,7 +559,8 @@ Applab.init = function(config) {
   config.afterClearPuzzle = function() {
     designMode.resetIds();
     Applab.setLevelHtml(config.level.startHtml || '');
-    Applab.storage.populateTable(level.dataTables, true, () => {}, outputError); // overwrite = true
+    let promise = Applab.storage.populateTable(level.dataTables, true); // overwrite = true
+    promise.catch(outputError);
     Applab.storage.populateKeyValue(
       level.dataProperties,
       true,
@@ -606,13 +607,10 @@ Applab.init = function(config) {
   // Print any json parsing errors to the applab debug console and the browser debug
   // console. If a json parse error is thrown before the applab debug console
   // initializes, the error will be printed only to the browser debug console.
+  let dataLoadedPromise;
   if (level.dataTables) {
-    Applab.storage.populateTable(
-      level.dataTables,
-      false,
-      () => {},
-      outputError
-    ); // overwrite = false
+    dataLoadedPromise = Applab.storage.populateTable(level.dataTables, false); // overwrite = false
+    dataLoadedPromise.catch(outputError);
   }
   if (level.dataProperties) {
     Applab.storage.populateKeyValue(
@@ -772,9 +770,14 @@ Applab.init = function(config) {
           );
         }
       }
-
+    })
+    .then(() => {
       if (getStore().getState().pageConstants.widgetMode) {
-        Applab.runButtonClick();
+        dataLoadedPromise
+          ? dataLoadedPromise.then(() => {
+              Applab.runButtonClick();
+            })
+          : Applab.runButtonClick();
       }
     });
 
