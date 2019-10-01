@@ -23,8 +23,8 @@ ActiveRecord::Base.transaction do
     elsif starting_date < cutoff_date
       puts "Update workshop #{w.id} gets new dates of #{starting_date} - #{ending_date}"
 
-      w.start_date = starting_date
-      w.ending_date = ending_date
+      w.started_at = starting_date
+      w.ended_at = ending_date
       w.save!
 
       total_updated += 1
