@@ -48,8 +48,9 @@ Rerun `assets:precompile` to regenerate new assets and try again."
   # Webpack adds its own hash to various files and doesn't have any
   # knowledge of Sprockets digests, so the Sprockets processed-asset digest
   # path should equal the logical path for these assets. The webpack hash can
-  # be either a 20- or 32-character hexadecimal string. See Gruntfile.js for
-  # when webpack might generate content hashes of 20 or 32 characters.
+  # be either a 20- or 32-character hexadecimal string. Search Gruntfile.js and
+  # webpack.js for [hash] and [contenthash] to see when webpack might generate
+  # content hashes of each length.
   #
   # This means that the digest for these assets is based on the webpack content
   # and not the Sprockets-processed output, so the wp-digest will not get
