@@ -91,9 +91,8 @@ Scenario: Basic teacher application submission
   # Principal approval
   Then I sign out
   Then I navigate to the principal approval page for "Severus"
-  Then I wait until element "h1" contains text "2019-2020 Code.org Principal Approval Form"
+  Then I wait until element "h1" contains text "2020-2021 Code.org Principal Approval Form"
   Then I press the first "input[name='doYouApprove'][value='Yes']" element
-  Then I press the first "input[name='planToTeach']" element
 
   And I press keys "nonexistent" for element "#nces_school"
   Then I wait until element ".VirtualizedSelectOption:contains('Other school not listed below')" is visible
@@ -117,9 +116,9 @@ Scenario: Basic teacher application submission
   Then I press keys "10" for element "#other"
 
   Then I press the first "input[name='committedToMasterSchedule']" element
-  Then I press the first "input[name='csdImplementation']" element
   Then I press the first "input[name='replaceCourse']" element
   Then I press the first "input[name='replaceWhichCourseCsd']" element
+  And I press the first "input[name='csdWhichUnits']" element
 
   Then I press the first "input[name='committedToDiversity']" element
   Then I press the first "#understandFee" element
