@@ -36,7 +36,7 @@ import {
   SectionHeaders as FacilitatorSectionHeaders,
   ScoreableQuestions as FacilitatorScoreableQuestions,
   ValidScores as FacilitatorValidScores
-} from '@cdo/apps/generated/pd/facilitator1920ApplicationConstants';
+} from '@cdo/apps/generated/pd/facilitatorApplicationConstants';
 import _ from 'lodash';
 import {
   ApplicationStatuses,
