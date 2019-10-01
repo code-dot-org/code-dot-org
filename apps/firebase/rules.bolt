@@ -30,6 +30,10 @@ path /v3/channels/shared {
   read() { isLoggedIn() }
 }
 
+path /v3/channels/{channelId}/current_tables/{tableName} is Boolean {
+  write() { canAccessChannel(channelId) }
+}
+
 path /v3/channels/{channelId}/serverTime is Number {
   write() { canAccessChannel(channelId) }
 }
