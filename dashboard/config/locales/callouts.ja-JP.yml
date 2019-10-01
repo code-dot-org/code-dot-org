@@ -216,8 +216,26 @@ ja-JP:
         courseB_maze_seq1: ヒントが ほしいときは、でんきゅうを クリック！
       courseB_maze_seq2:
         courseB_maze_seq2_callout1: ステップ ボタンを つかうと プログラムが ひとつずつ うごきます。これで バグを みつけよう！
+      courseC_artist_loopsPrePre1a:
+        courseC_artist_loopsPrePre1a_1: さいしょに このブロックを つかって、プレイエリアの まんなかに 行きます。
+      courseC_artist_loopsPrePre1a_2018:
+        courseC_artist_loopsPrePre1a_1: さいしょに このブロックを つかって、プレイエリアの まんなかに 行きます。
+      courseC_artist_loopsPrePre1a_2019:
+        courseC_artist_loopsPrePre1a_1: さいしょに このブロックを つかって、プレイエリアの まんなかに 行きます。
       courseC_collector_prog1:
         courseC_collector_prog1_1: ツールボックスに あたらしい ブロックが ありますよ。あとで せつめいを するので、まっててね。
+      courseC_collector_prog7:
+        courseC_collector_prog7_1: ひつようなブロックがあれば、ツールボックスからとり出そう。
+      courseC_collector_prog7_2018:
+        courseC_collector_prog7_1: ひつようなブロックがあれば、ツールボックスからとり出そう。
+      courseC_collector_prog7_2019:
+        courseC_collector_prog7_1: ひつようなブロックがあれば、ツールボックスからとり出そう。
+      courseC_harvester_loops1:
+        courseC_harvester_loops1_callout1: かぼちゃは、かぼちゃの右下に 書いてある数だけ あります。
+      courseC_harvester_loops1_2018:
+        courseC_harvester_loops1_callout1: かぼちゃは、かぼちゃの右下に 書いてある数だけ あります。
+      courseC_harvester_loops1_2019:
+        courseC_harvester_loops1_callout1: かぼちゃは、かぼちゃの右下に 書いてある数だけ あります。
       courseC_maze_programming1:
         grade2_CaringForNewPet_0_1: すべてのブロックをつなげたら「実行」を押してプログラムを開始してください。
       courseC_maze_programming1_2018:
@@ -230,6 +248,18 @@ ja-JP:
         courseC_maze_programming3_3: はい色のブロックをけすことができません。
       courseC_maze_programming3_2019:
         courseC_maze_programming3_3: はい色のブロックをけすことができません。
+      courseC_maze_programming7:
+        courseC_maze_programming7_2: はい色のブロックはけすことができません。
+      courseC_maze_programming7_2018:
+        courseC_maze_programming7_2: はい色のブロックはけすことができません。
+      courseC_maze_programming7_2019:
+        courseC_maze_programming7_2: はい色のブロックはけすことができません。
+      courseC_starWars_loops2:
+        courseC_starWars_loops2: １つだけブロックを入れます。
+      courseC_starWars_loops2_2018:
+        courseC_starWars_loops2: １つだけブロックを入れます。
+      courseC_starWars_loops2_2019:
+        courseC_starWars_loops2: １つだけブロックを入れます。
       courseD_maze_ramp1:
         grade2_CaringForNewPet_0_1: すべてのブロックをつなげたら「実行」を押してプログラムを開始してください。
       courseD_maze_ramp1_2018:

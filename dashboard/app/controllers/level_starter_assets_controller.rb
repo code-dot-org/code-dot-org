@@ -21,7 +21,7 @@ class LevelStarterAssetsController < ApplicationController
   # GET /level_starter_assets/:level_name/:filename
   # Returns requested file body as an IO stream.
   def file
-    friendly_name = "#{params[:filename]}.#{params[:format]}"
+    friendly_name = params[:filename]
     uuid_name = @level.starter_assets[friendly_name]
     file_obj = get_object(uuid_name)
     content_type = file_content_type(File.extname(uuid_name))
@@ -62,7 +62,7 @@ class LevelStarterAssetsController < ApplicationController
   # but does not delete the asset from S3 as other levels may still be
   # using it.
   def destroy
-    if @level.remove_starter_asset!("#{params[:filename]}.#{params[:format]}")
+    if @level.remove_starter_asset!(params[:filename])
       return head :no_content
     else
       return head :unprocessable_entity

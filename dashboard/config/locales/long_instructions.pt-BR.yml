@@ -10491,24 +10491,6 @@ pt-BR:
         <li>Rótulos não podem começar com números.</li>
         <li>O uso de maiúsculas e minúsculas e a sequência de caracteres deve ser exatamente os mesmos.</li>
         </ul></details></summary>
-      CSD U3 Variables naming rules v2_2018_2019: |-
-        <img style="float: right" src="https://images.code.org/f4b306422763c84bb924f4f7d3a6dca6-image-1492798058864.06.38 AM.png">
-
-        # Análise: Dando nomes a variáveis
-
-        Este programa tem vários erros causados por nomes inválidos de rótulos. Os erros impedem que o programa seja visto no modo de blocos, então o código está em modo de texto.
-
-        # Faça Isto
-
-        -   Encontre a regra violada por cada rótulo de variável.
-        -   **Corrija os erros escolhendo novos nomes que sigam as regras que você aprendeu no último nível.**
-        -   Se o seu programa funciona ele deve desenhar a imagem à direita.
-
-        <summary><em>Dica: Clique na seta para uma rápida revisão das regras.</em><details><ul>
-        <li>Rótulos não podem ter espaços.</li>
-        <li>Rótulos não podem começar com números.</li>
-        <li>O uso de maiúsculas e minúsculas e a sequência de caracteres deve ser exatamente os mesmos.</li>
-        </ul></details></summary>
       CSD U3 Variables random with assignment: |-
         <img src="https://images.code.org/ba9592e887f52c1a538a0517560cdacf-image-1493913633878.gif" style="float:right;height:150px">
 
@@ -11733,6 +11715,60 @@ pt-BR:
         [//]: # "https://images.code.org/68b31e0fe8b8b454225d87b0f4a0a5f8-image-1470317549553.png"
 
         [//]: # "https://images.code.org/00e4ee128c4beb11c0c7a6bba6024494-image-1470317549555.png"
+      CSD U3 collisions flyman add obstacles: |-
+        # Jogo de voo - Adicione obstáculos
+
+        Este é o jogo de voo que você construiu na última aula. Para os próximos níveis, você adicionará um obstáculo sprite no jogo, usando algumas das interações sprite que acabou de aprender. No fim você terá a chance de continuar a adicionar suas próprias ideias.
+
+        <img src="https://images.code.org/47f8c130ca668080d48520ef9aced093-image-1477069764142.08.58 AM.png" style="float:right;width:200px">
+
+        # Faça Isto
+
+        Adicione um obstáculo sprite no jogo. Você pode usar a imagem que quiser da aba de animação mas o exemplo apresentado aqui usa um sol. Agora você precisa adicionar o sprite ao jogo e adicionar uma animação nele.
+
+        -   Adicione um novo sprite no seu jogo,chamado "obstáculo".
+        -   Na aba animação crie uma nova animação para o seu obstáculo. No exemplo, a imagem de um sol foi escolhida.
+        -   Use o bloco `sprite.setAnimation()` para atribuir a imagem que você escolheu ao seu sprite.
+        -   Execute o código e certifique-se que o sprite apareça onde você gostaria que estivesse na tela. Você precisará configurar o X, Y e propriedades de escala para que apareça da forma que você quer.
+      CSD U3 collisions flyman add obstacles_2018: |-
+        # Jogo de voo - Adicione obstáculos
+
+        Este é o jogo de voo que você construiu na última aula. Para os próximos níveis, você adicionará um obstáculo sprite no jogo, usando algumas das interações sprite que acabou de aprender. No fim você terá a chance de continuar a adicionar suas próprias ideias.
+
+        <img src="https://images.code.org/47f8c130ca668080d48520ef9aced093-image-1477069764142.08.58 AM.png" style="float:right;width:200px">
+
+        # Faça Isto
+
+        Adicione um obstáculo sprite no jogo. Você pode usar a imagem que quiser da aba de animação mas o exemplo apresentado aqui usa um sol. Agora você precisa adicionar o sprite ao jogo e adicionar uma animação nele.
+
+        -   Adicione um novo sprite no seu jogo,chamado "obstáculo".
+        -   Na aba animação crie uma nova animação para o seu obstáculo. No exemplo, a imagem de um sol foi escolhida.
+        -   Use o bloco `sprite.setAnimation()` para atribuir a imagem que você escolheu ao seu sprite.
+        -   Execute o código e certifique-se que o sprite apareça onde você gostaria que estivesse na tela. Você precisará configurar o X, Y e propriedades de escala para que apareça da forma que você quer.
+      CSD U3 collisions flyman add obstacles_2019: |-
+        # Jogo de voo - Adicione obstáculos
+
+        Este é o jogo de voo que você construiu na última aula. Para os próximos níveis, você adicionará um obstáculo sprite no jogo, usando algumas das interações sprite que acabou de aprender. No fim você terá a chance de continuar a adicionar suas próprias ideias.
+
+        <img src="https://images.code.org/47f8c130ca668080d48520ef9aced093-image-1477069764142.08.58 AM.png" style="float:right;width:200px">
+
+        # Faça Isto
+
+        Adicione um obstáculo sprite no jogo. Você pode usar a imagem que quiser da aba de animação mas o exemplo apresentado aqui usa um sol. Agora você precisa adicionar o sprite ao jogo e adicionar uma animação nele.
+
+        -   Adicione um novo sprite no seu jogo,chamado "obstáculo".
+        -   Na aba animação crie uma nova animação para o seu obstáculo. No exemplo, a imagem de um sol foi escolhida.
+        -   Use o bloco `sprite.setAnimation()` para atribuir a imagem que você escolheu ao seu sprite.
+        -   Execute o código e certifique-se que o sprite apareça onde você gostaria que estivesse na tela. Você precisará configurar o X, Y e propriedades de escala para que apareça da forma que você quer.
+      CSD U3 collisions flyman make it your own: |-
+        # Jogo de voo - Faça o seu
+
+        Hora de fazer o seu próprio jogo usando interações sprite. Algumas ideias são apresentadas abaixo ou você pode escolher adicionar as suas próprias funcionalidades. Tenha a certeza de estar pronto para compartilhar suas ideias com seus colegas de classe.
+
+        -   Crie sprites "borda" para evitar que seu personagem caia para fora.
+        -   Adicione uma plataforma ao jogo para seu personagem navegar.
+        -   Adicione outros obstáculos no seu jogo.
+        -   Crie outra ideia própria.
       CSD U3 collisions horse: |-
         # Cavalo arco-íris
 
@@ -13198,6 +13234,21 @@ pt-BR:
         -   Veja o código que desenha os dois retângulos. O primeiro é desenhado em vermelho e o segundo é desenhado em azul.
         -   Altere a cor do retângulo vermelho para verde.
         -   Altere a ordem do código para que o retângulo verde apareça no topo.
+      CSD U4 - Design Mode Input Widgets: |-
+        # Elementos de entrada
+
+        <img src="https://images.code.org/108fcc6fc89bf88edde00353afb33d75-image-1469814642375.49.23.png" style="float: right; width: 150px"/>
+
+        Os botões são uma ótima maneira de navegar pelo aplicativo, e os rótulos de texto são a principal maneira de exibir o conteúdo no aplicativo. Quando se trata de receber informações de seus usuários, às vezes você precisa de um local para eles digitarem ou caixas para verificar. Os elementos **Entrada de texto**, **Menu suspenso**, **Botão de opção** e **Caixa de seleção** oferecem maneiras de os usuários inserirem informações no seu aplicativo.
+
+        # Faça isto
+
+        Escolha pelo menos dois dos elementos de entrada e para cada um:
+
+        -   Arraste-o para fora e posicione-o na tela
+        -   Altere o Id para algo significativo
+        -   Leia as propriedades e experimente-as
+        -   Adicione um elemento de rótulo ao lado de cada um que descreva o que eles fazem (não esqueça de fornecer um Id também!)
       CSD U4 - Design Mode Project: |-
         # Simulando seu App
 
@@ -14258,6 +14309,336 @@ pt-BR:
         -   Olhe para o primeiro bloco de eventos no programa e encontre onde diz "change".
         -   Dentro do bloco de eventos, obtenha o valor do intervalo do controle deslizante e use-o para fazer o LED piscar com essa nova taxa.
         -   Execute o seu programa, movendo o controle deslizante para ver se a velocidade do LED muda automaticamente.
+      CSD U6 circuit createButton: |-
+        <div style="float: right" markdown="1">
+
+        ![expandable](https://cdo-curriculum.s3.amazonaws.com/media/uploads/button_alligator.png)
+
+        </div>
+
+        # Crie seus próprios botões
+
+        Semelhante aos LEDs, os botões são um circuito realmente simples que você pode adicionar à sua placa com bastante facilidade. Como os LEDs, os botões devem ser conectados de um pino numerado a um pino de aterramento, mas, diferentemente dos LEDs, um circuito de botões deve ser desconectado no meio. Quando você conecta o circuito, ele produz um evento de pressionar o botão.
+
+        # Faça isto
+
+        -   Pegue dois fios.
+        -   Conecte um fio a um pino numerado aberto.
+        -   Conecte o segundo fio a um pino de aterramento.
+        -   Atualize a linha 2 para que ele faça referência ao pino que você escolheu.
+        -   Execute o código fornecido.
+        -   Com o programa em execução, toque as extremidades desconectadas dos dois fios para "pressionar" o botão.
+
+        \_ Dica: Um circuito de botão pode ser feito com muitos tipos diferentes de materiais, desde que sejam eletricamente condutivos. Tente fazer botões com papel alumínio, talheres ou clipes de papel.\_
+      CSD U6 circuit createButton_2018: |-
+        <div style="float: right" markdown="1">
+
+        ![expandable](https://cdo-curriculum.s3.amazonaws.com/media/uploads/button_alligator.png)
+
+        </div>
+
+        # Crie seus próprios botões
+
+        Semelhante aos LEDs, os botões são um circuito realmente simples que você pode adicionar à sua placa com bastante facilidade. Como os LEDs, os botões devem ser conectados de um pino numerado a um pino de aterramento, mas, diferentemente dos LEDs, um circuito de botões deve ser desconectado no meio. Quando você conecta o circuito, ele produz um evento de pressionar o botão.
+
+        # Faça isto
+
+        -   Pegue dois fios.
+        -   Conecte um fio a um pino numerado aberto.
+        -   Conecte o segundo fio a um pino de aterramento.
+        -   Atualize a linha 2 para que ele faça referência ao pino que você escolheu.
+        -   Execute o código fornecido.
+        -   Com o programa em execução, toque as extremidades desconectadas dos dois fios para "pressionar" o botão.
+
+        \_ Dica: Um circuito de botão pode ser feito com muitos tipos diferentes de materiais, desde que sejam eletricamente condutivos. Tente fazer botões com papel alumínio, talheres ou clipes de papel.\_
+      CSD U6 circuit createButton_2019: |-
+        <div style="float: right" markdown="1">
+
+        ![expandable](https://cdo-curriculum.s3.amazonaws.com/media/uploads/button_alligator.png)
+
+        </div>
+
+        # Crie seus próprios botões
+
+        Semelhante aos LEDs, os botões são um circuito realmente simples que você pode adicionar à sua placa com bastante facilidade. Como os LEDs, os botões devem ser conectados de um pino numerado a um pino de aterramento, mas, diferentemente dos LEDs, um circuito de botões deve ser desconectado no meio. Quando você conecta o circuito, ele produz um evento de pressionar o botão.
+
+        # Faça isto
+
+        -   Pegue dois fios.
+        -   Conecte um fio a um pino numerado aberto.
+        -   Conecte o segundo fio a um pino de aterramento.
+        -   Atualize a linha 2 para que ele faça referência ao pino que você escolheu.
+        -   Execute o código fornecido.
+        -   Com o programa em execução, toque as extremidades desconectadas dos dois fios para "pressionar" o botão.
+
+        \_ Dica: Um circuito de botão pode ser feito com muitos tipos diferentes de materiais, desde que sejam eletricamente condutivos. Tente fazer botões com papel alumínio, talheres ou clipes de papel.\_
+      CSD U6 circuit multi led: |-
+        # Fiação de vários LEDs
+
+        Usando o bloco `criarLed()`, você pode conectar e controlar quantos LEDs sua placa possui. Cada LED precisa estar conectado a um pino numerado separado, mas todos podem compartilhar o mesmo pino de aterramento.
+
+        # Faça isto
+
+        Deixe o LED atual conectado ao pino 2, mas adicione outro a um pino numerado de sua escolha. Para o seu novo LED:
+
+        -   Adicione um bloco `var meuLed = criarLed()`.
+        -   Substitua o rótulo variável `meuLed` por um rótulo exclusivo.
+        -   Verifique se você está no modo de texto, não no modo de bloqueio.
+        -   Adicione um comando `led.piscar()`.
+        -   Substitua o texto \`led 'pela sua nova variável de LED.
+        -   Teste seu código.
+
+        _Desafio: tente adicionar um terceiro LED e faça com que os três pisquem em intervalos diferentes._
+      CSD U6 circuit multi led_2018: |-
+        # Fiação de vários LEDs
+
+        Usando o bloco `criarLed()`, você pode conectar e controlar quantos LEDs sua placa possui. Cada LED precisa estar conectado a um pino numerado separado, mas todos podem compartilhar o mesmo pino de aterramento.
+
+        # Faça isto
+
+        Deixe o LED atual conectado ao pino 2, mas adicione outro a um pino numerado de sua escolha. Para o seu novo LED:
+
+        -   Adicione um bloco `var meuLed = criarLed()`.
+        -   Substitua o rótulo variável `meuLed` por um rótulo exclusivo.
+        -   Verifique se você está no modo de texto, não no modo de bloqueio.
+        -   Adicione um comando `led.piscar()`.
+        -   Substitua o texto \`led 'pela sua nova variável de LED.
+        -   Teste seu código.
+
+        _Desafio: tente adicionar um terceiro LED e faça com que os três pisquem em intervalos diferentes._
+      CSD U6 circuit multi led_2019: |-
+        # Fiação de vários LEDs
+
+        Usando o bloco `criarLed()`, você pode conectar e controlar quantos LEDs sua placa possui. Cada LED precisa estar conectado a um pino numerado separado, mas todos podem compartilhar o mesmo pino de aterramento.
+
+        # Faça isto
+
+        Deixe o LED atual conectado ao pino 2, mas adicione outro a um pino numerado de sua escolha. Para o seu novo LED:
+
+        -   Adicione um bloco `var meuLed = criarLed()`.
+        -   Substitua o rótulo variável `meuLed` por um rótulo exclusivo.
+        -   Verifique se você está no modo de texto, não no modo de bloqueio.
+        -   Adicione um comando `led.piscar()`.
+        -   Substitua o texto \`led 'pela sua nova variável de LED.
+        -   Teste seu código.
+
+        _Desafio: tente adicionar um terceiro LED e faça com que os três pisquem em intervalos diferentes._
+      CSD U6 circuit pinMode: |-
+        # Conecte um circuito
+
+        Você pode usar qualquer um dos blocos numerados para adicionar circuitos adicionais à sua placa. Vamos usar o pino 2 para adicionar outro LED.
+
+        # Fazem isto
+
+        -   Usando um fio, conecte o pino 2 ao lado positivo (+) de um LED
+        -   Usando outro fio, conecte o lado negativo (-) do LED a um pino de aterramento (GND) (não importa qual)
+        -   Execute este programa para testar seu circuito. Se funcionou, seu LED deve acender.
+
+        \_ Dica de depuração: os LEDs só funcionam se a eletricidade estiver fluindo de positiva para negativa. Se o LED não acender, verifique se está orientado da maneira certa.\_
+      CSD U6 circuit pinMode_2018: |-
+        # Conecte um circuito
+
+        Você pode usar qualquer um dos blocos numerados para adicionar circuitos adicionais à sua placa. Vamos usar o pino 2 para adicionar outro LED.
+
+        # Fazem isto
+
+        -   Usando um fio, conecte o pino 2 ao lado positivo (+) de um LED
+        -   Usando outro fio, conecte o lado negativo (-) do LED a um pino de aterramento (GND) (não importa qual)
+        -   Execute este programa para testar seu circuito. Se funcionou, seu LED deve acender.
+
+        \_ Dica de depuração: os LEDs só funcionam se a eletricidade estiver fluindo de positiva para negativa. Se o LED não acender, verifique se está orientado da maneira certa.\_
+      CSD U6 circuit pinMode_2019: |-
+        # Conecte um circuito
+
+        Você pode usar qualquer um dos blocos numerados para adicionar circuitos adicionais à sua placa. Vamos usar o pino 2 para adicionar outro LED.
+
+        # Fazem isto
+
+        -   Usando um fio, conecte o pino 2 ao lado positivo (+) de um LED
+        -   Usando outro fio, conecte o lado negativo (-) do LED a um pino de aterramento (GND) (não importa qual)
+        -   Execute este programa para testar seu circuito. Se funcionou, seu LED deve acender.
+
+        \_ Dica de depuração: os LEDs só funcionam se a eletricidade estiver fluindo de positiva para negativa. Se o LED não acender, verifique se está orientado da maneira certa.\_
+      CSD U6 circuit predict multi: |-
+        # Fazer uma previsão
+
+        Todos os dispositivos que você usou até agora são na verdade circuitos conectados a pinos numerados! Procure **#13** em sua placa para ver qual circuito está conectado ao pino 13, depois leia este código e preveja o que acontecerá quando o programa for executado.
+      CSD U6 circuit predict multi_2018: |-
+        # Fazer uma previsão
+
+        Todos os dispositivos que você usou até agora são na verdade circuitos conectados a pinos numerados! Procure **#13** em sua placa para ver qual circuito está conectado ao pino 13, depois leia este código e preveja o que acontecerá quando o programa for executado.
+      CSD U6 circuit predict multi_2019: |-
+        # Fazer uma previsão
+
+        Todos os dispositivos que você usou até agora são na verdade circuitos conectados a pinos numerados! Procure **#13** em sua placa para ver qual circuito está conectado ao pino 13, depois leia este código e preveja o que acontecerá quando o programa for executado.
+      CSD U6 circuit smart bike blinker buttons: |-
+        # Bicicleta Inteligente- Controles de pisca-pisca
+
+        Com os LEDs do seu pisca-pisca conectados, você só precisa programar alguns botões para controlá-los. Você pode colocar botões em outro lugar da bicicleta para facilitar o controle dos sinais de mudança de direção, mas, por enquanto, usaremos os botões esquerdo e direito integrados.
+
+        # Faça isto
+
+        -   Adicione manipuladores de eventos para piscar o pisca-pisca esquerdo quando o botão esquerdo for pressionado.
+        -   Adicione manipuladores de eventos para piscar o pisca direito quando o botão direito for pressionado.
+        -   Teste seu código!
+
+        _Sugestão: você precisará estar no modo de texto para que os pisca-piscas funcionem, pois não existem blocos internos para os elementos adicionados ao quadro._
+      CSD U6 circuit smart bike blinker buttons_2018: |-
+        # Bicicleta Inteligente- Controles de pisca-pisca
+
+        Com os LEDs do seu pisca-pisca conectados, você só precisa programar alguns botões para controlá-los. Você pode colocar botões em outro lugar da bicicleta para facilitar o controle dos sinais de mudança de direção, mas, por enquanto, usaremos os botões esquerdo e direito integrados.
+
+        # Faça isto
+
+        -   Adicione manipuladores de eventos para piscar o pisca-pisca esquerdo quando o botão esquerdo for pressionado.
+        -   Adicione manipuladores de eventos para piscar o pisca direito quando o botão direito for pressionado.
+        -   Teste seu código!
+
+        _Sugestão: você precisará estar no modo de texto para que os pisca-piscas funcionem, pois não existem blocos internos para os elementos adicionados ao quadro._
+      CSD U6 circuit smart bike blinker buttons_2019: |-
+        # Bicicleta Inteligente- Controles de pisca-pisca
+
+        Com os LEDs do seu pisca-pisca conectados, você só precisa programar alguns botões para controlá-los. Você pode colocar botões em outro lugar da bicicleta para facilitar o controle dos sinais de mudança de direção, mas, por enquanto, usaremos os botões esquerdo e direito integrados.
+
+        # Faça isto
+
+        -   Adicione manipuladores de eventos para piscar o pisca-pisca esquerdo quando o botão esquerdo for pressionado.
+        -   Adicione manipuladores de eventos para piscar o pisca direito quando o botão direito for pressionado.
+        -   Teste seu código!
+
+        _Sugestão: você precisará estar no modo de texto para que os pisca-piscas funcionem, pois não existem blocos internos para os elementos adicionados ao quadro._
+      CSD U6 circuit smart bike blinkers: |-
+        # Bicicleta Inteligente - Pisca-pisca
+
+        Usando seu guia de planejamento, conecte os dois LEDs que servirão como intermitentes. Para garantir que os piscas possam ser montados no final do guidão, certifique-se de conectá-los para que possam esticar em direções opostas.
+
+        # Faça isto
+
+        Usando clipes de jacaré, fios ou outro material condutor, conecte dois LEDs à sua placa, um para cada pisca-pisca.
+
+        -   Conecte cada LED a um pino numerado diferente na placa.
+        -   Use o bloco `criarLed()` para criar um objeto LED para cada pisca-pisca.
+
+        \_ Dica: facilite sua fiação considerando como seus antolhos serão montados ao selecionar um pino para uso.\_
+      CSD U6 circuit smart bike blinkers_2018: |-
+        # Bicicleta Inteligente - Pisca-pisca
+
+        Usando seu guia de planejamento, conecte os dois LEDs que servirão como intermitentes. Para garantir que os piscas possam ser montados no final do guidão, certifique-se de conectá-los para que possam esticar em direções opostas.
+
+        # Faça isto
+
+        Usando clipes de jacaré, fios ou outro material condutor, conecte dois LEDs à sua placa, um para cada pisca-pisca.
+
+        -   Conecte cada LED a um pino numerado diferente na placa.
+        -   Use o bloco `criarLed()` para criar um objeto LED para cada pisca-pisca.
+
+        \_ Dica: facilite sua fiação considerando como seus antolhos serão montados ao selecionar um pino para uso.\_
+      CSD U6 circuit smart bike blinkers_2019: |-
+        # Bicicleta Inteligente - Pisca-pisca
+
+        Usando seu guia de planejamento, conecte os dois LEDs que servirão como intermitentes. Para garantir que os piscas possam ser montados no final do guidão, certifique-se de conectá-los para que possam esticar em direções opostas.
+
+        # Faça isto
+
+        Usando clipes de jacaré, fios ou outro material condutor, conecte dois LEDs à sua placa, um para cada pisca-pisca.
+
+        -   Conecte cada LED a um pino numerado diferente na placa.
+        -   Use o bloco `criarLed()` para criar um objeto LED para cada pisca-pisca.
+
+        \_ Dica: facilite sua fiação considerando como seus antolhos serão montados ao selecionar um pino para uso.\_
+      CSD U6 circuit smart bike buzzer: |-
+        # Bicicleta Inteligente - Campainha
+
+        Agora que sabemos como adicionar mais botões, você pode adicionar um botão para controlar a buzina da bicicleta inteligente.
+
+        # Faça isto
+
+        Usando o botão que você já conectou à placa, encontre um bom local para colocar o botão da buzina. Então:
+
+        -   Crie um objeto de botão para o botão da buzina
+        -   Adicione um manipulador de eventos ao zumbido quando o botão for pressionado
+
+        \_Hint: O objeto de botão que você criar não estará no menu suspenso `onBoardEvent()`, portanto, você precisará digitar o nome que escolheu. Certifique-se de não usar aspas! \_
+      CSD U6 circuit smart bike buzzer_2018: |-
+        # Bicicleta Inteligente - Campainha
+
+        Agora que sabemos como adicionar mais botões, você pode adicionar um botão para controlar a buzina da bicicleta inteligente.
+
+        # Faça isto
+
+        Usando o botão que você já conectou à placa, encontre um bom local para colocar o botão da buzina. Então:
+
+        -   Crie um objeto de botão para o botão da buzina
+        -   Adicione um manipulador de eventos ao zumbido quando o botão for pressionado
+
+        \_Hint: O objeto de botão que você criar não estará no menu suspenso `onBoardEvent()`, portanto, você precisará digitar o nome que escolheu. Certifique-se de não usar aspas! \_
+      CSD U6 circuit smart bike buzzer_2019: |-
+        # Bicicleta Inteligente - Campainha
+
+        Agora que sabemos como adicionar mais botões, você pode adicionar um botão para controlar a buzina da bicicleta inteligente.
+
+        # Faça isto
+
+        Usando o botão que você já conectou à placa, encontre um bom local para colocar o botão da buzina. Então:
+
+        -   Crie um objeto de botão para o botão da buzina
+        -   Adicione um manipulador de eventos ao zumbido quando o botão for pressionado
+
+        \_Hint: O objeto de botão que você criar não estará no menu suspenso `onBoardEvent()`, portanto, você precisará digitar o nome que escolheu. Certifique-se de não usar aspas! \_
+      CSD U6 circuit smart bike final: |-
+        # Smart Bike - Toques finais
+
+        Nesse ponto, sua bicicleta inteligente deve ter todas as suas funcionalidades básicas. Agora é sua chance de adicionar os retoques finais.
+
+        # Faça isto
+
+        Você pode dividir e conquistar neste momento, permitindo que alguns membros do seu grupo se concentrem nos aspectos físicos do protótipo, enquanto outros trabalham para melhorar o código. Como este é um protótipo, não se preocupe em tornar tudo perfeito, mas tente garantir que o protótipo comunique seu design bem o suficiente para testar e obter feedback.
+      CSD U6 circuit smart bike final_2018: |-
+        # Smart Bike - Toques finais
+
+        Nesse ponto, sua bicicleta inteligente deve ter todas as suas funcionalidades básicas. Agora é sua chance de adicionar os retoques finais.
+
+        # Faça isto
+
+        Você pode dividir e conquistar neste momento, permitindo que alguns membros do seu grupo se concentrem nos aspectos físicos do protótipo, enquanto outros trabalham para melhorar o código. Como este é um protótipo, não se preocupe em tornar tudo perfeito, mas tente garantir que o protótipo comunique seu design bem o suficiente para testar e obter feedback.
+      CSD U6 circuit smart bike final_2019: |-
+        # Smart Bike - Toques finais
+
+        Nesse ponto, sua bicicleta inteligente deve ter todas as suas funcionalidades básicas. Agora é sua chance de adicionar os retoques finais.
+
+        # Faça isto
+
+        Você pode dividir e conquistar neste momento, permitindo que alguns membros do seu grupo se concentrem nos aspectos físicos do protótipo, enquanto outros trabalham para melhorar o código. Como este é um protótipo, não se preocupe em tornar tudo perfeito, mas tente garantir que o protótipo comunique seu design bem o suficiente para testar e obter feedback.
+      CSD U6 circuit smart bike light: |-
+        # Bicicleta Inteligente - Farol
+
+        A última parte do plano de bicicleta inteligente que precisamos descobrir é o farol automático.
+
+        # Faça isto
+
+        Primeiro você precisará decidir o que usar para o farol. Você pode adicionar outro circuito de LED ou talvez encontrar uma maneira de montar a placa que permita usar os LEDs coloridos como farol. Depois de descobrir o layout físico de suas luzes, adicione um código ao seu programa que acenda e desligue o farol com base na luz ou no escuro.
+
+        \_Sugestão: se você estiver usando os LEDs coloridos embutidos, pode ser necessário proteger o sensor de luz para garantir que ele esteja respondendo ao nível da luz ambiente e não à luz dos LEDs.
+      CSD U6 circuit smart bike light_2018: |-
+        # Bicicleta Inteligente - Farol
+
+        A última parte do plano de bicicleta inteligente que precisamos descobrir é o farol automático.
+
+        # Faça isto
+
+        Primeiro você precisará decidir o que usar para o farol. Você pode adicionar outro circuito de LED ou talvez encontrar uma maneira de montar a placa que permita usar os LEDs coloridos como farol. Depois de descobrir o layout físico de suas luzes, adicione um código ao seu programa que acenda e desligue o farol com base na luz ou no escuro.
+
+        \_Sugestão: se você estiver usando os LEDs coloridos embutidos, pode ser necessário proteger o sensor de luz para garantir que ele esteja respondendo ao nível da luz ambiente e não à luz dos LEDs.
+      CSD U6 circuit smart bike light_2019: |-
+        # Bicicleta Inteligente - Farol
+
+        A última parte do plano de bicicleta inteligente que precisamos descobrir é o farol automático.
+
+        # Faça isto
+
+        Primeiro você precisará decidir o que usar para o farol. Você pode adicionar outro circuito de LED ou talvez encontrar uma maneira de montar a placa que permita usar os LEDs coloridos como farol. Depois de descobrir o layout físico de suas luzes, adicione um código ao seu programa que acenda e desligue o farol com base na luz ou no escuro.
+
+        \_Sugestão: se você estiver usando os LEDs coloridos embutidos, pode ser necessário proteger o sensor de luz para garantir que ele esteja respondendo ao nível da luz ambiente e não à luz dos LEDs.
       CSD U6 colorLED on: |-
         <img src="//curriculum.code.org/images/circuitplayground/colorLedonoff.gif" style="float: right; margin: 10px;">
 
@@ -14759,6 +15140,51 @@ pt-BR:
         # Fazer uma previsão
 
         Leia o código deste programa e preveja o que acontecerá cada vez que o botão for pressionado?
+      CSD U6 for loop images: |-
+        # Construindo um laço de repetição for do zero
+
+        Agora que você teve alguma prática modificando os laços de repetição para processar matrizes, vamos ver se você pode fazer isso sozinho.
+
+        # Faça isto
+
+        Fornecemos os elementos de design e uma matriz para começar, mas o resto é com você.
+
+        -   Adicione um manipulador de eventos para responder ao "clique positivo\\ \_botao" que está sendo clicado
+        -   Coloque um _laço de repetição for_ dentro do manipulador de eventos
+        -   Modifique a condição de saída do _laço de repetição for_ para que ele funcione até chegar ao final do array `images`
+        -   Dentro do _laço de repetição for_, altere a imagem atual para "icon: // fa-thumbs-o-up"
+
+        \_Desafio: Você pode adicionar um segundo botão que gire todas as imagens novamente para o polegar para baixo?
+      CSD U6 for loop images_2018: |-
+        # Construindo um laço de repetição for do zero
+
+        Agora que você teve alguma prática modificando os laços de repetição para processar matrizes, vamos ver se você pode fazer isso sozinho.
+
+        # Faça isto
+
+        Fornecemos os elementos de design e uma matriz para começar, mas o resto é com você.
+
+        -   Adicione um manipulador de eventos para responder ao "clique positivo\\ \_botao" que está sendo clicado
+        -   Coloque um _laço de repetição for_ dentro do manipulador de eventos
+        -   Modifique a condição de saída do _laço de repetição for_ para que ele funcione até chegar ao final do array `images`
+        -   Dentro do _laço de repetição for_, altere a imagem atual para "icon: // fa-thumbs-o-up"
+
+        \_Desafio: Você pode adicionar um segundo botão que gire todas as imagens novamente para o polegar para baixo?
+      CSD U6 for loop images_2019: |-
+        # Construindo um laço de repetição for do zero
+
+        Agora que você teve alguma prática modificando os laços de repetição para processar matrizes, vamos ver se você pode fazer isso sozinho.
+
+        # Faça isto
+
+        Fornecemos os elementos de design e uma matriz para começar, mas o resto é com você.
+
+        -   Adicione um manipulador de eventos para responder ao "clique positivo\\ \_botao" que está sendo clicado
+        -   Coloque um _laço de repetição for_ dentro do manipulador de eventos
+        -   Modifique a condição de saída do _laço de repetição for_ para que ele funcione até chegar ao final do array `images`
+        -   Dentro do _laço de repetição for_, altere a imagem atual para "icon: // fa-thumbs-o-up"
+
+        \_Desafio: Você pode adicionar um segundo botão que gire todas as imagens novamente para o polegar para baixo?
       CSD U6 for loop led bonus 1_2018: |-
         # Desafio: Adicionar mais botões
 
@@ -14793,6 +15219,104 @@ pt-BR:
         # Faça Isto
 
         Adicione tratadores de eventos a "button\_red" e "button\_green" que faz com que todos os LEDs tenham estas cores.
+      CSD U6 for loop led function: |-
+        # Trocando cores com uma função
+
+        Poderíamos escrever um loop for para cada cor diferente na qual queremos definir os LEDs, mas isso seria um monte de código duplicado que é quase o mesmo. Este é o lugar perfeito para usar uma função \_ com um parâmetro\_! Você já viu e usou funções com parâmetros antes, mas agora fará uma a partir do zero.
+
+        # Faça isto
+
+        Crie uma função chamada `definirCorLEDs` que use um parâmetro`cor` e use-o para alterar a cor de todos os LEDs
+
+        -   Na parte inferior do seu programa, arraste uma função com o bloco de parâmetros ![expandable](https://images.code.org/bd6ec3d9a651cf760a7dc8e1949658c0-image-1512761901850.png)
+        -   Altere o nome de `myFunction` para`setLedsColor`
+        -   Altere o nome do parâmetro de `n` para`color`
+        -   Dentro da sua função, adicione um _for loop_ que se repita até atingir o final de `corLeds`
+        -   Dentro do _for loop_, defina a cor do led atual para o parâmetro `color` (por exemplo,`corLeds [i].cor(cor)`
+
+        Adicionaremos manipuladores de eventos que usam essa função no próximo nível, mas por enquanto você pode testar sua função pelo seu programa e digitar no console de depuração: `definirCorLEDs(" blue")`
+      CSD U6 for loop led function call: |-
+        # Chamando sua função
+
+        Agora que você criou uma função que pode se comportar de maneira diferente com base no parâmetro passado, podemos usá-la em vários manipuladores de eventos diferentes para alterar as luzes para cores diferentes.
+
+        # Faça isto
+
+        Para começar, basta criar um manipulador de eventos para "botao\\ \_vermelho"
+
+        -   Crie um novo manipulador de eventos para responder ao "botao\\ \_vermelho"
+        -   Dentro do manipulador de eventos, adicione um bloco "chamar função com parâmetro"
+            ![expandable](https://images.code.org/ee8e026b59682066eccfc4795b5c5036-image-1512771755527.png)
+        -   Altere o nome de `minhaFuncao` para`definirCorLEDs`
+        -   Altere o parâmetro de `n` para "vermelho"(observe as aspas!)
+        -   Teste seu programa, o botão "Vermelho" deve acender todos os seus LEDs
+      CSD U6 for loop led function call_2018: |-
+        # Chamando sua função
+
+        Agora que você criou uma função que pode se comportar de maneira diferente com base no parâmetro passado, podemos usá-la em vários manipuladores de eventos diferentes para alterar as luzes para cores diferentes.
+
+        # Faça isto
+
+        Para começar, basta criar um manipulador de eventos para "botao\\ \_vermelho"
+
+        -   Crie um novo manipulador de eventos para responder ao "botao\\ \_vermelho"
+        -   Dentro do manipulador de eventos, adicione um bloco "chamar função com parâmetro"
+            ![expandable](https://images.code.org/ee8e026b59682066eccfc4795b5c5036-image-1512771755527.png)
+        -   Altere o nome de `minhaFuncao` para`definirCorLEDs`
+        -   Altere o parâmetro de `n` para "vermelho"(observe as aspas!)
+        -   Teste seu programa, o botão "Vermelho" deve acender todos os seus LEDs
+      CSD U6 for loop led function_2018: |-
+        # Trocando cores com uma função
+
+        Poderíamos escrever um loop for para cada cor diferente na qual queremos definir os LEDs, mas isso seria um monte de código duplicado que é quase o mesmo. Este é o lugar perfeito para usar uma função \_ com um parâmetro\_! Você já viu e usou funções com parâmetros antes, mas agora fará uma a partir do zero.
+
+        # Faça isto
+
+        Crie uma função chamada `definirCorLEDs` que use um parâmetro`cor` e use-o para alterar a cor de todos os LEDs
+
+        -   Na parte inferior do seu programa, arraste uma função com o bloco de parâmetros ![expandable](https://images.code.org/bd6ec3d9a651cf760a7dc8e1949658c0-image-1512761901850.png)
+        -   Altere o nome de `myFunction` para`setLedsColor`
+        -   Altere o nome do parâmetro de `n` para`color`
+        -   Dentro da sua função, adicione um _for loop_ que se repita até atingir o final de `corLeds`
+        -   Dentro do _for loop_, defina a cor do led atual para o parâmetro `color` (por exemplo,`corLeds [i].cor(cor)`
+
+        Adicionaremos manipuladores de eventos que usam essa função no próximo nível, mas por enquanto você pode testar sua função pelo seu programa e digitar no console de depuração: `definirCorLEDs(" blue")`
+      CSD U6 for loop led off: |-
+        # Desligando todos os LEDs coloridos
+
+        Agora que você tem um botão para ativar os LEDs coloridos, é possível fazer outro desativá-los.
+
+        # Faça isto
+
+        Adicione um manipulador de eventos ao "botao\\ \_off" com um laço de repetição for que apaga cada LED colorido.
+      CSD U6 for loop led off_2018: |-
+        # Desligando todos os LEDs coloridos
+
+        Agora que você tem um botão para ativar os LEDs coloridos, é possível fazer outro desativá-los.
+
+        # Faça isto
+
+        Adicione um manipulador de eventos ao "botao\\ \_off" com um laço de repetição for que apaga cada LED colorido.
+      CSD U6 for loop led off_2019: |-
+        # Desligando todos os LEDs coloridos
+
+        Agora que você tem um botão para ativar os LEDs coloridos, é possível fazer outro desativá-los.
+
+        # Faça isto
+
+        Adicione um manipulador de eventos ao "botao\\ \_off" com um laço de repetição for que apaga cada LED colorido.
+      CSD U6 for loop led on: |-
+        # Ligar todos os LEDs coloridos
+
+        Agora que você sabe como usar um _laço de repetição for_ para processar todos os elementos em uma matriz, é possível ativar todos os LEDs coloridos com muito mais facilidade do que antes.
+
+        # Faça isto
+
+        Vamos iniciar um aplicativo que controla todos os LEDs coloridos em sua placa. O primeiro passo é ligar o botão que liga todos os LEDs.
+
+        -   Adicione um manipulador de eventos para "botao\\ \_on"
+        -   Coloque um _laço de repetição for_ no seu manipulador de eventos que se repita até chegar ao final do array `colorLeds`
+        -   Dentro do loop for, chame `colorLeds[i].on()` para ativar o LED de cor atual
       CSD U6 for loop led personalize_2019: |-
         # Faça Você Mesmo
 
@@ -14801,6 +15325,30 @@ pt-BR:
         # Faça Isto
 
         Acrescente um novo botão no projeto, e programe-o com um comportamento de sua escolha.
+      CSD U6 for loop list.length: |-
+        # Comprimento da matriz
+
+        No último programa, dissemos ao laço de repetição para executar três vezes com o código `for (var i = 0; i <3; i ++)`. Isso funciona, mas podemos escrever programas mais inteligentes usando o comprimento da matriz para decidir quantas vezes executar um loop.
+
+        # Fazem isto
+
+        Altere a condição de saída desse laço de repetição for para que ele funcione enquanto `i <buttons.length`.
+      CSD U6 for loop list.length_2018: |-
+        # Comprimento da matriz
+
+        No último programa, dissemos ao laço de repetição para executar três vezes com o código `for (var i = 0; i <3; i ++)`. Isso funciona, mas podemos escrever programas mais inteligentes usando o comprimento da matriz para decidir quantas vezes executar um loop.
+
+        # Fazem isto
+
+        Altere a condição de saída desse laço de repetição for para que ele funcione enquanto `i <buttons.length`.
+      CSD U6 for loop list.length_2019: |-
+        # Comprimento da matriz
+
+        No último programa, dissemos ao laço de repetição para executar três vezes com o código `for (var i = 0; i <3; i ++)`. Isso funciona, mas podemos escrever programas mais inteligentes usando o comprimento da matriz para decidir quantas vezes executar um loop.
+
+        # Fazem isto
+
+        Altere a condição de saída desse laço de repetição for para que ele funcione enquanto `i <buttons.length`.
       CSD U6 frequency: |-
         # Freqüência
 
@@ -16214,6 +16762,20 @@ pt-BR:
 
         -   Tente digitar algo na área de trabalho.
         -   Pressione <img src="https://images.code.org/678619085e37ea6ce904ac8abd0df2f2-image-1493226906609.14.45 AM.png" style="width:150px"> para ver uma prévia!
+      CSDU4 - Design Mode - 15: |-
+        # Modo de design
+
+        Bem-vindo ao Modo Design no Laboratório de Aplicativos! Isso permitirá que você crie facilmente uma versão digital de seus wireframes esboçados adicionando elementos da interface do usuário da caixa de ferramentas e modelando-os da maneira que desejar!
+
+        \*\* Objetivo: \*\* Adicione um botão vermelho grande ao seu aplicativo usando o Modo Design.
+
+        # Fazem isto: <img src="https://images.code.org/278f146396c80c97d0b5d73f24d48aec-image-1444335461720.png"> na aba caixa de ferramentas \*\*, arraste um botão e redimensione-o.
+
+        -   \*\* Altere o texto do botão \*\* para dizer "Clique em mim".
+
+        -   \*\* Defina a cor do botão \*\* para vermelho.
+
+        <img src="https://images.code.org/4cab6a5233cf07df0d8e312932762012-image-1444314797615.gif" style="width: 500px; float: middle">
       CSDU4 - Design Mode - 17: |-
         # Atualizando IDs e depurando com o log do console
 
@@ -16228,6 +16790,34 @@ pt-BR:
         -   Alterne para o modo de código e observe que os ID do menu suspenso foram atualizados para incluir os novos IDs. (Você ainda precisa selecionar o ID correto no menu suspenso.)
 
         -   \*\* Atualize as mensagens do `console.log` \*\* para combinar com os botões.
+      CSDU4 - Design Mode - 21: |-
+        # Adicionando imagens
+
+        Às vezes, a funcionalidade que você deseja representar no seu protótipo é muito complicada, apenas com os botões e campos padrão. Se você deseja simular interfaces mais avançadas (como um mapa), a maneira mais fácil de fazer isso é com uma imagem
+
+        # Faça isto
+
+        -   Encontre e baixe uma imagem do mapa que você gosta
+        -   Arraste um elemento de imagem para o seu aplicativo ![](<https://images.code.org/cda02ffe3acc869822a551f5cdbf8606-image-1444667846363.37.14 AM.png>)
+        -   Escolha sua imagem ![](<https://images.code.org/e5b9571ae54af60a3ae597b787e741ea-image-1444667688762.34.42 AM.png>)
+                 \- **URLs** podem ser adicionados diretamente no campo "imagem".
+                 \- **Carregar imagens** clicando em "Escolher".
+                 \- **Nota:** Você sempre pode ver todos os arquivos que você enviou clicando na engrenagem na parte superior da caixa de ferramentas. ![](<https://images.code.org/53b405b771bc11bf5d24c84c878c80dd-image-1444668067826.35.10 AM.png>)
+        -   Certifique-se de dar uma boa identificação à sua imagem!
+      CSDU4 - Design Mode - 4: |-
+        # IDs
+
+        O `id` (normalmente escreveremos \*\* ID \*\*) é um \*\* identificador exclusivo \*\* usado para cada elemento no aplicativo.
+
+        Cada elemento que aparece no aplicativo deve ter um \*\* ID exclusivo \*\*. De fato, se você tentar executar um programa que tenha dois botões com o mesmo ID, receberá uma mensagem de aviso no console.
+
+        # Faça isto
+
+        Embora cada elemento que você arraste no Modo Design obtenha um ID padrão, eles não são realmente tão úteis (como `botao1` e`botao2`), portanto, você deve criar o seu próprio IDs.
+
+        -   Altere o ID do seu botão "clique em mim" para algo útil (como `botaoVermelho`)
+        -   Arraste um segundo botão
+        -   Deixe o segundo botão azul e dê um ID de `botaoZaul`
       CSDU4 - Design Mode Icons: |-
         <img src="https://images.code.org/2b405319f597910b1563ae607958171c-image-1475866226306.49.51.png" style="width: 200px; float:right">
 
@@ -16595,6 +17185,24 @@ pt-BR:
 
         -   Crie um evento 'up' para o botão esquerdo.
         -   Adicione o código para desligar o LED quando o botão aparecer novamente.
+      CSDU6 - UI and Inputs - getNumber practice: |-
+        # pegarNúmero
+
+        \*\* Código Inicial: \*\* O programa tenta atualizar o valorDisplay sempre que o valor do slider muda, mas sempre define o valor para 10.
+
+        Você pode usar `pegarNumero()` para obter o valor do controle deslizante e atualizar o valorDisplay à medida que ele muda?
+      CSDU6 - UI and Inputs - hide show: |-
+        # Ocultar e mostrar
+
+        É um pouco estranho que os dois botões estejam na tela ao mesmo tempo. Você não precisa do botão Parar alarme até que o alarme esteja ativado. Você pode fazer com que os botões apareçam apenas quando forem necessários?
+
+        -   Você deseja que o botão de alarme de parada seja oculto quando o programa iniciar. Você pode fazer isso no modo de design.
+
+        Dica: ao clicar no botão de alarme de disparo, você deve alterar o texto, ocultar o botão de alarme de disparo, _e_ mostrar o botão de parar alarme.
+      CSDU6 - UI and Inputs - setText: |-
+        # definirTexto
+
+        Vamos começar a criar um aplicativo de alarme. Já configuramos um manipulador de eventos para o "triggerAlarmButton", que alterará o texto "statusLabel" para ON quando clicado. Você pode fazer o botão parar alarme alterar o texto para OFF quando clicado?
       CSDU6 - board event challenge_2018: |-
         # Desafio: Placa de som
 
@@ -16736,6 +17344,54 @@ pt-BR:
 
         -   Puxe um bloco `buzzer.frequency()` da caixa de ferramentas e brinque com ele. Você notará que ele tem dois parâmetros, o que acontece quando você altera um ou os dois?
         -   Execute o programa e curta a música do seu Circuito de  Playground.
+      CSDU6 - final project 1: |-
+        # Projetando a interface do usuário
+
+        Antes de se preocupar com o código do seu programa, comece definindo a interface do usuário. À medida que você adiciona elementos no modo Design, forneça a todos um ID significativo. Mesmo se você não planeja acessar um elemento com código, garantir que todos os seus IDs sejam descritivos ajudará a tornar seu programa mais legível e fácil de programar.
+      CSDU6 - final project 1_2018: |-
+        # Projetando a interface do usuário
+
+        Antes de se preocupar com o código do seu programa, comece definindo a interface do usuário. À medida que você adiciona elementos no modo Design, forneça a todos um ID significativo. Mesmo se você não planeja acessar um elemento com código, garantir que todos os seus IDs sejam descritivos ajudará a tornar seu programa mais legível e fácil de programar.
+      CSDU6 - final project 1_2019: |-
+        # Projetando a interface do usuário
+
+        Antes de se preocupar com o código do seu programa, comece definindo a interface do usuário. À medida que você adiciona elementos no modo Design, forneça a todos um ID significativo. Mesmo se você não planeja acessar um elemento com código, garantir que todos os seus IDs sejam descritivos ajudará a tornar seu programa mais legível e fácil de programar.
+      CSDU6 - final project 2: |-
+        # Conectando a interface do usuário
+
+        Com sua interface de usuário no lugar, agora você pode adicionar manipuladores de eventos para seus elementos de interface. Neste ponto, você pode incluir apenas os comandos `console.log ()` para garantir que seus eventos estejam funcionando conforme o esperado - você pode adicionar o código funcional posteriormente.
+      CSDU6 - final project 2_2018: |-
+        # Conectando a interface do usuário
+
+        Com sua interface de usuário no lugar, agora você pode adicionar manipuladores de eventos para seus elementos de interface. Neste ponto, você pode incluir apenas os comandos `console.log ()` para garantir que seus eventos estejam funcionando conforme o esperado - você pode adicionar o código funcional posteriormente.
+      CSDU6 - final project 2_2019: |-
+        # Conectando a interface do usuário
+
+        Com sua interface de usuário no lugar, agora você pode adicionar manipuladores de eventos para seus elementos de interface. Neste ponto, você pode incluir apenas os comandos `console.log ()` para garantir que seus eventos estejam funcionando conforme o esperado - você pode adicionar o código funcional posteriormente.
+      CSDU6 - final project 4: |-
+        # Funções
+
+        À medida que você continua trabalhando no seu programa, procure padrões que possam ser abstraídos em funções. Você pode encontrar código repetido em vários locais ou pedaços de código que possam ser melhor compreendidos de um nome? Não esqueça que você pode usar parâmetros para escrever funções para códigos repetidos que são quase iguais, mas que variam um pouco (como definir cores em vários LEDs).
+      CSDU6 - final project 4_2018: |-
+        # Funções
+
+        À medida que você continua trabalhando no seu programa, procure padrões que possam ser abstraídos em funções. Você pode encontrar código repetido em vários locais ou pedaços de código que possam ser melhor compreendidos de um nome? Não esqueça que você pode usar parâmetros para escrever funções para códigos repetidos que são quase iguais, mas que variam um pouco (como definir cores em vários LEDs).
+      CSDU6 - final project 4_2019: |-
+        # Funções
+
+        À medida que você continua trabalhando no seu programa, procure padrões que possam ser abstraídos em funções. Você pode encontrar código repetido em vários locais ou pedaços de código que possam ser melhor compreendidos de um nome? Não esqueça que você pode usar parâmetros para escrever funções para códigos repetidos que são quase iguais, mas que variam um pouco (como definir cores em vários LEDs).
+      CSDU6 - final project 6: |-
+        # Toques finais
+
+        Adicione os retoques finais ainda necessários para tornar sua inovação incrível. Se você tiver tempo, teste sua inovação com alguns usuários em potencial para obter feedback e encontrar oportunidades de melhoria. Quando terminar, clique no botão "Enviar" para entregá-lo!
+      CSDU6 - final project 6_2018: |-
+        # Toques finais
+
+        Adicione os retoques finais ainda necessários para tornar sua inovação incrível. Se você tiver tempo, teste sua inovação com alguns usuários em potencial para obter feedback e encontrar oportunidades de melhoria. Quando terminar, clique no botão "Enviar" para entregá-lo!
+      CSDU6 - final project 6_2019: |-
+        # Toques finais
+
+        Adicione os retoques finais ainda necessários para tornar sua inovação incrível. Se você tiver tempo, teste sua inovação com alguns usuários em potencial para obter feedback e encontrar oportunidades de melhoria. Quando terminar, clique no botão "Enviar" para entregá-lo!
       CSDU6 - lightswitch toggleswitch: |-
         # Usando o interruptor de alternância
 
@@ -17204,6 +17860,39 @@ pt-BR:
         Veja o código abaixo. O que você acha que isso vai fazer?
 
         Dê um palpite e execute o código para descobrir!
+      CSDU6 play songs: |-
+        # Criando músicas
+
+        Você pode criar e tocar músicas completas com `campainha.tocarNotas()`. São necessários dois parâmetros: uma matriz de notas para tocar e um ritmo no qual as notas são tocadas. Nas bolhas anteriores, você criou matrizes de notas e as tocou aleatoriamente, mas o `campainha.tocarNotas()` toca cada nota consecutivamente.
+
+        # Fazem isto
+
+        -   Puxe um bloco `campainha.tocarNotas` e altere a matriz inicial dentro.
+        -   Verifique se a nova matriz que você fornece possui pelo menos dois pares de notas próximos um do outro na lista (exemplo: `[" A5 "," A5 "," G4 "," G4 "]`)
+
+        \_ Dica: não se esqueça de que você sempre pode alternar entre o modo de bloco e texto.
+      CSDU6 play songs_2018: |-
+        # Criando músicas
+
+        Você pode criar e tocar músicas completas com `campainha.tocarNotas()`. São necessários dois parâmetros: uma matriz de notas para tocar e um ritmo no qual as notas são tocadas. Nas bolhas anteriores, você criou matrizes de notas e as tocou aleatoriamente, mas o `campainha.tocarNotas()` toca cada nota consecutivamente.
+
+        # Fazem isto
+
+        -   Puxe um bloco `campainha.tocarNotas` e altere a matriz inicial dentro.
+        -   Verifique se a nova matriz que você fornece possui pelo menos dois pares de notas próximos um do outro na lista (exemplo: `[" A5 "," A5 "," G4 "," G4 "]`)
+
+        \_ Dica: não se esqueça de que você sempre pode alternar entre o modo de bloco e texto.
+      CSDU6 play songs_2019: |-
+        # Criando músicas
+
+        Você pode criar e tocar músicas completas com `campainha.tocarNotas()`. São necessários dois parâmetros: uma matriz de notas para tocar e um ritmo no qual as notas são tocadas. Nas bolhas anteriores, você criou matrizes de notas e as tocou aleatoriamente, mas o `campainha.tocarNotas()` toca cada nota consecutivamente.
+
+        # Fazem isto
+
+        -   Puxe um bloco `campainha.tocarNotas` e altere a matriz inicial dentro.
+        -   Verifique se a nova matriz que você fornece possui pelo menos dois pares de notas próximos um do outro na lista (exemplo: `[" A5 "," A5 "," G4 "," G4 "]`)
+
+        \_ Dica: não se esqueça de que você sempre pode alternar entre o modo de bloco e texto.
       CSDU6 toggle state prediction: |-
         # Mais do interruptor de alternância
 
@@ -18640,6 +19329,10 @@ pt-BR:
         Agora que você transmitiu informações representadas como números decimais, é possível mapear esses números para caracteres de texto para enviar e receber informações baseadas em texto. Com um protocolo baseado em texto, você pode representar e comunicar com facilidade todos os tipos de informações.
 
         Seu professor fornecerá instruções mais específicas para esta atividade.
+      OPD-K5 WhatIsCS: Você já se perguntou "Exatamente, o que é ciência da computação?"
+        Ou, "Por que alguns programas de computador são escritos com palavras e alguns
+        são escritos usando imagens?" Se sim, assista a este vídeo; é uma ótima introdução
+        ao campo da ciência da computação.
       Overworld Chop Tree: Madeira é um recurso muito importante. Muitas coisas são
         feitas com ela. Siga até a árvore e utilize o bloco `destruir` para cortar
         ela.
