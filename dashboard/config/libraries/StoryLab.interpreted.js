@@ -5,7 +5,7 @@ var currentSceneNumber = 0;
 var scenes = [];
 
 function addBehaviorUntilBoolean(spriteId, behavior, condition) {
-  setProp(spriteId, behavior.name, function() { return condition; });
+  setProp(spriteId, behavior.name, function() { return true; });
   addBehaviorSimple(spriteId, behavior);
 }
 
@@ -14,6 +14,7 @@ function removeInvalidBehaviors() {
   for(var i = 0; i < spriteIds.length; i++) {
   	var behaviors = getBehaviorsForSpriteId(spriteIds[i]);
     for(var j = 0; j < behaviors.length; j++) {
+      console.log(getProp(spriteIds[i], behaviors[j])());
       if(getProp(spriteIds[i], behaviors[j])()) {
       	removeBehaviorSimple(spriteIds[i], behaviors[j]);
       }
