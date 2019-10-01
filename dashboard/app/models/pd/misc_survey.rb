@@ -34,6 +34,9 @@ module Pd
         {tag: "fit-pre-2019",   form_id: "91826716927166", allow_embed: false}, # 2019 FiT Workshop Pre-Survey
         {tag: "fit-post-2019",  form_id: "91883754303159", allow_embed: false}, # 2019 FiT Workshop Post-Survey
         {tag: "other_workshop", form_id: "91477280965166", allow_embed: true},  # Unofficial Workshop Attendance
+        {tag: "vir_f_form",     form_id: "92175282703154", allow_embed: false}, # Virtual Facilitator Form
+        {tag: "vir_ac_year_post",     form_id: "92174983603160", allow_embed: false}, # Virtual Academic Year Post
+        {tag: "vir_ac_year_module_1", form_id: "92175136628158", allow_embed: false}  # Virtual Academic Year Module 1
       ]
     end
 
