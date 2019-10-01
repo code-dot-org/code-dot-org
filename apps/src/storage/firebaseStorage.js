@@ -625,8 +625,7 @@ function getRecordsData(records) {
  *     "table_name2": [{ "city": "Seattle", "state": "WA" }, { "city": "Chicago", "state": "IL"}]
  *   }
  * @param {bool} overwrite Whether to overwrite a table if it already exists.
- * @param {function ()} onSuccess Function to call on success.
- * @param {function} onError Function to call with an error in case of failure.
+ * @returns {Promise} which resolves when all table data has been written
  */
 FirebaseStorage.populateTable = function(jsonData, overwrite) {
   if (!jsonData || !jsonData.length) {

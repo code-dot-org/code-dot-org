@@ -607,7 +607,7 @@ Applab.init = function(config) {
   // Print any json parsing errors to the applab debug console and the browser debug
   // console. If a json parse error is thrown before the applab debug console
   // initializes, the error will be printed only to the browser debug console.
-  let dataLoadedPromise;
+  let dataLoadedPromise = Promise.resolve();
   if (level.dataTables) {
     dataLoadedPromise = Applab.storage.populateTable(level.dataTables, false); // overwrite = false
     dataLoadedPromise.catch(outputError);
@@ -773,11 +773,9 @@ Applab.init = function(config) {
     })
     .then(() => {
       if (getStore().getState().pageConstants.widgetMode) {
-        dataLoadedPromise
-          ? dataLoadedPromise.then(() => {
-              Applab.runButtonClick();
-            })
-          : Applab.runButtonClick();
+        dataLoadedPromise.then(() => {
+          Applab.runButtonClick();
+        });
       }
     });
 
