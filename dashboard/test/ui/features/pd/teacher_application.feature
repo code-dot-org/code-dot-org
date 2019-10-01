@@ -11,6 +11,7 @@ Scenario: Basic teacher application submission
 
   # Section 1
   When I wait until element "h3" contains text "Section 1: About You"
+    And I wait for 10 seconds
     And I press the first "input[name='country']" element
     And I press keys "Severus" for element "input#firstName"
     And I press keys "Snape" for element "input#lastName"
@@ -23,6 +24,7 @@ Scenario: Basic teacher application submission
 
   # Section 2
   Then I wait until element "h3" contains text "Section 2: Teaching Background"
+  And I wait for 10 seconds
   And I press "input[name='subjectsTeaching']:first" using jQuery
   And I press the first "input[name='taughtInPast']" element
   And I press the first "input[name='previousYearlongCdoPd']" element
@@ -53,6 +55,7 @@ Scenario: Basic teacher application submission
 
   # Section 3
   Then I wait until element "h3" contains text "Section 3: Choose Your Program"
+  And I wait for 10 seconds
   And I press "input[name='program']:first" using jQuery
   And I press the first "input[name='csdWhichGrades']" element
   And I press keys "50" for element "input#csHowManyMinutes"
@@ -70,6 +73,7 @@ Scenario: Basic teacher application submission
 
   # Section 4
   Then I wait until element "h3" contains text "Section 4: Professional Learning Program Requirements"
+  And I wait for 10 seconds
   And I press "input[name='committed']:first" using jQuery
   And I click selector "input[name='payFee']" if I see it
   And I press the first "input[name='willingToTravel']" element
@@ -79,6 +83,7 @@ Scenario: Basic teacher application submission
 
   # Section 5
   Then I wait until element "h3" contains text "Section 5: Additional Demographic Information and submission"
+  And I wait for 10 seconds
   And I press "input[name='genderIdentity']:first" using jQuery
   And I press the first "input[name='race']" element
   And I press the first "input[name='howHeard']" element
