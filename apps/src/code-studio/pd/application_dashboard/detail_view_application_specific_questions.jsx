@@ -13,7 +13,7 @@ import {
   PageLabels as FacilitatorPageLabels,
   LabelOverrides as FacilitatorLabelOverrides,
   NumberedQuestions
-} from '@cdo/apps/generated/pd/facilitator1920ApplicationConstants';
+} from '@cdo/apps/generated/pd/facilitatorApplicationConstants';
 import PrincipalApprovalButtons from './principal_approval_buttons';
 
 const TEACHER = 'Teacher';

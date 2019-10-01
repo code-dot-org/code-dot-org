@@ -4,7 +4,7 @@ import LabeledFormComponent from '../../form_components/LabeledFormComponent';
 import {
   PageLabels,
   SectionHeaders
-} from '@cdo/apps/generated/pd/facilitator1920ApplicationConstants';
+} from '@cdo/apps/generated/pd/facilitatorApplicationConstants';
 
 export default class Section5YourApproachToLearningAndLeading extends LabeledFormComponent {
   static labels = PageLabels.section5YourApproachToLearningAndLeading;
