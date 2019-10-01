@@ -4,8 +4,8 @@ import PrincipalApprovalComponent, {
   MANUAL_SCHOOL_FIELDS,
   REQUIRED_SCHOOL_INFO_FIELDS,
   ALWAYS_REQUIRED_FIELDS
-} from '@cdo/apps/code-studio/pd/application/principalApproval1920/PrincipalApproval1920Component';
-import {TextFields} from '@cdo/apps/generated/pd/principalApproval1920ApplicationConstants';
+} from '@cdo/apps/code-studio/pd/application/principalApproval2021/PrincipalApproval2021Component';
+import {TextFields} from '@cdo/apps/generated/pd/principalApproval2021ApplicationConstants';
 
 describe('Principal Approval Component', () => {
   it('Requires only the top few fields if application is rejected', () => {
