@@ -1,5 +1,5 @@
 import React from 'react';
-import sketch, {fish, CreatureType} from './sketches';
+import {fish} from './sketches';
 import Button from 'react-bootstrap/lib/Button';
 const P5 = require('./loadP5');
 
@@ -17,7 +17,7 @@ export default class CreatureCreator extends React.Component {
   render() {
     return (
       <div>
-       <div id={CANVAS_ID} />
+        <div id={CANVAS_ID} />
         <br />
         <br />
         <Button onClick={() => this.download()}>Download as .png</Button>
