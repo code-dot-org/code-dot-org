@@ -95,6 +95,11 @@ module.exports = p5 => {
     draw();
   };
 
+  // TODO: actually calculate KNN data using fish draw state
+  p5.getKnnData = () => {
+    return [];
+  };
+
   p5.setup = () => {
     p5.createCanvas(CANVAS_WIDTH, CANVAS_HEIGHT);
     draw();
@@ -245,14 +250,5 @@ module.exports = p5 => {
       eyes.pupil_diameter,
       eyes.pupil_diameter
     );
-  };
-
-  // TODO: actually calculate KNN data using fish draw state
-  p5.getKnnData = () => {
-    return [-1, 1, 1.5, 8, -1];
-  };
-
-  p5.download = canvasId => {
-    p5.saveCanvas(canvasId, 'png');
   };
 };
