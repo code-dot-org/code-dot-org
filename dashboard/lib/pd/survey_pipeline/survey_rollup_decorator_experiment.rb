@@ -63,7 +63,8 @@ module Pd::SurveyPipeline
         averages: get_averages_all_ws(data),
         response_count: get_submission_count_all_ws(data),
         facilitator_id: facilitator_id,
-        all_workshop_ids: data[:related_workshop_ids]
+        all_workshop_ids: data[:related_workshop_ids],
+        course_name: Pd::Workshop.find(data[:current_workshop_id]).course
       }
 
       report
