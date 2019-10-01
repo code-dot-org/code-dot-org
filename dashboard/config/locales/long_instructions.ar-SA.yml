@@ -307,6 +307,7 @@ ar-SA:
         انظر جيداً!
 
         هل يمكنك جمع كل **10** مجوهرات؟
+      course2_harvester_loops_challenge1: اجمع كل الذرة.
       course2_maze_programming_challenge2: في بعض الأحيان توجد أكثر من طريقة لحل المشكلة.
         أحياناً يكون أسرع لو رجعت للوراء بدلاً من التوجه للأمام!
       course4_artist_fwp_challenge1: حاول تشغيل هذا البرنامج، وإجراء تغييرات لنرى
@@ -332,6 +333,10 @@ ar-SA:
         استخدم بلوكة جديدة لتجعل البطريق يعود اوتماتيكيا للبداية عندما يلامس الديناصور و عندما يحقق نقطة. هذه الخطوة ستجعل لعبتك أكثر تحديا ومتعة!
 
         شغل اللعبة وحرك البطريق بالاسهم حتى تحصل على 5 نقاط. يجب على البطريق ان يتحرك إلى جهة " منصف اليسار" من الشاشة ليكمل التحدي.
+      courseC_artist_loop1: |-
+        رائع!
+
+        لنضيف بعضا من اللمسات بتغيير الفرشة باستخدام بلوكة "تعيين النمط" قبل أن تبدأ دالة كرر.
       courseC_artist_loop1_2018: |-
         \_ رائع جداً\_
 
@@ -395,6 +400,24 @@ ar-SA:
         ![expandable](https://images.code.org/5774170704916cfddcf2e98c2c01d718-image-1553099207939.png)
         ![expandable](https://images.code.org/9b016314df4aed5165c76282bab0cea1-image-1553099212229.png)
         ![expandable](https://images.code.org/2cf50b8e9ae75803f15908304c22a10b-image-1553099215987.png)
+      courseC_artist_loops5a: |-
+        ماذا سيحدث لو غيرت أحد أو كلا الملصقات بمخلوق آخر؟
+
+        * * *
+
+        ![expandable](https://images.code.org/cadb5e244db64a781bc02b55f2e7ccca-image-1496711397989.08.28.png)
+      courseC_artist_loops5a_2018: |-
+        ماذا سيحدث لو غيرت أحد أو كلا الملصقات بمخلوق آخر؟
+
+        * * *
+
+        ![expandable](https://images.code.org/cadb5e244db64a781bc02b55f2e7ccca-image-1496711397989.08.28.png)
+      courseC_artist_loops5a_2019: |-
+        ماذا سيحدث لو غيرت أحد أو كلا الملصقات بمخلوق آخر؟
+
+        * * *
+
+        ![expandable](https://images.code.org/cadb5e244db64a781bc02b55f2e7ccca-image-1496711397989.08.28.png)
       courseC_artist_loops5b_2019: |-
         ماذا سيحدث لو استخدمت " تقدم إلى الأمام" ومن ثم " تقدم إلى الخلف" بمقدار 100 أو 200 أو 400 بيكسل داخل التكرار؟
 
@@ -405,6 +428,22 @@ ar-SA:
         ![expandable](https://images.code.org/d523de02389fd23db3029327c03b727d-image-1497039953252.24.18.png)
         ![expandable](https://images.code.org/55285e9e5c5ae1cf1c895cc0bf92824d-image-1553100970790.png)
         ![expandable](https://images.code.org/6b8e67db2a3b341bc56fa53f67c284c2-image-1553100974645.png)
+      courseC_artist_loops6a: |-
+        اضق ملصق ثالث في أي مكان ترغبه داخل دالة كرر! ماهو شكلها الآن؟
+
+        -   غير النمط بالفرشاة لتحصل على تنوع أكثر!
+
+        * * *
+
+        ![expandable](https://images.code.org/b0f999ef4b9ab6bd9780e9fbac07dc8d-image-1497040845047.39.55.png)
+      courseC_artist_loops6a_2018: |-
+        اضق ملصق ثالث في أي مكان ترغبه داخل دالة كرر! ماهو شكلها الآن؟
+
+        -   غير النمط بالفرشاة لتحصل على تنوع أكثر!
+
+        * * *
+
+        ![expandable](https://images.code.org/b0f999ef4b9ab6bd9780e9fbac07dc8d-image-1497040845047.39.55.png)
       courseC_artist_loops6a_2019: |-
         أضف ملصقا ثالثا في أي مكان ترغبه داخل التكرار! ماهو الشكل الناتج؟
 
@@ -430,6 +469,22 @@ ar-SA:
         ![expandable](https://images.code.org/9f28cb9b434b914846c3846bc6652f66-image-1560982666379.png)
         ![expandable](https://images.code.org/e9128684956504b0172708d63b65f93a-image-1560982686482.png)
         ![expandable](https://images.code.org/8e9cf52ecaf72678c65558f18f3e0d3e-image-1560982695632.png)
+      courseC_artist_loopsPre1a: |-
+        الآن, اجعل هذا الكود داخل دالة "كرر" وكررها **6** مرات.
+
+        -   لاحظ أننا أضفنا الالتفاف بدرجة 60 في نهاية دالة كرر لنحصل على التفافة كاملة.
+      courseC_artist_loopsPre1a_2018: |-
+        الآن, اجعل هذا الكود داخل دالة "كرر" وكررها **6** مرات.
+
+        -   لاحظ أننا أضفنا الالتفاف بدرجة 60 في نهاية دالة كرر لنحصل على التفافة كاملة.
+      courseC_artist_loopsPre1a_2019: |-
+        الآن, اجعل هذا الكود داخل دالة "كرر" وكررها **6** مرات.
+
+        -   لاحظ أننا أضفنا الالتفاف بدرجة 60 في نهاية دالة كرر لنحصل على التفافة كاملة.
+      courseC_artist_loopsPrePre1a: استخدم <xml><block type="jump_to_xy" id="callMe"><title
+        name="XPOS">200</title><title name="YPOS">200</title></block></xml> لتجعل
+        الرسام في منتصف منطقة اللعب. ومن ثم ارسم مستقيم بطول 50 بكسل باستخدام <xml><block
+        type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">50</title></block></xml>.
       courseC_artist_loopsPrePre1a_2018: |-
         ### الرسام في المكلن الخاطئ!
 
@@ -442,6 +497,18 @@ ar-SA:
         \_ "الان المس بيلي!"\_
 
         ارسم هذا المربع بطول ضلع 200 بيكسل.
+      courseC_collector_loops_challenge2: |-
+        _"لنبحث عن الكنز!"_
+
+        ساعد بجمع **5** قطع من المجوهرات على الأقل.
+      courseC_collector_loops_challenge2_2018: |-
+        _"لنبحث عن الكنز!"_
+
+        ساعد بجمع **5** قطع من المجوهرات على الأقل.
+      courseC_collector_loops_challenge2_2019: |-
+        _"لنبحث عن الكنز!"_
+
+        ساعد بجمع **5** قطع من المجوهرات على الأقل.
       courseC_collector_prog1: |-
         **لعب حر** هذه لورا المغامرة! حركها لتحصل على أكبر قدر من المجوهرات. استخدم  بلوكة" اجمع" لتجمع الكنوز.
 
@@ -540,6 +607,33 @@ ar-SA:
         اجمع على الأقل **10**من المجوهرات لتنهي هذا التحدي!
       courseC_data wizard: إضغط زر التشغيل. الساحر سيجعل الحيوانات تظهر. عد الحيوانات.
         ماذا لاحظت؟
+      courseC_harvester_loops1: |-
+        دالة تكرر تستخدم لتكرار أكثر من حركة.
+
+        استخدم دالة كرر لتجمع كل الأربع قرعات.
+      courseC_harvester_loops1_2018: |-
+        دالة تكرر تستخدم لتكرار أكثر من حركة.
+
+        استخدم دالة كرر لتجمع كل الأربع قرعات.
+      courseC_harvester_loops1_2019: |-
+        دالة تكرر تستخدم لتكرار أكثر من حركة.
+
+        استخدم دالة كرر لتجمع كل الأربع قرعات.
+      courseC_harvester_loops3: اجمع كل القرع.
+      courseC_harvester_loops3_2018: اجمع كل القرع.
+      courseC_harvester_loops3_2019: اجمع كل القرع.
+      courseC_harvester_loops8: |-
+        **تحدي** اجمع كل الذرة وكل القرع.
+
+        يمكن إكمال هذا التحدي بأي طريقة ترغبها, لكنها سوف تستهلك الكثير من العمل او الكثير من التفكير!
+      courseC_harvester_loops8_2018: |-
+        **تحدي** اجمع كل الذرة وكل القرع.
+
+        يمكن إكمال هذا التحدي بأي طريقة ترغبها, لكنها سوف تستهلك الكثير من العمل او الكثير من التفكير!
+      courseC_harvester_loops8_2019: |-
+        **تحدي** اجمع كل الذرة وكل القرع.
+
+        يمكن إكمال هذا التحدي بأي طريقة ترغبها, لكنها سوف تستهلك الكثير من العمل او الكثير من التفكير!
       courseC_maze_programming1: لصنع اللغز, اسحب جميع البلوكات واضغط على "تشغيل"
         ليمكنك رؤيتها!
       courseC_maze_programming1_2018: لصنع اللغز, اسحب جميع البلوكات واضغط على "تشغيل"
@@ -615,6 +709,123 @@ ar-SA:
         لحل المشكلة. أحياناً يكون أسرع لو رجعت للوراء بدلاً من التوجه للأمام!
       courseC_maze_programming_challenge2_2019: في بعض الأحيان توجد أكثر من طريقة
         لحل المشكلة. أحياناً يكون أسرع لو رجعت للوراء بدلاً من التوجه للأمام!
+      courseC_starWars_loops1: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _" اذهب واجمع قطع الحديد BB-8!"_
+
+        استخدم 5 من البلوكة نفسها لتجمع قطع الحديد. قطع الحديد تلمع كهذه: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)
+      courseC_starWars_loops10: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+         _"استمر BB-8!"_
+
+        أنت تقوم بعمل رائع! استمر!
+      courseC_starWars_loops10_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+         _"استمر BB-8!"_
+
+        أنت تقوم بعمل رائع! استمر!
+      courseC_starWars_loops10_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+         _"استمر BB-8!"_
+
+        أنت تقوم بعمل رائع! استمر!
+      courseC_starWars_loops11: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"استمر, BB-8!"_
+
+        انت على وشك الوصول! هذه المرة, اختر أي مسار ترغب به!
+      courseC_starWars_loops11_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"استمر, BB-8!"_
+
+        انت على وشك الوصول! هذه المرة, اختر أي مسار ترغب به!
+      courseC_starWars_loops11_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"استمر, BB-8!"_
+
+        انت على وشك الوصول! هذه المرة, اختر أي مسار ترغب به!
+      courseC_starWars_loops1_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _" اذهب واجمع قطع الحديد BB-8!"_
+
+        استخدم 5 من البلوكة نفسها لتجمع قطع الحديد. قطع الحديد تلمع كهذه: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)
+      courseC_starWars_loops1_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _" اذهب واجمع قطع الحديد BB-8!"_
+
+        استخدم 5 من البلوكة نفسها لتجمع قطع الحديد. قطع الحديد تلمع كهذه: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)
+      courseC_starWars_loops2: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Go BB-8!"_
+
+        لتجمع كل قطع الحديد, انشئ دالة تكرارية تستخدم فيها بلوكة واحدة داخل بلوكة "كرر".
+      courseC_starWars_loops2_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Go BB-8!"_
+
+        لتجمع كل قطع الحديد, انشئ دالة تكرارية تستخدم فيها بلوكة واحدة داخل بلوكة "كرر".
+      courseC_starWars_loops2_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Go BB-8!"_
+
+        لتجمع كل قطع الحديد, انشئ دالة تكرارية تستخدم فيها بلوكة واحدة داخل بلوكة "كرر".
+      courseC_starWars_loops4: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"استمر, BB-8."_
+
+        في هذا اللغز, يمكنك استخدام اثنان من بلوكة "كرر" لتساعدك في جعل BB-8 يجمع كل قطع الحديد بأقل عدد من البلوكات!
+      courseC_starWars_loops4_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"استمر, BB-8."_
+
+        في هذا اللغز, يمكنك استخدام اثنان من بلوكة "كرر" لتساعدك في جعل BB-8 يجمع كل قطع الحديد بأقل عدد من البلوكات!
+      courseC_starWars_loops4_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"استمر, BB-8."_
+
+        في هذا اللغز, يمكنك استخدام اثنان من بلوكة "كرر" لتساعدك في جعل BB-8 يجمع كل قطع الحديد بأقل عدد من البلوكات!
+      courseC_starWars_loops5: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Go BB-8!"_'
+      courseC_starWars_loops5_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Go BB-8!"_'
+      courseC_starWars_loops5_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Go BB-8!"_'
+      courseC_starWars_loops6: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"هل يمكنك جمعها كلها؟"_
+
+        الدوال التكرارية تستخدم أيضا أكثر من بلوكة داخلها! هل يمكنك استخدام "كرر" لهذه الخطوات؟
+      courseC_starWars_loops6_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"هل يمكنك جمعها كلها؟"_
+
+        الدوال التكرارية تستخدم أيضا أكثر من بلوكة داخلها! هل يمكنك استخدام "كرر" لهذه الخطوات؟
+      courseC_starWars_loops6_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"هل يمكنك جمعها كلها؟"_
+
+        الدوال التكرارية تستخدم أيضا أكثر من بلوكة داخلها! هل يمكنك استخدام "كرر" لهذه الخطوات؟
+      courseC_starWars_loops7: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"يمكنك فعلها!"_
+
+        هل يمكنك حمع كل قطع الحديد باستخدام دالة كرر واحدة؟ حاول برمجتها كاملة وابحث عن الكود البرمجي المتكرر وضعها داخل دالة كرر.
+      courseC_starWars_loops7_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"يمكنك فعلها!"_
+
+        هل يمكنك حمع كل قطع الحديد باستخدام دالة كرر واحدة؟ حاول برمجتها كاملة وابحث عن الكود البرمجي المتكرر وضعها داخل دالة كرر.
+      courseC_starWars_loops7_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"يمكنك فعلها!"_
+
+        هل يمكنك حمع كل قطع الحديد باستخدام دالة كرر واحدة؟ حاول برمجتها كاملة وابحث عن الكود البرمجي المتكرر وضعها داخل دالة كرر.
+      courseC_starWars_loops8: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"استمر, BB-8."_
+
+        **تحدي** اجمع الافكار من الالغاز السابقة لتكمل هذه المرحلة.
+      courseC_starWars_loops8_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"استمر, BB-8."_
+
+        **تحدي** اجمع الافكار من الالغاز السابقة لتكمل هذه المرحلة.
+      courseC_starWars_loops8_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"استمر, BB-8."_
+
+        **تحدي** اجمع الافكار من الالغاز السابقة لتكمل هذه المرحلة.
+      courseC_starWars_loops9: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"استمر!"_
+
+        استخدم ماتعلمته لتجمع كل قطع الحديد!
+      courseC_starWars_loops9_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"استمر!"_
+
+        استخدم ماتعلمته لتجمع كل قطع الحديد!
+      courseC_starWars_loops9_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"استمر!"_
+
+        استخدم ماتعلمته لتجمع كل قطع الحديد!
       courseD_bee_nestedLoops8: "إجْمَع كُلّ الرَحِيق مِن جَمِيعِ الزُهور \nوقم بِـإنْتاج
         عَسَل عند خلية النحل. \\\r\n\\\r\nقُم بِـإسْتِخْدَام \"حَلْقَة تِكرارات متداخِلة\". "
       courseD_bee_nestedLoops8_2018: "إجْمَع كُلّ الرَحِيق مِن جَمِيعِ الزُهور \nوقم

@@ -378,7 +378,9 @@ class TopInstructions extends Component {
       HEADER_HEIGHT +
       RESIZER_HEIGHT;
 
-    this.props.setInstructionsMaxHeightNeeded(maxNeededHeight);
+    if (this.props.maxHeight !== maxNeededHeight) {
+      this.props.setInstructionsMaxHeightNeeded(maxNeededHeight);
+    }
     return maxNeededHeight;
   };
 

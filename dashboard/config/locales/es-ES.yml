@@ -60,7 +60,11 @@ es:
   heading_x_of_y: "%{heading} (página %{x} de %{y})"
   join_section:
     code:
+      title: Únete a una sección en Code.org
       placeholder: Código de sección (ABCDEF)
+      instructions: 'Por favor ingresa tu código de 6 letras que tu profesor ha compartido
+        contigo (Ejemplo: "ABCDEF") para unirte a su sección.'
+      submit: Únete
   add_hint_form:
     placeholder: Introduce aquí tu pista
     submit: Agregar pista
