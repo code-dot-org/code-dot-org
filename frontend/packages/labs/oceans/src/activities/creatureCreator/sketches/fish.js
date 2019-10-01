@@ -3,7 +3,7 @@ const CANVAS_HEIGHT = 400;
 const BG_COLOR = 250;
 
 const BODY_CENTER_X = CANVAS_WIDTH / 2;
-const BODY_CENTER_Y = CANVAS_HEIGHT / 2;
+const BODY_CENTER_Y = 2 * CANVAS_HEIGHT / 3;
 let body = {
   width: 200,
   height: 50,
@@ -12,16 +12,16 @@ let body = {
 let fins = {
   color: '#87D1EE',
   tail: {
-    width: 10,
-    height: 40
+    width_percent: .1,
+    height_percent: .2
   },
   top_fin: {
-    width: 30,
-    height: 10
+    width_percent: 0.30,
+    height_percent: 0.10
   },
   side_fin: {
-    width: 10,
-    height: 30
+    width_percent: 0.10,
+    height_percent: 0.30
   }
 };
 let eyes = {
@@ -52,6 +52,49 @@ const findBodyXOffsetFromYOffset = yOffset => {
 };
 
 module.exports = p5 => {
+  p5.download = canvasId => {
+    p5.saveCanvas(canvasId, 'png');
+  };
+
+  p5.setBodySize = (width, height) => {
+    body.width = width;
+    body.height = height;
+    draw();
+  };
+
+  p5.setBodyColor = color => {
+    body.color = color;
+    draw();
+  }
+
+  p5.setEyeSize = diameter => {
+    eyes.diameter = diameter;
+    draw();
+  };
+
+  p5.setFinColor = color => {
+    fins.color = color;
+    draw();
+  }
+
+  p5.setTailSizeRelativeToBody = (width_percent, height_percent) => {
+    fins.tail.width_percent = width_percent;
+    fins.tail.height_percent = height_percent;
+    draw();
+  };
+
+  p5.setTopFinSizeRelativeToBody = (width_percent, height_percent) => {
+    fins.top_fin.width_percent = width_percent;
+    fins.top_fin.height_percent = height_percent;
+    draw();
+  };
+
+  p5.setSideFinSizeRelativeToBody = (width_percent, height_percent) => {
+    fins.side_fin.width_percent = width_percent;
+    fins.side_fin.height_percent = height_percent;
+    draw();
+  };
+
   p5.setup = () => {
     p5.createCanvas(CANVAS_WIDTH, CANVAS_HEIGHT);
     draw();
@@ -64,18 +107,20 @@ module.exports = p5 => {
     p5.fill(fins.color);
     p5.noStroke();
     const top_fin = fins.top_fin;
+    const topFinWidth = top_fin.width_percent * body.width;
+    const topFinHeight = top_fin.height_percent * body.height;
     p5.beginShape();
     // start the top fin on the top in the center
     p5.vertex(BODY_CENTER_X, BODY_CENTER_Y - body.height / 2);
     p5.vertex(
-      BODY_CENTER_X - top_fin.width / 2,
+      BODY_CENTER_X - topFinWidth / 2,
       BODY_CENTER_Y -
-        findBodyYOffsetFromXOffset(top_fin.width / 2) -
-        top_fin.height
+        findBodyYOffsetFromXOffset(topFinWidth / 2) -
+        topFinHeight
     );
     p5.vertex(
-      BODY_CENTER_X - top_fin.width,
-      BODY_CENTER_Y - findBodyYOffsetFromXOffset(top_fin.width)
+      BODY_CENTER_X - topFinWidth,
+      BODY_CENTER_Y - findBodyYOffsetFromXOffset(topFinWidth)
     );
     p5.endShape(p5.CLOSE);
 
@@ -83,22 +128,24 @@ module.exports = p5 => {
     p5.fill(fins.color);
     p5.noStroke();
     const tail = fins.tail;
+    const tailWidth = tail.width_percent * body.width;
+    const tailHeight = tail.height_percent * body.height;
     p5.beginShape();
     p5.vertex(
-      BODY_CENTER_X - findBodyXOffsetFromYOffset(tail.height / 4),
-      BODY_CENTER_Y - tail.height / 4
+      BODY_CENTER_X - findBodyXOffsetFromYOffset(tailHeight / 4),
+      BODY_CENTER_Y - tailHeight / 4
     );
     p5.vertex(
-      BODY_CENTER_X - body.width / 2 - tail.width,
-      BODY_CENTER_Y - tail.height / 2
+      BODY_CENTER_X - body.width / 2 - tailWidth,
+      BODY_CENTER_Y - tailHeight / 2
     );
     p5.vertex(
-      BODY_CENTER_X - body.width / 2 - tail.width,
-      BODY_CENTER_Y + tail.height / 2
+      BODY_CENTER_X - body.width / 2 - tailWidth,
+      BODY_CENTER_Y + tailHeight / 2
     );
     p5.vertex(
-      BODY_CENTER_X - findBodyXOffsetFromYOffset(tail.height / 4),
-      BODY_CENTER_Y + tail.height / 4
+      BODY_CENTER_X - findBodyXOffsetFromYOffset(tailHeight / 4),
+      BODY_CENTER_Y + tailHeight / 4
     );
     p5.endShape(p5.CLOSE);
 
@@ -111,31 +158,17 @@ module.exports = p5 => {
     p5.fill(fins.color);
     p5.noStroke();
     const side_fin = fins.side_fin;
+    const sideFinWidth = side_fin.width_percent * body.width;
+    const sideFinHeight = side_fin.height_percent * body.height;
     p5.beginShape();
     //p5.vertex(230, 190);
     const startX = BODY_CENTER_X;
     const startY = BODY_CENTER_Y - body.height / 10;
     p5.vertex(startX, startY);
-    p5.vertex(startX - side_fin.width, startY - side_fin.height / 3);
-    p5.vertex(startX - side_fin.width, startY + (2 * side_fin.height) / 3);
-    p5.vertex(startX, startY + side_fin.height / 3);
+    p5.vertex(startX - sideFinWidth, startY - sideFinHeight / 3);
+    p5.vertex(startX - sideFinWidth, startY + (2 * sideFinHeight) / 3);
+    p5.vertex(startX, startY + sideFinHeight / 3);
     p5.endShape(p5.CLOSE);
-
-    // eye
-    const eye_x_offset = Math.floor((eyes.x_offset_ratio * body.width) / 2);
-    const eye_y_offset = Math.floor((eyes.y_offset_ratio * body.height) / 2);
-    const eye_center_x = BODY_CENTER_X + eye_x_offset;
-    const eye_center_y = BODY_CENTER_Y - eye_y_offset;
-    p5.stroke('black');
-    p5.fill('white');
-    p5.ellipse(eye_center_x, eye_center_y, eyes.diameter, eyes.diameter);
-    p5.fill('black');
-    p5.ellipse(
-      eye_center_x,
-      eye_center_y,
-      eyes.pupil_diameter,
-      eyes.pupil_diameter
-    );
 
     //mouth
     p5.fill(BG_COLOR);
@@ -144,7 +177,6 @@ module.exports = p5 => {
 
     const yOffset = 0.15 * body.height;
     const mouthStartY = BODY_CENTER_Y + yOffset;
-    console.log(mouthStartY);
     const mouthStartX = Math.floor(
       BODY_CENTER_X + findBodyXOffsetFromYOffset(yOffset)
     );
@@ -199,9 +231,21 @@ module.exports = p5 => {
       p5.vertex(startPoint[0] - i * toothWidth, startPoint[1]);
     }
     p5.endShape();
-  };
 
-  p5.download = canvasId => {
-    p5.saveCanvas(canvasId, 'png');
+    // eye
+    const eye_x_offset = Math.floor((eyes.x_offset_ratio * body.width) / 2);
+    const eye_y_offset = Math.floor((eyes.y_offset_ratio * body.height) / 2);
+    const eye_center_x = BODY_CENTER_X + eye_x_offset;
+    const eye_center_y = BODY_CENTER_Y - eye_y_offset;
+    p5.stroke('black');
+    p5.fill('white');
+    p5.ellipse(eye_center_x, eye_center_y, eyes.diameter, eyes.diameter);
+    p5.fill('black');
+    p5.ellipse(
+      eye_center_x,
+      eye_center_y,
+      eyes.pupil_diameter,
+      eyes.pupil_diameter
+    );
   };
 };
