@@ -1082,19 +1082,18 @@ class User < ActiveRecord::Base
     # Find the script_level that goes with the most recent user_level
     most_recent_sl = visible_sls.find {|sl| sl.level_id == most_recent_ul.level_id}
 
-    # If the user started but didn't finish a level, go to that level.
-    return most_recent_sl unless most_recent_ul.passing?
-
     last_visible_level = visible_sls.max_by(&:chapter)
+
+    # If the user started but didn't finish a level, go to that level.
+    # Or if the user completed the last level but not all previous levels.
+    return most_recent_sl if most_recent_sl == last_visible_level || !most_recent_ul.passing?
 
     visible_incomplete_sls = visible_sls.find_all {|sl| visible_incomplete_level_ids.include?(sl.level_id)}
 
     first_visible_incomplete_level = visible_incomplete_sls.min_by(&:chapter)
 
-    # The user has completed the last level in the progression, but not all
-    # previous levels, return the first visible incomplete script_level
     return first_visible_incomplete_level || first_visible_level if
-      (most_recent_sl == last_visible_level) || most_recent_sl.nil?
+      most_recent_sl.nil?
 
     # Find the chapter for the script_level that goes with the most recent user_level
     most_recent_completed_chapter = most_recent_sl.chapter

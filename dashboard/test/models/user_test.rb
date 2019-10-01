@@ -892,8 +892,9 @@ class UserTest < ActiveSupport::TestCase
         best_result: Activity::MINIMUM_PASS_RESULT
       )
     end
-    assert twenty_hour.script_levels.first.level.unplugged?
-    assert_equal(2, user.next_unpassed_visible_progression_level(twenty_hour).chapter)
+    user.stubs(:completed?).returns(true)
+
+    assert_nil user.next_unpassed_visible_progression_level(twenty_hour)
   end
 
   test 'can get next_unpassed_visible_progression_level, last level complete, but script not complete, none hidden' do
@@ -961,7 +962,6 @@ class UserTest < ActiveSupport::TestCase
 
     twenty_hour.script_levels.each do |script_level|
       next if script_level.chapter != 3
-      puts script_level.level.unplugged?
       UserLevel.create(
         user: user,
         level: script_level.level,
@@ -989,9 +989,11 @@ class UserTest < ActiveSupport::TestCase
       best_result: Activity::MINIMUM_PASS_RESULT
     )
 
-    # User's most recent progress is on last level in script. There's nothing
-    # following it, so just return to the last level
-    assert_equal(script_level.chapter, user.next_unpassed_visible_progression_level(twenty_hour).chapter)
+    # User's most recent progress is on last level in script. But they
+    # have not completed previous levels, so go to the first incomplete,
+    # visible level.
+    assert twenty_hour.script_levels.first.level.unplugged?
+    assert_equal(2, user.next_unpassed_visible_progression_level(twenty_hour).chapter)
   end
 
   test 'can get next_unpassed_visible_progression_level when most recent level is only followed by unplugged levels' do
@@ -1019,7 +1021,7 @@ class UserTest < ActiveSupport::TestCase
     assert_equal(2, user.next_unpassed_visible_progression_level(script).chapter)
   end
 
-  test 'can get next_unpassed_visible_progression_level when most recent level not a progression level' do
+  test 'can get next_unpassed_visible_progression_level when most recent level is unplugged' do
     user = create :user
     script = create :script
 
@@ -1041,7 +1043,7 @@ class UserTest < ActiveSupport::TestCase
 
     # User's most recent progress is on unplugged level, that is followed by another
     # unplugged level. We should end up at the first non unplugged level
-    assert_equal(4, user.next_unpassed_visible_progression_level(script).chapter)
+    assert_equal(1, user.next_unpassed_visible_progression_level(script).chapter)
   end
 
   test 'can get next_unpassed_visible_progression_level when we have no progress' do
@@ -1067,7 +1069,10 @@ class UserTest < ActiveSupport::TestCase
     level_group = create :level_group, name: 'LevelGroupLevel1', type: 'LevelGroup'
     level_group.properties['pages'] = [{levels: ['level_multi1', 'level_multi2']}]
 
+    other_level = create :maze
+
     create(:script_level, script: script, levels: [level_group])
+    create(:script_level, script: script, levels: [other_level])
     create :user_script, user: user, script: script
 
     # Create a UserLevel for our level_group and sublevel, the sublevel is more recent
