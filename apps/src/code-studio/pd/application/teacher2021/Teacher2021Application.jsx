@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import FormController from '../../form_components/FormController';
 import Section1AboutYou from './Section1AboutYou';
-import Section2ChooseYourProgram from './Section2ChooseYourProgram';
-import Section3TeachingBackground from './Section3TeachingBackground';
+import Section2TeachingBackground from './Section2TeachingBackground';
+import Section3ChooseYourProgram from './Section3ChooseYourProgram';
 import Section4ProfessionalLearningProgramRequirements from './Section4ProfessionalLearningProgramRequirements';
 import Section5AdditionalDemographicInformation from './Section5AdditionalDemographicInformation';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
@@ -63,8 +63,8 @@ export default class Teacher2021Application extends FormController {
   getPageComponents() {
     return [
       Section1AboutYou,
-      Section3TeachingBackground,
-      Section2ChooseYourProgram,
+      Section2TeachingBackground,
+      Section3ChooseYourProgram,
       Section4ProfessionalLearningProgramRequirements,
       Section5AdditionalDemographicInformation
     ];

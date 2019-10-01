@@ -8,11 +8,11 @@ import {
 import {FormGroup, Row, Col} from 'react-bootstrap';
 import {PROGRAM_CSD, PROGRAM_CSP} from './TeacherApplicationConstants';
 
-export default class Section2ChooseYourProgram extends LabeledFormComponent {
-  static labels = PageLabels.section2ChooseYourProgram;
+export default class Section3ChooseYourProgram extends LabeledFormComponent {
+  static labels = PageLabels.section3ChooseYourProgram;
 
   static associatedFields = [
-    ...Object.keys(PageLabels.section2ChooseYourProgram)
+    ...Object.keys(PageLabels.section3ChooseYourProgram)
   ];
 
   getNameForSelectedProgram() {
@@ -62,7 +62,7 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
 
     return (
       <FormGroup>
-        <h3>Section 3: {SectionHeaders.section2ChooseYourProgram}</h3>
+        <h3>Section 3: {SectionHeaders.section3ChooseYourProgram}</h3>
         {this.radioButtonsFor('program')}
         {this.props.data.program === PROGRAM_CSD &&
           this.checkBoxesFor('csdWhichGrades')}
@@ -93,7 +93,7 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
           style: {
             width: '100px'
           },
-          label: PageLabels.section2ChooseYourProgram.csHowManyMinutes.replace(
+          label: PageLabels.section3ChooseYourProgram.csHowManyMinutes.replace(
             'program',
             this.getNameForSelectedProgram()
           ),
@@ -105,7 +105,7 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
           style: {
             width: '100px'
           },
-          label: PageLabels.section2ChooseYourProgram.csHowManyDaysPerWeek.replace(
+          label: PageLabels.section3ChooseYourProgram.csHowManyDaysPerWeek.replace(
             'program',
             this.getNameForSelectedProgram()
           ),
@@ -117,7 +117,7 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
           style: {
             width: '100px'
           },
-          label: PageLabels.section2ChooseYourProgram.csHowManyWeeksPerYear.replace(
+          label: PageLabels.section3ChooseYourProgram.csHowManyWeeksPerYear.replace(
             'program',
             this.getNameForSelectedProgram()
           ),

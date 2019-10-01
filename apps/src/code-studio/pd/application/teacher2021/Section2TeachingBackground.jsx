@@ -11,14 +11,14 @@ import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDr
 import {isEmail} from '@cdo/apps/util/formatValidation';
 import {styles} from './TeacherApplicationConstants';
 
-export default class Section3TeachingBackground extends LabeledFormComponent {
+export default class Section2TeachingBackground extends LabeledFormComponent {
   static labels = {
-    ...PageLabels.section3TeachingBackground,
+    ...PageLabels.section2TeachingBackground,
     ...PageLabels.section1AboutYou
   };
 
   static associatedFields = [
-    ...Object.keys(PageLabels.section3TeachingBackground),
+    ...Object.keys(PageLabels.section2TeachingBackground),
     'school',
     'schoolName',
     'schoolDistrictName',
@@ -47,7 +47,7 @@ export default class Section3TeachingBackground extends LabeledFormComponent {
   render() {
     return (
       <FormGroup>
-        <h3>Section 2: {SectionHeaders.section3TeachingBackground}</h3>
+        <h3>Section 2: {SectionHeaders.section2TeachingBackground}</h3>
 
         <p>Please provide your school and principal information below:</p>
 
