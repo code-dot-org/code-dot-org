@@ -215,7 +215,6 @@ export default class PrincipalApprovalComponent extends LabeledFormComponent {
         <div>
           {this.singleCheckboxFor('understandFee')}
           {this.radioButtonsFor('payFee')}
-
           {showPayFeeNote && (
             <div>
               <p style={styles.red}>
