@@ -653,11 +653,11 @@ module Api::V1::Pd
 
     # TODO: remove this test when workshop_organizer is deprecated
     test 'cohort view as a workshop organizer returns expected columns for a teacher' do
-      time = Date.new(2017, 3, 15)
+      time = Date.new(2020, 3, 15)
 
       Timecop.freeze(time) do
         workshop = create :summer_workshop,
-          sessions_from: Date.new(2017, 1, 1),
+          sessions_from: Date.new(2020, 1, 1),
           processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
         create :pd_enrollment, workshop: workshop, user: @serializing_teacher
 
@@ -680,12 +680,12 @@ module Api::V1::Pd
         assert_equal(
           {
             id: application.id,
-            date_accepted: '2017-03-15',
+            date_accepted: '2020-03-15',
             applicant_name: 'Minerva McGonagall',
             district_name: 'A School District',
             school_name: 'A Seattle Public School',
             email: 'minerva@hogwarts.edu',
-            assigned_workshop: 'January 1-5, 2017, Orchard Park NY',
+            assigned_workshop: 'January 1-5, 2020, Orchard Park NY',
             registered_workshop: 'Yes',
             status: 'accepted_not_notified',
             notes: nil,
@@ -701,7 +701,7 @@ module Api::V1::Pd
 
     # TODO: remove this test when workshop_organizer is deprecated
     test 'cohort view as a workshop organizer returns expected columns for a teacher without a workshop' do
-      time = Date.new(2017, 3, 15)
+      time = Date.new(2020, 3, 15)
 
       Timecop.freeze(time) do
         application = create(
@@ -722,7 +722,7 @@ module Api::V1::Pd
         assert_equal(
           {
             id: application.id,
-            date_accepted: '2017-03-15',
+            date_accepted: '2020-03-15',
             applicant_name: 'Minerva McGonagall',
             district_name: 'A School District',
             school_name: 'A Seattle Public School',
@@ -743,7 +743,7 @@ module Api::V1::Pd
 
     # TODO: remove this test when workshop_organizer is deprecated
     test 'cohort view as a workshop organizer returns expected columns for a facilitator' do
-      time = Date.new(2017, 3, 15)
+      time = Date.new(2020, 3, 15)
 
       Timecop.freeze(time) do
         application = create(
@@ -765,7 +765,7 @@ module Api::V1::Pd
         assert_equal(
           {
             id: application.id,
-            date_accepted: '2017-03-15',
+            date_accepted: '2020-03-15',
             applicant_name: 'Minerva McGonagall',
             district_name: 'A School District',
             school_name: 'Hogwarts',
@@ -787,11 +787,11 @@ module Api::V1::Pd
     end
 
     test 'cohort view returns expected columns for a teacher' do
-      time = Date.new(2017, 3, 15)
+      time = Date.new(2020, 3, 15)
 
       Timecop.freeze(time) do
         workshop = create :summer_workshop,
-          sessions_from: Date.new(2017, 1, 1),
+          sessions_from: Date.new(2020, 1, 1),
           processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
         create :pd_enrollment, workshop: workshop, user: @serializing_teacher
 
@@ -816,12 +816,12 @@ module Api::V1::Pd
         assert_equal(
           {
             id: application.id,
-            date_accepted: '2017-03-15',
+            date_accepted: '2020-03-15',
             applicant_name: 'Minerva McGonagall',
             district_name: 'A School District',
             school_name: 'A Seattle Public School',
             email: 'minerva@hogwarts.edu',
-            assigned_workshop: 'January 1-5, 2017, Orchard Park NY',
+            assigned_workshop: 'January 1-5, 2020, Orchard Park NY',
             registered_workshop: 'Yes',
             status: 'accepted_not_notified',
             notes: nil,
@@ -836,7 +836,7 @@ module Api::V1::Pd
     end
 
     test 'cohort view returns expected columns for a teacher without a workshop' do
-      time = Date.new(2017, 3, 15)
+      time = Date.new(2020, 3, 15)
 
       Timecop.freeze(time) do
         application = create(
@@ -857,7 +857,7 @@ module Api::V1::Pd
         assert_equal(
           {
             id: application.id,
-            date_accepted: '2017-03-15',
+            date_accepted: '2020-03-15',
             applicant_name: 'Minerva McGonagall',
             district_name: 'A School District',
             school_name: 'A Seattle Public School',
@@ -877,7 +877,7 @@ module Api::V1::Pd
     end
 
     test 'cohort view returns expected columns for a facilitator' do
-      time = Date.new(2017, 3, 15)
+      time = Date.new(2020, 3, 15)
 
       Timecop.freeze(time) do
         application = create(
@@ -899,7 +899,7 @@ module Api::V1::Pd
         assert_equal(
           {
             id: application.id,
-            date_accepted: '2017-03-15',
+            date_accepted: '2020-03-15',
             applicant_name: 'Minerva McGonagall',
             district_name: 'A School District',
             school_name: 'Hogwarts',
@@ -921,6 +921,7 @@ module Api::V1::Pd
     end
 
     test 'cohort csv download returns expected columns for teachers' do
+      skip 'Implement Principal Approval 2021'
       application = create TEACHER_APPLICATION_FACTORY, course: 'csp'
       create :pd_principal_approval1920_application, teacher_application: application
       application.update(status: 'accepted_not_notified')
@@ -968,18 +969,18 @@ module Api::V1::Pd
         "Current role",
         "Are you completing this application on behalf of someone else?",
         "If yes, please include the full name and role of the teacher and why you are applying on behalf of this teacher.",
-        "Which professional learning program would you like to join for the 2018-19 school year?",
-        "To which grades does your school plan to offer CS Principles in the 2019-20 school year?",
+        "Which professional learning program would you like to join for the 2020-21 school year?",
+        "To which grades does your school plan to offer CS Principles in the 2020-21 school year?",
         "How will you offer CS Principles?",
         "How many minutes will your CS Program class last?",
         "How many days per week will your CS program class be offered to one section of students?",
         "How many weeks during the year will this course be taught to one section of students?",
         "Total course hours",
         "How will you be offering this CS program course to students?",
-        "Do you plan to personally teach this course in the 2019-20 school year?",
+        "Do you plan to personally teach this course in the 2020-21 school year?",
         "Will this course replace an existing computer science course in the master schedule? (Teacher's response)",
         "If yes, please describe the course it will be replacing and why:",
-        "What subjects are you teaching this year (2018-19)?",
+        "What subjects are you teaching this year (2020-21)?",
         "Have you taught computer science courses or activities in the past?",
         "Have you participated in previous yearlong Code.org Professional Learning Programs?",
         "Are you committed to participating in the entire Professional Learning Program?",
@@ -999,8 +1000,8 @@ module Api::V1::Pd
         "Principal's email address (provided by principal)",
         "School name (provided by principal)",
         "School district (provided by principal)",
-        "Do you approve of this teacher participating in Code.org's 2019-20 Professional Learning Program?",
-        "Is this teacher planning to teach this course in the 2019-20 school year?",
+        "Do you approve of this teacher participating in Code.org's 2020-21 Professional Learning Program?",
+        "Is this teacher planning to teach this course in the 2020-21 school year?",
         "Total student enrollment",
         "Percentage of students who are eligible to receive free or reduced lunch (Principal's response)",
         "Percentage of underrepresented minority students (Principal's response)",
@@ -1011,7 +1012,7 @@ module Api::V1::Pd
         "Percentage of student enrollment by race - Native Hawaiian or other Pacific Islander",
         "Percentage of student enrollment by race - American Indian or Native Alaskan",
         "Percentage of student enrollment by race - Other",
-        "Are you committed to including this course on the master schedule in 2019-20 if this teacher is accepted into the program?",
+        "Are you committed to including this course on the master schedule in 2020-21 if this teacher is accepted into the program?",
         "Will this course replace an existing computer science course in the master schedule? (Principal's response)",
         "Which existing course or curriculum will CS Principles replace?",
         "How will you implement CS Principles at your school?",
