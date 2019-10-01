@@ -101,20 +101,25 @@ export function cleanupCircuitPlaygroundComponents(
     components.buzzer.stop();
   }
 
+  //Disable and clear sensors
   if (components.soundSensor) {
     components.soundSensor.disable();
+    components.soundSensor._events = {};
   }
 
   if (components.lightSensor) {
     components.lightSensor.disable();
+    components.lightSensor._events = {};
   }
 
   if (components.tempSensor) {
     components.tempSensor.disable();
+    components.tempSensor._events = {};
   }
 
   if (components.accelerometer) {
     components.accelerometer.stop();
+    components.accelerometer._events = {};
   }
   if (shouldDestroyComponents) {
     delete components.colorLeds;
@@ -134,6 +139,29 @@ export function cleanupCircuitPlaygroundComponents(
         delete components[`touchPad${pin}`];
       });
     }
+  }
+}
+
+/**
+ * Re-initializes sensor components and accelerometer
+ * @param {Object} components - map of components, as originally returned by
+ *   createCircuitPlaygroundComponents.
+ */
+export function enableCircuitPlaygroundComponents(components) {
+  if (components.soundSensor) {
+    components.soundSensor.enable();
+  }
+
+  if (components.lightSensor) {
+    components.lightSensor.enable();
+  }
+
+  if (components.tempSensor) {
+    components.tempSensor.enable();
+  }
+
+  if (components.accelerometer) {
+    components.accelerometer.start();
   }
 }
 
