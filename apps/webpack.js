@@ -320,15 +320,14 @@ function create(options) {
   var optimization = options.optimization;
   var mode = options.mode;
 
-  const suffix = minify ? '.min.js' : '.js';
-  // This generates a 20-hex-character hash.
-  const hash = minify ? 'wp[contenthash]' : '';
+  // When minifying, this generates a 20-hex-character hash.
+  const suffix = minify ? 'wp[contenthash].min.js' : '.js';
 
   var config = _.extend({}, baseConfig, {
     output: {
       path: outputDir,
       publicPath: '/assets/js/',
-      filename: `[name]${hash}${suffix}`
+      filename: `[name]${suffix}`
     },
     devtool: !process.env.CI && options.minify ? 'source-map' : devtool,
     entry: entries,
