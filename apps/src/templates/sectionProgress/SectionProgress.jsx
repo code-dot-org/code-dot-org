@@ -170,7 +170,7 @@ class SectionProgress extends Component {
               <div
                 style={{...h3Style, ...styles.heading, ...styles.tableHeader}}
               >
-                <span>{i18n.lessonsAttempted()}</span>
+                <span>{i18n.lessonsAttempted() + ' '}</span>
                 <a href={linkToOverview} style={styles.scriptLink}>
                   {scriptFriendlyName}
                 </a>
@@ -190,7 +190,7 @@ class SectionProgress extends Component {
               <div
                 style={{...h3Style, ...styles.heading, ...styles.tableHeader}}
               >
-                <span>{i18n.levelsAttempted()}</span>
+                <span>{i18n.levelsAttempted() + ' '}</span>
                 <a href={linkToOverview} style={styles.scriptLink}>
                   {scriptFriendlyName}
                 </a>

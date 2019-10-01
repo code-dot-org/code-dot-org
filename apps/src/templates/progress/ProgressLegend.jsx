@@ -13,7 +13,7 @@ const styles = {
     // Margin to get it to line up with ProgressLesson
     marginLeft: 3,
     marginRight: 3,
-    marginTop: 60
+    marginTop: 20
   },
   tdStyle: {
     padding: 10,

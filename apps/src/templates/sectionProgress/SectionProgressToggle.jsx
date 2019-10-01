@@ -5,6 +5,7 @@ import color from '@cdo/apps/util/color';
 import {connect} from 'react-redux';
 import {setCurrentView, ViewType} from './sectionProgressRedux';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import i18n from '@cdo/locale';
 
 const styles = {
   toggleButton: {
@@ -81,7 +82,7 @@ class SectionProgressToggle extends React.Component {
           value={ViewType.SUMMARY}
           style={styles.toggleButton}
         >
-          <div>Lessons</div>
+          <div>{i18n.lessons()}</div>
         </button>
         <button
           type="button"
@@ -89,7 +90,7 @@ class SectionProgressToggle extends React.Component {
           value={ViewType.DETAIL}
           style={styles.toggleButton}
         >
-          <div>Levels</div>
+          <div>{i18n.levels()}</div>
         </button>
       </ToggleGroup>
     );
