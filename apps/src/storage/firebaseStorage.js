@@ -628,18 +628,13 @@ function getRecordsData(records) {
  * @param {function ()} onSuccess Function to call on success.
  * @param {function} onError Function to call with an error in case of failure.
  */
-FirebaseStorage.populateTable = function(
-  jsonData,
-  overwrite,
-  onSuccess,
-  onError
-) {
+FirebaseStorage.populateTable = function(jsonData, overwrite) {
   if (!jsonData || !jsonData.length) {
     return;
   }
   // Ensure rate limit counters have been initialized, so that updates to the
   // counters/tables node will pass type definition checks in the security rules.
-  incrementRateLimitCounters()
+  return incrementRateLimitCounters()
     .then(() => getExistingTables(overwrite))
     .then(existingTables => {
       const promises = [];
@@ -659,8 +654,7 @@ FirebaseStorage.populateTable = function(
         }
       }
       return Promise.all(promises);
-    })
-    .then(onSuccess, onError);
+    });
 };
 
 /**

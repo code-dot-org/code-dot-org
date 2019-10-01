@@ -874,9 +874,11 @@ describe('FirebaseStorage', () => {
 
     it('loads new table data when no previous data exists', done => {
       const overwrite = false;
-      FirebaseStorage.populateTable(
+      let firebasePromise = FirebaseStorage.populateTable(
         NEW_TABLE_DATA_JSON,
-        overwrite,
+        overwrite
+      );
+      firebasePromise.then(
         () => verifyTable(NEW_TABLE_DATA).then(done),
         error => {
           throw error;
@@ -895,9 +897,11 @@ describe('FirebaseStorage', () => {
             .set(EXISTING_COUNTER_DATA)
         )
         .then(() => {
-          FirebaseStorage.populateTable(
+          let firebasePromise = FirebaseStorage.populateTable(
             NEW_TABLE_DATA_JSON,
-            overwrite,
+            overwrite
+          );
+          firebasePromise.then(
             () => verifyTable(EXISTING_TABLE_DATA).then(done),
             error => {
               throw error;
@@ -915,9 +919,11 @@ describe('FirebaseStorage', () => {
         .child(`storage/tables`)
         .set(EXISTING_TABLE_DATA)
         .then(() => {
-          FirebaseStorage.populateTable(
+          let firebasePromise = FirebaseStorage.populateTable(
             NEW_TABLE_DATA_JSON,
-            overwrite,
+            overwrite
+          );
+          firebasePromise.then(
             () => verifyTable(NEW_TABLE_DATA).then(done),
             error => {
               throw error;
@@ -937,9 +943,11 @@ describe('FirebaseStorage', () => {
             .set(EXISTING_COUNTER_DATA)
         )
         .then(() => {
-          FirebaseStorage.populateTable(
+          let firebasePromise = FirebaseStorage.populateTable(
             NEW_TABLE_DATA_JSON,
-            overwrite,
+            overwrite
+          );
+          firebasePromise.then(
             () => verifyTable(NEW_TABLE_DATA).then(done),
             error => {
               throw error;
@@ -951,14 +959,10 @@ describe('FirebaseStorage', () => {
     it('prints a friendly error message when given bad table json', done => {
       const overwrite = false;
 
-      FirebaseStorage.populateTable(
-        BAD_JSON,
-        overwrite,
-        () => {
-          throw 'expected JSON error to be reported';
-        },
-        validateError
-      );
+      let firebasePromise = FirebaseStorage.populateTable(BAD_JSON, overwrite);
+      firebasePromise.then(() => {
+        throw 'expected JSON error to be reported';
+      }, validateError);
 
       function validateError(error) {
         expect(error).to.contain('SyntaxError');
