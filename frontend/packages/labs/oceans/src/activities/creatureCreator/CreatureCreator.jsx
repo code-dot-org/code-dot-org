@@ -1,10 +1,10 @@
 import React from 'react';
-import {fish} from './sketches';
+import {fish} from '../../utils/sketches';
 import Button from 'react-bootstrap/lib/Button';
-const P5 = require('./loadP5');
 import Row from 'react-bootstrap/lib/Row';
 import Col from 'react-bootstrap/lib/Col';
 import {CirclePicker} from 'react-color';
+const P5 = require('../../utils/loadP5');
 
 const CANVAS_ID = 'p5-canvas';
 
