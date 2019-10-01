@@ -58,5 +58,8 @@
   "bugs": {
     "url": "https://github.com/code-dot-org/ml-activities/issues"
   },
-  "homepage": "https://github.com/code-dot-org/ml-activities#readme"
+  "homepage": "https://github.com/code-dot-org/ml-activities#readme",
+  "dependencies": {
+    "react-color": "^2.17.3"
+  }
 }
