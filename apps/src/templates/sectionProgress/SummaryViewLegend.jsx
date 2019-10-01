@@ -42,7 +42,7 @@ export default class SummaryViewLegend extends Component {
     const headerColSpan = showCSFProgressBox ? 2 : 3;
 
     return (
-      <div style={{marginTop: 20}}>
+      <div style={{marginTop: 60}}>
         <table>
           <thead>
             <tr>
