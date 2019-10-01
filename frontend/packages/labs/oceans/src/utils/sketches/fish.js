@@ -201,6 +201,11 @@ module.exports = p5 => {
     p5.endShape();
   };
 
+  // TODO: actually calculate KNN data using fish draw state
+  p5.getKnnData = () => {
+    return [-1, 1, 1.5, 8, -1];
+  };
+
   p5.download = canvasId => {
     p5.saveCanvas(canvasId, 'png');
   };

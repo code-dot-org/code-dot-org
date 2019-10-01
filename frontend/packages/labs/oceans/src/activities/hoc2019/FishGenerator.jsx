@@ -5,7 +5,8 @@ const P5 = require('../../utils/loadP5'); // pass in as prop?
 
 export default class FishGenerator extends React.Component {
   static propTypes = {
-    canvasId: PropTypes.string.isRequired
+    canvasId: PropTypes.string.isRequired,
+    registerKnnData: PropTypes.func.isRequired
   };
 
   componentDidMount() {
