@@ -28,7 +28,7 @@ import {
   ScoreableQuestions as TeacherScoreableQuestions,
   MultiAnswerQuestionFields as TeacherMultiAnswerQuestionFields,
   ValidScores as TeacherValidScores
-} from '@cdo/apps/generated/pd/teacher1920ApplicationConstants';
+} from '@cdo/apps/generated/pd/teacher2021ApplicationConstants';
 import {
   InterviewQuestions,
   LabelOverrides as FacilitatorLabelOverrides,
