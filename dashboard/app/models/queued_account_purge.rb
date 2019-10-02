@@ -43,4 +43,10 @@ class QueuedAccountPurge < ApplicationRecord
     AccountPurger.new(bypass_safety_constraints: true).purge_data_for_account User.with_deleted.find(user_id)
     destroy!
   end
+
+  # It's possible to have a QueuedAccountPurge still around, pointing at an account that
+  # has already been purged.  This method finds and removes those records.
+  def self.clean_up_resolved_records!
+    all.select {|qap| User.with_deleted.find(qap.user_id).purged_at.present?}.each(&:destroy!)
+  end
 end
