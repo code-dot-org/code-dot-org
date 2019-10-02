@@ -5,7 +5,7 @@ import {
   PageLabels,
   SectionHeaders,
   TextFields
-} from '@cdo/apps/generated/pd/teacher2021ApplicationConstants';
+} from '@cdo/apps/generated/pd/teacher1920ApplicationConstants';
 import {FormGroup} from 'react-bootstrap';
 import {
   styles as defaultStyles,
@@ -159,10 +159,10 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
         workshop => `${workshop.dates} in ${workshop.location}`
       );
       options.push(TextFields.notSureExplain);
-      options.push(TextFields.unableToAttend2021);
+      options.push(TextFields.unableToAttend1920);
       const textFieldMap = {
         [TextFields.notSureExplain]: 'notSureExplain',
-        [TextFields.unableToAttend2021]: 'unableToAttend'
+        [TextFields.unableToAttend1920]: 'unableToAttend'
       };
 
       return (
@@ -173,7 +173,7 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
             textFieldMap
           )}
           {_.intersection(
-            [TextFields.notSureExplain, TextFields.unableToAttend2021],
+            [TextFields.notSureExplain, TextFields.unableToAttend1920],
             this.props.data.ableToAttendMultiple
           ).length > 0 && (
             <div>
@@ -211,7 +211,7 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
     if (
       this.props.data.planToTeach &&
       !this.props.data.planToTeach.includes(
-        'Yes, I plan to teach this course this year (2020-21)'
+        'Yes, I plan to teach this course this year (2019-20)'
       ) &&
       this.props.data.payFee &&
       this.props.data.payFee.includes('No, ')
@@ -258,21 +258,11 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
       return (
         <div>
           <div id="regionalPartnerName">{this.renderRegionalPartnerName()}</div>
-          <p>
-            Teachers in this program are expected to attend the minimum number
-            of workshops that{' '}
-            <a
-              href="https://docs.google.com/document/d/1DhvzoNElJcfGYLrp5sVnnqp0ShvsePUpp3JK7ihjFGM/edit"
-              target="_blank"
-            >
-              correspond to the number of units they intend to teach
-            </a>
-            , including:
-          </p>
+          <p>Teachers in this program are required to participate in both:</p>
           <ul>
-            <li>One five-day, in-person summer workshop in 2020</li>
+            <li>One five-day, in-person summer workshop in 2019</li>
             <li>
-              Up to four one-day, in-person local workshops during the 2020-21
+              Up to four one-day, in-person local workshops during the 2019-20
               school year (typically held on Saturdays)
             </li>
           </ul>
@@ -284,13 +274,11 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
               this.renderAssignedWorkshopList()}
           </div>
           {this.radioButtonsFor('willingToTravel')}
-          We offer a series of virtual academic year workshops for those who are
+          We offer a virtual academic year workshop track for those who are
           unable to commit to traveling to in-person academic year workshops.
-          This workshop series consists of eight, 1.5 hour live sessions
-          throughout the academic year, hosted via a video conference tool.{' '}
-          <strong>Please note</strong> that this option is only available for
-          the academic year - all participants in the Professional Learning
-          Program must attend an in-person five-day summer workshop.
+          Please note that this option is only available for the academic year -
+          all participants in the Professional Learning Program must attend an
+          in-person five-day summer workshop.
           {this.radioButtonsFor('interestedInOnlineProgram')}
           {this.props.data.regionalPartnerId && (
             <div>
@@ -313,23 +301,22 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
                 . Let us know if your school would be able to pay the fee or if
                 you need to be considered for a scholarship.
               </label>
-              {this.singleCheckboxFor('understandFee')}
               {this.radioButtonsFor('payFee')}
               {showPayFeeNote && (
                 <p style={{color: 'red'}}>
-                  Note: To meet our implementation guidance and our scholarship
-                  recommendations, you should plan to teach this course in the
-                  upcoming school year (2020-21). We suggest checking with your
-                  administrators to ensure that the course will be offered in
-                  2020-21 before updating your answer to "
+                  Note: To be eligible for scholarship support, you must plan to
+                  teach this course in the upcoming school year (2019-20). We
+                  suggest checking with your administrators to ensure that the
+                  course will be offered in 2019-20 before updating your answer
+                  to "
                   <strong>
-                    Do you plan to personally teach this course in the 2020-21
+                    Do you plan to personally teach this course in the 2019-20
                     school year?
                   </strong>
                   " on page 3 and submitting your application.
                 </p>
               )}
-              {this.props.data.payFee === TextFields.noPayFee2021 &&
+              {this.props.data.payFee === TextFields.noPayFee1920 &&
                 this.largeInputFor('scholarshipReasons')}
             </div>
           )}
@@ -370,16 +357,16 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
     }
 
     if (data.regionalPartnerId) {
-      requiredFields.push('payFee', 'understandFee');
+      requiredFields.push('payFee');
     }
 
-    if (data.regionalPartnerId && data.payFee === TextFields.noPayFee2021) {
+    if (data.payFee === TextFields.noPayFee1920) {
       requiredFields.push('scholarshipReasons');
     }
 
     if (
       _.intersection(
-        [TextFields.notSureExplain, TextFields.unableToAttend2021],
+        [TextFields.notSureExplain, TextFields.unableToAttend1920],
         data.ableToAttendMultiple
       ).length > 0
     ) {
@@ -395,13 +382,13 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
   static processPageData(data) {
     const changes = {};
 
-    if (data.payFee !== TextFields.noPayFee2021) {
+    if (data.payFee !== TextFields.noPayFee1920) {
       changes.scholarshipReasons = undefined;
     }
 
     if (
       _.intersection(
-        [TextFields.notSureExplain, TextFields.unableToAttend2021],
+        [TextFields.notSureExplain, TextFields.unableToAttend1920],
         data.ableToAttendMultiple
       ).length === 0
     ) {
