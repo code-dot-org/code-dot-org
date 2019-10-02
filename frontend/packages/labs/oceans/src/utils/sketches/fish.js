@@ -101,10 +101,10 @@ module.exports = p5 => {
 
   const draw = () => {
     p5.background(BG_COLOR);
+    p5.noStroke();
 
     // top fin
     p5.fill(fins.color);
-    p5.noStroke();
     const top_fin = fins.top_fin;
     const topFinWidth = top_fin.width_percent * body.width;
     const topFinHeight = top_fin.height_percent * body.height;
@@ -117,7 +117,6 @@ module.exports = p5 => {
 
     // tail
     p5.fill(fins.color);
-    p5.noStroke();
     const tail = fins.tail;
     const tailWidth = tail.width_percent * body.width;
     const tailHeight = tail.height_percent * body.height;
@@ -142,12 +141,10 @@ module.exports = p5 => {
 
     // body
     p5.fill(body.color);
-    p5.noStroke();
     p5.ellipse(BODY_CENTER_X, BODY_CENTER_Y, body.width, body.height);
 
     // side fin
     p5.fill(fins.color);
-    p5.noStroke();
     const side_fin = fins.side_fin;
     const sideFinWidth = side_fin.width_percent * body.width;
     const sideFinHeight = side_fin.height_percent * body.height;
@@ -163,10 +160,7 @@ module.exports = p5 => {
 
     //mouth
     //p5.fill(BG_COLOR);
-    //p5.stroke(BG_COLOR);
-    //p5.strokeWeight(3);
     p5.noFill();
-    p5.noStroke();
     const yOffset = 0.15 * body.height;
     const mouthStartY = BODY_CENTER_Y + yOffset;
     const mouthStartX = Math.floor(
@@ -201,9 +195,6 @@ module.exports = p5 => {
     );
     p5.endShape(p5.CLOSE);
     p5.noFill();
-    // reset
-    p5.stroke(0);
-    p5.strokeWeight(0);
 
     // teeth
     p5.fill('white');
@@ -229,7 +220,6 @@ module.exports = p5 => {
     const eye_y_offset = Math.floor((eyes.y_offset_ratio * body.height) / 2);
     const eye_center_x = BODY_CENTER_X + eye_x_offset;
     const eye_center_y = BODY_CENTER_Y - eye_y_offset;
-    //p5.stroke('black');
     p5.fill('white');
     p5.ellipse(eye_center_x, eye_center_y, eyes.diameter, eyes.diameter);
     p5.fill('black');
