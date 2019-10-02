@@ -20,7 +20,6 @@ import {
   updateHiddenScript
 } from '@cdo/apps/code-studio/hiddenStageRedux';
 import ConfirmAssignment from '../courseOverview/ConfirmAssignment';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const style = {
   root: {
@@ -82,24 +81,6 @@ class EditSectionForm extends Component {
     const {section, hiddenStageState} = this.props;
     const sectionId = section.id;
     const scriptId = section.scriptId;
-
-    let assignmentData = {
-      section_id: sectionId,
-      section_creation_timestamp: section.createdAt
-    };
-    if (this.props.initialScriptId !== scriptId) {
-      assignmentData.script_id = scriptId;
-    }
-    if (this.props.initialCourseId !== section.courseId) {
-      assignmentData.course_id = section.courseId;
-    }
-    if (assignmentData.script_id || assignmentData.course_id) {
-      firehoseClient.putRecord({
-        study: 'assignment',
-        event: 'edit_section_details',
-        data_json: JSON.stringify(assignmentData)
-      });
-    }
 
     const isScriptHidden =
       sectionId &&
