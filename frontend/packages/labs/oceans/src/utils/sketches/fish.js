@@ -128,9 +128,9 @@ module.exports = p5 => {
     const topFinHeight = top_fin.height_percent * body.height;
     const bodyYOffsetFromWidth = findBodyYOffsetFromXOffset(topFinWidth / 2);
     p5.beginShape();
-    p5.vertex(BODY_CENTER_X - topFinWidth / 2, BODY_CENTER_Y - body.height / 2 + bodyYOffsetFromWidth);
+    p5.vertex(BODY_CENTER_X - topFinWidth / 2, BODY_CENTER_Y - bodyYOffsetFromWidth);
     p5.vertex(BODY_CENTER_X, BODY_CENTER_Y - body.height / 2 - topFinHeight);
-    p5.vertex(BODY_CENTER_X + topFinWidth / 2, BODY_CENTER_Y - body.height / 2 + bodyYOffsetFromWidth);
+    p5.vertex(BODY_CENTER_X + topFinWidth / 2, BODY_CENTER_Y - bodyYOffsetFromWidth);
     p5.endShape(p5.CLOSE);
 
     // tail

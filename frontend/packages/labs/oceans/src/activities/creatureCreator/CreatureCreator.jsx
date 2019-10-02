@@ -102,7 +102,7 @@ export default class CreatureCreator extends React.Component {
               id="eyeDiameterSlider"
               type="range"
               min="5"
-              max="50"
+              max="30"
               step="1"
               onChange={() => this.onEyeSizeChange()}
               style={{width: '200px'}}
@@ -141,8 +141,8 @@ export default class CreatureCreator extends React.Component {
             <input
               id="topFinWidthSlider"
               type="range"
-              min="5"
-              max="50"
+              min="10"
+              max="70"
               step="1"
               onChange={() => this.onTopFinSizeChange()}
               style={{width: '200px'}}
@@ -154,7 +154,7 @@ export default class CreatureCreator extends React.Component {
               id="topFinHeightSlider"
               type="range"
               min="10"
-              max="100"
+              max="50"
               step="1"
               onChange={() => this.onTopFinSizeChange()}
               style={{width: '200px'}}
