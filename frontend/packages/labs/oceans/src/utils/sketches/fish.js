@@ -108,17 +108,11 @@ module.exports = p5 => {
     const top_fin = fins.top_fin;
     const topFinWidth = top_fin.width_percent * body.width;
     const topFinHeight = top_fin.height_percent * body.height;
+    const bodyYOffsetFromWidth = findBodyYOffsetFromXOffset(topFinWidth / 2);
     p5.beginShape();
-    // start the top fin on the top in the center
-    p5.vertex(BODY_CENTER_X, BODY_CENTER_Y - body.height / 2);
-    p5.vertex(
-      BODY_CENTER_X - topFinWidth / 2,
-      BODY_CENTER_Y - findBodyYOffsetFromXOffset(topFinWidth / 2) - topFinHeight
-    );
-    p5.vertex(
-      BODY_CENTER_X - topFinWidth,
-      BODY_CENTER_Y - findBodyYOffsetFromXOffset(topFinWidth)
-    );
+    p5.vertex(BODY_CENTER_X - topFinWidth / 2, BODY_CENTER_Y - body.height / 2 + bodyYOffsetFromWidth);
+    p5.vertex(BODY_CENTER_X, BODY_CENTER_Y - body.height / 2 - topFinHeight);
+    p5.vertex(BODY_CENTER_X + topFinWidth / 2, BODY_CENTER_Y - body.height / 2 + bodyYOffsetFromWidth);
     p5.endShape(p5.CLOSE);
 
     // tail
@@ -160,7 +154,7 @@ module.exports = p5 => {
     p5.beginShape();
     //p5.vertex(230, 190);
     const startX = BODY_CENTER_X;
-    const startY = BODY_CENTER_Y - body.height / 10;
+    const startY = BODY_CENTER_Y + body.height * .35;
     p5.vertex(startX, startY);
     p5.vertex(startX - sideFinWidth, startY - sideFinHeight / 3);
     p5.vertex(startX - sideFinWidth, startY + (2 * sideFinHeight) / 3);
