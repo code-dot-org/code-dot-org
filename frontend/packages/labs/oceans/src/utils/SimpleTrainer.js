@@ -28,10 +28,19 @@ export default class SimpleTrainer {
   }
 
   /**
+   * @param {Array<number>} KNN data
+   * @param {number} classId
+   */
+  addExampleData(data, classId) {
+    const tensor = tf.tensor(data);
+    this.knn.addExample(tensor, classId);
+  }
+
+  /**
    * @param {ImageData | HTMLImageElement | HTMLCanvasElement | HTMLVideoElement} imageOrVideoElement
    * @param {number} classId
    */
-  addExample(imageOrVideoElement, classId) {
+  addExampleImage(imageOrVideoElement, classId) {
     const image = tf.fromPixels(imageOrVideoElement);
     const infer = () => this.mobilenet.infer(image, 'conv_preds');
 

@@ -8,6 +8,11 @@ const P5 = require('../../utils/loadP5');
 
 const FISH_COUNT = 9;
 
+export const ClassType = Object.freeze({
+  Like: 1,
+  Dislike: 2
+});
+
 export default class PondCreator extends React.Component {
   constructor(props) {
     super(props);
@@ -16,6 +21,10 @@ export default class PondCreator extends React.Component {
       trainer: new SimpleTrainer(),
       fish: this.generateFish()
     };
+  }
+
+  componentDidMount() {
+    this.state.trainer.initializeClassifiers();
   }
 
   generateFish = () => {
@@ -29,7 +38,11 @@ export default class PondCreator extends React.Component {
     return fishData;
   };
 
-  addExample = () => {};
+  addExample = (canvasId, doesLike) => {
+    const knnData = this.state.fish[canvasId].getKnnData();
+    const classifier = doesLike ? ClassType.Like : ClassType.Dislike;
+    this.state.trainer.addExampleData(knnData, classifier);
+  };
 
   render() {
     const {fish} = this.state;
@@ -45,7 +58,12 @@ export default class PondCreator extends React.Component {
             <Col id={canvasId} xs={6} />
             <Col xs={4}>KNN data: {fish[canvasId].getKnnData().join(', ')}</Col>
             <Col xs={2}>
-              <Button onClick={this.addExample}>Add example</Button>
+              <Button onClick={() => this.addExample(canvasId, true)}>
+                Like
+              </Button>
+              <Button onClick={() => this.addExample(canvasId, false)}>
+                Dislike
+              </Button>
             </Col>
           </Row>
         ))}
