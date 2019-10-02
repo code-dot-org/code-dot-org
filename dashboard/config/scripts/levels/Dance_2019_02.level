@@ -56,10 +56,7 @@
     "long_instructions": "The <xml><block type=\"Dancelab_whenKey\"></block></xml> block lets you run code when the up arrow is pressed. Make the dancer clap when you press up, or try another move!\r\n\r\n* Optional challenge: Create a dance-off between two dancers!",
     "short_instructions": "The `when up pressed` block lets you run code when the up arrow is pressed. Make the dancer clap when you press up, or try another move!",
     "encrypted": "false",
-    "mini_rubric": "false",
-    "encrypted_examples": [
-
-    ]
+    "mini_rubric": "false"
   },
   "published": true,
   "notes": "",
