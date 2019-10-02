@@ -1,9 +1,11 @@
+import {COLORS} from '../colors';
+
 const CANVAS_WIDTH = 400;
 const CANVAS_HEIGHT = 400;
 const BG_COLOR = 250;
 
 const BODY_CENTER_X = CANVAS_WIDTH / 2;
-const BODY_CENTER_Y = 2 * CANVAS_HEIGHT / 3;
+const BODY_CENTER_Y = (2 * CANVAS_HEIGHT) / 3;
 let body = {
   width: 200,
   height: 50,
@@ -12,16 +14,16 @@ let body = {
 let fins = {
   color: '#87D1EE',
   tail: {
-    width_percent: .1,
-    height_percent: .2
+    width_percent: 0.1,
+    height_percent: 0.2
   },
   top_fin: {
-    width_percent: 0.30,
-    height_percent: 0.10
+    width_percent: 0.3,
+    height_percent: 0.1
   },
   side_fin: {
-    width_percent: 0.10,
-    height_percent: 0.30
+    width_percent: 0.1,
+    height_percent: 0.3
   }
 };
 let eyes = {
@@ -52,6 +54,22 @@ const findBodyXOffsetFromYOffset = yOffset => {
 };
 
 module.exports = p5 => {
+  p5.getKnnData = () => {
+    return [
+      body.width,
+      body.height,
+      COLORS.indexOf(body.color),
+      eyes.diameter,
+      COLORS.indexOf(fins.color),
+      fins.top_fin.width_percent,
+      fins.top_fin.height_percent,
+      fins.side_fin.width_percent,
+      fins.side_fin.height_percent,
+      fins.tail.width_percent,
+      fins.tail.height_percent
+    ];
+  };
+
   p5.download = canvasId => {
     p5.saveCanvas(canvasId, 'png');
   };
@@ -65,7 +83,7 @@ module.exports = p5 => {
   p5.setBodyColor = color => {
     body.color = color;
     draw();
-  }
+  };
 
   p5.setEyeSize = diameter => {
     eyes.diameter = diameter;
@@ -75,7 +93,7 @@ module.exports = p5 => {
   p5.setFinColor = color => {
     fins.color = color;
     draw();
-  }
+  };
 
   p5.setTailSizeRelativeToBody = (width_percent, height_percent) => {
     fins.tail.width_percent = width_percent;
@@ -114,9 +132,7 @@ module.exports = p5 => {
     p5.vertex(BODY_CENTER_X, BODY_CENTER_Y - body.height / 2);
     p5.vertex(
       BODY_CENTER_X - topFinWidth / 2,
-      BODY_CENTER_Y -
-        findBodyYOffsetFromXOffset(topFinWidth / 2) -
-        topFinHeight
+      BODY_CENTER_Y - findBodyYOffsetFromXOffset(topFinWidth / 2) - topFinHeight
     );
     p5.vertex(
       BODY_CENTER_X - topFinWidth,
