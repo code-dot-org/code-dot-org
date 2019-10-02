@@ -7,7 +7,7 @@ const CANVAS_WIDTH = 400;
 const CANVAS_HEIGHT = 400;
 const BG_COLOR = '#021a61';
 const BODY_CENTER_X = CANVAS_WIDTH / 2;
-const BODY_CENTER_Y = (2 * CANVAS_HEIGHT) / 3;
+const BODY_CENTER_Y = CANVAS_HEIGHT / 2;
 
 /**
  * TYPES
@@ -15,16 +15,16 @@ const BODY_CENTER_Y = (2 * CANVAS_HEIGHT) / 3;
 export const EyeType = Object.freeze({
   Circle: 1,
   SemiCircleUp: 2,
-  SemiCircleDown: 2
+  SemiCircleDown: 3
 });
 
 /**
  * P5
  */
-module.exports = p5 => {
+export const sketch = p5 => {
   let body = {
-    width: 200,
-    height: 50,
+    width: CANVAS_WIDTH / 2,
+    height: CANVAS_WIDTH / 6,
     color: '#DC1C4B'
   };
   let fins = {
@@ -43,6 +43,7 @@ module.exports = p5 => {
     }
   };
   let eyes = {
+    type: EyeType.Circle,
     xOffsetRatio: 0.7,
     yOffsetRatio: 0.25,
     diameter: 25,
@@ -86,6 +87,10 @@ module.exports = p5 => {
 
   p5.setEyeSize = diameter => {
     eyes.diameter = diameter;
+  };
+
+  p5.setEyeType = type => {
+    eyes.type = parseInt(type);
   };
 
   p5.setFinColor = color => {
@@ -241,10 +246,38 @@ module.exports = p5 => {
     const eyeYOffset = Math.floor((eyes.yOffsetRatio * body.height) / 2);
     const eyeCenterX = BODY_CENTER_X + eyeXOffset;
     const eyeCenterY = BODY_CENTER_Y - eyeYOffset;
+    const pupilOffset = Math.floor(eyes.diameter / 4);
+    let pupilXOffset = 0;
+    let pupilYOffset = 0;
+
+    // outer eye
     p5.fill('white');
-    p5.ellipse(eyeCenterX, eyeCenterY, eyes.diameter, eyes.diameter);
+    if (eyes.type === EyeType.Circle) {
+      p5.ellipse(eyeCenterX, eyeCenterY, eyes.diameter);
+    } else if (eyes.type === EyeType.SemiCircleUp) {
+      p5.arc(
+        eyeCenterX,
+        eyeCenterY,
+        eyes.diameter,
+        eyes.diameter,
+        Math.PI,
+        2 * Math.PI
+      );
+      pupilXOffset = pupilOffset;
+      pupilYOffset = -pupilOffset;
+    } else if (eyes.type === EyeType.SemiCircleDown) {
+      p5.arc(eyeCenterX, eyeCenterY, eyes.diameter, eyes.diameter, 0, Math.PI);
+      pupilXOffset = pupilOffset;
+      pupilYOffset = pupilOffset;
+    }
+
+    // pupil
     p5.fill('black');
-    p5.ellipse(eyeCenterX, eyeCenterY, eyes.pupilDiameter, eyes.pupilDiameter);
+    p5.ellipse(
+      eyeCenterX + pupilXOffset,
+      eyeCenterY + pupilYOffset,
+      eyes.pupilDiameter
+    );
   };
 
   p5.redraw = () => {

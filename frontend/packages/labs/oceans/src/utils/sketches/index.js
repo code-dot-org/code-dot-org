@@ -1,2 +1,1 @@
-const fish = require('./fish');
-module.exports = {fish};
+export {sketch, EyeType} from './fish';
