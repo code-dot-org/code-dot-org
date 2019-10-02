@@ -29,11 +29,9 @@ module Api::V1::Pd::Application
     end
 
     # no log in required
-    puts "SKIP: Implement Principal Approval 2021"
-    # test_user_gets_response_for :create, method: :put, user: nil, params: -> {@test_params}, response: :success
+    test_user_gets_response_for :create, method: :put, user: nil, params: -> {@test_params}, response: :success
 
     test 'Updates user and application_guid upon submit' do
-      skip 'Implement Principal Approval 2021'
       principal = create :teacher
       sign_in principal
 
@@ -61,7 +59,6 @@ module Api::V1::Pd::Application
     end
 
     test 'application update contains replaced courses' do
-      skip 'Implement Principal Approval 2021'
       teacher_application = create TEACHER_APPLICATION_FACTORY, application_guid: SecureRandom.uuid
 
       test_params = {
@@ -86,7 +83,6 @@ module Api::V1::Pd::Application
     end
 
     test 'application update includes Other fields' do
-      skip 'Implement Principal Approval 2021'
       teacher_application = create TEACHER_APPLICATION_FACTORY, application_guid: SecureRandom.uuid
 
       test_params = {
@@ -122,7 +118,6 @@ module Api::V1::Pd::Application
     end
 
     test 'Sends principal approval received emails on successful create' do
-      skip 'Implement Principal Approval 2021'
       PRINCIPAL_APPROVAL_EMAILS.each do |email_type|
         TEACHER_APPLICATION_CLASS.any_instance.expects(:queue_email).with(email_type, deliver_now: true)
       end
@@ -141,7 +136,6 @@ module Api::V1::Pd::Application
     end
 
     test 'submit is idempotent' do
-      skip 'Implement Principal Approval 2021'
       create PRINCIPAL_APPROVAL_FACTORY, teacher_application: @teacher_application
 
       assert_no_difference "#{PRINCIPAL_APPROVAL_APPLICATION_CLASS.name}.count" do
@@ -151,7 +145,6 @@ module Api::V1::Pd::Application
     end
 
     test 'application gets autoscored upon submission' do
-      skip 'Implement Principal Approval 2021'
       put :create, params: @test_params
 
       @teacher_application.reload
