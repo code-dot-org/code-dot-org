@@ -214,6 +214,10 @@ export const commands = {
     return validationCommands.getNumBehaviorsForSpriteId(spriteId);
   },
 
+  getBehaviorsForSpriteId(spriteId) {
+    return validationCommands.getBehaviorsForSpriteId(spriteId);
+  },
+
   getSpriteIdsInUse() {
     return validationCommands.getSpriteIdsInUse();
   }

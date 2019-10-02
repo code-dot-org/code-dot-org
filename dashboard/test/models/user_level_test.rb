@@ -193,10 +193,13 @@ class UserLevelTest < ActiveSupport::TestCase
   test 'unsubmitting destroys unclaimed peer reviews' do
     level = create(:free_response, peer_reviewable: true)
     script = create :script
+    level_source = create :level_source
 
     ul = UserLevel.create(
       user: @user,
       level: level,
+      script: script,
+      level_source: level_source,
       attempts: 0,
       submitted: true,
       best_result: Activity::UNREVIEWED_SUBMISSION_RESULT
@@ -215,10 +218,13 @@ class UserLevelTest < ActiveSupport::TestCase
   test 'other changes do not destroy unclaimed peer reviews' do
     level = create(:free_response, peer_reviewable: true)
     script = create :script
+    level_source = create :level_source
 
     ul = UserLevel.create(
       user: @user,
       level: level,
+      script: script,
+      level_source: level_source,
       attempts: 0,
       submitted: true,
       best_result: Activity::UNREVIEWED_SUBMISSION_RESULT
