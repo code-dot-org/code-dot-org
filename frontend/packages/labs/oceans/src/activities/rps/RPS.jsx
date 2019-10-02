@@ -183,7 +183,7 @@ module.exports = class Main extends React.Component {
    */
   async trainExample(index) {
     if (this.video.isPlaying()) {
-      this.simpleTrainer.addExample(this.video.getVideoElement(), index);
+      this.simpleTrainer.addExampleImage(this.video.getVideoElement(), index);
       this.setState({
         ['trainingImages' + index]: this.state['trainingImages' + index].concat(
           this.video.getFrameDataURI()
