@@ -4,7 +4,7 @@ import {
   PageLabels,
   SectionHeaders,
   TextFields
-} from '@cdo/apps/generated/pd/teacher2021ApplicationConstants';
+} from '@cdo/apps/generated/pd/teacher1920ApplicationConstants';
 import {FormGroup, Row, Col} from 'react-bootstrap';
 import {PROGRAM_CSD, PROGRAM_CSP} from './TeacherApplicationConstants';
 
@@ -27,7 +27,7 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
 
   render() {
     // This should be kept consistent with the calculation logic in
-    // dashboard/app/models/pd/application/teacher2021_application.rb.
+    // dashboard/app/models/pd/application/teacher1920_application.rb.
     const csHowManyMinutes = parseInt(this.props.data.csHowManyMinutes, 10);
     const csHowManyDaysPerWeek = parseInt(
       this.props.data.csHowManyDaysPerWeek,
@@ -64,12 +64,33 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
       <FormGroup>
         <h3>Section 3: {SectionHeaders.section2ChooseYourProgram}</h3>
         {this.radioButtonsFor('program')}
-        {this.props.data.program === PROGRAM_CSD &&
-          this.checkBoxesFor('csdWhichGrades')}
+        {this.props.data.program === PROGRAM_CSD && (
+          <div>
+            {this.checkBoxesFor('csdWhichGrades')}
+            <p>
+              For teachers to participate in Code.org’s CS Discoveries
+              Professional Learning Program, we require that you offer at
+              minimum 50 instructional hours per section of students for a
+              semester-long course (Units 1 - 3), and at minimum 100 hours for a
+              year-long course (Units 1- 6). We assume a typical school year
+              consists of 180 days (36 weeks) and a typical semester consists of
+              18 weeks.
+            </p>
+          </div>
+        )}
         {this.props.data.program === PROGRAM_CSP && (
           <div>
             {this.checkBoxesFor('cspWhichGrades')}
             {this.radioButtonsFor('cspHowOffer')}
+            <p>
+              For teachers to participate in Code.org’s CS Principles
+              Professional Learning Program, we require that you offer at a
+              minimum 100 instructional hours per section of students for the
+              full-year course. CS Principles is not designed to be taught as a
+              semester unless you are able to offer 100 hours of the course in
+              one semester (usually in a block schedule format). We assume a
+              typical school year consists of 180 days (36 weeks).
+            </p>
           </div>
         )}
         <p>
@@ -80,13 +101,14 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
         <p>
           Please provide information about your course implementation plans.{' '}
           <a
-            href="https://docs.google.com/document/d/1DhvzoNElJcfGYLrp5sVnnqp0ShvsePUpp3JK7ihjFGM/edit"
+            href="https://docs.google.com/document/d/1nFp033SuO_BMR-Bkinrlp0Ti_s-XYQDsOc-UjqNdrGw/edit#heading=h.6s62vrpws18"
             target="_blank"
           >
             Click here
           </a>{' '}
-          for guidance on our professional development recommendations depending
-          on the number of units you intend to teach.
+          for guidance on required number of hours. Your Regional Partner will
+          follow up if your responses below don't meet the requirements, or if
+          they have additional questions.
         </p>
         <br />
         {this.numberInputFor('csHowManyMinutes', {
@@ -139,18 +161,38 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
             </Row>
           </div>
         )}
-        {courseNotes === 'csp' && (
+        {courseNotes === 'csd' && (
           <p style={{color: 'red'}}>
-            Note: 50 or more hours of instruction per CS Principles section are
-            strongly recommended. We suggest checking with your school
-            administration to see if additional time can be allotted for this
-            course in 2020-21.
+            Note: 50 or more hours of instruction per section for a
+            semester-long CS Discoveries course are normally required to
+            participate in the Professional Learning Program, though we will
+            consider applications with at least 30 hours for a limited number of
+            seats. We suggest checking with your school administration to see if
+            additional time can be allotted for this course in 2019-20.
           </p>
         )}
-        {this.props.data.program === PROGRAM_CSD &&
-          this.checkBoxesFor('csdWhichUnits')}
-        {this.props.data.program === PROGRAM_CSP &&
-          this.checkBoxesFor('cspWhichUnits')}
+        {courseNotes === 'csp' && (
+          <p style={{color: 'red'}}>
+            Note: 100 or more hours of CS Principles instruction per section are
+            normally required to participate in the Professional Learning
+            Program, though we will consider applications for non-AP classes
+            with at least 50 hours for a limited number of seats. We suggest
+            checking with your school administration to see if additional time
+            can be allotted for this course in 2019-20.
+          </p>
+        )}
+        {this.radioButtonsWithAdditionalTextFieldsFor(
+          'csTerms',
+          {
+            [TextFields.otherWithText]: 'other'
+          },
+          {
+            label: PageLabels.section2ChooseYourProgram.csTerms.replace(
+              'program',
+              this.getNameForSelectedProgram()
+            )
+          }
+        )}
         {this.radioButtonsWithAdditionalTextFieldsFor('planToTeach', {
           [TextFields.dontKnowIfIWillTeachExplain]: 'other'
         })}
@@ -158,9 +200,7 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
           [TextFields.iDontKnowExplain]: 'other'
         })}
         {this.props.data.replaceExisting === 'Yes' &&
-          this.checkBoxesWithAdditionalTextFieldsFor('replaceWhichCourse', {
-            [TextFields.otherPleaseExplain]: 'other'
-          })}
+          this.largeInputFor('replaceWhichCourse')}
       </FormGroup>
     );
   }
@@ -172,11 +212,11 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
     const requiredFields = [];
 
     if (data.program === PROGRAM_CSD) {
-      requiredFields.push('csdWhichGrades', 'csdWhichUnits');
+      requiredFields.push('csdWhichGrades');
     }
 
     if (data.program === PROGRAM_CSP) {
-      requiredFields.push('cspWhichGrades', 'csdWhichUnits', 'cspHowOffer');
+      requiredFields.push('cspWhichGrades', 'cspHowOffer');
     }
 
     if (data.replaceExisting === 'Yes') {
@@ -194,13 +234,11 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
 
     if (data.program === PROGRAM_CSD) {
       changes.cspWhichGrades = undefined;
-      changes.cspWhichUnits = undefined;
       changes.cspHowOffer = undefined;
     }
 
     if (data.program === PROGRAM_CSP) {
       changes.csdWhichGrades = undefined;
-      changes.csdWhichUnits = undefined;
     }
 
     if (data.replaceExisting !== 'Yes') {
