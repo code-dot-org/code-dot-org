@@ -648,6 +648,8 @@ export default function teacherSections(state = initialState, action) {
         );
     return {
       ...state,
+      initialCourseId: initialSectionData.courseId,
+      initialScriptId: initialSectionData.scriptId,
       sectionBeingEdited: initialSectionData,
       showSectionEditDialog: !action.silent
     };
@@ -914,6 +916,7 @@ export function getSectionRows(state, sectionIds) {
 export const sectionFromServerSection = serverSection => ({
   id: serverSection.id,
   name: serverSection.name,
+  createdAt: serverSection.createdAt,
   loginType: serverSection.login_type,
   grade: serverSection.grade,
   providerManaged: serverSection.providerManaged || false, // TODO: (josh) make this required when /v2/sections API is deprecated
