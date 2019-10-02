@@ -5,7 +5,7 @@ var currentSceneNumber = 0;
 var scenes = [];
 
 function addBehaviorUntilBoolean(spriteId, behavior, condition) {
-  setProp(spriteId, behavior.name, function() { return true; });
+  setProp(spriteId, behavior.name, function() { return condition; });
   addBehaviorSimple(spriteId, behavior);
 }
 
@@ -39,7 +39,7 @@ function runSetup() {
 
 function goToScene(sceneNumber) {
   getAnimationsInUse().forEach(function(animation) {
-    //removeAllBehaviors(animation);
+    removeAllBehaviors(animation);
   });
   currentSceneNumber = sceneNumber;
 }
