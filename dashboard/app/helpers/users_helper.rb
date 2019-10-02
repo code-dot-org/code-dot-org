@@ -297,7 +297,7 @@ module UsersHelper
 
         # Just in case this level has multiple pages, in which case we add an additional
         # array of booleans indicating which pages have been completed.
-        pages_completed = get_pages_completed(user, sl)
+        pages_completed = get_pages_completed(sl, user_levels_by_level)
 
         next unless pages_completed
 
@@ -314,18 +314,20 @@ module UsersHelper
     levels
   end
 
-  # Given a user and a script-level, returns a nil if there is only one page, or an array of
-  # values if there are multiple pages.  The array contains whether each page is completed, partially
-  # completed, or not yet attempted.  These values are ActivityConstants::FREE_PLAY_RESULT,
+  # Given a ScriptLevel and a set of UserLevels for a user, returns a nil if
+  # there is only one page, or an array of values if there are multiple pages.
+  # The array contains whether each page is completed, partially completed,
+  # or not yet attempted.  These values are ActivityConstants::FREE_PLAY_RESULT,
   # ActivityConstants::UNSUBMITTED_RESULT, and nil, respectively.
   #
-  # Since this is currently just used for multi-page LevelGroup levels, we only check that a valid
-  # (though not necessarily correct) answer has been given for each level embedded on a given page.
-  def get_pages_completed(user, sl)
+  # Since this is currently just used for multi-page LevelGroup levels, we only
+  # check that a valid (though not necessarily correct) answer has been given for
+  # each level embedded on a given page.
+  def get_pages_completed(sl, user_levels_by_level)
     # Since we only swap LevelGroups with other LevelGroups, just check levels[0]
     return nil unless sl.levels[0].is_a? LevelGroup
 
-    last_user_level = user.last_attempt_for_any(sl.levels)
+    last_user_level = last_attempt_for_levels(sl.levels, user_levels_by_level)
     level = last_user_level.try(:level) || sl.oldest_active_level
     pages_completed = []
 
@@ -346,7 +348,7 @@ module UsersHelper
       # Retrieve the level information for those embedded levels.  These results
       # won't necessarily match the order of level names as requested, but
       # fortunately we are just accumulating a count and don't mind the order.
-      embedded_levels = Level.where(name: embedded_level_names).to_a
+      embedded_levels = embedded_level_names.map {|name| Level.cache_find(name)}.compact
       embedded_levels.reject! {|l| l.type == 'FreeResponse' && l.optional == 'true'}
       embedded_levels.each do |embedded_level|
         level_id = embedded_level.id
@@ -371,6 +373,16 @@ module UsersHelper
     end
 
     pages_completed
+  end
+
+  # Returns the most recent (via updated_at) user_level for any of the specified
+  # levels.
+  def last_attempt_for_levels(levels, user_levels_by_level)
+    levels.
+      map {|l| user_levels_by_level[l.id]}.
+      compact.
+      sort_by(&:updated_at).
+      first
   end
 
   # @return [Float] The percentage, between 0.0 and 100.0, of the levels in the
