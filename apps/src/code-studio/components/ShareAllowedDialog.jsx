@@ -19,6 +19,9 @@ import PublishDialog from '../../templates/projects/publishDialog/PublishDialog'
 import {createHiddenPrintWindow} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import experiments from '@cdo/apps/util/experiments';
+import {showLibraryCreationDialog} from './Libraries/libraryCreationRedux';
+import LibraryCreationDialog from './Libraries/LibraryCreationDialog';
 
 function recordShare(type) {
   if (!window.dashboard) {
@@ -163,6 +166,7 @@ class ShareAllowedDialog extends React.Component {
     onClose: PropTypes.func.isRequired,
     onShowPublishDialog: PropTypes.func.isRequired,
     onUnpublish: PropTypes.func.isRequired,
+    openLibraryCreationDialog: PropTypes.func.isRequired,
     hideBackdrop: BaseDialog.propTypes.hideBackdrop,
     canShareSocial: PropTypes.bool.isRequired,
     userSharingDisabled: PropTypes.bool
@@ -455,6 +459,15 @@ class ShareAllowedDialog extends React.Component {
                       )}
                     </span>
                   )}
+                  {experiments.isEnabled('student-libraries') && (
+                    <button
+                      type="button"
+                      onClick={this.props.openLibraryCreationDialog}
+                      style={styles.button}
+                    >
+                      Share as library
+                    </button>
+                  )}
                 </div>
                 {this.state.showSendToPhone && (
                   <SendToPhone
@@ -498,6 +511,7 @@ class ShareAllowedDialog extends React.Component {
           )}
         </BaseDialog>
         <PublishDialog />
+        <LibraryCreationDialog channelId={this.props.channelId} />
       </div>
     );
   }
@@ -520,6 +534,10 @@ export default connect(
     },
     onUnpublish(projectId) {
       dispatch(unpublishProject(projectId));
+    },
+    openLibraryCreationDialog() {
+      dispatch(showLibraryCreationDialog());
+      dispatch(hideShareDialog());
     }
   })
 )(ShareAllowedDialog);
