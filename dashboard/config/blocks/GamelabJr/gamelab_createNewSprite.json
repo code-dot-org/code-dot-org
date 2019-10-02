@@ -12,7 +12,6 @@
     "args": [
       {
         "name": "NAME",
-        "assignment": true,
         "customInput": "spritePicker"
       },
       {
