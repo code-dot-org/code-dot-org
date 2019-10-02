@@ -49,7 +49,7 @@ describe('Principal Approval Component', () => {
       ...ALWAYS_REQUIRED_FIELDS,
       ...REQUIRED_SCHOOL_INFO_FIELDS,
       'replaceWhichCourseCsd',
-      'csdImplementation'
+      'csdWhichUnits'
     ].sort();
     const actualFields = PrincipalApprovalComponent.getDynamicallyRequiredFields(
       {
@@ -66,7 +66,7 @@ describe('Principal Approval Component', () => {
       ...ALWAYS_REQUIRED_FIELDS,
       ...REQUIRED_SCHOOL_INFO_FIELDS,
       'replaceWhichCourseCsp',
-      'cspImplementation'
+      'cspWhichUnits'
     ].sort();
     const actualFields = PrincipalApprovalComponent.getDynamicallyRequiredFields(
       {
