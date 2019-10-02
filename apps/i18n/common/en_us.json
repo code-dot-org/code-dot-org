@@ -78,6 +78,7 @@
   "assessmentSteps": "Steps to give assessment for",
   "assessmentSettings": "Assessment Settings",
   "assign": "Assign",
+  "assigned": "Assigned",
   "assignACourse": "Assign a course to your classroom or start your own course.",
   "assignCourse": "Assign Course",
   "assignConfirm": "Are you sure you want to assign \"{assignmentName}\" to \"{sectionName}\"?",
