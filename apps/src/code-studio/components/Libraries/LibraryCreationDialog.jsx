@@ -5,6 +5,7 @@ import {connect} from 'react-redux';
 import {hideLibraryCreationDialog} from './libraryCreationRedux';
 import libraryParser from './libraryParser';
 import LibraryClientApi from './LibraryClientApi';
+import i18n from '@cdo/locale';
 
 class LibraryCreationDialog extends React.Component {
   static propTypes = {
@@ -44,7 +45,7 @@ class LibraryCreationDialog extends React.Component {
           this.state.selectedFunctionList,
           this.state.libraryName
         );
-        // TODO: Display errors and success to the user.
+        // TODO: Display final version of error and success messages to the user.
         this.state.clientApi.publish(
           libraryJson,
           error => {
@@ -68,7 +69,7 @@ class LibraryCreationDialog extends React.Component {
         useUpdatedStyles
       >
         <button type="button" onClick={this.publish}>
-          Publish
+          {i18n.publish()}
         </button>
       </BaseDialog>
     );
