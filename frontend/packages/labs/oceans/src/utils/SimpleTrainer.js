@@ -7,8 +7,7 @@ const TOPK = 10;
 export default class SimpleTrainer {
   async initializeClassifiers() {
     this.knn = knnClassifier.create();
-    // TODO: uncomment mobilnet init
-    // this.mobilenet = await mobilenetModule.load();
+    this.mobilenet = await mobilenetModule.load();
   }
 
   clearAll() {
