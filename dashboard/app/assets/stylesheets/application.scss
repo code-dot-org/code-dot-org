@@ -2100,7 +2100,7 @@ a.download-video {
 .multi,
 .match {
   #markdown.teacher {
-    max-width: 800px;
+    max-width: 1000px;
     border: 5px solid $cyan;
     background-color: $lightest_cyan;
     border-radius: 5px;
@@ -2114,11 +2114,15 @@ a.download-video {
     h3 {
       padding: 5px;
       font-size: 18px;
+      line-height: 18px;
       font-family: $gotham-extra-bold;
       font-weight: normal;
       color: $white;
       background: $cyan;
       margin: 0;
+    }
+    p {
+      font-size: 13px;
     }
   }
 
@@ -2134,6 +2138,14 @@ a.download-video {
     h2:first-child {
       margin-top: 5px;
     }
+  }
+}
+
+.multi.contained, .contained.free-response {
+  margin: 20px;
+  max-width: 100%;
+  #markdown.teacher {
+    max-width: 100%;
   }
 }
 
@@ -2178,6 +2190,11 @@ a.download-video {
   margin-left: 50px;
   margin-right: 50px;
   max-width: 100%;
+}
+
+.multi.contained #markdown.teacher {
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .text-match #markdown.teacher, .free-response #markdown.teacher {

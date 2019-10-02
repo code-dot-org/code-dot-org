@@ -990,76 +990,101 @@ ja-JP:
         - feedback: 不正解
       courseC_multi_artist_prog6_predict1:
         questions:
-        - {}
+        - text: プログラムを実行（じっこう）したら、どんな図形が書けますか？
         answers:
-        - {}
-        - {}
-        - feedback: 正解です.
+        - text: 正三角形。
+          feedback: ふせいかい。四角形でした。
+        - text: まっすぐな線。
+          feedback: ふせいかい。四角形でした。
+        - text: 四角形。
+          feedback: 正解です.
         - text: わかりません
+          feedback: 四角形。
       courseC_multi_artist_prog6_predict1_2018:
         questions:
-        - {}
+        - text: プログラムを実行（じっこう）したら、どんな図形が書けますか？
         answers:
-        - {}
-        - {}
+        - text: 正三角形。
+          feedback: ふせいかい。四角形でした。
+        - text: まっすぐな線。
+          feedback: ふせいかい。四角形でした。
         - feedback: 正解です.
         - text: わかりません
+          feedback: 四角形。
       courseC_multi_artist_prog6_predict1_2018_2019:
         questions:
-        - {}
+        - text: プログラムを実行（じっこう）したら、どんな図形が書けますか？
         answers:
-        - {}
-        - {}
+        - text: 正三角形。
+          feedback: ふせいかい。四角形でした。
+        - text: まっすぐな線。
+          feedback: ふせいかい。四角形でした。
         - feedback: 正解です.
         - text: わかりません
+          feedback: 四角形。
       courseC_multi_harvester_loops11_predict1:
         questions:
-        - {}
+        - text: プログラムを実行（じっこう）したら、いくつか ぼちゃを あつめることが できますか？
         answers:
-        - {}
+        - feedback: ふせいかい。３つの くりかえしの なかで それぞれ ４つのかぼちゃを あつめるので ぜんぶで１２こ！
         - feedback: 正解です.
-        - {}
+        - feedback: ふせいかい。３つの くりかえしの なかで それぞれ ４つのかぼちゃを あつめるので ぜんぶで１２こ！
         - text: わかりません
+          feedback: ３つの くりかえしの なかで それぞれ ４つのかぼちゃを あつめるので ぜんぶで１２こ！
       courseC_multi_harvester_loops11_predict1_2018:
         questions:
-        - {}
+        - text: プログラムを実行（じっこう）したら、いくつか ぼちゃを あつめることが できますか？
         answers:
-        - {}
+        - feedback: ふせいかい。３つの くりかえしの なかで それぞれ ４つのかぼちゃを あつめるので ぜんぶで１２こ！
         - feedback: 正解です.
-        - {}
+        - feedback: ふせいかい。３つの くりかえしの なかで それぞれ ４つのかぼちゃを あつめるので ぜんぶで１２こ！
         - text: わかりません
+          feedback: ３つの くりかえしの なかで それぞれ ４つのかぼちゃを あつめるので ぜんぶで１２こ！
       courseC_multi_harvester_loops11_predict1_2018_2019:
         questions:
-        - {}
+        - text: プログラムを実行（じっこう）したら、いくつか ぼちゃを あつめることが できますか？
         answers:
-        - {}
+        - feedback: ふせいかい。３つの くりかえしの なかで それぞれ ４つのかぼちゃを あつめるので ぜんぶで１２こ！
         - feedback: 正解です.
-        - {}
+        - feedback: ふせいかい。３つの くりかえしの なかで それぞれ ４つのかぼちゃを あつめるので ぜんぶで１２こ！
         - text: わかりません
+          feedback: ３つの くりかえしの なかで それぞれ ４つのかぼちゃを あつめるので ぜんぶで１２こ！
       courseC_multi_maze_debugging8_predict1:
         questions:
         - text: '下のプログラムをじっくり見て、どこがまちがっているのか考えてみよう。 '
         answers:
         - text: プログラムは間違っていない。リスはドングリにたどりつける。
-        - feedback: 正解です.
-        - {}
+          feedback: ふせいかい。リスのスクラットが さいごに まがる ほうこうが、まちがっています。
+        - text: リスのスクラットが さいごに まがる ほうこうが、まちがっています。
+          feedback: 正解です.
+        - text: リスのスクラットは ドングリの 手前までしかいけません。
+          feedback: ふせいかい。リスのスクラットはまちがったほうこうに まがってしまいます。
         - text: わかりません
+          feedback: 'まちがっているのは、リスのスクラットがさいごに まがる ほうこうです。 '
       courseC_multi_maze_debugging8_predict1_2018:
         questions:
         - text: '下のプログラムをじっくり見て、どこがまちがっているのか考えてみよう。 '
         answers:
         - text: プログラムは間違っていない。リスはドングリにたどりつける。
-        - feedback: 正解です.
-        - {}
+          feedback: ふせいかい。リスのスクラットが さいごに まがる ほうこうが、まちがっています。
+        - text: リスのスクラットが さいごに まがる ほうこうが、まちがっています。
+          feedback: 正解です.
+        - text: リスのスクラットは ドングリの 手前までしかいけません。
+          feedback: ふせいかい。リスのスクラットはまちがったほうこうに まがってしまいます。
         - text: わかりません
+          feedback: 'まちがっているのは、リスのスクラットがさいごに まがる ほうこうです。 '
       courseC_multi_maze_debugging8_predict1_2018_2019:
         questions:
         - text: '下のプログラムをじっくり見て、どこがまちがっているのか考えてみよう。 '
         answers:
         - text: プログラムは間違っていない。リスはドングリにたどりつける。
-        - feedback: 正解です.
-        - {}
+          feedback: ふせいかい。リスのスクラットが さいごに まがる ほうこうが、まちがっています。
+        - text: リスのスクラットが さいごに まがる ほうこうが、まちがっています。
+          feedback: 正解です.
+        - text: リスのスクラットは ドングリの 手前までしかいけません。
+          feedback: ふせいかい。リスのスクラットはまちがったほうこうに まがってしまいます。
         - text: わかりません
+          feedback: 'まちがっているのは、リスのスクラットがさいごに まがる ほうこうです。 '
       courseC_multi_maze_programming8_predict1:
         questions:
         - text: プログラムを見て ”実行（じっこう）”ボタンをおしたら どうなるか考えてみよう。
@@ -1098,52 +1123,76 @@ ja-JP:
           feedback: このプログラムで 鳥は ブタのところに 行くことができます。
       courseC_multi_starWars_predict1:
         questions:
-        - {}
+        - text: プログラムを実行（じっこう）したら、どうなりますか？
         answers:
-        - {}
-        - {}
-        - feedback: 正解です.
+        - text: じっとしている。
+          feedback: ふせいかい。くりかえしブロックにより、５回前にすすみます。
+        - text: １つ前にすすむ。
+          feedback: ふせいかい。くりかえしブロックにより、５回前にすすみます。
+        - text: ５回前にすすんで、すべてのスクラップをあつめる。
+          feedback: 正解です.
         - text: わかりません
+          feedback: くりかえしブロックにより、BB-8は５回前にすすみます。
       courseC_multi_starWars_predict1_2018:
         questions:
-        - {}
+        - text: プログラムを実行（じっこう）したら、どうなりますか？
         answers:
-        - {}
-        - {}
-        - feedback: 正解です.
+        - text: じっとしている。
+          feedback: ふせいかい。くりかえしブロックにより、５回前にすすみます。
+        - text: １つ前にすすむ。
+          feedback: ふせいかい。くりかえしブロックにより、５回前にすすみます。
+        - text: ５回前にすすんで、すべてのスクラップをあつめる。
+          feedback: 正解です.
         - text: わかりません
+          feedback: くりかえしブロックにより、BB-8は５回前にすすみます。
       courseC_multi_starWars_predict1_2018_2019:
         questions:
-        - {}
+        - text: プログラムを実行（じっこう）したら、どうなりますか？
         answers:
-        - {}
-        - {}
-        - feedback: 正解です.
+        - text: じっとしている。
+          feedback: ふせいかい。くりかえしブロックにより、５回前にすすみます。
+        - text: １つ前にすすむ。
+          feedback: ふせいかい。くりかえしブロックにより、５回前にすすみます。
+        - text: ５回前にすすんで、すべてのスクラップをあつめる。
+          feedback: 正解です.
         - text: わかりません
+          feedback: くりかえしブロックにより、BB-8は５回前にすすみます。
       courseC_multi_starWars_predict2:
         questions:
-        - {}
+        - text: プログラムを実行（じっこう）したら、どうなりますか？
         answers:
-        - {}
-        - feedback: 正解です.
-        - {}
+        - text: さいしょの くりかえしで 行きすぎてしまう。
+          feedback: ふせいかい。さいしょのくりかえしで ３回前にすすむべきところ、２回しかすすんでいません。
+        - text: さいしょの くりかえしの かずが たりなくて、スクラップを ぜんぶ あつめられない。
+          feedback: 正解です.
+        - text: BB-8は、すべてのスクラップを あつめることが できる。
+          feedback: ふせいかい。さいしょのくりかえしで ３回前にすすむべきところ、２回しかすすんでいません。
         - text: わかりません
+          feedback: さいしょのくりかえしで ３回前にすすむべきところ、２回しかすすんでいません。
       courseC_multi_starWars_predict2_2018:
         questions:
-        - {}
+        - text: プログラムを実行（じっこう）したら、どうなりますか？
         answers:
-        - {}
-        - feedback: 正解です.
-        - {}
+        - text: さいしょの くりかえしで 行きすぎてしまう。
+          feedback: ふせいかい。さいしょのくりかえしで ３回前にすすむべきところ、２回しかすすんでいません。
+        - text: さいしょの くりかえしの かずが たりなくて、スクラップを ぜんぶ あつめられない。
+          feedback: 正解です.
+        - text: BB-8は、すべてのスクラップを あつめることが できる。
+          feedback: ふせいかい。さいしょのくりかえしで ３回前にすすむべきところ、２回しかすすんでいません。
         - text: わかりません
+          feedback: さいしょのくりかえしで ３回前にすすむべきところ、２回しかすすんでいません。
       courseC_multi_starWars_predict2_2018_2019:
         questions:
-        - {}
+        - text: プログラムを実行（じっこう）したら、どうなりますか？
         answers:
-        - {}
-        - feedback: 正解です.
-        - {}
+        - text: さいしょの くりかえしで 行きすぎてしまう。
+          feedback: ふせいかい。さいしょのくりかえしで ３回前にすすむべきところ、２回しかすすんでいません。
+        - text: さいしょの くりかえしの かずが たりなくて、スクラップを ぜんぶ あつめられない。
+          feedback: 正解です.
+        - text: BB-8は、すべてのスクラップを あつめることが できる。
+          feedback: ふせいかい。さいしょのくりかえしで ３回前にすすむべきところ、２回しかすすんでいません。
         - text: わかりません
+          feedback: さいしょのくりかえしで ３回前にすすむべきところ、２回しかすすんでいません。
       courseD_multi_artist_binary8_predict1:
         questions:
         - {}
@@ -1651,25 +1700,37 @@ ja-JP:
         - {}
       grade2_multi_collector_A_predict1:
         questions:
-        - {}
+        - text: 下のプログラムを実行（じっこう）したとき、ローレルは たからものを いくつ あつめることが できますか？
         answers:
-        - {}
-        - feedback: 正解です.
-        - {}
+        - text: ４つ
+          feedback: ふせいかい。ローレルは たからものが ないところで あつめようとしています。
+        - text: ローレルは、たからものが ないところで あつめようとします。
+          feedback: 正解です.
+        - text: ローレルは すべての たからものを あつめることができる。
+          feedback: ふせいかい。ローレルは たからものが ないところで あつめようとしています。
         - text: わかりません
+          feedback: ローレルは たからものが ないところで あつめようとしています。
       grade2_multi_collector_A_predict1_2018:
         questions:
         - {}
         answers:
-        - {}
-        - feedback: 正解です.
-        - {}
+        - text: ４つ
+          feedback: ふせいかい。ローレルは たからものが ないところで あつめようとしています。
+        - text: ローレルは、たからものが ないところで あつめようとします。
+          feedback: 正解です.
+        - text: ローレルは すべての たからものを あつめることができる。
+          feedback: ふせいかい。ローレルは たからものが ないところで あつめようとしています。
         - text: わかりません
+          feedback: ローレルは たからものが ないところで あつめようとしています。
       grade2_multi_collector_A_predict1_2018_2019:
         questions:
         - {}
         answers:
-        - {}
-        - feedback: 正解です.
-        - {}
+        - text: ４つ
+          feedback: ふせいかい。ローレルは たからものが ないところで あつめようとしています。
+        - text: ローレルは、たからものが ないところで あつめようとします。
+          feedback: 正解です.
+        - text: ローレルは すべての たからものを あつめることができる。
+          feedback: ふせいかい。ローレルは たからものが ないところで あつめようとしています。
         - text: わかりません
+          feedback: ローレルは たからものが ないところで あつめようとしています。

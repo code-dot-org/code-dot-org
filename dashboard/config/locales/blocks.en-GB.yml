@@ -162,12 +162,16 @@ en-GB:
         options:
           KEY:
             '"w"': W
+            '"a"': A
             '"s"': S
+            '"d"': D
       Mikelab_whenKeyReleased:
         options:
           KEY:
             '"w"': W
+            '"a"': A
             '"s"': S
+            '"d"': D
       RyanLab_moveForward:
         text: move forward
       RyanLab_turnLeft:
