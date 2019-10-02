@@ -261,7 +261,7 @@ module UsersHelper
   #   a map from level_id to a progress summary for the level.
   private def merge_user_progress_by_level(script:, user:, user_levels_by_level:, paired_user_levels:)
     levels = {}
-    script.script_levels.each do |sl|
+    script.script_levels.includes(:levels).includes(:stage).each do |sl|
       sl.level_ids.each do |level_id|
         # if we have a contained level or BubbleChoice level, use that to represent progress
         level = Level.cache_find(level_id)
