@@ -227,9 +227,9 @@ module Api::V1::Pd
       when :csp_facilitators
         return applications_of_type.csp
       when :csd_teachers
-        return applications_of_type.csd.where(application_year: APPLICATION_CURRENT_YEAR)
+        return applications_of_type.csd.where(application_year: DASHBOARD_APPLICATION_YEAR)
       when :csp_teachers
-        return applications_of_type.csp.where(application_year: APPLICATION_CURRENT_YEAR)
+        return applications_of_type.csp.where(application_year: DASHBOARD_APPLICATION_YEAR)
       else
         raise ActiveRecord::RecordNotFound
       end
