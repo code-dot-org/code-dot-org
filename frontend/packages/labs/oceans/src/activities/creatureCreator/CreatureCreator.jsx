@@ -24,6 +24,7 @@ export default class CreatureCreator extends React.Component {
       document.getElementById('bodyHeightSlider').value
     );
     this.p5.setBodySize(bodyWidth, bodyHeight);
+    this.p5.redraw();
   };
 
   onEyeSizeChange = () => {
@@ -31,12 +32,14 @@ export default class CreatureCreator extends React.Component {
       document.getElementById('eyeDiameterSlider').value
     );
     this.p5.setEyeSize(eyeDiameter);
+    this.p5.redraw();
   };
 
   onTailSizeChange = () => {
     var tailHeightPercent =
       parseInt(document.getElementById('tailHeightSlider').value) / 100;
     this.p5.setTailSizeRelativeToBody(tailHeightPercent);
+    this.p5.redraw();
   };
 
   onTopFinSizeChange = () => {
@@ -45,6 +48,7 @@ export default class CreatureCreator extends React.Component {
     var heightPercent =
       parseInt(document.getElementById('topFinHeightSlider').value) / 100;
     this.p5.setTopFinSizeRelativeToBody(widthPercent, heightPercent);
+    this.p5.redraw();
   };
 
   onSideFinSizeChange = () => {
@@ -53,6 +57,7 @@ export default class CreatureCreator extends React.Component {
     var heightPercent =
       parseInt(document.getElementById('sideFinHeightSlider').value) / 100;
     this.p5.setSideFinSizeRelativeToBody(widthPercent, heightPercent);
+    this.p5.redraw();
   };
 
   onEyeTypeChange = event => {
