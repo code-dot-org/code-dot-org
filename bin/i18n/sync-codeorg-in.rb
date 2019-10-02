@@ -15,12 +15,57 @@ require_relative 'redact_restore_utils'
 I18N_SOURCE_DIR = "i18n/locales/source"
 
 def sync_in
+  localize_hoc_content
   localize_level_content
   localize_block_content
   puts "Copying source files"
   I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
   redact_level_content
   redact_block_content
+end
+
+# Pulls in all strings that need to be translated for HourOfCode.com. Pulls
+# source files from pegasus/sites.v3/hourofcode.com and collects them to a
+# single source folder i18n/locales/source.
+def localize_hoc_content
+  puts "Localizing Hour of Code content"
+  orig_dir = "pegasus/sites.v3/hourofcode.com/public"
+  dest_dir = File.join(I18N_SOURCE_DIR, "hourofcode")
+
+  # Copy the file containing developer-added strings
+  Dir.mkdir(dest_dir) unless Dir.exist?(dest_dir)
+  FileUtils.cp("pegasus/sites.v3/hourofcode.com/i18n/en.yml", dest_dir)
+
+  # Copy the markdown files representing individual page content
+  Dir.glob(File.join(orig_dir, "**/*.{md,md.partial}")).each do |file|
+    dest = file.sub(orig_dir, dest_dir)
+    if File.extname(dest) == '.partial'
+      dest = File.join(File.dirname(dest), File.basename(dest, '.partial'))
+    end
+
+    FileUtils.mkdir_p(File.dirname(dest))
+    FileUtils.cp(file, dest)
+    sanitize_hoc_file(dest)
+  end
+end
+
+def sanitize_hoc_file(path)
+  # YAML headers can include a lot of things we don't want translators to mess
+  # with or worry about; layout, navigation settings, social media tags, etc.
+  # However, they also include things like page titles that we DO want
+  # translators to be able to translate, so we can't ignore them completely.
+  # Instead, here we reduce the headers down to contain only the keys we care
+  # about and then in the out step we reinflate the received headers with the
+  # values from the original source.
+  header, content, _line = Documents.new.helpers.parse_yaml_header(path)
+  header.slice!("title")
+  open(path, 'w') do |f|
+    unless header.empty?
+      f.write(I18nScriptUtils.to_crowdin_yaml(header))
+      f.write("---\n\n")
+    end
+    f.write(content)
+  end
 end
 
 def get_i18n_strings(level)
