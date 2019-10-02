@@ -512,6 +512,7 @@ zh-CN:
         CSF_Spritelab_MakeSprite_v2: 如何制作精灵
         CSF_SpriteLab_SpritesInAction_v2: 动作精灵
         csd_debugging: 调试
+        csd_applab_designmode_short: 应用程序实验室 - 设计模式
     callout:
       text:
         drag_blocks: 拖动一个"移动"的块，并将它吸到别的模块下面
