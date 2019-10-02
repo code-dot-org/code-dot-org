@@ -125,10 +125,10 @@ def main
   generate_shared_js_file(
     generate_multiple_constants(
       %w(SECTION_HEADERS PAGE_LABELS VALID_SCORES LABEL_OVERRIDES TEXT_FIELDS MULTI_ANSWER_QUESTION_FIELDS SCOREABLE_QUESTIONS),
-      source_module: Pd::Teacher2021ApplicationConstants,
+      source_module: Pd::Teacher1920ApplicationConstants,
       transform_keys: true
     ),
-    "#{REPO_DIR}/apps/src/generated/pd/teacher2021ApplicationConstants.js"
+    "#{REPO_DIR}/apps/src/generated/pd/teacher1920ApplicationConstants.js"
   )
 
   generate_shared_js_file(
