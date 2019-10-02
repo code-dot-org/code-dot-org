@@ -19,7 +19,7 @@ const Activity = Object.freeze({
 
 module.exports = class MLActivities extends React.Component {
   state = {
-    currentActivity: Activity.PondCreator
+    currentActivity: Activity.CreatureCreator
   };
 
   render() {

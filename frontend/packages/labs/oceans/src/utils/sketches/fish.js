@@ -1,26 +1,26 @@
 import {COLORS} from '../colors';
 
+/**
+ * CONSTANTS
+ */
 const CANVAS_WIDTH = 400;
 const CANVAS_HEIGHT = 400;
 const BG_COLOR = '#021a61';
-
 const BODY_CENTER_X = CANVAS_WIDTH / 2;
 const BODY_CENTER_Y = (2 * CANVAS_HEIGHT) / 3;
 
-const findBodyYOffsetFromXOffset = (body, xOffset) => {
-  return Math.sqrt(
-    Math.pow(body.height / 2, 2) *
-      (1 - Math.pow(xOffset, 2) / Math.pow(body.width / 2, 2))
-  );
-};
+/**
+ * TYPES
+ */
+export const EyeType = Object.freeze({
+  Circle: 1,
+  SemiCircleUp: 2,
+  SemiCircleDown: 2
+});
 
-const findBodyXOffsetFromYOffset = (body, yOffset) => {
-  return Math.sqrt(
-    Math.pow(body.width / 2, 2) *
-      (1 - Math.pow(yOffset, 2) / Math.pow(body.height / 2, 2))
-  );
-};
-
+/**
+ * P5
+ */
 module.exports = p5 => {
   let body = {
     width: 200,
@@ -111,15 +111,7 @@ module.exports = p5 => {
     draw();
   };
 
-  p5.redraw = () => {
-    draw();
-  }
-
-  const draw = () => {
-    p5.background(BG_COLOR);
-    p5.noStroke();
-
-    // top fin
+  p5.drawTopFin = () => {
     p5.fill(fins.color);
     const top_fin = fins.top_fin;
     const topFinWidth = top_fin.width_percent * body.width;
@@ -139,8 +131,9 @@ module.exports = p5 => {
       BODY_CENTER_Y - bodyYOffsetFromWidth
     );
     p5.endShape(p5.CLOSE);
+  };
 
-    // tail
+  p5.drawTail = () => {
     p5.fill(fins.color);
     const tail = fins.tail;
     const tailWidth = tail.width_percent * body.width;
@@ -163,28 +156,10 @@ module.exports = p5 => {
       BODY_CENTER_Y + tailHeight / 4
     );
     p5.endShape(p5.CLOSE);
+  };
 
-    // body
-    p5.fill(body.color);
-    p5.ellipse(BODY_CENTER_X, BODY_CENTER_Y, body.width, body.height);
-
-    // side fin
-    p5.fill(fins.color);
-    const side_fin = fins.side_fin;
-    const sideFinWidth = side_fin.width_percent * body.width;
-    const sideFinHeight = side_fin.height_percent * body.height;
-    p5.beginShape();
-    //p5.vertex(230, 190);
-    const startX = BODY_CENTER_X;
-    const startY = BODY_CENTER_Y + body.height * 0.35;
-    p5.vertex(startX, startY);
-    p5.vertex(startX - sideFinWidth, startY - sideFinHeight / 3);
-    p5.vertex(startX - sideFinWidth, startY + (2 * sideFinHeight) / 3);
-    p5.vertex(startX, startY + sideFinHeight / 3);
-    p5.endShape(p5.CLOSE);
-
+  p5.drawMouth = () => {
     //mouth
-    //p5.fill(BG_COLOR);
     p5.noFill();
     const yOffset = 0.15 * body.height;
     const mouthStartY = BODY_CENTER_Y + yOffset;
@@ -239,8 +214,29 @@ module.exports = p5 => {
       p5.vertex(startPoint[0] - i * toothWidth, startPoint[1]);
     }
     p5.endShape();
+  };
 
-    // eye
+  p5.drawBody = () => {
+    p5.fill(body.color);
+    p5.ellipse(BODY_CENTER_X, BODY_CENTER_Y, body.width, body.height);
+  };
+
+  p5.drawSideFin = () => {
+    p5.fill(fins.color);
+    const side_fin = fins.side_fin;
+    const sideFinWidth = side_fin.width_percent * body.width;
+    const sideFinHeight = side_fin.height_percent * body.height;
+    p5.beginShape();
+    const startX = BODY_CENTER_X;
+    const startY = BODY_CENTER_Y + body.height * 0.35;
+    p5.vertex(startX, startY);
+    p5.vertex(startX - sideFinWidth, startY - sideFinHeight / 3);
+    p5.vertex(startX - sideFinWidth, startY + (2 * sideFinHeight) / 3);
+    p5.vertex(startX, startY + sideFinHeight / 3);
+    p5.endShape(p5.CLOSE);
+  };
+
+  p5.drawEye = () => {
     const eye_x_offset = Math.floor((eyes.x_offset_ratio * body.width) / 2);
     const eye_y_offset = Math.floor((eyes.y_offset_ratio * body.height) / 2);
     const eye_center_x = BODY_CENTER_X + eye_x_offset;
@@ -255,4 +251,36 @@ module.exports = p5 => {
       eyes.pupil_diameter
     );
   };
+
+  p5.redraw = () => {
+    draw();
+  };
+
+  const draw = () => {
+    p5.background(BG_COLOR);
+    p5.noStroke();
+    p5.drawTopFin();
+    p5.drawTail();
+    p5.drawBody();
+    p5.drawSideFin();
+    p5.drawMouth();
+    p5.drawEye();
+  };
+};
+
+/**
+ * HELPERS
+ */
+const findBodyYOffsetFromXOffset = (body, xOffset) => {
+  return Math.sqrt(
+    Math.pow(body.height / 2, 2) *
+      (1 - Math.pow(xOffset, 2) / Math.pow(body.width / 2, 2))
+  );
+};
+
+const findBodyXOffsetFromYOffset = (body, yOffset) => {
+  return Math.sqrt(
+    Math.pow(body.width / 2, 2) *
+      (1 - Math.pow(yOffset, 2) / Math.pow(body.height / 2, 2))
+  );
 };
