@@ -8,7 +8,7 @@ const P5 = require('../../utils/loadP5');
 
 const FISH_COUNT = 9;
 
-export const Classifiers = Object.freeze({
+export const ClassType = Object.freeze({
   Like: 1,
   Dislike: 2
 });
@@ -40,7 +40,7 @@ export default class PondCreator extends React.Component {
 
   addExample = (canvasId, doesLike) => {
     const knnData = this.state.fish[canvasId].getKnnData();
-    const classifier = doesLike ? Classifiers.Like : Classifiers.Dislike;
+    const classifier = doesLike ? ClassType.Like : ClassType.Dislike;
     this.state.trainer.addExampleData(knnData, classifier);
   };
 
