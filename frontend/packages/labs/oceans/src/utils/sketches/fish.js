@@ -1,3 +1,5 @@
+import {COLORS} from '../colors';
+
 const CANVAS_WIDTH = 400;
 const CANVAS_HEIGHT = 400;
 const BG_COLOR = 250;
@@ -99,9 +101,9 @@ module.exports = p5 => {
     return [
       body.width,
       body.height,
-      body.color,
+      COLORS.indexOf(body.color),
       eyes.diameter,
-      fins.color,
+      COLORS.indexOf(fins.color),
       fins.top_fin.width_percent,
       fins.top_fin.height_percent,
       fins.side_fin.width_percent,

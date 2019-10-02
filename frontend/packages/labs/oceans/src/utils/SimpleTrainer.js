@@ -4,12 +4,11 @@ import * as knnClassifier from '@tensorflow-models/knn-classifier';
 
 const TOPK = 10;
 
-module.exports = class SimpleTrainer {
-  constructor() {}
-
+export default class SimpleTrainer {
   async initializeClassifiers() {
     this.knn = knnClassifier.create();
-    this.mobilenet = await mobilenetModule.load();
+    // TODO: uncomment mobilnet init
+    // this.mobilenet = await mobilenetModule.load();
   }
 
   clearAll() {
@@ -78,4 +77,4 @@ module.exports = class SimpleTrainer {
 
     return result;
   }
-};
+}
