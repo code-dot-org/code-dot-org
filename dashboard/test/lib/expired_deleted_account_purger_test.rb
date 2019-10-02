@@ -255,6 +255,26 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
     LOG
   end
 
+  test 'with an auto-retryable account' do
+    # Create an account that's queued, but autoretryable
+    autoretryable = create :student, deleted_at: 3.days.ago
+    qap = create :queued_account_purge, :autoretryable, user: autoretryable
+
+    Cdo::Metrics.expects(:push)
+
+    ExpiredDeletedAccountPurger.new(
+      deleted_after: 4.days.ago,
+      deleted_before: 2.days.ago
+    ).purge_expired_deleted_accounts!
+
+    # The account is purged
+    autoretryable.reload
+    refute_nil autoretryable.purged_at
+
+    # The autoretryable queued account purge record should be gone
+    refute QueuedAccountPurge.where(id: qap.id).exists?
+  end
+
   test 'moves account to queue when purge fails' do
     student_a = create :student, deleted_at: 3.days.ago
     student_b = create :student, deleted_at: 3.days.ago
