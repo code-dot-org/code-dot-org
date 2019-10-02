@@ -1009,6 +1009,8 @@ sk-SK:
 
         -   Vytvor dva zvončeky a prikáž mimozemšťanom robiť odlišný krok pre každý z nich
         -   Prikáž mimozemšťanom robiť nový tanečný krok vždy keď sa navzájom dotknú
+      Dance Party Predict: "**Skús predvídať:** Tu je sprite s menom `alien1`! \n\nČo
+        myslíš, že sa stane, keď na neho klikneš?  "
       Dance_Party_01: |-
         _Spravme si tanečnú párty!_
 
@@ -1118,6 +1120,31 @@ sk-SK:
         Spravme akvárium!
 
         Zmeň Dustyho (kôpku trávy) na rybu.
+      Fish Tank 3-validated: |-
+        Ryba začína byť roztržítá.
+
+        Zmeň správanie ryby tak, že bude plávať okolo akvária.
+      Fish Tank 4-validated: |-
+        Naše akvárium potrebuje vodu!
+
+        Použi <xml><block type="gamelab_setBackground" inline="true">
+            <value name="COLOR">
+              <block type="colour_picker">
+                <title name="COLOUR">#0000ff</title>
+              </block>
+            </value>
+          </block></xml>, aby si spravil modré pozadie.
+      Fish Tank 5-validated: Naša ryba je trochu osamelá. Pridaj ďalší sprite do akvária.
+      Fish Tank 6-validated: "Čo chceš, aby robil nový kamarát tvojej ryby? \n\nPridaj
+        mu správanie a sleduj ich!"
+      Fish Tank 6-validated_2019: |-
+        Čo chceš, aby robil nový kamarát tvojej ryby?
+
+        Pridaj mu správanie a sleduj ich!
+      Fish Tank 7-validated: "Pridali sme veľa nových blokov do panelu nástrojov.
+        \n\nPohraj sa s nimi a sprav tvoje akvárium špeciálnym!"
+      Fish Tank 7-validated_2019: "Pridali sme veľa nových blokov do panelu nástrojov.
+        \n\nPohraj sa s nimi a sprav tvoje akvárium špeciálnym!"
       Fish Tank Predict: "**Napíš predpoveď:** Čo myslíš, že sa stane, ked spustíš
         tento kód?"
       Fish Tank Predict_2019: "**Napíš predpoveď:** Čo myslíš, že sa stane, ked spustíš

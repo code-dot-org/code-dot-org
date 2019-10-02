@@ -6030,24 +6030,6 @@ zh-CN:
         <li>标签不能以数字开始。</li>
         <li>大小写和拼写必须完全一致。</li>
         </ul></details></summary>
-      CSD U3 Variables naming rules v2_2018_2019: |-
-        <img style="float: right" src="https://images.code.org/f4b306422763c84bb924f4f7d3a6dca6-image-1492798058864.06.38 AM.png">
-
-        # 调试：命名变量
-
-        程序因为错误的标签名字而有好几个错误。这些错误造成程序不能在模块模式下查看，因此代码在文本模式下。
-
-        # 这样做
-
-        -   找到每个变量标签违反的规则。
-        -   **根据在上一关学到的规则来选择新的名称，从而纠正错误。**
-        -   如果程序修好了，它能画出右边的图像。
-
-        <summary><em>提示：点击箭头来快速浏览规则。</em><details><ul>
-        <li>标签不能有空格。</li>
-        <li>标签不能以数字开始。</li>
-        <li>大小写和拼写必须完全一致。</li>
-        </ul></details></summary>
       CSD U3 Variables random with assignment: "<img src=\"https://images.code.org/ba9592e887f52c1a538a0517560cdacf-image-1493913633878.gif\"\nstyle=\"float:right;height:150px\">\n\n#
         调试：变量和随机数\n\n随机数也能赋给变量。这样，你能保存一个随机值，并在程序中多次使用。\n\n# \n\n这样做\n\n`eyeSize`（眼睛尺寸）被分派了一个随机数。不幸的是，只有一只眼睛用了它。\n\n-
         \  **运行程序**来看看它是如何工作的。\n-   **改动程序**来让两只眼睛都是同样的随机尺寸。提示：你只需要改动一行代码即可。"
@@ -10770,6 +10752,24 @@ zh-CN:
       CourseE_HOC 2018 Level_9b: |-
         成功抵达珊瑚礁，赶快搜寻**海洋之心**吧
         ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png) ！使用蓝色和红色珊瑚找到**宝箱** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png)。
+      Crack a Caesar Cipher: |-
+        # 破解凯撒密码！
+
+        这个工具可以用来对字母进行移位。你可以用它来加密或解密凯撒密码。
+
+        # 操作步骤
+
+        -   从消息菜单中选择任意一个 **消息** 。这会在文本框中加载一条已经过凯撒加密的消息
+
+        ![](https://images.code.org/347139486c8c729bf3c6e72ce67da878-image-1476286380409.gif)
+
+        -   使用“凯撒替换”选项卡中的按钮，对字母进行向前或向后的移位，以尝试对消息进行解读。
+
+        ![](https://images.code.org/ef9ebc16d2f1442dc46fba9bd48b5d43-image-1476285966821.gif)
+
+        你在破解这个密码的时候用了多久呢？这是一种好的加密方式吗？
+
+        <img src="http://code.org/api/hour/begin_encryption.png">
       Dance Party 1-validated: "**猜猜看：** 这个图形名叫`外星人一号`！当点击她时猜猜会发生什么？"
       Dance Party 2: "这个外星人对自己在火星上的舞技非常自信，但现在她只能上下移动了。 \n\n你能在<xml><block type=\"gamelab_addBehaviorSimple\"
         inline=\"true\">\n<value name=\"SPRITE\">\n<block type=\"sprite_variables_get\">\n\n<title

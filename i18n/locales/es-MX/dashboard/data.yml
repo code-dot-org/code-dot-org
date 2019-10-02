@@ -535,6 +535,7 @@ es-MX:
         CSF_Spritelab_MakeSprite_v2: Cómo crear un sprite
         CSF_SpriteLab_SpritesInAction_v2: Sprites en acción
         csd_debugging: Depuración
+        csd_applab_designmode_short: Modo de diseño del Laboratorio de aplicaciones
     callout:
       text:
         drag_blocks: Arrastra un bloque "mover" y colócalo debajo del otro bloque

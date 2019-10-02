@@ -125,6 +125,9 @@ Create games on the PC and XBox via a simple visual programming language. Can be
 ### [Pencil Code](//pencilcode.net)
 Pencil Code lets beginners be real web real developers, starting with turtle graphics and moving on to HTML5, CSS, and jQuery.  Create art, music, games, and stories in Coffeescript and Javascript using a unique switchable editor that lets you work in either blocks or text.
 
+### [Riot Games](https://www.riotgames.com/en/urf-academy)
+Riot Games’ Game Design curriculum is an entry-level course that teaches high school students the fundamental elements of game design using a framework and interactive workshops created by professional game designers. Course includes 6 modules containing 14 lessons.
+
 ### [Teaching Kids Programming ](http://teachingkidsprogramming.org)
 Build the next generation of creators using free, open-source Java courseware.
 
