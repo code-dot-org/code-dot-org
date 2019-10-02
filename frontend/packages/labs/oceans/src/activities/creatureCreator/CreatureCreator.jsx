@@ -1,5 +1,5 @@
 import React from 'react';
-import {fish} from '../../utils/sketches';
+import {sketch, EyeType} from '../../utils/sketches';
 import {COLORS} from '../../utils/colors';
 import Button from 'react-bootstrap/lib/Button';
 import Row from 'react-bootstrap/lib/Row';
@@ -11,7 +11,7 @@ const CANVAS_ID = 'p5-canvas';
 
 export default class CreatureCreator extends React.Component {
   componentDidMount() {
-    this.p5 = new P5(fish, CANVAS_ID);
+    this.p5 = new P5(sketch, CANVAS_ID);
   }
 
   download = () => {
@@ -55,6 +55,10 @@ export default class CreatureCreator extends React.Component {
     this.p5.setSideFinSizeRelativeToBody(widthPercent, heightPercent);
   };
 
+  onEyeTypeChange = event => {
+    this.p5.setEyeType(event.target.value);
+  };
+
   render() {
     return (
       <div>
@@ -83,8 +87,6 @@ export default class CreatureCreator extends React.Component {
               style={{width: '200px'}}
             />
           </Col>
-        </Row>
-        <Row>
           <Col xs={6}>
             Body Color
             <CirclePicker
@@ -108,6 +110,16 @@ export default class CreatureCreator extends React.Component {
               style={{width: '200px'}}
             />
           </Col>
+          <Col xs={3}>
+            <label>Eye Type</label>
+            <select onChange={this.onEyeTypeChange}>
+              {Object.keys(EyeType || {}).map(type => (
+                <option key={type} value={EyeType[type]}>
+                  {type}
+                </option>
+              ))}
+            </select>
+          </Col>
         </Row>
         <Row>
           <Col xs={6}>
@@ -122,7 +134,7 @@ export default class CreatureCreator extends React.Component {
           </Col>
         </Row>
         <Row>
-         <Col xs={3}>
+          <Col xs={3}>
             Tail Height
             <input
               id="tailHeightSlider"
