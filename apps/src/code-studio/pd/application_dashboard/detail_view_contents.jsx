@@ -744,7 +744,9 @@ export class DetailViewContents extends React.Component {
               {this.props.applicationData.meets_scholarship_criteria}
             </h4>
           )}
+
           {this.renderPointsSection()}
+
           {this.props.applicationData.application_type ===
             ApplicationTypes.teacher &&
             this.props.applicationData.course === 'csp' && (
@@ -849,8 +851,6 @@ export class DetailViewContents extends React.Component {
           </div>
         </div>
       );
-    } else {
-      return <h4>Bonus Points: {this.props.applicationData.bonus_points}</h4>;
     }
   };
 
@@ -981,20 +981,22 @@ export class DetailViewContents extends React.Component {
         </div>
       );
     }
-    if (this.state.bonus_point_questions.includes(snakeCaseKey)) {
+
+    if (
+      this.props.applicationData.application_type === 'Facilitator' &&
+      this.state.bonus_point_questions.includes(snakeCaseKey)
+    ) {
       if (scoringDropdowns.length) {
         scoringDropdowns.push(<br key="bonus_points_br" />);
       }
 
       scoringDropdowns.push(
         <div key="bonus_points_scores">
-          {this.props.applicationData.application_type === 'Facilitator' &&
-          FacilitatorScoringFields[key]
+          {FacilitatorScoringFields[key]
             ? FacilitatorScoringFields[key]['title']
             : 'Bonus Points'}
           {this.renderScoringDropdown(snakeCaseKey, 'bonus_points_scores')}
-          {this.props.applicationData.application_type === 'Facilitator' &&
-            FacilitatorScoringFields[key] &&
+          {FacilitatorScoringFields[key] &&
             FacilitatorScoringFields[key]['rubric']}
         </div>
       );
