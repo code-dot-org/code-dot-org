@@ -84,7 +84,7 @@ module.exports = class ImageRecognition extends React.Component {
                       key={i}
                       className={classData.name}
                       addTrainingExample={image => {
-                        this.simpleTrainer.addExample(image, i);
+                        this.simpleTrainer.addExampleImageImage(image, i);
                         this.updateExampleCounts(i);
                       }}
                     />
@@ -154,7 +154,7 @@ module.exports = class ImageRecognition extends React.Component {
                           return e.guid === guid;
                         });
                         loadImage(image.url, IMAGE_SIZE).then(image => {
-                          this.simpleTrainer.addExample(image, i);
+                          this.simpleTrainer.addExampleImage(image, i);
                           this.updateExampleCounts(i);
                         });
                       }}

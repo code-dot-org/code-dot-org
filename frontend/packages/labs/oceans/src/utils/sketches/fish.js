@@ -1,3 +1,5 @@
+import {COLORS} from '../colors';
+
 const CANVAS_WIDTH = 400;
 const CANVAS_HEIGHT = 400;
 const BG_COLOR = '#021a61';
@@ -52,6 +54,22 @@ const findBodyXOffsetFromYOffset = yOffset => {
 };
 
 module.exports = p5 => {
+  p5.getKnnData = () => {
+    return [
+      body.width,
+      body.height,
+      COLORS.indexOf(body.color),
+      eyes.diameter,
+      COLORS.indexOf(fins.color),
+      fins.top_fin.width_percent,
+      fins.top_fin.height_percent,
+      fins.side_fin.width_percent,
+      fins.side_fin.height_percent,
+      fins.tail.width_percent,
+      fins.tail.height_percent
+    ];
+  };
+
   p5.download = canvasId => {
     p5.saveCanvas(canvasId, 'png');
   };

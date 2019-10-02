@@ -1,5 +1,6 @@
 import React from 'react';
 import {fish} from '../../utils/sketches';
+import {COLORS} from '../../utils/colors';
 import Button from 'react-bootstrap/lib/Button';
 import Row from 'react-bootstrap/lib/Row';
 import Col from 'react-bootstrap/lib/Col';
@@ -7,52 +8,6 @@ import {CirclePicker} from 'react-color';
 const P5 = require('../../utils/loadP5');
 
 const CANVAS_ID = 'p5-canvas';
-
-const COLOR_OPTIONS = [
-  '#F5F6E8',
-  '#F8C09D',
-  '#EF937E',
-  '#EA676C',
-  '#FFF79C',
-  '#FED883',
-  '#FEBE40',
-  '#EC7523',
-  '#E3482C',
-  '#DC1C4B',
-  '#B31E48',
-  '#EE8EB4',
-  '#DD527C',
-  '#DC166D',
-  '#9B1D5A',
-  '#6F1E49',
-  '#DD94C1',
-  '#B557A1',
-  '#612D82',
-  '#432355',
-  '#5E79BC',
-  '#87D1EE',
-  '#2BB3CD',
-  '#2276BC',
-  '#1D5C87',
-  '#7ECDCA',
-  '#30B1AD',
-  '#1F8B95',
-  '#50B86B',
-  '#C9DB53',
-  '#8FC23F',
-  '#D0AD9A',
-  '#9A605C',
-  '#66342D',
-  '#311A12',
-  '#D0E2EE',
-  '#AABFD0',
-  '#7D8E9E',
-  '#5B6571',
-  '#143441',
-  '#3A4D5C',
-  '#0F2437',
-  '#000000'
-];
 
 export default class CreatureCreator extends React.Component {
   componentDidMount() {
@@ -133,7 +88,7 @@ export default class CreatureCreator extends React.Component {
           <Col xs={6}>
             Body Color
             <CirclePicker
-              colors={COLOR_OPTIONS}
+              colors={COLORS}
               circleSize={10}
               circleSpacing={4}
               onChange={color => this.p5.setBodyColor(color.hex)}
@@ -158,7 +113,7 @@ export default class CreatureCreator extends React.Component {
           <Col xs={6}>
             Fin Color
             <CirclePicker
-              colors={COLOR_OPTIONS}
+              colors={COLORS}
               circleSize={10}
               circleSpacing={4}
               onChange={color => this.p5.setFinColor(color.hex)}

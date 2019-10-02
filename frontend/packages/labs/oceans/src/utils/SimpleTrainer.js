@@ -4,9 +4,7 @@ import * as knnClassifier from '@tensorflow-models/knn-classifier';
 
 const TOPK = 10;
 
-module.exports = class SimpleTrainer {
-  constructor() {}
-
+export default class SimpleTrainer {
   async initializeClassifiers() {
     this.knn = knnClassifier.create();
     this.mobilenet = await mobilenetModule.load();
@@ -30,10 +28,19 @@ module.exports = class SimpleTrainer {
   }
 
   /**
+   * @param {Array<number>} KNN data
+   * @param {number} classId
+   */
+  addExampleData(data, classId) {
+    const tensor = tf.tensor(data);
+    this.knn.addExample(tensor, classId);
+  }
+
+  /**
    * @param {ImageData | HTMLImageElement | HTMLCanvasElement | HTMLVideoElement} imageOrVideoElement
    * @param {number} classId
    */
-  addExample(imageOrVideoElement, classId) {
+  addExampleImage(imageOrVideoElement, classId) {
     const image = tf.fromPixels(imageOrVideoElement);
     const infer = () => this.mobilenet.infer(image, 'conv_preds');
 
@@ -78,4 +85,4 @@ module.exports = class SimpleTrainer {
 
     return result;
   }
-};
+}
