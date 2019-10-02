@@ -54,6 +54,22 @@ const findBodyXOffsetFromYOffset = yOffset => {
 };
 
 module.exports = p5 => {
+  p5.getKnnData = () => {
+    return [
+      body.width,
+      body.height,
+      COLORS.indexOf(body.color),
+      eyes.diameter,
+      COLORS.indexOf(fins.color),
+      fins.top_fin.width_percent,
+      fins.top_fin.height_percent,
+      fins.side_fin.width_percent,
+      fins.side_fin.height_percent,
+      fins.tail.width_percent,
+      fins.tail.height_percent
+    ];
+  };
+
   p5.download = canvasId => {
     p5.saveCanvas(canvasId, 'png');
   };
@@ -95,22 +111,6 @@ module.exports = p5 => {
     fins.side_fin.width_percent = width_percent;
     fins.side_fin.height_percent = height_percent;
     draw();
-  };
-
-  p5.getKnnData = () => {
-    return [
-      body.width,
-      body.height,
-      COLORS.indexOf(body.color),
-      eyes.diameter,
-      COLORS.indexOf(fins.color),
-      fins.top_fin.width_percent,
-      fins.top_fin.height_percent,
-      fins.side_fin.width_percent,
-      fins.side_fin.height_percent,
-      fins.tail.width_percent,
-      fins.tail.height_percent
-    ];
   };
 
   p5.setup = () => {
