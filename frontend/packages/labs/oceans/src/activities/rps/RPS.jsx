@@ -197,7 +197,7 @@ module.exports = class Main extends React.Component {
       if (this.simpleTrainer.getNumClasses() > 0) {
         let frameDataURI = this.video.getFrameDataURI(400);
 
-        let predictionResult = await this.simpleTrainer.predict(
+        let predictionResult = await this.simpleTrainer.predictFromImage(
           this.video.getVideoElement()
         );
         let computerChoice = CLASS_NAMES[Math.floor(Math.random() * 3)];
