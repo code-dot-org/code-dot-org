@@ -78,45 +78,42 @@ module.exports = p5 => {
   p5.setBodySize = (width, height) => {
     body.width = width;
     body.height = height;
-    draw();
   };
 
   p5.setBodyColor = color => {
     body.color = color;
-    //draw();
   };
 
   p5.setEyeSize = diameter => {
     eyes.diameter = diameter;
-    draw();
   };
 
   p5.setFinColor = color => {
     fins.color = color;
-    draw();
   };
 
   p5.setTailSizeRelativeToBody = height_percent => {
     fins.tail.height_percent = height_percent;
-    draw();
   };
 
   p5.setTopFinSizeRelativeToBody = (width_percent, height_percent) => {
     fins.top_fin.width_percent = width_percent;
     fins.top_fin.height_percent = height_percent;
-    draw();
   };
 
   p5.setSideFinSizeRelativeToBody = (width_percent, height_percent) => {
     fins.side_fin.width_percent = width_percent;
     fins.side_fin.height_percent = height_percent;
-    draw();
   };
 
   p5.setup = () => {
     p5.createCanvas(CANVAS_WIDTH, CANVAS_HEIGHT);
     draw();
   };
+
+  p5.redraw = () => {
+    draw();
+  }
 
   const draw = () => {
     p5.background(BG_COLOR);
