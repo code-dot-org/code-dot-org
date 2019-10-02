@@ -5,7 +5,6 @@ import PrincipalApprovalComponent, {
   REQUIRED_SCHOOL_INFO_FIELDS,
   ALWAYS_REQUIRED_FIELDS
 } from '@cdo/apps/code-studio/pd/application/principalApproval2021/PrincipalApproval2021Component';
-import {TextFields} from '@cdo/apps/generated/pd/principalApproval2021ApplicationConstants';
 
 describe('Principal Approval Component', () => {
   it('Requires only the top few fields if application is rejected', () => {
@@ -55,7 +54,7 @@ describe('Principal Approval Component', () => {
       {
         doYouApprove: 'Yes',
         course: 'Computer Science Discoveries',
-        replaceCourse: TextFields.yesReplaceExistingCourse
+        replaceCourse: 'Yes'
       }
     ).sort();
     expect(actualFields).to.deep.equal(expectedFields);
@@ -72,7 +71,7 @@ describe('Principal Approval Component', () => {
       {
         doYouApprove: 'Yes',
         course: 'Computer Science Principles',
-        replaceCourse: TextFields.yesReplaceExistingCourse
+        replaceCourse: 'Yes'
       }
     ).sort();
     expect(actualFields).to.deep.equal(expectedFields);
