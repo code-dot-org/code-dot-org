@@ -944,11 +944,15 @@ exports.install = function(blockly, blockInstallOptions) {
       this.setHSV(184, 1.0, 0.74);
       if (spriteCount > 1) {
         this.interpolateMsg(
-          msg.setSpritePosition(),
+          msg.setSpriteIndex(),
           () => {
-            this.appendValueInput('SPRITE')
-              .setCheck(blockly.BlockValueType.NUMBER)
-              .appendTitle(spriteNumberTextDropdown(msg.setSpriteN));
+            this.appendDummyInput().appendTitle(
+              spriteNumberTextDropdown(msg.setSpriteN),
+              'SPRITE'
+            );
+          },
+          () => {
+            this.appendDummyInput().appendTitle(dropdown, 'VALUE');
           },
           blockly.ALIGN_RIGHT
         );
@@ -988,14 +992,15 @@ exports.install = function(blockly, blockInstallOptions) {
       this.interpolateMsg(
         msg.setSpritePosition(),
         () => {
-          this.appendValueInput('SPRITE').appendTitle({spriteIndex: ''});
+          this.appendValueInput('SPRITE').setCheck(
+            blockly.BlockValueType.NUMBER
+          );
         },
         () => {
           this.appendDummyInput().appendTitle(dropdown, 'VALUE');
         },
         blockly.ALIGN_RIGHT
       );
-
       this.setPreviousStatement(true);
       this.setInputsInline(true);
       this.setNextStatement(true);
