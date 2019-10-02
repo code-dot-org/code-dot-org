@@ -1048,97 +1048,65 @@ class User < ActiveRecord::Base
     user_levels.attempted.exists?
   end
 
-  # Returns the next visible script_level for the next progression level in the # given script that hasn't yet been passed, starting at the last level the
-  # the user most recently submitted
-  def next_unpassed_visible_progression_level(script)
+  # Returns the next valid (visible, plugged and not bonus) script_level for
+  # the given script that hasn't yet been passed, based on user's most recent
+  # progress in valid levels.
+  def next_unpassed_valid_progression_level(script)
     # If all levels in the script are complete, no need to find the next level,
     # will be redirected to /congrats.
     return nil if completed?(script)
 
-    visible_sls = visible_script_levels(script).reject {|sl| sl.bonus || sl.level.unplugged?}
+    valid_sls = visible_script_levels(script).reject {|sl| sl.bonus || sl.level.unplugged?}
 
-    sl_level_ids = visible_sls.map(&:level_ids).flatten
+    sl_level_ids = valid_sls.map(&:level_ids).flatten
 
     # Levels the user made progress in
-    ul_level_ids = user_levels.where(script: script).map(&:level_id)
+    ul_level_ids = user_levels.where(script: script).pluck(:level_id)
 
-    visible_completed_level_ids = sl_level_ids & ul_level_ids
-    visible_incomplete_level_ids = sl_level_ids - ul_level_ids
+    valid_in_progress_level_ids = sl_level_ids & ul_level_ids
+    valid_incomplete_level_ids = sl_level_ids - ul_level_ids
 
-    first_visible_level = visible_sls.min_by(&:chapter)
+    first_valid_level = valid_sls.min_by(&:chapter)
 
-    completed_all_visible_levels = visible_incomplete_level_ids.empty?
+    completed_all_valid_levels = valid_incomplete_level_ids.empty?
 
-    # Find the user_levels associated with visible script_levels
-    visible_user_levels = user_levels.where(level_id: visible_completed_level_ids)
+    # Find the user_levels associated with valid in progress script_levels
+    valid_user_levels = user_levels.where(level_id: valid_in_progress_level_ids)
 
     # The user has not made any visible progress or has completed all visible
     # levels but not the entire script, return the first visible script_level
-    return first_visible_level if visible_user_levels.empty? || completed_all_visible_levels
+    return first_valid_level if valid_user_levels.empty? || completed_all_valid_levels
 
     # Most recently completed user_level of the visible subset
-    most_recent_ul = visible_user_levels.max_by(&:created_at)
+    most_recent_ul = valid_user_levels.max_by(&:created_at)
 
     # Find the script_level that goes with the most recent user_level
-    most_recent_sl = visible_sls.find {|sl| sl.level_id == most_recent_ul.level_id}
+    most_recent_sl = valid_sls.find {|sl| sl.level_id == most_recent_ul.level_id}
 
-    last_visible_level = visible_sls.max_by(&:chapter)
+    last_valid_level = valid_sls.max_by(&:chapter)
 
     # If the user started but didn't finish a level, go to that level.
     # Or if the user completed the last level but not all previous levels.
-    return most_recent_sl if most_recent_sl == last_visible_level || !most_recent_ul.passing?
+    return most_recent_sl if most_recent_sl == last_valid_level || !most_recent_ul.passing?
 
-    visible_incomplete_sls = visible_sls.find_all {|sl| visible_incomplete_level_ids.include?(sl.level_id)}
+    valid_incomplete_sls = valid_sls.find_all {|sl| valid_incomplete_level_ids.include?(sl.level_id)}
 
-    first_visible_incomplete_level = visible_incomplete_sls.min_by(&:chapter)
+    first_valid_incomplete_level = valid_incomplete_sls.min_by(&:chapter)
 
-    return first_visible_incomplete_level || first_visible_level if
+    return first_valid_incomplete_level || first_valid_level if
       most_recent_sl.nil?
 
     # Find the chapter for the script_level that goes with the most recent user_level
     most_recent_completed_chapter = most_recent_sl.chapter
 
     # Find the script_level that has the next highest chapter level from the one above and is not complete
-    later_unpassed_visible_sls = visible_incomplete_sls.select do |sl|
+    later_valid_incomplete_sls = valid_incomplete_sls.select do |sl|
       sl.chapter > most_recent_completed_chapter
     end
 
-    next_unpassed_visible_progression_sl = later_unpassed_visible_sls.min_by(&:chapter)
+    next_unpassed_valid_progression_sl = later_valid_incomplete_sls.min_by(&:chapter)
 
-    next_unpassed_visible_progression_sl
-  end
-
-  # Returns the next script_level for the next progression level in the given
-  # script that hasn't yet been passed, starting its search at the last level we submitted
-  def next_unpassed_progression_level(script)
-    # some of our user_levels may be for levels within level_groups, or for levels
-    # that are no longer in this script. we want to ignore those, and only look
-    # user_levels that have matching script_levels
-    # Worth noting in the case that we have the same level appear in
-    # the script in multiple places (i.e. via level swapping) there's some potential
-    # for strange behavior.
-    sl_level_ids = script.script_levels.map(&:level_ids).flatten
-    ul_with_sl = user_levels_by_level(script).select do |level_id, _ul|
-      sl_level_ids.include? level_id
-    end
-
-    # Find the user_level that we've most recently had progress on
-    user_level = ul_with_sl.values.max_by(&:updated_at)
-
-    script_level_index = 0
-    if user_level
-      last_script_level = user_level.script_level
-      script_level_index = last_script_level.chapter - 1 if last_script_level
-    end
-
-    next_unpassed = script.script_levels[script_level_index..-1].try(:detect) do |script_level|
-      user_levels = script_level.level_ids.map {|id| ul_with_sl[id]}
-      unpassed_progression_level?(script_level, user_levels)
-    end
-
-    # if we don't have any unpassed levels proceeding the one we've most recently
-    # submitted, just go to the one we've most recently submitted
-    next_unpassed || last_script_level
+    next_unpassed_valid_progression_sl
   end
 
   # Returns true if all progression levels in the provided script have a passing

@@ -10,7 +10,7 @@ class MakerController < ApplicationController
     authenticate_user!
 
     csd_unit_6_script = MakerController.maker_script current_user
-    current_level = current_user.next_unpassed_visible_progression_level(csd_unit_6_script)
+    current_level = current_user.next_unpassed_valid_progression_level(csd_unit_6_script)
     @csd_unit_6 = {
       assignableName: data_t_suffix('script.name', csd_unit_6_script[:name], 'title'),
       lessonName: current_level.stage.localized_title,

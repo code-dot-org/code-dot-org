@@ -801,14 +801,14 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 'tester', user.username
   end
 
-  test 'can get next_unpassed_visible_progression_level, no progress, none hidden' do
+  test 'can get next_unpassed_valid_progression_level, no progress, none hidden' do
     user = create :user
     twenty_hour = Script.twenty_hour_script
     assert twenty_hour.script_levels.first.level.unplugged?
-    assert_equal(2, user.next_unpassed_visible_progression_level(twenty_hour).chapter)
+    assert_equal(2, user.next_unpassed_valid_progression_level(twenty_hour).chapter)
   end
 
-  test 'can get next_unpassed_visible_progression_level, progress, none hidden' do
+  test 'can get next_unpassed_valid_progression_level, progress, none hidden' do
     user = create :user
     twenty_hour = Script.twenty_hour_script
     second_script_level = twenty_hour.get_script_level_by_chapter(2)
@@ -819,10 +819,10 @@ class UserTest < ActiveSupport::TestCase
       attempts: 1,
       best_result: Activity::MINIMUM_PASS_RESULT
     )
-    assert_equal(3, user.next_unpassed_visible_progression_level(twenty_hour).chapter)
+    assert_equal(3, user.next_unpassed_valid_progression_level(twenty_hour).chapter)
   end
 
-  test 'can get next_unpassed_visible_progression_level, user skips level, none hidden' do
+  test 'can get next_unpassed_valid_progression_level, user skips level, none hidden' do
     user = create :user
     twenty_hour = Script.twenty_hour_script
     first_script_level = twenty_hour.get_script_level_by_chapter(1)
@@ -843,10 +843,10 @@ class UserTest < ActiveSupport::TestCase
       best_result: Activity::MINIMUM_PASS_RESULT
     )
 
-    assert_equal(4, user.next_unpassed_visible_progression_level(twenty_hour).chapter)
+    assert_equal(4, user.next_unpassed_valid_progression_level(twenty_hour).chapter)
   end
 
-  test 'can get next_unpassed_visible_progression_level, out of order progress, none hidden' do
+  test 'can get next_unpassed_valid_progression_level, out of order progress, none hidden' do
     user = create :user
     twenty_hour = Script.twenty_hour_script
     first_script_level = twenty_hour.get_script_level_by_chapter(1)
@@ -876,10 +876,10 @@ class UserTest < ActiveSupport::TestCase
       best_result: Activity::MINIMUM_PASS_RESULT
     )
 
-    assert_equal(4, user.next_unpassed_visible_progression_level(twenty_hour).chapter)
+    assert_equal(4, user.next_unpassed_valid_progression_level(twenty_hour).chapter)
   end
 
-  test 'can get next_unpassed_visible_progression_level, completed script, none hidden' do
+  test 'can get next_unpassed_valid_progression_level, completed script, none hidden' do
     user = create :user
     twenty_hour = Script.twenty_hour_script
 
@@ -894,10 +894,10 @@ class UserTest < ActiveSupport::TestCase
     end
     user.stubs(:completed?).returns(true)
 
-    assert_nil user.next_unpassed_visible_progression_level(twenty_hour)
+    assert_nil user.next_unpassed_valid_progression_level(twenty_hour)
   end
 
-  test 'can get next_unpassed_visible_progression_level, last level complete, but script not complete, none hidden' do
+  test 'can get next_unpassed_valid_progression_level, last level complete, but script not complete, none hidden' do
     user = create :user
     twenty_hour = Script.twenty_hour_script
 
@@ -919,10 +919,10 @@ class UserTest < ActiveSupport::TestCase
       best_result: Activity::MINIMUM_PASS_RESULT
     )
 
-    assert_equal(4, user.next_unpassed_visible_progression_level(twenty_hour).chapter)
+    assert_equal(4, user.next_unpassed_valid_progression_level(twenty_hour).chapter)
   end
 
-  test 'can get next_unpassed_visible_progression_level if not completed any unplugged levels' do
+  test 'can get next_unpassed_valid_progression_level if not completed any unplugged levels' do
     user = create :user
     twenty_hour = Script.twenty_hour_script
     twenty_hour.script_levels.each do |script_level|
@@ -936,10 +936,10 @@ class UserTest < ActiveSupport::TestCase
         best_result: Activity::MINIMUM_PASS_RESULT
       )
     end
-    assert_equal(35, user.next_unpassed_visible_progression_level(twenty_hour).chapter)
+    assert_equal(35, user.next_unpassed_valid_progression_level(twenty_hour).chapter)
   end
 
-  test 'can get next_unpassed_visible_progression_level, not tainted by other user progress' do
+  test 'can get next_unpassed_valid_progression_level, not tainted by other user progress' do
     user = create :user
     other_user = create :user
     twenty_hour = Script.twenty_hour_script
@@ -953,10 +953,10 @@ class UserTest < ActiveSupport::TestCase
         best_result: Activity::MINIMUM_PASS_RESULT
       )
     end
-    assert_equal(2, user.next_unpassed_visible_progression_level(twenty_hour).chapter)
+    assert_equal(2, user.next_unpassed_valid_progression_level(twenty_hour).chapter)
   end
 
-  test 'can get next_unpassed_visible_progression_level when most recent level is not passed' do
+  test 'can get next_unpassed_valid_progression_level when most recent level is not passed' do
     user = create :user
     twenty_hour = Script.twenty_hour_script
 
@@ -973,10 +973,10 @@ class UserTest < ActiveSupport::TestCase
 
     # The level we most recently had progress on we did not pass, so that's
     # where we should go
-    assert_equal(3, user.next_unpassed_visible_progression_level(twenty_hour).chapter)
+    assert_equal(3, user.next_unpassed_valid_progression_level(twenty_hour).chapter)
   end
 
-  test 'can get next_unpassed_visible_progression_level when most recent level is last level' do
+  test 'can get next_unpassed_valid_progression_level when most recent level is last level' do
     user = create :user
     twenty_hour = Script.twenty_hour_script
 
@@ -993,10 +993,10 @@ class UserTest < ActiveSupport::TestCase
     # have not completed previous levels, so go to the first incomplete,
     # visible level.
     assert twenty_hour.script_levels.first.level.unplugged?
-    assert_equal(2, user.next_unpassed_visible_progression_level(twenty_hour).chapter)
+    assert_equal(2, user.next_unpassed_valid_progression_level(twenty_hour).chapter)
   end
 
-  test 'can get next_unpassed_visible_progression_level when most recent level is only followed by unplugged levels' do
+  test 'can get next_unpassed_valid_progression_level when most recent level is only followed by unplugged levels' do
     user = create :user
     script = create :script
 
@@ -1018,10 +1018,10 @@ class UserTest < ActiveSupport::TestCase
     # User's most recent progress is on second last level of script, but none of
     # the levels after it are "progression" levels. Just return to the last level
     # we made progress on.
-    assert_equal(2, user.next_unpassed_visible_progression_level(script).chapter)
+    assert_equal(2, user.next_unpassed_valid_progression_level(script).chapter)
   end
 
-  test 'can get next_unpassed_visible_progression_level when most recent level is unplugged' do
+  test 'can get next_unpassed_valid_progression_level when most recent level is unplugged' do
     user = create :user
     script = create :script
 
@@ -1043,10 +1043,10 @@ class UserTest < ActiveSupport::TestCase
 
     # User's most recent progress is on unplugged level, that is followed by another
     # unplugged level. We should end up at the first non unplugged level
-    assert_equal(1, user.next_unpassed_visible_progression_level(script).chapter)
+    assert_equal(1, user.next_unpassed_valid_progression_level(script).chapter)
   end
 
-  test 'can get next_unpassed_visible_progression_level when we have no progress' do
+  test 'can get next_unpassed_valid_progression_level when we have no progress' do
     user = create :user
     script = create :script
 
@@ -1056,10 +1056,10 @@ class UserTest < ActiveSupport::TestCase
 
     # User's most recent progress is on unplugged level, that is followed by another
     # unplugged level. We should end up at the first non unplugged level
-    assert_equal(1, user.next_unpassed_visible_progression_level(script).chapter)
+    assert_equal(1, user.next_unpassed_valid_progression_level(script).chapter)
   end
 
-  test 'can get next_unpassed_visible_progression_level when last updated user_level is inside a level group' do
+  test 'can get next_unpassed_valid_progression_level when last updated user_level is inside a level group' do
     user = create :user
     script = create :script
 
@@ -1096,7 +1096,7 @@ class UserTest < ActiveSupport::TestCase
 
     assert(user_level1.updated_at < user_level2.updated_at)
 
-    next_script_level = user.next_unpassed_visible_progression_level(script)
+    next_script_level = user.next_unpassed_valid_progression_level(script)
     refute next_script_level.nil?
   end
 
@@ -3614,7 +3614,7 @@ class UserTest < ActiveSupport::TestCase
       SectionHiddenScript.create(section_id: section2.id, script_id: @script3.id)
     end
 
-    test 'can get next_unpassed_visible_progression_level, progress, hidden' do
+    test 'can get next_unpassed_valid_progression_level, progress, hidden' do
       student = create :student
       teacher = create :teacher
       twenty_hour = Script.twenty_hour_script
@@ -3639,10 +3639,10 @@ class UserTest < ActiveSupport::TestCase
       # Find the seventh stage, since the 5th is hidden and 6th is unplugged
       next_visible_stage = twenty_hour.stages.find {|stage| stage.relative_position == 7}
 
-      assert_equal(next_visible_stage.script_levels.first, student.next_unpassed_visible_progression_level(twenty_hour))
+      assert_equal(next_visible_stage.script_levels.first, student.next_unpassed_valid_progression_level(twenty_hour))
     end
 
-    test 'can get next_unpassed_visible_progression_level, last level complete, but script not complete, first hidden' do
+    test 'can get next_unpassed_valid_progression_level, last level complete, but script not complete, first hidden' do
       student = create :student
       teacher = create :teacher
       twenty_hour = Script.twenty_hour_script
@@ -3664,7 +3664,7 @@ class UserTest < ActiveSupport::TestCase
       # Find the second stage, since the 1st is hidden
       next_visible_stage = twenty_hour.stages.find {|stage| stage.relative_position == 2}
 
-      assert_equal(next_visible_stage.script_levels.first, student.next_unpassed_visible_progression_level(twenty_hour))
+      assert_equal(next_visible_stage.script_levels.first, student.next_unpassed_valid_progression_level(twenty_hour))
     end
 
     test "user in two sections, both attached to script" do
