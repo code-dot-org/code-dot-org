@@ -1,9 +1,9 @@
 const CANVAS_WIDTH = 400;
 const CANVAS_HEIGHT = 400;
-const BG_COLOR = 250;
+const BG_COLOR = '#021a61';
 
 const BODY_CENTER_X = CANVAS_WIDTH / 2;
-const BODY_CENTER_Y = 2 * CANVAS_HEIGHT / 3;
+const BODY_CENTER_Y = (2 * CANVAS_HEIGHT) / 3;
 let body = {
   width: 200,
   height: 50,
@@ -12,16 +12,16 @@ let body = {
 let fins = {
   color: '#87D1EE',
   tail: {
-    width_percent: .1,
-    height_percent: .2
+    width_percent: 0.03,
+    height_percent: 0.2
   },
   top_fin: {
-    width_percent: 0.30,
-    height_percent: 0.10
+    width_percent: 0.3,
+    height_percent: 0.1
   },
   side_fin: {
-    width_percent: 0.10,
-    height_percent: 0.30
+    width_percent: 0.1,
+    height_percent: 0.3
   }
 };
 let eyes = {
@@ -65,7 +65,7 @@ module.exports = p5 => {
   p5.setBodyColor = color => {
     body.color = color;
     draw();
-  }
+  };
 
   p5.setEyeSize = diameter => {
     eyes.diameter = diameter;
@@ -75,10 +75,9 @@ module.exports = p5 => {
   p5.setFinColor = color => {
     fins.color = color;
     draw();
-  }
+  };
 
-  p5.setTailSizeRelativeToBody = (width_percent, height_percent) => {
-    fins.tail.width_percent = width_percent;
+  p5.setTailSizeRelativeToBody = height_percent => {
     fins.tail.height_percent = height_percent;
     draw();
   };
@@ -114,9 +113,7 @@ module.exports = p5 => {
     p5.vertex(BODY_CENTER_X, BODY_CENTER_Y - body.height / 2);
     p5.vertex(
       BODY_CENTER_X - topFinWidth / 2,
-      BODY_CENTER_Y -
-        findBodyYOffsetFromXOffset(topFinWidth / 2) -
-        topFinHeight
+      BODY_CENTER_Y - findBodyYOffsetFromXOffset(topFinWidth / 2) - topFinHeight
     );
     p5.vertex(
       BODY_CENTER_X - topFinWidth,
@@ -171,10 +168,11 @@ module.exports = p5 => {
     p5.endShape(p5.CLOSE);
 
     //mouth
-    p5.fill(BG_COLOR);
-    p5.stroke(BG_COLOR);
-    p5.strokeWeight(3);
-
+    //p5.fill(BG_COLOR);
+    //p5.stroke(BG_COLOR);
+    //p5.strokeWeight(3);
+    p5.noFill();
+    p5.noStroke();
     const yOffset = 0.15 * body.height;
     const mouthStartY = BODY_CENTER_Y + yOffset;
     const mouthStartX = Math.floor(
@@ -211,7 +209,7 @@ module.exports = p5 => {
     p5.noFill();
     // reset
     p5.stroke(0);
-    p5.strokeWeight(1);
+    p5.strokeWeight(0);
 
     // teeth
     p5.fill('white');
@@ -237,7 +235,7 @@ module.exports = p5 => {
     const eye_y_offset = Math.floor((eyes.y_offset_ratio * body.height) / 2);
     const eye_center_x = BODY_CENTER_X + eye_x_offset;
     const eye_center_y = BODY_CENTER_Y - eye_y_offset;
-    p5.stroke('black');
+    //p5.stroke('black');
     p5.fill('white');
     p5.ellipse(eye_center_x, eye_center_y, eyes.diameter, eyes.diameter);
     p5.fill('black');

@@ -79,11 +79,9 @@ export default class CreatureCreator extends React.Component {
   };
 
   onTailSizeChange = () => {
-    var tailWidthPercent =
-      parseInt(document.getElementById('tailWidthSlider').value) / 100;
     var tailHeightPercent =
       parseInt(document.getElementById('tailHeightSlider').value) / 100;
-    this.p5.setTailSizeRelativeToBody(tailWidthPercent, tailHeightPercent);
+    this.p5.setTailSizeRelativeToBody(tailHeightPercent);
   };
 
   onTopFinSizeChange = () => {
@@ -169,19 +167,7 @@ export default class CreatureCreator extends React.Component {
           </Col>
         </Row>
         <Row>
-          <Col xs={3}>
-            Tail Width:
-            <input
-              id="tailWidthSlider"
-              type="range"
-              min="5"
-              max="30"
-              step="1"
-              onChange={() => this.onTailSizeChange()}
-              style={{width: '200px'}}
-            />
-          </Col>
-          <Col xs={3}>
+         <Col xs={3}>
             Tail Height
             <input
               id="tailHeightSlider"
