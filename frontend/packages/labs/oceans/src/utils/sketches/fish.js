@@ -95,9 +95,20 @@ module.exports = p5 => {
     draw();
   };
 
-  // TODO: actually calculate KNN data using fish draw state
   p5.getKnnData = () => {
-    return [];
+    return [
+      body.width,
+      body.height,
+      body.color,
+      eyes.diameter,
+      fins.color,
+      fins.top_fin.width_percent,
+      fins.top_fin.height_percent,
+      fins.side_fin.width_percent,
+      fins.side_fin.height_percent,
+      fins.tail.width_percent,
+      fins.tail.height_percent
+    ];
   };
 
   p5.setup = () => {
