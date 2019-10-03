@@ -4,6 +4,7 @@ import Row from 'react-bootstrap/lib/Row';
 import {sketch} from '../../utils/sketches';
 import SimpleTrainer from '../../utils/SimpleTrainer';
 import P5Canvas from './P5Canvas';
+import {COLORS} from '../../utils/colors';
 
 const FISH_COUNT = 9;
 
@@ -36,7 +37,7 @@ export default class PondCreator extends React.Component {
     let fishData = {};
     for (let i = 0; i < numFish; i++) {
       const canvasId = `${canvasPrefix}-fish-canvas-${i}`;
-      fishData[canvasId] = 'hi';
+      fishData[canvasId] = {body: {color: COLORS[i * 3 + 1]}};
     }
 
     return fishData;
@@ -52,9 +53,9 @@ export default class PondCreator extends React.Component {
     this.setState({currentMode: Modes.Predicting, predictionFish: pondFish});
   };
 
-  getPrediction = (knnData) => {
+  getPrediction = knnData => {
     return this.state.trainer.predictFromData(knnData);
-  }
+  };
 
   render() {
     console.log(this.state.predictionFish);
@@ -66,7 +67,7 @@ export default class PondCreator extends React.Component {
               <Row key={canvasId}>
                 <P5Canvas
                   id={canvasId}
-                  fishData={{}}
+                  fishData={this.state.trainingFish[canvasId]}
                   canvasId={canvasId}
                   sketch={sketch}
                   addExample={this.addExample}
@@ -85,7 +86,7 @@ export default class PondCreator extends React.Component {
               <Row key={canvasId}>
                 <P5Canvas
                   id={canvasId}
-                  fishData={{}}
+                  fishData={this.state.predictionFish[canvasId]}
                   canvasId={canvasId}
                   sketch={sketch}
                   addExample={this.addExample}

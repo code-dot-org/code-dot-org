@@ -1,4 +1,5 @@
 import {COLORS} from '../colors';
+import _ from 'lodash';
 
 /**
  * CONSTANTS
@@ -22,53 +23,55 @@ export const EyeType = Object.freeze({
  * P5
  */
 export const sketch = p5 => {
-  let body = {
-    width: CANVAS_WIDTH / 2,
-    height: CANVAS_WIDTH / 6,
-    color: '#DC1C4B'
-  };
-  let fins = {
-    color: '#87D1EE',
-    tail: {
-      widthPercent: 0.03,
-      heightPercent: 0.2
+  let fish = {
+    body: {
+      width: CANVAS_WIDTH / 2,
+      height: CANVAS_WIDTH / 6,
+      color: '#DC1C4B'
     },
-    topFin: {
-      widthPercent: 0.3,
-      heightPercent: 0.1
+    fins: {
+      color: '#87D1EE',
+      tail: {
+        widthPercent: 0.03,
+        heightPercent: 0.2
+      },
+      topFin: {
+        widthPercent: 0.3,
+        heightPercent: 0.1
+      },
+      sideFin: {
+        widthPercent: 0.1,
+        heightPercent: 0.3
+      }
     },
-    sideFin: {
-      widthPercent: 0.1,
-      heightPercent: 0.3
-    }
-  };
-  let eyes = {
-    type: EyeType.Circle,
-    xOffsetRatio: 0.7,
-    yOffsetRatio: 0.25,
-    diameter: 25,
-    pupilDiameter: 5
-  };
-  let mouth = {
-    teeth: {
-      num: 5,
-      height: 5
+    eyes: {
+      type: EyeType.Circle,
+      xOffsetRatio: 0.7,
+      yOffsetRatio: 0.25,
+      diameter: 25,
+      pupilDiameter: 5
+    },
+    mouth: {
+      teeth: {
+        num: 5,
+        height: 5
+      }
     }
   };
 
   p5.getKnnData = () => {
     return [
-      body.width,
-      body.height,
-      COLORS.indexOf(body.color),
-      eyes.diameter,
-      COLORS.indexOf(fins.color),
-      fins.topFin.widthPercent,
-      fins.topFin.heightPercent,
-      fins.sideFin.widthPercent,
-      fins.sideFin.heightPercent,
-      fins.tail.widthPercent,
-      fins.tail.heightPercent
+      fish.body.width,
+      fish.body.height,
+      COLORS.indexOf(fish.body.color),
+      fish.eyes.diameter,
+      COLORS.indexOf(fish.fins.color),
+      fish.fins.topFin.widthPercent,
+      fish.fins.topFin.heightPercent,
+      fish.fins.sideFin.widthPercent,
+      fish.fins.sideFin.heightPercent,
+      fish.fins.tail.widthPercent,
+      fish.fins.tail.heightPercent
     ];
   };
 
@@ -76,21 +79,30 @@ export const sketch = p5 => {
     p5.saveCanvas(canvasId, 'png');
   };
 
+  p5.setPartialData = partialFish => {
+   /* for (const key in partialFish) {
+      if (fish[key]) {
+        Object.assign(fish[key], partialFish[key]);
+      }
+    }*/
+  _.merge(fish, partialFish);
+  };
+
   p5.setBodySize = (width, height) => {
-    body.width = width;
-    body.height = height;
+    fish.body.width = width;
+    fish.body.height = height;
   };
 
   p5.setBodyColor = color => {
-    body.color = color;
+    fish.body.color = color;
   };
 
   p5.setEyeSize = diameter => {
-    eyes.diameter = diameter;
+    fish.eyes.diameter = diameter;
   };
 
   p5.setEyeType = type => {
-    eyes.type = parseInt(type);
+    fish.eyes.type = parseInt(type);
   };
 
   p5.setFinColor = color => {
@@ -117,8 +129,9 @@ export const sketch = p5 => {
   };
 
   p5.drawTopFin = () => {
-    p5.fill(fins.color);
-    const topFin = fins.topFin;
+    p5.fill(fish.fins.color);
+    const body = fish.body;
+    const topFin = fish.fins.topFin;
     const topFinWidth = topFin.widthPercent * body.width;
     const topFinHeight = topFin.heightPercent * body.height;
     const bodyYOffsetFromWidth = findBodyYOffsetFromXOffset(
@@ -139,8 +152,9 @@ export const sketch = p5 => {
   };
 
   p5.drawTail = () => {
-    p5.fill(fins.color);
-    const tail = fins.tail;
+    const body = fish.body;
+    p5.fill(fish.fins.color);
+    const tail = fish.fins.tail;
     const tailWidth = tail.widthPercent * body.width;
     const tailHeight = tail.heightPercent * body.height;
     p5.beginShape();
@@ -164,6 +178,7 @@ export const sketch = p5 => {
   };
 
   p5.drawMouth = () => {
+    const body = fish.body;
     //mouth
     p5.noFill();
     const yOffset = 0.15 * body.height;
@@ -206,8 +221,8 @@ export const sketch = p5 => {
     const startPoint = [mouthStartX, mouthStartY - 1];
     const endPoint = [bottomLipStart[0], bottomLipStart[1] - 1];
     const topMouthWidth = startPoint[0] - endPoint[0];
-    const numTeeth = mouth.teeth.num;
-    const toothHeight = mouth.teeth.height;
+    const numTeeth = fish.mouth.teeth.num;
+    const toothHeight = fish.mouth.teeth.height;
     const toothWidth = topMouthWidth / numTeeth;
     p5.beginShape();
     p5.vertex(...startPoint);
@@ -222,13 +237,14 @@ export const sketch = p5 => {
   };
 
   p5.drawBody = () => {
-    p5.fill(body.color);
-    p5.ellipse(BODY_CENTER_X, BODY_CENTER_Y, body.width, body.height);
+    p5.fill(fish.body.color);
+    p5.ellipse(BODY_CENTER_X, BODY_CENTER_Y, fish.body.width, fish.body.height);
   };
 
   p5.drawSideFin = () => {
-    p5.fill(fins.color);
-    const sideFin = fins.sideFin;
+    const body = fish.body;
+    p5.fill(fish.fins.color);
+    const sideFin = fish.fins.sideFin;
     const sideFinWidth = sideFin.widthPercent * body.width;
     const sideFinHeight = sideFin.heightPercent * body.height;
     p5.beginShape();
@@ -242,6 +258,8 @@ export const sketch = p5 => {
   };
 
   p5.drawEye = () => {
+    const body = fish.body;
+    const eyes = fish.eyes;
     const eyeXOffset = Math.floor((eyes.xOffsetRatio * body.width) / 2);
     const eyeYOffset = Math.floor((eyes.yOffsetRatio * body.height) / 2);
     const eyeCenterX = BODY_CENTER_X + eyeXOffset;

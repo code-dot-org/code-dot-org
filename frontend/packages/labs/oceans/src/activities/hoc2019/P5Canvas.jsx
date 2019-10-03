@@ -16,11 +16,12 @@ export default class P5Canvas extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {p5: null, predictedClass:null};
+    this.state = {p5: null, predictedClass: null};
   }
 
   componentDidMount() {
     const p5 = new P5(this.props.sketch, this.props.canvasId);
+    p5.setPartialData(this.props.fishData);
     this.setState({p5});
     if (this.props.showPrediction) {
       this.predictClass(p5);
@@ -28,7 +29,7 @@ export default class P5Canvas extends React.Component {
   }
 
   predictClass(p5) {
-    this.props.getPrediction(p5.getKnnData()).then( (res) => {
+    this.props.getPrediction(p5.getKnnData()).then(res => {
       this.setState({predictedClass: res.predictedClassId});
     });
   }
@@ -65,10 +66,7 @@ export default class P5Canvas extends React.Component {
               </div>
             )}
             {this.props.showPrediction && (
-              <Col xs={4}>
-                Prediction:{' '}
-                {this.state.predictedClass}
-              </Col>
+              <Col xs={4}>Prediction: {this.state.predictedClass}</Col>
             )}
           </div>
         )}
