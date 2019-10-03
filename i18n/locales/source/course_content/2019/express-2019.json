@@ -683,8 +683,7 @@
     "short_instructions": "Get BB-8 to pick up all the scrap metal as quickly as possible!",
     "long_instructions": "[][0] _\"Go BB-8!\"_",
     "authored_hints": {
-      "courseC_starWars_loops5_b": "To move down, you have to turn and then move forward.",
-      "courseC_starWars_loops5_a": "The best solution uses a turn, then a single `move forward`, another turn, then a loop."
+      "courseC_starWars_loops5_a": "The best solution uses a single `move forward`, then a turn, then a loop."
     }
   },
   "https://studio.code.org/s/express-2019/stage/6/puzzle/8": {

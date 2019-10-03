@@ -7,6 +7,7 @@ import {commands as spriteCommands} from '@cdo/apps/p5lab/spritelab/commands/spr
 
 describe('SpriteLab Core Library', () => {
   let p5Wrapper, createSprite, animation;
+  const spriteName = 'spriteName';
 
   beforeEach(function() {
     p5Wrapper = createP5Wrapper();
@@ -61,6 +62,19 @@ describe('SpriteLab Core Library', () => {
 
       expect(coreLibrary.getAnimationsInUse()).to.have.members(['a', 'b']);
     });
+
+    it('sprite names are unique', () => {
+      let sprite1 = createSprite();
+      coreLibrary.addSprite(sprite1, spriteName);
+
+      expect(sprite1.name).to.equal(spriteName);
+
+      let sprite2 = createSprite();
+      coreLibrary.addSprite(sprite2, spriteName);
+
+      expect(sprite1.name).to.equal(undefined);
+      expect(sprite2.name).to.equal(spriteName);
+    });
   });
 
   describe('getSpriteArray', () => {
@@ -72,9 +86,9 @@ describe('SpriteLab Core Library', () => {
       let id2 = coreLibrary.addSprite(sprite2);
       let id3 = coreLibrary.addSprite(sprite3);
 
-      expect(coreLibrary.getSpriteArray(id1)).to.have.members([sprite1]);
-      expect(coreLibrary.getSpriteArray(id2)).to.have.members([sprite2]);
-      expect(coreLibrary.getSpriteArray(id3)).to.have.members([sprite3]);
+      expect(coreLibrary.getSpriteArray({id: id1})).to.have.members([sprite1]);
+      expect(coreLibrary.getSpriteArray({id: id2})).to.have.members([sprite2]);
+      expect(coreLibrary.getSpriteArray({id: id3})).to.have.members([sprite3]);
     });
 
     it('works with animation groups', () => {
@@ -88,11 +102,34 @@ describe('SpriteLab Core Library', () => {
       coreLibrary.addSprite(sprite2);
       coreLibrary.addSprite(sprite3);
 
-      expect(coreLibrary.getSpriteArray('a')).to.have.members([
+      expect(coreLibrary.getSpriteArray({costume: 'a'})).to.have.members([
         sprite1,
         sprite3
       ]);
-      expect(coreLibrary.getSpriteArray('b')).to.have.members([sprite2]);
+      expect(coreLibrary.getSpriteArray({costume: 'b'})).to.have.members([
+        sprite2
+      ]);
+    });
+
+    it('works with sprite names', () => {
+      let sprite1 = createSprite();
+      let sprite2 = createSprite();
+
+      coreLibrary.addSprite(sprite1, spriteName);
+      coreLibrary.addSprite(sprite2, 'name2');
+
+      expect(coreLibrary.getSpriteArray({name: spriteName})).to.have.members([
+        sprite1
+      ]);
+      expect(coreLibrary.getSpriteArray({name: 'name2'})).to.have.members([
+        sprite2
+      ]);
+
+      let sprite3 = createSprite();
+      coreLibrary.addSprite(sprite3, spriteName);
+      expect(coreLibrary.getSpriteArray({name: spriteName})).to.have.members([
+        sprite3
+      ]);
     });
   });
 
@@ -123,7 +160,7 @@ describe('SpriteLab Core Library', () => {
       let sprite2 = createSprite();
       coreLibrary.addSprite(sprite2);
       let behavior = {
-        func: id => behaviorLog.push('behavior ran for sprite ' + id),
+        func: arg => behaviorLog.push('behavior ran for sprite ' + arg.id),
         name: 'behavior'
       };
 
@@ -144,11 +181,11 @@ describe('SpriteLab Core Library', () => {
       let sprite1 = createSprite();
       coreLibrary.addSprite(sprite1);
       let behavior1 = {
-        func: id => behaviorLog.push('behavior 1 ran for sprite ' + id),
+        func: arg => behaviorLog.push('behavior 1 ran for sprite ' + arg.id),
         name: 'behavior1'
       };
       let behavior2 = {
-        func: id => behaviorLog.push('behavior 2 ran for sprite ' + id),
+        func: arg => behaviorLog.push('behavior 2 ran for sprite ' + arg.id),
         name: 'behavior2'
       };
 
@@ -181,11 +218,11 @@ describe('SpriteLab Core Library', () => {
       let sprite1 = createSprite();
       coreLibrary.addSprite(sprite1);
       let behavior1 = {
-        func: id => behaviorLog.push('behavior 1 ran for sprite ' + id),
+        func: arg => behaviorLog.push('behavior 1 ran for sprite ' + arg.id),
         name: 'behavior1'
       };
       let behavior2 = {
-        func: id => behaviorLog.push('behavior 2 ran for sprite ' + id),
+        func: arg => behaviorLog.push('behavior 2 ran for sprite ' + arg.id),
         name: 'behavior2'
       };
 
@@ -251,11 +288,11 @@ describe('SpriteLab Core Library', () => {
         mouseWentDownStub.returns(true);
         mouseIsOverStub.returns(true);
         mousePressedOverStub.returns(true);
-        let id = coreLibrary.addSprite(createSprite());
-        coreLibrary.addEvent('whenclick', {sprite: id}, () =>
+        coreLibrary.addSprite(createSprite(), spriteName);
+        coreLibrary.addEvent('whenclick', {sprite: {name: spriteName}}, () =>
           eventLog.push('when click ran')
         );
-        coreLibrary.addEvent('whileclick', {sprite: id}, () =>
+        coreLibrary.addEvent('whileclick', {sprite: {name: spriteName}}, () =>
           eventLog.push('while click ran')
         );
 
@@ -280,7 +317,7 @@ describe('SpriteLab Core Library', () => {
         mouseIsOverStub.withArgs(sprite2).returns(true);
         mouseIsOverStub.withArgs(sprite3).returns(false);
 
-        coreLibrary.addEvent('whenclick', {sprite: 'a'}, extraArgs =>
+        coreLibrary.addEvent('whenclick', {sprite: {costume: 'a'}}, extraArgs =>
           eventLog.push(extraArgs.sprite + ' was clicked')
         );
 
@@ -301,7 +338,7 @@ describe('SpriteLab Core Library', () => {
         mouseIsOverStub.withArgs(sprite1).returns(true);
         mouseIsOverStub.withArgs(sprite2).returns(true);
 
-        coreLibrary.addEvent('whenclick', {sprite: 'a'}, extraArgs =>
+        coreLibrary.addEvent('whenclick', {sprite: {costume: 'a'}}, extraArgs =>
           eventLog.push(extraArgs.sprite + ' was clicked')
         );
 
@@ -314,13 +351,14 @@ describe('SpriteLab Core Library', () => {
     });
 
     describe('Collision Events with individual sprites', () => {
-      let eventLog, sprite, spriteId, target, targetId, overlapStub;
+      let eventLog, sprite, target, overlapStub;
+      const targetName = 'targetName';
       beforeEach(function() {
         eventLog = [];
         sprite = createSprite();
-        spriteId = coreLibrary.addSprite(sprite);
+        coreLibrary.addSprite(sprite, spriteName);
         target = createSprite();
-        targetId = coreLibrary.addSprite(target);
+        coreLibrary.addSprite(target, targetName);
         overlapStub = stub(sprite, 'overlap');
       });
 
@@ -334,8 +372,8 @@ describe('SpriteLab Core Library', () => {
         coreLibrary.addEvent(
           'whentouch',
           {
-            sprite1: spriteId,
-            sprite2: targetId
+            sprite1: {name: spriteName},
+            sprite2: {name: targetName}
           },
           () => eventLog.push('when touch ran')
         );
@@ -343,8 +381,8 @@ describe('SpriteLab Core Library', () => {
         coreLibrary.addEvent(
           'whiletouch',
           {
-            sprite1: spriteId,
-            sprite2: targetId
+            sprite1: {name: spriteName},
+            sprite2: {name: targetName}
           },
           () => eventLog.push('while touch ran')
         );
@@ -359,8 +397,8 @@ describe('SpriteLab Core Library', () => {
         coreLibrary.addEvent(
           'whiletouch',
           {
-            sprite1: spriteId,
-            sprite2: targetId
+            sprite1: {name: spriteName},
+            sprite2: {name: targetName}
           },
           () => eventLog.push('while touch ran')
         );
@@ -379,8 +417,8 @@ describe('SpriteLab Core Library', () => {
         coreLibrary.addEvent(
           'whentouch',
           {
-            sprite1: spriteId,
-            sprite2: targetId
+            sprite1: {name: spriteName},
+            sprite2: {name: targetName}
           },
           () => eventLog.push('when touch ran')
         );
@@ -400,8 +438,8 @@ describe('SpriteLab Core Library', () => {
         coreLibrary.addEvent(
           'whentouch',
           {
-            sprite1: spriteId,
-            sprite2: targetId
+            sprite1: {name: spriteName},
+            sprite2: {name: targetName}
           },
           () => eventLog.push('when touch ran')
         );
@@ -439,10 +477,10 @@ describe('SpriteLab Core Library', () => {
         target1.addAnimation('b', animation);
         target2.addAnimation('b', animation);
 
-        coreLibrary.addSprite(sprite1);
-        coreLibrary.addSprite(sprite2);
-        coreLibrary.addSprite(target1);
-        coreLibrary.addSprite(target2);
+        coreLibrary.addSprite(sprite1, 'sprite1');
+        coreLibrary.addSprite(sprite2, 'sprite2');
+        coreLibrary.addSprite(target1, 'target1');
+        coreLibrary.addSprite(target2, 'target2');
 
         overlapStub1 = stub(sprite1, 'overlap');
         overlapStub2 = stub(sprite2, 'overlap');
@@ -460,14 +498,14 @@ describe('SpriteLab Core Library', () => {
 
         coreLibrary.addEvent(
           'whentouch',
-          {sprite1: 'a', sprite2: 'b'},
+          {sprite1: {costume: 'a'}, sprite2: {costume: 'b'}},
           extraArgs =>
             eventLog.push(`when: ${extraArgs.sprite}, ${extraArgs.target}`)
         );
 
         coreLibrary.addEvent(
           'whiletouch',
-          {sprite1: 'a', sprite2: 'b'},
+          {sprite1: {costume: 'a'}, sprite2: {costume: 'b'}},
           extraArgs =>
             eventLog.push(`while: ${extraArgs.sprite}, ${extraArgs.target}`)
         );
@@ -485,7 +523,7 @@ describe('SpriteLab Core Library', () => {
 
         coreLibrary.addEvent(
           'whentouch',
-          {sprite1: 'a', sprite2: 'b'},
+          {sprite1: {costume: 'a'}, sprite2: {costume: 'b'}},
           extraArgs =>
             eventLog.push(`when: ${extraArgs.sprite}, ${extraArgs.target}`)
         );
@@ -503,7 +541,7 @@ describe('SpriteLab Core Library', () => {
 
         coreLibrary.addEvent(
           'whentouch',
-          {sprite1: 'a', sprite2: 'b'},
+          {sprite1: {costume: 'a'}, sprite2: {costume: 'b'}},
           extraArgs =>
             eventLog.push(`when: ${extraArgs.sprite}, ${extraArgs.target}`)
         );
@@ -521,7 +559,7 @@ describe('SpriteLab Core Library', () => {
 
         coreLibrary.addEvent(
           'whiletouch',
-          {sprite1: 'a', sprite2: 'b'},
+          {sprite1: {costume: 'a'}, sprite2: {costume: 'b'}},
           extraArgs =>
             eventLog.push(`while: ${extraArgs.sprite}, ${extraArgs.target}`)
         );
@@ -541,7 +579,7 @@ describe('SpriteLab Core Library', () => {
         overlapStub1.withArgs(target1).returns(true);
         coreLibrary.addEvent(
           'whentouch',
-          {sprite1: 'a', sprite2: 'b'},
+          {sprite1: {costume: 'a'}, sprite2: {costume: 'b'}},
           extraArgs =>
             eventLog.push(`when: ${extraArgs.sprite}, ${extraArgs.target}`)
         );
@@ -549,13 +587,13 @@ describe('SpriteLab Core Library', () => {
         expect(eventLog).to.deep.equal(['when: 0, 2']);
 
         // 'b' sprite changes to 'c' sprite
-        spriteCommands.setAnimation(2, 'c');
+        spriteCommands.setAnimation({name: 'target1'}, 'c');
         coreLibrary.runEvents(p5Wrapper.p5);
         // Event does not fire
         expect(eventLog).to.deep.equal(['when: 0, 2']);
 
         // 'c' sprite changes back to 'b' sprite
-        spriteCommands.setAnimation(2, 'b');
+        spriteCommands.setAnimation({name: 'target1'}, 'b');
         coreLibrary.runEvents(p5Wrapper.p5);
         // Event does fire again
         expect(eventLog).to.deep.equal(['when: 0, 2', 'when: 0, 2']);
@@ -570,7 +608,7 @@ describe('SpriteLab Core Library', () => {
 
         coreLibrary.addEvent(
           'whiletouch',
-          {sprite1: 'a', sprite2: 'a'},
+          {sprite1: {costume: 'a'}, sprite2: {costume: 'a'}},
           extraArgs =>
             eventLog.push(`while: ${extraArgs.sprite}, ${extraArgs.target}`)
         );
