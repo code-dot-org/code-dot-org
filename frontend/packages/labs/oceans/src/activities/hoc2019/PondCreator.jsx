@@ -1,7 +1,5 @@
 import React from 'react';
 import Row from 'react-bootstrap/lib/Row';
-import Col from 'react-bootstrap/lib/Col';
-import Button from 'react-bootstrap/lib/Button';
 import {sketch} from '../../utils/sketches';
 import SimpleTrainer from '../../utils/SimpleTrainer';
 //const P5 = require('../../utils/loadP5');

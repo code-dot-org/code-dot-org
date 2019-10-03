@@ -1,7 +1,6 @@
 import React, {PropTypes} from 'react';
 const P5 = require('../../utils/loadP5');
 //import {sketch} from '../../utils/sketches';
-import Row from 'react-bootstrap/lib/Row';
 import Col from 'react-bootstrap/lib/Col';
 import Button from 'react-bootstrap/lib/Button';
 
