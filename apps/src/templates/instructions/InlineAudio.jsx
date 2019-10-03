@@ -101,7 +101,7 @@ class InlineAudio extends React.Component {
   state = {
     audio: undefined,
     playing: false,
-    error: false,
+    error: true,
     hover: false
   };
 
@@ -137,6 +137,11 @@ class InlineAudio extends React.Component {
 
     const src = this.getAudioSrc();
     const audio = new Audio(src);
+
+    audio.addEventListener('canplay', () => {
+      this.setState({error: false});
+    });
+
     audio.addEventListener('ended', e => {
       this.setState({
         playing: false
@@ -207,6 +212,7 @@ class InlineAudio extends React.Component {
   };
 
   render() {
+    this.getAudioElement();
     if (
       this.props.textToSpeechEnabled &&
       !this.state.error &&
