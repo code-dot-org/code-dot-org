@@ -7,6 +7,8 @@ style_min: true
 
 <link href="/shared/css/course-blocks.css", type="text/css", rel="stylesheet"></link>
 
+<link href="/css/educate.css" rel="stylesheet">
+
 # Computer Science Principles
 
 ## What is CS Principles?
@@ -14,6 +16,29 @@ style_min: true
 Computer Science Principles introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. More than a traditional introduction to programming, it is a rigorous, engaging, and approachable course that explores many of the foundational ideas of computing so all students understand how these concepts are transforming the world we live in.
 
 This year-long course can be taught as an AP or non-AP course - no prerequisites required for students or for teachers new to computer science! In addition, our curriculum is available at no cost for anyone, anywhere to teach. For more information about our goals and approach to our courses, please see our [curriculum values](/educate/curriculum/values) and our [professional learning values](/educate/professional-learning/values).
+
+[breakoutquote]
+
+[col-33]
+
+<img src="/images/csp/csp-jennifer-douglass.jpg" style="max-width: 80%"/>
+
+[/col-33]
+
+[col-66]
+
+“Can I just say I <strong>LOVE</strong> Code.org? It's my first year teaching AP CS Principles (actually 1st year it is offered at our school) - and both the kids and I are having a blast.”
+
+*Jennifer Douglass, CS Principles Teacher*
+
+
+[/col-66]
+
+[clearboth]
+
+[/clearboth]
+   
+[/breakoutquote]
 
 <hr/>
 
@@ -92,6 +117,28 @@ This year-long course can be taught as an AP or non-AP course - no prerequisites
 As with all of our courses, we are committed to making regular updates to our CS Principles curriculum to make sure we continue to meet students’ and teachers’ needs, while supporting the best classroom experience possible. We’re planning some very exciting updates to CS Principles 2020-21, which will align with the new AP framework and incorporate the invaluable feedback we receive from our teachers and students!
 
 <a href="https://code.org/files/2020-21_CSPrinciples_1-pager.pdf", target=_"blank">Check out our 1-pager</a> for an overview of what's in store for the 2020-21 version of the course, and stay tuned!
+
+[breakoutquote]
+
+[col-33]
+
+<img src="/images/AR2016/best.jpg" style="max-width: 80%"/>
+
+[/col-33]
+
+[col-66]
+
+“I've never seen a nonprofit have an impact as large as this, in a timeframe as short as this. Just incredible.”
+
+*Charles Best, Founder & CEO, DonorsChoose.org*
+
+[/col-66]
+
+[clearboth]
+
+[/clearboth]
+   
+[/breakoutquote]
 
 ## Keep up with CS Principles
 
