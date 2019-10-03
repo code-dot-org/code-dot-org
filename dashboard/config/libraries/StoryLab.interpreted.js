@@ -5,21 +5,20 @@ var currentSceneNumber = 0;
 var scenes = [];
 
 function addBehaviorUntilBoolean(spriteId, behavior, condition) {
-  setProp(spriteId, behavior.name, function() { return condition; });
+  setProp(spriteId, behavior.name, JSON.stringify(function() { return condition; }));
+  console.log(getProp(spriteId, behavior.name));
   addBehaviorSimple(spriteId, behavior);
 }
 
 function removeInvalidBehaviors() {
-  var spriteIds = getSpriteIdsInUse();
-  for(var i = 0; i < spriteIds.length; i++) {
-  	var behaviors = getBehaviorsForSpriteId(spriteIds[i]);
-    for(var j = 0; j < behaviors.length; j++) {
-      console.log(getProp(spriteIds[i], behaviors[j])());
-      if(getProp(spriteIds[i], behaviors[j])()) {
-      	removeBehaviorSimple(spriteIds[i], behaviors[j]);
+  getSpriteIdsInUse().forEach(function(spriteId) {
+  	getBehaviorsForSpriteId(spriteId).forEach(function(behavior) {
+      //console.log(JSON.parse(getProp(spriteId, behavior))());
+      if(getProp(spriteId, behavior)()) {
+        removeBehaviorSimple(spriteId, behavior);
       }
-    }
-  }
+    });
+  });
 }
 
 function scene(sceneNumber, code) {
@@ -31,9 +30,9 @@ function setupStory(code) {
 }
 
 function runSetup() {
-  for(var i = 0; i < setupCode.length; i++) {
-  	setupCode[i].code();
-  }
+  setupCode.forEach(function(c) {
+  	c.code();
+  });
   setupCode = [];
 }
 
@@ -45,11 +44,10 @@ function goToScene(sceneNumber) {
 }
 
 function getCurrentScene() {
-  for(var i = 0; i < scenes.length; i++) {
-  	if(scenes[i].sceneNumber === currentSceneNumber) {
-      return scenes[i];
-    }
-  }
+  scenes.find(function(scene) {
+  	return scene.sceneNumber === currentSceneNumber;
+  });
+  return {};
 }
 
 function draw() {
