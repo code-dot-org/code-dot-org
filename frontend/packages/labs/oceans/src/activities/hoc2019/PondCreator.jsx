@@ -18,6 +18,8 @@ const Modes = Object.freeze({
   Predicting: 2
 });
 
+let canvasNum = 0;
+
 export default class PondCreator extends React.Component {
   constructor(props) {
     super(props);
@@ -36,8 +38,10 @@ export default class PondCreator extends React.Component {
   generateFish = (canvasPrefix, numFish) => {
     let fishData = {};
     for (let i = 0; i < numFish; i++) {
-      const canvasId = `${canvasPrefix}-fish-canvas-${i}`;
-      fishData[canvasId] = {body: {color: COLORS[i * 3 + 1]}};
+      const canvasId = `${canvasPrefix}-fish-canvas-${canvasNum}`;
+      canvasNum ++;
+      const colorIndex = Math.floor(Math.random() * COLORS.length)
+      fishData[canvasId] = {body: {color: COLORS[colorIndex]}};
     }
 
     return fishData;
@@ -108,6 +112,10 @@ export default class PondCreator extends React.Component {
                 />
               </Row>
             ))}
+            <Button onClick={() => this.switchToPredictions()}>
+              Show another!
+            </Button>
+
           </div>
         )}
       </div>
