@@ -5,9 +5,21 @@ export function getFunctions(code) {
 }
 
 export function createLibraryJson(code, selectedFunctions, libraryName) {
+  if (
+    typeof code !== 'string' ||
+    !Array.isArray(selectedFunctions) ||
+    typeof libraryName !== 'string' ||
+    !libraryName
+  ) {
+    return;
+  }
+
   let exportedFunctions = [];
   let fullConfig = [];
-  selectedFunctions.forEach(selectedFunction => {
+  for (let selectedFunction of selectedFunctions) {
+    if (!selectedFunction || !selectedFunction.functionName) {
+      return;
+    }
     exportedFunctions.push(
       `${selectedFunction.functionName}: ${selectedFunction.functionName}`
     );
@@ -16,13 +28,13 @@ export function createLibraryJson(code, selectedFunctions, libraryName) {
       category: 'Functions'
     };
 
-    if (selectedFunction.parameters.length > 0) {
+    if (selectedFunction.parameters && selectedFunction.parameters.length > 0) {
       individualConfig.params = selectedFunction.parameters;
       individualConfig.paletteParams = selectedFunction.parameters;
     }
 
     fullConfig.push(individualConfig);
-  });
+  }
 
   let functionsInClosure = exportedFunctions.join(',');
   let libraryClosure = `var ${libraryName} = (function() {${code}; return {${functionsInClosure}}})();`;
