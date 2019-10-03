@@ -2,7 +2,7 @@ import React from 'react';
 import Row from 'react-bootstrap/lib/Row';
 import Col from 'react-bootstrap/lib/Col';
 import Button from 'react-bootstrap/lib/Button';
-import {fish} from '../../utils/sketches';
+import {sketch} from '../../utils/sketches';
 import SimpleTrainer from '../../utils/SimpleTrainer';
 const P5 = require('../../utils/loadP5');
 
@@ -31,7 +31,7 @@ export default class PondCreator extends React.Component {
     let fishData = {};
     for (let i = 0; i < FISH_COUNT; i++) {
       const canvasId = `fish-canvas-${i}`;
-      const p5 = new P5(fish, canvasId);
+      const p5 = new P5(sketch, canvasId);
       fishData[canvasId] = p5;
     }
 
