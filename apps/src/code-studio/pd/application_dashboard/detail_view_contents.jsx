@@ -733,10 +733,7 @@ export class DetailViewContents extends React.Component {
               this.props.applicationData.form_data.lastName
             }`}
           </h1>
-          <h4>
-            Meets minimum requirements?{' '}
-            {this.props.applicationData.meets_criteria}
-          </h4>
+          <h4>Meets Guidelines? {this.props.applicationData.meets_criteria}</h4>
           {this.props.applicationData.application_type ===
             ApplicationTypes.teacher && (
             <h4>
@@ -951,7 +948,7 @@ export class DetailViewContents extends React.Component {
     ) {
       scoringDropdowns.push(
         <div key="meets_minimum_criteria_scores">
-          Meets minimum requirements?
+          Meets Guidelines?
           {this.renderScoringDropdown(
             snakeCaseKey,
             'meets_minimum_criteria_scores'
