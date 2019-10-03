@@ -18,7 +18,8 @@ class ManageStudents extends React.Component {
     // Provided by redux
     sectionId: PropTypes.number,
     loginType: PropTypes.string,
-    setStudents: PropTypes.func.isRequired
+    setStudents: PropTypes.func.isRequired,
+    studentData: PropTypes.object
   };
 
   state = {
@@ -26,22 +27,32 @@ class ManageStudents extends React.Component {
   };
 
   componentDidMount() {
-    //TODO: Add check if we already have the correct data and don't go loading it again
-    $.ajax({
-      method: 'GET',
-      url: `/dashboardapi/sections/${this.props.sectionId}/students`,
-      dataType: 'json'
-    }).done(studentData => {
-      const convertedStudentData = convertStudentServerData(
-        studentData,
-        this.props.loginType,
-        this.props.sectionId
-      );
-      this.props.setStudents(convertedStudentData);
+    // Don't load data if it's already stored in redux.
+    const alreadyHaveStudentData =
+      Object.values(this.props.studentData)[0] &&
+      Object.values(this.props.studentData)[0].sectionId ===
+        this.props.sectionId;
+    if (!alreadyHaveStudentData) {
+      $.ajax({
+        method: 'GET',
+        url: `/dashboardapi/sections/${this.props.sectionId}/students`,
+        dataType: 'json'
+      }).done(studentData => {
+        const convertedStudentData = convertStudentServerData(
+          studentData,
+          this.props.loginType,
+          this.props.sectionId
+        );
+        this.props.setStudents(convertedStudentData);
+        this.setState({
+          isLoading: false
+        });
+      });
+    } else {
       this.setState({
         isLoading: false
       });
-    });
+    }
   }
 
   render() {
@@ -69,7 +80,8 @@ export const UnconnectedManageStudents = ManageStudents;
 export default connect(
   state => ({
     sectionId: state.sectionData.section.id,
-    loginType: state.manageStudents.loginType
+    loginType: state.manageStudents.loginType,
+    studentData: state.manageStudents.studentData
   }),
   dispatch => ({
     setStudents(studentData) {
