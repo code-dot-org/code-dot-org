@@ -56,10 +56,30 @@ export default class SimpleTrainer {
   }
 
   /**
+   * @param {Array<number>} KNN data
+   * @returns {Promise<{confidencesByClassId: [], predictedClassId: null}>}
+   */
+  async predictFromData(data) {
+    const tensor = tf.tensor(data);
+    let result = {
+      predictedClassId: null,
+      confidencesByClassId: []
+    };
+    const numClasses = this.knn.getNumClasses();
+    if (numClasses > 0) {
+      const res = await this.knn.predictClass(tensor, TOPK);
+
+      result.predictedClassId = res.classIndex;
+      result.confidencesByClassId = res.confidences;
+    }
+    return result;
+  }
+
+  /**
    * @param {HTMLVideoElement} videoElement
    * @returns {Promise<{confidencesByClassId: [], predictedClassId: null}>}
    */
-  async predict(videoElement) {
+  async predictFromImage(videoElement) {
     const image = tf.fromPixels(videoElement);
     const infer = () => this.mobilenet.infer(image, 'conv_preds');
     let result = {

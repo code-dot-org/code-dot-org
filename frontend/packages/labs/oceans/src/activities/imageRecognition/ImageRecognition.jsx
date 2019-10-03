@@ -116,7 +116,7 @@ module.exports = class ImageRecognition extends React.Component {
                       <img
                         // onMouseOver={() => {
                         //   loadImage(image.url, IMAGE_SIZE).then((img) => {
-                        //     this.simpleTrainer.predict(img).then((result) => {
+                        //     this.simpleTrainer.predictFromImage(img).then((result) => {
                         //       console.log(result);
                         //     });
                         //   });
@@ -206,7 +206,7 @@ module.exports = class ImageRecognition extends React.Component {
               <Col style={{textAlign: 'center'}} xs={12}>
                 <PredictionUpload
                   predictClass={img => {
-                    this.simpleTrainer.predict(img).then(trainingResult => {
+                    this.simpleTrainer.predictFromImage(img).then(trainingResult => {
                       this.setState({trainingResult});
                     });
                   }}
@@ -228,7 +228,7 @@ module.exports = class ImageRecognition extends React.Component {
                       }}
                       onClick={() => {
                         loadImage(image.url, IMAGE_SIZE).then(img => {
-                          this.simpleTrainer.predict(img).then(result => {
+                          this.simpleTrainer.predictFromImage(img).then(result => {
                             this.setState({
                               trainingResult: result
                             });
@@ -297,7 +297,7 @@ module.exports = class ImageRecognition extends React.Component {
       if (this.simpleTrainer.getNumClasses() > 0) {
         let frameDataURI = this.video.getFrameDataURI(400);
 
-        let predictionResult = await this.simpleTrainer.predict(
+        let predictionResult = await this.simpleTrainer.predictFromImage(
           this.video.getVideoElement()
         );
         this.setState(
