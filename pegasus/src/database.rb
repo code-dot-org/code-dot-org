@@ -101,11 +101,11 @@ def k12_access_count
 end
 
 def jobs_nationwide
-  DB[:cdo_state_promote].where(state_code_s: "Sum_states").first[:cs_jobs_i]
+  $jobs_nationwide ||= DB[:cdo_state_promote].sum(:cs_jobs_i)
 end
 
 def grads_nationwide
-  DB[:cdo_state_promote].where(state_code_s: "Sum_states").first[:cs_graduates_i]
+  $grads_nationwide ||= DB[:cdo_state_promote].sum(:cs_graduates_i)
 end
 
 def zip_code_from_code(code)
