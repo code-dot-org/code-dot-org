@@ -57,9 +57,6 @@
     "short_instructions": "Drag the `make a new` block into the workspace, and connect it inside the `setup` block.",
     "video_key": "hoc_dance_warmup",
     "encrypted": "false",
-    "encrypted_examples": [
-
-    ],
     "mini_rubric": "false"
   },
   "published": true,
