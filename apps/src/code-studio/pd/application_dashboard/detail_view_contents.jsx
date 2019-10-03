@@ -747,41 +747,19 @@ export class DetailViewContents extends React.Component {
 
           {this.renderPointsSection()}
 
-          {this.props.applicationData.application_type ===
-            ApplicationTypes.teacher &&
-            this.props.applicationData.course === 'csp' && (
-              <h4>
-                <a
-                  target="_blank"
-                  href="https://drive.google.com/file/d/1_X_Tw3tVMSL2re_DcrSUC9Z5CH9js3Gd/view"
-                >
-                  View CS Principles Rubric
-                </a>
-              </h4>
-            )}
-          {this.props.applicationData.application_type ===
-            ApplicationTypes.teacher &&
-            this.props.applicationData.course === 'csd' && (
-              <h4>
-                <a
-                  target="_blank"
-                  href="https://drive.google.com/file/d/12Ntxq7TV1XYsD2eaZJVt5DqSctqR2hUj/view"
-                >
-                  View CS Discoveries Rubric
-                </a>
-              </h4>
-            )}
-          {this.props.applicationData.application_type ===
-            ApplicationTypes.facilitator && (
-            <h4>
-              <a
-                target="_blank"
-                href="https://docs.google.com/document/u/1/d/e/2PACX-1vTqUgsTTGeGMH0N1FTH2qPzQs1pVb8OWPf3lr1A0hzO9LyGLa27J9_Fsg4RG43ok1xbrCfQqKxBjNsk/pub"
-              >
-                View Rubric
-              </a>
-            </h4>
-          )}
+          <h4>
+            <a
+              target="_blank"
+              href={
+                this.props.applicationData.application_type ===
+                ApplicationTypes.teacher
+                  ? 'https://drive.google.com/file/d/1070Jf9VKtuJLOQJTCaO7fxUWyLOEHBdK/view'
+                  : 'https://docs.google.com/document/u/1/d/e/2PACX-1vTqUgsTTGeGMH0N1FTH2qPzQs1pVb8OWPf3lr1A0hzO9LyGLa27J9_Fsg4RG43ok1xbrCfQqKxBjNsk/pub'
+              }
+            >
+              View Rubric
+            </a>
+          </h4>
         </div>
 
         <div id="DetailViewHeader" style={styles.detailViewHeader}>
