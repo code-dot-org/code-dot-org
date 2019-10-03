@@ -4,7 +4,8 @@ import Col from 'react-bootstrap/lib/Col';
 import Button from 'react-bootstrap/lib/Button';
 import {sketch} from '../../utils/sketches';
 import SimpleTrainer from '../../utils/SimpleTrainer';
-const P5 = require('../../utils/loadP5');
+//const P5 = require('../../utils/loadP5');
+import P5Canvas from './P5Canvas';
 
 const FISH_COUNT = 9;
 
@@ -31,15 +32,14 @@ export default class PondCreator extends React.Component {
     let fishData = {};
     for (let i = 0; i < FISH_COUNT; i++) {
       const canvasId = `fish-canvas-${i}`;
-      const p5 = new P5(sketch, canvasId);
-      fishData[canvasId] = p5;
+      //const p5 = new P5(sketch, canvasId);
+      fishData[canvasId] = 'hi';
     }
 
     return fishData;
   };
 
-  addExample = (canvasId, doesLike) => {
-    const knnData = this.state.fish[canvasId].getKnnData();
+  addExample = (knnData, doesLike) => {
     const classifier = doesLike ? ClassType.Like : ClassType.Dislike;
     this.state.trainer.addExampleData(knnData, classifier);
   };
@@ -55,16 +55,13 @@ export default class PondCreator extends React.Component {
       <div>
         {Object.keys(fish).map(canvasId => (
           <Row key={canvasId}>
-            <Col id={canvasId} xs={6} />
-            <Col xs={4}>KNN data: {fish[canvasId].getKnnData().join(', ')}</Col>
-            <Col xs={2}>
-              <Button onClick={() => this.addExample(canvasId, true)}>
-                Like
-              </Button>
-              <Button onClick={() => this.addExample(canvasId, false)}>
-                Dislike
-              </Button>
-            </Col>
+            <P5Canvas
+              id={canvasId}
+              fish_data={{}}
+              canvasId={canvasId}
+              sketch={sketch}
+              addExample={this.addExample}
+            />
           </Row>
         ))}
       </div>
