@@ -6,7 +6,7 @@ import Button from 'react-bootstrap/lib/Button';
 
 export default class P5Canvas extends React.Component {
   static propTypes = {
-    fish_data: PropTypes.object.isRequired,
+    fishData: PropTypes.object.isRequired,
     canvasId: PropTypes.string.isRequired,
     sketch: PropTypes.func.isRequired,
     addExample: PropTypes.func.isRequired
@@ -19,7 +19,7 @@ export default class P5Canvas extends React.Component {
 
   componentDidMount() {
     const p5 = new P5(this.props.sketch, this.props.canvasId);
-    this.setState({p5: p5});
+    this.setState({p5});
   }
 
   render() {
@@ -51,11 +51,3 @@ export default class P5Canvas extends React.Component {
     );
   }
 }
-/*
-P5Canvas.propTypes = {
-  fish_data: PropTypes.object.isRequired,
-  canvasId: PropTypes.string.isRequired,
-  //sketch: PropTypes.func.isRequired,
-  addExample: PropTypes.func.isRequired
-};
-*/
