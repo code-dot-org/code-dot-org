@@ -11,7 +11,8 @@ export default class P5Canvas extends React.Component {
     addExample: PropTypes.func,
     isSelectable: PropTypes.bool,
     showPrediction: PropTypes.bool,
-    getPrediction: PropTypes.func // returns a promise
+    getPrediction: PropTypes.func, // returns a promise
+    getClassTypeString: PropTypes.func.isRequired
   };
 
   constructor(props) {
@@ -66,7 +67,7 @@ export default class P5Canvas extends React.Component {
               </div>
             )}
             {this.props.showPrediction && (
-              <Col xs={4}>Prediction: {this.state.predictedClass}</Col>
+              <Col xs={4}>Prediction: {this.props.getClassTypeString(this.state.predictedClass)}</Col>
             )}
           </div>
         )}

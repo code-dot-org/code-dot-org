@@ -57,8 +57,18 @@ export default class PondCreator extends React.Component {
     return this.state.trainer.predictFromData(knnData);
   };
 
+  getClassTypeString = classType => {
+    switch(classType) {
+      case ClassType.Like:
+        return "Like! :)";
+      case ClassType.Dislike:
+        return "Don't like :(";
+      default:
+        return "I don't know"
+    }
+  }
+
   render() {
-    console.log(this.state.predictionFish);
     return (
       <div>
         {this.state.currentMode === Modes.Training && (
@@ -72,6 +82,7 @@ export default class PondCreator extends React.Component {
                   sketch={sketch}
                   addExample={this.addExample}
                   isSelectable={true}
+                  getClassTypeString={this.getClassTypeString}
                 />
               </Row>
             ))}
@@ -93,6 +104,7 @@ export default class PondCreator extends React.Component {
                   isSelectable={false}
                   showPrediction={true}
                   getPrediction={this.getPrediction}
+                  getClassTypeString={this.getClassTypeString}
                 />
               </Row>
             ))}
