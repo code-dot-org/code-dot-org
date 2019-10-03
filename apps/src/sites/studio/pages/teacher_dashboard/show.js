@@ -14,9 +14,7 @@ import teacherSections, {
   setRosterProvider
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import sectionData, {setSection} from '@cdo/apps/redux/sectionDataRedux';
-import stats, {
-  asyncSetCompletedLevelCount
-} from '@cdo/apps/templates/teacherDashboard/statsRedux';
+import stats from '@cdo/apps/templates/teacherDashboard/statsRedux';
 import textResponses from '@cdo/apps/templates/textResponses/textResponsesRedux';
 import sectionAssessments from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
@@ -49,7 +47,6 @@ $(document).ready(function() {
   store.dispatch(selectSection(section.id));
   store.dispatch(setRosterProvider(section.login_type));
   store.dispatch(setLoginType(section.login_type));
-  store.dispatch(asyncSetCompletedLevelCount(section.id));
 
   if (!section.sharing_disabled && section.script.project_sharing) {
     store.dispatch(setShowSharingColumn(true));
