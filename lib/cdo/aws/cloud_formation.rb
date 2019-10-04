@@ -32,7 +32,7 @@ module AWS
     STACK_NAME_INVALID_REGEX = /[^[:alnum:]-]/
 
     SSH_KEY_NAME = 'server_access_key'.freeze
-    IMAGE_ID = ENV['IMAGE_ID'] || 'ami-c8580bdf' # ubuntu/images/hvm-ssd/ubuntu-trusty-14.04-amd64-server-*
+    IMAGE_ID = ENV['IMAGE_ID'] || 'ami-07d0cf3af28718ef8' # ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-20190722.1
     INSTANCE_TYPE = rack_env?(:production) ? 'm4.10xlarge' : 't2.2xlarge'
     SSH_IP = '0.0.0.0/0'.freeze
     S3_BUCKET = 'cdo-dist'.freeze
