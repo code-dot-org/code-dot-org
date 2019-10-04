@@ -17,7 +17,7 @@ module Pd
     }
 
     PAGE_LABELS = {
-      about_you: BASE_PAGE_LABELS[:about_you].slice(
+      about_you: BASE_PAGE_LABELS[:section_1_about_you].slice(
         :country,
         :first_name,
         :last_name,
@@ -50,7 +50,7 @@ module Pd
         }
       ),
       teaching_background:
-        BASE_PAGE_LABELS[:your_school].slice(
+        BASE_PAGE_LABELS[:section_2_your_school].slice(
           :previous_yearlong_cdo_pd
         ),
       choose_your_program: {
@@ -73,7 +73,7 @@ module Pd
           school year? Please note that the CS Principles Professional Learning Program
           is not available for grades K-8. (select all that apply)'
         ),
-        csp_how_offer: BASE_PAGE_LABELS[:choose_your_program][:csp_how_offer],
+        csp_how_offer: BASE_PAGE_LABELS[:section_3_choose_your_program][:csp_how_offer],
         cs_how_many_minutes: clean_multiline(
           'How many minutes per day is one CS program class section? (Include the
           number of minutes from start to finish that you see your students per class
@@ -150,7 +150,7 @@ module Pd
         notes_5: "Notes 5",
         alternate_email: "Alternate email",
         school_type: "School type",
-        district_name: PAGE_LABELS[:about_you][:school_district_name],
+        district_name: PAGE_LABELS[:section_1_about_you][:school_district_name],
         school_city: "School city",
         school_state: "School state",
         school_zip_code: "School zip code",
@@ -170,12 +170,12 @@ module Pd
         principal_approval_url: "Principal Approval Form URL"
       },
       principal: {
-        title: PAGE_LABELS[:about_you][:principal_title] + " (provided by principal)",
-        first_name: PAGE_LABELS[:about_you][:principal_first_name] + " (provided by principal)",
-        last_name: PAGE_LABELS[:about_you][:principal_last_name] + " (provided by principal)",
-        email: PAGE_LABELS[:about_you][:principal_email] + " (provided by principal)",
-        school_name: PAGE_LABELS[:about_you][:school_name] + " (provided by principal)",
-        district_name: PAGE_LABELS[:about_you][:school_district_name] + " (provided by principal)",
+        title: PAGE_LABELS[:section_1_about_you][:principal_title] + " (provided by principal)",
+        first_name: PAGE_LABELS[:section_1_about_you][:principal_first_name] + " (provided by principal)",
+        last_name: PAGE_LABELS[:section_1_about_you][:principal_last_name] + " (provided by principal)",
+        email: PAGE_LABELS[:section_1_about_you][:principal_email] + " (provided by principal)",
+        school_name: PAGE_LABELS[:section_1_about_you][:school_name] + " (provided by principal)",
+        district_name: PAGE_LABELS[:section_1_about_you][:school_district_name] + " (provided by principal)",
         do_you_approve: "Do you approve of this teacher participating in Code.org's 2020-21 Professional Learning Program?",
         plan_to_teach: "Is this teacher planning to teach this course in the 2020-21 school year?",
         total_student_enrollment: "Total student enrollment",
