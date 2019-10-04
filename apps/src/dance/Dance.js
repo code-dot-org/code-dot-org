@@ -629,6 +629,9 @@ Dance.prototype.initInterpreter = function() {
     setForegroundEffectExtended: effect => {
       nativeAPI.setForegroundEffect(effect.toString());
     },
+    makeAnonymousDanceSprite: (costume, location) => {
+      sprites.push(nativeAPI.makeNewDanceSprite(costume, null, location));
+    },
     makeNewDanceSprite: (costume, name, location) => {
       return Number(
         sprites.push(nativeAPI.makeNewDanceSprite(costume, name, location)) - 1
@@ -748,12 +751,12 @@ Dance.prototype.computeCharactersReferenced = function(studentCode) {
   // charactersReferencedSet with the results:
   const charactersReferencedSet = new Set();
   const charactersRegExp = new RegExp(
-    /^.*makeNewDanceSprite(?:Group)?\([^"]*"([^"]*)[^\r\n]*/,
+    /^.*make(Anonymous|New)DanceSprite(?:Group)?\([^"]*"([^"]*)[^\r\n]*/,
     'gm'
   );
   let match;
   while ((match = charactersRegExp.exec(studentCode))) {
-    const characterName = match[1];
+    const characterName = match[2];
     charactersReferencedSet.add(characterName);
   }
   return Array.from(charactersReferencedSet);
