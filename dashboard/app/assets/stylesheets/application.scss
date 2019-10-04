@@ -3175,3 +3175,10 @@ h2.danger {
     color: $yellow;
   }
 }
+
+/* Markdown content for label of required answer, as used in various forms,
+ * should get red asterisk at the end of last <p>. */
+.markdown_required p:last-of-type::after {
+  content: ' *';
+  color: $red;
+}
