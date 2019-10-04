@@ -1167,106 +1167,21 @@ zh-TW:
         text: 南
       aalab_addBehaviorForDuration:
         text: aalab 角色 {SPRITE} 開始 {BEHAVIOR} 持續 {SECONDS} 秒
-      aalab_addBehaviorSimpleFlexible:
-        text: aalab 角色 {SPRITE} 開始 {BEHAVIOR}
       aalab_addBehaviorUntilBoolean:
         text: 角色 {SPRITE} 開始 {BEHAVIOR} 直到 {CONDITION}
-      aalab_allSpritesWithAnimation:
-        text: "{ANIMATION}"
-      aalab_changePropByFlexible:
-        text: 角色 {SPRITE} {PROPERTY} 改變 {VAL}
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': 尺寸
-            '"rotation"': 旋轉
-            '"x"': x 座標
-            '"y"': y 座標
-            '"direction"': 移動方向
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': 當
-            '"while"': 當
-      aalab_clickedOn:
-        text: "{CONDITION} 角色 {SPRITE} 被點擊？"
-        options:
-          CONDITION:
-            '"when"': 當
-            '"while"': 當
-      aalab_createNewSpriteAdvanced:
-        text: |-
-          角色 創建一個新的 {COSTUME}
-          名稱 {NAME} 位置 {LOCATION}
-      aalab_createSpriteGroup:
-        text: 角色 創建一個新的 名稱 {VAR}
-      aalab_getThisSprite:
-        options:
-          CHOICE:
-            '"this"': this
-            '"other"': 其它
-      aalab_jumpTo:
-        text: aalab 角色 {SPRITE} 定位到 {LOCATION}
-      aalab_keyPressed:
-        text: "{CONDITION} {KEY} 鍵被按下？"
-        options:
-          CONDITION:
-            '"when"': 當
-            '"while"': 當
-          KEY:
-            '"up"': 向上
-            '"down"': 向下
-            '"left"': 向左
-            '"right"': 向右
-            '"space"': 空白
-      aalab_locationOf:
-        text: aalab 座標 {SPRITE}
-      aalab_location_picker:
-        text: "{LOCATION}"
-      aalab_moveInDirection:
-        text: 角色 aalab {SPRITE} 移動 {DISTANCE} 像素 面向 {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': 北
-            '"East"': 東
-            '"South"': 南
-            '"West"': 西
-      aalab_randomLocation:
-        text: 隨機座標
-      aalab_removeOneAndAll:
-        text: 角色 移除 {THIS}
-      aalab_setBG:
-        text: 背景設為 {BG}
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': 城市
-            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': 舞台
-            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': 太陽和彩虹
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': 'true'
-            '"false"': 'false'
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': 尺寸
-            '"rotation"': 旋轉
-            '"x"': x 座標
-            '"y"': y 座標
-            '"direction"': 移動方向
-            '"tint"': 色調
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': 重複無限次
-      aalab_showSpriteLabel:
-        options:
-          LOCATION:
-            '"above"': 上方
-            '"below"': 下方
-      aalab_speakerSaysConsole:
-        text: 角色 {SPRITE} 說出 {MESSAGE}
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
         options:
           OPTION:
             '"show"': 顯示
