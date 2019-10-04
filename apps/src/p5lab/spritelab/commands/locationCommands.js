@@ -9,8 +9,8 @@ export const commands = {
     return {x: this.World.mouseX, y: this.World.mouseY};
   },
 
-  locationOf(spriteId) {
-    let sprite = coreLibrary.getSpriteArray(spriteId)[0];
+  locationOf(spriteArg) {
+    let sprite = coreLibrary.getSpriteArray(spriteArg)[0];
     if (sprite) {
       return {x: sprite.x, y: sprite.y};
     }
