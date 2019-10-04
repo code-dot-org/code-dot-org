@@ -10,7 +10,7 @@ module Pd
     SECTION_HEADERS = {
       about_you: 'About You',
       teaching_background: 'Teaching Background',
-      section_3_choose_your_program: 'Choose Your Program',
+      choose_your_program: 'Choose Your Program',
       section_4_professional_learning_program_requirements: 'Professional Learning Program Requirements',
       section_5_additional_demographic_information: 'Additional Demographic Information and submission',
       school_stats_and_principal_approval_section: 'Principal Approval and School Information'
@@ -53,7 +53,7 @@ module Pd
         BASE_PAGE_LABELS[:your_school].slice(
           :previous_yearlong_cdo_pd
         ),
-      section_3_choose_your_program: {
+      choose_your_program: {
         program: clean_multiline(
           'Which professional learning program would you like to join for the 2020-21
           school year? Note: this application is only for Computer Science Discoveries and
@@ -73,7 +73,7 @@ module Pd
           school year? Please note that the CS Principles Professional Learning Program
           is not available for grades K-8. (select all that apply)'
         ),
-        csp_how_offer: BASE_PAGE_LABELS[:section_3_choose_your_program][:csp_how_offer],
+        csp_how_offer: BASE_PAGE_LABELS[:choose_your_program][:csp_how_offer],
         cs_how_many_minutes: clean_multiline(
           'How many minutes per day is one CS program class section? (Include the
           number of minutes from start to finish that you see your students per class
