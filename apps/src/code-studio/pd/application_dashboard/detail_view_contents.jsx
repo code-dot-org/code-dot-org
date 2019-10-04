@@ -725,6 +725,11 @@ export class DetailViewContents extends React.Component {
   };
 
   renderHeader = () => {
+    const rubricURL =
+      this.props.applicationData.application_type === ApplicationTypes.teacher
+        ? 'https://drive.google.com/file/d/1070Jf9VKtuJLOQJTCaO7fxUWyLOEHBdK/view'
+        : 'https://docs.google.com/document/u/1/d/e/2PACX-1vTqUgsTTGeGMH0N1FTH2qPzQs1pVb8OWPf3lr1A0hzO9LyGLa27J9_Fsg4RG43ok1xbrCfQqKxBjNsk/pub';
+
     return (
       <div style={styles.headerWrapper}>
         <div>
@@ -745,15 +750,7 @@ export class DetailViewContents extends React.Component {
           {this.renderPointsSection()}
 
           <h4>
-            <a
-              target="_blank"
-              href={
-                this.props.applicationData.application_type ===
-                ApplicationTypes.teacher
-                  ? 'https://drive.google.com/file/d/1070Jf9VKtuJLOQJTCaO7fxUWyLOEHBdK/view'
-                  : 'https://docs.google.com/document/u/1/d/e/2PACX-1vTqUgsTTGeGMH0N1FTH2qPzQs1pVb8OWPf3lr1A0hzO9LyGLa27J9_Fsg4RG43ok1xbrCfQqKxBjNsk/pub'
-              }
-            >
+            <a target="_blank" href={rubricURL}>
               View Rubric
             </a>
           </h4>
