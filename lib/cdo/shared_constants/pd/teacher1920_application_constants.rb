@@ -272,12 +272,12 @@ module Pd
       principal_implementation: {meets_minimum_criteria_scores: YES_NO, bonus_points_scores: [2, 0]},
       # Scholarship requirements
       previous_yearlong_cdo_pd: YES_NO,
+      free_lunch_percent: YES_NO,
+      underrepresented_minority_percent: YES_NO,
       # Bonus Points
       csp_how_offer: [2, 0],
       replace_existing: [5, 0],
       taught_in_past: [2, 0],
-      free_lunch_percent: [5, 0],
-      underrepresented_minority_percent: [5, 0],
       race: [2, 0]
     }
 
@@ -287,8 +287,6 @@ module Pd
         :csp_how_offer,
         :replace_existing,
         :taught_in_past,
-        :free_lunch_percent,
-        :underrepresented_minority_percent,
         :race,
         :principal_implementation
       ],
@@ -297,7 +295,9 @@ module Pd
         :previous_yearlong_cdo_pd,
         :principal_approval,
         :principal_schedule_confirmed,
-        :principal_diversity_recruitment
+        :principal_diversity_recruitment,
+        :underrepresented_minority_percent,
+        :free_lunch_percent,
       ],
       criteria_score_questions_csd: [
         :regional_partner_name,
