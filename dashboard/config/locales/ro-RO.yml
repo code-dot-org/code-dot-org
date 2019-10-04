@@ -479,6 +479,7 @@ ro:
       dvs. (pentru recuperarea parolei)
     update: Actualizaţi contul
     account_successfully_updated: Contul a fost actualizat cu succes.
+    update_email: Actualizează
   user_level:
     completed: Finalizat
     tried: Încercat
