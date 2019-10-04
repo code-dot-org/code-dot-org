@@ -145,6 +145,9 @@ class ButtonList extends React.Component {
       validationState = 'error';
     }
 
+    const labelClassName = this.props.required
+      ? 'markdown_required'
+      : 'markdown_not_required';
     const columnCount = this.props.columnCount ? this.props.columnCount : 1;
 
     return (
@@ -153,10 +156,9 @@ class ButtonList extends React.Component {
         controlId={this.props.groupName}
         validationState={validationState}
       >
-        <ControlLabel>
-          {this.props.label}
-          {this.props.required && <span style={{color: 'red'}}> *</span>}
-        </ControlLabel>
+        <div className={labelClassName}>
+          <ControlLabel>{this.props.label}</ControlLabel>
+        </div>
         <FormGroup style={{columnCount: columnCount}}>
           {this.renderInputComponents()}
         </FormGroup>
