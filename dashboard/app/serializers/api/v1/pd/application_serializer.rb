@@ -178,6 +178,7 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
 
     {
       title_i_status: stats.title_i_status,
+      rural_status: stats.rural_school?,
       school_type: school.school_type.try(:titleize),
       frl_eligible_percent: percent_string(stats.frl_eligible_total, stats.students_total),
       urm_percent: percent_string(urm_total, stats.students_total),

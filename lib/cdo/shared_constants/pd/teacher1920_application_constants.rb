@@ -111,6 +111,7 @@ module Pd
         ),
       school_stats_and_principal_approval_section: {
         title_i_status: 'Title I status',
+        rural_status: 'Rural Status',
         school_type: 'School Type',
         total_student_enrollment: 'Total Student Enrollment',
         free_lunch_percent: 'Percent of students that receive free/reduced lunch',
@@ -205,6 +206,7 @@ module Pd
       },
       nces: {
         title_i_status: "Title I status code (NCES data)",
+        rural_status: "Rural status",
         students_total: "Total student enrollment (NCES data)",
         frl_eligible_total: "Percentage of students who are eligible to receive free or reduced lunch (NCES data)",
         urm_percent: "Percentage of underrepresented minority students (NCES data)",
@@ -241,6 +243,7 @@ module Pd
       contact_invoicing_detail: {principal: :principal_contact_invoicing_detail},
 
       title_i_status: {stats: :title_i_status},
+      rural_status: {stats: :rural_status},
       school_type: {teacher: :school_type, stats: :school_type},
       total_student_enrollment: {principal: :principal_total_enrollment, stats: :students_total},
       free_lunch_percent: {principal: :principal_free_lunch_percent, stats: :frl_eligible_percent},
@@ -435,6 +438,7 @@ module Pd
       ],
       nces: [
         :title_i_status,
+        :rural_status,
         :students_total,
         :frl_eligible_total,
         :urm_percent,
