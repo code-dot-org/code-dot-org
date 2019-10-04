@@ -60,9 +60,6 @@ then
 	done
 elif [ "$2" == "code_dot_org_user_levels.lua" ]
 then
-	# Prepare for write-only test
-	/home/ec2-user/sysbench/src/sysbench ./$2 --mysql-host=$1 --mysql-port=3306 --mysql-db=sysbench --mysql-user=db --mysql-password=Password1 --db-driver=mysql --tables=250 --table-size=25000 --threads=250 --auto-inc=off prepare
-
 	# Launch multiple sysbench clients
 	for i in {1..$number_of_sysbench_clients}
 	do

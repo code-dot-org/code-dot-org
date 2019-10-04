@@ -1,10 +1,4 @@
 #!/usr/bin/env sysbench
-sysbench.cmdline.commands.prepare = {
-   function ()
-      -- stub
-   end,
-   sysbench.cmdline.PARALLEL_COMMAND
-}
 
 function event()
    -- TODO:(suresh) Run this on initialization of the thread.
