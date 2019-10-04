@@ -19,6 +19,9 @@ import PublishDialog from '../../templates/projects/publishDialog/PublishDialog'
 import {createHiddenPrintWindow} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import experiments from '@cdo/apps/util/experiments';
+import {showLibraryCreationDialog} from './Libraries/libraryCreationRedux';
+import LibraryCreationDialog from './Libraries/LibraryCreationDialog';
 
 function recordShare(type) {
   if (!window.dashboard) {
@@ -163,6 +166,7 @@ class ShareAllowedDialog extends React.Component {
     onClose: PropTypes.func.isRequired,
     onShowPublishDialog: PropTypes.func.isRequired,
     onUnpublish: PropTypes.func.isRequired,
+    openLibraryCreationDialog: PropTypes.func.isRequired,
     hideBackdrop: BaseDialog.propTypes.hideBackdrop,
     canShareSocial: PropTypes.bool.isRequired,
     userSharingDisabled: PropTypes.bool
@@ -254,6 +258,8 @@ class ShareAllowedDialog extends React.Component {
       modalClass += ' no-modal-icon';
     }
 
+    const isDroplet =
+      this.props.appType === 'applab' || this.props.appType === 'gamelab';
     const artistTwitterHandle =
       SongTitlesToArtistTwitterHandle[this.props.selectedSong];
 
@@ -283,9 +289,7 @@ class ShareAllowedDialog extends React.Component {
       ? twitterShareUrlDance
       : twitterShareUrlDefault;
 
-    const showShareWarning =
-      !this.props.canShareSocial &&
-      (this.props.appType === 'applab' || this.props.appType === 'gamelab');
+    const showShareWarning = !this.props.canShareSocial && isDroplet;
     let embedOptions;
     if (this.props.appType === 'applab') {
       embedOptions = {
@@ -413,6 +417,15 @@ class ShareAllowedDialog extends React.Component {
                       className="no-mc"
                     />
                   )}
+                  {experiments.isEnabled('student-libraries') && isDroplet && (
+                    <button
+                      type="button"
+                      onClick={this.props.openLibraryCreationDialog}
+                      style={styles.button}
+                    >
+                      {i18n.shareLibrary()}
+                    </button>
+                  )}
                   <DownloadReplayVideoButton
                     style={styles.button}
                     onError={this.replayVideoNotFound}
@@ -479,8 +492,7 @@ class ShareAllowedDialog extends React.Component {
                   </div>
                 )}
                 <div style={{clear: 'both', marginTop: 40}}>
-                  {(this.props.appType === 'applab' ||
-                    this.props.appType === 'gamelab') && (
+                  {isDroplet && (
                     <AdvancedShareOptions
                       allowExportExpo={this.props.allowExportExpo}
                       i18n={this.props.i18n}
@@ -498,6 +510,7 @@ class ShareAllowedDialog extends React.Component {
           )}
         </BaseDialog>
         <PublishDialog />
+        <LibraryCreationDialog channelId={this.props.channelId} />
       </div>
     );
   }
@@ -520,6 +533,10 @@ export default connect(
     },
     onUnpublish(projectId) {
       dispatch(unpublishProject(projectId));
+    },
+    openLibraryCreationDialog() {
+      dispatch(showLibraryCreationDialog());
+      dispatch(hideShareDialog());
     }
   })
 )(ShareAllowedDialog);

@@ -4,6 +4,7 @@ import {action} from '@storybook/addon-actions';
 import publishDialog from '@cdo/apps/templates/projects/publishDialog/publishDialogRedux';
 import pageConstants from '@cdo/apps/redux/pageConstants';
 import shareDialog from '@cdo/apps/code-studio/components/shareDialogRedux';
+import libraryCreation from './Libraries/libraryCreationRedux';
 
 const fakei18n = {
   t(s) {
@@ -27,7 +28,12 @@ const fakei18n = {
 export default storybook => {
   storybook
     .storiesOf('ShareAllowedDialog', module)
-    .withReduxStore({publishDialog, pageConstants, shareDialog})
+    .withReduxStore({
+      publishDialog,
+      pageConstants,
+      shareDialog,
+      libraryCreation
+    })
     .addStoryTable([
       {
         name: 'basic example',
@@ -42,6 +48,7 @@ export default storybook => {
               onClose={action('close')}
               onShowPublishDialog={action('show publish dialog')}
               onUnpublish={action('unpublish')}
+              openLibraryCreationDialog={action('open library creation dialog')}
               hideBackdrop={true}
               i18n={fakei18n}
               shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
@@ -68,6 +75,7 @@ export default storybook => {
               onClose={action('close')}
               onShowPublishDialog={action('show publish dialog')}
               onUnpublish={action('unpublish')}
+              openLibraryCreationDialog={action('open library creation dialog')}
               hideBackdrop={true}
               i18n={fakei18n}
               shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
@@ -95,6 +103,7 @@ export default storybook => {
               onClose={action('close')}
               onShowPublishDialog={action('show publish dialog')}
               onUnpublish={action('unpublish')}
+              openLibraryCreationDialog={action('open library creation dialog')}
               hideBackdrop={true}
               i18n={fakei18n}
               shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
@@ -121,6 +130,7 @@ export default storybook => {
               onClose={action('close')}
               onShowPublishDialog={action('show publish dialog')}
               onUnpublish={action('unpublish')}
+              openLibraryCreationDialog={action('open library creation dialog')}
               hideBackdrop={true}
               i18n={fakei18n}
               shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
@@ -148,6 +158,7 @@ export default storybook => {
               onClose={action('close')}
               onShowPublishDialog={action('show publish dialog')}
               onUnpublish={action('unpublish')}
+              openLibraryCreationDialog={action('open library creation dialog')}
               hideBackdrop={true}
               i18n={fakei18n}
               shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
@@ -175,6 +186,7 @@ export default storybook => {
               onClose={action('close')}
               onShowPublishDialog={action('show publish dialog')}
               onUnpublish={action('unpublish')}
+              openLibraryCreationDialog={action('open library creation dialog')}
               hideBackdrop={true}
               i18n={fakei18n}
               shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
@@ -201,6 +213,7 @@ export default storybook => {
               onClose={action('close')}
               onShowPublishDialog={action('show publish dialog')}
               onUnpublish={action('unpublish')}
+              openLibraryCreationDialog={action('open library creation dialog')}
               hideBackdrop={true}
               i18n={fakei18n}
               shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
@@ -227,6 +240,7 @@ export default storybook => {
               onClose={action('close')}
               onShowPublishDialog={action('show publish dialog')}
               onUnpublish={action('unpublish')}
+              openLibraryCreationDialog={action('open library creation dialog')}
               hideBackdrop={true}
               icon="https://studio.code.org/blockly/media/skins/pvz/static_avatar.png"
               i18n={fakei18n}
@@ -253,6 +267,7 @@ export default storybook => {
               onClose={action('close')}
               onShowPublishDialog={action('show publish dialog')}
               onUnpublish={action('unpublish')}
+              openLibraryCreationDialog={action('open library creation dialog')}
               hideBackdrop={true}
               i18n={fakei18n}
               shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
@@ -279,6 +294,7 @@ export default storybook => {
               onClose={action('close')}
               onShowPublishDialog={action('show publish dialog')}
               onUnpublish={action('unpublish')}
+              openLibraryCreationDialog={action('open library creation dialog')}
               hideBackdrop={true}
               i18n={fakei18n}
               shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
@@ -304,6 +320,7 @@ export default storybook => {
               onClose={action('close')}
               onShowPublishDialog={action('show publish dialog')}
               onUnpublish={action('unpublish')}
+              openLibraryCreationDialog={action('open library creation dialog')}
               hideBackdrop={true}
               i18n={fakei18n}
               shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
@@ -329,6 +346,7 @@ export default storybook => {
               onClose={action('close')}
               onShowPublishDialog={action('show publish dialog')}
               onUnpublish={action('unpublish')}
+              openLibraryCreationDialog={action('open library creation dialog')}
               hideBackdrop={true}
               i18n={fakei18n}
               shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
@@ -354,6 +372,7 @@ export default storybook => {
               onClose={action('close')}
               onShowPublishDialog={action('show publish dialog')}
               onUnpublish={action('unpublish')}
+              openLibraryCreationDialog={action('open library creation dialog')}
               hideBackdrop={true}
               i18n={fakei18n}
               shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
