@@ -7,6 +7,12 @@
     height: 34px
   }
 
+  /* Markdown content for label of required answer should get red asterisk at the end of last <p>. */
+  .markdown_required p:last-of-type:after {
+    content: ' *';
+    color: red;
+  }
+
 %h1
   2019-20 Professional Learning Program Teacher Application
 
