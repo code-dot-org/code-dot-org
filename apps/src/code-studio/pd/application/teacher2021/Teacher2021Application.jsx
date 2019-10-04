@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import FormController from '../../form_components/FormController';
-import Section1AboutYou from './Section1AboutYou';
+import AboutYou from './AboutYou';
 import Section2TeachingBackground from './Section2TeachingBackground';
 import Section3ChooseYourProgram from './Section3ChooseYourProgram';
 import Section4ProfessionalLearningProgramRequirements from './Section4ProfessionalLearningProgramRequirements';
@@ -62,7 +62,7 @@ export default class Teacher2021Application extends FormController {
    */
   getPageComponents() {
     return [
-      Section1AboutYou,
+      AboutYou,
       Section2TeachingBackground,
       Section3ChooseYourProgram,
       Section4ProfessionalLearningProgramRequirements,
