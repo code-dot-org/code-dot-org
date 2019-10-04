@@ -56,7 +56,7 @@
     "name_suffix": "_2019",
     "encrypted": "false",
     "mini_rubric": "false",
-    "validation_code": "// Check if each alien is a different color after a certain time has passed.\r\nif(World.frameCount > 180) {\r\n  if (getProp(\"blue alien\", \"tint\") && getProp(\"pink alien\", \"tint\") && getProp(\"yellow alien\", \"tint\")) {\r\n    levelSuccess(0);\r\n  } else {\r\n    levelSuccess(3);\r\n  }\r\n}",
+    "validation_code": "// Check if each alien is a different color after a certain time has passed.\r\nif(World.frameCount > 180) {\r\n  if (getProp({costume: \"blue alien\"}, \"tint\") && getProp({costume: \"pink alien\"}, \"tint\") && getProp({costume: \"yellow alien\"}, \"tint\")) {\r\n    levelSuccess(0);\r\n  } else {\r\n    levelSuccess(3);\r\n  }\r\n}",
     "block_pools": [
       "GamelabJr"
     ],

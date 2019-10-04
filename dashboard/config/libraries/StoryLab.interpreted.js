@@ -4,11 +4,21 @@ var setupCode = [];
 var currentSceneNumber = 0;
 var scenes = [];
 
-function addBehaviorUntilBoolean(spriteID, behavior, condition) {
-  if (spriteID && behavior) {
-    behavior.checkTerminate = condition;
-    addBehaviorSimple(spriteID, behavior);
-  }
+function addBehaviorUntilBoolean(spriteId, behavior, condition) {
+  setProp(spriteId, behavior.name, JSON.stringify(function() { return condition; }));
+  console.log(getProp(spriteId, behavior.name));
+  addBehaviorSimple(spriteId, behavior);
+}
+
+function removeInvalidBehaviors() {
+  getSpriteIdsInUse().forEach(function(spriteId) {
+  	getBehaviorsForSpriteId(spriteId).forEach(function(behavior) {
+      //console.log(JSON.parse(getProp(spriteId, behavior))());
+      if(getProp(spriteId, behavior)()) {
+        removeBehaviorSimple(spriteId, behavior);
+      }
+    });
+  });
 }
 
 function scene(sceneNumber, code) {
@@ -20,9 +30,9 @@ function setupStory(code) {
 }
 
 function runSetup() {
-  for(var i = 0; i < setupCode.length; i++) {
-  	setupCode[i].code();
-  }
+  setupCode.forEach(function(c) {
+  	c.code();
+  });
   setupCode = [];
 }
 
@@ -34,18 +44,20 @@ function goToScene(sceneNumber) {
 }
 
 function getCurrentScene() {
-  for(var i = 0; i < scenes.length; i++) {
-  	if(scenes[i].sceneNumber === currentSceneNumber) {
-      return scenes[i];
-    }
-  }
+  scenes.find(function(scene) {
+  	return scene.sceneNumber === currentSceneNumber;
+  });
+  return {};
 }
 
 function draw() {
+  /*
   if(setupCode.length > 0) {
   	runSetup();
   }
-  getCurrentScene().code();
+  */
+  //getCurrentScene().code();
   //getCurrentScene().code = function(){};
+  removeInvalidBehaviors();
   executeDrawLoopAndCallbacks();
 }
