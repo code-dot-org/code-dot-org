@@ -1089,6 +1089,8 @@ class User < ActiveRecord::Base
   # Returns the next script_level for the next progression level in the given
   # script that hasn't yet been passed, starting its search at the last level we submitted
   def next_unpassed_progression_level(script)
+    # If a script is hidden, return the first level in the script where the user will see a "your teacher didn't expect you here" message.
+    return  script.stages.first.script_levels.first if script_hidden?(script)
     # some of our user_levels may be for levels within level_groups, or for levels
     # that are no longer in this script. we want to ignore those, and only look
     # user_levels that have matching script_levels
@@ -1133,7 +1135,7 @@ class User < ActiveRecord::Base
   # Return true if script_level is a valid_progression_level and every
   # user_level is either missing or not passing
   def unpassed_progression_level?(script_level, user_levels)
-    script_level.valid_progression_level? && user_levels.all? do |user_level|
+    script_level.valid_progression_level?(self) && user_levels.all? do |user_level|
       !(user_level && user_level.passing?)
     end
   end
@@ -1187,11 +1189,30 @@ class User < ActiveRecord::Base
     end
   end
 
+  def stage_hidden?(stage)
+    SectionHiddenStage.where(
+      stage_id: stage.id,
+      section_id: sections_as_student.pluck(:id)
+    )
+  end
+
+  def all_stages_hidden?(script)
+    visible_stages = 0
+    script.stages.each do |stage|
+      break unless stage_hidden?(stage)
+      visible_stages += 1
+    end
+    visible_stages == 0
+  end
+
   # Is the given script hidden for this user (based on the sections that they are in)
   def script_hidden?(script)
     return false if try(:teacher?)
 
     return false if sections_as_student.empty?
+
+    # A script is effectively hidden if all of the stages within it are hidden.
+    return true if all_stages_hidden?(script)
 
     # Can't hide a script that isn't part of a course
     course = script.try(:course)
