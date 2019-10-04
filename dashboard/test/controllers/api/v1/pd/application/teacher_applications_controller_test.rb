@@ -16,7 +16,7 @@ module Api::V1::Pd::Application
 
       @program_manager = create :program_manager
       @partner = @program_manager.regional_partners.first
-      @application = create :pd_teacher1920_application, regional_partner: @partner
+      @application = create TEACHER_APPLICATION_FACTORY, regional_partner: @partner
     end
 
     setup do
