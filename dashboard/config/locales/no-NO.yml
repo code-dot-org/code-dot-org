@@ -456,6 +456,7 @@
     enter_parent_email: Angi dine foreldre eller foresattes epostadresse (for passordgjenoppretting)
     update: Oppdater konto
     account_successfully_updated: Kontoen er oppdatert.
+    update_email: Oppdater
   user_level:
     completed: Fullført
     tried: Forsøkt
