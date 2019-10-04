@@ -70,6 +70,7 @@ Scenario: Basic teacher application submission
 
   # Section 4
   Then I wait until element "h3" contains text "Section 4: Professional Learning Program Requirements"
+  Then I wait until element "input[name='committed']" is visible
   And I press "input[name='committed']:first" using jQuery
   And I click selector "input[name='payFee']" if I see it
   And I press the first "input[name='willingToTravel']" element

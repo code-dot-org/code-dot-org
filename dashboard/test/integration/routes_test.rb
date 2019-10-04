@@ -33,4 +33,9 @@ class RoutesTest < ActionDispatch::IntegrationTest
     assert_caching_disabled response.headers['Cache-Control']
     assert_not_nil cookies['_learn_session_test']
   end
+
+  def test_level_starter_assets_handles_periods
+    assert_generates('level_starter_assets/level_name.with.periods', {controller: 'level_starter_assets', action: 'show', level_name: 'level_name.with.periods'})
+    assert_generates('level_starter_assets/level_name_no_periods', {controller: 'level_starter_assets', action: 'show', level_name: 'level_name_no_periods'})
+  end
 end

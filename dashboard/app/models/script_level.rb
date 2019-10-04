@@ -205,7 +205,11 @@ class ScriptLevel < ActiveRecord::Base
     # in the stage, which is an assessment. Thus, to answer the question of
     # whether the nth level is locked, we must look at the last level
     last_script_level = stage.script_levels.last
-    user_level = user.user_level_for(last_script_level, last_script_level.oldest_active_level)
+    user_level = UserLevel.find_by(
+      user: user,
+      script: last_script_level.script,
+      level: last_script_level.oldest_active_level
+    )
     # There will initially be no user_level for the assessment level, at which
     # point it is considered locked. As soon as it gets unlocked, we will always
     # have a user_level

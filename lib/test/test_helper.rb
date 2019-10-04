@@ -15,15 +15,15 @@ class Level
   def try(property)
     false
   end
+
+  def game
+    "couldBeAnyLab"
+  end
 end
 
 class LevelAppLab
   def report_bug_url(request)
     "url"
-  end
-
-  def try(property)
-    property == :is_project_level
   end
 
   def game
@@ -36,12 +36,18 @@ class LevelGameLab
     "url"
   end
 
-  def try(property)
-    property == :is_project_level
+  def game
+    "GameLab"
+  end
+end
+
+class LevelSpriteLab
+  def report_bug_url(request)
+    "url"
   end
 
   def game
-    "GameLab"
+    "SpriteLab"
   end
 end
 
@@ -52,5 +58,9 @@ class Game
 
   def self.applab
     "AppLab"
+  end
+
+  def self.spritelab
+    "SpriteLab"
   end
 end
