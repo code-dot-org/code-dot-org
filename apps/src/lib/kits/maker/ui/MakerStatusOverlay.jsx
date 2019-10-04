@@ -6,12 +6,7 @@ import {connect} from 'react-redux';
 import color from '../../../../util/color';
 import FontAwesome from '../../../../templates/FontAwesome';
 import {getVisualizationScale} from '../../../../redux/layout';
-import {
-  isConnecting,
-  hasConnectionError,
-  getConnectionError,
-  useFakeBoardOnNextRun
-} from '../redux';
+import {isConnecting, hasConnectionError, getConnectionError} from '../redux';
 import {UnsupportedBrowserError} from '../MakerError';
 import OverlayButton from './OverlayButton';
 
@@ -33,7 +28,6 @@ export class UnconnectedMakerStatusOverlay extends Component {
     hasConnectionError: PropTypes.bool.isRequired,
     handleTryAgain: PropTypes.func.isRequired,
     handleDisableMaker: PropTypes.func.isRequired,
-    useFakeBoardOnNextRun: PropTypes.func.isRequired,
     handleOpenSetupPage: PropTypes.func.isRequired
   };
 
@@ -65,7 +59,6 @@ export class UnconnectedMakerStatusOverlay extends Component {
         <BoardNotFound
           {...dimensions}
           handleTryAgain={handleTryAgain}
-          useFakeBoardOnNextRun={this.props.useFakeBoardOnNextRun}
           handleOpenSetupPage={handleOpenSetupPage}
         />
       );
@@ -73,21 +66,15 @@ export class UnconnectedMakerStatusOverlay extends Component {
     return null;
   }
 }
-export default connect(
-  state => ({
-    scale: getVisualizationScale(state),
-    isConnecting: isConnecting(state),
-    isWrongBrowser:
-      getConnectionError(state) instanceof UnsupportedBrowserError,
-    hasConnectionError: hasConnectionError(state),
-    handleOpenSetupPage: () => {
-      window.open('/maker/setup', '_blank');
-    }
-  }),
-  {
-    useFakeBoardOnNextRun
+export default connect(state => ({
+  scale: getVisualizationScale(state),
+  isConnecting: isConnecting(state),
+  isWrongBrowser: getConnectionError(state) instanceof UnsupportedBrowserError,
+  hasConnectionError: hasConnectionError(state),
+  handleOpenSetupPage: () => {
+    window.open('/maker/setup', '_blank');
   }
-)(UnconnectedMakerStatusOverlay);
+}))(UnconnectedMakerStatusOverlay);
 
 const style = {
   root: {
@@ -203,13 +190,7 @@ class BoardNotFound extends Component {
   static propTypes = {
     ...overlayDimensionsPropTypes,
     handleTryAgain: PropTypes.func.isRequired,
-    useFakeBoardOnNextRun: PropTypes.func.isRequired,
     handleOpenSetupPage: PropTypes.func.isRequired
-  };
-
-  handleRunWithoutBoard = () => {
-    this.props.useFakeBoardOnNextRun();
-    this.props.handleTryAgain();
   };
 
   render() {
@@ -223,11 +204,6 @@ class BoardNotFound extends Component {
             text="Try Again"
             className="try-again"
             onClick={this.props.handleTryAgain}
-          />
-          <OverlayButton
-            text="Run Without Board"
-            className="run-without-board"
-            onClick={this.handleRunWithoutBoard}
           />
           <OverlayButton
             text="Setup Instructions"
