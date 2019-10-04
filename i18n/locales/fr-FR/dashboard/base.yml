@@ -1,3 +1,15 @@
+#Files in the config/locales directory are used for internationalization
+#and are automatically loaded by Rails. If you want to use locales other
+#than English, add the necessary files in this directory.
+#To use the locales, use `I18n.t`:
+#I18n.t 'hello'
+#In views, this is aliased to just `t`:
+#<%= t('hello') %>
+#To use a different locale, set it with `I18n.locale`:
+#I18n.locale = :es
+#This would use the information in config/locales/es.yml.
+#To learn more, please read the Rails Internationalization guide
+#available at http://guides.rubyonrails.org/i18n.html.
 fr:
   errors:
     messages:
@@ -417,6 +429,7 @@ fr:
     enter_parent_email: "Entrez l'adresse e-mail de vos parents ou de votre tuteur (pour la récupération de mot de passe)"
     update: "Mise à jour du compte"
     account_successfully_updated: "Compte actualisé avec succès."
+    update_email: "Mise à jour"
   user_level:
     completed: 'Terminé'
     tried: 'A essayé'
@@ -480,7 +493,7 @@ fr:
   footer:
     thank_you: 'Nous remercions nos <a href="https://code.org/about/donors"> donateurs</a>, <a href="https://code.org/about/partners"> partenaires</a>, notre <a href="https://code.org/about/team"> équipe étendue</a>, notre casting vidéo et nos <a href="https://code.org/about/advisors"> conseillers d''éducation</a> pour leur soutien à la création de Code Studio.'
     help_from_html: 'Nous tenons particulièrement à remercier les ingénieurs de Google, Microsoft, Facebook, Twitter et beaucoup d''autres organismes qui ont contribué à créer ce matériel.'
-    help_from_html_old: 'Les ingénieurs de Google, Microsoft, Facebook et Twitter ont contribué à créer ces matériels.'
+    help_from_html_old: 'Les ingénieurs de Google, Microsoft, Facebook et Twitter ont contribué à créer ces documents de formation.'
     art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Tous droits réservés. <br />Star Wars&#8482; &copy; %{current_year} Disney et Lucasfilm. Tous droits réservés.<br />La reine des neiges&#8482; &copy; %{current_year} Disney. Tous droits réservés. <br /> L’âge de glace&#8482; &copy; %{current_year} 20th Century Fox. Tous droits réservés. <br /> Angry Bird&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Tous droits réservés. <br /> Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Tous droits réservés. <br /> Le monde incroyable de Gumball est une marque commerciale et &copy; %{current_year} Cartoon Network.'
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Tous droits réservés. Star Wars&#8482; &copy; %{current_year} Disney et Lucasfilm. Tous droits réservés. La reine des neiges&#8482; &copy; %{current_year} Disney. Tous droits réservés. L’âge de glace&#8482; &copy; %{current_year} 20th Century Fox. Tous droits réservés. Angry Bird&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Tous droits réservés. Plantes vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Tous droits réservés. Le monde incroyable de Gumball est une marque commerciale et &copy; %{current_year} Cartoon Network.'
     code_from_html: 'Code.org utilise p5.play, qui est distribué sous la licence <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU LGPL 2.1</a>.'
@@ -616,6 +629,7 @@ fr:
       title: "Sports"
       body: "Créer un jeu de basket ou un mélange avec d'autres sports."
     text-compression:
+      title: "Compression de texte"
       body: "Dans cette leçon, les élèves utiliseront le Widget de Compression de texte pour compresser le texte en remplaçant des schémas par des symboles."
     unplugged:
       title: "Leçons en mode \"déconnecté\""
