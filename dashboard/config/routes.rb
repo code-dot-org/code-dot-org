@@ -1,6 +1,9 @@
 # For documentation see, e.g., http://guides.rubyonrails.org/routing.html.
 
 Dashboard::Application.routes.draw do
+  # Override Error Codes
+  match "/404", to: "errors#not_found", via: :all
+
   # React-router will handle sub-routes on the client.
   get 'teacher_dashboard/sections/:section_id/*path', to: 'teacher_dashboard#show', via: :all
   get 'teacher_dashboard/sections/:section_id', to: 'teacher_dashboard#show'
