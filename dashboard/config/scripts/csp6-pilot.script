@@ -19,7 +19,7 @@ level 'CSP U6L3 SFLP 20-21', progression: 'Lesson Overview'
 level 'U6L3 CFU Reasonable vs Unreasonable', progression: 'Check For Understanding', assessment: true
 level 'U6 L03 Evaluate Reasonable or Not', progression: 'Check For Understanding', assessment: true
 
-stage 'Traveling Salesman'
+stage 'The Limits of Algorithms'
 level 'CSP U6L4 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP U6L4 Traveling Salesman', progression: 'Widget: Traveling Salesman'
 level 'CSP U6L4 Random Traveling Salesman', progression: 'Widget: Traveling Salesman - Random Nodes'
@@ -28,3 +28,5 @@ level 'U6 L04 Unreasonable vs Undecidable', progression: 'Check For Understandin
 
 stage 'Parallel and Distributed Algorithms'
 level 'CSP U6L5 SFLP 20-21', progression: 'Lesson Overview'
+level 'U6L5 CFU Calculate Speedup', progression: 'Check For Understanding', assessment: true
+level 'U6 L05 Speedup Forever', progression: 'Check For Understanding', assessment: true

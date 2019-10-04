@@ -1,6 +1,16 @@
 name 'U6L5 CFU Calculate Speedup'
-question 'In which of the following situations is it most appropriate to use a heuristic solution?'
-wrong 'The only algorithms that provide exact solutions run in linear time'
-wrong 'The problem has been identified as undecidable'
-right 'The only algorithms that provide exact solutions run in unreasonable time but exact solutions are not necessary'
-wrong 'Two different algorithms have been identified that solve the problem in reasonable time'  
+wrong '2'
+right '3'
+wrong '20 mins'
+wrong '10 mins'
+
+markdown <<MARKDOWN
+An algorithm was initially written sequentially. Later it was determined that a parallel solution was possible and so the algorithm rewritten. The times to run each version of the algorithm are included in the table below.
+
+|Algorithm Type|Time|
+|---|---|
+|Sequential|30 mins|
+|Parallel|10 mins|
+
+What is the speedup of this parallel solution?
+MARKDOWN
