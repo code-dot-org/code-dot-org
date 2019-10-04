@@ -8,7 +8,7 @@ module Pd
     end
 
     SECTION_HEADERS = {
-      section_1_about_you: 'About You',
+      about_you: 'About You',
       section_2_teaching_background: 'Teaching Background',
       section_3_choose_your_program: 'Choose Your Program',
       section_4_professional_learning_program_requirements: 'Professional Learning Program Requirements',
@@ -17,7 +17,7 @@ module Pd
     }
 
     PAGE_LABELS = {
-      section_1_about_you: BASE_PAGE_LABELS[:section_1_about_you].slice(
+      about_you: BASE_PAGE_LABELS[:about_you].slice(
         :country,
         :first_name,
         :last_name,
@@ -150,7 +150,7 @@ module Pd
         notes_5: "Notes 5",
         alternate_email: "Alternate email",
         school_type: "School type",
-        district_name: PAGE_LABELS[:section_1_about_you][:school_district_name],
+        district_name: PAGE_LABELS[:about_you][:school_district_name],
         school_city: "School city",
         school_state: "School state",
         school_zip_code: "School zip code",
@@ -170,12 +170,12 @@ module Pd
         principal_approval_url: "Principal Approval Form URL"
       },
       principal: {
-        title: PAGE_LABELS[:section_1_about_you][:principal_title] + " (provided by principal)",
-        first_name: PAGE_LABELS[:section_1_about_you][:principal_first_name] + " (provided by principal)",
-        last_name: PAGE_LABELS[:section_1_about_you][:principal_last_name] + " (provided by principal)",
-        email: PAGE_LABELS[:section_1_about_you][:principal_email] + " (provided by principal)",
-        school_name: PAGE_LABELS[:section_1_about_you][:school_name] + " (provided by principal)",
-        district_name: PAGE_LABELS[:section_1_about_you][:school_district_name] + " (provided by principal)",
+        title: PAGE_LABELS[:about_you][:principal_title] + " (provided by principal)",
+        first_name: PAGE_LABELS[:about_you][:principal_first_name] + " (provided by principal)",
+        last_name: PAGE_LABELS[:about_you][:principal_last_name] + " (provided by principal)",
+        email: PAGE_LABELS[:about_you][:principal_email] + " (provided by principal)",
+        school_name: PAGE_LABELS[:about_you][:school_name] + " (provided by principal)",
+        district_name: PAGE_LABELS[:about_you][:school_district_name] + " (provided by principal)",
         do_you_approve: "Do you approve of this teacher participating in Code.org's 2020-21 Professional Learning Program?",
         plan_to_teach: "Is this teacher planning to teach this course in the 2020-21 school year?",
         total_student_enrollment: "Total student enrollment",

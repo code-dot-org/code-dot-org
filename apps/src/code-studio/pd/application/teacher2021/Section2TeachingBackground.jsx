@@ -14,7 +14,7 @@ import {styles} from './TeacherApplicationConstants';
 export default class Section2TeachingBackground extends LabeledFormComponent {
   static labels = {
     ...PageLabels.section2TeachingBackground,
-    ...PageLabels.section1AboutYou
+    ...PageLabels.aboutYou
   };
 
   static associatedFields = [
