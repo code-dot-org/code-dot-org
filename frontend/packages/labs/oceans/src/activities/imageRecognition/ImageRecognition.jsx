@@ -84,7 +84,7 @@ module.exports = class ImageRecognition extends React.Component {
                       key={i}
                       className={classData.name}
                       addTrainingExample={image => {
-                        this.simpleTrainer.addExampleImageImage(image, i);
+                        this.simpleTrainer.addExampleImage(image, i);
                         this.updateExampleCounts(i);
                       }}
                     />
