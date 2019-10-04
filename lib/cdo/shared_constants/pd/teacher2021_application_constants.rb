@@ -12,7 +12,7 @@ module Pd
       teaching_background: 'Teaching Background',
       choose_your_program: 'Choose Your Program',
       professional_learning_program_requirements: 'Professional Learning Program Requirements',
-      section_5_additional_demographic_information: 'Additional Demographic Information and submission',
+      additional_demographic_information: 'Additional Demographic Information and submission',
       school_stats_and_principal_approval_section: 'Principal Approval and School Information'
     }
 
@@ -100,7 +100,7 @@ module Pd
           understand_fee: "By checking this box, you indicate that you understand there may be a fee for the professional learning program you attend.",
           scholarship_reasons: "Please provide any additional information you'd like to share about why your application should be considered for a scholarship."
         },
-      section_5_additional_demographic_information:
+      additional_demographic_information:
         {
           gender_identity: 'Gender identity:',
           race: 'Race or ethnicity:',
@@ -164,7 +164,7 @@ module Pd
         previous_yearlong_cdo_pd: "Have you participated in previous yearlong Code.org Professional Learning Programs?",
         able_to_attend_multiple: "Please indicate which workshops you are able to attend.",
         willing_to_travel: "How far would you be willing to travel to academic year workshops?",
-        how_heard: PAGE_LABELS[:section_5_additional_demographic_information][:how_heard] + " (Teacher's response)",
+        how_heard: PAGE_LABELS[:additional_demographic_information][:how_heard] + " (Teacher's response)",
         gender_identity: "Teacher's gender identity",
         race: "Teacher's race",
         principal_approval_url: "Principal Approval Form URL"
