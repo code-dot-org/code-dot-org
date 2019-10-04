@@ -62,7 +62,7 @@ export function connect({interpreter, onDisconnect}) {
   }
 
   if (currentBoard) {
-    getBoard()
+    findPortWithViableDevice()
       .then(() => {
         commands.injectBoardController(currentBoard);
         currentBoard.installOnInterpreter(interpreter);
