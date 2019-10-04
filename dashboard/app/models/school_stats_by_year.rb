@@ -108,8 +108,11 @@ class SchoolStatsByYear < ActiveRecord::Base
     percent_of_students(frl_eligible_total)
   end
 
+  # Is this a rural school?
+  # Returns nil if there is no data. Otherwise returns true or false.
   def rural_school?
-    community_type&.starts_with? 'rural'
+    return nil unless community_type
+    community_type.starts_with? 'rural'
   end
 
   # returns what percent "count" is of the total student enrollment
