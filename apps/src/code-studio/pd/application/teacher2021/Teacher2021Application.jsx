@@ -5,7 +5,7 @@ import AboutYou from './AboutYou';
 import TeachingBackground from './TeachingBackground';
 import ChooseYourProgram from './ChooseYourProgram';
 import ProfessionalLearningProgramRequirements from './ProfessionalLearningProgramRequirements';
-import Section5AdditionalDemographicInformation from './Section5AdditionalDemographicInformation';
+import AdditionalDemographicInformation from './AdditionalDemographicInformation';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import queryString from 'query-string';
 /* global ga */
@@ -66,7 +66,7 @@ export default class Teacher2021Application extends FormController {
       TeachingBackground,
       ChooseYourProgram,
       ProfessionalLearningProgramRequirements,
-      Section5AdditionalDemographicInformation
+      AdditionalDemographicInformation
     ];
   }
 
