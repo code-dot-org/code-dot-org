@@ -106,21 +106,21 @@ export const sketch = p5 => {
   };
 
   p5.setFinColor = color => {
-    fins.color = color;
+    fish.fins.color = color;
   };
 
   p5.setTailSizeRelativeToBody = heightPercent => {
-    fins.tail.heightPercent = heightPercent;
+    fish.fins.tail.heightPercent = heightPercent;
   };
 
   p5.setTopFinSizeRelativeToBody = (widthPercent, heightPercent) => {
-    fins.topFin.widthPercent = widthPercent;
-    fins.topFin.heightPercent = heightPercent;
+    fish.fins.topFin.widthPercent = widthPercent;
+    fish.fins.topFin.heightPercent = heightPercent;
   };
 
   p5.setSideFinSizeRelativeToBody = (widthPercent, heightPercent) => {
-    fins.sideFin.widthPercent = widthPercent;
-    fins.sideFin.heightPercent = heightPercent;
+    fish.fins.sideFin.widthPercent = widthPercent;
+    fish.fins.sideFin.heightPercent = heightPercent;
   };
 
   p5.setup = () => {

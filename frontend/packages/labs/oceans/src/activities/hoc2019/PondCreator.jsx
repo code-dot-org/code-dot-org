@@ -39,8 +39,8 @@ export default class PondCreator extends React.Component {
     let fishData = {};
     for (let i = 0; i < numFish; i++) {
       const canvasId = `${canvasPrefix}-fish-canvas-${canvasNum}`;
-      canvasNum ++;
-      const colorIndex = Math.floor(Math.random() * COLORS.length)
+      canvasNum++;
+      const colorIndex = Math.floor(Math.random() * COLORS.length);
       fishData[canvasId] = {body: {color: COLORS[colorIndex]}};
     }
 
@@ -62,15 +62,15 @@ export default class PondCreator extends React.Component {
   };
 
   getClassTypeString = classType => {
-    switch(classType) {
+    switch (classType) {
       case ClassType.Like:
-        return "Like! :)";
+        return 'Like! :)';
       case ClassType.Dislike:
         return "Don't like :(";
       default:
-        return "I don't know"
+        return "I don't know";
     }
-  }
+  };
 
   render() {
     return (
@@ -115,7 +115,6 @@ export default class PondCreator extends React.Component {
             <Button onClick={() => this.switchToPredictions()}>
               Show another!
             </Button>
-
           </div>
         )}
       </div>
