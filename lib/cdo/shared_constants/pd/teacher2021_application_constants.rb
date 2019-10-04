@@ -9,7 +9,7 @@ module Pd
 
     SECTION_HEADERS = {
       about_you: 'About You',
-      section_2_teaching_background: 'Teaching Background',
+      teaching_background: 'Teaching Background',
       section_3_choose_your_program: 'Choose Your Program',
       section_4_professional_learning_program_requirements: 'Professional Learning Program Requirements',
       section_5_additional_demographic_information: 'Additional Demographic Information and submission',
@@ -49,8 +49,8 @@ module Pd
           how_heard: 'How did you hear about this program?'
         }
       ),
-      section_2_teaching_background:
-        BASE_PAGE_LABELS[:section_2_your_school].slice(
+      teaching_background:
+        BASE_PAGE_LABELS[:your_school].slice(
           :previous_yearlong_cdo_pd
         ),
       section_3_choose_your_program: {
