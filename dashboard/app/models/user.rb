@@ -1068,14 +1068,19 @@ class User < ActiveRecord::Base
 
     first_valid_level = valid_sls.min_by(&:chapter)
 
+    valid_incomplete_sls = valid_sls.find_all {|sl| valid_incomplete_level_ids.include?(sl.level_id)}
+
+    first_valid_incomplete_level = valid_incomplete_sls.min_by(&:chapter)
+
     completed_all_valid_levels = valid_incomplete_level_ids.empty?
 
-    # Find the user_levels associated with valid in progress script_levels
+    # Find the user_levels associated with valid in-progress script_levels
     valid_user_levels = user_levels.where(level_id: valid_in_progress_level_ids)
 
-    # The user has not made any visible progress or has completed all visible
-    # levels but not the entire script, return the first visible script_level
-    return first_valid_level if valid_user_levels.empty? || completed_all_valid_levels
+    # The user has not made any progress on valid levels or has completed all visible
+    # levels but not the entire script, return the first visible (incomplete) script_level
+    return first_valid_incomplete_level || first_valid_level if
+      valid_user_levels.empty? || completed_all_valid_levels
 
     # Most recently completed user_level of the visible subset
     most_recent_ul = valid_user_levels.max_by(&:created_at)
@@ -1088,13 +1093,6 @@ class User < ActiveRecord::Base
     # If the user started but didn't finish a level, go to that level.
     # Or if the user completed the last level but not all previous levels.
     return most_recent_sl if most_recent_sl == last_valid_level || !most_recent_ul.passing?
-
-    valid_incomplete_sls = valid_sls.find_all {|sl| valid_incomplete_level_ids.include?(sl.level_id)}
-
-    first_valid_incomplete_level = valid_incomplete_sls.min_by(&:chapter)
-
-    return first_valid_incomplete_level || first_valid_level if
-      most_recent_sl.nil?
 
     # Find the chapter for the script_level that goes with the most recent user_level
     most_recent_completed_chapter = most_recent_sl.chapter
