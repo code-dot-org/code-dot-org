@@ -305,6 +305,7 @@ sl:
     delete_text_teacher_note: 'Prosimo pomnite: brisanje vašega računa ne bo izbrisalo
       računov vaših študentov.'
     delete_confirm: Ali ste prepričani, da želite izbrisati svoj račun?
+    update_email: Posodobi
   user_level:
     completed: Zaključeno
     tried: Poskus
