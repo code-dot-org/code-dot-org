@@ -444,6 +444,7 @@ ar:
     enter_parent_email: أدخل البريد الالكتروني للأبوين/الوصي (لاسترجاع كلمة المرور)
     update: تحديث الحساب
     account_successfully_updated: تم تحديث الحساب بنجاح.
+    update_email: تحديث
   user_level:
     completed: أكمل
     tried: حاول
