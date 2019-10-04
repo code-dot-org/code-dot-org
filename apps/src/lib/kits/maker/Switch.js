@@ -43,8 +43,6 @@ export default class Switch extends EventEmitter {
      * fired, even if the state didn't change.
      * We cache the last known state of the switch so we only emit events when
      * the switch state changes.
-     * We don't initialize the lastKnownState so that we fire an event the first
-     * time we receive it, when the program starts.
      */
     let lastKnownState = undefined;
 
@@ -79,7 +77,7 @@ export default class Switch extends EventEmitter {
     // Listen to 'open' and 'close' events on the wrapped five.Switch controller.
     // Emit our own events only when we detect a state change.
     fiveSwitch.on('open', () => {
-      if (lastKnownState !== fiveSwitch.openValue) {
+      if (lastKnownState === fiveSwitch.closeValue) {
         this.emit('open');
         this.emit('change', fiveSwitch.openValue);
       }
@@ -87,7 +85,7 @@ export default class Switch extends EventEmitter {
     });
 
     fiveSwitch.on('close', () => {
-      if (lastKnownState !== fiveSwitch.closeValue) {
+      if (lastKnownState === fiveSwitch.openValue) {
         this.emit('close');
         this.emit('change', fiveSwitch.closeValue);
       }
