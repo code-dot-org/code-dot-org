@@ -4,7 +4,7 @@ import FormController from '../../form_components/FormController';
 import AboutYou from './AboutYou';
 import TeachingBackground from './TeachingBackground';
 import ChooseYourProgram from './ChooseYourProgram';
-import Section4ProfessionalLearningProgramRequirements from './Section4ProfessionalLearningProgramRequirements';
+import ProfessionalLearningProgramRequirements from './ProfessionalLearningProgramRequirements';
 import Section5AdditionalDemographicInformation from './Section5AdditionalDemographicInformation';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import queryString from 'query-string';
@@ -65,7 +65,7 @@ export default class Teacher2021Application extends FormController {
       AboutYou,
       TeachingBackground,
       ChooseYourProgram,
-      Section4ProfessionalLearningProgramRequirements,
+      ProfessionalLearningProgramRequirements,
       Section5AdditionalDemographicInformation
     ];
   }

@@ -11,7 +11,7 @@ module Pd
       about_you: 'About You',
       teaching_background: 'Teaching Background',
       choose_your_program: 'Choose Your Program',
-      section_4_professional_learning_program_requirements: 'Professional Learning Program Requirements',
+      professional_learning_program_requirements: 'Professional Learning Program Requirements',
       section_5_additional_demographic_information: 'Additional Demographic Information and submission',
       school_stats_and_principal_approval_section: 'Principal Approval and School Information'
     }
@@ -89,7 +89,7 @@ module Pd
         replace_existing: 'Will this course replace an existing computer science course in the master schedule? If yes, please list the course(s) that will be replaced.',
         replace_which_course: 'Which existing course or curriculum will it replace? Mark all that apply.'
       },
-      section_4_professional_learning_program_requirements:
+      professional_learning_program_requirements:
         {
           committed: BASE_PAGE_LABELS[:section_4_summer_workshop][:committed],
           able_to_attend_multiple: 'Your Regional Partner is hosting local summer workshop(s) at the following dates and locations. Please indicate which workshops you are able to attend. Select all that apply.',
