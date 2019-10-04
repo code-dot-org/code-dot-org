@@ -1,113 +1,96 @@
 import React from 'react';
+import fish from '../../utils/fishData';
 const P5 = require('../../utils/loadP5');
 
 export default class SpritesheetFish extends React.Component {
-  state = {
-    bodies: [
-      {
-        src: '/images/fish/body_1.png',
-        eyeAnchor: [45, 50],
-        mouthAnchor: [50, 50],
-        sideFinAnchor: [50, 55],
-        topFinAnchor: [50, 50],
-        tailAnchor: [55, 55]
-      },
-      {
-        src: '/images/fish/body_2.png',
-        eyeAnchor: [57, 47],
-        mouthAnchor: [50, 50],
-        sideFinAnchor: [50, 50],
-        topFinAnchor: [50, 50],
-        tailAnchor: [48, 51]
-      }
-    ],
-    eyes: [{src: '/images/fish/eye_1.png'}, {src: '/images/fish/eye_2.png'}],
-    mouths: [
-      {src: '/images/fish/mouth_1.png'},
-      {src: '/images/fish/mouth_2.png'}
-    ],
-    sideFins: [
-      {src: '/images/fish/side_fin_1.png'},
-      {src: '/images/fish/side_fin_2.png'}
-    ],
-    topFins: [
-      {src: '/images/fish/top_fin_1.png'},
-      {src: '/images/fish/top_fin_2.png'}
-    ],
-    tails: [{src: '/images/fish/tail_1.png'}, {src: '/images/fish/tail_2.png'}]
-  };
+  state = {...fish};
 
   componentDidMount() {
     this.p5 = new P5(this.sketch, 'canvas');
   }
 
   sketch = p5 => {
-    let bodyObj,
-      body,
-      eye1,
-      eye2,
-      mouth1,
-      mouth2,
-      sideFin1,
-      sideFin2,
-      topFin1,
-      topFin2,
-      tail1,
-      tail2;
+    let body,
+      bodyImg,
+      eye,
+      eyeImg,
+      mouth,
+      mouthImg,
+      sideFin,
+      sideFinImg,
+      topFin,
+      topFinImg,
+      tail,
+      tailImg;
 
     p5.preload = () => {
-      bodyObj = this.state.bodies[1];
-      body = p5.loadImage(bodyObj.src);
-      eye1 = p5.loadImage(this.state.eyes[0].src);
-      eye2 = p5.loadImage(this.state.eyes[1].src);
-      mouth1 = p5.loadImage(this.state.mouths[0].src);
-      mouth2 = p5.loadImage(this.state.mouths[1].src);
-      sideFin1 = p5.loadImage(this.state.sideFins[0].src);
-      sideFin2 = p5.loadImage(this.state.sideFins[1].src);
-      topFin1 = p5.loadImage(this.state.topFins[0].src);
-      topFin2 = p5.loadImage(this.state.topFins[1].src);
-      tail1 = p5.loadImage(this.state.tails[0].src);
-      tail2 = p5.loadImage(this.state.tails[1].src);
+      body = this.state.bodies.body1;
+      eye = this.state.eyes.eye2;
+      mouth = this.state.mouths.mouth2;
+      sideFin = this.state.sideFins.sideFin2;
+      topFin = this.state.topFins.topFin2;
+      tail = this.state.tails.tail2;
+
+      // Preload images to avoid race condition in setup method.
+      bodyImg = p5.loadImage(body.src);
+      eyeImg = p5.loadImage(eye.src);
+      mouthImg = p5.loadImage(mouth.src);
+      sideFinImg = p5.loadImage(sideFin.src);
+      topFinImg = p5.loadImage(topFin.src);
+      tailImg = p5.loadImage(tail.src);
     };
 
     p5.setup = () => {
       p5.createCanvas(200, 200);
-      // p5.background(220);
-      p5.background(0, 51, 153);
+      p5.background(220);
+      // p5.background(0, 51, 153);
 
-      // topFin choice
-      const topFinX = bodyObj.topFinAnchor[0];
-      const topFinY = bodyObj.topFinAnchor[1];
-      // p5.image(topFin1, topFinX, topFinY);
-      p5.image(topFin2, topFinX, topFinY);
+      // topFin
+      const topFinTransform = this.getTransform(topFin, body.id);
+      const topFinX =
+        body.anchor[0] + body.topFinAnchor[0] + topFinTransform[0];
+      const topFinY =
+        body.anchor[1] + body.topFinAnchor[1] + topFinTransform[1];
+      p5.image(topFinImg, topFinX, topFinY);
 
-      // tail choice
-      const tailX = bodyObj.tailAnchor[0];
-      const tailY = bodyObj.tailAnchor[1];
-      // p5.image(tail1, tailX, tailY);
-      p5.image(tail2, tailX, tailY);
+      // tail
+      const tailTransform = this.getTransform(tail, body.id);
+      const tailX = body.anchor[0] + body.tailAnchor[0] + tailTransform[0];
+      const tailY = body.anchor[1] + body.tailAnchor[1] + tailTransform[1];
+      p5.image(tailImg, tailX, tailY);
 
       // body
-      p5.image(body, 50, 50);
+      p5.image(bodyImg, body.anchor[0], body.anchor[1]);
 
-      // eye choice
-      const eyeX = bodyObj.eyeAnchor[0];
-      const eyeY = bodyObj.eyeAnchor[1];
-      // p5.image(eye1, eyeX, eyeY);
-      p5.image(eye2, eyeX, eyeY);
+      // eye
+      const eyeTransform = this.getTransform(eye, body.id);
+      const eyeX = body.anchor[0] + body.eyeAnchor[0] + eyeTransform[0];
+      const eyeY = body.anchor[1] + body.eyeAnchor[1] + eyeTransform[1];
+      p5.image(eyeImg, eyeX, eyeY);
 
-      // mouth choice
-      const mouthX = bodyObj.mouthAnchor[0];
-      const mouthY = bodyObj.mouthAnchor[1];
-      p5.image(mouth1, mouthX, mouthY);
-      // p5.image(mouth2, mouthX, mouthY);
+      // mouth
+      const mouthTransform = this.getTransform(mouth, body.id);
+      const mouthX = body.anchor[0] + body.mouthAnchor[0] + mouthTransform[0];
+      const mouthY = body.anchor[1] + body.mouthAnchor[1] + mouthTransform[1];
+      p5.image(mouthImg, mouthX, mouthY);
 
-      // sideFin choice
-      const sideFinX = bodyObj.sideFinAnchor[0];
-      const sideFinY = bodyObj.sideFinAnchor[1];
-      // p5.image(sideFin1, sideFinX, sideFinY);
-      p5.image(sideFin2, sideFinX, sideFinY);
+      // sideFin
+      const sideFinTransform = this.getTransform(sideFin, body.id);
+      const sideFinX =
+        body.anchor[0] + body.sideFinAnchor[0] + sideFinTransform[0];
+      const sideFinY =
+        body.anchor[1] + body.sideFinAnchor[1] + sideFinTransform[1];
+      p5.image(sideFinImg, sideFinX, sideFinY);
     };
+  };
+
+  getTransform = (obj, bodyId) => {
+    let transform = [0, 0];
+    if (obj.transforms && obj.transforms[bodyId]) {
+      transform[0] = obj.transforms[bodyId][0];
+      transform[1] = obj.transforms[bodyId][1];
+    }
+    return transform;
   };
 
   render() {
