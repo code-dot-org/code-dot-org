@@ -860,61 +860,19 @@ th:
         text: หันขวา
       Vector_positionCenter:
         text: ตรงกลาง
-      aalab_changePropByFlexible:
-        text: เปลี่ยน {SPRITE} {PROPERTY} โดย {VAL}
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': ขนาด
-            '"rotation"': การหมุน
-            '"x"': ตามแนวแกนนอน
-            '"y"': ตามแนวแกนตั้ง
-            '"direction"': ทิศทางการเคลื่อนไหว
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': เมื่อ (สัมผัสกัน)
-            '"while"': ในขณะที่
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': เมื่อ (สัมผัสกัน)
-            '"while"': ในขณะที่
-      aalab_jumpTo:
-        text: "{SPRITE} ข้ามไปที่ {LOCATION}"
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': เมื่อ (สัมผัสกัน)
-            '"while"': ในขณะที่
-          KEY:
-            '"up"': ขึ้นข้างบน
-            '"down"': เป็นตำแหน่ง
-            '"left"': ซ้าย
-            '"right"': ขวา
-            '"space"': อวกาศ
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': เมือง
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': จริง
-            '"false"': เท็จ
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': ขนาด
-            '"rotation"': การหมุน
-            '"x"': ตามแนวแกนนอน
-            '"y"': ตามแนวแกนตั้ง
-            '"direction"': ทิศทางการเคลื่อนไหว
-            '"tint"': ระดับอ่อนสี
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': ตลอดกาล
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
         options:
           OPTION:
             '"show"': แสดง
