@@ -111,7 +111,7 @@ Given(/^I navigate to the principal approval page for "([^"]*)"$/) do |name|
   require_rails_env
 
   user = User.find_by_email @users[name][:email]
-  application = Pd::Application::Teacher1920Application.find_by(user: user)
+  application = Pd::Application::ActiveApplicationModels::TEACHER_APPLICATION_CLASS.find_by(user: user)
 
   # TODO(Andrew) ensure regional partner in the original application, and remove this:
   application.update!(regional_partner: RegionalPartner.first)
