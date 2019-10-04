@@ -890,57 +890,19 @@ bs:
         text: okreni desno
       Vector_positionCenter:
         text: centralna
-      aalab_changePropByFlexible:
-        text: izmjeni {SPRITE} {PROPERTY} za {VAL}
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': veličina
-            '"rotation"': rotacija
-            '"direction"': smijer kretanja
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': kada
-            '"while"': dok
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': kada
-            '"while"': dok
-      aalab_jumpTo:
-        text: "{SPRITE} skoči na {LOCATION}"
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': kada
-            '"while"': dok
-          KEY:
-            '"up"': gore
-            '"down"': dolje
-            '"left"': lijevo
-            '"right"': desno
-            '"space"': svemir
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': grad
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': istinito
-            '"false"': neistinito
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': veličina
-            '"rotation"': rotacija
-            '"direction"': smijer kretanja
-            '"tint"': nijanse
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': zauvijek
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
         options:
           OPTION:
             '"show"': prikaži
