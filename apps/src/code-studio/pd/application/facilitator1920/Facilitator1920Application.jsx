@@ -4,7 +4,7 @@ import AboutYou from './AboutYou';
 import ChooseYourProgram from './ChooseYourProgram';
 import ExperienceAndCommitments from './ExperienceAndCommitments';
 import LeadingStudents from './LeadingStudents';
-import Section5YourApproachToLearningAndLeading from './Section5YourApproachToLearningAndLeading';
+import YourApproachToLearningAndLeading from './YourApproachToLearningAndLeading';
 import Section6Submission from './Section6Submission';
 
 export default class Facilitator1920Application extends FormController {
@@ -26,7 +26,7 @@ export default class Facilitator1920Application extends FormController {
       ChooseYourProgram,
       ExperienceAndCommitments,
       LeadingStudents,
-      Section5YourApproachToLearningAndLeading,
+      YourApproachToLearningAndLeading,
       Section6Submission
     ];
   }
