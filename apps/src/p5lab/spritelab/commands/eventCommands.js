@@ -17,9 +17,9 @@ export const commands = {
     }
   },
 
-  spriteClicked(condition, spriteId, callback) {
+  spriteClicked(condition, spriteArg, callback) {
     if (condition === 'when' || condition === 'while') {
-      coreLibrary.addEvent(condition + 'click', {sprite: spriteId}, callback);
+      coreLibrary.addEvent(condition + 'click', {sprite: spriteArg}, callback);
     }
   }
 };

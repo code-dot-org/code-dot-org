@@ -625,21 +625,15 @@ function getRecordsData(records) {
  *     "table_name2": [{ "city": "Seattle", "state": "WA" }, { "city": "Chicago", "state": "IL"}]
  *   }
  * @param {bool} overwrite Whether to overwrite a table if it already exists.
- * @param {function ()} onSuccess Function to call on success.
- * @param {function} onError Function to call with an error in case of failure.
+ * @returns {Promise} which resolves when all table data has been written
  */
-FirebaseStorage.populateTable = function(
-  jsonData,
-  overwrite,
-  onSuccess,
-  onError
-) {
+FirebaseStorage.populateTable = function(jsonData, overwrite) {
   if (!jsonData || !jsonData.length) {
-    return;
+    return Promise.resolve();
   }
   // Ensure rate limit counters have been initialized, so that updates to the
   // counters/tables node will pass type definition checks in the security rules.
-  incrementRateLimitCounters()
+  return incrementRateLimitCounters()
     .then(() => getExistingTables(overwrite))
     .then(existingTables => {
       const promises = [];
@@ -659,8 +653,7 @@ FirebaseStorage.populateTable = function(
         }
       }
       return Promise.all(promises);
-    })
-    .then(onSuccess, onError);
+    });
 };
 
 /**

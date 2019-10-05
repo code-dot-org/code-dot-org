@@ -1,14 +1,18 @@
 /* global p5 */
 import {expect} from '../../util/reconfiguredChai';
 import {commands} from '@cdo/apps/p5lab/spritelab/commands/spriteCommands';
+import {commands as actionCommands} from '@cdo/apps/p5lab/spritelab/commands/actionCommands';
 import * as coreLibrary from '@cdo/apps/p5lab/spritelab/coreLibrary';
 import createP5Wrapper from '../../util/gamelab/TestableP5Wrapper';
 
 describe('Sprite Commands', () => {
-  let p5Wrapper, createSprite, animation;
+  let p5Wrapper, makeSprite, animation;
+  const sprite1Name = 'sprite1';
+  const sprite2Name = 'sprite2';
+  const sprite3Name = 'sprite3';
   beforeEach(function() {
     p5Wrapper = createP5Wrapper();
-    createSprite = p5Wrapper.p5.createSprite.bind(p5Wrapper.p5);
+    makeSprite = commands.makeSprite.bind(p5Wrapper.p5);
     let image = new p5.Image(100, 100, p5Wrapper.p5);
     let frames = [{name: 0, frame: {x: 0, y: 0, width: 50, height: 50}}];
     let sheet = new p5Wrapper.p5.SpriteSheet(image, frames);
@@ -17,76 +21,71 @@ describe('Sprite Commands', () => {
   });
 
   it('countByAnimation', () => {
-    let sprite1 = createSprite();
-    let sprite2 = createSprite();
-    let sprite3 = createSprite();
-    sprite1.addAnimation('a', animation);
-    sprite2.addAnimation('b', animation);
-    sprite3.addAnimation('a', animation);
-    coreLibrary.addSprite(sprite1);
-    coreLibrary.addSprite(sprite2);
-    coreLibrary.addSprite(sprite3);
+    p5Wrapper.p5._predefinedSpriteAnimations = {a: animation, b: animation};
+    makeSprite({name: sprite1Name, animation: 'a'});
+    makeSprite({name: sprite2Name, animation: 'b'});
+    makeSprite({name: sprite3Name, animation: 'a'});
 
-    expect(commands.countByAnimation('a')).to.equal(2);
-    expect(commands.countByAnimation('b')).to.equal(1);
-    expect(commands.countByAnimation('c')).to.equal(0);
+    expect(commands.countByAnimation({costume: 'a'})).to.equal(2);
+    expect(commands.countByAnimation({costume: 'b'})).to.equal(1);
+    expect(commands.countByAnimation({costume: 'c'})).to.equal(0);
   });
 
   it('destroy single sprite', () => {
-    let sprite1 = createSprite();
-    let sprite2 = createSprite();
-    let id1 = coreLibrary.addSprite(sprite1);
-    let id2 = coreLibrary.addSprite(sprite2);
-    expect(coreLibrary.getSpriteIdsInUse()).to.have.members([id1, id2]);
+    makeSprite({name: sprite1Name});
+    makeSprite({name: sprite2Name});
 
-    commands.destroy(id1);
-    expect(coreLibrary.getSpriteIdsInUse()).to.have.members([id2]);
+    expect(coreLibrary.getSpriteIdsInUse()).to.have.members([0, 1]);
 
-    commands.destroy(id2);
+    commands.destroy({name: sprite1Name});
+    expect(coreLibrary.getSpriteIdsInUse()).to.have.members([1]);
+
+    commands.destroy({name: sprite2Name});
     expect(coreLibrary.getSpriteIdsInUse()).to.have.members([]);
   });
 
   it('destroy animation group', () => {
-    let sprite1 = createSprite();
-    let sprite2 = createSprite();
-    let sprite3 = createSprite();
-    sprite1.addAnimation('a', animation);
-    sprite2.addAnimation('b', animation);
-    sprite3.addAnimation('a', animation);
-    coreLibrary.addSprite(sprite1);
-    let id2 = coreLibrary.addSprite(sprite2);
-    coreLibrary.addSprite(sprite3);
+    p5Wrapper.p5._predefinedSpriteAnimations = {a: animation, b: animation};
+    makeSprite({name: sprite1Name, animation: 'a'});
+    makeSprite({name: sprite2Name, animation: 'b'});
+    makeSprite({name: sprite3Name, animation: 'a'});
 
-    commands.destroy('a');
+    commands.destroy({costume: 'a'});
 
-    expect(coreLibrary.getSpriteIdsInUse()).to.have.members([id2]);
+    expect(coreLibrary.getSpriteIdsInUse()).to.have.members([1]);
   });
 
   it('getProp for single sprite', () => {
-    let sprite = createSprite();
-    sprite.position.x = 123;
-    sprite.position.y = 321;
-    sprite.addAnimation('label', animation);
-    sprite.anotherProp = 'value';
-    let id = coreLibrary.addSprite(sprite);
-    expect(commands.getProp(id, 'x')).to.equal(123);
-    expect(commands.getProp(id, 'y')).to.equal(400 - 321);
-    expect(commands.getProp(id, 'costume')).to.equal('label');
-    expect(commands.getProp(id, 'anotherProp')).to.equal('value');
+    p5Wrapper.p5._predefinedSpriteAnimations = {label: animation};
+    makeSprite({
+      name: sprite1Name,
+      animation: 'label',
+      location: {x: 123, y: 321}
+    });
+    actionCommands.setProp({name: sprite1Name}, 'anotherProp', 'value');
+
+    expect(commands.getProp({name: sprite1Name}, 'x')).to.equal(123);
+    expect(commands.getProp({name: sprite1Name}, 'y')).to.equal(400 - 321);
+    expect(commands.getProp({name: sprite1Name}, 'costume')).to.equal('label');
+    expect(commands.getProp({name: sprite1Name}, 'anotherProp')).to.equal(
+      'value'
+    );
   });
 
   it('getProp for animation group uses the first sprite in the group', () => {
-    let sprite1 = createSprite();
-    sprite1.addAnimation('label', animation);
-    sprite1.position.x = 123;
-    coreLibrary.addSprite(sprite1);
+    p5Wrapper.p5._predefinedSpriteAnimations = {label: animation};
+    makeSprite({
+      name: sprite1Name,
+      animation: 'label',
+      location: {x: 123, y: 321}
+    });
+    makeSprite({
+      name: sprite2Name,
+      animation: 'label',
+      location: {x: 321, y: 123}
+    });
 
-    let sprite2 = createSprite();
-    sprite2.addAnimation('label', animation);
-    sprite2.position.x = 321;
-    coreLibrary.addSprite(sprite2);
-
-    expect(commands.getProp('label', 'x')).to.equal(123);
+    expect(commands.getProp({costume: 'label'}, 'x')).to.equal(123);
   });
 
   describe('makeSprite', () => {
@@ -102,56 +101,53 @@ describe('Sprite Commands', () => {
     });
 
     it('location defaults to (200,200)', () => {
-      let id = makeSprite();
-      expect(commands.getProp(id, 'x')).to.equal(200);
-      expect(commands.getProp(id, 'y')).to.equal(200);
+      makeSprite({name: sprite1Name});
+      expect(commands.getProp({name: sprite1Name}, 'x')).to.equal(200);
+      expect(commands.getProp({name: sprite1Name}, 'y')).to.equal(200);
     });
 
     it('location picker works', () => {
-      let id = makeSprite(undefined, {x: 123, y: 321});
-      expect(commands.getProp(id, 'x')).to.equal(123);
-      expect(commands.getProp(id, 'y')).to.equal(400 - 321);
+      makeSprite({name: sprite1Name, location: {x: 123, y: 321}});
+      expect(commands.getProp({name: sprite1Name}, 'x')).to.equal(123);
+      expect(commands.getProp({name: sprite1Name}, 'y')).to.equal(400 - 321);
     });
 
     it('location function works', () => {
       let locationFunc = () => ({x: 123, y: 321});
-      let id = makeSprite(undefined, locationFunc);
-      expect(commands.getProp(id, 'x')).to.equal(123);
-      expect(commands.getProp(id, 'y')).to.equal(400 - 321);
+      makeSprite({name: sprite1Name, location: locationFunc});
+      expect(commands.getProp({name: sprite1Name}, 'x')).to.equal(123);
+      expect(commands.getProp({name: sprite1Name}, 'y')).to.equal(400 - 321);
     });
 
     it('setting animation works', () => {
       p5Wrapper.p5._predefinedSpriteAnimations = {costume_label: animation};
-      let id = makeSprite('costume_label');
-      expect(commands.getProp(id, 'costume')).to.equal('costume_label');
+      makeSprite({name: sprite1Name, animation: 'costume_label'});
+      expect(commands.getProp({name: sprite1Name}, 'costume')).to.equal(
+        'costume_label'
+      );
     });
   });
 
   it('setAnimation for single sprite', () => {
     p5Wrapper.p5._predefinedSpriteAnimations = {costume_label: animation};
-    let sprite = createSprite();
-    let id = coreLibrary.addSprite(sprite);
-    commands.setAnimation(id, 'costume_label');
-    expect(commands.getProp(id, 'costume')).to.equal('costume_label');
+    makeSprite({name: sprite1Name});
+    commands.setAnimation({name: sprite1Name}, 'costume_label');
+    expect(commands.getProp({name: sprite1Name}, 'costume')).to.equal(
+      'costume_label'
+    );
   });
 
   it('setAnimation for animation group', () => {
-    p5Wrapper.p5._predefinedSpriteAnimations = {costume_label: animation};
-    let sprite1 = createSprite();
-    sprite1.addAnimation('a', animation);
-    let sprite2 = createSprite();
-    sprite2.addAnimation('a', animation);
-    let sprite3 = createSprite();
-    sprite3.addAnimation('a', animation);
+    p5Wrapper.p5._predefinedSpriteAnimations = {
+      a: animation,
+      costume_label: animation
+    };
+    makeSprite({name: sprite1Name, animation: 'a'});
+    makeSprite({name: sprite2Name, animation: 'a'});
+    makeSprite({name: sprite3Name, animation: 'a'});
 
-    coreLibrary.addSprite(sprite1);
-    coreLibrary.addSprite(sprite2);
-    coreLibrary.addSprite(sprite3);
+    commands.setAnimation({costume: 'a'}, 'costume_label');
 
-    commands.setAnimation('a', 'costume_label');
-
-    expect(sprite1.getAnimationLabel()).to.equal('costume_label');
-    expect(sprite2.getAnimationLabel()).to.equal('costume_label');
-    expect(sprite3.getAnimationLabel()).to.equal('costume_label');
+    expect(coreLibrary.getAnimationsInUse()).to.deep.equal(['costume_label']);
   });
 });
