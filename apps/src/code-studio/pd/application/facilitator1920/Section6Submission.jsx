@@ -10,7 +10,7 @@ import {
 export default class Section6Submission extends LabeledFormComponent {
   static labels = {
     ...PageLabels.section6Submission,
-    ...PageLabels.section1AboutYou
+    ...PageLabels.aboutYou
   };
 
   static associatedFields = [
