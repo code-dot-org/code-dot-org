@@ -8,11 +8,11 @@ import {
 } from '@cdo/apps/generated/pd/facilitator1920ApplicationConstants';
 import {CSF} from '../ApplicationConstants';
 
-export default class Section4LeadingStudents extends LabeledFormComponent {
-  static labels = PageLabels.section4LeadingStudents;
+export default class LeadingStudents extends LabeledFormComponent {
+  static labels = PageLabels.leadingStudents;
 
   static associatedFields = [
-    ...Object.keys(PageLabels.section4LeadingStudents),
+    ...Object.keys(PageLabels.leadingStudents),
     'currentlyInvolvedInCsEducation_other'
   ];
 
@@ -20,7 +20,7 @@ export default class Section4LeadingStudents extends LabeledFormComponent {
     const program = this.props.data.program || 'CS Program';
     return (
       <FormGroup>
-        <h3>Section 4: {SectionHeaders.section4LeadingStudents}</h3>
+        <h3>Section 4: {SectionHeaders.leadingStudents}</h3>
         {this.checkBoxesWithAdditionalTextFieldsFor(
           'currentlyInvolvedInCsEducation',
           {
