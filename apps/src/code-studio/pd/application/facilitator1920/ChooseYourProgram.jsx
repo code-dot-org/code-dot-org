@@ -8,12 +8,10 @@ import {
 } from '@cdo/apps/generated/pd/facilitator1920ApplicationConstants';
 import {YES, CSF, CSD, CSP} from '../ApplicationConstants';
 
-export default class Section2ChooseYourProgram extends LabeledFormComponent {
-  static labels = PageLabels.section2ChooseYourProgram;
+export default class ChooseYourProgram extends LabeledFormComponent {
+  static labels = PageLabels.chooseYourProgram;
 
-  static associatedFields = [
-    ...Object.keys(PageLabels.section2ChooseYourProgram)
-  ];
+  static associatedFields = [...Object.keys(PageLabels.chooseYourProgram)];
 
   componentWillUnmount() {
     if (this.loadPartnerRequest) {
@@ -83,7 +81,7 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
   render() {
     return (
       <FormGroup>
-        <h3>Section 2: {SectionHeaders.section2ChooseYourProgram}</h3>
+        <h3>Section 2: {SectionHeaders.chooseYourProgram}</h3>
         <p>
           We offer our Facilitator Development Program for three Code.org
           courses. For more details about the requirements to facilitate each
@@ -99,7 +97,7 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
 
         {this.buildButtons({
           name: 'program',
-          label: Section2ChooseYourProgram.labels['program'],
+          label: ChooseYourProgram.labels['program'],
           type: 'radio',
           required: true,
           answers: [
