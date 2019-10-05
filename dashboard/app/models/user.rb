@@ -1190,19 +1190,15 @@ class User < ActiveRecord::Base
   end
 
   def stage_hidden?(stage)
-    SectionHiddenStage.where(
+    section_hidden_stages = SectionHiddenStage.where(
       stage_id: stage.id,
       section_id: sections_as_student.pluck(:id)
     )
+    !section_hidden_stages.empty?
   end
 
   def all_stages_hidden?(script)
-    visible_stages = 0
-    script.stages.each do |stage|
-      break unless stage_hidden?(stage)
-      visible_stages += 1
-    end
-    visible_stages == 0
+    script.stages.detect {|stage| !stage_hidden?(stage)}.nil?
   end
 
   # Is the given script hidden for this user (based on the sections that they are in)
