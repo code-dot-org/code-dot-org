@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import FormController from '../../form_components/FormController';
 import AboutYou from './AboutYou';
 import ChooseYourProgram from './ChooseYourProgram';
-import Section3ExperienceAndCommitments from './Section3ExperienceAndCommitments';
+import ExperienceAndCommitments from './ExperienceAndCommitments';
 import Section4LeadingStudents from './Section4LeadingStudents';
 import Section5YourApproachToLearningAndLeading from './Section5YourApproachToLearningAndLeading';
 import Section6Submission from './Section6Submission';
@@ -24,7 +24,7 @@ export default class Facilitator1920Application extends FormController {
     return [
       AboutYou,
       ChooseYourProgram,
-      Section3ExperienceAndCommitments,
+      ExperienceAndCommitments,
       Section4LeadingStudents,
       Section5YourApproachToLearningAndLeading,
       Section6Submission
