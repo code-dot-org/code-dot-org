@@ -112,7 +112,12 @@ class SchoolStatsByYear < ActiveRecord::Base
   # Returns nil if there is no data. Otherwise returns true or false.
   def rural_school?
     return nil unless community_type
-    community_type.starts_with? 'rural'
+
+    # The Rural Education Achievement Program (REAP) accepts the following NCES locale codes
+    # as "rural": town (distant and remote subcategories)
+    # and rural (fringe, distant, and remote subcategories).
+    %w(town_distant town_remote rural_fringe rural_distant rural_remote).
+      any? {|type| community_type == type}
   end
 
   # returns what percent "count" is of the total student enrollment
