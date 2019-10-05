@@ -172,7 +172,7 @@ module Pd
 
     LABEL_OVERRIDES = {
       taught_in_past: 'Have you taught computer science courses or activities in the past?',
-      program: 'Which professional learning program would you like to join for the 2018-19 school year?',
+      program: 'Which professional learning program would you like to join for the 2020-21 school year?',
       csd_which_grades: 'To which grades does your school plan to offer CS Discoveries?',
       csp_which_grades: 'To which grades does your school plan to offer CS Principles?',
       csp_ap_exam: 'Are you planning for your students to take the AP CS Principles exam in the spring of 2019?',

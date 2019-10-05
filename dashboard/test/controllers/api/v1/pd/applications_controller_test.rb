@@ -921,9 +921,8 @@ module Api::V1::Pd
     end
 
     test 'cohort csv download returns expected columns for teachers' do
-      skip 'Implement Principal Approval 2021'
       application = create TEACHER_APPLICATION_FACTORY, course: 'csp'
-      create :pd_principal_approval1920_application, teacher_application: application
+      create PRINCIPAL_APPROVAL_FACTORY, teacher_application: application
       application.update(status: 'accepted_not_notified')
       sign_in @workshop_admin
       get :cohort_view, format: 'csv', params: {role: 'csp_teachers'}
@@ -976,12 +975,9 @@ module Api::V1::Pd
         "How many days per week will your CS program class be offered to one section of students?",
         "How many weeks during the year will this course be taught to one section of students?",
         "Total course hours",
-        "How will you be offering this CS program course to students?",
         "Do you plan to personally teach this course in the 2020-21 school year?",
         "Will this course replace an existing computer science course in the master schedule? (Teacher's response)",
-        "If yes, please describe the course it will be replacing and why:",
-        "What subjects are you teaching this year (2020-21)?",
-        "Have you taught computer science courses or activities in the past?",
+        "Which existing course or curriculum will it replace? Mark all that apply.",
         "Have you participated in previous yearlong Code.org Professional Learning Programs?",
         "Are you committed to participating in the entire Professional Learning Program?",
         "Please indicate which workshops you are able to attend.",

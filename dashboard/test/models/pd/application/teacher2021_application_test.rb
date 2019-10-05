@@ -523,7 +523,7 @@ module Pd::Application
 
     test 'autoscore with everything getting positive response for csd' do
       options = Pd::Application::Teacher2021Application.options
-      principal_options = Pd::Application::PrincipalApproval1920Application.options
+      principal_options = Pd::Application::PrincipalApproval2021Application.options
 
       application_hash = build :pd_teacher2021_application_hash,
         program: Pd::Application::TeacherApplicationBase::PROGRAMS[:csd],
@@ -535,12 +535,10 @@ module Pd::Application
         committed: options[:committed].first,
         race: options[:race].first(2),
         principal_approval: principal_options[:do_you_approve].first,
-        principal_plan_to_teach: principal_options[:plan_to_teach].first,
         principal_schedule_confirmed: principal_options[:committed_to_master_schedule].first,
         principal_diversity_recruitment: principal_options[:committed_to_diversity].first,
         principal_free_lunch_percent: 50,
         principal_underrepresented_minority_percent: 50,
-        principal_implementation: principal_options[:csd_implementation].second,
         principal_wont_replace_existing_course: principal_options[:replace_course].second
 
       application = create :pd_teacher2021_application, regional_partner: (create :regional_partner), form_data_hash: application_hash
@@ -554,7 +552,6 @@ module Pd::Application
             plan_to_teach: YES,
             committed: YES,
             principal_schedule_confirmed: YES,
-            principal_implementation: YES
           },
           meets_scholarship_criteria_scores: {
             plan_to_teach: YES,
@@ -568,7 +565,6 @@ module Pd::Application
             race: 2,
             free_lunch_percent: 5,
             underrepresented_minority_percent: 5,
-            principal_implementation: 2,
           },
         }.deep_stringify_keys,
         JSON.parse(application.response_scores)
@@ -577,7 +573,7 @@ module Pd::Application
 
     test 'autoscore with everything getting a positive response for csp' do
       options = Pd::Application::Teacher2021Application.options
-      principal_options = Pd::Application::PrincipalApproval1920Application.options
+      principal_options = Pd::Application::PrincipalApproval2021Application.options
 
       application_hash = build :pd_teacher2021_application_hash,
         program: Pd::Application::TeacherApplicationBase::PROGRAMS[:csp],
@@ -589,12 +585,10 @@ module Pd::Application
         committed: options[:committed].first,
         race: options[:race].first(2),
         principal_approval: principal_options[:do_you_approve].first,
-        principal_plan_to_teach: principal_options[:plan_to_teach].first,
         principal_schedule_confirmed: principal_options[:committed_to_master_schedule].first,
         principal_diversity_recruitment: principal_options[:committed_to_diversity].first,
         principal_free_lunch_percent: 50,
         principal_underrepresented_minority_percent: 50,
-        principal_implementation: principal_options[:csp_implementation].first,
         principal_wont_replace_existing_course: principal_options[:replace_course].second
 
       application = create :pd_teacher2021_application, regional_partner: (create :regional_partner), form_data_hash: application_hash
@@ -608,7 +602,6 @@ module Pd::Application
             plan_to_teach: YES,
             committed: YES,
             principal_schedule_confirmed: YES,
-            principal_implementation: YES
           },
           meets_scholarship_criteria_scores: {
             plan_to_teach: YES,
@@ -669,7 +662,7 @@ module Pd::Application
 
     test 'autoscore with everything getting negative response for csd' do
       options = Pd::Application::Teacher2021Application.options
-      principal_options = Pd::Application::PrincipalApproval1920Application.options
+      principal_options = Pd::Application::PrincipalApproval2021Application.options
 
       application_hash = build :pd_teacher2021_application_hash,
         program: Pd::Application::TeacherApplicationBase::PROGRAMS[:csd],
@@ -681,7 +674,6 @@ module Pd::Application
         committed: options[:committed].last,
         race: [options[:race].first],
         principal_approval: principal_options[:do_you_approve].last,
-        principal_plan_to_teach: principal_options[:plan_to_teach].fourth,
         principal_schedule_confirmed: principal_options[:committed_to_master_schedule].third,
         principal_diversity_recruitment: principal_options[:committed_to_diversity].last,
         principal_free_lunch_percent: 49,
@@ -696,13 +688,10 @@ module Pd::Application
           meets_minimum_criteria_scores: {
             regional_partner_name: NO,
             csd_which_grades: NO,
-            plan_to_teach: NO,
             committed: NO,
             principal_schedule_confirmed: NO,
-            principal_implementation: NO
           },
           meets_scholarship_criteria_scores: {
-            plan_to_teach: NO,
             previous_yearlong_cdo_pd: NO,
             principal_approval: NO,
             principal_schedule_confirmed: NO,
@@ -713,7 +702,6 @@ module Pd::Application
             race: 0,
             free_lunch_percent: 0,
             underrepresented_minority_percent: 0,
-            principal_implementation: 0
           },
         }.deep_stringify_keys,
         JSON.parse(application.response_scores)
@@ -722,7 +710,7 @@ module Pd::Application
 
     test 'autoscore with everything getting negative response for csp' do
       options = Pd::Application::Teacher2021Application.options
-      principal_options = Pd::Application::PrincipalApproval1920Application.options
+      principal_options = Pd::Application::PrincipalApproval2021Application.options
 
       application_hash = build :pd_teacher2021_application_hash,
         program: Pd::Application::TeacherApplicationBase::PROGRAMS[:csp],
@@ -734,7 +722,6 @@ module Pd::Application
         committed: options[:committed].last,
         race: [options[:race].first],
         principal_approval: principal_options[:do_you_approve].last,
-        principal_plan_to_teach: principal_options[:plan_to_teach].fourth,
         principal_schedule_confirmed: principal_options[:committed_to_master_schedule].third,
         principal_diversity_recruitment: principal_options[:committed_to_diversity].last,
         principal_free_lunch_percent: 49,
@@ -749,13 +736,10 @@ module Pd::Application
           meets_minimum_criteria_scores: {
             regional_partner_name: NO,
             csp_which_grades: NO,
-            plan_to_teach: NO,
             committed: NO,
-            principal_implementation: NO,
             principal_schedule_confirmed: NO,
           },
           meets_scholarship_criteria_scores: {
-            plan_to_teach: NO,
             previous_yearlong_cdo_pd: NO,
             principal_approval: NO,
             principal_schedule_confirmed: NO,
@@ -784,45 +768,38 @@ module Pd::Application
 
     test 'principal responses override teacher responses for scoring' do
       options = Pd::Application::Teacher2021Application.options
-      principal_options = Pd::Application::PrincipalApproval1920Application.options
+      principal_options = Pd::Application::PrincipalApproval2021Application.options
 
       application_hash = build :pd_teacher2021_application_hash,
-        plan_to_teach: options[:plan_to_teach].third,
         replace_existing: options[:replace_existing].first
 
       application = create :pd_teacher2021_application, form_data_hash: application_hash
 
       application.auto_score!
 
-      assert_equal NO, application.response_scores_hash[:meets_scholarship_criteria_scores][:plan_to_teach]
-      assert_equal NO, application.response_scores_hash[:meets_minimum_criteria_scores][:plan_to_teach]
       assert_equal 0, application.response_scores_hash[:bonus_points_scores][:replace_existing]
 
       application.update_form_data_hash(
         {
           principal_approval: principal_options[:do_you_approve].first,
-          principal_plan_to_teach: principal_options[:plan_to_teach].first,
           principal_wont_replace_existing_course: principal_options[:replace_course].second
         }
       )
 
       application.auto_score!
 
-      assert_equal YES, application.response_scores_hash[:meets_scholarship_criteria_scores][:plan_to_teach]
-      assert_equal YES, application.response_scores_hash[:meets_minimum_criteria_scores][:plan_to_teach]
       assert_equal 5, application.response_scores_hash[:bonus_points_scores][:replace_existing]
     end
 
     test 'nil results when applicable' do
       options = Pd::Application::Teacher2021Application.options
-      principal_options = Pd::Application::PrincipalApproval1920Application.options
+      principal_options = Pd::Application::PrincipalApproval2021Application.options
 
       application_hash = build :pd_teacher2021_application_hash,
         program: Pd::Application::TeacherApplicationBase::PROGRAMS[:csp],
         plan_to_teach: options[:plan_to_teach].last,
         replace_existing: options[:replace_existing].first,
         principal_approval: principal_options[:do_you_approve].first,
-        principal_plan_to_teach: principal_options[:plan_to_teach].last,
         principal_schedule_confirmed: principal_options[:committed_to_master_schedule].fourth,
         principal_wont_replace_existing_course: principal_options[:replace_course].last
 
@@ -832,13 +809,12 @@ module Pd::Application
 
       response_scores_hash = application.response_scores_hash
 
-      assert_equal [nil, nil], response_scores_hash[:meets_minimum_criteria_scores].slice(:plan_to_teach, :principal_schedule_confirmed).values
-      assert_equal [nil, nil], response_scores_hash[:meets_scholarship_criteria_scores].slice(:plan_to_teach, :principal_schedule_confirmed).values
+      assert_nil response_scores_hash[:meets_minimum_criteria_scores][:principal_schedule_confirmed]
+      assert_nil response_scores_hash[:meets_scholarship_criteria_scores][:principal_schedule_confirmed]
       assert_nil response_scores_hash[:bonus_points_scores][:replace_existing]
     end
 
     test 'principal_approval_state' do
-      skip 'Implement Principal Approval 2021'
       application = create :pd_teacher2021_application
       assert_nil application.principal_approval_state
 
@@ -856,7 +832,7 @@ module Pd::Application
       application.emails.last.destroy
       assert_equal 'Not required', application.reload.principal_approval_state
 
-      create :pd_principal_approval1920_application, teacher_application: application, approved: 'Yes'
+      create :pd_principal_approval2021_application, teacher_application: application, approved: 'Yes'
       assert_equal 'Complete - Yes', application.reload.principal_approval_state
     end
 
@@ -937,7 +913,6 @@ module Pd::Application
     private
 
     test 'test allow_sending_principal_email?' do
-      skip 'Implement Principal Approval 2021'
       # By default we can send.
       application = create :pd_teacher2021_application
       assert application.allow_sending_principal_email?
@@ -969,7 +944,7 @@ module Pd::Application
 
       # If we already have a principal response, we can't send.
       application = create :pd_teacher2021_application
-      create :pd_principal_approval1920_application, teacher_application: application
+      create :pd_principal_approval2021_application, teacher_application: application
       refute application.allow_sending_principal_email?
 
       # If we created a principal email < 5 days ago, we can't send.
@@ -984,7 +959,6 @@ module Pd::Application
     end
 
     test 'test allow_sending_principal_approval_teacher_reminder_email?' do
-      skip 'Implement Principal Approval 2021'
       # By default we can't send.
       application = create :pd_teacher2021_application
       refute application.allow_sending_principal_approval_teacher_reminder_email?
@@ -1027,7 +1001,7 @@ module Pd::Application
 
       # If we already have a principal response, we can't send.
       application = create :pd_teacher2021_application
-      create :pd_principal_approval1920_application, teacher_application: application
+      create :pd_principal_approval2021_application, teacher_application: application
       create :pd_application_email, application: application, email_type: 'principal_approval', created_at: 6.days.ago
       refute application.allow_sending_principal_approval_teacher_reminder_email?
 

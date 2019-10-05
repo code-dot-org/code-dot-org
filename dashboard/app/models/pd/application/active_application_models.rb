@@ -7,13 +7,13 @@ module Pd
 
       # Active (this year's) application classes and factories
       TEACHER_APPLICATION_CLASS = Teacher2021Application
-      PRINCIPAL_APPROVAL_APPLICATION_CLASS = PrincipalApproval1920Application
+      PRINCIPAL_APPROVAL_APPLICATION_CLASS = PrincipalApproval2021Application
       FACILITATOR_APPLICATION_CLASS = Facilitator1920Application
 
       TEACHER_APPLICATION_FACTORY = :pd_teacher2021_application
       TEACHER_APPLICATION_HASH_FACTORY = :pd_teacher2021_application_hash
-      PRINCIPAL_APPROVAL_FACTORY = :pd_principal_approval1920_application
-      PRINCIPAL_APPROVAL_HASH_FACTORY = :pd_principal_approval1920_application_hash
+      PRINCIPAL_APPROVAL_FACTORY = :pd_principal_approval2021_application
+      PRINCIPAL_APPROVAL_HASH_FACTORY = :pd_principal_approval2021_application_hash
       FACILITATOR_APPLICATION_FACTORY = :pd_facilitator1920_application
       FACILITATOR_APPLICATION_HASH_FACTORY = :pd_facilitator1920_application_hash
 
