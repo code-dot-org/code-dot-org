@@ -170,7 +170,7 @@ ManageAssets.propTypes = {
 };
 
 export function ManageLibraries(props) {
-  return <PopUpMenu.Item {...props}>Manage Libraries</PopUpMenu.Item>;
+  return <PopUpMenu.Item {...props}>{msg.manageLibraries()}</PopUpMenu.Item>;
 }
 
 export function ToggleMaker(props) {

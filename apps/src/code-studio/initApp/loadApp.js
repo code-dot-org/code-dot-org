@@ -482,7 +482,6 @@ const sourceHandler = {
   },
   getLibrariesList() {
     return getAppOptions().level.libraries;
-    // return window.Applab && Applab.getLibraries();
   },
   setInitialLevelSource(levelSource) {
     getAppOptions().level.lastAttempt = levelSource;
