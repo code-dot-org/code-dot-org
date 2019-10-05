@@ -110,17 +110,11 @@ class UserLevel < ActiveRecord::Base
   def after_submit
     submitted_level = Level.cache_find(level_id)
 
-    # Create peer reviews after submitting a peer_reviewable solution
+    # Some levels that belong to the professional learning program are peer reviewable.
+    # When submitting such a level, we create a record for a pending peer review, so that
+    # it becomes available for another teacher in the program to review.
     if submitted_level.try(:peer_reviewable?)
-      submitted_script_level = submitted_level.script_levels.find_by(script_id: script_id)
-      learning_module = submitted_script_level&.stage&.plc_learning_module
-      assignment_exists = learning_module && Plc::EnrollmentModuleAssignment.exists?(
-        user_id: user_id,
-        plc_learning_module: learning_module
-      )
-      if assignment_exists
-        PeerReview.create_for_submission(self, level_source_id)
-      end
+      PeerReview.create_for_submission(self, level_source_id)
     end
   end
 

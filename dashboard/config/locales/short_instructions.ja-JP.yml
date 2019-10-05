@@ -751,6 +751,9 @@ ja-JP:
       course2_collector_loops_challenge2: 'ジェムをすべてゲットしよう！ '
       course2_collector_prog_challenge1: よく見よう！ 10このジェムをぜんぶ集められるかな？
       course2_collector_prog_challenge2: ジェムはぜんぶで20こあるよ。半分より多くあつめたいな！
+      course2_harvester_loops_challenge1: とうもろこしをあつめよう。
+      course2_harvester_loops_challenge2: 木とはたけをさけて、レタスをあつめよう！
+      course2_maze_loops_challenge1: 'くりかえしを つかって リスを ドングリのところに つれていこう。 '
       course2_maze_programming_challenge1: ブタがかくれてる！さがすのをてつだってくれる？
       course2_maze_programming_challenge2: |-
         ブタのところに行くには、いろいろなほうほうがあります。
@@ -927,9 +930,128 @@ ja-JP:
       courseB_maze_seq1: ブロックをつかって、ぼくをブタさんのところに、つれていってください。
       courseB_maze_seq6: ブロックを くみあわせて、トリさんを ブタさんのところへ つれていって ください！
       courseB_maze_seq7: トリさんが ブタさんのところに いけるよう、ブロックを いれて ください！
+      courseC_artist_loop1: かっこよくしてみよう！
+      courseC_artist_loops5a: 新しいステッカー！
+      courseC_artist_loops5a_2018: 新しいステッカー！
+      courseC_artist_loops5a_2019: 新しいステッカー！
+      courseC_artist_loops6a: 新しいステッカー！
+      courseC_artist_loops6a_2018: 新しいステッカー！
+      courseC_artist_loops6a_2019: 新しいステッカー！
+      courseC_artist_loops7a: くりかえし と まがる を つかってみよう。
+      courseC_artist_loops7a_2018: くりかえし と まがる を つかってみよう。
+      courseC_artist_loops7a_2019: くりかえし と まがる を つかってみよう。
+      courseC_artist_loopsPrePre1a: 'プレイエリアの まんなかに 行ってから、線せんを 書いてみよう！ '
+      courseC_artist_loopsPrePre1a_2018: 'プレイエリアの まんなかに 行ってから、線せんを 書いてみよう！ '
+      courseC_artist_loopsPrePre1a_2019: 'プレイエリアの まんなかに 行ってから、線せんを 書いてみよう！ '
       courseC_artist_prog5: この家には天井が必要です！三角の屋根をかいてください。ヒント：3つの線はすべて同じ長さです。
       courseC_artist_prog5_2018: この家には天井が必要です！三角の屋根をかいてください。ヒント：3つの線はすべて同じ長さです。
       courseC_artist_prog5_2019: この家には天井が必要です！三角の屋根をかいてください。ヒント：3つの線はすべて同じ長さです。
+      courseC_collector_loops_challenge2: ５つ いじょう たからものを あつめよう。
+      courseC_collector_loops_challenge2_2018: ５つ いじょう たからものを あつめよう。
+      courseC_collector_loops_challenge2_2019: ５つ いじょう たからものを あつめよう。
+      courseC_collector_prog1: ブロックをならべて、ローレルが たからものを あつめるのを てつだってみよう。
+      courseC_collector_prog1_2018: ブロックをならべて、ローレルが たからものを あつめるのを てつだってみよう。
+      courseC_collector_prog1_2019: ブロックをならべて、ローレルが たからものを あつめるのを てつだってみよう。
+      courseC_collector_prog2: ローレルをたからもののところまでいごかして、'あつめる'でたからものをあつめます。
+      courseC_collector_prog2_2018: ローレルをたからもののところまでいごかして、'あつめる'でたからものをあつめます。
+      courseC_collector_prog2_2019: ローレルをたからもののところまでいごかして、'あつめる'でたからものをあつめます。
+      courseC_collector_prog3: たからものをあつめて、パズルをクリアできるよう ブロックをならべかえてひっつけてみよう。
+      courseC_collector_prog3_2018: たからものをあつめて、パズルをクリアできるよう ブロックをならべかえてひっつけてみよう。
+      courseC_collector_prog3_2019: たからものをあつめて、パズルをクリアできるよう ブロックをならべかえてひっつけてみよう。
+      courseC_collector_prog4: ブロックをならべて たからものを すべてあつめ パズルをクリアしよう。
+      courseC_collector_prog4_2018: ブロックをならべて たからものを すべてあつめ パズルをクリアしよう。
+      courseC_collector_prog4_2019: ブロックをならべて たからものを すべてあつめ パズルをクリアしよう。
+      courseC_collector_prog5: ブロックのじゅんばんがまちがっているので、正しいじゅんばんにならべなおそう。
+      courseC_collector_prog5_2018: ブロックのじゅんばんがまちがっているので、正しいじゅんばんにならべなおそう。
+      courseC_collector_prog5_2019: ブロックのじゅんばんがまちがっているので、正しいじゅんばんにならべなおそう。
+      courseC_collector_prog6: すべてのたからものを ゲットできるように ブロックをならべなおそう。
+      courseC_collector_prog6_2018: すべてのたからものを ゲットできるように ブロックをならべなおそう。
+      courseC_collector_prog6_2019: すべてのたからものを ゲットできるように ブロックをならべなおそう。
+      courseC_collector_prog7: すべてのたからものを ゲットできるよう ブロックを ついかしてみよう。
+      courseC_collector_prog7_2018: すべてのたからものを ゲットできるよう ブロックを ついかしてみよう。
+      courseC_collector_prog7_2019: すべてのたからものを ゲットできるよう ブロックを ついかしてみよう。
+      courseC_collector_prog8: _"このちょうしで がんばって！ すべての たからものを あつめるのを てつだって。"_
+      courseC_collector_prog8_2018: _"このちょうしで がんばって！ すべての たからものを あつめるのを てつだって。"_
+      courseC_collector_prog8_2019: _"このちょうしで がんばって！ すべての たからものを あつめるのを てつだって。"_
+      courseC_collector_prog9: _"すべてのたからものをゲットしよう！"_
+      courseC_collector_prog9_2018: _"すべてのたからものをゲットしよう！"_
+      courseC_collector_prog9_2019: _"すべてのたからものをゲットしよう！"_
+      courseC_collector_prog_challenge1: プログラムをじっくりみて！１０この たからもの すべて あつめることが できるかな？
+      courseC_collector_prog_challenge1_2018: プログラムをじっくりみて！１０この たからもの すべて あつめることが
+        できるかな？
+      courseC_collector_prog_challenge1_2019: プログラムをじっくりみて！１０この たからもの すべて あつめることが
+        できるかな？
+      courseC_collector_prog_challenge2: １０この たからものを すべてあつめれば パズルを クリアすることができます！
+      courseC_collector_prog_challenge2_2018: １０この たからものを すべてあつめれば パズルを クリアすることができます！
+      courseC_collector_prog_challenge2_2019: １０この たからものを すべてあつめれば パズルを クリアすることができます！
+      courseC_flappy_events1: "`クリックしたとき` の下に `ふつうにバタバタする` をひっつけて”実行（じっこう）”してみよう。クリックするかタップすれば、フラッピーは、まとに
+        むかって うごきます。"
+      courseC_flappy_events1_2018: "`クリックしたとき` の下に `ふつうにバタバタする` をひっつけて”実行（じっこう）”してみよう。クリックするかタップすれば、フラッピーは、まとに
+        むかって うごきます。"
+      courseC_flappy_events1_2019: "`クリックしたとき` の下に `ふつうにバタバタする` をひっつけて”実行（じっこう）”してみよう。クリックするかタップすれば、フラッピーは、まとに
+        むかって うごきます。"
+      courseC_flappy_events2: "”実行（じっこう）”ボタンがおされたら、スピードをふつうにするをついかしてゲームをやってみよう。まと
+        まで はばたき つづけよう。"
+      courseC_flappy_events2_2018: "”実行（じっこう）”ボタンがおされたら、スピードをふつうにするをついかしてゲームをやってみよう。まと
+        まで はばたき つづけよう。"
+      courseC_flappy_events2_2019: "”実行（じっこう）”ボタンがおされたら、スピードをふつうにするをついかしてゲームをやってみよう。まと
+        まで はばたき つづけよう。"
+      courseC_flappy_events3: "`じめんに ぶつかったとき` に`ゲームオーバー`をひっつけて。鳥を地めんにぶつけてみよう。"
+      courseC_flappy_events3_2018: "`じめんに ぶつかったとき` に`ゲームオーバー`をひっつけて。鳥を地めんにぶつけてみよう。"
+      courseC_flappy_events3_2019: "`じめんに ぶつかったとき` に`ゲームオーバー`をひっつけて。鳥を地めんにぶつけてみよう。"
+      courseC_flappy_events4: フラッピーが パイプに あたったとき、ゲームオーバーに なるよう`しょうがいぶつに あたったとき` に
+        ブロックを ひっつけよう。
+      courseC_flappy_events4_2018: フラッピーが パイプに あたったとき、ゲームオーバーに なるよう`しょうがいぶつに あたったとき`
+        に ブロックを ひっつけよう。
+      courseC_flappy_events4_2019: フラッピーが パイプに あたったとき、ゲームオーバーに なるよう`しょうがいぶつに あたったとき`
+        に ブロックを ひっつけよう。
+      courseC_flappy_events5: "`しょうがいぶつを とおりぬけたとき`に ブロックを ひっつけて、フラッピーが パイプの間を とおりぬけたとき、ポイントが入るようにしよう。"
+      courseC_flappy_events5_2018: "`しょうがいぶつを とおりぬけたとき`に ブロックを ひっつけて、フラッピーが パイプの間を
+        とおりぬけたとき、ポイントが入るようにしよう。"
+      courseC_flappy_events5_2019: "`しょうがいぶつを とおりぬけたとき`に ブロックを ひっつけて、フラッピーが パイプの間を
+        とおりぬけたとき、ポイントが入るようにしよう。"
+      courseC_harvester_loops1: くりかえしを つかって かぼちゃを あつめよう。
+      courseC_harvester_loops10: とうもうろこし と かぼちゃ を あつめよう。
+      courseC_harvester_loops10_2018: とうもうろこし と かぼちゃ を あつめよう。
+      courseC_harvester_loops10_2019: とうもうろこし と かぼちゃ を あつめよう。
+      courseC_harvester_loops11: とうもうろこし と かぼちゃ を あつめよう。
+      courseC_harvester_loops11_2018: とうもうろこし と かぼちゃ を あつめよう。
+      courseC_harvester_loops11_2019: とうもうろこし と かぼちゃ を あつめよう。
+      courseC_harvester_loops1_2018: くりかえしを つかって かぼちゃを あつめよう。
+      courseC_harvester_loops1_2019: くりかえしを つかって かぼちゃを あつめよう。
+      courseC_harvester_loops2: 前にすすむループ あとに かぼちゃをあつめる ループを プログラムできる？
+      courseC_harvester_loops2_2018: 前にすすむループ あとに かぼちゃをあつめる ループを プログラムできる？
+      courseC_harvester_loops2_2019: 前にすすむループ あとに かぼちゃをあつめる ループを プログラムできる？
+      courseC_harvester_loops3: かぼちゃをあつめよう。
+      courseC_harvester_loops3_2018: かぼちゃをあつめよう。
+      courseC_harvester_loops3_2019: かぼちゃをあつめよう。
+      courseC_harvester_loops4: とうもうろこし と かぼちゃ を あつめよう。
+      courseC_harvester_loops4_2018: とうもうろこし と かぼちゃ を あつめよう。
+      courseC_harvester_loops4_2019: とうもうろこし と かぼちゃ を あつめよう。
+      courseC_harvester_loops5: とうもうろこし と かぼちゃ を あつめよう。
+      courseC_harvester_loops5_2018: とうもうろこし と かぼちゃ を あつめよう。
+      courseC_harvester_loops5_2019: とうもうろこし と かぼちゃ を あつめよう。
+      courseC_harvester_loops6: とうもうろこし と かぼちゃ を あつめよう。
+      courseC_harvester_loops6_2018: とうもうろこし と かぼちゃ を あつめよう。
+      courseC_harvester_loops6_2019: とうもうろこし と かぼちゃ を あつめよう。
+      courseC_harvester_loops7: とうもうろこし と かぼちゃ を あつめよう。
+      courseC_harvester_loops7_2018: とうもうろこし と かぼちゃ を あつめよう。
+      courseC_harvester_loops7_2019: とうもうろこし と かぼちゃ を あつめよう。
+      courseC_harvester_loops8: "**チャレンジ** すべてのとうもろこし と かぼちゃを あつめよう。"
+      courseC_harvester_loops8_2018: "**チャレンジ** すべてのとうもろこし と かぼちゃを あつめよう。"
+      courseC_harvester_loops8_2019: "**チャレンジ** すべてのとうもろこし と かぼちゃを あつめよう。"
+      courseC_harvester_loops9: とうもうろこし と かぼちゃ を あつめよう。
+      courseC_harvester_loops9_2018: とうもうろこし と かぼちゃ を あつめよう。
+      courseC_harvester_loops9_2019: とうもうろこし と かぼちゃ を あつめよう。
+      courseC_harvester_loops_challenge1a: とうもろこしをあつめよう。
+      courseC_harvester_loops_challenge1a_2018: とうもろこしをあつめよう。
+      courseC_harvester_loops_challenge1a_2019: とうもろこしをあつめよう。
+      courseC_harvester_loops_challenge2: 木とはたけをさけて、レタスをあつめよう！
+      courseC_harvester_loops_challenge2_2018: 木とはたけをさけて、レタスをあつめよう！
+      courseC_harvester_loops_challenge2_2019: 木とはたけをさけて、レタスをあつめよう！
+      courseC_maze_loops_challenge1a: 'くりかえしを つかって リスを ドングリのところに つれていこう。 '
+      courseC_maze_loops_challenge1a_2018: 'くりかえしを つかって リスを ドングリのところに つれていこう。 '
+      courseC_maze_loops_challenge1a_2019: 'くりかえしを つかって リスを ドングリのところに つれていこう。 '
       courseC_maze_programming1: このパズルでは、ブロックをドラッグしてくっつけたら「実行」をクリックして、どうなるか見てみよう！
       courseC_maze_programming1_2018: このパズルでは、ブロックをドラッグしてくっつけたら「実行」をクリックして、どうなるか見てみよう！
       courseC_maze_programming1_2019: このパズルでは、ブロックをドラッグしてくっつけたら「実行」をクリックして、どうなるか見てみよう！
@@ -969,6 +1091,48 @@ ja-JP:
       courseC_maze_programming_challenge2_2019: |-
         ブタのところに行くには、いろいろなほうほうがあります。
         前に進むよりも、後ろにもどったほうが、早く行けることもあります。
+      courseC_starWars_loops1: BB-8は、とおったところに あるスクラップを あつめます。BB-8が すべてのスクラップを あつめれるよう
+        同じブロックを ５つ ならべてみよう。
+      courseC_starWars_loops10: すばらしい！がんばって！
+      courseC_starWars_loops10_2018: すばらしい！がんばって！
+      courseC_starWars_loops10_2019: すばらしい！がんばって！
+      courseC_starWars_loops10_predict2: すばらしい！がんばって！
+      courseC_starWars_loops10_predict2_2018: すばらしい！がんばって！
+      courseC_starWars_loops10_predict2_2019: すばらしい！がんばって！
+      courseC_starWars_loops11: あともう少し。こんどは自分のすきなほうほうでやってみよう。
+      courseC_starWars_loops11_2018: あともう少し。こんどは自分のすきなほうほうでやってみよう。
+      courseC_starWars_loops11_2019: あともう少し。こんどは自分のすきなほうほうでやってみよう。
+      courseC_starWars_loops1_2018: BB-8は、とおったところに あるスクラップを あつめます。BB-8が すべてのスクラップを
+        あつめれるよう 同じブロックを ５つ ならべてみよう。
+      courseC_starWars_loops1_2019: BB-8は、とおったところに あるスクラップを あつめます。BB-8が すべてのスクラップを
+        あつめれるよう 同じブロックを ５つ ならべてみよう。
+      courseC_starWars_loops1_predict1: BB-8は、とおったところに あるスクラップを あつめます。BB-8が すべてのスクラップを
+        あつめれるよう 同じブロックを ５つ ならべてみよう。
+      courseC_starWars_loops1_predict1_2018: BB-8は、とおったところに あるスクラップを あつめます。BB-8が すべてのスクラップを
+        あつめれるよう 同じブロックを ５つ ならべてみよう。
+      courseC_starWars_loops1_predict1_2019: BB-8は、とおったところに あるスクラップを あつめます。BB-8が すべてのスクラップを
+        あつめれるよう 同じブロックを ５つ ならべてみよう。
+      courseC_starWars_loops2: "`くりかえし` ブロックの中に １つだけ ブロックを 入れて すべてのスクラップを あつめよう。"
+      courseC_starWars_loops2_2018: "`くりかえし` ブロックの中に １つだけ ブロックを 入れて すべてのスクラップを あつめよう。"
+      courseC_starWars_loops2_2019: "`くりかえし` ブロックの中に １つだけ ブロックを 入れて すべてのスクラップを あつめよう。"
+      courseC_starWars_loops4: 短いプログラムで すべてのスクラップを あつめるには、`くりかえし`ブロックを ２つ つかいます。
+      courseC_starWars_loops4_2018: 短いプログラムで すべてのスクラップを あつめるには、`くりかえし`ブロックを ２つ つかいます。
+      courseC_starWars_loops4_2019: 短いプログラムで すべてのスクラップを あつめるには、`くりかえし`ブロックを ２つ つかいます。
+      courseC_starWars_loops5: できるだけみじかいプログラムで すべてのスクラップを　あつめて。
+      courseC_starWars_loops5_2018: できるだけみじかいプログラムで すべてのスクラップを　あつめて。
+      courseC_starWars_loops5_2019: できるだけみじかいプログラムで すべてのスクラップを　あつめて。
+      courseC_starWars_loops6: １ついじょうのブロックを中に入れてくりかえしてみよう！下のプログラムを くりかえすことが できるかな？
+      courseC_starWars_loops6_2018: １ついじょうのブロックを中に入れてくりかえしてみよう！下のプログラムを くりかえすことが できるかな？
+      courseC_starWars_loops6_2019: １ついじょうのブロックを中に入れてくりかえしてみよう！下のプログラムを くりかえすことが できるかな？
+      courseC_starWars_loops7: くりかえしを １つだけ つかって すべてのスクラップを あつめることが できるかな？くりかえしの パターンを
+        見つけて くりかえしの中に 入れてみよう。
+      courseC_starWars_loops7_2018: くりかえしを １つだけ つかって すべてのスクラップを あつめることが できるかな？くりかえしの
+        パターンを 見つけて くりかえしの中に 入れてみよう。
+      courseC_starWars_loops7_2019: くりかえしを １つだけ つかって すべてのスクラップを あつめることが できるかな？くりかえしの
+        パターンを 見つけて くりかえしの中に 入れてみよう。
+      courseC_starWars_loops9: いままでやったことを思い出して、すべてのスクラップをあつめよう！
+      courseC_starWars_loops9_2018: いままでやったことを思い出して、すべてのスクラップをあつめよう！
+      courseC_starWars_loops9_2019: いままでやったことを思い出して、すべてのスクラップをあつめよう！
       courseD_artist_binary1: |-
         「Draw binary "01010101"」ブロックを「実行したとき」にくっつけて、実行してください。
         アーティストは、一番目の行にバイナリで「01010101」を書きます。
@@ -993,6 +1157,9 @@ ja-JP:
       courseD_bee_nestedLoops8: "それぞれの花からすべての花のみつを集めてください。\nそしてそれぞれのハチの巣でハチミツを作ってください。\n入れ子のループ（ネスト・ループ）を使うのです。 "
       courseD_bee_nestedLoops8_2018: "それぞれの花からすべての花のみつを集めてください。\nそしてそれぞれのハチの巣でハチミツを作ってください。\n入れ子のループ（ネスト・ループ）を使うのです。 "
       courseD_bee_nestedLoops8_2019: "それぞれの花からすべての花のみつを集めてください。\nそしてそれぞれのハチの巣でハチミツを作ってください。\n入れ子のループ（ネスト・ループ）を使うのです。 "
+      courseD_collector_ramp10: ローレルが すべてのたからものを あつめるのを てつだって。
+      courseD_collector_ramp8: ローレルが すべてのたからものを あつめるのを てつだって。
+      courseD_collector_ramp9: ローレルが すべてのたからものを あつめるのを てつだって。
       courseD_maze_nestedLoops4: ひまわりまで行きたい！
       courseD_maze_nestedLoops4_2018: ひまわりまで行きたい！
       courseD_maze_nestedLoops4_2019: ひまわりまで行きたい！
@@ -1009,6 +1176,8 @@ ja-JP:
       courseE_bee_functions3: ひとつの作業を行うひとまとまりのコードを関数といいます。"get 5" という関数を使うと、一度に蜜を
         5 とることができます。ループを使って、ブロックの数がなるべく少なくしてください。
       courseE_bee_functions4: "「動いてみつを集める」の関数は、ハチを回転させ、蜜を集め、スタート地点までハチを戻します。この関数を使って蜜を全部集めましょう。"
+      courseE_farmer_concept2: かぼちゃをあつめよう。
+      courseE_farmer_concept2_2018: かぼちゃをあつめよう。
       courseF_artist_for7: |-
         さっきのプログラムを、3ヵ所かえるだけで、この絵を書くことが出来ます！
         ヒント：
@@ -1093,6 +1262,12 @@ ja-JP:
       frozen square loop 3x: 四角形を 3つ かいてみましょう。ひとつ四角形をかいたら、120度まがると いいわよ。
       frozen square snowflake: この雪のもようが かけるかしら？「くりかえし」ブロックで、四角形を10こ かけばいいわ。四角形をひとつ
         かいたら、「まがる」ブロックで36度まがるのよ。
+      grade2_collector_10: これがさいご！たくさんの たからものを あつめて このステージを クリアしよう。
+      grade2_collector_10_2018: これがさいご！たくさんの たからものを あつめて このステージを クリアしよう。
+      grade2_collector_10_2019: これがさいご！たくさんの たからものを あつめて このステージを クリアしよう。
+      grade2_collector_A: ローレルが すべてのたからものを あつめるのを てつだって。
+      grade2_collector_A_2018: ローレルが すべてのたからものを あつめるのを てつだって。
+      grade2_collector_A_2019: ローレルが すべてのたからものを あつめるのを てつだって。
       grade5_artist_binary11: |-
         自由に書きましょう！
         このまっさらなキャンバスに、すきな絵を書いてください。さあ何から書きましょうか！

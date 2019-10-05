@@ -168,7 +168,7 @@ class HomeController < ApplicationController
         @homepage_data[:teacherId] = current_user.id
         @homepage_data[:teacherEmail] = current_user.email
       elsif donor_banner_name
-        teachers_school = current_user.last_complete_school_info.school
+        teachers_school = Queries::SchoolInfo.last_complete(current_user)&.school
 
         donor_teacher_banner_options = {}
         donor_teacher_banner_options[:teacherFirstName] = current_user.short_name
