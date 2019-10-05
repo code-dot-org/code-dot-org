@@ -129,7 +129,8 @@ function unpackSources(data) {
     animations: data.animations,
     makerAPIsEnabled: data.makerAPIsEnabled,
     generatedProperties: data.generatedProperties,
-    selectedSong: data.selectedSong
+    selectedSong: data.selectedSong,
+    libraries: data.libraries
   };
 }
 
@@ -589,6 +590,10 @@ var projects = (module.exports = {
 
       if (currentSources.animations) {
         sourceHandler.setInitialAnimationList(currentSources.animations);
+      }
+
+      if (currentSources.libraries) {
+        sourceHandler.setInitialLibrariesList(currentSources.libraries);
       }
 
       if (currentSources.generatedProperties) {
@@ -1100,13 +1105,15 @@ var projects = (module.exports = {
         const makerAPIsEnabled = this.sourceHandler.getMakerAPIsEnabled();
         const selectedSong = this.sourceHandler.getSelectedSong();
         const generatedProperties = this.sourceHandler.getGeneratedProperties();
+        const libraries = this.sourceHandler.getLibrariesList();
         callback({
           source,
           html,
           animations,
           makerAPIsEnabled,
           selectedSong,
-          generatedProperties
+          generatedProperties,
+          libraries
         });
       })
     );
@@ -1140,6 +1147,25 @@ var projects = (module.exports = {
         );
       });
     });
+  },
+  setProjectLibraries(updatedLibrariesList) {
+    return new Promise(resolve => {
+      this.getUpdatedSourceAndHtml_(sourceAndHtml => {
+        this.saveSourceAndHtml_(
+          {
+            ...sourceAndHtml,
+            libraries: updatedLibrariesList
+          },
+          () => {
+            resolve();
+            utils.reload();
+          }
+        );
+      });
+    });
+  },
+  getProjectLibraries() {
+    return this.sourceHandler.getLibrariesList();
   },
   showSaveError_(errorType, errorCount, errorText) {
     header.showProjectSaveError();
