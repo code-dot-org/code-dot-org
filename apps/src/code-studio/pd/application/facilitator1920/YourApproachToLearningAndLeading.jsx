@@ -6,11 +6,11 @@ import {
   SectionHeaders
 } from '@cdo/apps/generated/pd/facilitator1920ApplicationConstants';
 
-export default class Section5YourApproachToLearningAndLeading extends LabeledFormComponent {
-  static labels = PageLabels.section5YourApproachToLearningAndLeading;
+export default class YourApproachToLearningAndLeading extends LabeledFormComponent {
+  static labels = PageLabels.yourApproachToLearningAndLeading;
 
   static associatedFields = [
-    ...Object.keys(PageLabels.section5YourApproachToLearningAndLeading)
+    ...Object.keys(PageLabels.yourApproachToLearningAndLeading)
   ];
 
   largeInputFor(name, props = {}) {
@@ -24,9 +24,7 @@ export default class Section5YourApproachToLearningAndLeading extends LabeledFor
   render() {
     return (
       <FormGroup>
-        <h3>
-          Section 5: {SectionHeaders.section5YourApproachToLearningAndLeading}
-        </h3>
+        <h3>Section 5: {SectionHeaders.yourApproachToLearningAndLeading}</h3>
 
         {this.largeInputFor('whyShouldAllHaveAccess')}
         {this.largeInputFor('skillsAreasToImprove')}
