@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import FormController from '../../form_components/FormController';
 import AboutYou from './AboutYou';
-import Section2ChooseYourProgram from './Section2ChooseYourProgram';
+import ChooseYourProgram from './ChooseYourProgram';
 import Section3ExperienceAndCommitments from './Section3ExperienceAndCommitments';
 import Section4LeadingStudents from './Section4LeadingStudents';
 import Section5YourApproachToLearningAndLeading from './Section5YourApproachToLearningAndLeading';
@@ -23,7 +23,7 @@ export default class Facilitator1920Application extends FormController {
   getPageComponents() {
     return [
       AboutYou,
-      Section2ChooseYourProgram,
+      ChooseYourProgram,
       Section3ExperienceAndCommitments,
       Section4LeadingStudents,
       Section5YourApproachToLearningAndLeading,
