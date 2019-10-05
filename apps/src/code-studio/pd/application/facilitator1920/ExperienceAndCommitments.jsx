@@ -12,11 +12,11 @@ import {CSF, CSD, CSP} from '../ApplicationConstants';
 const PARTNER_WORKSHOPS_API_ENDPOINT =
   '/api/v1/pd/regional_partner_workshops/find?';
 
-export default class Section3ExperienceAndCommitments extends LabeledFormComponent {
-  static labels = PageLabels.section3ExperienceAndCommitments;
+export default class ExperienceAndCommitments extends LabeledFormComponent {
+  static labels = PageLabels.experienceAndCommitments;
 
   static associatedFields = [
-    ...Object.keys(PageLabels.section3ExperienceAndCommitments),
+    ...Object.keys(PageLabels.experienceAndCommitments),
     'regionalPartnerId'
   ];
 
@@ -172,7 +172,7 @@ export default class Section3ExperienceAndCommitments extends LabeledFormCompone
     const program = this.props.data.program || 'CS Program';
     return (
       <FormGroup>
-        <h3>Section 3: {SectionHeaders.section3ExperienceAndCommitments}</h3>
+        <h3>Section 3: {SectionHeaders.experienceAndCommitments}</h3>
         {this.radioButtonsFor('teachingExperience')}
         {this.radioButtonsFor('haveLedAdults')}
 
