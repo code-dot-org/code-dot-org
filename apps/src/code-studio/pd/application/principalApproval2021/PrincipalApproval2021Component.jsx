@@ -3,7 +3,7 @@ import {FormGroup, Row, Col, ControlLabel} from 'react-bootstrap';
 import {
   PageLabels,
   TextFields
-} from '@cdo/apps/generated/pd/principalApproval1920ApplicationConstants';
+} from '@cdo/apps/generated/pd/principalApproval2021ApplicationConstants';
 import LabeledFormComponent from '../../form_components/LabeledFormComponent';
 import PrivacyDialog from '../PrivacyDialog';
 import {PrivacyDialogMode} from '../../constants';
@@ -29,7 +29,6 @@ const RACE_LIST = [
   'other'
 ];
 const REQUIRED_SCHOOL_INFO_FIELDS = [
-  'planToTeach',
   'school',
   'totalStudentEnrollment',
   'freeLunchPercent',
@@ -52,18 +51,16 @@ const REPLACE_COURSE_FIELDS = [
   'replaceWhichCourseCsp',
   'replaceWhichCourseCsd'
 ];
-const IMPLEMENTATION_FIELDS = ['csdImplementation', 'cspImplementation'];
-const YEAR = '2019-20';
+const YEAR = '2020-21';
+const YES = 'Yes';
 
-export default class PrincipalApproval1920Component extends LabeledFormComponent {
+export default class PrincipalApproval2021Component extends LabeledFormComponent {
   static labels = PageLabels;
 
   static associatedFields = [
     ...Object.keys(PageLabels),
     ...REPLACE_COURSE_FIELDS,
-    ...IMPLEMENTATION_FIELDS,
     'doYouApprove',
-    'planToTeach',
     'committedToMasterSchedule',
     'committedToDiversity',
     'contactInvoicing',
@@ -133,27 +130,13 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
     let showPayFeeNote =
       this.props.data.committedToMasterSchedule &&
       !this.props.data.committedToMasterSchedule.includes(
-        'Yes, I plan to include this course in the 2019-20 master schedule'
+        `Yes, I plan to include this course in the ${YEAR} master schedule`
       ) &&
       this.props.data.payFee &&
       this.props.data.payFee.includes('No, ');
 
-    const planToTeachOther =
-      'I don’t know if they will teach this course (Please Explain):';
     return (
       <div>
-        {this.radioButtonsWithAdditionalTextFieldsFor(
-          'planToTeach',
-          {
-            [planToTeachOther]: 'other'
-          },
-          {
-            label: `Is ${
-              this.props.teacherApplication.name
-            } planning to teach this course in
-                    the ${YEAR} school year?`
-          }
-        )}
         {this.renderSchoolSection()}
         {this.inputFor('totalStudentEnrollment')}
         {this.numberInputFor('freeLunchPercent', {
@@ -162,7 +145,7 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
           step: 1
         })}
         <p style={styles.questionText}>
-          Percentage of student enrollment by race
+          Percentage of student enrollment by race or ethnicity
         </p>
         {RACE_LIST.map(race => {
           return this.numberInputFor(race, {
@@ -193,10 +176,12 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
         {this.radioButtonsWithAdditionalTextFieldsFor('replaceCourse', {
           [TextFields.dontKnowExplain]: 'other'
         })}
-        {this.props.data.replaceCourse ===
-          TextFields.yesReplaceExistingCourse &&
+        {this.props.data.replaceCourse === YES &&
           this.renderCourseReplacementSection()}
-        {this.renderImplementationSection()}
+        {this.props.teacherApplication.course ===
+          'Computer Science Discoveries' && this.checkBoxesFor('csdWhichUnits')}
+        {this.props.teacherApplication.course ===
+          'Computer Science Principles' && this.checkBoxesFor('cspWhichUnits')}
         {this.radioButtonsWithAdditionalTextFieldsFor(
           'committedToDiversity',
           {
@@ -230,13 +215,12 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
         <div>
           {this.singleCheckboxFor('understandFee')}
           {this.radioButtonsFor('payFee')}
-
           {showPayFeeNote && (
             <div>
               <p style={styles.red}>
                 Note: To be eligible for scholarship support, your school must
-                commit to including this course in the 2019-20 master schedule.
-                If you are able to commit to offering this course in 2019-20,
+                commit to including this course in the {YEAR} master schedule.
+                If you are able to commit to offering this course in {YEAR} ,
                 please update your answer above before submitting in order to
                 retain scholarship eligibility.
               </p>
@@ -299,48 +283,6 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
     }
   }
 
-  renderImplementationSection() {
-    const questionLabel = (
-      <span>
-        To participate in Code.org’s {this.props.teacherApplication.course}{' '}
-        Professional Learning Program, we require that this course be offered in
-        one of the following ways. Please select which option will be
-        implemented at your school. Be sure to{' '}
-        <a
-          href="https://docs.google.com/document/d/1nFp033SuO_BMR-Bkinrlp0Ti_s-XYQDsOc-UjqNdrGw/edit#heading=h.6s62vrpws18"
-          target="_blank"
-        >
-          review the guidance on required number of hours here
-        </a>{' '}
-        prior to answering.
-      </span>
-    );
-    const otherLabel =
-      'We will use a different implementation schedule. (Please Explain):';
-
-    if (
-      this.props.teacherApplication.course === 'Computer Science Discoveries'
-    ) {
-      return this.radioButtonsWithAdditionalTextFieldsFor(
-        'csdImplementation',
-        {
-          [otherLabel]: 'other'
-        },
-        {label: questionLabel}
-      );
-    } else if (
-      this.props.teacherApplication.course === 'Computer Science Principles'
-    ) {
-      return this.radioButtonsWithAdditionalTextFieldsFor(
-        'cspImplementation',
-        {
-          [otherLabel]: 'other'
-        },
-        {label: questionLabel}
-      );
-    }
-  }
-
   render() {
     const courseSuffix =
       this.props.teacherApplication.course === 'Computer Science Discoveries'
@@ -352,17 +294,17 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
           A teacher at your school, {this.props.teacherApplication.name}, has
           applied to be a part of{' '}
           <a
-            href="https://code.org/educate/professional-learning-2019"
+            href="https://code.org/educate/professional-learning/middle-high"
             target="_blank"
           >
-            Code.org’s Professional Learning Program
+            Code.org's Professional Learning Program
           </a>{' '}
           in order to teach the{' '}
           <a href={`https://code.org/educate/${courseSuffix}`} target="_blank">
             {this.props.teacherApplication.course} curriculum
           </a>{' '}
           during the {YEAR} school year. Your approval is required for the
-          teacher’s application to be considered.
+          teacher's application to be considered.
         </p>
         {this.selectFor('title', {
           required: false,
@@ -371,11 +313,14 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
         {this.inputFor('firstName')}
         {this.inputFor('lastName')}
         {this.inputFor('email')}
-        <p>Teachers in this program are required to participate in both:</p>
+        <p>
+          Teachers should attend the minimum number of workshops that correspond
+          to the number of units they intend to teach, which include:
+        </p>
         <ul>
-          <li>One five-day, in-person summer workshop in 2019</li>
+          <li>One five-day, in-person summer workshop in 2020</li>
           <li>
-            Up to four one-day, in-person local workshops during the 2019-20
+            Up to four one-day, in-person local workshops during the {YEAR}{' '}
             school year (typically held on Saturdays)
           </li>
         </ul>
@@ -431,20 +376,20 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
 
     if (data.doYouApprove !== 'No') {
       requiredFields.push(...REQUIRED_SCHOOL_INFO_FIELDS);
-
-      if (data.course === 'Computer Science Discoveries') {
-        requiredFields.push('csdImplementation');
-      } else if (data.course === 'Computer Science Principles') {
-        requiredFields.push('cspImplementation');
-      }
     }
 
-    if (data.replaceCourse === TextFields.yesReplaceExistingCourse) {
+    if (data.replaceCourse === YES) {
       if (data.course === 'Computer Science Discoveries') {
         requiredFields.push('replaceWhichCourseCsd');
       } else if (data.course === 'Computer Science Principles') {
         requiredFields.push('replaceWhichCourseCsp');
       }
+    }
+
+    if (data.course === 'Computer Science Discoveries') {
+      requiredFields.push('csdWhichUnits');
+    } else if (data.course === 'Computer Science Principles') {
+      requiredFields.push('cspWhichUnits');
     }
 
     return requiredFields;
@@ -480,8 +425,7 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
     if (data.doYouApprove === 'No') {
       fieldsToClear.add([
         ...REQUIRED_SCHOOL_INFO_FIELDS,
-        REPLACE_COURSE_FIELDS,
-        IMPLEMENTATION_FIELDS
+        REPLACE_COURSE_FIELDS
       ]);
     }
 
@@ -491,7 +435,7 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
     }
 
     // Clear out replaced course if we are not replacing a course
-    if (data.replaceCourse !== TextFields.yesReplaceExistingCourse) {
+    if (data.replaceCourse !== YES) {
       fieldsToClear.add(REPLACE_COURSE_FIELDS);
     }
 
