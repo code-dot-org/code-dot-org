@@ -1022,6 +1022,7 @@ module Api::V1::Pd
         "Contact name for invoicing",
         "Contact email or phone number for invoicing",
         "Title I status code (NCES data)",
+        "Rural status",
         "Total student enrollment (NCES data)",
         "Percentage of students who are eligible to receive free or reduced lunch (NCES data)",
         "Percentage of underrepresented minority students (NCES data)",
