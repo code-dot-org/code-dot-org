@@ -271,6 +271,7 @@ module Pd
       cs_total_course_hours: YES_NO,
       plan_to_teach: YES_NO,
       committed: YES_NO,
+      replace_existing: YES_NO,
       principal_approval: YES_NO,
       principal_schedule_confirmed: YES_NO,
       principal_diversity_recruitment: YES_NO,
@@ -279,7 +280,6 @@ module Pd
       previous_yearlong_cdo_pd: YES_NO,
       # Bonus Points
       csp_how_offer: [2, 0],
-      replace_existing: [5, 0],
       taught_in_past: [2, 0],
       free_lunch_percent: [5, 0],
       underrepresented_minority_percent: [5, 0],
@@ -290,7 +290,6 @@ module Pd
     SCOREABLE_QUESTIONS = {
       bonus_points: [
         :csp_how_offer,
-        :replace_existing,
         :taught_in_past,
         :free_lunch_percent,
         :underrepresented_minority_percent,
@@ -310,6 +309,7 @@ module Pd
         :cs_total_course_hours,
         :plan_to_teach,
         :committed,
+        :replace_existing,
         :principal_implementation
       ],
       criteria_score_questions_csp: [
@@ -318,6 +318,7 @@ module Pd
         :cs_total_course_hours,
         :plan_to_teach,
         :committed,
+        :replace_existing,
         :principal_implementation
       ]
     }
