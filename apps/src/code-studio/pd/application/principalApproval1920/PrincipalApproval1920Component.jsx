@@ -9,7 +9,7 @@ import PrivacyDialog from '../PrivacyDialog';
 import {PrivacyDialogMode} from '../../constants';
 import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
 import {isInt, isPercent} from '@cdo/apps/util/formatValidation';
-import {styles} from '../teacher1920/TeacherApplicationConstants';
+import {styles} from '../teacher2021/TeacherApplicationConstants';
 
 const MANUAL_SCHOOL_FIELDS = [
   'schoolName',
