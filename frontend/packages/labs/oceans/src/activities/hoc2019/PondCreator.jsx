@@ -4,6 +4,7 @@ import Row from 'react-bootstrap/lib/Row';
 import {sketch} from '../../utils/sketches';
 import SimpleTrainer from '../../utils/SimpleTrainer';
 import P5Canvas from './P5Canvas';
+import Training from './Training';
 import {COLORS} from '../../utils/colors';
 
 const FISH_COUNT = 9;
@@ -18,6 +19,15 @@ const Modes = Object.freeze({
   Predicting: 2
 });
 
+const trainingData = [
+  {id: 1, imgUrl:'/images/bcat1.jpg', knnData:[0]},
+  {id: 2, imgUrl:'/images/bcat2.jpg', knnData:[0]},
+  {id: 3, imgUrl:'/images/bcat3.jpg', knnData:[0]},
+  {id: 4, imgUrl:'/images/bdog1.jpg', knnData:[1]},
+  {id: 5, imgUrl:'/images/bdog2.jpg', knnData:[1]},
+  {id: 6, imgUrl:'/images/bdog3.jpg', knnData:[1]},
+];
+
 let canvasNum = 0;
 
 export default class PondCreator extends React.Component {
@@ -28,6 +38,7 @@ export default class PondCreator extends React.Component {
     this.state = {
       trainer: trainer,
       trainingFish: this.generateFish('training', FISH_COUNT),
+      trainingData: trainingData,
       currentMode: Modes.Training,
       predictionFish: [], // this.generateFish('prediction',1),
       predictions: []
@@ -77,20 +88,8 @@ export default class PondCreator extends React.Component {
       <div>
         {this.state.currentMode === Modes.Training && (
           <div>
-            {Object.keys(this.state.trainingFish).map(canvasId => (
-              <Row key={canvasId}>
-                <P5Canvas
-                  id={canvasId}
-                  fishData={this.state.trainingFish[canvasId]}
-                  canvasId={canvasId}
-                  sketch={sketch}
-                  addExample={this.addExample}
-                  isSelectable={true}
-                  getClassTypeString={this.getClassTypeString}
-                />
-              </Row>
-            ))}
-            <Button onClick={() => this.switchToPredictions()}>
+          <Training trainer={this.state.trainer} trainingData={this.state.trainingData} numOptions={3} />
+                <Button onClick={() => this.switchToPredictions()}>
               Show some fish!
             </Button>
           </div>
