@@ -62,7 +62,7 @@ def main
     status.creation_time = stack.creation_time
 
     # get Unicorn active HTTP request count CloudWatch metric for the current adhoc stack
-    metric = Aws::CloudWatch::Metric.new(namespace: 'Unicorn', name: 'active', client: cloudwatch_client)
+    metric = Aws::CloudWatch::Metric.new(namespace: 'App Server', name: 'active', client: cloudwatch_client)
     total_http_requests = metric.get_statistics(
       {
         dimensions: [

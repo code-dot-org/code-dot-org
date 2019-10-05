@@ -17,47 +17,35 @@ export function reset() {
 }
 
 /**
- * Returns a list of all sprites that have the specified animation.
- * Called on each tick of the draw loop because animations can change throughout runtime.
- * @param {string} animation - animation name
- */
-function allSpritesWithAnimation(animation) {
-  let group = [];
-  Object.keys(nativeSpriteMap).forEach(spriteId => {
-    if (nativeSpriteMap[spriteId].getAnimationLabel() === animation) {
-      let sprite = nativeSpriteMap[spriteId];
-      if (sprite) {
-        group.push(sprite);
-      }
-    }
-  });
-  return group;
-}
-
-/**
- * Returns a list of sprites, specified either by id or animation name.
- * @param {(string|number)} spriteOrGroup - Either the id or the animation name
+ * Returns a list of sprites, specified either by id, name, or animation name.
+ * @param {Object} spriteArg - Specifies a sprite or group of sprites by id, name, or animation name.
  * @return {[Sprite]} List of sprites that match the parameter. Either a list containing the one sprite
- * the specified id, or a list containing all sprites with the specified animation.
+ * the specified id/name, or a list containing all sprites with the specified animation.
  */
-export function getSpriteArray(spriteOrGroup) {
-  if (typeof spriteOrGroup === 'number') {
-    const sprite = nativeSpriteMap[spriteOrGroup];
-    if (sprite) {
-      return [sprite];
-    }
+export function getSpriteArray(spriteArg) {
+  if (spriteArg.hasOwnProperty('id')) {
+    return [nativeSpriteMap[spriteArg.id]];
   }
-  if (typeof spriteOrGroup === 'string') {
-    return allSpritesWithAnimation(spriteOrGroup);
+  if (spriteArg.name) {
+    let sprite = Object.values(nativeSpriteMap).find(
+      sprite => sprite.name === spriteArg.name
+    );
+    return [sprite];
+  }
+  if (spriteArg.costume) {
+    return Object.values(nativeSpriteMap).filter(
+      sprite => sprite.getAnimationLabel() === spriteArg.costume
+    );
   }
   return [];
 }
 
 export function getAnimationsInUse() {
   let animations = new Set();
-  Object.keys(nativeSpriteMap).forEach(spriteId => {
-    animations.add(nativeSpriteMap[spriteId].getAnimationLabel());
-  });
+  Object.values(nativeSpriteMap).filter(sprite =>
+    animations.add(sprite.getAnimationLabel())
+  );
+
   return Array.from(animations);
 }
 
@@ -89,6 +77,21 @@ export function getNumBehaviorsForSpriteId(spriteId) {
   return numBehaviors;
 }
 
+/**
+ * @param {number} spriteId
+ * @return {[String]} List containing the names of the behaviors associated
+ * with the specified sprite
+ */
+export function getBehaviorsForSpriteId(spriteId) {
+  let spriteBehaviors = [];
+  behaviors.forEach(behavior => {
+    if (behavior.sprite.id === spriteId) {
+      spriteBehaviors.push(behavior.name);
+    }
+  });
+  return spriteBehaviors;
+}
+
 export function getSpriteIdsInUse() {
   let spriteIds = [];
   Object.keys(nativeSpriteMap).forEach(spriteId =>
@@ -102,11 +105,28 @@ export function getSpriteIdsInUse() {
  * @param {Sprite} sprite
  * @returns {Number} A unique id to reference the sprite.
  */
-export function addSprite(sprite) {
+export function addSprite(sprite, name) {
   nativeSpriteMap[spriteId] = sprite;
   sprite.id = spriteId;
+  if (name) {
+    enforceUniqueSpriteName(name);
+    sprite.name = name;
+  }
   spriteId++;
   return sprite.id;
+}
+
+/**
+ * Enforces that two sprites cannot have the same name. This is enforced by clearing
+ * the name from any existing sprites when a new sprite is created with that name.
+ * @param {String} name
+ */
+function enforceUniqueSpriteName(name) {
+  Object.values(nativeSpriteMap).forEach(sprite => {
+    if (sprite.name === name) {
+      sprite.name = undefined;
+    }
+  });
 }
 
 /**
@@ -284,5 +304,5 @@ export function removeBehavior(sprite, behavior) {
 }
 
 export function runBehaviors() {
-  behaviors.forEach(behavior => behavior.func(behavior.sprite.id));
+  behaviors.forEach(behavior => behavior.func({id: behavior.sprite.id}));
 }

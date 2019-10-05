@@ -116,4 +116,23 @@ class AdminSearchControllerTest < ActionController::TestCase
     post :lookup_section, params: {section_code: @teacher_section.code}
     assert_redirected_to_sign_in
   end
+
+  #
+  # pilot experiment tests
+  #
+
+  test 'non-admin cannot view list of piloters' do
+    sign_in @not_admin
+    get :show_pilot, params: {pilot_name: 'csd-piloters'}
+    assert_response :forbidden
+  end
+
+  test 'piloter shows up in list of piloters' do
+    create :teacher, pilot_experiment: 'csd-piloters', email: 'csd@example.com'
+    create :teacher, pilot_experiment: 'csp-piloters', email: 'csp@example.com'
+    get :show_pilot, params: {pilot_name: 'csd-piloters'}
+    assert_response :success
+    assert_select 'table tr td', 1
+    assert_select 'table tr td', 'csd@example.com'
+  end
 end
