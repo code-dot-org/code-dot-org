@@ -14,8 +14,7 @@ describe('MakerStatusOverlay', () => {
     hasConnectionError: false,
     handleTryAgain: () => {},
     handleDisableMaker: () => {},
-    handleOpenSetupPage: () => {},
-    useFakeBoardOnNextRun: () => {}
+    handleOpenSetupPage: () => {}
   };
 
   it('renders nothing by default', () => {
@@ -160,18 +159,16 @@ describe('MakerStatusOverlay', () => {
   });
 
   describe('on error', () => {
-    let wrapper, handleTryAgain, useFakeBoardOnNextRun, handleOpenSetupPage;
+    let wrapper, handleTryAgain, handleOpenSetupPage;
 
     beforeEach(() => {
       handleTryAgain = sinon.spy();
-      useFakeBoardOnNextRun = sinon.spy();
       handleOpenSetupPage = sinon.spy();
       wrapper = mount(
         <UnconnectedMakerStatusOverlay
           {...testProps}
           hasConnectionError
           handleTryAgain={handleTryAgain}
-          useFakeBoardOnNextRun={useFakeBoardOnNextRun}
           handleOpenSetupPage={handleOpenSetupPage}
         />
       );
@@ -200,21 +197,6 @@ describe('MakerStatusOverlay', () => {
       expect(handleTryAgain).not.to.have.been.called;
       wrapper.find(selector).simulate('click');
       expect(handleTryAgain).to.have.been.calledOnce;
-    });
-
-    it('and a "Run Without Board" button', () => {
-      const selector = 'button.run-without-board';
-      expect(wrapper).to.have.descendants(selector);
-      expect(wrapper.find(selector).text()).to.include('Run Without Board');
-    });
-
-    it('that calls the try again handler and useFakeBoardOnNextRun handler', () => {
-      const selector = 'button.run-without-board';
-      expect(handleTryAgain).not.to.have.been.called;
-      expect(useFakeBoardOnNextRun).not.to.have.been.called;
-      wrapper.find(selector).simulate('click');
-      expect(handleTryAgain).to.have.been.calledOnce;
-      expect(useFakeBoardOnNextRun).to.have.been.calledOnce;
     });
 
     it('and a "Setup Instructions" button', () => {

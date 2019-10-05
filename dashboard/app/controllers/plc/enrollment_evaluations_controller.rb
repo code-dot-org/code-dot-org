@@ -19,7 +19,7 @@ class Plc::EnrollmentEvaluationsController < ApplicationController
 
     modules_to_enroll_in = Plc::LearningModule.find([params[:content_module], params[:practice_module]])
 
-    if modules_to_enroll_in.size == 2 && modules_to_enroll_in.pluck(:module_type).sort == [Plc::LearningModule::CONTENT_MODULE, Plc::LearningModule::PRACTICE_MODULE]
+    if modules_to_enroll_in.pluck(:module_type).sort == [Plc::LearningModule::CONTENT_MODULE, Plc::LearningModule::PRACTICE_MODULE]
       @enrollment_unit_assignment.enroll_user_in_unit_with_learning_modules(modules_to_enroll_in)
       # Redirect to script view
       redirect_to script_path(@enrollment_unit_assignment.plc_course_unit.script)
