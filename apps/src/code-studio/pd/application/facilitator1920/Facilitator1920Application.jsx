@@ -5,7 +5,7 @@ import ChooseYourProgram from './ChooseYourProgram';
 import ExperienceAndCommitments from './ExperienceAndCommitments';
 import LeadingStudents from './LeadingStudents';
 import YourApproachToLearningAndLeading from './YourApproachToLearningAndLeading';
-import Section6Submission from './Section6Submission';
+import Submission from './Submission';
 
 export default class Facilitator1920Application extends FormController {
   static propTypes = {
@@ -27,7 +27,7 @@ export default class Facilitator1920Application extends FormController {
       ExperienceAndCommitments,
       LeadingStudents,
       YourApproachToLearningAndLeading,
-      Section6Submission
+      Submission
     ];
   }
 

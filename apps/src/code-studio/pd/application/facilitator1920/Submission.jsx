@@ -7,14 +7,14 @@ import {
   TextFields
 } from '@cdo/apps/generated/pd/facilitator1920ApplicationConstants';
 
-export default class Section6Submission extends LabeledFormComponent {
+export default class Submission extends LabeledFormComponent {
   static labels = {
-    ...PageLabels.section6Submission,
+    ...PageLabels.submission,
     ...PageLabels.aboutYou
   };
 
   static associatedFields = [
-    ...Object.keys(PageLabels.section6Submission),
+    ...Object.keys(PageLabels.submission),
     'genderIdentity',
     'race'
   ];
@@ -22,7 +22,7 @@ export default class Section6Submission extends LabeledFormComponent {
   render() {
     return (
       <FormGroup>
-        <h3>Section 6: {SectionHeaders.section6Submission}</h3>
+        <h3>Section 6: {SectionHeaders.submission}</h3>
         {this.radioButtonsFor('genderIdentity')}
         {this.checkBoxesFor('race')}
         {this.checkBoxesWithAdditionalTextFieldsFor(
