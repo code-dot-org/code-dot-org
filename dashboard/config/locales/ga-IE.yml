@@ -433,6 +433,7 @@ ga:
     enter_parent_email: Cuir isteach seoladh ríomhphoist do thuismitheora (i gcás
       gur gá duit d'fhocal faire a athshocrú)
     update: Nuashonraigh an Cuntas
+    update_email: Nuashonraigh
   user_level:
     completed: Críochnaithe
     tried: Iarracht déanta

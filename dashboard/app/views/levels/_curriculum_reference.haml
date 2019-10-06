@@ -1,7 +1,7 @@
 - level ||= @level
 
 - content_for(:head) do
-  %script{src: minifiable_asset_path('js/levels/_curriculum_reference.js')}
+  %script{src: webpack_asset_path('js/levels/_curriculum_reference.js')}
 
 .curriculum-reference
   %div{style: "overflow: hidden"}

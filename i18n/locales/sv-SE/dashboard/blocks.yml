@@ -875,61 +875,19 @@ sv:
         text: sväng höger
       Vector_positionCenter:
         text: mittersta delen
-      aalab_changePropByFlexible:
-        text: ändra {SPRITE} {PROPERTY} via {VAL}
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': storlek
-            '"rotation"': rotation
-            '"x"': x-position
-            '"y"': y-position
-            '"direction"': rörelseriktning
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': när
-            '"while"': medan
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': när
-            '"while"': medan
-      aalab_jumpTo:
-        text: "{SPRITE} hoppa till {LOCATION}"
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': när
-            '"while"': medan
-          KEY:
-            '"up"': upp
-            '"down"': ner
-            '"left"': vänster
-            '"right"': höger
-            '"space"': rymden
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': stad
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': sant
-            '"false"': falskt
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': storlek
-            '"rotation"': rotation
-            '"x"': x-position
-            '"y"': y-position
-            '"direction"': rörelseriktning
-            '"tint"': färgton
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': alltid
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
         options:
           OPTION:
             '"show"': visa

@@ -477,6 +477,7 @@ is:
       gleymast)
     update: Uppfæra aðgang
     account_successfully_updated: Uppfærsla aðgangs tókst.
+    update_email: Uppfæra
   user_level:
     completed: Lokið
     tried: Reynt

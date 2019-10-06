@@ -82,8 +82,15 @@ mt:
         text: kulur bl-addoċċ
       Mikelab_randomColor:
         text: kulur bl-addoċċ
-      aalab_setCollidable:
+      aalab_goToScene:
         options:
-          VAL:
-            '"true"': veru/minnu
-            '"false"': falz
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
+        options:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'

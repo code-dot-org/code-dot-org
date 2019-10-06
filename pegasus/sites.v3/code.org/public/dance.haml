@@ -8,8 +8,8 @@ theme: responsive
   window.pegasus.STUDIO_URL = "#{CDO.studio_url}";
 
 - js_locale = request.locale.to_s.downcase.tr('-', '_')
-%script{src: asset_path("js/#{js_locale}/common_locale.js")}
-%script{src: minifiable_asset_path('js/code.org/public/dance.js')}
+%script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
+%script{src: webpack_asset_path('js/code.org/public/dance.js')}
 
 %link{href: "/css/dance-landing/dance.css", type: "text/css", rel: "stylesheet"}
 
