@@ -1032,76 +1032,19 @@
         text: tilfeldig sted
       Vector_vectorNorth:
         text: nord
-      aalab_changePropByFlexible:
-        text: endre {SPRITE} {PROPERTY} med {VAL}
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': størrelse
-            '"rotation"': rotasjon
-            '"x"': x-posisjon
-            '"y"': y-posisjon
-            '"direction"': bevegelsesretning
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': når
-            '"while"': så lenge
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': når
-            '"while"': så lenge
-      aalab_getThisSprite:
-        options:
-          CHOICE:
-            '"this"': denne
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': når
-            '"while"': så lenge
-          KEY:
-            '"up"': opp
-            '"down"': ned
-            '"left"': venstre
-            '"right"': høyre
-            '"space"': verdensrommmet
-      aalab_location_picker:
-        text: "{LOCATION}"
-      aalab_moveInDirection:
-        options:
-          DIRECTION:
-            '"North"': Nord
-            '"East"': Øst
-            '"South"': Sør
-            '"West"': Vest
-      aalab_randomLocation:
-        text: tilfeldig sted
-      aalab_removeOneAndAll:
-        text: slett {THIS}
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': by
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': sann
-            '"false"': usann
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': størrelse
-            '"rotation"': rotasjon
-            '"x"': x-posisjon
-            '"y"': y-posisjon
-            '"direction"': bevegelsesretning
-            '"tint"': fargetone
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': for alltid
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
         options:
           OPTION:
             '"show"': vis

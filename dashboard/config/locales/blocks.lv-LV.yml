@@ -340,49 +340,19 @@ lv:
         text: pagriezt pa labi
       Vector_vectorNorth:
         text: uz ziemeļiem
-      aalab_changePropByFlexible:
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': izmērs
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': kad
-            '"while"': kamēr
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': kad
-            '"while"': kamēr
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': kad
-            '"while"': kamēr
-          KEY:
-            '"up"': uz augšu
-            '"down"': uz leju
-            '"left"': pa kreisi
-            '"right"': pa labi
-            '"space"': telpa
-      aalab_moveInDirection:
-        options:
-          DIRECTION:
-            '"North"': Ziemeļi
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': pilsēta
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': patiess
-            '"false"': nepatiess
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': izmērs
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
         options:
           OPTION:
             '"show"': rādīt

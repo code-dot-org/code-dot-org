@@ -260,6 +260,7 @@ eu:
     delete_text_teacher_note: 'Mesedez kontutan izan: zure kontua ezabatzeak ez ditu
       zure ikasleen kontuak ezabatuko.'
     delete_confirm: Ziur zaude zure kontua ezabatu nahi duzula?
+    update_email: Eguneratu
   user_level:
     completed: Amaituta
     tried: Saiatua

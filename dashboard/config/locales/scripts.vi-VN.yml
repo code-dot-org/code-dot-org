@@ -1025,6 +1025,8 @@ vi:
               name: Video độc lập
             Curriculum Reference:
               name: Tham khảo chương trình đào tạo
+            Contained Levels:
+              name: Các cấp độ có chứa
         algebraPD2b:
           description: 'Trực tuyến giai đoạn 2: Tìm hiểu sắc màu mùa hè'
           description_short: 'Trực tuyến giai đoạn 2: Tìm hiểu sắc màu mùa hè'

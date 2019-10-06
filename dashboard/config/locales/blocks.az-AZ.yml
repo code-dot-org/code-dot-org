@@ -385,45 +385,19 @@ az:
         text: sola dön
       RyanLab_turnRight:
         text: sağa dön
-      aalab_changePropByFlexible:
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': ölçü
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': nə zaman
-            '"while"': hələ ki,
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': nə zaman
-            '"while"': hələ ki,
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': nə zaman
-            '"while"': hələ ki,
-          KEY:
-            '"up"': yuxarı
-            '"down"': aşağı
-            '"left"': sola
-            '"right"': sağa
-            '"space"': kosmos
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': şəhər
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': doğru
-            '"false"': yalan
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': ölçü
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
         options:
           OPTION:
             '"show"': şov

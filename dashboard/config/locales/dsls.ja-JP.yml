@@ -976,15 +976,15 @@ ja-JP:
         questions:
         - {}
         answers:
-        - {}
+        - feedback: ふせいかい
         - feedback: 正解です.
-        - {}
+        - feedback: ふせいかい
         - feedback: 不正解
       behaviors 4 predict:
         questions:
         - {}
         answers:
-        - {}
+        - feedback: ふせいかい
         - feedback: 正解です.
         - {}
         - feedback: 不正解
@@ -1198,8 +1198,11 @@ ja-JP:
         - {}
         answers:
         - text: A
+          feedback: ふせいかい
         - text: B
+          feedback: ふせいかい
         - text: C
+          feedback: ふせいかい
         - text: D
           feedback: 正解です.
       courseD_multi_artist_binary8_predict1_2018:
@@ -1207,8 +1210,11 @@ ja-JP:
         - {}
         answers:
         - text: A
+          feedback: ふせいかい
         - text: B
+          feedback: ふせいかい
         - text: C
+          feedback: ふせいかい
         - text: D
           feedback: 正解です.
       courseD_multi_artist_binary8_predict1_2018_2019:
@@ -1216,37 +1222,49 @@ ja-JP:
         - {}
         answers:
         - text: A
+          feedback: ふせいかい
         - text: B
+          feedback: ふせいかい
         - text: C
+          feedback: ふせいかい
         - text: D
           feedback: 正解です.
       courseD_multi_artist_nestedLoops9_predict1:
         questions:
-        - {}
+        - text: "”実行（じっこう）”をクリックしたら、どの図形がかけますか？"
         answers:
         - text: A
           feedback: 正解です.
         - text: B
+          feedback: 不正解、五角形を かく くりかえしを ４回 くりかえして 一周しています。
         - text: C
+          feedback: 不正解、五角形を かく くりかえしを ４回 くりかえして 一周しています。
         - text: わかりません
+          feedback: 五角形を かく くりかえしを ４回 くりかえして 一周しています。
       courseD_multi_artist_nestedLoops9_predict1_2018:
         questions:
-        - {}
+        - text: "”実行（じっこう）”をクリックしたら、どの図形がかけますか？"
         answers:
         - text: A
           feedback: 正解です.
         - text: B
+          feedback: 不正解、五角形を かく くりかえしを ４回 くりかえして 一周しています。
         - text: C
+          feedback: 不正解、五角形を かく くりかえしを ４回 くりかえして 一周しています。
         - text: わかりません
+          feedback: 五角形を かく くりかえしを ４回 くりかえして 一周しています。
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         questions:
-        - {}
+        - text: "”実行（じっこう）”をクリックしたら、どの図形がかけますか？"
         answers:
         - text: A
           feedback: 正解です.
         - text: B
+          feedback: 不正解、五角形を かく くりかえしを ４回 くりかえして 一周しています。
         - text: C
+          feedback: 不正解、五角形を かく くりかえしを ４回 くりかえして 一周しています。
         - text: わかりません
+          feedback: 五角形を かく くりかえしを ４回 くりかえして 一周しています。
       courseD_multi_bee_conditionals1_predict1:
         questions:
         - {}
@@ -1297,60 +1315,88 @@ ja-JP:
         - text: わかりません
       courseD_multi_bee_nestedLoops2_predict1:
         questions:
-        - {}
+        - text: '"実行（じっこう）"をクリックしたら どうなりますか？プログラムは くりかえしが 入れ子に なっているよ。'
         answers:
-        - {}
-        - {}
-        - feedback: 正解です.
+        - text: ハチは、１回だけ 前に 進んで ミツを ゲットする。
+          feedback: ふせいかい、ハチは前に進むとミツをとるのくりかえしをくりかえして、すべてのミツをゲットする。
+        - text: ハチは ミツを ２つゲットする。
+          feedback: ふせいかい、ハチは前に進むとミツをとるのくりかえしをくりかえして、すべてのミツをゲットする。
+        - text: ハチは すべてのミツを ゲットする。
+          feedback: 正解です.
         - text: わかりません
+          feedback: ハチは前に進むとミツをとるのくりかえしをくりかえして、すべてのミツをゲットする。
       courseD_multi_bee_nestedLoops2_predict1_2018:
         questions:
-        - {}
+        - text: '"実行（じっこう）"をクリックしたら どうなりますか？プログラムは くりかえしが 入れ子に なっているよ。'
         answers:
-        - {}
-        - {}
-        - feedback: 正解です.
+        - text: ハチは、１回だけ 前に 進んで ミツを ゲットする。
+          feedback: ふせいかい、ハチは前に進むとミツをとるのくりかえしをくりかえして、すべてのミツをゲットする。
+        - text: ハチは ミツを ２つゲットする。
+          feedback: ふせいかい、ハチは前に進むとミツをとるのくりかえしをくりかえして、すべてのミツをゲットする。
+        - text: ハチは すべてのミツを ゲットする。
+          feedback: 正解です.
         - text: わかりません
+          feedback: ハチは前に進むとミツをとるのくりかえしをくりかえして、すべてのミツをゲットする。
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
         questions:
-        - {}
+        - text: '"実行（じっこう）"をクリックしたら どうなりますか？プログラムは くりかえしが 入れ子に なっているよ。'
         answers:
-        - {}
-        - {}
-        - feedback: 正解です.
+        - text: ハチは、１回だけ 前に 進んで ミツを ゲットする。
+          feedback: ふせいかい、ハチは前に進むとミツをとるのくりかえしをくりかえして、すべてのミツをゲットする。
+        - text: ハチは ミツを ２つゲットする。
+          feedback: ふせいかい、ハチは前に進むとミツをとるのくりかえしをくりかえして、すべてのミツをゲットする。
+        - text: ハチは すべてのミツを ゲットする。
+          feedback: 正解です.
         - text: わかりません
+          feedback: ハチは前に進むとミツをとるのくりかえしをくりかえして、すべてのミツをゲットする。
       courseD_multi_bee_nestedLoops9_predict2:
         questions:
-        - {}
+        - text: '"実行（じっこう）"をクリックしたら ハチは いくつミツを 集めることが できますか？'
         answers:
-        - {}
+        - feedback: ふせいかい、ハチはループのなかにある さいしょのループで ２つ、うしろのループで ２つ ミツを 集めます。それを２回 くりかえすので、８つ
+            ミツを 集めることができます。
         - feedback: 正解です.
-        - {}
+        - feedback: ふせいかい、ハチはループのなかにある さいしょのループで ２つ、うしろのループで ２つ ミツを 集めます。それを２回 くりかえすので、８つ
+            ミツを 集めることができます。
         - text: わかりません
+          feedback: ハチはループのなかにある さいしょのループで ２つ、うしろのループで ２つ ミツを 集めます。それを２回 くりかえすので、８つ
+            ミツを 集めることができます。
       courseD_multi_bee_nestedLoops9_predict2_2018:
         questions:
-        - {}
+        - text: '"実行（じっこう）"をクリックしたら ハチは いくつミツを 集めることが できますか？'
         answers:
-        - {}
+        - feedback: ふせいかい、ハチはループのなかにある さいしょのループで ２つ、うしろのループで ２つ ミツを 集めます。それを２回 くりかえすので、８つ
+            ミツを 集めることができます。
         - feedback: 正解です.
-        - {}
+        - feedback: ふせいかい、ハチはループのなかにある さいしょのループで ２つ、うしろのループで ２つ ミツを 集めます。それを２回 くりかえすので、８つ
+            ミツを 集めることができます。
         - text: わかりません
+          feedback: ハチはループのなかにある さいしょのループで ２つ、うしろのループで ２つ ミツを 集めます。それを２回 くりかえすので、８つ
+            ミツを 集めることができます。
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         questions:
-        - {}
+        - text: '"実行（じっこう）"をクリックしたら ハチは いくつミツを 集めることが できますか？'
         answers:
-        - {}
+        - feedback: ふせいかい、ハチはループのなかにある さいしょのループで ２つ、うしろのループで ２つ ミツを 集めます。それを２回 くりかえすので、８つ
+            ミツを 集めることができます。
         - feedback: 正解です.
-        - {}
+        - feedback: ふせいかい、ハチはループのなかにある さいしょのループで ２つ、うしろのループで ２つ ミツを 集めます。それを２回 くりかえすので、８つ
+            ミツを 集めることができます。
         - text: わかりません
+          feedback: ハチはループのなかにある さいしょのループで ２つ、うしろのループで ２つ ミツを 集めます。それを２回 くりかえすので、８つ
+            ミツを 集めることができます。
       courseD_multi_collector_debugging10_predict1:
         questions:
-        - {}
+        - text: '"実行（じっこう）"ボタンをクリックしても、たからものを 全部 集めることができないのは どうして？答えをよくみて、回答してね。'
         answers:
-        - {}
-        - {}
-        - feedback: 正解です.
+        - text: ローレルはまちがった方向に曲がろうとするから。
+          feedback: ふせいかい、まちがっているのは、そこだけじゃないよ。くりかえしの回数も足りないよ。
+        - text: 'たからものを全部集めるには、くりかえしの回数が足りません。 '
+          feedback: ふせいかい、まちがっているのは、そこだけじゃないよ。曲がる方向もまちがえてるよ。
+        - text: 曲がる方向*と*くりかえしの回数が まちがっているので、たからものを 全部 集めることは できません。
+          feedback: 正解です.
         - text: わかりません
+          feedback: 曲がる方向*と*くりかえしの回数が まちがっているので、たからものを 全部 集めることは できません。
       courseD_multi_farmer_condLoops9_predict1:
         questions:
         - {}
@@ -1379,58 +1425,89 @@ ja-JP:
         questions:
         - {}
         answers:
-        - {}
-        - feedback: 正解です.
-        - {}
+        - text: 農夫は道を歩いて行って、カボチャをしゅうかくします。
+          feedback: ふせいかい、`ピック カボチャ`がくりかえしの中にあるで、農夫は、さいごに カボチャを しゅうかくするのではなく、前に進むごとに
+            カボチャを しゅうかくします。
+        - text: 農夫は前に進むごとにカボチャをしゅうかくするが、カボチャをゲットすることはできない。
+          feedback: 正解です.
+        - text: 農夫や４回前に進んで、カボチャをゲットする。
+          feedback: ふせいかい、`ピック カボチャ`がくりかえしの中にあるで、農夫は、さいごに カボチャを しゅうかくするのではなく、前に進むごとに
+            カボチャを しゅうかくします。
         - text: わかりません
+          feedback: "`ピック カボチャ`がくりかえしの中にあるで、農夫は、さいごに カボチャを しゅうかくするのではなく、前に進むごとに カボチャを
+            しゅうかくします。"
       courseD_multi_farmer_while10_predict2:
         questions:
-        - {}
+        - text: このプログラムを動かしたら、どうなるかな？
         answers:
-        - {}
-        - feedback: 正解です.
-        - {}
+        - text: まっ平になる。
+          feedback: ふせいかい、土をかたづけて 山をなくす めいれいは 入っていません。
+        - text: 山が、平らになる。
+          feedback: 正解です.
+        - text: あなが なくなる。
+          feedback: ふせいかい、`～の間`は、じょうけんを みたす間 くりかえしますが、その中に 土をかたづけて 山を平らにする めいれいは ありません。
         - text: わかりません
+          feedback: "`～の間`は、じょうけんを みたす間 くりかえしますが、その中に 土をかたづけて 山を平らにする めいれいは ありません。"
       courseD_multi_farmer_while10_predict2_2018:
         questions:
-        - {}
+        - text: このプログラムを動かしたら、どうなるかな？
         answers:
-        - {}
-        - feedback: 正解です.
-        - {}
+        - text: まっ平になる。
+          feedback: ふせいかい、土をかたづけて 山をなくす めいれいは 入っていません。
+        - text: 山が、平らになる。
+          feedback: 正解です.
+        - text: あなが なくなる。
+          feedback: ふせいかい、`～の間`は、じょうけんを みたす間 くりかえしますが、その中に 土をかたづけて 山を平らにする めいれいは ありません。
         - text: わかりません
+          feedback: "`～の間`は、じょうけんを みたす間 くりかえしますが、その中に 土をかたづけて 山を平らにする めいれいは ありません。"
       courseD_multi_farmer_while10_predict2_2018_2019:
         questions:
-        - {}
+        - text: このプログラムを動かしたら、どうなるかな？
         answers:
-        - {}
-        - feedback: 正解です.
-        - {}
+        - text: まっ平になる。
+          feedback: ふせいかい、土をかたづけて 山をなくす めいれいは 入っていません。
+        - text: 山が、平らになる。
+          feedback: 正解です.
+        - text: あなが なくなる。
+          feedback: ふせいかい、`～の間`は、じょうけんを みたす間 くりかえしますが、その中に 土をかたづけて 山を平らにする めいれいは ありません。
         - text: わかりません
+          feedback: "`～の間`は、じょうけんを みたす間 くりかえしますが、その中に 土をかたづけて 山を平らにする めいれいは ありません。"
       courseD_multi_farmer_while4_predict1:
         questions:
-        - {}
+        - text: "”実行（じっこう）”をクリックしたら、どうなるかな？"
         answers:
-        - {}
-        - {}
-        - feedback: 正解です.
+        - text: なにも起こらない。
+          feedback: ふせいかい、農夫は山がなくなるまで、土をかたづけつづけます。
+        - text: 農夫はずっと土を かたづけ つづける。
+          feedback: ふせいかい、農夫は山がなくなるまで、土をかたづけつづけます。
+        - text: 農夫は山がなくなるまで、土をかたづけつづけます。
+          feedback: 正解です.
         - text: わかりません
+          feedback: 農夫は山がなくなるまで、土をかたづけつづけます。
       courseD_multi_farmer_while4_predict1_2018:
         questions:
-        - {}
+        - text: "”実行（じっこう）”をクリックしたら、どうなるかな？"
         answers:
-        - {}
-        - {}
-        - feedback: 正解です.
+        - text: なにも起こらない。
+          feedback: ふせいかい、農夫は山がなくなるまで、土をかたづけつづけます。
+        - text: 農夫はずっと土を かたづけ つづける。
+          feedback: ふせいかい、農夫は山がなくなるまで、土をかたづけつづけます。
+        - text: 農夫は山がなくなるまで、土をかたづけつづけます。
+          feedback: 正解です.
         - text: わかりません
+          feedback: 農夫は山がなくなるまで、土をかたづけつづけます。
       courseD_multi_farmer_while4_predict1_2018_2019:
         questions:
-        - {}
+        - text: "”実行（じっこう）”をクリックしたら、どうなるかな？"
         answers:
-        - {}
-        - {}
-        - feedback: 正解です.
+        - text: なにも起こらない。
+          feedback: ふせいかい、農夫は山がなくなるまで、土をかたづけつづけます。
+        - text: 農夫はずっと土を かたづけ つづける。
+          feedback: ふせいかい、農夫は山がなくなるまで、土をかたづけつづけます。
+        - text: 農夫は山がなくなるまで、土をかたづけつづけます。
+          feedback: 正解です.
         - text: わかりません
+          feedback: 農夫は山がなくなるまで、土をかたづけつづけます。
       courseD_multi_maze_until10_predict2:
         questions:
         - {}

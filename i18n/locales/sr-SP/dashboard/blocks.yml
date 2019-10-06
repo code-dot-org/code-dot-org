@@ -299,49 +299,19 @@ sr:
         text: окрени се лево
       RyanLab_turnRight:
         text: окрени се десно
-      aalab_changePropByFlexible:
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': величина
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': када
-            '"while"': док је
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': када
-            '"while"': док је
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': када
-            '"while"': док је
-          KEY:
-            '"up"': горе
-            '"down"': доле
-            '"left"': лево
-            '"right"': десно
-            '"space"': Простор
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': Град
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': тачно
-            '"false"': нетачно
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': величина
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': заувек
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
         options:
           OPTION:
             '"show"': прикажи

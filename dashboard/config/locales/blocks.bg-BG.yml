@@ -751,61 +751,19 @@ bg:
         text: завий надясно
       Vector_vectorNorth:
         text: север
-      aalab_changePropByFlexible:
-        text: промяна на {SPRITE} {PROPERTY} с {VAL}
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': размер
-            '"rotation"': въртене
-            '"x"': x позиция
-            '"y"': y позиция
-            '"direction"': посока на движение
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': когато
-            '"while"': докато
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': когато
-            '"while"': докато
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': когато
-            '"while"': докато
-          KEY:
-            '"up"': нагоре
-            '"down"': надолу
-            '"left"': наляво
-            '"right"': надясно
-            '"space"': космос
-      aalab_location_picker:
-        text: "{LOCATION}"
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': град
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': вярно
-            '"false"': грешно
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': размер
-            '"rotation"': въртене
-            '"x"': x позиция
-            '"y"': y позиция
-            '"direction"': посока на движение
-            '"tint"': оттенък
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': завинаги
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
         options:
           OPTION:
             '"show"': показва

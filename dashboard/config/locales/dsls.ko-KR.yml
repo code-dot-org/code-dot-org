@@ -452,6 +452,63 @@ ko-KR:
         - {}
         - {}
         - {}
+      CSD U1 Lesson 5 Overview:
+        markdown: |
+          # Overview
+
+          이 단원에서는 컴퓨터에서 사용하는 다양한 입력 및 출력 장치 유형과 컴퓨터가 보내고 받는 정보의 유형에 대해 알아봅니다.
+
+          ## Vocabulary
+
+          * **입력** - 컴퓨터에 정보를 제공할 수 있는 장치 또는 구성 요소
+          * **출력** - 컴퓨터에서 정보를 수신하는 모든 장치 또는 구성 요소
+
+
+          ## Resources
+
+          * [입력과 출력 - 활동가이드](https://docs.google.com/document/d/1ObS_kxkXoueaotPYFAEkcCDzn690zumqoLLnrU5kY2Q/export?format=pdf)
+      CSD U1 Lesson 6 Overview:
+        markdown: |
+          # Overview
+
+          이 단원에서는 입력을 출력으로 전환하기 위해 인간과 컴퓨터가 처리하는 방법을 배웁니다.
+
+          ## Vocabulary
+
+          * **알고리즘** - 컴퓨터에서 실행할 수 있는 과정에 대한 정확한 명령 순서
+
+          ## Resources
+
+          * [Card Sorting Algorithm - Activity Guide](https://docs.google.com/document/d/1o4kVRnXnigufkS9WsjHjeD38f8MQrX6qCEFpka-F9Oo/export?format=pdf)
+      CSD U1 Lesson 7 Overview:
+        markdown: |
+          # Overview
+
+          이 단원에서는 컴퓨터가 저장하는 정보의 종류와 어떻게 저장소가 정보 처리의 중요한 부분이 되는지 대해 알아봅니다.
+
+          ## Resources
+
+          * [저장소와 처리 - 활동가이드](https://docs.google.com/document/d/1I-OzbJizf7m5DK5jfRxDtSYtc_SoSk6vGtSM9tqlGw0/export?format=pdf)
+      CSD U1 Lesson 8 Overview:
+        markdown: |
+          # Overview
+
+          이 단원에서는 앱이 문제를 해결하기 위해 다양한 종류의 정보를 처리하는 방법을 살펴봅니다.
+
+          ## Resources
+
+          * [앱탐색 - 활동가이드](https://docs.google.com/document/d/1OW-fkwA7xeNZWiduWescL-6a6zFigtJVP7hfL1oNgVA/export?format=pdf)
+      CSD U1 Lesson 9 Overview:
+        markdown: |
+          # Overview
+
+          이 프로젝트의 경우 스스로 정의한 문제를 해결하는 자신의 앱을 디자인합니다.
+
+          ## Resources
+
+          * [앱과 문제해결 - 프로젝트 가이드](https://docs.google.com/document/d/1S7X-B2V1-WuT7ZLk1LAZRO1O5f4u7pgth4F7G00tGak/export?format=pdf)
+          * [앱과 문제해결 - 동료검토](https://docs.google.com/document/d/13ekhJvtz1vovS6FhGBeDf1mcYFRyJe65bQdi8S8T9lU/export?format=pdf)
+          * [앱과 문제해결 - 채점표](https://docs.google.com/document/d/1ix0LfgiVglwyC5Bb6PBlfBrnbeCOz2wPIPTgXu-qMZE/export?format=pdf)
       CSD U2 Design Project:
         title: 제목화면 주제
         content1: 설명 입력

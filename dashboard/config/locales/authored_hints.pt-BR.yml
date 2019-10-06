@@ -3360,7 +3360,7 @@ pt-BR:
           \ </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title
           name=\"DIR\">moveForward</title>\n                  </block>\n                  \n
           \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n
-          \   <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
+          \   <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>"
         courseD_collector_debugging_challenge2_b: |-
           Em seguida, colete as gemas restantes nessa linha.
 
@@ -9185,16 +9185,6 @@ pt-BR:
         courseC_starWars_loops4_b: 'Cada laço ''repetir'' terá apenas um comando dentro
           dele: ''mover à frente''.'
       courseC_starWars_loops5:
-        courseC_starWars_loops5_b: Para mover para baixo você deve virar e então mover
-          adiante.
-        courseC_starWars_loops5_a: A melhor solução utiliza uma volta, então um único
-          'mover à frente', outra volta, e então um laço.
-      courseC_starWars_loops5_2018:
-        courseC_starWars_loops5_b: Para mover para baixo você deve virar e então mover
-          adiante.
-        courseC_starWars_loops5_a: A melhor solução utiliza uma volta, então um único
-          'mover à frente', outra volta, e então um laço.
-      courseC_starWars_loops5_2019:
         courseC_starWars_loops5_b: Para mover para baixo você deve virar e então mover
           adiante.
         courseC_starWars_loops5_a: A melhor solução utiliza uma volta, então um único

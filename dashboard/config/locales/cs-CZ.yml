@@ -461,6 +461,7 @@ cs:
       (pro obnovení hesla)
     update: Aktualizovat účet
     account_successfully_updated: Účet úspěšně aktualizován.
+    update_email: Aktualizovat
   user_level:
     completed: Dokončeno
     tried: Vyzkoušeno

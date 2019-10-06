@@ -586,71 +586,19 @@ ka:
         text: შემთხვევითი მდებარეობა
       Vector_vectorNorth:
         text: ჩრდილოეთი
-      aalab_changePropByFlexible:
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': ზომა
-            '"rotation"': შებრუნება
-            '"x"': x პოზიცია
-            '"y"': y პოზიცია
-            '"direction"': მოძრაობის მიმართულება
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': როდის
-            '"while"': სანამ
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': როდის
-            '"while"': სანამ
-      aalab_getThisSprite:
-        options:
-          CHOICE:
-            '"other"': სხვა
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': როდის
-            '"while"': სანამ
-          KEY:
-            '"up"': ზემოთ
-            '"down"': ქვემოთ
-            '"left"': მარცხნივ
-            '"right"': მარჯვნივ
-            '"space"': კოსმოსი
-      aalab_moveInDirection:
-        options:
-          DIRECTION:
-            '"North"': ჩრდილოეთი
-            '"East"': აღმოსავლეთი
-            '"South"': სამრხეთი
-            '"West"': აღმოსავლეთი
-      aalab_randomLocation:
-        text: შემთხვევითი მდებარეობა
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': ქალაქი
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': ჭეშმარიტი
-            '"false"': მცდარი
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': ზომა
-            '"rotation"': შებრუნება
-            '"x"': x პოზიცია
-            '"y"': y პოზიცია
-            '"direction"': მოძრაობის მიმართულება
-            '"tint"': შეფერადება
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': ყოველთვის
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
         options:
           OPTION:
             '"show"': ჩვენება

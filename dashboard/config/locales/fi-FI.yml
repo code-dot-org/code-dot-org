@@ -386,6 +386,7 @@ fi:
     create_personal_login: Luo henkilökohtainen tunnus
     create_personal_login_under_13_username: Käyttäjänimi (Älä käytä oikeaa nimeäsi!)
     create_personal_login_under_13_parent_email: Huoltajan sähköpostiosoite
+    update_email: Päivitä
   user_level:
     completed: Valmis
     tried: Kokeili
