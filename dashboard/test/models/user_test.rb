@@ -3605,6 +3605,11 @@ class UserTest < ActiveSupport::TestCase
       # Find the second stage, since the 1st is hidden
       next_visible_stage = twenty_hour.stages.find {|stage| stage.relative_position == 2}
 
+      assert student.script_level_hidden?(twenty_hour.script_levels.first)
+
+      get build_script_level_path(twenty_hour.script_levels.first)
+      assert_response :success
+
       assert_equal(next_visible_stage.script_levels.first, student.next_unpassed_progression_level(twenty_hour))
     end
 
