@@ -39,5 +39,5 @@
       shared_blocks: @level.shared_blocks,
     }.to_json
   }
-%script{src: minifiable_asset_path('js/levels/editors/_droplet.js'),
+%script{src: webpack_asset_path('js/levels/editors/_droplet.js'),
         data: script_data}
