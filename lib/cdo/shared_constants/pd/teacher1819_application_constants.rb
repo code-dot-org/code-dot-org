@@ -1,5 +1,7 @@
 module Pd
   module Teacher1819ApplicationConstants
+    YES_NO = %w(Yes No).freeze
+
     # Remove newlines and leading whitespace from multiline strings
     def self.clean_multiline(string)
       string.gsub(/\n\s*/, ' ')
@@ -180,6 +182,34 @@ module Pd
 
     ALL_LABELS = PAGE_LABELS.values.reduce(:merge).freeze
     ALL_LABELS_WITH_OVERRIDES = ALL_LABELS.map {|k, v| [k, LABEL_OVERRIDES[k] || v]}.to_h.freeze
+
+    VALID_SCORES = {
+      regional_partner_name: YES_NO,
+      previous_yearlong_cdo_pd: YES_NO,
+      committed: YES_NO,
+      able_to_attend_single: YES_NO,
+      able_to_attend_multiple: YES_NO,
+      csp_which_grades: YES_NO,
+      csp_course_hours_per_year: YES_NO,
+      csd_which_grades: YES_NO,
+      csd_terms_per_year: YES_NO,
+      principal_approval: YES_NO,
+      schedule_confirmed: YES_NO,
+      diversity_recruitment: YES_NO,
+      free_lunch_percent: [5, 0],
+      underrepresented_minority_percent: [5, 0],
+      wont_replace_existing_course: [5, 0],
+      taught_in_past: [2, 0],
+      csp_how_offer: [2, 0]
+    }.freeze
+
+    CRITERIA_SCORE_QUESTIONS_CSP = (
+      VALID_SCORES.select {|_, v| v == YES_NO}.keys - [:csd_which_grades, :csd_terms_per_year]
+    ).freeze
+    CRITERIA_SCORE_QUESTIONS_CSD = (
+      VALID_SCORES.select {|_, v| v == YES_NO}.keys -
+        [:csp_how_offer, :csp_which_grades, :csp_course_hours_per_year]
+    ).freeze
 
     TEXT_FIELDS = {
       other_with_text: 'Other:'.freeze,
