@@ -117,7 +117,7 @@ class SchoolStatsByYear < ActiveRecord::Base
     # as "rural": town (distant and remote subcategories)
     # and rural (fringe, distant, and remote subcategories).
     %w(town_distant town_remote rural_fringe rural_distant rural_remote).
-      any? {|type| community_type == type}
+      include? community_type
   end
 
   # returns what percent "count" is of the total student enrollment

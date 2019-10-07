@@ -168,7 +168,7 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
   end
 
   def yes_no_string(value)
-    return nil unless value
+    return nil if value.nil?
     value ? Pd::Application::ApplicationBase::YES : Pd::Application::ApplicationBase::NO
   end
 
