@@ -15,7 +15,8 @@ const ButtonColor = {
   gray: 'gray',
   blue: 'blue',
   white: 'white',
-  red: 'red'
+  red: 'red',
+  green: 'green'
 };
 
 const ButtonSize = {
@@ -28,7 +29,9 @@ const styles = {
     display: 'inline-block',
     fontSize: 12,
     fontFamily: '"Gotham 4r", sans-serif',
-    border: '1px solid ' + color.border_gray,
+    borderWidth: '1px',
+    borderStyle: 'solid',
+    borderColor: color.border_gray,
     borderBottomLeftRadius: 3,
     borderBottomRightRadius: 3,
     borderTopLeftRadius: 3,
@@ -113,6 +116,22 @@ const styles = {
       },
       ':disabled': {
         backgroundColor: color.lightest_red,
+        boxShadow: 'inset 0 2px 0 0 rgba(0,0,0,0.1)'
+      }
+    },
+    [ButtonColor.green]: {
+      color: color.white,
+      backgroundColor: color.level_perfect,
+      fontWeight: 'bold',
+      boxShadow: 'inset 0 2px 0 0 rgba(255,255,255,0.40)',
+      ':hover': {
+        boxShadow: 'none',
+        color: color.charcoal,
+        borderColor: color.lightest_gray,
+        backgroundColor: color.lightest_gray
+      },
+      ':disabled': {
+        backgroundColor: color.lightest_gray,
         boxShadow: 'inset 0 2px 0 0 rgba(0,0,0,0.1)'
       }
     }
