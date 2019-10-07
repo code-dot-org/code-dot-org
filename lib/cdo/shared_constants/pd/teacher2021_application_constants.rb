@@ -111,7 +111,7 @@ module Pd
         title_i_status: 'Title I status',
         school_type: 'School Type',
         total_student_enrollment: 'Total Student Enrollment',
-        free_lunch_percent: 'Percent of students that receive free/reduced lunch',
+        free_lunch_percent: 'Percent of students eligible to receive free/reduced lunch',
         underrepresented_minority_percent: 'Percent of students that are underrepresented minorities',
         american_indian_or_native_alaskan_percent: 'Percentage of student enrollment by race: American Indian or Native Alaskan',
         asian_percent: 'Percentage of student enrollment by race: Asian',
