@@ -363,7 +363,12 @@ class ApiController < ApplicationController
       user_level = current_user.last_attempt(level, script)
       level_source = user_level.try(:level_source).try(:data)
 
-      response[:progress] = current_user.user_progress_by_stage(stage)
+      response[:progress] = current_user.
+        user_levels.
+        by_stage(stage).
+        pluck(:level_id, :best_result).
+        to_h
+
       if user_level
         response[:lastAttempt] = {
           timestamp: user_level.updated_at.to_datetime.to_milliseconds,
