@@ -1,25 +1,25 @@
 * * *
 
-title: Computer Science Fundamentals Transition Guide theme: responsive style_min: true
+fundamentos Ciencia de Computación, Guia de Trancisión tema: responsivos
 
 * * *
 
-# Teaching Courses A-F
+# Enseñando Cursos A-F
 
 ## Tabla de Contenidos
 
-* [Visión General](#overview)
-* [Teaching the new courses](#newcourses)
-* [Circle-Time Stories (Courses A and B)](#circletime)
-* [Lesson Scaffolding & Challenge Puzzles (All Ages)](#scaffolding)
-* [Bridging Activities For Unplugged Lessons (All Ages)](#unplugged)
+* [Panorama](#overview)
+* [Enseñando los nuevos cursos](#newcourses)
+* [Circulo-Tiempo de Cuentos (Cursos A y B)](#circletime)
+* [Lección Andamios; Reto rompecabezas (Todas Edades)](#scaffolding)
+* [Ofreciendo Actividades Para Lecciones Discontinuas (Todas Edades)](#unplugged)
 * [End of Course Projects (Courses E & F)](#endofcourse)
 * [Conclusion](#conclusion)
 * [FAQs](#faq)
 
 <a id="overview"></a>
 
-## Visión General
+## Panorama
 
 The landscape of computer science education has changed immensely since the creation of the original Computer Science Fundamentals courses. Originally, Courses 1-4 were designed as a starting point to acquire the basics, no matter what the age of the student who was coming to the discipline. Now that far more districts, cities, and states have implemented computer science courses beginning at Kindergarten, teachers are asking for more content to see students through until middle school/junior high.
 
@@ -38,7 +38,7 @@ The biggest update to CS Fundamentals is that content will move from four course
 
 <a id="newcourses"></a>
 
-## Teaching the new courses
+## Enseñando los nuevos cursos
 
 As mentioned earlier, the courses should feel familiar, but different. If you’ve been to a Code.org professional development workshop, then you’re ready to teach the new courses. There are a small number of changes, but the overall platform, curriculum and pedagogical philosophy is unchanged. If you haven’t yet been, Code.org offers 1 day workshops at no cost to help you learn how to understand the curricula, navigate the Code.org platform, and teach the unplugged lessons.
 
@@ -53,7 +53,7 @@ The rest of this guide will present each idea in more detail, offering tips and 
 
 <a id="circletime"></a>
 
-## Circle-Time Stories (Courses A and B)
+## Circulo-Tiempo de Cuentos (Cursos A y B)
 
 Some concepts are difficult to teach through activities and puzzles alone, especially for young students. This is why we’ve introduced a small number of circle-time stories in the Kindergarten and First Grade curricula. These stories are intended to be read by the teacher to the entire class, with stops along the way to discuss critical ideas like debugging, persistence, and frustration. Our hope is that allowing students to experience these tough concepts via story characters will help them to recognize the same notions when they arise in future lessons.
 
@@ -80,7 +80,7 @@ If you are unable to gather your entire class together, Code.org has provided a 
 
 <a id="scaffolding"></a>
 
-## Lesson Scaffolding & Challenge Puzzles (All Ages)
+## Lección Andamios; Reto rompecabezas (Todas Edades)
 
 Courses A-F are less scaffolded overall than our previous courses. That means that we try to have students create their code from the beginning as often as possible, unless they are specifically learning to debug. As part of this design, most of our online lessons follow a trend where we present a simple puzzle to begin the lesson, then slowly drill forward with a new concept until the point where students have had a chance to understand the idea underneath. Next, we present them with a challenge puzzle, which is intended to get students thinking about the concept in a new and complicated way.
 
@@ -104,7 +104,7 @@ Some final notes for this area:
 
 <a id="unplugged"></a>
 
-## Bridging Activities For Unplugged Lessons (All Ages)
+## Ofreciendo Actividades Para Lecciones Discontinuas (Todas Edades)
 
 Unplugged activities meet students where they are in terms of pointing out how they already use important CS concepts in their everyday life. Once students can identify fundamental ideas like loops and conditionals, they get over the mental blocks that can happen when trying to use them for the first time programming online.
 

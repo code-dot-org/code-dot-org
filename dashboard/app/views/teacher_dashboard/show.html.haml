@@ -5,6 +5,6 @@
   teacher_dashboard_data[:sections] = @sections
   teacher_dashboard_data[:section] = @section
 
-%script{src: minifiable_asset_path('js/teacher_dashboard/show.js'), data: {dashboard: teacher_dashboard_data.to_json}}
+%script{src: webpack_asset_path('js/teacher_dashboard/show.js'), data: {dashboard: teacher_dashboard_data.to_json}}
 
 #teacher-dashboard

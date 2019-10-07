@@ -86,6 +86,7 @@ class ActiveSupport::TestCase
     DCDO.clear
 
     Rails.application.config.stubs(:levelbuilder_mode).returns false
+    CDO.stubs(:pretty_js).returns(true)
   end
 
   teardown do
