@@ -242,6 +242,7 @@ de:
     code_with_teacher: "%{section_code} mit %{teacher_name}"
     confirm:
       remove: Bist du sicher, dass du diesen Bereich verlassen möchtest?
+    default_name: Unbenannte Sektion
     remove: "(Bereich löschen)"
     type:
       word: Geheimwort
@@ -309,6 +310,7 @@ de:
       educate_high: High School/Gymnasium
       educate_hoc: Hour of Code
       educate_partner: Eine Partnerschaft mit uns
+      educate_beyond: Jenseits von Code.org
       educate_inspire: Inspiriere einen Schüler/eine Schülerin
       educate_community: Online Community
       educate_tools: Hilfsmittel und Videos
@@ -337,6 +339,7 @@ de:
       signin: Anmelden
       signup: Konto erstellen
       already_registered: Bereits registriert?
+      pair_programming: Paarprogrammierung
       team: Team
       driver: Bediener
       navigator: Navigator
@@ -362,6 +365,7 @@ de:
       minecraft_hero: Minecraft Hero
       playlab: Spielelabor
       playlab_k1: Spielelabor (Leseanfänger)
+      scratch: Scratch
       sports: Sport
       starwars: Star Wars
       starwarsblocks: Star Wars (Bausteine)
@@ -430,6 +434,7 @@ de:
     enter_new_login_info: Gib deine neuen Login-Informationen ein
     update: Konto aktualisieren
     account_successfully_updated: Konto erfolgreich aktualisiert.
+    update_email: Aktualisieren
   user_level:
     completed: Abgeschlossen
     tried: Versucht
@@ -498,6 +503,7 @@ de:
   gender:
     male: Männlich
     female: Weiblich
+    non_binary: Nicht-binär
     none: Möchte ich nicht beantworten
   user_type:
     student: Schüler
@@ -561,6 +567,7 @@ de:
     notes_coming_soon: Hinweise für dieses Video kommen bald.
     autoplay_option: Autoplay Videos
     download: Video herunterladen
+    show_notes: Zeige Hinweise
     show_video: Video anzeigen
   compatibility:
     upgrade:
@@ -940,8 +947,10 @@ de:
   peer_review:
     accepted:
       name: Akzeptiert
+      description_markdown: "**Ja**, diese Eingabe **erfüllt** die Anforderungen"
     rejected:
       name: Abgelehnt
+      description_markdown: "**Nein**, diese Eingabe **erfüllt nicht** die Anforderungen"
     escalated:
       name: Eskaliert
       description: Ich möchte, dass ein Instrukteur die Einreichung überprüft
@@ -966,8 +975,10 @@ de:
     csf_variables: Variablen
     csf_for_loops: '"Zähle mit"-Schleifen'
     csf_internet: Internet
+    csf_warmup: Aufwärmübung
     cspSurvey: Umfrage
     csp2_1_2018: 'Einheit 2: Digitale Informationen'
+    csp3_1_2018: 'Einheit 3: Einführung in die Programmierung'
     csp_variables: Variablen
     csp_conditionals: Bedingungen
     csp_functions: Funktionen
@@ -1066,6 +1077,7 @@ de:
       gender:
         male: Männlich
         female: Weiblich
+        non_binary: Nicht-binär
         none: Möchte ich nicht beantworten
       school_country:
         canada: Kanada
@@ -1079,12 +1091,26 @@ de:
         math: Mathematik
         science: Wissenschaft
         la: Sprachkunst
+        efl: Englisch als Fremdsprache
         music: Musik
         art: Kunst
       resources:
+        bootstrap: Bootstrap
+        codecademy: CodeCademy
+        csfirst: Google CS First
+        khan: Khan Academy
         kodable: Kodable
+        scratch: Scratch
+        tynker: Tynker
       robotics:
+        grok: Grok Learning
         kodable: Kodable
+        lego: LEGO Education
+        microbit: Microbit
+        ozobot: Ozobot
+        sphero: Sphero
+        raspberry: Raspberry Pi
+        wonder: Wonder Workshop
       workshop_course:
         csp: Informatik Grundprinzipien
       email_opt_in:

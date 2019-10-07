@@ -10,6 +10,8 @@ de-DE:
         und \"bewegen\"-Blöcke."
       2-3 Artist 4: Hilf mir, das Haus für diese Katze zu vervollständigen.
       2-3 Artist 9 NEW: Vervollständige diesen Drachen
+      2-3 Artist Assessment 1: "**Prüfung**: Vervollständige den letzten Zahn. Er
+        ist 25 Pixel breit und 25 Pixel hoch."
       2-3 Artist Debugging Assessment 1: "Warum ist das Quadrat um 75 Pixel zu klein
         geraten?\\\r\n\\\r\nWo ist der Fehler? Kannst du es größer machen?"
       2-3 Artist Free Play: Freies Spiel! Zeichne was du willst.
@@ -17,6 +19,10 @@ de-DE:
         Lasst uns den Kopf des Roboters malen! Kannst du ein Quadrat malen, dessen Seiten 100 Pixel lang sind?
 
         <br/>
+      2-3 Artist Loops New 10: Jetzt lass uns einen Haufen V's miteinander verbinden,
+        sie in einer Schleife zeichnen.
+      2-3 Artist Loops New 12: 'Zeichne einen Diamanten mit einer Seitenlänge von
+        100 Pixel. '
       2-3 Artist Loops New 15: |-
         Zeichne etwas, wozu du gerade Lust hast!
         <br/><br/>
@@ -29,9 +35,14 @@ de-DE:
         sorge dafür, dass es sich nach jedem Durchlauf vorwärts bewegt!
       2-3 Artist Nested Loops Free Play: Freies Spiel, zeichne irgendetwas Cooles
         mit verschachtelten Schleifen.
+      2-3 Bee Functions Assessment 2: "**Prüfung:** Erzeuge eine Funktion, mit der
+        man sich drehen, vorwärts bewegen und 3 mal Honig erzeugen kann. Anschließend
+        lasse die Biene dahin zurückkehren wo sie angefangen hat und drehe um."
       2-3 Bee Loops 3A: Kannst du eine Schleife verwenden um den ganzen Nektar einzusammeln?
       4-5 Artist Free Draw 1: Freies Zeichnen!  Zeichne, was deine Inspiration dir
         eingibt.
+      4-5 Artist Patterns 11: Wie oft muss die Schleife durchlaufen werden, damit
+        ein Halbkreis gezeichnet wird?
       4-5 Artist Patterns 7: Wir wollen den Code der letzten Aufgabe etwas verändern
         und so ein komplizierteres Muster erzeugen. Achte darauf, wie die Diamanten
         sich jetzt überdecken. Versuche es mit einer Änderung des ersten "springe
@@ -438,6 +449,8 @@ de-DE:
       course1_maze_debugging_challenge1: Beseitige die Fehler in diesem Level. Entferne
         die Blöcke, welche nicht passen, und füge die fehlenden Blöcke hinzu. Bring
         den Vogel zum Schwein!
+      course2_collector_prog_challenge1: Schau genau! Kannst du alle **10** Schätze
+        einsammeln?
       course2_maze_programming_challenge2: Manchmal gibt es mehr als eine Lösung für
         ein Problem. Manchmal ist es schneller, rückwärts zu gehen, als vorwärts!
       course3_maze_debugging_challenge1: _"Gehe ich hier nur immer im Kreis herum?"_
@@ -874,6 +887,97 @@ de-DE:
         **Freies Spiel:** Das ist Laurel, die Abenteurerin! Bewege sie und sammle soviel Schätze wie möglich ein. Benutze den 'sammle' Block um die Schätze aufzuheben!
 
         Ziehe die Blöcke in den Arbeitsbereich und versuche herauszufinden, wie du die Schätze einsammeln kannst. Du brauchst mindestens einen Schatz um dieses Level zu bestehen.
+      courseC_collector_prog2: Bewegen Laurel zum Schatz und benutze dann <xml><block
+        type="collector_collect"/></xml> um ihn aufzuheben.
+      courseC_collector_prog2_2018: Bewegen Laurel zum Schatz und benutze dann <xml><block
+        type="collector_collect"/></xml> um ihn aufzuheben.
+      courseC_collector_prog3: |-
+        _"Die Reihenfolge ist wichtig!"_
+
+        Die Blöcke, die du brauchst, sind schon im Arbeitsbereich, aber noch nicht verbunden.\
+        Ordne diese Blöcke so an, dass der Schatz eingesammelt wird, und löse damit die Aufgabe.
+      courseC_collector_prog3_2018: |-
+        _"Die Reihenfolge ist wichtig!"_
+
+        Die Blöcke, die du brauchst, sind schon im Arbeitsbereich, aber noch nicht verbunden.\
+        Ordne diese Blöcke so an, dass der Schatz eingesammelt wird, und löse damit die Aufgabe.
+      courseC_collector_prog3_2019: |-
+        _"Die Reihenfolge ist wichtig!"_
+
+        Die Blöcke, die du brauchst, sind schon im Arbeitsbereich, aber noch nicht verbunden.\
+        Ordne diese Blöcke so an, dass der Schatz eingesammelt wird, und löse damit die Aufgabe.
+      courseC_collector_prog4: |-
+        _"Die Reihenfolge ist wichtig!"_
+
+        Die Blöcke, die du brauchst, sind schon im Arbeitsbereich, aber noch nicht verbunden.
+
+        Ordne diese Blöcke so an, dass alle Schätze eingesammelt werden, und löse damit die Aufgabe.
+      courseC_collector_prog4_2018: |-
+        _"Die Reihenfolge ist wichtig!"_
+
+        Die Blöcke, die du brauchst, sind schon im Arbeitsbereich, aber noch nicht verbunden.
+
+        Ordne diese Blöcke so an, dass alle Schätze eingesammelt werden, und löse damit die Aufgabe.
+      courseC_collector_prog4_2019: |-
+        _"Die Reihenfolge ist wichtig!"_
+
+        Die Blöcke, die du brauchst, sind schon im Arbeitsbereich, aber noch nicht verbunden.
+
+        Ordne diese Blöcke so an, dass alle Schätze eingesammelt werden, und löse damit die Aufgabe.
+      courseC_collector_prog5: |-
+        _"Hilf mir alle Schätze einzusammeln!"_
+
+        Diese Blöcke sind in der falschen Reihenfolge angeordnet. Kannst du das in Ordnung bringen?
+      courseC_collector_prog5_2018: |-
+        _"Hilf mir alle Schätze einzusammeln!"_
+
+        Diese Blöcke sind in der falschen Reihenfolge angeordnet. Kannst du das in Ordnung bringen?
+      courseC_collector_prog5_2019: |-
+        _"Hilf mir alle Schätze einzusammeln!"_
+
+        Diese Blöcke sind in der falschen Reihenfolge angeordnet. Kannst du das in Ordnung bringen?
+      courseC_collector_prog6: |-
+        _"Hilf mir, alle Schätze einzusammeln!"_
+
+        Dies Blöcke haben die Flasche Reihenfolge. Ordne sie richtig an um alle Schätze einzusammeln.
+      courseC_collector_prog6_2018: |-
+        _"Hilf mir, alle Schätze einzusammeln!"_
+
+        Dies Blöcke haben die Flasche Reihenfolge. Ordne sie richtig an um alle Schätze einzusammeln.
+      courseC_collector_prog6_2019: |-
+        _"Hilf mir, alle Schätze einzusammeln!"_
+
+        Dies Blöcke haben die Flasche Reihenfolge. Ordne sie richtig an um alle Schätze einzusammeln.
+      courseC_collector_prog7: |-
+        **Herausforderung:** _"Was ist hier los?"_
+
+        Auch wenn wir alle in die richtige Reihenfolge bringen, fehlen immer noch Schätze.\
+        Benutze weitere Blöcke aus der Werkzeugkiste um alle Schätze einzusammeln.
+      courseC_collector_prog7_2018: |-
+        **Herausforderung:** _"Was ist hier los?"_
+
+        Auch wenn wir alle in die richtige Reihenfolge bringen, fehlen immer noch Schätze.\
+        Benutze weitere Blöcke aus der Werkzeugkiste um alle Schätze einzusammeln.
+      courseC_collector_prog7_2019: |-
+        **Herausforderung:** _"Was ist hier los?"_
+
+        Auch wenn wir alle in die richtige Reihenfolge bringen, fehlen immer noch Schätze.\
+        Benutze weitere Blöcke aus der Werkzeugkiste um alle Schätze einzusammeln.
+      courseC_collector_prog8: _"Bleib weiter so gut an der Arbeit! Hilf mir, alle
+        Schätze einzusammeln."_
+      courseC_collector_prog8_2018: _"Bleib weiter so gut an der Arbeit! Hilf mir,
+        alle Schätze einzusammeln."_
+      courseC_collector_prog8_2019: _"Bleib weiter so gut an der Arbeit! Hilf mir,
+        alle Schätze einzusammeln."_
+      courseC_collector_prog9: _"Lass uns alle Schätze sammeln!"_
+      courseC_collector_prog9_2018: _"Lass uns alle Schätze sammeln!"_
+      courseC_collector_prog9_2019: _"Lass uns alle Schätze sammeln!"_
+      courseC_collector_prog_challenge2: In dieser Höhle gibt es 20 Schätze. Sammle
+        mindestens **10** ein um diese Herausforderung zu beenden!
+      courseC_collector_prog_challenge2_2018: In dieser Höhle gibt es 20 Schätze.
+        Sammle mindestens **10** ein um diese Herausforderung zu beenden!
+      courseC_collector_prog_challenge2_2019: In dieser Höhle gibt es 20 Schätze.
+        Sammle mindestens **10** ein um diese Herausforderung zu beenden!
       courseC_maze_programming1: Für diese Aufgabe musst du alle Blöcke zusammensetzen,
         auf 'Ausführen' klicken und zusehen, wie es läuft!
       courseC_maze_programming1_2018: Für diese Aufgabe musst du alle Blöcke zusammensetzen,
@@ -955,6 +1059,18 @@ de-DE:
         für ein Problem. Manchmal ist es schneller, rückwärts zu gehen, als vorwärts!
       courseC_maze_programming_challenge2_2019: Manchmal gibt es mehr als eine Lösung
         für ein Problem. Manchmal ist es schneller, rückwärts zu gehen, als vorwärts!
+      courseC_starWars_loops1: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Geh den Schrott sammeln, BB-8!"_
+
+        Nimm 5 mal den gleichen Block um den Metallschrott zu sammeln. Metallschrott sieht so aus: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)
+      courseC_starWars_loops1_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Geh den Schrott sammeln, BB-8!"_
+
+        Nimm 5 mal den gleichen Block um den Metallschrott zu sammeln. Metallschrott sieht so aus: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)
+      courseC_starWars_loops1_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Geh den Schrott sammeln, BB-8!"_
+
+        Nimm 5 mal den gleichen Block um den Metallschrott zu sammeln. Metallschrott sieht so aus: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)
       courseD_bee_nestedLoops8: Sammle den gesamten Nektar jeder Blüte und erzeuge
         Honig bei jeder Honigwabe. Benutze eine verschachtelte Schleife.
       courseD_bee_nestedLoops8_2018: Sammle den gesamten Nektar jeder Blüte und erzeuge
@@ -1030,3 +1146,18 @@ de-DE:
       frozen square snowflake: Kannst du eine Schneeflocke erstellen, indem du den
         „Wiederholen"-Baustein 10 mal benutzt, um ein Quadrat zu erstellen und nach
         jedem Quadrat den „Drehen"-Baustein mit 36° benutzt?
+      grade2_collector_10: |-
+        Du bist fast fertig!
+
+        Sammle so viele Schätze wie du kannst ein, um diesen Teil zu beenden!
+      grade2_collector_10_2018: |-
+        Du bist fast fertig!
+
+        Sammle so viele Schätze wie du kannst ein, um diesen Teil zu beenden!
+      grade2_collector_10_2019: |-
+        Du bist fast fertig!
+
+        Sammle so viele Schätze wie du kannst ein, um diesen Teil zu beenden!
+      grade2_collector_A: Hilf Laurel alle Schätze einzusammeln.
+      grade2_collector_A_2018: Hilf Laurel alle Schätze einzusammeln.
+      grade2_collector_A_2019: Hilf Laurel alle Schätze einzusammeln.

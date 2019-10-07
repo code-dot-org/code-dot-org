@@ -1,14 +1,14 @@
 - content_for(:head) do
   = stylesheet_link_tag 'css/levelbuilder', media: 'all'
   = stylesheet_link_tag 'jquery.handsontable.full', media: 'all'
-  %script{src: minifiable_asset_path('js/levelbuilder.js')}
+  %script{src: webpack_asset_path('js/levelbuilder.js')}
   = javascript_include_tag 'jquery.handsontable.full'
 
 - content_for :body_scripts do
   - video_infos = {}
   - Video.all.each { |video| video_infos[video.key] = video.summarize(false) }
   - script_data = { editorall: { video_infos: video_infos }.to_json }
-  %script{src: minifiable_asset_path('js/levels/editors/_all.js'), data: script_data}
+  %script{src: webpack_asset_path('js/levels/editors/_all.js'), data: script_data}
 
 .field
   = f.label 'Documentation'

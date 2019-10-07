@@ -13301,6 +13301,21 @@ pt-BR:
             -   Achar uma imagem para ser utilizada no lugar do elemento
             -   Desenhar a imagem utilizando um editor de imagem a sua escolha
         -   Certifique-se de que você e seus companheiros de time estejam regularmente olhando os designs de cada um para garantir um estilo consistente
+      CSD U4 - Design Mode Text: |-
+        # Adicionando texto
+
+        <img src="https://images.code.org/86ba633e04f90f3ca47dff3dcd064847-image-1469812708683.15.36.png" style="float: right; width: 75px"/>
+        O elemento label permite adicionar qualquer texto que você queira ao seu aplicativo. Basta arrastar um bloco de etiqueta e definir sua propriedade "texto".
+
+        # Faça isto
+
+        Use um elemento label para criar um título para este aplicativo.
+
+        -   Arraste um rótulo e coloque-o na parte superior da tela
+        -   Altere o Id para "tituloLabel"
+        -   Altere o texto para "Meu aplicativo"
+        -   Aumentar o tamanho da fonte
+        -   Escolha uma cor que você gosta para o título
       CSD U5 Amazon Data Video: Assista este vídeo para aprender como esse problema
         é resolvido pela Amazon. Enquanto assiste, pense em quais dados estão sendo
         coletados e de onde eles estão vindo.
@@ -13462,8 +13477,8 @@ pt-BR:
         # Faça isso
 
         -   Com o seu parceiro, responda às seguintes perguntas:
-                 1\. Qual é o maior número que você pode fazer com esta ferramenta?
-                 2\. O recorde de mais saltos de um cão e pessoa em um minuto é 59. Como você codificaria 59 em binário?
+                 1. Qual é o maior número que você pode fazer com esta ferramenta?
+                 2. O recorde de mais saltos de um cão e pessoa em um minuto é 59. Como você codificaria 59 em binário?
       CSD U5 binary 2_2018: |-
         # Número de 6 bits
 
@@ -13472,8 +13487,8 @@ pt-BR:
         # Faça isso
 
         -   Com o seu parceiro, responda às seguintes perguntas:
-                 1\. Qual é o maior número que você pode fazer com esta ferramenta?
-                 2\. O recorde de mais saltos de um cão e pessoa em um minuto é 59. Como você codificaria 59 em binário?
+                 1. Qual é o maior número que você pode fazer com esta ferramenta?
+                 2. O recorde de mais saltos de um cão e pessoa em um minuto é 59. Como você codificaria 59 em binário?
       CSD U5 binary 2_2019: |-
         # Número de 6 bits
 
@@ -13482,8 +13497,8 @@ pt-BR:
         # Faça isso
 
         -   Com o seu parceiro, responda às seguintes perguntas:
-                 1\. Qual é o maior número que você pode fazer com esta ferramenta?
-                 2\. O recorde de mais saltos de um cão e pessoa em um minuto é 59. Como você codificaria 59 em binário?
+                 1. Qual é o maior número que você pode fazer com esta ferramenta?
+                 2. O recorde de mais saltos de um cão e pessoa em um minuto é 59. Como você codificaria 59 em binário?
       CSD U5 binary 4-new: |-
         # Decodificando vários números
 
@@ -16790,6 +16805,24 @@ pt-BR:
         -   Alterne para o modo de código e observe que os ID do menu suspenso foram atualizados para incluir os novos IDs. (Você ainda precisa selecionar o ID correto no menu suspenso.)
 
         -   \*\* Atualize as mensagens do `console.log` \*\* para combinar com os botões.
+      CSDU4 - Design Mode - 18: "# Camadas e exclusão\n\n<img src=\"https://images.code.org/9e620f70869de438c4f0c66663686876-image-1444678130772.gif\"
+        style=\"width: 200px; float: right\"> Os elementos da interface do usuário
+        podem se sobrepor, então você precisará da capacidade para alterar a ordem
+        ou **profundidade** na qual cada uma é renderizada.\n\nSe você **rolar para
+        a parte inferior da guia Propriedades**, encontrará botões que te permitem
+        facilmente excluir ou alterar a profundidade\\*\\* de um elemento.\n\n-   **Exclua
+        um elemento** selecionando-o (clicando nele) na visualização de design e,
+        em seguida, clicando em **Excluir** na guia de propriedades.\n-   **Altere
+        a profundidade** dos elementos usando as setas duplas ou simples.\n        
+        \\- Clique na seta dupla para enviar para a frente ou para trás.\n        
+        \\- Clique na seta única para mover para cima ou para baixo uma camada.\n\n#
+        Fazem isto:\n\nUse as ferramentas **excluir \\*\\* e \\*\\* profundidade \\*\\*
+        para \\*\\* criar a imagem \"Depois\"**\n\n<table>\n<tr>\n\t<th style=\"text-align:center\">Antes</th>\n
+        \   <th style=\"text-align:center\">Depois</th>\n</tr>\n<tr>\n\t<td align=center><img
+        src=\"https://images.code.org/023f749ecb58c91869a4eacab6701203-image-1444685187662.png\"
+        style=\"width:200px ; border: solid 1px black\"></td>\n    <td style=\"text-align:center\"><img
+        src=\"https://images.code.org/e45fc7d451c071683fd3b59466b106b0-image-1444684677212.png\"
+        style=\"width:200px; border: solid 1px black\"></td>\n</tr>\n</table>"
       CSDU4 - Design Mode - 21: |-
         # Adicionando imagens
 
@@ -19478,6 +19511,16 @@ pt-BR:
         2.  Arraste a imagem para baixo para cobrir o código secreto
 
         ![](<>)
+      Room Escape Workshop - 8: |-
+        # Mostrando dentro do cofre
+
+        Agora configure o código para mostrar a chave e o quadrado cinza quando o usuário inserir o código correto.
+
+        # Faça isto
+
+        -   Dentro da instrução `se` que você criou no comando`onEvent` para adicionar com segurança:
+                 \- O bloco `mostrarElemento` para mostrar o quadrado cinza
+                 \- O bloco `mostrarElemento` para mostrar a chave
       Standalone_Artist_2: Desenhe este diamante com ângulos de 120 e 60 graus, e
         com lados de 150 pixels de comprimento.
       Standalone_Artist_3: Você pode desenhar este hexágono com lados de 100 pixels

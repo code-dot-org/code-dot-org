@@ -401,53 +401,19 @@ ga:
         text: cas ar chlé
       RyanLab_turnRight:
         text: cas ar dheis
-      aalab_changePropByFlexible:
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': méid
-            '"x"': ionad x
-            '"y"': ionad y
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': nuair
-            '"while"': chomh fada is atá
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': nuair
-            '"while"': chomh fada is atá
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': nuair
-            '"while"': chomh fada is atá
-          KEY:
-            '"up"': ag an mbarr
-            '"down"': ag an mbun
-            '"left"': ar chlé
-            '"right"': ar dheis
-            '"space"': spás
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': cathair
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': fíor
-            '"false"': bréagach
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': méid
-            '"x"': ionad x
-            '"y"': ionad y
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': go deo na ndeor
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
         options:
           OPTION:
             '"show"': taispeáin

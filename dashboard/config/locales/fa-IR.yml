@@ -277,6 +277,7 @@ fa:
     delete_text_teacher_note: 'لطفا توجه داشته باشید: حذف کردن حساب شما حساب های دانش
       آموزهایتان را حدف نخواهدکرد.'
     delete_confirm: آیا مطمئنید که میخواهید حسابتان را حذف کنید؟
+    update_email: بروزرسانی
   user_level:
     completed: انجام شد
     tried: سعی شد
