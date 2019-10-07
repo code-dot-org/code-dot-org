@@ -4,8 +4,8 @@ const fish = {
       id: 'body1',
       src: '/images/fish/body_1.png',
       anchor: [84, 84],
-      eyeAnchor: [20, 5], // TODO: move anchor to eye obj? (for all anchors here)
-      mouthAnchor: [20, 15],
+      eyeAnchor: [20, 5],
+      mouthAnchor: [23, 15],
       sideFinAnchor: [0, 20],
       topFinAnchor: [6, -10],
       tailAnchor: [-12, 0]
@@ -15,7 +15,7 @@ const fish = {
       src: '/images/fish/body_2.png',
       anchor: [84, 84],
       eyeAnchor: [32, 5],
-      mouthAnchor: [40, 15],
+      mouthAnchor: [37, 15],
       sideFinAnchor: [10, 18],
       topFinAnchor: [15, -10],
       tailAnchor: [-10, -2]
