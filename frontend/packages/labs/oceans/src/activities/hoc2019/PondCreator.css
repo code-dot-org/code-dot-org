@@ -24,10 +24,12 @@
 
 
 img {
-  position: absolute;
+  position: relative;
   width: 200px;
   height: 200px;
-  left: 0;
+  margin: 10px;
+  display: block;
+
 }
 
 .button {

@@ -13,9 +13,6 @@ export default class Training extends React.Component {
 
   constructor(props) {
     super(props);
-    /*const numOptions = this.props.numOptions
-      ? Math.min(this.props.numOptions, this.props.trainingData.length)
-      : this.props.trainingData.length;*/
     var trainingDataPos = 0;
     const visibleOptions = new Array(props.rows);
     for (var i = 0; i < props.rows; ++i) {
@@ -34,8 +31,6 @@ export default class Training extends React.Component {
   }
 
   replaceImage(row, col) {
-    //const idx = this.state.visibleOptions.findIndex(data => data.id == dataId);
-    //const row = this.state.visib;
     const newImage = this.props.trainingData[this.state.trainingDataPos];
     const newTrainingDataPos = this.state.trainingDataPos + 1;
     const newVisibleOptions = this.state.visibleOptions;
@@ -51,8 +46,16 @@ export default class Training extends React.Component {
   }
 
   addExampleAndReplace(data, row, col, cat) {
-    this.props.trainer.addExampleData(data.knnData, cat);
+    this.props.trainer.addExampleData(data.knnData, 0);
     this.replaceImage(row, col);
+  }
+
+  componentWillUnmount() {
+    this.state.visibleOptions.forEach(row => {
+      row.forEach(option => {
+        this.props.trainer.addExampleData(option.knnData, 1);
+      });
+    });
   }
 
   render() {
@@ -63,22 +66,12 @@ export default class Training extends React.Component {
             <Row>
               {row.map((data, colIdx) => (
                 <Col key={colIdx} xs={4}>
-                  <div className="container">
-                    <img src={data.imgUrl} />
-                    <div className="overlay" />
-                    <div className="button like-button">
-                      <a onClick={() => this.addExampleAndReplace(data, rowIdx, colIdx, 0)}>
-                        {' '}
-                        👍{' '}
-                      </a>
-                    </div>
-                    <div className="button dislike-button">
-                      <a onClick={() => this.addExampleAndReplace(data, rowIdx, colIdx, 1)}>
-                        {' '}
-                        👎{' '}
-                      </a>
-                    </div>
-                  </div>
+                  <img
+                    src={data.imgUrl}
+                    onClick={() =>
+                      this.addExampleAndReplace(data, rowIdx, colIdx)
+                    }
+                  />
                 </Col>
               ))}
             </Row>
