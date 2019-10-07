@@ -9,8 +9,8 @@ module Pd
 
     SECTION_HEADERS = {
       section_1_about_you: 'About You',
-      section_2_choose_your_program: 'Choose Your Program',
-      section_3_teaching_background: 'Teaching Background',
+      section_2_teaching_background: 'Teaching Background',
+      section_3_choose_your_program: 'Choose Your Program',
       section_4_professional_learning_program_requirements: 'Professional Learning Program Requirements',
       section_5_additional_demographic_information: 'Additional Demographic Information and submission',
       school_stats_and_principal_approval_section: 'Principal Approval and School Information'
@@ -49,7 +49,15 @@ module Pd
           how_heard: 'How did you hear about this program?'
         }
       ),
-      section_2_choose_your_program: {
+      section_2_teaching_background:
+        {subjects_teaching: BASE_PAGE_LABELS[:section_2_your_school][:subjects_teaching].gsub('17-18', '18-19')}.merge(
+          BASE_PAGE_LABELS[:section_2_your_school].slice(
+            :taught_in_past,
+            :cs_opportunities_at_school,
+            :previous_yearlong_cdo_pd
+          )
+        ),
+      section_3_choose_your_program: {
         program: clean_multiline(
           'Which professional learning program would you like to join for the 2019-20
           school year? Note: this application is only for Computer Science Discoveries and
@@ -84,14 +92,6 @@ module Pd
         replace_existing: 'Will this course replace an existing computer science course in the master schedule? If yes, please list the course(s) that will be replaced.',
         replace_which_course: 'If yes, please describe the course it will be replacing and why:'
       },
-      section_3_teaching_background:
-        {subjects_teaching: BASE_PAGE_LABELS[:section_2_your_school][:subjects_teaching].gsub('17-18', '18-19')}.merge(
-          BASE_PAGE_LABELS[:section_2_your_school].slice(
-            :taught_in_past,
-            :cs_opportunities_at_school,
-            :previous_yearlong_cdo_pd
-          )
-        ),
       section_4_professional_learning_program_requirements:
         {
           committed: BASE_PAGE_LABELS[:section_4_summer_workshop][:committed],
