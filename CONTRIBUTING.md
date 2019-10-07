@@ -62,5 +62,5 @@ Once you've linted and tested your changes, send us a pull request!  Contributor
 5. A Code.org [developer will ensure our test suite runs on your changes](https://github.com/code-dot-org/code-dot-org/wiki/How-to-run-Circle--tests-on-a-contributor-PR) and will merge your PR to staging for you.
 6. After your pull request is merged into staging, you can review your changes on the following sites:
   * [https://staging.code.org/](https://staging.code.org/)
-  * [https://staging-studio.code.org/](https://staging-studio.studio.code.org/)
+  * [https://staging-studio.code.org/](https://staging-studio.code.org/)
   * [https://staging.csedweek.org/](https://staging.csedweek.org/)
