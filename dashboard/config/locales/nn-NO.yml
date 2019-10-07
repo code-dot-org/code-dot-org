@@ -455,6 +455,7 @@ nn:
       passord)
     update: Oppdater konto
     account_successfully_updated: Kontoen er oppdatert.
+    update_email: Oppdater
   user_level:
     completed: Fullført
     tried: Forsøkt

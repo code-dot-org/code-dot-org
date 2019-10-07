@@ -9,48 +9,59 @@ style_min: true
 
 <link href="/css/educate.css" rel="stylesheet">
 
+<style>
+  details summary {
+    cursor: pointer;
+  }
+</style>
+
 # Computer Science Principles
 
-## What is CS Principles?
+<h2>What is CS Principles?</h2>
 
-Computer Science Principles introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. More than a traditional introduction to programming, it is a rigorous, engaging, and approachable course that explores many of the foundational ideas of computing so all students understand how these concepts are transforming the world we live in.
+<div class="col-50" style="padding-right: 20px;">
 
-This year-long course can be taught as an AP or non-AP course - no prerequisites required for students or for teachers new to computer science! In addition, our curriculum is available at no cost for anyone, anywhere to teach. For more information about our goals and approach to our courses, please see our [curriculum values](/educate/curriculum/values) and our [professional learning values](/educate/professional-learning/values).
+<%=view :display_video_thumbnail, id: "video6", video_code: "POiMh0qISpI", play_button: 'center', letterbox: 'false' %>
+<i>Bring CS Principles to your school!</i>
 
-[breakoutquote]
+<br>
+<br>
 
-[col-33]
+</div>
 
-<img src="/images/csp/csp-jennifer-douglass.jpg" style="max-width: 80%"/>
+<div class="col-50">
 
-[/col-33]
+<p>Computer Science Principles introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. More than a traditional introduction to programming, it is a rigorous, engaging, and approachable course that explores many of the foundational ideas of computing so all students understand how these concepts are transforming the world we live in.</p>
 
-[col-66]
+<p>This year-long course can be taught as an AP or non-AP course - no prerequisites required for students or for teachers new to computer science! In addition, our curriculum is available at no cost for anyone, anywhere to teach. For more information about our goals and approach to our courses, please see our <a href="https://code.org/educate/curriculum/values">curriculum values</a> and our <a href="https://code.org/educate/professional-learning/values">professional learning values</a>.</p>
 
-“Can I just say I <strong>LOVE</strong> Code.org? It's my first year teaching AP CS Principles (actually 1st year it is offered at our school) - and both the kids and I are having a blast.”
+</div>
 
-*Jennifer Douglass, CS Principles Teacher*
+<div style="clear: both;"></div>
 
+<br>
 
-[/col-66]
-
-[clearboth]
-
-[/clearboth]
-   
-[/breakoutquote]
-
-<hr/>
+<table style="border-style:none;">
+  <tr>
+    <th style="background-color:#0094ca;color:white;border-style:none;">
+      “Can I just say I <strong>LOVE</strong> Code.org? It's my first year teaching AP CS Principles (actually 1st year it is offered at our school) - and both the kids and I are having a blast.”<br/>
+      <i>Jennifer Douglass, CS Principles Teacher</i>
+      </th>
+    <th style="background-color:#0094ca;border-style:none;"">
+      <img src="/images/fit-125/csp/csp-jennifer-douglass.jpg">
+      </th>
+    </tr>
+  </table>
 
 ## Code.org's AP CS Principles Curriculum
 
-<img src="../files/apcsp_providerbadge_sm_alpha.png" style="float: right; width: 100px" alt="Code.org AP CSP Endorsed Badge">Code.org is recognized by the [College Board](http://collegeboard.org/APCSP) as an endorsed provider of curriculum and professional development for AP® Computer Science Principles. This endorsement affirms that all components of Code.org's CS Principles offerings are aligned to the AP Curriculum Framework standards and the AP CS Principles assessment. This affords schools access to resources including an AP CS Principles syllabus pre-approved by the College Board’s AP Course Audit, and officially recognized professional development that prepares teachers to teach this course.
+<img src="../files/apcsp_providerbadge_sm_alpha.png" style="float: right; margin-left: 5px; width: 100px" alt="Code.org AP CSP Endorsed Badge">Code.org is recognized by the <a href="http://collegeboard.org/APCSP", target=_"blank">College Board</a> as an endorsed provider of curriculum and professional development for AP® Computer Science Principles. This endorsement affirms that all components of Code.org's CS Principles offerings are aligned to the AP Curriculum Framework standards and the AP CS Principles assessment. This affords schools access to resources including an AP CS Principles syllabus pre-approved by the College Board’s AP Course Audit, and officially recognized professional development that prepares teachers to teach this course.
 
- * [Code.org 2019-20 AP CS Principles Endorsed Syllabus](/files/CSPSyllabus2019.pdf)
-
-<div style="clear:both"></div>
+Teaching CS Principles as an AP course? Don't forget to submit the <a href="/files/CSPSyllabus2019.pdf", target=_"blank">2019-20 AP Endorsed Syllabus</a> for the AP course audit.
 
 ## <a name="overview"></a>Curriculum Resources and Features
+
+CS Principles covers a broad range of foundational topics such as programming, algorithms, the internet, big data, digital privacy and security, and the societal impacts of computing. 
 
 [col-33]
 
@@ -64,7 +75,7 @@ This year-long course can be taught as an AP or non-AP course - no prerequisites
 
 [<center><img src="/images/animated-examples/lessonplans.png" width="90%">](https://curriculum.code.org/csp)</center>
 
-<div style="margin-top: 5px;"><a href="https://curriculum.code.org/csp">Daily lesson plans</a> come with detailed instructions, activity guides, assessments, standards mappings, and more.</div>
+<div style="margin-left: 15px; margin-top: 5px;"><a href="https://curriculum.code.org/csp">Daily lesson plans</a> come with detailed instructions, activity guides, assessments, standards mappings, and more.</div>
 
 [/col-33]
 
@@ -109,7 +120,7 @@ This year-long course can be taught as an AP or non-AP course - no prerequisites
 ### Don't miss these additional resources:
 
 - [**Course Materials List**](#materials)
-- <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfV5ljCxR8BZWJRT_m_6CpB", target=_"blank">**CS Principles Video Library**
+- <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfV5ljCxR8BZWJRT_m_6CpB", target=_"blank">**CS Principles Video Library**</a>
 - [**Code.org Video Library**](/educate/resources/videos)
 
 ## Coming Soon! - CS Principles 2020-21
@@ -117,28 +128,6 @@ This year-long course can be taught as an AP or non-AP course - no prerequisites
 As with all of our courses, we are committed to making regular updates to our CS Principles curriculum to make sure we continue to meet students’ and teachers’ needs, while supporting the best classroom experience possible. We’re planning some very exciting updates to CS Principles 2020-21, which will align with the new AP framework and incorporate the invaluable feedback we receive from our teachers and students!
 
 <a href="https://code.org/files/2020-21_CSPrinciples_1-pager.pdf", target=_"blank">Check out our 1-pager</a> for an overview of what's in store for the 2020-21 version of the course, and stay tuned!
-
-[breakoutquote]
-
-[col-33]
-
-<img src="/images/AR2016/best.jpg" style="max-width: 80%"/>
-
-[/col-33]
-
-[col-66]
-
-“I've never seen a nonprofit have an impact as large as this, in a timeframe as short as this. Just incredible.”
-
-*Charles Best, Founder & CEO, DonorsChoose.org*
-
-[/col-66]
-
-[clearboth]
-
-[/clearboth]
-   
-[/breakoutquote]
 
 ## Keep up with CS Principles
 
@@ -181,10 +170,27 @@ We have forums for educators to discuss and trade ideas about the CS Principles 
 
 ## Spread the word about CS Principles
 
-### Hand out these fliers around your school and consider sending home to parents.
+### Inspire students to enroll in the course:
 
-[![image](/images/fit-200/csp/csp-recruitment-poster.png)](/files/programs/csp-recruitment-poster.pdf)
-[![image](/images/fit-200/csp/csp-student-flyer.png)](/files/programs/csp-student-flyer.pdf)
+<div class="col-50" style="padding-right: 20px;">
+
+<%=view :display_video_thumbnail, id: "video4", video_code: "jQm0z894CG0", play_button: 'center', letterbox: 'false' %>
+<i>Play this video.</i>
+
+<br>
+<br>
+
+</div>
+
+<div class="col-50">
+
+<a href="https://code.org/files/programs/csp-student-flyer.pdf"><img src="https://code.org/images/csp/csp-student-flyer.png" style="width:203px"></a>
+<a href="https://code.org/files/programs/csp-recruitment-poster.pdf"><img src="https://code.org/images/csp/csp-recruitment-poster.png" style="width:203px"></a>
+<p><i>Send home these fliers.</i></p>
+
+</div>
+
+<div style="clear:both"></div>
 
 ### Hang these posters in your classroom and around your school:
 
@@ -193,33 +199,7 @@ We have forums for educators to discuss and trade ideas about the CS Principles 
 [![image](/images/fit-200/madison_maxey_CS_recruitment.png)](/files/programs/madison_maxey_CS_recruitment.pdf)
 [![image](/images/fit-200/javier_aguera_CS_recruitment.png)](/files/programs/javier_aguera_CS_recruitment.pdf)
 
-### Share these videos with students, teachers, and administrators:
-
-
-<div class="col-33" style="padding-right: 20px;">
-
-<%=view :display_video_thumbnail, id: "video4", video_code: "jQm0z894CG0", play_button: 'center', letterbox: 'false' %>
-<i>Inspire students</i>
-
-</div>
-
-<div class="col-33" style="padding-right: 20px;">
-
-<%=view :display_video_thumbnail, id: "video5", video_code: "DMr1iFYacGQ", play_button: 'center', letterbox: 'false' %>
-<i>Recruit teachers</i>
-
-</div>
-
-<div class="col-33" style="padding-right: 20px;">
-
-<%=view :display_video_thumbnail, id: "video6", video_code: "POiMh0qISpI", play_button: 'center', letterbox: 'false' %>
-<i>Engage administrators</i>
-
-</div>
-
-<div style="clear: both;"></div>
-
-[![image](/images/fit-200/csp/CSPrinciples_1-pager.png)](/files/CSPrinciples_1-pager.pdf)
+<i><a href="https://code.org/educate/resources/posters">Check out the full poster gallery</a> for even more decorating options!</i>
 
 <hr/>
 
@@ -314,4 +294,61 @@ We send out monthly updates! [Sign up for future emails](http://code.org/educate
 
 Please see this page about [CS Principles Inspirations](/educate/csp/inspirations) to read about the influential works in computer science education that form some of the course's philosophical underpinnings.
 
+<br>
+
 AP® is a registered trademark of the College Board.
+
+[breakoutquote]
+
+[col-33]
+
+<img src="/images/marketing/miral_1200x1071.jpg" style="max-width: 80%"/>
+
+[/col-33]
+
+[col-66]
+
+“When I work with celebrities, because I know code they instantly respect me and listen to what I have to say...to get the respect of people around you for what you really know how to do and not be afraid to do it will last you your whole life.”
+
+*Miral Kotb, Founder of iLuminate*
+
+
+[/col-66]
+
+[clearboth]
+
+[/clearboth]
+   
+[/breakoutquote]
+
+<!--
+
+### Share these videos with students, teachers, and administrators:
+
+
+<div class="col-33" style="padding-right: 20px;">
+
+<%=view :display_video_thumbnail, id: "video4", video_code: "jQm0z894CG0", play_button: 'center', letterbox: 'false' %>
+<i>Inspire students</i>
+
+</div>
+
+<div class="col-33" style="padding-right: 20px;">
+
+<%=view :display_video_thumbnail, id: "video5", video_code: "DMr1iFYacGQ", play_button: 'center', letterbox: 'false' %>
+<i>Recruit teachers</i>
+
+</div>
+
+<div class="col-33" style="padding-right: 20px;">
+
+<%=view :display_video_thumbnail, id: "video6", video_code: "POiMh0qISpI", play_button: 'center', letterbox: 'false' %>
+<i>Engage administrators</i>
+
+</div>
+
+<div style="clear: both;"></div>
+
+[![image](/images/fit-200/csp/CSPrinciples_1-pager.png)](/files/CSPrinciples_1-pager.pdf)
+
+-->

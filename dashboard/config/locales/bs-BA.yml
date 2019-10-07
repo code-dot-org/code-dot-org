@@ -294,6 +294,7 @@ bs:
     enter_new_login_info: Unesite svoje nove podatke za prijavu
     enter_parent_email: Unesi email adresu od svog roditelja ili staratelja (za obnovu
       lozinke)
+    update_email: Osvježi
   user_level:
     completed: Kompletirano
     tried: Pokušano

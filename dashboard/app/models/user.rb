@@ -1019,11 +1019,6 @@ class User < ActiveRecord::Base
       end
   end
 
-  def user_progress_by_stage(stage)
-    levels = stage.script_levels.map(&:level_ids).flatten
-    user_levels.where(script: stage.script, level: levels).pluck(:level_id, :best_result).to_h
-  end
-
   def has_activity?
     user_levels.attempted.exists?
   end

@@ -905,7 +905,7 @@ zh-CN:
         Course_4_SCFL_1_a: |-
           看看这个移动选项:
 
-          \!\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
+          !\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
         Course_4_SCFL_1_b: '试着用两个 "计数" 循环: 一个用于攀爬和抓取花蜜, 另一种用于攀爬和制作蜂蜜。'
         Course_4_SCFL_1_c: |-
           注意，一个`计数循环`里需要几个普通的循环来重复`counter`（计数器）次数来增加楼梯图案。
@@ -972,7 +972,7 @@ zh-CN:
         Course_4_SCFL_1a_b: |-
           看看这个移动选项:
 
-          \!\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
+          !\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
         Course_4_SCFL_1a_c: "`计数循环` 将帮助您执行相同的模式，但步骤数不断变化。请注意，所需步骤的数量从7开始，每次减1，直到 5。"
         Course_4_SCFL_1a_d: |-
           \*\* 解决方案: \*
@@ -1035,7 +1035,7 @@ zh-CN:
         Course_4_SCFL_1b_b: |-
           看看这个移动选项:
 
-          \!\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
+          !\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
         Course_4_SCFL_1b_c: |-
           \*\* 解决方案: \*
 
@@ -1096,7 +1096,7 @@ zh-CN:
         Course_4_SCFL_2_a: |-
           看看这个移动选项:
 
-          \!\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
+          !\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
         Course_4_SCFL_2_b: 请注意，在`计数循环` 的每次迭代中，在你停止与目标互动后，都有3个点。
         Course_4_SCFL_2_c: 在`计数循环`的每次迭代中，每个对象的数字都与 `counter`（计数器）变量有某种关联。
         Course_4_SCFL_2_d: |-
@@ -1581,7 +1581,7 @@ zh-CN:
         Course_4_SCV_4_c: |-
           看看这个移动选项:
 
-          \!\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
+          !\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
         Course_4_SCV_4_d: |-
           \*\* 解决方案: \*
 
@@ -7565,12 +7565,6 @@ zh-CN:
       courseC_starWars_loops5:
         courseC_starWars_loops5_b: 要往下走, 你必须转向, 然后向前移动。
         courseC_starWars_loops5_a: 最好的解决方案是使用一个转向, 然后一个单一的`向前移动` ，另一个转向，然后一个循环。
-      courseC_starWars_loops5_2018:
-        courseC_starWars_loops5_b: 要往下走, 你必须转向, 然后向前移动。
-        courseC_starWars_loops5_a: 最好的解决方案是使用一个转向, 然后一个单一的`向前移动` ，另一个转向，然后一个循环。
-      courseC_starWars_loops5_2019:
-        courseC_starWars_loops5_b: 要往下走, 你必须转向, 然后向前移动。
-        courseC_starWars_loops5_a: 最好的解决方案是使用一个转向, 然后一个单一的`向前移动` ，另一个转向，然后一个循环。
       courseC_starWars_loops6:
         courseC_starWars_loops6_a: 试着在一张纸上写下移动的情况, 来寻找模式。
         courseC_starWars_loops6_b: 如果你想使用更少的代码, 你可以把`重复循环`放在另一个里面！这称为 \*\* 嵌套循环 \*\*。
@@ -12291,7 +12285,7 @@ zh-CN:
         courseF_bee_for_challenge2_a: |-
           看看这个移动选项:
 
-          \!\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
+          !\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
         courseF_bee_for_challenge2_b: '试着用两个 "计数" 循环: 一个用于攀爬和抓取花蜜, 另一种用于攀爬和制作蜂蜜。'
         courseF_bee_for_challenge2_c: |-
           注意，一个`计数循环`里需要几个普通的循环来重复`counter`（计数器）次数来增加楼梯图案。
@@ -12434,7 +12428,7 @@ zh-CN:
         courseF_bee_for_challenge2_a: |-
           看看这个移动选项:
 
-          \!\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
+          !\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
         courseF_bee_for_challenge2_b: '试着用两个 "计数" 循环: 一个用于攀爬和抓取花蜜, 另一种用于攀爬和制作蜂蜜。'
         courseF_bee_for_challenge2_c: |-
           注意，一个`计数循环`里需要几个普通的循环来重复`counter`（计数器）次数来增加楼梯图案。
@@ -12500,7 +12494,7 @@ zh-CN:
         courseF_bee_for_challenge2_a: |-
           看看这个移动选项:
 
-          \!\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
+          !\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
         courseF_bee_for_challenge2_b: '试着用两个 "计数" 循环: 一个用于攀爬和抓取花蜜, 另一种用于攀爬和制作蜂蜜。'
         courseF_bee_for_challenge2_c: |-
           注意，一个`计数循环`里需要几个普通的循环来重复`counter`（计数器）次数来增加楼梯图案。

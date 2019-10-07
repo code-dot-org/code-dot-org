@@ -9,7 +9,7 @@
 = stylesheet_link_tag '/blockly/video-js/video-js', media: 'all'
 
 - content_for(:head) do
-  %script{src: minifiable_asset_path('js/levels/_external.js'), data: {external: { in_level_group: in_level_group }.to_json}}
+  %script{src: webpack_asset_path('js/levels/_external.js'), data: {external: { in_level_group: in_level_group }.to_json}}
   :javascript
     var options = #{level.properties['options'].to_json}
 
