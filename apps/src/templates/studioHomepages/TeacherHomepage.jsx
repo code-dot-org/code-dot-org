@@ -187,7 +187,7 @@ export default class TeacherHomepage extends Component {
           <SpecialAnnouncementActionBlock
             hocLaunch={hocLaunch}
             hasIncompleteApplication={
-              !!sessionStorage['Teacher1920Application']
+              !!sessionStorage['Teacher2021Application']
             }
           />
         )}
