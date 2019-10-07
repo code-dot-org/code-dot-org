@@ -88,7 +88,7 @@ export default class PondCreator extends React.Component {
       <div>
         {this.state.currentMode === Modes.Training && (
           <div>
-          <Training trainer={this.state.trainer} trainingData={this.state.trainingData} rows={2} cols={2} />
+          <Training trainer={this.state.trainer} trainingData={this.state.trainingData} rows={2} cols={2} label={"Like"} />
                 <Button onClick={() => this.switchToPredictions()}>
               Show some fish!
             </Button>

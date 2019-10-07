@@ -7,53 +7,52 @@ export default class Training extends React.Component {
   static propTypes = {
     trainingData: PropTypes.array.isRequired,
     trainer: PropTypes.object.isRequired,
-    rows: PropTypes.number,
-    cols: PropTypes.number
+    rows: PropTypes.number.isRequired,
+    cols: PropTypes.number.isRequired,
+    label: PropTypes.string.isRequired
   };
 
   constructor(props) {
     super(props);
     var trainingDataPos = 0;
+    // What are the options on the screen?
     const visibleOptions = new Array(props.rows);
+    // Keeps track of the current category of the option. Currently implemented
+    // using booleans but could hold an enum value if we wanted more categories.
+    const selectedOptions = new Array(props.rows);
     for (var i = 0; i < props.rows; ++i) {
       visibleOptions[i] = this.props.trainingData.slice(
         trainingDataPos,
         trainingDataPos + props.cols
       );
       trainingDataPos += props.cols;
+      selectedOptions[i] = new Array(props.cols);
+      selectedOptions[i].fill(false, 0, props.cols);
     }
-    console.log(visibleOptions);
 
     this.state = {
-      trainingDataPos: trainingDataPos,
-      visibleOptions: visibleOptions
+      visibleOptions: visibleOptions,
+      selectedOptions: selectedOptions
     };
   }
 
-  replaceImage(row, col) {
-    const newImage = this.props.trainingData[this.state.trainingDataPos];
-    const newTrainingDataPos = this.state.trainingDataPos + 1;
-    const newVisibleOptions = this.state.visibleOptions;
-    if (newImage) {
-      newVisibleOptions[row].splice(col, 1, newImage);
-    } else {
-      newVisibleOptions[row].splice(col, 1);
+  selectOption(row, col) {
+    const selectedOptions = this.state.selectedOptions;
+    if (selectedOptions[row][col]) {
+      return;
     }
-    this.setState({
-      visibleOptions: newVisibleOptions,
-      trainingDataPos: newTrainingDataPos
-    });
-  }
-
-  addExampleAndReplace(data, row, col, cat) {
-    this.props.trainer.addExampleData(data.knnData, 0);
-    this.replaceImage(row, col);
+    selectedOptions[row][col] = true;
+    this.setState({selectedOptions});
   }
 
   componentWillUnmount() {
-    this.state.visibleOptions.forEach(row => {
-      row.forEach(option => {
-        this.props.trainer.addExampleData(option.knnData, 1);
+    this.state.visibleOptions.forEach((row, rowIdx) => {
+      row.forEach((option, colIdx) => {
+        if (this.state.selectedOptions[rowIdx][colIdx]) {
+          this.props.trainer.addExampleData(option.knnData, 0);
+        } else {
+          this.props.trainer.addExampleData(option.knnData, 1);
+        }
       });
     });
   }
@@ -66,12 +65,15 @@ export default class Training extends React.Component {
             <Row>
               {row.map((data, colIdx) => (
                 <Col key={colIdx} xs={4}>
-                  <img
-                    src={data.imgUrl}
-                    onClick={() =>
-                      this.addExampleAndReplace(data, rowIdx, colIdx)
-                    }
-                  />
+                  <div className="selectable-image-container">
+                    <img
+                      src={data.imgUrl}
+                      onClick={() => this.selectOption(rowIdx, colIdx)}
+                    />
+                    {this.state.selectedOptions[rowIdx][colIdx] && (
+                      <div className="top-right-label">{this.props.label}</div>
+                    )}
+                  </div>
                 </Col>
               ))}
             </Row>

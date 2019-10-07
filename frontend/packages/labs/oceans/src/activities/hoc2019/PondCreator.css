@@ -1,8 +1,23 @@
-img {
-  position: relative;
+.selectable-image-container {
   width: 200px;
   height: 200px;
   margin: 10px;
-  display: block;
+  position: relative;
+}
 
+img {
+  position: relative;
+  display: block;
+  width: 200px;
+  height: 200px;
+}
+
+.top-right-label {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 50px;
+  height: 20px;
+  background-color: coral;
+  font-family: "Gotham 4r", sans-serif;
 }
