@@ -1,7 +1,6 @@
 const fish = {
   bodies: {
     body1: {
-      id: 'body1',
       src: '/images/fish/body_1.png',
       anchor: [84, 84],
       eyeAnchor: [20, 5],
@@ -11,7 +10,6 @@ const fish = {
       tailAnchor: [-12, 0]
     },
     body2: {
-      id: 'body2',
       src: '/images/fish/body_2.png',
       anchor: [84, 84],
       eyeAnchor: [32, 5],
