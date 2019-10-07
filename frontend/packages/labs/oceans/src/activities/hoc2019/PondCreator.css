@@ -1,28 +1,3 @@
-.container {
-  position: relative;
-  margin: 10px;
-  width: 200px;
-  height: 200px;
-  display: block;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0);
-  transition: background 0.5s ease;
-}
-
-
-.container:hover .overlay {
-  display: inline;
-  background: rgba(0, 0, 0, .3);
-}
-
-
 img {
   position: relative;
   width: 200px;
@@ -31,35 +6,3 @@ img {
   display: block;
 
 }
-
-.button {
-  position: absolute;
-  width: 20px;
-  left:0;
-  text-align: center;
-  opacity: 0;
-  transition: opacity .35s ease;
-}
-
-.like-button {
-  top: 10px;
-}
-
-.dislike-button {
-  bottom: 10px;
-}
-
-
-.button a {
-  width: 20px;
-  padding: 12px 48px;
-  text-align: center;
-  z-index: 1;
-}
-
-
-.container:hover .button {
-  opacity: 1;
-}
-
-
