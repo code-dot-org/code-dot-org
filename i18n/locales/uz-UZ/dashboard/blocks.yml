@@ -111,19 +111,18 @@ uz:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': shahar
-      aalab_keyPressed:
+      aalab_goToScene:
         options:
-          KEY:
-            '"space"': koinot
-      aalab_setBG:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': shahar
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': rost
-            '"false"': yolgʻon
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
       binary_whenKey:
         options:
           KEY:

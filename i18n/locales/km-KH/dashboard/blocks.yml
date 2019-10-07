@@ -401,53 +401,19 @@ km:
         text: បត់​ឆ្វេង
       RyanLab_turnRight:
         text: បត់​ស្ដាំ
-      aalab_changePropByFlexible:
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': ទំហំ
-            '"x"': គូល​x
-            '"y"': គូល​y
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': នៅ​ពេល
-            '"while"': នៅ​ពេល
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': នៅ​ពេល
-            '"while"': នៅ​ពេល
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': នៅ​ពេល
-            '"while"': នៅ​ពេល
-          KEY:
-            '"up"': ឡើង
-            '"down"': ចុះ
-            '"left"': ឆ្វេង
-            '"right"': ស្តាំ
-            '"space"': លំហ​អាកាស
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': ទីក្រុង
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': ពិត
-            '"false"': មិន​ពិត
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': ទំហំ
-            '"x"': គូល​x
-            '"y"': គូល​y
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': ជារៀងរហូត
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
         options:
           OPTION:
             '"show"': បង្ហាញ

@@ -9,8 +9,8 @@ module Pd
 
     SECTION_HEADERS = {
       section_1_about_you: 'About You',
-      section_2_choose_your_program: 'Choose Your Program',
-      section_3_teaching_background: 'Teaching Background',
+      section_2_teaching_background: 'Teaching Background',
+      section_3_choose_your_program: 'Choose Your Program',
       section_4_professional_learning_program_requirements: 'Professional Learning Program Requirements',
       section_5_additional_demographic_information: 'Additional Demographic Information and submission',
       school_stats_and_principal_approval_section: 'Principal Approval and School Information'

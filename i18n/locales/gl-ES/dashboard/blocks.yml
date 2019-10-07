@@ -319,49 +319,19 @@ gl:
         text: vire á esquerda
       RyanLab_turnRight:
         text: vire á dereita
-      aalab_changePropByFlexible:
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': tamaño
-            '"x"': posición x
-            '"y"': posición y
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': cando
-            '"while"': mentras
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': cando
-            '"while"': mentras
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': cando
-            '"while"': mentras
-          KEY:
-            '"up"': arriba
-            '"down"': abaixo
-            '"left"': esquerda
-            '"right"': dereita
-            '"space"': espazo
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': cidade
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': verdadeiro
-            '"false"': falso
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': tamaño
-            '"x"': posición x
-            '"y"': posición y
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
         options:
           OPTION:
             '"show"': mostrar

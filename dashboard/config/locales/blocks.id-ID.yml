@@ -584,58 +584,19 @@ id:
         text: Tengah
       Vector_vectorNorth:
         text: Utara
-      aalab_changePropByFlexible:
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': ukuran
-            '"rotation"': Perputaran
-            '"x"': posisi x
-            '"y"': posisi y
-            '"direction"': Arah pergerakan
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': ketika
-            '"while"': Selagi
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': ketika
-            '"while"': Selagi
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': ketika
-            '"while"': Selagi
-          KEY:
-            '"up"': atas
-            '"down"': turun
-            '"left"': kiri
-            '"right"': kanan
-            '"space"': luar angkasa
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': kota
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': Benar
-            '"false"': Salah
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': ukuran
-            '"rotation"': Perputaran
-            '"x"': posisi x
-            '"y"': posisi y
-            '"direction"': Arah pergerakan
-            '"tint"': Mewarnai
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': selamanya
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
         options:
           OPTION:
             '"show"': tampilkan

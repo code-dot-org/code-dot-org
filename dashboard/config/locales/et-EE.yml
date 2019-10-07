@@ -324,6 +324,7 @@ et:
     create_personal_login: Loo isiklik login
     create_personal_login_under_13_username: Kasutajanimi (ärge kasutage oma pärisnime!)
     create_personal_login_under_13_parent_email: Lapsevanem/hooldaja e-posti aadress
+    update_email: Uuenda
   user_level:
     completed: Tehtud
     tried: Proovisin

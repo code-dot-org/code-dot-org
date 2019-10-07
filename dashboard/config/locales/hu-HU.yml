@@ -418,6 +418,7 @@ hu:
       esetére)
     update: Adatok frissítése
     account_successfully_updated: Az adatok frissítése sikeres volt.
+    update_email: Frissítés
   user_level:
     completed: Befejezve
     tried: Próbáltam

@@ -1,3 +1,15 @@
+#Files in the config/locales directory are used for internationalization
+#and are automatically loaded by Rails. If you want to use locales other
+#than English, add the necessary files in this directory.
+#To use the locales, use `I18n.t`:
+#I18n.t 'hello'
+#In views, this is aliased to just `t`:
+#<%= t('hello') %>
+#To use a different locale, set it with `I18n.locale`:
+#I18n.locale = :es
+#This would use the information in config/locales/es.yml.
+#To learn more, please read the Rails Internationalization guide
+#available at http://guides.rubyonrails.org/i18n.html.
 ko:
   errors:
     messages:
@@ -382,6 +394,7 @@ ko:
     create_personal_login_under_13_parent_email: '부모/보호자 이메일'
     create_personal_login_info: '만약 학년도의 끝 후에도 Code.org 계정을 계속 사용하고 싶으시다면 아래에서 개인계정을 만들 수 있습니다.'
     create_personal_login_terms: "Code.org 의 <a herf='%{terms_of_service_url}',target='_blank'>서비스 약관</a>을 준수할 것에 동의합니다. 13세 미만의 경우, 부모님 또는 보호자의 허락을 얻어 Code.org 사이트의 서비스를 사용하는 것임을 확인합니다."
+    update_email: "업데이트"
   user_level:
     completed: '완료'
     tried: '시도함'

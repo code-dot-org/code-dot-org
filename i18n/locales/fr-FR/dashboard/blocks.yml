@@ -1047,78 +1047,19 @@ fr:
         text: lieu aléatoire
       Vector_vectorNorth:
         text: nord
-      aalab_changePropByFlexible:
-        text: changer {SPRITE} {PROPERTY} par {VAL}
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': taille
-            '"rotation"': orientation
-            '"x"': position x
-            '"y"': position y
-            '"direction"': direction du mouvement
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': quand
-            '"while"': tant que
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': quand
-            '"while"': tant que
-      aalab_getThisSprite:
-        options:
-          CHOICE:
-            '"this"': ceci
-      aalab_jumpTo:
-        text: "{SPRITE} passer à {LOCATION}"
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': quand
-            '"while"': tant que
-          KEY:
-            '"up"': vers le haut
-            '"down"': vers le bas
-            '"left"': vers la gauche
-            '"right"': vers la droite
-            '"space"': espace
-      aalab_location_picker:
-        text: "{LOCATION}"
-      aalab_moveInDirection:
-        options:
-          DIRECTION:
-            '"North"': Nord
-            '"East"': Est
-            '"South"': Sud
-            '"West"': Ouest
-      aalab_randomLocation:
-        text: lieu aléatoire
-      aalab_removeOneAndAll:
-        text: enlever {THIS}
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': ville
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': vrai
-            '"false"': faux
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': taille
-            '"rotation"': orientation
-            '"x"': position x
-            '"y"': position y
-            '"direction"': direction du mouvement
-            '"tint"': nuance
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': à l'infini
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
         options:
           OPTION:
             '"show"': montrer
