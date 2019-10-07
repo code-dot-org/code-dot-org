@@ -62,11 +62,20 @@ export function connect({interpreter, onDisconnect}) {
   }
 
   if (currentBoard) {
-    commands.injectBoardController(currentBoard);
-    currentBoard.installOnInterpreter(interpreter);
-    // When the board is reset, the components are disabled. Re-enable now.
-    currentBoard.enableComponents();
-    return Promise.resolve();
+    findPortWithViableDevice()
+      .then(() => {
+        commands.injectBoardController(currentBoard);
+        currentBoard.installOnInterpreter(interpreter);
+        // When the board is reset, the components are disabled. Re-enable now.
+        currentBoard.enableComponents();
+        return Promise.resolve();
+      })
+      .catch(error => {
+        if (error instanceof ConnectionCanceledError) {
+          // This was intentional, and we don't need an error screen.
+          return Promise.reject(error);
+        }
+      });
   }
 
   const store = getStore();
