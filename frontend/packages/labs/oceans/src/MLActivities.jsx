@@ -3,6 +3,7 @@ import RPS from './activities/rps/RPS';
 import ImageRecognition from './activities/imageRecognition/ImageRecognition';
 import CreatureCreator from './activities/creatureCreator/CreatureCreator';
 import PondCreator from './activities/hoc2019/PondCreator';
+import SpritesheetFish from './activities/hoc2019/SpritesheetFish';
 import Button from 'react-bootstrap/lib/Button';
 import Row from 'react-bootstrap/lib/Row';
 import Col from 'react-bootstrap/lib/Col';
@@ -14,7 +15,8 @@ const Activity = Object.freeze({
   RPS: 1,
   ImageRecognition: 2,
   CreatureCreator: 3,
-  PondCreator: 4
+  PondCreator: 4,
+  SpritesheetFish: 5
 });
 
 module.exports = class MLActivities extends React.Component {
@@ -75,6 +77,15 @@ module.exports = class MLActivities extends React.Component {
                 >
                   Pick Pond Creator
                 </Button>
+                <Button
+                  onClick={() =>
+                    this.setState({
+                      currentActivity: Activity.SpritesheetFish
+                    })
+                  }
+                >
+                  Pick Spritesheet Fish
+                </Button>
               </div>
             )}
             {this.state.currentActivity === Activity.RPS && (
@@ -95,6 +106,11 @@ module.exports = class MLActivities extends React.Component {
             {this.state.currentActivity === Activity.PondCreator && (
               <Panel>
                 <PondCreator />
+              </Panel>
+            )}
+            {this.state.currentActivity === Activity.SpritesheetFish && (
+              <Panel>
+                <SpritesheetFish />
               </Panel>
             )}
           </Col>
