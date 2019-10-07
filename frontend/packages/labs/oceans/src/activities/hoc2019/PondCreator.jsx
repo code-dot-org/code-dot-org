@@ -20,12 +20,12 @@ const Modes = Object.freeze({
 });
 
 const trainingData = [
-  {id: 1, imgUrl:'/images/bcat1.jpg', knnData:[0]},
-  {id: 2, imgUrl:'/images/bcat2.jpg', knnData:[0]},
-  {id: 3, imgUrl:'/images/bcat3.jpg', knnData:[0]},
-  {id: 4, imgUrl:'/images/bdog1.jpg', knnData:[1]},
-  {id: 5, imgUrl:'/images/bdog2.jpg', knnData:[1]},
-  {id: 6, imgUrl:'/images/bdog3.jpg', knnData:[1]},
+  {id: 1, imgUrl:'/images/cat1.jpg', knnData:[0]},
+  {id: 2, imgUrl:'/images/cat2.jpg', knnData:[0]},
+  {id: 3, imgUrl:'/images/cat3.jpg', knnData:[0]},
+  {id: 4, imgUrl:'/images/dog1.png', knnData:[1]},
+  {id: 5, imgUrl:'/images/dog2.png', knnData:[1]},
+  {id: 6, imgUrl:'/images/dog3.png', knnData:[1]},
 ];
 
 let canvasNum = 0;
