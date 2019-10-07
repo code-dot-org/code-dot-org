@@ -21,7 +21,7 @@ const Activity = Object.freeze({
 
 module.exports = class MLActivities extends React.Component {
   state = {
-    currentActivity: Activity.SpritesheetFish
+    currentActivity: Activity.PondCreator
   };
 
   render() {
