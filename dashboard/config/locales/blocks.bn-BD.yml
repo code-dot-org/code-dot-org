@@ -300,45 +300,19 @@ bn:
         text: বামে যান
       RyanLab_turnRight:
         text: ডানে যান
-      aalab_changePropByFlexible:
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': আকার
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': যখন
-            '"while"': যখন
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': যখন
-            '"while"': যখন
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': যখন
-            '"while"': যখন
-          KEY:
-            '"up"': উপরে
-            '"down"': নিচে
-            '"left"': বামে
-            '"right"': ডানে
-            '"space"': স্থান
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': নগরী
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': সত্যি
-            '"false"': মিথ্যা
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': আকার
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
         options:
           OPTION:
             '"show"': প্রদর্শন করুন

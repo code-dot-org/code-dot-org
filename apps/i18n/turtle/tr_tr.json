@@ -1,4 +1,5 @@
 {
+  "backward": "geriye doğru",
   "blocksUsed": "Kullanılan blok: %1",
   "branches": "dallar",
   "catColour": "Renk",
@@ -58,6 +59,7 @@
   "lengthFeedback": "Hareket mesafeleri dışında doğru anlamışsın.",
   "lengthParameter": "uzunluk",
   "loopVariable": "sayaç",
+  "moveBackward": "geriye doğru taşı",
   "moveEastTooltip": "Sanatçıyı doğuya hareket ettirir.",
   "moveForwardTooltip": "Sanatçıyı ilerletir.",
   "moveNorthTooltip": "Sanatçıyı kuzeye hareket ettirir.",

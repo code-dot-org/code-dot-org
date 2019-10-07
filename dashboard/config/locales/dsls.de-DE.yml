@@ -77,17 +77,18 @@ de-DE:
         - {}
         - {}
         answers:
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png"
         - {}
       2-3 Graph Paper Multi 1:
         title: Multiple-Choice
         questions:
         - text: Welches Programm erzeugt dieses Bild?
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png"
       2-3 Maze Match 2:
         title: Labyrinth Übereinstimmung
         content1: Weise die Puzzle den Blöcken zu.
@@ -324,10 +325,11 @@ de-DE:
         - text: Wenn der DNS sie zu der Seite mit der IP-Adresse 100.42.50.110 geleitet
             hat, auf welcher Seite sind sie?
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: code.org
+        - text: csisfun.com
+          correct: true
+        - text: thinkersmith.org
+        - text: khanacademy.org
       4-5 Songwriting Multi 1:
         title: Multiple-Choice
         questions:
@@ -1153,6 +1155,7 @@ de-DE:
       'Technique: Frequency Analysis':
         content1: hier die Beschreibung
       Terminology Recap:
+        title: Das war einfach. Was als nächstes?
         content1: hier die Beschreibung
       behaviors 1 predict:
         questions:
@@ -1174,31 +1177,44 @@ de-DE:
         - feedback: Falsch
       courseC_multi_artist_prog6_predict1:
         questions:
-        - {}
+        - text: Schau dir den Code unten genau an. Was passiert, wenn du auf "Ausführen"
+            klickst?
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: Der Künstler will ein Dreieck mit drei gleichen Seiten zeichnen.
+          feedback: Falsch. Der Künstler zeichnet ein Quadrat.
+        - text: Der Künstler wird eine einzelne Linie zeichnen.
+          feedback: Falsch. Der Künstler zeichnet ein Quadrat.
+        - text: Der Künstler zeichnet ein Quadrat.
+          correct: true
           feedback: Richtig!
         - text: Ich weiß es nicht.
+          feedback: Der Künstler zeichnet ein Quadrat.
       courseC_multi_artist_prog6_predict1_2018:
         questions:
-        - {}
+        - text: Schau dir den Code unten genau an. Was passiert, wenn du auf "Ausführen"
+            klickst?
         answers:
-        - {}
-        - {}
+        - text: Der Künstler will ein Dreieck mit drei gleichen Seiten zeichnen.
+          feedback: Falsch. Der Künstler zeichnet ein Quadrat.
+        - text: Der Künstler wird eine einzelne Linie zeichnen.
+          feedback: Falsch. Der Künstler zeichnet ein Quadrat.
         - correct: true
           feedback: Richtig!
         - text: Ich weiß es nicht.
+          feedback: Der Künstler zeichnet ein Quadrat.
       courseC_multi_artist_prog6_predict1_2018_2019:
         questions:
-        - {}
+        - text: Schau dir den Code unten genau an. Was passiert, wenn du auf "Ausführen"
+            klickst?
         answers:
-        - {}
-        - {}
+        - text: Der Künstler will ein Dreieck mit drei gleichen Seiten zeichnen.
+          feedback: Falsch. Der Künstler zeichnet ein Quadrat.
+        - text: Der Künstler wird eine einzelne Linie zeichnen.
+          feedback: Falsch. Der Künstler zeichnet ein Quadrat.
         - correct: true
           feedback: Richtig!
         - text: Ich weiß es nicht.
+          feedback: Der Künstler zeichnet ein Quadrat.
       courseC_multi_harvester_loops11_predict1:
         questions:
         - {}
@@ -1945,28 +1961,54 @@ de-DE:
         - {}
       grade2_multi_collector_A_predict1:
         questions:
-        - {}
+        - text: Schau dir den Code unten genau an. Wenn dieser Code bis zum Ende ausgeführt
+            würde (wenn man die Fehler nicht beachtet), wie viele Schätze würde Laurel
+            sammeln?
         answers:
-        - {}
-        - correct: true
+        - text: Mit diesem Code wird Laurel 4 Schätze einsammeln.
+          feedback: Falsch. Laurel versucht Schätze einzusammeln an Stellen, wo kein
+            Schatz ist, und das verursacht einen Fehler.
+        - text: Laurel wird versuchen Schätze einzusammeln an Stellen, wo kein Schatz
+            ist, und das verursacht einen Fehler.
+          correct: true
           feedback: Richtig!
-        - {}
+        - text: Laurel wird alle Schätze einsammeln.
+          feedback: Falsch. Laurel versucht Schätze einzusammeln an Stellen, wo kein
+            Schatz ist, und das verursacht einen Fehler.
         - text: Ich weiß es nicht.
+          feedback: Laurel versucht Schätze einzusammeln an Stellen, wo kein Schatz
+            ist, und das verursacht einen Fehler.
       grade2_multi_collector_A_predict1_2018:
         questions:
         - {}
         answers:
-        - {}
-        - correct: true
+        - text: Mit diesem Code wird Laurel 4 Schätze einsammeln.
+          feedback: Falsch. Laurel versucht Schätze einzusammeln an Stellen, wo kein
+            Schatz ist, und das verursacht einen Fehler.
+        - text: Laurel wird versuchen Schätze einzusammeln an Stellen, wo kein Schatz
+            ist, und das verursacht einen Fehler.
+          correct: true
           feedback: Richtig!
-        - {}
+        - text: Laurel wird alle Schätze einsammeln.
+          feedback: Falsch. Laurel versucht Schätze einzusammeln an Stellen, wo kein
+            Schatz ist, und das verursacht einen Fehler.
         - text: Ich weiß es nicht.
+          feedback: Laurel versucht Schätze einzusammeln an Stellen, wo kein Schatz
+            ist, und das verursacht einen Fehler.
       grade2_multi_collector_A_predict1_2018_2019:
         questions:
         - {}
         answers:
-        - {}
-        - correct: true
+        - text: Mit diesem Code wird Laurel 4 Schätze einsammeln.
+          feedback: Falsch. Laurel versucht Schätze einzusammeln an Stellen, wo kein
+            Schatz ist, und das verursacht einen Fehler.
+        - text: Laurel wird versuchen Schätze einzusammeln an Stellen, wo kein Schatz
+            ist, und das verursacht einen Fehler.
+          correct: true
           feedback: Richtig!
-        - {}
+        - text: Laurel wird alle Schätze einsammeln.
+          feedback: Falsch. Laurel versucht Schätze einzusammeln an Stellen, wo kein
+            Schatz ist, und das verursacht einen Fehler.
         - text: Ich weiß es nicht.
+          feedback: Laurel versucht Schätze einzusammeln an Stellen, wo kein Schatz
+            ist, und das verursacht einen Fehler.

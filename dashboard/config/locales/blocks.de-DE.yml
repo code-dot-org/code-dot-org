@@ -222,6 +222,10 @@ de:
           UNIT:
             '"measures"': Takte
             '"seconds"': Sekunden
+          OP:
+            '">"': ">"
+            '"<"': "<"
+            '"="': "="
       Dancelab_jumpTo:
         text: "{SPRITE} springen Sie zu {LOCATION}"
         options:
@@ -697,6 +701,8 @@ de:
         options:
           CHOICE:
             '"this"': dies
+      gamelab_hideTitleScreen:
+        text: verstecke Titelbildschirm
       gamelab_jumpTo:
         text: "{SPRITE} springen Sie zu {LOCATION}"
       gamelab_keyPressed:
@@ -736,6 +742,14 @@ de:
             '"x"': x
             '"y"': y
             '"z"': z
+      gamelab_locationAt:
+        text: 'Position x: {X} y: {Y}'
+      gamelab_locationMouse:
+        text: Mausposition
+      gamelab_locationOf:
+        text: Position von {SPRITE}
+      gamelab_location_picker:
+        text: "{LOCATION}"
       gamelab_makeNewSpriteAnon:
         text: erstelle neuen {ANIMATION_NAME} Sprite in {LOCATION}
       gamelab_mirrorSprite:
@@ -743,10 +757,28 @@ de:
           DIRECTION:
             '"right"': rechts
             '"left"': links
+      gamelab_mouseLocation:
+        text: Mausposition
+      gamelab_moveInDirection:
+        options:
+          DIRECTION:
+            '"North"': Nord
+            '"East"': Ost
+            '"South"': Süd
+            '"West"': West
+      gamelab_pointInDirection:
+        options:
+          DIRECTION:
+            '"North"': Nord
+            '"East"': Ost
+            '"South"': Süd
+            '"West"': West
       gamelab_randColor:
         text: zufällige Farbe
       gamelab_randomColor:
         text: zufällige Farbe
+      gamelab_randomLocation:
+        text: zufällige Position
       gamelab_setBackground:
         text: Hintergrundfarbe einstellen {COLOR}
       gamelab_setBackgroundImage:
@@ -758,6 +790,7 @@ de:
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': Galaxie
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': Raster
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': Regenbogen
+            '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': Sterne
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': Unterwasser
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': Winter
       gamelab_setProp:
@@ -932,6 +965,10 @@ de:
             MOVES.Kick: Stern
             MOVES.ThisOrThat: Dies oder Das
             MOVES.Rest: Keiner
+      Mikelab_locationAt:
+        text: 'Position x: {X} y: {Y}'
+      Mikelab_location_picker:
+        text: "{LOCATION}"
       Mikelab_randomColor:
         text: zufällige Farbe
       Mikelab_setBG:
@@ -1003,94 +1040,33 @@ de:
         text: nach rechts drehen
       Vector_positionCenter:
         text: Mitte
+      Vector_push:
+        text: setze Geschwindigkeit {VECTOR}
+      Vector_randomLocation:
+        text: zufällige Position
+      Vector_setColor:
+        text: setze Farbe zu {COLOR}
+      Vector_vectorNorth:
+        text: Nord
       Vector_where:
         options:
           PROPERTY:
             "'shapeColor'": Farbe
       aalab_addBehaviorUntilBoolean:
         text: "{SPRITE} beginnt {BEHAVIOR} bis {CONDITION}"
-      aalab_changePropByFlexible:
-        text: Änderung {SPRITE} {PROPERTY} bis {VAL}.
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': Größe
-            '"rotation"': Rotation
-            '"x"': x-Position
-            '"y"': y-Position
-            '"direction"': Bewegungsrichtung
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': wenn
-            '"while"': solange
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': wenn
-            '"while"': solange
-      aalab_createNewSprite:
-        text: "aalab erstelle neuen Sprite \n genannt {NAME} \n mit Kostüm {COSTUME}
-          \n in {LOCATION}"
-      aalab_createNewSpriteAdvanced:
-        text: "erstelle neuen Sprite genannt {NAME} \n mit Kostüm {COSTUME} \n in
-          {LOCATION}"
-      aalab_createNewSpriteAnon:
-        text: erstelle neuen {ANIMATION_NAME} Sprite in {LOCATION}
-      aalab_createNewSpriteAnonReturn:
-        text: aalab erstelle neuen {ANIMATION_NAME} Sprite in {LOCATION}
-      aalab_createPropertyGroup:
-        text: |-
-          erstelle neue Sprite Gruppe genannt {VAR}
-          mit allen {COSTUME} Sprites
-      aalab_createSpriteGroup:
-        text: erstelle eine neue Sprite Gruppe genannt {VAR}
-      aalab_getThisSprite:
-        options:
-          CHOICE:
-            '"this"': dies
-      aalab_jumpTo:
-        text: "{SPRITE} springen Sie zu {LOCATION}"
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': wenn
-            '"while"': solange
-          KEY:
-            '"up"': hoch
-            '"down"': runter
-            '"left"': links
-            '"right"': rechts
-            '"space"': Weltall
-      aalab_removeOneAndAll:
-        text: entferne {THIS}
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': Stadt
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': wahr
-            '"false"': falsch
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': Größe
-            '"rotation"': Rotation
-            '"x"': x-Position
-            '"y"': y-Position
-            '"direction"': Bewegungsrichtung
-            '"tint"': Farbton
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"1"': 1 Sekunde
-            '"2"': 2 Sekunden
-            '"3"': 3 Sekunden
-            '"4"': 4 Sekunden
-            '"5"': 5 Sekunden
-            '"0"': für immer
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
         options:
           OPTION:
             '"show"': zeige
@@ -1102,6 +1078,7 @@ de:
             '1': an
             '"toggle"': wechseln
       binary_move:
+        text: bewege {DIR}
         options:
           DIR:
             '"up"': hoch
@@ -1153,6 +1130,7 @@ de:
       craft_moveForward:
         text: vorwärts bewegen
       craft_placeBlock:
+        text: plaziere {blockType}
         options:
           blockType:
             '"blueCoralBlock"': blaue Koralle-Baustein

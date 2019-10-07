@@ -1159,6 +1159,8 @@ pt-BR:
               name: Teste Pluralsight
             Externals Optionally Displayed as Unplugged:
               name: Externos Opcionalmente Exibidos como Desconectados
+            Contained Levels:
+              name: Níveis Contidos
         algebraPD2b:
           title: Ciência da computação em álgebra PD
           description: 'Fase 2 - on-line: combinado de estudos de verão'
@@ -5952,7 +5954,7 @@ pt-BR:
             Learn to Drag and Drop:
               name: Aprenda a arrastar e soltar
             Programming in Maze:
-              name: Programação com Scrat
+              name: Programando com Angry Birds
             Programming in Harvester:
               name: Programação com Colheitadeira
             Tell a Story in Play Lab:

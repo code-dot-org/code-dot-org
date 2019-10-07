@@ -439,6 +439,7 @@ fil:
       ng iyong kasalukuyang mga secret na mga pulong
     enter_parent_email: Ilagay ang iyong mga magulang, o tagapangalaga na email address
       (para sa password recovery)
+    update_email: I-update
   user_level:
     completed: Nakompleto
     tried: Sinubukan

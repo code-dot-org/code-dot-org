@@ -57,6 +57,10 @@ de-DE:
           werden muss.
       2-3 Artist Functions 3:
         2-3_Artist_Functions_3_a: "**115 + 45 = 160**"
+      2-3 Artist Loops New 9:
+        2-3_Artist_Loops_New_9_b: Dieses V ist eigentlich nur ein halbes Quadrat.
+          Wie könnte der Code ausschauen, der benötigt wird um ein halbes Quadrat
+          zu zeichnen?
       2-3 Artist Nested Loops 3:
         2-3_Artist_Nested_Loops_3_a: |-
           Brauchst du Hilfe mit den Winkeln?\
@@ -92,6 +96,10 @@ de-DE:
       2-3 Bee Loops 7:
         2-3_Bee_Loops_7_a: Die erste Aktion wird eher eine Drehung als eine Fortbewegung
           sein.
+      2-3 Maze 1:
+        2-3_Maze_1_a: Um einen "vorwärts bewegen" block zu verwenden, ziehe diesen
+          von der Werkzeugleiste in den Arbeitsbereich und verbinde ihn mit dem "Wenn
+          Ausführen" Block.
       2-3 Maze 6:
         2-3_Maze_6_a: Es gibt zwei Möglichkeiten um dieses Puzzle zu lösen!
       4-5 Artist 11:
@@ -123,6 +131,8 @@ de-DE:
         4-5_Maze_7_a: |-
           **Dein Code soll so kompakt wie möglich sein?**
           Suche nach sich wiederholenden Teilen in Deinem Code und setze diese in eine Schleife!
+      4-5 Nested Loops 12:
+        4-5_Nested_Loops_12_a: "**360 / 36 = ?**"
       Course 4 SCF 1:
         Course_4_SCF_1_a: Jedes Hexagon hat 40 Pixel lange Seiten.
       Course 4 SCF 1a:
@@ -1642,15 +1652,174 @@ de-DE:
           setzen.
       courseB_maze_seq8:
         courseB_maze_seq8_b: Es gibt zwei Möglichkeiten um dieses Puzzle zu lösen!
+      courseC_collector_prog1:
+        courseC_collector_prog1_a: Wenn du auf einem Feld stehst, wo ein Schatz liegt,
+          dann benutze einen <xml><block type="collector_collect"/></xml> Block um
+          ihn aufzuheben.
+        courseC_collector_prog1_b: Die einfachste Lösung wäre, einmal nach vorwärts
+          zu gehen und dann den Schutz aufzuheben.
+      courseC_collector_prog1_2018:
+        courseC_collector_prog1_a: Wenn du auf einem Feld stehst, wo ein Schatz liegt,
+          dann benutze einen <xml><block type="collector_collect"/></xml> Block um
+          ihn aufzuheben.
+        courseC_collector_prog1_b: Die einfachste Lösung wäre, einmal nach vorwärts
+          zu gehen und dann den Schutz aufzuheben.
+      courseC_collector_prog1_2019:
+        courseC_collector_prog1_a: Wenn du auf einem Feld stehst, wo ein Schatz liegt,
+          dann benutze einen <xml><block type="collector_collect"/></xml> Block um
+          ihn aufzuheben.
+        courseC_collector_prog1_b: Die einfachste Lösung wäre, einmal nach vorwärts
+          zu gehen und dann den Schutz aufzuheben.
+      courseC_collector_prog2:
+        courseC_collector_prog2_a: Du kannst 4 <xml><block type="maze_move"><title
+          name="DIR">moveForward</title></block></xml> Blöcke benutzen oder auch den
+          <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+          Block um dein Programm kürzer zu machen.
+      courseC_collector_prog2_2018:
+        courseC_collector_prog2_a: Du kannst 4 <xml><block type="maze_move"><title
+          name="DIR">moveForward</title></block></xml> Blöcke benutzen oder auch den
+          <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+          Block um dein Programm kürzer zu machen.
+      courseC_collector_prog2_2019:
+        courseC_collector_prog2_a: Du kannst 4 <xml><block type="maze_move"><title
+          name="DIR">moveForward</title></block></xml> Blöcke benutzen oder auch den
+          <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+          Block um dein Programm kürzer zu machen.
       courseC_collector_prog3:
+        courseC_collector_prog3_a: Das Programm wird nur diejenigen Blöcke ausführen,
+          welche mit dem <xml><block type="when_run"/></xml> Block verbunden sind.
+        courseC_collector_prog3_b: Versuche die "Schritt" Taste zu verwenden um deinen
+          Code Zeile für Zeile auszuführen. Siehst du, wo etwas falsch läuft?
         courseC_collector_prog3_c: Wenn du Probleme hast diese Aufgabe zu lösen, versuche
           alle Bewegungen auf ein Blatt Papier zu schreiben.
       courseC_collector_prog3_2018:
+        courseC_collector_prog3_a: Das Programm wird nur diejenigen Blöcke ausführen,
+          welche mit dem <xml><block type="when_run"/></xml> Block verbunden sind.
+        courseC_collector_prog3_b: Versuche die "Schritt" Taste zu verwenden um deinen
+          Code Zeile für Zeile auszuführen. Siehst du, wo etwas falsch läuft?
         courseC_collector_prog3_c: Wenn du Probleme hast diese Aufgabe zu lösen, versuche
           alle Bewegungen auf ein Blatt Papier zu schreiben.
       courseC_collector_prog3_2019:
+        courseC_collector_prog3_a: Das Programm wird nur diejenigen Blöcke ausführen,
+          welche mit dem <xml><block type="when_run"/></xml> Block verbunden sind.
+        courseC_collector_prog3_b: Versuche die "Schritt" Taste zu verwenden um deinen
+          Code Zeile für Zeile auszuführen. Siehst du, wo etwas falsch läuft?
         courseC_collector_prog3_c: Wenn du Probleme hast diese Aufgabe zu lösen, versuche
           alle Bewegungen auf ein Blatt Papier zu schreiben.
+      courseC_collector_prog4:
+        courseC_collector_prog4_a: Wenn du nicht mehr weiter kommst, versuche einmal
+          alle Schritte auf ein Blatt Papier zu schreiben.
+        courseC_collector_prog4_c: Versuche diesen Weg zu nehmen.
+      courseC_collector_prog4_2018:
+        courseC_collector_prog4_a: Wenn du nicht mehr weiter kommst, versuche einmal
+          alle Schritte auf ein Blatt Papier zu schreiben.
+        courseC_collector_prog4_c: Versuche diesen Weg zu nehmen.
+      courseC_collector_prog4_2019:
+        courseC_collector_prog4_a: Wenn du nicht mehr weiter kommst, versuche einmal
+          alle Schritte auf ein Blatt Papier zu schreiben.
+        courseC_collector_prog4_c: Versuche diesen Weg zu nehmen.
+      courseC_collector_prog5:
+        courseC_collector_prog5_a: |-
+          "Funktioniert es beim ersten Schritt?
+          Klappt es beim zweiten Schritt?
+          Wo läuft etwas schief?"
+        courseC_collector_prog5_b: Wenn du schon einen Fehler verbessert hast und
+          das Programm aber immer noch nicht funktioniert, nimm als Anleitung zum
+          Fehler suchen die oben genannte Schritte.
+        courseC_collector_prog5_c: Wenn du nicht mehr weiter kommst, versuche einmal
+          alle Schritte auf ein Blatt Papier zu schreiben.
+        courseC_collector_prog5_d: Folge diesem Weg um die Schätze einzusammeln.
+      courseC_collector_prog5_2018:
+        courseC_collector_prog5_a: |-
+          "Funktioniert es beim ersten Schritt?
+          Klappt es beim zweiten Schritt?
+          Wo läuft etwas schief?"
+        courseC_collector_prog5_b: Wenn du schon einen Fehler verbessert hast und
+          das Programm aber immer noch nicht funktioniert, nimm als Anleitung zum
+          Fehler suchen die oben genannte Schritte.
+        courseC_collector_prog5_c: Wenn du nicht mehr weiter kommst, versuche einmal
+          alle Schritte auf ein Blatt Papier zu schreiben.
+        courseC_collector_prog5_d: Folge diesem Weg um die Schätze einzusammeln.
+      courseC_collector_prog5_2019:
+        courseC_collector_prog5_a: |-
+          "Funktioniert es beim ersten Schritt?
+          Klappt es beim zweiten Schritt?
+          Wo läuft etwas schief?"
+        courseC_collector_prog5_b: Wenn du schon einen Fehler verbessert hast und
+          das Programm aber immer noch nicht funktioniert, nimm als Anleitung zum
+          Fehler suchen die oben genannte Schritte.
+        courseC_collector_prog5_c: Wenn du nicht mehr weiter kommst, versuche einmal
+          alle Schritte auf ein Blatt Papier zu schreiben.
+        courseC_collector_prog5_d: Folge diesem Weg um die Schätze einzusammeln.
+      courseC_collector_prog6:
+        courseC_collector_prog6_a: |-
+          Findest du heraus, was falsch ist?
+
+          Versuche einmal mit der "Schritt" Taste den Code Zeile für Zeile auszuführen, um die Fehler zu finden.
+        courseC_collector_prog6_b: Du kommst nicht mehr weiter? Versuche diesen Weg
+          zu nehmen, um die Schätze einzusammeln.
+      courseC_collector_prog6_2018:
+        courseC_collector_prog6_a: |-
+          Findest du heraus, was falsch ist?
+
+          Versuche einmal mit der "Schritt" Taste den Code Zeile für Zeile auszuführen, um die Fehler zu finden.
+        courseC_collector_prog6_b: Du kommst nicht mehr weiter? Versuche diesen Weg
+          zu nehmen, um die Schätze einzusammeln.
+      courseC_collector_prog6_2019:
+        courseC_collector_prog6_a: |-
+          Findest du heraus, was falsch ist?
+
+          Versuche einmal mit der "Schritt" Taste den Code Zeile für Zeile auszuführen, um die Fehler zu finden.
+        courseC_collector_prog6_b: Du kommst nicht mehr weiter? Versuche diesen Weg
+          zu nehmen, um die Schätze einzusammeln.
+      courseC_collector_prog7:
+        courseC_collector_prog7_a: 'Du hast schon sehr viel großartigen Code im Arbeitsbereich.
+          Du brauchst nichts davon löschen um die Aufgabe zu lösen.  '
+        courseC_collector_prog7_b: Hier ist noch nicht der Block, den du brauchst
+          um die Abenteurerin in die richtige Richtung zu bewegen? Zieh einen rüber
+          aus der Werkzeugkiste.
+        courseC_collector_prog7_c: Du siehst nicht den besten Weg um alle Schätze
+          einzusammeln? Versuche mal diesen!
+      courseC_collector_prog7_2018:
+        courseC_collector_prog7_a: 'Du hast schon sehr viel großartigen Code im Arbeitsbereich.
+          Du brauchst nichts davon löschen um die Aufgabe zu lösen.  '
+        courseC_collector_prog7_b: Hier ist noch nicht der Block, den du brauchst
+          um die Abenteurerin in die richtige Richtung zu bewegen? Zieh einen rüber
+          aus der Werkzeugkiste.
+        courseC_collector_prog7_c: Du siehst nicht den besten Weg um alle Schätze
+          einzusammeln? Versuche mal diesen!
+      courseC_collector_prog7_2019:
+        courseC_collector_prog7_a: 'Du hast schon sehr viel großartigen Code im Arbeitsbereich.
+          Du brauchst nichts davon löschen um die Aufgabe zu lösen.  '
+        courseC_collector_prog7_b: Hier ist noch nicht der Block, den du brauchst
+          um die Abenteurerin in die richtige Richtung zu bewegen? Zieh einen rüber
+          aus der Werkzeugkiste.
+        courseC_collector_prog7_c: Du siehst nicht den besten Weg um alle Schätze
+          einzusammeln? Versuche mal diesen!
+      courseC_collector_prog_challenge1:
+        courseC_collector_prog_challenge1_a: Du kannst den 'sammle' Block öfter verwenden
+          um die zusätzlichen Schätze einzusammeln.
+      courseC_collector_prog_challenge1_2018:
+        courseC_collector_prog_challenge1_a: Du kannst den 'sammle' Block öfter verwenden
+          um die zusätzlichen Schätze einzusammeln.
+      courseC_collector_prog_challenge1_2019:
+        courseC_collector_prog_challenge1_a: Du kannst den 'sammle' Block öfter verwenden
+          um die zusätzlichen Schätze einzusammeln.
+      courseC_collector_prog_challenge2:
+        courseC_collector_prog_challenge1_a: Du kannst mehr als einen 'sammle' Block
+          auf jedem Feld verwenden.
+        courseC_collector_prog_challenge1_b: Hast du dich verlaufen? Versuche diesen
+          Weg zu nehmen um die Aufgabe zu lösen!
+      courseC_collector_prog_challenge2_2018:
+        courseC_collector_prog_challenge1_a: Du kannst mehr als einen 'sammle' Block
+          auf jedem Feld verwenden.
+        courseC_collector_prog_challenge1_b: Hast du dich verlaufen? Versuche diesen
+          Weg zu nehmen um die Aufgabe zu lösen!
+      courseC_collector_prog_challenge2_2019:
+        courseC_collector_prog_challenge1_a: Du kannst mehr als einen 'sammle' Block
+          auf jedem Feld verwenden.
+        courseC_collector_prog_challenge1_b: Hast du dich verlaufen? Versuche diesen
+          Weg zu nehmen um die Aufgabe zu lösen!
       courseC_data wizard:
         courseA_playLab_events7_a: |-
           Nimm diesen Block um zu regeln was passiert, wenn die Figuren kollidieren.
@@ -1869,6 +2038,15 @@ de-DE:
           Die kürzeste Lösung braucht nur 5 Blöcke, aber dieser Block wird benötigt:
 
           <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+      courseC_starWars_loops1:
+        courseC_starWars_loops1_a: BB-8 hebt den Metallschrott automatisch auf, wenn
+          er darüber fährt.
+      courseC_starWars_loops1_2018:
+        courseC_starWars_loops1_a: BB-8 hebt den Metallschrott automatisch auf, wenn
+          er darüber fährt.
+      courseC_starWars_loops1_2019:
+        courseC_starWars_loops1_a: BB-8 hebt den Metallschrott automatisch auf, wenn
+          er darüber fährt.
       courseD_maze_ramp6:
         courseC_maze_programming6_a: Es gibt zwei Möglichkeiten um dieses Puzzle zu
           lösen!
