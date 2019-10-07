@@ -1,10 +1,6 @@
 import React, {PropTypes} from 'react';
-import Button from 'react-bootstrap/lib/Button';
 import Row from 'react-bootstrap/lib/Row';
 import Col from 'react-bootstrap/lib/Col';
-import SimpleTrainer from '../../utils/SimpleTrainer';
-import P5Canvas from './P5Canvas';
-import {COLORS} from '../../utils/colors';
 import './PondCreator.css';
 
 export default class Training extends React.Component {
