@@ -1,3 +1,19 @@
+import {PropTypes} from 'react';
+
+// return [
+//   body.width,
+//   body.height,
+//   COLORS.indexOf(body.color),
+//   eyes.diameter,
+//   COLORS.indexOf(fins.color),
+//   fins.topFin.widthPercent,
+//   fins.topFin.heightPercent,
+//   fins.sideFin.widthPercent,
+//   fins.sideFin.heightPercent,
+//   fins.tail.widthPercent,
+//   fins.tail.heightPercent
+// ];
+
 const fish = {
   bodies: {
     body1: {
@@ -42,3 +58,17 @@ const fish = {
 };
 
 export default fish;
+
+export const bodyShape = PropTypes.shape({
+  src: PropTypes.string.isRequired,
+  anchor: PropTypes.array.isRequired,
+  eyeAnchor: PropTypes.array.isRequired,
+  mouthAnchor: PropTypes.array.isRequired,
+  sideFinAnchor: PropTypes.array.isRequired,
+  topFinAnchor: PropTypes.array.isRequired,
+  tailAnchor: PropTypes.array.isRequired
+});
+
+export const bodyPartShape = PropTypes.shape({
+  src: PropTypes.string.isRequired
+});

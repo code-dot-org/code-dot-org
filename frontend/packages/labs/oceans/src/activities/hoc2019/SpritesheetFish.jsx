@@ -1,9 +1,51 @@
 import React from 'react';
-import fish from '../../utils/fishData';
+import fish, {bodyShape, bodyPartShape} from '../../utils/fishData';
 const P5 = require('../../utils/loadP5');
 
+const generateRandomFish = () => {
+  const bodies = Object.values(fish.bodies);
+  const eyes = Object.values(fish.eyes);
+  const mouths = Object.values(fish.mouths);
+  const sideFins = Object.values(fish.sideFins);
+  const topFins = Object.values(fish.topFins);
+  const tails = Object.values(fish.tails);
+
+  return {
+    body: bodies[Math.floor(Math.random() * bodies.length)],
+    eye: eyes[Math.floor(Math.random() * eyes.length)],
+    mouth: mouths[Math.floor(Math.random() * mouths.length)],
+    sideFin: sideFins[Math.floor(Math.random() * sideFins.length)],
+    topFin: topFins[Math.floor(Math.random() * topFins.length)],
+    tail: tails[Math.floor(Math.random() * tails.length)]
+  };
+};
+
 export default class SpritesheetFish extends React.Component {
-  state = {...fish};
+  render() {
+    const randomFish = generateRandomFish();
+
+    return (
+      <Fish
+        body={randomFish.body}
+        eye={randomFish.eye}
+        mouth={randomFish.mouth}
+        sideFin={randomFish.sideFin}
+        topFin={randomFish.topFin}
+        tail={randomFish.tail}
+      />
+    );
+  }
+}
+
+class Fish extends React.Component {
+  static propTypes = {
+    body: bodyShape.isRequired,
+    eye: bodyPartShape.isRequired,
+    mouth: bodyPartShape.isRequired,
+    sideFin: bodyPartShape.isRequired,
+    topFin: bodyPartShape.isRequired,
+    tail: bodyPartShape.isRequired
+  };
 
   componentDidMount() {
     this.p5 = new P5(this.sketch, 'canvas');
@@ -24,12 +66,12 @@ export default class SpritesheetFish extends React.Component {
       tailImg;
 
     p5.preload = () => {
-      body = this.state.bodies.body1;
-      eye = this.state.eyes.eye2;
-      mouth = this.state.mouths.mouth1;
-      sideFin = this.state.sideFins.sideFin2;
-      topFin = this.state.topFins.topFin2;
-      tail = this.state.tails.tail2;
+      body = this.props.body;
+      eye = this.props.eye;
+      mouth = this.props.mouth;
+      sideFin = this.props.sideFin;
+      topFin = this.props.topFin;
+      tail = this.props.tail;
 
       // Preload images to avoid race condition in setup method.
       bodyImg = p5.loadImage(body.src);
