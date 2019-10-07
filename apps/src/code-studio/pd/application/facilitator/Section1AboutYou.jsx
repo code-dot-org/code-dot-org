@@ -7,7 +7,7 @@ import {
   PageLabels,
   SectionHeaders,
   TextFields
-} from '@cdo/apps/generated/pd/facilitator1920ApplicationConstants';
+} from '@cdo/apps/generated/pd/facilitatorApplicationConstants';
 import {isEmail, isZipCode} from '@cdo/apps/util/formatValidation';
 
 const FACILITATOR_URL = 'https://code.org/educate/facilitator';
