@@ -6,8 +6,8 @@
 - if current_user
   - projects_data[:canViewAdvancedTools] = !(current_user.under_13? && current_user.terms_version.nil?)
 
-%script{src: asset_path("js/#{js_locale}/common_locale.js"), data: {projects: projects_data.to_json}}
-%script{src: minifiable_asset_path('js/projects/public.js')}
+%script{src: webpack_asset_path("js/#{js_locale}/common_locale.js"), data: {projects: projects_data.to_json}}
+%script{src: webpack_asset_path('js/projects/public.js')}
 
 .projects-page
   #public-gallery
