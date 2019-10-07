@@ -8,16 +8,16 @@ module Pd
     end
 
     SECTION_HEADERS = {
-      section_1_about_you: 'About You',
-      section_2_choose_your_program: 'Choose Your Program',
-      section_3_teaching_background: 'Teaching Background',
-      section_4_professional_learning_program_requirements: 'Professional Learning Program Requirements',
-      section_5_additional_demographic_information: 'Additional Demographic Information and submission',
+      about_you: 'About You',
+      teaching_background: 'Teaching Background',
+      choose_your_program: 'Choose Your Program',
+      professional_learning_program_requirements: 'Professional Learning Program Requirements',
+      additional_demographic_information: 'Additional Demographic Information and submission',
       school_stats_and_principal_approval_section: 'Principal Approval and School Information'
     }
 
     PAGE_LABELS = {
-      section_1_about_you: BASE_PAGE_LABELS[:section_1_about_you].slice(
+      about_you: BASE_PAGE_LABELS[:section_1_about_you].slice(
         :country,
         :first_name,
         :last_name,
@@ -49,7 +49,11 @@ module Pd
           how_heard: 'How did you hear about this program?'
         }
       ),
-      section_2_choose_your_program: {
+      teaching_background:
+        BASE_PAGE_LABELS[:section_2_your_school].slice(
+          :previous_yearlong_cdo_pd
+        ),
+      choose_your_program: {
         program: clean_multiline(
           'Which professional learning program would you like to join for the 2020-21
           school year? Note: this application is only for Computer Science Discoveries and
@@ -85,11 +89,7 @@ module Pd
         replace_existing: 'Will this course replace an existing computer science course in the master schedule? If yes, please list the course(s) that will be replaced.',
         replace_which_course: 'Which existing course or curriculum will it replace? Mark all that apply.'
       },
-      section_3_teaching_background:
-        BASE_PAGE_LABELS[:section_2_your_school].slice(
-          :previous_yearlong_cdo_pd
-        ),
-      section_4_professional_learning_program_requirements:
+      professional_learning_program_requirements:
         {
           committed: BASE_PAGE_LABELS[:section_4_summer_workshop][:committed],
           able_to_attend_multiple: 'Your Regional Partner is hosting local summer workshop(s) at the following dates and locations. Please indicate which workshops you are able to attend. Select all that apply.',
@@ -100,7 +100,7 @@ module Pd
           understand_fee: "By checking this box, you indicate that you understand there may be a fee for the professional learning program you attend.",
           scholarship_reasons: "Please provide any additional information you'd like to share about why your application should be considered for a scholarship."
         },
-      section_5_additional_demographic_information:
+      additional_demographic_information:
         {
           gender_identity: 'Gender identity:',
           race: 'Race or ethnicity:',
@@ -150,7 +150,7 @@ module Pd
         notes_5: "Notes 5",
         alternate_email: "Alternate email",
         school_type: "School type",
-        district_name: PAGE_LABELS[:section_1_about_you][:school_district_name],
+        district_name: PAGE_LABELS[:about_you][:school_district_name],
         school_city: "School city",
         school_state: "School state",
         school_zip_code: "School zip code",
@@ -164,18 +164,18 @@ module Pd
         previous_yearlong_cdo_pd: "Have you participated in previous yearlong Code.org Professional Learning Programs?",
         able_to_attend_multiple: "Please indicate which workshops you are able to attend.",
         willing_to_travel: "How far would you be willing to travel to academic year workshops?",
-        how_heard: PAGE_LABELS[:section_5_additional_demographic_information][:how_heard] + " (Teacher's response)",
+        how_heard: PAGE_LABELS[:additional_demographic_information][:how_heard] + " (Teacher's response)",
         gender_identity: "Teacher's gender identity",
         race: "Teacher's race",
         principal_approval_url: "Principal Approval Form URL"
       },
       principal: {
-        title: PAGE_LABELS[:section_1_about_you][:principal_title] + " (provided by principal)",
-        first_name: PAGE_LABELS[:section_1_about_you][:principal_first_name] + " (provided by principal)",
-        last_name: PAGE_LABELS[:section_1_about_you][:principal_last_name] + " (provided by principal)",
-        email: PAGE_LABELS[:section_1_about_you][:principal_email] + " (provided by principal)",
-        school_name: PAGE_LABELS[:section_1_about_you][:school_name] + " (provided by principal)",
-        district_name: PAGE_LABELS[:section_1_about_you][:school_district_name] + " (provided by principal)",
+        title: PAGE_LABELS[:about_you][:principal_title] + " (provided by principal)",
+        first_name: PAGE_LABELS[:about_you][:principal_first_name] + " (provided by principal)",
+        last_name: PAGE_LABELS[:about_you][:principal_last_name] + " (provided by principal)",
+        email: PAGE_LABELS[:about_you][:principal_email] + " (provided by principal)",
+        school_name: PAGE_LABELS[:about_you][:school_name] + " (provided by principal)",
+        district_name: PAGE_LABELS[:about_you][:school_district_name] + " (provided by principal)",
         do_you_approve: "Do you approve of this teacher participating in Code.org's 2020-21 Professional Learning Program?",
         plan_to_teach: "Is this teacher planning to teach this course in the 2020-21 school year?",
         total_student_enrollment: "Total student enrollment",
