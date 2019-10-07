@@ -4,7 +4,7 @@ import {
   PageLabels,
   SectionHeaders,
   TextFields
-} from '@cdo/apps/generated/pd/teacher2021ApplicationConstants';
+} from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import {FormGroup, Row, Col} from 'react-bootstrap';
 import {PROGRAM_CSD, PROGRAM_CSP} from './TeacherApplicationConstants';
 

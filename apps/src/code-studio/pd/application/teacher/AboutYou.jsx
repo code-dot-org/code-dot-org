@@ -5,7 +5,7 @@ import UsPhoneNumberInput from '../../form_components/UsPhoneNumberInput';
 import {
   PageLabels,
   SectionHeaders
-} from '@cdo/apps/generated/pd/teacher2021ApplicationConstants';
+} from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import {isEmail, isZipCode} from '@cdo/apps/util/formatValidation';
 import {
   FormGroup,

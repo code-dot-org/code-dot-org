@@ -3,13 +3,13 @@ import {FormGroup, Row, Col, ControlLabel} from 'react-bootstrap';
 import {
   PageLabels,
   TextFields
-} from '@cdo/apps/generated/pd/principalApproval2021ApplicationConstants';
+} from '@cdo/apps/generated/pd/principalApprovalApplicationConstants';
 import LabeledFormComponent from '../../form_components/LabeledFormComponent';
 import PrivacyDialog from '../PrivacyDialog';
 import {PrivacyDialogMode} from '../../constants';
 import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
 import {isInt, isPercent} from '@cdo/apps/util/formatValidation';
-import {styles} from '../teacher2021/TeacherApplicationConstants';
+import {styles} from '../teacher/TeacherApplicationConstants';
 
 const MANUAL_SCHOOL_FIELDS = [
   'schoolName',
@@ -54,7 +54,7 @@ const REPLACE_COURSE_FIELDS = [
 const YEAR = '2020-21';
 const YES = 'Yes';
 
-export default class PrincipalApproval2021Component extends LabeledFormComponent {
+export default class PrincipalApprovalComponent extends LabeledFormComponent {
   static labels = PageLabels;
 
   static associatedFields = [
