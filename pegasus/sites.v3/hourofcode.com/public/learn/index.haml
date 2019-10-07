@@ -86,8 +86,8 @@ social:
 -# Not ideal but we can pull the undigested files from /blockly.
 - locale_code = hoc_get_locale_code
 - js_locale = locale_code.to_s.downcase.tr('-', '_')
-%script{src: asset_path("js/#{js_locale}/tutorialExplorer_locale.js")}
-%script{src: minifiable_asset_path("js/tutorialExplorer.js")}
+%script{src: webpack_asset_path("js/#{js_locale}/tutorialExplorer_locale.js")}
+%script{src: webpack_asset_path("js/tutorialExplorer.js")}
 
 -# Load tutorial images from code.org so we don't have to duplicate them on hourofcode.com.
 - tutorials_contents = Tutorials.new(:tutorials).contents(request.host_with_port)

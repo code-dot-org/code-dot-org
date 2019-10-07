@@ -30,20 +30,20 @@ const CS_TEACHERS_URL = 'https://code.org/educate/community';
 const INTERNATIONAL = 'Other country';
 const US = 'United States';
 
-export default class Section1AboutYou extends LabeledFormComponent {
+export default class AboutYou extends LabeledFormComponent {
   static propTypes = {
     ...LabeledFormComponent.propTypes,
     accountEmail: PropTypes.string.isRequired
   };
 
-  static labels = PageLabels.section1AboutYou;
+  static labels = PageLabels.aboutYou;
 
   static associatedFields = [
     // Gender Identity and Race are things we want rendered in Section 1 in the detail view
     // but we want to ask in section 5. So they need to be removed here.
     // Also remove a whole mess of fields (from school to principal to role) which we have
     // moved to Section 3, and therefore don't want to validate here in Section 1.
-    ..._.difference(Object.keys(PageLabels.section1AboutYou), [
+    ..._.difference(Object.keys(PageLabels.aboutYou), [
       'genderIdentity',
       'race',
       'school',
@@ -178,7 +178,7 @@ export default class Section1AboutYou extends LabeledFormComponent {
           .
         </p>
 
-        <h3>Section 1: {SectionHeaders.section1AboutYou}</h3>
+        <h3>Section 1: {SectionHeaders.aboutYou}</h3>
 
         {this.radioButtonsFor('country')}
 

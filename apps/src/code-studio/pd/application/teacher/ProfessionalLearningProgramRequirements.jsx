@@ -25,11 +25,11 @@ const styles = {
   }
 };
 
-export default class Section4SummerWorkshop extends LabeledFormComponent {
-  static labels = PageLabels.section4ProfessionalLearningProgramRequirements;
+export default class SummerWorkshop extends LabeledFormComponent {
+  static labels = PageLabels.professionalLearningProgramRequirements;
 
   static associatedFields = [
-    ...Object.keys(PageLabels.section4ProfessionalLearningProgramRequirements),
+    ...Object.keys(PageLabels.professionalLearningProgramRequirements),
     'regionalPartnerId',
     'regionalPartnerGroup',
     'regionalPartnerWorkshopIds'
@@ -342,8 +342,7 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
     return (
       <FormGroup>
         <h3>
-          Section 4:{' '}
-          {SectionHeaders.section4ProfessionalLearningProgramRequirements}
+          Section 4: {SectionHeaders.professionalLearningProgramRequirements}
         </h3>
 
         <p>
