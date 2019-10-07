@@ -1,8 +1,9 @@
 .container {
   position: relative;
-  margin-top: 50px;
-  width: 100px;
-  height: 100px;
+  margin: 10px;
+  width: 200px;
+  height: 200px;
+  display: block;
 }
 
 .overlay {
@@ -17,15 +18,15 @@
 
 
 .container:hover .overlay {
-  display: block;
+  display: inline;
   background: rgba(0, 0, 0, .3);
 }
 
 
 img {
   position: absolute;
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   left: 0;
 }
 
