@@ -5,7 +5,7 @@ import UsPhoneNumberInput from '../../form_components/UsPhoneNumberInput';
 import {
   PageLabels,
   SectionHeaders
-} from '@cdo/apps/generated/pd/teacher2021ApplicationConstants';
+} from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import {isEmail, isZipCode} from '@cdo/apps/util/formatValidation';
 import {
   FormGroup,
@@ -258,10 +258,9 @@ const NameInput = ({
   errorMessage
 }) => (
   <FormGroup controlId={id} validationState={validationState}>
-    <ControlLabel>
-      {label}
-      {REQUIRED}
-    </ControlLabel>
+    <div className="markdown_label markdown_label_required">
+      <ControlLabel>{label}</ControlLabel>
+    </div>
     <FormControl
       type="text"
       componentClass="input"
@@ -280,5 +279,3 @@ NameInput.propTypes = {
   errorMessage: PropTypes.node,
   handleChange: PropTypes.func
 };
-
-const REQUIRED = <span style={{color: 'red'}}>&nbsp;*</span>;

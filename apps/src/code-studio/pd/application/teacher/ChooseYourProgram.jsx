@@ -4,7 +4,7 @@ import {
   PageLabels,
   SectionHeaders,
   TextFields
-} from '@cdo/apps/generated/pd/teacher2021ApplicationConstants';
+} from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import {FormGroup, Row, Col} from 'react-bootstrap';
 import {PROGRAM_CSD, PROGRAM_CSP} from './TeacherApplicationConstants';
 
@@ -174,7 +174,7 @@ export default class ChooseYourProgram extends LabeledFormComponent {
     }
 
     if (data.program === PROGRAM_CSP) {
-      requiredFields.push('cspWhichGrades', 'csdWhichUnits', 'cspHowOffer');
+      requiredFields.push('cspWhichGrades', 'cspWhichUnits', 'cspHowOffer');
     }
 
     if (data.replaceExisting === 'Yes') {
