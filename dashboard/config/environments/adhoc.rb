@@ -33,14 +33,8 @@ Dashboard::Application.configure do
   # Version of your assets, change this if you want to expire all your assets.
   config.assets.version = '1.0'
 
-  # Whether or not to display pretty apps (formerly called blockly).
-  config.pretty_apps = true
-
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
-
-  # Whether or not to display pretty apps (formerly called blockly).
-  config.pretty_apps = false
 
   # Log condensed lines to syslog for centralized logging.
   config.lograge.enabled = true

@@ -260,7 +260,7 @@ class Blockly < Level
           baseUrl: Blockly.base_url,
           app: game.try(:app),
           droplet: uses_droplet?,
-          pretty: Rails.configuration.pretty_apps ? '' : '.min',
+          pretty: CDO.optimize_webpack_assets ? '.min' : '',
         }
       )
     end
