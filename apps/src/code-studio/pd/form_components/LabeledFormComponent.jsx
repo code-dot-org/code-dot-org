@@ -1,6 +1,6 @@
 import React from 'react';
 import FormComponent from './FormComponent';
-import MarkdownSpan from '../components/markdownSpan';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 export default class LabeledFormComponent extends FormComponent {
   /**
@@ -16,7 +16,12 @@ export default class LabeledFormComponent extends FormComponent {
       return name;
     }
 
-    return <MarkdownSpan>{this.constructor.labels[name]}</MarkdownSpan>;
+    return (
+      <SafeMarkdown
+        openExternalLinksInNewTab
+        markdown={this.constructor.labels[name]}
+      />
+    );
   }
 
   indented(depth = 1) {

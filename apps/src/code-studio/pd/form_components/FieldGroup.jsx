@@ -9,8 +9,6 @@ import {
   Col
 } from 'react-bootstrap';
 
-const REQUIRED = <span style={{color: 'red'}}>&nbsp;*</span>;
-
 export default class FieldGroup extends React.Component {
   constructor(props) {
     super(props);
@@ -66,14 +64,21 @@ export default class FieldGroup extends React.Component {
       ...props
     } = this.props;
 
+    // We wrap the ControlLabel in a div with a class name that specifies
+    // whether the field is required or not.  If it is required, some CSS
+    // in pd.scss adds a red asterisk after the end of the last <p> inside
+    // this div.
+    const labelClassName = required
+      ? 'markdown_label markdown_required'
+      : 'markdown_label markdown_not_required';
+
     return (
       <FormGroup controlId={id} validationState={validationState}>
         <Row>
           <Col {...labelWidth}>
-            <ControlLabel>
-              {label}
-              {required && REQUIRED}
-            </ControlLabel>
+            <div className={labelClassName}>
+              <ControlLabel>{label}</ControlLabel>
+            </div>
           </Col>
           {inlineControl && this.renderControl(controlWidth, children, props)}
         </Row>

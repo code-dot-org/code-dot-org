@@ -174,7 +174,7 @@ export default class ChooseYourProgram extends LabeledFormComponent {
     }
 
     if (data.program === PROGRAM_CSP) {
-      requiredFields.push('cspWhichGrades', 'csdWhichUnits', 'cspHowOffer');
+      requiredFields.push('cspWhichGrades', 'cspWhichUnits', 'cspHowOffer');
     }
 
     if (data.replaceExisting === 'Yes') {
