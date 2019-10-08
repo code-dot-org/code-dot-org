@@ -20,12 +20,12 @@ const Modes = Object.freeze({
 });
 
 const trainingData = [
-  {id: 1, imgUrl:'/images/cat1.jpg', knnData:[0]},
-  {id: 2, imgUrl:'/images/cat2.jpg', knnData:[0]},
-  {id: 3, imgUrl:'/images/cat3.jpg', knnData:[0]},
-  {id: 4, imgUrl:'/images/dog1.png', knnData:[1]},
-  {id: 5, imgUrl:'/images/dog2.png', knnData:[1]},
-  {id: 6, imgUrl:'/images/dog3.png', knnData:[1]},
+  {id: 1, imgUrl: '/images/cat1.jpg', knnData: [0]},
+  {id: 2, imgUrl: '/images/cat2.jpg', knnData: [0]},
+  {id: 3, imgUrl: '/images/cat3.jpg', knnData: [0]},
+  {id: 4, imgUrl: '/images/dog1.png', knnData: [1]},
+  {id: 5, imgUrl: '/images/dog2.png', knnData: [1]},
+  {id: 6, imgUrl: '/images/dog3.png', knnData: [1]}
 ];
 
 let canvasNum = 0;
@@ -88,9 +88,15 @@ export default class PondCreator extends React.Component {
       <div>
         {this.state.currentMode === Modes.Training && (
           <div>
-          <Training trainer={this.state.trainer} trainingData={this.state.trainingData} rows={2} cols={2} label={"Like"} />
-                <Button onClick={() => this.switchToPredictions()}>
-              Show some fish!
+            <Training
+              trainer={this.state.trainer}
+              trainingData={this.state.trainingData}
+              rows={2}
+              cols={2}
+              label={'Like'}
+            />
+            <Button onClick={() => this.switchToPredictions()}>
+              Train Bot
             </Button>
           </div>
         )}
