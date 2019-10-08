@@ -172,7 +172,7 @@ module Pd
 
     LABEL_OVERRIDES = {
       taught_in_past: 'Have you taught computer science courses or activities in the past?',
-      program: 'Which professional learning program would you like to join for the 2018-19 school year?',
+      program: 'Which professional learning program would you like to join for the 2020-21 school year?',
       csd_which_grades: 'To which grades does your school plan to offer CS Discoveries?',
       csp_which_grades: 'To which grades does your school plan to offer CS Principles?',
       csp_ap_exam: 'Are you planning for your students to take the AP CS Principles exam in the spring of 2019?',
@@ -220,9 +220,11 @@ module Pd
       no_explain: "No (Please Explain):".freeze,
       no_pay_fee: "No, my school or I will not be able to pay the summer workshop program fee.".freeze,
       i_dont_know_explain: "I don't know (Please Explain):",
+      no_pay_fee_2021: 'No, my school will not be able to pay the program fee. I would like to be considered for a scholarship.',
       no_pay_fee_1920: 'No, my school will not be able to pay the program fee. I would like to be considered for a scholarship.',
-      not_sure_explain: 'Not sure (Please explain):',
-      unable_to_attend_1920: 'I’m not able to attend any of the above workshop dates. (Please explain):'
+      not_sure_explain: 'Not sure (Please Explain):',
+      unable_to_attend_2021: 'I’m not able to attend any of the above workshop dates. (Please Explain):',
+      unable_to_attend_1920: 'I’m not able to attend any of the above workshop dates. (Please Explain):'
     }.freeze
 
     SUBJECTS_TAUGHT_IN_PAST = [

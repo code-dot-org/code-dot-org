@@ -39,7 +39,7 @@
         %span#displayed-user-email= f.object.email.present? ? f.object.email : '***encrypted***'
         - if current_user.should_see_edit_email_link?
           (
-          %a#edit-email-link{href: '#'}= "Update"
+          %a#edit-email-link{href: '#'}= t('user.update_email')
           )
   - if resource.username.present?
     .field
@@ -203,4 +203,4 @@
       studentCount: current_user.students.count,
     }.to_json
   }
-%script{src: minifiable_asset_path('js/devise/registrations/edit.js'), data: script_data}
+%script{src: webpack_asset_path('js/devise/registrations/edit.js'), data: script_data}

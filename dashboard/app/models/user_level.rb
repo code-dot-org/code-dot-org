@@ -43,6 +43,11 @@ class UserLevel < ActiveRecord::Base
   scope :passing, -> {where('best_result >= ?', ActivityConstants::MINIMUM_PASS_RESULT)}
   scope :perfect, -> {where('best_result > ?', ActivityConstants::MAXIMUM_NONOPTIMAL_RESULT)}
 
+  def self.by_stage(stage)
+    levels = stage.script_levels.map(&:level_ids).flatten
+    where(script: stage.script, level: levels)
+  end
+
   def readonly_requires_submitted
     if readonly_answers? && !submitted?
       errors.add(:readonly_answers, 'readonly_answers only valid on submitted UserLevel')
@@ -110,17 +115,11 @@ class UserLevel < ActiveRecord::Base
   def after_submit
     submitted_level = Level.cache_find(level_id)
 
-    # Create peer reviews after submitting a peer_reviewable solution
+    # Some levels that belong to the professional learning program are peer reviewable.
+    # When submitting such a level, we create a record for a pending peer review, so that
+    # it becomes available for another teacher in the program to review.
     if submitted_level.try(:peer_reviewable?)
-      submitted_script_level = submitted_level.script_levels.find_by(script_id: script_id)
-      learning_module = submitted_script_level&.stage&.plc_learning_module
-      assignment_exists = learning_module && Plc::EnrollmentModuleAssignment.exists?(
-        user_id: user_id,
-        plc_learning_module: learning_module
-      )
-      if assignment_exists
-        PeerReview.create_for_submission(self, level_source_id)
-      end
+      PeerReview.create_for_submission(self, level_source_id)
     end
   end
 

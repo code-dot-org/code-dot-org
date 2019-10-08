@@ -8,7 +8,7 @@ class HelpHeader
 
     # Help-related.
 
-    if options[:level] && options[:level].try(:is_project_level) && options[:level].game == Game.gamelab
+    if options[:level] && options[:level].game == Game.gamelab
       entries << {
         title: I18n.t("#{loc_prefix}game_lab_documentation"),
         url: "https://docs.code.org/gamelab/",
@@ -22,7 +22,7 @@ class HelpHeader
       }
     end
 
-    if options[:level] && options[:level].try(:is_project_level) && options[:level].game == Game.applab
+    if options[:level] && options[:level].game == Game.applab
       entries << {
         title: I18n.t("#{loc_prefix}app_lab_documentation"),
         url: "https://docs.code.org/applab/",
@@ -33,6 +33,20 @@ class HelpHeader
         title: I18n.t("#{loc_prefix}app_lab_tutorials"),
         url: CDO.code_org_url('/educate/applab'),
         id: "applab-tutorials"
+      }
+    end
+
+    if options[:level] && options[:level].game == Game.spritelab
+      entries << {
+        title: I18n.t("#{loc_prefix}sprite_lab_documentation"),
+        url: "https://docs.code.org/spritelab/",
+        id: "spritelab-docs"
+      }
+
+      entries << {
+        title: I18n.t("#{loc_prefix}sprite_lab_tutorials"),
+        url: CDO.code_org_url('/educate/spritelab'),
+        id: "spritelab-tutorials"
       }
     end
 
