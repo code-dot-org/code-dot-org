@@ -4,16 +4,14 @@ import {
   PageLabels,
   SectionHeaders,
   TextFields
-} from '@cdo/apps/generated/pd/teacher2021ApplicationConstants';
+} from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import {FormGroup, Row, Col} from 'react-bootstrap';
 import {PROGRAM_CSD, PROGRAM_CSP} from './TeacherApplicationConstants';
 
-export default class Section2ChooseYourProgram extends LabeledFormComponent {
-  static labels = PageLabels.section2ChooseYourProgram;
+export default class ChooseYourProgram extends LabeledFormComponent {
+  static labels = PageLabels.chooseYourProgram;
 
-  static associatedFields = [
-    ...Object.keys(PageLabels.section2ChooseYourProgram)
-  ];
+  static associatedFields = [...Object.keys(PageLabels.chooseYourProgram)];
 
   getNameForSelectedProgram() {
     if (this.props.data.program === PROGRAM_CSD) {
@@ -62,7 +60,7 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
 
     return (
       <FormGroup>
-        <h3>Section 3: {SectionHeaders.section2ChooseYourProgram}</h3>
+        <h3>Section 3: {SectionHeaders.chooseYourProgram}</h3>
         {this.radioButtonsFor('program')}
         {this.props.data.program === PROGRAM_CSD &&
           this.checkBoxesFor('csdWhichGrades')}
@@ -93,7 +91,7 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
           style: {
             width: '100px'
           },
-          label: PageLabels.section2ChooseYourProgram.csHowManyMinutes.replace(
+          label: PageLabels.chooseYourProgram.csHowManyMinutes.replace(
             'program',
             this.getNameForSelectedProgram()
           ),
@@ -105,7 +103,7 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
           style: {
             width: '100px'
           },
-          label: PageLabels.section2ChooseYourProgram.csHowManyDaysPerWeek.replace(
+          label: PageLabels.chooseYourProgram.csHowManyDaysPerWeek.replace(
             'program',
             this.getNameForSelectedProgram()
           ),
@@ -117,7 +115,7 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
           style: {
             width: '100px'
           },
-          label: PageLabels.section2ChooseYourProgram.csHowManyWeeksPerYear.replace(
+          label: PageLabels.chooseYourProgram.csHowManyWeeksPerYear.replace(
             'program',
             this.getNameForSelectedProgram()
           ),

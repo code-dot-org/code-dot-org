@@ -5,7 +5,7 @@ import {
   PageLabels,
   SectionHeaders,
   TextFields
-} from '@cdo/apps/generated/pd/facilitator1920ApplicationConstants';
+} from '@cdo/apps/generated/pd/facilitatorApplicationConstants';
 import {YES, CSF, CSD, CSP} from '../ApplicationConstants';
 
 export default class Section2ChooseYourProgram extends LabeledFormComponent {
