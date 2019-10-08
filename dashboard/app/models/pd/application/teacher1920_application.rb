@@ -466,7 +466,7 @@ module Pd::Application
       teacher_answers = full_answers
       principal_application = Pd::Application::PrincipalApproval1920Application.where(application_guid: application_guid).first
       principal_answers = principal_application&.csv_data
-      school_stats = School.find_by_id(school_id)&.school_stats_by_year&.order(school_year: :desc)&.first
+      school_stats = get_latest_school_stats(school_id)
       CSV.generate do |csv|
         row = []
         CSV_COLUMNS[:teacher].each do |k|
@@ -504,6 +504,10 @@ module Pd::Application
     # Additional labels to include in the form data hash
     def self.additional_labels
       ADDITIONAL_KEYS_IN_ANSWERS
+    end
+
+    def get_latest_school_stats(school_id)
+      School.find_by_id(school_id)&.school_stats_by_year&.order(school_year: :desc)&.first
     end
 
     # @override
@@ -627,8 +631,30 @@ module Pd::Application
           meets_minimum_criteria_scores[:principal_implementation] = responses[:principal_implementation] == principal_options[:csp_implementation].first ? YES : NO
         end
 
-        bonus_points_scores[:free_lunch_percent] = (responses[:principal_free_lunch_percent]&.to_i&.>= 50) ? 5 : 0
-        bonus_points_scores[:underrepresented_minority_percent] = ((responses[:principal_underrepresented_minority_percent]).to_i >= 50) ? 5 : 0
+        school_stats = get_latest_school_stats(school_id)
+
+        free_lunch_percent = responses[:principal_free_lunch_percent].present? ?
+          responses[:principal_free_lunch_percent].to_i :
+          school_stats&.frl_eligible_percent
+        free_lunch_percent_cutoff = school_stats&.rural_school? ? 40 : 50
+
+        meets_scholarship_criteria_scores[:free_lunch_percent] =
+          if free_lunch_percent
+            free_lunch_percent >= free_lunch_percent_cutoff ? YES : NO
+          else
+            nil
+          end
+
+        urm_percent = responses[:principal_underrepresented_minority_percent].present? ?
+          responses[:principal_underrepresented_minority_percent].to_i :
+          school_stats&.urm_percent
+
+        meets_scholarship_criteria_scores[:underrepresented_minority_percent] =
+          if urm_percent
+            urm_percent >= 50 ? YES : NO
+          else
+            nil
+          end
       end
 
       update(
