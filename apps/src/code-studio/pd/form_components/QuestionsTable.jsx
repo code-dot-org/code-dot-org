@@ -54,11 +54,11 @@ class QuestionRow extends React.Component {
   render() {
     // We wrap the ControlLabel in a div with a class name that specifies
     // whether the field is required or not.  If it is required, some CSS
-    // in application.scss adds a red asterisk after the end of the last
-    // <p> inside this div.
+    // in pd.scss adds a red asterisk after the end of the last <p> inside
+    // this div.
     const labelClassName = this.props.question.required
-      ? 'markdown_required'
-      : 'markdown_not_required';
+      ? 'markdown_label markdown_required'
+      : 'markdown_label markdown_not_required';
 
     return (
       <tr>

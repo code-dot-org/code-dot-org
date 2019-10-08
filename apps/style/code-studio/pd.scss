@@ -1,4 +1,5 @@
 @import "color";
+
 @import "bootstrap-sass/assets/stylesheets/bootstrap/mixins/buttons";
 @import "bootstrap-sass/assets/stylesheets/bootstrap/variables";
 @import "mixins";
@@ -31,6 +32,19 @@
   @import "bootstrap-sass/assets/stylesheets/bootstrap";
   @include buttons();
   @include user-selects(auto);
+
+  // Markdown content for label of required answer, as used in various forms,
+  // should get red asterisk at the end of last <p>.
+  .markdown_required p:last-of-type::after {
+    content: ' *';
+    color: $red;
+  }
+
+  // Markdown content for label, as used various in forms, doesn't need margin
+  // below the last <p>.
+  .markdown_label p:last-of-type {
+    margin-bottom: 0px
+  }
 
   a:not(.btn) {
     color: $purple;
