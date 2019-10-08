@@ -63,9 +63,8 @@ export default class PondCreator extends React.Component {
     this.state.trainer.addExampleData(knnData, classifier);
   };
 
-  switchToPredictions = () => {
-    const pondFish = this.generateFish('prediction', 1);
-    this.setState({currentMode: Modes.Predicting, predictionFish: pondFish});
+  setMode = newMode => {
+    this.setState({currentMode: newMode});
   };
 
   getPrediction = knnData => {
@@ -95,30 +94,15 @@ export default class PondCreator extends React.Component {
               cols={2}
               label={'Like'}
             />
-            <Button onClick={() => this.switchToPredictions()}>
+            <Button onClick={() => this.setMode(Modes.Predicting)}>
               Train Bot
             </Button>
           </div>
         )}
         {this.state.currentMode === Modes.Predicting && (
           <div>
-            {Object.keys(this.state.predictionFish).map(canvasId => (
-              <Row key={canvasId}>
-                <P5Canvas
-                  id={canvasId}
-                  fishData={this.state.predictionFish[canvasId]}
-                  canvasId={canvasId}
-                  sketch={sketch}
-                  addExample={this.addExample}
-                  isSelectable={false}
-                  showPrediction={true}
-                  getPrediction={this.getPrediction}
-                  getClassTypeString={this.getClassTypeString}
-                />
-              </Row>
-            ))}
-            <Button onClick={() => this.switchToPredictions()}>
-              Show another!
+            <Button onClick={() => this.setMode(Modes.Training)}>
+              Train More
             </Button>
           </div>
         )}
