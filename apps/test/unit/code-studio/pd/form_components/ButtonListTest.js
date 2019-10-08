@@ -34,7 +34,7 @@ describe('ButtonList', () => {
       expect(
         radioList.containsMatchingElement(
           <FormGroup id="favoritePet" controlId="favoritePet">
-            <div className="markdown_not_required">
+            <div className="markdown_label markdown_not_required">
               <ControlLabel>What is your favorite pet?</ControlLabel>
             </div>
             <FormGroup>
@@ -82,7 +82,7 @@ describe('ButtonList', () => {
       expect(
         checkboxList.containsMatchingElement(
           <FormGroup id="favoritePet" controlId="favoritePet">
-            <div className="markdown_not_required">
+            <div className="markdown_label markdown_not_required">
               <ControlLabel>What is your favorite pet?</ControlLabel>
             </div>
             <FormGroup>
