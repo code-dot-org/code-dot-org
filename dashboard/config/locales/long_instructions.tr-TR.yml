@@ -5,6 +5,8 @@ tr-TR:
       2-3 Artist 1 new: Merhaba, ben bir sanatçıyım. Bana neredeyse her şeyi çizdirebilecek
         kodlar yazabilirsin. Birkaç blok kullanarak resimdeki gri çizgilerin üstünü
         çizmemi sağla.(Her çizgi 100 piksel uzunluğunda)
+      2-3 Artist 3new: Kırmızı şapka 100 piksel uzunluğundadır. 70 piksel daha kısa
+        olan siyah bir şapka çizerek tamamla. (Siyah şapkanın genişliği 50 pikseldir)
       2-3 Artist 4: Kedi için bu evi tamamlamama yardım et.
       2-3 Artist 9 NEW: Uçurtmayı bitirin.
       2-3 Artist Free Play: Serbest çizim! İstediğiniz herhangi bir şey çizin.
@@ -4598,8 +4600,8 @@ tr-TR:
         Çiz" diye adlandırdığımız bir fonksiyon. Ne olduğunu görmek ve fonksiyonlar
         nelere yapılabileceğini denemek için kodu çalıştırın. Kare, üçgen veya sekizgenlerden
         desen yapabilir misin?
-      Standalone_Artist_9: Şimdi devam et ve istediğin her türlü resmi yap! Hata ne
-        istiyorsan yapabileceğin bir fonksiyonun bile var!
+      Standalone_Artist_9: Şimdi devam et ve istediğin her türlü resmi yap! Hatta
+        ne istiyorsan yapabileceğin bir fonksiyonun bile var!
       Underground Avoiding Lava: Bu blokların bazılarının altında lav gizli ve ilerlemeden
         önce bunların üstünü örtmen gerekir. 'Eğer' komutu burada işine yarayacak.
         Bu blokları çıkarmak için doğru yere bir adet 'ilerle' komutu ekle.
@@ -4612,6 +4614,8 @@ tr-TR:
       Underground If Statements_2019: Şimdi işler biraz daha zorlaşıyor. 3 kızıltaş
         çıkarın ama lavın içine düşmeyin. Ortaya çıkardığınız lavların üstüne kırıktaş
         yerleştirmek için bir "eğer" komutu kullanın.
+      course1_artist_loops_challenge2: Bir oyun oynayalım! Çizebildiğin kadar X çiz!
+        Üst üste 3 alabilir miyim?
       course1_artist_loops_challenge4: Zar atma zamanı! Çizmek için yardımcı olabilir
         misin?
       course1_maze_debugging_challenge1: |-
