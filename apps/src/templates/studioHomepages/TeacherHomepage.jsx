@@ -241,7 +241,7 @@ export default class TeacherHomepage extends Component {
             <div style={styles.clear} />
           </div>
         )}
-       <TeacherSections queryStringOpen={queryStringOpen} locale={locale} />
+        <TeacherSections queryStringOpen={queryStringOpen} locale={locale} />
         <RecentCourses
           courses={courses}
           topCourse={topCourse}
