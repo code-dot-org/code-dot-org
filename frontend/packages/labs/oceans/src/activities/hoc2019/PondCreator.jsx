@@ -5,6 +5,7 @@ import {sketch} from '../../utils/sketches';
 import SimpleTrainer from '../../utils/SimpleTrainer';
 import P5Canvas from './P5Canvas';
 import Training from './Training';
+import Predict from './Predict';
 import {COLORS} from '../../utils/colors';
 
 const FISH_COUNT = 9;
@@ -101,6 +102,7 @@ export default class PondCreator extends React.Component {
         )}
         {this.state.currentMode === Modes.Predicting && (
           <div>
+            <Predict />
             <Button onClick={() => this.setMode(Modes.Training)}>
               Train More
             </Button>
