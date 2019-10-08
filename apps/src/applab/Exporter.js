@@ -3,7 +3,6 @@ import $ from 'jquery';
 import _ from 'lodash';
 import JSZip from 'jszip';
 import {saveAs} from 'filesaver.js';
-import {SnackSession} from 'snack-sdk';
 
 import * as applabConstants from './constants';
 import * as assetPrefix from '../assetManagement/assetPrefix';
@@ -24,12 +23,12 @@ import exportExpoSplashPng from '../templates/export/expo/splash.png';
 import logToCloud from '../logToCloud';
 import {getAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
 import project from '@cdo/apps/code-studio/initApp/project';
-import {EXPO_SESSION_SECRET} from '../constants';
 import {
   EXPO_SDK_VERSION,
   extractSoundAssets,
   createPackageFilesFromZip,
   createPackageFilesFromExpoFiles,
+  createSnackSession,
   rewriteAssetUrls,
   getEnvironmentPrefix,
   fetchWebpackRuntime
@@ -554,15 +553,7 @@ export default {
       'DataWarning.js': {contents: exportExpoDataWarningJs, type: 'CODE'}
     };
 
-    const session = new SnackSession({
-      sessionId: `${getEnvironmentPrefix()}-${project.getCurrentId()}`,
-      files,
-      name: `project-${project.getCurrentId()}`,
-      sdkVersion: EXPO_SDK_VERSION,
-      user: {
-        sessionSecret: config.expoSession || EXPO_SESSION_SECRET
-      }
-    });
+    const session = createSnackSession(files, config.expoSession);
 
     // Important that index.html comes first:
     const fileAssets = [
