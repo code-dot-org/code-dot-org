@@ -111,6 +111,7 @@ module Pd
         ),
       school_stats_and_principal_approval_section: {
         title_i_status: 'Title I status',
+        rural_status: 'Rural Status',
         school_type: 'School Type',
         total_student_enrollment: 'Total Student Enrollment',
         free_lunch_percent: 'Percent of students that receive free/reduced lunch',
@@ -205,6 +206,7 @@ module Pd
       },
       nces: {
         title_i_status: "Title I status code (NCES data)",
+        rural_status: "Rural status",
         students_total: "Total student enrollment (NCES data)",
         frl_eligible_total: "Percentage of students who are eligible to receive free or reduced lunch (NCES data)",
         urm_percent: "Percentage of underrepresented minority students (NCES data)",
@@ -241,6 +243,7 @@ module Pd
       contact_invoicing_detail: {principal: :principal_contact_invoicing_detail},
 
       title_i_status: {stats: :title_i_status},
+      rural_status: {stats: :rural_status},
       school_type: {teacher: :school_type, stats: :school_type},
       total_student_enrollment: {principal: :principal_total_enrollment, stats: :students_total},
       free_lunch_percent: {principal: :principal_free_lunch_percent, stats: :frl_eligible_percent},
@@ -273,11 +276,11 @@ module Pd
       principal_implementation: {meets_minimum_criteria_scores: YES_NO, bonus_points_scores: [2, 0]},
       # Scholarship requirements
       previous_yearlong_cdo_pd: YES_NO,
+      free_lunch_percent: YES_NO,
+      underrepresented_minority_percent: YES_NO,
       # Bonus Points
       csp_how_offer: [2, 0],
       taught_in_past: [2, 0],
-      free_lunch_percent: [5, 0],
-      underrepresented_minority_percent: [5, 0],
       race: [2, 0]
     }
 
@@ -286,8 +289,6 @@ module Pd
       bonus_points: [
         :csp_how_offer,
         :taught_in_past,
-        :free_lunch_percent,
-        :underrepresented_minority_percent,
         :race,
         :principal_implementation
       ],
@@ -296,7 +297,9 @@ module Pd
         :previous_yearlong_cdo_pd,
         :principal_approval,
         :principal_schedule_confirmed,
-        :principal_diversity_recruitment
+        :principal_diversity_recruitment,
+        :underrepresented_minority_percent,
+        :free_lunch_percent,
       ],
       criteria_score_questions_csd: [
         :regional_partner_name,
@@ -436,6 +439,7 @@ module Pd
       ],
       nces: [
         :title_i_status,
+        :rural_status,
         :students_total,
         :frl_eligible_total,
         :urm_percent,
