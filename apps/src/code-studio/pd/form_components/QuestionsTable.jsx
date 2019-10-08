@@ -52,6 +52,14 @@ class QuestionRow extends React.Component {
   }
 
   render() {
+    // We wrap the ControlLabel in a div with a class name that specifies
+    // whether the field is required or not.  If it is required, some CSS
+    // in pd.scss adds a red asterisk after the end of the last <p> inside
+    // this div.
+    const labelClassName = this.props.question.required
+      ? 'markdown_label markdown_required'
+      : 'markdown_label markdown_not_required';
+
     return (
       <tr>
         <td>
@@ -59,12 +67,9 @@ class QuestionRow extends React.Component {
             controlId={this.props.question.name}
             validationState={this.getValidationState()}
           >
-            <ControlLabel>
-              {this.props.question.label}
-              {this.props.question.required && (
-                <span className="form-required-field"> *</span>
-              )}
-            </ControlLabel>
+            <div className={labelClassName}>
+              <ControlLabel>{this.props.question.label}</ControlLabel>
+            </div>
           </FormGroup>
         </td>
         {this.props.options.map(this.buildColumn)}
