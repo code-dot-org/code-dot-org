@@ -115,6 +115,12 @@ module Dashboard
     config.assets.paths << Rails.root.join('../shared/css')
     config.assets.paths << Rails.root.join('../shared/js')
 
+    # Whether to fallback to assets pipeline if a precompiled asset is missed.
+    config.assets.compile = !CDO.optimize_rails_assets
+
+    # Generate digests for assets URLs which do not contain webpack hashes.
+    config.assets.digest = CDO.optimize_rails_assets
+
     config.assets.precompile += %w(
       js/*
       css/*.css
