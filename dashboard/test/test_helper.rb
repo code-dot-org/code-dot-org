@@ -86,7 +86,7 @@ class ActiveSupport::TestCase
     DCDO.clear
 
     Rails.application.config.stubs(:levelbuilder_mode).returns false
-    CDO.stubs(:pretty_js).returns(true)
+    CDO.stubs(:optimize_webpack_assets).returns(false)
   end
 
   teardown do
