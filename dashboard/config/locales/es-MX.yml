@@ -496,6 +496,7 @@ es-MX:
       o tutor (para recuperar la contraseña)
     update: Actualizar la cuenta
     account_successfully_updated: La cuenta se actualizó correctamente.
+    update_email: Actualizar
   user_level:
     completed: Completado
     tried: Intentado

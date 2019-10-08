@@ -369,53 +369,19 @@ sl:
         text: obrni se levo
       RyanLab_turnRight:
         text: obrni se desno
-      aalab_changePropByFlexible:
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': velikost
-            '"x"': x položaj
-            '"y"': y položaj
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': ko
-            '"while"': dokler
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': ko
-            '"while"': dokler
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': ko
-            '"while"': dokler
-          KEY:
-            '"up"': gor
-            '"down"': dol
-            '"left"': levo
-            '"right"': desno
-            '"space"': vesolje
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': mesto
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': velja
-            '"false"': ne velja
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': velikost
-            '"x"': x položaj
-            '"y"': y položaj
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': neskončno
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
         options:
           OPTION:
             '"show"': prikaži

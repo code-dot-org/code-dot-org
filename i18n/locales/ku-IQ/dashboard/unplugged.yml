@@ -32,6 +32,16 @@ ku:
         title: بەرنامەڕێژی پەڕەی هێڵکاری
       ComputationalThinking:
         title: بیرکردنەوەی ژمارەیی
+      courseB_unplugged_MRF:
+        title: خولی بێ كۆمپیوتەر
+      courseB_unplugged_loopyMRF:
+        title: خولی بێ كۆمپیوتەر
+      courseC_Unplugged_ScreenOutTheMean:
+        title: خولی بێ كۆمپیوتەر
+      courseD_unplugged_digitalCitizenship:
+        title: خولی بێ كۆمپیوتەر
+      courseF_unplugged_powerOfWords:
+        title: خولی بێ كۆمپیوتەر
       courseA_unplugged_happyMaps:
         title: نەخشەی دڵخۆش
       courseD_unplugged_graphPaperProgramming:
@@ -42,6 +52,10 @@ ku:
         title: نەخشەی دڵخۆش
       GraphPaperProgramming_2018:
         title: بەرنامەڕێژی پەڕەی هێڵکاری
+      courseD_unplugged_digitalCitizenship_2018:
+        title: خولی بێ كۆمپیوتەر
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: خولی بێ كۆمپیوتەر
       Conditionals_2018:
         title: مەرجیەکان
       RelayProgramming_2018:
@@ -52,6 +66,10 @@ ku:
         title: بەرنامەڕێژی پەڕەی هێڵکاری
       RelayProgramming_2018_2019:
         title: بەرنامەڕێژی بە پێشبڕکێ
+      courseD_unplugged_digitalCitizenship_2019:
+        title: خولی بێ كۆمپیوتەر
+      courseC_Unplugged_ScreenOutTheMean_2019:
+        title: خولی بێ كۆمپیوتەر
       UnplugHappyMaps_2019:
         title: نەخشەی دڵخۆش
       timeforcs_demo_conditionals:

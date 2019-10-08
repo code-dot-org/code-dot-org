@@ -572,8 +572,7 @@
     "short_instructions": "Get BB-8 to pick up all the scrap metal as quickly as possible!",
     "long_instructions": "[][0] _\"Go BB-8!\"_",
     "authored_hints": {
-      "courseC_starWars_loops5_b": "To move down, you have to turn and then move forward.",
-      "courseC_starWars_loops5_a": "The best solution uses a turn, then a single `move forward`, another turn, then a loop."
+      "courseC_starWars_loops5_a": "The best solution uses a single `move forward`, then a turn, then a loop."
     }
   },
   "https://studio.code.org/s/coursec-2018/stage/8/puzzle/8": {
@@ -885,7 +884,7 @@
     "authored_hints": {
       "courseC_harvester_loops_challenge1_a": "This is too hard without loops!",
       "courseC_harvester_loops_challenge1_b": "You can repeat `move forward` and `pick corn` as many times as you need, then `turn right` at each corner.",
-      "courseC_harvester_loops_challenge1_c": "The best way to collect the corn in the middle uses a `repeat` block inside of another `repeat` block.\n\n[blockly block][0]"
+      "courseC_harvester_loops_challenge1_c": "After picking corn the first two times, you can use a nested loop to pick the next eight pieces.\n\n[blockly block][0]"
     }
   },
   "https://studio.code.org/s/coursec-2018/stage/10/extras?level_name=courseC_harvester_loops_challenge2_2018": {

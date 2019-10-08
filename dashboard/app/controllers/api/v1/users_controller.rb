@@ -112,7 +112,10 @@ class Api::V1::UsersController < Api::V1::JsonApiController
 
   # POST /api/v1/users/<user_id>/dismiss_donor_teacher_banner
   def dismiss_donor_teacher_banner
-    @user.donor_teacher_banner_dismissed = true
+    @user.donor_teacher_banner_dismissed = {
+      participate: params[:participate].to_s == "true",
+      source: params[:source]
+    }
     @user.save
 
     head :ok
