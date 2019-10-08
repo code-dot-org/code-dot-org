@@ -2,17 +2,28 @@ import * as mobilenetModule from '@tensorflow-models/mobilenet';
 import * as tf from '@tensorflow/tfjs';
 import * as knnClassifier from '@tensorflow-models/knn-classifier';
 
-const TOPK = 10;
-
 export default class SimpleTrainer {
   async initializeClassifiers() {
     this.knn = knnClassifier.create();
     this.mobilenet = await mobilenetModule.load();
+    this.TOPK = 10;
+  }
+
+  async initializeClassifiersWithoutMobilenet() {
+    this.knn = knnClassifier.create();
+  }
+
+  setTopK(k) {
+    this.TOPK = k;
   }
 
   clearAll() {
     this.knn.dispose();
     this.knn = knnClassifier.create();
+  }
+
+  dispose() {
+    this.knn.dispose();
   }
 
   getNumClasses() {
@@ -67,7 +78,7 @@ export default class SimpleTrainer {
     };
     const numClasses = this.knn.getNumClasses();
     if (numClasses > 0) {
-      const res = await this.knn.predictClass(tensor, TOPK);
+      const res = await this.knn.predictClass(tensor, this.TOPK);
 
       result.predictedClassId = res.classIndex;
       result.confidencesByClassId = res.confidences;
@@ -91,7 +102,7 @@ export default class SimpleTrainer {
     if (numClasses > 0) {
       let logits = infer();
 
-      const res = await this.knn.predictClass(logits, TOPK);
+      const res = await this.knn.predictClass(logits, this.TOPK);
 
       result.predictedClassId = res.classIndex;
       result.confidencesByClassId = res.confidences;
@@ -104,5 +115,39 @@ export default class SimpleTrainer {
     image.dispose();
 
     return result;
+  }
+
+  /*
+   * TFJS doesn't provide a great way to serialize a model and restore it so
+   * we have to hack one ourselves. This is largely based on the examples at
+   * https://github.com/tensorflow/tfjs/issues/633#issuecomment-456308218
+   * with some customization and updates from documentation.
+   * /
+
+  /**
+   * @returns {string}
+   */
+  getDatasetJSON() {
+    let dataset = this.knn.getClassifierDataset();
+    var datasetObj = {};
+    Object.keys(dataset).forEach(key => {
+      let data = dataset[key].dataSync();
+      datasetObj[key] = {data: Array.from(data), shape: dataset[key].shape};
+    });
+    return JSON.stringify(datasetObj);
+  }
+
+  /**
+   * @param {string} datasetJson
+   */
+  loadDatasetJSON(datasetJson) {
+    const tensorObj = JSON.parse(datasetJson);
+    Object.keys(tensorObj).forEach(key => {
+      tensorObj[key] = tf.tensor(
+        Array.from(tensorObj[key].data),
+        tensorObj[key].shape
+      );
+    });
+    this.knn.setClassifierDataset(tensorObj);
   }
 }
