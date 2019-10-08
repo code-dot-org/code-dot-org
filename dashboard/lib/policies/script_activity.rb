@@ -7,7 +7,7 @@ class Policies::ScriptActivity
     !!user_script.completed_at || user.completed_progression_levels?(script)
   end
 
-  def self.a_level_passed?(user, script)
+  def self.passed_any_level?(user, script)
     user_levels = UserLevels.
       where(user: user, script: script).
       index_by(&:level_id)
@@ -20,6 +20,6 @@ class Policies::ScriptActivity
   end
 
   def self.not_started?(user, script)
-    !completed?(user, script) && !a_level_passed?(user, script)
+    !completed?(user, script) && !passed_any_level?(user, script)
   end
 end
