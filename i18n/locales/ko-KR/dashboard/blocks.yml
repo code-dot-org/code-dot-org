@@ -234,6 +234,31 @@ ko:
             '"x"': 교차
             '"plus"': 더하기
             '"random"': random(랜덤)
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': 외계인
+            '"BEAR"': 곰
+            '"CAT"': 고양이
+            '"DOG"': 개
+            '"DUCK"': 오리
+            '"FROG"': 개구리
+            '"MOOSE"': 사슴
+            '"PINEAPPLE"': 파인애플
+            '"ROBOT"': 로봇
+            '"SHARK"': 상어
+            '"UNICORN"': 유니콘
+          LOCATION:
+            "{x: 200, y: 100}": 맨 위로
+            "{x: 200, y: 300}": 맨 아래로
+            "{x: 100, y: 200}": 왼쪽으로
+            "{x: 300, y: 200}": 오른쪽으로
+            "{x: 200, y: 200}": 중간
+            "{x: 100, y: 100}": 왼쪽 위
+            "{x: 300, y: 100}": 오른쪽 위
+            "{x: 100, y: 300}": 왼쪽 아래
+            "{x: 300, y: 300}": 오른쪽 아래
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": random(랜덤)
       Dancelab_makeNewDanceSprite:
         text: |-
           새로운 {COSTUME} 만들기
@@ -492,6 +517,20 @@ ko:
       Dancelab_setTint:
         text: "{SPRITE} 색조를 {VAL}(으)로 설정하기"
       Dancelab_setTintEach:
+        options:
+          THIS:
+            sprites: 모두
+            '"ALIEN"': 모든 외계인
+            '"BEAR"': 모든 곰
+            '"CAT"': 모든 고양이
+            '"DOG"': 모든 개
+            '"DUCK"': 모든 오리
+            '"FROG"': 모든 개구리
+            '"MOOSE"': 모든 사슴
+            '"PINEAPPLE"': 모든 파인애플
+            '"ROBOT"': 모든 로봇
+            '"SHARK"': 모든 상어
+      Dancelab_setTintEachInline:
         options:
           THIS:
             sprites: 모두
