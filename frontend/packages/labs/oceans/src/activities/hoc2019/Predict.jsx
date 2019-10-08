@@ -19,7 +19,7 @@ export default class Predict extends React.Component {
     return (
       <ImageGrid
         cols={3}
-        label="love"
+        label="like"
         images={images}
         onSelectImage={this.onSelectImage}
       />
