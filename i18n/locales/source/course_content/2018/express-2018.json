@@ -2288,9 +2288,8 @@
   "https://studio.code.org/s/express-2018/stage/24/puzzle/4": {
     "short_instructions": "Collect all of the nectar using  as few blocks as possible.",
     "authored_hints": {
-      "courseE_bee_concept3a_a": "Try using nested `repeat` loops to solve this puzzle.",
-      "courseE_bee_concept3a_b": "If you can't figure out where to put the loops, try writing your code step-by-step and looking for patterns.",
-      "courseE_bee_concept3a_c": "There are three groups of flowers, so your outer `repeat` loop should repeat three times."
+      "courseE_bee_concept3a_a": "Try using nested `repeat` or `while` loops to solve this puzzle.",
+      "courseE_bee_concept3a_b": "If you can't figure out where to put the loops, try writing your code step-by-step and looking for patterns."
     }
   },
   "https://studio.code.org/s/express-2018/stage/24/puzzle/5": {
@@ -2524,7 +2523,7 @@
     "authored_hints": {
       "courseF_artist_variables4_a": "Get him ready to draw the next triangle.",
       "courseF_artist_variables4_c": "This is the pattern your artist will be following:\n\n[][0]",
-      "courseF_artist_variables4_b": "[][0]"
+      "courseF_artist_variables4_b": "[blockly block][0]"
     }
   },
   "https://studio.code.org/s/express-2018/stage/29/puzzle/8": {

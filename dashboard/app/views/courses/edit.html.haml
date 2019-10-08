@@ -4,7 +4,7 @@
                         course_families: Course::FAMILY_NAMES,
                         version_year_options: Course.get_version_year_options}
 - content_for(:head) do
-  %script{ src: minifiable_asset_path('js/courses/edit.js'), data: {course_editor: course_editor_data.to_json}}
+  %script{ src: webpack_asset_path('js/courses/edit.js'), data: {course_editor: course_editor_data.to_json}}
 = form_for(course) do |f|
   #course_editor
   %button.btn.btn-primary{type: 'submit', style: 'margin: 0'} Save Changes
