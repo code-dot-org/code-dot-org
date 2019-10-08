@@ -876,61 +876,19 @@ ar:
         text: اتجه إلى اليمين
       Vector_positionCenter:
         text: المنتصف
-      aalab_changePropByFlexible:
-        text: غيّر {SPRITE} {PROPERTY} بمقدار {VAL}
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': الحجم
-            '"rotation"': الدوران
-            '"x"': الموضع س
-            '"y"': الموضع ص
-            '"direction"': اتجاه الحركة
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': عندما
-            '"while"': التكرار طالما
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': عندما
-            '"while"': التكرار طالما
-      aalab_jumpTo:
-        text: "{SPRITE} انتقل إلى {LOCATION}"
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': عندما
-            '"while"': التكرار طالما
-          KEY:
-            '"up"': الأعلى
-            '"down"': الأسفل
-            '"left"': اليسار
-            '"right"': اليمين
-            '"space"': الفضاء
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': مدينة
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': صحيح
-            '"false"': خطأ
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': الحجم
-            '"rotation"': الدوران
-            '"x"': الموضع س
-            '"y"': الموضع ص
-            '"direction"': اتجاه الحركة
-            '"tint"': لون خفيف
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': إلى الأبد
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
         options:
           OPTION:
             '"show"': إظهار

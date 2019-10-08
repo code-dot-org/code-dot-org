@@ -761,61 +761,19 @@ uk:
         text: посередині
       Vector_setSize:
         text: встановити ширину {WIDTH} висоту {HEIGHT}
-      aalab_changePropByFlexible:
-        text: змінити {SPRITE} {PROPERTY} на {VAL}
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': розмір
-            '"rotation"': поворот
-            '"x"': позиція по осі x
-            '"y"': позиція по осі y
-            '"direction"': напрямок руху
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': коли
-            '"while"': поки
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': коли
-            '"while"': поки
-      aalab_jumpTo:
-        text: "{SPRITE} стрибає до {LOCATION}"
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': коли
-            '"while"': поки
-          KEY:
-            '"up"': вгору
-            '"down"': вниз
-            '"left"': ліворуч
-            '"right"': праворуч
-            '"space"': космос
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': місто
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': Істина
-            '"false"': Хибність
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': розмір
-            '"rotation"': поворот
-            '"x"': позиція по осі x
-            '"y"': позиція по осі y
-            '"direction"': напрямок руху
-            '"tint"': відтінок
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': постійно
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
         options:
           OPTION:
             '"show"': показати

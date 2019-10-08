@@ -935,72 +935,19 @@ ru:
         options:
           PROPERTY:
             "'shapeColor'": цвет
-      aalab_changePropByFlexible:
-        text: изменить {SPRITE} {PROPERTY} на {VAL}
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': размер
-            '"rotation"': вращение
-            '"x"': позиция абсцисс (x)
-            '"y"': позиция ординат (y)
-            '"direction"': направление движения
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': когда
-            '"while"': пока
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': когда
-            '"while"': пока
-      aalab_jumpTo:
-        text: "{SPRITE} перейти к {LOCATION}"
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': когда
-            '"while"': пока
-          KEY:
-            '"up"': вверх
-            '"down"': вниз
-            '"left"': влево
-            '"right"': вправо
-            '"space"': космос
-      aalab_moveInDirection:
-        options:
-          DIRECTION:
-            '"North"': Север
-            '"East"': Восток
-            '"South"': Юг
-            '"West"': Запад
-      aalab_randomLocation:
-        text: случайное местоположение
-      aalab_removeOneAndAll:
-        text: удалить {THIS}
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': город
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': истина
-            '"false"': ложь
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': размер
-            '"rotation"': вращение
-            '"x"': позиция абсцисс (x)
-            '"y"': позиция ординат (y)
-            '"direction"': направление движения
-            '"tint"': оттенок
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': всегда
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
         options:
           OPTION:
             '"show"': показать

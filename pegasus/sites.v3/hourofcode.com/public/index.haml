@@ -27,8 +27,8 @@ social:
 %script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=false&libraries=places,geometry&v=3.37"}
 %script{type: "text/javascript", src: "/js/jquery.geocomplete.min.js"}
 - js_locale = request.locale.to_s.downcase.tr('-', '_')
-%script{src: asset_path("js/#{js_locale}/common_locale.js")}
-%script{type: "text/javascript", src: minifiable_asset_path('js/hourofcode.com/public/index.js')}
+%script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
+%script{type: "text/javascript", src: webpack_asset_path('js/hourofcode.com/public/index.js')}
 
 %link{rel: "stylesheet", type: "text/css", href: "/css/front-page.css"}
 
@@ -201,7 +201,7 @@ social:
     // hoc2018: temporarily disable the cycling.
     //timerId = setInterval(cycleImage, 6000);
   });
-  
+
   $(function() {
     $('.highlight-item').mouseover(function() {
       var caption = $(this).find('.highlight-caption');

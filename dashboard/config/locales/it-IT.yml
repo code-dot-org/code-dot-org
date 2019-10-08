@@ -490,6 +490,7 @@ it:
       della password)
     update: Aggiorna Account
     account_successfully_updated: Account aggiornato con successo.
+    update_email: Aggiorna
   user_level:
     completed: Completato
     tried: Provato

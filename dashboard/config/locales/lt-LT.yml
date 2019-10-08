@@ -313,6 +313,7 @@ lt:
     delete_text_teacher_note: 'Pastaba: pašalinus Jūsų paskyrą, mokinių paskyros nebus
       panaikintos.'
     delete_confirm: Ar tikrai norite panaikinti savo paskyrą?
+    update_email: Atnaujinti
   user_level:
     completed: Baigta
     tried: Išbandyta

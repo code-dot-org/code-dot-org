@@ -8,6 +8,6 @@
   teacher_dashboard_data[:validCourses] = Course.valid_courses(user: @current_user)
   teacher_dashboard_data[:studentScriptIds] = @section.student_script_ids
 
-%script{src: minifiable_asset_path('js/teacher_dashboard/show.js'), data: {dashboard: teacher_dashboard_data.to_json}}
+%script{src: webpack_asset_path('js/teacher_dashboard/show.js'), data: {dashboard: teacher_dashboard_data.to_json}}
 
 #teacher-dashboard

@@ -1186,138 +1186,23 @@ pt-BR:
             "'shapeColor'": cor
       aalab_addBehaviorForDuration:
         text: aalab elemento {SPRITE} começa a {BEHAVIOR} por {SECONDS} segundos
-      aalab_addBehaviorSimpleFlexible:
-        text: aalab elemento {SPRITE} começa a {BEHAVIOR}
       aalab_addBehaviorUntilBoolean:
         text: aalab sprite {SPRITE} começa a {BEHAVIOR} até {CONDITION}
-      aalab_addToSpriteGroup:
-        text: adicionar personagem {SPRITE} ao grupo {GROUP}
-      aalab_allSpritesWithAnimation:
-        text: "{ANIMATION}"
-      aalab_changePropByFlexible:
-        text: alterar {SPRITE} {PROPERTY} por {VAL}
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': tamanho
-            '"rotation"': rotação
-            '"x"': posição x
-            '"y"': posição y
-            '"direction"': direção do movimento
-      aalab_checkTouching:
-        text: "{CONDITION} {SPRITE1} toca {SPRITE2}"
-        options:
-          CONDITION:
-            '"when"': quando
-            '"while"': enquanto
-      aalab_clickedOn:
-        text: "{CONDITION} {SPRITE} clicado"
-        options:
-          CONDITION:
-            '"when"': quando
-            '"while"': enquanto
-      aalab_createNewSprite:
-        text: "aalab faz um novo elemento\n chamado {NAME} \n com fantasia {COSTUME}
-          \n em {LOCATION}"
-      aalab_createNewSpriteAdvanced:
-        text: "faça um novo elemento chamado {NAME} \n com fantasia {COSTUME} \n em
-          {LOCATION}"
-      aalab_createNewSpriteAnon:
-        text: criar novo {ANIMATION_NAME} elemento em {LOCATION}
-      aalab_createNewSpriteAnonReturn:
-        text: aalab criará novo {ANIMATION_NAME} elemento em {LOCATION}
-      aalab_createPropertyGroup:
-        text: |-
-          faça um novo grupo de elementos chamado {VAR}
-          de todos os elementos {COSTUME}
-      aalab_createSpriteGroup:
-        text: faça um novo grupo de personagens chamado {VAR}
-      aalab_getSpritesByName:
-        text: qualquer sprite chamado {NAME}
-      aalab_getThisSprite:
-        text: "{CHOICE} sprite"
-        options:
-          CHOICE:
-            '"this"': este
-      aalab_jumpTo:
-        text: "{SPRITE} pular para {LOCATION}"
-      aalab_keyPressed:
-        text: "{CONDITION} {KEY} pressionado"
-        options:
-          CONDITION:
-            '"when"': quando
-            '"while"': enquanto
-          KEY:
-            '"up"': para cima
-            '"down"': para baixo
-            '"left"': para esquerda
-            '"right"': para direita
-            '"space"': espaço
-      aalab_locationOf:
-        text: aalab localização de {SPRITE}
-      aalab_location_picker:
-        text: "{LOCATION}"
-      aalab_moveForward:
-        text: aalab mover {SPRITE} {DISTANCE} pixels para a frente
-      aalab_moveInDirection:
-        text: aalab mover {SPRITE} {DISTANCE} pixels {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': Norte
-            '"East"': Leste
-            '"South"': Sul
-            '"West"': Oeste
-      aalab_moveToward:
-        text: aalab mover {SPRITE} uma distância {DISTANCE} em direção {TARGET}
-      aalab_nameStringSay:
-        text: "{NAMESTRING} diz {MESSAGE}"
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
       aalab_prompt:
         text: perguntar {MESSAGE}
-      aalab_randomLocation:
-        text: posição aleatória
-      aalab_removeOneAndAll:
-        text: remover {THIS}
-      aalab_setBG:
+      aalab_scene:
         options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': cidade
-      aalab_setCollidable:
-        text: aalab define {SPRITE} passível de colisão com {VAL}
-        options:
-          VAL:
-            '"true"': verdadeiro
-            '"false"': falso
-      aalab_setDirection:
-        text: aalab define {SPRITE} direção de movimento {DIRECTION}
-      aalab_setProp:
-        text: aalab define {SPRITE} {PROPERTY} para {VAL}
-        options:
-          PROPERTY:
-            '"scale"': tamanho
-            '"rotation"': rotação
-            '"x"': posição x
-            '"y"': posição y
-            '"direction"': direção do movimento
-            '"tint"': tonalidade
-      aalab_setSpriteVariable:
-        text: aalab define {VARIABLE} para {SPRITE}
-      aalab_showCustomText:
-        text: mostrar texto{TEXT}localização{LOCATION}tamanho{SIZE}cor{COLOR}duração{DURATION}
-        options:
-          DURATION:
-            '"1"': 1 segundo
-            '"2"': 2 segundos
-            '"3"': 3 segundos
-            '"4"': 4 segundos
-            '"5"': 5 segundos
-            '"0"': eterno
-      aalab_showSpriteLabel:
-        text: mostrar rótulo{TEXT} {LOCATION} elemento{SPRITE}
-      aalab_speakerSaysConsole:
-        text: "{SPRITE} diz {MESSAGE}"
-      aalab_spriteSay:
-        text: elemento {SPRITE} diz {TEXT} por {SECONDS} segundos
-      aalab_toggleHideCustomText:
-        text: "{OPTION} texto personalizado"
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
         options:
           OPTION:
             '"show"': mostre

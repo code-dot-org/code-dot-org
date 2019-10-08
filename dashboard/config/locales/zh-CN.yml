@@ -429,6 +429,7 @@ zh-CN:
     enter_parent_email: 输入你的父母或监护人的电子邮件地址（用于恢复密码）
     update: 更新帐户
     account_successfully_updated: 账号已成功更新。
+    update_email: 更新
   user_level:
     completed: 已完成
     tried: 试过了

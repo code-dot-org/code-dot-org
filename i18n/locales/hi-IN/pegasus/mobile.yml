@@ -468,6 +468,7 @@
   sports_athlete_Chris: "क्रिस बोश (Chris Bosh), ओलम्पिक गोल्ड मेडल विजेता और NBA चैम्पियन, मियामी हीट"
   sports_athlete_Harrison: "हैरियन बार्न्स (Harrison Barnes), ओलम्पिक गोल्ड मेडल विजेता और NBA चैम्पियन, डल्लास मेवरिक्स"
   watch_inspirational_videos: "शुरुआत करने से पहले, इनमें से एक प्रेरित वीडियो देखें"
+  video_title_cs_is_everything: "कंप्यूटर साइंस सबकुछ बदल रही है"
   video_title_inspire_girl: "किसी लड़की को प्रेरित करें"
   video_title_cs_intro: "कंप्यूटर साइंस का परिचय"
   video_title_schools_dont_teach: "जो अधिकतर स्कूल नहीं पढ़ाते"
@@ -661,6 +662,7 @@
   dashboard_sections_table_secret: "लॉगिन प्रकार"
   dashboard_sections_table_grade: "ग्रेड"
   dashboard_sections_table_course: "कोर्स"
+  dashboard_sections_table_pairing_allowed: "जोड़ी प्रोग्रामिंग"
   dashboard_sections_table_stage_extras: "अतरिक्त चरण"
   dashboard_sections_table_students: "छात्र"
   dashboard_sections_table_code: "अनुभाग कोड"
@@ -733,6 +735,7 @@
   dashboard_curriculum: "पाठ्यक्रम"
   dashboard_curriculum_overview: "K-5 पाठ्यक्रम की रूपरेखा"
   dashboard_overview: "रूपरेखा"
+  dashboard_sequence: "अनुक्रम"
   dashboard_framework: "फ्रेमवर्क"
   dashboard_standards: "मानक"
   dashboard_implementation_guide: "कार्यान्वयन गाइड"
@@ -907,6 +910,7 @@
   coursef-2017_name: कोर्स F (2017)
   pre-express-2018_name: पूर्व-पाठक एक्सप्रेस कोर्स (2018)
   pre-express-2019_name: पूर्व-पाठक एक्सप्रेस कोर्स (2019)
+  csd3_name: 'Unit 3: Animation and Games'
   accelerated_name: "त्वरित पाठ्यक्रम"
   pre-express_name: 'पूर्व-पाठक एक्सप्रेस कोर्स:'
   20-hour_name: त्वरित पाठ्यक्रम
@@ -919,6 +923,8 @@
   minecraft_name: "Minecraft"
   starwarsblocks_name: "Star Wars (ब्लॉक्स)"
   hoc-encryption_name: साधारण कूटलेखन
+  applab_name: "ऐप लैब"
+  gamelab_name: "गेम लैब"
   basketball_name: "बास्केटबॉल गेम बनाएं"
   applab_gradelevel: "आयु 13+"
   applab_shortdescription_congrats: "ऐप लैब ऐसा प्रोग्रामिंग परिवेश है, जहां आप साधारण ऐप्स बना सकते हैं। एक ऐप डिज़ाइन करें, इसे काम करने के लिए सक्रिय करने हेतु ब्लॉक्स या JavaScript के साथ कोड करें, फिर सेकंडों में अपने ऐप को साझा करें।"
@@ -1160,6 +1166,7 @@
   khan_beyond_name: "कंप्यूटर प्रोग्रामिंग सीखें"
   tynker_beyond_name: "घर पर प्रोग्रामिंग सीखें"
   scratch_beyond_name: "कोडिंग के साथ रचनात्मक बनें"
+  kodable_beyond_name: "Kodable"
   scratchjr_beyond_name: "आरंभिक-पाठकों के लिए ScratchJR"
   hopscotch_beyond_name: 'Hopscotch: आपके iPad पर प्रोग्रामिंग'
   groklearning_beyond_name: "पाइथन प्रोग्रामिंग सीखें"
@@ -1373,6 +1380,7 @@
   user_header_create: 'बनाएं '
   user_header_applab: 'ऐप लैब '
   user_header_artist: 'कलाकार '
+  user_header_gamelab: "गेम लैब"
   user_header_dance: "डांस पार्टी"
   user_header_minecraft: "Minecraft"
   user_header_view_all: "सभी प्रोजेक्ट देखें..."
@@ -1465,6 +1473,7 @@
   hoc2018_mc_video_5min: "5 मिनट"
   hoc2018_mc_video_title_steph_curry: "स्टेफ करी के साथ आवर ऑफ़ कोड"
   hoc2018_mc_video_title_sports: "खुद को प्रेरित करें। कोई भी सीख सकता है।"
+  hoc2018_mc_video_title_cs_is_everything: "कंप्यूटर साइंस सबकुछ बदल रही है"
   hoc2018_mc_video_title_inspire_girl: "किसी लड़की को प्रेरित करें"
   hoc2018_mc_video_title_cs_intro: "कंप्यूटर साइंस का परिचय"
   hoc2018_mc_video_title_schools_dont_teach: "जो अधिकतर स्कूल नहीं पढ़ाते"
@@ -1518,6 +1527,7 @@
   hoc2018_dance_amazon_try_coding_this_summer_button: "एक कैंप से जुड़ें"
   hoc2018_dance_amazon_scholarship_programs_title: "एक कैंप से जुड़ें"
   hoc2018_dance_amazon_scholarship_programs_description: "Amazon उन वंचित विद्यार्थियों के लिए प्रति वर्ष $10,000 तक की छात्रवृत्तियों की पेशकश कर रहा है, जिन्होंने सफलतापूर्वक AP CS कोर्स पूरा कर लिया है या इस समय इस कोर्स में नामांकित हैं और अमेरिका में 4-वर्षीय कॉलेज या यूनिवर्सिटी में CS डिग्री के लिए पढ़ाई करना चाहते हैं।"
+  hoc2018_dance_amazon_scholarship_programs_button: "अभी अप्लाई करें"
   hoc2018_dance_amazon_internships_title: "Amazon पर इंटर्न बनें"
   hoc2018_dance_amazon_internships_description: "गर्मी 2019 Amazon Future Engineer इंटर्नशिप्स के लिए आवेदन अब शुरू हो गए हैं। इंटर्न्स नई विशेषताओं की खोज करने और उन्हें बनाने के लिए व Amazon ग्राहकों की ओर से सेवाओं के लिए प्रबंधक, तकनीकी परामर्शदाता और अन्य इंटर्न्स के साथ साझेदारी करेंगे। इंटर्नशिप्स अमेरिका व कैनेडा में उपलब्ध हैं।"
   hoc2018_dance_amazon_internships_button: "इंटर्नशिप ढूंढें"
