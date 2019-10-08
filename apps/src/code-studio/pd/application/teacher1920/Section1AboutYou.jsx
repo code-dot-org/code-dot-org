@@ -265,7 +265,7 @@ const NameInput = ({
   errorMessage
 }) => (
   <FormGroup controlId={id} validationState={validationState}>
-    <div className="markdown_required">
+    <div className="markdown_label markdown_label_required">
       <ControlLabel>{label}</ControlLabel>
     </div>
     <FormControl
