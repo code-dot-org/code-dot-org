@@ -63,4 +63,8 @@ class ScriptActivityTest < ActiveSupport::TestCase
     assert user_script.completed_at.nil?
     assert Policies::ScriptActivity.completed?(@user, user_script.script)
   end
+
+  test 'completed is false when user has no progress' do
+    refute Policies::ScriptActivity.completed?(@user, @script)
+  end
 end
