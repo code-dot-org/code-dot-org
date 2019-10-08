@@ -18,15 +18,17 @@ import stats from '@cdo/apps/templates/teacherDashboard/statsRedux';
 import textResponses from '@cdo/apps/templates/textResponses/textResponsesRedux';
 import sectionAssessments from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import scriptSelection, {
-  loadValidScripts
-} from '@cdo/apps/redux/scriptSelectionRedux';
+import scriptSelection from '@cdo/apps/redux/scriptSelectionRedux';
 import TeacherDashboard from '@cdo/apps/templates/teacherDashboard/TeacherDashboard';
+import {setValidScripts} from '../../../../redux/scriptSelectionRedux';
 
 const script = document.querySelector('script[data-dashboard]');
 const scriptData = JSON.parse(script.dataset.dashboard);
 const section = scriptData.section;
 const sections = scriptData.sections;
+const validScripts = scriptData.validScripts;
+const studentScriptIds = scriptData.studentScriptIds;
+const validCourses = scriptData.validCourses;
 const baseUrl = `/teacher_dashboard/sections/${section.id}`;
 
 $(document).ready(function() {
@@ -52,36 +54,33 @@ $(document).ready(function() {
     store.dispatch(setShowSharingColumn(true));
   }
 
-  $.ajax({
-    method: 'GET',
-    url: '/dashboardapi/sections/valid_scripts',
-    dataType: 'json'
-  }).done(validScripts => {
-    store.dispatch(loadValidScripts(section, validScripts)).then(() => {
-      renderTeacherDashboard();
-    });
-  });
+  store.dispatch(
+    setValidScripts(
+      validScripts,
+      studentScriptIds,
+      validCourses,
+      section.course_id
+    )
+  );
 
-  const renderTeacherDashboard = () => {
-    ReactDOM.render(
-      <Provider store={store}>
-        <Router basename={baseUrl}>
-          <Route
-            path="/"
-            component={props => (
-              <TeacherDashboard
-                {...props}
-                studioUrlPrefix={scriptData.studioUrlPrefix}
-                pegasusUrlPrefix={scriptData.pegasusUrlPrefix}
-                sectionId={section.id}
-                sectionName={section.name}
-                studentCount={section.students.length}
-              />
-            )}
-          />
-        </Router>
-      </Provider>,
-      document.getElementById('teacher-dashboard')
-    );
-  };
+  ReactDOM.render(
+    <Provider store={store}>
+      <Router basename={baseUrl}>
+        <Route
+          path="/"
+          component={props => (
+            <TeacherDashboard
+              {...props}
+              studioUrlPrefix={scriptData.studioUrlPrefix}
+              pegasusUrlPrefix={scriptData.pegasusUrlPrefix}
+              sectionId={section.id}
+              sectionName={section.name}
+              studentCount={section.students.length}
+            />
+          )}
+        />
+      </Router>
+    </Provider>,
+    document.getElementById('teacher-dashboard')
+  );
 });
