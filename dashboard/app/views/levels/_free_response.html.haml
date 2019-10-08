@@ -35,8 +35,8 @@
     %div= render(inline: level.long_instructions, type: :md)
 
   - if level.allow_user_uploads?
-    %script{src: minifiable_asset_path('js/fileupload/jquery.iframe-transport.js')}
-    %script{src: minifiable_asset_path('js/fileupload/jquery.fileupload.js')}
+    %script{src: webpack_asset_path('js/fileupload/jquery.iframe-transport.js')}
+    %script{src: webpack_asset_path('js/fileupload/jquery.fileupload.js')}
     %p#free-response-upload
     :javascript
       dashboard.project.getCurrentId = function () {
