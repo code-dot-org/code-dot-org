@@ -1,4 +1,4 @@
-Date of Last Revision: July 22, 2019
+Date of Last Revision: October 8, 2019
 
 ## About Code.org
 Code.org® is a nonprofit dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color.
