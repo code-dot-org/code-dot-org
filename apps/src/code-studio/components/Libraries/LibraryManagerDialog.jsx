@@ -16,7 +16,7 @@ export default class LibraryManagerDialog extends React.Component {
   };
 
   componentDidMount = () => {
-    this.setState({libraries: dashboard.project.getProjectLibraries()});
+    this.setState({libraries: dashboard.project.getProjectLibraries() || []});
   };
 
   setLibraryToImport = event => {

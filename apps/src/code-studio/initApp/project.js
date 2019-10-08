@@ -1165,7 +1165,7 @@ var projects = (module.exports = {
     });
   },
   getProjectLibraries() {
-    return this.sourceHandler.getLibrariesList();
+    return currentSources.libraries;
   },
   showSaveError_(errorType, errorCount, errorText) {
     header.showProjectSaveError();
