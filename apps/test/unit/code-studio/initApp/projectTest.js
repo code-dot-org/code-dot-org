@@ -489,25 +489,29 @@ describe('project.js', () => {
     });
 
     it('performs a save with the new library list', () => {
-      sourceHandler.getProjectLibraries.returns([]);
+      let library = ['test'];
+      sourceHandler.getLibrariesList.returns(undefined);
       project.init(sourceHandler);
-      project.setProjectLibraries(['test']).then(() => {
+      return project.setProjectLibraries(library).then(() => {
         expect(project.saveSourceAndHtml_).to.have.been.called;
         expect(
           project.saveSourceAndHtml_.getCall(0).args[0].libraries
-        ).to.equal(['test']);
+        ).to.equal(library);
       });
     });
 
     it('performs a save with no libraries if an empty array is passed', () => {
-      project.setProjectLibraries(['test']).then(() => {
+      let library = ['test'];
+      let result = [];
+      project.init(sourceHandler);
+      return project.setProjectLibraries(library).then(() => {
         expect(
           project.saveSourceAndHtml_.getCall(0).args[0].libraries
-        ).to.equal(['test']);
-        project.setProjectLibraries([]).then(() => {
+        ).to.equal(library);
+        return project.setProjectLibraries(result).then(() => {
           expect(
-            project.saveSourceAndHtml_.getCall(0).args[0].libraries
-          ).to.equal([]);
+            project.saveSourceAndHtml_.getCall(1).args[0].libraries
+          ).to.equal(result);
         });
       });
     });
@@ -817,6 +821,6 @@ function createStubSourceHandler() {
     getSelectedSong: sinon.stub(),
     prepareForRemix: sinon.stub().returns(Promise.resolve()),
     setInitialLibrariesList: sinon.stub(),
-    getLibrariesList: sinon.stub().resolves()
+    getLibrariesList: sinon.stub()
   };
 }
