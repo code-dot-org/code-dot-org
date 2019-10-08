@@ -1,10 +1,8 @@
 import React from 'react';
 import Button from 'react-bootstrap/lib/Button';
-import Row from 'react-bootstrap/lib/Row';
-import {sketch} from '../../utils/sketches';
 import SimpleTrainer from '../../utils/SimpleTrainer';
-import P5Canvas from './P5Canvas';
 import Training from './Training';
+import Predict from './Predict';
 import {COLORS} from '../../utils/colors';
 
 const FISH_COUNT = 9;
@@ -20,12 +18,12 @@ const Modes = Object.freeze({
 });
 
 const trainingData = [
-  {id: 1, imgUrl:'/images/cat1.jpg', knnData:[0]},
-  {id: 2, imgUrl:'/images/cat2.jpg', knnData:[0]},
-  {id: 3, imgUrl:'/images/cat3.jpg', knnData:[0]},
-  {id: 4, imgUrl:'/images/dog1.png', knnData:[1]},
-  {id: 5, imgUrl:'/images/dog2.png', knnData:[1]},
-  {id: 6, imgUrl:'/images/dog3.png', knnData:[1]},
+  {id: 1, imgUrl: '/images/cat1.jpg', knnData: [0]},
+  {id: 2, imgUrl: '/images/cat2.jpg', knnData: [0]},
+  {id: 3, imgUrl: '/images/cat3.jpg', knnData: [0]},
+  {id: 4, imgUrl: '/images/dog1.png', knnData: [1]},
+  {id: 5, imgUrl: '/images/dog2.png', knnData: [1]},
+  {id: 6, imgUrl: '/images/dog3.png', knnData: [1]}
 ];
 
 let canvasNum = 0;
@@ -63,9 +61,8 @@ export default class PondCreator extends React.Component {
     this.state.trainer.addExampleData(knnData, classifier);
   };
 
-  switchToPredictions = () => {
-    const pondFish = this.generateFish('prediction', 1);
-    this.setState({currentMode: Modes.Predicting, predictionFish: pondFish});
+  setMode = newMode => {
+    this.setState({currentMode: newMode});
   };
 
   getPrediction = knnData => {
@@ -88,31 +85,23 @@ export default class PondCreator extends React.Component {
       <div>
         {this.state.currentMode === Modes.Training && (
           <div>
-          <Training trainer={this.state.trainer} trainingData={this.state.trainingData} rows={2} cols={2} label={"Like"} />
-                <Button onClick={() => this.switchToPredictions()}>
-              Show some fish!
+            <Training
+              trainer={this.state.trainer}
+              trainingData={this.state.trainingData}
+              rows={2}
+              cols={2}
+              label={'Like'}
+            />
+            <Button onClick={() => this.setMode(Modes.Predicting)}>
+              Train Bot
             </Button>
           </div>
         )}
         {this.state.currentMode === Modes.Predicting && (
           <div>
-            {Object.keys(this.state.predictionFish).map(canvasId => (
-              <Row key={canvasId}>
-                <P5Canvas
-                  id={canvasId}
-                  fishData={this.state.predictionFish[canvasId]}
-                  canvasId={canvasId}
-                  sketch={sketch}
-                  addExample={this.addExample}
-                  isSelectable={false}
-                  showPrediction={true}
-                  getPrediction={this.getPrediction}
-                  getClassTypeString={this.getClassTypeString}
-                />
-              </Row>
-            ))}
-            <Button onClick={() => this.switchToPredictions()}>
-              Show another!
+            <Predict />
+            <Button onClick={() => this.setMode(Modes.Training)}>
+              Train More
             </Button>
           </div>
         )}

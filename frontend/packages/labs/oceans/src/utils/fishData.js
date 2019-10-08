@@ -60,9 +60,11 @@ export const bodyShape = PropTypes.shape({
   mouthAnchor: PropTypes.array.isRequired,
   sideFinAnchor: PropTypes.array.isRequired,
   topFinAnchor: PropTypes.array.isRequired,
-  tailAnchor: PropTypes.array.isRequired
+  tailAnchor: PropTypes.array.isRequired,
+  knnData: PropTypes.array.isRequired
 });
 
 export const bodyPartShape = PropTypes.shape({
-  src: PropTypes.string.isRequired
+  src: PropTypes.string.isRequired,
+  knnData: PropTypes.array.isRequired
 });
