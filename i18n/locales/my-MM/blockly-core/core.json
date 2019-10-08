@@ -41,6 +41,7 @@
     "CONTROLS_FOREACH_INPUT_ITEM": "ပစ္စည်းတစ်ခုခြင်းစီ အတွက်",
     "CONTROLS_FOREACH_TOOLTIP": "",
     "CONTROLS_FOR_HELPURL": "",
+    "CONTROLS_FOR_INPUT_COUNTER": "",
     "CONTROLS_FOR_INPUT_FROM_TO_BY": "%1 မှ %2 %3 ထိရေတွက်ပါ",
     "CONTROLS_FOR_INPUT_WITH": "အတွက်",
     "CONTROLS_FOR_TOOLTIP": "တိကျသောကြားပိုင်းများကို အသုံးပြု၍ ရေတွက်ခြင်းဖြင့် စဂဏန်းမှ ဆုံးဂဏန်းထိ variable %1ကို ရယူပါ။ထို့နောက်တိကျသော blockများပြုလုပ်ပါ",
