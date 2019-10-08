@@ -3,7 +3,7 @@
   "config": {
     "func": "makeAnonymousDanceSprite",
     "inline": false,
-    "blockText": "make a new {COSTUME}\n at {LOCATION}",
+    "blockText": "make a new {COSTUME} at {LOCATION}",
     "color": [
       355,
       ".7",
