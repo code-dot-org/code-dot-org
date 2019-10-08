@@ -17,12 +17,10 @@ export default class LabeledFormComponent extends FormComponent {
     }
 
     return (
-      <div style={{display: 'inline-block'}}>
-        <SafeMarkdown
-          openExternalLinksInNewTab
-          markdown={this.constructor.labels[name]}
-        />
-      </div>
+      <SafeMarkdown
+        openExternalLinksInNewTab
+        markdown={this.constructor.labels[name]}
+      />
     );
   }
 

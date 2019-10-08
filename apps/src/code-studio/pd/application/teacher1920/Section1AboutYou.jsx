@@ -265,10 +265,9 @@ const NameInput = ({
   errorMessage
 }) => (
   <FormGroup controlId={id} validationState={validationState}>
-    <ControlLabel>
-      {label}
-      {REQUIRED}
-    </ControlLabel>
+    <div className="markdown_required">
+      <ControlLabel>{label}</ControlLabel>
+    </div>
     <FormControl
       type="text"
       componentClass="input"
@@ -287,5 +286,3 @@ NameInput.propTypes = {
   errorMessage: PropTypes.node,
   handleChange: PropTypes.func
 };
-
-const REQUIRED = <span style={{color: 'red'}}>&nbsp;*</span>;
