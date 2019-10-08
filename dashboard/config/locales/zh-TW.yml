@@ -416,6 +416,7 @@ zh-TW:
     enter_parent_email: 輸入你的家長或監護人的電子郵件位址 (用於密碼恢復)
     update: 更新帳戶
     account_successfully_updated: 帳戶更新成功。
+    update_email: 更新
   user_level:
     completed: 已完成
     tried: 已體驗

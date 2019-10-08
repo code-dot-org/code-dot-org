@@ -97,6 +97,7 @@ tg:
       student: Донишҷӯ
   user:
     new_password_hint: "(агар нахоҳед, ки онро тағйир диҳед, холӣ монед)"
+    update_email: Навсозӣ кардан
   home:
     online: онлайн
     view_course: Намоиш додани дарс

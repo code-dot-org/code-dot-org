@@ -55,6 +55,8 @@ fr-FR:
       4-5 Nested Loops 9: Dessine les dents dans la bouche de l'alligator !
       4-5 Nested Loops Assessment 1: "**Évaluation :** Utilise une boucle imbriquée
         pour terminer le dessin."
+      Alien Defender: "**Idée de projet:** Faire un jeu de type Defender dans Play
+        Lab!"
       AppLab Intro 7 - Change Screen Color: "<div style=\"float:right\">\\\r\n\\\\t<img\nsrc=\"https://images.code.org/bf9b1fb57751fa90c9b786339914ad70-image-1508521068798.34.54\nAM.png\"
         style=\"height:150px\"> \\\r\n</div>\\\r\n\\\r\n**Goal:** Make the screen\ngreen.
         \\\r\n\\\r\n**How:** Drag in a `setProperty()` block. Use the dropdowns\nto
@@ -1261,7 +1263,7 @@ fr-FR:
       CSD U2 new page: "# Create a New Page for Your Website.\\\r\n\n\\\r\nHere's\nyour
         project from before.  You'll be adding another page.  Your new page\ncan be
         a top 10 list, a recipe, or anything you like.\\\r\n\\\r\n\n# Do This\\\r\n\n\\*\nAdd
-        a new HTML file by clicking  ![](<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38\nPM.png>).
+        a new HTML file by clicking  \\!\\[](\\<<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38>\nPM.png>).
         \ The new file will appear in the files list on the left side of the\nworkspace.\\\r\n\n-
         \  Rename the file, either by right clicking it and choosing\n    \"Rename\",
         or by clicking on it when it's already highlighted.  **Make sure\n    the
@@ -1271,7 +1273,7 @@ fr-FR:
       CSD U2 new page_2018: "# Create a New Page for Your Website.\\\r\n\n\\\r\nHere's\nyour
         project from before.  You'll be adding another page.  Your new page\ncan be
         a top 10 list, a recipe, or anything you like.\\\r\n\\\r\n\n# Do This\\\r\n\n\\*\nAdd
-        a new HTML file by clicking  ![](<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38\nPM.png>).
+        a new HTML file by clicking  \\!\\[](\\<<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38>\nPM.png>).
         \ The new file will appear in the files list on the left side of the\nworkspace.\\\r\n\n-
         \  Rename the file, either by right clicking it and choosing\n    \"Rename\",
         or by clicking on it when it's already highlighted.  **Make sure\n    the
@@ -1281,7 +1283,7 @@ fr-FR:
       CSD U2 new page_2019: "# Create a New Page for Your Website.\\\r\n\n\\\r\nHere's\nyour
         project from before.  You'll be adding another page.  Your new page\ncan be
         a top 10 list, a recipe, or anything you like.\\\r\n\\\r\n\n# Do This\\\r\n\n\\*\nAdd
-        a new HTML file by clicking  ![](<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38\nPM.png>).
+        a new HTML file by clicking  \\!\\[](\\<<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38>\nPM.png>).
         \ The new file will appear in the files list on the left side of the\nworkspace.\\\r\n\n-
         \  Rename the file, either by right clicking it and choosing\n    \"Rename\",
         or by clicking on it when it's already highlighted.  **Make sure\n    the
@@ -1392,17 +1394,17 @@ fr-FR:
         to help you\n    find any potential problems with your site.\\\r"
       CSD U2 project share: "# Share Your Project\\\r\n\n\\\r\nIt's\ntime to share
         your project with the world!\\\r\n\\\r\n\n# Do This\\\r\n\n-   Click the\n
-        \   ![](<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27\n
+        \   \\!\\[](\\<<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27>\n
         \   AM.png>) button at the top of this page.\\\r\n-   Copy the URL it gives
         you, and\n    email it to the people you want to see your page.\\\r\n    \\\r"
       CSD U2 project share_2018: "# Share Your Project\\\r\n\n\\\r\nIt's\ntime to
         share your project with the world!\\\r\n\\\r\n\n# Do This\\\r\n\n-   Click
-        the\n    ![](<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27\n
+        the\n    \\!\\[](\\<<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27>\n
         \   AM.png>) button at the top of this page.\\\r\n-   Copy the URL it gives
         you, and\n    email it to the people you want to see your page.\\\r\n    \\\r"
       CSD U2 project share_2019: "# Share Your Project\\\r\n\n\\\r\nIt's\ntime to
         share your project with the world!\\\r\n\\\r\n\n# Do This\\\r\n\n-   Click
-        the\n    ![](<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27\n
+        the\n    \\!\\[](\\<<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27>\n
         \   AM.png>) button at the top of this page.\\\r\n-   Copy the URL it gives
         you, and\n    email it to the people you want to see your page.\\\r\n    \\\r"
       CSD U2 upload images: "# Upload Images\\\r\n\n\\\r\nNext, you'll\nneed to upload
@@ -1707,172 +1709,172 @@ fr-FR:
         and \"d\" are common\n    choices).\\\r\n-   Add some shapes to your background
         to make the scene more interesting."
       CSD U3 L11 Freeplay: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned to create
-        whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L11 Freeplay_2018: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L11 Freeplay_2019: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L12 Freeplay: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned to create
-        whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L12 Freeplay_2018: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L12 Freeplay_2019: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L13 Freeplay: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned to create
-        whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L13 Freeplay_2018: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L13 Freeplay_2019: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L15 Freeplay: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned to create
-        whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L15 Freeplay_2018: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L15 Freeplay_2019: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L16 Freeplay: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned to create
-        whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L16 Freeplay_2018: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L16 Freeplay_2019: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L17 Freeplay: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned to create
-        whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L17 Freeplay_2018: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L17 Freeplay_2019: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L18 Freeplay: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned to create
-        whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L18 Freeplay_2018: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L18 Freeplay_2019: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L19 Freeplay: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned to create
-        whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L19 Freeplay_2018: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L19 Freeplay_2019: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L3 Freeplay: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned to create
-        whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L3 Freeplay_2018: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L3 Freeplay_2019: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L4 Freeplay: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned to create
-        whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L4 Freeplay_2018: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L4 Freeplay_2019: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L5 Freeplay: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned to create
-        whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L5 Freeplay_2018: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L5 Freeplay_2019: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L6 Freeplay: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned to create
-        whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L6 Freeplay_2018: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L6 Freeplay_2019: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L7 Freeplay: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned to create
-        whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L7 Freeplay_2018: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L7 Freeplay_2019: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L9 Freeplay: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned to create
-        whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L9 Freeplay_2018: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L9 Freeplay_2019: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 Mouse Input Bee 2: "# Random Around Point\\\r\n\n\\\r\n<img\nsrc=\"https://images.code.org/d124946bb9e01a3623078c2a87beea8c-image-1477681483067.gif\"\nstyle=\"float:right\">\\\r\n\\\r\nNow
         that you can make the bee follow the mouse,\nlets make a bee fly around the
@@ -1996,10 +1998,10 @@ fr-FR:
         watchers to help debug your program._"
       CSD U3 Plotting Shapes Shape Lab: "# Drawing Shapes\\\r\n\n\\\r\nExplore\nusing
         this tool that lets you draw different colored shapes. \\\r\n\\\r\nMake\nsure
-        you hit \"Run\" and try out turning on the grid to help you place shapes\nprecisely.\\\r\n\\\r\n![](<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59\nPM.png>)"
+        you hit \"Run\" and try out turning on the grid to help you place shapes\nprecisely.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59>\nPM.png>)"
       CSD U3 Plotting Shapes Shape Lab_2018: "# Drawing Shapes\\\r\n\n\\\r\nExplore\nusing
         this tool that lets you draw different colored shapes. \\\r\n\\\r\nMake\nsure
-        you hit \"Run\" and try out turning on the grid to help you place shapes\nprecisely.\\\r\n\\\r\n![](<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59\nPM.png>)"
+        you hit \"Run\" and try out turning on the grid to help you place shapes\nprecisely.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59>\nPM.png>)"
       CSD U3 Random Debug Cloud: "<img src=\"https://images.code.org/529b7e5ddda4683e6a0cc5b3028e4dbf-image-1490824752133.58.50\nPM.png\"
         style=\"float:right;height:150px\">\\\r\n\\\r\n\n# Debug - Using 4 Parameters\\\r\n\n\\\r\nNow\nthat
         the grass is working, let's add a cloud to the sky. Unfortunately, it\nlooks
@@ -2938,100 +2940,100 @@ fr-FR:
         you encode 59 in binary?"
       CSD U5 binary 4-new: "# Decoding multiple numbers\\\r\n\n\\\r\nHere's\na widget
         that can calculate numbers of 4, 5, or 6 bits.  You can use it to\nfind the
-        two world records encoded in the binary string below.\\\r\n\\\r\n![](<https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06\nPM.png>)\\\r\n\\\r\n\n1.
+        two world records encoded in the binary string below.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06>\nPM.png>)\\\r\n\\\r\n\n1.
         \ Most number of people lifted and thrown in two minutes.\n    (4 bits)\\\r\n2.
         \ Most canned drinks opened by a parrot in one minute. (6 bits)\\\r\n    \\\r\n
         \   # \n    Do This\\\r\n3.  Decode the two numbers from the binary string."
       CSD U5 binary 4-new_2018: "# Decoding multiple numbers\\\r\n\n\\\r\nHere's\na
         widget that can calculate numbers of 4, 5, or 6 bits.  You can use it to\nfind
-        the two world records encoded in the binary string below.\\\r\n\\\r\n![](<https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06\nPM.png>)\\\r\n\\\r\n\n1.
+        the two world records encoded in the binary string below.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06>\nPM.png>)\\\r\n\\\r\n\n1.
         \ Most number of people lifted and thrown in two minutes.\n    (4 bits)\\\r\n2.
         \ Most canned drinks opened by a parrot in one minute. (6 bits)\\\r\n    \\\r\n
         \   # \n    Do This\\\r\n3.  Decode the two numbers from the binary string."
       CSD U5 binary 4-new_2019: "# Decoding multiple numbers\\\r\n\n\\\r\nHere's\na
         widget that can calculate numbers of 4, 5, or 6 bits.  You can use it to\nfind
-        the two world records encoded in the binary string below.\\\r\n\\\r\n![](<https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06\nPM.png>)\\\r\n\\\r\n\n1.
+        the two world records encoded in the binary string below.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06>\nPM.png>)\\\r\n\\\r\n\n1.
         \ Most number of people lifted and thrown in two minutes.\n    (4 bits)\\\r\n2.
         \ Most canned drinks opened by a parrot in one minute. (6 bits)\\\r\n    \\\r\n
         \   # \n    Do This\\\r\n3.  Decode the two numbers from the binary string."
       CSD U5 binary 5-new: "# Decoding multiple numbers\\\r\n\n\\\r\nHere's\na widget
         that can calculate numbers up to to eight bits. (If you have a shorter\nnumber,
         you can just leave the extra bits at the left off.) You can use it\nto find
-        the values of the two world records below.\\\r\n\\\r\n![](<https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14\nPM.png>)\\\r\n\\\r\n\n1.
+        the values of the two world records below.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14>\nPM.png>)\\\r\n\\\r\n\n1.
         \ Longest tail on a dog (in inches) (5 bits)\\\r\n2.  Most spoons\n    balanced
         on someone's face (5 bits)\\\r\n    \\\r\n    # Do This\\\r\n3.  Decode the
         two\n    numbers from a the binary string."
       CSD U5 binary 5-new_2018: "# Decoding multiple numbers\\\r\n\n\\\r\nHere's\na
         widget that can calculate numbers up to to eight bits. (If you have a shorter\nnumber,
         you can just leave the extra bits at the left off.) You can use it\nto find
-        the values of the two world records below.\\\r\n\\\r\n![](<https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14\nPM.png>)\\\r\n\\\r\n\n1.
+        the values of the two world records below.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14>\nPM.png>)\\\r\n\\\r\n\n1.
         \ Longest tail on a dog (in inches) (5 bits)\\\r\n2.  Most spoons\n    balanced
         on someone's face (5 bits)\\\r\n    \\\r\n    # Do This\\\r\n3.  Decode the
         two\n    numbers from a the binary string."
       CSD U5 binary 5-new_2019: "# Decoding multiple numbers\\\r\n\n\\\r\nHere's\na
         widget that can calculate numbers up to to eight bits. (If you have a shorter\nnumber,
         you can just leave the extra bits at the left off.) You can use it\nto find
-        the values of the two world records below.\\\r\n\\\r\n![](<https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14\nPM.png>)\\\r\n\\\r\n\n1.
+        the values of the two world records below.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14>\nPM.png>)\\\r\n\\\r\n\n1.
         \ Longest tail on a dog (in inches) (5 bits)\\\r\n2.  Most spoons\n    balanced
         on someone's face (5 bits)\\\r\n    \\\r\n    # Do This\\\r\n3.  Decode the
         two\n    numbers from a the binary string."
       CSD U5 binary 6-new: "# Decoding multiple numbers\\\r\n\n\\\r\nHere's\na new
         bit string.  This time, you don't know the bit length of the two numbers.
-        \ Try\nto decode the numbers without knowing the bit length.\\\r\n\\\r\n![](<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46\nPM.png>)\\\r\n\\\r\n\n1.
+        \ Try\nto decode the numbers without knowing the bit length.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46>\nPM.png>)\\\r\n\\\r\n\n1.
         \ Largest wind chime, in feet (? bits)\\\r\n2.  Furthest arrow\n    shot with
         someone's feet (in feet) (? bits)\\\r\n    \\\r\n    # Do This\\\r\n3.  Try
         to\n    decode the two numbers from the binary string.\\\r\n4.  Discuss with
         your partner\n    why you cannot know for sure whether your answer is correct."
       CSD U5 binary 6-new_2018: "# Decoding multiple numbers\\\r\n\n\\\r\nHere's\na
         new bit string.  This time, you don't know the bit length of the two numbers.
-        \ Try\nto decode the numbers without knowing the bit length.\\\r\n\\\r\n![](<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46\nPM.png>)\\\r\n\\\r\n\n1.
+        \ Try\nto decode the numbers without knowing the bit length.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46>\nPM.png>)\\\r\n\\\r\n\n1.
         \ Largest wind chime, in feet (? bits)\\\r\n2.  Furthest arrow\n    shot with
         someone's feet (in feet) (? bits)\\\r\n    \\\r\n    # Do This\\\r\n3.  Try
         to\n    decode the two numbers from the binary string.\\\r\n4.  Discuss with
         your partner\n    why you cannot know for sure whether your answer is correct."
       CSD U5 binary 6-new_2019: "# Decoding multiple numbers\\\r\n\n\\\r\nHere's\na
         new bit string.  This time, you don't know the bit length of the two numbers.
-        \ Try\nto decode the numbers without knowing the bit length.\\\r\n\\\r\n![](<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46\nPM.png>)\\\r\n\\\r\n\n1.
+        \ Try\nto decode the numbers without knowing the bit length.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46>\nPM.png>)\\\r\n\\\r\n\n1.
         \ Largest wind chime, in feet (? bits)\\\r\n2.  Furthest arrow\n    shot with
         someone's feet (in feet) (? bits)\\\r\n    \\\r\n    # Do This\\\r\n3.  Try
         to\n    decode the two numbers from the binary string.\\\r\n4.  Discuss with
         your partner\n    why you cannot know for sure whether your answer is correct."
       CSD U5 binary 7-new: "# Bit Length\\\r\n\n\\\r\nIf you don't\nknow how many
         bits long each number is, you won't be able to decode a string\nof numbers.\\\r\n\\\r\nFor
-        example, the following binary string could be decoded\nmany different ways.\\\r\n\\\r\n![](<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46\nPM.png>)\\\r\n\\\r\nIf
-        you split the string like this, the string reads 12, 84.\\\r\n\\\r\n![](<https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01\nPM.png>)
-        ![](<https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08\nPM.png>)\\\r\n\\\r\n\\\r\nIf
-        you split it like this, the string reads 42, 20.\\\r\n\\\r\n![](<https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13\nPM.png>)
-        ![](<https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19\nPM.png>)\\\r\n\\\r\nTo
+        example, the following binary string could be decoded\nmany different ways.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46>\nPM.png>)\\\r\n\\\r\nIf
+        you split the string like this, the string reads 12, 84.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01>\nPM.png>)
+        \\!\\[](\\<<https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08>\nPM.png>)\\\r\n\\\r\n\\\r\nIf
+        you split it like this, the string reads 42, 20.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13>\nPM.png>)
+        \\!\\[](\\<<https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19>\nPM.png>)\\\r\n\\\r\nTo
         solve this problem, people agree on a fixed length for every\nnumber.  The
         following string uses the same two numbers, but each number takes\nup exactly
-        eight bits, no matter how many bits it actually needs.\\\r\n\\\r\n![](<https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26\nPM.png>)\\\r\n\\\r\n\n#
+        eight bits, no matter how many bits it actually needs.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26>\nPM.png>)\\\r\n\\\r\n\n#
         Do This\\\r\n\n\\\r\n\n-   Use the binary widget to decode the string\n    that
         uses eight bit numbers.\\\r\n-   Check you answer with a partner to see whether\n
         \   you got the same answer."
       CSD U5 binary 7-new_2018: "# Bit Length\\\r\n\n\\\r\nIf you don't\nknow how
         many bits long each number is, you won't be able to decode a string\nof numbers.\\\r\n\\\r\nFor
-        example, the following binary string could be decoded\nmany different ways.\\\r\n\\\r\n![](<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46\nPM.png>)\\\r\n\\\r\nIf
-        you split the string like this, the string reads 12, 84.\\\r\n\\\r\n![](<https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01\nPM.png>)
-        ![](<https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08\nPM.png>)\\\r\n\\\r\n\\\r\nIf
-        you split it like this, the string reads 42, 20.\\\r\n\\\r\n![](<https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13\nPM.png>)
-        ![](<https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19\nPM.png>)\\\r\n\\\r\nTo
+        example, the following binary string could be decoded\nmany different ways.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46>\nPM.png>)\\\r\n\\\r\nIf
+        you split the string like this, the string reads 12, 84.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01>\nPM.png>)
+        \\!\\[](\\<<https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08>\nPM.png>)\\\r\n\\\r\n\\\r\nIf
+        you split it like this, the string reads 42, 20.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13>\nPM.png>)
+        \\!\\[](\\<<https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19>\nPM.png>)\\\r\n\\\r\nTo
         solve this problem, people agree on a fixed length for every\nnumber.  The
         following string uses the same two numbers, but each number takes\nup exactly
-        eight bits, no matter how many bits it actually needs.\\\r\n\\\r\n![](<https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26\nPM.png>)\\\r\n\\\r\n\n#
+        eight bits, no matter how many bits it actually needs.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26>\nPM.png>)\\\r\n\\\r\n\n#
         Do This\\\r\n\n\\\r\n\n-   Use the binary widget to decode the string\n    that
         uses eight bit numbers.\\\r\n-   Check you answer with a partner to see whether\n
         \   you got the same answer."
       CSD U5 binary 7-new_2019: "# Bit Length\\\r\n\n\\\r\nIf you don't\nknow how
         many bits long each number is, you won't be able to decode a string\nof numbers.\\\r\n\\\r\nFor
-        example, the following binary string could be decoded\nmany different ways.\\\r\n\\\r\n![](<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46\nPM.png>)\\\r\n\\\r\nIf
-        you split the string like this, the string reads 12, 84.\\\r\n\\\r\n![](<https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01\nPM.png>)
-        ![](<https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08\nPM.png>)\\\r\n\\\r\n\\\r\nIf
-        you split it like this, the string reads 42, 20.\\\r\n\\\r\n![](<https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13\nPM.png>)
-        ![](<https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19\nPM.png>)\\\r\n\\\r\nTo
+        example, the following binary string could be decoded\nmany different ways.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46>\nPM.png>)\\\r\n\\\r\nIf
+        you split the string like this, the string reads 12, 84.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01>\nPM.png>)
+        \\!\\[](\\<<https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08>\nPM.png>)\\\r\n\\\r\n\\\r\nIf
+        you split it like this, the string reads 42, 20.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13>\nPM.png>)
+        \\!\\[](\\<<https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19>\nPM.png>)\\\r\n\\\r\nTo
         solve this problem, people agree on a fixed length for every\nnumber.  The
         following string uses the same two numbers, but each number takes\nup exactly
-        eight bits, no matter how many bits it actually needs.\\\r\n\\\r\n![](<https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26\nPM.png>)\\\r\n\\\r\n\n#
+        eight bits, no matter how many bits it actually needs.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26>\nPM.png>)\\\r\n\\\r\n\n#
         Do This\\\r\n\n\\\r\n\n-   Use the binary widget to decode the string\n    that
         uses eight bit numbers.\\\r\n-   Check you answer with a partner to see whether\n
         \   you got the same answer."
@@ -3039,26 +3041,26 @@ fr-FR:
         shape by typing 0s and 1s. You can always click \"Readable Format\"\nif you
         want to clean up your work."
       CSD U5 black white images pixelation 2: "# Do This\\\r\n\n\\\r\nUse\nthe pixelation
-        widget to draw a smiley face\\\r\n\\\r\n![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47\nPM.png>)"
+        widget to draw a smiley face\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47>\nPM.png>)"
       CSD U5 black white images pixelation 2_2018: "# Do This\\\r\n\n\\\r\nUse\nthe
-        pixelation widget to draw a smiley face\\\r\n\\\r\n![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47\nPM.png>)"
+        pixelation widget to draw a smiley face\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47>\nPM.png>)"
       CSD U5 black white images pixelation 2_2019: "# Do This\\\r\n\n\\\r\nUse\nthe
-        pixelation widget to draw a smiley face\\\r\n\\\r\n![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47\nPM.png>)"
+        pixelation widget to draw a smiley face\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47>\nPM.png>)"
       CSD U5 black white images pixelation 3: "# Do This\\\r\n\n\\\r\nThe\nwidth and
         height sliders are set incorrectly for this image so it doesn't\nlook like
-        anything. Change them until you find the image.\\\r\n\\\r\n![](<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17\nPM.png>)"
+        anything. Change them until you find the image.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17>\nPM.png>)"
       CSD U5 black white images pixelation 3_2018: "# Do This\\\r\n\n\\\r\nThe\nwidth
         and height sliders are set incorrectly for this image so it doesn't\nlook
-        like anything. Change them until you find the image.\\\r\n\\\r\n![](<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17\nPM.png>)"
+        like anything. Change them until you find the image.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17>\nPM.png>)"
       CSD U5 black white images pixelation 3_2019: "# Do This\\\r\n\n\\\r\nThe\nwidth
         and height sliders are set incorrectly for this image so it doesn't\nlook
-        like anything. Change them until you find the image.\\\r\n\\\r\n![](<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17\nPM.png>)"
+        like anything. Change them until you find the image.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17>\nPM.png>)"
       CSD U5 black white images pixelation 4: "# Do This\\\r\n\n\\\r\nAdd\neyebrows
-        to this smiley face. Remember to use the \"Readable Format\" if you\nget stuck.\\\r\n\\\r\n![](<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37\nPM.png>)"
+        to this smiley face. Remember to use the \"Readable Format\" if you\nget stuck.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37>\nPM.png>)"
       CSD U5 black white images pixelation 4_2018: "# Do This\\\r\n\n\\\r\nAdd\neyebrows
-        to this smiley face. Remember to use the \"Readable Format\" if you\nget stuck.\\\r\n\\\r\n![](<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37\nPM.png>)"
+        to this smiley face. Remember to use the \"Readable Format\" if you\nget stuck.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37>\nPM.png>)"
       CSD U5 black white images pixelation 4_2019: "# Do This\\\r\n\n\\\r\nAdd\neyebrows
-        to this smiley face. Remember to use the \"Readable Format\" if you\nget stuck.\\\r\n\\\r\n![](<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37\nPM.png>)"
+        to this smiley face. Remember to use the \"Readable Format\" if you\nget stuck.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37>\nPM.png>)"
       CSD U5 black white images pixelation 5: "# Do This\\\r\n\n\\\r\nNow\nit's your
         turn. Draw anything you want in the pixelation widget. Feel free\nto change
         the width and height of your image if you wish."
@@ -4555,6 +4557,47 @@ fr-FR:
       CourseE_HOC 2018 Level_9b: Vous voici enfin au récif, partez à la recherche
         du **Cœur de l'océan** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png) !
         Utilisez les coraux bleus et rouges pour atteindre le **coffre** au trésor ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
+      Crack Random Substitution: |-
+        # Casse un chiffrement par substitution mono-alphabétique!
+
+        Cette version de l'outil t'apporte plus d'informations sur le texte crypté et plus d'options pour essayer différentes substitutions.
+
+        ### Plusieurs piste pour analyser le texte
+
+        -   Teste différentes options de tri disponible dans l'onglet de substituion pour voir différentes vues sur la féquence des lettres dans le texte original ainsi que le texte standard Anglais.
+            ![](https://images.code.org/82efbca1807206c9a07de520fdb22027-image-1443572614493.23.28.png)
+
+        ### Différents moyens de substitution
+
+        -   Pour substituer une lettre tu peux mettre une lettre bleue de l'alphabet directement sous la lettre orange que tu souhaites changer dans le texte codé
+            ![](https://images.code.org/da9a7af7568d8c1698872ab91b4d79d7-image-1443572471212.gif)
+
+        ### Joue, Joue toujours
+
+        -   Il y a d'autres moyens pour analyser et substituer des caractères que tu peux trouver en cliquant sur les boutons et en essayant ce dont tu as envie.
+        -   Rappelles toi que tu ne peux rien cassé :)
+
+        Regarde le temps que tu as mis pour casser ce chiffrement! Est-ce que c'est la bonne méthode pour chiffrer des données sensibles ?
+
+        <img src="http://code.org/api/hour/finish_encryption.png">
+      Crack a Caesar Cipher: |-
+        # Cassé le code de César!
+
+        Cet outil te permet de manipuler des textes et d'effectuer un chiffrement par décalage. Tu peux l'utiliser pour crypter ou décrypter.
+
+        # Fais ça
+
+        -   Charge un **Message d'exemple** depuis le menu déroulant. Cela chargera un message qui a été crypté avec le code de César.
+
+         ![](https://images.code.org/347139486c8c729bf3c6e72ce67da878-image-1476286380409.gif)
+
+        -   En utilisant les boutons dans l'onglet de substitution, tu peux décaler l'alphabet en avant ou en arrière pour essayer de déchiffrer le message.
+
+        ![](https://images.code.org/ef9ebc16d2f1442dc46fba9bd48b5d43-image-1476285966821.gif)
+
+        Regarde combien de temps il t'a fallu pour casser ce chiffrement! Est ce que c'est le bon moyen de crypter des données sensibles ?
+
+        <img src="http://code.org/api/hour/begin_encryption.png">
       Dance_Party_01: |-
         _Faisons une fête dansante !_
 
@@ -4652,7 +4695,7 @@ fr-FR:
       Dance_Party_extras_on_beat: |-
         # grave, médium et aigu
 
-        Cette danse utilise des événements de « de pointe » pour déclencher le code lorsque différentes parties de la musique deviennent fortes. Essayez de bricoler différentes chansons pour voir comment elles changent la danse.
+        Cette danse utilise des événements « de pointe » pour déclencher le code lorsque différentes parties de la musique deviennent fortes. Essayez de bricoler différentes chansons pour voir comment elles changent la danse.
       Dance_Party_extras_speed: |-
         # Accélérez, ralentissez
 
@@ -4680,6 +4723,12 @@ fr-FR:
         la rivière est inclus ! \\\r\n \\\r\nPlacez deux fois le petit bloc vert dans
         votre espace de travail pour corriger le chemin et amener {currentPlayerName}
         vers la torche de redstone [redstone_torch]."
+      Geometric Sun: |-
+        **Idée de projet:** Crée un motif en utilisant des idées géométriques comme des moules.
+        Cela demande de la persistance et de la planification!
+      Geometric Sun_2018: |-
+        **Idée de projet:** Crée un motif en utilisant des idées géométriques comme des moules.
+        Cela demande de la persistance et de la planification!
       HOC 2018 Level_1: Il vous faudra du matériel pour ce voyage. Prenez un **bateau**
         ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
         dans le **coffre** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
@@ -4719,6 +4768,10 @@ fr-FR:
         miel !
       K-1 Maze Loops 2: Utilise le bloc « Répéter » pour m'amener au cochon !
       K-1 Maze Loops 8: Utilise les boucles « Répéter » pour m'amener au cochon.
+      MC HOC 2016 SCORE LEVEL: "Certains jeux ont un compteur de score. Jouez à chat
+        avec ces golems de fer et utilisez le  <xml>  <block type=\"craft_addScore\">\n
+        \   <title name=\"SCORE\">1</title>\n  </block></xml> block pour vous donner
+        un point quand vous les touchez. \n\nAtteignez cinq points pour gagner !"
       MC_HOC_2017_01_RETRY: "Utilisez l'Agent pour libérer {currentPlayerName} de
         la maison !   \\\r\n \\\r\n   \\\r\nDéplacez un bloc « avancer » dans le bloc
         « après exécution » dans l'espace de travail afin d'amener l'Agent sur la
@@ -4801,6 +4854,10 @@ fr-FR:
         atteindre le mouton.
       Overworld Move to Sheep_2019: Ajoute une deuxième commande « avancer plus »
         pour atteindre le mouton.
+      Robot Doodle: "**Idée de projet:** Crée un dessin de quelque chose de familier
+        dans la réalité. Cela demande de la persistance et de la planification!"
+      Robot Doodle_2018: "**Idée de projet:** Crée un dessin de quelque chose de familier
+        dans la réalité. Cela demande de la persistance et de la planification!"
       Room Escape Workshop - 1: |-
         # Mise en place des chambres
 
@@ -5201,6 +5258,12 @@ fr-FR:
         \  **Add\n    a `setScreen` block** inside each `onEvent` block.\\\r\n-   **Select
         the screen\n    ID** from each `setScreen` dropdown.\\\r\n-   **Run your app**
         and test that all\n    of the buttons work."
+      'Widget: Text Compression': Cherche des motifs (répétition de mots ou de phrases)
+        dans le texte. Rentre les motifs que tu as trouvé dans le dictionnaire à droite.
+        En même temps que tu rentres les motifs dans le dictionnaire, le symbole pour
+        cette entrée remplace le motif dans le texte.
+      course1_maze_debugging_challenge1: Corrige ce niveau. Enlève les blocs en trop,
+        et ajoute les blocs manquant. Amène moi jusqu'au cochon!
       course2_artist_nestedLoops_challenge1: "Can you figure\nout how to make a picture
         like this?\\\r\n\\\r\n\n-   Both shapes have **50 pixel\n    sides.**\\\r\n-
         \  The _octagons_ are made with **45 degree** turns.\\\r\n-   The _triangles_\n
@@ -5209,12 +5272,29 @@ fr-FR:
         like this?\\\r\n\\\r\n\n-   The first inner loop should\n    make an octagon.\\\r\n-
         \  The second inner loop should make a hexagon.\\\r\n-   The\n    third inner
         loop should make a square."
+      course2_bee_conditionals_challenge2: Ramasse tout le nectar et fais tout le
+        miel. Tu peux ramasser tous le nectar dans les fleurs en utilisant la boucle
+        `tant que nectar > 0`.
+      course2_collector_prog_challenge1: Regarde attentivement! Est ce que tu peux
+        ramasser les **10** diamants?
+      course2_harvester_loops_challenge1: Ramasse tout le maïs.
+      course2_harvester_loops_challenge2: Rammasse toutes les laitues. Evite les arbres
+        et les champs!
+      course2_maze_programming_challenge2: Parfois il y a plus d'une manière de résoudre
+        le même problème. Parfois il est plus rapide de faire marche arrière que d'aller
+        tout droit!
+      course3_artist_functions_challenge1: Dès que tu as défini une fonction, tu peux
+        l'appeler encore et encore - quand tu veux et n'importe où! Essaie ce code
+        pour voir comment il fonctionne, puis modifie le pour faire ton propre dessin
+        impressionant!
       course3_artist_functions_challenge2: "Not only can you\njump to some pre-set
         locations, like the corners of the canvas, you can also\nuse a `jump to` command
         to get to absolutely any spot you like! Try this code\nto see how it works,
         then make the program your own!\\\r\n<xml>\\\r\n  <block\ntype=\"jump_to_xy\">\\\r\n
         \   <title name=\"XPOS\">???</title>\\\r\n    <title\nname=\"YPOS\">???</title>\\\r\n
         \   </block></xml>"
+      course3_bee_functions_challenge1: Tu dois te débrouiller pour ce défi. Cela
+        peut-être plus compliqué qu'il n'y parait!
       course3_playLab_challenge1: "\\*The **squirrels** are terrified\nto see that
         a **dinosaur** has come to town! Can the brave **knight** keep\nthem all from
         panicking?\\*\\\r\n\\\r\nRules:\\\r\n\n1.  _Touching the squirrels scores\n
@@ -5228,6 +5308,7 @@ fr-FR:
       course4_artist_binary_challenge2: "There are 256 bits\nrepresented on this grid
         - that means it's easy for a small change to cause\nbig problems. Are you
         persistent enough to restore this logo back to normal?\\\r\n\\\r\n![](https://images.code.org/74e15f513982b47762dd33ebbc21e5e9-image-1498776314610.png)"
+      course4_artist_concept_challenge2: Crée 5 rosaces en utilisant le code ci-dessous.
       course4_artist_functions_challenge2: "Not only can you\njump to some pre-set
         locations, like the corners of the canvas, you can also\nuse a `jump to` command
         to get to absolutely any spot you like! Try this code\nto see how it works,
@@ -5306,6 +5387,12 @@ fr-FR:
       courseA_artist_loops_challenge1_2019: "You can use a loop to\ndraw many lines
         in a row.\\\r\n\\\r\nCan you draw a house? Make it look just the\nway you
         like it!  Try looking for patterns that repeat!\\\r\n\\\r\nHere are some\nideas:\\\r\n\\\r\n![](https://images.code.org/6e59e881e0aa1d31186e81a203655a0b-image-1501785654664.png)"
+      courseA_artist_loops_challenge2a: _"Aide moi à monter ce camp!"_Utilise les
+        blocs dans la boîte à outils pour dessiner ces 3 tentes.
+      courseA_artist_loops_challenge2a_2018: _"Aide moi à monter ce camp!"_Utilise
+        les blocs dans la boîte à outils pour dessiner ces 3 tentes.
+      courseA_artist_loops_challenge2a_2019: _"Aide moi à monter ce camp!"_Utilise
+        les blocs dans la boîte à outils pour dessiner ces 3 tentes.
       courseA_collector_loops1: "**Free Play:** This is Laurel\nthe Adventurer! Move
         her around and get as much treasure as you can.\\\r\n\\\r\nDrag\nblocks into
         the workspace and try to figure out how to get treasure.  Get\nat least one
@@ -5331,6 +5418,22 @@ fr-FR:
       courseA_collector_loops2_2019: 'Ramasse les trois tas! Déplace Laurel jusqu''à
         chaque partie du trésor, puis utilise le <xml><block type="collector_collect"
         block-text="get treasure"/></xml> bloc. '
+      courseA_collector_loops3: Comment Laurel peut récupérer les 5 diamants en utilisant
+        seulement un <xml><block type="maze_moveEast"/></xml> block?
+      courseA_collector_loops3_2018: Comment Laurel peut récupérer les 5 diamants
+        en utilisant seulement un <xml><block type="maze_moveEast"/></xml> block?
+      courseA_collector_loops3_2019: Comment Laurel peut récupérer les 5 diamants
+        en utilisant seulement un <xml><block type="maze_moveEast" block-text="move
+        east"/></xml> block?
+      courseA_collector_loops_challenge1: _"Tu peux m'aider à identifier des erreurs?
+        Je sais vers où je souhaite aller, mais je ne suis pas sur du nombre d'étapes
+        que je dois faire."_
+      courseA_collector_loops_challenge1_2018: _"Tu peux m'aider à identifier des
+        erreurs? Je sais vers où je souhaite aller, mais je ne suis pas sur du nombre
+        d'étapes que je dois faire."_
+      courseA_collector_loops_challenge1_2019: _"Tu peux m'aider à identifier des
+        erreurs? Je sais vers où je souhaite aller, mais je ne suis pas sur du nombre
+        d'étapes que je dois faire."_
       courseA_collector_preLoops7: "Get all three piles! Move\nLaurel to each piece
         of treasure, then use this block:\\\r\n  <xml><block type=\"collector_collect\"/></xml>"
       courseA_harvester_seq2_2019: 'Utilisez **trois** blocs <xml><block type="maze_moveWest"
@@ -5344,6 +5447,7 @@ fr-FR:
       courseA_maze_ramp3a_2019: Attrape un <xml><block type="maze_moveNorth" block-text="move
         north"/></xml> bloc depuis la barre d'outils et ajoute le à la suite des autres
         blocs pour finaliser ce code, puis clique "▶ Lancer".
+      courseA_maze_seq1: _"Essaie de m'emmener jusqu'au cochon en utilisant ces blocs!"_
       courseA_maze_seq10: "**Challenge:** Go around the TNT\nto get the bird to the
         pig!\\\r\n\\\r\n![expandable](https://images.code.org/a656e421bc90e530a7e1ce636e507752-image-1497996976195.gif)"
       courseA_maze_seq11: "Time for a shorter puzzle!  Move\none way, then another
@@ -5355,16 +5459,39 @@ fr-FR:
       courseA_maze_seq12: "Get that pig!\\\r\n\\\r\n![expandable](https://images.code.org/c6ae5024441e2305db82d06679e5a281-image-1497997160569.gif)"
       courseA_maze_seq12_2018: "Get that pig!\\\r\n\\\r\n![expandable](https://images.code.org/c6ae5024441e2305db82d06679e5a281-image-1497997160569.gif)"
       courseA_maze_seq12_2019: "Get that pig!\\\r\n\\\r\n![expandable](https://images.code.org/c6ae5024441e2305db82d06679e5a281-image-1497997160569.gif)"
+      courseA_maze_seq13_2019: Attrape ce cochon comme tu peux!
+      courseA_maze_seq1_2018: _"Essaie de m'emmener jusqu'au cochon en utilisant ces
+        blocs!"_
+      courseA_maze_seq1_2019: _"Essaie de m'emmener jusqu'au cochon en utilisant ces
+        blocs!"_
+      courseA_maze_seq2: |-
+        _"Un bug! Corrige le code pour m'amener au cochon."_
+
+        ![expandable](https://images.code.org/4af4959874b3ca1fdd3008dc4f77add4-image-1497994904322.gif)
       courseA_maze_seq3: "_\"Fix the code to get me to the pig!\"_\\\r\n\\\r\n![expandable](https://images.code.org/4adca88dc6df7378846a91d0fb0e59d1-image-1497995239069.gif)"
       courseA_maze_seq4: "_\"Something is not quite right.\"_\n\\\r\n\\\r\nREMOVE
         a block to get the bird to the pig!\\\r\n\\\r\n![expandable](https://images.code.org/6af44fb0ba5ac5dd5502e2538f51fb9c-image-1497996162453.gif)"
       courseA_maze_seq5: "Try this one yourself from the beginning.\\\r\n\\\r\n![expandable](https://images.code.org/e4ef591b4580db478330c298d1af756f-image-1497997080163.gif)"
       courseA_maze_seq6: "Move one way, then another to get\nthe bird to the pig!\\\r\n\\\r\n![expandable](https://images.code.org/8f71c406afa60c6898937d950c670205-image-1497996506419.gif)"
+      courseA_maze_seq6_2018: Déplace-moi dans une direction, puis dans une autre
+        pour m'amener au cochon !
+      courseA_maze_seq6_2019: Déplace-moi dans une direction, puis dans une autre
+        pour m'amener au cochon !
       courseA_maze_seq7: "Figure out what is missing and then\nadd blocks to get the
         bird to the pig!\\\r\n\\\r\n![expandable](https://images.code.org/35bdb628dabd4259b581286b071c02f3-image-1497996651260.gif)"
       courseA_maze_seq8: "Solve this level and get the bird\nto the pig!\\\r\n\\\r\n![expandable](https://images.code.org/fb4735244f74a4e001d1fa7b5c6028f9-image-1497998330218.gif)"
+      courseA_maze_seq8_2018: Résoud ce niveau pour m'amener au cochon!
+      courseA_maze_seq8_2019: Résoud ce niveau pour m'amener au cochon!
       courseA_maze_seq9: "**Challenge:** Debug this level by\nadding blocks to get
         the bird to the pig!\\\r\n\\\r\n![expandable](https://images.code.org/3f35068dd3cf51c420a536fa078f854d-image-1497996843105.gif)"
+      courseA_maze_seq_challenge1: Corrige ce niveau. Enlève les blocs en trop, et
+        ajoute les blocs manquant. Amène moi jusqu'au cochon!
+      courseA_maze_seq_challenge1_2018: Corrige ce niveau. Enlève les blocs en trop,
+        et ajoute les blocs manquant. Amène moi jusqu'au cochon!
+      courseA_maze_seq_challenge1_2019: Corrige ce niveau. Enlève les blocs en trop,
+        et ajoute les blocs manquant. Amène moi jusqu'au cochon!
+      courseA_maze_seq_challenge2_2019: Trouve le chemin pour m'amener jusqu'au cochon.
+        Evite la TNT sinon les plumes vont voler!
       courseA_playLab_events1_2019: Ceci est un niveau de Play Lab. Déplace des blocs
         vers l'espace de travail et regarde ce qui se passe!
       courseA_playLab_events2_2019: Jorge le chien veut dire "Salut." Peux-tu l'aider?
@@ -5386,33 +5513,43 @@ fr-FR:
         type=\"studio_whenArrow\">\\\r\n    <title\nname=\"VALUE\">left</title>\\\r\n
         \ </block></xml> event block that is already\nin the workspace.\\\r\n\\\r\nGet
         Jorge to the flag to finish this level!"
+      courseA_playLab_events4: Maintenant, ajoute d'autres blocs pour que Jorge aille
+        à droite lorsque le bouton flèche droite est pressé.
+      courseA_playLab_events5: Ajoute des événements pour déplacer Jorge vers le haut
+        et vers le bas lorsque les flèches haut et bas sont pressés.
+      courseA_playLab_events5_2018: Ajoute des événements pour déplacer Jorge vers
+        le haut et vers le bas lorsque les flèches haut et bas sont pressés.
+      courseA_playLab_events5_2019: Ajoute des événements pour déplacer Jorge vers
+        le haut et vers le bas lorsque les flèches haut et bas sont pressés.
+      courseA_playLab_events6_2019: Change le fond d'écran et joue un son aléatoire
+        lorsque tu cliques sur Jorge pour que ce soit plus intéressant.
       courseA_playlab_events_challenge1: "_\"Where are my friends\nhiding? In this
         game, clicking on me will show my friend Olive the cat!\"_\\\r\n\\\r\nClicking\nOlive
         will make Robin appear! Can you write code to show the rest of the characters\ntoo?\\\r\n\\\r\nIn
         this puzzle, make sure to click for hints! The hints will help\nyou do this
-        project step-by-step!\\\r\n\\\r\n![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png>)"
+        project step-by-step!\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>\nPM.png>)"
       courseA_playlab_events_challenge1_2018: "_\"Where are my friends\nhiding? In
         this game, clicking on me will show my friend Olive the cat!\"_\\\r\n\\\r\nClicking\nOlive
         will make Robin appear! Can you write code to show the rest of the characters\ntoo?\\\r\n\\\r\nIn
         this puzzle, make sure to click for hints! The hints will help\nyou do this
-        project step-by-step!\\\r\n\\\r\n![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png>)"
+        project step-by-step!\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>\nPM.png>)"
       courseA_playlab_events_challenge1_2019: "_\"Where are my friends\nhiding? In
         this game, clicking on me will show my friend Olive the cat!\"_\\\r\n\\\r\nClicking\nOlive
         will make Robin appear! Can you write code to show the rest of the characters\ntoo?\\\r\n\\\r\nIn
         this puzzle, make sure to click for hints! The hints will help\nyou do this
-        project step-by-step!\\\r\n\\\r\n![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png>)"
+        project step-by-step!\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>\nPM.png>)"
       courseA_playlab_events_challenge2: "_\"Let's have a party!\nGive my friends
         something to do when you click or tap them.\"_\\\r\n\\\r\nWhat\nwill the animals
         say? What else will happen?\\\r\n\\\r\n\\\r\n\\\r\nIn this puzzle,\nmake sure
-        to click for hints! The hints will give you fun things to try!\\\r\n\\\r\n![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png>)"
+        to click for hints! The hints will give you fun things to try!\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>\nPM.png>)"
       courseA_playlab_events_challenge2_2018: "_\"Let's have a party!\nGive my friends
         something to do when you click or tap them.\"_\\\r\n\\\r\nWhat\nwill the animals
         say? What else will happen?\\\r\n\\\r\n\\\r\n\\\r\nIn this puzzle,\nmake sure
-        to click for hints! The hints will give you fun things to try!\\\r\n\\\r\n![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png>)"
+        to click for hints! The hints will give you fun things to try!\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>\nPM.png>)"
       courseA_playlab_events_challenge2_2019: "_\"Let's have a party!\nGive my friends
         something to do when you click or tap them.\"_\\\r\n\\\r\nWhat\nwill the animals
         say? What else will happen?\\\r\n\\\r\n\\\r\n\\\r\nIn this puzzle,\nmake sure
-        to click for hints! The hints will give you fun things to try!\\\r\n\\\r\n![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png>)"
+        to click for hints! The hints will give you fun things to try!\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>\nPM.png>)"
       courseB_Scrat_ramp3a_2019: Attrape un <xml><block type="maze_moveNorth" block-text="move
         north"/></xml> bloc depuis la barre d'outils et ajoute le à la suite des autres
         blocs pour finaliser ce code, puis clique "▶ Lancer".
@@ -5425,6 +5562,8 @@ fr-FR:
       courseB_artist_loops10_2019: "Use what you have learned to\ndraw a picture of
         what you think the artist saw when he got home.\\\r\n\\\r\n\\_\\_\\_\\\r\n\n###
         \n\nIdeas\\\r\n\\\r\n![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)\\\r\n![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)\\\r\n![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)\\\r\n![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)"
+      courseB_artist_loops1_2019: C'est un nouveau puzzle appelé "Artiste". Joue avec
+        ce niveau et dessine quelque chose d'amusant.
       courseB_artist_loops4_2019: Maintenant on a besoin que la terre soit prêt à
         être planté. Trouvez les bugs dans le code et aidez l'artiste à préparer le
         sol.
@@ -5453,6 +5592,19 @@ fr-FR:
       courseB_collector_loops2_2019: "Move Laurel to the treasure,\nthen use the<xml><block
         type=\"collector_collect\"/></xml>block to pick it\nup.\\\r\n\\\r\n\\\r\nGet
         all four piles to pass this level."
+      courseB_collector_loops3: Comment Laurel peut récupérer les 5 diamants en utilisant
+        seulement un <xml><block type="maze_moveEast"/></xml> block?
+      courseB_collector_loops3_2018: Comment Laurel peut récupérer les 5 diamants
+        en utilisant seulement un <xml><block type="maze_moveEast"/></xml> block?
+      courseB_collector_loops3_2019: Comment Laurel peut récupérer les 5 diamants
+        en utilisant seulement un <xml><block type="maze_moveEast" block-text="move
+        east"/></xml> block?
+      courseB_collector_loops_challenge2a: _"Ramassonsles diamants!"_ Aide Laurel
+        à obtenir au moins **5** diamants pour terminer le puzzle.
+      courseB_collector_loops_challenge2a_2018: _"Ramassonsles diamants!"_ Aide Laurel
+        à obtenir au moins **5** diamants pour terminer le puzzle.
+      courseB_collector_loops_challenge2a_2019: _"Ramassonsles diamants!"_ Aide Laurel
+        à obtenir au moins **5** diamants pour terminer le puzzle.
       courseB_playLab_events1: "This game is called \"Play Lab\".  \\\r\n\\\r\nSee\nif
         you can figure out what each block does."
       courseB_playLab_events1_2018: "This game is called \"Play Lab\".  \\\r\n\\\r\nSee\nif
@@ -5494,6 +5646,40 @@ fr-FR:
         it up, BB-8.\"_\\\r\n\\\r\n**Challenge**: Gather all the scrap metal."
       courseB_starWars_prog8_2019: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"Keep
         it up, BB-8.\"_\\\r\n\\\r\n**Challenge**: Gather all the scrap metal."
+      courseC19_playLab_EOC1: |-
+        C'est incroyable tout ce que tu as appris! Créons un jeu pas à pas.
+
+        En utilisant de nouveaux blocs dans ta boite à outils, choisis un nouvel arrière-plan, puis un acteur pour faire parti de ton jeu.
+      courseC19_playLab_EOC3: |-
+        Ajoutons des caractères à ton jeu.
+
+        Utilise le bloc `affecter à l'acteur` pour ajouter plus de caractères, puis bouge jusqu'au drapeau pour terminer le puzzle.
+      courseC19_playLab_EOC6: Tu as terminé! Maintenant tu peux jouer à ton jeu où
+        le partager avec tes amis et camarades de classe!
+      courseC_PlayLab_events6_2019: Maintenant écris un programme pour que Waddles
+        le Pingouin se déplace avec les touches haut / bas / gauche / droite pour
+        toucher toutes les cibles !
+      courseC_PlayLab_events7: |-
+        Le bloc `Répéter à l'infini` permet de répéter un code sans cesse. Utilise ce bloc pour faire bouger sans cesse Chomp le Dino (Acteur 2) de haut en bas de 400 pixels.
+
+        ![](https://images.code.org/0cbe6dd5f4e2251e3f121dbabc0cc19d-image-1523040103822.com-resize.gif)
+      courseC_PlayLab_events7_2018: |-
+        Le bloc `Répéter à l'infini` permet de répéter un code sans cesse. Utilise ce bloc pour faire bouger sans cesse Chomp le Dino (Acteur 2) de haut en bas de 400 pixels.
+
+        ![](https://images.code.org/0cbe6dd5f4e2251e3f121dbabc0cc19d-image-1523040103822.com-resize.gif)
+      courseC_PlayLab_events7_2019: |-
+        Le bloc `Répéter à l'infini` permet de répéter un code sans cesse. Utilise ce bloc pour faire bouger sans cesse Chomp le Dino (Acteur 2) de haut en bas de 400 pixels.
+
+        ![](https://images.code.org/0cbe6dd5f4e2251e3f121dbabc0cc19d-image-1523040103822.com-resize.gif)
+      courseC_PlayLab_events8: "Peux-tu faire dire «Aïe!» à Waddles (acteur 1) et
+        jouer un son de «impact» s'il percute Chomp? \n\nLorque c'est prêt, démarre
+        le jeu pour voir ce qui se passe.\n\n![](https://images.code.org/a634f249021651f60a1acf37bf78d07d-image-1475342557950.gif)"
+      courseC_PlayLab_events8_2018: "Peux-tu faire dire «Aïe!» à Waddles (acteur 1)
+        et jouer un son de «impact» s'il percute Chomp? \n\nLorque c'est prêt, démarre
+        le jeu pour voir ce qui se passe.\n\n![](https://images.code.org/a634f249021651f60a1acf37bf78d07d-image-1475342557950.gif)"
+      courseC_PlayLab_events8_2019: "Peux-tu faire dire «Aïe!» à Waddles (acteur 1)
+        et jouer un son de «impact» s'il percute Chomp? \n\nLorque c'est prêt, démarre
+        le jeu pour voir ce qui se passe.\n\n![](https://images.code.org/a634f249021651f60a1acf37bf78d07d-image-1475342557950.gif)"
       courseC_PlayLab_events_challenge1: "Use a new block to\nmake Waddles automatically
         move back to the start when he runs into the Dinosaur\nand when he scores
         a point. This will make your game more challenging and\nfun!\\\r\n\\\r\nPlay
@@ -5588,6 +5774,9 @@ fr-FR:
       courseC_artist_loopsPre1a_2019: "Now, put this code into  a\n`repeat` block
         and loop it **6** times.\\\r\n\n-   Notice that we have added a 60\n    degree
         turn at the end of each loop to get a full rotation."
+      courseC_artist_loopsPrePre1a: |-
+        Utilise le bloc <xml><block type="jump_to_xy" id="callMe"><title name="XPOS">200</title><title name="YPOS">200</title></block></xml> pour amener l'artiste au centre de l'air de jeu.\
+        Puis dessine une ligne de 50 pixels de long avec le bloc <xml><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">50</title></block></xml>.
       courseC_collector_loops_challenge2: "_\"Let's hunt for\ntreasure - using loops!\"_\\\r\n\\\r\nHelp
         the collector by debugging this code.\nGet all of the treasure!"
       courseC_collector_loops_challenge2_2018: "_\"Let's hunt for\ntreasure - using
@@ -5596,6 +5785,82 @@ fr-FR:
       courseC_collector_loops_challenge2_2019: "_\"Let's hunt for\ntreasure - using
         loops!\"_\\\r\n\\\r\nHelp the collector by debugging this code.\nGet all of
         the treasure!"
+      courseC_collector_prog1: |-
+        **Jeu Libre.** C'est Laurel l'Aventurière! Bouge la un peu partout et récupère autant de diamants que tu peux. Utilise le bloc `collecter` pour attraper les diamants.
+
+        Fais glisser les blocs dans l'espace de travail et essaie de trouver comment récupérer les diamants. Attrape au moins 1 diamant pour passer ce niveau.
+      courseC_collector_prog1_2018: |-
+        **Jeu Libre.** C'est Laurel l'Aventurière! Bouge la un peu partout et récupère autant de diamants que tu peux. Utilise le bloc `collecter` pour attraper les diamants.
+
+        Fais glisser les blocs dans l'espace de travail et essaie de trouver comment récupérer les diamants. Attrape au moins 1 diamant pour passer ce niveau.
+      courseC_collector_prog1_2019: |-
+        **Jeu Libre.** C'est Laurel l'Aventurière! Bouge la un peu partout et récupère autant de diamants que tu peux. Utilise le bloc `collecter` pour attraper les diamants.
+
+        Fais glisser les blocs dans l'espace de travail et essaie de trouver comment récupérer les diamants. Attrape au moins 1 diamant pour passer ce niveau.
+      courseC_collector_prog2: Bouge Laurel jusqu'au diamant, puis utilise <xml><block
+        type="collector_collect"/></xml> pour le ramasser.
+      courseC_collector_prog2_2018: Bouge Laurel jusqu'au diamant, puis utilise <xml><block
+        type="collector_collect"/></xml> pour le ramasser.
+      courseC_collector_prog3: "_\"Les Séquences comptent!\"_ \n\nLes blocs dont tu
+        as besoin sont déjà dans l'espace de travail, mais pas connectés.\\\nOrdonne
+        ces blocs pour ramasser les diamants et résoudre le puzzle."
+      courseC_collector_prog3_2018: "_\"Les Séquences comptent!\"_ \n\nLes blocs dont
+        tu as besoin sont déjà dans l'espace de travail, mais pas connectés.\\\nOrdonne
+        ces blocs pour ramasser les diamants et résoudre le puzzle."
+      courseC_collector_prog3_2019: "_\"Les Séquences comptent!\"_ \n\nLes blocs dont
+        tu as besoin sont déjà dans l'espace de travail, mais pas connectés.\\\nOrdonne
+        ces blocs pour ramasser les diamants et résoudre le puzzle."
+      courseC_collector_prog4: "_\"Sequence matters!\"_ \n\nThe blocks you need are
+        already in the workspace, but not connected. \n\nMets ces blocs dans l'ordre
+        pour ramasser tous les diamants et résoudre ce puzzle."
+      courseC_collector_prog4_2018: "_\"Sequence matters!\"_ \n\nThe blocks you need
+        are already in the workspace, but not connected. \n\nMets ces blocs dans l'ordre
+        pour ramasser tous les diamants et résoudre ce puzzle."
+      courseC_collector_prog4_2019: "_\"Sequence matters!\"_ \n\nThe blocks you need
+        are already in the workspace, but not connected. \n\nMets ces blocs dans l'ordre
+        pour ramasser tous les diamants et résoudre ce puzzle."
+      courseC_collector_prog5: "_\"Aide moi à ramasser chaque morceau de diamant\"_
+        \n\nCes blocs sont dans le désordre. Peux-tu les ré-organiser ?"
+      courseC_collector_prog5_2018: "_\"Aide moi à ramasser chaque morceau de diamant\"_
+        \n\nCes blocs sont dans le désordre. Peux-tu les ré-organiser ?"
+      courseC_collector_prog5_2019: "_\"Aide moi à ramasser chaque morceau de diamant\"_
+        \n\nCes blocs sont dans le désordre. Peux-tu les ré-organiser ?"
+      courseC_collector_prog6: "_\"Aide moi à ramasser tous ces diamants\"_ \n\nCes
+        blocs sont dans le désordre. Ré-organise les pour ramasser les diamants ."
+      courseC_collector_prog6_2018: "_\"Aide moi à ramasser tous ces diamants\"_ \n\nCes
+        blocs sont dans le désordre. Ré-organise les pour ramasser les diamants ."
+      courseC_collector_prog6_2019: "_\"Aide moi à ramasser tous ces diamants\"_ \n\nCes
+        blocs sont dans le désordre. Ré-organise les pour ramasser les diamants ."
+      courseC_collector_prog7: |-
+        \*\* Défi:\*\*_"Qu'est-ce qui se passe ici?"_
+
+        Même si l'on met ceux-la dans l'ordre, il en manquera quand même.\
+        Utilise des blocs de la boite à outils pour ramasser tous les diamants.
+      courseC_collector_prog7_2018: |-
+        \*\* Défi:\*\*_"Qu'est-ce qui se passe ici?"_
+
+        Même si l'on met ceux-la dans l'ordre, il en manquera quand même.\
+        Utilise des blocs de la boite à outils pour ramasser tous les diamants.
+      courseC_collector_prog7_2019: |-
+        \*\* Défi:\*\*_"Qu'est-ce qui se passe ici?"_
+
+        Même si l'on met ceux-la dans l'ordre, il en manquera quand même.\
+        Utilise des blocs de la boite à outils pour ramasser tous les diamants.
+      courseC_collector_prog8: \_ "Continuez votre bon travail! Aidez-moi à rassembler
+        tout les diamants." \_
+      courseC_collector_prog8_2018: \_ "Continuez votre bon travail! Aidez-moi à rassembler
+        tout les diamants." \_
+      courseC_collector_prog8_2019: \_ "Continuez votre bon travail! Aidez-moi à rassembler
+        tout les diamants." \_
+      courseC_collector_prog9: _"Ramassons tous les diamants!"_
+      courseC_collector_prog9_2018: _"Ramassons tous les diamants!"_
+      courseC_collector_prog9_2019: _"Ramassons tous les diamants!"_
+      courseC_collector_prog_challenge2: Il y a 20 diamants dans cette cave. Ramasses
+        en au moins **10** pour terminer le défi!
+      courseC_collector_prog_challenge2_2018: Il y a 20 diamants dans cette cave.
+        Ramasses en au moins **10** pour terminer le défi!
+      courseC_collector_prog_challenge2_2019: Il y a 20 diamants dans cette cave.
+        Ramasses en au moins **10** pour terminer le défi!
       courseC_flappy_events1: "Attach the `flap a normal amount`\nblock to the `when
         click` event, then press \"Run\".   \\\r\n\\\r\n\\---\\\r\n\\\r\nClick\nor
         tap on the play space to move Flappy to the target."
@@ -5692,6 +5957,90 @@ fr-FR:
         lorsque Flappy rencontre un obstacle, essaie de remettre le score à 0.
       courseC_flappy_events9_2019: Pour varier un peu, au lieu de terminer le jeu
         lorsque Flappy rencontre un obstacle, essaie de remettre le score à 0.
+      courseC_harvester_loops1: "Les boucles peuvent être utiliser pour répéter plus
+        que des mouvements. \n\nUtilise les boucles pour ramasser les 4 citrouilles."
+      courseC_harvester_loops10: Ramasse tout le maïs et toutes les citrouilles.
+      courseC_harvester_loops10_2018: Ramasse tout le maïs et toutes les citrouilles.
+      courseC_harvester_loops10_2019: Ramasse tout le maïs et toutes les citrouilles.
+      courseC_harvester_loops11: Ramasse tout le maïs et toutes les citrouilles.
+      courseC_harvester_loops11_2018: Ramasse tout le maïs et toutes les citrouilles.
+      courseC_harvester_loops11_2019: Ramasse tout le maïs et toutes les citrouilles.
+      courseC_harvester_loops1_2018: "Les boucles peuvent être utiliser pour répéter
+        plus que des mouvements. \n\nUtilise les boucles pour ramasser les 4 citrouilles."
+      courseC_harvester_loops1_2019: "Les boucles peuvent être utiliser pour répéter
+        plus que des mouvements. \n\nUtilise les boucles pour ramasser les 4 citrouilles."
+      courseC_harvester_loops2: Est-ce que tu peux combiner 2 boucles différentes
+        pour bouger jusqu'à la citrouille puis les ramasser toutes?
+      courseC_harvester_loops2_2018: Est-ce que tu peux combiner 2 boucles différentes
+        pour bouger jusqu'à la citrouille puis les ramasser toutes?
+      courseC_harvester_loops2_2019: Est-ce que tu peux combiner 2 boucles différentes
+        pour bouger jusqu'à la citrouille puis les ramasser toutes?
+      courseC_harvester_loops3: Rammasse toutes les citrouilles.
+      courseC_harvester_loops3_2018: Rammasse toutes les citrouilles.
+      courseC_harvester_loops3_2019: Rammasse toutes les citrouilles.
+      courseC_harvester_loops4: "Maintenant il y a du maïs qui pousse aussi! \n\nRamasse
+        tout le maïs et toutes les citrouilles."
+      courseC_harvester_loops4_2018: "Maintenant il y a du maïs qui pousse aussi!
+        \n\nRamasse tout le maïs et toutes les citrouilles."
+      courseC_harvester_loops4_2019: "Maintenant il y a du maïs qui pousse aussi!
+        \n\nRamasse tout le maïs et toutes les citrouilles."
+      courseC_harvester_loops5: Ramasse tout le maïs et toutes les citrouilles.
+      courseC_harvester_loops5_2018: Ramasse tout le maïs et toutes les citrouilles.
+      courseC_harvester_loops5_2019: Ramasse tout le maïs et toutes les citrouilles.
+      courseC_harvester_loops6: Ramasse tout le maïs et toutes les citrouilles.
+      courseC_harvester_loops6_2018: Ramasse tout le maïs et toutes les citrouilles.
+      courseC_harvester_loops6_2019: Ramasse tout le maïs et toutes les citrouilles.
+      courseC_harvester_loops7: Ramasse tout le maïs et toutes les citrouilles.
+      courseC_harvester_loops7_2018: Ramasse tout le maïs et toutes les citrouilles.
+      courseC_harvester_loops7_2019: Ramasse tout le maïs et toutes les citrouilles.
+      courseC_harvester_loops8: |-
+        **Défi** Ramasse tout le maïs et toutes les citrouilles.
+
+        Tu peux terminer ce défi dans le sens que tu veux, mais il va te deander beaucoup de travail et de réflexion!
+      courseC_harvester_loops8_2018: |-
+        **Défi** Ramasse tout le maïs et toutes les citrouilles.
+
+        Tu peux terminer ce défi dans le sens que tu veux, mais il va te deander beaucoup de travail et de réflexion!
+      courseC_harvester_loops8_2019: |-
+        **Défi** Ramasse tout le maïs et toutes les citrouilles.
+
+        Tu peux terminer ce défi dans le sens que tu veux, mais il va te deander beaucoup de travail et de réflexion!
+      courseC_harvester_loops9: Ramasse tout le maïs et toutes les citrouilles.
+      courseC_harvester_loops9_2018: Ramasse tout le maïs et toutes les citrouilles.
+      courseC_harvester_loops9_2019: Ramasse tout le maïs et toutes les citrouilles.
+      courseC_harvester_loops_challenge2: Rammasse toutes les laitues. Evite les arbres
+        et les champs!
+      courseC_harvester_loops_challenge2_2018: Rammasse toutes les laitues. Evite
+        les arbres et les champs!
+      courseC_harvester_loops_challenge2_2019: Rammasse toutes les laitues. Evite
+        les arbres et les champs!
+      courseC_maze_programming1: Pour ce puzzle, mets tous les blocs ensemble et clique
+        "Démarrer" pour le voir faire!
+      courseC_maze_programming1_2018: Pour ce puzzle, mets tous les blocs ensemble
+        et clique "Démarrer" pour le voir faire!
+      courseC_maze_programming1_2019: Pour ce puzzle, mets tous les blocs ensemble
+        et clique "Démarrer" pour le voir faire!
+      courseC_maze_programming2: Ajoutes à nouveau un bloc <xml><block type="maze_moveForward"/></xml>
+        de la boite à outils pour terminer ton code.
+      courseC_maze_programming2_2018: Ajoutes à nouveau un bloc <xml><block type="maze_moveForward"/></xml>
+        de la boite à outils pour terminer ton code.
+      courseC_maze_programming2_2019: Ajoutes à nouveau un bloc <xml><block type="maze_moveForward"
+        block-text="move forward"/></xml> de la boite à outils pour terminer ton code.
+      courseC_maze_programming3: |-
+        _"Ce cochon froisse mes plumes."_
+
+        Il y a un bloc de trop qui va faire pêter l'oiseau.
+        Jettes le en le décrochant des blocs gris et en le faisant glisser vers la boîte à outils.
+      courseC_maze_programming3_2018: |-
+        _"Ce cochon froisse mes plumes."_
+
+        Il y a un bloc de trop qui va faire pêter l'oiseau.
+        Jettes le en le décrochant des blocs gris et en le faisant glisser vers la boîte à outils.
+      courseC_maze_programming3_2019: |-
+        _"Ce cochon froisse mes plumes."_
+
+        Il y a un bloc de trop qui va faire pêter l'oiseau.
+        Jettes le en le décrochant des blocs gris et en le faisant glisser vers la boîte à outils.
       courseC_maze_programming4: "_\"Trace the path and lead me to\nthe silly pig.\"_
         \\\r\n\\\r\nAvoid TNT or feathers will fly!"
       courseC_maze_programming4_2018: "_\"Trace the path and lead me to\nthe silly
@@ -5704,6 +6053,62 @@ fr-FR:
         the TNT."
       courseC_maze_programming5_2019: "_\"Follow this path to get me to\nthe pig!\"_\\\r\n\\\r\nAvoid
         the TNT."
+      courseC_maze_programming6: |-
+        \_"Reste calme et aide moi a trouver ce vilain cochon. Autrement je pourrais m'énerver!" \_
+
+        Amène l'oiseau jusqu'au cochon et évite la TNT.
+      courseC_maze_programming6_2018: |-
+        \_"Reste calme et aide moi a trouver ce vilain cochon. Autrement je pourrais m'énerver!" \_
+
+        Amène l'oiseau jusqu'au cochon et évite la TNT.
+      courseC_maze_programming6_2019: |-
+        \_"Reste calme et aide moi a trouver ce vilain cochon. Autrement je pourrais m'énerver!" \_
+
+        Amène l'oiseau jusqu'au cochon et évite la TNT.
+      courseC_maze_programming7: |-
+        _"C'est l'heure d'être en colère!"_
+
+        **Défi** Ce code a beaucoup d'erreur. Tu dois ajouter des blocs et en enlever d'autres.
+      courseC_maze_programming7_2018: |-
+        _"C'est l'heure d'être en colère!"_
+
+        **Défi** Ce code a beaucoup d'erreur. Tu dois ajouter des blocs et en enlever d'autres.
+      courseC_maze_programming7_2019: |-
+        _"C'est l'heure d'être en colère!"_
+
+        **Défi** Ce code a beaucoup d'erreur. Tu dois ajouter des blocs et en enlever d'autres.
+      courseC_maze_programming8: _"Reste calme et aide moi a trouver ce vilain cochon."_
+      courseC_maze_programming8_2018: _"Reste calme et aide moi a trouver ce vilain
+        cochon."_
+      courseC_maze_programming8_2019: _"Reste calme et aide moi a trouver ce vilain
+        cochon."_
+      courseC_maze_programming8_predict1: _"Reste calme et aide moi a trouver ce vilain
+        cochon."_
+      courseC_maze_programming8_predict1_2018: _"Reste calme et aide moi a trouver
+        ce vilain cochon."_
+      courseC_maze_programming8_predict1_2019: _"Reste calme et aide moi a trouver
+        ce vilain cochon."_
+      courseC_maze_programming9: _"Maintenant, aide moi me faufiler jusqu'au cochon
+        comme tu le souhaites!"_
+      courseC_maze_programming9_2018: _"Maintenant, aide moi me faufiler jusqu'au
+        cochon comme tu le souhaites!"_
+      courseC_maze_programming9_2019: _"Maintenant, aide moi me faufiler jusqu'au
+        cochon comme tu le souhaites!"_
+      courseC_maze_programming_challenge1: 'L''oiseau a besoin de ton aide! Le cochon
+        se cache et le but est de le trouver. '
+      courseC_maze_programming_challenge1_2018: 'L''oiseau a besoin de ton aide! Le
+        cochon se cache et le but est de le trouver. '
+      courseC_maze_programming_challenge1_2019: 'L''oiseau a besoin de ton aide! Le
+        cochon se cache et le but est de le trouver. '
+      courseC_maze_programming_challenge2: Parfois il y a plus d'une manière de résoudre
+        le même problème. Parfois il est plus rapide de faire marche arrière que d'aller
+        tout droit!
+      courseC_maze_programming_challenge2_2018: Parfois il y a plus d'une manière
+        de résoudre le même problème. Parfois il est plus rapide de faire marche arrière
+        que d'aller tout droit!
+      courseC_maze_programming_challenge2_2019: Parfois il y a plus d'une manière
+        de résoudre le même problème. Parfois il est plus rapide de faire marche arrière
+        que d'aller tout droit!
       courseC_starWars_loops1: "[](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"Go
         get the scrap metal, BB-8\"_ \\\r\n\\\r\nUse five of the same blocks to\nget
         the scrap metal. Scrap metal glows like this: [](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)"
@@ -5746,6 +6151,12 @@ fr-FR:
       courseC_starWars_loops4_2019: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"Keep
         it up, BB-8.\"_\\\r\n\\\r\nIn this puzzle, two `repeat` loops will help\nyou
         get BB-8 to all of the scrap metal with the fewest number of blocks!"
+      courseC_starWars_loops5: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Allez BB-8!"_'
+      courseC_starWars_loops5_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Allez BB-8!"_'
+      courseC_starWars_loops5_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Allez BB-8!"_'
       courseC_starWars_loops6: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"Can
         you get it all?\"_\\\r\n\\\r\nLoops even work with more than one block\ninside!
         \ Can you loop this sequence?"
@@ -5792,12 +6203,143 @@ fr-FR:
         style=\"float: left; margin: 0 15px 15px 0;\" />\\\r\nDraw a\nstair-step pattern
         that uses turns between 75 and 105 degrees -- but make\nsure that your left
         and right turns use the same angle.  \\\r\n(You will see\nwhy later.)"
+      courseD_artist_binary1: Nous avons mis à votre disposition une grille de "pixels"
+        que vous pouvez parcourir pour créer des dessins en activant certains carrés.
+      courseD_artist_binary1_2018: Nous avons mis à votre disposition une grille de
+        "pixels" que vous pouvez parcourir pour créer des dessins en activant certains
+        carrés.
+      courseD_artist_binary1_2019: Nous avons mis à votre disposition une grille de
+        "pixels" que vous pouvez parcourir pour créer des dessins en activant certains
+        carrés.
+      courseD_artist_binary2: |-
+        Voici une fonction qui prend des chaines binaires de 1 et de 0 qui dicte à l'artiste de les suivre de gauche à droite, de haut en bas.
+
+        * * *
+
+        L'artiste remplira les carrés lorsqu'il voit un 1 et ignorera le carré lorsqu'il voit un 0.
+
+        * * *
+
+        **Démarre ce code pour voir comment l'artiste utilise les binaires pour dessiner les motifs.**
+      courseD_artist_binary2_2018: |-
+        Voici une fonction qui prend des chaines binaires de 1 et de 0 qui dicte à l'artiste de les suivre de gauche à droite, de haut en bas.
+
+        * * *
+
+        L'artiste remplira les carrés lorsqu'il voit un 1 et ignorera le carré lorsqu'il voit un 0.
+
+        * * *
+
+        **Démarre ce code pour voir comment l'artiste utilise les binaires pour dessiner les motifs.**
+      courseD_artist_binary2_2019: |-
+        Voici une fonction qui prend des chaines binaires de 1 et de 0 qui dicte à l'artiste de les suivre de gauche à droite, de haut en bas.
+
+        * * *
+
+        L'artiste remplira les carrés lorsqu'il voit un 1 et ignorera le carré lorsqu'il voit un 0.
+
+        * * *
+
+        **Démarre ce code pour voir comment l'artiste utilise les binaires pour dessiner les motifs.**
       courseD_artist_binary_challenge2_2018: "There are 256 bits\nrepresented on this
         grid - that means it's easy for a small change to cause\nbig problems. Are
         you persistent enough to restore this logo back to normal?\\\r\n\\\r\n![](https://images.code.org/74e15f513982b47762dd33ebbc21e5e9-image-1498776314610.png)"
       courseD_artist_binary_challenge2_2019: "There are 256 bits\nrepresented on this
         grid - that means it's easy for a small change to cause\nbig problems. Are
         you persistent enough to restore this logo back to normal?\\\r\n\\\r\n![](https://images.code.org/74e15f513982b47762dd33ebbc21e5e9-image-1498776314610.png)"
+      courseD_artist_nestedLoops1a: "Maintenant répéte le triangle 6 fois. \n\nAprès
+        chaque triangle, tu auras besoin de tourner de 60 degrés avant de dessiner
+        le suivant. "
+      courseD_artist_nestedLoops1a_2018: "Maintenant répéte le triangle 6 fois. \n\nAprès
+        chaque triangle, tu auras besoin de tourner de 60 degrés avant de dessiner
+        le suivant. "
+      courseD_artist_nestedLoops1a_2019: "Maintenant répéte le triangle 6 fois. \n\nAprès
+        chaque triangle, tu auras besoin de tourner de 60 degrés avant de dessiner
+        le suivant. "
+      courseD_artist_nestedLoops2: |-
+        Cette fois, complète le puzzle avec le moins de blocs possible.
+
+        Après chaque triangle, tu auras besoin de tourner de 60 degrés avant de dessiner le suivant. Regarde comment c'est beaucoup plus simple avec les **boucles imbriquées**?
+      courseD_artist_nestedLoops2_2018: |-
+        Cette fois, complète le puzzle avec le moins de blocs possible.
+
+        Après chaque triangle, tu auras besoin de tourner de 60 degrés avant de dessiner le suivant. Regarde comment c'est beaucoup plus simple avec les **boucles imbriquées**?
+      courseD_artist_nestedLoops2_2019: |-
+        Cette fois, complète le puzzle avec le moins de blocs possible.
+
+        Après chaque triangle, tu auras besoin de tourner de 60 degrés avant de dessiner le suivant. Regarde comment c'est beaucoup plus simple avec les **boucles imbriquées**?
+      courseD_artist_nestedLoops4: |-
+        Bravo!  Fais la même chose avec des cercles.
+
+        -   Chaque cercle est construit en avancant 1 pixel avant de tourner d'1 degré, 360 fois.
+        -   Chaque cercle commence juste à 50 pixels de l'endroit ou le précédent c'est terminé
+      courseD_artist_nestedLoops4_2018: |-
+        Bravo!  Fais la même chose avec des cercles.
+
+        -   Chaque cercle est construit en avancant 1 pixel avant de tourner d'1 degré, 360 fois.
+        -   Chaque cercle commence juste à 50 pixels de l'endroit ou le précédent c'est terminé
+      courseD_artist_nestedLoops4_2019: |-
+        Bravo!  Fais la même chose avec des cercles.
+
+        -   Chaque cercle est construit en avancant 1 pixel avant de tourner d'1 degré, 360 fois.
+        -   Chaque cercle commence juste à 50 pixels de l'endroit ou le précédent c'est terminé
+      courseD_artist_nestedLoops5: |-
+        Que se passe-t-il si tu tournes de 90 degrés entre chaque cercle?
+
+        (Pour obtenir cette image, tu dois encore avancer de 50 pixels entre chaque cercle)
+      courseD_artist_nestedLoops5_2018: |-
+        Que se passe-t-il si tu tournes de 90 degrés entre chaque cercle?
+
+        (Pour obtenir cette image, tu dois encore avancer de 50 pixels entre chaque cercle)
+      courseD_artist_nestedLoops5_2019: |-
+        Que se passe-t-il si tu tournes de 90 degrés entre chaque cercle?
+
+        (Pour obtenir cette image, tu dois encore avancer de 50 pixels entre chaque cercle)
+      courseD_artist_nestedLoops7: |-
+        Utilises ce que tu as appris pour faire ce dessin.
+
+        -   chaque carré à **100 pixels de côté** et **des angles à 90 degrés**
+        -   Tu devras tourner de **60 degrés entre chaque carré**. Pourquoi? Parce qu'il y a 6 carrés, et 360 degrés (un tour complet) divisé par 6, c'est 60 degrés.
+        -   Assures toi de sauter de **50 pixels pour aller au carré suivant**
+      courseD_artist_nestedLoops7_2018: |-
+        Utilises ce que tu as appris pour faire ce dessin.
+
+        -   chaque carré à **100 pixels de côté** et **des angles à 90 degrés**
+        -   Tu devras tourner de **60 degrés entre chaque carré**. Pourquoi? Parce qu'il y a 6 carrés, et 360 degrés (un tour complet) divisé par 6, c'est 60 degrés.
+        -   Assures toi de sauter de **50 pixels pour aller au carré suivant**
+      courseD_artist_nestedLoops7_2019: |-
+        Utilises ce que tu as appris pour faire ce dessin.
+
+        -   chaque carré à **100 pixels de côté** et **des angles à 90 degrés**
+        -   Tu devras tourner de **60 degrés entre chaque carré**. Pourquoi? Parce qu'il y a 6 carrés, et 360 degrés (un tour complet) divisé par 6, c'est 60 degrés.
+        -   Assures toi de sauter de **50 pixels pour aller au carré suivant**
+      courseD_artist_nestedLoops8: |-
+        Using what you have learned in the last couple of puzzles, build this image from the beginning.
+
+        -   Chaque hexagone a **50 pixels de côtés** et des **virages à 60 degrés**
+      courseD_artist_nestedLoops8_2018: |-
+        Using what you have learned in the last couple of puzzles, build this image from the beginning.
+
+        -   Chaque hexagone a **50 pixels de côtés** et des **virages à 60 degrés**
+      courseD_artist_nestedLoops8_2019: |-
+        Using what you have learned in the last couple of puzzles, build this image from the beginning.
+
+        -   Chaque hexagone a **50 pixels de côtés** et des **virages à 60 degrés**
+      courseD_artist_nestedLoops9: |-
+        **Défi:** Peux tu trouver comment faire un dessin comme celui la ?
+
+        -   Chaque forme fait **50 pixels de côté**
+        -   Entre chaque forme, tu devras sauter en vant de la longueur d'un côté, et tourner de 45 degrés.
+      courseD_artist_nestedLoops9_2018: |-
+        **Défi:** Peux tu trouver comment faire un dessin comme celui la ?
+
+        -   Chaque forme fait **50 pixels de côté**
+        -   Entre chaque forme, tu devras sauter en vant de la longueur d'un côté, et tourner de 45 degrés.
+      courseD_artist_nestedLoops9_2019: |-
+        **Défi:** Peux tu trouver comment faire un dessin comme celui la ?
+
+        -   Chaque forme fait **50 pixels de côté**
+        -   Entre chaque forme, tu devras sauter en vant de la longueur d'un côté, et tourner de 45 degrés.
       courseD_artist_nestedLoops9_predict1: "**Challenge:**\nCan you figure out how
         to make a picture like this?\\\r\n\\\r\n\n-   Both shapes have\n    50 pixel
         sides"
@@ -5807,6 +6349,30 @@ fr-FR:
       courseD_artist_nestedLoops9_predict1_2019: "**Challenge:**\nCan you figure out
         how to make a picture like this?\\\r\n\\\r\n\n-   Both shapes have\n    50
         pixel sides"
+      courseD_artist_nestedLoopsFP: |-
+        Now it's your turn.  Take the skills you have learned and make something that you love!
+
+        Besoin d'une idée? Essai de faire un de ceux-la:
+
+        ![expandable](https://images.code.org/7ac814e356b3548f57bfab8a9eb31dff-image-1497993113904.png)
+        ![expandable](https://images.code.org/bd29d35c9a8abf9d27591b90b0f3ec0f-image-1497993121072.png)
+        ![expandable](https://images.code.org/2970f34785e51ae98be7aff6fe0827ce-image-1497993126938.png)
+      courseD_artist_nestedLoopsFP_2018: |-
+        Now it's your turn.  Take the skills you have learned and make something that you love!
+
+        Besoin d'une idée? Essai de faire un de ceux-la:
+
+        ![expandable](https://images.code.org/7ac814e356b3548f57bfab8a9eb31dff-image-1497993113904.png)
+        ![expandable](https://images.code.org/bd29d35c9a8abf9d27591b90b0f3ec0f-image-1497993121072.png)
+        ![expandable](https://images.code.org/2970f34785e51ae98be7aff6fe0827ce-image-1497993126938.png)
+      courseD_artist_nestedLoopsFP_2019: |-
+        Now it's your turn.  Take the skills you have learned and make something that you love!
+
+        Besoin d'une idée? Essai de faire un de ceux-la:
+
+        ![expandable](https://images.code.org/7ac814e356b3548f57bfab8a9eb31dff-image-1497993113904.png)
+        ![expandable](https://images.code.org/bd29d35c9a8abf9d27591b90b0f3ec0f-image-1497993121072.png)
+        ![expandable](https://images.code.org/2970f34785e51ae98be7aff6fe0827ce-image-1497993126938.png)
       courseD_artist_nestedLoops_challenge1: "Can you figure\nout how to make a picture
         like this?\\\r\n\\\r\n\n-   Both shapes have **50 pixel\n    sides.**\\\r\n-
         \  The _octagons_ are made with **45 degree** turns.\\\r\n-   The _triangles_\n
@@ -5819,18 +6385,24 @@ fr-FR:
         a picture like this?\\\r\n\\\r\n\n-   Both shapes have **50 pixel\n    sides.**\\\r\n-
         \  The _octagons_ are made with **45 degree** turns.\\\r\n-   The _triangles_\n
         \   are made with **120 degree** turns."
-      courseD_artist_nestedLoops_challenge2: "Can you figure\nout how to make a picture
-        like this?\\\r\n\\\r\n\n-   The first inner loop should\n    make an octagon.\\\r\n-
-        \  The second inner loop should make a hexagon.\\\r\n-   The\n    third inner
-        loop should make a square."
-      courseD_artist_nestedLoops_challenge2_2018: "Can you figure\nout how to make
-        a picture like this?\\\r\n\\\r\n\n-   The first inner loop should\n    make
-        an octagon.\\\r\n-   The second inner loop should make a hexagon.\\\r\n-   The\n
-        \   third inner loop should make a square."
-      courseD_artist_nestedLoops_challenge2_2019: "Can you figure\nout how to make
-        a picture like this?\\\r\n\\\r\n\n-   The first inner loop should\n    make
-        an octagon.\\\r\n-   The second inner loop should make a hexagon.\\\r\n-   The\n
-        \   third inner loop should make a square."
+      courseD_artist_nestedLoops_challenge2: |-
+        Ce code est juste un peu faux! Peux-tu le corriger pour dessiner correctement dans l'espace de travail?
+
+        -   La première boucle interieure devrait faire un octagone.
+        -   La seconde boucle intérieure devrait faire un hexagone.
+        -   La troisième boucle devrait faire un carré.
+      courseD_artist_nestedLoops_challenge2_2018: |-
+        Ce code est juste un peu faux! Peux-tu le corriger pour dessiner correctement dans l'espace de travail?
+
+        -   La première boucle interieure devrait faire un octagone.
+        -   La seconde boucle intérieure devrait faire un hexagone.
+        -   La troisième boucle devrait faire un carré.
+      courseD_artist_nestedLoops_challenge2_2019: |-
+        Ce code est juste un peu faux! Peux-tu le corriger pour dessiner correctement dans l'espace de travail?
+
+        -   La première boucle interieure devrait faire un octagone.
+        -   La seconde boucle intérieure devrait faire un hexagone.
+        -   La troisième boucle devrait faire un carré.
       courseD_artist_project1: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)\n_“Hi,
         I’m Elsa of Arendelle, help me draw a shape.”_\\\r\n\\\r\nDraw a small shape,\nbetween
         **20 and 50** pixels wide.  It can be any shape that you like.  \\\r\n\n<hr/>\\\r\n\\\r\nYou\ncan
@@ -6002,20 +6574,94 @@ fr-FR:
       courseD_artist_project5_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)\n_\"Get
         creative with shapes and angles to see what kind of new snowflakes\nwe can
         draw!\"_\\\r"
-      courseD_artist_ramp11: "Great!  Now let's make a square\nusing Artist!  The
-        blocks are a little different, but the idea is the same.\\\r\n\\_\\_\\_\\\r\nEach\nside
-        of the square has a length of 200 pixels, and you will need to turn 90\ndegrees
-        to make each angle."
-      courseD_artist_ramp12: "Use what you've learned to draw\nthis triangle inside
-        of a square.\\\r\n\\_\\_\\_\\\r\n\n##### The sides are each 200 pixels\n\nlong.
-        You will need to turn 90 degrees to make the square and 120 degrees\nto make
-        the triangle."
+      courseD_artist_ramp11: |-
+        Bravo! Maintenant faisons un carré avec l'artiste! Les blocs sont légèrement différent, mais l'idée est la même.
+
+        * * *
+
+        Chaque côté du carré est long de 200 pixels, et tu auras besoin de tourner à 90 degrés pour faire chaque angle.
+      courseD_artist_ramp12: |-
+        Utilise ce que tu as appris pour dessiner ce triangle dnas un carré
+
+        * * *
+
+        ##### Les côtés font chacun 200 pixels de long. Tu auras besoin de tourner à 90 degrés pour faire le carré et 120 degrés pour faire le triangle.
+      courseD_autorun_binary2_2019: |-
+        Voici une fonction qui prend des chaines binaires de 1 et de 0 qui dicte à l'artiste de les suivre de gauche à droite, de haut en bas.
+
+        * * *
+
+        L'artiste remplira les carrés lorsqu'il voit un 1 et ignorera le carré lorsqu'il voit un 0.
+
+        * * *
+
+        **Démarre ce code pour voir comment l'artiste utilise les binaires pour dessiner les motifs.**
       courseD_bee_conditionals1_predict1: "_\"This cloud is\nblocking my view!\"_\\\r\n\\\r\nCheck
         to see if there's a flower under the cloud.\nIf there's a flower, get nectar."
       courseD_bee_conditionals1_predict1_2018: "_\"This cloud is\nblocking my view!\"_\\\r\n\\\r\nCheck
         to see if there's a flower under the cloud.\nIf there's a flower, get nectar."
       courseD_bee_conditionals1_predict1_2019: "_\"This cloud is\nblocking my view!\"_\\\r\n\\\r\nCheck
         to see if there's a flower under the cloud.\nIf there's a flower, get nectar."
+      courseD_bee_conditionals2: |-
+        Plus de nuages!
+
+        Vérifie sous chaque nuage s'il cache une fleur avant de ramasser le nectar.  S'il y a une fleur sous le nuage, l'abeille aura besoin de ramasser le nectar _une fois_.
+
+        Souviens toi: Tous les nuages ne cachent pas la même chose!
+      courseD_bee_conditionals2_2018: |-
+        Plus de nuages!
+
+        Vérifie sous chaque nuage s'il cache une fleur avant de ramasser le nectar.  S'il y a une fleur sous le nuage, l'abeille aura besoin de ramasser le nectar _une fois_.
+
+        Souviens toi: Tous les nuages ne cachent pas la même chose!
+      courseD_bee_conditionals2_2019: |-
+        Plus de nuages!
+
+        Vérifie sous chaque nuage s'il cache une fleur avant de ramasser le nectar.  S'il y a une fleur sous le nuage, l'abeille aura besoin de ramasser le nectar _une fois_.
+
+        Souviens toi: Tous les nuages ne cachent pas la même chose!
+      courseD_bee_conditionals3: Tu peux seulement ramasser le nectar des fleurs,
+        mais tu peux vérifier n'importe quel espacepour voir s'il contient une fleur.
+        S'il y a une fleur sous un de ces nuages, l'abeille devra ramasser le nectar
+        _une fois_.
+      courseD_bee_conditionals3_2018: Tu peux seulement ramasser le nectar des fleurs,
+        mais tu peux vérifier n'importe quel espacepour voir s'il contient une fleur.
+        S'il y a une fleur sous un de ces nuages, l'abeille devra ramasser le nectar
+        _une fois_.
+      courseD_bee_conditionals3_2019: Tu peux seulement ramasser le nectar des fleurs,
+        mais tu peux vérifier n'importe quel espacepour voir s'il contient une fleur.
+        S'il y a une fleur sous un de ces nuages, l'abeille devra ramasser le nectar
+        _une fois_.
+      courseD_bee_conditionals6: |-
+        _"Maintenant je veux juste du miel"_
+
+        Certains de ces nuages peuvent avoir des nids d'abeille sous eux. Vérifie bien si un nid d'abeilles se cache derrière chaque nuage! S'il y a un nid d'abeilles, l'abeille aura besoin de faire du miel _une fois_.
+      courseD_bee_conditionals6_2018: |-
+        _"Maintenant je veux juste du miel"_
+
+        Certains de ces nuages peuvent avoir des nids d'abeille sous eux. Vérifie bien si un nid d'abeilles se cache derrière chaque nuage! S'il y a un nid d'abeilles, l'abeille aura besoin de faire du miel _une fois_.
+      courseD_bee_conditionals6_2019: |-
+        _"Maintenant je veux juste du miel"_
+
+        Certains de ces nuages peuvent avoir des nids d'abeille sous eux. Vérifie bien si un nid d'abeilles se cache derrière chaque nuage! S'il y a un nid d'abeilles, l'abeille aura besoin de faire du miel _une fois_.
+      courseD_bee_conditionals7: "Parfois un nuage couvre une fleur, parfois il couvre
+        un nid d'abeilles!\n\nUtilise le bloc `si/autre` pour ramasser le nectar des
+        fleurs et faire du miel dans les nids d'abeilles. \nSouviens toi: s'il y a
+        une fleur, l'abeille n'a besoin de ramasser le nectar qu'_une seule fois_.
+        S'il y a un nid d'abeilles, l'abeille n'a besoin de faire du miel qu'_une
+        seule fois_."
+      courseD_bee_conditionals7_2018: "Parfois un nuage couvre une fleur, parfois
+        il couvre un nid d'abeilles!\n\nUtilise le bloc `si/autre` pour ramasser le
+        nectar des fleurs et faire du miel dans les nids d'abeilles. \nSouviens toi:
+        s'il y a une fleur, l'abeille n'a besoin de ramasser le nectar qu'_une seule
+        fois_. S'il y a un nid d'abeilles, l'abeille n'a besoin de faire du miel qu'_une
+        seule fois_."
+      courseD_bee_conditionals7_2019: "Parfois un nuage couvre une fleur, parfois
+        il couvre un nid d'abeilles!\n\nUtilise le bloc `si/autre` pour ramasser le
+        nectar des fleurs et faire du miel dans les nids d'abeilles. \nSouviens toi:
+        s'il y a une fleur, l'abeille n'a besoin de ramasser le nectar qu'_une seule
+        fois_. S'il y a un nid d'abeilles, l'abeille n'a besoin de faire du miel qu'_une
+        seule fois_."
       courseD_bee_conditionals7_predict2: "Sometimes a cloud\ncovers a flower, sometimes
         it covers a honeycomb! \\\r\n\\\r\nUse the `if/else`\nblock to collect nectar
         at flowers and make honey at honeycomb. Remember:\nthere will only ever bee
@@ -6028,6 +6674,61 @@ fr-FR:
         sometimes it covers a honeycomb! \\\r\n\\\r\nUse the `if/else`\nblock to collect
         nectar at flowers and make honey at honeycomb. Remember:\nthere will only
         ever bee _one_ honeycomb or _one_ flower behind each cloud."
+      courseD_bee_conditionals8: |-
+        **Défi** Il y aura une fleur ou un nid d'abeille suos chacun de ces nuages!
+
+        Ramasse le nectar une fois s'il y a une fleur.
+        Sinon, fait du miel une fois (parce qu'il y a un nid d'abeilles).
+      courseD_bee_conditionals8_2018: |-
+        **Défi** Il y aura une fleur ou un nid d'abeille suos chacun de ces nuages!
+
+        Ramasse le nectar une fois s'il y a une fleur.
+        Sinon, fait du miel une fois (parce qu'il y a un nid d'abeilles).
+      courseD_bee_conditionals8_2019: |-
+        **Défi** Il y aura une fleur ou un nid d'abeille suos chacun de ces nuages!
+
+        Ramasse le nectar une fois s'il y a une fleur.
+        Sinon, fait du miel une fois (parce qu'il y a un nid d'abeilles).
+      courseD_bee_conditionals9: Ramasse tous les nectars et fais du miel. tu peux
+        seulement ramasser du nectar depuis les fleurs et faire du miel depuis les
+        nids d'abeilles. Vérifie tous les espaces pour vérifier qu'il y a une fleur
+        ou un nid d'abeilles. Il y aura toujours une seule fleur ou un nid d'abeille
+        derrière chaque nuage.
+      courseD_bee_conditionals9_2018: Ramasse tous les nectars et fais du miel. tu
+        peux seulement ramasser du nectar depuis les fleurs et faire du miel depuis
+        les nids d'abeilles. Vérifie tous les espaces pour vérifier qu'il y a une
+        fleur ou un nid d'abeilles. Il y aura toujours une seule fleur ou un nid d'abeille
+        derrière chaque nuage.
+      courseD_bee_conditionals9_2019: Ramasse tous les nectars et fais du miel. tu
+        peux seulement ramasser du nectar depuis les fleurs et faire du miel depuis
+        les nids d'abeilles. Vérifie tous les espaces pour vérifier qu'il y a une
+        fleur ou un nid d'abeilles. Il y aura toujours une seule fleur ou un nid d'abeille
+        derrière chaque nuage.
+      courseD_bee_conditionals_challenge1: Ramasse tous les nectars et fais du miel.
+        Tu peux seulement ramasser du nectar depuis les fleurs et faire du miel depuis
+        les nids d'abeilles. Vérifie tous les espaces pour vérifier qu'il y a une
+        fleur ou un nid d'abeilles.
+      courseD_bee_conditionals_challenge1_2018: Ramasse tous les nectars et fais du
+        miel. Tu peux seulement ramasser du nectar depuis les fleurs et faire du miel
+        depuis les nids d'abeilles. Vérifie tous les espaces pour vérifier qu'il y
+        a une fleur ou un nid d'abeilles.
+      courseD_bee_conditionals_challenge1_2019: Ramasse tous les nectars et fais du
+        miel. Tu peux seulement ramasser du nectar depuis les fleurs et faire du miel
+        depuis les nids d'abeilles. Vérifie tous les espaces pour vérifier qu'il y
+        a une fleur ou un nid d'abeilles.
+      courseD_bee_conditionals_challenge2: Ramasse tout le nectar et fais tout le
+        miel. Tu peux ramasser tous le nectar dans les fleurs en utilisant la boucle
+        `tant que nectar > 0`.
+      courseD_bee_conditionals_challenge2_2018: Ramasse tout le nectar et fais tout
+        le miel. Tu peux ramasser tous le nectar dans les fleurs en utilisant la boucle
+        `tant que nectar > 0`.
+      courseD_bee_conditionals_challenge2_2019: Ramasse tout le nectar et fais tout
+        le miel. Tu peux ramasser tous le nectar dans les fleurs en utilisant la boucle
+        `tant que nectar > 0`.
+      courseD_bee_debugging_challenge1a: |-
+        _"Bizz bizz! Je sais comment ramasser du nectar, maintenant aide moi à faire du miel!"_
+
+        Regarde comment l'abeille ramasse le nectar. Peux-tu utiliser le même modèle pour aider l'abeille à faire son miel?
       courseD_bee_nestedLoops8: Recueille tout le nectar de chaque fleur et fabrique
         du miel dans chaque gâteau de miel. Utilise une boucle imbriquée.
       courseD_bee_nestedLoops8_2018: Recueille tout le nectar de chaque fleur et fabrique
@@ -6101,6 +6802,9 @@ fr-FR:
       courseD_collector_debugging5a_2019: "_\"This puzzle is making\nme loopy!\"_\\\r\n\\\r\nAll
         of the commands that you need are already here...now\nuse your debugging skills
         to figure out how to solve this puzzle."
+      courseD_collector_debugging6: "**Défi:** Tous les blocs dont tu as besoin sont
+        ici...Maintenant utilise tes comoétences en débogage pour corriger les erreurs
+        et ramasser les diamants."
       courseD_collector_debugging8: "_\"So much treasure!\"_\\\r\n\\\r\nHelp\nLaurel
         fix the code to get all the treasure."
       courseD_collector_debugging8a_2018: "_\"So much treasure!\"_\\\r\n\\\r\nHelp\nLaurel
@@ -6127,10 +6831,16 @@ fr-FR:
       courseD_collector_nested_loops_challenge2a: "_\"Let's\nhunt for treasure - using
         loops!\"_ \\\r\n\\\r\nHelp the collector reach at least\ntwo piles of treasure
         using only the blocks in your toolbox. It is possible\nto collect all 4."
-      courseD_collector_ramp8: "This puzzle is a lot like the\nlast one, but now it
-        stars Laurel the Adventurer!\\\r\n\\_\\_\\_\\\r\n\\\r\nTake the same\npath
-        as before, but this time, use a repeat loop to collect treasure when\nyou
-        get to it.\\\r"
+      courseD_collector_ramp10: Fais marcher Laurel dans ce carré en ramassant les
+        diamants lorsque tu les trouves.
+      courseD_collector_ramp8: |-
+        Ce puzzle est preque identique au précédent, mais maintenant il commence avec Laurel l'Aventurière!
+
+        * * *
+
+        Prends le même chemin que précédemment, mais cette fois, utilise une boucle répéter pour ramasser tous les diamants lorsque tu passes dessus.
+      courseD_collector_ramp9: Maintenant qu'il y a plus de diamants, peux-tu aider
+        Laurel à les ramasser?
       courseD_farmer_condLoops3: "_\"Corn, lettuce, AND pumpkins!\nHelp me harvest
         them all.\"_\\\r\n\\\r\nEach plant will have either one piece\nof corn, one
         head of lettuce, or one pumpkin."
@@ -6205,12 +6915,36 @@ fr-FR:
         the TNT."
       courseD_maze_ramp5_2019: "_\"Follow this path to get me to\nthe pig!\"_\\\r\n\\\r\nAvoid
         the TNT."
-      courseD_maze_ramp6: "_\"Keep calm and help me find the\nbad pig. Otherwise I
-        might get angry!\"_\\\r\n\\\r\nWhen you have several of the\nsame block in
-        a row, try using a `repeat` loop, instead.  This will do the\nsame thing with
-        less code!"
-      courseD_maze_ramp7: "_\"It's time to get angry!\"_  \\\r\n\\\r\n\\\r\nUse\nwhat
-        you've learned to get the bird to the pig!"
+      courseD_maze_ramp6: |-
+        _"Reste calme et aide moi à attraper le cochon. Sinon je vais devenir en colère!"_
+
+        Lorsque tu as plusieurs blocs identiques sur une rangée, essaie d'utiliser une boucle `Répéter` à la place. Cela fera la même chose avec moins de code!
+      courseD_maze_ramp7: |-
+        _"C'est le moment d'être en colère"_
+
+        Utilise ce que tu as appris pour amener l'oiseau sur le cochon!
+      courseD_playLab_cond1: |-
+        Pour commencer notre jeu, le pirate Pegleg (acteur 1) doit pouvoir aller dans toutes les directions. Connecte les blocs aux bons évènements pour que Pegleg bouge.
+
+        * * *
+
+        Aide Pegleg à attraper les drapeaux pour résoudre ce puzzle.
+      courseD_playLab_cond1_2018: |-
+        Pour commencer notre jeu, le pirate Pegleg (acteur 1) doit pouvoir aller dans toutes les directions. Connecte les blocs aux bons évènements pour que Pegleg bouge.
+
+        * * *
+
+        Aide Pegleg à attraper les drapeaux pour résoudre ce puzzle.
+      courseD_playLab_cond2: "Il est temps d'ajouter des points! \n\nEdite le code
+        pour donner à Pegleg (acteur 1) un point lorsqu'il touche le dragon (acteur
+        2). "
+      courseD_playLab_cond2_2018: "Il est temps d'ajouter des points! \n\nEdite le
+        code pour donner à Pegleg (acteur 1) un point lorsqu'il touche le dragon (acteur
+        2). "
+      courseD_playLab_cond3: 'Utilise une boucle `Répète à l''infini` pour que les
+        émotions du dragon (acteur 2) change aléatoirement chaque seconde.  '
+      courseD_playLab_cond3_2018: 'Utilise une boucle `Répète à l''infini` pour que
+        les émotions du dragon (acteur 2) change aléatoirement chaque seconde.  '
       courseD_playLab_cond3a: "It's time to use what we've\nlearned about conditionals
         to make this game amazing. \\\r\n\\\r\nAdd code so\nthat when Pegleg gets
         to the dragon, he gets two points _if_ the dragon is\nhappy. Otherwise, he
@@ -6219,6 +6953,32 @@ fr-FR:
         to make this game amazing. \\\r\n\\\r\nAdd code so\nthat when Pegleg gets
         to the dragon, he gets two points _if_ the dragon is\nhappy. Otherwise, he
         should get only one point added to his score."
+      courseD_playLab_cond4: |-
+        Cela devient intéressant!
+
+        Ajoute du code pour que le ninja (acteur 3) poursuive Pegleg dès que le jeu commence. Le jeu est perdu et s'arrête si le ninja l'attrape.
+      courseD_playLab_cond4_2018: |-
+        Cela devient intéressant!
+
+        Ajoute du code pour que le ninja (acteur 3) poursuive Pegleg dès que le jeu commence. Le jeu est perdu et s'arrête si le ninja l'attrape.
+      courseD_playLab_cond5: |-
+        Maintenant il nous faut un moyen de gagner.
+
+        Ajoute une boucle `Répète à l'infini` qui vérifie en permanence **si** le score est supérieur à 5 et qui termine le jeu comme une **victoire** si c'est le cas.
+      courseD_playLab_cond5_2018: |-
+        Maintenant il nous faut un moyen de gagner.
+
+        Ajoute une boucle `Répète à l'infini` qui vérifie en permanence **si** le score est supérieur à 5 et qui termine le jeu comme une **victoire** si c'est le cas.
+      courseD_playLab_cond6: |-
+        Wow, c'est trop difficile de gagner!
+
+        Améliorons ce jeu pour le rendre plus attrayant. Ce défi est en 2 parties :
+
+        * * *
+
+        1.  Ralentit le ninja (acteur 3) avant que tu le mettes à poursuivre le pirate (acteur 1).
+
+        2.  Utilise une boucle `Répète à l'infini` pour vérifier si le pirate est dans une "zone sûre" sous la ligne des pieuvres (à plus de 225 pixels du bas), s'il s'y trouve, alors le ninja **fuis** le pirate. Sinon, le ninja **poursuit** le pirate.
       courseD_playLab_cond6a: "We don't want the pirate to\nstay in the \"safe zone\"
         too long!  \\\r\n\\\r\nAdd code to the `if` statement\nbelow so that if the
         pirate is in the safe zone, the program will wait one\nsecond, then deduct
@@ -6236,6 +6996,22 @@ fr-FR:
         I might get angry!\"_\\\r\n\\\r\nWhen you have several blocks\nin a row, try
         moving them inside of a `repeat` loop.  This will do the same\nthing with
         less code!"
+      courseD_scrat_ramp8: "**Défi:** Utilise ce que tu as appris pour emmener Scrat
+        jusqu'au gland!"
+      courseE_artist_concept1: "Recrée cette image. \n\n-   Les hexagones font 50
+        pixels de côté\n-   Les hexagones sont espacés de 100 pixels\n-   L' épaisseur
+        des stylos des hexagones est de 1 pixel, 4 pixels et 8 pixels."
+      courseE_artist_concept1_2018: "Recrée cette image. \n\n-   Les hexagones font
+        50 pixels de côté\n-   Les hexagones sont espacés de 100 pixels\n-   L' épaisseur
+        des stylos des hexagones est de 1 pixel, 4 pixels et 8 pixels."
+      courseE_artist_concept4: |-
+        Recrée ce dessin.
+
+        Chaque carré a un côté de **20 pixels** de long et ils sont **15 carrés par rangée**.
+      courseE_artist_concept4_2018: |-
+        Recrée ce dessin.
+
+        Chaque carré a un côté de **20 pixels** de long et ils sont **15 carrés par rangée**.
       courseE_artist_concept_challenge1: "<img src=\"https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png\"\nwidth=\"200px\"/>\\\r\n\\\r\nNow
         for a challenge!  \\\r\n\\\r\nHere is a design that\nuses only blocks that
         you have already been shown.  Can you figure out how\nto recreate it?  Feel
@@ -6246,6 +7022,84 @@ fr-FR:
         you have already been shown.  Can you figure out how\nto recreate it?  Feel
         free to use trial and error. You are not expected to\nget it perfect the first
         time."
+      courseE_artist_concept_challenge2: Crée 5 rosaces en utilisant le code ci-dessous.
+      courseE_artist_concept_challenge2_2018: Crée 5 rosaces en utilisant le code
+        ci-dessous.
+      courseE_artist_functions1: |-
+        _"Moi Artiste zombie. Moi aimer dessiner!"_
+
+        Aide le zombie à dessiner des lunettes de 100 pixels de côté.
+        Le lien entre les carreaux de lunettes fait 75 pixels de long.
+      courseE_artist_functions10: |-
+        Cette fois, utilise des lignes de 8 hexagones avec des côtés de 25 pixels.
+
+        -   Pour faire chaque hexagone, répéte le côté 6 fois, en tournant de 60 degrés.
+        -   Saute en avant de 25 pixels entre chaque hexagone.
+        -   Pour dessiner un diamant, tu auras besoin d'alterner entre tourner à 60 degrés et 120 degrés.
+      courseE_artist_functions10_2018: |-
+        Cette fois, utilise des lignes de 8 hexagones avec des côtés de 25 pixels.
+
+        -   Pour faire chaque hexagone, répéte le côté 6 fois, en tournant de 60 degrés.
+        -   Saute en avant de 25 pixels entre chaque hexagone.
+        -   Pour dessiner un diamant, tu auras besoin d'alterner entre tourner à 60 degrés et 120 degrés.
+      courseE_artist_functions10_2019: |-
+        Cette fois, utilise des lignes de 8 hexagones avec des côtés de 25 pixels.
+
+        -   Pour faire chaque hexagone, répéte le côté 6 fois, en tournant de 60 degrés.
+        -   Saute en avant de 25 pixels entre chaque hexagone.
+        -   Pour dessiner un diamant, tu auras besoin d'alterner entre tourner à 60 degrés et 120 degrés.
+      courseE_artist_functions2: |-
+        Les fonctions permettent de créer de nouveaux blocs!
+
+        Nous avons mis les blocs nécessaires pour dessiner un carré dans une fonction appelée `Dessine un carré`. Cette fois, utilise la fonction `dessine un carré` pour créer les lunettes.
+      courseE_artist_functions3: |-
+        Nous reviendrons aux fonctions rapidement. Faisons une pause pour s'entrainer à faire cette étoile.
+
+        Tu peux faire ce dessin en ajoutant un bloc `répéter`.
+      courseE_artist_functions4: |-
+        Maintenant que tu peux dessiner une étoile, essaie de dessiner 4 étoiles!
+
+        -   Chaque branche de l'etoile fait 25 pixels de long
+        -   Tourne de 45 degrés entre chaque branche
+        -   Saute de 100 pixels entre chaque étoile
+      courseE_artist_functions5: |-
+        Quand est-ce qu'il est plus dur de dessiner 3 étoiles que 4? Lorsque tu dois en plus sauter par dessus la lune!
+
+        Dessine seulement ces 3 étoiles pour finir ce puzzle.
+      courseE_artist_functions6: |-
+        Tu te débrouilles bien!
+
+        Fais cette fenêtre en dessinant un carré, puis tourne de 90 degrés avant de dessiner une autre et ainsi de suite.
+      courseE_artist_functions7: |-
+        Prenons le code pour la fenêtre et ajoutons le à la fonction `dessine une fenêtre`. Maintenant nous pouvons appeler la fonction n'importe quand pour dessiner une fenêtre sans avoir à écrire du code à nouveau.
+
+         ![](https://images.code.org/615a5e93abdaffeed438a976a56fc1f5-image-1497998528859.gif)
+
+        Essaie de résoudre ce puzzle en créant \`dessine une fenêtre et en l'appelant 5 fois. Attention à la porte!
+
+        -   Les fenêtres du haut sont espacés de 50 pixels chacunes.
+        -   Les fenêtres du bas sont 100 pixels sous celles du haut.
+      courseE_artist_functions8: |-
+        **Défi:** Est ce que tu savais que tu pouvais appeler des fonctions depuis l'intérieur d'une autre fonction?
+
+        Crée autant de fonctions que tu juges nécessaire pour dessiner ces carrés de 50 pixels.
+      courseE_artist_functions9: |-
+        Crée cette image en utilisant uniquement les blocs fournis.
+
+        -   Chaque triangle a des côtés de **50 pixels**
+        -   Pour dessiner un diamant, tu devras alterner entre tourner à **60 degrés et 120 degrés**.
+      courseE_artist_functions_challenge1: Dès que tu as défini une fonction, tu peux
+        l'appeler encore et encore - quand tu veux et n'importe où! Essaie ce code
+        pour voir comment il fonctionne, puis modifie le pour faire ton propre dessin
+        impressionant!
+      courseE_artist_functions_challenge1_2018: Dès que tu as défini une fonction,
+        tu peux l'appeler encore et encore - quand tu veux et n'importe où! Essaie
+        ce code pour voir comment il fonctionne, puis modifie le pour faire ton propre
+        dessin impressionant!
+      courseE_artist_functions_challenge1_2019: Dès que tu as défini une fonction,
+        tu peux l'appeler encore et encore - quand tu veux et n'importe où! Essaie
+        ce code pour voir comment il fonctionne, puis modifie le pour faire ton propre
+        dessin impressionant!
       courseE_artist_functions_challenge2: "Not only can you\njump to some pre-set
         locations, like the corners of the canvas, you can also\nuse a `jump to` command
         to get to absolutely any spot you like! Try this code\nto see how it works,
@@ -6264,6 +7118,12 @@ fr-FR:
         then make the program your own!\\\r\n<xml>\\\r\n  <block\ntype=\"jump_to_xy\">\\\r\n
         \   <title name=\"XPOS\">???</title>\\\r\n    <title\nname=\"YPOS\">???</title>\\\r\n
         \   </block></xml>"
+      courseE_artist_functions_predict1: 'Voici un puzzle aui utilise une fonction
+        que nous avons définis. '
+      courseE_artist_functions_predict1_2018: 'Voici un puzzle aui utilise une fonction
+        que nous avons définis. '
+      courseE_artist_functions_predict1_2019: 'Voici un puzzle aui utilise une fonction
+        que nous avons définis. '
       courseE_artist_ramp8: "Great!  Now let's use that `repeat`\nloop to make a square
         using Artist!  The blocks for artist are a little different\nthan other puzzles,
         but the idea is the same.\\\r\n\\_\\_\\_\\\r\n\n##### Each side of\n\nthe
@@ -6280,18 +7140,82 @@ fr-FR:
       courseE_artist_ramp9_2: "Use what you've learned to draw\nthis triangle.\\\r\n\\_\\_\\_\\\r\n\n#####
         The sides are each 100 pixels long. You will\n\nneed to turn 120 degrees at
         each corner."
+      courseE_bee_concept1: "_\"Que de fleurs\"_\n\nRamasse tout le nectar de chaque
+        fleurs. "
+      courseE_bee_concept1_2018: "_\"Que de fleurs\"_\n\nRamasse tout le nectar de
+        chaque fleurs. "
       courseE_bee_concept2: "Help the bee make all of the honey.  \\\r\n\\\r\nYou\ncan
         only make honey at a honeycomb, but you can check any space to see if\nthere
         is a honeycomb."
       courseE_bee_concept2_2018: "Help the bee make all of the honey.  \\\r\n\\\r\nYou\ncan
         only make honey at a honeycomb, but you can check any space to see if\nthere
         is a honeycomb."
+      courseE_bee_concept5: |-
+        Est-ce que tu peux aider l'abeille a ramasser le nectar des fleurs?
+
+        Tu peux seulement ramasser le nectar des fleurs, mais tu peux vérifier s'il y a une fleur sur n'importe quel espace.
+      courseE_bee_concept5_2018: |-
+        Est-ce que tu peux aider l'abeille a ramasser le nectar des fleurs?
+
+        Tu peux seulement ramasser le nectar des fleurs, mais tu peux vérifier s'il y a une fleur sur n'importe quel espace.
+      courseE_bee_functions10: |-
+        _"Montre moi le MIEL"_
+
+        Résoud le puzzle en créant une fonction qui fait faire à l'abeille:
+
+        -   tourne dans la branche du chemin
+        -   Fabrique tout le miel
+        -   retourne dans le chemin principal
+        -   retourne dans la direction d'origine
       courseE_bee_functions2: "Functions are blocks of code that\nperform a task.
         \ \\\r\n\\\r\nUse the `get 2 nectar` function to collect the nectar\nfrom
         each flower."
       courseE_bee_functions3: Les fonctions sont des blocs de code qui effectuent
         une tâche. Utilise la fonction « Obtenir 5 » pour obtenir 5 nectars à la fois.
         Veille également à utiliser une boucle pour obtenir un compte de bloc idéal.
+      courseE_bee_functions4: La fonction «Déplacer et obtenir le nectar» déplace
+        l'abeille, recueille le nectar et renvoie l'abeille là où elle a commencé.
+        Utilise la fonction pour récolter tout le nectar.
+      courseE_bee_functions8: |-
+        **Défi:** Ces fleurs peuvent avoir des doses de nectars différentes à chaque fois que l'on exécute le puzzle.
+
+        Crée une fonction qui collecte tout le nectar de chaque fleur.
+      courseE_bee_functions_challenge1: Tu dois te débrouiller pour ce défi. Cela
+        peut-être plus compliqué qu'il n'y parait!
+      courseE_farmer_functions1: |-
+        _"On se connait? Je suis le cueilleur!"_
+
+        Aide le cueilleur à aller à la citrouille et à la ramasser.
+      courseE_farmer_functions10b: Utilise ta nouvelle fonction 2 fois pour résoudre
+        ce puzzle.
+      courseE_farmer_functions11_predict: Trouve quelle fonction utiliser and laquelle
+        effacer, puis résoud le puzzle!
+      courseE_farmer_functions11_predict_2018: Trouve quelle fonction utiliser and
+        laquelle effacer, puis résoud le puzzle!
+      courseE_farmer_functions11_predict_2019: Trouve quelle fonction utiliser and
+        laquelle effacer, puis résoud le puzzle!
+      courseE_farmer_functions1_2018: |-
+        _"On se connait? Je suis le cueilleur!"_
+
+        Aide le cueilleur à aller à la citrouille et à la ramasser.
+      courseE_farmer_functions1_2019: |-
+        _"On se connait? Je suis le cueilleur!"_
+
+        Aide le cueilleur à aller à la citrouille et à la ramasser.
+      courseE_farmer_functions1a: |-
+        _"Oooh, les légumes surgissent de partout!"_
+
+        Maintenant aide le cueilleur à ramasser tout le maïs sur le chemin de la citrouille.
+
+        * * *
+
+        ##### Note: Chaque carré sur le chemin qui mène à la citrouille peuvent avoir un maïs ou rien. Tu auras besoin d'utiliser une déclaration `si` pour vérifier s'il y a un maïs avant de le ramasser!
+      courseE_farmer_functions2b: |-
+        Aide le cueilleur à ramasser le maïs et les citrouilles.
+
+        * * *
+
+        ##### Chaque germe donnera soit _un_ maïs ou rien.
       courseE_farmer_functions2ba: "_\"I feel so functional!\"_\\\r\n\\\r\nDid\nyou
         notice that there was repeated code in the last puzzle?  It doesn't work\nto
         put it all inside of a loop, but we **can** use functions.  \\\r\n\\\r\nFor\nthis
@@ -6313,6 +7237,31 @@ fr-FR:
         pumpkin`. Now, all you need to do is put the small `corn and pumpkin`\n**function
         call block** into the code where you need it.\\\r\n\\\r\n\\_\\_\\_\\\r\n\n#####
         \n\nEach sprout will either grow _one_ corn or nothing."
+      courseE_farmer_functions3c: |-
+        Maintenant, termine toi même la fonction en y ajoutant les blocs dans la **définition de la fonction**.
+
+        N'oublie pas d'ajouter le petit bloc **d'appel à la fonction** pour utiliser la fonction dans tom programme lorsque tu as terminé.
+      courseE_farmer_functions5c: Ta fonction sera utile ici.
+      courseE_farmer_functions6c: |-
+        _"Maïs, il y a des salades!"_
+
+        Maintenant les pousses peuvent être du maïs ou de la salade. Qu'est ce que tu dois rajouter au programme pour vérifier chaque pousse et la ramasser?
+
+        * * *
+
+        ##### Note: Chaque pousse deviendra **un** maïs ou **une** salade.
+      courseE_farmer_functions7b: |-
+        _"Quel labyrinthe!"_
+
+        Aide la fermière à trouver son chemin en descendant le long de ce trajet compliqué jusqu'à la citrouille en tournant à **gauche** au maïs et à **droite** à la salade.
+
+        _(N'oublie pas de ramasser tous les produits en chemins!)_
+      courseE_farmer_functions8b: |-
+        **Défi:**  Tous les coins ne sont pas indiqués dans ce labyrinthe, ce qui veut dire que tu devras utiliser ton code de navigation plus d'une fois pour arriver à destination.
+
+        Tu peux deviner ce que tu dois faire ?
+      courseE_farmer_functions9b: Regarde bien ce puzzle. Est-ce que tu peux trouver
+        le motif?
       courseE_farmer_ramp11a: "Oh my!  This pile is so big that\nit's hard to guess
         how much dirt is in it.  \\\r\n\\\r\n\\_\\_\\_\\\r\n\\\r\nWe've added\na new
         block to the toolbox called the `while there is a pile` block.  Use\nthis
@@ -6357,6 +7306,12 @@ fr-FR:
         \ \\\r\n\\\r\nLook at all of these clouds. Some of them will turn into\nhoney,
         and others into nectar.   \\\r\nHelp the bee follow the path and solve\nthis
         puzzle.\\\r\n\\\r\n\\\r\n\\\r"
+      courseE_farmer_ramp12g: Avance jusqu'à atteindre la laitue, puis tourne à gauche
+        **si** il y a un chemin à gauche. Sinon, tourne à droite.
+      courseE_farmer_ramp12g_2018: Avance jusqu'à atteindre la laitue, puis tourne
+        à gauche **si** il y a un chemin à gauche. Sinon, tourne à droite.
+      courseE_farmer_ramp12g_2019: Avance jusqu'à atteindre la laitue, puis tourne
+        à gauche **si** il y a un chemin à gauche. Sinon, tourne à droite.
       courseE_playLab_challenge1: "\\*The **squirrels** are terrified\nto see that
         a **dinosaur** has come to town! Can the brave **knight** keep\nthem all from
         panicking?\\*\\\r\n\\\r\nRules:\\\r\n\n1.  _Touching the squirrels scores\n
@@ -6367,6 +7322,28 @@ fr-FR:
         out of points. Add some code to the `win game` and\n    `lose game` functions
         to make the game work the way it should. \\\r\n    Click the\n    hints for
         ideas!"
+      courseE_playLab_scaffold1: |-
+        C'est incroyable tout ce que tu as appris! Créons un jeu pas à pas.
+
+        En utilisant de nouveaux blocs dans ta boite à outils, choisis un nouvel arrière-plan, puis un acteur pour faire parti de ton jeu.
+      courseE_playLab_scaffold2: |-
+        Utilise des blocs comme des gestionnaires d'évènements et des actions pour faire bouger ton joueur avec les flêches de ton clavier.
+
+        Amène le joueur vers les drapeaux pour terminer ce puzzle.
+      courseE_playLab_scaffold3: |-
+        Ajoutons des caractères à ton jeu.
+
+        Utilise le bloc `affecter à l'acteur` pour ajouter plus de caractères, puis bouge jusqu'au drapeau pour terminer le puzzle.
+      courseE_playLab_scaffold4: |-
+        Plusieurs personnages et faire bouger les acteurs est un bon début pour un jeu, mais nous avons besoin de plus pour que cela ressemble à un vrai jeu. Ajoutons un score!
+
+        Utilise des blocs d'évènements comme `lorsque l'acteur touche` pour changer le score. Marque 10 points pour terminer ce puzzle.
+      courseE_playLab_scaffold5: Bon boulot! Tu as tous les composants de base pour
+        un jeu fonctionnel. Maintenant passe un peu de temps à vérifier que le jeu
+        fonctionne comme tu le souhaites. Inclus un moyen de gagner ou de perdre,
+        puis joue jusqu'à que tu rencontres une des 2 conditions.
+      courseE_playLab_scaffold6: Tu as terminé! Maintenant tu peux jouer à ton jeu
+        où le partager avec tes amis et camarades de classe!
       courseF_artist_for_challenge1: "Can you figure out how\nto re-create this drawing?
         \\\r\n\\\r\n<img src=\"https://images.code.org/724b2efa8aefe863bd0d6491a3f1590f-image-1445563707400.26.50.png\"\nwidth=\"350px\"/>"
       courseF_artist_for_challenge1_2018: "Can you figure out how\nto re-create this
@@ -6569,6 +7546,15 @@ fr-FR:
       frozen square snowflake: Peux-tu créer un flocon de neige en utilisant le bloc
         «Répéter» pour faire 10 fois un carré, et le bloc «Tourner» pour tourner de
         36 degrés entre chaque carré ?
+      grade2_collector_10: "C'est presque terminé! \n\nRamasse autant de diamants
+        que tu peux pour finir le niveau!"
+      grade2_collector_10_2018: "C'est presque terminé! \n\nRamasse autant de diamants
+        que tu peux pour finir le niveau!"
+      grade2_collector_10_2019: "C'est presque terminé! \n\nRamasse autant de diamants
+        que tu peux pour finir le niveau!"
+      grade2_collector_A: Aide Laurel à ramasser tous les diamants.
+      grade2_collector_A_2018: Aide Laurel à ramasser tous les diamants.
+      grade2_collector_A_2019: Aide Laurel à ramasser tous les diamants.
       iceage_click_hello: "Can you help Sid call for his friends\nwhen you click on
         him? \\\r\nOnce you're done, press \"Run\" to play.  Click\non Sid to see
         your code work!"

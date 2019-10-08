@@ -360,28 +360,66 @@ he:
         options:
           EFFECT:
             '"none"': כלום
+            '"circles"': מעגלים
             '"color_cycle"': צבעים
             '"diamonds"': יהלומים
+            '"disco_ball"': כדור דיסקו
+            '"fireworks"': זיקוקים
             '"swirl"': הִיפְּנוֹ
+            '"kaleidoscope"': קליידוסקופ
+            '"lasers"': רחבת ריקודים מלייזר
             '"splatter"': בועות
             '"rainbow"': קשת
             '"snowflakes"': שלג
+            '"text"': שמות שירים
+            '"galaxy"': חלל
+            '"sparkles"': נצנוצים
             '"spiral"': ספירלה
             '"disco"': ריבועים
+            '"stars"': כוכבים
+          PALETTE:
+            '"rave"': שחור לבן
+            '"cool"': מגניב
+            '"electronic"': אלקטרוני
+            '"iceCream"': גלידה
+            '"default"': אוֹר
+            '"neon"': ניאון
+            '"tropical"': טרופי
+            '"vintage"': וינטאג'
+            '"warm"': חמים
       Dancelab_setBackgroundEffectWithPalette:
         text: קבעו אפקט רקע {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"none"': כלום
             '"rand"': "(רנדומלי)"
+            '"circles"': מעגלים
             '"color_cycle"': צבעים
             '"diamonds"': יהלומים
+            '"disco_ball"': כדור דיסקו
+            '"fireworks"': זיקוקים
             '"swirl"': הִיפְּנוֹ
+            '"kaleidoscope"': קליידוסקופ
+            '"lasers"': רחבת ריקודים מלייזר
             '"splatter"': בועות
             '"rainbow"': קשת
             '"snowflakes"': שלג
+            '"text"': שמות שירים
+            '"galaxy"': חלל
+            '"sparkles"': נצנוצים
             '"spiral"': ספירלה
             '"disco"': ריבועים
+            '"stars"': כוכבים
+          PALETTE:
+            '"rave"': שחור לבן
+            '"cool"': מגניב
+            '"electronic"': אלקטרוני
+            '"iceCream"': גלידה
+            '"default"': אוֹר
+            '"neon"': ניאון
+            '"tropical"': טרופי
+            '"vintage"': וינטאג'
+            '"warm"': חמים
       Dancelab_setDanceSpeed:
         text: קבע {SPRITE} מהירות ריקוד ל {SPEED}
         options:
@@ -419,9 +457,17 @@ he:
           EFFECT:
             '"none"': כלום
             '"bubbles"': בועות
+            '"confetti"': קונפטי
+            '"hearts_red"': לבבות
+            '"music_notes"': תווים
             '"pineapples"': אננסים
+            '"pizzas"': פיצות
+            '"smiling_poop"': קקי
             '"rain"': גשם
+            '"floating_rainbows"': קשתות
+            '"smile_face"': חיוכים
             '"spotlight"': זרקור
+            '"color_lights"': אורות שלב
             '"raining_tacos"': טָאקוֹ
       Dancelab_setForegroundEffectExtended:
         text: קבע אפקט חזית {EFFECT}
@@ -430,9 +476,17 @@ he:
             '"none"': כלום
             '"rand"': "(רנדומלי)"
             '"bubbles"': בועות
+            '"confetti"': קונפטי
+            '"hearts_red"': לבבות
+            '"music_notes"': תווים
             '"pineapples"': אננסים
+            '"pizzas"': פיצות
+            '"smiling_poop"': קקי
             '"rain"': גשם
+            '"floating_rainbows"': קשתות
+            '"smile_face"': חיוכים
             '"spotlight"': זרקור
+            '"color_lights"': אורות שלב
             '"raining_tacos"': טָאקוֹ
       Dancelab_setProp:
         text: 'קבע {PROPERTY} של {SPRITE} ל {VAL} '
@@ -566,6 +620,8 @@ he:
             '"space"': חלל
             '"enter"': אנטר
             '"a"': a
+            '"b"': נ
+            '"c"': ב
             '"d"': d
             '"e"': e
             '"f"': f
@@ -576,8 +632,10 @@ he:
             '"k"': k
             '"l"': l
             '"m"': m
+            '"n"': מ
             '"o"': o
             '"p"': p
+            '"q"': "/"
             '"r"': r
             '"s"': s
             '"t"': t
@@ -588,6 +646,7 @@ he:
             '"y"': 'y'
             '"z"': z
             '"0"': '0'
+            '"1"': '1'
             '"2"': '2'
             '"3"': '3'
             '"4"': '4'
@@ -605,6 +664,8 @@ he:
             '2': טְרֶבֶּל
       Dancelab_whenSetup:
         text: הגדרה
+      gamelab_addBehaviorSimple:
+        text: דמות {SPRITE} מתחילה {BEHAVIOR}
       gamelab_changePropBy:
         text: שנה {PROPERTY} של {SPRITE} ב {VAL}
         options:
@@ -621,10 +682,16 @@ he:
             '"while"': כאשר
       gamelab_clickedOn:
         text: כאשר {SPRITE} נלחץ
+      gamelab_clickedSpritePointer:
+        text: לחץ {SPRITE}
       gamelab_comment:
         text: 'הערה: {COMMENT}'
       gamelab_destroy:
         text: הסר את {THIS}
+      gamelab_draggable:
+        text: נגרר
+      gamelab_edgesDisplace:
+        text: פינות חוסמות {SPRITE} מלזוז
       gamelab_getProp:
         text: "{PROPERTY} של {SPRITE}"
         options:
@@ -637,6 +704,8 @@ he:
             '"tint"': גוון
       gamelab_hideTitleScreen:
         text: הסתר כותרת מסך
+      gamelab_isTouchingEdges:
+        text: "{SPRITE} נוגע בפינות"
       gamelab_jumpTo:
         text: "{SPRITE} קפוץ למיקום {LOCATION}"
       gamelab_keyPressed:
@@ -651,6 +720,8 @@ he:
             '"right"': ימינה
             '"space"': חלל
             '"a"': a
+            '"b"': נ
+            '"c"': ב
             '"d"': d
             '"e"': e
             '"f"': f
@@ -661,8 +732,10 @@ he:
             '"k"': k
             '"l"': l
             '"m"': m
+            '"n"': מ
             '"o"': o
             '"p"': p
+            '"q"': "/"
             '"r"': r
             '"s"': s
             '"t"': t
@@ -672,6 +745,8 @@ he:
             '"x"': x
             '"y"': 'y'
             '"z"': z
+      gamelab_locationAt:
+        text: 'מיקום: x: {X} y: {Y}'
       gamelab_locationMouse:
         text: מיקום עכבר
       gamelab_locationOf:
@@ -679,12 +754,15 @@ he:
       gamelab_location_picker:
         text: "{LOCATION}"
       gamelab_mirrorSprite:
+        text: "{SPRITE} פונה ל{DIRECTION}"
         options:
           DIRECTION:
             '"right"': ימינה
             '"left"': שמאלה
       gamelab_mouseLocation:
         text: מיקום עכבר
+      gamelab_moveForward:
+        text: הזז את {SPRITE} {DISTANCE} פיקסלים קדימה
       gamelab_randColor:
         text: צבע אקראי
       gamelab_randomColor:
@@ -752,6 +830,8 @@ he:
             '"w"': w
             '"s"': s
             '"d"': d
+      Mikelab_addBehaviorSimple:
+        text: דמות {SPRITE} מתחילה {BEHAVIOR}
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -827,10 +907,12 @@ he:
           SELECT:
             '"all"': כולם
       Mikelab_groupRemoveTint:
+        text: מחק צבע מ{SELECT} {COSTUME}
         options:
           SELECT:
             '"all"': כולם
       Mikelab_groupSetProp:
+        text: השם את {PROPERTY} של {SELECT} {COSTUME} ל{VAL}
         options:
           SELECT:
             '"all"': כולם
@@ -841,9 +923,12 @@ he:
             '"y"': מיקום בציר y
             '"direction"': כיוון תנועה
       Mikelab_groupSetTint:
+        text: שנה את הצבע של {SELECT} {COSTUME} ל{COLOR}
         options:
           SELECT:
             '"all"': כולם
+      Mikelab_groupWhenClickedOn:
+        text: כאשר {COSTUME} נלחץ
       Mikelab_ifDanceIs:
         text: |-
           אם {SPRITE} עושה {DANCE}
@@ -861,6 +946,8 @@ he:
             MOVES.Kick: כוכב
             MOVES.ThisOrThat: זה או ההוא
             MOVES.Rest: כלום
+      Mikelab_locationAt:
+        text: 'מיקום: x: {X} y: {Y}'
       Mikelab_location_picker:
         text: "{LOCATION}"
       Mikelab_randomColor:
@@ -942,65 +1029,19 @@ he:
         options:
           PROPERTY:
             "'shapeColor'": צבע
-      aalab_changePropByFlexible:
-        text: שנה {PROPERTY} של {SPRITE} ב {VAL}
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': גודל
-            '"rotation"': סיבוב
-            '"x"': מיקום בציר x
-            '"y"': מיקום בציר y
-            '"direction"': כיוון תנועה
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': כאשר
-            '"while"': כאשר
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': כאשר
-            '"while"': כאשר
-      aalab_jumpTo:
-        text: "{SPRITE} קפוץ למיקום {LOCATION}"
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': כאשר
-            '"while"': כאשר
-          KEY:
-            '"up"': למעלה
-            '"down"': למטה
-            '"left"': שמאלה
-            '"right"': ימינה
-            '"space"': חלל
-      aalab_location_picker:
-        text: "{LOCATION}"
-      aalab_removeOneAndAll:
-        text: הסר את {THIS}
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': עיר
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': נכון
-            '"false"': שגוי
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': גודל
-            '"rotation"': סיבוב
-            '"x"': מיקום בציר x
-            '"y"': מיקום בציר y
-            '"direction"': כיוון תנועה
-            '"tint"': גוון
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': לנצח
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
         options:
           OPTION:
             '"show"': הצג

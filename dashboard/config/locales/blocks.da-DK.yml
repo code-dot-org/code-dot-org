@@ -473,53 +473,19 @@ da:
         text: drej til venstre
       RyanLab_turnRight:
         text: drej til højre
-      aalab_changePropByFlexible:
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': størrelse
-            '"x"': x-position
-            '"y"': y-position
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': når
-            '"while"': mens
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': når
-            '"while"': mens
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': når
-            '"while"': mens
-          KEY:
-            '"up"': op
-            '"down"': ned
-            '"left"': venstre
-            '"right"': højre
-            '"space"': rummet
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': by
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': sandt
-            '"false"': falsk
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': størrelse
-            '"x"': x-position
-            '"y"': y-position
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': for evigt
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
         options:
           OPTION:
             '"show"': vis

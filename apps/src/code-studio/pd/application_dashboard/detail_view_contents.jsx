@@ -28,7 +28,7 @@ import {
   ScoreableQuestions as TeacherScoreableQuestions,
   MultiAnswerQuestionFields as TeacherMultiAnswerQuestionFields,
   ValidScores as TeacherValidScores
-} from '@cdo/apps/generated/pd/teacher1920ApplicationConstants';
+} from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import {
   InterviewQuestions,
   LabelOverrides as FacilitatorLabelOverrides,
@@ -36,7 +36,7 @@ import {
   SectionHeaders as FacilitatorSectionHeaders,
   ScoreableQuestions as FacilitatorScoreableQuestions,
   ValidScores as FacilitatorValidScores
-} from '@cdo/apps/generated/pd/facilitator1920ApplicationConstants';
+} from '@cdo/apps/generated/pd/facilitatorApplicationConstants';
 import _ from 'lodash';
 import {
   ApplicationStatuses,
@@ -725,6 +725,11 @@ export class DetailViewContents extends React.Component {
   };
 
   renderHeader = () => {
+    const rubricURL =
+      this.props.applicationData.application_type === ApplicationTypes.teacher
+        ? 'https://drive.google.com/file/d/1070Jf9VKtuJLOQJTCaO7fxUWyLOEHBdK/view'
+        : 'https://docs.google.com/document/u/1/d/e/2PACX-1vTqUgsTTGeGMH0N1FTH2qPzQs1pVb8OWPf3lr1A0hzO9LyGLa27J9_Fsg4RG43ok1xbrCfQqKxBjNsk/pub';
+
     return (
       <div style={styles.headerWrapper}>
         <div>
@@ -733,10 +738,7 @@ export class DetailViewContents extends React.Component {
               this.props.applicationData.form_data.lastName
             }`}
           </h1>
-          <h4>
-            Meets minimum requirements?{' '}
-            {this.props.applicationData.meets_criteria}
-          </h4>
+          <h4>Meets Guidelines? {this.props.applicationData.meets_criteria}</h4>
           {this.props.applicationData.application_type ===
             ApplicationTypes.teacher && (
             <h4>
@@ -744,42 +746,14 @@ export class DetailViewContents extends React.Component {
               {this.props.applicationData.meets_scholarship_criteria}
             </h4>
           )}
+
           {this.renderPointsSection()}
-          {this.props.applicationData.application_type ===
-            ApplicationTypes.teacher &&
-            this.props.applicationData.course === 'csp' && (
-              <h4>
-                <a
-                  target="_blank"
-                  href="https://drive.google.com/file/d/1_X_Tw3tVMSL2re_DcrSUC9Z5CH9js3Gd/view"
-                >
-                  View CS Principles Rubric
-                </a>
-              </h4>
-            )}
-          {this.props.applicationData.application_type ===
-            ApplicationTypes.teacher &&
-            this.props.applicationData.course === 'csd' && (
-              <h4>
-                <a
-                  target="_blank"
-                  href="https://drive.google.com/file/d/12Ntxq7TV1XYsD2eaZJVt5DqSctqR2hUj/view"
-                >
-                  View CS Discoveries Rubric
-                </a>
-              </h4>
-            )}
-          {this.props.applicationData.application_type ===
-            ApplicationTypes.facilitator && (
-            <h4>
-              <a
-                target="_blank"
-                href="https://docs.google.com/document/u/1/d/e/2PACX-1vTqUgsTTGeGMH0N1FTH2qPzQs1pVb8OWPf3lr1A0hzO9LyGLa27J9_Fsg4RG43ok1xbrCfQqKxBjNsk/pub"
-              >
-                View Rubric
-              </a>
-            </h4>
-          )}
+
+          <h4>
+            <a target="_blank" href={rubricURL}>
+              View Rubric
+            </a>
+          </h4>
         </div>
 
         <div id="DetailViewHeader" style={styles.detailViewHeader}>
@@ -849,8 +823,6 @@ export class DetailViewContents extends React.Component {
           </div>
         </div>
       );
-    } else {
-      return <h4>Bonus Points: {this.props.applicationData.bonus_points}</h4>;
     }
   };
 
@@ -973,7 +945,7 @@ export class DetailViewContents extends React.Component {
     ) {
       scoringDropdowns.push(
         <div key="meets_minimum_criteria_scores">
-          Meets minimum requirements?
+          Meets Guidelines?
           {this.renderScoringDropdown(
             snakeCaseKey,
             'meets_minimum_criteria_scores'
@@ -981,20 +953,22 @@ export class DetailViewContents extends React.Component {
         </div>
       );
     }
-    if (this.state.bonus_point_questions.includes(snakeCaseKey)) {
+
+    if (
+      this.props.applicationData.application_type === 'Facilitator' &&
+      this.state.bonus_point_questions.includes(snakeCaseKey)
+    ) {
       if (scoringDropdowns.length) {
         scoringDropdowns.push(<br key="bonus_points_br" />);
       }
 
       scoringDropdowns.push(
         <div key="bonus_points_scores">
-          {this.props.applicationData.application_type === 'Facilitator' &&
-          FacilitatorScoringFields[key]
+          {FacilitatorScoringFields[key]
             ? FacilitatorScoringFields[key]['title']
             : 'Bonus Points'}
           {this.renderScoringDropdown(snakeCaseKey, 'bonus_points_scores')}
-          {this.props.applicationData.application_type === 'Facilitator' &&
-            FacilitatorScoringFields[key] &&
+          {FacilitatorScoringFields[key] &&
             FacilitatorScoringFields[key]['rubric']}
         </div>
       );

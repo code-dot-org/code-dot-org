@@ -353,6 +353,7 @@ ca:
     delete_text_teacher_note: 'Tingueu en compte: Si suprimiu el vostre compte no
       s''esborrarant els comptes dels seus alumnes.'
     delete_confirm: Esteu segur que voleu suprimir el vostre compte?
+    update_email: Actualitza
   user_level:
     completed: Completat
     tried: Provat

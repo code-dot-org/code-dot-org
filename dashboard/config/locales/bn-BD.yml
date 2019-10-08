@@ -217,6 +217,8 @@ bn:
       section: শাখা
       submitted_on: 'দাখিল করুন:'
       unsubmit: জমা না দেয়া
+  user:
+    update_email: আপডেট
   user_level:
     completed: সম্পূর্ণ হয়েছে
     tried: চেষ্টা করা হয়েছে

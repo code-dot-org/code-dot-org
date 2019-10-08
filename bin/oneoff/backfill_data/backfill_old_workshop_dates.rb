@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+require_relative '../../../dashboard/config/environment'
+
 # Script to backfill workshops, that were migrated from Workshop to Pd::Workshop,
 # with their start & stop dates, to prevent them from showing up in dashboards
 # because their states appear to be STATE_NOT_STARTED.

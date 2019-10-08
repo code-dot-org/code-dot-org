@@ -400,57 +400,19 @@ fil:
         text: kumaliwa
       RyanLab_turnRight:
         text: kumanan
-      aalab_changePropByFlexible:
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': sukat
-            '"x"': x na posisyon
-            '"y"': y na posisyon
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': kelan
-            '"while"': habang
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': kelan
-            '"while"': habang
-      aalab_getThisSprite:
-        options:
-          CHOICE:
-            '"other"': iba
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': kelan
-            '"while"': habang
-          KEY:
-            '"up"': taas
-            '"down"': baba
-            '"left"': kaliwa
-            '"right"': kanan
-            '"space"': space
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': siyudad
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': tama
-            '"false"': mali
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': sukat
-            '"x"': x na posisyon
-            '"y"': y na posisyon
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': magpakailanman
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
         options:
           OPTION:
             '"show"': ipakita
