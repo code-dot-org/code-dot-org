@@ -98,26 +98,8 @@ class SchoolStatsByYear < ActiveRecord::Base
     grade_kg_offered || grade_01_offered || grade_02_offered || grade_03_offered || grade_04_offered || grade_05_offered || grade_06_offered || grade_07_offered || grade_08_offered
   end
 
-  # Percentage of underrepresented minorities students
   def urm_percent
     percent_of_students([student_am_count, student_hi_count, student_bl_count, student_hp_count].compact.reduce(:+))
-  end
-
-  # Percentage of free/reduced lunch eligible students
-  def frl_eligible_percent
-    percent_of_students(frl_eligible_total)
-  end
-
-  # Is this a rural school?
-  # Returns nil if there is no data. Otherwise returns true or false.
-  def rural_school?
-    return nil unless community_type
-
-    # The Rural Education Achievement Program (REAP) accepts the following NCES locale codes
-    # as "rural": town (distant and remote subcategories)
-    # and rural (fringe, distant, and remote subcategories).
-    %w(town_distant town_remote rural_fringe rural_distant rural_remote).
-      include? community_type
   end
 
   # returns what percent "count" is of the total student enrollment
