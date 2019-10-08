@@ -119,7 +119,7 @@ def main
       source_module: Pd::Facilitator1920ApplicationConstants,
       transform_keys: true
     ),
-    "#{REPO_DIR}/apps/src/generated/pd/facilitator1920ApplicationConstants.js"
+    "#{REPO_DIR}/apps/src/generated/pd/facilitatorApplicationConstants.js"
   )
 
   generate_shared_js_file(
@@ -128,7 +128,7 @@ def main
       source_module: Pd::Teacher2021ApplicationConstants,
       transform_keys: true
     ),
-    "#{REPO_DIR}/apps/src/generated/pd/teacher2021ApplicationConstants.js"
+    "#{REPO_DIR}/apps/src/generated/pd/teacherApplicationConstants.js"
   )
 
   generate_shared_js_file(
@@ -137,7 +137,7 @@ def main
       source_module: Pd::PrincipalApproval2021ApplicationConstants,
       transform_keys: true
     ),
-    "#{REPO_DIR}/apps/src/generated/pd/principalApproval2021ApplicationConstants.js"
+    "#{REPO_DIR}/apps/src/generated/pd/principalApprovalApplicationConstants.js"
   )
 
   generate_shared_js_file(

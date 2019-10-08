@@ -5,7 +5,7 @@ import {
   PageLabels,
   SectionHeaders,
   TextFields
-} from '@cdo/apps/generated/pd/facilitator1920ApplicationConstants';
+} from '@cdo/apps/generated/pd/facilitatorApplicationConstants';
 import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import {CSF, CSD, CSP} from '../ApplicationConstants';
 
