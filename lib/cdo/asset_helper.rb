@@ -20,7 +20,7 @@ class AssetHelper
     #
     # Never skip the manifest lookup when using the prebuilt apps package in
     # development because this would generate invalid urls.
-    skip_manifest = CDO.pretty_js && CDO.use_my_apps
+    skip_manifest = !CDO.optimize_webpack_assets && CDO.use_my_apps
     return "/assets/#{asset}" if skip_manifest
     path = webpack_manifest[asset]
     raise "Invalid webpack asset name: '#{asset}'" unless path
