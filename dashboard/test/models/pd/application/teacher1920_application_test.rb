@@ -78,19 +78,6 @@ module Pd::Application
       assert_equal Pd::Application::Teacher1920Application::REVIEWING_INCOMPLETE, teacher_application.meets_criteria
     end
 
-    test 'total score calculates the sum of all response scores' do
-      teacher_application = build :pd_teacher1920_application, response_scores: {
-        bonus_points_scores: {
-          free_lunch_percent: '5',
-          underrepresented_minority_percent: '5',
-          able_to_attend_single: TEXT_FIELDS[:able_to_attend_single],
-          csp_which_grades: nil
-        }
-      }.to_json
-
-      assert_equal 10, teacher_application.total_score
-    end
-
     test 'accepted_at updates times' do
       today = Date.today.to_time
       tomorrow = Date.tomorrow.to_time
@@ -319,12 +306,12 @@ module Pd::Application
       csv_header_csd = CSV.parse(Teacher1920Application.csv_header('csd'))[0]
       assert csv_header_csd.include? "To which grades does your school plan to offer CS Discoveries in the 2019-20 school year?"
       refute csv_header_csd.include? "To which grades does your school plan to offer CS Principles in the 2019-20 school year?"
-      assert_equal 100, csv_header_csd.length
+      assert_equal 101, csv_header_csd.length
 
       csv_header_csp = CSV.parse(Teacher1920Application.csv_header('csp'))[0]
       refute csv_header_csp.include? "To which grades does your school plan to offer CS Discoveries in the 2019-20 school year?"
       assert csv_header_csp.include? "To which grades does your school plan to offer CS Principles in the 2019-20 school year?"
-      assert_equal 102, csv_header_csp.length
+      assert_equal 103, csv_header_csp.length
     end
 
     test 'school cache' do
@@ -579,12 +566,12 @@ module Pd::Application
             principal_approval: YES,
             principal_schedule_confirmed: YES,
             principal_diversity_recruitment: YES,
+            free_lunch_percent: YES,
+            underrepresented_minority_percent: YES,
           },
           bonus_points_scores: {
             taught_in_past: 2,
             race: 2,
-            free_lunch_percent: 5,
-            underrepresented_minority_percent: 5,
             principal_implementation: 2,
             cs_terms: 2
           },
@@ -638,14 +625,14 @@ module Pd::Application
             previous_yearlong_cdo_pd: YES,
             principal_approval: YES,
             principal_schedule_confirmed: YES,
-            principal_diversity_recruitment: YES
+            principal_diversity_recruitment: YES,
+            free_lunch_percent: YES,
+            underrepresented_minority_percent: YES,
           },
           bonus_points_scores: {
             csp_how_offer: 2,
             taught_in_past: 2,
             race: 2,
-            free_lunch_percent: 5,
-            underrepresented_minority_percent: 5
           },
         }.deep_stringify_keys,
         JSON.parse(application.response_scores)
@@ -739,12 +726,12 @@ module Pd::Application
             principal_approval: NO,
             principal_schedule_confirmed: NO,
             principal_diversity_recruitment: NO,
+            free_lunch_percent: NO,
+            underrepresented_minority_percent: NO,
           },
           bonus_points_scores: {
             taught_in_past: 0,
             race: 0,
-            free_lunch_percent: 0,
-            underrepresented_minority_percent: 0,
             cs_terms: 0,
             principal_implementation: 0
           },
@@ -797,14 +784,14 @@ module Pd::Application
             previous_yearlong_cdo_pd: NO,
             principal_approval: NO,
             principal_schedule_confirmed: NO,
-            principal_diversity_recruitment: NO
+            principal_diversity_recruitment: NO,
+            free_lunch_percent: NO,
+            underrepresented_minority_percent: NO,
           },
           bonus_points_scores: {
             csp_how_offer: 0,
             taught_in_past: 0,
             race: 0,
-            free_lunch_percent: 0,
-            underrepresented_minority_percent: 0
           },
         }.deep_stringify_keys,
         JSON.parse(application.response_scores)
