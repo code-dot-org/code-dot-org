@@ -7,7 +7,7 @@ import Section4LeadingStudents from './Section4LeadingStudents';
 import Section5YourApproachToLearningAndLeading from './Section5YourApproachToLearningAndLeading';
 import Section6Submission from './Section6Submission';
 
-export default class Facilitator1920Application extends FormController {
+export default class FacilitatorApplication extends FormController {
   static propTypes = {
     ...FormController.propTypes,
     accountEmail: PropTypes.string.isRequired
@@ -15,7 +15,7 @@ export default class Facilitator1920Application extends FormController {
 
   static submitButtonText = 'Complete and Send';
 
-  static sessionStorageKey = 'Facilitator1920Application';
+  static sessionStorageKey = 'FacilitatorApplication';
 
   /**
    * @override

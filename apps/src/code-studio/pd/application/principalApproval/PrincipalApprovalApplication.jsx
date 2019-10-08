@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import FormController from '../../form_components/FormController';
-import PrincipalApproval2021Component from './PrincipalApproval2021Component';
+import PrincipalApprovalComponent from './PrincipalApprovalComponent';
 
-export default class PrincipalApproval2021Application extends FormController {
+export default class PrincipalApprovalApplication extends FormController {
   static propTypes = {
     ...FormController.propTypes,
     teacherApplication: PropTypes.shape({
@@ -64,7 +64,7 @@ export default class PrincipalApproval2021Application extends FormController {
    * @override
    */
   getPageComponents() {
-    return [PrincipalApproval2021Component];
+    return [PrincipalApprovalComponent];
   }
 
   /**

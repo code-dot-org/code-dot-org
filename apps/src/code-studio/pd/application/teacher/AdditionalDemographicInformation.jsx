@@ -4,16 +4,16 @@ import {
   PageLabels,
   SectionHeaders,
   TextFields
-} from '@cdo/apps/generated/pd/teacher2021ApplicationConstants';
+} from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import {FormGroup} from 'react-bootstrap';
 import PrivacyDialog from '../PrivacyDialog';
 import {PrivacyDialogMode} from '../../constants';
 
-export default class Section5AdditionalDemographicInformation extends LabeledFormComponent {
-  static labels = PageLabels.section5AdditionalDemographicInformation;
+export default class AdditionalDemographicInformation extends LabeledFormComponent {
+  static labels = PageLabels.additionalDemographicInformation;
 
   static associatedFields = [
-    ...Object.keys(PageLabels.section5AdditionalDemographicInformation)
+    ...Object.keys(PageLabels.additionalDemographicInformation)
   ];
 
   state = {
@@ -34,9 +34,7 @@ export default class Section5AdditionalDemographicInformation extends LabeledFor
   render() {
     return (
       <FormGroup>
-        <h3>
-          Section 5: {SectionHeaders.section5AdditionalDemographicInformation}
-        </h3>
+        <h3>Section 5: {SectionHeaders.additionalDemographicInformation}</h3>
         {this.radioButtonsFor('genderIdentity')}
         {this.checkBoxesFor('race')}
         {this.checkBoxesWithAdditionalTextFieldsFor(

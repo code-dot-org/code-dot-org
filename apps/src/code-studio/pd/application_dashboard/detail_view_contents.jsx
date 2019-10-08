@@ -28,7 +28,7 @@ import {
   ScoreableQuestions as TeacherScoreableQuestions,
   MultiAnswerQuestionFields as TeacherMultiAnswerQuestionFields,
   ValidScores as TeacherValidScores
-} from '@cdo/apps/generated/pd/teacher2021ApplicationConstants';
+} from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import {
   InterviewQuestions,
   LabelOverrides as FacilitatorLabelOverrides,
@@ -36,7 +36,7 @@ import {
   SectionHeaders as FacilitatorSectionHeaders,
   ScoreableQuestions as FacilitatorScoreableQuestions,
   ValidScores as FacilitatorValidScores
-} from '@cdo/apps/generated/pd/facilitator1920ApplicationConstants';
+} from '@cdo/apps/generated/pd/facilitatorApplicationConstants';
 import _ from 'lodash';
 import {
   ApplicationStatuses,
