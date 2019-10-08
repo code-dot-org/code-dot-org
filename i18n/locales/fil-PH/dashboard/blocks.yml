@@ -76,6 +76,12 @@ fil:
             sprites: lahat
           FORMAT:
             '"random"': nang hindi pinipili
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": kaliwa
+            "{x: 300, y: 200}": kanan
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": nang hindi pinipili
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
@@ -160,6 +166,10 @@ fil:
             '"scale"': sukat
             '"height"': taas
       Dancelab_setTintEach:
+        options:
+          THIS:
+            sprites: lahat
+      Dancelab_setTintEachInline:
         options:
           THIS:
             sprites: lahat
