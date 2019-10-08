@@ -37,15 +37,15 @@ describe('Simple Trainer tests', () => {
     const classifierDatasetString = trainer.getDatasetJSON();
     trainer.clearAll();
 
-    const retrained_trainer = new SimpleTrainer();
-    retrained_trainer.setTopK(3);
-    await retrained_trainer.initializeClassifiersWithoutMobilenet();
-    const untrained_result = await retrained_trainer.predictFromData([1, 1]);
-    expect(untrained_result.predictedClassId).toEqual(null);
+    const retrainedTrainer = new SimpleTrainer();
+    retrainedTrainer.setTopK(3);
+    await retrainedTrainer.initializeClassifiersWithoutMobilenet();
+    const untrainedResult = await retrainedTrainer.predictFromData([1, 1]);
+    expect(untrainedResult.predictedClassId).toEqual(null);
 
-    retrained_trainer.loadDatasetJSON(classifierDatasetString);
-    const retrained_result = await retrained_trainer.predictFromData([1, 1]);
-    expect(retrained_result.predictedClassId).toEqual(0);
-    expect(retrained_result.confidencesByClassId[0]).toEqual(1);
+    retrainedTrainer.loadDatasetJSON(classifierDatasetString);
+    const retrainedResult = await retrainedTrainer.predictFromData([1, 1]);
+    expect(retrainedResult.predictedClassId).toEqual(0);
+    expect(retrainedResult.confidencesByClassId[0]).toEqual(1);
   });
 });
