@@ -4476,6 +4476,8 @@ pl:
               name: Literująca Pszczółka
             Learn to Drag and Drop:
               name: Nauka metody "przeciągnij i upuść"
+            Programming in Maze:
+              name: Programowanie w labiryncie
         removed19:
           stages:
             'Debugging: Unspotted Bugs':

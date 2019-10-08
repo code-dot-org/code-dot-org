@@ -486,6 +486,7 @@ es:
     enter_parent_email: Ingresa el email de tu padre o tutor (para recuperar la clave)
     update: Actualizar cuenta de usuario
     account_successfully_updated: Cuenta actualizada exitosamente.
+    update_email: Actualizar
   user_level:
     completed: Completada
     tried: Prueba

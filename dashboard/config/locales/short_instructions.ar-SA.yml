@@ -264,6 +264,7 @@ ar-SA:
       bounce_7: إرفاق مربعات برمجية لكل من المربعات البرمجية "عند". ارتداد الكرة حتى
         تصطدم بهدف النهاية.
       course2_harvester_loops_challenge1: اجمع كل الذرة.
+      course2_harvester_loops_challenge2: اجمع كل الخس. تجنب الأشجار والحقول!
       course2_maze_loops_challenge1: 'الآن السنجاب يرغب باستخدام دالة كرر ليحصل على
         البلوط! '
       course2_maze_programming_challenge2: في بعض الأحيان توجد أكثر من طريقة لحل المشكلة.
@@ -273,6 +274,9 @@ ar-SA:
       courseC19_playLab_EOC2: استخدم الأحداث والحركات لتجعل بطلك يتحرك. انتقل للهدف.
       courseC19_playLab_EOC5: احسنت! لديك كل المهارات لتنشىء لعبة حقيقة. الآن اقض
         بعض من الوقت لتتأكد من أن لعبتك تعمل بالطريقةالتي ترغبها.
+      courseC_PlayLab_events1: اجعل الكلب جورج (الممثل 1) يقول " Hi there."
+      courseC_PlayLab_events1_2018: اجعل الكلب جورج (الممثل 1) يقول " Hi there."
+      courseC_PlayLab_events1_2019: اجعل الكلب جورج (الممثل 1) يقول " Hi there."
       courseC_PlayLab_eventsA_embed_2019: لنلعب لعبة. سجل 5 نقاط عن طريق تحريك البطريق
         إلى الأخطبوط!
       courseC_artist_loop1: لنضيف بعض من البيتزا!
@@ -365,18 +369,51 @@ ar-SA:
 
         عد الحيوانات.
         ماذا لاحظت؟
+      courseC_flappy_events10: 'اصنع لعبة فلابي الخاصة بك! '
+      courseC_flappy_events10_2018: 'اصنع لعبة فلابي الخاصة بك! '
+      courseC_flappy_events10_2019: 'اصنع لعبة فلابي الخاصة بك! '
       courseC_harvester_loops1: استخدم دالة كرر لتجمع كل القرع.
+      courseC_harvester_loops10: اجمع كل الذرة واليقطينات.
+      courseC_harvester_loops10_2018: اجمع كل الذرة واليقطينات.
+      courseC_harvester_loops10_2019: اجمع كل الذرة واليقطينات.
+      courseC_harvester_loops11: اجمع كل الذرة واليقطينات.
+      courseC_harvester_loops11_2018: اجمع كل الذرة واليقطينات.
+      courseC_harvester_loops11_2019: اجمع كل الذرة واليقطينات.
       courseC_harvester_loops1_2018: استخدم دالة كرر لتجمع كل القرع.
       courseC_harvester_loops1_2019: استخدم دالة كرر لتجمع كل القرع.
+      courseC_harvester_loops2: هل يمكنك جمع دالتين كرر لتتوجه إلى القرع ومن ثم تجمعهم
+        كلهم؟
+      courseC_harvester_loops2_2018: هل يمكنك جمع دالتين كرر لتتوجه إلى القرع ومن
+        ثم تجمعهم كلهم؟
+      courseC_harvester_loops2_2019: هل يمكنك جمع دالتين كرر لتتوجه إلى القرع ومن
+        ثم تجمعهم كلهم؟
       courseC_harvester_loops3: اجمع كل القرع.
       courseC_harvester_loops3_2018: اجمع كل القرع.
       courseC_harvester_loops3_2019: اجمع كل القرع.
+      courseC_harvester_loops4: اجمع كل الذرة واليقطينات.
+      courseC_harvester_loops4_2018: اجمع كل الذرة واليقطينات.
+      courseC_harvester_loops4_2019: اجمع كل الذرة واليقطينات.
+      courseC_harvester_loops5: اجمع كل الذرة واليقطينات.
+      courseC_harvester_loops5_2018: اجمع كل الذرة واليقطينات.
+      courseC_harvester_loops5_2019: اجمع كل الذرة واليقطينات.
+      courseC_harvester_loops6: اجمع كل الذرة واليقطينات.
+      courseC_harvester_loops6_2018: اجمع كل الذرة واليقطينات.
+      courseC_harvester_loops6_2019: اجمع كل الذرة واليقطينات.
+      courseC_harvester_loops7: اجمع كل الذرة واليقطينات.
+      courseC_harvester_loops7_2018: اجمع كل الذرة واليقطينات.
+      courseC_harvester_loops7_2019: اجمع كل الذرة واليقطينات.
       courseC_harvester_loops8: "**تحدي** اجمع كل الذرة وكل القرع."
       courseC_harvester_loops8_2018: "**تحدي** اجمع كل الذرة وكل القرع."
       courseC_harvester_loops8_2019: "**تحدي** اجمع كل الذرة وكل القرع."
+      courseC_harvester_loops9: اجمع كل الذرة واليقطينات.
+      courseC_harvester_loops9_2018: اجمع كل الذرة واليقطينات.
+      courseC_harvester_loops9_2019: اجمع كل الذرة واليقطينات.
       courseC_harvester_loops_challenge1a: اجمع كل الذرة.
       courseC_harvester_loops_challenge1a_2018: اجمع كل الذرة.
       courseC_harvester_loops_challenge1a_2019: اجمع كل الذرة.
+      courseC_harvester_loops_challenge2: اجمع كل الخس. تجنب الأشجار والحقول!
+      courseC_harvester_loops_challenge2_2018: اجمع كل الخس. تجنب الأشجار والحقول!
+      courseC_harvester_loops_challenge2_2019: اجمع كل الخس. تجنب الأشجار والحقول!
       courseC_maze_debugging9_2019: استخدم البلوكات من صندوق الأدوات لبناء برنامجك.
         أوصل الطائر إلى الخنزير.
       courseC_maze_loops_challenge1a: 'الآن السنجاب يرغب باستخدام دالة كرر ليحصل على

@@ -862,61 +862,19 @@ ko:
         text: 오른쪽으로 회전
       Vector_positionCenter:
         text: 중간
-      aalab_changePropByFlexible:
-        text: "{SPRITE}{PROPERTY}을(를) {VAL}만큼 변경"
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': 크기
-            '"rotation"': 회전
-            '"x"': x 좌표
-            '"y"': y 좌표
-            '"direction"': 움직임 방향
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': "~할 때"
-            '"while"': '반복(~인 동안):'
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': "~할 때"
-            '"while"': '반복(~인 동안):'
-      aalab_jumpTo:
-        text: "{SPRITE}이(가) {LOCATION}(으)로 점프"
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': "~할 때"
-            '"while"': '반복(~인 동안):'
-          KEY:
-            '"up"': 위로
-            '"down"': 아래로
-            '"left"': 왼쪽으로
-            '"right"': 오른쪽으로
-            '"space"': 우주
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': 도시
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': 참
-            '"false"': 거짓
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': 크기
-            '"rotation"': 회전
-            '"x"': x 좌표
-            '"y"': y 좌표
-            '"direction"': 움직임 방향
-            '"tint"': 색조
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': 영원히
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
         options:
           OPTION:
             '"show"': 보이게 하기

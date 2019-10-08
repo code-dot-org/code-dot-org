@@ -3875,6 +3875,47 @@ pt-BR:
 
           <a class="btn btn-large btn-primary" href="https://form.jotform.com/90556900301146?user_id=<user_id/>">Responder à pesquisa preliminar</a>
 
+      OPD-K5 Puzzles:
+        markdown: "# Olhando à Frente > Tudo Sobre Desafios\n\nNas etapas que seguem,
+          você irá usar a Code.org para aprender o básico de ciências da computação.
+          Você será desafiado com uma variedade de quebra-cabeças que deverão ser
+          resolvidos. Para resolver os desafios, você terá que escrever programas
+          utilizando diferentes personagens para atingir diferentes objetivos. Iremos
+          praticar com nosso primeiro desafio na Etapa 3. Mas antes de chegarmos lá,
+          aqui está uma visão geral dos desafios que você e seus alunos irão encontrar:\n\n##
+          Amostras de Desafios em Labirintos\n\n![](//code.org/images/mockup_birds.png)\n![](//code.org/images/pvz.png)\n\nVocê
+          terá que levar o pássaro zangado até o porco, e terá que levar o zumbi até
+          o girassol.\n\n## Amostra do Desafio do Artista\n\n![](//code.org/images/artist.png)\n\nVocê
+          terá que fazer o artista desenhar sobre as linhas em cinza, movimentando-o
+          ao redor da tela. Ele irá desenhar uma linha atrás de si aonde quer que
+          ele vá.\n\n## Amostra do Desafio da Abelha\n\n![](//code.org/images/bee.png)\n\nVocê
+          terá que movimentar a abelha para coletar todo o néctar e produzir todo
+          o mel. As unidades de néctar e mel necessários para cada desafio são mostradas
+          no canto inferior direito de cada flor ou colmeia.\n\n## Laboratório de
+          Jogos\n\n![](//code.org/images/playlab.png)\n\nNo Laboratório de Jogos,
+          você irá criar jogos e estórias baseadas em diferentes objetivos.\n\n##
+          Flappy\n\n![](//code.org/images/flappy.png)\n\nNo Flappy, você irá criar
+          seu próprio jogo Flappy Bird. \nOs desafios envolvidos na criação do jogo
+          irão ajudá-lo a aprender partes do código que você irá precisar para o seu
+          jogo.\n\n## Pular\n\n![](//code.org/images/bounce.png)\n\nEm Pular, você
+          cria seu próprio jogo.\nAssim como no Flappy, os desafios envolvidos na
+          criação do jogo ajudam você a aprender trechos que código que serão necessários
+          no seu jogo. \n\n* * *\n\nNesta série, nos iremos apresentar a você desafios
+          de [Fundamentos de CC](http://code.org/educate/k5). Estes desafios servem
+          como tutoriais online, ajudando os alunos a aprenderem conceitos como laços,
+          eventos, condicionais, e funções.\n\nDurante esta experiência de desenvolvimento
+          profissional, nós iremos intercalar vários desafios progressivos, para que
+          você possa se familiarizar com os conceitos de programação de Fundamentos
+          de CC e os personagens que seus alunos irão amar. Durante este curso, você
+          irá reparar que a movimentação entre os ambientes é rápida, seja levando
+          o pássaro zangado até o porco, fazendo um desenho, ou coletando néctar.
+          Estas transições ocorrem rápido no curso para mostrar a você um leque de
+          desafios oferecidos em Fundamentos de CC. Seus alunos terão que permanecer
+          mais tempo em cada ambiente.\n\nSe você quiser se familiarizar mais com
+          a experiência dos alunos, você sempre poderá completar os cursos de [Fundamentos
+          de CC](http://studio.code.org/) por conta própria, a qualquer momento. Mas
+          este curso dará a você uma boa noção sobre o que esperar, ao apresentar
+          a você alguns dos desafios mais fundamentais em um curto espaço de tempo.\n"
       OPD-K5 Stage1Go:
         markdown: |
           # Vamos Começar > Tudo pronto? Vamos!
@@ -3930,6 +3971,23 @@ pt-BR:
       OPD-K5 Stage3aGo:
         title: título
         content1: descrição aqui
+      OPD-K5 Unplugged:
+        markdown: |
+          # Olhando à Frente > Ficando "Desplugado"
+
+          <img src="https://images.code.org/ae83fdee9390a1155e5173b2a06f9773-image-1434399991310.JPG" class="level-image">
+
+          Ao lecionar ciência da computação, você pode pensar que seria melhor ter acesso a tecnologias de primeira linha - computadores novos, internet rápida, os últimos aplicativos. Mas em Code.org, nós descobrimos que algumas das aulas mais impactantes de ciência da computação são na verdade "desplugadas", ou ministradas com pouca ou nenhuma tecnologia. Nestas aulas, os alunos aprendem conceitos de computadores sem um computador.
+
+          É por isso que nossos cursos de Fundamentos de CC usam atividades desplugadas para introduzir conceitos de computação com o manuseio de conceitos físicos antes que os alunos escrevam programas usando estes conceitos. Um exemplo disto seria fazer uma dança com movimentos repetidos em classe, para entender o conceito de como os laços repetem comandos em um programa de computador. Desta forma, quando os alunos começam a escrever os programas usando laços, a atividade desplugada forneceu a eles algo com que eles já estão acostumados, e podem relacionar este novo conceito com esta atividade.
+
+          Assista o vídeo abaixo para compreender os benefícios do uso de atividades desplugadas para o ensino de ciência da computação.
+
+          <iframe width="640" height="390" src="https://youtubeeducation.com/embed/-7lcnNcONHY" frameborder="0" allowfullscreen></iframe>
+          [Baixe o video](https://videos.code.org/levelbuilder/unplugged-whyshouldteachunpluggedactivities-mp4.mp4)
+          <br/>
+          <br/>
+          **À medida que você percorrer as Etapas 4-8**, você terá a oportunidade de rever algumas das nossas atividades desplugadas para cada um dos conceitos essenciais que são tratados neste curso.
       OPD-K5 Vocabulary:
         markdown: |
           # Fundamentos de CC > Vocabulário Chave
@@ -3957,6 +4015,42 @@ pt-BR:
            - **[Fundamentos em Ciências da Computação (CC) Pré-espresso](http://studio.code.org/s/pre-express)**: aproximadamente 20 horas (Idades 4-8)
 
 
+      OPD-K5 What is Mastery:
+        markdown: "## Olhando à Frente > O que é ter domínio do assunto?\n\nNas etapas
+          que seguem, você irá dominar os seguintes conceitos básicos de ciência da
+          computação:\n\n- Etapa 4: Sequenciamento\n- Etapa 5: Laços\n- Etapa 6: Condicionais\n-
+          Etapa 7: Funções\n- Etapa 8: Eventos\n\n## O que é \"dominar um assunto\"?\n\nNós
+          definimos \"domínio\" como ser capar de fazer o seguinte:\n\n- Definir e
+          explicar o que significa um conceito essencial, e por que ele é importante
+          na ciência da computação\n- Escrever programas simples aplicando o conceito
+          (usando programação visual para solucionar desafios)\n- Refletir como você
+          poderá integrar o conceito à sua prática\n\nUse esta lista como referência
+          enquanto você percorre o curso. À medida que completar cada etapa, pergunte
+          a si mesmo:\n\n- Eu consigo definir e explicar a importante deste conceito
+          específico em um nível iniciante?\n- Eu fui capaz de completar com sucesso
+          os desafios simples desta etapa?\n- Eu tenho algumas ideias de como eu poderia
+          usar isto em minha sala de aula?\n\nSe você respondeu sim a cada pergunta,
+          prossiga para a etapa seguinte. Se você respondeu não para qualquer uma
+          das perguntas, considere revisitar a etapa ou explorar mais acerca do tópico
+          ao lado do aluno no Code Studio, antes de prosseguir.\n\n## Coisas para
+          ter em mente ao aprender ciência da computação:\n\n- O mundo da programação
+          de computadores se move tão rápido que não há realmente pessoas que dominam
+          o assunto. **Somos todos aprendizes** em estágios diferentes mas ainda somos
+          todos aprendizes. \n- A programação se torna mais confortável a cada vez
+          que você retorna a ela. **Você não vai se tornar um especialista na primeira
+          vez.**\n- Não há atalhos, o ato de programar e **aprender a programar leva
+          tempo, mas qualquer um pode fazê-lo!**\n\n> **Principal Lição:** O objetivo
+          das próximas várias etapas não torná-lo um cientista da computação, mas
+          ao invés disso ajudá-lo a se sentir suficientemente confortável com os conceitos
+          essenciais, para que você fique empolgado em compartilhar este conhecimento
+          com seus alunos.\n\n## Após eu \"dominar\" os conceitos, o que vem depois?\n\nNa
+          **Etapa 9** você irá explorar o currículo livre e os recursos para professores
+          da Code.org. Você pode escolher usar qualquer um destes recursos ou outros
+          recursos curriculares que escolher. Completar este curso te dará os conceitos
+          que você vai precisar para entender qualquer currículo inicial de ciência
+          da computação.\n\nNas **Etapas 10 e 11**, nós iremos apontar a direção aos
+          recursos que você pode usar para aprender mais ou se sentir mais preparado
+          para ensinar estes conceitos em sua sala de aula.\n"
       OPD-K5 Why teach CS:
         markdown: |
           # Fundamentos de CC > Por que ensinar ciência da computação?
@@ -3987,6 +4081,15 @@ pt-BR:
 
           > <a href="http://ctt.ec/Bfjw3" target="blank"><button class="default">Compartilhe no Tweeter >></button></a><br><br>
           Não possui uma conta no Tweeter? Você também pode nos encontrar no [Facebook](https://www.facebook.com/Code.org/) ou [Instagram](https://www.instagram.com/codeorg/).
+      OPD-Stage3Start:
+        markdown: |
+          # Olhando à Frente > Visão Geral desta Etapa
+
+          <img src="https://images.code.org/0b8c948f309ae1df3d9920520e4a168c-image-1435004357188.JPG" width="450px" style="border-radius:10px;">
+
+          Ao completar esta etapa, você irá:
+
+          - Estar preparado para "dominar o básico" de ciência da computação através da revisão do conteúdo do curso
       'Overview: Images':
         markdown: |+
           # Imagens

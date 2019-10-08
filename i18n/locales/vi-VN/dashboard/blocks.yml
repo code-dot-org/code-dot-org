@@ -839,61 +839,19 @@ vi:
         text: rẽ phải
       Vector_positionCenter:
         text: giữa
-      aalab_changePropByFlexible:
-        text: thay đổi {PROPERTY} {SPRITE} theo {VAL}
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': kích cỡ
-            '"rotation"': xoay
-            '"x"': hoành độ
-            '"y"': tung độ
-            '"direction"': phương hướng chuyển động
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': khi nào
-            '"while"': Lặp khi
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': khi nào
-            '"while"': Lặp khi
-      aalab_jumpTo:
-        text: "{SPRITE} nhảy đến {LOCATION}"
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': khi nào
-            '"while"': Lặp khi
-          KEY:
-            '"up"': trên
-            '"down"': xuống
-            '"left"': trái
-            '"right"': phải
-            '"space"': vũ trụ
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': thành phố
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': đúng
-            '"false"': sai
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': kích cỡ
-            '"rotation"': xoay
-            '"x"': hoành độ
-            '"y"': tung độ
-            '"direction"': phương hướng chuyển động
-            '"tint"': sắc thái
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': mãi mãi
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
         options:
           OPTION:
             '"show"': hiển thị

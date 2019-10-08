@@ -1801,6 +1801,8 @@ es-ES:
           Recuerda, puedes insertar más de 1 bloque:
            <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> bucle.
       courseA_collector_loops3_2019:
+        courseA_collector_loops3_a: "Intente user un \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title
+          name=\"TIMES\" config=\"3-10\">???</title></block></xml> \n\nbucle!"
         courseA_collector_loops3_b: |-
           Recuerda, puedes insertar más de 1 bloque:
            <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> bucle.
@@ -3574,6 +3576,16 @@ es-ES:
           esquina, y otra después de la esquina.
         courseB_iceage_loops2_b: Si te atascas, intenta decir los pasos en voz alta.
         courseB_iceage_loops2_c: Sigue esta ruta para llevar a Scrat a la bellota.
+      courseB_iceage_loops3_2019:
+        courseB_iceage_loops3_a: |-
+          Use este nuevo bloque!
+          <xml><block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="3-10">5</title>
+              </block></xml>
+        courseB_iceage_loops3_b: |-
+          Para repetir código, arrastre un `repeat` <xml><block type="controls_repeat_simplified">
+              <title name="TIMES">???</title>
+            </block></xml> bucle, luego ponga el bloque que prefiera dentro del bucle.
       courseB_maze_seq3:
         courseB_maze_seq3_b: Intenta usar el botón de pasos para ver dónde está el
           problema del programa. ¿Es el primer paso? ¿El segundo, quizás?
@@ -5287,16 +5299,6 @@ es-ES:
         courseC_starWars_loops4_a: Utiliza dos bloques `repetir`.
         courseC_starWars_loops4_b: 'Cada `repetir` tendrá sólo una órden dentro: `avanzar`.'
       courseC_starWars_loops5:
-        courseC_starWars_loops5_b: Para moverte hacia abajo, tienes que girar y luego
-          avanzar.
-        courseC_starWars_loops5_a: La mejor solución utiliza un giro, un único `avanzar`,
-          otro giro y después un bucle.
-      courseC_starWars_loops5_2018:
-        courseC_starWars_loops5_b: Para moverte hacia abajo, tienes que girar y luego
-          avanzar.
-        courseC_starWars_loops5_a: La mejor solución utiliza un giro, un único `avanzar`,
-          otro giro y después un bucle.
-      courseC_starWars_loops5_2019:
         courseC_starWars_loops5_b: Para moverte hacia abajo, tienes que girar y luego
           avanzar.
         courseC_starWars_loops5_a: La mejor solución utiliza un giro, un único `avanzar`,

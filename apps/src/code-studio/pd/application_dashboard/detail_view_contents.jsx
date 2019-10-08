@@ -28,7 +28,7 @@ import {
   ScoreableQuestions as TeacherScoreableQuestions,
   MultiAnswerQuestionFields as TeacherMultiAnswerQuestionFields,
   ValidScores as TeacherValidScores
-} from '@cdo/apps/generated/pd/teacher1920ApplicationConstants';
+} from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import {
   InterviewQuestions,
   LabelOverrides as FacilitatorLabelOverrides,
@@ -36,7 +36,7 @@ import {
   SectionHeaders as FacilitatorSectionHeaders,
   ScoreableQuestions as FacilitatorScoreableQuestions,
   ValidScores as FacilitatorValidScores
-} from '@cdo/apps/generated/pd/facilitator1920ApplicationConstants';
+} from '@cdo/apps/generated/pd/facilitatorApplicationConstants';
 import _ from 'lodash';
 import {
   ApplicationStatuses,
@@ -1044,8 +1044,11 @@ export class DetailViewContents extends React.Component {
                 <tbody>
                   {Object.keys(this.pageLabels[header]).map((key, j) => {
                     return (
+                      // For most fields, render them only when they have values.
+                      // For explicitly listed fields, render them regardless of their values.
                       (this.props.applicationData.form_data[key] ||
                         key === 'csTotalCourseHours' ||
+                        key === 'alternateEmail' ||
                         header ===
                           'schoolStatsAndPrincipalApprovalSection') && (
                         <tr key={j}>
