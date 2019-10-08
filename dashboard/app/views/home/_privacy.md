@@ -91,8 +91,6 @@ We may also survey Users to provide us with optional demographic information (su
 
 Computer science educators may provide a school or classroom street address, along with a description of course offerings, in order to allow students or parents to find local schools, summer-camps, or workshops that teach computer science in their neighborhood.
 
-Our partners can sometimes provide additional programs or services such as scholarships or free supplies for schools. When these services or programs are available locally, teachers will have the option to share their email address, school name, and school ID with a specific partner to opt in to a specific service or program to support their classroom.
-
 If you nominate a teacher for professional development or to receive teaching resources, we will only send them emails about the program they are nominated for - they will not be added to any mailing lists (unless they sign up). The nominated teacher may see your name and your description of why you nominated them. Additionally, in the US, we will share the nominated teacher’s name, school, city, and why you nominated them (but not the teacher’s email address or your name) with our Regional Partner in the teacher’s state, so that our partner knows the teacher was recommended and to help process the teacher's application for a scholarship to the partner’s local workshops.
 
 Lastly, for teachers, educators, and partners who participate in our computer science training programs, we may ask for information that is required for compensating or acknowledging you for your work (such as a mailing address to send a check, the name of the school/district that employs you, or a tax form containing your social-security number for IRS reporting purposes).
