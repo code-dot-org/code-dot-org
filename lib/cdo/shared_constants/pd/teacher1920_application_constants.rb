@@ -1,11 +1,16 @@
 module Pd
   module Teacher1920ApplicationConstants
-    include Pd::TeacherCommonApplicationConstants
+    YES_NO = %w(Yes No).freeze
 
     # Remove newlines and leading whitespace from multiline strings
     def self.clean_multiline(string)
       string.gsub(/\n\s*/, ' ')
     end
+
+    LABEL_OVERRIDES = {
+      program: 'Which professional learning program would you like to join for the 2019-20 school year?',
+      cs_how_many_minutes: 'How many minutes will your class last?'
+    }.freeze
 
     SECTION_HEADERS = {
       section_1_about_you: 'About You',
@@ -223,11 +228,6 @@ module Pd
       }
     }
 
-    LABEL_OVERRIDES = {
-      program: 'Which professional learning program would you like to join for the 2019-20 school year?',
-      cs_how_many_minutes: 'How many minutes will your class last?'
-    }.freeze
-
     MULTI_ANSWER_QUESTION_FIELDS = {
       school_name: {principal: :principal_school_name},
       district_name: {principal: :principal_school_district},
@@ -339,6 +339,40 @@ module Pd
       VALID_SCORES.select {|_, v| v == YES_NO}.keys -
         [:csp_how_offer, :csp_which_grades] - SCHOLARSHIP_QUESTIONS
     ).freeze
+
+    TEXT_FIELDS = {
+      other_with_text: 'Other:'.freeze,
+      other_please_list: 'Other (Please List):'.freeze,
+      other_please_explain: 'Other (Please Explain):'.freeze,
+      not_teaching_this_year: "I'm not teaching this year (Please Explain):".freeze,
+      not_teaching_next_year: "I'm not teaching next year (Please Explain):".freeze,
+      dont_know_if_i_will_teach_explain: "I don't know if I will teach this course (Please Explain):".freeze,
+      unable_to_attend: "No, I'm unable to attend (Please Explain):".freeze,
+      able_to_attend_single: "Yes, I'm able to attend".freeze,
+      no_explain: "No (Please Explain):".freeze,
+      i_dont_know_explain: "I don't know (Please Explain):",
+      no_pay_fee_1920: 'No, my school will not be able to pay the program fee. I would like to be considered for a scholarship.',
+      not_sure_explain: 'Not sure (Please Explain):',
+      unable_to_attend_1920: 'I’m not able to attend any of the above workshop dates. (Please Explain):'
+    }.freeze
+
+    SUBJECTS_TAUGHT_IN_PAST = [
+      'CS Fundamentals',
+      'CS in Algebra',
+      'CS in Science',
+      'CS Discoveries',
+      'CS Principles (intro or AP-level)',
+      'AP CS A',
+      'Beauty and Joy of Computing',
+      'Code HS',
+      'Edhesive',
+      'Exploring Computer Science',
+      'Mobile CSP',
+      'NMSI',
+      'Project Lead the Way',
+      'Robotics',
+      'ScratchEd'
+    ].freeze
 
     CSV_COLUMNS = {
       teacher: [
