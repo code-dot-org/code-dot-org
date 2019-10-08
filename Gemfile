@@ -334,6 +334,7 @@ install_if require_pg do
   gem 'pg', require: false
 end
 
+gem 'active_record_union'
 gem 'activerecord-import'
 gem 'scenic'
 gem 'scenic-mysql_adapter'
