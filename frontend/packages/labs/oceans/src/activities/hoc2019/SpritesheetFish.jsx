@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import fish, {bodyShape, bodyPartShape} from '../../utils/fishData';
 const P5 = require('../../utils/loadP5');
 
-const generateRandomFish = () => {
+export const generateRandomFish = () => {
   const bodies = Object.values(fish.bodies);
   const eyes = Object.values(fish.eyes);
   const mouths = Object.values(fish.mouths);
@@ -10,13 +10,29 @@ const generateRandomFish = () => {
   const topFins = Object.values(fish.topFins);
   const tails = Object.values(fish.tails);
 
+  const body = bodies[Math.floor(Math.random() * bodies.length)];
+  const eye = eyes[Math.floor(Math.random() * eyes.length)];
+  const mouth = mouths[Math.floor(Math.random() * mouths.length)];
+  const sideFin = sideFins[Math.floor(Math.random() * sideFins.length)];
+  const topFin = topFins[Math.floor(Math.random() * topFins.length)];
+  const tail = tails[Math.floor(Math.random() * tails.length)];
+  const knnData = [
+      ...body.knnData,
+      ...eye.knnData,
+      ...mouth.knnData,
+      ...sideFin.knnData,
+      ...topFin.knnData,
+      ...tail.knnData
+    ];
+
   return {
-    body: bodies[Math.floor(Math.random() * bodies.length)],
-    eye: eyes[Math.floor(Math.random() * eyes.length)],
-    mouth: mouths[Math.floor(Math.random() * mouths.length)],
-    sideFin: sideFins[Math.floor(Math.random() * sideFins.length)],
-    topFin: topFins[Math.floor(Math.random() * topFins.length)],
-    tail: tails[Math.floor(Math.random() * tails.length)]
+    body,
+    eye,
+    mouth,
+    sideFin,
+    topFin,
+    tail,
+    knnData
   };
 };
 
@@ -32,23 +48,25 @@ export default class SpritesheetFish extends React.Component {
         sideFin={randomFish.sideFin}
         topFin={randomFish.topFin}
         tail={randomFish.tail}
+        canvasId="canvas"
       />
     );
   }
 }
 
-class Fish extends React.Component {
+export class Fish extends React.Component {
   static propTypes = {
     body: bodyShape.isRequired,
     eye: bodyPartShape.isRequired,
     mouth: bodyPartShape.isRequired,
     sideFin: bodyPartShape.isRequired,
     topFin: bodyPartShape.isRequired,
-    tail: bodyPartShape.isRequired
+    tail: bodyPartShape.isRequired,
+    canvasId: PropTypes.string.isRequired
   };
 
   componentDidMount() {
-    this.p5 = new P5(this.sketch, 'canvas');
+    this.p5 = new P5(this.sketch, this.props.canvasId);
   }
 
   sketch = p5 => {
@@ -118,6 +136,6 @@ class Fish extends React.Component {
   };
 
   render() {
-    return <div id="canvas" />;
+    return <div id={this.props.canvasId} />;
   }
 }
