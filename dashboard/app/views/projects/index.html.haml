@@ -10,8 +10,8 @@
     projects_data[:canShare] = !current_user.sharing_disabled?
   end
 
-%script{src: asset_path("js/#{js_locale}/common_locale.js"), data: {projects: projects_data.to_json}}
-%script{src: minifiable_asset_path('js/projects/index.js')}
+%script{src: webpack_asset_path("js/#{js_locale}/common_locale.js"), data: {projects: projects_data.to_json}}
+%script{src: webpack_asset_path('js/projects/index.js')}
 
 .projects-page
   #projects-header

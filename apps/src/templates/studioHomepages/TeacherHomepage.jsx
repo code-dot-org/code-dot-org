@@ -186,9 +186,7 @@ export default class TeacherHomepage extends Component {
         {isEnglish && showSpecialAnnouncement && (
           <SpecialAnnouncementActionBlock
             hocLaunch={hocLaunch}
-            hasIncompleteApplication={
-              !!sessionStorage['Teacher1920Application']
-            }
+            hasIncompleteApplication={!!sessionStorage['TeacherApplication']}
           />
         )}
         {announcement && showAnnouncement && (
