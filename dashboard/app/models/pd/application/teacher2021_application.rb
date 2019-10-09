@@ -198,7 +198,9 @@ module Pd::Application
             'Unit 3: What is a Computer?',
             'Unit 4: The Design Process',
             'Unit 5: Data & Society',
-            'Unit 6: Physical Computing'
+            'Unit 6: Physical Computing',
+            'All units',
+            "I'm not sure"
           ],
           csp_which_units: [
             'Unit 1: Digital Information',
@@ -211,6 +213,8 @@ module Pd::Application
             'Unit 8: AP Create Performance Task',
             'Unit 9: Data',
             'Unit 10: Cybersecurity and Global Impact',
+            'All units',
+            "I'm not sure"
           ],
           replace_which_course: [
             'CodeHS',
