@@ -10,6 +10,9 @@ hr:
   campaign_date_full: "7. - 13. prosinca"
   campaign_date_year: "2016."
   campaign_date_full_year: "5.-11. prosinca, 2016."
+  hoc2019_header: 'Uči informatiku. Promijeni svijet.'
+  hoc2019_header_line1_mobile: 'Uči informatiku.'
+  hoc2019_header_line2_mobile: 'Promijeni svijet.'
   codeorg_homepage_hoc2018_curriculum: 'Go further with <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org courses</a>'
   codeorg_homepage_hoc2018_dance_heading: 'Create your own <span class="highlight-word">Dance&nbsp;Party</span>'
   codeorg_homepage_hoc2018_header_line1: 'The Hour of Code is coming...'
@@ -317,7 +320,7 @@ hr:
   map_legend_title: 'Legenda'
   map_legend_hoc_events: 'Događanje Sat kodiranja'
   map_legend_cs_tech_jam: 'Poseban događaj'
-  map_warning: "The Hour of Code map only shows the first 200,000 registered events. All registered events with a valid address can be viewed on the <a href='%{events_url}'>events page.</a>"
+  map_warning: "A full list of the events can be viewed on the <a href='%{events_url}'>events page.</a>"
   meta_tag_og_title: 'Sat kodiranja se približava'
   meta_tag_og_description: 'Sat Kodiranja je globalni pokret koji doseže milijune učenika u 180+ zemalja i na preko 30 jezika. Od 4 do 104 godine.'
   meta_tag_twitter_title: 'Sat kodiranja se približava'
