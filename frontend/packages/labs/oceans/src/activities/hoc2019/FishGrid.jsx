@@ -14,7 +14,7 @@ export default class FishGrid extends React.Component {
     ).isRequired,
     cols: PropTypes.number.isRequired,
     canSelect: PropTypes.bool,
-    onSelectImage: PropTypes.func
+    onSelectFish: PropTypes.func
   };
 
   constructor(props) {
@@ -25,22 +25,17 @@ export default class FishGrid extends React.Component {
     };
   }
 
-  onSelectImage = (rowIdx, colIdx) => {
-    if (!this.props.canSelect) {
+  onSelectFish = (rowIdx, colIdx) => {
+    if (!this.props.canSelect || this.state.rows[rowIdx][colIdx].isSelected) {
       return;
     }
 
-    let selectedImages = {...this.state.selectedImages};
-    let selectedInRow = selectedImages[rowIdx] || [];
+    let updatedRows = [...this.state.rows];
+    updatedRows[rowIdx][colIdx].isSelected = true;
+    this.setState({rows: updatedRows});
 
-    if (!selectedInRow.includes(colIdx)) {
-      selectedInRow.push(colIdx);
-      selectedImages[rowIdx] = selectedInRow;
-      this.setState({selectedImages});
-
-      if (this.props.onSelectImage) {
-        this.props.onSelectImage();
-      }
+    if (this.props.onSelectFish) {
+      this.props.onSelectFish();
     }
   };
 
@@ -51,7 +46,7 @@ export default class FishGrid extends React.Component {
           <div key={`row-${rowIdx}`} style={styles.row}>
             {row.map((fishDatum, colIdx) => (
               <div
-                onClick={() => this.onSelectImage(rowIdx, colIdx)}
+                onClick={() => this.onSelectFish(rowIdx, colIdx)}
                 style={styles.col}
                 key={`col-${colIdx}`}
               >

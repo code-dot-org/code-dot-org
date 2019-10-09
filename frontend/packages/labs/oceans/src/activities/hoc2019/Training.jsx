@@ -66,15 +66,22 @@ export default class Training extends React.Component {
             <Row>
               {row.map((data, colIdx) => (
                 <Col key={colIdx} xs={6}>
-                  <div className="selectable-image-container" onClick={() => (this.selectOption(rowIdx, colIdx))}>
+                  <div
+                    className="selectable-image-container"
+                    onClick={() => this.selectOption(rowIdx, colIdx)}
+                  >
                     <Fish
                       body={this.state.visibleOptions[rowIdx][colIdx].body}
                       eye={this.state.visibleOptions[rowIdx][colIdx].eye}
                       mouth={this.state.visibleOptions[rowIdx][colIdx].mouth}
-                      sideFin={this.state.visibleOptions[rowIdx][colIdx].sideFin}
+                      sideFin={
+                        this.state.visibleOptions[rowIdx][colIdx].sideFin
+                      }
                       topFin={this.state.visibleOptions[rowIdx][colIdx].topFin}
                       tail={this.state.visibleOptions[rowIdx][colIdx].tail}
-                      canvasId={"canvas-" + rowIdx + "-" + colIdx}
+                      canvasId={
+                        this.state.visibleOptions[rowIdx][colIdx].canvasId
+                      }
                     />
                     {this.state.selectedOptions[rowIdx][colIdx] && (
                       <div className="top-right-label">{this.props.label}</div>
