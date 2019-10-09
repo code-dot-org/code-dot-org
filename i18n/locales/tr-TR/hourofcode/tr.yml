@@ -10,6 +10,9 @@ tr:
   campaign_date_full: "7-13 Aralık"
   campaign_date_year: "2016"
   campaign_date_full_year: "5-11 Aralık, 2016"
+  hoc2019_header: 'Bilgisayar Bilimlerini Öğren, Dünyayı değiştir.'
+  hoc2019_header_line1_mobile: 'Bilgisayar Bilimlerini Öğren.'
+  hoc2019_header_line2_mobile: 'Dünyayı değiştir.'
   codeorg_homepage_hoc2018_curriculum: 'Code.org <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">dersleri </a> ile devam edin'
   codeorg_homepage_hoc2018_dance_heading: 'Create your own <span class="highlight-word">Dance&nbsp;Party</span>'
   codeorg_homepage_hoc2018_header_line1: 'Kodlama Saati geliyor...'
