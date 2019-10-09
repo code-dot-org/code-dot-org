@@ -720,18 +720,26 @@ module Pd::Application
           principal_school_type: principal_school.try(:school_type),
           principal_school_district: principal_school.try(:district).try(:name),
           principal_approval: principal_response.values_at(:do_you_approve, :do_you_approve_other).compact.join(" "),
-          principal_schedule_confirmed: principal_response.values_at(:committed_to_master_schedule, :committed_to_master_schedule_other).compact.join(" "),
+          principal_schedule_confirmed:
+            principal_response.values_at(:committed_to_master_schedule, :committed_to_master_schedule_other).compact.join(" "),
           principal_total_enrollment: principal_response[:total_student_enrollment],
-          principal_diversity_recruitment: principal_response.values_at(:committed_to_diversity, :committed_to_diversity_other).compact.join(" "),
-          principal_free_lunch_percent: format("%0.02f%%", principal_response[:free_lunch_percent]),
-          principal_underrepresented_minority_percent: format("%0.02f%%", principal_approval.underrepresented_minority_percent),
-          principal_american_indian_or_native_alaskan_percent: format("%0.02f%%", principal_response[:american_indian]),
-          principal_asian_percent: format("%0.02f%%", principal_response[:asian]),
-          principal_black_or_african_american_percent: format("%0.02f%%", principal_response[:black]),
-          principal_hispanic_or_latino_percent: format("%0.02f%%", principal_response[:hispanic]),
-          principal_native_hawaiian_or_pacific_islander_percent: format("%0.02f%%", principal_response[:pacific_islander]),
-          principal_white_percent: format("%0.02f%%", principal_response[:white]),
-          principal_other_percent: format("%0.02f%%", principal_response[:other]),
+          principal_diversity_recruitment:
+            principal_response.values_at(:committed_to_diversity, :committed_to_diversity_other).compact.join(" "),
+          principal_free_lunch_percent:
+            principal_response[:free_lunch_percent] ? format("%0.02f%%", principal_response[:free_lunch_percent]) : nil,
+          principal_underrepresented_minority_percent:
+            principal_approval.underrepresented_minority_percent ? format("%0.02f%%", principal_approval.underrepresented_minority_percent) : nil,
+          principal_american_indian_or_native_alaskan_percent:
+            principal_response[:american_indian] ? format("%0.02f%%", principal_response[:american_indian]) : nil,
+          principal_asian_percent: principal_response[:asian] ? format("%0.02f%%", principal_response[:asian]) : nil,
+          principal_black_or_african_american_percent:
+            principal_response[:black] ? format("%0.02f%%", principal_response[:black]) : nil,
+          principal_hispanic_or_latino_percent:
+            principal_response[:hispanic] ? format("%0.02f%%", principal_response[:hispanic]) : nil,
+          principal_native_hawaiian_or_pacific_islander_percent:
+            principal_response[:pacific_islander] ? format("%0.02f%%", principal_response[:pacific_islander]) : nil,
+          principal_white_percent: principal_response[:white] ? format("%0.02f%%", principal_response[:white]) : nil,
+          principal_other_percent: principal_response[:other] ? format("%0.02f%%", principal_response[:other]) : nil,
           principal_wont_replace_existing_course: replace_course_string,
           principal_send_ap_scores: principal_response[:send_ap_scores],
           principal_pay_fee: principal_response[:pay_fee],
