@@ -1,33 +1,33 @@
 ---
-title: Supporting special needs students for the Hour of Code
+title: Υποστήριξη μαθητών με αναπηρία στην Ώρα του Κώδικα
 ---
 
-# Supporting students with disabilities for the Hour of Code
+# Υποστήριξη μαθητών με αναπηρία στην Ώρα του Κώδικα
 
-Anyone can try an Hour of Code during Computer Science Education Week. Often, students with autism, ADHD or other learning differences find they love programming. Encourage all the students in your classroom to give it a try! In setting up the experience for your classroom, reward participation rather than completion. You can give everyone a [certificate]({{ supporting-special-needs-students/certificate }}) no matter how many puzzles or challenges they complete within the hour. [Pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q) is another great way to teach collaboration and have students work together to solve problems.
+Anyone can try an Hour of Code during Computer Science Education Week. Συχνά, μαθητές με αυτισμό, απόσπαση προσοχής ή άλλες μαθησιακές δυσκολίες, αγαπούν τον προγραμματισμό. Ενθαρρύνετε όλους τους μαθητές στην τάξη σας να δοκιμάσουν! Στο πλαίσιο της εκδήλωσης για την τάξη σας, επιβραβεύστε την συμμετοχή παρά τον τερματισμό. Μπορείτε να δώσετε σε όλους ένα [δίπλωμα]({{ supporting-special-needs-students/certificate }}), ανεξάρτητα από το πόσα προβλήματα ή ασκήσεις ολοκλήρωσε εντός της ώρας. Ο [ προγραμματισμός σε ζεύγη (pair programming)](https://www.youtube.com/watch?v=vgkahOzFH2Q) είναι ένας άλλος καλός τρόπος για να μάθουν οι μαθητές τη συνεργασία για την επίλυση προβλημάτων.
 
-## Fit a variety of needs with unplugged and online tutorials
+## Ανταποκριθείτε σε διαφορετικές ανάγκες με αποσυνδεδεμένα και online μαθήματα
 
-In finding the right activity for everyone in your class, consider both online and “unplugged” options that do not require computers. Unplugged activities allow students to get hands on with computer science concepts. The [Big Event](https://studio.code.org/s/course1/stage/15/puzzle/1) puts teachers in control over the actions of students, allowing for a great opportunity to tailor the content to the abilities of each student.
+Στην αναζήτηση της κατάλληλης δραστηριότητας για όλους στην τάξη σας, δοκιμάστε τόσο online όσο και "αποσυνδεδεμένες" επιλογές που δεν απαιτούν υπολογιστές. Οι αποσυνδεδεμένες δραστηριότητες δίνουν την ευκαιρία στους μαθητές να δοκιμάσουν έμπρακτα τις έννοιες της επιστήμης των υπολογιστών. Το <a href="https://studio.code.org/s/course1/stage/15/puzzle/1>"Μεγάλο Γεγονός</a> επιτρέπει στους διδάσκοντες να ελέγχουν τις πράξεις των μαθητών, δίνοντας έτσι την ευκαρία να διαμορφώσει το περιεχόμενο του μαθήματος στις ικανότητες του κάθε μαθητή.
 
-For other students, the accommodations available on the computer may allow them to participate better than an unplugged choice. For example, students who are deaf or hard of hearing can participate fully in the online tutorials.
+Για άλλους μαθητές, τα εργαλεία που είναι διαθέσιμα στους υπολογιστές, ίσως τους επιτρέπουν να συμμετέχουν πιο εύκολα απο ό, τι στις αποσυνδεδεμένες δραστηριότητες. Για παράδειγμα, οι μαθητές με προβλήματα ακοής μπορούν να συμμετέχουν πλήρως στα online μαθήματα.
 
-The most inclusive choice may also depend on whether you have an accessible computer lab or laptops.
+Επιπλέον, η καταλληλότερη επιλογή μπορεί να εξαρτάται από την πρόσβαση σε εργαστηριο υπολογιστών ή σε φορητούς υπολογιστές.
 
-For example, do your students have reduced mobility or dexterity? If all your students have access to technology at your school, ask your students or tech teacher what accommodations your students typically use with the computers available.
+Για παράδειγμα, υπάρχουν στην τάξη σας μαθητές με περιορισμένη κινητικότητα; Εάν όλοι οι μαθητές σας έχουν πρόσβαση στην τεχνολογία, ρωτήστε αυτούς ή τον καθηγητή τεχνολογίας, τι είδους εργαλεία χρησιμοποιούν συνήθως με τους διαθέσιμους υπολογιστές.
 
 ## Sensory Impairments
 
-### Students who are blind or low vision
+### Μαθητές με προβλήματα όρασης
 
-For students who use a screen reader, the [Quorum tutorial for beginners](https://quorumlanguage.com/hourofcode/astro1.html) or the [Quorum tutorial for comfortable students](https://quorumlanguage.com/hourofcode/part1.html) is a great place to start. Quorum started as an interpreted language designed to be accessible to screen reader users. Eventually, it became a general purpose programming language designed for any user. You can use these Hour of Code tutorials with your entire classroom. And, if you want to go beyond an Hour of Code, the team at Quorum has additional tools and curriculum.
+Για μαθητές που χρησιμοποιούν screen reader, τα μαθήματα [Quorum για αρχάριους](https://quorumlanguage.com/hourofcode/astro1.html), ή [Quorum για προχωρημένους](https://quorumlanguage.com/hourofcode/part1.html), είναι πολύ καλές επιλογές για αρχή. Η Quorum ξεκίνησε σαν μια γλώσσα σχεδιασμένη ειδικά ώστε να είναι προσβάσιμη σε χρήστες screen readers. Με την πάροδο του χρόνου, έγινε μια γλώσσα προγραμματισμού που χρησιμοποιείται από οποιονδήποτε χρήστη. Μπορείτε να χρησιμοποιήσετε αυτά τα μαθήματα της Ώρας του Κώδικα με όλους τους μαθητές της τάξης. And, if you want to go beyond an Hour of Code, the team at Quorum has additional tools and curriculum.
 
-If your student uses other accommodations in technology classes, you may use those to help with Hour of Code as well. These can include larger monitors, software screen magnification, high contrast settings in their operating system, voice control and more.
+Εάν ο μαθητής χρησιμοποιεί κάποια συγκεκριμένα εργαλεία της τάξης των υπολογιστών, μπορείτε να χρησιμοποιήσετε στην Ώρα του Κώδικα επίσης. Για παράδειγμα μεγάλες οθόνες, μεγένθυση οθόνης μέσω του υπολογιστή, υψηλή αντίθεση εικόνας μέσω ρυθμίσεων στον υπολογιστή, ηχητικές εντολές κλπ.
 
-### Students who are deaf or hard of hearing
+### Μαθητές με προβλήματα ακοής
 
-The [Code.org tutorials](https://studio.code.org/) are all designed to be used with or without sound. All the videos have captions. Some students can also benefit from headphones set to a higher volume.
+Τα [μαθήματα του Code.org](https://studio.code.org/) είναι σχεδιασμένα για χρήση με ή χωρίς ήχο. Όλα τα βίντεο έχουν υπότιτλους. Για μερικούς μαθητές ίσως βοηθάει η χρήση ακουστικών σε υψηλή ένταση.
 
 ## Μάθετε περισσότερα
 
-To learn more about computer science education and special needs students, we recommend this [online book]({{ supporting-special-needs-students/book }}).
+Για να μάθετε περισσότερα σχετικά με την διδασκαλία της επιστήμης των υπολογιστών και τους μαθητές με αναπηρία, σας προτείνουμε [αυτό]({{ supporting-special-needs-students/book }}) το online βιβλίο.
