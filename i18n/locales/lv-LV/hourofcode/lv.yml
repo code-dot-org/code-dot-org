@@ -10,6 +10,9 @@ lv:
   campaign_date_full: "5.-11. decembris"
   campaign_date_year: "2016"
   campaign_date_full_year: "5.-11. decembris, 2016"
+  hoc2019_header: 'Mācies datorzinātni. Maini pasauli.'
+  hoc2019_header_line1_mobile: 'Mācies datorzinātni.'
+  hoc2019_header_line2_mobile: 'Maini pasauli.'
   codeorg_homepage_hoc2018_curriculum: 'Go further with <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org courses</a>'
   codeorg_homepage_hoc2018_dance_heading: 'Create your own <span class="highlight-word">Dance&nbsp;Party</span>'
   codeorg_homepage_hoc2018_header_line1: 'The Hour of Code is coming...'
@@ -317,7 +320,7 @@ lv:
   map_legend_title: 'Legend'
   map_legend_hoc_events: 'Hour of Code Event'
   map_legend_cs_tech_jam: 'Special Event'
-  map_warning: "The Hour of Code map only shows the first 200,000 registered events. All registered events with a valid address can be viewed on the <a href='%{events_url}'>events page.</a>"
+  map_warning: "A full list of the events can be viewed on the <a href='%{events_url}'>events page.</a>"
   meta_tag_og_title: 'Programmēšanas stunda tuvojas'
   meta_tag_og_description: 'Programmēšas stunda ir starptautiska kustība, kurā piedalās ap desmit miljonu skolēnu vairāk nekā 180 valstīs un vairāk nekā 30 valodās. Vecums no 4 līdz 104 gadiem.'
   meta_tag_twitter_title: 'Programmēšanas stunda tuvojas'
