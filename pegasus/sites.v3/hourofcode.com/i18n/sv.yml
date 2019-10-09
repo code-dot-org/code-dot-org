@@ -10,6 +10,9 @@
   campaign_date_full: "5-11 december"
   campaign_date_year: "2016"
   campaign_date_full_year: "5-11 december 2016"
+  hoc2019_header: 'Lär dig datavetenskap. Förändra världen.'
+  hoc2019_header_line1_mobile: 'Lär dig datavetenskap.'
+  hoc2019_header_line2_mobile: 'Förändra världen.'
   codeorg_homepage_hoc2018_curriculum: 'Fortsätt med <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org-kurser</a>'
   codeorg_homepage_hoc2018_dance_heading: 'Skapa ditt egna <span class="highlight-word">dans&nbsp;party</span>'
   codeorg_homepage_hoc2018_header_line1: 'Hour of Code närmar sig...'
@@ -47,7 +50,7 @@
   not_found_desc: 'Den begärda sidan hittades inte'
   not_found_instructions: 'Kontrollera adressen och försök igen eller välja en länk i listan nedan.'
   company_4-H: 4-H Youth Development
-  company_asa: Afterschool Alliance
+  company_asa: 4-H Youth Development
   company_asos: ASOS
   company_bgca: Boys and Girls Club of America
   company_bsusa: Boy Scouts of America
@@ -789,7 +792,7 @@
   tutorial_hopdropphone_name: "Make \"Don't Drop the Phone\" on iPad/iPhone"
   tutorial_techfaa_name: "Flocking Autonomous Agents"
   tutorial_codehsjsgraph_name: "JavaScript Graphics with CodeHS"
-  tutorial_thunkable_name: "Learn How to Build 10 Apps in 1 Hour!"
+  tutorial_thunkable_name: "Lär dig bygga 10 appar på 1 timme!"
   tutorial_hopcrossyroad_name: "Make Crossy Road on iPad/iPhone"
   tutorial_switchglitch_name: "Switch & Glitch: Robot Adventure"
   tutorial_codecar_name: "Code Car Simulator"
@@ -803,7 +806,7 @@
   tutorial_rgbegin_name: "RoboGarden Coding - Beginner"
   tutorial_myradream_name: "Actimator: Myra's Dream"
   tutorial_thinkfun_name: "Robot Repair: Can You Fix the Robot Brain?"
-  tutorial_hopfireworks_name: "Make a Fireworks App on iPad/iPhone"
+  tutorial_hopfireworks_name: "Skapa Fyverkerier på iPad/iPhone"
   tutorial_grokspace_name: "Space (Blockly)"
   tutorial_codehspython_name: "Code in Python with CodeHS"
   tutorial_codehsjava_name: "Coding in Java with CodeHS"
@@ -818,13 +821,13 @@
   tutorial_techikb_name: "Interactive Kotlin Basics"
   tutorial_kanostreet_name: "Street Artist"
   tutorial_nyblebot_name: "Boogie Bot"
-  tutorial_codemojijs_name: "Beginning JavaScript"
-  tutorial_techapf_name: "Advanced Python Features"
+  tutorial_codemojijs_name: "Nybörjare JavaScript"
+  tutorial_techapf_name: "Avancerad Python"
   tutorial_techfpjs_name: "Practical Introduction to Functional Programming with JS"
   tutorial_techlinq_name: "Using C# LINQ - A Practical Overview"
-  tutorial_gpbcatapult_name: "Build a Catapult"
-  tutorial_quorumastro_name: "Coding in Astronomy"
-  tutorial_alicewonder_name: "Alice in Wonderland"
+  tutorial_gpbcatapult_name: "Bygg en katapult"
+  tutorial_quorumastro_name: "Koda i Astronomin"
+  tutorial_alicewonder_name: "Alice i Underlandet"
   tutorial_rginter_name: "RoboGarden Coding - Intermediate"
   tutorial_cssgrid_name: "Grid Garden"
   tutorial_jshero_name: "JS Hero"
@@ -1381,7 +1384,7 @@
   tutorial_rgbegin_shortdescription: "At RoboGarden, we believe in giving learners the opportunity to take an active role in their education"
   tutorial_myradream_shortdescription: "Use code blocks to help Myra on a journey to get her dream back."
   tutorial_thinkfun_shortdescription: "Enjoy this fun CS activity that teaches Boolean logic concepts."
-  tutorial_hopfireworks_shortdescription: "Make a Fireworks App on iPad/iPhone"
+  tutorial_hopfireworks_shortdescription: "Skapa Fyverkerier på iPad/iPhone"
   tutorial_grokspace_shortdescription: "This activity is designed to give you your first experience programming, and has been specially designed for the Hour of Code. Use the visual programming language Blockly to investigate space and reach for the stars."
   tutorial_codehspython_shortdescription: "Code programs in Python!"
   tutorial_codehsjava_shortdescription: "Code programs in Java!"
