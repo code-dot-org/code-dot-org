@@ -489,6 +489,22 @@ module HttpCacheTest
         end
       end
 
+      # When varnish tries to cache large responses, if the cache is full of many small responses,
+      # it may hit the "nuke limit" and abort the connection, not only failing to cache, but also
+      # truncating the response. We ran into this issue in production during high-traffic times with large pdf files.
+      # To avoid this, we configure varnish to not cache pdfs.
+      it 'does not cache pdfs' do
+        url = '/fakepdf.pdf'
+
+        2.times do
+          response = proxy_request url
+          assert_ok response
+          assert_miss response
+        end
+
+        assert_equal 2, count_origin_requests(url)
+      end
+
       it 'Strips cookies from the penultimate dance level' do
         assert strips_session_specific_cookies_from_request? '/s/dance/stage/1/puzzle/12'
       end

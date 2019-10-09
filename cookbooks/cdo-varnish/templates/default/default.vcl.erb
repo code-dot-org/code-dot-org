@@ -144,6 +144,12 @@ if (req.http.X-Cookie-language_) {
 <%= setup_behavior(config, 'req', &method(:process_proxy)) %>
 ###
 
+# Don't cache potentially large files to avoid aborted connections due to hitting the "nuke limit":
+# https://varnish-misc.varnish-cache.narkive.com/tUrH8ayo/question-about-an-lru-error
+if (req.url ~ "^.*\.pdf$") {
+  return (pass);
+}
+
 # Override builtin VCL with customizations:
 # 1. Allow caching whitelisted cookies.
 # 2. Return 403 instead of (pipe) on unsupported HTTP request methods.
