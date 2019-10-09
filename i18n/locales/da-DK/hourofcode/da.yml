@@ -10,6 +10,9 @@ da:
   campaign_date_full: "7.-13. december"
   campaign_date_year: "2016"
   campaign_date_full_year: "5.-11. december 2016"
+  hoc2019_header: 'Lær at programmere. Lær at ændre verden.'
+  hoc2019_header_line1_mobile: 'Lær at programmere.'
+  hoc2019_header_line2_mobile: 'Lær at ændre verden.'
   codeorg_homepage_hoc2018_curriculum: 'Go further with <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org courses</a>'
   codeorg_homepage_hoc2018_dance_heading: 'Lav din egen <span class="highlight-word">Danse&nbsp;fest</span>'
   codeorg_homepage_hoc2018_header_line1: 'Hour of Code nærmer sig...'
