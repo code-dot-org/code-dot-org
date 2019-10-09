@@ -82,6 +82,12 @@ export default class PondCreator extends React.Component {
     localStorage.setItem(SESSION_KEY, this.state.trainer.getDatasetJSON());
   };
 
+  startOver() {
+    this.state.trainer.clearAll();
+    localStorage.removeItem(SESSION_KEY);
+    this.setMode(Modes.Training);
+  }
+
   render() {
     if (!this.state.initialized) {
       return null;
@@ -111,6 +117,7 @@ export default class PondCreator extends React.Component {
             </Button>
           </div>
         )}
+        <Button onClick={() => this.clearTraining()}>Start over</Button>
       </div>
     );
   }
