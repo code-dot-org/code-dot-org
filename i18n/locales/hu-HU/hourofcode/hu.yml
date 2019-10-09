@@ -10,6 +10,9 @@ hu:
   campaign_date_full: "december 4-10"
   campaign_date_year: "2017"
   campaign_date_full_year: "December 4-10, 2017"
+  hoc2019_header: 'Learn computer science. Change the world.'
+  hoc2019_header_line1_mobile: 'Learn computer science.'
+  hoc2019_header_line2_mobile: 'Change the world.'
   codeorg_homepage_hoc2018_curriculum: 'Haladj tovább a <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org kurzusokkal</a>'
   codeorg_homepage_hoc2018_dance_heading: 'Készítsd el saját <span class="highlight-word">tánc&nbsp;partidat</span>'
   codeorg_homepage_hoc2018_header_line1: 'Hamarosan itt a "Hour of Code" esemény...'
