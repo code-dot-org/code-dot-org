@@ -16,7 +16,7 @@ nav: how_to_nav
 
 ## 2) ஒரு டுடோரியலைத் தேர்வு செய்க
 
-We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
+பல்வேறு வகையான கூட்டாளர்களால் உருவாக்கப்பட்ட அனைத்து வயது மாணவர்களுக்கும் பலவிதமான வேடிக்கையான, மணிநேர பயிற்சிகளை நாங்கள் வழங்குகிறோம். [ அவற்றை முயற்சிக்கவும்! ]({{urls/learn }a>)
 
 **கோட் டுடோரியல்களின் அனைத்து நேரம் சுய வழிகாட்டுதலும் - உங்கள் குழந்தை வேகத்திலும் வேகத்திலும் வேலை செய்ய அனுமதிக்கிறது**
 
@@ -37,13 +37,13 @@ We provide a variety of fun, hour-long tutorials for students of all ages, creat
 - பில் கேட்ஸ், மார்க் ஜுக்கர்பெர்க், மற்றும் NBA நடிகர் கிரிஸ் பாஷ் ([ 1 நிமிடம் </ a > [ 5 நிமிடம் ](https://www.youtube.com/watch?v=nKIu9yen5nc), மற்றும் <a href = "https://www.youtube.com/watch?v = dU1xS07N-FA "> 9 நிமிட ](https://www.youtube.com/watch?v=qYZF6oIZtfc) பதிப்புகள்).
 - [ குறியீட்டு உலகளாவிய வீடியோவின் ஹவர் ](https://www.youtube.com/watch?v=KsOIlDT145A).
 - [ ஜனாதிபதி ஒபாமா அனைத்து மாணவர்களும் கணினி அறிவியலைக் கற்றுக் கொள்ளுமாறு அழைப்பு விடுத்துள்ளனர்](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-- Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- மேலும் உத்வேகம் தரும் <a href="== {url / inspire} "
 
 நீங்கள் மற்றும் உங்கள் குழந்தை இருவரும் கணினி அறிவியல் புத்தம் புதிய என்றால் அது பரவாயில்லை. குறியீட்டு நடவடிக்கையின் உங்கள் நேரத்தை அறிமுகப்படுத்த சில யோசனைகள் இங்கு உள்ளன:
 
 - உதாரணமாக, சிறுவர்கள் மற்றும் பெண்கள் இருவருக்கும் கவனித்துக்கொள்வதற்கான வழிகள் (உயிர்களைக் காப்பாற்றுவது, மக்களுக்கு உதவுதல், மக்களை இணைத்தல், முதலியன) ஆகியவற்றைக் கொண்டு நமது வாழ்க்கையைப் பாதிக்கும் வழிகளை விளக்குங்கள்.
 - அன்றாட வாழ்க்கையில் குறியீட்டைப் பயன்படுத்தும் பட்டியலைக் குறிப்பிடுக.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- கணினி அறிவியலில் சிறுமிகள் ஆர்வம் காட்டுவதற்கான உதவிக்குறிப்புகளைக் காண்க [ இங்கே ](a> {urls/girls }a>).
 
 மேலும் யோசனைகள் வேண்டுமா? அனுபவம் வாய்ந்த கல்வியாளர்களிடமிருந்து சிறந்த நடைமுறைகளுக்கு எங்கள் [ டெம்ப்ளேட் பாடம் திட்டம் ](/files/AfterschoolEducatorLessonPlanOutline.docx) என்பதைப் பார்க்கவும்.
 
@@ -63,7 +63,7 @@ We provide a variety of fun, hour-long tutorials for students of all ages, creat
 
 ## 6) கொண்டாடுங்கள்
 
-[Print certificates]({{ urls/certificates }}) for your child (and yourself!).
+உங்கள் பிள்ளைக்கு (மற்றும் நீங்களே!) [ அச்சிடும் சான்றிதழ்கள் ](== {urls/certificates }ibl).
 
 சமூக மீடியாவில் உங்கள் நிகழ்வு நிகழ்வு நிகழ்வுகளின் வீடியோ மற்றும் வீடியோக்களைப் பகிரலாம். #HourOfCode மற்றும் @codeorg பயன்படுத்தவும், எனவே உங்கள் வெற்றியை முன்னிலைப்படுத்தலாம்!
 
@@ -73,7 +73,7 @@ We provide a variety of fun, hour-long tutorials for students of all ages, creat
 
 தொழில்நுட்பத்தின் வேலைகள் மற்றும் மென்பொருள் பயன்பாடுகளை எவ்வாறு உருவாக்குவது என்பது பற்றி மேலும் அறிய ஒரு பயணத்தின் முதல் படியாகும். இந்த பயணத்தை தொடர
 
-- Encourage your child to continue [to learn online]({{ urls/learn_beyond }}).
-- Help [promote]({{ urls/promote }}) computer science education in your child’s school district.
+- ஆன்லைனில் கற்றுக்கொள்ள [ தொடர உங்கள் குழந்தையை ஊக்குவிக்கவும் ]({{urls/learn_beyond }a>).
+- உங்கள் குழந்தையின் பள்ளி மாவட்டத்தில் கணினி அறிவியல் கல்வியை [ ஊக்குவிக்க ](== {urls/promote }a>) உதவுங்கள்.
 
 {{signup_button}}
