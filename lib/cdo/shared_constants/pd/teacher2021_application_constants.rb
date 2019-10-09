@@ -8,16 +8,16 @@ module Pd
     end
 
     SECTION_HEADERS = {
-      section_1_about_you: 'About You',
-      section_2_choose_your_program: 'Choose Your Program',
-      section_3_teaching_background: 'Teaching Background',
-      section_4_professional_learning_program_requirements: 'Professional Learning Program Requirements',
-      section_5_additional_demographic_information: 'Additional Demographic Information and submission',
+      about_you: 'About You',
+      teaching_background: 'Teaching Background',
+      choose_your_program: 'Choose Your Program',
+      professional_learning_program_requirements: 'Professional Learning Program Requirements',
+      additional_demographic_information: 'Additional Demographic Information and submission',
       school_stats_and_principal_approval_section: 'Principal Approval and School Information'
     }
 
     PAGE_LABELS = {
-      section_1_about_you: BASE_PAGE_LABELS[:section_1_about_you].slice(
+      about_you: BASE_PAGE_LABELS[:section_1_about_you].slice(
         :country,
         :first_name,
         :last_name,
@@ -49,7 +49,11 @@ module Pd
           how_heard: 'How did you hear about this program?'
         }
       ),
-      section_2_choose_your_program: {
+      teaching_background:
+        BASE_PAGE_LABELS[:section_2_your_school].slice(
+          :previous_yearlong_cdo_pd
+        ),
+      choose_your_program: {
         program: clean_multiline(
           'Which professional learning program would you like to join for the 2020-21
           school year? Note: this application is only for Computer Science Discoveries and
@@ -85,11 +89,7 @@ module Pd
         replace_existing: 'Will this course replace an existing computer science course in the master schedule? If yes, please list the course(s) that will be replaced.',
         replace_which_course: 'Which existing course or curriculum will it replace? Mark all that apply.'
       },
-      section_3_teaching_background:
-        BASE_PAGE_LABELS[:section_2_your_school].slice(
-          :previous_yearlong_cdo_pd
-        ),
-      section_4_professional_learning_program_requirements:
+      professional_learning_program_requirements:
         {
           committed: BASE_PAGE_LABELS[:section_4_summer_workshop][:committed],
           able_to_attend_multiple: 'Your Regional Partner is hosting local summer workshop(s) at the following dates and locations. Please indicate which workshops you are able to attend. Select all that apply.',
@@ -100,7 +100,7 @@ module Pd
           understand_fee: "By checking this box, you indicate that you understand there may be a fee for the professional learning program you attend.",
           scholarship_reasons: "Please provide any additional information you'd like to share about why your application should be considered for a scholarship."
         },
-      section_5_additional_demographic_information:
+      additional_demographic_information:
         {
           gender_identity: 'Gender identity:',
           race: 'Race or ethnicity:',
@@ -109,9 +109,10 @@ module Pd
         },
       school_stats_and_principal_approval_section: {
         title_i_status: 'Title I status',
+        rural_status: 'Rural Status',
         school_type: 'School Type',
         total_student_enrollment: 'Total Student Enrollment',
-        free_lunch_percent: 'Percent of students that receive free/reduced lunch',
+        free_lunch_percent: 'Percent of students eligible to receive free/reduced lunch',
         underrepresented_minority_percent: 'Percent of students that are underrepresented minorities',
         american_indian_or_native_alaskan_percent: 'Percentage of student enrollment by race: American Indian or Native Alaskan',
         asian_percent: 'Percentage of student enrollment by race: Asian',
@@ -150,7 +151,7 @@ module Pd
         notes_5: "Notes 5",
         alternate_email: "Alternate email",
         school_type: "School type",
-        district_name: PAGE_LABELS[:section_1_about_you][:school_district_name],
+        district_name: PAGE_LABELS[:about_you][:school_district_name],
         school_city: "School city",
         school_state: "School state",
         school_zip_code: "School zip code",
@@ -164,18 +165,18 @@ module Pd
         previous_yearlong_cdo_pd: "Have you participated in previous yearlong Code.org Professional Learning Programs?",
         able_to_attend_multiple: "Please indicate which workshops you are able to attend.",
         willing_to_travel: "How far would you be willing to travel to academic year workshops?",
-        how_heard: PAGE_LABELS[:section_5_additional_demographic_information][:how_heard] + " (Teacher's response)",
+        how_heard: PAGE_LABELS[:additional_demographic_information][:how_heard] + " (Teacher's response)",
         gender_identity: "Teacher's gender identity",
         race: "Teacher's race",
         principal_approval_url: "Principal Approval Form URL"
       },
       principal: {
-        title: PAGE_LABELS[:section_1_about_you][:principal_title] + " (provided by principal)",
-        first_name: PAGE_LABELS[:section_1_about_you][:principal_first_name] + " (provided by principal)",
-        last_name: PAGE_LABELS[:section_1_about_you][:principal_last_name] + " (provided by principal)",
-        email: PAGE_LABELS[:section_1_about_you][:principal_email] + " (provided by principal)",
-        school_name: PAGE_LABELS[:section_1_about_you][:school_name] + " (provided by principal)",
-        district_name: PAGE_LABELS[:section_1_about_you][:school_district_name] + " (provided by principal)",
+        title: PAGE_LABELS[:about_you][:principal_title] + " (provided by principal)",
+        first_name: PAGE_LABELS[:about_you][:principal_first_name] + " (provided by principal)",
+        last_name: PAGE_LABELS[:about_you][:principal_last_name] + " (provided by principal)",
+        email: PAGE_LABELS[:about_you][:principal_email] + " (provided by principal)",
+        school_name: PAGE_LABELS[:about_you][:school_name] + " (provided by principal)",
+        district_name: PAGE_LABELS[:about_you][:school_district_name] + " (provided by principal)",
         do_you_approve: "Do you approve of this teacher participating in Code.org's 2020-21 Professional Learning Program?",
         plan_to_teach: "Is this teacher planning to teach this course in the 2020-21 school year?",
         total_student_enrollment: "Total student enrollment",
@@ -201,6 +202,7 @@ module Pd
       },
       nces: {
         title_i_status: "Title I status code (NCES data)",
+        rural_status: 'Rural Status',
         students_total: "Total student enrollment (NCES data)",
         frl_eligible_total: "Percentage of students who are eligible to receive free or reduced lunch (NCES data)",
         urm_percent: "Percentage of underrepresented minority students (NCES data)",
@@ -237,6 +239,7 @@ module Pd
       contact_invoicing_detail: {principal: :principal_contact_invoicing_detail},
 
       title_i_status: {stats: :title_i_status},
+      rural_status: {stats: :rural_status},
       school_type: {teacher: :school_type, stats: :school_type},
       total_student_enrollment: {principal: :principal_total_enrollment, stats: :students_total},
       free_lunch_percent: {principal: :principal_free_lunch_percent, stats: :frl_eligible_percent},
@@ -262,17 +265,17 @@ module Pd
       cs_total_course_hours: YES_NO,
       plan_to_teach: YES_NO,
       committed: YES_NO,
+      replace_existing: YES_NO,
       principal_approval: YES_NO,
       principal_schedule_confirmed: YES_NO,
       principal_diversity_recruitment: YES_NO,
       principal_implementation: {meets_minimum_criteria_scores: YES_NO, bonus_points_scores: [2, 0]},
       # Scholarship requirements
       previous_yearlong_cdo_pd: YES_NO,
+      free_lunch_percent: YES_NO,
+      underrepresented_minority_percent: YES_NO,
       # Bonus Points
       csp_how_offer: [2, 0],
-      replace_existing: [5, 0],
-      free_lunch_percent: [5, 0],
-      underrepresented_minority_percent: [5, 0],
       race: [2, 0]
     }
 
@@ -280,7 +283,6 @@ module Pd
     SCOREABLE_QUESTIONS = {
       bonus_points: [
         :csp_how_offer,
-        :replace_existing,
         :free_lunch_percent,
         :underrepresented_minority_percent,
         :race,
@@ -291,7 +293,9 @@ module Pd
         :previous_yearlong_cdo_pd,
         :principal_approval,
         :principal_schedule_confirmed,
-        :principal_diversity_recruitment
+        :principal_diversity_recruitment,
+        :underrepresented_minority_percent,
+        :free_lunch_percent,
       ],
       criteria_score_questions_csd: [
         :regional_partner_name,
@@ -299,6 +303,7 @@ module Pd
         :cs_total_course_hours,
         :plan_to_teach,
         :committed,
+        :replace_existing,
         :principal_implementation
       ],
       criteria_score_questions_csp: [
@@ -307,6 +312,7 @@ module Pd
         :cs_total_course_hours,
         :plan_to_teach,
         :committed,
+        :replace_existing,
         :principal_implementation
       ]
     }
@@ -426,6 +432,7 @@ module Pd
       ],
       nces: [
         :title_i_status,
+        :rural_status,
         :students_total,
         :frl_eligible_total,
         :urm_percent,
