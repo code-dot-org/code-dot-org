@@ -32,6 +32,18 @@
   @include buttons();
   @include user-selects(auto);
 
+  .inline_markdown {
+    display: inline;
+
+    div {
+      display: inline;
+    }
+
+    p {
+      display: inline;
+    }
+  }
+
   a:not(.btn) {
     color: $purple;
     font-family: "Gotham 7r";
