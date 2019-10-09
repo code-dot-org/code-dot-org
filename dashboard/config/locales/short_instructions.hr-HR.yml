@@ -8,16 +8,12 @@ hr-HR:
       2-3 Artist 2 new: 'Zid ove kuće nije u potpunosti dovršen. Svaka strana je 100,
         a ona nedovršena je samo 50. Dovrši zid. '
       2-3 Artist 4: Pomozi mi dovršiti kuću za ovu mačku.
-      2-3 Artist 6: 'Ova kuća treba krov! Nacrtaj trokut.  Savjet: sve tri strane
-        su iste duljine.'
       2-3 Artist 9 NEW: Dovrši ovog zmaja
       2-3 Artist Free Play: Besplatna igra! Nacrtaj što god želiš.
       2-3 Artist Loops New 15: Nacrtaj nešto zabavno.
       2-3 Artist Nested Loops 10: Ponovi ovak kod 12 puta kako bi dovršio uzorak.
       2-3 Artist Nested Loops 12: Ponovi ovaj kod 12 puta kako bi dovršio kovrče.
       2-3 Bee Loops 2A: Ovaj put upotrijebi petlju da pokupiš sav nektar.
-      2-3 Maze 1: 'Možeš li mi pomoći uhvatiti nestašnu svinju? Naniži nekoliko ''idi
-        naprijed'' blokova ispod ''kod pokretanja'' bloka i pritisni ''Kreni''. '
       2-3 Maze 10: Vodi me do zelene zloće! (Pazi se TNT-a)
       2-3 Maze 4: Vodi me do zelene zloće! (Pazi se TNT-a)
       2-3 Maze 6: Ostani smiren i pomozi mi pronaći zločestu svinju. U suprotnom mogao
@@ -96,34 +92,6 @@ hr-HR:
         kako biste prikupili vunu s obje ovce.
       Overworld Shear Sheep_2019: Vrijeme je za šišanje ovaca! Upotrijebi naredbu
         "ošišaj" kako biste prikupili vunu s obje ovce.
-      Standalone_Artist_1: Dobrodošao kod Umjetnika! Kao prvo, pokušajmo napraviti
-        obični kvadrat koristeći blokove za okret udesno i za ići naprijed. Svaka
-        stranica treba biti dugačka 100 piksela.
-      Standalone_Artist_2: Nacrtaj ovaj romb s kutevima od 120 i 60 stupnjeva te stranicama
-        dugačkim 150 piksela.
-      Standalone_Artist_3: Možeš li nacrtati ovaj šesterokut sa stranicama dugačkim
-        100 piksela i okretima od 60 stupnjeva?
-      Standalone_Artist_4: Sad imamo novi blok za igranje, petlju. Ona će ponavljati
-        niz naredbi. Što će se dogoditi ako ove naredbe ponoviš 6 puta?
-      Standalone_Artist_5: Koliko puta trebaš u petlji ponoviti crtanje ovog romba
-        da nacrtaš cvijet?
-      Standalone_Artist_5.5: 'Zapazi kako smo pojednostavili kôd za crtanje romba
-        stavivši ga u petlju. Možeš u petlji ponoviti taj cijeli niz 12 puta da bi
-        nacrtao cvijet. Savjet: Nakon svake petlje za crtanje romba trebaš se okrenuti
-        za 30 stupnjeva zato da ne crtaš uvijek po istom rombu.'
-      Standalone_Artist_6: 'Ponovi ovaj kôd za crtanje šesterokuta 6 puta da dobiješ
-        uzorak. Za koliko se stupnjeva trebaš svaki put okrenuti? Savjet: podijeli
-        broj stupnjeva u krugu s brojem ponavljanja u petlji.'
-      Standalone_Artist_7: 'Funkcija je još jedan programski alat koji ti pomaže da
-        se ne ponavljaš. Ova funkcija crta cvijet, tako da je možeš koristiti kad
-        god želiš nacrtati cvijet. Koristi nju i novi blok za skok da nacrtaš ovo
-        cvijeće. Savjet: Cvjetovi su razmaknuti 150 piksela'
-      Standalone_Artist_8: Ovo je funkcija nazvana "Nacrtaj oblik" koju smo isprogramirali
-        da crta šesterokute. Pokreni program da vidiš što ona radi i onda eksperimentiraj
-        s tom funkcijom da vidiš što će se dogoditi. Možeš li napraviti da ona crta
-        uzorke od kvadrata, trokuta ili osmerokuta?
-      Standalone_Artist_9: Sada samo naprijed i napravi sliku kakvu god želiš! Čak
-        imaš i praznu funkciju u kojoj možeš napraviti što god poželiš!
       Underground Avoiding Lava: Ispod nekih blokova skriva se lava koju će biti potrebno
         prekriti prije pomicanje naprijed. Naredba "ako" može vam za to pomoći. Dodajte
         i "idi naprijed" naredbu na pravo mjesto kako biste izvadili rudu iz blokova.

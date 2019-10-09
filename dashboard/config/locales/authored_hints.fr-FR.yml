@@ -2145,15 +2145,14 @@ fr-FR:
           autant de fois que tu le voudras !  Essaie de l'appeler deux fois pour résoudre
           ce casse-tête.
       HOC 2018 Level_10:
-        voyage_aquatic_10a: Tu vois les **lanternes aquatiques** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)
-          ? Comment les combiner à un bloc conditionnel pour traverser le monument
-          sous-marin ?
+        voyage_aquatic_10a: Tu vois les **lanternes aquatiques** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png) ?
+          Comment les combiner à un bloc conditionnel pour traverser le monument sous-marin ?
       HOC 2018 Level_7a:
-        aquatic7: Tu peux utiliser le bloc `si chemin` pour t’aider à tourner au bon
-          moment.
+        aquatic7: Tu peux utiliser le bloc si chemin pour t’aider à faire les bons
+          virages.
       HOC 2018 Level_9b:
-        voyage_aquatic_9a: Tu vois les blocs de coraux rouge et bleu? Utilise les
-          pour tourner à droite et à gauche au travers du récif.
+        voyage_aquatic_9a: Quel manifique récif de corail ! Si le corail bleu est
+          dans son bon **droit**, le corail rouge n'est pas non plus très **gauche** !
       MC_HOC_2017_01_RETRY:
         MC_HOC_2017_01_RETRY_a: Fais glisser un bloc ˋavancerˋ depuis la boite à outils
           vers l'espace de travail et place-le en dessous du bloc ˋquand l’exécution commenceˋ.
@@ -2797,20 +2796,6 @@ fr-FR:
           Ce bloc `sauter à` te permet de faire sauter l'artiste zombie sur n'importe quel pixel de la grille, quand tu le souhaites. Il fonctionne en le bougeant d'un nombre de pixels à droite et d'un autre nombre vers le bas. C'est toujours compté à partir du coin supérieur gauche, ce qui signifie que ce n'est pas important où se trouve l'artiste zombie \_avant \_ que la commande soit exécuter!
 
           ![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)
-      course3_bee_debugging_challenge1:
-        courseD_bee_debugging_challenge1_a: Pourquoi la première moitié de ce programme
-          fonctionne ? Réfléchis pourquoi l'abeille a besoin de reculer. Combien de
-          nectar l'abeille ramasse à chaque fois qu'elle passe sur une fleur?
-        courseD_bee_debugging_challenge1_b: Sur le chemin du retour, fais suivre à
-          l'abeille le même motif. Combien de miel l'abeille a besoin de faire à chaque
-          fois qu'elle passe sur un nid d'abeilles?
-        courseD_bee_debugging_challenge1_c: |-
-          Dès que l'abeille arrive sur la dernière rangée, fais lui répéter ces commandes:
-
-          -   Répéte 2 fois:
-              -   Avance
-              -   Fais 3 miels
-          -   Recule
       course3_bee_functions_challenge1:
         courseE_bee_functions_challenge1_a: Si le casse-tête semble difficile, essaie
           de construire ta fonction peu à peu. Ajoute quelques blocs, puis essaie.
@@ -2880,74 +2865,6 @@ fr-FR:
           </next>
           </block>
           </xml>
-      course3_collector_debugging_challenge2:
-        courseD_collector_debugging_challenge2_b: |-
-          Ensuite, ramasse les diamants restant dans la rangée.
-
-          ![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)
-          Ajoute ces blocs à ton programme..
-
-          <xml><block type="maze_move">
-                              <title name="DIR">moveBackward</title>
-                            </block>
-          <block type="controls_repeat">
-                  <title name="TIMES">4</title>
-                  <statement name="DO">
-
-                  </statement>
-                </block>
-
-          </xml>
-        courseD_collector_debugging_challenge2_c: "Enfin, ramasse le diamant principal.
-          Ajoute ces blocs à ton programme.\n\n<xml>\n  <block type=\"maze_turn\">\n
-          \               <title name=\"DIR\">turnRight</title>\n              </block>\n
-          \     <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n
-          \       <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>"
-        courseD_collector_debugging_challenge2_d: |-
-          Voici la solution complète à ce puzzle.
-
-          <xml>
-            <block type="when_run" deletable="false" movable="false">
-              <next>
-                <block type="controls_repeat">
-                  <title name="TIMES">4</title>
-                  <statement name="DO">
-                    <block type="controls_repeat">
-                      <title name="TIMES">4</title>
-                      <statement name="DO">
-                        <block type="controls_repeat">
-                          <title name="TIMES">2</title>
-                          <statement name="DO">
-                            <block type="maze_move">
-                              <title name="DIR">moveForward</title>
-                              <next>
-                                <block type="controls_repeat">
-                                  <title name="TIMES">2</title>
-                                  <statement name="DO">
-                                    <block type="collector_collect"/>
-                                  </statement>
-                                </block>
-                              </next>
-                            </block>
-                          </statement>
-                          <next>
-                            <block type="maze_move">
-                              <title name="DIR">moveBackward</title>
-                            </block>
-                          </next>
-                        </block>
-                      </statement>
-                      <next>
-                        <block type="maze_turn">
-                          <title name="DIR">turnRight</title>
-                        </block>
-                      </next>
-                    </block>
-                  </statement>
-                </block>
-              </next>
-            </block>
-          </xml>
       course3_farmer_condLoops_challenge1:
         courseD_farmer_condLoops_challenge1_a: Le bouton ˋÉTAPE\` pourrait être très
           utile dans ce problème.
@@ -2955,7 +2872,6 @@ fr-FR:
         courseD_farmer_condLoops_challenge2_a: La quantité de chaque légume dans chaque
           espace varie. Utilise des boucles ˋtant que\` pour cela.
       course3_maze_debugging_challenge1:
-        courseC_maze_debugging_challenge1_a: Gauche ou droite? C'est à toi de décider!
         courseC_maze_debugging_challenge1_b: Le chemin de Scrat est de forme rectangulaire
           ! Il doit tourner du même côté à chaque fois !
         courseC_maze_debugging_challenge1_c: Si tu es bloqué, tu peux toujours recommencer
@@ -3179,16 +3095,6 @@ fr-FR:
           </block>
           </xml>
       course4_collector_nested_loops_challenge2:
-        courseD_bee_nested_loops_challenge2_a: N'oublie pas que tu peux `répéter`
-          une simple commande ou un motif plus long. Tu peux même `répéter` un bloc
-          `répéter`!
-        courseD_bee_nested_loops_challenge2_b: Pour avoir les 4 diamants, utilise
-          d'abord une boucle pour t'éloigner du centre. Tourne à droite ou gauche,
-          puis utilise une boucle imbriquée pour aller de la première pile de diamants
-          à la seconde. Si tu répetes la boucle imbriquée plusieurs fois, le collecteur
-          bougera autour _de toute_ la cave!
-        courseD_bee_nested_loops_challenge2_c: Le programme le plus court qui atteint
-          tous les diamants utilise un seul bloc `collecter` et 2 blocs `tourner`.
         courseD_bee_nested_loops_challenge2_d: |-
           **Solution :**
 
@@ -3919,13 +3825,13 @@ fr-FR:
       courseA_harvester_seq2:
         courseA_harvester_seq2_a: N’oublie pas d’utiliser <xml><block type="harvester_corn"/></xml>
           pour ramasser le maïs !
-        courseA_harvester_seq2_b: Essaie d’écrire les étapes sur une feuille de papier
-          pour trouver une solution!
+        courseA_harvester_seq2_b: Essaie d’écrire les étapes sur du papier pour trouver
+          une solution !
       courseA_harvester_seq2_2019:
         courseA_harvester_seq2_a: N’oublie pas d’utiliser <xml><block type="harvester_corn"/></xml>
           pour ramasser le maïs !
-        courseA_harvester_seq2_b: Essaie d’écrire les étapes sur une feuille de papier
-          pour trouver une solution!
+        courseA_harvester_seq2_b: Essaie d’écrire les étapes sur du papier pour trouver
+          une solution !
       courseA_harvester_seq3:
         courseA_harvester_seq3_a: |-
           As-tu pensé à utiliser ce bloc ?
@@ -4186,8 +4092,8 @@ fr-FR:
           </xml>
       courseA_maze_seq1:
         courseA_maze_seq1_a: |-
-          Si tu as du mal à faire bouger l’oiseau, assure-toi que les blocs sont connectés sous <xml>
-            <block type="when_run"/>
+          Si tu as du mal à faire bouger l’oiseau, assure-toi que des blocs sont connectés à <xml>
+          <block type="when_run"/>
           </xml>
         courseA_maze_seq1_b: |-
           L’oiseau devra se déplacer vers l’Ouest 3 fois pour arriver au cochon. Utilise ce bloc :
@@ -4208,8 +4114,8 @@ fr-FR:
         courseA_maze_seq10_b: Tu devras aller dans 3 directions différentes pour résoudre
           ce casse-tête.
       courseA_maze_seq13:
-        courseA_maze_seq13_a: Si le chemin ne te semble pas clair, trace du doigt
-          un chemin de l’oiseau jusqu'au cochon.
+        courseA_maze_seq13_a: Si le chemin ne semble pas clair, trace du doigt un
+          chemin de l’oiseau au cochon.
         courseA_maze_seq13_b: N’aie pas peur de faire des erreurs ! Essaie d’ajouter
           des blocs et d’exécuter le code pour voir ce qui se passe.
         courseA_maze_seq13_c: |-
@@ -4217,8 +4123,8 @@ fr-FR:
 
           <xml><block type="maze_moveEast"/></xml> t’aideront à te rapprocher du cochon.
       courseA_maze_seq13_2018:
-        courseA_maze_seq13_a: Si le chemin ne te semble pas clair, trace du doigt
-          un chemin de l’oiseau jusqu'au cochon.
+        courseA_maze_seq13_a: Si le chemin ne semble pas clair, trace du doigt un
+          chemin de l’oiseau au cochon.
         courseA_maze_seq13_b: N’aie pas peur de faire des erreurs ! Essaie d’ajouter
           des blocs et d’exécuter le code pour voir ce qui se passe.
         courseA_maze_seq13_c: |-
@@ -4226,8 +4132,8 @@ fr-FR:
 
           <xml><block type="maze_moveEast"/></xml> t’aideront à te rapprocher du cochon.
       courseA_maze_seq13_2019:
-        courseA_maze_seq13_a: Si le chemin ne te semble pas clair, trace du doigt
-          un chemin de l’oiseau jusqu'au cochon.
+        courseA_maze_seq13_a: Si le chemin ne semble pas clair, trace du doigt un
+          chemin de l’oiseau au cochon.
         courseA_maze_seq13_b: N’aie pas peur de faire des erreurs ! Essaie d’ajouter
           des blocs et d’exécuter le code pour voir ce qui se passe.
         courseA_maze_seq13_c: |-
@@ -4236,8 +4142,8 @@ fr-FR:
           <xml><block type="maze_moveEast"/></xml> t’aideront à te rapprocher du cochon.
       courseA_maze_seq1_2018:
         courseA_maze_seq1_a: |-
-          Si tu as du mal à faire bouger l’oiseau, assure-toi que les blocs sont connectés sous <xml>
-            <block type="when_run"/>
+          Si tu as du mal à faire bouger l’oiseau, assure-toi que des blocs sont connectés à <xml>
+          <block type="when_run"/>
           </xml>
         courseA_maze_seq1_b: |-
           L’oiseau devra se déplacer vers l’Ouest 3 fois pour arriver au cochon. Utilise ce bloc :
@@ -4245,8 +4151,8 @@ fr-FR:
           <xml><block type="maze_moveWest"/></xml>
       courseA_maze_seq1_2019:
         courseA_maze_seq1_a: |-
-          Si tu as du mal à faire bouger l’oiseau, assure-toi que les blocs sont connectés sous <xml>
-            <block type="when_run"/>
+          Si tu as du mal à faire bouger l’oiseau, assure-toi que des blocs sont connectés à <xml>
+          <block type="when_run"/>
           </xml>
         courseA_maze_seq1_b: |-
           L’oiseau devra se déplacer vers l’Ouest 3 fois pour arriver au cochon. Utilise ce bloc :
@@ -4256,13 +4162,12 @@ fr-FR:
         courseA_maze_seq2_a: Il manque 1 bloc à ce programme. Peux-tu trouver lequel
           ?
         courseA_maze_seq2_b: Essaie d’abord d’exécuter le code pour voir où l’oiseau
-          arrive. Où aller à partir de là?
+          termine. Où aller à partir de là ?
       courseA_maze_seq3:
         courseA_maze_seq3_a: Un des blocs déplace l’oiseau dans la mauvaise direction.
           Peux-tu trouver lequel et le remplacer par le bon bloc ?
         courseA_maze_seq3_b: Essaie d’utilise le bouton « Étape » pour trouver où
-          le programme ne fonctionne pas. Est-ce à la première étape ? À la deuxième
-          ?
+          le programme tourne mal. Est-ce à la première étape ? À la deuxième ?
         courseA_maze_seq3_c: Ce bloc <xml><block type="maze_moveNorth"/></xml> semble
           ne pas déplacer l’oiseau vers la bonne direction. Peux-tu le remplacer par
           un bloc différent ?
@@ -4270,21 +4175,20 @@ fr-FR:
         courseA_maze_seq4_a: Si tu as du mal, essaie de trouver le bon chemin puis
           enlève le bloc qui ne correspond pas.
         courseA_maze_seq4_b: Essaie d’exécuter le code tel quel. Est-ce que quelque
-          chose ne fonctionne pas? Quel bloc peux-tu enlever? Comment peux-tu le corriger?
+          chose tourne mal ? Quel bloc peux-tu enlever ? Comment peux-tu le corriger
+          ?
       courseA_maze_seq5:
-        courseA_maze_seq5_a: Essaie d’écrire les étapes sur une feuille de papier
-          pour trouver une solution!
-        courseA_maze_seq5_b: Tu auras besoin de 2 blocs qui pointent dans 2 directions.
+        courseA_maze_seq5_a: Essaie d’écrire les étapes sur du papier pour trouver
+          une solution !
+        courseA_maze_seq5_b: Tu auras besoin de 2 blocs dirigés vers 2 directions.
       courseA_maze_seq5_2018:
-        '1': Essaie d’écrire les étapes sur une feuille de papier pour trouver une
-          solution!
+        '1': Essaie d’écrire les étapes sur du papier pour trouver une solution !
         '2': |-
           Tu devras utiliser ce bloc :
 
           <xml><block type="maze_moveSouth"/></xml>
       courseA_maze_seq5_2019:
-        '1': Essaie d’écrire les étapes sur une feuille de papier pour trouver une
-          solution!
+        '1': Essaie d’écrire les étapes sur du papier pour trouver une solution !
         '2': |-
           Tu devras utiliser ce bloc :
 
@@ -4307,7 +4211,7 @@ fr-FR:
           2 parties : une partie avant le coin et une autre après le coin.'
       courseA_maze_seq7:
         courseA_maze_seq7_a: Il y a 1 bloc que tu dois ajouter pour faire avancer
-          l’oiseau jusqu'au cochon.
+          l’oiseau vers le cochon.
         courseA_maze_seq7_b: Si tu ne trouves pas quoi faire, essaie de dessiner le
           casse-tête sur du papier et trace un chemin avec ton doigt pour voir dans
           quelle direction te déplacer.
@@ -4323,8 +4227,7 @@ fr-FR:
       courseA_maze_seq9:
         courseA_maze_seq9_a: Bloqué ? Essaie de tracer du doigt le chemin de l’oiseau.
         courseA_maze_seq9_b: Si tu n’es pas sûr de ce que tu dois faire, essaie d’appuyer
-          sur « Recommencer » et d’exécuter le code pour voir ce qui ne fonctionne
-          pas.
+          sur « Recommencer » et d’exécuter le code pour voir ce qui tourne mal.
         courseA_maze_seq9_c: Tu devras te déplacer dans 3 directions pour résoudre
           ce casse-tête.
       courseA_maze_seq_challenge1:
@@ -7438,9 +7341,6 @@ fr-FR:
       courseC_artist_prog5:
         courseC_artist_prog5_a: Fait glisser le curseur à gauche jusqu’à pouvoir exécuter
           ton code ligne par ligne pour voir où les choses tournent mal.
-        courseC_artist_prog5_b: N'aie pas peur de faire des erreurs! Essaie d'ajouter
-          des blocs et d'exécuter ton code pour voie ce qui va se passer, même si
-          tu penses que tu n'as pas résolu encore le puzzle.
         courseC_artist_prog5_c: Tu peux utiliser le menu déroulant des blocs ˋtourner\`
           pour voir de quel angle tu as besoin !
         courseC_artist_prog5_d: Chaque tournant devrait être de 90 degrés vers la
@@ -7448,9 +7348,6 @@ fr-FR:
       courseC_artist_prog5_2018:
         courseC_artist_prog5_a: Fait glisser le curseur à gauche jusqu’à pouvoir exécuter
           ton code ligne par ligne pour voir où les choses tournent mal.
-        courseC_artist_prog5_b: N'aie pas peur de faire des erreurs! Essaie d'ajouter
-          des blocs et d'exécuter ton code pour voie ce qui va se passer, même si
-          tu penses que tu n'as pas résolu encore le puzzle.
         courseC_artist_prog5_c: Tu peux utiliser les menus déroulants des blocs pour
           modifier ce qu’ils font !
         courseC_artist_prog5_d: Chaque tournant devrait être de 90 degrés vers la
@@ -7458,9 +7355,6 @@ fr-FR:
       courseC_artist_prog5_2019:
         courseC_artist_prog5_a: Fait glisser le curseur à gauche jusqu’à pouvoir exécuter
           ton code ligne par ligne pour voir où les choses tournent mal.
-        courseC_artist_prog5_b: N'aie pas peur de faire des erreurs! Essaie d'ajouter
-          des blocs et d'exécuter ton code pour voie ce qui va se passer, même si
-          tu penses que tu n'as pas résolu encore le puzzle.
         courseC_artist_prog5_c: Tu peux utiliser les menus déroulants des blocs pour
           modifier ce qu’ils font !
         courseC_artist_prog5_d: Chaque tournant devrait être de 90 degrés vers la
@@ -7502,9 +7396,6 @@ fr-FR:
           -   tourner à droite de 45 degrés
 
           Répète cela 2 fois !
-        courseC_artist_prog7_e: N'aie pas peur de faire des erreurs! Essaie d'ajouter
-          des blocs et d'exécuter ton code pour voie ce qui va se passer, même si
-          tu penses que tu n'as pas résolu encore le puzzle.
       courseC_artist_prog7_2018:
         courseC_artist_prog7_a: Chaque angle fait soit 45, soit 90 degrés.
         courseC_artist_prog7_b: |-
@@ -7524,9 +7415,6 @@ fr-FR:
           -   tourner à droite de 45 degrés
 
           Répète cela 2 fois !
-        courseC_artist_prog7_e: N'aie pas peur de faire des erreurs! Essaie d'ajouter
-          des blocs et d'exécuter ton code pour voie ce qui va se passer, même si
-          tu penses que tu n'as pas résolu encore le puzzle.
       courseC_artist_prog7_2019:
         courseC_artist_prog7_a: Chaque angle fait soit 45, soit 90 degrés.
         courseC_artist_prog7_b: |-
@@ -7546,9 +7434,6 @@ fr-FR:
           -   tourner à droite de 45 degrés
 
           Répète cela 2 fois !
-        courseC_artist_prog7_e: N'aie pas peur de faire des erreurs! Essaie d'ajouter
-          des blocs et d'exécuter ton code pour voie ce qui va se passer, même si
-          tu penses que tu n'as pas résolu encore le puzzle.
       courseC_artist_prog_challenge1:
         courseC_artist_prog_challenge1_a: Tu peux dessiner cela comme un rectangle
           avec une ligne au milieu ou comme deux carrés !
@@ -7605,25 +7490,16 @@ fr-FR:
           name="DIR">moveForward</title></block></xml> ou utiliser le bloc <xml><block
           type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
           pour rendre ton programme plus court.
-        courseC_collector_prog2_b: N'aie pas peur de faire des erreurs! Essaie d'ajouter
-          des blocs et d'exécuter ton code pour voie ce qui va se passer, même si
-          tu penses que tu n'as pas résolu encore le puzzle.
       courseC_collector_prog2_2018:
         courseC_collector_prog2_a: Tu peux utiliser quatre blocs <xml><block type="maze_move"><title
           name="DIR">moveForward</title></block></xml> ou utiliser le bloc <xml><block
           type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
           pour rendre ton programme plus court.
-        courseC_collector_prog2_b: N'aie pas peur de faire des erreurs! Essaie d'ajouter
-          des blocs et d'exécuter ton code pour voie ce qui va se passer, même si
-          tu penses que tu n'as pas résolu encore le puzzle.
       courseC_collector_prog2_2019:
         courseC_collector_prog2_a: Tu peux utiliser quatre blocs <xml><block type="maze_move"><title
           name="DIR">moveForward</title></block></xml> ou utiliser le bloc <xml><block
           type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
           pour rendre ton programme plus court.
-        courseC_collector_prog2_b: N'aie pas peur de faire des erreurs! Essaie d'ajouter
-          des blocs et d'exécuter ton code pour voie ce qui va se passer, même si
-          tu penses que tu n'as pas résolu encore le puzzle.
       courseC_collector_prog3:
         courseC_collector_prog3_a: Le programme n’exécutera que les blocs qui sont
           connectés au bloc <xml><block type="when_run"/></xml>.
@@ -7648,23 +7524,14 @@ fr-FR:
       courseC_collector_prog4:
         courseC_collector_prog4_a: Si tu es bloqué, essaie d’écrire les étapes sur
           une feuille.
-        courseC_collector_prog4_b: N'aie pas peur de faire des erreurs! Essaie d'ajouter
-          des blocs et d'exécuter ton code pour voie ce qui va se passer, même si
-          tu penses que tu n'as pas résolu encore le puzzle.
         courseC_collector_prog4_c: Essaie cette option.
       courseC_collector_prog4_2018:
         courseC_collector_prog4_a: Si tu es bloqué, essaie d’écrire les étapes sur
           une feuille.
-        courseC_collector_prog4_b: N'aie pas peur de faire des erreurs! Essaie d'ajouter
-          des blocs et d'exécuter ton code pour voie ce qui va se passer, même si
-          tu penses que tu n'as pas résolu encore le puzzle.
         courseC_collector_prog4_c: Essaie cette option.
       courseC_collector_prog4_2019:
         courseC_collector_prog4_a: Si tu es bloqué, essaie d’écrire les étapes sur
           une feuille.
-        courseC_collector_prog4_b: N'aie pas peur de faire des erreurs! Essaie d'ajouter
-          des blocs et d'exécuter ton code pour voie ce qui va se passer, même si
-          tu penses que tu n'as pas résolu encore le puzzle.
         courseC_collector_prog4_c: Essaie cette option.
       courseC_collector_prog5:
         courseC_collector_prog5_a: |-
@@ -8046,6 +7913,31 @@ fr-FR:
         courseC_harvester_loops_challenge1_b: Tu peux répéter ˋavancer`et ˋrécolter
           maïs` autant de fois que nécessaire, puis ˋtourner à droite\` dans chaque
           coin.
+        courseC_harvester_loops_challenge1_c: |-
+          Le meilleur moyen de récolter le maïs au milieu est d’utiliser un bloc ˋrépéter`à l’intérieur d’un autre bloc ˋrépéter`.
+
+          <xml><block type="controls_repeat">
+
+          <title name="TIMES">2</title>
+          <statement name="DO">
+          <block type="controls_repeat">
+          <title name="TIMES">4</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="harvester_corn"/>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block></xml>
       courseC_harvester_loops_challenge1a_2019:
         courseC_harvester_loops_challenge1_a: C'est trop compliqué sans boucle!
         courseC_harvester_loops_challenge1_b: Tu peux répéter ˋavancer`et ˋrécolter
@@ -8118,222 +8010,24 @@ fr-FR:
           Le modèle spirale peut être codé avec juste 18 blocs!
 
           ![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)
-      courseC_maze_debugging1:
-        courseC_maze_debugging1_a: |-
-          -   Est ce que tout fonctionne après la première étape?
-          -   Est-ce que cela fonctionne toujours après la seconde?
-          -   Où est ce que cela ne fonctionne pas?
-        courseC_maze_debugging1_b: Tu as besoin d'ajouter un bloc pour terminer ce
-          puzzle.
-      courseC_maze_debugging1_2018:
-        courseC_maze_debugging1_a: |-
-          -   Est ce que tout fonctionne après la première étape?
-          -   Est-ce que cela fonctionne toujours après la seconde?
-          -   Où est ce que cela ne fonctionne pas?
-        courseC_maze_debugging1_b: Tu as besoin d'ajouter un bloc pour terminer ce
-          puzzle.
-      courseC_maze_debugging1_2019:
-        courseC_maze_debugging1_a: |-
-          -   Est ce que tout fonctionne après la première étape?
-          -   Est-ce que cela fonctionne toujours après la seconde?
-          -   Où est ce que cela ne fonctionne pas?
-        courseC_maze_debugging1_b: Tu as besoin d'ajouter un bloc pour terminer ce
-          puzzle.
       courseC_maze_debugging2:
-        courseC_maze_debugging2_a: Il y a beaucoup de code intéressant dans l'espace
-          de travail. Ne l'efface pas tout pour recommencer de zéro!
-        courseC_maze_debugging2_b: |-
-          -   Est ce que tout fonctionne après la première étape?
-          -   Est-ce que cela fonctionne toujours après la seconde?
-          -   Où est ce que cela ne fonctionne pas?
         courseC_maze_debugging2_c: Tu ne trouves pas le problème ? Essaie d’exécuter
           le code quelques fois pour voir ce qui se passe.
       courseC_maze_debugging2_2018:
-        courseC_maze_debugging2_a: Il y a beaucoup de code intéressant dans l'espace
-          de travail. Ne l'efface pas tout pour recommencer de zéro!
-        courseC_maze_debugging2_b: |-
-          -   Est ce que tout fonctionne après la première étape?
-          -   Est-ce que cela fonctionne toujours après la seconde?
-          -   Où est ce que cela ne fonctionne pas?
         courseC_maze_debugging2_c: Tu ne trouves pas le problème ? Essaie d’exécuter
           le code quelques fois pour voir ce qui se passe.
       courseC_maze_debugging2_2019:
-        courseC_maze_debugging2_a: Il y a beaucoup de code intéressant dans l'espace
-          de travail. Ne l'efface pas tout pour recommencer de zéro!
-        courseC_maze_debugging2_b: |-
-          -   Est ce que tout fonctionne après la première étape?
-          -   Est-ce que cela fonctionne toujours après la seconde?
-          -   Où est ce que cela ne fonctionne pas?
         courseC_maze_debugging2_c: Tu ne trouves pas le problème ? Essaie d’exécuter
           le code quelques fois pour voir ce qui se passe.
       courseC_maze_debugging3:
-        courseC_maze_debugging3_a: |-
-          Pour enlever un bloc au milieu du code, déplace tous les autres blocs à un endroit de l'espace de travail.
-
-          Ramène le bloc que tu souhaites retirer dans la boite à outils.
-
-          Enfin, ramène les autres blocs où ils doivent être.
-
-          ![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)
         courseC_maze_debugging3_b: Tu ne trouves pas le problème ? Essaie d’exécuter
           le code quelques fois pour voir ce qui se passe.
       courseC_maze_debugging3_2018:
-        courseC_maze_debugging3_a: |-
-          Pour enlever un bloc au milieu du code, déplace tous les autres blocs à un endroit de l'espace de travail.
-
-          Ramène le bloc que tu souhaites retirer dans la boite à outils.
-
-          Enfin, ramène les autres blocs où ils doivent être.
-
-          ![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)
         courseC_maze_debugging3_b: Tu ne trouves pas le problème ? Essaie d’exécuter
           le code quelques fois pour voir ce qui se passe.
       courseC_maze_debugging3_2019:
-        courseC_maze_debugging3_a: |-
-          Pour enlever un bloc au milieu du code, déplace tous les autres blocs à un endroit de l'espace de travail.
-
-          Ramène le bloc que tu souhaites retirer dans la boite à outils.
-
-          Enfin, ramène les autres blocs où ils doivent être.
-
-          ![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)
         courseC_maze_debugging3_b: Tu ne trouves pas le problème ? Essaie d’exécuter
           le code quelques fois pour voir ce qui se passe.
-      courseC_maze_debugging4:
-        courseC_maze_debugging4_a: Utilise le bouton "Etape" pour passer les instructions
-          pas à pas. Est ce que cela t'aide à trouver la ligne qui pose problème?
-        courseC_maze_debugging4_b: Un des changements de direction fait aller Scrat
-          dans la mauvaise direction. Est-ce que tu peux trouver lequel?
-      courseC_maze_debugging4_2018:
-        courseC_maze_debugging4_a: Utilise le bouton "Etape" pour passer les instructions
-          pas à pas. Est ce que cela t'aide à trouver la ligne qui pose problème?
-        courseC_maze_debugging4_b: Un des changements de direction fait aller Scrat
-          dans la mauvaise direction. Est-ce que tu peux trouver lequel?
-      courseC_maze_debugging4_2019:
-        courseC_maze_debugging4_a: Utilise le bouton "Etape" pour passer les instructions
-          pas à pas. Est ce que cela t'aide à trouver la ligne qui pose problème?
-        courseC_maze_debugging4_b: Un des changements de direction fait aller Scrat
-          dans la mauvaise direction. Est-ce que tu peux trouver lequel?
-      courseC_maze_debugging5:
-        courseC_maze_debugging5_a: "Il y a déjà beaucoup de blocs qui peuvent aider
-          dans l'espace de travail. Ne les efface pas tous! \n\nUtilise le bouton
-          \"Etape\" pour les passer et trouver où le code ne fonctionne pas."
-        courseC_maze_debugging5_b: Essaie de dire ce que devrait faire Scrat à hautes
-          voix. Est-ce que c'est la même chose que le code dans l'espace de travail?
-          Qu'est ce qui ne va pas?
-      courseC_maze_debugging5_2018:
-        courseC_maze_debugging5_a: "Il y a déjà beaucoup de blocs qui peuvent aider
-          dans l'espace de travail. Ne les efface pas tous! \n\nUtilise le bouton
-          \"Etape\" pour les passer et trouver où le code ne fonctionne pas."
-        courseC_maze_debugging5_b: Essaie de dire ce que devrait faire Scrat à hautes
-          voix. Est-ce que c'est la même chose que le code dans l'espace de travail?
-          Qu'est ce qui ne va pas?
-      courseC_maze_debugging5_2019:
-        courseC_maze_debugging5_a: "Il y a déjà beaucoup de blocs qui peuvent aider
-          dans l'espace de travail. Ne les efface pas tous! \n\nUtilise le bouton
-          \"Etape\" pour les passer et trouver où le code ne fonctionne pas."
-        courseC_maze_debugging5_b: Essaie de dire ce que devrait faire Scrat à hautes
-          voix. Est-ce que c'est la même chose que le code dans l'espace de travail?
-          Qu'est ce qui ne va pas?
-      courseC_maze_debugging6:
-        courseC_maze_debugging6_a: |-
-          -   Qu'est-ce que Scrat devrait faire?
-          -   Qu'est-ce que Scrat fait ?
-          -   Qu'est-ce que ça te dit ?
-        courseC_maze_debugging6_b: |-
-          Une fois que tu as trouvé et corrigé le premier bogue, passe à nouveau en mode débogage pour trouver le second.
-
-          Répéte le processus jusqu'à ce que le programme fonctionne!
-      courseC_maze_debugging6_2018:
-        courseC_maze_debugging6_a: |-
-          -   Qu'est-ce que Scrat devrait faire?
-          -   Qu'est-ce que Scrat fait ?
-          -   Qu'est-ce que ça te dit ?
-        courseC_maze_debugging6_b: |-
-          Une fois que tu as trouvé et corrigé le premier bogue, passe à nouveau en mode débogage pour trouver le second.
-
-          Répéte le processus jusqu'à ce que le programme fonctionne!
-      courseC_maze_debugging6_2019:
-        courseC_maze_debugging6_a: |-
-          -   Qu'est-ce que Scrat devrait faire?
-          -   Qu'est-ce que Scrat fait ?
-          -   Qu'est-ce que ça te dit ?
-        courseC_maze_debugging6_b: |-
-          Une fois que tu as trouvé et corrigé le premier bogue, passe à nouveau en mode débogage pour trouver le second.
-
-          Répéte le processus jusqu'à ce que le programme fonctionne!
-      courseC_maze_debugging7:
-        courseC_maze_debugging7_a: |-
-          -   Est ce que tout fonctionne après la première étape?
-          -   Est-ce que cela fonctionne toujours après la seconde?
-          -   Où est ce que cela ne fonctionne pas?
-        courseC_maze_debugging7_b: N'oublie pas d'utiliser le bouton "Etape" pour
-          jouer le programme ligne par ligne!
-        courseC_maze_debugging7_c: |-
-          Après avoir trouvé et corrigé le premier bogue, assure toi de passer à nouveau en mode débogage pour trouver le suivant.
-
-          Répéte le processus jusqu'à ce que le programme fonctionne!
-      courseC_maze_debugging7_2018:
-        courseC_maze_debugging7_a: |-
-          -   Est ce que tout fonctionne après la première étape?
-          -   Est-ce que cela fonctionne toujours après la seconde?
-          -   Où est ce que cela ne fonctionne pas?
-        courseC_maze_debugging7_b: N'oublie pas d'utiliser le bouton "Etape" pour
-          jouer le programme ligne par ligne!
-        courseC_maze_debugging7_c: |-
-          Après avoir trouvé et corrigé le premier bogue, assure toi de passer à nouveau en mode débogage pour trouver le suivant.
-
-          Répéte le processus jusqu'à ce que le programme fonctionne!
-      courseC_maze_debugging7_2019:
-        courseC_maze_debugging7_a: |-
-          -   Est ce que tout fonctionne après la première étape?
-          -   Est-ce que cela fonctionne toujours après la seconde?
-          -   Où est ce que cela ne fonctionne pas?
-        courseC_maze_debugging7_b: N'oublie pas d'utiliser le bouton "Etape" pour
-          jouer le programme ligne par ligne!
-        courseC_maze_debugging7_c: |-
-          Après avoir trouvé et corrigé le premier bogue, assure toi de passer à nouveau en mode débogage pour trouver le suivant.
-
-          Répéte le processus jusqu'à ce que le programme fonctionne!
-      courseC_maze_debugging_challenge1:
-        courseC_maze_debugging_challenge1_a: Gauche ou droite? C'est à toi de décider!
-        courseC_maze_debugging_challenge1_b: Le chemin de Scrat est de forme rectangulaire
-          ! Il doit tourner du même côté à chaque fois .
-        courseC_maze_debugging_challenge1_c: Si tu te retrouves bloqué, tu peux toujours
-          redémarrer et trouver un nouveau chemin!
-      courseC_maze_debugging_challenge1_2018:
-        courseC_maze_debugging_challenge1_a: Gauche ou droite? C'est à toi de décider!
-        courseC_maze_debugging_challenge1_b: Le chemin de Scrat est de forme rectangulaire
-          ! Il doit tourner du même côté à chaque fois .
-        courseC_maze_debugging_challenge1_c: Si tu te retrouves bloqué, tu peux toujours
-          redémarrer et trouver un nouveau chemin!
-      courseC_maze_debugging_challenge1_2019:
-        courseC_maze_debugging_challenge1_a: Gauche ou droite? C'est à toi de décider!
-        courseC_maze_debugging_challenge1_b: Le chemin de Scrat est de forme rectangulaire
-          ! Il doit tourner du même côté à chaque fois .
-        courseC_maze_debugging_challenge1_c: Si tu te retrouves bloqué, tu peux toujours
-          redémarrer et trouver un nouveau chemin!
-      courseC_maze_debugging_challenge2:
-        courseC_maze_debugging_challenge2_b: Si tu te sens bloqué, essaie de déboguer
-          le code. Où est-ce que cela ne va pas ?
-        courseC_maze_debugging_challenge2_c: |-
-          Il y a deux chemins différents que tu peux suivre en avançant et en tournant 4 fois. Si tu trouves un moyen d'utiliser une boucle, il y en a même plus !
-
-          ![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)
-      courseC_maze_debugging_challenge2_2018:
-        courseC_maze_debugging_challenge2_b: Si tu te sens bloqué, essaie de déboguer
-          le code. Où est-ce que cela ne va pas ?
-        courseC_maze_debugging_challenge2_c: |-
-          Il y a deux chemins différents que tu peux suivre en avançant et en tournant 4 fois. Si tu trouves un moyen d'utiliser une boucle, il y en a même plus !
-
-          ![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)
-      courseC_maze_debugging_challenge2_2019:
-        courseC_maze_debugging_challenge2_b: Si tu te sens bloqué, essaie de déboguer
-          le code. Où est-ce que cela ne va pas ?
-        courseC_maze_debugging_challenge2_c: |-
-          Il y a deux chemins différents que tu peux suivre en avançant et en tournant 4 fois. Si tu trouves un moyen d'utiliser une boucle, il y en a même plus !
-
-          ![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)
       courseC_maze_loops_challenge1a:
         courseC_maze_loops_challenge1_a: Pense à ce chemin comme étant 2 différente
           parties. Chacune d'elles à un modèle qui se répète.
@@ -8446,22 +8140,16 @@ fr-FR:
           -   Tourne dans l'autre sens
           -   Avance
       courseC_maze_programming5:
-        courseC_maze_programming5_a: Essaie d'utiliser le bouton "Etape" pour exécuter
-          ton code ligne par ligne. Peux-tu deviner ce que tu dois faire ensuite ?
         courseC_maze_programming5_b: L' oiseau aura besoin de tourner une fois pour
           terminer le puzzle. Peux-tu trouver dans quel sens?
         courseC_maze_programming5_c: La solution aura 2 blocs `avancer plus`, un `tourner
           à`, et 2 autres `avancer plus`.
       courseC_maze_programming5_2018:
-        courseC_maze_programming5_a: Essaie d'utiliser le bouton "Etape" pour exécuter
-          ton code ligne par ligne. Peux-tu deviner ce que tu dois faire ensuite ?
         courseC_maze_programming5_b: L' oiseau aura besoin de tourner une fois pour
           terminer le puzzle. Peux-tu trouver dans quel sens?
         courseC_maze_programming5_c: La solution aura 2 blocs `avancer plus`, un `tourner
           à`, et 2 autres `avancer plus`.
       courseC_maze_programming5_2019:
-        courseC_maze_programming5_a: Essaie d'utiliser le bouton "Etape" pour exécuter
-          ton code ligne par ligne. Peux-tu deviner ce que tu dois faire ensuite ?
         courseC_maze_programming5_b: L' oiseau aura besoin de tourner une fois pour
           terminer le puzzle. Peux-tu trouver dans quel sens?
         courseC_maze_programming5_c: La solution aura 2 blocs `avancer plus`, un `tourner
@@ -8508,21 +8196,12 @@ fr-FR:
       courseC_maze_programming8:
         courseC_maze_programming8_a: Souviens toi que tu peux utiliser le bouton "Etape"
           pour regarder ton code ligne par ligne si tu es bloqué.
-        courseC_maze_programming8_b: N'aie pas peur de faire des erreurs! Essaie d'ajouter
-          des blocs et d'exécuter ton code pour voie ce qui va se passer, même si
-          tu penses que tu n'as pas résolu encore le puzzle.
       courseC_maze_programming8_2018:
         courseC_maze_programming8_a: Souviens toi que tu peux utiliser le bouton "Etape"
           pour regarder ton code ligne par ligne si tu es bloqué.
-        courseC_maze_programming8_b: N'aie pas peur de faire des erreurs! Essaie d'ajouter
-          des blocs et d'exécuter ton code pour voie ce qui va se passer, même si
-          tu penses que tu n'as pas résolu encore le puzzle.
       courseC_maze_programming8_2019:
         courseC_maze_programming8_a: Souviens toi que tu peux utiliser le bouton "Etape"
           pour regarder ton code ligne par ligne si tu es bloqué.
-        courseC_maze_programming8_b: N'aie pas peur de faire des erreurs! Essaie d'ajouter
-          des blocs et d'exécuter ton code pour voie ce qui va se passer, même si
-          tu penses que tu n'as pas résolu encore le puzzle.
       courseC_maze_programming_challenge1:
         courseC_maze_programming_challenge1_a: Il y a plusieurs chemins pour atteindre
           le cochon. Utilise ton doigt pour en trouver un puis programme le!
@@ -8719,22 +8398,6 @@ fr-FR:
           Tu n'as pas besoin de tourner à gauche pour résoudre ce puzzle. Toutes `Tourner à` peuvent aller sur la droite.
 
           ![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)
-      courseD_artist_1_2018:
-        courseD_artist_project1_a: Utilise le menu déroulant du bloc `tourner` pour
-          choisir l'angle dont tu as besoin!
-        courseD_artist_project1_b: Souviens toi que `Avancer` dessine une ligne, alos
-          que `sauter en avant` ne le fait pas.
-      courseD_artist_1_2018_2019:
-        courseD_artist_project1_a: Utilise le menu déroulant du bloc `tourner` pour
-          choisir l'angle dont tu as besoin!
-        courseD_artist_project1_b: Souviens toi que `Avancer` dessine une ligne, alos
-          que `sauter en avant` ne le fait pas.
-      courseD_artist_2_2018:
-        courseD_artist_project1_a: Utilise le menu déroulant du bloc `tourner` pour
-          choisir l'angle dont tu as besoin!
-      courseD_artist_2_2018_2019:
-        courseD_artist_project1_a: Utilise le menu déroulant du bloc `tourner` pour
-          choisir l'angle dont tu as besoin!
       courseD_artist_binary1:
         courseD_artist_binary1_a: Remplace les "???" dans le bloc de texte avec l'image
           binaire que tu veux, à base de 0 et de 1.
@@ -8887,7 +8550,7 @@ fr-FR:
           n’as pas encore résolu le puzzle.
       courseD_artist_nestedLoops1:
         courseD_artist_nestedLoops1_a: Le moyen le plus simple pour le dessiner c'est
-          d'avancer et de tourner à droite.
+          d'avancer et d'utiliser des virages à droite.
         courseD_artist_nestedLoops1_b: Tu peux dessiner ce triangle avec une boucle
           `Répéter` et 2 blocs à l'intérieur. De quels blocs as tu besoin?
         courseD_artist_nestedLoops1_c: Essaie d'écrire les étapes sur une feuille
@@ -8895,7 +8558,7 @@ fr-FR:
           boucles.
       courseD_artist_nestedLoops1_2018:
         courseD_artist_nestedLoops1_a: Le moyen le plus simple pour le dessiner c'est
-          d'avancer et de tourner à droite.
+          d'avancer et d'utiliser des virages à droite.
         courseD_artist_nestedLoops1_b: Tu peux dessiner ce triangle avec une boucle
           `Répéter` et 2 blocs à l'intérieur. De quels blocs as tu besoin?
         courseD_artist_nestedLoops1_c: Essaie d'écrire les étapes sur une feuille
@@ -8903,7 +8566,7 @@ fr-FR:
           boucles.
       courseD_artist_nestedLoops1_2019:
         courseD_artist_nestedLoops1_a: Le moyen le plus simple pour le dessiner c'est
-          d'avancer et de tourner à droite.
+          d'avancer et d'utiliser des virages à droite.
         courseD_artist_nestedLoops1_b: Tu peux dessiner ce triangle avec une boucle
           `Répéter` et 2 blocs à l'intérieur. De quels blocs as tu besoin?
         courseD_artist_nestedLoops1_c: Essaie d'écrire les étapes sur une feuille
@@ -9265,72 +8928,12 @@ fr-FR:
           l'artiste doit tourner à 45 degrés 8 fois.
         courseD_artist_nestedLoops_challenge2_b: Pour dessiner un carré, l'artiste
           a besoin de tourner à 90 degrés 4 fois.
-      courseD_artist_project1:
-        courseD_artist_project1_a: Utilise le menu déroulant du bloc `tourner` pour
-          choisir l'angle dont tu as besoin!
-        courseD_artist_project1_b: Souviens toi que `Avancer` dessine une ligne, alos
-          que `sauter en avant` ne le fait pas.
-      courseD_artist_project1_2018:
-        courseD_artist_project1_a: Utilise le menu déroulant du bloc `tourner` pour
-          choisir l'angle dont tu as besoin!
-        courseD_artist_project1_b: Souviens toi que `Avancer` dessine une ligne, alos
-          que `sauter en avant` ne le fait pas.
-      courseD_artist_project1_2019:
-        courseD_artist_project1_a: Utilise le menu déroulant du bloc `tourner` pour
-          choisir l'angle dont tu as besoin!
-        courseD_artist_project1_b: Souviens toi que `Avancer` dessine une ligne, alos
-          que `sauter en avant` ne le fait pas.
-      courseD_artist_project2:
-        courseD_artist_project2_a: Souviens toi que `Avancer` dessine une ligne, alos
-          que `sauter en avant` ne le fait pas.
-        courseD_artist_project2_b: Après avoir dessiner et bouger la première fois,
-          tu peux répéter le code en ajoutant une boucle autour.
-      courseD_artist_project2_2018:
-        courseD_artist_project2_a: Souviens toi que `Avancer` dessine une ligne, alos
-          que `sauter en avant` ne le fait pas.
-        courseD_artist_project2_b: Après avoir dessiner et bouger la première fois,
-          tu peux répéter le code en ajoutant une boucle autour.
-      courseD_artist_project2_2019:
-        courseD_artist_project2_a: Souviens toi que `Avancer` dessine une ligne, alos
-          que `sauter en avant` ne le fait pas.
-        courseD_artist_project2_b: Après avoir dessiner et bouger la première fois,
-          tu peux répéter le code en ajoutant une boucle autour.
-      courseD_artist_project3:
-        courseD_artist_project3_a: Utilise le menu déroulant du bloc `tourner` pour
-          choisir l'angle dont tu as besoin!
-        courseD_artist_project3_b: |-
-          Essaie les boucles imbriquées!
-
-          Utilise le code que tu as créé pour dessiner une ligne de formes et imbrique la à l'intérieur d'une autre boucle. Au fond, avant que la boucle extérieure ne s'arrète, ajoute un bloc qui retournera Elsa.
-
-          -   Essaie 72 degrés si tu répétes la boucle extérieur 5 fois.
-          -   Essaie 60 degrés si tu répétes la boucle extérieur 6 fois
-      courseD_artist_project3_2018:
-        courseD_artist_project3_a: Utilise le menu déroulant du bloc `tourner` pour
-          choisir l'angle dont tu as besoin!
-        courseD_artist_project3_b: |-
-          Essaie les boucles imbriquées!
-
-          Utilise le code que tu as créé pour dessiner une ligne de formes et imbrique la à l'intérieur d'une autre boucle. Au fond, avant que la boucle extérieure ne s'arrète, ajoute un bloc qui retournera Elsa.
-
-          -   Essaie 72 degrés si tu répétes la boucle extérieur 5 fois.
-          -   Essaie 60 degrés si tu répétes la boucle extérieur 6 fois
-      courseD_artist_project3_2019:
-        courseD_artist_project3_a: Utilise le menu déroulant du bloc `tourner` pour
-          choisir l'angle dont tu as besoin!
-        courseD_artist_project3_b: |-
-          Essaie les boucles imbriquées!
-
-          Utilise le code que tu as créé pour dessiner une ligne de formes et imbrique la à l'intérieur d'une autre boucle. Au fond, avant que la boucle extérieure ne s'arrète, ajoute un bloc qui retournera Elsa.
-
-          -   Essaie 72 degrés si tu répétes la boucle extérieur 5 fois.
-          -   Essaie 60 degrés si tu répétes la boucle extérieur 6 fois
       courseD_artist_ramp11:
         courseD_artist_ramp11a: Pour dessiner un côté, utilise le bloc `move forward
           by 100 pixels`, et remplace 100 par 200.
-        courseD_artist_ramp11b: Pour dessiner 4 côtés, place un bloc `Avancer de 200
-          pixels` à l'intérieur d'une boucle `Répéter` et assure toi que la boucle
-          est configurée pour dessiner 4 fois!
+        courseD_artist_ramp11b: Pour dessiner 4 côtés, place un bloc `move forward
+          by 200 pixels` à l'intérieur d'une boucle `Répéter` et assure toi que la
+          boucle est configurée pour dessiner 4 fois!
         courseD_artist_ramp11_c: N’oublie pas de mettre le bloc ˋtourner\` à l’intérieur
           de la boucle!
       courseD_artist_ramp12:
@@ -9624,24 +9227,7 @@ fr-FR:
                                 <block type="maze_nectar"/>
                               </statement>
             </block></xml>
-      courseD_bee_debugging_challenge1:
-        courseD_bee_debugging_challenge1_a: Pourquoi la première moitié de ce programme
-          fonctionne ? Réfléchis pourquoi l'abeille a besoin de reculer. Combien de
-          nectar l'abeille ramasse à chaque fois qu'elle passe sur une fleur?
-        courseD_bee_debugging_challenge1_b: Sur le chemin du retour, fais suivre à
-          l'abeille le même motif. Combien de miel l'abeille a besoin de faire à chaque
-          fois qu'elle passe sur un nid d'abeilles?
-        courseD_bee_debugging_challenge1_c: |-
-          Dès que l'abeille arrive sur la dernière rangée, fais lui répéter ces commandes:
-
-          -   Répéte 2 fois:
-              -   Avance
-              -   Fais 3 miels
-          -   Recule
       courseD_bee_debugging_challenge1a:
-        courseD_bee_debugging_challenge1_a: Pourquoi la première moitié de ce programme
-          fonctionne ? Réfléchis pourquoi l'abeille a besoin de reculer. Combien de
-          nectar l'abeille ramasse à chaque fois qu'elle passe sur une fleur?
         courseD_bee_debugging_challenge1_b: Pour résoudre ce puzzle, l'abeille doit
           suivre le même modèle pour faire du miel qu'elle utilise pour ramasser le
           nectar.
@@ -9664,108 +9250,6 @@ fr-FR:
                                 </block>
                               </next>
                             </block></xml>
-      courseD_bee_nestedLoops1:
-        courseD_bee_nestedLoops1_a: Ca ne fonctionne pas ? Essaie d'utiliser le bouton
-          "Etape" pour voir ce qui se passe ligne par ligne.
-        courseD_bee_nestedLoops1_b: Essaie d'abord d'écrire le code pour un côté du
-          carré . Est-ce que tu peux boucler ça pour ramasser tous les nectars?
-        courseD_bee_nestedLoops1_c: N'oublie pas d'utiliser le bloc `obtenir du nectar`
-          dès que tu es sur une case avec une fleur.
-      courseD_bee_nestedLoops1_2018:
-        courseD_bee_nestedLoops1_a: Ca ne fonctionne pas ? Essaie d'utiliser le bouton
-          "Etape" pour voir ce qui se passe ligne par ligne.
-        courseD_bee_nestedLoops1_b: Essaie d'abord d'écrire le code pour un côté du
-          carré . Est-ce que tu peux boucler ça pour ramasser tous les nectars?
-        courseD_bee_nestedLoops1_c: N'oublie pas d'utiliser le bloc `obtenir du nectar`
-          dès que tu es sur une case avec une fleur.
-      courseD_bee_nestedLoops1_2019:
-        courseD_bee_nestedLoops1_a: Ca ne fonctionne pas ? Essaie d'utiliser le bouton
-          "Etape" pour voir ce qui se passe ligne par ligne.
-        courseD_bee_nestedLoops1_b: Essaie d'abord d'écrire le code pour un côté du
-          carré . Est-ce que tu peux boucler ça pour ramasser tous les nectars?
-        courseD_bee_nestedLoops1_c: N'oublie pas d'utiliser le bloc `obtenir du nectar`
-          dès que tu es sur une case avec une fleur.
-      courseD_bee_nestedLoops1a:
-        courseD_bee_nestedLoops1_a: Ca ne fonctionne pas ? Essaie d'utiliser le bouton
-          "Etape" pour voir ce qui se passe ligne par ligne.
-        courseD_bee_nestedLoops1_c: N'oublie pas d'utiliser le bloc `obtenir du nectar`
-          dès que tu es sur une case avec une fleur.
-      courseD_bee_nestedLoops1a_2018:
-        courseD_bee_nestedLoops1_a: Ca ne fonctionne pas ? Essaie d'utiliser le bouton
-          "Etape" pour voir ce qui se passe ligne par ligne.
-        courseD_bee_nestedLoops1_c: N'oublie pas d'utiliser le bloc `obtenir du nectar`
-          dès que tu es sur une case avec une fleur.
-      courseD_bee_nestedLoops1a_2019:
-        courseD_bee_nestedLoops1_a: Ca ne fonctionne pas ? Essaie d'utiliser le bouton
-          "Etape" pour voir ce qui se passe ligne par ligne.
-        courseD_bee_nestedLoops1_c: N'oublie pas d'utiliser le bloc `obtenir du nectar`
-          dès que tu es sur une case avec une fleur.
-      courseD_bee_nestedLoops2:
-        courseD_bee_nestedLoops2_a: Pour résoudre ce puzlle, tu auras besoin d'incruster
-          une boucle d'aune autre boucle `répéter`.
-        courseD_bee_nestedLoops2_b: Tu ne trouves pas où mettre la boucle ? Essaie
-          d’écrire le code étape par étape et cherche un motif.
-        courseD_bee_nestedLoops2_c: N’oublie pas que tu peux mettre plus d’un bloc
-          à l’intérieur d’une boucle `répéter`.
-      courseD_bee_nestedLoops2_2018:
-        courseD_bee_nestedLoops2_a: Pour résoudre ce puzlle, tu auras besoin d'incruster
-          une boucle d'aune autre boucle `répéter`.
-        courseD_bee_nestedLoops2_b: Tu ne trouves pas où mettre la boucle ? Essaie
-          d’écrire le code étape par étape et cherche un motif.
-        courseD_bee_nestedLoops2_c: N’oublie pas que tu peux mettre plus d’un bloc
-          à l’intérieur d’une boucle `répéter`.
-      courseD_bee_nestedLoops2_2019:
-        courseD_bee_nestedLoops2_a: Pour résoudre ce puzlle, tu auras besoin d'incruster
-          une boucle d'aune autre boucle `répéter`.
-        courseD_bee_nestedLoops2_b: Tu ne trouves pas où mettre la boucle ? Essaie
-          d’écrire le code étape par étape et cherche un motif.
-        courseD_bee_nestedLoops2_c: N’oublie pas que tu peux mettre plus d’un bloc
-          à l’intérieur d’une boucle `répéter`.
-      courseD_bee_nestedLoops7:
-        courseD_bee_nestedLoops7_a: Tu auras besoin de répéter `obtenir du nectar`
-          à l'intérieur d'une autre boucle `répéter` qui a aussi le bloc \`avancer
-          à l'intérieur.
-        courseD_bee_nestedLoops7_b: Tu auras besoin d'utiliser les 3 blocs `répéter`
-          disponibles pour résoudre ce puzzle.
-        courseD_bee_nestedLoops7_c: |-
-          Incruste tes blocs de 3 niveaux, comme ça :
-
-          -   Répete 4 fois
-              -   répéte 3 fois
-              -   répéte 12 fois
-                  -   ramasse nectar
-              -   avance
-              -   tourne à droite
-      courseD_bee_nestedLoops7_2018:
-        courseD_bee_nestedLoops7_a: Tu auras besoin de répéter `obtenir du nectar`
-          à l'intérieur d'une autre boucle `répéter` qui a aussi le bloc \`avancer
-          à l'intérieur.
-        courseD_bee_nestedLoops7_b: Tu auras besoin d'utiliser les 3 blocs `répéter`
-          disponibles pour résoudre ce puzzle.
-        courseD_bee_nestedLoops7_c: |-
-          Incruste tes blocs de 3 niveaux, comme ça :
-
-          -   Répete 4 fois
-              -   répéte 3 fois
-              -   répéte 12 fois
-                  -   ramasse nectar
-              -   avance
-              -   tourne à droite
-      courseD_bee_nestedLoops7_2019:
-        courseD_bee_nestedLoops7_a: Tu auras besoin de répéter `obtenir du nectar`
-          à l'intérieur d'une autre boucle `répéter` qui a aussi le bloc \`avancer
-          à l'intérieur.
-        courseD_bee_nestedLoops7_b: Tu auras besoin d'utiliser les 3 blocs `répéter`
-          disponibles pour résoudre ce puzzle.
-        courseD_bee_nestedLoops7_c: |-
-          Incruste tes blocs de 3 niveaux, comme ça :
-
-          -   Répete 4 fois
-              -   répéte 3 fois
-              -   répéte 12 fois
-                  -   ramasse nectar
-              -   avance
-              -   tourne à droite
       courseD_collector_debugging1:
         courseD_collector_debugging1_a: |-
           Utilise le bouton "Etape" pour voir si tout est bon dans un premier temps
@@ -9922,93 +9406,7 @@ fr-FR:
         courseD_collector_debugging9_b: Trouve comment tu résoudrais ce problème,
           puis bouge étape par étape pour essayer de faire correspondre le code avec
           votre pensée.
-      courseD_collector_debugging_challenge2:
-        courseD_collector_debugging_challenge2_a: "Commence par ramasser juste **deux**
-          diamants depuis chacune des premières **deux** piles.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04
-          AM copy.png>)\nUtilise ces blocs.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block
-          type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n
-          \ </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title
-          name=\"DIR\">moveForward</title>\n                  </block>\n                  \n
-          \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n
-          \   <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>"
-        courseD_collector_debugging_challenge2_b: |-
-          Ensuite, ramasse les diamants restant dans la rangée.
-
-          ![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)
-          Ajoute ces blocs à ton programme..
-
-          <xml><block type="maze_move">
-                              <title name="DIR">moveBackward</title>
-                            </block>
-          <block type="controls_repeat">
-                  <title name="TIMES">4</title>
-                  <statement name="DO">
-
-                  </statement>
-                </block>
-
-          </xml>
-        courseD_collector_debugging_challenge2_c: "Enfin, ramasse le diamant principal.
-          Ajoute ces blocs à ton programme.\n\n<xml>\n  <block type=\"maze_turn\">\n
-          \               <title name=\"DIR\">turnRight</title>\n              </block>\n
-          \     <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n
-          \       <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>"
-        courseD_collector_debugging_challenge2_d: |-
-          Voici la solution complète à ce puzzle.
-
-          <xml>
-            <block type="when_run" deletable="false" movable="false">
-              <next>
-                <block type="controls_repeat">
-                  <title name="TIMES">4</title>
-                  <statement name="DO">
-                    <block type="controls_repeat">
-                      <title name="TIMES">4</title>
-                      <statement name="DO">
-                        <block type="controls_repeat">
-                          <title name="TIMES">2</title>
-                          <statement name="DO">
-                            <block type="maze_move">
-                              <title name="DIR">moveForward</title>
-                              <next>
-                                <block type="controls_repeat">
-                                  <title name="TIMES">2</title>
-                                  <statement name="DO">
-                                    <block type="collector_collect"/>
-                                  </statement>
-                                </block>
-                              </next>
-                            </block>
-                          </statement>
-                          <next>
-                            <block type="maze_move">
-                              <title name="DIR">moveBackward</title>
-                            </block>
-                          </next>
-                        </block>
-                      </statement>
-                      <next>
-                        <block type="maze_turn">
-                          <title name="DIR">turnRight</title>
-                        </block>
-                      </next>
-                    </block>
-                  </statement>
-                </block>
-              </next>
-            </block>
-          </xml>
       courseD_collector_nested_loops_challenge2:
-        courseD_bee_nested_loops_challenge2_a: N'oublie pas que tu peux `répéter`
-          une simple commande ou un motif plus long. Tu peux même `répéter` un bloc
-          `répéter`!
-        courseD_bee_nested_loops_challenge2_b: Pour avoir les 4 diamants, utilise
-          d'abord une boucle pour t'éloigner du centre. Tourne à droite ou gauche,
-          puis utilise une boucle imbriquée pour aller de la première pile de diamants
-          à la seconde. Si tu répetes la boucle imbriquée plusieurs fois, le collecteur
-          bougera autour _de toute_ la cave!
-        courseD_bee_nested_loops_challenge2_c: Le programme le plus court qui atteint
-          tous les diamants utilise un seul bloc `collecter` et 2 blocs `tourner`.
         courseD_bee_nested_loops_challenge2_d: |-
           **Solution :**
 
@@ -10066,16 +9464,6 @@ fr-FR:
           </block>
           </xml>
       courseD_collector_nested_loops_challenge2_2018:
-        courseD_bee_nested_loops_challenge2_a: N'oublie pas que tu peux `répéter`
-          une simple commande ou un motif plus long. Tu peux même `répéter` un bloc
-          `répéter`!
-        courseD_bee_nested_loops_challenge2_b: Pour avoir les 4 diamants, utilise
-          d'abord une boucle pour t'éloigner du centre. Tourne à droite ou gauche,
-          puis utilise une boucle imbriquée pour aller de la première pile de diamants
-          à la seconde. Si tu répetes la boucle imbriquée plusieurs fois, le collecteur
-          bougera autour _de toute_ la cave!
-        courseD_bee_nested_loops_challenge2_c: Le programme le plus court qui atteint
-          tous les diamants utilise un seul bloc `collecter` et 2 blocs `tourner`.
         courseD_bee_nested_loops_challenge2_d: |-
           **Solution :**
 
@@ -10133,16 +9521,6 @@ fr-FR:
           </block>
           </xml>
       courseD_collector_nested_loops_challenge2_2019:
-        courseD_bee_nested_loops_challenge2_a: N'oublie pas que tu peux `répéter`
-          une simple commande ou un motif plus long. Tu peux même `répéter` un bloc
-          `répéter`!
-        courseD_bee_nested_loops_challenge2_b: Pour avoir les 4 diamants, utilise
-          d'abord une boucle pour t'éloigner du centre. Tourne à droite ou gauche,
-          puis utilise une boucle imbriquée pour aller de la première pile de diamants
-          à la seconde. Si tu répetes la boucle imbriquée plusieurs fois, le collecteur
-          bougera autour _de toute_ la cave!
-        courseD_bee_nested_loops_challenge2_c: Le programme le plus court qui atteint
-          tous les diamants utilise un seul bloc `collecter` et 2 blocs `tourner`.
         courseD_bee_nested_loops_challenge2_d: |-
           **Solution :**
 
@@ -10200,9 +9578,6 @@ fr-FR:
           </block>
           </xml>
       courseD_collector_nested_loops_challenge2a:
-        courseD_collector_nested_loops_challenge2a_a: N'oublie pas que tu peux `répéter`
-          une simple commande ou un motif plus long. Tu peux même `répéter` un bloc
-          `répéter`!
         courseD_collector_nested_loops_challenge2a_b: Peux-tu deviner comment récupérer
           les 4 diamants sans utiliser plus de blocs que pour en ramasser 2?
       courseD_collector_ramp10:
@@ -10243,27 +9618,6 @@ fr-FR:
       courseD_farmer_condLoops7_2019:
         courseD_farmer_condLoops7_b: Essaie d’utiliser ˋquand chemin devant\` pour
           que le moissonneur continue d’avancer le bon nombre de fois.
-      courseD_harvester_nested_loops_challenge1:
-        courseD_harvester_nested_loops_challenge1_a: 'Essaie de suivre ce chemin pour
-          récolter tout le maïs! '
-        courseD_harvester_nested_loops_challenge1_b: Pour ramasser plus d'un maïs,
-          tu dois utiliser `récolte maïs` plus d'une fois.
-        courseD_harvester_nested_loops_challenge1_c: Tu devras mettre une petite boucle
-          à l'intérieur de ta boucle principale pour résoudre ce puzzle!
-      courseD_harvester_nested_loops_challenge1_2018:
-        courseD_harvester_nested_loops_challenge1_a: 'Essaie de suivre ce chemin pour
-          récolter tout le maïs! '
-        courseD_harvester_nested_loops_challenge1_b: Pour ramasser plus d'un maïs,
-          tu dois utiliser `récolte maïs` plus d'une fois.
-        courseD_harvester_nested_loops_challenge1_c: Tu devras mettre une petite boucle
-          à l'intérieur de ta boucle principale pour résoudre ce puzzle!
-      courseD_harvester_nested_loops_challenge1_2019:
-        courseD_harvester_nested_loops_challenge1_a: 'Essaie de suivre ce chemin pour
-          récolter tout le maïs! '
-        courseD_harvester_nested_loops_challenge1_b: Pour ramasser plus d'un maïs,
-          tu dois utiliser `récolte maïs` plus d'une fois.
-        courseD_harvester_nested_loops_challenge1_c: Tu devras mettre une petite boucle
-          à l'intérieur de ta boucle principale pour résoudre ce puzzle!
       courseD_iceage_loops1:
         courseD_iceage_loops1_a: Attention à la glace brisée ! Scrat tombera à travers
           !
@@ -10357,251 +9711,11 @@ fr-FR:
           processus !
         courseD_iceage_loops9_b: Ton code final devrait avoir **4** boucles.
         courseD_iceage_loops9_c: Scrat devrait suivre ce chemin pour obtenir le gland.
-      courseD_maze_intro5a_2019:
-        courseC_maze_programming5_a: Essaie d'utiliser le bouton "Etape" pour exécuter
-          ton code ligne par ligne. Peux-tu deviner ce que tu dois faire ensuite ?
-        courseC_maze_programming5_c: N'aie pas peur de faire des erreurs! Essaie d'ajouter
-          des blocs et d'exécuter ton code pour voie ce qui va se passer, même si
-          tu penses que tu n'as pas résolu encore le puzzle.
-      courseD_maze_nestedLoops3:
-        courseD_maze_nestedLoops3_a: Pour résoudre ce puzzle, tu auras besoin d'incruster
-          une boucle dans autre boucle `répéter`.
-        courseD_maze_nestedLoops3_b: Tu ne trouves pas où mettre la boucle ? Essaie
-          d’écrire le code étape par étape et cherche un motif.
-        courseD_maze_nestedLoops3_c: Essaie d'écrire du code pour un trajet tout droit
-          et un tournant. Est-ce que tu peux répéter ça pour aller jusqu'au tournesol?
-      courseD_maze_nestedLoops3_2018:
-        courseD_maze_nestedLoops3_a: Pour résoudre ce puzzle, tu auras besoin d'incruster
-          une boucle dans autre boucle `répéter`.
-        courseD_maze_nestedLoops3_b: Tu ne trouves pas où mettre la boucle ? Essaie
-          d’écrire le code étape par étape et cherche un motif.
-        courseD_maze_nestedLoops3_c: Essaie d'écrire du code pour un trajet tout droit
-          et un tournant. Est-ce que tu peux répéter ça pour aller jusqu'au tournesol?
-      courseD_maze_nestedLoops3_2019:
-        courseD_maze_nestedLoops3_a: Pour résoudre ce puzzle, tu auras besoin d'incruster
-          une boucle dans autre boucle `répéter`.
-        courseD_maze_nestedLoops3_b: Tu ne trouves pas où mettre la boucle ? Essaie
-          d’écrire le code étape par étape et cherche un motif.
-        courseD_maze_nestedLoops3_c: Essaie d'écrire du code pour un trajet tout droit
-          et un tournant. Est-ce que tu peux répéter ça pour aller jusqu'au tournesol?
-      courseD_maze_nestedLoops4:
-        courseD_maze_nestedLoops4_a: |-
-          Essaie d'utiliser ce trajet dans ce labyrinthe
-
-          ![](https://images.code.org/565dbbcaf5862da0f60e54195820e814-image-1505961491245.36.09.png)
-        courseD_maze_nestedLoops4_b: Si le motif est difficile à repérer, essaie de
-          tout coder et de voir quelles choses se répètent encore et encore avant
-          de placer les boucles.
-        courseD_maze_nestedLoops4_c: Essaie d'utiliser une boucle `répéter` à l'intérieur
-          d'une autre pour réduire la taille du code dont tu as besoin.
-      courseD_maze_nestedLoops4_2018:
-        courseD_maze_nestedLoops4_a: |-
-          Essaie d'utiliser ce trajet dans ce labyrinthe
-
-          ![](https://images.code.org/565dbbcaf5862da0f60e54195820e814-image-1505961491245.36.09.png)
-        courseD_maze_nestedLoops4_b: Si le motif est difficile à repérer, essaie de
-          tout coder et de voir quelles choses se répètent encore et encore avant
-          de placer les boucles.
-        courseD_maze_nestedLoops4_c: Essaie d'utiliser une boucle `répéter` à l'intérieur
-          d'une autre pour réduire la taille du code dont tu as besoin.
-      courseD_maze_nestedLoops4_2019:
-        courseD_maze_nestedLoops4_a: |-
-          Essaie d'utiliser ce trajet dans ce labyrinthe
-
-          ![](https://images.code.org/565dbbcaf5862da0f60e54195820e814-image-1505961491245.36.09.png)
-        courseD_maze_nestedLoops4_b: Si le motif est difficile à repérer, essaie de
-          tout coder et de voir quelles choses se répètent encore et encore avant
-          de placer les boucles.
-        courseD_maze_nestedLoops4_c: Essaie d'utiliser une boucle `répéter` à l'intérieur
-          d'une autre pour réduire la taille du code dont tu as besoin.
-      courseD_maze_nestedLoops5:
-        courseD_maze_nestedLoops5_a: Recherche un motif en escalier dans ce dédale
-          pour trouver où une boucle imbriquée peut être utilisée.
-        courseD_maze_nestedLoops5_b: Tu ne trouves pas où mettre la boucle ? Essaie
-          d’écrire le code étape par étape et cherche un motif.
-      courseD_maze_nestedLoops5_2018:
-        courseD_maze_nestedLoops5_a: Recherche un motif en escalier dans ce dédale
-          pour trouver où une boucle imbriquée peut être utilisée.
-        courseD_maze_nestedLoops5_b: Tu ne trouves pas où mettre la boucle ? Essaie
-          d’écrire le code étape par étape et cherche un motif.
-      courseD_maze_nestedLoops5_2019:
-        courseD_maze_nestedLoops5_a: Recherche un motif en escalier dans ce dédale
-          pour trouver où une boucle imbriquée peut être utilisée.
-        courseD_maze_nestedLoops5_b: Tu ne trouves pas où mettre la boucle ? Essaie
-          d’écrire le code étape par étape et cherche un motif.
-      courseD_maze_nestedLoops6:
-        courseD_maze_nestedLoops6_a: Si tu es coincé, essaie d’écrire sur une feuille
-          le code de papier sans boucles d’abord et de voir ce qui se répète.
-        courseD_maze_nestedLoops6_b: Les boucles imbriquées `répéter` peuvent aider
-          à diminuer le nombre de blocs utilisés.
-        courseD_maze_nestedLoops6_c: Tu auras besoin d’utiliser 2 boucles imbriquées
-          ˋrépéter\` pour résoudre ce puzzle.
-      courseD_maze_nestedLoops6_2018:
-        courseD_maze_nestedLoops6_a: Si tu es coincé, essaie d’écrire sur une feuille
-          le code de papier sans boucles d’abord et de voir ce qui se répète.
-        courseD_maze_nestedLoops6_b: Les boucles imbriquées `répéter` peuvent aider
-          à diminuer le nombre de blocs utilisés.
-        courseD_maze_nestedLoops6_c: Tu auras besoin d’utiliser 2 boucles imbriquées
-          ˋrépéter\` pour résoudre ce puzzle.
-      courseD_maze_nestedLoops6_2019:
-        courseD_maze_nestedLoops6_a: Si tu es coincé, essaie d’écrire sur une feuille
-          le code de papier sans boucles d’abord et de voir ce qui se répète.
-        courseD_maze_nestedLoops6_b: Les boucles imbriquées `répéter` peuvent aider
-          à diminuer le nombre de blocs utilisés.
-        courseD_maze_nestedLoops6_c: Tu auras besoin d’utiliser 2 boucles imbriquées
-          ˋrépéter\` pour résoudre ce puzzle.
-      courseD_maze_ramp1:
-        courseC_maze_programming1_a: Si l'oiseau ne va pas ver le cochon, assure toi
-          que les 3 blocs sont bien assemblés ensemble, puis clic à nouveau sur "Démarrer".
-        courseC_maze_programming1_b: N'aie pas peur de faire des erreurs! Essaie d'ajouter
-          des blocs et d'exécuter ton code pour voie ce qui va se passer, même si
-          tu penses que tu n'as pas résolu encore le puzzle.
-      courseD_maze_ramp1_2018:
-        courseC_maze_programming1_a: Si l'oiseau ne va pas ver le cochon, assure toi
-          que les 3 blocs sont bien assemblés ensemble, puis clic à nouveau sur "Démarrer".
-        courseC_maze_programming1_b: N'aie pas peur de faire des erreurs! Essaie d'ajouter
-          des blocs et d'exécuter ton code pour voie ce qui va se passer, même si
-          tu penses que tu n'as pas résolu encore le puzzle.
-      courseD_maze_ramp1_2019:
-        courseC_maze_programming1_a: Si l'oiseau ne va pas ver le cochon, assure toi
-          que les 3 blocs sont bien assemblés ensemble, puis clic à nouveau sur "Démarrer".
-        courseC_maze_programming1_b: N'aie pas peur de faire des erreurs! Essaie d'ajouter
-          des blocs et d'exécuter ton code pour voie ce qui va se passer, même si
-          tu penses que tu n'as pas résolu encore le puzzle.
-      courseD_maze_ramp2:
-        courseC_maze_programming2_a: Pour utiliser un bloc ˋavancerˋ, fais-le glisser
-          depuis la barre d'outils jusqu'à l'espace de travail et connecte-le au bloc
-          ˋquand l’exécution commenceˋ.
-        courseC_maze_programming2_b: Assure toi que les 3 blocs sont attachés ensemble
-          et aussi sur le bloc `quand l'exécution commence`.
-      courseD_maze_ramp2_2018:
-        courseC_maze_programming2_a: Pour utiliser un bloc ˋavancerˋ, fais-le glisser
-          depuis la barre d'outils jusqu'à l'espace de travail et connecte-le au bloc
-          ˋquand l’exécution commenceˋ.
-        courseC_maze_programming2_b: Assure toi que les 3 blocs sont attachés ensemble
-          et aussi sur le bloc `quand l'exécution commence`.
-      courseD_maze_ramp2_2019:
-        courseC_maze_programming2_a: Pour utiliser un bloc ˋavancerˋ, fais-le glisser
-          depuis la barre d'outils jusqu'à l'espace de travail et connecte-le au bloc
-          ˋquand l’exécution commenceˋ.
-        courseC_maze_programming2_b: Assure toi que les 3 blocs sont attachés ensemble
-          et aussi sur le bloc `quand l'exécution commence`.
-      courseD_maze_ramp3:
-        courseC_maze_programming3_a: |-
-          ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
-
-          Pour enlever un bloc du milieu de ton code, fais glisser tous les blocs du dessous vers la droite en les laissant dans l'espace de travail.
-
-          Clique sur le bloc que tu veux enlever, et fais le revenir dans la boite à outils.
-
-          Enfin, replace tes blocs que tu avais mis à droite sous les blocs restant.
-      courseD_maze_ramp3_2018:
-        courseC_maze_programming3_a: |-
-          ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
-
-          Pour enlever un bloc du milieu de ton code, fais glisser tous les blocs du dessous vers la droite en les laissant dans l'espace de travail.
-
-          Clique sur le bloc que tu veux enlever, et fais le revenir dans la boite à outils.
-
-          Enfin, replace tes blocs que tu avais mis à droite sous les blocs restant.
-      courseD_maze_ramp3_2019:
-        courseC_maze_programming3_a: |-
-          ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
-
-          Pour enlever un bloc du milieu de ton code, fais glisser tous les blocs du dessous vers la droite en les laissant dans l'espace de travail.
-
-          Clique sur le bloc que tu veux enlever, et fais le revenir dans la boite à outils.
-
-          Enfin, replace tes blocs que tu avais mis à droite sous les blocs restant.
-      courseD_maze_ramp4:
-        courseC_maze_programming4_a: Tu peux tourner à gauche ou à droite du point
-          de vue de l'oiseau. Si tu te diriges à droite, tourner à droite te fera
-          aller vers le bas.
-        courseC_maze_programming4_b: Pour suive le chemin, avance et tourne dans un
-          sens, puis avance à nouveau et tourne dans le sens opposé. Avance une fois
-          de plus pour atteindre le cochon.
-      courseD_maze_ramp4_2018:
-        courseC_maze_programming4_a: Tu peux tourner à gauche ou à droite du point
-          de vue de l'oiseau. Si tu te diriges à droite, tourner à droite te fera
-          aller vers le bas.
-        courseC_maze_programming4_b: Pour suive le chemin, avance et tourne dans un
-          sens, puis avance à nouveau et tourne dans le sens opposé. Avance une fois
-          de plus pour atteindre le cochon.
-      courseD_maze_ramp5:
-        courseC_maze_programming5_a: Essaie d'utiliser le bouton "Etape" pour exécuter
-          ton code ligne par ligne. Peux-tu deviner ce que tu dois faire ensuite ?
-        courseC_maze_programming5_b: Souviens toi que tourner se fait du point de
-          vue de l'oiseau.
-        courseC_maze_programming5_c: N'aie pas peur de faire des erreurs! Essaie d'ajouter
-          des blocs et d'exécuter ton code pour voie ce qui va se passer, même si
-          tu penses que tu n'as pas résolu encore le puzzle.
-      courseD_maze_ramp5_2018:
-        courseC_maze_programming5_a: Essaie d'utiliser le bouton "Etape" pour exécuter
-          ton code ligne par ligne. Peux-tu deviner ce que tu dois faire ensuite ?
-        courseC_maze_programming5_b: Souviens toi que tourner se fait du point de
-          vue de l'oiseau.
-        courseC_maze_programming5_c: N'aie pas peur de faire des erreurs! Essaie d'ajouter
-          des blocs et d'exécuter ton code pour voie ce qui va se passer, même si
-          tu penses que tu n'as pas résolu encore le puzzle.
-      courseD_maze_ramp5_2019:
-        courseC_maze_programming5_a: Essaie d'utiliser le bouton "Etape" pour exécuter
-          ton code ligne par ligne. Peux-tu deviner ce que tu dois faire ensuite ?
-        courseC_maze_programming5_b: Souviens toi que tourner se fait du point de
-          vue de l'oiseau.
-        courseC_maze_programming5_c: N'aie pas peur de faire des erreurs! Essaie d'ajouter
-          des blocs et d'exécuter ton code pour voie ce qui va se passer, même si
-          tu penses que tu n'as pas résolu encore le puzzle.
-      courseD_maze_ramp5a:
-        courseC_maze_programming5_a: Essaie d'utiliser le bouton "Etape" pour exécuter
-          ton code ligne par ligne. Peux-tu deviner ce que tu dois faire ensuite ?
-        courseC_maze_programming5_b: Souviens toi que tourner se fait du point de
-          vue de l'oiseau.
-        courseC_maze_programming5_c: N'aie pas peur de faire des erreurs! Essaie d'ajouter
-          des blocs et d'exécuter ton code pour voie ce qui va se passer, même si
-          tu penses que tu n'as pas résolu encore le puzzle.
-      courseD_maze_ramp5a_2018:
-        courseC_maze_programming5_a: Essaie d'utiliser le bouton "Etape" pour exécuter
-          ton code ligne par ligne. Peux-tu deviner ce que tu dois faire ensuite ?
-        courseC_maze_programming5_b: Souviens toi que tourner se fait du point de
-          vue de l'oiseau.
-        courseC_maze_programming5_c: N'aie pas peur de faire des erreurs! Essaie d'ajouter
-          des blocs et d'exécuter ton code pour voie ce qui va se passer, même si
-          tu penses que tu n'as pas résolu encore le puzzle.
-      courseD_maze_ramp5a_2019:
-        courseC_maze_programming5_a: Essaie d'utiliser le bouton "Etape" pour exécuter
-          ton code ligne par ligne. Peux-tu deviner ce que tu dois faire ensuite ?
-        courseC_maze_programming5_c: N'aie pas peur de faire des erreurs! Essaie d'ajouter
-          des blocs et d'exécuter ton code pour voie ce qui va se passer, même si
-          tu penses que tu n'as pas résolu encore le puzzle.
-      courseD_maze_ramp5b:
-        courseC_maze_programming5_a: Essaie d'utiliser le bouton "Etape" pour exécuter
-          ton code ligne par ligne. Peux-tu deviner ce que tu dois faire ensuite ?
-        courseC_maze_programming5_b: Souviens toi que tourner se fait du point de
-          vue de l'oiseau.
-        courseC_maze_programming5_c: N'aie pas peur de faire des erreurs! Essaie d'ajouter
-          des blocs et d'exécuter ton code pour voie ce qui va se passer, même si
-          tu penses que tu n'as pas résolu encore le puzzle.
-      courseD_maze_ramp5b_2018:
-        courseC_maze_programming5_a: Essaie d'utiliser le bouton "Etape" pour exécuter
-          ton code ligne par ligne. Peux-tu deviner ce que tu dois faire ensuite ?
-        courseC_maze_programming5_b: Souviens toi que tourner se fait du point de
-          vue de l'oiseau.
-        courseC_maze_programming5_c: N'aie pas peur de faire des erreurs! Essaie d'ajouter
-          des blocs et d'exécuter ton code pour voie ce qui va se passer, même si
-          tu penses que tu n'as pas résolu encore le puzzle.
-      courseD_maze_ramp5b_2019:
-        courseC_maze_programming5_a: Essaie d'utiliser le bouton "Etape" pour exécuter
-          ton code ligne par ligne. Peux-tu deviner ce que tu dois faire ensuite ?
-        courseC_maze_programming5_b: Souviens toi que tourner se fait du point de
-          vue de l'oiseau.
-        courseC_maze_programming5_c: N'aie pas peur de faire des erreurs! Essaie d'ajouter
-          des blocs et d'exécuter ton code pour voie ce qui va se passer, même si
-          tu penses que tu n'as pas résolu encore le puzzle.
       courseD_maze_ramp6:
         courseC_maze_programming6_a: Il y a deux façons de résoudre ce casse-tête
           !
-        courseC_maze_programming6_b: L' oiseau commence face au mur, donc souviens
-          toi de tourner avant de bouger.
+        courseC_maze_programming6_b: L'oiseau commence face au mur, donc souviens
+          to de tourner avant de bouger.
         courseC_maze_programming6_c: N'oublie pas que tu peux écrire une partie de
           code à la fois, puis appuyer sur « Exécuter » pour déterminer ce que tu
           dois faire à partir de là.
@@ -10703,59 +9817,14 @@ fr-FR:
           boucle `Répète à l'infini` qui vérifie la position du pirate (mais pas à
           l'intérieur de la déclaration `si`) pour que les points ne soient pas retiés
           trop rapidement.
-      courseD_scrat_ramp1:
-        courseC_maze_programming1_a: Si Scrat ne va pas vers le gland assure toi que
-          les 3 blocs sont bien assemblés ensemble, puis clic à nouveau sur "Démarrer".
-        courseC_maze_programming1_b: N'aie pas peur de faire des erreurs! Essaie d'ajouter
-          des blocs et d'exécuter ton code pour voie ce qui va se passer, même si
-          tu penses que tu n'as pas résolu encore le puzzle.
-      courseD_scrat_ramp2:
-        courseC_maze_programming2_a: Pour utiliser un bloc ˋavancerˋ, fais-le glisser
-          depuis la barre d'outils jusqu'à l'espace de travail et connecte-le au bloc
-          ˋquand l’exécution commenceˋ.
-        courseC_maze_programming2_b: Assure-toi que les trois blocs `avancer` sont
-          connectés au bloc ˋquand l’exécution commence\`.
-      courseD_scrat_ramp3:
-        courseC_maze_programming3_a: |-
-          ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
-
-          Pour enlever un bloc du milieu de ton code, fais glisser tous les blocs du dessous vers la droite en les laissant dans l'espace de travail.
-
-          Clique sur le bloc que tu veux enlever, et fais le revenir dans la boite à outils.
-
-          Enfin, replace tes blocs que tu avais mis à droite sous les blocs restant.
-        courseC_maze_programming3_b: Souviens toi que tourner à droite et à gauche,
-          c'est du point de vue de Scrat.
-      courseD_scrat_ramp4:
-        courseC_maze_programming4_c: N'aie pas peur de faire des erreurs! Essaie d'ajouter
-          des blocs et d'exécuter ton code pour voie ce qui va se passer, même si
-          tu penses que tu n'as pas résolu encore le puzzle.
-      courseD_scrat_ramp5:
-        courseC_maze_programming5_a: Essaie d'utiliser le bouton "Etape" pour exécuter
-          ton code ligne par ligne. Peux-tu deviner ce que tu dois faire ensuite ?
-        courseC_maze_programming5_b: Quelle distance dois tu parcourir pour atteindre
-          le coin ?
-        courseC_maze_programming5_c: Tu devras tourner à gauche au coin pour aller
-          vers le gland.
-      courseD_scrat_ramp6:
-        courseC_maze_programming6a_a: Utilise une boucle `répéter` pour faire avancer
-          Scrat !
       courseD_scrat_ramp7:
         courseD_scrat_programming6_a: Il y a deux façons de résoudre ce casse-tête
           !
-        courseD_scrat_programming6_b: Souviens toi de tourner avant de bouger, puisque
-          Scrat est dirigé dans la mauvaise direction.
-        courseD_scrat_programming6_c: N'aie pas peur de faire des erreurs! Essaie
-          d'ajouter des blocs et d'exécuter ton code pour voie ce qui va se passer,
-          même si tu penses que tu n'as pas résolu encore le puzzle.
       courseD_scrat_ramp8:
         courseD_maze_ramp7_b: N'oublie pas d'utiliser le bouton "Etape" pour avancer
           bloc par bloc et voir les erreurs.
         courseD_maze_ramp7_a: Utilise le bloc `Répéter` pour exécuter un simple bloc
           ou un ensemble de bloc encore et encore.
-        courseD_maze_ramp7_c: N'aie pas peur de faire des erreurs! Essaie d'ajouter
-          des blocs et d'exécuter ton code pour voie ce qui va se passer, même si
-          tu penses que tu n'as pas résolu encore le puzzle.
       courseE_artist_concept1:
         courseE_artist_concept1_a: Les hexagones ont des côtés de 50 pixels et tournent
           de 60 degrés à droite.
@@ -11193,8 +10262,12 @@ fr-FR:
         courseE_bee_concept3a_c: Il y a 3 groupes de fleurs, donc ta boucle `répéter`
           extérieur devrait se répéter 3 fois.
       courseE_bee_concept3_2018:
+        courseE_bee_concept3a_a: Essai d'utiliser des boucles imbriquées `Répéter`
+          pour résoudre ce puzzle.
         courseE_bee_concept3a_b: Si tu ne sais pas où mettre des boucles, essaies
           d'écrire ton code pas à pas et de chercher des motifs.
+        courseE_bee_concept3a_c: Il y a 3 groupes de fleurs, donc ta boucle `répéter`
+          extérieur devrait se répéter 3 fois.
       courseE_bee_concept4:
         courseE_bee_concept4_a: Une déclaration `si/autre` pourrait vraiment t'aider
           ici.
@@ -12128,6 +11201,10 @@ fr-FR:
           la couleur de chaque octogone que la largeur du pinceau.
       courseF_artist_variables4:
         courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseF_artist_variables4_2018:
+        courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseF_artist_variables4_2019:
+        courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseF_artist_variables_challenge2:
         courseF_artist_variables_challenge2_d: |-
           **Solution :**
@@ -12837,54 +11914,3 @@ fr-FR:
           </next>
           </block>
           </xml>
-      iceage_click_hello:
-        iceage_click_hello_a: Ajoute un ou plusieurs blocs `l'acteur 1 dit` à l'évènement
-          `quand on clique` pour terminer ce puzzle.
-      iceage_free_play:
-        iceage_free_play_a: 'Est-ce que tu peux faire que Sid et Granny aient un combat
-          de Cristal de Glace?  '
-        iceage_free_play_b: Fais poursuivre Diego par Granny. Tu gagnes et le jeu
-          se termine si elle arrive à l'attraper.
-        iceage_free_play_c: Est ce que tu peux avoir Sid qui lance des flocons de
-          neige sur Diego et Diego devenir plus gros à chaque fois qu'il est touché?
-          Tu gagnes et le jeu se termine si Diego est touché 5 fois.
-      iceage_hello1:
-        iceage_hello1_a: Tu dois seulement ajouter un bloc pour résoudre ce puzzle.
-          Fais glisser le bloc `dit` depuis la boite à outil et connecte le au bloc
-          d'évènement `lorsque l'exécution commence` qui est déjà dans l'espace de
-          travail. Ensuite frapper "Bonjour!" à l'intérieur.
-      iceage_hello2:
-        iceage_hello2_a: 'Pour résoudre ce puzzle, tu auras besoin que Sid dise en
-          utilisant le bloc `l''acteur 1 dit`. Tu auras aussi besoin que Manny dise
-          quelque chose avec le bloc `l''acteur 2 dit`. '
-      iceage_move_events:
-        iceage_move_events_a: 'Chaque évènement `quand flèche __` aura besoin d''avoir
-          une commande `déplacer l''acteur` différente pour résoudre ce puzzle. '
-      iceage_move_to_actor:
-        iceage_move_to_actor_a: Pour ce puzzle, tu peux soit descendre Diego de 200
-          pixels, soit monter Manny de 200 pixels.
-        iceage_move_to_actor_b: Connecte le bloc `jouer le son__` à l'évènement `lorsque
-          l'acteur 1 touche l'acteur 2` pour terminer ce défi.
-      iceage_move_to_flag:
-        iceage_hello3_a: Utilise le bloc `déplacer l'acteur 1 vers la droite 200 pixels`
-          pour résoudre ce problème.
-      iceage_repeat:
-        iceage_repeat_a: Utilise les deux blocs `déplacer l'acteur 1 vers la gauche`
-          et `déplacer l'acteur 1 vers la droite` pour résoudre ce puzzle.
-      iceage_sound_and_points:
-        iceage_sound_and_points_a: Tu auras besoin d'ajouter 2 blocs sousl'évènement
-          `lorsque l'acteur 1 touche l'acteur 2`.
-        iceage_sound_and_points_b: Tu auras besoin des 2 blocs `marquer un point`
-          et `joue le son ____` pour passer ce niveau.
-      iceage_throw_hearts:
-        iceage_throw_hearts_a: Quand veux-tu envoyer des coeurs à Granny? Lorsqu'une
-          tu appuies sur une touche? Lorsque tu cliques sur Sid? sur Granny? C'est
-          ton choix!
-        iceage_throw_hearts_b: Pour que Granny sois heureux lorsqu'il reçoit un coeur,
-          tu auras besoin de connecter le bloc `affecter à l'acteur 2 une bonne humeur`
-          sous l'évènement `lorsque l'acteur 2 touche n'importe quel projectile`.
-      iceage_warn_ice_age:
-        iceage_warn_ice_age_a: 'Tu devrais seulement avoir besoin d''ajouter 2 blocs
-          pour amener ce puzzle où il devrait être. '
-        iceage_warn_ice_age_b: Ajouter les 2 nouveaux blocs sous `lorsque l'exécution
-          commence` pour qu'ils démarrent juste après le départ du programme.

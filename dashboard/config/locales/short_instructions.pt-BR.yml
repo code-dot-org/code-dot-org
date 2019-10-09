@@ -1578,22 +1578,10 @@ pt-BR:
         néctares?
       NEW Course 4 Play Lab Params 11: 'É hora de atividade livre! Divirta-se com
         todos os blocos de sua caixa de ferramentas. '
-      NetSim Standalone Automatic DNS: Nesta versão do Simulador de Internet, um DNS
-        (Sistema de Nome de Domínio) é fornecido e você conhece os endereços IP de
-        todos os computadores conectados. Envie uma mensagem no formato GET [hostname]
-        para o serviço DNS no endereço <yourRouterNumber>.15 para obter o endereço
-        de um aluno.
       NetSim Standalone Broadcast: Nesta versão do Simulador de Internet, você pode
         conectar-se a até 5 outras pessoas em uma sala. Quando você envia mensagens
         na sala, todo mundo as recebe. Quais são alguns dos desafios desse sistema
         e como você pode resolvê-los?
-      NetSim Standalone Classroom Routers: Nesta versão do Simulador de Internet,
-        todos se conectam a um roteador e têm um endereço específico. Para enviar
-        mensagens, você deve endereçá-la ao endereço específico do destinatário, e
-        o roteador cuidará de entregá-lo no computador certo. Se houver outros roteadores
-        criados em sua classe, peça o endereço de um de seus colegas e envie uma mensagem
-        para eles! Veja o registro do roteador para ver o caminho que as mensagens
-        seguiram pela rede.
       NetSim Standalone Freeplay: Nesta configuração, a maioria das opções está ativada
         e você pode brincar com elas. Divirta-se!
       NetSim Standalone Manual DNS: Nesta versão do simulador, você não pode ver os

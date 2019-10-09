@@ -4,9 +4,7 @@ pt-BR:
   data:
     script:
       category:
-        csd_category_name: Descobertas da Ciência da Computação (2018-2019)
         csd_2018_category_name: Descobertas da Ciência da Computação (2018-2019)
-        csd_2019_category_name: Descobertas da Ciência da Computação (2019-2020)
         csf_category_name: Conceitos básicos da CC
         csf_2018_category_name: Fundamentos da Ciência da Computação (2018)
         csf_international_category_name: Fundamentos da Ciencia da Computação International
@@ -1108,8 +1106,6 @@ pt-BR:
               name: Teste Pluralsight
             Externals Optionally Displayed as Unplugged:
               name: Externos Opcionalmente Exibidos como Desconectados
-            Bubble Choice:
-              name: Escolha da bolha
             Contained Levels:
               name: Níveis Contidos
         algebraPD2b:
@@ -2345,12 +2341,6 @@ pt-BR:
               name: teste módulo de conteúdo da Unidade 1 Charlie
             test Unit 1 practice module Delta:
               name: teste unidade 1prática do módulo Delta
-            test Unit 1 practice module Echo:
-              name: teste unidade 1prática do módulo Echo
-            test Unit 1 practice module Foxtrot:
-              name: teste unidade 1 prática do módulo Foxtrot
-            test Unit 1 required reading:
-              name: teste unidade 1 leitura obrigatória
         allthehiddenthings:
           stages:
             Contained Levels:
@@ -2459,12 +2449,6 @@ pt-BR:
               name: Introdução a estilização com CSS
             'Personal Website: Connecting Pages':
               name: 'Site pessoal: conectando páginas'
-            Classes and External Style Sheets:
-              name: Classes e folhas de estilo externas
-            Box Model and Page Layout:
-              name: Modelo da caixa e layout da página
-            'Personal Website: Midway Check':
-              name: 'Site pessoal: verificação intermediária'
             Publishing a Website:
               name: Publicando um site
             Sources and Search Engines:
@@ -2563,14 +2547,10 @@ pt-BR:
               name: Persistência & Frustração
             Programming:
               name: Programação
-            Programming Unplugged:
-              name: Programação desconectada
             Sequences & Algorithms:
               name: Sequências & Algoritmos
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos da vida real: plante uma semente'
-            'Programming Unplugged: Happy Maps':
-              name: 'Programação desconectada: mapas felizes'
         grade4:
           stages:
             'Bee: Determine the Concept':
@@ -2583,16 +2563,12 @@ pt-BR:
               name: Cidadania digital
             Explore project ideas:
               name: Explore ideias de projetos
-            'Farmer: Functions (New)':
-              name: 'Fazendeiro: Funções (Novo)'
             Final Project - Presentation Day:
               name: Projeto Final - Dia da Apresentação
             'Final Project - Unplugged: Design Process':
               name: 'Projeto Final - Desconectado: Processo de Design'
             'Final Project - Work Day: Build Project Online':
               name: 'Projeto Final - Dia de Trabalho: Construa o Projeto Online'
-            More Programming with Scratch:
-              name: Mais Programação com Scratch
             'New Artist: Functions':
               name: 'Novo Artista: Funções'
             Songwriting:
@@ -2621,8 +2597,6 @@ pt-BR:
               name: Persistência & Frustração
             Programming:
               name: Programação
-            Programming Unplugged:
-              name: Programação desconectada
             Sequences & Algorithms:
               name: Sequências & Algoritmos
             Unspotted Bugs:
@@ -3067,8 +3041,6 @@ pt-BR:
               name: Folhas de estilo externas
             Peer Review:
               name: Revisão em grupo
-            Box Model and Page Layout:
-              name: Modelo da caixa e layout da página
             Digital Footprint:
               name: Pegada Digital
             Publishing a Website:
@@ -3233,8 +3205,6 @@ pt-BR:
               name: Cidadania digital
             Explore Project Ideas:
               name: Explore Ideias de Projetos
-            More Programming with Scratch:
-              name: Mais Programação com Scratch
             Private and Personal Information:
               name: Informações Privadas e Pessoais
             Internet:
@@ -6314,8 +6284,3 @@ pt-BR:
               name: 'Repetições: Meus amigos robôs esquisitos'
             Nested Loops:
               name: Laços aninhados
-        dance-2019:
-          stages:
-            Dance Party:
-              name: Festa dançante
-          description: Crie sua própria dança para compartilhar com seus amigos.

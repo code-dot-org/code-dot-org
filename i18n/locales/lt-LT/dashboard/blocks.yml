@@ -58,12 +58,6 @@ lt:
         options:
           FORMAT:
             '"random"': atsitiktinis
-      Dancelab_makeAnonymousDanceSprite:
-        options:
-          LOCATION:
-            "{x: 100, y: 200}": kairėn
-            "{x: 300, y: 200}": dešinėn
-            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": atsitiktinis
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:

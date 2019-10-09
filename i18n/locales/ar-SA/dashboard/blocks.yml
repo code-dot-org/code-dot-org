@@ -242,31 +242,6 @@ ar:
             '"x"': متقاطع
             '"plus"': زائد
             '"random"': عشوائي
-      Dancelab_makeAnonymousDanceSprite:
-        options:
-          COSTUME:
-            '"ALIEN"': كائن فضائي
-            '"BEAR"': دب
-            '"CAT"': قطة
-            '"DOG"': كلب
-            '"DUCK"': بطة
-            '"FROG"': ضفدع
-            '"MOOSE"': غزال موظ
-            '"PINEAPPLE"': أناناس
-            '"ROBOT"': روبوت
-            '"SHARK"': سمكة قرش
-            '"UNICORN"': وحيد القرن
-          LOCATION:
-            "{x: 200, y: 100}": أعلى
-            "{x: 200, y: 300}": أسفل
-            "{x: 100, y: 200}": اليسار
-            "{x: 300, y: 200}": اليمين
-            "{x: 200, y: 200}": المنتصف
-            "{x: 100, y: 100}": أعلى اليسار
-            "{x: 300, y: 100}": أعلى اليمين
-            "{x: 100, y: 300}": أسفل اليسار
-            "{x: 300, y: 300}": أسفل اليمين
-            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": عشوائي
       Dancelab_makeNewDanceSprite:
         text: |-
           أجرِ {COSTUME} جديد
@@ -527,20 +502,6 @@ ar:
       Dancelab_setTint:
         text: عيّن اللون الخفيف {SPRITE} على {VAL}
       Dancelab_setTintEach:
-        options:
-          THIS:
-            sprites: الكل
-            '"ALIEN"': كل الكائنات الفضائية
-            '"BEAR"': كل الدببة
-            '"CAT"': كل القطط
-            '"DOG"': كل الكلاب
-            '"DUCK"': كل البط
-            '"FROG"': كل الضفادع
-            '"MOOSE"': كل الغزلان
-            '"PINEAPPLE"': كل الأناناس
-            '"ROBOT"': كل الروبوتات
-            '"SHARK"': كل أسماك القرش
-      Dancelab_setTintEachInline:
         options:
           THIS:
             sprites: الكل

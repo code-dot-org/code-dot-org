@@ -266,31 +266,6 @@ hu:
             '"x"': keresztezés
             '"plus"': plusz
             '"random"': véletlen
-      Dancelab_makeAnonymousDanceSprite:
-        options:
-          COSTUME:
-            '"ALIEN"': Földönkívüli
-            '"BEAR"': Medve
-            '"CAT"': Macska
-            '"DOG"': Kutya
-            '"DUCK"': Kacsa
-            '"FROG"': Béka
-            '"MOOSE"': Jávorszarvas
-            '"PINEAPPLE"': Ananász
-            '"ROBOT"': Robot
-            '"SHARK"': Cápa
-            '"UNICORN"': Egyszarvú
-          LOCATION:
-            "{x: 200, y: 100}": fent
-            "{x: 200, y: 300}": lent
-            "{x: 100, y: 200}": balra
-            "{x: 300, y: 200}": jobbra
-            "{x: 200, y: 200}": közép
-            "{x: 100, y: 100}": balra fent
-            "{x: 300, y: 100}": jobbra fent
-            "{x: 100, y: 300}": balra lent
-            "{x: 300, y: 300}": jobbra lent
-            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": véletlen
       Dancelab_makeNewDanceSprite:
         text: |-
           új {COSTUME} készítése
@@ -562,21 +537,6 @@ hu:
       Dancelab_setTint:
         text: "{SPRITE} árnyalatának beállítása: {VAL}"
       Dancelab_setTintEach:
-        text: 'állítsd {THIS} árnyalat: {VAL}'
-        options:
-          THIS:
-            sprites: összes
-            '"ALIEN"': összes földönkívüli
-            '"BEAR"': összes medve
-            '"CAT"': összes macska
-            '"DOG"': összes kutya
-            '"DUCK"': összes kacsa
-            '"FROG"': összes béka
-            '"MOOSE"': összes jávorszarvas
-            '"PINEAPPLE"': összes ananász
-            '"ROBOT"': összes robot
-            '"SHARK"': összes cápa
-      Dancelab_setTintEachInline:
         text: 'állítsd {THIS} árnyalat: {VAL}'
         options:
           THIS:

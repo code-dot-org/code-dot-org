@@ -3529,9 +3529,3 @@ fr:
               name: Introduction
             Nested Loops:
               name: Boucles imbriquées
-        dance-2019:
-          stages:
-            Dance Party:
-              name: Fête dansante
-          description: Codez votre propre soirée dansante à partager avec vos amis
-            !

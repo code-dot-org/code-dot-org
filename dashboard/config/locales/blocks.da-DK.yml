@@ -92,14 +92,6 @@ da:
             '"inner"': indersiden af firkant
             '"x"': kryds og tværs
             '"random"': tilfældig
-      Dancelab_makeAnonymousDanceSprite:
-        options:
-          COSTUME:
-            '"DOG"': Hund
-          LOCATION:
-            "{x: 100, y: 200}": venstre
-            "{x: 300, y: 200}": højre
-            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": tilfældig
       Dancelab_makeNewDanceSprite:
         options:
           COSTUME:
@@ -237,10 +229,6 @@ da:
             '"scale"': størrelse
             '"height"': højde
       Dancelab_setTintEach:
-        options:
-          THIS:
-            sprites: alle
-      Dancelab_setTintEachInline:
         options:
           THIS:
             sprites: alle

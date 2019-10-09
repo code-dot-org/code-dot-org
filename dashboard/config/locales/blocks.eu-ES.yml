@@ -197,12 +197,6 @@ eu:
             '"SHARK"': marrazo guztiak
           FORMAT:
             '"random"': ausazkoa
-      Dancelab_makeAnonymousDanceSprite:
-        options:
-          LOCATION:
-            "{x: 100, y: 200}": ezkerrera
-            "{x: 300, y: 200}": eskuinera
-            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ausazkoa
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
@@ -309,19 +303,6 @@ eu:
             '"y"': posizio bertikala
             '"tint"': tinta
       Dancelab_setTintEach:
-        options:
-          THIS:
-            '"ALIEN"': estralurtar guztiak
-            '"BEAR"': hartz guztiak
-            '"CAT"': katu guztiak
-            '"DOG"': txakur guztiak
-            '"DUCK"': ahate guztiak
-            '"FROG"': zapo guztiak
-            '"MOOSE"': altze guztiak
-            '"PINEAPPLE"': piña giztiak
-            '"ROBOT"': robot guztiak
-            '"SHARK"': marrazo guztiak
-      Dancelab_setTintEachInline:
         options:
           THIS:
             '"ALIEN"': estralurtar guztiak

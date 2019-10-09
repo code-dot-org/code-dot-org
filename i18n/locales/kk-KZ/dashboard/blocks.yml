@@ -58,12 +58,6 @@ kk:
         options:
           FORMAT:
             '"random"': кездейсоқ
-      Dancelab_makeAnonymousDanceSprite:
-        options:
-          LOCATION:
-            "{x: 100, y: 200}": солға
-            "{x: 300, y: 200}": оңға
-            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": кездейсоқ
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:

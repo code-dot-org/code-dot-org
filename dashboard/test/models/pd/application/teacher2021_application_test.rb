@@ -78,6 +78,19 @@ module Pd::Application
       assert_equal Pd::Application::Teacher2021Application::REVIEWING_INCOMPLETE, teacher_application.meets_criteria
     end
 
+    test 'total score calculates the sum of all response scores' do
+      teacher_application = build :pd_teacher2021_application, response_scores: {
+        bonus_points_scores: {
+          free_lunch_percent: '5',
+          underrepresented_minority_percent: '5',
+          able_to_attend_single: TEXT_FIELDS[:able_to_attend_single],
+          csp_which_grades: nil
+        }
+      }.to_json
+
+      assert_equal 10, teacher_application.total_score
+    end
+
     test 'accepted_at updates times' do
       today = Date.today.to_time
       tomorrow = Date.tomorrow.to_time
@@ -306,12 +319,12 @@ module Pd::Application
       csv_header_csd = CSV.parse(Teacher2021Application.csv_header('csd'))[0]
       assert csv_header_csd.include? "To which grades does your school plan to offer CS Discoveries in the 2020-21 school year?"
       refute csv_header_csd.include? "To which grades does your school plan to offer CS Principles in the 2020-21 school year?"
-      assert_equal 98, csv_header_csd.length
+      assert_equal 97, csv_header_csd.length
 
       csv_header_csp = CSV.parse(Teacher2021Application.csv_header('csp'))[0]
       refute csv_header_csp.include? "To which grades does your school plan to offer CS Discoveries in the 2020-21 school year?"
       assert csv_header_csp.include? "To which grades does your school plan to offer CS Principles in the 2020-21 school year?"
-      assert_equal 100, csv_header_csp.length
+      assert_equal 99, csv_header_csp.length
     end
 
     test 'school cache' do
@@ -538,7 +551,6 @@ module Pd::Application
             csd_which_grades: YES,
             plan_to_teach: YES,
             committed: YES,
-            replace_existing: YES,
             principal_schedule_confirmed: YES,
           },
           meets_scholarship_criteria_scores: {
@@ -547,11 +559,12 @@ module Pd::Application
             principal_approval: YES,
             principal_schedule_confirmed: YES,
             principal_diversity_recruitment: YES,
-            free_lunch_percent: YES,
-            underrepresented_minority_percent: YES,
           },
           bonus_points_scores: {
+            replace_existing: 5,
             race: 2,
+            free_lunch_percent: 5,
+            underrepresented_minority_percent: 5,
           },
         }.deep_stringify_keys,
         JSON.parse(application.response_scores)
@@ -588,7 +601,6 @@ module Pd::Application
             csp_which_grades: YES,
             plan_to_teach: YES,
             committed: YES,
-            replace_existing: YES,
             principal_schedule_confirmed: YES,
           },
           meets_scholarship_criteria_scores: {
@@ -596,13 +608,14 @@ module Pd::Application
             previous_yearlong_cdo_pd: YES,
             principal_approval: YES,
             principal_schedule_confirmed: YES,
-            principal_diversity_recruitment: YES,
-            free_lunch_percent: YES,
-            underrepresented_minority_percent: YES,
+            principal_diversity_recruitment: YES
           },
           bonus_points_scores: {
             csp_how_offer: 2,
+            replace_existing: 5,
             race: 2,
+            free_lunch_percent: 5,
+            underrepresented_minority_percent: 5
           },
         }.deep_stringify_keys,
         JSON.parse(application.response_scores)
@@ -632,7 +645,6 @@ module Pd::Application
             csp_which_grades: YES,
             plan_to_teach: YES,
             committed: YES,
-            replace_existing: YES,
           },
           meets_scholarship_criteria_scores: {
             plan_to_teach: YES,
@@ -640,6 +652,7 @@ module Pd::Application
           },
           bonus_points_scores: {
             csp_how_offer: 2,
+            replace_existing: 5,
             race: 2
           },
         }.deep_stringify_keys,
@@ -676,7 +689,6 @@ module Pd::Application
             regional_partner_name: NO,
             csd_which_grades: NO,
             committed: NO,
-            replace_existing: NO,
             principal_schedule_confirmed: NO,
           },
           meets_scholarship_criteria_scores: {
@@ -684,11 +696,12 @@ module Pd::Application
             principal_approval: NO,
             principal_schedule_confirmed: NO,
             principal_diversity_recruitment: NO,
-            free_lunch_percent: NO,
-            underrepresented_minority_percent: NO,
           },
           bonus_points_scores: {
+            replace_existing: 0,
             race: 0,
+            free_lunch_percent: 0,
+            underrepresented_minority_percent: 0,
           },
         }.deep_stringify_keys,
         JSON.parse(application.response_scores)
@@ -724,20 +737,20 @@ module Pd::Application
             regional_partner_name: NO,
             csp_which_grades: NO,
             committed: NO,
-            replace_existing: NO,
             principal_schedule_confirmed: NO,
           },
           meets_scholarship_criteria_scores: {
             previous_yearlong_cdo_pd: NO,
             principal_approval: NO,
             principal_schedule_confirmed: NO,
-            principal_diversity_recruitment: NO,
-            free_lunch_percent: NO,
-            underrepresented_minority_percent: NO,
+            principal_diversity_recruitment: NO
           },
           bonus_points_scores: {
             csp_how_offer: 0,
+            replace_existing: 0,
             race: 0,
+            free_lunch_percent: 0,
+            underrepresented_minority_percent: 0
           },
         }.deep_stringify_keys,
         JSON.parse(application.response_scores)
@@ -764,8 +777,7 @@ module Pd::Application
 
       application.auto_score!
 
-      assert_equal NO,
-        application.response_scores_hash[:meets_minimum_criteria_scores][:replace_existing]
+      assert_equal 0, application.response_scores_hash[:bonus_points_scores][:replace_existing]
 
       application.update_form_data_hash(
         {
@@ -776,8 +788,7 @@ module Pd::Application
 
       application.auto_score!
 
-      assert_equal YES,
-        application.response_scores_hash[:meets_minimum_criteria_scores][:replace_existing]
+      assert_equal 5, application.response_scores_hash[:bonus_points_scores][:replace_existing]
     end
 
     test 'nil results when applicable' do
@@ -799,8 +810,8 @@ module Pd::Application
       response_scores_hash = application.response_scores_hash
 
       assert_nil response_scores_hash[:meets_minimum_criteria_scores][:principal_schedule_confirmed]
-      assert_nil response_scores_hash[:meets_minimum_criteria_scores][:replace_existing]
       assert_nil response_scores_hash[:meets_scholarship_criteria_scores][:principal_schedule_confirmed]
+      assert_nil response_scores_hash[:bonus_points_scores][:replace_existing]
     end
 
     test 'principal_approval_state' do

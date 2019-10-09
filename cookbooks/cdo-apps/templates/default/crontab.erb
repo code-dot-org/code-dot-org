@@ -62,6 +62,7 @@
 
     if node.chef_environment == 'test' && node.name == 'staging-next'
       cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'update_dtsn')
+      cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'cron', 'trigger_circle_build')
     end
 
     if node.chef_environment == 'test' && node.name == 'test' # 'real' test only

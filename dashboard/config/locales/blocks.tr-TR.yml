@@ -214,30 +214,6 @@ tr:
             '"x"': çapraz geçiş
             '"plus"': artı
             '"random"': gelişigüzel
-      Dancelab_makeAnonymousDanceSprite:
-        options:
-          COSTUME:
-            '"ALIEN"': Uzaylı
-            '"BEAR"': Ayı
-            '"CAT"': Kedi
-            '"DOG"': Köpek
-            '"DUCK"': Ördek
-            '"FROG"': Kurbağa
-            '"MOOSE"': Geyik
-            '"PINEAPPLE"': Ananas
-            '"SHARK"': Köpek balığı
-            '"UNICORN"': Tek boynuzlu at
-          LOCATION:
-            "{x: 200, y: 100}": üst
-            "{x: 200, y: 300}": alt
-            "{x: 100, y: 200}": sol
-            "{x: 300, y: 200}": sağ
-            "{x: 200, y: 200}": merkez
-            "{x: 100, y: 100}": sol üst
-            "{x: 300, y: 100}": sağ üst
-            "{x: 100, y: 300}": sol alt
-            "{x: 300, y: 300}": sağ alt
-            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": gelişigüzel
       Dancelab_makeNewDanceSprite:
         text: |-
           yeni bir {COSTUME} yap
@@ -489,20 +465,6 @@ tr:
       Dancelab_setTint:
         text: "{SPRITE} renk tonunu {VAL} olarak ayarla"
       Dancelab_setTintEach:
-        options:
-          THIS:
-            sprites: tüm
-            '"ALIEN"': tüm uzaylılar
-            '"BEAR"': tüm ayılar
-            '"CAT"': tüm kediler
-            '"DOG"': tüm köpekler
-            '"DUCK"': tüm ördekler
-            '"FROG"': tüm kurbağalar
-            '"MOOSE"': tüm geyikler
-            '"PINEAPPLE"': tüm ananaslar
-            '"ROBOT"': tüm robotlar
-            '"SHARK"': tüm köpekbalıkları
-      Dancelab_setTintEachInline:
         options:
           THIS:
             sprites: tüm

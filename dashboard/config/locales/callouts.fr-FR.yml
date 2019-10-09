@@ -126,10 +126,10 @@ fr-FR:
       Infinity_repeat:
         Infinity_repeat_callout: Place les bloc « Déplacer » ici à l'intérieur
       MC HOC 2016 Level 2-2:
-        craft2_run_button_callout: Lorsque tu es prêt, appuie sur "Démarrer" pour
-          tester ton programme.
+        craft2_run_button_callout: Lorsque tu es prêt, appuie "Démarrer" pour tester
+          ton programme.
       MC HOC 2016 New Walk:
-        MC_HOC_2016_New_Walk_callout2: Appuie sur "Démarrer" pour commencer à bouger.
+        MC_HOC_2016_New_Walk_callout2: Appuie "Démarrer" pour commencer à bouger.
       MC_HOC_2017_03_Cole:
         MC_HOC_2017_03_Cole_1: Ceci est une boucle « répéter » !  Cliquez dessus dans
           l'espace de travail et ajoutez le code que vous voulez exécuter en boucle.
@@ -213,9 +213,6 @@ fr-FR:
           plus de code à la fin.
         courseE_artist_functions_challenge2_callout2: Si tu n'aime pas ce concept,
           change le à ta convenance!
-      course3_bee_debugging_challenge1:
-        courseD_bee_debugging_challenge1_callout1: Utilise cette commande pour faire
-          reculer l'abeille.
       course3_playLab_challenge1:
         courseC_PlayLab_events_challenge1_1: Ce bloc te laisse bouger les acteurs
           vers différentes parties de l'espace de jeu.
@@ -284,12 +281,6 @@ fr-FR:
         courseA_collector_loops1_1: Y a-t-il de nouveaux blocs dans la boite à outils?
           Ne t'inquiète pas, nous allons t'aider à les utiliser plus tard dans de
           futurs étapes.
-      courseA_maze_ramp2_2019:
-        courseC_maze_programming2_1: C'est la boite à outils. C'est ici que tu trouves
-          les blocs supplémentaires pour compléter les puzzles.
-      courseA_maze_ramp3a_2018:
-        courseC_maze_programming2_1: C'est la boite à outils. C'est ici que tu trouves
-          les blocs supplémentaires pour compléter les puzzles.
       courseA_maze_seq1:
         courseA_maze_seq1_1: Clique dans la bulle si tu as besoin d'une astuce!
       courseA_maze_seq1_2018:
@@ -329,15 +320,6 @@ fr-FR:
         courseA_playLab_events6_1: Cela te permet de choisir un son "aléatoire", ce
           qui veut dire que tu ne sais pas ce que tu auras tant que tu ne l'entendras
           pas!
-      courseB_Scrat_ramp1_2018:
-        grade2_CaringForNewPet_0_1: Après avoir attachés tous les blocs ensemble,
-          appuie sur "Démarrer" pour que ton programme commence.
-      courseB_Scrat_ramp1_2019:
-        grade2_CaringForNewPet_0_1: Après avoir attachés tous les blocs ensemble,
-          appuie sur "Démarrer" pour que ton programme commence.
-      courseB_Scrat_ramp3a_2019:
-        courseC_maze_programming2_1: C'est la boite à outils. C'est ici que tu trouves
-          les blocs supplémentaires pour compléter les puzzles.
       courseB_collector_loops1:
         courseB_collector_loops1_1: Y a-t-il de nouveaux blocs dans la boite à outils?
           Ne t'inquiète pas, nous allons t'aider à les utiliser plus tard dans de
@@ -403,59 +385,15 @@ fr-FR:
       courseC_harvester_loops1_2019:
         courseC_harvester_loops1_callout1: Le nombre 4 sur la citrouille indique qu'il
           y a 4 citrouilles que tu peux ramasser.
-      courseC_maze_debugging5:
-        courseC_maze_debugging5_1: Les blocs gris ne peuvent pas être effacés!
-      courseC_maze_programming1:
-        grade2_CaringForNewPet_0_1: Après avoir attachés tous les blocs ensemble,
-          appuie sur "Démarrer" pour que ton programme commence.
-      courseC_maze_programming1_2018:
-        grade2_CaringForNewPet_0_1: Après avoir attachés tous les blocs ensemble,
-          appuie sur "Démarrer" pour que ton programme commence.
-      courseC_maze_programming1_2019:
-        grade2_CaringForNewPet_0_1: Après avoir attachés tous les blocs ensemble,
-          appuie sur "Démarrer" pour que ton programme commence.
-      courseC_maze_programming2:
-        courseC_maze_programming2_1: C'est la boite à outils. C'est ici que tu trouves
-          les blocs supplémentaires pour compléter les puzzles.
-      courseC_maze_programming2_2018:
-        courseC_maze_programming2_1: C'est la boite à outils. C'est ici que tu trouves
-          les blocs supplémentaires pour compléter les puzzles.
-      courseC_maze_programming2_2019:
-        courseC_maze_programming2_1: C'est la boite à outils. C'est ici que tu trouves
-          les blocs supplémentaires pour compléter les puzzles.
       courseC_maze_programming3:
-        courseC_maze_programming3_2: Tu peux faire glisser d'autres blocs vers la
-          boite à outils pour les enlever.
         courseC_maze_programming3_3: Ces blocs sont comme des pierres que tu ne peux
           pas enlever.
       courseC_maze_programming3_2018:
-        courseC_maze_programming3_2: Tu peux faire glisser d'autres blocs vers la
-          boite à outils pour les enlever.
         courseC_maze_programming3_3: Ces blocs sont comme des pierres que tu ne peux
           pas enlever.
       courseC_maze_programming3_2019:
-        courseC_maze_programming3_2: Tu peux faire glisser d'autres blocs vers la
-          boite à outils pour les enlever.
         courseC_maze_programming3_3: Ces blocs sont comme des pierres que tu ne peux
           pas enlever.
-      courseC_maze_programming4:
-        courseC_maze_programming4_1: C'est ton nombre maximum de blocs. Cela te dit
-          combien il te reste de blocs utilisables.
-      courseC_maze_programming4_2018:
-        courseC_maze_programming4_1: C'est ton nombre maximum de blocs. Cela te dit
-          combien il te reste de blocs utilisables.
-      courseC_maze_programming4_2019:
-        courseC_maze_programming4_1: C'est ton nombre maximum de blocs. Cela te dit
-          combien il te reste de blocs utilisables.
-      courseC_maze_programming5:
-        '': Ces blocs n'ont pas de nombres sur eux. Tu peux en utiliser autant que
-          tu veux !
-      courseC_maze_programming5_2018:
-        '': Ces blocs n'ont pas de nombres sur eux. Tu peux en utiliser autant que
-          tu veux !
-      courseC_maze_programming5_2019:
-        '': Ces blocs n'ont pas de nombres sur eux. Tu peux en utiliser autant que
-          tu veux !
       courseC_maze_programming7:
         courseC_maze_programming7_1: C'est ton premier défi! Ils sont fait pour être
           difficile et peuvent demander plusieurs essais.
@@ -515,80 +453,8 @@ fr-FR:
       courseD_bee_conditionals_challenge2_2019:
         courseD_bee_conditionals_challenge2_1: Utilise cette boucle pour collecter
           tout le nectar (ou miel) d’une fleur (ou d’un gâteau de miel).
-      courseD_bee_debugging_challenge1:
-        courseD_bee_debugging_challenge1_callout1: Utilise cette commande pour faire
-          reculer l'abeille.
-      courseD_bee_debugging_challenge1a:
-        courseD_bee_debugging_challenge1_callout1: Utilise cette commande pour faire
-          reculer l'abeille.
       courseD_collector_ramp8:
         courseD_collector_ramp8_1: 'Utilise ce bloc pour ramasser un diamant.  '
-      courseD_maze_intro4_2019:
-        courseC_maze_programming4_1: C'est ton nombre maximum de blocs. Cela te dit
-          combien il te reste de blocs utilisables.
-      courseD_maze_intro5a_2019:
-        '': Ces blocs n'ont pas de nombres sur eux. Tu peux en utiliser autant que
-          tu veux !
-      courseD_maze_ramp1:
-        grade2_CaringForNewPet_0_1: Après avoir attachés tous les blocs ensemble,
-          appuie sur "Démarrer" pour que ton programme commence.
-      courseD_maze_ramp1_2018:
-        grade2_CaringForNewPet_0_1: Après avoir attachés tous les blocs ensemble,
-          appuie sur "Démarrer" pour que ton programme commence.
-      courseD_maze_ramp1_2019:
-        grade2_CaringForNewPet_0_1: Après avoir attachés tous les blocs ensemble,
-          appuie sur "Démarrer" pour que ton programme commence.
-      courseD_maze_ramp2:
-        courseC_maze_programming2_1: C'est la boite à outils. C'est ici que tu trouves
-          les blocs supplémentaires pour compléter les puzzles.
-      courseD_maze_ramp2_2018:
-        courseC_maze_programming2_1: C'est la boite à outils. C'est ici que tu trouves
-          les blocs supplémentaires pour compléter les puzzles.
-      courseD_maze_ramp2_2019:
-        courseC_maze_programming2_1: C'est la boite à outils. C'est ici que tu trouves
-          les blocs supplémentaires pour compléter les puzzles.
-      courseD_maze_ramp3:
-        courseC_maze_programming3_2: Tu peux faire glisser d'autres blocs vers la
-          boite à outils pour les enlever.
-        stone_block_2: Les blocs gris sont comme des pierres que tu ne peux pas enlever.
-      courseD_maze_ramp3_2018:
-        courseC_maze_programming3_2: Tu peux faire glisser d'autres blocs vers la
-          boite à outils pour les enlever.
-        stone_block_2: Les blocs gris sont comme des pierres que tu ne peux pas enlever.
-      courseD_maze_ramp3_2019:
-        courseC_maze_programming3_2: Tu peux faire glisser d'autres blocs vers la
-          boite à outils pour les enlever.
-      courseD_maze_ramp4:
-        courseC_maze_programming4_1: C'est ton nombre maximum de blocs. Cela te dit
-          combien il te reste de blocs utilisables.
-      courseD_maze_ramp4_2018:
-        courseC_maze_programming4_1: C'est ton nombre maximum de blocs. Cela te dit
-          combien il te reste de blocs utilisables.
-      courseD_maze_ramp4_2019:
-        courseC_maze_programming4_1: C'est ton nombre maximum de blocs. Cela te dit
-          combien il te reste de blocs utilisables.
-      courseD_maze_ramp5:
-        '': Ces blocs n'ont pas de nombres sur eux. Tu peux en utiliser autant que
-          tu veux !
-      courseD_maze_ramp5_2018:
-        '': Ces blocs n'ont pas de nombres sur eux. Tu peux en utiliser autant que
-          tu veux !
-      courseD_maze_ramp5_2019:
-        '': Ces blocs n'ont pas de nombres sur eux. Tu peux en utiliser autant que
-          tu veux !
-      courseD_maze_ramp5a:
-        '': Ces blocs n'ont pas de nombres sur eux. Tu peux en utiliser autant que
-          tu veux !
-      courseD_maze_ramp5a_2018:
-        '': Ces blocs n'ont pas de nombres sur eux. Tu peux en utiliser autant que
-          tu veux !
-      courseD_maze_ramp5a_2019:
-        '': Ces blocs n'ont pas de nombres sur eux. Tu peux en utiliser autant que
-          tu veux !
-      courseD_maze_ramp6:
-        courseD_maze_ramp6_1: Quelque soit le code que tu mettras ici, il se répétera
-          autant de fois que tu lui diras de le faire, puis continuera à exécuter
-          le reste du programme.
       courseD_playLab_condFP:
         courseD_playLab_condFP_1: nous avons organisés les blocs en catégories pour
           que tu aies plus de code pour jouer avec! Appuis ici pour voir ou tout se
@@ -597,29 +463,6 @@ fr-FR:
         courseD_playLab_condFP_1: nous avons organisés les blocs en catégories pour
           que tu aies plus de code pour jouer avec! Appuis ici pour voir ou tout se
           trouve.
-      courseD_scrat_ramp1:
-        grade2_CaringForNewPet_0_1: Après avoir attachés tous les blocs ensemble,
-          appuie sur "Démarrer" pour que ton programme commence.
-      courseD_scrat_ramp2:
-        courseC_maze_programming2_1: C'est la boite à outils. C'est ici que tu trouves
-          les blocs supplémentaires pour compléter les puzzles.
-      courseD_scrat_ramp3:
-        courseC_maze_programming3_2: Tu peux faire glisser d'autres blocs vers la
-          boite à outils pour les enlever.
-      courseD_scrat_ramp4:
-        courseC_maze_programming4_1: C'est ton nombre maximum de blocs. Cela te dit
-          combien il te reste de blocs utilisables.
-      courseD_scrat_ramp5:
-        '': Ces blocs n'ont pas de nombres sur eux. Tu peux en utiliser autant que
-          tu veux !
-      courseD_scrat_ramp6:
-        courseD_maze_ramp6_1: Quelque soit le code que tu mettras ici, il se répétera
-          autant de fois que tu lui diras de le faire, puis continuera à exécuter
-          le reste du programme.
-      courseD_scrat_ramp7:
-        courseD_maze_ramp6_1: Quelque soit le code que tu mettras ici, il se répétera
-          autant de fois que tu lui diras de le faire, puis continuera à exécuter
-          le reste du programme.
       courseD_scrat_ramp8:
         courseD_maze_ramp7_1: C'est ton premier défi! Ils sont fait pour être difficile
           et peuvent demander plusieurs essais.

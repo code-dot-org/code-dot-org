@@ -41,7 +41,6 @@
     "CONTROLS_FOREACH_INPUT_ITEM": "kartok su kiekvienu",
     "CONTROLS_FOREACH_TOOLTIP": "Kartoti veiksmus su kiekvienu sąrašo elementu, priskirtu kintamajam \"%1\".",
     "CONTROLS_FOR_HELPURL": "",
-    "CONTROLS_FOR_INPUT_COUNTER": "",
     "CONTROLS_FOR_INPUT_FROM_TO_BY": "kinta nuo %1 iki %2 po %3",
     "CONTROLS_FOR_INPUT_WITH": "kartok, kai",
     "CONTROLS_FOR_TOOLTIP": "Kartoti veiksmus, kai kintamasis %1 gauna reikšmes nuo [pradinės] iki [galutinės], didinant po [žingsnį].",

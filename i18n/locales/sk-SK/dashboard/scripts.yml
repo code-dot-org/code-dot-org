@@ -4270,8 +4270,3 @@ sk:
               name: Projekt s vnorenými cyklami vo Frozen
             Nested Loops in Frozen:
               name: Vnorené cykly vo Frozen
-        dance-2019:
-          stages:
-            Dance Party:
-              name: Tanečná Párty
-          description: Nakóduj si vlastnú Tanečnú párty a zdieľaj ju s kamarátmi!

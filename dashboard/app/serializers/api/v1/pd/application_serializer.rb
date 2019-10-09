@@ -167,11 +167,6 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
     "#{(100.0 * count / total).round(2)}%"
   end
 
-  def yes_no_string(value)
-    return nil if value.nil?
-    value ? Pd::Application::ApplicationBase::YES : Pd::Application::ApplicationBase::NO
-  end
-
   def school_stats
     return {} unless object.try(:school_id)
 
@@ -183,7 +178,6 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
 
     {
       title_i_status: stats.title_i_status,
-      rural_status: yes_no_string(stats.rural_school?),
       school_type: school.school_type.try(:titleize),
       frl_eligible_percent: percent_string(stats.frl_eligible_total, stats.students_total),
       urm_percent: percent_string(urm_total, stats.students_total),

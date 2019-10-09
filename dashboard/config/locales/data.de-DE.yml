@@ -747,9 +747,7 @@ de:
         CSF_scrat_loops_CF: Schleifen in Ice Age
         CSF_if_allskins: Der Wenn-Block
         CSF_loops_AB: Schleifen
-        csd_gamelab_booleans: Boolesche Ausdrücke
         csd_gamelab_conditional_statements: Bedingte Anweisungen
-        csd_gamelab_if_else: Wenn/Sonst Anweisungen
         CSF_SpriteLabIntro_CDEF: Hier ist das Sprite Lab
         CSF_Spritelab_MakeSprite_CDEF: Wie du ein Sprite im Sprite Lab erstellst
         CDEF_Video_SpritesInAction: Sprites in Aktion
@@ -760,8 +758,6 @@ de:
         mc_2018_closing: 'Minecraft: Voyage Aquatic Glückwunsch'
         hoc_dance_warmup: Tanzparty - Warm Up
         hoc_dance_congrats: Tanzparty -Party On!
-        c_and_c_great_to_create: Es ist großartig etwas zu erschaffen und fair zu
-          spielen
         teaching_csf_how_it_works: 'Informatik Grundlagen: Wie der Kurs funktioniert'
         what_is_cs: Was ist Informatik?
         repeat_block: Benutze den Wiederholungsblock
@@ -773,7 +769,6 @@ de:
         CSF_SpriteLab_Intro_v2: Einführung Sprite Lab
         CSF_Spritelab_MakeSprite_v2: Wie man einen Sprite erstellt
         CSF_SpriteLab_SpritesInAction_v2: Sprites in Aktion
-        csd_applab_designmode_short: App-Labor - Designmodus
     callout:
       text:
         drag_blocks: Ziehe einen "vorwärts bewegen"-Baustein und lasse ihn unter den

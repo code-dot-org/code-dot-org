@@ -5272,9 +5272,3 @@ it:
               name: Introduzione al Debugging
             Nested Loops in Frozen:
               name: Cicli annidati con Frozen
-        dance-2019:
-          stages:
-            Dance Party:
-              name: Ballando col codice
-          title: Ballando col codice (versione 2019)
-          description: Crea un ballo tutto tuo e condividilo con i tuoi amici!

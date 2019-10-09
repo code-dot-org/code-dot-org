@@ -60,11 +60,7 @@ zh-CN:
   heading_x_of_y: "%{heading} (第%{x} 页 共%{y} 页)"
   join_section:
     code:
-      title: '加入一个小组。'
       placeholder: "小组代码（ABCDEF）"
-      instructions: "请输入老师给您的 6 字代码, 参加小组。（比如：“ABCDEF”。）"
-      instructions_short: "输入您的6位小组代码。"
-      submit: '加入'
   add_hint_form:
     placeholder: '请在这里输入您的密码提示'
     submit: '添加密码提示'
@@ -93,7 +89,6 @@ zh-CN:
     continue_with: '用%{provider}继续'
     sign_in_with: '用%{provider}登录'
     signed_in: '登录成功！'
-    signed_out_markdown: '###，您已注销 [Code.org](%{url})'
     already_signedup: '已经注册了吗？'
     notyet_signedup: "还未注册吗？"
     google_oauth2: '谷歌'
@@ -736,7 +731,6 @@ zh-CN:
   age_interstitial:
     age: 你的年龄
     header: 帐户信息更新
-    disclaimer: "Code.org 永远不会把这信息租，或买给第三方。"
   terms_interstitial:
     title: "更新的服务条款和隐私政策"
     intro_desc: "我们更新了我们的服务条款和隐私政策，如下所示。这些变化自 2016 年 8 月 24 日起生效。 最大的变化是︰ 我们将 <i>不再将学生帐户的电子邮件地址存储在代码工作室。</i>这是对我们来说，一个大改变，我们希望它在教育技术中设置学生隐私的新标准。我们已经通过电子邮件给你发送了其它更改的摘要。"

@@ -250,31 +250,6 @@ fi:
             '"x"': ristiinrastiin
             '"plus"': risti
             '"random"': satunnainen
-      Dancelab_makeAnonymousDanceSprite:
-        options:
-          COSTUME:
-            '"ALIEN"': Avaruusolento
-            '"BEAR"': Karhu
-            '"CAT"': Kissa
-            '"DOG"': Koira
-            '"DUCK"': Ankka
-            '"FROG"': Sammakko
-            '"MOOSE"': Hirvi
-            '"PINEAPPLE"': Ananas
-            '"ROBOT"': Robotti
-            '"SHARK"': Hai
-            '"UNICORN"': Yksisarvinen
-          LOCATION:
-            "{x: 200, y: 100}": ylös
-            "{x: 200, y: 300}": alas
-            "{x: 100, y: 200}": vasemmalle
-            "{x: 300, y: 200}": oikealle
-            "{x: 200, y: 200}": keskellä
-            "{x: 100, y: 100}": vasen yläkulma
-            "{x: 300, y: 100}": oikea yläkulma
-            "{x: 100, y: 300}": alavasen
-            "{x: 300, y: 300}": alaoikea
-            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": satunnainen
       Dancelab_makeNewDanceSprite:
         text: |-
           tee uusi {COSTUME}
@@ -493,20 +468,6 @@ fi:
       Dancelab_setTint:
         text: Aseta {SPRITE} sävy {VAL}
       Dancelab_setTintEach:
-        options:
-          THIS:
-            sprites: kaikki
-            '"ALIEN"': kaikki alienit
-            '"BEAR"': kaikki karhut
-            '"CAT"': kaikki kissat
-            '"DOG"': kaikki koirat
-            '"DUCK"': kaikki ankat
-            '"FROG"': kaikki sammakot
-            '"MOOSE"': kaikki hirvet
-            '"PINEAPPLE"': kaikki ananakset
-            '"ROBOT"': kaikki robotit
-            '"SHARK"': kaikki hait
-      Dancelab_setTintEachInline:
         options:
           THIS:
             sprites: kaikki

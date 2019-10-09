@@ -234,31 +234,6 @@ th:
             '"x"': กากบาท
             '"plus"': เครื่องหมายบวก
             '"random"': สุ่ม
-      Dancelab_makeAnonymousDanceSprite:
-        options:
-          COSTUME:
-            '"ALIEN"': มนุษย์ต่างดาว
-            '"BEAR"': หมี
-            '"CAT"': แมว
-            '"DOG"': สุนัข
-            '"DUCK"': เป็ด
-            '"FROG"': กบ
-            '"MOOSE"': กวางมูส
-            '"PINEAPPLE"': สับปะรด
-            '"ROBOT"': หุ่นยนต์
-            '"SHARK"': ฉลาม
-            '"UNICORN"': ยูนิคอร์น
-          LOCATION:
-            "{x: 200, y: 100}": ด้านบน
-            "{x: 200, y: 300}": ด้านล่าง
-            "{x: 100, y: 200}": ซ้าย
-            "{x: 300, y: 200}": ขวา
-            "{x: 200, y: 200}": ตรงกลาง
-            "{x: 100, y: 100}": ซ้ายบน
-            "{x: 300, y: 100}": ขวาบน
-            "{x: 100, y: 300}": ซ้ายล่าง
-            "{x: 300, y: 300}": ขวาล่าง
-            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": สุ่ม
       Dancelab_makeNewDanceSprite:
         text: |-
           ทำใหม่ {COSTUME}
@@ -517,20 +492,6 @@ th:
       Dancelab_setTint:
         text: กำหนด {SPRITE} ระดับอ่อนสีเป็น {VAL}
       Dancelab_setTintEach:
-        options:
-          THIS:
-            sprites: ทั้งหมด
-            '"ALIEN"': มนุษย์ต่างดาวทั้งหมด
-            '"BEAR"': หมีทั้งหมด
-            '"CAT"': แมวทั้งหมด
-            '"DOG"': สุนัขทั้งหมด
-            '"DUCK"': เป็ดทั้งหมด
-            '"FROG"': กบทั้งหมด
-            '"MOOSE"': กวางมูสทั้งหมด
-            '"PINEAPPLE"': สับปะรดทั้งหมด
-            '"ROBOT"': หุ่นยนต์ทั้งหมด
-            '"SHARK"': ฉลามทั้งหมด
-      Dancelab_setTintEachInline:
         options:
           THIS:
             sprites: ทั้งหมด

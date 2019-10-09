@@ -4460,8 +4460,3 @@ es:
               name: Eventos en la Guerra de las Galaxias
             Introduction to Debugging:
               name: Introducción a la depuración
-        dance-2019:
-          stages:
-            Dance Party:
-              name: Fiesta para bailar
-          description: "¡Programa tu propio baile para compartirlo con tus amigos!"

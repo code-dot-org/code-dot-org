@@ -257,29 +257,6 @@ sv:
             '"column"': kolumn
             '"x"': korsvis
             '"random"': slumpad
-      Dancelab_makeAnonymousDanceSprite:
-        options:
-          COSTUME:
-            '"BEAR"': Björn
-            '"CAT"': Katt
-            '"DOG"': Hund
-            '"DUCK"': Anka
-            '"FROG"': Groda
-            '"MOOSE"': Älg
-            '"PINEAPPLE"': Ananas
-            '"SHARK"': Haj
-            '"UNICORN"': Enhörning
-          LOCATION:
-            "{x: 200, y: 100}": topp
-            "{x: 200, y: 300}": botten
-            "{x: 100, y: 200}": vänster
-            "{x: 300, y: 200}": höger
-            "{x: 200, y: 200}": mittersta delen
-            "{x: 100, y: 100}": längst upp till vänster
-            "{x: 300, y: 100}": längst upp till höger
-            "{x: 100, y: 300}": nederst till vänster
-            "{x: 300, y: 300}": nederst till höger
-            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": slumpad
       Dancelab_makeNewDanceSprite:
         text: |-
           gör en ny {COSTUME}
@@ -534,20 +511,6 @@ sv:
       Dancelab_setTint:
         text: Ställ in {SPRITE}s färgton till {VAL}
       Dancelab_setTintEach:
-        options:
-          THIS:
-            sprites: alla
-            '"ALIEN"': alla aliens
-            '"BEAR"': alla björnar
-            '"CAT"': alla katter
-            '"DOG"': alla hundar
-            '"DUCK"': alla ankor
-            '"FROG"': alla grodor
-            '"MOOSE"': alla älgar
-            '"PINEAPPLE"': alla ananaser
-            '"ROBOT"': alla robotar
-            '"SHARK"': alla hajar
-      Dancelab_setTintEachInline:
         options:
           THIS:
             sprites: alla
@@ -887,9 +850,7 @@ sv:
             '"left"': vänster pil
             '"right"': höger pil
             '"w"': V
-            '"a"': A
             '"s"': S
-            '"d"': D
       Mikelab_whenKeyReleased:
         options:
           KEY:
@@ -898,9 +859,7 @@ sv:
             '"left"': vänster pil
             '"right"': höger pil
             '"w"': V
-            '"a"': A
             '"s"': S
-            '"d"': D
       Mikelab_whileKeyPressed:
         options:
           KEY:

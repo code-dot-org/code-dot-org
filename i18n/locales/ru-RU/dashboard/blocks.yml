@@ -236,31 +236,6 @@ ru:
             '"x"': крест-накрест
             '"plus"': плюс
             '"random"': случайный
-      Dancelab_makeAnonymousDanceSprite:
-        options:
-          COSTUME:
-            '"ALIEN"': Инопланетянин
-            '"BEAR"': Медведь
-            '"CAT"': Кот
-            '"DOG"': Собака
-            '"DUCK"': Утка
-            '"FROG"': Лягушка
-            '"MOOSE"': Лось
-            '"PINEAPPLE"': Ананас
-            '"ROBOT"': Робот
-            '"SHARK"': Акула
-            '"UNICORN"': Единорог
-          LOCATION:
-            "{x: 200, y: 100}": верх
-            "{x: 200, y: 300}": низ
-            "{x: 100, y: 200}": влево
-            "{x: 300, y: 200}": вправо
-            "{x: 200, y: 200}": центр
-            "{x: 100, y: 100}": вверху слева
-            "{x: 300, y: 100}": вверху справа
-            "{x: 100, y: 300}": внизу слева
-            "{x: 300, y: 300}": внизу справа
-            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": случайный
       Dancelab_makeNewDanceSprite:
         text: |-
           создать новый {COSTUME}
@@ -521,20 +496,6 @@ ru:
       Dancelab_setTint:
         text: установить оттенок {SPRITE} на {VAL}
       Dancelab_setTintEach:
-        options:
-          THIS:
-            sprites: все
-            '"ALIEN"': все инопланетяне
-            '"BEAR"': все медведи
-            '"CAT"': все кошки
-            '"DOG"': все собаки
-            '"DUCK"': все утки
-            '"FROG"': все лягушки
-            '"MOOSE"': все лоси
-            '"PINEAPPLE"': все ананасы
-            '"ROBOT"': все роботы
-            '"SHARK"': все акулы
-      Dancelab_setTintEachInline:
         options:
           THIS:
             sprites: все

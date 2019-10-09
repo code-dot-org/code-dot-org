@@ -58,12 +58,6 @@ bn:
         options:
           FORMAT:
             '"random"': এলোমেলো
-      Dancelab_makeAnonymousDanceSprite:
-        options:
-          LOCATION:
-            "{x: 100, y: 200}": বামে
-            "{x: 300, y: 200}": ডানে
-            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": এলোমেলো
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:

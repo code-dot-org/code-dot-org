@@ -957,7 +957,6 @@ tr-TR:
         - {}
       K-1 Happy Maps Multi 1:
         title: Çoktan Seçmeli
-        content1: Hangi ok Flurb'u hazineye ulaştırır
         questions:
         - text: Hangi ok Flurb' u hazineye ulaştırır?
         answers:
@@ -1000,12 +999,12 @@ tr-TR:
         - {}
       K-1 Maze Match 1:
         title: Eşleştirme
-        content2: Doğru olan çözüm bloklarını, resimlerin yanına yerleştir
+        content2: bloklarla bulmacaları eşleştir
         pre_title: Talimatlar
         questions:
-        - text: Doğru olan çözüm bloklarını, resimlerin yanına yerleştir
-        - text: Doğru olan çözüm bloklarını, resimlerin yanına yerleştir
-        - text: Doğru olan çözüm bloklarını, resimlerin yanına yerleştir
+        - {}
+        - {}
+        - {}
         - {}
         answers:
         - {}

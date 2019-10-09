@@ -1747,11 +1747,6 @@ sk-SK:
             </block>
           </xml>
       Course 4 SCFL 3:
-        Course_4_SCFL_3_a: "`Šírka štetca` je 1. Prvý štvorec má strany 50 pixelov
-          a každý ďalší štvorec je o 50 pixelov širší ako predošlý."
-        Course_4_SCFL_3_b: Nepriehľadnosť štetca je vždy `counter`/2.
-        Course_4_SCFL_3_c: Potom ako dokončíš každý štvorec, tak nezabudni skočiť
-          dozadu, otočiť sa, skočiť znovu a otočiť sa späť!
         Course_4_SCFL_3_d: |-
           **Riešenie:**
 
@@ -7192,6 +7187,31 @@ sk-SK:
         courseC_harvester_loops_challenge1_b: Môžeš zopakovať `posuň sa dopredu` a
           `zober kukuricu` koľkokoľvek krát potrebuješ, potom v každom rohu použi
           blok `otoč sa vpravo`.
+        courseC_harvester_loops_challenge1_c: |-
+          Najlepší spôsob na zozbieranie kukurice používa blok `opakuj` vo vnútri iného bloku `opakuj`.
+
+          <xml><block type="controls_repeat">
+
+          <title name="TIMES">2</title>
+          <statement name="DO">
+          <block type="controls_repeat">
+          <title name="TIMES">4</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="harvester_corn"/>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block></xml>
       courseC_harvester_loops_challenge1a_2019:
         courseC_harvester_loops_challenge1_a: Toto by bolo bez cyklov príliš ťažké!
         courseC_harvester_loops_challenge1_b: Môžeš zopakovať `posuň sa dopredu` a
@@ -9804,11 +9824,6 @@ sk-SK:
         courseF_artist_for9_b: Blok `nastav alfa` mení nepriehľadnosť farby. Čim menšia
           hodnota, tým je farba priehľadnejšia.
       courseF_artist_for_challenge1:
-        courseF_artist_for_challenge1_a: "`Šírka štetca` je 1. Prvý štvorec má strany
-          50 pixelov a každý ďalší štvorec je o 50 pixelov širší ako predošlý."
-        courseF_artist_for_challenge1_b: Nepriehľadnosť štetca je vždy `counter`/2.
-        courseF_artist_for_challenge1_c: Potom ako dokončíš každý štvorec, tak nezabudni
-          skočiť dozadu, otočiť sa, skočiť znovu a otočiť sa späť!
         courseF_artist_for_challenge1_d: |-
           **Riešenie:**
 
@@ -9943,11 +9958,6 @@ sk-SK:
             </block>
           </xml>
       courseF_artist_for_challenge1_2018:
-        courseF_artist_for_challenge1_a: "`Šírka štetca` je 1. Prvý štvorec má strany
-          50 pixelov a každý ďalší štvorec je o 50 pixelov širší ako predošlý."
-        courseF_artist_for_challenge1_b: Nepriehľadnosť štetca je vždy `counter`/2.
-        courseF_artist_for_challenge1_c: Potom ako dokončíš každý štvorec, tak nezabudni
-          skočiť dozadu, otočiť sa, skočiť znovu a otočiť sa späť!
         courseF_artist_for_challenge1_d: |-
           **Riešenie:**
 
@@ -10082,11 +10092,6 @@ sk-SK:
             </block>
           </xml>
       courseF_artist_for_challenge1_2019:
-        courseF_artist_for_challenge1_a: "`Šírka štetca` je 1. Prvý štvorec má strany
-          50 pixelov a každý ďalší štvorec je o 50 pixelov širší ako predošlý."
-        courseF_artist_for_challenge1_b: Nepriehľadnosť štetca je vždy `counter`/2.
-        courseF_artist_for_challenge1_c: Potom ako dokončíš každý štvorec, tak nezabudni
-          skočiť dozadu, otočiť sa, skočiť znovu a otočiť sa späť!
         courseF_artist_for_challenge1_d: |-
           **Riešenie:**
 

@@ -76,12 +76,6 @@ az:
             sprites: bütün
           FORMAT:
             '"random"': təsadüfi
-      Dancelab_makeAnonymousDanceSprite:
-        options:
-          LOCATION:
-            "{x: 100, y: 200}": sola
-            "{x: 300, y: 200}": sağa
-            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": təsadüfi
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
@@ -166,10 +160,6 @@ az:
             '"scale"': ölçü
             '"height"': hündürlük
       Dancelab_setTintEach:
-        options:
-          THIS:
-            sprites: bütün
-      Dancelab_setTintEachInline:
         options:
           THIS:
             sprites: bütün

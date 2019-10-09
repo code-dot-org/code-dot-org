@@ -434,14 +434,6 @@ pl-PL:
         Wiem którą drogą chcę iść, ale nie jestem pewien ile kroków muszę zrobić."_
       courseA_collector_loops_challenge1_2019: _"Czy możesz mi pomóc znaleźć błędy?
         Wiem którą drogą chcę iść, ale nie jestem pewien ile kroków muszę zrobić."_
-      courseA_harvester_seq2_2019: 'Użyj **trzech** klocków <xml><block type="maze_moveWest"
-        block-text="move west"/></xml> aby żniwiarka-rolniczka dotarła do kukurydzy! '
-      courseA_harvester_seq3_2019: Użyj **trzech** klocków <xml><block type="maze_moveNorth"
-        block-text="move north"/></xml> aby żniwiarka-rolniczka dotarła do kukurydzy!
-        Nie zapomnij na końcu zebrać kukurydzy.
-      courseA_maze_ramp2_2019: Podłącz oba <xml><block type="maze_moveEast" block-text="move
-        east"/></xml> klocki do klocka <xml><block type="when_run" block-text="when
-        run"/></xml>, aby skończyć swój kod, a potem kliknij "▶ Run".
       courseA_playlab_events_challenge1: "_\"Gdzie ukrywają się moi przyjaciele? W
         tej grze klikając na mnie pokaże się mój przyjaciel kot Olive!\"_\\\r\n\\\r\nKlikając
         na Olivie pojawi się Robin! Czy możesz napisać kod aby pokazać również resztę
@@ -472,10 +464,6 @@ pl-PL:
       courseB_artist_loops_challenge2_2019: |-
         Zagrajmy w grę!
         Narysuj tak dużo X jak możesz! Czy zmieścisz 3 w jednym rzędzie?
-      courseB_collector_loops2_2019: |-
-        Pomóż Laurel dojść do skarbu, a potem użyj klacka <xml><block type="collector_collect" block-text="get treasure"/></xml> aby zebrać kryształ.
-
-        Zbierz wszystkie cztery kryształy, aby ukończyć ten poziom.
       courseB_maze_seq3: _"Napraw kod, aby doprowadzić mnie do świnki!"_
       courseB_maze_seq_challenge2_2019: Debuguj ten poziom. Te bloki są poprawne,
         ale w złej kolejności!

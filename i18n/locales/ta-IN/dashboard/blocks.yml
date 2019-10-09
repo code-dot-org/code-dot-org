@@ -38,10 +38,6 @@ ta:
         options:
           FORMAT:
             '"random"': தொடர்பின்றி எடுக்கப்பட்ட
-      Dancelab_makeAnonymousDanceSprite:
-        options:
-          LOCATION:
-            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": தொடர்பின்றி எடுக்கப்பட்ட
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:

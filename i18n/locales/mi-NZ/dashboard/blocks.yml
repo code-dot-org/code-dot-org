@@ -61,11 +61,6 @@ mi:
         options:
           GROUP:
             sprites: katoa
-      Dancelab_makeAnonymousDanceSprite:
-        options:
-          LOCATION:
-            "{x: 100, y: 200}": mauī
-            "{x: 300, y: 200}": matau
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
@@ -131,10 +126,6 @@ mi:
             '"scale"': rahinga
             '"height"': teitei
       Dancelab_setTintEach:
-        options:
-          THIS:
-            sprites: katoa
-      Dancelab_setTintEachInline:
         options:
           THIS:
             sprites: katoa

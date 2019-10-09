@@ -147,13 +147,6 @@ id:
             '"row"': baris
             '"column"': kolom
             '"random"': acak
-      Dancelab_makeAnonymousDanceSprite:
-        options:
-          LOCATION:
-            "{x: 100, y: 200}": kiri
-            "{x: 300, y: 200}": kanan
-            "{x: 200, y: 200}": Tengah
-            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": acak
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
@@ -270,20 +263,6 @@ id:
             '"rotation"': Perputaran
             '"tint"': Mewarnai
       Dancelab_setTintEach:
-        options:
-          THIS:
-            sprites: semua
-            '"ALIEN"': semua aliens
-            '"BEAR"': semua beruang
-            '"CAT"': semua kucing
-            '"DOG"': semua anjing
-            '"DUCK"': semua bebek
-            '"FROG"': semua katak
-            '"MOOSE"': semua rusa
-            '"PINEAPPLE"': semua nanas
-            '"ROBOT"': semua robot
-            '"SHARK"': semua hiu
-      Dancelab_setTintEachInline:
         options:
           THIS:
             sprites: semua
