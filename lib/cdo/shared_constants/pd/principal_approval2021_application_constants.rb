@@ -19,8 +19,6 @@ module Pd
       replace_course: 'Will this course replace an existing computer science course in the master schedule? If yes, please list the course(s) that will be replaced.',
       replace_which_course_csp: 'Which existing course or curriculum will CS Principles replace? Mark all that apply.',
       replace_which_course_csd: 'Which existing course or curriculum will CS Discoveries replace? Mark all that apply.',
-      csd_which_units: 'Which CS Discoveries units do you intend to teach in the 2020-21 school year?',
-      csp_which_units: 'Which CS Principles units do you intend to teach in the 2020-21 school year?',
       understand_fee: 'By checking this box, you indicate that you understand there may be a fee for the professional learning program your teacher attends.',
       pay_fee: 'If there is a fee for the program, will your school be able to pay for the fee?',
       contact_invoicing: "Contact name for invoicing (if applicable)",
