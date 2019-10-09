@@ -10,6 +10,9 @@ pt:
   campaign_date_full: "4-10 de dezembro"
   campaign_date_year: "2017"
   campaign_date_full_year: "4-10 de dezembro de 2017"
+  hoc2019_header: 'Aprenda Ciência da Computação. Mude o mundo.'
+  hoc2019_header_line1_mobile: 'Aprenda Ciência da Computação.'
+  hoc2019_header_line2_mobile: 'Mude o mundo.'
   codeorg_homepage_hoc2018_curriculum: 'Vá mais longe com os <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Cursos da Code.org</a>'
   codeorg_homepage_hoc2018_dance_heading: 'Crie a sua própria <span class="highlight-word">Festa&nbsp;Dançante</span>'
   codeorg_homepage_hoc2018_header_line1: 'A Hora do Código chegou...'
