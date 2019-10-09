@@ -296,6 +296,26 @@ describe('entry tests', () => {
           dest: 'build/minifiable-lib/fileupload/'
         }
       ]
+    },
+    unhash: {
+      files: [
+        {
+          expand: true,
+          cwd: 'build/package/js',
+          // The applab and gamelab exporters need unhashed copies of these files.
+          src: [
+            'webpack-runtimewp*.min.js',
+            'applab-apiwp*.min.js',
+            'gamelab-apiwp*.min.js'
+          ],
+          dest: 'build/package/js',
+          // e.g. webpack-runtimewp0123456789aabbccddee.min.js --> webpack-runtime.min.js
+          rename: function(dest, src) {
+            var outputFile = src.replace(/wp[0-9a-f]{20}/, '');
+            return path.join(dest, outputFile);
+          }
+        }
+      ]
     }
   };
 
@@ -1172,6 +1192,7 @@ describe('entry tests', () => {
 
   grunt.registerTask('postbuild', [
     'newer:copy:static',
+    'newer:copy:unhash',
     'newer:sass',
     'compile-firebase-rules'
   ]);
