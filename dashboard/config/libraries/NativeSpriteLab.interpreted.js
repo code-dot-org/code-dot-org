@@ -146,7 +146,7 @@ function setupSim(
   for (counter_i = 0; counter_i < s1number; counter_i++) {
     makeNewSpriteAnon(s1costume, randomLocation());
   }
-  addBehaviorSimple({costume: s1costume}, new Behavior(movementBehavior(s2speed)));
+  addBehaviorSimple({costume: s1costume}, new Behavior(movementBehavior(s1speed)));
 
   checkTouching('while', {costume: s1costume}, {costume: s3costume}, function(extraArgs) {
     destroy({id: extraArgs.target});
