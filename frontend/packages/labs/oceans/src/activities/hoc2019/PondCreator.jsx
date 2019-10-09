@@ -29,7 +29,7 @@ export default class PondCreator extends React.Component {
       trainer: trainer,
       initialized: false,
       trainingData: this.generateFish(FISH_COUNT),
-      currentMode: Modes.Predicting, // TODO: CHANGE THIS BACK TO TRAINING
+      currentMode: Modes.Training,
       predictionFish: [], // this.generateFish(1),
       predictions: []
     };

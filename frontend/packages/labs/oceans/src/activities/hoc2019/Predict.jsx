@@ -11,8 +11,9 @@ export default class Predict extends React.Component {
     const fishData = props.trainingData.map(datum => {
       return {
         fish: datum,
-        isSelected: false,
-        label: 'hi'
+        isSelected: true,
+        // TODO: (maddie) refactor to calculate % confidence
+        label: 'like'
       };
     });
     this.state = {fishData};
