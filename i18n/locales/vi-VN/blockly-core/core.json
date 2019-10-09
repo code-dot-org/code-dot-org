@@ -41,6 +41,7 @@
     "CONTROLS_FOREACH_INPUT_ITEM": "với mỗi phần tử",
     "CONTROLS_FOREACH_TOOLTIP": "Với mỗi vật trong danh sách, lấy từng thành phần, gán vào biến \"%1\", rồi thực hiện một số lệnh.",
     "CONTROLS_FOR_HELPURL": "",
+    "CONTROLS_FOR_INPUT_COUNTER": "",
     "CONTROLS_FOR_INPUT_FROM_TO_BY": "từ %1 đến %2 mỗi lần thêm %3",
     "CONTROLS_FOR_INPUT_WITH": "đếm theo",
     "CONTROLS_FOR_TOOLTIP": "Gán từng số, từ số đầu đến số cuối với bước đếm đã được xác định, vào biến %1, và thực hiện các khối đã định sẵn.",

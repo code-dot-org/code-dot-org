@@ -1284,31 +1284,6 @@ ro-RO:
         courseC_harvester_loops_challenge1_b: Puteți repeta comenzile "mută înainte"
           și "culege porumb" ori de câte ori aveți nevoie, apoi "întoarceți la dreapta"
           la fiecare colț.
-        courseC_harvester_loops_challenge1_c: |-
-          Cea mai bună modalitate de a colecta primii patru porumbi folosește un bloc `repetă` în interiorul unui alt bloc`repetă`. Puteți folosi acest model și pentru restul puzzle-ului!
-
-          <xml><block type="controls_repeat">
-
-          <title name="TIMES">2</title>
-          <statement name="DO">
-          <block type="controls_repeat">
-          <title name="TIMES">4</title>
-          <statement name="DO">
-          <block type="maze_move">
-          <title name="DIR">mutăÎnainte</title>
-          <next>
-          <block type="harvester_corn"/>
-          </next>
-          </block>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">întoarceLaDreapta</title>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block></xml>
       courseC_harvester_loops_challenge1a_2019:
         courseC_harvester_loops_challenge1_b: Puteți repeta comenzile "mută înainte"
           și "culege porumb" ori de câte ori aveți nevoie, apoi "întoarceți la dreapta"
@@ -1589,10 +1564,6 @@ ro-RO:
       courseF_artist_fwp_challenge2:
         courseF_artist_fwp_challenge1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseF_artist_variables4:
-        courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
-      courseF_artist_variables4_2018:
-        courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
-      courseF_artist_variables4_2019:
         courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseF_bee_conditionals5:
         courseF_bee_conditionals5_c: 'Există 3 laturi cu flori ale dreptunghiului,

@@ -1436,6 +1436,8 @@
   app_lab_tutorials: "Tutoriales del Laboratorio de aplicaciones"
   game_lab_documentation: "Documentación del Laboratorio de juegos"
   game_lab_tutorials: "Tutoriales del Laboratorio de juegos"
+  sprite_lab_documentation: "Documentación del Laboratorio de sprites"
+  sprite_lab_tutorials: "Tutoriales del Laboratorio de sprites"
   header_documentation: "Documentación"
   user_header_label: "Hola, %{username}"
   user_header_team: "Equipo"
