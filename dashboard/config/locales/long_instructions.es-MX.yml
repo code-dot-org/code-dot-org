@@ -1146,7 +1146,7 @@ es-MX:
         <strong>¿Qué es un párrafo?</strong>
         </summary>
 
-        Los párrafos están marcados con etiquetas de apertura (`<p>`) y cierre (`</p>`. Los párrafos de texto en HTML pueden tener cualquier longitud, desde una palabra hasta un grupo de oraciones. Agrupan conjuntos de oraciones y ponen un espacio entre ese grupo de texto y el siguiente.
+        Los párrafos están marcados con etiquetas de apertura (`<p>`) y cierre (`</p>`). Los párrafos de texto en HTML pueden tener cualquier longitud, desde una palabra hasta un grupo de oraciones. Agrupan conjuntos de oraciones y ponen un espacio entre ese grupo de texto y el siguiente.
 
         </details>
         <details>

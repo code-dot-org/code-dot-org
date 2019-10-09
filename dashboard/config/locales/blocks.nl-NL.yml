@@ -215,6 +215,30 @@ nl:
             '"column"': kolom
             '"x"': kriskras
             '"random"': willekeurig
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': Buitenaards wezen
+            '"BEAR"': Beer
+            '"CAT"': Kat
+            '"DOG"': Hond
+            '"DUCK"': Eend
+            '"FROG"': Kikker
+            '"MOOSE"': Eland
+            '"PINEAPPLE"': Ananas
+            '"SHARK"': Haai
+            '"UNICORN"': Eenhoorn
+          LOCATION:
+            "{x: 200, y: 100}": boven
+            "{x: 200, y: 300}": onder
+            "{x: 100, y: 200}": links
+            "{x: 300, y: 200}": rechts
+            "{x: 200, y: 200}": midden
+            "{x: 100, y: 100}": linksboven
+            "{x: 300, y: 100}": rechtsboven
+            "{x: 100, y: 300}": linksonder
+            "{x: 300, y: 300}": rechtsonder
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": willekeurig
       Dancelab_makeNewDanceSprite:
         text: |-
           maak een nieuw {COSTUME}
@@ -461,6 +485,20 @@ nl:
       Dancelab_setTint:
         text: stel de tint van {SPRITE} in op {VAL}
       Dancelab_setTintEach:
+        options:
+          THIS:
+            sprites: alles
+            '"ALIEN"': alle buitenaardse wezens
+            '"BEAR"': alle beren
+            '"CAT"': alle katten
+            '"DOG"': alle honden
+            '"DUCK"': alle eenden
+            '"FROG"': alle kikkers
+            '"MOOSE"': alle elanden
+            '"PINEAPPLE"': alle ananassen
+            '"ROBOT"': alle robots
+            '"SHARK"': alle haaien
+      Dancelab_setTintEachInline:
         options:
           THIS:
             sprites: alles

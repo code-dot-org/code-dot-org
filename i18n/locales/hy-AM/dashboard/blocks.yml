@@ -58,6 +58,12 @@ hy:
         options:
           FORMAT:
             '"random"': կամայական
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": ձախ
+            "{x: 300, y: 200}": ճիշտ
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": կամայական
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
