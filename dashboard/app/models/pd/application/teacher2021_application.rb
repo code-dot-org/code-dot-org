@@ -630,7 +630,6 @@ module Pd::Application
           end
 
         school_stats = get_latest_school_stats(school_id)
-        bonus_points_scores[:underrepresented_minority_percent] = ((responses[:principal_underrepresented_minority_percent]).to_i >= 50) ? 5 : 0
 
         free_lunch_percent = responses[:principal_free_lunch_percent].present? ?
           responses[:principal_free_lunch_percent].to_i :
