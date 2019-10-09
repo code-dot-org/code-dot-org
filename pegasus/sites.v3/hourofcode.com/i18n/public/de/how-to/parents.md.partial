@@ -43,7 +43,7 @@ Es ist in Ordnung, wenn Sie und Ihr Kind absolute Neulinge in Informatik sind. H
 
 - Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
 - Zählen Sie auf, wo überall im täglichen Leben Code verwendet wird.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- [Hier]({{ urls/girls }}) finden Sie Tipps, wie Sie Mädchen für Informatik begeistern können.
 
 Brauchen Sie weitere Ideen? Schauen Sie sich unsere [Vorlage Unterrichtsplan](/files/AfterschoolEducatorLessonPlanOutline.docx) mit gelungenen Beispielen erfahrener Pädagoginnen und Pädagogen an.
 
