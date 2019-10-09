@@ -67,7 +67,7 @@
     .checkbox
       = f.label :terms_of_service_version do
         = f.check_box :terms_of_service_version, {}, User::TERMS_OF_SERVICE_VERSIONS.last
-        != t('terms_interstitial.accept_label_markdown', tos_url: CDO.code_org_url('/tos'), privacy_url: CDO.code_org_url('/privacy'), markdown: true)
+        != t('terms_interstitial.accept_label_markdown', tos_url: CDO.code_org_url('/tos', 'https:'), privacy_url: CDO.code_org_url('/privacy', 'https:'), markdown: true)
         %span#student-consent{style: "display: none;"}
           = t('signup_form.student_consent')
         - if @user.errors[:terms_of_service_version].present?
