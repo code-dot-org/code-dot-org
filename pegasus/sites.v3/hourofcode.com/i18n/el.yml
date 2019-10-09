@@ -10,6 +10,9 @@ el:
   campaign_date_full: "4-10 Δεκεμβρίου"
   campaign_date_year: "2016"
   campaign_date_full_year: "5-12 Δεκεμβρίου, 2016"
+  hoc2019_header: 'Μάθετε πληροφορική. Αλλάξτε τον κόσμο.'
+  hoc2019_header_line1_mobile: 'Μάθετε πληροφορική.'
+  hoc2019_header_line2_mobile: 'Αλλάξτε τον κόσμο.'
   codeorg_homepage_hoc2018_curriculum: 'Προχωρήστε παραπέρα με <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">μαθήματα Code.org</a>'
   codeorg_homepage_hoc2018_dance_heading: 'Δημιουργήστε το δικό σας <span class="highlight-word">χορευτικό&nbsp;πάρτυ</span>'
   codeorg_homepage_hoc2018_header_line1: 'Η Ώρα του Κώδικα πλησιάζει...'
@@ -439,7 +442,7 @@ el:
   title_stats: Blurbs και στατιστικά
   title_partners: Συνεργάτες
   title_resources: Πόροι
-  title_past_posters: Past Hour of Code Posters
+  title_past_posters: Προηγούμενα Posters της Ώρας του Κώδικα
   title_signup_thanks: Ευχαριστούμε που γράφτηκες για να πραγματοποιήσεις μια Ώρα του Κώδικα!
   title_tutorial_guidelines: Οδηγίες για τα μαθήματα
   title_whole_school: Συμμετοχή όλου του σχολείου
