@@ -6,6 +6,7 @@ import Predict from './Predict';
 import {generateRandomFish} from './SpritesheetFish';
 
 const FISH_COUNT = 9;
+const SESSION_KEY = 'PondCreator';
 
 export const ClassType = Object.freeze({
   Like: 0,
@@ -23,6 +24,7 @@ export default class PondCreator extends React.Component {
 
     const trainer = new SimpleTrainer();
     trainer.initializeClassifiers().then(() => {
+      this.loadTraining();
       this.setState({initialized: true});
     });
     this.state = {
@@ -69,6 +71,17 @@ export default class PondCreator extends React.Component {
     }
   };
 
+  loadTraining() {
+    const storedTraining = localStorage.getItem(SESSION_KEY);
+    if (storedTraining) {
+      this.state.trainer.loadDatasetJSON(storedTraining);
+    }
+  }
+
+  saveTraining = () => {
+    localStorage.setItem(SESSION_KEY, this.state.trainer.getDatasetJSON());
+  };
+
   render() {
     if (!this.state.initialized) {
       return null;
@@ -83,6 +96,7 @@ export default class PondCreator extends React.Component {
               rows={2}
               cols={2}
               label={'Like'}
+              saveTraining={this.saveTraining}
             />
             <Button onClick={() => this.setMode(Modes.Predicting)}>
               Train Bot

@@ -10,7 +10,8 @@ export default class Training extends React.Component {
     trainer: PropTypes.object.isRequired,
     rows: PropTypes.number.isRequired,
     cols: PropTypes.number.isRequired,
-    label: PropTypes.string.isRequired
+    label: PropTypes.string.isRequired,
+    saveTraining: PropTypes.func
   };
 
   constructor(props) {
@@ -56,6 +57,9 @@ export default class Training extends React.Component {
         }
       });
     });
+    if (this.props.saveTraining) {
+      this.props.saveTraining();
+    }
   }
 
   render() {
