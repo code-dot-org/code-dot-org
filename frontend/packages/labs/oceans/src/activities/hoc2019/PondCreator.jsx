@@ -98,15 +98,18 @@ export default class PondCreator extends React.Component {
               Train More
             </Button>
             <Button onClick={() => this.setMode(Modes.Results)}>
-            Show my pond
+              Show my pond
             </Button>
           </div>
         )}
         {this.state.currentMode === Modes.Results && (
-          <PondResult fishData={this.state.trainingData}/>
-            )
-
-        }
+          <div>
+            <PondResult fishData={this.state.trainingData} />
+            <Button onClick={() => this.setMode(Modes.Training)}>
+              Train More
+            </Button>
+          </div>
+        )}
       </div>
     );
   }
