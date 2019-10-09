@@ -16,7 +16,7 @@
   margin: 5px 0px;
   background-color: white;
   border-color: white;
-  color: #4d575f;
+  color: black;
 }
 
 .ctabutton-white-inverse {
@@ -149,7 +149,6 @@ a.category-link {
   color: white;
   border-radius: 5px;
   padding: 10px;
-  text-shadow: 0px 0px 4px rgba(31, 31, 31, 1.0);
   text-align: center;
 }
 
@@ -159,8 +158,10 @@ a.category-link {
 }
 
 .front-header-description {
+  color: black;
   max-width: 800px;
   display: inline-block;
+  text-shadow: 0px 0px 20px white, 0px 0px 20px white, 0px 0px 20px white;
 }
 
 .hoc-description {
