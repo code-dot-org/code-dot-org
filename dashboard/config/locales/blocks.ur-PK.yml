@@ -42,6 +42,10 @@ ur:
         options:
           FORMAT:
             '"random"': بےترتیب
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          LOCATION:
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": بےترتیب
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:

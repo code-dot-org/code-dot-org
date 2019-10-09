@@ -41,6 +41,7 @@
     "CONTROLS_FOREACH_INPUT_ITEM": "для кожного елемента",
     "CONTROLS_FOREACH_TOOLTIP": "Для кожного елемента списку задай змінну '%1', а потім запиши деякі команди.",
     "CONTROLS_FOR_HELPURL": "",
+    "CONTROLS_FOR_INPUT_COUNTER": "",
     "CONTROLS_FOR_INPUT_FROM_TO_BY": "від %1 до %2 через %3",
     "CONTROLS_FOR_INPUT_WITH": "для",
     "CONTROLS_FOR_TOOLTIP": "Нехай змінна %1 приймає значення від початкового до кінцевого значення, враховуючи заданий інтервал, і виконує вказані блоки.",

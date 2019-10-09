@@ -8640,31 +8640,6 @@ pt-BR:
         courseC_harvester_loops_challenge1_a: Isto é muito difícil sem loops!
         courseC_harvester_loops_challenge1_b: Você pode repetir `avançar` e `pegar
           milho` quantas vezes precisar, depois `virar à direita` em cada esquina.
-        courseC_harvester_loops_challenge1_c: |-
-          O melhor jeito de coler o milho no meio é usar um bloco 'repetir' dentro de outro bloco 'repetir'.
-
-          <xml><block type="controls_repeat">
-
-          <title name="TIMES">2</title>
-          <statement name="DO">
-          <block type="controls_repeat">
-          <title name="TIMES">4</title>
-          <statement name="DO">
-          <block type="maze_move">
-          <title name="DIR">moveForward</title>
-          <next>
-          <block type="harvester_corn"/>
-          </next>
-          </block>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block></xml>
       courseC_harvester_loops_challenge1a_2019:
         courseC_harvester_loops_challenge1_a: Isto é muito difícil sem loops!
         courseC_harvester_loops_challenge1_b: Você pode repetir `avançar` e `pegar
@@ -12584,12 +12559,8 @@ pt-BR:
         courseE_bee_concept3a_c: Existem três grupos de flores, então o laço externo
           de `repetição` deve repetir três vezes.
       courseE_bee_concept3_2018:
-        courseE_bee_concept3a_a: Tente usar laços `repetir` aninhados para resolver
-          esse quebra-cabeça.
         courseE_bee_concept3a_b: Se você não consegue descobrir onde colocar os laços
           de repetições, tente escrever seu código passo a passo e procurar por padrões.
-        courseE_bee_concept3a_c: Existem três grupos de flores, então o laço externo
-          de `repetição` deve repetir três vezes.
       courseE_bee_concept4:
         courseE_bee_concept4_a: Uma declaração `se/senão` poderia ajudá-lo aqui.
         courseE_bee_concept4_b: O padrão de degrau da escada pode ajudá-lo a passar
@@ -14245,7 +14216,6 @@ pt-BR:
           Este é o padrão que seu(sua) artista irá seguir:
 
           ![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)
-        courseF_artist_variables4_b: "![](https://images.code.org/fc31a4b60dc86d7b820c2d242f83e6ed-image-1477533361197.gif)"
       courseF_artist_variables4_2019:
         courseF_artist_variables4_a: Seu código não será muito diferente do que foi
           no último desafio, exceto que você vai precisar virar o artista para que
@@ -14255,7 +14225,6 @@ pt-BR:
           Este é o padrão que seu(sua) artista irá seguir:
 
           ![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)
-        courseF_artist_variables4_b: "![](https://images.code.org/fc31a4b60dc86d7b820c2d242f83e6ed-image-1477533361197.gif)"
       courseF_artist_variables5:
         courseF_artist_variables5_a: A segunda metade do seu código deve parecer quase
           o mesmo que a primeira metade, exceto você estará virando para _esquerda_,

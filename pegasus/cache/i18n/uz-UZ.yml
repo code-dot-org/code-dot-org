@@ -481,6 +481,7 @@ uz-UZ:
   dashboard_navigation_student: 'O‘quvchi: %{student_name}'
   dashboard_sections_new_section: Yangi bo‘lim
   dashboard_sections_name: Bo‘lim nomi
+  dashboard_sections_close: Yopish
   dashboard_students_name: Ismi
   dashboard_students_completed_levels: O‘tilgan bosqichlar
   dashboard_students_total_lines: Kod satrlari

@@ -4889,3 +4889,9 @@ pl:
               name: Zagnieżdżające się  pętle
             Events in Star Wars:
               name: Wydarzenia w Star Wars
+        dance-2019:
+          stages:
+            Dance Party:
+              name: Potańcówka
+          description: Stwórz kod swojej własnej imprezy tanecznej i udostępnij ją
+            swoim znajomym.
