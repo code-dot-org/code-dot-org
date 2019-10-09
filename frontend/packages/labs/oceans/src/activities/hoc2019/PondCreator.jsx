@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/lib/Button';
 import SimpleTrainer from '../../utils/SimpleTrainer';
 import Training from './Training';
 import Predict from './Predict';
+import PondResult from './PondResult';
 import {generateRandomFish} from './SpritesheetFish';
 
 const FISH_COUNT = 9;
@@ -14,7 +15,8 @@ export const ClassType = Object.freeze({
 
 const Modes = Object.freeze({
   Training: 1,
-  Predicting: 2
+  Predicting: 2,
+  Results: 3
 });
 
 export default class PondCreator extends React.Component {
@@ -95,8 +97,16 @@ export default class PondCreator extends React.Component {
             <Button onClick={() => this.setMode(Modes.Training)}>
               Train More
             </Button>
+            <Button onClick={() => this.setMode(Modes.Results)}>
+            Show my pond
+            </Button>
           </div>
         )}
+        {this.state.currentMode === Modes.Results && (
+          <PondResult fishData={this.state.trainingData}/>
+            )
+
+        }
       </div>
     );
   }
