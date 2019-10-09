@@ -407,6 +407,7 @@ gl:
       target='_blank'>termos de serviço</a> do Code.org. Se son menor de 13 anos,
       declaro que teño autorización de meus pais ou responsables legais para usar
       os servizos de Code.org incluso sen a supervisión dun profesor.
+    update_email: Actualizar
   user_level:
     completed: Concluído
     tried: Probado

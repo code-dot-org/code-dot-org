@@ -28,4 +28,4 @@
   - script_data = {scriptName: {name: text,
     href: script_path(@script, section_id: section_id, user_id: user_id),
     smallText: small_text}.to_json}
-  %script{type: "text/javascript", src: minifiable_asset_path('js/shared/_header_progress.js'), data: script_data}
+  %script{type: "text/javascript", src: webpack_asset_path('js/shared/_header_progress.js'), data: script_data}

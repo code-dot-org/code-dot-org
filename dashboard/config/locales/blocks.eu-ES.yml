@@ -632,61 +632,19 @@ eu:
         text: ezkerrera biratu
       RyanLab_turnRight:
         text: eskuinera biratu
-      aalab_changePropByFlexible:
-        text: aldatu {SPRITE} {PROPERTY} honekin {VAL}
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': tamaina
-            '"rotation"': itzulikapena
-            '"x"': x posizioa
-            '"y"': y posizioa
-            '"direction"': mugimentuaren norantza
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': "-enean"
-            '"while"': bitartean
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': "-enean"
-            '"while"': bitartean
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': "-enean"
-            '"while"': bitartean
-          KEY:
-            '"up"': gora
-            '"down"': behera
-            '"left"': ezkerrera
-            '"right"': eskuinera
-            '"space"': espazioa
-      aalab_removeOneAndAll:
-        text: ezabatu {THIS}
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': hiria
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': egia
-            '"false"': gezurra
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': tamaina
-            '"rotation"': itzulikapena
-            '"x"': x posizioa
-            '"y"': y posizioa
-            '"direction"': mugimentuaren norantza
-            '"tint"': tinta
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': betiko
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
         options:
           OPTION:
             '"show"': erakutsi

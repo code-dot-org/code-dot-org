@@ -1,72 +1,152 @@
+#Files in the config/locales directory are used for internationalization
+#and are automatically loaded by Rails. If you want to use locales other
+#than English, add the necessary files in this directory.
+#To use the locales, use `I18n.t`:
+#I18n.t 'hello'
+#In views, this is aliased to just `t`:
+#<%= t('hello') %>
+#To use a different locale, set it with `I18n.locale`:
+#I18n.locale = :es
+#This would use the information in config/locales/es.yml.
+#To learn more, please read the Rails Internationalization guide
+#available at http://guides.rubyonrails.org/i18n.html.
 ku:
   errors:
     messages:
       not_saved: 'تکایە ئەم هەڵانەی خوارەوە ڕاست بکەوە:'
       too_young: 'ئەم ناوەرۆکە بەردەست نیە بۆ قوتابیانی تەمەنی خواروتر بەهۆی سنوورداری تەمەنەوە.'
       teacher_must_accept_terms: 'ئەم ناوەرۆکە بەردەست نیە بۆ قوتابیانی تەمەنی خوارووتر بەهۆی سنوورداری تەمەنەوە. داوا لە مامۆستاکەت بکە کە یاساکانی خزمەتگوزاری نوێکراوە قبوڵ بکات تا بتوانی ئەم ناوەرۆکە بەردەست بخەی. مامۆستاکەت دەتوانێ ئەم ڕێکارە ئەنجام بدات بە داخڵبوون بۆ ناو كۆد ستۆدیۆ پاشان کرتە کردن لەسەر دوگمەی"پێداچوونەوە بە یاسا نوێکراوەکان" نزیک بەشی سەرەوەی لاپەڕەی سەرەتای كۆد ستۆدیۆ.'
-      pair_programmer: 'تۆ ئێستاکە دووانە پرۆگرامسازی ئەنجام دەدەی لەگەڵ قووتابیێک کە ڕێپێدراو نیە بۆ دەستگەیشتن بەم ناوەرۆکە. بۆ دەستگەیشتن بەم ناوەرۆکە، دووانە پرۆگرامسازی بووەستێنە و دووبارە هەوڵ بدەوە.'
+      pair_programmer: 'تۆ ئێستاکە هاوەڵ-بەرنامەسازی ئەنجام دەدەی لەگەڵ قووتابیێک کە ڕێپێدراو نیە بۆ دەستگەیشتن بەم ناوەرۆکە، هاوەڵ-بەرنامەسازی بووەستێنە و دووبارە هەوڵ بدەوە.'
   activerecord:
     errors:
       messages:
         blank: "داواکراوە"
         blank_plural: "داواکراوە"
         invalid: "ناڕاستە"
-        invalid_plural: "ناڕاستە"
+        invalid_plural: "ناڕاستن"
     attributes:
       user:
         name: 'ناوی پیشاندراو'
-        name_example: 'ناوی پیشاندراو <br/>(نمونە: پرۆگرامسازە ناوازەکە یان ئازاد س.)'
-        email: 'ئیمەیڵ'
-        parent_email: 'پۆستی ئەلکترۆنی باوان/بەخێوکەر'
+        name_example: 'ناوی پیشاندراو<br/>(نمونە: بەرنامەسازە ناوازەکە یان ئازاد س.)'
+        email: 'پۆستی ئەلیكترۆنی'
+        parent_email: 'پۆستی ئەلیكترۆنی باوان/بەخێوکەر'
         personal_email: "ناونیشانی پۆستی ئەلکترۆنی کەسی<a href=\"%{url}\">(کرتە لێرە بکە ئەگەر خاوەن پۆستی ئەلکترۆنی نیت)</a>"
         username: 'ناوی بەکارهێنەر'
-        password: 'تێپەڕەوشە'
-        password_confirmation: 'پشتڕاستکردنەوەی تێپەڕەوشە'
-        current_password: 'تێپەڕەوشەی ئێستا'
+        password: 'تێپەڕووشە'
+        password_confirmation: 'پشتڕاستکردنەوەی تێپەڕووشە'
+        current_password: 'تێپەڕووشەی ئێستا'
         locale: 'زمان'
         age: 'تەمەن'
         gender: 'ڕەگەز'
         edit_header: 'دەستکاریکردنی وردەکارییەکانی هەژمار'
+        finish_sign_up_header: 'كرداری درووستكردنی هەژمارەكەت تەواوبكە'
+        finish_sign_up_subheader: 'ئەم زانیاریانەی خوارەوە پڕبكەوە بۆ درووستكردنی هەژماری (Code.org) بۆ <strong>%{email}</strong>.'
+        finish_sign_up_subheader_provider: 'ئەم زانیاریانەی خوارەوە پڕبكەوە بۆ درووستكردنی هەژماری (Code.org) بە <strong>%{provider}</strong> بۆ <strong>%{email}</strong>.'
         error:
           future: ناکرێت لە داهاتوو بێت
   beta: "تاقیکاری"
-  hello: "چۆنی جیهان"
+  hello: "سڵاو جیهان"
   welcome_back: "بەخێربێیەوە، %{name}"
+  your_professional_learning_plan: "پلانە پێشكەوتووەكەی فێربوونی تایبەت بەخۆت"
+  see_your_learning_plan: "پلانی فێربوونی خۆت پشانبدە"
   submit: بنێرە
-  previous_page: لاپەرەی پێشوو
-  next_page: لاپەرەی دواتر
+  previous_page: لاپەڕەی پێشوو
+  next_page: لاپەڕەی دواتر
+  next_resource: سەرچاوەی دواتر
   or: "یان"
+  heading_x_of_y: "%{heading} (لاپەڕە %{x} لە%{y})"
+  join_section:
+    code:
+      title: 'بەشداری بكە لە یەكێك لە بەشەكانی (Code.org)'
+      instructions: "تكایە ئەو كۆدە 6 پیتە داخڵ بكە كە مامۆستاكەت داویەتی بە ئێوە (نموونە: \"ABCDEFK\") تا بتوانی بەشداری بەشەكەیان بكەیت."
+      instructions_short: "كۆدە 6 پیتیەكەی بەشەكەت داخڵ بكە"
+      submit: 'بەشداریبكە'
+  add_hint_form:
+    placeholder: 'تكایە سەرەداوی خۆت لێرە داخڵبكە'
+    submit: 'سەرەداو زیادبكە'
   appname: "Code.org"
   stage: "قۆناغ"
-  stage_number: "قۆناغی %{number}"
+  stage_number: "وانەی %{number}"
+  puzzle: "مەتەڵ"
+  trophies: "خەڵاتەكان"
+  courses: 'خولەكان'
+  courses_page:
+    title_student: "زانستی کۆمپیوتەر فێربە"
+    title_teacher: "زانستی کۆمپیوتەر فێربكە"
+  unplugged_activity: 'خولی بێ كۆمپیوتەر'
+  of: "لە"
   more: "زیاتر"
   less: "کەمتر"
+  try_hoc: "\"كاتژمێرێك كۆدنووسین\" تاقیبكەوە، كرتە لێرە بكە >> "
+  try_k8intro: "خولە سەرەتاییەكانی زانستی کۆمپیوتەر بۆ قوتابیانی بنەڕەتی تاقیبكەوە (15-25 كاتژمێر)"
+  k8intro: "خولە سەرەتاییەكانی زانستی کۆمپیوتەر بۆ قوتابیانی بنەڕەتی (15-25 كاتژمێر)"
+  already_started: "ئایا پێشتر دەستت پێكردووە؟ لێرە بەردەوام بە >> "
+  demos: "بەڕێوەبەر: سەرجەم ڕوونكردنەوەكان"
   continue: 'بەردەوام بە'
+  prize: 'خەڵات'
   more_info: 'زانیاری زیاتر'
   auth:
+    continue_with: 'بەردەوام بە لەگەڵ %{provider}'
     sign_in_with: 'چوونەژوورەوە لەگەڵ %{provider}'
-    google_oauth2: 'هەژماری گووگڵ'
+    signed_in: 'چووی بۆ ناو هەژمارەكەت!'
+    signed_out_markdown: '### لە هەژمارەكەت دەرچووی [Code.org](%{url}).'
+    sign_out_of_markdown: '### %{provider} بەكارهێنرا بۆ چوونەژوورەوە. [كرتە لێرەبكە](%{url}) بۆ چوونەدەرەوە لە %{provider}.'
+    already_signedup: 'پێشتر خۆت تۆماركردووە؟'
+    notyet_signedup: "تا ئێستا بەشداریت نەكردووە؟"
+    google_oauth2: 'گوگڵ'
     twitter: 'تویتەر'
     facebook: 'فەیسبووک'
-    windowslive: 'هەژماری مایکڕۆسۆفت'
-    microsoft_v2_auth: 'هەژماری مایکڕۆسۆفت'
-    forgot_password: 'تێپەڕەوشەت لەبیر کردووە؟'
+    windowslive: 'مایکڕۆسۆفت'
+    microsoft_v2_auth: 'مایکڕۆسۆفت'
+    powerschool: 'Powerschool'
+    forgot_password: 'تێپەڕووشەت لەبیرکردووە؟'
+    migration_success: 'سەكەوتوو بوو! ئێستا هەژمارەكەت نوێكراوە بۆ شێوازە نوێكە.'
+    demigration_success: 'شێوازی نویێ هەژمار بۆ هەژمارەكەت لەكارخراوە.'
+    need_confirmation: "ڕینماییەكانی پشتڕاستكردنەوی هەژمارەكەت پێنەگەیشتووە؟"
+    need_unlock: "ڕینماییەكانی كردنەوەی هەژمارەكەت پێنەگەیشتووە؟"
+    not_linked: "ببورە، هەژمارەكەت لە (Code.org) نەبەستراوەتەوە بە %{provider}. بۆ چوونەژوورەوە تكایە تێپەڕووشە لە خوارەوە بنووسە."
+    use_clever: "ببورە، هەژمارەكەت لە (Code.org) نەبەستراوەتەوە بە %{provider}. دەتوانی چوونەژوورەوە ئەنجام بدەی لە ڕێگای (Clever Portal)."
+    unable_to_connect_provider: "نەتوانرا هەژمارەكەت لە (Code.org) ببەسترێتەوە بە هەژماری %{provider}. تكایە دووبارە هەوڵبدە."
+    already_in_use: "ئەم هەژمارەت لە %{provider} لە ئێستا بەستراوەتەوە بە هەژمارێكی تری (Code.org)."
+    already_linked: "ئەم هەژمارەت لە %{provider} لە ئێستا بەستراوەتەوە بە هەژمارەكەت لە (Code.org)."
   signup_form:
+    email_signup: 'خۆت تۆماربكە لە ڕێگای پۆستی ئەلیكترۆنی'
+    student_count: '%{count} قوتابی تا ئێستا خۆیان تۆماركردووە.'
+    teacher_count: '%{count} مامۆستا تا ئێستا خۆیان تۆماركردووە.'
+    overview: 'خۆت تۆماربكە و هەژمارێك دروستبكە تا لە پێشكەوتنەكانت ئاگاداربیت وهەڵیانبگریت یان بۆ بەڕێوەبردنی پۆلەكەت. <a href="/">دەتوانی گوزەر بكەیت بە ناو قۆناغەكان و مەتەڵەكان</a> بەبێ هەبوونی هەژمار، بەڵام دەبێ خۆت تۆماربكەیت تا بتوانی پێشكەوتنەكان و پرۆژەكانت هەڵگری.'
+    hoc_already_signed_up_heading: 'دەستپێبكە بەبێ چوونەژوورەوە'
+    hoc_already_signed_up_content: 'تۆ ئێستا خۆت تۆماركردووە بۆ فێركردنی "كاتژمێرێك كۆدنووسین"! ئێوە و قوتابیەكانت پێویست ناكات چوونەژوورەوە ئەنجام بدەن بۆ بەشداری كردن لەم چالاكیە. بۆ دەستپێكردن، <a href="%{learn_url}">فێركاریەك هەڵبژێرە</a> بۆ پۆلەكەت و لینكەكەیان پێبدە.<br/><br/>ئەگەر "كاتژمێرێك كۆدنووسین" لەلات خۆش بوو و چێژت لێی وەرگرتوە و دەتەوێت بەردەوام بیت، ئەوا تێپەڕووشەیەك دابنێ و هەژمارێكی كۆد ستۆدیۆ دروستبكە لە خوارەوە تا بتوانی قوتابیەكانت بەشداری پێبكەیت لەهەر یەك لە <a href="%{educate_url}">خولە درێژكراوەكانمان</a>.'
+    hoc_already_signed_up_content_post_hoc: 'زۆر سوپاس بۆ پێشكەش كردنی "كاتژمێرێك كۆدنووسین". بۆ چوونەژوورەوە بۆ كۆد ستۆدیۆ، دەبێ تێپەڕووشەیەك دابنێی بۆ هەژمارەكەت. بە ئەنجامدانی ئەم هەنگاوە دەتوانی پێشكەوتنەكانت هەڵبگری و پۆلەكەت بەڕێوەبەری. وە دەتوانی خول دیاریبكەی بۆ قوتابیەكانت و پێشكەوتنەكانیان ببینی. <a href="%{studio_url}">وە دەشتوانی بەردەوام بی لە گوزەر كردن بەناو قوناغە جیاجیاكان و مەتەڵەكان</a> بەبێ درووستكردنی هیچ هەژمارێك.'
+    teacher_educator_guide: 'ڕێبەری فێركردن ببینە'
+    title: "هەژمارێك دروست بكە لە (Code.org)"
+    school_name: 'ناوی قوتابخانە (ئارەزومەندانە)'
+    school_address: 'ناونیشانی قوتابخانە (ئارەزومەندانە)'
+    address_placeholder: 'ناونیشان، شار، ناوچە، زیپ كۆد'
+    gender: 'ڕەگەز (ئارەزومەندانە)'
+    birthday: 'بەرواری لەدایك بوون (ئارەزومەندانە)'
     age: 'تەمەن'
+    user_type: 'ئایا تۆ قوتابی یان مامۆستای؟'
     submit: 'خۆتۆمارکردن'
+    go_to_account: 'بڕۆ بۆ هەژمارەكەم'
     teacher: 'ئایا تۆ مامۆستای؟'
     valid_username: "بەردەستە!"
+    invalid_username: "ناوی بەكارهێنەر دەبێت لانی كەم 5 پیت بێت"
     taken_username: "ئەم ناوی بەکارهێنەرە بەکارهاتووە"
     valid_password: "تێپەڕەوشەی دروست!"
     invalid_password: "تێپەڕەوشە پێویستە لانی کەم 6 نووسە بێت"
+    mismatch_password: "ئەم دوو تێپەڕەوشەی كە داخڵت كردوون یەك نین"
+    under_13_consent: "ئەگەر من لە 13 ساڵ بچووكترم، ئەوا دووپاتی دەكەمەوە كە مۆڵەتم لە باوانم یان لە بەخێوكەری یاساییم وەرگرتووە تا خزمەتگوزارییەكانی (Code.org) بەكاربهێنم."
+    student_consent: "دووپاتی دەكەمەوە كە مۆڵەتم لە باوانم یان لە بەخێوكەری یاساییم وەرگرتووە تا خزمەتگوزارییەكانی (Code.org) بەكاربهێنم."
+    agree_us_website: "من ڕازیم ماڵپەڕێك بەكاربهێنم كە دامەرزراوە لە ویلایەتە یەكگرتووەكانی ئەمریكا."
+    my_data_to_us: "زانیاری بەكارهێنانم لەم ماڵپەڕە لەوانەیە بنێررێ، هەڵبگیرێ یان شیبكرێتەوە لە ویلایەتە یەكگرتووەكانی ئەمریكا."
     user_type_teacher: "مامۆستا"
     user_type_student: "قوتابی"
     field_is_required: "داواکراوە"
   school_info:
     other: 'هی تر'
   signin_form:
-    login: 'ئیمەیڵ'
-    password: 'تێپەڕەوشە'
+    login: 'پۆستی ئەلیكترۆنی'
+    password: 'تێپەڕووشە'
     submit: 'چوونەژوورەوە'
   signinsection:
     welcome: 'بەخێربێیت بۆ %{section_name}'
@@ -74,7 +154,7 @@ ku:
     login: 'چوونەژوورەوە'
   password:
     reset_form:
-      title: 'تێپەڕەوشەت لەبیر کردووە؟'
+      title: 'تێپەڕووشەت لەبیرکردووە؟'
       email: 'ناونیشانی ئیمەیڵ'
       submit: 'بنێرە'
     change_form:
@@ -84,7 +164,7 @@ ku:
       submit: 'گۆڕینی تێپەڕەوشەکەم'
   section:
     type:
-      email: 'ئیمەیڵ'
+      email: 'پۆستی ئەلیكترۆنی'
   crud:
     submit: 'بنێرە'
     confirm: 'ئایا تۆ دڵنیایت؟'
@@ -172,7 +252,7 @@ ku:
     csp_loops: 'گرێکان'
   pd:
     form_labels:
-      email: 'ئیمەیڵ'
+      email: 'پۆستی ئەلیكترۆنی'
     form_entries:
       gender:
         male: 'نێر'

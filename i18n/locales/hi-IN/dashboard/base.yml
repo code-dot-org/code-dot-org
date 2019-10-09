@@ -1,3 +1,15 @@
+#Files in the config/locales directory are used for internationalization
+#and are automatically loaded by Rails. If you want to use locales other
+#than English, add the necessary files in this directory.
+#To use the locales, use `I18n.t`:
+#I18n.t 'hello'
+#In views, this is aliased to just `t`:
+#<%= t('hello') %>
+#To use a different locale, set it with `I18n.locale`:
+#I18n.locale = :es
+#This would use the information in config/locales/es.yml.
+#To learn more, please read the Rails Internationalization guide
+#available at http://guides.rubyonrails.org/i18n.html.
 hi:
   errors:
     messages:
@@ -316,10 +328,13 @@ hi:
       navigator: 'साझेदार'
       create: 'बनाए'
       algebra_game: 'बीज गणित'
+      applab: 'ऐप लैब'
       artist_k1: 'कलाकार (आरंभिक-पाठक)'
       basketball: 'बास्केटबॉल'
+      bounce: 'उछाल'
       dance: 'डांस पार्टी'
       frozen: 'Frozen'
+      gamelab: 'गेम लैब'
       gamelab_jr: 'गेम लैब (बीटा)'
       gumball: 'गम्बॉल की अद्भुत दुनिया'
       iceage: 'हिम युग'
@@ -406,6 +421,7 @@ hi:
     enter_parent_email: "अपने माता या पिता या अभिभावक का ईमेल पता दर्ज करें (पासवर्ड रिकवरी के लिए)"
     update: "खाता अद्यतन करें"
     account_successfully_updated: "खाता सफलतापूर्वक अद्यतन हो गया।"
+    update_email: "अद्यतन करें"
   user_level:
     completed: 'पूरा हो गया'
     tried: 'कोशिश की'
@@ -546,6 +562,7 @@ hi:
       unused: "उपयोग न किए गए स्तर"
   upsell:
     applab:
+      title: 'ऐप लैब'
       body: "ऐप लैब ऐसा प्रोग्रामिंग परिवेश है, जहां आप साधारण ऐप्स बना सकते हैं। ऐप डिजाइन करें, इसे लाभदायक बनाने के लिए ब्लॉक्स या JavaScript के साथ कोड बनाएं, फिर सेकंडों में अपना ऐप साझा करें।"
       body_short: "ऐप डिजाइन करें, इसे लाभदायक बनाने के लिए ब्लॉक्स या JavaScript के साथ कोड बनाएं, फिर सेकंडों में अपना ऐप साझा करें।"
       audience: 'आयु 13+'
@@ -568,6 +585,7 @@ hi:
       title: "गैलरी"
       body: "ऐप की गैलरी और हमारे उपयोगकर्ताओं द्वारा बनाए कलाकार चित्र देखें"
     gamelab:
+      title: "गेम लैब"
       body: "गेम लैब ऐसा प्रोग्रामिंग परिवेश है, जहां आप ऐसी वस्तुओं और चरित्रों के साथ साधारण एनिमेशन व गेम्स बना सकते हैं, जो एक-दूसरे के साथ अंतःक्रिया करते हैं।"
       audience: "आयु 13+"
       cta: "जानें कैसे"
@@ -806,13 +824,17 @@ hi:
     csf_f_1: 'रैम्प अप से पाठ्यक्रम F (वैकल्पिक)'
     csf_f_2: 'पाठ्यक्रम F की सामग्री'
     csf_digcit: 'डिजीटल नागरिकता'
+    csf_jigsaw: 'पहेली'
     csf_sequencing: 'अनुक्रमण'
     csf_loops: 'फंदे'
     csf_events: 'घटनाएँ'
     csf_online_safety: 'ऑनलाइन सुरक्षा'
+    csf_binary: 'युग्मक'
     csf_conditionals: 'शर्तें'
+    csf_nested_loops: 'नेस्टड लूप्स'
     csf_functions: 'कार्य'
     csf_variables: 'चर'
+    csf_for_loops: 'फॉर लूप्स'
     csf_internet: 'इंटरनेट'
     csf_warmup: 'तैयारी करें'
     csd1_1: 'अध्याय 1: प्रश्न हल करने की प्रक्रिया'
@@ -987,11 +1009,13 @@ hi:
         codecademy: 'CodeCademy'
         csfirst: 'Google CS First'
         khan: 'Khan Academy'
+        kodable: 'Kodable'
         scratch: 'Scratch'
         tynker: 'Tynker'
         other: "अन्य:"
       robotics:
         grok: 'Grok Learning'
+        kodable: 'Kodable'
         lego: 'LEGO Education'
         microbit: 'Microbit'
         ozobot: 'Ozobot'

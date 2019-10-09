@@ -537,6 +537,10 @@ es-MX:
       Begin planning your project_2018_2019:
         title: Empieza a planificar tu proyecto
         content1: descripción aquí
+      BigEvent-Unplugged:
+        markdown: "# El Gran Evento \n\nEn ciencias de la computación, eventos son
+          acciones que un computador monitorea. En esta lección usted reaccionará
+          de manera diferente dependiendo cuál botón esta presionado.\n"
       CSD Header Size MC:
         title: Verificación rápida de títulos
         content1: Mira el código a continuación y predice cómo se mostrarán los títulos.
@@ -2219,6 +2223,13 @@ es-MX:
           #Programación de papel cuadriculado
 
           Escribe algoritmos que tus compañeros puedan usar para dibujar imágenes.
+      HappyLoops-Unplugged:
+        markdown: |
+          # Bucles Felices
+
+          En esta lección aprenderá acerca de bucles!
+
+          ![](https://images.code.org/6aac7f675f0c69033f42ccac6a733f68-image-1557769673400.png)
       HappyMaps-Unplugged:
         markdown: |
           # Mapas felices

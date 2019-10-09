@@ -446,6 +446,7 @@ pl:
     confirm_secret_words: Potwierdź, że to ty, wprowadzając swoje aktualne sekretne
       słowa
     enter_parent_email: Wprowadź adres rodzica lub opiekunka (do odzyskiwania hasła)
+    update_email: Uaktualnij
   user_level:
     completed: Ukończono
     tried: Próbowano

@@ -1,3 +1,15 @@
+#Files in the config/locales directory are used for internationalization
+#and are automatically loaded by Rails. If you want to use locales other
+#than English, add the necessary files in this directory.
+#To use the locales, use `I18n.t`:
+#I18n.t 'hello'
+#In views, this is aliased to just `t`:
+#<%= t('hello') %>
+#To use a different locale, set it with `I18n.locale`:
+#I18n.locale = :es
+#This would use the information in config/locales/es.yml.
+#To learn more, please read the Rails Internationalization guide
+#available at http://guides.rubyonrails.org/i18n.html.
 he:
   errors:
     messages:
@@ -307,7 +319,7 @@ he:
       settings: 'החשבון שלי'
       logout: 'התנתק'
       signin: 'התחבר'
-      signup: 'צור חשבון'
+      signup: 'צור חשבון משתמש'
       already_registered: 'כבר נרשמת?'
       pair_programming: 'תכנות בזוגות'
       team: 'צוות'
@@ -327,6 +339,7 @@ he:
       gamelab_jr: 'מעבדת המשחקים (בטא)'
       iceage: 'עידן הקרח'
       infinity: 'אינסוף'
+      minecraft_adventurer: 'הרפתקן מיינקראפט'
       minecraft_designer: 'מיינקראפט'
       minecraft_hero: 'גיבור מיינקרפט'
       playlab: 'מעבדת הצעצועים'
@@ -401,6 +414,7 @@ he:
     enter_parent_email: "הזן את כתובת הדוא\"ל של ההורה או האופוטרופוס החוקי (לצורך שחזור סיסמה)"
     update: "עדכן חשבון"
     account_successfully_updated: "חשבון עודכן בהצלחה."
+    update_email: "עדכון"
   user_level:
     completed: 'הושלם'
     tried: 'נוסה'
@@ -580,7 +594,7 @@ he:
       body: "גלה את העולם של מיינקראפט באמצעות קוד"
     minecraft2016:
       title: "מיינקראפט"
-      body: "תכנת חיות ויצורי מיינקרפט נוספים בגרסת מיינקרפט משלך."
+      body: "תכנת חיות ויצורי מיינקרפט נוספים בגרסת מיינקראפט משלך."
     aquatic:
       title: "מיינקראפט"
     hero:
@@ -588,10 +602,10 @@ he:
     text-compression:
       body: "בשיעור זה, התלמידים ישתמשו בווידג'ט של דחיסת טקסט כדי לכווץ אותו על-ידי החלפת תבניות עם סמלים."
     unplugged:
-      title: "שיעורים ללא מחשב"
+      title: "שיעורים מנותקים"
       audience: "גילאי 4+"
       body: "הרכבנו עבורך מספר שיעורים ללא מחשב לשימוש בכיתתך. כעת תוכל ללמד את יסודות מדעי המחשב, גם אם אין ברשותך מחשבים בכיתה! נסה להשתמש בשיעורים אלו כקורס בפני עצמו או כקורס משלים לשיעורים במדעי המחשב."
-      body_short: "אם אין ברשותך מחשבים, נסה להשתמש בשיעורים ללא מחשב בכיתתך."
+      body_short: "אם אין ברשותך מחשבים, נסה להשתמש בשיעורים המנותקים האלו בכיתתך."
     unplugged_conditionals:
       title: "תנאים"
       body: "למד על אלגוריתמים והתניות בפעילות הזו ללא מחשב בעזרת סט קלפים."

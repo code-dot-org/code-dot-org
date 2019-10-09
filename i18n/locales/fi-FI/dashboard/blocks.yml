@@ -910,72 +910,19 @@ fi:
         options:
           PROPERTY:
             "'shapeColor'": väri
-      aalab_changePropByFlexible:
-        text: muuta {SPRITE} {PROPERTY} {VAL}
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': koko
-            '"rotation"': kierto
-            '"x"': x:än paikka
-            '"y"': y:n paikka
-            '"direction"': liikkeen suunta
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': kun
-            '"while"': niin kauan kuin
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': kun
-            '"while"': niin kauan kuin
-      aalab_jumpTo:
-        text: "{SPRITE} siirry paikkaan {LOCATION}"
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': kun
-            '"while"': niin kauan kuin
-          KEY:
-            '"up"': ylös
-            '"down"': alas
-            '"left"': vasemmalle
-            '"right"': oikealle
-            '"space"': avaruus
-      aalab_moveInDirection:
-        options:
-          DIRECTION:
-            '"North"': Pohjoinen
-            '"East"': Itä
-            '"South"': Etelä
-            '"West"': Länsi
-      aalab_randomLocation:
-        text: satunnainen paikka
-      aalab_removeOneAndAll:
-        text: poista {THIS}
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': kaupunki
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': tosi
-            '"false"': epätosi
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': koko
-            '"rotation"': kierto
-            '"x"': x:än paikka
-            '"y"': y:n paikka
-            '"direction"': liikkeen suunta
-            '"tint"': sävy
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': ikuisesti
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
         options:
           OPTION:
             '"show"': näytä

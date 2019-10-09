@@ -4,7 +4,7 @@ class AssetHelper
   include Singleton
 
   def webpack_manifest_path
-    ''
+    "#{CDO.root_dir}/dashboard/public/blockly/js/manifest.json"
   end
 
   def webpack_manifest
@@ -17,7 +17,7 @@ class AssetHelper
     # development mode, this produces valid url to an unminified, undigested
     # asset. In unit tests, this often just needs to return a stub value without
     # raising an exception.
-    return "/blockly/#{asset}" if CDO.pretty_js
+    return "/assets/#{asset}" if CDO.pretty_js
     path = webpack_manifest[asset]
     raise "Invalid webpack asset name: '#{asset}'" unless path
     path
