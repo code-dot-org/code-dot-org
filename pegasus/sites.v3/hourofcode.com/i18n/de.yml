@@ -10,6 +10,9 @@ de:
   campaign_date_full: "7.-13. Dezember"
   campaign_date_year: "2016"
   campaign_date_full_year: "5. - 11. Dezember 2016"
+  hoc2019_header: 'Lerne Informatik. Verändere die Welt.'
+  hoc2019_header_line1_mobile: 'Lerne Informatik.'
+  hoc2019_header_line2_mobile: 'Verändere die Welt.'
   codeorg_homepage_hoc2018_curriculum: 'Mache weiter mit <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org-Kursen</a>.'
   codeorg_homepage_hoc2018_dance_heading: 'Erstelle Deine eigene <span class="highlight-word">Tanz&nbsp;Party</span>.'
   codeorg_homepage_hoc2018_header_line1: 'Die Hour of Code kommt ...'
@@ -244,8 +247,8 @@ de:
   front_join_us_challenge: "Gewinne ein Videochat mit einer Berühmtheit für dein Klassenzimmer!"
   front_join_us_learn_more: "Erfahre mehr"
   signup_closed: 'Die Anmeldung für die Hour of Code ist nun geschlossen. Einschreibungen für die nächste Hour of Code im Oktober.'
-  signup_registration_not_required: "You don't need to register to participate! The Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan an event for your class."
-  signup_registration_closed: "And every year in December, your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. We'll open registration for the annual celebration in October."
+  signup_registration_not_required: "Sie müssen sich nicht registrieren, um teilzunehmen! Die Aktivitäten der Hour of Code sind ganzjährig verfügbar. <a href='%{hoc_activities_url}'>Probieren Sie eine Aktivität</a> oder lesen Sie unsere <a href='%{howto_guide_url}'>How-to guide</a>, um eine Veranstaltung für Ihre Klasse zu planen."
+  signup_registration_closed: "Und jedes Jahr im Dezember kann Ihre Klasse mit Millionen von Schülern auf der ganzen Welt die Computer Science Education Week mit der Hour of Code feiern. Wir werden die Anmeldung für die jährliche Feier im Oktober öffnen."
   signup_header: 'Veranstalten Sie eine Hour of Code während der %{campaign_date} und registrieren Sie sich hier.'
   signup_name_label: 'Dein Name'
   signup_name_error: 'Bitte gib einen Namen an.'
@@ -267,7 +270,7 @@ de:
   signup_your_event: 'Melde Deine Veranstaltung an'
   signup_host_an_hour: 'Veranstalte eine Hour of Code'
   signup_match_volunteer: 'Helfen Sie mir, einen lokalen Software-Ingenieur zu finden'
-  signup_email_preference_opt_in: 'Can we email you about updates to Code.org courses, local opportunities, or other computer science news?'
+  signup_email_preference_opt_in: 'Dürfen wir dich per E-Mail über Neuigkeiten zu Code.org Kursen, lokale Möglichkeiten oder andere Neuigkeiten zur Informatik informieren?'
   signup_email_preference_privacy: '(Siehe unsere Datenschutzerklärung)'
   signup_email_preference_yes: 'Ja'
   signup_email_preference_no: 'Nein'
@@ -301,13 +304,13 @@ de:
   social_hoc2018_hoc_coming_create: "Die Hour of Code kommt. Was wirst du erschaffen?"
   social_hoc2018_hoc_here: "Die Hour of Code ist da!"
   social_hoc2018_join: "Die Hour of Code kommt"
-  social_hoc2018_mc: "Minecraft is back for the Hour of Code, and you’re the hero! Write code to journey through Minecraft biomes."
-  social_hoc2018_mc_creativity: "Use your creativity and problem solving skills to explore and build underwater worlds with code."
+  social_hoc2018_mc: "Minecraft ist zurück für die Stunde des Codes, und du bist der Held! Schreiben Sie Code, um durch die Biome von Minecraft zu reisen."
+  social_hoc2018_mc_creativity: "Nutze deine Kreativität und Problemlösungsfähigkeiten, um mittels Code Unterwasserwelten zu erforschen und aufzubauen."
   social_hoc2018_what_create: "Was wirst du erschaffen?"
-  social_hoc2018_global_movement: "The Hour of Code is a global movement reaching tens of millions of students. One-hour tutorials are available in 45+ languages for all ages."
+  social_hoc2018_global_movement: "The Hour of Code ist eine globale Bewegung, die Zehnmillionen von Studenten erreicht. Einstündige Tutorials sind in über 45 Sprachen für alle Altersgruppen verfügbar."
   map_title: "Hour of Code - Übersicht"
   map_header: 'Hour of Code Veranstaltungen auf der ganzen Welt'
-  map_header_count_year: '%{event_count} events registered in %{year}'
+  map_header_count_year: '%{event_count} Events registriert im Jahr %{year}'
   see_all_events: 'Alle Veranstaltungen anzeigen'
   map_header_company: '# von Firmen organisiert'
   map_header_country: '# in %{country}'
@@ -323,7 +326,7 @@ de:
   meta_tag_twitter_title: 'Die Hour of Code kommt'
   meta_tag_twitter_description: 'Die Hour of Code ist eine weltweite Bewegung, die Millionen von Schülern in über 180 Ländern mit über 30 Sprachen erreicht. Alter von 4 bis 104 Jahre.'
   twitter_default_text: "Ich nehme dieses Jahr an der #HourOfCode teil, und Du? @codeorg"
-  twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
+  twitter_donor_text: "Beim diesjährigen #HourOfCode geht es um Kreativität. Ich bin dabei! Bist du das? (Danke %{random_donor} für die Unterstützung von @codeorg)"
   hoc_faq_title: 'Häufig gestellte Fragen'
   hoc_faq_what_is_hoc_q: 'Was ist die Hour of Code?'
   hoc_faq_what_is_hoc_a: "Hour of Code ist eine einstündige Einführung in die Informatik, entwickelt um hinter das Geheimnis der Programmierung zu schauen und die Grundlagen kennen zu lernen. <a href='%{codeorg_url}'>Probieren Sie die Tutorials aus</a>."
@@ -377,8 +380,8 @@ de:
   stats_hoc: "Hour of Code: 5 Tage"
   stats_global: "Über 100 Mio. Schülerinnen und Schüler haben eine Hour of Code ausprobiert"
   stats_girls_more: "Dabei probierten mehr Mädchen Informatik aus als in den ganzen 70 Jahren zuvor"
-  stats_females: "Participation of female students in computer science is only 20-25% of high school courses, university courses, and the workforce."
-  stats_females_more: "During the Hour of Code, female students make up <b>50% of all participants</b>!"
+  stats_females: "Die Beteiligung von Studentinnen an der Informatik beträgt nur 20-25% der Kurse für weiterführende Schulen, Universitäten und der Arbeitskräfte."
+  stats_females_more: "Während der Hour of Code machen Studentinnen <b>50% aller Teilnehmer</b> aus!"
   stats_nina: '"Jeder Tag führte zu demselben Ergebnis &mdash; 100 % Engagement." - Nina Nichols Peery, Lehrerin'
   stats_student: '"Ich wusste, dass war eine <b>einmalige</b> Chance." - Mariana Alzate, Schülerin'
   stats_michael: '"<b>Noch nie</b> habe ich meine Schüler <b>so begeistert</b> gesehen, etwas zu lernen." - Michael Clark, Lehrer'
@@ -417,8 +420,8 @@ de:
   videos_hoc_2014: Stunde des Codes ist hier - jeder kann lernen
   videos_obama_cs: President Obama über Informatik
   videos_anybody_can_learn: Jeder kann lernen (1 min)
-  videos_creativity: What is Creativity?
-  videos_creativity_series: What is Creativity? View Full Series.
+  videos_creativity: Was ist Kreativität?
+  videos_creativity_series: Was ist Kreativität? Vollständige Serie anzeigen.
   title_country_resources: Länderspezifische Hilfsmittel
   title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
   title_hoc_review_committee: Hour of Code and CSEdWeek Review Committee
@@ -431,7 +434,7 @@ de:
   title_how_to_volunteers: Anleitung für freiwillige "Hour of Code"-Teinehmer
   title_how_to_parents: Leitfaden für Eltern
   title_how_to: How-to Anleitung
-  title_international_partners: Contact International Partners
+  title_international_partners: Kontakt zu internationalen Partnern
   title_press_release: Pressematerial für Volksvertreter
   title_op_ed: Beispiel für einen Aufruf zur Unterstützung einer Informatikwoche und der Hour of Code
   title_press_kit: Pressemappe
@@ -466,7 +469,7 @@ de:
   highlights_constant_alba_short_heading: Jessica Alba macht eine "Hour of Code"
   highlights_constant_obama_heading: Präsident Obama ist der erste Präsident welcher eine "Hour of Code" im Weißen Haus veranstaltet hat.
   highlights_constant_obama_short_heading: Chefprogrammierer
-  highlights_constant_malala_heading: "\"Every girl deserves to take part in creating the technology that'll change our world, and change who runs it.\""
+  highlights_constant_malala_heading: "\"Jedes Mädchen verdient es, an der Entwicklung der Technologie mitzuwirken, die unsere Welt verändern wird, und zu ändern, wer sie leitet.\""
   highlights_constant_malala_short_heading: Friedensnobelpreisträgerin Malala
   highlights_constant_trudeau_heading: Der kanadische Premierminister Justin Trudeau hat ein einfaches Spiel mit seinem Lieblingssport programmiert.
   highlights_constant_trudeau_short_heading: Premierminister Justin Trudeau programmiert ein Spiel
@@ -488,7 +491,7 @@ de:
   learn_robotics_banner_heading: 'ROBOTIK'
   learn_robotics_banner_blurb: 'Haben Sie Roboter? Dann kombinieren Sie sie mit den folgenden Aktivitäten, um Schülern jeden Alters eine Stunde des Codes zum Anfassen anzubieten!'
   tutorial_danceparty_name: "Tanzparty"
-  tutorial_chibitronics_name: "Chibitronics: Illuminated Story"
+  tutorial_chibitronics_name: "Chibitronics: Erleuchtete Geschichte"
   tutorial_athlete_name: "Programmiere dein eigenes Sportspiel"
   tutorial_moana_name: "Moana: Wegfindung mit Code"
   tutorial_star-wars_name: "Star Wars: Erschaffe ein Galaxie mit Code"
@@ -1142,8 +1145,8 @@ de:
   tutorial_codestersbasketball_shortdescription: "Erstelle dein eigenes ziehen und schießen Basketball-Spiel! "
   tutorial_nclkarel_shortdescription: "Learn to code with Karel the Robot as you travel the world together solving problems."
   tutorial_buildpong_shortdescription: "Build the arcade classic and give the computer artificial intelligence to play against you."
-  tutorial_tynkerdrones_shortdescription: "Program a controller for your robot or drone."
-  tutorial_carla_shortdescription: "Learn to code by programming a talking virtual robot named Carla!"
+  tutorial_tynkerdrones_shortdescription: "Programmiere eine Steuerung für Ihren Roboter oder Ihre Drohne."
+  tutorial_carla_shortdescription: "Lernen programmieren, indem du einen sprechenden virtuellen Roboter namens Carla! programmierst!"
   tutorial_globaloria_shortdescription: "Go on a MakeQuest! Modify code to beat our game, then build your own!"
   tutorial_capost_shortdescription: "Use code to build a great looking holiday or birthday card."
   tutorial_marco_shortdescription: "An immersive game to guide Marco with a visual programming language."
@@ -1171,9 +1174,9 @@ de:
   tutorial_codingrobots_shortdescription: "RoboBlockly is designed for beginners to learn coding and math with robots. "
   tutorial_robob_shortdescription: "RoboBlockly is designed for beginners to learn robotics in Blockly. "
   tutorial_coders_shortdescription: "Entdecke Bot-Programmierung mit einem Raumschiff Rennen! (ab 14 Jahren)"
-  tutorial_tynkerhw_shortdescription: "Solve fun coding puzzles to navigate your Hot Wheels car and win the race!"
-  tutorial_tynkermh_shortdescription: "Solve fun coding puzzles with the ghouls of Monster High."
-  tutorial_caphoto_shortdescription: "Build an app that lets you customize photos with stickers and filters."
+  tutorial_tynkerhw_shortdescription: "Löse lustige Programmierrätsel, um dein Hot Wheels-Auto zu navigieren und das Rennen zu gewinnen!"
+  tutorial_tynkermh_shortdescription: "Löse lustige Codierrätsel mit den Ghouls der Monster High."
+  tutorial_caphoto_shortdescription: "Erstelle eine App, mit der du Fotos mit Aufklebern und Filtern anpassen kannst."
   tutorial_mozillahw_shortdescription: "Learners will remix JavaScript code to change the words on a website"
   tutorial_ticklep_shortdescription: "With Tickle, a user-friendly coding app, you can easily program Parrot Drone to swim in a number of ways by simply dragging and dropping coding blocks to create a command for it to follow."
   tutorial_bbot_shortdescription: "Teach your students (ages 7 and up) programming in a fun and easy way. No prior programming knowledge or experience needed!"
