@@ -1,8 +1,8 @@
 {
   "category": "Groups",
   "config": {
-    "func": "setPropEach",
-    "blockText": "set {GROUP} {PROPERTY} to {VAL}",
+    "func": "setPropRandomEach",
+    "blockText": "randomize {GROUP} {PROPERTY}",
     "args": [
       {
         "name": "GROUP",
@@ -83,13 +83,12 @@
           [
             "vertical position",
             "\"y\""
+          ],
+          [
+            "tint",
+            "\"tint\""
           ]
         ]
-      },
-      {
-        "name": "VAL",
-        "type": "Number",
-        "field": true
       }
     ]
   }

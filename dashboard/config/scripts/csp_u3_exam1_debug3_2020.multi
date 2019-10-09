@@ -4,8 +4,8 @@ height 'auto'
 question ‘The following program is run. Then the user clicks the "topButton" button ONCE. What will be displayed in the console?’
 
 wrong ‘<pre>cat<br>bird<br>dog</pre>’
-right ‘<pre>dog<br>cat<br>bird</pre>’
-wrong ‘<pre>cat<br>dog<br>bird</pre>’
+wrong ‘<pre>dog<br>cat<br>bird</pre>’
+right ‘<pre>cat<br>dog<br>bird</pre>’
 wrong ‘<pre>bird<br>cat<br>dog</pre>’
 
 
