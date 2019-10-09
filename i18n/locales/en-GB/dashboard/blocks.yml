@@ -38,6 +38,10 @@ en-GB:
         options:
           FORMAT:
             '"random"': random
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          LOCATION:
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": random
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:

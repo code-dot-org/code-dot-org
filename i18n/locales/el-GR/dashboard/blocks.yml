@@ -266,6 +266,31 @@ el:
             '"x"': χιαστί
             '"plus"': συν
             '"random"': τυχαίο
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': Εξωγήινος
+            '"BEAR"': Αρκούδα
+            '"CAT"': Γάτα
+            '"DOG"': Σκύλος
+            '"DUCK"': Πάπια
+            '"FROG"': Βάτραχος
+            '"MOOSE"': Ελάφι
+            '"PINEAPPLE"': Ανανάς
+            '"ROBOT"': Ρομπότ
+            '"SHARK"': Καρχαρίας
+            '"UNICORN"': Μονόκερως
+          LOCATION:
+            "{x: 200, y: 100}": πάνω
+            "{x: 200, y: 300}": κάτω
+            "{x: 100, y: 200}": αριστερά
+            "{x: 300, y: 200}": δεξιά
+            "{x: 200, y: 200}": κέντρο
+            "{x: 100, y: 100}": πάνω αριστερά
+            "{x: 300, y: 100}": πάνω δεξιά
+            "{x: 100, y: 300}": κάτω αριστερά
+            "{x: 300, y: 300}": κάτω δεξιά
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": τυχαίο
       Dancelab_makeNewDanceSprite:
         text: |-
           φτιάξε ένα νέο {COSTUME}
@@ -537,6 +562,21 @@ el:
       Dancelab_setTint:
         text: όρισε του {SPRITE} την απόχρωση σε {VAL}
       Dancelab_setTintEach:
+        text: όρισε {THIS} απόχρωση σε {VAL}
+        options:
+          THIS:
+            sprites: όλα
+            '"ALIEN"': όλοι οι εξωγήινοι
+            '"BEAR"': όλες οι αρκούδες
+            '"CAT"': όλες οι γάτες
+            '"DOG"': όλοι οι σκύλοι
+            '"DUCK"': όλες οι πάπιες
+            '"FROG"': όλοι οι βάτραχοι
+            '"MOOSE"': όλα τα ελάφια
+            '"PINEAPPLE"': όλοι οι ανανάδες
+            '"ROBOT"': όλα τα ρομπότ
+            '"SHARK"': όλοι οι καρχαρίες
+      Dancelab_setTintEachInline:
         text: όρισε {THIS} απόχρωση σε {VAL}
         options:
           THIS:

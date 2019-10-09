@@ -234,6 +234,31 @@ ja:
             '"x"': 十字
             '"plus"': プラス
             '"random"': ランダム に
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': エイリアン
+            '"BEAR"': クマ
+            '"CAT"': ネコ
+            '"DOG"': 犬
+            '"DUCK"': アヒル
+            '"FROG"': カエル
+            '"MOOSE"': ムース
+            '"PINEAPPLE"': パイナップル
+            '"ROBOT"': ロボット
+            '"SHARK"': サメ
+            '"UNICORN"': ユニコーン
+          LOCATION:
+            "{x: 200, y: 100}": 上
+            "{x: 200, y: 300}": 下
+            "{x: 100, y: 200}": 左 に
+            "{x: 300, y: 200}": 右 に
+            "{x: 200, y: 200}": 中央
+            "{x: 100, y: 100}": 左上
+            "{x: 300, y: 100}": 右上
+            "{x: 100, y: 300}": 左下
+            "{x: 300, y: 300}": 右下
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ランダム に
       Dancelab_makeNewDanceSprite:
         text: |-
           {COSTUME} を新しくつくる
@@ -492,6 +517,20 @@ ja:
       Dancelab_setTint:
         text: "{SPRITE} の色合いを {VAL} にセット"
       Dancelab_setTintEach:
+        options:
+          THIS:
+            sprites: すべて
+            '"ALIEN"': すべてのエイリアン
+            '"BEAR"': すべてのクマ
+            '"CAT"': すべてのネコ
+            '"DOG"': すべてのイヌ
+            '"DUCK"': すべてのアヒル
+            '"FROG"': すべてのカエル
+            '"MOOSE"': すべてのムース
+            '"PINEAPPLE"': すべてのパイナップル
+            '"ROBOT"': すべてのロボット
+            '"SHARK"': すべてのサメ
+      Dancelab_setTintEachInline:
         options:
           THIS:
             sprites: すべて

@@ -1724,3 +1724,8 @@ cs:
               name: Úvod
             Nested Loops:
               name: Vnořené cykly
+        dance-2019:
+          stages:
+            Dance Party:
+              name: Taneční večírek
+          description: Vytvoř si svůj vlastní taneční večírek a sdílej ho s kamarády!
