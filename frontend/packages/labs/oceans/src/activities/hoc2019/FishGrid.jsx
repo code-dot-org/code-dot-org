@@ -1,23 +1,35 @@
 import React, {PropTypes} from 'react';
+import {fishShape} from '../../utils/fishData';
+import {Fish} from './SpritesheetFish';
 import _ from 'lodash';
 
-export default class ImageGrid extends React.Component {
+export default class FishGrid extends React.Component {
   static propTypes = {
-    images: PropTypes.array.isRequired,
+    fishData: PropTypes.arrayOf(
+      PropTypes.shape({
+        fish: fishShape.isRequired,
+        isSelected: PropTypes.bool,
+        label: PropTypes.string
+      })
+    ).isRequired,
     cols: PropTypes.number.isRequired,
-    label: PropTypes.string,
+    canSelect: PropTypes.bool,
     onSelectImage: PropTypes.func
   };
 
   constructor(props) {
     super(props);
     this.state = {
-      rows: _.chunk(props.images, props.cols),
+      rows: _.chunk(props.fishData, props.cols),
       selectedImages: {}
     };
   }
 
   onSelectImage = (rowIdx, colIdx) => {
+    if (!this.props.canSelect) {
+      return;
+    }
+
     let selectedImages = {...this.state.selectedImages};
     let selectedInRow = selectedImages[rowIdx] || [];
 
@@ -32,24 +44,20 @@ export default class ImageGrid extends React.Component {
     }
   };
 
-  isSelected = (rowIdx, colIdx) => {
-    return (this.state.selectedImages[rowIdx] || []).includes(colIdx);
-  };
-
   render() {
     return (
       <div>
         {this.state.rows.map((row, rowIdx) => (
           <div key={`row-${rowIdx}`} style={styles.row}>
-            {row.map((image, colIdx) => (
+            {row.map((fishDatum, colIdx) => (
               <div
                 onClick={() => this.onSelectImage(rowIdx, colIdx)}
                 style={styles.col}
                 key={`col-${colIdx}`}
               >
-                <img src={image} style={styles.img} />
-                {this.props.label && this.isSelected(rowIdx, colIdx) && (
-                  <span style={styles.label}>{this.props.label}</span>
+                <Fish {...fishDatum.fish} />
+                {fishDatum.isSelected && fishDatum.label && (
+                  <span style={styles.label}>{fishDatum.label}</span>
                 )}
               </div>
             ))}

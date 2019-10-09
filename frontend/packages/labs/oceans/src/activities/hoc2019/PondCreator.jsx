@@ -28,20 +28,20 @@ export default class PondCreator extends React.Component {
     this.state = {
       trainer: trainer,
       initialized: false,
-      trainingData: this.generateFish('training', FISH_COUNT),
-      currentMode: Modes.Training,
-      predictionFish: [], // this.generateFish('prediction',1),
+      trainingData: this.generateFish(FISH_COUNT),
+      currentMode: Modes.Predicting, // TODO: CHANGE THIS BACK TO TRAINING
+      predictionFish: [], // this.generateFish(1),
       predictions: []
     };
   }
 
-  generateFish = (canvasPrefix, numFish) => {
+  generateFish = numFish => {
     let fishData = [];
     for (let i = 0; i < numFish; i++) {
       fishData[i] = generateRandomFish();
+      fishData[i].canvasId = `fish-canvas-${i}`;
     }
 
-    console.log(fishData);
     return fishData;
   };
 
@@ -91,7 +91,7 @@ export default class PondCreator extends React.Component {
         )}
         {this.state.currentMode === Modes.Predicting && (
           <div>
-            <Predict />
+            <Predict trainingData={this.state.trainingData} />
             <Button onClick={() => this.setMode(Modes.Training)}>
               Train More
             </Button>

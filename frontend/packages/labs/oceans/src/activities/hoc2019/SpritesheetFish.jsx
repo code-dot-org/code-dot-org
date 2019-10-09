@@ -1,5 +1,5 @@
 import React, {PropTypes} from 'react';
-import fish, {bodyShape, bodyPartShape} from '../../utils/fishData';
+import fish, {fishShape, bodyShape, bodyPartShape} from '../../utils/fishData';
 const P5 = require('../../utils/loadP5');
 
 export const generateRandomFish = () => {
@@ -17,13 +17,13 @@ export const generateRandomFish = () => {
   const topFin = topFins[Math.floor(Math.random() * topFins.length)];
   const tail = tails[Math.floor(Math.random() * tails.length)];
   const knnData = [
-      ...body.knnData,
-      ...eye.knnData,
-      ...mouth.knnData,
-      ...sideFin.knnData,
-      ...topFin.knnData,
-      ...tail.knnData
-    ];
+    ...body.knnData,
+    ...eye.knnData,
+    ...mouth.knnData,
+    ...sideFin.knnData,
+    ...topFin.knnData,
+    ...tail.knnData
+  ];
 
   return {
     body,
@@ -55,15 +55,7 @@ export default class SpritesheetFish extends React.Component {
 }
 
 export class Fish extends React.Component {
-  static propTypes = {
-    body: bodyShape.isRequired,
-    eye: bodyPartShape.isRequired,
-    mouth: bodyPartShape.isRequired,
-    sideFin: bodyPartShape.isRequired,
-    topFin: bodyPartShape.isRequired,
-    tail: bodyPartShape.isRequired,
-    canvasId: PropTypes.string.isRequired
-  };
+  static propTypes = {fishShape};
 
   componentDidMount() {
     this.p5 = new P5(this.sketch, this.props.canvasId);

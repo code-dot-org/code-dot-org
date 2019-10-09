@@ -1,28 +1,24 @@
-import React from 'react';
-import ImageGrid from './ImageGrid';
+import React, {PropTypes} from 'react';
+import FishGrid from './FishGrid';
 
 export default class Predict extends React.Component {
-  onSelectImage = () => {
-    console.log('selected');
+  static propTypes = {
+    trainingData: PropTypes.array.isRequired
   };
 
-  render() {
-    const images = [
-      '/images/cat1.jpg',
-      '/images/cat2.jpg',
-      '/images/cat3.jpg',
-      '/images/dog1.png',
-      '/images/dog2.png',
-      '/images/dog3.png'
-    ];
+  constructor(props) {
+    super(props);
+    const fishData = props.trainingData.map(datum => {
+      return {
+        fish: datum,
+        isSelected: false,
+        label: 'hi'
+      };
+    });
+    this.state = {fishData};
+  }
 
-    return (
-      <ImageGrid
-        cols={3}
-        label="like"
-        images={images}
-        onSelectImage={this.onSelectImage}
-      />
-    );
+  render() {
+    return <FishGrid fishData={this.state.fishData} cols={3} />;
   }
 }
