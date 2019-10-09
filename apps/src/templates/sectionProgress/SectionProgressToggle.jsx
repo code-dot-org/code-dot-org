@@ -11,7 +11,7 @@ const styles = {
   toggleButton: {
     padding: '3px 20px',
     height: 34,
-    marginBottom: 10
+    margin: 'auto auto 10px auto'
   }
 };
 
