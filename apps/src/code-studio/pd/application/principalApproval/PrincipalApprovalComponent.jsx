@@ -178,10 +178,6 @@ export default class PrincipalApprovalComponent extends LabeledFormComponent {
         })}
         {this.props.data.replaceCourse === YES &&
           this.renderCourseReplacementSection()}
-        {this.props.teacherApplication.course ===
-          'Computer Science Discoveries' && this.checkBoxesFor('csdWhichUnits')}
-        {this.props.teacherApplication.course ===
-          'Computer Science Principles' && this.checkBoxesFor('cspWhichUnits')}
         {this.radioButtonsWithAdditionalTextFieldsFor(
           'committedToDiversity',
           {
@@ -376,11 +372,6 @@ export default class PrincipalApprovalComponent extends LabeledFormComponent {
 
     if (data.doYouApprove !== 'No') {
       requiredFields.push(...REQUIRED_SCHOOL_INFO_FIELDS);
-      if (data.course === 'Computer Science Discoveries') {
-        requiredFields.push('csdWhichUnits');
-      } else if (data.course === 'Computer Science Principles') {
-        requiredFields.push('cspWhichUnits');
-      }
       if (data.replaceCourse === YES) {
         if (data.course === 'Computer Science Discoveries') {
           requiredFields.push('replaceWhichCourseCsd');
