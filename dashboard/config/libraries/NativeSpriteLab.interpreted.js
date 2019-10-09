@@ -136,27 +136,27 @@ function setupSim(
   for (counter_i = 0; counter_i < s3number; counter_i++) {
     makeNewSpriteAnon(s3costume, randomLocation());
   }
-  setProp(s3costume, 'scale', 50);
+  setProp({costume: s3costume}, 'scale', 50);
 
   for (counter_i = 0; counter_i < s2number; counter_i++) {
     makeNewSpriteAnon(s2costume, randomLocation());
   }
-  addBehaviorSimple(s2costume, new Behavior(movementBehavior(s2speed)));
+  addBehaviorSimple({costume: s2costume}, new Behavior(movementBehavior(s2speed)));
 
   for (counter_i = 0; counter_i < s1number; counter_i++) {
     makeNewSpriteAnon(s1costume, randomLocation());
   }
-  addBehaviorSimple(s1costume, new Behavior(movementBehavior(s1speed)));
+  addBehaviorSimple({costume: s1costume}, new Behavior(movementBehavior(s2speed)));
 
-  checkTouching('while', s1costume, s3costume, function(extraArgs) {
-    destroy(extraArgs.target);
+  checkTouching('while', {costume: s1costume}, {costume: s3costume}, function(extraArgs) {
+    destroy({id: extraArgs.target});
     World.sprite1score++;
     printText(s1costume + ' has collected ' + World.sprite1score);
     checkSimulationEnd();
   });
 
-  checkTouching('while', s2costume, s3costume, function(extraArgs) {
-    destroy(extraArgs.target);
+  checkTouching('while', {costume: s2costume}, {costume: s3costume}, function(extraArgs) {
+    destroy({id: extraArgs.target});
     World.sprite2score++;
     printText(s2costume + ' has collected ' + World.sprite2score);
     checkSimulationEnd();
@@ -164,8 +164,8 @@ function setupSim(
 
   function checkSimulationEnd() {
     if (countByAnimation(s3costume) === 0) {
-      destroy(s1costume);
-      destroy(s2costume);
+      destroy({costume: s1costume});
+      destroy({costume: s2costume});
       printText('The simulation has ended after ' + World.seconds + ' seconds');
       printText(s1costume + ' has collected ' + World.sprite1score);
       printText(s2costume + ' has collected ' + World.sprite2score);
