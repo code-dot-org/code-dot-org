@@ -10,6 +10,9 @@ ru:
   campaign_date_full: "7-13 декабря"
   campaign_date_year: "2016"
   campaign_date_full_year: "5-11 декабря 2016 года"
+  hoc2019_header: 'Познай информатику. Измени мир.'
+  hoc2019_header_line1_mobile: 'Познай информатику.'
+  hoc2019_header_line2_mobile: 'Измени мир.'
   codeorg_homepage_hoc2018_curriculum: 'Идите дальше с <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">курсами Code.org</a>'
   codeorg_homepage_hoc2018_dance_heading: 'Создайте свою собственную <span class="highlight-word">Танцевальную&nbsp;Вечеринку</span>'
   codeorg_homepage_hoc2018_header_line1: 'Скоро наступит «Час Программирования»...'
@@ -317,7 +320,7 @@ ru:
   map_legend_title: 'Легенда'
   map_legend_hoc_events: 'Мероприятие в Час Кода'
   map_legend_cs_tech_jam: 'Особое мероприятие'
-  map_warning: "The Hour of Code map only shows the first 200,000 registered events. All registered events with a valid address can be viewed on the <a href='%{events_url}'>events page.</a>"
+  map_warning: "A full list of the events can be viewed on the <a href='%{events_url}'>events page.</a>"
   meta_tag_og_title: 'Скоро наступит Час Программирования'
   meta_tag_og_description: 'Час Кода - это глобальное движение, охватывающее десятки миллионов учеников в более чем 180 странах и более чем на 30 языках. В возрасте от 4 до 104.'
   meta_tag_twitter_title: 'Скоро наступит Час Программирования'
