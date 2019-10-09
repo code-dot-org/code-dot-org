@@ -12,10 +12,7 @@ import {connect} from 'react-redux';
 import Select from 'react-select';
 import 'react-select/dist/react-select.css';
 import {SelectStyleProps} from '../constants';
-import CohortCalculator, {
-  countAcceptedApplications,
-  countRegisteredApplicants
-} from './cohort_calculator';
+import CohortCalculator, {countAcceptedApplications} from './cohort_calculator';
 import RegionalPartnerDropdown, {
   RegionalPartnerPropType
 } from '../components/regional_partner_dropdown';
@@ -139,7 +136,6 @@ export class QuickView extends React.Component {
             role={this.props.route.role}
             regionalPartnerFilterValue={this.props.regionalPartnerFilter.value}
             accepted={countAcceptedApplications(this.state.applications)}
-            registered={countRegisteredApplicants(this.state.applications)}
           />
         )}
         {this.props.showRegionalPartnerDropdown && <RegionalPartnerDropdown />}
