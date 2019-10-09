@@ -58,6 +58,12 @@ si:
         options:
           FORMAT:
             '"random"': අහඹු
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": වම
+            "{x: 300, y: 200}": දකුණ
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": අහඹු
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:

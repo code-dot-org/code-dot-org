@@ -248,18 +248,17 @@ fr-FR:
         Idée de projet: Crée un motif en utilisant des idées géométriques comme des moules.
         Cela demande de la persistance et de la planification!
       HOC 2018 Level_1: Récupérez un bateau dans le coffre.
-      HOC 2018 Level_10: Atteignez l'entrée du monument sous-marin.
-      HOC 2018 Level_11: Construisez un conduit avec de la prismarine dans le monument
+      HOC 2018 Level_10: Atteins l'entrée de ce monument sous-marin.
+      HOC 2018 Level_11: Construis un conduit avec de la prismarine dans le monument
         sous-marin.
-      HOC 2018 Level_12: Concevez votre propre environnement sous-marin, vous avez
-        carte blanche !
+      HOC 2018 Level_12: Concevez votre propre monde sous-marin, vous avez carte blanche !
       HOC 2018 Level_2: Rendez-vous au bout du quai.
       HOC 2018 Level_3: Naviguez en haute mer pour atteindre la morue.
-      HOC 2018 Level_4: Utilisez une boucle pour atteindre le dauphin.
-      HOC 2018 Level_5: Explorez l'épave de navire pour atteindre le coffre.
-      HOC 2018 Level_6: Naviguez à travers la glace pour atteindre le saumon.
-      HOC 2018 Level_7a: Explorez les ruines sous-marines à la recherche d'un coffre.
-      HOC 2018 Level_9b: Suivez le corail pour atteindre le trésor.
+      HOC 2018 Level_4: Utilise une boucle pour atteindre le dauphin.
+      HOC 2018 Level_5: Explore l'épave de navire pour atteindre le coffre.
+      HOC 2018 Level_6: Navigue à travers la glace pour atteindre le saumon.
+      HOC 2018 Level_7a: Explore les ruines sous-marines à la recherche d'un coffre.
+      HOC 2018 Level_9b: Suis le corail pour atteindre le trésor.
       Infinity_catch: Peux-tu aider Elsa («acteur 2») à rattraper Anna en utilisant
         les touches de direction ?
       Infinity_finale: Crée ce que tu veux et partage-le !
@@ -365,8 +364,8 @@ fr-FR:
       MC HOC 2016 Level 2-2: Le poulet est immobile. Placez des blocs « se déplacer »
         et « tourner » dans l'emplacement « après génération » pour qu'il se déplace.
       MC HOC 2016 Level 3: Génial, le poulet s'est déplacé ! Mais il s'est ensuite
-        arrêté. Dans les jeux, les poulets se déplacent tout le temps. Utilisez une
-        boucle « faire à l'infini » pour que ces poulets continuent à se déplacer.
+        arrêté. Dans les jeux, les poulets se déplacent tout le temps. Utilise une
+        boucle `faire à l'infini` pour que ces poulets continuent de se déplacer.
       MC HOC 2016 Level 4: 'Là, les poulets ont l''air bizarre : ils vont tous dans
         le même sens. Les jeux utilisent des déplacements aléatoires pour rendre les
         mouvements réalistes. Ordonnez aux poulets de « tourner aléatoirement ».'
@@ -497,33 +496,36 @@ fr-FR:
       Standalone_Artist_1: Bienvenue à l'Artiste ! Tout d'abord, nous allons essayer
         de faire un simple carré à l'aide du bloc «Tourner à droite» et du bloc «Avancer».
         Chaque côté doit mesurer 100 pixels.
-      Standalone_Artist_2: "Draw this diamond with 120 and 60\ndegree angles and 150
-        pixel long sides.\\\r\n\\\r"
-      Standalone_Artist_3: "Pouvez-vous dessiner cet hexagone avec des côtés de 100\npixels
-        et des angles de 60 degrés ?\\\r\n\\\r"
-      Standalone_Artist_4: "Now you've got a new block to play\nwith, the loop. This
-        will repeat a set of commands. What happens if you loop\nthese commands 6
-        times?\\\r\n\\\r"
-      Standalone_Artist_5: "How many times do you need to loop\nthis diamond to draw
-        the flower?\\\r\n\\\r"
-      Standalone_Artist_5.5: "Notice how we simplified the diamond\ncode by turning
-        it into a loop. You can loop that whole sequence 12 times\nto draw the flower.
-        Hint: You'll need to turn 30 degrees after your diamond\nloop so you don't
-        keep drawing over the same diamond.\\\r\n\\\r"
-      Standalone_Artist_6: "Loop this hexagon code 6 times to\ncreate the design.
-        How many degrees will you need to turn each time? Hint:\ndivide the number
-        of degrees in a circle by the number of times you are looping.\\\r\n\\\r"
-      Standalone_Artist_7: "A function is another programming\ntool to help you avoid
-        repeating yourself. This function draws a flower, so\nyou can use it any time
-        you want to draw a flower. Use this and the new jump\nblock to draw these
-        flowers. Hint: The flowers are 150 pixels apart\\\r\n\\\r"
+      Standalone_Artist_2: Dessine ce diamand avec des angles de 120 et 60 degrés
+        ainsi que des côtés de 150 pixels de long.
+      Standalone_Artist_3: |-
+        Pouvez-vous dessiner cet hexagone avec des côtés de 100
+        pixels et des angles de 60 degrés?
+      Standalone_Artist_4: 'Maintenant tu as un nouveau bloc pour jouer : la boucle.
+        Celle-ci répète un ensemble de commandes. Que se passe-t-il si tu fais boucler
+        ces commandes 6 fois ?'
+      Standalone_Artist_5: Combien de fois te faut-il répéter ce diamant pour dessiner
+        la fleur ?
+      Standalone_Artist_5.5: 'Remarque comment nous avons simplifié le code du diamant
+        en utilisant une boucle. Tu peux répéter en boucle la séquence totale 12 fois
+        pour dessiner la fleur. Astuce: Tu dois tourner de 30 degrés après ta boucle
+        diamant afin de ne pas dessiner sur le même diamant.'
+      Standalone_Artist_6: 'Boucle ce code «Hexagone» 6 fois pour créer le dessin.
+        De combien de degrés devras-tu tourner à chaque fois ? Indice : divise le
+        nombre de degrés dans un cercle par le nombre de fois que tu boucles.'
+      Standalone_Artist_7: 'Une fonction est un autre outil de programmation pour
+        te permettre d’éviter de te répéter. Cette fonction dessine une fleur, alors
+        tu peux l’utiliser chaque fois que tu veux dessiner une fleur. Utilise ceci
+        et le nouveau bloc sauter pour dessiner ces fleurs. Indice : les fleurs sont
+        à 150 pixels les unes des autres'
       Standalone_Artist_8: Voici une fonction appelée «Dessiner une forme» que nous
         avons programmée pour dessiner des hexagones. Exécute le code pour voir ce
         qu'il fait et puis fais des expériences avec la fonction pour voir ce qu’il
         se passe. Peux-tu lui faire dessiner un motif de carrés, de triangles ou d’octogones
         ?
-      Standalone_Artist_9: "Now go ahead and make whatever picture\nyou'd like! You've
-        even got an empty function that you can make do whatever\nyou want!\\\r\n\\\r"
+      Standalone_Artist_9: Maintenant, lance-toi et crée l’image que tu veux ! Tu
+        as même une fonction «Vide» à laquelle tu peux faire faire ce que tu veux
+        !
       Underground Avoiding Lava: La lave se cache sous certains de ces blocs, que
         tu devras couvrir avant d'avancer. Une commande « Si » serait très utile ici.
         Ajoute une commande «Avancer» au bon endroit pour extraire ces blocs.
@@ -558,54 +560,53 @@ fr-FR:
         dans le but » et « Quand la balle manque la raquette » pour créer un jeu.
         Vois combien de points tu peux marquer avant que ton adversaire marque deux
         fois.
-      bounce_10_basketball: Il y a maintenant un but en haut. Attache les blocs « Marquer
-        un point » et « Marquer un point pour l’adversaire » aux blocs « Quand la
-        balle dans le but » et « Quand la balle manque la main » pour créer un jeu.
-        Vois combien de points tu peux marquer avant que ton adversaire marque deux
-        fois.
-      bounce_10_sports: Maintenant, il ya un but au sommet! Attachez les blocs «points
-        de points» et «points adverses» aux blocs «Quand la balle dans le but» et
-        «Quand la balle rate la main» pour faire une partie. Voyez combien de points
-        vous pouvez marquer avant que votre adversaire marque deux fois!
+      bounce_10_basketball: Il y a maintenant un but en haut! Attache les blocs `Marquer
+        un point` et `Marquer un point pour l’adversaire` aux blocs `Quand la balle
+        est dans le but` et `Lorsque la balle manque la main` pour créer un jeu. Vois
+        combien de points tu peux marquer avant que ton adversaire marque deux fois.
+      bounce_10_sports: Maintenant, il y a un but en haut! Attache les blocs «marquer
+        un points» et «marquer un point pour l'adversaire`aux blocs`Quand la balle
+        est dans le but`et`Quand la balle manque le joueur\` pour faire une partie.
+        Regarde combien de points tu peux marquer avant que ton adversaire marque
+        deux fois!
       bounce_11: Tu peux maintenant attacher des blocs au bloc « Lors du lancement ».
         Tu dois attacher le nouveau bloc « Lancer une nouvelle balle » à plusieurs
         endroits. Essaie également de changer la scène ou la vitesse de la raquette
         et de la balle pour voir combien de points tu peux marquer avant que ton adversaire
         marque deux fois.
-      bounce_11_basketball: Tu peux maintenant attacher des blocs au bloc « Lors du
-        lancement ». Tu dois attacher le nouveau bloc « Lancer une nouvelle balle »
-        à plusieurs endroits. Essaie également de changer la scène ou la vitesse de
-        la main et de la balle pour voir combien de points tu peux marquer avant que
-        ton adversaire marque deux fois!
-      bounce_11_sports: Tu peux maintenant attacher des blocs au bloc « Lors du lancement ».
-        Tu dois attacher le nouveau bloc « Lancer une nouvelle balle » à plusieurs
-        endroits. Essaie également de changer la scène ou la vitesse de la main et
-        de la balle pour voir combien de points tu peux marquer avant que ton adversaire
-        marque deux fois!
+      bounce_11_basketball: Tu peux maintenant attacher des blocs au bloc `quand l'exécution
+        commence`. Tu dois attacher le nouveau bloc `Lancer une nouvelle balle` à
+        plusieurs endroits. Essaie également de changer le personnage ou la vitesse
+        de la main et de la balle pour voir combien de points tu peux marquer avant
+        que ton adversaire marque deux fois!
+      bounce_11_sports: Tu peux maintenant attacher des blocs au bloc `quand l'exécution
+        commence`. Tu dois attacher le nouveau bloc `Lancer une nouvelle balle` à
+        plusieurs endroits. Essaie également de changer le personnage ou la vitesse
+        de la main et de la balle pour voir combien de points tu peux marquer avant
+        que ton adversaire marque deux fois!
       bounce_12: Crée ton propre jeu de Casse-briques. Tu peux changer tous les visuels
         et toutes les règles. Quand tu as finis, appuie sur Finis pour permettre à
         tes amis d'essayer le jeu sur leur téléphone.
-      bounce_12_basketball: Crée ton propre jeu de basketball. Tu peux changer toutes
-        les règles. Quand tu as fini, clique «Terminer» pour que tes amis puissent
+      bounce_12_basketball: Crée ton propre jeu de basket. Tu peux changer toutes
+        les règles. Quand tu as fini, clique sur `Terminer` pour que tes amis puissent
         essayer ton jeu sur leur téléphone.
-      bounce_12_sports: 'Créez votre propre jeu! Vous êtes responsable ici: vous pouvez
-        changer toutes les règles, mélanger et faire correspondre les sports, soyez
-        créatifs! Lorsque vous avez terminé, cliquez sur Terminer pour laisser les
-        amis essayer votre jeu sur leurs téléphones.'
-      bounce_1_basketball: Attache un bloc au bloc « Quand flèche vers la gauche »
-        et appuie sur « Exécuter ». Déplace la main à l'aide de la flèche de gauche
-        pour atteindre la cible visée.
-      bounce_1_sports: Rendez-vous au drapeau! Attachez un bloc au bloc "Quand la
-        flèche gauche" et appuyez sur "Exécuter" pour déplacer le joueur au drapeau.
+      bounce_12_sports: 'Crée ton propre jeu! Tu es responsable ici: Tu peux changer
+        toutes les règles, mélanger les sports entre eux, soyez créatifs! Lorsque
+        tu as terminé, clique sur Terminer pour laisser tes amis essayer ton jeu sur
+        leurs téléphones.'
+      bounce_1_basketball: Attache un bloc au bloc `Quand flèche à gauche` et appuie
+        sur `Exécuter`. Déplace la main à l'aide de la flèche de gauche pour atteindre
+        la cible visée.
+      bounce_1_sports: Va au drapeau! Attache un bloc à "Quand flèche à gauche" et
+        appuye sur "Exécuter" pour déplacer le joueur jusqu'au drapeau.
       bounce_2: Attache un bloc aux blocs « Quand flèche vers la droite »  et « Quand
         flèche vers la gauche ». Déplace la raquette pour atteindre les deux cibles
         visées.
-      bounce_2_basketball: Attache un bloc aux blocx « Quand flèche vers la droite »
-        et « Quand flèche vers la gauche » et appuie sur « Exécuter ». Déplace la
-        main pour atteindre les deux cibles visées.
-      bounce_2_sports: Il y a deux drapeaux maintenant! Attachez un bloc aux blocs
-        "Quand flèche à gauche" et "Quand flèche à droite" pour faire bouger votre
-        joueur dans deux directions.
+      bounce_2_basketball: Attache un bloc aux bloc `Quand flèche à droite` et `Quand
+        flèche à gauche`. Déplace la main pour atteindre les deux cibles visées.
+      bounce_2_sports: Il y a deux drapeaux maintenant! Attache un bloc à "Quand flèche
+        à gauche" et à "Quand flèche à droite" pour faire bouger ton joueur dans deux
+        directions.
       bounce_3: Maintenant, essaie quelque chose de semblable avec le bloc « Quand
         flèche vers le haut ». Déplace la raquette jusqu’à la cible visée en haut.
       bounce_4: Cette fois, tu dois ajouter quatre blocs. Déplace la raquette vers
@@ -613,24 +614,23 @@ fr-FR:
       bounce_5: Nous allons faire voler une balle vers le bas, jusqu’à la raquette.
         Attache un bloc au bloc «Quand la balle touche la raquette» pour veiller à
         ce que la balle atteigne la cible visée.
-      bounce_5_basketball: Nous allons faire voler une balle vers le bas, jusqu’à
-        la main. Attache un bloc au bloc « Quand la balle touche la raquette » pour
-        veiller à ce que la balle atteigne le drapeau.
-      bounce_5_sports: La rondelle de hockey va voler vers le bas vers le joueur!
-        Attachez un bloc au bloc "quand le ballon touche le joueur" pour frapper le
-        drapeau.
+      bounce_5_basketball: Nous allons envoyer le ballon vers le bas, jusqu’à la main.
+        Attache un bloc au bloc `lorsque la balle touche la main` pour veiller à ce
+        que la balle atteigne le drapeau.
+      bounce_5_sports: Le palet va glisser vers le bas en direction du joueur! Attache
+        un bloc à "quand la balle touche le joueur" pour atteindre le drapeau.
       bounce_6: Maintenant la cible visée est en haut. Il faudra attacher des blocs
         aux deux blocs « Quand la balle touche » pour résoudre ce puzzle.
       bounce_6_basketball: Maintenant le drapeau est en haut. Tu dois attacher des
-        blocs aux deux blocs « Quand le balle touche… » pour résoudre ce puzzle.
+        blocs aux deux blocs `Quand le balle touche` pour résoudre ce puzzle.
       bounce_6_sports: Maintenant le drapeau est en haut. Tu dois attacher des blocs
-        aux deux blocs « Quand le balle touche… » pour résoudre ce puzzle.
+        aux deux blocs `Quand le balle touche` pour résoudre ce puzzle.
       bounce_7: Attache des blocs à chacun des blocs « Quand ». Fais rebondir la balle
         jusqu'à ce qu'elle frappe la cible visée.
-      bounce_7_basketball: Attache des blocs à tous les blocs « Quand ». Fais rebondir
+      bounce_7_basketball: Attache des blocs à tous les blocs "Quand". Fais rebondir
         la balle jusqu'à ce qu'elle touche le drapeau.
-      bounce_7_sports: Attache des blocs à tous les blocs « Quand ». Fais rebondir
-        la balle jusqu'à ce qu'elle touche le drapeau.
+      bounce_7_sports: Attache des blocs à tous les blocs "Quand". Fais rebondir la
+        balle jusqu'à ce qu'elle touche le drapeau.
       course2_artist_nestedLoops_challenge1: Peux-tu trouver comment faire un dessin
         comme celui-la ?
       course2_artist_nestedLoops_challenge2: Peux-tu trouver comment faire un dessin
@@ -664,6 +664,12 @@ fr-FR:
         des modifications pour voir quels changements sont produits. Comprenez-vous
         comment cela fonctionne ? (Vous pouvez également tout supprimer et mettre
         quelque chose de totalement différent à la place.)
+      course4_collector_nested_loops_challenge2: Aide le collectioneur à atteindre
+        au moins de piles de diamant en utilisant seulement les blocs de la boite
+        à outils. C'est possible de ramasser les 4.
+      course4_harvester_nested_loops_challenge1: '"J''ai besoin d''aide à la ferme!
+        Aide moi à récolter ce maïs en utilisant uniquement les blocs présent dans
+        la boite à outils."'
       courseA_artist_loops1: C'est un nouveau puzzle appelé "Artiste". Joue avec ce
         niveau et dessine quelque chose d'amusant.
       courseA_artist_loops10: Aide moi à placer les pierres pour que je ne tombe pas!
@@ -809,39 +815,39 @@ fr-FR:
         et de **un** bloc `Bouger à l'ouest`.
       courseA_maze_ramp5a_2018: Amène l’oiseau jusqu'au cochon !
       courseA_maze_ramp5a_2019: Amène l’oiseau jusqu'au cochon !
-      courseA_maze_seq1: Amène moi jusqu'au cochon!
-      courseA_maze_seq10: 'Défi: Contourne la TNT pour atteindre le cochon! '
-      courseA_maze_seq11: Déplace-moi dans une direction, puis dans une autre pour
-        m'amener au cochon .
-      courseA_maze_seq11_2018: Déplace-moi dans une direction, puis dans une autre
-        pour m'amener au cochon .
-      courseA_maze_seq11_2019: Déplace-moi dans une direction, puis dans une autre
-        pour m'amener au cochon .
+      courseA_maze_seq1: Amène l'oiseau jusqu'au sale cochon!
+      courseA_maze_seq10: 'Défi: Contourne la TNT pour que l''oiseau atteigne le cochon! '
+      courseA_maze_seq11: Bouge dans une direction, puis dans une autre pour amener
+        l'oiseau jusqu'au cochon.
+      courseA_maze_seq11_2018: Bouge dans une direction, puis dans une autre pour
+        amener l'oiseau jusqu'au cochon.
+      courseA_maze_seq11_2019: Bouge dans une direction, puis dans une autre pour
+        amener l'oiseau jusqu'au cochon.
       courseA_maze_seq12: 'Attrape ce cochon! '
       courseA_maze_seq12_2018: 'Attrape ce cochon! '
       courseA_maze_seq12_2019: 'Attrape ce cochon! '
       courseA_maze_seq13: Attrape ce cochon comme tu peux!
       courseA_maze_seq13_2018: Attrape ce cochon comme tu peux!
       courseA_maze_seq13_2019: Attrape ce cochon comme tu peux!
-      courseA_maze_seq1_2018: Amène moi jusqu'au cochon!
-      courseA_maze_seq1_2019: Amène moi jusqu'au cochon!
-      courseA_maze_seq2: Modifie le code pour m'amener au cochon !
-      courseA_maze_seq3: Corrige le code pour que j'atteigne le cochon!
-      courseA_maze_seq4: ENLEVE un bloc pour que j'atteigne le cochon!
-      courseA_maze_seq5: Essaie celui la tout seul depuis le début.
-      courseA_maze_seq6: Déplace-moi dans une direction, puis dans une autre pour
-        m'amener au cochon !
-      courseA_maze_seq6_2018: Déplace-moi dans une direction, puis dans une autre
-        pour m'amener au cochon !
-      courseA_maze_seq6_2019: Déplace-moi dans une direction, puis dans une autre
-        pour m'amener au cochon !
-      courseA_maze_seq7: Trouve ce qui manque, puis ajoute des blocs pour m'amener
-        au cochon !
-      courseA_maze_seq8: Résoud ce niveau pour m'amener au cochon!
-      courseA_maze_seq8_2018: Résoud ce niveau pour m'amener au cochon!
-      courseA_maze_seq8_2019: Résoud ce niveau pour m'amener au cochon!
-      courseA_maze_seq9: Corrige ce niveau en ajoutant des blocs pour m'amener jusqu'au
-        cochon!
+      courseA_maze_seq1_2018: Amène l'oiseau jusqu'au sale cochon!
+      courseA_maze_seq1_2019: Amène l'oiseau jusqu'au sale cochon!
+      courseA_maze_seq2: Modifie le code pour amener l'oiseau jusq'au cochon .
+      courseA_maze_seq3: Modifie le code pour que l'oiseau atteigne le cochon!
+      courseA_maze_seq4: ENLEVE un bloc pour que l'oiseau atteigne le cochon!
+      courseA_maze_seq5: Essaie celui la depuis le début.
+      courseA_maze_seq6: Bouge dans une direction, puis dans une autre pour amener
+        l'oiseau jusqu'au cochon !
+      courseA_maze_seq6_2018: Bouge dans une direction, puis dans une autre pour amener
+        l'oiseau jusqu'au cochon !
+      courseA_maze_seq6_2019: Bouge dans une direction, puis dans une autre pour amener
+        l'oiseau jusqu'au cochon !
+      courseA_maze_seq7: Trouve ce qui manque, puis ajoute des blocs pour amener l'oiseau
+        jusqu'au cochon!
+      courseA_maze_seq8: Résoud ce niveau et amène l'oiseau jusqu'au cochon!
+      courseA_maze_seq8_2018: Résoud ce niveau et amène l'oiseau jusqu'au cochon!
+      courseA_maze_seq8_2019: Résoud ce niveau et amène l'oiseau jusqu'au cochon!
+      courseA_maze_seq9: Corrige ce niveau en ajoutant des blocs pour amener l'oiseau
+        jusqu'au cochon!
       courseA_maze_seq_challenge1: Il y a une problème. Corrige ce code pour m'amener
         jusqu'au cochon!
       courseA_maze_seq_challenge1_2018: Il y a une problème. Corrige ce code pour
@@ -925,10 +931,10 @@ fr-FR:
         diamants pour terminer le puzzle.
       courseB_collector_loops_challenge2a_2019: Aide Laurel à obtenir au moins **5**
         diamants pour terminer le puzzle.
-      courseB_maze_seq6: Déplace-moi dans une direction, puis dans une autre pour
-        m'amener au cochon !
-      courseB_maze_seq7: Trouve ce qui manque, puis ajoute des blocs pour m'amener
-        au cochon !
+      courseB_maze_seq6: Bouge dans une direction, puis dans une autre pour amener
+        l'oiseau jusqu'au cochon !
+      courseB_maze_seq7: Trouve ce qui manque, puis ajoute des blocs pour amener l'oiseau
+        jusqu'au cochon!
       courseC19_playLab_EOC1: Choisis un arrière plan et un acteur qui sera ton héros
         dans le jeu.
       courseC19_playLab_EOC3: Ajoute 2 ou plus acteurs à ton jeu et fais les bouger.
@@ -1034,15 +1040,33 @@ fr-FR:
         Utilise un nouveau bloc pour faire reculer automatiquement Waddles au départ lorsqu'il court vers le dinosaure et lorsqu'il marque un point.
         Joue au jeu et bouge Waddles avec les flèches jusqu'a ce que tu marques assez de points.
       courseC_artist_loop1: Ajoutons des pizazz!
+      courseC_artist_loops1a: 'Centre l''artiste dans l''aire de jeu, puis dessine
+        un oiseau en utilisant un autocollant. '
+      courseC_artist_loops1a_2018: 'Centre l''artiste dans l''aire de jeu, puis dessine
+        un oiseau en utilisant un autocollant. '
+      courseC_artist_loops2a: Maintenant utilise une boucle pour faire tourner l'oiseau
+        12 fois de 30 degrés.
+      courseC_artist_loops2a_2018: Maintenant utilise une boucle pour faire tourner
+        l'oiseau 12 fois de 30 degrés.
+      courseC_artist_loops3a: Maintenant ajoute une chauve-souris !
+      courseC_artist_loops3a_2018: Maintenant ajoute une chauve-souris !
+      courseC_artist_loops4a: Essaie de sauter en avant de 75 pixels.
+      courseC_artist_loops4a_2018: Essaie de sauter en avant de 75 pixels.
       courseC_artist_loops5a: Essaie de nouveaux autocollants!
       courseC_artist_loops5a_2018: Essaie de nouveaux autocollants!
       courseC_artist_loops5a_2019: Essaie de nouveaux autocollants!
+      courseC_artist_loops5b: Essaie d'ajouter des lignes !
+      courseC_artist_loops5b_2018: Essaie d'ajouter des lignes !
+      courseC_artist_loops5b_2019: Essaie d'ajouter des lignes !
       courseC_artist_loops6a: Ajoute un autre autocollant!
       courseC_artist_loops6a_2018: Ajoute un autre autocollant!
       courseC_artist_loops6a_2019: Ajoute un autre autocollant!
       courseC_artist_loops7a: Joue avec les boucles et les angles.
       courseC_artist_loops7a_2018: Joue avec les boucles et les angles.
       courseC_artist_loops7a_2019: Joue avec les boucles et les angles.
+      courseC_artist_loops8a: Maintenant essaie quelque chose par toi même!
+      courseC_artist_loops8a_2018: Maintenant essaie quelque chose par toi même!
+      courseC_artist_loops8a_2019: Maintenant essaie quelque chose par toi même!
       courseC_artist_loopsPre1a: Il est temps de faire tourner cette ligne!
       courseC_artist_loopsPre1a_2018: Il est temps de faire tourner cette ligne!
       courseC_artist_loopsPre1a_2019: Il est temps de faire tourner cette ligne!
@@ -1052,12 +1076,66 @@ fr-FR:
         jeu, puis dessine une ligne. '
       courseC_artist_loopsPrePre1a_2019: 'Amène l''artiste au centre de l''aire de
         jeu, puis dessine une ligne. '
+      courseC_artist_prog1: Amuse toi avec les blocs dans la boite à outils pour voir
+        ce qu'ils font!
+      courseC_artist_prog1_2018: Amuse toi avec les blocs dans la boite à outils pour
+        voir ce qu'ils font!
+      courseC_artist_prog1_2019: Amuse toi avec les blocs dans la boite à outils pour
+        voir ce qu'ils font!
+      courseC_artist_prog2: Fais glisser les blocs sur l'ecran pour que l'artiste
+        dessine sur les lignes grises dans le dessin. (Chaque ligne fait 100 pixels
+        de long)
+      courseC_artist_prog2_2018: Fais glisser les blocs sur l'ecran pour que l'artiste
+        dessine sur les lignes grises dans le dessin. (Chaque ligne fait 100 pixels
+        de long)
+      courseC_artist_prog2_2019: Fais glisser les blocs sur l'ecran pour que l'artiste
+        dessine sur les lignes grises dans le dessin. (Chaque ligne fait 100 pixels
+        de long)
+      courseC_artist_prog3: Chaque côté du carré intérieur fait 100 pixels et tous
+        les angles sont à 90 degrés.
+      courseC_artist_prog3_2018: Chaque côté du carré intérieur fait 100 pixels et
+        tous les angles sont à 90 degrés.
+      courseC_artist_prog3_2019: Chaque côté du carré intérieur fait 100 pixels et
+        tous les angles sont à 90 degrés.
+      courseC_artist_prog4: Termine la fusée de Starle pour qu'elle puisse ratrapper
+        son animal.
+      courseC_artist_prog4_2018: Termine la fusée de Starle pour qu'elle puisse ratrapper
+        son animal.
+      courseC_artist_prog4_2019: Termine la fusée de Starle pour qu'elle puisse ratrapper
+        son animal.
       courseC_artist_prog5: 'Cette maison a besoin d''un toit ! Dessine le triangle.  Indice
         : les trois côtés sont de la même longueur.'
       courseC_artist_prog5_2018: 'Cette maison a besoin d''un toit ! Dessine le triangle.  Indice
         : les trois côtés sont de la même longueur.'
       courseC_artist_prog5_2019: 'Cette maison a besoin d''un toit ! Dessine le triangle.  Indice
         : les trois côtés sont de la même longueur.'
+      courseC_artist_prog6: Dessine ce diamant avec des côtés de 200 pixels.
+      courseC_artist_prog6_2018: Dessine ce diamant avec des côtés de 200 pixels.
+      courseC_artist_prog6_2019: Dessine ce diamant avec des côtés de 200 pixels.
+      courseC_artist_prog7: "**Défi:** Cette étiquette est spéciale! Peux-tu trouver
+        comment faire le tour?"
+      courseC_artist_prog7_2018: "**Défi:** Cette étiquette est spéciale! Peux-tu
+        trouver comment faire le tour?"
+      courseC_artist_prog7_2019: "**Défi:** Cette étiquette est spéciale! Peux-tu
+        trouver comment faire le tour?"
+      courseC_artist_prog8: |-
+        Une étiquette de plus. C'est un triangle pour Pi.
+        (Chaque côté fait 150 pixels)
+      courseC_artist_prog8_2018: |-
+        Une étiquette de plus. C'est un triangle pour Pi.
+        (Chaque côté fait 150 pixels)
+      courseC_artist_prog8_2019: |-
+        Une étiquette de plus. C'est un triangle pour Pi.
+        (Chaque côté fait 150 pixels)
+      courseC_artist_prog_challenge1: 'Dessine des pièces pour chacun des animaux. '
+      courseC_artist_prog_challenge1_2018: 'Dessine des pièces pour chacun des animaux. '
+      courseC_artist_prog_challenge1_2019: 'Dessine des pièces pour chacun des animaux. '
+      courseC_artist_prog_challenge2a: _"Aide moi à peindre les lignes jaunes sur
+        cette route!"_
+      courseC_artist_prog_challenge2a_2018: _"Aide moi à peindre les lignes jaunes
+        sur cette route!"_
+      courseC_artist_prog_challenge2a_2019: _"Aide moi à peindre les lignes jaunes
+        sur cette route!"_
       courseC_collector_loops_challenge2: Ramasse au moins **5** diamants!
       courseC_collector_loops_challenge2_2018: Ramasse au moins **5** diamants!
       courseC_collector_loops_challenge2_2019: Ramasse au moins **5** diamants!
@@ -1240,6 +1318,54 @@ fr-FR:
         les arbres et les champs!
       courseC_harvester_loops_challenge2_2019: Rammasse toutes les laitues. Evite
         les arbres et les champs!
+      courseC_maze_debugging1: Corrige le code pour aider Scrat à atteindre le gland.
+      courseC_maze_debugging1_2018: Corrige le code pour aider Scrat à atteindre le
+        gland.
+      courseC_maze_debugging1_2019: Corrige le code pour aider Scrat à atteindre le
+        gland.
+      courseC_maze_debugging2: Utilise tes compétences de débogage pour amener Scrat
+        jusqu'au gland.
+      courseC_maze_debugging2_2018: Utilise tes compétences de débogage pour amener
+        Scrat jusqu'au gland.
+      courseC_maze_debugging2_2019: Utilise tes compétences de débogage pour amener
+        Scrat jusqu'au gland.
+      courseC_maze_debugging3: Enlève des blocs pour que Scrat atteigne le gland!
+      courseC_maze_debugging3_2018: Enlève des blocs pour que Scrat atteigne le gland!
+      courseC_maze_debugging3_2019: Enlève des blocs pour que Scrat atteigne le gland!
+      courseC_maze_debugging4: Quelqu'un a ses directions mélangées! Est ce que tu
+        peux aider?
+      courseC_maze_debugging4_2018: Quelqu'un a ses directions mélangées! Est ce que
+        tu peux aider?
+      courseC_maze_debugging4_2019: Quelqu'un a ses directions mélangées! Est ce que
+        tu peux aider?
+      courseC_maze_debugging5: Débogue ce niveau en réorganisant les blocs.
+      courseC_maze_debugging5_2018: Débogue ce niveau en réorganisant les blocs.
+      courseC_maze_debugging5_2019: Débogue ce niveau en réorganisant les blocs.
+      courseC_maze_debugging6: Trouve ce qui ne va pas et amène Scrat jusqu'au gland.
+      courseC_maze_debugging6_2018: Trouve ce qui ne va pas et amène Scrat jusqu'au
+        gland.
+      courseC_maze_debugging6_2019: Trouve ce qui ne va pas et amène Scrat jusqu'au
+        gland.
+      courseC_maze_debugging7: "**Défi:** Débogue ce niveau en réorganisant, ajoutant,
+        et effaçant des blocs."
+      courseC_maze_debugging7_2018: "**Défi:** Débogue ce niveau en réorganisant,
+        ajoutant, et effaçant des blocs."
+      courseC_maze_debugging7_2019: "**Défi:** Débogue ce niveau en réorganisant,
+        ajoutant, et effaçant des blocs."
+      courseC_maze_debugging9: Débogue ce niveau pour amener Scrat jusqu'au gland.
+      courseC_maze_debugging9_2018: Débogue ce niveau pour amener Scrat jusqu'au gland.
+      courseC_maze_debugging_challenge1: Aide Scrat à décider dans quel chemin tourner
+        pour atteindre le gland.
+      courseC_maze_debugging_challenge1_2018: Aide Scrat à décider dans quel chemin
+        tourner pour atteindre le gland.
+      courseC_maze_debugging_challenge1_2019: Aide Scrat à décider dans quel chemin
+        tourner pour atteindre le gland.
+      courseC_maze_debugging_challenge2: Aide Scrat à atteindre le gland avec seulement
+        4 commandes pour tourner.
+      courseC_maze_debugging_challenge2_2018: Aide Scrat à atteindre le gland avec
+        seulement 4 commandes pour tourner.
+      courseC_maze_debugging_challenge2_2019: Aide Scrat à atteindre le gland avec
+        seulement 4 commandes pour tourner.
       courseC_maze_loops_challenge1a: 'Maintenant Scrat veut utiliser les boucles
         pour essayer d''atteindre son gland! '
       courseC_maze_loops_challenge1a_2018: 'Maintenant Scrat veut utiliser les boucles
@@ -1258,6 +1384,18 @@ fr-FR:
         la boite à outil pour terminer ton code.
       courseC_maze_programming2_2019: Ajoute à nouveau `un bloc`avancer plus\` depuis
         la boite à outil pour terminer ton code.
+      courseC_maze_programming3: Il y a un bloc de trop qui va faire s'écraser l'oiseau.
+        Enlève le en le poussant dans la boite à outils.
+      courseC_maze_programming3_2018: Il y a un bloc de trop qui va faire s'écraser
+        l'oiseau. Enlève le en le poussant dans la boite à outils.
+      courseC_maze_programming3_2019: Il y a un bloc de trop qui va faire s'écraser
+        l'oiseau. Enlève le en le poussant dans la boite à outils.
+      courseC_maze_programming4: Evite la TNT ou des plumes voleront!
+      courseC_maze_programming4_2018: Evite la TNT ou des plumes voleront!
+      courseC_maze_programming4_2019: Evite la TNT ou des plumes voleront!
+      courseC_maze_programming5: Evite la TNT.
+      courseC_maze_programming5_2018: Evite la TNT.
+      courseC_maze_programming5_2019: Evite la TNT.
       courseC_maze_programming6: '"Reste calme et aide moi a trouver ce vilain cochon.
         Autrement je pourrais m''énerver!"'
       courseC_maze_programming6_2018: '"Reste calme et aide moi a trouver ce vilain
@@ -1523,6 +1661,24 @@ fr-FR:
       courseD_artist_nestedLoops_challenge2: Corrige le code pour faire ce dessin!
       courseD_artist_nestedLoops_challenge2_2018: Corrige le code pour faire ce dessin!
       courseD_artist_nestedLoops_challenge2_2019: Corrige le code pour faire ce dessin!
+      courseD_artist_project1: 'Dessine une petite forme, entre **20 et 50** pixels
+        de large. Cela peut être n''importe quelle forme que tu aimes.  '
+      courseD_artist_project1_2018: 'Dessine une petite forme, entre **20 et 50**
+        pixels de large. Cela peut être n''importe quelle forme que tu aimes.  '
+      courseD_artist_project1_2019: 'Dessine une petite forme, entre **20 et 50**
+        pixels de large. Cela peut être n''importe quelle forme que tu aimes.  '
+      courseD_artist_project2: Maintenant prends ta forme et dessines en 2 ou 3 dans
+        une rangée!
+      courseD_artist_project2_2018: Maintenant prends ta forme et dessines en 2 ou
+        3 dans une rangée!
+      courseD_artist_project2_2019: Maintenant prends ta forme et dessines en 2 ou
+        3 dans une rangée!
+      courseD_artist_project3: Fais tourner autour cette ligne de formes!
+      courseD_artist_project3_2018: Fais tourner autour cette ligne de formes!
+      courseD_artist_project3_2019: Fais tourner autour cette ligne de formes!
+      courseD_artist_project4: Il est temps de superposer ces formes!
+      courseD_artist_project4_2018: Il est temps de superposer ces formes!
+      courseD_artist_project4_2019: Il est temps de superposer ces formes!
       courseD_artist_ramp11: Maintenant crée un carré en utilisant Artist!
       courseD_artist_ramp12: Utilise ce que tu as appris pour dessine ce triangle
         à l'intérieur d'un carré.
@@ -1580,14 +1736,47 @@ fr-FR:
         miel.
       courseD_bee_conditionals_challenge2_2019: Ramasse tous les nectars et fais du
         miel.
+      courseD_bee_debugging_challenge1: Regarde comment les abeilles récupèrent le
+        nectar. Peux-tu utiliser la même méthode pour aider l'abeille à faire tout
+        le miel?
       courseD_bee_debugging_challenge1a: Regarde comment l'abeille attrape le nectar.
         Utilise le même modèle pour aider l'abeille à faire du miel.
+      courseD_bee_nestedLoops1: Aide l'abeille à ramasser tout le nectar.
+      courseD_bee_nestedLoops1_2018: Aide l'abeille à ramasser tout le nectar.
+      courseD_bee_nestedLoops1_2019: Aide l'abeille à ramasser tout le nectar.
+      courseD_bee_nestedLoops1a: Aide l'abeille à ramasser tout le nectar.
+      courseD_bee_nestedLoops1a_2018: Aide l'abeille à ramasser tout le nectar.
+      courseD_bee_nestedLoops1a_2019: Aide l'abeille à ramasser tout le nectar.
+      courseD_bee_nestedLoops2: Cette fois, aide l'abeille à ramasser tout le nectar
+        en utilisant le moins possible de blocs.
+      courseD_bee_nestedLoops2_2018: Cette fois, aide l'abeille à ramasser tout le
+        nectar en utilisant le moins possible de blocs.
+      courseD_bee_nestedLoops2_2019: Cette fois, aide l'abeille à ramasser tout le
+        nectar en utilisant le moins possible de blocs.
+      courseD_bee_nestedLoops2_predict1: Cette fois, aide l'abeille à ramasser tout
+        le nectar en utilisant le moins possible de blocs.
+      courseD_bee_nestedLoops2_predict1_2018: Cette fois, aide l'abeille à ramasser
+        tout le nectar en utilisant le moins possible de blocs.
+      courseD_bee_nestedLoops2_predict1_2019: Cette fois, aide l'abeille à ramasser
+        tout le nectar en utilisant le moins possible de blocs.
+      courseD_bee_nestedLoops7: 'Défi: Trouve comment ramasser tous les nectars en
+        utilisant seulement les blocs disponibles.'
+      courseD_bee_nestedLoops7_2018: 'Défi: Trouve comment ramasser tous les nectars
+        en utilisant seulement les blocs disponibles.'
+      courseD_bee_nestedLoops7_2019: 'Défi: Trouve comment ramasser tous les nectars
+        en utilisant seulement les blocs disponibles.'
       courseD_bee_nestedLoops8: Recueille tout le nectar de chaque fleur et fabrique
         du miel dans chaque gâteau de miel. Utilise une boucle imbriquée.
       courseD_bee_nestedLoops8_2018: Recueille tout le nectar de chaque fleur et fabrique
         du miel dans chaque gâteau de miel. Utilise une boucle imbriquée.
       courseD_bee_nestedLoops8_2019: Recueille tout le nectar de chaque fleur et fabrique
         du miel dans chaque gâteau de miel. Utilise une boucle imbriquée.
+      courseD_bee_nestedLoops9: Fais tout le miel.
+      courseD_bee_nestedLoops9_2018: Fais tout le miel.
+      courseD_bee_nestedLoops9_2019: Fais tout le miel.
+      courseD_bee_nestedLoops9_predict2: Fais tout le miel.
+      courseD_bee_nestedLoops9_predict2_2018: Fais tout le miel.
+      courseD_bee_nestedLoops9_predict2_2019: Fais tout le miel.
       courseD_collector_debugging1: Corrige la ou les erreurs pour ramasser les diamants.
       courseD_collector_debugging1a_2018: Corrige la ou les erreurs pour ramasser
         les diamants.
@@ -1619,11 +1808,37 @@ fr-FR:
         comment résoudre ce puzzle.
       courseD_collector_debugging6: "**Défi:** Utilise tes compétences en débogage
         pour corriger les erreurs et ramasser tous les diamants."
+      courseD_collector_debugging_challenge2: Es-tu un expert des boucles imbriquées?
+        Utilise ce que tu as appris jusqu'à maintenant pour ramasser tous les diamants!
+      courseD_collector_nested_loops_challenge2: Aide le collectioneur à atteindre
+        au moins de piles de diamant en utilisant seulement les blocs de la boite
+        à outils. C'est possible de ramasser les 4.
+      courseD_collector_nested_loops_challenge2_2018: Aide le collectioneur à atteindre
+        au moins de piles de diamant en utilisant seulement les blocs de la boite
+        à outils. C'est possible de ramasser les 4.
+      courseD_collector_nested_loops_challenge2_2019: Aide le collectioneur à atteindre
+        au moins de piles de diamant en utilisant seulement les blocs de la boite
+        à outils. C'est possible de ramasser les 4.
       courseD_collector_nested_loops_challenge2a: Aide Laurel à ramasser au moins
         2 tas de diamants.
       courseD_collector_ramp10: Aide Laurel à ramasser tous les diamants.
       courseD_collector_ramp8: Aide Laurel à ramasser tous les diamants.
       courseD_collector_ramp9: Aide Laurel à ramasser tous les diamants.
+      courseD_harvester_nested_loops_challenge1: '"J''ai besoin d''aide à la ferme!
+        Aide moi à récolter ce maïs en utilisant uniquement les blocs présent dans
+        la boite à outils."'
+      courseD_harvester_nested_loops_challenge1_2018: '"J''ai besoin d''aide à la
+        ferme! Aide moi à récolter ce maïs en utilisant uniquement les blocs présent
+        dans la boite à outils."'
+      courseD_harvester_nested_loops_challenge1_2019: '"J''ai besoin d''aide à la
+        ferme! Aide moi à récolter ce maïs en utilisant uniquement les blocs présent
+        dans la boite à outils."'
+      courseD_maze_nestedLoops3: Amène le zombie jusqu'au tournesol en utilisant le
+        moins de blocs possible.
+      courseD_maze_nestedLoops3_2018: Amène le zombie jusqu'au tournesol en utilisant
+        le moins de blocs possible.
+      courseD_maze_nestedLoops3_2019: Amène le zombie jusqu'au tournesol en utilisant
+        le moins de blocs possible.
       courseD_maze_nestedLoops4: |-
         Amène-moi jusqu'au tournesol !
         (Indice : tu devras utiliser une boucle « Répéter » à l'intérieur d'une autre boucle pour réussir ce niveau.)
@@ -1633,9 +1848,48 @@ fr-FR:
       courseD_maze_nestedLoops4_2019: |-
         Amène-moi jusqu'au tournesol !
         (Indice : tu devras utiliser une boucle « Répéter » à l'intérieur d'une autre boucle pour réussir ce niveau.)
+      courseD_maze_nestedLoops5: Amène le zombie jusqu'au tournesol en utilisant le
+        moins de blocs possible!
+      courseD_maze_nestedLoops5_2018: Amène le zombie jusqu'au tournesol en utilisant
+        le moins de blocs possible!
+      courseD_maze_nestedLoops5_2019: Amène le zombie jusqu'au tournesol en utilisant
+        le moins de blocs possible!
       courseD_maze_nestedLoops6: Amène-moi jusqu'au tournesol !
       courseD_maze_nestedLoops6_2018: Amène-moi jusqu'au tournesol !
       courseD_maze_nestedLoops6_2019: Amène-moi jusqu'au tournesol !
+      courseD_maze_ramp1: Pour ce puzzle, mets tous les blocs ensemble et clique "Démarrer"
+        pour le voir faire!
+      courseD_maze_ramp1_2018: Pour ce puzzle, mets tous les blocs ensemble et clique
+        "Démarrer" pour le voir faire!
+      courseD_maze_ramp1_2019: Pour ce puzzle, mets tous les blocs ensemble et clique
+        "Démarrer" pour le voir faire!
+      courseD_maze_ramp2: Fais glisser un bloc `avancer` suppémentaire depuis la boite
+        à outils, puis attache les tous à `quand l'éxecution commence`.
+      courseD_maze_ramp2_2018: Fais glisser un bloc `avancer` suppémentaire depuis
+        la boite à outils, puis attache les tous à `quand l'éxecution commence`.
+      courseD_maze_ramp2_2019: Fais glisser un bloc `avancer` suppémentaire depuis
+        la boite à outils, puis attache les tous à `quand l'éxecution commence`.
+      courseD_maze_ramp3: Il y a un bloc de trop qui va faire s'écraser l'oiseau.
+        Enlève le en le poussant dans la boite à outils.
+      courseD_maze_ramp3_2018: Il y a un bloc de trop qui va faire s'écraser l'oiseau.
+        Enlève le en le poussant dans la boite à outils.
+      courseD_maze_ramp4: Evite la TNT ou des plumes voleront!
+      courseD_maze_ramp4_2018: Evite la TNT ou des plumes voleront!
+      courseD_maze_ramp5: Evite la TNT.
+      courseD_maze_ramp5_2018: Evite la TNT.
+      courseD_maze_ramp5_2019: Evite la TNT.
+      courseD_maze_ramp5a: Regarde bien la séquence et essaie de trouver comment atteindre
+        ce cochon!
+      courseD_maze_ramp5a_2018: Regarde bien la séquence et essaie de trouver comment
+        atteindre ce cochon!
+      courseD_maze_ramp5b: Navigue dans ce labyrinthe pour aider l'oiseau à trouver
+        le cochon!
+      courseD_maze_ramp5b_2018: Navigue dans ce labyrinthe pour aider l'oiseau à trouver
+        le cochon!
+      courseD_maze_ramp5b_2019: Navigue dans ce labyrinthe pour aider l'oiseau à trouver
+        le cochon!
+      courseD_maze_ramp5c: Aide l'oiseau à atteindre le cochon.
+      courseD_maze_ramp5c_2018: Aide l'oiseau à atteindre le cochon.
       courseD_maze_ramp6: '"Reste calme et aide moi a trouver ce vilain cochon. Autrement
         je pourrais m''énerver!"'
       courseD_maze_ramp7: Amène l’oiseau jusqu'au cochon !
@@ -1680,6 +1934,14 @@ fr-FR:
         amis!
       courseD_playLab_condFP_2018: Maintenant construis ton propre jeu pour montrer
         à tes amis!
+      courseD_scrat_ramp1: Pour ce puzzle, mets tous les blocs ensemble et clique
+        "Démarrer" pour le voir faire!
+      courseD_scrat_ramp2: Fais glisser un bloc `avancer` suppémentaire depuis la
+        boite à outils, puis attache les tous à `quand l'éxecution commence`.
+      courseD_scrat_ramp3: Il y a un bloc de trop qui va faire s'écraser Scrat. Enlève
+        le en le poussant dans la boite à outils.
+      courseD_scrat_ramp4: Evite la glace craquelé pour garder Scrat sain et sauf!
+      courseD_scrat_ramp5: Evite la glace craquelé.
       courseD_scrat_ramp6: "_\"Keep calm and help me find the\nbad pig. Otherwise
         I might get angry!\"_\\\r\n\\\r\nWhen you have several blocks\nin a row, try
         moving them inside of a `repeat` loop.  This will do the same\nthing with
@@ -1880,6 +2142,9 @@ fr-FR:
         avec une seule boucle?
       courseF_artist_for_challenge2_2019: Peux-tu trouver comment récréer ce dessin
         avec une seule boucle?
+      courseF_bee_for4: Aide l'abeille à ramasser tout le nectar.
+      courseF_bee_for4_2018: Aide l'abeille à ramasser tout le nectar.
+      courseF_bee_for4_2019: Aide l'abeille à ramasser tout le nectar.
       courseF_bee_for8: |-
         Tu as compris ! Quelle doit être ton augmentation pour recueillir 3, 6, 9, 12, 15 nectars ?
         Indice : que dois-tu ajouter à chaque numéro pour obtenir le nombre suivant ?
@@ -1956,8 +2221,8 @@ fr-FR:
         paysage hivernal.
       frozen line: Salut! Je suis Elsa de Arendelle. Aide-moi à créer une seule ligne.
       frozen perpendicular: Maintenant, voyons si nous pouvons créer deux lignes qui
-        soient à un angle de 90 degrés l’une de l’autre. Tu devras utiliser le bloc
-        «Tourner» ainsi que le bloc «Déplacer».
+        ont une angle de 90 degrés entre elles. Tu devras utiliser le bloc « Tourner
+        » ainsi que le bloc « Avancer ».
       frozen snowflake branch: Essaie d'utiliser le bloc «Créer une branche de flocon
         de neige» pour créer trois branches, qui commencent à ressembler à un flocon
         de neige.
@@ -1997,7 +2262,62 @@ fr-FR:
         Voici une toile à la résolution plus élevée pour dessiner dessus - 16 pixels par 16 pixels !
 
         Regarde ce qui se passe lorsque nous commençons à faire preuve de créativité avec les bits ?
+      iceage_click_hello: 'Peux-tu aider Sid à appeler son ami lorsque tu cliques
+        sur lui? '
+      iceage_free_play: 'Il est temps de créerton propre jeu ou ta propre histoire! '
+      iceage_hello1: Aide Sid à dire "Bonjour!" en glissant le bloc `dit` pour le
+        connecter sous l'évènement `quand l'exécution commence`.
+      iceage_hello2: Aide Manny et Sid à se saluer l'un l'autre en utilisant deux
+        fois le bloc `l'acteur__dit`.
+      iceage_move_events: Ecris le code pour aider Scrat à ramasser tous les glands!
+      iceage_move_to_actor: Connecte un bloc à l'évènement `lorsque l'acteur touche`
+        pour jouer un son lorsque Diego trouve Manny.
+      iceage_move_to_flag: Scrat cherche son gland! Peux-tu l'aider à bouger les 200
+        derniers pixels?
+      iceage_repeat: Aide Granny à faire de l'exercice en bougeant de gauche à droite
+        de façon répété.
+      iceage_sound_and_points: 'Peux-tu terminer ce programme pour que tu **joues
+        un son** et **marque un point** lorsque Sid et Granny se rencontrent? '
+      iceage_throw_hearts: Utilise la commande `acteur__lancer` pour que Sid (acteur
+        1) envoie des coeurs à Granny (acteur 2) et que l'humeur de granny devienne
+        bonne lorsqu'elle se fait toucher par eux.
+      iceage_warn_ice_age: Modifie cette scène avec un arrière-plan glacé et configure
+        la vitesse de Sid (acteur 1) sur rapide.
       k-1 maze 1: Peux-tu me faire aller vers l’Ouest pour rejoindre le cochon ?
+      ramp_artist_loops1: Avance de 60 pixels pour terminer ce puzzle.
+      ramp_artist_loops1_2018: Avance de 60 pixels pour terminer ce puzzle.
+      ramp_artist_loops1_2019: Avance de 60 pixels pour terminer ce puzzle.
+      ramp_artist_loops2: Avance 5 fois et dessine cette ligne colorée.
+      ramp_artist_loops2_2018: Avance 5 fois et dessine cette ligne colorée.
+      ramp_artist_loops2_2019: Avance 5 fois et dessine cette ligne colorée.
+      ramp_artist_loops3: Utilise une boucle `répéter` pour dessiner 5 tirets de couleur.
+      ramp_artist_loops3_2018: Utilise une boucle `répéter` pour dessiner 5 tirets
+        de couleur.
+      ramp_artist_loops3_2019: Utilise une boucle `répéter` pour dessiner 5 tirets
+        de couleur.
+      ramp_artist_loops4: Que se passe-t-il lorsque tu ajoutes un bloc pour tourner
+        à 72 degrés après tout le reste dans la boucle?
+      ramp_artist_loops4_2018: Que se passe-t-il lorsque tu ajoutes un bloc pour tourner
+        à 72 degrés après tout le reste dans la boucle?
+      ramp_artist_loops5: Utilise des boucles pour créer cet escalier.
+      ramp_artist_loops5_2018: Utilise des boucles pour créer cet escalier.
+      ramp_artist_loops5_2019: Utilise des boucles pour créer cet escalier.
+      ramp_artist_loops6: Edite ta boucle pour dessiner cette échelle.
+      ramp_artist_loops6_2018: Edite ta boucle pour dessiner cette échelle.
+      ramp_artist_loops6_2019: Edite ta boucle pour dessiner cette échelle.
+      ramp_artist_loops7: Cherche un motif et réduis ce code en utilisant des boucles!
+      ramp_artist_loops7_2018: Cherche un motif et réduis ce code en utilisant des
+        boucles!
+      ramp_artist_loops7_2019: Cherche un motif et réduis ce code en utilisant des
+        boucles!
+      ramp_artist_loops8: Cherche un motif et réduis ce code en utilisant des boucles.
+      ramp_artist_loops8_2018: Cherche un motif et réduis ce code en utilisant des
+        boucles.
+      ramp_artist_loops8_2019: Cherche un motif et réduis ce code en utilisant des
+        boucles.
+      ramp_artist_loops9: Résous ce puzzle en dessinant un carré.
+      ramp_artist_loops9_2018: Résous ce puzzle en dessinant un carré.
+      ramp_artist_loops9_2019: Résous ce puzzle en dessinant un carré.
       scrat 16: Gland ! Gland ! Gland ! Utilise un bloc « Si » pour m'y amener avec
         le plus petit nombre de blocs possible.
       scrat 17: Ok, recommençons pour s'entraîner ! Ce n'est pas très différent, mais

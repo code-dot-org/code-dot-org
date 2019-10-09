@@ -17956,9 +17956,36 @@ es-MX:
             Nested Loops in Frozen:
               name: Bucles anidados en Frozen
           title: Hora del Código Perú 2019
+        csp6-pilot:
+          stages:
+            Algorithms Solve Problems:
+              name: Los algoritmos resuelven problemas
+            Algorithm Efficiency:
+              name: Eficiencia del algoritmo
+            Unreasonable Time:
+              name: Tiempo poco razonable
+            Traveling Salesman:
+              name: Vendedor viajero
         denny-science-8:
+          title: Detector de colisiones
           stages:
             'Earthquake Detector: Designing Screens':
               name: 'Detector de terremotos: diseño de pantallas'
             'Earthquake Detector: Processing with Events':
               name: 'Detector de terremotos: procesamiento con eventos'
+            'Collision Detector: Designing Screens':
+              name: 'Detector de colisiones: diseño de pantallas'
+            'Collision Detector: Processing with Events':
+              name: 'Detector de colisiones: procesamiento con eventos'
+        denny-science-copy:
+          stages:
+            'Collision Detector: Designing Screens':
+              name: 'Detector de colisiones: diseño de pantallas'
+            'Collision Detector: Processing with Events':
+              name: 'Detector de colisiones: procesamiento con eventos'
+        dance-2019:
+          stages:
+            Dance Party:
+              name: Fiesta de baile
+          description: "¡Programa tu propia fiesta de baile para compartir con tus
+            amigos!"

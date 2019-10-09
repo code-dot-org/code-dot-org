@@ -70,7 +70,7 @@ const customInputTypes = {
         );
     },
     generateCode(block, arg) {
-      return Blockly.JavaScript.translateVarName(block.getTitleValue(arg.name));
+      return `'${block.getTitleValue(arg.name)}'`;
     }
   },
   limitedColourPicker: {

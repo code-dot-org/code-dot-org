@@ -823,6 +823,7 @@
   carousel_heading_beyond_languages: "Tutoriels dans d'autres langages de programmation"
   carousel_heading_apps_games: "Crée tes propres applications ou jeux"
   carousel_heading_university: "Cours universitaires en ligne"
+  carousel_heading_online_university: "Parcours Universitaires en ligne Disponible"
   carousel_heading_webpages: "Apprendre à faire des pages Web"
   carousel_heading_robots: "Apprendre à programmer avec des robots"
   carousel_heading_ide: "Plateformes populaires parmi les enseignants"
@@ -911,8 +912,10 @@
   coursef-2017_name: Cours F (2017)
   pre-express-2018_name: Cours rapide pour les primo-lecteurs (2018)
   pre-express-2019_name: Cours rapide pour les primo-lecteurs (2019)
+  csd3_name: 'Unité 3 : Animation et jeux'
   accelerated_name: "Cours accéléré"
   express_name: "Cours Express"
+  pre-express_name: Parcours rapide pour les nouveaux-lecteurs
   20-hour_name: Cours accéléré
   algebra_name: "Informatique en algèbre"
   AlgebraA_name: "Informatique en algèbre cours A"
@@ -1384,6 +1387,12 @@
   header_help_support: 'Aide et support '
   header_report_bug: "Rapporter un problème"
   header_tutorials: "Tutoriels"
+  app_lab_documentation: "Documentation du Laboratoire d'Applications"
+  app_lab_tutorials: "Tutoriels sur le Laboratoire d'Applications"
+  game_lab_documentation: "Documentation du Laboratoire de Jeux"
+  game_lab_tutorials: "Tutoriels sur le Laboratoire de Jeux"
+  sprite_lab_documentation: "Documentation du Laboratoire de Lutins"
+  sprite_lab_tutorials: "Tutoriels sur le Laboratoire de Lutins"
   header_documentation: "Documentation"
   user_header_label: "Bonjour %{username}"
   user_header_team: "Équipe"
