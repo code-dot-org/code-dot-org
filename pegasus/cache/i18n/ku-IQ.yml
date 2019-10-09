@@ -339,8 +339,8 @@ ku-TR:
   are_you_teacher: ئایا تۆ مامۆستای؟
   volunteer_engineer_submission_field_name: ناو
   volunteer_engineer_submission_field_description: باسکردن
-  volunteer_engineer_submission_field_email: ناونیشانی پۆستی ئەلیكترۆنی
-  volunteer_engineer_submission_field_email_placeholder: ناونیشانی پۆستی ئەلیكترۆنی
+  volunteer_engineer_submission_field_email: ناونیشانی ئیمەیڵ
+  volunteer_engineer_submission_field_email_placeholder: ناونیشانی ئیمەیڵ
   volunteer_engineer_submission_submit: بنێرە
   volunteer_engineer_submission_experience_university_student_or_researcher: خوێندکاری
     زانکۆ (یان توێژەر)
@@ -424,9 +424,6 @@ ku-TR:
   user_header_signin: چوونەژوورەوە
   user_header_gamelab: تاقیگەی یاری
   applab_tile_start_tutorial: دەستپێبکە
-  account_sign_up_email_opt_in: ئایا دەتوانین نامەی پۆستی ئەلیكترۆنیت بۆ بنێرین دەربارەی
-    نوێكاریەكانی خولەكانمان، هەلی خولی دەورووبەرت، یان هەواڵی تری تایبەت بە زانستی
-    کۆمپیوتەر؟ (نزیكەی یەك جار لە مانگێك)
   account_sign_up_child_accept_terms: دووپاتی دەكەمەوە كە مۆڵەتم لە باوانم یان لە
     بەخێوكەری یاساییم وەرگرتووە تا خزمەتگوزارییەكانی (Code.org) بەكاربهێنم.
   hoc_overview_start_tutorial: دەستپێبکە

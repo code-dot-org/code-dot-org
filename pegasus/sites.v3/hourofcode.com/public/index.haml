@@ -124,8 +124,9 @@ social:
   -# Map
   - unless @country == 'ma' # Hide map for Morocco because of sensitive border disputes misrepresented in map
     #maparea.full-width
-      -# Show a picture of the map unless it is currently the week of HOC.
-      -if hoc_mode != "actual-hoc"
+      -# During pre-Hour of Code season, show the embedded map.
+      -# All other times show a picture of the map.
+      -if hoc_mode == "pre-hoc"
         = view :hoc_events_map
         .footnote=hoc_s(:map_warning).gsub(/%{events_url}/, resolve_url('/events'))
       -else
