@@ -4,7 +4,7 @@ const fish = {
   // BODY KNN DATA: [width (in pixels), height (in pixels), isPointy (0/1 bool)]
   bodies: {
     body1: {
-      src: '/images/fish/body_1.png',
+      src: 'images/fish/body_1.png',
       anchor: [84, 84],
       eyeAnchor: [20, 5],
       mouthAnchor: [23, 15],
@@ -14,7 +14,7 @@ const fish = {
       knnData: [32, 32, 0]
     },
     body2: {
-      src: '/images/fish/body_2.png',
+      src: 'images/fish/body_2.png',
       anchor: [84, 84],
       eyeAnchor: [32, 5],
       mouthAnchor: [37, 15],
@@ -26,28 +26,28 @@ const fish = {
   },
   // EYE KNN DATA: [width (in pixels), height (in pixels)]
   eyes: {
-    eye1: {src: '/images/fish/eye_1.png', knnData: [7, 7]},
-    eye2: {src: '/images/fish/eye_2.png', knnData: [9, 8]}
+    eye1: {src: 'images/fish/eye_1.png', knnData: [7, 7]},
+    eye2: {src: 'images/fish/eye_2.png', knnData: [9, 8]}
   },
   // MOUTH KNN DATA: [hasTeeth (0/1 bool)]
   mouths: {
-    mouth1: {src: '/images/fish/mouth_1.png', knnData: [1]},
-    mouth2: {src: '/images/fish/mouth_2.png', knnData: [0]}
+    mouth1: {src: 'images/fish/mouth_1.png', knnData: [1]},
+    mouth2: {src: 'images/fish/mouth_2.png', knnData: [0]}
   },
   // SIDE FIN KNN DATA: [width (in pixels), height (in pixels), isPointy (0/1 bool)]
   sideFins: {
-    sideFin1: {src: '/images/fish/side_fin_1.png', knnData: [17, 18, 0]},
-    sideFin2: {src: '/images/fish/side_fin_2.png', knnData: [12, 13, 1]}
+    sideFin1: {src: 'images/fish/side_fin_1.png', knnData: [17, 18, 0]},
+    sideFin2: {src: 'images/fish/side_fin_2.png', knnData: [12, 13, 1]}
   },
   // TOP FIN KNN DATA: [width (in pixels), height (in pixels), isPointy (0/1 bool)]
   topFins: {
-    topFin1: {src: '/images/fish/top_fin_1.png', knnData: [16, 15, 0]},
-    topFin2: {src: '/images/fish/top_fin_2.png', knnData: [20, 26, 1]}
+    topFin1: {src: 'images/fish/top_fin_1.png', knnData: [16, 15, 0]},
+    topFin2: {src: 'images/fish/top_fin_2.png', knnData: [20, 26, 1]}
   },
   // TAIL KNN DATA: [width (in pixels), height (in pixels), isPointy (0/1 bool)]
   tails: {
-    tail1: {src: '/images/fish/tail_1.png', knnData: [14, 30, 0]},
-    tail2: {src: '/images/fish/tail_2.png', knnData: [14, 28, 1]}
+    tail1: {src: 'images/fish/tail_1.png', knnData: [14, 30, 0]},
+    tail2: {src: 'images/fish/tail_2.png', knnData: [14, 28, 1]}
   }
 };
 
