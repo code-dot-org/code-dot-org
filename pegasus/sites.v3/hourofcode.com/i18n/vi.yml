@@ -10,6 +10,9 @@ vi:
   campaign_date_full: "Tháng 12 5-11"
   campaign_date_year: "2016"
   campaign_date_full_year: "Tháng 12 5-11, 2016"
+  hoc2019_header: 'Học khoa học máy tính. Thay đổi thế giới.'
+  hoc2019_header_line1_mobile: 'Học khoa học máy tính.'
+  hoc2019_header_line2_mobile: 'Thay đổi thế giới.'
   codeorg_homepage_hoc2018_curriculum: 'Tiến xa hơn với <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">các khóa học tại Code.org</a>'
   codeorg_homepage_hoc2018_dance_heading: 'Tạo buổi <span class="highlight-word"> Khiêu vũ &nbsp; Tiệc tùng</span> của chính bạn'
   codeorg_homepage_hoc2018_header_line1: 'Giờ Lập Trình đang đến rồi đây...'
