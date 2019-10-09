@@ -61,7 +61,9 @@ class AddSectionDialog extends Component {
               handleCancel={handleCancel}
             />
           )}
-          {loginType && <EditSectionForm title={title} locale={locale} />}
+          {loginType && (
+            <EditSectionForm title={title} locale={locale} newSection={true} />
+          )}
         </PadAndCenter>
       </BaseDialog>
     );
