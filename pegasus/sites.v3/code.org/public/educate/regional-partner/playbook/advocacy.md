@@ -13,7 +13,7 @@ Regional partners can use the following resources to advocate for K-12 computer 
 
 - [State Fact Sheets](http://code.org/promote): This includes state-specific data on why it is important for every student to understand computer science (click on your state, then “view state fact-sheet”)
 - [State Policy Landscape] (https://docs.google.com/document/d/1J3TbEQt3SmIWuha7ooBPvlWpiK-pNVIV5uuQEzNzdkE/edit): Provides a narrative summary of state-by-state accomplishments in computer science policy
--Talk to your Department of Education about computer science education!
+- Talk to your Department of Education about computer science education!
 
 ## Teacher Certification Resources
 
