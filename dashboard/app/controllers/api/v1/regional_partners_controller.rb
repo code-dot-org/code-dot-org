@@ -14,10 +14,20 @@ class Api::V1::RegionalPartnersController < ApplicationController
 
   # GET /api/v1/regional_partners/capacity?role=:role&regional_partner_value=:regional_partner
   def capacity
-    role = params[:role]
-    regional_partner_value = current_user.workshop_admin? ? params[:regional_partner_value] : current_user.regional_partners.first.try(:id)
+    regional_partner_value = current_user.workshop_admin? ?
+      params[:regional_partner_value] :
+      current_user.regional_partners.first.try(:id)
 
-    render json: {capacity: get_partner_cohort_capacity(regional_partner_value, role)}
+    render json: {capacity: get_partner_cohort_capacity(regional_partner_value, params[:role])}
+  end
+
+  # GET /api/v1/regional_partners/enrolled?role=:role&regional_partner_value=:regional_partner
+  def enrolled
+    regional_partner_value = current_user.workshop_admin? ?
+      params[:regional_partner_value] :
+      current_user.regional_partners.first.try(:id)
+
+    render json: {enrolled: get_partner_enrolled_cohort(regional_partner_value, params[:role])}
   end
 
   # GET /api/v1/regional_partners/show/:id
@@ -76,5 +86,14 @@ class Api::V1::RegionalPartnersController < ApplicationController
       end
     end
     nil
+  end
+
+  def get_partner_enrolled_cohort(regional_partner_value, role)
+    return if ['none', 'all'].include? regional_partner_value
+    # TODO: remove dummy data
+    # get regional partner object
+    # query workshops of type role
+    # count enrollment
+    11
   end
 end

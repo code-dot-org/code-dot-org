@@ -7,10 +7,7 @@ import {connect} from 'react-redux';
 import Spinner from '../components/spinner';
 import $ from 'jquery';
 import CohortViewTable from './cohort_view_table';
-import CohortCalculator, {
-  countAcceptedApplications,
-  countRegisteredApplicants
-} from './cohort_calculator';
+import CohortCalculator, {countAcceptedApplications} from './cohort_calculator';
 import RegionalPartnerDropdown, {
   RegionalPartnerPropType
 } from '../components/regional_partner_dropdown';
@@ -111,7 +108,6 @@ class CohortView extends React.Component {
                 this.props.regionalPartnerFilter.value
               }
               accepted={countAcceptedApplications(this.state.applications)}
-              registered={countRegisteredApplicants(this.state.applications)}
             />
           )}
 
