@@ -1,5 +1,10 @@
-import React, {PropTypes} from 'react';
-import fish, {fishShape, bodyShape, bodyPartShape} from '../../utils/fishData';
+/* eslint-disable react/prop-types */
+/* See https://github.com/yannickcr/eslint-plugin-react/issues/2343
+ * for explanation for above eslint-disable.
+ * */
+
+import React from 'react';
+import fish, {fishShape} from '../../utils/fishData';
 const P5 = require('../../utils/loadP5');
 
 export const generateRandomFish = () => {
