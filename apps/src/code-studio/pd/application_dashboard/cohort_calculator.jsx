@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {Table} from 'react-bootstrap';
 import {RegionalPartnerValuePropType} from '../components/regional_partner_dropdown';
+import {CohortCalculatorStatuses} from '@cdo/apps/generated/pd/sharedApplicationConstants';
 import $ from 'jquery';
 
 const styles = {
@@ -9,6 +10,18 @@ const styles = {
     float: 'right'
   }
 };
+
+export function countAcceptedApplications(applications) {
+  (applications || []).filter(app =>
+    CohortCalculatorStatuses.includes(app.status)
+  ).length;
+}
+
+export function countRegisteredApplicants(applications) {
+  // Registered applicants are people with accepted applications and have
+  // enrolled in their assigned workshops.
+  (applications || []).filter(app => app.registered_workshop === 'Yes').length;
+}
 
 export default class CohortCalculator extends React.Component {
   static propTypes = {
@@ -23,18 +36,18 @@ export default class CohortCalculator extends React.Component {
 
     this.state = {
       loading: true,
-      capacity: null,
-      accepted: null,
-      registered: null
+      capacity: null
     };
     this.loadRequest = null;
   }
 
   componentWillMount() {
+    // TODO: load enrollment count
     this.load(this.props.regionalPartnerFilterValue);
   }
 
   componentWillReceiveProps(nextProps) {
+    // TODO: load enrollment count if regionalPartnerFilterValue changes
     this.load(nextProps.regionalPartnerFilterValue);
   }
 
@@ -61,9 +74,7 @@ export default class CohortCalculator extends React.Component {
     }).done(data => {
       this.setState({
         loading: false,
-        capacity: data.capacity,
-        accepted: this.props.accepted,
-        registered: this.props.registered
+        capacity: data.capacity
       });
       this.loadRequest = null;
     });
@@ -89,14 +100,19 @@ export default class CohortCalculator extends React.Component {
               <td>{this.state.capacity}</td>
             </tr>
             <tr>
+              {/*TODO: add hover text explaining what these fields represent*/}
               <td>Accepted</td>
-              <td>{this.state.accepted}</td>
+              <td>{this.props.accepted}</td>
             </tr>
             <tr>
               <td>Remaining Capacity</td>
-              <td>{this.state.capacity - this.state.accepted}</td>
+              <td>
+                {this.state.capacity -
+                  Math.max(this.props.accepted, this.props.registered)}
+              </td>
             </tr>
             <tr>
+              {/*TODO: show total enrollments including non-application enrollment*/}
               <td>Registered</td>
               <td>{this.state.registered}</td>
             </tr>
