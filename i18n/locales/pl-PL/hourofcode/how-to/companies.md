@@ -71,7 +71,7 @@ Rozpocznij Godzinę Kodowania inspirując uczestników i dyskutując, jaki jest 
 - Jeśli jesteście firmą technologiczną, macie zabawne demo, innowacyjne produkty, nad którymi pracuje Wasza firma.
 - Jeśli nie jesteście firmą technologiczną, omówcie sposoby, Wasza firma korzysta z technologii do rozwiązywania problemów i realizacji celów.
 - Zaproście programistów z Waszej firmy, by opowiedzieli, dlaczego postanowili studiować informatykę i o projektach, nad którymi pracują.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- Wskazówki, jak zainteresować dziewczęta informatyką, zobacz [tutaj]({{ urls/girls }}).
 
 ## 6. Programuj!
 

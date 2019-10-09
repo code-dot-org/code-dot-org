@@ -42,8 +42,8 @@ Na początku Godziny Kodowania postaraj się zainspirować swoje dziecko dyskutu
 To nie szkodzi jeśli i Ty, i Twoje dziecko jesteście nowicjuszami w informatyce. Oto kilka pomysłów na rozpoczęcie waszej Godziny Kodowania:
 
 - Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
-- Wymień rzeczy, które używają kodu w codziennym życiu.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- Wymień rzeczy, które używają oprogramowania w codziennym życiu.
+- Wskazówki, jak zainteresować dziewczęta informatyką, zobacz [tutaj]({{ urls/girls }}).
 
 Potrzebujesz więcej pomysłów? Zajrzyj do naszego [ szablonu planu lekcji](/files/AfterschoolEducatorLessonPlanOutline.docx), zawierającego najlepsze praktyki doświadczonych pedagogów.
 
