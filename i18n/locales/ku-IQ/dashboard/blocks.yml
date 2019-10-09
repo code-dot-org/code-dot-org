@@ -248,6 +248,29 @@ ku:
             '"x"': بەیەکداچوو
             '"plus"': کۆ
             '"random"': هەڕەمەکی
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': بوونەوەری ئاسمانی
+            '"BEAR"': وورچ
+            '"CAT"': پشیلە
+            '"DOG"': سەگ
+            '"DUCK"': مراوی
+            '"FROG"': بۆق
+            '"MOOSE"': ڕەنە
+            '"PINEAPPLE"': ئەناناس
+            '"ROBOT"': ڕۆبۆت
+            '"SHARK"': ماسی قرش
+            '"UNICORN"': ئەسپی یەکشاخە
+          LOCATION:
+            "{x: 200, y: 100}": سەرەوە
+            "{x: 200, y: 300}": خوارەوە
+            "{x: 200, y: 200}": ناوەڕاست
+            "{x: 100, y: 100}": سەرەوە لای چەپ
+            "{x: 300, y: 100}": سەرەوە لای ڕاست
+            "{x: 100, y: 300}": خوارەوە لای چەپ
+            "{x: 300, y: 300}": خوارەوە لای ڕاست
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": هەڕەمەکی
       Dancelab_makeNewDanceSprite:
         text: دانەیەکی نوێ دروست بکە لە {COSTUME} بە ناوی {NAME} لە {LOCATION}
         options:
@@ -505,6 +528,20 @@ ku:
       Dancelab_setTint:
         text: سێبەری ڕەنگی {SPRITE} دابنێ بە {VAL}
       Dancelab_setTintEach:
+        text: سێبەری ڕەنگی {THIS} دابنێ بە {VAL}
+        options:
+          THIS:
+            '"ALIEN"': هەموو بوونەوەرە ئاسمانیەکان
+            '"BEAR"': هەموو وورچەکان
+            '"CAT"': هەموو پشیلەکان
+            '"DOG"': هەموو سەگەکان
+            '"DUCK"': هەموو مراویەکان
+            '"FROG"': هەموو بۆقەکان
+            '"MOOSE"': هەموو ڕەنەکان
+            '"PINEAPPLE"': هەموو ئەناناسەکان
+            '"ROBOT"': هەموو ڕۆبۆتەکان
+            '"SHARK"': هەموو قرشەکان
+      Dancelab_setTintEachInline:
         text: سێبەری ڕەنگی {THIS} دابنێ بە {VAL}
         options:
           THIS:

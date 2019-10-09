@@ -1801,3 +1801,8 @@ ko:
               name: 소개
             Nested Loops:
               name: 중첩 반복
+        dance-2019:
+          stages:
+            Dance Party:
+              name: 댄스 파티
+          description: 나만의 댄스 파티의 코드를 만들고 친구와 공유하세요!

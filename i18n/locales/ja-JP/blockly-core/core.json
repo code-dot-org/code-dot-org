@@ -41,6 +41,7 @@
     "CONTROLS_FOREACH_INPUT_ITEM": "各項目の",
     "CONTROLS_FOREACH_TOOLTIP": "リストの各項目に対してアイテムに変数 '%1' を設定し、いくつかのステートメントをしてください。",
     "CONTROLS_FOR_HELPURL": "",
+    "CONTROLS_FOR_INPUT_COUNTER": "",
     "CONTROLS_FOR_INPUT_FROM_TO_BY": "%1から%2まで%3ずつ",
     "CONTROLS_FOR_INPUT_WITH": "くりかえす",
     "CONTROLS_FOR_TOOLTIP": "変数%1は、始めの数字から終わりの数字まで指定した間隔で値をとり、指定したブロックを実行します。",

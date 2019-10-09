@@ -2872,11 +2872,67 @@ de:
           Ich werde zum Problemlöser. Ich gestalte es so, dass alles funktioniert
           wie ich es will. Aber ich möchte auch Designerin werden. Ich möchte die
           Künstlerin und alles von der kreativen Seite her angehen.
+      2:
+        text: Die Erstellung Deiner eigenen Apps ist mit App Lab ganz einfach! Ob
+          du neu in der Programmierung bist oder bereits Erfahrung hast. App Lab ist
+          ein großartiges Werkzeug, um neue Apps zu erstellen und diese mit Deinen
+          Freunden zu teilen.
       3:
         text: Dies ist ein App-Labor. Auf der linken Seite ist Deine App. Auf der
           rechten Seite ist der Code der ausgeführt wird. Du baust Dein Programm indem
           Du Blöcke aus der Toolbox ziehst. Du startest mit einenm Block der "SetProperty"
           genannt wird.
+      4:
+        text: Der Set-Eigenschaft-Baustein verändert das Aussehen der Elemente auf
+          Deinem Bildschirm. Wie die Tasten, Beschriftungen oder sogar der Bildschirm
+          selbst. Zuerst musst du sich entscheiden, welches Element du ändern möchtest.
+          Wenn du mit der Maus über ein Element in Ihrer App fährst, kannst du hier
+          den Namen oder die ID sehen. Wähle dann diese ID aus dem ersten Dropdown-Menü
+          aus.
+      5:
+        text: Elemente haben viele Eigenschaften, die du ändern kannst, wie z. B.
+          Textfarbe, Hintergrundfarbe oder Schriftgröße. Du kannst die vollständige
+          Liste sehen und im zweiten Dropdown-Menü auswählen, welche Eigenschaft du
+          ändern möchtest.
+      6:
+        text: Das letzte Dropdown-Menü ist der Bereich, in dem du den Wert eingeben
+          kannst, den du verwenden möchtest. Der Block wird dir einen Vorschlag machen.
+          Aber du kannst jederzeit selbst verschiedene Farben oder Zahlen eingeben.
+      7:
+        text: 'Sobald du fertig bist, liest sich der Block ein wenig wie ein Satz:
+          "Setze die Hintergrundfarbe der Taste1 auf grün". Klicke auf Ausführen,
+          um die Änderungen zu sehen, die du im Code gemacht hast. Wenn du "Zurücksetzen"
+          klickst, kannst du weitere Blöcke hineinziehen, um andere Dinge an deiner
+          App zu ändern. Wie der Text!'
+      8:
+        text: Für dieses Tutorial werden wir im Blockmodus arbeiten, aber App Lab
+          unterstützt auch die Arbeit im Text.
+      9:
+        text: Sie werden in JavaScript, der Sprache des Webs, programmieren. Jedes
+          Level hat ein Ziel, Anweisungen und ein Bild von dem, was du schaffen sollst.
+      10:
+        text: Wenn du mal nicht weiter kommst, klicke auf dieses Bild und es wird
+          dir genau zeigen, wie du das Level abschließen kannst. Aber sieh bitter
+          erst zu, ob du es nicht vielleicht auch alleine schaffen kannst.
+      11:
+        text: Sobald du das Ziel für diese Stufe erreicht hast, klicken auf "Fertig
+          stellen", um fortzufahren. Das ist alles, was es gibt! Klicke auf den orangefarbenen
+          "Weiter"-Button, um zum nächsten Level zu gelangen und dein Abenteuer mit
+          einem App Lab zu beginnen!
+    applab_intro_events:
+      1:
+        text: Apps sind wirklich cool, denn es ist so etwas wie die Gründung eines
+          eigenen Unternehmens. Man kann alles von Grund auf entwerfen, man kann alles
+          verwalten, und man ist der Besitzer dieses Werkes, das man gerade mit Code
+          erstellt hat.
+      2:
+        text: Jetzt, da Sie das Aussehen Ihrer App ändern können, machen wir sie interaktiv,
+          indem wir auf Ereignisse reagieren! Ereignisse sind Benutzeraktionen wie
+          das Klicken auf eine Schaltfläche, das Blättern durch ein Menü oder das
+          Bewegen mit der Maus über ein Bild. Interaktive Anwendungen benötigen Methoden,
+          um auf Ereignisse zu reagieren, wie z. B. die Wiedergabe eines Sounds, wenn
+          ich auf diese Schaltfläche klicke. Um dies in App Lab zu tun, müssen Sie
+          einen neuen Block namens 'onEvent' verwenden.
     mc_2017_agent_intro:
       11:
         text: Hast du vergessen, was du in einem Level tun musst, findest du oben

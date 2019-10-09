@@ -1790,3 +1790,8 @@
               name: Introduksjon
             Nested Loops:
               name: Løkker i løkker
+        dance-2019:
+          stages:
+            Dance Party:
+              name: Dansefest
+          description: Programmer din egen dansefest du kan dele med vennene dine!

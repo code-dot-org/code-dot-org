@@ -1743,3 +1743,8 @@ ja:
               name: アーティストくりかえし
             Nested Loops:
               name: 入れ子のループ
+        dance-2019:
+          stages:
+            Dance Party:
+              name: ダンスパーティー
+          description: 自分だけのダンスパーティーをプログラムして友達と共有しましょう。
