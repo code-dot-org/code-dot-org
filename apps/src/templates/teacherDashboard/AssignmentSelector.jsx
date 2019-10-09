@@ -341,7 +341,6 @@ export default class AssignmentSelector extends Component {
               style={dropdownStyle}
               disabled={disabled}
             >
-              {!newSection && <option value={noAssignment} />}
               {secondaryOptions.map(
                 scriptAssignId =>
                   assignments[scriptAssignId] && (
@@ -350,7 +349,7 @@ export default class AssignmentSelector extends Component {
                     </option>
                   )
               )}
-              {newSection && <option value={noAssignment} />}
+              <option value={noAssignment} />
             </select>
           </div>
         )}
