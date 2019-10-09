@@ -1192,7 +1192,6 @@ describe('entry tests', () => {
 
   grunt.registerTask('postbuild', [
     'newer:copy:static',
-    'newer:copy:unhash',
     'newer:sass',
     'compile-firebase-rules'
   ]);
@@ -1204,7 +1203,8 @@ describe('entry tests', () => {
     envConstants.DEV ? 'noop' : 'uglify:lib',
     envConstants.DEV ? 'webpack:build' : 'webpack:uglify',
     'notify:js-build',
-    'postbuild'
+    'postbuild',
+    envConstants.DEV ? 'noop' : 'newer:copy:unhash'
   ]);
 
   grunt.registerTask('rebuild', ['clean', 'build']);
