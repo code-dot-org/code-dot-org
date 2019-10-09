@@ -10,5 +10,5 @@
 %link{href: asset_path('css/common.css'), rel: 'stylesheet', type: 'text/css'}
 %link{href: asset_path('css/scratch.css'), rel: 'stylesheet', type: 'text/css'}
 
-%script{src: minifiable_asset_path('js/common.js')}
-%script{src: minifiable_asset_path('js/scratch.js'), data: {appoptions: app_options.to_json}}
+%script{src: webpack_asset_path('js/common.js')}
+%script{src: webpack_asset_path('js/scratch.js'), data: {appoptions: app_options.to_json}}
