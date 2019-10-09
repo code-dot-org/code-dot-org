@@ -10,6 +10,9 @@ uk:
   campaign_date_full: "4-10 грудня"
   campaign_date_year: "2017"
   campaign_date_full_year: "5-11 грудня 2016 року"
+  hoc2019_header: 'Вивчайте інформатику. Змінити світ.'
+  hoc2019_header_line1_mobile: 'Вивчайте інформатику.'
+  hoc2019_header_line2_mobile: 'Змінити світ.'
   codeorg_homepage_hoc2018_curriculum: 'Рухайтесь далі з <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">курсами Code.org</a>'
   codeorg_homepage_hoc2018_dance_heading: 'Create your own <span class="highlight-word">Dance&nbsp;Party</span>'
   codeorg_homepage_hoc2018_header_line1: 'Наближається Година коду...'
@@ -317,7 +320,7 @@ uk:
   map_legend_title: 'Умовні позначення'
   map_legend_hoc_events: 'Заходи Години коду'
   map_legend_cs_tech_jam: 'Технічні студії'
-  map_warning: "The Hour of Code map only shows the first 200,000 registered events. All registered events with a valid address can be viewed on the <a href='%{events_url}'>events page.</a>"
+  map_warning: "A full list of the events can be viewed on the <a href='%{events_url}'>events page.</a>"
   meta_tag_og_title: 'Кожна дитина заслуговує на можливості'
   meta_tag_og_description: 'Година коду є глобальним рухом, який залучає десятки мільйони учнів із більш, як 180 країн, які розмовляють більш, як 45 мовами. Для будь-якого віку від 4 до 104.'
   meta_tag_twitter_title: 'Кожна дитина заслуговує на можливості'
