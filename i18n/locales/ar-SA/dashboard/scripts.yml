@@ -1633,3 +1633,8 @@ ar:
               name: مقدمة
             Nested Loops:
               name: الحلقات المتداخلة
+        dance-2019:
+          stages:
+            Dance Party:
+              name: حفلة رقص
+          description: برمِج حفلة الرقص الخاصة بك لمشاركتها مع أصدقائك.

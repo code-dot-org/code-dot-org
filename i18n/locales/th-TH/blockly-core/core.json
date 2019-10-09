@@ -41,6 +41,7 @@
     "CONTROLS_FOREACH_INPUT_ITEM": "สำหรับแต่ละอัน",
     "CONTROLS_FOREACH_TOOLTIP": "สำหรับแต่ละสิ่งในรายการ ตั้งค่าตัวแปร '%1' เป็นสิ่งนั้น แล้วทำข้อความคำสั่งบางอย่าง",
     "CONTROLS_FOR_HELPURL": "",
+    "CONTROLS_FOR_INPUT_COUNTER": "",
     "CONTROLS_FOR_INPUT_FROM_TO_BY": "จาก %1 จนถึง %2 นับทีละ %3",
     "CONTROLS_FOR_INPUT_WITH": "สำหรับ",
     "CONTROLS_FOR_TOOLTIP": "กำหนดค่าตัวแปร %1 โดยเริ่มนับค่าจากจำนวนเริ่มต้นไปยังจำนวนสิ้นสุด โดยนับข้ามตามจำนวนที่กำหนดไว้ และทำคำสั่งที่ถูกระบุในบล็อก",
