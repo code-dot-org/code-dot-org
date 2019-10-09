@@ -70,7 +70,8 @@ export default class AssignmentSelector extends Component {
     dropdownStyle: PropTypes.object,
     onChange: PropTypes.func,
     disabled: PropTypes.bool,
-    locale: PropTypes.string
+    locale: PropTypes.string,
+    newSection: PropTypes.bool
   };
 
   /**
@@ -246,7 +247,7 @@ export default class AssignmentSelector extends Component {
   };
 
   render() {
-    const {assignments, dropdownStyle, disabled} = this.props;
+    const {assignments, dropdownStyle, disabled, newSection} = this.props;
     let {assignmentFamilies} = this.props;
     const {
       selectedPrimaryId,
@@ -254,6 +255,18 @@ export default class AssignmentSelector extends Component {
       selectedAssignmentFamily,
       versions
     } = this.state;
+
+    // If the user is setting up a new section and selects a course as the
+    // primary assignment, default the secondary assignment to the first
+    // script in the course.
+    const noCurrentSecondaryAssignment = selectedSecondaryId === 'null_null';
+    const defaultScriptId = assignments[selectedPrimaryId]
+      ? assignments[selectedPrimaryId].scriptAssignIds[0]
+      : null;
+    const secondaryId =
+      newSection && noCurrentSecondaryAssignment
+        ? defaultScriptId
+        : selectedSecondaryId;
 
     let secondaryOptions;
     const primaryAssignment = assignments[selectedPrimaryId];
@@ -323,12 +336,12 @@ export default class AssignmentSelector extends Component {
             </div>
             <select
               id="uitest-secondary-assignment"
-              value={selectedSecondaryId}
+              value={secondaryId}
               onChange={this.onChangeSecondary}
               style={dropdownStyle}
               disabled={disabled}
             >
-              <option value={noAssignment} />
+              {!newSection && <option value={noAssignment} />}
               {secondaryOptions.map(
                 scriptAssignId =>
                   assignments[scriptAssignId] && (
@@ -337,6 +350,7 @@ export default class AssignmentSelector extends Component {
                     </option>
                   )
               )}
+              {newSection && <option value={noAssignment} />}
             </select>
           </div>
         )}
