@@ -2,6 +2,7 @@ import React, {PropTypes} from 'react';
 import Row from 'react-bootstrap/lib/Row';
 import Col from 'react-bootstrap/lib/Col';
 import './PondCreator.css';
+import {Fish} from './SpritesheetFish';
 
 export default class Training extends React.Component {
   static propTypes = {
@@ -47,11 +48,11 @@ export default class Training extends React.Component {
 
   componentWillUnmount() {
     this.state.visibleOptions.forEach((row, rowIdx) => {
-      row.forEach((option, colIdx) => {
+      row.forEach((fish, colIdx) => {
         if (this.state.selectedOptions[rowIdx][colIdx]) {
-          this.props.trainer.addExampleData(option.knnData, 0);
+          this.props.trainer.addExampleData(fish.knnData, 0);
         } else {
-          this.props.trainer.addExampleData(option.knnData, 1);
+          this.props.trainer.addExampleData(fish.knnData, 1);
         }
       });
     });
@@ -64,11 +65,23 @@ export default class Training extends React.Component {
           <div key={rowIdx}>
             <Row>
               {row.map((data, colIdx) => (
-                <Col key={colIdx} xs={4}>
-                  <div className="selectable-image-container">
-                    <img
-                      src={data.imgUrl}
-                      onClick={() => this.selectOption(rowIdx, colIdx)}
+                <Col key={colIdx} xs={6}>
+                  <div
+                    className="selectable-image-container"
+                    onClick={() => this.selectOption(rowIdx, colIdx)}
+                  >
+                    <Fish
+                      body={this.state.visibleOptions[rowIdx][colIdx].body}
+                      eye={this.state.visibleOptions[rowIdx][colIdx].eye}
+                      mouth={this.state.visibleOptions[rowIdx][colIdx].mouth}
+                      sideFin={
+                        this.state.visibleOptions[rowIdx][colIdx].sideFin
+                      }
+                      topFin={this.state.visibleOptions[rowIdx][colIdx].topFin}
+                      tail={this.state.visibleOptions[rowIdx][colIdx].tail}
+                      canvasId={
+                        this.state.visibleOptions[rowIdx][colIdx].canvasId
+                      }
                     />
                     {this.state.selectedOptions[rowIdx][colIdx] && (
                       <div className="top-right-label">{this.props.label}</div>

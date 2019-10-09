@@ -68,3 +68,13 @@ export const bodyPartShape = PropTypes.shape({
   src: PropTypes.string.isRequired,
   knnData: PropTypes.array.isRequired
 });
+
+export const fishShape = PropTypes.shape({
+  body: bodyShape.isRequired,
+  eye: bodyPartShape.isRequired,
+  mouth: bodyPartShape.isRequired,
+  sideFin: bodyPartShape.isRequired,
+  topFin: bodyPartShape.isRequired,
+  tail: bodyPartShape.isRequired,
+  canvasId: PropTypes.string.isRequired
+});

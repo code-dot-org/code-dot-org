@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/lib/Button';
 import SimpleTrainer from '../../utils/SimpleTrainer';
 import Training from './Training';
 import Predict from './Predict';
-import {COLORS} from '../../utils/colors';
+import {generateRandomFish} from './SpritesheetFish';
 
 const FISH_COUNT = 9;
 
@@ -17,40 +17,29 @@ const Modes = Object.freeze({
   Predicting: 2
 });
 
-const trainingData = [
-  {id: 1, imgUrl: '/images/cat1.jpg', knnData: [0]},
-  {id: 2, imgUrl: '/images/cat2.jpg', knnData: [0]},
-  {id: 3, imgUrl: '/images/cat3.jpg', knnData: [0]},
-  {id: 4, imgUrl: '/images/dog1.png', knnData: [1]},
-  {id: 5, imgUrl: '/images/dog2.png', knnData: [1]},
-  {id: 6, imgUrl: '/images/dog3.png', knnData: [1]}
-];
-
-let canvasNum = 0;
-
 export default class PondCreator extends React.Component {
   constructor(props) {
     super(props);
 
     const trainer = new SimpleTrainer();
+    trainer.initializeClassifiers().then(() => {
+      this.setState({initialized: true});
+    });
     this.state = {
       trainer: trainer,
-      trainingFish: this.generateFish('training', FISH_COUNT),
-      trainingData: trainingData,
+      initialized: false,
+      trainingData: this.generateFish(FISH_COUNT),
       currentMode: Modes.Training,
-      predictionFish: [], // this.generateFish('prediction',1),
+      predictionFish: [], // this.generateFish(1),
       predictions: []
     };
-    trainer.initializeClassifiers();
   }
 
-  generateFish = (canvasPrefix, numFish) => {
-    let fishData = {};
+  generateFish = numFish => {
+    let fishData = [];
     for (let i = 0; i < numFish; i++) {
-      const canvasId = `${canvasPrefix}-fish-canvas-${canvasNum}`;
-      canvasNum++;
-      const colorIndex = Math.floor(Math.random() * COLORS.length);
-      fishData[canvasId] = {body: {color: COLORS[colorIndex]}};
+      fishData[i] = generateRandomFish();
+      fishData[i].canvasId = `fish-canvas-${i}`;
     }
 
     return fishData;
@@ -81,6 +70,9 @@ export default class PondCreator extends React.Component {
   };
 
   render() {
+    if (!this.state.initialized) {
+      return null;
+    }
     return (
       <div>
         {this.state.currentMode === Modes.Training && (
@@ -99,7 +91,7 @@ export default class PondCreator extends React.Component {
         )}
         {this.state.currentMode === Modes.Predicting && (
           <div>
-            <Predict />
+            <Predict trainingData={this.state.trainingData} />
             <Button onClick={() => this.setMode(Modes.Training)}>
               Train More
             </Button>
