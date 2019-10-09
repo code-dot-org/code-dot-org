@@ -41,7 +41,6 @@
     "CONTROLS_FOREACH_INPUT_ITEM": "pro každou položku",
     "CONTROLS_FOREACH_TOOLTIP": "Pro každou položku v seznamu nastavte do proměnné '%1' danou položku a proveďte nějaké operace.",
     "CONTROLS_FOR_HELPURL": "",
-    "CONTROLS_FOR_INPUT_COUNTER": "",
     "CONTROLS_FOR_INPUT_FROM_TO_BY": "od %1 do %2 po %3",
     "CONTROLS_FOR_INPUT_WITH": "počítat s",
     "CONTROLS_FOR_TOOLTIP": "Nechá proměnnou %1 nabývat hodnot od počátečního do koncového čísla po daném přírůstku a provádí s ní příslušné bloky.",

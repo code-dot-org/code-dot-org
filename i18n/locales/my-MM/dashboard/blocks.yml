@@ -108,10 +108,6 @@ my:
         options:
           THIS:
             sprites: အားလုံး
-      Dancelab_setTintEachInline:
-        options:
-          THIS:
-            sprites: အားလုံး
       Dancelab_setVisibleEach:
         options:
           THIS:

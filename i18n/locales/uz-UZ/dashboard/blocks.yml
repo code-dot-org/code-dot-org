@@ -30,10 +30,6 @@ uz:
         options:
           FORMAT:
             '"random"': tasodifiy
-      Dancelab_makeAnonymousDanceSprite:
-        options:
-          LOCATION:
-            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": tasodifiy
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:

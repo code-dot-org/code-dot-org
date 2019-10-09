@@ -6733,7 +6733,7 @@ pt-BR:
       CSD U3 - Conditionals Video_2019: |-
         ## Perguntas para Consideração
 
-        -   Qual é um exemplo de quando você precisaria de uma declaração "if/else"?
+        -   O que é um exemplo de quando você precisaria de uma declaração "if/else"?
       CSD U3 - Simple Counter Predict: |-
         # O Padrão de Contador
 
@@ -7659,13 +7659,13 @@ pt-BR:
         As expressões booleanas mais simples são questões que o computador pode responder com verdadeiro ou falso.
         Outra maneira de dizer isso é que as expressões booleanas \*\* avaliam \*\* para `verdadeiro` ou`falso`.
 
-        # Faça Isso
+        # Para fazer
 
         Você pode modificar os valores das propriedades do sprite de modo que cada uma das expressões booleanas seja avaliada como `verdadeiro`?
 
         -   Leia todo o programa para ver como o `sprite1` e o`sprite2` estão sendo criados e quais propriedades são comparadas.
         -   Para cada uma das expressões booleanas, identifique as propriedades do sprite sendo comparadas.
-        -   Altere o código _nas primeiras **11** linhas_ para que cada uma das instruções `console.log ()` imprima `verdadeiro`.
+        -   Altere o código \_na primeira linha \*\* 11 \*\* \*\* para que cada uma das instruções `console.log ()` imprima `verdadeiro`.
       CSD U3 Complex Movement counter prediction: |-
         # Velocity e o padrão de contador
 
@@ -8075,15 +8075,15 @@ pt-BR:
       CSD U3 Draw Loop Plugged update your scene_2019: |-
         # Estenda Sua Cena
 
-        Essa é a cena de sprites que você fez na lição anterior. Agora você irá atualizá-la um pouco para usar a função draw e propriedades de sprites.
+        Essa é a cena de sprites que você fez na lição anterior. Agora você irá atualizá-la um pouco para usar um laço de desenho e propriedades de sprites.
 
         <img src="https://images.code.org/ce257c4d91da460c9c2add1733873769-image-1492209174198.32.29 PM.png" style="float:right;height:100px">
 
         # Faça Isso
 
-        -   Adicione uma função draw ao seu programa (você deve ter apenas uma).
-        -   Use a ferramenta de seleção em laço (clique, segure e arraste) para selecionar o código que será atualizado a cada frame e coloque-o dentro do seu laço de desenho. Use Ctrl-Z para desfazer qualquer erro que cometer.
-        -   Adicione um código ao seu programa que atualiza os `sprite.x`, `sprite.y` ou `sprite.rotation` dos seus sprites, para que eles se movam. Você precisará atualizá-los com `randomNumber()`.
+        -   Adicione um laço de desenho ao seu programa (você deve ter apenas um).
+        -   Use a ferramenta de seleção em laço (clique, segure e arraste) para selecionar o código que será atualizado cada vez e coloque-o dentro do seu laço de desenho. Use Ctrl-Z para desfazer qualquer erro que cometer.
+        -   Adicione um código ao seu programa que atualiza os `sprite.x`, `sprite.y` ou `sprite.rotation` dos seus sprites, para que possam mover. Você precisará atualizá-los com `randomNumber()`.
       CSD U3 Draw Loop Plugged wiggle sprite rotation: |-
         <img src="https://images.code.org/03f98fedbe59ceb5ef0a8530cb81c367-image-1492040405357.gif" style="float:right;height:150px">
 
@@ -8265,7 +8265,7 @@ pt-BR:
       CSD U3 Else_2019: |-
         # Inverta as Engrenagens
 
-        As engrenagens estão de volta. Elas já giram quando você pressiona a barra de espaço, mas agora você vai querer invertê-las quando não estiver pressionando a barra de espaço.
+        As engrenagens estão de volta. Elas já giram quando você pressiona a barra de espaço, mas agora você vai querer invertê-las quando não estiver girando.
 
         # Faça isso
 
@@ -10491,24 +10491,6 @@ pt-BR:
         <li>Rótulos não podem começar com números.</li>
         <li>O uso de maiúsculas e minúsculas e a sequência de caracteres deve ser exatamente os mesmos.</li>
         </ul></details></summary>
-      CSD U3 Variables naming rules v2_2018_2019: |-
-        <img style="float: right" src="https://images.code.org/f4b306422763c84bb924f4f7d3a6dca6-image-1492798058864.06.38 AM.png">
-
-        # Debugar: Dando nomes a variáveis
-
-        Este programa tem vários erros causados por nomes inválidos. Os erros impedem que o programa seja visto no modo de blocos, então o código está em modo de texto.
-
-        # Faça Isto
-
-        -   Encontre a regra violada por cada nome de variável.
-        -   **Corrija os erros escolhendo novos nomes que sigam as regras que você aprendeu no último nível.**
-        -   Se o seu programa funciona ele deve desenhar a imagem à direita.
-
-        <summary><em>Dica: Clique na seta para uma rápida revisão das regras.</em><details><ul>
-        <li>Rótulos não podem ter espaços.</li>
-        <li>Rótulos não podem começar com números.</li>
-        <li>O uso de maiúsculas e minúsculas e a sequência de caracteres deve ser exatamente os mesmos.</li>
-        </ul></details></summary>
       CSD U3 Variables random with assignment: |-
         <img src="https://images.code.org/ba9592e887f52c1a538a0517560cdacf-image-1493913633878.gif" style="float:right;height:150px">
 
@@ -10735,32 +10717,6 @@ pt-BR:
         -   Discuta com seu parceiro: o que você acha que acontecerá quando o carro finalmente parar?
 
         _Desafio: Adicionar código que reduza o ritmo do carro somente se a velocidade X for maior que 0._
-      CSD U3 abstraction decelerateX_2018: |-
-        # Retardando as coisas
-
-        Agora que você já teve alguma prática para acelerar as coisas, pode usar o padrão do contador para desacelerar os sprites?
-
-        # Faça isto
-
-        O carro vai correr na água! Você precisará usar o padrão do contador para abrandá-lo.
-
-        -   Use o bloco `sprite.velocityX` com um padrão de contador para desacelerar o carro em 0,25 enquanto ele se move pela tela.
-        -   Discuta com seu parceiro: o que você acha que acontecerá quando o carro finalmente parar?
-
-        _Desafio: adicione código que diminua a velocidade do carro apenas se sua velocidadeX for maior que 0._
-      CSD U3 abstraction decelerateX_2019: |-
-        # Retardando as coisas
-
-        Agora que você já teve alguma prática para acelerar as coisas, pode usar o padrão do contador para desacelerar os sprites?
-
-        # Faça isto
-
-        O carro vai correr na água! Você precisará usar o padrão do contador para abrandá-lo.
-
-        -   Use o bloco `sprite.velocityX` com um padrão de contador para desacelerar o carro em 0,25 enquanto ele se move pela tela.
-        -   Discuta com seu parceiro: o que você acha que acontecerá quando o carro finalmente parar?
-
-        _Desafio: adicione código que diminua a velocidade do carro apenas se sua velocidadeX for maior que 0._
       CSD U3 abstraction decelerateY: |-
         # Simulando a gravidade
 
@@ -10820,32 +10776,6 @@ pt-BR:
         -   Adicione uma declaração if que faça o seguinte ([Mostre-me onde] [2])
                 \- Verifica se o sprite atingiu o ponto mais alto.
                 \- Se sim, use o bloco `velocityY` para fazer o sprite cair novamente.
-      CSD U3 abstraction jump_2018: |-
-        # Saltando
-
-        Agora você tem todos os blocos necessários para fazer o seu sprite saltar! O sprite deve pular para cima se estiver no chão e o usuário pressionar a tecla "para cima" e, em seguida, voltar a descer quando chegar ao topo do salto.
-
-        # Faça isto
-
-        -   Encontre a instrução `if` que verifica se o sprite está no chão e observe que a instrução `if` verifica se o usuário pressionou a tecla de seta "para cima". ([Mostre-me onde](#triggercallout=code_triggered1))
-                 \- Faça o sapo pular quando o usuário pressionar a tecla de seta.
-                 \- Faça o sapo parar de se mover.
-        -   Adicione um código que faça o seguinte ([Mostre-me onde](#triggercallout=code_triggered2))
-                 \- Verifique se o sprite do sapo atingiu seu ponto mais alto.
-                 \- Se sim, faça o sprite voltar para baixo.
-      CSD U3 abstraction jump_2018_2019: |-
-        # Saltando
-
-        Agora você tem todos os blocos necessários para fazer o seu sprite saltar! O sprite deve pular para cima se estiver no chão e o usuário pressionar a tecla "para cima" e, em seguida, voltar a descer quando chegar ao topo do salto.
-
-        # Faça isto
-
-        -   Encontre a instrução `if` que verifica se o sprite está no chão e observe que a instrução `if` verifica se o usuário pressionou a tecla de seta "para cima". ([Mostre-me onde](#triggercallout=code_triggered1))
-                 \- Faça o sapo pular quando o usuário pressionar a tecla de seta.
-                 \- Faça o sapo parar de se mover.
-        -   Adicione um código que faça o seguinte ([Mostre-me onde](#triggercallout=code_triggered2))
-                 \- Verifique se o sprite do sapo atingiu seu ponto mais alto.
-                 \- Se sim, faça o sprite voltar para baixo.
       CSD U3 abstraction jumping: |-
         # Salto
 
@@ -11839,32 +11769,6 @@ pt-BR:
         -   Adicione uma plataforma ao jogo para seu personagem navegar.
         -   Adicione outros obstáculos no seu jogo.
         -   Crie outra ideia própria.
-      CSD U3 collisions flyman make it your own_2018: |-
-        # Jogo do aviador - Faça o seu próprio
-
-        Hora de criar esse jogo usando o que você aprendeu sobre interações com sprites.
-
-        # Fazem isto
-
-        Adicione pelo menos mais um aspecto ao seu jogo que use interações de sprite. Há algumas idéias abaixo ou você pode optar por adicionar seus próprios recursos. Verifique se você está pronto para compartilhar suas idéias com seus colegas de classe.
-
-        -   Crie sprites invisíveis na borda do seu jogo para impedir que seu personagem salte.
-        -   Adicione plataformas ao jogo para o seu personagem navegar.
-        -   Adicione outro obstáculo ao seu jogo.
-        -   Crie outra ideia sua.
-      CSD U3 collisions flyman make it your own_2019: |-
-        # Jogo do aviador - Faça o seu próprio
-
-        Hora de criar esse jogo usando o que você aprendeu sobre interações com sprites.
-
-        # Fazem isto
-
-        Adicione pelo menos mais um aspecto ao seu jogo que use interações de sprite. Há algumas idéias abaixo ou você pode optar por adicionar seus próprios recursos. Verifique se você está pronto para compartilhar suas idéias com seus colegas de classe.
-
-        -   Crie sprites invisíveis na borda do seu jogo para impedir que seu personagem salte.
-        -   Adicione plataformas ao jogo para o seu personagem navegar.
-        -   Adicione outro obstáculo ao seu jogo.
-        -   Crie outra ideia sua.
       CSD U3 collisions horse: |-
         # Cavalo arco-íris
 
@@ -12248,7 +12152,7 @@ pt-BR:
       CSD U3 collisions types_2019: |-
         # Tipos de Colisão
 
-        Existem quatro tipos de colisão que são usados no Game Lab: `displace` (deslocar), `colide` (colidir), `bounce` (pular), e `bounceOff` (pular para fora). Estes blocos irão causar um determinado tipo de interação entre a _sprite_ e o seu _alvo_.
+        Existem quatro tipos de colisão que são usados no Game Lab: `displace` (deslocar), `colide` (colidir), `bounce` (pular), e `bounceOff` (pular para fora). Estes blocos irão causar um determinado tipo de interação entre a _figura_ e o seu _alvo_.
 
         # Faça Isto
 
@@ -13111,18 +13015,6 @@ pt-BR:
         Veja um exemplo em <a href=\"/s/csd3-2017/stage/15/puzzle/11\" target=\"_blank\">
         Lição 15 Quebra-cabeça</a>.\n-   Chame a função `controlPlayer` dentro do
         laço de desenho.\n-   Rode o jogo e teste seu código."
-      CSD U3 platform player2_2018: |-
-        # Controles do usuário
-
-        Em seguida, você deve adicionar controles de usuário para poder mover seu jogador. Seu aparelho precisa se mover para a esquerda quando a tecla de seta esquerda for pressionada, para a direita quando a tecla de seta direita for pressionada e pular quando a barra de espaço for pressionada.
-
-        # Faça isto
-
-        -   Crie uma nova função `controlarJogador` na área "funções "do seu código.
-        -   Dentro da função `controlarJogador`, use os blocos`if`, `keyDown` e`sprite.x` para fazer o seu jogador se mover para a esquerda e direita de acordo com as teclas de seta. Veja <a href="/s/csd3-2018/stage/12/puzzle/7" target="_blank"> Lição 12 Quebra-cabeça 7 </a> para exemplos.
-        -   Dentro da função `controlarJogador`, use os blocos`if`, `keyDown` e`velocityY` para fazer seu jogador pular quando a seta para cima for pressionada. Veja <a href="/s/csd3-2018/stage/15/puzzle/11" target="_blank"> Lição 15 Quebra-cabeça 11 </a> como exemplo.
-        -   Chame a função `controlarJogador` dentro do laço de desenho.
-        -   Execute o jogo e teste seu código.
       CSD U3 platform player2_2019: "# Controles de Usuário\n\nA seguir, você deverá
         adicionar controles de usuário para que você possa movimentar seu jogador.
         Seu jogador precisa se mover à esquerda quando a seta à esquerda for pressionada,
@@ -16530,22 +16422,6 @@ pt-BR:
         # Faça isto
 
         Antes de cada chamada para `definirTela`, adicione um bloco `definirPropriedade` para alterar a propriedade "text" de "vencedor" para exibir o vencedor real.
-      CSD U6 tugowar setProperty_2018: |-
-        # Exiba o vencedor
-
-        A tela vencedora não sabe realmente quem ganhou o jogo. Vamos consertar isso agora.
-
-        # Faça isto
-
-        Antes da chamada para `definirTela`, adicione um bloco`setProperty` para alterar a propriedade "texto" de "vencedor" para exibir o vencedor real.
-      CSD U6 tugowar setProperty_2019: |-
-        # Exiba o vencedor
-
-        A tela vencedora não sabe realmente quem ganhou o jogo. Vamos consertar isso agora.
-
-        # Faça isto
-
-        Antes da chamada para `definirTela`, adicione um bloco`setProperty` para alterar a propriedade "texto" de "vencedor" para exibir o vencedor real.
       CSD U6 tugowar setScreen: |-
         # Mude para a tela da vitória
 
@@ -16794,7 +16670,7 @@ pt-BR:
         ## Perguntas a considerar
 
         -   Qual é o padrão do contador?
-        -   Como o padrão do contador move os sprites pela tela?
+        -   Como o padrão de contador move os sprites pela tela?
       'CSD: Animation Tab_2019': |-
         ## Perguntas a considerar
 
@@ -17855,24 +17731,6 @@ pt-BR:
         # Faça isso
 
         -   Altere o código para que o ícone e sua cor sejam escolhidos usando a variável "myIndex".
-      CSDU6 buzzer.stop_2018: |-
-        # Parando a música
-
-        Às vezes, você precisa interromper a música quando quiser, como no código abaixo. A duração não foi especificada e agora a nota é reproduzida continuamente. Felizmente, o método `buzzer.stop ()` está aqui para salvar seus ouvidos.
-
-        # Fazem isto
-
-        -   Encontre uma maneira de fazer com que a nota pare de tocar com `buzzer.stop ()`.
-        -   Comemore sua vitória sobre a nota sem fim!
-      CSDU6 buzzer.stop_2019: |-
-        # Parando a música
-
-        Às vezes, você precisa interromper a música quando quiser, como no código abaixo. A duração não foi especificada e agora a nota é reproduzida continuamente. Felizmente, o método `buzzer.stop ()` está aqui para salvar seus ouvidos.
-
-        # Fazem isto
-
-        -   Encontre uma maneira de fazer com que a nota pare de tocar com `buzzer.stop ()`.
-        -   Comemore sua vitória sobre a nota sem fim!
       CSDU6 circuit playground piano: |-
         # Circuito Piano
 
@@ -19486,34 +19344,6 @@ pt-BR:
         Nesta versão do Simulador de Internet, você pode conectar-se a até 5 outras pessoas em uma sala. Quando você envia mensagens na sala, todo mundo as recebe. Quais são alguns dos desafios desse sistema e como você pode resolvê-los?
 
         Seu professor fornecerá instruções mais específicas para esta atividade.
-      NetSim Standalone Classroom Routers: |-
-        # Mensagens de roteamento
-
-        Nesta versão do Simulador de Internet, todos se conectam a um roteador e têm um endereço específico. Para enviar mensagens, você deve endereçá-la ao endereço específico do destinatário, e o roteador cuidará de entregá-lo no computador certo. Se houver outros roteadores criados em sua classe, peça o endereço de um de seus colegas e envie uma mensagem para eles! Veja o o registro do roteador para ver o caminho que as mensagens seguiram pela rede.
-
-        Seu professor fornecerá instruções mais específicas para esta atividade.
-      NetSim Standalone Freeplay: |-
-        # Simulador de Internet Jogo gratuito
-
-        Nesta versão do Simulador de Internet, a maioria das opções está ativada e configurável. As mensagens podem ser enviadas para qualquer roteador dentro da classe e seguirão caminhos diferentes para chegar ao destino.
-
-        Seu professor fornecerá instruções mais específicas para esta atividade.
-      NetSim Standalone Manual DNS: |-
-        # Introdução ao DNS
-
-        Nesta versão do simulador, você não pode ver os endereços dos outros alunos. Em vez disso, um de vocês deve atuar como um serviço de nomes, para ajudar a compartilhar endereços. Na guia DNS na coluna da esquerda, uma pessoa pode assumir como DNS.
-
-        Seu professor fornecerá instruções mais específicas para esta atividade.
-      NetSim Standalone Packets TCP: |-
-        # Pacotes e criação de uma Internet confiável
-
-        As mensagens na Internet podem seguir vários caminhos para chegar ao seu destino e, às vezes, ao longo do caminho a mensagem é descartada. Nesta versão do Simulador de Internet:
-
-        -   Há 10% de chance de um pacote ser descartado
-        -   Vários pacotes podem seguir caminhos diferentes para o destino
-        -   O tamanho máximo padrão do pacote é definido como 6 caracteres adicionais
-
-        Seu professor fornecerá instruções mais específicas para esta atividade.
       NetSim Standalone SendAB: |-
         # Enviando bits com o Simulador de Internet
 
@@ -19532,11 +19362,6 @@ pt-BR:
         Agora que você transmitiu informações representadas como números decimais, é possível mapear esses números para caracteres de texto para enviar e receber informações baseadas em texto. Com um protocolo baseado em texto, você pode representar e comunicar com facilidade todos os tipos de informações.
 
         Seu professor fornecerá instruções mais específicas para esta atividade.
-      OPD-K5 FirstProgram: Assista o vídeo abaixo, que explica o primeiro programa
-        que os estudantes irão escrever no [Curso A](https://studio.code.org/s/coursea-2018?section_id=2042045).
-        Na próxima página, você mesmo irá escrever um programa parecido!
-      OPD-K5 RepeatBlock: Assista o vídeo abaixo, que explica como laços funcionam
-        e introduz o bloco 'Repita' em Fundamentos de CC.
       OPD-K5 WhatIsCS: Você já se perguntou "Exatamente, o que é ciência da computação?"
         Ou, "Por que alguns programas de computador são escritos com palavras e alguns
         são escritos usando imagens?" Se sim, assista a este vídeo; é uma ótima introdução
@@ -19686,27 +19511,6 @@ pt-BR:
         2.  Arraste a imagem para baixo para cobrir o código secreto
 
         ![](<>)
-      Room Escape Workshop - 3-2: |-
-        # Mover imagem
-
-        Agora faça com que o usuário encontre o código secreto clicando na imagem. Quando eles clicam na imagem, ela deve se mover para cima e para fora do caminho.
-
-        # Fazem isto
-
-        -   Puxe um bloco `onEvent`
-        -   Altere o ponto de identificação no bloco `onEvent` para foto (que é o ID do elemento foto)
-        -   Dentro do bloco `onEvent`, adicione o bloco`setPosition` com as seguintes entradas
-                 \- ID: foto
-                 \- As próximas duas entradas são valores x e y - teste alguns números para tentar fazer com que a imagem se mova como nas fotos à direita
-      Room Escape Workshop - 4: "Você gerou um código secreto para que os usuários
-        possam navegar para a segunda sala. Vamos permitir que o usuário digite o
-        código secreto ao clicar no cofre\n\n# Faça isto\n\n-   Adicione um bloco
-        `onEvent`\n         \\- Escolha o ID do cofre\n-   Dentro do bloco `onEvent`,
-        adicione um bloco <img src=\"https://images.code.org/c0964a8543728d018d5d9583319e22b9-image-1491060910093.34.36
-        AM.png\" style=\"width:300px\">\n         \\- No lado esquerdo, altere o _x_
-        (o nome da variável) para ser _guess_ \n         \\- No lado direito, mude
-        \\_ \"Digite um valor\" \\_ (a mensagem para solicitar ao usuário) para \\_
-        \"Digite o código\" \\_"
       Room Escape Workshop - 8: |-
         # Mostrando dentro do cofre
 

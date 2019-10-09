@@ -266,31 +266,6 @@ is:
             '"x"': þvers-og-kruss
             '"plus"': plús
             '"random"': eitthvað
-      Dancelab_makeAnonymousDanceSprite:
-        options:
-          COSTUME:
-            '"ALIEN"': Geimvera
-            '"BEAR"': Björn
-            '"CAT"': Köttur
-            '"DOG"': Hundur
-            '"DUCK"': Önd
-            '"FROG"': Froskur
-            '"MOOSE"': Elgur
-            '"PINEAPPLE"': Ananas
-            '"ROBOT"': Vélmenni
-            '"SHARK"': Hákarl
-            '"UNICORN"': Einhyrningur
-          LOCATION:
-            "{x: 200, y: 100}": efst
-            "{x: 200, y: 300}": neðst
-            "{x: 100, y: 200}": vinstri
-            "{x: 300, y: 200}": hægri
-            "{x: 200, y: 200}": í miðju
-            "{x: 100, y: 100}": efst til vinstri
-            "{x: 300, y: 100}": efst til hægri
-            "{x: 100, y: 300}": neðst til vinstri
-            "{x: 300, y: 300}": neðst til hægri
-            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": eitthvað
       Dancelab_makeNewDanceSprite:
         text: |-
           búa til {COSTUME}
@@ -562,21 +537,6 @@ is:
       Dancelab_setTint:
         text: stilla lit {SPRITE} á {VAL}
       Dancelab_setTintEach:
-        text: stilla lit {THIS} á {VAL}
-        options:
-          THIS:
-            sprites: allt
-            '"ALIEN"': allar geimverur
-            '"BEAR"': allir birnir
-            '"CAT"': allir kettir
-            '"DOG"': allir hundar
-            '"DUCK"': allar endur
-            '"FROG"': allir froskar
-            '"MOOSE"': allir elgir
-            '"PINEAPPLE"': allir ananasar
-            '"ROBOT"': öll vélmenni
-            '"SHARK"': allir hákarlar
-      Dancelab_setTintEachInline:
         text: stilla lit {THIS} á {VAL}
         options:
           THIS:

@@ -842,16 +842,6 @@ pl-PL:
         - {}
         - correct: true
         - {}
-      DigitalFootprint-Unplugged:
-        markdown: |
-          # Twój cyfrowy ślad
-
-          Umieszczanie informacji o sobie w internecie tworzy cyfrowy ślad.
-      GettingLoopy-Unplugged:
-        markdown: |
-          # Poznając pętle
-
-          Ta lekcja przedstawia sposób programowania za pomocą pętli używanych w tańcu.
       Internet Simulator Setup 2:
         title: tytuł
       K-1 Artist 1 Multi 1:
@@ -1052,11 +1042,6 @@ pl-PL:
         - text: SQUARE
           correct: true
         - text: SOUTH
-      MoveItMoveIt-Unplugged:
-        markdown: |
-          # Pzenieś go, przenieś go
-
-          Użyj mapy i wydawaj polecenia, aby osiągnąć cel.
       Multi-Screen Apps:
         title: tytuł
       New Challenge Introduction:

@@ -1500,9 +1500,3 @@ ca:
               name: Introducció
             Nested Loops:
               name: Bucles imbricats
-        dance-2019:
-          stages:
-            Dance Party:
-              name: Festa de ball
-          description: Crea un codi amb la teva pròpia festa de ball i comparteix-la
-            amb els teus amics!

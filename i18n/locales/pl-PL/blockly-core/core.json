@@ -41,7 +41,6 @@
     "CONTROLS_FOREACH_INPUT_ITEM": "dla każdego elementu",
     "CONTROLS_FOREACH_TOOLTIP": "Każdemu elementowi z listy przyporządkuj zmienną '%1', a następnie wykonaj kilka instrukcji.",
     "CONTROLS_FOR_HELPURL": "https://code.google.com/p/blockly/wiki/Loops#count_with",
-    "CONTROLS_FOR_INPUT_COUNTER": "",
     "CONTROLS_FOR_INPUT_FROM_TO_BY": "od %1 do %2 co %3",
     "CONTROLS_FOR_INPUT_WITH": "dla",
     "CONTROLS_FOR_TOOLTIP": "Niech zmienna %1 przyjmuje wartości od liczby początkowej do liczby końcowej, co pewien przedział, i wykonaj  określone bloki.",

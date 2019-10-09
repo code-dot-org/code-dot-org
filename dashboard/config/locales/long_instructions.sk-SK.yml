@@ -3558,18 +3558,6 @@ sk-SK:
       courseF_artist_for9_2019: |-
         **Inšpirácia:** Použi počítadlo vo vnútri bloku `nastav alfa`, aby si dostal niečo ako tento vyblednutý stred.\
         (Tento šesťuholníkový vzor bol vytvorený otáčaním o 60 stupňov.)
-      courseF_artist_for_challenge1: |-
-        Dokážeš prísť na to, ako vytvoriť tento obrázok?
-
-        <img src="https://images.code.org/724b2efa8aefe863bd0d6491a3f1590f-image-1445563707400.26.50.png" width="350px"/>
-      courseF_artist_for_challenge1_2018: |-
-        Dokážeš prísť na to, ako vytvoriť tento obrázok?
-
-        <img src="https://images.code.org/724b2efa8aefe863bd0d6491a3f1590f-image-1445563707400.26.50.png" width="350px"/>
-      courseF_artist_for_challenge1_2019: |-
-        Dokážeš prísť na to, ako vytvoriť tento obrázok?
-
-        <img src="https://images.code.org/724b2efa8aefe863bd0d6491a3f1590f-image-1445563707400.26.50.png" width="350px"/>
       courseF_artist_variables10: "Tu je tvoj kód z predošlej úlohy. Skús zmeniť premennú
         rôznymi spôsobmi. \n\n-   Čo sa stane, ak začneš s `dĺžka` menšou než 150?\n-
         \  Čo ak zakaždým vynásobiš tvoju premennú číslom 1.25 namiesto pripočítania

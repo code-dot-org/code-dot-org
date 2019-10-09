@@ -10162,6 +10162,33 @@ is-IS:
         courseC_harvester_loops_challenge1_b: Þú getur endurtekið `færa áfram` og
           `tína maís` eins oft og þú þarft, síðan notað `snúa til hægri` á hverju
           horni.
+        courseC_harvester_loops_challenge1_c: |-
+          Besta leiðin til að safna fyrstu fjórum af maís er að nota `endurtaka` kubb innan í öðrum `endurtaka` kubbi. Þú getur líka notað þetta fyrir afganginn af þrautinni!
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat">
+          <title name="TIMES">2</title>
+          <statement name="DO">
+          <block type="controls_repeat">
+          <title name="TIMES">2</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="harvester_corn"/>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block></next></block></xml>
       courseC_harvester_loops_challenge1a_2019:
         courseC_harvester_loops_challenge1_a: Ekki láta þér detta í hug að reyna þetta
           án þess að nota lykkjur!
@@ -14181,8 +14208,12 @@ is-IS:
         courseE_bee_concept3a_c: Það eru þrjú blómastóð þannig að ytri `endurtaka`
           lykkjan ætti að endurtaka 3svar sinnum.
       courseE_bee_concept3_2018:
+        courseE_bee_concept3a_a: Prófaðu að nota faldaðar `endurtaka` lykkjur til
+          að leysa þessa þraut.
         courseE_bee_concept3a_b: Ef þú sérð ekki hvar á hafa lykkjurnar, er ráð að
           skrifa kóðann þrep fyrir þrep og leita svo að endurtekningum.
+        courseE_bee_concept3a_c: Það eru þrjú blómastóð þannig að ytri `endurtaka`
+          lykkjan ætti að endurtaka 3svar sinnum.
       courseE_bee_concept4:
         courseE_bee_concept4_a: Hér gæti `ef/annars` setning komið að góðu gagni.
         courseE_bee_concept4_b: Með tröppumynstrinu ættir þú að komast yfir öll blómin
@@ -15737,6 +15768,7 @@ is-IS:
           Þetta er mynstrið sem listamaðurinn mun fara eftir:
 
           ![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)
+        courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseF_artist_variables4_2019:
         courseF_artist_variables4_a: Kóðinn verður mjög svipaður kóðanum í síðustu
           þraut nema hvað þú þarft að snúa listamanninum, láta hann hoppa niður og
@@ -15745,6 +15777,7 @@ is-IS:
           Þetta er mynstrið sem listamaðurinn mun fara eftir:
 
           ![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)
+        courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseF_artist_variables5:
         courseF_artist_variables5_a: Seinni helmingur kóðans ætti að vera næstum því
           eins og fyrri hlutinn, nema hvað þú átt að snúa til _vinstri_, hoppa og

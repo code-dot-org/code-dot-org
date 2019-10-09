@@ -37,8 +37,6 @@ ja-JP:
         draw O: Oを かく
         draw D: Dを かく
         draw E: Eを かく
-      2-3 Artist Functions 1:
-        draw ear stems: メガネをかこう。
       2-3 Artist Functions 10:
         big gear: 大きな歯車
         small gear: 小さな歯車
@@ -50,10 +48,8 @@ ja-JP:
         draw a flower: 花 を かく
       2-3 Artist Functions 2:
         draw a square: 正方形 を かく
-        draw ear stems: メガネをかこう。
       2-3 Artist Functions 3:
         draw a square: 正方形 を かく
-        draw ear stems: メガネをかこう。
       2-3 Artist Functions 4:
         draw a square: 正方形 を かく
       2-3 Artist Functions 9:
@@ -101,43 +97,28 @@ ja-JP:
         get 5 nectar: 蜜を5つ取る
       4-5 Bee Debugging 9:
         make all honey: ハチミツをぜんぶ作る
-      Alien Defender:
-        game has been won: 勝った
       Course 4 Artist Binary 1:
         draw: かく
-        draw bit: ０か1で図形をかいてみよう
       Course 4 Artist Binary 2:
         draw: かく
-        draw bit: ０か1で図形をかいてみよう
       Course 4 Artist Binary 3:
         draw: かく
-        draw bit: ０か1で図形をかいてみよう
       Course 4 Artist Binary 4:
         draw: かく
-        draw bit: ０か1で図形をかいてみよう
       Course 4 Artist Binary 5:
         draw: かく
-        draw bit: ０か1で図形をかいてみよう
       Course 4 Artist Binary 6:
         draw: かく
-        draw bit: ０か1で図形をかいてみよう
       Course 4 Artist Binary 7:
         draw: かく
-        draw bit: ０か1で図形をかいてみよう
       Course 4 Artist Binary Free Play 2:
         draw: かく
-        draw bit: ０か1で図形をかいてみよう
       Course 4 Artist Binary Free Play 2a:
         draw: かく
-        draw bit: ０か1で図形をかいてみよう
       Course 4 Artist Binary Free Play 2b:
         draw: かく
-        draw bit: ０か1で図形をかいてみよう
       Course 4 Artist Binary pre1:
-        draw bit: ０か1で図形をかいてみよう
         draw: かく
-      Course 4 Artist Functions challenge:
-        draw a line of squares: 四角形の列をかこう。
       Course 4 Bee Params 5:
         get 5 nectar: 蜜を5つ取る
       Course 4 Bee Params 6:
@@ -165,27 +146,11 @@ ja-JP:
       Find the Wizard:
         do something: 何かしてください
       Geometric Sun:
-        draw a door: ドアをかこう
-        draw grass: メガネをかこう
-        draw windows: まどをかこう
-        rectangle: 長方形
-        sun: 太陽
         diamond: ダイヤモンド
-        window: 窓
         draw a house: 家 を かく
-        triangle: 三角形
-        square: 四角形
       Geometric Sun_2018:
-        draw a door: ドアをかこう
-        draw grass: メガネをかこう
-        draw windows: まどをかこう
-        rectangle: 長方形
-        sun: 太陽
         diamond: ダイヤモンド
-        window: 窓
         draw a house: 家 を かく
-        triangle: 三角形
-        square: 四角形
       K-1 Artist2 3:
         draw roof: やねをかく
       K-1 Artist2 4:
@@ -198,14 +163,6 @@ ja-JP:
       MC_HOC_2017_10_RETRY_2019:
         fix long path: 長い道を直す
         fix short path: 短い道を直す
-      NEW Course 4 Artist Functions 11:
-        draw a line of squares: 四角形の列をかこう。
-      NEW Course 4 Artist Functions 12:
-        draw a line of squares: 四角形の列をかこう。
-      NEW Course 4 Artist Functions 13:
-        draw a line of squares: 四角形の列をかこう。
-      NEW Course 4 Artist Functions 14:
-        draw a line of squares: 四角形の列をかこう。
       NEW Course 4 Artist Functions 3:
         draw a square: 正方形 を かく
       NEW Course 4 Artist Functions 4:
@@ -256,13 +213,9 @@ ja-JP:
       NEW Course 4 Play Lab Params 11:
         jump: ジャンプする
       Robot Doodle:
-        25 pixel square: 一辺が25ピクセルの四角形
         draw head: あたまを かく
-        draw eye: 目をかこう
       Robot Doodle_2018:
-        25 pixel square: 一辺が25ピクセルの四角形
         draw head: あたまを かく
-        draw eye: 目をかこう
       Standalone_Artist_7:
         draw a flower: 花 を かく
       Standalone_Artist_9:
@@ -270,177 +223,108 @@ ja-JP:
       course1_artist_loops_challenge1:
         '"simple" solution': 解答例
       course3_artist_functions_challenge1:
-        my design: 私のデザイン
         do something: 何かしてください
       course3_artist_functions_challenge2:
-        my design: 私のデザイン
         do something: 何かしてください
       course3_bee_functions_challenge1:
         do something: 何かしてください
-        get 3 nectar or honey: 3つ ミツを とって ハチミツを 3つ 作ろう
       course3_bee_functions_challenge2:
         do something: 何かしてください
-        move and collect: 集めて回ろう
-      course3_playLab_challenge1:
-        win game: 勝ち
-        lose game: 負け
-        keep playing: ゲームをつづける
       course4_artist_binary_challenge1:
         draw: かく
-        draw bit: ０か1で図形をかいてみよう
       course4_artist_binary_challenge2:
         draw: かく
-        draw bit: ０か1で図形をかいてみよう
-      course4_artist_concept_challenge2:
-        draw pinwheel: 風車をかこう
       course4_artist_functions_challenge2:
-        my design: 私のデザイン
         do something: 何かしてください
       course4_artist_fwp_challenge1:
         draw a polygon: 多角形を描く
         do something: 何かしてください
       courseA_artist_loops_challenge1:
         '"simple" solution': 解答例
-      courseC_artist_prog3:
-        draw flame: 窓わくをかく
-        draw fire: ほのおをかく
-      courseC_artist_prog3_2018:
-        draw flame: 窓わくをかく
-        draw fire: ほのおをかく
-      courseC_artist_prog3_2019:
-        draw flame: 窓わくをかく
-        draw fire: ほのおをかく
-      courseC_artist_prog4:
-        booster: ブースター
-      courseC_artist_prog4_2018:
-        booster: ブースター
-      courseC_artist_prog4_2019:
-        booster: ブースター
       courseC_data wizard:
         do something: 何かしてください
       courseD_artist_binary1:
-        draw bit: ０か1で図形をかいてみよう
         draw: かく
       courseD_artist_binary1_2018:
-        draw bit: ０か1で図形をかいてみよう
         draw: かく
       courseD_artist_binary1_2019:
-        draw bit: ０か1で図形をかいてみよう
         draw: かく
       courseD_artist_binary2:
         draw: かく
-        draw bit: ０か1で図形をかいてみよう
       courseD_artist_binary2_2018:
         draw: かく
-        draw bit: ０か1で図形をかいてみよう
       courseD_artist_binary2_2019:
         draw: かく
-        draw bit: ０か1で図形をかいてみよう
       courseD_artist_binary3:
         draw: かく
-        draw bit: ０か1で図形をかいてみよう
       courseD_artist_binary3_2018:
         draw: かく
-        draw bit: ０か1で図形をかいてみよう
       courseD_artist_binary3_2019:
         draw: かく
-        draw bit: ０か1で図形をかいてみよう
       courseD_artist_binary4:
         draw: かく
-        draw bit: ０か1で図形をかいてみよう
       courseD_artist_binary4_2018:
         draw: かく
-        draw bit: ０か1で図形をかいてみよう
       courseD_artist_binary4_2019:
         draw: かく
-        draw bit: ０か1で図形をかいてみよう
       courseD_artist_binary5:
         draw: かく
-        draw bit: ０か1で図形をかいてみよう
       courseD_artist_binary5_2018:
         draw: かく
-        draw bit: ０か1で図形をかいてみよう
       courseD_artist_binary5_2019:
         draw: かく
-        draw bit: ０か1で図形をかいてみよう
       courseD_artist_binary6:
         draw: かく
-        draw bit: ０か1で図形をかいてみよう
       courseD_artist_binary6_2018:
         draw: かく
-        draw bit: ０か1で図形をかいてみよう
       courseD_artist_binary6_2019:
         draw: かく
-        draw bit: ０か1で図形をかいてみよう
       courseD_artist_binary7:
         draw: かく
-        draw bit: ０か1で図形をかいてみよう
       courseD_artist_binary7_2018:
         draw: かく
-        draw bit: ０か1で図形をかいてみよう
       courseD_artist_binary7_2019:
         draw: かく
-        draw bit: ０か1で図形をかいてみよう
       courseD_artist_binary8:
         draw: かく
-        draw bit: ０か1で図形をかいてみよう
       courseD_artist_binary8_2018:
         draw: かく
-        draw bit: ０か1で図形をかいてみよう
       courseD_artist_binary8_2019:
         draw: かく
-        draw bit: ０か1で図形をかいてみよう
       courseD_artist_binary8_predict1:
         draw: かく
-        draw bit: ０か1で図形をかいてみよう
       courseD_artist_binary8_predict1_2018:
         draw: かく
-        draw bit: ０か1で図形をかいてみよう
       courseD_artist_binary8_predict1_2019:
         draw: かく
-        draw bit: ０か1で図形をかいてみよう
       courseD_artist_binaryFP_2018:
         draw: かく
-        draw bit: ０か1で図形をかいてみよう
       courseD_artist_binaryFP_2019:
         draw: かく
-        draw bit: ０か1で図形をかいてみよう
       courseD_artist_binary_challenge1_2018:
         draw: かく
-        draw bit: ０か1で図形をかいてみよう
       courseD_artist_binary_challenge1_2019:
         draw: かく
-        draw bit: ０か1で図形をかいてみよう
       courseD_artist_binary_challenge2_2018:
         draw: かく
-        draw bit: ０か1で図形をかいてみよう
       courseD_artist_binary_challenge2_2019:
         draw: かく
-        draw bit: ０か1で図形をかいてみよう
       courseD_autorun_binary2_2019:
         draw: かく
-        draw bit: ０か1で図形をかいてみよう
       courseD_autorun_binary3_2019:
-        draw bit: ０か1で図形をかいてみよう
         draw: かく
       courseD_autorun_binary4_2019:
-        draw bit: ０か1で図形をかいてみよう
         draw: かく
       courseD_autorun_binary5_2019:
-        draw bit: ０か1で図形をかいてみよう
         draw: かく
       courseD_autorun_binary6_2019:
-        draw bit: ０か1で図形をかいてみよう
         draw: かく
       courseD_autorun_binary7_2019:
-        draw bit: ０か1で図形をかいてみよう
         draw: かく
       courseD_autorun_binary8_2019:
         draw: かく
-        draw bit: ０か1で図形をかいてみよう
       courseD_autorun_binary8_predict1_2019:
         draw: かく
-        draw bit: ０か1で図形をかいてみよう
       courseE_artist_concept1:
         do something: 何かしてください
         draw a hexagon: 六角形 を かく
@@ -448,43 +332,24 @@ ja-JP:
         draw a hexagon: 六角形 を かく
       courseE_artist_concept4:
         draw a square: 正方形 を かく
-        draw a line of squares: 四角形の列をかこう。
-        draw a plane of squares: あみ模様をかいてみよう
       courseE_artist_concept4_2018:
         draw a square: 正方形 を かく
-        draw a line of squares: 四角形の列をかこう。
-        draw a plane of squares: あみ模様をかいてみよう
       courseE_artist_concept_challenge1:
         do something: 何かしてください
       courseE_artist_concept_challenge1_2018:
         do something: 何かしてください
-      courseE_artist_concept_challenge2:
-        draw pinwheel: 風車をかこう
-      courseE_artist_concept_challenge2_2018:
-        draw pinwheel: 風車をかこう
-      courseE_artist_functions1:
-        draw ear stems: メガネをかこう。
       courseE_artist_functions10:
         do something: 何かしてください
-        draw hexagon: 六角形 を かく
-        draw line of hexagons: 六角形で線をかこう
       courseE_artist_functions10_2018:
         do something: 何かしてください
-        draw hexagon: 六角形 を かく
-        draw line of hexagons: 六角形で線をかこう
       courseE_artist_functions10_2019:
         do something: 何かしてください
-        draw hexagon: 六角形 を かく
-        draw line of hexagons: 六角形で線をかこう
       courseE_artist_functions2:
         draw a square: 正方形 を かく
-        draw ear stems: メガネをかこう。
       courseE_artist_functions2_2018:
         draw a square: 正方形 を かく
-        draw ear stems: メガネをかこう。
       courseE_artist_functions2_2019:
         draw a square: 正方形 を かく
-        draw ear stems: メガネをかこう。
       courseE_artist_functions3_2018:
         draw a star: 星形 を かく
       courseE_artist_functions3_2019:
@@ -498,25 +363,19 @@ ja-JP:
       courseE_artist_functions5_2019:
         draw a star: 星形 を かく
       courseE_artist_functions7:
-        draw a window: まどをかこう
         draw a house: 家 を かく
       courseE_artist_functions7_2018:
-        draw a window: まどをかこう
         draw a house: 家 を かく
       courseE_artist_functions7_2019:
-        draw a window: まどをかこう
         draw a house: 家 を かく
       courseE_artist_functions8:
         do something: 何かしてください
-        draw a line of squares: 四角形の列をかこう。
         draw square: 正方形を かく
       courseE_artist_functions8_2018:
         do something: 何かしてください
-        draw a line of squares: 四角形の列をかこう。
         draw square: 正方形を かく
       courseE_artist_functions8_2019:
         do something: 何かしてください
-        draw a line of squares: 四角形の列をかこう。
         draw square: 正方形を かく
       courseE_artist_functions8a_2018:
         draw a square: 正方形 を かく
@@ -525,90 +384,56 @@ ja-JP:
         draw a square: 正方形 を かく
         do something: 何かしてください
       courseE_artist_functions8b_2018:
-        draw a line of squares: 四角形の列をかこう。
         draw square: 正方形を かく
         do something: 何かしてください
       courseE_artist_functions8b_2019:
-        draw a line of squares: 四角形の列をかこう。
         draw square: 正方形を かく
         do something: 何かしてください
       courseE_artist_functions8c_2018:
-        draw a line of squares: 四角形の列をかこう。
         draw square: 正方形を かく
         do something: 何かしてください
       courseE_artist_functions8c_2019:
-        draw a line of squares: 四角形の列をかこう。
         draw square: 正方形を かく
         do something: 何かしてください
       courseE_artist_functions9:
         do something: 何かしてください
         draw triangle: 三角形を かく
-        draw line of triangles: 三角形で線をかこう
       courseE_artist_functions9_2018:
         do something: 何かしてください
         draw triangle: 三角形を かく
-        draw line of triangles: 三角形で線をかこう
       courseE_artist_functions9_2019:
         do something: 何かしてください
         draw triangle: 三角形を かく
-        draw line of triangles: 三角形で線をかこう
       courseE_artist_functionsProj_2018:
-        draw hexagon: 六角形 を かく
-        draw line of hexagons: 六角形で線をかこう
-        draw a line of squares: 四角形の列をかこう。
         draw square: 正方形を かく
       courseE_artist_functionsProj_2019:
-        draw hexagon: 六角形 を かく
-        draw line of hexagons: 六角形で線をかこう
-        draw a line of squares: 四角形の列をかこう。
         draw square: 正方形を かく
       courseE_artist_functions_challenge1:
-        my design: 私のデザイン
         do something: 何かしてください
       courseE_artist_functions_challenge1_2018:
-        my design: 私のデザイン
         do something: 何かしてください
       courseE_artist_functions_challenge1_2019:
-        my design: 私のデザイン
         do something: 何かしてください
       courseE_artist_functions_challenge2:
-        my design: 私のデザイン
         do something: 何かしてください
       courseE_artist_functions_challenge2_2018:
-        my design: 私のデザイン
         do something: 何かしてください
       courseE_artist_functions_challenge2_2019:
-        my design: 私のデザイン
         do something: 何かしてください
       courseE_artist_functions_predict1:
         draw a square: 正方形 を かく
-        draw ear stems: メガネをかこう。
       courseE_artist_functions_predict1_2018:
         draw a square: 正方形 を かく
-        draw ear stems: メガネをかこう。
       courseE_artist_functions_predict1_2019:
         draw a square: 正方形 を かく
-        draw ear stems: メガネをかこう。
       courseE_artist_functions_predict2:
-        draw line of polygons: 多角形で線をかこう
-        draw polygon: 多角形をかこう
         do something: 何かしてください
       courseE_artist_functions_predict2_2018:
-        draw line of polygons: 多角形で線をかこう
-        draw polygon: 多角形をかこう
         do something: 何かしてください
       courseE_artist_functions_predict2_2019:
-        draw line of polygons: 多角形で線をかこう
-        draw polygon: 多角形をかこう
         do something: 何かしてください
-      courseE_bee_concept4:
-        honey nectar: ハチミツとミツ
       courseE_bee_functions1:
         do something: 何かしてください
-      courseE_bee_functions10:
-        move and make honey: ハチミツを作ってまわろう
-      courseE_bee_functions11_predict1:
-        move and make honey: ハチミツを作ってまわろう
       courseE_bee_functions2:
         get 2 nectar: 蜜を2つ取る
       courseE_bee_functions3:
@@ -621,49 +446,16 @@ ja-JP:
         get 7 nectar make 7 honey: 7つ蜜を取り、7つ蜂蜜を作る
       courseE_bee_functions7:
         get 7 make 7: ７つとり、7つ作る
-      courseE_bee_functions8:
-        collect all nectar: ミツを集めよう
-      courseE_bee_functions9:
-        get all nectar: ミツをすべて集めよう
       courseE_bee_functions_challenge1:
         do something: 何かしてください
-        get 3 nectar or honey: 3つ ミツを とって ハチミツを 3つ 作ろう
       courseE_bee_functions_challenge2:
         do something: 何かしてください
-        move and collect: 集めて回ろう
       courseE_farmer_concept1:
         do something: 何かしてください
       courseE_farmer_concept2:
         do something: 何かしてください
-        get pumpkin: カボチャを集めよう
-      courseE_farmer_concept2_2018:
-        get pumpkin: カボチャを集めよう
       courseE_farmer_concept3:
         do something: 何かしてください
-      courseE_farmer_functions10b:
-        navigate: ナビゲート
-      courseE_farmer_functions11_predict:
-        check and pick: 調べて しゅうかくする
-        find pumpkin: カボチャを見つけよう
-        wander path: 迷路
-      courseE_farmer_functions2ba:
-        corn and pumpkin: トウモロコシとカボチャ
-      courseE_farmer_functions3c:
-        corn and pumpkin: トウモロコシとカボチャ
-      courseE_farmer_functions4b:
-        corn and pumpkin: トウモロコシとカボチャ
-      courseE_farmer_functions5c:
-        corn and pumpkin: トウモロコシとカボチャ
-      courseE_farmer_functions6c:
-        corn and pumpkin: トウモロコシとカボチャ
-      courseE_farmer_functions8b:
-        navigate: ナビゲート
-      courseE_farmer_functions9b:
-        navigate: ナビゲート
-      courseE_playLab_challenge1:
-        win game: 勝ち
-        lose game: 負け
-        keep playing: ゲームをつづける
       courseE_playLab_scaffold1:
         do something: 何かしてください
       courseE_playLab_scaffold2:
@@ -709,16 +501,11 @@ ja-JP:
         collect: あつめる
       grade5_artist_binary11:
         draw: かく
-        draw bit: ０か1で図形をかいてみよう
       grade5_artist_binary4:
         draw: かく
-        draw bit: ０か1で図形をかいてみよう
       grade5_artist_binary5:
         draw: かく
-        draw bit: ０か1で図形をかいてみよう
       grade5_artist_binary8:
         draw: かく
-        draw bit: ０か1で図形をかいてみよう
       grade5_artist_binary9:
         draw: かく
-        draw bit: ０か1で図形をかいてみよう

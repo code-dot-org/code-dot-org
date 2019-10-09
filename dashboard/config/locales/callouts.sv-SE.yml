@@ -220,7 +220,6 @@ sv-SE:
       frozen freeplay:
         snowflake_dropdown: Använd den här rullisten för att skapa olika snöflingor!
       frozen line:
-        run: Tryck på "Kör" för att prova programmet!
         move_elsa_forward: Dra ett "flytta framåt" block och fäst det under "vid start"
           blocket för att få Elsa att gå framåt
       frozen perpendicular:

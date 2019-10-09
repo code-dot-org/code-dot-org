@@ -268,31 +268,6 @@ zh-TW:
             '"x"': 十字交叉
             '"plus"': 十字加號
             '"random"': 隨機
-      Dancelab_makeAnonymousDanceSprite:
-        options:
-          COSTUME:
-            '"ALIEN"': 外星人
-            '"BEAR"': 熊仔
-            '"CAT"': 小貓
-            '"DOG"': 小狗
-            '"DUCK"': 鴨子
-            '"FROG"': 青蛙
-            '"MOOSE"': 麋鹿
-            '"PINEAPPLE"': 鳳梨
-            '"ROBOT"': 機器人
-            '"SHARK"': 鯊魚
-            '"UNICORN"': 獨角獸
-          LOCATION:
-            "{x: 200, y: 100}": 頂部
-            "{x: 200, y: 300}": 底部
-            "{x: 100, y: 200}": " 向左"
-            "{x: 300, y: 200}": 向右
-            "{x: 200, y: 200}": 中間
-            "{x: 100, y: 100}": 左上
-            "{x: 300, y: 100}": 右上
-            "{x: 100, y: 300}": 左下
-            "{x: 300, y: 300}": 右下
-            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": 隨機
       Dancelab_makeNewDanceSprite:
         text: |-
           角色 創建一個新的 {COSTUME}
@@ -564,21 +539,6 @@ zh-TW:
       Dancelab_setTint:
         text: 角色 {SPRITE} 色調設為 {VAL}
       Dancelab_setTintEach:
-        text: 角色 {THIS} 色調設為 {VAL}
-        options:
-          THIS:
-            sprites: 全部
-            '"ALIEN"': 全部外星人
-            '"BEAR"': 全部熊仔
-            '"CAT"': 全部小貓
-            '"DOG"': 全部小狗
-            '"DUCK"': 全部鴨子
-            '"FROG"': 全部青蛙
-            '"MOOSE"': 全部麋鹿
-            '"PINEAPPLE"': 全部鳳梨
-            '"ROBOT"': 全部機器人
-            '"SHARK"': 全部鯊魚
-      Dancelab_setTintEachInline:
         text: 角色 {THIS} 色調設為 {VAL}
         options:
           THIS:

@@ -76,12 +76,6 @@ pt:
             sprites: tudo
           FORMAT:
             '"random"': aleatório
-      Dancelab_makeAnonymousDanceSprite:
-        options:
-          LOCATION:
-            "{x: 100, y: 200}": para a esquerda
-            "{x: 300, y: 200}": para a direita
-            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": aleatório
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
@@ -166,10 +160,6 @@ pt:
             '"scale"': tamanho
             '"height"': altura
       Dancelab_setTintEach:
-        options:
-          THIS:
-            sprites: tudo
-      Dancelab_setTintEachInline:
         options:
           THIS:
             sprites: tudo

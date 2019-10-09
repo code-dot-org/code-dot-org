@@ -428,11 +428,6 @@ ja-JP:
         - {}
       Begin planning your project:
         title: タイトル
-        content1: 説明
-      Begin planning your project_2018:
-        content1: 説明
-      Begin planning your project_2018_2019:
-        content1: 説明
       CSD Header Size MC:
         answers:
         - {}
@@ -453,39 +448,26 @@ ja-JP:
         - {}
       CSD U2 Design Project:
         title: タイトル
-        content1: 説明
       CSD U2 Design Project_2018:
         title: タイトル
-        content1: 説明
       CSD U2 Design Project_2018_2019:
         title: タイトル
-        content1: 説明
       CSD U2 L2 Overview:
         title: タイトル
-        content1: 説明
       CSD U2 L3 Overview:
         title: タイトル
-        content1: 説明
       CSD U2 L4 Overview:
         title: タイトル
-        content1: 説明
       CSD U2 L5 Overview:
         title: タイトル
-        content1: 説明
       CSD U2 L6 Overview:
         title: タイトル
-        content1: 説明
-      CSD U2 Lesson 6 Overview:
-        content1: 説明
       CSD U2 expand project:
         title: タイトル
-        content1: 説明
       CSD U2 expand project_2018:
         title: タイトル
-        content1: 説明
       CSD U2 expand project_2018_2019:
         title: タイトル
-        content1: 説明
       CSD U2 image debug match:
         questions:
         - {}
@@ -538,12 +520,6 @@ ja-JP:
         - {}
         - {}
         - {}
-      CSD U2 project guide:
-        content1: 説明
-      CSD U2 project guide_2018:
-        content1: 説明
-      CSD U2 project guide_2018_2019:
-        content1: 説明
       CSD U3 - conditionals - Matching:
         questions:
         - {}
@@ -610,10 +586,6 @@ ja-JP:
         - {}
         - {}
         - {}
-      CSD U3 Card Examples_2018:
-        content1: 説明
-      CSD U3 Card Examples_2018_2019:
-        content1: 説明
       CSD U3 Functions Prediction define first:
         answers:
         - {}
@@ -709,13 +681,10 @@ ja-JP:
         - {}
       CSD U3 combining rep:
         title: タイトル
-        content1: 説明
       CSD U3 combining rep_2018:
         title: タイトル
-        content1: 説明
       CSD U3 combining rep_2018_2019:
         title: タイトル
-        content1: 説明
       CSD U3 drawSprites placement match:
         questions:
         - {}
@@ -738,66 +707,26 @@ ja-JP:
         - {}
         - {}
         - {}
-      CSD U3 game intro:
-        content1: 説明
-      CSD U3 game intro_2018:
-        content1: 説明
-      CSD U3 game intro_2018_2019:
-        content1: 説明
-      CSD U3 platform intro:
-        content1: 説明
-      CSD U3 platform intro_2018:
-        content1: 説明
-      CSD U3 platform intro_2018_2019:
-        content1: 説明
       CSD U5 Encryption 1:
         title: タイトル
-        content1: 説明
       CSD U5 Encryption 1_2018:
         title: タイトル
-        content1: 説明
       CSD U5 Encryption 1_2018_2019:
         title: タイトル
-        content1: 説明
-      CSD U5 Encryption 2:
-        content1: 説明
-      CSD U5 Encryption 2_2018:
-        content1: 説明
-      CSD U5 Encryption 2_2018_2019:
-        content1: 説明
       CSD U5 L13 SFLP Interpreting Data:
         title: タイトル
-        content1: 説明
-      CSD U5 crosstab warmup:
-        content1: 説明
-      CSD U5 crosstab warmup_2018:
-        content1: 説明
-      CSD U5 crosstab warmup_2018_2019:
-        content1: 説明
       CSD U5 data visualization:
         title: タイトル
-        content1: 説明
       CSD U5 data visualization_2018:
         title: タイトル
-        content1: 説明
       CSD U5 data visualization_2018_2019:
         title: タイトル
-        content1: 説明
       CSD U5 student record:
         title: タイトル
-        content1: 説明
       CSD U5 student record_2018:
         title: タイトル
-        content1: 説明
       CSD U5 student record_2018_2019:
         title: タイトル
-        content1: 説明
-      CSD U6 LED create intro:
-        content1: 説明
-      CSD U6 LED create intro_2018:
-        content1: 説明
-      CSD U6 LED create intro_2018_2019:
-        content1: 説明
       CSD U6 array multi:
         questions:
         - {}
@@ -822,12 +751,6 @@ ja-JP:
         - {}
         - {}
         - {}
-      CSD U6 final intro:
-        content1: 説明
-      CSD U6 final intro_2018:
-        content1: 説明
-      CSD U6 final intro_2018_2019:
-        content1: 説明
       CSD U6 setProperty predict multi:
         questions:
         - {}
@@ -844,13 +767,8 @@ ja-JP:
         - {}
         - {}
         - {}
-      Internet Simulator Setup:
-        content1: 説明
       Internet Simulator Setup 2:
         title: タイトル
-        content1: 説明
-      Internet Simulator Setup 3:
-        content1: 説明
       K-1 Artist 1 Multi 1:
         title: 複数の選択肢
         questions:
@@ -1048,20 +966,12 @@ ja-JP:
         - text: 南
       Multi-Screen Apps:
         title: タイトル
-        content1: 説明
       New Challenge Introduction:
         title: タイトル
-        content1: 説明
       OPD-K5 Stage3aGo:
         title: タイトル
-        content1: 説明
       Prepare for your presentation:
         title: タイトル
-        content1: 説明
-      'Technique: Frequency Analysis':
-        content1: 説明
-      Terminology Recap:
-        content1: 説明
       behaviors 1 predict:
         questions:
         - {}
@@ -1143,38 +1053,38 @@ ja-JP:
         questions:
         - text: '下のプログラムをじっくり見て、どこがまちがっているのか考えてみよう。 '
         answers:
-        - text: プログラムは間違っていない。スクラットはドングリにたどりつける。
-          feedback: ふせいかい。スクラットが さいごに まがる ほうこうが、まちがっています。
-        - text: スクラットが さいごに まがる ほうこうが、まちがっています。
+        - text: プログラムは間違っていない。リスはドングリにたどりつける。
+          feedback: ふせいかい。リスのスクラットが さいごに まがる ほうこうが、まちがっています。
+        - text: リスのスクラットが さいごに まがる ほうこうが、まちがっています。
           feedback: 正解です.
-        - text: スクラットは ドングリの 手前までしかいけません。
-          feedback: ふせいかい。スクラットはまちがったほうこうに まがってしまいます。
+        - text: リスのスクラットは ドングリの 手前までしかいけません。
+          feedback: ふせいかい。リスのスクラットはまちがったほうこうに まがってしまいます。
         - text: わかりません
-          feedback: 'まちがっているのは、スクラットがさいごに まがる ほうこうです。 '
+          feedback: 'まちがっているのは、リスのスクラットがさいごに まがる ほうこうです。 '
       courseC_multi_maze_debugging8_predict1_2018:
         questions:
         - text: '下のプログラムをじっくり見て、どこがまちがっているのか考えてみよう。 '
         answers:
-        - text: プログラムは間違っていない。スクラットはドングリにたどりつける。
-          feedback: ふせいかい。スクラットが さいごに まがる ほうこうが、まちがっています。
-        - text: スクラットが さいごに まがる ほうこうが、まちがっています。
+        - text: プログラムは間違っていない。リスはドングリにたどりつける。
+          feedback: ふせいかい。リスのスクラットが さいごに まがる ほうこうが、まちがっています。
+        - text: リスのスクラットが さいごに まがる ほうこうが、まちがっています。
           feedback: 正解です.
-        - text: スクラットは ドングリの 手前までしかいけません。
-          feedback: ふせいかい。スクラットはまちがったほうこうに まがってしまいます。
+        - text: リスのスクラットは ドングリの 手前までしかいけません。
+          feedback: ふせいかい。リスのスクラットはまちがったほうこうに まがってしまいます。
         - text: わかりません
-          feedback: 'まちがっているのは、スクラットがさいごに まがる ほうこうです。 '
+          feedback: 'まちがっているのは、リスのスクラットがさいごに まがる ほうこうです。 '
       courseC_multi_maze_debugging8_predict1_2018_2019:
         questions:
         - text: '下のプログラムをじっくり見て、どこがまちがっているのか考えてみよう。 '
         answers:
-        - text: プログラムは間違っていない。スクラットはドングリにたどりつける。
-          feedback: ふせいかい。スクラットが さいごに まがる ほうこうが、まちがっています。
-        - text: スクラットが さいごに まがる ほうこうが、まちがっています。
+        - text: プログラムは間違っていない。リスはドングリにたどりつける。
+          feedback: ふせいかい。リスのスクラットが さいごに まがる ほうこうが、まちがっています。
+        - text: リスのスクラットが さいごに まがる ほうこうが、まちがっています。
           feedback: 正解です.
-        - text: スクラットは ドングリの 手前までしかいけません。
-          feedback: ふせいかい。スクラットはまちがったほうこうに まがってしまいます。
+        - text: リスのスクラットは ドングリの 手前までしかいけません。
+          feedback: ふせいかい。リスのスクラットはまちがったほうこうに まがってしまいます。
         - text: わかりません
-          feedback: 'まちがっているのは、スクラットがさいごに まがる ほうこうです。 '
+          feedback: 'まちがっているのは、リスのスクラットがさいごに まがる ほうこうです。 '
       courseC_multi_maze_programming8_predict1:
         questions:
         - text: プログラムを見て ”実行（じっこう）”ボタンをおしたら どうなるか考えてみよう。
@@ -1283,15 +1193,9 @@ ja-JP:
           feedback: ふせいかい。さいしょのくりかえしで ３回前にすすむべきところ、２回しかすすんでいません。
         - text: わかりません
           feedback: さいしょのくりかえしで ３回前にすすむべきところ、２回しかすすんでいません。
-      courseD_external_binary1:
-        title: ０か1で図形をかいてみよう
-      courseD_external_binary1_2018:
-        title: ０か1で図形をかいてみよう
-      courseD_external_binary1_2018_2019:
-        title: ０か1で図形をかいてみよう
       courseD_multi_artist_binary8_predict1:
         questions:
-        - text: '"実行（じっこう）"をクリックしたら、どのパターンが かかれるかな？'
+        - {}
         answers:
         - text: A
           feedback: ふせいかい
@@ -1303,7 +1207,7 @@ ja-JP:
           feedback: 正解です.
       courseD_multi_artist_binary8_predict1_2018:
         questions:
-        - text: '"実行（じっこう）"をクリックしたら、どのパターンが かかれるかな？'
+        - {}
         answers:
         - text: A
           feedback: ふせいかい
@@ -1315,7 +1219,7 @@ ja-JP:
           feedback: 正解です.
       courseD_multi_artist_binary8_predict1_2018_2019:
         questions:
-        - text: '"実行（じっこう）"をクリックしたら、どのパターンが かかれるかな？'
+        - {}
         answers:
         - text: A
           feedback: ふせいかい
@@ -1363,76 +1267,52 @@ ja-JP:
           feedback: 五角形を かく くりかえしを ４回 くりかえして 一周しています。
       courseD_multi_bee_conditionals1_predict1:
         questions:
-        - text: くもの下は見えないけど、花があるはず。もし 花があれば、ミツを集めよう。花じゃなかったら、何もしなくていいよ。 "実行（じっこう）"をクリックしたら、どうなるか考えてみよう。
+        - {}
         answers:
-        - text: 'ハチはくものところまで行って、むじょうけんにミツを集めようとする。 '
-          feedback: ふせいかい、くもの下に花があるか `もし 花で` で調べて、花が あればミツを 集めます。
-        - text: ハチはくものところまで行って、くもの下に花があれば ミツを 集めます。
-          feedback: 正解です.
-        - text: 'ハチはくものところまで行くけど、その後は何もしない。 '
-          feedback: ふせいかい、くもの下に花があるか `もし 花で` で調べて、花が あればミツを 集めます。
+        - {}
+        - feedback: 正解です.
+        - {}
         - text: わかりません
-          feedback: くもの下に花があるか `もし 花で` で調べて、花が あればミツを 集めます。
       courseD_multi_bee_conditionals1_predict1_2018:
         questions:
-        - text: くもの下は見えないけど、花があるはず。もし 花があれば、ミツを集めよう。花じゃなかったら、何もしなくていいよ。 "実行（じっこう）"をクリックしたら、どうなるか考えてみよう。
+        - {}
         answers:
-        - text: 'ハチはくものところまで行って、むじょうけんにミツを集めようとする。 '
-          feedback: ふせいかい、くもの下に花があるか `もし 花で` で調べて、花が あればミツを 集めます。
-        - text: ハチはくものところまで行って、くもの下に花があれば ミツを 集めます。
-          feedback: 正解です.
-        - text: 'ハチはくものところまで行くけど、その後は何もしない。 '
-          feedback: ふせいかい、くもの下に花があるか `もし 花で` で調べて、花が あればミツを 集めます。
+        - {}
+        - feedback: 正解です.
+        - {}
         - text: わかりません
-          feedback: くもの下に花があるか `もし 花で` で調べて、花が あればミツを 集めます。
       courseD_multi_bee_conditionals1_predict1_2018_2019:
         questions:
-        - text: くもの下は見えないけど、花があるはず。もし 花があれば、ミツを集めよう。花じゃなかったら、何もしなくていいよ。 "実行（じっこう）"をクリックしたら、どうなるか考えてみよう。
+        - {}
         answers:
-        - text: 'ハチはくものところまで行って、むじょうけんにミツを集めようとする。 '
-          feedback: ふせいかい、くもの下に花があるか `もし 花で` で調べて、花が あればミツを 集めます。
-        - text: ハチはくものところまで行って、くもの下に花があれば ミツを 集めます。
-          feedback: 正解です.
-        - text: 'ハチはくものところまで行くけど、その後は何もしない。 '
-          feedback: ふせいかい、くもの下に花があるか `もし 花で` で調べて、花が あればミツを 集めます。
+        - {}
+        - feedback: 正解です.
+        - {}
         - text: わかりません
-          feedback: くもの下に花があるか `もし 花で` で調べて、花が あればミツを 集めます。
       courseD_multi_bee_conditionals7_predict2:
         questions:
-        - text: このプログラムを動かしたら、どうなるかな？ちゅうい：くもにかくれているのは、花が_一つ_が、ハチの巣が_一つ_だよ。
+        - {}
         answers:
-        - text: ハチは花ではミツをとり、ハチの巣ではハチミツを作る。
-          feedback: 正解です.
-        - text: ハチは花でもハチの巣でもミツをとろうとする。
-          feedback: ふせいかい、`もし 花で` があるので、ハチは花からミツをとったり、ハチの巣でハチミツを作ったりします。
-        - text: ハチは花でもハチの巣でもハチミツを作ろうとする。
-          feedback: ふせいかい、`もし 花で` で、ハチは花からミツをとったり、ハチの巣でハチミツを作ったりします。
+        - feedback: 正解です.
+        - {}
+        - {}
         - text: わかりません
-          feedback: "`もし 花で` で、ハチは花からミツをとったり、ハチの巣でハチミツを作ったりします。"
       courseD_multi_bee_conditionals7_predict2_2018:
         questions:
-        - text: このプログラムを動かしたら、どうなるかな？ちゅうい：くもにかくれているのは、花が_一つ_が、ハチの巣が_一つ_だよ。
+        - {}
         answers:
-        - text: ハチは花ではミツをとり、ハチの巣ではハチミツを作る。
-          feedback: 正解です.
-        - text: ハチは花でもハチの巣でもミツをとろうとする。
-          feedback: ふせいかい、`もし 花で` があるので、ハチは花からミツをとったり、ハチの巣でハチミツを作ったりします。
-        - text: ハチは花でもハチの巣でもハチミツを作ろうとする。
-          feedback: ふせいかい、`もし 花で` で、ハチは花からミツをとったり、ハチの巣でハチミツを作ったりします。
+        - feedback: 正解です.
+        - {}
+        - {}
         - text: わかりません
-          feedback: "`もし 花で` で、ハチは花からミツをとったり、ハチの巣でハチミツを作ったりします。"
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         questions:
         - {}
         answers:
-        - text: ハチは花ではミツをとり、ハチの巣ではハチミツを作る。
-          feedback: 正解です.
-        - text: ハチは花でもハチの巣でもミツをとろうとする。
-          feedback: ふせいかい、`もし 花で` があるので、ハチは花からミツをとったり、ハチの巣でハチミツを作ったりします。
-        - text: ハチは花でもハチの巣でもハチミツを作ろうとする。
-          feedback: ふせいかい、`もし 花で` で、ハチは花からミツをとったり、ハチの巣でハチミツを作ったりします。
+        - feedback: 正解です.
+        - {}
+        - {}
         - text: わかりません
-          feedback: "`もし 花で` で、ハチは花からミツをとったり、ハチの巣でハチミツを作ったりします。"
       courseD_multi_bee_nestedLoops2_predict1:
         questions:
         - text: '"実行（じっこう）"をクリックしたら どうなりますか？プログラムは くりかえしが 入れ子に なっているよ。'
@@ -1519,29 +1399,25 @@ ja-JP:
           feedback: 曲がる方向*と*くりかえしの回数が まちがっているので、たからものを 全部 集めることは できません。
       courseD_multi_farmer_condLoops9_predict1:
         questions:
-        - text: "”実行（じっこう）”をクリックしたら、どうなるかな？"
+        - {}
         answers:
-        - text: 全部の作物をしゅうかくできる。
-          feedback: ふせいかい、かぼちゃを しゅうかくする めいれいが ありません。
-        - text: さくもつを ひとつも しゅうかく できない。
-          feedback: ふせいかい、かいだんじょうに進んで、そこにあるトウモロコシやレタスを しゅかく しますが、かぼちゃだけは しゅうかく できません。
-        - text: カボチャ以外のものは、しゅうかくできる。
-          feedback: 正解です.
+        - {}
+        - {}
+        - feedback: 正解です.
         - text: わかりません
-          feedback: かいだんじょうに進んで、そこにあるトウモロコシやレタスを しゅかく しますが、かぼちゃだけは しゅうかく できません。
       courseD_multi_farmer_condLoops9_predict1_2018:
         questions:
-        - text: "”実行（じっこう）”をクリックしたら、どうなるかな？"
+        - {}
         answers:
-        - text: 全部の作物をしゅうかくできる。
+        - {}
         - {}
         - feedback: 正解です.
         - text: わかりません
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
         questions:
-        - text: "”実行（じっこう）”をクリックしたら、どうなるかな？"
+        - {}
         answers:
-        - text: 全部の作物をしゅうかくできる。
+        - {}
         - {}
         - feedback: 正解です.
         - text: わかりません
@@ -1634,158 +1510,119 @@ ja-JP:
           feedback: 農夫は山がなくなるまで、土をかたづけつづけます。
       courseD_multi_maze_until10_predict2:
         questions:
-        - text: "”実行（じっこう）”をクリックしたら、どうなるかな？"
-        answers:
-        - text: ゾンビは すぐに 右に曲がって、動けなくなる。
-          feedback: 正解です.
-        - text: ゾンビは、ひまわりまで行くことができる。
-          feedback: ふせいかい、まっすぐ 行けるかどうか 調べるより *前に* 右に道があるか 調べるので、まちがった方向に行ってしまいます。
-        - text: ゾンビは、右に曲がったら、その一角を回りつづける。
-          feedback: ふせいかい、ゾンビは、まっすぐか 右に曲がる しかできない。左に曲がれないので、すぐに動けなくなってしまいます。
-        - text: わかりません
-          feedback: まっすぐ 行けるかどうか 調べるより *前に* 右に道があるか 調べるので、まちがった方向に行ってしまいます。
-      courseD_multi_maze_until10_predict2_2018:
-        questions:
-        - text: "”実行（じっこう）”をクリックしたら、どうなるかな？"
+        - {}
         answers:
         - feedback: 正解です.
-        - text: ゾンビは、ひまわりまで行くことができる。
-        - text: ゾンビは、右に曲がったら、その一角を回りつづける。
+        - {}
+        - {}
+        - text: わかりません
+      courseD_multi_maze_until10_predict2_2018:
+        questions:
+        - {}
+        answers:
+        - feedback: 正解です.
+        - {}
+        - {}
         - text: わかりません
       courseD_multi_maze_until10_predict2_2018_2019:
         questions:
-        - text: "”実行（じっこう）”をクリックしたら、どうなるかな？"
+        - {}
         answers:
         - feedback: 正解です.
-        - text: ゾンビは、ひまわりまで行くことができる。
-        - text: ゾンビは、右に曲がったら、その一角を回りつづける。
+        - {}
+        - {}
         - text: わかりません
       courseD_multi_maze_until2_predict1:
         questions:
-        - text: プログラムを実行（じっこう）したら、どうなりますか？
+        - {}
         answers:
-        - text: トリさんは、まったく動かない。
-          feedback: ふせいかい、道を進んで つきあたったら 左に曲がるを ブタさんのところに着くまで くりかえします！
+        - {}
         - text: 鳥はブタのところまで行くことができる。
           feedback: 正解です.
-        - text: 道をまっすぐ進んで、TNTに げきとつ する。
-          feedback: ふせいかい、道を進んで つきあたったら 左に曲がるを ブタさんのところに着くまで くりかえします！
+        - {}
         - text: わかりません
-          feedback: 道を進んで つきあたったら 左に曲がるを ブタさんのところに着くまで くりかえします！
       courseD_multi_maze_until2_predict1_2018:
         questions:
-        - text: プログラムを実行（じっこう）したら、どうなりますか？
+        - {}
         answers:
-        - text: トリさんは、まったく動かない。
-          feedback: ふせいかい、道を進んで つきあたったら 左に曲がるを ブタさんのところに着くまで くりかえします！
+        - {}
         - text: 鳥はブタのところまで行くことができる。
           feedback: 正解です.
-        - text: 道をまっすぐ進んで、TNTに げきとつ する。
-          feedback: ふせいかい、道を進んで つきあたったら 左に曲がるを ブタさんのところに着くまで くりかえします！
+        - {}
         - text: わかりません
-          feedback: 道を進んで つきあたったら 左に曲がるを ブタさんのところに着くまで くりかえします！
       courseD_multi_maze_until2_predict1_2018_2019:
         questions:
-        - text: プログラムを実行（じっこう）したら、どうなりますか？
+        - {}
         answers:
-        - text: トリさんは、まったく動かない。
-          feedback: ふせいかい、道を進んで つきあたったら 左に曲がるを ブタさんのところに着くまで くりかえします！
+        - {}
         - text: 鳥はブタのところまで行くことができる。
           feedback: 正解です.
-        - text: 道をまっすぐ進んで、TNTに げきとつ する。
-          feedback: ふせいかい、道を進んで つきあたったら 左に曲がるを ブタさんのところに着くまで くりかえします！
+        - {}
         - text: わかりません
-          feedback: 道を進んで つきあたったら 左に曲がるを ブタさんのところに着くまで くりかえします！
       courseD_multi_scrat_predict1:
         questions:
-        - text: "”実行（じっこう）”ボタンを押したら、どうなりますか？"
+        - {}
         answers:
-        - text: スクラットは、まったく動かない。
-          feedback: 不正解、 'くりかえし' の中に'前に すすむ'が入っているので、スクラットは前に3回進みます。
-        - text: スクラットを前に3回進んで、曲がって、また、前に3回進んでドングリをゲットする！
-          feedback: 正解です.
-        - text: スクラットは前に進んで、曲がって、海に落ちてしまう。
-          feedback: 不正解、 'くりかえし' の中に'前に すすむ'が入っているので、スクラットは前に3回進みます。
+        - {}
+        - feedback: 正解です.
+        - {}
         - text: わかりません
-          feedback: "'くりかえし'の中に '前に すすむ'があるので、スクラットは3回前に進みます。曲がって、さらに前に3回進んでドングリをゲットします。"
       courseE_multi_bee_functions_predict1:
         questions:
-        - text: さっきのパズルとまったく同じプログラムがあります。今回はつくるハチミツの量がちがっています。"実行（じっこう）"をクリックしたら どうなるかな？
+        - {}
         answers:
-        - text: 同じプログラムで このパズルも クリアできる。
-          feedback: 正解、作るハチミツの量が変わってもだいじょうぶ。関数は量が変わっても うまくいくように 作られています。
-        - text: ハチミツを全部作ることはできない。
-          feedback: 不正解、関数は 0になるまで ハチミツを作るように 作られています。
-        - text: ハチミツをたくさん作ろうとする。
-          feedback: 不正解、関数は 0になるまで ハチミツを作るように 作られています。
+        - {}
+        - {}
+        - {}
         - text: わかりません
-          feedback: このプログラムでパズルをクリアできます。プログラムは 0になるまで ハチミツを作るように 作られています。
       courseE_multi_farmer_functions11_predict:
         questions:
-        - text: 農夫は何をしゅうかくするかな？
+        - {}
         answers:
-        - text: カボチャを２つしゅうかくします。
-          feedback: 不正解、農夫はトウモロコシをしゅうかくした後、 "check and pick"を呼ばない。
-        - text: カボチャを全部しゅうかくする。
-          feedback: 不正解、農夫はトウモロコシをしゅうかくした後、 "check and pick"を呼ばない。
-        - text: レタスをしゅうかくする。
-          feedback: 不正解、農夫は1回曲がって、トウモロコシのとこまで行って終わります。
-        - text: トウモロコシをしゅうかくする。
-          feedback: 正解です.
+        - {}
+        - {}
+        - {}
+        - feedback: 正解です.
       courseE_multi_farmer_functions11_predict_2018:
         questions:
-        - text: 農夫は何をしゅうかくするかな？
+        - {}
         answers:
-        - text: カボチャを２つしゅうかくします。
-        - text: カボチャを全部しゅうかくする。
-        - text: レタスをしゅうかくする。
-          feedback: 正解です.
-        - text: トウモロコシをしゅうかくする。
+        - {}
+        - {}
+        - feedback: 正解です.
+        - {}
       courseE_multi_farmer_functions11_predict_2018_2019:
         questions:
-        - text: 農夫は何をしゅうかくするかな？
+        - {}
         answers:
-        - text: カボチャを２つしゅうかくします。
-        - text: カボチャを全部しゅうかくする。
-        - text: レタスをしゅうかくする。
-          feedback: 正解です.
-        - text: トウモロコシをしゅうかくする。
+        - {}
+        - {}
+        - feedback: 正解です.
+        - {}
       courseE_prediction_artistFunction1:
         questions:
-        - text: '"実行（じっこう）"をクリックしたら、どんな絵が かかれますか？'
+        - {}
         answers:
-        - text: 何もかかれない。関数が呼び出されない。
-          feedback: 不正解、関数は２度呼び出されます。
-        - text: 四角形を１つかく。
-          feedback: 不正解、関数は２度呼び出されます。
-        - text: ２つの四角形が重なりあった絵をかく。
-          feedback: 不正解、四角形の辺の長さは100ピクセルで、次の四角形をかく前に 175ピクセル ジャンプしています。
-        - text: すき間を開けて 四角形を ２つかく。
-          feedback: 正解、関数は２回呼び出されて、関数と関数の間でジャンプして移動しています。
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_prediction_artistFunction1_2018:
         questions:
-        - text: '"実行（じっこう）"をクリックしたら、どんな絵が かかれますか？'
+        - {}
         answers:
-        - text: 何もかかれない。関数が呼び出されない。
-          feedback: 不正解、関数は２度呼び出されます。
-        - text: 四角形を１つかく。
-          feedback: 不正解、関数は２度呼び出されます。
-        - text: ２つの四角形が重なりあった絵をかく。
-          feedback: 不正解、四角形の辺の長さは100ピクセルで、次の四角形をかく前に 175ピクセル ジャンプしています。
-        - text: すき間を開けて 四角形を ２つかく。
-          feedback: 正解、関数は２回呼び出されて、関数と関数の間でジャンプして移動しています。
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_prediction_artistFunction1_2018_2019:
         questions:
-        - text: '"実行（じっこう）"をクリックしたら、どんな絵が かかれますか？'
+        - {}
         answers:
-        - text: 何もかかれない。関数が呼び出されない。
-          feedback: 不正解、関数は２度呼び出されます。
-        - text: 四角形を１つかく。
-          feedback: 不正解、関数は２度呼び出されます。
-        - text: ２つの四角形が重なりあった絵をかく。
-          feedback: 不正解、四角形の辺の長さは100ピクセルで、次の四角形をかく前に 175ピクセル ジャンプしています。
-        - text: すき間を開けて 四角形を ２つかく。
-          feedback: 正解、関数は２回呼び出されて、関数と関数の間でジャンプして移動しています。
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_bee_variables_8a_2018:
         questions:
         - {}
@@ -1804,206 +1641,140 @@ ja-JP:
         - text: わかりません
       courseF_multi_artist_for10_predict1:
         questions:
-        - text: プログラムを実行（じっこう）したら、どうなりますか？
+        - {}
         answers:
-        - text: アーティストは だんだん太くなっていく 真っすぐな 線を かきます。
-          feedback: 不正解、 `まつ`のくり返しのなかで 曲がっています。
-        - text: 'だんだん長くて細くなっていく らせん模様を かく '
-          feedback: 不正解、 `まつ`のくり返しのなかでだんだん長くて 太くなっていく 線をかきます。
-        - text: だんだん長くて 太くなっていく らせん模様を かく 。
-          feedback: 正解です.
+        - {}
+        - {}
+        - feedback: 正解です.
         - text: わかりません
-          feedback: 不正解、 `まつ`のくり返しのなかでだんだん長くて 太くなっていく 線をかきます。
       courseF_multi_artist_for10_predict1_2018:
         questions:
-        - text: プログラムを実行（じっこう）したら、どうなりますか？
+        - {}
         answers:
-        - text: アーティストは だんだん太くなっていく 真っすぐな 線を かきます。
-          feedback: 不正解、 `まつ`のくり返しのなかで 曲がっています。
-        - text: 'だんだん長くて細くなっていく らせん模様を かく '
-          feedback: 不正解、 `まつ`のくり返しのなかでだんだん長くて 太くなっていく 線をかきます。
-        - text: だんだん長くて 太くなっていく らせん模様を かく 。
-          feedback: 正解です.
+        - {}
+        - {}
+        - feedback: 正解です.
         - text: わかりません
-          feedback: 不正解、 `まつ`のくり返しのなかでだんだん長くて 太くなっていく 線をかきます。
       courseF_multi_artist_for10_predict1_2018_2019:
         questions:
-        - text: プログラムを実行（じっこう）したら、どうなりますか？
+        - {}
         answers:
-        - text: アーティストは だんだん太くなっていく 真っすぐな 線を かきます。
-          feedback: 不正解、 `まつ`のくり返しのなかで 曲がっています。
-        - text: 'だんだん長くて細くなっていく らせん模様を かく '
-          feedback: 不正解、 `まつ`のくり返しのなかでだんだん長くて 太くなっていく 線をかきます。
-        - text: だんだん長くて 太くなっていく らせん模様を かく 。
-          feedback: 正解です.
+        - {}
+        - {}
+        - feedback: 正解です.
         - text: わかりません
-          feedback: 不正解、 `まつ`のくり返しのなかでだんだん長くて 太くなっていく 線をかきます。
       courseF_multi_artist_fwp2_predict1:
         questions:
-        - text: プログラムを実行（じっこう）したら、どうなりますか？
+        - {}
         answers:
-        - text: アーティストは同じ関数を使って、ちがう大きさの四角形を2つかく。
-          feedback: 正解です.
-        - text: アーティストは別々の関数を使って、ちがう大きさの四角形を2つかく。
-          feedback: 不正解、パラメータを変えることで 1つの関数で ちがう大きさの四角形をかいています。
-        - text: アーティストは別々の関数を使って、同じ大きさの四角形を2つかく。
-          feedback: 不正解、パラメータを変えることで 1つの関数で ちがう大きさの四角形をかいています。
+        - feedback: 正解です.
+        - {}
+        - {}
         - text: わかりません
-          feedback: パラメータを変えることで 1つの関数で ちがう大きさの四角形を2つ かいています。
       courseF_multi_artist_variables3a_predict1:
         questions:
-        - text: 変数 "length"に50をセットしました。"実行（じっこう）"をクリックしたら どうなるかな？
+        - {}
         answers:
-        - text: 一辺が50ピクセルの三角形をかく。
-          feedback: 正解です.
-        - text: 一辺が3ピクセルの50角形をかく。
-          feedback: 不正解、変数`length`は、`くりかえし`の回数ではありません。
-        - text: 50度曲がった線を3本かく
-          feedback: 不正解、変数`length`は、`まがる`角度ではありません。
+        - feedback: 正解です.
+        - {}
+        - {}
         - text: わかりません
-          feedback: 変数`length`に50をセットして `動く 前に`で使ているので、アーティストは一辺が50ピクセルの三角形をかきます。
       courseF_multi_artist_variables3a_predict1_2018:
         questions:
-        - text: 変数 "length"に50をセットしました。"実行（じっこう）"をクリックしたら どうなるかな？
+        - {}
         answers:
-        - text: 一辺が50ピクセルの三角形をかく。
-          feedback: 正解です.
-        - text: 一辺が3ピクセルの50角形をかく。
-          feedback: 不正解、変数`length`は、`くりかえし`の回数ではありません。
-        - text: 50度曲がった線を3本かく
-          feedback: 不正解、変数`length`は、`まがる`角度ではありません。
+        - feedback: 正解です.
+        - {}
+        - {}
         - text: わかりません
-          feedback: 変数`length`に50をセットして `動く 前に`で使ているので、アーティストは一辺が50ピクセルの三角形をかきます。
       courseF_multi_artist_variables3a_predict1_2018_2019:
         questions:
-        - text: 変数 "length"に50をセットしました。"実行（じっこう）"をクリックしたら どうなるかな？
+        - {}
         answers:
-        - text: 一辺が50ピクセルの三角形をかく。
-          feedback: 正解です.
-        - text: 一辺が3ピクセルの50角形をかく。
-          feedback: 不正解、変数`length`は、`くりかえし`の回数ではありません。
-        - text: 50度曲がった線を3本かく
-          feedback: 不正解、変数`length`は、`まがる`角度ではありません。
+        - feedback: 正解です.
+        - {}
+        - {}
         - text: わかりません
-          feedback: 変数`length`に50をセットして `動く 前に`で使ているので、アーティストは一辺が50ピクセルの三角形をかきます。
       courseF_multi_bee_conditionals1_predict1:
         questions:
-        - text: 花がなければハチは何もしません。プログラムを実行（じっこう）したら、どうなりますか？
+        - {}
         answers:
-        - text: 'ハチはくものところまで行って、むじょうけんにミツを集めようとする。 '
-          feedback: ふせいかい、くもの下に花があるか `もし 花で` で調べて、花が あればミツを 集めます。
-        - text: ハチはくものところまで行って、くもの下に花があれば ミツを 集めます。
-          feedback: 正解です.
-        - text: 'ハチはくものところまで行くけど、その後は何もしない。 '
-          feedback: ふせいかい、くもの下に花があるか `もし 花で` で調べて、花が あればミツを 集めます。
+        - {}
+        - feedback: 正解です.
+        - {}
         - text: わかりません
-          feedback: くもの下に花があるか `もし 花で` で調べて、花が あればミツを 集めます。
       courseF_multi_bee_conditionals7_predict2:
         questions:
-        - text: "”実行（じっこう）”をクリックしたら、どうなるかな？"
+        - {}
         answers:
-        - text: ハチは花からミツは集めるが、ハチミツは作らない。
-          feedback: 正解です.
-        - text: ハチは花でもハチの巣でもミツをとろうとする。
-          feedback: 不正解、`もし 花で` で、ハチは花からミツを集め、花でなかったら（ハチの巣だったら）ハチミツを作ります。
-        - text: ハチは花でもハチの巣でもハチミツを作ろうとする。
-          feedback: 不正解、`もし 花で` で、ハチは花からミツを集め、ハチの巣でハチミツを作ります。
+        - feedback: 正解です.
+        - {}
+        - {}
         - text: わかりません
-          feedback: ハチは花からミツを集めるが、ハチミツは作らない。
       courseF_multi_bee_for3_predict1:
         questions:
-        - text: プログラムを実行（じっこう）したら、どうなりますか？
+        - {}
         answers:
-        - text: 'ハチはすべての花からミツを集めることができる。 '
-          feedback: 不正解、 `回くりかえす`でハチはミツを集めるけど、4つの花からしかミツを集めません。
-        - text: 1つの花を除いて、ハチはすべての花からミツを集めることができる。
-          feedback: 正解です.
-        - text: 'ハチはすべての花からミツを1つづつ集める。 '
-          feedback: 不正解、 `回くりかえす`でハチはミツを集めるけど、4つの花からしかミツを集めません。
-        - text: 'ハチは花にあるよりも たくさんのミツを 集めようとする。 '
-          feedback: 不正解、 `回くりかえす`でハチはミツを集めるけど、4つの花からしかミツを集めません。
+        - {}
+        - feedback: 正解です.
+        - {}
+        - {}
       courseF_multi_bee_for3_predict1_2018:
         questions:
-        - text: プログラムを実行（じっこう）したら、どうなりますか？
+        - {}
         answers:
-        - text: 'ハチはすべての花からミツを集めることができる。 '
-          feedback: 不正解、 `回くりかえす`でハチはミツを集めるけど、4つの花からしかミツを集めません。
-        - text: 1つの花を除いて、ハチはすべての花からミツを集めることができる。
-          feedback: 正解です.
-        - text: 'ハチはすべての花からミツを1つづつ集める。 '
-          feedback: 不正解、 `回くりかえす`でハチはミツを集めるけど、4つの花からしかミツを集めません。
+        - {}
+        - feedback: 正解です.
+        - {}
         - {}
       courseF_multi_bee_for3_predict1_2018_2019:
         questions:
-        - text: プログラムを実行（じっこう）したら、どうなりますか？
+        - {}
         answers:
-        - text: 'ハチはすべての花からミツを集めることができる。 '
-          feedback: 不正解、 `回くりかえす`でハチはミツを集めるけど、4つの花からしかミツを集めません。
-        - text: 1つの花を除いて、ハチはすべての花からミツを集めることができる。
-          feedback: 正解です.
-        - text: 'ハチはすべての花からミツを1つづつ集める。 '
-          feedback: 不正解、 `回くりかえす`でハチはミツを集めるけど、4つの花からしかミツを集めません。
+        - {}
+        - feedback: 正解です.
+        - {}
         - {}
       courseF_multi_bee_fwp9_predict1:
         questions:
-        - text: プログラムを実行（じっこう）したら、どうなりますか？
+        - {}
         answers:
-        - text: ハチは、ミツやハチミツを集めない。
-          feedback: 不正解、関数はパラメータで引きつがれた数だけ、ミツかハチミツを集めます。
-        - text: 'ハチは階段状に動いて、最初に3つ、次に2つのミツかハチミツを集めます。 '
-          feedback: 不正解、関数はパラメータで引きつがれた数だけ、ミツかハチミツを集めます。
-        - text: '1回のくり返しでミツかハチミツを1つ集める。 '
-          feedback: 不正解、関数はパラメータで引きつがれた数だけ、ミツかハチミツを集めます。
+        - {}
+        - {}
+        - {}
         - text: わかりません
-          feedback: クリックして関数の中を見れば、パラメータで引きつがれた数だけ、ミツかハチミツを集めているのがわかります。
       courseF_multi_playlab_variables4c_predictive1:
         questions:
-        - text: 質問に "Ali"と答えたら どうなりますか？
+        - {}
         answers:
-        - text: かいぞくは、"Pleasure to meet you, Ali." と言う。
-          feedback: '正解 '
-        - text: かいぞくは"Pleasure to meet you." と言う。
-          feedback: 不正解、 `つなげる`を使えば、かいぞくのことばに入力された名前をつなげることができます。
-        - text: かいぞくは、"Ali"と言う。
-          feedback: 不正解、 `つなげる`を使えば、かいぞくのことばに入力された名前をつなげることができます。
+        - {}
+        - {}
+        - {}
         - text: わかりません
-          feedback: '不正解、`つなげる`を使えば、かいぞくのことばに入力された名前（Ali）をつなげることができます。 '
       coursee_prediction_artistfunction2:
         questions:
-        - text: '"実行（じっこう）"をクリックしたら、どんな絵が かかれますか？'
+        - {}
         answers:
-        - text: アーティストは、ちゃんと絵をかいて、パズルをクリアする。
-          feedback: 不正解、くり返しの中で使うのは、"draw line of polygons"ではなく "draw polygon" instです。
-        - text: アーティストは４つ四角形で まど のパターンをかく。
-          feedback: 正解です.
-        - text: アーティストは、一番上の列だけかく。
-          feedback: 不正解、プログラムの中で"draw line of polygons"を呼んでいません。
-        - text: アーティストは、枠のなかに４つ四角形をかく。
-          feedback: 不正解、くり返しのなかで"draw polygon"を呼んだら90度曲がっています。
+        - {}
+        - feedback: 正解です.
+        - {}
+        - {}
       coursee_prediction_artistfunction2_2018:
         questions:
-        - text: '"実行（じっこう）"をクリックしたら、どんな絵が かかれますか？'
+        - {}
         answers:
-        - text: アーティストは、ちゃんと絵をかいて、パズルをクリアする。
-          feedback: 不正解、くり返しの中で使うのは、"draw line of polygons"ではなく "draw polygon" instです。
-        - text: アーティストは４つ四角形で まど のパターンをかく。
-          feedback: 正解です.
-        - text: アーティストは、一番上の列だけかく。
-          feedback: 不正解、プログラムの中で"draw line of polygons"を呼んでいません。
-        - text: アーティストは、枠のなかに４つ四角形をかく。
-          feedback: 不正解、くり返しのなかで"draw polygon"を呼んだら90度曲がっています。
+        - {}
+        - feedback: 正解です.
+        - {}
+        - {}
       coursee_prediction_artistfunction2_2018_2019:
         questions:
-        - text: '"実行（じっこう）"をクリックしたら、どんな絵が かかれますか？'
+        - {}
         answers:
-        - text: アーティストは、ちゃんと絵をかいて、パズルをクリアする。
-          feedback: 不正解、くり返しの中で使うのは、"draw line of polygons"ではなく "draw polygon" instです。
-        - text: アーティストは４つ四角形で まど のパターンをかく。
-          feedback: 正解です.
-        - text: アーティストは、一番上の列だけかく。
-          feedback: 不正解、プログラムの中で"draw line of polygons"を呼んでいません。
-        - text: アーティストは、枠のなかに４つ四角形をかく。
-          feedback: 不正解、くり返しのなかで"draw polygon"を呼んだら90度曲がっています。
+        - {}
+        - feedback: 正解です.
+        - {}
+        - {}
       grade2_multi_collector_A_predict1:
         questions:
         - text: 下のプログラムを実行（じっこう）したとき、ローレルは たからものを いくつ あつめることが できますか？

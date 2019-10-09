@@ -1961,8 +1961,3 @@ hu:
               name: Bevezető
             Nested Loops:
               name: Egymásba ágyazott ciklusok
-        dance-2019:
-          stages:
-            Dance Party:
-              name: Táncos buli
-          description: Kódold le saját táncos bulidat, és oszd meg az ismerőseiddel!

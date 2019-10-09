@@ -2199,6 +2199,33 @@ zh-TW:
       courseC_harvester_loops_challenge1a_2018:
         courseC_harvester_loops_challenge1_a: 不用迴圈是不可能達成目標的！
         courseC_harvester_loops_challenge1_b: 你可以重複執行`移動-向前`和`收集玉木`到你想要的次數，然後在每次要轉向時使用`轉向-右邊`積木。
+        courseC_harvester_loops_challenge1_c: |-
+          要收集一開始的四個玉米，最好的方式是在一個`重複`積木裡頭使用另一個`重複`積木。你可以用這個模式來解決後面的關卡！
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat">
+          <title name="TIMES">2</title>
+          <statement name="DO">
+          <block type="controls_repeat">
+          <title name="TIMES">2</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="harvester_corn"/>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block></next></block></xml>
       courseC_harvester_loops_challenge1a_2019:
         courseC_harvester_loops_challenge1_a: 不用迴圈是不可能達成目標的！
         courseC_harvester_loops_challenge1_b: 你可以重複執行`移動-向前`和`收集玉木`到你想要的次數，然後在每次要轉向時使用`轉向-右邊`積木。
@@ -2754,6 +2781,10 @@ zh-TW:
 
           ![Solution Blocks](https://images.code.org/d64a0e22c1db1d98c35b243bca6460ab-image-1469727090121.png)
       courseF_artist_variables4:
+        courseF_artist_variables4_b: "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)"
+      courseF_artist_variables4_2018:
+        courseF_artist_variables4_b: "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)"
+      courseF_artist_variables4_2019:
         courseF_artist_variables4_b: "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)"
       courseF_artist_variables7:
         courseF_artist_variables7_c: 要左轉 120 度才能做出三角形的角。

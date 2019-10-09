@@ -247,31 +247,6 @@ cs:
             '"x"': křížem krážem
             '"plus"': plus
             '"random"': náhodně
-      Dancelab_makeAnonymousDanceSprite:
-        options:
-          COSTUME:
-            '"ALIEN"': Vetřelec
-            '"BEAR"': Medvěd
-            '"CAT"': Kočka
-            '"DOG"': Pes
-            '"DUCK"': Kachna
-            '"FROG"': Žába
-            '"MOOSE"': Los
-            '"PINEAPPLE"': Ananas
-            '"ROBOT"': Robot
-            '"SHARK"': Žralok
-            '"UNICORN"': Jednorožec
-          LOCATION:
-            "{x: 200, y: 100}": nahoře
-            "{x: 200, y: 300}": dole
-            "{x: 100, y: 200}": vlevo
-            "{x: 300, y: 200}": vpravo
-            "{x: 200, y: 200}": uprostřed
-            "{x: 100, y: 100}": nahoře vlevo
-            "{x: 300, y: 100}": nahoře vpravo
-            "{x: 100, y: 300}": dole vlevo
-            "{x: 300, y: 300}": dole vpravo
-            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": náhodně
       Dancelab_makeNewDanceSprite:
         text: |-
           vytvořit nový {COSTUME}
@@ -527,21 +502,6 @@ cs:
       Dancelab_setTint:
         text: nastavit {SPRITE} odstín na {VAL}
       Dancelab_setTintEach:
-        text: nastav odstín {THIS} na {VAL}
-        options:
-          THIS:
-            sprites: vše
-            '"ALIEN"': všichni vetřelci
-            '"BEAR"': všichni medvědi
-            '"CAT"': všechny kočky
-            '"DOG"': všichni psi
-            '"DUCK"': všechny kachny
-            '"FROG"': všechny žáby
-            '"MOOSE"': všichni losi
-            '"PINEAPPLE"': všechny ananasy
-            '"ROBOT"': všichni roboti
-            '"SHARK"': všichni žraloci
-      Dancelab_setTintEachInline:
         text: nastav odstín {THIS} na {VAL}
         options:
           THIS:

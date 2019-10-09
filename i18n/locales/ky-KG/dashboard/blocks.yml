@@ -76,12 +76,6 @@ ky:
             sprites: баары
           FORMAT:
             '"random"': туш келди
-      Dancelab_makeAnonymousDanceSprite:
-        options:
-          LOCATION:
-            "{x: 100, y: 200}": солго
-            "{x: 300, y: 200}": оңго
-            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": туш келди
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
@@ -166,10 +160,6 @@ ky:
             '"scale"': өлчөмү
             '"height"': бийиктиги
       Dancelab_setTintEach:
-        options:
-          THIS:
-            sprites: баары
-      Dancelab_setTintEachInline:
         options:
           THIS:
             sprites: баары

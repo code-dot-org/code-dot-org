@@ -58,12 +58,6 @@ sq:
         options:
           FORMAT:
             '"random"': zakonshëm
-      Dancelab_makeAnonymousDanceSprite:
-        options:
-          LOCATION:
-            "{x: 100, y: 200}": majtas
-            "{x: 300, y: 200}": djathtas
-            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": zakonshëm
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:

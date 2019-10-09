@@ -12796,8 +12796,3 @@ tr:
               name: İç İçe Döngüler
             Nested Loops in Frozen:
               name: Frozen'da İç İçe Döngüler
-        dance-2019:
-          stages:
-            Dance Party:
-              name: Dans Partisi
-          description: Kendi dans partinizi kodlayın ve arkadaşlarınızla paylaşın!

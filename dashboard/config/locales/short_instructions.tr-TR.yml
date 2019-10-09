@@ -10,8 +10,6 @@ tr-TR:
         360? 500?"
       2-3 Artist 2 new: Bu evin bir duvarı yarım. Her kenar 100 ancak yarım duvar
         sadece 50. Duvarı tamamla.
-      2-3 Artist 3new: Kırmızı şapka 100 piksel uzunluğundadır. 70 piksel daha kısa
-        olan siyah bir şapka çizerek tamamla. (Siyah şapkanın genişliği 50 pikseldir)
       2-3 Artist 4: Kedi için bu evi tamamlamama yardım et.
       2-3 Artist 6: 'Bu evin bir çatıya ihtiyacı var! Üçgeni çizin. İpucu: Üç kenarda
         aynı uzunluktadır.'
@@ -377,13 +375,12 @@ tr-TR:
       K-1 Artist2 Assessment1: Değerlendirme:Diğer karenin yanına bir kare çizin.
       K-1 Artist2 Free Draw: Herhangi bir şey çiz!
       K-1 Artist2_7: Rafa üst çekmece oluşturmak için bir kare çizin!
-      K-1 Bee 1: Beni çiçeğe götür, nektarı al, sonra beni peteğe götür ve bal yap
+      K-1 Bee 1: Beni çiçeğe götür, nektarı al, sonra beni peteğe götür ve bal yap.
       K-1 Bee 11: Üç nektar topla ve bir bal yap.
       K-1 Bee 13: Üç nektar topla ve bir bal yap!
-      K-1 Bee 14: Beni nektara götür, onu al, beni bala götür, ve bal yap!
       K-1 Bee 15: İki bal yapmak için iki nektar topla!
-      K-1 Bee 2: Beni çiçeğe götür, nektarı al, sonra beni peteğe götür ve bal yap
-      K-1 Bee 3: Beni çiçeğe götür, nektarı al, sonra beni peteğe götür ve bal yap
+      K-1 Bee 2: Beni çiçeğe götür, nektarı al, sonra beni peteğe götür ve bal yap.
+      K-1 Bee 3: Beni çiçeğe götür, nektarı al, sonra beni peteğe götür ve bal yap.
       K-1 Bee 4: İki nektar topla ve iki bal yap!
       K-1 Bee 5: Üç nektar al ve üç bal yap!
       K-1 Bee 6: İki nektar topla ve iki bal yap!
@@ -395,8 +392,6 @@ tr-TR:
       K-1 Bee Loops 12: Tüm nektar ve tüm balı topla.
       K-1 Bee Loops 5: '"Tekrarla" bloğu kullanarak ilerleyip nektar ve balı alalım!'
       K-1 Bee Puzzle 12: Üç nektar topla ve iki bal yap
-      K-1 Building a Foundation Assessment: Üç seviyeli bir piramid inşa et, başka
-        yön yok, şekle ulaşana kadar parçalarla oynamaya devam et!
       K-1 Maze 10: Beni domuza götürmek için TNT'nin etrafından dolaş!
       K-1 Maze 2: Beni domuza götürmek için doğuya ilerle!
       K-1 Maze 3: Beni domuza götürmek için güneye ilerle!
@@ -554,8 +549,8 @@ tr-TR:
         Çiz" diye adlandırdığımız bir fonksiyon. Ne olduğunu görmek ve fonksiyonlar
         nelere yapılabileceğini denemek için kodu çalıştırın. Kare, üçgen veya sekizgenlerden
         desen yapabilir misin?
-      Standalone_Artist_9: Şimdi devam et ve istediğin her türlü resmi yap! Hatta
-        ne istiyorsan yapabileceğin bir fonksiyonun bile var!
+      Standalone_Artist_9: Şimdi devam et ve istediğin her türlü resmi yap! Hata ne
+        istiyorsan yapabileceğin bir fonksiyonun bile var!
       U4 Model Design 1: Tasarım Modu'nu kullanarak ekranınıza büyük kırmızı bir buton
         ekleyin. (Tam talimatları görmek için tıklayın)
       U4 Model Design 1_2018: Tasarım Modu'nu kullanarak ekranınıza büyük kırmızı
@@ -619,14 +614,14 @@ tr-TR:
         oyunu denemeleri için Bitir düğmesine bas.
       bounce_1_basketball: '"sol ok olduğunda" karesine bir kare ekleyin ve "Çalıştır"a
         basın. Son göreve ulaşmak için hedefe elinizi sol oku kullanarak hareket ettirin.'
-      bounce_1_sports: Bayrağa ulaşın! "sol ok basıldığında" bloğuna bir kod ekleyin
+      bounce_1_sports: Bayrağa ulaşın! "sol ok olduğunda" karesine bir kare ekleyin
         ve oyuncuyu bayrağa doğru hareket ettirmek için "Çalıştır"a basın.
       bounce_2: '"sağ ok olduğunda" ve "sol ok olduğunda" bloklarına bir blok ekleyin.
         Son hedeflerin ikisine de ulaşmak için raketi hareket ettirin.'
       bounce_2_basketball: '"sağ ok olduğunda" ve "sol ok olduğunda" karelerine bir
         kare ekleyin. Son görevlerin ikisine de ulaşmak için eli hareket ettirin.'
       bounce_2_sports: Şimdi iki bayrak var. Oyuncunuzu iki yönde de hareket ettirmek
-        için "sol oka basıldığında" ve "sağ oka basıldığında" bloklarına bir kod ekleyin.
+        için "sol ok olduğunda" ve "sağ ok olduğunda" karelerine bir kare ekleyin.
       bounce_3: Şimdi 'yukarı ok olduğunda' bloğuyla benzer şeyler deneyin. Üstteki
         hedefi bitirmek için raketi hareket ettirin.
       bounce_4: Bu sefer 4 blok eklemeniz geriyor. Bulmacayı tamamlamak için raketi
@@ -636,7 +631,7 @@ tr-TR:
       bounce_5_basketball: Ele doğru aşağı uçan bir top göndereceğiz. Topun bayrağa
         ulaştığından emin olmak için "top ele vurduğunda" bloğuna bir blok ekleyin.
       bounce_5_sports: Hokey topu oyuncuya doğru aşağı uçacak! Bayrağa vurmak için
-        "top oyuncuya isabet ettiği zaman" bloğuna bir kod ekleyin.
+        "top oyuncuya vurduğunda" bloğuna bir blok ekleyin.
       bounce_6: Bu sefer son hedef en üstte. Bu bulmacayı çözmek için "top çarptığında"
         bloklarının ikisine de blok eklemen gerekiyor.
       bounce_6_basketball: Şimdi bayrak en üstte. Bulmacayı çözmek için "top vurduğunda"
@@ -649,8 +644,6 @@ tr-TR:
         olaşana kadar topu zıplat.
       bounce_7_sports: Her bir "sırasında" bloğuna blokalar ekleyin. Son hedefe olaşana
         kadar topu zıplat.
-      course1_artist_loops_challenge2: Bir oyun oynayalım! Çizebildiğin kadar X çiz!
-        Üst üste 3 alabilir miyim?
       course1_artist_loops_challenge3: Tweet tweet! İki kuş evi yapmama yardımcı olabilir
         misin?
       course1_artist_loops_challenge4: Zar atma zamanı! Çizmek için yardımcı olabilir

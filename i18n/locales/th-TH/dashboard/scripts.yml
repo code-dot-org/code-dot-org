@@ -1805,8 +1805,3 @@ th:
               name: ลูปซ้อนลูป
             Nested Loops in Frozen:
               name: ลูปซ้อนลูป ในเกม Frozen
-        dance-2019:
-          stages:
-            Dance Party:
-              name: งานเต้นรำ
-          description: เขียนโค้ดสำหรับปาร์ตี้เต้นรำของคุณเอง เพื่อแชร์กับเพื่อนๆ ของคุณ!

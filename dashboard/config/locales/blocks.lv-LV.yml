@@ -60,21 +60,6 @@ lv:
             '"row"': rinda
             '"column"': kolonna
             '"random"': nejaušs
-      Dancelab_makeAnonymousDanceSprite:
-        options:
-          COSTUME:
-            '"BEAR"': Lācis
-            '"CAT"': Kaķis
-            '"DUCK"': Pīle
-            '"FROG"': Varde
-            '"PINEAPPLE"': Ananāss
-            '"ROBOT"': Robots
-            '"SHARK"': Haizivs
-            '"UNICORN"': Vienradzis
-          LOCATION:
-            "{x: 100, y: 200}": pa kreisi
-            "{x: 300, y: 200}": pa labi
-            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": nejaušs
       Dancelab_makeNewDanceSprite:
         options:
           COSTUME:

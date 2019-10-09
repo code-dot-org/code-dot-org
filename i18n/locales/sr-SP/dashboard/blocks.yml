@@ -58,12 +58,6 @@ sr:
         options:
           FORMAT:
             '"random"': насумичан
-      Dancelab_makeAnonymousDanceSprite:
-        options:
-          LOCATION:
-            "{x: 100, y: 200}": лево
-            "{x: 300, y: 200}": десно
-            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": насумичан
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:

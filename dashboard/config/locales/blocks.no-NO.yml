@@ -261,31 +261,6 @@
             '"x"': kryss
             '"plus"': pluss
             '"random"': tilfeldig
-      Dancelab_makeAnonymousDanceSprite:
-        options:
-          COSTUME:
-            '"ALIEN"': Romvesen
-            '"BEAR"': Bjørn
-            '"CAT"': Katt
-            '"DOG"': Hund
-            '"DUCK"': And
-            '"FROG"': Frosk
-            '"MOOSE"': Elg
-            '"PINEAPPLE"': Ananas
-            '"ROBOT"': Robot
-            '"SHARK"': Hai
-            '"UNICORN"': Enhjørning
-          LOCATION:
-            "{x: 200, y: 100}": topp
-            "{x: 200, y: 300}": bunn
-            "{x: 100, y: 200}": venstre
-            "{x: 300, y: 200}": høyre
-            "{x: 200, y: 200}": midten
-            "{x: 100, y: 100}": øverst til venstre
-            "{x: 300, y: 100}": øverst til høyre
-            "{x: 100, y: 300}": nederst til venstre
-            "{x: 300, y: 300}": nederst til høyre
-            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": tilfeldig
       Dancelab_makeNewDanceSprite:
         text: |-
           lag en ny {COSTUME}
@@ -556,21 +531,6 @@
       Dancelab_setTint:
         text: sett {SPRITE} fargetone til {VAL}
       Dancelab_setTintEach:
-        text: sett {THIS} fargetone til {VAL}
-        options:
-          THIS:
-            sprites: alle
-            '"ALIEN"': alle romvesener
-            '"BEAR"': alle bjørner
-            '"CAT"': alle katter
-            '"DOG"': alle hunder
-            '"DUCK"': alle ender
-            '"FROG"': alle frosker
-            '"MOOSE"': alle elger
-            '"PINEAPPLE"': alle ananaser
-            '"ROBOT"': alle roboter
-            '"SHARK"': alle haier
-      Dancelab_setTintEachInline:
         text: sett {THIS} fargetone til {VAL}
         options:
           THIS:

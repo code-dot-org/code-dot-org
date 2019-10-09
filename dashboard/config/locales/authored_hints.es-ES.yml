@@ -4916,6 +4916,10 @@ es-ES:
         courseC_harvester_loops_challenge1_b: Puedes repetir `avanzar` y `recolecta
           maíz` tantas veces como necesites, después, `girar a la derecha` en cada
           esquina.
+        courseC_harvester_loops_challenge1_c: |-
+          La mejor forma de coger el maíz del medio usa un bloque `repetir` dentro de otro bloque `repetir`.
+
+          <xml><block type="controls_repeat">         <title name="TIMES">2</title>         <statement name="DO">           <block type="controls_repeat">             <title name="TIMES">4</title>             <statement name="DO">               <block type="maze_move">                 <title name="DIR">moveForward</title>                 <next>                   <block type="harvester_corn"/>                 </next>               </block>             </statement>             <next>               <block type="maze_turn">                 <title name="DIR">turnRight</title>               </block>             </next>           </block>         </statement>         </block></xml>
       courseC_harvester_loops_challenge1a_2019:
         courseC_harvester_loops_challenge1_a: "¡Esto es muy difícil sin bucles!"
         courseC_harvester_loops_challenge1_b: Puedes repetir `avanzar` y `recolecta
@@ -5970,6 +5974,10 @@ es-ES:
         courseF_artist_fwp_challenge1_e: Tanto el color de cada octágono como el ancho
           del lápiz están controlados por la variable \`contador '.
       courseF_artist_variables4:
+        courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseF_artist_variables4_2018:
+        courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseF_artist_variables4_2019:
         courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseF_artist_variables5:
         courseF_artist_variables5_b: La primera mitad de tu código dibujará tres triángulos,

@@ -53,11 +53,6 @@ ne:
           LOCATION:
             "{x: 100, y: 200}": बाँया
             "{x: 300, y: 200}": दाँया
-      Dancelab_makeAnonymousDanceSprite:
-        options:
-          LOCATION:
-            "{x: 100, y: 200}": बाँया
-            "{x: 300, y: 200}": दाँया
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
