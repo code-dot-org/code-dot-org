@@ -128,7 +128,6 @@ module ProxyHelper
     return 400, "Network error #{e.class} #{e.message}"
   end
 
-  # Wrap constant in a method so it can be stubbed in a test.
   def dashboard_ip_address
     @@dashboard_ip_address ||= IPAddr.new(IPSocket.getaddress(CDO.dashboard_hostname))
   end
