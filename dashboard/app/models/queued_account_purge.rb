@@ -29,7 +29,10 @@
 # https://docs.google.com/document/d/1l2kB4COz8-NwZfNCGufj7RfdSm-B3waBmLenc6msWVs/edit
 #
 class QueuedAccountPurge < ApplicationRecord
-  belongs_to :user
+  # Un-scope the user association to always include soft-deleted users.
+  # This lets us say `joins(:user)` below and not get the `deleted_at is null`
+  # part of the generated query.
+  belongs_to :user, -> {with_deleted}
 
   # Some errors are known to be intermittent, such as external services being temporarily
   # unavailable. If an account purge was queued for one of these reasons, our system can
@@ -40,13 +43,13 @@ class QueuedAccountPurge < ApplicationRecord
   # Used by developers to resolve an account purge queued for manual review,
   # after they've investigated the account and decided it's ready to purge.
   def resolve!
-    AccountPurger.new(bypass_safety_constraints: true).purge_data_for_account User.with_deleted.find(user_id)
+    AccountPurger.new(bypass_safety_constraints: true).purge_data_for_account user
     destroy!
   end
 
   # It's possible to have a QueuedAccountPurge still around, pointing at an account that
   # has already been purged.  This method finds and removes those records.
   def self.clean_up_resolved_records!
-    all.select {|qap| User.with_deleted.find(qap.user_id).purged_at.present?}.each(&:destroy!)
+    joins(:user).where.not(users: {purged_at: nil}).destroy_all
   end
 end
