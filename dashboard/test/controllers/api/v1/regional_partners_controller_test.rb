@@ -1,6 +1,9 @@
 require 'test_helper'
 
 class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
+  include Pd::SharedWorkshopConstants
+  include Pd::Application::ActiveApplicationModels
+
   COURSES = ['csd', 'csp']
 
   self.use_transactional_test_case = true
@@ -299,5 +302,52 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
     get :find, zip_code: 11111
     assert_response :success
     assert_equal "no_state", JSON.parse(@response.body)['error']
+  end
+
+  test 'program manager gets partner enrollment count' do
+    sign_in @program_manager
+
+    get :enrolled, params: {role: 'csd_teachers', regional_partner_value: nil}
+    result = JSON.parse(@response.body)
+
+    assert_response :success
+
+    # A non-nil result means regional_partner_value was automatically figured out from the server side.
+    assert_equal 0, result['enrolled']
+  end
+
+  test 'get partner enrollment count' do
+    # For each type of workshop "role", create a workshop of that role
+    # with number of enrollments equal to the role index
+    application_year = APPLICATION_CURRENT_YEAR.split('-').first.to_i
+    application_year_start_date = Date.new(application_year, 6, 1)
+
+    Api::V1::Pd::ApplicationsController::ROLES.each_with_index do |role, index|
+      course, subject =
+        case role
+        when :csf_facilitators
+          [COURSE_CSF, SUBJECT_CSF_FIT]
+        when :csd_facilitators
+          [COURSE_CSD, SUBJECT_CSD_FIT]
+        when :csp_facilitators
+          [COURSE_CSP, SUBJECT_CSP_FIT]
+        when :csd_teachers
+          [COURSE_CSD, SUBJECT_CSD_SUMMER_WORKSHOP]
+        when :csp_teachers
+          [COURSE_CSP, SUBJECT_CSP_SUMMER_WORKSHOP]
+        end
+
+      create :workshop,
+        course: course,
+        subject: subject,
+        enrolled_unattending_users: index,
+        sessions_from: application_year_start_date,
+        regional_partner: @regional_partner
+    end
+
+    Api::V1::Pd::ApplicationsController::ROLES.each_with_index do |role, index|
+      result = @controller.send :get_partner_enrollment_count, @regional_partner.id, role.to_s
+      assert_equal index, result, "Wrong enrollment count for role #{role}"
+    end
   end
 end
