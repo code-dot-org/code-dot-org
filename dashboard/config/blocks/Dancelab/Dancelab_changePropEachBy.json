@@ -1,8 +1,8 @@
 {
-  "category": "Groups",
+  "category": "Sprites",
   "config": {
-    "func": "setPropRandomEach",
-    "blockText": "randomize {GROUP} {PROPERTY}",
+    "func": "changePropEachBy",
+    "blockText": "change {GROUP} {PROPERTY} by {VAL}",
     "args": [
       {
         "name": "GROUP",
@@ -83,12 +83,13 @@
           [
             "vertical position",
             "\"y\""
-          ],
-          [
-            "tint",
-            "\"tint\""
           ]
         ]
+      },
+      {
+        "name": "VAL",
+        "type": "Number",
+        "field": true
       }
     ]
   }
