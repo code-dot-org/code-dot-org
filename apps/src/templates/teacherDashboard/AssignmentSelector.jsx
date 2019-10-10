@@ -260,7 +260,7 @@ export default class AssignmentSelector extends Component {
     // primary assignment, default the secondary assignment to the first
     // script in the course.
     const noCurrentSecondaryAssignment = selectedSecondaryId === 'null_null';
-    const defaultScriptId = assignments[selectedPrimaryId]
+    const defaultScriptId = assignments[selectedPrimaryId].scriptAssignIds
       ? assignments[selectedPrimaryId].scriptAssignIds[0]
       : null;
     const secondaryId =
