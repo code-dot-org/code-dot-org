@@ -15,13 +15,13 @@ describe('Cohort Calculator', () => {
           regionalPartnerFilterValue={regionalPartnerFilterValue}
           role="csp_teachers"
           accepted={0}
-          registered={0}
         />
       );
     });
 
     it('Is loading', () => {
-      expect(cohortCalculator.state('loading')).to.be.true;
+      expect(cohortCalculator.state('loadingCapacity')).to.be.true;
+      expect(cohortCalculator.state('loadingRegistrationCount')).to.be.true;
     });
     it('Does not render a table', () => {
       expect(cohortCalculator.find('table')).to.have.length(0);
@@ -47,7 +47,6 @@ describe('Cohort Calculator', () => {
           regionalPartnerFilterValue={regionalPartnerFilterValue}
           role="csp_teachers"
           accepted={0}
-          registered={0}
         />
       );
 
@@ -58,7 +57,7 @@ describe('Cohort Calculator', () => {
     });
 
     it('Is no longer loading', () => {
-      expect(cohortCalculator.state('loading')).to.be.false;
+      expect(cohortCalculator.state('loadingCapacity')).to.be.false;
     });
     it('Does not render anything', () => {
       expect(cohortCalculator.html()).to.be.null;
@@ -83,7 +82,6 @@ describe('Cohort Calculator', () => {
           regionalPartnerFilterValue={regionalPartnerFilterValue}
           role="csp_teachers"
           accepted={0}
-          registered={0}
         />
       );
 
@@ -94,7 +92,7 @@ describe('Cohort Calculator', () => {
     });
 
     it('Is no longer loading', () => {
-      expect(cohortCalculator.state('loading')).to.be.false;
+      expect(cohortCalculator.state('loadingCapacity')).to.be.false;
     });
     it('Renders a table', () => {
       cohortCalculator.update();
