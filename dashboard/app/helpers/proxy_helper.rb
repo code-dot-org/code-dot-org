@@ -130,7 +130,7 @@ module ProxyHelper
 
   # Wrap constant in a method so it can be stubbed in a test.
   def dashboard_ip_address
-    @@dashboard_ip_address ||= IPAddr.new(IPSocket.getaddress(CDO.dashboard_hostname)) rescue nil
+    @@dashboard_ip_address ||= IPAddr.new(IPSocket.getaddress(CDO.dashboard_hostname))
   end
   module_function :dashboard_ip_address
 
