@@ -45,10 +45,10 @@ self.log_resource_filter.push 'FrontendLaunchConfig', 'ASGCount'
 # TODO migrate stacks to cloudformation-provisioned instances.
 if %w(autoscale-prod test staging levelbuilder).include? stack_name
   self.daemon_instance_id = {
-    'autoscale-prod' => 'i-436d69dd',
+    'autoscale-prod' => 'i-08f5f8ace0a473b8d',
     'test' => 'i-004727200191f3251',
     'staging' => 'i-02e6cdc765421ab34',
-    'levelbuilder' => 'i-03a540ccf70cc8138'
+    'levelbuilder' => 'i-0907b146f7e6503f6'
   }[stack_name]
 else
   self.daemon = 'Daemon'
