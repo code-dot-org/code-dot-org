@@ -24,13 +24,18 @@ export function reset() {
  */
 export function getSpriteArray(spriteArg) {
   if (spriteArg.hasOwnProperty('id')) {
-    return [nativeSpriteMap[spriteArg.id]];
+    let sprite = nativeSpriteMap[spriteArg.id];
+    if (sprite) {
+      return [sprite];
+    }
   }
   if (spriteArg.name) {
     let sprite = Object.values(nativeSpriteMap).find(
       sprite => sprite.name === spriteArg.name
     );
-    return [sprite];
+    if (sprite) {
+      return [sprite];
+    }
   }
   if (spriteArg.costume) {
     return Object.values(nativeSpriteMap).filter(
