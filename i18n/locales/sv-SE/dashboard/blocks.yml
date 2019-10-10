@@ -257,6 +257,29 @@ sv:
             '"column"': kolumn
             '"x"': korsvis
             '"random"': slumpad
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"BEAR"': Björn
+            '"CAT"': Katt
+            '"DOG"': Hund
+            '"DUCK"': Anka
+            '"FROG"': Groda
+            '"MOOSE"': Älg
+            '"PINEAPPLE"': Ananas
+            '"SHARK"': Haj
+            '"UNICORN"': Enhörning
+          LOCATION:
+            "{x: 200, y: 100}": topp
+            "{x: 200, y: 300}": botten
+            "{x: 100, y: 200}": vänster
+            "{x: 300, y: 200}": höger
+            "{x: 200, y: 200}": mittersta delen
+            "{x: 100, y: 100}": längst upp till vänster
+            "{x: 300, y: 100}": längst upp till höger
+            "{x: 100, y: 300}": nederst till vänster
+            "{x: 300, y: 300}": nederst till höger
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": slumpad
       Dancelab_makeNewDanceSprite:
         text: |-
           gör en ny {COSTUME}
@@ -511,6 +534,20 @@ sv:
       Dancelab_setTint:
         text: Ställ in {SPRITE}s färgton till {VAL}
       Dancelab_setTintEach:
+        options:
+          THIS:
+            sprites: alla
+            '"ALIEN"': alla aliens
+            '"BEAR"': alla björnar
+            '"CAT"': alla katter
+            '"DOG"': alla hundar
+            '"DUCK"': alla ankor
+            '"FROG"': alla grodor
+            '"MOOSE"': alla älgar
+            '"PINEAPPLE"': alla ananaser
+            '"ROBOT"': alla robotar
+            '"SHARK"': alla hajar
+      Dancelab_setTintEachInline:
         options:
           THIS:
             sprites: alla
@@ -850,7 +887,9 @@ sv:
             '"left"': vänster pil
             '"right"': höger pil
             '"w"': V
+            '"a"': A
             '"s"': S
+            '"d"': D
       Mikelab_whenKeyReleased:
         options:
           KEY:
@@ -859,7 +898,9 @@ sv:
             '"left"': vänster pil
             '"right"': höger pil
             '"w"': V
+            '"a"': A
             '"s"': S
+            '"d"': D
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -875,61 +916,19 @@ sv:
         text: sväng höger
       Vector_positionCenter:
         text: mittersta delen
-      aalab_changePropByFlexible:
-        text: ändra {SPRITE} {PROPERTY} via {VAL}
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': storlek
-            '"rotation"': rotation
-            '"x"': x-position
-            '"y"': y-position
-            '"direction"': rörelseriktning
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': när
-            '"while"': medan
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': när
-            '"while"': medan
-      aalab_jumpTo:
-        text: "{SPRITE} hoppa till {LOCATION}"
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': när
-            '"while"': medan
-          KEY:
-            '"up"': upp
-            '"down"': ner
-            '"left"': vänster
-            '"right"': höger
-            '"space"': rymden
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': stad
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': sant
-            '"false"': falskt
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': storlek
-            '"rotation"': rotation
-            '"x"': x-position
-            '"y"': y-position
-            '"direction"': rörelseriktning
-            '"tint"': färgton
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': alltid
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
         options:
           OPTION:
             '"show"': visa

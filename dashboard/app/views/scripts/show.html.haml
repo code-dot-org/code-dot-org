@@ -5,7 +5,7 @@
 - if @script.professional_learning_course? && @current_user && Plc::UserCourseEnrollment.exists?(user: @current_user, plc_course: @script.plc_course_unit.plc_course)
   -  scriptOverviewData[:plcBreadcrumb] = {unit_name: @script.plc_course_unit.unit_name, course_view_path: course_path(@script.plc_course_unit.plc_course.course)}
 - content_for(:head) do
-  %script{ src: minifiable_asset_path('js/scripts/show.js'), data: {scriptoverview: scriptOverviewData.to_json }}
+  %script{ src: webpack_asset_path('js/scripts/show.js'), data: {scriptoverview: scriptOverviewData.to_json }}
 
 
 - if RaceInterstitialHelper.show?(current_user) || @force_race_interstitial

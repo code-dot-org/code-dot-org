@@ -38,6 +38,10 @@ en-GB:
         options:
           FORMAT:
             '"random"': random
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          LOCATION:
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": random
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
@@ -162,44 +166,34 @@ en-GB:
         options:
           KEY:
             '"w"': W
+            '"a"': A
             '"s"': S
+            '"d"': D
       Mikelab_whenKeyReleased:
         options:
           KEY:
             '"w"': W
+            '"a"': A
             '"s"': S
+            '"d"': D
       RyanLab_moveForward:
         text: move forward
       RyanLab_turnLeft:
         text: turn left
       RyanLab_turnRight:
         text: turn right
-      aalab_checkTouching:
+      aalab_goToScene:
         options:
-          CONDITION:
-            '"when"': when
-            '"while"': while
-      aalab_clickedOn:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': when
-            '"while"': while
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': when
-            '"while"': while
-          KEY:
-            '"space"': space
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': city
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': 'true'
-            '"false"': 'false'
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
       binary_whenKey:
         options:
           KEY:

@@ -1466,6 +1466,8 @@
   app_lab_tutorials: "App Lab Tutorials"
   game_lab_documentation: "Game Lab Documentation"
   game_lab_tutorials: "Game Lab Tutorials"
+  sprite_lab_documentation: "Sprite Lab Documentation"
+  sprite_lab_tutorials: "Sprite Lab Tutorials"
   header_documentation: "Documentation"
   user_header_label: "Hi %{username}"
   user_header_team: "Team"

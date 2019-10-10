@@ -72,4 +72,11 @@ class AdminSearchController < ApplicationController
     end
     redirect_to :lookup_section
   end
+
+  def show_pilot
+    @pilot_name = params[:pilot_name]
+    return head :bad_request unless Experiment::PILOT_EXPERIMENTS.include?(@pilot_name)
+    user_ids =  SingleUserExperiment.where(name: @pilot_name).map(&:min_user_id)
+    @emails = User.where(id: user_ids).pluck(:email)
+  end
 end

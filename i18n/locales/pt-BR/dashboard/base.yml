@@ -1,3 +1,15 @@
+#Files in the config/locales directory are used for internationalization
+#and are automatically loaded by Rails. If you want to use locales other
+#than English, add the necessary files in this directory.
+#To use the locales, use `I18n.t`:
+#I18n.t 'hello'
+#In views, this is aliased to just `t`:
+#<%= t('hello') %>
+#To use a different locale, set it with `I18n.locale`:
+#I18n.locale = :es
+#This would use the information in config/locales/es.yml.
+#To learn more, please read the Rails Internationalization guide
+#available at http://guides.rubyonrails.org/i18n.html.
 pt-BR:
   errors:
     messages:
@@ -49,11 +61,11 @@ pt-BR:
   heading_x_of_y: "%{heading} (página %{x} de %{y})"
   join_section:
     code:
-      title: 'Adira a uma secção em Code.org'
+      title: 'Entre em uma seção no Code.org'
       placeholder: "Código da seção (ABCDEF)"
-      instructions: "Por favor insira o código de 6 letras que o seu professor lhe deu. (por exemplo: \"ABCDEF\") para que se possa juntar à sua secção."
-      instructions_short: "Insira o seu código de secção de 6 letras"
-      submit: 'Aderir'
+      instructions: "Por favor, insira o código de 6 letras que o seu professor lhe deu. (por exemplo: \"ABCDEF\") para se juntar a sessão deles."
+      instructions_short: "Digite o seu código da sessão de 6 letras"
+      submit: 'Entrar'
   add_hint_form:
     placeholder: 'Digite sua dica aqui'
     submit: 'Adicionar dica'
@@ -427,6 +439,7 @@ pt-BR:
     enter_parent_email: "Insira o E-Mail dos pais ou responsável legal (para recuperação de senha)"
     update: "Atualizar Conta"
     account_successfully_updated: "Conta atualizada com sucesso."
+    update_email: "Atualizar"
   user_level:
     completed: 'Concluído'
     tried: 'Provado'

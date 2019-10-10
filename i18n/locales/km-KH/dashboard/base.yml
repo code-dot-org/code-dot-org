@@ -1,3 +1,15 @@
+#Files in the config/locales directory are used for internationalization
+#and are automatically loaded by Rails. If you want to use locales other
+#than English, add the necessary files in this directory.
+#To use the locales, use `I18n.t`:
+#I18n.t 'hello'
+#In views, this is aliased to just `t`:
+#<%= t('hello') %>
+#To use a different locale, set it with `I18n.locale`:
+#I18n.locale = :es
+#This would use the information in config/locales/es.yml.
+#To learn more, please read the Rails Internationalization guide
+#available at http://guides.rubyonrails.org/i18n.html.
 km:
   errors:
     messages:
@@ -340,6 +352,7 @@ km:
     create_personal_login_info: 'បើសិនជាអ្នកនៅតែចង់បន្តរការប្រើប្រាស់គណនីទោះបន្ទាប់ពីការបញ្ចប់ការសិក្សារបស់អ្នក អ្នកអាចបង្កើតការចូលទៅកាន់គណនីសម្រាប់ខ្លួនឯងផ្ទាល់ នៅខាងក្រោមនេះ។'
     enter_new_login_info: 'សូមធ្វើការវាយចូលនូវព័ត៌មាននៃការប្រើប្រាស់គណនីរបស់អ្នក'
     confirm_secret_words: 'ធ្វើការយល់ព្រមថា អ្នកគឺជាអ្នកប្រើប្រាស់ដោយវាយចូលនូវពាក្យដែលរក្សាជាសម្ងាត់'
+    update_email: "កែលម្អរ"
   user_level:
     completed: 'បាន​បញ្ចប់'
     tried: 'បាន​ព្យាយាម'

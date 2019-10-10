@@ -483,6 +483,7 @@ id:
       sandi)
     update: Perbarui Akun
     account_successfully_updated: Akun sukses diperbarui.
+    update_email: Update
   user_level:
     completed: Selesai
     tried: Telah mencoba

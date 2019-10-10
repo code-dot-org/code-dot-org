@@ -466,6 +466,7 @@ uk:
       (для відновлення пароля)
     update: Оновити обліковий запис
     account_successfully_updated: Обліковий запис успішно оновлено.
+    update_email: Оновити
   user_level:
     completed: Завершено
     tried: Спробував

@@ -214,6 +214,30 @@ tr:
             '"x"': çapraz geçiş
             '"plus"': artı
             '"random"': gelişigüzel
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': Uzaylı
+            '"BEAR"': Ayı
+            '"CAT"': Kedi
+            '"DOG"': Köpek
+            '"DUCK"': Ördek
+            '"FROG"': Kurbağa
+            '"MOOSE"': Geyik
+            '"PINEAPPLE"': Ananas
+            '"SHARK"': Köpek balığı
+            '"UNICORN"': Tek boynuzlu at
+          LOCATION:
+            "{x: 200, y: 100}": üst
+            "{x: 200, y: 300}": alt
+            "{x: 100, y: 200}": sol
+            "{x: 300, y: 200}": sağ
+            "{x: 200, y: 200}": merkez
+            "{x: 100, y: 100}": sol üst
+            "{x: 300, y: 100}": sağ üst
+            "{x: 100, y: 300}": sol alt
+            "{x: 300, y: 300}": sağ alt
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": gelişigüzel
       Dancelab_makeNewDanceSprite:
         text: |-
           yeni bir {COSTUME} yap
@@ -465,6 +489,20 @@ tr:
       Dancelab_setTint:
         text: "{SPRITE} renk tonunu {VAL} olarak ayarla"
       Dancelab_setTintEach:
+        options:
+          THIS:
+            sprites: tüm
+            '"ALIEN"': tüm uzaylılar
+            '"BEAR"': tüm ayılar
+            '"CAT"': tüm kediler
+            '"DOG"': tüm köpekler
+            '"DUCK"': tüm ördekler
+            '"FROG"': tüm kurbağalar
+            '"MOOSE"': tüm geyikler
+            '"PINEAPPLE"': tüm ananaslar
+            '"ROBOT"': tüm robotlar
+            '"SHARK"': tüm köpekbalıkları
+      Dancelab_setTintEachInline:
         options:
           THIS:
             sprites: tüm
@@ -859,74 +897,19 @@ tr:
         text: merkez
       Vector_randomLocation:
         text: rastgele konum
-      aalab_changePropByFlexible:
-        text: "{SPRITE} {PROPERTY}’i {VAL} kadar değiştir"
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': boyut
-            '"rotation"': yön
-            '"x"': x konumu
-            '"y"': y konumu
-            '"direction"': hareket yönü
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': Ne zaman
-            '"while"': sürece
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': Ne zaman
-            '"while"': sürece
-      aalab_getThisSprite:
-        options:
-          CHOICE:
-            '"other"': diğer
-      aalab_jumpTo:
-        text: "{SPRITE} {LOCATION}’a atla"
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': Ne zaman
-            '"while"': sürece
-          KEY:
-            '"up"': yukarı
-            '"down"': aşağı
-            '"left"': sol
-            '"right"': sağ
-            '"space"': uzay
-      aalab_moveInDirection:
-        options:
-          DIRECTION:
-            '"North"': Kuzey
-            '"East"': Doğu
-            '"South"': Güney
-            '"West"': Batı
-      aalab_randomLocation:
-        text: rastgele konum
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': şehir
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': doğru
-            '"false"': 'false'
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': boyut
-            '"rotation"': yön
-            '"x"': x konumu
-            '"y"': y konumu
-            '"direction"': hareket yönü
-            '"tint"': renk tonu
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': sonsuza dek
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
         options:
           OPTION:
             '"show"': göster

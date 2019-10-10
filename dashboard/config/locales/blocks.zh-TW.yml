@@ -268,6 +268,31 @@ zh-TW:
             '"x"': 十字交叉
             '"plus"': 十字加號
             '"random"': 隨機
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': 外星人
+            '"BEAR"': 熊仔
+            '"CAT"': 小貓
+            '"DOG"': 小狗
+            '"DUCK"': 鴨子
+            '"FROG"': 青蛙
+            '"MOOSE"': 麋鹿
+            '"PINEAPPLE"': 鳳梨
+            '"ROBOT"': 機器人
+            '"SHARK"': 鯊魚
+            '"UNICORN"': 獨角獸
+          LOCATION:
+            "{x: 200, y: 100}": 頂部
+            "{x: 200, y: 300}": 底部
+            "{x: 100, y: 200}": " 向左"
+            "{x: 300, y: 200}": 向右
+            "{x: 200, y: 200}": 中間
+            "{x: 100, y: 100}": 左上
+            "{x: 300, y: 100}": 右上
+            "{x: 100, y: 300}": 左下
+            "{x: 300, y: 300}": 右下
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": 隨機
       Dancelab_makeNewDanceSprite:
         text: |-
           角色 創建一個新的 {COSTUME}
@@ -539,6 +564,21 @@ zh-TW:
       Dancelab_setTint:
         text: 角色 {SPRITE} 色調設為 {VAL}
       Dancelab_setTintEach:
+        text: 角色 {THIS} 色調設為 {VAL}
+        options:
+          THIS:
+            sprites: 全部
+            '"ALIEN"': 全部外星人
+            '"BEAR"': 全部熊仔
+            '"CAT"': 全部小貓
+            '"DOG"': 全部小狗
+            '"DUCK"': 全部鴨子
+            '"FROG"': 全部青蛙
+            '"MOOSE"': 全部麋鹿
+            '"PINEAPPLE"': 全部鳳梨
+            '"ROBOT"': 全部機器人
+            '"SHARK"': 全部鯊魚
+      Dancelab_setTintEachInline:
         text: 角色 {THIS} 色調設為 {VAL}
         options:
           THIS:
@@ -1167,106 +1207,21 @@ zh-TW:
         text: 南
       aalab_addBehaviorForDuration:
         text: aalab 角色 {SPRITE} 開始 {BEHAVIOR} 持續 {SECONDS} 秒
-      aalab_addBehaviorSimpleFlexible:
-        text: aalab 角色 {SPRITE} 開始 {BEHAVIOR}
       aalab_addBehaviorUntilBoolean:
         text: 角色 {SPRITE} 開始 {BEHAVIOR} 直到 {CONDITION}
-      aalab_allSpritesWithAnimation:
-        text: "{ANIMATION}"
-      aalab_changePropByFlexible:
-        text: 角色 {SPRITE} {PROPERTY} 改變 {VAL}
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': 尺寸
-            '"rotation"': 旋轉
-            '"x"': x 座標
-            '"y"': y 座標
-            '"direction"': 移動方向
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': 當
-            '"while"': 當
-      aalab_clickedOn:
-        text: "{CONDITION} 角色 {SPRITE} 被點擊？"
-        options:
-          CONDITION:
-            '"when"': 當
-            '"while"': 當
-      aalab_createNewSpriteAdvanced:
-        text: |-
-          角色 創建一個新的 {COSTUME}
-          名稱 {NAME} 位置 {LOCATION}
-      aalab_createSpriteGroup:
-        text: 角色 創建一個新的 名稱 {VAR}
-      aalab_getThisSprite:
-        options:
-          CHOICE:
-            '"this"': this
-            '"other"': 其它
-      aalab_jumpTo:
-        text: aalab 角色 {SPRITE} 定位到 {LOCATION}
-      aalab_keyPressed:
-        text: "{CONDITION} {KEY} 鍵被按下？"
-        options:
-          CONDITION:
-            '"when"': 當
-            '"while"': 當
-          KEY:
-            '"up"': 向上
-            '"down"': 向下
-            '"left"': 向左
-            '"right"': 向右
-            '"space"': 空白
-      aalab_locationOf:
-        text: aalab 座標 {SPRITE}
-      aalab_location_picker:
-        text: "{LOCATION}"
-      aalab_moveInDirection:
-        text: 角色 aalab {SPRITE} 移動 {DISTANCE} 像素 面向 {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': 北
-            '"East"': 東
-            '"South"': 南
-            '"West"': 西
-      aalab_randomLocation:
-        text: 隨機座標
-      aalab_removeOneAndAll:
-        text: 角色 移除 {THIS}
-      aalab_setBG:
-        text: 背景設為 {BG}
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': 城市
-            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': 舞台
-            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': 太陽和彩虹
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': 'true'
-            '"false"': 'false'
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': 尺寸
-            '"rotation"': 旋轉
-            '"x"': x 座標
-            '"y"': y 座標
-            '"direction"': 移動方向
-            '"tint"': 色調
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': 重複無限次
-      aalab_showSpriteLabel:
-        options:
-          LOCATION:
-            '"above"': 上方
-            '"below"': 下方
-      aalab_speakerSaysConsole:
-        text: 角色 {SPRITE} 說出 {MESSAGE}
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
         options:
           OPTION:
             '"show"': 顯示

@@ -53,6 +53,11 @@ ne:
           LOCATION:
             "{x: 100, y: 200}": बाँया
             "{x: 300, y: 200}": दाँया
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": बाँया
+            "{x: 300, y: 200}": दाँया
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
@@ -292,49 +297,19 @@ ne:
         text: turn left
       RyanLab_turnRight:
         text: turn right
-      aalab_changePropByFlexible:
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': size
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': when
-            '"while"': while
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': when
-            '"while"': while
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': when
-            '"while"': while
-          KEY:
-            '"up"': माथि
-            '"down"': तल
-            '"left"': बाँया
-            '"right"': दाँया
-            '"space"': space
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': शहर
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': 'true'
-            '"false"': 'false'
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': size
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': forever
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
         options:
           OPTION:
             '"show"': देखाउ

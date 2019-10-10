@@ -33,7 +33,8 @@ class LibraryCategory extends React.Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
     datasets: PropTypes.arrayOf(PropTypes.string).isRequired,
-    description: PropTypes.string.isRequired
+    description: PropTypes.string.isRequired,
+    importTable: PropTypes.func.isRequired
   };
 
   state = {
@@ -63,7 +64,11 @@ class LibraryCategory extends React.Component {
               {this.props.description}
             </span>
             {this.props.datasets.map(tableName => (
-              <LibraryTable key={tableName} name={tableName} />
+              <LibraryTable
+                key={tableName}
+                name={tableName}
+                importTable={this.props.importTable}
+              />
             ))}
           </div>
         )}

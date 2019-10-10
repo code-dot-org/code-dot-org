@@ -108,6 +108,10 @@ my:
         options:
           THIS:
             sprites: အားလုံး
+      Dancelab_setTintEachInline:
+        options:
+          THIS:
+            sprites: အားလုံး
       Dancelab_setVisibleEach:
         options:
           THIS:
@@ -172,27 +176,18 @@ my:
             MOVES.Rest: ဘာမှမရှိ
       Mikelab_randomColor:
         text: ကျဘန်းအရောင်
-      aalab_checkTouching:
+      aalab_goToScene:
         options:
-          CONDITION:
-            '"when"': အချိန်
-      aalab_clickedOn:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': အချိန်
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': အချိန်
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': 'true'
-            '"false"': 'false'
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': အမြဲတမ်​း
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
       craft_ifPath:
         options:
           DIR:

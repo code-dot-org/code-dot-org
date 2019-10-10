@@ -43,7 +43,7 @@
     "long_instructions": "Make the ball roll.\r\n\r\n* Create a new behavior and use it to make the ball roll. Your behavior should combine two different actions.\r\n\r\n![](https://images.code.org/4c81af6da51ce5b8ce83e9056dbfe34c-image-1567714812224.2019-09-05 16_19_45.gif)",
     "auto_run_setup": "DRAW_LOOP",
     "parent_level_id": 15499,
-    "validation_code": "if (getProp(\"soccer\", \"x\") > 350 && getProp(\"soccer\", \"rotation\") != 0) {\r\n  levelSuccess(0);\r\n}",
+    "validation_code": "if (getProp({costume: \"soccer\"}, \"x\") > 350 && getProp({costume: \"soccer\"}, \"rotation\") != 0) {\r\n  levelSuccess(0);\r\n}",
     "encrypted": "false",
     "mini_rubric": "false",
     "thumbnail_url": "https://images.code.org/4c81af6da51ce5b8ce83e9056dbfe34c-image-1567714812224.2019-09-05 16_19_45.gif",

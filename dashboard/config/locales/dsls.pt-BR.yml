@@ -619,6 +619,48 @@ pt-BR:
           # Imagens Binárias
 
           Descreva como recriar uma imagem usando somente dois valores simples.
+      Building a UI with Design Mode:
+        markdown: |
+          # Bem-vindo ao modo de design do Laboratório de Aplicativos
+
+          No  Laboratório de Aplicativos, o "Modo Design" permite arrastar e soltar elementos da interface do usuário no aplicativo.
+
+          ### Vocabulário
+          ** Interface do usuário (UI) ** - A "Interface do usuário" ou ** UI ** de um aplicativo refere-se à maneira como uma pessoa (usuário) interage com o computador ou aplicativo. Existem padrões comuns para interfaces de usuário que você provavelmente conhece apenas por experiência própria:
+
+          * ** Elementos da interface do usuário ** ou objetos, como botões, imagens, caixas de texto, menus, telas e assim por diante.
+          * ** Eventos da interface do usuário ** ou controles, como * clique *, * rolagem *, * mova o mouse *, * digite a tecla *, etc.
+
+          O  Laboratório de Aplicativos permite adicionar facilmente elementos de interface do usuário ao seu aplicativo e adicionar código para responder quando um usuário interage com esses elementos. É um processo de duas etapas, mas aprenderemos tudo sobre esta lição.
+
+          Para começar, basta olhar para o Modo Design e adicionar um único elemento de interface do usuário (um botão) ao nosso aplicativo. Nós adicionaremos código mais tarde.
+
+          <div style="column-count: 4; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 100%">
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
+          Você verá um novo conjunto de opções acima da área do aplicativo que permite alternar entre o "Modo Design" e o Modo Código ". </p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span> Adicionar um elemento é tão fácil quanto arrastar e soltar no aplicativo onde você quiser. Quando estiver na tela do aplicativo, você poderá reposicioná-lo, redimensioná-lo e alterar muitas outras propriedades sobre ele </p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span> A guia <em> Propriedades </em> mostra tudo o que você pode alterar sobre a aparência de um elemento da interface do usuário. </p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">4.</span> O <strong> ID do elemento </strong> é importante porque é como você se refere ao elemento no seu código. Discutiremos os IDs de elementos posteriormente. </p>
+          </div>
+
+          ! [] (https://images.code.org/01a31ac3be66deb6d01a92a1edfffd21-image-1476726587662.png)
+
+
+          <div style="column-count: 2; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 66%; float: right">
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">5.</span> Você pode fazer com que o texto que o usuário vê no texto do botão seja o que você quiser. </p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">6.</span><strong> Nota: </strong> Role para baixo para ver outras propriedades de um elemento da interface do usuário que podem estar" ocultas "abaixo. </p>
+          </div>
+
+          <div style = "clear: both"> </div>
+          <hr>
+
+          ** Agora você tenta! **
       CSD Header Size MC:
         title: Verificação rápida de títulos
         content1: Olhe o código abaixo e preveja como os títulos serão mostrados.
@@ -3083,6 +3125,54 @@ pt-BR:
 
           Além dos sites recomendados listados para cada tópico, considere olhar para os vários sites de financiamento colaborativo (como Kickstarter e Indiegogo) para ver os produtos que ainda não chegaram ao mercado.
 
+      Choosing Good IDs:
+        markdown: |+
+          # Escolhendo bons IDs
+
+          ** Bons IDs ** são ** significativos e descritivos **.
+
+          Assim como você deseja bons nomes para funções, você desejará um ID para descrever o objetivo pretendido do elemento.
+
+          Por exemplo, se você possui muitos botões em seu programa, convém fornecer a cada um um ID que descreva o que o botão faz.
+
+          Então, em vez disso:
+           
+           * `botao1` e` botao2`
+
+          Você pode criar IDs que transmitam não apenas que é um botão, mas para o que você pretende que o botão seja usado, como:
+
+           * `homeBotao` e` salvarBotao` ou
+           * `botaoHome` e` botaoSalvar` ou
+           * `homeBtn` e` salvarBtn`
+           * você decide!
+
+          <img src="https://images.code.org/b33be9ee1521f2aa80fedcf22c929d44-image-1476910499958.png" style="display: block; margin: auto;">
+
+          # Regras sobre IDs
+          Ao criar IDs descritivos e significativos, **existem algumas regras sobre ID ** que você precisa conhecer. IDs...
+
+          * diferenciam maiúsculas de minúsculas.
+          * não pode conter espaços.
+          * *deve* começar com uma letra (A-Z ou a-z) e pode ser seguido por qualquer número de dígitos e letras.
+          * pode conter hífens ("-"), sublinhados ("_"), dois pontos (":") ou pontos (".").
+
+          **Maiúsculas e Minúsculas?**
+
+          Isso significa que há uma diferença entre o `HomeBotao` e o` homeBotao` (observe o H em maiúsculo no primeiro).
+
+          Essas diferenças parecem irritantes no começo, mas você se acostuma e realmente aprecia o fato de o computador exigir tanta precisão.
+
+          Existem alguns estilos comuns de identificação de maiúsculas e minúsculas com ortografia:
+
+          * ** "Camelcase" ** - `umNomeCamelcaseSePareceComIsso`
+          * ** Sublinhados ** - `Algumas_pessoas_gostam_de_usar_hífens_para_separar_palavras`
+          * **traços** - `Outros-como-usar-hífens-ou-traços`
+
+          Tudo o que você escolher depende de você. É o seu estilo. Apenas ajuda a ser consistente.
+
+
+
+
       ConditionalsWithCards-Unplugged:
         markdown: |
           # Condicionais com Cartas
@@ -3587,6 +3677,66 @@ pt-BR:
 
           > <a href="http://ctt.ec/Bfjw3" target="blank"><button class="default">Compartilhe no Tweeter >></button></a><br><br>
           Não possui uma conta no Twitter? Você também pode nos encontrar no [Facebook](https://www.facebook.com/Code.org/) ou no [Instagram](https://www.instagram.com/codeorg/).
+      OPD-K5 CS Tips:
+        markdown: |
+          Vamos Começar > Navegando por este Curso Online
+
+          Se você chegou até aqui, parabéns! À medida que você completar este curso, você irá se familiarizar com tudo o que Fundamentos de CC tem a oferecer.
+
+          Se você estiver com problemas, a informação abaixo irá ajudá-lo a navegar e a usar este espaço para seu aprendizado profissional.
+
+          ---
+
+          ## Etapas
+
+          A página principal de desenvolvimento profissional é mostrada abaixo. Esta página é subdividida em diversas __etapas__, em que cada uma delas representa um tópico ou uma ideia distinta.
+
+          <img src ="https://images.code.org/3f0fa0abc76fa6e6bde06bb4bc705202-image-1548976538784.png" />
+
+          <br/>
+          <br/>
+
+          ## Desafios
+
+          Cada etapa consiste em níveis que denominamos __desafios__, que contém vídeos específicos, leituras, ou questões. Desafios são indicados através de círculos numerados. As cores do círculo do desafio irão mudar conforme seu progresso. Neste desenvolvimento profissional você verá os seguintes tipos de círculos:<br/>
+
+          <img src ="https://images.code.org/8b3fcfcf0120bed0dc34c014f1f81071-image-1548976153188.png" />
+
+          <br/>
+          <br/>
+
+          ## Acessando Desafios
+
+          Desafios são visíveis:
+          <p>Na página principal de desenvolvimento profissional</p>
+          <p>No cabeçalho de qualquer outro desafio em uma mesma etapa</p>
+          <p>A partir do menu suspenso localizado no cabeçalho de qualquer desafio</p>
+
+          <h4><details>
+          <summary style="color:#ffa400;">Clique aqui para ver mais sobre o acesso a desafios</summary>
+          <br>
+          <div><em>Quando você terminar de ver isto, clique na seta acima para ocultar a seção</em></div>
+          <br>
+          <img src ="https://images.code.org/27681ae1028bb26bcacd9970086c3792-image-1548976069596.gif" />
+          </details></h4>
+
+          <br/>
+
+          ## Movimentando-se Entre Desafios
+
+          Clique "Continuar" ou "Próximo Recurso" após cada desafio para prosseguir ao próximo. Ou, a qualquer momento, você pode saltar para um novo desafio clicando em seu número localizado no cabeçalho.
+
+          <h4><details>
+          <summary style="color:#ffa400;">Clique aqui para ver mais sobre movimentação entre desafios</summary>
+          <br>
+          <div><em>Quando você terminar de ver isto, clique a seta acima para ocultar a seção</em></div>
+          <br><img src ="https://images.code.org/d28046a78ecb03f9501f3bb7764c7ce8-image-1548976730590.gif" />
+          </details></h4>
+
+          <br/>
+          <br/>
+
+          > Isto é tudo! Fique à vontade para retornar a este nível sempre que você sentir necessidade de relembrar como esta plataforma funciona.
       OPD-K5 Outline:
         markdown: |
           # Vamos Começar > Linhas Gerais do Curso
@@ -3725,9 +3875,319 @@ pt-BR:
 
           <a class="btn btn-large btn-primary" href="https://form.jotform.com/90556900301146?user_id=<user_id/>">Responder à pesquisa preliminar</a>
 
+      OPD-K5 Puzzles:
+        markdown: "# Olhando à Frente > Tudo Sobre Desafios\n\nNas etapas que seguem,
+          você irá usar a Code.org para aprender o básico de ciências da computação.
+          Você será desafiado com uma variedade de quebra-cabeças que deverão ser
+          resolvidos. Para resolver os desafios, você terá que escrever programas
+          utilizando diferentes personagens para atingir diferentes objetivos. Iremos
+          praticar com nosso primeiro desafio na Etapa 3. Mas antes de chegarmos lá,
+          aqui está uma visão geral dos desafios que você e seus alunos irão encontrar:\n\n##
+          Amostras de Desafios em Labirintos\n\n![](//code.org/images/mockup_birds.png)\n![](//code.org/images/pvz.png)\n\nVocê
+          terá que levar o pássaro zangado até o porco, e terá que levar o zumbi até
+          o girassol.\n\n## Amostra do Desafio do Artista\n\n![](//code.org/images/artist.png)\n\nVocê
+          terá que fazer o artista desenhar sobre as linhas em cinza, movimentando-o
+          ao redor da tela. Ele irá desenhar uma linha atrás de si aonde quer que
+          ele vá.\n\n## Amostra do Desafio da Abelha\n\n![](//code.org/images/bee.png)\n\nVocê
+          terá que movimentar a abelha para coletar todo o néctar e produzir todo
+          o mel. As unidades de néctar e mel necessários para cada desafio são mostradas
+          no canto inferior direito de cada flor ou colmeia.\n\n## Laboratório de
+          Jogos\n\n![](//code.org/images/playlab.png)\n\nNo Laboratório de Jogos,
+          você irá criar jogos e estórias baseadas em diferentes objetivos.\n\n##
+          Flappy\n\n![](//code.org/images/flappy.png)\n\nNo Flappy, você irá criar
+          seu próprio jogo Flappy Bird. \nOs desafios envolvidos na criação do jogo
+          irão ajudá-lo a aprender partes do código que você irá precisar para o seu
+          jogo.\n\n## Pular\n\n![](//code.org/images/bounce.png)\n\nEm Pular, você
+          cria seu próprio jogo.\nAssim como no Flappy, os desafios envolvidos na
+          criação do jogo ajudam você a aprender trechos que código que serão necessários
+          no seu jogo. \n\n* * *\n\nNesta série, nos iremos apresentar a você desafios
+          de [Fundamentos de CC](http://code.org/educate/k5). Estes desafios servem
+          como tutoriais online, ajudando os alunos a aprenderem conceitos como laços,
+          eventos, condicionais, e funções.\n\nDurante esta experiência de desenvolvimento
+          profissional, nós iremos intercalar vários desafios progressivos, para que
+          você possa se familiarizar com os conceitos de programação de Fundamentos
+          de CC e os personagens que seus alunos irão amar. Durante este curso, você
+          irá reparar que a movimentação entre os ambientes é rápida, seja levando
+          o pássaro zangado até o porco, fazendo um desenho, ou coletando néctar.
+          Estas transições ocorrem rápido no curso para mostrar a você um leque de
+          desafios oferecidos em Fundamentos de CC. Seus alunos terão que permanecer
+          mais tempo em cada ambiente.\n\nSe você quiser se familiarizar mais com
+          a experiência dos alunos, você sempre poderá completar os cursos de [Fundamentos
+          de CC](http://studio.code.org/) por conta própria, a qualquer momento. Mas
+          este curso dará a você uma boa noção sobre o que esperar, ao apresentar
+          a você alguns dos desafios mais fundamentais em um curto espaço de tempo.\n"
+      OPD-K5 Stage1Go:
+        markdown: |
+          # Vamos Começar > Tudo pronto? Vamos!
+
+          <img src="https://images.code.org/80a1fa04481359759d2b86ddca9b33a4-image-1433972662378.png" class="level-image">
+
+          Ao completar esta etapa, você deverá ter:
+
+          - Revisado os detalhes do curso
+          - Aprendido como navegar pela plataforma de ensino
+          - Planejado sua participação neste curso
+
+          Na próxima etapa, você irá:
+
+          - Definir "ciências da computação" e rever o vocabulário chave
+          - Identificar os benefícios de lecionar e aprender ciências da computação
+          - Diferenciar "codificação" de "ciências da computação"
+          - Explicar os benefícios de começar a codificar usando programação visual
+      OPD-K5 Stage2Go:
+        markdown: |
+          # Fundamentos de CC > Olhando à Frente
+
+          Nós esperamos que esta etapa tenha dado a você uma boa introdução à ciência da computação.
+
+          Ao completar esta etapa, você deve ser capaz de:
+
+          - Definir "ciência da computação" e ter revisado o vocabulário chave
+          - Identificar os benefícios em ensinar e aprender ciência da computação
+          - Diferenciar "codificação" de "ciência da computação"
+          - Explicar os benefícios em começar a codificar usando programação visual
+
+          > **Dica para Ensino:** Embora ciência da computação possa ser uma disciplina rica e complexa, na Code.org nós acreditamos que professores e estudantes devam dominar os conceitos básicos antes de mergulharem em projetos de alto nível. Este curso online ensina a você, o professor, estes conceitos básicos para que você possa apoiar seus alunos a fazerem isto também.
+
+          Na próxima etapa, iremos brevemente apresentar algumas estruturas para pensar sobre o conteúdo restante deste curso. A seguir, iremos mergulhar fundo e começar a aprender ciência da computação.
+      OPD-K5 Stage2Overview:
+        markdown: |
+          # Fundamentos de CC > Visão geral desta Etapa
+
+          Na Etapa 1, você aprendeu sobre este curso e como navegar pela plataforma de ensino. Agora você está pronto para mergulhar no conteúdo real.
+
+          Vamos começar com alguns fundamentos.
+
+          <img src="https://images.code.org/8af62f96e37199542519fae8580b0a29-image-1434146715374.jpg" width="450px" style="margin-right:45px; border-radius:10px;">
+
+          Ao completar a Etapa 2, você irá:
+
+          - Definir "ciências da computação" e rever o vocabulário chave
+          - Identificar os benefícios de ensinar e aprender ciências da computação
+          - Diferenciar "codificação" de "ciências da computação"
+          - Explicar os benefícios de iniciar a codificar usando programação visual
+
+          Planeje gastar entre 10-30 minutos completando esta etapa.
+      OPD-K5 Stage3Go:
+        markdown: |+
+          # Sequenciamento > Reflexão
+
+          Parabéns! Você acabou de escrever código. Você é oficialmente um programador! Nossa plataforma controla quantas linhas de código você escreveu, e irá informá-lo após cada quebra-cabeças!
+
+          ---
+
+          Você reparou que o último quebra-cabeças foi um pouco mais difícil? Foi um quebra-cabeças **desafiador**. Quebra-cabeças desafiadores têm por objetivo esticar os limites do que os alunos irão fazer. Nós deixamos claro que eles devem ser tentados, mas não exigimos que sejam completados para que os estudantes obtenham sucesso na lição.
+
+          <img src="https://images.code.org/e3b9903cf4acc68be5c01c4118b3d53d-image-1434152749660.JPG" width="450px" style="margin-right:45px; border-radius:10px;">
+
+          ---
+
+          **Tome um momento agora para revisar como o sequenciamento (incluindo programação e algorítmos) são introduzidos no currículo de Fundamentos de CC, e pense como você poderá implementar as atividades sugeridas em sala de aula.**
+
+      OPD-K5 Stage3Start:
+        markdown: |
+          # Sequenciamento > Visão Geral da Etapa
+
+          <img src="https://images.code.org/06b4f5c946f2a47176706352d9dbbb56-image-1434152393531.JPG" width="450px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+          Ao completar a Etapa 4, você irá:
+
+          - Definir "algorítmo" e "programa"
+          - Escrever programas usando blocos de código
+          - Refletir sobre aplicações em sala de aula
+
+          > **O que Esperar desta Etapa:** Nos níveis que seguem, iremos começar com um plano desplugado de aulas para introduzi-lo a um conceito, para planejar como você poderia introduzir ideias para os estudantes de sua classe. A seguir, iremos prover a você instruções em vídeo e apresentar uma série de desafios para você aplicar seu conhecimento. Para completar um desafio, você deverá escrever código usando blocos de código Blockly. Estas lições são do Curso A, que é dirigido aos alunos da pré-escola. Terminaremos com uma oportunidade para refletir sobre como você poderia ensinar este conceito aos seus alunos. Você deverá gastar entre 10-30 minutos neste etapa.
+
+          Tudo pronto? Vamos lá!
       OPD-K5 Stage3aGo:
         title: título
         content1: descrição aqui
+        markdown: "# Sequenciamento > Aulas Desplugadas\n\nConforme mencionamos, gostaríamos
+          de introduzir os tópicos de ciência da computação com lições desplugadas.
+          Mais tarde, usaremos atividades-ponte para transicionar às aulas online.
+          Começar com aulas desplugadas permite introduzir conceitos de uma forma
+          divertida e amigável. Assim, os estudantes já terão familiaridade com o
+          conceito no momento em que entrarem em contato com as aulas online, e poderão
+          relacionar as aulas online com as atividades desplugadas.\n\nDurante estas
+          etapas de programação que você irá percorrer, iremos também iniciar com
+          exemples de aulas desplugadas. Leia o plano de aula que segue e assista
+          aos vídeos relacionados, pensando como você poderia implementá-los em sala
+          de aula com seus alunos.\n<br/>\n***\n<br/>\nIremos começar com sequenciamento.
+          Em sua essência, este estilo de ciência da computação é sobre **sequências**.
+          Uma sequência é uma ordenação específica de coisas. Nestes desafios, nós
+          queremos encontrar a sequência correta de instruções que dizem ao computador
+          o que fazer. Esta lista de instruções é denominada um **algorítmo**. Uma
+          vez que o algorítmo é codificado em uma linguagem que pode ser lida por
+          uma máquina, ele se torna um **programa**.\n<br/>\n<br/>\n\n**1. Reveja
+          o Alano de Aula \"[Mapas Felizes](https://curriculum.code.org/csf/coursea/5/)\"
+          do Curso A.**\n<br/>\nLembre-se que o Curso A é direcionado a alunos da
+          pré-escola. Sequenciamento aparece também em outros cursos, e você pode
+          achar exemplos destas aulas na parte inferior desta página.\n\n<br/>\n\n**2.
+          Assista ao vídeo para alunos: Mapas Felizes**\n<br/>\nEste é um vídeo que
+          você mostraria aos alunos para ajudar a introduzir o conceito de sequenciamento
+          e dar início à aula desplugada.\n\n<iframe width=\"640\" height=\"390\"
+          src=\"https://www.youtube.com/embed/hrnhiKAQ1_k\" frameborder=\"0\" allowfullscreen></iframe>\n\n[Não
+          consegue ver o vídeo? Clique aqui](http://videos.code.org/2014/C1-happy-maps-unplugged.mp4)
+          \ \n\n<br/>\n\n**3. Assista ao vídeo para professores: Como facilitar \"Mapas
+          Felizes\"**\n<br/>\nEste vídeo tem por objetivo dar suporte a você como
+          professor, se você estiver procurando dicas sobre como apresentar esta aula.\n<iframe
+          width=\"640\" height=\"390\" src=\"https://www.youtube.com/embed/En6Bshuqljg\"
+          frameborder=\"0\" allowfullscreen></iframe>\n\n<br/>\n\n\n**4. Reveja outras
+          lições desplugadas que introduzem sequenciamento:**\n\n- Curso A (Pré-escola):
+          [Algorítmos na Vida Real: Plante uma Semente](https://curriculum.code.org/csf-18/coursea/3/)\n-
+          Curso B (Ano 1): [Meus Amigos Robôs.](https://curriculum.code.org/csf-18/coursea/3/),
+          [Mexa-o, mexa-o](https://curriculum.code.org/csf-18/courseb/1/)\n- Curso
+          C (Ano 2): [Planos em Papel](https://curriculum.code.org/csf-18/coursec/4/)\n-
+          Curso D (Ano 3): [Programação com Gráficos em Papel](https://curriculum.code.org/csf-18/coursed/1/)\n-
+          Curso E, Curso F (Anos 4, 5): [Meus Amigos Robôs](https://curriculum.code.org/csf-18/coursee/1/)\n\n\n---\n\n\n>
+          ## Reflita\n> Como você explicaria o conceito de programação (incluindo
+          sequênciamento e algorítmos) para seus alunos? Compartilhe suas ideias em
+          <a href=\"http://forum.code.org/t/teaching-sequencing/408\">nossa comunidade</a>.\n\n>
+          <a href=\"http://forum.code.org/t/teaching-sequencing/408\" target=\"blank\"><button
+          class=\"plc\">Discuta nos fórums >></button></a>\n\nApós comentar no fórum,
+          volte aqui e clique abaixo para seguir em frente.\n\nNa próxima etapa, iremos
+          acrescentar alguma complexidade aos nossos programadas através da adição
+          de laços.\n"
+      OPD-K5 Stage4Go:
+        markdown: "Laços > Lições Desplugadas\n\nNesta etapa, vimos como adicionar
+          laços em um programa é mais eficiente ao codificar ações repetitivas. Na
+          próxima etapa, iremos olhar a codificação de **declarações-se** e outras
+          condicionais. \n<br/>\n\n**1. Reveja o Plano da Lição \"[Entrelaçando-se](https://levelbuilder.code.org/curriculum/coursec/7/Teacher)\"
+          do Curso C: **\n<br/>O Curso C é destinado a estudantes do Ano 2. Ciclos
+          também aparecem em outros cursos, e você pode encontrar exemplos destas
+          lições ao final desta página.\n\n<br/>\n\n**2. Assista ao vídeo para alunos:
+          Entrelaçando-se**\n<br/>\nEste é um vídeo que você mostraria aos seus alunos
+          para ajudar a introduzir o conceito de laços, e dar início à aula desplugada.\n\n<iframe
+          width=\"640\" height=\"390\" src=\"https://www.youtube.com/embed/JoKTqHCni0M\"
+          frameborder=\"0\" allowfullscreen></iframe>\n\n[Não consegue ver o vídeo?
+          Clique aqui](http://videos.code.org/2014/C1-getting-loopy.mp4)\n\n<br/>\n\n**3.
+          Veja o vídeo para professores: Como facilitar \"Entrelaçando-se\"**\n<br/>\nEste
+          vídeo tem por objetivo dar suporte a você como professor, caso você estiver
+          procurando por dicas sobre como dar esta aula.\n<iframe width=\"640\" height=\"390\"
+          src=\"https://www.youtube.com/embed/Vo2woYRRogA\" frameborder=\"0\" allowfullscreen></iframe>\n\n<br/>\n\n**4.
+          Reveja outras lições desplugadas que apresentam laços:**\n\n- Curso A (Pré-escola):
+          [Laços Felizes](https://curriculum.code.org/csf-18/coursea/9/)\n- Curso
+          B (Ano 1): [Meus Laços com Amigos Robôs.](https://curriculum.code.org/csf-18/courseb/8/)\n-
+          Curso E, F (Anos 4, 5): [Meus Laços com Amigos Robôs](https://curriculum.code.org/csf-18/coursee/6/)\n\n***\n\n>
+          ## Reflita\n> Como você explicaria o conceito de laços para seus alunos?<br><br>
+          [Compartilhe suas ideias em nosso fórum.](http://forum.code.org/t/teaching-loops-and-efficiency/405/1)\n\n>
+          <a href=\"http://forum.code.org/t/teaching-loops-and-efficiency/405/1\"
+          target=\"blank\"><button class=\"plc\">Discuta nos fórums >></button></a>\n\nApós
+          comentar no fórum, volte aqui e clique abaixo para prosseguir à próxima
+          página.\n"
+      OPD-K5 Stage4Review:
+        markdown: |
+          # Laços > Reflexão
+
+          Nesta etapa, exploramos como laços podem ser usados para tornar o código mais eficiente. No próximo estágio, iremos ver como condicionais podem ajudar a acrescentar lógica ao programa.
+
+          **Tome um momento para revisar como laços são introduzidos no currículo de Fundamentos de CC. Considere como você poderia implementar as atividades sugeridas em sua sala de aula.**
+
+          ![](https://images.code.org/c6dca0407f5a517823f7e71b8da3880b-image-1549050118354.jpg)
+      OPD-K5 Stage4Start:
+        markdown: |
+          Laços > Visão Geral da Etapa 5
+
+          Esta etapa dá sequência à sua primeira experiência com programação adicionando o conceito central e **ciclos**.
+
+          <img src="https://images.code.org/fcd3262b1c25e70426ac90e6f9fa65ac-image-1434152998854.JPG" width="450px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+          Ao completar a Etapa 5, você irá:
+
+          - Praticar a codificação de laços simples
+          - Refletir na aplicação em classe
+
+          > **O que Esperar desta Etapa:** Nos níveis que seguem, iremos introduzir uma aula desplugada e uma série de quebra-cabeças do Curso C (destinado ao Ano 2) com foco no conceito de laços. Para completar um quebra-cabeça, você precisará escrever código usando programação visual, baseada em blocos. Iremos terminar com uma oportunidade para refletir. Você deverá gastar entre 20-45 minutos nesta etapa.
+
+          Tudo pronto? Vamos lá!
+      OPD-K5 Stage5Go:
+        markdown: |
+          # Condicionais > Lições Desplugadas
+
+
+          **1. Reveja o Plano de Aulas "[Condicionais com Cartas](https://curriculum.code.org/csf-18/coursed/13/)" do Curso D:**
+          <br/>
+          O Curso D é destinado a alunos do Ano 3. Esta mesma lição também aparece no Curso E e no Curso F. Condicionais não são cobertas nos Cursos A, B ou C.
+          <br/><br/>
+
+          **2. Veja o vídeo para estudantes: Condicionais com Cartas**
+          <br/>
+          Este é um vídeo que você mostraria aos alunos para ajudar a introduzir o conceito de condicionais, e dar início à aula desplugada.
+          <iframe width="640" height="390" src="https://www.youtube.com/embed/UymN4lTL50s" frameborder="0" allowfullscreen></iframe>
+          <br/>
+          [Não consegue ver o vídeo? Clique aqui](http://videos.code.org/2014/C2-conditionals-with-cards.mp4)
+
+          <br/><br/>
+          **3. Assista ao vídeo do professor: "Condicionais com Cartas"**
+          <br/>
+          Este vídeo tem por objetivo suportá-lo como professor, se você estiver procurando dicas em como apresentar a lição.
+
+          <iframe width="640" height="390" src="https://www.youtube.com/embed/2m2Rn9VxHfU" frameborder="0" allowfullscreen></iframe>
+          [Não consegue ver o vídeo? Clique aqui](https://videos.code.org/levelbuilder/unplugged-lessoninaction-conditionalswithcards-mp4.mp4)
+
+          <br/><br/>
+
+          ---
+
+          > ## Reflita
+          > Como você poderia explicar o conceito de condicionais a seus estudantes? Compartilhe suas ideias em [nosso fórum](http://forum.code.org/t/teaching-conditionals/406/1).
+
+          > <a href="http://forum.code.org/t/teaching-conditionals/406/1" target="blank"><button class="plc">Discuta nos fórums >></button></a>
+
+          Após comentar no fórum, volte aqui e clique abaixo para prosseguir à etapa seguinte.
+      OPD-K5 Stage5Review:
+        markdown: |
+          # Condicionais > Reflexão
+
+          Nesta etapa, exploramos como condicionais ajudam programadores a adicionar lógica em seu código. Na próxima etapa, iremos ver como funções podem ajudá-lo a trazer seu código para o próximo nível.
+
+          **Tome um momento agora para rever como condicionais foram introduzidas no currículo de Fundamentos de CC, e como você poderia implementar as atividades sugeridas em sua sala de aula.**
+
+          ![](https://images.code.org/6335e7aa128d84c96ac402005cd9a3bb-image-1549053033052.jpg)
+      OPD-K5 Stage5Start:
+        markdown: |
+          # Condicionais > Visão Geral da Etapa
+
+          <img src="https://images.code.org/d2c2e06ce0bef52ae173a1de35b92af7-image-1470945682161.png" width="450px"  style="border-radius:10px; float:right; margin: 0 0 40px 40px;"/>
+
+          Até agora, você escreveu um programa simples e acrescentou laços para melhorar sua eficiência. Nesta etapa, iremos explorar **declarações-se**, que começam a adicionar lógica ao seu programa.
+
+          Ao completar a Etapa 6, você irá:
+
+          - Praticar a codificar condicionais simples
+          - Refletir sobre sua aplicação em sala de aula
+
+          >**O que Esperar desta Etapa:** Primeiramente iremos introduzir uma aula desplugada do Curso D (destinada ao Ano 3) que apresenta a ideia de condicionais. A seguir, você irá completar uma série de quebra-cabeças para aplicar seus conhecimentos usando condicionais. Terminaremos com uma oportunidade para reflexão. Você deverá gastar entre 20-45 minutos nesta etapa.
+
+          Tudo pronto? Vamos lá!
+      OPD-K5 Unplugged:
+        markdown: |
+          # Olhando à Frente > Ficando "Desplugado"
+
+          <img src="https://images.code.org/ae83fdee9390a1155e5173b2a06f9773-image-1434399991310.JPG" class="level-image">
+
+          Ao lecionar ciência da computação, você pode pensar que seria melhor ter acesso a tecnologias de primeira linha - computadores novos, internet rápida, os últimos aplicativos. Mas em Code.org, nós descobrimos que algumas das aulas mais impactantes de ciência da computação são na verdade "desplugadas", ou ministradas com pouca ou nenhuma tecnologia. Nestas aulas, os alunos aprendem conceitos de computadores sem um computador.
+
+          É por isso que nossos cursos de Fundamentos de CC usam atividades desplugadas para introduzir conceitos de computação com o manuseio de conceitos físicos antes que os alunos escrevam programas usando estes conceitos. Um exemplo disto seria fazer uma dança com movimentos repetidos em classe, para entender o conceito de como os laços repetem comandos em um programa de computador. Desta forma, quando os alunos começam a escrever os programas usando laços, a atividade desplugada forneceu a eles algo com que eles já estão acostumados, e podem relacionar este novo conceito com esta atividade.
+
+          Assista o vídeo abaixo para compreender os benefícios do uso de atividades desplugadas para o ensino de ciência da computação.
+
+          <iframe width="640" height="390" src="https://youtubeeducation.com/embed/-7lcnNcONHY" frameborder="0" allowfullscreen></iframe>
+          [Baixe o video](https://videos.code.org/levelbuilder/unplugged-whyshouldteachunpluggedactivities-mp4.mp4)
+          <br/>
+          <br/>
+          **À medida que você percorrer as Etapas 4-8**, você terá a oportunidade de rever algumas das nossas atividades desplugadas para cada um dos conceitos essenciais que são tratados neste curso.
+      OPD-K5 Vocabulary:
+        markdown: |
+          # Fundamentos de CC > Vocabulário Chave
+
+          À medida em que você aprende ciência da computação, uma das tarefas mais importantes é se familiarizar com a linguagem de codificação. Neste curso, e por todos os recursos de Fundamentos de CC, nós usamos o mesmo vocabulário usado na indústria de tecnologia. Ao encorajar estudantes jovens a aprender os termos profissionais permite a eles se comunicarem com outros e construir seu conhecimento em computação sem que tenham que reaprender termos e conceitos mais tarde. Os termos e conceitos usados nestes cursos são definidos usando palavras que a maioria dos estudantes deve ser capaz de entender.
+
+          Aqui está uma [lista de termos de vocabulário](http://code.org/curriculum/docs/k-5/glossary) que é usada nos recursos de Fundamentos de CC; muitos destes termos são introduzidos neste curso também. Você não precisa aprender estes termos agora. Use esta lista como uma referência durante este curso online de desenvolvimento profissional, e quando você utilizar nossos cursos com seus estudantes.
+
+          <a href="http://code.org/curriculum/docs/k-5/glossary" target="blank"><button class="default">Veja o Glossário</button></a>
+
+          > **Dica de Ensino:** A melhor prática é introduzir o vocabulário em uma linguagem de entendimento simples, relacionar os termos com experiências anteriores, usar os termos repetidamente além da aula em si e no decorrer de todo o curso (e em outras situações) quando apropriado, e reforçar seu uso de forma oral e escrita pelos estudantes.
       OPD-K5 Welcome 2:
         markdown: |+
           # Vamos começar > Cursos Fundamentais de Ciências da Computação
@@ -3744,6 +4204,118 @@ pt-BR:
            - **[Fundamentos em Ciências da Computação (CC) Pré-espresso](http://studio.code.org/s/pre-express)**: aproximadamente 20 horas (Idades 4-8)
 
 
+      OPD-K5 What is Mastery:
+        markdown: "## Olhando à Frente > O que é ter domínio do assunto?\n\nNas etapas
+          que seguem, você irá dominar os seguintes conceitos básicos de ciência da
+          computação:\n\n- Etapa 4: Sequenciamento\n- Etapa 5: Laços\n- Etapa 6: Condicionais\n-
+          Etapa 7: Funções\n- Etapa 8: Eventos\n\n## O que é \"dominar um assunto\"?\n\nNós
+          definimos \"domínio\" como ser capar de fazer o seguinte:\n\n- Definir e
+          explicar o que significa um conceito essencial, e por que ele é importante
+          na ciência da computação\n- Escrever programas simples aplicando o conceito
+          (usando programação visual para solucionar desafios)\n- Refletir como você
+          poderá integrar o conceito à sua prática\n\nUse esta lista como referência
+          enquanto você percorre o curso. À medida que completar cada etapa, pergunte
+          a si mesmo:\n\n- Eu consigo definir e explicar a importante deste conceito
+          específico em um nível iniciante?\n- Eu fui capaz de completar com sucesso
+          os desafios simples desta etapa?\n- Eu tenho algumas ideias de como eu poderia
+          usar isto em minha sala de aula?\n\nSe você respondeu sim a cada pergunta,
+          prossiga para a etapa seguinte. Se você respondeu não para qualquer uma
+          das perguntas, considere revisitar a etapa ou explorar mais acerca do tópico
+          ao lado do aluno no Code Studio, antes de prosseguir.\n\n## Coisas para
+          ter em mente ao aprender ciência da computação:\n\n- O mundo da programação
+          de computadores se move tão rápido que não há realmente pessoas que dominam
+          o assunto. **Somos todos aprendizes** em estágios diferentes mas ainda somos
+          todos aprendizes. \n- A programação se torna mais confortável a cada vez
+          que você retorna a ela. **Você não vai se tornar um especialista na primeira
+          vez.**\n- Não há atalhos, o ato de programar e **aprender a programar leva
+          tempo, mas qualquer um pode fazê-lo!**\n\n> **Principal Lição:** O objetivo
+          das próximas várias etapas não torná-lo um cientista da computação, mas
+          ao invés disso ajudá-lo a se sentir suficientemente confortável com os conceitos
+          essenciais, para que você fique empolgado em compartilhar este conhecimento
+          com seus alunos.\n\n## Após eu \"dominar\" os conceitos, o que vem depois?\n\nNa
+          **Etapa 9** você irá explorar o currículo livre e os recursos para professores
+          da Code.org. Você pode escolher usar qualquer um destes recursos ou outros
+          recursos curriculares que escolher. Completar este curso te dará os conceitos
+          que você vai precisar para entender qualquer currículo inicial de ciência
+          da computação.\n\nNas **Etapas 10 e 11**, nós iremos apontar a direção aos
+          recursos que você pode usar para aprender mais ou se sentir mais preparado
+          para ensinar estes conceitos em sua sala de aula.\n"
+      OPD-K5 Why teach CS:
+        markdown: |
+          # Fundamentos de CC > Por que ensinar ciência da computação?
+
+          <img src="//code.org/images/edquote1.png" width="250px" style="margin-right:45px; float:left">
+
+          Pesquisas mostram que ciência da computação promove o pensamento crítico, criatividade, solução de problemas, e engajamento com habilidades do mundo real. De fato, uma [pesquisa recente](https://medium.com/@codeorg/code-org-resourceful-teachers-higher-student-achievement-8be1efdec06e) descobriu que salas de aula com professores qualificados obtém notas mais altas em testes padronizados de português, matemática e ciências, após o ensino de lições de Fundamentos de CC.
+
+          Por que você iria querer lecionar ciência da computação se você não é um professor de exatas? Se você está se dedicando a este curso, você provavelmente tem algumas respostas próprias para esta pergunta. Mas se você precisa de alguma inspiração a mais, dedique um tempo agora e reveja [esta coleção de vídeos](http://code.org/educate/inspire) para captar o "por que". Estes vídeos são ótimos para compartilhar com seus estudantes, sua diretoria, pais de alunos e sua comunidade, se você precisar justificar o uso de CC na sala de aula. Você também pode estar interessado em algumas das estatísticas e evidências relacionadas à educação de CC.
+
+          <a href="http://code.org/educate/inspire" target="blank"><button class="default">Explore videos inspiracionais</button></a><a href="http://code.org/promote" target="blank"><button class="default">Explore pesquisas >></button></a>
+
+          Gaste alguns momentos explorando nossas pesquisas e tome nota de quaisquer fatos relevantes ou interessantes que você encontrar.
+      OPD-K5 Younger Grades:
+        markdown: |
+          # Por que ensinar ciência da computação nas primeiras séries?
+
+          <img src="https://images.code.org/0149da542dae03da5f40b7b8aacf73c0-image-1434818868152.jpg" class="level-image">
+
+          Além das práticas de pensamento lógico que os alunos aprendem através da experiência em codificação, o ensino de ciência da computação nas primeiras séries oferecem um benefício adicional para os estudantes e a sociedade &mdash; nós podemos trabalhar para criar mais equidade na indústria de tecnologia.
+
+          Ao esperarmos até que a ciência da computação seja introduzida aos alunos no colegial ou na faculdade, alguns estudantes já terão decidido que computação não é para elas, ou eles poderão se sentir que já estão muito defasados em relação aos alunos que já estudam isto fora da escola.
+
+          Expor estudantes à ciência da computação durante o ensino fundamental, quando eles não têm que cursá-la como matéria optativa em uma faculdade, irá permitir a todos os alunos saberem o quanto esta matéria é acessível, e poderão então decidir se gostam ou não.
+
+          > ## Por que você acredita que lecionar ciência da computação vale a pena?
+          [Envie suas impressões pelo Tweeter](https://twitter.com/teachcode) e tenha certeza de incluir a tag @teachcode para que possamos responder.
+
+          > <a href="http://ctt.ec/Bfjw3" target="blank"><button class="default">Compartilhe no Tweeter >></button></a><br><br>
+          Não possui uma conta no Tweeter? Você também pode nos encontrar no [Facebook](https://www.facebook.com/Code.org/) ou [Instagram](https://www.instagram.com/codeorg/).
+      OPD-Stage3Start:
+        markdown: |
+          # Olhando à Frente > Visão Geral desta Etapa
+
+          <img src="https://images.code.org/0b8c948f309ae1df3d9920520e4a168c-image-1435004357188.JPG" width="450px" style="border-radius:10px;">
+
+          Ao completar esta etapa, você irá:
+
+          - Estar preparado para "dominar o básico" de ciência da computação através da revisão do conteúdo do curso
+      'Overview: Design Mode':
+        markdown: |
+          # Bem-vindo ao modo de design do Laboratório de Aplicativos
+          No Laboratório de Aplicativos, o "Modo Design" permite arrastar e soltar elementos da interface do usuário no aplicativo.
+
+          ### Vocabulário
+          * **Interface do usuário(UI) ** - como uma pessoa (usuário) interage com o computador ou aplicativo.
+          * **Elementos da interface do usuário** ou objetos, como botões, imagens, caixas de texto, menus, telas e assim por diante.
+
+          ## Exemplo
+
+          <div style="column-count: 4; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 100%">
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
+          Você verá um novo conjunto de opções acima da área do aplicativo que permite alternar entre o "Modo Design" e o Modo Código ".</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span> Adicionar um elemento é tão fácil quanto arrastá-lo e soltá-lo no aplicativo onde você quiser. Quando estiver na tela do aplicativo, você pode reposicioná-lo, redimensioná-lo e alterar muitas outras propriedades sobre ele </p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span> A guia <em> Propriedades </em> mostra tudo o que você pode alterar sobre a aparência de um elemento da interface do usuário. </p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">4.</span> O <strong> ID do elemento </strong> é importante porque é como você se refere ao elemento no seu código. Discutiremos os IDs de elementos posteriormente. </p></div>
+
+
+          ![](https://images.code.org/01a31ac3be66deb6d01a92a1edfffd21-image-1476726587662.png)
+
+
+          <div style="column-count: 2; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 66%; float: right">
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">5.</span>Você pode transformar o texto que o usuário vê no texto do botão como desejar.</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">6.</span><strong>Nota:</strong> Role para baixo para ver outras propriedades de um elemento da interface do usuário que pode estar "oculto" abaixo.</p>
+          </div>
+
+          <div style="clear: both"></div>
+          <hr>
+
+          ** Agora você tenta! **
       'Overview: Images':
         markdown: |+
           # Imagens
@@ -3780,6 +4352,57 @@ pt-BR:
            
 
 
+      'Overview: onEvent':
+        markdown: |
+          # Respondendo à entrada do usuário
+
+          Você precisará mergulhar no modo de código para que ele realmente responda aos usuários. O Laboratório de Aplicativos aguarda para responder a certos ** eventos ** que ocorrem em um programa. O bloco `onEvent` especifica em qual elemento da interface do usuário aguardar um evento.
+
+          ## OnEvent
+
+          <br><br>
+
+          <div style="column-count: 4; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 4; width: 100%">
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1. </span>
+          Mude para o modo de código </p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2. </span>
+          Arraste um bloco <code> onEvent </code> da caixa de ferramentas para a área de trabalho. </p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3. </span>
+          Use o menu suspenso para selecionar o <em> ID </em> do elemento da interface do usuário que você deseja configurar para responder a algum evento. Os IDs de todos os elementos da interface do usuário adicionados no modo de design serão listados aqui. </p>
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">4. </span>
+          Use o menu suspenso para selecionar o <em> tipo </em> de evento ao qual você deseja responder. (Basta usar "clique" por enquanto). </p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">5. </span>
+          Adicione código dentro da função que você deseja executar <em> quando </em> o usuário acionar o evento. A função será executada uma vez toda vez que o usuário acionar o evento específico. </p>
+
+          </div>
+
+          ![](https://images.code.org/9b506faaaadf61338dc738a4eafb66b2-image-1476740205599.png)
+      'Overview: setPosition':
+        markdown: |
+          # setPosition e dimensões da tela
+
+          O comando `setPosition` permite mover elementos da interface do usuário para uma posição arbitrária na tela.
+
+          <img src="https://images.code.org/ee55080bb341528ca7e8ebc79f9f978b-image-1490369263385.27.12 AM.png" style="display: block; margin: auto">
+
+          Você (talvez obviamente) precisa conectar números reais nesses parâmetros de `setPosition` para que isso tenha algum efeito. Os números para as coordenadas setPosition ** x e y da tela **.
+
+          ** Dicas: **
+
+          * 0,0 é o canto superior esquerdo.
+          * Especifique um local por quantos pixels da **esquerda e para baixo** da parte superior da tela.
+          * A tela é ** 320 por 450 pixels **.
+          * Você pode ** passar o mouse sobre a tela ** para ver as coordenadas x, y de qualquer ponto.
+
+          <div style="width: 100%; text-align: center">
+          <img src="https://images.code.org/8b346602d75f2877c64e1793b6a04302-image-1476889124747.png">
+
+          <img src="https://images.code.org/fc7e830fa2ea994b885c76618b484dfa-image-1476889137756.gif">
+          </div>
       PicturingData-Unplugged:
         markdown: |
           # Retratando Dados
@@ -3992,7 +4615,7 @@ pt-BR:
         markdown: |
           # Visão Geral
 
-          Nesta lição, você aprenderá um processo formal de solução de problemas que ajudará você a estruturar sua abordagem com uma grande variedade de problemas.
+          Nesta lição, você aprenderá um processo formal de solução de problemas que ajudará você a estruturar sua abordagem para uma grande variedade de problemas.
 
           ## Recursos
 
@@ -5799,11 +6422,11 @@ pt-BR:
         markdown: |
           # Visão Geral
 
-          A classe trabalha em grupos para projetar barcos de folha de alumínio que suportarão quantos centavos forem possíveis. Ao fim, os grupos refletem sobre suas próprias experiências com a atividade e fazem conexões com os tipos de solução de problemas que estarão usando para o restante do curso.
+          A classe trabalha em grupos para projetar barcos de folha de alumínio que suportarão quantos centavos forem possíveis. Ao fim, os grupos refletem sobre suas experiências com a atividade e fazem conexões com os tipos de solução de problemas que estarão usando para o restante do curso.
 
 
           ## Recursos
-          * [Barcos de Alumínio](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - Guai de atividade (copiar como [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))
+          * [Barcos de Alumínio](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - Guia de atividade (copiar como [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))
       grade2_multi_collector_A_predict1:
         questions:
         - text: Observe atentamente o código abaixo. Se o código fosse executado até

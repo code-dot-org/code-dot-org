@@ -317,7 +317,11 @@ class ScriptLevelsController < ApplicationController
       readonly_view_options
     elsif @user && current_user && @user != current_user
       # load other user's solution for teachers viewing their students' solution
-      @user_level = @user.user_level_for(@script_level, @level)
+      @user_level = UserLevel.find_by(
+        user: @user,
+        script: @script_level.script,
+        level: @level
+      )
       level_source = @user_level.try(:level_source)
       readonly_view_options
     elsif current_user
@@ -325,7 +329,11 @@ class ScriptLevelsController < ApplicationController
       @last_activity = current_user.last_attempt(@level, @script)
       level_source = @last_activity.try(:level_source)
 
-      user_level = current_user.user_level_for(@script_level, @level)
+      user_level = UserLevel.find_by(
+        user: current_user,
+        script: @script_level.script,
+        level: @level
+      )
       if user_level && user_level.submitted?
         level_view_options(
           @level.id,

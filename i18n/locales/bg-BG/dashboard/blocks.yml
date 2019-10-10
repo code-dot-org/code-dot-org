@@ -214,6 +214,25 @@ bg:
             '"column"': колона
             '"plus"': плюс
             '"random"': случаен
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': Извънземно
+            '"BEAR"': Мечка
+            '"CAT"': Котка
+            '"DUCK"': Патица
+            '"FROG"': Жаба
+            '"MOOSE"': Лос
+            '"PINEAPPLE"': Ананас
+            '"ROBOT"': Робот
+            '"SHARK"': Акула
+            '"UNICORN"': Еднорог
+          LOCATION:
+            "{x: 200, y: 100}": горе
+            "{x: 200, y: 300}": долу
+            "{x: 100, y: 200}": наляво
+            "{x: 300, y: 200}": надясно
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": случаен
       Dancelab_makeNewDanceSprite:
         options:
           COSTUME:
@@ -386,6 +405,20 @@ bg:
             '"y"': вертикално положение
             '"tint"': оттенък
       Dancelab_setTintEach:
+        options:
+          THIS:
+            sprites: всички
+            '"ALIEN"': всички извънземни
+            '"BEAR"': всички мечки
+            '"CAT"': всички котки
+            '"DOG"': всички кучета
+            '"DUCK"': всички патици
+            '"FROG"': всички жаби
+            '"MOOSE"': всички лосове
+            '"PINEAPPLE"': всички ананаси
+            '"ROBOT"': всички роботи
+            '"SHARK"': всички акули
+      Dancelab_setTintEachInline:
         options:
           THIS:
             sprites: всички
@@ -750,61 +783,19 @@ bg:
         text: завий надясно
       Vector_vectorNorth:
         text: север
-      aalab_changePropByFlexible:
-        text: промяна на {SPRITE} {PROPERTY} с {VAL}
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': размер
-            '"rotation"': въртене
-            '"x"': x позиция
-            '"y"': y позиция
-            '"direction"': посока на движение
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': когато
-            '"while"': докато
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': когато
-            '"while"': докато
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': когато
-            '"while"': докато
-          KEY:
-            '"up"': нагоре
-            '"down"': надолу
-            '"left"': наляво
-            '"right"': надясно
-            '"space"': космос
-      aalab_location_picker:
-        text: "{LOCATION}"
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': град
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': вярно
-            '"false"': грешно
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': размер
-            '"rotation"': въртене
-            '"x"': x позиция
-            '"y"': y позиция
-            '"direction"': посока на движение
-            '"tint"': оттенък
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': завинаги
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
         options:
           OPTION:
             '"show"': показва

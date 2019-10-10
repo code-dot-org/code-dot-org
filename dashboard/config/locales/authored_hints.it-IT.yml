@@ -9600,30 +9600,6 @@ it-IT:
         courseC_harvester_loops_challenge1_b: Puoi ripetere i blocchi `vai avanti`
           e `prendi pannocchia` tutte le volte che ti serve, poi `gira a destra` ad
           ogni angolo.
-        courseC_harvester_loops_challenge1_c: |-
-          Il modo migliore per raccogliere le pannocchie del secondo e terzo lato del percorso è di usare un ciclo `ripeti ... volte` dentro a un altro blocco `ripeti ... volte`.
-
-          <xml><block type="controls_repeat">
-                  <title name="TIMES">2</title>
-                  <statement name="DO">
-                    <block type="controls_repeat">
-                      <title name="TIMES">4</title>
-                      <statement name="DO">
-                        <block type="maze_move">
-                          <title name="DIR">moveForward</title>
-                          <next>
-                            <block type="harvester_corn"/>
-                          </next>
-                        </block>
-                      </statement>
-                      <next>
-                        <block type="maze_turn">
-                          <title name="DIR">turnRight</title>
-                        </block>
-                      </next>
-                    </block>
-                  </statement>
-                  </block></xml>
       courseC_harvester_loops_challenge1a_2019:
         courseC_harvester_loops_challenge1_a: È troppo difficile senza usare i cicli!
         courseC_harvester_loops_challenge1_b: Puoi ripetere i blocchi `vai avanti`
@@ -10218,13 +10194,9 @@ it-IT:
         courseC_starWars_loops5_a: La soluzione migliore usa un blocco `vai avanti`,
           una curva e infine un ciclo.
       courseC_starWars_loops5_2018:
-        courseC_starWars_loops5_b: Per far muovere BB-8 verso il basso, devi farlo
-          girare e poi farlo andare avanti.
         courseC_starWars_loops5_a: La soluzione migliore usa un blocco `vai avanti`,
           una curva e infine un ciclo.
       courseC_starWars_loops5_2019:
-        courseC_starWars_loops5_b: Per far muovere BB-8 verso il basso, devi farlo
-          girare e poi farlo andare avanti.
         courseC_starWars_loops5_a: La soluzione migliore usa un blocco `vai avanti`,
           una curva e infine un ciclo.
       courseC_starWars_loops6:
@@ -13691,12 +13663,9 @@ it-IT:
         courseE_bee_concept3a_c: Ci sono quattro tratti rettilinei di percorso, quindi
           il ciclo `ripeti ... volte` più esterno deve essere ripetuto quattro volte.
       courseE_bee_concept3_2018:
-        courseE_bee_concept3a_a: Prova a risolvere l'esercizio usando dei cicli annidati.
         courseE_bee_concept3a_b: Se non riesci a capire dove mettere i cicli, prova
           a scrivere il codice con tutti i blocchi azzurri e cerca poi di riconoscere
           la sequenza che si ripete.
-        courseE_bee_concept3a_c: Ci sono quattro tratti rettilinei di percorso, quindi
-          il ciclo `ripeti ... volte` più esterno deve essere ripetuto quattro volte.
       courseE_bee_concept4:
         courseE_bee_concept4_a: Un'istruzione condizionale `se/altrimenti` potrebbe
           davvero risolvere il dilemma.
@@ -15475,7 +15444,6 @@ it-IT:
           Questo è lo schema che il tuo artista dovrà seguire:
 
           ![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)
-        courseF_artist_variables4_b: "![](https://images.code.org/fc31a4b60dc86d7b820c2d242f83e6ed-image-1477533361197.gif)"
       courseF_artist_variables4_2019:
         courseF_artist_variables4_a: Il codice non sarà molto diverso da quello dell'esercizio
           precedente, tranne per il fatto che dovrai girare l'artista per farlo saltare
@@ -15485,7 +15453,6 @@ it-IT:
           Questo è lo schema che il tuo artista dovrà seguire:
 
           ![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)
-        courseF_artist_variables4_b: "![](https://images.code.org/fc31a4b60dc86d7b820c2d242f83e6ed-image-1477533361197.gif)"
       courseF_artist_variables5:
         courseF_artist_variables5_a: La seconda metà del programma dovrebbe apparire
           quasi uguale alla prima metà, tranne per il fatto che dovrai girare a _sinistra_,

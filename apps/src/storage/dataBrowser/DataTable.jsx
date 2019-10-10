@@ -58,6 +58,7 @@ class DataTable extends React.Component {
   static propTypes = {
     getColumnNames: PropTypes.func.isRequired,
     readOnly: PropTypes.bool,
+    rowsPerPage: PropTypes.number,
     // from redux state
     tableColumns: PropTypes.arrayOf(PropTypes.string).isRequired,
     tableName: PropTypes.string.isRequired,
@@ -198,11 +199,11 @@ class DataTable extends React.Component {
     this.setState({currentPage: number - 1});
   };
 
-  getRowsForCurrentPage() {
+  getRowsForCurrentPage(rowsPerPage) {
     if (this.props.tableRecords['slice']) {
       return this.props.tableRecords.slice(
-        this.state.currentPage * MAX_ROWS_PER_PAGE,
-        (this.state.currentPage + 1) * MAX_ROWS_PER_PAGE
+        this.state.currentPage * rowsPerPage,
+        (this.state.currentPage + 1) * rowsPerPage
       );
     }
     return this.props.tableRecords;
@@ -215,11 +216,12 @@ class DataTable extends React.Component {
     );
     let editingColumn = this.state.editingColumn;
 
+    let rowsPerPage = this.props.rowsPerPage || MAX_ROWS_PER_PAGE;
     let numPages = Math.max(
       1,
-      Math.ceil(Object.keys(this.props.tableRecords).length / MAX_ROWS_PER_PAGE)
+      Math.ceil(Object.keys(this.props.tableRecords).length / rowsPerPage)
     );
-    let rows = this.getRowsForCurrentPage();
+    let rows = this.getRowsForCurrentPage(rowsPerPage);
 
     // Always show at least one column.
     if (columnNames.length === 1) {

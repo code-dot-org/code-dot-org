@@ -76,6 +76,12 @@ ky:
             sprites: баары
           FORMAT:
             '"random"': туш келди
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": солго
+            "{x: 300, y: 200}": оңго
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": туш келди
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
@@ -160,6 +166,10 @@ ky:
             '"scale"': өлчөмү
             '"height"': бийиктиги
       Dancelab_setTintEach:
+        options:
+          THIS:
+            sprites: баары
+      Dancelab_setTintEachInline:
         options:
           THIS:
             sprites: баары
@@ -401,53 +411,19 @@ ky:
         text: солго бурул
       RyanLab_turnRight:
         text: оңго бурул
-      aalab_changePropByFlexible:
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': өлчөмү
-            '"x"': x позиция
-            '"y"': у позиция
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': качан
-            '"while"': болуп турганда
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': качан
-            '"while"': болуп турганда
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': качан
-            '"while"': болуп турганда
-          KEY:
-            '"up"': өйдө
-            '"down"': ылдый
-            '"left"': солго
-            '"right"': оңго
-            '"space"': космос
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': шаар
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': туура
-            '"false"': жалган
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': өлчөмү
-            '"x"': x позиция
-            '"y"': у позиция
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': дайыма
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
         options:
           OPTION:
             '"show"': көрсөт

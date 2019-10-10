@@ -262,3 +262,11 @@ level 'allthethings_external_not_displayed_as_unplugged'
 
 stage 'Bubble Choice'
 level 'allthethings_bubble_choice'
+
+stage 'Contained Levels'
+level 'contained_single_multi'
+level 'Test GameLab Predictive'
+level 'PS predictive Applab level test'
+level 'contained_applab_choose2'
+level 'contained_csf_multi2'
+level 'contained_csf_free_response'

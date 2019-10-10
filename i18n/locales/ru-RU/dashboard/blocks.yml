@@ -236,6 +236,31 @@ ru:
             '"x"': крест-накрест
             '"plus"': плюс
             '"random"': случайный
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': Инопланетянин
+            '"BEAR"': Медведь
+            '"CAT"': Кот
+            '"DOG"': Собака
+            '"DUCK"': Утка
+            '"FROG"': Лягушка
+            '"MOOSE"': Лось
+            '"PINEAPPLE"': Ананас
+            '"ROBOT"': Робот
+            '"SHARK"': Акула
+            '"UNICORN"': Единорог
+          LOCATION:
+            "{x: 200, y: 100}": верх
+            "{x: 200, y: 300}": низ
+            "{x: 100, y: 200}": влево
+            "{x: 300, y: 200}": вправо
+            "{x: 200, y: 200}": центр
+            "{x: 100, y: 100}": вверху слева
+            "{x: 300, y: 100}": вверху справа
+            "{x: 100, y: 300}": внизу слева
+            "{x: 300, y: 300}": внизу справа
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": случайный
       Dancelab_makeNewDanceSprite:
         text: |-
           создать новый {COSTUME}
@@ -496,6 +521,20 @@ ru:
       Dancelab_setTint:
         text: установить оттенок {SPRITE} на {VAL}
       Dancelab_setTintEach:
+        options:
+          THIS:
+            sprites: все
+            '"ALIEN"': все инопланетяне
+            '"BEAR"': все медведи
+            '"CAT"': все кошки
+            '"DOG"': все собаки
+            '"DUCK"': все утки
+            '"FROG"': все лягушки
+            '"MOOSE"': все лоси
+            '"PINEAPPLE"': все ананасы
+            '"ROBOT"': все роботы
+            '"SHARK"': все акулы
+      Dancelab_setTintEachInline:
         options:
           THIS:
             sprites: все
@@ -935,72 +974,19 @@ ru:
         options:
           PROPERTY:
             "'shapeColor'": цвет
-      aalab_changePropByFlexible:
-        text: изменить {SPRITE} {PROPERTY} на {VAL}
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': размер
-            '"rotation"': вращение
-            '"x"': позиция абсцисс (x)
-            '"y"': позиция ординат (y)
-            '"direction"': направление движения
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': когда
-            '"while"': пока
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': когда
-            '"while"': пока
-      aalab_jumpTo:
-        text: "{SPRITE} перейти к {LOCATION}"
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': когда
-            '"while"': пока
-          KEY:
-            '"up"': вверх
-            '"down"': вниз
-            '"left"': влево
-            '"right"': вправо
-            '"space"': космос
-      aalab_moveInDirection:
-        options:
-          DIRECTION:
-            '"North"': Север
-            '"East"': Восток
-            '"South"': Юг
-            '"West"': Запад
-      aalab_randomLocation:
-        text: случайное местоположение
-      aalab_removeOneAndAll:
-        text: удалить {THIS}
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': город
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': истина
-            '"false"': ложь
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': размер
-            '"rotation"': вращение
-            '"x"': позиция абсцисс (x)
-            '"y"': позиция ординат (y)
-            '"direction"': направление движения
-            '"tint"': оттенок
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': всегда
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
         options:
           OPTION:
             '"show"': показать
