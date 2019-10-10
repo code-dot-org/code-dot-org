@@ -126,8 +126,8 @@ export class Fish extends React.Component {
       p5.image(mouthImg, mouthX, mouthY);
 
       // sideFin
-      const sideFinX = body.anchor[0] + body.sideFinAnchor[0];
-      const sideFinY = body.anchor[1] + body.sideFinAnchor[1];
+      const sideFinX = body.anchor[0] + body.sideFinAnchor[0] + sideFin.transform[0];
+      const sideFinY = body.anchor[1] + body.sideFinAnchor[1] + sideFin.transform[1];
       p5.image(sideFinImg, sideFinX, sideFinY);
     };
   };
