@@ -2,7 +2,7 @@ import * as coreLibrary from '../coreLibrary';
 
 export const commands = {
   countByAnimation(animation) {
-    let sprites = coreLibrary.getSpriteArray(animation);
+    let sprites = coreLibrary.getSpriteArray({costume: animation});
     return sprites.length;
   },
   destroy(spriteArg) {
