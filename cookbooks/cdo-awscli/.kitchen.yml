@@ -9,10 +9,10 @@ provisioner:
 verifier:
   name: inspec
 platforms:
-- name: ubuntu-14.04
+- name: ubuntu-18.04
   driver:
-    image: dokken/ubuntu-14.04
-    pid_one_command: /sbin/init
+    image: dokken/ubuntu-18.04
+    pid_one_command: /bin/systemd
   run_list:
   - recipe[apt]
   - recipe[sudo-user]
