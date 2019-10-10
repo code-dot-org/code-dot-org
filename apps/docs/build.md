@@ -215,6 +215,8 @@ In some cases, production behavior will differ from development or CI because
 we use minified JS in production. To build minified js locally, you can do 
 the following:
 
+0. Make sure you have `build_apps: true` and `use_my_apps: true` in locals.yml.
+
 1. set `pretty_js: false` in locals.yml. This will make dashboard and pegasus
    use the webpack manifest to find your js assets (which now have content 
    hashes in the filename) rather than looking for unhashed filenames.
