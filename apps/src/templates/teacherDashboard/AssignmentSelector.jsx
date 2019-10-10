@@ -218,7 +218,18 @@ export default class AssignmentSelector extends Component {
       selectedAssignmentFamily,
       selectedVersionYear
     );
-    const selectedSecondaryId = noAssignment;
+    const primary = this.props.assignments[selectedPrimaryId];
+    // If the user is setting up a new section and selects a course as the
+    // primary assignment, default the secondary assignment to the first
+    // script in the course.
+    const defaultSecondaryId =
+      this.props.newSection && primary && primary.scriptAssignIds
+        ? primary.scriptAssignIds[0]
+        : null;
+
+    const selectedSecondaryId = this.props.newSection
+      ? defaultSecondaryId
+      : noAssignment;
 
     this.setState(
       {
@@ -247,7 +258,7 @@ export default class AssignmentSelector extends Component {
   };
 
   render() {
-    const {assignments, dropdownStyle, disabled, newSection} = this.props;
+    const {assignments, dropdownStyle, disabled} = this.props;
     let {assignmentFamilies} = this.props;
     const {
       selectedPrimaryId,
@@ -255,18 +266,6 @@ export default class AssignmentSelector extends Component {
       selectedAssignmentFamily,
       versions
     } = this.state;
-
-    // If the user is setting up a new section and selects a course as the
-    // primary assignment, default the secondary assignment to the first
-    // script in the course.
-    const noCurrentSecondaryAssignment = selectedSecondaryId === 'null_null';
-    const defaultScriptId = assignments[selectedPrimaryId].scriptAssignIds
-      ? assignments[selectedPrimaryId].scriptAssignIds[0]
-      : null;
-    const secondaryId =
-      newSection && noCurrentSecondaryAssignment
-        ? defaultScriptId
-        : selectedSecondaryId;
 
     let secondaryOptions;
     const primaryAssignment = assignments[selectedPrimaryId];
@@ -336,7 +335,7 @@ export default class AssignmentSelector extends Component {
             </div>
             <select
               id="uitest-secondary-assignment"
-              value={secondaryId}
+              value={selectedSecondaryId}
               onChange={this.onChangeSecondary}
               style={dropdownStyle}
               disabled={disabled}
