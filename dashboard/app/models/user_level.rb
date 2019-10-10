@@ -173,9 +173,9 @@ class UserLevel < ActiveRecord::Base
   end
 
   # Get number of passed levels per user for the given set of user IDs
-  # @param [Array<Integer>] user_ids
+  # @param [ActiveRecord::Relation<Collection<User>>] users
   # @return [Hash<Integer, Integer>] user_id => passed_level_count
-  def self.count_passed_levels_for_users(user_ids)
-    where(user_id: user_ids).passing.group(:user_id).count
+  def self.count_passed_levels_for_users(users)
+    joins(:user).merge(users).passing.group(:user_id).count
   end
 end
