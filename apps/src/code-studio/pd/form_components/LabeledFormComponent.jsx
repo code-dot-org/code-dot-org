@@ -17,6 +17,11 @@ export default class LabeledFormComponent extends FormComponent {
     }
 
     return (
+      // SafeMarkdown wraps markdown in a <div> and uses <p> tags for each
+      // paragraph, but the form system was built using a prior markdown
+      // renderer which didn't do that for single-line entries, and so we rely
+      // on some CSS styling in pd.scss to set these elements to
+      // "display: inline" to maintain backwards compatibility.
       <div className="inline_markdown">
         <SafeMarkdown
           openExternalLinksInNewTab
