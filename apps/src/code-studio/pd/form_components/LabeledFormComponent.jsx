@@ -1,6 +1,6 @@
 import React from 'react';
 import FormComponent from './FormComponent';
-import MarkdownSpan from '../components/markdownSpan';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 export default class LabeledFormComponent extends FormComponent {
   /**
@@ -16,7 +16,19 @@ export default class LabeledFormComponent extends FormComponent {
       return name;
     }
 
-    return <MarkdownSpan>{this.constructor.labels[name]}</MarkdownSpan>;
+    return (
+      // SafeMarkdown wraps markdown in a <div> and uses <p> tags for each
+      // paragraph, but the form system was built using a prior markdown
+      // renderer which didn't do that for single-line entries, and so we rely
+      // on some CSS styling in pd.scss to set these elements to
+      // "display: inline" to maintain backwards compatibility.
+      <div className="inline_markdown">
+        <SafeMarkdown
+          openExternalLinksInNewTab
+          markdown={this.constructor.labels[name]}
+        />
+      </div>
+    );
   }
 
   indented(depth = 1) {

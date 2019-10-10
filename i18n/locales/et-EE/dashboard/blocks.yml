@@ -239,6 +239,30 @@ et:
             '"x"': risti-rästi
             '"plus"': pluss
             '"random"': juhuslik
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': Tulnukas
+            '"BEAR"': Karu
+            '"CAT"': Kass
+            '"DUCK"': Part
+            '"FROG"': Konn
+            '"MOOSE"': Põder
+            '"PINEAPPLE"': Ananass
+            '"ROBOT"': Robot
+            '"SHARK"': Hai
+            '"UNICORN"': Ükssarvik
+          LOCATION:
+            "{x: 200, y: 100}": üleval
+            "{x: 200, y: 300}": all
+            "{x: 100, y: 200}": vasakule
+            "{x: 300, y: 200}": paremale
+            "{x: 200, y: 200}": keskel
+            "{x: 100, y: 100}": üleval vasakul
+            "{x: 300, y: 100}": üleval paremal
+            "{x: 100, y: 300}": keskel vasakul
+            "{x: 300, y: 300}": all paremal
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": juhuslik
       Dancelab_makeNewDanceSprite:
         text: |-
           tee uus {COSTUME}
@@ -459,6 +483,21 @@ et:
       Dancelab_setTint:
         text: määra {SPRITE} toon {VAL}
       Dancelab_setTintEach:
+        text: määra {THIS} toon {VAL}
+        options:
+          THIS:
+            sprites: kõik
+            '"ALIEN"': kõik tulnukad
+            '"BEAR"': kõik karud
+            '"CAT"': kõik kassid
+            '"DOG"': kõik koerad
+            '"DUCK"': kõik pardid
+            '"FROG"': kõik konnad
+            '"MOOSE"': kõik põdrad
+            '"PINEAPPLE"': kõik ananassid
+            '"ROBOT"': kõik robotid
+            '"SHARK"': kõik haid
+      Dancelab_setTintEachInline:
         text: määra {THIS} toon {VAL}
         options:
           THIS:
@@ -871,61 +910,19 @@ et:
         text: pööra paremale
       Vector_positionCenter:
         text: keskel
-      aalab_changePropByFlexible:
-        text: muuda {SPRITE} {PROPERTY} {VAL} võrra
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': suurus
-            '"rotation"': pööramine
-            '"x"': x asukoht
-            '"y"': y asukoht
-            '"direction"': liikumise suund
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': kui
-            '"while"': tingimusel
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': kui
-            '"while"': tingimusel
-      aalab_jumpTo:
-        text: "{SPRITE} hüppavad {LOCATION}"
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': kui
-            '"while"': tingimusel
-          KEY:
-            '"up"': üles
-            '"down"': alla
-            '"left"': vasakule
-            '"right"': paremale
-            '"space"': kosmos
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': linn
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': tõene
-            '"false"': väär
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': suurus
-            '"rotation"': pööramine
-            '"x"': x asukoht
-            '"y"': y asukoht
-            '"direction"': liikumise suund
-            '"tint"': toon
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': igavesti
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
         options:
           OPTION:
             '"show"': näita

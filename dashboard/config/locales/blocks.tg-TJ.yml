@@ -68,3 +68,15 @@ tg:
         text: ранги тасодуфӣ
       Mikelab_randomColor:
         text: ранги тасодуфӣ
+      aalab_goToScene:
+        options:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
+        options:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'

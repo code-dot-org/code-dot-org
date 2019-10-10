@@ -61,6 +61,11 @@ mi:
         options:
           GROUP:
             sprites: katoa
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": mauī
+            "{x: 300, y: 200}": matau
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
@@ -126,6 +131,10 @@ mi:
             '"scale"': rahinga
             '"height"': teitei
       Dancelab_setTintEach:
+        options:
+          THIS:
+            sprites: katoa
+      Dancelab_setTintEachInline:
         options:
           THIS:
             sprites: katoa
@@ -341,50 +350,19 @@ mi:
         text: huri whakatemauī
       RyanLab_turnRight:
         text: huri whakatematau
-      aalab_changePropByFlexible:
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': rahinga
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': ina
-            '"while"': i te
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': ina
-            '"while"': i te
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': ina
-            '"while"': i te
-          KEY:
-            '"up"': runga
-            '"down"': raro
-            '"left"': mauī
-            '"right"': matau
-            '"space"': tuarangi
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': tāone
-              nui
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': pono
-            '"false"': hē
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': rahinga
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': āke, āke
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
         options:
           OPTION:
             '"show"': whakaaturia

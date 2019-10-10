@@ -6,7 +6,7 @@ noindex: true
 
 # Using Data
 
-More resources to come.
+Data informs district and school recruitment by supporting your case and aligning with districts needs. Data can move the needle for districts to implement CS and can show funders the impact of your program. Check out these resources on how you can add data to your recruitment plan.
 
 ## Quick Links
 - [Access Your Data Dashboard](#tableau)
@@ -37,64 +37,48 @@ Visit <a href="http://online.tableau.com/" target=_blank>http://online.tableau.c
 </details>
 
 <a name="guide"></a>
-## Data Dashboard How-To Guide
-Check out **<a href="https://docs.google.com/document/d/14KgWKsfRuzC740lDZLlgjTpW4qZ-Wnt0U-v1xpNHjss/edit?ts=5a737737#" target=_blank>this guide</a>** for all things data dashboard, including how to navigate your tableau, what kind of data is available, and how to put that data to work.
+## Data Guides
+- [Data Guide](https://docs.google.com/document/d/1qeOw9YiogQ9o75lsgQ5uRNr5jZBd92Tfjc26V2_ie78/view) - Top ways to use Tableau and policy data to target and engage districts
+- [In Depth Guide](https://docs.google.com/document/d/14KgWKsfRuzC740lDZLlgjTpW4qZ-Wnt0U-v1xpNHjss/edit?ts=5a737737) - Dive more into Tableau, including Tableau navigation and available data
+- [Overview of Tableau Webinar](https://drive.google.com/file/d/1y5uJc0peiLUjGT6eqjmrMnUqsofRVyHR/view) including the [recording](https://code.zoom.us/recording/play/dllXoAASg7qgR_c2QMXC9dgou-2cjYawiWpJ2lixfkGzRlAHj1jhxUDqa0ERSrKK?continueMode=true) of useful views in Tableau
+
+
 
 <a name="summer"></a>
-## 2018 Summer Data Clean-up
-
-Teacher data from your 2018-19 CS Principles and CS Discoveries local summer workshop or TeacherCon cohorts is now available in Tableau. We need your help to identify errors to be fixed so this data will be more useful to you long term. This is a one-time clean-up process that will give you a more accurate view into important metrics like implementation rate, URM student numbers, and overall program health. Changes that you’ve requested will be implemented by the Code.org data team and visible in your Tableau data dashboard by the end of November.
-
-Please navigate to the <a href="https://us-east-1.online.tableau.com/#/site/codeorg/views/Regionalpartnerdatasharing/TeacherRoster
-" target=_blank>Teacher Roster tab</a> of your data dashboard and filter to this school year.
-
-Note that there is a filter for each course, CS Discoveries and CS Principles, so you will need to repeat the following steps for each course. Please look for the following inaccuracies:
-
-<details>
-  <summary>Teachers who are actually implementing, but are listed as having 0 students</summary>
-  <p>
-
-* This might occur if a teacher is teaching with a Code.org account that is different from the one they used to register for your workshop or TeacherCon. If you are able to give us the email address of the account the teacher is using to teach, we can fix their data in Tableau.
-</p>
-</details>
-
-<details>
-  <summary>Teachers to remove</summary>
-  <p>
-
-* There may be some people that are included in the attendance for your workshop according to the dashboard, but shouldn't be listed as part of your cohort (e.g., novice and apprentice facilitators). Please identify these people so we can remove them.
-* It is possible that the same teacher might appear multiple times on your list. Please identify these people so we can remove one of the two entries.
-* You should not remove teachers that are no longer teaching the course or participating in PD for any reason. This information is important to retain for implementation rates.
-</p>
-</details>
-
-<details>
-  <summary>Teachers to add</summary>
-  <p>
-
-* If for any reason a teacher is missing from your roster, please provide their email address. The address you provide should be associated with the Code.org account they use to teach.
-</p>
-</details>
-
-
-**Data change requests will be accepted until November 9**. Indicate the changes that you’re requesting in **<a href="https://docs.google.com/forms/d/e/1FAIpQLSfyI2FIPoncROIZ3GDf0Uxt2W5OLqBvIjYUP8rONFc5qTp12w/viewform?usp=sf_link" target=_blank>this survey</a>**.
-
-Please also note that this process is for CS Discoveries and CS Principles programs only. We have not yet defined a process for CS Fundamentals teacher data.
-
-<a name="access"></a>
 ## K-12 Computer Science Access Report
-The CSTA and Code.org are partnering to create the first-ever comprehensive report of which schools offer computer science in the US. We are using a combination of crowdsourced surveys, data from curriculum providers like the College Board and data from state departments of education to get information about every school in the country. All the data we are gathering is made public on our site at <a href="http://code.org/yourschool" target=_blank>http://code.org/yourschool</a> and as regional partners, you have access to even more data via Tableau. Learn about how to access this data in the [Data Dashboard How-To Guide](https://docs.google.com/document/d/14KgWKsfRuzC740lDZLlgjTpW4qZ-Wnt0U-v1xpNHjss/edit?ts=5a737737#)
 
+This is a report of which schools offer any computer science course in the US (including DOE data and survey data). See the Access Report section of the [2019 State of Computer Science Report](https://advocacy.code.org/2019_state_of_cs.pdf). All the data is made public on our site at <http://code.org/yourschool> and as regional partners, you have access to even [more data via Tableau](https://us-east-1.online.tableau.com/#/site/codeorg/workbooks/124362/views)!
+
+<details>
+  <summary>What schools teach a CS course in my state?</summary>
+  <p>
+
+Look in the [School-level filter](https://us-east-1.online.tableau.com/#/site/codeorg/views/Regionalpartnerdatasharing/School-levelFilter?:iid=3) view under “Computer Science Activities”. This includes all DOE data and survey data collected in your state and will show you which schools teacher computer science. 
+</p>
+</details>
+
+<details>
+	<summary>What course counts as CS?</summary>
+See the [Access Report Section](https://advocacy.code.org/2019_state_of_cs.pdf) for the definition of what counts as a Computer Science course. Email <accessreport@code.org> to find out what courses were counted in your state.
+</p>
+</details>
+
+<details>
+	<summary>What courses count in my state?</summary>
+Refer to the [Access Report Section](https://advocacy.code.org/2019_state_of_cs.pdf) for which of the 39 states we have the full data set for public schools with any 9-12 grade bands. Email <accessreport@code.org> with any other information on what exactly your data set contains.
+</p>
+</details>
+
+<details>
+	<summary>How can you help?</summary>
 The data we gather can be an incredible resource to you, but only if it is robust. We need your help gathering data about every school in the country!
 
-<details>
-  <summary>How can you help?</summary>
-  <p>
-
-* Include a call in your newsletters for students, teachers, parents, and districts to fill out the survey at <a href="http://code.org/yourschool" target=_blank>http://code.org/yourschool</a>. You can find sample language to use in your newsletter [here](https://docs.google.com/document/d/1O9julhujYWIkg-JAm92B-6havhPLSTI0avnXFXlthsk/edit?usp=sharing)
-* Connect to local organizations in your region who can spread the word on your behalf.
-* Connect us to organizations that may already have this information in your region (accessreport@code.org).
-* Share <a href="http://code.org/yourschool" target=_blank>the page</a> on [Twitter](https://twitter.com/intent/tweet?related=codeorg&text=Does+your+school+teach+computer+science%3F+Expand+computer+science+at+your+school+or+district.+%40codeorg&url=https%3A%2F%2Fcode.org%2Fyourschool) or [Facebook](https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcode.org%2Fyourschool).
-
+- Include a call in your newsletter for students, teachers, parents, and districts to fill out the survery at <http://code.org/yourschool>. You can find sample language to use in your newsletter [here](https://docs.google.com/document/d/1O9julhujYWIkg-JAm92B-6havhPLSTI0avnXFXlthsk/edit?usp=sharing)
+- Connect to local organizations in your region who can spread the word on your behalf.
+- Connect us to organizations that may already have this information in your region (<accessreport@code.org>).
+- Share the [page](http://code.org/yourschool) on [Twitter](https://twitter.com/intent/tweet?related=codeorg&text=Does+your+school+teach+computer+science%3F+Expand+computer+science+at+your+school+or+district.+%40codeorg&url=https%3A%2F%2Fcode.org%2Fyourschool) or [Facebook](https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcode.org%2Fyourschool).
 </p>
 </details>
+
+## 2019 Fall Data Clean-up
+*Coming soon*. Process for Fall data clean up will be released mid-October.

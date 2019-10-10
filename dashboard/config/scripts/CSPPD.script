@@ -1,9 +1,9 @@
 professional_learning_course 'CS Principles Support'
-login_required 'true'
+login_required true
 
 stage 'Introduction to PD'
 level 'CSPPD presurvey'
-level 'CSPPD Welcome Video'
+level 'Welcome to the Family!'
 level 'PDECS tour'
 level 'PDECS commitment'
 level 'PDECS commitment match'
@@ -24,11 +24,11 @@ level 'CSPPD PD goals'
 level 'CSPPD program overlap'
 
 stage 'Exploring CSP Instructional Materials'
-level 'CSPPD instructional materials' 
+level 'CSPPD instructional materials'
 level 'CSPPD materials overview'
 level 'CSPPD materials question1'
 
-stage 'Impact of Computer Science' 
+stage 'Impact of Computer Science'
 level 'CSPPD impact of CS'
 level 'ECSPD impact vid1'
 level 'ECSPD impact vid2'

@@ -401,6 +401,7 @@ da:
     delete_confirm: Sikker på, at du vil slette din konto?
     deleted_user: slettet bruger
     create_personal_login_under_13_parent_email: Forældres/værges e-mail adresse
+    update_email: Opdater
   user_level:
     completed: Fuldført
     tried: Forsøgt

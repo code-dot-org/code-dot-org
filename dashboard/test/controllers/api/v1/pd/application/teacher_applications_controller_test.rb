@@ -16,7 +16,7 @@ module Api::V1::Pd::Application
 
       @program_manager = create :program_manager
       @partner = @program_manager.regional_partners.first
-      @application = create :pd_teacher1920_application, regional_partner: @partner
+      @application = create TEACHER_APPLICATION_FACTORY, regional_partner: @partner
     end
 
     setup do
@@ -61,11 +61,11 @@ module Api::V1::Pd::Application
         with(instance_of(TEACHER_APPLICATION_CLASS)).
         returns(mock {|mail| mail.expects(:deliver_now)})
 
-      Pd::Application::PrincipalApproval1819Application.expects(:create_placeholder_and_send_mail).never
+      PRINCIPAL_APPROVAL_APPLICATION_CLASS.expects(:create_placeholder_and_send_mail).never
 
       regional_partner = create :regional_partner, applications_principal_approval: RegionalPartner::ALL_REQUIRE_APPROVAL
 
-      Pd::Application::Teacher1819Application.any_instance.stubs(:regional_partner).returns(regional_partner)
+      TEACHER_APPLICATION_CLASS.any_instance.stubs(:regional_partner).returns(regional_partner)
 
       sign_in @applicant
 
@@ -76,7 +76,7 @@ module Api::V1::Pd::Application
     test 'does not send confirmation mail on unsuccessful create' do
       Pd::Application::TeacherApplicationMailer.expects(:principal_approval).never
       Pd::Application::TeacherApplicationMailer.expects(:confirmation).never
-      Pd::Application::PrincipalApproval1819Application.expects(:create_placeholder_and_send_mail).never
+      PRINCIPAL_APPROVAL_APPLICATION_CLASS.expects(:create_placeholder_and_send_mail).never
 
       sign_in @applicant
 

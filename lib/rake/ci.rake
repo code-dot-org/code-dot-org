@@ -19,23 +19,21 @@ namespace :ci do
     elsif CDO.daemon && CDO.chef_managed
 
       # Temporarily disable automatic chef cookbook updates for Ubuntu upgrade except for envs undergoing upgrade
-      if [].include?(rack_env)
-        ChatClient.log('Updating Chef cookbooks...')
-        RakeUtils.with_bundle_dir(cookbooks_dir) do
-          # Automatically update Chef cookbook versions in staging environment.
-          RakeUtils.bundle_exec './update_cookbook_versions' if rack_env?(:staging)
-          RakeUtils.bundle_exec 'berks', 'install'
-          if rack_env?(:staging) && GitUtils.file_changed_from_git?(cookbooks_dir)
-            RakeUtils.system 'git', 'add', '.'
-            RakeUtils.system 'git', 'commit', '-m', '"Updated cookbook versions"'
-            RakeUtils.git_push
-          end
-          RakeUtils.bundle_exec 'berks', 'upload', (rack_env?(:production) ? '' : '--no-freeze')
-          RakeUtils.bundle_exec 'berks', 'apply', rack_env
-
-          ChatClient.log 'Applying <b>chef</b> profile...'
-          RakeUtils.sudo '/opt/chef/bin/chef-client'
+      ChatClient.log('Updating Chef cookbooks...')
+      RakeUtils.with_bundle_dir(cookbooks_dir) do
+        # Automatically update Chef cookbook versions in staging environment.
+        RakeUtils.bundle_exec './update_cookbook_versions' if rack_env?(:staging)
+        RakeUtils.bundle_exec 'berks', 'install'
+        if rack_env?(:staging) && GitUtils.file_changed_from_git?(cookbooks_dir)
+          RakeUtils.system 'git', 'add', '.'
+          RakeUtils.system 'git', 'commit', '-m', '"Updated cookbook versions"'
+          RakeUtils.git_push
         end
+        RakeUtils.bundle_exec 'berks', 'upload', (rack_env?(:production) ? '' : '--no-freeze')
+        RakeUtils.bundle_exec 'berks', 'apply', rack_env
+
+        ChatClient.log 'Applying <b>chef</b> profile...'
+        RakeUtils.sudo '/opt/chef/bin/chef-client --chef-license accept-silent'
       end
     end
   end
@@ -107,7 +105,7 @@ end
 # Returns true if upgrade succeeded, false if failed.
 def upgrade_frontend(name, hostname)
   ChatClient.log "Upgrading <b>#{name}</b> (#{hostname})..."
-  command = 'sudo /opt/chef/bin/chef-client'
+  command = 'sudo /opt/chef/bin/chef-client --chef-license accept-silent'
   log_path = aws_dir "deploy-#{name}.log"
   begin
     RakeUtils.system "ssh -i ~/.ssh/deploy-id_rsa #{hostname} '#{command} 2>&1' >> #{log_path}"

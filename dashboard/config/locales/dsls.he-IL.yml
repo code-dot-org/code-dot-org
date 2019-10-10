@@ -10,6 +10,7 @@ he-IL:
         - text: התחל עם ריבוע<br/>מקם משולש מעל הריבוע<br/>מקם משולש מתחת לריבוע
         - text: התחל עם ריבוע<br/>מקם משולש מימין לריבוע<br/>מקם מקבילית מתחת לריבוע<br/>מקם
             משולש מימין למקבילית
+          correct: true
         - text: התחל עם ריבוע<br/>מקם מקבילית מעל הריבוע<br/>מקם משולש מימין למקבילית
         - text: התחל עם ריבוע<br/>מקם משולש מתחת לריבוע<br/>מקם מקבילית מימין למשולש
       2-3 Algorithms Multi 2:
@@ -20,7 +21,7 @@ he-IL:
         - text: איזו תמונה <em>אינה</em> מתארת את האלגוריתם הזה?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 Big Event Match 1:
@@ -56,14 +57,14 @@ he-IL:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       2-3 Getting Loopy Multi 1:
         title: בחירה ממספר אפשרויות
         questions:
         - text: איך תפשט את רצף הפעולות הזה עם לולאות?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -84,7 +85,7 @@ he-IL:
         - text: מי מהתוכניות הבאות מייצר את התמונה הזו?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
       2-3 Maze Match 2:
         title: התאמת מבוך
@@ -104,7 +105,7 @@ he-IL:
         - text: איזה אוסף בלוקים יוביל אותי אל החזיר?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 Relay Programming Multi 1:
@@ -114,7 +115,7 @@ he-IL:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       2-3 Relay Programming Multi 2:
         title: בחירה ממספר אפשרויות
         questions:
@@ -122,13 +123,13 @@ he-IL:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       2-3 artist debug multi 1:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 artist functions multi 1:
@@ -136,7 +137,7 @@ he-IL:
         questions:
         - text: בחר את הבלוקים המתאימים לצייר את התמונה הזו בהינתן הפונקציות הבאות
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 artist loops match 1:
@@ -158,7 +159,7 @@ he-IL:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       2-3 artist loops multi 2:
         title: האמן - לולאות אפשרויות מרובות
@@ -168,7 +169,7 @@ he-IL:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       2-3 artist match 1:
         title: התאמת אמן
         content1: התאם את הצורה עם הבלוקים המשלימים אותה.
@@ -188,14 +189,14 @@ he-IL:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       2-3 bee conditionals multi 3:
         questions:
         - text: בחר את הבלוקים הכי טובים.
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 bee loops multi 1:
@@ -203,7 +204,7 @@ he-IL:
         questions:
         - text: איזה בלוק אוסף את כל הצוף?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -224,7 +225,7 @@ he-IL:
         - text: איזו קבוצת בלוקים היא התשובה הנכונה?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 Algorithms Match 1:
@@ -250,6 +251,7 @@ he-IL:
         - text: אפיית עוגיות
         - text: קניות מרשימת המצרכים
         - text: בננה
+          correct: true
       4-5 Computational Thinking Match 1:
         title: מתאם
         content1: כל אחד מן הרכבים פורק למספר חלקים קטנים. התאם לכל מרכב את רשימת
@@ -272,6 +274,7 @@ he-IL:
         answers:
         - text: ירושלים _____ _____ _____.
         - text: _____ היא עיר _____.
+          correct: true
         - text: _____ היא _____ _____ בינונית.
         - text: יוג'ין היא עיר "____".
       4-5 Crowdsourcing Multi 1:
@@ -280,13 +283,14 @@ he-IL:
         - text: איזה מהתמונות הבאות מייצגת בצורה הכי טובה מיקור המונים?
         answers:
         - {}
-        - {}
+        - correct: true
       4-5 Crowdsourcing Multi 2:
         title: בחירה ממספר אפשרויות
         questions:
         - text: איזה מן הפעולות הבאות הכי מתאימות ליישום בעזרת מיקור המונים?
         answers:
         - text: ניקוי החדר שלך
+          correct: true
         - text: אכילת הקינוח שלך
         - text: לסרק את השיער
         - text: שטיפת הפנים שלך
@@ -297,6 +301,7 @@ he-IL:
         answers:
         - text: יום ההולדת שלך
         - text: האוכל האהוב עליך
+          correct: true
         - text: הכתובת שלך
         - text: מספר כרטיס האשראי של ההורים שלך
       4-5 Internet Multi 1:
@@ -308,7 +313,7 @@ he-IL:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       4-5 Internet Multi 2:
         title: בחירה ממספר אפשרויות
         questions:
@@ -316,7 +321,7 @@ he-IL:
             נמצא?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 Songwriting Multi 1:
@@ -325,7 +330,7 @@ he-IL:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 Suncatchers Match 1:
@@ -348,7 +353,7 @@ he-IL:
             1?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
       4-5 artist loops multi 1:
         title: האמן - לולאות אפשרויות מרובות
@@ -356,7 +361,7 @@ he-IL:
         - text: מי מהבלוקים ייצרו את הציור הבא?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 artist multi 1:
@@ -365,7 +370,7 @@ he-IL:
         - text: אילו בלוקים מציירות מלבן עם היקף באורך 100?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 artist multi 2:
@@ -375,7 +380,7 @@ he-IL:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       4-5 bee conditionals multi 1:
         title: דבורה - התניות עם מספר תשובות אפשריות
@@ -384,7 +389,7 @@ he-IL:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       4-5 bee debug multi 1:
         title: דבורה - ניפוי שגיאות עם מספר תשובות אפשריות
@@ -392,7 +397,7 @@ he-IL:
         - text: איזו גרסה של הפונקציה תעבוד?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 bee loops multi 1:
@@ -400,7 +405,7 @@ he-IL:
         questions:
         - text: איזה מהבלוקים יפתרו את החידה?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -409,7 +414,7 @@ he-IL:
         questions:
         - text: איזה מהבלוקים יפתרו את החידה?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -430,7 +435,7 @@ he-IL:
         questions:
         - text: איזה מהבלוקים יפתרו את החידה?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -446,19 +451,19 @@ he-IL:
       CSD Header Size MC:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD Header Size MC_2018:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD Header Size MC_2018_2019:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD U2 Design Project:
@@ -601,7 +606,7 @@ he-IL:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -610,7 +615,7 @@ he-IL:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -619,7 +624,7 @@ he-IL:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -631,19 +636,19 @@ he-IL:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Functions Prediction define first_2018:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Functions Prediction define first_2018_2019:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Keypress Matching:
         questions:
@@ -678,7 +683,7 @@ he-IL:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Sprite Movement Predict Multi_2018:
         questions:
@@ -686,7 +691,7 @@ he-IL:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Sprite Movement Predict Multi_2018_2019:
         questions:
@@ -694,14 +699,14 @@ he-IL:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Sprites intro predict multi:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD U3 Sprites intro predict multi_2018:
@@ -709,7 +714,7 @@ he-IL:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD U3 Sprites intro predict multi_2018_2019:
@@ -717,7 +722,7 @@ he-IL:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD U3 combining rep:
@@ -821,7 +826,7 @@ he-IL:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       CSD U6 array multi_2018:
         questions:
         - {}
@@ -829,7 +834,7 @@ he-IL:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       CSD U6 array multi_2018_2019:
         questions:
         - {}
@@ -837,7 +842,7 @@ he-IL:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       CSD U6 final intro:
         content1: הוסיפו תיאור כאן
       CSD U6 final intro_2018:
@@ -850,7 +855,7 @@ he-IL:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U6 setProperty predict multi_2018:
         questions:
@@ -858,7 +863,7 @@ he-IL:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       Internet Simulator Setup:
         content1: הוסיפו תיאור כאן
@@ -873,7 +878,7 @@ he-IL:
         - text: איזה מהבלוקים יפתרו את החידה?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Artist 1 Multi 2:
@@ -881,7 +886,7 @@ he-IL:
         questions:
         - text: איזה מהבלוקים מייצרים ריבוע?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -904,7 +909,7 @@ he-IL:
         - text: כמה צופים יש כתוצאה מהתרגיל?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Bee 1 Multi 2:
@@ -915,7 +920,7 @@ he-IL:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       K-1 Bee Loops Match 1:
         title: מתאם
         content2: התאם את הבלוקים
@@ -948,13 +953,13 @@ he-IL:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       K-1 Getting Loopy Multi 1:
         title: בחירה ממספר אפשרויות
         questions:
         - text: איך תפשט את רצף הפעולות הזה עם לולאות?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Happy Maps Multi 1:
@@ -963,7 +968,7 @@ he-IL:
         - text: איזה מן החצים לוקח את פורב (היצור) אל האוצר?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Keep it Private Multi 1:
@@ -971,7 +976,7 @@ he-IL:
         questions:
         - text: איזה מידע <strong>אינך</strong> צריך לשתף ברשת?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Maze Debugging Multi 1:
@@ -979,7 +984,7 @@ he-IL:
         questions:
         - text: איזה מן האפשרויות צריכה להיות הבלוק הסופי?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -988,7 +993,7 @@ he-IL:
         questions:
         - text: איזה מבלוקי החזרה הם זהים?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Maze Loops Multi 2:
@@ -998,7 +1003,7 @@ he-IL:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       K-1 Maze Match 1:
         title: מתאם
         content2: התאם את הפאזלים ואת הבלוקים
@@ -1020,7 +1025,7 @@ he-IL:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       K-1 Move It Multi 1:
         title: בחירה ממספר אפשרויות
@@ -1028,7 +1033,7 @@ he-IL:
         - text: איזה אלגוריתם מביא את פלורב (היצור) אל הפרחים?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Plant a Seed Multi 1:
@@ -1038,14 +1043,14 @@ he-IL:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       K-1 Plant a Seed Multi 2:
         title: בחירה ממספר אפשרויות
         questions:
         - text: איזה חלק צריך להשלים לתוך החלק הריק באלגוריתם?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
       K-1 Word Search Multi 1:
         title: בחירה ממספר אפשרויות
@@ -1053,7 +1058,7 @@ he-IL:
         - text: איזה מהבלוקים מאיית "MOVE"?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
       K-1 Word Search Multi 3:
         title: בחירה ממספר אפשרויות
@@ -1061,7 +1066,7 @@ he-IL:
         - text: איזה מהמילים הבאות מאויתת ע"י הדבורה?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
       Multi-Screen Apps:
         title: כותרת
@@ -1085,7 +1090,7 @@ he-IL:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       behaviors 4 predict:
@@ -1093,7 +1098,7 @@ he-IL:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_artist_prog6_predict1:
@@ -1102,7 +1107,7 @@ he-IL:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseC_multi_artist_prog6_predict1_2018:
         questions:
@@ -1110,7 +1115,7 @@ he-IL:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseC_multi_artist_prog6_predict1_2018_2019:
         questions:
@@ -1118,38 +1123,41 @@ he-IL:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseC_multi_harvester_loops11_predict1:
         questions:
         - {}
         answers:
         - text: '4'
-        - {}
-        - {}
+        - text: '12'
+          correct: true
+        - text: '15'
         - {}
       courseC_multi_harvester_loops11_predict1_2018:
         questions:
         - {}
         answers:
         - text: '4'
-        - {}
-        - {}
+        - text: '12'
+          correct: true
+        - text: '15'
         - {}
       courseC_multi_harvester_loops11_predict1_2018_2019:
         questions:
         - {}
         answers:
         - text: '4'
-        - {}
-        - {}
+        - text: '12'
+          correct: true
+        - text: '15'
         - {}
       courseC_multi_maze_debugging8_predict1:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_maze_debugging8_predict1_2018:
@@ -1157,7 +1165,7 @@ he-IL:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_maze_debugging8_predict1_2018_2019:
@@ -1165,7 +1173,7 @@ he-IL:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_maze_programming8_predict1:
@@ -1173,7 +1181,7 @@ he-IL:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_maze_programming8_predict1_2018:
@@ -1181,7 +1189,7 @@ he-IL:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_maze_programming8_predict1_2018_2019:
@@ -1189,7 +1197,7 @@ he-IL:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_starWars_predict1:
@@ -1198,7 +1206,7 @@ he-IL:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - text: אינני יודע
       courseC_multi_starWars_predict1_2018:
         questions:
@@ -1206,7 +1214,7 @@ he-IL:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - text: אינני יודע
       courseC_multi_starWars_predict1_2018_2019:
         questions:
@@ -1214,14 +1222,14 @@ he-IL:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - text: אינני יודע
       courseC_multi_starWars_predict2:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_starWars_predict2_2018:
@@ -1229,7 +1237,7 @@ he-IL:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_starWars_predict2_2018_2019:
@@ -1237,7 +1245,7 @@ he-IL:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_external_binary1:
@@ -1254,6 +1262,7 @@ he-IL:
         - text: ב
         - text: ג
         - text: ד
+          correct: true
       courseD_multi_artist_binary8_predict1_2018:
         questions:
         - {}
@@ -1262,6 +1271,7 @@ he-IL:
         - text: ב
         - text: ג
         - text: ד
+          correct: true
       courseD_multi_artist_binary8_predict1_2018_2019:
         questions:
         - {}
@@ -1270,11 +1280,13 @@ he-IL:
         - text: ב
         - text: ג
         - text: ד
+          correct: true
       courseD_multi_artist_nestedLoops9_predict1:
         questions:
         - {}
         answers:
         - text: א
+          correct: true
         - text: ב
         - text: ג
         - {}
@@ -1283,6 +1295,7 @@ he-IL:
         - {}
         answers:
         - text: א
+          correct: true
         - text: ב
         - text: ג
         - {}
@@ -1291,6 +1304,7 @@ he-IL:
         - {}
         answers:
         - text: א
+          correct: true
         - text: ב
         - text: ג
         - {}
@@ -1299,7 +1313,7 @@ he-IL:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_bee_conditionals1_predict1_2018:
@@ -1307,7 +1321,7 @@ he-IL:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019:
@@ -1315,14 +1329,14 @@ he-IL:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_bee_conditionals7_predict2:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1330,7 +1344,7 @@ he-IL:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1338,7 +1352,7 @@ he-IL:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1348,7 +1362,7 @@ he-IL:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018:
         questions:
@@ -1356,7 +1370,7 @@ he-IL:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
         questions:
@@ -1364,7 +1378,7 @@ he-IL:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_bee_nestedLoops9_predict2:
         questions:
@@ -1372,7 +1386,8 @@ he-IL:
         answers:
         - text: '4'
         - text: '8'
-        - {}
+          correct: true
+        - text: '12'
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018:
         questions:
@@ -1380,7 +1395,8 @@ he-IL:
         answers:
         - text: '4'
         - text: '8'
-        - {}
+          correct: true
+        - text: '12'
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         questions:
@@ -1388,7 +1404,8 @@ he-IL:
         answers:
         - text: '4'
         - text: '8'
-        - {}
+          correct: true
+        - text: '12'
         - {}
       courseD_multi_collector_debugging10_predict1:
         questions:
@@ -1396,7 +1413,7 @@ he-IL:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_condLoops9_predict1:
         questions:
@@ -1404,7 +1421,7 @@ he-IL:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
         questions:
@@ -1412,7 +1429,7 @@ he-IL:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
         questions:
@@ -1420,14 +1437,14 @@ he-IL:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_ramp13:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_farmer_while10_predict2:
@@ -1435,7 +1452,7 @@ he-IL:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_farmer_while10_predict2_2018:
@@ -1443,7 +1460,7 @@ he-IL:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_farmer_while10_predict2_2018_2019:
@@ -1451,7 +1468,7 @@ he-IL:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_farmer_while4_predict1:
@@ -1460,7 +1477,7 @@ he-IL:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_while4_predict1_2018:
         questions:
@@ -1468,7 +1485,7 @@ he-IL:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_while4_predict1_2018_2019:
         questions:
@@ -1476,13 +1493,13 @@ he-IL:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_maze_until10_predict2:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1490,7 +1507,7 @@ he-IL:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1498,7 +1515,7 @@ he-IL:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1507,7 +1524,7 @@ he-IL:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_maze_until2_predict1_2018:
@@ -1515,7 +1532,7 @@ he-IL:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_maze_until2_predict1_2018_2019:
@@ -1523,7 +1540,7 @@ he-IL:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_scrat_predict1:
@@ -1531,14 +1548,14 @@ he-IL:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseE_multi_bee_functions_predict1:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1549,14 +1566,14 @@ he-IL:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       courseE_multi_farmer_functions11_predict_2018:
         questions:
         - {}
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseE_multi_farmer_functions11_predict_2018_2019:
         questions:
@@ -1564,7 +1581,7 @@ he-IL:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseE_prediction_artistFunction1:
         questions:
@@ -1573,7 +1590,7 @@ he-IL:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       courseE_prediction_artistFunction1_2018:
         questions:
         - {}
@@ -1581,7 +1598,7 @@ he-IL:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       courseE_prediction_artistFunction1_2018_2019:
         questions:
         - {}
@@ -1589,13 +1606,13 @@ he-IL:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       courseF_bee_variables_8a_2018:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_bee_variables_8a_2018_2019:
@@ -1603,7 +1620,7 @@ he-IL:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_artist_for10_predict1:
@@ -1612,7 +1629,7 @@ he-IL:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseF_multi_artist_for10_predict1_2018:
         questions:
@@ -1620,7 +1637,7 @@ he-IL:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseF_multi_artist_for10_predict1_2018_2019:
         questions:
@@ -1628,13 +1645,13 @@ he-IL:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseF_multi_artist_fwp2_predict1:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1642,7 +1659,7 @@ he-IL:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1650,7 +1667,7 @@ he-IL:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1658,7 +1675,7 @@ he-IL:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1667,14 +1684,14 @@ he-IL:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_bee_conditionals7_predict2:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1683,7 +1700,7 @@ he-IL:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_bee_for3_predict1_2018:
@@ -1691,7 +1708,7 @@ he-IL:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_bee_for3_predict1_2018_2019:
@@ -1699,7 +1716,7 @@ he-IL:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_bee_fwp9_predict1:
@@ -1707,14 +1724,14 @@ he-IL:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_playlab_variables4c_predictive1:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1723,7 +1740,7 @@ he-IL:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       coursee_prediction_artistfunction2_2018:
@@ -1731,7 +1748,7 @@ he-IL:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       coursee_prediction_artistfunction2_2018_2019:
@@ -1739,7 +1756,7 @@ he-IL:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       grade2_multi_collector_A_predict1:
@@ -1747,7 +1764,7 @@ he-IL:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       grade2_multi_collector_A_predict1_2018:
@@ -1755,7 +1772,7 @@ he-IL:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       grade2_multi_collector_A_predict1_2018_2019:
@@ -1763,6 +1780,6 @@ he-IL:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}

@@ -480,6 +480,7 @@ sk:
       obnovenie hesla)
     update: Aktualizujte konto
     account_successfully_updated: Konto bolo úspešne aktualizované.
+    update_email: Aktualizovať
   user_level:
     completed: Dokončené
     tried: Vyskúšaný

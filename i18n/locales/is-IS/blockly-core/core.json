@@ -41,6 +41,7 @@
     "CONTROLS_FOREACH_INPUT_ITEM": "fyrir hvert stak",
     "CONTROLS_FOREACH_TOOLTIP": "Fyrir hvert atriði í lista er breyta '%1' stillt á atriðið og skipanir gerðar.",
     "CONTROLS_FOR_HELPURL": "",
+    "CONTROLS_FOR_INPUT_COUNTER": "",
     "CONTROLS_FOR_INPUT_FROM_TO_BY": "frá %1 til %2 talið um %3",
     "CONTROLS_FOR_INPUT_WITH": "frá",
     "CONTROLS_FOR_TOOLTIP": "Láta breytuna %1 taka inn gildi frá fyrstu tölu til síðustu tölu hlaupandi á bilinu og endurtaka kubbana fyrir hverja tölu.",

@@ -394,6 +394,7 @@ pt:
     deleted_user: utilizador eliminado
     update: Actualizar conta
     account_successfully_updated: Conta atualizada com sucesso.
+    update_email: Atualizar
   user_level:
     completed: Concluído
     tried: Tentado

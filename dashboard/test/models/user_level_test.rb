@@ -14,6 +14,43 @@ class UserLevelTest < ActiveSupport::TestCase
     @driver_user_level.navigator_user_levels << @navigator_user_level
   end
 
+  test "by_stage" do
+    script = create :script
+    stage = create :stage, script: script
+    script_level = create :script_level, script: script, stage: stage
+    level = script_level.levels.first
+
+    stage_user_level = create :user_level, script: script, level: level
+    other_user_level = create :user_level
+
+    assert_includes UserLevel.by_stage(stage), stage_user_level
+    refute_includes UserLevel.by_stage(stage), other_user_level
+  end
+
+  test "by_stage will find all levels for each script_level" do
+    script = create :script
+    stage = create :stage, script: script
+    first_level = create :level
+    second_level = create :level
+    create :script_level,
+      script: script,
+      stage: stage,
+      levels: [
+        first_level,
+        second_level
+      ]
+
+    assert_equal UserLevel.by_stage(stage), []
+
+    first_user_level = create :user_level, script: script, level: first_level
+
+    assert_equal UserLevel.by_stage(stage), [first_user_level]
+
+    second_user_level = create :user_level, script: script, level: second_level
+
+    assert_equal UserLevel.by_stage(stage), [first_user_level, second_user_level]
+  end
+
   test "perfect? finished? and passing? should be able to handle ScriptLevels that have nil as best_result" do
     # these exist in production. example:
     # #<UserLevel id: 28907915, user_id: 852686, level_id: 5,

@@ -43,6 +43,11 @@ class UserLevel < ActiveRecord::Base
   scope :passing, -> {where('best_result >= ?', ActivityConstants::MINIMUM_PASS_RESULT)}
   scope :perfect, -> {where('best_result > ?', ActivityConstants::MAXIMUM_NONOPTIMAL_RESULT)}
 
+  def self.by_stage(stage)
+    levels = stage.script_levels.map(&:level_ids).flatten
+    where(script: stage.script, level: levels)
+  end
+
   def readonly_requires_submitted
     if readonly_answers? && !submitted?
       errors.add(:readonly_answers, 'readonly_answers only valid on submitted UserLevel')

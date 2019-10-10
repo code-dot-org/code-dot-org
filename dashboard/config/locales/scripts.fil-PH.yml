@@ -1053,6 +1053,8 @@ fil:
               name: Standalone na video
             Curriculum Reference:
               name: Pagtukoy sa Kurikulum
+            Contained Levels:
+              name: Nilalaman na mga Antas
         algebraPD2b:
           stages:
             Best Practices for Teaching Computer Science:
@@ -11945,6 +11947,8 @@ fil:
               name: Spelling Bee
             Learn to Drag and Drop:
               name: Matutong Mag-Drag at Mag-Drop
+            Programming in Maze:
+              name: Pag-Program sa Maze
         removed19:
           stages:
             'Debugging: Unspotted Bugs':

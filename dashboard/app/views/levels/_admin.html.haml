@@ -40,7 +40,7 @@
                 = hidden_field_tag :authenticity_token, form_authenticity_token
                 = submit_tag 'Clone'
             - content_for(:head) do
-              %script{src: minifiable_asset_path('js/levelbuilder.js')}
+              %script{src: webpack_asset_path('js/levelbuilder.js')}
             :javascript
               window.levelbuilder.ajaxSubmit('.clone_level');
         -if @level.is_a? LevelGroup
