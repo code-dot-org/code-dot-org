@@ -85,6 +85,13 @@ a.category-link {
   margin-right: 10px;
 }
 
+.announcements-body {
+  background-color: #5c3f7f;
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+}
+
 @media screen and (min-width: 0px) and (max-width: 600px) {
   .robotics-provider {
     max-width: 45%;
@@ -117,7 +124,7 @@ a.category-link {
 
 @media screen and (min-width: 1201px) {
   .robotics-provider {
-    max-width: 15%;
+    max-width: 25%;
   }
 
   .front-header-banner h4 {
