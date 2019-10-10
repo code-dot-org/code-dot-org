@@ -77,6 +77,11 @@ USERS_TO_DELETE = %w(
   896
 ).map(&:to_i).freeze
 
-# ActiveRecord model destroy will raise an error if it encounters an error destroying a single item in the
-# array and will not continue destroying the remaining items in the input array.
-User.destroy(USERS_TO_DELETE) if rack_env?(:levelbuilder) && CDO.dashboard_hostname == 'levelbuilder-studio.code.org'
+ActiveRecord::Base.transaction do
+  # ActiveRecord model destroy will raise an error if it encounters an error destroying a single item in the
+  # array and will not continue destroying the remaining items in the input array.
+  User.destroy(USERS_TO_DELETE) if rack_env?(:levelbuilder) && CDO.dashboard_hostname == 'levelbuilder-studio.code.org'
+
+  # This script is a dry-run unless we comment out this last line
+  raise ActiveRecord::Rollback.new, "Intentional rollback"
+end
