@@ -265,6 +265,31 @@ ro:
             '"x"': încrucişat
             '"plus"': plus
             '"random"': aleator
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': Extraterestru
+            '"BEAR"': Urs
+            '"CAT"': Pisică
+            '"DOG"': Câine
+            '"DUCK"': Raţă
+            '"FROG"': Broască
+            '"MOOSE"': Elan
+            '"PINEAPPLE"': Ananas
+            '"ROBOT"': Robot
+            '"SHARK"': Rechin
+            '"UNICORN"': Unicorn
+          LOCATION:
+            "{x: 200, y: 100}": sus
+            "{x: 200, y: 300}": la bază
+            "{x: 100, y: 200}": stânga
+            "{x: 300, y: 200}": dreapta
+            "{x: 200, y: 200}": centru
+            "{x: 100, y: 100}": stânga sus
+            "{x: 300, y: 100}": dreapta sus
+            "{x: 100, y: 300}": stânga jos
+            "{x: 300, y: 300}": dreapta jos
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": aleator
       Dancelab_makeNewDanceSprite:
         text: |-
           fă un nou {COSTUME}
@@ -538,6 +563,21 @@ ro:
       Dancelab_setTint:
         text: setează {SPRITE} nuanţa la {VAL}
       Dancelab_setTintEach:
+        text: setează {THIS} nuanţa la {VAL}
+        options:
+          THIS:
+            sprites: toate
+            '"ALIEN"': toţi extratereştrii
+            '"BEAR"': toţi urşii
+            '"CAT"': toate pisicile
+            '"DOG"': toţi câinii
+            '"DUCK"': toate raţele
+            '"FROG"': toate broaştele
+            '"MOOSE"': toţi elanii
+            '"PINEAPPLE"': toţi ananaşii
+            '"ROBOT"': toţi roboţii
+            '"SHARK"': toţi rechinii
+      Dancelab_setTintEachInline:
         text: setează {THIS} nuanţa la {VAL}
         options:
           THIS:

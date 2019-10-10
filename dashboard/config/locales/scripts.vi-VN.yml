@@ -5791,3 +5791,9 @@ vi:
               name: Vòng lặp lồng nhau
             Nested Loops Project in Frozen:
               name: Dự án vòng lặp lồng nhau trong Frozen
+        dance-2019:
+          stages:
+            Dance Party:
+              name: Bữa tiệc khiêu vũ
+          description: Viết mã bữa tiệc khiêu vũ của riêng bạn để chia sẻ với bạn
+            bè của mình!

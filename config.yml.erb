@@ -376,12 +376,6 @@ bundler_use_sudo: <%=chef_managed%>
 daemon: <%=name == 'production-daemon'%>
 image_optim: <%=chef_managed && !ci_test%>
 
-# Referenced in CI config, but not sure if they are still used anywhere?
-# TODO verify these are intentionally no longer used and remove references from CI config.
-build_shared_js:
-use_my_shared_js:
-build_blockly_core:
-
 # Referenced in Chef config, but not sure if they are still used anywhere?
 # TODO: verify these are intentionally no longer used and remove references from Chef config.
 build_blockly: false

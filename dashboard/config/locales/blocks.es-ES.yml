@@ -266,6 +266,31 @@ es:
             '"x"': cruz
             '"plus"': signo más
             '"random"': aleatorio
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': Extraterrestre
+            '"BEAR"': Oso
+            '"CAT"': Gato
+            '"DOG"': Perro
+            '"DUCK"': Pato
+            '"FROG"': Rana
+            '"MOOSE"': Alce
+            '"PINEAPPLE"': Piña
+            '"ROBOT"': Robot
+            '"SHARK"': Tiburón
+            '"UNICORN"': Unicornio
+          LOCATION:
+            "{x: 200, y: 100}": arriba
+            "{x: 200, y: 300}": abajo
+            "{x: 100, y: 200}": izquierda
+            "{x: 300, y: 200}": derecha
+            "{x: 200, y: 200}": centro
+            "{x: 100, y: 100}": arriba a la izquierda
+            "{x: 300, y: 100}": arriba a la derecha
+            "{x: 100, y: 300}": abajo a la izquierda
+            "{x: 300, y: 300}": abajo a la derecha
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": aleatorio
       Dancelab_makeNewDanceSprite:
         text: |-
           crea un nuevo {COSTUME}
@@ -537,6 +562,21 @@ es:
       Dancelab_setTint:
         text: establecer tonalidad {SPRITE} a {VAL}
       Dancelab_setTintEach:
+        text: establecer tonalidad {THIS} a {VAL}
+        options:
+          THIS:
+            sprites: todo
+            '"ALIEN"': todos los extraterrestres
+            '"BEAR"': todos los osos
+            '"CAT"': todos los gatos
+            '"DOG"': todos los perros
+            '"DUCK"': todos los patos
+            '"FROG"': todas las ranas
+            '"MOOSE"': todos los alces
+            '"PINEAPPLE"': todas las piñas
+            '"ROBOT"': todos los robots
+            '"SHARK"': todos los tiburones
+      Dancelab_setTintEachInline:
         text: establecer tonalidad {THIS} a {VAL}
         options:
           THIS:
