@@ -1,33 +1,33 @@
 ---
 title: The Circuit Playground
-nav: educate_nav
 video_player: true
 theme: responsive
 ---
 
 # The Circuit Playground
 
-<div class="col-66" style="padding-right: 20px;">
+<div class="col-33">
+<center><img src="/images/animated-examples/circuitplayground.gif" style="width: 250px"></center>
+</div>
+
+<div class="col-66" style="margin-top: 50px;">
 
 The Circuit Playground is family of small microcontroller boards with LEDs, buttons, and sensors built in. Designed specifically for novice programmers, the Circuit Playground enables students to get up and running quickly with physical computing without worrying about many of the traditional barriers to entry. Developed by our friends at <a href="//adafruit.com">Adafruit</a>, the Circuit Playground is the core tool used in <a href="//studio.code.org/s/csd6">CS Discoveries Unit 6, Physical Computing</a>.
 
 </div>
 
-<div class="col-33">
-<img src="/images/animated-examples/circuitplayground.gif" style="max-width: 90%">
-</div>
+<div style="clear:both;"></div>
 
-<div syle="clear:both;"></div>
+<div class="col-50", style="margin-top:20px">
 
-## <a name="how"></a>Programming with the Circuit Playground
-
-<div class="col-33">
-<img src="/images/cp_sensors_all.png" style="max-width: 90%">
-</div>
-
-<div class="col-66" style="padding-left: 20px;">
+<h2><a name="how"></a>Programming with the Circuit Playground</h2>
 
 Code.org has developed a special set of commands for <a href="/applab/">App Lab</a>, our block-to-text app development environment, called the Maker Toolkit. Using App Lab and the Maker Toolkit, students can quickly build apps that communicate with external hardware using the same language and environment they've already become comfortable with.
+
+</div>
+
+<div class="col-50">
+<center><img src="/images/cp_sensors_all.png" style="width: 300px; margin-top:30px"></center>
 
 </div>
 
@@ -55,28 +55,28 @@ The **Maker App** is a standalone app that allows the Circuit Playground to comm
 
 ## <a name="classroom"></a>Getting Circuit Playgrounds for your Classroom
 
-<div class="col-66">
+<div class="col-66", style="margin-top:15px">
 
-Code.org has partnered with Adafruit to create a <a href="//www.adafruit.com/product/3399", target="_blank">classroom kit</a> of Circuit Playground boards and accessories necessary for implementing CS Discoveries Unit 6, Physical Computing. The kit contains 15 Circuit Playground boards,
- 15 Micro USB cables to connect the board to a computer, and a few other accessories. The curriculum is designed for a 2:1 student to board ratio, so a single classroom kit supports a classroom of 30 students.
+<p>Code.org has partnered with Adafruit to create a <a href="//www.adafruit.com/product/3399", target="_blank">classroom kit</a> of Circuit Playground boards and accessories necessary for implementing CS Discoveries Unit 6, Physical Computing. The kit contains 15 Circuit Playground boards, 15 Micro USB cables to connect the board to a computer, and a few other accessories. The curriculum is designed for a 2:1 student to board ratio, so a single classroom kit supports a classroom of 30 students.</p>
+ 
+<p>For smaller classrooms, we recommend investing in a set of <a href="https://www.adafruit.com/product/3795", target=_"blank">Circuit Playground Individual Kits</a>. The individual kit is designed for a single student or share-pair and costs $29.96.</p>
 
  </div>
 
  <div class="col-33">
  <img src="/images/cp_class_pack.jpg" style="max-width: 90%; margin: 0 0 20px 20px;">
  </div>
- 
-For smaller classrooms, we recommend investing in a set of <a href="https://www.adafruit.com/product/3795", target=_"blank">Circuit Playground Individual Kits</a>. The individual kit is designed for a single student or share-pair and costs $29.96.
+
 
 ### Budgeting for the Circuit Playground classroom kit
 
-The full cost of the Circuit Playground classroom kit is $350 (plus shipping/handling). All educators receive a 10% discount when they apply the code **ADAEDU** at checkout, which reduces the price of the kit to approximately $315. *Note: The ADAEDU code only applies to orders of $250 or greater.* 
+The full cost of the Circuit Playground classroom kit is $350. All educators receive a 10% discount when they apply the code **ADAEDU** at checkout, which reduces the price of the kit to approximately $315. *Note: The ADAEDU code only applies to orders of $250 or greater.* 
 
 Many teachers are able to request funding from their school's technology budget to cover the full cost. 
 
 However, we understand that the expense of the classroom kit can be a barrier to implementing the full course, especially in low-income schools. Code.org is able to fully subsidize a limited number of classroom kits for teachers in the 2019-20 CS Discoveries Professional Learning Program who are unable to secure funding. Please read below for the full eligiblility requirements for this subsidy.
 
-### <a name="subsidy"></a> Circuit Playground classroom kit Subsidy Program
+### <a name="subsidy"></a> Circuit Playground classroom kit subsidy program
 
 **Available starting January 2020**
 
@@ -89,9 +89,6 @@ If you are participating in the 2019-20 CS Discoveries Professional Learning Pro
 - Will teach Unit 6 by the end of the 2020-21 school year. When the program launches in January 2020, we will ask interested teachers to fill out a Unit 6 implementation plan template in the semester they will be teaching Unit 6 and submit it to us at <a href="mailto:teacher@code.org">teacher@code.org</a>
 
 **By the end of January 2020,** teachers in the 2019-20 CS Discoveries Professional Learning Program will receive an email from us with more information about how to request a subsidy for the Adafruit Circuit Playground classroom kit on our website if they are unable to secure funding and are otherwise qualified.
-
-
-**Participants in the 2018-19 Professional Learning Program should [click here](/circuitplayground-2018) to see their subsidy requirements.**
 
 
 <!--

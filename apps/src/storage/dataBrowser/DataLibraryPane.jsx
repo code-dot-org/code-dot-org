@@ -2,9 +2,11 @@ import Radium from 'radium';
 import React from 'react';
 import LibraryCategory from './LibraryCategory';
 import SearchBar from '@cdo/apps/templates/SearchBar';
-import datasetManifest from './datasetManifest.json';
+import {categories} from './datasetManifest.json';
 import color from '../../util/color';
 import msg from '@cdo/locale';
+import PreviewModal from './PreviewModal';
+import FirebaseStorage from '../firebaseStorage';
 
 const styles = {
   container: {
@@ -24,6 +26,22 @@ const styles = {
 };
 
 class DataLibraryPane extends React.Component {
+  importTable = datasetInfo => {
+    if (datasetInfo.current) {
+      FirebaseStorage.addCurrentTableToProject(
+        datasetInfo.name,
+        () => console.log('success'),
+        err => console.log(err)
+      );
+    } else {
+      FirebaseStorage.copyStaticTable(
+        datasetInfo.name,
+        () => console.log('success'),
+        err => console.log(err)
+      );
+    }
+  };
+
   render() {
     return (
       <div style={styles.container}>
@@ -33,14 +51,16 @@ class DataLibraryPane extends React.Component {
           onChange={() => console.log('search!')}
         />
         <hr style={styles.divider} />
-        {datasetManifest.categories.map(category => (
+        {categories.map(category => (
           <LibraryCategory
             key={category.name}
             name={category.name}
             datasets={category.datasets}
             description={category.description}
+            importTable={this.importTable}
           />
         ))}
+        <PreviewModal importTable={this.importTable} />
       </div>
     );
   }

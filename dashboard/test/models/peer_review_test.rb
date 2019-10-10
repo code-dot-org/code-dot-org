@@ -35,9 +35,6 @@ class PeerReviewTest < ActiveSupport::TestCase
 
   setup do
     @script.reload
-    Rails.application.config.stubs(:levelbuilder_mode).returns false
-    Plc::EnrollmentModuleAssignment.stubs(:exists?).with(user_id: @user.id, plc_learning_module: @learning_module).returns(true)
-
     PeerReviewMailer.stubs(:review_completed_receipt).returns(stub(:deliver_now))
   end
 
@@ -47,14 +44,6 @@ class PeerReviewTest < ActiveSupport::TestCase
     end
 
     assert_equal Set[nil, 'escalated'], PeerReview.where(submitter: @user, level: @level).map(&:status).to_set
-  end
-
-  test 'submitting a peer reviewed level when I am not enrolled in the module should not create PeerReview objects' do
-    Plc::EnrollmentModuleAssignment.stubs(:exists?).returns(false)
-
-    assert_no_difference('PeerReview.count') do
-      track_progress @level_source.id
-    end
   end
 
   test 'submitting a non peer reviewable level should not create Peer Review objects' do
@@ -244,10 +233,6 @@ class PeerReviewTest < ActiveSupport::TestCase
     submitter_1 = create :teacher
     submitter_2 = create :teacher
     submitter_3 = create :teacher
-
-    [submitter_1, submitter_2, submitter_3].each do |submitter|
-      Plc::EnrollmentModuleAssignment.stubs(:exists?).with(user_id: submitter.id, plc_learning_module: @learning_module).returns(true)
-    end
 
     level_source_1 = create(:level_source, data: 'Some answer')
     level_source_2 = create(:level_source, data: 'Other answer')

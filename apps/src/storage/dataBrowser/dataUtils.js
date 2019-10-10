@@ -1,3 +1,4 @@
+import {tables} from './datasetManifest.json';
 /** @file Utility functions for the data browser. */
 
 /**
@@ -9,6 +10,10 @@ export const ColumnType = {
   NUMBER: 'number',
   BOOLEAN: 'boolean'
 };
+
+export function getDatasetInfo(tableName) {
+  return tables.find(table => table.name === tableName);
+}
 
 /**
  * @param {*} val

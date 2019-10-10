@@ -1,3 +1,5 @@
+require 'cdo/honeybadger'
+
 class CoursesController < ApplicationController
   include VersionRedirectOverrider
 
@@ -54,6 +56,7 @@ class CoursesController < ApplicationController
       course = Course.get_from_cache(course_name)
       # only support this alternative course name for plc courses
       raise ActiveRecord::RecordNotFound unless course.try(:plc_course)
+      Honeybadger.notify "Deprecated PLC course name logic used for course #{course_name}"
     end
 
     if course.plc_course

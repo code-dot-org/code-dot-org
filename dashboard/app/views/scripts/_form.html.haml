@@ -25,7 +25,7 @@
                   version_year_options: Script.get_version_year_options,
                   flex_category_map: I18n.t('flex_category'),
                   is_levelbuilder: current_user.levelbuilder?}
-  %script{src: minifiable_asset_path('js/scripts/_form.js'),
+  %script{src: webpack_asset_path('js/scripts/_form.js'),
           data: {levelBuilderEditScript: scriptData.to_json}}
 
 - if @show_all_instructions

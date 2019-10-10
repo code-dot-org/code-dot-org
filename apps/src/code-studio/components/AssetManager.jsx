@@ -131,9 +131,16 @@ export default class AssetManager extends React.Component {
    * when loading the current list of assets.
    * @param xhr
    */
-  onAssetListFailure = xhr => {
+  onAssetListFailure = ({status}) => {
+    const {useFilesApi} = this.props;
+    if (useFilesApi && status === 404) {
+      // No files in this project yet, proceed with an empty file list
+      this.onAssetListReceived({files: []});
+      return;
+    }
+
     this.setState({
-      statusMessage: 'Error loading asset list: ' + getErrorMessage(xhr.status)
+      statusMessage: 'Error loading asset list: ' + getErrorMessage(status)
     });
   };
 

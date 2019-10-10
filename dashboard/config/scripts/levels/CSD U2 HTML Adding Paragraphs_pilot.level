@@ -11,10 +11,10 @@
     "long_instructions": "# Add Text to the Body\r\n\r\nWhen you start any Web Lab project, it will automatically add `<!DOCTYPE>`, `<html>`, `<head>`, and `<body>` tags to your project. When you add content to your projects, you'll need to do it between the `<body>` and `</body>` tags because it should be part of the body of your webpage.\r\n\r\n# Do This\r\n\r\n* Write three separate sentences about any topic you like inside of the body tags of your web page.\r\n* Hit \"Refresh and Save\" if you don't see the changes in the preview area.\r\n* Compare your work with a neighbor. Make sure you're placing code in the same place.\r\n",
     "project_template_level_name": "CSD U2 HTML Adding Paragraphs Template_pilot",
     "submittable": "false",
-    "encrypted_examples": "whn44Cb828B7NmpYMFQ7pq7xwPFYkTRuCDvCLmKCmSIHSv1WqT3mVcw9UXVr\npfbEAgMX9uKYY6UonCjJqyMOyQ==\n",
+    "encrypted_examples": "ryXWRW+Mo9jwDOBZWCrVnXi9t7uZAyoNr7fSgYNhQxOlAdCcIQKN4WorDUjh\nA96zh/RzzGmSarz2FPYN3BDz2g==\n",
     "parent_level_id": 15853,
     "name_suffix": "_pilot",
-    "map_reference": "/docs/csd-1718/html_tags/index.html",
+    "map_reference": "/docs/concepts/html/html-tags/index.html",
     "video_key": "csd_weblab_intro_2",
     "encrypted": "false",
     "mini_rubric": "false",
@@ -22,7 +22,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-12 23:30:07 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-20 20:00:32 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-07-24 16:27:55 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-07 18:04:05 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-07 18:04:48 +0000\",\"changed\":[\"encrypted_examples\",\"map_reference\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-07-30 21:06:40 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-07-30 21:09:06 +0000\",\"changed\":[\"encrypted_examples\",\"teacher_markdown\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-12 23:30:07 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-20 20:00:32 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-07-24 16:27:55 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-07 18:04:05 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-07 18:04:48 +0000\",\"changed\":[\"encrypted_examples\",\"map_reference\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-07-30 21:06:40 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-07-30 21:09:06 +0000\",\"changed\":[\"encrypted_examples\",\"teacher_markdown\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-09-19 21:57:24 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2019-09-20 17:49:06 +0000\",\"changed\":[\"encrypted_examples\",\"map_reference\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

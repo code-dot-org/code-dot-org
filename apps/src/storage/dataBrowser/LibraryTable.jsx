@@ -2,11 +2,10 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import React from 'react';
 import FontAwesome from '../../templates/FontAwesome';
-import FirebaseStorage from '../firebaseStorage';
 import msg from '@cdo/locale';
 import color from '../../util/color';
 import {showPreview} from '../redux/data';
-import PreviewModal from './PreviewModal';
+import {getDatasetInfo} from './dataUtils';
 
 const styles = {
   tableName: {
@@ -55,8 +54,7 @@ const styles = {
 class LibraryTable extends React.Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    current: PropTypes.bool.isRequired,
+    importTable: PropTypes.func.isRequired,
 
     // from redux dispatch
     onShowPreview: PropTypes.func.isRequired
@@ -66,29 +64,16 @@ class LibraryTable extends React.Component {
     collapsed: true
   };
 
+  datasetInfo = getDatasetInfo(this.props.name);
+
   toggleCollapsed = () =>
     this.setState({
       collapsed: !this.state.collapsed
     });
 
-  importTable = () => {
-    if (this.props.current) {
-      // TODO: Implement current tables (see STAR-615)
-    } else {
-      FirebaseStorage.copyStaticTable(
-        this.props.name,
-        () => {
-          console.log('success');
-        },
-        err => {
-          console.log(err);
-        }
-      );
-    }
-  };
-
   render() {
     const icon = this.state.collapsed ? 'caret-right' : 'caret-down';
+
     return (
       <div>
         <a style={styles.tableName} onClick={this.toggleCollapsed}>
@@ -98,7 +83,7 @@ class LibraryTable extends React.Component {
         {!this.state.collapsed && (
           <div style={styles.collapsibleContainer}>
             {/* TODO: Add last updated time */}
-            <div>{this.props.description}</div>
+            <div>{this.datasetInfo.description}</div>
             <div>
               <button
                 style={styles.preview}
@@ -110,14 +95,13 @@ class LibraryTable extends React.Component {
               <button
                 style={styles.import}
                 type="button"
-                onClick={this.importTable}
+                onClick={() => this.props.importTable(this.datasetInfo)}
               >
                 {msg.import()}
               </button>
             </div>
           </div>
         )}
-        <PreviewModal tableName={this.props.name} />
       </div>
     );
   }

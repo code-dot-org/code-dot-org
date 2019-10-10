@@ -181,6 +181,8 @@ assets_s3_bucket:          cdo-v3-assets
 assets_s3_directory:       assets<%=_env%>
 sources_s3_bucket:         cdo-v3-sources
 sources_s3_directory:      sources<%=_env%>
+libraries_s3_bucket:       cdo-v3-libraries
+libraries_s3_directory:    libraries<%=_env%>
 videos_s3_bucket:          videos.code.org
 videos_url:                //videos.code.org
 
@@ -307,7 +309,6 @@ build_pegasus: true
 
 # Dashboard
 override_dashboard:
-dashboard_assets_dir: <%=root_dir%>/dashboard/public/assets
 dashboard_devise_secret:   !Secret
 dashboard_devise_pepper:   !Secret
 dashboard_secret_key_base: !Secret
@@ -328,7 +329,6 @@ pegasus_sock:
 pegasus_port: 3000
 pegasus_unicorn_name: pegasus
 pegasus_workers: 8
-pegasus_skip_asset_map: false
 sinatra_session_secret:
 
 # Configures Pegasus `settings.read_only`, which affects some (legacy) routes. Not actively used(?)
@@ -375,12 +375,6 @@ bundler_use_sudo: <%=chef_managed%>
 
 daemon: <%=name == 'production-daemon'%>
 image_optim: <%=chef_managed && !ci_test%>
-
-# Referenced in CI config, but not sure if they are still used anywhere?
-# TODO verify these are intentionally no longer used and remove references from CI config.
-build_shared_js:
-use_my_shared_js:
-build_blockly_core:
 
 # Referenced in Chef config, but not sure if they are still used anywhere?
 # TODO: verify these are intentionally no longer used and remove references from Chef config.

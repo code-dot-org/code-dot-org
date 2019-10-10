@@ -16,7 +16,7 @@
 
 - if @script_level
   - level_data = { redirect_script_url: @redirect_script_url, script_name: @script_level.script&.name, course_name: @script_level.script&.course&.name }
-  %script{ src: minifiable_asset_path('js/levels/show.js'), data: { level: level_data.to_json } }
+  %script{ src: webpack_asset_path('js/levels/show.js'), data: { level: level_data.to_json } }
   -# Mount point for RedirectDialog React component.
   %div#redirect-dialog
 

@@ -46,4 +46,18 @@ class QueuedAccountPurgeTest < ActiveSupport::TestCase
     end
     refute_nil QueuedAccountPurge.find_by_id(qap.id)
   end
+
+  test "needing_manual_review normally includes everything" do
+    q1 = create :queued_account_purge
+    q2 = create :queued_account_purge
+    assert_includes QueuedAccountPurge.needing_manual_review, q1
+    assert_includes QueuedAccountPurge.needing_manual_review, q2
+  end
+
+  test "needing_manual_review omits Pardot::InvalidApiKeyException" do
+    q1 = create :queued_account_purge
+    q2 = create :queued_account_purge, reason_for_review: 'Pardot::InvalidApiKeyException'
+    assert_includes QueuedAccountPurge.needing_manual_review, q1
+    refute_includes QueuedAccountPurge.needing_manual_review, q2
+  end
 end

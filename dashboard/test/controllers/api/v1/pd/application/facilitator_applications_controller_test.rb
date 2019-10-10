@@ -14,7 +14,7 @@ module Api::V1::Pd::Application
     end
 
     setup do
-      FACILITATOR_APPLICATION_MAILER_CLASS.stubs(:confirmation).returns(
+      Pd::Application::FacilitatorApplicationMailer.stubs(:confirmation).returns(
         mock {|mail| mail.stubs(:deliver_now)}
       )
     end
@@ -24,7 +24,7 @@ module Api::V1::Pd::Application
     test_user_gets_response_for :create, user: :teacher, params: -> {@test_params}, response: :success
 
     test 'sends confirmation mail on successful create' do
-      FACILITATOR_APPLICATION_MAILER_CLASS.expects(:confirmation).returns(
+      Pd::Application::FacilitatorApplicationMailer.expects(:confirmation).returns(
         mock {|mail| mail.expects(:deliver_now)}
       )
       sign_in @applicant
@@ -34,7 +34,7 @@ module Api::V1::Pd::Application
     end
 
     test 'does not send confirmation mail on unsuccessful create' do
-      FACILITATOR_APPLICATION_MAILER_CLASS.expects(:confirmation).never
+      Pd::Application::FacilitatorApplicationMailer.expects(:confirmation).never
       sign_in @applicant
 
       put :create, params: {form_data: {firstName: ''}}

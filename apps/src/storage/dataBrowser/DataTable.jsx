@@ -31,7 +31,7 @@ const styles = {
     overflow: 'scroll'
   },
   pagination: {
-    marginBottom: 20
+    overflow: 'auto'
   },
   plusIcon: {
     alignItems: 'center',
@@ -57,6 +57,8 @@ const INITIAL_STATE = {
 class DataTable extends React.Component {
   static propTypes = {
     getColumnNames: PropTypes.func.isRequired,
+    readOnly: PropTypes.bool,
+    rowsPerPage: PropTypes.number,
     // from redux state
     tableColumns: PropTypes.arrayOf(PropTypes.string).isRequired,
     tableName: PropTypes.string.isRequired,
@@ -197,11 +199,11 @@ class DataTable extends React.Component {
     this.setState({currentPage: number - 1});
   };
 
-  getRowsForCurrentPage() {
+  getRowsForCurrentPage(rowsPerPage) {
     if (this.props.tableRecords['slice']) {
       return this.props.tableRecords.slice(
-        this.state.currentPage * MAX_ROWS_PER_PAGE,
-        (this.state.currentPage + 1) * MAX_ROWS_PER_PAGE
+        this.state.currentPage * rowsPerPage,
+        (this.state.currentPage + 1) * rowsPerPage
       );
     }
     return this.props.tableRecords;
@@ -214,11 +216,12 @@ class DataTable extends React.Component {
     );
     let editingColumn = this.state.editingColumn;
 
+    let rowsPerPage = this.props.rowsPerPage || MAX_ROWS_PER_PAGE;
     let numPages = Math.max(
       1,
-      Math.ceil(Object.keys(this.props.tableRecords).length / MAX_ROWS_PER_PAGE)
+      Math.ceil(Object.keys(this.props.tableRecords).length / rowsPerPage)
     );
-    let rows = this.getRowsForCurrentPage();
+    let rows = this.getRowsForCurrentPage(rowsPerPage);
 
     // Always show at least one column.
     if (columnNames.length === 1) {
@@ -236,7 +239,7 @@ class DataTable extends React.Component {
             label={msg.paginationLabel()}
           />
         </div>
-        <table>
+        <table style={styles.table}>
           <tbody>
             <tr>
               {columnNames.map(columnName => (
@@ -258,28 +261,35 @@ class DataTable extends React.Component {
                   }
                   isEditing={editingColumn === columnName}
                   isPending={this.state.pendingColumn === columnName}
+                  readOnly={this.props.readOnly}
                   renameColumn={this.renameColumn}
                 />
               ))}
-              <th style={styles.addColumnHeader}>
-                {this.state.pendingAdd ? (
-                  <FontAwesome icon="spinner" className="fa-spin" />
-                ) : (
-                  <FontAwesome
-                    id="addColumnButton"
-                    icon="plus"
-                    style={styles.plusIcon}
-                    onClick={this.addColumn}
-                  />
-                )}
-              </th>
-              <th style={dataStyles.headerCell}>Actions</th>
+              {!this.props.readOnly && (
+                <th style={styles.addColumnHeader}>
+                  {this.state.pendingAdd ? (
+                    <FontAwesome icon="spinner" className="fa-spin" />
+                  ) : (
+                    <FontAwesome
+                      id="addColumnButton"
+                      icon="plus"
+                      style={styles.plusIcon}
+                      onClick={this.addColumn}
+                    />
+                  )}
+                </th>
+              )}
+              {!this.props.readOnly && (
+                <th style={dataStyles.headerCell}>Actions</th>
+              )}
             </tr>
 
-            <AddTableRow
-              tableName={this.props.tableName}
-              columnNames={columnNames}
-            />
+            {!this.props.readOnly && (
+              <AddTableRow
+                tableName={this.props.tableName}
+                columnNames={columnNames}
+              />
+            )}
 
             {Object.keys(rows).map(id => (
               <EditTableRow
@@ -287,6 +297,7 @@ class DataTable extends React.Component {
                 tableName={this.props.tableName}
                 record={JSON.parse(rows[id])}
                 key={id}
+                readOnly={this.props.readOnly}
               />
             ))}
           </tbody>

@@ -125,7 +125,7 @@ class PeerReview < ActiveRecord::Base
   end
 
   def localized_status_description
-    I18n.t("peer_review.#{status}.description").html_safe if status
+    I18n.t("peer_review.#{status}.description_markdown", markdown: true).html_safe if status
   end
 
   def self.create_for_submission(user_level, level_source_id)

@@ -26,14 +26,20 @@ export default class RecentCourses extends Component {
     courses: shapes.courses,
     topCourse: shapes.topCourse,
     isTeacher: PropTypes.bool.isRequired,
-    hasFeedback: PropTypes.bool
+    hasFeedback: PropTypes.bool.isRequired
+  };
+
+  static defaultProps = {
+    courses: [],
+    isTeacher: false,
+    hasFeedback: false
   };
 
   render() {
     const {courses, topCourse, isTeacher, hasFeedback} = this.props;
     const topFourCourses = courses.slice(0, 4);
     const moreCourses = courses.slice(4);
-    const hasCourse = courses.length > 0 || topCourse !== null;
+    const hasCourse = courses.length > 0 || !!topCourse;
 
     return (
       <div id="recent-courses">

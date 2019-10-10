@@ -249,19 +249,18 @@ module Api::V1::Pd
       )
     end
 
-    test 'experiment_survey_report: return empty result for workshop without responds' do
-      csf_201_ws = create :csf_deep_dive_workshop
+    test 'generic_survey_report: return empty result for workshop without responds' do
+      ayw_ws = create :csp_academic_year_workshop, num_facilitators: 1
 
       # This test assumes there's one facilitator in the workshop
-      assert_equal 1, csf_201_ws.facilitators.count
-      f_id = csf_201_ws.facilitators.first.id.to_s
-      f_name = csf_201_ws.facilitators.first.name
+      assert_equal 1, ayw_ws.facilitators.count
+      f_id = ayw_ws.facilitators.first.id.to_s
+      f_name = ayw_ws.facilitators.first.name
 
       expected_result = {
         "course_name" => nil,
         "questions" => {},
         "this_workshop" => {},
-        "all_my_workshops" => {},
         "facilitators" => {
           f_id => f_name
         },
@@ -294,7 +293,7 @@ module Api::V1::Pd
       }
 
       sign_in @admin
-      get :experiment_survey_report, params: {workshop_id: csf_201_ws.id}
+      get :generic_survey_report, params: {workshop_id: ayw_ws.id}
       result = JSON.parse(@response.body).slice(*expected_result.keys)
 
       assert_equal expected_result, result
@@ -318,11 +317,7 @@ module Api::V1::Pd
       expected_result = {
         "course_name" => nil,
         "questions" => {},
-        "this_workshop" => {},
-        "all_my_workshops" => {},
-        "facilitators" => {},
-        "facilitator_averages" => {},
-        "facilitator_response_counts" => {}
+        "this_workshop" => {}
       }
 
       sign_in @admin

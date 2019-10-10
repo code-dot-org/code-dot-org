@@ -553,7 +553,8 @@ Applab.init = function(config) {
   config.afterClearPuzzle = function() {
     designMode.resetIds();
     Applab.setLevelHtml(config.level.startHtml || '');
-    Applab.storage.populateTable(level.dataTables, true, () => {}, outputError); // overwrite = true
+    let promise = Applab.storage.populateTable(level.dataTables, true); // overwrite = true
+    promise.catch(outputError);
     Applab.storage.populateKeyValue(
       level.dataProperties,
       true,
@@ -600,13 +601,10 @@ Applab.init = function(config) {
   // Print any json parsing errors to the applab debug console and the browser debug
   // console. If a json parse error is thrown before the applab debug console
   // initializes, the error will be printed only to the browser debug console.
+  let dataLoadedPromise = Promise.resolve();
   if (level.dataTables) {
-    Applab.storage.populateTable(
-      level.dataTables,
-      false,
-      () => {},
-      outputError
-    ); // overwrite = false
+    dataLoadedPromise = Applab.storage.populateTable(level.dataTables, false); // overwrite = false
+    dataLoadedPromise.catch(outputError);
   }
   if (level.dataProperties) {
     Applab.storage.populateKeyValue(
@@ -723,6 +721,8 @@ Applab.init = function(config) {
     });
   }
 
+  loadLibraryBlocks(config);
+
   // Set the custom set of blocks (may have had maker blocks merged in) so
   // we can later pass the custom set to the interpreter.
   config.level.levelBlocks = config.dropletConfig.blocks;
@@ -764,9 +764,12 @@ Applab.init = function(config) {
           );
         }
       }
-
+    })
+    .then(() => {
       if (getStore().getState().pageConstants.widgetMode) {
-        Applab.runButtonClick();
+        dataLoadedPromise.then(() => {
+          Applab.runButtonClick();
+        });
       }
     });
 
@@ -775,6 +778,30 @@ Applab.init = function(config) {
   }
   return loader;
 };
+
+function loadLibraryBlocks(config) {
+  if (!level.libraries) {
+    return;
+  }
+
+  level.libraryCode = '';
+  level.libraries.forEach(library => {
+    config.dropletConfig.additionalPredefValues.push(library.name);
+    level.libraryCode += library.source;
+    // TODO: add category management for libraries (blocked on spec)
+    // config.dropletConfig.categories['libraryName'] = {
+    //   id: 'libraryName',
+    //   color: 'colorName',
+    //   rgb: 'colorHexCode',
+    //   blocks: []
+    // };
+
+    library.dropletConfig.forEach(dropletConfig => {
+      config.dropletConfig.blocks.push(dropletConfig);
+      level.codeFunctions[dropletConfig.func] = null;
+    });
+  });
+}
 
 function changedToDataMode(state, lastState) {
   return (
@@ -814,6 +841,12 @@ function setupReduxSubscribers(store) {
       );
     }
 
+    const lastIsPreview = lastState.data && lastState.data.isPreviewOpen;
+    const isPreview = state.data && state.data.isPreviewOpen;
+    if (isDataMode && isPreview && !lastIsPreview) {
+      onDataPreview(state.data.tableName);
+    }
+
     if (
       !lastState.runState ||
       state.runState.isRunning !== lastState.runState.isRunning
@@ -847,6 +880,28 @@ function setupReduxSubscribers(store) {
       getProjectDatabase().child('counters/tables'),
       tableType.PROJECT
     );
+
+    if (experiments.isEnabled(experiments.APPLAB_DATASETS)) {
+      // /v3/channels/<channel_id>/current_tables tracks which
+      // current tables the project has imported. Here we initialize the
+      // redux list of current tables and keep it in sync
+      let currentTableRef = getProjectDatabase().child('current_tables');
+      currentTableRef.on('child_added', snapshot => {
+        store.dispatch(
+          addTableName(
+            typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key,
+            tableType.SHARED
+          )
+        );
+      });
+      currentTableRef.on('child_removed', snapshot => {
+        store.dispatch(
+          deleteTableName(
+            typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key
+          )
+        );
+      });
+    }
   }
 }
 
@@ -1208,6 +1263,7 @@ Applab.execute = function() {
     // Initialize the interpreter and parse the student code
     Applab.JSInterpreter.parse({
       code: codeWhenRun,
+      libraryCode: level.libraryCode,
       blocks: level.levelBlocks,
       blockFilter: level.executePaletteApisOnly && level.codeFunctions,
       enableEvents: true
@@ -1280,6 +1336,18 @@ function onInterfaceModeChange(mode) {
     }
   }
   requestAnimationFrame(() => showHideWorkspaceCallouts());
+}
+
+function onDataPreview(tableName) {
+  onColumnNames(getSharedDatabase(), tableName, columnNames => {
+    getStore().dispatch(updateTableColumns(tableName, columnNames));
+  });
+
+  getSharedDatabase()
+    .child(`storage/tables/${tableName}/records`)
+    .once('value', snapshot => {
+      getStore().dispatch(updateTableRecords(tableName, snapshot.val()));
+    });
 }
 
 /**

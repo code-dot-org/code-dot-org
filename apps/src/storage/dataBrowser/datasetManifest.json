@@ -1,110 +1,111 @@
 {
+  "tables": [
+    {
+      "name": "cities",
+      "description": "description cities",
+      "current": false
+    },
+    {
+      "name": "history",
+      "description": "description history",
+      "current": false
+    },
+    {
+      "name": "sports",
+      "description": "description sports",
+      "current": true
+    },
+    {
+      "name": "spotify",
+      "description": "description spotify",
+      "current": true
+    },
+    {
+      "name": "openweathermap",
+      "description": "5 day 3 hour forecast from 5 cities",
+      "current": true
+    },
+    {
+      "name": "one",
+      "description": "description one",
+      "current": false
+    },
+    {
+      "name": "two",
+      "description": "description two",
+      "current": false
+    },
+    {
+      "name": "three",
+      "description": "description three",
+      "current": false
+    },
+    {
+      "name": "four",
+      "description": "description four",
+      "current": false
+    },
+    {
+      "name": "five",
+      "description": "description five",
+      "current": false
+    },
+    {
+      "name": "six",
+      "description": "description six",
+      "current": false
+    },
+    {
+      "name": "seven",
+      "description": "description seven",
+      "current": false
+    },
+    {
+      "name": "eight",
+      "description": "description eight",
+      "current": false
+    },
+    {
+      "name": "nine",
+      "description": "description nine",
+      "current": false
+    },
+    {
+      "name": "ten",
+      "description": "description ten",
+      "current": false
+    }
+  ],
   "categories": [
     {
       "name": "Test Data",
       "description": "datasets that are in the shared channel in dev firebase",
-      "datasets": [
-        {
-          "name": "cities",
-          "description": "description",
-          "current": false
-        },
-        {
-          "name": "history",
-          "description": "description",
-          "current": false
-        },
-        {
-          "name": "sports",
-          "description": "description",
-          "current": true
-        },
-        {
-          "name": "spotify",
-          "description": "description",
-          "current": true
-        }
-      ]
+      "datasets": ["cities", "history", "sports", "spotify", "openweathermap"]
     },
     {
       "name": "Animals",
       "description": "description",
-      "datasets": [
-        {
-          "name": "one",
-          "description": "description one",
-          "current": false
-        },
-        {
-          "name": "two",
-          "description": "description two",
-          "current": false
-        }
-      ]
+      "datasets": ["one", "two"]
     },
     {
       "name": "Arts & Entertainment",
       "description": "description",
-      "datasets": [
-        {
-          "name": "three",
-          "description": "description three",
-          "current": false
-        },
-        {
-          "name": "four",
-          "description": "description four",
-          "current": false
-        }
-      ]
+      "datasets": ["three", "four"]
     },
     {
       "name": "Business & Money",
       "description": "description",
-      "datasets": [
-        {
-          "name": "five",
-          "description": "description five",
-          "current": false
-        },
-        {
-          "name": "six",
-          "description": "description six",
-          "current": false
-        }
-      ]
+      "datasets": ["five", "six"]
     },
     {
       "name": "Education",
       "description": "description",
-      "datasets": [
-        {
-          "name": "seven",
-          "description": "description seven",
-          "current": false
-        },
-        {
-          "name": "eight",
-          "description": "description eight",
-          "current": false
-        },
-        {
-          "name": "nine",
-          "description": "description nine",
-          "current": false
-        }
-      ]
+      "datasets": ["seven", "eight", "nine"]
     },
     {
       "name": "Health & Medicine",
       "description": "description",
-      "datasets": [
-        {
-          "name": "ten",
-          "description": "description ten",
-          "current": false
-        }
-      ]
+      "datasets": ["ten"]
     }
   ]
 }

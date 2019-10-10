@@ -1,12 +1,12 @@
 - content_for(:head) do
-  %script{src: minifiable_asset_path('js/peer_reviews/show.js')}
+  %script{src: webpack_asset_path('js/peer_reviews/show.js')}
 .peer-review
   - reviewed = @peer_review.review_completed?
 
   - if @peer_review.script.professional_learning_course?
     #breadcrumb
     - course_unit = @peer_review.script.plc_course_unit
-    - react_props = {unit_name: course_unit.unit_name, unit_view_path: script_path(course_unit.script), course_view_path: course_path(course_unit.plc_course.get_url_name), page_name: t('flex_category.peer_review')}
+    - react_props = {unit_name: course_unit.unit_name, unit_view_path: script_path(course_unit.script), course_view_path: course_path(course_unit.plc_course.course), page_name: t('flex_category.peer_review')}
     :javascript
       ReactDOM.render(
         React.createElement(window.dashboard.plcHeader, #{react_props.to_json}),
