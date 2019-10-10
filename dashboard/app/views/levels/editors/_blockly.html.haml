@@ -1,9 +1,9 @@
 - content_for(:head) do
   - if @level.is_a?(Blockly) && !@level.uses_droplet?
-    = javascript_include_tag 'js/blockly'
-    = javascript_include_tag "js/en_us/blockly_locale"
-    = javascript_include_tag "js/en_us/common_locale"
-    = javascript_include_tag "js/en_us/#{@level.game.app}_locale"
+    %script{src: webpack_asset_path('js/blockly.js')}
+    %script{src: webpack_asset_path('js/en_us/blockly_locale.js')}
+    %script{src: webpack_asset_path('js/en_us/common_locale.js')}
+    %script{src: webpack_asset_path("js/en_us/#{@level.game.app}_locale.js")}
 
 %legend.control-legend.levelTypeHeader
   Blockly Options
@@ -81,5 +81,5 @@
       shared_blocks: @level.shared_blocks,
     }.to_json
   }
-%script{src: minifiable_asset_path('js/levels/editors/_blockly.js'),
+%script{src: webpack_asset_path('js/levels/editors/_blockly.js'),
         data: script_data}

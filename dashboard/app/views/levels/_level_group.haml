@@ -10,7 +10,8 @@
 - current_page = params[:puzzle_page] || 1
 
 -# Is this a survey where we've already submitted
-- submitted_survey = @script_level.try(:anonymous?) && current_user && current_user.user_level_for(@script_level, @level).try(:submitted?)
+- user_level = UserLevel.find_by(user: current_user, script: @script_level.script, level: @level)
+- submitted_survey = @script_level.try(:anonymous?) && current_user && user_level.try(:submitted?)
 
 .level-group
   - @pages.each do |page|
@@ -44,7 +45,7 @@
           = render partial: 'levels/single_multi', locals: {standalone: false, level: level, last_attempt: sublevel_last_attempt, tight_layout: true}
         - elsif level_class == "text_match"
           -# For students (or teachers doing PD), clear out all answers.
-          - unless current_user.try(:should_see_inline_answer?, @script_level)
+          - unless Policies::InlineAnswer.visible?(current_user, @script_level)
             - level.properties['answers'] = nil
           = render partial: 'levels/single_text_match', locals: {standalone: false, level: level, last_attempt: sublevel_last_attempt }
         - elsif level_class == "free_response"
@@ -61,4 +62,4 @@
   - unless @script_level.nil?
     - init_data = { total_level_count: @total_level_count, page: current_page.to_i || -1, last_attempt: parsed_last_attempt}
 
-  %script{src: minifiable_asset_path('js/levels/_level_group.js'), data: {levelData: data.to_json, initData: init_data.to_json}}
+  %script{src: webpack_asset_path('js/levels/_level_group.js'), data: {levelData: data.to_json, initData: init_data.to_json}}

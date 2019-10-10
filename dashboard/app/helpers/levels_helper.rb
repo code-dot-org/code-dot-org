@@ -631,12 +631,12 @@ module LevelsHelper
       @blockly_loaded = true
       blocks = blocks + content_tag(:div, '', {id: 'codeWorkspace', style: 'display: none'}) +
       content_tag(:style, '.blocklySvg { background: none; }') +
-      content_tag(:script, '', src: asset_path('js/blockly.js')) +
-      content_tag(:script, '', src: asset_path("js/#{js_locale}/blockly_locale.js")) +
-      content_tag(:script, '', src: minifiable_asset_path('js/common.js')) +
-      content_tag(:script, '', src: asset_path("js/#{js_locale}/#{app}_locale.js")) +
-      content_tag(:script, '', src: minifiable_asset_path("js/#{app}.js"), 'data-appoptions': options.to_json) +
-      content_tag(:script, '', src: minifiable_asset_path('js/embedBlocks.js'))
+      content_tag(:script, '', src: webpack_asset_path('js/blockly.js')) +
+      content_tag(:script, '', src: webpack_asset_path("js/#{js_locale}/blockly_locale.js")) +
+      content_tag(:script, '', src: webpack_asset_path('js/common.js')) +
+      content_tag(:script, '', src: webpack_asset_path("js/#{js_locale}/#{app}_locale.js")) +
+      content_tag(:script, '', src: webpack_asset_path("js/#{app}.js"), 'data-appoptions': options.to_json) +
+      content_tag(:script, '', src: webpack_asset_path('js/embedBlocks.js'))
     end
 
     blocks
@@ -816,7 +816,7 @@ module LevelsHelper
   # Should the multi calling on this helper function include answers to be rendered into the client?
   # Caller indicates whether the level is standalone or not.
   def include_multi_answers?(standalone)
-    standalone || current_user.try(:should_see_inline_answer?, @script_level)
+    standalone || Policies::InlineAnswer.visible?(current_user, @script_level)
   end
 
   # Finds the existing LevelSourceImage corresponding to the specified level

@@ -203,6 +203,8 @@ export default {
     element.textContent = 'text';
     element.style.maxWidth = applabConstants.APP_WIDTH + 'px';
     element.style.borderStyle = 'solid';
+    // Set optimizeSpeed to ensure better text size consistency between Safari and Chrome
+    element.style.textRendering = 'optimizeSpeed';
     elementLibrary.setAllPropertiesToCurrentTheme(
       element,
       designMode.activeScreen()
@@ -213,9 +215,14 @@ export default {
   },
 
   onDeserialize: function(element) {
-    // Set background color style for older projects that didn't set them on create:
+    // Set background color style for older projects that didn't set it on create:
     if (!element.style.backgroundColor) {
       element.style.backgroundColor = themeValues.label.backgroundColor.classic;
+    }
+    // Set text rendering style for older projects that didn't set it on create:
+    if (!element.style.textRendering) {
+      // Set optimizeSpeed to ensure better text size consistency between Safari and Chrome
+      element.style.textRendering = 'optimizeSpeed';
     }
     // Set border styles for older projects that didn't set them on create:
     elementUtils.setDefaultBorderStyles(element);

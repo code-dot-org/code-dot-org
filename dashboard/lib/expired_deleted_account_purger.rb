@@ -117,7 +117,7 @@ class ExpiredDeletedAccountPurger
   end
 
   def expired_soft_deleted_accounts
-    user_ids_needing_manual_review = QueuedAccountPurge.pluck(:user_id)
+    user_ids_needing_manual_review = QueuedAccountPurge.needing_manual_review.pluck(:user_id)
     soft_deleted_accounts.
       where(
         'deleted_at BETWEEN :start_date AND :end_date',

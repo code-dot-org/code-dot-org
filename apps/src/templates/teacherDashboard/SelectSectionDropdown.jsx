@@ -4,6 +4,8 @@ import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import {navigateToHref} from '@cdo/apps/utils';
 import {getVisibleSections} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {TeacherDashboardPath} from '@cdo/apps/templates/teacherDashboard/TeacherDashboardNavigation';
+import _ from 'lodash';
 
 const styles = {
   container: {
@@ -25,7 +27,13 @@ class SelectSectionDropdown extends React.Component {
 
   onChange = event => {
     const sectionId = event.target.value;
-    navigateToHref(`/teacher_dashboard/sections/${sectionId}`);
+    const baseUrl = `/teacher_dashboard/sections/${sectionId}/`;
+    const currentTab = _.last(_.split(window.location.pathname, '/'));
+    const teacherNavigationTabs = _.values(TeacherDashboardPath);
+    const sectionUrl = _.includes(teacherNavigationTabs, `/${currentTab}`)
+      ? baseUrl.concat(currentTab)
+      : baseUrl;
+    navigateToHref(sectionUrl);
   };
 
   render() {

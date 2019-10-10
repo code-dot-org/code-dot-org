@@ -2754,23 +2754,6 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
-  test 'should_see_inline_answer? returns true in levelbuilder' do
-    Rails.application.config.stubs(:levelbuilder_mode).returns true
-
-    assert @student.should_see_inline_answer?(nil)
-    assert @student.should_see_inline_answer?(create(:script_level))
-  end
-
-  test 'should_see_inline_answer? returns false for non teachers' do
-    assert_not @student.should_see_inline_answer?(create(:script_level))
-  end
-
-  test 'should_see_inline_answer? returns true for authorized teachers in csp' do
-    user = create :teacher
-    create(:plc_user_course_enrollment, plc_course: (create :plc_course), user: user)
-    assert user.should_see_inline_answer?((create :script_level))
-  end
-
   test 'account_age_days should return days since account creation' do
     student = create :student, created_at: DateTime.now - 10
     assert student.account_age_days == 10

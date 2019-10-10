@@ -830,41 +830,45 @@ describe('Circuit Playground Components', () => {
       });
     });
 
-    it('calls disable on the soundSensor', () => {
+    it('calls disable on the soundSensor and clears events', () => {
       const spy = sinon.spy(components.soundSensor, 'disable');
       cleanupCircuitPlaygroundComponents(
         components,
-        true /* shouldDestroyComponents */
+        false /* shouldDestroyComponents */
       );
+      console.log(components.soundSensor._events);
       expect(spy).to.have.been.calledOnce;
+      expect(components.soundSensor._events).to.be.empty;
     });
 
-    it('calls disable on the lightSensor', () => {
+    it('calls disable on the lightSensor and clears events', () => {
       const spy = sinon.spy(components.lightSensor, 'disable');
       cleanupCircuitPlaygroundComponents(
         components,
-        true /* shouldDestroyComponents */
+        false /* shouldDestroyComponents */
       );
       expect(spy).to.have.been.calledOnce;
+      expect(components.lightSensor._events).to.be.empty;
     });
 
-    it('calls disable on the tempSensor', () => {
+    it('calls disable on the tempSensor and clears events', () => {
       const spy = sinon.spy(components.tempSensor, 'disable');
       cleanupCircuitPlaygroundComponents(
         components,
-        true /* shouldDestroyComponents */
+        false /* shouldDestroyComponents */
       );
       expect(spy).to.have.been.calledOnce;
+      expect(components.tempSensor._events).to.be.empty;
     });
 
-    it('calls stop on the accelerometer', () => {
+    it('calls stop on the accelerometer and clears events', () => {
       // Spy on the controller template, because stop() ends up readonly on
       // the returned component.
       const spy = sinon.spy(Playground.Accelerometer.stop, 'value');
       return createCircuitPlaygroundComponents(board).then(components => {
         cleanupCircuitPlaygroundComponents(
           components,
-          true /* shouldDestroyComponents */
+          false /* shouldDestroyComponents */
         );
 
         let assertionError;
@@ -873,6 +877,8 @@ describe('Circuit Playground Components', () => {
         } catch (e) {
           assertionError = e;
         }
+
+        expect(components.accelerometer._events).to.be.empty;
 
         spy.restore();
         if (assertionError) {

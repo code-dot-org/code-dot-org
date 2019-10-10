@@ -4,7 +4,7 @@
                 videoWidth: 853}
 
 - content_for(:head) do
-  %script{src: minifiable_asset_path('js/levels/_standalone_video.js'), data: video_data}
+  %script{src: webpack_asset_path('js/levels/_standalone_video.js'), data: video_data}
 
 .standalone-video
   - @slides = get_slides_by_video_key(@level.video_key)

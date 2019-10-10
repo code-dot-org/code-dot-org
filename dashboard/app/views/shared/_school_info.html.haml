@@ -9,7 +9,7 @@
 - existing_school_info[:country] ||= 'US' if us_ip
 
 - content_for(:head) do
-  %script{src: minifiable_asset_path('js/shared/_school_info.js')}
+  %script{src: webpack_asset_path('js/shared/_school_info.js')}
 
 #pl-application-form
   #pl-application-facets.form-section
@@ -91,13 +91,7 @@
     var options = #{existing_school_info.to_json};
     var suppressScrolling = #{!!(local_assigns[:suppress_scrolling])};
     options['suppressScrolling'] = suppressScrolling;
-
-    var assumeUsa = #{!!(local_assigns[:assume_usa])};
-
-    if (assumeUsa) {
-      $('#school-country-group').hide();
-      $('#school-country').val('United States');
-    }
+    options['assumeUsa'] = #{!!(local_assigns[:assume_usa])};
 
     // Send through some values that the JavaScript will need.
     window.schoolInfoManager = new SchoolInfoManager(options);

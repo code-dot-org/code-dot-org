@@ -30,6 +30,7 @@ import {
   addMissingColumns,
   getColumnsRef
 } from './firebaseMetadata';
+import {tableType} from './redux/data';
 
 /**
  * Namespace for Firebase storage.
@@ -456,6 +457,24 @@ FirebaseStorage.resetForTesting = function() {
   resetConfigForTesting();
 };
 
+FirebaseStorage.addCurrentTableToProject = function(
+  tableName,
+  onSuccess,
+  onError
+) {
+  return incrementRateLimitCounters()
+    .then(loadConfig)
+    .then(config => {
+      return enforceTableCount(config, tableName);
+    })
+    .then(() => {
+      getProjectDatabase()
+        .child(`current_tables/${tableName}`)
+        .set(true);
+    })
+    .then(onSuccess, onError);
+};
+
 FirebaseStorage.copyStaticTable = function(tableName, onSuccess, onError) {
   return incrementRateLimitCounters()
     .then(loadConfig)
@@ -524,19 +543,27 @@ FirebaseStorage.createTable = function(tableName, onSuccess, onError) {
 /**
  * Delete an entire table from firebase storage, then reset its lastId and rowCount.
  * @param {string} tableName
+ * @param {string} type
  * @param {function ()} onSuccess
  * @param {function (string)} onError
  */
-FirebaseStorage.deleteTable = function(tableName, onSuccess, onError) {
-  const tableRef = getProjectDatabase().child(`storage/tables/${tableName}`);
-  const countersRef = getProjectDatabase().child(
-    `counters/tables/${tableName}`
-  );
-  tableRef
-    .set(null)
-    .then(() => countersRef.set(null))
-    .then(() => getColumnsRef(getProjectDatabase(), tableName).set(null))
-    .then(onSuccess, onError);
+FirebaseStorage.deleteTable = function(tableName, type, onSuccess, onError) {
+  if (type === tableType.SHARED) {
+    getProjectDatabase()
+      .child(`current_tables/${tableName}`)
+      .set(null)
+      .then(onSuccess, onError);
+  } else {
+    const tableRef = getProjectDatabase().child(`storage/tables/${tableName}`);
+    const countersRef = getProjectDatabase().child(
+      `counters/tables/${tableName}`
+    );
+    tableRef
+      .set(null)
+      .then(() => countersRef.set(null))
+      .then(() => getColumnsRef(getProjectDatabase(), tableName).set(null))
+      .then(onSuccess, onError);
+  }
 };
 
 /**
@@ -598,21 +625,15 @@ function getRecordsData(records) {
  *     "table_name2": [{ "city": "Seattle", "state": "WA" }, { "city": "Chicago", "state": "IL"}]
  *   }
  * @param {bool} overwrite Whether to overwrite a table if it already exists.
- * @param {function ()} onSuccess Function to call on success.
- * @param {function} onError Function to call with an error in case of failure.
+ * @returns {Promise} which resolves when all table data has been written
  */
-FirebaseStorage.populateTable = function(
-  jsonData,
-  overwrite,
-  onSuccess,
-  onError
-) {
+FirebaseStorage.populateTable = function(jsonData, overwrite) {
   if (!jsonData || !jsonData.length) {
-    return;
+    return Promise.resolve();
   }
   // Ensure rate limit counters have been initialized, so that updates to the
   // counters/tables node will pass type definition checks in the security rules.
-  incrementRateLimitCounters()
+  return incrementRateLimitCounters()
     .then(() => getExistingTables(overwrite))
     .then(existingTables => {
       const promises = [];
@@ -632,8 +653,7 @@ FirebaseStorage.populateTable = function(
         }
       }
       return Promise.all(promises);
-    })
-    .then(onSuccess, onError);
+    });
 };
 
 /**
