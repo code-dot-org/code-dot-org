@@ -1253,6 +1253,10 @@ pl-PL:
           jeśli coś wydaje się źle.
         courseA_collector_loops_challenge1_b: Nie musisz używać pętli jeśli robisz
           coś tylko jeden raz.
+      courseA_harvester_loops2_2019:
+        courseA_harvester_loops2_a: "Twój kod będzie miał **cztery** klocki `move
+          west`\n\n<xml><block type=\"maze_moveWest\"/></xml>\n\ni **cztery** <xml>\n`pick
+          corn`\n  <block type=\"harvester_corn\"/>\n</xml> klocki. "
       courseA_harvester_loops3:
         courseA_harvester_loops3_b: Aby powtórzyć kod, przeciągnij pętlę `repeat`,
           następnie umieść tam blok, który chcesz aby się powtarzał.
@@ -1274,6 +1278,12 @@ pl-PL:
       courseA_maze_seq13_2019:
         courseA_maze_seq13_b: Nie bój się popełniać błędów! Spróbuj dodawać bloki
           i uruchom kod, aby zobaczyć co się stanie.
+        courseA_maze_seq13_c: |-
+          Te klocki <xml><block type="maze_moveNorth"/></xml>
+
+          <xml><block type="maze_moveEast"/></xml>
+
+           pomogą Ci zbliżyć się do świnki.
       courseA_maze_seq2:
         courseA_maze_seq2_b: Spróbuj najpierw uruchomić kod, aby zobaczyć gdzie ptak
           skończy. Dokąd musisz stąd iść?
@@ -2089,10 +2099,6 @@ pl-PL:
         courseF_artist_fwp_challenge1_e: Zarówno kolor każdego ośmiokąta jak i szerokość
           pióra są sterowane przez zmienną 'licznik'.
       courseF_artist_variables4:
-        courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
-      courseF_artist_variables4_2018:
-        courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
-      courseF_artist_variables4_2019:
         courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseF_artist_variables_challenge2:
         courseF_artist_variables_challenge2_a: 'Zmienne są pomocne, ponieważ można
