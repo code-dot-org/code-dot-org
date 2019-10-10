@@ -138,7 +138,7 @@ class SettingsCog extends Component {
           showTail={true}
         >
           <ManageAssets onClick={this.manageAssets} />
-          {experiments.isEnabled('student-libraries') && (
+          {experiments.isEnabled(experiments.STUDENT_LIBRARIES) && (
             <ManageLibraries onClick={this.manageLibraries} />
           )}
           {this.props.showMakerToggle && (

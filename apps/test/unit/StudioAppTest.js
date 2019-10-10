@@ -205,6 +205,7 @@ describe('StudioApp', () => {
 
     it('given empty libraries array, leaves the config unchanged', () => {
       let config = initialConfig;
+      config.level.libraries = [];
       studioApp().loadLibraryBlocks(config);
       expect(config).to.deep.equal(initialConfig);
     });

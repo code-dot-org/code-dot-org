@@ -26,6 +26,7 @@ experiments.APPLAB_DATASETS = 'applabDatasets';
 experiments.CENSUS_MAP_ON_MAPBOX = 'censusMapOnMapbox';
 experiments.DONOR_TEACHER_BANNER = 'donorTeacherBanner';
 experiments.ASSIGNMENT_UPDATES = 'assignmentUpdates';
+experiments.STUDENT_LIBRARIES = 'student-libraries';
 
 /**
  * Get our query string. Provided as a method so that tests can mock this.
