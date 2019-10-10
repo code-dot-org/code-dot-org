@@ -50,6 +50,9 @@ class QueuedAccountPurge < ApplicationRecord
   # It's possible to have a QueuedAccountPurge still around, pointing at an account that
   # has already been purged.  This method finds and removes those records.
   def self.clean_up_resolved_records!
+    # Not too worried about efficiency here because:
+    # a) It runs once every night, close to nadir traffic.
+    # b) Number of selected records should always be double-digits and below.
     joins(:user).where.not(users: {purged_at: nil}).destroy_all
   end
 end
