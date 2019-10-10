@@ -5427,3 +5427,8 @@ zh-TW:
               name: 巢狀迴圈
             Introduction to Debugging:
               name: 除錯 Debug 介紹
+        dance-2019:
+          stages:
+            Dance Party:
+              name: 舞蹈派對
+          description: 寫個你自己的舞蹈程式，並分享給朋友們！

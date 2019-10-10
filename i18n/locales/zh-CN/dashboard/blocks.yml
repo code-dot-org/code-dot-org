@@ -269,6 +269,31 @@ zh-CN:
             '"x"': 十字交叉
             '"plus"': 添加
             '"random"': 随机
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': 外星人
+            '"BEAR"': 玩具熊
+            '"CAT"': 猫
+            '"DOG"': 狗
+            '"DUCK"': 鸭子
+            '"FROG"': 青蛙
+            '"MOOSE"': 驼鹿
+            '"PINEAPPLE"': 菠萝
+            '"ROBOT"': 机器人
+            '"SHARK"': 鲨鱼
+            '"UNICORN"': 独角兽
+          LOCATION:
+            "{x: 200, y: 100}": 顶部
+            "{x: 200, y: 300}": 底部
+            "{x: 100, y: 200}": 向左
+            "{x: 300, y: 200}": 向右
+            "{x: 200, y: 200}": 中央
+            "{x: 100, y: 100}": 左上
+            "{x: 300, y: 100}": 右上
+            "{x: 100, y: 300}": 左下
+            "{x: 300, y: 300}": 右下
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": 随机
       Dancelab_makeNewDanceSprite:
         text: |-
           新建 {COSTUME}
@@ -538,6 +563,21 @@ zh-CN:
       Dancelab_setTint:
         text: 设置 {SPRITE} 色调为 {VAL}
       Dancelab_setTintEach:
+        text: 设置 {THIS} 色调为 {VAL}
+        options:
+          THIS:
+            sprites: 所有
+            '"ALIEN"': 所有外星人
+            '"BEAR"': 所有熊
+            '"CAT"': 所有猫
+            '"DOG"': 所有狗
+            '"DUCK"': 所有鸭子
+            '"FROG"': 所有青蛙
+            '"MOOSE"': 所有驼鹿
+            '"PINEAPPLE"': 所有菠萝
+            '"ROBOT"': 所有机器人
+            '"SHARK"': 所有鲨鱼
+      Dancelab_setTintEachInline:
         text: 设置 {THIS} 色调为 {VAL}
         options:
           THIS:

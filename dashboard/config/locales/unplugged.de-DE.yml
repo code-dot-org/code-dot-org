@@ -262,16 +262,29 @@ de:
           ob sich diese zwei Punkte (oder Spielcharaktere) berühren.
       courseA_unplugged_loops:
         title: 'Offline: Schleifen'
+        desc: In dieser Lektion lernst du Schleifen kennen!
       courseB_unplugged_MRF:
         title: Aktivität ohne Computer
+        desc: In dieser Lektion wirst du deine Freunde "programmieren"!
       courseB_unplugged_loopyMRF:
         title: Aktivität ohne Computer
+        desc: Genau wie in "My Robotic Friends" wirst du deine Freunde "programmieren",
+          aber diesmal mit Schleifen!
       courseC_Unplugged_ScreenOutTheMean:
         title: Aktivität ohne Computer
+        desc: Heute wirst du lernen, was zu tun ist, wenn jemand online gemein zu
+          dir ist.
       courseD_unplugged_digitalCitizenship:
         title: Aktivität ohne Computer
+        desc: Heute wirst du erfahren, was es bedeutet, ein digitaler Bürger zu sein.
+      courseE_unplugged_privateInformation:
+        title: 'Bildung für gesunden Menschenverstand: Private und persönliche Daten '
+        desc: Heute wirst du den Unterschied zwischen privaten und persönlichen Daten
+          lernen!
       courseF_unplugged_powerOfWords:
         title: Aktivität ohne Computer
+        desc: Heute wirst du lernen, was zu tun ist, wenn jemand online gemein zu
+          dir ist.
       courseAB_unplugged_plantASeed:
         title: 'Real-Life-Algorithmen: Pflanze Samen'
         desc: Diese Lektion behandelt die Anwendung von Algorithmen im Alltag, zum
@@ -343,6 +356,7 @@ de:
           das Konzept weiter und zeigt, wie Computer auch komplexe Informationen wie
           Bilder und Farben als Binärcode speichern können.
       courseE_unplugged_diceRace:
+        title: 'Real-Life Algorithmen: Würfelrennen'
         desc: In dieser Lektion wird die Verwendung von Algorithmen im täglichen Leben
           behandelt. Dazu identifizieren und schreiben die Schüler den Algorithmus
           für ein Würfelrennen.
@@ -391,6 +405,7 @@ de:
           zu Funktionen so nützlich ist.  '
       courseB_unplugged_MRF_2018:
         title: Meine Roboterfreunde
+        desc: Lerne zu programmieren, indem du Code für deine Freunde schreibst!
       PlantASeed_2018:
         title: 'Real-Life-Algorithmen: Pflanze Samen'
         desc: Diese Lektion behandelt die Anwendung von Algorithmen im Alltag, zum
@@ -406,6 +421,7 @@ de:
           erklären, wie Schüler sicher im Internet navigieren.
       courseA_unplugged_loops_2018:
         title: 'Offline: Schleifen'
+        desc: In dieser Lektion lernst du Schleifen kennen!
       BigEvent_2018:
         title: Der große Event
         desc: Schüler lernen das Programmierkonzept „Ereignis“ kennen. Dies ist eine
@@ -419,8 +435,11 @@ de:
           anweisen, ein Bild zu reproduzieren.
       courseD_unplugged_digitalCitizenship_2018:
         title: Aktivität ohne Computer
+        desc: Heute wirst du erfahren, was es bedeutet, ein digitaler Bürger zu sein.
       courseC_Unplugged_ScreenOutTheMean_2018:
         title: Aktivität ohne Computer
+        desc: Heute wirst du lernen, was zu tun ist, wenn jemand online gemein zu
+          dir ist.
       Conditionals_2018:
         title: Bedingungen
         desc: Als Einführung in bedingte Anweisungen spielen die Schüler ein Kartenspiel,
@@ -456,10 +475,17 @@ de:
           repräsentiert und gespeichert werden können.
       MoveItMoveIt_2018:
         title: Bewegung, Bewegung
+      courseB_unplugged_CnC_2018:
+        title: Es ist großartig etwas zu erschaffen und fair zu spielen
       RelayProgramming_2018:
         title: Relais-Programmierung
+        desc: Diese Aktivität beginnt mit einer kurzen Lektion über Debugging und
+          Beharrlichkeit. Anschließend kommt es zu einem Wettlauf mit der Zeit, wenn
+          sich die Schüler zu Teams zusammen finden und zusammenarbeiten, um ein Programm
+          zu schreiben. Eine Anweisung nach der anderen.
       courseB_unplugged_MRF_2019:
         title: Meine Roboterfreunde
+        desc: Lerne zu programmieren, indem du Code für deine Freunde schreibst!
       Conditionals_2019:
         title: Bedingungen
         desc: Als Einführung in bedingte Anweisungen spielen die Schüler ein Kartenspiel,
@@ -473,8 +499,13 @@ de:
           anweisen, ein Bild zu reproduzieren.
       RelayProgramming_2018_2019:
         title: Relais-Programmierung
+        desc: Diese Aktivität beginnt mit einer kurzen Lektion über Debugging und
+          Beharrlichkeit. Anschließend kommt es zu einem Wettlauf mit der Zeit, wenn
+          sich die Schüler zu Teams zusammen finden und zusammenarbeiten, um ein Programm
+          zu schreiben. Eine Anweisung nach der anderen.
       courseD_unplugged_digitalCitizenship_2019:
         title: Aktivität ohne Computer
+        desc: Heute wirst du erfahren, was es bedeutet, ein digitaler Bürger zu sein.
       BinaryImages_2019:
         title: Binärbilder
         desc: Viele Menschen denken bei Binärwerten an die Zahlen 1 und 0. In vorherigen
@@ -489,6 +520,8 @@ de:
           einfache Choreografie und werden angewiesen, diese zu wiederholen.
       courseC_Unplugged_ScreenOutTheMean_2019:
         title: Aktivität ohne Computer
+        desc: Heute wirst du lernen, was zu tun ist, wenn jemand online gemein zu
+          dir ist.
       BigEvent_2019:
         title: Der große Event
         desc: Schüler lernen das Programmierkonzept „Ereignis“ kennen. Dies ist eine
@@ -520,6 +553,7 @@ de:
           erklären, wie Schüler sicher im Internet navigieren.
       courseA_unplugged_loops_2019:
         title: 'Offline: Schleifen'
+        desc: In dieser Lektion lernst du Schleifen kennen!
       MoveItMoveIt_2019:
         title: Bewegung, Bewegung
       DigitalFootprint_2019:
@@ -527,11 +561,37 @@ de:
         desc: Die Lehrer vermitteln den Schülern, dass man einen digitalen Fußabdruck
           oder eine Fährte hinterlässt, wenn man Informationen über sich selbst ins
           Internet stellt, und erläutern mögliche Konsequenzen.
+      courseB_unplugged_CnC_2019:
+        title: Es ist großartig etwas zu erschaffen und fair zu spielen
+      GraphingData_2019:
+        desc: In dieser Lektion sammeln die Schüler Daten aus einem Play Lab-Projekt
+          oder einem realen Szenario. Diese werden verwenden um Vorhersagen zu treffen.
+      courseE_unplugged_accessAbility_2019:
+        desc: Erfahren Sie mehr über die Zugänglichkeit und den Wert von Empathie
+          durch Brainstorming und die Entwicklung zugänglicher Lösungen für mögliche
+          Apps.
+      courseE_simon_says_2019:
+        title: Simon sagt
+        desc: "Spielen Sie ein Spiel und überlegen Sie, welche Befehle benötigt werden,
+          um das richtige Ergebnis zu erzielen.\r\n\r\n![test image](https://code.org/images/logo.png)"
+      courseB_unplugged_passwords_2019:
+        title: Starke Passwörter
+        desc: Erfahre, warum Menschen Passwörter verwenden, lernen die Vorteile der
+          Verwendung von Passwörtern kennen und entdecke Strategien zur Erstellung
+          und Aufbewahrung starker und sicherer Passwörter.
       timeforcs_demo_crowdsourcing:
         title: Crowdsourcing
+        desc: '_Joshs Anmerkung: Im Gegensatz zur ersten Lektion habe ich diese wie
+          eine typische unplugged Lektion formatiert._'
       timeforcs_demo_conditionals:
         title: Bedingungen
         desc: Als Einführung in bedingte Anweisungen spielen die Schüler ein Kartenspiel,
           für welches sie Regeln wie "Wenn ich eine rote Karte ziehe, bekomme ich
           einen Punkt" und "Wenn ich eine schwarze Karte ziehe, bekommst du einen
           Punkt" erstellen.
+      TheRightApp_2019:
+        desc: "* Jeder benutzt heutzutage Computer, insbesondere Smartphones. \r\n*
+          Smartphone-Anwendungen oder \"Apps\" helfen Menschen mit Freunden zu reden,
+          Musik zu hören, einzukaufen oder einfach das Internet zu erkunden.\r\n*
+          Es ist wichtig für Programmierer, die Bedürfnisse anderer zu verstehen und
+          Anwendungen mit Blick auf sie zu entwickeln!\r\n\r\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"

@@ -10622,3 +10622,8 @@ zh-CN:
               name: 调试简介
             Nested Loops in Frozen:
               name: 冰雪奇缘里的嵌套循环
+        dance-2019:
+          stages:
+            Dance Party:
+              name: 舞蹈派对
+          description: 写出你自己的舞会代码，分享给你的朋友们！

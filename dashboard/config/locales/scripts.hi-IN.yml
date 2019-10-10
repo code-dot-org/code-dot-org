@@ -1235,3 +1235,7 @@ hi:
               name: परिचय
             Nested Loops:
               name: नेस्टड लूप्स
+        dance-2019:
+          stages:
+            Dance Party:
+              name: डांस पार्टी
