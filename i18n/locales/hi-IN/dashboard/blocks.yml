@@ -263,6 +263,31 @@ hi:
             '"x"': आड़ा-तिरछा
             '"plus"': जोड़
             '"random"': यादृच्छिक
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': एलियन
+            '"BEAR"': भालू
+            '"CAT"': बिल्ली
+            '"DOG"': कुत्ता
+            '"DUCK"': बत्तख
+            '"FROG"': मेंढक
+            '"MOOSE"': अमरीकी हिरण
+            '"PINEAPPLE"': अनानास
+            '"ROBOT"': रोबोट
+            '"SHARK"': शार्क
+            '"UNICORN"': गेंडा
+          LOCATION:
+            "{x: 200, y: 100}": ऊपर
+            "{x: 200, y: 300}": नीचे
+            "{x: 100, y: 200}": बाएं
+            "{x: 300, y: 200}": सही
+            "{x: 200, y: 200}": बीच में
+            "{x: 100, y: 100}": ऊपर बाएं
+            "{x: 300, y: 100}": ऊपर दाएं
+            "{x: 100, y: 300}": नीचे बाएं
+            "{x: 300, y: 300}": नीचे दाएं
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": यादृच्छिक
       Dancelab_makeNewDanceSprite:
         text: "{LOCATION} पर {NAME} नामक {COSTUME} बनाएं"
         options:
@@ -528,6 +553,20 @@ hi:
       Dancelab_setTint:
         text: "{SPRITE} की रंगत को {VAL} पर सेट करें"
       Dancelab_setTintEach:
+        text: "{THIS} रंगत को {VAL} पर सेट करें"
+        options:
+          THIS:
+            '"ALIEN"': सभी एलियन्स
+            '"BEAR"': सभी भालू
+            '"CAT"': सभी बिल्लियां
+            '"DOG"': सभी कुत्ते
+            '"DUCK"': सभी बत्तखें
+            '"FROG"': सभी मेंढक
+            '"MOOSE"': सभी अमरीकी हिरण
+            '"PINEAPPLE"': सभी अनानास
+            '"ROBOT"': सभी रोबोट
+            '"SHARK"': सभी शार्क्स
+      Dancelab_setTintEachInline:
         text: "{THIS} रंगत को {VAL} पर सेट करें"
         options:
           THIS:

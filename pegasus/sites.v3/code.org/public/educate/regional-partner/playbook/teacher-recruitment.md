@@ -7,7 +7,7 @@ noindex: true
 
 # District & School Recruitment
 
-Use these resources to help build local capacity for district and school recruitment to give partners a general outline of what to consider during recruitment. The tips are in general chronological order, however, the actual order may vary among districs and partners.
+Use these resources to help build local capacity for district and school recruitment to give partners a general outline of what to consider during recruitment. The tips are in general chronological order, however, the actual order may vary among districts and partners.
 
 ## Connect & Expand Your Network
 - Understand where CS is taught now and where it isn't with [data](https://docs.google.com/document/d/1qeOw9YiogQ9o75lsgQ5uRNr5jZBd92Tfjc26V2_ie78/view)
@@ -23,18 +23,18 @@ ________________
     - Know what [state level policies](https://code.org/educate/regional-partner/playbook/advocacy) matter in your area
     - Know how Code.org fits into district [curricula](https://code.org/educate/regional-partner/playbook/curriculum)
     - [CS Principles Curricula Comparison](https://docs.google.com/spreadsheets/d/1yMuKDTPWEVWVgHNi67v5sI3UR_W4hkh3dtHARtJIGJk/edit#gid=0) shows a comparison of some CS Principles providers
-- Show why CS is important (edit your own Administrator Brochure)
-- Know what works in [marketing](https://docs.google.com/document/d/15mnINzIbsNWl4NEAQMHZlExUI0JioRZcLKQgToK8UJk/edit?ts=5d8cd273#heading=h.vy1pdtnjamfr). See *[sample emails and guidelines](https://docs.google.com/document/d/1lL8TCh0R2jasKupOp_ELN4TrZo-IhfQUm5RnRyKqHrQ/edit)*
+- Show why CS is important (edit your own Administrator Brochure or use the [generic one](https://docs.google.com/presentation/d/1y2Massbn_i9fZ5QGOaFlGoZaX9nrKywVoklh649RE3s/edit#slide=id.g6303d7b1c5_0_0))
+- Know what works in [marketing](https://code.org/educate/regional-partner/playbook/communications). See *[sample emails and guidelines](https://docs.google.com/document/d/1lL8TCh0R2jasKupOp_ELN4TrZo-IhfQUm5RnRyKqHrQ/edit#heading=h.yfwh5hek7u8)*
 - Have district sign an [agreement](https://docs.google.com/document/d/1vnRvVw0wPiWKqO22eIQaozcEnkNSHUdWqlk06Eoi_7E/view) (here’s an *[example agreement](https://docs.google.com/document/d/1Mdj_riHQuTxjg5_7jjbz_AjsqQuAtnJUR0uon-P7e1E/view)*)
 
 
 
-#
+
 ________________
 <a id="teachapp"></a>
 ## Customize Shareable Resources
 
-- Application link (*Coming soon*)
+- [Application link](code.org/apply)
 - [Code.org Why CS Pitch Deck](https://docs.google.com/presentation/d/1PoCuK8zqQd_1m75deyJoUKbslybnBAWLOOoX4ww6NV0/view) can help your pitch on district implementation
 - [The K–12 Computer Science Framework](https://k12cs.org/) provides an organizing structure and guidance for states and school districts to create their own standards. The framework also informs curriculum and professional development. See [Figure 8.7](https://k12cs.org/wp-content/uploads/2016/09/K%E2%80%9312-Computer-Science-Framework.pdf) for sample implementation pathways
 - [Professional Learning Programs Overview 1-Pager](https://docs.google.com/document/d/1-jt3i9ep9dvxZAfvAcNeZybq5Af0PKYFPJTPuB5Pa1E/view) that you can customize
@@ -44,7 +44,7 @@ ________________
     - [Twitter](https://twitter.com/TeachCode/status/961018039935238144)
     - Make a video with your local teachers
 
-### Supporting Resources
+## Supporting Resources
 - [Fundraising opportunities](https://code.org/educate/regional-partner/playbook/funding)
 - [Teacher Application Process Doc](https://docs.google.com/document/d/15Dv9OncMEYnVmDvgDRFj1seB8mj4y8wj7-GitVxtzGY/view) includes the teacher application questions and process FAQs
    - Best fit for PD defined in the [rubric](https://drive.google.com/file/d/1070Jf9VKtuJLOQJTCaO7fxUWyLOEHBdK/view)
