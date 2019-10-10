@@ -1,5 +1,3 @@
-hidden false
-
 stage 'Sequencing with Scrat', flex_category: 'csf_sequencing'
 level 'courseAB_video_NewIntro_2019'
 skin 'jigsaw'
