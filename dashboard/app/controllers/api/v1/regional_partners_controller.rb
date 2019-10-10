@@ -4,6 +4,7 @@ class Api::V1::RegionalPartnersController < ApplicationController
   before_action :authenticate_user!, except: [:find, :show]
 
   include Pd::SharedWorkshopConstants
+  include Pd::Application::ActiveApplicationModels
 
   # GET /api/v1/regional_partners
   def index
@@ -31,7 +32,7 @@ class Api::V1::RegionalPartnersController < ApplicationController
         current_user.regional_partners.first.try(:id)
       end
 
-    render json: {enrolled: get_partner_enrolled_cohort(regional_partner_id, params[:role])}
+    render json: {enrolled: get_partner_enrollment_count(regional_partner_id, params[:role])}
   end
 
   # GET /api/v1/regional_partners/show/:id
@@ -96,10 +97,10 @@ class Api::V1::RegionalPartnersController < ApplicationController
   #
   # @param regional_partner_id [Integer]
   # @param role [String] a string contains workshop course and subject type, e.g. 'csp_teachers'
-  # @return [Integer]
+  # @return [Integer, nil] nil if regional_partner_id is invalid, otherwise returns a count
   # @see Api::V1::Pd::ApplicationsController:ROLES
   #
-  def get_partner_enrolled_cohort(regional_partner_id, role)
+  def get_partner_enrollment_count(regional_partner_id, role)
     partner = RegionalPartner.find_by_id(regional_partner_id)
     return unless partner
 
