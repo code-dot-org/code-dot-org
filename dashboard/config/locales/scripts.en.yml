@@ -653,6 +653,7 @@ en:
               name: Teaching Strategies
             What is CSP?:
               name: What is CSP?
+          description_audience: ''
         CSPLessonSamples:
           title: CSP Lesson Samples
           description: Lesson samples for CSP

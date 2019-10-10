@@ -172,7 +172,7 @@ const styles = {
     height: NAVBAR_HEIGHT,
     backgroundColor: color.purple,
     display: 'flex',
-    marginBottom: 30,
+    marginBottom: 10,
     overflow: 'hidden',
     position: 'relative'
   },
