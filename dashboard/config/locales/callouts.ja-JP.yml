@@ -8,6 +8,8 @@ ja-JP:
         Bee_Cond_5_1a: ムラサキ色の花は、1 または 0 の、ミツをもっていますが、プログラムを動（うご）かすまでは、わからないんです！
       4-5 Artist Patterns Free Play:
         4-5_Artist_Patterns_Free_Play_1: 全部のお気に入りブロックが、種類ごとに分けられました。これらの言葉をクリックすると、どうなったか確認できます。
+      4-5 Bee Conditionals 2:
+        4_5_Bee_Conditionals_2_1: すべてのくもの下で花があるか調べてね。ハチの巣か どうかは 調べなくていいよ。
       AppLab Intro 7 - Change Screen Color:
         applab_hoc_finish: '画面は緑に変わりましたか？もしそうならば「終了」を押してください。そうでなければ「リセット」を押して、プログラムを変更した後、もう一度「実行」を押してください。
 
@@ -138,8 +140,19 @@ ja-JP:
         craft_what_is_iron: 鉄を掘りましょう！
       Underground Iron_2019:
         craft_what_is_iron: 鉄を掘りましょう！
+      course2_bee_conditionals_challenge2:
+        courseD_bee_conditionals_challenge2_1: 花（または、ハチの巣）のところで、すべてのミツを集める（または、ハチミツをつくる）には、これを使います。
+      course3_artist_functions_challenge1:
+        courseE_artist_functions_challenge1_callout1: この下にプログラムを書きたそう。
+        courseE_artist_functions_challenge1_callout2: このデザインがイマイチなら、好きなデザインに変えてみよう。
+      course3_artist_functions_challenge2:
+        courseE_artist_functions_challenge2_callout1: この下にプログラムを書きたそう。
+        courseE_artist_functions_challenge2_callout2: このデザインがイマイチなら、好きなデザインに変えてみよう。
       course3_playLab_challenge1:
         courseC_PlayLab_events_challenge1_1: このブロックは、キャラを ほかの ばしょに いどうさせるのに つかいます。
+      course4_artist_functions_challenge2:
+        courseE_artist_functions_challenge2_callout1: この下にプログラムを書きたそう。
+        courseE_artist_functions_challenge2_callout2: このデザインがイマイチなら、好きなデザインに変えてみよう。
       courseA_artist_loops4:
         courseA_artist_loops4_1: いくつのブロックが つかえるか、この すうじを みてください。
       courseA_artist_loops4_2018:
@@ -176,6 +189,10 @@ ja-JP:
         courseA_collector_loops1_1: ツールボックスに あたらしい ブロックが ありますよ。あとで せつめいを するので、まっててね。
       courseA_collector_preLoops6:
         courseA_collector_loops1_1: ツールボックスに あたらしい ブロックが ありますよ。あとで せつめいを するので、まっててね。
+      courseA_maze_ramp2_2019:
+        courseC_maze_programming2_1: これはツールボックスで パズルをクリアするのに必要なブロックが入っています。
+      courseA_maze_ramp3a_2018:
+        courseC_maze_programming2_1: これはツールボックスで パズルをクリアするのに必要なブロックが入っています。
       courseA_maze_seq1:
         courseA_maze_seq1_1: ヒントが ほしいときは、でんきゅうを クリック！
       courseA_maze_seq1_2018:
@@ -208,6 +225,8 @@ ja-JP:
         grade2_CaringForNewPet_0_1: すべてのブロックをつなげたら「実行」を押してプログラムを開始してください。
       courseB_Scrat_ramp1_2019:
         grade2_CaringForNewPet_0_1: すべてのブロックをつなげたら「実行」を押してプログラムを開始してください。
+      courseB_Scrat_ramp3a_2019:
+        courseC_maze_programming2_1: これはツールボックスで パズルをクリアするのに必要なブロックが入っています。
       courseB_collector_loops1:
         courseB_collector_loops1_1: ツールボックスに あたらしい ブロックが ありますよ。あとで せつめいを するので、まっててね。
       courseB_maze_seq1:
@@ -218,6 +237,8 @@ ja-JP:
         courseB_maze_seq1: ヒントが ほしいときは、でんきゅうを クリック！
       courseB_maze_seq2:
         courseB_maze_seq2_callout1: ステップ ボタンを つかうと プログラムが ひとつずつ うごきます。これで バグを みつけよう！
+      courseC19_playLab_EOC3:
+        courseE_playLab_scaffold3_1: はたに目指して 主人公を動かそう。
       courseC_PlayLab_events8:
         courseC_PlayLab_events8_callout1: ペンギンが きょうりゅうに さわったとき につかうのは、このブロックです。
       courseC_PlayLab_events8_2018:
@@ -250,18 +271,41 @@ ja-JP:
         courseC_harvester_loops1_callout1: かぼちゃは、かぼちゃの右下に 書いてある数だけ あります。
       courseC_harvester_loops1_2019:
         courseC_harvester_loops1_callout1: かぼちゃは、かぼちゃの右下に 書いてある数だけ あります。
+      courseC_maze_debugging5:
+        courseC_maze_debugging5_1: 灰色のブロックは消せません！
       courseC_maze_programming1:
         grade2_CaringForNewPet_0_1: すべてのブロックをつなげたら「実行」を押してプログラムを開始してください。
       courseC_maze_programming1_2018:
         grade2_CaringForNewPet_0_1: すべてのブロックをつなげたら「実行」を押してプログラムを開始してください。
       courseC_maze_programming1_2019:
         grade2_CaringForNewPet_0_1: すべてのブロックをつなげたら「実行」を押してプログラムを開始してください。
+      courseC_maze_programming2:
+        courseC_maze_programming2_1: これはツールボックスで パズルをクリアするのに必要なブロックが入っています。
+      courseC_maze_programming2_2018:
+        courseC_maze_programming2_1: これはツールボックスで パズルをクリアするのに必要なブロックが入っています。
+      courseC_maze_programming2_2019:
+        courseC_maze_programming2_1: これはツールボックスで パズルをクリアするのに必要なブロックが入っています。
       courseC_maze_programming3:
+        courseC_maze_programming3_2: 余計なブロックを消すには、ドラックしてツールボックスに持っていきます。
         courseC_maze_programming3_3: はい色のブロックをけすことができません。
       courseC_maze_programming3_2018:
+        courseC_maze_programming3_2: 余計なブロックを消すには、ドラックしてツールボックスに持っていきます。
         courseC_maze_programming3_3: はい色のブロックをけすことができません。
       courseC_maze_programming3_2019:
+        courseC_maze_programming3_2: 余計なブロックを消すには、ドラックしてツールボックスに持っていきます。
         courseC_maze_programming3_3: はい色のブロックをけすことができません。
+      courseC_maze_programming4:
+        courseC_maze_programming4_1: ブロックの左上にある数字は、そのブロックを使用する回数です。
+      courseC_maze_programming4_2018:
+        courseC_maze_programming4_1: ブロックの左上にある数字は、そのブロックを使用する回数です。
+      courseC_maze_programming4_2019:
+        courseC_maze_programming4_1: ブロックの左上にある数字は、そのブロックを使用する回数です。
+      courseC_maze_programming5:
+        '': ブロックの左上に数字がないので、何回でもそのブロックを使えるよ！
+      courseC_maze_programming5_2018:
+        '': ブロックの左上に数字がないので、何回でもそのブロックを使えるよ！
+      courseC_maze_programming5_2019:
+        '': ブロックの左上に数字がないので、何回でもそのブロックを使えるよ！
       courseC_maze_programming7:
         courseC_maze_programming7_1: これが、パズルへの さいしょの チャレンジです。あきらめずに がんばろう。
         courseC_maze_programming7_2: はい色のブロックはけすことができません。
@@ -286,32 +330,146 @@ ja-JP:
       courseD_artist_ramp11:
         courseD_artist_ramp11_1: この数字は かえることができます。
         courseD_artist_ramp11_2: ここをクリックして、くりかえしの回数をかえてみよう。
+      courseD_bee_conditionals2:
+        4_5_Bee_Conditionals_2_1: すべてのくもの下で花があるか調べてね。ハチの巣か どうかは 調べなくていいよ。
+        4_5_Bee_Conditionals_2_2: わからないときは、ここをクリックしてビデオを見てみよう。
+      courseD_bee_conditionals2_2018:
+        4_5_Bee_Conditionals_2_1: すべてのくもの下で花があるか調べてね。ハチの巣か どうかは 調べなくていいよ。
+      courseD_bee_conditionals2_2019:
+        4_5_Bee_Conditionals_2_1: すべてのくもの下で花があるか調べてね。ハチの巣か どうかは 調べなくていいよ。
+      courseD_bee_conditionals_challenge2:
+        courseD_bee_conditionals_challenge2_1: 花（または、ハチの巣）のところで、すべてのミツを集める（または、ハチミツをつくる）には、これを使います。
+      courseD_bee_conditionals_challenge2_2018:
+        courseD_bee_conditionals_challenge2_1: 花（または、ハチの巣）のところで、すべてのミツを集める（または、ハチミツをつくる）には、これを使います。
+      courseD_bee_conditionals_challenge2_2019:
+        courseD_bee_conditionals_challenge2_1: 花（または、ハチの巣）のところで、すべてのミツを集める（または、ハチミツをつくる）には、これを使います。
       courseD_collector_ramp8:
         courseD_collector_ramp8_1: 'このブロックを使えば、たからものを１つ集めることができるよ。  '
+      courseD_maze_intro4_2019:
+        courseC_maze_programming4_1: ブロックの左上にある数字は、そのブロックを使用する回数です。
+      courseD_maze_intro5a_2019:
+        '': ブロックの左上に数字がないので、何回でもそのブロックを使えるよ！
       courseD_maze_ramp1:
         grade2_CaringForNewPet_0_1: すべてのブロックをつなげたら「実行」を押してプログラムを開始してください。
       courseD_maze_ramp1_2018:
         grade2_CaringForNewPet_0_1: すべてのブロックをつなげたら「実行」を押してプログラムを開始してください。
       courseD_maze_ramp1_2019:
         grade2_CaringForNewPet_0_1: すべてのブロックをつなげたら「実行」を押してプログラムを開始してください。
+      courseD_maze_ramp2:
+        courseC_maze_programming2_1: これはツールボックスで パズルをクリアするのに必要なブロックが入っています。
+      courseD_maze_ramp2_2018:
+        courseC_maze_programming2_1: これはツールボックスで パズルをクリアするのに必要なブロックが入っています。
+      courseD_maze_ramp2_2019:
+        courseC_maze_programming2_1: これはツールボックスで パズルをクリアするのに必要なブロックが入っています。
+      courseD_maze_ramp3:
+        courseC_maze_programming3_2: 余計なブロックを消すには、ドラックしてツールボックスに持っていきます。
+        stone_block_2: 灰色のブロックは消せません。
+      courseD_maze_ramp3_2018:
+        courseC_maze_programming3_2: 余計なブロックを消すには、ドラックしてツールボックスに持っていきます。
+        stone_block_2: 灰色のブロックは消せません。
+      courseD_maze_ramp3_2019:
+        courseC_maze_programming3_2: 余計なブロックを消すには、ドラックしてツールボックスに持っていきます。
+      courseD_maze_ramp4:
+        courseC_maze_programming4_1: ブロックの左上にある数字は、そのブロックを使用する回数です。
+      courseD_maze_ramp4_2018:
+        courseC_maze_programming4_1: ブロックの左上にある数字は、そのブロックを使用する回数です。
+      courseD_maze_ramp4_2019:
+        courseC_maze_programming4_1: ブロックの左上にある数字は、そのブロックを使用する回数です。
+      courseD_maze_ramp5:
+        '': ブロックの左上に数字がないので、何回でもそのブロックを使えるよ！
+      courseD_maze_ramp5_2018:
+        '': ブロックの左上に数字がないので、何回でもそのブロックを使えるよ！
+      courseD_maze_ramp5_2019:
+        '': ブロックの左上に数字がないので、何回でもそのブロックを使えるよ！
+      courseD_maze_ramp5a:
+        '': ブロックの左上に数字がないので、何回でもそのブロックを使えるよ！
+      courseD_maze_ramp5a_2018:
+        '': ブロックの左上に数字がないので、何回でもそのブロックを使えるよ！
+      courseD_maze_ramp5a_2019:
+        '': ブロックの左上に数字がないので、何回でもそのブロックを使えるよ！
+      courseD_playLab_condFP:
+        courseD_playLab_condFP_1: 使えるブロックは やりたいごとに まとまっています。クリックすれば、どんな命令があるか すべて見ることができます。
+      courseD_playLab_condFP_2018:
+        courseD_playLab_condFP_1: 使えるブロックは やりたいごとに まとまっています。クリックすれば、どんな命令があるか すべて見ることができます。
       courseD_scrat_ramp1:
         grade2_CaringForNewPet_0_1: すべてのブロックをつなげたら「実行」を押してプログラムを開始してください。
+      courseD_scrat_ramp2:
+        courseC_maze_programming2_1: これはツールボックスで パズルをクリアするのに必要なブロックが入っています。
+      courseD_scrat_ramp3:
+        courseC_maze_programming3_2: 余計なブロックを消すには、ドラックしてツールボックスに持っていきます。
+      courseD_scrat_ramp4:
+        courseC_maze_programming4_1: ブロックの左上にある数字は、そのブロックを使用する回数です。
+      courseD_scrat_ramp5:
+        '': ブロックの左上に数字がないので、何回でもそのブロックを使えるよ！
       courseD_scrat_ramp8:
         courseD_maze_ramp7_1: これが、パズルへの さいしょの チャレンジです。あきらめずに がんばろう。
+      courseE_artist_functions1:
+        courseD_artist_functions1_1: この命令で四角形をかくことから始めよう。
       courseE_artist_functions2:
         courseD_artist_functions2_1: この緑のブロックが実行されるとき関数内のすべてのプログラムが実行されます。最初の四角を描いた後、アーティストは何をすべきでしょう？
       courseE_artist_functions2_2018:
         courseD_artist_functions2_1: この緑のブロックが実行されるとき関数内のすべてのプログラムが実行されます。最初の四角を描いた後、アーティストは何をすべきでしょう？
       courseE_artist_functions2_2019:
         courseD_artist_functions2_1: この緑のブロックが実行されるとき関数内のすべてのプログラムが実行されます。最初の四角を描いた後、アーティストは何をすべきでしょう？
+      courseE_artist_functions8:
+        courseD_artist_functions8_1: 関数を作る命令は、ここをクリックすると出てきます。
+      courseE_artist_functions8a_2018:
+        courseD_artist_functions8_1: 関数を作る命令は、ここをクリックすると出てきます。
+      courseE_artist_functions8a_2019:
+        courseD_artist_functions8_1: 関数を作る命令は、ここをクリックすると出てきます。
+      courseE_artist_functions_challenge1:
+        courseE_artist_functions_challenge1_callout1: この下にプログラムを書きたそう。
+        courseE_artist_functions_challenge1_callout2: このデザインがイマイチなら、好きなデザインに変えてみよう。
+      courseE_artist_functions_challenge1_2018:
+        courseE_artist_functions_challenge1_callout1: この下にプログラムを書きたそう。
+        courseE_artist_functions_challenge1_callout2: このデザインがイマイチなら、好きなデザインに変えてみよう。
+      courseE_artist_functions_challenge1_2019:
+        courseE_artist_functions_challenge1_callout1: この下にプログラムを書きたそう。
+        courseE_artist_functions_challenge1_callout2: このデザインがイマイチなら、好きなデザインに変えてみよう。
+      courseE_artist_functions_challenge2:
+        courseE_artist_functions_challenge2_callout1: この下にプログラムを書きたそう。
+        courseE_artist_functions_challenge2_callout2: このデザインがイマイチなら、好きなデザインに変えてみよう。
+      courseE_artist_functions_challenge2_2018:
+        courseE_artist_functions_challenge2_callout1: この下にプログラムを書きたそう。
+        courseE_artist_functions_challenge2_callout2: このデザインがイマイチなら、好きなデザインに変えてみよう。
+      courseE_artist_functions_challenge2_2019:
+        courseE_artist_functions_challenge2_callout1: この下にプログラムを書きたそう。
+        courseE_artist_functions_challenge2_callout2: このデザインがイマイチなら、好きなデザインに変えてみよう。
       courseE_artist_ramp8:
         courseE_artist_ramp8_1: この数字は かえることができます。
         courseE_artist_ramp8_2: ここをクリックして、くりかえしの回数をかえてみよう。
       courseE_artist_ramp8_2:
         courseE_artist_ramp8_1: この数字は かえることができます。
         courseE_artist_ramp8_2: ここをクリックして、くりかえしの回数をかえてみよう。
+      courseE_farmer_functions1:
+        courseE_farmer_functions1_2: こんどのツールボックスは前とちょっとちがいます。クリックすると そのカテゴリに ある命令が
+          出てきます。
+      courseE_farmer_functions13_2018:
+        courseE_farmer_functions1a_1: この作物は 何かわからないよ。プログラムが 実行される度に 変わります。
+      courseE_farmer_functions13_2019:
+        courseE_farmer_functions1a_1: この作物は 何かわからないよ。プログラムが 実行される度に 変わります。
+      courseE_farmer_functions1_2018:
+        courseE_farmer_functions1_2: こんどのツールボックスは前とちょっとちがいます。クリックすると そのカテゴリに ある命令が
+          出てきます。
+      courseE_farmer_functions1_2019:
+        courseE_farmer_functions1_2: こんどのツールボックスは前とちょっとちがいます。クリックすると そのカテゴリに ある命令が
+          出てきます。
+      courseE_farmer_functions1a:
+        courseE_farmer_functions1a_1: この作物は 何かわからないよ。プログラムが 実行される度に 変わります。
+      courseE_farmer_functions1a_2018:
+        courseE_farmer_functions1a_1: この作物は 何かわからないよ。プログラムが 実行される度に 変わります。
+      courseE_farmer_functions1a_2019:
+        courseE_farmer_functions1a_1: この作物は 何かわからないよ。プログラムが 実行される度に 変わります。
+      courseE_farmer_functions2b:
+        courseE_farmer_functions1a_1: この作物は 何かわからないよ。プログラムが 実行される度に 変わります。
+      courseE_farmer_functions2b_2018:
+        courseE_farmer_functions1a_1: この作物は 何かわからないよ。プログラムが 実行される度に 変わります。
+      courseE_farmer_functions2b_2019:
+        courseE_farmer_functions1a_1: この作物は 何かわからないよ。プログラムが 実行される度に 変わります。
       courseE_playLab_challenge1:
         courseC_PlayLab_events_challenge1_1: このブロックは、キャラを ほかの ばしょに いどうさせるのに つかいます。
+      courseE_playLab_scaffold3:
+        courseE_playLab_scaffold3_1: はたに目指して 主人公を動かそう。
       frozen circle function with parameter:
         frozen_circle_function_with_parameter_circle: '"円を描く"ブロックを使い、そして大きさを変えてください。'
       frozen cross:

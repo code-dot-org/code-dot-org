@@ -266,6 +266,31 @@ he:
             '"x"': קְרִיס-קְרוֹס
             '"plus"': פלוס
             '"random"': אקראי
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': חייזר
+            '"BEAR"': דוב
+            '"CAT"': חתול
+            '"DOG"': כלב
+            '"DUCK"': ברווז
+            '"FROG"': צפרדע
+            '"MOOSE"': מוּס
+            '"PINEAPPLE"': אננס
+            '"ROBOT"': רובוט
+            '"SHARK"': כריש
+            '"UNICORN"': חד-קרן
+          LOCATION:
+            "{x: 200, y: 100}": עליון
+            "{x: 200, y: 300}": תחתון
+            "{x: 100, y: 200}": שמאלה
+            "{x: 300, y: 200}": ימינה
+            "{x: 200, y: 200}": באמצע
+            "{x: 100, y: 100}": למעלה משמאל
+            "{x: 300, y: 100}": למעלה מימין
+            "{x: 100, y: 300}": למטה משמאל
+            "{x: 300, y: 300}": למטה מימין
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": אקראי
       Dancelab_makeNewDanceSprite:
         text: |-
           צור {COSTUME} חדש
@@ -537,6 +562,21 @@ he:
       Dancelab_setTint:
         text: קבע גוון של {SPRITE} ל {VAL}
       Dancelab_setTintEach:
+        text: קבע גוון של {THIS} ל {VAL}
+        options:
+          THIS:
+            sprites: כולם
+            '"ALIEN"': כל החייזרים
+            '"BEAR"': כל הדובים
+            '"CAT"': כל החתולים
+            '"DOG"': כל הכלבים
+            '"DUCK"': כל הברווזים
+            '"FROG"': כל הצפרדעים
+            '"MOOSE"': כל המוּסים
+            '"PINEAPPLE"': כל האננסים
+            '"ROBOT"': כל הרובוטים
+            '"SHARK"': כל הכרישים
+      Dancelab_setTintEachInline:
         text: קבע גוון של {THIS} ל {VAL}
         options:
           THIS:

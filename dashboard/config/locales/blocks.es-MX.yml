@@ -267,6 +267,31 @@ es-MX:
             '"x"': entrecruzado
             '"plus"': más
             '"random"': al azar
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': Extraterrestre
+            '"BEAR"': Oso
+            '"CAT"': Gato
+            '"DOG"': Perro
+            '"DUCK"': Pato
+            '"FROG"': Rana
+            '"MOOSE"': Alce
+            '"PINEAPPLE"': Piña
+            '"ROBOT"': Robot
+            '"SHARK"': Tiburón
+            '"UNICORN"': Unicornio
+          LOCATION:
+            "{x: 200, y: 100}": arriba
+            "{x: 200, y: 300}": abajo
+            "{x: 100, y: 200}": izquierda
+            "{x: 300, y: 200}": derecha
+            "{x: 200, y: 200}": centro
+            "{x: 100, y: 100}": arriba a la izquierda
+            "{x: 300, y: 100}": arriba a la derecha
+            "{x: 100, y: 300}": abajo a la izquierda
+            "{x: 300, y: 300}": abajo a la derecha
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": al azar
       Dancelab_makeNewDanceSprite:
         text: |-
           Haz un nuevo {COSTUME}
@@ -538,6 +563,21 @@ es-MX:
       Dancelab_setTint:
         text: definir tinte {SPRITE} a {VAL}
       Dancelab_setTintEach:
+        text: establecer tonalidad {THIS} a {VAL}
+        options:
+          THIS:
+            sprites: todo
+            '"ALIEN"': todos los extraterrestres
+            '"BEAR"': todos los osos
+            '"CAT"': todos los gatos
+            '"DOG"': todos los perros
+            '"DUCK"': todos los patos
+            '"FROG"': todas las ranas
+            '"MOOSE"': todos los alces
+            '"PINEAPPLE"': todas las piñas
+            '"ROBOT"': todos los robots
+            '"SHARK"': todos los tiburones
+      Dancelab_setTintEachInline:
         text: establecer tonalidad {THIS} a {VAL}
         options:
           THIS:
@@ -1186,7 +1226,10 @@ es-MX:
         text: aalab sprite {SPRITE} inicia {BEHAVIOR} durante {SECONDS} segundos
       aalab_addBehaviorUntilBoolean:
         text: sprite {SPRITE} inicia {BEHAVIOR} hasta {CONDITION}
+      aalab_createNewSpriteAnonReturn2:
+        text: nuevo sprite llamado{SPRITE_NAME} con disfraz{ANIMATION_NAME} en ubicación{LOCATION}
       aalab_goToScene:
+        text: ir a escena {SCENE}
         options:
           SCENE:
             '1': '1'
@@ -1195,12 +1238,16 @@ es-MX:
       aalab_prompt:
         text: preguntar {MESSAGE}
       aalab_scene:
+        text: escena {SCENE}
         options:
           SCENE:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_setupStory:
+        text: configurar historia
       aalab_showHideSprite:
+        text: "{OPTION}{SPRITE}"
         options:
           OPTION:
             '"show"': mostrar

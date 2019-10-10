@@ -76,6 +76,12 @@ ga:
             sprites: uile
           FORMAT:
             '"random"': randamach
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": ar chlé
+            "{x: 300, y: 200}": ar dheis
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": randamach
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
@@ -160,6 +166,10 @@ ga:
             '"scale"': méid
             '"height"': airde
       Dancelab_setTintEach:
+        options:
+          THIS:
+            sprites: uile
+      Dancelab_setTintEachInline:
         options:
           THIS:
             sprites: uile

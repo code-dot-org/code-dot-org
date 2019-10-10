@@ -2481,6 +2481,10 @@ tr-TR:
 
           -   Hangi değer hareket hızını kontrol ediyor?
       course1_artist_loops_challenge1:
+        courseA_artist_loops_challenge1_a: |-
+          Duvarları ve çatıyı yapmak için döngü bloğunu kullanabilirsin. Farklı kodlar kullanmayı dene [0]!
+
+          Kendi kodunu yaz ya da [1] ipucuna tıkla!
         courseA_artist_loops_challenge1_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         courseA_artist_loops_challenge1_c: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         courseA_artist_loops_challenge1_d: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
@@ -6199,15 +6203,6 @@ tr-TR:
         courseC_harvester_loops_challenge1_a: Döngü kullanmadan bunu yapmak çook zor!
         courseC_harvester_loops_challenge1_b: "`ilerle` ve `mısır al`ı ihtiyacın olduğu
           kadar tekrar edip, her köşede `sağa dön` yapabilirsin."
-        courseC_harvester_loops_challenge1_c: "İlk dört mısırı toplamanın en iyi yolu,
-          'tekrarla' bloğunun içinde başka bir 'tekrarla' bloğunu kullanmaktır. Bu
-          deseni bulmacanın geri kalanı için de kullanabilirsin. \n\n<xml>\n<block
-          type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block
-          type=\"controls_repeat\">\n<title name=\"TIMES\">2</title>\n<statement name=\"DO\">\n<block
-          type=\"controls_repeat\">\n<title name=\"TIMES\">2</title>\n<statement name=\"DO\">\n<block
-          type=\"maze_move\">\n<title name=\"DIR\">moveForward</title>\n<next>\n<block
-          type=\"harvester_corn\"/>\n</next>\n</block>\n</statement>\n<next>\n<block
-          type=\"maze_turn\">\n<title name=\"DIR\">turnRight</title>\n</block>\n</next>\n</block>\n</statement>\n</block></next></block></xml>"
       courseC_harvester_loops_challenge1a_2019:
         courseC_harvester_loops_challenge1_a: Döngü kullanmadan bunu yapmak çook zor!
         courseC_harvester_loops_challenge1_b: "`ilerle` ve `mısır al`ı ihtiyacın olduğu
@@ -8742,8 +8737,6 @@ tr-TR:
       courseE_bee_concept3_2018:
         courseE_bee_concept3a_b: Döngüyü nereye koyacağınızı bulamıyorsanız, kodunuzu
           adım adım yazmayı deneyin ve desenlere bakın.
-        courseE_bee_concept3a_c: Üç grup çiçek var, bu yüzden dış döngünüz üç kez
-          tekrarlanmalı.
       courseE_bee_concept4:
         courseE_bee_concept4_b: Basamak deseni, çiçekler ve balpeteklerinin tamamını
           geçmenize yardımcı olabilir.
@@ -9734,13 +9727,11 @@ tr-TR:
           Sanatçınızın takip edeceği desen bu:
 
           ![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)
-        courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseF_artist_variables4_2019:
         courseF_artist_variables4_c: |-
           Sanatçınızın takip edeceği desen bu:
 
           ![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)
-        courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseF_artist_variables5:
         courseF_artist_variables5_b: Kodunuzun ilk yarısı üç tane üçgen çizecek, kodunuzun
           ikinci yarısı diğer üç taneyi çizecek.

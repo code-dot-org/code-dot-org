@@ -42,6 +42,12 @@ ms:
         options:
           FORMAT:
             '"random"': rawak
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": kiri
+            "{x: 300, y: 200}": kanan
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": rawak
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:

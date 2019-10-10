@@ -259,6 +259,31 @@ bs:
             '"x"': unakrsno
             '"plus"': plus
             '"random"': slučajno odabran
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': Vanzemaljac
+            '"BEAR"': Medvjed
+            '"CAT"': Mačka
+            '"DOG"': Pas
+            '"DUCK"': Patka
+            '"FROG"': Žaba
+            '"MOOSE"': Los
+            '"PINEAPPLE"': Ananas
+            '"ROBOT"': Robot
+            '"SHARK"': Ajkula
+            '"UNICORN"': Jednorog
+          LOCATION:
+            "{x: 200, y: 100}": vrh
+            "{x: 200, y: 300}": dno
+            "{x: 100, y: 200}": lijevo
+            "{x: 300, y: 200}": desno
+            "{x: 200, y: 200}": centralna
+            "{x: 100, y: 100}": gornja lijeva
+            "{x: 300, y: 100}": donja desna
+            "{x: 100, y: 300}": donja lijeva
+            "{x: 300, y: 300}": donja desna
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": slučajno odabran
       Dancelab_makeNewDanceSprite:
         text: |-
           kreiraj novi {COSTUME}
@@ -528,6 +553,20 @@ bs:
       Dancelab_setTint:
         text: podesi {SPRITE} nijanse na {VAL}
       Dancelab_setTintEach:
+        text: podesi {THIS} nijanse na {VAL}
+        options:
+          THIS:
+            '"ALIEN"': svi vanzemaljci
+            '"BEAR"': svi medvjedi
+            '"CAT"': sve mačke
+            '"DOG"': svi psi
+            '"DUCK"': sve patke
+            '"FROG"': sve žabe
+            '"MOOSE"': svi losovi
+            '"PINEAPPLE"': svi ananasi
+            '"ROBOT"': svi roboti
+            '"SHARK"': sve ajkule
+      Dancelab_setTintEachInline:
         text: podesi {THIS} nijanse na {VAL}
         options:
           THIS:
