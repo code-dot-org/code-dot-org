@@ -73,7 +73,7 @@ Resources:
     Properties:
       EndpointIdentifier: !Sub "RDS-${AWS::StackName}"
       EndpointType: source
-      EngineName: mysql
+      EngineName: aurora
       ServerName: !Ref RDSHost
       Port: 3306
       Username: !Ref RDSUsername
@@ -112,7 +112,7 @@ Resources:
   DMS<%=task_name.underscore.camelize%>:
     Type: AWS::DMS::ReplicationTask
     Properties:
-      MigrationType: full-load-and-cdc
+      MigrationType: full-load
       ReplicationInstanceArn: !Ref TableauSync
       ReplicationTaskIdentifier: <%= task_name %>
       SourceEndpointArn: !Ref RDSEndpoint
