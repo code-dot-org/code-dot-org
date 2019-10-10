@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class ScriptActivityTest < ActiveSupport::TestCase
+class Queries::ScriptActivityTest < ActiveSupport::TestCase
   setup do
     @user = create :user
   end

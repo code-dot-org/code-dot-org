@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class ScriptActivityTest < ActiveSupport::TestCase
+class Policies::ScriptActivityTest < ActiveSupport::TestCase
   setup_all do
     @user = create :user
     @script = create :script
