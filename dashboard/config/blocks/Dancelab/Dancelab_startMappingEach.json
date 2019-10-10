@@ -1,12 +1,12 @@
 {
-  "category": "Groups",
+  "category": "Sprites",
   "config": {
-    "func": "changeMoveEachLR",
-    "blockText": "{GROUP} do {MOVE} {DIR} forever",
+    "func": "startMappingEach",
+    "blockText": "{GROUP} begin {PROPERTY} following {RANGE}",
     "color": [
-      270,
-      ".7",
-      ".7"
+      136,
+      0.84,
+      0.8
     ],
     "args": [
       {
@@ -63,80 +63,52 @@
         ]
       },
       {
-        "name": "MOVE",
+        "name": "PROPERTY",
         "options": [
           [
-            "(Next)",
-            "\"next\""
+            "size",
+            "\"scale\""
           ],
           [
-            "(Previous)",
-            "\"prev\""
+            "width",
+            "\"width\""
           ],
           [
-            "(Random)",
-            "\"rand\""
+            "height",
+            "\"height\""
           ],
           [
-            "Body Roll",
-            "MOVES.Roll"
+            "rotation",
+            "\"rotation\""
           ],
           [
-            "Clap High",
-            "MOVES.ClapHigh"
+            "horizontal position",
+            "\"x\""
           ],
           [
-            "Dab",
-            "MOVES.Dab"
+            "vertical position",
+            "\"y\""
           ],
           [
-            "Double Down",
-            "MOVES.DoubleJam"
-          ],
-          [
-            "Drop",
-            "MOVES.Drop"
-          ],
-          [
-            "Floss",
-            "MOVES.Floss"
-          ],
-          [
-            "Fresh",
-            "MOVES.Fresh"
-          ],
-          [
-            "Gangnam",
-            "MOVES.Clown"
-          ],
-          [
-            "Star",
-            "MOVES.Kick"
-          ],
-          [
-            "This or That",
-            "MOVES.ThisOrThat"
-          ],
-          [
-            "Zombie",
-            "MOVES.Thriller"
-          ],
-          [
-            "None",
-            "MOVES.Rest"
+            "tint",
+            "\"tint\""
           ]
         ]
       },
       {
-        "name": "DIR",
+        "name": "RANGE",
         "options": [
           [
-            "←",
-            "-1"
+            "bass",
+            "\"bass\""
           ],
           [
-            "→",
-            "1"
+            "mid",
+            "\"mid\""
+          ],
+          [
+            "treble",
+            "\"treble\""
           ]
         ]
       }
