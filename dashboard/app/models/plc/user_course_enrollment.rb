@@ -15,6 +15,9 @@
 #  index_plc_user_course_enrollments_on_user_id_and_plc_course_id  (user_id,plc_course_id) UNIQUE
 #
 
+# Maps a user to a course they are enrolled in.
+#
+# Normally created when a teacher enrolls in a workshop with a corresponding PLC course.
 class Plc::UserCourseEnrollment < ActiveRecord::Base
   belongs_to :plc_course, class_name: '::Plc::Course'
   belongs_to :user, class_name: 'User'

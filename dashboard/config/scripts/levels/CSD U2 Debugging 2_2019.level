@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 155,
   "properties": {
-    "long_instructions": "# Debugging\r\n\r\n<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\r\n<details>\r\n\r\n<summary><strong>What is a bug?</strong></summary>\r\nBugs are mistakes in code which causes it not to work as planned.\r\n</details>\r\n\r\n<details>\r\n<summary><strong>What is debugging?</strong></summary>\r\nDebugging is the process of finding and fixing bugs.  Debugging is a problem solving process so use your problem solving steps as you try to debug. \r\n</details>\r\n\r\n<details>\r\n<summary><strong>What are some examples of bugs?</strong></summary>\r\n\r\nBugs can be anything that causes code not to work as planned.  Some examples are misspelling, putting code in the wrong place, using the wrong tag, or forgetting to close a tag.\r\n\r\n\r\n</details>\r\n</div>\r\n\r\nMore debugging practice!  This page is a little more challenging to debug than the last one.\r\n\r\n# Do This\r\n\r\n<img src=\"https://images.code.org/61190513dba270c731251df168b98f80-image-1474383960371.02.38 AM.png\" style=\"float:right;border:5px black solid;width:250px\">\r\n\r\n* Discuss with your partner what you think the bugs are in this page.\r\n* Find and fix all the bugs so that your page matches the one on the right.",
+    "long_instructions": "# Debugging\r\n\r\n<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\r\n\r\n::: details [**What is a bug?**]\r\nBugs are mistakes in code which causes it not to work as planned.\r\n:::\r\n\r\n\r\n::: details [**What is debugging?**]\r\nDebugging is the process of finding and fixing bugs.  Debugging is a problem solving process so use your problem solving steps as you try to debug. \r\n:::\r\n\r\n\r\n::: details [**What are some examples of bugs?**]\r\n\r\nBugs can be anything that causes code not to work as planned.  Some examples are misspelling, putting code in the wrong place, using the wrong tag, or forgetting to close a tag.\r\n\r\n\r\n:::\r\n\r\n</div>\r\n\r\nMore debugging practice!  This page is a little more challenging to debug than the last one.\r\n\r\n# Do This\r\n\r\n<img src=\"https://images.code.org/61190513dba270c731251df168b98f80-image-1474383960371.02.38 AM.png\" style=\"float:right;border:5px black solid;width:250px\">\r\n\r\n* Discuss with your partner what you think the bugs are in this page.\r\n* Find and fix all the bugs so that your page matches the one on the right.",
     "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \" <!DOCTYPE html>\\n<html>\\n\\t<head>\\n\\t</head>\\n\\t<body>\\n\\t\\t<h1>Cat Supplies</h1>\\n\\t\\tCat Toys\\n\\t\\tKeep your cat entertained!\\n\\t\\t<li>Lasers, Catnip Toys</li>\\n\\t\\t<li>Kitty Chew Toys</li>\\n\\t</body>\\n</html>\"\r\n    }\r\n  ]\r\n}",
     "encrypted_examples": "Hs2ZCDWRHEyYY2Wq3Mq8Vl+hdK2FY0s7c6sABetJUQNCvejn3ovt2ZMQGoSW\nH5+iVvim+w2HOyvCUXPAi2NXDw==\n",
     "instructions_important": "false",
@@ -19,10 +19,14 @@
       "/docs/concepts/html/images-in-html/"
     ],
     "map_reference": "/docs/concepts/html/formatting-html/",
-    "submittable": "false"
+    "submittable": "false",
+    "encrypted": "false",
+    "mini_rubric": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-05-11 04:34:31 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2019-01-30 02:38:23 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-05-11 04:34:31 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2019-01-30 02:38:23 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-10-03 22:15:25 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </Weblab>

@@ -5,7 +5,7 @@
 
 - if request.gdpr? || (rack_env == :test && request.params['show_cookie_banner_on_test'].present?)
   %link{rel:'stylesheet', type:'text/css', href:'/shared/css/cookie-banner.css'}
-  %script{src: minifiable_asset_path("js/cookieBanner.js")}
+  %script{src: webpack_asset_path("js/cookieBanner.js")}
 
   -# dashboard is passed as a parameter when the dashboard is rendering this banner.
   - dashboard ||= false

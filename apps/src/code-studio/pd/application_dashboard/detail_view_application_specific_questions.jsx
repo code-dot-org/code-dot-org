@@ -7,13 +7,13 @@ import {
   PageLabels as TeacherPageLabels,
   LabelOverrides as TeacherLabelOverrides,
   ValidScores as TeacherValidScores
-} from '@cdo/apps/generated/pd/teacher1920ApplicationConstants';
+} from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import {
   SectionHeaders as FacilitatorSectionHeaders,
   PageLabels as FacilitatorPageLabels,
   LabelOverrides as FacilitatorLabelOverrides,
   NumberedQuestions
-} from '@cdo/apps/generated/pd/facilitator1920ApplicationConstants';
+} from '@cdo/apps/generated/pd/facilitatorApplicationConstants';
 import PrincipalApprovalButtons from './principal_approval_buttons';
 
 const TEACHER = 'Teacher';

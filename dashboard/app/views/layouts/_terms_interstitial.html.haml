@@ -35,4 +35,4 @@
           = tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token)
       .clear
 
-%script{src: minifiable_asset_path('js/layouts/_terms_interstitial.js')}
+%script{src: webpack_asset_path('js/layouts/_terms_interstitial.js')}
