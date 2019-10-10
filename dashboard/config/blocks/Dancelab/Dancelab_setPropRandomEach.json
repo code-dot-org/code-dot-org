@@ -1,11 +1,11 @@
 {
   "category": "Groups",
   "config": {
-    "func": "setTintEachInline",
-    "blockText": "set {THIS} tint to {VAL}",
+    "func": "setPropRandomEach",
+    "blockText": "randomize {GROUP} {PROPERTY}",
     "args": [
       {
-        "name": "THIS",
+        "name": "GROUP",
         "options": [
           [
             "all",
@@ -58,9 +58,37 @@
         ]
       },
       {
-        "name": "VAL",
-        "type": "Colour",
-        "customInput": "limitedColourPicker"
+        "name": "PROPERTY",
+        "options": [
+          [
+            "size",
+            "\"scale\""
+          ],
+          [
+            "width",
+            "\"width\""
+          ],
+          [
+            "height",
+            "\"height\""
+          ],
+          [
+            "rotation",
+            "\"rotation\""
+          ],
+          [
+            "horizontal position",
+            "\"x\""
+          ],
+          [
+            "vertical position",
+            "\"y\""
+          ],
+          [
+            "tint",
+            "\"tint\""
+          ]
+        ]
       }
     ]
   }

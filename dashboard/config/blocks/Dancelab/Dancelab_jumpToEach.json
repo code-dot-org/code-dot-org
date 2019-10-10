@@ -1,13 +1,8 @@
 {
-  "category": "Groups",
+  "category": "Actions",
   "config": {
-    "func": "changeMoveEachLR",
-    "blockText": "{GROUP} do {MOVE} {DIR} forever",
-    "color": [
-      270,
-      ".7",
-      ".7"
-    ],
+    "func": "jumpToEach",
+    "blockText": "jump {GROUP} to {LOCATION}",
     "args": [
       {
         "name": "GROUP",
@@ -63,80 +58,47 @@
         ]
       },
       {
-        "name": "MOVE",
+        "name": "LOCATION",
         "options": [
           [
-            "(Next)",
-            "\"next\""
+            "top",
+            "{x: 200, y: 100}"
           ],
           [
-            "(Previous)",
-            "\"prev\""
+            "bottom",
+            "{x: 200, y: 300}"
           ],
           [
-            "(Random)",
-            "\"rand\""
+            "left",
+            "{x: 100, y: 200}"
           ],
           [
-            "Body Roll",
-            "MOVES.Roll"
+            "right",
+            "{x: 300, y: 200}"
           ],
           [
-            "Clap High",
-            "MOVES.ClapHigh"
+            "center",
+            "{x: 200, y: 200}"
           ],
           [
-            "Dab",
-            "MOVES.Dab"
+            "top left",
+            "{x: 100, y: 100}"
           ],
           [
-            "Double Down",
-            "MOVES.DoubleJam"
+            "top right",
+            "{x: 300, y: 100}"
           ],
           [
-            "Drop",
-            "MOVES.Drop"
+            "bottom left",
+            "{x: 100, y: 300}"
           ],
           [
-            "Floss",
-            "MOVES.Floss"
+            "bottom right",
+            "{x: 300, y: 300}"
           ],
           [
-            "Fresh",
-            "MOVES.Fresh"
-          ],
-          [
-            "Gangnam",
-            "MOVES.Clown"
-          ],
-          [
-            "Star",
-            "MOVES.Kick"
-          ],
-          [
-            "This or That",
-            "MOVES.ThisOrThat"
-          ],
-          [
-            "Zombie",
-            "MOVES.Thriller"
-          ],
-          [
-            "None",
-            "MOVES.Rest"
-          ]
-        ]
-      },
-      {
-        "name": "DIR",
-        "options": [
-          [
-            "←",
-            "-1"
-          ],
-          [
-            "→",
-            "1"
+            "random",
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}"
           ]
         ]
       }
