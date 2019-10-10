@@ -89,8 +89,8 @@ export const donorTeacherBannerOptionsShape = PropTypes.shape({
 export default class DonorTeacherBanner extends Component {
   static propTypes = {
     options: donorTeacherBannerOptionsShape,
-    onDismiss: PropTypes.func,
-    showPegasusLink: PropTypes.bool
+    showPegasusLink: PropTypes.bool,
+    source: PropTypes.string.isRequired
   };
 
   initialState = {
@@ -121,10 +121,29 @@ export default class DonorTeacherBanner extends Component {
 
     this.setState({submitted: true});
 
-    if (this.props.onDismiss) {
-      this.props.onDismiss();
-    }
+    this.dismiss();
   };
+
+  dismissWithCallbacks(onSuccess, onFailure) {
+    $.ajax({
+      url: '/dashboardapi/v1/users/me/dismiss_donor_teacher_banner',
+      type: 'post',
+      data: {
+        participate: this.state.participate,
+        source: this.props.source
+      }
+    })
+      .done(onSuccess)
+      .fail(onFailure);
+  }
+
+  logDismissError = xhr => {
+    console.log(`Failed to dismiss donor teacher banner! ${xhr.responseText}`);
+  };
+
+  dismiss() {
+    this.dismissWithCallbacks(null, this.logDismissError);
+  }
 
   renderDonorForm() {
     const permissionStyle = this.state.participate
@@ -148,6 +167,11 @@ export default class DonorTeacherBanner extends Component {
       schoolZip: 'school-zip'
     };
 
+    const schoolLink =
+      'https://support.code.org/hc/en-us/articles/360031291431-What-does-school-information-refer-to-';
+    const amazonLink =
+      'https://www.amazon.com/gp/help/customer/display.html?ie=UTF8&nodeId=468496';
+
     return (
       <div style={styles.main}>
         <div style={styles.message}>
@@ -161,11 +185,15 @@ export default class DonorTeacherBanner extends Component {
             computing resources.
           </div>
           <div style={styles.paragraph}>
-            Would you like to participate in the Amazon Future Engineer Program?
+            Would you like to participate in the{' '}
+            {!this.props.showPegasusLink && (
+              <span>Amazon Future Engineer Program?</span>
+            )}
             {this.props.showPegasusLink && (
               <span>
-                &nbsp;
-                <a href={pegasus('/amazon-future-engineer')}>Learn more</a>
+                <a href={pegasus('/amazon-future-engineer')}>
+                  Amazon Future Engineer Program? Learn more
+                </a>
               </span>
             )}
           </div>
@@ -214,18 +242,23 @@ export default class DonorTeacherBanner extends Component {
                 }
                 disabled={this.state.participate !== true}
               />
-              I give Code.org permission to share my name, email address, and
-              school information with Amazon.com (required to participate). Use
-              of your personal information by Amazon is subject to Amazon’s
-              Privacy Policy. You may be required to agree to additional terms
-              and conditions with Amazon directly.{' '}
-              <span style={styles.red}>*</span>
+              I give Code.org permission to share my name, email address, and{' '}
+              <a href={schoolLink} target="_blank">
+                school name and ID
+              </a>{' '}
+              with Amazon.com (required to participate). Use of your personal
+              information by Amazon is subject to{' '}
+              <a href={amazonLink} target="_blank">
+                Amazon’s Privacy Policy
+              </a>
+              . You may be required to agree to additional terms and conditions
+              with Amazon directly. <span style={styles.red}>*</span>
             </label>
           </div>
 
           <form
             id="hidden_form"
-            action="https://afe.qa.amazon-blogs.psdops.com/code-org-afe"
+            action="https://www.teachers-amazon-future-engineer.com/"
             method="post"
             target="_blank"
           >
@@ -248,6 +281,16 @@ export default class DonorTeacherBanner extends Component {
             text="Submit"
             disabled={buttonDisabled}
           />
+
+          {this.props.showPegasusLink && (
+            <Button
+              href={pegasus('/amazon-future-engineer')}
+              style={styles.button}
+              color={Button.ButtonColor.gray}
+              size="large"
+              text="Learn more"
+            />
+          )}
         </div>
         <div style={styles.clear} />
       </div>
@@ -262,7 +305,7 @@ export default class DonorTeacherBanner extends Component {
           notice="Your response has been submitted!"
           details="Thank you for your response.  If you are not redirected to the form in a few moments,"
           detailsLinkText="click here"
-          detailsLink="https://afe.qa.amazon-blogs.psdops.com/code-org-afe"
+          detailsLink="https://www.teachers-amazon-future-engineer.com/"
           detailsLinkNewWindow={true}
           dismissible={true}
         />

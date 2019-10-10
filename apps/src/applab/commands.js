@@ -920,6 +920,8 @@ applabCommands.textLabel = function(opts) {
   newLabel.id = opts.elementId;
   newLabel.style.position = 'relative';
   newLabel.style.borderStyle = 'solid';
+  // Set optimizeSpeed to ensure better text size consistency between Safari and Chrome
+  newLabel.style.textRendering = 'optimizeSpeed';
   elementLibrary.setAllPropertiesToCurrentTheme(
     newLabel,
     Applab.activeScreen()

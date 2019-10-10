@@ -41,6 +41,7 @@
     "CONTROLS_FOREACH_INPUT_ITEM": "za svaki predmet",
     "CONTROLS_FOREACH_TOOLTIP": "Za svaki element u listi, postavi da varijabla %1 ima vrijednost tog elementa, i onda izvrši neke naredbe.",
     "CONTROLS_FOR_HELPURL": "",
+    "CONTROLS_FOR_INPUT_COUNTER": "",
     "CONTROLS_FOR_INPUT_FROM_TO_BY": "od %1 do %2 racunati za %3",
     "CONTROLS_FOR_INPUT_WITH": "za",
     "CONTROLS_FOR_TOOLTIP": "Odredi da varijabla %1 poprimi vrijednosti od početnog broja do zadnjeg broja, računajući po određenim intervalima, i napravi navedene blokove.",

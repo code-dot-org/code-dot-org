@@ -89,7 +89,11 @@ export default function(state = initialState, action) {
         .set('isPreviewOpen', true)
         .set('tableName', action.tableName);
     case HIDE_PREVIEW:
-      return state.set('isPreviewOpen', false).set('tableName', '');
+      return state
+        .set('isPreviewOpen', false)
+        .set('tableName', '')
+        .set('tableRecords', {})
+        .set('tableColumns', []);
     default:
       return state;
   }

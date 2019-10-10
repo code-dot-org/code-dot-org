@@ -7007,33 +7007,6 @@ ka-GE:
         courseC_harvester_loops_challenge1_b: თქვენ შეგიძლიათ გამოიყენოთ `წინ მოძრაობა`
           და `სიმინდის შეგროვება` იმდენჯერ, რამდენჯერაც დაგჭირდებათ, შემდეგ კი შეტრიალდეთ
           მარჯვნივ ყოველ კუთხესთან.
-        courseC_harvester_loops_challenge1_c: |-
-          სიმინდის შესაგროვებლად საუკეთესო ამონახსნი იყენებს `გამეორების` ბლოკს სხვა `გამეორების` ბლოკის შიგნით. თქვენ შეგიძლიათ ამ ნიმუშის გამოყენება დანარჩენი თავსატეხისთვისაც!
-
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="controls_repeat">
-          <title name="TIMES">2</title>
-          <statement name="DO">
-          <block type="controls_repeat">
-          <title name="TIMES">2</title>
-          <statement name="DO">
-          <block type="maze_move">
-          <title name="DIR">მოძრაობაწინ</title>
-          <next>
-          <block type="harvester_corn"/>
-          </next>
-          </block>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">მობრუნებამარჯვნივ</title>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block></next></block></xml>
       courseC_harvester_loops_challenge1a_2019:
         courseC_harvester_loops_challenge1_a: ციკლების გარეშე ამის შესრულება ძალიან
           რთული იქნება!
@@ -7377,16 +7350,6 @@ ka-GE:
         courseC_starWars_loops4_b: 'ყოველ `გამეორების` ციკლში მოთავსდება მხოლოდ ერთი
           ბრძანება: `გადაადგილდეთ წინ`.'
       courseC_starWars_loops5:
-        courseC_starWars_loops5_b: ქვემოთ სამოძრაოდ უნდა შეტრიალდეთ და შემდეგ იმოძრაოთ
-          წინ.
-        courseC_starWars_loops5_a: ამოხსნის საუკეთესო გზა მობრუნებას, შემდეგ ერთ `წინ
-          გადაადგილებას`, კიდევ ერთ მობრუნებს და ციკლს იყენებს.
-      courseC_starWars_loops5_2018:
-        courseC_starWars_loops5_b: ქვემოთ სამოძრაოდ უნდა შეტრიალდეთ და შემდეგ იმოძრაოთ
-          წინ.
-        courseC_starWars_loops5_a: ამოხსნის საუკეთესო გზა მობრუნებას, შემდეგ ერთ `წინ
-          გადაადგილებას`, კიდევ ერთ მობრუნებს და ციკლს იყენებს.
-      courseC_starWars_loops5_2019:
         courseC_starWars_loops5_b: ქვემოთ სამოძრაოდ უნდა შეტრიალდეთ და შემდეგ იმოძრაოთ
           წინ.
         courseC_starWars_loops5_a: ამოხსნის საუკეთესო გზა მობრუნებას, შემდეგ ერთ `წინ
@@ -9769,8 +9732,6 @@ ka-GE:
       courseE_bee_concept3_2018:
         courseE_bee_concept3a_b: თუ არ შეგიძლიათ გაარკვიოთ, სად უნდა ჩასვათ ციკლი,
           სცადეთ ნაწილ-ნაწილ დაწეროთ ამოხსნა და მოძებნოთ გამეორებადი კოდი.
-        courseE_bee_concept3a_c: აქ ყვავილების სამი ჯგუფია, ამიტომ თქვენი გარე `გამეორების`
-          ციკლი უნდა მეორდებოდეს სამჯერ.
       courseE_bee_concept4:
         courseE_bee_concept4_b: კიბის საფეხური ნიმუში შეიძლება დაგეხმაროთ ყვავილებსა
           და ფიჭებში გაღწევაში.
@@ -10893,13 +10854,11 @@ ka-GE:
           ეს ის ნიმუშია, რომელსაც მიჰყვება მხატვარი:
 
           ![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)
-        courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseF_artist_variables4_2019:
         courseF_artist_variables4_c: |-
           ეს ის ნიმუშია, რომელსაც მიჰყვება მხატვარი:
 
           ![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)
-        courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseF_artist_variables5:
         courseF_artist_variables5_b: თქვენი კოდის პირველი ნაწილი დახატავს პირველ სამ
           სამკუთხედს, ხოლო მეორე სხვა სამ სამკუთხედს.

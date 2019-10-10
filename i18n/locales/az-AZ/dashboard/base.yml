@@ -1,3 +1,15 @@
+#Files in the config/locales directory are used for internationalization
+#and are automatically loaded by Rails. If you want to use locales other
+#than English, add the necessary files in this directory.
+#To use the locales, use `I18n.t`:
+#I18n.t 'hello'
+#In views, this is aliased to just `t`:
+#<%= t('hello') %>
+#To use a different locale, set it with `I18n.locale`:
+#I18n.locale = :es
+#This would use the information in config/locales/es.yml.
+#To learn more, please read the Rails Internationalization guide
+#available at http://guides.rubyonrails.org/i18n.html.
 az:
   errors:
     messages:
@@ -258,14 +270,12 @@ az:
     email_resend_confirm: 'Təsdiqləmə təlimatlarını yenidən göndər'
     new_password_hint: "(dəyişmək istəmirsinizsə, boş buraxın)"
     current_password_hint: '(dəyişikliklərinizi təsdiq etmək üçün cari parolunuz lazımdır)'
+    update_email: "Yenilə"
   user_level:
     completed: 'Tamamlandı'
     tried: 'Yoxlanıldı'
   home:
     title: "Mənim nəticələrim"
-    description: 'Kod Studiyası "Code.org" tərəfindən hazırlanmış onlayn kursların məskənidir'
-    lines_of_code: "ŞAGİRDLƏR %{lines_count} SƏTİR KOD YAZIB"
-    lines_of_code_linebreak: "%{students_count} MİLYON ŞAGİRD<br/>%{lines_count} SƏTİR KOD YAZIB"
     all_courses: "Kurs 1, 2 və 3-ün icmalı"
     lesson_plans: "Dərs planları"
     signin_message: "Artıq qeydiyyatdan keçmisiniz? %{link}"
@@ -288,11 +298,6 @@ az:
     trynow: 'Elə indi sınaqdan keçirin'
     20hour_overview: 'Bu 20 saatlıq kurs informatikanın əsasları və proqramlaşdırmanın əsas anlayışlarını təqdim edir. Kurs K-8 yaş qrupunda (12-13 yaşlılar) olan siniflərdə istifadə olunmaq üçün hazırlanıb, lakin öyrənmək hər yaşda əyləncəlidir.'
     use_as_teacher: 'Saytı müəllim olaraq istifadə edin'
-    heading_hoc2014: "<h2>Kod Saatı</h2><h1>Bütün yaşlar üçün</h1>"
-    heading_elementary: "<h2>20 saatlıq kurslar</h2><h1>Başlayanlar (bütün yaşlar) üçün</h1>"
-    heading_apps: "<h2>Əyləncə üçün</h2><h1>Hərkəs</h1>"
-    heading_tools: "<h2>Növbəti addım üçün hazırsan?</h2><h1> Universitet üçün JavaScript alətləri</h1>"
-    heading_legacy: "<h2>Bizim ümumi kursumuz</h2><h1>Bütün yaşlar üçün</h1>"
     your_gallery: Qalereya
     no_primary_course: "Code Studiosu kursunu yoxla"
     print_certificate: "Sertifikatı çap edin"

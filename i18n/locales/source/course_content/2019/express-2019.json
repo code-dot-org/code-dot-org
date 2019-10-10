@@ -683,8 +683,7 @@
     "short_instructions": "Get BB-8 to pick up all the scrap metal as quickly as possible!",
     "long_instructions": "[][0] _\"Go BB-8!\"_",
     "authored_hints": {
-      "courseC_starWars_loops5_b": "To move down, you have to turn and then move forward.",
-      "courseC_starWars_loops5_a": "The best solution uses a turn, then a single `move forward`, another turn, then a loop."
+      "courseC_starWars_loops5_a": "The best solution uses a single `move forward`, then a turn, then a loop."
     }
   },
   "https://studio.code.org/s/express-2019/stage/6/puzzle/8": {
@@ -2488,7 +2487,7 @@
     "authored_hints": {
       "courseF_artist_variables4_a": "Your code won't be much different than it was in the last puzzle, except that you will need to turn the artist to jump down, then turn him back to get ready to draw the next triangle.",
       "courseF_artist_variables4_c": "This is the pattern your artist will be following:\n\n[][0]",
-      "courseF_artist_variables4_b": "[][0]"
+      "courseF_artist_variables4_b": "[blockly block][0]"
     }
   },
   "https://studio.code.org/s/express-2019/stage/19/puzzle/8": {
@@ -3131,7 +3130,7 @@
     "callouts": {
       "behavior_callout": "Why isn't this behavior working for the middle star?",
       "star2_callout": "Remove this costume block and use the \"this sprite\" block instead.",
-      "this_sprite_callout": "Testing"
+      "this_sprite_callout": "Replace the costume block below with this."
     }
   },
   "https://studio.code.org/s/express-2019/stage/26/puzzle/5": {

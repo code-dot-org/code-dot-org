@@ -2,7 +2,7 @@ var testUtils = require('../../../util/testUtils');
 var tickWrapper = require('../../util/tickWrapper');
 import {TestResults} from '@cdo/apps/constants';
 var $ = require('jquery');
-var ReactTestUtils = require('react-dom/test-utils');
+var ReactTestUtils = require('react-addons-test-utils');
 
 // i'd like this test to not run through level tests, which has a lot of hacks,
 // but this is the easiest approach for now. hopefully at some point in the

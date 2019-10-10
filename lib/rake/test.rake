@@ -152,6 +152,7 @@ namespace :test do
         database = writer.path[1..-1]
         writer.path = ''
         opts = MysqlConsoleHelper.options(writer)
+        mysqldump_opts = "mysqldump #{opts} --skip-comments --set-gtid-purged=OFF"
 
         if seed_data
           File.write(seed_file, seed_data)
@@ -161,7 +162,7 @@ namespace :test do
           RakeUtils.rake_stream_output 'db:create db:test:prepare'
           ENV.delete 'TEST_ENV_NUMBER'
           # Store new DB contents
-          `mysqldump #{opts} #{database}1 --skip-comments | sed '#{auto_inc}' > #{seed_file.path}`
+          `#{mysqldump_opts} #{database}1 | sed '#{auto_inc}' > #{seed_file.path}`
           gzip_data = Zlib::GzipWriter.wrap(StringIO.new) {|gz| IO.copy_stream(seed_file.path, gz); gz.finish}.tap(&:rewind)
 
           s3_client.put_object(
@@ -173,7 +174,7 @@ namespace :test do
           CDO.log.info "Uploaded seed data to #{s3_key}"
         end
 
-        cloned_data = `mysqldump #{opts} #{database}2 --skip-comments | sed '#{auto_inc}'`
+        cloned_data = `#{mysqldump_opts} #{database}2 | sed '#{auto_inc}'`
         if seed_data.equal?(cloned_data)
           CDO.log.info 'Test data not modified'
         else

@@ -10,6 +10,7 @@ import Firmata from 'firmata';
 import {
   createCircuitPlaygroundComponents,
   cleanupCircuitPlaygroundComponents,
+  enableCircuitPlaygroundComponents,
   componentConstructors
 } from './PlaygroundComponents';
 import {
@@ -192,6 +193,15 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
     }
 
     this.fiveBoard_.on('disconnect', () => this.emit('disconnect'));
+  }
+
+  /**
+   * Enable existing board components
+   */
+  enableComponents() {
+    if (this.prewiredComponents_) {
+      enableCircuitPlaygroundComponents(this.prewiredComponents_);
+    }
   }
 
   /**

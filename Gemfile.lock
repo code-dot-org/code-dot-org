@@ -469,7 +469,7 @@ GEM
     hashery (2.1.2)
     hashie (3.6.0)
     highline (1.6.21)
-    honeybadger (3.3.0)
+    honeybadger (4.5.1)
     html2haml (2.2.0)
       erubis (~> 2.7.0)
       haml (>= 4.0, < 6)

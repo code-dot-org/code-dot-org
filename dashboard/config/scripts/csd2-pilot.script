@@ -2,7 +2,7 @@ login_required true
 hideable_stages true
 exclude_csf_column_in_legend true
 student_detail_progress_view true
-teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-19/unit2/"], ["teacherForum", "https://forum.code.org/c/csd"]]
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-20/unit2/"], ["teacherForum", "https://forum.code.org/c/csd"]]
 has_verified_resources true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/csd-20/unit2/{LESSON}'

@@ -12,6 +12,6 @@
 - data[:user_id] = @current_user.try(:id)
 
 - content_for(:head) do
-  %script{ src: minifiable_asset_path('js/courses/show.js'), data: {courses_show: data.to_json}}
+  %script{ src: webpack_asset_path('js/courses/show.js'), data: {courses_show: data.to_json}}
 
 #course_overview

@@ -248,6 +248,29 @@ ku:
             '"x"': بەیەکداچوو
             '"plus"': کۆ
             '"random"': هەڕەمەکی
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': بوونەوەری ئاسمانی
+            '"BEAR"': وورچ
+            '"CAT"': پشیلە
+            '"DOG"': سەگ
+            '"DUCK"': مراوی
+            '"FROG"': بۆق
+            '"MOOSE"': ڕەنە
+            '"PINEAPPLE"': ئەناناس
+            '"ROBOT"': ڕۆبۆت
+            '"SHARK"': ماسی قرش
+            '"UNICORN"': ئەسپی یەکشاخە
+          LOCATION:
+            "{x: 200, y: 100}": سەرەوە
+            "{x: 200, y: 300}": خوارەوە
+            "{x: 200, y: 200}": ناوەڕاست
+            "{x: 100, y: 100}": سەرەوە لای چەپ
+            "{x: 300, y: 100}": سەرەوە لای ڕاست
+            "{x: 100, y: 300}": خوارەوە لای چەپ
+            "{x: 300, y: 300}": خوارەوە لای ڕاست
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": هەڕەمەکی
       Dancelab_makeNewDanceSprite:
         text: دانەیەکی نوێ دروست بکە لە {COSTUME} بە ناوی {NAME} لە {LOCATION}
         options:
@@ -505,6 +528,20 @@ ku:
       Dancelab_setTint:
         text: سێبەری ڕەنگی {SPRITE} دابنێ بە {VAL}
       Dancelab_setTintEach:
+        text: سێبەری ڕەنگی {THIS} دابنێ بە {VAL}
+        options:
+          THIS:
+            '"ALIEN"': هەموو بوونەوەرە ئاسمانیەکان
+            '"BEAR"': هەموو وورچەکان
+            '"CAT"': هەموو پشیلەکان
+            '"DOG"': هەموو سەگەکان
+            '"DUCK"': هەموو مراویەکان
+            '"FROG"': هەموو بۆقەکان
+            '"MOOSE"': هەموو ڕەنەکان
+            '"PINEAPPLE"': هەموو ئەناناسەکان
+            '"ROBOT"': هەموو ڕۆبۆتەکان
+            '"SHARK"': هەموو قرشەکان
+      Dancelab_setTintEachInline:
         text: سێبەری ڕەنگی {THIS} دابنێ بە {VAL}
         options:
           THIS:
@@ -1026,111 +1063,22 @@ ku:
             "'shapeColor'": ڕەنگ
       aalab_addBehaviorForDuration:
         text: سپڕایتی aalab {SPRITE} {BEHAVIOR} دەستپێدەکات بۆ {SECONDS} چرکە
-      aalab_addBehaviorSimpleFlexible:
-        text: سپڕایتی aalab {SPRITE} دەستپێدەکات {BEHAVIOR}
       aalab_addBehaviorUntilBoolean:
         text: سپڕایتی {SPRITE} دەست بە {BEHAVIOR} دەکات تا {CONDITION}
-      aalab_addToSpriteGroup:
-        text: سپڕایت زیاد بکە{SPRITE} بۆ گروپی {GROUP}
-      aalab_allSpritesWithAnimation:
-        text: "{ANIMATION}"
-      aalab_changePropByFlexible:
-        text: گۆڕانی aalab {SPRITE} {PROPERTY} بەبڕی {VAL}
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"rotation"': سوڕانەوە
-            '"direction"': ئاڕاستەی جووڵە
-      aalab_checkTouching:
-        text: "{CONDITION} {SPRITE1} بەر {SPRITE2} دەکەوێ"
-      aalab_clickedOn:
-        text: "{CONDITION} {SPRITE} کرتە کراوە"
-      aalab_createNewSprite:
-        text: "aalab سپڕایتێکی نوێ دروست بکە \n بەناوی {NAME} \n بە جلوبەرگی {COSTUME}
-          \n لە {LOCATION}"
-      aalab_createNewSpriteAdvanced:
-        text: "سپڕایتێکی نوێ ڕروست بکە بە ناوی {NAME} \n بە جلوبەرگی {COSTUME} \n
-          لە {LOCATION}"
-      aalab_createNewSpriteAnon:
-        text: سپرایتێکی {ANIMATION_NAME} نوێ دروست بکە لە {LOCATION}
-      aalab_createNewSpriteAnonReturn:
-        text: aalab سپڕایتێکی {ANIMATION_NAME} نوێ دروست بکە لە {LOCATION}
-      aalab_createPropertyGroup:
-        text: سپڕایت گروپێکی نوێ دروست بکە بەناوی {VAR} لە هەموو {COSTUME} ی سپڕایت
-      aalab_createSpriteGroup:
-        text: گروپێکی سپڕایتی نوێ دروست بکە بەناوی {VAR}
-      aalab_getSpritesByName:
-        text: هەر سپڕایتێک بەناوی {NAME}
-      aalab_getThisSprite:
-        text: سپڕایتی {CHOICE}
-        options:
-          CHOICE:
-            '"this"': ئەمە
-      aalab_jumpTo:
-        text: aalab {SPRITE} دەپەڕێتەوە بۆ {LOCATION}
-      aalab_keyPressed:
-        text: "{CONDITION} {KEY} داگیراوە"
-      aalab_locationOf:
-        text: aalab شوێنی {SPRITE}
-      aalab_location_picker:
-        text: "{LOCATION}"
-      aalab_moveForward:
-        text: aalab {SPRITE} بجوڵێنە بەبڕی {DISTANCE} وێنەخاڵ بۆ پێشەوە
-      aalab_moveInDirection:
-        text: aalab {SPRITE} بجوڵێنە بەبڕی {DISTANCE} وێنەخاڵ بەئاراستەی {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': باکوور
-            '"East"': ڕۆژهەڵات
-            '"South"': باشوور
-            '"West"': ڕۆژئاوا
-      aalab_moveToward:
-        text: aalab {SPRITE} بجوڵێنە دووری {DISTANCE} بەئاڕاستەی {TARGET}
-      aalab_nameStringSay:
-        text: "{NAMESTRING} دەڵێت {MESSAGE}"
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
       aalab_prompt:
         text: پرسیار بکە {MESSAGE}
-      aalab_randomLocation:
-        text: شوێنێکی هەڕەمەکی
-      aalab_removeOneAndAll:
-        text: لاببە {THIS}
-      aalab_setBG:
+      aalab_scene:
         options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': شار
-      aalab_setCollidable:
-        text: aalab سپڕایتی {SPRITE} بەیەکدابدە بە {VAL}
-        options:
-          VAL:
-            '"true"': ڕاست
-            '"false"': هەڵە
-      aalab_setDirection:
-        text: aalab ئاڕاستەی جوڵەی {SPRITE} دابنێ بەرەو {DIRECTION}
-      aalab_setProp:
-        text: aalab {SPRITE} {PROPERTY} دابنێ بە {VAL}
-        options:
-          PROPERTY:
-            '"rotation"': سوڕانەوە
-            '"direction"': ئاڕاستەی جووڵە
-            '"tint"': سێبەری ڕەنگ
-      aalab_setSpriteVariable:
-        text: aalab {VARIABLE} بکە بە {SPRITE}
-      aalab_showCustomText:
-        text: دەق پیشان بدە{TEXT}شوێن{LOCATION}قەبارە{SIZE}ڕەنگ{COLOR}ماوە{DURATION}
-        options:
-          DURATION:
-            '"1"': 1 چرکە
-            '"2"': 2 چرکە
-            '"3"': 3 چرکە
-            '"4"': 4 چرکە
-            '"5"': 5 چرکە
-      aalab_showSpriteLabel:
-        text: ناو دیاربخە{TEXT} {LOCATION} سپڕایتی{SPRITE}
-      aalab_speakerSaysConsole:
-        text: "{SPRITE} دەڵێ {MESSAGE}"
-      aalab_spriteSay:
-        text: سپڕایت {SPRITE} بڵێ {TEXT} بەماوەی {SECONDS} چرکە
-      aalab_toggleHideCustomText:
-        text: "{OPTION} دەقێکی خوازراو"
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
       binary_drawBin:
         text: دووانی بکێشە {BIN}
       binary_drawBinScreen:
@@ -1198,6 +1146,7 @@ ku:
         options:
           TYPE:
             "'sand'": لم/وردە بەرد
+            "'darkPrismarine'": پریسمارینی تۆخ
             "'seaLantern'": چرای دەریایی
       craft_log:
         text: نامەی لۆگ {MESSAGE}
@@ -1205,4 +1154,54 @@ ku:
         text: جێگیربکە {blockType}
         options:
           blockType:
+            '"strippedOak"': دارڕێژ
+            '"strippedDarkOak"': دارڕێژی تۆخ
+            '"stoneBricks"': بلۆکی بەردین
+            '"mossyStoneBricks"': بلۆکی بەردی قەوزەدار
+            '"crackedStoneBricks"': بلۆکی بەردی شکاو
+            '"decorativeStoneBricks"': بلۆکی بەردی دیکۆرکراو
+            '"blueCoralBlock"': بلۆکی مەرجانی شین
+            '"pinkCoralBlock"': بلۆکی مەرجانی پەمەیی
+            '"magentaCoralBlock"': بلۆکی مەرجانی ئەرخەوانی
+            '"redCoralBlock"': بلۆکی مەرجانی سوور
+            '"yellowCoralBlock"': بلۆکی مەرجانی زەرد
+            '"blueDeadCoralBlock"': بلۆکی مەرجانی مردووی شین
+            '"pinkDeadCoralBlock"': بلۆکی مەرجانی مردووی پەمەیی
+            '"magentaDeadCoralBlock"': بلۆکی مەرجانی مردووی ئەرخەوانی
+            '"readDeadCoralBlock"': بلۆکی مەرجانی مردووی سوور
+            '"yellowDeadCoralBlock"': بلۆکی مەرجانی مردووی زەرد
+            '"prismarine"': بلۆکی پریسمارین
+            '"darkPrismarine"': پریسمارینی تۆخ
             '"seaLantern"': چرای دەریایی
+            '"packedIce"': بەفری قالبکراو
+            '"blueIce"': بەفری شین
+            '"blackConcrete"': کۆنکریتی ڕەش
+            '"seaGrass"': گیای دەریایی
+            '"kelp"': گژوگیای دەریا
+            '"polishedGranite"': گرانێتی لووس
+      craft_placePrismarine:
+        text: پریسمارین دابنێ
+      craft_repeatUntilConduit:
+        text: |-
+          دووبارە بکەوە تا جۆگەکە تەواو دەبێت
+          {STATEMENT}
+      craft_repeatUntilGoal:
+        text: |-
+          دووبارە بکەوە تا ئامانجەکە
+          {STATEMENT}
+      craft_spawnEntity:
+        text: هێلکە ماسی {ENTITY}
+        options:
+          ENTITY:
+            '"cod"': ماسی کۆد
+            '"dolphin"': دۆلفین
+            '"salmon"': سەلەمۆن
+            '"seaTurtle"': کیسەڵی دەریایی
+            '"squid"': ئەکتاپوس
+            '"tropicalFish"': ماسی کەمەرەیی
+      craft_turn:
+        text: بسوڕێوە {DIR}
+        options:
+          DIR:
+            right: بۆ لای ڕاست ↻
+            left: بۆ لای چەپ ↺

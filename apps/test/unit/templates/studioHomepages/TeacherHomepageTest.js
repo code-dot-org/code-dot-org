@@ -96,6 +96,7 @@ describe('TeacherHomepage', () => {
     assert.deepEqual(recentCourses.props(), {
       showAllCoursesLink: true,
       isTeacher: true,
+      hasFeedback: false,
       courses: courses,
       topCourse: topCourse
     });

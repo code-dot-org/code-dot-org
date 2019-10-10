@@ -17,7 +17,6 @@ import CensusTeacherBanner from '../census2017/CensusTeacherBanner';
 import DonorTeacherBanner, {
   donorTeacherBannerOptionsShape
 } from '@cdo/apps/templates/DonorTeacherBanner';
-import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
   clear: {
@@ -142,28 +141,6 @@ export default class TeacherHomepage extends Component {
     this.hideCensusBanner();
   };
 
-  dismissDonorTeacherBannerWithCallbacks(onSuccess, onFailure) {
-    $.ajax({
-      url: `/api/v1/users/${this.props.teacherId}/dismiss_donor_teacher_banner`,
-      type: 'post'
-    })
-      .done(onSuccess)
-      .fail(onFailure);
-  }
-
-  logDismissDonorTeacherBannerError = xhr => {
-    console.error(
-      `Failed to dismiss donor teacher banner! ${xhr.responseText}`
-    );
-  };
-
-  dismissDonorTeacherBanner() {
-    this.dismissDonorTeacherBannerWithCallbacks(
-      null,
-      this.logDismissDonorTeacherBannerError
-    );
-  }
-
   componentDidMount() {
     // The component used here is implemented in legacy HAML/CSS rather than React.
     $('#teacher_reminders')
@@ -208,9 +185,7 @@ export default class TeacherHomepage extends Component {
         {isEnglish && showSpecialAnnouncement && (
           <SpecialAnnouncementActionBlock
             hocLaunch={hocLaunch}
-            hasIncompleteApplication={
-              !!sessionStorage['Teacher1920Application']
-            }
+            hasIncompleteApplication={!!sessionStorage['TeacherApplication']}
           />
         )}
         {announcement && showAnnouncement && (
@@ -256,18 +231,16 @@ export default class TeacherHomepage extends Component {
             <br />
           </div>
         )}
-        {experiments.isEnabled('donorTeacherBanner') &&
-          isEnglish &&
-          this.state.donorBannerName && (
-            <div>
-              <DonorTeacherBanner
-                options={donorTeacherBannerOptions}
-                onDismiss={() => this.dismissDonorTeacherBanner()}
-                showPegasusLink={true}
-              />
-              <div style={styles.clear} />
-            </div>
-          )}
+        {isEnglish && this.state.donorBannerName && (
+          <div>
+            <DonorTeacherBanner
+              options={donorTeacherBannerOptions}
+              showPegasusLink={true}
+              source="teacher_home"
+            />
+            <div style={styles.clear} />
+          </div>
+        )}
         <TeacherSections queryStringOpen={queryStringOpen} locale={locale} />
         <RecentCourses
           courses={courses}

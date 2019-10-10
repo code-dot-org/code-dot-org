@@ -5,11 +5,36 @@ de-DE:
       2-3 Artist 1 new: Hallo, ich bin ein Künstler. Du kannst mich programmieren,
         um fast alles zu zeichnen. Benutze ein paar Blöcke, um mich über die grauen
         Linien im Bild zeichnen zu lassen (jede Linie ist 100 Pixel lang).
+      2-3 Artist 2 new: Dieses Haus hat eine halbfertige Wand. Jede Seite hat 100
+        Pixel, aber die halbfertige nur 50. Vervollständige die Wand.
       2-3 Artist 3.4: "Der \"springe\"-Block bewegt den Künstler, ohne eine Linie
         zu zeichnen. \nZeichne die gestrichelte Linie nach. Verwende dazu \"springe\"
         und \"bewegen\"-Blöcke."
+      2-3 Artist 3new: |-
+        Der rote Hut ist 100 Pixel hoch. Zeichne den schwarzen Hut, der 70 Pixel kleiner ist, zu Ende.
+
+        _(Beachte: Die Breite des schwarzen Hutes beträgt 50 Pixel.)_
       2-3 Artist 4: Hilf mir, das Haus für diese Katze zu vervollständigen.
+      2-3 Artist 6: |-
+        Dieses Haus braucht ein Dach! Zeichne das Dreieck.
+
+        Hinweis: alle drei Seiten sind gleich lang.
+
+        <img src="https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif" width="300"/>
+      2-3 Artist 7: 'Zeichne die rechte Hälfte des letzten Fensters zu Ende. Jedes
+        Quadrat der Fensterscheibe beträgt 25 Pixel. '
+      2-3 Artist 8: |-
+        Zeit eine Scheune zu bauen.
+
+        Mache die Räume für jedes Tier, indem die Scheune in 2 gleich große Rechtecke aufgeteilt wird.
+
+        Hinweis:
+        Die Rechtecke sind 200 Pixel weit und 100 Pixel hoch.
+
+        Es gibt viele verschiedene Wege um das Rätsel zu lösen.
       2-3 Artist 9 NEW: Vervollständige diesen Drachen
+      2-3 Artist Assessment 1: "**Prüfung**: Vervollständige den letzten Zahn. Er
+        ist 25 Pixel breit und 25 Pixel hoch."
       2-3 Artist Debugging Assessment 1: "Warum ist das Quadrat um 75 Pixel zu klein
         geraten?\\\r\n\\\r\nWo ist der Fehler? Kannst du es größer machen?"
       2-3 Artist Free Play: Freies Spiel! Zeichne was du willst.
@@ -17,6 +42,10 @@ de-DE:
         Lasst uns den Kopf des Roboters malen! Kannst du ein Quadrat malen, dessen Seiten 100 Pixel lang sind?
 
         <br/>
+      2-3 Artist Loops New 10: Jetzt lass uns einen Haufen V's miteinander verbinden,
+        sie in einer Schleife zeichnen.
+      2-3 Artist Loops New 12: 'Zeichne einen Diamanten mit einer Seitenlänge von
+        100 Pixel. '
       2-3 Artist Loops New 15: |-
         Zeichne etwas, wozu du gerade Lust hast!
         <br/><br/>
@@ -29,9 +58,14 @@ de-DE:
         sorge dafür, dass es sich nach jedem Durchlauf vorwärts bewegt!
       2-3 Artist Nested Loops Free Play: Freies Spiel, zeichne irgendetwas Cooles
         mit verschachtelten Schleifen.
+      2-3 Bee Functions Assessment 2: "**Prüfung:** Erzeuge eine Funktion, mit der
+        man sich drehen, vorwärts bewegen und 3 mal Honig erzeugen kann. Anschließend
+        lasse die Biene dahin zurückkehren wo sie angefangen hat und drehe um."
       2-3 Bee Loops 3A: Kannst du eine Schleife verwenden um den ganzen Nektar einzusammeln?
       4-5 Artist Free Draw 1: Freies Zeichnen!  Zeichne, was deine Inspiration dir
         eingibt.
+      4-5 Artist Patterns 11: Wie oft muss die Schleife durchlaufen werden, damit
+        ein Halbkreis gezeichnet wird?
       4-5 Artist Patterns 7: Wir wollen den Code der letzten Aufgabe etwas verändern
         und so ein komplizierteres Muster erzeugen. Achte darauf, wie die Diamanten
         sich jetzt überdecken. Versuche es mit einer Änderung des ersten "springe
@@ -72,8 +106,350 @@ de-DE:
         \  Ändere die `\"text\"` Eigenschaft des Etiketts so wie du möchstest, zum
         Beispiel `\"Willkommen bei meiner App!\"`.\n\n**Klappt nicht? Klicke hier:**
         ![expandable](https://images.code.org/4bf99e7352e7c17a5bf73ced80171f6a-image-1511280628092.gif)"
+      AppLab Intro 7 - onEvent intro: |-
+        <img src="https://images.code.org/3d8c8487ea669563d3401c0009cd9462-image-1511281194897.gif" style="float:right;height:200px">
+
+        **Ziel:**Der Bildschirm beginnt blau. Fügen Sie Code hinzu, damit er grün wird, wenn Sie auf die Schaltfläche "Green-ify" klicken.
+
+        **Wie:** Fügt Code innerhalb des `onEvent()` hinzu, der die `"background-color"` des Bildschirms auf `"green"` setzt.
+
+        **Bist du hängen geblieben? Klicke hier:** ![expandable](https://images.code.org/5ddf6b129bc04b79839b3661ccef788b-image-1511281012076.gif)
+      AppLab Intro 7 - onEvent twoButtons: |-
+        <img src="https://images.code.org/158c9258bfff18c2177440f201446c47-image-1507566793890.gif" style="float:right;height:200px">
+
+        **Ziel:** Hilfe bei der Fertigstellung dieser Taschenlampen-App. Mit der Taste "On" wird der Bildschirm bereits weiß. Starten Sie die App und probieren Sie es aus. Schreiben Sie dann den Code so, dass die Taste "Off" den Bildschirm wieder schwarz macht.
+
+        **Wie:** Füge Code innerhalb des leeren `onEvent()` hinzu, der die `"background-color"` des Bildschirms auf `"black"` und `"text-color"` des Labels auf `"white"` setzt.
+
+        **Bist du hängen geblieben? Klicke hier:** ![expandable](https://images.code.org/020b1d9b465aaf35967a528a92961c13-image-1511281772276.gif)
+      AppLab Intro 7 - playSound: "<img src=\"https://images.code.org/28176329f15dea1a863564b069e72aab-image-1511282702534.44.52
+        AM.png\" style=\"float:right;height:200px\">\n\n**Ziel:** Dieses Geräuschabspielgerät
+        ist fast fertig! Führe es aus, um zu sehen, wie es funktioniert. Füge dann
+        ein Bild, einen Text und einen Ton zur letzten Schaltfläche hinzu.\n\n**Wie:**
+        \n\n-   Füge dem Programm ein `onEvent()` hinzu und setze die \"id\" auf `\"button4\"`.
+        Ziehen Sie einen `playSound()` in das `onEvent()` und wählen Sie einen Sound
+        aus der Bibliothek. \n-   Füge eine `setProperty()` (außerhalb Ihres `onEvent()`)
+        hinzu, um die `\"image\"` Eigenschaft der Schaltfläche zu ändern. Wähle dann
+        ein Bild über die dritte Dropdown-Liste aus.\n-   Füge einen weiteren Befehl
+        `setProperty()` hinzu, um den `\"Text\"` der Schaltfläche zu ändern.\n\n**Bist
+        du hängen geblieben? Klicke hier:** ![expandable](https://images.code.org/a3fdcb8954c5e8d585bef64df1ec5b1a-image-1511285408512.gif)"
+      AppLab Intro 7 - thisOrThatAddButton: |-
+        <img src="https://images.code.org/3feb07aaf3d933b094647479673a3293-image-1508373443129.37.00 PM.png" style="float:right;height:200px">
+
+        **Ziel:** Füge dem Bildschirm eine zweite Schaltfläche hinzu, die "right" mit einer `"id"` von `"rightButton"` sagt.
+
+        **Wie:** Im Designmodus zieh eine neue Schaltfläche hinein. Positionieren und vergrößern Sie es. Stellen Sie dann seine `"id"`, `"text"`, `"background-color"`, und `"font-size"` ein.
+
+        **Bist du hängen geblieben? Klicke hier:** ![expandable](https://images.code.org/7035ad0445984cf889b159cf5682e35a-image-1508383186447.gif)
+      AppLab Intro 7 - thisOrThatAddScreen: |-
+        <img src="https://images.code.org/f102a1363aa575cc530379d9a4ee378c-image-1508382068883.00.59 PM.png" style="float:right;height:200px">
+
+        **Ziel:** Erstelle einen neuen Bildschirm namens `"rightScreen"`. Füge ein Textetikett hinzu, auf dem steht: "Du bist rechts abgebogen!".
+
+        **Wie:** Im Designmodus ziehe ein neues Bildschirmelement hinein. Ändere seine `"id"`zu `"rightScreen"`. Ziehe dann ein Label auf den Bildschirm und ändern Sie den Text in "You went right!".
+
+        **Bist du hängen geblieben? Klicke hier:** ![expandable](https://images.code.org/11cf186acb0453cf9ec46929b763f568-image-1508383646159.gif)
+      AppLab Intro 7 - thisOrThatPersonalize: "<a href=\"https://studio.code.org/projects/applab/gx21oCP10-V4GlNMlSpwdQ\"
+        target=\"_blank\"><img src=\"https://images.code.org/ba6c0db48cc1c3c28c135f1c2f67f361-image-1511244802597.10.18
+        PM.png\" style=\"float:right;height:200px\"></a>\n<a href=\"https://studio.code.org/projects/applab/SM_edi1btguZZiQaTtUT9Q\"
+        target=\"_blank\"><img src=\"https://images.code.org/284b55697d786e0cd64350d0967c5dda-image-1511244806272.11.05
+        PM.png\" style=\"float:right;height:200px\"></a>\n<a href=\"https://studio.code.org/projects/applab/SMvVhgBX_GGyxg5LSEMrgg\"
+        target=\"_blank\"><img src=\"https://images.code.org/445181ff8d84861919512ba9b8e09586-image-1511244809994.12.40
+        PM.png\" style=\"float:right;height:200px\"></a>\n\n**Ziel:** Erstelle eine
+        eigene App, indem du dieses Projekt erweitern. Dann teile es mit jemandem!\n\n**Wie:**
+        Entscheide, welche Art von App du erstellen möchten. Dann erstelle diese,
+        indem du weitere Bildschirme, Schaltflächen, Text, Sound und Benutzerinteraktionen
+        zu der App hinzufügst. Es gibt noch ein paar weitere Bausteine in der Toolbox,
+        mit denen du ebenfalls experimentieren kannst. Wenn du fertig bist, klicke
+        auf \"Teilen\", um es an dich selbst oder einen Freund zu senden! \n\n<details>\n\n<summary><b>Wählen
+        Sie Ihre eigenen Abenteuerideen aus</b></summary>\n\nProbieren Sie diese <a
+        href=\"https://studio.code.org/projects/applab/SMvVhgBX_GGyxg5LSEMrgg\" target=\"_blank\">Beispiel
+        Abenteuer App</a>, damit du sehen kannst, wie es funktioniert. Hier sind einige
+        Ideen, die dir helfen, deine eigene Geschichte zu erfinden.\n\n<li>Mache ein
+        Abenteuer über deinen Lieblingscharakter, real oder fiktiv.</li>\n<li>Mache
+        ein Abenteuer, das die Geschichte Ihres Lieblingsbuchs, Ihres Lieblingsfilms
+        oder Ihrer eigenen Kreation erzählt.</li>\n<li>Make an adventure that has
+        a lot of unexpected twists or has a difficult moral choice.</li>\n<br>\n</details>\n\n<details><summary><b>Grußkarte
+        Ideen</b></summary>\n\nProbiere diese <a href=\"https://studio.code.org/projects/applab/SM_edi1btguZZiQaTtUT9Q\"
+        target=\"_blank\">Beispiel Grußkarte App</a> aus, damit du sehen kannst, wie
+        es funktioniert. Hier sind einige Ideen, die dir helfen, deine eigene Karte
+        zu finden.\n\n<li>Denke an einen Geburtstag, Urlaub oder einen anderen besonderen
+        Tag, der bevorsteht. Erstelle eine Karte zum Feiern!</li>\n<li>Erstelle eine
+        Dankeschön-Karte für jemanden, den du schätzt.</li>\n<li>Erstelle eine Einladung
+        für eine bevorstehende Veranstaltung.</li>\n<br>\n</details>\n\n<details><summary><b>Persönlichkeitsquiz
+        Ideen</b></summary>\n\nProbieren Sie diese <a href=\"https://studio.code.org/projects/applab/gx21oCP10-V4GlNMlSpwdQ\"
+        target=\"_blank\">Beispiel Persönlichkeitsquiz App</a> aus, damit Sie sehen
+        können, wie es funktioniert. Hier sind einige Ideen, die Ihnen helfen, Ihr
+        eigenes Quiz zu entwickeln.\n\n<li>Machen Sie ein Quiz, das etwas vorschlägt,
+        was eine Person mögen könnte, z.B. eine Mahlzeit, ein Team, ein Buch oder
+        einen Ort.</li>\n<li>Machen Sie ein Quiz, das anhand der Antworten \"die Zukunft
+        voraussagt\".</li>\n<li>Mache ein Quiz, um den Menschen zu helfen, eine schwere
+        Entscheidung zu treffen.</li>\n\n</details>"
+      AppLab Intro 7 - thisOrThatSetScreen: |-
+        <img src="https://images.code.org/acd1acf659a2504d38ff80256d8e870f-image-1508374065550.com-crop (1).gif" style="float:right;height:200px">
+
+        **Ziel:** Der Bildschirm wechselt auf `"rightScreen"`, wenn der Benutzer auf die `"rightButton"`klickt.
+
+        **Wie:** Im Code-Modus füge Deinem Programm ein neues `onEvent()` für die "Rechts!"-Taste hinzu. Füge dann einen `setScreen()`-Block darin ein, der die Bildschirme auf `"rightScreen"` schaltet.
+
+        **Bist du hängen geblieben? Klicke hier:** ![expandable](https://images.code.org/64dfec0d9f9c2fc237abb90ef6a72f0e-image-1508384166252.gif)
+      CSD U1 - PixFilter 1x1 intro: |-
+        # 3 Bit Farben
+
+        Jedes Pixel ist ein Quadrat auf einem Bildschirm, das Licht aussendet. Jedem Pixel kann eine bestimmte Anzahl von Bits zugeordnet sein, und Bits pro Pixel bestimmen die Farben, die gerendert werden können.
+
+        In diesem Tool verwenden wir 3 Bit, um den einen großen schwarzen Pixel zu definieren. Das erste Bit beeinflusst den Rot-Ton. Das zweite Bit beeinflusst den Grünton. Das dritte Bit beeinflusst den Blauton.
+
+        # Mache folgendes
+
+        -   Klicke auf die Schaltfläche "Ausführen", um das Widget zu starten
+        -   Klicke auf die Glühbirnen, um jede Farbe ein- oder auszuschalten und zu sehen, was mit Deinem Pixel passiert
+        -   Schaue wie viele verschiedene Farben du mit nur drei Bits darstellen kannst
+        -   Notiere dir die Binärdatei, die jeder Farbe zugeordnet ist, die du dir ausdenkst
+      CSD U1 - PixFilter Filter Intro: |-
+        # Pixel filtern
+
+        Wenn du Instagram jemals verwendet hast, bist du wahrscheinlich auf einen Bildfilter gestoßen. Bildfilter lesen in jedem Pixel ein, verarbeiten es in irgendeiner Weise und geben das gefilterte Pixel zurück. In diesem Tool werden wir zunächst nur einen einzelnen Pixel filtern, bevor wir zu einem vollständigen Bild übergehen.
+
+        # Mach folgendes
+
+        -   Versuche, die Farbabweichungen im Filterbereich zu ändern
+        -   Klicke auf die obere Glühlampenreihe im Abschnitt Diagramm, um zu sehen, wie der Filter den Eingang (obere Glühlampen) in den Ausgang (untere Glühlampen) umwandelt
+        -   Schaue Dir an, wie die Zahlen im Binärbereich Änderungen der Farben widerspiegeln
+        -   Basierend darauf, wie sich die Bits ändern, kannst du formulieren, was Ersetzen bedeutet? Sprich mit deinem Partner und schau, ob du es herausfinden kannst
+        -   Füllen anschließend die Tabelle Level 2 in Ihrem Aktivitätsleitfaden aus
+      CSD U1 - PixFilter Filter Revisit: |-
+        # Kombinieren von Filtern
+
+        Jetzt, da du mit der Filterung eines einzelnen Farbkanals gespielt hast, ist es an der Zeit zu sehen, was passiert, wenn wir mehr als eine Farbe filtern.
+
+        # Mach folgendes
+
+        -   Erstelle mithilfe der Farb-Dropdowns im Filterbereich einen Filter, der den Wert von mehr als einem Farbkanal ändert
+        -   Klicke auf die obere Glühlampenreihe im Abschnitt Diagramm, um zu sehen, wie der Filter den Eingang (obere Glühlampen) in den Ausgang (untere Glühlampen) umwandelt
+        -   Schau Dir an, wie die Zahlen im Binärbereich Änderungen der Farben widerspiegeln
+        -   Fülle die Tabelle Level 4 in Deinem Aktivitätsleitfaden aus
+      CSD U1 - PixFilter FreePlay: |-
+        # Freies Spiel
+
+        Tu, was du willst, mach etwas Fantastisches
+      CSD U1 - PixFilter Mario: |-
+        # Kombinieren von Filtern
+
+        Manchmal müssen Sie mehr als ein Pixel filtern, um die gewünschte Farbänderung zu erhalten.
+
+        # Mach folgendes
+
+        Schau dir Mario an, er sieht ziemlich gut aus in seinem roten Hut und seinem Overall. Deine Aufgabe ist es, den Filter so aufzustellen, dass er wie Luigi aussieht, mit einem grünen Hut und Overall.
+
+        -   Bestimme zunächst, welche Bit(s) geändert werden müssen, um die gewünschte Änderung zu erhalten.
+        -   Sobald du herausgefunden hast, welches Bit geändert werden muss, stelle das Dropdown-Menü für den Filter entsprechend ein.
+        -   Nachdem du den Filter eingestellt wurde, versuche, andere Filter zu finden, die _nur_ seinen Hut und seinen Overall ändern - wie viele verschiedene Kleidungsfarben kannst du dir ausdenken?
+
+        _Wie viele Versuche hat es gedauert, bis du den richtigen Filter gefunden hast?_
+      CSD U1 - PixFilter Mushroom: |-
+        # Bilder filtern
+
+        Nachdem wir nun gesehen haben, wie ein einzelnes Pixel gefiltert werden kann, um dessen Farbe zu ändern, versuchen wir nun, einen Filter auf ein gesamtes Bild anzuwenden, das aus mehreren Pixeln besteht. Der von Dir erstellte Filter wird auf jedes Pixel im Bild angewendet - und du hast immer noch die Glühbirnen zur Verfügung, um zu experimentieren, wie Dein Filter mit einzelnen Farben funktioniert.
+
+        # Mach folgendes
+
+        Hier ist ein Bild eines roten Pilzes - du sollst versuchen, ihn in einen gelben Pilz zu verwandeln.
+
+        -   Bestimme zunächst, welches Bit geändert werden muss, um Rot in Gelb zu verwandeln
+        -   Sobald du herausgefunden hast, welches Bit geändert werden muss, verwende die Filter-Dropdowns, um alle roten Bereiche gelb zu machen
+        -   Nachdem der Filter so funktioniert, dass das Rot gelb geworden ist kannst du schauen, ob du mit ein Filtern erstellen kannst, das den Pilz in einer andere Farben erstrahlen lässt
+
+        _Wie viele Versuche hat es gedauert, bis du den richtigen Filter gefunden hast?_
+      CSD U1 - PixFilter UnFilter: |-
+        # UnFiltering
+
+        Bitfilter können auch benutzt werden um eine Filterung rückgängig zu machen. Hier ist ein Bild eines Vogels, der aus seinen Originalfarben gefiltert wurde. Kannst du es wieder normal machen?
+
+        # Mach folgendes
+
+        <img src="https://images.code.org/c15636bda16e8792c59ac955332e37a5-image-1471372091393.22.56.png" style="float:right; width: 200px"/>
+        So sollte unser Vogel aussehen. Verwende den Filter, um ihn wieder normal zu machen.
+
+        -   Entscheide, welche Farben (und damit welche Bits) du ändern musst. Vielleicht musst du deine Gedanken zunächst zu Papier bringen.
+        -   Sobald du weißt, welche Bits geändert werden müssen, setze das Filter-Dropdown-Menü entsprechend, um Deine Antwort zu testen.
+        -   Nachdem du das Bild korrigiert hast, notieren Dir sowohl Ihren Prozess als auch Deinen endgültigen Filter im Bereich Level 6 Deines Activitätsleitfadens.
+
+        _Wie viele Versuche hat es gedauert, bis du den richtigen Filter gefunden hast?_
+      CSD U2 Pair Programming Video_2019: |-
+        ## Questions to consider
+
+        -   Warum glauben Sie, dass professionelle Programmierer die Paarprogrammierung verwenden?
+        -   Was glauben Sie, wie die Paarprogrammierung Ihnen helfen wird, besser zu programmieren?
+      CSD U2 add style_2019: |-
+        # Probier es aus!
+
+        Jetzt, da du verschiedene Arten des Stylings gesehen hast, ist es an der Zeit, es selbst auszuprobieren. Hier ist eine Webseite, die du schon einmal gesehen hast, aber sie braucht etwas Stil!
+
+        # Mach folgendes
+
+        -   Gib der Webseite eine Hintergrundfarbe.
+        -   Schaffe mehr Platz um die Bilder herum.
+        -   Setze den gesamten Text in eine andere Farbe.
+        -   Füge nach eigenem Ermessen andere Stile hinzu.
+      CSD U2 layout style margin_2019: "<div class=\"no-pullthrough\" style=\"float:
+        right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
+        markdown=\"1\">\n<details>\n\n<summary>\n<strong>Wie funktioniert der Code?</strong>\n</summary>\nHier
+        ist der Code, der zusätzlichen Platz um die Bilder herum schafft:\n\n<pre>img
+        {\n\tmargin: 10px;\n}</pre>\n\n-   `img` ist der _Selektor_.  Es legt fest,
+        welche Elemente den Regeln innerhalb der geschweiften Klammern (in diesem
+        Fall den Bildern) folgen müssen.\n\n-   `margin: 10px;` ist die Regel, die
+        10 Pixel Platz um das Bild schafft.\n    </details>\n    <details>\n    <summary>\n
+        \   <strong>Was bewirkt die \"Margin\"-Eigenschaft?</strong>\n    </summary>\n\nDie
+        Eigenschaft `margin` bestimmt, wie viel Platz um das Bild herum sein wird.
+        \ Meistens wird der Rand in Pixeln definieren. Du kannst mehr über diese Eigenschaft
+        erfahren unter <a href=\"http://www.w3schools.com/cssref/pr_margin.asp\" target=\"_new\">W3Schools
+        - CSS margin Property</a>.\n\n</details>\n<details>\n<summary>\n<strong>Was
+        bedeutet `px` / Was ist ein Pixel?</strong>\n</summary>\n\nPixel, abgekürzt
+        `px`, ist die Art und Weise, wie Elemente in CSS gemessen werden.  Es hat
+        die Größe eines einzelnen Lichtpunktes auf dem Bildschirm.\n\n</details>\n</div>\n\n#
+        Margin\n\nMargins geben an, wie viel Platz um ein Element herum sein soll.\n\n-
+        \  Suche die Eigenschaft `margin` im Regelsatz `img`.\n-   Vergrößere 'margin'
+        und besprechen die Wirkung mit einem Partner.\n-   Wählen einen anderen Elementtyp
+        und gib ihm ebenfalls einen Rand."
+      CSD U3 Scene Example_2018_2019: |-
+        # Sprite Szenen
+
+        Durch die Kombination von Formen, Sprites und Text kannst du einfache Szenen, Geschichten oder Comics erstellen. Obwohl dieses Beispiel ziemlich einfach ist, können Sie beliebig viele Sprites und Formen kombinieren, um beliebig komplexe oder detaillierte Szenen zu erstellen.
+
+        ## Skizziere es
+
+        Bevor du weitermachst, nimm dir eine Sekunde Zeit, um eine Szene zu entwerfen, die du am Ende dieser Lektion machen möchtest. Betrachte die einfachen Formen, die du in der Vergangenheit verwendet hast, Sprites für Ihre Figuren und jeden Text, den du auf dem Bildschirm sehen möchtest. Sobald du eine Idee entworfen hast, wirst du lernen, wie man eine Szene zusammensetzt.
+      CSD U5 Amazon Data Video: Sieh Dir dieses Video an, um zu erfahren, wie dieses
+        Problem von Amazon gelöst wird. Während du zusiehst, denke darüber nach, welche
+        Daten gesammelt werden und woher sie kommen.
+      CSD U5 Amazon Data Video_2018: Sieh Dir dieses Video an, um zu erfahren, wie
+        dieses Problem von Amazon gelöst wird. Während du zusiehst, denke darüber
+        nach, welche Daten gesammelt werden und woher sie kommen.
+      CSD U5 Amazon Data Video_2019: Sieh Dir dieses Video an, um zu erfahren, wie
+        dieses Problem von Amazon gelöst wird. Während du zusiehst, denke darüber
+        nach, welche Daten gesammelt werden und woher sie kommen.
+      CSD U5 Waze Data Video: Sieh Dir dieses Video an, um zu erfahren, wie dieses
+        Problem von Waze gelöst wird. Während du zusiehst, denke darüber nach, welche
+        Daten gesammelt werden und woher sie kommen.
+      CSD U5 Waze Data Video_2018: Sieh Dir dieses Video an, um zu erfahren, wie dieses
+        Problem von Waze gelöst wird. Während du zusiehst, denke darüber nach, welche
+        Daten gesammelt werden und woher sie kommen.
+      CSD U5 Waze Data Video_2019: Sieh Dir dieses Video an, um zu erfahren, wie dieses
+        Problem von Waze gelöst wird. Während du zusiehst, denke darüber nach, welche
+        Daten gesammelt werden und woher sie kommen.
+      CSD U5 binary video_2019: |-
+        ## Zu berücksichtigende Fragen
+
+        -   Warum werden alle Arten von Daten auf dem Computer als Zahlen gespeichert?
+        -   Wenn alles als Zahl gespeichert ist, wie kann der Computer Deiner Meinung nach den Unterschied zwischen Zahlen, Buchstaben, Bildern und Ton erkennen?
+      CSD U6 arrays video: |-
+        ## Zu berücksichtigende Fragen
+
+        -   Wann könnte ein Array nützlicher sein als eine Variable?
+        -   Warum musst du immer ein Array einer Variablen zuweisen?
+        -   Wie kannst du auf die Elemente in Ihrem Array zugreifen?
+      CSD U6 for loop led color_2019: |-
+        # Füge etwas Farbe hinzu
+
+        Jetzt, da Sie die LEDs ein- und ausschalten können, ist es an der Zeit, etwas Farbe hinzuzufügen.
+
+        # Mach folgendes
+
+        Füge Event-Handler für "button\_red" und "button\_green" hinzu, die alle LEDs in diese Farben umschaltet.
+      CSD U6 for loop led personalize_2019: |-
+        # Make it Your Own
+
+        Denke an einen neuen Button, den du in diesem Projekt gerne hättest.  Vergiss nicht die anderen LED-Optionen wie Puls und Blinken.
+
+        # Mach folgendes
+
+        Füge dem Projekt eine neue Schaltfläche hinzu und programmiere diese mit einem Verhalten Deiner Wahl.
+      CSD U6 functions paramters video_2019: |-
+        ## Zu berücksichtigende Fragen
+
+        -   Wie machen Parameter Funktionen nützlicher?
+        -   Woher weißt du, wann du mehrere Funktionen zu einer einzigen kombinieren kannst?
+      CSD U6 hardware software video_2019: |-
+        ## Zu berücksichtigende Fragen
+
+        -   Worin besteht der Unterschied zwischen Hard- und Software?
+        -   Was macht das Betriebssystem eines Computers?
+      CSD U6 params modify clouds_2019: |-
+        # Wolken
+
+        Dieses Programm lässt die Wolken sich bewegen, wenn du in den Soundsensor pustest, aber es ist noch nicht fertig.
+
+        # Mach folgendes
+
+        -   Erstelle eine neue Funktion `moveCloud(name)`, die jede Wolke bewegt.
+            -   (Hinweis: Du wirst fast den gleichen Code wie die Funktion `moveCloud0` verwenden).
+        -   Rufe Deine neue Funktion `moveCloud(name)` innerhalb des Ereignisblocks einmal für jeden Wolkennamen auf.
+            -   (Hinweis: Dies ist vergleichbar mit dem Aufruf der Funktion `loopCloud(name)`.)
+      CSD U6 setProperty hidden 2_2019: |-
+        # Zeigen/Verbergen
+
+        Diese Alarm-App ist nicht besonders nützlich, wenn Sie den Alarm nicht ausschalten können, sobald er ausgelöst wurde. Lasst uns das in Ordnung bringen.
+
+        # Mach folgendes
+
+        Erstelle ein zweites Ereignis, um zu beobachten, ob der "stopAlarmButton" angeklickt werden kann. Wenn dieses Ereignis ausgelöst wird:
+
+        -   Ändere den Statustext auf "OFF".
+        -   Verberge die "stopAlarmButton".
+
+        _Hinweis: "hidden" ist eine boolesche Eigenschaft. Wenn wir `false` benutzt haben, damit der Button erscheint, was sollten wir dann verwenden, um ihn wieder zu verstecken?_
+      'CSD: Animation Tab_2019': |-
+        ## Zu berücksichtigende Fragen
+
+        -   Welche Schritte gibt es, um ein Bild zu einem Sprite hinzuzufügen?
+        -   Welche verschiedenen Möglichkeiten gibt es, ein Bild zu erhalten?
+      'CSD: Drawing in Game Lab 1_2019': |-
+        ## Zu berücksichtigende Fragen
+
+        -   Wo finden Sie weitere Informationen zur Verwendung der Bausteine / Blöcke?
+        -   Was ist ein Vorteil der Verwendung des Blockmodus?
+      'CSD: Drawing in Game Lab 2_2019': |-
+        ## Zu berücksichtigende Fragen
+
+        -   Worin besteht der Unterschied zwischen Strich und Füllung?
+      'CSD: For Loop_2019': |-
+        ## Zu berücksichtigende Fragen
+
+        -   Wofür werden Schleifen bei der Programmierung verwendet?
+        -   An welcher Stelle verwendest du Schleifen?
+      'CSD: Introduction to the Draw Loop_2019': |-
+        ## Zu berücksichtigende Frage
+
+        -   Was bewirkt die Zeichenfunktion?
+      'CSD: Sprites in Game Lab_2019': |-
+        ## Zu berücksichtigende Fragen
+
+        -   Was ist ein Sprite?
+        -   Was sind Eigenschaften?
+        -   Welches Problem lösen Sprites?
+      CSDU4 Design Mode Video_2019: |-
+        ## Zu berücksichtigende Fragen
+
+        -   Wo in App Lab können Sie die Benutzeroberfläche Ihrer App gestalten?
+        -   Welche Arten von Elementen können Sie Ihrer App hinzufügen?
+      CSDU6 making new arrays_2019: |-
+        # Making New Arrays
+
+        Jetzt, da Sie Arrays ändern können, ist es an der Zeit, dass Sie Ihre eigenen erstellen.
+
+        # Mach folgendes
+
+        -   Erstelle ein neues Array mit beliebigen Noten. Sie können in verschiedenen Oktaven, in einer bestimmten Tonart usw. angeordnet sein. Alles, was du willst!
+        -   Lasse den Summer eine zufällige Note aus Ihrem Array spielen, wenn du die Taste **rechts** drückst.
       Course 4 Artist For Loops 6a: Nimm drei kleine Änderungen an dem Code aus dem
         vorherigem Level vor, um dies zu erreichen!
+      Course 4 Bee 1: |-
+        Die Biene weiß nicht, was sich unter der Wolke verbirgt!
+
+        Benutze den „Wenn“-Baustein, um nachzusehen und **NUR DANN** Nektar zu sammeln, wenn eine Blume unter der Wolke ist.
+      Course 4 Maze 4: Versuche, das Rätsel mit dem „Wiederholen“-Baustein zu lösen,
+        damit du weniger Bausteine benötigst...
       CourseD_Dance_Party_01: |-
         _Los geht‘s mit der Tanzparty!_
 
@@ -171,6 +547,47 @@ de-DE:
       CourseE_HOC 2018 Level_9b: Du hast das Riff erreicht. Suche jetzt nach dem **Herz
         des Meeres** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)!
         Verwende blaue und rote Korallen, um die Schatz**truhe** zu erreichen![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
+      Crack Random Substitution: |-
+        # Breche eine zufällige Substitutions-Verschlüsselung auf!
+
+        Diese Version des Tools bietet Dir mehr Informationen über den verschlüsselten Text und mehr Möglichkeiten, wie du verschiedene Substitutionen ausprobieren kannst.
+
+        ### Verschiedene Möglichkeiten, Text zu analysieren
+
+        -   Spiele mit einigen der Sortieroptionen, die auf der Registerkarte Zufällige Verschlüsselung verfügbar sind, um verschiedene Ansichten über die Häufigkeiten der Buchstaben im Eingabetext sowie im englischen Standardtext zu erhalten.
+            ![](https://images.code.org/82efbca1807206c9a07de520fdb22027-image-1443572614493.23.28.png)
+
+        ### Unterschiedliche Möglichkeiten der Substitution
+
+        -   Um einen Buchstaben zu ersetzen, kannst du einen blauen Buchstaben des Alphabets direkt unter den orangefarbenen Buchstaben ziehen, den du im ursprünglichen Chiffriertext ändern möchtest.
+            ![](https://images.code.org/da9a7af7568d8c1698872ab91b4d79d7-image-1443572471212.gif)
+
+        ### Spielen.  Immer spielen.
+
+        -   Es gibt andere Möglichkeiten, Zeichen zu analysieren und zu ersetzen, die du finden kannst, indem du auf die Schaltflächen klickst und ausprobierst, was immer du möchtest.
+        -   Denke daran: Du kannst es nicht brechen :)
+
+        Schau, wie lange du brauchst, um die Verschlüsslung zu knacken! Ist dies eine gute Methode, um geheime Daten zu verschlüsseln?
+
+        <img src="http://code.org/api/hour/finish_encryption.png">
+      Crack a Caesar Cipher: |-
+        # Knacke eine Caesar-Verschlüsslung!
+
+        Mit diesem Tool kannst du mit Text spielen und eine Caesar-Verschlüsselung verwenden. Du kannst damit eine Nachricht entweder verschlüsseln oder entschlüsseln.
+
+        # Mach folgendes
+
+        -   Lade eine **Sample message** aus dem Dropdown-Menü der Nachricht. Dadurch wird eine Nachricht geladen, die mit einer Caesar-Verschlüsselung verschlüsselt wurde.
+
+        ![](https://images.code.org/347139486c8c729bf3c6e72ce67da878-image-1476286380409.gif)
+
+        -   Mit den Schaltflächen auf der Registerkarte Caesar-Ersetzung kannst du das Alphabet vorwärts oder rückwärts verschieben, um zu versuchen, die Nachricht zu entschlüsseln.
+
+        ![](https://images.code.org/ef9ebc16d2f1442dc46fba9bd48b5d43-image-1476285966821.gif)
+
+        Schau, wie lange du benötigst, um die Verschlüsselung zu knacken! Ist dies eine gute Methode, um geheime Daten zu verschlüsseln?
+
+        <img src="http://code.org/api/hour/begin_encryption.png">
       Dance_Party_01: |-
         _Los geht‘s mit der Tanzparty!_
 
@@ -178,15 +595,15 @@ de-DE:
 
         -   _Sie können auch auf die Glühbirne links klicken, wenn Sie weitere Informationen oder zusätzliche Herausforderungen möchten._
       Dance_Party_02: |-
-        Lassen Sie den Elch tanzen!
+        Lasse den Elch tanzen!
 
-        Ziehen Sie den Block <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> in den Arbeitsbereich. Verbinden Sie ihn unterhalb des Blocks <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"Takte"</title></block></xml>. Ihr Tänzer sollte nach dem vierten Takt mit einem neuen Tanzschritt beginnen.
+        Ziehe den Baustein <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> in den Arbeitsbereich. Verbinde ihn unterhalb des Bausteins <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Dein Tänzer sollte nach dem vierten Takt mit einem neuen Tanzschritt beginnen.
 
         **Takte** sind die zeitliche Struktur von Musik. In diesem Tutorial ist ein Takt vier Schläge lang.
       Dance_Party_03: |-
         _Jetzt grooven wir!_
 
-        Fügen Sie einen Block <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"Takte"</title></block></xml> zu Ihrem Arbeitsbereich hinzu. Lassen Sie den Tänzer nach 6 Takten einen neuen Tanzschritt beginnen.
+        Füge einen <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> Baustein zu Deienem Arbeitsbereich hinzu. Lasse den Tänzer nach 6 Takten einen neuen Tanzschritt beginnen.
       Dance_Party_04: |-
         _Dieser Tanz braucht etwas Pep!_
 
@@ -219,9 +636,9 @@ de-DE:
 
         Dieses Programm verwendet den "Bass" (die tiefen Töne) der Musik, um die Höhe eines Tänzers zu kontrollieren. Können Sie die anderen Tänzer auch auf die Musik reagieren lassen?
       Dance_Party_11: |-
-        Mit dem Block <xml><block type="Dancelab_whenKey"></block></xml> können Sie Code ausführen, wenn die Pfeiltaste nach oben gedrückt wird.
+        Mit dem <xml><block type="Dancelab_whenKey"></block></xml> Baustein kannst du Code ausführen, wenn die Pfeiltaste nach oben gedrückt wird.
 
-        Sie können den Tanzschritt verändern, die Eigenschaften eines Tänzers verändern oder einen schnellen einmaligen Tanzschritt tun. Seien Sie kreativ und halten Sie Ausschau nach neuen Blöcken!
+        Du kannst den Tanzschritt verändern, die Eigenschaften eines Tänzers verändern oder einen schnellen einmaligen Tanzschritt tun. Sei kreativ und halte Ausschau nach neuen Blöcken!
       Dance_Party_11_5: "Schau dir diesen Block an:\n\n<xml>\n  <block type=\"Dancelab_makeNewDanceSpriteGroup\">\n
         \   <title name=\"N\">6</title>\n    <title name=\"COSTUME\">\"ENTE\"</title>\n
         \   <title name=\"LAYOUT\">\"Kreis\"</title>\n  </block></xml>\n  \nNun kannst
@@ -259,7 +676,7 @@ de-DE:
         -   Ändere das Layout, wenn eine Taste gedrückt wird
         -   Ändere eine Eigenschaft, wenn die Tänzer ihre Formation ändern
       Dance_Party_extras_on_beat: |-
-        # Bass, mittlerer Ton und Sopran
+        # Bass, Mitten und Höhen
 
         Dieser Tanz verwendet „Peak“-Ereignisse, um den Code auszulösen, wenn verschiedene Teile der Musik laut werden. Versuche, mit verschiedenen Liedern herumzuexperimentieren, um zu sehen, wie sie den Tanz verändern.
       Dance_Party_extras_speed: |-
@@ -274,6 +691,39 @@ de-DE:
         -   Füge eine weitere Gruppe von Tänzern hinzu
         -   Blende Tänzer mithilfe der Pfeiltasten ein- und aus
         -   Blende alle der Tänzer aus und wechsle zu einem spannenden Hintergrundeffekt
+      Escape Room Example: |-
+        # Room Escape
+
+        In der heutigen Werkstatt wirst du daran arbeiten, eine Room-Escape-App zu entwickeln!  Diese Ebene hat eine Beispiel-App, mit der du herumspielen solltest, um das Gefühl dafür zu bekommen, was du erschaffen wirst.
+
+        # Mache folgendes
+
+        -   Klicken Sie auf "▶ AUSFÜHREN", um die App zu starten.
+        -   Versuche den Schlüssel zu finden, der die Tür öffnet.
+      Final Room Escape App: "# Du hast es geschafft!\n\nDu hast einen Escape Room
+        erstellt! Jetzt ist es an der Zeit, diesen anzupassen. \n\nZiehe in Betracht:\n\n-
+        \  dem Raum mehr Stil zu geben\n-   weiterer Dinge hinzuzufügen, mit denen
+        Benutzer im Raum interagieren kann.\n-   versuche, Ihren Geheimcode zufällig
+        zu machen.\n-   füge weiterer Räume hinzu"
+      Frequency Analysis: |-
+        # Knacke ein zufällige Substitutions-Verschlüsselung!
+
+        Nachrichten, die mit der **Caesar-Verschlüsselung** verschlüsselt sind, lassen sich sehr leicht knacken. Was wäre, wenn wir, anstatt das ganze Alphabet zu verschieben, jeden Buchstaben des Alphabets auf einen anderen Buchstaben des Alphabets abgebildet hätten? Dies wird als **zufällige Substitutions-Verschlüsselung** bezeichnet.
+
+        In dieser Version des Tools wirst du mehr mit den Diagrammen interagieren, die die Häufigkeit der Buchstaben anzeigen. Indem du die Häufigkeit der Buchstaben in der verschlüsselten Eingabemeldung im Vergleich zur Häufigkeit der Buchstaben in einem typischen Stück englischer Prosa analysierst, kannst du beginnen, dich darauf zu beschränken, was einige der Buchstabenzuordnungen sein könnten. Wusstest du, dass _'E'_ der am häufigsten verwendete Buchstabe in der englischen Sprache ist? Vielleicht ist daher auch der häufigste Buchstabe in Deinem verschlüsselten Texten ein _'E'_, aber vielleicht auch nicht! Du musst ein wenig raten und prüfen, ob diese Ersetzung Sinn macht.
+
+        # Mach folgendes
+
+        -   Laden Sie die **Sample message (hard)** aus dem Dropdown-Menü der Nachricht. Dadurch wird eine Nachricht geladen, die mit einer zufälligen Ersetzungschiffre verschlüsselt wurde.
+            ![](https://images.code.org/04c6230c9607110126581c298bc09183-image-1443569176380.gif)
+
+        -   Du knackst die Nachricht knacken, indem du errätst, welcher Buchstaben des Alphabets im ursprünglichen Verschlüsselungstext geändert werden soll. Du kannst dies tun, indem Sie die blauen Buchstaben des Alphabets direkt unter den orangefarbenen Buchstaben ziehst, den du im ursprünglichen Verschlüsselungstext ändern möchtest. Buchstaben, die mit Deiner Vermutungen geändert wurden, werden im Nachrichtenfenster links nicht mehr orange hervorgehoben.
+            ![](https://images.code.org/da9a7af7568d8c1698872ab91b4d79d7-image-1443572471212.gif)
+
+        -   Spiele mit einigen der Sortieroptionen, die auf der Registerkarte "Zufällige Ersetzung von Verschlüsselungen" verfügbar sind, um verschiedene Ansichten über die Häufigkeiten der Buchstaben im Eingabetext sowie im englischen Standardtext zu erhalten.
+            ![](https://images.code.org/82efbca1807206c9a07de520fdb22027-image-1443572614493.23.28.png)
+
+        Sieh, wie lange du brauchst, um die Verschlüsselung zu knacken! Ist dies eine gute Methode, um geheime Daten zu verschlüsseln?
       Function intro Ryan: "In deinem Arbeitsbereich befindet sich eine **Funktion**
         namens \"Brücke bauen\".  Sie umfasst den gesamten Code, den du zum Überqueren
         des Flusses benötigst! \\\r\n \\\r\nDocke den kleinen, grünen Block zweimal
@@ -284,6 +734,22 @@ de-DE:
         des Flusses benötigst! \\\r\n \\\r\nDocke den kleinen, grünen Block zweimal
         in deinem Arbeitsbereich an, um den Weg zu reparieren und {currentPlayerName}
         zur Redstone-Fackel [redstone_torch] zu bringen."
+      Gamelab StartScreen Intro: |-
+        # Start- und Endbildschirme
+
+        Dieses Tutorial zeigt Dir, wie du Start- und Endbildschirme im Game Lab erstellst und das Spiel vom Endbildschirm aus neu gestarten werden kann.
+
+        Drücke "Ausführen", um das Spiel auf der linken Seite zu spielen.  Befolge zum Abspielen die Anweisungen auf dem Startbildschirm.  Wenn das Spiel beendet ist, folge den Anweisungen auf dem Endbildschirm, um das Spiel neu zu starten.
+
+        In der nächsten Textblase siehst du den Code für das Spiel. Beginne deinen eigenen Start- und Endbildschirme hinzuzufügen.
+
+        ## Startbildschirm
+
+        Der Startbildschirm ist der Einführungsbildschirm, der erscheint, bevor der Benutzer mit dem Spielen des Spiels beginnt.  Dieser enthält in der Regel den Titel des Spiels und einige grundlegende Anweisungen zum Spielen.  Es kann auch den Spieleentwickler nennen.
+
+        ## Endbildschirm
+
+        Der Endbildschirm erscheint, nachdem der Benutzer das Spiel gewonnen oder verloren hat.  Es beinhaltet manchmal die Punktezahl, eine Highscore oder andere Informationen.  Es kann auch eine Option haben, das Spiel erneut zu spielen.
       HOC 2018 Level_1: Du benötigst für deine Reise Vorräte. Sammle ein **Boot**
         ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
         aus der **Truhe** ein![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
@@ -314,8 +780,29 @@ de-DE:
       HOC 2018 Level_9b: Du hast das Riff erreicht. Suche jetzt nach dem **Herz des
         Meeres** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)!
         Verwende blaue und rote Korallen, um die Schatz**truhe** zu erreichen![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
+      Intro to Web Lab - Part 1_2019: |-
+        ## Zu berücksichtigende Frage:
+
+        -   Was sind die verschiedenen Teile von Web Lab und wofür werden sie verwendet?
+      Intro to Web Lab - Part 2_2019: |-
+        ## Zu berücksichtigende Fragen
+
+        -   Warum sind HTML-Tags nützlich?
+        -   Was bewirkt das Absatz-Tag?
+      Introduction to Variables - Part 1_2019: |-
+        ## Zu berücksichtigende Fragen
+
+        -   Wozu werden Variablen verwendet?
+        -   Wie erstellt man eine Variable und weist ihr einen Wert zu?
+        -   Was kann in eine Variable aufnehmen?
       K-1 Bee Loops 5: Verwende „Wiederhole"-Schleifen, um den Nektar und den Honig
         zu sammeln.
+      K-1 Maze Loops 11: |-
+        Bring mich zum Schwein!\
+        Mit der „Wiederholen“-Schleife geht es leichter.
+      K-1 Maze Loops 12: |-
+        Bring mich zum Schwein!\
+        Mit der „Wiederholen“-Schleife geht es leichter.
       K-1 Maze Loops 2: Benutze die “Wiederholen"-Schleife, um mich zum Schwein zu
         bringen.
       K-1 Maze Loops 8: Benutze „Wiederholen“-Schleifen, um mich zum Schwein zu bringen.
@@ -401,6 +888,153 @@ de-DE:
         Schafen zu gelangen.
       Overworld Move to Sheep_2019: Füge einen zweiten „Vorwärts“-Befehl hinzu, um
         zu den Schafen zu gelangen.
+      Pixelation - Lesson 15 - Color Shades: |-
+        # Farbzerlegungen: Aufgabe 2
+
+        **Anweisungen:**
+        <img src='https://images.code.org/548d1daa698a17b1005b1747f152587f-image-1439476855059.png' style="width: 150px; float:right">Wir beginnen mit der Reihe von Rottönen, die Maddie im Video kreiert hat. Experimentiere mit 6-Bit-Farben, indem du die untere Zeile des Bildes mit Farbtönen einer anderen Farbe ausfüllst. Hier ist ein Beispiel mit einigen Blautönen. Probiere deine eigene Farbe!
+      Pixelation - Lesson 15 - Color Shades 4x4: "# Pixelation: Aufgabe 3\n\n<img
+        src = \"https://code.org/images/cspunit1/ColorTask3.png\" style=\"float:right;
+        margin:0 20px\" width=200>\n\n**Anweisungen:**\nWir beginnen Sie mit dem 4x4
+        Bild, das Maddie im Video erstellt hat.\n\nDeine Aufgabe ist es, ein 4x4-Raster
+        mit Farben zu füllen, indem du _12 Bit pro Pixel_ verwendest. Das Ergebnis
+        sollte ungefähr so aussehen wie das rechts dargestellte Bild.  \n\nHier sind
+        die Anforderungen:\n\n-   Reihe 1 - füllen Sie mit Rottönen. \n-   Reihe 2
+        - Grüntöne. \n-   Reihe 3 - Blautöne. \n-   Reihe 4 - Graustufen."
+      Pixelation - Lesson 15 - Complete 3-bit color: "# Farbzerlegung: Aufgabe 1\n\n**Anweisungen:**\n\n-
+        \  Wir beginnen mit dem 4x2-Bild, das Maddie erstellt hat, aber wir haben
+        die letzten beiden Felder weggelassen. \n-   Vervollständige das Bild, indem
+        du herausfindest, welche zwei Farben fehlen und kodiere diese."
+      Pixelation 4x4 Empty: Die Breite und Höhe sind nun in den Pixeldaten kodiert.
+        Kannst du herausfinden, wie du die Abmessungen anpassen kannst?
+      Pixelation Bee: |-
+        # Beispiel für 12 Bits pro Pixel
+
+        -   Dieses größere Bild einer Biene kodiert Farbe mit 12 Bit pro Pixel, aber das Betrachten in Hexadezimalen macht es einfacher, die Farbe jedes Pixels zu sehen.
+        -   Wenn du in den Binärmodus wechselst - halten Dich fest - sind es viele Bits.
+        -   Hier ist noch eine weitere spannende Sache, die du ausprobieren kannst: Schiebe die Bits pro Pixel hoch bis auf 24 Bits pro Pixel. Was passiert dann? Kannst du dieses Verhalten erklären?
+      Pixelation Flappy: |-
+        # Beispiel für mehr Bits pro Pixel
+
+        Hier ist ein größeres Bild mit 9 Bit pro Pixel. Mit 9 Bit pro Pixel können 512 verschiedene Farben darstellt werden. Klicke dich durch, um das nächste Bild zu sehen, das noch ausgefeilter, aber einfacher zu verstehen ist.
+      Room Escape Workshop - 1: |-
+        # Räume einrichten
+
+        <img src="https://images.code.org/9d103d74f7c2da05aeccd5fc317e6ab6-image-1490368234432.08.44 AM.png" style="width:200px; float:right">
+
+        Um eine Escape Room zu erstellen müssen Sie den Raum zunächst einrichten, in dem der Benutzer Abenteuer erleben kann. Ein Teil der Arbeit wurde bereits für Sie erledigt.  Sie müssen nur entscheiden, wie die verschiedenen Teile des Raumes aussehen werden, indem Sie Bilder auswählen!
+
+        # Mache folgendes
+
+        -   Das Level beginnt im Designmodus.
+        -   Füge für jedes leere Bildelement (graues Rechteck) ein entsprechendes Bild ein. Du brauchst beispielsweise ein Türbild für das Bildelement Tür mit der Bezeichnung Tür.
+        -   Ein Beispiel dafür, wie der Raum aussehen könnte, findest du auf der rechten Seite.
+      Room Escape Workshop - 10: |-
+        # Tür öffnen
+
+        <img src="https://images.code.org/3651f7d5306bdcfd2d9a3d9bb842626e-image-1491066778787.12.36 PM.png" style="width:200px;float:right">
+
+        Wir kommen dem Ganzen näher! Lasst uns die Tür einrichten, um sie zum Öffnen vorzubereiten.
+
+        # Mach folgendes
+
+        -   Bild für den Außenbereich hinzufügen
+        -   Gib ihm eine gute ID (vielleicht _außen_).
+        -   Das Bild für den Außenbereich ausblenden (Es wird beim Öffnen der Tür angezeigt)
+      Room Escape Workshop - 10 - 2: |-
+        # Tür öffnen
+
+        <img src="https://images.code.org/57407cb51f50e08ecddb8ce7d2d89157-image-1491065952915.58.58 PM.png" style="width:200px;float:right">
+
+        Öffne die Tür, wenn man den Schlüssel hat!
+
+        # Mach folgendes
+
+        -   Füge einen `onEvent` Block hinzu, wenn auf die Tür geklickt wurde.
+        -   Fügen Sie eine `if`-Anweisung innerhalb des `onEvent` Events hinzu, um zu überprüfen, ob sich die Schlüsselposition nach unten bewegt hat.
+            -   Hinzufügen einer if-Anweisung
+            -   In der if-Anweisung fügen Sie `==` hinzu.
+            -   Auf einer Seite der `==` befindet sich die x-Position, auf die Sie den Schlüssel bewegen, wenn er angeklickt wird.
+            -   Auf der anderen Seite fügen Sie den Block `getXPosition()` hinzu - Die ID dafür sollte die ID Ihres Schlüssels sein!
+        -   Verwenden Sie innerhalb der `if`-Anweisung `showElement`, um das versteckte Außenbild anzuzeigen, wenn man den Schlüssel hat
+      Room Escape Workshop - 3: |-
+        # Den Code verstecken
+
+        <img src="https://images.code.org/6fa80456a39d9b6417545f5f66ec83a5-image-1490368827625.png" style="width:400px;float:right">
+
+        1.  Klicke im Designmodus auf das weiße Quadrat auf dem "CODE" steht. Ändere es, um einen Geheimcode deiner Wahl anzuzeigen.
+        2.  Ziehe das Bild nach unten, um den Geheimcode abzudecken.
+
+        ![](<>)
+      Room Escape Workshop - 3-2: |-
+        # Bild bewegen
+
+        Machen Sie es nun so, dass der Benutzer den Geheimcode durch Anklicken des Bildes finden kann. Wenn sie auf das Bild klicken, sollte es sich nach oben und aus dem Weg bewegen.
+
+        # Mach folgendes
+
+        -   Ziehe einen `onEvent` Baustein in den Arbeitsbereich
+        -   Ändere die im `onEvent` Baustein in "Bild" (das ist die ID des Bildelements)
+        -   Füge innerhalb des `onEvent` Bausteins den Baustein `setPosition` mit den folgenden Eingaben hinzu
+            -   ID: "Bild"
+            -   Die nächsten beiden Eingaben sind x- und y-Werte - testen Sie einige Werte, um zu versuchen, das Bild wie in den Bildern rechts zu bewegen
+      Room Escape Workshop - 4: "# Den Safe einrichten\n\nDu hast einen Geheimcode
+        generiert und ihn so verwendet, dass Benutzer in den zweiten Raum navigieren
+        können. Geben wir dem Benutzer nun die Möglichkeit den Geheimcode einzugeben
+        wenn er auf den Safe klickt.\n\n# Mach folgendes\n\n-   Hinzufügen eines `onEvent`-Bausteins\n
+        \   -   Wähle die ID für den Safe aus.\n-   Füge innerhalb des `onEvent` Bausteins
+        einen <img src=\"https://images.code.org/c0964a8543728d018d5d9583319e22b9-image-1491060910093.34.36
+        AM.png\" style=\"width:300px\"> Baustein hinzu.\n    -   Ändere auf der linken
+        Seite das _x_ (den Namen der Variable) in _guess_. \n    -   Ändere auf der
+        rechten Seite _\"Einen Wert eingeben\"_  (also die Benutzeraufforderung) auf
+        _\"Den Code eingeben\"_"
+      Room Escape Workshop - 5: |-
+        # Überprüfen des Geheimcodes
+
+        Nachdem du nun eine Vermutung des Geheimcodes vom Benutzer entgegen gennommen hast, musst du nur prüfen, ob diese korrekt ist! Wir können dies mit einer `if`-Anweisung tun. Eine if-Anweisung prüft, ob eine Bedingung true ist, in diesem Fall wird geprüft, ob die vom Benutzer eingegebene Nummer mit dem Geheimcode übereinstimmt.
+
+        # Mach folgendes
+
+        -   Füge innerhalb des `onEvent`-Bausteins für den Safe unterhalb des Prompt-Befehls eine <img src="https://images.code.org/5e9a434b1ad6b8f010db928b668127a5-image-1491061131564.37.01 AM.png" style="width:100px">-Anweisung hinzu.
+        -   Erstelle die Bedingung, indem du den <img src="https://images.code.org/f0680979704c30975550211b03ed222e-image-1491061134985.37.08 AM.png" style="width:100px"> Baustein herausziehst, der prüft, ob zwei Dinge gleich sind
+        -   Auf der einen Seite von <img src="https://images.code.org/f0680979704c30975550211b03ed222e-image-1491061134985.37.08 AM.png" style="width:100px"> setze _guess_ (der Name des Wertes, den wir zum Speichern der Benutzer guess verwendet haben)
+        -   Auf der anderen Seite gibst du den Wert für deinen Geheimcode ein
+      Room Escape Workshop - 7: "# Zeige das innere des Safes\n\n<img src=\"https://images.code.org/71e74305187a46d0badeb29a9a69ac56-image-1490371014841.55.37
+        AM.png\" style=\"width:200px;float:right\">\n\nSobald du das Programm hast
+        das den Geheimcode überprüft, willst du auch, dass sich der Safe \"öffnet\"
+        und den Schlüssel innen angezeigt wird. Zuerst müssen Sie diese Elemente aber
+        noch im Designmodus erstellen.\n\n# Mach folgendes\n\n-   Gehe in den Designmodus
+        und fügen Sie ein graues quadratisches Bild hinzu.\n    -   Klicke und ziehe
+        ein Bildelement <img src=\"https://images.code.org/8f4bc108415d83e5c528c9204502efc2-image-1491059181186.06.13
+        AM.png\" style=\"width:75px\"> auf den Bildschirm.\n    -   Gib ihm eine gute
+        ID (vielleicht _insideSafe_).\n    -   Finde ein graues Quadrat, das als Bild
+        verwendet werden soll.\n    -   Dies dient als Innenseite des Tresors, da
+        es die Vorderseite des Tresors verdeckt, wenn es gezeigt wird.\n-   Hinzufügen
+        eines Schlüsselbildes\n    -   Klicke und ziehe ein Bildelement <img src=\"https://images.code.org/8f4bc108415d83e5c528c9204502efc2-image-1491059181186.06.13
+        AM.png\" style=\"width:75px\"> auf den Bildschirm.\n    -   Gib ihm eine gute
+        ID (vielleicht _Schlüssel_)\n    -   Finde ein Schlüsselbild zur Verwendung
+        \n-   Klicke im Designmodus auf die versteckte Eigenschaft für das graue Quadrat
+        und die Taste. Wenn sie ausgeblendet sind, wird es im Designmodus so aussehen
+        wie unten beschrieben.\n\n<img src=\"https://images.code.org/2c2c7e9996515f2b30d416b558fd1360-image-1489605526794.17.55
+        PM.png\" style=\"width:200px\">"
+      Room Escape Workshop - 8: |-
+        # Zeige das Innere des Safes
+
+        Richte nun den Code so ein, dass der Schlüssel und das graue Quadrat angezeigt werden, wenn der Benutzer den richtigen Code eingibt.
+
+        # Mach folgendes
+
+        -   Innerhalb der `if`-Anweisung, die du im Befehl `onEvent` für den Safe erstellt hast, füge ein:
+            -   Der `showElement` Baustein um das graue Quadrat anzuzeigen
+            -   Der `showElement` Baustein um den Schlüssel anzuzeigen
+      Room Escape Workshop - 9-2: "# Schlüssel-Klick\n\n<img src=\"https://images.code.org/1a736d2774860bebc5072b8ae8b38f34-image-1491066638078.10.00
+        PM.png\" style=\"width:170px;float:right\">\n\nSobald ein Benutzer auf den
+        Schlüssel klickt, möchtest du zeigen, dass er den Schlüssel hält. Du kannst
+        dies tun, indem du den Schlüssel in die untere Ecke des Raumes bewegst. \n\n#
+        Mache folgendes\n\n-   Fügt einen `onEvent`-Baustein hinzu für das Ereignis
+        wenn der Benutzer auf den Schlüssel klickt. \n-   Innerhalb des Blocks `onEvent`:\n
+        \   -   Verwende `setPosition`, um die Taste in die untere Ecke des Bildschirms
+        zu bewegen"
       Standalone_Artist_2: Zeichne diesen Diamanten indem du Winkel von 120 und 60
         Grad, sowie 150 Pixel lange Seiten verwendest.
       Standalone_Artist_3: Kannst du ein Hexagon (Sechseck) mit 100 Pixel Seitenlänge
@@ -431,14 +1065,333 @@ de-DE:
         oder Fünfecken zeichnen?
       Standalone_Artist_9: Leg los und zeichne ein Bild deiner Wahl! Du erhältst dafür
         eine leere Funktion, mit der du machen kannst was du möchtest!
+      U4 Model Program 5_2019: |-
+        # Wire Up the Other Buttons
+
+        Nachdem du nun eine Taste zum Funktionieren gebracht hast, folgen nun einfach dem gleichen Muster für alle anderen.
+
+        # Mach folgendes
+
+        -   Erstelle für jede Schaltfläche ein Ereignis, das beim Drücken der Taste auf den entsprechenden Bildschirm verweist.
+        -   Führe Deine App aus und teste, ob alle Schaltflächen funktionieren.
+      'Video: Intro to CSS Part 2_2019': |-
+        ## Zu berücksichtigend Frage
+
+        -   Woher weiß die Webseite, welches Stylesheet sie verwenden soll?
+      Vigenere: "# Verschlüsseln und Entschlüsseln einer Nachricht mit der Vigenère-Chiffre\n\nDies
+        ist eine interaktive Version der Vigenère-Chiffre, die die Ver- und Entschlüsselung
+        animiert, während sie stattfindet, mit einem Stück Text zum Ver- und Entschlüsseln
+        und dem Schlüssel.\n\n# Mach folgendes\n\n### Eine Nachricht verschlüsseln\n\nKlicken
+        Sie mehrmals auf \"Schritt\" und verfolgen Sie, was passiert. Achten Sie darauf:\n\n-
+        \  Wie der Chiffriertext entsteht\n-   Was passiert, wenn man zum letzten
+        Zeichen des Schlüssels gelangt?\n-   Nachdem du ein paar Zeichen durchgegangen
+        bist, klicke auf \"Ausführen\", um den Rest zu sehen.\n-   Klicke auf Neustart
+        und spiele die Animation erneut ab. Du kannst den Geschwindigkeitsregler verwenden,
+        um die Animation zu beschleunigen oder zu verlangsamen.  \n\n![](https://images.code.org/06858f88ac12997bba73f4f76638a068-image-1443574425185.gif)\n\n###
+        Eine Nachricht entschlüsseln\n\nVerschlüssele eine Nachricht wie oben beschrieben,
+        dann:\n\n-   markiere und kopiere den verschlüsselten Text\n-   fügen diesen
+        in den Klartextbereich ein. Hinweis: Ändere den Schlüssel nicht.\n-   ändere
+        den Umschalter Verschlüsseln/Entschlüsseln auf \"Entschlüsseln\".\n-   Drücke
+        \"Schritt\"  ein paar Mal, und dann \"Ausführen\"\n\nDu solltest sehen, wie
+        der Originaltext entsteht.\n![](https://images.code.org/dc89d6c19c17adb23b6b5ff9a62c4583-image-1443574425182.gif)\n\nWie
+        schwer wäre es, eine mit dieser Verschlüsslungsmethode verschlüsselten Nachricht
+        zu knacken? Macht die Länge der Passfeder einen Unterschied?"
       'Widget: Text Compression': Suche im Text nach Mustern (Worte oder Sätze die
         sich wiederholen). Trage die Muster die du findest in das Wörterbuch rechts
         ein. Wenn du einen Eintrag in das Wörterbuch machst, wird das Symbol des Eintrags
         die Muster im Text ersetzen.
+      course1_artist_loops_challenge3: |-
+        **Zwitscher!**
+
+        _"Kannst du mir helfen, zwei Vogelhäuser zu bauen?"_
+      course1_maze_debugging_challenge1: Beseitige die Fehler in diesem Level. Entferne
+        die Blöcke, welche nicht passen, und füge die fehlenden Blöcke hinzu. Bring
+        den Vogel zum Schwein!
+      course1_maze_seq_challenge2: Du kannst dich nur bis zu viermal in jede Richtung
+        bewegen. Kannst du einen Weg finden, bevor dir die Bausteine ausgehen?
+      course1_playlab_events_challenge1: |-
+        "Wo verstecken sich meine Freunde? In diesem Spiel wird mit einem Klick auf mich meine Freundin Olive die Katze sichtbar!"\_
+
+        Ein Klick auf Olive lässt Robin erscheinen! Kannst du Code schreiben, um auch den Rest der Charaktere anzuzeigen?
+
+        Achten bei diesem Rätsel darauf, dass du auf Hinweise klickst! Die Hinweise helfen Dir, dieses Projekt Schritt für Schritt durchzuführen!
+
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
+      course1_playlab_events_challenge2: |-
+        _"Lasst uns eine Party feiern! Gib meinen Freunden etwas zu tun, indem du sie anklickst oder antippst."_
+
+        Was werden die Tiere sagen? Was wird sonst noch passieren?
+
+        Achte bei diesem Rätsel darauf, dass du auf Hinweise klickst! Die Hinweise werden dir lustige Dinge zum Ausprobieren geben!
+
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
+      course2_artist_prog_challenge1: Zeichne Räume für jedes Tier. Es gibt viele
+        verschiedene Möglichkeiten, dieses Rätsel zu lösen, also viel Spaß!
+      course2_collector_prog_challenge1: Schau genau! Kannst du alle **10** Schätze
+        einsammeln?
+      course2_maze_programming_challenge1: '"Das Schwein versteckt sich! Kannst du
+        mir helfen, mich zurechtzufinden?"\_'
+      course2_maze_programming_challenge2: Manchmal gibt es mehr als eine Lösung für
+        ein Problem. Manchmal ist es schneller, rückwärts zu gehen, als vorwärts!
       course3_maze_debugging_challenge1: _"Gehe ich hier nur immer im Kreis herum?"_
       course4_artist_fwp_challenge1: Versuche, dieses Programm auszuführen und verändere
         es, um zu sehen, was passiert. Kannst du herausfinden, wie es funktioniert?
         (Oder lösche es und ersetze es durch etwas ganz anderes)
+      courseA_artist_loops10: |-
+        ## Zeit um wieder an Land zu gehen. Hilf mir Steine abzulegen, so dass ich nicht ins Wasser falle!
+
+        ![expandable](https://images.code.org/d3213d375d0271e114aa4313cdeb34be-image-1498064942606.gif)
+      courseA_artist_loops10_2018: |-
+        ## Zeit um wieder an Land zu gehen. Hilf mir Steine abzulegen, so dass ich nicht ins Wasser falle!
+
+        ![expandable](https://images.code.org/d3213d375d0271e114aa4313cdeb34be-image-1498064942606.gif)
+      courseA_artist_loops10_2019: |-
+        ## Zeit um wieder an Land zu gehen. Hilf mir Steine abzulegen, so dass ich nicht ins Wasser falle!
+
+        ![expandable](https://images.code.org/d3213d375d0271e114aa4313cdeb34be-image-1498064942606.gif)
+      courseA_artist_loops11: |-
+        ## Hilf mir Stufen zu bauen, um zu sehen, wie das Schiff davon segelt.
+
+        ![expandable](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)
+      courseA_artist_loops11_2018: |-
+        ## Hilf mir Stufen zu bauen, um zu sehen, wie das Schiff davon segelt.
+
+        ![expandable](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)
+      courseA_artist_loops11_2019: |-
+        ## Hilf mir Stufen zu bauen, um zu sehen, wie das Schiff davon segelt.
+
+        ![expandable](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)
+      courseA_artist_loops12: |-
+        Der Zeichner sah etwas Lustiges in der Ferne. Zeichne, was Du denkst, was er sah!
+
+        * * *
+
+        ### Ideen
+
+        ![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)
+        ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)
+        ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)
+        ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
+      courseA_artist_loops12_2018: |-
+        Der Zeichner sah etwas Lustiges in der Ferne. Zeichne, was Du denkst, was er sah!
+
+        * * *
+
+        ### Ideen
+
+        ![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)
+        ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)
+        ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)
+        ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
+      courseA_artist_loops12_2019: |-
+        Der Zeichner sah etwas Lustiges in der Ferne. Zeichne, was Du denkst, was er sah!
+
+        * * *
+
+        ### Ideen
+
+        ![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)
+        ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)
+        ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)
+        ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
+      courseA_artist_loops2: |-
+        Hilf dem Künstler diese Linie 2 mal vorwärts zu zeichnen.
+
+        ![](https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif)
+      courseA_artist_loops2_2018: |-
+        Hilf dem Künstler diese Linie 2 mal vorwärts zu zeichnen.
+
+        ![](https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif)
+      courseA_artist_loops2_2019: |-
+        Hilf dem Künstler diese Linie 2 mal vorwärts zu zeichnen.
+
+        ![](https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif)
+      courseA_artist_loops3: |-
+        Unser Künstler versucht 5 mal eine Linie zu zeichnen, aber er schafft es nicht. Kannst du helfen?
+
+        ![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
+      courseA_artist_loops3_2018: |-
+        Unser Künstler versucht 5 mal eine Linie zu zeichnen, aber er schafft es nicht. Kannst du helfen?
+
+        ![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
+      courseA_artist_loops3_2019: |-
+        Unser Künstler versucht 5 mal eine Linie zu zeichnen, aber er schafft es nicht. Kannst du helfen?
+
+        ![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
+      courseA_artist_loops4: |-
+        Verwende jetzt eine <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml> Schleife um die Linie 5 mal zu zeichnen!
+
+        ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
+      courseA_artist_loops4_2018: |-
+        Verwende jetzt eine <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml> Schleife um die Linie 5 mal zu zeichnen!
+
+        ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
+      courseA_artist_loops4_2019: |-
+        Verwende jetzt eine <xml><block type="controls_repeat_simplified_dropdown" block-text="repeat"><title name="TIMES" config="2-6">5</title></block></xml> Schleife um die Linie 5 mal zu zeichnen!
+
+        ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
+      courseA_artist_loops5: |-
+        ## Zeichne eine Linie, welche 5 Schritte lang ist. Das wird unser Horizont.
+
+        ![expandable](https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
+      courseA_artist_loops5_2018: |-
+        ## Zeichne eine Linie, welche 5 Schritte lang ist. Das wird unser Horizont.
+
+        ![expandable](https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
+      courseA_artist_loops5_2019: |-
+        ## Zeichne eine Linie, welche 5 Schritte lang ist. Das wird unser Horizont.
+
+        ![expandable](https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
+      courseA_artist_loops6: |-
+        ## Lass uns einen schönen Hügel in den Hintergrund zeichnen.
+
+        ![expandable](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
+      courseA_artist_loops6_2018: |-
+        ## Lass uns einen schönen Hügel in den Hintergrund zeichnen.
+
+        ![expandable](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
+      courseA_artist_loops6_2019: |-
+        ## Lass uns einen schönen Hügel in den Hintergrund zeichnen.
+
+        ![expandable](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
+      courseA_artist_loops7: |-
+        ## Benutze die <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> Schleife um Wellen zum Wasser hinzuzufügen.
+
+        ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
+      courseA_artist_loops7_2018: |-
+        ## Benutze die <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> Schleife um Wellen zum Wasser hinzuzufügen.
+
+        ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
+      courseA_artist_loops7_2019: |-
+        Benutze die <xml><block type="controls_repeat_simplified_dropdown" block-text="repeat"><title name="TIMES" config="3-10">???</title></block></xml>-Schleife, um dem Wasser Wellen hinzuzufügen.
+
+        ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
+      courseA_artist_loops8: |-
+        ## Wir brauchen eine Leiter hinauf aufs Boot.
+
+        ![expandable](https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)
+      courseA_artist_loops8_2018: |-
+        ## Wir brauchen eine Leiter hinauf aufs Boot.
+
+        ![expandable](https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)
+      courseA_artist_loops8_2019: |-
+        ## Wir brauchen eine Leiter hinauf aufs Boot.
+
+        ![expandable](https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)
+      courseA_artist_loops9: |-
+        ## **Herausforderung:** Die Treppe zum Dock ist kaputt. Hilf mir, die Treppe zu reparieren.
+
+        ![expandable](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
+      courseA_artist_loops9_2018: |-
+        ## **Herausforderung:** Die Treppe zum Dock ist kaputt. Hilf mir, die Treppe zu reparieren.
+
+        ![expandable](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
+      courseA_artist_loops9_2019: |-
+        ## **Herausforderung:** Die Treppe zum Dock ist kaputt. Hilf mir, die Treppe zu reparieren.
+
+        ![expandable](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
+      courseA_artist_loops_challenge1: |-
+        Du kannst eine Schleife nehmen um viele Linien hintereinander zu zeichnen.
+
+        Kannst du ein Haus zeichnen? Mach es so, wie es dir gefällt! Versuche Muster zu finden, die sich wiederholen!
+
+        Hier sind ein paar Ideen:
+
+        ![](https://images.code.org/6e59e881e0aa1d31186e81a203655a0b-image-1501785654664.png)
+      courseA_artist_loops_challenge1_2018: |-
+        Du kannst eine Schleife nehmen um viele Linien hintereinander zu zeichnen.
+
+        Kannst du ein Haus zeichnen? Mach es so, wie es dir gefällt! Versuche Muster zu finden, die sich wiederholen!
+
+        Hier sind ein paar Ideen:
+
+        ![](https://images.code.org/6e59e881e0aa1d31186e81a203655a0b-image-1501785654664.png)
+      courseA_artist_loops_challenge1_2019: |-
+        Du kannst eine Schleife nehmen um viele Linien hintereinander zu zeichnen.
+
+        Kannst du ein Haus zeichnen? Mach es so, wie es dir gefällt! Versuche Muster zu finden, die sich wiederholen!
+
+        Hier sind ein paar Ideen:
+
+        ![](https://images.code.org/6e59e881e0aa1d31186e81a203655a0b-image-1501785654664.png)
+      courseA_artist_loops_challenge2a: |-
+        _"Hilf mir den Zeltplatz fertigzustellen!"_
+
+        Benutze die Blöcke im Werkzeugkasten um diese drei Zelte zu zeichnen.
+      courseA_artist_loops_challenge2a_2018: |-
+        _"Hilf mir den Zeltplatz fertigzustellen!"_
+
+        Benutze die Blöcke im Werkzeugkasten um diese drei Zelte zu zeichnen.
+      courseA_artist_loops_challenge2a_2019: |-
+        _"Hilf mir den Zeltplatz fertigzustellen!"_
+
+        Benutze die Blöcke im Werkzeugkasten um diese drei Zelte zu zeichnen.
+      courseA_collector_loops1: |-
+        **Freies Spiel:** Das ist Laurel, die Abenteurerin! Bewege sie umher und sammle so viele Schätze wie du kannst.
+
+        Ziehe Blöcke in den Arbeitsbereich und versuche herauszufinden, wie du einen Schatz einsammeln kannst. Du brauchst mindestens einen Diamant um dieses Level zu bestehen.
+      courseA_collector_loops12: |-
+        _"Heureka!  Hol dir so viele Schätze wie möglich!"_\
+        (Du musst nicht alle einsammeln.)
+      courseA_collector_loops12_2018: |-
+        _"Heureka!  Hol dir so viele Schätze wie möglich!"_\
+        (Du musst nicht alle einsammeln.)
+      courseA_collector_loops12_2019: |-
+        _"Heureka!  Hol dir so viele Schätze wie möglich!"_\
+        (Du musst nicht alle einsammeln.)
+      courseA_collector_loops1_2018: |-
+        **Freies Spiel:** Das ist Laurel, die Abenteurerin! Bewege sie umher und sammle so viele Schätze wie du kannst.
+
+        Ziehe Blöcke in den Arbeitsbereich und versuche herauszufinden, wie du einen Schatz einsammeln kannst. Du brauchst mindestens einen Diamant um dieses Level zu bestehen.
+      courseA_collector_loops1_2019: |-
+        **Freies Spiel:** Das ist Laurel, die Abenteurerin! Bewege sie umher und sammle so viele Schätze wie du kannst.
+
+        Ziehe Blöcke in den Arbeitsbereich und versuche herauszufinden, wie du einen Schatz einsammeln kannst. Du brauchst mindestens einen Diamant um dieses Level zu bestehen.
+      courseA_collector_loops2: |-
+        Sammle alle Schätze ein! Bewege Laurel zu jedem Edelstein und benutze dann diesen Block:
+        <xml><block type="collector_collect"/></xml>
+      courseA_collector_loops2_2019: 'Sammle alle drei Schätze ein! Bewege Laurel
+        zu jedem Edelstein und benutze dann diesen <xml><block type="collector_collect"
+        block-text="get treasure"/></xml> Baustein. '
+      courseA_collector_loops3: Wie kann Laurel alle fünf Schätze einsammeln, wenn
+        sie nur einen <xml><block type="maze_moveEast"/></xml> Block benutzt?
+      courseA_collector_loops3_2018: Wie kann Laurel alle fünf Schätze einsammeln,
+        wenn sie nur einen <xml><block type="maze_moveEast"/></xml> Block benutzt?
+      courseA_collector_loops3_2019: Wie kann Laurel alle fünf Schätze einsammeln,
+        wenn sie nur einen <xml><block type="maze_moveEast" block-text="move east"/></xml>
+        Block benutzt?
+      courseA_collector_loops_challenge1: _"Kannst du mir helfen Fehler im Code zu
+        finden? Ich weiß, welchen Weg ich gehen will, aber ich bin mir nicht sicher,
+        wieviel Schritte ich machen muss."_
+      courseA_collector_loops_challenge1_2018: _"Kannst du mir helfen Fehler im Code
+        zu finden? Ich weiß, welchen Weg ich gehen will, aber ich bin mir nicht sicher,
+        wieviel Schritte ich machen muss."_
+      courseA_collector_loops_challenge1_2019: _"Kannst du mir helfen Fehler im Code
+        zu finden? Ich weiß, welchen Weg ich gehen will, aber ich bin mir nicht sicher,
+        wieviel Schritte ich machen muss."_
+      courseA_collector_preLoops1: "Das ist Laurel, die Abenteurerin! \n\nDrücken
+        Sie \"Ausführen\", um zu sehen, wie sie zum Schatz geht und ihn sich schnappt."
+      courseA_collector_preLoops2: "Großartig!  Jetzt können Sie selbst Code hinzufügen!
+        \ \n\nRaste den ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)
+        Baustein am unteren Rand des Programms ein und klicke auf \"Ausführen\"!"
+      courseA_collector_preLoops3: Um den Schatz zu ergattern, raste zwei ![](https://images.code.org/54c206b62a02f1d7ea8f1bee52664ecb-image-1508905670742.25.37.png)
+        Bausteine und einen ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)
+        Baustein an den unteren Rand des Programms ein und klicke auf "Ausführen"!
+      courseA_collector_preLoops7: |-
+        Sammle alle Schätze ein! Bewege Laurel zu jedem Edelstein und benutze dann diesen Block:
+        <xml><block type="collector_collect"/></xml>
+      courseA_harvester_seq2_2019: 'Benutze **drei** <xml><block type="maze_moveWest"
+        block-text="move west"/></xml> Bausteine, um die Erntemaschine zum Mais zu
+        bringen! '
+      courseA_harvester_seq3_2019: Benutze **drei** <xml><block type="maze_moveNorth"
+        block-text="move north"/></xml> Bausteine, um die Erntemaschine zum Mais zu
+        bringen! Vergiss nicht, den Mais am Ende aufzunehmen.
+      courseA_maze_ramp2_2019: Füge die beiden<xml><block type="maze_moveEast" block-text="move
+        east"/></xml> an den<xml><block type="when_run" block-text="when run"/></xml>
+        an, um Deinen Code zu vervollständigen. Klicke dann auf "▶ Ausführen".
+      courseA_maze_ramp3a_2019: Nimm einen <xml><block type="maze_moveNorth" block-text="move
+        north"/></xml> Baustein aus der Toolbox und füge ihn unten in die anderen
+        Bausteine ein, um diesen Code abzuschließen. Dann klicke auf "▶ Ausführen".
       courseA_maze_seq1: _"Nimm diese Blöcke zu Hilfe und versuche, mich zum Schwein
         zu führen!"_
       courseA_maze_seq10: |-
@@ -498,16 +1451,128 @@ de-DE:
         **Herausforderung:**Repariere dieses Level, indem Du Blöcke hinzufügst um den Vogel zum Schwein zu bewegen!
 
         ![expandable](https://images.code.org/3f35068dd3cf51c420a536fa078f854d-image-1497996843105.gif)
+      courseA_maze_seq_challenge1: Beseitige die Fehler in diesem Level. Entferne
+        die Blöcke, welche nicht passen, und füge die fehlenden Blöcke hinzu. Bring
+        den Vogel zum Schwein!
+      courseA_maze_seq_challenge1_2018: Beseitige die Fehler in diesem Level. Entferne
+        die Blöcke, welche nicht passen, und füge die fehlenden Blöcke hinzu. Bring
+        den Vogel zum Schwein!
+      courseA_maze_seq_challenge1_2019: Beseitige die Fehler in diesem Level. Entferne
+        die Blöcke, welche nicht passen, und füge die fehlenden Blöcke hinzu. Bring
+        den Vogel zum Schwein!
+      courseA_maze_seq_challenge2_2019: Folge dem Weg, der den Vogel zum Schwein bringt.
+        Vermeide das TNT, sonst fliegen die Federn!
+      courseA_playLab_events1_2019: Dies ist ein Play Lab Level. Bewegen Sie Baustein
+        in den Arbeitsbereich und sehen Sie, was passiert!
+      courseA_playLab_events2_2019: Jorge, der Hund, will "Hallo." sagen. Kannst du
+        ihm helfen?
+      courseA_playLab_events3: |-
+        Hilf Jorge, dem Hund, sich zu bewegen indem du den <xml><block type="studio_move">
+            <title name="SPRITE">1</title>
+            <title name="DIR">8</title>
+          </block></xml> Block mit dem <xml><block type="studio_whenArrow">
+            <title name="VALUE">left</title>
+          </block></xml> Ereignis-Block, der schon im Arbeitsbereich ist, verbindest.
+
+        Bring Jorge zur Fahne um dieses Level zu beenden!
+      courseA_playLab_events3_2018: |-
+        Hilf Jorge, dem Hund, sich zu bewegen indem du den <xml><block type="studio_move">
+            <title name="SPRITE">1</title>
+            <title name="DIR">8</title>
+          </block></xml> Block mit dem <xml><block type="studio_whenArrow">
+            <title name="VALUE">left</title>
+          </block></xml> Ereignis-Block, der schon im Arbeitsbereich ist, verbindest.
+
+        Bring Jorge zur Fahne um dieses Level zu beenden!
+      courseA_playLab_events3_2019: |-
+        Hilf Jorge, dem Hund, sich zu bewegen indem du den <xml><block type="studio_move" block-text="move dog west">
+            <title name="SPRITE">1</title>
+            <title name="DIR">8</title>
+          </block></xml> Block mit dem <xml><block type="studio_whenArrow" block-text="when left arrow">
+            <title name="VALUE">left</title>
+          </block></xml> Ereignis-Block, der schon im Arbeitsbereich ist, verbindest.
+
+        Bring Jorge zur Fahne um dieses Level zu beenden!
+      courseA_playLab_events4: Füge jetzt mehr Blöcke hinzu, um Jorge nach rechts
+        zu bewegen wenn die Pfeiltaste nach 'rechts' gedrückt wird.
+      courseA_playLab_events5: Füge Ereignisse hinzu um Jorge nach oben und unten
+        zu bewegen, wenn die 'oben' und 'unten' Pfeiltasten gedrückt werden.
+      courseA_playLab_events5_2018: Füge Ereignisse hinzu um Jorge nach oben und unten
+        zu bewegen, wenn die 'oben' und 'unten' Pfeiltasten gedrückt werden.
+      courseA_playLab_events5_2019: Füge Ereignisse hinzu um Jorge nach oben und unten
+        zu bewegen, wenn die 'oben' und 'unten' Pfeiltasten gedrückt werden.
+      courseA_playLab_events6_2019: Mach das Ganze noch interessanter indem du den
+        Hintergrund änderst oder einen zufälligen Ton abspielst, wenn auf Jorge geklickt
+        wird.
+      courseA_playlab_events_challenge1: |-
+        Wenn du auf Olive klickst wird Robin erscheinen! Kannst du einen Code schreiben, damit auch die anderen Figuren erscheinen?
+
+        Denk in dieser Aufgabe unbedingt daran, auf die Tipps zu klicken! Die Tipps werden dir helfen dieses Projekt Schritt-für-Schritt zu schaffen!
+
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
+      courseA_playlab_events_challenge1_2018: |-
+        Wenn du auf Olive klickst wird Robin erscheinen! Kannst du einen Code schreiben, damit auch die anderen Figuren erscheinen?
+
+        Denk in dieser Aufgabe unbedingt daran, auf die Tipps zu klicken! Die Tipps werden dir helfen dieses Projekt Schritt-für-Schritt zu schaffen!
+
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
+      courseA_playlab_events_challenge1_2019: |-
+        Wenn du auf Olive klickst wird Robin erscheinen! Kannst du einen Code schreiben, damit auch die anderen Figuren erscheinen?
+
+        Denk in dieser Aufgabe unbedingt daran, auf die Tipps zu klicken! Die Tipps werden dir helfen dieses Projekt Schritt-für-Schritt zu schaffen!
+
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
+      courseA_playlab_events_challenge2: |-
+        Gib jeder Figur etwas zu tun, wenn du auf sie klickst. Was werden die Tiere sagen? Was wird ich passieren?
+
+        Denk in dieser Aufgabe unbedingt daran, auf die Tipps zu klicken. In den Tipps gibt es lustige Vorschläge zum Ausprobieren!
+
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
+      courseA_playlab_events_challenge2_2018: |-
+        Gib jeder Figur etwas zu tun, wenn du auf sie klickst. Was werden die Tiere sagen? Was wird ich passieren?
+
+        Denk in dieser Aufgabe unbedingt daran, auf die Tipps zu klicken. In den Tipps gibt es lustige Vorschläge zum Ausprobieren!
+
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
+      courseA_playlab_events_challenge2_2019: |-
+        Gib jeder Figur etwas zu tun, wenn du auf sie klickst. Was werden die Tiere sagen? Was wird ich passieren?
+
+        Denk in dieser Aufgabe unbedingt daran, auf die Tipps zu klicken. In den Tipps gibt es lustige Vorschläge zum Ausprobieren!
+
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
+      courseB_Scrat_ramp3a_2019: Nimm einen <xml><block type="maze_moveNorth" block-text="move
+        north"/></xml> Baustein aus der Toolbox und füge ihn unten in die anderen
+        Bausteine ein, um diesen Code abzuschließen. Dann klicke auf "▶ Ausführen".
+      courseB_artist_loops1_2019: Dies ist eine neue Art von Aufgabe, sie hießt "Künstler".
+        Spiele in diesem Level und zeichne etwas lustiges.
       courseB_artist_loops3_2019: Hilfe dem Künstler, eine Linie siebenmal zu zeichnen,
         um eine Gartenmauer zu bauen.
+      courseB_artist_loops4_2019: Jetzt müssen wir den Boden für die Pflanzung vorbereiten.
+        Finde die Fehler im Code und helfe mit den Boden vorzubereiten.
       courseB_artist_loops7: "**Aufgabe:** Es ist ein versteckter Garten! Lauf ein
         bisschen herum."
       courseB_artist_loops7_2018: "**Aufgabe:** Es ist ein versteckter Garten! Lauf
         ein bisschen herum."
       courseB_artist_loops7_2019: "**Aufgabe:** Es ist ein versteckter Garten! Lauf
         ein bisschen herum."
-      courseB_collector_loops10_2019: Hilf Laurel, alles Gold aus der Höhle zu holen!
+      courseB_collector_loops1: |-
+        **Freies Spiel:** Das ist Laurel, die Abenteurerin! Bewege sie umher und sammle so viele Schätze wie du kannst.
+
+        Ziehe Blöcke in den Arbeitsbereich und versuche herauszufinden, wie du einen Schatz einsammeln kannst. Du brauchst mindestens einen Diamant um dieses Level zu bestehen.
+      courseB_collector_loops10_2019: Hilf Laurel, alle Schätze aus dieser Höhle zu
+        holen.
       courseB_collector_loops11_2019: Heureka!  Hol dir so viele Schätze wie möglich!
+      courseB_collector_loops2_2019: |-
+        Bewege Laurel auf den Schatz und benutze dann den Block<xml><block type="collector_collect" block-text="get treasure"/></xml>, um ihn aufzunehmen.
+
+        Sammle alle vier Edelsteine um dieses Level zu schaffen.
+      courseB_collector_loops3: Wie kann Laurel alle fünf Schätze einsammeln, wenn
+        sie nur einen <xml><block type="maze_moveEast"/></xml> Block benutzt?
+      courseB_collector_loops3_2018: Wie kann Laurel alle fünf Schätze einsammeln,
+        wenn sie nur einen <xml><block type="maze_moveEast"/></xml> Block benutzt?
+      courseB_collector_loops3_2019: Wie kann Laurel alle fünf Schätze einsammeln,
+        wenn sie nur einen <xml><block type="maze_moveEast" block-text="move east"/></xml>
+        Block benutzt?
       courseB_collector_loops4_2019: Repariere Laurels Weg, um alles Gold zu bekommen!
       courseB_collector_loops6_2019: Finden sie den Code heraus, um Laurel zu helfen
         und all das Gold zu kassieren!
@@ -516,14 +1581,391 @@ de-DE:
         herunter! Schreibe den Code um Laurel zu helfen, alles zu bekommen."
       courseB_collector_loops9_2019: _"Hilf mir all das Gold aus diesen tiefen Tal
         zu bekommen."_
+      courseB_collector_loops_challenge2a: |-
+        _"Lass uns den Schatz holen!"_
+
+        Hilf Laurel mindestens **5** Schätze einzusammeln um diese Aufgabe zu beenden.
+      courseB_collector_loops_challenge2a_2018: |-
+        _"Lass uns den Schatz holen!"_
+
+        Hilf Laurel mindestens **5** Schätze einzusammeln um diese Aufgabe zu beenden.
+      courseB_collector_loops_challenge2a_2019: |-
+        _"Lass uns den Schatz holen!"_
+
+        Hilf Laurel mindestens **5** Schätze einzusammeln um diese Aufgabe zu beenden.
+      courseB_iceage_loops7: 'Scrat möchte wirklich gern zur Eichel kommen! '
+      courseB_iceage_loops7_2019: 'Scrat möchte wirklich gern zur Eichel kommen! '
+      courseB_maze_seq11_2019: Es ist an Dir!  Bring Scrat zur Eichel.
       courseB_maze_seq12_2019: Jetzt bekomme das Schwein auf irgendeine Art und Weise!
       courseB_maze_seq3: _"Repariere den Code, damit ich das Schwein bekomme!_"
+      courseB_maze_seq5_2019: Dieses Rätsel ist ein wenig knifflig!
+      courseB_maze_seq6_2019: Bewege dich in eine Richtung, dann in eine andere, um
+        Scrat zur Eichel zu bringen!
+      courseB_maze_seq7_2019: Finde heraus, was fehlt und füge dann Blöcke hinzu,
+        damit Scrat an die Eichel kommt!
+      courseC19_playLab_EOC4: |-
+        Viele Charaktere und die Bewegung der Schauspieler ist ein großartiger Anfang für ein Spiel, aber wir müssen mehr tun, damit es sich wie ein echtes Spiel anfühlt. Lasst uns eine Punktzahl hinzufügen!
+
+        Verwende Ereignisblöcke wie den `Wenn der Schauspieler berührt...`, um die Punktzahl zu ändern oder das Spiel zu gewinnen. Erreiche 5 Punkte oder gewinne das Spiel, um dieses Rätsel zu lösen.
+      courseC19_playLab_EOC5: Tolle Arbeit! Du hast alle grundlegenden Komponenten
+        für ein funktionierendes Spiel. Verbringe nun Zeit damit, sicherzustellen,
+        dass das Spiel so funktioniert, wie du es dir vorstellst. Wenn du fertig bist,
+        klicke "Fertig"!
+      courseC_PlayLab_eventsA_embed_2019: Lasst uns ein Spiel spielen. Erreiche 5
+        Punkte, indem du den Pinguin auf den Oktopus bewegst!
+      courseC_artist_loops2a_2019: |-
+        Verwende nun eine Schleife, um weitere Kopien Deines Aufklebers zu erstellen. Versuche, die Zahlenwerte für die Drehung zu ändern und wiederhole Bausteine, um verschiedene Muster zu erstellen.
+
+        * * *
+
+        Drücke "Fertig stellen", wenn du mit dem, was du gemacht hast, zufrieden bist.
+
+        ![expandable](https://images.code.org/8b4352a1abe72419043d278752261b57-image-1553097917337.png)
+        ![expandable](https://images.code.org/5211e2fe2852e25a884a790155ba47d5-image-1553097923167.png)
+        ![expandable](https://images.code.org/0e3fbe8bbd20526cc735dfd26d2473ee-image-1553097925789.png)
+      courseC_artist_loops7a_2019: |-
+        Versuche die `wiederhole`-Schleife so zu ändern, dass sie eine andere Anzahl von Malen ausführt wird.  Wie weit muss man sich drehen, um im Kreis zu gehen?
+
+        -   Versuche zu ändern, wie oft du dich drehst.
+            -   Versuche eine 60-Grad-Drehung, 6 mal
+            -   Versuche eine 20-Grad-Drehung, 18 mal.
+
+        * * *
+
+        Das erste Bild verwendet einen Piraten, einen Ninja und eine Giraffe. Sie wiederholen 18 mal eine 20 Grad Drehung.
+
+        ![expandable](https://images.code.org/99411638acb44e8a7ba5b9696fe11fa4-image-1496714175039.53.24.png)
+        ![expandable](https://images.code.org/9f28cb9b434b914846c3846bc6652f66-image-1560982666379.png)
+        ![expandable](https://images.code.org/e9128684956504b0172708d63b65f93a-image-1560982686482.png)
+        ![expandable](https://images.code.org/8e9cf52ecaf72678c65558f18f3e0d3e-image-1560982695632.png)
+      courseC_artist_loopsPrePre1a_2019: "Der Künstler ist an der falschen Stelle!
+        \ \n\nBenutzen Sie den <xml><block type=\"jump_to_xy\" id=\"callMe\" block-text=\"jump
+        to 200 over 200 down\"><title name=\"XPOS\">200</title><title name=\"YPOS\">200</title></block></xml>
+        Baustein, um den Künstler in die Mitte des Spielbereichs zu bringen.\nZeichne
+        dann eine 50 Pixel lange Linie mit dem <xml><block type=\"draw_move_by_constant\"
+        block-text=\"move forward\"><title name=\"DIR\">moveForward</title><title
+        name=\"VALUE\">50</title></block></xml> Baustein."
+      courseC_collector_prog1: |-
+        **Freies Spiel:** Das ist Laurel, die Abenteurerin! Bewege sie und sammle soviel Schätze wie möglich ein. Benutze den 'sammle' Block um die Schätze aufzuheben!
+
+        Ziehe die Blöcke in den Arbeitsbereich und versuche herauszufinden, wie du die Schätze einsammeln kannst. Du brauchst mindestens einen Schatz um dieses Level zu bestehen.
+      courseC_collector_prog1_2018: |-
+        **Freies Spiel:** Das ist Laurel, die Abenteurerin! Bewege sie und sammle soviel Schätze wie möglich ein. Benutze den 'sammle' Block um die Schätze aufzuheben!
+
+        Ziehe die Blöcke in den Arbeitsbereich und versuche herauszufinden, wie du die Schätze einsammeln kannst. Du brauchst mindestens einen Schatz um dieses Level zu bestehen.
+      courseC_collector_prog1_2019: |-
+        **Freies Spiel:** Das ist Laurel, die Abenteurerin! Bewege sie und sammle soviel Schätze wie möglich ein. Benutze den 'sammle' Block um die Schätze aufzuheben!
+
+        Ziehe die Blöcke in den Arbeitsbereich und versuche herauszufinden, wie du die Schätze einsammeln kannst. Du brauchst mindestens einen Schatz um dieses Level zu bestehen.
+      courseC_collector_prog2: Bewegen Laurel zum Schatz und benutze dann <xml><block
+        type="collector_collect"/></xml> um ihn aufzuheben.
+      courseC_collector_prog2_2018: Bewegen Laurel zum Schatz und benutze dann <xml><block
+        type="collector_collect"/></xml> um ihn aufzuheben.
+      courseC_collector_prog3: |-
+        _"Die Reihenfolge ist wichtig!"_
+
+        Die Blöcke, die du brauchst, sind schon im Arbeitsbereich, aber noch nicht verbunden.\
+        Ordne diese Blöcke so an, dass der Schatz eingesammelt wird, und löse damit die Aufgabe.
+      courseC_collector_prog3_2018: |-
+        _"Die Reihenfolge ist wichtig!"_
+
+        Die Blöcke, die du brauchst, sind schon im Arbeitsbereich, aber noch nicht verbunden.\
+        Ordne diese Blöcke so an, dass der Schatz eingesammelt wird, und löse damit die Aufgabe.
+      courseC_collector_prog3_2019: |-
+        _"Die Reihenfolge ist wichtig!"_
+
+        Die Blöcke, die du brauchst, sind schon im Arbeitsbereich, aber noch nicht verbunden.\
+        Ordne diese Blöcke so an, dass der Schatz eingesammelt wird, und löse damit die Aufgabe.
+      courseC_collector_prog4: |-
+        _"Die Reihenfolge ist wichtig!"_
+
+        Die Blöcke, die du brauchst, sind schon im Arbeitsbereich, aber noch nicht verbunden.
+
+        Ordne diese Blöcke so an, dass alle Schätze eingesammelt werden, und löse damit die Aufgabe.
+      courseC_collector_prog4_2018: |-
+        _"Die Reihenfolge ist wichtig!"_
+
+        Die Blöcke, die du brauchst, sind schon im Arbeitsbereich, aber noch nicht verbunden.
+
+        Ordne diese Blöcke so an, dass alle Schätze eingesammelt werden, und löse damit die Aufgabe.
+      courseC_collector_prog4_2019: |-
+        _"Die Reihenfolge ist wichtig!"_
+
+        Die Blöcke, die du brauchst, sind schon im Arbeitsbereich, aber noch nicht verbunden.
+
+        Ordne diese Blöcke so an, dass alle Schätze eingesammelt werden, und löse damit die Aufgabe.
+      courseC_collector_prog5: |-
+        _"Hilf mir alle Schätze einzusammeln!"_
+
+        Diese Blöcke sind in der falschen Reihenfolge angeordnet. Kannst du das in Ordnung bringen?
+      courseC_collector_prog5_2018: |-
+        _"Hilf mir alle Schätze einzusammeln!"_
+
+        Diese Blöcke sind in der falschen Reihenfolge angeordnet. Kannst du das in Ordnung bringen?
+      courseC_collector_prog5_2019: |-
+        _"Hilf mir alle Schätze einzusammeln!"_
+
+        Diese Blöcke sind in der falschen Reihenfolge angeordnet. Kannst du das in Ordnung bringen?
+      courseC_collector_prog6: |-
+        _"Hilf mir, alle Schätze einzusammeln!"_
+
+        Dies Blöcke haben die Flasche Reihenfolge. Ordne sie richtig an um alle Schätze einzusammeln.
+      courseC_collector_prog6_2018: |-
+        _"Hilf mir, alle Schätze einzusammeln!"_
+
+        Dies Blöcke haben die Flasche Reihenfolge. Ordne sie richtig an um alle Schätze einzusammeln.
+      courseC_collector_prog6_2019: |-
+        _"Hilf mir, alle Schätze einzusammeln!"_
+
+        Dies Blöcke haben die Flasche Reihenfolge. Ordne sie richtig an um alle Schätze einzusammeln.
+      courseC_collector_prog7: |-
+        **Herausforderung:** _"Was ist hier los?"_
+
+        Auch wenn wir alle in die richtige Reihenfolge bringen, fehlen immer noch Schätze.\
+        Benutze weitere Blöcke aus der Werkzeugkiste um alle Schätze einzusammeln.
+      courseC_collector_prog7_2018: |-
+        **Herausforderung:** _"Was ist hier los?"_
+
+        Auch wenn wir alle in die richtige Reihenfolge bringen, fehlen immer noch Schätze.\
+        Benutze weitere Blöcke aus der Werkzeugkiste um alle Schätze einzusammeln.
+      courseC_collector_prog7_2019: |-
+        **Herausforderung:** _"Was ist hier los?"_
+
+        Auch wenn wir alle in die richtige Reihenfolge bringen, fehlen immer noch Schätze.\
+        Benutze weitere Blöcke aus der Werkzeugkiste um alle Schätze einzusammeln.
+      courseC_collector_prog8: _"Bleib weiter so gut an der Arbeit! Hilf mir, alle
+        Schätze einzusammeln."_
+      courseC_collector_prog8_2018: _"Bleib weiter so gut an der Arbeit! Hilf mir,
+        alle Schätze einzusammeln."_
+      courseC_collector_prog8_2019: _"Bleib weiter so gut an der Arbeit! Hilf mir,
+        alle Schätze einzusammeln."_
+      courseC_collector_prog9: _"Lass uns alle Schätze sammeln!"_
+      courseC_collector_prog9_2018: _"Lass uns alle Schätze sammeln!"_
+      courseC_collector_prog9_2019: _"Lass uns alle Schätze sammeln!"_
+      courseC_collector_prog_challenge2: In dieser Höhle gibt es 20 Schätze. Sammle
+        mindestens **10** ein um diese Herausforderung zu beenden!
+      courseC_collector_prog_challenge2_2018: In dieser Höhle gibt es 20 Schätze.
+        Sammle mindestens **10** ein um diese Herausforderung zu beenden!
+      courseC_collector_prog_challenge2_2019: In dieser Höhle gibt es 20 Schätze.
+        Sammle mindestens **10** ein um diese Herausforderung zu beenden!
+      courseC_data wizard: Drücke "Ausführen". Der Zauberer lässt Tiere erscheinen.
+        Zähle sie. Was fällt dir auf?
+      courseC_maze_programming1: Für diese Aufgabe musst du alle Blöcke zusammensetzen,
+        auf 'Ausführen' klicken und zusehen, wie es läuft!
+      courseC_maze_programming1_2018: Für diese Aufgabe musst du alle Blöcke zusammensetzen,
+        auf 'Ausführen' klicken und zusehen, wie es läuft!
+      courseC_maze_programming1_2019: Für diese Aufgabe musst du alle Blöcke zusammensetzen,
+        auf 'Ausführen' klicken und zusehen, wie es läuft!
+      courseC_maze_programming2: Ziehe einen weiteren <xml><block type="maze_moveForward"/></xml>
+        Block aus dem Werkzeugkasten um deinen Code fertigzustellen.
+      courseC_maze_programming2_2018: Ziehe einen weiteren <xml><block type="maze_moveForward"/></xml>
+        Block aus dem Werkzeugkasten um deinen Code fertigzustellen.
+      courseC_maze_programming2_2019: Ziehe einen weiteren <xml><block type="maze_moveForward"
+        block-text="move forward"/></xml> Block aus dem Werkzeugkasten um deinen Code
+        fertigzustellen.
+      courseC_maze_programming3: |-
+        _"Dieses Schwein ärgert mich."_
+
+        Hier ist ein Block, der den Vogel gegen etwas krachen läßt.\
+        Wirf es weg indem du es von den grauen Blöcken losmachst und in den Werkzeugkasten zurückziehst.
+      courseC_maze_programming3_2018: |-
+        _"Dieses Schwein ärgert mich."_
+
+        Hier ist ein Block, der den Vogel gegen etwas krachen läßt.\
+        Wirf es weg indem du es von den grauen Blöcken losmachst und in den Werkzeugkasten zurückziehst.
+      courseC_maze_programming3_2019: |-
+        _"Dieses Schwein ärgert mich."_
+
+        Hier ist ein Block, der den Vogel gegen etwas krachen läßt.\
+        Wirf es weg indem du es von den grauen Blöcken losmachst und in den Werkzeugkasten zurückziehst.
+      courseC_maze_programming6: |-
+        _"Bleib ruhig und hilf mir das böse Schwein zu finden. Sonst könnte ich wütend werden!"_
+
+        Bring den Vogel zum Schwein und vermeide das TNT.
+      courseC_maze_programming6_2018: |-
+        _"Bleib ruhig und hilf mir das böse Schwein zu finden. Sonst könnte ich wütend werden!"_
+
+        Bring den Vogel zum Schwein und vermeide das TNT.
+      courseC_maze_programming6_2019: |-
+        _"Bleib ruhig und hilf mir das böse Schwein zu finden. Sonst könnte ich wütend werden!"_
+
+        Bring den Vogel zum Schwein und vermeide das TNT.
+      courseC_maze_programming7: |-
+        _"Es ist Zeit wütend zu werden!"_
+
+        **Herausforderung:** In diesem Code stecken viele Fehler. Du musst einige Blöcke entfernen und andere hinzufügen.
+      courseC_maze_programming7_2018: |-
+        _"Es ist Zeit wütend zu werden!"_
+
+        **Herausforderung:** In diesem Code stecken viele Fehler. Du musst einige Blöcke entfernen und andere hinzufügen.
+      courseC_maze_programming7_2019: |-
+        _"Es ist Zeit wütend zu werden!"_
+
+        **Herausforderung:** In diesem Code stecken viele Fehler. Du musst einige Blöcke entfernen und andere hinzufügen.
+      courseC_maze_programming8: _"Bleib ruhig und hilf mir das böse Schwein zu finden."_
+      courseC_maze_programming8_2018: _"Bleib ruhig und hilf mir das böse Schwein
+        zu finden."_
+      courseC_maze_programming8_2019: _"Bleib ruhig und hilf mir das böse Schwein
+        zu finden."_
+      courseC_maze_programming8_predict1: _"Bleib ruhig und hilf mir das böse Schwein
+        zu finden."_
+      courseC_maze_programming8_predict1_2018: _"Bleib ruhig und hilf mir das böse
+        Schwein zu finden."_
+      courseC_maze_programming8_predict1_2019: _"Bleib ruhig und hilf mir das böse
+        Schwein zu finden."_
+      courseC_maze_programming9: _"Und jetzt, hilf mir mich zum Schwein zu schleichen,
+        egal auf welchem Weg!"_
+      courseC_maze_programming9_2018: _"Und jetzt, hilf mir mich zum Schwein zu schleichen,
+        egal auf welchem Weg!"_
+      courseC_maze_programming9_2019: _"Und jetzt, hilf mir mich zum Schwein zu schleichen,
+        egal auf welchem Weg!"_
+      courseC_maze_programming_challenge1: 'Der Vogel braucht deine Hilfe! Das Schwein
+        versteckt sich und das Ziel ist es, es zu finden. '
+      courseC_maze_programming_challenge1_2018: 'Der Vogel braucht deine Hilfe! Das
+        Schwein versteckt sich und das Ziel ist es, es zu finden. '
+      courseC_maze_programming_challenge1_2019: 'Der Vogel braucht deine Hilfe! Das
+        Schwein versteckt sich und das Ziel ist es, es zu finden. '
+      courseC_maze_programming_challenge2: Manchmal gibt es mehr als eine Lösung für
+        ein Problem. Manchmal ist es schneller, rückwärts zu gehen, als vorwärts!
+      courseC_maze_programming_challenge2_2018: Manchmal gibt es mehr als eine Lösung
+        für ein Problem. Manchmal ist es schneller, rückwärts zu gehen, als vorwärts!
+      courseC_maze_programming_challenge2_2019: Manchmal gibt es mehr als eine Lösung
+        für ein Problem. Manchmal ist es schneller, rückwärts zu gehen, als vorwärts!
+      courseC_starWars_loops1: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Geh den Schrott sammeln, BB-8!"_
+
+        Nimm 5 mal den gleichen Block um den Metallschrott zu sammeln. Metallschrott sieht so aus: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)
+      courseC_starWars_loops10: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+         _"Los, BB-8!"_
+
+        Du machst das super! Mach weiter so!
+      courseC_starWars_loops10_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+         _"Los, BB-8!"_
+
+        Du machst das super! Mach weiter so!
+      courseC_starWars_loops10_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+         _"Los, BB-8!"_
+
+        Du machst das super! Mach weiter so!
+      courseC_starWars_loops11: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Mach so weiter, BB-8!"_
+
+        Du hast es fast geschafft! Suche dir dieses Mal einen Pfad, so wie du ihn magst!
+      courseC_starWars_loops11_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Mach so weiter, BB-8!"_
+
+        Du hast es fast geschafft! Suche dir dieses Mal einen Pfad, so wie du ihn magst!
+      courseC_starWars_loops11_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Mach so weiter, BB-8!"_
+
+        Du hast es fast geschafft! Suche dir dieses Mal einen Pfad, so wie du ihn magst!
+      courseC_starWars_loops1_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Geh den Schrott sammeln, BB-8!"_
+
+        Nimm 5 mal den gleichen Block um den Metallschrott zu sammeln. Metallschrott sieht so aus: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)
+      courseC_starWars_loops1_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Geh den Schrott sammeln, BB-8!"_
+
+        Nimm 5 mal den gleichen Block um den Metallschrott zu sammeln. Metallschrott sieht so aus: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)
+      courseC_starWars_loops2: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Los, BB-8!"_
+
+        Um den ganzen Metallschrott aufzusammeln, versuche eine Schleife zu erstellen, in der nur ein Block im 'wiederholen' Block verwendet wird.
+      courseC_starWars_loops2_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Los, BB-8!"_
+
+        Um den ganzen Metallschrott aufzusammeln, versuche eine Schleife zu erstellen, in der nur ein Block im 'wiederholen' Block verwendet wird.
+      courseC_starWars_loops2_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Los, BB-8!"_
+
+        Um den ganzen Metallschrott aufzusammeln, versuche eine Schleife zu erstellen, in der nur ein Block im 'wiederholen' Block verwendet wird.
+      courseC_starWars_loops4: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Mach so weiter, BB-8."_
+
+        Um in dieser Aufgabe BB-8 zum ganzen Metallschrott zu bringen und dabei so wenig Blöcke wie möglich zu verwenden werden dir 2 'wiederholen' Schleifen helfen!
+      courseC_starWars_loops4_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Mach so weiter, BB-8."_
+
+        Um in dieser Aufgabe BB-8 zum ganzen Metallschrott zu bringen und dabei so wenig Blöcke wie möglich zu verwenden werden dir 2 'wiederholen' Schleifen helfen!
+      courseC_starWars_loops4_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Mach so weiter, BB-8."_
+
+        Um in dieser Aufgabe BB-8 zum ganzen Metallschrott zu bringen und dabei so wenig Blöcke wie möglich zu verwenden werden dir 2 'wiederholen' Schleifen helfen!
+      courseC_starWars_loops5: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Los, BB-8!"_'
+      courseC_starWars_loops5_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Los, BB-8!"_'
+      courseC_starWars_loops5_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Los, BB-8!"_'
+      courseC_starWars_loops6: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Kannst du alles aufsammeln?"_
+
+        Schleifen funktionieren auch mit mehr als einem Block drin! Kannst du diese Abfolge in einer Schleife zusammenfassen?
+      courseC_starWars_loops6_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Kannst du alles aufsammeln?"_
+
+        Schleifen funktionieren auch mit mehr als einem Block drin! Kannst du diese Abfolge in einer Schleife zusammenfassen?
+      courseC_starWars_loops6_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Kannst du alles aufsammeln?"_
+
+        Schleifen funktionieren auch mit mehr als einem Block drin! Kannst du diese Abfolge in einer Schleife zusammenfassen?
+      courseC_starWars_loops7: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Du schaffst das!"_
+
+        Schaffst du es mit nur einer Schleife den ganzen Metallschrott zu sammeln? Versuche zuerst alle Schritte einzeln zu programmieren und finde dann heraus, welchen wiederholenden Code du in ein Schleife geben kannst.
+      courseC_starWars_loops7_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Du schaffst das!"_
+
+        Schaffst du es mit nur einer Schleife den ganzen Metallschrott zu sammeln? Versuche zuerst alle Schritte einzeln zu programmieren und finde dann heraus, welchen wiederholenden Code du in ein Schleife geben kannst.
+      courseC_starWars_loops7_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Du schaffst das!"_
+
+        Schaffst du es mit nur einer Schleife den ganzen Metallschrott zu sammeln? Versuche zuerst alle Schritte einzeln zu programmieren und finde dann heraus, welchen wiederholenden Code du in ein Schleife geben kannst.
+      courseC_starWars_loops8: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Mach so weiter, BB-8."_
+
+        **Herausforderung:** Kombiniere Ideen aus den letzten paar Aufgaben um dieses Level abzuschließen.
+      courseC_starWars_loops8_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Mach so weiter, BB-8."_
+
+        **Herausforderung:** Kombiniere Ideen aus den letzten paar Aufgaben um dieses Level abzuschließen.
+      courseC_starWars_loops8_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Mach so weiter, BB-8."_
+
+        **Herausforderung:** Kombiniere Ideen aus den letzten paar Aufgaben um dieses Level abzuschließen.
+      courseC_starWars_loops9: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Mach so weiter!"_
+
+        Benutze, was du bisher gelernt hast um den ganzen Metallschrott aufzusammeln!
+      courseC_starWars_loops9_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Mach so weiter!"_
+
+        Benutze, was du bisher gelernt hast um den ganzen Metallschrott aufzusammeln!
+      courseC_starWars_loops9_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Mach so weiter!"_
+
+        Benutze, was du bisher gelernt hast um den ganzen Metallschrott aufzusammeln!
+      courseD_artist_5_2018_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _\"Versuche, die Formen oder die Längen der Linien zu ändern, um diese nach
+        deinem Geschmack aussehen zu lassen!\"_\n\n<br/>  \n\n**Inspiration:** Du
+        kannst deine Zeichnung beliebig ändern, aber hier ist eine Idee:\n\n-   Versuche,
+        die Formen in der Mitte der Schneeflocke mit denen am Ende jeder Linie zu
+        tauschen!"
       courseD_bee_nestedLoops8: Sammle den gesamten Nektar jeder Blüte und erzeuge
         Honig bei jeder Honigwabe. Benutze eine verschachtelte Schleife.
       courseD_bee_nestedLoops8_2018: Sammle den gesamten Nektar jeder Blüte und erzeuge
         Honig bei jeder Honigwabe. Benutze eine verschachtelte Schleife.
       courseD_bee_nestedLoops8_2019: Sammle den gesamten Nektar jeder Blüte und erzeuge
         Honig bei jeder Honigwabe. Benutze eine verschachtelte Schleife.
+      courseD_iceage_loops7: 'Scrat möchte wirklich gern zur Eichel kommen! '
+      courseD_iceage_loops7_2019: 'Scrat möchte wirklich gern zur Eichel kommen! '
+      courseD_maze_intro4_2019: '\_"Verfolge den Weg und führe mich zum Schwein."
+        \_ '
+      courseD_maze_intro5a_2019: Zählen Sie die Felder auf dem Gitter sorgfältig!
+      courseD_maze_intro5c_2019: Achten Sie auf TNT! Hilf Red, zum Schwein zu kommen.
       courseD_maze_nestedLoops4: |-
         Bring mich zu der Sonnenblume!
         (Hinweis: Du musst eine „Wiederholen“-Schleife innerhalb einer anderen benutzen, um dieses Level zu bestehen.
@@ -533,6 +1975,12 @@ de-DE:
       courseD_maze_nestedLoops4_2019: |-
         Bring mich zu der Sonnenblume!
         (Hinweis: Du musst eine „Wiederholen“-Schleife innerhalb einer anderen benutzen, um dieses Level zu bestehen.
+      courseD_maze_ramp3_2019: |-
+        Hilf dem Vogel, zum Schwein zu kommen. Es gibt einen zusätzlichen blauen `Vorwärts bewegen` Baustein.
+
+        Wirf den übeflüssigen Baustein weg, indem du ihn von den anderen Bausteinen entfernst und ihn zurück in den Werkzeugkasten ziehst.
+      courseD_maze_ramp5a_2019: Zählen Sie die Felder auf dem Gitter sorgfältig!
+      courseD_scrat_ramp5: Vermeiden Sie das gerissene Eis!
       courseE_bee_functions3: Funktionen sind Programm-Bausteine, die eine Aufgabe
         ausführen. Verwende die „hohle 5“- Funktion, um gleichzeitig 5 mal Nektar
         zu holen. Stelle sicher, dass eine Schleife verwendet wird, die eine optimale
@@ -593,3 +2041,58 @@ de-DE:
       frozen square snowflake: Kannst du eine Schneeflocke erstellen, indem du den
         „Wiederholen"-Baustein 10 mal benutzt, um ein Quadrat zu erstellen und nach
         jedem Quadrat den „Drehen"-Baustein mit 36° benutzt?
+      grade2_collector_10: |-
+        Du bist fast fertig!
+
+        Sammle so viele Schätze wie du kannst ein, um diesen Teil zu beenden!
+      grade2_collector_10_2018: |-
+        Du bist fast fertig!
+
+        Sammle so viele Schätze wie du kannst ein, um diesen Teil zu beenden!
+      grade2_collector_10_2019: |-
+        Du bist fast fertig!
+
+        Sammle so viele Schätze wie du kannst ein, um diesen Teil zu beenden!
+      grade2_collector_A: Hilf Laurel alle Schätze einzusammeln.
+      grade2_collector_A_2018: Hilf Laurel alle Schätze einzusammeln.
+      grade2_collector_A_2019: Hilf Laurel alle Schätze einzusammeln.
+      grade5_pixelation: |-
+        # Erstelle dein eigenes Bild in beliebiger Größe
+
+        ![](https://images.code.org/01c15fed4f1a2c6c3af531edc35e736e-image-1439596066108.png)
+        ![](https://images.code.org/24efcaa184d1fc852f37c32911b3b87c-image-1439596070178.png)
+        ![](https://images.code.org/c9a5d0fd5ba445b7f6b5744e08b50e49-image-1439596071878.png)
+        ![](https://images.code.org/f14e1b8dd722b0ca5bc54fa96b34f2eb-image-1439596074236.png)
+        ![](https://images.code.org/fe938c0c16453b9d461b4023098079df-image-1439596075744.png)
+        ![](https://images.code.org/02c88a7da51289b2f2d1f64bd8c97b28-image-1439596077514.png)
+        ![](https://images.code.org/309e3157dcfd91956181007f483f8e58-image-1439596079084.png)
+
+        **Anleitung:**
+
+        -   Kodiere ein Bild von allem, was du magst, mit `binary`.
+        -   Die binäre Sprache wird nur mit `0` und `1` dargestellt.
+        -   Vielleicht möchtest du zuerst etwas auf Millimeterpapier planen und skizzieren.
+        -   Stelle etwas dar, vielleicht deinen ausgeschriebenen Namen, deine Initialen, ein Symbol oder Logo irgendeiner Art.
+        -   Werde kreativ! Das Bild muss kein perfektes Quadrat sein, es kann lang und dünn sein.
+      mike3bit: "# 3-Bit-Farbe\n\n**Anweisungen**\n\n-   Wir beginnen mit dem 4x2-Bild
+        das Maddie erstellt hat, aber wir haben die letzten Pixel weggelassen. \n-
+        \  Beende das Bild, indem Du herausfindest, welche Farben fehlt und kodieren
+        diese anschließend."
+      mike3bitbird: "# 3-Bit-Farbe\n\nHier ist ein Beispiel für ein Bild, das mit
+        einer 3-Bit-Farbe erstellt wurde. Versuche, es zu ändern, um zu verstehen,
+        wie es funktioniert. \n\n_Wenn du das Bild zurücksetzen möchten, drücken Sie
+        \"Zurücksetzen\"._"
+      mike3bitfreeplay: |-
+        # 3-Bit-Farbe
+
+        Du hast eine letzte Chance um zu experimentieren und kreativ zu werden mit dem Pixelation Widget. Mache etwas Fantastisches und teile es mit deinen Klassenkameraden!
+
+        -   _Tipp:_ Du kannst den Wert eines Pixels kopieren und einfügen, um ihn wiederholt zu verwenden.
+      mike3bitmario: "# 3-Bit-Farbe\n\n**Herausforderung:\\*** \n\nEin unvorsichtiger
+        Binärcodierer hat versehentlich in EINE zusätzliche 0 oder 1 irgendwo die
+        Bilddaten eingegebn. Dadurch sieht Marion nun etwas komisch aus! \n\nLösche
+        das zusätzliche Bit, um Mario wieder normal aussehen zu lassen!\n\n![](<https://images.code.org/8b7c17ba204a1a4d33e1bd6de7f01d76-image-1477306657312.54.57
+        AM.png>)"
+      ramp_artist_loops4_2019: Du kannst diesen Stern erzeugen, indem du eine Schleife
+        aus einer Folge von ´bewege vorwärts´ und ´drehe rechts um 144 Grad´ Sätzen
+        drehen.

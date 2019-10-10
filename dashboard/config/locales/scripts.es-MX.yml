@@ -1155,6 +1155,8 @@ es-MX:
               name: Externos opcionalmente mostrados como sin conexión
             Bubble Choice:
               name: Bubble Choice
+            Contained Levels:
+              name: Niveles contenidos
         algebraPD2b:
           title: Ciencias de la computación en álgebra PD
           description: Enseñar programación funcional a través de álgebra
@@ -14253,7 +14255,7 @@ es-MX:
             Learn to Drag and Drop:
               name: Aprende a arrastrar y soltar
             Programming in Maze:
-              name: Programación con Scrat
+              name: Programación con Angry Birds
             Programming in Harvester:
               name: Programación con la cosechadora
             Tell a Story in Play Lab:
@@ -15592,6 +15594,8 @@ es-MX:
               name: PT de práctica Parte 3
             Unit 4 Assessment:
               name: Evaluación de la Unidad 4
+            'Lesson 15: Unit 4 Assessment':
+              name: 'Lección 15: evaluación de la unidad 4'
           title: 'Unidad 4: Variables, condicionales, funciones'
         csp1-2019:
           title: CSP Unidad 1 - Internet ('19-'20)
@@ -17665,6 +17669,8 @@ es-MX:
               name: Encuesta de la Unidad 3 para ESTUDIANTES
             Unit 3 TEACHER Survey:
               name: Encuesta de la Unidad 3 para DOCENTES
+            'Lesson 11: Unit Assessment':
+              name: 'Lección 11: evaluación de la unidad'
           title: 'Unidad 3: Introducción al diseño de aplicaciones'
         csl-vn:
           stages:
@@ -17950,3 +17956,36 @@ es-MX:
             Nested Loops in Frozen:
               name: Bucles anidados en Frozen
           title: Hora del Código Perú 2019
+        csp6-pilot:
+          stages:
+            Algorithms Solve Problems:
+              name: Los algoritmos resuelven problemas
+            Algorithm Efficiency:
+              name: Eficiencia del algoritmo
+            Unreasonable Time:
+              name: Tiempo poco razonable
+            Traveling Salesman:
+              name: Vendedor viajero
+        denny-science-8:
+          title: Detector de colisiones
+          stages:
+            'Earthquake Detector: Designing Screens':
+              name: 'Detector de terremotos: diseño de pantallas'
+            'Earthquake Detector: Processing with Events':
+              name: 'Detector de terremotos: procesamiento con eventos'
+            'Collision Detector: Designing Screens':
+              name: 'Detector de colisiones: diseño de pantallas'
+            'Collision Detector: Processing with Events':
+              name: 'Detector de colisiones: procesamiento con eventos'
+        denny-science-copy:
+          stages:
+            'Collision Detector: Designing Screens':
+              name: 'Detector de colisiones: diseño de pantallas'
+            'Collision Detector: Processing with Events':
+              name: 'Detector de colisiones: procesamiento con eventos'
+        dance-2019:
+          stages:
+            Dance Party:
+              name: Fiesta de baile
+          description: "¡Programa tu propia fiesta de baile para compartir con tus
+            amigos!"

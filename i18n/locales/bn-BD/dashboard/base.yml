@@ -1,3 +1,15 @@
+#Files in the config/locales directory are used for internationalization
+#and are automatically loaded by Rails. If you want to use locales other
+#than English, add the necessary files in this directory.
+#To use the locales, use `I18n.t`:
+#I18n.t 'hello'
+#In views, this is aliased to just `t`:
+#<%= t('hello') %>
+#To use a different locale, set it with `I18n.locale`:
+#I18n.locale = :es
+#This would use the information in config/locales/es.yml.
+#To learn more, please read the Rails Internationalization guide
+#available at http://guides.rubyonrails.org/i18n.html.
 bn:
   errors:
     messages:
@@ -57,8 +69,6 @@ bn:
   auth:
     sign_in_with: '%{provider} এর সাথে সাইন ইন করো'
     signed_in: 'সাইনড ইন!'
-    signed_out: 'আপনি <a href="%{url}">Code.org</a> থেকে বের হয়ে গেছেন।'
-    sign_out_of: 'আপনি সাইন ইন করার জন্য %{provider} ব্যবহার করেছেন। %{provider} থেকে সাইন আউট করার জন্য <a href="%{url}">এখানে ক্লিক</a> করুন।'
     already_signedup: 'ইতিমধ্যে সাইন আপ করেছ?'
     notyet_signedup: "এখনো যোগ দেননি?"
     google_oauth2: 'গুগল অ্যাকাউন্ট'
@@ -211,6 +221,8 @@ bn:
       section: 'শাখা'
       submitted_on: 'দাখিল করুন:'
       unsubmit: 'জমা না দেয়া'
+  user:
+    update_email: "আপডেট"
   user_level:
     completed: 'সম্পূর্ণ হয়েছে'
     tried: 'চেষ্টা করা হয়েছে'

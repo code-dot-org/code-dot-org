@@ -186,6 +186,7 @@ class DataBrowser extends React.Component {
                   <EditTableListRow
                     key={tableName}
                     tableName={tableName}
+                    tableType={this.props.tableListMap[tableName]}
                     onViewChange={() =>
                       this.props.onViewChange(DataView.TABLE, tableName)
                     }

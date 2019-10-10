@@ -1146,7 +1146,7 @@ es-MX:
         <strong>¿Qué es un párrafo?</strong>
         </summary>
 
-        Los párrafos están marcados con etiquetas de apertura (`<p>`) y cierre (`</p>`. Los párrafos de texto en HTML pueden tener cualquier longitud, desde una palabra hasta un grupo de oraciones. Agrupan conjuntos de oraciones y ponen un espacio entre ese grupo de texto y el siguiente.
+        Los párrafos están marcados con etiquetas de apertura (`<p>`) y cierre (`</p>`). Los párrafos de texto en HTML pueden tener cualquier longitud, desde una palabra hasta un grupo de oraciones. Agrupan conjuntos de oraciones y ponen un espacio entre ese grupo de texto y el siguiente.
 
         </details>
         <details>
@@ -7479,24 +7479,6 @@ es-MX:
         <li>El uso de mayúsculas y la ortografía deben ser exactamente iguales.</li>
         </ul></details></summary>
       CSD U3 Variables naming rules v2_2018: |-
-        <img style="float: right" src="https://images.code.org/f4b306422763c84bb924f4f7d3a6dca6-image-1492798058864.06.38 AM.png">
-
-        # Depuración: nombres de variables
-
-        Este programa tiene varios errores causados por nombres de etiquetas incorrectos. Los errores impiden que el programa se vea en el modo de bloques, por lo que el código está en texto.
-
-        # Haz esto
-
-        -   Encuentra la regla que infringe cada etiqueta de variable.
-        -   **Selecciona nuevos nombres que sigan las reglas que aprendiste en el último nivel para corregir los errores.**
-        -   Si tu programa funciona, deberías dibujar la imagen de la derecha.
-
-        <summary><em>Te damos una pista: haz clic en la flecha para dar un vistazo rápido a las reglas.</em><details><ul>
-        <li>Las etiquetas no pueden tener espacios.</li>
-        <li>Las etiquetas no pueden empezar con un número.</li>
-        <li>El uso de mayúsculas y la ortografía deben ser exactamente iguales.</li>
-        </ul></details></summary>
-      CSD U3 Variables naming rules v2_2018_2019: |-
         <img style="float: right" src="https://images.code.org/f4b306422763c84bb924f4f7d3a6dca6-image-1492798058864.06.38 AM.png">
 
         # Depuración: nombres de variables
@@ -15413,7 +15395,7 @@ es-MX:
       Dance_Party_02: |-
         ¡Hagamos bailar a este alce!
 
-        Arrastra el bloque \<<xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> al espacio de trabajo. Conéctalo debajo del bloque <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> Tu bailarín debería empezar a moverse después del cuarto compás.
+        Arrastra el bloque \<<xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> al espacio de trabajo. Conéctalo debajo del bloque <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> Tu bailarín debería empezar a moverse después del cuarto compás.
 
         Los **compases** se usan para contar el tiempo en la música. En este tutorial, un compás tiene cuatro tiempos.
       Dance_Party_03: |-
@@ -16907,6 +16889,9 @@ es-MX:
           <xml><block type="collector_collect"/></xml>
       courseA_collector_loops2_2018: '¡Consigue los tres montones! Acerca a Laurel
         a cada pieza del tesoro y, luego, usa este bloque: <xml><block type="collector_collect"/></xml>'
+      courseA_collector_loops2_2019: 'Obtenga todos los 3 montones! Mueva Laurel a
+        cada pieza de tesoro, y luego use <xml><block type="collector_collect" block-text="get
+        treasure"/></xml> bloque. '
       courseA_collector_loops3: ¿Cómo puede Laurel obtener los cinco montones de tesoros
         con un solo bloque <xml><block type="maze_moveEast"/></xml>?
       courseA_collector_loops3_2018: ¿Cómo puede Laurel obtener los cinco montones
@@ -17126,6 +17111,9 @@ es-MX:
         sobran y agrega los que faltan. ¡Haz que el pájaro llegue hasta el cerdo!
       courseA_maze_seq_challenge2_2019: Traza el camino para que el pájaro llegue
         hasta el cerdo. ¡Evita el TNT o volarán plumas!
+      courseA_playLab_events1_2019: Este es un Play Lab nivel. Mueva bloques al area
+        de trabajo y observe que sucede!
+      courseA_playLab_events2_2019: Jorge el Perro quiere decir "Hola." Puede ayudarle?
       courseA_playLab_events3: |-
         Ayuda a Jorge el Perro a moverse. Conecta el bloque <xml><block type="studio_move">
             <title name="SPRITE">1</title>

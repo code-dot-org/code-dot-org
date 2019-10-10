@@ -1,3 +1,15 @@
+#Files in the config/locales directory are used for internationalization
+#and are automatically loaded by Rails. If you want to use locales other
+#than English, add the necessary files in this directory.
+#To use the locales, use `I18n.t`:
+#I18n.t 'hello'
+#In views, this is aliased to just `t`:
+#<%= t('hello') %>
+#To use a different locale, set it with `I18n.locale`:
+#I18n.locale = :es
+#This would use the information in config/locales/es.yml.
+#To learn more, please read the Rails Internationalization guide
+#available at http://guides.rubyonrails.org/i18n.html.
 fr:
   errors:
     messages:
@@ -15,10 +27,10 @@ fr:
     attributes:
       user:
         name: 'Nom à afficher'
-        name_example: 'Afficher nom <br/> (par ex. SuperCodeur ou Jeanne S.)'
+        name_example: 'Afficher le nom<br/>(par ex. SuperCodeur ou Jeanne S.)'
         email: 'E-mail'
         parent_email: 'Email du parent/tuteur'
-        personal_email: "Email personnel <a href=\"%{url}\">(click here if you don't have an email address)</a>"
+        personal_email: "Adresse email personnel <a href=\"%{url}\">(cliquez ici si vous n'avez pas d'adresse email)</a>"
         username: 'nom d''utilisateur'
         password: 'Mot de passe'
         password_confirmation: 'Confirmation du mot de passe'
@@ -28,8 +40,8 @@ fr:
         gender: 'Sexe'
         edit_header: 'Modifier les détails du compte'
         finish_sign_up_header: 'Terminez la création de votre profil'
-        finish_sign_up_subheader: 'Remplissez les informations suivantes pour finir de créer votre compte Code.org.'
-        finish_sign_up_subheader_provider: 'Remplissez les informations suivantes pour compléter la création d''un Code.org avec <strong>%{provider}</strong> <strong>%{email}</strong>.'
+        finish_sign_up_subheader: 'Remplissez les informations suivantes pour finir de créer votre compte Code.org pour <strong>%{email}</strong>.'
+        finish_sign_up_subheader_provider: 'Remplissez les informations suivantes pour compléter la création d''un Code.org avec <strong>%{provider}</strong> de <strong>%{email}</strong>.'
         error:
           future: ne peut pas être dans le futur
   beta: "beta"
@@ -48,7 +60,11 @@ fr:
   heading_x_of_y: "%{heading} (page %{x} sur %{y})"
   join_section:
     code:
+      title: 'Rejoindre un groupe de classe sur Code.Org'
       placeholder: "Code de la section (ABCDEF)"
+      instructions: "Merci d'entrer votre code à 6 caractères que votre professeur vous a donné (exemple : \"ABCDEF\") pour rejoindre son groupe de classe."
+      instructions_short: "Entrez le code à 6 caractères de votre groupe de classe"
+      submit: 'Rejoindre'
   add_hint_form:
     placeholder: 'Écrire un indice ici'
     submit: 'Ajouter un indice'
@@ -77,8 +93,8 @@ fr:
     continue_with: 'Continuer avec %{provider}'
     sign_in_with: 'Se connecter avec %{provider}'
     signed_in: 'Connecté!'
-    signed_out: 'Déconnexion de <a href="%{url}">Code.org</a>.'
-    sign_out_of: 'Tu as utilisé  %{provider} pour te connecter. <a href="%{url}">Clique ici</a> pour te déconnecter de %{provider}.'
+    signed_out_markdown: '### Vous avez fermé la session sur [Code.org](%{url}).'
+    sign_out_of_markdown: '#### Vous utilisiez %{provider} pour vous connecter. [Click here](%{url}) pour fermer la session %{provider}.'
     already_signedup: 'Déjà inscrit ?'
     notyet_signedup: "Pas encore inscrit ?"
     google_oauth2: 'Compte Google'
@@ -116,7 +132,7 @@ fr:
     age: 'Age'
     user_type: 'Êtes-vous un élève ou un enseignant ?'
     submit: 'S’inscrire'
-    go_to_account: 'Vers mon compte'
+    go_to_account: 'Se rendre à mon compte'
     teacher: 'Êtes-vous un enseignant?'
     valid_username: "Disponible !"
     invalid_username: "Le nom d'utilisateur doit contenir au moins 5 caractères"
@@ -124,13 +140,11 @@ fr:
     valid_password: "Mot de passe correct !"
     invalid_password: "Le mot de passe doit comporter au moins 6 caractères."
     mismatch_password: "Les deux mots de passe ne sont pas identiques."
-    agree_tos_privacy: "Je sui d'accord avec les <a href='http://code.org/tos'> modalités de service</a> et la <a href='http://code.org/privacy'> politique de confidentialité</a>."
     under_13_consent: "Si j’ai moins de 13 ans, je confirme que j’ai l’autorisation de mes parents ou de mon tuteur légal pour utiliser les services de Code.org."
     student_consent: "Je confirme que j’ai l'autorisation de mes parents ou de mon tuteur légal pour utiliser les services de Code.org."
     agree_us_website: "J’accepte d’utiliser un site Web basé aux États-Unis."
     my_data_to_us: "Des informations sur mon utilisation de ce site peuvent être envoyées et enregistrées ou traitées aux États-Unis."
-    student_terms: "J'accepte d'être lié aux <a href='http://code.org/tos'>conditions d'utilisation</a> de Code.org. Si je suis âgé de moins de 13 ans, je confirme en soumettant ce formulaire que j'ai la permission de mes parents ou de mon tuteur légal pour utiliser les services Code.org. <br/><br/>Les adresses e-mail ne sont pas stockées sous une forme qui nous permettrait de contacter les élèves. Les élèves ne recevront jamais d'e-mails venant de Code.org sauf pour la récupération du mot de passe. Voir notre <a href='http://code.org/privacy'>politique de confidentialité</a> pour plus d'informations."
-    teacher_terms: "J'accepte d'être lié aux conditions d'utilisation de Code.org. Pour plus d'informations sur la vie privée, voir notre <a href='http://code.org/privacy'>politique de confidentialité</a>."
+    student_terms_markdown: "Les adresses de courriel ne sont pas stockées dans un format qui nous permet de contacter les étudiants.\nLes étudiants ne recevront jamais de courriels de Code.org sauf lors de la procédure de récupération de mot de passe.\nVoir notre [politique de confidatialité](http://code.org/privacy) pour plus d'informations."
     additional_information: "Nous avons besoin de quelques informations supplémentaires pour continuer l’inscription."
     user_type_button: "Mise à jour du type de compte"
     user_type_label: "Type de compte"
@@ -138,7 +152,7 @@ fr:
     user_type_student: "Élève"
     field_is_required: "est obligatoire"
     accept_terms: "Vous devez accepter les conditions d'utilisation pour créer un compte"
-    error: "Une erreur est apparue."
+    error: "Une erreur est survenue."
     email_preference_question: "Pouvons-nous vous envoyer des e-mails d’information sur nos formations, des opportunités près de chez vous ou d’autres brèves dans le domaine informatique?"
     email_preference_privacy: "(Voir notre politique de protection des données)"
     email_preference_yes: "Oui"
@@ -184,7 +198,7 @@ fr:
     login: 'Connexion'
     invalid_login: 'Erreur d''identifiant, veuillez réessayer'
     pair_programming: 'J''ai un partenaire sur mon ordinateur'
-    student_privacy: "En savoir plus sur pourquoi vous ne voyez pas votre nom complet <a href='%{student_privacy_blog}' target='_blank'> ici</a>."
+    student_privacy_markdown: "Savoir pourquoi vous ne voyez pas votre nom complet [here](%{student_privacy_blog})."
   password:
     reset_form:
       title: 'Mot de passe oublié ?'
@@ -282,6 +296,12 @@ fr:
       professional_learning: "Apprentissage professionnel"
       documentation: "Documentation"
       tutorials: "Tutoriels"
+      app_lab_documentation: "Documentation du Laboratoire d'Applications"
+      app_lab_tutorials: "Tutoriels sur le Laboratoire d'Applications"
+      game_lab_documentation: "Documentation du Laboratoire de Jeux"
+      game_lab_tutorials: "Tutoriels sur le Laboratoire de Jeux"
+      sprite_lab_documentation: "Documentation du Laboratoire de Lutins"
+      sprite_lab_tutorials: "Tutoriels sur le Laboratoire de Lutins"
       educate_overview: "Aperçu enseignant"
       educate_elementary: "École primaire"
       educate_middle: "Collège"
@@ -423,14 +443,12 @@ fr:
     enter_parent_email: "Entrez l'adresse e-mail de vos parents ou de votre tuteur (pour la récupération de mot de passe)"
     update: "Mise à jour du compte"
     account_successfully_updated: "Compte actualisé avec succès."
+    update_email: "Mise à jour"
   user_level:
     completed: 'Terminé'
     tried: 'A essayé'
   home:
     title: "Code Studio"
-    description: 'Code Studio héberge les cours en ligne créés par Code.org'
-    lines_of_code: "%{lines_count} LIGNES DE CODE ÉCRITES PAR DES ÉLÈVES"
-    lines_of_code_linebreak: "%{lines_count} LIGNES DE CODE <br/> ÉCRITES PAR %{students_count}  MILLIONS D’ÉLÈVES"
     all_courses: "Présentation des cours 1, 2 et 3"
     lesson_plans: "Plans des cours"
     signin_message: "Déjà enregistré? %{link}"
@@ -460,11 +478,7 @@ fr:
     test_videos_help: 'Essayez notre nouveau lecteur vidéo dans votre école'
     try_beta_courses: 'Nouveau ! Essayez nos cours bêta pour les élèves de CM2'
     use_as_teacher: 'Utiliser ce site en tant qu''enseignant'
-    heading_hoc2014: "<h2>L’Heure de Code pour</h2><h1>Tous les âges</h1>"
-    heading_elementary: "<h2>20 heures de cours sur</h2><h1>les Fondamentaux de l’informatique (tout âge)</h1>"
-    heading_apps: "<h2>Amusant pour</h2><h1>Tout le monde</h1>"
-    heading_tools: "<h2>Prêt pour la prochaine étape ?</h2><h1>Outils JavaScript pour le lycée</h1>"
-    heading_legacy: "<h2>Nos cours accélérés pour</h2><h1>Tous les âges</h1>"
+    heading_elementary_markdown: "## 20 heures de parcours pour les\n\n# Fondamentaux d'Informatique (tous les ages)"
     your_gallery: Galerie
     no_primary_course: "Essaye un cours Code Studio"
     choose_next_course: "Essaye un cours Code Studio en le choisissant ci-dessous"
@@ -494,7 +508,7 @@ fr:
   footer:
     thank_you: 'Nous remercions nos <a href="https://code.org/about/donors"> donateurs</a>, <a href="https://code.org/about/partners"> partenaires</a>, notre <a href="https://code.org/about/team"> équipe étendue</a>, notre casting vidéo et nos <a href="https://code.org/about/advisors"> conseillers d''éducation</a> pour leur soutien à la création de Code Studio.'
     help_from_html: 'Nous tenons particulièrement à remercier les ingénieurs de Google, Microsoft, Facebook, Twitter et beaucoup d''autres organismes qui ont contribué à créer ce matériel.'
-    help_from_html_old: 'Les ingénieurs de Google, Microsoft, Facebook et Twitter ont contribué à créer ces matériels.'
+    help_from_html_old: 'Les ingénieurs de Google, Microsoft, Facebook et Twitter ont contribué à créer ces documents de formation.'
     art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Tous droits réservés. <br />Star Wars&#8482; &copy; %{current_year} Disney et Lucasfilm. Tous droits réservés.<br />La reine des neiges&#8482; &copy; %{current_year} Disney. Tous droits réservés. <br /> L’âge de glace&#8482; &copy; %{current_year} 20th Century Fox. Tous droits réservés. <br /> Angry Bird&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Tous droits réservés. <br /> Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Tous droits réservés. <br /> Le monde incroyable de Gumball est une marque commerciale et &copy; %{current_year} Cartoon Network.'
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Tous droits réservés. Star Wars&#8482; &copy; %{current_year} Disney et Lucasfilm. Tous droits réservés. La reine des neiges&#8482; &copy; %{current_year} Disney. Tous droits réservés. L’âge de glace&#8482; &copy; %{current_year} 20th Century Fox. Tous droits réservés. Angry Bird&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Tous droits réservés. Plantes vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Tous droits réservés. Le monde incroyable de Gumball est une marque commerciale et &copy; %{current_year} Cartoon Network.'
     code_from_html: 'Code.org utilise p5.play, qui est distribué sous la licence <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU LGPL 2.1</a>.'
@@ -630,6 +644,7 @@ fr:
       title: "Sports"
       body: "Créer un jeu de basket ou un mélange avec d'autres sports."
     text-compression:
+      title: "Compression de texte"
       body: "Dans cette leçon, les élèves utiliseront le Widget de Compression de texte pour compresser le texte en remplaçant des schémas par des symboles."
     unplugged:
       title: "Leçons en mode \"déconnecté\""
@@ -659,8 +674,7 @@ fr:
     header_artist: "L’art du code"
     report_abuse: "Signaler un abus"
   landing:
-    prerelease: "Ce cours est en <span class= « betatext » >bêta</span>.  Il ne s'agit pas de la version finale du cours qui est susceptible d'être modifié tant que nous recevrons des commentaires à son sujet et que des améliorations seront effectuées."
-    prerelease_hoc2014: "Ce tutoriel est en <span class= « betatext » >bêta</span>.  Il est susceptible d'être modifié tant que nous recevrons des commentaires à son sujet et que des améliorations seront effectuées."
+    prerelease_tutorial: "Ce tutoriel est en **beta**. Il est sujet à révision en fonction des commentaires et des améliorations sont apportées."
     report_bug: "Signaler un bogue"
     support: "Obtenir de l'aide"
     support_url: "//support.code.org"
@@ -732,8 +746,9 @@ fr:
   age_interstitial:
     age: Ton âge
     header: Mise à jour des informations du compte
-    message: "Nous sommes en train de mettre à jour notre offre afin d’offrir une protection de la vie privée encore plus importante. Pour ce faire, les utilisateurs existants doivent entrer leur âge ici. <br/> Comme toujours, code.org ne louera, vendra ou partagera jamais cette information avec des tiers."
-    sign_out: 'Si tu ne souhaites pas donner ton âge, tu peux te <a href="%{url}">déconnecter</a>.'
+    warning: "Nous sommes en train d'implanter des mises à jour afin de te garantir une protection des données privées encore meilleure. Pour ce faire, nous demandons aux utilisateurs existants d'entrer leur âge."
+    disclaimer: "Comme toujours, code.org ne louera pas, ne vendra pas ou ne partagera pas ces informations avec des tiers."
+    sign_out_markdown: 'Si tu ne souhaites pas fournir ton âge, tu peux [déconnecter](%{url}).'
   terms_interstitial:
     title: "Mise à jour des conditions d’utilisation et de la politique de confidentialité"
     intro_desc: "Nous avons mis à jour nos conditions d’utilisation et politique de confidentialité, tel que montré ci-dessous. Les changements sont en vigueur à partir du 24 août 2016.  Le changement le plus important est que nous n'allons <i>plus stocker les adresses e-mail des élèves sur Code Studio.</i> C'est très important pour nous et nous espérons établir ainsi un nouveau standard pour la protection de la vie privée des élèves dans les technologies de l’éducation. Nous vous avons envoyé un résumé des autres modifications par e-mail."
@@ -829,10 +844,10 @@ fr:
   peer_review:
     accepted:
       name: 'Accepté'
-      description: '<strong>Oui</strong>, cette proposition <strong>répond</strong> aux exigences'
+      description_markdown: '**Oui**, cette soumission **remplit** les critères'
     rejected:
       name: 'Rejeté'
-      description: '<strong>Non</strong>, cette proposition <strong>ne répond pas</strong> aux exigences'
+      description_markdown: '**Non**, cette soumission **ne remplit pas** les critères'
     escalated:
       name: 'Remonté'
       description: 'Je voudrais qu''un instructeur examine cette proposition'
@@ -864,6 +879,7 @@ fr:
     csf_variables: 'variables'
     csf_for_loops: 'Boucles « Pour »'
     csf_internet: 'Internet'
+    csf_warmup: 'Echauffement'
     csd1_1: 'Chapitre 1 : Résolution de problèmes'
     csd1_2: 'Chapitre 2 : Ordinateurs et résolution de problèmes'
     csd2_1: 'Chapitre 1 : Contenu Web et HTML'
@@ -894,6 +910,7 @@ fr:
     csp_postap_2: 'Chapitre 2 : Application et bases de données'
     csp2_1_2018: 'Unité 2: L’Information numérique'
     csp3_1_2018: 'Unité 3 : Introduction à la programmation'
+    csp4_1_2018: 'Unité 4: Big Data et Confidentialité'
     csp_variables: 'variables'
     csp_conditionals: 'Instructions conditionnelles'
     csp_functions: 'fonctions'
@@ -902,6 +919,7 @@ fr:
     csp_loops: 'boucles'
     csp_traversals: 'Parcours'
     csp_libraries: 'Bibliothèques'
+    csp_parameters_return_values: 'Paramètres et Valeur de Retour'
     dlp: 'Sujets de réflexion'
     time4cs_c1: 'Les Everglades et ses écosystèmes'
     time4cs_c2: 'Les chaînes alimentaires dans les Everglades'
@@ -966,7 +984,6 @@ fr:
     download_in_Vietnamese: 'Télécharger en Vietnamien:'
     windows: 'Windows (64 bits)'
     mac: 'Mac OS X'
-  stage_extras_teacher_message: "Les leçons supplémentaires sont désactivées pour certains de vos espaces. Vos étudiants ne verront pas cette page à moins de les réactiver. Vous pouvez le faire en visitant votre <a href='http://code.org/teacher-dashboard'>Teacher Dashboard</a>."
   locked_stage: 'Les contenus ne sont pas visibles car cette étape est verrouillée pour l''instant. Ton professeur la déverrouillera lorsqu''il sera temps de travailler dessus ou pour consulter tes réponses.'
   hidden_stage: "Ton professeur n'avait pas prévu que tu travailles ici. Demande lui quelle leçon tu dois suivre."
   hidden_script: "Ton professeur n'avait pas prévu que tu travailles ici. Demande lui quelle unité tu dois suivre."
@@ -1061,15 +1078,15 @@ fr:
       title: 'Participation à l’atelier'
       intro: "Merci d’avoir pris le temps de recevoir une formation sur le programme d’études de Code.org. Notre mission d’apporter des possibilités d’éducation en informatique à tous les enfants de toutes les écoles du monde entier ne serait pas possible sans vous."
       instructions: "Veuillez remplir le formulaire ci-dessous pour indiquer que 1) vous avez participé à un atelier de formation dirigé par un des partenaires internationaux de Code.org et 2) vous acceptez de partager vos informations avec notre partenaire international dans votre pays agin qu’il puisse vous soutenir lors de votre voyage comme professeur d’informatique."
-      thanks: "Merci pour votre soumission ! Nous nous réjouissons de vous soutenir pendant que vous apprenez à connaître les programmes d’études et outils de Code.org. Veuillez continuer à partager vos questions et vos commentaires avec nous en nous écrivant à <a href='%{support_email_url}'>support@code.org</a> ou en postant sur le <a href='%{teacher_forum_url}' target='_blank'>forum des enseignants</a> !"
+      thanks_markdown: "Merci pour votre soumission ! Nous nous réjouissons de vous soutenir pendant que vous apprenez à connaître les programmes d’études et outils de Code.org. Veuillez continuer à partager vos questions et vos commentaires avec nous en nous écrivant à [support@code.org](%{support_email_url}) ou en postant sur le [forum des enseignants](%{teacher_forum_url})!"
     logged_out:
       heading: 'Merci de votre intérêt pour le programme d’apprentissage professionnel !'
       body: 'Pour commencer, vous devez d’abord être connecté à votre compte de Code.org. Si vous désirez plus d’informations sur le programme avant de commencer votre demande, veuillez consulter l’<a href="%{url}">aperçu du programme d’apprentissage professionnel</a>.'
     not_teacher:
-      body: 'Merci de votre intérêt pour le programme d’apprentissage professionnel de Code.org ! Vous êtes actuellement connecté à un compte élève. Veuillez soit créer un compte enseignant, soit <a href="%{user_settings}">aller dans vos paramètres utilisateur</a> pour mettre à niveau votre compte d’élève à enseignant.'
-      more: 'Si vous désirez plus d’informations sur le programme avant de commencer votre demande, veuillez consulter l’<a href="%{pl_overview}">aperçu du programme d’apprentissage professionnel</a>.'
+      body_markdown: 'Merci de votre intérêt pour le programme d’apprentissage professionnel de Code.org ! Vous êtes actuellement connecté à un compte élève. Veuillez soit créer un compte enseignant, soit [aller dans vos paramètres utilisateur](%{user_settings}) pour mettre à niveau votre compte d’élève à enseignant.'
+      more_markdown: 'Si vous désirez plus d’informations sur le programme avant de commencer votre demande, veuillez consulter l’[aperçu du programme d’apprentissage professionnel](%{pl_overview}).'
     no_teacher_email:
-      body: 'Votre compte n’est pas associé à une adresse e-mail. Veuillez <a href="%{user_registration}">consulter les paramètres de votre compte</a> pour ajouter votre adresse e-mail avant de remplir ce formulaire.'
+      body_markdown: 'Votre compte n’est pas associé à une adresse e-mail. Veuillez [consulter les paramètres de votre compte](%{user_registration}) pour ajouter votre adresse e-mail avant de remplir ce formulaire.'
   courses_category: 'Cours complets'
   cookie_banner:
     message: 'En poursuivant votre navigation sur ce site ou en cliquant sur « J’accepte », vous acceptez le stockage de cookies sur votre ordinateur ou appareil mobile.'

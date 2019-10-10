@@ -351,6 +351,21 @@ ja-JP:
       CSDU6 arrays select rainbow: 配列の内容を順に画面に書き込みます。(クリックして完全な指示を表示)
       CSDU6 arrays select rainbow_2018: 配列の内容を順に画面に書き込みます。(クリックして完全な指示を表示)
       CSDU6 arrays select rainbow_2019: 配列の内容を順に画面に書き込みます。(クリックして完全な指示を表示)
+      Course 4 Artist 1: '四角形をかくのを手伝ってください。(それぞれの線の長さは300ピクセル) '
+      Course 4 Artist 10: 面白い形を書くプログラムです。これを、入れ子でくりかえすと、どうなるでしょうか？くりかえす度に、少しまがると、どうなるでしょう？あなたの、すきな絵を書いて楽しんでください。
+      Course 4 Artist 11: これは、むずかしいよ！1回じゃムリだから、色々、やって見てください。ヒントを見たいときは、ランプをクリック。
+      Course 4 Artist 12: もっとカッコいいデザインを作るヒントを見たかったら、ランプをクリックして！自分のすきなデザインを、自由に書いても良いよ！
+      Course 4 Artist 13: ここに、真っ白なキャンバスがあります。線のかたちや、スタンプを使って、あなたが書きたいものを、自由に書いてください！
+      Course 4 Artist 2: くりかえしを使って、四角形（そとがわの、大きな四角形だけ）を書いてください。(それぞれの辺は300ピクセルです)
+      Course 4 Artist 3: "「くりかえし」を使えば、かんたんに、このデザインが書けるよ。まずはプログラムを動かして(「実行」をクリックして)
+        何が起こるか見てみよう。その後に「くりかえし」を、使ってデザインを完成させよう。"
+      Course 4 Artist 4: くりかえしの回数を入れて、色のついた円を作ってください。ヒント：1回転は何度ですか？
+      Course 4 Artist 5: 図が対称（たいしょう）になるように、下に三角形を3つ書きましょう。正三角形のそれぞれの辺の長さは50ピクセルです。ヒント：少しプログラムをかえたら、実行して、動きをみながら考えましょう。
+      Course 4 Artist 6: 正三角形を3つ書くプログラムを完成（かんせい）させてください。
+      Course 4 Artist 7: '10回、三角形を書きます。そのためには「くりかえし」ブロックを追加（ついか）し、その中に灰色（はいいろ）のブロックを全部入れます。「くりかえし」のなかに「くりかえし」を入れることを「入れ子」と言います。  '
+      Course 4 Artist 8: 太陽の絵を書いてください。「くりかえし」ブロックを加えて、灰色（はいいろ）のブロック全部を中に入れてみてね。
+      Course 4 Artist 8a: この形を、おぼえてますか？ヒントなしで、これを書いてみよう！
+      Course 4 Artist 9: このデザインを書くには、10 回くりかえします。ヒント：1回書いたら、少しまがりましょう。
       Course 4 Artist Binary 3: 3ケタのバイナリ文字列（0と1が三つ）で、このパターンを書いて下さい。
       Course 4 Artist Binary 4: |-
         このプログラムを実行すると、おこった顔が書かれます。
@@ -376,6 +391,24 @@ ja-JP:
         1.  線の太さは？
         2.  まがる向きは？
         3.  いくつ「ずつ」カウントする？
+      Course 4 Artist Inspire: もっとカッコいいデザインを作るヒントを見たかったら、ランプをクリックして！自分のすきなデザインを、自由に書いても良いよ！
+      Course 4 Artist Vars 1: 正三角形を書きましょう。それぞれの長さが100ピクセルぴったりの正三角形です。
+      Course 4 Artist Vars 2: 「前に動く"150"ピクセル」のかわりに「前に動く"length"ピクセル」ブロックを使います。"length"は、変数（へんすう）で、あなたの好きな数にできます。この三角形を書くために、"length"に150をセットしてください。
+      Course 4 Artist Vars 4: |-
+        高さが、はばの2倍の四角形を書きます。
+        "width" （ウィドゥス、はばの意味）という変数に100 をセットします。計算ブロックを使ってプログラムを仕上げてください。
+        ヒント：四角形の高さは、width × 2 です。
+      Course 4 Artist Vars 6: |-
+        これは、多角形を書くプログラムです。 sidesという変数は4にセットされていますので、四角形を書くはずです。計算ブロックといっしょに sides 変数を使って、プログラムを仕上げてください。
+        ランプをクリックするとヒントがあるよ！
+      Course 4 Bee 1: |-
+        実行するまで、「？」の下に、何があるかは分かりません！
+        「もし」ブロックを使って、「？」の下に、何があるかチェックしてください。そして、もし花だったら、花のミツをとってください。
+      Course 4 Bee 2: "「もし～」ブロックを使って、全ての「？」をチェックしてください。そのとき、「？」が花なら、花のミツをとり、「？」がハチの巣なら、ハチミツを作ります！"
+      Course 4 Bee 3: "「？」は、花か、ハチの巣か、のどちらかです。「もし～」ブロックを使って、花の時はミツをとって、ちがう (つまりハチの巣)
+        時は、ハチミツを作りましょう。"
+      Course 4 Bee Loops 5 NEW: 3つ花があり、それぞれの花にはミツがあります。「くりかえし」を上手く使って、少ないブロック数で、全部のミツを集めてください。
+      Course 4 Bee Loops 5a NEW: 全ての花のミツを集めながら、ハチの巣（す）へ行きます。ハチの巣についたら、ハチミツを5回、作って下さい。「くりかえし」ブロックを使って、使うブロックの数を出来るだけ少なくしてくださいね！
       Course 4 Bee Params 5: |-
         こんどは、「関数を作る」を使って、全部のプログラムを書いてみましょう。
         「方向」をパラメータにして「ミツを五つ取る」関数を作ってください。
@@ -468,10 +501,12 @@ ja-JP:
       Dance_Party_12: グルーブをつづけて！自分だけのダンスを作成して、友達と共有しましょう。
       Function intro Ryan: "「橋をかける」関数を 2 回使って、たいまつまでの道を作りましょう。"
       Function intro Ryan_2019: "「橋をかける」関数を 2 回使って、たいまつまでの道を作りましょう。"
+      Geometric Sun: アイデア：多角形を使って、絵をかいてみよう。
+      Geometric Sun_2018: アイデア：多角形を使って、絵をかいてみよう。
       HOC 2018 Level_1: チェストからボートを回収しましょう。
       HOC 2018 Level_10: この海底遺跡の入り口にたどりつきましょう。
       HOC 2018 Level_11: 海底遺跡の中にある海晶ブロックでコンジットを作りましょう。
-      HOC 2018 Level_12: あなたの好きなように水中の世界を作ってみましょう!
+      HOC 2018 Level_12: 好きなように水中の世界を作ってみましょう!
       HOC 2018 Level_2: ドックの奥に向かいましょう。
       HOC 2018 Level_3: 開けた海をわたってタラにたどりつきましょう。
       HOC 2018 Level_4: ループを使ってイルカにたどりつきましょう。
@@ -619,6 +654,12 @@ ja-JP:
       NEW Course 4 Artist Params 9: |-
         `draw a square`関数の「編集」をクリックして、`length` パラメータを追加します。「パラメータを追加（ついか）」ボタンの左のボックスに `length` と入れてから、ボタンをおして下さい。
         そして、正方形を三つ書きます。大きさは、25、50、75ピクセルで、それぞれ100ピクセルはなれています。
+      NEW Course 4 Artist Vars 2: 数のブロックを「セット Length は？」と「？回くりかえす」のところに入れて、50ピクセルの長さの三角形を6つ書いてください。
+      NEW Course 4 Artist Vars 4: もう一回やってみよう！このカッコイイ六角形を使ったデザインを書くには、「lengh」変数を60にしてみてね。
+      NEW Course 4 Artist Vars 6: |-
+        100 ピクセルの辺を持つ五角形のパターンを書くよ！
+        「セット length は」に、数のブロックをくっつけて、数は100にします。全部の「前に動く？ピクセル」には「length」ブロックを入れて下さい。
+        「length」に入れた数が、その後のプログラムで、どこでも使えることが分ったかな？
       NEW Course 4 Bee For Loops 1: "「くりかえし」を使って、すべての花からミツを集めましょう。"
       NEW Course 4 Bee For Loops 8: 3、6、9、12、15の花のミツをとるためには、いくつずつ `counter` を ふやせば良いでしょう？「???」に正しい数をいれて、すべての花のミツを集めてください。
       Overworld Avoid Monsters: Creeperに出くわすとやっかいです。慎重にやり過ごし、安全な家に戻りましょう。
@@ -645,10 +686,21 @@ ja-JP:
       Overworld Powered Minecart_2019: 上出来です！資源をたくさん集め、それなりの家ができました。次はマップの端からドアまでレールを敷きましょう。
       Overworld Shear Sheep: '"刈る"コマンドを使って両方の羊から羊毛を集めましょう。'
       Overworld Shear Sheep_2019: '"刈る"コマンドを使って両方の羊から羊毛を集めましょう。'
+      Robot Doodle: アイデア：リアルな絵をかいてみよう。
+      Robot Doodle_2018: アイデア：リアルな絵をかいてみよう。
       Standalone_Artist_1: アーティストへようこそ！はじめに、「前に うごく」ブロックと「右に まがる」ブロックで、正方形をかいてみよう。それぞれの辺は、100
         ピクセルの長さだよ。
+      Standalone_Artist_2: "「左に まがる 120度」と「左に まがる 60度」で、ダイヤモンドを書くよ。それぞれ「150ピクセル」うごかしてね。"
+      Standalone_Artist_3: "「前に うごく 100ピクセル」と「右に まがる60度」をつかって、六角形が書けるかな？"
+      Standalone_Artist_4: "「くりかえし」ブロックは、すきな回数プログラムを、くりかえします。ここに出ているプログラムを「くりかえし」ブロックの中に入れて、6回くりかえすと、どうなるかな？"
+      Standalone_Artist_5: ダイヤモンドを書くプログラムがあります。何回くりかえすと花が書けるかな？
       Standalone_Artist_5.5: "「くりかえし」ブロックをつかって、ダイヤモンドが かんたんに書けるようにしてあります。このプログラムを12回くりかえすと花が書けます。ヒント：ひとつのダイヤモンドを書きおえたら、30度まがりましょう。ずっと同じところにダイヤモンドを書いていたらダメだよ。"
+      Standalone_Artist_6: このデザインは、六角形を書くプログラムを 6 回くりかえします。くりかえしのたびに、何度まがればいいかな？ヒント：円の角度を、くりかえしの回数で、わり算すればいいよ。
+      Standalone_Artist_7: '関数（かんすう）は、くりかえしと同じように、べんりです。「draw a flower」は、花を書く関数です。「draw
+        a flower」ブロックをつかえば、いつでも、花を書くことが出来ます。これと「前に ジャンプ」ブロックを組み合わせて、3つ花を書いてください。ヒント:
+        花は 150 ピクセルずつ はなれているよ。'
       Standalone_Artist_8: "「Draw a shape」は、六角形を書くようにプログラムした関数です。まず実行して、この関数が、どう うごくか、みてみてください。さて、正方形や、三角形や、八角形を書くように、この関数の中のプログラムを書き直すことが出来るかな？"
+      Standalone_Artist_9: さあ、あなたの好きな絵を書いてみて！すきなことが出来る、空っぽの関数もあるから、つかってね！
       Underground Avoiding Lava: 一部のブロックの下には溶岩が隠れていて、前進する前に"if"コマンドでフタをする必要があります。適切な場所に"前進"コマンドを追加して、ブロックを掘りましょう。
       Underground Avoiding Lava_2019: 一部のブロックの下には溶岩が隠れていて、前進する前に"if"コマンドでフタをする必要があります。適切な場所に"前進"コマンドを追加して、ブロックを掘りましょう。
       Underground If Statements: 次は溶岩の中に落ちないようにして、レッドストーンを3つ掘りましょう。溶岩を見つけたら、"If"コマンドを使って丸石を置きます。
@@ -698,21 +750,48 @@ ja-JP:
       course1_maze_seq_challenge2: それぞれの方向（ほうこう）に 4回までしか うごけません。ブロックが なくなる前に クリアできるかな？
       course1_playlab_events_challenge1: みんなどこにかくれてるかな？ のこりのお友だちを表示（ひょうじ）するコードを書けるかな？
       course1_playlab_events_challenge2: パーティーをしよう！クリックしたりタップするときのアクションをつけて、おともだちを楽しませよう。
+      course2_artist_nestedLoops_challenge1: 同じ図が、かけるかな？
+      course2_artist_nestedLoops_challenge2: 同じ図が、かけるかな？
       course2_artist_prog_challenge1: それぞれの動物（どうぶつ）のために部屋（へや）を作ってあげましょう。 このパズルはいろいろなときかたがあるので、楽しんでくだい。最短（さいたん）は6ブロックですが、すきなだけ使（つか）ってください。
       course2_artist_prog_challenge2: この道路（どうろ）に黄色い線をかいてください。
+      course2_bee_conditionals_challenge1: すべてのミツを集めて、全部のハチの巣でハチミツを作ろう。
+      course2_bee_conditionals_challenge2: すべてのミツを集めて、全部のハチの巣でハチミツを作ろう。
       course2_collector_loops_challenge2: 'ジェムをすべてゲットしよう！ '
       course2_collector_prog_challenge1: よく見よう！ 10このジェムをぜんぶ集められるかな？
       course2_collector_prog_challenge2: ジェムはぜんぶで20こあるよ。半分より多くあつめたいな！
+      course2_harvester_loops_challenge1: とうもろこしをあつめよう。
+      course2_harvester_loops_challenge2: 木とはたけをさけて、レタスをあつめよう！
+      course2_maze_loops_challenge1: 'くりかえしを つかって スクラットを ドングリのところに つれていこう。 '
       course2_maze_programming_challenge1: ブタがかくれてる！さがすのをてつだってくれる？
+      course2_maze_programming_challenge2: |-
+        ブタのところに行くには、いろいろなほうほうがあります。
+        前に進むよりも、後ろにもどったほうが、早く行けることもあります。
+      course3_artist_functions_challenge1: 一度定義した関数は、いつでも、どこからでも、何度でも呼び出すことができます。プログラムの中で
+        どのように 関数が 使われているのか 見て、プログラムを 修正し、自分なりの いかしたデザインを 作ってみよう。
+      course3_artist_functions_challenge2: プログラムがどのように動いているのよく見て、あなただけのプログラムを作ろう！
       course3_bee_debugging_challenge1: ハチが花のミツをどのように集めているか見てください。 同じパターンを使って、すべてのハチミツを作れますか？
+      course3_bee_functions_challenge1: このチャレンジも きっとクリアできるよ。見た目よりもむつかしいよ！
       course3_bee_functions_challenge2: チャレンジ問題によくきたね！
       course3_collector_debugging_challenge2: 入れ子のループはマスターしたかな？ これまでに学んだことをいかして、ジェムをすべて集めましょう！
       course3_farmer_condLoops_challenge1: カボチャで右にまがりましょう。クリアするために作物をすべて集めよう。かくれた作物には、トウモロコシとレタスのどちらか1つしかありません。
       course3_maze_debugging_challenge1: _円をかくように、ぐるりと回ればいいかな？_
       course3_maze_debugging_challenge2: _回りすぎると、めまいがするよ！ 4つの「まがる」ブロックだけでドングリをひろえるようにしてね。_
+      course3_playLab_challenge1: ポイントがたまった後、マイナスになった後、どうしますか？関数`win game` と `lose
+        game` にどんなプログラムを追加しますか？何を追加するかはヒントを見てみよう！
+      course4_artist_concept_challenge2: 下のプログラムを使って、風車を5つかこう。
+      course4_artist_functions_challenge2: プログラムがどのように動いているのよく見て、あなただけのプログラムを作ろう！
       course4_artist_fwp_challenge1: このプログラムを実行してみてください、そして何が起こるかを参照し変更をしてください。それがどのように動作するかを理解できますか？(または削除し、完全に別の何かと交換)
       courseA_artist_loops1: これは「アーティスト」という あたらしい パズルです。すきなものを かいて ください。（かきおわったら、「おわり」を
         クリックします）
+      courseA_artist_loops10: おちないよう石をおいてください。
+      courseA_artist_loops10_2018: おちないよう石をおいてください。
+      courseA_artist_loops10_2019: おちないよう石をおいてください。
+      courseA_artist_loops11: ふねが見れるよう かいだんをつくってみよう。
+      courseA_artist_loops11_2018: ふねが見れるよう かいだんをつくってみよう。
+      courseA_artist_loops11_2019: ふねが見れるよう かいだんをつくってみよう。
+      courseA_artist_loops12: じゆうに おもしろいと おもうのもを かいてみよう。
+      courseA_artist_loops12_2018: じゆうに おもしろいと おもうのもを かいてみよう。
+      courseA_artist_loops12_2019: じゆうに おもしろいと おもうのもを かいてみよう。
       courseA_artist_loops1_2018: これは「アーティスト」という あたらしい パズルです。すきなものを かいて ください。（かきおわったら、「おわり」を
         クリックします）
       courseA_artist_loops1_2019: これは「アーティスト」という あたらしい パズルです。すきなものを かいて ください。（かきおわったら、「おわり」を
@@ -738,6 +817,15 @@ ja-JP:
       courseA_artist_loops8: ボートにいくには、はしごがひつようです。
       courseA_artist_loops8_2018: ボートにいくには、はしごがひつようです。
       courseA_artist_loops8_2019: ボートにいくには、はしごがひつようです。
+      courseA_artist_loops9: "**チャレンジ** かいだんをつくろう"
+      courseA_artist_loops9_2018: "**チャレンジ** かいだんをつくろう"
+      courseA_artist_loops9_2019: "**チャレンジ** かいだんをつくろう"
+      courseA_artist_loops_challenge1: 家をかくことができるかな？
+      courseA_artist_loops_challenge1_2018: 家をかくことができるかな？
+      courseA_artist_loops_challenge1_2019: 家をかくことができるかな？
+      courseA_artist_loops_challenge2a: _"テントを３つ つくってみよう！"_
+      courseA_artist_loops_challenge2a_2018: _"テントを３つ つくってみよう！"_
+      courseA_artist_loops_challenge2a_2019: _"テントを３つ つくってみよう！"_
       courseA_collector_loops1: ローレルを うごかして、たからものを あつめよう！
       courseA_collector_loops10: ローレルが ぜんぶの たからを あつめられるよう、たすけて ください。
       courseA_collector_loops10_2018: ローレルが ぜんぶの たからを あつめられるよう、たすけて ください。
@@ -786,6 +874,8 @@ ja-JP:
       courseA_harvester_seq6_2019: 自分でやってみよう！
       courseA_harvester_seq7: 自分でやってみよう！
       courseA_harvester_seq7_2019: 自分でやってみよう！
+      courseA_maze_ramp5a_2018: トリさんを ブタさんの ところに つれって行って！
+      courseA_maze_ramp5a_2019: トリさんを ブタさんの ところに つれって行って！
       courseA_maze_seq1: トリさんを ブタさんの ところに つれていって！
       courseA_maze_seq10: 'チャレンジ：バクダンを よけつつ、ブタさんを つかまえて！ '
       courseA_maze_seq11: ブロックを くみあわせて、トリさんを ブタさんのところへ つれていって ください。
@@ -817,6 +907,30 @@ ja-JP:
       courseA_maze_seq_challenge2: みちを たどって トリさんを ブタさんのところに つれてって。ばくだんで はねが とばされないように！
       courseA_maze_seq_challenge2_2018: みちを たどって トリさんを ブタさんのところに つれてって。ばくだんで はねが とばされないように！
       courseA_maze_seq_challenge2_2019: みちを たどって トリさんを ブタさんのところに つれてって。ばくだんで はねが とばされないように！
+      courseA_playLab_events1: ワークスペースにブロックをおいて 実行してみよう！
+      courseA_playLab_events1_2018: ワークスペースにブロックをおいて 実行してみよう！
+      courseA_playLab_events2: 犬に”こんにちは”といわせてみよう！
+      courseA_playLab_events2_2018: 犬に”こんにちは”といわせてみよう！
+      courseA_playLab_events3: 左やじるしキーが おされたとき、左にうごくようにしてみよう。
+      courseA_playLab_events3_2018: 左やじるしキーが おされたとき、左にうごくようにしてみよう。
+      courseA_playLab_events3_2019: 左やじるしキーが おされたとき、左にうごくようにしてみよう。
+      courseA_playLab_events4: 右やじるしキーがおされたとき、右にうごくようにしよう。
+      courseA_playLab_events5: 上やじるしキーと下やじるしキーで犬を上下にうごかしてみよう。
+      courseA_playLab_events5_2018: 上やじるしキーと下やじるしキーで犬を上下にうごかしてみよう。
+      courseA_playLab_events5_2019: 上やじるしキーと下やじるしキーで犬を上下にうごかしてみよう。
+      courseA_playLab_events6: はいけいをかえてみよう、犬がクリックされたときランダムに音がなるようにしてみよう。
+      courseA_playLab_events6_2018: はいけいをかえてみよう、犬がクリックされたときランダムに音がなるようにしてみよう。
+      courseA_playLab_events6_2019: はいけいをかえてみよう、犬がクリックされたときランダムに音がなるようにしてみよう。
+      courseA_playLab_events7: 犬が、きょうりゅうにぶつかったら きょうりゅうが きえる ゲームをつくってみよう。
+      courseA_playlab_events_challenge1: ヒントを１つづつみて、ほかのキャラクターのコーディングをしてみよう。
+      courseA_playlab_events_challenge1_2018: ヒントを１つづつみて、ほかのキャラクターのコーディングをしてみよう。
+      courseA_playlab_events_challenge1_2019: ヒントを１つづつみて、ほかのキャラクターのコーディングをしてみよう。
+      courseA_playlab_events_challenge2: キャラクターがクリックされたとき キャラクターにいろんなことをさせてみよう。
+      courseA_playlab_events_challenge2_2018: キャラクターがクリックされたとき キャラクターにいろんなことをさせてみよう。
+      courseA_playlab_events_challenge2_2019: キャラクターがクリックされたとき キャラクターにいろんなことをさせてみよう。
+      courseA_video_events: Need a better playlab/events combo
+      courseA_video_events_2018: Need a better playlab/events combo
+      courseA_video_events_2019: Need a better playlab/events combo
       courseB_artist_loops1: これは「アーティスト」という あたらしい パズルです。すきなものを かいて ください。（かきおわったら、「おわり」を
         クリックします）
       courseB_artist_loops1_2018: これは「アーティスト」という あたらしい パズルです。すきなものを かいて ください。（かきおわったら、「おわり」を
@@ -834,15 +948,364 @@ ja-JP:
       courseB_maze_seq1: ブロックをつかって、ぼくをブタさんのところに、つれていってください。
       courseB_maze_seq6: ブロックを くみあわせて、トリさんを ブタさんのところへ つれていって ください！
       courseB_maze_seq7: トリさんが ブタさんのところに いけるよう、ブロックを いれて ください！
+      courseC19_playLab_EOC1: はいけいとゲームの主人公になるキャラを選ぼう。
+      courseC19_playLab_EOC3: ゲームにキャラを二人追加して、動かしてみよう。
+      courseC19_playLab_EOC4: ポイントをゲットする仕組みを考えよう。どうすればポイントをゲットできるかな？
+      courseC19_playLab_EOC6: 完成、ゲームをプレイしてみよう！ともだちとゲームを共有しよう！
+      courseC_PlayLab_events1: 犬のジョージ(キャラ 1) に、 "Hi there."と言わせてみよう。
+      courseC_PlayLab_events1_2018: 犬のジョージ(キャラ 1) に、 "Hi there."と言わせてみよう。
+      courseC_PlayLab_events1_2019: 犬のジョージ(キャラ 1) に、 "Hi there."と言わせてみよう。
+      courseC_PlayLab_events2: 犬のジョージ(キャラ 1) が 何か 言ったあと、ねこのオリーブ(キャラ 2) にも 何か 言わせてください。
+      courseC_PlayLab_events2_2018: 犬のジョージ(キャラ 1) が 何か 言ったあと、ねこのオリーブ(キャラ 2) にも 何か
+        言わせてください。
+      courseC_PlayLab_events2_2019: 犬のジョージ(キャラ 1) が 何か 言ったあと、ねこのオリーブ(キャラ 2) にも 何か
+        言わせてください。
+      courseC_PlayLab_events3: 犬のジョージ（キャラ１）を ねこのオリーブのところまで 行かせることが できるかな？
+      courseC_PlayLab_events3_2018: 犬のジョージ（キャラ１）を ねこのオリーブのところまで 行かせることが できるかな？
+      courseC_PlayLab_events3_2019: 犬のジョージ（キャラ１）を ねこのオリーブのところまで 行かせることが できるかな？
+      courseC_PlayLab_events4: 犬のジョージ（キャラ１）を ねこのオリーブのところまで 行かせて、オリーブのところに来たら、オリーブに"Hi
+        there."と言わせることができるかな？
+      courseC_PlayLab_events4_2018: 犬のジョージ（キャラ１）を ねこのオリーブのところまで 行かせて、オリーブのところに来たら、オリーブに"Hi
+        there."と言わせることができるかな？
+      courseC_PlayLab_events4_2019: 犬のジョージ（キャラ１）を ねこのオリーブのところまで 行かせて、オリーブのところに来たら、オリーブに"Hi
+        there."と言わせることができるかな？
+      courseC_PlayLab_events5: タコのオクタビアを クリックしたら、 "こんにちわ"と 言わせてみよう。
+      courseC_PlayLab_events5_2018: タコのオクタビアを クリックしたら、 "こんにちわ"と 言わせてみよう。
+      courseC_PlayLab_events5_2019: タコのオクタビアを クリックしたら、 "こんにちわ"と 言わせてみよう。
+      courseC_PlayLab_events6: 上向き矢印キー・下向き矢印キー・左向き矢印キー・右向き矢印キーでペンギンをうごかして、ぜんぶの はたに
+        さわってみよう！
+      courseC_PlayLab_events6_2018: 上向き矢印キー・下向き矢印キー・左向き矢印キー・右向き矢印キーでペンギンをうごかして、ぜんぶの
+        はたに さわってみよう！
+      courseC_PlayLab_events6_2019: 上向き矢印キー・下向き矢印キー・左向き矢印キー・右向き矢印キーでペンギンをうごかして、ぜんぶの
+        はたに さわってみよう！
+      courseC_PlayLab_events7: "`ずっとやること` をつかえば、中に入れためいれいを ずっと くりかえすことが できます。`ずっとやること`
+        をつかって、きょうりゅう（キャラ２）を 上下に 400ピクセル 行ったり来たり させてみよう。"
+      courseC_PlayLab_events7_2018: "`ずっとやること` をつかえば、中に入れためいれいを ずっと くりかえすことが できます。`ずっとやること`
+        をつかって、きょうりゅう（キャラ２）を 上下に 400ピクセル 行ったり来たり させてみよう。"
+      courseC_PlayLab_events7_2019: "`ずっとやること` をつかえば、中に入れためいれいを ずっと くりかえすことが できます。`ずっとやること`
+        をつかって、きょうりゅう（キャラ２）を 上下に 400ピクセル 行ったり来たり させてみよう。"
+      courseC_PlayLab_events8: "ペンギン (actor 1) が きょうりゅうに さわったら、音を ならして、\"いたい！\"と いわせることが
+        できるかな？ \nプログラムができたら、ゲームをやってみよう。"
+      courseC_PlayLab_events8_2018: "ペンギン (actor 1) が きょうりゅうに さわったら、音を ならして、\"いたい！\"と
+        いわせることが できるかな？ \nプログラムができたら、ゲームをやってみよう。"
+      courseC_PlayLab_events8_2019: "ペンギン (actor 1) が きょうりゅうに さわったら、音を ならして、\"いたい！\"と
+        いわせることが できるかな？ \nプログラムができたら、ゲームをやってみよう。"
+      courseC_PlayLab_events9: |-
+        ペンギン(キャラ1) が タコ(キャラ3) に さわったとき、ポイントが はいるように できる？
+        矢じるしキーで ペンギンを うごかして、ポイントを ゲットしよう！
+      courseC_PlayLab_events9_2018: |-
+        ペンギン(キャラ1) が タコ(キャラ3) に さわったとき、ポイントが はいるように できる？
+        矢じるしキーで ペンギンを うごかして、ポイントを ゲットしよう！
+      courseC_PlayLab_events9_2019: |-
+        ペンギン(キャラ1) が タコ(キャラ3) に さわったとき、ポイントが はいるように できる？
+        矢じるしキーで ペンギンを うごかして、ポイントを ゲットしよう！
+      courseC_PlayLab_eventsA: |-
+        `実行（じっこう）した時`に はいけいを かえて、ペンギンの うごくスピードを かえてみよう。
+        矢じるしキーで ペンギンを うごかして、ポイントを ゲットしよう！
+      courseC_PlayLab_eventsA_2018: |-
+        `実行（じっこう）した時`に はいけいを かえて、ペンギンの うごくスピードを かえてみよう。
+        矢じるしキーで ペンギンを うごかして、ポイントを ゲットしよう！
+      courseC_PlayLab_eventsA_2019: |-
+        `実行（じっこう）した時`に はいけいを かえて、ペンギンの うごくスピードを かえてみよう。
+        矢じるしキーで ペンギンを うごかして、ポイントを ゲットしよう！
+      courseC_PlayLab_eventsFP: 自分だけのものがたりを作ってみよう。かんせいしたら、 "おわり" をクリックして友だちに知らせよう。ものがたりのアイデアはヒントの中にあるよ。
+      courseC_PlayLab_eventsFP_2018: 自分だけのものがたりを作ってみよう。かんせいしたら、 "おわり" をクリックして友だちに知らせよう。ものがたりのアイデアはヒントの中にあるよ。
+      courseC_PlayLab_eventsFP_2019: 自分だけのものがたりを作ってみよう。かんせいしたら、 "おわり" をクリックして友だちに知らせよう。ものがたりのアイデアはヒントの中にあるよ。
+      courseC_PlayLab_events_challenge1: |-
+        ペンギンが きょうりゅうに さわったときや ポイントを ゲットしたときに、ペンギンが スタート地点に もどるように してみよう。
+        ペンギンを矢じるしキーでうごかして、ポイントをゲットしよう。
+      courseC_PlayLab_events_challenge1_2018: |-
+        ペンギンが きょうりゅうに さわったときや ポイントを ゲットしたときに、ペンギンが スタート地点に もどるように してみよう。
+        ペンギンを矢じるしキーでうごかして、ポイントをゲットしよう。
+      courseC_PlayLab_events_challenge1_2019: |-
+        ペンギンが きょうりゅうに さわったときや ポイントを ゲットしたときに、ペンギンが スタート地点に もどるように してみよう。
+        ペンギンを矢じるしキーでうごかして、ポイントをゲットしよう。
+      courseC_artist_loop1: かっこよくしてみよう！
+      courseC_artist_loops5a: 新しいステッカー！
+      courseC_artist_loops5a_2018: 新しいステッカー！
+      courseC_artist_loops5a_2019: 新しいステッカー！
+      courseC_artist_loops6a: 新しいステッカー！
+      courseC_artist_loops6a_2018: 新しいステッカー！
+      courseC_artist_loops6a_2019: 新しいステッカー！
+      courseC_artist_loops7a: くりかえし と まがる を つかってみよう。
+      courseC_artist_loops7a_2018: くりかえし と まがる を つかってみよう。
+      courseC_artist_loops7a_2019: くりかえし と まがる を つかってみよう。
+      courseC_artist_loopsPre1a: ぐるっと せんを かいてみよう！
+      courseC_artist_loopsPre1a_2018: ぐるっと せんを かいてみよう！
+      courseC_artist_loopsPre1a_2019: ぐるっと せんを かいてみよう！
+      courseC_artist_loopsPrePre1a: 'プレイエリアの まんなかに 行ってから、線せんを 書いてみよう！ '
+      courseC_artist_loopsPrePre1a_2018: 'プレイエリアの まんなかに 行ってから、線せんを 書いてみよう！ '
+      courseC_artist_loopsPrePre1a_2019: 'プレイエリアの まんなかに 行ってから、線せんを 書いてみよう！ '
+      courseC_artist_prog1: ツールボックスにあるブロックを使って、絵をかいてみよう！
+      courseC_artist_prog1_2018: ツールボックスにあるブロックを使って、絵をかいてみよう！
+      courseC_artist_prog1_2019: ツールボックスにあるブロックを使って、絵をかいてみよう！
+      courseC_artist_prog2: ブロックをワークスペースにドラックして、灰色の線（長さは100ピクセル）をかこう。
+      courseC_artist_prog2_2018: ブロックをワークスペースにドラックして、灰色の線（長さは100ピクセル）をかこう。
+      courseC_artist_prog2_2019: ブロックをワークスペースにドラックして、灰色の線（長さは100ピクセル）をかこう。
+      courseC_artist_prog3: 四角形の辺の長さは100ピクセルで、それぞれの角度は90度。
+      courseC_artist_prog3_2018: 四角形の辺の長さは100ピクセルで、それぞれの角度は90度。
+      courseC_artist_prog3_2019: 四角形の辺の長さは100ピクセルで、それぞれの角度は90度。
+      courseC_artist_prog4: ロケットが完成したので、ペットを追いかけれるようになりました。
+      courseC_artist_prog4_2018: ロケットが完成したので、ペットを追いかけれるようになりました。
+      courseC_artist_prog4_2019: ロケットが完成したので、ペットを追いかけれるようになりました。
       courseC_artist_prog5: この家には天井が必要です！三角の屋根をかいてください。ヒント：3つの線はすべて同じ長さです。
       courseC_artist_prog5_2018: この家には天井が必要です！三角の屋根をかいてください。ヒント：3つの線はすべて同じ長さです。
       courseC_artist_prog5_2019: この家には天井が必要です！三角の屋根をかいてください。ヒント：3つの線はすべて同じ長さです。
+      courseC_artist_prog6: 一辺が200ピクセルのひし形をかいてみよう。
+      courseC_artist_prog6_2018: 一辺が200ピクセルのひし形をかいてみよう。
+      courseC_artist_prog6_2019: 一辺が200ピクセルのひし形をかいてみよう。
+      courseC_artist_prog7: "**チャレンジ** スペシャルバージョンの名札です！ かくことができるかな？"
+      courseC_artist_prog7_2018: "**チャレンジ** スペシャルバージョンの名札です！ かくことができるかな？"
+      courseC_artist_prog7_2019: "**チャレンジ** スペシャルバージョンの名札です！ かくことができるかな？"
+      courseC_artist_prog8: |-
+        Piの名札は、三角形だよ。
+        （一辺は150ピクセル）
+      courseC_artist_prog8_2018: |-
+        Piの名札は、三角形だよ。
+        （一辺は150ピクセル）
+      courseC_artist_prog8_2019: |-
+        Piの名札は、三角形だよ。
+        （一辺は150ピクセル）
+      courseC_artist_prog_challenge1: '動物たちの部屋をかこう。 '
+      courseC_artist_prog_challenge1_2018: '動物たちの部屋をかこう。 '
+      courseC_artist_prog_challenge1_2019: '動物たちの部屋をかこう。 '
+      courseC_artist_prog_challenge2a: _"道路に黄色い線をかいて！"_
+      courseC_artist_prog_challenge2a_2018: _"道路に黄色い線をかいて！"_
+      courseC_artist_prog_challenge2a_2019: _"道路に黄色い線をかいて！"_
+      courseC_collector_loops_challenge2: ５つ いじょう たからものを あつめよう。
+      courseC_collector_loops_challenge2_2018: ５つ いじょう たからものを あつめよう。
+      courseC_collector_loops_challenge2_2019: ５つ いじょう たからものを あつめよう。
+      courseC_collector_prog1: ブロックをならべて、ローレルが たからものを あつめるのを てつだってみよう。
+      courseC_collector_prog1_2018: ブロックをならべて、ローレルが たからものを あつめるのを てつだってみよう。
+      courseC_collector_prog1_2019: ブロックをならべて、ローレルが たからものを あつめるのを てつだってみよう。
+      courseC_collector_prog2: ローレルをたからもののところまでいごかして、'あつめる'でたからものをあつめます。
+      courseC_collector_prog2_2018: ローレルをたからもののところまでいごかして、'あつめる'でたからものをあつめます。
+      courseC_collector_prog2_2019: ローレルをたからもののところまでいごかして、'あつめる'でたからものをあつめます。
+      courseC_collector_prog3: たからものをあつめて、パズルをクリアできるよう ブロックをならべかえてひっつけてみよう。
+      courseC_collector_prog3_2018: たからものをあつめて、パズルをクリアできるよう ブロックをならべかえてひっつけてみよう。
+      courseC_collector_prog3_2019: たからものをあつめて、パズルをクリアできるよう ブロックをならべかえてひっつけてみよう。
+      courseC_collector_prog4: ブロックをならべて たからものを すべてあつめ パズルをクリアしよう。
+      courseC_collector_prog4_2018: ブロックをならべて たからものを すべてあつめ パズルをクリアしよう。
+      courseC_collector_prog4_2019: ブロックをならべて たからものを すべてあつめ パズルをクリアしよう。
+      courseC_collector_prog5: ブロックのじゅんばんがまちがっているので、正しいじゅんばんにならべなおそう。
+      courseC_collector_prog5_2018: ブロックのじゅんばんがまちがっているので、正しいじゅんばんにならべなおそう。
+      courseC_collector_prog5_2019: ブロックのじゅんばんがまちがっているので、正しいじゅんばんにならべなおそう。
+      courseC_collector_prog6: すべてのたからものを ゲットできるように ブロックをならべなおそう。
+      courseC_collector_prog6_2018: すべてのたからものを ゲットできるように ブロックをならべなおそう。
+      courseC_collector_prog6_2019: すべてのたからものを ゲットできるように ブロックをならべなおそう。
+      courseC_collector_prog7: すべてのたからものを ゲットできるよう ブロックを ついかしてみよう。
+      courseC_collector_prog7_2018: すべてのたからものを ゲットできるよう ブロックを ついかしてみよう。
+      courseC_collector_prog7_2019: すべてのたからものを ゲットできるよう ブロックを ついかしてみよう。
+      courseC_collector_prog8: _"このちょうしで がんばって！ すべての たからものを あつめるのを てつだって。"_
+      courseC_collector_prog8_2018: _"このちょうしで がんばって！ すべての たからものを あつめるのを てつだって。"_
+      courseC_collector_prog8_2019: _"このちょうしで がんばって！ すべての たからものを あつめるのを てつだって。"_
+      courseC_collector_prog9: _"すべてのたからものをゲットしよう！"_
+      courseC_collector_prog9_2018: _"すべてのたからものをゲットしよう！"_
+      courseC_collector_prog9_2019: _"すべてのたからものをゲットしよう！"_
+      courseC_collector_prog_challenge1: プログラムをじっくりみて！１０この たからもの すべて あつめることが できるかな？
+      courseC_collector_prog_challenge1_2018: プログラムをじっくりみて！１０この たからもの すべて あつめることが
+        できるかな？
+      courseC_collector_prog_challenge1_2019: プログラムをじっくりみて！１０この たからもの すべて あつめることが
+        できるかな？
+      courseC_collector_prog_challenge2: １０この たからものを すべてあつめれば パズルを クリアすることができます！
+      courseC_collector_prog_challenge2_2018: １０この たからものを すべてあつめれば パズルを クリアすることができます！
+      courseC_collector_prog_challenge2_2019: １０この たからものを すべてあつめれば パズルを クリアすることができます！
+      courseC_flappy_events1: "`クリックしたとき` の下に `ふつうにバタバタする` をひっつけて”実行（じっこう）”してみよう。クリックするかタップすれば、フラッピーは、まとに
+        むかって うごきます。"
+      courseC_flappy_events10: '自分だけのゲームを作ってみよう！ '
+      courseC_flappy_events10_2018: '自分だけのゲームを作ってみよう！ '
+      courseC_flappy_events10_2019: '自分だけのゲームを作ってみよう！ '
+      courseC_flappy_events1_2018: "`クリックしたとき` の下に `ふつうにバタバタする` をひっつけて”実行（じっこう）”してみよう。クリックするかタップすれば、フラッピーは、まとに
+        むかって うごきます。"
+      courseC_flappy_events1_2019: "`クリックしたとき` の下に `ふつうにバタバタする` をひっつけて”実行（じっこう）”してみよう。クリックするかタップすれば、フラッピーは、まとに
+        むかって うごきます。"
+      courseC_flappy_events2: "”実行（じっこう）”ボタンがおされたら、スピードをふつうにするをついかしてゲームをやってみよう。まと
+        まで はばたき つづけよう。"
+      courseC_flappy_events2_2018: "”実行（じっこう）”ボタンがおされたら、スピードをふつうにするをついかしてゲームをやってみよう。まと
+        まで はばたき つづけよう。"
+      courseC_flappy_events2_2019: "”実行（じっこう）”ボタンがおされたら、スピードをふつうにするをついかしてゲームをやってみよう。まと
+        まで はばたき つづけよう。"
+      courseC_flappy_events3: "`じめんに ぶつかったとき` に`ゲームオーバー`をひっつけて。鳥を地めんにぶつけてみよう。"
+      courseC_flappy_events3_2018: "`じめんに ぶつかったとき` に`ゲームオーバー`をひっつけて。鳥を地めんにぶつけてみよう。"
+      courseC_flappy_events3_2019: "`じめんに ぶつかったとき` に`ゲームオーバー`をひっつけて。鳥を地めんにぶつけてみよう。"
+      courseC_flappy_events4: フラッピーが パイプに あたったとき、ゲームオーバーに なるよう`しょうがいぶつに あたったとき` に
+        ブロックを ひっつけよう。
+      courseC_flappy_events4_2018: フラッピーが パイプに あたったとき、ゲームオーバーに なるよう`しょうがいぶつに あたったとき`
+        に ブロックを ひっつけよう。
+      courseC_flappy_events4_2019: フラッピーが パイプに あたったとき、ゲームオーバーに なるよう`しょうがいぶつに あたったとき`
+        に ブロックを ひっつけよう。
+      courseC_flappy_events5: "`しょうがいぶつを とおりぬけたとき`に ブロックを ひっつけて、フラッピーが パイプの間を とおりぬけたとき、ポイントが入るようにしよう。"
+      courseC_flappy_events5_2018: "`しょうがいぶつを とおりぬけたとき`に ブロックを ひっつけて、フラッピーが パイプの間を
+        とおりぬけたとき、ポイントが入るようにしよう。"
+      courseC_flappy_events5_2019: "`しょうがいぶつを とおりぬけたとき`に ブロックを ひっつけて、フラッピーが パイプの間を
+        とおりぬけたとき、ポイントが入るようにしよう。"
+      courseC_flappy_events6: "「すこしパタパタする」や「たくさんパタパタする」にしても、ポイントをゲットできるかためしてみよう。"
+      courseC_flappy_events6_2018: "「すこしパタパタする」や「たくさんパタパタする」にしても、ポイントをゲットできるかためしてみよう。"
+      courseC_flappy_events6_2019: "「すこしパタパタする」や「たくさんパタパタする」にしても、ポイントをゲットできるかためしてみよう。"
+      courseC_flappy_events7: "`実行（じっこう）した時` のうしろにブロックをひっつけて、はいけいをかえてみよう。"
+      courseC_flappy_events7_2018: "`実行（じっこう）した時` のうしろにブロックをひっつけて、はいけいをかえてみよう。"
+      courseC_flappy_events7_2019: "`実行（じっこう）した時` のうしろにブロックをひっつけて、はいけいをかえてみよう。"
+      courseC_flappy_events8: しょうがいぶつをとおりぬけたときに、はいけいが **ランダム**に かわるように してみよう。
+      courseC_flappy_events8_2018: しょうがいぶつをとおりぬけたときに、はいけいが **ランダム**に かわるように してみよう。
+      courseC_flappy_events8_2019: しょうがいぶつをとおりぬけたときに、はいけいが **ランダム**に かわるように してみよう。
+      courseC_flappy_events9: しょうがいぶつに あたったとき、ゲームオーバーではなく、スコアが 0に なるように してみよう。
+      courseC_flappy_events9_2018: しょうがいぶつに あたったとき、ゲームオーバーではなく、スコアが 0に なるように してみよう。
+      courseC_flappy_events9_2019: しょうがいぶつに あたったとき、ゲームオーバーではなく、スコアが 0に なるように してみよう。
+      courseC_harvester_loops1: くりかえしを つかって かぼちゃを あつめよう。
+      courseC_harvester_loops10: とうもうろこし と かぼちゃ を あつめよう。
+      courseC_harvester_loops10_2018: とうもうろこし と かぼちゃ を あつめよう。
+      courseC_harvester_loops10_2019: とうもうろこし と かぼちゃ を あつめよう。
+      courseC_harvester_loops11: とうもうろこし と かぼちゃ を あつめよう。
+      courseC_harvester_loops11_2018: とうもうろこし と かぼちゃ を あつめよう。
+      courseC_harvester_loops11_2019: とうもうろこし と かぼちゃ を あつめよう。
+      courseC_harvester_loops1_2018: くりかえしを つかって かぼちゃを あつめよう。
+      courseC_harvester_loops1_2019: くりかえしを つかって かぼちゃを あつめよう。
+      courseC_harvester_loops2: 前にすすむループ あとに かぼちゃをあつめる ループを プログラムできる？
+      courseC_harvester_loops2_2018: 前にすすむループ あとに かぼちゃをあつめる ループを プログラムできる？
+      courseC_harvester_loops2_2019: 前にすすむループ あとに かぼちゃをあつめる ループを プログラムできる？
+      courseC_harvester_loops3: かぼちゃをあつめよう。
+      courseC_harvester_loops3_2018: かぼちゃをあつめよう。
+      courseC_harvester_loops3_2019: かぼちゃをあつめよう。
+      courseC_harvester_loops4: とうもうろこし と かぼちゃ を あつめよう。
+      courseC_harvester_loops4_2018: とうもうろこし と かぼちゃ を あつめよう。
+      courseC_harvester_loops4_2019: とうもうろこし と かぼちゃ を あつめよう。
+      courseC_harvester_loops5: とうもうろこし と かぼちゃ を あつめよう。
+      courseC_harvester_loops5_2018: とうもうろこし と かぼちゃ を あつめよう。
+      courseC_harvester_loops5_2019: とうもうろこし と かぼちゃ を あつめよう。
+      courseC_harvester_loops6: とうもうろこし と かぼちゃ を あつめよう。
+      courseC_harvester_loops6_2018: とうもうろこし と かぼちゃ を あつめよう。
+      courseC_harvester_loops6_2019: とうもうろこし と かぼちゃ を あつめよう。
+      courseC_harvester_loops7: とうもうろこし と かぼちゃ を あつめよう。
+      courseC_harvester_loops7_2018: とうもうろこし と かぼちゃ を あつめよう。
+      courseC_harvester_loops7_2019: とうもうろこし と かぼちゃ を あつめよう。
+      courseC_harvester_loops8: "**チャレンジ** すべてのとうもろこし と かぼちゃを あつめよう。"
+      courseC_harvester_loops8_2018: "**チャレンジ** すべてのとうもろこし と かぼちゃを あつめよう。"
+      courseC_harvester_loops8_2019: "**チャレンジ** すべてのとうもろこし と かぼちゃを あつめよう。"
+      courseC_harvester_loops9: とうもうろこし と かぼちゃ を あつめよう。
+      courseC_harvester_loops9_2018: とうもうろこし と かぼちゃ を あつめよう。
+      courseC_harvester_loops9_2019: とうもうろこし と かぼちゃ を あつめよう。
+      courseC_harvester_loops_challenge1a: とうもろこしをあつめよう。
+      courseC_harvester_loops_challenge1a_2018: とうもろこしをあつめよう。
+      courseC_harvester_loops_challenge1a_2019: とうもろこしをあつめよう。
+      courseC_harvester_loops_challenge2: 木とはたけをさけて、レタスをあつめよう！
+      courseC_harvester_loops_challenge2_2018: 木とはたけをさけて、レタスをあつめよう！
+      courseC_harvester_loops_challenge2_2019: 木とはたけをさけて、レタスをあつめよう！
+      courseC_maze_debugging1: リスがドングリのところへ行けるようプログラムをなおしてみよう。
+      courseC_maze_debugging1_2018: リスがドングリのところへ行けるようプログラムをなおしてみよう。
+      courseC_maze_debugging1_2019: リスがドングリのところへ行けるようプログラムをなおしてみよう。
+      courseC_maze_debugging2: リスがドングリのところへ行けるようプログラムをなおしてみよう。
+      courseC_maze_debugging2_2018: リスがドングリのところへ行けるようプログラムをなおしてみよう。
+      courseC_maze_debugging2_2019: リスがドングリのところへ行けるようプログラムをなおしてみよう。
+      courseC_maze_debugging3: リスがドングリのところに行けるように 余分なブロックを消そう。
+      courseC_maze_debugging3_2018: リスがドングリのところに行けるように 余分なブロックを消そう。
+      courseC_maze_debugging3_2019: リスがドングリのところに行けるように 余分なブロックを消そう。
+      courseC_maze_debugging4: 曲がる方向はあってるかな、正しい方向に なおせるかな？
+      courseC_maze_debugging4_2018: 曲がる方向はあってるかな、正しい方向に なおせるかな？
+      courseC_maze_debugging4_2019: 曲がる方向はあってるかな、正しい方向に なおせるかな？
+      courseC_maze_debugging5: ブロックを並べ直したり、変更したりしてデバッグしよう。
+      courseC_maze_debugging5_2018: ブロックを並べ直したり、変更したりしてデバッグしよう。
+      courseC_maze_debugging5_2019: ブロックを並べ直したり、変更したりしてデバッグしよう。
+      courseC_maze_debugging6: まちがいを見つけて、リスをドングリのところに行かせよう。
+      courseC_maze_debugging6_2018: まちがいを見つけて、リスをドングリのところに行かせよう。
+      courseC_maze_debugging6_2019: まちがいを見つけて、リスをドングリのところに行かせよう。
+      courseC_maze_debugging7: "**チャレンジ** ブロックを 並べ直したり、追加したり、消したりしてデバッグしよう。"
+      courseC_maze_debugging7_2018: "**チャレンジ** ブロックを 並べ直したり、追加したり、消したりしてデバッグしよう。"
+      courseC_maze_debugging7_2019: "**チャレンジ** ブロックを 並べ直したり、追加したり、消したりしてデバッグしよう。"
+      courseC_maze_debugging9: バグをなおして、リスをドングリのことへ連れて行こう。
+      courseC_maze_debugging9_2018: バグをなおして、リスをドングリのことへ連れて行こう。
+      courseC_maze_loops_challenge1a: 'くりかえしを つかって スクラットを ドングリのところに つれていこう。 '
+      courseC_maze_loops_challenge1a_2018: 'くりかえしを つかって スクラットを ドングリのところに つれていこう。 '
+      courseC_maze_loops_challenge1a_2019: 'くりかえしを つかって スクラットを ドングリのところに つれていこう。 '
       courseC_maze_programming1: このパズルでは、ブロックをドラッグしてくっつけたら「実行」をクリックして、どうなるか見てみよう！
       courseC_maze_programming1_2018: このパズルでは、ブロックをドラッグしてくっつけたら「実行」をクリックして、どうなるか見てみよう！
       courseC_maze_programming1_2019: このパズルでは、ブロックをドラッグしてくっつけたら「実行」をクリックして、どうなるか見てみよう！
       courseC_maze_programming2: ツールボックスからもうひとつ「前に すすむ」ブロックをドラッグしてきて、コードをかんせいさせよう。
       courseC_maze_programming2_2018: ツールボックスからもうひとつ「前に すすむ」ブロックをドラッグしてきて、コードをかんせいさせよう。
       courseC_maze_programming2_2019: ツールボックスからもうひとつ「前に すすむ」ブロックをドラッグしてきて、コードをかんせいさせよう。
+      courseC_maze_programming3: 余分なブロックが１つあるので、トリさんはかべにぶつかってしまいます。不要なブロックをドラックしてツールボックスにもどそう。
+      courseC_maze_programming3_2018: 余分なブロックが１つあるので、トリさんはかべにぶつかってしまいます。不要なブロックをドラックしてツールボックスにもどそう。
+      courseC_maze_programming3_2019: 余分なブロックが１つあるので、トリさんはかべにぶつかってしまいます。不要なブロックをドラックしてツールボックスにもどそう。
+      courseC_maze_programming4: TNTにぶつからないで！羽がなくなちゃうよ。
+      courseC_maze_programming4_2018: TNTにぶつからないで！羽がなくなちゃうよ。
+      courseC_maze_programming4_2019: TNTにぶつからないで！羽がなくなちゃうよ。
+      courseC_maze_programming5: TNTにぶつからないで。
+      courseC_maze_programming5_2018: TNTにぶつからないで。
+      courseC_maze_programming5_2019: TNTにぶつからないで。
+      courseC_maze_programming6: おちついてブタをいっしょにさがそう。てつだってくれなかったらおこるよ！
+      courseC_maze_programming6_2018: おちついてブタをいっしょにさがそう。てつだってくれなかったらおこるよ！
+      courseC_maze_programming6_2019: おちついてブタをいっしょにさがそう。てつだってくれなかったらおこるよ！
+      courseC_maze_programming7: |-
+        **チャレンジ:** このプログラムには、いくつかのバグがあります。
+        ブロックをけしたり、つかしたりしてみよう。
+      courseC_maze_programming7_2018: |-
+        **チャレンジ:** このプログラムには、いくつかのバグがあります。
+        ブロックをけしたり、つかしたりしてみよう。
+      courseC_maze_programming7_2019: |-
+        **チャレンジ:** このプログラムには、いくつかのバグがあります。
+        ブロックをけしたり、つかしたりしてみよう。
+      courseC_maze_programming8: _"おちついて ブタさんをいっしょにさがそう。"_
+      courseC_maze_programming8_2018: _"おちついて ブタさんをいっしょにさがそう。"_
+      courseC_maze_programming8_2019: _"おちついて ブタさんをいっしょにさがそう。"_
+      courseC_maze_programming8_predict1: _"おちついて ブタさんをいっしょにさがそう。"_
+      courseC_maze_programming8_predict1_2018: _"おちついて ブタさんをいっしょにさがそう。"_
+      courseC_maze_programming8_predict1_2019: _"おちついて ブタさんをいっしょにさがそう。"_
+      courseC_maze_programming9: _"じぶんの すきな ほうほうで ブタのところに 行ってみよう！"_
+      courseC_maze_programming9_2018: _"じぶんの すきな ほうほうで ブタのところに 行ってみよう！"_
+      courseC_maze_programming9_2019: _"じぶんの すきな ほうほうで ブタのところに 行ってみよう！"_
+      courseC_maze_programming_challenge1: 'かくれているブタのところへ行く道を考えてみよう。 '
+      courseC_maze_programming_challenge1_2018: 'かくれているブタのところへ行く道を考えてみよう。 '
+      courseC_maze_programming_challenge1_2019: 'かくれているブタのところへ行く道を考えてみよう。 '
+      courseC_maze_programming_challenge2: |-
+        ブタのところに行くには、いろいろなほうほうがあります。
+        前に進むよりも、後ろにもどったほうが、早く行けることもあります。
+      courseC_maze_programming_challenge2_2018: |-
+        ブタのところに行くには、いろいろなほうほうがあります。
+        前に進むよりも、後ろにもどったほうが、早く行けることもあります。
+      courseC_maze_programming_challenge2_2019: |-
+        ブタのところに行くには、いろいろなほうほうがあります。
+        前に進むよりも、後ろにもどったほうが、早く行けることもあります。
+      courseC_starWars_loops1: BB-8は、とおったところに あるスクラップを あつめます。BB-8が すべてのスクラップを あつめれるよう
+        同じブロックを ５つ ならべてみよう。
+      courseC_starWars_loops10: すばらしい！がんばって！
+      courseC_starWars_loops10_2018: すばらしい！がんばって！
+      courseC_starWars_loops10_2019: すばらしい！がんばって！
+      courseC_starWars_loops10_predict2: すばらしい！がんばって！
+      courseC_starWars_loops10_predict2_2018: すばらしい！がんばって！
+      courseC_starWars_loops10_predict2_2019: すばらしい！がんばって！
+      courseC_starWars_loops11: あともう少し。こんどは自分のすきなほうほうでやってみよう。
+      courseC_starWars_loops11_2018: あともう少し。こんどは自分のすきなほうほうでやってみよう。
+      courseC_starWars_loops11_2019: あともう少し。こんどは自分のすきなほうほうでやってみよう。
+      courseC_starWars_loops1_2018: BB-8は、とおったところに あるスクラップを あつめます。BB-8が すべてのスクラップを
+        あつめれるよう 同じブロックを ５つ ならべてみよう。
+      courseC_starWars_loops1_2019: BB-8は、とおったところに あるスクラップを あつめます。BB-8が すべてのスクラップを
+        あつめれるよう 同じブロックを ５つ ならべてみよう。
+      courseC_starWars_loops1_predict1: BB-8は、とおったところに あるスクラップを あつめます。BB-8が すべてのスクラップを
+        あつめれるよう 同じブロックを ５つ ならべてみよう。
+      courseC_starWars_loops1_predict1_2018: BB-8は、とおったところに あるスクラップを あつめます。BB-8が すべてのスクラップを
+        あつめれるよう 同じブロックを ５つ ならべてみよう。
+      courseC_starWars_loops1_predict1_2019: BB-8は、とおったところに あるスクラップを あつめます。BB-8が すべてのスクラップを
+        あつめれるよう 同じブロックを ５つ ならべてみよう。
+      courseC_starWars_loops2: "`くりかえし` ブロックの中に １つだけ ブロックを 入れて すべてのスクラップを あつめよう。"
+      courseC_starWars_loops2_2018: "`くりかえし` ブロックの中に １つだけ ブロックを 入れて すべてのスクラップを あつめよう。"
+      courseC_starWars_loops2_2019: "`くりかえし` ブロックの中に １つだけ ブロックを 入れて すべてのスクラップを あつめよう。"
+      courseC_starWars_loops4: 短いプログラムで すべてのスクラップを あつめるには、`くりかえし`ブロックを ２つ つかいます。
+      courseC_starWars_loops4_2018: 短いプログラムで すべてのスクラップを あつめるには、`くりかえし`ブロックを ２つ つかいます。
+      courseC_starWars_loops4_2019: 短いプログラムで すべてのスクラップを あつめるには、`くりかえし`ブロックを ２つ つかいます。
+      courseC_starWars_loops5: できるだけみじかいプログラムで すべてのスクラップを　あつめて。
+      courseC_starWars_loops5_2018: できるだけみじかいプログラムで すべてのスクラップを　あつめて。
+      courseC_starWars_loops5_2019: できるだけみじかいプログラムで すべてのスクラップを　あつめて。
+      courseC_starWars_loops6: １ついじょうのブロックを中に入れてくりかえしてみよう！下のプログラムを くりかえすことが できるかな？
+      courseC_starWars_loops6_2018: １ついじょうのブロックを中に入れてくりかえしてみよう！下のプログラムを くりかえすことが できるかな？
+      courseC_starWars_loops6_2019: １ついじょうのブロックを中に入れてくりかえしてみよう！下のプログラムを くりかえすことが できるかな？
+      courseC_starWars_loops7: くりかえしを １つだけ つかって すべてのスクラップを あつめることが できるかな？くりかえしの パターンを
+        見つけて くりかえしの中に 入れてみよう。
+      courseC_starWars_loops7_2018: くりかえしを １つだけ つかって すべてのスクラップを あつめることが できるかな？くりかえしの
+        パターンを 見つけて くりかえしの中に 入れてみよう。
+      courseC_starWars_loops7_2019: くりかえしを １つだけ つかって すべてのスクラップを あつめることが できるかな？くりかえしの
+        パターンを 見つけて くりかえしの中に 入れてみよう。
+      courseC_starWars_loops9: いままでやったことを思い出して、すべてのスクラップをあつめよう！
+      courseC_starWars_loops9_2018: いままでやったことを思い出して、すべてのスクラップをあつめよう！
+      courseC_starWars_loops9_2019: いままでやったことを思い出して、すべてのスクラップをあつめよう！
       courseD_artist_binary1: |-
         「Draw binary "01010101"」ブロックを「実行したとき」にくっつけて、実行してください。
         アーティストは、一番目の行にバイナリで「01010101」を書きます。
@@ -852,36 +1315,337 @@ ja-JP:
       courseD_artist_binary1_2019: |-
         「Draw binary "01010101"」ブロックを「実行したとき」にくっつけて、実行してください。
         アーティストは、一番目の行にバイナリで「01010101」を書きます。
+      courseD_artist_binary2: どんなパターンができあがるか、このプログラムを実行してみて。
+      courseD_artist_binary2_2018: どんなパターンができあがるか、このプログラムを実行してみて。
+      courseD_artist_binary2_2019: どんなパターンができあがるか、このプログラムを実行してみて。
+      courseD_artist_binary3: 左のイメージをかくには、どのパターンを 8回 くりかえせば いいかな？
+      courseD_artist_binary3_2018: 左のイメージをかくには、どのパターンを 8回 くりかえせば いいかな？
+      courseD_artist_binary3_2019: 左のイメージをかくには、どのパターンを 8回 くりかえせば いいかな？
       courseD_artist_binary4: 3ケタのバイナリ文字列（0と1が三つ）で、このパターンを書いて下さい。
       courseD_artist_binary4_2018: 3ケタのバイナリ文字列（0と1が三つ）で、このパターンを書いて下さい。
       courseD_artist_binary4_2019: 3ケタのバイナリ文字列（0と1が三つ）で、このパターンを書いて下さい。
+      courseD_artist_binary5: |-
+        それぞれの0と1の文字列は、このパターンの１行を表しています。
+
+        文字列をかえて、こまり顔を ニコニコ顔に できるかな？
+      courseD_artist_binary5_2018: |-
+        それぞれの0と1の文字列は、このパターンの１行を表しています。
+
+        文字列をかえて、こまり顔を ニコニコ顔に できるかな？
+      courseD_artist_binary5_2019: |-
+        それぞれの0と1の文字列は、このパターンの１行を表しています。
+
+        文字列をかえて、こまり顔を ニコニコ顔に できるかな？
       courseD_artist_binary6: 6ケタのバイナリ文字列を、11回くりかして書けば、このイメージを書くことが出来ますよ。
       courseD_artist_binary6_2018: 6ケタのバイナリ文字列を、11回くりかして書けば、このイメージを書くことが出来ますよ。
       courseD_artist_binary6_2019: 6ケタのバイナリ文字列を、11回くりかして書けば、このイメージを書くことが出来ますよ。
       courseD_artist_binary7: 一番短いバイナリ文字で、このイメージが書けるように考えて下さい。
       courseD_artist_binary7_2018: 一番短いバイナリ文字で、このイメージが書けるように考えて下さい。
       courseD_artist_binary7_2019: 一番短いバイナリ文字で、このイメージが書けるように考えて下さい。
+      courseD_artist_binary8: このパターンをかく プログラムを かんせい させよう。
+      courseD_artist_binary8_2018: このパターンをかく プログラムを かんせい させよう。
+      courseD_artist_binary8_2019: このパターンをかく プログラムを かんせい させよう。
+      courseD_artist_binary8_predict1: このパターンをかく プログラムを かんせい させよう。
+      courseD_artist_binary8_predict1_2018: このパターンをかく プログラムを かんせい させよう。
+      courseD_artist_binary8_predict1_2019: このパターンをかく プログラムを かんせい させよう。
+      courseD_artist_binaryFP: |-
+        16×16の広いキャンパスだよ！
+
+        あなたが書いた文字列で どんなパターンができるのか 見てみよう。
+      courseD_artist_binaryFP8: "**自由 時間**  好きな文字列で どんどん かいてみよう！ "
+      courseD_artist_binaryFP_2018: |-
+        16×16の広いキャンパスだよ！
+
+        あなたが書いた文字列で どんなパターンができるのか 見てみよう。
+      courseD_artist_binaryFP_2019: |-
+        16×16の広いキャンパスだよ！
+
+        あなたが書いた文字列で どんなパターンができるのか 見てみよう。
+      courseD_artist_nestedLoops1: |-
+        三角形をかいてみよう。\
+        (へんの長さは100ピクセル、曲がる角度は120度)
+      courseD_artist_nestedLoops10: 次は四角形だけでやってみよう。今度は、四角形を７つ１列にならべるだけだよ。
+      courseD_artist_nestedLoops10_2018: 次は四角形だけでやってみよう。今度は、四角形を７つ１列にならべるだけだよ。
+      courseD_artist_nestedLoops10_2019: 次は四角形だけでやってみよう。今度は、四角形を７つ１列にならべるだけだよ。
+      courseD_artist_nestedLoops1_2018: |-
+        三角形をかいてみよう。\
+        (へんの長さは100ピクセル、曲がる角度は120度)
+      courseD_artist_nestedLoops1_2019: |-
+        三角形をかいてみよう。\
+        (へんの長さは100ピクセル、曲がる角度は120度)
+      courseD_artist_nestedLoops1a: '三角形を６個かいてみよう。 '
+      courseD_artist_nestedLoops1a_2018: '三角形を６個かいてみよう。 '
+      courseD_artist_nestedLoops1a_2019: '三角形を６個かいてみよう。 '
+      courseD_artist_nestedLoops2: 今度は、もっとも短いプログラムで パズルを クリアしよう。
+      courseD_artist_nestedLoops2_2018: 今度は、もっとも短いプログラムで パズルを クリアしよう。
+      courseD_artist_nestedLoops2_2019: 今度は、もっとも短いプログラムで パズルを クリアしよう。
+      courseD_artist_nestedLoops3: |-
+        新しいわざを使ってビルの右がわの列の窓をかいてみよう。
+
+        窓は20ピックセルの長方形で、それぞれは20ピクセルはなれています。
+      courseD_artist_nestedLoops3_2018: |-
+        新しいわざを使ってビルの右がわの列の窓をかいてみよう。
+
+        窓は20ピックセルの長方形で、それぞれは20ピクセルはなれています。
+      courseD_artist_nestedLoops3_2019: |-
+        新しいわざを使ってビルの右がわの列の窓をかいてみよう。
+
+        窓は20ピックセルの長方形で、それぞれは20ピクセルはなれています。
+      courseD_artist_nestedLoops4: すごい！こんどは、円でやってみよう。
+      courseD_artist_nestedLoops4_2018: すごい！こんどは、円でやってみよう。
+      courseD_artist_nestedLoops4_2019: すごい！こんどは、円でやってみよう。
+      courseD_artist_nestedLoops5: 円をかき終わった後、90度まがるようにしたら どうなるかな？
+      courseD_artist_nestedLoops5_2018: 円をかき終わった後、90度まがるようにしたら どうなるかな？
+      courseD_artist_nestedLoops5_2019: 円をかき終わった後、90度まがるようにしたら どうなるかな？
+      courseD_artist_nestedLoops7: こんどは、これをかいてみよう。
+      courseD_artist_nestedLoops7_2018: こんどは、これをかいてみよう。
+      courseD_artist_nestedLoops7_2019: こんどは、これをかいてみよう。
+      courseD_artist_nestedLoops8: さっきやったパズルを思い出して、今度は、これを １から かいてみよう。
+      courseD_artist_nestedLoops8_2018: さっきやったパズルを思い出して、今度は、これを １から かいてみよう。
+      courseD_artist_nestedLoops8_2019: さっきやったパズルを思い出して、今度は、これを １から かいてみよう。
+      courseD_artist_nestedLoops9: "**チャレンジ** 同じ図が、かけるかな？"
+      courseD_artist_nestedLoops9_2018: "**チャレンジ** 同じ図が、かけるかな？"
+      courseD_artist_nestedLoops9_2019: "**チャレンジ** 同じ図が、かけるかな？"
+      courseD_artist_nestedLoops9_predict1: "**チャレンジ** 同じ図が、かけるかな？"
+      courseD_artist_nestedLoops9_predict1_2018: "**チャレンジ** 同じ図が、かけるかな？"
+      courseD_artist_nestedLoops9_predict1_2019: "**チャレンジ** 同じ図が、かけるかな？"
+      courseD_artist_nestedLoopsFP: 今度は、自分の思い通りに図形をかいていよう！
+      courseD_artist_nestedLoopsFP_2018: 今度は、自分の思い通りに図形をかいていよう！
+      courseD_artist_nestedLoopsFP_2019: 今度は、自分の思い通りに図形をかいていよう！
+      courseD_artist_nestedLoops_challenge1: 同じ図が、かけるかな？
+      courseD_artist_nestedLoops_challenge1_2018: 同じ図が、かけるかな？
+      courseD_artist_nestedLoops_challenge1_2019: 同じ図が、かけるかな？
+      courseD_artist_nestedLoops_challenge2: バグをなおそう！
+      courseD_artist_nestedLoops_challenge2_2018: バグをなおそう！
+      courseD_artist_nestedLoops_challenge2_2019: バグをなおそう！
+      courseD_artist_ramp11: 四角形をかいてみよう！
+      courseD_artist_ramp12: 四角形の中に 三角形をかいてみよう。
+      courseD_autorun_binary2_2019: どんなパターンができあがるか、このプログラムを実行してみて。
+      courseD_autorun_binary3_2019: 左のイメージをかくには、どのパターンを 8回 くりかえせば いいかな？
       courseD_autorun_binary4_2019: 3ケタのバイナリ文字列（0と1が三つ）で、このパターンを書いて下さい。
+      courseD_autorun_binary5_2019: |-
+        それぞれの0と1の文字列は、このパターンの１行を表しています。
+
+        文字列をかえて、こまり顔を ニコニコ顔に できるかな？
       courseD_autorun_binary6_2019: 6ケタのバイナリ文字列を、11回くりかして書けば、このイメージを書くことが出来ますよ。
       courseD_autorun_binary7_2019: 一番短いバイナリ文字で、このイメージが書けるように考えて下さい。
+      courseD_autorun_binary8_2019: このパターンをかく プログラムを かんせい させよう。
+      courseD_autorun_binary8_predict1_2019: このパターンをかく プログラムを かんせい させよう。
+      courseD_bee_conditionals2: 'くもの下に花が かくれているか 調べて、ミツを集めましょう。  '
+      courseD_bee_conditionals2_2018: 'くもの下に花が かくれているか 調べて、ミツを集めましょう。  '
+      courseD_bee_conditionals2_2019: 'くもの下に花が かくれているか 調べて、ミツを集めましょう。  '
+      courseD_bee_conditionals3: |-
+        ハチがミツを集めるのを手つだおう。
+
+        花があるかどうか調べて、花があれば ミツを集めること。
+      courseD_bee_conditionals3_2018: |-
+        ハチがミツを集めるのを手つだおう。
+
+        花があるかどうか調べて、花があれば ミツを集めること。
+      courseD_bee_conditionals3_2019: |-
+        ハチがミツを集めるのを手つだおう。
+
+        花があるかどうか調べて、花があれば ミツを集めること。
+      courseD_bee_conditionals6: ハチの巣がかくれているくもがあります。かくれているのが、ハチの巣かどうか調べてみよう！
+      courseD_bee_conditionals6_2018: ハチの巣がかくれているくもがあります。かくれているのが、ハチの巣かどうか調べてみよう！
+      courseD_bee_conditionals6_2019: ハチの巣がかくれているくもがあります。かくれているのが、ハチの巣かどうか調べてみよう！
+      courseD_bee_conditionals9: すべてのミツを集めて、全部のハチの巣でハチミツを作ろう。
+      courseD_bee_conditionals9_2018: すべてのミツを集めて、全部のハチの巣でハチミツを作ろう。
+      courseD_bee_conditionals9_2019: すべてのミツを集めて、全部のハチの巣でハチミツを作ろう。
+      courseD_bee_conditionals_challenge1: すべてのミツを集めて、全部のハチの巣でハチミツを作ろう。
+      courseD_bee_conditionals_challenge1_2018: すべてのミツを集めて、全部のハチの巣でハチミツを作ろう。
+      courseD_bee_conditionals_challenge1_2019: すべてのミツを集めて、全部のハチの巣でハチミツを作ろう。
+      courseD_bee_conditionals_challenge2: すべてのミツを集めて、全部のハチの巣でハチミツを作ろう。
+      courseD_bee_conditionals_challenge2_2018: すべてのミツを集めて、全部のハチの巣でハチミツを作ろう。
+      courseD_bee_conditionals_challenge2_2019: すべてのミツを集めて、全部のハチの巣でハチミツを作ろう。
+      courseD_bee_debugging_challenge1a: どうやって ミツを 集めればいいか 考えて。あるパターンを くりかえせば、全部のミツを
+        集めることができるよ。
       courseD_bee_nestedLoops8: "それぞれの花からすべての花のみつを集めてください。\nそしてそれぞれのハチの巣でハチミツを作ってください。\n入れ子のループ（ネスト・ループ）を使うのです。 "
       courseD_bee_nestedLoops8_2018: "それぞれの花からすべての花のみつを集めてください。\nそしてそれぞれのハチの巣でハチミツを作ってください。\n入れ子のループ（ネスト・ループ）を使うのです。 "
       courseD_bee_nestedLoops8_2019: "それぞれの花からすべての花のみつを集めてください。\nそしてそれぞれのハチの巣でハチミツを作ってください。\n入れ子のループ（ネスト・ループ）を使うのです。 "
+      courseD_collector_debugging1: バグをなして、すべてのたからものをゲットしよう。
+      courseD_collector_debugging1a_2018: バグをなして、すべてのたからものをゲットしよう。
+      courseD_collector_debugging1a_2019: バグをなして、すべてのたからものをゲットしよう。
+      courseD_collector_debugging2: バグをなして、すべてのたからものをゲットしよう。
+      courseD_collector_debugging2a_2018: バグをなして、すべてのたからものをゲットしよう。
+      courseD_collector_debugging2a_2019: バグをなして、すべてのたからものをゲットしよう。
+      courseD_collector_debugging3: バグをなして、すべてのたからものをゲットしよう。
+      courseD_collector_debugging3a_2018: バグをなして、すべてのたからものをゲットしよう。
+      courseD_collector_debugging3a_2019: バグをなして、すべてのたからものをゲットしよう。
+      courseD_collector_debugging4: バグをなして、すべてのたからものをゲットしよう。
+      courseD_collector_debugging4a_2018: バグをなして、すべてのたからものをゲットしよう。
+      courseD_collector_debugging4a_2019: バグをなして、すべてのたからものをゲットしよう。
+      courseD_collector_debugging5: プログラムは すでに できあがっています。バグをなおして、このパズルを クリアしよう。
+      courseD_collector_debugging5a_2018: プログラムは すでに できあがっています。バグをなおして、このパズルを クリアしよう。
+      courseD_collector_debugging5a_2019: プログラムは すでに できあがっています。バグをなおして、このパズルを クリアしよう。
+      courseD_collector_debugging6: チャレンジ バグを なおして すべての たからものを 集めよう。
+      courseD_collector_nested_loops_challenge2a: ローレルが ２ついじょう たからものを 集めるのを てつだって！
+      courseD_collector_ramp10: ローレルが すべてのたからものを あつめるのを てつだって。
+      courseD_collector_ramp8: ローレルが すべてのたからものを あつめるのを てつだって。
+      courseD_collector_ramp9: ローレルが すべてのたからものを あつめるのを てつだって。
       courseD_maze_nestedLoops4: ひまわりまで行きたい！
       courseD_maze_nestedLoops4_2018: ひまわりまで行きたい！
       courseD_maze_nestedLoops4_2019: ひまわりまで行きたい！
       courseD_maze_nestedLoops6: ひまわりまで行きたい！
       courseD_maze_nestedLoops6_2018: ひまわりまで行きたい！
       courseD_maze_nestedLoops6_2019: ひまわりまで行きたい！
+      courseD_maze_ramp1: すべてのブロックをひっつけて、"実行（じっこう）" をクリックしたらどうなるか見てみよう。
+      courseD_maze_ramp1_2018: すべてのブロックをひっつけて、"実行（じっこう）" をクリックしたらどうなるか見てみよう。
+      courseD_maze_ramp1_2019: すべてのブロックをひっつけて、"実行（じっこう）" をクリックしたらどうなるか見てみよう。
+      courseD_maze_ramp2: ツールボックスから もうひとつ `前に すすむ` を取り出して、 `実行（じっこう）した時`の下に引っ付けよう。
+      courseD_maze_ramp2_2018: ツールボックスから もうひとつ `前に すすむ` を取り出して、 `実行（じっこう）した時`の下に引っ付けよう。
+      courseD_maze_ramp2_2019: ツールボックスから もうひとつ `前に すすむ` を取り出して、 `実行（じっこう）した時`の下に引っ付けよう。
+      courseD_maze_ramp3: 余分なブロックが１つあるので、トリさんはかべにぶつかってしまいます。不要なブロックをドラックしてツールボックスにもどそう。
+      courseD_maze_ramp3_2018: 余分なブロックが１つあるので、トリさんはかべにぶつかってしまいます。不要なブロックをドラックしてツールボックスにもどそう。
+      courseD_maze_ramp4: TNTにぶつからないで！羽がなくなちゃうよ。
+      courseD_maze_ramp4_2018: TNTにぶつからないで！羽がなくなちゃうよ。
+      courseD_maze_ramp5: TNTにぶつからないで。
+      courseD_maze_ramp5_2018: TNTにぶつからないで。
+      courseD_maze_ramp5_2019: TNTにぶつからないで。
+      courseD_maze_ramp5a: ブタさんのところへ行くために、どのように命令を並べればよいか順番に注意してね！
+      courseD_maze_ramp5a_2018: ブタさんのところへ行くために、どのように命令を並べればよいか順番に注意してね！
+      courseD_maze_ramp5b: トリさんが ブタさんのところに 行けるように 道案内してください！
+      courseD_maze_ramp5b_2018: トリさんが ブタさんのところに 行けるように 道案内してください！
+      courseD_maze_ramp5b_2019: トリさんが ブタさんのところに 行けるように 道案内してください！
+      courseD_maze_ramp5c: トリさんがブタさんのところへ行くのを手伝って。
+      courseD_maze_ramp5c_2018: トリさんがブタさんのところへ行くのを手伝って。
+      courseD_maze_ramp6: おちついてブタをいっしょにさがそう。てつだってくれなかったらおこるよ！
+      courseD_maze_ramp7: トリさんを ブタさんの ところに つれって行って！
+      courseD_playLab_cond1: かいぞくを はたの ところまで 連れて行って。
+      courseD_playLab_cond1_2018: かいぞくを はたの ところまで 連れて行って。
+      courseD_playLab_cond2: 'ドラゴンにタッチして ポイントを ゲットしよう。 '
+      courseD_playLab_cond2_2018: 'ドラゴンにタッチして ポイントを ゲットしよう。 '
+      courseD_playLab_cond3: '１秒毎に ドラゴンの顔を てきとうに 変えてみよう。  '
+      courseD_playLab_cond3_2018: '１秒毎に ドラゴンの顔を てきとうに 変えてみよう。  '
+      courseD_playLab_cond3a: かいぞくが ドラゴンに タッチしたとき、ドラゴンの顔が うれしい 顔なら 2ポイント、うれしいで なければ
+        1ポイント ゲットできるようにしよう。
+      courseD_playLab_cond3a_2018: かいぞくが ドラゴンに タッチしたとき、ドラゴンの顔が うれしい 顔なら 2ポイント、うれしいで
+        なければ 1ポイント ゲットできるようにしよう。
+      courseD_playLab_cond4: ゲームが始まったらすぐに、忍者(キャラ 3) が かいぞくを 追いかけるようにします。 忍者が かいぞくに
+        さわったら、負けでゲームを終わりにします。
+      courseD_playLab_cond4_2018: ゲームが始まったらすぐに、忍者(キャラ 3) が かいぞくを 追いかけるようにします。 忍者が
+        かいぞくに さわったら、負けでゲームを終わりにします。
+      courseD_playLab_cond5: "`ずっと やること` の中で ポイントが 5以上になったか 調べて、5以上になっていたら 勝ちで ゲームを
+        終わりましょう。"
+      courseD_playLab_cond5_2018: "`ずっと やること` の中で ポイントが 5以上になったか 調べて、5以上になっていたら 勝ちで
+        ゲームを 終わりましょう。"
+      courseD_playLab_cond6: "1.  忍者 (キャラ 3) のスピードをおそくする。\n2.  もし、かいぞくのYの位置が 255よりも
+        大きくなったら 忍者が **にげる** ように、 255より小さいときは **おいかける** ようにしよう。  "
+      courseD_playLab_cond6_2018: "1.  忍者 (キャラ 3) のスピードをおそくする。\n2.  もし、かいぞくのYの位置が
+        255よりも 大きくなったら 忍者が **にげる** ように、 255より小さいときは **おいかける** ようにしよう。  "
+      courseD_playLab_cond6a: かいぞく（キャラ1）が安全地帯にいる間は、1秒ごとに ポイントが マイナスされるようにしよう。
+      courseD_playLab_cond6a_2018: かいぞく（キャラ1）が安全地帯にいる間は、1秒ごとに ポイントが マイナスされるようにしよう。
+      courseD_playLab_condFP: 自分だけのゲームを作って 友達に 見せびらかそう！
+      courseD_playLab_condFP_2018: 自分だけのゲームを作って 友達に 見せびらかそう！
+      courseD_scrat_ramp1: すべてのブロックをひっつけて、"実行（じっこう）" をクリックしたらどうなるか見てみよう。
+      courseD_scrat_ramp2: ツールボックスから もうひとつ `前に すすむ` を取り出して、 `実行（じっこう）した時`の下に引っ付けよう。
+      courseD_scrat_ramp3: 余分なブロックが１つあるので、スクラットは道から外れてしまいます。不要なブロックをドラックしてツールボックスにもどそう。
+      courseD_scrat_ramp4: 氷のさけ目にスクラットが落ちないように気を付けて！
+      courseD_scrat_ramp5: 氷のさけ目にスクラットが落ちないようにね。
+      courseD_scrat_ramp6: くり返しを使って、スクラットがドングリのところへ行くのを手伝って！
+      courseD_scrat_ramp8: 今までやったことを活かして、ドングリをゲットしよう！
+      courseE_artist_concept1: 'つぎの絵をかいてみよう。 '
+      courseE_artist_concept1_2018: 'つぎの絵をかいてみよう。 '
+      courseE_artist_concept4: つぎの絵をかいてみよう。
+      courseE_artist_concept4_2018: つぎの絵をかいてみよう。
+      courseE_artist_concept_challenge1: 'ユニークな形をかくのを手伝って。 '
+      courseE_artist_concept_challenge1_2018: 'ユニークな形をかくのを手伝って。 '
+      courseE_artist_concept_challenge2: 下のプログラムを使って、風車を5つかこう。
+      courseE_artist_concept_challenge2_2018: 下のプログラムを使って、風車を5つかこう。
       courseE_artist_functions1: |-
         こんにちは！ゾンビアーティストです。お絵かき大好き！
         四角いメガネを描くので手伝ってください。ヒント：メガネのつなぎ部分は、レンズの四角より25ピクセル短く描きましょう。
+      courseE_artist_functions10: こんどは、一辺が25ピクセルの六角形で線をかいてみよう。
+      courseE_artist_functions10_2018: こんどは、一辺が25ピクセルの六角形で線をかいてみよう。
+      courseE_artist_functions10_2019: こんどは、一辺が25ピクセルの六角形で線をかいてみよう。
+      courseE_artist_functions2: "`draw a square`関数を使って、メガネをかいてみよう。 "
+      courseE_artist_functions3: くり返しを使って、この絵をかいてみよう。
+      courseE_artist_functions4: １つ星がかけたので、こんどは４つかいてみよう！
+      courseE_artist_functions5: ３つだけ星をかいてみよう。
+      courseE_artist_functions5_2018: ３つだけ星をかいてみよう。
+      courseE_artist_functions5_2019: ３つだけ星をかいてみよう。
+      courseE_artist_functions6: 四角形を１つかいたら、次の四角形をかく前に90度曲がるをくり返して、まどをかいてみよう。
+      courseE_artist_functions7: 関数`draw a window`を作って、それを5回繰り返そう。ドアに気を付けてね！
+      courseE_artist_functions7_2018: 関数`draw a window`を作って、それを5回繰り返そう。ドアに気を付けてね！
+      courseE_artist_functions7_2019: 関数`draw a window`を作って、それを5回繰り返そう。ドアに気を付けてね！
+      courseE_artist_functions8: チャレンジ：50ピクセルの四角形で できた もようを かくのに 必要な関数を作ろう。
+      courseE_artist_functions9: 次のようなイメージをかいてみよう。
+      courseE_artist_functions_challenge1: 一度定義した関数は、いつでも、どこからでも、何度でも呼び出すことができます。プログラムの中で
+        どのように 関数が 使われているのか 見て、プログラムを 修正し、自分なりの いかしたデザインを 作ってみよう。
+      courseE_artist_functions_challenge1_2018: 一度定義した関数は、いつでも、どこからでも、何度でも呼び出すことができます。プログラムの中で
+        どのように 関数が 使われているのか 見て、プログラムを 修正し、自分なりの いかしたデザインを 作ってみよう。
+      courseE_artist_functions_challenge1_2019: 一度定義した関数は、いつでも、どこからでも、何度でも呼び出すことができます。プログラムの中で
+        どのように 関数が 使われているのか 見て、プログラムを 修正し、自分なりの いかしたデザインを 作ってみよう。
+      courseE_artist_functions_challenge2: プログラムがどのように動いているのよく見て、あなただけのプログラムを作ろう！
+      courseE_artist_functions_challenge2_2018: プログラムがどのように動いているのよく見て、あなただけのプログラムを作ろう！
+      courseE_artist_functions_challenge2_2019: プログラムがどのように動いているのよく見て、あなただけのプログラムを作ろう！
+      courseE_artist_ramp8: 四角形をかいてみよう！
+      courseE_artist_ramp8_2: 四角形をかいてみよう！
+      courseE_artist_ramp9: こんどは、三角形をかいてみよう。
+      courseE_artist_ramp9_2: こんどは、三角形をかいてみよう。
       courseE_bee_concept1: '入れ子の繰り返し（ネスト・ループ）を使って、それぞれの花からすべての花のみつを集めてください。　 '
       courseE_bee_concept1_2018: '入れ子の繰り返し（ネスト・ループ）を使って、それぞれの花からすべての花のみつを集めてください。　 '
+      courseE_bee_concept2: 'ハチミツを作るのを手伝おう。 '
+      courseE_bee_concept2_2018: 'ハチミツを作るのを手伝おう。 '
+      courseE_bee_concept3: できるだけ少ないステップでミツを集めよう。
+      courseE_bee_concept3_2018: できるだけ少ないステップでミツを集めよう。
+      courseE_bee_concept4: ハチが花のミツを集めて、ハチミツを作るのを手伝おう。　
+      courseE_bee_concept4_2018: ハチが花のミツを集めて、ハチミツを作るのを手伝おう。　
+      courseE_bee_concept5: 花からミツを集めるのを手伝って！
+      courseE_bee_concept5_2018: 花からミツを集めるのを手伝って！
       courseE_bee_functions1: それぞれの花から、すべてのミツをあつめて下さい。
+      courseE_bee_functions10: ハチが横に曲がって全部のハチミツを作って道にもどってくる関数を作ろう。
+      courseE_bee_functions2: 花からミツを集めるために、関数 `get 2 nectar`を作ろう。
       courseE_bee_functions3: ひとつの作業を行うひとまとまりのコードを関数といいます。"get 5" という関数を使うと、一度に蜜を
         5 とることができます。ループを使って、ブロックの数がなるべく少なくしてください。
       courseE_bee_functions4: "「動いてみつを集める」の関数は、ハチを回転させ、蜜を集め、スタート地点までハチを戻します。この関数を使って蜜を全部集めましょう。"
+      courseE_bee_functions5: 花からミツを集める関数を書いてみよう。
+      courseE_bee_functions6: 花からミツを集めてハチの巣でハチミツを作る関数を作ろう。
+      courseE_bee_functions7: 横道を行って、ミツを集め、ハチミツを作ってもといた場所にもどってくる関数を作ろう。ミツを全部集めてハチミツを作って！
+      courseE_bee_functions8: 花からすべてのミツを集めて、ハチミツを作って。
+      courseE_bee_functions9: 花からすべてのミツを集める関数を作ろう。
+      courseE_bee_functions_challenge1: このチャレンジも きっとクリアできるよ。見た目よりもむつかしいよ！
+      courseE_bee_functions_challenge2: このチャレンジも きっとクリアできるよ。すごいね！
+      courseE_farmer_concept1: 地面に開いてる あなを うめることが できるかな？
+      courseE_farmer_concept1_2018: 地面に開いてる あなを うめることが できるかな？
+      courseE_farmer_concept2: かぼちゃをあつめよう。
+      courseE_farmer_concept2_2018: かぼちゃをあつめよう。
+      courseE_farmer_functions1: 農夫がカボチャのところまで行って、しゅうかくするのを手伝って。
+      courseE_farmer_functions10b: 新しい関数を２回呼んで このパズルをクリアしよう。
+      courseE_farmer_functions1_2018: 農夫がカボチャのところまで行って、しゅうかくするのを手伝って。
+      courseE_farmer_functions1_2019: 農夫がカボチャのところまで行って、しゅうかくするのを手伝って。
+      courseE_farmer_functions1a: 農夫が、トウモロコシ、レタス、 **それから** カボチャをしゅうかくするのを手伝って。
+      courseE_farmer_functions2b: 農夫がトウモロコシとカボチャを集めるのを手つだって。
+      courseE_farmer_functions2b_2018: 農夫がトウモロコシとカボチャを集めるのを手つだって。
+      courseE_farmer_functions2b_2019: 農夫がトウモロコシとカボチャを集めるのを手つだって。
+      courseE_farmer_functions2ba: 関数`corn and pumpkin` を使って、トウモロコシとカボチャを しゅうかくしましょう。
+      courseE_farmer_functions2ba_2019: 関数`corn and pumpkin` を使って、トウモロコシとカボチャを しゅうかくしましょう。
+      courseE_farmer_functions3c: コーディングしてある部分から、必要な部分を切り取って**関数 定義**なかに入れよう。
+      courseE_farmer_functions5c: 関数が役立つでしょう
+      courseE_farmer_functions6c: 作物がトウモロコシかレタスかを調べるには、このプログラムに何を追加すればいいかな？
+      courseE_farmer_functions7b: 農夫がカボチャのところに行くのを手伝って、トウモロコシがあれば左、レタスがあれば右に曲がってね。
+      courseE_farmer_functions8b: "**チャレンジ** さっきやったパズルを思い出して、カボチャを全部集めよう。 "
+      courseE_farmer_functions9b: このパズルをクリアするには、どのパターンを使えばいいかな？
+      courseE_farmer_ramp11a: 山がある間、土をかたずける。
+      courseE_farmer_ramp11a_2018: 山がある間、土をかたずける。
+      courseE_farmer_ramp11a_2019: 山がある間、土をかたずける。
+      courseE_farmer_ramp11b: 山がある間、土をかたずける。
+      courseE_farmer_ramp11b_2018: 山がある間、土をかたずける。
+      courseE_farmer_ramp11b_2019: 山がある間、土をかたずける。
+      courseE_farmer_ramp12f: レタスにたどり着くまで前に進んで、**もし**左に道があれば左に、そうでなければ、右に曲がりましょう。
+      courseE_farmer_ramp12f_2018: レタスにたどり着くまで前に進んで、**もし**左に道があれば左に、そうでなければ、右に曲がりましょう。
+      courseE_farmer_ramp12f_2019: レタスにたどり着くまで前に進んで、**もし**左に道があれば左に、そうでなければ、右に曲がりましょう。
+      courseE_farmer_ramp12g: レタスにたどり着くまで前に進んで、**もし**左に道があれば左に、そうでなければ、右に曲がりましょう。
+      courseE_farmer_ramp12g_2018: レタスにたどり着くまで前に進んで、**もし**左に道があれば左に、そうでなければ、右に曲がりましょう。
+      courseE_farmer_ramp12g_2019: レタスにたどり着くまで前に進んで、**もし**左に道があれば左に、そうでなければ、右に曲がりましょう。
+      courseE_playLab_challenge1: ポイントがたまった後、マイナスになった後、どうしますか？関数`win game` と `lose
+        game` にどんなプログラムを追加しますか？何を追加するかはヒントを見てみよう！
+      courseE_playLab_scaffold1: はいけいとゲームの主人公になるキャラを選ぼう。
+      courseE_playLab_scaffold2: キーがおされたらで 主人公を動かそう。
+      courseE_playLab_scaffold3: ゲームにキャラを二人追加して、動かしてみよう。
+      courseE_playLab_scaffold4: ポイントをゲットする仕組みを考えよう。どうすればポイントをゲットできるかな？
+      courseE_playLab_scaffold5: もう少しで完成。ゲームの勝ち負けの条件を考えて、条件をクリアするまでゲームを続けましょう。
+      courseE_playLab_scaffold6: 完成、ゲームをプレイしてみよう！ともだちとゲームを共有しよう！
       courseF_artist_for7: |-
         さっきのプログラムを、3ヵ所かえるだけで、この絵を書くことが出来ます！
         ヒント：
@@ -966,6 +1730,12 @@ ja-JP:
       frozen square loop 3x: 四角形を 3つ かいてみましょう。ひとつ四角形をかいたら、120度まがると いいわよ。
       frozen square snowflake: この雪のもようが かけるかしら？「くりかえし」ブロックで、四角形を10こ かけばいいわ。四角形をひとつ
         かいたら、「まがる」ブロックで36度まがるのよ。
+      grade2_collector_10: これがさいご！たくさんの たからものを あつめて このステージを クリアしよう。
+      grade2_collector_10_2018: これがさいご！たくさんの たからものを あつめて このステージを クリアしよう。
+      grade2_collector_10_2019: これがさいご！たくさんの たからものを あつめて このステージを クリアしよう。
+      grade2_collector_A: ローレルが すべてのたからものを あつめるのを てつだって。
+      grade2_collector_A_2018: ローレルが すべてのたからものを あつめるのを てつだって。
+      grade2_collector_A_2019: ローレルが すべてのたからものを あつめるのを てつだって。
       grade5_artist_binary11: |-
         自由に書きましょう！
         このまっさらなキャンバスに、すきな絵を書いてください。さあ何から書きましょうか！
@@ -975,6 +1745,17 @@ ja-JP:
         えがおが書かれるように、プログラムを直してください。
       grade5_artist_binary8: このイメージを完成（かんせい）させてください。
       grade5_artist_binary9: "もっと細かいキャンバスがあります - 16 ピクセル × 16 ピクセルです! \\\r \\\rこのビットで何ができるか、見てください。"
+      iceage_click_hello: 'シドをクリックしたとき、シドに何か言わせることができるかな？ '
+      iceage_free_play: 'あなたがゲームや物語をつくる番です！ '
+      iceage_hello1: '`実行（じっこう）した時`の下に `言う` を引っ付けて、シドに"こんにちわ！"と言わせてみよう。'
+      iceage_hello2: "`キャラ ___ 言う`を使って、マニーとシドに あいさつさせよう。"
+      iceage_move_events: スクラットがドングリを集めるのを手伝って！
+      iceage_move_to_actor: "`キャラが さわったら`を使って、ディエゴがマニーに会った時に音楽を鳴らそう。"
+      iceage_move_to_flag: スクラットがドングリを見つけた。200ピクセル動かすことができるかな？
+      iceage_repeat: グラニーを左右に行ったり来たりさせてみよう。
+      iceage_sound_and_points: 'シドがグラニーにさわったら、**音を 鳴らす** と **ポイントを ふやす** を行ってください。 '
+      iceage_throw_hearts: "`キャラ なげる`を使って、シド（キャラ1）にハートを投げさせて、グラニー（キャラ2）が受け取ったら うれしい顔になるようにしよう。"
+      iceage_warn_ice_age: 背景を氷のもように変えて、シド（キャラ1）のスピードをはやいにしよう。
       k-1 maze 1: 西にうごかして、ブタさんのところまで つれていって あげましょう。
       scrat 16: ドングリ ！ドングリ ！ドングリ ！いちばんすくないブロックでぼくをあそこまでつれていくには、"もしも"ブロックをつかってね。
       scrat 17: よし、練習のためにもう一度やってみよう。さっきとそんなにかわらないけど、壁にきをつけてね。

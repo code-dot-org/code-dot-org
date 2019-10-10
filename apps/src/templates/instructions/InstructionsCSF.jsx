@@ -24,7 +24,6 @@ import color from '../../util/color';
 import commonStyles from '../../commonStyles';
 import Instructions from './Instructions';
 import styleConstants from '../../styleConstants';
-import {setInstructionsMaxHeightNeeded} from '../../redux/instructions';
 
 var instructions = require('../../redux/instructions');
 
@@ -171,8 +170,7 @@ class InstructionsCSF extends React.Component {
 
     height: PropTypes.number.isRequired,
     maxHeight: PropTypes.number.isRequired,
-    setInstructionsRenderedHeight: PropTypes.func.isRequired,
-    setInstructionsMaxHeightNeeded: PropTypes.func.isRequired
+    setInstructionsRenderedHeight: PropTypes.func.isRequired
   };
 
   static defaultProps = {
@@ -283,7 +281,6 @@ class InstructionsCSF extends React.Component {
         minHeight
       );
       this.props.setInstructionsRenderedHeight(newHeight);
-      this.props.setInstructionsMaxHeightNeeded(maxHeight);
     }
 
     this.props.adjustMaxNeededHeight();
@@ -742,9 +739,6 @@ module.exports = connect(
       },
       clearFeedback(height) {
         dispatch(instructions.setFeedback(null));
-      },
-      setInstructionsMaxHeightNeeded(height) {
-        dispatch(setInstructionsMaxHeightNeeded(height));
       }
     };
   },

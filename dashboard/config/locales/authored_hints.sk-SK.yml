@@ -1747,6 +1747,11 @@ sk-SK:
             </block>
           </xml>
       Course 4 SCFL 3:
+        Course_4_SCFL_3_a: "`Šírka štetca` je 1. Prvý štvorec má strany 50 pixelov
+          a každý ďalší štvorec je o 50 pixelov širší ako predošlý."
+        Course_4_SCFL_3_b: Nepriehľadnosť štetca je vždy `counter`/2.
+        Course_4_SCFL_3_c: Potom ako dokončíš každý štvorec, tak nezabudni skočiť
+          dozadu, otočiť sa, skočiť znovu a otočiť sa späť!
         Course_4_SCFL_3_d: |-
           **Riešenie:**
 
@@ -7187,31 +7192,6 @@ sk-SK:
         courseC_harvester_loops_challenge1_b: Môžeš zopakovať `posuň sa dopredu` a
           `zober kukuricu` koľkokoľvek krát potrebuješ, potom v každom rohu použi
           blok `otoč sa vpravo`.
-        courseC_harvester_loops_challenge1_c: |-
-          Najlepší spôsob na zozbieranie kukurice používa blok `opakuj` vo vnútri iného bloku `opakuj`.
-
-          <xml><block type="controls_repeat">
-
-          <title name="TIMES">2</title>
-          <statement name="DO">
-          <block type="controls_repeat">
-          <title name="TIMES">4</title>
-          <statement name="DO">
-          <block type="maze_move">
-          <title name="DIR">moveForward</title>
-          <next>
-          <block type="harvester_corn"/>
-          </next>
-          </block>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block></xml>
       courseC_harvester_loops_challenge1a_2019:
         courseC_harvester_loops_challenge1_a: Toto by bolo bez cyklov príliš ťažké!
         courseC_harvester_loops_challenge1_b: Môžeš zopakovať `posuň sa dopredu` a
@@ -7775,16 +7755,6 @@ sk-SK:
         courseC_starWars_loops4_b: 'Každý cyklus `opakuj` bude mať vo vnútri len jeden
           príkaz: `posuň sa dopredu`.'
       courseC_starWars_loops5:
-        courseC_starWars_loops5_b: Ak chceš ísť dole musíš sa najprv otočiť a potom
-          pohnúť dopredu.
-        courseC_starWars_loops5_a: V najlepšom riešení použiješ otoč sa, potom jeden
-          blok `posuň sa dopredu`, znova otoč sa a potom cyklus.
-      courseC_starWars_loops5_2018:
-        courseC_starWars_loops5_b: Ak chceš ísť dole musíš sa najprv otočiť a potom
-          pohnúť dopredu.
-        courseC_starWars_loops5_a: V najlepšom riešení použiješ otoč sa, potom jeden
-          blok `posuň sa dopredu`, znova otoč sa a potom cyklus.
-      courseC_starWars_loops5_2019:
         courseC_starWars_loops5_b: Ak chceš ísť dole musíš sa najprv otočiť a potom
           pohnúť dopredu.
         courseC_starWars_loops5_a: V najlepšom riešení použiješ otoč sa, potom jeden
@@ -9340,6 +9310,270 @@ sk-SK:
           Vieš nakresliť niečo takéto?
 
           ![](https://images.code.org/80ae9ab3e449db1ed4e13c86239f7617-image-1475906794954.06.12.png)
+      courseF_artist_for10:
+        courseF_artist_for10_a: Nareslený obrázok bol vytvorený s použitím počítadla
+          pre `nastav alfa` a `počítadlo` / 10 pre šírku štetca.
+        courseF_artist_for10_b: Nakreslený obrázok používa otočenie o 61 stupňov.
+        courseF_artist_for10_c: |-
+          Chceš vedieť ako bol obrázok vytvorený?
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="draw_colour" inline="true" id="draw-color">
+                  <value name="COLOUR">
+                    <block type="colour_picker">
+                      <title name="COLOUR">#ff0000</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="controls_for_counter" inline="true">
+                    <mutation counter="counter"></mutation>
+                      <value name="FROM">
+                        <block type="math_number">
+                          <title name="NUM">15</title>
+                        </block>
+                      </value>
+                      <value name="TO">
+                        <block type="math_number">
+                          <title name="NUM">175</title>
+                        </block>
+                      </value>
+                      <value name="BY">
+                        <block type="math_number">
+                          <title name="NUM">2</title>
+                        </block>
+                      </value>
+                      <statement name="DO">
+                        <block type="draw_width" inline="false">
+                          <value name="WIDTH">
+                            <block type="math_arithmetic" inline="true">
+                              <title name="OP">DIVIDE</title>
+                              <value name="A">
+                                <block type="variables_get">
+                                  <title name="VAR">counter</title>
+                                </block>
+                              </value>
+                              <value name="B">
+                                <block type="math_number">
+                                  <title name="NUM">10</title>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="alpha" inline="true" id="alpha">
+                              <value name="VALUE">
+                                <block type="variables_get">
+                                  <title name="VAR">counter</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="draw_move" inline="true">
+                                  <title name="DIR">moveForward</title>
+                                  <value name="VALUE">
+                                    <block type="variables_get">
+                                      <title name="VAR">counter</title>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="draw_turn" inline="true">
+                                      <title name="DIR">turnRight</title>
+                                      <value name="VALUE">
+                                        <block type="math_number">
+                                          <title name="NUM">61</title>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseF_artist_for10_2018:
+        courseF_artist_for10_a: Nareslený obrázok bol vytvorený s použitím počítadla
+          pre `nastav alfa` a `počítadlo` / 10 pre šírku štetca.
+        courseF_artist_for10_b: Nakreslený obrázok používa otočenie o 61 stupňov.
+        courseF_artist_for10_c: |-
+          Chceš vedieť ako bol obrázok vytvorený?
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="draw_colour" inline="true" id="draw-color">
+                  <value name="COLOUR">
+                    <block type="colour_picker">
+                      <title name="COLOUR">#ff0000</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="controls_for_counter" inline="true">
+                    <mutation counter="counter"></mutation>
+                      <value name="FROM">
+                        <block type="math_number">
+                          <title name="NUM">15</title>
+                        </block>
+                      </value>
+                      <value name="TO">
+                        <block type="math_number">
+                          <title name="NUM">175</title>
+                        </block>
+                      </value>
+                      <value name="BY">
+                        <block type="math_number">
+                          <title name="NUM">2</title>
+                        </block>
+                      </value>
+                      <statement name="DO">
+                        <block type="draw_width" inline="false">
+                          <value name="WIDTH">
+                            <block type="math_arithmetic" inline="true">
+                              <title name="OP">DIVIDE</title>
+                              <value name="A">
+                                <block type="variables_get">
+                                  <title name="VAR">counter</title>
+                                </block>
+                              </value>
+                              <value name="B">
+                                <block type="math_number">
+                                  <title name="NUM">10</title>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="alpha" inline="true" id="alpha">
+                              <value name="VALUE">
+                                <block type="variables_get">
+                                  <title name="VAR">counter</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="draw_move" inline="true">
+                                  <title name="DIR">moveForward</title>
+                                  <value name="VALUE">
+                                    <block type="variables_get">
+                                      <title name="VAR">counter</title>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="draw_turn" inline="true">
+                                      <title name="DIR">turnRight</title>
+                                      <value name="VALUE">
+                                        <block type="math_number">
+                                          <title name="NUM">61</title>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseF_artist_for10_2019:
+        courseF_artist_for10_a: Nareslený obrázok bol vytvorený s použitím počítadla
+          pre `nastav alfa` a `počítadlo` / 10 pre šírku štetca.
+        courseF_artist_for10_b: Nakreslený obrázok používa otočenie o 61 stupňov.
+        courseF_artist_for10_c: |-
+          Chceš vedieť ako bol obrázok vytvorený?
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="draw_colour" inline="true" id="draw-color">
+                  <value name="COLOUR">
+                    <block type="colour_picker">
+                      <title name="COLOUR">#ff0000</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="controls_for_counter" inline="true">
+                    <mutation counter="counter"></mutation>
+                      <value name="FROM">
+                        <block type="math_number">
+                          <title name="NUM">15</title>
+                        </block>
+                      </value>
+                      <value name="TO">
+                        <block type="math_number">
+                          <title name="NUM">175</title>
+                        </block>
+                      </value>
+                      <value name="BY">
+                        <block type="math_number">
+                          <title name="NUM">2</title>
+                        </block>
+                      </value>
+                      <statement name="DO">
+                        <block type="draw_width" inline="false">
+                          <value name="WIDTH">
+                            <block type="math_arithmetic" inline="true">
+                              <title name="OP">DIVIDE</title>
+                              <value name="A">
+                                <block type="variables_get">
+                                  <title name="VAR">counter</title>
+                                </block>
+                              </value>
+                              <value name="B">
+                                <block type="math_number">
+                                  <title name="NUM">10</title>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="alpha" inline="true" id="alpha">
+                              <value name="VALUE">
+                                <block type="variables_get">
+                                  <title name="VAR">counter</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="draw_move" inline="true">
+                                  <title name="DIR">moveForward</title>
+                                  <value name="VALUE">
+                                    <block type="variables_get">
+                                      <title name="VAR">counter</title>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="draw_turn" inline="true">
+                                      <title name="DIR">turnRight</title>
+                                      <value name="VALUE">
+                                        <block type="math_number">
+                                          <title name="NUM">61</title>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
       courseF_artist_for1_2018:
         courseF_artist_for1_a: |-
           Vieš nakresliť niečo takéto?
@@ -9570,6 +9804,11 @@ sk-SK:
         courseF_artist_for9_b: Blok `nastav alfa` mení nepriehľadnosť farby. Čim menšia
           hodnota, tým je farba priehľadnejšia.
       courseF_artist_for_challenge1:
+        courseF_artist_for_challenge1_a: "`Šírka štetca` je 1. Prvý štvorec má strany
+          50 pixelov a každý ďalší štvorec je o 50 pixelov širší ako predošlý."
+        courseF_artist_for_challenge1_b: Nepriehľadnosť štetca je vždy `counter`/2.
+        courseF_artist_for_challenge1_c: Potom ako dokončíš každý štvorec, tak nezabudni
+          skočiť dozadu, otočiť sa, skočiť znovu a otočiť sa späť!
         courseF_artist_for_challenge1_d: |-
           **Riešenie:**
 
@@ -9704,6 +9943,11 @@ sk-SK:
             </block>
           </xml>
       courseF_artist_for_challenge1_2018:
+        courseF_artist_for_challenge1_a: "`Šírka štetca` je 1. Prvý štvorec má strany
+          50 pixelov a každý ďalší štvorec je o 50 pixelov širší ako predošlý."
+        courseF_artist_for_challenge1_b: Nepriehľadnosť štetca je vždy `counter`/2.
+        courseF_artist_for_challenge1_c: Potom ako dokončíš každý štvorec, tak nezabudni
+          skočiť dozadu, otočiť sa, skočiť znovu a otočiť sa späť!
         courseF_artist_for_challenge1_d: |-
           **Riešenie:**
 
@@ -9838,6 +10082,11 @@ sk-SK:
             </block>
           </xml>
       courseF_artist_for_challenge1_2019:
+        courseF_artist_for_challenge1_a: "`Šírka štetca` je 1. Prvý štvorec má strany
+          50 pixelov a každý ďalší štvorec je o 50 pixelov širší ako predošlý."
+        courseF_artist_for_challenge1_b: Nepriehľadnosť štetca je vždy `counter`/2.
+        courseF_artist_for_challenge1_c: Potom ako dokončíš každý štvorec, tak nezabudni
+          skočiť dozadu, otočiť sa, skočiť znovu a otočiť sa späť!
         courseF_artist_for_challenge1_d: |-
           **Riešenie:**
 

@@ -250,6 +250,7 @@
   "learnMore": "สิ่งที่น่าเรียนรู้ยังมีอีก",
   "less": "ย่อลง",
   "lesson": "บทเรียน",
+  "lessonExtrasButton": "ไปที่แดชบอร์ดครู",
   "lessonName": "ชื่อบทเรียน",
   "lessonNumbered": "บทเรียน {lessonNumber}: {lessonName}",
   "lessonPlans": "แผนการสอน",

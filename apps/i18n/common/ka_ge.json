@@ -495,6 +495,7 @@
   "leaveSection": "სექციის დატოვება",
   "less": "ნაკლები",
   "lesson": "გაკვეთილი",
+  "lessonExtrasButton": "მასწავლებლის მართვის პანელზე გადასვლა",
   "lessonName": "გაკვეთილის სახელი",
   "lessonNumbered": "გაკვეთილი {lessonNumber}: {lessonName}",
   "lessonPlans": "გაკვეთილის გეგმები",

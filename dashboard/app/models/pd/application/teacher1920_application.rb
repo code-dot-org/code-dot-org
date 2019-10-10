@@ -139,7 +139,7 @@ module Pd::Application
       end
 
       # email_type maps to the mailer action
-      Teacher1920ApplicationMailer.send(email.email_type, self).deliver_now
+      TeacherApplicationMailer.send(email.email_type, self).deliver_now
     end
 
     # Return a string if the principal approval state is complete, in-progress, or not required.
@@ -543,7 +543,14 @@ module Pd::Application
         meets_scholarship_criteria_scores[:plan_to_teach] = responses[:plan_to_teach] == options[:plan_to_teach].first ? YES : NO
       end
 
-      bonus_points_scores[:replace_existing] = responses[:replace_existing].in?(options[:replace_existing].values_at(1, 2)) ? 5 : 0
+      meets_minimum_criteria_scores[:replace_existing] =
+        if responses[:replace_existing] == YES
+          NO
+        elsif responses[:replace_existing] == TEXT_FIELDS[:i_dont_know_explain]
+          nil
+        else
+          YES
+        end
 
       # Section 3
       if course == 'csd'
@@ -604,13 +611,13 @@ module Pd::Application
             nil
           end
 
-        bonus_points_scores[:replace_existing] =
+        meets_minimum_criteria_scores[:replace_existing] =
           if responses[:principal_wont_replace_existing_course] == principal_options[:replace_course][1]
-            5
-          elsif responses[:principal_wont_replace_existing_course]&.in? [principal_options[:replace_course][0], principal_options[:replace_course][2]]
-            0
-          else
+            YES
+          elsif responses[:principal_wont_replace_existing_course] == TEXT_FIELDS[:i_dont_know_explain]
             nil
+          else
+            NO
           end
 
         if course == 'csd'
