@@ -108,8 +108,8 @@ export class Fish extends React.Component {
       p5.image(topFinImg, topFinX, topFinY);
 
       // tail
-      const tailX = body.anchor[0] + body.tailAnchor[0];
-      const tailY = body.anchor[1] + body.tailAnchor[1];
+      const tailX = body.anchor[0] + body.tailAnchor[0] + tail.transform[0];
+      const tailY = body.anchor[1] + body.tailAnchor[1] + tail.transform[1];
       p5.image(tailImg, tailX, tailY);
 
       // body
@@ -121,8 +121,8 @@ export class Fish extends React.Component {
       p5.image(eyeImg, eyeX, eyeY);
 
       // mouth
-      const mouthX = body.anchor[0] + body.mouthAnchor[0];
-      const mouthY = body.anchor[1] + body.mouthAnchor[1];
+      const mouthX = body.anchor[0] + body.mouthAnchor[0] + mouth.transform[0];
+      const mouthY = body.anchor[1] + body.mouthAnchor[1] + mouth.transform[1];
       p5.image(mouthImg, mouthX, mouthY);
 
       // sideFin
