@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class InlineAnswerTest < ActiveSupport::TestCase
+class Policies::InlineAnswerTest < ActiveSupport::TestCase
   setup_all do
     @authorized_teacher = create :authorized_teacher
     @teacher = create :teacher
