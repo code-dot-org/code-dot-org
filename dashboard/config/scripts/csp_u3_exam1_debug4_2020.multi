@@ -1,7 +1,7 @@
 name 'csp-u3-exam1-debug4_2020'
 height 'auto'
 
-question ‘The following program is run. Then the user clicks the “topButton” ONCE and then clicks the “bottomButton” ONCE. What will be displayed in the console?’
+question ‘The following program is run. Then the user clicks the “bottomButton” ONCE and then clicks the “topButton” ONCE. What will be displayed in the console?’
 
 wrong ‘<pre>aaa<br>bbb<br>ccc</pre>’
 wrong ‘<pre>aaa<br>ccc<br>bbb</pre>’

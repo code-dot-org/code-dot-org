@@ -5,6 +5,8 @@ require_relative '../../deployment'
 require 'cdo/only_one'
 require 'net/http'
 require 'json'
+require 'ostruct'
+require 'csv'
 require_relative '../../shared/middleware/helpers/firebase_helper'
 
 WeatherForecastOffice = Struct.new(:city, :state, :zip)
@@ -44,10 +46,31 @@ def get_weather_data
   return records
 end
 
+def parse_csv(filename)
+  records = []
+  id = 1
+  table = CSV.parse(File.read(filename), headers: true)
+  table.each do |row|
+    record = OpenStruct.new
+    record.id = id
+    id += 1
+    table.headers.each do |col|
+      record[col] = row[col]
+    end
+    records.push(record.to_h.to_json)
+  end
+  return records
+end
+
 def main
   fb = FirebaseHelper.new('shared')
-  weather_records = get_weather_data
-  fb.upload_shared_table('openweathermap', weather_records)
+  if ARGV.empty?
+    records = get_weather_data
+    fb.upload_shared_table('openweathermap', records)
+  else
+    records = parse_csv ARGV[0]
+    fb.upload_shared_table(ARGV[1], records)
+  end
 end
 
 main if only_one_running?(__FILE__)
