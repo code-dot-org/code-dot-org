@@ -944,10 +944,10 @@ exports.install = function(blockly, blockInstallOptions) {
       this.setHSV(184, 1.0, 0.74);
       if (spriteCount > 1) {
         this.interpolateMsg(
-          msg.setSpriteIndex(),
+          msg.setSpritePosition(),
           () => {
             this.appendDummyInput().appendTitle(
-              spriteNumberTextDropdown(msg.setSpriteN),
+              spriteNumberTextDropdown('{spriteIndex}'),
               'SPRITE'
             );
           },
