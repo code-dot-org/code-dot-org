@@ -32,6 +32,9 @@
   @include buttons();
   @include user-selects(auto);
 
+  // Markdown rendered with SafeMarkdown in LabeledFormComponent is wrapped in
+  // a <div> and uses <p> tags for each paragraph, but the forms system
+  // expects this content to be entirely inline, and so we provide this styling.
   .inline_markdown {
     display: inline;
 
