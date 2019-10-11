@@ -357,7 +357,7 @@ export default class PrincipalApprovalComponent extends LabeledFormComponent {
    * @override
    */
   static getDynamicallyRequiredFields(data) {
-    const requiredFields = ALWAYS_REQUIRED_FIELDS;
+    let requiredFields = [...ALWAYS_REQUIRED_FIELDS];
 
     if (data.school && data.school === '-1') {
       requiredFields.push(
@@ -388,7 +388,7 @@ export default class PrincipalApprovalComponent extends LabeledFormComponent {
    * @override
    */
   static getErrorMessages(data) {
-    const formatErrors = {};
+    let formatErrors = {};
 
     if (data.totalStudentEnrollment && !isInt(data.totalStudentEnrollment)) {
       formatErrors.totalStudentEnrollment = 'Must be a valid number';
@@ -417,7 +417,7 @@ export default class PrincipalApprovalComponent extends LabeledFormComponent {
     }
 
     // Clear out school form data if we have a school
-    if (data.school && data.school !== -1) {
+    if (data.school && data.school !== '-1') {
       fieldsToClear = fieldsToClear.concat(MANUAL_SCHOOL_FIELDS);
     }
 
@@ -441,10 +441,3 @@ export default class PrincipalApprovalComponent extends LabeledFormComponent {
     return changes;
   }
 }
-
-export {
-  ALWAYS_REQUIRED_FIELDS,
-  MANUAL_SCHOOL_FIELDS,
-  REQUIRED_SCHOOL_INFO_FIELDS,
-  RACE_LIST
-};
