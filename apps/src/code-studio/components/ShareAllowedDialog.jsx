@@ -24,7 +24,6 @@ import {createHiddenPrintWindow} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import experiments from '@cdo/apps/util/experiments';
-// import {showLibraryCreationDialog} from './shareDialogRedux';
 import LibraryCreationDialog from './Libraries/LibraryCreationDialog';
 
 function recordShare(type) {
