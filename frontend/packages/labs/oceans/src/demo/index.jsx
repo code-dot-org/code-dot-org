@@ -42,6 +42,9 @@ function loadFish(fish, x, y, palette) {
     results = _.orderBy(results, ['fishPart.type']);
 
     results.forEach(result => {
+      let intermediateCanvas = document.createElement('canvas');
+      let intermediateCtx = intermediateCanvas.getContext('2d');
+
       let anchor = [0, 0];
       if (result.fishPart.type !== FishBodyPart.BODY) {
         anchor = bodyAnchorFromType(body, result.fishPart.type);
@@ -50,11 +53,11 @@ function loadFish(fish, x, y, palette) {
       const xPos = bodyAnchor[0] + anchor[0];
       const yPos = bodyAnchor[1] + anchor[1];
 
-      fishCtx.drawImage(result.img, xPos, yPos);
+      intermediateCtx.drawImage(result.img, xPos, yPos);
       const rgb = colorFromType(palette, result.fishPart.type);
 
       if (rgb) {
-        let imageData = fishCtx.getImageData(
+        let imageData = intermediateCtx.getImageData(
           xPos,
           yPos,
           result.img.width,
@@ -70,8 +73,10 @@ function loadFish(fish, x, y, palette) {
           }
         }
 
-        fishCtx.putImageData(imageData, xPos, yPos);
+        intermediateCtx.putImageData(imageData, xPos, yPos);
       }
+
+      fishCtx.drawImage(intermediateCanvas, 0, 0);
     });
 
     fishCanvases.push(fishCanvas);
