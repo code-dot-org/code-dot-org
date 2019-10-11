@@ -1265,7 +1265,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
     # csf workshop has workshop admins, program managers, and other csf facilitators in list
     csf_workshop = create :workshop, course: COURSE_CSF
-    potential_organizer_ids = csf_workshop.potential_organizers.map {|org| org[:value]}
+    potential_organizer_ids = csf_workshop.potential_organizers.ids
 
     assert potential_organizer_ids.include? workshop_admin.id
     assert potential_organizer_ids.include? program_manager.id
@@ -1275,7 +1275,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
     # non-csf workshop without regional partner has workshop admins and all program managers in list
     csd_workshop = create :workshop, course: COURSE_CSD
-    potential_organizer_ids = csd_workshop.potential_organizers.map {|org| org[:value]}
+    potential_organizer_ids = csd_workshop.potential_organizers.ids
     assert potential_organizer_ids.include? workshop_admin.id
     assert potential_organizer_ids.include? program_manager.id
     # facilitators cannot be organizers for non-csf workshops
@@ -1285,7 +1285,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop_partner = create :regional_partner
     workshop_partner_program_manager = create :program_manager, regional_partner: workshop_partner
     csd_workshop.regional_partner = workshop_partner
-    potential_organizer_ids = csd_workshop.potential_organizers.map {|org| org[:value]}
+    potential_organizer_ids = csd_workshop.potential_organizers.ids
     assert potential_organizer_ids.include? workshop_admin.id
     assert potential_organizer_ids.include? workshop_partner_program_manager.id
     refute potential_organizer_ids.include? program_manager.id
