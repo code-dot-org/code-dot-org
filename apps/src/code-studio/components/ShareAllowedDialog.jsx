@@ -12,7 +12,11 @@ import color from '../../util/color';
 import * as applabConstants from '../../applab/constants';
 import * as p5labConstants from '@cdo/apps/p5lab/constants';
 import {SongTitlesToArtistTwitterHandle} from '../dancePartySongArtistTags';
-import {hideShareDialog, unpublishProject} from './shareDialogRedux';
+import {
+  hideShareDialog,
+  unpublishProject,
+  showLibraryCreationDialog
+} from './shareDialogRedux';
 import DownloadReplayVideoButton from './DownloadReplayVideoButton';
 import {showPublishDialog} from '../../templates/projects/publishDialog/publishDialogRedux';
 import PublishDialog from '../../templates/projects/publishDialog/PublishDialog';
@@ -20,7 +24,7 @@ import {createHiddenPrintWindow} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import experiments from '@cdo/apps/util/experiments';
-import {showLibraryCreationDialog} from './Libraries/libraryCreationRedux';
+// import {showLibraryCreationDialog} from './shareDialogRedux';
 import LibraryCreationDialog from './Libraries/LibraryCreationDialog';
 
 function recordShare(type) {
