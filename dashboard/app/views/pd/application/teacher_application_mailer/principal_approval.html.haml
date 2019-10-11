@@ -7,19 +7,23 @@
   = @application.applicant_full_name + ','
   has submitted an application to participate in
   = @application.effective_regional_partner_name + "'s"
-  Professional Learning Program in order to teach the
+  Professional Learning Program in order to prepare to teach the
   = @application.course_name
-  curriculum during the 2019-20 school year.
+  curriculum during the school year.
   We are excited that this teacher is committed to computer science education!
 
 %p
-  %strong In order for us to consider your teacher’s application, we first need your approval.
+  %strong We need your approval in order for us to consider
+  = @application.applicant_full_name + "'s"
+  application.
 
 %p
   Please take five minutes to complete
   = link_to('this form', @application.principal_approval_url)
   as soon as possible.
-  Please note that your teacher’s application is not considered complete until we receive this form.
+  Please note that
+  = @application.first_name + "'s"
+  application is not considered complete until we receive this form.
 
 %p
   Registration for the Professional Learning Program may have a cost,
@@ -28,11 +32,11 @@
   to see the cost of the program in your region.
 
 %p
-  We are looking for teachers who are hoping to teach the course in the 2019-20 school year.
-  In addition, we require the following commitment:
+  For participating teachers the following commitment is strongly recommended:
   %ul
-    %li To attend one five-day summer workshop in 2019
-    %li To attend up to four one-day local workshops during the 2019-20 school year (usually held on Saturdays)
+    %li To attend one, five-day summer workshop
+    %li To attend up to four, one-day local workshops during the school year (usually held on Saturdays)
+    %li To teach the course in the school year.
 
 %p{style: 'margin-bottom: 0'}
   Please direct all questions or concerns to:
@@ -40,9 +44,10 @@
     = render partial: 'partner_signature'
 
 %p
-  For more information about Code.org’s Professional Learning Programs, please visit
+  For more information about Code.org’s professional development programs, please visit
   = link_to('https://code.org/educate', 'https://code.org/educate') + '.'
-  Thank you very much for your support of computer science for all!
+  Please let us know if you have any questions.
+  Thank you very much for your support of computer science for every student!
 
 %p
   = render partial: 'partner_signature'
