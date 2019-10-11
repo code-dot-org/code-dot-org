@@ -543,7 +543,6 @@ module Pd::Application
             principal_schedule_confirmed: YES,
           },
           meets_scholarship_criteria_scores: {
-            principal_schedule_confirmed: YES,
             free_lunch_percent: YES,
             underrepresented_minority_percent: YES,
           },
@@ -590,7 +589,6 @@ module Pd::Application
             principal_schedule_confirmed: YES,
           },
           meets_scholarship_criteria_scores: {
-            principal_schedule_confirmed: YES,
             free_lunch_percent: YES,
             underrepresented_minority_percent: YES,
           },
@@ -672,7 +670,6 @@ module Pd::Application
             principal_schedule_confirmed: NO,
           },
           meets_scholarship_criteria_scores: {
-            principal_schedule_confirmed: NO,
             free_lunch_percent: NO,
             underrepresented_minority_percent: NO,
           },
