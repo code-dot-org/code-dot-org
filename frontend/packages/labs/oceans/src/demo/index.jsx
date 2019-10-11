@@ -7,34 +7,57 @@ const CANVAS_WIDTH = 1024;
 const CANVAS_HEIGHT = 576;
 
 let canvas,
-  ctx,
-  fishCanvases = [];
+  fishCanvases = [],
+  fishPromises = [],
+  fishCenter = [100, 100],
+  fishChange = [0, 1];
 
 $(document).ready(() => {
   canvas = document.getElementById('activity-canvas');
   canvas.width = CANVAS_WIDTH;
   canvas.height = CANVAS_HEIGHT;
 
-  ctx = canvas.getContext('2d');
-  ctx.rect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
-  ctx.fill();
-
   const fish1 = generateRandomFish();
-  const fish2 = generateRandomFish();
-  const fish3 = generateRandomFish();
+  //const fish2 = generateRandomFish();
+  //const fish3 = generateRandomFish();
   const palette = fish.colorPalettes.palette1;
 
-  loadFish(fish1, 100, 100, palette);
-  loadFish(fish2, 300, 100, palette);
-  loadFish(fish3, 500, 100, palette);
+  loadImages(fish1);
+  function animateScreen() {
+    var ctx = canvas.getContext('2d');
+
+    ctx.globalCompositeOperation = 'destination-over';
+    ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT); // clear canvas
+    //const x = Math.random() * 10 + 95;
+    //const y = Math.random() * 10 + 95;
+    if (fishCenter[1] < 95) {
+      fishChange[1] = 1;
+    }
+    if (fishCenter[1] > 105) {
+      fishChange[1] = -1;
+    }
+    fishCenter[1] += fishChange[1];
+    loadFish(fish1, fishCenter[0], fishCenter[1], palette, ctx);
+    //window.requestAnimationFrame(animateScreen);
+  }
+
+  ////window.requestAnimationFrame(animateScreen);
+  window.setInterval(animateScreen, 50);
+  //loadFish(fish2, 300, 100, palette);
+  //loadFish(fish3, 500, 100, palette);
 });
 
-function loadFish(fish, x, y, palette) {
+function loadImages(fish) {
+  fishPromises = fish.parts.map(bodyPart => loadFishImage(bodyPart));
+  console.log(fishPromises);
+}
+
+function loadFish(fish, x, y, palette, ctx) {
   let fishCanvas = document.createElement('canvas');
   let fishCtx = fishCanvas.getContext('2d');
 
-  const promises = fish.parts.map(bodyPart => loadFishImage(bodyPart));
-  Promise.all(promises).then(results => {
+  //const promises = fish.parts.map(bodyPart => loadFishImage(bodyPart));
+  Promise.all(fishPromises).then(results => {
     const body = results.find(
       result => result.fishPart.type === FishBodyPart.BODY
     ).fishPart;
