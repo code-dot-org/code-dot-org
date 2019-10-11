@@ -73,7 +73,7 @@ Resources:
     Properties:
       EndpointIdentifier: !Sub "RDS-${AWS::StackName}"
       EndpointType: source
-      EngineName: aurora
+      EngineName: mysql
       ServerName: !Ref RDSHost
       Port: 3306
       Username: !Ref RDSUsername
