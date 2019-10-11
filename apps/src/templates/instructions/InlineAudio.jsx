@@ -106,6 +106,10 @@ class InlineAudio extends React.Component {
     loaded: false
   };
 
+  componentDidMount() {
+    this.getAudioElement();
+  }
+
   componentWillUpdate(nextProps) {
     const audioTargetWillChange =
       this.props.src !== nextProps.src ||
@@ -213,7 +217,6 @@ class InlineAudio extends React.Component {
   };
 
   render() {
-    this.getAudioElement();
     if (
       this.props.textToSpeechEnabled &&
       !this.state.error &&
