@@ -43,6 +43,11 @@ class UserLevel < ActiveRecord::Base
   scope :passing, -> {where('best_result >= ?', ActivityConstants::MINIMUM_PASS_RESULT)}
   scope :perfect, -> {where('best_result > ?', ActivityConstants::MAXIMUM_NONOPTIMAL_RESULT)}
 
+  def self.by_stage(stage)
+    levels = stage.script_levels.map(&:level_ids).flatten
+    where(script: stage.script, level: levels)
+  end
+
   def readonly_requires_submitted
     if readonly_answers? && !submitted?
       errors.add(:readonly_answers, 'readonly_answers only valid on submitted UserLevel')
@@ -168,9 +173,9 @@ class UserLevel < ActiveRecord::Base
   end
 
   # Get number of passed levels per user for the given set of user IDs
-  # @param [Array<Integer>] user_ids
+  # @param [ActiveRecord::Relation<Collection<User>>] users
   # @return [Hash<Integer, Integer>] user_id => passed_level_count
-  def self.count_passed_levels_for_users(user_ids)
-    where(user_id: user_ids).passing.group(:user_id).count
+  def self.count_passed_levels_for_users(users)
+    joins(:user).merge(users).passing.group(:user_id).count
   end
 end

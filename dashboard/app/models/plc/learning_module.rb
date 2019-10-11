@@ -16,6 +16,11 @@
 #  index_plc_learning_modules_on_stage_id            (stage_id)
 #
 
+# A component of a course, like "Internet Safety" or "What are loops?"
+# Modules are independent of courses. Two people taking the same course may have different modules
+# to complete. Additionally, some modules will be part of multiple courses. So courses are not
+# part of modules, and modules are not part of courses.
+# Learning Modules correspond to Stages in our regular curriculum hierarchy.
 class Plc::LearningModule < ActiveRecord::Base
   belongs_to :stage
   belongs_to :plc_course_unit, class_name: '::Plc::CourseUnit', foreign_key: 'plc_course_unit_id'

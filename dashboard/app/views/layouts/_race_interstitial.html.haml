@@ -19,4 +19,4 @@
               %a#later-link.dismiss-link{href: '#'}= t('race_interstitial.decline')
           = tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token)
 
-%script{src: minifiable_asset_path('js/layouts/_race_interstitial.js')}
+%script{src: webpack_asset_path('js/layouts/_race_interstitial.js')}

@@ -946,28 +946,28 @@ hi-IN:
         questions:
         - {}
         answers:
-        - text: ४
-        - text: १२
+        - text: '4'
+        - text: '12'
           correct: true
-        - text: १‍५
+        - text: '15'
         - {}
       courseC_multi_harvester_loops11_predict1_2018:
         questions:
         - {}
         answers:
-        - text: ४
-        - text: १२
+        - text: '4'
+        - text: '12'
           correct: true
-        - text: १‍५
+        - text: '15'
         - {}
       courseC_multi_harvester_loops11_predict1_2018_2019:
         questions:
         - {}
         answers:
-        - text: ४
-        - text: १२
+        - text: '4'
+        - text: '12'
           correct: true
-        - text: १‍५
+        - text: '15'
         - {}
       courseC_multi_maze_debugging8_predict1:
         questions:
@@ -1195,28 +1195,28 @@ hi-IN:
         questions:
         - {}
         answers:
-        - text: ४
-        - text: ८
+        - text: '4'
+        - text: '8'
           correct: true
-        - text: १२
+        - text: '12'
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018:
         questions:
         - {}
         answers:
-        - text: ४
-        - text: ८
+        - text: '4'
+        - text: '8'
           correct: true
-        - text: १२
+        - text: '12'
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         questions:
         - {}
         answers:
-        - text: ४
-        - text: ८
+        - text: '4'
+        - text: '8'
           correct: true
-        - text: १२
+        - text: '12'
         - {}
       courseD_multi_collector_debugging10_predict1:
         questions:

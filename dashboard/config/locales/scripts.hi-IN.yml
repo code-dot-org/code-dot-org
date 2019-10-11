@@ -32,16 +32,26 @@ hi:
               name: शर्तें
             Getting Loopy:
               name: लूपी होना
+            Graph Paper Programming:
+              name: ग्राफ पेपर प्रोग्रामिंग
             'Real-life Algorithms: Paper Planes':
               name: 'वास्तविक-जीवन की कलन विधियां: कागज के जहाज'
+            Relay programming:
+              name: रिले प्रोग्रामिंग
             The Big Event:
               name: विशाल इवेंट
             Your Digital Footprint:
               name: आपका डिजीटल फुटप्रिंट
         course3:
           stages:
+            Bounce:
+              name: उछाल
+            Computational Thinking:
+              name: अभिकलनात्मक चिंतन
             Crowdsourcing:
               name: क्राउडसोर्सिंग
+            Dice Race:
+              name: डाइस रेस
             Digital Citizenship:
               name: डिजीटल नागरिकता
             Functional Suncatchers:
@@ -57,6 +67,10 @@ hi:
             जब वे बर्फ के जादू और सुंदरता की पड़ताल करती हैं।
         usability:
           stages:
+            Binary:
+              name: युग्मक
+            For Loops:
+              name: फॉर लूप्स
             Variables:
               name: चर
         algebra:
@@ -75,20 +89,63 @@ hi:
           stages:
             Teacher Dashboard:
               name: अध्यापक डैशबोर्ड
+        netsim:
+          title: इंटरनेट अनुकारक
         20-hour:
           stages:
+            Abstraction:
+              name: संक्षेपण
+            Algorithms:
+              name: कलन विधियां
+            Computational Thinking:
+              name: अभिकलनात्मक चिंतन
             Conditionals:
               name: शर्तें
             Functions:
               name: कार्य
+            Graph Paper Programming:
+              name: ग्राफ पेपर प्रोग्रामिंग
             Introduction to Computer Science:
               name: कंप्यूटर विज्ञान का परिचय
+            Relay Programming:
+              name: रिले प्रोग्रामिंग
+            Song Writing:
+              name: गीत लेखन
+            The Artist:
+              name: कलाकार
+            The Artist 2:
+              name: कलाकार 2
+            The Artist 3:
+              name: कलाकार 3
+            The Artist 4:
+              name: कलाकार 4
+            The Artist 5:
+              name: कलाकार 5
+            The Farmer:
+              name: किसान
+            The Farmer 2:
+              name: किसान 2
+            The Farmer 3:
+              name: किसान 3
             The Internet:
               name: इंटरनेट
+            The Maze:
+              name: पहेली
+            Wrap-up:
+              name: समाप्ति
+        edit-code:
+          stages:
+            The Artist:
+              name: कलाकार
+            The Maze:
+              name: पहेली
         events:
           title: घटनाएँ
           description: घटनाएँ
           description_short: घटनाएँ
+          stages:
+            Bounce:
+              name: उछाल
         flappy:
           title: फ्लैपी कोड
           description: क्या आप 10 मिनट से कम समय में अपनी खुद की गेम लिख सकते हैं?
@@ -96,10 +153,21 @@ hi:
           stages:
             Flappy Code:
               name: फ्लैपी कोड
+        jigsaw:
+          title: पहेली
+          stages:
+            Jigsaw:
+              name: पहेली
         algebraPD:
           stages:
             Teacher Dashboard:
               name: अध्यापक डैशबोर्ड
+        cspunit3:
+          stages:
+            Creating Functions:
+              name: फंक्शन्स बनाना
+            While Loops:
+              name: व्हाइल लूप्स
         algebraPD3:
           stages:
             Teacher Dashboard:
@@ -124,6 +192,10 @@ hi:
               name: डिज़ाइन रेसिपी
         allthethings:
           stages:
+            Bounce:
+              name: उछाल
+            Jigsaw:
+              name: पहेली
             Minecraft:
               name: Minecraft
             Web Lab:
@@ -132,6 +204,22 @@ hi:
           stages:
             Teacher Dashboard:
               name: अध्यापक डैशबोर्ड
+        cspfacilitator:
+          stages:
+            App Lab:
+              name: ऐप लैब
+            Internet Simulator:
+              name: इंटरनेट अनुकारक
+        ECSPD2:
+          stages:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            Wrap-up:
+              name: समाप्ति
         algebraPD2:
           stages:
             Teacher Dashboard:
@@ -150,6 +238,26 @@ hi:
           stages:
             Wrap-Up:
               name: समाप्ति
+        ECSPD2-iZone:
+          stages:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            Wrap-up:
+              name: समाप्ति
+        ECSPD2-NexTech:
+          stages:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            Wrap-up:
+              name: समाप्ति
         asUnplugged:
           stages:
             Binary Bracelets:
@@ -158,6 +266,8 @@ hi:
               name: नींव का निर्माण करना
             Getting Loopy:
               name: लूपी होना
+            Graph Paper Programming:
+              name: ग्राफ पेपर प्रोग्रामिंग
             Happy Maps:
               name: हैप्पी मैप्स
             Move it, Move it:
@@ -172,6 +282,10 @@ hi:
           stages:
             Wrap-Up:
               name: समाप्ति
+        cspunit3temp:
+          stages:
+            While Loops:
+              name: व्हाइल लूप्स
         starwars:
           title: 'स्टार वार्स: कोड के झरीये आकाशगंगा बनाए'
         starwarsblocks:
@@ -201,6 +315,8 @@ hi:
               name: पाठ्यक्रम के बाद का सर्वेक्षण
         csp3-2017:
           stages:
+            Creating Functions:
+              name: फंक्शन्स बनाना
             Post-Course Survey:
               name: पाठ्यक्रम के बाद का सर्वेक्षण
         csp4-2017:
@@ -211,16 +327,28 @@ hi:
               name: पाठ्यक्रम के बाद का सर्वेक्षण
         csp5-2017:
           stages:
+            While Loops:
+              name: व्हाइल लूप्स
             Post-Course Survey:
               name: पाठ्यक्रम के बाद का सर्वेक्षण
         CSDU3-Draft:
           stages:
             Functions:
               name: कार्य
+            Velocity:
+              name: वेग
         algebraFacilitator:
           stages:
             Teacher Dashboard:
               name: अध्यापक डैशबोर्ड
+        allthehiddenthings:
+          stages:
+            Game Lab:
+              name: गेम लैब
+        MikeTest:
+          stages:
+            Artist Functions:
+              name: कलाकार फंक्शन्स
         gradeKinder:
           stages:
             Events:
@@ -241,12 +369,32 @@ hi:
               name: घटनाएँ
             Loops:
               name: फंदे
+            Unspotted Bugs:
+              name: बिना देखे बग्स
         grade5:
           stages:
             Digital Citizenship:
               name: डिजीटल नागरिकता
+        ecs-unit1:
+          stages:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            Wrap-up:
+              name: समाप्ति
+        grade3:
+          stages:
+            Bee Debugging:
+              name: मधुमक्खी डीबगिंग
+            Bounce:
+              name: उछाल
         csd3-2017:
           stages:
+            Velocity:
+              name: वेग
             Functions:
               name: कार्य
             Variables:
@@ -263,27 +411,42 @@ hi:
               name: विशाल इवेंट
         k5concepts:
           stages:
+            Binary:
+              name: युग्मक
             Conditionals:
               name: शर्तें
             Events:
               name: घटनाएँ
+            For Loops:
+              name: फॉर लूप्स
             Functions:
               name: कार्य
+            Functions with Parameters:
+              name: मापदंडों के साथ फंक्शन
             Loops:
               name: फंदे
+            Nested Loops:
+              name: नेस्टड लूप्स
             Variables:
               name: चर
+            While Loops:
+              name: व्हाइल लूप्स
         algebrapdnext:
           stages:
             Teacher Dashboard:
               name: अध्यापक डैशबोर्ड
             The Design Recipe:
               name: डिज़ाइन रेसिपी
+        basketball:
+          stages:
+            Bounce:
+              name: उछाल
         hoc-encryption:
           stages:
             Simple Encryption:
               name: साधारण कूटलेखन
         fesbinary:
+          title: युग्मक
           stages:
             Binary Bracelets:
               name: युग्मक ब्रैस्लेट्स
@@ -330,6 +493,10 @@ hi:
               name: कार्डों के साथ सापेक्ष
             Digital Citizenship:
               name: डिजीटल नागरिकता
+            Nested Loops:
+              name: नेस्टड लूप्स
+            Introduction:
+              name: परिचय
         coursee-draft:
           stages:
             Digital Citizenship:
@@ -338,6 +505,8 @@ hi:
               name: इंटरनेट
             Crowdsourcing:
               name: क्राउडसोर्सिंग
+            Introduction:
+              name: परिचय
             Conditionals:
               name: शर्तें
         coursef-draft:
@@ -348,6 +517,10 @@ hi:
               name: एनवलोप वेरिएब्लस
             For Loop Fun:
               name: फॉर लूप फन
+            Songwriting with Parameters:
+              name: मापदंडों के साथ गीत लिखना
+            Introduction:
+              name: परिचय
         2016_sciencePD-phase2b:
           stages:
             Wrap-Up:
@@ -364,6 +537,10 @@ hi:
           stages:
             Wrap-Up:
               name: समाप्ति
+        csf2harvey:
+          stages:
+            Binary:
+              name: युग्मक
         sciencepd5:
           stages:
             Wrap-Up:
@@ -376,8 +553,22 @@ hi:
           stages:
             Lists:
               name: सूचियाँ
+            For Loops:
+              name: फॉर लूप्स
+            Functions with Parameters:
+              name: मापदंडों के साथ फंक्शन
+        workshop-gamelab:
+          stages:
+            Introduction:
+              name: परिचय
+        coursed-ramp:
+          stages:
+            Introduction:
+              name: परिचय
         coursee-ramp:
           stages:
+            Introduction:
+              name: परिचय
             Conditionals:
               name: शर्तें
             'Real Life Algorithms: Dice Race':
@@ -386,16 +577,26 @@ hi:
           stages:
             Lists:
               name: सूचियाँ
+            For Loops:
+              name: फॉर लूप्स
+            Functions with Parameters:
+              name: मापदंडों के साथ फंक्शन
+            Functions with Parameters_:
+              name: मापदंडों के साथ फंक्शन
         csd3-draft:
           stages:
             Variables:
               name: चर
             Conditionals:
               name: शर्तें
+            Velocity:
+              name: वेग
             Functions:
               name: कार्य
         csd3-old:
           stages:
+            Velocity:
+              name: वेग
             Functions:
               name: कार्य
         csd2-draft:
@@ -408,10 +609,20 @@ hi:
               name: चर
             Conditionals:
               name: शर्तें
+            Velocity:
+              name: वेग
             Functions:
               name: कार्य
             'null':
               name: शून्य
+        coursef-ramp:
+          stages:
+            Introduction:
+              name: परिचय
+        artist-and-bb8:
+          stages:
+            Bounce:
+              name: उछाल
         coursea-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -434,6 +645,9 @@ hi:
           title: कोर्स C
           assignment_family_title: कोर्स C
         coursed-2017:
+          stages:
+            Nested Loops:
+              name: नेस्टड लूप्स
           title: कोर्स D
           assignment_family_title: कोर्स D
           description_short: जल्दी से कोर्स C से अवधारणाओं को ग्रहण करें, फिर कलन
@@ -444,8 +658,12 @@ hi:
               name: एनवलोप वेरिएब्लस
             For Loop Fun:
               name: फॉर लूप फन
+            Songwriting with Parameters:
+              name: मापदंडों के साथ गीत लिखना
             Building a Foundation:
               name: नींव का निर्माण करना
+            Nested Loops:
+              name: नेस्टड लूप्स
           title: कोर्स E
           assignment_family_title: कोर्स E
           description_short: जल्दी से कोर्स C और D में अवधारणाओं को ग्रहण करें और
@@ -460,6 +678,8 @@ hi:
             और अपनी खुद की कला, कहानी या गेम बनाएं।
         express-2017:
           stages:
+            Introduction:
+              name: परिचय
             Internet:
               name: इंटरनेट
             Digital Citizenship:
@@ -470,8 +690,12 @@ hi:
               name: एनवलोप वेरिएब्लस
             For Loop Fun:
               name: फॉर लूप फन
+            Songwriting with Parameters:
+              name: मापदंडों के साथ गीत लिखना
             Building a Foundation:
               name: नींव का निर्माण करना
+            Nested Loops:
+              name: नेस्टड लूप्स
         pre-express-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -480,10 +704,16 @@ hi:
           stages:
             Thanks:
               name: धन्यवाद
+        csp3-research-mxghyt:
+          stages:
+            Creating Functions:
+              name: फंक्शन्स बनाना
         e-f-ramp:
           stages:
             Building a Foundation:
               name: नींव का निर्माण करना
+            Nested Loops:
+              name: नेस्टड लूप्स
             Conditionals:
               name: शर्तें
             Internet:
@@ -492,16 +722,26 @@ hi:
               name: क्राउडसोर्सिंग
         new-d:
           stages:
+            Introduction:
+              name: परिचय
+            Nested Loops:
+              name: नेस्टड लूप्स
             Conditionals with Cards:
               name: कार्डों के साथ सापेक्ष
             Digital Citizenship:
               name: डिजीटल नागरिकता
             Building a Foundation:
               name: नींव का निर्माण करना
+            Loops in Ice Age:
+              name: हिमयुग में लूप्स
         new-express:
           stages:
+            Introduction:
+              name: परिचय
             Building a Foundation:
               name: नींव का निर्माण करना
+            Nested Loops:
+              name: नेस्टड लूप्स
         new-e:
           stages:
             Building a Foundation:
@@ -520,6 +760,12 @@ hi:
               name: एनवलोप वेरिएब्लस
             For Loop Fun:
               name: फॉर लूप फन
+            Songwriting with Parameters:
+              name: मापदंडों के साथ गीत लिखना
+        csp3-staging:
+          stages:
+            Creating Functions:
+              name: फंक्शन्स बनाना
         pwc:
           stages:
             Simple Encryption:
@@ -540,6 +786,10 @@ hi:
           stages:
             Building a Foundation:
               name: नींव का निर्माण करना
+            Nested Loops:
+              name: नेस्टड लूप्स
+            Introduction:
+              name: परिचय
             Conditionals:
               name: शर्तें
             Internet:
@@ -550,20 +800,28 @@ hi:
           stages:
             Building a Foundation:
               name: नींव का निर्माण करना
+            Introduction:
+              name: परिचय
             Envelope Variables:
               name: एनवलोप वेरिएब्लस
             For Loop Fun:
               name: फॉर लूप फन
+            Songwriting with Parameters:
+              name: मापदंडों के साथ गीत लिखना
         csd6-old:
           stages:
             Lists:
               name: सूचियाँ
+            For Loops:
+              name: फॉर लूप्स
         csd3-1819draft:
           stages:
             Variables:
               name: चर
             Conditionals:
               name: शर्तें
+            Velocity:
+              name: वेग
             Functions:
               name: कार्य
         csd3-2018:
@@ -572,6 +830,8 @@ hi:
               name: चर
             Conditionals:
               name: शर्तें
+            Velocity:
+              name: वेग
             Functions:
               name: कार्य
         csd2-2018:
@@ -582,14 +842,26 @@ hi:
           assignment_family_title: कोर्स A
           description_short: आरंभिक-पाठकों के लिए कंप्यूटर साइंस का परिचय।
           stages:
+            'Debugging: Unspotted Bugs':
+              name: बिना देखे बग्स
+            'Persistence & Frustration: Stevie and the Marbles':
+              name: स्टेवी और बड़ा प्रोजेक्ट
             'Programming: Happy Maps':
               name: हैप्पी मैप्स
             Going Places Safely:
               name: सुरक्षित रूप से स्थानों पर जाना
+            'Persistence & Frustration: Stevie and the Big Project':
+              name: स्टेवी और बड़ा प्रोजेक्ट
         express-2018:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: ग्राफ पेपर प्रोग्रामिंग
+            Introduction:
+              name: परिचय
             Building a Foundation:
               name: नींव का निर्माण करना
+            Nested Loops:
+              name: नेस्टड लूप्स
             'Events: The Big Event':
               name: विशाल इवेंट
             'Loops: Getting Loopy':
@@ -610,6 +882,10 @@ hi:
               name: इंटरनेट
             Crowdsourcing:
               name: क्राउडसोर्सिंग
+            Relay Programming:
+              name: रिले प्रोग्रामिंग
+            Graph Paper Programming:
+              name: ग्राफ पेपर प्रोग्रामिंग
         courseb-2018:
           assignment_family_title: कोर्स B
           stages:
@@ -617,11 +893,17 @@ hi:
               name: 'वास्तविक-जीवन की कलन विधियां: पौधा उगाना'
             Your Digital Footprint:
               name: आपका डिजीटल फुटप्रिंट
+            Move It, Move It:
+              name: इसे मूव करें, इसे मूव करें
             Copyright and Creativity:
               name: यह ग्रेट टू क्रिएट एंड प्ले फेयर है
         coursed-2018:
           assignment_family_title: कोर्स D
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: ग्राफ पेपर प्रोग्रामिंग
+            Introduction:
+              name: परिचय
             Building a Foundation:
               name: नींव का निर्माण करना
             Conditionals with Cards:
@@ -630,6 +912,12 @@ hi:
               name: डिजीटल नागरिकता
             'Unplugged: Binary':
               name: युग्मक चित्र
+            Loops in Ice Age:
+              name: हिमयुग में लूप्स
+            Graph Paper Programming:
+              name: ग्राफ पेपर प्रोग्रामिंग
+            Relay Programming:
+              name: रिले प्रोग्रामिंग
         coursec-2018:
           assignment_family_title: कोर्स C
           stages:
@@ -641,6 +929,10 @@ hi:
               name: विशाल इवेंट
             Binary Bracelets:
               name: युग्मक ब्रैस्लेट्स
+        csd6-2018:
+          stages:
+            Functions with Parameters:
+              name: मापदंडों के साथ फंक्शन
         coursee-2018:
           assignment_family_title: कोर्स E
           stages:
@@ -648,6 +940,8 @@ hi:
               name: मेरे रोबोटिक दोस्त
             Building a Foundation:
               name: नींव का निर्माण करना
+            Introduction:
+              name: परिचय
             'Functions: Songwriting':
               name: गीत लेखन
             Internet:
@@ -669,28 +963,48 @@ hi:
               name: मेरे रोबोटिक दोस्त
             Building a Foundation:
               name: नींव का निर्माण करना
+            Introduction:
+              name: परिचय
             Envelope Variables:
               name: एनवलोप वेरिएब्लस
             For Loop Fun:
               name: फॉर लूप फन
+            Songwriting with Parameters:
+              name: मापदंडों के साथ गीत लिखना
             Conditionals with Cards:
               name: कार्डों के साथ सापेक्ष
         csp1-2018:
           stages:
             The Internet:
               name: इंटरनेट
+        csp3-2018:
+          stages:
+            Creating Functions:
+              name: फंक्शन्स बनाना
         csp4-2018:
           stages:
             Simple Encryption:
               name: साधारण कूटलेखन
+        csp5-2018:
+          stages:
+            While Loops:
+              name: व्हाइल लूप्स
         pre-express-2018:
           stages:
+            'Debugging: Unspotted Bugs':
+              name: बिना देखे बग्स
+            'Persistence & Frustration: Stevie and the Marbles':
+              name: स्टेवी और बड़ा प्रोजेक्ट
             'Real-life Algorithms: Plant a Seed':
               name: 'वास्तविक-जीवन की कलन विधियां: पौधा उगाना'
+            Move It, Move It:
+              name: इसे मूव करें, इसे मूव करें
             Your Digital Footprint:
               name: आपका डिजीटल फुटप्रिंट
             Copyright and Creativity:
               name: यह ग्रेट टू क्रिएट एंड प्ले फेयर है
+            'Persistence & Frustration: Stevie and the Big Project':
+              name: स्टेवी और बड़ा प्रोजेक्ट
         dance:
           stages:
             Dance Party:
@@ -719,6 +1033,8 @@ hi:
               name: एनवलोप वेरिएब्लस
             For Loop Fun:
               name: फॉर लूप फन
+            The Artist:
+              name: कलाकार
             Internet:
               name: इंटरनेट
             Crowdsourcing:
@@ -737,11 +1053,16 @@ hi:
               name: डांस पार्टी
         coursed-2019:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: ग्राफ पेपर प्रोग्रामिंग
             Relay Programming:
+              name: रिले प्रोग्रामिंग
               description_teacher: यह गतिविधि डीबगिंग और दृढ़ता के बारे में एक छोटे
                 पाठ से शुरू होगी, फिर बहुत तेज़ी से मूव होगी क्योंकि छात्रों को टीमों
                 में बाटा जाता है और वे एक ही समय पर एक निर्देश का प्रोग्राम लिखने
                 के लिए एक साथ काम करते हैं।
+            Loops in Ice Age:
+              name: हिमयुग में लूप्स
             Conditionals with Cards:
               name: कार्डों के साथ सापेक्ष
             Digital Citizenship:
@@ -754,6 +1075,8 @@ hi:
           stages:
             Building a Foundation:
               name: नींव का निर्माण करना
+            Nested Loops:
+              name: नेस्टड लूप्स
             Conditionals with Cards:
               name: कार्डों के साथ सापेक्ष
             'Functions: Songwriting':
@@ -770,6 +1093,8 @@ hi:
               name: गीत लेखन
         express-2019:
           stages:
+            Relay Programming:
+              name: रिले प्रोग्रामिंग
             Conditionals with Cards:
               name: कार्डों के साथ सापेक्ष
             Envelope Variables:
@@ -803,6 +1128,8 @@ hi:
               name: प्रभावशाली पासवर्ड
             Picturing Data:
               name: तस्वीरों वाला डेटा
+        gamelab:
+          title: गेम लैब
         coursea-2019:
           description_short: आरंभिक-पाठकों के लिए कंप्यूटर साइंस का परिचय।
           stages:
@@ -812,12 +1139,18 @@ hi:
               name: सुरक्षित रूप से स्थानों पर जाना
         courseb-2019:
           stages:
+            Move It, Move It:
+              name: इसे मूव करें, इसे मूव करें
             Your Digital Footprint:
               name: आपका डिजीटल फुटप्रिंट
+            Loops in Ice Age:
+              name: हिमयुग में लूप्स
             'Loops: Getting Loopy':
               name: लूपी होना
         pre-express-2019:
           stages:
+            Move It, Move It:
+              name: इसे मूव करें, इसे मूव करें
             Your Digital Footprint:
               name: आपका डिजीटल फुटप्रिंट
         removed19:
@@ -834,8 +1167,14 @@ hi:
               name: चर
             Conditionals:
               name: शर्तें
+            Velocity:
+              name: वेग
             Functions:
               name: कार्य
+        csd6-2019:
+          stages:
+            Functions with Parameters:
+              name: मापदंडों के साथ फंक्शन
         csp4-pilot:
           stages:
             Surveys:
@@ -844,10 +1183,18 @@ hi:
           stages:
             The Internet:
               name: इंटरनेट
+        csp3-2019:
+          stages:
+            Creating Functions:
+              name: फंक्शन्स बनाना
         csp4-2019:
           stages:
             Simple Encryption:
               name: साधारण कूटलेखन
+        csp5-2019:
+          stages:
+            While Loops:
+              name: व्हाइल लूप्स
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -860,6 +1207,10 @@ hi:
           stages:
             Libraries:
               name: पुस्तकालय
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: ग्राफ पेपर प्रोग्रामिंग
         csd2-pilot:
           stages:
             Lists:
@@ -870,5 +1221,21 @@ hi:
               name: चर
             Conditionals:
               name: शर्तें
+            Velocity:
+              name: वेग
             Functions:
               name: कार्य
+        csl-vn:
+          stages:
+            Loops in Ice Age:
+              name: हिमयुग में लूप्स
+        peru-2019:
+          stages:
+            Introduction:
+              name: परिचय
+            Nested Loops:
+              name: नेस्टड लूप्स
+        dance-2019:
+          stages:
+            Dance Party:
+              name: डांस पार्टी

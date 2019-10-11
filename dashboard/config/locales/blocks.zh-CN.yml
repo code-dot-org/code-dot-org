@@ -269,6 +269,31 @@ zh-CN:
             '"x"': 十字交叉
             '"plus"': 添加
             '"random"': 随机
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': 外星人
+            '"BEAR"': 玩具熊
+            '"CAT"': 猫
+            '"DOG"': 狗
+            '"DUCK"': 鸭子
+            '"FROG"': 青蛙
+            '"MOOSE"': 驼鹿
+            '"PINEAPPLE"': 菠萝
+            '"ROBOT"': 机器人
+            '"SHARK"': 鲨鱼
+            '"UNICORN"': 独角兽
+          LOCATION:
+            "{x: 200, y: 100}": 顶部
+            "{x: 200, y: 300}": 底部
+            "{x: 100, y: 200}": 向左
+            "{x: 300, y: 200}": 向右
+            "{x: 200, y: 200}": 中央
+            "{x: 100, y: 100}": 左上
+            "{x: 300, y: 100}": 右上
+            "{x: 100, y: 300}": 左下
+            "{x: 300, y: 300}": 右下
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": 随机
       Dancelab_makeNewDanceSprite:
         text: |-
           新建 {COSTUME}
@@ -538,6 +563,21 @@ zh-CN:
       Dancelab_setTint:
         text: 设置 {SPRITE} 色调为 {VAL}
       Dancelab_setTintEach:
+        text: 设置 {THIS} 色调为 {VAL}
+        options:
+          THIS:
+            sprites: 所有
+            '"ALIEN"': 所有外星人
+            '"BEAR"': 所有熊
+            '"CAT"': 所有猫
+            '"DOG"': 所有狗
+            '"DUCK"': 所有鸭子
+            '"FROG"': 所有青蛙
+            '"MOOSE"': 所有驼鹿
+            '"PINEAPPLE"': 所有菠萝
+            '"ROBOT"': 所有机器人
+            '"SHARK"': 所有鲨鱼
+      Dancelab_setTintEachInline:
         text: 设置 {THIS} 色调为 {VAL}
         options:
           THIS:
@@ -1206,139 +1246,23 @@ zh-CN:
             "'shapeColor'": 颜色
       aalab_addBehaviorForDuration:
         text: aalab 精灵 {SPRITE} 开始 {BEHAVIOR} 经历 {SECONDS} 秒
-      aalab_addBehaviorSimpleFlexible:
-        text: aalab 精灵 {SPRITE} 开始 {BEHAVIOR}
       aalab_addBehaviorUntilBoolean:
         text: 精灵{SPRITE} 开始{BEHAVIOR} 直到{CONDITION}
-      aalab_addToSpriteGroup:
-        text: 向组 {GROUP} 添加精灵 {SPRITE}
-      aalab_allSpritesWithAnimation:
-        text: "{ANIMATION}"
-      aalab_changePropByFlexible:
-        text: 将 {SPRITE} {PROPERTY} 改为 {VAL}
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': 大小
-            '"rotation"': 旋转
-            '"x"': x位置
-            '"y"': y位置
-            '"direction"': 移动方向
-      aalab_checkTouching:
-        text: "{CONDITION} {SPRITE1} 碰到 {SPRITE2}"
-        options:
-          CONDITION:
-            '"when"': 当
-            '"while"': 当
-      aalab_clickedOn:
-        text: "{CONDITION} {SPRITE} 被点击"
-        options:
-          CONDITION:
-            '"when"': 当
-            '"while"': 当
-      aalab_createNewSprite:
-        text: "aalab 制作一个新的精灵 \n 取名 {NAME} \n 服装设置为 {COSTUME} \n 位于 {LOCATION}"
-      aalab_createNewSpriteAdvanced:
-        text: "制作一个新的精灵命名为 {NAME} \n 服装设置为 {COSTUME} \n 位于 {LOCATION}"
-      aalab_createNewSpriteAnon:
-        text: 在 {LOCATION} 处, 创建一个新的 {ANIMATION_NAME} 精灵
-      aalab_createNewSpriteAnonReturn:
-        text: aalab 在 {LOCATION} 处, 创建一个新的 {ANIMATION_NAME} 精灵
-      aalab_createPropertyGroup:
-        text: 创建一个名为 {VAR} 的精灵组，其中包括所有的着装为 {COSTUME} 精灵
-      aalab_createSpriteGroup:
-        text: 创造一个叫做 {VAR} 的新精灵组
-      aalab_getSpritesByName:
-        text: 任何名为 {NAME} 的精灵
-      aalab_getThisSprite:
-        text: "{CHOICE} 精灵"
-        options:
-          CHOICE:
-            '"this"': 这
-            '"other"': 其他
-      aalab_jumpTo:
-        text: "{SPRITE} 跳到 {LOCATION}"
-      aalab_keyPressed:
-        text: "{CONDITION} {KEY} 被按下"
-        options:
-          CONDITION:
-            '"when"': 当
-            '"while"': 当
-          KEY:
-            '"up"': 向上
-            '"down"': 向下
-            '"left"': 向左
-            '"right"': 向右
-            '"space"': 空间
-      aalab_locationOf:
-        text: aalab {SPRITE} 的位置
-      aalab_location_picker:
-        text: "{LOCATION}"
-      aalab_moveForward:
-        text: aalab 向前移动 {SPRITE} {DISTANCE} 像素
-      aalab_moveInDirection:
-        text: aalab 移动 {SPRITE} {DISTANCE} 像素 {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': 北
-            '"East"': 东
-            '"South"': 南
-            '"West"': 西
-      aalab_moveToward:
-        text: aalab 移动 {SPRITE} 距离 {DISTANCE} 朝向目标 {TARGET}
-      aalab_nameStringSay:
-        text: "{NAMESTRING} 说 {MESSAGE}"
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
       aalab_prompt:
         text: 提问 {MESSAGE}
-      aalab_randomLocation:
-        text: 随机位置
-      aalab_removeOneAndAll:
-        text: 移除 {THIS}
-      aalab_setBG:
+      aalab_scene:
         options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': 城市
-      aalab_setCollidable:
-        text: aalab 设置 {SPRITE} 可相撞于 {VAL}
-        options:
-          VAL:
-            '"true"': 真
-            '"false"': 错
-      aalab_setDirection:
-        text: aalab 设置 {SPRITE} 运动方向为 {DIRECTION}
-      aalab_setProp:
-        text: aalab 设置 {SPRITE} {PROPERTY} 为 {VAL}
-        options:
-          PROPERTY:
-            '"scale"': 大小
-            '"rotation"': 旋转
-            '"x"': x位置
-            '"y"': y位置
-            '"direction"': 移动方向
-            '"tint"': 色调
-      aalab_setSpriteVariable:
-        text: aalab 设置 {VARIABLE} 到 {SPRITE}
-      aalab_showCustomText:
-        text: 显示文字 {TEXT} 在位置 {LOCATION} 字体大小 {SIZE} 颜色 {COLOR} 显示时长为 {DURATION}
-        options:
-          DURATION:
-            '"1"': 1 秒
-            '"2"': 2 秒
-            '"3"': 3 秒
-            '"4"': 4 秒
-            '"5"': 5 秒
-            '"0"': 永远
-      aalab_showSpriteLabel:
-        text: 显示精灵 {SPRITE} 的标签 {TEXT} {LOCATION}
-        options:
-          LOCATION:
-            '"above"': above
-            '"below"': below
-      aalab_speakerSaysConsole:
-        text: "{SPRITE} 说 {MESSAGE}"
-      aalab_spriteSay:
-        text: 精灵 {SPRITE} 说{TEXT} 持续{SECONDS} 秒
-      aalab_toggleHideCustomText:
-        text: "{OPTION} 自定义文字"
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
         options:
           OPTION:
             '"show"': 显示

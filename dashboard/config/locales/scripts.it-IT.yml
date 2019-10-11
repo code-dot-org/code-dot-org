@@ -4946,7 +4946,7 @@ it:
             Learn to Drag and Drop:
               name: Impara come Trascinare i Blocchi
             Programming in Maze:
-              name: Programmare con Scrat
+              name: Programmare con Angry Bird
             Programming in Harvester:
               name: Programmare con la contadina
             Tell a Story in Play Lab:
@@ -5272,3 +5272,9 @@ it:
               name: Introduzione al Debugging
             Nested Loops in Frozen:
               name: Cicli annidati con Frozen
+        dance-2019:
+          stages:
+            Dance Party:
+              name: Ballando col codice
+          title: Ballando col codice (versione 2019)
+          description: Crea un ballo tutto tuo e condividilo con i tuoi amici!

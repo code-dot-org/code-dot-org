@@ -71,6 +71,8 @@ class ExpiredDeletedAccountPurger
       QueuedAccountPurge.create(user: account, reason_for_review: err.message) unless @dry_run
       @num_accounts_queued += 1
     end
+
+    QueuedAccountPurge.clean_up_resolved_records!
   rescue StandardError => err
     yell err.message
     raise

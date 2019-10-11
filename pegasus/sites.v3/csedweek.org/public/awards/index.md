@@ -8,7 +8,7 @@ theme: responsive
 
 # 2019 Champions of Computer Science Awards
 
-In celebration of the 2019 [Computer Science Education Week](https://csedweek.org/) (CSEdWeek), the [Computer Science Teachers Association](http://www.csteachers.org/) (CSTA) and [Code.org](https://code.org/) are pleased to announce that submissions for the third annual Champions of Computer Science AWards are now open! 
+In celebration of the 2019 [Computer Science Education Week](https://csedweek.org/) (CSEdWeek), the [Computer Science Teachers Association](http://www.csteachers.org/) (CSTA) and [Code.org](https://code.org/) are pleased to announce that submissions for the third annual Champions of Computer Science Awards are now open! 
 <br>
 <br>
 The purpose of the Champions of CS Awards is to identify and celebrate students, teachers, administrators, and organizations who have made a significant impact to improve access to and the quality of CS education.
@@ -20,7 +20,7 @@ Any K-12 student, teacher, or administrator may be nominated. Organizations that
 Award winners and a guest of choice will receive an all-expenses paid trip (travel & hotel) to attend the CSEdWeek event on December 9th (location to be confirmed).
 <br>
 <br>
-Submit your nominations using this form. The deadline for submission is Monday, October 21, 2019 at midnight PT. Email awards@csteachers.org if you have questions. You can take a look at last year’s winners below!
+Submit your nominations using [this form](https://www.cvent.com/c/abstracts/b2b495a4-4caf-4ed5-88b1-954d5a605b24). The deadline for submission is Monday, October 21, 2019 at midnight PT. Email awards@csteachers.org if you have questions. You can take a look at last year’s winners below!
 <br>
 <br>
 

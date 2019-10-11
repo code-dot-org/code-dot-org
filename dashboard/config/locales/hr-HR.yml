@@ -241,6 +241,7 @@ hr:
     delete_text_teacher_note: 'Napomena: brisanjem računa neće se izbrisati i račune
       vaših učenika.'
     delete_confirm: Jeste li sigurni da želite izbrisati svoj račun?
+    update_email: Osvježi
   user_level:
     completed: Završen
     tried: Pokušan

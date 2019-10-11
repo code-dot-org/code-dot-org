@@ -1,3 +1,15 @@
+#Files in the config/locales directory are used for internationalization
+#and are automatically loaded by Rails. If you want to use locales other
+#than English, add the necessary files in this directory.
+#To use the locales, use `I18n.t`:
+#I18n.t 'hello'
+#In views, this is aliased to just `t`:
+#<%= t('hello') %>
+#To use a different locale, set it with `I18n.locale`:
+#I18n.locale = :es
+#This would use the information in config/locales/es.yml.
+#To learn more, please read the Rails Internationalization guide
+#available at http://guides.rubyonrails.org/i18n.html.
 mi:
   errors:
     messages:
@@ -256,6 +268,7 @@ mi:
     delete_text: "Mā te pāwhiri i te pātene o raro nei ka muku i tō pūkete."
     delete_text_teacher_note: "Kia mōhio ai koe: e kore ngā pūkete o ngā ākonga e mukua ina mukua tō ake pūkete."
     delete_confirm: 'Āe rānei e hiahia ana koe ki te muku i tō pūkete?'
+    update_email: "Whakahou"
   user_level:
     completed: 'Kua oti'
     tried: 'Kua ngana'

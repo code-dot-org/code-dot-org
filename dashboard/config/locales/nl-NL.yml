@@ -404,6 +404,7 @@ nl:
       naam!)
     create_personal_login_under_13_parent_email: E-mailadres van ouder/voogd
     enter_new_login_info: Voer je nieuwe aanmeldgegevens in
+    update_email: Bijwerken
   user_level:
     completed: Voltooid
     tried: Geprobeerd

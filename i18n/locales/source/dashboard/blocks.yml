@@ -273,6 +273,34 @@ en:
             '"x"': criss-cross
             '"plus"': plus
             '"random"': random
+      Dancelab_makeAnonymousDanceSprite:
+        text: |-
+          make a new [COSTUME][0]
+           at [LOCATION][1]
+        options:
+          COSTUME:
+            '"ALIEN"': Alien
+            '"BEAR"': Bear
+            '"CAT"': Cat
+            '"DOG"': Dog
+            '"DUCK"': Duck
+            '"FROG"': Frog
+            '"MOOSE"': Moose
+            '"PINEAPPLE"': Pineapple
+            '"ROBOT"': Robot
+            '"SHARK"': Shark
+            '"UNICORN"': Unicorn
+          LOCATION:
+            "{x: 200, y: 100}": top
+            "{x: 200, y: 300}": bottom
+            "{x: 100, y: 200}": left
+            "{x: 300, y: 200}": right
+            "{x: 200, y: 200}": center
+            "{x: 100, y: 100}": top left
+            "{x: 300, y: 100}": top right
+            "{x: 100, y: 300}": bottom left
+            "{x: 300, y: 300}": bottom right
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": random
       Dancelab_makeNewDanceSprite:
         text: |-
           make a new [COSTUME][0]
@@ -552,6 +580,21 @@ en:
       Dancelab_setTint:
         text: set [SPRITE][0] tint to [VAL][1]
       Dancelab_setTintEach:
+        text: set [THIS][0] tint to [VAL][1]
+        options:
+          THIS:
+            sprites: all
+            '"ALIEN"': all aliens
+            '"BEAR"': all bears
+            '"CAT"': all cats
+            '"DOG"': all dogs
+            '"DUCK"': all ducks
+            '"FROG"': all frogs
+            '"MOOSE"': all moose
+            '"PINEAPPLE"': all pineapples
+            '"ROBOT"': all robots
+            '"SHARK"': all sharks
+      Dancelab_setTintEachInline:
         text: set [THIS][0] tint to [VAL][1]
         options:
           THIS:

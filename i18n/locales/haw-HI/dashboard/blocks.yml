@@ -60,3 +60,15 @@ haw:
             '4': very fast
             '0.5': slow
             '0.25': very slow
+      aalab_goToScene:
+        options:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
+        options:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'

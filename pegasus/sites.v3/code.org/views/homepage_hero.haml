@@ -4,9 +4,13 @@
   actions = Homepage.get_actions
 
 - main_actions = capture_haml do
-  - if show_single_hero == "create"
+  - if show_single_hero == "hoc2019"
     .hero-message
-      = I18n.t(:hoc2018_creativity_what_will_you_create)
+      = hoc_s(:hoc2019_header_line1_mobile)
+    .hero-message-second
+      = hoc_s(:hoc2019_header_line2_mobile)
+    .hero-sub-message
+      = hoc_s(:codeorg_homepage_hoc2018_header_line1)
   .action_buttons
     - actions.each do |entry|
       - if ["cta_button", "cta_button_solid_white", "cta_button_hollow_white"].include? entry[:type]
