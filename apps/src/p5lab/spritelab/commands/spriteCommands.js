@@ -40,10 +40,10 @@ export const commands = {
   getThisSprite(which, extraArgs) {
     if (extraArgs) {
       if (which === 'this') {
-        return extraArgs.sprite;
+        return {id: extraArgs.sprite};
       }
       if (which === 'other') {
-        return extraArgs.target;
+        return {id: extraArgs.target};
       }
     }
   },
