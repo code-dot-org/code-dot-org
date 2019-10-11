@@ -35,12 +35,7 @@ export const generateRandomFish = () => {
   ];
 
   return {
-    body,
-    eye,
-    mouth,
-    sideFin,
-    topFin,
-    tail,
+    parts: [body, eye, mouth, sideFin, topFin, tail],
     colorPalette,
     knnData
   };
