@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import _ from 'lodash';
-import fish, {FishBodyPart} from '../utils/fishData';
+import {FishBodyPart} from '../utils/fishData';
 import {generateRandomFish} from '../activities/hoc2019/SpritesheetFish';
 
 const CANVAS_WIDTH = 1024;
@@ -36,20 +36,25 @@ $(document).ready(() => {
   canvas.width = CANVAS_WIDTH;
   canvas.height = CANVAS_HEIGHT;
 
-  for (var i = 0; i < 3; ++i) {
+  for (var i = 0; i < 15; ++i) {
     const x = Math.floor(Math.random() * CANVAS_WIDTH);
     const y = Math.floor(Math.random() * CANVAS_HEIGHT);
     fishes.push(getRandomFish([x, y], [x, y]));
   }
-  const palette = fish.colorPalettes.palette1;
 
   fishes.forEach(fish => {
     //fish.canvas = document.createElement('canvas');
     fish.canvas = new OffscreenCanvas(200, 200);
     loadImages(fish.fish).then(results =>
-      drawFish(fish.fish, results, palette, fish.canvas.getContext('2d'))
+      drawFish(
+        fish.fish,
+        results,
+        fish.fish.colorPalette,
+        fish.canvas.getContext('2d')
+      )
     );
   });
+
   function animateScreen() {
     var ctx = canvas.getContext('2d');
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -62,7 +67,7 @@ $(document).ready(() => {
         fish.canvas,
         fish.currentPos[0],
         fish.currentPos[1],
-        palette,
+        fish.fish.colorPalette,
         ctx
       );
     });
@@ -85,7 +90,6 @@ function drawFish(fish, results, palette, ctx) {
   results.forEach(result => {
     let intermediateCanvas = document.createElement('canvas');
     let intermediateCtx = intermediateCanvas.getContext('2d');
-
     let anchor = [0, 0];
     if (result.fishPart.type !== FishBodyPart.BODY) {
       anchor = bodyAnchorFromType(body, result.fishPart.type);
