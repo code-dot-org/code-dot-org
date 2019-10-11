@@ -3,7 +3,7 @@
  * for explanation for above eslint-disable.
  * */
 
-import React from 'react';
+import React, {PropTypes} from 'react';
 import fish, {fishShape} from '../../utils/fishData';
 const P5 = require('../../utils/loadP5');
 
@@ -66,7 +66,10 @@ export default class SpritesheetFish extends React.Component {
 }
 
 export class Fish extends React.Component {
-  static propTypes = {fishShape};
+  static propTypes = {
+    fishShape: fishShape,
+    transparentBackground: PropTypes.bool
+  };
 
   componentDidMount() {
     this.p5 = new P5(this.sketch, this.props.canvasId);
@@ -133,8 +136,9 @@ export class Fish extends React.Component {
 
     p5.setup = () => {
       p5.createCanvas(200, 200);
-      // p5.background(220);
-      p5.background(0, 51, 153);
+      if (!this.props.transparentBackground) {
+        p5.background(0, 51, 153);
+      }
 
       this.colorImage(bodyImg, bodyColor);
       this.colorImage(sideFinImg, finColor);
@@ -174,6 +178,12 @@ export class Fish extends React.Component {
   };
 
   render() {
-    return <div id={this.props.canvasId} />;
+    return <div id={this.props.canvasId} style={styles.canvas} />;
   }
 }
+
+const styles = {
+  canvas: {
+    display: 'inline'
+  }
+};
