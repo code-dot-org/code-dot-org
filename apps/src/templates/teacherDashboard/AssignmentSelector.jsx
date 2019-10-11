@@ -225,7 +225,7 @@ export default class AssignmentSelector extends Component {
     const defaultSecondaryId =
       this.props.newSection && primary && primary.scriptAssignIds
         ? primary.scriptAssignIds[0]
-        : null;
+        : noAssignment;
 
     const selectedSecondaryId = this.props.newSection
       ? defaultSecondaryId
