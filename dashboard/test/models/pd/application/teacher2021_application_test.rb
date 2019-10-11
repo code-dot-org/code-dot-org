@@ -534,7 +534,6 @@ module Pd::Application
       assert_equal(
         {
           meets_minimum_criteria_scores: {
-            regional_partner_name: YES,
             csd_which_grades: YES,
             plan_to_teach: YES,
             committed: YES,
@@ -584,7 +583,6 @@ module Pd::Application
       assert_equal(
         {
           meets_minimum_criteria_scores: {
-            regional_partner_name: YES,
             csp_which_grades: YES,
             plan_to_teach: YES,
             committed: YES,
@@ -628,7 +626,6 @@ module Pd::Application
       assert_equal(
         {
           meets_minimum_criteria_scores: {
-            regional_partner_name: YES,
             csp_which_grades: YES,
             plan_to_teach: YES,
             committed: YES,
@@ -673,7 +670,6 @@ module Pd::Application
       assert_equal(
         {
           meets_minimum_criteria_scores: {
-            regional_partner_name: NO,
             csd_which_grades: NO,
             committed: NO,
             replace_existing: NO,
@@ -721,7 +717,6 @@ module Pd::Application
       assert_equal(
         {
           meets_minimum_criteria_scores: {
-            regional_partner_name: NO,
             csp_which_grades: NO,
             committed: NO,
             replace_existing: NO,
@@ -742,15 +737,6 @@ module Pd::Application
         }.deep_stringify_keys,
         JSON.parse(application.response_scores)
       )
-    end
-
-    test 'autoscore is idempotent' do
-      application = create :pd_teacher2021_application, regional_partner: nil
-      application.update(response_scores: {regional_partner_name: YES}.to_json)
-
-      application.auto_score!
-
-      assert_equal YES, JSON.parse(application.response_scores)['regional_partner_name']
     end
 
     test 'principal responses override teacher responses for scoring' do
