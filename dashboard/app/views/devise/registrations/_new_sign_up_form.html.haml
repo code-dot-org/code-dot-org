@@ -12,7 +12,7 @@
 = form_for(@user, url: users_begin_sign_up_path, html: {class: "signup"}) do |f|
   / Email
   .field-row
-    .field.field-sm>
+    .field.field-sm
       -# Render email label as "Email&nbsp;*", so the asterisk referencing the
       -# "student terms" footer can't wrap onto a line all by itself
       = f.label :email do
