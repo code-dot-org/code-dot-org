@@ -322,7 +322,7 @@ class UserLevelTest < ActiveSupport::TestCase
       create :student, :with_puzzles, num_puzzles: 10 - n
     end
 
-    passing_level_counts = UserLevel.count_passed_levels_for_users(students.map(&:id))
+    passing_level_counts = UserLevel.count_passed_levels_for_users(User.where(id: students.map(&:id)))
     assert_equal(
       {
         students[0].id => 10,
