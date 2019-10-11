@@ -12,7 +12,7 @@ module Pd
       teaching_background: 'Teaching Background',
       choose_your_program: 'Choose Your Program',
       professional_learning_program_requirements: 'Professional Learning Program Requirements',
-      additional_demographic_information: 'Additional Demographic Information and submission',
+      additional_demographic_information: 'Additional Demographic Information and Submission',
       school_stats_and_principal_approval_section: 'Principal Approval and School Information'
     }
 
@@ -289,31 +289,26 @@ module Pd
         :principal_implementation
       ],
       scholarship_questions: [
-        :plan_to_teach,
         :previous_yearlong_cdo_pd,
-        :principal_approval,
         :principal_schedule_confirmed,
-        :principal_diversity_recruitment,
         :underrepresented_minority_percent,
         :free_lunch_percent,
       ],
       criteria_score_questions_csd: [
-        :regional_partner_name,
         :csd_which_grades,
-        :cs_total_course_hours,
         :plan_to_teach,
         :committed,
         :replace_existing,
-        :principal_implementation
+        :principal_implementation,
+        :principal_approval,
       ],
       criteria_score_questions_csp: [
-        :regional_partner_name,
         :csp_which_grades,
-        :cs_total_course_hours,
         :plan_to_teach,
         :committed,
         :replace_existing,
-        :principal_implementation
+        :principal_implementation,
+        :principal_approval,
       ]
     }
 
