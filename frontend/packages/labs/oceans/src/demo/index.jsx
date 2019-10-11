@@ -19,14 +19,15 @@ $(document).ready(() => {
   ctx.rect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
   ctx.fill();
 
-  const fish1 = generateRandomFish();
-  const fish2 = generateRandomFish();
-  const fish3 = generateRandomFish();
   const palette = fish.colorPalettes.palette1;
-
-  loadFish(fish1, 100, 100, palette);
-  loadFish(fish2, 300, 100, palette);
-  loadFish(fish3, 500, 100, palette);
+  let x = 0,
+    y = 0;
+  for (let i = 0; i < 1; i++) {
+    let fish = generateRandomFish();
+    loadFish(fish, x, y, palette);
+    x = Math.floor(Math.random() * CANVAS_WIDTH);
+    y = Math.floor(Math.random() * CANVAS_HEIGHT);
+  }
 });
 
 function loadFish(fish, x, y, palette) {
