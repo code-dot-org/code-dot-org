@@ -13,7 +13,7 @@
       %meta{'http-equiv' => 'X-UA-Compatible', content: 'IE=Edge'}
     = stylesheet_link_tag    'css/code-studio', media: 'all'
     = stylesheet_link_tag    'application', media: 'all'
-    = render partial: 'layouts/analytics'
+    // = render partial: 'layouts/analytics'
     // webpack-runtime.js must appear exactly once on any page containing webpack entries
     %script{src: webpack_asset_path('js/webpack-runtime.js')}
     // essential.js is ordered above application.js to filter new relic errors
