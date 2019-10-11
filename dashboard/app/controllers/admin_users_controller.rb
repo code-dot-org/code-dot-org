@@ -44,7 +44,9 @@ class AdminUsersController < ApplicationController
   end
 
   def assume_identity
-    user = User.from_identifier(params[:user_id])
+    user_id = params[:user_id]
+    user_id.strip!
+    user = User.from_identifier(user_id)
 
     if user
       bypass_sign_in user
