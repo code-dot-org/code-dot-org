@@ -36,6 +36,8 @@ level 'U5 L03 Lists Practice 5', progression: 'List Operations'
 level 'U5 L03 Lists Practice 9', progression: 'List Operations'
 level 'U5 L03 Lists Practice 6', progression: 'List Operations'
 level 'U5 L03 Lists Practice 10', progression: 'List Operations'
+level 'U5L3 CFU Lists Psuedocode', progression: 'Check For Understanding: AP Practice'
+level 'U5L3 CFU Lists Psuedocode 2', progression: 'Check For Understanding: AP Practice'
 
 stage 'Lists Make', flex_category: 'csp_lists'
 level 'CSP U5L4 SFLP 20-21', progression: 'Lesson Overview'

@@ -150,7 +150,7 @@
       %br/
       *
       -# Temporarily use student_terms so that existing translations get used.
-      != t('signup_form.student_terms')
+      != t('signup_form.student_terms_markdown', markdown: true)
 
   .span5{style: "display: flex;"}
     %div.vertical-or
