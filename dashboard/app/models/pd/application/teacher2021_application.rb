@@ -583,11 +583,14 @@ module Pd::Application
         end
 
       # Section 3
-      # TODO: fix logic. Why it ever return null?
       if course == 'csd'
-        meets_minimum_criteria_scores[:previous_yearlong_cdo_pd] = (responses[:previous_yearlong_cdo_pd] & ['CS Discoveries', 'Exploring Computer Science']).empty? ? YES : NO
+        took_csd_course =
+          responses[:previous_yearlong_cdo_pd].include?('CS Discoveries') ||
+          responses[:previous_yearlong_cdo_pd].include?('Exploring Computer Science')
+        meets_minimum_criteria_scores[:previous_yearlong_cdo_pd] = took_csd_course ? NO : YES
       elsif course == 'csp'
-        meets_minimum_criteria_scores[:previous_yearlong_cdo_pd] = responses[:previous_yearlong_cdo_pd].exclude?('CS Principles') ? YES : NO
+        meets_minimum_criteria_scores[:previous_yearlong_cdo_pd] =
+          responses[:previous_yearlong_cdo_pd].include?('CS Principles') ? NO : YES
       end
 
       # Section 4
