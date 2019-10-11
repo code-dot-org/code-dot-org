@@ -259,6 +259,31 @@ bs:
             '"x"': unakrsno
             '"plus"': plus
             '"random"': slučajno odabran
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': Vanzemaljac
+            '"BEAR"': Medvjed
+            '"CAT"': Mačka
+            '"DOG"': Pas
+            '"DUCK"': Patka
+            '"FROG"': Žaba
+            '"MOOSE"': Los
+            '"PINEAPPLE"': Ananas
+            '"ROBOT"': Robot
+            '"SHARK"': Ajkula
+            '"UNICORN"': Jednorog
+          LOCATION:
+            "{x: 200, y: 100}": vrh
+            "{x: 200, y: 300}": dno
+            "{x: 100, y: 200}": lijevo
+            "{x: 300, y: 200}": desno
+            "{x: 200, y: 200}": centralna
+            "{x: 100, y: 100}": gornja lijeva
+            "{x: 300, y: 100}": donja desna
+            "{x: 100, y: 300}": donja lijeva
+            "{x: 300, y: 300}": donja desna
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": slučajno odabran
       Dancelab_makeNewDanceSprite:
         text: |-
           kreiraj novi {COSTUME}
@@ -528,6 +553,20 @@ bs:
       Dancelab_setTint:
         text: podesi {SPRITE} nijanse na {VAL}
       Dancelab_setTintEach:
+        text: podesi {THIS} nijanse na {VAL}
+        options:
+          THIS:
+            '"ALIEN"': svi vanzemaljci
+            '"BEAR"': svi medvjedi
+            '"CAT"': sve mačke
+            '"DOG"': svi psi
+            '"DUCK"': sve patke
+            '"FROG"': sve žabe
+            '"MOOSE"': svi losovi
+            '"PINEAPPLE"': svi ananasi
+            '"ROBOT"': svi roboti
+            '"SHARK"': sve ajkule
+      Dancelab_setTintEachInline:
         text: podesi {THIS} nijanse na {VAL}
         options:
           THIS:
@@ -890,57 +929,19 @@ bs:
         text: okreni desno
       Vector_positionCenter:
         text: centralna
-      aalab_changePropByFlexible:
-        text: izmjeni {SPRITE} {PROPERTY} za {VAL}
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': veličina
-            '"rotation"': rotacija
-            '"direction"': smijer kretanja
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': kada
-            '"while"': dok
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': kada
-            '"while"': dok
-      aalab_jumpTo:
-        text: "{SPRITE} skoči na {LOCATION}"
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': kada
-            '"while"': dok
-          KEY:
-            '"up"': gore
-            '"down"': dolje
-            '"left"': lijevo
-            '"right"': desno
-            '"space"': svemir
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': grad
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': istinito
-            '"false"': neistinito
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': veličina
-            '"rotation"': rotacija
-            '"direction"': smijer kretanja
-            '"tint"': nijanse
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': zauvijek
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
         options:
           OPTION:
             '"show"': prikaži

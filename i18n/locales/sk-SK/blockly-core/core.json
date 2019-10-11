@@ -41,6 +41,7 @@
     "CONTROLS_FOREACH_INPUT_ITEM": "pre každú položku",
     "CONTROLS_FOREACH_TOOLTIP": "Pre každú položku v zozname nastaviť premennú '%1' a potom robiť nejaké úkony.",
     "CONTROLS_FOR_HELPURL": "",
+    "CONTROLS_FOR_INPUT_COUNTER": "",
     "CONTROLS_FOR_INPUT_FROM_TO_BY": "od %1 do %2 počítané po %3",
     "CONTROLS_FOR_INPUT_WITH": "pre",
     "CONTROLS_FOR_TOOLTIP": "Premenná %1 dostane hodnoty v rozmedzí od prvého zadaného čísla po posledné číslo, počítajúc v zadanom intervale. Pre každú hodnotu sa vykonajú zvolené bloky.",

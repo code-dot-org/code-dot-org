@@ -266,6 +266,31 @@ hu:
             '"x"': keresztezés
             '"plus"': plusz
             '"random"': véletlen
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': Földönkívüli
+            '"BEAR"': Medve
+            '"CAT"': Macska
+            '"DOG"': Kutya
+            '"DUCK"': Kacsa
+            '"FROG"': Béka
+            '"MOOSE"': Jávorszarvas
+            '"PINEAPPLE"': Ananász
+            '"ROBOT"': Robot
+            '"SHARK"': Cápa
+            '"UNICORN"': Egyszarvú
+          LOCATION:
+            "{x: 200, y: 100}": fent
+            "{x: 200, y: 300}": lent
+            "{x: 100, y: 200}": balra
+            "{x: 300, y: 200}": jobbra
+            "{x: 200, y: 200}": közép
+            "{x: 100, y: 100}": balra fent
+            "{x: 300, y: 100}": jobbra fent
+            "{x: 100, y: 300}": balra lent
+            "{x: 300, y: 300}": jobbra lent
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": véletlen
       Dancelab_makeNewDanceSprite:
         text: |-
           új {COSTUME} készítése
@@ -537,6 +562,21 @@ hu:
       Dancelab_setTint:
         text: "{SPRITE} árnyalatának beállítása: {VAL}"
       Dancelab_setTintEach:
+        text: 'állítsd {THIS} árnyalat: {VAL}'
+        options:
+          THIS:
+            sprites: összes
+            '"ALIEN"': összes földönkívüli
+            '"BEAR"': összes medve
+            '"CAT"': összes macska
+            '"DOG"': összes kutya
+            '"DUCK"': összes kacsa
+            '"FROG"': összes béka
+            '"MOOSE"': összes jávorszarvas
+            '"PINEAPPLE"': összes ananász
+            '"ROBOT"': összes robot
+            '"SHARK"': összes cápa
+      Dancelab_setTintEachInline:
         text: 'állítsd {THIS} árnyalat: {VAL}'
         options:
           THIS:
@@ -1130,99 +1170,21 @@ hu:
             "'shapeColor'": szín
       aalab_addBehaviorUntilBoolean:
         text: szereplő {SPRITE} elkezd {BEHAVIOR} amíg {CONDITION}
-      aalab_addToSpriteGroup:
-        text: "{SPRITE} add hozzá {GROUP} csoporthoz"
-      aalab_changePropByFlexible:
-        text: 'módosítás: {SPRITE} {PROPERTY} ennyivel: {VAL}'
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': méret
-            '"rotation"': forgás
-            '"x"': x pozíció
-            '"y"': y-pozíció
-            '"direction"': mozgás iránya
-      aalab_checkTouching:
-        options:
-          CONDITION:
-            '"when"': amikor
-            '"while"': amíg
-      aalab_clickedOn:
-        text: "{CONDITION} {SPRITE} kattintás"
-        options:
-          CONDITION:
-            '"when"': amikor
-            '"while"': amíg
-      aalab_createNewSpriteAdvanced:
-        text: "készíts új sprite-ot neve {NAME} \n jelmeze {COSTUME} \n helye {LOCATION}"
-      aalab_createPropertyGroup:
-        text: |-
-          készíts új sprite csoportot neve {VAR}
-          minden {COSTUME} sprite-ból
-      aalab_getSpritesByName:
-        text: 'bármely sprite, neve: {NAME}'
-      aalab_getThisSprite:
-        text: "{CHOICE} sprite"
-        options:
-          CHOICE:
-            '"this"': ez
-      aalab_jumpTo:
-        text: "{SPRITE} ugrás: {LOCATION}"
-      aalab_keyPressed:
-        text: "{CONDITION} {KEY} nyomva"
-        options:
-          CONDITION:
-            '"when"': amikor
-            '"while"': amíg
-          KEY:
-            '"up"': fel
-            '"down"': le
-            '"left"': balra
-            '"right"': jobbra
-            '"space"': világűr
-      aalab_location_picker:
-        text: "{LOCATION}"
-      aalab_moveInDirection:
-        options:
-          DIRECTION:
-            '"North"': Észak
-            '"East"': Kelet
-            '"South"': Dél
-            '"West"': Nyugat
-      aalab_nameStringSay:
-        text: "{NAMESTRING} mondja {MESSAGE}"
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
       aalab_prompt:
         text: kérdezd {MESSAGE}
-      aalab_randomLocation:
-        text: véletlen hely
-      aalab_removeOneAndAll:
-        text: távolítsd el {THIS}
-      aalab_setBG:
+      aalab_scene:
         options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': város
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': igaz
-            '"false"': hamis
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': méret
-            '"rotation"': forgás
-            '"x"': x pozíció
-            '"y"': y-pozíció
-            '"direction"': mozgás iránya
-            '"tint"': árnyalat
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': mindig
-      aalab_speakerSaysConsole:
-        text: "{SPRITE} mondja {MESSAGE}"
-      aalab_spriteSay:
-        text: sprite {SPRITE} mondja {TEXT} {SECONDS} másodpercig
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
         options:
           OPTION:
             '"show"': mutasd

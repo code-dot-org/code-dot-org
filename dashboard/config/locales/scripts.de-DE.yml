@@ -3,9 +3,15 @@ de:
   data:
     script:
       category:
+        csd_category_name: CS Discoveries ('17-'18)
+        csd_2018_category_name: CS Discoveries ('18-'19)
+        csd_2019_category_name: CS Discoveries ('19-'20)
         csf_category_name: Einführung in Informatik und Programmieren
+        csf_2018_category_name: Informatik Grundlagen (2018)
         csf_international_category_name: Informatik Grundlagen international
         csf2_draft_category_name: 'In der Entwicklung: Kurse A - F'
+        csp_2018_category_name: CS Principles ('18-'19)
+        csp_2019_category_name: CS Principles ('19-'20)
         cspexams_category_name: Praxistest Grundlagen der Informatik
         csp17_category_name: Informatik Grundprinzipien
         hoc_category_name: Hour of Code
@@ -293,6 +299,8 @@ de:
               name: Boolesche Operatoren
             'Eval: Conditionals':
               name: Bedingungen
+            'Eval: Defining Functions':
+              name: Zusammengesetzte Funktionen
             'Eval: Functions':
               name: Text-Probleme mit dem Design-Builder lösen
             'Eval: Strings and Images':
@@ -346,6 +354,8 @@ de:
               name: Das Design-Rezept
         K5PD:
           stages:
+            Computer Science Pedagogy:
+              name: Pädagogik der Informatik
             Next Steps:
               name: Nächste Schritte
             Teacher Dashboard:
@@ -364,6 +374,9 @@ de:
         pixelation:
           description: Erstelle Bilder mit Bits und Bytes.
           description_short: Erstelle Bilder mit Bits und Bytes.
+          stages:
+            Color Pixelation Examples:
+              name: Beispiele für die Farbzerlegung
         20-hour:
           title: Kurzeinführung in die Informatik
           description: Dieser 20-stündige Kurs umfasst die Informatik- und Programmierkonzepte
@@ -525,12 +538,20 @@ de:
           stages:
             Text Compression:
               name: Text-Kompression
+        CSPPD:
+          stages:
+            What is CSP?:
+              name: Was ist CSP?
         CSPLessonSamples:
           stages:
             Lesson 14:
               name: Lektion 14
             Lesson 15:
               name: Lektion 15
+        ECSPD:
+          stages:
+            What is ECS?:
+              name: Was ist ECS?
         sciencePD:
           stages:
             Introduction to StarLogo Nova:
@@ -562,6 +583,8 @@ de:
               name: Solange-Schleifen
         algebraPD3:
           stages:
+            Computer Science Pedagogy:
+              name: Pädagogik der Informatik
             Course Overview:
               name: Kursübersicht
             Evaluation Blocks:
@@ -576,6 +599,14 @@ de:
               name: Das große Spiel
             The Design Recipe:
               name: Das Design-Rezept
+        ECSPD-NexTech:
+          stages:
+            What is ECS?:
+              name: Was ist ECS?
+        ECSPD-iZone:
+          stages:
+            What is ECS?:
+              name: Was ist ECS?
         algebraPD-NexTech:
           stages:
             Course Overview:
@@ -1797,18 +1828,26 @@ de:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Real-Life-Algorithmen: Pflanze Samen'
+          title: Kurs A
+          assignment_family_title: Kurs A
         courseb-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Real-Life-Algorithmen: Pflanze Samen'
+          title: Kurs B
+          assignment_family_title: Kurs B
         coursec-2017:
           stages:
             'Real-life Algorithms: Paper Planes':
               name: 'Alltagsalgorithmen: Papierflieger'
+          title: Kurs C
+          assignment_family_title: Kurs C
         coursed-2017:
           stages:
             Nested Loops:
               name: Verschachtelte Schleifen
+          title: Kurs D
+          assignment_family_title: Kurs D
         coursee-2017:
           stages:
             Ice Age Play Lab:
@@ -1823,10 +1862,14 @@ de:
               name: Grundlagen aufbauen
             Nested Loops:
               name: Verschachtelte Schleifen
+          title: Kurs E
+          assignment_family_title: Kurs E
         coursef-2017:
           stages:
             Building a Foundation:
               name: Grundlagen aufbauen
+          title: Kurs F
+          assignment_family_title: Kurs F
         express-2017:
           stages:
             Introduction:
@@ -1999,6 +2042,7 @@ de:
             Lists:
               name: Listen
         coursea-2018:
+          assignment_family_title: Kurs A
           stages:
             'Debugging: Unspotted Bugs':
               name: Unentdeckte Bugs
@@ -2047,6 +2091,7 @@ de:
             Graph Paper Programming:
               name: Programmieren auf Millimeterpapier
         courseb-2018:
+          assignment_family_title: Kurs B
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Real-Life-Algorithmen: Pflanze Samen'
@@ -2054,7 +2099,10 @@ de:
               name: Dein digitaler Fußabdruck
             Move It, Move It:
               name: Bewegung, Bewegung
+            Copyright and Creativity:
+              name: Es ist großartig etwas zu erschaffen und fair zu spielen
         coursed-2018:
+          assignment_family_title: Kurs D
           stages:
             'Algorithms: Graph Paper Programming':
               name: Programmieren auf Millimeterpapier
@@ -2077,6 +2125,7 @@ de:
             Relay Programming:
               name: Relais-Programmierung
         coursec-2018:
+          assignment_family_title: Kurs C
           stages:
             Building a Foundation:
               name: Grundlagen aufbauen
@@ -2091,6 +2140,7 @@ de:
             Functions with Parameters:
               name: Funktionen mit Parametern
         coursee-2018:
+          assignment_family_title: Kurs E
           stages:
             'Programming: My Robotic Friends':
               name: Meine Roboterfreunde
@@ -2109,6 +2159,7 @@ de:
             Minecraft Hour of Code:
               name: Minecraft Hour of Code
         coursef-2018:
+          assignment_family_title: Kurs F
           stages:
             'Programming: My Robotic Friends':
               name: Meine Roboterfreunde
@@ -2201,6 +2252,8 @@ de:
               name: Bewegung, Bewegung
             Your Digital Footprint:
               name: Dein digitaler Fußabdruck
+            Copyright and Creativity:
+              name: Es ist großartig etwas zu erschaffen und fair zu spielen
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie und das große Projekt
         frozen-2018:
@@ -2261,6 +2314,11 @@ de:
               name: Programmieren auf Millimeterpapier
             Relay Programming:
               name: Relais-Programmierung
+              description_teacher: Diese Aktivität beginnt mit einer kurzen Lektion
+                über Debugging und Beharrlichkeit. Anschließend kommt es zu einem
+                Wettlauf mit der Zeit, wenn sich die Schüler zu Teams zusammen finden
+                und zusammenarbeiten, um ein Programm zu schreiben. Eine Anweisung
+                nach der anderen.
             Loops in Ice Age:
               name: Schleifen in Ice Age
             Conditionals with Cards:
@@ -2287,6 +2345,8 @@ de:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+            Simon Says:
+              name: Simon sagt
             Songwriting:
               name: Songschreiben
         express-2019:
@@ -2326,6 +2386,8 @@ de:
               name: Der große Event
             Binary Bracelets:
               name: Binäre Armbänder
+            Powerful Passwords:
+              name: Starke Passwörter
         gamelab:
           title: Spielelabor
         coursea-2019:
@@ -2475,6 +2537,8 @@ de:
               name: Geschwindigkeit
             Functions:
               name: Funktionen
+            Random Numbers:
+              name: Zufällige Zahlen
             Sprite Properties:
               name: Sprite Eigenschaften
         csl-vn:
@@ -2487,3 +2551,9 @@ de:
               name: Einführung
             Nested Loops:
               name: Verschachtelte Schleifen
+        dance-2019:
+          stages:
+            Dance Party:
+              name: Tanzparty
+          description: Codiere deine eigene Tanzparty, um sie mit deinen Freunden
+            zu teilen!

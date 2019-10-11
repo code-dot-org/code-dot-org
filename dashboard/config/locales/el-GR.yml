@@ -363,6 +363,7 @@ el:
       πάροχο.
     no_password_because_sponsored: Συμβουλευτείτε τον δάσκαλό σας για να διαχειριστεί
       τον κωδικό σας.
+    update_email: Ενημέρωση
   user_level:
     completed: Ολοκληρώθηκε
     tried: Δοκιμάστηκε

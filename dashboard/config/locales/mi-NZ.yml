@@ -285,6 +285,7 @@ mi:
     delete_text_teacher_note: 'Kia mōhio ai koe: e kore ngā pūkete o ngā ākonga e
       mukua ina mukua tō ake pūkete.'
     delete_confirm: Āe rānei e hiahia ana koe ki te muku i tō pūkete?
+    update_email: Whakahou
   user_level:
     completed: Kua oti
     tried: Kua ngana

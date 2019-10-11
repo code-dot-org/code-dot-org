@@ -22,16 +22,14 @@ export default class LibraryClientApi {
     );
   }
 
-  getLatest() {
+  getLatest(onSuccess, onError) {
     this.libraryApi.fetch(
       this.channelId + '/' + LIBRARY_NAME,
       (error, data) => {
         if (data) {
-          // in the future, responses will be passed back to the import dialog
-          console.log('Library: ' + data);
+          onSuccess(data);
         } else {
-          // In the future, errors will be surfaced to the user in the import dialog
-          console.warn('Error getting library: ' + error);
+          onError(error);
         }
       }
     );

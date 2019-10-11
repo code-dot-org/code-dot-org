@@ -14,11 +14,27 @@ de-DE:
       2-3 Artist 3.4: "Der \"springe\"-Block bewegt den Künstler, ohne eine Linie
         zu zeichnen. \nZeichne die gestrichelte Linie nach. Verwende dazu \"springe\"
         und \"bewegen\"-Blöcke."
+      2-3 Artist 3new: |-
+        Der rote Hut ist 100 Pixel hoch. Zeichne den schwarzen Hut, der 70 Pixel kleiner ist, zu Ende.
+        (Beachte: Die Breite des schwarzen Hutes beträgt 50 Pixel.)
       2-3 Artist 4: Hilf mir, das Haus für diese Katze zu vervollständigen.
       2-3 Artist 6: 'Dieses Haus braucht ein Dach! Zeichne das Dreieck.  Hinweis:
         alle drei Seiten sind gleich lang.'
+      2-3 Artist 7: 'Zeichne die rechte Hälfte des letzten Fensters zu Ende. Jedes
+        Quadrat der Fensterscheibe beträgt 25 Pixel. '
+      2-3 Artist 8: |-
+        Zeichne die Räume für die beiden Tiere.
+        Mach dazu ein Rechteck und teile es in 2 gleich große Quadrate.
+        Das Rechteck ist 200 Pixel breit und 100 Pixel hoch.
+        Es gibt viele Möglichkeiten, diese Aufgabe zu lösen. Also viel Spass!
       2-3 Artist 9 NEW: Vervollständige diesen Drachen
+      2-3 Artist Assessment 1: 'Prüfung: Vervollständige den letzten Zahn: 25 Pixel
+        breit und 25 Pixel hoch.'
       2-3 Artist Free Play: Freies Spiel! Zeichne was du willst.
+      2-3 Artist Loops New 10: Jetzt lass uns einen Haufen V's miteinander verbinden,
+        sie in einer Schleife zeichnen.
+      2-3 Artist Loops New 12: 'Zeichne einen Diamanten mit einer Seitenlänge von
+        100 Pixel. '
       2-3 Artist Loops New 15: Zeichne etwas, wozu du gerade Lust hast.
       2-3 Artist Nested Loops 10: Wiederhole diesen Code 12 Mal, um das Muster zu
         zeichnen.
@@ -30,10 +46,15 @@ de-DE:
       2-3 Bee Functions 3: Sammle den ganzen Nektar von allen Blumen.
       2-3 Bee Functions 6: Jetzt benutze dieselbe Funktion, um Nektar von den drei
         Blüten zu sammeln.
+      2-3 Bee Functions Assessment 2: 'Prüfung: Erzeuge eine Funktion, mit der man
+        sich drehen, vorwärts bewegen und 3 mal Honig erzeugen kann. Anschließend
+        lasse die Biene dahin zurückkehren wo sie angefangen hat und drehe um.'
       2-3 Bee Loops 2A: Kannst du diese Aufgabe mit einer Schleife vereinfachen?
       2-3 Bee Loops 3A: Kannst du eine Schleife verwenden um den ganzen Nektar einzusammeln?
       2-3 Maze 10: Führe mich zu dem grünen Bösewicht! (Pass auf das TNT auf)
       2-3 Maze 2: Dieses Schwein zerrauft meine Federn. Hilf mir, zu ihm zu kommen!
+      2-3 Maze 3: Verfolge den Pfad und führe mich zu dem dummen Schwein. Vermeide
+        das TNT, sonst fliegen die Federn!
       2-3 Maze 4: Führe mich zu dem grünen Bösewicht! (Pass auf das TNT auf)
       2-3 Maze 6: Bleib ruhig und hilf mir, das böse Schwein zu finden. Sonst könnte
         ich wütend werden!
@@ -54,6 +75,8 @@ de-DE:
         Dreieck zu zeichnen. Jede Seite hat eine Länge von 300 Pixeln.'
       4-5 Artist Free Draw 1: Freies Zeichnen!  Zeichne, was deine Inspiration dir
         eingibt.
+      4-5 Artist Patterns 11: 'Wie oft muss die Schleife durchlaufen werden, damit
+        ein Halbkreis gezeichnet wird? '
       4-5 Artist Patterns 7: Wir wollen den Code der letzten Aufgabe etwas verändern
         und so ein komplizierteres Muster erzeugen. Achte darauf, wie die Diamanten
         sich jetzt überdecken. Versuche es mit einer Änderung des ersten "springe
@@ -101,7 +124,10 @@ de-DE:
       4-5 Nested Loops 5: Benutze den angegebenen Code in einer Schleife, um eine
         Windmühle zu erstellen.
       4-5 Nested Loops 9: Zeichne die Zähne im Mund des Alligators!
+      AB_Debug_PlayLab3: Bewege den Ritter zu jeder der Flaggen. Wenn etwas schief
+        läuft, suchen Sie nach den Fehlern!
       Alien Defender: 'Projekt Idee: Macht ein Verteidigungsspiel in Play Lab!'
+      CDEF_debugging_flappy2: Warum funktioniert dieses Spiel nicht?
       CSD U5 black white images pixelation 5: Zeichne was du willst
       CSD U5 black white images pixelation 5_2018: Zeichne was du willst
       CSD U5 black white images pixelation 5_2019: Zeichne was du willst
@@ -134,6 +160,17 @@ de-DE:
         Wir haben dir ein Gitter aus „Pixeln“ zur Verfügung gestellt, durch das du laufen kannst und in dem du Designs erstellen kannst, indem du nur bestimmte Quadrate anschaltest.  Kannst du den Künstler „01010101“ in Binärcode in der ersten Reihe zeichnen lassen?
       Course 4 Artist For Loops 6a: Nimm drei kleine Änderungen an dem Code aus dem
         vorherigem Level vor, um dies zu erreichen!
+      Course 4 Bee 1: |-
+        Die Biene weiß nicht, was sich unter der Wolke verbirgt!
+
+        Benutze den „Wenn“-Baustein, um nachzusehen und nur dann Nektar zu sammeln, wenn eine Blume unter der Wolke ist.
+      Course 4 Bee Loops 5 NEW: Hier sind drei Blumen. Kannst du das Anweisungsmuster
+        finden, das du dreimal wiederholen musst, um den Nektar mit möglichst wenigen
+        Bausteinen zu sammeln?
+      Course 4 Bee Loops 5a NEW: Jetzt solltest Du Wiederholungen verwenden, um den
+        Bienen beim Einsammeln des Nektars auf ihrem Weg zur Bienenwabe zu helfen.
+        Benutze so wenige Bausteine, wie möglich!  Vergiss nicht am Schluss Honig
+        zu erzeugen!
       Course 4 Bee Params 5: 'Lass uns von vorne beginnen - erstelle eine neue Funktion
         mit einem Parameter für die Richtung. Gib ihr die Bezeichnung: „Nimm 5 Nektar".'
       Course 4 EC 1a: Keine Regeln. Keine Hinweise. Nur die Herausforderung!
@@ -143,6 +180,8 @@ de-DE:
       Course 4 EC 2c: Keine Regeln. Keine Hinweise. Nur die Herausforderung!
       Course 4 Maze 2: Vermeide das Dynamit!
       Course 4 Maze 3: 'Zeige dem bösen Vogel den Weg zum Schwein! '
+      Course 4 Maze 4: Versuche den "repeat"-Baustein, um bei der Lösung dieses Rätsels
+        weniger Bausteine zu verwenden...
       Course 4 Maze 5: Kannst du diese Aufgabe lösen und dabei die kleinstmögliche
         Anzahl an Bausteinen verwenden?
       Course 4 SCFL 1: Löse diese Aufgabe mit so wenig Bausteinen wie möglich.
@@ -222,17 +261,18 @@ de-DE:
       Dance_Party_12: Grooven Sie los! Erstellen Sie einen eigenen Tanz und teilen
         Sie ihn mit Ihren Freunden.
       Dance_Party_extras_battle: Tanzformation! (Klicke auf "Mehr" für weitere Details)
-      Dance_Party_extras_every_beat: Viertel-Noten! (Klicke auf "Mehr" für weitere
+      Dance_Party_extras_every_beat: Viertelnoten! (Klicke auf "Mehr" für weitere
         Details)
       Dance_Party_extras_layout: Stellen wir uns in Formation! (Klicke auf "Mehr"
         für weitere Details)
-      Dance_Party_extras_on_beat: Tiefen, Mitten, Höhen (Klicke auf "Mehr" für weitere
-        Details)
-      Dance_Party_extras_speed: Schneller, langsamer (Klicke auf "Mehr" für weitere
-        Details)
+      Dance_Party_extras_on_beat: Tiefen, Mitten und Höhen (Klicke auf "Mehr" für
+        weitere Details)
+      Dance_Party_extras_speed: Beschleunigen, verlangsamen (Klicke auf "Mehr" für
+        weitere Details)
       Dance_Party_extras_visible: Wo sind sie hin? (Klicke auf "Mehr" für weitere
         Details)
       FoodFight: Das ist ein Beispiel für ein Spiels, das du in Play Lab machen kannst.
+      Frequency Analysis: Test
       Function intro Ryan: Verwende zweimal die "Brücke bauen"-Funktion, um einen
         Weg zur Fackel zu bauen.
       Function intro Ryan_2019: Verwende zweimal die "Brücke bauen"-Funktion, um einen
@@ -278,6 +318,8 @@ de-DE:
         Linien zu zeichnen?
       K-1 Artist Loops 4: Könnte man mit einer Schleife das Dach der Burg zeichnen?
       K-1 Artist Loops 5: Was muss 4-mal wiederholt werden, um diese Treppe zu zeichnen?
+      K-1 Artist Loops 6: 'Diese braucht zwei Schleifen: eine, um die Treppe hoch
+        zu gehen und eine, um herunterzugehen.'
       K-1 Artist Loops 7: Schleifen können dir dabei helfen, dieses Muster fertigzustellen.
       K-1 Artist Loops 8: Diese Treppe hat längere Stufen.
       K-1 Artist Loops 9: Was ist der einfachste Weg, diese Treppe zu zeichnen?
@@ -299,9 +341,15 @@ de-DE:
       K-1 Artist2 Free Draw: Zeichne irgendwas!
       K-1 Artist2_7: Bei dieser Kommode fehlt noch die oberste Schublade! Zeichne
         ein Rechteck!
+      K-1 Bee 1: Bewege mich zur Blume, nimm den Nektar, bewege mich danach zur Honigwabe
+        und erzeuge Honig
       K-1 Bee 11: Hole 3 Nektar und mache dann 1 Honig.
       K-1 Bee 13: Hole 3 Nektar und mache dann 1 Honig!
       K-1 Bee 15: Hole zwei Portionen Nektar, um 2 Honig herzustellen.
+      K-1 Bee 2: Bewege mich zur Blume, nimm den Nektar, bewege mich danach zur Honigwabe
+        und erzeuge Honig
+      K-1 Bee 3: Bewege mich zur Blume, nimm den Nektar, bewege mich danach zur Honigwabe
+        und erzeuge Honig
       K-1 Bee 4: Hole zwei Portionen Nektar und stelle zwei Portionen Honig her.
       K-1 Bee 5: Hole drei Portionen Nektar und stelle drei Portionen Honig her.
       K-1 Bee 6: Hole zwei Portionen Nektar und stelle zwei Portionen Honig her.
@@ -316,7 +364,10 @@ de-DE:
       K-1 Bee Loops 7: Sammle Nektar und stelle Honig her.
       K-1 Bee Loops 8: Sammle Nektar und stelle Honig her.
       K-1 Bee Loops 9: Sammle den ganzen Nektar und stelle allen Honig her.
+      K-1 Bee Puzzle 12: Hole dreimal Nektar und mache dann zweimal Honig
       K-1 Maze 10: Gehe um das TNT herum, um mich zum Schwein zu bringen!
+      K-1 Maze 11: 'Verfolge den Weg und führe mich zu dem dummen Schwein. Vermeiden
+        das TNT, sonst fliegen die Federn! Hinweis: Es ist südlich von mir.'
       K-1 Maze 2: Bewege mich nach Osten, um mich zum Schwein zu bringen!
       K-1 Maze 3: Bewege mich nach Süden, um mich zum Schwein zu bringen!
       K-1 Maze 4: Bewege mich nach Norden, um mich zum Schwein zu bringen!
@@ -330,6 +381,11 @@ de-DE:
       K-1 Maze 9: Bewege mich in eine Richtung, dann in eine andere, um mich zum Schwein
         zu bringen!
       K-1 Maze Loops 1: Bring mich zum Schwein!
+      K-1 Maze Loops 11: |-
+        Bring mich zum Schwein!\
+        Mit der „Wiederholen“-Schleife geht es leichter.
+      K-1 Maze Loops 12: Bring mich zum Schwein! Mit der „Wiederholen“-Schleife geht
+        es leichter.
       K-1 Maze Loops 2: Benutze die “Wiederholen"-Schleife, um mich zum Schwein zu
         bringen.
       K-1 Maze Loops 3: Bring mich zum Schwein! Benutze auf jeden Fall die „Wiederholen“-Schleifen.
@@ -337,8 +393,34 @@ de-DE:
       K-1 Maze Loops 6: Bring mich zum Schwein! Benutze auf jeden Fall die „Wiederholen“-Schleifen.
       K-1 Maze Loops 7: Bring mich zum Schwein! Benutze auf jeden Fall die „Wiederholen“-Schleifen.
       K-1 Maze Loops 8: Benutze „Wiederholen“-Schleifen, um mich zum Schwein zu bringen.
+      K-1 Maze Sequence Assessment 1: |-
+        Schauen wir mal, was du gelernt hast!
+        Bewege mich in eine Richtung, dann in eine andere, um mich zum Schwein zu bringen.
+      K-1 Maze Sequence Assessment 2: Bewege mich in eine Richtung, dann in eine andere,
+        um mich zum Schwein zu bringen.
       K-1 artist 1 level 9: Dafür brauchst du drei Linien.
       K-1 maze debug 1: Bring mich zum Schwein, indem du den Code änderst.
+      K-1 maze debug 10: Bereinige diesen Level von Fehlern, indem du die Bausteine
+        so anordnest, dass ich das Schwein erreiche!
+      K-1 maze debug 11: |-
+        Dies ist ein Test!
+        Bereinige diesen Level von Fehlern, indem du die Bausteine so anordnest, dass ich das Schwein erreiche
+      K-1 maze debug 2: Finde heraus, was fehlt und ergänze dann Bausteine, um mich
+        zum Schwein zu bringen!
+      K-1 maze debug 3: Etwas ist nicht ganz richtig. ENTFERNE Bausteine, um mich
+        zu dem Schwein zu bringen!
+      K-1 maze debug 4: Gehe diese Bausteine durch und repariere sie! Ich glaube,
+        dass ich in die falsche Richtung gehe.
+      K-1 maze debug 5: Bereinige diesen Level von Fehlern, indem du die Bausteine
+        so anordnest, dass ich das Schwein erreiche!
+      K-1 maze debug 6: Bereinige diesen Level von Fehlern, indem du die Bausteine
+        so anordnest, dass ich das Schwein erreiche!
+      K-1 maze debug 7: Bereinige diesen Level von Fehlern, indem du die Bausteine
+        so anordnest, dass ich das Schwein erreiche!
+      K-1 maze debug 8: Bereinige diesen Level von Fehlern, indem du die Bausteine
+        neu anordnest und Bausteine ergänzt, damit ich das Schwein erreiche!
+      K-1 maze debug 9: Bereinige diesen Level von Fehlern, indem du die Bausteine
+        so anordnest, dass ich das Schwein erreiche!
       MC HOC 2016 Level 10: Es ist an der Zeit, dein eigenes Minecraft zu erstellen!
         Spawne Kreaturen und lass sie nach deiner Pfeife tanzen. Viel Spaß!
       MC HOC 2016 Level 2-2: Das Huhn ist eingefroren. Platziere `bewegen`- und `drehen`-Blöcke
@@ -469,6 +551,30 @@ de-DE:
         um Wolle von beiden Schafen zu sammeln.
       Overworld Shear Sheep_2019: Zeit zum Schafescheren! Benutze den Befehl "scheren",
         um Wolle von beiden Schafen zu sammeln.
+      Pixelation - Lesson 15 - Color Shades: Wir beginnen mit der Reihe von Rottönen,
+        die Maddie im Video kreiert hat. Experimentiere mit 6-Bit-Farben, indem du
+        die untere Zeile des Bildes mit Farbtönen einer anderen Farbe ausfüllst. Hier
+        ist ein Beispiel mit einigen Blautönen. Probiere deine eigene Farbe!
+      Pixelation - Lesson 15 - Color Shades 4x4: 'Wir beginnen mit dem 4x4 Bild, das
+        Maddie im Video erstellt hat. Deine Aufgabe ist es, ein 4x4-Raster mit Farben
+        mit 12 Bit pro Pixel zu füllen. Hier sind die Anforderungen: Reihe 1 - füllen
+        Sie mit Rottönen. Reihe 2 - Grüntöne. Reihe 3 - Blautöne. Reihe 4 - Graustufen.'
+      Pixelation - Lesson 15 - Complete 3-bit color: Wir beginnen mit dem 4x2-Bild,
+        das Maddie erstellt hat, aber wir haben die letzten beiden Felder weggelassen.
+        Vervollständige das Bild, indem du herausfindest, welche zwei Farben fehlen.
+        Kodiere diese dann.
+      Pixelation 4x4 Empty: Die Breite und Höhe sind nun in den Pixeldaten kodiert.
+        Kannst du herausfinden, wie du die Abmessungen anpassen kannst?
+      Pixelation Bee: 'Dieses größere Bild einer Biene kodiert Farbe mit 12 Bit pro
+        Pixel, aber das Betrachten in Hexadezimalen macht es einfacher, die Farbe
+        jedes Pixels zu sehen. Wenn du in den Binärmodus wechselst - halten Dich fest
+        - sind es viele Bits. Hier ist noch eine weitere spannende Sache, die du ausprobieren
+        kannst: Schiebe die Bits pro Pixel hoch bis auf 24 Bits pro Pixel. Was passiert
+        dann? Kannst du dieses Verhalten erklären?'
+      Pixelation Flappy: Hier ist ein größeres Bild mit 9 Bit pro Pixel. Mit 9 Bit
+        pro Pixel können 512 verschiedene Farben darstellt werden. Klicke dich durch,
+        um das nächste Bild zu sehen, das noch ausgefeilter, aber einfacher zu verstehen
+        ist.
       Standalone_Artist_1: Willkommen zu Künstler! Als Erstes versuchen wir, ein einfaches
         Quadrat zu zeichnen, indem wir den „Nach rechts drehen“-Baustein und den „Nach
         vorne bewegen“-Baustein verwenden. Jede Seite sollte 100 Pixel lang sein.
@@ -529,10 +635,15 @@ de-DE:
       Underground Mining Coal_2019: Du wirst die wertvollsten Rohstoffe unter der
         Erde finden, aber dort kann es dunkel sein. Platziere mindestens 2 Fackeln
         und baue mindestens 2 Kohleblöcke ab.
+      Vigenere: Test
       'Widget: Text Compression': Suche im Text nach Mustern (Worte oder Sätze die
         sich wiederholen). Trage die Muster die du findest in das Wörterbuch rechts
         ein. Wenn du einen Eintrag in das Wörterbuch machst, wird das Symbol des Eintrags
         die Muster im Text ersetzen.
+      behaviors 1: Mache eine Vorhersage!
+      behaviors 2: Flieg die Rackete zu den Sternen!
+      behaviors 4: Mache eine Vorhersage!
+      behaviors 5: Bewege den Astronauten diagonal.
       bounce_1: Hänge einen Baustein an den „wenn-Pfeil-nach-links“-Baustein und drücke
         „Ausführen“. Bewege den Schläger mit dem Linkspfeil, um das Ziel zu erreichen.
       bounce_10: Jetzt ist oben ein Tor. Hänge die Bausteine „Punkt erzielen“ und
@@ -612,6 +723,23 @@ de-DE:
         hüpfen, bis er das Ziel trifft.
       bounce_7_sports: Hänge Bausteine an beide „Sobald“-Bausteine. Lass den Ball
         hüpfen, bis er das Ziel trifft.
+      course1_artist_loops_challenge3: '"Kannst du mir helfen, zwei Vogelhäuser zu
+        bauen?"'
+      course1_maze_debugging_challenge1: Beseitige die Fehler in diesem Level. Entferne
+        die Blöcke, welche nicht passen, und füge die fehlenden Blöcke hinzu. Bring
+        den Vogel zum Schwein!
+      course1_maze_seq_challenge2: Du kannst dich nur bis zu viermal in jede Richtung
+        bewegen. Kannst du einen Weg finden, bevor dir die Bausteine ausgehen?
+      course1_playlab_events_challenge1: '"Wo verstecken sich meine Freunde? Kannst
+        du Code schreiben, um den Rest meiner Freunde zu zeigen?"'
+      course1_playlab_events_challenge2: '"Lasst uns eine Party feiern! Gib meinen
+        Freunden etwas zu tun, indem du sie anklickst oder antippst."'
+      course2_artist_prog_challenge1: Zeichne Räume für jedes Tier. Es gibt viele
+        verschiedene Möglichkeiten, dieses Rätsel zu lösen, also viel Spaß. Die kürzest
+        mögliche Lösung benötigt 6 Bausteine, aber verwende ruhig so viel du magst!
+      course2_collector_loops_challenge2: Hole alle Schätze!
+      course2_maze_programming_challenge1: '"Das Schwein versteckt sich! Kannst du
+        mir helfen, mich zurechtzufinden?"\_'
       course2_maze_programming_challenge2: Manchmal gibt es mehr als eine Lösung für
         ein Problem. Manchmal ist es schneller, rückwärts zu gehen, als vorwärts!
       course3_maze_debugging_challenge1: _"Gehe ich hier nur immer im Kreis herum?"_
@@ -709,6 +837,8 @@ de-DE:
         ein!
       courseA_collector_loops2_2018: Hier sind drei Stapel mit Schätzen. Sammle Sie
         alle ein!
+      courseA_collector_loops2_2019: Sammle alle drei Schätze ein! Bewege Laurel zu
+        jedem Edelstein und benutze dann den Sammelbaustein.
       courseA_collector_loops4: Behebe den Fehler in Laurels Weg, um alle Schätze
         zu bekommen.
       courseA_collector_loops4_2018: Behebe den Fehler in Laurels Weg, um alle Schätze
@@ -750,14 +880,30 @@ de-DE:
         zu finden?"_
       courseA_collector_loops_challenge1_2019: _"Kannst du mir helfen Fehler im Code
         zu finden?"_
+      courseA_collector_loops_challenge2: 'Hol Dir alle Schätze! '
       courseA_collector_loops_challenge2kp: Sammle mindestens **3** Schätze ein um
         dieses Level zu bestehen.
       courseA_collector_loops_challenge2kp_2018: Sammle mindestens **3** Schätze ein
         um dieses Level zu bestehen.
       courseA_collector_loops_challenge2kp_2019: Sammle mindestens **3** Schätze ein
         um dieses Level zu bestehen.
+      courseA_collector_preLoops1: "Das ist Laurel, die Abenteurerin! \n\nDrücken
+        Sie \"Ausführen\", um zu sehen, wie sie zum Schatz geht und ihn sich schnappt."
+      courseA_collector_preLoops2: "Großartig!  Jetzt können Sie selbst Code hinzufügen!
+        \ \n\nRaste den `Schatz holen` Baustein am unteren Rand des Programms ein
+        und klicke auf \"Ausführen\"."
+      courseA_collector_preLoops3: Raste zwei `E -->` Bausteine und einen `Schatz
+        holen` Baustein an den unteren Rand des Programms ein und klicke dann auf
+        "Ausführen".
+      courseA_collector_preLoops4: Findest du heraus, wie man das Rätsel lösen kann?
+      courseA_collector_preLoops5: Hol dir einen dieser 2 Edelsteine, um das Rätsel
+        zu lösen.
+      courseA_collector_preLoops6: Hole beide Teile des Schatzes um das Rätsel zu
+        lösen.
       courseA_collector_preLoops7: Hier sind drei Stapel mit Schätzen. Sammle Sie
         alle ein!
+      courseA_harvester_loops6_2019: Du benötigst **einen** `Bewege nach Süden` Baustein
+        und **einen** `Bewege nach Westen` Baustein.
       courseA_maze_seq1: Bring den Vogel zum bösen Schwein!
       courseA_maze_seq10: 'Herausforderung: Geh um das TNT herum, um den Vogel zum
         Schwein zu bringen! '
@@ -808,9 +954,13 @@ de-DE:
         Arbeitsbereich und schau was passiert!
       courseA_playLab_events1_2018: Das ist ein Spiel-Labor Level. Bewege Blöcke in
         den Arbeitsbereich und schau was passiert!
+      courseA_playLab_events1_2019: Dies ist ein Play Lab Level. Bewegen Sie Baustein
+        in den Arbeitsbereich und sehen Sie, was passiert!
       courseA_playLab_events2: Jorge, der Hund, will "Hallo." sagen. Kannst du ihm
         helfen?
       courseA_playLab_events2_2018: Jorge, der Hund, will "Hallo." sagen. Kannst du
+        ihm helfen?
+      courseA_playLab_events2_2019: Jorge, der Hund, will "Hallo." sagen. Kannst du
         ihm helfen?
       courseA_playLab_events3: Verbinde den "nach links bewegen"-Block mit dem "wenn
         links"-Ereignisblock, den Du bereits auf der Arbeitsfläche vorfindest!
@@ -855,6 +1005,10 @@ de-DE:
       courseA_video_events: Es braucht eine bessere Playlab/Ereignis Kombination
       courseA_video_events_2018: Es braucht eine bessere Playlab/Ereignis Kombination
       courseA_video_events_2019: Es braucht eine bessere Playlab/Ereignis Kombination
+      courseB_Scrat_ramp1_2018: Für dieses Rätsel musst du die Blöcke zusammenstecken
+        und "▶ Ausführen" drücken!
+      courseB_Scrat_ramp1_2019: Für dieses Rätsel musst du die Blöcke zusammenstecken
+        und "▶ Ausführen" drücken!
       courseB_artist_loops1: Dies ist eine neue Art von Aufgabe, sie hießt "Künstler".
         Spiele in diesem Level und zeichne etwas lustiges.
       courseB_artist_loops1_2018: Dies ist eine neue Art von Aufgabe, sie hießt "Künstler".
@@ -918,14 +1072,28 @@ de-DE:
         einzusammeln um diese Aufgabe zu beenden.
       courseB_collector_loops_challenge2a_2019: Hilf Laurel mindestens **5** Schätze
         einzusammeln um diese Aufgabe zu beenden.
+      courseB_iceage_loops7: 'Scrat möchte wirklich gern zur Eichel kommen! '
+      courseB_iceage_loops7_2019: 'Scrat möchte wirklich gern zur Eichel kommen! '
+      courseB_maze_seq11_2018: Es ist an Dir!  Bring Scrat zur Eichel.
+      courseB_maze_seq11_2019: Es ist an Dir!  Bring Scrat zur Eichel.
       courseB_maze_seq12: Jetzt bekomme das Schwein auf irgendeine Art und Weise!
       courseB_maze_seq12_2018: Jetzt bekomme das Schwein auf irgendeine Art und Weise!
       courseB_maze_seq12_2019: Jetzt bekomme das Schwein auf irgendeine Art und Weise!
       courseB_maze_seq2: _"Ein Fehler! Repariere den Code, damit ich das Schwein bekomme."_
+      courseB_maze_seq5_2018: Dieses Rätsel ist ein wenig knifflig!
+      courseB_maze_seq5_2019: Dieses Rätsel ist ein wenig knifflig!
       courseB_maze_seq6: Gehe zuerst in eine Richtung und dann in eine andere, um
         den Vogel zum Schwein zu bringen!
+      courseB_maze_seq6_2018: Bewege dich in eine Richtung, dann in eine andere, um
+        Scrat zur Eichel zu bringen!
+      courseB_maze_seq6_2019: Bewege dich in eine Richtung, dann in eine andere, um
+        Scrat zur Eichel zu bringen!
       courseB_maze_seq7: Finde heraus was fehlt, und füge dann Blöcke hinzu, um den
         Vogel zum Schwein zu bringen!
+      courseB_maze_seq7_2018: Finde heraus, was fehlt und füge dann Blöcke hinzu,
+        damit Scrat an die Eichel kommt!
+      courseB_maze_seq7_2019: Finde heraus, was fehlt und füge dann Blöcke hinzu,
+        damit Scrat an die Eichel kommt!
       courseB_maze_seq8: Du bist dran! Was musst du machen um den Vogel zum Schwein
         zu bringen?
       courseB_maze_seq9: 'Aufgabe: Bewege das TNT um den Vogel zum Schwein zu bekommen.'
@@ -934,12 +1102,21 @@ de-DE:
         kann.
       courseB_playLab_events1_2019: Mal sehen, ob du herausfindest, was jeder Block
         kann.
+      courseC19_playLab_EOC5: Tolle Arbeit! Du hast alle grundlegenden Komponenten
+        für ein funktionierendes Spiel. Verbringe nun Zeit damit, sicherzustellen,
+        dass das Spiel so funktioniert, wie du es dir vorstellst.
       courseC_PlayLab_events3: Kannst Du ein Programm schreiben, so dass Jorge, der
         Hund (Figur 1) sich zu Olivia, der Katze hinbewegt?
       courseC_PlayLab_events3_2018: Kannst Du ein Programm schreiben, so dass Jorge,
         der Hund (Figur 1) sich zu Olivia, der Katze hinbewegt?
       courseC_PlayLab_events3_2019: Kannst Du ein Programm schreiben, so dass Jorge,
         der Hund (Figur 1) sich zu Olivia, der Katze hinbewegt?
+      courseC_PlayLab_eventsA_embed_2019: Lasst uns ein Spiel spielen. Erreiche 5
+        Punkte, indem du den Pinguin auf den Oktopus bewegst!
+      courseC_artist_loops2a_2019: Verwende nun eine Schleife, um weitere Kopien Deines
+        Aufklebers zu erstellen. Versuche, die Zahlenwerte für die Drehung zu ändern
+        und wiederhole Bausteine, um verschiedene Muster zu erstellen.
+      courseC_artist_loops3a_2019: Jetzt füge eine zweiten Aufkleber hinzu!
       courseC_artist_prog5: 'Dieses Haus braucht ein Dach! Zeichne das Dreieck.  Hinweis:
         alle drei Seiten sind gleich lang.'
       courseC_artist_prog5_2018: 'Dieses Haus braucht ein Dach! Zeichne das Dreieck.  Hinweis:
@@ -952,6 +1129,63 @@ de-DE:
         helfen kannst, die Schätze einzusammeln.
       courseC_collector_prog1_2019: Spiel mit den Blöcken und schau, ob du Laurel
         helfen kannst, die Schätze einzusammeln.
+      courseC_collector_prog2: Bewegen Laurel zum Schatz und benutze dann 'sammle'
+        um ihn aufzuheben.
+      courseC_collector_prog2_2018: Bewegen Laurel zum Schatz und benutze dann 'sammle'
+        um ihn aufzuheben.
+      courseC_collector_prog2_2019: Bewegen Laurel zum Schatz und benutze dann 'sammle'
+        um ihn aufzuheben.
+      courseC_collector_prog3: Ordne diese Blöcke so an, dass der Schatz eingesammelt
+        wird, und löse damit die Aufgabe.
+      courseC_collector_prog3_2018: Ordne diese Blöcke so an, dass der Schatz eingesammelt
+        wird, und löse damit die Aufgabe.
+      courseC_collector_prog3_2019: Ordne diese Blöcke so an, dass der Schatz eingesammelt
+        wird, und löse damit die Aufgabe.
+      courseC_collector_prog4: Bringe diese Blöcke in die richtige Reihenfolge um
+        alle Schätze zu sammeln und die Aufgabe zu lösen.
+      courseC_collector_prog4_2018: Bringe diese Blöcke in die richtige Reihenfolge
+        um alle Schätze zu sammeln und die Aufgabe zu lösen.
+      courseC_collector_prog4_2019: Bringe diese Blöcke in die richtige Reihenfolge
+        um alle Schätze zu sammeln und die Aufgabe zu lösen.
+      courseC_collector_prog5: Diese Blöcke sind in der falschen Reihenfolge angeordnet.
+        Kannst du das in Ordnung bringen?
+      courseC_collector_prog5_2018: Diese Blöcke sind in der falschen Reihenfolge
+        angeordnet. Kannst du das in Ordnung bringen?
+      courseC_collector_prog5_2019: Diese Blöcke sind in der falschen Reihenfolge
+        angeordnet. Kannst du das in Ordnung bringen?
+      courseC_collector_prog6: Ordne die Blöcke neu an um alle Schätze einzusammeln.
+      courseC_collector_prog6_2018: Ordne die Blöcke neu an um alle Schätze einzusammeln.
+      courseC_collector_prog6_2019: Ordne die Blöcke neu an um alle Schätze einzusammeln.
+      courseC_collector_prog7: Nimm Blöcke aus der Werkzeugkiste um alle Blöcke einzusammeln.
+      courseC_collector_prog7_2018: Nimm Blöcke aus der Werkzeugkiste um alle Blöcke
+        einzusammeln.
+      courseC_collector_prog7_2019: Nimm Blöcke aus der Werkzeugkiste um alle Blöcke
+        einzusammeln.
+      courseC_collector_prog8: _"Bleib weiter so gut an der Arbeit! Hilf mir, alle
+        Schätze einzusammeln."_
+      courseC_collector_prog8_2018: _"Bleib weiter so gut an der Arbeit! Hilf mir,
+        alle Schätze einzusammeln."_
+      courseC_collector_prog8_2019: _"Bleib weiter so gut an der Arbeit! Hilf mir,
+        alle Schätze einzusammeln."_
+      courseC_collector_prog9: _"Lass uns alle Schätze sammeln!"_
+      courseC_collector_prog9_2018: _"Lass uns alle Schätze sammeln!"_
+      courseC_collector_prog9_2019: _"Lass uns alle Schätze sammeln!"_
+      courseC_collector_prog_challenge1: Schau genau! Kannst du alle **10** Schätze
+        einsammeln?
+      courseC_collector_prog_challenge1_2018: Schau genau! Kannst du alle **10** Schätze
+        einsammeln?
+      courseC_collector_prog_challenge1_2019: Schau genau! Kannst du alle **10** Schätze
+        einsammeln?
+      courseC_collector_prog_challenge2: Sammle mindesten **10** Schätze ein um diese
+        Herausforderung zu beenden!
+      courseC_collector_prog_challenge2_2018: Sammle mindesten **10** Schätze ein
+        um diese Herausforderung zu beenden!
+      courseC_collector_prog_challenge2_2019: Sammle mindesten **10** Schätze ein
+        um diese Herausforderung zu beenden!
+      courseC_data wizard: "Drücke \"Ausführen\". \nDer Zauberer lässt Tiere erscheinen.
+        \n\nZähle sie. \nWas fällt dir auf?"
+      courseC_maze_debugging9_2019: Verwende die Bausteine in der Toolbox, um Ihr
+        Programm zu erstellen. Bring den Vogel zum Schwein.
       courseC_maze_programming1: Für diese Aufgabe musst du alle Blöcke zusammensetzen,
         auf 'Ausführen' klicken und zusehen, wie es läuft!
       courseC_maze_programming1_2018: Für diese Aufgabe musst du alle Blöcke zusammensetzen,
@@ -1005,6 +1239,83 @@ de-DE:
         für ein Problem. Manchmal ist es schneller, rückwärts zu gehen, als vorwärts!
       courseC_maze_programming_challenge2_2019: Manchmal gibt es mehr als eine Lösung
         für ein Problem. Manchmal ist es schneller, rückwärts zu gehen, als vorwärts!
+      courseC_starWars_loops1: BB-8 hebt alles Altmetall, das entlang seines Weges
+        liegt, auf. Nimm 5 mal den gleichen Block, damit BB-8 den ganzen Metallschrott
+        im Spielbereich aufhebt.
+      courseC_starWars_loops10: Du machst das super! Mach weiter so!
+      courseC_starWars_loops10_2018: Du machst das super! Mach weiter so!
+      courseC_starWars_loops10_2019: Du machst das super! Mach weiter so!
+      courseC_starWars_loops10_predict2: Du machst das super! Mach weiter so!
+      courseC_starWars_loops10_predict2_2018: Du machst das super! Mach weiter so!
+      courseC_starWars_loops10_predict2_2019: Du machst das super! Mach weiter so!
+      courseC_starWars_loops11: Du hast es fast geschafft! Suche dir dieses Mal einen
+        Pfad, so wie du ihn magst!
+      courseC_starWars_loops11_2018: Du hast es fast geschafft! Suche dir dieses Mal
+        einen Pfad, so wie du ihn magst!
+      courseC_starWars_loops11_2019: Du hast es fast geschafft! Suche dir dieses Mal
+        einen Pfad, so wie du ihn magst!
+      courseC_starWars_loops1_2018: BB-8 hebt alles Altmetall, das entlang seines
+        Weges liegt, auf. Nimm 5 mal den gleichen Block, damit BB-8 den ganzen Metallschrott
+        im Spielbereich aufhebt.
+      courseC_starWars_loops1_2019: BB-8 hebt alles Altmetall, das entlang seines
+        Weges liegt, auf. Nimm 5 mal den gleichen Block, damit BB-8 den ganzen Metallschrott
+        im Spielbereich aufhebt.
+      courseC_starWars_loops1_predict1: BB-8 hebt alles Altmetall, das entlang seines
+        Weges liegt, auf. Nimm 5 mal den gleichen Block, damit BB-8 den ganzen Metallschrott
+        im Spielbereich aufhebt.
+      courseC_starWars_loops1_predict1_2018: BB-8 hebt alles Altmetall, das entlang
+        seines Weges liegt, auf. Nimm 5 mal den gleichen Block, damit BB-8 den ganzen
+        Metallschrott im Spielbereich aufhebt.
+      courseC_starWars_loops1_predict1_2019: BB-8 hebt alles Altmetall, das entlang
+        seines Weges liegt, auf. Nimm 5 mal den gleichen Block, damit BB-8 den ganzen
+        Metallschrott im Spielbereich aufhebt.
+      courseC_starWars_loops2: Um den ganzen Metallschrott aufzusammeln, versuche
+        eine Schleife zu erstellen, in der nur ein Block im 'wiederholen' Block verwendet
+        wird.
+      courseC_starWars_loops2_2018: Um den ganzen Metallschrott aufzusammeln, versuche
+        eine Schleife zu erstellen, in der nur ein Block im 'wiederholen' Block verwendet
+        wird.
+      courseC_starWars_loops2_2019: Um den ganzen Metallschrott aufzusammeln, versuche
+        eine Schleife zu erstellen, in der nur ein Block im 'wiederholen' Block verwendet
+        wird.
+      courseC_starWars_loops4: Um in dieser Aufgabe BB-8 zum ganzen Metallschrott
+        zu bringen und dabei so wenig Blöcke wie möglich zu verwenden werden dir 2
+        'wiederholen' Schleifen helfen!
+      courseC_starWars_loops4_2018: Um in dieser Aufgabe BB-8 zum ganzen Metallschrott
+        zu bringen und dabei so wenig Blöcke wie möglich zu verwenden werden dir 2
+        'wiederholen' Schleifen helfen!
+      courseC_starWars_loops4_2019: Um in dieser Aufgabe BB-8 zum ganzen Metallschrott
+        zu bringen und dabei so wenig Blöcke wie möglich zu verwenden werden dir 2
+        'wiederholen' Schleifen helfen!
+      courseC_starWars_loops5: Bringe BB-8 dazu den ganzen Metallschrott so schnell
+        wie möglich einzusammeln!
+      courseC_starWars_loops5_2018: Bringe BB-8 dazu den ganzen Metallschrott so schnell
+        wie möglich einzusammeln!
+      courseC_starWars_loops5_2019: Bringe BB-8 dazu den ganzen Metallschrott so schnell
+        wie möglich einzusammeln!
+      courseC_starWars_loops6: Schleifen funktionieren auch mit mehr als einem Block
+        drin! Kannst du diese Abfolge in einer Schleife zusammenfassen?
+      courseC_starWars_loops6_2018: Schleifen funktionieren auch mit mehr als einem
+        Block drin! Kannst du diese Abfolge in einer Schleife zusammenfassen?
+      courseC_starWars_loops6_2019: Schleifen funktionieren auch mit mehr als einem
+        Block drin! Kannst du diese Abfolge in einer Schleife zusammenfassen?
+      courseC_starWars_loops7: Schaffst du es mit nur einer Schleife den ganzen Metallschrott
+        zu sammeln? Versuche zuerst alle Schritte einzeln zu programmieren und finde
+        dann heraus, welchen wiederholenden Code du in ein Schleife geben kannst.
+      courseC_starWars_loops7_2018: Schaffst du es mit nur einer Schleife den ganzen
+        Metallschrott zu sammeln? Versuche zuerst alle Schritte einzeln zu programmieren
+        und finde dann heraus, welchen wiederholenden Code du in ein Schleife geben
+        kannst.
+      courseC_starWars_loops7_2019: Schaffst du es mit nur einer Schleife den ganzen
+        Metallschrott zu sammeln? Versuche zuerst alle Schritte einzeln zu programmieren
+        und finde dann heraus, welchen wiederholenden Code du in ein Schleife geben
+        kannst.
+      courseC_starWars_loops9: Benutze, was du bisher gelernt hast um den ganzen Metallschrott
+        aufzusammeln!
+      courseC_starWars_loops9_2018: Benutze, was du bisher gelernt hast um den ganzen
+        Metallschrott aufzusammeln!
+      courseC_starWars_loops9_2019: Benutze, was du bisher gelernt hast um den ganzen
+        Metallschrott aufzusammeln!
       courseD_artist_binary1: |-
         Bei der binären Schreibweise werden Informationen mit nur zwei Optionen repräsentiert.  Hier nutzen wir die Option „aus“ (dargestellt durch die Nummer 0) und „an“ (dargestellt durch die Nummer 1).
 
@@ -1047,6 +1358,14 @@ de-DE:
         Honig bei jeder Honigwabe. Benutze eine verschachtelte Schleife.
       courseD_bee_nestedLoops8_2019: Sammle den gesamten Nektar jeder Blüte und erzeuge
         Honig bei jeder Honigwabe. Benutze eine verschachtelte Schleife.
+      courseD_collector_ramp10: Hilf Laurel alle Schätze einzusammeln.
+      courseD_collector_ramp8: Hilf Laurel alle Schätze einzusammeln.
+      courseD_collector_ramp9: Hilf Laurel alle Schätze einzusammeln.
+      courseD_iceage_loops7: 'Scrat möchte wirklich gern zur Eichel kommen! '
+      courseD_iceage_loops7_2019: 'Scrat möchte wirklich gern zur Eichel kommen! '
+      courseD_maze_intro4_2019: Hilf Red, das Schwein zu erreichen.
+      courseD_maze_intro5a_2019: Zählen Sie die Felder auf dem Gitter sorgfältig!
+      courseD_maze_intro5c_2019: Achten Sie auf TNT! Hilf Red, zum Schwein zu kommen.
       courseD_maze_nestedLoops4: |-
         Bring mich zu der Sonnenblume!
         (Hinweis: Du musst eine „Wiederholen“-Schleife innerhalb einer anderen benutzen, um dieses Level zu bestehen.
@@ -1059,8 +1378,11 @@ de-DE:
       courseD_maze_nestedLoops6: Bring mich zu der Sonnenblume!
       courseD_maze_nestedLoops6_2018: Bring mich zu der Sonnenblume!
       courseD_maze_nestedLoops6_2019: Bring mich zu der Sonnenblume!
+      courseD_maze_ramp3_2019: Wirf den zusätzlichen "vorwärts bewegen" Baustein weg.
+      courseD_maze_ramp5a_2019: Zählen Sie die Felder auf dem Gitter sorgfältig!
       courseD_maze_ramp6: '"Bleib ruhig und hilf mir das böse Schwein zu finden. Sonst
         könnte ich wütend werden!"'
+      courseD_scrat_ramp5: Vermeiden Sie das gerissene Eis.
       courseE_artist_functions1: 'Hallo. Ich Zombie-Künstler. Ich zeichnen liebe!
         Hilf mir, die quadratischen Gläser zu zeichnen.  Hinweis: Die Brücke zwischen
         den Gläsern ist 25 Pixel kürzer als die Länge der Quadrate.'
@@ -1142,6 +1464,8 @@ de-DE:
         machen."
       courseF_bee_fwp8: Benutze deine neue Funktion um die Spirale zu lösen.
       courseF_bee_fwp9_predict1: Benutze deine neue Funktion um dieses Puzzle zu lösen.
+      express_maze_debugging9_2019: Verwende die Blöcke in der Toolbox, um ein Programm
+        zu erstellen. Bringt Scrat zur Eichel.
       flappy_1: Füge dem "Beim Klicken"-Baustein einen weiteren Baustein hinzu und
         drücke dann "Ausführen". Klicke oder tippe auf den Bildschirm, um Flappy zum
         Ziel zu bewegen.
@@ -1222,6 +1546,15 @@ de-DE:
       frozen square snowflake: Kannst du eine Schneeflocke erstellen, indem du den
         „Wiederholen"-Baustein 10 mal benutzt, um ein Quadrat zu erstellen und nach
         jedem Quadrat den „Drehen"-Baustein mit 36° benutzt?
+      grade2_collector_10: Du bist fast fertig! Sammle so viele Schätze wie du kannst
+        ein, um diesen Teil zu beenden!
+      grade2_collector_10_2018: Du bist fast fertig! Sammle so viele Schätze wie du
+        kannst ein, um diesen Teil zu beenden!
+      grade2_collector_10_2019: Du bist fast fertig! Sammle so viele Schätze wie du
+        kannst ein, um diesen Teil zu beenden!
+      grade2_collector_A: Hilf Laurel alle Schätze einzusammeln.
+      grade2_collector_A_2018: Hilf Laurel alle Schätze einzusammeln.
+      grade2_collector_A_2019: Hilf Laurel alle Schätze einzusammeln.
       grade5_artist_binary11: 'Freies Spiel: Hier ist eine leere Leinwand für dich
         zum Zeichnen.  Viel Spaß!'
       grade5_artist_binary4: Kannst du dieses Muster zeichnen, indem du eine dreistellige
@@ -1234,7 +1567,24 @@ de-DE:
         Hier ist eine Leinwand mit einer höheren Auflösung um darauf zu zeichnen - 16 Pixel mal 16 Pixel!
 
         Siehst du, was passiert, wenn wir anfangen mit den Bits kreativ zu werden?
+      grade5_pixelation: Kodiere ein Bild von allem, was du magst, mit Binärdateien.
+        Die binäre Sprache wird nur mit '0' und '1' dargestellt.
       k-1 maze 1: Kannst du mich nach Westen bewegen, damit ich zum Schwein komme?
+      mike3bit: Wir beginnen mit dem 4x2-Bild, das Maddie erstellt hat, aber wir haben
+        die letzten Pixel weggelassen. Vervollständige das Bild, indem du herausfinden,
+        welche Farben fehlen. Kodieren diese dann.
+      mike3bitbird: Hier ist ein Beispiel für ein Bild, das mit einer 3-Bit-Farbe
+        erstellt wurde. Versuchen Sie, es zu ändern, um zu verstehen, wie es funktioniert.
+        Wenn Sie das Bild zurücksetzen möchten, drücken Sie "Zurücksetzen".
+      mike3bitfreeplay: Mache etwas Fantastisches und teile es mit deinen Klassenkameraden!
+        Sie können den Wert eines Pixels kopieren und einfügen, um ihn wiederholt
+        zu verwenden.
+      mike3bitmario: "Ein unvorsichtiger Binärcodierer hat versehentlich in EINE zusätzliche
+        0 oder 1 irgendwo die Bilddaten eingegebn. Dadurch sieht Marion nun etwas
+        komisch aus! \n\nLösche das zusätzliche Bit, um Mario wieder normal aussehen
+        zu lassen!"
+      ramp_artist_loops4_2019: Erstelle dieses Sternenmuster, indem du eine Reihe
+        von ´bewege vorwärts´ Bausteine und ´drehe rechts um 144 Grad" wiederholst.
       scrat 16: Eichel! Eichel! Eichel! Verwende einen „Wenn"-Baustein, um mich mit
         der geringsten Anzahl an Bausteinen zum Ziel zu bringen.
       scrat 17: OK, nochmals zum Üben - das ist nicht sehr unterschiedlich, aber man

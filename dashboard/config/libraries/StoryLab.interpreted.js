@@ -5,16 +5,17 @@ var currentSceneNumber = 0;
 var scenes = [];
 
 function addBehaviorUntilBoolean(spriteId, behavior, condition) {
-  setProp(spriteId, behavior.name, JSON.stringify(function() { return condition; }));
-  console.log(getProp(spriteId, behavior.name));
+  // this doesn't work the way it should
+  setProp(spriteId, behavior.name, function() { return condition; });
   addBehaviorSimple(spriteId, behavior);
 }
 
 function removeInvalidBehaviors() {
   getSpriteIdsInUse().forEach(function(spriteId) {
   	getBehaviorsForSpriteId(spriteId).forEach(function(behavior) {
-      //console.log(JSON.parse(getProp(spriteId, behavior))());
+      console.log(getProp(spriteId, behavior)());
       if(getProp(spriteId, behavior)()) {
+        console.log("oh snap");
         removeBehaviorSimple(spriteId, behavior);
       }
     });

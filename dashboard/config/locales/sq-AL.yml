@@ -349,6 +349,7 @@ sq:
     delete_text_teacher_note: 'Ju lutem vini re: duke fshirë llogarinë tuaj nuk do
       të fshihen llogaritë e studentëve të tjerë.'
     delete_confirm: A je i sigurtë që do të fshish llogarinë tënde?
+    update_email: Përditëso
   user_level:
     completed: E përfunduar
     tried: U përpoqe

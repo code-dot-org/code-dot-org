@@ -4716,7 +4716,7 @@ sk:
             Spelling Bee:
               name: Včela Hláskovanie
             Programming in Maze:
-              name: Programovanie so Scratom
+              name: Programovanie s Angry Birds
             Programming in Harvester:
               name: Programovanie so Záhradníčkou
             Tell a Story in Play Lab:
@@ -4941,3 +4941,8 @@ sk:
               name: Projekt s vnorenými cyklami vo Frozen
             Nested Loops in Frozen:
               name: Vnorené cykly vo Frozen
+        dance-2019:
+          stages:
+            Dance Party:
+              name: Tanečná Párty
+          description: Nakóduj si vlastnú Tanečnú párty a zdieľaj ju s kamarátmi!
