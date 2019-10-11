@@ -10,6 +10,9 @@ ms:
   campaign_date_full: "Disember 4-10"
   campaign_date_year: "2017"
   campaign_date_full_year: "Disember 4-10, 2017"
+  hoc2019_header: 'Pelajari sains komputer. Ubah dunia.'
+  hoc2019_header_line1_mobile: 'Pelajari sains komputer.'
+  hoc2019_header_line2_mobile: 'Ubah dunia.'
   codeorg_homepage_hoc2018_curriculum: 'Go further with <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org courses</a>'
   codeorg_homepage_hoc2018_dance_heading: 'Create your own <span class="highlight-word">Dance&nbsp;Party</span>'
   codeorg_homepage_hoc2018_header_line1: 'The Hour of Code is coming...'

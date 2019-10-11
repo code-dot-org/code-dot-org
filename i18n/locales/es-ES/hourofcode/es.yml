@@ -10,6 +10,9 @@
   campaign_date_full: "Del 7 al 13 de diciembre"
   campaign_date_year: "2017"
   campaign_date_full_year: "Del 4 al 10 de diciembre de 2017"
+  hoc2019_header: 'Aprende a programar. Cambia el mundo.'
+  hoc2019_header_line1_mobile: 'Aprende a programar.'
+  hoc2019_header_line2_mobile: 'Cambia el mundo.'
   codeorg_homepage_hoc2018_curriculum: 'Go further with <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org courses</a>'
   codeorg_homepage_hoc2018_dance_heading: 'Create your own <span class="highlight-word">Dance&nbsp;Party</span>'
   codeorg_homepage_hoc2018_header_line1: 'The Hour of Code is coming...'
@@ -1065,7 +1068,7 @@
   tutorial_duckrace_name: "The Big Duck Race"
   tutorial_allcancodeapps_name: "Allcancode Platform: Build web and mobile apps in Blockly"
   tutorial_n2y_name: "Bitt Bott Explores Earth"
-  tutorial_danceparty_shortdescription: "Code a Dance Party to share with your friends. Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!"
+  tutorial_danceparty_shortdescription: "Programa una Fiesta de baile y compártela con tus amigos. ¡Con Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara y 25 artistas más!"
   tutorial_chibitronics_shortdescription: "Program a paper circuit to light up your own story."
   tutorial_athlete_shortdescription: "¡Elige entre hacer un juego de baloncesto o mezclar y combinar deportes!"
   tutorial_moana_shortdescription: "Moana es valiente, intrépida y está decidida a encontrar su propio camino."
@@ -1643,7 +1646,7 @@
   tutorial_duckrace_shortdescription: "In this course you will solve programming tasks to help Toni the duck collect coins for its holiday savings. At the end of the course you create your own game."
   tutorial_allcancodeapps_shortdescription: "Use the Allcancode Platform to create web and mobile apps from design to delivery."
   tutorial_n2y_shortdescription: "Help Bitt Bott explore Earth using direction arrows."
-  tutorial_danceparty_longdescription: "Code a Dance Party to share with your friends. Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!"
+  tutorial_danceparty_longdescription: "Programa una Fiesta de baile y compártela con tus amigos. ¡Con Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara y 25 artistas más!"
   tutorial_chibitronics_longdescription: "Program a paper circuit to light up your own story."
   tutorial_athlete_longdescription: "¡Elige entre hacer un juego de baloncesto o mezclar y combinar deportes!"
   tutorial_moana_longdescription: "El nuevo tutorial de Disney Hour of Code usa un lenguaje de programación visual que usa bloques donde los estudiantes simplemente arrastran y sueltan bloques visuales para escribir el código. La programación visual es una forma divertida y fácil de entender para enseñar la lógica de la codificación. La exposición a la programación visual sienta las bases para la programación basada en texto, una actividad más compleja. El tutorial está dirigido a niños mayores de 8 años y aquellos que intentan programar por primera vez. Disponible en 23 idiomas y localizado fuera de los Estados Unidos. Este tutorial está disponible en línea gratis e incluye un juego de herramientas digital en inglés y español para educadores y organizadores de eventos."
