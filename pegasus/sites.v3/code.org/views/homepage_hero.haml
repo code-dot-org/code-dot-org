@@ -4,7 +4,7 @@
   actions = Homepage.get_actions
 
 - main_actions = capture_haml do
-  - show_single_hero == "hoc2019"
+  - if show_single_hero == "hoc2019"
     .hero-message
       = hoc_s(:hoc2019_header_line1_mobile)
     .hero-message-second
