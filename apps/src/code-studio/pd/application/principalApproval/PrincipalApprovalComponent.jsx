@@ -178,10 +178,6 @@ export default class PrincipalApprovalComponent extends LabeledFormComponent {
         })}
         {this.props.data.replaceCourse === YES &&
           this.renderCourseReplacementSection()}
-        {this.props.teacherApplication.course ===
-          'Computer Science Discoveries' && this.checkBoxesFor('csdWhichUnits')}
-        {this.props.teacherApplication.course ===
-          'Computer Science Principles' && this.checkBoxesFor('cspWhichUnits')}
         {this.radioButtonsWithAdditionalTextFieldsFor(
           'committedToDiversity',
           {
@@ -361,7 +357,7 @@ export default class PrincipalApprovalComponent extends LabeledFormComponent {
    * @override
    */
   static getDynamicallyRequiredFields(data) {
-    const requiredFields = ALWAYS_REQUIRED_FIELDS;
+    let requiredFields = [...ALWAYS_REQUIRED_FIELDS];
 
     if (data.school && data.school === '-1') {
       requiredFields.push(
@@ -376,20 +372,13 @@ export default class PrincipalApprovalComponent extends LabeledFormComponent {
 
     if (data.doYouApprove !== 'No') {
       requiredFields.push(...REQUIRED_SCHOOL_INFO_FIELDS);
-    }
-
-    if (data.replaceCourse === YES) {
-      if (data.course === 'Computer Science Discoveries') {
-        requiredFields.push('replaceWhichCourseCsd');
-      } else if (data.course === 'Computer Science Principles') {
-        requiredFields.push('replaceWhichCourseCsp');
+      if (data.replaceCourse === YES) {
+        if (data.course === 'Computer Science Discoveries') {
+          requiredFields.push('replaceWhichCourseCsd');
+        } else if (data.course === 'Computer Science Principles') {
+          requiredFields.push('replaceWhichCourseCsp');
+        }
       }
-    }
-
-    if (data.course === 'Computer Science Discoveries') {
-      requiredFields.push('csdWhichUnits');
-    } else if (data.course === 'Computer Science Principles') {
-      requiredFields.push('cspWhichUnits');
     }
 
     return requiredFields;
@@ -399,7 +388,7 @@ export default class PrincipalApprovalComponent extends LabeledFormComponent {
    * @override
    */
   static getErrorMessages(data) {
-    const formatErrors = {};
+    let formatErrors = {};
 
     if (data.totalStudentEnrollment && !isInt(data.totalStudentEnrollment)) {
       formatErrors.totalStudentEnrollment = 'Must be a valid number';
@@ -418,31 +407,35 @@ export default class PrincipalApprovalComponent extends LabeledFormComponent {
    * @override
    */
   static processPageData(data) {
-    const changes = {};
-    const fieldsToClear = new Set();
+    let changes = {};
+    let fieldsToClear = [];
 
     // Clear out all the form data if the principal rejects the application
     if (data.doYouApprove === 'No') {
-      fieldsToClear.add([
-        ...REQUIRED_SCHOOL_INFO_FIELDS,
-        REPLACE_COURSE_FIELDS
-      ]);
+      fieldsToClear = fieldsToClear.concat(REQUIRED_SCHOOL_INFO_FIELDS);
+      fieldsToClear = fieldsToClear.concat(REPLACE_COURSE_FIELDS);
     }
 
     // Clear out school form data if we have a school
-    if (data.school && data.school !== -1) {
-      fieldsToClear.add(MANUAL_SCHOOL_FIELDS);
+    if (data.school && data.school !== '-1') {
+      fieldsToClear = fieldsToClear.concat(MANUAL_SCHOOL_FIELDS);
     }
 
     // Clear out replaced course if we are not replacing a course
     if (data.replaceCourse !== YES) {
-      fieldsToClear.add(REPLACE_COURSE_FIELDS);
+      fieldsToClear = fieldsToClear.concat(REPLACE_COURSE_FIELDS);
     }
 
-    // Sanitize numeric fields (necessary for older browsers that don't
-    // automatically enforce numeric inputs)
-    ['freeLunchPercent', ...RACE_LIST].forEach(field => {
-      changes[field] = parseFloat(data[field]).toString();
+    if (data.doYouApprove !== 'No') {
+      // Sanitize numeric fields (necessary for older browsers that don't
+      // automatically enforce numeric inputs)
+      ['freeLunchPercent', ...RACE_LIST].forEach(field => {
+        changes[field] = parseFloat(data[field]).toString();
+      });
+    }
+
+    fieldsToClear.forEach(field => {
+      changes[field] = undefined;
     });
 
     return changes;
