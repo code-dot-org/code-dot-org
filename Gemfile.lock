@@ -237,6 +237,8 @@ GEM
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.3)
     active_record_query_trace (1.5.3)
+    active_record_union (1.3.0)
+      activerecord (>= 4.0)
     activejob (5.0.7.2)
       activesupport (= 5.0.7.2)
       globalid (>= 0.3.6)
@@ -877,6 +879,7 @@ DEPENDENCIES
   acmesmith (~> 0)
   active_model_serializers!
   active_record_query_trace
+  active_record_union
   activerecord-import
   acts_as_list
   addressable
