@@ -4,3 +4,9 @@ const constants = {
 };
 
 export default constants;
+
+export const Modes = Object.freeze({
+  Training: 0,
+  Predicting: 1,
+  Pond: 2
+});
