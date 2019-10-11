@@ -441,3 +441,10 @@ export default class PrincipalApprovalComponent extends LabeledFormComponent {
     return changes;
   }
 }
+
+export {
+  ALWAYS_REQUIRED_FIELDS,
+  MANUAL_SCHOOL_FIELDS,
+  REQUIRED_SCHOOL_INFO_FIELDS,
+  RACE_LIST
+};
