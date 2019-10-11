@@ -37,8 +37,10 @@ $(document).ready(() => {
   canvas.width = CANVAS_WIDTH;
   canvas.height = CANVAS_HEIGHT;
 
-  for (var i = 0 ; i < 5 ; ++i ) {
-    fishes.push(getRandomFish([100 + i * 200, 100],[100 + i * 200, 100]))
+  for (var i = 0 ; i < 15 ; ++i ) {
+    const x = Math.floor(Math.random() * CANVAS_WIDTH);
+    const y = Math.floor(Math.random() * CANVAS_HEIGHT);
+    fishes.push(getRandomFish([x, y],[x, y]))
   }
   const palette = fish.colorPalettes.palette1;
 
@@ -62,7 +64,6 @@ $(document).ready(() => {
 
 function loadImages(fish) {
   fishPromises = fish.parts.map(bodyPart => loadFishImage(bodyPart));
-  console.log(fishPromises);
 }
 
 function loadFish(fish, x, y, palette, ctx) {
