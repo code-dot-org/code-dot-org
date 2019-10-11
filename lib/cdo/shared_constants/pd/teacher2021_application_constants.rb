@@ -259,19 +259,16 @@ module Pd
 
     VALID_SCORES = {
       # Minimum requirements
-      regional_partner_name: YES_NO,
       csd_which_grades: YES_NO,
       csp_which_grades: YES_NO,
-      cs_total_course_hours: YES_NO,
-      plan_to_teach: YES_NO,
       committed: YES_NO,
+      plan_to_teach: YES_NO,
+      previous_yearlong_cdo_pd: YES_NO,
       replace_existing: YES_NO,
       principal_approval: YES_NO,
-      principal_schedule_confirmed: YES_NO,
-      principal_diversity_recruitment: YES_NO,
       principal_implementation: {meets_minimum_criteria_scores: YES_NO, bonus_points_scores: [2, 0]},
+      principal_schedule_confirmed: YES_NO,
       # Scholarship requirements
-      previous_yearlong_cdo_pd: YES_NO,
       free_lunch_percent: YES_NO,
       underrepresented_minority_percent: YES_NO,
       # Bonus Points
@@ -289,45 +286,30 @@ module Pd
         :principal_implementation
       ],
       scholarship_questions: [
-        :previous_yearlong_cdo_pd,
-        :principal_schedule_confirmed,
         :underrepresented_minority_percent,
         :free_lunch_percent,
       ],
       criteria_score_questions_csd: [
         :csd_which_grades,
-        :plan_to_teach,
         :committed,
+        :plan_to_teach,
+        :previous_yearlong_cdo_pd,
         :replace_existing,
-        :principal_implementation,
         :principal_approval,
+        :principal_implementation,
+        :principal_schedule_confirmed,
       ],
       criteria_score_questions_csp: [
         :csp_which_grades,
-        :plan_to_teach,
         :committed,
+        :plan_to_teach,
+        :previous_yearlong_cdo_pd,
         :replace_existing,
-        :principal_implementation,
         :principal_approval,
+        :principal_implementation,
+        :principal_schedule_confirmed,
       ]
     }
-
-    SCHOLARSHIP_QUESTIONS = [
-      :previous_yearlong_cdo_pd,
-      :principal_approval,
-      :principal_plan_to_teach,
-      :principal_schedule_confirmed,
-      :principal_diversity_recruitment
-    ]
-
-    CRITERIA_SCORE_QUESTIONS_CSP = (
-      VALID_SCORES.select {|_, v| v == YES_NO}.keys -
-        [:csd_which_grades] - SCHOLARSHIP_QUESTIONS
-    ).freeze
-    CRITERIA_SCORE_QUESTIONS_CSD = (
-      VALID_SCORES.select {|_, v| v == YES_NO}.keys -
-        [:csp_how_offer, :csp_which_grades] - SCHOLARSHIP_QUESTIONS
-    ).freeze
 
     CSV_COLUMNS = {
       teacher: [
