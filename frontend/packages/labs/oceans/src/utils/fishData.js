@@ -7,8 +7,8 @@ export const FishBodyPart = Object.freeze({
   DORSAL_FIN: 0,
   TAIL: 1,
   BODY: 2,
-  EYE: 3,
-  MOUTH: 4,
+  MOUTH: 3,
+  EYE: 4,
   PECTORAL_FIN: 5
 });
 
@@ -29,11 +29,11 @@ const fish = {
     body2: {
       src: 'images/fish/body/Body_EyeShape.png',
       anchor: [40, 30],
-      eyeAnchor: [92, 56],
-      mouthAnchor: [127, 70],
-      pectoralFinAnchor: [48, 89],
-      dorsalFinAnchor: [29, 17],
-      tailAnchor: [0, 70],
+      eyeAnchor: [90, 40],
+      mouthAnchor: [125, 55],
+      pectoralFinAnchor: [60, 89],
+      dorsalFinAnchor: [35, 15],
+      tailAnchor: [-25, 45],
       knnData: [48, 27, 0],
       type: FishBodyPart.BODY
     },
@@ -41,10 +41,10 @@ const fish = {
       src: 'images/fish/body/Body_Round.png',
       anchor: [40, 30],
       eyeAnchor: [60, 25],
-      mouthAnchor: [95, 50],
-      pectoralFinAnchor: [18, 89],
-      dorsalFinAnchor: [12, -15],
-      tailAnchor: [0, 50],
+      mouthAnchor: [95, 40],
+      pectoralFinAnchor: [30, 75],
+      dorsalFinAnchor: [17, -15],
+      tailAnchor: [-25, 30],
       knnData: [48, 27, 0],
       type: FishBodyPart.BODY
     },
@@ -52,18 +52,21 @@ const fish = {
       src: 'images/fish/body/Body_RoundedSquare.png',
       anchor: [40, 30],
       eyeAnchor: [65, 26],
-      mouthAnchor: [95, 61],
+      mouthAnchor: [90, 61],
       pectoralFinAnchor: [23, 80],
       dorsalFinAnchor: [13, -19],
-      tailAnchor: [-3, 50],
+      tailAnchor: [-30, 50],
       knnData: [48, 27, 0],
       type: FishBodyPart.BODY
     }
   },
   // EYE KNN DATA: [width (in pixels), height (in pixels)]
   eyes: {
-    // I'm having trouble with anchor points that work for both eyes
-    //eye1: {src: 'images/fish/eyes/Eye.png', knnData: [7, 7], type: FishBodyPart.EYE},
+    eye1: {
+      src: 'images/fish/eyes/Eye.png',
+      knnData: [7, 7],
+      type: FishBodyPart.EYE
+    },
     eye2: {
       src: 'images/fish/eyes/Eye_Round.png',
       knnData: [9, 8],
@@ -74,63 +77,62 @@ const fish = {
   mouths: {
     mouth1: {
       src: 'images/fish/mouth/Mouth_RoundedHeart.png',
-      transform: [0, -8.5],
       knnData: [1],
       type: FishBodyPart.MOUTH
     },
     mouth2: {
       src: 'images/fish/mouth/Mouth_CurvedCylinder.png',
-      transform: [0, -16.5],
       knnData: [0],
       type: FishBodyPart.MOUTH
     },
     mouth3: {
       src: 'images/fish/mouth/Mouth_Heart.png',
-      transform: [-8, -12],
       knnData: [0],
       type: FishBodyPart.MOUTH
     },
     mouth4: {
       src: 'images/fish/mouth/Mouth_DuckLips.png',
-      transform: [-6, -9],
       knnData: [0],
       type: FishBodyPart.MOUTH
     }
-    // The shark mouth is inset so we need to set anchor points for this
-    //mouth5: {src: 'images/fish/mouth/Mouth_Shark.png', transform: [-6, -9], knnData: [0]}
+    // TODO: fix shark mouth transform
+    // mouth5: {
+    //   src: 'images/fish/mouth/Mouth_Shark.png',
+    //   knnData: [0],
+    //   type: FishBodyPart.MOUTH
+    // }
   },
   // SIDE FIN KNN DATA: [width (in pixels), height (in pixels), isPointy (0/1 bool)]
   sideFins: {
     sideFin1: {
       src: 'images/fish/pectoralFin/Pectoral_Fin_Standard.png',
-      transform: [0, 0],
       knnData: [17, 18, 0],
       type: FishBodyPart.PECTORAL_FIN
     },
     sideFin2: {
       src: 'images/fish/pectoralFin/Pectoral_Fin_Drop.png',
-      transform: [0, 0],
       knnData: [12, 13, 1],
       type: FishBodyPart.PECTORAL_FIN
     },
     sideFin3: {
       src: 'images/fish/pectoralFin/Pectoral_Fin_Almond.png',
-      transform: [0, 3],
       knnData: [12, 13, 1],
       type: FishBodyPart.PECTORAL_FIN
     },
     // This fin needs to be on the body as opposed to coming off the body so it will
     // need different anchor points on the body itself.
-    //sideFin4: {src: 'images/fish/pectoralFin/Pectoral_Fin_Bean.png', transform: [0,0], knnData: [12, 13, 1], type: FishBodyPart.PECTORAL_FIN},
+    sideFin4: {
+      src: 'images/fish/pectoralFin/Pectoral_Fin_Bean.png',
+      knnData: [12, 13, 1],
+      type: FishBodyPart.PECTORAL_FIN
+    },
     sideFin5: {
       src: 'images/fish/pectoralFin/Pectoral_Fin_RoundTriangle.png',
-      transform: [0, 0],
       knnData: [12, 13, 1],
       type: FishBodyPart.PECTORAL_FIN
     },
     sideFin6: {
       src: 'images/fish/pectoralFin/Pectoral_Fin_Sharp.png',
-      transform: [0, 0],
       knnData: [12, 13, 1],
       type: FishBodyPart.PECTORAL_FIN
     }
@@ -153,7 +155,11 @@ const fish = {
       type: FishBodyPart.DORSAL_FIN
     },
     // This fin spans the whole body so can only be used with the corresponding side fin
-    //topFin4: {src: 'images/fish/dorsalFin/Dorsal_Fin_Bean.png', knnData: [20, 26, 1], type: FishBodyPart.DORSAL_FIN},
+    // topFin4: {
+    //   src: 'images/fish/dorsalFin/Dorsal_Fin_Bean.png',
+    //   knnData: [20, 26, 1],
+    //   type: FishBodyPart.DORSAL_FIN
+    // },
     topFin5: {
       src: 'images/fish/dorsalFin/Dorsal_Fin_Wave.png',
       knnData: [20, 26, 1],
@@ -169,37 +175,31 @@ const fish = {
   tails: {
     tail1: {
       src: 'images/fish/tailFin/Tail_Fin_Clamshell.png',
-      transform: [-21, -24],
       knnData: [14, 30, 0],
       type: FishBodyPart.TAIL
     },
     tail2: {
       src: 'images/fish/tailFin/Tail_Fin_RoundedHeart.png',
-      transform: [-29, -28],
       knnData: [14, 28, 1],
       type: FishBodyPart.TAIL
     },
     tail3: {
       src: 'images/fish/tailFin/Tail_Fin_Almond.png',
-      transform: [-37, -25],
       knnData: [14, 28, 1],
       type: FishBodyPart.TAIL
     },
     tail4: {
       src: 'images/fish/tailFin/Tail_Fin_Bean.png',
-      transform: [-31, -32.5],
       knnData: [14, 28, 1],
       type: FishBodyPart.TAIL
     },
     tail5: {
       src: 'images/fish/tailFin/Tail_Fin_RoundedTriangle.png',
-      transform: [-24, -13.9],
       knnData: [14, 28, 1],
       type: FishBodyPart.TAIL
     },
     tail6: {
       src: 'images/fish/tailFin/Tail_Fin_Sharp.png',
-      transform: [-24, -38],
       knnData: [14, 28, 1],
       type: FishBodyPart.TAIL
     }
