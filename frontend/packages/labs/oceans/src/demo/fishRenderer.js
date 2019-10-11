@@ -127,15 +127,14 @@ function colorFromType(palette, type) {
 }
 
 export const init = function(canvas) {
-  for (var i = 0; i < 15; ++i) {
+  for (var i = 0; i < 10; ++i) {
     const x = Math.floor(Math.random() * constants.canvasWidth);
     const y = Math.floor(Math.random() * constants.canvasHeight);
     fishes.push(getRandomFish([x, y], [x, y]));
   }
 
   fishes.forEach(fish => {
-    //fish.canvas = document.createElement('canvas');
-    fish.canvas = new OffscreenCanvas(200, 200);
+    fish.canvas = document.createElement('canvas');
     loadImages(fish.fish).then(results =>
       drawFish(
         fish.fish,
