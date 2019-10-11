@@ -86,7 +86,11 @@ class ActiveSupport::TestCase
     DCDO.clear
 
     Rails.application.config.stubs(:levelbuilder_mode).returns false
+
+    # Ensure that AssetHelper#webpack_asset_path does not raise an exception
+    # when called from unit tests. See comments on that method for details.
     CDO.stubs(:optimize_webpack_assets).returns(false)
+    CDO.stubs(:use_my_apps).returns(true)
   end
 
   teardown do
