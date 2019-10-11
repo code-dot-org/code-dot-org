@@ -6,7 +6,7 @@ import Predict from './Predict';
 import PondResult from './PondResult';
 import {generateRandomFish} from './SpritesheetFish';
 
-const FISH_COUNT = 9;
+const FISH_COUNT = 15;
 const SESSION_KEY = 'PondCreator';
 
 export const ClassType = Object.freeze({
@@ -101,7 +101,7 @@ export default class PondCreator extends React.Component {
             <Training
               trainer={this.state.trainer}
               trainingData={this.state.trainingData}
-              rows={2}
+              rows={7}
               cols={2}
               label={'Like'}
               saveTraining={this.saveTraining}
