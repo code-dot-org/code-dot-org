@@ -19,12 +19,11 @@ $(document).ready(() => {
   ctx.rect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
   ctx.fill();
 
-  const palette = fish.colorPalettes.palette1;
   let x = 0,
     y = 0;
-  for (let i = 0; i < 1; i++) {
+  for (let i = 0; i < 25; i++) {
     let fish = generateRandomFish();
-    loadFish(fish, x, y, palette);
+    loadFish(fish, x, y, fish.colorPalette);
     x = Math.floor(Math.random() * CANVAS_WIDTH);
     y = Math.floor(Math.random() * CANVAS_HEIGHT);
   }
