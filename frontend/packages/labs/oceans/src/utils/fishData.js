@@ -43,7 +43,6 @@ const fish = {
       tailAnchor: [-3, 50],
       knnData: [48, 27, 0]
     }
-
   },
   // EYE KNN DATA: [width (in pixels), height (in pixels)]
   eyes: {
@@ -164,6 +163,14 @@ const fish = {
       transform: [-24, -38],
       knnData: [14, 28, 1]
     }
+  },
+  colorPalettes: {
+    palette1: {
+      bodyColor: '#7ECDCA',
+      finColor: '#F8C09D',
+      mouthColor: '#DD94C1',
+      knnData: [234, 103, 108, 20, 52, 65]
+    }
   }
 };
 
@@ -185,6 +192,13 @@ export const bodyPartShape = PropTypes.shape({
   knnData: PropTypes.array.isRequired
 });
 
+export const colorPaletteShape = PropTypes.shape({
+  bodyColor: PropTypes.string.isRequired,
+  finColor: PropTypes.string.isRequired,
+  mouthColor: PropTypes.string.isRequired,
+  knnData: PropTypes.array.isRequired
+});
+
 export const fishShape = PropTypes.shape({
   body: bodyShape.isRequired,
   eye: bodyPartShape.isRequired,
@@ -192,5 +206,6 @@ export const fishShape = PropTypes.shape({
   sideFin: bodyPartShape.isRequired,
   topFin: bodyPartShape.isRequired,
   tail: bodyPartShape.isRequired,
+  colorPalette:colorPaletteShape.isRequired,
   canvasId: PropTypes.string.isRequired
 });

@@ -79,6 +79,7 @@ export default class Training extends React.Component {
                       }
                       topFin={this.state.visibleOptions[rowIdx][colIdx].topFin}
                       tail={this.state.visibleOptions[rowIdx][colIdx].tail}
+                      colorPalette={this.state.visibleOptions[rowIdx][colIdx].colorPalette}
                       canvasId={
                         this.state.visibleOptions[rowIdx][colIdx].canvasId
                       }
