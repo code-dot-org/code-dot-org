@@ -4,12 +4,12 @@ import {PropTypes} from 'react';
 // is ordered by its render dependency (i.e., dorsalFin should be rendered
 // before body).
 export const FishBodyPart = Object.freeze({
-  DORSAL_FIN: 'dorsalFin',
-  TAIL: 'tail',
-  BODY: 'body',
-  EYE: 'eye',
-  MOUTH: 'mouth',
-  PECTORAL_FIN: 'pectoralFin'
+  DORSAL_FIN: 0,
+  TAIL: 1,
+  BODY: 2,
+  EYE: 3,
+  MOUTH: 4,
+  PECTORAL_FIN: 5
 });
 
 const fish = {
@@ -206,6 +206,9 @@ const fish = {
   },
   colorPalettes: {
     palette1: {
+      bodyRgb: [126, 205, 202],
+      finRgb: [248, 192, 157],
+      mouthRgb: [221, 148, 193],
       bodyColor: '#7ECDCA',
       finColor: '#F8C09D',
       mouthColor: '#DD94C1',

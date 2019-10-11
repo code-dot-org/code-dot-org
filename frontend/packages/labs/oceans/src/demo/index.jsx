@@ -1,5 +1,6 @@
 import $ from 'jquery';
-import {FishBodyPart} from '../utils/fishData';
+import _ from 'lodash';
+import fish, {FishBodyPart} from '../utils/fishData';
 import {generateRandomFish} from '../activities/hoc2019/SpritesheetFish';
 
 const CANVAS_WIDTH = 1024;
@@ -21,34 +22,56 @@ $(document).ready(() => {
   const fish1 = generateRandomFish();
   const fish2 = generateRandomFish();
   const fish3 = generateRandomFish();
+  const palette = fish.colorPalettes.palette1;
 
-  loadFish(fish1, 100, 100);
-  loadFish(fish2, 300, 100);
-  loadFish(fish3, 500, 100);
+  loadFish(fish1, 100, 100, palette);
+  loadFish(fish2, 300, 100, palette);
+  loadFish(fish3, 500, 100, palette);
 });
 
-function loadFish(fish, x, y) {
+function loadFish(fish, x, y, palette) {
   let fishCanvas = document.createElement('canvas');
   let fishCtx = fishCanvas.getContext('2d');
 
   const promises = fish.parts.map(bodyPart => loadFishImage(bodyPart));
-
   Promise.all(promises).then(results => {
     const body = results.find(
       result => result.fishPart.type === FishBodyPart.BODY
     ).fishPart;
     const bodyAnchor = bodyAnchorFromType(body, body.type);
+    results = _.orderBy(results, ['fishPart.type']);
 
     results.forEach(result => {
       let anchor = [0, 0];
       if (result.fishPart.type !== FishBodyPart.BODY) {
         anchor = bodyAnchorFromType(body, result.fishPart.type);
       }
-      fishCtx.drawImage(
-        result.img,
-        bodyAnchor[0] + anchor[0],
-        bodyAnchor[1] + anchor[1]
-      );
+
+      const xPos = bodyAnchor[0] + anchor[0];
+      const yPos = bodyAnchor[1] + anchor[1];
+
+      fishCtx.drawImage(result.img, xPos, yPos);
+      const rgb = colorFromType(palette, result.fishPart.type);
+
+      if (rgb) {
+        let imageData = fishCtx.getImageData(
+          xPos,
+          yPos,
+          result.img.width,
+          result.img.height
+        );
+        let data = imageData.data;
+
+        for (let i = 0; i < data.length; i += 4) {
+          if (data[i] === 255 && data[i + 1] === 255 && data[i + 2] === 255) {
+            data[i] = rgb[0];
+            data[i + 1] = rgb[1];
+            data[i + 2] = rgb[2];
+          }
+        }
+
+        fishCtx.putImageData(imageData, xPos, yPos);
+      }
     });
 
     fishCanvases.push(fishCanvas);
@@ -83,5 +106,20 @@ function bodyAnchorFromType(body, type) {
       return body.anchor;
     default:
       return [0, 0];
+  }
+}
+
+function colorFromType(palette, type) {
+  switch (type) {
+    case FishBodyPart.MOUTH:
+      return palette.mouthRgb;
+    case FishBodyPart.DORSAL_FIN:
+    case FishBodyPart.PECTORAL_FIN:
+    case FishBodyPart.TAIL:
+      return palette.finRgb;
+    case FishBodyPart.BODY:
+      return palette.bodyRgb;
+    default:
+      return null;
   }
 }
