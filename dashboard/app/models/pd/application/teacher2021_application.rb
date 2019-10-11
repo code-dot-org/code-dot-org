@@ -555,9 +555,7 @@ module Pd::Application
       options = self.class.options
       principal_options = Pd::Application::PrincipalApproval2021Application.options
 
-      meets_minimum_criteria_scores = {
-        regional_partner_name: regional_partner.presence ? YES : NO
-      }
+      meets_minimum_criteria_scores = {}
       meets_scholarship_criteria_scores = {}
       bonus_points_scores = {}
 
@@ -573,7 +571,6 @@ module Pd::Application
 
       if responses[:plan_to_teach].in? options[:plan_to_teach].first(4)
         meets_minimum_criteria_scores[:plan_to_teach] = responses[:plan_to_teach].in?(options[:plan_to_teach].first(2)) ? YES : NO
-        meets_scholarship_criteria_scores[:plan_to_teach] = responses[:plan_to_teach] == options[:plan_to_teach].first ? YES : NO
       end
 
       meets_minimum_criteria_scores[:replace_existing] =
@@ -586,10 +583,11 @@ module Pd::Application
         end
 
       # Section 3
+      # TODO: fix logic. Why it ever return null?
       if course == 'csd'
-        meets_scholarship_criteria_scores[:previous_yearlong_cdo_pd] = (responses[:previous_yearlong_cdo_pd] & ['CS Discoveries', 'Exploring Computer Science']).empty? ? YES : NO
+        meets_minimum_criteria_scores[:previous_yearlong_cdo_pd] = (responses[:previous_yearlong_cdo_pd] & ['CS Discoveries', 'Exploring Computer Science']).empty? ? YES : NO
       elsif course == 'csp'
-        meets_scholarship_criteria_scores[:previous_yearlong_cdo_pd] = responses[:previous_yearlong_cdo_pd].exclude?('CS Principles') ? YES : NO
+        meets_minimum_criteria_scores[:previous_yearlong_cdo_pd] = responses[:previous_yearlong_cdo_pd].exclude?('CS Principles') ? YES : NO
       end
 
       # Section 4
@@ -600,25 +598,13 @@ module Pd::Application
 
       # Principal Approval
       if responses[:principal_approval]
-        meets_scholarship_criteria_scores[:principal_approval] =
+        meets_minimum_criteria_scores[:principal_approval] =
           responses[:principal_approval] == principal_options[:do_you_approve].first ? YES : NO
-
-        meets_scholarship_criteria_scores[:principal_diversity_recruitment] =
-          responses[:principal_diversity_recruitment] == principal_options[:committed_to_diversity].first ? YES : NO
 
         meets_minimum_criteria_scores[:principal_schedule_confirmed] =
           if responses[:principal_schedule_confirmed]&.in?(principal_options[:committed_to_master_schedule].slice(0..1))
             YES
           elsif responses[:principal_schedule_confirmed] == principal_options[:committed_to_master_schedule][2]
-            NO
-          else
-            nil
-          end
-
-        meets_scholarship_criteria_scores[:principal_schedule_confirmed] =
-          if responses[:principal_schedule_confirmed] == principal_options[:committed_to_master_schedule][0]
-            YES
-          elsif responses[:principal_schedule_confirmed]&.in?(principal_options[:committed_to_master_schedule].slice(1..2))
             NO
           else
             nil
@@ -687,23 +673,17 @@ module Pd::Application
     end
 
     def meets_scholarship_criteria
-      if principal_approval_state == NOT_REQUIRED
-        # If there is no needed principal approval, then criteria is just whether
-        # the one scholarship question is yes
-        response_scores_hash[:meets_scholarship_criteria_scores][:previous_yearlong_cdo_pd] || REVIEWING_INCOMPLETE
+      response_scores = response_scores_hash[:meets_scholarship_criteria_scores] || {}
+      scored_questions = SCOREABLE_QUESTIONS[:scholarship_questions]
+
+      scores = scored_questions.map {|q| response_scores[q]}
+
+      if scores.uniq == [YES]
+        YES
+      elsif NO.in? scores
+        NO
       else
-        response_scores = response_scores_hash[:meets_scholarship_criteria_scores] || {}
-        scored_questions = SCOREABLE_QUESTIONS[:scholarship_questions]
-
-        scores = scored_questions.map {|q| response_scores[q]}
-
-        if scores.uniq == [YES]
-          YES
-        elsif NO.in? scores
-          NO
-        else
-          REVIEWING_INCOMPLETE
-        end
+        REVIEWING_INCOMPLETE
       end
     end
 

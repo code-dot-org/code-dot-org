@@ -266,6 +266,7 @@ module Pd
       previous_yearlong_cdo_pd: YES_NO,
       replace_existing: YES_NO,
       principal_approval: YES_NO,
+      # TODO: is this question still asked?
       principal_implementation: {meets_minimum_criteria_scores: YES_NO, bonus_points_scores: [2, 0]},
       principal_schedule_confirmed: YES_NO,
       # Scholarship requirements
