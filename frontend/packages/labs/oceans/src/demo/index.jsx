@@ -37,16 +37,16 @@ $(document).ready(() => {
   canvas.width = CANVAS_WIDTH;
   canvas.height = CANVAS_HEIGHT;
 
-  for (var i = 0 ; i < 15 ; ++i ) {
+  for (var i = 0; i < 15; ++i) {
     const x = Math.floor(Math.random() * CANVAS_WIDTH);
     const y = Math.floor(Math.random() * CANVAS_HEIGHT);
-    fishes.push(getRandomFish([x, y],[x, y]))
+    fishes.push(getRandomFish([x, y], [x, y]));
   }
-  const palette = fish.colorPalettes.palette1;
 
   fishes.forEach(fish => {
     loadImages(fish.fish);
   });
+
   function animateScreen() {
     var ctx = canvas.getContext('2d');
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -55,7 +55,13 @@ $(document).ready(() => {
 
     fishes.forEach(fish => {
       updatePos(fish);
-      loadFish(fish.fish, fish.currentPos[0], fish.currentPos[1], palette, ctx);
+      loadFish(
+        fish.fish,
+        fish.currentPos[0],
+        fish.currentPos[1],
+        fish.fish.colorPalette,
+        ctx
+      );
     });
   }
 
@@ -70,7 +76,6 @@ function loadFish(fish, x, y, palette, ctx) {
   let fishCanvas = document.createElement('canvas');
   let fishCtx = fishCanvas.getContext('2d');
 
-  //const promises = fish.parts.map(bodyPart => loadFishImage(bodyPart));
   Promise.all(fishPromises).then(results => {
     const body = results.find(
       result => result.fishPart.type === FishBodyPart.BODY
