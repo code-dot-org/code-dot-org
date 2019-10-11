@@ -209,9 +209,27 @@ const fish = {
       bodyRgb: [126, 205, 202],
       finRgb: [248, 192, 157],
       mouthRgb: [221, 148, 193],
-      bodyColor: '#7ECDCA',
-      finColor: '#F8C09D',
-      mouthColor: '#DD94C1',
+      knnData: [234, 103, 108, 20, 52, 65]
+    },
+    palette2: {
+      bodyRgb: [253, 192, 77],
+      finRgb: [235, 120, 50],
+      mouthRgb: [235, 120, 50],
+      // TODO: fix this KNN data
+      knnData: [234, 103, 108, 20, 52, 65]
+    },
+    palette3: {
+      bodyRgb: [39, 116, 186],
+      finRgb: [253, 217, 136],
+      mouthRgb: [253, 217, 136],
+      // TODO: fix this KNN data
+      knnData: [234, 103, 108, 20, 52, 65]
+    },
+    palette4: {
+      bodyRgb: [21, 52, 64],
+      finRgb: [200, 220, 92],
+      mouthRgb: [200, 220, 92],
+      // TODO: fix this KNN data
       knnData: [234, 103, 108, 20, 52, 65]
     }
   }
