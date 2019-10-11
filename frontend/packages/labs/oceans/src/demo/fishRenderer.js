@@ -3,7 +3,8 @@ import constants from './constants';
 import {FishBodyPart} from '../utils/fishData';
 import {generateRandomFish} from '../activities/hoc2019/SpritesheetFish';
 
-let fishes = [];
+let fishes = [],
+    backgroundImage;
 
 function updatePos(fish) {
   for (var i = 0; i <= 1; i++) {
@@ -127,11 +128,14 @@ function colorFromType(palette, type) {
 }
 
 export const init = function(canvas) {
-  for (var i = 0; i < 10; ++i) {
+  for (var i = 0; i < 30; ++i) {
     const x = Math.floor(Math.random() * constants.canvasWidth);
     const y = Math.floor(Math.random() * constants.canvasHeight);
     fishes.push(getRandomFish([x, y], [x, y]));
   }
+
+  backgroundImage = new Image();
+  backgroundImage.src = 'images/underwater-background.jpg';
 
   fishes.forEach(fish => {
     fish.canvas = document.createElement('canvas');
@@ -148,8 +152,7 @@ export const init = function(canvas) {
   function animateScreen() {
     var ctx = canvas.getContext('2d');
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    ctx.globalCompositeOperation = 'destination-over';
+    ctx.drawImage(backgroundImage, 0, 0, constants.canvasWidth, constants.canvasHeight);
 
     fishes.forEach(fish => {
       updatePos(fish);
