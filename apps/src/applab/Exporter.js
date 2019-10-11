@@ -47,7 +47,6 @@ const APP_OPTIONS_WHITELIST = {
   baseUrl: true,
   app: true,
   droplet: true,
-  pretty: true,
   level: {
     skin: true,
     editCode: true,
