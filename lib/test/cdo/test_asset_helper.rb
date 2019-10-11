@@ -5,12 +5,12 @@ class AssetHelpersTest < Minitest::Test
   def setup
     AssetHelper.any_instance.stubs(:webpack_manifest_path).returns('./test/fixtures/webpack-manifest.json')
     @asset_helper = AssetHelper.clone.instance
-    CDO.stubs(:pretty_js).returns(false)
+    CDO.stubs(:optimize_webpack_assets).returns(true)
   end
 
   def test_valid_asset
     assert_equal(
-      '/blockly/js/cookieBanner.d90978a8439431440869.min.js',
+      '/assets/js/cookieBanner.d90978a8439431440869.min.js',
       @asset_helper.webpack_asset_path('js/cookieBanner.js'),
       "incorrect webpack asset path"
     )
@@ -30,19 +30,19 @@ class AssetHelpersTest < Minitest::Test
     end
   end
 
-  def test_valid_asset_with_pretty_js
-    CDO.stubs(:pretty_js).returns(true)
+  def test_valid_asset_with_unoptimized_webpack_assets
+    CDO.stubs(:optimize_webpack_assets).returns(false)
     assert_equal(
-      '/blockly/js/cookieBanner.js',
+      '/assets/js/cookieBanner.js',
       @asset_helper.webpack_asset_path('js/cookieBanner.js')
     )
   end
 
-  def test_missing_manifest_with_pretty_js
-    CDO.stubs(:pretty_js).returns(true)
+  def test_missing_manifest_with_unoptimized_webpack_assets
+    CDO.stubs(:optimize_webpack_assets).returns(false)
     AssetHelper.any_instance.stubs(:webpack_manifest_path).returns('./test/fixtures/nonexistent.json')
     assert_equal(
-      '/blockly/js/cookieBanner.js',
+      '/assets/js/cookieBanner.js',
       @asset_helper.webpack_asset_path('js/cookieBanner.js')
     )
   end

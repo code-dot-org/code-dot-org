@@ -453,6 +453,10 @@ class TopInstructions extends Component {
     if (this.state.tabSelected !== TabType.COMMENTS) {
       this.incrementFeedbackVisitCount();
     }
+    firehoseClient.putRecord({
+      study: 'top-instructions',
+      event: 'click-feedback-tab'
+    });
 
     this.setState({tabSelected: TabType.COMMENTS}, () => {
       this.forceTabResizeToMaxHeight();
