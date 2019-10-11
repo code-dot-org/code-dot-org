@@ -83,16 +83,24 @@ a.category-link {
   border-radius: 10px;
   margin-bottom: 10px;
   margin-right: 10px;
+  background-color: white;
 }
 
 .announcements-body {
   background-color: #5c3f7f;
-  border-radius: 5px;
-  padding: 10px;
+  border-radius: 10px;
+  padding: 20px;
   color: white;
+  max-width: 30%;
+  margin-bottom: 10px;
+  margin-right: 10px;
 }
 
 @media screen and (min-width: 0px) and (max-width: 600px) {
+  .announcements-body {
+    min-width: 100%;
+  }
+
   .robotics-provider {
     max-width: 45%;
   }
@@ -108,6 +116,10 @@ a.category-link {
 }
 
 @media screen and (min-width: 601px) and (max-width: 1200px) {
+  .announcements-body {
+    min-width: 100%;
+  }
+
   .robotics-provider {
     max-width: 30%;
   }
@@ -123,6 +135,10 @@ a.category-link {
 }
 
 @media screen and (min-width: 1201px) {
+  .announcements-body {
+    min-width: 40%;
+  }
+
   .robotics-provider {
     max-width: 25%;
   }
