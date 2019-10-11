@@ -196,7 +196,6 @@ module Pd
         csd_implementation: "How will you implement CS Discoveries at your school?",
         committed_to_diversity: "Do you commit to recruiting and enrolling a diverse group of students in this course, representative of the overall demographics of your school?",
         pay_fee: "If there is a fee for the program, will your teacher or your school be able to pay for the fee?",
-        how_heard: "How did you hear about this program? (Principal's response)",
         share_ap_scores: "Principal authorizes college board to send AP Scores",
       },
       nces: {
@@ -231,8 +230,6 @@ module Pd
       replace_existing: {teacher: :replace_existing, principal: :principal_wont_replace_existing_course},
 
       pay_fee: {teacher: :pay_fee, principal: :principal_pay_fee},
-
-      how_heard: {teacher: :how_heard, principal: :principal_how_heard},
 
       contact_invoicing: {principal: :principal_contact_invoicing},
       contact_invoicing_detail: {principal: :principal_contact_invoicing_detail},
@@ -397,7 +394,6 @@ module Pd
         :csd_implementation,
         :committed_to_diversity,
         :pay_fee,
-        :how_heard,
         :share_ap_scores,
         :contact_invoicing,
         :contact_invoicing_detail
