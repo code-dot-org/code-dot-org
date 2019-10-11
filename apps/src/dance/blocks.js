@@ -70,7 +70,7 @@ const customInputTypes = {
         );
     },
     generateCode(block, arg) {
-      return Blockly.JavaScript.translateVarName(block.getTitleValue(arg.name));
+      return `'${block.getTitleValue(arg.name)}'`;
     }
   },
   limitedColourPicker: {
@@ -156,7 +156,12 @@ export default {
       },
       removeVar: Blockly.Blocks.variables_get.removeVar
     };
-    generator.sprite_variables_get = generator.variables_get;
+    generator.sprite_variables_get = function() {
+      return [
+        `'${this.getTitleValue('VAR')}'`,
+        Blockly.JavaScript.ORDER_ATOMIC
+      ];
+    };
     Blockly.Variables.registerGetter(
       Blockly.BlockValueType.SPRITE,
       'sprite_variables_get'
@@ -184,5 +189,158 @@ export default {
       removeVar: Blockly.Blocks.variables_get.removeVar
     };
     generator.sprite_parameter_get = generator.variables_get;
+
+    Blockly.Blocks.gamelab_behavior_get = {
+      init() {
+        var fieldLabel = new Blockly.FieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);
+        // Must be marked EDITABLE so that cloned blocks share the same var name
+        fieldLabel.EDITABLE = true;
+        this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
+        this.setHSV(136, 0.84, 0.8);
+        const mainTitle = this.appendDummyInput()
+          .appendTitle(fieldLabel, 'VAR')
+          .appendTitle(Blockly.Msg.VARIABLES_GET_TAIL);
+
+        if (Blockly.useModalFunctionEditor) {
+          var editLabel = new Blockly.FieldIcon(Blockly.Msg.FUNCTION_EDIT);
+          Blockly.bindEvent_(
+            editLabel.fieldGroup_,
+            'mousedown',
+            this,
+            this.openEditor
+          );
+          mainTitle.appendTitle(editLabel);
+        }
+
+        this.setStrictOutput(true, Blockly.BlockValueType.BEHAVIOR);
+        this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
+        this.currentParameterNames_ = [];
+      },
+
+      openEditor(e) {
+        e.stopPropagation();
+        behaviorEditor.openEditorForFunction(this, this.getTitleValue('VAR'));
+      },
+
+      getVars() {
+        return Blockly.Variables.getVars.bind(this)(
+          Blockly.BlockValueType.BEHAVIOR
+        );
+      },
+
+      renameVar(oldName, newName) {
+        if (Blockly.Names.equals(oldName, this.getTitleValue('VAR'))) {
+          this.setTitleValue(newName, 'VAR');
+        }
+      },
+
+      renameProcedure(oldName, newName) {
+        if (Blockly.Names.equals(oldName, this.getTitleValue('VAR'))) {
+          this.setTitleValue(newName, 'VAR');
+        }
+      },
+
+      getCallName() {
+        return this.getTitleValue('VAR');
+      },
+
+      setProcedureParameters(paramNames, paramIds, typeNames) {
+        Blockly.Blocks.procedures_callnoreturn.setProcedureParameters.call(
+          this,
+          paramNames.slice(1),
+          paramIds && paramIds.slice(1),
+          typeNames && typeNames.slice(1)
+        );
+      },
+
+      mutationToDom() {
+        const container = document.createElement('mutation');
+        for (let x = 0; x < this.currentParameterNames_.length; x++) {
+          const parameter = document.createElement('arg');
+          parameter.setAttribute('name', this.currentParameterNames_[x]);
+          if (this.currentParameterTypes_[x]) {
+            parameter.setAttribute('type', this.currentParameterTypes_[x]);
+          }
+          container.appendChild(parameter);
+        }
+        return container;
+      },
+
+      domToMutation(xmlElement) {
+        this.currentParameterNames_ = [];
+        this.currentParameterTypes_ = [];
+        for (let childNode of xmlElement.childNodes) {
+          if (childNode.nodeName.toLowerCase() === 'arg') {
+            this.currentParameterNames_.push(childNode.getAttribute('name'));
+            this.currentParameterTypes_.push(childNode.getAttribute('type'));
+          }
+        }
+        // Use parameter names as dummy IDs during initialization. Add dummy
+        // "this_sprite" param.
+        this.setProcedureParameters(
+          [null].concat(this.currentParameterNames_),
+          [null].concat(this.currentParameterNames_),
+          [null].concat(this.currentParameterTypes_)
+        );
+      }
+    };
+
+    generator.gamelab_behavior_get = function() {
+      const name = Blockly.JavaScript.variableDB_.getName(
+        this.getTitleValue('VAR'),
+        Blockly.Procedures.NAME_TYPE
+      );
+      const extraArgs = [];
+      for (let x = 0; x < this.currentParameterNames_.length; x++) {
+        extraArgs[x] =
+          Blockly.JavaScript.valueToCode(
+            this,
+            'ARG' + x,
+            Blockly.JavaScript.ORDER_COMMA
+          ) || 'null';
+      }
+      return [
+        `new Behavior(${name}, [${extraArgs.join(', ')}])`,
+        Blockly.JavaScript.ORDER_ATOMIC
+      ];
+    };
+
+    Blockly.Blocks.behavior_definition = Blockly.Block.createProcedureDefinitionBlock(
+      {
+        initPostScript(block) {
+          block.setHSV(136, 0.84, 0.8);
+          block.parameterNames_ = ['this sprite'];
+          block.parameterTypes_ = [Blockly.BlockValueType.SPRITE];
+        },
+        overrides: {
+          getVars(category) {
+            return {
+              Behavior: [this.getTitleValue('NAME')]
+            };
+          },
+          callType_: 'gamelab_behavior_get'
+        }
+      }
+    );
+
+    generator.behavior_definition = generator.procedures_defnoreturn;
+
+    Blockly.Procedures.DEFINITION_BLOCK_TYPES.push('behavior_definition');
+    Blockly.Variables.registerGetter(
+      Blockly.BlockValueType.BEHAVIOR,
+      'gamelab_behavior_get'
+    );
+    Blockly.Flyout.configure(Blockly.BlockValueType.BEHAVIOR, {
+      initialize(flyout, cursor) {
+        if (behaviorEditor && !behaviorEditor.isOpen()) {
+          flyout.addButtonToFlyout_(
+            cursor,
+            'Create a Behavior',
+            behaviorEditor.openWithNewFunction.bind(behaviorEditor)
+          );
+        }
+      },
+      addDefaultVar: false
+    });
   }
 };

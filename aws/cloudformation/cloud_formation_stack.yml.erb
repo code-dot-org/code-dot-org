@@ -28,7 +28,7 @@ frontends = @frontends = rack_env?(:production) || ENV['FRONTENDS']
 database = @database = [:staging, :test, :levelbuilder, :adhoc].include?(rack_env) || ENV['DATABASE']
 load_balancer = @load_balancer = !rack_env?(:adhoc) || ENV['FRONTENDS']
 alarms = @alarms = !rack_env?(:adhoc) || ENV['ALARMS']
-chef_version = '12.7.2'
+chef_version = '15.2.20'
 
 unless dry_run
   update_certs.call unless load_balancer
@@ -45,10 +45,10 @@ self.log_resource_filter.push 'FrontendLaunchConfig', 'ASGCount'
 # TODO migrate stacks to cloudformation-provisioned instances.
 if %w(autoscale-prod test staging levelbuilder).include? stack_name
   self.daemon_instance_id = {
-    'autoscale-prod' => 'i-436d69dd',
-    'test' => 'i-f85e6666',
-    'staging' => 'i-57a3afc7',
-    'levelbuilder' => 'i-03a540ccf70cc8138'
+    'autoscale-prod' => 'i-08f5f8ace0a473b8d',
+    'test' => 'i-004727200191f3251',
+    'staging' => 'i-02e6cdc765421ab34',
+    'levelbuilder' => 'i-0907b146f7e6503f6'
   }[stack_name]
 else
   self.daemon = 'Daemon'
@@ -175,7 +175,7 @@ Resources:
     DependsOn: WebServerAMI
     CreationPolicy:
       ResourceSignal:
-        Timeout: PT60M
+        Timeout: PT120M
         Count: 1
   WebServerAMI:
     Type: AWS::EC2::Instance
@@ -253,8 +253,8 @@ Resources:
       ConnectionDrainingPolicy:
         Enabled: true
         Timeout: 300
-<%   if !frontends && daemon -%>
-      Instances: [!Ref <%=daemon%>]
+<%   if !frontends && daemon_instance_id -%>
+      Instances: [<%=daemon_instance_id%>]
 <%   end -%>
 <% end -%>
 

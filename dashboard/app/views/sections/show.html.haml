@@ -8,7 +8,7 @@
     pairingAllowed: @section.pairing_allowed
   }.to_json
 
-%script{src: minifiable_asset_path('js/sections/show.js'), data: {section: section_data}}
+%script{src: webpack_asset_path('js/sections/show.js'), data: {section: section_data}}
 
 #signinsection
   %h2

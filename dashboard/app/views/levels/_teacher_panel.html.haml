@@ -45,4 +45,4 @@
       - @script_level&.summarize_for_teacher_panel(student)
 
 - content_for(:head) do
-  %script{src: minifiable_asset_path('js/levels/_teacher_panel.js'), data: {teacherpanel: data.to_json }}
+  %script{src: webpack_asset_path('js/levels/_teacher_panel.js'), data: {teacherpanel: data.to_json }}

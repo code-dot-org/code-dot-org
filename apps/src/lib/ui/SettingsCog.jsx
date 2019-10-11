@@ -11,7 +11,9 @@ import project from '../../code-studio/initApp/project';
 import * as makerToolkitRedux from '../kits/maker/redux';
 import PopUpMenu from './PopUpMenu';
 import ConfirmEnableMakerDialog from './ConfirmEnableMakerDialog';
+import LibraryManagerDialog from '@cdo/apps/code-studio/components/Libraries/LibraryManagerDialog';
 import {getStore} from '../../redux';
+import experiments from '@cdo/apps/util/experiments';
 
 const style = {
   iconContainer: {
@@ -53,7 +55,8 @@ class SettingsCog extends Component {
   state = {
     open: false,
     canOpen: true,
-    confirmingEnableMaker: false
+    confirmingEnableMaker: false,
+    managingLibraries: false
   };
 
   open = () => this.setState({open: true, canOpen: false});
@@ -68,6 +71,11 @@ class SettingsCog extends Component {
   manageAssets = () => {
     this.close();
     assets.showAssetManager();
+  };
+
+  manageLibraries = () => {
+    this.close();
+    this.setState({managingLibraries: true});
   };
 
   toggleMakerToolkit = () => {
@@ -89,6 +97,7 @@ class SettingsCog extends Component {
 
   showConfirmation = () => this.setState({confirmingEnableMaker: true});
   hideConfirmation = () => this.setState({confirmingEnableMaker: false});
+  closeLibraryManager = () => this.setState({managingLibraries: false});
 
   setTargetPoint(icon) {
     if (!icon) {
@@ -129,6 +138,9 @@ class SettingsCog extends Component {
           showTail={true}
         >
           <ManageAssets onClick={this.manageAssets} />
+          {experiments.isEnabled(experiments.STUDENT_LIBRARIES) && (
+            <ManageLibraries onClick={this.manageLibraries} />
+          )}
           {this.props.showMakerToggle && (
             <ToggleMaker onClick={this.toggleMakerToolkit} />
           )}
@@ -137,6 +149,10 @@ class SettingsCog extends Component {
           isOpen={this.state.confirmingEnableMaker}
           handleConfirm={this.confirmEnableMaker}
           handleCancel={this.hideConfirmation}
+        />
+        <LibraryManagerDialog
+          isOpen={this.state.managingLibraries}
+          onClose={this.closeLibraryManager}
         />
       </span>
     );
@@ -152,6 +168,10 @@ ManageAssets.propTypes = {
   first: PropTypes.bool,
   last: PropTypes.bool
 };
+
+export function ManageLibraries(props) {
+  return <PopUpMenu.Item {...props}>{msg.manageLibraries()}</PopUpMenu.Item>;
+}
 
 export function ToggleMaker(props) {
   const reduxState = getStore().getState();
