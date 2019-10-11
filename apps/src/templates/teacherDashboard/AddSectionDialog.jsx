@@ -62,7 +62,11 @@ class AddSectionDialog extends Component {
             />
           )}
           {loginType && (
-            <EditSectionForm title={title} locale={locale} newSection={true} />
+            <EditSectionForm
+              title={title}
+              locale={locale}
+              isNewSection={true}
+            />
           )}
         </PadAndCenter>
       </BaseDialog>

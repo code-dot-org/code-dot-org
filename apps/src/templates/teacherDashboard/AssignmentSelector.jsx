@@ -71,7 +71,7 @@ export default class AssignmentSelector extends Component {
     onChange: PropTypes.func,
     disabled: PropTypes.bool,
     locale: PropTypes.string,
-    newSection: PropTypes.bool
+    isNewSection: PropTypes.bool
   };
 
   /**
@@ -223,11 +223,11 @@ export default class AssignmentSelector extends Component {
     // primary assignment, default the secondary assignment to the first
     // script in the course.
     const defaultSecondaryId =
-      this.props.newSection && primary && primary.scriptAssignIds
+      this.props.isNewSection && primary && primary.scriptAssignIds
         ? primary.scriptAssignIds[0]
         : noAssignment;
 
-    const selectedSecondaryId = this.props.newSection
+    const selectedSecondaryId = this.props.isNewSection
       ? defaultSecondaryId
       : noAssignment;
 
