@@ -9,42 +9,55 @@ const CANVAS_HEIGHT = 576;
 let canvas,
   fishCanvases = [],
   fishPromises = [],
-  fishCenter = [100, 100],
-  fishChange = [0, 1];
+  fishes = [];
+
+function updatePos(fish) {
+  for (var i = 0; i <= 1; i++) {
+    if (fish.currentPos[i] > fish.defaultPos[i] + 5) {
+      fish.posChange[i] = -1;
+    }
+    if (fish.currentPos[i] < fish.defaultPos[i] - 5) {
+      fish.posChange[i] = 1;
+    }
+    fish.currentPos[i] += fish.posChange[i];
+  }
+}
+
+function getRandomFish(currentPos, defaultPos) {
+  return {
+    fish: generateRandomFish(),
+    defaultPos: defaultPos,
+    currentPos: currentPos,
+    posChange: [0, 1]
+  };
+}
 
 $(document).ready(() => {
   canvas = document.getElementById('activity-canvas');
   canvas.width = CANVAS_WIDTH;
   canvas.height = CANVAS_HEIGHT;
 
-  const fish1 = generateRandomFish();
-  //const fish2 = generateRandomFish();
-  //const fish3 = generateRandomFish();
+  for (var i = 0 ; i < 5 ; ++i ) {
+    fishes.push(getRandomFish([100 + i * 200, 100],[100 + i * 200, 100]))
+  }
   const palette = fish.colorPalettes.palette1;
 
-  loadImages(fish1);
+  fishes.forEach(fish => {
+    loadImages(fish.fish);
+  });
   function animateScreen() {
     var ctx = canvas.getContext('2d');
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     ctx.globalCompositeOperation = 'destination-over';
-    ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT); // clear canvas
-    //const x = Math.random() * 10 + 95;
-    //const y = Math.random() * 10 + 95;
-    if (fishCenter[1] < 95) {
-      fishChange[1] = 1;
-    }
-    if (fishCenter[1] > 105) {
-      fishChange[1] = -1;
-    }
-    fishCenter[1] += fishChange[1];
-    loadFish(fish1, fishCenter[0], fishCenter[1], palette, ctx);
-    //window.requestAnimationFrame(animateScreen);
+
+    fishes.forEach(fish => {
+      updatePos(fish);
+      loadFish(fish.fish, fish.currentPos[0], fish.currentPos[1], palette, ctx);
+    });
   }
 
-  ////window.requestAnimationFrame(animateScreen);
   window.setInterval(animateScreen, 50);
-  //loadFish(fish2, 300, 100, palette);
-  //loadFish(fish3, 500, 100, palette);
 });
 
 function loadImages(fish) {
