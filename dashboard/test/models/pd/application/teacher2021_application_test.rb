@@ -722,7 +722,6 @@ module Pd::Application
           meets_scholarship_criteria_scores: {
             previous_yearlong_cdo_pd: NO,
             principal_approval: NO,
-            principal_schedule_confirmed: NO,
             free_lunch_percent: NO,
             underrepresented_minority_percent: NO,
           },
@@ -782,7 +781,6 @@ module Pd::Application
 
       assert_nil response_scores_hash[:meets_minimum_criteria_scores][:principal_schedule_confirmed]
       assert_nil response_scores_hash[:meets_minimum_criteria_scores][:replace_existing]
-      assert_nil response_scores_hash[:meets_scholarship_criteria_scores][:principal_schedule_confirmed]
     end
 
     test 'principal_approval_state' do
