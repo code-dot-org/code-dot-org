@@ -543,7 +543,6 @@ module Pd::Application
             principal_schedule_confirmed: YES,
           },
           meets_scholarship_criteria_scores: {
-            plan_to_teach: YES,
             principal_schedule_confirmed: YES,
             free_lunch_percent: YES,
             underrepresented_minority_percent: YES,
@@ -591,7 +590,6 @@ module Pd::Application
             principal_schedule_confirmed: YES,
           },
           meets_scholarship_criteria_scores: {
-            plan_to_teach: YES,
             principal_schedule_confirmed: YES,
             free_lunch_percent: YES,
             underrepresented_minority_percent: YES,
@@ -630,9 +628,7 @@ module Pd::Application
             previous_yearlong_cdo_pd: YES,
             replace_existing: YES,
           },
-          meets_scholarship_criteria_scores: {
-            plan_to_teach: YES,
-          },
+          meets_scholarship_criteria_scores: {},
           bonus_points_scores: {
             csp_how_offer: 2,
             race: 2
