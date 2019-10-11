@@ -122,7 +122,6 @@ module Pd
         white_percent: 'Percentage of student enrollment by race: White',
         other_races_percent: 'Percentage of student enrollment by race: Other',
         principal_approval: "Do you approve of <Teacher Name> participating in Code.org's 2020-21 Professional Learning Program?",
-        principal_plan_to_teach: 'Is <Teacher Name> planning to teach this course in the 2020-21 school year?',
         principal_schedule_confirmed: 'Are you committed to including Computer Science <Program> on the master schedule in 2020-21 if <Teacher Name> is accepted into the program?',
         principal_diversity_recruitment: 'Do you commit to recruiting and enrolling a diverse group of students in this course, representative of the overall demographics of your school?',
         contact_invoicing: "Contact name for invoicing",
@@ -177,7 +176,6 @@ module Pd
         school_name: PAGE_LABELS[:about_you][:school_name] + " (provided by principal)",
         district_name: PAGE_LABELS[:about_you][:school_district_name] + " (provided by principal)",
         do_you_approve: "Do you approve of this teacher participating in Code.org's 2020-21 Professional Learning Program?",
-        plan_to_teach: "Is this teacher planning to teach this course in the 2020-21 school year?",
         total_student_enrollment: "Total student enrollment",
         free_lunch_percent: "Percentage of students who are eligible to receive free or reduced lunch (Principal's response)",
         underrepresented_minority_percent: "Percentage of underrepresented minority students (Principal's response)",
@@ -226,7 +224,6 @@ module Pd
       principal_last_name: {teacher: :principal_last_name, principal: :principal_response_last_name},
       principal_email: {teacher: :principal_email, principal: :principal_response_email},
 
-      plan_to_teach: {teacher: :plan_to_teach, principal: :principal_plan_to_teach},
       replace_existing: {teacher: :replace_existing, principal: :principal_wont_replace_existing_course},
 
       pay_fee: {teacher: :pay_fee, principal: :principal_pay_fee},
@@ -375,7 +372,6 @@ module Pd
         :school_name,
         :district_name,
         :do_you_approve,
-        :plan_to_teach,
         :total_student_enrollment,
         :free_lunch_percent,
         :underrepresented_minority_percent,

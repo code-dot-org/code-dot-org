@@ -652,7 +652,7 @@ module Pd::Application
             meets_scholarship_criteria_scores: meets_scholarship_criteria_scores,
             bonus_points_scores: bonus_points_scores
           }
-        ) {|key, old, new| key.in?([:plan_to_teach, :replace_existing]) ? new : old}.to_json
+        ) {|key, old, new| key == :replace_existing ? new : old}.to_json
       )
     end
 
