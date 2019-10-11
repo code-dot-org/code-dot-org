@@ -11,7 +11,7 @@ $(document).ready(() => {
   canvas.height = constants.canvasHeight;
 
   const initialState = {
-    currentMode: Modes.Pond
+    currentMode: Modes.Training
   };
   setState(initialState);
 
