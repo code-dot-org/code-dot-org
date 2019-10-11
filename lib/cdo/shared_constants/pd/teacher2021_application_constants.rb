@@ -12,7 +12,7 @@ module Pd
       teaching_background: 'Teaching Background',
       choose_your_program: 'Choose Your Program',
       professional_learning_program_requirements: 'Professional Learning Program Requirements',
-      additional_demographic_information: 'Additional Demographic Information and submission',
+      additional_demographic_information: 'Additional Demographic Information and Submission',
       school_stats_and_principal_approval_section: 'Principal Approval and School Information'
     }
 
