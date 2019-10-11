@@ -124,7 +124,6 @@ module Pd
         principal_approval: "Do you approve of <Teacher Name> participating in Code.org's 2020-21 Professional Learning Program?",
         principal_plan_to_teach: 'Is <Teacher Name> planning to teach this course in the 2020-21 school year?',
         principal_schedule_confirmed: 'Are you committed to including Computer Science <Program> on the master schedule in 2020-21 if <Teacher Name> is accepted into the program?',
-        principal_implementation: "To participate in Code.org's Computer Science <Program> Professional Learning Program, we require that this course be offered in one of the following ways. Please select which option will be implemented at your school.",
         principal_diversity_recruitment: 'Do you commit to recruiting and enrolling a diverse group of students in this course, representative of the overall demographics of your school?',
         contact_invoicing: "Contact name for invoicing",
         contact_invoicing_detail: "Contact email or phone number for invoicing",
@@ -266,8 +265,6 @@ module Pd
       previous_yearlong_cdo_pd: YES_NO,
       replace_existing: YES_NO,
       principal_approval: YES_NO,
-      # TODO: is this question still asked?
-      principal_implementation: {meets_minimum_criteria_scores: YES_NO, bonus_points_scores: [2, 0]},
       principal_schedule_confirmed: YES_NO,
       # Scholarship requirements
       free_lunch_percent: YES_NO,
@@ -284,7 +281,6 @@ module Pd
         :free_lunch_percent,
         :underrepresented_minority_percent,
         :race,
-        :principal_implementation
       ],
       scholarship_questions: [
         :underrepresented_minority_percent,
@@ -297,7 +293,6 @@ module Pd
         :previous_yearlong_cdo_pd,
         :replace_existing,
         :principal_approval,
-        :principal_implementation,
         :principal_schedule_confirmed,
       ],
       criteria_score_questions_csp: [
@@ -307,7 +302,6 @@ module Pd
         :previous_yearlong_cdo_pd,
         :replace_existing,
         :principal_approval,
-        :principal_implementation,
         :principal_schedule_confirmed,
       ]
     }
