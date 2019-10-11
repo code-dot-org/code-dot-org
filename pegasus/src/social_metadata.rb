@@ -67,7 +67,7 @@ def get_social_metadata_for_page(request)
     "csedweek.org" => {
       "soon-hoc" => {
         title: I18n.t(:csedweek_og_title),
-        description: I18n.t(:social_hoc2019_coming_dates),
+        description: hoc_s(:social_hoc2019_coming_dates),
         image: images[:cs_is_everything_thumbnail],
         video: videos[:computer_science_is_changing_everything]
       },
@@ -86,7 +86,7 @@ def get_social_metadata_for_page(request)
     },
     "hourofcode.com" => {
       "soon-hoc" => {
-        title: hoc_s(:social_hoc2018_hoc_here),
+        title: hoc_s(:social_hoc_is_coming),
         description: hoc_s(:social_hoc2019_hoc_is_about_csforgood),
         image: images[:hoc_2019_social]
       },
