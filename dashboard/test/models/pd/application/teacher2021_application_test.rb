@@ -537,12 +537,12 @@ module Pd::Application
             csd_which_grades: YES,
             plan_to_teach: YES,
             committed: YES,
+            previous_yearlong_cdo_pd: YES,
             replace_existing: YES,
             principal_schedule_confirmed: YES,
           },
           meets_scholarship_criteria_scores: {
             plan_to_teach: YES,
-            previous_yearlong_cdo_pd: YES,
             principal_approval: YES,
             principal_schedule_confirmed: YES,
             free_lunch_percent: YES,
@@ -585,12 +585,12 @@ module Pd::Application
             csp_which_grades: YES,
             plan_to_teach: YES,
             committed: YES,
+            previous_yearlong_cdo_pd: YES,
             replace_existing: YES,
             principal_schedule_confirmed: YES,
           },
           meets_scholarship_criteria_scores: {
             plan_to_teach: YES,
-            previous_yearlong_cdo_pd: YES,
             principal_approval: YES,
             principal_schedule_confirmed: YES,
             free_lunch_percent: YES,
@@ -627,11 +627,11 @@ module Pd::Application
             csp_which_grades: YES,
             plan_to_teach: YES,
             committed: YES,
+            previous_yearlong_cdo_pd: YES,
             replace_existing: YES,
           },
           meets_scholarship_criteria_scores: {
             plan_to_teach: YES,
-            previous_yearlong_cdo_pd: YES
           },
           bonus_points_scores: {
             csp_how_offer: 2,
@@ -670,11 +670,11 @@ module Pd::Application
           meets_minimum_criteria_scores: {
             csd_which_grades: NO,
             committed: NO,
+            previous_yearlong_cdo_pd: NO,
             replace_existing: NO,
             principal_schedule_confirmed: NO,
           },
           meets_scholarship_criteria_scores: {
-            previous_yearlong_cdo_pd: NO,
             principal_approval: NO,
             principal_schedule_confirmed: NO,
             free_lunch_percent: NO,
@@ -716,11 +716,11 @@ module Pd::Application
           meets_minimum_criteria_scores: {
             csp_which_grades: NO,
             committed: NO,
+            previous_yearlong_cdo_pd: NO,
             replace_existing: NO,
             principal_schedule_confirmed: NO,
           },
           meets_scholarship_criteria_scores: {
-            previous_yearlong_cdo_pd: NO,
             principal_approval: NO,
             free_lunch_percent: NO,
             underrepresented_minority_percent: NO,
