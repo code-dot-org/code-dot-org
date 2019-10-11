@@ -67,7 +67,7 @@ def get_social_metadata_for_page(request)
     "csedweek.org" => {
       "soon-hoc" => {
         title: I18n.t(:csedweek_og_title),
-        description: I18n.t(:social_hoc2019_coming_dates),
+        description: hoc_s(:social_hoc2019_coming_dates),
         image: images[:cs_is_everything_thumbnail],
         video: videos[:computer_science_is_changing_everything]
       },
