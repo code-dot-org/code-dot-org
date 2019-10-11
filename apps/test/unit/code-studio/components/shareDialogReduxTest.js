@@ -6,7 +6,8 @@ describe('Share dialog redux module', () => {
   let originalState = {
     isOpen: false,
     isUnpublishPending: false,
-    didUnpublish: false
+    didUnpublish: false,
+    libraryDialogIsOpen: false
   };
 
   const UNPUBLISH_REQUEST = 'shareDialog/UNPUBLISH_REQUEST';
@@ -30,10 +31,14 @@ describe('Share dialog redux module', () => {
     });
   });
 
-  it('showShareDialog sets unpublish values to false', () => {
+  it('showShareDialog sets other values to their initial state', () => {
     expect(
       reducer(
-        {isUnpublishPending: true, didUnpublish: true},
+        {
+          isUnpublishPending: true,
+          didUnpublish: true,
+          libraryDialogIsOpen: true
+        },
         shareDialog.showShareDialog()
       )
     ).to.deep.equal({...originalState, ...{isOpen: true}});
@@ -41,8 +46,8 @@ describe('Share dialog redux module', () => {
 
   it('hideShareDialog sets isOpen to false', () => {
     expect(
-      reducer({isOpen: true}, shareDialog.hideShareDialog())
-    ).to.deep.equal(originalState);
+      reducer({isOpen: true}, shareDialog.hideShareDialog()).isOpen
+    ).to.equal(false);
   });
 
   it('hideShareDialog sets unpublish values to false', () => {
@@ -51,35 +56,59 @@ describe('Share dialog redux module', () => {
         {isOpen: true, isUnpublishPending: true, didUnpublish: true},
         shareDialog.hideShareDialog()
       )
-    ).to.deep.equal(originalState);
-  });
-
-  it('unpublish project sets isUnpublishPending to true', () => {
-    console.log(UNPUBLISH_REQUEST);
-    expect(reducer(undefined, {type: UNPUBLISH_REQUEST})).to.deep.equal({
-      ...originalState,
-      ...{isUnpublishPending: true}
+    ).to.deep.equal({
+      isOpen: false,
+      isUnpublishPending: false,
+      didUnpublish: false
     });
   });
 
+  it('hideShareDialog leaves libraryDialogIsOpen unchanged', () => {
+    expect(
+      reducer(
+        {isOpen: true, libraryDialogIsOpen: true},
+        shareDialog.hideShareDialog()
+      ).libraryDialogIsOpen
+    ).to.be.true;
+  });
+
+  it('unpublish project sets isUnpublishPending to true', () => {
+    expect(reducer(undefined, {type: UNPUBLISH_REQUEST}).isUnpublishPending).to
+      .be.true;
+  });
+
   it('unpublish project only changes isUnpublishPending', () => {
-    expect(reducer({isOpen: true}, {type: UNPUBLISH_REQUEST})).to.deep.equal({
-      isOpen: true,
+    let state = {isOpen: true, libraryDialogIsOpen: true};
+    expect(reducer(state, {type: UNPUBLISH_REQUEST})).to.deep.equal({
+      ...state,
       isUnpublishPending: true
     });
   });
 
   it('unpublish success changes publish values to original state', () => {
+    let result = reducer(
+      {isOpen: true, isUnpublishPending: true, didUnpublish: false},
+      {type: UNPUBLISH_SUCCESS}
+    );
+    expect(result.isOpen).to.be.false;
+    expect(result.isUnpublishPending).to.be.false;
+    expect(result.didUnpublish).to.be.true;
+  });
+
+  it('unpublish success leaves libraryDialogIsOpen unchanged', () => {
     expect(
-      reducer(
-        {isOpen: true, isUnpublishPending: true, didUnpublish: false},
-        {type: UNPUBLISH_SUCCESS}
-      )
-    ).to.deep.equal({...originalState, ...{didUnpublish: true}});
+      reducer({libraryDialogIsOpen: true}, {type: UNPUBLISH_SUCCESS})
+        .libraryDialogIsOpen
+    ).to.be.true;
   });
 
   it('unpublish fail changes only isUnpublishPending', () => {
-    let state = {isOpen: true, isUnpublishPending: true, didUnpublish: true};
+    let state = {
+      isOpen: true,
+      isUnpublishPending: true,
+      didUnpublish: true,
+      libraryDialogIsOpen: true
+    };
     expect(reducer(state, {type: UNPUBLISH_FAILURE})).to.deep.equal({
       ...state,
       ...{isUnpublishPending: false}
@@ -87,7 +116,12 @@ describe('Share dialog redux module', () => {
   });
 
   it('saveReplayLog sets the changes only the replay log', () => {
-    let state = {isOpen: true, isUnpublishPending: true, didUnpublish: true};
+    let state = {
+      isOpen: true,
+      isUnpublishPending: true,
+      didUnpublish: true,
+      libraryDialogIsOpen: true
+    };
     let testLog = 'test';
     expect(reducer(state, shareDialog.saveReplayLog(testLog))).to.deep.equal({
       ...state,

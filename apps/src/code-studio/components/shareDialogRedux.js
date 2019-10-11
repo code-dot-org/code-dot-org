@@ -25,8 +25,7 @@ export default function reducer(state = initialState, action) {
     case SHOW_SHARE_DIALOG:
       return {
         ...state,
-        isUnpublishPending: false,
-        didUnpublish: false,
+        ...initialState,
         isOpen: true
       };
     case HIDE_SHARE_DIALOG:
