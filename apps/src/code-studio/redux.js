@@ -9,7 +9,6 @@ import shareDialog from './components/shareDialogRedux';
 import exportDialog from './components/exportDialogRedux';
 import hiddenStage from './hiddenStageRedux';
 import isRtl from './isRtlRedux';
-import libraryCreation from './components/Libraries/libraryCreationRedux';
 import responsive from './responsiveRedux';
 import publishDialog from '../templates/projects/publishDialog/publishDialogRedux';
 import verifiedTeacher from './verifiedTeacherRedux';
@@ -24,7 +23,6 @@ registerReducers({
   exportDialog,
   hiddenStage,
   isRtl,
-  libraryCreation,
   responsive,
   publishDialog,
   verifiedTeacher

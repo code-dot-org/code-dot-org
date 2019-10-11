@@ -8,10 +8,6 @@ import {Provider} from 'react-redux';
 import {getStore} from '../redux';
 import {showShareDialog} from './components/shareDialogRedux';
 import {AllPublishableProjectTypes} from '../util/sharedConstants';
-import {
-  setLibraryName,
-  setLibrarySource
-} from './components/Libraries/libraryCreationRedux';
 
 export function shareProject(shareUrl) {
   dashboard.project.saveIfSourcesChanged().then(() => {
@@ -37,13 +33,6 @@ export function shareProject(shareUrl) {
         pageConstants.is13Plus || (!pageConstants.isSignedIn && is13Plus);
     } else {
       canShareSocial = pageConstants.is13Plus || !pageConstants.isSignedIn;
-    }
-
-    if (appType === 'applab' || appType === 'gamelab') {
-      getStore().dispatch(setLibraryName(dashboard.project.getCurrentName()));
-      dashboard.project.getUpdatedSourceAndHtml_(response => {
-        getStore().dispatch(setLibrarySource(response.source));
-      });
     }
 
     // Allow publishing for any project type that students can publish.
