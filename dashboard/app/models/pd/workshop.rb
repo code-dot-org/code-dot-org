@@ -344,9 +344,14 @@ class Pd::Workshop < ActiveRecord::Base
   # Returns the school year the summer workshop is preparing for, in
   # the form "2019-2020", like application_year on Pd Applications.
   # The school year runs 6/1-5/31.
+  # @see Pd::Application::ActiveApplicationModels::APPLICATION_YEARS
   def school_year
     return nil if sessions.empty?
-    sessions.order(:start).first.start.month >= 6 ? "#{year}-#{year.to_i + 1}" : "#{year.to_i - 1}-#{year}"
+
+    workshop_year = year
+    sessions.order(:start).first.start.month >= 6 ?
+      "#{workshop_year}-#{workshop_year.to_i + 1}" :
+      "#{workshop_year.to_i - 1}-#{workshop_year}"
   end
 
   # Suppress 3 and 10-day reminders for certain workshops
