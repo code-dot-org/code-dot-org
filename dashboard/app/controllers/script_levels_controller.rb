@@ -65,7 +65,7 @@ class ScriptLevelsController < ApplicationController
       return
     end
     configure_caching(@script)
-    if @script.finish_url && current_user.try(:completed?, @script)
+    if @script.finish_url && Policies::ScriptActivity.completed?(current_user, @script)
       redirect_to @script.finish_url
       return
     end

@@ -142,6 +142,10 @@ function initProjects() {
       getGeneratedProperties: function() {
         return undefined;
       },
+      setInitialLibrariesList: function(_) {},
+      getLibrariesList: function() {
+        return undefined;
+      },
       setInitialLevelSource: function(levelSource) {
         options.projectData = levelSource;
       },

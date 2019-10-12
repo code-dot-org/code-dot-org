@@ -76,9 +76,6 @@ Dashboard::Application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
-  # Whether or not to display pretty apps (formerly called blockly).
-  config.pretty_apps = true
-
   # Log condensed lines to syslog for centralized logging.
   config.lograge.enabled = true
   config.lograge.formatter = Lograge::Formatters::Cee.new
