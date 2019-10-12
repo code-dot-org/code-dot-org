@@ -10,6 +10,9 @@ ko:
   campaign_date_full: "12월 4일-10일"
   campaign_date_year: "2017년"
   campaign_date_full_year: "2017년 12월 4일부터 10일"
+  hoc2019_header: '컴퓨터과학을 배워 세상을 바꾸어 보세요.'
+  hoc2019_header_line1_mobile: '컴퓨터과학을 배워.'
+  hoc2019_header_line2_mobile: '세상을 바꾸어 보세요.'
   codeorg_homepage_hoc2018_curriculum: 'Go further with <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org courses</a>'
   codeorg_homepage_hoc2018_dance_heading: 'Create your own <span class="highlight-word">Dance&nbsp;Party</span>'
   codeorg_homepage_hoc2018_header_line1: 'The Hour of Code is coming...'
@@ -317,7 +320,7 @@ ko:
   map_legend_title: '찾아보기'
   map_legend_hoc_events: 'Hour of Code 행사'
   map_legend_cs_tech_jam: '특별 이벤트'
-  map_warning: "The Hour of Code map only shows the first 200,000 registered events. All registered events with a valid address can be viewed on the <a href='%{events_url}'>events page.</a>"
+  map_warning: "A full list of the events can be viewed on the <a href='%{events_url}'>events page.</a>"
   meta_tag_og_title: 'Hour of Code 가 여기 있습니다.'
   meta_tag_og_description: 'Hour of Code 는 180개 이상의 나라에서 30개 이상의 언어로, 4세부터 104세까지 수천만 명의 학생들과 함께하려는 전세계적 운동입니다.'
   meta_tag_twitter_title: 'Hour of Code 가 여기 있습니다.'

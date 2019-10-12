@@ -10,6 +10,9 @@
   campaign_date_full: "දෙසැම්බර් 5-11"
   campaign_date_year: "2016"
   campaign_date_full_year: "දෙසැම්බර් 5-11, 2016"
+  hoc2019_header: 'Learn computer science. Change the world.'
+  hoc2019_header_line1_mobile: 'Learn computer science.'
+  hoc2019_header_line2_mobile: 'Change the world.'
   codeorg_homepage_hoc2018_curriculum: 'Go further with <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org courses</a>'
   codeorg_homepage_hoc2018_dance_heading: 'Create your own <span class="highlight-word">Dance&nbsp;Party</span>'
   codeorg_homepage_hoc2018_header_line1: 'The Hour of Code is coming...'
@@ -317,7 +320,7 @@
   map_legend_title: 'පුරාවෘත්තය'
   map_legend_hoc_events: 'Hour of Code වැඩසටහන'
   map_legend_cs_tech_jam: 'විශේෂ වැඩසටහන'
-  map_warning: "The Hour of Code map only shows the first 200,000 registered events. All registered events with a valid address can be viewed on the <a href='%{events_url}'>events page.</a>"
+  map_warning: "A full list of the events can be viewed on the <a href='%{events_url}'>events page.</a>"
   meta_tag_og_title: 'සැම දරුවකුම මේ අවස්ථාවට සුදුසුයි'
   meta_tag_og_description: 'Hour of Code යනු රටවල් 180කට වැඩිගණනක් හා භාෂා 45කට අධික සංඛ්‍යාවකින් අන්තර්ජාතිකව සිසුන් දහස් ගණනින් පරිගණක විද්‍යාවට සමීපකිරීමට පවත්වනුලබන වැඩසටහණකි. වයස 4 සිට 104.'
   meta_tag_twitter_title: 'සැම දරුවකුම මේ අවස්ථාවට සුදුසුයි'
