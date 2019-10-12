@@ -9,8 +9,12 @@
   = @application.effective_regional_partner_name + "'s"
   2020-21 Professional Learning Program for
   = @application.course_name + ","
-  %strong at no cost to you or your school,
-  in partnership with Code.org! Please read on for more details, and then make
+  - if @application.regional_partner
+    %strong at no cost to you or your school,
+    in partnership with Code.org!
+  - else
+    %strong at no cost to you or your school!
+  Please read on for more details, and then make
   sure to register using the link below
   %strong within two weeks
   of receiving this message to
