@@ -1250,7 +1250,7 @@ export class DetailViewContents extends React.Component {
             <td style={styles.answerColumn}>
               {this.renderRegionalPartnerAnswer()}
             </td>
-            {this.renderScoringSection('regionalPartnerName')}
+            <td style={styles.scoringColumn} />
           </tr>
           {this.props.applicationData.application_type ===
             ApplicationTypes.teacher && (

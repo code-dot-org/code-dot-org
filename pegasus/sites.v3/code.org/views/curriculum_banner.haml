@@ -6,3 +6,6 @@
       %button{style: "margin: initial; background-color: initial; border-color: white; vertical-align: initial;"}
         See how
   .clear{style: "clear: both"}
+- elsif Homepage.show_courses_banner(request)
+  .curriculum-banner
+    = hoc_s(:codeorg_homepage_hoc2018_curriculum).gsub("%{studio_url}", CDO.studio_url)
