@@ -20,7 +20,7 @@ class LibraryCreationDialog extends React.Component {
     librarySource: '',
     selectedFunctionList: [],
     loadingFinished: false,
-    libraryName: dashboard.project.getCurrentName()
+    libraryName: ''
   };
 
   componentDidUpdate(prevProps) {
