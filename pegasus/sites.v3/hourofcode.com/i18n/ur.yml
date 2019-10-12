@@ -10,6 +10,9 @@
   campaign_date_full: "4-10 دسمبر"
   campaign_date_year: "2017"
   campaign_date_full_year: "4-10، 2017"
+  hoc2019_header: 'Learn computer science. Change the world.'
+  hoc2019_header_line1_mobile: 'Learn computer science.'
+  hoc2019_header_line2_mobile: 'Change the world.'
   codeorg_homepage_hoc2018_curriculum: 'آگے بڑھا <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org کورس</a>'
   codeorg_homepage_hoc2018_dance_heading: 'آپ کے اپنے <span class="highlight-word">رقص&nbsp;پارٹی</span> بنائیں'
   codeorg_homepage_hoc2018_header_line1: 'کوڈ کی گھڑی آ رہا ہے...'

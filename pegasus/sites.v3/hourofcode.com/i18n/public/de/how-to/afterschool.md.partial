@@ -8,7 +8,7 @@ nav: how_to_nav
 
 # Wie unterrichtet man eine Hour of Code in Freizeit und Verein
 
-### Schließen Sie sich der Bewegung an und bringen Sie mit diesen Schritten eine Gruppe von Schülern zu ihrer ersten Informatik Stunde. Eine "Hour of Code" ist einfach zu veranstalten - selbst für Anfänger! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+### Schließen Sie sich der Bewegung an und bringen Sie mit diesen Schritten eine Gruppe von Schülern zu ihrer ersten Informatik Stunde. Eine "Hour of Code" ist einfach zu veranstalten - selbst für Anfänger! Wenn Sie möchten, dass ein zusätzliches Paar Hände aushelfen, können Sie einen [lokalen Freiwilligen]({{ urls/volunteer_local }}}) finden, der Ihnen hilft, eine Hour of Code in Ihrer außerschulischen Klasse oder Ihrem Club auszuführen.
 
 ---
 
@@ -16,7 +16,7 @@ nav: how_to_nav
 
 ## Wähle eine Lektion
 
-We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for participants all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
+Wir bieten eine Vielzahl von [lustigen, stundenlangen Tutorials]({{ urls/learn }}) für Teilnehmer jeden Alters, die von einer Vielzahl von Partnern erstellt wurden. [Probieren Sie sie aus!]({{ urls/learn }})
 
 **Alle Hour of Code Tutorien** erfordern minimale Vorbereitungszeit für den Organisator und sind selbstgeführt, so dass die Kinder in ihrer eigenen Geschwindigkeit und ihren eigenen Fähigkeiten entsprechend arbeiten können.
 
@@ -26,7 +26,7 @@ We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for partici
 
 ## 3. Machen Sie Werbung für Ihre "Hour of Code"
 
-Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage others to host their own events.
+Bewerben Sie Ihre Hour of Code [mit diesen Tools]({{ urls/promote }}) und ermutigen Sie andere, ihre eigenen Veranstaltungen durchzuführen.
 
 ## 4. Planen Sie ihren Bedarf an technischer Ausstattung - Computer sind nicht immer erforderlich
 
@@ -53,22 +53,22 @@ Beginnen Sie Ihre Hour of Code mit einer motivierenden Diskussion mit den Teilne
 
 - Beschreiben Sie, wie Technologie unser Leben beeinflusst, mit Beispielen, die Jungen und Mädchen ansprechen (Sprechen Sie über Apps und Technologien, die eingesetzt werden, um Leben zu retten, Menschen zu helfen, Menschen zu verbinden etc.).
 - Zählen Sie auf, wo überall im täglichen Leben Code verwendet wird.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- [Hier]({{ urls/girls }}) finden Sie Tipps, wie Sie Mädchen für Informatik begeistern können.
 
 **Brauchen Sie mehr Hilfe?** Laden Sie diese [Vorlage für einen Unterrichtsplan](/files/AfterschoolEducatorLessonPlanOutline.docx) herunter.
 
 ## 6. Programmieren!
 
-**Zeigen Sie, wo die Aktivität zu finden ist** - Schreiben Sie den Link zum Tutorium and die Tafel. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+**Zeigen Sie, wo die Aktivität zu finden ist** - Schreiben Sie den Link zum Tutorium and die Tafel. Den Link, der auf der Seite [Informationen für das ausgewählte Tutorial]({{ urls/learn }}) aufgeführt ist, finden Sie unter der Teilnehmerzahl.
 
 **Wenn jemand Schwierigkeiten hat, ist es okay zu antworten:**- - "Ich weiß nicht. Versuchen wir zusammen eine Lösung zu finden." - "Technik funktioniert nicht immer so, wie wir uns es wünschen." - "Programmieren lernen ist wie das Erlernen einer neuen Sprache; Es braucht Zeit, bis man flüssig sprechen kann."
 
-**What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn]({{ urls/learn }}) - Or, ask those who finish early to help others who are having trouble.
+**Was tun, wenn jemand früher fertig ist?** - Ermutigen Sie die Teilnehmer, eine weitere Hour of Code Aktivität unter [hourofcode.com/learn]({{ urls/learn }}) auszuprobieren. - Oder bitten Sie diejenigen, die früh fertig sind, anderen zu helfen, die Probleme haben.
 
 ## 7. Feiern
 
-- [Print certificates]({{ urls/certificates }}) for your students.
-- [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers for your students.
+- [Drucken Sie Zertifikate]({{ urls/certificates }}) für Ihre Schüler.
+- [Drucken Sie "I did an hour of code!"]({{ promote/resources_stickers }}}) Aufkleber für Ihre Schüler.
 - Bestellen Sie hier [speziell angefertigte T-Shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) für die Teilnehmer.
 - Teilen Sie Fotos und Videos Ihrer Hour of Code-Veranstaltung in den sozialen Medien. Verwenden Sie #HourOfCode und @codeorg, damit wir Ihren Erfolg auch hervorheben können!
 

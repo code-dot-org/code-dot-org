@@ -10,6 +10,9 @@ sr:
   campaign_date_full: "7-13 децембра"
   campaign_date_year: "2016"
   campaign_date_full_year: "Децембар 5-11, 2016"
+  hoc2019_header: 'Учи информатику. Промени свет.'
+  hoc2019_header_line1_mobile: 'Учи информатику.'
+  hoc2019_header_line2_mobile: 'Промени свет.'
   codeorg_homepage_hoc2018_curriculum: 'Наставите са програмирањем на <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org курсевима</a>'
   codeorg_homepage_hoc2018_dance_heading: 'Create your own <span class="highlight-word">Dance&nbsp;Party</span>'
   codeorg_homepage_hoc2018_header_line1: 'Час програмирања се приближава...'
