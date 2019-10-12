@@ -4,7 +4,7 @@
 
 %p
   Thank you for your interest in
-  = "#{@application.regional_partner&.name || 'Code.org'}'s"
+  = @application.effective_regional_partner_name + "'s"
   Professional Learning Program! We've received your application.
   = @application.regional_partner&.name || 'We'
   will review your application soon.
