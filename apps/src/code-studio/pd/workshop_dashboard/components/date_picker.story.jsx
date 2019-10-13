@@ -1,5 +1,4 @@
 import React from 'react';
-import moment from 'moment';
 import DatePicker from './date_picker';
 import {action} from '@storybook/addon-actions';
 
