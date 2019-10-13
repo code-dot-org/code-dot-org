@@ -15,9 +15,9 @@ export default storybook => {
       </div>
     ))
     .add('Basic', () => (
-      <DatePicker date={moment()} onChange={action('changed')} />
+      <DatePicker date={new Date()} onChange={action('changed')} />
     ))
     .add('Clearable', () => (
-      <DatePicker date={moment()} onChange={action('changed')} clearable />
+      <DatePicker date={new Date()} onChange={action('changed')} clearable />
     ));
 };

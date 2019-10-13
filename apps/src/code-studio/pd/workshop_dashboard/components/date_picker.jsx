@@ -93,16 +93,16 @@ const DateInputWithIcon = Radium(DateInputWithIconUnwrapped);
 
 export default class DatePicker extends React.Component {
   static propTypes = {
-    date: ReactDatePicker.propTypes.selected,
+    date: PropTypes.instanceOf(Date),
     onChange: PropTypes.func.isRequired,
-    onBlur: ReactDatePicker.propTypes.onBlur,
-    minDate: ReactDatePicker.propTypes.minDate,
-    maxDate: ReactDatePicker.propTypes.maxDate,
-    selectsStart: ReactDatePicker.propTypes.selectsStart,
-    selectsEnd: ReactDatePicker.propTypes.selectsEnd,
-    startDate: ReactDatePicker.propTypes.startDate,
-    endDate: ReactDatePicker.propTypes.endDate,
-    readOnly: ReactDatePicker.propTypes.disabled,
+    onBlur: PropTypes.func,
+    minDate: PropTypes.instanceOf(Date),
+    maxDate: PropTypes.instanceOf(Date),
+    selectsStart: PropTypes.bool,
+    selectsEnd: PropTypes.bool,
+    startDate: PropTypes.instanceOf(Date),
+    endDate: PropTypes.instanceOf(Date),
+    readOnly: PropTypes.bool,
     clearable: PropTypes.bool
   };
 
