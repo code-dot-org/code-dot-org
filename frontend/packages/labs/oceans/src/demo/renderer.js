@@ -30,6 +30,14 @@ let fishes = [],
   canvas,
   canvasCtx;
 
+const FISH_CANVAS_WIDTH = 300;
+const FISH_CANVAS_HEIGHT = 200;
+const FISH_WIDTH = 150;
+const FISH_HEIGHT = 100;
+
+const ROWS = 5;
+const COLS = 4;
+
 function getSwayOffsets(fishId) {
   var swayValue = (($time() * 360) / (20 * 1000) + (fishId + 1) * 10) % 360;
   var swayOffsetX = Math.sin(((swayValue * Math.PI) / 180) * 5) * 6;
@@ -54,18 +62,16 @@ function getFishLocation(fishId) {
 
   // Generate the location based on the layout.
   if (layout === 'random') {
-    for (var i = 0; i < 30; ++i) {
       x = Math.floor(Math.random() * constants.canvasWidth);
       y = Math.floor(Math.random() * constants.canvasHeight);
-    }
   } else if (layout === 'grid') {
-    x = (fishId % 10) * 200;
-    y = Math.floor(fishId / 10) * 200;
+    x = (fishId % COLS) * FISH_WIDTH*1.3 + 10;
+    y = Math.floor(fishId / COLS) * FISH_HEIGHT*1.1 + 10;
   } else if (layout === 'diamondgrid') {
-    x = (fishId % 10) * 200 + (Math.floor(fishId / 10) % 2 === 1 ? -100 : 0);
-    y = Math.floor(fishId / 10) * 200;
+    x = (fishId % COLS) * FISH_WIDTH + (Math.floor(fishId / COLS) % 2 === 1 ? -100 : 0);
+    y = Math.floor(fishId / COLS) * FISH_HEIGHT;
   } else if (layout === 'line') {
-    x = fishId * 200;
+    x = fishId * FISH_WIDTH;
     y = 200;
   }
 
@@ -93,6 +99,8 @@ function drawFish(fish, results, palette, ctx) {
 
   results.forEach(result => {
     let intermediateCanvas = document.createElement('canvas');
+    intermediateCanvas.width = FISH_CANVAS_WIDTH;
+    intermediateCanvas.height = FISH_CANVAS_HEIGHT;
     let intermediateCtx = intermediateCanvas.getContext('2d');
     let anchor = [0, 0];
     if (result.fishPart.type !== FishBodyPart.BODY) {
@@ -130,7 +138,7 @@ function drawFish(fish, results, palette, ctx) {
 }
 
 function drawRenderedFish(fishCanvas, x, y, palette, ctx) {
-  ctx.drawImage(fishCanvas, x, y);
+  ctx.drawImage(fishCanvas, x, y, FISH_WIDTH, FISH_HEIGHT);
 }
 
 function loadFishImage(fishPart) {
@@ -185,12 +193,14 @@ export const init = function(canvasParam) {
   canvas = canvasParam;
   canvasCtx = canvas.getContext('2d');
 
-  for (let i = 0; i < 30; i++) {
+  for (let i = 0; i < ROWS * COLS; i++) {
     fishes.push(getRandomFish(i));
   }
 
   fishes.forEach(fish => {
     fish.canvas = document.createElement('canvas');
+    fish.canvas.width = FISH_CANVAS_WIDTH;
+    fish.canvas.height = FISH_CANVAS_HEIGHT;
     loadImages(fish.fish).then(results =>
       drawFish(
         fish.fish,
