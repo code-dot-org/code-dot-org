@@ -940,7 +940,9 @@ exports.install = function(blockly, blockInstallOptions) {
     helpUrl: '',
     init: function() {
       var dropdown = new blockly.FieldDropdown(this.VALUES);
-      var dropdown1 = spriteNumberTextDropdown(msg.setSpriteN);
+      var dropdown1 = new blockly.FieldDropdown(
+        spriteNumberTextArray(msg.setSpriteN)
+      );
 
       dropdown.setValue(this.VALUES[1][1]); // default to top-left
       this.setHSV(184, 1.0, 0.74);
