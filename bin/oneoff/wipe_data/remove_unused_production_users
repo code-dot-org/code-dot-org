@@ -7,6 +7,9 @@ require_relative '../../../dashboard/config/environment'
 
 exit unless rack_env?(:production) && CDO.dashboard_hostname == 'studio.code.org'
 
+# This script is a dry-run unless we change this line.
+DRY_RUN = true
+
 USERS_TO_DELETE = %w(
   1652546
   1901680
@@ -53,8 +56,7 @@ USERS_TO_DELETE.each do |user_id|
   ActiveRecord::Base.transaction do
     User.destroy(user_id)
 
-    # This script is a dry-run unless we comment out this line.
-    raise ActiveRecord::Rollback.new, "Intentional rollback"
+    raise ActiveRecord::Rollback.new, "Intentional rollback" if DRY_RUN
 
     puts "User ID successfully destroyed - #{user_id}"
   end
