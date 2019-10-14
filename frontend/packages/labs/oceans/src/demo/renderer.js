@@ -1,7 +1,8 @@
+import 'babel-polyfill';
 import _ from 'lodash';
 import constants, {Modes} from './constants';
 import {FishBodyPart} from '../utils/fishData';
-import {generateRandomFish} from '../activities/hoc2019/SpritesheetFish';
+import {generateRandomFish} from '../utils/generateOcean';
 import {getState} from './state';
 
 window.requestAnimFrame = (function() {
