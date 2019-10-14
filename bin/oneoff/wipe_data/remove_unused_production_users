@@ -50,11 +50,12 @@ USERS_TO_DELETE = %w(
 # ActiveRecord `destroy` can take an array argument, but carrying out all destroys in a single database transaction
 # can cause the entire operation to be rolledback when an error was raised destroying a single malformed User.
 USERS_TO_DELETE.each do |user_id|
-  User.destroy(user_id)
+  ActiveRecord::Base.transaction do
+    User.destroy(user_id)
 
-  # This script is a dry-run unless we comment out this line.
-  raise ActiveRecord::Rollback.new, "Intentional rollback"
-
+    # This script is a dry-run unless we comment out this last line
+    raise ActiveRecord::Rollback.new, "Intentional rollback"
+  end
   puts "User ID successfully destroyed - #{user_id}"
 rescue StandardError => error
   puts "Error destroying User ID - #{user_id} / #{error.message}"
