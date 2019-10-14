@@ -25,23 +25,53 @@ let fishes = [],
     currentBackgroundImageName,
     backgroundImage;
 
-function updatePos(fish) {
-  var swayValue = (($time() * 360) / (20 * 1000) + (fish.id + 1) * 10) % 360;
-  var swayOffsetX = Math.sin(((swayValue * Math.PI) / 180) * 5) * 6;
-  var swayOffsetY = Math.sin(((swayValue * Math.PI) / 180) * 6) * 2;
+function getSwayOffsets(fishId) {
+  var swayValue = (($time() * 360 / (20 * 1000)) + (fishId+1) * 10) % 360;
+  var swayOffsetX = Math.sin(swayValue*Math.PI/180*5) * 6;
+  var swayOffsetY = Math.sin(swayValue*Math.PI/180*6) * 2;
 
-  fish.currentPos[0] = fish.defaultPos[0] + swayOffsetX;
-  fish.currentPos[1] = fish.defaultPos[1] + swayOffsetY;
+  return {offsetX: swayOffsetX, offsetY: swayOffsetY};
 }
 
-function getRandomFish(id, currentPos, defaultPos) {
+function getFishLocation(fishId) {
+  let x, y;
+  let layout;
+
+  // Determine which layout to use based on mode.
+  const currentMode = getState().currentMode;
+  if (currentMode === Modes.Training) {
+    layout = "grid";
+  } else if (currentMode === Modes.Predicting) {
+    layout = "line";
+  } else if (currentMode === Modes.Pond) {
+    layout = "diamondgrid";
+  }
+
+  // Generate the location based on the layout.
+  if (layout === "random") {
+    for (var i = 0; i < 30; ++i) {
+      x = Math.floor(Math.random() * constants.canvasWidth);
+      y = Math.floor(Math.random() * constants.canvasHeight);
+    }
+  } else if (layout === "grid") {
+    x = (fishId % 10) * 200;
+    y = Math.floor(fishId / 10) * 200;
+  } else if (layout === "diamondgrid") {
+    x = (fishId % 10) * 200 + (Math.floor(fishId / 10) % 2 === 1 ? -100 : 0);
+    y = Math.floor(fishId / 10) * 200;
+  } else if (layout === "line") {
+    x = fishId * 200;
+    y = 200;
+  }
+
+  return {x: x, y: y};
+}
+
+function getRandomFish(id) {
   return {
     id: id,
     fish: generateRandomFish(),
-    defaultPos: defaultPos,
-    currentPos: currentPos,
-    canvas: null,
-    posChange: [0, 1]
+    canvas: null
   };
 }
 
@@ -95,7 +125,6 @@ function drawFish(fish, results, palette, ctx) {
 }
 
 function drawRenderedFish(fishCanvas, x, y, palette, ctx) {
-  //const promises = fish.parts.map(bodyPart => loadFishImage(bodyPart));
   ctx.drawImage(fishCanvas, x, y);
 }
 
@@ -144,21 +173,11 @@ function colorFromType(palette, type) {
   }
 }
 
+// Initialize the renderer once.
+// This will generate canvases with the fish collection.
 export const init = function(canvas) {
-  const layout = 'grid';
-  var i;
-  if (layout === 'random') {
-    for (i = 0; i < 30; ++i) {
-      const x = Math.floor(Math.random() * constants.canvasWidth);
-      const y = Math.floor(Math.random() * constants.canvasHeight);
-      fishes.push(getRandomFish(i, [x, y], [x, y]));
-    }
-  } else if (layout === 'grid') {
-    for (i = 0; i < 30; ++i) {
-      const x = (i % 10) * 200;
-      const y = Math.floor(i / 10) * 200;
-      fishes.push(getRandomFish(i, [x, y], [x, y]));
-    }
+  for (let i = 0; i < 30; i++) {
+    fishes.push(getRandomFish(i));
   }
 
   fishes.forEach(fish => {
@@ -174,6 +193,8 @@ export const init = function(canvas) {
   });
 
   function animateScreen() {
+    // Update static screen elements that might change occasionally,
+    // e.g. background image.
     updateScreenElements();
 
     var ctx = canvas.getContext('2d');
@@ -187,11 +208,12 @@ export const init = function(canvas) {
     );
 
     fishes.forEach(fish => {
-      updatePos(fish);
+      const location = getFishLocation(fish.id);
+      const offsets = getSwayOffsets(fish.id);
       drawRenderedFish(
         fish.canvas,
-        fish.currentPos[0],
-        fish.currentPos[1],
+        location.x + offsets.offsetX,
+        location.y + offsets.offsetY,
         fish.fish.colorPalette,
         ctx
       );
