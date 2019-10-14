@@ -13,8 +13,8 @@ let canvas, canvasCtx;
 
 const FISH_CANVAS_WIDTH = 300;
 const FISH_CANVAS_HEIGHT = 200;
-const FISH_WIDTH = 150;
-const FISH_HEIGHT = 100;
+const FISH_WIDTH = 300;
+const FISH_HEIGHT = 200;
 const ROWS = 5;
 const COLS = 4;
 
@@ -39,14 +39,16 @@ export function init(canvasParam) {
 
 function loadBackgroundImage() {
   let backgroundImageName;
-  const currentMode = getState().currentMode;
-  if (currentMode === Modes.Training) {
-    backgroundImageName = 'classroom';
-  } else if (currentMode === Modes.Predicting) {
-    backgroundImageName = 'pipes';
-  } else if (currentMode === Modes.Pond) {
-    backgroundImageName = 'underwater';
-  }
+  // const currentMode = getState().currentMode;
+  // if (currentMode === Modes.Training) {
+  //   backgroundImageName = 'classroom';
+  // } else if (currentMode === Modes.Predicting) {
+  //   backgroundImageName = 'pipes';
+  // } else if (currentMode === Modes.Pond) {
+  //   backgroundImageName = 'underwater';
+  // }
+
+  backgroundImageName = 'underwater';
 
   return new Promise((resolve, reject) => {
     const img = new Image();
@@ -71,17 +73,23 @@ function initTraining() {
   }
 
   const fishDatum = fishData[0];
-  fishDatum.canvas = document.createElement('canvas');
-  fishDatum.canvas.width = FISH_CANVAS_WIDTH;
-  fishDatum.canvas.height = FISH_CANVAS_HEIGHT;
-  loadImages(fishDatum.fish).then(results =>
+  loadImages(fishDatum.fish).then(results => {
     drawFish(
       fishDatum.fish,
       results,
       canvasCtx,
-      constants.canvasWidth / 2,
-      constants.canvasHeight / 2
-    )
+      canvas.width / 2,
+      canvas.height / 2
+    );
+  });
+
+  // Draw frame around fish
+  const rectSize = 300;
+  canvasCtx.fillRect(
+    canvas.width / 2 - rectSize / 2,
+    canvas.height / 2 - rectSize / 2,
+    rectSize,
+    rectSize
   );
 }
 
@@ -198,7 +206,13 @@ function drawFish(fish, results, ctx, x = 0, y = 0) {
       intermediateCtx.putImageData(imageData, xPos, yPos);
     }
 
-    ctx.drawImage(intermediateCanvas, x, y);
+    ctx.drawImage(
+      intermediateCanvas,
+      x - intermediateCanvas.width / 2,
+      y - intermediateCanvas.height / 2,
+      FISH_WIDTH,
+      FISH_HEIGHT
+    );
   });
 }
 
