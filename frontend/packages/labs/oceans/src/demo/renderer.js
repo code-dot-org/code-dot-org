@@ -3,29 +3,32 @@ import constants from './constants';
 import {FishBodyPart} from '../utils/fishData';
 import {generateRandomFish} from '../activities/hoc2019/SpritesheetFish';
 
-
-window.requestAnimFrame = (function(){
-  return  window.requestAnimationFrame       ||
-          window.webkitRequestAnimationFrame ||
-          window.mozRequestAnimationFrame    ||
-          window.oRequestAnimationFrame      ||
-          window.msRequestAnimationFrame     ||
-          function(/* function */ callback, /* DOMElement */ element){
-            window.setTimeout(callback, 1000 / 60);
-          };
+window.requestAnimFrame = (function() {
+  return (
+    window.requestAnimationFrame ||
+    window.webkitRequestAnimationFrame ||
+    window.mozRequestAnimationFrame ||
+    window.oRequestAnimationFrame ||
+    window.msRequestAnimationFrame ||
+    function(/* function */ callback, /* DOMElement */ element) {
+      window.setTimeout(callback, 1000 / 60);
+    }
+  );
 })();
 
-var $time = Date.now || function() {
-  return +new Date;
-};
+var $time =
+  Date.now ||
+  function() {
+    return +new Date();
+  };
 
 let fishes = [],
-    backgroundImage;
+  backgroundImage;
 
 function updatePos(fish) {
-  var swayValue = (($time() * 360 / (20 * 1000)) + (fish.id+1) * 10) % 360;
-  var swayOffsetX = Math.sin(swayValue*Math.PI/180*5) * 6;
-  var swayOffsetY = Math.sin(swayValue*Math.PI/180*6) * 2;
+  var swayValue = (($time() * 360) / (20 * 1000) + (fish.id + 1) * 10) % 360;
+  var swayOffsetX = Math.sin(((swayValue * Math.PI) / 180) * 5) * 6;
+  var swayOffsetY = Math.sin(((swayValue * Math.PI) / 180) * 6) * 2;
 
   fish.currentPos[0] = fish.defaultPos[0] + swayOffsetX;
   fish.currentPos[1] = fish.defaultPos[1] + swayOffsetY;
@@ -142,15 +145,16 @@ function colorFromType(palette, type) {
 }
 
 export const init = function(canvas) {
-  const layout = "grid";
-  if (layout === "random") {
-    for (var i = 0; i < 30; ++i) {
+  const layout = 'grid';
+  var i;
+  if (layout === 'random') {
+    for (i = 0; i < 30; ++i) {
       const x = Math.floor(Math.random() * constants.canvasWidth);
       const y = Math.floor(Math.random() * constants.canvasHeight);
       fishes.push(getRandomFish(i, [x, y], [x, y]));
     }
-  } else if (layout === "grid") {
-    for (var i = 0; i < 30; ++i) {
+  } else if (layout === 'grid') {
+    for (i = 0; i < 30; ++i) {
       const x = (i % 10) * 200;
       const y = Math.floor(i / 10) * 200;
       fishes.push(getRandomFish(i, [x, y], [x, y]));
@@ -175,7 +179,13 @@ export const init = function(canvas) {
   function animateScreen() {
     var ctx = canvas.getContext('2d');
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.drawImage(backgroundImage, 0, 0, constants.canvasWidth, constants.canvasHeight);
+    ctx.drawImage(
+      backgroundImage,
+      0,
+      0,
+      constants.canvasWidth,
+      constants.canvasHeight
+    );
 
     fishes.forEach(fish => {
       updatePos(fish);
@@ -188,8 +198,8 @@ export const init = function(canvas) {
       );
     });
 
-    requestAnimFrame(animateScreen);
+    window.requestAnimFrame(animateScreen);
   }
 
-  requestAnimFrame(animateScreen);
+  window.requestAnimFrame(animateScreen);
 };
