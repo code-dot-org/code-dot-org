@@ -12,6 +12,10 @@ class ContactRollups
   MAX_EXECUTION_TIME = 1_800_000
   MAX_EXECUTION_TIME_SEC = MAX_EXECUTION_TIME / 1000
 
+  DATABASE_CLUSTER_CLONE_ID = "#{CDO.db_cluster_id}-temporary-clone"
+  DATABASE_CLUSTER_CLONE_INSTANCE_ID = "#{DATABASE_CLUSTER_CLONE_ID}-instance"
+  DATABASE_CLONE_INSTANCE_TYPE = 'db.r4.2xlarge'
+
   # Connection to read from Pegasus production database.
   PEGASUS_DB_READER = sequel_connect(
     CDO.pegasus_db_reader,
@@ -26,32 +30,13 @@ class ContactRollups
     query_timeout: MAX_EXECUTION_TIME_SEC
   )
 
-  # Connection to read from Pegasus reporting database.
-  PEGASUS_REPORTING_DB_READER = sequel_connect(
-    CDO.pegasus_reporting_db_reader,
-    CDO.pegasus_reporting_db_reader,
-    query_timeout: MAX_EXECUTION_TIME_SEC
-  )
-
-  # Connection to write to Pegasus reporting database.
-  PEGASUS_REPORTING_DB_WRITER = sequel_connect(
-    CDO.pegasus_reporting_db_writer,
-    CDO.pegasus_reporting_db_writer,
-    query_timeout: MAX_EXECUTION_TIME_SEC
-  )
-
-  # Connection to read from Dashboard reporting database.
-  DASHBOARD_REPORTING_DB_READER = sequel_connect(
-    CDO.dashboard_reporting_db_reader,
-    CDO.dashboard_reporting_db_reader,
-    query_timeout: MAX_EXECUTION_TIME_SEC
-  )
-
   def self.mysql_multi_connection
     # return a connection with the MULTI_STATEMENTS flag set that allows multiple statements in one DB call
+    pegasus_clone_writer_uri = URI(CDO.pegasus_reporting_db_writer)
+    pegasus_clone_writer_uri.host = @@clone_db_endpoint
     sequel_connect(
-      CDO.pegasus_reporting_db_writer,
-      CDO.pegasus_reporting_db_writer,
+      pegasus_clone_writer_uri.to_s,
+      pegasus_clone_writer_uri.to_s,
       query_timeout: MAX_EXECUTION_TIME_SEC,
       multi_statements: true
     )
@@ -963,6 +948,48 @@ class ContactRollups
     nil
   rescue StandardError => error
     log "Error iterating over stream #{s} - #{error}"
+  end
+
+  def self.initialize_connections_to_database_clone
+    rds_client = Aws::RDS::Client.new
+    @@clone_db_endpoint = rds_client.describe_db_cluster_endpoints(
+      {
+        db_cluster_identifier: DATABASE_CLUSTER_CLONE_ID,
+        filters: [{name: 'db-cluster-endpoint-type', values: ['writer']}],
+      }
+    ).db_cluster_endpoints.first.endpoint
+
+    # Connection to write to Pegasus clone database.
+    pegasus_clone_writer_uri = URI(CDO.pegasus_reporting_db_writer)
+    pegasus_clone_writer_uri.host = @@clone_db_endpoint
+    @@pegasus_clone_db_writer = sequel_connect(
+      pegasus_clone_writer_uri.to_s,
+      pegasus_clone_writer_uri.to_s,
+      query_timeout: MAX_EXECUTION_TIME_SEC
+    )
+
+    # Connection to read from Pegasus clone database.
+    pegasus_clone_reader_uri = URI(CDO.pegasus_reporting_db_reader)
+    pegasus_clone_reader_uri.host = @@clone_db_endpoint
+    @@pegasus_clone_db_reader = sequel_connect(
+      pegasus_clone_reader_uri.to_s,
+      pegasus_clone_reader_uri.to_s,
+      query_timeout: MAX_EXECUTION_TIME_SEC
+    )
+
+    # Connection to read from Dashboard clone database.
+    dashboard_clone_reader_uri = URI(CDO.dashboard_reporting_db_reader)
+    dashboard_clone_reader_uri.host = @@clone_db_endpoint
+    @@dashboard_clone_db_reader = sequel_connect(
+      dashboard_clone_reader_uri.to_s,
+      dashboard_clone_reader_uri.to_s,
+      query_timeout: MAX_EXECUTION_TIME_SEC
+    )
+  end
+
+  # Enable ContactRollupsValidation to get a read-only connection to the clone server's Pegasus database.
+  def self.pegasus_clone_db_reader
+    @@pegasus_clone_db_reader
   end
 
   # Delete database cluster clone if it exists.
