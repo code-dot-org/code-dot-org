@@ -643,6 +643,8 @@ describe('entry tests', () => {
   var professionalDevelopmentEntries = {
     'code.org/public/pd-workshop-survey/splat':
       './src/sites/code.org/pages/public/pd-workshop-survey/splat.js',
+    'code.org/public/learn/local':
+      './src/sites/code.org/pages/public/learn/local.js',
 
     'pd/_jotform_loader': './src/sites/studio/pages/pd/_jotform_loader.js',
     'pd/_jotform_embed': './src/sites/studio/pages/pd/_jotform_embed.js',
