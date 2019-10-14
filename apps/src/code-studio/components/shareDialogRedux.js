@@ -8,13 +8,16 @@ const UNPUBLISH_REQUEST = 'shareDialog/UNPUBLISH_REQUEST';
 const UNPUBLISH_SUCCESS = 'shareDialog/UNPUBLISH_SUCCESS';
 const UNPUBLISH_FAILURE = 'shareDialog/UNPUBLISH_FAILURE';
 const SAVE_REPLAY_LOG = 'shareDialog/SAVE_REPLAY_LOG';
+const SHOW_LIBRARY_CREATION_DIALOG = 'shareDialog/SHOW_LIBRARY_CREATION_DIALOG';
+const HIDE_LIBRARY_CREATION_DIALOG = 'shareDialog/HIDE_LIBRARY_CREATION_DIALOG';
 
 // Reducer
 
 const initialState = {
   isOpen: false,
   isUnpublishPending: false,
-  didUnpublish: false
+  didUnpublish: false,
+  libraryDialogIsOpen: false
 };
 
 export default function reducer(state = initialState, action) {
@@ -28,7 +31,9 @@ export default function reducer(state = initialState, action) {
     case HIDE_SHARE_DIALOG:
       return {
         ...state,
-        ...initialState
+        isUnpublishPending: false,
+        didUnpublish: false,
+        isOpen: false
       };
     case UNPUBLISH_REQUEST:
       return {
@@ -38,7 +43,8 @@ export default function reducer(state = initialState, action) {
     case UNPUBLISH_SUCCESS:
       return {
         ...state,
-        ...initialState,
+        isOpen: false,
+        isUnpublishPending: false,
         didUnpublish: true
       };
     case UNPUBLISH_FAILURE:
@@ -50,6 +56,16 @@ export default function reducer(state = initialState, action) {
       return {
         ...state,
         replayLog: action.replayLog
+      };
+    case SHOW_LIBRARY_CREATION_DIALOG:
+      return {
+        ...state,
+        libraryDialogIsOpen: true
+      };
+    case HIDE_LIBRARY_CREATION_DIALOG:
+      return {
+        ...state,
+        libraryDialogIsOpen: false
       };
     default:
       return state;
@@ -89,4 +105,12 @@ export function unpublishProject(projectId) {
 
 export function saveReplayLog(replayLog) {
   return {type: SAVE_REPLAY_LOG, replayLog};
+}
+
+export function showLibraryCreationDialog() {
+  return {type: SHOW_LIBRARY_CREATION_DIALOG};
+}
+
+export function hideLibraryCreationDialog() {
+  return {type: HIDE_LIBRARY_CREATION_DIALOG};
 }
