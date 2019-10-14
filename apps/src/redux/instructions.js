@@ -106,7 +106,7 @@ export default function reducer(state = {...instructionsInitialState}, action) {
   if (
     action.type === SET_INSTRUCTIONS_RENDERED_HEIGHT &&
     state.allowResize &&
-    Math.abs(action.renderedHeight - state.renderedHeight) > 1
+    Math.abs(action.height - state.renderedHeight) > 1
   ) {
     return Object.assign({}, state, {
       renderedHeight: action.height,
