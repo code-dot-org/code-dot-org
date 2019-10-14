@@ -149,6 +149,8 @@ class ContactRollups
   def self.build_contact_rollups(log_collector)
     start = Time.now
 
+    initialize_connections_to_database_clone
+
     @@pegasus_clone_db_writer.run "SET SQL_SAFE_UPDATES = 0"
     # set READ UNCOMMITTED transaction isolation level on both read connections to avoid taking locks
     # on tables we are reading from during what can be multi-minute operations
