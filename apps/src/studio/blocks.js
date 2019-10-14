@@ -167,7 +167,6 @@ exports.install = function(blockly, blockInstallOptions) {
    * @returns {Blockly.FieldDropdown}
    */
   function spriteNumberTextDropdown(stringGenerator) {
-    console.log(stringGenerator);
     return new blockly.FieldDropdown(spriteNumberTextArray(stringGenerator));
   }
 
