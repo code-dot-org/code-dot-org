@@ -62,18 +62,16 @@ function getFishLocation(fishId) {
 
   // Generate the location based on the layout.
   if (layout === 'random') {
-    for (var i = 0; i < 30; ++i) {
       x = Math.floor(Math.random() * constants.canvasWidth);
       y = Math.floor(Math.random() * constants.canvasHeight);
-    }
   } else if (layout === 'grid') {
     x = (fishId % COLS) * FISH_WIDTH*1.3 + 10;
     y = Math.floor(fishId / COLS) * FISH_HEIGHT*1.1 + 10;
   } else if (layout === 'diamondgrid') {
-    x = (fishId % 10) * 200 + (Math.floor(fishId / 10) % 2 === 1 ? -100 : 0);
-    y = Math.floor(fishId / 10) * 200;
+    x = (fishId % COLS) * FISH_WIDTH + (Math.floor(fishId / COLS) % 2 === 1 ? -100 : 0);
+    y = Math.floor(fishId / COLS) * FISH_HEIGHT;
   } else if (layout === 'line') {
-    x = fishId * 200;
+    x = fishId * FISH_WIDTH;
     y = 200;
   }
 
