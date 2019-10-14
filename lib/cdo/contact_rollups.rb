@@ -4,6 +4,7 @@ require src_dir 'database'
 require_relative('../../dashboard/config/environment')
 require 'cdo/properties'
 require 'json'
+require 'aws-sdk-rds'
 
 class ContactRollups
   # Production database has a global max query execution timeout setting. This 30 minute setting can be used
