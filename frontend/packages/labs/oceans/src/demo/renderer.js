@@ -1,8 +1,89 @@
 import _ from 'lodash';
 import constants, {Modes} from './constants';
 import {FishBodyPart} from '../utils/fishData';
-import {generateRandomFish} from '../activities/hoc2019/SpritesheetFish';
 import {getState} from './state';
+
+var $time =
+  Date.now ||
+  function() {
+    return +new Date();
+  };
+
+let canvas, canvasCtx;
+
+const FISH_CANVAS_WIDTH = 300;
+const FISH_CANVAS_HEIGHT = 200;
+const FISH_WIDTH = 150;
+const FISH_HEIGHT = 100;
+const ROWS = 5;
+const COLS = 4;
+
+// Initialize the renderer once.
+// This will generate canvases with the fish collection.
+export function init(canvasParam) {
+  canvas = canvasParam;
+  canvasCtx = canvas.getContext('2d');
+
+  loadBackgroundImage().then(img => {
+    renderBackgroundImage(img);
+
+    switch (getState().currentMode) {
+      case Modes.Training:
+        initTraining();
+        break;
+      default:
+        console.error('not yet implemented');
+    }
+  });
+}
+
+function loadBackgroundImage() {
+  let backgroundImageName;
+  const currentMode = getState().currentMode;
+  if (currentMode === Modes.Training) {
+    backgroundImageName = 'classroom';
+  } else if (currentMode === Modes.Predicting) {
+    backgroundImageName = 'pipes';
+  } else if (currentMode === Modes.Pond) {
+    backgroundImageName = 'underwater';
+  }
+
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    const srcPath = `images/${backgroundImageName}-background.png`;
+    img.addEventListener('load', e => resolve(img));
+    img.addEventListener('error', () => {
+      reject(new Error(`failed to load background image at #{srcPath}`));
+    });
+    img.src = srcPath;
+  });
+}
+
+function renderBackgroundImage(img) {
+  canvasCtx.drawImage(img, 0, 0, constants.canvasWidth, constants.canvasHeight);
+}
+
+function initTraining() {
+  const fishData = getState().fishData;
+  if (fishData.length === 0) {
+    console.error('No fish to render');
+    return;
+  }
+
+  const fishDatum = fishData[0];
+  fishDatum.canvas = document.createElement('canvas');
+  fishDatum.canvas.width = FISH_CANVAS_WIDTH;
+  fishDatum.canvas.height = FISH_CANVAS_HEIGHT;
+  loadImages(fishDatum.fish).then(results =>
+    drawFish(
+      fishDatum.fish,
+      results,
+      canvasCtx,
+      constants.canvasWidth / 2,
+      constants.canvasHeight / 2
+    )
+  );
+}
 
 window.requestAnimFrame = (function() {
   return (
@@ -16,27 +97,6 @@ window.requestAnimFrame = (function() {
     }
   );
 })();
-
-var $time =
-  Date.now ||
-  function() {
-    return +new Date();
-  };
-
-let fishes = [],
-  currentBackgroundImageName,
-  backgroundImage,
-  currentModeStartTime,
-  canvas,
-  canvasCtx;
-
-const FISH_CANVAS_WIDTH = 300;
-const FISH_CANVAS_HEIGHT = 200;
-const FISH_WIDTH = 150;
-const FISH_HEIGHT = 100;
-
-const ROWS = 5;
-const COLS = 4;
 
 function getSwayOffsets(fishId) {
   var swayValue = (($time() * 360) / (20 * 1000) + (fishId + 1) * 10) % 360;
@@ -62,13 +122,15 @@ function getFishLocation(fishId) {
 
   // Generate the location based on the layout.
   if (layout === 'random') {
-      x = Math.floor(Math.random() * constants.canvasWidth);
-      y = Math.floor(Math.random() * constants.canvasHeight);
+    x = Math.floor(Math.random() * constants.canvasWidth);
+    y = Math.floor(Math.random() * constants.canvasHeight);
   } else if (layout === 'grid') {
-    x = (fishId % COLS) * FISH_WIDTH*1.3 + 10;
-    y = Math.floor(fishId / COLS) * FISH_HEIGHT*1.1 + 10;
+    x = (fishId % COLS) * FISH_WIDTH * 1.3 + 10;
+    y = Math.floor(fishId / COLS) * FISH_HEIGHT * 1.1 + 10;
   } else if (layout === 'diamondgrid') {
-    x = (fishId % COLS) * FISH_WIDTH + (Math.floor(fishId / COLS) % 2 === 1 ? -100 : 0);
+    x =
+      (fishId % COLS) * FISH_WIDTH +
+      (Math.floor(fishId / COLS) % 2 === 1 ? -100 : 0);
     y = Math.floor(fishId / COLS) * FISH_HEIGHT;
   } else if (layout === 'line') {
     x = fishId * FISH_WIDTH;
@@ -78,19 +140,22 @@ function getFishLocation(fishId) {
   return {x: x, y: y};
 }
 
-function getRandomFish(id) {
-  return {
-    id: id,
-    fish: generateRandomFish(),
-    canvas: null
-  };
-}
-
 function loadImages(fish) {
-  return Promise.all(fish.parts.map(bodyPart => loadFishImage(bodyPart)));
+  return Promise.all(fish.parts.map(loadFishImage));
 }
 
-function drawFish(fish, results, palette, ctx) {
+function loadFishImage(fishPart) {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.addEventListener('load', e => resolve({img, fishPart}));
+    img.addEventListener('error', () => {
+      reject(new Error(`failed to load image at #{fishPart.src}`));
+    });
+    img.src = fishPart.src;
+  });
+}
+
+function drawFish(fish, results, ctx, x = 0, y = 0) {
   const body = results.find(
     result => result.fishPart.type === FishBodyPart.BODY
   ).fishPart;
@@ -111,7 +176,7 @@ function drawFish(fish, results, palette, ctx) {
     const yPos = bodyAnchor[1] + anchor[1];
 
     intermediateCtx.drawImage(result.img, xPos, yPos);
-    const rgb = colorFromType(palette, result.fishPart.type);
+    const rgb = colorFromType(fish.colorPalette, result.fishPart.type);
 
     if (rgb) {
       let imageData = intermediateCtx.getImageData(
@@ -133,23 +198,12 @@ function drawFish(fish, results, palette, ctx) {
       intermediateCtx.putImageData(imageData, xPos, yPos);
     }
 
-    ctx.drawImage(intermediateCanvas, 0, 0);
+    ctx.drawImage(intermediateCanvas, x, y);
   });
 }
 
-function drawRenderedFish(fishCanvas, x, y, palette, ctx) {
+function drawRenderedFish(fishCanvas, x, y, ctx) {
   ctx.drawImage(fishCanvas, x, y, FISH_WIDTH, FISH_HEIGHT);
-}
-
-function loadFishImage(fishPart) {
-  return new Promise((resolve, reject) => {
-    const img = new Image();
-    img.addEventListener('load', e => resolve({img, fishPart}));
-    img.addEventListener('error', () => {
-      reject(new Error(`failed to load image at #{fishPart.src}`));
-    });
-    img.src = fishPart.src;
-  });
 }
 
 function bodyAnchorFromType(body, type) {
@@ -186,34 +240,6 @@ function colorFromType(palette, type) {
   }
 }
 
-// Initialize the renderer once.
-// This will generate canvases with the fish collection.
-// It will start the animation farme callbacks from the browser.
-export const init = function(canvasParam) {
-  canvas = canvasParam;
-  canvasCtx = canvas.getContext('2d');
-
-  for (let i = 0; i < ROWS * COLS; i++) {
-    fishes.push(getRandomFish(i));
-  }
-
-  fishes.forEach(fish => {
-    fish.canvas = document.createElement('canvas');
-    fish.canvas.width = FISH_CANVAS_WIDTH;
-    fish.canvas.height = FISH_CANVAS_HEIGHT;
-    loadImages(fish.fish).then(results =>
-      drawFish(
-        fish.fish,
-        results,
-        fish.fish.colorPalette,
-        fish.canvas.getContext('2d')
-      )
-    );
-  });
-
-  window.requestAnimFrame(animateScreen);
-};
-
 function animateScreen() {
   // Update static screen elements that might change occasionally,
   // e.g. background image.
@@ -229,14 +255,13 @@ function animateScreen() {
     constants.canvasHeight
   );
 
-  fishes.forEach(fish => {
+  getState().fishes.forEach(fish => {
     const location = getFishLocation(fish.id);
     const offsets = getSwayOffsets(fish.id);
     drawRenderedFish(
       fish.canvas,
       location.x + offsets.offsetX,
       location.y + offsets.offsetY,
-      fish.fish.colorPalette,
       ctx
     );
   });

@@ -1,14 +1,13 @@
 let state = {
-  currentMode: null
+  currentMode: null,
+  fishData: []
 };
 
 export const getState = function() {
   return state;
 };
 
-export const setState = function(newState, onComplete = () => {}) {
-  console.log("setState", newState);
-
+export const setState = function(newState) {
+  console.log('setState', newState);
   state = {...state, ...newState};
-  onComplete();
 };
