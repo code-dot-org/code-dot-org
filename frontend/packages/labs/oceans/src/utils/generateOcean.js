@@ -45,16 +45,13 @@ export const generateOcean = numFish => {
 
 export const filterOcean = async (ocean, trainer) => {
   const predictionPromises = [];
-  //const fishPredictions = new Array(ocean.length);
   ocean.forEach((fish, idx) => {
     predictionPromises.push(
       trainer.predictFromData(fish.knnData).then(res => {
-        //fishPredctions[idx] = res;
         fish.result = res;
       })
     );
   });
   await Promise.all(predictionPromises);
-  //_.sortBy(ocean, []);
   return ocean;
 };
