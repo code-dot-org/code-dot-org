@@ -263,6 +263,7 @@ lv:
     deleted_user: dzēsts lietotājs
     create_personal_login_under_13_username: Lietotājvārds (neizmanto savu īsto vārdu!)
     create_personal_login_under_13_parent_email: Vecāka/aizbildņa e-pasta adrese
+    update_email: Atjaunināt
   user_level:
     completed: Pabeigts
     tried: Mēģināts

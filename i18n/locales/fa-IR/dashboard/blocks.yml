@@ -58,6 +58,12 @@ fa:
         options:
           FORMAT:
             '"random"': در هم
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": سمت چپ
+            "{x: 300, y: 200}": سمت راست
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": در هم
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
@@ -303,45 +309,19 @@ fa:
         text: بپیچ به چپ
       RyanLab_turnRight:
         text: بپیچ به راست
-      aalab_changePropByFlexible:
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': اندازه
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': وقتی
-            '"while"': '"while"'
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': وقتی
-            '"while"': '"while"'
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': وقتی
-            '"while"': '"while"'
-          KEY:
-            '"up"': بالا
-            '"down"': پایین
-            '"left"': سمت چپ
-            '"right"': سمت راست
-            '"space"': فضا
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': شهر
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': صحیح
-            '"false"': غلط
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': اندازه
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
         options:
           OPTION:
             '"show"': نشان می دهد

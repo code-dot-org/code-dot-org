@@ -147,6 +147,13 @@ id:
             '"row"': baris
             '"column"': kolom
             '"random"': acak
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": kiri
+            "{x: 300, y: 200}": kanan
+            "{x: 200, y: 200}": Tengah
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": acak
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
@@ -263,6 +270,20 @@ id:
             '"rotation"': Perputaran
             '"tint"': Mewarnai
       Dancelab_setTintEach:
+        options:
+          THIS:
+            sprites: semua
+            '"ALIEN"': semua aliens
+            '"BEAR"': semua beruang
+            '"CAT"': semua kucing
+            '"DOG"': semua anjing
+            '"DUCK"': semua bebek
+            '"FROG"': semua katak
+            '"MOOSE"': semua rusa
+            '"PINEAPPLE"': semua nanas
+            '"ROBOT"': semua robot
+            '"SHARK"': semua hiu
+      Dancelab_setTintEachInline:
         options:
           THIS:
             sprites: semua
@@ -582,58 +603,19 @@ id:
         text: Tengah
       Vector_vectorNorth:
         text: Utara
-      aalab_changePropByFlexible:
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': ukuran
-            '"rotation"': Perputaran
-            '"x"': posisi x
-            '"y"': posisi y
-            '"direction"': Arah pergerakan
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': ketika
-            '"while"': Selagi
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': ketika
-            '"while"': Selagi
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': ketika
-            '"while"': Selagi
-          KEY:
-            '"up"': atas
-            '"down"': turun
-            '"left"': kiri
-            '"right"': kanan
-            '"space"': luar angkasa
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': kota
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': Benar
-            '"false"': Salah
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': ukuran
-            '"rotation"': Perputaran
-            '"x"': posisi x
-            '"y"': posisi y
-            '"direction"': Arah pergerakan
-            '"tint"': Mewarnai
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': selamanya
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
         options:
           OPTION:
             '"show"': tampilkan

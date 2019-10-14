@@ -106,6 +106,8 @@ ta:
   teacher:
     panel:
       student: மாணவர்
+  user:
+    update_email: புதுப்பிக்கவும்
   user_level:
     completed: நிறைவடைந்தது
     tried: முயற்சிக்கப்பட்டது

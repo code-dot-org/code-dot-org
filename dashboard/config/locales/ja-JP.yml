@@ -405,6 +405,7 @@ ja:
     confirm_secret_words: 秘密の単語を入力してあなたであることを確認
     enter_parent_email: あなたの親または保護者の電子メール アドレス(パスワード回復のため) を入力してください。
     update: アカウントを更新
+    update_email: 更新
   user_level:
     completed: 完了
     tried: 試してみました

@@ -7,6 +7,7 @@ var webpackConfig = require('./webpack');
 var envConstants = require('./envConstants');
 var checkEntryPoints = require('./script/checkEntryPoints');
 var {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer');
+var CopyPlugin = require('copy-webpack-plugin');
 var {StatsWriterPlugin} = require('webpack-stats-plugin');
 var UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
 var sass = require('node-sass');
@@ -201,7 +202,7 @@ describe('entry tests', () => {
           expand: true,
           cwd: 'lib/blockly',
           src: ['??_??.js'],
-          dest: 'build/package/js',
+          dest: 'build/locales',
           // e.g., ar_sa.js -> ar_sa/blockly_locale.js
           rename: function(dest, src) {
             var outputPath = src.replace(
@@ -227,14 +228,15 @@ describe('entry tests', () => {
           expand: true,
           cwd: './node_modules/@code-dot-org/p5/lib',
           src: ['p5.js'],
-          dest: 'build/package/js/p5play/'
+          dest: 'build/minifiable-lib/p5play/'
         },
         {
           expand: true,
           cwd: './node_modules/@code-dot-org/p5.play/lib',
           src: ['p5.play.js'],
-          dest: 'build/package/js/p5play/'
+          dest: 'build/minifiable-lib/p5play/'
         },
+        // Piskel must not be minified or digested in order to work properly.
         {
           expand: true,
           // For some reason, if we provide piskel root as an absolute path here,
@@ -244,6 +246,7 @@ describe('entry tests', () => {
           src: ['**'],
           dest: 'build/package/js/piskel/'
         },
+        // Bramble must not be minified or digested in order to work properly.
         {
           expand: true,
           cwd: './node_modules/@code-dot-org/bramble/dist',
@@ -254,7 +257,7 @@ describe('entry tests', () => {
           expand: true,
           cwd: 'lib/droplet',
           src: ['droplet-full*.js'],
-          dest: 'build/package/js/droplet/'
+          dest: 'build/minifiable-lib/droplet/'
         },
         {
           expand: true,
@@ -266,19 +269,19 @@ describe('entry tests', () => {
           expand: true,
           cwd: 'lib/tooltipster',
           src: ['*.js'],
-          dest: 'build/package/js/tooltipster/'
+          dest: 'build/minifiable-lib/tooltipster/'
         },
         {
           expand: true,
           cwd: 'lib/marked',
           src: ['marked*.js'],
-          dest: 'build/package/js/marked/'
+          dest: 'build/minifiable-lib/marked/'
         },
         {
           expand: true,
           cwd: 'lib/phaser',
           src: ['*.js'],
-          dest: 'build/package/js/phaser/'
+          dest: 'build/minifiable-lib/phaser/'
         },
         {
           expand: true,
@@ -290,7 +293,27 @@ describe('entry tests', () => {
           expand: true,
           cwd: 'lib/fileupload',
           src: ['*.js'],
-          dest: 'build/package/js/fileupload/'
+          dest: 'build/minifiable-lib/fileupload/'
+        }
+      ]
+    },
+    unhash: {
+      files: [
+        {
+          expand: true,
+          cwd: 'build/package/js',
+          // The applab and gamelab exporters need unhashed copies of these files.
+          src: [
+            'webpack-runtimewp*.min.js',
+            'applab-apiwp*.min.js',
+            'gamelab-apiwp*.min.js'
+          ],
+          dest: 'build/package/js',
+          // e.g. webpack-runtimewp0123456789aabbccddee.min.js --> webpack-runtime.min.js
+          rename: function(dest, src) {
+            var outputFile = src.replace(/wp[0-9a-f]{20}/, '');
+            return path.join(dest, outputFile);
+          }
         }
       ]
     }
@@ -352,7 +375,7 @@ describe('entry tests', () => {
           },
           expand: true,
           src: ['i18n/**/*.json'],
-          dest: 'build/package/js/'
+          dest: 'build/locales'
         }
       ]
     }
@@ -881,14 +904,72 @@ describe('entry tests', () => {
         new StatsWriterPlugin({
           fields: ['assetsByChunkName', 'assets']
         }),
+        // The [contenthash] placeholder generates a 32-character hash when
+        // used within the copy plugin.
+        new CopyPlugin(
+          [
+            // Always include unhashed locale files in the package, since unit
+            // tests rely on these in both minified and unminified environments.
+            // The order of these rules is important to ensure that the hashed
+            // locale files appear in the manifest when minifying.
+            {
+              from: 'build/locales',
+              to: '[path]/[name].[ext]',
+              toType: 'template'
+            },
+            minify && {
+              from: 'build/locales',
+              to: '[path]/[name]wp[contenthash].[ext]',
+              toType: 'template'
+            },
+            // Always include unminified, unhashed p5.js as this is needed by
+            // unit tests. The order of these rules is important to ensure that
+            // the minified, hashed copy of p5.js appears in the manifest when
+            // minifying.
+            {
+              context: 'build/minifiable-lib/',
+              from: '**/p5.js',
+              to: '[path]/[name].[ext]',
+              toType: 'template'
+            },
+            // Libraries in this directory are assumed to have .js and .min.js
+            // copies of each source file. In development mode, copy only foo.js.
+            // In production mode, copy only foo.min.js and rename it to foo.js.
+            // This allows the manifest to contain a single mapping from foo.js
+            // to a target file with the correct contents given the mode.
+            //
+            // Ideally, the target file would have the .min.js suffix in
+            // production mode. This could be accomplished by nesting these files
+            // within a minifiable-lib directory in the output package so that the
+            // manifest plugin could do special processing on these files.
+            {
+              context: 'build/minifiable-lib/',
+              from: minify ? `**/*.min.js` : '**/*.js',
+              to: minify
+                ? '[path]/[name]wp[contenthash].[ext]'
+                : '[path]/[name].[ext]',
+              toType: 'template',
+              ignore: minify ? [] : ['*.min.js'],
+              transformPath: targetPath => targetPath.replace(/\.min/, '')
+            }
+          ].filter(entry => !!entry)
+        ),
         // Unit tests require certain unminified files to have been built.
         new UnminifiedWebpackPlugin({
           include: [/^webpack-runtime/, /^applab-api/, /^gamelab-api/]
         }),
         new ManifestPlugin({
-          basePath: 'js/'
+          basePath: 'js/',
+          map: file => {
+            if (minify) {
+              // Remove contenthash in manifest key from files generated via
+              // copy-webpack-plugin. See:
+              // https://github.com/webpack-contrib/copy-webpack-plugin/issues/104#issuecomment-370174211
+              file.name = file.name.replace(/wp[a-f0-9]{32}\./, '.');
+            }
+            return file;
+          }
         })
-
       ],
       minify: minify,
       watch: watch,
@@ -942,8 +1023,8 @@ describe('entry tests', () => {
       files: _.fromPairs(
         ['p5play/p5.play.js', 'p5play/p5.js'].map(function(src) {
           return [
-            OUTPUT_DIR + src.replace(/\.js$/, '.min.js'), // dst
-            OUTPUT_DIR + src // src
+            'build/minifiable-lib/' + src.replace(/\.js$/, '.min.js'), // dst
+            'build/minifiable-lib/' + src // src
           ];
         })
       )
@@ -1117,11 +1198,13 @@ describe('entry tests', () => {
 
   grunt.registerTask('build', [
     'prebuild',
+    // For any minifiable libs, generate minified sources if they do not already
+    // exist in our repo. Skip minification in development environment.
+    envConstants.DEV ? 'noop' : 'uglify:lib',
     envConstants.DEV ? 'webpack:build' : 'webpack:uglify',
     'notify:js-build',
-    // Skip minification in development environment.
-    envConstants.DEV ? 'noop' : 'uglify:lib',
-    'postbuild'
+    'postbuild',
+    envConstants.DEV ? 'noop' : 'newer:copy:unhash'
   ]);
 
   grunt.registerTask('rebuild', ['clean', 'build']);

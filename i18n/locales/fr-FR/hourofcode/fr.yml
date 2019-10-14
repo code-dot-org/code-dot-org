@@ -10,6 +10,9 @@ fr:
   campaign_date_full: "Du 7 au 13 décembre"
   campaign_date_year: "2016"
   campaign_date_full_year: "5-11 décembre, 2016"
+  hoc2019_header: 'Apprends l''informatique. Change le monde.'
+  hoc2019_header_line1_mobile: 'Apprends l''informatique.'
+  hoc2019_header_line2_mobile: 'Change le monde.'
   codeorg_homepage_hoc2018_curriculum: 'Aller plus loin avec <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">les cours Code.org</a>'
   codeorg_homepage_hoc2018_dance_heading: 'Crée ta propre <span class="highlight-word">Soirée&nbsp;Dansante</span>'
   codeorg_homepage_hoc2018_header_line1: 'L''Heure de Code arrive bientôt...'

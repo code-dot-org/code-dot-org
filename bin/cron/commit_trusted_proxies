@@ -4,6 +4,7 @@
 # This is important to correctly geolocate users
 set -e
 
+cd ~/staging
 dashboard/scripts/archive/generate_trusted_proxies
 
 git add lib/cdo/trusted_proxies.json

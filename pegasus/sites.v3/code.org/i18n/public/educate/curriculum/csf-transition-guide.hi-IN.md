@@ -1,6 +1,6 @@
 * * *
 
-title: Computer Science Fundamentals Transition Guide theme: responsive style_min: true
+शीर्षक: कंप्यूटर विज्ञान बुनियादी बातों संक्रमण गाइड विषय: उत्तरदायी style_min: सच
 
 * * *
 

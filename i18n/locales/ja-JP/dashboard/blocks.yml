@@ -234,6 +234,31 @@ ja:
             '"x"': 十字
             '"plus"': プラス
             '"random"': ランダム に
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': エイリアン
+            '"BEAR"': クマ
+            '"CAT"': ネコ
+            '"DOG"': 犬
+            '"DUCK"': アヒル
+            '"FROG"': カエル
+            '"MOOSE"': ムース
+            '"PINEAPPLE"': パイナップル
+            '"ROBOT"': ロボット
+            '"SHARK"': サメ
+            '"UNICORN"': ユニコーン
+          LOCATION:
+            "{x: 200, y: 100}": 上
+            "{x: 200, y: 300}": 下
+            "{x: 100, y: 200}": 左 に
+            "{x: 300, y: 200}": 右 に
+            "{x: 200, y: 200}": 中央
+            "{x: 100, y: 100}": 左上
+            "{x: 300, y: 100}": 右上
+            "{x: 100, y: 300}": 左下
+            "{x: 300, y: 300}": 右下
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ランダム に
       Dancelab_makeNewDanceSprite:
         text: |-
           {COSTUME} を新しくつくる
@@ -492,6 +517,20 @@ ja:
       Dancelab_setTint:
         text: "{SPRITE} の色合いを {VAL} にセット"
       Dancelab_setTintEach:
+        options:
+          THIS:
+            sprites: すべて
+            '"ALIEN"': すべてのエイリアン
+            '"BEAR"': すべてのクマ
+            '"CAT"': すべてのネコ
+            '"DOG"': すべてのイヌ
+            '"DUCK"': すべてのアヒル
+            '"FROG"': すべてのカエル
+            '"MOOSE"': すべてのムース
+            '"PINEAPPLE"': すべてのパイナップル
+            '"ROBOT"': すべてのロボット
+            '"SHARK"': すべてのサメ
+      Dancelab_setTintEachInline:
         options:
           THIS:
             sprites: すべて
@@ -862,61 +901,19 @@ ja:
         text: みぎに まがる
       Vector_positionCenter:
         text: 中央
-      aalab_changePropByFlexible:
-        text: "{SPRITE} {PROPERTY} を {VAL} 変更"
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': 大きさ
-            '"rotation"': 回転
-            '"x"': x 位置
-            '"y"': y 位置
-            '"direction"': 動きの方向
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': もし
-            '"while"': 以下の間
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': もし
-            '"while"': 以下の間
-      aalab_jumpTo:
-        text: "{SPRITE}　{LOCATION}にとぶ"
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': もし
-            '"while"': 以下の間
-          KEY:
-            '"up"': 上 に
-            '"down"': 下 に
-            '"left"': 左 に
-            '"right"': 右 に
-            '"space"': うちゅう
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': まち
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': 'true'
-            '"false"': 'false'
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': 大きさ
-            '"rotation"': 回転
-            '"x"': x 位置
-            '"y"': y 位置
-            '"direction"': 動きの方向
-            '"tint"': 色合い
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': ずっとくりかえす
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
         options:
           OPTION:
             '"show"': 表示(ひょうじ)する

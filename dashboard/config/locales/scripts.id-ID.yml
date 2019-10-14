@@ -1080,6 +1080,8 @@ id:
               name: Video mandiri
             Curriculum Reference:
               name: Referensi kurikulum
+            Contained Levels:
+              name: Tingkat yang terkandung
         algebraPD2b:
           title: Ilmu komputer dalam aljabar PD
           description: Mengajarkan pemrograman fungsional melalui aljabar

@@ -351,17 +351,20 @@ class Homepage
   end
 
   def self.show_single_hero
-    "create"
+    "hoc2019"
   end
 
   def self.get_heroes_arranged(request)
     hero_create = [{text: "homepage_hero_text_stat_students", centering: "50% 30%", type: "stat", textposition: "bottom", image: "/images/homepage/announcement.jpg"}]
+    hero_hoc2019 = [{text: "homepage_hero_text_stat_students", centering: "50% 30%", type: "stat", textposition: "bottom", image: "/images/homepage/hoc2019.jpg"}]
 
     # Generate a random set of hero images alternating between non-celeb and celeb.
     heroes = get_heroes
     hero_display_time = 13 * 1000
 
-    if show_single_hero == "create"
+    if show_single_hero == "hoc2019"
+      heroes_arranged = hero_hoc2019
+    elsif show_single_hero == "create"
       heroes_arranged = hero_create
     else
       # The order alternates person & stat.  Person alternates non-celeb and
@@ -414,6 +417,10 @@ class Homepage
 
   def self.show_professional_learning_banner(request)
     false
+  end
+
+  def self.show_courses_banner(request)
+    true
   end
 
   def self.get_dance_stars

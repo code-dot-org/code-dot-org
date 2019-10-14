@@ -9,7 +9,7 @@ fr-FR:
         answers:
         - text: Commence par un carré<br/>Mets un triangle au-dessus du carré<br/>Mets
             un triangle au-dessous du carré
-        - {}
+        - correct: true
         - text: Commence par un carré<br/>Dessine un parallélogramme au-dessus du
             carré<br/>Place un triangle à droite du parallélogramme
         - text: Commence par un carré<br/>Place un triangle sous le carré<br/>Mets
@@ -22,7 +22,7 @@ fr-FR:
         - text: Quelle image <em>ne</em> suit <em>pas</em> cet algorithme?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 Big Event Match 1:
@@ -58,14 +58,14 @@ fr-FR:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       2-3 Getting Loopy Multi 1:
         title: Choix multiple
         questions:
         - text: Comment simplifierais-tu cette séquence avec des boucles\_?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -86,7 +86,7 @@ fr-FR:
         - text: Quel programme fait cette image\_?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
       2-3 Maze Match 2:
         title: Correspondance du labyrinthe
@@ -106,7 +106,7 @@ fr-FR:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 Relay Programming Multi 1:
@@ -116,7 +116,7 @@ fr-FR:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       2-3 Relay Programming Multi 2:
         title: Choix multiple
         questions:
@@ -124,13 +124,13 @@ fr-FR:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       2-3 artist debug multi 1:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 artist functions multi 1:
@@ -139,7 +139,7 @@ fr-FR:
         - text: Choisis les bons blocs pour dessiner cette image à l’aide des fonctions
             données
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 artist loops match 1:
@@ -161,7 +161,7 @@ fr-FR:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       2-3 artist loops multi 2:
         title: Choix multiple des boucles d’artistes
@@ -171,7 +171,7 @@ fr-FR:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       2-3 artist match 1:
         title: Correspondance d'artistes
         content1: Fais correspondre la forme avec les blocs qui la complètent.
@@ -191,14 +191,14 @@ fr-FR:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       2-3 bee conditionals multi 3:
         questions:
         - text: Choisis les meilleurs blocs.
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 bee loops multi 1:
@@ -206,7 +206,7 @@ fr-FR:
         questions:
         - text: Quels blocs recueillent la totalité du nectar ?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -227,7 +227,7 @@ fr-FR:
         - text: Quel ensemble de blocs est la bonne réponse?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 Algorithms Match 1:
@@ -254,6 +254,7 @@ fr-FR:
         - text: Cuisiner des biscuits
         - text: Faire les courses à partir d’une liste
         - text: Banane
+          correct: true
       4-5 Computational Thinking Match 1:
         title: Correspondance
         content1: Chacun de ces véhicules a été décomposé en pièces plus petites.
@@ -276,6 +277,7 @@ fr-FR:
         answers:
         - text: Seattle  _____ une _____ _____
         - text: _____ est une _____ ville.
+          correct: true
         - text: _____ est _____ un _____.
         - text: Eugene est une ville _____.
       4-5 Crowdsourcing Multi 1:
@@ -285,7 +287,7 @@ fr-FR:
             ?
         answers:
         - {}
-        - {}
+        - correct: true
       4-5 Crowdsourcing Multi 2:
         title: Choix multiple
         questions:
@@ -293,6 +295,7 @@ fr-FR:
             production participative ?
         answers:
         - text: Nettoyer sa chambre
+          correct: true
         - text: Manger son dessert
         - text: Se brosser les cheveux
         - text: Se laver le visage
@@ -304,6 +307,7 @@ fr-FR:
         answers:
         - text: Ton anniversaire
         - text: Ton plat préféré
+          correct: true
         - text: Ton adresse
         - text: Le numéro de carte bancaire de tes parents
       4-5 Internet Multi 1:
@@ -315,7 +319,7 @@ fr-FR:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       4-5 Internet Multi 2:
         title: Choix multiple
         questions:
@@ -323,7 +327,7 @@ fr-FR:
             quel site es-tu ?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 Songwriting Multi 1:
@@ -334,6 +338,7 @@ fr-FR:
         - text: Lou, Lou, skip to my Lou,
         - text: Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou,
             Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.
+          correct: true
         - {}
         - {}
       4-5 Suncatchers Match 1:
@@ -357,7 +362,7 @@ fr-FR:
             même séquence que le programme 1 ?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
       4-5 artist loops multi 1:
         title: Choix multiple des boucles d’artistes
@@ -365,7 +370,7 @@ fr-FR:
         - text: Quels blocs vont créer le dessin?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 artist multi 1:
@@ -374,7 +379,7 @@ fr-FR:
         - text: Quels blocs dessinent un rectangle avec un périmètre de 100 ?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 artist multi 2:
@@ -384,7 +389,7 @@ fr-FR:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       4-5 bee conditionals multi 1:
         title: Choix multiple des instructions conditionnelles de l’abeille
@@ -393,7 +398,7 @@ fr-FR:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       4-5 bee debug multi 1:
         title: Choix multiple du débogage de l’abeille
@@ -401,7 +406,7 @@ fr-FR:
         - text: Quelle version de la fonction fonctionnera ?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 bee loops multi 1:
@@ -409,7 +414,7 @@ fr-FR:
         questions:
         - text: Quels blocs résoudront le puzzle ?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -418,7 +423,7 @@ fr-FR:
         questions:
         - text: Quels blocs permettent de résoudre le puzzle ?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -439,7 +444,7 @@ fr-FR:
         questions:
         - text: Quels blocs permettent de résoudre le puzzle ?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -458,19 +463,19 @@ fr-FR:
       CSD Header Size MC:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD Header Size MC_2018:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD Header Size MC_2018_2019:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD U2 Design Project:
@@ -610,7 +615,7 @@ fr-FR:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -619,7 +624,7 @@ fr-FR:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -628,7 +633,7 @@ fr-FR:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -640,19 +645,19 @@ fr-FR:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Functions Prediction define first_2018:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Functions Prediction define first_2018_2019:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Keypress Matching:
         questions:
@@ -687,7 +692,7 @@ fr-FR:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Sprite Movement Predict Multi_2018:
         questions:
@@ -695,7 +700,7 @@ fr-FR:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Sprite Movement Predict Multi_2018_2019:
         questions:
@@ -703,14 +708,14 @@ fr-FR:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Sprites intro predict multi:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD U3 Sprites intro predict multi_2018:
@@ -718,7 +723,7 @@ fr-FR:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD U3 Sprites intro predict multi_2018_2019:
@@ -726,7 +731,7 @@ fr-FR:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD U3 combining rep:
@@ -827,7 +832,7 @@ fr-FR:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       CSD U6 array multi_2018:
         questions:
         - {}
@@ -835,7 +840,7 @@ fr-FR:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       CSD U6 array multi_2018_2019:
         questions:
         - {}
@@ -843,7 +848,7 @@ fr-FR:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       CSD U6 final intro:
         content1: description ici
       CSD U6 final intro_2018:
@@ -856,7 +861,7 @@ fr-FR:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U6 setProperty predict multi_2018:
         questions:
@@ -864,8 +869,80 @@ fr-FR:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
+      Dance_Party_extras_intro:
+        markdown: |
+          # Continuer de dancer!
+
+          Pour la 2ème partie, tu vas créer ton projet. Il n'y a pas de puzzle ici - A la place, il y a un ensemble de projets qui présente différentes façons de faire des soirées dansantes.
+
+          Tu peux faire ces niveaux dans _n'importe quel ordre_. Navigue un peu partout pour comprendre comment les choses sont effectuées dans un niveau préc'dent, ou combine les concepts entre les projets. Essaie les tous, choisis ton favori, et passe du temps pour ajouter à ce projet tes idées pour qu'il deveinne le tien
+
+          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Continuer</a>
+
+          <div class="clearfix"></div>
+
+          <div style="float: left; margin: 10px">
+          <a href="2">
+          <h2>
+          Soyez informé
+          </h2>
+
+
+          <img src="https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="3">
+          <h2>
+          Où iraient-ils ?
+          </h2>
+
+          <img src="https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="4">
+          <h2>
+          Équipes de danse
+          </h2>
+
+          <img src="https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="5">
+          <h2>
+          Noires
+          </h2>
+
+          <img src="https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="6">
+          <h2>
+          Basse, Médium, Aïgu
+          </h2>
+
+          <img src="https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="7">
+          <h2>
+          Accélérer, Ralentir
+          </h2>
+
+          <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
+
+          </div>
       DigitalFootprint-Unplugged:
         markdown: |
           # Votre Empreinte Digital
@@ -906,7 +983,7 @@ fr-FR:
         - text: Quels blocs permettent de résoudre ce puzzle ?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Artist 1 Multi 2:
@@ -914,7 +991,7 @@ fr-FR:
         questions:
         - text: Quels blocs dessinent le carré\_?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -937,7 +1014,7 @@ fr-FR:
         - text: Combien de nectar cela représente-t-il?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Bee 1 Multi 2:
@@ -948,7 +1025,7 @@ fr-FR:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       K-1 Bee Loops Match 1:
         title: Correspondance
         content2: Fais correspondre les blocs
@@ -981,13 +1058,13 @@ fr-FR:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       K-1 Getting Loopy Multi 1:
         title: Choix multiple
         questions:
         - text: Comment simplifierais-tu cette séquence avec des boucles\_?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Happy Maps Multi 1:
@@ -996,7 +1073,7 @@ fr-FR:
         - text: Quelle flèche amène le Flurb au trésor ?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Keep it Private Multi 1:
@@ -1005,7 +1082,7 @@ fr-FR:
         - text: Quelle information <strong>ne</strong> devrais-tu <strong>pas</strong>
             partager en ligne?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Maze Debugging Multi 1:
@@ -1013,7 +1090,7 @@ fr-FR:
         questions:
         - text: Quel choix devrait être le dernier bloc\_?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1022,7 +1099,7 @@ fr-FR:
         questions:
         - text: Quel bloc «Répéter» est le même?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Maze Loops Multi 2:
@@ -1032,7 +1109,7 @@ fr-FR:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       K-1 Maze Match 1:
         title: Correspondance
         content2: Fais correspondre les puzzles et les blocs
@@ -1054,7 +1131,7 @@ fr-FR:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       K-1 Move It Multi 1:
         title: Choix multiple
@@ -1062,7 +1139,7 @@ fr-FR:
         - text: Quel algorithme amène le Flurb vers les fleurs ?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Plant a Seed Multi 1:
@@ -1072,14 +1149,14 @@ fr-FR:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       K-1 Plant a Seed Multi 2:
         title: Choix multiple
         questions:
         - text: Quelle étape devrait remplir le vide de cet algorithme ?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
       K-1 Word Search Multi 1:
         title: Choix multiple
@@ -1087,7 +1164,7 @@ fr-FR:
         - text: Quels blocs épellent le mot «BOUGER»?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
       K-1 Word Search Multi 3:
         title: Choix multiple
@@ -1095,7 +1172,7 @@ fr-FR:
         - text: Quel mot est épelé\_?
         answers:
         - text: ENSEMBLE
-        - {}
+        - correct: true
         - text: SUD
       MoveItMoveIt-Unplugged:
         markdown: |
@@ -1108,6 +1185,38 @@ fr-FR:
       New Challenge Introduction:
         title: titre
         content1: description ici
+        markdown: |+
+          ### Nouveau Callenge: Casse un chiffrement par substitution mono-alphabétique... avec un nouveau widget
+
+          Et si au lieu de décaler l'alphabet complet, on fait correspondre chaque lettre de l'alphabet avec une lettre différente de l'alphabet ? Cela s'appelle un **chiffrement par substitution mono-alphabétique**
+
+          ![](https://images.code.org/7837e7fef2f38659f4bf51a29b6dc4d3-image-1473863470440.gif)
+
+          Maintenant, au lieu de coder le message avec un simple décalage de l'alphabet, tu vas voir des messages encodés par substitution mono-alphabétique.
+
+
+          C'est plus difficile à casser et demande des outils plus sophistiqués, donc...
+
+          Lorsque tu cliques sur continuer, tu vas voir une **nouvelle version, plus sophistiquée de l'outil de codage** qui te montre des choses différentes.
+
+          Mais ce qu'il fait est un mystère!
+
+          ### Ton travail:
+
+          * Comprend ce qui se passe avec cette nouvelle version de l'outil
+          * Quelle information va t'être présentée ?
+          * Comprend ce que l'outil te laisse faire
+          * Comme d'habitude : Tu ne peux pas le casser. Donc clique sur des choses, fouille.
+          * Si tu le comprends, tu devrais être capable de cassé le message codé avec la substitution mono-alphabétique.
+
+          ### Indice
+
+          * Est ce que tu savais que la lettre **E** est la  plus commune dans la langue Française ?
+
+          ###Réunissez vous et discutez
+          Après avoir passé du temps à jouer avec, tu devrais te réunir avec un partenaire, un petit groupe, une classe entière, pour discuter ce que tu as trouvé et vérifié que tu sais ce qui se passe et les différents moyens d'utiliser l'outil.
+
+
       OPD-K5 Stage3aGo:
         title: titre
         content1: description ici
@@ -1115,9 +1224,55 @@ fr-FR:
         title: titre
         content1: description ici
       'Technique: Frequency Analysis':
+        title: Comment casser un chiffrement par substitution
         content1: description ici
+        markdown: "# Cassé un chiffrement par substitution\n\nLa meilleure technique
+          pour cassé une substitution mono-alphabétique s'appelle **Analyse fréquentielle**\nParaphrasé
+          depuis: [wikipedia](https://fr.wikipedia.org/wiki/Analyse_fr%C3%A9quentielle)\n\n*
+          **L' Analyse fréquentielle** est basée sur le fait que, dans chaque langue,
+          certaines lettres ou combinaisons de lettres apparaissent avec une certaine
+          **fréquence**. \n* Par exemple, en français, le e est la lettre la plus
+          utilisée, suivie du a et du s. Inversement, le w est peu utilisé.\n* En
+          fait, la distribution des lettres est à peu près la même sur presque tous
+          les texte en Français ou en Anglais.\n\nLa version du widget de la page
+          précédente est destiné à vous aider à **casser un chiffrement par substitution
+          mono-alphabétique en utilisant une analyse fréquentielle**.\n\nEn analysant
+          la fréquence des lettres d'un message crypté et en la comparant à la fréquence
+          des lettres d'un extrait d'une prose en Français, tu peux commencer à restreindre
+          les lettres qui peuvent se substituer.\n\nL'outil te montre les fréquences
+          des lettre dans le texte chiffré (orange) comparé à la fréquence des lettres
+          du Français (blue).\n\n### Astuce: Où commencer?\n\n1. Trouve les petits
+          mots et résoud les en premier. Combien de mots de 2 lettres connais-tu?(\"le\").
+          Un mot de 3 lettres assez courant : \"les\".\n2. Une fois que tu as fait
+          cela, tu as trouvé des substitutions pour certaines lettres les plus courantes.
+          Tu dois pouvoir utiliser ton intuition pour trouver d'autres mots grâce
+          aux substitutions partielles et en les devinant.\n3. Après avoir trouver
+          quelques lettres chèrement gagnées, le reste devrait tomber facilement.\n4.
+          Comparer la fréquence des lettres donne de bonnes idées pour deviner les
+          lettres\n\n### Essaie ça:\nL' animation ci-dessous montre quelqu' un qui
+          commence. Voici ce qu'ils ont essayé\n\n* D'abord, tri les lettres par fréquence.\n*
+          Identifie un groupe de caractère qui semble bien convenir avec `the`. \nC'est
+          un bon début!\n\n![](https://images.code.org/4c188dfb0b284810845285b83ce5bcd4-image-1473787694329.gif)\n\n##
+          Est-ce que la substitution mono-alpabétique est bien ?\n* Après un peu d'entrainement,
+          combien de temps te faut-il pour cassé ce type de chiffrement?\n* C'est
+          bon ou pas?\n\n\n"
       Terminology Recap:
+        title: C'était facile, La suite ?
         content1: description ici
+        markdown: |
+          # Pause et Résumer
+
+          Les messages encryptés avec le **Code de César** sont très facile à cassés, et surtout avec des outils de calcul. Maintenant que vous avez un peu de pratique pour cassé un chiffrement par décalage de l'alphabet (plutôt facile, hein ?) essayons quelque chose de plus difficile.
+
+          **Résumé terminologie**
+
+          * **Chiffrement** - un processus de codage des messages pour les garder secrets, donc seulement les parties autorisées peuvent les lire.
+          * **Déchiffrement** - un processus qui inverse le chiffrement en prenant un message secret et en reproduisant le texte original
+          * **Chiffrer** - Le terme générique d'une technique (ou algorithme) qui permet d'effectuer le chiffrement
+          * **Code de César** - Une technique de chiffrement qui déplace l'alphabet par un nombre de caractères.
+          * **Cassé un chiffrement** - Lorsque tu tentes de décoder un message secret *sans* connaitre toutes les spécifications du chiffrage, tu essaies de casser le chiffrement.
+
+          Clic Continuer pour voir le **Prochain Challenge**...
       TheRightAppMarkdownLevel_2019:
         markdown: "# La bonne application\n\n* Tout le monde utilise des ordinateurs
           de nos jours, surtout des smartphones. \n* Les applications de smartphone
@@ -1129,679 +1284,1394 @@ fr-FR:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - feedback: Incorrect.
+        - correct: true
+          feedback: Correct!
+        - feedback: Incorrect.
         - feedback: Incorrect
       behaviors 4 predict:
         questions:
         - {}
         answers:
-        - {}
-        - {}
+        - feedback: Incorrect.
+        - correct: true
+          feedback: Correct!
         - {}
         - feedback: Incorrect
       courseC_multi_artist_prog6_predict1:
         questions:
-        - {}
+        - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer lorsque
+            tu cliqueras sur "Démarrer"?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: L'artiste dessinera un triamgle avec 3 côté égaux.
+          feedback: Incorrect. L'artiste a dessiné un carré.
+        - text: L'artiste dessinera une seule ligne.
+          feedback: Incorrect. L'artiste a dessiné un carré.
+        - text: L'artiste dessine un carré.
+          correct: true
+          feedback: Correct!
+        - text: Je ne sais pas.
+          feedback: L'artiste dessine un carré.
       courseC_multi_artist_prog6_predict1_2018:
         questions:
-        - {}
+        - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer lorsque
+            tu cliqueras sur "Démarrer"?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: L'artiste dessinera un triamgle avec 3 côté égaux.
+          feedback: Incorrect. L'artiste a dessiné un carré.
+        - text: L'artiste dessinera une seule ligne.
+          feedback: Incorrect. L'artiste a dessiné un carré.
+        - correct: true
+          feedback: Correct!
+        - text: Je ne sais pas.
+          feedback: L'artiste dessine un carré.
       courseC_multi_artist_prog6_predict1_2018_2019:
         questions:
-        - {}
+        - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer lorsque
+            tu cliqueras sur "Démarrer"?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: L'artiste dessinera un triamgle avec 3 côté égaux.
+          feedback: Incorrect. L'artiste a dessiné un carré.
+        - text: L'artiste dessinera une seule ligne.
+          feedback: Incorrect. L'artiste a dessiné un carré.
+        - correct: true
+          feedback: Correct!
+        - text: Je ne sais pas.
+          feedback: L'artiste dessine un carré.
       courseC_multi_harvester_loops11_predict1:
         questions:
-        - {}
+        - text: Regarde attentivement le code ci-dessous. Combien de citrouilles le
+            fermier ramassera après avoir cliquer sur "Démarrer"?
         answers:
         - text: '4'
+          feedback: Incorrect. Le fermier ramassera 4 citrouilles dans chacune des
+            3 boucles. 4 fois égal 12!
         - text: '12'
+          correct: true
+          feedback: Correct!
         - text: '15'
-        - {}
+          feedback: Incorrect. Le fermier ramassera 4 citrouilles dans chacune des
+            3 boucles. 4 fois égal 12!
+        - text: Je ne sais pas.
+          feedback: Le fermier ramassera 4 citrouilles dans chacune des 3 boucles.
+            4 fois égal 12!
       courseC_multi_harvester_loops11_predict1_2018:
         questions:
-        - {}
+        - text: Regarde attentivement le code ci-dessous. Combien de citrouilles le
+            fermier ramassera après avoir cliquer sur "Démarrer"?
         answers:
         - text: '4'
+          feedback: Incorrect. Le fermier ramassera 4 citrouilles dans chacune des
+            3 boucles. 4 fois égal 12!
         - text: '12'
+          correct: true
+          feedback: Correct!
         - text: '15'
-        - {}
+          feedback: Incorrect. Le fermier ramassera 4 citrouilles dans chacune des
+            3 boucles. 4 fois égal 12!
+        - text: Je ne sais pas.
+          feedback: Le fermier ramassera 4 citrouilles dans chacune des 3 boucles.
+            4 fois égal 12!
       courseC_multi_harvester_loops11_predict1_2018_2019:
         questions:
-        - {}
+        - text: Regarde attentivement le code ci-dessous. Combien de citrouilles le
+            fermier ramassera après avoir cliquer sur "Démarrer"?
         answers:
         - text: '4'
+          feedback: Incorrect. Le fermier ramassera 4 citrouilles dans chacune des
+            3 boucles. 4 fois égal 12!
         - text: '12'
+          correct: true
+          feedback: Correct!
         - text: '15'
-        - {}
+          feedback: Incorrect. Le fermier ramassera 4 citrouilles dans chacune des
+            3 boucles. 4 fois égal 12!
+        - text: Je ne sais pas.
+          feedback: Le fermier ramassera 4 citrouilles dans chacune des 3 boucles.
+            4 fois égal 12!
       courseC_multi_maze_debugging8_predict1:
         questions:
-        - {}
+        - text: 'Regarde attentivement le code ci-dessous. Quel est la première erreur
+            qui va faire échouer ce programme? '
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Le programme n'a pas échoué. Scrat va atteindre le gland.
+          feedback: Incorrect. Scrat a pris le mauvais chemin après son dernier virage.
+        - text: Scrat prendra le mauvais chemin après son dernier virage.
+          correct: true
+          feedback: Correct!
+        - text: Scrat n'a pas fait assez de pas et s'est arrêté juste avant le gland.
+          feedback: Incorrect. Il fait trop de pas après avoir tourner du mauvais
+            côté.
+        - text: Je ne sais pas.
+          feedback: 'La première erreur, c''est que Scrat a pris le mauvais chemin
+            après son dernier virage. '
       courseC_multi_maze_debugging8_predict1_2018:
         questions:
-        - {}
+        - text: 'Regarde attentivement le code ci-dessous. Quel est la première erreur
+            qui va faire échouer ce programme? '
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Le programme n'a pas échoué. Scrat va atteindre le gland.
+          feedback: Incorrect. Scrat a pris le mauvais chemin après son dernier virage.
+        - text: Scrat prendra le mauvais chemin après son dernier virage.
+          correct: true
+          feedback: Correct!
+        - text: Scrat n'a pas fait assez de pas et s'est arrêté juste avant le gland.
+          feedback: Incorrect. Il fait trop de pas après avoir tourner du mauvais
+            côté.
+        - text: Je ne sais pas.
+          feedback: 'La première erreur, c''est que Scrat a pris le mauvais chemin
+            après son dernier virage. '
       courseC_multi_maze_debugging8_predict1_2018_2019:
         questions:
-        - {}
+        - text: 'Regarde attentivement le code ci-dessous. Quel est la première erreur
+            qui va faire échouer ce programme? '
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Le programme n'a pas échoué. Scrat va atteindre le gland.
+          feedback: Incorrect. Scrat a pris le mauvais chemin après son dernier virage.
+        - text: Scrat prendra le mauvais chemin après son dernier virage.
+          correct: true
+          feedback: Correct!
+        - text: Scrat n'a pas fait assez de pas et s'est arrêté juste avant le gland.
+          feedback: Incorrect. Il fait trop de pas après avoir tourner du mauvais
+            côté.
+        - text: Je ne sais pas.
+          feedback: 'La première erreur, c''est que Scrat a pris le mauvais chemin
+            après son dernier virage. '
       courseC_multi_maze_programming8_predict1:
         questions:
-        - {}
+        - text: Lis attentivement le code ci-dessous. Que va-t-il se passer lorsque
+            tu vas cliquer sur "Démarrer"?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: L'oiseau sera trop court d'une étape pour arriver au cochon.
+          feedback: Incorrecte. Ce code amène parfaitemement l'oiseau jusqu'au cochon.
+        - text: L'oiseau va aller jusqu'au cochon.
+          correct: true
+          feedback: Correct!
+        - text: L'oiseau va foncer dans la TNT.
+          feedback: Incorrecte. Ce code amène parfaitemement l'oiseau jusqu'au cochon.
+        - text: Je ne sais pas.
+          feedback: Ce code amène parfaitement l'oiseau jusqu'au cochon.
       courseC_multi_maze_programming8_predict1_2018:
         questions:
-        - {}
+        - text: Lis attentivement le code ci-dessous. Que va-t-il se passer lorsque
+            tu vas cliquer sur "Démarrer"?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: L'oiseau sera trop court d'une étape pour arriver au cochon.
+          feedback: Incorrecte. Ce code amène parfaitemement l'oiseau jusqu'au cochon.
+        - text: L'oiseau va aller jusqu'au cochon.
+          correct: true
+          feedback: Correct!
+        - text: L'oiseau va foncer dans la TNT.
+          feedback: Incorrecte. Ce code amène parfaitemement l'oiseau jusqu'au cochon.
+        - text: Je ne sais pas.
+          feedback: Ce code amène parfaitement l'oiseau jusqu'au cochon.
       courseC_multi_maze_programming8_predict1_2018_2019:
         questions:
-        - {}
+        - text: Lis attentivement le code ci-dessous. Que va-t-il se passer lorsque
+            tu vas cliquer sur "Démarrer"?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: L'oiseau sera trop court d'une étape pour arriver au cochon.
+          feedback: Incorrecte. Ce code amène parfaitemement l'oiseau jusqu'au cochon.
+        - text: L'oiseau va aller jusqu'au cochon.
+          correct: true
+          feedback: Correct!
+        - text: L'oiseau va foncer dans la TNT.
+          feedback: Incorrecte. Ce code amène parfaitemement l'oiseau jusqu'au cochon.
+        - text: Je ne sais pas.
+          feedback: Ce code amène parfaitement l'oiseau jusqu'au cochon.
       courseC_multi_starWars_predict1:
         questions:
-        - {}
+        - text: Que penses-tu qu'il se passera lorsque tu appuieras dur "Démarrer"?
         answers:
-        - {}
-        - {}
-        - {}
+        - text: BB-8 ne bougera pas.
+          feedback: Incorrect. Le bloc `Répéter` fera avancer BB-8 5 fois.
+        - text: BB-8 bougera seulement d'un pas
+          feedback: Incorrect. Le bloc `Répéter` fera avancer BB-8 5 fois.
+        - text: BB-8 bougera 5 fois et ramassera toute la feraille
+          correct: true
+          feedback: Correct!
         - text: Je ne sais pas
+          feedback: Le bloc `Répéter` fera avancer BB-8 5 fois.
       courseC_multi_starWars_predict1_2018:
         questions:
-        - {}
+        - text: Que penses-tu qu'il se passera lorsque tu appuieras dur "Démarrer"?
         answers:
-        - {}
-        - {}
-        - {}
+        - text: BB-8 ne bougera pas.
+          feedback: Incorrect. Le bloc `Répéter` fera avancer BB-8 5 fois.
+        - text: BB-8 bougera seulement d'un pas
+          feedback: Incorrect. Le bloc `Répéter` fera avancer BB-8 5 fois.
+        - text: BB-8 bougera 5 fois et ramassera toute la feraille
+          correct: true
+          feedback: Correct!
         - text: Je ne sais pas
+          feedback: Le bloc `Répéter` fera avancer BB-8 5 fois.
       courseC_multi_starWars_predict1_2018_2019:
         questions:
-        - {}
+        - text: Que penses-tu qu'il se passera lorsque tu appuieras dur "Démarrer"?
         answers:
-        - {}
-        - {}
-        - {}
+        - text: BB-8 ne bougera pas.
+          feedback: Incorrect. Le bloc `Répéter` fera avancer BB-8 5 fois.
+        - text: BB-8 bougera seulement d'un pas
+          feedback: Incorrect. Le bloc `Répéter` fera avancer BB-8 5 fois.
+        - text: BB-8 bougera 5 fois et ramassera toute la feraille
+          correct: true
+          feedback: Correct!
         - text: Je ne sais pas
+          feedback: Le bloc `Répéter` fera avancer BB-8 5 fois.
       courseC_multi_starWars_predict2:
         questions:
-        - {}
+        - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer lorsque
+            tu cliqueras sur "Démarrer"?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: BB-8 va voyager trop loin dans la première boucle.
+          feedback: Incorrect. La première boucle laisse seulement BB-8 avancer de
+            2 pas, alors qu'il a besoin d'avancer de 3 pas.
+        - text: BB-8 ne voyagera pas assez loin dans la première boucle pour pouvoir
+            ramasser toute la ferraille.
+          correct: true
+          feedback: Correct!
+        - text: BB-8 ramassera toute la ferraille sans problème.
+          feedback: Incorrect. La première boucle laisse seulement BB-8 avancer de
+            2 pas, alors qu'il a besoin d'avancer de 3 pas.
+        - text: Je ne sais pas.
+          feedback: La première boucle laisse BB-8 avancer seulement de 2 pas, alors
+            qu; il a besoin d'avancer de 3 pas.
       courseC_multi_starWars_predict2_2018:
         questions:
-        - {}
+        - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer lorsque
+            tu cliqueras sur "Démarrer"?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: BB-8 va voyager trop loin dans la première boucle.
+          feedback: Incorrect. La première boucle laisse seulement BB-8 avancer de
+            2 pas, alors qu'il a besoin d'avancer de 3 pas.
+        - text: BB-8 ne voyagera pas assez loin dans la première boucle pour pouvoir
+            ramasser toute la ferraille.
+          correct: true
+          feedback: Correct!
+        - text: BB-8 ramassera toute la ferraille sans problème.
+          feedback: Incorrect. La première boucle laisse seulement BB-8 avancer de
+            2 pas, alors qu'il a besoin d'avancer de 3 pas.
+        - text: Je ne sais pas.
+          feedback: La première boucle laisse BB-8 avancer seulement de 2 pas, alors
+            qu; il a besoin d'avancer de 3 pas.
       courseC_multi_starWars_predict2_2018_2019:
         questions:
-        - {}
+        - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer lorsque
+            tu cliqueras sur "Démarrer"?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: BB-8 va voyager trop loin dans la première boucle.
+          feedback: Incorrect. La première boucle laisse seulement BB-8 avancer de
+            2 pas, alors qu'il a besoin d'avancer de 3 pas.
+        - text: BB-8 ne voyagera pas assez loin dans la première boucle pour pouvoir
+            ramasser toute la ferraille.
+          correct: true
+          feedback: Correct!
+        - text: BB-8 ramassera toute la ferraille sans problème.
+          feedback: Incorrect. La première boucle laisse seulement BB-8 avancer de
+            2 pas, alors qu'il a besoin d'avancer de 3 pas.
+        - text: Je ne sais pas.
+          feedback: La première boucle laisse BB-8 avancer seulement de 2 pas, alors
+            qu; il a besoin d'avancer de 3 pas.
+      courseD_external_binary1:
+        title: Dessin Binaire
+      courseD_external_binary1_2018:
+        title: Dessin Binaire
+      courseD_external_binary1_2018_2019:
+        title: Dessin Binaire
       courseD_multi_artist_binary8_predict1:
         questions:
-        - {}
+        - text: Regarde de près le code suivant. Quelle image créera-t-il après avoir
+            appuyer sur "Démarrer"?
         answers:
         - text: A
+          feedback: Incorrect.
         - text: B
+          feedback: Incorrect.
         - text: C
+          feedback: Incorrect.
         - text: D
+          correct: true
+          feedback: Correct!
       courseD_multi_artist_binary8_predict1_2018:
         questions:
-        - {}
+        - text: Regarde de près le code suivant. Quelle image créera-t-il après avoir
+            appuyer sur "Démarrer"?
         answers:
         - text: A
+          feedback: Incorrect.
         - text: B
+          feedback: Incorrect.
         - text: C
+          feedback: Incorrect.
         - text: D
+          correct: true
+          feedback: Correct!
       courseD_multi_artist_binary8_predict1_2018_2019:
         questions:
-        - {}
+        - text: Regarde de près le code suivant. Quelle image créera-t-il après avoir
+            appuyer sur "Démarrer"?
         answers:
         - text: A
+          feedback: Incorrect.
         - text: B
+          feedback: Incorrect.
         - text: C
+          feedback: Incorrect.
         - text: D
+          correct: true
+          feedback: Correct!
       courseD_multi_artist_nestedLoops9_predict1:
         questions:
-        - {}
+        - text: Regarde bien le code ci-dessous. Quel dessin va faire ce programme
+            lorsque tu cliqueras sur "Démarrer"?
         answers:
         - text: A
+          correct: true
+          feedback: Correct!
         - text: B
+          feedback: Incorrect. L'intérieur de la boucle fait un pentagon, et l'extérieur
+            le répète 4 fois dans un cercle.
         - text: C
-        - {}
+          feedback: Incorrect. L'intérieur de la boucle fait un pentagon, et l'extérieur
+            le répète 4 fois dans un cercle.
+        - text: Je ne sais pas.
+          feedback: The inner loop makes a pentagon, and the outer loop repeats it
+            4 times in a circle.
       courseD_multi_artist_nestedLoops9_predict1_2018:
         questions:
-        - {}
+        - text: Regarde bien le code ci-dessous. Quel dessin va faire ce programme
+            lorsque tu cliqueras sur "Démarrer"?
         answers:
         - text: A
+          correct: true
+          feedback: Correct!
         - text: B
+          feedback: Incorrect. L'intérieur de la boucle fait un pentagon, et l'extérieur
+            le répète 4 fois dans un cercle.
         - text: C
-        - {}
+          feedback: Incorrect. L'intérieur de la boucle fait un pentagon, et l'extérieur
+            le répète 4 fois dans un cercle.
+        - text: Je ne sais pas.
+          feedback: The inner loop makes a pentagon, and the outer loop repeats it
+            4 times in a circle.
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         questions:
-        - {}
+        - text: Regarde bien le code ci-dessous. Quel dessin va faire ce programme
+            lorsque tu cliqueras sur "Démarrer"?
         answers:
         - text: A
+          correct: true
+          feedback: Correct!
         - text: B
+          feedback: Incorrect. L'intérieur de la boucle fait un pentagon, et l'extérieur
+            le répète 4 fois dans un cercle.
         - text: C
-        - {}
+          feedback: Incorrect. L'intérieur de la boucle fait un pentagon, et l'extérieur
+            le répète 4 fois dans un cercle.
+        - text: Je ne sais pas.
+          feedback: The inner loop makes a pentagon, and the outer loop repeats it
+            4 times in a circle.
       courseD_multi_bee_conditionals1_predict1:
         questions:
-        - {}
+        - text: Le nuage bloque la vue. Il pourrait y avoir une fleur sous le nuage.
+            S'il y a une fleur, l'abeille devra y ramasser le nectar une fois. S'il
+            n'y a pas de fleur, l'abeille ne fera rien. Regarde bien le code suivant.
+            Qu'est ce que tu penses qui se passera après avoir appuyer sur "Démarrer"?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 'L''abeille bougera jusqu''au nuage et essaiera de ramasser le nectar,
+            peu importe ce qui se passe. '
+          feedback: Incorrect. Le bloc `Si à la fleur` assure que l'abeille essaiera
+            seulement de ramasser le nectar si une fleur est sous le nuage.
+        - text: L'abeille bougera vers le nuage et essaiera seulement de ramasser
+            du nectar s'il y a une fleur dessous.
+          correct: true
+          feedback: Correct!
+        - text: 'L''abeille bougera jusqu''au nuage et ne fera rien ensuite, peu importe
+            ce qui se passe. '
+          feedback: Incorrect. Le bloc `Si à la fleur` assure que l'abeille essaiera
+            de ramasser le nectar si une fleur est sous le nuage.
+        - text: Je ne sais pas.
+          feedback: Le bloc `Si à la fleur` assure que l'abeille essaiera de ramasser
+            le nectar si une fleur est sous le nuage.
       courseD_multi_bee_conditionals1_predict1_2018:
         questions:
-        - {}
+        - text: Le nuage bloque la vue. Il pourrait y avoir une fleur sous le nuage.
+            S'il y a une fleur, l'abeille devra y ramasser le nectar une fois. S'il
+            n'y a pas de fleur, l'abeille ne fera rien. Regarde bien le code suivant.
+            Qu'est ce que tu penses qui se passera après avoir appuyer sur "Démarrer"?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 'L''abeille bougera jusqu''au nuage et essaiera de ramasser le nectar,
+            peu importe ce qui se passe. '
+          feedback: Incorrect. Le bloc `Si à la fleur` assure que l'abeille essaiera
+            seulement de ramasser le nectar si une fleur est sous le nuage.
+        - text: L'abeille bougera vers le nuage et essaiera seulement de ramasser
+            du nectar s'il y a une fleur dessous.
+          correct: true
+          feedback: Correct!
+        - text: 'L''abeille bougera jusqu''au nuage et ne fera rien ensuite, peu importe
+            ce qui se passe. '
+          feedback: Incorrect. Le bloc `Si à la fleur` assure que l'abeille essaiera
+            de ramasser le nectar si une fleur est sous le nuage.
+        - text: Je ne sais pas.
+          feedback: Le bloc `Si à la fleur` assure que l'abeille essaiera de ramasser
+            le nectar si une fleur est sous le nuage.
       courseD_multi_bee_conditionals1_predict1_2018_2019:
         questions:
-        - {}
+        - text: Le nuage bloque la vue. Il pourrait y avoir une fleur sous le nuage.
+            S'il y a une fleur, l'abeille devra y ramasser le nectar une fois. S'il
+            n'y a pas de fleur, l'abeille ne fera rien. Regarde bien le code suivant.
+            Qu'est ce que tu penses qui se passera après avoir appuyer sur "Démarrer"?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 'L''abeille bougera jusqu''au nuage et essaiera de ramasser le nectar,
+            peu importe ce qui se passe. '
+          feedback: Incorrect. Le bloc `Si à la fleur` assure que l'abeille essaiera
+            seulement de ramasser le nectar si une fleur est sous le nuage.
+        - text: L'abeille bougera vers le nuage et essaiera seulement de ramasser
+            du nectar s'il y a une fleur dessous.
+          correct: true
+          feedback: Correct!
+        - text: 'L''abeille bougera jusqu''au nuage et ne fera rien ensuite, peu importe
+            ce qui se passe. '
+          feedback: Incorrect. Le bloc `Si à la fleur` assure que l'abeille essaiera
+            de ramasser le nectar si une fleur est sous le nuage.
+        - text: Je ne sais pas.
+          feedback: Le bloc `Si à la fleur` assure que l'abeille essaiera de ramasser
+            le nectar si une fleur est sous le nuage.
       courseD_multi_bee_conditionals7_predict2:
         questions:
-        - {}
+        - text: 'Regarde attentivement le code suivant. Que penses-tu qu''il se passera
+            après avoir cliquer sur "Démarrer"? Souviens toi: il y aura toujours seulement
+            pour une abeille *un* nid d''abeilles ou *une* fleur derrière chaque nuage.'
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: L'abeille ramassera le nectar de chaque fleur et le miel de chaque
+            nid d'abeilles.
+          correct: true
+          feedback: Correct!
+        - text: L'abeille essaiera de ramasser le nectar des fleurs et des nids d'abeilles.
+          feedback: Incorrect. Le bloc `Si `a la fleur` laisse l' abeille ramasser
+            le nectar sur chaque fleur et le miel à chaque nid d'abeilles.
+        - text: L'abeille essaiera d'obtenir du miel depuis les fleurs et les nids
+            d'abeilles.
+          feedback: Incorrect. Le bloc `Si à la fleur` laisse l'abeille ramasser le
+            nectar à chaque fleur et le miel à chaque nid d'abeilles..
+        - text: Je ne sais pas.
+          feedback: Le bloc `Si à la fleur` laisse l'abeille ramasser le nectar à
+            chaque fleur et le miel à chaque nid d'abeilles.
       courseD_multi_bee_conditionals7_predict2_2018:
         questions:
-        - {}
+        - text: 'Regarde attentivement le code suivant. Que penses-tu qu''il se passera
+            après avoir cliquer sur "Démarrer"? Souviens toi: il y aura toujours seulement
+            pour une abeille *un* nid d''abeilles ou *une* fleur derrière chaque nuage.'
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: L'abeille ramassera le nectar de chaque fleur et le miel de chaque
+            nid d'abeilles.
+          correct: true
+          feedback: Correct!
+        - text: L'abeille essaiera de ramasser le nectar des fleurs et des nids d'abeilles.
+          feedback: Incorrect. Le bloc `Si `a la fleur` laisse l' abeille ramasser
+            le nectar sur chaque fleur et le miel à chaque nid d'abeilles.
+        - text: L'abeille essaiera d'obtenir du miel depuis les fleurs et les nids
+            d'abeilles.
+          feedback: Incorrect. Le bloc `Si à la fleur` laisse l'abeille ramasser le
+            nectar à chaque fleur et le miel à chaque nid d'abeilles..
+        - text: Je ne sais pas.
+          feedback: Le bloc `Si à la fleur` laisse l'abeille ramasser le nectar à
+            chaque fleur et le miel à chaque nid d'abeilles.
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: L'abeille ramassera le nectar de chaque fleur et le miel de chaque
+            nid d'abeilles.
+          correct: true
+          feedback: Correct!
+        - text: L'abeille essaiera de ramasser le nectar des fleurs et des nids d'abeilles.
+          feedback: Incorrect. Le bloc `Si `a la fleur` laisse l' abeille ramasser
+            le nectar sur chaque fleur et le miel à chaque nid d'abeilles.
+        - text: L'abeille essaiera d'obtenir du miel depuis les fleurs et les nids
+            d'abeilles.
+          feedback: Incorrect. Le bloc `Si à la fleur` laisse l'abeille ramasser le
+            nectar à chaque fleur et le miel à chaque nid d'abeilles..
+        - text: Je ne sais pas.
+          feedback: Le bloc `Si à la fleur` laisse l'abeille ramasser le nectar à
+            chaque fleur et le miel à chaque nid d'abeilles.
       courseD_multi_bee_nestedLoops2_predict1:
         questions:
-        - {}
+        - text: Regarde attentivement les boucles imbriquées ci-dessous. Que va-t-il
+            se passer lorsque tu cliqueras sur "Démarrer"?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: L'abeille avancera et prendra le nectar seulement une fois.
+          feedback: Incorrect. L'abeille répéte la boucle qui fait avancer et collecter
+            le nectar, lui permettant ainsi de terminer le puzzle.
+        - text: L'abeille prendra 2 unités de nectar.
+          feedback: Incorrect. L'abeille répéte la boucle qui fait avancer et collecter
+            le nectar, lui permettant ainsi de terminer le puzzle.
+        - text: L' abeille prendra tout le nectar.
+          correct: true
+          feedback: Correct!
+        - text: Je ne sais pas.
+          feedback: L' abeille répéte la boucle qui fait avancer et collecter le nectar,
+            lui permettant ainsi de terminer le puzzle.
       courseD_multi_bee_nestedLoops2_predict1_2018:
         questions:
-        - {}
+        - text: Regarde attentivement les boucles imbriquées ci-dessous. Que va-t-il
+            se passer lorsque tu cliqueras sur "Démarrer"?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: L'abeille avancera et prendra le nectar seulement une fois.
+          feedback: Incorrect. L'abeille répéte la boucle qui fait avancer et collecter
+            le nectar, lui permettant ainsi de terminer le puzzle.
+        - text: L'abeille prendra 2 unités de nectar.
+          feedback: Incorrect. L'abeille répéte la boucle qui fait avancer et collecter
+            le nectar, lui permettant ainsi de terminer le puzzle.
+        - text: L' abeille prendra tout le nectar.
+          correct: true
+          feedback: Correct!
+        - text: Je ne sais pas.
+          feedback: L' abeille répéte la boucle qui fait avancer et collecter le nectar,
+            lui permettant ainsi de terminer le puzzle.
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
         questions:
-        - {}
+        - text: Regarde attentivement les boucles imbriquées ci-dessous. Que va-t-il
+            se passer lorsque tu cliqueras sur "Démarrer"?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: L'abeille avancera et prendra le nectar seulement une fois.
+          feedback: Incorrect. L'abeille répéte la boucle qui fait avancer et collecter
+            le nectar, lui permettant ainsi de terminer le puzzle.
+        - text: L'abeille prendra 2 unités de nectar.
+          feedback: Incorrect. L'abeille répéte la boucle qui fait avancer et collecter
+            le nectar, lui permettant ainsi de terminer le puzzle.
+        - text: L' abeille prendra tout le nectar.
+          correct: true
+          feedback: Correct!
+        - text: Je ne sais pas.
+          feedback: L' abeille répéte la boucle qui fait avancer et collecter le nectar,
+            lui permettant ainsi de terminer le puzzle.
       courseD_multi_bee_nestedLoops9_predict2:
         questions:
-        - {}
+        - text: Regarde attentivement le code ci-dessous. Combien de miel l'abeille
+            produira lorsque tu cliqueras sur "Démarrer"?
         answers:
         - text: '4'
+          feedback: Incorrect. L' abeille collecte 2 nectars dans une boucle avancer,
+            puis 2 nectars dans une boucle descend. Tout cela dans une autre boucle
+            qui se répète 2 fois. 4 fois 2 égal 8!
         - text: '8'
+          correct: true
+          feedback: Correct!
         - text: '12'
-        - {}
+          feedback: Incorrect. L' abeille collecte 2 nectars dans une boucle avancer,
+            puis 2 nectars dans une boucle descend. Tout cela dans une autre boucle
+            qui se répète 2 fois. 4 fois 2 égal 8!
+        - text: Je ne sais pas.
+          feedback: L' abeille collecte 2 nectars dans une boucle avancer, puis 2
+            nectars dans une boucle descend. Tout cela dans une autre boucle qui se
+            répète 2 fois. 4 fois 2 égal 8!
       courseD_multi_bee_nestedLoops9_predict2_2018:
         questions:
-        - {}
+        - text: Regarde attentivement le code ci-dessous. Combien de miel l'abeille
+            produira lorsque tu cliqueras sur "Démarrer"?
         answers:
         - text: '4'
+          feedback: Incorrect. L' abeille collecte 2 nectars dans une boucle avancer,
+            puis 2 nectars dans une boucle descend. Tout cela dans une autre boucle
+            qui se répète 2 fois. 4 fois 2 égal 8!
         - text: '8'
+          correct: true
+          feedback: Correct!
         - text: '12'
-        - {}
+          feedback: Incorrect. L' abeille collecte 2 nectars dans une boucle avancer,
+            puis 2 nectars dans une boucle descend. Tout cela dans une autre boucle
+            qui se répète 2 fois. 4 fois 2 égal 8!
+        - text: Je ne sais pas.
+          feedback: L' abeille collecte 2 nectars dans une boucle avancer, puis 2
+            nectars dans une boucle descend. Tout cela dans une autre boucle qui se
+            répète 2 fois. 4 fois 2 égal 8!
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         questions:
-        - {}
+        - text: Regarde attentivement le code ci-dessous. Combien de miel l'abeille
+            produira lorsque tu cliqueras sur "Démarrer"?
         answers:
         - text: '4'
+          feedback: Incorrect. L' abeille collecte 2 nectars dans une boucle avancer,
+            puis 2 nectars dans une boucle descend. Tout cela dans une autre boucle
+            qui se répète 2 fois. 4 fois 2 égal 8!
         - text: '8'
+          correct: true
+          feedback: Correct!
         - text: '12'
-        - {}
+          feedback: Incorrect. L' abeille collecte 2 nectars dans une boucle avancer,
+            puis 2 nectars dans une boucle descend. Tout cela dans une autre boucle
+            qui se répète 2 fois. 4 fois 2 égal 8!
+        - text: Je ne sais pas.
+          feedback: L' abeille collecte 2 nectars dans une boucle avancer, puis 2
+            nectars dans une boucle descend. Tout cela dans une autre boucle qui se
+            répète 2 fois. 4 fois 2 égal 8!
       courseD_multi_collector_debugging10_predict1:
         questions:
-        - {}
+        - text: 'Regarde attentivement le code ci-dessous. Pourquoi Laurel ne ramassera
+            pas tous les diamants lorsque tu appuieras sur "Démarrer"? Attention:
+            Cette une question délicate, fais attention d''avoir bien lu toutes les
+            options avant de répondre!'
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Laurel tournera dans la mauvaise direction en faisant un carré.
+          feedback: Incorrect. C'était partiellement correct, mais la boucle ne tourne
+            pas assez longtemps pour pouvoir ramasser tous les diamants.
+        - text: 'La boucle ne tourne pas assez longtemps pour Laurel pour ramasser
+            tous les diamants. '
+          feedback: Incorrect. C'était partiellement correct, mais l'abeille tourne
+            aussi du mauvais côté lorsqu'elle essaie de faire un carré.
+        - text: Laurel tourne dans le mauvais sens *et* la boucle ne tourne pas assez
+            longtemps pour que Laurel ramasse tous les diamants.
+          correct: true
+          feedback: Correct!
+        - text: Je ne sais pas.
+          feedback: Laurel tourne dans le mauvais sens *et* la boucle ne tourne pas
+            assez longtemps pour que Laurel ramasse tous les diamants.
       courseD_multi_farmer_condLoops9_predict1:
         questions:
-        - {}
+        - text: Regarde de près le code suivant. Que se passera-t-il après avoir appuyer
+            sur "Démarrer"?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Le cuilleur ramassera toute les plantes.
+          feedback: Incorrect. Il n'y a pas de code pour ramasser la citrouille.
+        - text: Le cueilleur ne ramassera aucune des plantes avec le chemin qu'il
+            prend.
+          feedback: Incorrect. Le code verra le cueilleur répéter le modèle des marches
+            d'escalier et ramasser autant de laitues et plantes qu'il croise. Il ne
+            ramassera pas la citrouille.
+        - text: Le cueilleur ramassera toutes les plantes, sauf la citrouille.
+          correct: true
+          feedback: Correct!
+        - text: Je ne sais pas.
+          feedback: Le code verra le cueilleur répéter le modèle des marches d'escalier
+            et ramasser autant de laitues et plantes qu'il croise. Il ne ramassera
+            pas la citrouille.
       courseD_multi_farmer_condLoops9_predict1_2018:
         questions:
-        - {}
+        - text: Regarde de près le code suivant. Que se passera-t-il après avoir appuyer
+            sur "Démarrer"?
         answers:
+        - text: Le cuilleur ramassera toute les plantes.
         - {}
-        - {}
-        - {}
-        - {}
+        - correct: true
+          feedback: Correct!
+        - text: Je ne sais pas.
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
         questions:
-        - {}
+        - text: Regarde de près le code suivant. Que se passera-t-il après avoir appuyer
+            sur "Démarrer"?
         answers:
+        - text: Le cuilleur ramassera toute les plantes.
         - {}
-        - {}
-        - {}
-        - {}
+        - correct: true
+          feedback: Correct!
+        - text: Je ne sais pas.
       courseD_multi_farmer_ramp13:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Le fermier marchera jusq'au bout du chemin et recoltera la citrouille.
+          feedback: Incorrect. Le bloc `Récolte citrouille` est à l'intérieur de la
+            boucle, donc le fermieressaiera de ramasser la citrouille à chaque étape,
+            au lieu de le faire seulement à la fin.
+        - text: Le fermier essaiera de ramasser les citrouille à chaque pas, mais
+            ne parviendra jamais jusqu'à la citrouille.
+          correct: true
+          feedback: Correct!
+        - text: Le fermier marchera de 4 pas, puis essaiera de ramasser une citrouille.
+          feedback: Incorrect. Le bloc `Récolte citrouille` est à l'intérieur de la
+            boucle, donc le fermieressaiera de ramasser la citrouille à chaque étape,
+            au lieu de le faire seulement à la fin.
+        - text: Je ne sais pas.
+          feedback: Le bloc `Récolte citrouille` est à l'intérieur de la boucle, donc
+            le fermieressaiera de ramasser la citrouille à chaque étape, au lieu de
+            le faire seulement à la fin.
       courseD_multi_farmer_while10_predict2:
         questions:
-        - {}
+        - text: Regarde bien le code suivant. Que restera-t-il à la fin de ce puzzle?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Rien. Ce code ne laissera que le sol du niveau.
+          feedback: Incorrect Il n'y a pas de code pour enlever la saleté d'un tas.
+        - text: Ce code laissera le tas intact.
+          correct: true
+          feedback: Correct!
+        - text: Ce code laissera les trous intacts.
+          feedback: Incorrect. La boucle `Tant que` génèra des boucles de n'importe
+            quelle taille, mais il n'y a pas de code pour enlever la saleté du tas.
+        - text: Je ne sais pas.
+          feedback: La boucle `Tant que` génèra des boucles de n'importe quelle taille,
+            mais il n'y a pas de code pour enlever la saleté du tas.
       courseD_multi_farmer_while10_predict2_2018:
         questions:
-        - {}
+        - text: Regarde bien le code suivant. Que restera-t-il à la fin de ce puzzle?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Rien. Ce code ne laissera que le sol du niveau.
+          feedback: Incorrect Il n'y a pas de code pour enlever la saleté d'un tas.
+        - text: Ce code laissera le tas intact.
+          correct: true
+          feedback: Correct!
+        - text: Ce code laissera les trous intacts.
+          feedback: Incorrect. La boucle `Tant que` génèra des boucles de n'importe
+            quelle taille, mais il n'y a pas de code pour enlever la saleté du tas.
+        - text: Je ne sais pas.
+          feedback: La boucle `Tant que` génèra des boucles de n'importe quelle taille,
+            mais il n'y a pas de code pour enlever la saleté du tas.
       courseD_multi_farmer_while10_predict2_2018_2019:
         questions:
-        - {}
+        - text: Regarde bien le code suivant. Que restera-t-il à la fin de ce puzzle?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Rien. Ce code ne laissera que le sol du niveau.
+          feedback: Incorrect Il n'y a pas de code pour enlever la saleté d'un tas.
+        - text: Ce code laissera le tas intact.
+          correct: true
+          feedback: Correct!
+        - text: Ce code laissera les trous intacts.
+          feedback: Incorrect. La boucle `Tant que` génèra des boucles de n'importe
+            quelle taille, mais il n'y a pas de code pour enlever la saleté du tas.
+        - text: Je ne sais pas.
+          feedback: La boucle `Tant que` génèra des boucles de n'importe quelle taille,
+            mais il n'y a pas de code pour enlever la saleté du tas.
       courseD_multi_farmer_while4_predict1:
         questions:
-        - {}
+        - text: Regarde de près le code suivant. Que se passera-t-il après avoir appuyer
+            sur "Démarrer"?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Rien ne se passera.
+          feedback: Incorrect. Le fermier enlèvera la saleté tant qu'il y aura un
+            tas, puis s'arrêtera dès que le tas sera terminé
+        - text: Le ferier n'arrêtera jamais d'enlever la saleté.
+          feedback: Incorrect. Le fermier enlèvera la saleté tant qu'il y aura un
+            tas, puis s'arrêtera dès que le tas sera terminé
+        - text: Le fermier enlèvera la saleté tant qu'il y aura un tas, puis s'arrêtera
+            dès que le tas sera terminé.
+          correct: true
+          feedback: Correct!
+        - text: Je ne sais pas.
+          feedback: Le fermier enlèvera la saleté tant qu'il y aura un tas, puis s'arrêtera
+            dès que le tas sera terminé
       courseD_multi_farmer_while4_predict1_2018:
         questions:
-        - {}
+        - text: Regarde de près le code suivant. Que se passera-t-il après avoir appuyer
+            sur "Démarrer"?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Rien ne se passera.
+          feedback: Incorrect. Le fermier enlèvera la saleté tant qu'il y aura un
+            tas, puis s'arrêtera dès que le tas sera terminé
+        - text: Le ferier n'arrêtera jamais d'enlever la saleté.
+          feedback: Incorrect. Le fermier enlèvera la saleté tant qu'il y aura un
+            tas, puis s'arrêtera dès que le tas sera terminé
+        - text: Le fermier enlèvera la saleté tant qu'il y aura un tas, puis s'arrêtera
+            dès que le tas sera terminé.
+          correct: true
+          feedback: Correct!
+        - text: Je ne sais pas.
+          feedback: Le fermier enlèvera la saleté tant qu'il y aura un tas, puis s'arrêtera
+            dès que le tas sera terminé
       courseD_multi_farmer_while4_predict1_2018_2019:
         questions:
-        - {}
+        - text: Regarde de près le code suivant. Que se passera-t-il après avoir appuyer
+            sur "Démarrer"?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Rien ne se passera.
+          feedback: Incorrect. Le fermier enlèvera la saleté tant qu'il y aura un
+            tas, puis s'arrêtera dès que le tas sera terminé
+        - text: Le ferier n'arrêtera jamais d'enlever la saleté.
+          feedback: Incorrect. Le fermier enlèvera la saleté tant qu'il y aura un
+            tas, puis s'arrêtera dès que le tas sera terminé
+        - text: Le fermier enlèvera la saleté tant qu'il y aura un tas, puis s'arrêtera
+            dès que le tas sera terminé.
+          correct: true
+          feedback: Correct!
+        - text: Je ne sais pas.
+          feedback: Le fermier enlèvera la saleté tant qu'il y aura un tas, puis s'arrêtera
+            dès que le tas sera terminé
       courseD_multi_maze_until10_predict2:
         questions:
-        - {}
+        - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer lorsque
+            tu cliqueras sur "Démarrer"?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Le zombie va tourner à droite et se retrouver coincé.
+          correct: true
+          feedback: Correct!
+        - text: Le zombie va arriver jusqu'au tournesol.
+          feedback: Incorrect. Dans ce code, il cherche à tourner à droite *avant*
+            de regarder s'il peut passer tout droit. C'est à cause de ça que le puzzle  échoue.
+        - text: Le zombie va tourner à droite sur le premier chemin et partir en tournant
+            sans jamais s'arrêter de tourner.
+          feedback: Incorrect. Le zombie cherche seulement à tourner à droite ou un
+            chemin droit. Il ne cherche jamais à tourner à gauche, donc il se fait
+            bloquer immédiatement.
+        - text: Je ne sais pas.
+          feedback: Dans ce code, il cherche à tourner à droite *avant* de regarder
+            s'il peut passer tout droit. C'est à cause de ça que le puzzle  échoue.
       courseD_multi_maze_until10_predict2_2018:
         questions:
-        - {}
+        - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer lorsque
+            tu cliqueras sur "Démarrer"?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - correct: true
+          feedback: Correct!
+        - text: Le zombie va arriver jusqu'au tournesol.
+        - text: Le zombie va tourner à droite sur le premier chemin et partir en tournant
+            sans jamais s'arrêter de tourner.
+        - text: Je ne sais pas.
       courseD_multi_maze_until10_predict2_2018_2019:
         questions:
-        - {}
+        - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer lorsque
+            tu cliqueras sur "Démarrer"?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - correct: true
+          feedback: Correct!
+        - text: Le zombie va arriver jusqu'au tournesol.
+        - text: Le zombie va tourner à droite sur le premier chemin et partir en tournant
+            sans jamais s'arrêter de tourner.
+        - text: Je ne sais pas.
       courseD_multi_maze_until2_predict1:
         questions:
-        - {}
+        - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer lorsque
+            tu cliqueras sur "Démarrer"?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: L'oiseau ne bougera pas du tout.
+          feedback: Incorrect. Le code fait avancer l'oiseau tant qu'il y a un chemin,
+            puis tourner à gauche. Il continue de faire ça jusq'à ce qu'il rencontre
+            le cochon!
+        - text: L'oiseau va aller jusqu'au cochon.
+          correct: true
+          feedback: Correct!
+        - text: L'oiseau avance et percute la TNT.
+          feedback: Incorrect. Le code fait avancer l'oiseau tant qu'il y a un chemin
+            sûr, puis tourner à gauche. Il continue de faire ça jusq'à ce qu'il rencontre
+            le cochon!
+        - text: Je ne sais pas.
+          feedback: Le code fait avancer l'oiseau tant qu'il y a un chemin, puis tourner
+            à gauche. Il continue de faire ça jusq'à ce qu'il rencontre le cochon!.
       courseD_multi_maze_until2_predict1_2018:
         questions:
-        - {}
+        - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer lorsque
+            tu cliqueras sur "Démarrer"?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: L'oiseau ne bougera pas du tout.
+          feedback: Incorrect. Le code fait avancer l'oiseau tant qu'il y a un chemin,
+            puis tourner à gauche. Il continue de faire ça jusq'à ce qu'il rencontre
+            le cochon!
+        - text: L'oiseau va aller jusqu'au cochon.
+          correct: true
+          feedback: Correct!
+        - text: L'oiseau avance et percute la TNT.
+          feedback: Incorrect. Le code fait avancer l'oiseau tant qu'il y a un chemin
+            sûr, puis tourner à gauche. Il continue de faire ça jusq'à ce qu'il rencontre
+            le cochon!
+        - text: Je ne sais pas.
+          feedback: Le code fait avancer l'oiseau tant qu'il y a un chemin, puis tourner
+            à gauche. Il continue de faire ça jusq'à ce qu'il rencontre le cochon!.
       courseD_multi_maze_until2_predict1_2018_2019:
         questions:
-        - {}
+        - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer lorsque
+            tu cliqueras sur "Démarrer"?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: L'oiseau ne bougera pas du tout.
+          feedback: Incorrect. Le code fait avancer l'oiseau tant qu'il y a un chemin,
+            puis tourner à gauche. Il continue de faire ça jusq'à ce qu'il rencontre
+            le cochon!
+        - text: L'oiseau va aller jusqu'au cochon.
+          correct: true
+          feedback: Correct!
+        - text: L'oiseau avance et percute la TNT.
+          feedback: Incorrect. Le code fait avancer l'oiseau tant qu'il y a un chemin
+            sûr, puis tourner à gauche. Il continue de faire ça jusq'à ce qu'il rencontre
+            le cochon!
+        - text: Je ne sais pas.
+          feedback: Le code fait avancer l'oiseau tant qu'il y a un chemin, puis tourner
+            à gauche. Il continue de faire ça jusq'à ce qu'il rencontre le cochon!.
       courseD_multi_scrat_predict1:
         questions:
-        - {}
+        - text: Ce code utilise un nouveau bloc. Que penses-tu qu'il se passera lorsque
+            tu appuieras sur "Exécuter" ?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Rien. Scrat ne bougera pas du tout.
+          feedback: Incorrect. Mettre le bloc `avancer` dans le bloc `répéter` va
+            faire avancer Scrat 3 fois.
+        - text: Scrat avancera 3 fois, puis avancera 3 fois encore pour le faire arriver
+            au gland !
+          correct: true
+          feedback: Correct!
+        - text: Scrat avancera, puis tournera et tombera.
+          feedback: Incorrect. Mettre le bloc `avancer` dans le bloc `répéter` va
+            faire avancer Scrat 3 fois.
+        - text: Je ne sais pas.
+          feedback: L' ajout du bloc `Avancer` à l'intérieur du bloc `répéter` fera
+            avancer Scrat 3 fois. Il tournera puis avancera encore 3 fois pour arriver
+            au gland !
       courseE_multi_bee_functions_predict1:
         questions:
-        - {}
+        - text: Voici exactement le même programme que le dernier puzzle, mais la
+            dose de miel à ramasser à changer. Que va-t-il se passer lorsque tu vas
+            cliquer sur "Démarrer"?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Le même programme fonctionnera pour résoudre ce puzzle, aussi.
+          correct: true
+          feedback: Correct! Cela ne change rien qu'il y ait une dose de miel différente.
+            La fonction est programmé pour en tenir compte.
+        - text: L'abeille n'a pas fait assez de miel.
+          feedback: Incorrect. La fonction est programmé pour tenir compte de n'importe
+            quelle dose de miel supérieur à 0.
+        - text: L'abeille essaiera de faire trop de miel.
+          feedback: Incorrect. La fonction est programmé pour tenir compte de n'importe
+            quelle dose de miel supérieur à 0.
+        - text: Je ne sais pas.
+          feedback: Le programme fonctionnera pour résoudre le puzzle, aussi. C'est
+            programmé pour supporter n'importe quelle dose de miel supérieur à 0.
       courseE_multi_farmer_functions11_predict:
         questions:
-        - {}
+        - text: Regarde les fonctions définis ci-dessous. Qu'est ce que la fermière
+            va ramasser ?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: La fermière ramassera 2 citrouilles.
+          feedback: Incorrect. La fermière n'appelle pas "Vérifier et ramasser" tant
+            qu'elle n'est pas arrivé au maïs.
+        - text: La fermière ramassera toutes les citrouilles.
+          feedback: Incorrect. La fermière n'appelle pas "Vérifier et ramasser" tant
+            qu'elle n'est pas arrivé au maïs.
+        - text: La fermière ramassera la salade.
+          feedback: Incorrect. La fermière tourne une fois et s'arrête au maïs.
+        - text: La fermière va ramasser le maïs.
+          correct: true
+          feedback: Correct!
       courseE_multi_farmer_functions11_predict_2018:
         questions:
-        - {}
+        - text: Regarde les fonctions définis ci-dessous. Qu'est ce que la fermière
+            va ramasser ?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: La fermière ramassera 2 citrouilles.
+        - text: La fermière ramassera toutes les citrouilles.
+        - text: La fermière ramassera la salade.
+          correct: true
+          feedback: Correct!
+        - text: La fermière va ramasser le maïs.
       courseE_multi_farmer_functions11_predict_2018_2019:
         questions:
-        - {}
+        - text: Regarde les fonctions définis ci-dessous. Qu'est ce que la fermière
+            va ramasser ?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: La fermière ramassera 2 citrouilles.
+        - text: La fermière ramassera toutes les citrouilles.
+        - text: La fermière ramassera la salade.
+          correct: true
+          feedback: Correct!
+        - text: La fermière va ramasser le maïs.
       courseE_prediction_artistFunction1:
         questions:
-        - {}
+        - text: Que va-t-il se passer lorsque vous appuyez sur "démarrer?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Rien. La fonction n'est appelé dans le programme.
+          feedback: Incorrecy, la fonction est appelée 2 fois dans le progamme.
+        - text: L'artiste dessinera un carré simple.
+          feedback: Incorrecy, la fonction est appelée 2 fois dans le progamme.
+        - text: L'artiste dessinera 2 carrés qui se chevauchent.
+          feedback: Incorrect. La longueur de chaque côté du carré fait seulement
+            100 pixels, mais l'artiste saute de 175 pixels entre les fonctions.
+        - text: L' artiste dessinera 2 carrés avec un petit écart entre les 2.
+          correct: true
+          feedback: Correct! La fonction est appelée 2 fois dans le programme avec
+            un saut entre les 2.
       courseE_prediction_artistFunction1_2018:
         questions:
-        - {}
+        - text: Que va-t-il se passer lorsque vous appuyez sur "démarrer?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Rien. La fonction n'est appelé dans le programme.
+          feedback: Incorrecy, la fonction est appelée 2 fois dans le progamme.
+        - text: L'artiste dessinera un carré simple.
+          feedback: Incorrecy, la fonction est appelée 2 fois dans le progamme.
+        - text: L'artiste dessinera 2 carrés qui se chevauchent.
+          feedback: Incorrect. La longueur de chaque côté du carré fait seulement
+            100 pixels, mais l'artiste saute de 175 pixels entre les fonctions.
+        - text: L' artiste dessinera 2 carrés avec un petit écart entre les 2.
+          correct: true
+          feedback: Correct! La fonction est appelée 2 fois dans le programme avec
+            un saut entre les 2.
       courseE_prediction_artistFunction1_2018_2019:
         questions:
-        - {}
+        - text: Que va-t-il se passer lorsque vous appuyez sur "démarrer?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Rien. La fonction n'est appelé dans le programme.
+          feedback: Incorrecy, la fonction est appelée 2 fois dans le progamme.
+        - text: L'artiste dessinera un carré simple.
+          feedback: Incorrecy, la fonction est appelée 2 fois dans le progamme.
+        - text: L'artiste dessinera 2 carrés qui se chevauchent.
+          feedback: Incorrect. La longueur de chaque côté du carré fait seulement
+            100 pixels, mais l'artiste saute de 175 pixels entre les fonctions.
+        - text: L' artiste dessinera 2 carrés avec un petit écart entre les 2.
+          correct: true
+          feedback: Correct! La fonction est appelée 2 fois dans le programme avec
+            un saut entre les 2.
       courseF_bee_variables_8a_2018:
         questions:
         - {}
         answers:
         - {}
+        - correct: true
+          feedback: Correct!
         - {}
-        - {}
-        - {}
+        - text: Je ne sais pas.
       courseF_bee_variables_8a_2018_2019:
         questions:
         - {}
         answers:
         - {}
+        - correct: true
+          feedback: Correct!
         - {}
-        - {}
-        - {}
+        - text: Je ne sais pas.
       courseF_multi_artist_for10_predict1:
         questions:
-        - {}
+        - text: Que va-t-il se passer lorsque tu appuyes sur "démarrer?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: L'artiste dessinera un trait droit dont l'épaisseur augmente d'un
+            côté de l'espace de jeu à l'autre.
+          feedback: Incorrect. L'artiste tourne entre les itérations de la boucle
+            `Pour`.
+        - text: 'L'' artiste dessinera une spirale et à chaque fois à traver la boucle
+            `pour`, le trait deviens plus long et plus fin. '
+          feedback: Incorrect. A chaque fois, au travers de la bouce `pour`, l'artiste
+            dessine un trait plus long qui est aussi plus épais.
+        - text: L' artiste dessinera une spirale et à chaque fois à traver la boucle
+            `pour`, le trait deviens plus long et plus épais.
+          correct: true
+          feedback: Correct!
+        - text: Je ne sais pas.
+          feedback: Incorrect. A chaque fois, au travers de la bouce `pour`, l'artiste
+            dessine un trait plus long qui est aussi plus épais.
       courseF_multi_artist_for10_predict1_2018:
         questions:
-        - {}
+        - text: Que va-t-il se passer lorsque tu appuyes sur "démarrer?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: L'artiste dessinera un trait droit dont l'épaisseur augmente d'un
+            côté de l'espace de jeu à l'autre.
+          feedback: Incorrect. L'artiste tourne entre les itérations de la boucle
+            `Pour`.
+        - text: 'L'' artiste dessinera une spirale et à chaque fois à traver la boucle
+            `pour`, le trait deviens plus long et plus fin. '
+          feedback: Incorrect. A chaque fois, au travers de la bouce `pour`, l'artiste
+            dessine un trait plus long qui est aussi plus épais.
+        - text: L' artiste dessinera une spirale et à chaque fois à traver la boucle
+            `pour`, le trait deviens plus long et plus épais.
+          correct: true
+          feedback: Correct!
+        - text: Je ne sais pas.
+          feedback: Incorrect. A chaque fois, au travers de la bouce `pour`, l'artiste
+            dessine un trait plus long qui est aussi plus épais.
       courseF_multi_artist_for10_predict1_2018_2019:
         questions:
-        - {}
+        - text: Que va-t-il se passer lorsque tu appuyes sur "démarrer?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: L'artiste dessinera un trait droit dont l'épaisseur augmente d'un
+            côté de l'espace de jeu à l'autre.
+          feedback: Incorrect. L'artiste tourne entre les itérations de la boucle
+            `Pour`.
+        - text: 'L'' artiste dessinera une spirale et à chaque fois à traver la boucle
+            `pour`, le trait deviens plus long et plus fin. '
+          feedback: Incorrect. A chaque fois, au travers de la bouce `pour`, l'artiste
+            dessine un trait plus long qui est aussi plus épais.
+        - text: L' artiste dessinera une spirale et à chaque fois à traver la boucle
+            `pour`, le trait deviens plus long et plus épais.
+          correct: true
+          feedback: Correct!
+        - text: Je ne sais pas.
+          feedback: Incorrect. A chaque fois, au travers de la bouce `pour`, l'artiste
+            dessine un trait plus long qui est aussi plus épais.
       courseF_multi_artist_fwp2_predict1:
         questions:
-        - {}
+        - text: Que se passera-t-il si tu exécutes ce programme?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: L' artiste utilisera la fonction pour dessiner 2 boites de tailles
+            différentes.
+          correct: true
+          feedback: Correct!
+        - text: L' artiste utilisera 2 différentes fonctions pour dessiner 2 boites
+            de tailles différentes.
+          feedback: Incorrect. Utiliser des paramètres te permet d'utiliser une seule
+            fonction pour créer des sorties différentes.
+        - text: L' artiste utilisera 2 fonctions différentes pour dessiner la même
+            boite 2 fois.
+          feedback: Incorrect. Utiliser des paramètres te permet d'utiliser une seule
+            fonction pour créer des sorties différentes.
+        - text: Je ne sais pas.
+          feedback: Le programme utilise des paramètres pour pour permettre à une
+            seule fonction de créer 2 boites de tailles différentes.
       courseF_multi_artist_variables3a_predict1:
         questions:
-        - {}
+        - text: Nous avons configuré la variable "longueur" à 50. Que se passera-t-il
+            lorsque tu cliqueras sur "Démarrer"?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: L'artiste dessinera un triangle de 50 pixels de côté.
+          correct: true
+          feedback: Correct!
+        - text: L'artiste dessinera un polygone de 50 côtés avec des côtés de 3 pixels.
+          feedback: Incorrect. La variable "longueur" devrait avoir besoin d'être
+            dans la boucle `répéte` pour que cela se produise.
+        - text: L'artiste dessinera 3 côtés ouverts avec des angles à 50 degrés.
+          feedback: Incorrect. La variable `longueur` devrait être utilisé dans le
+            bloc `tourner` pour que cela se produise.
+        - text: Je ne sais pas.
+          feedback: La variable `longueur` est à 50 et va être utilisé dans le bloc
+            `avancer`, donc l'artiste dessinera un triangle avec 50 pixels de côtés.
       courseF_multi_artist_variables3a_predict1_2018:
         questions:
-        - {}
+        - text: Nous avons configuré la variable "longueur" à 50. Que se passera-t-il
+            lorsque tu cliqueras sur "Démarrer"?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: L'artiste dessinera un triangle de 50 pixels de côté.
+          correct: true
+          feedback: Correct!
+        - text: L'artiste dessinera un polygone de 50 côtés avec des côtés de 3 pixels.
+          feedback: Incorrect. La variable "longueur" devrait avoir besoin d'être
+            dans la boucle `répéte` pour que cela se produise.
+        - text: L'artiste dessinera 3 côtés ouverts avec des angles à 50 degrés.
+          feedback: Incorrect. La variable `longueur` devrait être utilisé dans le
+            bloc `tourner` pour que cela se produise.
+        - text: Je ne sais pas.
+          feedback: La variable `longueur` est à 50 et va être utilisé dans le bloc
+            `avancer`, donc l'artiste dessinera un triangle avec 50 pixels de côtés.
       courseF_multi_artist_variables3a_predict1_2018_2019:
         questions:
-        - {}
+        - text: Nous avons configuré la variable "longueur" à 50. Que se passera-t-il
+            lorsque tu cliqueras sur "Démarrer"?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: L'artiste dessinera un triangle de 50 pixels de côté.
+          correct: true
+          feedback: Correct!
+        - text: L'artiste dessinera un polygone de 50 côtés avec des côtés de 3 pixels.
+          feedback: Incorrect. La variable "longueur" devrait avoir besoin d'être
+            dans la boucle `répéte` pour que cela se produise.
+        - text: L'artiste dessinera 3 côtés ouverts avec des angles à 50 degrés.
+          feedback: Incorrect. La variable `longueur` devrait être utilisé dans le
+            bloc `tourner` pour que cela se produise.
+        - text: Je ne sais pas.
+          feedback: La variable `longueur` est à 50 et va être utilisé dans le bloc
+            `avancer`, donc l'artiste dessinera un triangle avec 50 pixels de côtés.
       courseF_multi_bee_conditionals1_predict1:
         questions:
-        - {}
+        - text: S'il n'y a pas de fleurs, l'abeille devait ne rien faire. Regarde
+            bien le code ci-dessous. Que penses-tu qu'il se passera après avoir cliquer
+            sur "Exécuter"?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 'L''abeille bougera jusqu''au nuage et essaiera de ramasser le nectar,
+            peu importe ce qui se passe. '
+          feedback: Incorrect. Le bloc `Si à la fleur` assure que l'abeille essaiera
+            seulement de ramasser le nectar si une fleur est sous le nuage.
+        - text: L'abeille bougera vers le nuage et essaiera seulement de ramasser
+            du nectar s'il y a une fleur dessous.
+          correct: true
+          feedback: Correct!
+        - text: 'L''abeille bougera jusqu''au nuage et ne fera rien ensuite, peu importe
+            ce qui se passe. '
+          feedback: Incorrect. Le bloc `Si à la fleur` assure que l'abeille essaiera
+            de ramasser le nectar si une fleur est sous le nuage.
+        - text: Je ne sais pas.
+          feedback: Le bloc `Si à la fleur` assure que l'abeille essaiera de ramasser
+            le nectar si une fleur est sous le nuage.
       courseF_multi_bee_conditionals7_predict2:
         questions:
-        - {}
+        - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer lorsque
+            tu cliqueras sur "Démarrer"?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: L' abeille ramassera le nectar sur chaque fleur, sinon cela fera du
+            miel.
+          correct: true
+          feedback: Correct!
+        - text: L'abeille essaiera de ramasser le nectar des fleurs et des nids d'abeilles.
+          feedback: Incorrect. Le bloc `si à la fleur` laisse l'abeille ramasser le
+            nectar à chaque fleur et faire du miel s'il n'y a pas de fleur (donc du
+            coup un nid d'abeilles).
+        - text: L'abeille essaiera d'obtenir du miel depuis les fleurs et les nids
+            d'abeilles.
+          feedback: Incorrect. Le bloc `Si à la fleur` laisse l'abeille ramasser le
+            nectar à chaque fleur et le miel à chaque nid d'abeilles.
+        - text: Je ne sais pas.
+          feedback: Le bloc `Si à la fleur` laisse l'abeille ramasser le nectar à
+            chaque fleur, sinon il fait du miel.
       courseF_multi_bee_for3_predict1:
         questions:
-        - {}
+        - text: Lis le code ci-dessous.  Que va-t-il se passer lorsque tu cliqueras
+            su "Démarrer"?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 'L'' abeille avancera et ramassera tout le nectar de chaque fleur. '
+          feedback: Incorrect. La boucle `pour` laissera l'abeille ramasser la bonne
+            quantité de nectar, mais c'est configuré pour atteindre 4 fleurs.
+        - text: L' abeille avancera et ramassera tout le nectar de toutes les fleurs,
+            sauf pour une.
+          correct: true
+          feedback: Correct!
+        - text: 'L'' abeille avancera et ramassera un nectar de chaque fleur. '
+          feedback: Incorrect. La boucle `pour` laissera l'abeille ramasser la bonne
+            quantité de nectar, mais c'est configuré pour atteindre 4 fleurs.
+        - text: 'L'' abeille avancera et essaiera de ramasser plus de nectar qu''il
+            y a sur les fleurs. '
+          feedback: Incorrect. La boucle `pour` laissera l'abeille ramasser la bonne
+            quantité de nectar, mais c'est configuré pour atteindre 4 fleurs.
       courseF_multi_bee_for3_predict1_2018:
         questions:
-        - {}
+        - text: Lis le code ci-dessous.  Que va-t-il se passer lorsque tu cliqueras
+            su "Démarrer"?
         answers:
-        - {}
-        - {}
-        - {}
+        - text: 'L'' abeille avancera et ramassera tout le nectar de chaque fleur. '
+          feedback: Incorrect. La boucle `pour` laissera l'abeille ramasser la bonne
+            quantité de nectar, mais c'est configuré pour atteindre 4 fleurs.
+        - text: L' abeille avancera et ramassera tout le nectar de toutes les fleurs,
+            sauf pour une.
+          correct: true
+          feedback: Correct!
+        - text: 'L'' abeille avancera et ramassera un nectar de chaque fleur. '
+          feedback: Incorrect. La boucle `pour` laissera l'abeille ramasser la bonne
+            quantité de nectar, mais c'est configuré pour atteindre 4 fleurs.
         - {}
       courseF_multi_bee_for3_predict1_2018_2019:
         questions:
-        - {}
+        - text: Lis le code ci-dessous.  Que va-t-il se passer lorsque tu cliqueras
+            su "Démarrer"?
         answers:
-        - {}
-        - {}
-        - {}
+        - text: 'L'' abeille avancera et ramassera tout le nectar de chaque fleur. '
+          feedback: Incorrect. La boucle `pour` laissera l'abeille ramasser la bonne
+            quantité de nectar, mais c'est configuré pour atteindre 4 fleurs.
+        - text: L' abeille avancera et ramassera tout le nectar de toutes les fleurs,
+            sauf pour une.
+          correct: true
+          feedback: Correct!
+        - text: 'L'' abeille avancera et ramassera un nectar de chaque fleur. '
+          feedback: Incorrect. La boucle `pour` laissera l'abeille ramasser la bonne
+            quantité de nectar, mais c'est configuré pour atteindre 4 fleurs.
         - {}
       courseF_multi_bee_fwp9_predict1:
         questions:
-        - {}
+        - text: Que va-t-il se passer lorsque tu appuyes sur "démarrer?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: L' abeille ne collectera pas de nectar ni de miel.
+          feedback: Incorrect. La fonction est faite pour ramasser autant de nectars
+            ou de miel en le passant via un paramètre.
+        - text: 'L'' abeille ramassera 3 nectars ou miel, puis 2 nectars ou miel en
+            suivant un modèle de marche d''escaliers. '
+          correct: true
+          feedback: Correct! La fonction est faite pour ramasser autant de nectars
+            ou de miel en le passant via un paramètre.
+        - text: 'L'' abeille ramassera seulement un nectar ou miel à chaque itération
+            de la boucle. '
+          feedback: Incorrect. La fonction est faite pour ramasser autant de nectars
+            ou de miels en le passant via un paramètre.
+        - text: Je ne sais pas.
+          feedback: Cliquer pour regarder à l'intérieur de la fonction montre qu'elle
+            est faite pour ramasser autant de nectar ou de miel en le passant via
+            un paramètre.
       courseF_multi_playlab_variables4c_predictive1:
         questions:
-        - {}
+        - text: Que se passerai-t-il si l'utilisateur entrer le nom "Ali" à l'invite?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 'Le pirate dirait: "Ravi de te rencontrer, Ali" et c''est tout.'
+          correct: true
+          feedback: 'Correct. '
+        - text: Le pirate dirait "Ravi de te rencontrer." et c'est tout.
+          feedback: Incorrect. Note que le bloc `aggréger` insère le nom fourni dans
+            la réponse du pirate.
+        - text: Le pirate pourrait dire "Ali" et c'est tout.
+          feedback: Incorrect. Note que le bloc `aggréger` insère le nom fourni dans
+            la réponse du pirate.
+        - text: Je ne sais pas.
+          feedback: 'Incorrect. Note que le bloc `aggréger` insère le nom fourni (Ali)
+            dans la réponse du pirate. '
       coursee_prediction_artistfunction2:
         questions:
-        - {}
+        - text: Que va-t-il se passer lorsque tu appuies sur "démarrer?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: L' artiste résoudra ce problème correctement.
+          feedback: Incorrect. La boucle utilise `dessine polygone` au lieu de `dessine
+            une ligne de polygones`.
+        - text: L' artiste dessinera 4 carrés dans une fenêtre.
+          correct: true
+          feedback: Correct!
+        - text: L' artiste dessinera seulement 1 ligne de carrés.
+          feedback: Incorrect. Le programme n'appelle pas "dessine ligne de polygones".
+        - text: L' artiste dessinera 4 carrés les uns sur les autres.
+          feedback: Incorrect. La boucle tourne à 90 degrés entre chaque appel pour
+            "dessiner polygone".
       coursee_prediction_artistfunction2_2018:
         questions:
-        - {}
+        - text: Que va-t-il se passer lorsque tu appuies sur "démarrer?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: L' artiste résoudra ce problème correctement.
+          feedback: Incorrect. La boucle utilise `dessine polygone` au lieu de `dessine
+            une ligne de polygones`.
+        - text: L' artiste dessinera 4 carrés dans une fenêtre.
+          correct: true
+          feedback: Correct!
+        - text: L' artiste dessinera seulement 1 ligne de carrés.
+          feedback: Incorrect. Le programme n'appelle pas "dessine ligne de polygones".
+        - text: L' artiste dessinera 4 carrés les uns sur les autres.
+          feedback: Incorrect. La boucle tourne à 90 degrés entre chaque appel pour
+            "dessiner polygone".
       coursee_prediction_artistfunction2_2018_2019:
         questions:
-        - {}
+        - text: Que va-t-il se passer lorsque tu appuies sur "démarrer?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: L' artiste résoudra ce problème correctement.
+          feedback: Incorrect. La boucle utilise `dessine polygone` au lieu de `dessine
+            une ligne de polygones`.
+        - text: L' artiste dessinera 4 carrés dans une fenêtre.
+          correct: true
+          feedback: Correct!
+        - text: L' artiste dessinera seulement 1 ligne de carrés.
+          feedback: Incorrect. Le programme n'appelle pas "dessine ligne de polygones".
+        - text: L' artiste dessinera 4 carrés les uns sur les autres.
+          feedback: Incorrect. La boucle tourne à 90 degrés entre chaque appel pour
+            "dessiner polygone".
       grade2_multi_collector_A_predict1:
         questions:
-        - {}
+        - text: Regarde attentivement le code ci-dessous. Si le code devaient aller
+            jusqu`à la fin (en ignorant les erreurs). combien de diamants Laurel aurait
+            elle ramassée?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Laurel ramassera 4 diamants avec ce code.
+          feedback: Incorrect. Laurel essaie de ramasser des diamants où il n'y en
+            a pas et cela a provoquer une erreur.
+        - text: Laurel essaiera de ramasser des diamants où il n'y en a pas et cela
+            provoque une erreur.
+          correct: true
+          feedback: Correct!
+        - text: Laurel ramassera tous les trésors.
+          feedback: Incorrect. Laurel essaie de ramasser des diamants où il n'y en
+            a pas et cela a provoquer une erreur.
+        - text: Je ne sais pas.
+          feedback: Laurel essaie de ramasser des diamants où il n'y en a pas et cela
+            a provoqué une erreur.
       grade2_multi_collector_A_predict1_2018:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Laurel ramassera 4 diamants avec ce code.
+          feedback: Incorrect. Laurel essaie de ramasser des diamants où il n'y en
+            a pas et cela a provoquer une erreur.
+        - text: Laurel essaiera de ramasser des diamants où il n'y en a pas et cela
+            provoque une erreur.
+          correct: true
+          feedback: Correct!
+        - text: Laurel ramassera tous les trésors.
+          feedback: Incorrect. Laurel essaie de ramasser des diamants où il n'y en
+            a pas et cela a provoquer une erreur.
+        - text: Je ne sais pas.
+          feedback: Laurel essaie de ramasser des diamants où il n'y en a pas et cela
+            a provoqué une erreur.
       grade2_multi_collector_A_predict1_2018_2019:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Laurel ramassera 4 diamants avec ce code.
+          feedback: Incorrect. Laurel essaie de ramasser des diamants où il n'y en
+            a pas et cela a provoquer une erreur.
+        - text: Laurel essaiera de ramasser des diamants où il n'y en a pas et cela
+            provoque une erreur.
+          correct: true
+          feedback: Correct!
+        - text: Laurel ramassera tous les trésors.
+          feedback: Incorrect. Laurel essaie de ramasser des diamants où il n'y en
+            a pas et cela a provoquer une erreur.
+        - text: Je ne sais pas.
+          feedback: Laurel essaie de ramasser des diamants où il n'y en a pas et cela
+            a provoqué une erreur.

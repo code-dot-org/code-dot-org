@@ -106,8 +106,10 @@
   third_party_scratch_btn_curriculum: "Lade Scratch Jr. Curriculum herunter"
   third_party_scratch_btn_forum: "Forum für Scratch-Tutoren"
   third_party_scratch_btn_site: "Besuche Scratch"
+  third_party_lightbot_desc: "In Lightbot müssen die Schüler einen Roboter mit Befehlen programmieren, um Rätsel zu lösen. Die Schüler können das Spiel im Browser (erfordert Flash Player), auf Android- oder iOS-Geräten spielen. Die Schüler spielen den ersten Satz der \"Basic\"-Level in Lightbot. Sie werden lernen, wie man einem Computer sagt, was er mit einer Reihe von grundlegenden Befehlen tun soll, und den allgemeinen Prozess erlernen, wie Computerprogramme geschrieben werden."
   third_party_lightbot_btn_curriculum: "Lade Lightbot Curriculum herunter"
   third_party_lightbot_btn_site: "Besuche Lichtroboter"
+  third_party_khan_desc: "Erfahren Sie, wie Sie Zeichnungen, Animationen und Spiele mit JavaScript & ProcessingJS programmieren oder Webseiten mit HTML & CSS erstellen. Du kannst teilen, was immer du erschaffen hast, erkunden was andere erschaffen haben und voneinander lernen!"
   third_party_khan_btn_learn: "Lerne Informatik mit Khan Acadamy"
   third_party_khan_btn_forum: "Khan Academy Informatik-Forum"
   third_party_appinv_btn_curriculum: "Lade App Inventor 2 Curriculum herunter"
@@ -183,6 +185,19 @@
   learn_back_to_minecraft: "Lerne mehr mit Minecraft"
   hoc_is_here: 'Die #HourOfCode kommt wieder: Dezember 5-11. https://youtu.be/KsOIlDT145A.'
   just_did_hoc: 'Ich habe gerade die #HourOfCode gemacht - Finde mehr heraus! @codeorg'
+  just_did_course1: "Ich habe gerade Kurs 1 beendet - schau dir das an! @codeorg"
+  just_did_course2: "Ich habe gerade Kurs 2 beendet - schau dir das an! @codeorg"
+  just_did_course3: "Ich habe gerade Kurs 3 beendet - schau dir das an! @codeorg"
+  just_did_course4: "Ich habe gerade Kurs 4 beendet - schau dir das an! @codeorg"
+  just_did_coursea: "Ich habe gerade Kurs A beendet - schau dir das an! @codeorg"
+  just_did_courseb: "Ich habe gerade Kurs B beendet - schau dir das an! @codeorg"
+  just_did_coursec: "Ich habe gerade Kurs C beendet - schau dir das an! @codeorg"
+  just_did_coursed: "Ich habe gerade Kurs D beendet - schau dir das an! @codeorg"
+  just_did_coursee: "Ich habe gerade Kurs E beendet - schau dir das an! @codeorg"
+  just_did_coursef: "Ich habe gerade Kurs F beendet - schau dir das an! @codeorg"
+  just_did_accelerated: "Ich habe gerade den bescheunigten Kurs beendet - schau dir das an! @codeorg"
+  just_did_hoc_donor: 'Ich habe gerade die #HourOfCode gemacht - schau es dir an! (Danke %{donor_twitter} für die Unterstützung von @codeorg)'
+  just_did_course_donor: "Ich habe gerade den %{course} gemacht - schau es dir an! Danke %{donor_twitter} für die Unterstützung von @codeorg"
   twitter_teach_cs: "Warum unterrichten so wenige Schulen Informatik? Wir können das ändern. http://youtu.be/2DxWIxec6yo. Besuche http://code.org/, um mehr zu erfahren."
   learn_hoc: "Lerne eine Hour of Code"
   beyond_hoc: "￼Erweitern Sie Ihr Wissen"
@@ -380,17 +395,22 @@
   mc_specs: "Viele Sprachen | Moderne Browser, Tablets | Alter: 6-106"
   minecraft_designer: "Minecraft Designer"
   minecraft_adventurer: "Minecraft Abenteurer"
+  minecraft_specs: "Viele Sprachen | Moderne Browser und Tablets | Klasse 2+"
   minecraft_agent_description: "Minecraft präsentiert eine brandneue Aktivität zur Hour of Code! Entdecke die Welt von Minecraft mit Code."
   minecraft_agent_button: "Start"
   minecraft_designer_description: "Baue ein Minecraft-Spiel. Erschaffe deine eigene Version von Hühnern, Schafen, Creepern, Zombies und mehr."
   minecraft_designer_button: "Start"
+  minecraft_adventurer_description: "Benutze Code, um Alex oder Steve auf ein Abenteuer mitzunehmen."
   minecraft_adventurer_button: "Start"
   minecraft_no_internet: "Sie haben kein Internet?"
   minecraft_subtitle: "Minecraft Hour of Code"
   minecraft_teach_resources: "Lehrer-Ressourcen und Unterrichtsplan."
+  minecraft_continue_learning_description: "Keine Informatikkenntnisse erforderlich! Tragen Sie dazu bei, dass alle Jugendlichen die wertvollen Fähigkeiten lernen können, die sie durch den Informatikunterricht erworben haben. Nehmen Sie an einer kostenlosen Serie von drei einstündigen Workshops im Microsoft Store teil, in denen Sie das Programmieren in einer unterhaltsamen und stressfreien Umgebung erleben, sich mit den wichtigsten Konzepten der Informatik vertraut machen und sich darauf vorbereiten, eine Hour of Code in Ihrem Klassenzimmer oder Ihrer Community zu leiten. Du schaffst das! <a href='%{minecraft_continue_learning_url}', target='_blank'>Melden Sie sich noch heute</a> an."
+  minecraft_future: "Helfen Sie allen Jugendlichen, zukunftsfähig zu werden"
   sports_page_title: "Hour of Code - Sport"
   sports_title: "Programmiere Dein eigenes Sport-Spiel"
   sports_watch_video: "Video anschauen"
+  sports_select_theme: "Wähle dein Tutorial-Thema aus"
   sports_basketball_title: "Baue ein Basketball-Spiel"
   sports_all_sports_title: "Kombiniere Elemente unterschiedlicher Sportarten"
   sports_featured_athletes: "Siehe hier, welche Athleten dabei sind"
@@ -413,6 +433,7 @@
   video_title_my_name_is_aracely: "Mein Name ist Aracely"
   video_1min: "1 Minute"
   video_2min: "2 Minuten"
+  video_3min: "3 Minuten"
   video_5min: "5 Minuten"
   speak_another_language: "Du sprichst eine andere Sprache?"
   help_translate: "Hilf mit, bei der Übersetzung."
@@ -636,6 +657,15 @@
   dashboard_course2: 'Kurs 2:'
   dashboard_course3: 'Kurs 3:'
   dashboard_course4: 'Kurs 4 (beta): '
+  dashboard_coursea: 'Kurs A: '
+  dashboard_courseb: 'Kurs B: '
+  dashboard_coursec: 'Kurs C: '
+  dashboard_coursed: 'Kurs D: '
+  dashboard_coursee: 'Kurs E: '
+  dashboard_coursef: 'Kurs F: '
+  dashboard_pre-express: 'Leseanfänger-Expresskurs: '
+  dashboard_express: 'Expresskurs: '
+  dashboard_tools: 'Werkzeuge: '
   dashboard_curriculum: "Lehrplan"
   dashboard_curriculum_overview: "Vor- und Grundschullehrplan Übersicht"
   dashboard_overview: "Übersicht"
@@ -727,6 +757,8 @@
   carousel_heading_webpages: "Lernen Sie, Webseiten zu erstellen"
   carousel_heading_robots: "Lernen Sie Programmieren mit Robotern"
   carousel_heading_ide: "Bei Lehrern beliebte Plattformen"
+  carousel_heading_mobtabelem: "Für Smartphones und Tablets"
+  carousel_heading_prereader: "Für Leseanfänger"
   educator_notes: "Hinweise für Pädagogen"
   teach_led_lesson_plans: "Unterrichtspläne von anderen Lehrern"
   learn_footer_all_tutorials: "Schauen Sie sich die <a href=\"https://code.org/educate/allhourofcode\">umfangreiche Liste der Hour-of-Code-Anleitungen an</a>. Kriterien und Veröffentlichungsleitfäden für Hour-of-Code-Anleitungen <a href=\"https://hourofcode.com/tutorial-guidelines\">finden Sie hier.</a>"
@@ -786,6 +818,26 @@
   course2_name: "Kurs 2"
   course3_name: "Kurs 3"
   course4_name: "Kurs 4"
+  coursea-draft_name: Kurs A
+  coursea_name: "Kurs A"
+  courseb-draft_name: Kurs B
+  courseb_name: "Kurs B"
+  coursec-draft_name: Kurs C
+  coursec_name: "Kurs C"
+  coursed-draft_name: Kurs D
+  coursed_name: "Kurs D"
+  coursee-draft_name: Kurs E
+  coursee_name: "Kurs E"
+  coursef-draft_name: Kurs F
+  coursef_name: "Kurs F"
+  coursea-2017_name: Kurs A (2017)
+  courseb-2017_name: Kurs B (2017)
+  coursec-2017_name: Kurs C (2017)
+  coursed-2017_name: Kurs D (2017)
+  coursee-2017_name: Kurs E (2017)
+  coursef-2017_name: Kurs F (2017)
+  pre-express-2018_name: Leseanfänger-Expresskurs (2018)
+  pre-express-2019_name: Leseanfänger-Expresskurs (2019)
   accelerated_name: "Beschleunigter Kurs"
   20-hour_name: Beschleunigter Kurs
   gumball_name: "Gumball"
@@ -853,14 +905,30 @@
   course2_gradelevel: "Alter: 6-18"
   course3_gradelevel: "Alter: 8-18"
   course4_gradelevel: "Alter: 10-18"
+  coursea_gradelevel: "Alter 4-7"
+  courseb_gradelevel: "Alter 5-8"
+  coursec_gradelevel: "Alter 6-10"
   coursed_gradelevel: "Ab 8. Klasse"
   coursee_gradelevel: "Alter 8-12"
+  coursef_gradelevel: "Alter 9-13"
+  coursea-2017_gradelevel: Alter 4-7
+  courseb-2017_gradelevel: Alter 5-8
+  coursec-2017_gradelevel: Alter 6-10
   coursed-2017_gradelevel: Ab 8. Klasse
   coursee-2017_gradelevel: Alter 8-12
+  coursef-2017_gradelevel: Alter 9-13
+  coursea-2018_gradelevel: Alter 4-7
+  courseb-2018_gradelevel: Alter 5-8
+  coursec-2018_gradelevel: Alter 6-10
   coursed-2018_gradelevel: Ab 8. Klasse
   coursee-2018_gradelevel: Alter 8-12
+  coursef-2018_gradelevel: Alter 9-13
+  coursea-2019_gradelevel: Alter 4-7
+  courseb-2019_gradelevel: Alter 5-8
+  coursec-2019_gradelevel: Alter 6-10
   coursed-2019_gradelevel: Ab 8. Klasse
   coursee-2019_gradelevel: Alter 8-12
+  coursef-2019_gradelevel: Alter 9-13
   accelerated_gradelevel: "Alter: 10-18"
   codeorg_platformtext: "Moderne Browser, Smartphones, Tablets"
   codeintl_platformtext: "Moderne Browser, Smartphones, Tablets"
@@ -1182,11 +1250,13 @@
   header_project_gallery: "Projekte"
   header_sections: "Sektionen"
   header_professional_learning: "Professionelles Lernen"
+  header_educate_overview: "Lehrerübersicht"
   header_educate_elementary: "Grundschule"
   header_educate_middle: "Mittelschule"
   header_educate_high: "High School/Gymnasium"
   header_educate_hoc: "Hour of Code"
   header_educate_partner: "Eine Partnerschaft mit uns"
+  header_educate_beyond: "Jenseits von Code.org"
   header_educate_inspire: "Inspiriere einen Schüler/eine Schülerin"
   header_educate_community: "Online Community"
   header_educate_tools: "Hilfsmittel und Videos"
@@ -1234,6 +1304,7 @@
   applab_tile_start_tutorial: "Start"
   applab_tile_teacher_guide: "Lehrer-Leitfaden anzeigen"
   account_sign_up_email_opt_in: "Dürfen wir dich per E-Mail über Neuigkeiten zu unseren Kursen, lokale Möglichkeiten oder andere Neuigkeiten zur Informatik informieren?"
+  account_sign_up_child_accept_terms: "Ich bestätige, dass ich die Erlaubnis meines Erziehungsberechtigten habe, die Dienste von Code.org zu nutzen."
   hoc_overview_dance_title: "Tanzparty"
   hoc_overview_title: "Hour of Code Aktivitäten von Code.org"
   hoc_overview_subtitle: "Die <a href=\"https://hourofcode.com\">Hour of Code</a> ist eine weltweite Bewegung, die Millionen von Schülern in über 180 Länder erreicht. Jeder kann, egal wo, ein Hour of Code Veranstaltung organisieren oder eines der über 200 einstündigen Tutorials versuchen, verfügbar in über 45 Sprachen."
@@ -1252,17 +1323,20 @@
   hoc2018_creativity_social_media_2: 'Die diesjährige #HourOfCode dreht sich um Kreativität. Was wirst du erschaffen?'
   hoc2018_creativity_courses: "Tauche weiter ein, mit den Code.org Kursen"
   hoc2018_creativity_courses_link: "Tauche weiter ein, mit den <a href=\"https://studio.code.org/courses\">Code.org Kursen</a>"
+  hoc2018_mc_details: "Viele Sprachen | Moderne Browser und Tablets | Klasse 2+"
   hoc2018_mc_aquatic_description: "Minecraft präsentiert eine brandneue Aktivität zur Hour of Code! Entdecke die Welt von Minecraft mit Code."
   hoc2018_mc_hero_description: "Minecraft präsentiert eine brandneue Aktivität zur Hour of Code! Entdecke die Welt von Minecraft mit Code."
   hoc2018_mc_designer_title: "Minecraft Designer"
   hoc2018_mc_designer_description: "Baue ein Minecraft-Spiel. Erschaffe deine eigene Version von Hühnern, Schafen, Creepern, Zombies und mehr."
   hoc2018_mc_adventurer_title: "Minecraft Abenteurer"
+  hoc2018_mc_adventurer_description: "Benutze Code, um Alex oder Steve auf ein Abenteuer mitzunehmen."
   hoc2018_mc_start: "Start"
   hoc2018_mc_no_internet: "Sie haben kein Internet?"
   hoc2018_mc_educators_box2_button: "Herunterladen"
   hoc2018_mc_watch_videos: "Bevor du loslegst, sieh dir eines dieser inspirierenden Videos an"
   hoc2018_mc_video_1min: "1 Minute"
   hoc2018_mc_video_2min: "2 Minuten"
+  hoc2018_mc_video_3min: "3 Minuten"
   hoc2018_mc_video_5min: "5 Minuten"
   hoc2018_mc_video_title_steph_curry: "Hour of Code mit Steph Curry"
   hoc2018_mc_video_title_cs_is_everything: "Informatik verändert alles"
@@ -1281,6 +1355,7 @@
   hoc2018_mc_homepage_try_it: "Ausprobieren"
   hoc2018_mc_back_journey: "Minecraft präsentiert eine brandneue Aktivität zur Hour of Code! Entdecke die Welt von Minecraft mit Code."
   hoc2018_mc_teacher_guide: "Lehrer-Leitfaden anzeigen"
+  hoc2018_mc_minecraft_education: "Minecraft Education"
   hoc2018_mc_go_to_mc_education: "Gehe zu Minecraft Education"
   hoc2018_dance_party_main_heading: "Tanzparty"
   hoc2018_dance_create_your_own_dance_title: "Erstelle deine eigene Tanzparty"
@@ -1304,4 +1379,6 @@
   hoc2018_dance_amazon_future_engineer_footer: "* Die Künstler deren Musik in diesem Tutorial vorkommt, sponsern oder unterstützen Amazon nicht durch die Lizensierung ihrer Musik auf Code.org.\n\n"
   hoc2018_dance_measure: "Takt"
   hoc2018_dance_measure_colon: 'Takt:'
+  page_not_found_title: "Seite nicht gefunden"
+  page_not_found_header: '404: Seite nicht gefunden'
   page_not_found_description: "Die Seite die Sie suchen gibt es nicht unter dieser Adresse. Prüfen Sie die Adresse und versuchen Sie es noch einmal. Oder, gehen Sie zurück zu unserer Webseite."
