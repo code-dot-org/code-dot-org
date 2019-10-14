@@ -2,7 +2,7 @@
 
 Dashboard::Application.routes.draw do
   # Override Error Codes
-  match "/404", to: "errors#not_found", via: :all
+  get "404", to: "application#render_404", via: :all
 
   # React-router will handle sub-routes on the client.
   get 'teacher_dashboard/sections/:section_id/*path', to: 'teacher_dashboard#show', via: :all
