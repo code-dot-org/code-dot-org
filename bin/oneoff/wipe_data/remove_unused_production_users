@@ -53,10 +53,11 @@ USERS_TO_DELETE.each do |user_id|
   ActiveRecord::Base.transaction do
     User.destroy(user_id)
 
-    # This script is a dry-run unless we comment out this last line
+    # This script is a dry-run unless we comment out this line.
     raise ActiveRecord::Rollback.new, "Intentional rollback"
+
+    puts "User ID successfully destroyed - #{user_id}"
   end
-  puts "User ID successfully destroyed - #{user_id}"
 rescue StandardError => error
   puts "Error destroying User ID - #{user_id} / #{error.message}"
 end
