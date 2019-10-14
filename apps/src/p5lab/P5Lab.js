@@ -272,6 +272,7 @@ P5Lab.prototype.init = function(config) {
 
   config.dropletConfig = dropletConfig;
   config.appMsg = this.isSpritelab ? spritelabMsg : gamelabMsg;
+  this.studioApp_.loadLibraryBlocks(config);
 
   // hide makeYourOwn on the share page
   config.makeYourOwn = false;
@@ -1018,6 +1019,7 @@ P5Lab.prototype.initInterpreter = function(attachDebugger = true) {
   code += this.studioApp_.getCode();
   this.JSInterpreter.parse({
     code,
+    libraryCode: this.level.libraryCode,
     blocks: dropletConfig.blocks,
     blockFilter: this.level.executePaletteApisOnly && this.level.codeFunctions,
     enableEvents: true,

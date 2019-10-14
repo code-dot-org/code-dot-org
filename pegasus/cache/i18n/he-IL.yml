@@ -270,7 +270,7 @@ he-IL:
   homepage_slot_text_hoc: שעה של קוד
   homepage_slot_text_frozen: לשבור את הקרח עם אנה ואלזה
   homepage_slot_text_studio: כל המדריכים שלנו
-  homepage_slot_text_course4: קורס 4
+  homepage_slot_text_course4: מסלול 4
   homepage_slot_text_shop: חנות
   homepage_slot_text_flappy: קוד מתנופף
   homepage_action_text_num_served: "# למדו"
@@ -312,7 +312,7 @@ he-IL:
   homepage_slot_text_link_buy: השתתף
   homepage_slot_text_link_donate: תרום
   homepage_header_donors: code.org מודה לתומכיו
-  homepage_donors_seall: ראה הכל
+  homepage_donors_seall: לכל הפעילויות
   homepage_donors_donate: תרום
   homepage_below_hero_announcement_text: אנו דואגים לפרטיותך ואנחנו מכניסים עדכונים
     למדיניות הפרטיות שלנו אשר יכנסו לתוקף ב25 למאי.
@@ -373,13 +373,23 @@ he-IL:
     של מיינקראפט.
   mc_gradelevel: לגילאי 6 ומעלה
   mc_platformtext: דפדפנים מודרנים, סמארטפונים, טאבלטים
+  minecraft_agent: המסע של הגיבור במיינקראפט
+  minecraft_designer: מעצב מיינקראפט
+  minecraft_adventurer: הרפתקן מיינקראפט
+  minecraft_tutorials: מדריכי שעה של קוד - מיינקראפט
+  minecraft_specs: שפות רבות | טאבלטים ודפדפנים מודרניים | כיתות ב+
   minecraft_agent_button: התחל
-  minecraft_designer_description: תכנת חיות ויצורי מיינקרפט נוספים בגרסת מיינקרפט
+  minecraft_designer_description: תכנת חיות ויצורי מיינקרפט נוספים בגרסת מיינקראפט
     משלך.
   minecraft_designer_button: התחל
+  minecraft_adventurer_description: השתמש בקוד כדי לצאת עם אלכס או סטיב להרפתקה.
   minecraft_adventurer_button: התחל
+  minecraft_no_internet: אין אינטרנט?
   minecraft_subtitle: 'שעת הקוד: גרסת מיינקראפט'
   sports_watch_video: צפה בסרטון
+  video_title_steph_curry: שעה של קוד עם סטף קרי
+  video_2min: 2 דק'
+  no_internet: אין אינטרנט?
   are_you_teacher: האם אתה מורה?
   volunteer_engineer_submission_intro_signup: אנא הכנס את הפרטים הבאים אם אתה סטודנט
     למחשבים או מומחה תוכנה. עליך להיות לפחות בן 18 כדי להירשם כמתנדב. שים לב שכל השדות
@@ -714,10 +724,10 @@ he-IL:
   playlab_name: מעבדת הצעצועים
   infinity_name: אינסוף מעבדת הצעצועים
   artist_name: אמן
-  course1_name: קורס 1
-  course2_name: קורס 2
-  course3_name: קורס 3
-  course4_name: קורס 4
+  course1_name: מסלול 1
+  course2_name: מסלול 2
+  course3_name: מסלול 3
+  course4_name: מסלול 4
   coursed-draft_name: קורס ד'
   coursed_name: קורס ד'
   coursed-2017_name: קורס ד' (2017)
@@ -1249,16 +1259,30 @@ he-IL:
   hoc_overview_start_tutorial: התחל
   hoc2018_creativity_create: צור
   hoc2018_creativity_what_will_you_create: מה אתם תיצרו?
-  hoc2018_mc_designer_description: תכנת חיות ויצורי מיינקרפט נוספים בגרסת מיינקרפט
+  hoc2018_mc_page_title: מדריכי שעה של קוד - מיינקראפט
+  hoc2018_mc_details: שפות רבות | טאבלטים ודפדפנים מודרניים | כיתות ב+
+  hoc2018_mc_aquatic_title: 'מיינקראפט: מסע ימי'
+  hoc2018_mc_hero_title: המסע של הגיבור במיינקראפט
+  hoc2018_mc_designer_title: מעצב מיינקראפט
+  hoc2018_mc_designer_description: תכנת חיות ויצורי מיינקרפט נוספים בגרסת מיינקראפט
     משלך.
+  hoc2018_mc_adventurer_title: הרפתקן מיינקראפט
+  hoc2018_mc_adventurer_description: השתמש בקוד כדי לצאת עם אלכס או סטיב להרפתקה.
   hoc2018_mc_start: התחל
+  hoc2018_mc_no_internet: אין אינטרנט?
+  hoc2018_mc_educators: למורים
   hoc2018_mc_educators_box2_button: הורד
+  hoc2018_mc_video_2min: 2 דק'
+  hoc2018_mc_video_title_steph_curry: שעה של קוד עם סטף קרי
   hoc2018_mc_homepage_what_create: מה אתם תיצרו?
   hoc2018_mc_homepage_join_us: הצטרף אלינו
   hoc2018_mc_homepage_try_it: נסו זאת
   hoc2018_mc_minecraft_education: לימוד בעזרת מיינקרפט
   hoc2018_mc_continue_learning: המשך ללמוד עם מיינקרפט.
   hoc2018_mc_go_to_mc_education: עבור ללימוד בעזרת מיינקרפט
+  hoc2018_mc_short_description_shorter: השתמש ביצירתיות ובכישורי פתרון בעיות כדי לגלות
+    ולבנות עולמות תת-ימיים עם קוד.
+  hoc2018_mc_journey: מסע במיינקראפט עם קוד.
   hoc2018_dance_party_main_heading: מסיבת ריקודים
   hoc2018_dance_party_subheading: עזרו לתרגם את "מסיבת ריקודים"
   hoc2018_dance_create_your_own_dance_title: צרו מסיבת ריקודים משלכם

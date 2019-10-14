@@ -47,7 +47,7 @@ module Api::V1::Pd::Application
       @teacher_application.reload
       expected_principal_fields = {
         principal_approval: 'Yes',
-        principal_schedule_confirmed: 'Yes, I plan to include this course in the 2019-20 master schedule',
+        principal_schedule_confirmed: 'Yes, I plan to include this course in the 2020-2021 master schedule',
         principal_diversity_recruitment: 'Yes',
         principal_free_lunch_percent: '50.00%',
         principal_underrepresented_minority_percent: '52.00%',
@@ -65,7 +65,7 @@ module Api::V1::Pd::Application
         application_guid: teacher_application.application_guid,
         form_data: build(PRINCIPAL_APPROVAL_HASH_FACTORY).merge(
           {
-            replace_course: 'Yes, it will replace an existing computer science course',
+            replace_course: 'Yes',
             replace_which_course_csp: ['CodeHS', 'CS50']
           }.stringify_keys
         )
@@ -77,7 +77,7 @@ module Api::V1::Pd::Application
       end
 
       assert_equal(
-        'Yes, it will replace an existing computer science course: CodeHS, CS50',
+        'Yes: CodeHS, CS50',
         teacher_application.reload.sanitize_form_data_hash[:principal_wont_replace_existing_course]
       )
     end
@@ -149,7 +149,7 @@ module Api::V1::Pd::Application
 
       @teacher_application.reload
 
-      assert_equal YES, @teacher_application.response_scores_hash[:meets_scholarship_criteria_scores][:principal_approval]
+      assert_equal YES, @teacher_application.response_scores_hash[:meets_minimum_criteria_scores][:principal_approval]
     end
   end
 end

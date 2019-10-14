@@ -25,9 +25,6 @@ cloudfront_private_key: \"$CLOUDFRONT_PRIVATE_KEY\"
 ignore_eyes_mismatches: true
 disable_all_eyes_running: true
 use_my_apps: true
-use_my_shared_js: true
-build_blockly_core: true
-build_shared_js: true
 build_dashboard: true
 build_pegasus: true
 build_apps: true

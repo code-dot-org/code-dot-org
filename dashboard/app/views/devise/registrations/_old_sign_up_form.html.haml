@@ -150,7 +150,7 @@
       %br/
       *
       -# Temporarily use student_terms so that existing translations get used.
-      != t('signup_form.student_terms')
+      != t('signup_form.student_terms_markdown', markdown: true)
 
   .span5{style: "display: flex;"}
     %div.vertical-or
@@ -160,7 +160,7 @@
 
     = render "devise/shared/oauth_links"
 
-%script{src: minifiable_asset_path('js/devise/registrations/_old_sign_up_form.js')}
+%script{src: webpack_asset_path('js/devise/registrations/_old_sign_up_form.js')}
 %script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=true&libraries=places,geometry&v=3.37"}
 
 :javascript

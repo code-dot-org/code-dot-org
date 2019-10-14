@@ -17,7 +17,6 @@ import CensusTeacherBanner from '../census2017/CensusTeacherBanner';
 import DonorTeacherBanner, {
   donorTeacherBannerOptionsShape
 } from '@cdo/apps/templates/DonorTeacherBanner';
-import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
   clear: {
@@ -186,9 +185,7 @@ export default class TeacherHomepage extends Component {
         {isEnglish && showSpecialAnnouncement && (
           <SpecialAnnouncementActionBlock
             hocLaunch={hocLaunch}
-            hasIncompleteApplication={
-              !!sessionStorage['Teacher1920Application']
-            }
+            hasIncompleteApplication={!!sessionStorage['TeacherApplication']}
           />
         )}
         {announcement && showAnnouncement && (
@@ -234,18 +231,16 @@ export default class TeacherHomepage extends Component {
             <br />
           </div>
         )}
-        {experiments.isEnabled('donorTeacherBanner') &&
-          isEnglish &&
-          this.state.donorBannerName && (
-            <div>
-              <DonorTeacherBanner
-                options={donorTeacherBannerOptions}
-                showPegasusLink={true}
-                source="teacher_home"
-              />
-              <div style={styles.clear} />
-            </div>
-          )}
+        {isEnglish && this.state.donorBannerName && (
+          <div>
+            <DonorTeacherBanner
+              options={donorTeacherBannerOptions}
+              showPegasusLink={true}
+              source="teacher_home"
+            />
+            <div style={styles.clear} />
+          </div>
+        )}
         <TeacherSections queryStringOpen={queryStringOpen} locale={locale} />
         <RecentCourses
           courses={courses}
