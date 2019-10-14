@@ -7,6 +7,8 @@ export const getState = function() {
 };
 
 export const setState = function(newState, onComplete = () => {}) {
+  console.log("setState", newState);
+
   state = {...state, ...newState};
   onComplete();
 };
