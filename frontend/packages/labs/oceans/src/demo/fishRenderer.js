@@ -3,6 +3,18 @@ import constants from './constants';
 import {FishBodyPart} from '../utils/fishData';
 import {generateRandomFish} from '../activities/hoc2019/SpritesheetFish';
 
+
+window.requestAnimFrame = (function(){
+  return  window.requestAnimationFrame       ||
+          window.webkitRequestAnimationFrame ||
+          window.mozRequestAnimationFrame    ||
+          window.oRequestAnimationFrame      ||
+          window.msRequestAnimationFrame     ||
+          function(/* function */ callback, /* DOMElement */ element){
+            window.setTimeout(callback, 1000 / 60);
+          };
+})();
+
 var $time = Date.now || function() {
   return +new Date;
 };
@@ -130,16 +142,19 @@ function colorFromType(palette, type) {
 }
 
 export const init = function(canvas) {
-/*  for (var i = 0; i < 30; ++i) {
-    const x = Math.floor(Math.random() * constants.canvasWidth);
-    const y = Math.floor(Math.random() * constants.canvasHeight);
-    fishes.push(getRandomFish(i, [x, y], [x, y]));
-  } */
-
-  for (var i = 0; i < 30; ++i) {
-    const x = (i % 10) * 200;
-    const y = Math.floor(i / 10) * 200;
-    fishes.push(getRandomFish(i, [x, y], [x, y]));
+  const layout = "grid";
+  if (layout === "random") {
+    for (var i = 0; i < 30; ++i) {
+      const x = Math.floor(Math.random() * constants.canvasWidth);
+      const y = Math.floor(Math.random() * constants.canvasHeight);
+      fishes.push(getRandomFish(i, [x, y], [x, y]));
+    }
+  } else if (layout === "grid") {
+    for (var i = 0; i < 30; ++i) {
+      const x = (i % 10) * 200;
+      const y = Math.floor(i / 10) * 200;
+      fishes.push(getRandomFish(i, [x, y], [x, y]));
+    }
   }
 
   backgroundImage = new Image();
@@ -172,7 +187,9 @@ export const init = function(canvas) {
         ctx
       );
     });
+
+    requestAnimFrame(animateScreen);
   }
 
-  window.setInterval(animateScreen, 50);
+  requestAnimFrame(animateScreen);
 };
