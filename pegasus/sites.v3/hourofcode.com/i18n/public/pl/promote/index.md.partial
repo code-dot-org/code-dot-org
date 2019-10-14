@@ -1,5 +1,5 @@
 ---
-title: Podaj dalej
+title: Rozpowszechniaj inicjatywę
 layout: wide
 nav: promote_nav
 ---
@@ -8,26 +8,26 @@ nav: promote_nav
 
 # Zaangażuj swoją społeczność do Godziny Kodowania
 
-## 1. Rozgłaszaj
+## 1. Rozpowszechniaj inicjatywę
 
-Tell your friends about the **#HourOfCode**!
+Powiadom znajomych o **#HourOfCode**!
 
 {{ promote/share_buttons }}
 
 ## 2. Zaproponuj całej swojej szkole udział w Godzinie Kodowania
 
-[Send this email]({{ promote/sample_emails }}) to your principal and challenge every classroom at your school to sign up.
+[Wyślij ten e-maila]({{ promote/sample_emails }}) do swojego dyrektora i poproś każdą klasę w swojej szkole, aby się zarejestrowała.
 
 ## 3. Poproś swojego pracodawcę o przyłączenie się
 
-[Send this email]({{ promote/sample_emails }}) to your manager or company's CEO.
+[Wyślij ten e-mail ]({{ promote/sample_emails }}) do swojego menedżera lub dyrektora firmy.
 
 ## 4. Promuj Godzinę Kodowania w swojej społeczności
 
-[Recruit a local group]({{ promote/sample_emails }})— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. Nie musisz być w szkole, by poznać nowe umiejętności. Use these [posters, banners, stickers, videos and more](/promote/resources) for your own event.
+[Zwerbuj lokalną grupę ]({{ promote/sample_emails }}) — klub harcerzy lub harcerek, kościół, uniwersytet, grupę weteranów, związek zawodowy lub nawet kilku znajomych. Nie musisz być w szkole, by poznać nowe umiejętności. Użyj te [plakaty, banery, naklejki, wideo, i wiele więcej](/promote/resources) dla swojego wydarzenia.
 
 ## 6. Poproś władze lokalne o udzielenie wsparcia Godzinie Kodowania
 
-[Send this email]({{ promote/sample_emails }}) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. Może to pomóc w tworzeniu wsparcia dla informatyki w twoim obszarze poza tą jedną godziną.
+[Wyślij ten e-mail ]({{ promote/sample_emails }}) do przedstawicieli władz lokalnych, rady miasta lub rady szkoły i zaproś ich do swojej szkoły na Godzinę Kodowania. Może to pomóc w tworzeniu wsparcia dla informatyki w Twojej okolicy poza tą jedną godziną.
 
 {{ signup_button }}

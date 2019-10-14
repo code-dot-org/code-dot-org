@@ -8,7 +8,7 @@ nav: promote_nav
 
 # Plakaty minionej Godziny Kodowania
 
-### Find our posters from previous years to print and hang in your classroom! Looking for the newest posters? [Click here]({{ promote/promote_posters_url }}).
+### Znajdź nasze plakaty z poprzednich lat, aby je wydrukować i powiesić w swojej klasie! Jeśli szukasz najnowszych plakatów, [ to kliknij tutaj]({{ promote/promote_posters_url }}).
 
 * * *
 

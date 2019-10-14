@@ -20,17 +20,17 @@ en:
         options:
           GROUP:
             sprites: all
-            '"ALIEN"': all aliens
-            '"BEAR"': all bears
-            '"CAT"': all cats
-            '"DOG"': all dogs
-            '"DUCK"': all ducks
-            '"FROG"': all frogs
-            '"MOOSE"': all moose
-            '"PINEAPPLE"': all pineapples
-            '"ROBOT"': all robots
-            '"SHARK"': all sharks
-            '"UNICORN"': all unicorns
+            '"ALIEN"': aliens
+            '"BEAR"': bears
+            '"CAT"': cats
+            '"DOG"': dogs
+            '"DUCK"': ducks
+            '"FROG"': frogs
+            '"MOOSE"': moose
+            '"PINEAPPLE"': pineapples
+            '"ROBOT"': robots
+            '"SHARK"': sharks
+            '"UNICORN"': unicorns
           MOVE:
             '"next"': "(Next)"
             '"prev"': "(Previous)"
@@ -82,22 +82,45 @@ en:
             '"rotation"': rotation
             '"x"': horizontal position
             '"y"': vertical position
+      Dancelab_changePropEachBy:
+        text: change [GROUP][0] [PROPERTY][1] by [VAL][2]
+        options:
+          GROUP:
+            sprites: all
+            '"ALIEN"': aliens
+            '"BEAR"': bears
+            '"CAT"': cats
+            '"DOG"': dogs
+            '"DUCK"': ducks
+            '"FROG"': frogs
+            '"MOOSE"': moose
+            '"PINEAPPLE"': pineapples
+            '"ROBOT"': robots
+            '"SHARK"': sharks
+            '"UNICORN"': unicorns
+          PROPERTY:
+            '"scale"': size
+            '"width"': width
+            '"height"': height
+            '"rotation"': rotation
+            '"x"': horizontal position
+            '"y"': vertical position
       Dancelab_doMoveEachLR:
         text: "[GROUP][0] do [MOVE][1] [DIR][2] once"
         options:
           GROUP:
             sprites: all
-            '"ALIEN"': all aliens
-            '"BEAR"': all bears
-            '"CAT"': all cats
-            '"DOG"': all dogs
-            '"DUCK"': all ducks
-            '"FROG"': all frogs
-            '"MOOSE"': all moose
-            '"PINEAPPLE"': all pineapples
-            '"ROBOT"': all robots
-            '"SHARK"': all sharks
-            '"UNICORN"': all unicorns
+            '"ALIEN"': aliens
+            '"BEAR"': bears
+            '"CAT"': cats
+            '"DOG"': dogs
+            '"DUCK"': ducks
+            '"FROG"': frogs
+            '"MOOSE"': moose
+            '"PINEAPPLE"': pineapples
+            '"ROBOT"': robots
+            '"SHARK"': sharks
+            '"UNICORN"': unicorns
           MOVE:
             '"rand"': "(Random)"
             MOVES.XBend: Bend
@@ -162,7 +185,7 @@ en:
       Dancelab_eval:
         text: eval [CODE][0]
       Dancelab_everySeconds:
-        text: 'every [N][0] [UNIT][1] '
+        text: 'repeat every [N][0] [UNIT][1] '
         options:
           UNIT:
             '"measures"': measures
@@ -247,22 +270,49 @@ en:
             "{x: 100, y: 300}": bottom left
             "{x: 300, y: 300}": bottom right
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": random
+      Dancelab_jumpToEach:
+        text: jump [GROUP][0] to [LOCATION][1]
+        options:
+          GROUP:
+            sprites: all
+            '"ALIEN"': aliens
+            '"BEAR"': bears
+            '"CAT"': cats
+            '"DOG"': dogs
+            '"DUCK"': ducks
+            '"FROG"': frogs
+            '"MOOSE"': moose
+            '"PINEAPPLE"': pineapples
+            '"ROBOT"': robots
+            '"SHARK"': sharks
+            '"UNICORN"': unicorns
+          LOCATION:
+            "{x: 200, y: 100}": top
+            "{x: 200, y: 300}": bottom
+            "{x: 100, y: 200}": left
+            "{x: 300, y: 200}": right
+            "{x: 200, y: 200}": center
+            "{x: 100, y: 100}": top left
+            "{x: 300, y: 100}": top right
+            "{x: 100, y: 300}": bottom left
+            "{x: 300, y: 300}": bottom right
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": random
       Dancelab_layoutSprites:
         text: layout [GROUP][0] as a [FORMAT][1]
         options:
           GROUP:
             sprites: all
-            '"ALIEN"': all aliens
-            '"BEAR"': all bears
-            '"CAT"': all cats
-            '"DOG"': all dogs
-            '"DUCK"': all ducks
-            '"FROG"': all frogs
-            '"MOOSE"': all moose
-            '"PINEAPPLE"': all pineapples
-            '"ROBOT"': all robots
-            '"SHARK"': all sharks
-            '"UNICORN"': all unicorns
+            '"ALIEN"': aliens
+            '"BEAR"': bears
+            '"CAT"': cats
+            '"DOG"': dogs
+            '"DUCK"': ducks
+            '"FROG"': frogs
+            '"MOOSE"': moose
+            '"PINEAPPLE"': pineapples
+            '"ROBOT"': robots
+            '"SHARK"': sharks
+            '"UNICORN"': unicorns
           FORMAT:
             '"border"': border
             '"inner"': inside square
@@ -274,22 +324,20 @@ en:
             '"plus"': plus
             '"random"': random
       Dancelab_makeAnonymousDanceSprite:
-        text: |-
-          make a new [COSTUME][0]
-           at [LOCATION][1]
+        text: make a new [COSTUME][0] at [LOCATION][1]
         options:
           COSTUME:
-            '"ALIEN"': Alien
-            '"BEAR"': Bear
-            '"CAT"': Cat
-            '"DOG"': Dog
-            '"DUCK"': Duck
-            '"FROG"': Frog
-            '"MOOSE"': Moose
-            '"PINEAPPLE"': Pineapple
-            '"ROBOT"': Robot
-            '"SHARK"': Shark
-            '"UNICORN"': Unicorn
+            '"ALIEN"': alien
+            '"BEAR"': bear
+            '"CAT"': cat
+            '"DOG"': dog
+            '"DUCK"': duck
+            '"FROG"': frog
+            '"MOOSE"': moose
+            '"PINEAPPLE"': pineapple
+            '"ROBOT"': robot
+            '"SHARK"': shark
+            '"UNICORN"': unicorn
           LOCATION:
             "{x: 200, y: 100}": top
             "{x: 200, y: 300}": bottom
@@ -307,17 +355,17 @@ en:
            called [NAME][1] at [LOCATION][2]
         options:
           COSTUME:
-            '"ALIEN"': Alien
-            '"BEAR"': Bear
-            '"CAT"': Cat
-            '"DOG"': Dog
-            '"DUCK"': Duck
-            '"FROG"': Frog
-            '"MOOSE"': Moose
-            '"PINEAPPLE"': Pineapple
-            '"ROBOT"': Robot
-            '"SHARK"': Shark
-            '"UNICORN"': Unicorn
+            '"ALIEN"': alien
+            '"BEAR"': bear
+            '"CAT"': cat
+            '"DOG"': dog
+            '"DUCK"': duck
+            '"FROG"': frog
+            '"MOOSE"': moose
+            '"PINEAPPLE"': pineapple
+            '"ROBOT"': robot
+            '"SHARK"': shark
+            '"UNICORN"': unicorn
           LOCATION:
             "{x: 200, y: 100}": top
             "{x: 200, y: 300}": bottom
@@ -355,17 +403,17 @@ en:
             '19': '19'
             '20': '20'
           COSTUME:
-            '"ALIEN"': Aliens
-            '"BEAR"': Bears
-            '"CAT"': Cats
-            '"DOG"': Dogs
-            '"DUCK"': Ducks
-            '"FROG"': Frogs
-            '"MOOSE"': Moose
-            '"PINEAPPLE"': Pineapples
-            '"ROBOT"': Robots
-            '"SHARK"': Sharks
-            '"UNICORN"': Unicorns
+            '"ALIEN"': aliens
+            '"BEAR"': bears
+            '"CAT"': cats
+            '"DOG"': dogs
+            '"DUCK"': ducks
+            '"FROG"': frogs
+            '"MOOSE"': moose
+            '"PINEAPPLE"': pineapples
+            '"ROBOT"': robots
+            '"SHARK"': sharks
+            '"UNICORN"': unicorns
           LAYOUT:
             '"border"': border
             '"inner"': inside square
@@ -475,17 +523,17 @@ en:
         options:
           GROUP:
             sprites: all
-            '"ALIEN"': all aliens
-            '"BEAR"': all bears
-            '"CAT"': all cats
-            '"DOG"': all dogs
-            '"DUCK"': all ducks
-            '"FROG"': all frogs
-            '"MOOSE"': all moose
-            '"PINEAPPLE"': all pineapples
-            '"ROBOT"': all robots
-            '"SHARK"': all sharks
-            '"UNICORN"': all unicorns
+            '"ALIEN"': aliens
+            '"BEAR"': bears
+            '"CAT"': cats
+            '"DOG"': dogs
+            '"DUCK"': ducks
+            '"FROG"': frogs
+            '"MOOSE"': moose
+            '"PINEAPPLE"': pineapples
+            '"ROBOT"': robots
+            '"SHARK"': sharks
+            '"UNICORN"': unicorns
           SPEED:
             '1': normal
             '2': fast
@@ -541,23 +589,32 @@ en:
             '"rotation"': rotation
             '"x"': horizontal position
             '"y"': vertical position
-            '"tint"': tint
       Dancelab_setPropEach:
         text: set [GROUP][0] [PROPERTY][1] to [VAL][2]
         options:
           GROUP:
             sprites: all
-            '"ALIEN"': all aliens
-            '"BEAR"': all bears
-            '"CAT"': all cats
-            '"DOG"': all dogs
-            '"DUCK"': all ducks
-            '"FROG"': all frogs
-            '"MOOSE"': all moose
-            '"PINEAPPLE"': all pineapples
-            '"ROBOT"': all robots
-            '"SHARK"': all sharks
-            '"UNICORN"': all unicorns
+            '"ALIEN"': aliens
+            '"BEAR"': bears
+            '"CAT"': cats
+            '"DOG"': dogs
+            '"DUCK"': ducks
+            '"FROG"': frogs
+            '"MOOSE"': moose
+            '"PINEAPPLE"': pineapples
+            '"ROBOT"': robots
+            '"SHARK"': sharks
+            '"UNICORN"': unicorns
+          PROPERTY:
+            '"scale"': size
+            '"width"': width
+            '"height"': height
+            '"rotation"': rotation
+            '"x"': horizontal position
+            '"y"': vertical position
+      Dancelab_setPropRandom:
+        text: randomize [SPRITE][0] [PROPERTY][1]
+        options:
           PROPERTY:
             '"scale"': size
             '"width"': width
@@ -566,9 +623,22 @@ en:
             '"x"': horizontal position
             '"y"': vertical position
             '"tint"': tint
-      Dancelab_setPropRandom:
-        text: randomize [SPRITE][0] [PROPERTY][1]
+      Dancelab_setPropRandomEach:
+        text: randomize [GROUP][0] [PROPERTY][1]
         options:
+          GROUP:
+            sprites: all
+            '"ALIEN"': aliens
+            '"BEAR"': bears
+            '"CAT"': cats
+            '"DOG"': dogs
+            '"DUCK"': ducks
+            '"FROG"': frogs
+            '"MOOSE"': moose
+            '"PINEAPPLE"': pineapples
+            '"ROBOT"': robots
+            '"SHARK"': sharks
+            '"UNICORN"': unicorns
           PROPERTY:
             '"scale"': size
             '"width"': width
@@ -584,31 +654,33 @@ en:
         options:
           THIS:
             sprites: all
-            '"ALIEN"': all aliens
-            '"BEAR"': all bears
-            '"CAT"': all cats
-            '"DOG"': all dogs
-            '"DUCK"': all ducks
-            '"FROG"': all frogs
-            '"MOOSE"': all moose
-            '"PINEAPPLE"': all pineapples
-            '"ROBOT"': all robots
-            '"SHARK"': all sharks
+            '"ALIEN"': aliens
+            '"BEAR"': bears
+            '"CAT"': cats
+            '"DOG"': dogs
+            '"DUCK"': ducks
+            '"FROG"': frogs
+            '"MOOSE"': moose
+            '"PINEAPPLE"': pineapples
+            '"ROBOT"': robots
+            '"SHARK"': sharks
+            '"UNICORN"': unicorns
       Dancelab_setTintEachInline:
         text: set [THIS][0] tint to [VAL][1]
         options:
           THIS:
             sprites: all
-            '"ALIEN"': all aliens
-            '"BEAR"': all bears
-            '"CAT"': all cats
-            '"DOG"': all dogs
-            '"DUCK"': all ducks
-            '"FROG"': all frogs
-            '"MOOSE"': all moose
-            '"PINEAPPLE"': all pineapples
-            '"ROBOT"': all robots
-            '"SHARK"': all sharks
+            '"ALIEN"': aliens
+            '"BEAR"': bears
+            '"CAT"': cats
+            '"DOG"': dogs
+            '"DUCK"': ducks
+            '"FROG"': frogs
+            '"MOOSE"': moose
+            '"PINEAPPLE"': pineapples
+            '"ROBOT"': robots
+            '"SHARK"': sharks
+            '"UNICORN"': unicorns
       Dancelab_setTintInline:
         text: set [SPRITE][0] tint to [VAL][1]
       Dancelab_setVisible:
@@ -622,17 +694,17 @@ en:
         options:
           THIS:
             sprites: all
-            '"ALIEN"': all aliens
-            '"BEAR"': all bears
-            '"CAT"': all cats
-            '"DOG"': all dogs
-            '"DUCK"': all ducks
-            '"FROG"': all frogs
-            '"MOOSE"': all moose
-            '"PINEAPPLE"': all pineapples
-            '"ROBOT"': all robots
-            '"SHARK"': all sharks
-            '"UNICORN"': all unicorns
+            '"ALIEN"': aliens
+            '"BEAR"': bears
+            '"CAT"': cats
+            '"DOG"': dogs
+            '"DUCK"': ducks
+            '"FROG"': frogs
+            '"MOOSE"': moose
+            '"PINEAPPLE"': pineapples
+            '"ROBOT"': robots
+            '"SHARK"': sharks
+            '"UNICORN"': unicorns
           VISIBILITY:
             'true': visible
             'false': invisible
@@ -651,9 +723,66 @@ en:
             '"bass"': bass
             '"mid"': mid
             '"treble"': treble
+      Dancelab_startMappingEach:
+        text: "[GROUP][0] begin [PROPERTY][1] following [RANGE][2]"
+        options:
+          GROUP:
+            sprites: all
+            '"ALIEN"': aliens
+            '"BEAR"': bears
+            '"CAT"': cats
+            '"DOG"': dogs
+            '"DUCK"': ducks
+            '"FROG"': frogs
+            '"MOOSE"': moose
+            '"PINEAPPLE"': pineapples
+            '"ROBOT"': robots
+            '"SHARK"': sharks
+            '"UNICORN"': unicorns
+          PROPERTY:
+            '"scale"': size
+            '"width"': width
+            '"height"': height
+            '"rotation"': rotation
+            '"x"': horizontal position
+            '"y"': vertical position
+            '"tint"': tint
+          RANGE:
+            '"bass"': bass
+            '"mid"': mid
+            '"treble"': treble
       Dancelab_stopMapping:
         text: "[SPRITE][0] stops [PROPERTY][1] following [RANGE][2]"
         options:
+          PROPERTY:
+            '"scale"': size
+            '"width"': width
+            '"height"': height
+            '"rotation"': rotation
+            '"x"': horizontal position
+            '"y"': vertical position
+            '"direction"': movement direction
+            '"tint"': tint
+          RANGE:
+            '"bass"': bass
+            '"mid"': mid
+            '"treble"': treble
+      Dancelab_stopMappingEach:
+        text: "[GROUP][0] stops [PROPERTY][1] following [RANGE][2]"
+        options:
+          GROUP:
+            sprites: all
+            '"ALIEN"': aliens
+            '"BEAR"': bears
+            '"CAT"': cats
+            '"DOG"': dogs
+            '"DUCK"': ducks
+            '"FROG"': frogs
+            '"MOOSE"': moose
+            '"PINEAPPLE"': pineapples
+            '"ROBOT"': robots
+            '"SHARK"': sharks
+            '"UNICORN"': unicorns
           PROPERTY:
             '"scale"': size
             '"width"': width
