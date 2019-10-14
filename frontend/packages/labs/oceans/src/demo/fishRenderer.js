@@ -3,23 +3,25 @@ import constants from './constants';
 import {FishBodyPart} from '../utils/fishData';
 import {generateRandomFish} from '../activities/hoc2019/SpritesheetFish';
 
+var $time = Date.now || function() {
+  return +new Date;
+};
+
 let fishes = [],
     backgroundImage;
 
 function updatePos(fish) {
-  for (var i = 0; i <= 1; i++) {
-    if (fish.currentPos[i] > fish.defaultPos[i] + 5) {
-      fish.posChange[i] = -1;
-    }
-    if (fish.currentPos[i] < fish.defaultPos[i] - 5) {
-      fish.posChange[i] = 1;
-    }
-    fish.currentPos[i] += fish.posChange[i];
-  }
+  var swayValue = (($time() * 360 / (20 * 1000)) + (fish.id+1) * 10) % 360;
+  var swayOffsetX = Math.sin(swayValue*Math.PI/180*5) * 6;
+  var swayOffsetY = Math.sin(swayValue*Math.PI/180*6) * 2;
+
+  fish.currentPos[0] = fish.defaultPos[0] + swayOffsetX;
+  fish.currentPos[1] = fish.defaultPos[1] + swayOffsetY;
 }
 
-function getRandomFish(currentPos, defaultPos) {
+function getRandomFish(id, currentPos, defaultPos) {
   return {
+    id: id,
     fish: generateRandomFish(),
     defaultPos: defaultPos,
     currentPos: currentPos,
@@ -77,7 +79,7 @@ function drawFish(fish, results, palette, ctx) {
   });
 }
 
-function loadFish(fishCanvas, x, y, palette, ctx) {
+function drawRenderedFish(fishCanvas, x, y, palette, ctx) {
   //const promises = fish.parts.map(bodyPart => loadFishImage(bodyPart));
   ctx.drawImage(fishCanvas, x, y);
 }
@@ -128,10 +130,16 @@ function colorFromType(palette, type) {
 }
 
 export const init = function(canvas) {
-  for (var i = 0; i < 30; ++i) {
+/*  for (var i = 0; i < 30; ++i) {
     const x = Math.floor(Math.random() * constants.canvasWidth);
     const y = Math.floor(Math.random() * constants.canvasHeight);
-    fishes.push(getRandomFish([x, y], [x, y]));
+    fishes.push(getRandomFish(i, [x, y], [x, y]));
+  } */
+
+  for (var i = 0; i < 30; ++i) {
+    const x = (i % 10) * 200;
+    const y = Math.floor(i / 10) * 200;
+    fishes.push(getRandomFish(i, [x, y], [x, y]));
   }
 
   backgroundImage = new Image();
@@ -156,7 +164,7 @@ export const init = function(canvas) {
 
     fishes.forEach(fish => {
       updatePos(fish);
-      loadFish(
+      drawRenderedFish(
         fish.canvas,
         fish.currentPos[0],
         fish.currentPos[1],
