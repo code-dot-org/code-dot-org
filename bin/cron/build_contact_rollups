@@ -15,6 +15,10 @@ def main
   start_time = Time.now
   log_collector = LogCollector.new "Build contact rollups"
 
+  # Delete clone database cluster if it was left behind by the last execution of Contact Rollups.
+  log_collector.time!('Delete db clone') {ContactRollups.delete_database_clone}
+  log_collector.time!('Create db clone') {ContactRollups.create_database_clone}
+
   # Build new daily table of contact rollups
   log_collector.time!('Build contact rollups') {ContactRollups.build_contact_rollups(log_collector)}
 
@@ -38,6 +42,10 @@ def main
 rescue => e
   log_collector.record_exception(e)
 ensure
+  # Use time instead of time! so failure in cleaning up clone db
+  # will not stop reporting tasks following it.
+  log_collector.time('Clean up db clone') {ContactRollups.delete_database_clone}
+
   log_collector.info("Script finished with #{log_collector.errors.size} caught exception(s) in"\
     " #{LogCollector.get_friendly_time(Time.now - start_time)}."
   )
