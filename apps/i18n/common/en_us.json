@@ -1298,6 +1298,7 @@
   "setupCoursesTeacher": "Assign a course to your classroom or start your own course.",
   "setupCoursesStudent": "Browse Code.org's courses to find your next challenge.",
   "share": "Share",
+  "shareLibrary": "Share as library",
   "shareFailure": "Sorry, we can't share this program.",
   "shareSettingEnableButton": "Enable sharing advanced projects for all students",
   "shareSettingDisableButton": "Disable sharing advanced projects for all students",
