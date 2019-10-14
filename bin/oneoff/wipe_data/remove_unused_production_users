@@ -47,12 +47,14 @@ USERS_TO_DELETE = %w(
   39270846
 ).map(&:to_i).freeze
 
-ActiveRecord::Base.transaction do
-  # ActiveRecord model destroy will raise an error if it encounters an error destroying a single item in the
-  # array and will not continue destroying the remaining items in the input array.
-  # If needed, an individual User can be restored by id: User.with_deleted.find(id).undestroy
-  User.destroy(USERS_TO_DELETE)
+# ActiveRecord `destroy` can take an array argument, but carrying out all destroys in a single database transaction
+# can cause the entire operation to be rolledback when an error was raised destroying a single malformed User.
+USERS_TO_DELETE.each do |user_id|
+  User.destroy(user_id)
 
   # This script is a dry-run unless we comment out this last line
   raise ActiveRecord::Rollback.new, "Intentional rollback"
+  puts "User ID successfully destroyed - #{user_id}"
+rescue StandardError => error
+  puts "Error destroying User ID - #{user_id} / #{error.message}"
 end
