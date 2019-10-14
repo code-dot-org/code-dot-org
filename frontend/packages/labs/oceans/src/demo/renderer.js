@@ -2,17 +2,19 @@ import _ from 'lodash';
 import constants, {Modes} from './constants';
 import {FishBodyPart} from '../utils/fishData';
 import {generateRandomFish} from '../activities/hoc2019/SpritesheetFish';
-import {setState, getState} from './state';
+import {getState} from './state';
 
-window.requestAnimFrame = (function(){
-  return  window.requestAnimationFrame       ||
-          window.webkitRequestAnimationFrame ||
-          window.mozRequestAnimationFrame    ||
-          window.oRequestAnimationFrame      ||
-          window.msRequestAnimationFrame     ||
-          function(/* function */ callback, /* DOMElement */ element){
-            window.setTimeout(callback, 1000 / 60);
-          };
+window.requestAnimFrame = (function() {
+  return (
+    window.requestAnimationFrame ||
+    window.webkitRequestAnimationFrame ||
+    window.mozRequestAnimationFrame ||
+    window.oRequestAnimationFrame ||
+    window.msRequestAnimationFrame ||
+    function(/* function */ callback, /* DOMElement */ element) {
+      window.setTimeout(callback, 1000 / 60);
+    }
+  );
 })();
 
 var $time =
@@ -22,13 +24,13 @@ var $time =
   };
 
 let fishes = [],
-    currentBackgroundImageName,
-    backgroundImage;
+  currentBackgroundImageName,
+  backgroundImage;
 
 function getSwayOffsets(fishId) {
-  var swayValue = (($time() * 360 / (20 * 1000)) + (fishId+1) * 10) % 360;
-  var swayOffsetX = Math.sin(swayValue*Math.PI/180*5) * 6;
-  var swayOffsetY = Math.sin(swayValue*Math.PI/180*6) * 2;
+  var swayValue = (($time() * 360) / (20 * 1000) + (fishId + 1) * 10) % 360;
+  var swayOffsetX = Math.sin(((swayValue * Math.PI) / 180) * 5) * 6;
+  var swayOffsetY = Math.sin(((swayValue * Math.PI) / 180) * 6) * 2;
 
   return {offsetX: swayOffsetX, offsetY: swayOffsetY};
 }
@@ -40,26 +42,26 @@ function getFishLocation(fishId) {
   // Determine which layout to use based on mode.
   const currentMode = getState().currentMode;
   if (currentMode === Modes.Training) {
-    layout = "grid";
+    layout = 'grid';
   } else if (currentMode === Modes.Predicting) {
-    layout = "line";
+    layout = 'line';
   } else if (currentMode === Modes.Pond) {
-    layout = "diamondgrid";
+    layout = 'diamondgrid';
   }
 
   // Generate the location based on the layout.
-  if (layout === "random") {
+  if (layout === 'random') {
     for (var i = 0; i < 30; ++i) {
       x = Math.floor(Math.random() * constants.canvasWidth);
       y = Math.floor(Math.random() * constants.canvasHeight);
     }
-  } else if (layout === "grid") {
+  } else if (layout === 'grid') {
     x = (fishId % 10) * 200;
     y = Math.floor(fishId / 10) * 200;
-  } else if (layout === "diamondgrid") {
+  } else if (layout === 'diamondgrid') {
     x = (fishId % 10) * 200 + (Math.floor(fishId / 10) % 2 === 1 ? -100 : 0);
     y = Math.floor(fishId / 10) * 200;
-  } else if (layout === "line") {
+  } else if (layout === 'line') {
     x = fishId * 200;
     y = 200;
   }
@@ -226,11 +228,11 @@ export const init = function(canvas) {
     let backgroundImageName;
     const currentMode = getState().currentMode;
     if (currentMode === Modes.Training) {
-      backgroundImageName = "classroom";
+      backgroundImageName = 'classroom';
     } else if (currentMode === Modes.Predicting) {
-      backgroundImageName = "pipes";
+      backgroundImageName = 'pipes';
     } else if (currentMode === Modes.Pond) {
-      backgroundImageName = "underwater";
+      backgroundImageName = 'underwater';
     }
 
     if (currentBackgroundImageName !== backgroundImageName) {
