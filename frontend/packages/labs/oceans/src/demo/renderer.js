@@ -72,6 +72,9 @@ function initTraining() {
     return;
   }
 
+  // Draw box behind fish
+  canvasCtx.fillRect(canvas.width / 2 - 150, canvas.height / 2 - 150, 300, 300);
+
   const fishDatum = fishData[0];
   drawTrainingFish(fishDatum);
 }
