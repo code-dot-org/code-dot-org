@@ -73,7 +73,11 @@ function initTraining() {
   }
 
   const fishDatum = fishData[0];
-  loadImages(fishDatum.fish).then(results => {
+  drawTrainingFish(fishDatum);
+}
+
+function drawTrainingFish(fishDatum) {
+  loadFishImages(fishDatum.fish).then(results => {
     drawFish(
       fishDatum.fish,
       results,
@@ -82,15 +86,6 @@ function initTraining() {
       canvas.height / 2
     );
   });
-
-  // Draw frame around fish
-  const rectSize = 300;
-  canvasCtx.fillRect(
-    canvas.width / 2 - rectSize / 2,
-    canvas.height / 2 - rectSize / 2,
-    rectSize,
-    rectSize
-  );
 }
 
 window.requestAnimFrame = (function() {
@@ -148,7 +143,7 @@ function getFishLocation(fishId) {
   return {x: x, y: y};
 }
 
-function loadImages(fish) {
+function loadFishImages(fish) {
   return Promise.all(fish.parts.map(loadFishImage));
 }
 
@@ -210,8 +205,8 @@ function drawFish(fish, results, ctx, x = 0, y = 0) {
       intermediateCanvas,
       x - intermediateCanvas.width / 2,
       y - intermediateCanvas.height / 2,
-      FISH_WIDTH,
-      FISH_HEIGHT
+      FISH_CANVAS_WIDTH,
+      FISH_CANVAS_HEIGHT
     );
   });
 }

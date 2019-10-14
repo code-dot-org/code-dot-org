@@ -17,7 +17,7 @@ const fish = {
   bodies: {
     body1: {
       src: 'images/fish/body/Body_BrushTip.png',
-      anchor: [75, 50],
+      anchor: [100, 75],
       eyeAnchor: [72, 17],
       mouthAnchor: [115, 30],
       pectoralFinAnchor: [40, 65],
@@ -28,7 +28,7 @@ const fish = {
     },
     body2: {
       src: 'images/fish/body/Body_EyeShape.png',
-      anchor: [75, 50],
+      anchor: [80, 30],
       eyeAnchor: [90, 40],
       mouthAnchor: [125, 55],
       pectoralFinAnchor: [60, 89],
@@ -39,7 +39,7 @@ const fish = {
     },
     body3: {
       src: 'images/fish/body/Body_Round.png',
-      anchor: [75, 50],
+      anchor: [100, 50],
       eyeAnchor: [60, 25],
       mouthAnchor: [95, 40],
       pectoralFinAnchor: [30, 75],
@@ -50,7 +50,7 @@ const fish = {
     },
     body4: {
       src: 'images/fish/body/Body_RoundedSquare.png',
-      anchor: [75, 50],
+      anchor: [100, 50],
       eyeAnchor: [65, 26],
       mouthAnchor: [90, 61],
       pectoralFinAnchor: [23, 80],
