@@ -1,5 +1,5 @@
-import {init as initFishRenderer} from '../fishRenderer';
+import {init as initRenderer} from '../renderer';
 
 export const init = canvas => {
-  initFishRenderer(canvas);
+  initRenderer(canvas);
 };
