@@ -167,6 +167,7 @@ exports.install = function(blockly, blockInstallOptions) {
    * @returns {Blockly.FieldDropdown}
    */
   function spriteNumberTextDropdown(stringGenerator) {
+    console.log(stringGenerator);
     return new blockly.FieldDropdown(spriteNumberTextArray(stringGenerator));
   }
 
@@ -940,16 +941,15 @@ exports.install = function(blockly, blockInstallOptions) {
     helpUrl: '',
     init: function() {
       var dropdown = new blockly.FieldDropdown(this.VALUES);
+      var dropdown1 = spriteNumberTextDropdown(msg.setSpriteN);
+
       dropdown.setValue(this.VALUES[1][1]); // default to top-left
       this.setHSV(184, 1.0, 0.74);
       if (spriteCount > 1) {
         this.interpolateMsg(
-          msg.setSpritePosition(),
+          msg.setSpriteIndex(),
           () => {
-            this.appendDummyInput().appendTitle(
-              spriteNumberTextDropdown('{spriteIndex}'),
-              'SPRITE'
-            );
+            this.appendDummyInput().appendTitle(dropdown1, 'SPRITE');
           },
           () => {
             this.appendDummyInput().appendTitle(dropdown, 'VALUE');
