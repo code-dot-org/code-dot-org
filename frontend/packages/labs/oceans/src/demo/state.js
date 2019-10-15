@@ -22,4 +22,6 @@ export const setState = function(newState) {
   } else {
     state = {...state, ...newState};
   }
+
+  return state;
 };

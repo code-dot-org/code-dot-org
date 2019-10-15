@@ -18,15 +18,20 @@ const COLS = 4;
 
 // Initialize the renderer once.
 // This will generate canvases with the fish collection.
-export function init() {
-  const state = getState();
+export function init(canvas) {
+  canvas.width = constants.canvasWidth;
+  canvas.height = constants.canvasHeight;
+  const state = setState({
+    canvas,
+    ctx: canvas.getContext('2d')
+  });
 
   switch (state.currentMode) {
     case Modes.Training:
       drawTrainingScreen(state);
       break;
     case Modes.Predicting:
-      drawPredictingScreen();
+      drawPredictingScreen(state);
       break;
     default:
       console.error('not yet implemented');
@@ -133,8 +138,12 @@ function drawTrainingUiElements(state) {
       text: 'next',
       id: 'next-button',
       onClick: () => {
+        while (container.firstChild) {
+          container.removeChild(container.firstChild);
+        }
+        const canvas = state.canvas;
         setState({currentMode: Modes.Predicting});
-        init();
+        init(canvas);
       }
     }
   ];
@@ -148,8 +157,8 @@ function drawTrainingUiElements(state) {
   });
 }
 
-function drawPredictingScreen() {
-  console.log('predicting');
+function drawPredictingScreen(state) {
+  console.log(state);
 }
 
 window.requestAnimFrame = (function() {

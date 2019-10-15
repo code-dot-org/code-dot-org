@@ -8,10 +8,6 @@ import {setState, getState} from './state';
 import {generateRandomFish} from '../activities/hoc2019/SpritesheetFish';
 
 $(document).ready(() => {
-  let canvas = document.getElementById('activity-canvas');
-  canvas.width = constants.canvasWidth;
-  canvas.height = constants.canvasHeight;
-
   // Generate some fish
   let fishes = [];
   for (let i = 0; i < 100; i++) {
@@ -21,14 +17,13 @@ $(document).ready(() => {
   // Set up state
   const initialState = {
     currentMode: Modes.Training,
-    fishData: fishes,
-    canvas,
-    ctx: canvas.getContext('2d')
+    fishData: fishes
   };
   setState(initialState);
 
   // Initialize renderer
-  initRenderer();
+  const canvas = document.getElementById('activity-canvas');
+  initRenderer(canvas);
 
   // Initialize current model
   initModel();
