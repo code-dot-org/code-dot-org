@@ -63,4 +63,22 @@ YAML
     assert_raises(RuntimeError) {config.x = 'a'}
     assert_raises(ArgumentError) {config.y}
   end
+
+  def test_invalid_key
+    config = Cdo::Config.new
+
+    override = Tempfile.new(%w(override .yml))
+    override.write "foo: foo\nbar: bar"
+    override.close
+
+    default = Tempfile.new(%w(default .yml))
+    default.write "foo: foo2"
+    default.close
+
+    config.load_configuration(override.path, default.path)
+
+    ex = assert_raises(Cdo::Config::UnknownKeyError) {config.freeze}
+    assert_match "Remove unknown key not defined in #{default.path}", ex.message
+    assert_match "bar (in #{override.path})", ex.message
+  end
 end

@@ -4,11 +4,34 @@ require 'cdo/yaml'
 module Cdo
   # Loads and combines structured application configuration settings.
   class Config < OpenStruct
+    def initialize
+      super
+      @keys_by_source = Hash.new {|h, k| h[k] = Set.new}
+    end
+
     # Soft-freeze: Don't allow any config items to be created/modified,
     # but allow stubbing for unit tests.
     def freeze
       @table.each_key(&method(:new_ostruct_member!))
       @frozen = true
+      valid_keys!
+    end
+
+    class UnknownKeyError < ::StandardError; end
+
+    # Ensure that config keys from all sources are defined in the most recently loaded (default) source,
+    # preventing override configuration for undefined keys.
+    def valid_keys!
+      return unless @default_source
+      unknown_keys = @keys_by_source.map {|_, v| v}.inject(&:+) - @keys_by_source[@default_source]
+      if unknown_keys.any?
+        unknown_sources = unknown_keys.map {|key| [key, @keys_by_source.select {|_, keys| keys.include?(key)}.keys]}.to_h
+        raise UnknownKeyError, <<~STR
+          Invalid configuration
+          Remove unknown key#{unknown_keys.one? ? '' : 's'} not defined in #{@default_source}:
+          #{unknown_sources.map {|k, v| "#{k} (in #{v.to_a.join(', ')})"}.join("\n")}
+        STR
+      end
     end
 
     def method_missing(key, *args)
@@ -43,7 +66,10 @@ module Cdo
           YAML.load_file(source) || {}
         elsif File.extname(source) == '.erb'
           YAML.load_erb_file(source, binding) || {}
-        end.transform_keys(&:to_sym)
+        end.transform_keys(&:to_sym).tap do |h|
+          @default_source = source
+          @keys_by_source[source].merge(h.keys)
+        end
       end
     end
 

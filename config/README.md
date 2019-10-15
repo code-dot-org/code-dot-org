@@ -14,6 +14,9 @@ CDO.stubs(x: 'foo')
 ```
 
 Properties defined below can be further configured through several overrides.
+
+Overriding any property not defined in the default `config.yml.erb` will raise an error on startup.
+
 The loading order is as follows (1 = highest priority):
 
 1. `ENV`

@@ -1,5 +1,6 @@
 require 'cdo/config'
 require 'cdo/secrets_config'
+require 'pathname'
 
 ####################################################################################################
 ##
@@ -17,7 +18,12 @@ module Cdo
 
     def initialize
       super
+
       root = File.expand_path('..', __dir__)
+
+      # Convert root to relative path for more readable error message.
+      @root = Pathname.new(root).relative_path_from(Pathname.new(Dir.pwd)).to_s
+
       load_configuration(
         # 1. ENV - environment variables (CDO_*)
         ENV.to_h.select {|k, _| k.match?(ENV_PREFIX)}.transform_keys {|k| k.sub(ENV_PREFIX, '').downcase},
@@ -35,12 +41,15 @@ module Cdo
         "#{root}/config.yml.erb"
       )
 
-      defaults = render("#{root}/config.yml.erb").first
-      to_h.keys.each do |key|
-        raise "Unknown property not in defaults: #{key}" unless defaults.key?(key.to_sym)
-      end
       raise "'#{rack_env}' is not known environment." unless rack_envs.include?(rack_env)
       freeze
+    end
+
+    def valid_keys!
+      super
+    rescue UnknownKeyError => e
+      e.message << "Refer to #{File.join(@root, 'config/README.md')} for further documentation."
+      raise
     end
 
     def shared_cache
