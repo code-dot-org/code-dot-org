@@ -496,6 +496,10 @@ class User < ActiveRecord::Base
     self.races = Policies::Races.sanitized(races).join(',')
     self.races = nil if races.empty?
     self.urm = Policies::Races.any_urm?(races)
+
+    # Make sure we explicitly return true here so Rails doesn't interpret a
+    # potential `self.urm = false` as us trying to halt the callback chain
+    true
   end
 
   def fix_by_user_type
