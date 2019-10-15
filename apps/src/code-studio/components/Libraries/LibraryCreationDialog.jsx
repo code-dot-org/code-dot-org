@@ -10,6 +10,12 @@ import i18n from '@cdo/locale';
 import Button from '../../../templates/Button';
 import DialogFooter from '../../../templates/teacherDashboard/DialogFooter';
 
+const styles = {
+  scrollbar: {
+    overflowY: 'scroll'
+  }
+};
+
 class LibraryCreationDialog extends React.Component {
   static propTypes = {
     dialogIsOpen: PropTypes.bool.isRequired,
@@ -69,17 +75,36 @@ class LibraryCreationDialog extends React.Component {
     );
   };
 
+  tempSubmit = () => {
+    console.log('submit');
+  };
+
   displayFunctions = () => {
     if (!this.state.loadingFinished) {
       return <div>Loading...</div>;
     }
+    //Todo Adjust rows and cols to respond to changing size of window
     return (
       <div>
-        <div>{this.state.libraryName}</div>
-        {this.state.selectedFunctionList.map(selectedFunction => {
-          let name = selectedFunction.functionName;
-          return <div key={name}>{name}</div>;
-        })}
+        <h2>{this.state.libraryName}</h2>
+        <form onSubmit={this.tempSubmit}>
+          <textarea
+            name="description"
+            rows="2"
+            cols="200"
+            placeholder="Write a description of your library"
+          />
+          <div>
+            {this.state.selectedFunctionList.map(selectedFunction => {
+              let name = selectedFunction.functionName;
+              return (
+                <div>
+                  <input type="checkbox" key={name} /> {name} <br />
+                </div>
+              );
+            })}
+          </div>
+        </form>
       </div>
     );
   };
@@ -92,7 +117,7 @@ class LibraryCreationDialog extends React.Component {
         handleClose={this.handleClose}
       >
         <Body>
-          {this.displayFunctions()}
+          <div style={styles.scrollbar}>{this.displayFunctions()}</div>
           <DialogFooter rightAlign>
             <Button
               onClick={this.publish}
