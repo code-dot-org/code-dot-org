@@ -598,6 +598,7 @@ ro:
               name: Introducere in Dezvoltarea Profesională
             Teaching Strategies:
               name: Strategii de predare
+          description_audience: '[șir gol]'
         CSPLessonSamples:
           description_audience: '[șir gol]'
           stages:

@@ -27,6 +27,13 @@ ky:
           PROPERTY:
             '"scale"': өлчөмү
             '"height"': бийиктиги
+      Dancelab_changePropEachBy:
+        options:
+          GROUP:
+            sprites: баары
+          PROPERTY:
+            '"scale"': өлчөмү
+            '"height"': бийиктиги
       Dancelab_doMoveEachLR:
         options:
           GROUP:
@@ -70,6 +77,14 @@ ky:
             "{x: 100, y: 200}": солго
             "{x: 300, y: 200}": оңго
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": туш келди
+      Dancelab_jumpToEach:
+        options:
+          GROUP:
+            sprites: баары
+          LOCATION:
+            "{x: 100, y: 200}": солго
+            "{x: 300, y: 200}": оңго
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": туш келди
       Dancelab_layoutSprites:
         options:
           GROUP:
@@ -78,12 +93,26 @@ ky:
             '"random"': туш келди
       Dancelab_makeAnonymousDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': бөтөн
+            '"CAT"': мышык
+            '"DOG"': ит
+            '"DUCK"': өрдөк
+            '"ROBOT"': робот
+            '"UNICORN"': жалгыз мүйүз
           LOCATION:
             "{x: 100, y: 200}": солго
             "{x: 300, y: 200}": оңго
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": туш келди
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': бөтөн
+            '"CAT"': мышык
+            '"DOG"': ит
+            '"DUCK"': өрдөк
+            '"ROBOT"': робот
+            '"UNICORN"': жалгыз мүйүз
           LOCATION:
             "{x: 100, y: 200}": солго
             "{x: 300, y: 200}": оңго
@@ -165,6 +194,13 @@ ky:
           PROPERTY:
             '"scale"': өлчөмү
             '"height"': бийиктиги
+      Dancelab_setPropRandomEach:
+        options:
+          GROUP:
+            sprites: баары
+          PROPERTY:
+            '"scale"': өлчөмү
+            '"height"': бийиктиги
       Dancelab_setTintEach:
         options:
           THIS:
@@ -182,8 +218,22 @@ ky:
           PROPERTY:
             '"scale"': өлчөмү
             '"height"': бийиктиги
+      Dancelab_startMappingEach:
+        options:
+          GROUP:
+            sprites: баары
+          PROPERTY:
+            '"scale"': өлчөмү
+            '"height"': бийиктиги
       Dancelab_stopMapping:
         options:
+          PROPERTY:
+            '"scale"': өлчөмү
+            '"height"': бийиктиги
+      Dancelab_stopMappingEach:
+        options:
+          GROUP:
+            sprites: баары
           PROPERTY:
             '"scale"': өлчөмү
             '"height"': бийиктиги

@@ -17,6 +17,11 @@ ms:
           PROPERTY:
             '"scale"': saiz
             '"height"': ketinggian
+      Dancelab_changePropEachBy:
+        options:
+          PROPERTY:
+            '"scale"': saiz
+            '"height"': ketinggian
       Dancelab_doMoveEachLR:
         options:
           DIR:
@@ -38,18 +43,30 @@ ms:
             "{x: 100, y: 200}": kiri
             "{x: 300, y: 200}": kanan
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": rawak
+      Dancelab_jumpToEach:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": kiri
+            "{x: 300, y: 200}": kanan
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": rawak
       Dancelab_layoutSprites:
         options:
           FORMAT:
             '"random"': rawak
       Dancelab_makeAnonymousDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': makhluk asing
+            '"DOG"': anjing
           LOCATION:
             "{x: 100, y: 200}": kiri
             "{x: 300, y: 200}": kanan
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": rawak
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': makhluk asing
+            '"DOG"': anjing
           LOCATION:
             "{x: 100, y: 200}": kiri
             "{x: 300, y: 200}": kanan
@@ -111,12 +128,27 @@ ms:
           PROPERTY:
             '"scale"': saiz
             '"height"': ketinggian
+      Dancelab_setPropRandomEach:
+        options:
+          PROPERTY:
+            '"scale"': saiz
+            '"height"': ketinggian
       Dancelab_startMapping:
         options:
           PROPERTY:
             '"scale"': saiz
             '"height"': ketinggian
+      Dancelab_startMappingEach:
+        options:
+          PROPERTY:
+            '"scale"': saiz
+            '"height"': ketinggian
       Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': saiz
+            '"height"': ketinggian
+      Dancelab_stopMappingEach:
         options:
           PROPERTY:
             '"scale"': saiz

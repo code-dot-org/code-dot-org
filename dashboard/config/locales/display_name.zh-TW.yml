@@ -2,7 +2,14 @@
 zh-TW:
   data:
     display_name:
+      App Lab Intro 8 - Video Getting Started: 視頻：入門
+      App Lab Intro 8 - Video Images and Sounds: 影片：圖像和聲音
+      App Lab Intro 8 - Video Make It Interactive: 影片：加上互動性
+      AppLab Intro 7 - Change Screen Color: 更改顯示幕顏色
       AppLab Intro 7 - Change Text 2: 修改文字
+      AppLab Intro 7 - Full Text: 兩個按鈕
+      AppLab Intro 7 - onEvent intro: 使按鈕起作用
+      AppLab Intro 7 - onEvent twoButtons: 更多onEvent練習
       AppLab Intro 7 - playSound: 播放音效的用法
       CDEF_video_SpritesInAction: 如何建立一個角色
       CDEF_video_SpritesInAction_2019: 如何建立一個角色

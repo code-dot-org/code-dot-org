@@ -21,6 +21,11 @@ sq:
           PROPERTY:
             '"scale"': madhësia
             '"height"': gjatësia
+      Dancelab_changePropEachBy:
+        options:
+          PROPERTY:
+            '"scale"': madhësia
+            '"height"': gjatësia
       Dancelab_doMoveEachLR:
         options:
           DIR:
@@ -54,18 +59,38 @@ sq:
             "{x: 100, y: 200}": majtas
             "{x: 300, y: 200}": djathtas
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": zakonshëm
+      Dancelab_jumpToEach:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": majtas
+            "{x: 300, y: 200}": djathtas
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": zakonshëm
       Dancelab_layoutSprites:
         options:
           FORMAT:
             '"random"': zakonshëm
       Dancelab_makeAnonymousDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': alien
+            '"CAT"': mace
+            '"DOG"': qen
+            '"DUCK"': rosë
+            '"ROBOT"': Roboti
+            '"UNICORN"': njëbrirësh
           LOCATION:
             "{x: 100, y: 200}": majtas
             "{x: 300, y: 200}": djathtas
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": zakonshëm
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': alien
+            '"CAT"': mace
+            '"DOG"': qen
+            '"DUCK"': rosë
+            '"ROBOT"': Roboti
+            '"UNICORN"': njëbrirësh
           LOCATION:
             "{x: 100, y: 200}": majtas
             "{x: 300, y: 200}": djathtas
@@ -127,12 +152,27 @@ sq:
           PROPERTY:
             '"scale"': madhësia
             '"height"': gjatësia
+      Dancelab_setPropRandomEach:
+        options:
+          PROPERTY:
+            '"scale"': madhësia
+            '"height"': gjatësia
       Dancelab_startMapping:
         options:
           PROPERTY:
             '"scale"': madhësia
             '"height"': gjatësia
+      Dancelab_startMappingEach:
+        options:
+          PROPERTY:
+            '"scale"': madhësia
+            '"height"': gjatësia
       Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': madhësia
+            '"height"': gjatësia
+      Dancelab_stopMappingEach:
         options:
           PROPERTY:
             '"scale"': madhësia
