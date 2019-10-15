@@ -71,12 +71,10 @@ function initTraining() {
     return;
   }
 
-  drawTraining();
-
-  // Calculate button positions based on frame around fish
+  drawTrainingScreen();
 }
 
-function drawTraining() {
+function drawTrainingScreen() {
   // TODO: (maddie) cache background image
   loadBackgroundImage().then(img => {
     renderBackgroundImage(img);
@@ -123,21 +121,27 @@ function drawUpcomingFish() {
 
 function drawTrainingUiElements() {
   const container = document.getElementById('ui-container');
-  const next = function() {
+  const classifyFish = function(doesLike) {
+    // TODO: (maddie) classify fish with trainer
     trainingIndex += 1;
-    drawTraining();
+    drawTrainingScreen();
   };
 
   const buttons = [
     {
       text: 'like',
       id: 'like-button',
-      onClick: next
+      onClick: () => classifyFish(true)
     },
     {
       text: 'dislike',
       id: 'dislike-button',
-      onClick: next
+      onClick: () => classifyFish(false)
+    },
+    {
+      text: 'next',
+      id: 'next-button',
+      onClick: () => console.log('next')
     }
   ];
 
