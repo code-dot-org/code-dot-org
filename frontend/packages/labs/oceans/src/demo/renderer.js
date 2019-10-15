@@ -9,7 +9,10 @@ var $time =
     return +new Date();
   };
 
-let canvas, canvasCtx;
+let canvas,
+  canvasCtx,
+  upcomingCanvas,
+  trainingIndex = 0;
 
 const FISH_CANVAS_WIDTH = 300;
 const FISH_CANVAS_HEIGHT = 200;
@@ -24,17 +27,13 @@ export function init(canvasParam) {
   canvas = canvasParam;
   canvasCtx = canvas.getContext('2d');
 
-  loadBackgroundImage().then(img => {
-    renderBackgroundImage(img);
-
-    switch (getState().currentMode) {
-      case Modes.Training:
-        initTraining();
-        break;
-      default:
-        console.error('not yet implemented');
-    }
-  });
+  switch (getState().currentMode) {
+    case Modes.Training:
+      initTraining();
+      break;
+    default:
+      console.error('not yet implemented');
+  }
 }
 
 function loadBackgroundImage() {
@@ -72,14 +71,30 @@ function initTraining() {
     return;
   }
 
-  // Draw box behind fish
-  canvasCtx.fillRect(canvas.width / 2 - 150, canvas.height / 2 - 150, 300, 300);
+  drawTraining();
 
-  const fishDatum = fishData[0];
-  drawTrainingFish(fishDatum);
+  // Calculate button positions based on frame around fish
 }
 
-function drawTrainingFish(fishDatum) {
+function drawTraining() {
+  // TODO: (maddie) cache background image
+  loadBackgroundImage().then(img => {
+    renderBackgroundImage(img);
+    drawTrainingFish();
+    drawUpcomingFish();
+    drawUiElements();
+  });
+}
+
+function drawTrainingFish() {
+  // Draw frame behind fish
+  canvasCtx.fillStyle = '#FFFFFF';
+  const frameSize = 300;
+  const frameXPos = canvas.width / 2 - frameSize / 2;
+  const frameYPos = canvas.height / 2 - frameSize / 2;
+  canvasCtx.fillRect(frameXPos, frameYPos, frameSize, frameSize);
+
+  const fishDatum = getState().fishData[trainingIndex];
   loadFishImages(fishDatum.fish).then(results => {
     drawFish(
       fishDatum.fish,
@@ -90,6 +105,23 @@ function drawTrainingFish(fishDatum) {
     );
   });
 }
+
+function drawUpcomingFish() {
+  const allFish = getState().fishData;
+  const fishLeft = allFish.length - trainingIndex - 1;
+  const numUpcomingFish = fishLeft >= 3 ? 3 : fishLeft;
+
+  let x = canvas.width / 2 - 300;
+  for (let i = 1; i <= numUpcomingFish; i++) {
+    const fishDatum = allFish[trainingIndex + i];
+    loadFishImages(fishDatum.fish).then(results => {
+      drawFish(fishDatum.fish, results, canvasCtx, x, canvas.height / 2);
+      x -= 200;
+    });
+  }
+}
+
+function drawUiElements() {}
 
 window.requestAnimFrame = (function() {
   return (

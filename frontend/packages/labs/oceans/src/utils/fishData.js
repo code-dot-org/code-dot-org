@@ -17,7 +17,7 @@ const fish = {
   bodies: {
     body1: {
       src: 'images/fish/body/Body_BrushTip.png',
-      anchor: [100, 75],
+      anchor: [90, 65],
       eyeAnchor: [72, 17],
       mouthAnchor: [115, 30],
       pectoralFinAnchor: [40, 65],
