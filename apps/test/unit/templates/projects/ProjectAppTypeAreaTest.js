@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
 import {mount} from 'enzyme';
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/deprecatedChai';
 import ProjectAppTypeArea from '@cdo/apps/templates/projects/ProjectAppTypeArea';
 import sinon from 'sinon';
 import {
