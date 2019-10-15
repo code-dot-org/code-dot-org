@@ -697,7 +697,6 @@
   "setPosition": "set to the %1 position",
   "setSprite": "set",
   "setSpriteN": "set actor {spriteIndex}",
-  "setSpriteIndex": "%1 to the %2 position",
   "setSpritePosition": "set actor %1 to the %2 position",
   "setDroidN": "set droid {spriteIndex}",
   "soccerboy": "soccer boy",
