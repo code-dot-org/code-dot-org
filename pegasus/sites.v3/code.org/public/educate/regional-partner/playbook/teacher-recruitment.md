@@ -23,7 +23,7 @@ ________________
     - Know what [state level policies](https://code.org/educate/regional-partner/playbook/advocacy) matter in your area
     - Know how Code.org fits into district [curricula](https://code.org/educate/regional-partner/playbook/curriculum)
     - [CS Principles Curricula Comparison](https://docs.google.com/spreadsheets/d/1yMuKDTPWEVWVgHNi67v5sI3UR_W4hkh3dtHARtJIGJk/edit#gid=0) shows a comparison of some CS Principles providers
-- Show why CS is important (edit your own Administrator Brochure or use the [generic one](https://docs.google.com/presentation/d/1y2Massbn_i9fZ5QGOaFlGoZaX9nrKywVoklh649RE3s/edit#slide=id.g6303d7b1c5_0_0))
+- Show why CS is important (edit your own [Administrator Brochure](https://docs.google.com/presentation/d/1y2Massbn_i9fZ5QGOaFlGoZaX9nrKywVoklh649RE3s/edit#slide=id.g6303d7b1c5_0_0) or use the [generic one](https://code.org/files/programs/codeorg-program-brochure.pdf))
 - Know what works in [marketing](https://code.org/educate/regional-partner/playbook/communications). See *[sample emails and guidelines](https://docs.google.com/document/d/1lL8TCh0R2jasKupOp_ELN4TrZo-IhfQUm5RnRyKqHrQ/edit#heading=h.yfwh5hek7u8)*
 - Have district sign an [agreement](https://docs.google.com/document/d/1vnRvVw0wPiWKqO22eIQaozcEnkNSHUdWqlk06Eoi_7E/view) (here’s an *[example agreement](https://docs.google.com/document/d/1Mdj_riHQuTxjg5_7jjbz_AjsqQuAtnJUR0uon-P7e1E/view)*)
 
@@ -35,13 +35,13 @@ ________________
 ## Customize Shareable Resources
 
 - [Application link](code.org/apply)
-- [Code.org Why CS Pitch Deck](https://docs.google.com/presentation/d/1PoCuK8zqQd_1m75deyJoUKbslybnBAWLOOoX4ww6NV0/view) can help your pitch on district implementation
+- [Code.org Why CS Pitch Deck](https://docs.google.com/presentation/d/1SUGh9QdyXoXPepD1vC5YXRnicxp-th_yWX8dNM_vywc/edit?usp=sharing) can help your pitch on district implementation
 - [The K–12 Computer Science Framework](https://k12cs.org/) provides an organizing structure and guidance for states and school districts to create their own standards. The framework also informs curriculum and professional development. See [Figure 8.7](https://k12cs.org/wp-content/uploads/2016/09/K%E2%80%9312-Computer-Science-Framework.pdf) for sample implementation pathways
 - [Professional Learning Programs Overview 1-Pager](https://docs.google.com/document/d/1-jt3i9ep9dvxZAfvAcNeZybq5Af0PKYFPJTPuB5Pa1E/view) that you can customize
 - Share the following [Become A Computer Science Teacher video](https://www.youtube.com/watch?v=9VvuRiFQv10) via
     - [Facebook](https://www.facebook.com/Code.org/videos/1590100594419571/) 
     - [Twitter](https://twitter.com/codeorg/status/961018039872380929) 
-    - [Twitter](https://twitter.com/TeachCode/status/961018039935238144)
+    - [YouTube](https://www.youtube.com/watch?v=9VvuRiFQv10&feature=youtu.be)
     - Make a video with your local teachers
 
 ## Supporting Resources
