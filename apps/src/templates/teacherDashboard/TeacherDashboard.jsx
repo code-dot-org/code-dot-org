@@ -1,9 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {Route, Switch} from 'react-router-dom';
-import {connect} from 'react-redux';
 import {TeacherDashboardPath} from './TeacherDashboardNavigation';
-import {getStudentCount} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import TeacherDashboardHeader from './TeacherDashboardHeader';
 import StatsTableWithData from './StatsTableWithData';
 import SectionProgress from '@cdo/apps/templates/sectionProgress/SectionProgress';
@@ -20,12 +18,10 @@ class TeacherDashboard extends Component {
     pegasusUrlPrefix: PropTypes.string.isRequired,
     sectionId: PropTypes.number.isRequired,
     sectionName: PropTypes.string.isRequired,
+    studentCount: PropTypes.number.isRequired,
 
     // Provided by React router in parent.
-    location: PropTypes.object.isRequired,
-
-    // Provided by redux.
-    studentCount: PropTypes.number.isRequired
+    location: PropTypes.object.isRequired
   };
 
   render() {
@@ -112,6 +108,4 @@ class TeacherDashboard extends Component {
 }
 
 export const UnconnectedTeacherDashboard = TeacherDashboard;
-export default connect(state => ({
-  studentCount: getStudentCount(state)
-}))(TeacherDashboard);
+export default TeacherDashboard;
