@@ -67,6 +67,17 @@ describe('/learn/local', () => {
       assert.notInclude(compileHTML(1, withoutAddress), expectedMarkup);
     });
 
+    it('school address guards against JavaScript injection', () => {
+      const input = {
+        ...SAMPLE_LOCATION,
+        school_address_s: `<a onmouseover="alert('gotcha')">Fake Address</a>`
+      };
+      assert.include(
+        compileHTML(1, input),
+        `&lt;a onmouseover="alert('gotcha')"&gt;Fake Address&lt;/a&gt;`
+      );
+    });
+
     it('optionally includes a line for class format', () => {
       const withoutClassFormat = {
         ...SAMPLE_LOCATION,

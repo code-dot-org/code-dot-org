@@ -170,12 +170,14 @@ export function compileHTML(index, location) {
 
   const schoolNameH3 = document.createElement('h3');
   schoolNameH3.className = 'entry-detail';
-  schoolNameH3.innerText = location.school_name_s;
+  schoolNameH3.textContent = location.school_name_s;
   container.appendChild(schoolNameH3);
 
   if (location.school_address_s) {
-    line = location.school_address_s;
-    lines.push(line);
+    const schoolAddressDiv = document.createElement('div');
+    schoolAddressDiv.className = 'entry-detail';
+    schoolAddressDiv.textContent = location.school_address_s;
+    container.appendChild(schoolAddressDiv);
   }
 
   if (location.class_format_s) {
