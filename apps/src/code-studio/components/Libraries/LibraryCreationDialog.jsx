@@ -9,12 +9,8 @@ import LibraryClientApi from './LibraryClientApi';
 import i18n from '@cdo/locale';
 import Button from '../../../templates/Button';
 import DialogFooter from '../../../templates/teacherDashboard/DialogFooter';
-
-const styles = {
-  scrollbar: {
-    overflowY: 'scroll'
-  }
-};
+import PadAndCenter from '../../../templates/teacherDashboard/PadAndCenter';
+import {Heading2} from '../../../lib/ui/Headings';
 
 class LibraryCreationDialog extends React.Component {
   static propTypes = {
@@ -86,7 +82,7 @@ class LibraryCreationDialog extends React.Component {
     //Todo Adjust rows and cols to respond to changing size of window
     return (
       <div>
-        <h2>{this.state.libraryName}</h2>
+        <Heading2>{this.state.libraryName}</Heading2>
         <form onSubmit={this.tempSubmit}>
           <textarea
             name="description"
@@ -97,9 +93,11 @@ class LibraryCreationDialog extends React.Component {
           <div>
             {this.state.selectedFunctionList.map(selectedFunction => {
               let name = selectedFunction.functionName;
+              let comment = selectedFunction.comment;
               return (
                 <div>
                   <input type="checkbox" key={name} /> {name} <br />
+                  <p>{comment}</p>
                 </div>
               );
             })}
@@ -115,16 +113,19 @@ class LibraryCreationDialog extends React.Component {
         title="Publish Functions as a Library"
         isOpen={this.props.dialogIsOpen}
         handleClose={this.handleClose}
+        useUpdatedStyles
       >
         <Body>
-          <div style={styles.scrollbar}>{this.displayFunctions()}</div>
-          <DialogFooter rightAlign>
-            <Button
-              onClick={this.publish}
-              text={i18n.publish()}
-              color={Button.ButtonColor.orange}
-            />
-          </DialogFooter>
+          <PadAndCenter>
+            <div>{this.displayFunctions()}</div>
+            <DialogFooter rightAlign>
+              <Button
+                onClick={this.publish}
+                text={i18n.publish()}
+                color={Button.ButtonColor.orange}
+              />
+            </DialogFooter>
+          </PadAndCenter>
         </Body>
       </Dialog>
     );
