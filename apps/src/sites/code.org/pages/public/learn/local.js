@@ -83,40 +83,28 @@ function updateResults(locations) {
   loadMap(locations);
 }
 
+/**
+ * Transform response into list of locations to display.
+ * @param {Object} results
+ * @returns {Array.<{lat, lon, title, html, zoom}>}
+ */
 export function getLocations(results) {
-  var locations = [];
-
-  if (results.response) {
-    var places = results.response.docs; // The actual places that were returned by Solr.
-    var places_count = places.length;
-
-    for (var i = 0; i < places_count; i++) {
-      var index = i;
-      var coordinates = places[i].location_p.split(',');
-      var lat = coordinates[0];
-      var lon = coordinates[1];
-      var title = places[i].school_name_s;
-      var html = compileHTML(index, places[i]);
-      var more_link =
-        '<div><a id="location-details-trigger-' +
-        index +
-        '" class="location-details-trigger" onclick="event.preventDefault();" href="#location-details-' +
-        index +
-        '">More information</a></div>';
-
-      var location = {
-        lat: lat,
-        lon: lon,
-        title: title,
-        html: html + more_link,
-        zoom: 10
-      };
-
-      locations.push(location);
-    }
+  if (!(results && results.response && results.response.docs)) {
+    return [];
   }
 
-  return locations;
+  return results.response.docs.map((place, index) => {
+    const [lat, lon] = place.location_p.split(',');
+    const title = place.school_name_s;
+    const html = compileHTML(index, place);
+    return {
+      lat,
+      lon,
+      title,
+      html,
+      zoom: 10
+    };
+  });
 }
 
 function setFacetDefaults() {
@@ -225,7 +213,14 @@ function compileHTML(index, location) {
   var details = compileDetails(index, location, lines);
   addDetails(index, details);
 
-  return html;
+  var more_link =
+    '<div><a id="location-details-trigger-' +
+    index +
+    '" class="location-details-trigger" onclick="event.preventDefault();" href="#location-details-' +
+    index +
+    '">More information</a></div>';
+
+  return html + more_link;
 }
 
 function setDetailsTrigger(index, location, marker) {
