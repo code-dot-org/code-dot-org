@@ -462,7 +462,8 @@ FirebaseStorage.addCurrentTableToProject = function(
   onSuccess,
   onError
 ) {
-  return incrementRateLimitCounters()
+  return enforceUniqueTableNames(tableName)
+    .then(incrementRateLimitCounters)
     .then(loadConfig)
     .then(config => {
       return enforceTableCount(config, tableName);
@@ -476,7 +477,8 @@ FirebaseStorage.addCurrentTableToProject = function(
 };
 
 FirebaseStorage.copyStaticTable = function(tableName, onSuccess, onError) {
-  return incrementRateLimitCounters()
+  return enforceUniqueTableNames(tableName)
+    .then(incrementRateLimitCounters)
     .then(loadConfig)
     .then(config => {
       return enforceTableCount(config, tableName);
@@ -502,6 +504,32 @@ FirebaseStorage.copyStaticTable = function(tableName, onSuccess, onError) {
     .then(onSuccess, onError);
 };
 
+function enforceUniqueTableNames(tableName) {
+  let projectRef = getProjectDatabase();
+  return Promise.all([
+    projectRef
+      .child(`counters/tables/${tableName}`)
+      .once('value')
+      .then(snapshot => {
+        if (snapshot.val()) {
+          return Promise.reject(
+            'There is already a table with name ' + tableName
+          );
+        }
+      }),
+    projectRef
+      .child(`current_tables/${tableName}`)
+      .once('value')
+      .then(snapshot => {
+        if (snapshot.val()) {
+          return Promise.reject(
+            'There is already a table with name ' + tableName
+          );
+        }
+      })
+  ]);
+}
+
 /**
  * Adds an entry for the table in Firebase under counters/tables, making the table
  * show up in the data browser and also count toward the table count limit.
@@ -510,7 +538,8 @@ FirebaseStorage.copyStaticTable = function(tableName, onSuccess, onError) {
  * @param {function(string)} onError
  */
 FirebaseStorage.createTable = function(tableName, onSuccess, onError) {
-  return validateTableName(tableName)
+  return enforceUniqueTableNames(tableName)
+    .then(() => validateTableName(tableName))
     .then(incrementRateLimitCounters)
     .then(loadConfig)
     .then(config => {
