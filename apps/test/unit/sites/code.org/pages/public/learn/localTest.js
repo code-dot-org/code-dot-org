@@ -9,74 +9,56 @@ describe('/learn/local', () => {
   describe('getLocations()', () => {
     it("doesn't throw any errors", () => {
       const result = getLocations(SAMPLE_RESPONSE);
-      assert.deepEqual(result, [
-        {
-          lat: '49.9025854',
-          lon: '-129.3042705',
-          title: 'Virtruvian Elementary',
-          html:
-            '<h3 class="entry-detail">Virtruvian Elementary</h3><div class="entry-detail">2020 Example Way, Mukilteo, WA, United States</div><div class="entry-detail"><strong>Format: </strong>Out of school - Afterschool program (private)</div><div class="entry-detail"><strong>Level(s): </strong>Preschool, Elementary</div><div class="entry-detail"><strong>Language(s): </strong>Code.org Code Studio, HTML, JavaScript, Ruby</div><div><a id="location-details-trigger-0" class="location-details-trigger" onclick="event.preventDefault();" href="#location-details-0">More information</a></div>',
-          zoom: 10
-        },
-        {
-          lat: '44.6409',
-          lon: '-124.348',
-          title: 'Code on the Road',
-          html:
-            '<h3 class="entry-detail">Code on the Road</h3><div class="entry-detail">Example Building 8th floor\nSeattle, WA 98109\nUnited States</div><div class="entry-detail"><strong>Format: </strong>Out of school - Other out of school (private)</div><div class="entry-detail"><strong>Level(s): </strong>High school, College</div><div class="entry-detail"><strong>Language(s): </strong>C#, Python</div><div><a id="location-details-trigger-1" class="location-details-trigger" onclick="event.preventDefault();" href="#location-details-1">More information</a></div>',
-          zoom: 10
-        },
-        {
-          lat: '107.16035650000001',
-          lon: ' 125.5214185',
-          title: 'Bloom County Library',
-          html:
-            '<h3 class="entry-detail">Bloom County Library</h3><div class="entry-detail">151 Wildacre Rd SW Lakewood WA 98499</div><div class="entry-detail"><strong>Format: </strong>Out of school - Other out of school (public)</div><div class="entry-detail"><strong>Level(s): </strong>Elementary, Middle school, High school</div><div class="entry-detail"><strong>Language(s): </strong>Scratch, JavaScript, PHP, Ruby, C++, Arduino</div><div><a id="location-details-trigger-2" class="location-details-trigger" onclick="event.preventDefault();" href="#location-details-2">More information</a></div>',
-          zoom: 10
-        }
-      ]);
+      assert.deepEqual(result, EXPECTED_LOCATIONS);
     });
   });
 
   describe('compileHTML()', () => {
     it('end-to-end coverage', () => {
-      const result = compileHTML(1, SAMPLE_RESPONSE.response.docs[1]);
+      const result = compileHTML(1, SAMPLE_LOCATION);
       assert.equal(
         result,
-        '<h3 class="entry-detail">Code on the Road</h3><div class="entry-detail">Example Building 8th floor\nSeattle, WA 98109\nUnited States</div><div class="entry-detail"><strong>Format: </strong>Out of school - Other out of school (private)</div><div class="entry-detail"><strong>Level(s): </strong>, </div><div class="entry-detail"><strong>Language(s): </strong>C#, Python</div><div><a id="location-details-trigger-1" class="location-details-trigger" onclick="event.preventDefault();" href="#location-details-1">More information</a></div>'
+        '<h3 class="entry-detail">Code on the Road</h3>' +
+          '<div class="entry-detail">Example Building 8th floor\nSeattle, WA 98109\nUnited States</div>' +
+          '<div class="entry-detail"><strong>Format: </strong>Out of school - Other out of school (private)</div>' +
+          '<div class="entry-detail"><strong>Level(s): </strong>, </div>' +
+          '<div class="entry-detail"><strong>Language(s): </strong>C#, Python</div>' +
+          '<div><a id="location-details-trigger-1" class="location-details-trigger" onclick="event.preventDefault();" href="#location-details-1">More information</a></div>'
       );
     });
 
     it('includes a line for school name', () => {
       const fakeName = 'My example school';
-      const expectedMarkup = `<h3 class="entry-detail">${fakeName}</h3>`;
       const input = {
-        ...SAMPLE_RESPONSE.response.docs[1],
+        ...SAMPLE_LOCATION,
         school_name_s: fakeName
       };
-      assert.include(compileHTML(1, input), expectedMarkup);
+      assert.include(
+        compileHTML(1, input),
+        `<h3 class="entry-detail">${fakeName}</h3>`
+      );
     });
 
     it('optionally includes a line for school address', () => {
       const fakeAddress = 'My example address';
       const expectedMarkup = `<div class="entry-detail">${fakeAddress}</div>`;
 
-      const inputWithAddress = {
-        ...SAMPLE_RESPONSE.response.docs[1],
+      const withAddress = {
+        ...SAMPLE_LOCATION,
         school_address_s: fakeAddress
       };
-      assert.include(compileHTML(1, inputWithAddress), expectedMarkup);
+      assert.include(compileHTML(1, withAddress), expectedMarkup);
 
-      const inputWithoutAddress = {
-        ...inputWithAddress,
+      const withoutAddress = {
+        ...withAddress,
         school_address_s: null
       };
-      assert.notInclude(compileHTML(1, inputWithoutAddress), expectedMarkup);
+      assert.notInclude(compileHTML(1, withoutAddress), expectedMarkup);
     });
 
     it('optionally includes a line for class format', () => {
       const withoutClassFormat = {
-        ...SAMPLE_RESPONSE.response.docs[1],
+        ...SAMPLE_LOCATION,
         class_format_s: null,
         class_format_category_s: null
       };
@@ -122,7 +104,7 @@ describe('/learn/local', () => {
 
     it('optionally includes a line for class languages', () => {
       const withoutLanguages = {
-        ...SAMPLE_RESPONSE.response.docs[1],
+        ...SAMPLE_LOCATION,
         class_languages_all_ss: null
       };
       assert.notInclude(compileHTML(1, withoutLanguages), 'Language(s)');
@@ -175,7 +157,7 @@ describe('/learn/local', () => {
 
     it('optionally includes a line for school website', () => {
       const withoutWebsite = {
-        ...SAMPLE_RESPONSE.response.docs[1],
+        ...SAMPLE_LOCATION,
         school_website_s: null
       };
       compileHTML(1, withoutWebsite);
@@ -194,7 +176,7 @@ describe('/learn/local', () => {
 
     it('will fill in a missing protocol for a school website', () => {
       const withoutWebsite = {
-        ...SAMPLE_RESPONSE.response.docs[1],
+        ...SAMPLE_LOCATION,
         school_website_s: 'example.com'
       };
       compileHTML(1, withoutWebsite);
@@ -207,7 +189,7 @@ describe('/learn/local', () => {
 
     it('optionally includes a line for class description', () => {
       const withoutWebsite = {
-        ...SAMPLE_RESPONSE.response.docs[1],
+        ...SAMPLE_LOCATION,
         class_description_s: null
       };
       compileHTML(1, withoutWebsite);
@@ -228,6 +210,25 @@ describe('/learn/local', () => {
     });
   });
 });
+
+const SAMPLE_LOCATION = {
+  location_p: '44.6409,-124.348',
+  school_name_s: 'Code on the Road',
+  school_address_s:
+    'Example Building 8th floor\nSeattle, WA 98109\nUnited States',
+  class_format_s: 'out_of_school_other',
+  school_tuition_s: 'yes',
+  school_level_ss: ['high_school', 'college'],
+  school_website_s: 'http://example.com/event',
+  class_description_s:
+    'Code on the Road is an evening course designed to teach programming to people who like coffee shops.',
+  class_format_category_s: 'out_of_school',
+  class_format_subcategory_s: 'other',
+  class_languages_all_ss: ['C#', 'Python'],
+  school_name_sort_s: 'code by the needle',
+  distance: 3.7068423199924205,
+  id: 2165377
+};
 
 const SAMPLE_RESPONSE = {
   facet_counts: {facet_fields: {}},
@@ -255,24 +256,7 @@ const SAMPLE_RESPONSE = {
         distance: 32.789735611616116,
         id: 4994975
       },
-      {
-        location_p: '44.6409,-124.348',
-        school_name_s: 'Code on the Road',
-        school_address_s:
-          'Example Building 8th floor\nSeattle, WA 98109\nUnited States',
-        class_format_s: 'out_of_school_other',
-        school_tuition_s: 'yes',
-        school_level_ss: ['high_school', 'college'],
-        school_website_s: 'http://example.com/event',
-        class_description_s:
-          'Code on the Road is an evening course designed to teach programming to people who like coffee shops.',
-        class_format_category_s: 'out_of_school',
-        class_format_subcategory_s: 'other',
-        class_languages_all_ss: ['C#', 'Python'],
-        school_name_sort_s: 'code by the needle',
-        distance: 3.7068423199924205,
-        id: 2165377
-      },
+      SAMPLE_LOCATION,
       {
         location_p: '107.16035650000001, 125.5214185',
         school_name_s: 'Bloom County Library',
@@ -300,3 +284,30 @@ const SAMPLE_RESPONSE = {
     ]
   }
 };
+
+const EXPECTED_LOCATIONS = [
+  {
+    lat: '49.9025854',
+    lon: '-129.3042705',
+    title: 'Virtruvian Elementary',
+    html:
+      '<h3 class="entry-detail">Virtruvian Elementary</h3><div class="entry-detail">2020 Example Way, Mukilteo, WA, United States</div><div class="entry-detail"><strong>Format: </strong>Out of school - Afterschool program (private)</div><div class="entry-detail"><strong>Level(s): </strong>Preschool, Elementary</div><div class="entry-detail"><strong>Language(s): </strong>Code.org Code Studio, HTML, JavaScript, Ruby</div><div><a id="location-details-trigger-0" class="location-details-trigger" onclick="event.preventDefault();" href="#location-details-0">More information</a></div>',
+    zoom: 10
+  },
+  {
+    lat: '44.6409',
+    lon: '-124.348',
+    title: 'Code on the Road',
+    html:
+      '<h3 class="entry-detail">Code on the Road</h3><div class="entry-detail">Example Building 8th floor\nSeattle, WA 98109\nUnited States</div><div class="entry-detail"><strong>Format: </strong>Out of school - Other out of school (private)</div><div class="entry-detail"><strong>Level(s): </strong>High school, College</div><div class="entry-detail"><strong>Language(s): </strong>C#, Python</div><div><a id="location-details-trigger-1" class="location-details-trigger" onclick="event.preventDefault();" href="#location-details-1">More information</a></div>',
+    zoom: 10
+  },
+  {
+    lat: '107.16035650000001',
+    lon: ' 125.5214185',
+    title: 'Bloom County Library',
+    html:
+      '<h3 class="entry-detail">Bloom County Library</h3><div class="entry-detail">151 Wildacre Rd SW Lakewood WA 98499</div><div class="entry-detail"><strong>Format: </strong>Out of school - Other out of school (public)</div><div class="entry-detail"><strong>Level(s): </strong>Elementary, Middle school, High school</div><div class="entry-detail"><strong>Language(s): </strong>Scratch, JavaScript, PHP, Ruby, C++, Arduino</div><div><a id="location-details-trigger-2" class="location-details-trigger" onclick="event.preventDefault();" href="#location-details-2">More information</a></div>',
+    zoom: 10
+  }
+];
