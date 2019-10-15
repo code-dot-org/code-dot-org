@@ -50,7 +50,6 @@ function initModel() {
 function getRandomFish(id) {
   return {
     id: id,
-    fish: generateRandomFish(),
-    canvas: null
+    fish: generateRandomFish()
   };
 }
