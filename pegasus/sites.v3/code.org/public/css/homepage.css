@@ -132,7 +132,7 @@ body.modal-open .supreme-container{
   font-size: 44px;
   line-height: 44px;
   color: white;
-  margin-top: 40px;
+  margin-top: 0px;
   margin-bottom: 20px;
 }
 
@@ -181,7 +181,7 @@ body.modal-open .supreme-container{
 }
 
 #homepage .action_buttons {
-  margin-bottom: 100px;
+  margin-bottom: 20px;
 }
 
 #homepage #actions a {
