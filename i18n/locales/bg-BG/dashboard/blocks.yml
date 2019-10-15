@@ -78,6 +78,27 @@ bg:
             '"rotation"': въртене
             '"x"': хоризонтално положение
             '"y"': вертикално положение
+      Dancelab_changePropEachBy:
+        options:
+          GROUP:
+            sprites: всички
+            '"ALIEN"': всички извънземни
+            '"BEAR"': всички мечки
+            '"CAT"': всички котки
+            '"DOG"': всички кучета
+            '"DUCK"': всички патици
+            '"FROG"': всички жаби
+            '"MOOSE"': всички лосове
+            '"PINEAPPLE"': всички ананаси
+            '"ROBOT"': всички роботи
+            '"SHARK"': всички акули
+            '"UNICORN"': Еднорози
+          PROPERTY:
+            '"scale"': размер
+            '"height"': височина
+            '"rotation"': въртене
+            '"x"': хоризонтално положение
+            '"y"': вертикално положение
       Dancelab_doMoveEachLR:
         text: "{GROUP} направи {MOVE} {DIR} веднъж"
         options:
@@ -93,7 +114,7 @@ bg:
             '"PINEAPPLE"': всички ананаси
             '"ROBOT"': всички роботи
             '"SHARK"': всички акули
-            '"UNICORN"': всички еднорози
+            '"UNICORN"': Еднорози
           MOVE:
             '"rand"': Случаен
             MOVES.ClapHigh: Пляскай високо
@@ -191,6 +212,27 @@ bg:
             "{x: 100, y: 200}": наляво
             "{x: 300, y: 200}": надясно
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": случаен
+      Dancelab_jumpToEach:
+        options:
+          GROUP:
+            sprites: всички
+            '"ALIEN"': всички извънземни
+            '"BEAR"': всички мечки
+            '"CAT"': всички котки
+            '"DOG"': всички кучета
+            '"DUCK"': всички патици
+            '"FROG"': всички жаби
+            '"MOOSE"': всички лосове
+            '"PINEAPPLE"': всички ананаси
+            '"ROBOT"': всички роботи
+            '"SHARK"': всички акули
+            '"UNICORN"': Еднорози
+          LOCATION:
+            "{x: 200, y: 100}": горе
+            "{x: 200, y: 300}": долу
+            "{x: 100, y: 200}": наляво
+            "{x: 300, y: 200}": надясно
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": случаен
       Dancelab_layoutSprites:
         options:
           GROUP:
@@ -205,7 +247,7 @@ bg:
             '"PINEAPPLE"': всички ананаси
             '"ROBOT"': всички роботи
             '"SHARK"': всички акули
-            '"UNICORN"': всички еднорози
+            '"UNICORN"': Еднорози
           FORMAT:
             '"border"': рамка
             '"circle"': кръг
@@ -217,16 +259,17 @@ bg:
       Dancelab_makeAnonymousDanceSprite:
         options:
           COSTUME:
-            '"ALIEN"': Извънземно
+            '"ALIEN"': извънземно
             '"BEAR"': Мечка
-            '"CAT"': Котка
-            '"DUCK"': Патица
+            '"CAT"': котка
+            '"DOG"': куче
+            '"DUCK"': патица
             '"FROG"': Жаба
-            '"MOOSE"': Лос
+            '"MOOSE"': всички лосове
             '"PINEAPPLE"': Ананас
-            '"ROBOT"': Робот
+            '"ROBOT"': робот
             '"SHARK"': Акула
-            '"UNICORN"': Еднорог
+            '"UNICORN"': еднорог
           LOCATION:
             "{x: 200, y: 100}": горе
             "{x: 200, y: 300}": долу
@@ -239,6 +282,7 @@ bg:
             '"ALIEN"': Извънземно
             '"BEAR"': Мечка
             '"CAT"': Котка
+            '"DOG"': куче
             '"DUCK"': Патица
             '"FROG"': Жаба
             '"MOOSE"': Лос
@@ -337,7 +381,7 @@ bg:
             '"PINEAPPLE"': всички ананаси
             '"ROBOT"': всички роботи
             '"SHARK"': всички акули
-            '"UNICORN"': всички еднорози
+            '"UNICORN"': Еднорози
           SPEED:
             '1': нормално
             '2': бързо
@@ -372,7 +416,6 @@ bg:
             '"rotation"': въртене
             '"x"': хоризонтално положение
             '"y"': вертикално положение
-            '"tint"': оттенък
       Dancelab_setPropEach:
         options:
           GROUP:
@@ -387,7 +430,15 @@ bg:
             '"PINEAPPLE"': всички ананаси
             '"ROBOT"': всички роботи
             '"SHARK"': всички акули
-            '"UNICORN"': всички еднорози
+            '"UNICORN"': Еднорози
+          PROPERTY:
+            '"scale"': размер
+            '"height"': височина
+            '"rotation"': въртене
+            '"x"': хоризонтално положение
+            '"y"': вертикално положение
+      Dancelab_setPropRandom:
+        options:
           PROPERTY:
             '"scale"': размер
             '"height"': височина
@@ -395,8 +446,21 @@ bg:
             '"x"': хоризонтално положение
             '"y"': вертикално положение
             '"tint"': оттенък
-      Dancelab_setPropRandom:
+      Dancelab_setPropRandomEach:
         options:
+          GROUP:
+            sprites: всички
+            '"ALIEN"': всички извънземни
+            '"BEAR"': всички мечки
+            '"CAT"': всички котки
+            '"DOG"': всички кучета
+            '"DUCK"': всички патици
+            '"FROG"': всички жаби
+            '"MOOSE"': всички лосове
+            '"PINEAPPLE"': всички ананаси
+            '"ROBOT"': всички роботи
+            '"SHARK"': всички акули
+            '"UNICORN"': Еднорози
           PROPERTY:
             '"scale"': размер
             '"height"': височина
@@ -418,6 +482,7 @@ bg:
             '"PINEAPPLE"': всички ананаси
             '"ROBOT"': всички роботи
             '"SHARK"': всички акули
+            '"UNICORN"': Еднорози
       Dancelab_setTintEachInline:
         options:
           THIS:
@@ -432,6 +497,7 @@ bg:
             '"PINEAPPLE"': всички ананаси
             '"ROBOT"': всички роботи
             '"SHARK"': всички акули
+            '"UNICORN"': Еднорози
       Dancelab_setVisible:
         options:
           VISIBILITY:
@@ -451,7 +517,7 @@ bg:
             '"PINEAPPLE"': всички ананаси
             '"ROBOT"': всички роботи
             '"SHARK"': всички акули
-            '"UNICORN"': всички еднорози
+            '"UNICORN"': Еднорози
           VISIBILITY:
             'true': видим
             'false': невидим
@@ -467,8 +533,59 @@ bg:
           RANGE:
             '"bass"': бас
             '"treble"': сопрано
+      Dancelab_startMappingEach:
+        options:
+          GROUP:
+            sprites: всички
+            '"ALIEN"': всички извънземни
+            '"BEAR"': всички мечки
+            '"CAT"': всички котки
+            '"DOG"': всички кучета
+            '"DUCK"': всички патици
+            '"FROG"': всички жаби
+            '"MOOSE"': всички лосове
+            '"PINEAPPLE"': всички ананаси
+            '"ROBOT"': всички роботи
+            '"SHARK"': всички акули
+            '"UNICORN"': Еднорози
+          PROPERTY:
+            '"scale"': размер
+            '"height"': височина
+            '"rotation"': въртене
+            '"x"': хоризонтално положение
+            '"y"': вертикално положение
+            '"tint"': оттенък
+          RANGE:
+            '"bass"': бас
+            '"treble"': сопрано
       Dancelab_stopMapping:
         options:
+          PROPERTY:
+            '"scale"': размер
+            '"height"': височина
+            '"rotation"': въртене
+            '"x"': хоризонтално положение
+            '"y"': вертикално положение
+            '"direction"': посока на движение
+            '"tint"': оттенък
+          RANGE:
+            '"bass"': бас
+            '"treble"': сопрано
+      Dancelab_stopMappingEach:
+        options:
+          GROUP:
+            sprites: всички
+            '"ALIEN"': всички извънземни
+            '"BEAR"': всички мечки
+            '"CAT"': всички котки
+            '"DOG"': всички кучета
+            '"DUCK"': всички патици
+            '"FROG"': всички жаби
+            '"MOOSE"': всички лосове
+            '"PINEAPPLE"': всички ананаси
+            '"ROBOT"': всички роботи
+            '"SHARK"': всички акули
+            '"UNICORN"': Еднорози
           PROPERTY:
             '"scale"': размер
             '"height"': височина
