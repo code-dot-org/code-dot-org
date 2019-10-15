@@ -13,9 +13,9 @@
     %p
       - if @user.provider.present?
         - provider = t("auth.#{@user.provider}")
-        = t('activerecord.attributes.user.finish_sign_up_subheader_provider', provider: provider, email: @user.email).html_safe
+        != t('activerecord.attributes.user.finish_sign_up_subheader_provider_markdown', provider: provider, email: @user.email, markdown: true)
       - else
-        = t('activerecord.attributes.user.finish_sign_up_subheader', email: @user.email).html_safe
+        != t('activerecord.attributes.user.finish_sign_up_subheader', email: @user.email, markdown: true)
       %span= link_to 'Cancel', users_cancel_path
 
     = f.hidden_field :locale, value: locale
