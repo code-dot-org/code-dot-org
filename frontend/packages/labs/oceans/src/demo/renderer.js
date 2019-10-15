@@ -82,7 +82,7 @@ function drawTraining() {
     renderBackgroundImage(img);
     drawTrainingFish();
     drawUpcomingFish();
-    drawUiElements();
+    drawTrainingUiElements();
   });
 }
 
@@ -121,7 +121,33 @@ function drawUpcomingFish() {
   }
 }
 
-function drawUiElements() {}
+function drawTrainingUiElements() {
+  const container = document.getElementById('ui-container');
+  const buttons = [
+    {
+      text: 'like',
+      id: 'like-button',
+      onClick: () => {
+        console.log('clicked like');
+      }
+    },
+    {
+      text: 'dislike',
+      id: 'dislike-button',
+      onClick: () => {
+        console.log('clicked dislike');
+      }
+    }
+  ];
+
+  buttons.forEach(button => {
+    let btnEl = document.createElement('button');
+    btnEl.innerHTML = button.text;
+    btnEl.setAttribute('id', button.id);
+    btnEl.addEventListener('click', button.onClick);
+    container.appendChild(btnEl);
+  });
+}
 
 window.requestAnimFrame = (function() {
   return (
