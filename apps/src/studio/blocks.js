@@ -940,7 +940,7 @@ exports.install = function(blockly, blockInstallOptions) {
     helpUrl: '',
     init: function() {
       var dropdown = new blockly.FieldDropdown(this.VALUES);
-      var dropdown1 = new blockly.FieldDropdown(
+      var spriteIndexDropdown = new blockly.FieldDropdown(
         spriteNumberTextArray(s => s.spriteIndex.toString())
       );
 
@@ -950,7 +950,7 @@ exports.install = function(blockly, blockInstallOptions) {
         this.interpolateMsg(
           msg.setSpritePosition(),
           () => {
-            this.appendDummyInput().appendTitle(dropdown1, 'SPRITE');
+            this.appendDummyInput().appendTitle(spriteIndexDropdown, 'SPRITE');
           },
           () => {
             this.appendDummyInput().appendTitle(dropdown, 'VALUE');
