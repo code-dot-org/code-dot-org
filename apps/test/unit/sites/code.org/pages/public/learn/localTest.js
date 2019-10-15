@@ -137,6 +137,96 @@ describe('/learn/local', () => {
       );
     });
   });
+
+  describe('compileDetails()', () => {
+    // The compileDetails() function gets called as part of the compileHTML()
+    // function, but instead of changing the return value of compileHTML its
+    // result gets pushed into the DOM as part of div#location-details, so it's
+    // ready to display as part of a pop-up.
+    // These tests stub that DOM element and check its contents.
+
+    let locationDetailsDiv;
+
+    beforeEach(() => {
+      locationDetailsDiv = document.createElement('div');
+      locationDetailsDiv.id = 'location-details';
+      document.body.appendChild(locationDetailsDiv);
+    });
+
+    afterEach(() => {
+      document.body.removeChild(locationDetailsDiv);
+    });
+
+    it('end-to-end coverage', () => {
+      compileHTML(1, SAMPLE_RESPONSE.response.docs[1]);
+      assert.equal(
+        locationDetailsDiv.innerHTML,
+        `<div id="location-details-1">` +
+          `<h2 style="margin-top: 0; margin-bottom: .5em; padding-top: 0;">Code on the Road</h2>` +
+          `<div>Example Building 8th floor\nSeattle, WA 98109\nUnited States</div>` +
+          `<div><strong>Format: </strong>Out of school - Other out of school (private)</div>` +
+          `<div><strong>Level(s): </strong>, </div>` +
+          `<div><strong>Language(s): </strong>C#, Python</div>` +
+          `<div><strong>Website: </strong><a href="http://example.com/event" target="_blank">http://example.com/event</a></div>` +
+          `<p style="margin-top: 1em;">Code on the Road is an evening course designed to teach programming to people who like coffee shops.</p>` +
+          `</div>`
+      );
+    });
+
+    it('optionally includes a line for school website', () => {
+      const withoutWebsite = {
+        ...SAMPLE_RESPONSE.response.docs[1],
+        school_website_s: null
+      };
+      compileHTML(1, withoutWebsite);
+      assert.notInclude(locationDetailsDiv.innerHTML, 'Website:');
+
+      const withWebsite = {
+        ...withoutWebsite,
+        school_website_s: 'https://example.com'
+      };
+      compileHTML(1, withWebsite);
+      assert.include(
+        locationDetailsDiv.innerHTML,
+        `<div><strong>Website: </strong><a href="https://example.com" target="_blank">https://example.com</a></div>`
+      );
+    });
+
+    it('will fill in a missing protocol for a school website', () => {
+      const withoutWebsite = {
+        ...SAMPLE_RESPONSE.response.docs[1],
+        school_website_s: 'example.com'
+      };
+      compileHTML(1, withoutWebsite);
+
+      assert.include(
+        locationDetailsDiv.innerHTML,
+        `<div><strong>Website: </strong><a href="http://example.com" target="_blank">http://example.com</a></div>`
+      );
+    });
+
+    it('optionally includes a line for class description', () => {
+      const withoutWebsite = {
+        ...SAMPLE_RESPONSE.response.docs[1],
+        class_description_s: null
+      };
+      compileHTML(1, withoutWebsite);
+      assert.notInclude(
+        locationDetailsDiv.innerHTML,
+        '<p style="margin-top: 1em;">'
+      );
+
+      const withWebsite = {
+        ...withoutWebsite,
+        class_description_s: 'Fake class description'
+      };
+      compileHTML(1, withWebsite);
+      assert.include(
+        locationDetailsDiv.innerHTML,
+        `<p style="margin-top: 1em;">Fake class description</p>`
+      );
+    });
+  });
 });
 
 const SAMPLE_RESPONSE = {
