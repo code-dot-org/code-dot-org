@@ -1,12 +1,14 @@
 /*global dashboard*/
 import React from 'react';
 import PropTypes from 'prop-types';
-import BaseDialog from '../../../templates/BaseDialog';
+import Dialog, {Body} from '@cdo/apps/templates/Dialog';
 import {connect} from 'react-redux';
 import {hideLibraryCreationDialog} from '../shareDialogRedux';
 import libraryParser from './libraryParser';
 import LibraryClientApi from './LibraryClientApi';
 import i18n from '@cdo/locale';
+import Button from '../../../templates/Button';
+import DialogFooter from '../../../templates/teacherDashboard/DialogFooter';
 
 class LibraryCreationDialog extends React.Component {
   static propTypes = {
@@ -84,16 +86,22 @@ class LibraryCreationDialog extends React.Component {
 
   render() {
     return (
-      <BaseDialog
+      <Dialog
+        title="Publish Functions as a Library"
         isOpen={this.props.dialogIsOpen}
         handleClose={this.handleClose}
-        useUpdatedStyles
       >
-        {this.displayFunctions()}
-        <button type="button" onClick={this.publish}>
-          {i18n.publish()}
-        </button>
-      </BaseDialog>
+        <Body>
+          {this.displayFunctions()}
+          <DialogFooter rightAlign>
+            <Button
+              onClick={this.publish}
+              text={i18n.publish()}
+              color={Button.ButtonColor.orange}
+            />
+          </DialogFooter>
+        </Body>
+      </Dialog>
     );
   }
 }
