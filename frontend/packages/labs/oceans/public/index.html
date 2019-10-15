@@ -10,11 +10,95 @@
       integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
       crossorigin="anonymous"
     />
-  </head>
+    <style>
+      #header {
+        width: 100%;
+        height: 80px;
+      }
+      #container {
+        position: relative;
+        width: 100vw;
+        height: 56.25vw; /* height:width ratio = 9/16 = .5625  */
+        max-height: 100vh;
+        max-width: 177.78vh; /* 16/9 = 1.778 */
+      }
+      #ui-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 56.25vw; /* height:width ratio = 9/16 = .5625  */
+        max-height: 100vh;
+        max-width: 177.78vh; /* 16/9 = 1.778 */
+      }
+      #activity-canvas {
+        width: 100%;
+      }
 
+      @media screen and (max-aspect-ratio: 16/9) {
+        button {
+          background-color: #aaf;
+          color: white;
+          font-size: 3vw;
+          border-radius: 3vw;
+          padding: 1vw;
+          border: none;
+          width: 20vw;
+          height: 10vw;
+        }
+        #like-button {
+          position: absolute;
+          right: 30vw;
+          bottom: 3vw;
+        }
+        #dislike-button {
+          position: absolute;
+          right: 50vw;
+          bottom: 3vw;
+        }
+        #next-button {
+          position: absolute;
+          right: 1vw;
+          bottom: 1vw;
+        }
+      }
+
+      @media screen and (min-aspect-ratio: 16/9) {
+        button {
+          background-color: #aaf;
+          color: white;
+          font-size: calc(3vh * 16 / 9);
+          border-radius: calc(3vh * 16 / 9);
+          padding: calc(1vh * 16 / 9);
+          border: none;
+          width: calc(20vh * 16 / 9);
+          height: calc(10vh * 16 / 9);
+        }
+        #like-button {
+          position: absolute;
+          right: calc(30vh * 16 / 9);
+          bottom: calc(3vh * 16 / 9);
+        }
+        #dislike-button {
+          position: absolute;
+          right: calc(50vh * 16 / 9);
+          bottom: calc(3vh * 16 / 9);
+        }
+        #next-button {
+          position: absolute;
+          right: calc(1vh * 16 / 9);
+          bottom: calc(1vh * 16 / 9);
+        }
+      }
+    </style>
+  </head>
   <body>
+    <div id="header"></div>
     <div id="ml-activities"></div>
-    <canvas id="activity-canvas" />
+    <div id="container">
+      <canvas id="activity-canvas"></canvas>
+      <div id="ui-container" />
+    </div>
     <script src="demo.js"></script>
   </body>
 </html>
