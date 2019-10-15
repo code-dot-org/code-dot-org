@@ -1,5 +1,9 @@
 import {PropTypes} from 'react';
 
+const normalizeColorComponent = colorcomp => {
+  return colorcomp / 255;
+};
+
 // Describe the different body parts of the fish. The object
 // is ordered by its render dependency (i.e., dorsalFin should be rendered
 // before body).
@@ -23,7 +27,7 @@ const fish = {
       pectoralFinAnchor: [40, 65],
       dorsalFinAnchor: [30, -20],
       tailAnchor: [-25, 20],
-      knnData: [0.69],
+      knnData: [0.37],
       type: FishBodyPart.BODY
     },
     body2: {
@@ -34,7 +38,7 @@ const fish = {
       pectoralFinAnchor: [60, 89],
       dorsalFinAnchor: [35, 15],
       tailAnchor: [-25, 45],
-      knnData: [0.50],
+      knnData: [0.00],
       type: FishBodyPart.BODY
     },
     body3: {
@@ -56,7 +60,7 @@ const fish = {
       pectoralFinAnchor: [23, 80],
       dorsalFinAnchor: [13, -19],
       tailAnchor: [-30, 50],
-      knnData: [0.91],
+      knnData: [0.82],
       type: FishBodyPart.BODY
     }
   },
@@ -64,12 +68,12 @@ const fish = {
   eyes: {
     eye1: {
       src: 'images/fish/eyes/Eye.png',
-      knnData: [955, 0.21],
+      knnData: [1, 0.07],
       type: FishBodyPart.EYE
     },
     eye2: {
       src: 'images/fish/eyes/Eye_Round.png',
-      knnData: [491, 0.36],
+      knnData: [0.55, 0.42],
       type: FishBodyPart.EYE
     }
   },
@@ -77,22 +81,22 @@ const fish = {
   mouths: {
     mouth1: {
       src: 'images/fish/mouth/Mouth_RoundedHeart.png',
-      knnData: [0, 1.31],
+      knnData: [0, 0.46],
       type: FishBodyPart.MOUTH
     },
     mouth2: {
       src: 'images/fish/mouth/Mouth_CurvedCylinder.png',
-      knnData: [0, 2.2],
+      knnData: [0, 1],
       type: FishBodyPart.MOUTH
     },
     mouth3: {
       src: 'images/fish/mouth/Mouth_Heart.png',
-      knnData: [0, 0.96],
+      knnData: [0, 0.25],
       type: FishBodyPart.MOUTH
     },
     mouth4: {
       src: 'images/fish/mouth/Mouth_DuckLips.png',
-      knnData: [0, 0.68],
+      knnData: [0, 0.08],
       type: FishBodyPart.MOUTH
     }
     // TODO: fix shark mouth transform
@@ -106,17 +110,17 @@ const fish = {
   sideFins: {
     sideFin1: {
       src: 'images/fish/pectoralFin/Pectoral_Fin_Standard.png',
-      knnData: [1],
+      knnData: [0.2],
       type: FishBodyPart.PECTORAL_FIN
     },
     sideFin2: {
       src: 'images/fish/pectoralFin/Pectoral_Fin_Drop.png',
-      knnData: [2],
+      knnData: [0.4],
       type: FishBodyPart.PECTORAL_FIN
     },
     sideFin3: {
       src: 'images/fish/pectoralFin/Pectoral_Fin_Almond.png',
-      knnData: [4],
+      knnData: [0.8],
       type: FishBodyPart.PECTORAL_FIN
     },
     // This fin needs to be on the body as opposed to coming off the body so it will
@@ -128,12 +132,12 @@ const fish = {
     },
     sideFin5: {
       src: 'images/fish/pectoralFin/Pectoral_Fin_RoundTriangle.png',
-      knnData: [3],
+      knnData: [0.6],
       type: FishBodyPart.PECTORAL_FIN
     },
     sideFin6: {
       src: 'images/fish/pectoralFin/Pectoral_Fin_Sharp.png',
-      knnData: [5],
+      knnData: [1],
       type: FishBodyPart.PECTORAL_FIN
     }
   },
@@ -146,12 +150,12 @@ const fish = {
     },
     topFin2: {
       src: 'images/fish/dorsalFin/Dorsal_Fin_Mohawk.png',
-      knnData: [2],
+      knnData: [0.5],
       type: FishBodyPart.DORSAL_FIN
     },
     topFin3: {
       src: 'images/fish/dorsalFin/Dorsal_Fin_Almond.png',
-      knnData: [4],
+      knnData: [1],
       type: FishBodyPart.DORSAL_FIN
     },
     // This fin spans the whole body so can only be used with the corresponding side fin
@@ -162,12 +166,12 @@ const fish = {
     // },
     topFin5: {
       src: 'images/fish/dorsalFin/Dorsal_Fin_Wave.png',
-      knnData: [1],
+      knnData: [0.25],
       type: FishBodyPart.DORSAL_FIN
     },
     topFin6: {
       src: 'images/fish/dorsalFin/Dorsal_Fin_Shark.png',
-      knnData: [3],
+      knnData: [0.75],
       type: FishBodyPart.DORSAL_FIN
     }
   },
@@ -175,32 +179,32 @@ const fish = {
   tails: {
     tail1: {
       src: 'images/fish/tailFin/Tail_Fin_Clamshell.png',
-      knnData: [2, 36.85],
+      knnData: [0.56],
       type: FishBodyPart.TAIL
     },
     tail2: {
       src: 'images/fish/tailFin/Tail_Fin_RoundedHeart.png',
-      knnData: [2, 29],
+      knnData: [0.97],
       type: FishBodyPart.TAIL
     },
     tail3: {
       src: 'images/fish/tailFin/Tail_Fin_Almond.png',
-      knnData: [2, 43],
+      knnData: [1],
       type: FishBodyPart.TAIL
     },
     tail4: {
       src: 'images/fish/tailFin/Tail_Fin_Bean.png',
-      knnData: [2, 38],
+      knnData: [0.64],
       type: FishBodyPart.TAIL
     },
     tail5: {
       src: 'images/fish/tailFin/Tail_Fin_RoundedTriangle.png',
-      knnData: [1, 29],
+      knnData: [0],
       type: FishBodyPart.TAIL
     },
     tail6: {
       src: 'images/fish/tailFin/Tail_Fin_Sharp.png',
-      knnData: [2, 37],
+      knnData: [0.57],
       type: FishBodyPart.TAIL
     }
   },
@@ -210,25 +214,37 @@ const fish = {
       bodyRgb: [126, 205, 202],
       finRgb: [248, 192, 157],
       mouthRgb: [221, 148, 193],
-      knnData: [126, 205, 202, 248, 192, 157]
+      knnData: [normalizeColorComponent(126), normalizeColorComponent(205),normalizeColorComponent( 202), normalizeColorComponent(248), normalizeColorComponent(192), normalizeColorComponent(157)]
     },
     palette2: {
       bodyRgb: [253, 192, 77],
       finRgb: [235, 120, 50],
       mouthRgb: [235, 120, 50],
-      knnData: [253, 192, 77, 235, 120, 50]
+      knnData: [normalizeColorComponent(253), normalizeColorComponent(192), normalizeColorComponent(77), normalizeColorComponent(235), normalizeColorComponent(120), normalizeColorComponent(50)]
     },
     palette3: {
       bodyRgb: [39, 116, 186],
       finRgb: [253, 217, 136],
       mouthRgb: [253, 217, 136],
-      knnData: [39, 116, 186, 253, 217, 136]
+      knnData: [normalizeColorComponent(39),normalizeColorComponent( 116), normalizeColorComponent(186), normalizeColorComponent(253), normalizeColorComponent(217), normalizeColorComponent(136)]
     },
     palette4: {
       bodyRgb: [21, 52, 64],
       finRgb: [200, 220, 92],
       mouthRgb: [200, 220, 92],
-      knnData: [21, 52, 64, 200, 220, 92]
+      knnData: [normalizeColorComponent(21), normalizeColorComponent(52), normalizeColorComponent(64), normalizeColorComponent(200), normalizeColorComponent(220), normalizeColorComponent(92)]
+    },
+    palette5: {
+      bodyRgb: [0,0,0],
+      finRgb: [0,0,0],
+      mouthRgb: [200, 220, 92],
+      knnData: [normalizeColorComponent(0), normalizeColorComponent(0), normalizeColorComponent(0), normalizeColorComponent(0), normalizeColorComponent(0), normalizeColorComponent(0)]
+    },
+    palette6: {
+      bodyRgb: [255, 255, 255],
+      finRgb: [255, 255, 255],
+      mouthRgb: [200, 220, 92],
+      knnData: [normalizeColorComponent(255), normalizeColorComponent(255), normalizeColorComponent(255), normalizeColorComponent(255), normalizeColorComponent(255), normalizeColorComponent(255)]
     }
   }
 };

@@ -6,7 +6,6 @@ export default class SimpleTrainer {
   async initializeClassifiers() {
     this.knn = knnClassifier.create();
     this.mobilenet = await mobilenetModule.load();
-    this.TOPK = 10;
   }
 
   async initializeClassifiersWithoutMobilenet() {
