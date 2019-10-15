@@ -577,6 +577,7 @@ en:
         csd_debugging: Debugging
         csd_applab_designmode_short: App Lab Design Mode
         csp-pd-welcome: Welcome to the Family!
+        CSF-Teaching-Problem-Solving: CSF Teaching Problem Solving
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block
