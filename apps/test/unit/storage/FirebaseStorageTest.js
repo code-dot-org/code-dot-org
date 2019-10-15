@@ -1,4 +1,4 @@
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/deprecatedChai';
 import {initFirebaseStorage} from '@cdo/apps/storage/firebaseStorage';
 import {tableType} from '@cdo/apps/storage/redux/data';
 import {

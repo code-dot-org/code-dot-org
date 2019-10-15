@@ -1,5 +1,5 @@
 /** @file Tests for Game Lab helper methods that make decisions based on redux state */
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/deprecatedChai';
 import {forEveryBooleanPermutation} from '../../util/testUtils';
 import {
   allowAnimationMode,
