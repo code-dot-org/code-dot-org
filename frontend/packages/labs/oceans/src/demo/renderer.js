@@ -1,3 +1,4 @@
+import 'babel-polyfill';
 import _ from 'lodash';
 import constants, {Modes} from './constants';
 import {FishBodyPart} from '../utils/fishData';

@@ -4,7 +4,7 @@ import SimpleTrainer from '../../utils/SimpleTrainer';
 import Training from './Training';
 import Predict from './Predict';
 import PondResult from './PondResult';
-import {generateRandomFish} from './SpritesheetFish';
+import {generateRandomFish} from '../../utils/generateOcean';
 
 const FISH_COUNT = 15;
 const SESSION_KEY = 'PondCreator';

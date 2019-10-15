@@ -5,7 +5,7 @@ import {init as initTraining} from './modes/training';
 import {init as initPredicting} from './modes/predicting';
 import {init as initPond} from './modes/pond';
 import {setState, getState} from './state';
-import {generateRandomFish} from '../activities/hoc2019/SpritesheetFish';
+import {generateRandomFish} from '../utils/generateOcean';
 
 $(document).ready(() => {
   // Generate some fish
