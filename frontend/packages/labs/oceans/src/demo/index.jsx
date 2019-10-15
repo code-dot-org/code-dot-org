@@ -6,6 +6,7 @@ import {init as initPredicting} from './modes/predicting';
 import {init as initPond} from './modes/pond';
 import {setState, getState} from './state';
 import {generateRandomFish} from '../utils/generateOcean';
+import SimpleTrainer from '../utils/SimpleTrainer';
 
 $(document).ready(() => {
   // Generate some fish
@@ -15,9 +16,12 @@ $(document).ready(() => {
   }
 
   // Set up state
+  const trainer = new SimpleTrainer();
+  trainer.initializeClassifiersWithoutMobilenet();
   const initialState = {
     currentMode: Modes.Training,
-    fishData: fishes
+    fishData: fishes,
+    trainer
   };
   setState(initialState);
 

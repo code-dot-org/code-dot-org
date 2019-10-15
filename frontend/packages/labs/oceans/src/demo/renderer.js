@@ -1,6 +1,6 @@
 import 'babel-polyfill';
 import _ from 'lodash';
-import constants, {Modes} from './constants';
+import constants, {Modes, ClassType, strForClassType} from './constants';
 import {FishBodyPart} from '../utils/fishData';
 import {setState} from './state';
 
@@ -24,8 +24,11 @@ export function init(canvas) {
     case Modes.Predicting:
       drawPredictingScreen(state);
       break;
+    case Modes.Pond:
+      drawPondScreen(state);
+      break;
     default:
-      console.error('not yet implemented');
+      console.error('Unrecognized mode passed to renderer init method.');
   }
 }
 
@@ -110,14 +113,16 @@ function drawUpcomingFish(state) {
 }
 
 function drawTrainingUiElements(state) {
-  const container = document.getElementById('ui-container');
   const classifyFish = function(doesLike) {
-    // TODO: (maddie) classify fish with trainer
+    const knnData = state.fishData[state.trainingIndex].fish.knnData;
+    const classId = doesLike ? ClassType.Like : ClassType.Dislike;
+    state.trainer.addExampleData(knnData, classId);
     state.trainingIndex += 1;
     setState({trainingIndex: state.trainingIndex});
     drawTrainingScreen(state);
   };
 
+  const container = uiContainer();
   const buttons = [
     {
       text: 'like',
@@ -133,9 +138,7 @@ function drawTrainingUiElements(state) {
       text: 'next',
       id: 'next-button',
       onClick: () => {
-        while (container.firstChild) {
-          container.removeChild(container.firstChild);
-        }
+        clearChildren(container);
         const canvas = state.canvas;
         setState({currentMode: Modes.Predicting});
         init(canvas);
@@ -143,17 +146,73 @@ function drawTrainingUiElements(state) {
     }
   ];
 
-  buttons.forEach(button => {
-    let btnEl = document.createElement('button');
-    btnEl.innerHTML = button.text;
-    btnEl.setAttribute('id', button.id);
-    btnEl.addEventListener('click', button.onClick);
-    container.appendChild(btnEl);
-  });
+  buttons.forEach(button =>
+    renderButton(container, button.id, button.text, button.onClick)
+  );
 }
 
 function drawPredictingScreen(state) {
-  console.log(state);
+  state.canvas
+    .getContext('2d')
+    .clearRect(0, 0, state.canvas.width, state.canvas.height);
+  drawPredictingFish(state);
+  drawPredictingUiElements(state);
+}
+
+function drawPredictingFish(state) {
+  const canvas = state.canvas;
+  const ctx = canvas.getContext('2d');
+
+  const fishDatum = state.fishData[state.trainingIndex];
+  loadFishImages(fishDatum.fish).then(results => {
+    drawFish(fishDatum.fish, results, ctx, canvas.width / 2, canvas.height / 2);
+  });
+}
+
+function drawPredictingUiElements(state) {
+  const container = uiContainer();
+  const buttons = [
+    {
+      text: 'predict next fish',
+      id: 'predict-button',
+      onClick: () => {
+        state.trainingIndex += 1;
+        setState(state);
+        drawPredictingScreen(state);
+      }
+    },
+    {
+      text: 'next',
+      id: 'next-button',
+      onClick: () => {
+        clearChildren(container);
+        const canvas = state.canvas;
+        setState({currentMode: Modes.Pond});
+        init(canvas);
+      }
+    }
+  ];
+
+  predictionText(state, res => {
+    const text = `prediction: ${strForClassType(res.predictedClassId)} @ ${
+      res.confidencesByClassId[res.predictedClassId]
+    }`;
+    renderText(container, 'predict-text', text);
+    buttons.forEach(button =>
+      renderButton(container, button.id, button.text, button.onClick)
+    );
+  });
+}
+
+function predictionText(state, onComplete) {
+  const fishDatum = state.fishData[state.trainingIndex];
+  state.trainer.predictFromData(fishDatum.fish.knnData).then(res => {
+    onComplete(res);
+  });
+}
+
+function drawPondScreen(state) {
+  console.log('pond!');
 }
 
 function loadFishImages(fish) {
@@ -222,6 +281,44 @@ function drawFish(fish, results, ctx, x = 0, y = 0) {
       FISH_CANVAS_HEIGHT
     );
   });
+}
+
+function renderButton(container, id, text, onClick) {
+  // If an element with this id already exists, destroy it.
+  destroyElById(id);
+
+  let btnEl = document.createElement('button');
+  btnEl.innerHTML = text;
+  btnEl.setAttribute('id', id);
+  btnEl.addEventListener('click', onClick);
+  container.appendChild(btnEl);
+}
+
+function renderText(container, id, text) {
+  // If an element with this id already exists, destroy it.
+  destroyElById(id);
+
+  let textEl = document.createElement('div');
+  textEl.setAttribute('id', id);
+  textEl.innerHTML = text;
+  container.appendChild(textEl);
+}
+
+function clearChildren(el) {
+  while (el.firstChild) {
+    el.removeChild(el.firstChild);
+  }
+}
+
+function uiContainer() {
+  return document.getElementById('ui-container');
+}
+
+function destroyElById(id) {
+  const existingEl = document.getElementById(id);
+  if (existingEl) {
+    existingEl.remove();
+  }
 }
 
 function bodyAnchorFromType(body, type) {
