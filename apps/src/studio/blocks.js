@@ -941,14 +941,14 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       var dropdown = new blockly.FieldDropdown(this.VALUES);
       var dropdown1 = new blockly.FieldDropdown(
-        spriteNumberTextArray(msg.setSpriteN)
+        spriteNumberTextArray(s => s.spriteIndex.toString())
       );
 
       dropdown.setValue(this.VALUES[1][1]); // default to top-left
       this.setHSV(184, 1.0, 0.74);
       if (spriteCount > 1) {
         this.interpolateMsg(
-          msg.setSpriteIndex(),
+          msg.setSpritePosition(),
           () => {
             this.appendDummyInput().appendTitle(dropdown1, 'SPRITE');
           },
