@@ -21,7 +21,7 @@ describe('/learn/local', () => {
         '<h3 class="entry-detail">Code on the Road</h3>' +
           '<div class="entry-detail">Example Building 8th floor\nSeattle, WA 98109\nUnited States</div>' +
           '<div class="entry-detail"><strong>Format: </strong>Out of school - Other out of school (private)</div>' +
-          '<div class="entry-detail"><strong>Level(s): </strong>, </div>' +
+          '<div class="entry-detail"><strong>Level(s): </strong>High school, College</div>' +
           '<div class="entry-detail"><strong>Language(s): </strong>C#, Python</div>' +
           '<div><a id="location-details-trigger-1" class="location-details-trigger" onclick="event.preventDefault();" href="#location-details-1">More information</a></div>'
       );

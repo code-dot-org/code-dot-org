@@ -206,12 +206,20 @@ export function compileHTML(index, location) {
   }
 
   if (location.school_level_ss) {
-    $.each(location.school_level_ss, function(key, field) {
-      location.school_level_ss[key] = i18n('level_' + field);
-    });
+    const schoolLevelDiv = document.createElement('div');
+    schoolLevelDiv.className = 'entry-detail';
 
-    line = '<strong>Level(s): </strong>' + location.school_level_ss.join(', ');
-    lines.push(line);
+    const schoolLevelStrong = document.createElement('strong');
+    schoolLevelStrong.textContent = 'Level(s): ';
+    schoolLevelDiv.appendChild(schoolLevelStrong);
+
+    schoolLevelDiv.appendChild(
+      document.createTextNode(
+        location.school_level_ss.map(key => i18n(`level_${key}`)).join(', ')
+      )
+    );
+
+    container.appendChild(schoolLevelDiv);
   }
 
   if (location.class_languages_all_ss) {
