@@ -27,6 +27,13 @@ fil:
           PROPERTY:
             '"scale"': sukat
             '"height"': taas
+      Dancelab_changePropEachBy:
+        options:
+          GROUP:
+            sprites: lahat
+          PROPERTY:
+            '"scale"': sukat
+            '"height"': taas
       Dancelab_doMoveEachLR:
         options:
           GROUP:
@@ -70,6 +77,14 @@ fil:
             "{x: 100, y: 200}": kaliwa
             "{x: 300, y: 200}": kanan
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": nang hindi pinipili
+      Dancelab_jumpToEach:
+        options:
+          GROUP:
+            sprites: lahat
+          LOCATION:
+            "{x: 100, y: 200}": kaliwa
+            "{x: 300, y: 200}": kanan
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": nang hindi pinipili
       Dancelab_layoutSprites:
         options:
           GROUP:
@@ -78,12 +93,26 @@ fil:
             '"random"': nang hindi pinipili
       Dancelab_makeAnonymousDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': dayuhan
+            '"CAT"': pusa
+            '"DOG"': aso
+            '"DUCK"': duck
+            '"ROBOT"': robot
+            '"UNICORN"': unicorn
           LOCATION:
             "{x: 100, y: 200}": kaliwa
             "{x: 300, y: 200}": kanan
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": nang hindi pinipili
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': dayuhan
+            '"CAT"': pusa
+            '"DOG"': aso
+            '"DUCK"': duck
+            '"ROBOT"': robot
+            '"UNICORN"': unicorn
           LOCATION:
             "{x: 100, y: 200}": kaliwa
             "{x: 300, y: 200}": kanan
@@ -165,6 +194,13 @@ fil:
           PROPERTY:
             '"scale"': sukat
             '"height"': taas
+      Dancelab_setPropRandomEach:
+        options:
+          GROUP:
+            sprites: lahat
+          PROPERTY:
+            '"scale"': sukat
+            '"height"': taas
       Dancelab_setTintEach:
         options:
           THIS:
@@ -182,8 +218,22 @@ fil:
           PROPERTY:
             '"scale"': sukat
             '"height"': taas
+      Dancelab_startMappingEach:
+        options:
+          GROUP:
+            sprites: lahat
+          PROPERTY:
+            '"scale"': sukat
+            '"height"': taas
       Dancelab_stopMapping:
         options:
+          PROPERTY:
+            '"scale"': sukat
+            '"height"': taas
+      Dancelab_stopMappingEach:
+        options:
+          GROUP:
+            sprites: lahat
           PROPERTY:
             '"scale"': sukat
             '"height"': taas
