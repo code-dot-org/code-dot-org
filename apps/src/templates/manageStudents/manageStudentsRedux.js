@@ -4,6 +4,7 @@ import {
   sectionCode,
   sectionName
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import $ from 'jquery';
 
 // Response from server after adding a new student to the section.
 export const AddStatus = {
@@ -116,7 +117,8 @@ const initialState = {
   showSharingColumn: false,
   addStatus: {status: null, numStudents: null},
   transferData: {...blankStudentTransfer},
-  transferStatus: {...blankStudentTransferStatus}
+  transferStatus: {...blankStudentTransferStatus},
+  isLoadingStudents: true
 };
 
 const SET_LOGIN_TYPE = 'manageStudents/SET_LOGIN_TYPE';
@@ -140,6 +142,12 @@ const UPDATE_STUDENT_TRANSFER = 'manageStudents/UPDATE_STUDENT_TRANSFER';
 const CANCEL_STUDENT_TRANSFER = 'manageStudents/CANCEL_STUDENT_TRANSFER';
 const TRANSFER_STUDENTS_SUCCESS = 'manageStudents/TRANSFER_STUDENTS_SUCCESS';
 const TRANSFER_STUDENTS_FAILURE = 'manageStudents/TRANSFER_STUDENTS_FAILURE';
+const START_LOADING_STUDENTS = 'sectionProgress/START_LOADING_STUDENTS';
+const FINISH_LOADING_STUDENTS = 'sectionProgress/FINISH_LOADING_STUDENTS';
+
+// Action creators
+export const startLoadingStudents = () => ({type: START_LOADING_STUDENTS});
+export const finishLoadingStudents = () => ({type: FINISH_LOADING_STUDENTS});
 
 export const setLoginType = loginType => ({type: SET_LOGIN_TYPE, loginType});
 export const setStudents = studentData => ({type: SET_STUDENTS, studentData});
@@ -440,7 +448,8 @@ export default function manageStudents(state = initialState, action) {
     return {
       ...state,
       studentData: studentData,
-      addStatus: {status: null, numStudents: null}
+      addStatus: {status: null, numStudents: null},
+      isLoadingStudents: false
     };
   }
   if (action.type === START_EDITING_STUDENT) {
@@ -701,6 +710,18 @@ export default function manageStudents(state = initialState, action) {
       }
     };
   }
+  if (action.type === START_LOADING_STUDENTS) {
+    return {
+      ...state,
+      isLoadingStudents: true
+    };
+  }
+  if (action.type === FINISH_LOADING_STUDENTS) {
+    return {
+      ...state,
+      isLoadingStudents: false
+    };
+  }
 
   return state;
 }
@@ -831,4 +852,29 @@ const transferStudentsOnServer = (
     .fail((jqXhr, status) => {
       onComplete(status, jqXhr.responseJSON);
     });
+};
+
+export const sectionStudentsDataOnServer = sectionId => {
+  return (dispatch, getState) => {
+    const state = getState().manageStudents;
+    // Don't load data if it's already stored in redux.
+    const alreadyHaveStudentData =
+      Object.values(state.studentData)[0] &&
+      Object.values(state.studentData)[0].sectionId === sectionId;
+    if (!alreadyHaveStudentData) {
+      dispatch(startLoadingStudents());
+      $.ajax({
+        method: 'GET',
+        url: `/dashboardapi/sections/${sectionId}/students`,
+        dataType: 'json'
+      }).done(studentData => {
+        const convertedStudentData = convertStudentServerData(
+          studentData,
+          state.loginType,
+          sectionId
+        );
+        dispatch(setStudents(convertedStudentData));
+      });
+    }
+  };
 };
