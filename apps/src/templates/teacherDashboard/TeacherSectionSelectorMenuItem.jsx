@@ -19,7 +19,7 @@ const styles = {
   }
 };
 
-export default class SectionSelectionMenuItem extends Component {
+export default class TeacherSectionSelectorMenuItem extends Component {
   static propTypes = {
     section: sectionForDropdownShape,
     onClick: PropTypes.func.isRequired

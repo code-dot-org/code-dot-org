@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {sectionForDropdownShape} from './shapes';
-import SectionSelectionDropdown from './SectionSelectionDropdown';
+import TeacherSectionSelector from './TeacherSectionSelector';
 import AssignedButton from '@cdo/apps/templates/AssignedButton';
 import AssignButton from '@cdo/apps/templates/AssignButton';
 
@@ -14,11 +14,11 @@ const styles = {
 export default class SectionAssigner extends Component {
   static propTypes = {
     sections: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
-    selectedSection: PropTypes.object
+    initialSelectedSection: PropTypes.object
   };
 
   state = {
-    selectedSection: this.props.selectedSection
+    selectedSection: this.props.initialSelectedSection
   };
 
   onChangeSection = sectionId => {
@@ -37,7 +37,7 @@ export default class SectionAssigner extends Component {
 
     return (
       <div style={styles.main}>
-        <SectionSelectionDropdown
+        <TeacherSectionSelector
           sections={sections}
           onChangeSection={this.onChangeSection}
           selectedSection={selectedSection}
