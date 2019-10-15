@@ -1172,7 +1172,3 @@ en:
     privacy_policy: 'privacy policy'
     logout: 'Logout'
     yes: 'Yes'
-  page_not_found_title: "Page Not Found"
-  page_not_found_header: '404: Page Not Found'
-  page_not_found_description: "The page you are looking for doesn't exist at this address. Check the web address and resubmit. Or, go back to our homepage."
-  page_not_found_button: "Return home"
