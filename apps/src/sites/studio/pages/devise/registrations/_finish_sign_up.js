@@ -4,7 +4,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import SchoolInfoInputs from '@cdo/apps/templates/SchoolInfoInputs';
 import getScriptData from '@cdo/apps/util/getScriptData';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const TEACHER_ONLY_FIELDS = [
   '#teacher-name-label',
@@ -21,7 +20,7 @@ const STUDENT_ONLY_FIELDS = [
 // Values loaded from scriptData are always initial values, not the latest
 // (possibly unsaved) user-edited values on the form.
 const scriptData = getScriptData('signup');
-const {usIp, signUpUID, provider} = scriptData;
+const {usIp, provider} = scriptData;
 
 // Auto-fill country and countryCode if we detect a US IP address.
 let schoolData = {
@@ -84,10 +83,6 @@ $(document).ready(() => {
   }
 
   function setUserType(userType) {
-    if (userType) {
-      trackUserType(userType);
-    }
-
     if (userType === 'teacher') {
       switchToTeacher();
     } else {
@@ -104,15 +99,6 @@ $(document).ready(() => {
   function switchToStudent() {
     fadeInFields(STUDENT_ONLY_FIELDS);
     hideFields(TEACHER_ONLY_FIELDS);
-  }
-
-  function trackUserType(type) {
-    firehoseClient.putRecord({
-      study: 'account-sign-up-v5',
-      study_group: 'experiment-v4',
-      event: 'select-' + type,
-      data_string: signUpUID
-    });
   }
 
   function fadeInFields(fields) {
