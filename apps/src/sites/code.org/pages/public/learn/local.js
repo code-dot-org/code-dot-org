@@ -1,4 +1,6 @@
-/* global $, Maplace */
+/* global Maplace */
+
+import $ from 'jquery';
 
 var gmap;
 var gmap_loc;
@@ -81,7 +83,7 @@ function updateResults(locations) {
   loadMap(locations);
 }
 
-function getLocations(results) {
+export function getLocations(results) {
   var locations = [];
 
   if (results.response) {
