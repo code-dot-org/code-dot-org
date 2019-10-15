@@ -107,6 +107,13 @@ def create_in_up_pr
     "apps i18n sync"
   )
 
+  I18nScriptUtils.git_add_and_commit(
+    [
+      "i18n/locales/source/hourofcode/",
+    ],
+    "hoc i18n sync"
+  )
+
   `git push origin #{IN_UP_BRANCH}`
   in_up_pr = GitHub.create_pull_request(
     base: 'staging',
@@ -164,6 +171,15 @@ def create_down_out_pr
       "i18n/locales/*/blockly-core",
     ],
     "blockly i18n updates"
+  )
+
+  I18nScriptUtils.git_add_and_commit(
+    [
+      "i18n/locales/*/hourofcode/",
+      "pegasus/sites.v3/hourofcode.com/i18n/*.yml",
+      "pegasus/sites.v3/hourofcode.com/i18n/public/*/"
+    ],
+    "hoc i18n updates"
   )
 
   `git push origin #{DOWN_OUT_BRANCH}`
