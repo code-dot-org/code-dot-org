@@ -38,7 +38,7 @@ const fish = {
       pectoralFinAnchor: [60, 89],
       dorsalFinAnchor: [35, 15],
       tailAnchor: [-25, 45],
-      knnData: [0.00],
+      knnData: [0.0],
       type: FishBodyPart.BODY
     },
     body3: {
@@ -49,7 +49,7 @@ const fish = {
       pectoralFinAnchor: [30, 75],
       dorsalFinAnchor: [17, -15],
       tailAnchor: [-25, 30],
-      knnData: [1.00],
+      knnData: [1.0],
       type: FishBodyPart.BODY
     },
     body4: {
@@ -214,37 +214,53 @@ const fish = {
       bodyRgb: [126, 205, 202],
       finRgb: [248, 192, 157],
       mouthRgb: [221, 148, 193],
-      knnData: [normalizeColorComponent(126), normalizeColorComponent(205),normalizeColorComponent( 202), normalizeColorComponent(248), normalizeColorComponent(192), normalizeColorComponent(157)]
+      knnData: [
+        normalizeColorComponent(126),
+        normalizeColorComponent(205),
+        normalizeColorComponent(202),
+        normalizeColorComponent(248),
+        normalizeColorComponent(192),
+        normalizeColorComponent(157)
+      ]
     },
     palette2: {
       bodyRgb: [253, 192, 77],
       finRgb: [235, 120, 50],
       mouthRgb: [235, 120, 50],
-      knnData: [normalizeColorComponent(253), normalizeColorComponent(192), normalizeColorComponent(77), normalizeColorComponent(235), normalizeColorComponent(120), normalizeColorComponent(50)]
+      knnData: [
+        normalizeColorComponent(253),
+        normalizeColorComponent(192),
+        normalizeColorComponent(77),
+        normalizeColorComponent(235),
+        normalizeColorComponent(120),
+        normalizeColorComponent(50)
+      ]
     },
     palette3: {
       bodyRgb: [39, 116, 186],
       finRgb: [253, 217, 136],
       mouthRgb: [253, 217, 136],
-      knnData: [normalizeColorComponent(39),normalizeColorComponent( 116), normalizeColorComponent(186), normalizeColorComponent(253), normalizeColorComponent(217), normalizeColorComponent(136)]
+      knnData: [
+        normalizeColorComponent(39),
+        normalizeColorComponent(116),
+        normalizeColorComponent(186),
+        normalizeColorComponent(253),
+        normalizeColorComponent(217),
+        normalizeColorComponent(136)
+      ]
     },
     palette4: {
       bodyRgb: [21, 52, 64],
       finRgb: [200, 220, 92],
       mouthRgb: [200, 220, 92],
-      knnData: [normalizeColorComponent(21), normalizeColorComponent(52), normalizeColorComponent(64), normalizeColorComponent(200), normalizeColorComponent(220), normalizeColorComponent(92)]
-    },
-    palette5: {
-      bodyRgb: [0,0,0],
-      finRgb: [0,0,0],
-      mouthRgb: [200, 220, 92],
-      knnData: [normalizeColorComponent(0), normalizeColorComponent(0), normalizeColorComponent(0), normalizeColorComponent(0), normalizeColorComponent(0), normalizeColorComponent(0)]
-    },
-    palette6: {
-      bodyRgb: [255, 255, 255],
-      finRgb: [255, 255, 255],
-      mouthRgb: [200, 220, 92],
-      knnData: [normalizeColorComponent(255), normalizeColorComponent(255), normalizeColorComponent(255), normalizeColorComponent(255), normalizeColorComponent(255), normalizeColorComponent(255)]
+      knnData: [
+        normalizeColorComponent(21),
+        normalizeColorComponent(52),
+        normalizeColorComponent(64),
+        normalizeColorComponent(200),
+        normalizeColorComponent(220),
+        normalizeColorComponent(92)
+      ]
     }
   }
 };
