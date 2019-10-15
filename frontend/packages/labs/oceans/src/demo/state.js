@@ -1,13 +1,25 @@
-let state = {
+const initialState = {
   currentMode: null,
-  fishData: []
+  fishData: [],
+  canvas: null,
+  ctx: null,
+  trainingIndex: 0,
+  backgroundImg: null
 };
+let state = {...initialState};
 
 export const getState = function() {
   return state;
 };
 
 export const setState = function(newState) {
-  console.log('setState', newState);
-  state = {...state, ...newState};
+  if (newState.currentMode) {
+    state = {
+      ...initialState,
+      fishData: state.fishData,
+      ...newState
+    };
+  } else {
+    state = {...state, ...newState};
+  }
 };

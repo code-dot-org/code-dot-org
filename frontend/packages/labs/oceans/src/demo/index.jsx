@@ -21,12 +21,14 @@ $(document).ready(() => {
   // Set up state
   const initialState = {
     currentMode: Modes.Training,
-    fishData: fishes
+    fishData: fishes,
+    canvas,
+    ctx: canvas.getContext('2d')
   };
   setState(initialState);
 
   // Initialize renderer
-  initRenderer(canvas);
+  initRenderer();
 
   // Initialize current model
   initModel();

@@ -1,18 +1,13 @@
 import _ from 'lodash';
 import constants, {Modes} from './constants';
 import {FishBodyPart} from '../utils/fishData';
-import {getState} from './state';
+import {getState, setState} from './state';
 
 var $time =
   Date.now ||
   function() {
     return +new Date();
   };
-
-let canvas,
-  canvasCtx,
-  trainingIndex = 0,
-  backgroundImg;
 
 const FISH_CANVAS_WIDTH = 300;
 const FISH_CANVAS_HEIGHT = 200;
@@ -23,13 +18,15 @@ const COLS = 4;
 
 // Initialize the renderer once.
 // This will generate canvases with the fish collection.
-export function init(canvasParam) {
-  canvas = canvasParam;
-  canvasCtx = canvas.getContext('2d');
+export function init() {
+  const state = getState();
 
-  switch (getState().currentMode) {
+  switch (state.currentMode) {
     case Modes.Training:
-      drawTrainingScreen();
+      drawTrainingScreen(state);
+      break;
+    case Modes.Predicting:
+      drawPredictingScreen();
       break;
     default:
       console.error('not yet implemented');
@@ -60,65 +57,65 @@ function loadBackgroundImage() {
   });
 }
 
-function renderBackgroundImage(img) {
-  canvasCtx.drawImage(img, 0, 0, constants.canvasWidth, constants.canvasHeight);
+function renderBackgroundImage(ctx, img) {
+  ctx.drawImage(img, 0, 0, constants.canvasWidth, constants.canvasHeight);
 }
 
-function drawTrainingScreen() {
-  if (backgroundImg) {
-    renderBackgroundImage(backgroundImg);
-    drawTrainingFish();
-    drawUpcomingFish();
-    drawTrainingUiElements();
+function drawTrainingScreen(state) {
+  if (state.backgroundImg) {
+    renderBackgroundImage(state.ctx, state.backgroundImg);
+    drawTrainingFish(state);
+    drawUpcomingFish(state);
+    drawTrainingUiElements(state);
   } else {
-    loadBackgroundImage().then(img => {
-      backgroundImg = img;
-      drawTrainingScreen();
+    loadBackgroundImage().then(backgroundImg => {
+      state = {...state, backgroundImg};
+      setState(state);
+      drawTrainingScreen(state);
     });
   }
 }
 
-function drawTrainingFish() {
+function drawTrainingFish(state) {
+  const canvas = state.canvas;
+  const ctx = canvas.getContext('2d');
+
   // Draw frame behind fish
-  canvasCtx.fillStyle = '#FFFFFF';
+  ctx.fillStyle = '#FFFFFF';
   const frameSize = 300;
   const frameXPos = canvas.width / 2 - frameSize / 2;
   const frameYPos = canvas.height / 2 - frameSize / 2;
-  canvasCtx.fillRect(frameXPos, frameYPos, frameSize, frameSize);
+  ctx.fillRect(frameXPos, frameYPos, frameSize, frameSize);
 
-  const fishDatum = getState().fishData[trainingIndex];
+  const fishDatum = state.fishData[state.trainingIndex];
   loadFishImages(fishDatum.fish).then(results => {
-    drawFish(
-      fishDatum.fish,
-      results,
-      canvasCtx,
-      canvas.width / 2,
-      canvas.height / 2
-    );
+    drawFish(fishDatum.fish, results, ctx, canvas.width / 2, canvas.height / 2);
   });
 }
 
-function drawUpcomingFish() {
-  const allFish = getState().fishData;
-  const fishLeft = allFish.length - trainingIndex - 1;
+function drawUpcomingFish(state) {
+  const fishLeft = state.fishData.length - state.trainingIndex - 1;
   const numUpcomingFish = fishLeft >= 3 ? 3 : fishLeft;
-
+  const canvas = state.canvas;
   let x = canvas.width / 2 - 300;
+
   for (let i = 1; i <= numUpcomingFish; i++) {
-    const fishDatum = allFish[trainingIndex + i];
+    const fishDatum = state.fishData[state.trainingIndex + i];
     loadFishImages(fishDatum.fish).then(results => {
-      drawFish(fishDatum.fish, results, canvasCtx, x, canvas.height / 2);
+      const ctx = canvas.getContext('2d');
+      drawFish(fishDatum.fish, results, ctx, x, canvas.height / 2);
       x -= 200;
     });
   }
 }
 
-function drawTrainingUiElements() {
+function drawTrainingUiElements(state) {
   const container = document.getElementById('ui-container');
   const classifyFish = function(doesLike) {
     // TODO: (maddie) classify fish with trainer
-    trainingIndex += 1;
-    drawTrainingScreen();
+    state.trainingIndex += 1;
+    setState({trainingIndex: state.trainingIndex});
+    drawTrainingScreen(state);
   };
 
   const buttons = [
@@ -135,7 +132,10 @@ function drawTrainingUiElements() {
     {
       text: 'next',
       id: 'next-button',
-      onClick: () => console.log('next')
+      onClick: () => {
+        setState({currentMode: Modes.Predicting});
+        init();
+      }
     }
   ];
 
@@ -146,6 +146,10 @@ function drawTrainingUiElements() {
     btnEl.addEventListener('click', button.onClick);
     container.appendChild(btnEl);
   });
+}
+
+function drawPredictingScreen() {
+  console.log('predicting');
 }
 
 window.requestAnimFrame = (function() {
