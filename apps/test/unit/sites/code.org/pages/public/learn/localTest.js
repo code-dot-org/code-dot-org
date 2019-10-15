@@ -102,6 +102,23 @@ describe('/learn/local', () => {
       );
     });
 
+    it('optionally includes a line for school level', () => {
+      const withoutLevel = {
+        ...SAMPLE_LOCATION,
+        school_level_ss: null
+      };
+      assert.notInclude(compileHTML(1, withoutLevel), 'Level(s)');
+
+      const withLevel = {
+        ...withoutLevel,
+        school_level_ss: ['elementary', 'middle_school', 'high_school']
+      };
+      assert.include(
+        compileHTML(1, withLevel),
+        `<strong>Level(s): </strong>Elementary, Middle school, High school</div>`
+      );
+    });
+
     it('optionally includes a line for class languages', () => {
       const withoutLanguages = {
         ...SAMPLE_LOCATION,
