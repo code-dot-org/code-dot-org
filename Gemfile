@@ -152,7 +152,7 @@ gem 'uglifier', '>= 1.3.0'
 # Use jquery as the JavaScript library.
 gem 'jquery-rails'
 
-gem 'phantomjs', '~> 1.9.7.1'
+gem 'phantomjs', '~> 2.1.1.0'
 
 # For emoji in utility output.
 gem 'gemoji'
