@@ -15,9 +15,12 @@ ro-RO:
         draw_rect: desenează_dreptunghi
       2-3 Artist Debugging 10:
         draw square: desenează pătrat
+        jump to controller top left: sari în colţul stânga sus al controller-ului
         jump to middle: sări la mijloc
         draw a circle: desenează un cerc
         draw a button: desenează un buton
+        draw cord: desenează linia
+        draw R pad: desenează pad-ul R
       2-3 Artist Debugging 5:
         draw left leg: desenează piciorul stâng
         draw right leg: desenează piciorul drept
@@ -25,6 +28,7 @@ ro-RO:
         draw a head: desenează un cap
       2-3 Artist Debugging 6:
         draw right leg: desenează piciorul drept
+        draw sitting stick figure: desenează personajul stând jos
         draw head: desenează cap
         draw arms: desenează brațe
         jump to neck: sări la gât
@@ -33,6 +37,9 @@ ro-RO:
         draw O: desenează O
         draw D: desenează D
         draw E: desenează E
+      2-3 Artist Functions 10:
+        big gear: roată dinţată mare
+        small gear: roată dinţată mică
       2-3 Artist Functions 11:
         draw a hexagon: desenează un hexagon
       2-3 Artist Functions 11.5:
@@ -77,12 +84,17 @@ ro-RO:
         draw a car: desenează o mașină
       4-5 Artist 8:
         draw circle: desenează cerc
+        draw goal: desenează poarta
       4-5 Bee Conditionals 7:
         check purple flower: verifică floare mov
       4-5 Bee Conditionals 8:
         check flower make honey: verifică floare fă miere
       4-5 Bee Conditionals Assessment 1:
         get nectar or make honey: coletează nectar sau fă miere
+      4-5 Bee Debugging 7:
+        make 3 honey: fă miere de 3 ori
+      4-5 Bee Debugging 9:
+        make all honey: fă toată mierea
       Alien Defender:
         game has been won: jocul a fost câștigat
       Course 4 Artist Binary 1:
@@ -108,15 +120,15 @@ ro-RO:
       Course 4 Artist Binary pre1:
         draw: desenează
       Course 4 Bee Params 1:
-        get 3 nectar: obţine 3 nectare
+        get 3 nectar: obţine de 3 ori nectar
       Course 4 Bee Params 2:
-        get 3 nectar: obţine 3 nectare
+        get 3 nectar: obţine de 3 ori nectar
       Course 4 Bee Params 3:
-        get 3 nectar: obţine 3 nectare
+        get 3 nectar: obţine de 3 ori nectar
       Course 4 Bee Params 4:
-        get 3 nectar: obţine 3 nectare
+        get 3 nectar: obţine de 3 ori nectar
       Course 4 Bee Params 7:
-        get many nectar: obţine multe nectare
+        get many nectar: obţine mult nectar
       Course 4 Bee Params 8:
         get nectar make honey: obține nectar fă miere
       Course 4 Play Lab Params 1:
@@ -155,6 +167,12 @@ ro-RO:
         draw a house: desenează o casă
         triangle: triunghi
         square: pătrat
+      K-1 Artist2 3:
+        draw roof: desenează acoperişul
+      K-1 Artist2 4:
+        draw rectangle: desenează dreptunghiul
+      K-1 Artist2 5:
+        draw rectangle: desenează dreptunghiul
       NEW Course 4 Artist Functions 3:
         draw a square: desenează un pătrat
       NEW Course 4 Artist Functions 4:
@@ -214,6 +232,8 @@ ro-RO:
         draw a flower: desenează o floare
       Standalone_Artist_8:
         draw a shape: desenează o formă
+      Standalone_Artist_9:
+        my function: funcţia mea
       course3_artist_functions_challenge1:
         do something: facă ceva
       course3_artist_functions_challenge2:

@@ -21,6 +21,11 @@ sr:
           PROPERTY:
             '"scale"': величина
             '"height"': висина
+      Dancelab_changePropEachBy:
+        options:
+          PROPERTY:
+            '"scale"': величина
+            '"height"': висина
       Dancelab_doMoveEachLR:
         options:
           DIR:
@@ -54,18 +59,28 @@ sr:
             "{x: 100, y: 200}": лево
             "{x: 300, y: 200}": десно
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": насумичан
+      Dancelab_jumpToEach:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": лево
+            "{x: 300, y: 200}": десно
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": насумичан
       Dancelab_layoutSprites:
         options:
           FORMAT:
             '"random"': насумичан
       Dancelab_makeAnonymousDanceSprite:
         options:
+          COSTUME:
+            '"DUCK"': патка
           LOCATION:
             "{x: 100, y: 200}": лево
             "{x: 300, y: 200}": десно
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": насумичан
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"DUCK"': патка
           LOCATION:
             "{x: 100, y: 200}": лево
             "{x: 300, y: 200}": десно
@@ -127,12 +142,27 @@ sr:
           PROPERTY:
             '"scale"': величина
             '"height"': висина
+      Dancelab_setPropRandomEach:
+        options:
+          PROPERTY:
+            '"scale"': величина
+            '"height"': висина
       Dancelab_startMapping:
         options:
           PROPERTY:
             '"scale"': величина
             '"height"': висина
+      Dancelab_startMappingEach:
+        options:
+          PROPERTY:
+            '"scale"': величина
+            '"height"': висина
       Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': величина
+            '"height"': висина
+      Dancelab_stopMappingEach:
         options:
           PROPERTY:
             '"scale"': величина

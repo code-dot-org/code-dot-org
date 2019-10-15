@@ -26,6 +26,10 @@ mt:
         options:
           LOCATION:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": bl-addoċċ
+      Dancelab_jumpToEach:
+        options:
+          LOCATION:
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": bl-addoċċ
       Dancelab_layoutSprites:
         options:
           FORMAT:

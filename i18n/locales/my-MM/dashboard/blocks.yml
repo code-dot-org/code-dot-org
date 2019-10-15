@@ -18,6 +18,10 @@ my:
           DIR:
             '1': "→"
             "-1": "←"
+      Dancelab_changePropEachBy:
+        options:
+          GROUP:
+            sprites: အားလုံး
       Dancelab_doMoveEachLR:
         options:
           GROUP:
@@ -38,6 +42,10 @@ my:
         options:
           DANCE:
             MOVES.Rest: ဘာမှမရှိ
+      Dancelab_jumpToEach:
+        options:
+          GROUP:
+            sprites: အားလုံး
       Dancelab_layoutSprites:
         options:
           GROUP:
@@ -104,6 +112,10 @@ my:
         options:
           GROUP:
             sprites: အားလုံး
+      Dancelab_setPropRandomEach:
+        options:
+          GROUP:
+            sprites: အားလုံး
       Dancelab_setTintEach:
         options:
           THIS:
@@ -115,6 +127,14 @@ my:
       Dancelab_setVisibleEach:
         options:
           THIS:
+            sprites: အားလုံး
+      Dancelab_startMappingEach:
+        options:
+          GROUP:
+            sprites: အားလုံး
+      Dancelab_stopMappingEach:
+        options:
+          GROUP:
             sprites: အားလုံး
       Dancelab_whenKey:
         options:
