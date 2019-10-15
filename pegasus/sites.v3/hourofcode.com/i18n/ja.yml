@@ -10,6 +10,9 @@ ja:
   campaign_date_full: "12月 5 − 11日"
   campaign_date_year: "2016"
   campaign_date_full_year: "2016 年 12 月 5 - 11 日"
+  hoc2019_header: 'プログラミングを試してみよう、より良い世界を創れるよ.'
+  hoc2019_header_line1_mobile: 'プログラミングを試してみよう.'
+  hoc2019_header_line2_mobile: 'より良い世界を創れるよ.'
   codeorg_homepage_hoc2018_curriculum: '<a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org のコース</a> を進める'
   codeorg_homepage_hoc2018_dance_heading: 'Create your own <span class="highlight-word">Dance&nbsp;Party</span>'
   codeorg_homepage_hoc2018_header_line1: 'The Hour of Code is coming...'

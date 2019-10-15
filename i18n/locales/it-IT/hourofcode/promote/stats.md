@@ -32,7 +32,7 @@ Speriamo che stimoli l'interesse degli studenti a continuare ad imparare. Le ric
 
 #### Perché è importante tutto questo?
 
-La tecnologia sta trasformando ogni azienda del pianeta. Nel 2015, 7 milioni di posti di lavoro vacanti, tra cui arte e design, richiedevano competenze di programmazione. But 65 percent of schools in the U.S. don't teach computer science. È ora di superare questo divario e prendere il treno del XXI secolo. Sappiamo che, indipendentemente da ciò che i nostri studenti faranno quando saranno cresciuti, sia che vogliano lavorare nel campo della medicina, degli affari, della politica o delle arti, sapere come si costruiscono degli strumenti tecnologi fornirà loro la fiducia in se stessi necessaria e delle competenze fondamentali per avere successo nel loro campo. <br /> <br />
+La tecnologia sta trasformando ogni azienda del pianeta. Nel 2015, 7 milioni di posti di lavoro vacanti, tra cui arte e design, richiedevano competenze di programmazione. But 55 percent of schools in the U.S. don't teach computer science. È ora di superare questo divario e prendere il treno del XXI secolo. Sappiamo che, indipendentemente da ciò che i nostri studenti faranno quando saranno cresciuti, sia che vogliano lavorare nel campo della medicina, degli affari, della politica o delle arti, sapere come si costruiscono degli strumenti tecnologi fornirà loro la fiducia in se stessi necessaria e delle competenze fondamentali per avere successo nel loro campo. <br /> <br />
 
 #### A quote you can use in materials
 

@@ -62,7 +62,6 @@
 
     if node.chef_environment == 'test' && node.name == 'staging-next'
       cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'update_dtsn')
-      cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'cron', 'trigger_circle_build')
     end
 
     if node.chef_environment == 'test' && node.name == 'test' # 'real' test only
@@ -104,7 +103,6 @@
       cronjob at:'0 14 * * 1-5', do:deploy_dir('bin', 'cron', 'zendesk_slack_report')
 
       # RDS backup window is 08:50-09:20, so by 11:50 backups should definitely be ready
-      cronjob at:'50 11 * * *', do:deploy_dir('bin', 'cron', 'push_latest_rds_backup_to_secondary_account')
       cronjob at:'50 11 * * *', do:deploy_dir('bin', 'cron', 'push_latest_aurora_backup_to_secondary_account')
     end
 

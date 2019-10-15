@@ -10,6 +10,9 @@ et:
   campaign_date_full: "4.-10. detsember"
   campaign_date_year: "2017"
   campaign_date_full_year: "4.-10. detsember 2017"
+  hoc2019_header: 'Learn computer science. Change the world.'
+  hoc2019_header_line1_mobile: 'Learn computer science.'
+  hoc2019_header_line2_mobile: 'Change the world.'
   codeorg_homepage_hoc2018_curriculum: 'Õpi edasi<a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org kursustega</a>'
   codeorg_homepage_hoc2018_dance_heading: 'Loo oma <span class="highlight-word"> Tantsu&nbsp;õhtu</span>'
   codeorg_homepage_hoc2018_header_line1: 'KoodiTund on tulekul...'

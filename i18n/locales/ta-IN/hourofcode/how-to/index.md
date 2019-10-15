@@ -8,9 +8,9 @@ nav: how_to_nav
 
 # ஒரு வகுப்பின் ஒரு மணி நேரத்தை உங்கள் வகுப்பில் எப்படி கற்பிக்க வேண்டும்
 
-### இயக்கத்தில் சேர்ந்து, மாணவர் குழுக்களுக்கு கணினியியல் பற்றிய முதல் படிகளை அறிமுகப்படுத்துங்கள். மணிநேர நிரலாக்கம், புதிதாய் படிப்பவர்க்கும் இயக்க எளிதானது! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your class.
+### இயக்கத்தில் சேர்ந்து, மாணவர் குழுக்களுக்கு கணினியியல் பற்றிய முதல் படிகளை அறிமுகப்படுத்துங்கள். மணிநேர நிரலாக்கம், புதிதாய் படிப்பவர்க்கும் இயக்க எளிதானது! உதவ கூடுதல் கைகளின் தொகுப்பை நீங்கள் விரும்பினால், உங்கள் வகுப்பில் ஒரு மணிநேர குறியீட்டை இயக்க உதவும் [ உள்ளூர் தன்னார்வலரை ](== {urls/volunteer_local }==) காணலாம்.
 
-### Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}).
+### உங்களிடம் இன்னும் கேள்விகள் இருந்தால் எங்கள் [ பங்கேற்பு வழிகாட்டியைப் பாருங்கள் ](=== localized_files/participation_guide }ibl).
 
 * * *
 
@@ -18,11 +18,11 @@ nav: how_to_nav
 
 ## 2. பயிற்சியை தேர்வு செய்க
 
-We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for all age groups and experience levels. மாணவர்களே தங்கள் சொந்த நடவடிக்கைகளை மேற்கொள்கின்றனர், ஆனால் பல நடவடிக்கைகள், ஆசிரியர்களுக்கான பாடம் திட்டங்களை உள்ளடக்கியிருந்தாலும், நீங்கள் விவாதத்தை வழிகாட்டும் அல்லது நடவடிக்கைகளை நீட்டிக்க (நீங்கள் நடவடிக்கைகளை கிளிக் செய்யும் போது நீங்கள் இணைப்பைக் காணலாம்). [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
+எல்லா வயதினருக்கும் அனுபவ நிலைகளுக்கும் பலவிதமான வேடிக்கைகளை, [ மாணவர் வழிகாட்டும் பயிற்சிகள் ](== {urls/learn }a>) வழங்குகிறோம். மாணவர்களே தங்கள் சொந்த நடவடிக்கைகளை மேற்கொள்கின்றனர், ஆனால் பல நடவடிக்கைகள், ஆசிரியர்களுக்கான பாடம் திட்டங்களை உள்ளடக்கியிருந்தாலும், நீங்கள் விவாதத்தை வழிகாட்டும் அல்லது நடவடிக்கைகளை நீட்டிக்க (நீங்கள் நடவடிக்கைகளை கிளிக் செய்யும் போது நீங்கள் இணைப்பைக் காணலாம்). [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
 ## 3. உங்கள் கோடை மணிநேரத்தை ஊக்குவிக்கவும்
 
-Promote your Hour of Code [with these tools]({{ urls/promote_resources }}) and encourage others to host their own events.
+இந்த கருவிகளைக் கொண்டு உங்கள் மணிநேர குறியீட்டை  ஊக்குவிக்கவும், மற்றவர்கள் தங்கள் சொந்த நிகழ்வுகளை நடத்த ஊக்குவிக்கவும்.</p> 
 
 ## 4. உங்கள் தொழில்நுட்பத் தேவைகளைத் திட்டமிடுங்கள் - கணினிகள் விருப்பமானது
 
@@ -38,24 +38,24 @@ Promote your Hour of Code [with these tools]({{ urls/promote_resources }}) and e
 
 ## 5. எழுச்சியூட்டும் பேச்சாளரோடோ அல்லது காணொளியொடோ உங்கள் மணிநேர நிரலாக்கத்தை தொடங்கவும்
 
-**Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
+** கணினி அறிவியலின் சாத்தியக்கூறுகளின் அகலத்தைப் பற்றி பேசுவதன் மூலம் உங்கள் மாணவர்களை ஊக்குவிக்க [ உள்ளூர் தன்னார்வலரை ](== {urls/volunteer_local }sex) அழைக்கவும். </ strong> சுற்றி ஆயிரக்கணக்கான தன்னார்வலர்கள் உள்ளனர் வகுப்பறை வருகை அல்லது உங்கள் மாணவர்களுடன் வீடியோ அரட்டை மூலம் உங்கள் குறியீட்டு நேரத்திற்கு உதவ உலகம் தயாராக உள்ளது!</p> 
 
 **ஒரு தூண்டுதலாக வீடியோவை காட்டு:**
 
 - அசல் Code.org வெளியீட்டு வீடியோ, பில் கேட்ஸ், மார்க் ஜுக்கர்பெர்க், மற்றும் NBA நட்சத்திர கிறிஸ் போஷ் ஆகியவற்றைக் கொண்டது. [ 1 நிமிடம் ](https://www.youtube.com/watch?v=qYZF6oIZtfc), <a href = "https://www.youtube.com/watch?v = nKIu9yen5nc "> 5 நிமிடம் </a>, மற்றும் [ 9 நிமிட ](https://www.youtube.com/watch?v=dU1xS07N-FA) பதிப்புகளில் கிடைக்கும்)
-- Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- மேலும் உத்வேகம் தரும் <a href="== {url / inspire} "
 
 **நீங்கள் மற்றும் உங்கள் மாணவர்கள் கணினி அறிவியல் புத்தம் புதிய என்றால் அது பரவாயில்லை. குறியீட்டு நடவடிக்கையின் உங்கள் மணிநேரத்தை அறிமுகப்படுத்த சில யோசனைகள் இங்கு உள்ளன:**
 
 - தொழில்நுட்பங்கள் நம் வாழ்வில் தாக்கத்தை ஏற்படுத்தும் வழிகளை விவரிக்கவும், சிறுவர்கள் மற்றும் பெண்கள் ஆகிய இரு உதாரணங்களையும் எடுத்துக் கொள்ளுங்கள் (உயிர்களை காப்பாற்றுவதைப் பற்றி பேசுதல், மக்களுக்கு உதவுதல், மக்கள் இணைப்பது போன்றவை).
 - ஒரு வர்க்கமாக, அன்றாட வாழ்வில் குறியீட்டை பயன்படுத்தும் விஷயங்களை பட்டியலிடுங்கள்.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- கணினி அறிவியலில் சிறுமிகள் ஆர்வம் காட்டுவதற்கான உதவிக்குறிப்புகளைக் காண்க [ இங்கே ](a> {urls/girls }a>).
 
 ## 6. கோட்!
 
 **நடவடிக்கைக்கு நேரடி மாணவர்கள்**
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+- டுடோரியல் இணைப்பை ஒரு வெள்ளை பலகையில் எழுதவும். பங்கேற்பாளர்களின் எண்ணிக்கையின் கீழ் நீங்கள் தேர்ந்தெடுத்த டுடோரியலுக்கான [ தகவல் ](== {urls/learn }ibl) இல் பட்டியலிடப்பட்டுள்ள இணைப்பைக் கண்டறியவும்.
 
 **உங்கள் மாணவர்கள் சிரமங்களை எதிர்கொள்கையில் அது பதிலளிக்க வேண்டியது பரவாயில்லை:**
 
@@ -65,7 +65,7 @@ Promote your Hour of Code [with these tools]({{ urls/promote_resources }}) and e
 
 **ஒரு மாணவர் ஆரம்பத்தில் முடிந்தால் என்ன செய்வது?**
 
-- Students can see all tutorials and [try another Hour of Code activity]({{ urls/learn }}).
+- மாணவர்கள் அனைத்து டுடோரியல்களையும் பார்க்கலாம் மற்றும் [ மற்றொரு மணிநேர குறியீடு செயல்பாட்டை முயற்சிக்கவும் ](a> {urls/learn }a>).
 - அல்லது, நடவடிக்கைகளைத் தொந்தரவு செய்யும் வகுப்புத் தோழர்களுக்கு உதவ ஆரம்பிக்கிற மாணவர்களைக் கேட்கவும்.
 
 [வண்ணம்-33]
@@ -84,8 +84,8 @@ Promote your Hour of Code [with these tools]({{ urls/promote_resources }}) and e
 
 9/5000 [/ நெடுவரிசை-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
-- [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
+- உங்கள் மாணவர்களுக்கு [ அச்சிடும் சான்றிதழ்கள் ](== {urls/certificates }ibl).
+- [ "நான் ஒரு மணிநேர குறியீட்டைச் செய்தேன்!" ]({{urls/promote_stickers }a>) உங்கள் மாணவர்களுக்கான ஸ்டிக்கர்களை அச்சிடுங்கள்.
 - உங்கள் பள்ளிக்காக  தனிப்பயன் டி-ஷர்டுகளை ஆர்டர் செய்யவும்.</li> 
     
     - சமூக மீடியாவில் உங்கள் நிகழ்வு நிகழ்வு நிகழ்வுகளின் வீடியோ மற்றும் வீடியோக்களைப் பகிரலாம். #HourOfCode மற்றும் @codeorg பயன்படுத்தவும், எனவே உங்கள் வெற்றியை முன்னிலைப்படுத்தலாம்!</ul> 

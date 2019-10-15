@@ -23,6 +23,13 @@ mi:
           PROPERTY:
             '"scale"': rahinga
             '"height"': teitei
+      Dancelab_changePropEachBy:
+        options:
+          GROUP:
+            sprites: katoa
+          PROPERTY:
+            '"scale"': rahinga
+            '"height"': teitei
       Dancelab_doMoveEachLR:
         options:
           GROUP:
@@ -57,12 +64,38 @@ mi:
           LOCATION:
             "{x: 100, y: 200}": mauī
             "{x: 300, y: 200}": matau
+      Dancelab_jumpToEach:
+        options:
+          GROUP:
+            sprites: katoa
+          LOCATION:
+            "{x: 100, y: 200}": mauī
+            "{x: 300, y: 200}": matau
       Dancelab_layoutSprites:
         options:
           GROUP:
             sprites: katoa
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': kaituarangi
+            '"CAT"': ngeru
+            '"DOG"': kurī
+            '"DUCK"': rakiraki
+            '"ROBOT"': karetao
+            '"UNICORN"': mairetahi
+          LOCATION:
+            "{x: 100, y: 200}": mauī
+            "{x: 300, y: 200}": matau
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': kaituarangi
+            '"CAT"': ngeru
+            '"DOG"': kurī
+            '"DUCK"': rakiraki
+            '"ROBOT"': karetao
+            '"UNICORN"': mairetahi
           LOCATION:
             "{x: 100, y: 200}": mauī
             "{x: 300, y: 200}": matau
@@ -125,7 +158,18 @@ mi:
           PROPERTY:
             '"scale"': rahinga
             '"height"': teitei
+      Dancelab_setPropRandomEach:
+        options:
+          GROUP:
+            sprites: katoa
+          PROPERTY:
+            '"scale"': rahinga
+            '"height"': teitei
       Dancelab_setTintEach:
+        options:
+          THIS:
+            sprites: katoa
+      Dancelab_setTintEachInline:
         options:
           THIS:
             sprites: katoa
@@ -138,8 +182,22 @@ mi:
           PROPERTY:
             '"scale"': rahinga
             '"height"': teitei
+      Dancelab_startMappingEach:
+        options:
+          GROUP:
+            sprites: katoa
+          PROPERTY:
+            '"scale"': rahinga
+            '"height"': teitei
       Dancelab_stopMapping:
         options:
+          PROPERTY:
+            '"scale"': rahinga
+            '"height"': teitei
+      Dancelab_stopMappingEach:
+        options:
+          GROUP:
+            sprites: katoa
           PROPERTY:
             '"scale"': rahinga
             '"height"': teitei
