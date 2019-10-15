@@ -218,7 +218,7 @@ export default class ChooseYourProgram extends LabeledFormComponent {
       (data.csHowManyMinutes < 1 || data.csHowManyMinutes > 480)
     ) {
       formatErrors.csHowManyMinutes =
-        'Class section minutes per day must be positive number from 1-480 inclusive';
+        'Class section minutes per day must be between 1 and 480';
     }
 
     if (
@@ -226,7 +226,7 @@ export default class ChooseYourProgram extends LabeledFormComponent {
       (data.csHowManyDaysPerWeek < 1 || data.csHowManyDaysPerWeek > 7)
     ) {
       formatErrors.csHowManyDaysPerWeek =
-        'Class section days per week must be positive number between 1-7 inclusive';
+        'Class section days per week must be between 1 and 7';
     }
 
     if (
@@ -234,7 +234,7 @@ export default class ChooseYourProgram extends LabeledFormComponent {
       (data.csHowManyWeeksPerYear < 1 || data.csHowManyWeeksPerYear > 52)
     ) {
       formatErrors.csHowManyWeeksPerYear =
-        'Class section weeks per year must be positive number from 1-52 inclusive';
+        'Class section weeks per year must be between 1 and 52';
     }
 
     return formatErrors;
