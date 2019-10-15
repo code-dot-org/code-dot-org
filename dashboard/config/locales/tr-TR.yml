@@ -18,6 +18,7 @@ tr:
       messages:
         blank: gerekli
         blank_plural: gereklidir
+        invalid: geçersizdir
         invalid_plural: geçersiz
     attributes:
       user:
@@ -36,6 +37,7 @@ tr:
         age: Yaş
         gender: Cinsiyet
         edit_header: Hesap Bilgilerini Düzenle
+        finish_sign_up_header: Hesabınızı oluşturmayı bitirin
         error:
           future: gelecekte olması mümkün değil
   beta: beta
