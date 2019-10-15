@@ -348,20 +348,24 @@ function createNewFirehose() {
   });
 }
 
-let singleton;
+let promise;
 function getSingleton() {
-  if (!singleton) {
-    singleton = new FirehoseClient();
+  if (!promise) {
+    promise = new Promise(resolve => resolve(new FirehoseClient()));
   }
-  return singleton;
+  return promise;
 }
 
 function putRecord(data, options) {
-  getSingleton().putRecord(data, options);
+  getSingleton().then(firehoseClient =>
+    firehoseClient.putRecord(data, options)
+  );
 }
 
 function putRecordBatch(data, options) {
-  getSingleton().putRecordBatch(data, options);
+  getSingleton().then(firehoseClient =>
+    firehoseClient.putRecordBatch(data, options)
+  );
 }
 
 export default {putRecord, putRecordBatch};
