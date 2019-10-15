@@ -3,11 +3,17 @@ import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 import PopUpMenu from '../../lib/ui/PopUpMenu';
-import SectionSelectionMenuItem from './SectionSelectionMenuItem';
+import TeacherSectionSelectorMenuItem from './TeacherSectionSelectorMenuItem';
 import {sectionForDropdownShape} from './shapes';
 import SmallChevronLink from '@cdo/apps/templates/SmallChevronLink';
 
 const styles = {
+  main: {
+    marginRight: 10
+  },
+  select: {
+    height: 34
+  },
   addNewSection: {
     borderTop: `1px solid ${color.charcoal}`,
     paddingTop: 16,
@@ -17,15 +23,14 @@ const styles = {
   }
 };
 
-export default class SectionSelectionDropdown extends Component {
+export default class TeacherSectionSelector extends Component {
   static propTypes = {
     sections: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
     selectedSection: PropTypes.object,
-    selectSection: PropTypes.func
+    onChangeSection: PropTypes.func.isRequired
   };
 
   state = {
-    selectedSection: this.props.selectedSection,
     isMenuOpen: false,
     canMenuOpen: true,
     targetPoint: {top: 0, left: 0}
@@ -40,6 +45,11 @@ export default class SectionSelectionDropdown extends Component {
     if (!this.state.isMenuOpen && this.state.canMenuOpen) {
       this.openMenu();
     }
+  };
+
+  handleNativeDropdownChange = event => {
+    const selectedSectionId = parseInt(event.target.value);
+    this.props.onChangeSection(selectedSectionId);
   };
 
   openMenu() {
@@ -64,41 +74,24 @@ export default class SectionSelectionDropdown extends Component {
     this.setState({isMenuOpen: false});
   }
 
-  setSelectedSection = section => {
-    this.setState({selectedSection: section});
-  };
-
-  onChangeSection = event => {
-    const {sections} = this.props;
-    const sectionId = parseInt(event.target.value);
-    const section = sections.find(section => section.id === sectionId);
-    this.setSelectedSection(section);
-    if (!this.state.isMenuOpen && this.state.canMenuOpen) {
-      this.openMenu();
-    }
-  };
-
   chooseMenuItem = section => {
-    const {sections} = this.props;
-    const selectedSection = sections.find(s => s.id === section.id);
-    this.setSelectedSection(selectedSection);
+    this.props.onChangeSection(section.id);
     this.closeMenu();
   };
 
   render() {
-    const {sections} = this.props;
-    const {selectedSection} = this.state;
+    const {sections, selectedSection} = this.props;
     const menuOffset = {x: 0, y: 0};
 
     return (
-      <div>
+      <div style={styles.main}>
         <select
           value={selectedSection.id}
-          onChange={this.onChangeSection}
-          disabled={false}
+          onChange={this.props.onChangeSection}
           ref={select => (this.select = select)}
           onClick={this.handleClick}
           onMouseDown={this.handleMouseDown}
+          style={styles.select}
         >
           {sections.map(section => (
             <option key={section.id} value={section.id}>
@@ -113,7 +106,7 @@ export default class SectionSelectionDropdown extends Component {
           offset={menuOffset}
         >
           {sections.map(section => (
-            <SectionSelectionMenuItem
+            <TeacherSectionSelectorMenuItem
               section={section}
               onClick={() => this.chooseMenuItem(section)}
               key={section.id}
