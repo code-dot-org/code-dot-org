@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 import PopUpMenu from '../../lib/ui/PopUpMenu';
-import SectionSelectionMenuItem from './SectionSelectionMenuItem';
+import TeacherSectionSelectorMenuItem from './TeacherSectionSelectorMenuItem';
 import {sectionForDropdownShape} from './shapes';
 import SmallChevronLink from '@cdo/apps/templates/SmallChevronLink';
 
@@ -23,7 +23,7 @@ const styles = {
   }
 };
 
-export default class SectionSelectionDropdown extends Component {
+export default class TeacherSectionSelector extends Component {
   static propTypes = {
     sections: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
     selectedSection: PropTypes.object,
@@ -88,7 +88,6 @@ export default class SectionSelectionDropdown extends Component {
         <select
           value={selectedSection.id}
           onChange={this.props.onChangeSection}
-          disabled={false}
           ref={select => (this.select = select)}
           onClick={this.handleClick}
           onMouseDown={this.handleMouseDown}
@@ -107,7 +106,7 @@ export default class SectionSelectionDropdown extends Component {
           offset={menuOffset}
         >
           {sections.map(section => (
-            <SectionSelectionMenuItem
+            <TeacherSectionSelectorMenuItem
               section={section}
               onClick={() => this.chooseMenuItem(section)}
               key={section.id}
