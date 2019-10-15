@@ -80,6 +80,28 @@ el:
             '"rotation"': περιστροφή
             '"x"': οριζόντια θέση
             '"y"': κάθετη θέση
+      Dancelab_changePropEachBy:
+        options:
+          GROUP:
+            sprites: όλα
+            '"ALIEN"': όλοι οι εξωγήινοι
+            '"BEAR"': όλες οι αρκούδες
+            '"CAT"': όλες οι γάτες
+            '"DOG"': όλοι οι σκύλοι
+            '"DUCK"': όλες οι πάπιες
+            '"FROG"': όλοι οι βάτραχοι
+            '"MOOSE"': όλα τα ελάφια
+            '"PINEAPPLE"': όλοι οι ανανάδες
+            '"ROBOT"': όλα τα ρομπότ
+            '"SHARK"': όλοι οι καρχαρίες
+            '"UNICORN"': Μονόκεροι
+          PROPERTY:
+            '"scale"': μέγεθος
+            '"width"': πλάτος
+            '"height"': ύψος
+            '"rotation"': περιστροφή
+            '"x"': οριζόντια θέση
+            '"y"': κάθετη θέση
       Dancelab_doMoveEachLR:
         text: "{GROUP} κάντε {MOVE} {DIR} μία φορά"
         options:
@@ -95,7 +117,7 @@ el:
             '"PINEAPPLE"': όλοι οι ανανάδες
             '"ROBOT"': όλα τα ρομπότ
             '"SHARK"': όλοι οι καρχαρίες
-            '"UNICORN"': όλοι οι μονόκεροι
+            '"UNICORN"': Μονόκεροι
           MOVE:
             '"rand"': "(Τυχαίο)"
             MOVES.XBend: Λύγισε
@@ -240,6 +262,32 @@ el:
             "{x: 100, y: 300}": κάτω αριστερά
             "{x: 300, y: 300}": κάτω δεξιά
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": τυχαίο
+      Dancelab_jumpToEach:
+        options:
+          GROUP:
+            sprites: όλα
+            '"ALIEN"': όλοι οι εξωγήινοι
+            '"BEAR"': όλες οι αρκούδες
+            '"CAT"': όλες οι γάτες
+            '"DOG"': όλοι οι σκύλοι
+            '"DUCK"': όλες οι πάπιες
+            '"FROG"': όλοι οι βάτραχοι
+            '"MOOSE"': όλα τα ελάφια
+            '"PINEAPPLE"': όλοι οι ανανάδες
+            '"ROBOT"': όλα τα ρομπότ
+            '"SHARK"': όλοι οι καρχαρίες
+            '"UNICORN"': Μονόκεροι
+          LOCATION:
+            "{x: 200, y: 100}": πάνω
+            "{x: 200, y: 300}": κάτω
+            "{x: 100, y: 200}": αριστερά
+            "{x: 300, y: 200}": δεξιά
+            "{x: 200, y: 200}": κέντρο
+            "{x: 100, y: 100}": πάνω αριστερά
+            "{x: 300, y: 100}": πάνω δεξιά
+            "{x: 100, y: 300}": κάτω αριστερά
+            "{x: 300, y: 300}": κάτω δεξιά
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": τυχαίο
       Dancelab_layoutSprites:
         text: διάταξη {GROUP} ως {FORMAT}
         options:
@@ -255,7 +303,7 @@ el:
             '"PINEAPPLE"': όλοι οι ανανάδες
             '"ROBOT"': όλα τα ρομπότ
             '"SHARK"': όλοι οι καρχαρίες
-            '"UNICORN"': όλοι οι μονόκεροι
+            '"UNICORN"': Μονόκεροι
           FORMAT:
             '"border"': όριο
             '"inner"': εσωτερικό τετράγωνο
@@ -267,19 +315,20 @@ el:
             '"plus"': συν
             '"random"': τυχαίο
       Dancelab_makeAnonymousDanceSprite:
+        text: φτιάξει ένα καινούριο {COSTUME} σε {LOCATION}
         options:
           COSTUME:
-            '"ALIEN"': Εξωγήινος
+            '"ALIEN"': εξωγήινος
             '"BEAR"': Αρκούδα
-            '"CAT"': Γάτα
-            '"DOG"': Σκύλος
-            '"DUCK"': Πάπια
+            '"CAT"': γάτα
+            '"DOG"': σκύλος
+            '"DUCK"': πάπια
             '"FROG"': Βάτραχος
-            '"MOOSE"': Ελάφι
+            '"MOOSE"': όλα τα ελάφια
             '"PINEAPPLE"': Ανανάς
-            '"ROBOT"': Ρομπότ
+            '"ROBOT"': ρομπότ
             '"SHARK"': Καρχαρίας
-            '"UNICORN"': Μονόκερως
+            '"UNICORN"': μονόκερος
           LOCATION:
             "{x: 200, y: 100}": πάνω
             "{x: 200, y: 300}": κάτω
@@ -469,7 +518,7 @@ el:
             '"PINEAPPLE"': όλοι οι ανανάδες
             '"ROBOT"': όλα τα ρομπότ
             '"SHARK"': όλοι οι καρχαρίες
-            '"UNICORN"': όλοι οι μονόκεροι
+            '"UNICORN"': Μονόκεροι
           SPEED:
             '1': κανονικό
             '2': γρήγορη
@@ -523,7 +572,6 @@ el:
             '"rotation"': περιστροφή
             '"x"': οριζόντια θέση
             '"y"': κάθετη θέση
-            '"tint"': απόχρωση
       Dancelab_setPropEach:
         text: όρισε για {GROUP} το {PROPERTY} σε {VAL}
         options:
@@ -539,7 +587,17 @@ el:
             '"PINEAPPLE"': όλοι οι ανανάδες
             '"ROBOT"': όλα τα ρομπότ
             '"SHARK"': όλοι οι καρχαρίες
-            '"UNICORN"': όλοι οι μονόκεροι
+            '"UNICORN"': Μονόκεροι
+          PROPERTY:
+            '"scale"': μέγεθος
+            '"width"': πλάτος
+            '"height"': ύψος
+            '"rotation"': περιστροφή
+            '"x"': οριζόντια θέση
+            '"y"': κάθετη θέση
+      Dancelab_setPropRandom:
+        text: κάνε τυχαίο του {SPRITE} το {PROPERTY}
+        options:
           PROPERTY:
             '"scale"': μέγεθος
             '"width"': πλάτος
@@ -548,9 +606,21 @@ el:
             '"x"': οριζόντια θέση
             '"y"': κάθετη θέση
             '"tint"': απόχρωση
-      Dancelab_setPropRandom:
-        text: κάνε τυχαίο του {SPRITE} το {PROPERTY}
+      Dancelab_setPropRandomEach:
         options:
+          GROUP:
+            sprites: όλα
+            '"ALIEN"': όλοι οι εξωγήινοι
+            '"BEAR"': όλες οι αρκούδες
+            '"CAT"': όλες οι γάτες
+            '"DOG"': όλοι οι σκύλοι
+            '"DUCK"': όλες οι πάπιες
+            '"FROG"': όλοι οι βάτραχοι
+            '"MOOSE"': όλα τα ελάφια
+            '"PINEAPPLE"': όλοι οι ανανάδες
+            '"ROBOT"': όλα τα ρομπότ
+            '"SHARK"': όλοι οι καρχαρίες
+            '"UNICORN"': Μονόκεροι
           PROPERTY:
             '"scale"': μέγεθος
             '"width"': πλάτος
@@ -576,6 +646,7 @@ el:
             '"PINEAPPLE"': όλοι οι ανανάδες
             '"ROBOT"': όλα τα ρομπότ
             '"SHARK"': όλοι οι καρχαρίες
+            '"UNICORN"': Μονόκεροι
       Dancelab_setTintEachInline:
         text: όρισε {THIS} απόχρωση σε {VAL}
         options:
@@ -591,6 +662,7 @@ el:
             '"PINEAPPLE"': όλοι οι ανανάδες
             '"ROBOT"': όλα τα ρομπότ
             '"SHARK"': όλοι οι καρχαρίες
+            '"UNICORN"': Μονόκεροι
       Dancelab_setTintInline:
         text: όρισε του {SPRITE} την απόχρωση σε {VAL}
       Dancelab_setVisible:
@@ -614,7 +686,7 @@ el:
             '"PINEAPPLE"': όλοι οι ανανάδες
             '"ROBOT"': όλα τα ρομπότ
             '"SHARK"': όλοι οι καρχαρίες
-            '"UNICORN"': όλοι οι μονόκεροι
+            '"UNICORN"': Μονόκεροι
           VISIBILITY:
             'true': ορατό
             'false': αόρατο
@@ -633,9 +705,64 @@ el:
             '"bass"': μπάσα
             '"mid"': μεσαία
             '"treble"': πρίμα
+      Dancelab_startMappingEach:
+        options:
+          GROUP:
+            sprites: όλα
+            '"ALIEN"': όλοι οι εξωγήινοι
+            '"BEAR"': όλες οι αρκούδες
+            '"CAT"': όλες οι γάτες
+            '"DOG"': όλοι οι σκύλοι
+            '"DUCK"': όλες οι πάπιες
+            '"FROG"': όλοι οι βάτραχοι
+            '"MOOSE"': όλα τα ελάφια
+            '"PINEAPPLE"': όλοι οι ανανάδες
+            '"ROBOT"': όλα τα ρομπότ
+            '"SHARK"': όλοι οι καρχαρίες
+            '"UNICORN"': Μονόκεροι
+          PROPERTY:
+            '"scale"': μέγεθος
+            '"width"': πλάτος
+            '"height"': ύψος
+            '"rotation"': περιστροφή
+            '"x"': οριζόντια θέση
+            '"y"': κάθετη θέση
+            '"tint"': απόχρωση
+          RANGE:
+            '"bass"': μπάσα
+            '"mid"': μεσαία
+            '"treble"': πρίμα
       Dancelab_stopMapping:
         text: "{SPRITE} σταματάει να αλλάζει το {PROPERTY} ακολουθώντας τα {RANGE}"
         options:
+          PROPERTY:
+            '"scale"': μέγεθος
+            '"width"': πλάτος
+            '"height"': ύψος
+            '"rotation"': περιστροφή
+            '"x"': οριζόντια θέση
+            '"y"': κάθετη θέση
+            '"direction"': κατεύθυνση κίνησης
+            '"tint"': απόχρωση
+          RANGE:
+            '"bass"': μπάσα
+            '"mid"': μεσαία
+            '"treble"': πρίμα
+      Dancelab_stopMappingEach:
+        options:
+          GROUP:
+            sprites: όλα
+            '"ALIEN"': όλοι οι εξωγήινοι
+            '"BEAR"': όλες οι αρκούδες
+            '"CAT"': όλες οι γάτες
+            '"DOG"': όλοι οι σκύλοι
+            '"DUCK"': όλες οι πάπιες
+            '"FROG"': όλοι οι βάτραχοι
+            '"MOOSE"': όλα τα ελάφια
+            '"PINEAPPLE"': όλοι οι ανανάδες
+            '"ROBOT"': όλα τα ρομπότ
+            '"SHARK"': όλοι οι καρχαρίες
+            '"UNICORN"': Μονόκεροι
           PROPERTY:
             '"scale"': μέγεθος
             '"width"': πλάτος
