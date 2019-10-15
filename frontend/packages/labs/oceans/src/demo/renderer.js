@@ -123,20 +123,21 @@ function drawUpcomingFish() {
 
 function drawTrainingUiElements() {
   const container = document.getElementById('ui-container');
+  const next = function() {
+    trainingIndex += 1;
+    drawTraining();
+  };
+
   const buttons = [
     {
       text: 'like',
       id: 'like-button',
-      onClick: () => {
-        console.log('clicked like');
-      }
+      onClick: next
     },
     {
       text: 'dislike',
       id: 'dislike-button',
-      onClick: () => {
-        console.log('clicked dislike');
-      }
+      onClick: next
     }
   ];
 
