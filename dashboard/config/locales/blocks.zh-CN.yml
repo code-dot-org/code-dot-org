@@ -81,6 +81,28 @@ zh-CN:
             '"rotation"': 旋转
             '"x"': 水平位置
             '"y"': 垂直位置
+      Dancelab_changePropEachBy:
+        options:
+          GROUP:
+            sprites: 所有
+            '"ALIEN"': 所有外星人
+            '"BEAR"': 所有熊
+            '"CAT"': 所有猫
+            '"DOG"': 所有狗
+            '"DUCK"': 所有鸭子
+            '"FROG"': 所有青蛙
+            '"MOOSE"': 所有驼鹿
+            '"PINEAPPLE"': 所有菠萝
+            '"ROBOT"': 所有机器人
+            '"SHARK"': 所有鲨鱼
+            '"UNICORN"': 独角兽
+          PROPERTY:
+            '"scale"': 大小
+            '"width"': 宽度
+            '"height"': 高度
+            '"rotation"': 旋转
+            '"x"': 水平位置
+            '"y"': 垂直位置
       Dancelab_doMoveEachLR:
         text: 在 {GROUP} 中，进行 {MOVE} {DIR} 一次
         options:
@@ -96,7 +118,7 @@ zh-CN:
             '"PINEAPPLE"': 所有菠萝
             '"ROBOT"': 所有机器人
             '"SHARK"': 所有鲨鱼
-            '"UNICORN"': 所有独角兽
+            '"UNICORN"': 独角兽
           MOVE:
             '"rand"': 随机
             MOVES.XBend: 弯曲
@@ -159,7 +181,7 @@ zh-CN:
       Dancelab_eval:
         text: 执行 {CODE}
       Dancelab_everySeconds:
-        text: '每次 {N} {UNIT} '
+        text: '每 {N} {UNIT} '
         options:
           UNIT:
             '"measures"': 节拍
@@ -243,6 +265,32 @@ zh-CN:
             "{x: 100, y: 300}": 左下
             "{x: 300, y: 300}": 右下
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": 随机
+      Dancelab_jumpToEach:
+        options:
+          GROUP:
+            sprites: 所有
+            '"ALIEN"': 所有外星人
+            '"BEAR"': 所有熊
+            '"CAT"': 所有猫
+            '"DOG"': 所有狗
+            '"DUCK"': 所有鸭子
+            '"FROG"': 所有青蛙
+            '"MOOSE"': 所有驼鹿
+            '"PINEAPPLE"': 所有菠萝
+            '"ROBOT"': 所有机器人
+            '"SHARK"': 所有鲨鱼
+            '"UNICORN"': 独角兽
+          LOCATION:
+            "{x: 200, y: 100}": 顶部
+            "{x: 200, y: 300}": 底部
+            "{x: 100, y: 200}": 向左
+            "{x: 300, y: 200}": 向右
+            "{x: 200, y: 200}": 中央
+            "{x: 100, y: 100}": 左上
+            "{x: 300, y: 100}": 右上
+            "{x: 100, y: 300}": 左下
+            "{x: 300, y: 300}": 右下
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": 随机
       Dancelab_layoutSprites:
         text: 布局 {GROUP} 作为 {FORMAT}
         options:
@@ -258,7 +306,7 @@ zh-CN:
             '"PINEAPPLE"': 所有菠萝
             '"ROBOT"': 所有机器人
             '"SHARK"': 所有鲨鱼
-            '"UNICORN"': 所有独角兽
+            '"UNICORN"': 独角兽
           FORMAT:
             '"border"': 边框
             '"inner"': 正方形内部
@@ -270,15 +318,16 @@ zh-CN:
             '"plus"': 添加
             '"random"': 随机
       Dancelab_makeAnonymousDanceSprite:
+        text: 在 {LOCATION} 创建一个新的 {COSTUME}
         options:
           COSTUME:
             '"ALIEN"': 外星人
-            '"BEAR"': 玩具熊
+            '"BEAR"': 熊
             '"CAT"': 猫
             '"DOG"': 狗
             '"DUCK"': 鸭子
             '"FROG"': 青蛙
-            '"MOOSE"': 驼鹿
+            '"MOOSE"': 所有驼鹿
             '"PINEAPPLE"': 菠萝
             '"ROBOT"': 机器人
             '"SHARK"': 鲨鱼
@@ -301,7 +350,7 @@ zh-CN:
         options:
           COSTUME:
             '"ALIEN"': 外星人
-            '"BEAR"': 玩具熊
+            '"BEAR"': 熊
             '"CAT"': 猫
             '"DOG"': 狗
             '"DUCK"': 鸭子
@@ -470,7 +519,7 @@ zh-CN:
             '"PINEAPPLE"': 所有菠萝
             '"ROBOT"': 所有机器人
             '"SHARK"': 所有鲨鱼
-            '"UNICORN"': 所有独角兽
+            '"UNICORN"': 独角兽
           SPEED:
             '1': 正常
             '2': 快
@@ -524,7 +573,6 @@ zh-CN:
             '"rotation"': 旋转
             '"x"': 水平位置
             '"y"': 垂直位置
-            '"tint"': 色调
       Dancelab_setPropEach:
         text: 设置 {GROUP} {PROPERTY} 为 {VAL}
         options:
@@ -540,7 +588,17 @@ zh-CN:
             '"PINEAPPLE"': 所有菠萝
             '"ROBOT"': 所有机器人
             '"SHARK"': 所有鲨鱼
-            '"UNICORN"': 所有独角兽
+            '"UNICORN"': 独角兽
+          PROPERTY:
+            '"scale"': 大小
+            '"width"': 宽度
+            '"height"': 高度
+            '"rotation"': 旋转
+            '"x"': 水平位置
+            '"y"': 垂直位置
+      Dancelab_setPropRandom:
+        text: 随机 {SPRITE} {PROPERTY}
+        options:
           PROPERTY:
             '"scale"': 大小
             '"width"': 宽度
@@ -549,9 +607,21 @@ zh-CN:
             '"x"': 水平位置
             '"y"': 垂直位置
             '"tint"': 色调
-      Dancelab_setPropRandom:
-        text: 随机 {SPRITE} {PROPERTY}
+      Dancelab_setPropRandomEach:
         options:
+          GROUP:
+            sprites: 所有
+            '"ALIEN"': 所有外星人
+            '"BEAR"': 所有熊
+            '"CAT"': 所有猫
+            '"DOG"': 所有狗
+            '"DUCK"': 所有鸭子
+            '"FROG"': 所有青蛙
+            '"MOOSE"': 所有驼鹿
+            '"PINEAPPLE"': 所有菠萝
+            '"ROBOT"': 所有机器人
+            '"SHARK"': 所有鲨鱼
+            '"UNICORN"': 独角兽
           PROPERTY:
             '"scale"': 大小
             '"width"': 宽度
@@ -577,6 +647,7 @@ zh-CN:
             '"PINEAPPLE"': 所有菠萝
             '"ROBOT"': 所有机器人
             '"SHARK"': 所有鲨鱼
+            '"UNICORN"': 独角兽
       Dancelab_setTintEachInline:
         text: 设置 {THIS} 色调为 {VAL}
         options:
@@ -592,6 +663,7 @@ zh-CN:
             '"PINEAPPLE"': 所有菠萝
             '"ROBOT"': 所有机器人
             '"SHARK"': 所有鲨鱼
+            '"UNICORN"': 独角兽
       Dancelab_setTintInline:
         text: 设置 {SPRITE} 色调为 {VAL}
       Dancelab_setVisible:
@@ -615,7 +687,7 @@ zh-CN:
             '"PINEAPPLE"': 所有菠萝
             '"ROBOT"': 所有机器人
             '"SHARK"': 所有鲨鱼
-            '"UNICORN"': 所有独角兽
+            '"UNICORN"': 独角兽
           VISIBILITY:
             'true': 可见
             'false': 隐藏
@@ -634,9 +706,64 @@ zh-CN:
             '"bass"': 低音
             '"mid"': 中音音量
             '"treble"': 高音音量
+      Dancelab_startMappingEach:
+        options:
+          GROUP:
+            sprites: 所有
+            '"ALIEN"': 所有外星人
+            '"BEAR"': 所有熊
+            '"CAT"': 所有猫
+            '"DOG"': 所有狗
+            '"DUCK"': 所有鸭子
+            '"FROG"': 所有青蛙
+            '"MOOSE"': 所有驼鹿
+            '"PINEAPPLE"': 所有菠萝
+            '"ROBOT"': 所有机器人
+            '"SHARK"': 所有鲨鱼
+            '"UNICORN"': 独角兽
+          PROPERTY:
+            '"scale"': 大小
+            '"width"': 宽度
+            '"height"': 高度
+            '"rotation"': 旋转
+            '"x"': 水平位置
+            '"y"': 垂直位置
+            '"tint"': 色调
+          RANGE:
+            '"bass"': 低音
+            '"mid"': 中音音量
+            '"treble"': 高音音量
       Dancelab_stopMapping:
         text: "{SPRITE} 停止 {PROPERTY} 为 {RANGE}"
         options:
+          PROPERTY:
+            '"scale"': 大小
+            '"width"': 宽度
+            '"height"': 高度
+            '"rotation"': 旋转
+            '"x"': 水平位置
+            '"y"': 垂直位置
+            '"direction"': 移动方向
+            '"tint"': 色调
+          RANGE:
+            '"bass"': 低音
+            '"mid"': 中音音量
+            '"treble"': 高音音量
+      Dancelab_stopMappingEach:
+        options:
+          GROUP:
+            sprites: 所有
+            '"ALIEN"': 所有外星人
+            '"BEAR"': 所有熊
+            '"CAT"': 所有猫
+            '"DOG"': 所有狗
+            '"DUCK"': 所有鸭子
+            '"FROG"': 所有青蛙
+            '"MOOSE"': 所有驼鹿
+            '"PINEAPPLE"': 所有菠萝
+            '"ROBOT"': 所有机器人
+            '"SHARK"': 所有鲨鱼
+            '"UNICORN"': 独角兽
           PROPERTY:
             '"scale"': 大小
             '"width"': 宽度
