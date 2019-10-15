@@ -62,7 +62,11 @@ function drawTrainingScreen(state) {
     renderBackgroundImage(state.ctx, state.backgroundImg);
     drawTrainingFish(state);
     drawUpcomingFish(state);
-    drawTrainingUiElements(state);
+    if (!state.uiDrawn) {
+      drawTrainingUiElements(state);
+      state.uiDrawn = true;
+      setState(state);
+    }
   } else {
     loadBackgroundImage().then(backgroundImg => {
       state = {...state, backgroundImg};
