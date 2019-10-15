@@ -58,6 +58,28 @@ uk:
             '"rotation"': поворот
             '"x"': горизонтальне положення
             '"y"': вертикальне положення
+      Dancelab_changePropEachBy:
+        options:
+          GROUP:
+            sprites: усі
+            '"ALIEN"': всі прибульці
+            '"BEAR"': всі ведмеді
+            '"CAT"': всі коти
+            '"DOG"': всі собаки
+            '"DUCK"': всі качки
+            '"FROG"': всі жаби
+            '"MOOSE"': всі лосі
+            '"PINEAPPLE"': всі ананаси
+            '"ROBOT"': всі роботи
+            '"SHARK"': всі акули
+            '"UNICORN"': Єдинороги
+          PROPERTY:
+            '"scale"': розмір
+            '"width"': ширина
+            '"height"': висота
+            '"rotation"': поворот
+            '"x"': горизонтальне положення
+            '"y"': вертикальне положення
       Dancelab_doMoveEachLR:
         text: "{GROUP} виконує рух {MOVE} {DIR} один раз"
         options:
@@ -73,7 +95,7 @@ uk:
             '"PINEAPPLE"': всі ананаси
             '"ROBOT"': всі роботи
             '"SHARK"': всі акули
-            '"UNICORN"': всі єдинороги
+            '"UNICORN"': Єдинороги
           MOVE:
             '"rand"': "(Випадковий)"
           DIR:
@@ -154,6 +176,32 @@ uk:
             "{x: 100, y: 300}": нижній лівий кут
             "{x: 300, y: 300}": нижній правий кут
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": випадковий
+      Dancelab_jumpToEach:
+        options:
+          GROUP:
+            sprites: усі
+            '"ALIEN"': всі прибульці
+            '"BEAR"': всі ведмеді
+            '"CAT"': всі коти
+            '"DOG"': всі собаки
+            '"DUCK"': всі качки
+            '"FROG"': всі жаби
+            '"MOOSE"': всі лосі
+            '"PINEAPPLE"': всі ананаси
+            '"ROBOT"': всі роботи
+            '"SHARK"': всі акули
+            '"UNICORN"': Єдинороги
+          LOCATION:
+            "{x: 200, y: 100}": вгорі
+            "{x: 200, y: 300}": вниз
+            "{x: 100, y: 200}": ліворуч
+            "{x: 300, y: 200}": праворуч
+            "{x: 200, y: 200}": посередині
+            "{x: 100, y: 100}": верхній лівий кут
+            "{x: 300, y: 100}": верхній правий кут
+            "{x: 100, y: 300}": нижній лівий кут
+            "{x: 300, y: 300}": нижній правий кут
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": випадковий
       Dancelab_layoutSprites:
         text: розмістити {GROUP} у формі {FORMAT}
         options:
@@ -169,7 +217,7 @@ uk:
             '"PINEAPPLE"': всі ананаси
             '"ROBOT"': всі роботи
             '"SHARK"': всі акули
-            '"UNICORN"': всі єдинороги
+            '"UNICORN"': Єдинороги
           FORMAT:
             '"border"': рамка
             '"inner"': внутрішній квадрат
@@ -183,17 +231,17 @@ uk:
       Dancelab_makeAnonymousDanceSprite:
         options:
           COSTUME:
-            '"ALIEN"': Прибулець
+            '"ALIEN"': інопланетянин
             '"BEAR"': Ведмідь
-            '"CAT"': Кіт
-            '"DOG"': Собака
-            '"DUCK"': Качка
+            '"CAT"': кіт
+            '"DOG"': пес
+            '"DUCK"': качку
             '"FROG"': Жаба
-            '"MOOSE"': Лось
+            '"MOOSE"': всі лосі
             '"PINEAPPLE"': Ананас
-            '"ROBOT"': Робот
+            '"ROBOT"': робот
             '"SHARK"': Акула
-            '"UNICORN"': Єдиноріг
+            '"UNICORN"': єдиноріг
           LOCATION:
             "{x: 200, y: 100}": вгорі
             "{x: 200, y: 300}": вниз
@@ -349,7 +397,7 @@ uk:
             '"PINEAPPLE"': всі ананаси
             '"ROBOT"': всі роботи
             '"SHARK"': всі акули
-            '"UNICORN"': всі єдинороги
+            '"UNICORN"': Єдинороги
           SPEED:
             '1': нормальний
             '2': швидко
@@ -383,7 +431,6 @@ uk:
             '"rotation"': поворот
             '"x"': горизонтальне положення
             '"y"': вертикальне положення
-            '"tint"': відтінок
       Dancelab_setPropEach:
         text: встановити {GROUP} {PROPERTY} у {VAL}
         options:
@@ -399,7 +446,17 @@ uk:
             '"PINEAPPLE"': всі ананаси
             '"ROBOT"': всі роботи
             '"SHARK"': всі акули
-            '"UNICORN"': всі єдинороги
+            '"UNICORN"': Єдинороги
+          PROPERTY:
+            '"scale"': розмір
+            '"width"': ширина
+            '"height"': висота
+            '"rotation"': поворот
+            '"x"': горизонтальне положення
+            '"y"': вертикальне положення
+      Dancelab_setPropRandom:
+        text: випадково {SPRITE} {PROPERTY}
+        options:
           PROPERTY:
             '"scale"': розмір
             '"width"': ширина
@@ -408,9 +465,21 @@ uk:
             '"x"': горизонтальне положення
             '"y"': вертикальне положення
             '"tint"': відтінок
-      Dancelab_setPropRandom:
-        text: випадково {SPRITE} {PROPERTY}
+      Dancelab_setPropRandomEach:
         options:
+          GROUP:
+            sprites: усі
+            '"ALIEN"': всі прибульці
+            '"BEAR"': всі ведмеді
+            '"CAT"': всі коти
+            '"DOG"': всі собаки
+            '"DUCK"': всі качки
+            '"FROG"': всі жаби
+            '"MOOSE"': всі лосі
+            '"PINEAPPLE"': всі ананаси
+            '"ROBOT"': всі роботи
+            '"SHARK"': всі акули
+            '"UNICORN"': Єдинороги
           PROPERTY:
             '"scale"': розмір
             '"width"': ширина
@@ -436,6 +505,7 @@ uk:
             '"PINEAPPLE"': всі ананаси
             '"ROBOT"': всі роботи
             '"SHARK"': всі акули
+            '"UNICORN"': Єдинороги
       Dancelab_setTintEachInline:
         text: встановити для {THIS} відтінок у {VAL}
         options:
@@ -451,6 +521,7 @@ uk:
             '"PINEAPPLE"': всі ананаси
             '"ROBOT"': всі роботи
             '"SHARK"': всі акули
+            '"UNICORN"': Єдинороги
       Dancelab_setTintInline:
         text: встановити для {SPRITE} відтінок {VAL}
       Dancelab_setVisible:
@@ -474,7 +545,7 @@ uk:
             '"PINEAPPLE"': всі ананаси
             '"ROBOT"': всі роботи
             '"SHARK"': всі акули
-            '"UNICORN"': всі єдинороги
+            '"UNICORN"': Єдинороги
           VISIBILITY:
             'true': видимий
             'false': невидимий
@@ -493,9 +564,64 @@ uk:
             '"bass"': низькі тони
             '"mid"': середні тони
             '"treble"': високі тони
+      Dancelab_startMappingEach:
+        options:
+          GROUP:
+            sprites: усі
+            '"ALIEN"': всі прибульці
+            '"BEAR"': всі ведмеді
+            '"CAT"': всі коти
+            '"DOG"': всі собаки
+            '"DUCK"': всі качки
+            '"FROG"': всі жаби
+            '"MOOSE"': всі лосі
+            '"PINEAPPLE"': всі ананаси
+            '"ROBOT"': всі роботи
+            '"SHARK"': всі акули
+            '"UNICORN"': Єдинороги
+          PROPERTY:
+            '"scale"': розмір
+            '"width"': ширина
+            '"height"': висота
+            '"rotation"': поворот
+            '"x"': горизонтальне положення
+            '"y"': вертикальне положення
+            '"tint"': відтінок
+          RANGE:
+            '"bass"': низькі тони
+            '"mid"': середні тони
+            '"treble"': високі тони
       Dancelab_stopMapping:
         text: "{SPRITE} припиняє {PROPERTY} після {RANGE}"
         options:
+          PROPERTY:
+            '"scale"': розмір
+            '"width"': ширина
+            '"height"': висота
+            '"rotation"': поворот
+            '"x"': горизонтальне положення
+            '"y"': вертикальне положення
+            '"direction"': напрямок руху
+            '"tint"': відтінок
+          RANGE:
+            '"bass"': низькі тони
+            '"mid"': середні тони
+            '"treble"': високі тони
+      Dancelab_stopMappingEach:
+        options:
+          GROUP:
+            sprites: усі
+            '"ALIEN"': всі прибульці
+            '"BEAR"': всі ведмеді
+            '"CAT"': всі коти
+            '"DOG"': всі собаки
+            '"DUCK"': всі качки
+            '"FROG"': всі жаби
+            '"MOOSE"': всі лосі
+            '"PINEAPPLE"': всі ананаси
+            '"ROBOT"': всі роботи
+            '"SHARK"': всі акули
+            '"UNICORN"': Єдинороги
           PROPERTY:
             '"scale"': розмір
             '"width"': ширина
