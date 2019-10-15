@@ -25,10 +25,10 @@ require_relative '../../lib/cdo/github'
 
 require_relative 'i18n_script_utils'
 
-require_relative 'sync-codeorg-in'
-require_relative 'sync-codeorg-up'
-require_relative 'sync-codeorg-down'
-require_relative 'sync-codeorg-out'
+require_relative 'sync-in'
+require_relative 'sync-up'
+require_relative 'sync-down'
+require_relative 'sync-out'
 require_relative 'upload_i18n_translation_percentages_to_gdrive'
 
 require 'optparse'
