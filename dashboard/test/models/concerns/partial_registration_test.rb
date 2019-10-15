@@ -101,14 +101,10 @@ class PartialRegistrationTest < ActiveSupport::TestCase
     assert_equal user.oauth_refresh_token, result_user.oauth_refresh_token
   end
 
-  test 'cancel ends signup tracking and deletes user attributes from the session' do
+  test 'cancel deletes user attributes from the session' do
     user = build :user, :google_sso_provider
     session = fake_session user.attributes
-
-    SignUpTracking.expects(:log_cancel_finish_sign_up)
-    SignUpTracking.expects(:end_sign_up_tracking)
     new_session = PartialRegistration.cancel(session)
-
     assert_nil new_session[PartialRegistration::USER_ATTRIBUTES_SESSION_KEY]
   end
 

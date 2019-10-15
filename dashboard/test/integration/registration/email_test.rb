@@ -8,13 +8,6 @@ module RegistrationsControllerTests
   class EmailTest < ActionDispatch::IntegrationTest
     include OmniauthCallbacksControllerTests::Utils
 
-    setup do
-      stub_firehose
-
-      # Force split-test to control group (override in tests over experiment)
-      SignUpTracking.stubs(:split_test_percentage).returns(100)
-    end
-
     test "student sign-up" do
       email = "student@example.com"
 
@@ -39,16 +32,6 @@ module RegistrationsControllerTests
 
       created_user = User.find signed_in_user_id
       assert_equal User.hash_email(email), created_user.hashed_email
-
-      assert_sign_up_tracking(
-        SignUpTracking::NEW_SIGN_UP_GROUP,
-        %w(
-          load-new-sign-up-page
-          begin-sign-up-success
-          email-load-finish-sign-up-page
-          email-sign-up-success
-        )
-      )
     ensure
       created_user&.destroy!
     end

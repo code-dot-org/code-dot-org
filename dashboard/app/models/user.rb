@@ -73,7 +73,6 @@ require 'digest/md5'
 require 'cdo/aws/metrics'
 require 'cdo/user_helpers'
 require 'school_info_interstitial_helper'
-require 'sign_up_tracking'
 
 class User < ActiveRecord::Base
   include SerializedProperties
@@ -651,11 +650,8 @@ class User < ActiveRecord::Base
   def self.from_omniauth(auth, params, session = nil)
     omniauth_user = find_by_credential(type: auth.provider, id: auth.uid)
 
-    unless omniauth_user
-      omniauth_user = create do |user|
-        initialize_new_oauth_user(user, auth, params)
-      end
-      SignUpTracking.log_sign_up_result(omniauth_user, session)
+    omniauth_user ||= create do |user|
+      initialize_new_oauth_user(user, auth, params)
     end
 
     omniauth_user.update_oauth_credential_tokens(auth)

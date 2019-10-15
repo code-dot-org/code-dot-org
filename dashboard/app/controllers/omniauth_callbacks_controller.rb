@@ -119,11 +119,6 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     provider = auth_hash.provider.to_s
     session[:sign_up_type] = provider
 
-    # For some providers, signups can happen without ever having hit the sign_up page, where
-    # our tracking data is usually populated, so do it here
-    SignUpTracking.begin_sign_up_tracking(session)
-    SignUpTracking.log_oauth_callback provider, session
-
     # Fiddle with data if it's a Powerschool request (other OpenID 2.0 providers might need similar treatment if we add any)
     if provider == 'powerschool'
       auth_hash = extract_powerschool_data(auth_hash)
@@ -161,7 +156,6 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   private
 
   def sign_in_google_oauth2(user)
-    SignUpTracking.log_oauth_callback AuthenticationOption::GOOGLE, session
     prepare_locale_cookie user
 
     if allows_section_takeover user
@@ -172,11 +166,6 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   def sign_up_google_oauth2
     session[:sign_up_type] = AuthenticationOption::GOOGLE
-
-    # For some providers, signups can happen without ever having hit the sign_up page, where
-    # our tracking data is usually populated, so do it here
-    SignUpTracking.begin_sign_up_tracking(session, split_test: true)
-    SignUpTracking.log_oauth_callback AuthenticationOption::GOOGLE, session
 
     user = User.new.tap do |u|
       User.initialize_new_oauth_user(u, auth_hash, auth_params)
@@ -195,7 +184,6 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   def sign_in_clever(user)
-    SignUpTracking.log_oauth_callback AuthenticationOption::CLEVER, session
     prepare_locale_cookie user
     user.update_oauth_credential_tokens auth_hash
     handle_untrusted_email_signin(user, AuthenticationOption::CLEVER)
@@ -203,12 +191,6 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   def sign_up_clever
     session[:sign_up_type] = AuthenticationOption::CLEVER
-
-    # For some providers, signups can happen without ever having hit the sign_up page, where
-    # our tracking data is usually populated, so do it here
-    # Clever performed poorly in our split test, so never send it to the experiment
-    SignUpTracking.begin_sign_up_tracking(session, split_test: false)
-    SignUpTracking.log_oauth_callback AuthenticationOption::CLEVER, session
 
     user = User.from_omniauth(auth_hash, auth_params, session)
     prepare_locale_cookie user
@@ -439,10 +421,6 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   def sign_in_user(user)
     flash.notice = I18n.t('auth.signed_in')
-
-    # Will only log if the sign_up page session cookie is set, so this is safe to call in all cases
-    SignUpTracking.log_sign_in(user, session, request)
-
     sign_in_and_redirect user
   end
 

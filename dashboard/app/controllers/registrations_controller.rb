@@ -24,7 +24,6 @@ class RegistrationsController < Devise::RegistrationsController
       @user = User.new_with_session(user_params, session)
     else
       @already_hoc_registered = params[:already_hoc_registered]
-      SignUpTracking.begin_sign_up_tracking(session, split_test: true)
       super
     end
   end
@@ -37,7 +36,6 @@ class RegistrationsController < Devise::RegistrationsController
   def begin_sign_up
     @user = User.new(begin_sign_up_params)
     @user.validate_for_finish_sign_up
-    SignUpTracking.log_begin_sign_up(@user, session)
 
     if @user.errors.blank?
       PartialRegistration.persist_attributes(session, @user)
@@ -103,8 +101,6 @@ class RegistrationsController < Devise::RegistrationsController
       storage_id = take_storage_id_ownership_from_cookie(current_user.id)
       current_user.generate_progress_from_storage_id(storage_id) if storage_id
     end
-
-    SignUpTracking.log_sign_up_result resource, session
   end
 
   #

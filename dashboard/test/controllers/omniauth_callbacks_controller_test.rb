@@ -547,7 +547,6 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   end
 
   test 'clever: creates user if user is not found by credentials' do
-    SignUpTracking.stubs(:new_sign_up_experience?).returns(false)
     # Given I do not have a Code.org account
     uid = "nonexistent-clever"
 
@@ -574,7 +573,6 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   end
 
   test 'clever: does not direct user to finish sign-up (new_sign_up_experience)' do
-    SignUpTracking.stubs(:new_sign_up_experience?).returns(true)
     # Given I do not have a Code.org account
     uid = "nonexistent-clever"
 
@@ -601,7 +599,6 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   end
 
   test 'clever: sets tokens on new user' do
-    SignUpTracking.stubs(:new_sign_up_experience?).returns(false)
     # Given I do not have a Code.org account
     uid = "nonexistent-clever"
 
@@ -753,7 +750,6 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   end
 
   test 'google_oauth2: sets tokens in session/cache when redirecting to complete registration (new_sign_up_experience)' do
-    SignUpTracking.stubs(:new_sign_up_experience?).returns(true)
     # Given I do not have a Code.org account
     uid = "nonexistent-google-oauth2"
 
