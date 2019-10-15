@@ -163,11 +163,15 @@ function loadMap(locations) {
 }
 
 export function compileHTML(index, location) {
+  const container = document.createElement('div');
   var lines = [];
   var line;
+  var html = '';
 
-  // Compile HTML.
-  var html = '<h3 class="entry-detail">' + location.school_name_s + '</h3>';
+  const schoolNameH3 = document.createElement('h3');
+  schoolNameH3.className = 'entry-detail';
+  schoolNameH3.innerText = location.school_name_s;
+  container.appendChild(schoolNameH3);
 
   if (location.school_address_s) {
     line = location.school_address_s;
@@ -220,7 +224,7 @@ export function compileHTML(index, location) {
     index +
     '">More information</a></div>';
 
-  return html + more_link;
+  return container.innerHTML + html + more_link;
 }
 
 function setDetailsTrigger(index, location, marker) {
