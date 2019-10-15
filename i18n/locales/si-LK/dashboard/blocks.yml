@@ -21,6 +21,11 @@ si:
           PROPERTY:
             '"scale"': විශාලත්වය
             '"height"': උස
+      Dancelab_changePropEachBy:
+        options:
+          PROPERTY:
+            '"scale"': විශාලත්වය
+            '"height"': උස
       Dancelab_doMoveEachLR:
         options:
           DIR:
@@ -54,18 +59,38 @@ si:
             "{x: 100, y: 200}": වම
             "{x: 300, y: 200}": දකුණ
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": අහඹු
+      Dancelab_jumpToEach:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": වම
+            "{x: 300, y: 200}": දකුණ
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": අහඹු
       Dancelab_layoutSprites:
         options:
           FORMAT:
             '"random"': අහඹු
       Dancelab_makeAnonymousDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': පිටසක්වල ජීවියා
+            '"CAT"': බළලා
+            '"DOG"': බල්ලා
+            '"DUCK"': තාරාවා
+            '"ROBOT"': රොබෝ
+            '"UNICORN"': කඟවේනා
           LOCATION:
             "{x: 100, y: 200}": වම
             "{x: 300, y: 200}": දකුණ
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": අහඹු
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': පිටසක්වල ජීවියා
+            '"CAT"': බළලා
+            '"DOG"': බල්ලා
+            '"DUCK"': තාරාවා
+            '"ROBOT"': රොබෝ
+            '"UNICORN"': කඟවේනා
           LOCATION:
             "{x: 100, y: 200}": වම
             "{x: 300, y: 200}": දකුණ
@@ -127,12 +152,27 @@ si:
           PROPERTY:
             '"scale"': විශාලත්වය
             '"height"': උස
+      Dancelab_setPropRandomEach:
+        options:
+          PROPERTY:
+            '"scale"': විශාලත්වය
+            '"height"': උස
       Dancelab_startMapping:
         options:
           PROPERTY:
             '"scale"': විශාලත්වය
             '"height"': උස
+      Dancelab_startMappingEach:
+        options:
+          PROPERTY:
+            '"scale"': විශාලත්වය
+            '"height"': උස
       Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': විශාලත්වය
+            '"height"': උස
+      Dancelab_stopMappingEach:
         options:
           PROPERTY:
             '"scale"': විශාලත්වය

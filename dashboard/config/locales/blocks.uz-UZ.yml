@@ -26,6 +26,10 @@ uz:
         options:
           LOCATION:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": tasodifiy
+      Dancelab_jumpToEach:
+        options:
+          LOCATION:
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": tasodifiy
       Dancelab_layoutSprites:
         options:
           FORMAT:

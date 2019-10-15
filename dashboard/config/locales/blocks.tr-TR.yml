@@ -72,6 +72,28 @@ tr:
             '"rotation"': yön
             '"x"': yatay konum
             '"y"': dikey konum
+      Dancelab_changePropEachBy:
+        options:
+          GROUP:
+            sprites: tüm
+            '"ALIEN"': tüm uzaylılar
+            '"BEAR"': tüm ayılar
+            '"CAT"': tüm kediler
+            '"DOG"': tüm köpekler
+            '"DUCK"': tüm ördekler
+            '"FROG"': tüm kurbağalar
+            '"MOOSE"': tüm geyikler
+            '"PINEAPPLE"': tüm ananaslar
+            '"ROBOT"': tüm robotlar
+            '"SHARK"': tüm köpekbalıkları
+            '"UNICORN"': Tek boynuzlu atlar
+          PROPERTY:
+            '"scale"': boyut
+            '"width"': genişlik
+            '"height"': Yükseklik
+            '"rotation"': yön
+            '"x"': yatay konum
+            '"y"': dikey konum
       Dancelab_doMoveEachLR:
         text: "{GROUP} bir kere {MOVE} {DIR} yap"
         options:
@@ -87,7 +109,7 @@ tr:
             '"PINEAPPLE"': tüm ananaslar
             '"ROBOT"': tüm robotlar
             '"SHARK"': tüm köpekbalıkları
-            '"UNICORN"': tüm tek boynuzlu atlar
+            '"UNICORN"': Tek boynuzlu atlar
           MOVE:
             '"rand"': "(Rastgele)"
             MOVES.Roll: Yuvarlanma
@@ -188,6 +210,32 @@ tr:
             "{x: 100, y: 300}": sol alt
             "{x: 300, y: 300}": sağ alt
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": gelişigüzel
+      Dancelab_jumpToEach:
+        options:
+          GROUP:
+            sprites: tüm
+            '"ALIEN"': tüm uzaylılar
+            '"BEAR"': tüm ayılar
+            '"CAT"': tüm kediler
+            '"DOG"': tüm köpekler
+            '"DUCK"': tüm ördekler
+            '"FROG"': tüm kurbağalar
+            '"MOOSE"': tüm geyikler
+            '"PINEAPPLE"': tüm ananaslar
+            '"ROBOT"': tüm robotlar
+            '"SHARK"': tüm köpekbalıkları
+            '"UNICORN"': Tek boynuzlu atlar
+          LOCATION:
+            "{x: 200, y: 100}": üst
+            "{x: 200, y: 300}": alt
+            "{x: 100, y: 200}": sol
+            "{x: 300, y: 200}": sağ
+            "{x: 200, y: 200}": merkez
+            "{x: 100, y: 100}": sol üst
+            "{x: 300, y: 100}": sağ üst
+            "{x: 100, y: 300}": sol alt
+            "{x: 300, y: 300}": sağ alt
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": gelişigüzel
       Dancelab_layoutSprites:
         text: "{GROUP}’i bir {FORMAT} olarak düzenle"
         options:
@@ -203,7 +251,7 @@ tr:
             '"PINEAPPLE"': tüm ananaslar
             '"ROBOT"': tüm robotlar
             '"SHARK"': tüm köpekbalıkları
-            '"UNICORN"': tüm tek boynuzlu atlar
+            '"UNICORN"': Tek boynuzlu atlar
           FORMAT:
             '"border"': kenarlık
             '"inner"': iç kare
@@ -219,14 +267,15 @@ tr:
           COSTUME:
             '"ALIEN"': Uzaylı
             '"BEAR"': Ayı
-            '"CAT"': Kedi
-            '"DOG"': Köpek
-            '"DUCK"': Ördek
+            '"CAT"': kedi
+            '"DOG"': köpek
+            '"DUCK"': ördek
             '"FROG"': Kurbağa
-            '"MOOSE"': Geyik
+            '"MOOSE"': tüm geyikler
             '"PINEAPPLE"': Ananas
+            '"ROBOT"': Robot
             '"SHARK"': Köpek balığı
-            '"UNICORN"': Tek boynuzlu at
+            '"UNICORN"': Tek boynuzlu
           LOCATION:
             "{x: 200, y: 100}": üst
             "{x: 200, y: 300}": alt
@@ -252,6 +301,7 @@ tr:
             '"FROG"': Kurbağa
             '"MOOSE"': Geyik
             '"PINEAPPLE"': Ananas
+            '"ROBOT"': Robot
             '"SHARK"': Köpek balığı
             '"UNICORN"': Tek boynuzlu at
           LOCATION:
@@ -402,7 +452,7 @@ tr:
             '"PINEAPPLE"': tüm ananaslar
             '"ROBOT"': tüm robotlar
             '"SHARK"': tüm köpekbalıkları
-            '"UNICORN"': tüm tek boynuzlu atlar
+            '"UNICORN"': Tek boynuzlu atlar
           SPEED:
             '1': normal
             '2': hızlı
@@ -450,7 +500,6 @@ tr:
             '"rotation"': yön
             '"x"': yatay konum
             '"y"': dikey konum
-            '"tint"': renk tonu
       Dancelab_setPropEach:
         text: "{GROUP} {PROPERTY}’i {VAL} olarak ayarla"
         options:
@@ -466,7 +515,17 @@ tr:
             '"PINEAPPLE"': tüm ananaslar
             '"ROBOT"': tüm robotlar
             '"SHARK"': tüm köpekbalıkları
-            '"UNICORN"': tüm tek boynuzlu atlar
+            '"UNICORN"': Tek boynuzlu atlar
+          PROPERTY:
+            '"scale"': boyut
+            '"width"': genişlik
+            '"height"': Yükseklik
+            '"rotation"': yön
+            '"x"': yatay konum
+            '"y"': dikey konum
+      Dancelab_setPropRandom:
+        text: "{SPRITE} {PROPERTY}’i rastgele yap"
+        options:
           PROPERTY:
             '"scale"': boyut
             '"width"': genişlik
@@ -475,9 +534,21 @@ tr:
             '"x"': yatay konum
             '"y"': dikey konum
             '"tint"': renk tonu
-      Dancelab_setPropRandom:
-        text: "{SPRITE} {PROPERTY}’i rastgele yap"
+      Dancelab_setPropRandomEach:
         options:
+          GROUP:
+            sprites: tüm
+            '"ALIEN"': tüm uzaylılar
+            '"BEAR"': tüm ayılar
+            '"CAT"': tüm kediler
+            '"DOG"': tüm köpekler
+            '"DUCK"': tüm ördekler
+            '"FROG"': tüm kurbağalar
+            '"MOOSE"': tüm geyikler
+            '"PINEAPPLE"': tüm ananaslar
+            '"ROBOT"': tüm robotlar
+            '"SHARK"': tüm köpekbalıkları
+            '"UNICORN"': Tek boynuzlu atlar
           PROPERTY:
             '"scale"': boyut
             '"width"': genişlik
@@ -502,6 +573,7 @@ tr:
             '"PINEAPPLE"': tüm ananaslar
             '"ROBOT"': tüm robotlar
             '"SHARK"': tüm köpekbalıkları
+            '"UNICORN"': Tek boynuzlu atlar
       Dancelab_setTintEachInline:
         options:
           THIS:
@@ -516,6 +588,7 @@ tr:
             '"PINEAPPLE"': tüm ananaslar
             '"ROBOT"': tüm robotlar
             '"SHARK"': tüm köpekbalıkları
+            '"UNICORN"': Tek boynuzlu atlar
       Dancelab_setTintInline:
         text: "{SPRITE} renk tonunu {VAL} olarak ayarla"
       Dancelab_setVisible:
@@ -539,7 +612,7 @@ tr:
             '"PINEAPPLE"': tüm ananaslar
             '"ROBOT"': tüm robotlar
             '"SHARK"': tüm köpekbalıkları
-            '"UNICORN"': tüm tek boynuzlu atlar
+            '"UNICORN"': Tek boynuzlu atlar
           VISIBILITY:
             'true': görünür
             'false': görünmez
@@ -558,9 +631,64 @@ tr:
             '"bass"': bas
             '"mid"': orta
             '"treble"': tiz
+      Dancelab_startMappingEach:
+        options:
+          GROUP:
+            sprites: tüm
+            '"ALIEN"': tüm uzaylılar
+            '"BEAR"': tüm ayılar
+            '"CAT"': tüm kediler
+            '"DOG"': tüm köpekler
+            '"DUCK"': tüm ördekler
+            '"FROG"': tüm kurbağalar
+            '"MOOSE"': tüm geyikler
+            '"PINEAPPLE"': tüm ananaslar
+            '"ROBOT"': tüm robotlar
+            '"SHARK"': tüm köpekbalıkları
+            '"UNICORN"': Tek boynuzlu atlar
+          PROPERTY:
+            '"scale"': boyut
+            '"width"': genişlik
+            '"height"': Yükseklik
+            '"rotation"': yön
+            '"x"': yatay konum
+            '"y"': dikey konum
+            '"tint"': renk tonu
+          RANGE:
+            '"bass"': bas
+            '"mid"': orta
+            '"treble"': tiz
       Dancelab_stopMapping:
         text: "{SPRITE} {RANGE}’i takiben {PROPERTY}’i durdurur"
         options:
+          PROPERTY:
+            '"scale"': boyut
+            '"width"': genişlik
+            '"height"': Yükseklik
+            '"rotation"': yön
+            '"x"': yatay konum
+            '"y"': dikey konum
+            '"direction"': hareket yönü
+            '"tint"': renk tonu
+          RANGE:
+            '"bass"': bas
+            '"mid"': orta
+            '"treble"': tiz
+      Dancelab_stopMappingEach:
+        options:
+          GROUP:
+            sprites: tüm
+            '"ALIEN"': tüm uzaylılar
+            '"BEAR"': tüm ayılar
+            '"CAT"': tüm kediler
+            '"DOG"': tüm köpekler
+            '"DUCK"': tüm ördekler
+            '"FROG"': tüm kurbağalar
+            '"MOOSE"': tüm geyikler
+            '"PINEAPPLE"': tüm ananaslar
+            '"ROBOT"': tüm robotlar
+            '"SHARK"': tüm köpekbalıkları
+            '"UNICORN"': Tek boynuzlu atlar
           PROPERTY:
             '"scale"': boyut
             '"width"': genişlik

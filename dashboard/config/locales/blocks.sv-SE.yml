@@ -80,6 +80,28 @@ sv:
             '"rotation"': rotation
             '"x"': horisontellt läge
             '"y"': vertikalt läge
+      Dancelab_changePropEachBy:
+        options:
+          GROUP:
+            sprites: alla
+            '"ALIEN"': alla aliens
+            '"BEAR"': alla björnar
+            '"CAT"': alla katter
+            '"DOG"': alla hundar
+            '"DUCK"': alla ankor
+            '"FROG"': alla grodor
+            '"MOOSE"': alla älgar
+            '"PINEAPPLE"': alla ananaser
+            '"ROBOT"': alla robotar
+            '"SHARK"': alla hajar
+            '"UNICORN"': Enhörningar
+          PROPERTY:
+            '"scale"': storlek
+            '"width"': bredd
+            '"height"': höjd
+            '"rotation"': rotation
+            '"x"': horisontellt läge
+            '"y"': vertikalt läge
       Dancelab_doMoveEachLR:
         text: "{GROUP} gör {MOVE} {DIR} en gång"
         options:
@@ -95,7 +117,7 @@ sv:
             '"PINEAPPLE"': alla ananaser
             '"ROBOT"': alla robotar
             '"SHARK"': alla hajar
-            '"UNICORN"': alla enhörningar
+            '"UNICORN"': Enhörningar
           MOVE:
             '"rand"': "(Slumpad)"
             MOVES.XBend: Böj
@@ -232,6 +254,32 @@ sv:
             "{x: 100, y: 300}": nederst till vänster
             "{x: 300, y: 300}": nederst till höger
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": slumpad
+      Dancelab_jumpToEach:
+        options:
+          GROUP:
+            sprites: alla
+            '"ALIEN"': alla aliens
+            '"BEAR"': alla björnar
+            '"CAT"': alla katter
+            '"DOG"': alla hundar
+            '"DUCK"': alla ankor
+            '"FROG"': alla grodor
+            '"MOOSE"': alla älgar
+            '"PINEAPPLE"': alla ananaser
+            '"ROBOT"': alla robotar
+            '"SHARK"': alla hajar
+            '"UNICORN"': Enhörningar
+          LOCATION:
+            "{x: 200, y: 100}": topp
+            "{x: 200, y: 300}": botten
+            "{x: 100, y: 200}": vänster
+            "{x: 300, y: 200}": höger
+            "{x: 200, y: 200}": mittersta delen
+            "{x: 100, y: 100}": längst upp till vänster
+            "{x: 300, y: 100}": längst upp till höger
+            "{x: 100, y: 300}": nederst till vänster
+            "{x: 300, y: 300}": nederst till höger
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": slumpad
       Dancelab_layoutSprites:
         text: utforma {GROUP} som en/ett {FORMAT}
         options:
@@ -247,7 +295,7 @@ sv:
             '"PINEAPPLE"': alla ananaser
             '"ROBOT"': alla robotar
             '"SHARK"': alla hajar
-            '"UNICORN"': alla enhörningar
+            '"UNICORN"': Enhörningar
           FORMAT:
             '"border"': gräns
             '"inner"': innanför kvadrat
@@ -260,15 +308,17 @@ sv:
       Dancelab_makeAnonymousDanceSprite:
         options:
           COSTUME:
+            '"ALIEN"': alien
             '"BEAR"': Björn
-            '"CAT"': Katt
-            '"DOG"': Hund
-            '"DUCK"': Anka
+            '"CAT"': katt
+            '"DOG"': hund
+            '"DUCK"': anka
             '"FROG"': Groda
-            '"MOOSE"': Älg
+            '"MOOSE"': alla älgar
             '"PINEAPPLE"': Ananas
+            '"ROBOT"': robot
             '"SHARK"': Haj
-            '"UNICORN"': Enhörning
+            '"UNICORN"': enhörning
           LOCATION:
             "{x: 200, y: 100}": topp
             "{x: 200, y: 300}": botten
@@ -286,6 +336,7 @@ sv:
           kallade {NAME} till {LOCATION}
         options:
           COSTUME:
+            '"ALIEN"': alien
             '"BEAR"': Björn
             '"CAT"': Katt
             '"DOG"': Hund
@@ -293,6 +344,7 @@ sv:
             '"FROG"': Groda
             '"MOOSE"': Älg
             '"PINEAPPLE"': Ananas
+            '"ROBOT"': robot
             '"SHARK"': Haj
             '"UNICORN"': Enhörning
           LOCATION:
@@ -332,6 +384,7 @@ sv:
             '19': '19'
             '20': '20'
           COSTUME:
+            '"ALIEN"': alla aliens
             '"BEAR"': Björnar
             '"CAT"': Katter
             '"DOG"': Hundar
@@ -445,7 +498,7 @@ sv:
             '"PINEAPPLE"': alla ananaser
             '"ROBOT"': alla robotar
             '"SHARK"': alla hajar
-            '"UNICORN"': alla enhörningar
+            '"UNICORN"': Enhörningar
           SPEED:
             '1': normal
             '2': snabb
@@ -495,7 +548,6 @@ sv:
             '"rotation"': rotation
             '"x"': horisontellt läge
             '"y"': vertikalt läge
-            '"tint"': färgton
       Dancelab_setPropEach:
         text: ställ in {GROUP} {PROPERTY} till {VAL}
         options:
@@ -511,7 +563,17 @@ sv:
             '"PINEAPPLE"': alla ananaser
             '"ROBOT"': alla robotar
             '"SHARK"': alla hajar
-            '"UNICORN"': alla enhörningar
+            '"UNICORN"': Enhörningar
+          PROPERTY:
+            '"scale"': storlek
+            '"width"': bredd
+            '"height"': höjd
+            '"rotation"': rotation
+            '"x"': horisontellt läge
+            '"y"': vertikalt läge
+      Dancelab_setPropRandom:
+        text: slumpa {SPRITE} {PROPERTY}
+        options:
           PROPERTY:
             '"scale"': storlek
             '"width"': bredd
@@ -520,9 +582,21 @@ sv:
             '"x"': horisontellt läge
             '"y"': vertikalt läge
             '"tint"': färgton
-      Dancelab_setPropRandom:
-        text: slumpa {SPRITE} {PROPERTY}
+      Dancelab_setPropRandomEach:
         options:
+          GROUP:
+            sprites: alla
+            '"ALIEN"': alla aliens
+            '"BEAR"': alla björnar
+            '"CAT"': alla katter
+            '"DOG"': alla hundar
+            '"DUCK"': alla ankor
+            '"FROG"': alla grodor
+            '"MOOSE"': alla älgar
+            '"PINEAPPLE"': alla ananaser
+            '"ROBOT"': alla robotar
+            '"SHARK"': alla hajar
+            '"UNICORN"': Enhörningar
           PROPERTY:
             '"scale"': storlek
             '"width"': bredd
@@ -547,6 +621,7 @@ sv:
             '"PINEAPPLE"': alla ananaser
             '"ROBOT"': alla robotar
             '"SHARK"': alla hajar
+            '"UNICORN"': Enhörningar
       Dancelab_setTintEachInline:
         options:
           THIS:
@@ -561,6 +636,7 @@ sv:
             '"PINEAPPLE"': alla ananaser
             '"ROBOT"': alla robotar
             '"SHARK"': alla hajar
+            '"UNICORN"': Enhörningar
       Dancelab_setTintInline:
         text: Ställ in {SPRITE}s färgton till {VAL}
       Dancelab_setVisible:
@@ -584,13 +660,40 @@ sv:
             '"PINEAPPLE"': alla ananaser
             '"ROBOT"': alla robotar
             '"SHARK"': alla hajar
-            '"UNICORN"': alla enhörningar
+            '"UNICORN"': Enhörningar
           VISIBILITY:
             'true': synlig
             'false': osynlig
       Dancelab_startMapping:
         text: "{SPRITE} påbörjar {PROPERTY} följandes {RANGE}"
         options:
+          PROPERTY:
+            '"scale"': storlek
+            '"width"': bredd
+            '"height"': höjd
+            '"rotation"': rotation
+            '"x"': horisontellt läge
+            '"y"': vertikalt läge
+            '"tint"': färgton
+          RANGE:
+            '"bass"': bas
+            '"mid"': mellan
+            '"treble"': diskant
+      Dancelab_startMappingEach:
+        options:
+          GROUP:
+            sprites: alla
+            '"ALIEN"': alla aliens
+            '"BEAR"': alla björnar
+            '"CAT"': alla katter
+            '"DOG"': alla hundar
+            '"DUCK"': alla ankor
+            '"FROG"': alla grodor
+            '"MOOSE"': alla älgar
+            '"PINEAPPLE"': alla ananaser
+            '"ROBOT"': alla robotar
+            '"SHARK"': alla hajar
+            '"UNICORN"': Enhörningar
           PROPERTY:
             '"scale"': storlek
             '"width"': bredd
@@ -613,6 +716,34 @@ sv:
             '"rotation"': rotation
             '"x"': horisontellt läge
             '"y"': vertikal position
+            '"direction"': rörelseriktning
+            '"tint"': färgton
+          RANGE:
+            '"bass"': bas
+            '"mid"': mellan
+            '"treble"': diskant
+      Dancelab_stopMappingEach:
+        options:
+          GROUP:
+            sprites: alla
+            '"ALIEN"': alla aliens
+            '"BEAR"': alla björnar
+            '"CAT"': alla katter
+            '"DOG"': alla hundar
+            '"DUCK"': alla ankor
+            '"FROG"': alla grodor
+            '"MOOSE"': alla älgar
+            '"PINEAPPLE"': alla ananaser
+            '"ROBOT"': alla robotar
+            '"SHARK"': alla hajar
+            '"UNICORN"': Enhörningar
+          PROPERTY:
+            '"scale"': storlek
+            '"width"': bredd
+            '"height"': höjd
+            '"rotation"': rotation
+            '"x"': horisontellt läge
+            '"y"': vertikalt läge
             '"direction"': rörelseriktning
             '"tint"': färgton
           RANGE:

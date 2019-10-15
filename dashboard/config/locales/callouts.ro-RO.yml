@@ -2,6 +2,12 @@
 ro-RO:
   data:
     callouts:
+      2-3 Artist Debugging 1:
+        2-3_Artist_Debugging_1_a: Artistul nu are un buton "Pas", dar poţi trage cursorul
+          în stânga ca să priveşti cu mai multă atenţie cum rulează programul tau.
+      2-3 Bee Conditionals 5:
+        Bee_Cond_5_1a: Florile mov pot avea 1 sau 0 nectar...dar nu vei şti până când
+          nu rulezi programul!
       CSD U3 Draw Loop Plugged wiggle sprite y_2018:
         '': "[șir gol]"
       CSD U3 Draw Loop Plugged wiggle sprite y_2019:
@@ -24,6 +30,9 @@ ro-RO:
       Course 4 Artist Vars 6:
         degrees_per_side: Împărțiți 360 la numărul de laturi pentru a obține mărimea
           în grade a fiecărui unghi.
+      Course 4 Bee 1:
+        if_bee_nectar: Folosește blocul "dacă" pentru a decide dacă albina ar trebui
+          să ia nectarul sau să facă miere
       Course 4 Bee Params 2:
         edit_get_nectar: Utilizaţi acest buton pentru a edita funcţia şi pentru a
           schimba direcţia spre care se va întoarce albina ca să obţină nectarul.
@@ -68,6 +77,11 @@ ro-RO:
         Infinity_move_right_runbutton: Adaugă bloc de mutare aici
       Infinity_repeat:
         Infinity_repeat_callout: Plasează blocuri de mutare în interior aici
+      MC HOC 2016 Level 2-2:
+        craft2_run_button_callout: Când eşti gata, apasă "Rulează" pentru a încerca
+          programul.
+      MC HOC 2016 New Walk:
+        MC_HOC_2016_New_Walk_callout2: Apasă "Rulează" pentru a începe mişcarea.
       NEW Course 4 Artist Functions 7:
         edit_function: Click aici pentru a edita funcţia dumneavoastră.
       NEW Course 4 Artist Functions 8:
@@ -132,6 +146,7 @@ ro-RO:
         snowflake_dropdown: Utilizaţi acest meniu derulant pentru a crea diferiți
           fulgi de zăpadă!
       frozen line:
+        run: Apasă "Rulează" pentru a încerca programul tău!
         move_elsa_forward: Trageţi un bloc de "Mutare înainte" şi fixaţi-l sub blocul
           "Atunci când rulaţi" pentru a o face pe Elsa să avanseze
       frozen perpendicular:

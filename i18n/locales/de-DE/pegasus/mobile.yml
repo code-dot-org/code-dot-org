@@ -836,9 +836,24 @@
   coursed-2017_name: Kurs D (2017)
   coursee-2017_name: Kurs E (2017)
   coursef-2017_name: Kurs F (2017)
+  coursea-2018_name: Kurs A (2018)
+  courseb-2018_name: Kurs B (2018)
+  coursec-2018_name: Kurs C (2018)
+  coursed-2018_name: Kurs D (2018)
+  coursee-2018_name: Kurs E (2018)
+  coursef-2018_name: Kurs F (2018)
+  coursea-2019_name: Kurs A (2019)
+  courseb-2019_name: Kurs B (2019)
+  coursec-2019_name: Kurs C (2019)
+  coursed-2019_name: Kurs D (2019)
+  coursee-2019_name: Kurs E (2019)
+  coursef-2019_name: Kurs F (2019)
+  express-2018_name: Expresskurs (2018)
   pre-express-2018_name: Leseanfänger-Expresskurs (2018)
+  express-2019_name: Expresskurs (2019)
   pre-express-2019_name: Leseanfänger-Expresskurs (2019)
   accelerated_name: "Beschleunigter Kurs"
+  express_name: "Expresskurs"
   20-hour_name: Beschleunigter Kurs
   gumball_name: "Gumball"
   classicmaze_name: "Klassisches Labyrinth"
