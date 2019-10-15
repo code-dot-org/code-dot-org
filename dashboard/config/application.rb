@@ -158,8 +158,5 @@ module Dashboard
     console do
       ARGV.push '-r', root.join('lib/console.rb')
     end
-
-    # Use custom routes for error codes
-    config.exceptions_app = routes
   end
 end
