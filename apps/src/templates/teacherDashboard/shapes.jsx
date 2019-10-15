@@ -137,3 +137,9 @@ export const sortableSectionShape = PropTypes.shape({
   assignmentName: PropTypes.arrayOf(PropTypes.string),
   assignmentPath: PropTypes.arrayOf(PropTypes.string)
 });
+
+export const sectionForDropdownShape = PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  isAssigned: PropTypes.bool.isRequired
+});

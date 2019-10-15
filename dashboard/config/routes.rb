@@ -612,6 +612,7 @@ Dashboard::Application.routes.draw do
       get 'regional_partners/:school_district_id/:course', to: 'regional_partners#for_school_district_and_course', defaults: {format: 'json'}
       get 'regional_partners', to: 'regional_partners#index', defaults: {format: 'json'}
       get 'regional_partners/capacity', to: 'regional_partners#capacity'
+      get 'regional_partners/enrolled', to: 'regional_partners#enrolled'
 
       get 'projects/gallery/public/:project_type/:limit(/:published_before)', to: 'projects/public_gallery#index', defaults: {format: 'json'}
 

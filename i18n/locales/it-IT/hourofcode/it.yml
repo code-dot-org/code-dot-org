@@ -10,6 +10,9 @@ it:
   campaign_date_full: "dal 4 al 10 dicembre"
   campaign_date_year: "2017"
   campaign_date_full_year: "dal 4 al 10 dicembre 2017"
+  hoc2019_header: 'Impara l''informatica e cambia il mondo.'
+  hoc2019_header_line1_mobile: 'Impara l''informatica.'
+  hoc2019_header_line2_mobile: 'Cambia il mondo.'
   codeorg_homepage_hoc2018_curriculum: 'Approfondisci i <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">corsi di Code.org</a>'
   codeorg_homepage_hoc2018_dance_heading: 'Crea il tuo progetto in <span class="highlight-word">Ballando&nbsp;col&nbsp;codice</span>'
   codeorg_homepage_hoc2018_header_line1: 'L''Ora del Codice è in arrivo...'

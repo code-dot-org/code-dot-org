@@ -220,14 +220,14 @@ describe('AssignmentSelector', () => {
         .find('option')
         .at(0)
         .text(),
-      ''
+      'Unit 1: Problem Solving'
     );
     assert.equal(
       secondary
         .find('option')
         .at(1)
         .text(),
-      'Unit 1: Problem Solving'
+      ''
     );
     assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
       courseId: 29,
