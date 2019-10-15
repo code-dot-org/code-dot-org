@@ -3,6 +3,7 @@
   "plugins": [
     "add-module-exports",
     "syntax-async-functions",
+    "syntax-dynamic-import",
     "transform-object-rest-spread",
     "transform-class-properties",
     ["transform-regenerator", {"async": true, "asyncGenerators": true}],
