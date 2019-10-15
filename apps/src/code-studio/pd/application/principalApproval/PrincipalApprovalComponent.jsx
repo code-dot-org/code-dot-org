@@ -8,7 +8,7 @@ import LabeledFormComponent from '../../form_components/LabeledFormComponent';
 import PrivacyDialog from '../PrivacyDialog';
 import {PrivacyDialogMode} from '../../constants';
 import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
-import {isPercent, isZipCode} from '@cdo/apps/util/formatValidation';
+import {isInt, isPercent, isZipCode} from '@cdo/apps/util/formatValidation';
 import {styles} from '../teacher/TeacherApplicationConstants';
 
 const MANUAL_SCHOOL_FIELDS = [
@@ -394,8 +394,12 @@ export default class PrincipalApprovalComponent extends LabeledFormComponent {
       formatErrors.schoolZipCode = 'Must be a valid zip code';
     }
 
-    if (data.totalStudentEnrollment && data.totalStudentEnrollment <= 0) {
-      formatErrors.totalStudentEnrollment = 'Must be a positive number';
+    if (
+      data.totalStudentEnrollment &&
+      (!isInt(data.totalStudentEnrollment) || data.totalStudentEnrollment <= 0)
+    ) {
+      formatErrors.totalStudentEnrollment =
+        'Must be a valid and positive number';
     }
 
     ['freeLunchPercent', ...RACE_LIST].forEach(key => {
