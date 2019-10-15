@@ -13,6 +13,7 @@ require 'yaml'
 
 require_relative 'i18n_script_utils'
 require_relative 'redact_restore_utils'
+require_relative 'hoc_sync_utils'
 
 CLEAR = "\r\033[K"
 
@@ -24,6 +25,7 @@ def sync_out
   rebuild_blockly_js_files
   puts "updating TTS I18n (should usually take 2-3 minutes, may take up to 15 if there are a whole lot of translation updates)"
   I18nScriptUtils.run_standalone_script "dashboard/scripts/update_tts_i18n.rb"
+  HocSyncUtils.sync_out
 end
 
 # Files downloaded from Crowdin are organized by language name,
