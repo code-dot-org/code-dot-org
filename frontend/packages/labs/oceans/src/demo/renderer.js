@@ -11,8 +11,8 @@ var $time =
 
 let canvas,
   canvasCtx,
-  upcomingCanvas,
-  trainingIndex = 0;
+  trainingIndex = 0,
+  backgroundImg;
 
 const FISH_CANVAS_WIDTH = 300;
 const FISH_CANVAS_HEIGHT = 200;
@@ -29,7 +29,7 @@ export function init(canvasParam) {
 
   switch (getState().currentMode) {
     case Modes.Training:
-      initTraining();
+      drawTrainingScreen();
       break;
     default:
       console.error('not yet implemented');
@@ -64,24 +64,18 @@ function renderBackgroundImage(img) {
   canvasCtx.drawImage(img, 0, 0, constants.canvasWidth, constants.canvasHeight);
 }
 
-function initTraining() {
-  const fishData = getState().fishData;
-  if (fishData.length === 0) {
-    console.error('No fish to render');
-    return;
-  }
-
-  drawTrainingScreen();
-}
-
 function drawTrainingScreen() {
-  // TODO: (maddie) cache background image
-  loadBackgroundImage().then(img => {
-    renderBackgroundImage(img);
+  if (backgroundImg) {
+    renderBackgroundImage(backgroundImg);
     drawTrainingFish();
     drawUpcomingFish();
     drawTrainingUiElements();
-  });
+  } else {
+    loadBackgroundImage().then(img => {
+      backgroundImg = img;
+      drawTrainingScreen();
+    });
+  }
 }
 
 function drawTrainingFish() {
