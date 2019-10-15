@@ -235,6 +235,22 @@ de-DE:
         zu erreichen.
       Crack Random Substitution: Anweisungen
       Crack a Caesar Cipher: Anweisungen
+      Dance Party 2_2019: Ersetze den Baustein zum Verhalten im `sprite begins` Baustein
+        durch einen anderen, der den Außerirdischen zum Drehen bringt!
+      Dance Party 3_2019: 'Erstelle ein neues Sprite, das wie ein rosa Alien aussieht,
+        und lasse es dann eine beliebige Bewegung ausführen, wenn es angeklickt wird.  '
+      Dance Party 4_2019: Erstelle ein drittes Sprite, das wie ein gelber Außerirdischer
+        aussieht, lass es einen Tanz machen, wenn es angeklickt wird, und setze alle
+        deine Außerirdischen so ein, dass sie in einer horizontalen Linie stehen.
+      Dance Party 5_2019: Erstelle ein einzelnes Tastendruckereignis mit dem Tastendruck-Ereignisbaustein.
+        Für dieses Ereignis solltest du es so gestalten, dass beim Drücken einer Taste
+        jeder deiner Aliens seine Farbe wechselt!
+      Dance Party 6_2019: Füge ein Sprite hinzu das wie eine Glocke aussieht, und
+        füge dann ein Ereignis hinzu, bei dem jeder Außerirdische aufhört zu tanzen,
+        wenn er angeklickt wird.
+      Dance Party 7_2019: Lasse den blauen Außerirdischen einen neuen Tanz beginnen,
+        wenn der rosa Außerirdische ihn berührt. Verwenden Sie das Ereignis `wenn
+        berührt`.
       Dance_Party_01: Ziehen Sie den Block "Neuen Block erstellen" in den Arbeitsbereich,
         und verbinden Sie ihn innerhalb des "Setup" -Blocks.
       Dance_Party_02: Lassen Sie den Elch nach 4 Takten einen neuen Tanzschritt beginnen.
@@ -271,6 +287,14 @@ de-DE:
         weitere Details)
       Dance_Party_extras_visible: Wo sind sie hin? (Klicke auf "Mehr" für weitere
         Details)
+      Fish Tank 2-validated_2019: Verwandle den Steppenläufer in jede Art von Fisch!
+      Fish Tank 3-validated_2019: Ändere das Verhalten der Fische so, dass sie nach
+        links und rechts schwimmen.
+      Fish Tank 4-validated_2019: Verwende den `Hintergrundfarbe einstellen` Baustein,
+        um den Hintergrund auf eine beliebigen Farbe zu setzen.
+      Fish Tank 5-validated_2019: Der Fisch ist abenteuerlustig und will neue Kreaturen
+        im Meer treffen. Füge ein weiteres Sprite in das Aquarium hinzu. Dieses Sprite
+        kann jedes andere Kostüm haben, außer dem, das du für deine Fische benutzt!
       FoodFight: Das ist ein Beispiel für ein Spiels, das du in Play Lab machen kannst.
       Frequency Analysis: Test
       Function intro Ryan: Verwende zweimal die "Brücke bauen"-Funktion, um einen
@@ -636,14 +660,21 @@ de-DE:
         Erde finden, aber dort kann es dunkel sein. Platziere mindestens 2 Fackeln
         und baue mindestens 2 Kohleblöcke ab.
       Vigenere: Test
+      Virtual Pet 8_2019: "**Freispiel:** Was können Sie noch mit Ihrem Haustier machen?
+        Versuchen Sie, was Sie wollen!"
       'Widget: Text Compression': Suche im Text nach Mustern (Worte oder Sätze die
         sich wiederholen). Trage die Muster die du findest in das Wörterbuch rechts
         ein. Wenn du einen Eintrag in das Wörterbuch machst, wird das Symbol des Eintrags
         die Muster im Text ersetzen.
       behaviors 1: Mache eine Vorhersage!
       behaviors 2: Flieg die Rackete zu den Sternen!
+      behaviors 3: Hilf dem Rover, den Roboter zu überholen!
+      behaviors 3a: 'Debuggen: Lasse alle Sterne auf die gleiche Weise drehen!'
       behaviors 4: Mache eine Vorhersage!
       behaviors 5: Bewege den Astronauten diagonal.
+      behaviors 6: Lass den Ball rollen.
+      behaviors 7: Fahren Sie in den Horizont!
+      behaviors free play: 'Freiespiel: Erstelle deine eigene Weltraumszene!'
       bounce_1: Hänge einen Baustein an den „wenn-Pfeil-nach-links“-Baustein und drücke
         „Ausführen“. Bewege den Schläger mit dem Linkspfeil, um das Ziel zu erreichen.
       bounce_10: Jetzt ist oben ein Tor. Hänge die Bausteine „Punkt erzielen“ und
@@ -1102,6 +1133,8 @@ de-DE:
         kann.
       courseB_playLab_events1_2019: Mal sehen, ob du herausfindest, was jeder Block
         kann.
+      courseC19_playLab_EOC2: Nutze Ereignisse und Aktionen, um deinen Helden in Bewegung
+        zu setzen. Komme zu den Zielen.
       courseC19_playLab_EOC5: Tolle Arbeit! Du hast alle grundlegenden Komponenten
         für ein funktionierendes Spiel. Verbringe nun Zeit damit, sicherzustellen,
         dass das Spiel so funktioniert, wie du es dir vorstellst.
@@ -1113,10 +1146,16 @@ de-DE:
         der Hund (Figur 1) sich zu Olivia, der Katze hinbewegt?
       courseC_PlayLab_eventsA_embed_2019: Lasst uns ein Spiel spielen. Erreiche 5
         Punkte, indem du den Pinguin auf den Oktopus bewegst!
+      courseC_artist_loops1a_2019: 'Bringe den Zeichner in die Mitte des Zeichenbereiches
+        und zeichnen Sie dann einen Aufkleber. '
+      courseC_artist_loops1b_2019: 'Ändere die Richtung, in die Dein Aufkleber zeigt,
+        indem du Deinen Code um einen `Drehe`-Befehl ergänzt. '
       courseC_artist_loops2a_2019: Verwende nun eine Schleife, um weitere Kopien Deines
         Aufklebers zu erstellen. Versuche, die Zahlenwerte für die Drehung zu ändern
         und wiederhole Bausteine, um verschiedene Muster zu erstellen.
       courseC_artist_loops3a_2019: Jetzt füge eine zweiten Aufkleber hinzu!
+      courseC_artist_loops4a_2019: Bearbeite Deinen Code so, dass du zwischen den
+        beiden Aufklebern vorwärts springst.
       courseC_artist_prog5: 'Dieses Haus braucht ein Dach! Zeichne das Dreieck.  Hinweis:
         alle drei Seiten sind gleich lang.'
       courseC_artist_prog5_2018: 'Dieses Haus braucht ein Dach! Zeichne das Dreieck.  Hinweis:
@@ -1379,10 +1418,15 @@ de-DE:
       courseD_maze_nestedLoops6_2018: Bring mich zu der Sonnenblume!
       courseD_maze_nestedLoops6_2019: Bring mich zu der Sonnenblume!
       courseD_maze_ramp3_2019: Wirf den zusätzlichen "vorwärts bewegen" Baustein weg.
+      courseD_maze_ramp4_2019: Hilf Skrat zur Eichel zu gelangen.
       courseD_maze_ramp5a_2019: Zählen Sie die Felder auf dem Gitter sorgfältig!
+      courseD_maze_ramp5c_2019: Achte auf knackendes Eis! Hilf Scrat, an die Eichel
+        zu kommen.
       courseD_maze_ramp6: '"Bleib ruhig und hilf mir das böse Schwein zu finden. Sonst
         könnte ich wütend werden!"'
       courseD_scrat_ramp5: Vermeiden Sie das gerissene Eis.
+      courseE_aboutme_6: 'Weiter so! Versuche Deinem Poster mehr Funktionen hinzuzufügen,
+        um es noch besser zu machen. '
       courseE_artist_functions1: 'Hallo. Ich Zombie-Künstler. Ich zeichnen liebe!
         Hilf mir, die quadratischen Gläser zu zeichnen.  Hinweis: Die Brücke zwischen
         den Gläsern ist 25 Pixel kürzer als die Länge der Quadrate.'
