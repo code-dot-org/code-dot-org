@@ -181,18 +181,28 @@ export function compileHTML(index, location) {
   }
 
   if (location.class_format_s) {
-    line =
-      '<strong>Format: </strong>' +
-      i18n(location.class_format_category_s) +
-      ' - ' +
-      i18n(location.class_format_s);
+    const formatDiv = document.createElement('div');
+    formatDiv.className = 'entry-detail';
+
+    const formatStrong = document.createElement('strong');
+    formatStrong.textContent = 'Format: ';
+    formatDiv.appendChild(formatStrong);
+
+    formatDiv.appendChild(
+      document.createTextNode(
+        `${i18n(location.class_format_category_s)} - ${i18n(
+          location.class_format_s
+        )}`
+      )
+    );
+
     if (location.school_tuition_s === 'yes') {
-      line += ' (private)';
+      formatDiv.appendChild(document.createTextNode(` (private)`));
     } else if (location.school_tuition_s === 'no') {
-      line += ' (public)';
+      formatDiv.appendChild(document.createTextNode(` (public)`));
     }
 
-    lines.push(line);
+    container.appendChild(formatDiv);
   }
 
   if (location.school_level_ss) {
