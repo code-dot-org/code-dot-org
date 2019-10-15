@@ -1,8 +1,5 @@
 /** @file Provides clients to AWS Firehose, whose data is imported into AWS Redshift. */
 
-import AWS from 'aws-sdk/lib/core';
-import 'aws-sdk/lib/config';
-import Firehose from 'aws-sdk/clients/firehose';
 import {
   createUuid,
   trySetLocalStorage,
@@ -56,8 +53,8 @@ const deliveryStreamName = 'analysis-events';
 // TODO(asher): Determine whether any of the utility functions herein should be
 // moved elsewhere, e.g., to apps/src/util.js.
 class FirehoseClient {
-  constructor() {
-    this.firehose = createNewFirehose();
+  constructor(AWS, Firehose) {
+    this.firehose = createNewFirehose(AWS, Firehose);
   }
 
   /**
@@ -315,7 +312,7 @@ class FirehoseClient {
 // This code sets up an AWS config against a very restricted user, so this is
 // not a concern, we just don't want to make things super obvious. For the
 // plaintext, contact asher or eric.
-function createNewFirehose() {
+function createNewFirehose(AWS, Firehose) {
   // eslint-disable-next-line
   const _0x12ed = [
     '\x41\x4b\x49\x41\x4a\x41\x41\x4d\x42\x59\x4d\x36\x55\x53\x59\x54\x34\x35\x34\x51',
@@ -350,10 +347,18 @@ function createNewFirehose() {
 
 let promise;
 function getSingleton() {
-  if (!promise) {
-    promise = new Promise(resolve => resolve(new FirehoseClient()));
-  }
-  return promise;
+  return Promise.all([
+    import('aws-sdk/lib/core'),
+    import('aws-sdk/clients/firehose'),
+    import('aws-sdk/lib/config')
+  ]).then(([{default: AWS}, {default: Firehose}]) => {
+    if (!promise) {
+      promise = new Promise(resolve =>
+        resolve(new FirehoseClient(AWS, Firehose))
+      );
+    }
+    return promise;
+  });
 }
 
 function putRecord(data, options) {
