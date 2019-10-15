@@ -240,6 +240,7 @@ export default class CourseOverview extends Component {
             name={script.name}
             id={script.id}
             description={script.description}
+            assignedSectionId={script.assigned_section_id}
           />
         ))}
       </div>
