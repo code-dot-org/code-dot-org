@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import constants, {Modes} from './constants';
+import {Modes} from './constants';
 import {init as initRenderer} from './renderer';
 import {init as initTraining} from './modes/training';
 import {init as initPredicting} from './modes/predicting';

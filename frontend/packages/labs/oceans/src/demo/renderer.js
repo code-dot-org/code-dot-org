@@ -2,20 +2,10 @@ import 'babel-polyfill';
 import _ from 'lodash';
 import constants, {Modes} from './constants';
 import {FishBodyPart} from '../utils/fishData';
-import {getState, setState} from './state';
-
-var $time =
-  Date.now ||
-  function() {
-    return +new Date();
-  };
+import {setState} from './state';
 
 const FISH_CANVAS_WIDTH = 300;
 const FISH_CANVAS_HEIGHT = 200;
-const FISH_WIDTH = 300;
-const FISH_HEIGHT = 200;
-const ROWS = 5;
-const COLS = 4;
 
 // Initialize the renderer once.
 // This will generate canvases with the fish collection.
@@ -162,61 +152,6 @@ function drawPredictingScreen(state) {
   console.log(state);
 }
 
-window.requestAnimFrame = (function() {
-  return (
-    window.requestAnimationFrame ||
-    window.webkitRequestAnimationFrame ||
-    window.mozRequestAnimationFrame ||
-    window.oRequestAnimationFrame ||
-    window.msRequestAnimationFrame ||
-    function(/* function */ callback, /* DOMElement */ element) {
-      window.setTimeout(callback, 1000 / 60);
-    }
-  );
-})();
-
-function getSwayOffsets(fishId) {
-  var swayValue = (($time() * 360) / (20 * 1000) + (fishId + 1) * 10) % 360;
-  var swayOffsetX = Math.sin(((swayValue * Math.PI) / 180) * 5) * 6;
-  var swayOffsetY = Math.sin(((swayValue * Math.PI) / 180) * 6) * 2;
-
-  return {offsetX: swayOffsetX, offsetY: swayOffsetY};
-}
-
-function getFishLocation(fishId) {
-  let x, y;
-  let layout;
-
-  // Determine which layout to use based on mode.
-  const currentMode = getState().currentMode;
-  if (currentMode === Modes.Training) {
-    layout = 'grid';
-  } else if (currentMode === Modes.Predicting) {
-    layout = 'line';
-  } else if (currentMode === Modes.Pond) {
-    layout = 'diamondgrid';
-  }
-
-  // Generate the location based on the layout.
-  if (layout === 'random') {
-    x = Math.floor(Math.random() * constants.canvasWidth);
-    y = Math.floor(Math.random() * constants.canvasHeight);
-  } else if (layout === 'grid') {
-    x = (fishId % COLS) * FISH_WIDTH * 1.3 + 10;
-    y = Math.floor(fishId / COLS) * FISH_HEIGHT * 1.1 + 10;
-  } else if (layout === 'diamondgrid') {
-    x =
-      (fishId % COLS) * FISH_WIDTH +
-      (Math.floor(fishId / COLS) % 2 === 1 ? -100 : 0);
-    y = Math.floor(fishId / COLS) * FISH_HEIGHT;
-  } else if (layout === 'line') {
-    x = fishId * FISH_WIDTH;
-    y = 200;
-  }
-
-  return {x: x, y: y};
-}
-
 function loadFishImages(fish) {
   return Promise.all(fish.parts.map(loadFishImage));
 }
@@ -285,10 +220,6 @@ function drawFish(fish, results, ctx, x = 0, y = 0) {
   });
 }
 
-function drawRenderedFish(fishCanvas, x, y, ctx) {
-  ctx.drawImage(fishCanvas, x, y, FISH_WIDTH, FISH_HEIGHT);
-}
-
 function bodyAnchorFromType(body, type) {
   switch (type) {
     case FishBodyPart.EYE:
@@ -321,84 +252,4 @@ function colorFromType(palette, type) {
     default:
       return null;
   }
-}
-
-function animateScreen() {
-  // Update static screen elements that might change occasionally,
-  // e.g. background image.
-  updateScreenElements();
-
-  var ctx = canvas.getContext('2d');
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.drawImage(
-    backgroundImage,
-    0,
-    0,
-    constants.canvasWidth,
-    constants.canvasHeight
-  );
-
-  getState().fishes.forEach(fish => {
-    const location = getFishLocation(fish.id);
-    const offsets = getSwayOffsets(fish.id);
-    drawRenderedFish(
-      fish.canvas,
-      location.x + offsets.offsetX,
-      location.y + offsets.offsetY,
-      ctx
-    );
-  });
-
-  drawOverlays();
-
-  window.requestAnimFrame(animateScreen);
-}
-
-function updateScreenElements() {
-  let backgroundImageName;
-  const currentMode = getState().currentMode;
-  if (currentMode === Modes.Training) {
-    backgroundImageName = 'classroom';
-  } else if (currentMode === Modes.Predicting) {
-    backgroundImageName = 'pipes';
-  } else if (currentMode === Modes.Pond) {
-    backgroundImageName = 'underwater';
-  }
-
-  if (currentBackgroundImageName !== backgroundImageName) {
-    backgroundImage = new Image();
-    backgroundImage.src = `images/${backgroundImageName}-background.png`;
-    currentBackgroundImageName = backgroundImageName;
-    currentModeStartTime = $time();
-  }
-}
-
-function drawOverlays() {
-  // update fade
-  var duration = $time() - currentModeStartTime;
-  var amount = 1 - duration / 800;
-  if (amount < 0) {
-    amount = 0;
-  }
-  DrawFade(amount, '#000');
-}
-
-function DrawFade(amount, overlayColour) {
-  if (amount === 0) {
-    return;
-  }
-
-  canvasCtx.globalAlpha = amount;
-  canvasCtx.fillStyle = overlayColour;
-  DrawFilledRect(0, 0, constants.canvasWidth, constants.canvasHeight);
-  canvasCtx.globalAlpha = 1;
-}
-
-function DrawFilledRect(x, y, w, h) {
-  x = Math.floor(x / 1);
-  y = Math.floor(y / 1);
-  w = Math.floor(w / 1);
-  h = Math.floor(h / 1);
-
-  canvasCtx.fillRect(x, y, w, h);
 }
