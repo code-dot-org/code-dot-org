@@ -8,7 +8,7 @@ export default class SimpleTrainer {
     this.mobilenet = await mobilenetModule.load();
   }
 
-  async initializeClassifiersWithoutMobilenet() {
+  initializeClassifiersWithoutMobilenet() {
     this.knn = knnClassifier.create();
   }
 
