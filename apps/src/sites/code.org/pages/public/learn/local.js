@@ -162,7 +162,7 @@ function loadMap(locations) {
   gmap.Load(map_options);
 }
 
-function compileHTML(index, location) {
+export function compileHTML(index, location) {
   var lines = [];
   var line;
 
@@ -230,7 +230,7 @@ function setDetailsTrigger(index, location, marker) {
   });
 }
 
-function i18n(token) {
+export function i18n(token) {
   var labels = {
     in_school: 'In school',
     in_school_daily_programming_course: 'Daily programming course',

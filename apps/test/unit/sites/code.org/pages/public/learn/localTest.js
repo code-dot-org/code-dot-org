@@ -1,5 +1,9 @@
 import {assert} from 'chai';
-import {getLocations} from '@cdo/apps/sites/code.org/pages/public/learn/local';
+import {
+  compileHTML,
+  getLocations,
+  i18n
+} from '@cdo/apps/sites/code.org/pages/public/learn/local';
 
 describe('/learn/local', () => {
   describe('getLocations()', () => {
@@ -31,6 +35,106 @@ describe('/learn/local', () => {
           zoom: 10
         }
       ]);
+    });
+  });
+
+  describe('compileHTML()', () => {
+    it('end-to-end coverage', () => {
+      const result = compileHTML(1, SAMPLE_RESPONSE.response.docs[1]);
+      assert.equal(
+        result,
+        '<h3 class="entry-detail">Code on the Road</h3><div class="entry-detail">Example Building 8th floor\nSeattle, WA 98109\nUnited States</div><div class="entry-detail"><strong>Format: </strong>Out of school - Other out of school (private)</div><div class="entry-detail"><strong>Level(s): </strong>, </div><div class="entry-detail"><strong>Language(s): </strong>C#, Python</div><div><a id="location-details-trigger-1" class="location-details-trigger" onclick="event.preventDefault();" href="#location-details-1">More information</a></div>'
+      );
+    });
+
+    it('includes a line for school name', () => {
+      const fakeName = 'My example school';
+      const expectedMarkup = `<h3 class="entry-detail">${fakeName}</h3>`;
+      const input = {
+        ...SAMPLE_RESPONSE.response.docs[1],
+        school_name_s: fakeName
+      };
+      assert.include(compileHTML(1, input), expectedMarkup);
+    });
+
+    it('optionally includes a line for school address', () => {
+      const fakeAddress = 'My example address';
+      const expectedMarkup = `<div class="entry-detail">${fakeAddress}</div>`;
+
+      const inputWithAddress = {
+        ...SAMPLE_RESPONSE.response.docs[1],
+        school_address_s: fakeAddress
+      };
+      assert.include(compileHTML(1, inputWithAddress), expectedMarkup);
+
+      const inputWithoutAddress = {
+        ...inputWithAddress,
+        school_address_s: null
+      };
+      assert.notInclude(compileHTML(1, inputWithoutAddress), expectedMarkup);
+    });
+
+    it('optionally includes a line for class format', () => {
+      const withoutClassFormat = {
+        ...SAMPLE_RESPONSE.response.docs[1],
+        class_format_s: null,
+        class_format_category_s: null
+      };
+      assert.notInclude(compileHTML(1, withoutClassFormat), 'Format:');
+
+      const fakeFormat = 'in_school_daily_programming_course';
+      const fakeCategoryFormat = 'in_school';
+      const withFormatNoTuition = {
+        ...withoutClassFormat,
+        class_format_s: fakeFormat,
+        class_format_category_s: fakeCategoryFormat,
+        school_tuition_s: null
+      };
+      assert.include(
+        compileHTML(1, withFormatNoTuition),
+        `<div class="entry-detail"><strong>Format: </strong>${i18n(
+          fakeCategoryFormat
+        )} - ${i18n(fakeFormat)}</div>`
+      );
+
+      const withFormatPublic = {
+        ...withFormatNoTuition,
+        school_tuition_s: 'no'
+      };
+      assert.include(
+        compileHTML(1, withFormatPublic),
+        `<div class="entry-detail"><strong>Format: </strong>${i18n(
+          fakeCategoryFormat
+        )} - ${i18n(fakeFormat)} (public)</div>`
+      );
+
+      const withFormatPrivate = {
+        ...withFormatNoTuition,
+        school_tuition_s: 'yes'
+      };
+      assert.include(
+        compileHTML(1, withFormatPrivate),
+        `<div class="entry-detail"><strong>Format: </strong>${i18n(
+          fakeCategoryFormat
+        )} - ${i18n(fakeFormat)} (private)</div>`
+      );
+    });
+
+    it('optionally includes a line for class languages', () => {
+      const withoutLanguages = {
+        ...SAMPLE_RESPONSE.response.docs[1],
+        class_languages_all_ss: null
+      };
+      assert.notInclude(compileHTML(1, withoutLanguages), 'Language(s)');
+
+      const withLanguages = {
+        ...withoutLanguages,
+        class_languages_all_ss: ['Ruby', 'JavaScript']
+      };
+      assert.include(
+        compileHTML(1, withLanguages),
+        `<div class="entry-detail"><strong>Language(s): </strong>Ruby, JavaScript</div>`
+      );
     });
   });
 });
