@@ -39,6 +39,17 @@ describe('/learn/local', () => {
       );
     });
 
+    it('school name guards against JavaScript injection', () => {
+      const input = {
+        ...SAMPLE_LOCATION,
+        school_name_s: `<a onmouseover="alert('gotcha')">Fake Name</a>`
+      };
+      assert.include(
+        compileHTML(1, input),
+        `&lt;a onmouseover="alert('gotcha')"&gt;Fake Name&lt;/a&gt;`
+      );
+    });
+
     it('optionally includes a line for school address', () => {
       const fakeAddress = 'My example address';
       const expectedMarkup = `<div class="entry-detail">${fakeAddress}</div>`;
