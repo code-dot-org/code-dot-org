@@ -6,19 +6,40 @@ import LibraryClientApi from '@cdo/apps/code-studio/components/Libraries/Library
 import LibraryListItem from '@cdo/apps/code-studio/components/Libraries/LibraryListItem';
 import color from '@cdo/apps/util/color';
 
+const DEFAULT_MARGIN = 7;
+
 const styles = {
   linkBox: {
     cursor: 'auto',
-    width: '600px',
     height: '32px',
-    marginBottom: 0
+    margin: DEFAULT_MARGIN,
+    marginRight: 0,
+    flex: 1
   },
   header: {
     textAlign: 'left',
     fontSize: 'x-large',
     color: color.purple,
-    margin: 7,
+    margin: DEFAULT_MARGIN,
     marginTop: 20
+  },
+  libraryList: {
+    maxHeight: '110px',
+    overflowY: 'auto'
+  },
+  message: {
+    color: color.dark_charcoal,
+    textAlign: 'left',
+    margin: DEFAULT_MARGIN,
+    overflow: 'hidden',
+    lineHeight: '15px',
+    whiteSpace: 'pre-wrap'
+  },
+  inputParent: {
+    display: 'flex'
+  },
+  add: {
+    margin: DEFAULT_MARGIN
   }
 };
 
@@ -30,19 +51,24 @@ export default class LibraryManagerDialog extends React.Component {
 
   state = {
     importLibraryId: '',
-    libraries: []
+    libraries: [],
+    classLibraries: []
   };
 
   componentDidMount = () => {
+    let libraryClient = new LibraryClientApi();
     this.setState({libraries: dashboard.project.getProjectLibraries() || []});
+    this.setState({classLibraries: libraryClient.getClassLibraries() || []});
   };
 
   setLibraryToImport = event => {
     this.setState({importLibraryId: event.target.value});
   };
 
-  addLibrary = library => {
-    let libraryToImport = library ? library : this.state.importLibraryId;
+  addLibrary = event => {
+    let libraryToImport = event.target.value
+      ? event.target.value
+      : this.state.importLibraryId;
     let libraryClient = new LibraryClientApi(libraryToImport);
     libraryClient.getLatest(
       data => {
@@ -70,7 +96,16 @@ export default class LibraryManagerDialog extends React.Component {
   };
 
   displayProjectLibraries = () => {
-    return this.state.libraries.map(library => {
+    let libraries = this.state.libraries;
+    if (!Array.isArray(libraries) || !libraries.length) {
+      return (
+        <div style={styles.message}>
+          You have no libraries in your project. Try adding one from your class
+          list or from an ID.
+        </div>
+      );
+    }
+    return libraries.map(library => {
       return (
         <LibraryListItem
           key={library.name}
@@ -83,7 +118,15 @@ export default class LibraryManagerDialog extends React.Component {
   };
 
   displayClassLibraries = () => {
-    let classLibraries = this.state.libraries;
+    let classLibraries = this.state.classLibraries;
+    if (!Array.isArray(classLibraries) || !classLibraries.length) {
+      return (
+        <div style={styles.message}>
+          No one in your class has published a library. Try adding one from an
+          ID.
+        </div>
+      );
+    }
     return classLibraries.map(library => {
       return (
         <LibraryListItem
@@ -103,19 +146,21 @@ export default class LibraryManagerDialog extends React.Component {
         useUpdatedStyles
       >
         <div style={styles.header}>Manage libraries in this project</div>
-        {this.displayProjectLibraries()}
+        <div style={styles.libraryList}>{this.displayProjectLibraries()}</div>
         <div style={styles.header}>Import library from my class</div>
-        {this.displayClassLibraries()}
+        <div style={styles.libraryList}>{this.displayClassLibraries()}</div>
         <div style={styles.header}>Import library from ID</div>
-        <input
-          style={styles.linkBox}
-          type="text"
-          value={this.state.importLibraryId}
-          onChange={this.setLibraryToImport}
-        />
-        <button onClick={this.addLibrary} type="button">
-          Add
-        </button>
+        <div style={styles.inputParent}>
+          <input
+            style={styles.linkBox}
+            type="text"
+            value={this.state.importLibraryId}
+            onChange={this.setLibraryToImport}
+          />
+          <button style={styles.add} onClick={this.addLibrary} type="button">
+            Add
+          </button>
+        </div>
       </BaseDialog>
     );
   }
