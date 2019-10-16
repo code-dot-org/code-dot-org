@@ -6,6 +6,7 @@ import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import firehoseClient from '../../lib/util/firehose';
+import _ from 'lodash';
 var userAgentParser = require('../../code-studio/initApp/userAgentParser');
 
 export const TeacherDashboardPath = {
@@ -119,9 +120,7 @@ export default class TeacherDashboardNavigation extends Component {
   };
 
   tabChanged = link => {
-    const currentTab = window.location.pathname.substring(
-      window.location.pathname.lastIndexOf('/') + 1
-    );
+    const currentTab = _.last(_.split(window.location.pathname, '/'));
     const clickedTab = link.url.substring(1);
 
     firehoseClient.putRecord({
