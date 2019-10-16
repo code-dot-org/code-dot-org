@@ -40,7 +40,7 @@ class LibraryCreationDialog extends React.Component {
   state = {
     clientApi: new LibraryClientApi(this.props.channelId),
     librarySource: '',
-    selectedFunctionList: [],
+    sourceFunctionList: [],
     loadingFinished: false,
     libraryName: '',
     canPublish: false
@@ -60,7 +60,7 @@ class LibraryCreationDialog extends React.Component {
         ),
         librarySource: response.source,
         loadingFinished: true,
-        selectedFunctionList: libraryParser.getFunctions(response.source)
+        sourceFunctionList: libraryParser.getFunctions(response.source)
       });
     });
   };
@@ -71,9 +71,16 @@ class LibraryCreationDialog extends React.Component {
   };
 
   publish = () => {
+    let formElements = document.getElementById('selectFunction').elements;
+    let selectedFunctionList = [];
+    [...formElements].forEach(element => {
+      if (element.type === 'checkbox' && element.checked) {
+        selectedFunctionList.push(this.state.sourceFunctionList[element.value]);
+      }
+    });
     let libraryJson = libraryParser.createLibraryJson(
       this.state.librarySource,
-      this.state.selectedFunctionList,
+      selectedFunctionList,
       this.state.libraryName
     );
     // TODO: Display final version of error and success messages to the user.
@@ -103,14 +110,14 @@ class LibraryCreationDialog extends React.Component {
     if (!this.state.loadingFinished) {
       return <div>Loading...</div>;
     }
-    let keyIndex = 0;
+    let keyIndex = -1;
     return (
       <div>
         <Heading2>
           <b>Library Name: </b>
           {this.state.libraryName}
         </Heading2>
-        <form onSubmit={this.publish}>
+        <form id="selectFunction" onSubmit={this.publish}>
           <textarea
             required
             name="description"
@@ -119,9 +126,9 @@ class LibraryCreationDialog extends React.Component {
             style={styles.textarea}
             placeholder="Write a description of your library"
           />
-          {this.state.selectedFunctionList.map(selectedFunction => {
-            let name = selectedFunction.functionName;
-            let comment = selectedFunction.comment;
+          {this.state.sourceFunctionList.map(sourceFunction => {
+            let name = sourceFunction.functionName;
+            let comment = sourceFunction.comment;
             return (
               <div key={keyIndex++} style={styles.functionItem}>
                 <input
@@ -129,6 +136,7 @@ class LibraryCreationDialog extends React.Component {
                   style={styles.largerCheckbox}
                   disabled={comment.length === 0}
                   onClick={this.validateInput}
+                  value={keyIndex}
                 />
                 {name}
                 <br />
