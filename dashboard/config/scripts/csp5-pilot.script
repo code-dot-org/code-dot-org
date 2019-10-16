@@ -50,9 +50,12 @@ level 'CSP U5L5 SFLP 20-21', progression: 'Lesson Overview'
 level 'csp_applab_loops_2018', progression: 'Introduction to Loops'
 level 'U3L07 Free Response Reflection_2018', progression: 'Check Your Understanding', assessment: true
 
-stage 'Loops Investigate and Practice', flex_category: 'csp_loops'
+stage 'Loops Investigate', flex_category: 'csp_loops'
 level 'CSP U5L6 SFLP 20-21', progression: 'Lesson Overview'
 level 'U5 Loops Investigate Coin Flipper', progression: 'Coin Flipper Investigation'
+
+stage 'Loops Practice', flex_category: 'csp_loops'
+level 'CSP U5L7 SFLP 20-21', progression: 'Lesson Overview'
 level 'U5 Loops Practice Part 1', progression: 'While Loop Practice'
 level 'U5 Loops Practice Part 2', progression: 'While Loop Practice'
 level 'U5 Loops Practice Part 3', progression: 'While Loop Practice'
