@@ -25,7 +25,7 @@
       #activity-canvas {
         width: 100%;
       }
-      #ui {
+      #ui-container {
         position: absolute;
         top: 0;
         left: 0;
@@ -60,8 +60,21 @@
       button:focus {
         outline: white auto 5px;
       }
+
       .ui-button {
         position: absolute;
+      }
+
+      @media screen and (max-width: 800px) {
+        button {
+          font-size: 90%;
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        button {
+          font-size: 60%;
+        }
       }
 
       #like-button {
