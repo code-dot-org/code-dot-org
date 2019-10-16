@@ -18,6 +18,8 @@
       #container {
         position: relative;
         width: 100%;
+        max-width: 970px;
+        margin: 0 auto;
       }
       #activity-canvas {
         width: 100%;
@@ -43,41 +45,40 @@
         bottom: 20px;
       }
 
-      @media screen and (max-aspect-ratio: 16/9) {
-        button {
-          background-color: #aaf;
-          color: white;
-          font-size: 3vw;
-          border-radius: 3vw;
-          padding: 1vw;
-          border: none;
-          width: 20vw;
-          height: 10vw;
-        }
-        #like-button {
-          position: absolute;
-          right: 30vw;
-          bottom: 3vw;
-        }
-        #dislike-button {
-          position: absolute;
-          right: 50vw;
-          bottom: 3vw;
-        }
-        #next-button {
-          position: absolute;
-          right: 1vw;
-          bottom: 1vw;
-        }
-        #predict-button {
-          position: absolute;
-          right: 40vw;
-          bottom: 3vw;
-        }
-        #predict-text {
-          width: 100%;
-          text-align: center;
-        }
+      button {
+        background-color: #aaf;
+        color: white;
+        font-size: 100%;
+        border-radius: 3%;
+        padding: 1%;
+        border: none;
+        width: 18%;
+        height: 10%;
+      }
+
+      .ui-button {
+        position: absolute;
+      }
+
+      #like-button {
+        right: 30%;
+        bottom: 3%;
+      }
+      #dislike-button {
+        right: 50%;
+        bottom: 3%;
+      }
+      #next-button {
+        right: 3%;
+        bottom: 3%;
+      }
+      #predict-button {
+        right: 40%;
+        bottom: 3%;
+      }
+      #predict-text {
+        width: 100%;
+        text-align: center;
       }
 
     </style>

@@ -32,24 +32,7 @@ $(document).ready(() => {
 
   // Initialize current model
   initModel();
-
-  window.addEventListener(
-    'resize',
-    debounce(onResize, 100)
-  );
 });
-
-function onResize() {
-  const w = $("#ui").width();
-  const ratio = w/1024;
-  $("#test-button").css({
-    padding: ratio * 20 + "px",
-    width: ratio * 200 + "px",
-    "font-size": ratio * 24 + "px",
-    right: ratio * 20 + "px",
-    bottom: ratio * 20 + "px"
-  });
-}
 
 // Initialize a model based on mode.
 // Should only be called when mode changes.
