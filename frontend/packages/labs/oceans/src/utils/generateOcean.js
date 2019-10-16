@@ -1,4 +1,4 @@
-import fish from './fishData';
+import {fish} from './fishData';
 //const _ = require('lodash');
 
 export const generateRandomFish = () => {

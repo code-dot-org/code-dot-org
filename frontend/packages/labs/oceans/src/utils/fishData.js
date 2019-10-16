@@ -16,7 +16,7 @@ export const FishBodyPart = Object.freeze({
   PECTORAL_FIN: 5
 });
 
-const fish = {
+const fishComponents = {
   // BODY KNN DATA: [height:width ratio]
   bodies: {
     body1: {
@@ -265,7 +265,38 @@ const fish = {
   }
 };
 
-export default fish;
+const generateKnnData = () => {
+  Object.keys(fishComponents).forEach(key => {
+    const knnDataLength = Object.values(fishComponents[key])[0].knnData.length;
+    const minArray = new Array(knnDataLength);
+    minArray.fill(Number.POSITIVE_INFINITY);
+    const maxArray = new Array(knnDataLength);
+    maxArray.fill(Number.NEGATIVE_INFINITY);
+    Object.values(fishComponents[key]).forEach(component => {
+      for (var i = 0; i < component.knnData.length; ++i) {
+        if (component.knnData[i] < minArray[i]) {
+          minArray[i] = component.knnData[i];
+        }
+        if (component.knnData[i] > maxArray[i]) {
+          maxArray[i] = component.knnData[i];
+        }
+      }
+    });
+    Object.values(fishComponents[key]).forEach(component => {
+      for (var i = 0; i < component.knnData.length; ++i) {
+        if (maxArray[i] === minArray[i]) {
+          component.knnData[i] = 0;
+        } else {
+          component.knnData[i] =
+            (component.knnData[i] - minArray[i]) / (maxArray[i] - minArray[i]);
+        }
+      }
+    });
+  });
+  return fishComponents;
+};
+
+export const fish = generateKnnData();
 
 export const bodyShape = PropTypes.shape({
   src: PropTypes.string.isRequired,
