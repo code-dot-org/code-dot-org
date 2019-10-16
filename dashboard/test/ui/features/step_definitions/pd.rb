@@ -161,6 +161,43 @@ And(/^I make the teacher named "([^"]*)" a workshop admin$/) do |name|
   user.permission = UserPermission::WORKSHOP_ADMIN
 end
 
+Given /^Create a regional partner "([^"]*)" with some teacher applications$/ do |partner_name|
+  require_rails_env
+
+  regional_partner = RegionalPartner.find_by_name(partner_name)
+  return unless regional_partner
+
+  time_start = Time.now
+  application_count = 0
+  %w(csd csp).each do |course|
+    Pd::Application::ApplicationBase.statuses.each do |status|
+      application =
+        FactoryGirl.create(
+          Pd::Application::ActiveApplicationModels::TEACHER_APPLICATION_FACTORY,
+          course: course
+        )
+      application.update(status: status, regional_partner_id: regional_partner.id)
+      application_count += 1
+    end
+  end
+
+  puts "Created #{application_count} applications in #{Time.now - time_start} seconds"
+
+  # regional_partner = RegionalPartner.last
+  # b = FactoryGirl.create(Pd::Application::ActiveApplicationModels::TEACHER_APPLICATION_FACTORY, course: 'csd', regional_partner_id: RegionalPartner.last.id, status: 'accepted')
+  # Teacher2021Application.where(regional_partner_id: regional_partner.id).count
+  # Teacher2021Application.where(regional_partner_id: regional_partner.id).destroy_all
+end
+
+And /^Delete all applications from regional partner "([^"]*)"$/ do |partner_name|
+  # TODO: find don't create, return if not exist
+  regional_partner = RegionalPartner.find_by_name(partner_name)
+  count_before = Pd::Application::ActiveApplicationModels::TEACHER_APPLICATION_CLASS.where(regional_partner_id: regional_partner.id).count
+  Pd::Application::ActiveApplicationModels::TEACHER_APPLICATION_CLASS.where(regional_partner_id: regional_partner.id).destroy_all
+  count_after = Pd::Application::ActiveApplicationModels::TEACHER_APPLICATION_CLASS.where(regional_partner_id: regional_partner.id).count
+  p "count_before = #{count_before}, count_after = #{count_after}"
+end
+
 And(/^I create some fake applications of each type and status$/) do
   require_rails_env
   time_start = Time.now
