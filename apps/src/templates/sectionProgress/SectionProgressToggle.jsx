@@ -45,9 +45,13 @@ class SectionProgressToggle extends React.Component {
     // the action.
     if (this.state.selectedToggle === ViewType.SUMMARY) {
       firehoseClient.putRecord({
-        study: 'teacher-dashboard',
-        study_group: 'react',
-        event: 'progress-detailed'
+        study: ' teacher_dashboard_actions',
+        study_group: 'progress',
+        event: 'view_change_toggle',
+        data_json: JSON.stringify({
+          old_view: ViewType.SUMMARY,
+          new_view: ViewType.DETAIL
+        })
       });
       this.setState({selectedToggle: ViewType.DETAIL}, () => {
         setTimeout(() => {
@@ -56,9 +60,13 @@ class SectionProgressToggle extends React.Component {
       });
     } else {
       firehoseClient.putRecord({
-        study: 'teacher-dashboard',
-        study_group: 'react',
-        event: 'progress-summary'
+        study: ' teacher_dashboard_actions',
+        study_group: 'progress',
+        event: 'view_change_toggle',
+        data_json: JSON.stringify({
+          old_view: ViewType.DETAIL,
+          new_view: ViewType.SUMMARY
+        })
       });
       this.setState({selectedToggle: ViewType.SUMMARY}, () => {
         setTimeout(() => {
