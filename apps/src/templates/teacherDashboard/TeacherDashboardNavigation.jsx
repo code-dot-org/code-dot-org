@@ -5,6 +5,7 @@ import {NavLink} from 'react-router-dom';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import firehoseClient from '../../lib/util/firehose';
 var userAgentParser = require('../../code-studio/initApp/userAgentParser');
 
 export const TeacherDashboardPath = {
@@ -117,6 +118,22 @@ export default class TeacherDashboardNavigation extends Component {
     }
   };
 
+  tabChanged = link => {
+    const currentTab = window.location.pathname.substring(
+      window.location.pathname.lastIndexOf('/') + 1
+    );
+    const clickedTab = link.url.substring(1);
+
+    firehoseClient.putRecord({
+      study: ' teacher_dashboard_actions',
+      study_group: currentTab,
+      event: 'click_new_tab',
+      data_json: JSON.stringify({
+        new_tab: clickedTab
+      })
+    });
+  };
+
   render() {
     const {listPosition, shouldScroll} = this.state;
     const links = this.props.links || teacherDashboardLinks;
@@ -147,6 +164,7 @@ export default class TeacherDashboardNavigation extends Component {
             to={link.url}
             style={styles.linkContainer}
             activeStyle={styles.activeLinkContainer}
+            onClick={() => this.tabChanged(link)}
           >
             <div style={styles.link}>{link.label}</div>
           </NavLink>
