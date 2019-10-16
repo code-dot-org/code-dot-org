@@ -12,6 +12,7 @@ const FISH_CANVAS_HEIGHT = 200;
 export function init(canvas) {
   canvas.width = constants.canvasWidth;
   canvas.height = constants.canvasHeight;
+  clearBackground();
   const state = setState({
     canvas,
     ctx: canvas.getContext('2d')
@@ -57,14 +58,14 @@ function loadBackgroundImage() {
 }
 
 function renderBackgroundImage(img) {
-  const backgroundCanvas = document.getElementById('background-canvas');
-  if (!backgroundCanvas) {
+  const canvas = backgroundCanvas();
+  if (!canvas) {
     return;
   }
 
-  backgroundCanvas.width = constants.canvasWidth;
-  backgroundCanvas.height = constants.canvasHeight;
-  const ctx = backgroundCanvas.getContext('2d');
+  canvas.width = constants.canvasWidth;
+  canvas.height = constants.canvasHeight;
+  const ctx = canvas.getContext('2d');
   ctx.drawImage(img, 0, 0, constants.canvasWidth, constants.canvasHeight);
 }
 
@@ -392,6 +393,16 @@ function clearChildren(el) {
 
 function uiContainer() {
   return document.getElementById('ui-container');
+}
+
+function backgroundCanvas() {
+  return document.getElementById('background-canvas');
+}
+
+function clearBackground() {
+  const canvas = backgroundCanvas();
+  const ctx = canvas.getContext('2d');
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
 
 function destroyElById(id) {
