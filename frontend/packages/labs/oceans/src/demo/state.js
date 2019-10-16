@@ -15,17 +15,6 @@ export const getState = function() {
 };
 
 export const setState = function(newState) {
-  if (newState.currentMode) {
-    // When mode changes, reset backgroundImg and uiDrawn.
-    state = {
-      ...state,
-      backgroundImg: null,
-      uiDrawn: false,
-      ...newState
-    };
-  } else {
-    state = {...state, ...newState};
-  }
-
+  state = {...state, ...newState};
   return state;
 };
