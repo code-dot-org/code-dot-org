@@ -5,7 +5,7 @@ var {
 } = require('@cdo/apps/p5lab/spritelab/textConsoleModule');
 var createStore = require('../../util/redux').createStore;
 var combineReducers = require('redux').combineReducers;
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/deprecatedChai';
 var _ = require('lodash');
 var P5LabInterfaceMode = require('@cdo/apps/p5lab/constants')
   .P5LabInterfaceMode;

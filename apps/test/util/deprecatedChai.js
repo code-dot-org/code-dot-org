@@ -1,4 +1,7 @@
-/** @file Import chai and configure it for our own test style. */
+/** @file Import chai and configure it for our own test style.
+ * This file is deprecated because chai-enzyme is deprecated.
+ * Please use reconfiguredChai.js instead.
+ * */
 import chai from 'chai';
 import chaiSubset from 'chai-subset';
 import chaiEnzyme from 'chai-enzyme';

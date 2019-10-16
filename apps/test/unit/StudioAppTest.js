@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import sinon from 'sinon';
-import {expect} from '../util/configuredChai';
+import {expect} from '../util/deprecatedChai';
 import {
   singleton as studioApp,
   stubStudioApp,
