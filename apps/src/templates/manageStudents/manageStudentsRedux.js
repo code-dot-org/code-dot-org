@@ -112,6 +112,7 @@ const blankNewStudentRow = {
  */
 const initialState = {
   loginType: '',
+  sectionId: null,
   studentData: {},
   editingData: {},
   showSharingColumn: false,
@@ -150,7 +151,11 @@ export const startLoadingStudents = () => ({type: START_LOADING_STUDENTS});
 export const finishLoadingStudents = () => ({type: FINISH_LOADING_STUDENTS});
 
 export const setLoginType = loginType => ({type: SET_LOGIN_TYPE, loginType});
-export const setStudents = studentData => ({type: SET_STUDENTS, studentData});
+export const setStudents = (studentData, sectionId) => ({
+  type: SET_STUDENTS,
+  studentData,
+  sectionId
+});
 export const startEditingStudent = studentId => ({
   type: START_EDITING_STUDENT,
   studentId
@@ -449,7 +454,8 @@ export default function manageStudents(state = initialState, action) {
       ...state,
       studentData: studentData,
       addStatus: {status: null, numStudents: null},
-      isLoadingStudents: false
+      isLoadingStudents: false,
+      sectionId: action.sectionId
     };
   }
   if (action.type === START_EDITING_STUDENT) {
@@ -858,18 +864,8 @@ export const loadSectionStudentData = sectionId => {
   return (dispatch, getState) => {
     const state = getState().manageStudents;
 
-    // For picture and word logins we add a row for adding new entries at position 0
-    const indexToCheckForStudent =
-      state.loginType === SectionLoginType.word ||
-      state.loginType === SectionLoginType.picture
-        ? 1
-        : 0;
-
     // Don't load data if it's already stored in redux.
-    const alreadyHaveStudentData =
-      Object.values(state.studentData)[indexToCheckForStudent] &&
-      Object.values(state.studentData)[indexToCheckForStudent].sectionId ===
-        sectionId;
+    const alreadyHaveStudentData = state.sectionId === sectionId;
 
     if (!alreadyHaveStudentData) {
       dispatch(startLoadingStudents());
@@ -883,7 +879,7 @@ export const loadSectionStudentData = sectionId => {
           state.loginType,
           sectionId
         );
-        dispatch(setStudents(convertedStudentData));
+        dispatch(setStudents(convertedStudentData, sectionId));
       });
     } else {
       dispatch(finishLoadingStudents());
