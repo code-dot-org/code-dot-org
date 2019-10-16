@@ -40,7 +40,72 @@ class DataVisualizer extends React.Component {
   };
 
   render() {
-    const {chartType, numBins, values, xValues, yValues} = this.state;
+    const dropdownField = (fieldName, displayName, values) => (
+      <div id={fieldName} style={rowStyle.container}>
+        <label style={rowStyle.description}>{displayName}</label>
+        <select
+          value={this.state[fieldName]}
+          onChange={event => this.handleChange(fieldName, event.target.value)}
+        >
+          <option value="">Select</option>
+          {values.map(value => (
+            <option key={value} value={value}>
+              {value}
+            </option>
+          ))}
+        </select>
+      </div>
+    );
+
+    const modalBody = (
+      <div>
+        <h1> Explore {this.props.tableName} </h1>
+        <h2> Overview </h2>
+        <div id="selection-area">
+          <div id="chartTitleRow" style={rowStyle.container}>
+            <label style={rowStyle.description}>Chart Title</label>
+            <input
+              style={rowStyle.input}
+              onChange={event =>
+                this.handleChange('chartTitle', event.target.value)
+              }
+            />
+          </div>
+
+          {dropdownField('chartType', 'Chart Type', [
+            'Bar Chart',
+            'Histogram',
+            'Cross Tab',
+            'Scatter Plot'
+          ])}
+
+          {this.state.chartType === 'Histogram' && (
+            <div id="numBinsRow" style={rowStyle.container}>
+              <label style={rowStyle.description}>Bins</label>
+              <input
+                style={rowStyle.input}
+                value={this.state.numBins}
+                onChange={event =>
+                  this.handleChange('numBins', event.target.value)
+                }
+              />
+            </div>
+          )}
+          {(this.state.chartType === 'Bar Chart' ||
+            this.state.chartType === 'Histogram') &&
+            dropdownField('values', 'Values', this.props.tableColumns)}
+
+          {(this.state.chartType === 'Cross Tab' ||
+            this.state.chartType === 'Scatter Plot') && (
+            <div>
+              {dropdownField('xValues', 'X Values', this.props.tableColumns)}
+              {dropdownField('yValues', 'Y Values', this.props.tableColumns)}
+            </div>
+          )}
+        </div>
+        <div id="chart-area" />
+      </div>
+    );
 
     return (
       <span style={[{display: 'inline-block'}]}>
@@ -57,98 +122,7 @@ class DataVisualizer extends React.Component {
           fullWidth
           fullHeight
         >
-          <h1> Explore {this.props.tableName} </h1>
-          <h2> Overview </h2>
-          <div id="selection-area">
-            <div id="chartTitleRow" style={rowStyle.container}>
-              <label style={rowStyle.description}>Chart Title</label>
-              <input
-                style={rowStyle.input}
-                onChange={event =>
-                  this.handleChange('chartTitle', event.target.value)
-                }
-              />
-            </div>
-
-            <div id="chartTypeRow" style={rowStyle.container}>
-              <label style={rowStyle.description}>Chart Type</label>
-              <select
-                value={chartType}
-                onChange={event =>
-                  this.handleChange('chartType', event.target.value)
-                }
-              >
-                <option value="">Select</option>
-                <option value="bar">Bar Chart</option>
-                <option value="histogram">Histogram</option>
-                <option value="crosstab">Cross Tab</option>
-                <option value="scatter">Scatter Plot</option>
-              </select>
-              {chartType === 'histogram' && (
-                <span>
-                  <label style={rowStyle.description}>Bins</label>
-                  <input
-                    style={rowStyle.input}
-                    value={numBins}
-                    onChange={event =>
-                      this.handleChange('numBins', event.target.value)
-                    }
-                  />
-                </span>
-              )}
-            </div>
-            {(chartType === 'bar' || chartType === 'histogram') && (
-              <div id="valuesRow" style={rowStyle.container}>
-                <label style={rowStyle.description}>Values</label>
-                <select
-                  value={values}
-                  onChange={event =>
-                    this.handleChange('values', event.target.value)
-                  }
-                >
-                  <option value="">Select</option>
-                  {this.props.tableColumns.map(columnName => (
-                    <option key={columnName} value={columnName}>
-                      {columnName}
-                    </option>
-                  ))}
-                </select>
-              </div>
-            )}
-            {(chartType === 'crosstab' || chartType === 'scatter') && (
-              <div id="xyValuesRow" style={rowStyle.container}>
-                <label style={rowStyle.description}>X Values</label>
-                <select
-                  value={xValues}
-                  onChange={event =>
-                    this.handleChange('xValues', event.target.value)
-                  }
-                >
-                  <option value="">Select</option>
-                  {this.props.tableColumns.map(columnName => (
-                    <option key={columnName} value={columnName}>
-                      {columnName}
-                    </option>
-                  ))}
-                </select>
-                <label style={rowStyle.description}>Y Values</label>
-                <select
-                  value={yValues}
-                  onChange={event =>
-                    this.handleChange('yValues', event.target.value)
-                  }
-                >
-                  <option value="">Select</option>
-                  {this.props.tableColumns.map(columnName => (
-                    <option key={columnName} value={columnName}>
-                      {columnName}
-                    </option>
-                  ))}
-                </select>
-              </div>
-            )}
-          </div>
-          <div id="chart-area" />
+          {modalBody}
         </BaseDialog>
       </span>
     );
