@@ -42,17 +42,52 @@
         right: 20px;
         bottom: 20px;
       }
+
+      @media screen and (max-aspect-ratio: 16/9) {
+        button {
+          background-color: #aaf;
+          color: white;
+          font-size: 3vw;
+          border-radius: 3vw;
+          padding: 1vw;
+          border: none;
+          width: 20vw;
+          height: 10vw;
+        }
+        #like-button {
+          position: absolute;
+          right: 30vw;
+          bottom: 3vw;
+        }
+        #dislike-button {
+          position: absolute;
+          right: 50vw;
+          bottom: 3vw;
+        }
+        #next-button {
+          position: absolute;
+          right: 1vw;
+          bottom: 1vw;
+        }
+        #predict-button {
+          position: absolute;
+          right: 40vw;
+          bottom: 3vw;
+        }
+        #predict-text {
+          width: 100%;
+          text-align: center;
+        }
+      }
+
     </style>
   </head>
-
   <body>
     <div id="header"></div>
     <div id="ml-activities"></div>
     <div id="container">
       <canvas id="activity-canvas"></canvas>
-      <div id="ui">
-        <button id="test-button">test button</button>
-      </div>
+      <div id="ui-container" />
     </div>
     <script src="demo.js"></script>
   </body>

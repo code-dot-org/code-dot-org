@@ -1,49 +1,42 @@
 import $ from 'jquery';
-import constants, {Modes} from './constants';
+import {Modes} from './constants';
 import {init as initRenderer} from './renderer';
 import {init as initTraining} from './modes/training';
 import {init as initPredicting} from './modes/predicting';
 import {init as initPond} from './modes/pond';
 import {setState, getState} from './state';
 import debounce from 'lodash/debounce';
+import {generateRandomFish} from '../utils/generateOcean';
+import SimpleTrainer from '../utils/SimpleTrainer';
 
 $(document).ready(() => {
-  let canvas = document.getElementById('activity-canvas');
-  canvas.width = constants.canvasWidth;
-  canvas.height = constants.canvasHeight;
+  // Generate some fish
+  let fishes = [];
+  for (let i = 0; i < 100; i++) {
+    fishes.push(getRandomFish(i));
+  }
 
   // Set up state
+  const trainer = new SimpleTrainer();
+  trainer.initializeClassifiersWithoutMobilenet();
   const initialState = {
-    currentMode: Modes.Training
+    currentMode: Modes.Training,
+    fishData: fishes,
+    trainer
   };
   setState(initialState);
 
   // Initialize renderer
+  const canvas = document.getElementById('activity-canvas');
   initRenderer(canvas);
 
   // Initialize current model
   initModel();
 
-  // Periodically switch mode
-  // TODO(bethany,maddie): add state transitions
-  /*window.setInterval(() => {
-    const currentMode = getState().currentMode;
-    if (currentMode === Modes.Training) {
-      setState({currentMode: Modes.Predicting});
-    } else if (currentMode === Modes.Predicting) {
-      setState({currentMode: Modes.Pond});
-    } else if (currentMode === Modes.Pond) {
-      setState({currentMode: Modes.Training});
-    }
-
-    // Initialize this new model.
-    initModel();
-  }, 4 * 1000);*/
-
-    window.addEventListener(
-      'resize',
-      debounce(onResize, 100)
-    );
+  window.addEventListener(
+    'resize',
+    debounce(onResize, 100)
+  );
 });
 
 function onResize() {
@@ -74,4 +67,11 @@ function initModel() {
     default:
       console.error('No mode specified');
   }
+}
+
+function getRandomFish(id) {
+  return {
+    id: id,
+    fish: generateRandomFish()
+  };
 }
