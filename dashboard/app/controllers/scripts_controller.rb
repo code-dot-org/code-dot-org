@@ -81,12 +81,13 @@ class ScriptsController < ApplicationController
   end
 
   def edit
+    beta = params[:beta].present?
     @show_all_instructions = params[:show_all_instructions]
     @script_data = {
       script: @script ? @script.summarize_for_edit : {},
       i18n: @script ? @script.summarize_i18n : {},
-      beta: params[:beta].present?,
-      levelKeyList: params[:beta] && Level.key_list,
+      beta: beta,
+      levelKeyList: beta && Level.key_list,
       stageLevelData: @script_file,
       locales: options_for_locale_select,
       script_families: ScriptConstants::FAMILY_NAMES,
