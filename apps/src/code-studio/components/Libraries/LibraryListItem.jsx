@@ -16,7 +16,8 @@ const styles = {
     fontSize: 'large',
     marginTop: 10,
     textOverflow: 'ellipsis',
-    flex: '0 0 250px'
+    flex: '0 0 250px',
+    overflow: 'hidden'
   },
   description: {
     overflow: 'hidden',
@@ -33,6 +34,9 @@ const styles = {
     position: 'absolute',
     bottom: 0,
     right: 50
+  },
+  addButton: {
+    marginLeft: 'auto'
   }
 };
 
@@ -61,15 +65,6 @@ export default class LibraryListItem extends React.Component {
     return (
       <div className="assetRow" style={styles.listItem}>
         <span style={styles.libraryName}>{library.name}</span>
-        {this.props.onRefresh && (
-          <button
-            type="button"
-            onClick={() => this.props.onRefresh(library.name)}
-            style={styles.refreshButton}
-          >
-            <FontAwesome icon="refresh" />
-          </button>
-        )}
         {this.props.onRemove && (
           <button
             type="button"
@@ -80,6 +75,15 @@ export default class LibraryListItem extends React.Component {
             <FontAwesome icon="trash-o" />
           </button>
         )}
+        {this.props.onRefresh && (
+          <button
+            type="button"
+            onClick={() => this.props.onRefresh(library.name)}
+            style={styles.refreshButton}
+          >
+            <FontAwesome icon="refresh" />
+          </button>
+        )}
         <span style={styles.description}>
           {this.displayDescription(library.description)}
         </span>
@@ -87,7 +91,11 @@ export default class LibraryListItem extends React.Component {
           {this.moreDetails(library)}
         </span>
         {this.props.onAdd && (
-          <button type="button" onClick={() => this.props.onAdd(library.id)}>
+          <button
+            style={styles.addButton}
+            type="button"
+            onClick={() => this.props.onAdd(library.id)}
+          >
             <FontAwesome icon="plus" />
           </button>
         )}
