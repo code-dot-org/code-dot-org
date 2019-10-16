@@ -82,6 +82,9 @@ class ScriptsController < ApplicationController
 
   def edit
     beta = params[:beta].present?
+    if @script.script_levels.any?(&:has_experiment?)
+      beta = false
+    end
     @show_all_instructions = params[:show_all_instructions]
     @script_data = {
       script: @script ? @script.summarize_for_edit : {},
