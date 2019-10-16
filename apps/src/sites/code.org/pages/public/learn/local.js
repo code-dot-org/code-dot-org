@@ -165,68 +165,53 @@ function loadMap(locations) {
 export function compileHTML(index, location) {
   const container = document.createElement('div');
   var lines = [];
-  var line;
   var html = '';
 
-  const schoolNameH3 = document.createElement('h3');
-  schoolNameH3.className = 'entry-detail';
-  schoolNameH3.textContent = location.school_name_s;
-  container.appendChild(schoolNameH3);
+  container.appendChild(
+    createEntryDetail({tag: 'h3', text: location.school_name_s})
+  );
 
   if (location.school_address_s) {
-    const schoolAddressDiv = document.createElement('div');
-    schoolAddressDiv.className = 'entry-detail';
-    schoolAddressDiv.textContent = location.school_address_s;
-    container.appendChild(schoolAddressDiv);
+    container.appendChild(createEntryDetail({text: location.school_address_s}));
   }
 
   if (location.class_format_s) {
-    const formatDiv = document.createElement('div');
-    formatDiv.className = 'entry-detail';
-
-    const formatStrong = document.createElement('strong');
-    formatStrong.textContent = 'Format: ';
-    formatDiv.appendChild(formatStrong);
-
-    formatDiv.appendChild(
-      document.createTextNode(
-        `${i18n(location.class_format_category_s)} - ${i18n(
-          location.class_format_s
-        )}`
-      )
+    const formatSuffix =
+      location.school_tuition_s === 'yes'
+        ? ' (private)'
+        : location.school_tuition_s === 'no'
+        ? ' (public)'
+        : '';
+    container.appendChild(
+      createEntryDetail({
+        label: 'Format: ',
+        text:
+          i18n(location.class_format_category_s) +
+          ' - ' +
+          i18n(location.class_format_s) +
+          formatSuffix
+      })
     );
-
-    if (location.school_tuition_s === 'yes') {
-      formatDiv.appendChild(document.createTextNode(` (private)`));
-    } else if (location.school_tuition_s === 'no') {
-      formatDiv.appendChild(document.createTextNode(` (public)`));
-    }
-
-    container.appendChild(formatDiv);
   }
 
   if (location.school_level_ss) {
-    const schoolLevelDiv = document.createElement('div');
-    schoolLevelDiv.className = 'entry-detail';
-
-    const schoolLevelStrong = document.createElement('strong');
-    schoolLevelStrong.textContent = 'Level(s): ';
-    schoolLevelDiv.appendChild(schoolLevelStrong);
-
-    schoolLevelDiv.appendChild(
-      document.createTextNode(
-        location.school_level_ss.map(key => i18n(`level_${key}`)).join(', ')
-      )
+    container.appendChild(
+      createEntryDetail({
+        label: 'Level(s): ',
+        text: location.school_level_ss
+          .map(key => i18n(`level_${key}`))
+          .join(', ')
+      })
     );
-
-    container.appendChild(schoolLevelDiv);
   }
 
   if (location.class_languages_all_ss) {
-    line =
-      '<strong>Language(s): </strong>' +
-      location.class_languages_all_ss.join(', ');
-    lines.push(line);
+    container.appendChild(
+      createEntryDetail({
+        label: 'Language(s): ',
+        text: location.class_languages_all_ss.join(', ')
+      })
+    );
   }
 
   $.each(lines, function(key, field) {
@@ -245,6 +230,26 @@ export function compileHTML(index, location) {
     '">More information</a></div>';
 
   return container.innerHTML + html + more_link;
+}
+
+/**
+ * Create a div.entry-detail with specified text and (optional) label.
+ * @param {string} [tag] Tag type to generate, `div` by default.
+ * @param {string} [label] If provided, shows up as a **strong** tag in front
+ *   of the text.
+ * @param {string} text
+ * @returns {HTMLDivElement}
+ */
+function createEntryDetail({tag = 'div', label, text}) {
+  const div = document.createElement(tag);
+  div.className = 'entry-detail';
+  if (label) {
+    const strong = document.createElement('strong');
+    strong.textContent = label;
+    div.appendChild(strong);
+  }
+  div.appendChild(document.createTextNode(text));
+  return div;
 }
 
 function setDetailsTrigger(index, location, marker) {
