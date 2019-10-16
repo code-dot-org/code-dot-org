@@ -20,6 +20,7 @@
         width: 100%;
         max-width: 970px;
         margin: 0 auto;
+        user-select: none;
       }
       #activity-canvas {
         width: 100%;
@@ -46,16 +47,19 @@
       }
 
       button {
-        background-color: #aaf;
+        background-color: #403f3f; /* #4e4e82; */
         color: white;
-        font-size: 100%;
-        border-radius: 3%;
+        font-size: 120%;
+        border-radius: 5px;
         padding: 1%;
         border: none;
-        width: 18%;
-        height: 10%;
+        width: 17%;
+        height: 8%;
       }
 
+      button:focus {
+        outline: white auto 5px;
+      }
       .ui-button {
         position: absolute;
       }
