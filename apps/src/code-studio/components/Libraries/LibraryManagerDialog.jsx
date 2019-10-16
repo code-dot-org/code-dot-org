@@ -1,8 +1,26 @@
 /*globals dashboard*/
 import PropTypes from 'prop-types';
 import React from 'react';
-import Dialog, {Body} from '@cdo/apps/templates/Dialog';
+import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import LibraryClientApi from '@cdo/apps/code-studio/components/Libraries/LibraryClientApi';
+import LibraryListItem from '@cdo/apps/code-studio/components/Libraries/LibraryListItem';
+import color from '@cdo/apps/util/color';
+
+const styles = {
+  linkBox: {
+    cursor: 'auto',
+    width: '600px',
+    height: '32px',
+    marginBottom: 0
+  },
+  header: {
+    textAlign: 'left',
+    fontSize: 'x-large',
+    color: color.purple,
+    margin: 7,
+    marginTop: 20
+  }
+};
 
 export default class LibraryManagerDialog extends React.Component {
   static propTypes = {
@@ -23,8 +41,9 @@ export default class LibraryManagerDialog extends React.Component {
     this.setState({importLibraryId: event.target.value});
   };
 
-  addLibrary = () => {
-    let libraryClient = new LibraryClientApi(this.state.importLibraryId);
+  addLibrary = library => {
+    let libraryToImport = library ? library : this.state.importLibraryId;
+    let libraryClient = new LibraryClientApi(libraryToImport);
     libraryClient.getLatest(
       data => {
         dashboard.project.setProjectLibraries([
@@ -38,6 +57,10 @@ export default class LibraryManagerDialog extends React.Component {
     );
   };
 
+  refreshLibrary = libraryName => {
+    console.log('refreshed ' + libraryName + '!');
+  };
+
   removeLibrary = libraryName => {
     dashboard.project.setProjectLibraries(
       this.state.libraries.filter(library => {
@@ -46,37 +69,54 @@ export default class LibraryManagerDialog extends React.Component {
     );
   };
 
-  displayLibraries = () => {
+  displayProjectLibraries = () => {
     return this.state.libraries.map(library => {
       return (
-        <div key={library.name}>
-          <span>{library.name}</span>
-          <button
-            type="button"
-            onClick={() => this.removeLibrary(library.name)}
-          >
-            Remove
-          </button>
-        </div>
+        <LibraryListItem
+          key={library.name}
+          library={library}
+          onRefresh={this.refreshLibrary}
+          onRemove={this.removeLibrary}
+        />
+      );
+    });
+  };
+
+  displayClassLibraries = () => {
+    let classLibraries = this.state.libraries;
+    return classLibraries.map(library => {
+      return (
+        <LibraryListItem
+          key={library.name}
+          library={library}
+          onAdd={this.addLibrary}
+        />
       );
     });
   };
 
   render() {
     return (
-      <Dialog isOpen={this.props.isOpen} onCancel={this.props.onClose}>
-        <Body>
-          {this.displayLibraries()}
-          <input
-            type="text"
-            value={this.state.importLibraryId}
-            onChange={this.setLibraryToImport}
-          />
-          <button onClick={this.addLibrary} type="button">
-            Add Library
-          </button>
-        </Body>
-      </Dialog>
+      <BaseDialog
+        isOpen={this.props.isOpen}
+        handleClose={this.props.onClose}
+        useUpdatedStyles
+      >
+        <div style={styles.header}>Manage libraries in this project</div>
+        {this.displayProjectLibraries()}
+        <div style={styles.header}>Import library from my class</div>
+        {this.displayClassLibraries()}
+        <div style={styles.header}>Import library from ID</div>
+        <input
+          style={styles.linkBox}
+          type="text"
+          value={this.state.importLibraryId}
+          onChange={this.setLibraryToImport}
+        />
+        <button onClick={this.addLibrary} type="button">
+          Add
+        </button>
+      </BaseDialog>
     );
   }
 }
