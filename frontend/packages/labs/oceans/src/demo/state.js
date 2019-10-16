@@ -16,10 +16,11 @@ export const getState = function() {
 
 export const setState = function(newState) {
   if (newState.currentMode) {
+    // When mode changes, reset backgroundImg and uiDrawn.
     state = {
-      ...initialState,
-      fishData: state.fishData,
-      trainer: state.trainer,
+      ...state,
+      backgroundImg: null,
+      uiDrawn: false,
       ...newState
     };
   } else {

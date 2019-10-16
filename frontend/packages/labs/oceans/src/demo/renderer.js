@@ -212,7 +212,83 @@ function predictionText(state, onComplete) {
 }
 
 function drawPondScreen(state) {
-  console.log('pond!');
+  if (state.backgroundImg) {
+    renderBackgroundImage(state.ctx, state.backgroundImg);
+    drawPondFish(state);
+    if (!state.uiDrawn) {
+      drawPondUiElements(state);
+      state.uiDrawn = true;
+      setState(state);
+    }
+  } else {
+    loadBackgroundImage().then(backgroundImg => {
+      state = {...state, backgroundImg};
+      setState(state);
+      drawPondScreen(state);
+    });
+  }
+}
+
+function drawPondFish(state) {
+  predictAllFish(state, fishWithConfidence => {
+    fishWithConfidence = _.sortBy(fishWithConfidence, ['confidence']);
+    const pondFish = fishWithConfidence.splice(0, 20);
+
+    pondFish.forEach(fishDatum => {
+      loadFishImages(fishDatum.fish).then(results => {
+        const randomX = randomInt(
+          FISH_CANVAS_WIDTH / 4,
+          state.canvas.width - FISH_CANVAS_WIDTH / 4
+        );
+        const randomY = randomInt(
+          FISH_CANVAS_HEIGHT / 4,
+          state.canvas.height - FISH_CANVAS_HEIGHT / 4
+        );
+        drawFish(fishDatum.fish, results, state.ctx, randomX, randomY);
+      });
+    });
+  });
+}
+
+function predictAllFish(state, onComplete) {
+  let fishWithConfidence = [];
+  state.fishData.map(fishDatum => {
+    state.trainer.predictFromData(fishDatum.fish.knnData).then(res => {
+      if (res.predictedClassId === ClassType.Like) {
+        let data = {
+          ...fishDatum,
+          confidence: res.confidencesByClassId[res.predictedClassId]
+        };
+        fishWithConfidence.push(data);
+      }
+
+      if (fishWithConfidence.length === state.fishData.length) {
+        onComplete(fishWithConfidence);
+      }
+    });
+  });
+}
+
+function drawPondUiElements(state) {
+  const container = uiContainer();
+  const buttons = [
+    {
+      text: 'start over',
+      id: 'start-over-button',
+      onClick: () => {
+        clearChildren(container);
+        const canvas = state.canvas;
+        state.currentMode = Modes.Training;
+        state.trainer.clearAll();
+        setState(state);
+        init(canvas);
+      }
+    }
+  ];
+
+  buttons.forEach(button =>
+    renderButton(container, button.id, button.text, button.onClick)
+  );
 }
 
 function loadFishImages(fish) {
@@ -353,4 +429,10 @@ function colorFromType(palette, type) {
     default:
       return null;
   }
+}
+
+function randomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
