@@ -320,26 +320,11 @@ export function i18n(token) {
  */
 function compileDetails(index, location, initialContent) {
   const container = document.createElement('div');
-  const lines = [];
 
   const heading = document.createElement('h2');
   heading.style = 'margin-top: 0; margin-bottom: .5em; padding-top: 0;';
   heading.textContent = location.school_name_s;
   container.appendChild(heading);
-
-  if (location.school_website_s) {
-    if (!location.school_website_s.match(/^https?:\/\//i)) {
-      location.school_website_s = 'http://' + location.school_website_s;
-    }
-
-    let line =
-      '<strong>Website: </strong><a href="' +
-      location.school_website_s +
-      '" target="_blank">' +
-      location.school_website_s +
-      '</a>';
-    lines.push(line);
-  }
 
   initialContent.childNodes.forEach(child => {
     const clone = child.cloneNode(true);
@@ -347,11 +332,26 @@ function compileDetails(index, location, initialContent) {
     clone.removeAttribute('class');
     container.appendChild(clone);
   });
-  let html = container.innerHTML;
 
-  $.each(lines, function(key, field) {
-    html += '<div>' + field + '</div>';
-  });
+  let website = location.school_website_s;
+  if (website) {
+    if (!website.match(/^https?:\/\//i)) {
+      website = 'http://' + website;
+    }
+
+    const websiteDiv = document.createElement('div');
+    const websiteStrong = document.createElement('strong');
+    websiteStrong.textContent = 'Website: ';
+    websiteDiv.appendChild(websiteStrong);
+    const websiteA = document.createElement('a');
+    websiteA.setAttribute('href', website);
+    websiteA.setAttribute('target', '_blank');
+    websiteA.textContent = website;
+    websiteDiv.appendChild(websiteA);
+    container.appendChild(websiteDiv);
+  }
+
+  let html = container.innerHTML;
 
   if (location.class_description_s) {
     html +=
