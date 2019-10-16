@@ -7,10 +7,17 @@ import {hideLibraryCreationDialog} from '../shareDialogRedux';
 import libraryParser from './libraryParser';
 import LibraryClientApi from './LibraryClientApi';
 import i18n from '@cdo/locale';
-import Button from '../../../templates/Button';
-import DialogFooter from '../../../templates/teacherDashboard/DialogFooter';
 import PadAndCenter from '../../../templates/teacherDashboard/PadAndCenter';
-import {Heading2} from '../../../lib/ui/Headings';
+import {Heading1, Heading2} from '../../../lib/ui/Headings';
+
+const styles = {
+  alert: {
+    color: 'red'
+  },
+  libraryBoundary: {
+    padding: 10
+  }
+};
 
 class LibraryCreationDialog extends React.Component {
   static propTypes = {
@@ -72,13 +79,14 @@ class LibraryCreationDialog extends React.Component {
   };
 
   tempSubmit = () => {
-    console.log('submit');
+    this.publish();
   };
 
   displayFunctions = () => {
     if (!this.state.loadingFinished) {
       return <div>Loading...</div>;
     }
+    let keyIndex = 0;
     //Todo Adjust rows and cols to respond to changing size of window
     return (
       <div>
@@ -90,18 +98,29 @@ class LibraryCreationDialog extends React.Component {
             cols="200"
             placeholder="Write a description of your library"
           />
-          <div>
-            {this.state.selectedFunctionList.map(selectedFunction => {
-              let name = selectedFunction.functionName;
-              let comment = selectedFunction.comment;
-              return (
-                <div>
-                  <input type="checkbox" key={name} /> {name} <br />
-                  <p>{comment}</p>
-                </div>
-              );
-            })}
-          </div>
+          {this.state.selectedFunctionList.map(selectedFunction => {
+            let name = selectedFunction.functionName;
+            let comment = selectedFunction.comment;
+            return (
+              <div key={keyIndex++}>
+                <input type="checkbox" disabled={comment.length === 0} />
+                {name}
+                <br />
+                {comment.length === 0 && (
+                  <p style={styles.alert}>
+                    You must add a comment describing this function before you
+                    can export it.
+                  </p>
+                )}
+                <pre>{comment}</pre>
+              </div>
+            );
+          })}
+          <input
+            type="submit"
+            value={i18n.publish()}
+            disabled={!this.state.canPublish}
+          />
         </form>
       </div>
     );
@@ -110,21 +129,16 @@ class LibraryCreationDialog extends React.Component {
   render() {
     return (
       <Dialog
-        title="Publish Functions as a Library"
         isOpen={this.props.dialogIsOpen}
         handleClose={this.handleClose}
         useUpdatedStyles
       >
         <Body>
           <PadAndCenter>
-            <div>{this.displayFunctions()}</div>
-            <DialogFooter rightAlign>
-              <Button
-                onClick={this.publish}
-                text={i18n.publish()}
-                color={Button.ButtonColor.orange}
-              />
-            </DialogFooter>
+            <div style={styles.libraryBoundary}>
+              <Heading1>Functions as a Library</Heading1>
+              {this.displayFunctions()}
+            </div>
           </PadAndCenter>
         </Body>
       </Dialog>
