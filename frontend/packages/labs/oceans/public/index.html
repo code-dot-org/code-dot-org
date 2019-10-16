@@ -17,96 +17,74 @@
       }
       #container {
         position: relative;
-        width: 100vw;
-        height: 56.25vw; /* height:width ratio = 9/16 = .5625  */
-        max-height: 100vh;
-        max-width: 177.78vh; /* 16/9 = 1.778 */
+        width: 100%;
+        max-width: 970px;
+        margin: 0 auto;
+        user-select: none;
+      }
+      #background-canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+      }
+      #activity-canvas {
+        width: 100%;
       }
       #ui-container {
         position: absolute;
         top: 0;
         left: 0;
-        width: 100vw;
-        height: 56.25vw; /* height:width ratio = 9/16 = .5625  */
-        max-height: 100vh;
-        max-width: 177.78vh; /* 16/9 = 1.778 */
-      }
-      #activity-canvas,
-      #background-canvas {
-        position: absolute;
         width: 100%;
+        height: 100%;
       }
-
-      @media screen and (max-aspect-ratio: 16/9) {
+      button {
+        background-color: #403f3f; /* #4e4e82; */
+        color: white;
+        font-size: 120%;
+        border-radius: 5px;
+        padding: 1%;
+        border: none;
+        width: 17%;
+        height: 8%;
+      }
+      button:focus {
+        outline: white auto 5px;
+      }
+      .ui-button {
+        position: absolute;
+      }
+      @media screen and (max-width: 800px) {
         button {
-          background-color: #aaf;
-          color: white;
-          font-size: 3vw;
-          border-radius: 3vw;
-          padding: 1vw;
-          border: none;
-          width: 20vw;
-          height: 10vw;
-        }
-        #like-button {
-          position: absolute;
-          right: 30vw;
-          bottom: 3vw;
-        }
-        #dislike-button {
-          position: absolute;
-          right: 50vw;
-          bottom: 3vw;
-        }
-        #next-button,
-        #start-over-button {
-          position: absolute;
-          right: 1vw;
-          bottom: 1vw;
-        }
-        #predict-button {
-          position: absolute;
-          right: 40vw;
-          bottom: 3vw;
-        }
-        #predict-text {
-          width: 100%;
-          text-align: center;
+          font-size: 90%;
         }
       }
-
-      @media screen and (min-aspect-ratio: 16/9) {
+      @media screen and (max-width: 600px) {
         button {
-          background-color: #aaf;
-          color: white;
-          font-size: calc(3vh * 16 / 9);
-          border-radius: calc(3vh * 16 / 9);
-          padding: calc(1vh * 16 / 9);
-          border: none;
-          width: calc(20vh * 16 / 9);
-          height: calc(10vh * 16 / 9);
+          font-size: 60%;
         }
-        #like-button {
-          position: absolute;
-          right: calc(30vh * 16 / 9);
-          bottom: calc(3vh * 16 / 9);
-        }
-        #dislike-button {
-          position: absolute;
-          right: calc(50vh * 16 / 9);
-          bottom: calc(3vh * 16 / 9);
-        }
-        #next-button,
-        #start-over-button {
-          position: absolute;
-          right: calc(1vh * 16 / 9);
-          bottom: calc(1vh * 16 / 9);
-        }
-        #predict-button {
-          position: absolute;
-          right: calc(40vh * 16 / 9);
-          bottom: calc(3vh * 16 / 9);
-        }
+      }
+      #like-button {
+        right: 30%;
+        bottom: 3%;
+      }
+      #dislike-button {
+        right: 50%;
+        bottom: 3%;
+      }
+      #next-button,
+      #start-over-button {
+        right: 3%;
+        bottom: 3%;
+      }
+      #predict-button {
+        right: 40%;
+        bottom: 3%;
+      }
+      #predict-text {
+        width: 100%;
+        text-align: center;
       }
     </style>
   </head>
