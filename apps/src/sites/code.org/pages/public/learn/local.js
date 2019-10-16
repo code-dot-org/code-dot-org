@@ -163,16 +163,14 @@ function loadMap(locations) {
 }
 
 export function compileHTML(index, location) {
-  const container = document.createElement('div');
-  var lines = [];
-  var html = '';
+  const sharedContent = document.createElement('div');
 
-  container.appendChild(
-    createEntryDetail({tag: 'h3', text: location.school_name_s})
-  );
+  const heading = createEntryDetail({tag: 'h3', text: location.school_name_s});
 
   if (location.school_address_s) {
-    container.appendChild(createEntryDetail({text: location.school_address_s}));
+    sharedContent.appendChild(
+      createEntryDetail({text: location.school_address_s})
+    );
   }
 
   if (location.class_format_s) {
@@ -182,7 +180,7 @@ export function compileHTML(index, location) {
         : location.school_tuition_s === 'no'
         ? ' (public)'
         : '';
-    container.appendChild(
+    sharedContent.appendChild(
       createEntryDetail({
         label: 'Format: ',
         text:
@@ -195,7 +193,7 @@ export function compileHTML(index, location) {
   }
 
   if (location.school_level_ss) {
-    container.appendChild(
+    sharedContent.appendChild(
       createEntryDetail({
         label: 'Level(s): ',
         text: location.school_level_ss
@@ -206,7 +204,7 @@ export function compileHTML(index, location) {
   }
 
   if (location.class_languages_all_ss) {
-    container.appendChild(
+    sharedContent.appendChild(
       createEntryDetail({
         label: 'Language(s): ',
         text: location.class_languages_all_ss.join(', ')
@@ -214,13 +212,8 @@ export function compileHTML(index, location) {
     );
   }
 
-  $.each(lines, function(key, field) {
-    html += '<div class="entry-detail">' + field + '</div>';
-  });
-
   // Add details to the page for displaying in a modal popup.
-  var details = compileDetails(index, location, lines);
-  addDetails(index, details);
+  addDetails(index, compileDetails(index, location, sharedContent));
 
   var more_link =
     '<div><a id="location-details-trigger-' +
@@ -229,7 +222,7 @@ export function compileHTML(index, location) {
     index +
     '">More information</a></div>';
 
-  return container.innerHTML + html + more_link;
+  return heading.outerHTML + sharedContent.innerHTML + more_link;
 }
 
 /**
@@ -292,7 +285,18 @@ export function i18n(token) {
   return labels[token];
 }
 
-function compileDetails(index, location, lines) {
+/**
+ * Compile HTML contents of a pop-up to be displayed when an item
+ * on the map is selected.
+ * @param index
+ * @param location
+ * @param {Node} initialContent - Preformed DOM elements to clone and
+ *   include in the body of the popup.
+ * @returns {string} HTML for the body of the popup.
+ */
+function compileDetails(index, location, initialContent) {
+  const container = document.createElement('div');
+  const lines = [];
   // Compile HTML.
   var html =
     '<h2 style="margin-top: 0; margin-bottom: .5em; padding-top: 0;">' +
@@ -312,6 +316,14 @@ function compileDetails(index, location, lines) {
       '</a>';
     lines.push(line);
   }
+
+  initialContent.childNodes.forEach(child => {
+    const clone = child.cloneNode(true);
+    // Strip class to preserve behavior
+    clone.removeAttribute('class');
+    container.appendChild(clone);
+  });
+  html += container.innerHTML;
 
   $.each(lines, function(key, field) {
     html += '<div>' + field + '</div>';
