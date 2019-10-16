@@ -5,7 +5,6 @@ import {init as initTraining} from './modes/training';
 import {init as initPredicting} from './modes/predicting';
 import {init as initPond} from './modes/pond';
 import {setState, getState} from './state';
-import debounce from 'lodash/debounce';
 import {generateRandomFish} from '../utils/generateOcean';
 import SimpleTrainer from '../utils/SimpleTrainer';
 
