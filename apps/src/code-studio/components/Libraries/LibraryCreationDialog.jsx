@@ -7,8 +7,8 @@ import {hideLibraryCreationDialog} from '../shareDialogRedux';
 import libraryParser from './libraryParser';
 import LibraryClientApi from './LibraryClientApi';
 import i18n from '@cdo/locale';
-import PadAndCenter from '../../../templates/teacherDashboard/PadAndCenter';
-import {Heading1, Heading2} from '../../../lib/ui/Headings';
+import PadAndCenter from '@cdo/apps/templates/teacherDashboard/PadAndCenter';
+import {Heading1, Heading2} from '@cdo/apps/lib/ui/Headings';
 
 const styles = {
   alert: {
@@ -163,7 +163,7 @@ class LibraryCreationDialog extends React.Component {
         <Body>
           <PadAndCenter>
             <div style={styles.libraryBoundary}>
-              <Heading1>Functions as a Library</Heading1>
+              <Heading1>Export Functions as a Library</Heading1>
               {this.displayFunctions()}
             </div>
           </PadAndCenter>
