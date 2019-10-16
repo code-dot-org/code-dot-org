@@ -854,13 +854,23 @@ const transferStudentsOnServer = (
     });
 };
 
-export const sectionStudentsDataOnServer = sectionId => {
+export const loadSectionStudentData = sectionId => {
   return (dispatch, getState) => {
     const state = getState().manageStudents;
+
+    // For picture and word logins we add a row for adding new entries at position 0
+    const indexToCheckForStudent =
+      state.loginType === SectionLoginType.word ||
+      state.loginType === SectionLoginType.picture
+        ? 1
+        : 0;
+
     // Don't load data if it's already stored in redux.
     const alreadyHaveStudentData =
-      Object.values(state.studentData)[0] &&
-      Object.values(state.studentData)[0].sectionId === sectionId;
+      Object.values(state.studentData)[indexToCheckForStudent] &&
+      Object.values(state.studentData)[indexToCheckForStudent].sectionId ===
+        sectionId;
+
     if (!alreadyHaveStudentData) {
       dispatch(startLoadingStudents());
       $.ajax({
@@ -875,6 +885,8 @@ export const sectionStudentsDataOnServer = sectionId => {
         );
         dispatch(setStudents(convertedStudentData));
       });
+    } else {
+      dispatch(finishLoadingStudents());
     }
   };
 };
