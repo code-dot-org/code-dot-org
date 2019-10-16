@@ -192,14 +192,14 @@ describe('/learn/local', () => {
     });
 
     it('end-to-end coverage', () => {
-      compileHTML(1, SAMPLE_RESPONSE.response.docs[1]);
+      compileHTML(1, SAMPLE_LOCATION);
       assert.equal(
         locationDetailsDiv.innerHTML,
         `<div id="location-details-1">` +
           `<h2 style="margin-top: 0; margin-bottom: .5em; padding-top: 0;">Code on the Road</h2>` +
           `<div>Example Building 8th floor\nSeattle, WA 98109\nUnited States</div>` +
           `<div><strong>Format: </strong>Out of school - Other out of school (private)</div>` +
-          `<div><strong>Level(s): </strong>, </div>` +
+          `<div><strong>Level(s): </strong>High school, College</div>` +
           `<div><strong>Language(s): </strong>C#, Python</div>` +
           `<div><strong>Website: </strong><a href="http://example.com/event" target="_blank">http://example.com/event</a></div>` +
           `<p style="margin-top: 1em;">Code on the Road is an evening course designed to teach programming to people who like coffee shops.</p>` +
