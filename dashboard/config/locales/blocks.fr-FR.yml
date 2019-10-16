@@ -80,6 +80,28 @@ fr:
             '"rotation"': orientation
             '"x"': position horizontale
             '"y"': position verticale
+      Dancelab_changePropEachBy:
+        options:
+          GROUP:
+            sprites: tout
+            '"ALIEN"': tous les extraterrestres
+            '"BEAR"': tous les ours
+            '"CAT"': tous les chats
+            '"DOG"': tous les chiens
+            '"DUCK"': tous les canards
+            '"FROG"': toutes les grenouilles
+            '"MOOSE"': tous les orignaux
+            '"PINEAPPLE"': tous les ananas
+            '"ROBOT"': tous les robots
+            '"SHARK"': tous les requins
+            '"UNICORN"': Licornes
+          PROPERTY:
+            '"scale"': taille
+            '"width"': largeur
+            '"height"': hauteur
+            '"rotation"': orientation
+            '"x"': position horizontale
+            '"y"': position verticale
       Dancelab_doMoveEachLR:
         text: "{GROUP} faire {MOVE} {DIR} une fois"
         options:
@@ -95,7 +117,7 @@ fr:
             '"PINEAPPLE"': tous les ananas
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
-            '"UNICORN"': Toutes les licornes
+            '"UNICORN"': Licornes
           MOVE:
             '"rand"': "(Aléatoire)"
             MOVES.XBend: Pliez
@@ -240,6 +262,32 @@ fr:
             "{x: 100, y: 300}": vers le bas à gauche
             "{x: 300, y: 300}": vers le haut à droite
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": aléatoire
+      Dancelab_jumpToEach:
+        options:
+          GROUP:
+            sprites: tout
+            '"ALIEN"': tous les extraterrestres
+            '"BEAR"': tous les ours
+            '"CAT"': tous les chats
+            '"DOG"': tous les chiens
+            '"DUCK"': tous les canards
+            '"FROG"': toutes les grenouilles
+            '"MOOSE"': tous les orignaux
+            '"PINEAPPLE"': tous les ananas
+            '"ROBOT"': tous les robots
+            '"SHARK"': tous les requins
+            '"UNICORN"': Licornes
+          LOCATION:
+            "{x: 200, y: 100}": vers le haut
+            "{x: 200, y: 300}": vers le bas
+            "{x: 100, y: 200}": vers la gauche
+            "{x: 300, y: 200}": vers la droite
+            "{x: 200, y: 200}": vers le centre
+            "{x: 100, y: 100}": vers le haut à gauche
+            "{x: 300, y: 100}": vers le haut à droite
+            "{x: 100, y: 300}": vers le bas à gauche
+            "{x: 300, y: 300}": vers le haut à droite
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": aléatoire
       Dancelab_layoutSprites:
         text: afficher {GROUP} en tant que {FORMAT}
         options:
@@ -255,7 +303,7 @@ fr:
             '"PINEAPPLE"': tous les ananas
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
-            '"UNICORN"': Toutes les licornes
+            '"UNICORN"': Licornes
           FORMAT:
             '"border"': frontière
             '"inner"': carré intérieur
@@ -267,19 +315,20 @@ fr:
             '"plus"': plus
             '"random"': aléatoire
       Dancelab_makeAnonymousDanceSprite:
+        text: fais un nouveau {COSTUME} à {LOCATION}
         options:
           COSTUME:
-            '"ALIEN"': Extraterrestre
+            '"ALIEN"': extraterrestre
             '"BEAR"': Ours
-            '"CAT"': Chat
-            '"DOG"': Chien
-            '"DUCK"': Canard
+            '"CAT"': chat
+            '"DOG"': chien
+            '"DUCK"': canard
             '"FROG"': Grenouille
-            '"MOOSE"': Orignal
+            '"MOOSE"': tous les orignaux
             '"PINEAPPLE"': Ananas
-            '"ROBOT"': Robot
+            '"ROBOT"': robot
             '"SHARK"': Requin
-            '"UNICORN"': Licorne
+            '"UNICORN"': licorne
           LOCATION:
             "{x: 200, y: 100}": vers le haut
             "{x: 200, y: 300}": vers le bas
@@ -469,7 +518,7 @@ fr:
             '"PINEAPPLE"': tous les ananas
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
-            '"UNICORN"': Toutes les licornes
+            '"UNICORN"': Licornes
           SPEED:
             '1': normal
             '2': rapide
@@ -523,7 +572,6 @@ fr:
             '"rotation"': orientation
             '"x"': position horizontale
             '"y"': position verticale
-            '"tint"': nuance
       Dancelab_setPropEach:
         text: définir {GROUP} {PROPERTY} à {VAL}
         options:
@@ -539,7 +587,17 @@ fr:
             '"PINEAPPLE"': tous les ananas
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
-            '"UNICORN"': Toutes les licornes
+            '"UNICORN"': Licornes
+          PROPERTY:
+            '"scale"': taille
+            '"width"': largeur
+            '"height"': hauteur
+            '"rotation"': orientation
+            '"x"': position horizontale
+            '"y"': position verticale
+      Dancelab_setPropRandom:
+        text: randomiser {SPRITE} {PROPERTY}
+        options:
           PROPERTY:
             '"scale"': taille
             '"width"': largeur
@@ -548,9 +606,21 @@ fr:
             '"x"': position horizontale
             '"y"': position verticale
             '"tint"': nuance
-      Dancelab_setPropRandom:
-        text: randomiser {SPRITE} {PROPERTY}
+      Dancelab_setPropRandomEach:
         options:
+          GROUP:
+            sprites: tout
+            '"ALIEN"': tous les extraterrestres
+            '"BEAR"': tous les ours
+            '"CAT"': tous les chats
+            '"DOG"': tous les chiens
+            '"DUCK"': tous les canards
+            '"FROG"': toutes les grenouilles
+            '"MOOSE"': tous les orignaux
+            '"PINEAPPLE"': tous les ananas
+            '"ROBOT"': tous les robots
+            '"SHARK"': tous les requins
+            '"UNICORN"': Licornes
           PROPERTY:
             '"scale"': taille
             '"width"': largeur
@@ -576,6 +646,7 @@ fr:
             '"PINEAPPLE"': tous les ananas
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
+            '"UNICORN"': Licornes
       Dancelab_setTintEachInline:
         text: définir la teinte de {THIS} à {VAL}
         options:
@@ -591,6 +662,7 @@ fr:
             '"PINEAPPLE"': tous les ananas
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
+            '"UNICORN"': Licornes
       Dancelab_setTintInline:
         text: définir la teinte de {SPRITE} à {VAL}
       Dancelab_setVisible:
@@ -614,7 +686,7 @@ fr:
             '"PINEAPPLE"': tous les ananas
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
-            '"UNICORN"': Toutes les licornes
+            '"UNICORN"': Licornes
           VISIBILITY:
             'true': visible
             'false': invisible
@@ -633,9 +705,64 @@ fr:
             '"bass"': grave
             '"mid"': médium
             '"treble"': aigu
+      Dancelab_startMappingEach:
+        options:
+          GROUP:
+            sprites: tout
+            '"ALIEN"': tous les extraterrestres
+            '"BEAR"': tous les ours
+            '"CAT"': tous les chats
+            '"DOG"': tous les chiens
+            '"DUCK"': tous les canards
+            '"FROG"': toutes les grenouilles
+            '"MOOSE"': tous les orignaux
+            '"PINEAPPLE"': tous les ananas
+            '"ROBOT"': tous les robots
+            '"SHARK"': tous les requins
+            '"UNICORN"': Licornes
+          PROPERTY:
+            '"scale"': taille
+            '"width"': largeur
+            '"height"': hauteur
+            '"rotation"': orientation
+            '"x"': position horizontale
+            '"y"': position verticale
+            '"tint"': nuance
+          RANGE:
+            '"bass"': grave
+            '"mid"': médium
+            '"treble"': aigu
       Dancelab_stopMapping:
         text: "{SPRITE} arrête {PROPERTY} suivant {RANGE}"
         options:
+          PROPERTY:
+            '"scale"': taille
+            '"width"': largeur
+            '"height"': hauteur
+            '"rotation"': orientation
+            '"x"': position horizontale
+            '"y"': position verticale
+            '"direction"': direction du mouvement
+            '"tint"': nuance
+          RANGE:
+            '"bass"': grave
+            '"mid"': médium
+            '"treble"': aigu
+      Dancelab_stopMappingEach:
+        options:
+          GROUP:
+            sprites: tout
+            '"ALIEN"': tous les extraterrestres
+            '"BEAR"': tous les ours
+            '"CAT"': tous les chats
+            '"DOG"': tous les chiens
+            '"DUCK"': tous les canards
+            '"FROG"': toutes les grenouilles
+            '"MOOSE"': tous les orignaux
+            '"PINEAPPLE"': tous les ananas
+            '"ROBOT"': tous les robots
+            '"SHARK"': tous les requins
+            '"UNICORN"': Licornes
           PROPERTY:
             '"scale"': taille
             '"width"': largeur

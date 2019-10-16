@@ -31,6 +31,8 @@
   "allStudents": "Alle elever",
   "and": "og",
   "animationMode": "Animasjon",
+  "animationPicker_drawYourOwn": "Tegn din egen",
+  "animationPicker_error": "Feilmelding: {message}",
   "announcements": "Kunngjøringer",
   "announcementHeadingBackToSchool": "Gjør deg klar til det nye skoleåret",
   "announcementDescriptionBackToSchool": "Se våre ofte stilte spørsmål for å finne ut hvordan du administrerer klasserommet ditt og kommer i gang med undervisningen.",

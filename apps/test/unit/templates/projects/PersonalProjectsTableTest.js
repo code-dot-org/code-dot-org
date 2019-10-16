@@ -1,6 +1,6 @@
 import React from 'react';
 import {mount} from 'enzyme';
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/deprecatedChai';
 import {Provider} from 'react-redux';
 import {getStore} from '@cdo/apps/redux';
 import {UnconnectedPersonalProjectsTable as PersonalProjectsTable} from '@cdo/apps/templates/projects/PersonalProjectsTable';

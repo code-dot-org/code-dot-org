@@ -55,6 +55,24 @@ id:
             '"scale"': ukuran
             '"height"': tinggi
             '"rotation"': Perputaran
+      Dancelab_changePropEachBy:
+        options:
+          GROUP:
+            sprites: semua
+            '"ALIEN"': semua aliens
+            '"BEAR"': semua beruang
+            '"CAT"': semua kucing
+            '"DOG"': semua anjing
+            '"DUCK"': semua bebek
+            '"FROG"': semua katak
+            '"MOOSE"': semua rusa
+            '"PINEAPPLE"': semua nanas
+            '"ROBOT"': semua robot
+            '"SHARK"': semua hiu
+          PROPERTY:
+            '"scale"': ukuran
+            '"height"': tinggi
+            '"rotation"': Perputaran
       Dancelab_doMoveEachLR:
         options:
           GROUP:
@@ -128,6 +146,25 @@ id:
             "{x: 300, y: 200}": kanan
             "{x: 200, y: 200}": Tengah
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": acak
+      Dancelab_jumpToEach:
+        options:
+          GROUP:
+            sprites: semua
+            '"ALIEN"': semua aliens
+            '"BEAR"': semua beruang
+            '"CAT"': semua kucing
+            '"DOG"': semua anjing
+            '"DUCK"': semua bebek
+            '"FROG"': semua katak
+            '"MOOSE"': semua rusa
+            '"PINEAPPLE"': semua nanas
+            '"ROBOT"': semua robot
+            '"SHARK"': semua hiu
+          LOCATION:
+            "{x: 100, y: 200}": kiri
+            "{x: 300, y: 200}": kanan
+            "{x: 200, y: 200}": Tengah
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": acak
       Dancelab_layoutSprites:
         options:
           GROUP:
@@ -149,6 +186,14 @@ id:
             '"random"': acak
       Dancelab_makeAnonymousDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': alien
+            '"CAT"': kucing
+            '"DOG"': anjing
+            '"DUCK"': bebek
+            '"MOOSE"': semua rusa
+            '"ROBOT"': robot
+            '"UNICORN"': unicorn
           LOCATION:
             "{x: 100, y: 200}": kiri
             "{x: 300, y: 200}": kanan
@@ -156,6 +201,14 @@ id:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": acak
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': alien
+            '"CAT"': kucing
+            '"DOG"': anjing
+            '"DUCK"': bebek
+            '"MOOSE"': semua rusa
+            '"ROBOT"': robot
+            '"UNICORN"': unicorn
           LOCATION:
             "{x: 100, y: 200}": kiri
             "{x: 300, y: 200}": kanan
@@ -183,6 +236,17 @@ id:
             '18': '18'
             '19': '19'
             '20': '20'
+          COSTUME:
+            '"ALIEN"': semua aliens
+            '"BEAR"': semua beruang
+            '"CAT"': semua kucing
+            '"DOG"': semua anjing
+            '"DUCK"': semua bebek
+            '"FROG"': semua katak
+            '"MOOSE"': semua rusa
+            '"PINEAPPLE"': semua nanas
+            '"ROBOT"': semua robot
+            '"SHARK"': semua hiu
           LAYOUT:
             '"grid"': Kisi
             '"row"': baris
@@ -242,7 +306,6 @@ id:
             '"scale"': ukuran
             '"height"': tinggi
             '"rotation"': Perputaran
-            '"tint"': Mewarnai
       Dancelab_setPropEach:
         options:
           GROUP:
@@ -261,9 +324,27 @@ id:
             '"scale"': ukuran
             '"height"': tinggi
             '"rotation"': Perputaran
-            '"tint"': Mewarnai
       Dancelab_setPropRandom:
         options:
+          PROPERTY:
+            '"scale"': ukuran
+            '"height"': tinggi
+            '"rotation"': Perputaran
+            '"tint"': Mewarnai
+      Dancelab_setPropRandomEach:
+        options:
+          GROUP:
+            sprites: semua
+            '"ALIEN"': semua aliens
+            '"BEAR"': semua beruang
+            '"CAT"': semua kucing
+            '"DOG"': semua anjing
+            '"DUCK"': semua bebek
+            '"FROG"': semua katak
+            '"MOOSE"': semua rusa
+            '"PINEAPPLE"': semua nanas
+            '"ROBOT"': semua robot
+            '"SHARK"': semua hiu
           PROPERTY:
             '"scale"': ukuran
             '"height"': tinggi
@@ -322,8 +403,55 @@ id:
             '"bass"': Kecil
             '"mid"': Sedang
             '"treble"': Besar
+      Dancelab_startMappingEach:
+        options:
+          GROUP:
+            sprites: semua
+            '"ALIEN"': semua aliens
+            '"BEAR"': semua beruang
+            '"CAT"': semua kucing
+            '"DOG"': semua anjing
+            '"DUCK"': semua bebek
+            '"FROG"': semua katak
+            '"MOOSE"': semua rusa
+            '"PINEAPPLE"': semua nanas
+            '"ROBOT"': semua robot
+            '"SHARK"': semua hiu
+          PROPERTY:
+            '"scale"': ukuran
+            '"height"': tinggi
+            '"rotation"': Perputaran
+            '"tint"': Mewarnai
+          RANGE:
+            '"bass"': Kecil
+            '"mid"': Sedang
+            '"treble"': Besar
       Dancelab_stopMapping:
         options:
+          PROPERTY:
+            '"scale"': ukuran
+            '"height"': tinggi
+            '"rotation"': Perputaran
+            '"direction"': Arah pergerakan
+            '"tint"': Mewarnai
+          RANGE:
+            '"bass"': Kecil
+            '"mid"': Sedang
+            '"treble"': Besar
+      Dancelab_stopMappingEach:
+        options:
+          GROUP:
+            sprites: semua
+            '"ALIEN"': semua aliens
+            '"BEAR"': semua beruang
+            '"CAT"': semua kucing
+            '"DOG"': semua anjing
+            '"DUCK"': semua bebek
+            '"FROG"': semua katak
+            '"MOOSE"': semua rusa
+            '"PINEAPPLE"': semua nanas
+            '"ROBOT"': semua robot
+            '"SHARK"': semua hiu
           PROPERTY:
             '"scale"': ukuran
             '"height"': tinggi

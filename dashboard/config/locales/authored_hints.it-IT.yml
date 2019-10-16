@@ -9600,6 +9600,30 @@ it-IT:
         courseC_harvester_loops_challenge1_b: Puoi ripetere i blocchi `vai avanti`
           e `prendi pannocchia` tutte le volte che ti serve, poi `gira a destra` ad
           ogni angolo.
+        courseC_harvester_loops_challenge1_c: |-
+          Il modo migliore per raccogliere le pannocchie del secondo e terzo lato del percorso è di usare un ciclo `ripeti ... volte` dentro a un altro blocco `ripeti ... volte`.
+
+          <xml><block type="controls_repeat">
+                  <title name="TIMES">2</title>
+                  <statement name="DO">
+                    <block type="controls_repeat">
+                      <title name="TIMES">4</title>
+                      <statement name="DO">
+                        <block type="maze_move">
+                          <title name="DIR">moveForward</title>
+                          <next>
+                            <block type="harvester_corn"/>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnRight</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  </block></xml>
       courseC_harvester_loops_challenge1a_2019:
         courseC_harvester_loops_challenge1_a: È troppo difficile senza usare i cicli!
         courseC_harvester_loops_challenge1_b: Puoi ripetere i blocchi `vai avanti`

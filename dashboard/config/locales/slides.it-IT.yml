@@ -4001,3 +4001,13 @@ it:
         text: Hai già dimostrato di essere un intrepido programmatore e non vedo l'ora
           di scoprire cosa creerai. E speriamo che le tue avventure con la programmazione
           non finiscano qui. Buon viaggio!
+    what_is_cs:
+      1:
+        image: notes/what_is_cs.png
+    writing_first_program:
+      3:
+        image: notes/writing_first_program_3.png
+      4:
+        image: notes/writing_first_program_4.png
+      5:
+        image: notes/writing_first_program_5.png

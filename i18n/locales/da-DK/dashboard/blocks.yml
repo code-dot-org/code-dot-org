@@ -32,11 +32,17 @@ da:
           PROPERTY:
             '"scale"': størrelse
             '"height"': højde
+      Dancelab_changePropEachBy:
+        options:
+          GROUP:
+            sprites: alle
+          PROPERTY:
+            '"scale"': størrelse
+            '"height"': højde
       Dancelab_doMoveEachLR:
         options:
           GROUP:
             sprites: alle
-            '"UNICORN"': alle enhjørninger
           MOVE:
             MOVES.Roll: Rul med kroppen
             MOVES.DoubleJam: Ned to gange
@@ -82,11 +88,18 @@ da:
             "{x: 100, y: 200}": venstre
             "{x: 300, y: 200}": højre
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": tilfældig
+      Dancelab_jumpToEach:
+        options:
+          GROUP:
+            sprites: alle
+          LOCATION:
+            "{x: 100, y: 200}": venstre
+            "{x: 300, y: 200}": højre
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": tilfældig
       Dancelab_layoutSprites:
         options:
           GROUP:
             sprites: alle
-            '"UNICORN"': alle enhjørninger
           FORMAT:
             '"border"': grænse
             '"inner"': indersiden af firkant
@@ -95,7 +108,12 @@ da:
       Dancelab_makeAnonymousDanceSprite:
         options:
           COSTUME:
-            '"DOG"': Hund
+            '"ALIEN"': alien
+            '"CAT"': kat
+            '"DOG"': hund
+            '"DUCK"': and
+            '"ROBOT"': robot
+            '"UNICORN"': enhjørning
           LOCATION:
             "{x: 100, y: 200}": venstre
             "{x: 300, y: 200}": højre
@@ -103,7 +121,12 @@ da:
       Dancelab_makeNewDanceSprite:
         options:
           COSTUME:
+            '"ALIEN"': alien
+            '"CAT"': kat
             '"DOG"': Hund
+            '"DUCK"': and
+            '"ROBOT"': robot
+            '"UNICORN"': enhjørning
           LOCATION:
             "{x: 100, y: 200}": venstre
             "{x: 300, y: 200}": højre
@@ -191,7 +214,6 @@ da:
         options:
           GROUP:
             sprites: alle
-            '"UNICORN"': alle enhjørninger
           SPEED:
             '1': normal
             '2': fast
@@ -227,12 +249,18 @@ da:
         options:
           GROUP:
             sprites: alle
-            '"UNICORN"': alle enhjørninger
           PROPERTY:
             '"scale"': størrelse
             '"height"': højde
       Dancelab_setPropRandom:
         options:
+          PROPERTY:
+            '"scale"': størrelse
+            '"height"': højde
+      Dancelab_setPropRandomEach:
+        options:
+          GROUP:
+            sprites: alle
           PROPERTY:
             '"scale"': størrelse
             '"height"': højde
@@ -250,14 +278,27 @@ da:
         options:
           THIS:
             sprites: alle
-            '"UNICORN"': alle enhjørninger
       Dancelab_startMapping:
         options:
           PROPERTY:
             '"scale"': størrelse
             '"height"': højde
+      Dancelab_startMappingEach:
+        options:
+          GROUP:
+            sprites: alle
+          PROPERTY:
+            '"scale"': størrelse
+            '"height"': højde
       Dancelab_stopMapping:
         options:
+          PROPERTY:
+            '"scale"': størrelse
+            '"height"': højde
+      Dancelab_stopMappingEach:
+        options:
+          GROUP:
+            sprites: alle
           PROPERTY:
             '"scale"': størrelse
             '"height"': højde

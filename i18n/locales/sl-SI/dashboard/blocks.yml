@@ -23,6 +23,13 @@ sl:
           PROPERTY:
             '"scale"': velikost
             '"height"': višina
+      Dancelab_changePropEachBy:
+        options:
+          GROUP:
+            sprites: vse
+          PROPERTY:
+            '"scale"': velikost
+            '"height"': višina
       Dancelab_doMoveEachLR:
         options:
           GROUP:
@@ -58,6 +65,14 @@ sl:
             "{x: 100, y: 200}": levo
             "{x: 300, y: 200}": desno
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": naključno
+      Dancelab_jumpToEach:
+        options:
+          GROUP:
+            sprites: vse
+          LOCATION:
+            "{x: 100, y: 200}": levo
+            "{x: 300, y: 200}": desno
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": naključno
       Dancelab_layoutSprites:
         options:
           GROUP:
@@ -66,12 +81,24 @@ sl:
             '"random"': naključno
       Dancelab_makeAnonymousDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': marsovec
+            '"CAT"': muca
+            '"DOG"': kuža
+            '"DUCK"': raca
+            '"ROBOT"': robot
           LOCATION:
             "{x: 100, y: 200}": levo
             "{x: 300, y: 200}": desno
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": naključno
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': marsovec
+            '"CAT"': muca
+            '"DOG"': kuža
+            '"DUCK"': raca
+            '"ROBOT"': robot
           LOCATION:
             "{x: 100, y: 200}": levo
             "{x: 300, y: 200}": desno
@@ -137,6 +164,13 @@ sl:
           PROPERTY:
             '"scale"': velikost
             '"height"': višina
+      Dancelab_setPropRandomEach:
+        options:
+          GROUP:
+            sprites: vse
+          PROPERTY:
+            '"scale"': velikost
+            '"height"': višina
       Dancelab_setTintEach:
         options:
           THIS:
@@ -154,8 +188,22 @@ sl:
           PROPERTY:
             '"scale"': velikost
             '"height"': višina
+      Dancelab_startMappingEach:
+        options:
+          GROUP:
+            sprites: vse
+          PROPERTY:
+            '"scale"': velikost
+            '"height"': višina
       Dancelab_stopMapping:
         options:
+          PROPERTY:
+            '"scale"': velikost
+            '"height"': višina
+      Dancelab_stopMappingEach:
+        options:
+          GROUP:
+            sprites: vse
           PROPERTY:
             '"scale"': velikost
             '"height"': višina
