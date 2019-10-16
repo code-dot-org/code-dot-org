@@ -251,6 +251,18 @@ describe('/learn/local', () => {
       );
     });
 
+    it('school website guards against JavaScript injection', () => {
+      const input = {
+        ...SAMPLE_LOCATION,
+        school_website_s: `https://example.com" onmouseover="alert('gotcha')`
+      };
+      compileHTML(1, input);
+      assert.include(
+        locationDetailsDiv.innerHTML,
+        `https://example.com\" onmouseover=\"alert('gotcha')`
+      );
+    });
+
     it('optionally includes a line for class description', () => {
       const withoutWebsite = {
         ...SAMPLE_LOCATION,
