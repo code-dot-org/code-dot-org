@@ -165,8 +165,6 @@ function loadMap(locations) {
 export function compileHTML(index, location) {
   const sharedContent = document.createElement('div');
 
-  const heading = createEntryDetail({tag: 'h3', text: location.school_name_s});
-
   if (location.school_address_s) {
     sharedContent.appendChild(
       createEntryDetail({text: location.school_address_s})
@@ -213,16 +211,21 @@ export function compileHTML(index, location) {
   }
 
   // Add details to the page for displaying in a modal popup.
+  // Note: This has a side-effect on the DOM.
   addDetails(index, compileDetails(index, location, sharedContent));
 
-  var more_link =
-    '<div><a id="location-details-trigger-' +
-    index +
-    '" class="location-details-trigger" onclick="event.preventDefault();" href="#location-details-' +
-    index +
-    '">More information</a></div>';
+  const heading = createEntryDetail({tag: 'h3', text: location.school_name_s});
 
-  return heading.outerHTML + sharedContent.innerHTML + more_link;
+  const moreLinkDiv = document.createElement('div');
+  const moreLinkA = document.createElement('a');
+  moreLinkA.id = `location-details-trigger-${index}`;
+  moreLinkA.className = 'location-details-trigger';
+  moreLinkA.setAttribute('onclick', 'event.preventDefault();');
+  moreLinkA.href = `#location-details-${index}`;
+  moreLinkA.textContent = 'More information';
+  moreLinkDiv.appendChild(moreLinkA);
+
+  return heading.outerHTML + sharedContent.innerHTML + moreLinkDiv.outerHTML;
 }
 
 /**
