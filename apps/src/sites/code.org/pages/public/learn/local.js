@@ -351,14 +351,14 @@ function compileDetails(index, location, initialContent) {
     container.appendChild(websiteDiv);
   }
 
-  let html = container.innerHTML;
-
   if (location.class_description_s) {
-    html +=
-      '<p style="margin-top: 1em;">' + location.class_description_s + '</p>';
+    const descriptionP = document.createElement('p');
+    descriptionP.style = 'margin-top: 1em;';
+    descriptionP.textContent = location.class_description_s;
+    container.appendChild(descriptionP);
   }
 
-  return html;
+  return container.innerHTML;
 }
 
 function addDetails(index, details) {
