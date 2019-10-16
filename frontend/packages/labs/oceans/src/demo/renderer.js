@@ -185,7 +185,7 @@ function drawPredictingFish(state) {
   const ctx = canvas.getContext('2d');
 
   const fishDatum = state.fishData[state.trainingIndex];
-  drawSingleFish(fishDatum, canvas.width / 2 - FISH_CANVAS_WIDTH, canvas.height / 2 - FISH_CANVAS_HEIGHT, ctx);
+  drawSingleFish(fishDatum, canvas.width / 2 - FISH_CANVAS_WIDTH / 2, canvas.height / 2 - FISH_CANVAS_HEIGHT / 2, ctx);
 }
 
 function drawPredictingUiElements(state) {
