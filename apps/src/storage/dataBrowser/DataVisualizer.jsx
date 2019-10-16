@@ -5,6 +5,7 @@ import {connect} from 'react-redux';
 import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
 import * as dataStyles from './dataStyles';
 import * as rowStyle from '@cdo/apps/applab/designElements/rowStyle';
+import GoogleChart from '@cdo/apps/applab/GoogleChart';
 
 const INITIAL_STATE = {
   isVisualizerOpen: false,
@@ -39,8 +40,37 @@ class DataVisualizer extends React.Component {
     this.setState({[field]: value});
   };
 
+  aggregateRecordsByColumn = (records, columnName) => {
+    let counts = {};
+    records.forEach(record => {
+      let value = record[columnName];
+      counts[value] = (counts[value] || 0) + 1;
+    });
+    let chartData = [];
+    Object.keys(counts).forEach(key => {
+      chartData.push({[columnName]: key, count: counts[key]});
+    });
+    return chartData;
+  };
+
+  updateChart = () => {
+    const targetDiv = document.getElementById('chart-area');
+    const records =
+      Object.keys(this.props.tableRecords).length > 0 &&
+      this.props.tableRecords.map(tableRecord => JSON.parse(tableRecord));
+    if (this.state.chartType === 'bar' && this.state.values) {
+      var chart = new GoogleChart.MaterialBarChart(targetDiv);
+      const chartData = this.aggregateRecordsByColumn(
+        records,
+        this.state.values
+      );
+      chart.drawChart(chartData, [this.state.values, 'count']);
+    }
+  };
+
   render() {
     const {chartType, numBins, values, xValues, yValues} = this.state;
+    this.updateChart();
 
     return (
       <span style={[{display: 'inline-block'}]}>
