@@ -284,6 +284,18 @@ describe('/learn/local', () => {
         `<p style="margin-top: 1em;">Fake class description</p>`
       );
     });
+
+    it('class description guards against JavaScript injection', () => {
+      const input = {
+        ...SAMPLE_LOCATION,
+        class_description_s: `<a onmouseover="alert('gotcha')">Fake Description</a>`
+      };
+      compileHTML(1, input);
+      assert.include(
+        locationDetailsDiv.innerHTML,
+        `&lt;a onmouseover="alert('gotcha')"&gt;Fake Description&lt;/a&gt;`
+      );
+    });
   });
 });
 
