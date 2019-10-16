@@ -4,9 +4,7 @@ const initialState = {
   canvas: null,
   ctx: null,
   trainer: null,
-  trainingIndex: 0,
-  backgroundImg: null,
-  uiDrawn: false
+  trainingIndex: 0
 };
 let state = {...initialState};
 
