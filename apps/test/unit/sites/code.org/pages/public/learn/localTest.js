@@ -157,6 +157,19 @@ describe('/learn/local', () => {
         `<div class="entry-detail"><strong>Language(s): </strong>Ruby, JavaScript</div>`
       );
     });
+
+    it('class languages guard against JavaScript injection', () => {
+      const input = {
+        ...SAMPLE_LOCATION,
+        class_languages_all_ss: [
+          `<a onmouseover="alert('gotcha')">Classic ASP</a>`
+        ]
+      };
+      assert.include(
+        compileHTML(1, input),
+        `&lt;a onmouseover="alert('gotcha')"&gt;Classic ASP&lt;/a&gt;`
+      );
+    });
   });
 
   describe('compileDetails()', () => {
