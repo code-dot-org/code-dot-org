@@ -196,7 +196,7 @@ describe('/learn/local', () => {
       assert.equal(
         locationDetailsDiv.innerHTML,
         `<div id="location-details-1">` +
-          `<h2 style="margin-top: 0; margin-bottom: .5em; padding-top: 0;">Code on the Road</h2>` +
+          `<h2 style="margin-top: 0px; margin-bottom: 0.5em; padding-top: 0px;">Code on the Road</h2>` +
           `<div>Example Building 8th floor\nSeattle, WA 98109\nUnited States</div>` +
           `<div><strong>Format: </strong>Out of school - Other out of school (private)</div>` +
           `<div><strong>Level(s): </strong>High school, College</div>` +
@@ -204,6 +204,18 @@ describe('/learn/local', () => {
           `<div><strong>Website: </strong><a href="http://example.com/event" target="_blank">http://example.com/event</a></div>` +
           `<p style="margin-top: 1em;">Code on the Road is an evening course designed to teach programming to people who like coffee shops.</p>` +
           `</div>`
+      );
+    });
+
+    it('school name guards against JavaScript injection', () => {
+      const input = {
+        ...SAMPLE_LOCATION,
+        school_name_s: `<a onmouseover="alert('gotcha')">Fake Name</a>`
+      };
+      compileHTML(1, input);
+      assert.include(
+        locationDetailsDiv.innerHTML,
+        `&lt;a onmouseover="alert('gotcha')"&gt;Fake Name&lt;/a&gt;`
       );
     });
 

@@ -162,7 +162,32 @@ function loadMap(locations) {
   gmap.Load(map_options);
 }
 
+/**
+ * Generate HTML to be attached to a map pin for a given location.
+ * @param {number} index
+ * @param {object} location
+ * @returns {string} HTML ready for use in the map.
+ */
 export function compileHTML(index, location) {
+  const heading = createEntryDetail({tag: 'h3', text: location.school_name_s});
+  const sharedContent = createSharedContent(location);
+  const moreLink = createMoreLink(index);
+
+  // Add details to the page for displaying in a modal popup.
+  // Note: This has a side-effect on the DOM.
+  addDetails(index, compileDetails(index, location, sharedContent));
+
+  // Return concatenated HTML
+  return heading.outerHTML + sharedContent.innerHTML + moreLink.outerHTML;
+}
+
+/**
+ * Generate DOM elements for content to be shared between the location info
+ * and the more details popup.
+ * @param {object} location
+ * @returns {HTMLDivElement}
+ */
+function createSharedContent(location) {
   const sharedContent = document.createElement('div');
 
   if (location.school_address_s) {
@@ -209,13 +234,10 @@ export function compileHTML(index, location) {
       })
     );
   }
+  return sharedContent;
+}
 
-  // Add details to the page for displaying in a modal popup.
-  // Note: This has a side-effect on the DOM.
-  addDetails(index, compileDetails(index, location, sharedContent));
-
-  const heading = createEntryDetail({tag: 'h3', text: location.school_name_s});
-
+function createMoreLink(index) {
   const moreLinkDiv = document.createElement('div');
   const moreLinkA = document.createElement('a');
   moreLinkA.id = `location-details-trigger-${index}`;
@@ -224,8 +246,7 @@ export function compileHTML(index, location) {
   moreLinkA.href = `#location-details-${index}`;
   moreLinkA.textContent = 'More information';
   moreLinkDiv.appendChild(moreLinkA);
-
-  return heading.outerHTML + sharedContent.innerHTML + moreLinkDiv.outerHTML;
+  return moreLinkDiv;
 }
 
 /**
@@ -300,11 +321,11 @@ export function i18n(token) {
 function compileDetails(index, location, initialContent) {
   const container = document.createElement('div');
   const lines = [];
-  // Compile HTML.
-  var html =
-    '<h2 style="margin-top: 0; margin-bottom: .5em; padding-top: 0;">' +
-    location.school_name_s +
-    '</h2>';
+
+  const heading = document.createElement('h2');
+  heading.style = 'margin-top: 0; margin-bottom: .5em; padding-top: 0;';
+  heading.textContent = location.school_name_s;
+  container.appendChild(heading);
 
   if (location.school_website_s) {
     if (!location.school_website_s.match(/^https?:\/\//i)) {
@@ -326,7 +347,7 @@ function compileDetails(index, location, initialContent) {
     clone.removeAttribute('class');
     container.appendChild(clone);
   });
-  html += container.innerHTML;
+  let html = container.innerHTML;
 
   $.each(lines, function(key, field) {
     html += '<div>' + field + '</div>';
