@@ -42,7 +42,8 @@ class LibraryCreationDialog extends React.Component {
     librarySource: '',
     selectedFunctionList: [],
     loadingFinished: false,
-    libraryName: ''
+    libraryName: '',
+    canPublish: false
   };
 
   componentDidUpdate(prevProps) {
@@ -89,8 +90,13 @@ class LibraryCreationDialog extends React.Component {
     );
   };
 
-  tempSubmit = () => {
-    this.publish();
+  validateInput = () => {
+    // Check if any of the checkboxes are checked
+    // If this changes the publishable state, update
+    let isChecked = $("input[type='checkbox']").is(':checked');
+    if (isChecked !== this.state.canPublish) {
+      this.setState({canPublish: isChecked});
+    }
   };
 
   displayFunctions = () => {
@@ -98,15 +104,15 @@ class LibraryCreationDialog extends React.Component {
       return <div>Loading...</div>;
     }
     let keyIndex = 0;
-    //Todo Adjust rows and cols to respond to changing size of window
     return (
       <div>
         <Heading2>
           <b>Library Name: </b>
           {this.state.libraryName}
         </Heading2>
-        <form onSubmit={this.tempSubmit}>
+        <form onSubmit={this.publish}>
           <textarea
+            required
             name="description"
             rows="2"
             cols="200"
@@ -122,6 +128,7 @@ class LibraryCreationDialog extends React.Component {
                   type="checkbox"
                   style={styles.largerCheckbox}
                   disabled={comment.length === 0}
+                  onClick={this.validateInput}
                 />
                 {name}
                 <br />
