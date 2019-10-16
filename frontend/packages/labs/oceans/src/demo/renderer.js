@@ -57,6 +57,7 @@ function loadBackgroundImage() {
 }
 
 function renderBackgroundImage(ctx, img) {
+  //ctx.setTransform(1, 0, 0, 1, 0, 0);
   ctx.drawImage(img, 0, 0, constants.canvasWidth, constants.canvasHeight);
 }
 
@@ -79,6 +80,27 @@ function drawTrainingScreen(state) {
   }
 }
 
+function drawSingleFish(fishDatum, fishXPos, fishYPos, ctx) {
+  if (!fishDatum.canvas) {
+    fishDatum.canvas = document.createElement('canvas');
+    fishDatum.canvas.width = FISH_CANVAS_WIDTH;
+    fishDatum.canvas.height = FISH_CANVAS_HEIGHT;
+    loadFishImages(fishDatum.fish).then(results => {
+      const fishCtx = fishDatum.canvas.getContext('2d');
+      drawFish(
+        fishDatum.fish,
+        results,
+        fishCtx,
+        FISH_CANVAS_WIDTH / 2,
+        FISH_CANVAS_HEIGHT / 2
+      );
+      ctx.drawImage(fishDatum.canvas, fishXPos, fishYPos);
+    });
+  } else {
+    ctx.drawImage(fishDatum.canvas, fishXPos, fishYPos);
+  }
+}
+
 function drawTrainingFish(state) {
   const canvas = state.canvas;
   const ctx = canvas.getContext('2d');
@@ -88,27 +110,26 @@ function drawTrainingFish(state) {
   const frameSize = 300;
   const frameXPos = canvas.width / 2 - frameSize / 2;
   const frameYPos = canvas.height / 2 - frameSize / 2;
+  const fishXPos = frameXPos + (frameSize - FISH_CANVAS_WIDTH) / 2;
+  const fishYPos = frameYPos + (frameSize - FISH_CANVAS_HEIGHT) / 2;
   ctx.fillRect(frameXPos, frameYPos, frameSize, frameSize);
 
   const fishDatum = state.fishData[state.trainingIndex];
-  loadFishImages(fishDatum.fish).then(results => {
-    drawFish(fishDatum.fish, results, ctx, canvas.width / 2, canvas.height / 2);
-  });
+  drawSingleFish(fishDatum, fishXPos, fishYPos, ctx);
 }
 
 function drawUpcomingFish(state) {
   const fishLeft = state.fishData.length - state.trainingIndex - 1;
   const numUpcomingFish = fishLeft >= 3 ? 3 : fishLeft;
   const canvas = state.canvas;
-  let x = canvas.width / 2 - 300;
+  const ctx = canvas.getContext('2d');
+  let x = canvas.width / 2 - 300 - FISH_CANVAS_WIDTH / 2;
+  const y = canvas.height / 2 - FISH_CANVAS_HEIGHT / 2;
 
   for (let i = 1; i <= numUpcomingFish; i++) {
     const fishDatum = state.fishData[state.trainingIndex + i];
-    loadFishImages(fishDatum.fish).then(results => {
-      const ctx = canvas.getContext('2d');
-      drawFish(fishDatum.fish, results, ctx, x, canvas.height / 2);
-      x -= 200;
-    });
+    drawSingleFish(fishDatum, x, y, ctx);
+    x -= 200;
   }
 }
 
@@ -164,9 +185,7 @@ function drawPredictingFish(state) {
   const ctx = canvas.getContext('2d');
 
   const fishDatum = state.fishData[state.trainingIndex];
-  loadFishImages(fishDatum.fish).then(results => {
-    drawFish(fishDatum.fish, results, ctx, canvas.width / 2, canvas.height / 2);
-  });
+  drawSingleFish(fishDatum, canvas.width / 2 - FISH_CANVAS_WIDTH, canvas.height / 2 - FISH_CANVAS_HEIGHT, ctx);
 }
 
 function drawPredictingUiElements(state) {
@@ -231,6 +250,8 @@ function loadFishImage(fishPart) {
 }
 
 function drawFish(fish, results, ctx, x = 0, y = 0) {
+  ctx.translate(FISH_CANVAS_WIDTH, 0);
+  ctx.scale(-1, 1);
   const body = results.find(
     result => result.fishPart.type === FishBodyPart.BODY
   ).fishPart;
