@@ -290,6 +290,7 @@ function renderButton(container, id, text, onClick) {
   let btnEl = document.createElement('button');
   btnEl.innerHTML = text;
   btnEl.setAttribute('id', id);
+  btnEl.setAttribute('class', 'ui-button');
   btnEl.addEventListener('click', onClick);
   container.appendChild(btnEl);
 }
