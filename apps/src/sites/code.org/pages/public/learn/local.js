@@ -175,7 +175,7 @@ export function compileHTML(index, location) {
 
   // Add details to the page for displaying in a modal popup.
   // Note: This has a side-effect on the DOM.
-  addDetails(index, compileDetails(index, location, sharedContent));
+  addDetails(index, location, sharedContent);
 
   // Return concatenated HTML
   return heading.outerHTML + sharedContent.innerHTML + moreLink.outerHTML;
@@ -310,16 +310,30 @@ export function i18n(token) {
 }
 
 /**
- * Compile HTML contents of a pop-up to be displayed when an item
- * on the map is selected.
+ * Push location details into a div#location-details in the DOM for
+ * use in a modal pop-up associated with a map location.
+ * @param {number} index
+ * @param {object} location
+ * @param {Node} sharedContent to add to the body of the modal
+ */
+function addDetails(index, location, sharedContent) {
+  const destination = document.querySelector('#location-details');
+  if (destination) {
+    destination.appendChild(compileDetails(index, location, sharedContent));
+  }
+}
+
+/**
+ * Compile HTML contents of a pop-up associated with a map item.
  * @param index
  * @param location
  * @param {Node} initialContent - Preformed DOM elements to clone and
  *   include in the body of the popup.
- * @returns {string} HTML for the body of the popup.
+ * @returns {HTMLDivElement} Contents for the body of the popup
  */
 function compileDetails(index, location, initialContent) {
   const container = document.createElement('div');
+  container.id = `location-details-${index}`;
 
   const heading = document.createElement('h2');
   heading.style = 'margin-top: 0; margin-bottom: .5em; padding-top: 0;';
@@ -358,11 +372,5 @@ function compileDetails(index, location, initialContent) {
     container.appendChild(descriptionP);
   }
 
-  return container.innerHTML;
-}
-
-function addDetails(index, details) {
-  var details_html =
-    '<div id="location-details-' + index + '">' + details + '</div>';
-  $('#location-details').append(details_html);
+  return container;
 }
