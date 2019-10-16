@@ -30,6 +30,7 @@ import {
 } from '@cdo/apps/redux/scriptSelectionRedux';
 import {stageIsAllAssessment} from '@cdo/apps/templates/progress/progressHelpers';
 import color from '../../util/color';
+import firehoseClient from '../../lib/util/firehose';
 
 const styles = {
   heading: {
@@ -87,6 +88,16 @@ class SectionProgress extends Component {
   onChangeScript = scriptId => {
     this.props.setScriptId(scriptId);
     this.props.loadScript(scriptId);
+
+    firehoseClient.putRecord({
+      study: ' teacher_dashboard_actions',
+      study_group: 'progress',
+      event: 'change_script',
+      data_json: JSON.stringify({
+        old_script_id: this.props.scriptId,
+        new_script_id: scriptId
+      })
+    });
   };
 
   onChangeLevel = lessonOfInterest => {
