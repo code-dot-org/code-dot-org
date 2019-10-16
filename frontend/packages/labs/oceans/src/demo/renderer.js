@@ -19,13 +19,13 @@ export function init(canvas) {
 
   switch (state.currentMode) {
     case Modes.Training:
-      drawTrainingScreen(state);
+      initTrainingScreen(state);
       break;
     case Modes.Predicting:
-      drawPredictingScreen(state);
+      initPredictingScreen(state);
       break;
     case Modes.Pond:
-      drawPondScreen(state);
+      initPondScreen(state);
       break;
     default:
       console.error('Unrecognized mode passed to renderer init method.');
@@ -56,27 +56,32 @@ function loadBackgroundImage() {
   });
 }
 
-function renderBackgroundImage(ctx, img) {
+function renderBackgroundImage(img) {
+  const backgroundCanvas = document.getElementById('background-canvas');
+  if (!backgroundCanvas) {
+    return;
+  }
+
+  backgroundCanvas.width = constants.canvasWidth;
+  backgroundCanvas.height = constants.canvasHeight;
+  const ctx = backgroundCanvas.getContext('2d');
   ctx.drawImage(img, 0, 0, constants.canvasWidth, constants.canvasHeight);
 }
 
+function initTrainingScreen(state) {
+  // We only want to draw the background and UI elements once,
+  // so render here instead of in drawTrainingScreen().
+  loadBackgroundImage().then(backgroundImg => {
+    renderBackgroundImage(backgroundImg);
+    drawTrainingScreen(state);
+    drawTrainingUiElements(state);
+  });
+}
+
 function drawTrainingScreen(state) {
-  if (state.backgroundImg) {
-    renderBackgroundImage(state.ctx, state.backgroundImg);
-    drawTrainingFish(state);
-    drawUpcomingFish(state);
-    if (!state.uiDrawn) {
-      drawTrainingUiElements(state);
-      state.uiDrawn = true;
-      setState(state);
-    }
-  } else {
-    loadBackgroundImage().then(backgroundImg => {
-      state = {...state, backgroundImg};
-      setState(state);
-      drawTrainingScreen(state);
-    });
-  }
+  state.ctx.clearRect(0, 0, state.canvas.width, state.canvas.height);
+  drawTrainingFish(state);
+  drawUpcomingFish(state);
 }
 
 function drawTrainingFish(state) {
@@ -151,6 +156,10 @@ function drawTrainingUiElements(state) {
   );
 }
 
+function initPredictingScreen(state) {
+  drawPredictingScreen(state);
+}
+
 function drawPredictingScreen(state) {
   state.canvas
     .getContext('2d')
@@ -211,22 +220,16 @@ function predictionText(state, onComplete) {
   });
 }
 
+function initPondScreen(state) {
+  loadBackgroundImage().then(backgroundImg => {
+    renderBackgroundImage(backgroundImg);
+    drawPondScreen(state);
+    drawPondUiElements(state);
+  });
+}
+
 function drawPondScreen(state) {
-  if (state.backgroundImg) {
-    renderBackgroundImage(state.ctx, state.backgroundImg);
-    drawPondFish(state);
-    if (!state.uiDrawn) {
-      drawPondUiElements(state);
-      state.uiDrawn = true;
-      setState(state);
-    }
-  } else {
-    loadBackgroundImage().then(backgroundImg => {
-      state = {...state, backgroundImg};
-      setState(state);
-      drawPondScreen(state);
-    });
-  }
+  drawPondFish(state);
 }
 
 function drawPondFish(state) {
@@ -252,7 +255,7 @@ function drawPondFish(state) {
 
 function predictAllFish(state, onComplete) {
   let fishWithConfidence = [];
-  state.fishData.map(fishDatum => {
+  state.fishData.map((fishDatum, index) => {
     state.trainer.predictFromData(fishDatum.fish.knnData).then(res => {
       if (res.predictedClassId === ClassType.Like) {
         let data = {
@@ -262,7 +265,7 @@ function predictAllFish(state, onComplete) {
         fishWithConfidence.push(data);
       }
 
-      if (fishWithConfidence.length === state.fishData.length) {
+      if (index === state.fishData.length - 1) {
         onComplete(fishWithConfidence);
       }
     });

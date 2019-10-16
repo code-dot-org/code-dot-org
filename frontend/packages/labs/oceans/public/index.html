@@ -31,7 +31,9 @@
         max-height: 100vh;
         max-width: 177.78vh; /* 16/9 = 1.778 */
       }
-      #activity-canvas {
+      #activity-canvas,
+      #background-canvas {
+        position: absolute;
         width: 100%;
       }
 
@@ -112,6 +114,7 @@
     <div id="header"></div>
     <div id="ml-activities"></div>
     <div id="container">
+      <canvas id="background-canvas"></canvas>
       <canvas id="activity-canvas"></canvas>
       <div id="ui-container" />
     </div>
