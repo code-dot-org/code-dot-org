@@ -3,6 +3,7 @@ const initialState = {
   fishData: [],
   canvas: null,
   ctx: null,
+  trainer: null,
   trainingIndex: 0,
   backgroundImg: null,
   uiDrawn: false
@@ -18,6 +19,7 @@ export const setState = function(newState) {
     state = {
       ...initialState,
       fishData: state.fishData,
+      trainer: state.trainer,
       ...newState
     };
   } else {
