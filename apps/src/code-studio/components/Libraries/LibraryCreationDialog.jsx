@@ -16,6 +16,17 @@ const styles = {
   },
   libraryBoundary: {
     padding: 10
+  },
+  largerCheckbox: {
+    width: 20,
+    height: 20,
+    margin: 10
+  },
+  functionItem: {
+    marginBottom: 20
+  },
+  textarea: {
+    width: 400
   }
 };
 
@@ -90,26 +101,34 @@ class LibraryCreationDialog extends React.Component {
     //Todo Adjust rows and cols to respond to changing size of window
     return (
       <div>
-        <Heading2>{this.state.libraryName}</Heading2>
+        <Heading2>
+          <b>Library Name: </b>
+          {this.state.libraryName}
+        </Heading2>
         <form onSubmit={this.tempSubmit}>
           <textarea
             name="description"
             rows="2"
             cols="200"
+            style={styles.textarea}
             placeholder="Write a description of your library"
           />
           {this.state.selectedFunctionList.map(selectedFunction => {
             let name = selectedFunction.functionName;
             let comment = selectedFunction.comment;
             return (
-              <div key={keyIndex++}>
-                <input type="checkbox" disabled={comment.length === 0} />
+              <div key={keyIndex++} style={styles.functionItem}>
+                <input
+                  type="checkbox"
+                  style={styles.largerCheckbox}
+                  disabled={comment.length === 0}
+                />
                 {name}
                 <br />
                 {comment.length === 0 && (
                   <p style={styles.alert}>
-                    You must add a comment describing this function before you
-                    can export it.
+                    This function cannot be exported until you add a comment to
+                    it.
                   </p>
                 )}
                 <pre>{comment}</pre>
@@ -117,6 +136,7 @@ class LibraryCreationDialog extends React.Component {
             );
           })}
           <input
+            className="btn btn-primary"
             type="submit"
             value={i18n.publish()}
             disabled={!this.state.canPublish}
