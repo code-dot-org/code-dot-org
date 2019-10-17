@@ -1,5 +1,9 @@
 #!/bin/bash
 
+set -xe
+
+PASSWORD=$3
+
 # Move to home directory
 cd /home/ec2-user
 
@@ -26,7 +30,7 @@ sudo make
 
 # Copy any code-dot-org load test scripts into the sysbench lua directory.
 # TODO:(suresh) Pull the latest from origin in the code-dot-org project
-cp `find /home/ec2-user/code-dot-org/dashboard/test/load/database/sysbench/src/lua -name "code_dot_org*.lua"` /home/ec2-user/sysbench/src/lua
+cp `find /home/ec2-user/code-dot-org/dashboard/test/load/database/sysbench/src/lua -name "cdo*.lua"` /home/ec2-user/sysbench/src/lua
 
 cd src
 cd lua
@@ -41,43 +45,43 @@ threads=20
 let number_of_sysbench_clients=max_db_connections/threads
 
 # Drop / create the sysbench schema
-mysql -h$1 -udb -pPassword1 -e "drop schema if exists sysbench;create schema sysbench;"
+mysql -h$1 -udb -p$PASSWORD -e "drop schema if exists sysbench;create schema sysbench;"
 
 # Execute tests
 if [ "$2" == "oltp_read_only.lua" ]
 then
 	# Prepare for read-only test
-	/home/ec2-user/sysbench/src/sysbench ./$2 --mysql-host=$1 --mysql-port=3306 --mysql-db=sysbench --mysql-user=db --mysql-password=Password1 --db-driver=mysql --tables=250 --table-size=25000 --threads=250 prepare
+	/home/ec2-user/sysbench/src/sysbench ./$2 --mysql-host=$1 --mysql-port=3306 --mysql-db=sysbench --mysql-user=db --mysql-password=$PASSWORD --db-driver=mysql --tables=250 --table-size=25000 --threads=250 prepare
 
 	# Launch multiple sysbench clients
 	for i in {1..$number_of_sysbench_clients}
 	do
 		# Execute read-only test
-		(/home/ec2-user/sysbench/src/sysbench ./$2 --mysql-host=$1 --mysql-port=3306 --mysql-db=sysbench --mysql-user=db --mysql-password=Password1 --db-driver=mysql --tables=250 --table-size=25000 --threads=$threads --time=86400 --range_selects=off --db-ps-mode=disable --skip_trx=on run)&
+		(/home/ec2-user/sysbench/src/sysbench ./$2 --mysql-host=$1 --mysql-port=3306 --mysql-db=sysbench --mysql-user=db --mysql-password=$PASSWORD --db-driver=mysql --tables=250 --table-size=25000 --threads=$threads --time=86400 --range_selects=off --db-ps-mode=disable --skip_trx=on run)&
 
 		# Sleep one second
 		sleep 1
 	done
-elif [ "$2" == "code_dot_org_user_levels.lua" ]
+elif [[ "$2" =~ cdo.*\.lua ]]
 then
 	# Launch multiple sysbench clients
 	for i in {1..$number_of_sysbench_clients}
 	do
 		# Execute write-only test
-		(/home/ec2-user/sysbench/src/sysbench ./$2 --mysql-host=$1 --mysql-port=3306 --mysql-db=sysbench --mysql-user=db --mysql-password=Password1 --db-driver=mysql --tables=250 --table-size=25000 --threads=$threads --time=86400 --range_selects=off --db-ps-mode=disable --skip_trx=off --auto-inc=off --mysql-ignore-errors=all run)&
+		(/home/ec2-user/sysbench/src/sysbench ./$2 --mysql-host=$1 --mysql-port=3306 --mysql-db=sysbench --mysql-user=db --mysql-password=$PASSWORD --db-driver=mysql --threads=$threads --time=86400 --mysql-ignore-errors=all run)&
 
 		# Sleep one second
 		sleep 1
 	done
 else
 	# Prepare for write-only test
-	/home/ec2-user/sysbench/src/sysbench ./$2 --mysql-host=$1 --mysql-port=3306 --mysql-db=sysbench --mysql-user=db --mysql-password=Password1 --db-driver=mysql --tables=250 --table-size=25000 --threads=250 --auto-inc=off prepare
+	/home/ec2-user/sysbench/src/sysbench ./$2 --mysql-host=$1 --mysql-port=3306 --mysql-db=sysbench --mysql-user=db --mysql-password=$PASSWORD --db-driver=mysql --tables=250 --table-size=25000 --threads=250 --auto-inc=off prepare
 
 	# Launch multiple sysbench clients
 	for i in {1..$number_of_sysbench_clients}
 	do
 		# Execute write-only test
-		(/home/ec2-user/sysbench/src/sysbench ./$2 --mysql-host=$1 --mysql-port=3306 --mysql-db=sysbench --mysql-user=db --mysql-password=Password1 --db-driver=mysql --tables=250 --table-size=25000 --threads=$threads --time=86400 --range_selects=off --db-ps-mode=disable --skip_trx=off --auto-inc=off --mysql-ignore-errors=all run)&
+		(/home/ec2-user/sysbench/src/sysbench ./$2 --mysql-host=$1 --mysql-port=3306 --mysql-db=sysbench --mysql-user=db --mysql-password=$PASSWORD --db-driver=mysql --tables=250 --table-size=25000 --threads=$threads --time=86400 --range_selects=off --db-ps-mode=disable --skip_trx=off --auto-inc=off --mysql-ignore-errors=all run)&
 
 		# Sleep one second
 		sleep 1
