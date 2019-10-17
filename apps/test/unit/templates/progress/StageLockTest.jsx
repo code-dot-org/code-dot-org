@@ -1,5 +1,5 @@
 import React from 'react';
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/deprecatedChai';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
 import {UnconnectedStageLock as StageLock} from '@cdo/apps/templates/progress/StageLock';

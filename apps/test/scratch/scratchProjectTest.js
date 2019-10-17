@@ -1,6 +1,6 @@
 import sinon from 'sinon';
 import * as testUtils from '../util/testUtils';
-import {assert} from '../util/configuredChai';
+import {assert} from '../util/deprecatedChai';
 import loadScratch from '@cdo/apps/sites/studio/pages/init/loadScratch';
 import {__TestInterface} from '@cdo/apps/scratch/scratch';
 
