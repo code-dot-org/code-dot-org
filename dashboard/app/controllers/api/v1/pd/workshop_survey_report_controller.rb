@@ -124,10 +124,7 @@ module Api::V1::Pd
 
     # GET /api/v1/pd/workshops/experiment_survey_report/:id/
     def experiment_survey_report
-      this_ws_report = report_single_workshop(@workshop, current_user)
-      rollup_report = report_rollups_experiment(@workshop, current_user)
-
-      render json: this_ws_report.merge(rollup_report).merge(experiment: true)
+      render json: {experiment: true}
     rescue => e
       notify_error e
     end
@@ -150,9 +147,9 @@ module Api::V1::Pd
 
     def create_generic_survey_report
       this_ws_report = report_single_workshop(@workshop, current_user)
-      rollup_report = report_rollups(@workshop, current_user)
+      rollup_report = report_rollups_experiment(@workshop, current_user)
 
-      render json: this_ws_report.merge(rollup_report).merge(experiment: true)
+      render json: this_ws_report.merge(rollup_report)
     end
 
     def notify_error(exception, error_status_code = :bad_request)
