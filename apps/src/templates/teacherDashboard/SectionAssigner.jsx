@@ -25,7 +25,8 @@ class SectionAssigner extends Component {
   static propTypes = {
     sections: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
     initialSelectedSectionId: PropTypes.number,
-    selectSection: PropTypes.func.isRequired
+    selectSection: PropTypes.func.isRequired,
+    showAssignButton: PropTypes.bool
   };
 
   state = {
@@ -45,7 +46,7 @@ class SectionAssigner extends Component {
   };
 
   render() {
-    const {sections} = this.props;
+    const {sections, showAssignButton} = this.props;
     const {selectedSection} = this.state;
 
     return (
@@ -58,7 +59,7 @@ class SectionAssigner extends Component {
             selectedSection={selectedSection}
           />
           {selectedSection.isAssigned && <AssignedButton />}
-          {!selectedSection.isAssigned && <AssignButton />}
+          {!selectedSection.isAssigned && showAssignButton && <AssignButton />}
         </div>
       </div>
     );
