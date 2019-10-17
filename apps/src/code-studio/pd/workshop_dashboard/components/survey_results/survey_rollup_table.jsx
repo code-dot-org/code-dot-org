@@ -107,7 +107,7 @@ export class SurveyRollupTable extends React.Component {
 
   renderAverage(value, category) {
     return value
-      ? `${value.toFixed(2)} / ${this.categoryDenominator[category]}`
+      ? `${value.toFixed(1)} / ${this.categoryDenominator[category]}`
       : '-';
   }
 
