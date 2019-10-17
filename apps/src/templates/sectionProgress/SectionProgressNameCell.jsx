@@ -23,6 +23,7 @@ class SectionProgressNameCell extends Component {
       study_group: 'progress',
       event: 'go_to_student',
       data_json: JSON.stringify({
+        section_id: this.props.sectionId,
         script_id: this.props.scriptId,
         student_id: this.props.studentId
       })

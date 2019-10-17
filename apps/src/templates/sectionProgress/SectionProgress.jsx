@@ -94,6 +94,7 @@ class SectionProgress extends Component {
       study_group: 'progress',
       event: 'change_script',
       data_json: JSON.stringify({
+        section_id: this.props.section.id,
         old_script_id: this.props.scriptId,
         new_script_id: scriptId
       })
@@ -131,12 +132,13 @@ class SectionProgress extends Component {
     return scriptData ? `${scriptData.path}?section_id=${section.id}` : null;
   }
 
-  navigateToCourse = () => {
+  navigateToScript = () => {
     firehoseClient.putRecord({
       study: ' teacher_dashboard_actions',
       study_group: 'progress',
       event: 'go_to_script',
       data_json: JSON.stringify({
+        section_id: this.props.section.id,
         script_id: this.props.scriptId
       })
     });
@@ -196,7 +198,7 @@ class SectionProgress extends Component {
                 <a
                   href={linkToOverview}
                   style={styles.scriptLink}
-                  onClick={this.navigateToCourse}
+                  onClick={this.navigateToScript}
                 >
                   {scriptFriendlyName}
                 </a>
@@ -220,7 +222,7 @@ class SectionProgress extends Component {
                 <a
                   href={linkToOverview}
                   style={styles.scriptLink}
-                  onClick={this.navigateToCourse}
+                  onClick={this.navigateToScript}
                 >
                   {scriptFriendlyName}
                 </a>

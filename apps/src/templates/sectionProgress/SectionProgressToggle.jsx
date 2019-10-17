@@ -22,7 +22,8 @@ const styles = {
 class SectionProgressToggle extends React.Component {
   static propTypes = {
     currentView: PropTypes.string.isRequired,
-    setCurrentView: PropTypes.func.isRequired
+    setCurrentView: PropTypes.func.isRequired,
+    sectionId: PropTypes.number
   };
 
   state = {
@@ -49,6 +50,7 @@ class SectionProgressToggle extends React.Component {
         study_group: 'progress',
         event: 'view_change_toggle',
         data_json: JSON.stringify({
+          section_id: this.props.sectionId,
           old_view: ViewType.SUMMARY,
           new_view: ViewType.DETAIL
         })
@@ -64,6 +66,7 @@ class SectionProgressToggle extends React.Component {
         study_group: 'progress',
         event: 'view_change_toggle',
         data_json: JSON.stringify({
+          section_id: this.props.sectionId,
           old_view: ViewType.DETAIL,
           new_view: ViewType.SUMMARY
         })
@@ -109,7 +112,8 @@ export const UnconnectedSectionProgressToggle = SectionProgressToggle;
 
 export default connect(
   state => ({
-    currentView: state.sectionProgress.currentView
+    currentView: state.sectionProgress.currentView,
+    sectionId: state.sectionProgress.section.id
   }),
   dispatch => ({
     setCurrentView(viewType) {

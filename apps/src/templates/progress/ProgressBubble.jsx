@@ -119,7 +119,8 @@ class ProgressBubble extends React.Component {
       event: 'go_to_level',
       data_json: JSON.stringify({
         student_id: this.props.selectedStudentId,
-        level_url: this.props.level.url
+        level_url: this.props.level.url,
+        section_id: this.props.selectedSectionId
       })
     });
   };
