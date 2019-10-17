@@ -12,6 +12,7 @@ const FISH_CANVAS_HEIGHT = 200;
 export function init(canvas) {
   canvas.width = constants.canvasWidth;
   canvas.height = constants.canvasHeight;
+  clearBackground();
   const state = setState({
     canvas,
     ctx: canvas.getContext('2d')
@@ -19,13 +20,13 @@ export function init(canvas) {
 
   switch (state.currentMode) {
     case Modes.Training:
-      drawTrainingScreen(state);
+      initTrainingScreen(state);
       break;
     case Modes.Predicting:
-      drawPredictingScreen(state);
+      initPredictingScreen(state);
       break;
     case Modes.Pond:
-      drawPondScreen(state);
+      initPondScreen(state);
       break;
     default:
       console.error('Unrecognized mode passed to renderer init method.');
@@ -56,28 +57,32 @@ function loadBackgroundImage() {
   });
 }
 
-function renderBackgroundImage(ctx, img) {
-  //ctx.setTransform(1, 0, 0, 1, 0, 0);
+function renderBackgroundImage(img) {
+  const canvas = backgroundCanvas();
+  if (!canvas) {
+    return;
+  }
+
+  canvas.width = constants.canvasWidth;
+  canvas.height = constants.canvasHeight;
+  const ctx = canvas.getContext('2d');
   ctx.drawImage(img, 0, 0, constants.canvasWidth, constants.canvasHeight);
 }
 
+function initTrainingScreen(state) {
+  // We only want to draw the background and UI elements once,
+  // so render here instead of in drawTrainingScreen().
+  loadBackgroundImage().then(backgroundImg => {
+    renderBackgroundImage(backgroundImg);
+    drawTrainingScreen(state);
+    drawTrainingUiElements(state);
+  });
+}
+
 function drawTrainingScreen(state) {
-  if (state.backgroundImg) {
-    renderBackgroundImage(state.ctx, state.backgroundImg);
-    drawTrainingFish(state);
-    drawUpcomingFish(state);
-    if (!state.uiDrawn) {
-      drawTrainingUiElements(state);
-      state.uiDrawn = true;
-      setState(state);
-    }
-  } else {
-    loadBackgroundImage().then(backgroundImg => {
-      state = {...state, backgroundImg};
-      setState(state);
-      drawTrainingScreen(state);
-    });
-  }
+  state.ctx.clearRect(0, 0, state.canvas.width, state.canvas.height);
+  drawTrainingFish(state);
+  drawUpcomingFish(state);
 }
 
 function drawSingleFish(fishDatum, fishXPos, fishYPos, ctx) {
@@ -172,6 +177,10 @@ function drawTrainingUiElements(state) {
   );
 }
 
+function initPredictingScreen(state) {
+  drawPredictingScreen(state);
+}
+
 function drawPredictingScreen(state) {
   state.canvas
     .getContext('2d')
@@ -230,8 +239,78 @@ function predictionText(state, onComplete) {
   });
 }
 
+function initPondScreen(state) {
+  loadBackgroundImage().then(backgroundImg => {
+    renderBackgroundImage(backgroundImg);
+    drawPondScreen(state);
+    drawPondUiElements(state);
+  });
+}
+
 function drawPondScreen(state) {
-  console.log('pond!');
+  drawPondFish(state);
+}
+
+function drawPondFish(state) {
+  predictAllFish(state, fishWithConfidence => {
+    fishWithConfidence = _.sortBy(fishWithConfidence, ['confidence']);
+    const pondFish = fishWithConfidence.splice(0, 20);
+
+    pondFish.forEach(fishDatum => {
+      loadFishImages(fishDatum.fish).then(results => {
+        const randomX = randomInt(
+          FISH_CANVAS_WIDTH / 4,
+          state.canvas.width - FISH_CANVAS_WIDTH / 4
+        );
+        const randomY = randomInt(
+          FISH_CANVAS_HEIGHT / 4,
+          state.canvas.height - FISH_CANVAS_HEIGHT / 4
+        );
+        drawFish(fishDatum.fish, results, state.ctx, randomX, randomY);
+      });
+    });
+  });
+}
+
+function predictAllFish(state, onComplete) {
+  let fishWithConfidence = [];
+  state.fishData.map((fishDatum, index) => {
+    state.trainer.predictFromData(fishDatum.fish.knnData).then(res => {
+      if (res.predictedClassId === ClassType.Like) {
+        let data = {
+          ...fishDatum,
+          confidence: res.confidencesByClassId[res.predictedClassId]
+        };
+        fishWithConfidence.push(data);
+      }
+
+      if (index === state.fishData.length - 1) {
+        onComplete(fishWithConfidence);
+      }
+    });
+  });
+}
+
+function drawPondUiElements(state) {
+  const container = uiContainer();
+  const buttons = [
+    {
+      text: 'start over',
+      id: 'start-over-button',
+      onClick: () => {
+        clearChildren(container);
+        const canvas = state.canvas;
+        state.currentMode = Modes.Training;
+        state.trainer.clearAll();
+        setState(state);
+        init(canvas);
+      }
+    }
+  ];
+
+  buttons.forEach(button =>
+    renderButton(container, button.id, button.text, button.onClick)
+  );
 }
 
 function loadFishImages(fish) {
@@ -341,6 +420,16 @@ function uiContainer() {
   return document.getElementById('ui-container');
 }
 
+function backgroundCanvas() {
+  return document.getElementById('background-canvas');
+}
+
+function clearBackground() {
+  const canvas = backgroundCanvas();
+  const ctx = canvas.getContext('2d');
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
+
 function destroyElById(id) {
   const existingEl = document.getElementById(id);
   if (existingEl) {
@@ -383,4 +472,10 @@ function colorFromType(palette, type) {
     default:
       return null;
   }
+}
+
+function randomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
