@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {assert} from '../../../../../util/configuredChai';
+import {assert} from '../../../../../util/deprecatedChai';
 import EligibilityChecklist from '@cdo/apps/lib/kits/maker/ui/EligibilityChecklist';
 import {Status} from '@cdo/apps/lib/ui/ValidationStep';
 import {Unit6Intention} from '@cdo/apps/lib/kits/maker/util/discountLogic';
