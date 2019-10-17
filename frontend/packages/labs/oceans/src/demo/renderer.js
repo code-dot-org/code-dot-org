@@ -356,8 +356,10 @@ function bodyAnchorFromType(body, type) {
       return body.mouthAnchor;
     case FishBodyPart.DORSAL_FIN:
       return body.dorsalFinAnchor;
-    case FishBodyPart.PECTORAL_FIN:
-      return body.pectoralFinAnchor;
+    case FishBodyPart.PECTORAL_FIN_FRONT:
+      return body.pectoralFinFrontAnchor;
+    case FishBodyPart.PECTORAL_FIN_BACK:
+      return body.pectoralFinBackAnchor;
     case FishBodyPart.TAIL:
       return body.tailAnchor;
     case FishBodyPart.BODY:
@@ -372,7 +374,8 @@ function colorFromType(palette, type) {
     case FishBodyPart.MOUTH:
       return palette.mouthRgb;
     case FishBodyPart.DORSAL_FIN:
-    case FishBodyPart.PECTORAL_FIN:
+    case FishBodyPart.PECTORAL_FIN_FRONT:
+    case FishBodyPart.PECTORAL_FIN_BACK:
     case FishBodyPart.TAIL:
       return palette.finRgb;
     case FishBodyPart.BODY:

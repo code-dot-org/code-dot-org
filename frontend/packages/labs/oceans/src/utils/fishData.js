@@ -10,10 +10,11 @@ const normalizeColorComponent = colorcomp => {
 export const FishBodyPart = Object.freeze({
   DORSAL_FIN: 0,
   TAIL: 1,
-  BODY: 2,
-  EYE: 3,
-  PECTORAL_FIN: 4,
-  MOUTH: 5
+  PECTORAL_FIN_BACK: 2,
+  BODY: 3,
+  PECTORAL_FIN_FRONT: 4,
+  MOUTH: 5,
+  EYE: 6
 });
 
 const fish = {
@@ -24,7 +25,8 @@ const fish = {
       anchor: [100, 50],
       eyeAnchor: [17, 12],
       mouthAnchor: [20, 40],
-      pectoralFinAnchor: [50, 77],
+      pectoralFinBackAnchor: [30, 67],
+      pectoralFinFrontAnchor: [55, 72],
       dorsalFinAnchor: [23, -15],
       tailAnchor: [107, 41],
       knnData: [0.6],
@@ -35,7 +37,8 @@ const fish = {
       anchor: [100, 50],
       eyeAnchor: [17, 15],
       mouthAnchor: [15, 45],
-      pectoralFinAnchor: [40, 77],
+      pectoralFinBackAnchor: [25, 67],
+      pectoralFinFrontAnchor: [50, 70],
       dorsalFinAnchor: [53, -25],
       tailAnchor: [107, 67],
       knnData: [0],
@@ -59,7 +62,8 @@ const fish = {
       anchor: [100, 50],
       eyeAnchor: [10, 15],
       mouthAnchor: [8, 45],
-      pectoralFinAnchor: [30, 85],
+      pectoralFinBackAnchor: [25, 85],
+      pectoralFinFrontAnchor: [45, 82],
       dorsalFinAnchor: [20, -18],
       tailAnchor: [97, 50],
       knnData: [1.0],
@@ -70,7 +74,8 @@ const fish = {
       anchor: [100, 50],
       eyeAnchor: [15, 12],
       mouthAnchor: [15, 40],
-      pectoralFinAnchor: [33, 80],
+      pectoralFinBackAnchor: [30, 80],
+      pectoralFinFrontAnchor: [50, 75],
       dorsalFinAnchor: [33, -19],
       tailAnchor: [92, 47],
       knnData: [0.8],
@@ -81,7 +86,8 @@ const fish = {
       anchor: [80, 50],
       eyeAnchor: [18, 12],
       mouthAnchor: [25, 40],
-      pectoralFinAnchor: [57, 78],
+      pectoralFinBackAnchor: [52, 73],
+      pectoralFinFrontAnchor: [77, 68],
       dorsalFinAnchor: [33, -23],
       tailAnchor: [139, 19],
       knnData: [0.4],
@@ -165,33 +171,61 @@ const fish = {
     }
   },
   // SIDE FIN KNN DATA: [pointiness rank]
-  sideFins: {
+  pectoralFinsFront: {
     almond: {
       src: 'images/fish/pectoralFin/Pectoral_Fin_Almond.png',
       knnData: [0.8],
-      type: FishBodyPart.PECTORAL_FIN
+      type: FishBodyPart.PECTORAL_FIN_FRONT
     },
     drop: {
       src: 'images/fish/pectoralFin/Pectoral_Fin_Drop.png',
       knnData: [0.4],
-      type: FishBodyPart.PECTORAL_FIN
+      type: FishBodyPart.PECTORAL_FIN_FRONT
     },
     roundTriangle: {
       src: 'images/fish/pectoralFin/Pectoral_Fin_RoundTriangle.png',
       knnData: [0.6],
-      type: FishBodyPart.PECTORAL_FIN
+      type: FishBodyPart.PECTORAL_FIN_FRONT
     },
     sharp: {
       src: 'images/fish/pectoralFin/Pectoral_Fin_Sharp.png',
       knnData: [1],
-      type: FishBodyPart.PECTORAL_FIN
+      type: FishBodyPart.PECTORAL_FIN_FRONT
     },
     standard: {
       src: 'images/fish/pectoralFin/Pectoral_Fin_Standard.png',
       knnData: [0.2],
-      type: FishBodyPart.PECTORAL_FIN
+      type: FishBodyPart.PECTORAL_FIN_FRONT
     }
   },
+  pectoralFinsBack: {
+    almond: {
+      src: 'images/fish/pectoralFin/Pectoral_Fin_Almond.png',
+      knnData: [0.8],
+      type: FishBodyPart.PECTORAL_FIN_BACK
+    },
+    drop: {
+      src: 'images/fish/pectoralFin/Pectoral_Fin_Drop.png',
+      knnData: [0.4],
+      type: FishBodyPart.PECTORAL_FIN_BACK
+    },
+    roundTriangle: {
+      src: 'images/fish/pectoralFin/Pectoral_Fin_RoundTriangle.png',
+      knnData: [0.6],
+      type: FishBodyPart.PECTORAL_FIN_BACK
+    },
+    sharp: {
+      src: 'images/fish/pectoralFin/Pectoral_Fin_Sharp.png',
+      knnData: [1],
+      type: FishBodyPart.PECTORAL_FIN_BACK
+    },
+    standard: {
+      src: 'images/fish/pectoralFin/Pectoral_Fin_Standard.png',
+      knnData: [0.2],
+      type: FishBodyPart.PECTORAL_FIN_BACK
+    }
+  },
+
   // TOP FIN KNN DATA: [pointiness rank]
   topFins: {
     almond: {
