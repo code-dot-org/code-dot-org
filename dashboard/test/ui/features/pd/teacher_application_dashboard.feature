@@ -1,11 +1,12 @@
 @dashboard_db_access
 @eyes
-@need_teacher_application_data
+@clean_up_teacher_application
 
 Feature: Teacher Application Dashboard view
 
   Scenario: Application dashboard, list view, detail view, cohort view
-    Given I am a workshop administrator with some applications of each type and status
+    Given I am a workshop administrator
+    And I create some fake teacher applications
     And I am on "http://studio.code.org/pd/application_dashboard/summary"
     Then I wait until element "table#summary-csd-teachers" is visible
 
