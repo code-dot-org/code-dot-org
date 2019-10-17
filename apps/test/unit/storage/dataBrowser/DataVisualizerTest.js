@@ -26,7 +26,7 @@ describe('DataVisualizer', () => {
     wrapper = shallow(<DataVisualizer {...DEFAULT_PROPS} />);
     expect(wrapper.find(BaseDialog).prop('isOpen')).to.be.false;
 
-    wrapper.find('button').simulate('click');
+    wrapper.instance().handleOpen();
     expect(wrapper.find(BaseDialog).prop('isOpen')).to.be.true;
   });
 });
