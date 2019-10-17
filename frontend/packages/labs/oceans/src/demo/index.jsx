@@ -16,15 +16,16 @@ $(document).ready(() => {
   // Set up state
   const trainer = new SimpleTrainer();
   trainer.initializeClassifiersWithoutMobilenet();
+  const canvas = document.getElementById('activity-canvas');
   const initialState = {
     currentMode: Modes.Training,
     fishData: fishes,
-    trainer
+    trainer,
+    canvas
   };
   setState(initialState);
 
   // Initialize renderer
-  const canvas = document.getElementById('activity-canvas');
   initRenderer(canvas);
 
   // Initialize current model

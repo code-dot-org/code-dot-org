@@ -7,6 +7,8 @@ import {setState} from './state';
 const FISH_CANVAS_WIDTH = 300;
 const FISH_CANVAS_HEIGHT = 200;
 
+export function render() {}
+
 // Initialize the renderer once.
 // This will generate canvases with the fish collection.
 export function init(canvas) {
