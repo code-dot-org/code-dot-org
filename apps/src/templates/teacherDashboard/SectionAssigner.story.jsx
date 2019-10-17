@@ -1,5 +1,6 @@
 import React from 'react';
 import {UnconnectedSectionAssigner as SectionAssigner} from './SectionAssigner';
+import {action} from '@storybook/addon-actions';
 import {fakeTeacherSectionsForDropdown} from './sectionAssignmentTestHelper';
 
 export default storybook => {
@@ -9,8 +10,9 @@ export default storybook => {
       story: () => (
         <div>
           <SectionAssigner
-            initialSelectedSection={fakeTeacherSectionsForDropdown[0]}
+            initialSelectedSectionId={fakeTeacherSectionsForDropdown[0].id}
             sections={fakeTeacherSectionsForDropdown}
+            selectSection={action('selectSection')}
           />
         </div>
       )

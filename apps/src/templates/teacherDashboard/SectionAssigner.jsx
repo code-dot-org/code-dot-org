@@ -16,13 +16,13 @@ const styles = {
 class SectionAssigner extends Component {
   static propTypes = {
     sections: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
-    selectedSectionId: PropTypes.string,
+    initialSelectedSectionId: PropTypes.number,
     selectSection: PropTypes.func.isRequired
   };
 
   state = {
     selectedSection: this.props.sections.find(
-      section => section.id === parseInt(this.props.selectedSectionId)
+      section => section.id === this.props.initialSelectedSectionId
     )
   };
 
@@ -58,7 +58,7 @@ export const UnconnectedSectionAssigner = SectionAssigner;
 
 export default connect(
   state => ({
-    selectedSectionId: state.teacherSections.selectedSectionId
+    initialSelectedSectionId: parseInt(state.teacherSections.selectedSectionId)
   }),
   dispatch => ({
     selectSection(sectionId) {
