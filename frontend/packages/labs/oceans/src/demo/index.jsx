@@ -11,7 +11,7 @@ import SimpleTrainer from '../utils/SimpleTrainer';
 $(document).ready(() => {
   // Generate some fish
   let fishes = [];
-  for (let i = 0; i < 100; i++) {
+  for (let i = 0; i < 1000; i++) {
     fishes.push(getRandomFish(i));
   }
 
