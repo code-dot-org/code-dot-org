@@ -13,6 +13,12 @@ ka:
   hoc2019_header: 'Learn computer science. Change the world.'
   hoc2019_header_line1_mobile: 'Learn computer science.'
   hoc2019_header_line2_mobile: 'Change the world.'
+  social_hoc2019_every_sudent: 'Every student has the potential to change the world. Help them get started. #CSforGood'
+  social_hoc2019_learn_computer_science: 'Learn computer science. Change the world. #CSforGood #HourOfCode'
+  social_hoc_is_coming: 'The Hour of Code is coming!'
+  social_hoc2019_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn computer science. Change the world.'
+  social_hoc2019_coming_dates: 'The Hour of Code is coming December 9-15, 2019. Computer science is foundational for every student to learn.'
+  social_hoc2019_dance: 'Featuring Katy Perry, Jonas Brothers, Lil Nas X, Panic at the Disco, and many more!'
   codeorg_homepage_hoc2018_curriculum: 'Go further with <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org courses</a>'
   codeorg_homepage_hoc2018_dance_heading: 'Create your own <span class="highlight-word">Dance&nbsp;Party</span>'
   codeorg_homepage_hoc2018_header_line1: 'The Hour of Code is coming...'
@@ -569,7 +575,7 @@ ka:
   tutorial_buildpong_name: "შექმენით პონგი ხელოვნური ინტელექტით"
   tutorial_tynkerdrones_name: "დააპროგრამეთ დრონები და რობოტები"
   tutorial_carla_name: "პროგრამირება კარლასთან ერთად"
-  tutorial_globaloria_name: "Globaloria MakeQuest"
+  tutorial_zulama_name: "Zulama MakeQuest Video Game Activity"
   tutorial_capost_name: "შექმენით ციფრული ღია ბარათი HTML-ის და CSS-ის საშუალებით"
   tutorial_marco_name: "გაიქეცი, მარკო!"
   tutorial_codestersflappybike_name: "მოფარფატე ველოსიპედი"
@@ -1147,7 +1153,7 @@ ka:
   tutorial_buildpong_shortdescription: "ააწყვეთ კლასიკური არკადული თამაში და უბრძანეთ ხელოვნურ ინტელექტს ითამაშოს თქვენს წინააღმდეგ."
   tutorial_tynkerdrones_shortdescription: "დააპროგრამეთ კონტროლერი თქვენი რობოტისთვის ან დრონისთვის."
   tutorial_carla_shortdescription: "ისწავლეთ პროგრამირება ვირტუალური რობოტის, კარლას დაპროგრამების საშუალებით!"
-  tutorial_globaloria_shortdescription: "შეასრულეთ MakeQuest! შეცვალეთ კოდი, რომ მოიგოთ თამაში, მერე კი ააწყეთ თქვენი თამაში!"
+  tutorial_zulama_shortdescription: "Go on a MakeQuest! Modify code to beat our game, then build your own!"
   tutorial_capost_shortdescription: "გამოიყენეთ კოდი, რათა შექმნათ ძალიან ლამაზი ბარათი."
   tutorial_marco_shortdescription: "იმერსიული თამაში, რომელშიც ვიზუალური პროგრამირების ენის გამოყენებით მოსწავლეებს Marco-ს გააცნობს."
   tutorial_codestersflappybike_shortdescription: "შექმენით თამაში მოთამაშის კონტროლით. გააჩერეთ მოტოციკლი ჰაერში და ამავე დროს თავი აარიდეთ დაბრკოლებებს!"
@@ -1725,7 +1731,7 @@ ka:
   tutorial_buildpong_longdescription: "პონგი ერთ-ერთი უძველესი არკადული და პირველი სპორტული არკადული თამაშია. ეს მაგიდის ჩოგბურთის მაგვარი თამაშია, რომელსაც ახასიათებს მარტივი ორგანზომილებიანი გრაფიკა. თამაშის მიზანი ისაა, რომ მოთამაშემ კომპიუტერთან შეჯიბრების დროს მოიპოვოს ქულა და დაიცვას საკუთარი კარი. ამ პროექტში კომპიუტერი დაპროგრამებულია მარტივი ხელოვნური ინტელექტით და მას შეუძლია მოთამაშის ქმედებებზე რეაგირება."
   tutorial_tynkerdrones_longdescription: "ისწავლეთ დაკავშირებული მოწყობილობების დაპროგრამება \"დაჩქარებული კურსის\" თავსატეხების ამოხსნით, სადაც ვირტუალურ დრონებსა და რობოტებს უნდა გადაალახინოთ დაბრკოლებები. შემდეგ მზად იქნებით ნამდვილი დრონებისა და რობოტების სამართავი პროგრამების დასაწერად. საჭიროა iPad-ი ან ანდროიდის ტაბლეტი და სათამაშო შესაბამისი მხარდაჭერით."
   tutorial_carla_longdescription: "\"პროგრამირება კარლასთან ერთად\" არის მოკლე აქტივობების სერია, რომელიც მოსწავლეებს უძღვება მარტივი ჩატბოტის შექმნის პროცესში და ასწავლის ძირითად კონცეფციებს, როგორიცაა ცვლადები და პირობითი ბრძანებები. აქტივობები ისეა დაგეგმილი, რომ თანმიმდევრულად მიყვეს იმ მცდარ შეხედულებებს, რაც ახალ პროგრამისტებს ამ თემებთან დაკავშირებით ხშირად აქვთ. ამისთვის კურსი მოსწავლეებს სთავაზობს უამრავ შესაძლებლობას პრაქტიკისთვის, ისევე, როგორც გამიზნულ მინიშნებებს და უკუკავშირს.\n"
-  tutorial_globaloria_longdescription: "MakeQuest-ით ისწავლით  JavaScript-ის კოდის შეცვლას სახალისო თამაშით და გაიწაფებით კომპიუტერული მეცნიერების ისეთ კონცეფციებში, როგორიცაა ცვლადები და ფუნქციები. შექმენით საკუთარი თამაში Sandbox-ში ჩვენი თამაშის კოდის განვრცობითა და შეცვლით. გამოაქვეყნეთ და გაუზიარეთ თქვენი თამაში მეგობრებს!\nმასწავლებლებს: მოცემულია გაკვეთილის გეგმები და საგნისთვის სპეციფიკური დამატებითი იქტივობები."
+  tutorial_zulama_longdescription: "In this activity you will learn to edit JavaScript code through a playful action game and master computer science concepts like variables and functions. Create your own game in the Sandbox by remixing and expanding on existing game code. Then publish and share your game with friends and family. A scripted lesson guide is included for teachers."
   tutorial_capost_longdescription: "HTML-ისა და CSS-ის სწავლის დაწყება მარტივია ამ ციფრული საფოსტო ღია ბარათის საშუალებით. ისწავლეთ სათაურების, აბზაცების, სურათების და ბმულების დამატება და შექმენით საარდადაგებო ან დაბადების დღის მისალოცი ბარათი თქვენი მეგობრებისთვის და ოჯახისთვის."
   tutorial_marco_longdescription: "მოსწავლეები თამაშობენ სათავგადასავლო თამაშს, რომელიც დაფუძნებულია რეალურ ამბავზე. ისინი უძღვებიან მარკოს, მთავარ გმირს, თითოეულ საფეხურზე, რისთვისაც აძლევენ მას ნაბიჯ-ნაბიჯ ინსტრუქციებს, კოდის ერთ საათში გამოყენებული ვიზუალური პროგრამირების ენის დახმარებით. ისინი ეცნობიან ბრძანებების თანმიმდევრობას, იტერაციასა და პირობით ბრძანებებს ისე, რომ ვერც კი ამჩნევენ ამას."
   tutorial_codestersflappybike_longdescription: "In this activity, students use our drag-to-text toolkit to start coding in Python right away! Students are guided through a series of learning activities that teach them to build a complete game! After they finish, they are challenged to use what they learned about syntax, dot notation, events, variables, parameters and game mechanics to create a new game. "
@@ -2303,7 +2309,7 @@ ka:
   tutorial_buildpong_language: "მხოლოდ ინგლისური"
   tutorial_tynkerdrones_language: "მხოლოდ ინგლისური"
   tutorial_carla_language: "მხოლოდ ინგლისური"
-  tutorial_globaloria_language: "მხოლოდ ინგლისური"
+  tutorial_zulama_language: "მხოლოდ ინგლისური"
   tutorial_capost_language: "ინგლისური, ჰოლანდიური, ესპანური, რუსული"
   tutorial_marco_language: "რამდენიმე"
   tutorial_codestersflappybike_language: "მხოლოდ ინგლისური"
@@ -2881,7 +2887,7 @@ ka:
   tutorial_buildpong_string_detail_grades: "კლასები 2+"
   tutorial_tynkerdrones_string_detail_grades: "კლასები 2+"
   tutorial_carla_string_detail_grades: "კლასები 6+"
-  tutorial_globaloria_string_detail_grades: "კლასები 6+"
+  tutorial_zulama_string_detail_grades: "კლასები 6+"
   tutorial_capost_string_detail_grades: "კლასები 6+"
   tutorial_marco_string_detail_grades: "კლასები 2-8"
   tutorial_codestersflappybike_string_detail_grades: "კლასები 6+"
@@ -3459,7 +3465,7 @@ ka:
   tutorial_buildpong_string_platforms: "ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი, Android ტელეფონი, iPad"
   tutorial_tynkerdrones_string_platforms: "Android ტაბლეტი, iPad"
   tutorial_carla_string_platforms: "ყველა თანამედროვე ბრაუზერი"
-  tutorial_globaloria_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari"
+  tutorial_zulama_string_platforms: "Internet Explorer 11, Chrome, Firefox, Safari"
   tutorial_capost_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari"
   tutorial_marco_string_platforms: "ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი, iPad"
   tutorial_codestersflappybike_string_platforms: "ყველა თანამედროვე ბრაუზერი"
@@ -4037,7 +4043,7 @@ ka:
   tutorial_buildpong_string_detail_platforms: ""
   tutorial_tynkerdrones_string_detail_platforms: "თუთიყუშის დრონი, რობოტი Sphero, რობოტი ოლი"
   tutorial_carla_string_detail_platforms: ""
-  tutorial_globaloria_string_detail_platforms: ""
+  tutorial_zulama_string_detail_platforms: ""
   tutorial_capost_string_detail_platforms: ""
   tutorial_marco_string_detail_platforms: ""
   tutorial_codestersflappybike_string_detail_platforms: ""
@@ -4615,7 +4621,7 @@ ka:
   tutorial_buildpong_string_detail_programming_languages: "Blocks, Ready, Unity"
   tutorial_tynkerdrones_string_detail_programming_languages: "ბლოკები"
   tutorial_carla_string_detail_programming_languages: "Coffeescript"
-  tutorial_globaloria_string_detail_programming_languages: "JavaScript"
+  tutorial_zulama_string_detail_programming_languages: "JavaScript"
   tutorial_capost_string_detail_programming_languages: "HTML, CSS"
   tutorial_marco_string_detail_programming_languages: "ბლოკები"
   tutorial_codestersflappybike_string_detail_programming_languages: "Python"

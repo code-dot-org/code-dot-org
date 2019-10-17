@@ -4,7 +4,7 @@ import sinon from 'sinon';
 const project = require('@cdo/apps/code-studio/initApp/project');
 const assets = require('@cdo/apps/code-studio/assets');
 import i18n from '@cdo/apps/code-studio/i18n';
-import {assert} from './configuredChai';
+import {assert} from './deprecatedChai';
 export {
   throwOnConsoleErrorsEverywhere,
   throwOnConsoleWarningsEverywhere,

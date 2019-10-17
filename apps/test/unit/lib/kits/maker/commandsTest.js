@@ -1,5 +1,5 @@
 /** @file Test maker command behavior */
-import {expect} from '../../../../util/configuredChai';
+import {expect} from '../../../../util/deprecatedChai';
 import sinon from 'sinon';
 import {
   analogRead,
