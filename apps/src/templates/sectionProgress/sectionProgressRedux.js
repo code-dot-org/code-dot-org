@@ -73,6 +73,7 @@ export const addStudentLevelPairing = (scriptId, studentLevelPairing) => {
 
 export const jumpToLessonDetails = lessonOfInterest => {
   return (dispatch, getState) => {
+    const state = getState().sectionProgress;
     dispatch(setLessonOfInterest(lessonOfInterest));
     dispatch(setCurrentView(ViewType.DETAIL));
     firehoseClient.putRecord({
@@ -80,6 +81,7 @@ export const jumpToLessonDetails = lessonOfInterest => {
       study_group: 'progress',
       event: 'view_change_toggle',
       data_json: JSON.stringify({
+        section_id: state.section.id,
         old_view: ViewType.SUMMARY,
         new_view: ViewType.DETAIL
       })
