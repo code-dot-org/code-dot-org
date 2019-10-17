@@ -18,6 +18,31 @@ Before('@as_teacher') do
   steps 'Given I am a teacher'
 end
 
+Before('@need_teacher_application_data') do
+  count_before = Pd::Application::ActiveApplicationModels::TEACHER_APPLICATION_CLASS.count
+  Pd::Application::ActiveApplicationModels::TEACHER_APPLICATION_CLASS.destroy_all
+  count_after = Pd::Application::ActiveApplicationModels::TEACHER_APPLICATION_CLASS.count
+
+  puts "Deleted #{count_before - count_after} existing applications. Count before = #{count_before}, after = #{count_after}"
+
+  time_start = Time.now
+  application_count = 0
+
+  %w(csd csp).each do |course|
+    Pd::Application::ApplicationBase.statuses.each do |status|
+      application =
+        FactoryGirl.create(
+          Pd::Application::ActiveApplicationModels::TEACHER_APPLICATION_FACTORY,
+          course: course
+        )
+      application.update(status: status)
+      application_count += 1
+    end
+  end
+
+  puts "Created #{application_count} applications in #{Time.now - time_start} seconds."
+end
+
 # Add After hook as the last one, which results in it being run before
 # sign-out steps etc. change the page the browser is currently on.
 After do
