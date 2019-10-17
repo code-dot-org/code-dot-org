@@ -30,7 +30,7 @@ level 'U7 Libraries List Math Library', progression: 'Code Investigation'
 level 'U7 Libraries Investigate Pig Latin', progression: 'Code Investigation'
 
 stage 'Libraries Project', flex_category: 'csp_libraries'
-level 'U7 Libraries Explanation', progression: 'Video: Libraries'
+level 'U7 Libraries Explanation Video', progression: 'Video: Libraries'
 level 'CSP Pilot U7 Libraries Make Pt 1', progression: 'One Function Library'
 level 'CSP Pilot U7 Libraries Make Pt 2', progression: 'One Function Library'
 level 'CSP Pilot U7 Libraries Make Pt 3', progression: 'Libraries Playground'
