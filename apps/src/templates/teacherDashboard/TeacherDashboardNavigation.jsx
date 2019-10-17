@@ -7,6 +7,7 @@ import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import firehoseClient from '../../lib/util/firehose';
 import _ from 'lodash';
+import {connect} from 'react-redux';
 var userAgentParser = require('../../code-studio/initApp/userAgentParser');
 
 export const TeacherDashboardPath = {
@@ -52,14 +53,15 @@ const ListPosition = {
   end: 'end'
 };
 
-export default class TeacherDashboardNavigation extends Component {
+class TeacherDashboardNavigation extends Component {
   static propTypes = {
     links: PropTypes.arrayOf(
       PropTypes.shape({
         label: PropTypes.string.isRequired,
         url: PropTypes.string.isRequired
       })
-    )
+    ),
+    sectionId: PropTypes.number
   };
 
   state = {
@@ -128,6 +130,7 @@ export default class TeacherDashboardNavigation extends Component {
       study_group: currentTab,
       event: 'click_new_tab',
       data_json: JSON.stringify({
+        section_id: this.props.sectionId,
         new_tab: clickedTab
       })
     });
@@ -179,6 +182,9 @@ export default class TeacherDashboardNavigation extends Component {
     );
   }
 }
+export default connect(state => ({
+  sectionId: state.sectionData.section.id
+}))(TeacherDashboardNavigation);
 
 const NAVBAR_HEIGHT = 50;
 const PADDING = 10;

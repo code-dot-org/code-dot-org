@@ -41,6 +41,7 @@ class SelectSectionDropdown extends React.Component {
       study_group: currentTab,
       event: 'change_section',
       data_json: JSON.stringify({
+        section_id: this.props.selectedSectionId,
         old_section_id: this.props.selectedSectionId,
         new_section_id: sectionId
       })
