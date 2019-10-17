@@ -5,8 +5,8 @@ module Api::V1::Pd
   class WorkshopSurveyReportController < ReportControllerBase
     include WorkshopScoreSummarizer
     include ::Pd::WorkshopSurveyReportCsvConverter
-    include Pd::WorkshopSurveyResultsHelper
     include Pd::SurveyPipeline::Helper
+    include Pd::SharedWorkshopConstants
 
     load_and_authorize_resource :workshop, class: 'Pd::Workshop'
 
