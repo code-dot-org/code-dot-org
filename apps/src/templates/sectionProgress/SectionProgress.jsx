@@ -131,6 +131,17 @@ class SectionProgress extends Component {
     return scriptData ? `${scriptData.path}?section_id=${section.id}` : null;
   }
 
+  navigateToCourse = () => {
+    firehoseClient.putRecord({
+      study: ' teacher_dashboard_actions',
+      study_group: 'progress',
+      event: 'go_to_script',
+      data_json: JSON.stringify({
+        script_id: this.props.scriptId
+      })
+    });
+  };
+
   render() {
     const {
       section,
@@ -182,7 +193,11 @@ class SectionProgress extends Component {
                 style={{...h3Style, ...styles.heading, ...styles.tableHeader}}
               >
                 <span>{i18n.lessonsAttempted() + ' '}</span>
-                <a href={linkToOverview} style={styles.scriptLink}>
+                <a
+                  href={linkToOverview}
+                  style={styles.scriptLink}
+                  onClick={this.navigateToCourse}
+                >
                   {scriptFriendlyName}
                 </a>
               </div>
@@ -202,7 +217,11 @@ class SectionProgress extends Component {
                 style={{...h3Style, ...styles.heading, ...styles.tableHeader}}
               >
                 <span>{i18n.levelsAttempted() + ' '}</span>
-                <a href={linkToOverview} style={styles.scriptLink}>
+                <a
+                  href={linkToOverview}
+                  style={styles.scriptLink}
+                  onClick={this.navigateToCourse}
+                >
                   {scriptFriendlyName}
                 </a>
               </div>
