@@ -27,7 +27,7 @@ const fish = {
       pectoralFinAnchor: [50, 77],
       dorsalFinAnchor: [23, -15],
       tailAnchor: [107, 20],
-      knnData: [1.0],
+      knnData: [0.6],
       type: FishBodyPart.BODY
     },
     eel: {
@@ -38,7 +38,7 @@ const fish = {
       pectoralFinAnchor: [40, 77],
       dorsalFinAnchor: [53, -25],
       tailAnchor: [107, 40],
-      knnData: [1.0],
+      knnData: [0],
       type: FishBodyPart.BODY
     },
     /*
@@ -51,7 +51,7 @@ const fish = {
       pectoralFinAnchor: [40, 77],
       dorsalFinAnchor: [53, -25],
       tailAnchor: [107, 40],
-      knnData: [1.0],
+      knnData: [0.2],
       type: FishBodyPart.BODY
     },*/
     round: {
@@ -73,7 +73,7 @@ const fish = {
       pectoralFinAnchor: [33, 80],
       dorsalFinAnchor: [33, -19],
       tailAnchor: [92, 20],
-      knnData: [0.82],
+      knnData: [0.8],
       type: FishBodyPart.BODY
     },
     shark: {
@@ -84,7 +84,7 @@ const fish = {
       pectoralFinAnchor: [57, 78],
       dorsalFinAnchor: [33, -23],
       tailAnchor: [137, -15],
-      knnData: [0.82],
+      knnData: [0.4],
       type: FishBodyPart.BODY
     }
   },
@@ -92,27 +92,27 @@ const fish = {
   eyes: {
     angry: {
       src: 'images/fish/eyes/Eyes_Angry.png',
-      knnData: [1, 0.07],
+      knnData: [1, 0.0],
       type: FishBodyPart.EYE
     },
     big: {
       src: 'images/fish/eyes/Eyes_Big.png',
-      knnData: [1, 0.07],
+      knnData: [1, 0.75],
       type: FishBodyPart.EYE
     },
     concentric: {
       src: 'images/fish/eyes/Eyes_Concentric.png',
-      knnData: [1, 0.07],
+      knnData: [1, 1.00],
       type: FishBodyPart.EYE
     },
     side: {
       src: 'images/fish/eyes/Eyes_Side.png',
-      knnData: [1, 0.07],
+      knnData: [1, 0.5],
       type: FishBodyPart.EYE
     },
     unibrow: {
       src: 'images/fish/eyes/Eyes_Unibrow.png',
-      knnData: [1, 0.07],
+      knnData: [1, 0.25],
       type: FishBodyPart.EYE
     }
   },
@@ -120,27 +120,27 @@ const fish = {
   mouths: {
     curvedCylinder: {
       src: 'images/fish/mouth/Mouth_CurvedCylinder.png',
-      knnData: [0, 1],
+      knnData: [0, 0.5],
       type: FishBodyPart.MOUTH
     },
     duckLips: {
       src: 'images/fish/mouth/Mouth_DuckLips.png',
-      knnData: [0, 0.08],
+      knnData: [0, 0.375],
       type: FishBodyPart.MOUTH
     },
     heart: {
       src: 'images/fish/mouth/Mouth_Heart.png',
-      knnData: [0, 0.25],
+      knnData: [0, 0.75],
       type: FishBodyPart.MOUTH
     },
     lips: {
       src: 'images/fish/mouth/Mouth_Lips.png',
-      knnData: [0, 0.25],
+      knnData: [0, 1.0],
       type: FishBodyPart.MOUTH
     },
     longMouth: {
       src: 'images/fish/mouth/Mouth_LongMouth.png',
-      knnData: [0, 0.25],
+      knnData: [0, 0.875],
       type: FishBodyPart.MOUTH
     },
     oval: {
@@ -150,17 +150,17 @@ const fish = {
     },
     roundedHeart: {
       src: 'images/fish/mouth/Mouth_RoundedHeart.png',
-      knnData: [0, 0.46],
+      knnData: [0, 0.625],
       type: FishBodyPart.MOUTH
     },
     shark: {
       src: 'images/fish/mouth/Mouth_Shark.png',
-      knnData: [1, 0.56],
+      knnData: [1, 0.00],
       type: FishBodyPart.MOUTH
     },
     sharpTeeth: {
       src: 'images/fish/mouth/Mouth_SharpTeeth.png',
-      knnData: [1, 0.56],
+      knnData: [1, 0.125],
       type: FishBodyPart.MOUTH
     }
   },
@@ -201,13 +201,13 @@ const fish = {
     },/*
     anglerfish: {
       src: 'images/fish/dorsalFin/Dorsal_Fin_anglerfish.png',
-      knnData: [1],
+      knnData: [0.125],
       type: FishBodyPart.DORSAL_FIN
     },*/
     /*
     horns: {
       src: 'images/fish/dorsalFin/Dorsal_Fin_Horns.png',
-      knnData: [1],
+      knnData: [0.625],
       type: FishBodyPart.DORSAL_FIN
     },
     */
@@ -223,7 +223,7 @@ const fish = {
     },
     shark: {
       src: 'images/fish/dorsalFin/Dorsal_Fin_Shark.png',
-      knnData: [0.75],
+      knnData: [0.875],
       type: FishBodyPart.DORSAL_FIN
     },
     spikes: {
@@ -233,12 +233,12 @@ const fish = {
     },/*
     topHat: {
       src: 'images/fish/dorsalFin/Dorsal_Fin_TopHat.png',
-      knnData: [0.75],
+      knnData: [0.25],
       type: FishBodyPart.DORSAL_FIN
     },*/
     wave: {
       src: 'images/fish/dorsalFin/Dorsal_Fin_Wave.png',
-      knnData: [0.25],
+      knnData: [0.375],
       type: FishBodyPart.DORSAL_FIN
     }
   },
