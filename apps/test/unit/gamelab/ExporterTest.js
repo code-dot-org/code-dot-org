@@ -1,4 +1,4 @@
-import {assert, expect} from '../../util/configuredChai';
+import {assert, expect} from '../../util/deprecatedChai';
 import sinon from 'sinon';
 
 var testUtils = require('../../util/testUtils');

@@ -1,5 +1,5 @@
 import React from 'react';
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/deprecatedChai';
 import {mount} from 'enzyme';
 import ToggleButton from '@cdo/apps/templates/ToggleButton';
 

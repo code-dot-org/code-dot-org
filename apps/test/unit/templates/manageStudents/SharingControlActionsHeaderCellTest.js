@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/deprecatedChai';
 import i18n from '@cdo/locale';
 import {combineReducers, createStore} from 'redux';
 import reducer from '@cdo/apps/templates/manageStudents/manageStudentsRedux';

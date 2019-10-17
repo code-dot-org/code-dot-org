@@ -32,7 +32,7 @@ const styles = {
 
 /**
  * Given an array of versions, return that array with the same versions, plus
- * isRecommended and isSelected properties set on the recommented and selected version(s).
+ * isRecommended and isSelected properties set on the recommended and selected version(s).
  * Note: This method will change the content of the versions array that is passed to it.
  * @param {Array<AssignmentVersionShape>} versions
  * @param {String} locale. User's current locale.

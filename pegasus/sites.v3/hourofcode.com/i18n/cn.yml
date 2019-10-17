@@ -13,6 +13,12 @@ cn:
   hoc2019_header: '学习计算机科学，改变世界！'
   hoc2019_header_line1_mobile: '学习计算机科学.'
   hoc2019_header_line2_mobile: '改变世界!'
+  social_hoc2019_every_sudent: 'Every student has the potential to change the world. Help them get started. #CSforGood'
+  social_hoc2019_learn_computer_science: 'Learn computer science. Change the world. #CSforGood #HourOfCode'
+  social_hoc_is_coming: 'The Hour of Code is coming!'
+  social_hoc2019_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn computer science. Change the world.'
+  social_hoc2019_coming_dates: 'The Hour of Code is coming December 9-15, 2019. Computer science is foundational for every student to learn.'
+  social_hoc2019_dance: 'Featuring Katy Perry, Jonas Brothers, Lil Nas X, Panic at the Disco, and many more!'
   codeorg_homepage_hoc2018_curriculum: '继续更深入的使用 <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org 课程</a>'
   codeorg_homepage_hoc2018_dance_heading: 'Create your own <span class="highlight-word">Dance&nbsp;Party</span>'
   codeorg_homepage_hoc2018_header_line1: '编程一小时活动即将开始'
@@ -569,7 +575,7 @@ cn:
   tutorial_buildpong_name: "用人工智能创建Pong"
   tutorial_tynkerdrones_name: "给无人机和机器人编程序"
   tutorial_carla_name: "与Carla一起编程"
-  tutorial_globaloria_name: "Globaloria MakeQuest"
+  tutorial_zulama_name: "Zulama MakeQuest Video Game Activity"
   tutorial_capost_name: "用HTML和CSS创作一张电子明信片"
   tutorial_marco_name: "奔跑吧，马里奥！"
   tutorial_codestersflappybike_name: "飞行的自行车"
@@ -1147,7 +1153,7 @@ cn:
   tutorial_buildpong_shortdescription: "建立街机经典游戏, 让计算机人工智能对抗你。"
   tutorial_tynkerdrones_shortdescription: "为你的机器人或无人机编程控制器。"
   tutorial_carla_shortdescription: "学习编程一个说话的虚拟机器人叫卡拉!"
-  tutorial_globaloria_shortdescription: "去 MakeQuest! 修改代码击败我们的游戏, 然后建立自己的!"
+  tutorial_zulama_shortdescription: "Go on a MakeQuest! Modify code to beat our game, then build your own!"
   tutorial_capost_shortdescription: "使用代码创建一个美丽的假期或生日贺卡。"
   tutorial_marco_shortdescription: "用可视化编程语言指导马可一个的身临其境的游戏。"
   tutorial_codestersflappybike_shortdescription: "使用播放器控件创建游戏，让你的自行车在空中自由地 躲避障碍物!"
@@ -1725,7 +1731,7 @@ cn:
   tutorial_buildpong_longdescription: "Pong是最早的街机视频游戏之一，也是第一个体育街机视频游戏。 这是一个乒乓球运动游戏，具有简单的二维图形。 本场比赛的目的是让球员在防守目标并得分。 在这个项目中，计算机用基本的人工智能编程，所以它可以对玩家做出反应。"
   tutorial_tynkerdrones_longdescription: "通过解决“崩溃课程”的难题，学习编程连接的设以导航虚拟无人机和机器人中穿过障碍物。 然后，您就可以创建程序来控制真正的无人机和机器人。 这需要iPad或Android平板电脑和受支持的玩具。"
   tutorial_carla_longdescription: "“用卡拉编程”是一系列简短的活动，引导学生构建简单的聊天机器人，并同时学习变量和条件等核心概念。 这些活动都经过精心设计，通过提供许多实践机会以及有针对性的提示和反馈来解决新程序员对这些主题的常见误解。\n"
-  tutorial_globaloria_longdescription: "在MakeQuest中，你通过一个有趣的动作游戏来学习编辑JavaScript代码，掌握变量和函数等计算机科学概念。 通过创建我们自己的游戏，我们在沙箱中混合并扩展了游戏代码。 发布并与朋友分享你的游戏！ 教师：课程计划和专题扩展活动都包括在内。"
+  tutorial_zulama_longdescription: "In this activity you will learn to edit JavaScript code through a playful action game and master computer science concepts like variables and functions. Create your own game in the Sandbox by remixing and expanding on existing game code. Then publish and share your game with friends and family. A scripted lesson guide is included for teachers."
   tutorial_capost_longdescription: "用这个电子明信片开始学习HTML和CSS是容易和有趣的。 了解如何添加标题，段落，图片和链接来创建节日贺卡或生日庆祝活动，以便与朋友和家人分享。"
   tutorial_marco_longdescription: "学生根据原本的故事玩一个冒险游戏。 他们通过每个级别指导Marco（主要角色），以小时代使用的可视化编程语言的形式向他提供分步说明。 他们被引入了序列命令，迭代和条件，学生甚至没有注意到它。"
   tutorial_codestersflappybike_longdescription: "在这个活动中，学生将使用可以拖动到文本的工具栏，开始用Python进行编程！学生将通过一系列学习活动来指导他们建立一个完整的游戏！完成之后，他们将接受挑战，使用他们学习的语法、点符号、事件、变量、参数和游戏机制来创建新的游戏。"
@@ -2303,7 +2309,7 @@ cn:
   tutorial_buildpong_language: "仅英语"
   tutorial_tynkerdrones_language: "仅英语"
   tutorial_carla_language: "仅英语"
-  tutorial_globaloria_language: "仅英语"
+  tutorial_zulama_language: "仅英语"
   tutorial_capost_language: "英语, 荷兰, 西班牙语, 俄语"
   tutorial_marco_language: "多个"
   tutorial_codestersflappybike_language: "仅英语"
@@ -2881,7 +2887,7 @@ cn:
   tutorial_buildpong_string_detail_grades: "二年级以上"
   tutorial_tynkerdrones_string_detail_grades: "二年级以上"
   tutorial_carla_string_detail_grades: "六年级以上"
-  tutorial_globaloria_string_detail_grades: "六年级以上"
+  tutorial_zulama_string_detail_grades: "六年级以上"
   tutorial_capost_string_detail_grades: "六年级以上"
   tutorial_marco_string_detail_grades: "小学二年级到初中二年级"
   tutorial_codestersflappybike_string_detail_grades: "六年级以上"
@@ -3459,7 +3465,7 @@ cn:
   tutorial_buildpong_string_platforms: "所有较新的浏览器，安卓平板电脑，Android 手机 iPad"
   tutorial_tynkerdrones_string_platforms: "安卓平板电脑 iPad"
   tutorial_carla_string_platforms: "所有高版本浏览器"
-  tutorial_globaloria_string_platforms: "IE 11，微软Edge、 Chrome、 火狐、 Safari"
+  tutorial_zulama_string_platforms: "IE 11、 Chrome、 火狐、 Safari"
   tutorial_capost_string_platforms: "IE 11，微软Edge、 Chrome、 火狐、 Safari"
   tutorial_marco_string_platforms: "所有较新的浏览器，安卓平板电脑，iPad"
   tutorial_codestersflappybike_string_platforms: "所有高版本浏览器"
@@ -4037,7 +4043,7 @@ cn:
   tutorial_buildpong_string_detail_platforms: ""
   tutorial_tynkerdrones_string_detail_platforms: "Parrot无人机、 Sphero机器人、 Ollie机器人"
   tutorial_carla_string_detail_platforms: ""
-  tutorial_globaloria_string_detail_platforms: ""
+  tutorial_zulama_string_detail_platforms: ""
   tutorial_capost_string_detail_platforms: ""
   tutorial_marco_string_detail_platforms: ""
   tutorial_codestersflappybike_string_detail_platforms: ""
@@ -4615,7 +4621,7 @@ cn:
   tutorial_buildpong_string_detail_programming_languages: "Blocks, Ready, Unity"
   tutorial_tynkerdrones_string_detail_programming_languages: "方块"
   tutorial_carla_string_detail_programming_languages: "Coffeescript"
-  tutorial_globaloria_string_detail_programming_languages: "JavaScript"
+  tutorial_zulama_string_detail_programming_languages: "JavaScript"
   tutorial_capost_string_detail_programming_languages: "HTML CSS"
   tutorial_marco_string_detail_programming_languages: "方块"
   tutorial_codestersflappybike_string_detail_programming_languages: "Python"
