@@ -347,12 +347,8 @@ function compileDetails(index, location, initialContent) {
     container.appendChild(clone);
   });
 
-  let website = location.school_website_s;
+  const website = normalizeURL(location.school_website_s);
   if (website) {
-    if (!website.match(/^https?:\/\//i)) {
-      website = 'http://' + website;
-    }
-
     const websiteDiv = document.createElement('div');
     const websiteStrong = document.createElement('strong');
     websiteStrong.textContent = 'Website: ';
@@ -373,4 +369,28 @@ function compileDetails(index, location, initialContent) {
   }
 
   return container;
+}
+
+/**
+ * Given a user-provided url (we hope)
+ * - assume it's an external link, and prefix a protocol in case
+ *   they omitted one.
+ * - detect non-URLs and drop them entirely.
+ * @param {string} possibleUrl
+ * @return {string|undefined} normalized URL
+ */
+function normalizeURL(possibleUrl) {
+  // Drop JavaScript hrefs entirely
+  if (/^javascript/i.test(possibleUrl)) {
+    return;
+  }
+
+  // Benefit of the doubt - coerce "example.com" to valid external
+  // href "http://example.com".  Note we only support http/https
+  // protocols here.
+  if (possibleUrl && !possibleUrl.match(/^https?:\/\//i)) {
+    possibleUrl = 'http://' + possibleUrl;
+  }
+
+  return possibleUrl;
 }

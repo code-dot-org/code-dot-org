@@ -251,7 +251,7 @@ describe('/learn/local', () => {
       );
     });
 
-    it('school website guards against JavaScript injection', () => {
+    it('school website guards against quote injection', () => {
       const input = {
         ...SAMPLE_LOCATION,
         school_website_s: `https://example.com" onmouseover="alert('gotcha')`
@@ -260,6 +260,18 @@ describe('/learn/local', () => {
       assert.include(
         locationDetailsDiv.innerHTML,
         `https://example.com\" onmouseover=\"alert('gotcha')`
+      );
+    });
+
+    it('school website guards against javascript href', () => {
+      const input = {
+        ...SAMPLE_LOCATION,
+        school_website_s: `javascript:alert('gotcha')`
+      };
+      compileHTML(1, input);
+      assert.notInclude(
+        locationDetailsDiv.innerHTML,
+        `javascript:alert('gotcha')`
       );
     });
 
