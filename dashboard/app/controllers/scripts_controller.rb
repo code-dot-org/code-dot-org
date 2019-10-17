@@ -81,7 +81,25 @@ class ScriptsController < ApplicationController
   end
 
   def edit
+    beta = params[:beta].present?
+    if @script.script_levels.any?(&:has_experiment?)
+      beta = false
+      beta_warning = "The beta Script Editor is not available, because it does not support level variants with experiments."
+    end
     @show_all_instructions = params[:show_all_instructions]
+    @script_data = {
+      script: @script ? @script.summarize_for_edit : {},
+      i18n: @script ? @script.summarize_i18n : {},
+      beta: beta,
+      betaWarning: beta_warning,
+      levelKeyList: beta && Level.key_list,
+      stageLevelData: @script_file,
+      locales: options_for_locale_select,
+      script_families: ScriptConstants::FAMILY_NAMES,
+      version_year_options: Script.get_version_year_options,
+      flex_category_map: I18n.t('flex_category'),
+      is_levelbuilder: current_user.levelbuilder?
+    }
   end
 
   def update
