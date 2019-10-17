@@ -9,7 +9,6 @@ import LibraryClientApi from './LibraryClientApi';
 import i18n from '@cdo/locale';
 import PadAndCenter from '@cdo/apps/templates/teacherDashboard/PadAndCenter';
 import {Heading1, Heading2} from '@cdo/apps/lib/ui/Headings';
-import $ from 'jquery';
 
 const styles = {
   alert: {
@@ -107,7 +106,13 @@ class LibraryCreationDialog extends React.Component {
   validateInput = () => {
     // Check if any of the checkboxes are checked
     // If this changes the publishable state, update
-    let isChecked = $("input[type='checkbox']").is(':checked');
+    let formElements = document.getElementById('selectFunction').elements;
+    let isChecked = false;
+    [...formElements].forEach(element => {
+      if (element.type === 'checkbox' && element.checked) {
+        isChecked = true;
+      }
+    });
     if (isChecked !== this.state.canPublish) {
       this.setState({canPublish: isChecked});
     }
@@ -117,11 +122,11 @@ class LibraryCreationDialog extends React.Component {
     if (!this.state.loadingFinished) {
       return <div id="loading">Loading...</div>;
     }
-    let keyIndex = -1;
+    let keyIndex = 0;
     return (
       <div>
         <Heading2>
-          <b>Library Name: </b>
+          <b>{i18n.libraryName()}</b>
           {this.state.libraryName}
         </Heading2>
         <form id="selectFunction" onSubmit={this.publish}>
@@ -137,20 +142,19 @@ class LibraryCreationDialog extends React.Component {
             let name = sourceFunction.functionName;
             let comment = sourceFunction.comment;
             return (
-              <div key={keyIndex++} style={styles.functionItem}>
+              <div key={keyIndex} style={styles.functionItem}>
                 <input
                   type="checkbox"
                   style={styles.largerCheckbox}
                   disabled={comment.length === 0}
                   onClick={this.validateInput}
-                  value={keyIndex}
+                  value={keyIndex++}
                 />
                 {name}
                 <br />
                 {comment.length === 0 && (
                   <p style={styles.alert}>
-                    This function cannot be exported until you add a comment to
-                    it.
+                    {i18n.libraryExportNoCommentError()}
                   </p>
                 )}
                 <pre>{comment}</pre>
@@ -178,7 +182,7 @@ class LibraryCreationDialog extends React.Component {
         <Body>
           <PadAndCenter>
             <div style={styles.libraryBoundary}>
-              <Heading1>Export Functions as a Library</Heading1>
+              <Heading1>{i18n.libraryExportTitle()}</Heading1>
               {this.displayFunctions()}
             </div>
           </PadAndCenter>
