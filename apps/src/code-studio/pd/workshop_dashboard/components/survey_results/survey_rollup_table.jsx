@@ -2,6 +2,7 @@ import React from 'react';
 import {Table} from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
+import {COURSE_CSF} from '../../workshopConstants';
 
 const questionCategories = [
   'facilitator_effectiveness',
@@ -11,6 +12,7 @@ const questionCategories = [
 
 export class SurveyRollupTable extends React.Component {
   static propTypes = {
+    courseName: PropTypes.string.isRequired,
     rollups: PropTypes.object.isRequired,
     questions: PropTypes.object.isRequired,
     facilitators: PropTypes.object.isRequired
@@ -18,6 +20,12 @@ export class SurveyRollupTable extends React.Component {
 
   constructor(props) {
     super(props);
+
+    this.questionDenominator = {
+      facilitator_effectiveness: 7,
+      teacher_engagement: props.courseName === COURSE_CSF ? 5 : 7,
+      overall_success: 7
+    };
   }
 
   /**
@@ -43,7 +51,8 @@ export class SurveyRollupTable extends React.Component {
           question_found = true;
           orderedRows.push({
             key: question_name,
-            label: questions[question_name]
+            label: questions[question_name],
+            category: category
           });
         }
       });
@@ -96,6 +105,12 @@ export class SurveyRollupTable extends React.Component {
     }));
   }
 
+  renderAverage(value, category) {
+    return value
+      ? `${value.toFixed(2)} / ${this.questionDenominator[category]}`
+      : '-';
+  }
+
   render() {
     let orderedColumns = this.createOrderedColumns();
 
@@ -127,12 +142,18 @@ export class SurveyRollupTable extends React.Component {
           {/*Next rows are average scores of categories and questions*/}
           {orderedRows.map((row, i) => (
             <tr key={i} style={row.isCategory ? {borderTop: 'solid'} : {}}>
+              {/* First cell is category/question text */}
               <td style={row.isCategory ? {} : {paddingLeft: '30px'}}>
                 {row.label}
               </td>
+
+              {/* Next cells are category/question average scores in each scenario */}
               {orderedColumns.map((column, j) => (
                 <td key={j}>
-                  {this.props.rollups[column.key].averages[row.key]}
+                  {this.renderAverage(
+                    this.props.rollups[column.key].averages[row.key],
+                    row.category || row.key
+                  )}
                 </td>
               ))}
             </tr>
