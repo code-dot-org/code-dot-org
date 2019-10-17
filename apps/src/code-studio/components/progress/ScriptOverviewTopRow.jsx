@@ -10,6 +10,9 @@ import {
   stringForType,
   resourceShape
 } from '@cdo/apps/templates/courseOverview/resourceType';
+import experiments from '@cdo/apps/util/experiments';
+import SectionAssigner from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
+import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 
 export const NOT_STARTED = 'NOT_STARTED';
 export const IN_PROGRESS = 'IN_PROGRESS';
@@ -50,6 +53,8 @@ export default class ScriptOverviewTopRow extends React.Component {
         name: PropTypes.string.isRequired
       })
     ).isRequired,
+    sections: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
+    selectedSectionId: PropTypes.number,
     currentCourseId: PropTypes.number,
     professionalLearningCourse: PropTypes.bool,
     scriptProgress: PropTypes.oneOf([NOT_STARTED, IN_PROGRESS, COMPLETED]),
@@ -65,6 +70,8 @@ export default class ScriptOverviewTopRow extends React.Component {
   render() {
     const {
       sectionsInfo,
+      sections,
+      selectedSectionId,
       currentCourseId,
       professionalLearningCourse,
       scriptProgress,
@@ -105,6 +112,12 @@ export default class ScriptOverviewTopRow extends React.Component {
               assignmentName={scriptTitle}
             />
           )}
+        {experiments.isEnabled(experiments.ASSIGNMENT_UPDATES) && (
+          <SectionAssigner
+            sections={sections}
+            initialSelectedSectionId={selectedSectionId}
+          />
+        )}
         {!professionalLearningCourse &&
           viewAs === ViewType.Teacher &&
           resources.length > 0 && (
