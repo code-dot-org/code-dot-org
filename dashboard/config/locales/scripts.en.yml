@@ -12635,6 +12635,12 @@ en:
               name: Student Survey (Libraries)
             Teacher Survey (Libraries):
               name: Teacher Survey (Libraries)
+            Loops Investigate:
+              name: Loops Investigate
+            Loops Practice:
+              name: Loops Practice
+            Loops Make:
+              name: Loops Make
           title: CSP Unit 5 Pilot - Lists, Loops, and Traversals
           description_audience: ''
           description_short: ''
