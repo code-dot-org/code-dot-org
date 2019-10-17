@@ -19,9 +19,9 @@ module Pd::SurveyPipeline::Helper
   # @param workshop [Pd::Workshop] the workshop user selects, which is used to find related workshops
   # @param current_user [User] the user requesting survey report
   # @return [Hash] {:workshopRollups, :facilitatorRollups => rollup_content}
-  # @see SurveyRollupDecoratorExperiment.decorate_facilitator_rollup for data structure of rollup_content
+  # @see SurveyRollupDecorator.decorate_facilitator_rollup for data structure of rollup_content
   #
-  def report_rollups_experiment(workshop, current_user)
+  def report_rollups(workshop, current_user)
     # Get list of facilitators this user can see
     facilitator_ids =
       if current_user.program_manager? || current_user.workshop_organizer? || current_user.workshop_admin?
@@ -34,8 +34,8 @@ module Pd::SurveyPipeline::Helper
     reports = {facilitator_rollups: {}, workshop_rollups: {}}
 
     facilitator_ids.each do |fid|
-      reports[:facilitator_rollups].deep_merge! report_facilitator_rollup_experiment(fid, workshop, true)
-      reports[:workshop_rollups].deep_merge! report_facilitator_rollup_experiment(fid, workshop, false)
+      reports[:facilitator_rollups].deep_merge! report_facilitator_rollup(fid, workshop, true)
+      reports[:workshop_rollups].deep_merge! report_facilitator_rollup(fid, workshop, false)
 
       # TODO: report_partner_rollup()
       # TODO: report_cdo_rollup()
@@ -52,7 +52,7 @@ module Pd::SurveyPipeline::Helper
   # @param only_facilitator_questions [Boolean]
   # @return [Hash]
   #
-  def report_facilitator_rollup_experiment(facilitator_id, workshop, only_facilitator_questions)
+  def report_facilitator_rollup(facilitator_id, workshop, only_facilitator_questions)
     context = {
       current_workshop_id: workshop.id,
       facilitator_id: facilitator_id,
@@ -75,7 +75,7 @@ module Pd::SurveyPipeline::Helper
     process_rollup_data context
 
     # Decorate
-    Pd::SurveyPipeline::SurveyRollupDecoratorExperiment.decorate_facilitator_rollup(
+    Pd::SurveyPipeline::SurveyRollupDecorator.decorate_facilitator_rollup(
       context, only_facilitator_questions
     )
   end
