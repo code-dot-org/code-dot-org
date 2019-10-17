@@ -167,7 +167,7 @@ And (/^I create some fake teacher applications$/) do
   application_count = 0
 
   %w(csd csp).each do |course|
-    Pd::Application::ApplicationBase.statuses.each do |status|
+    Pd::Application::ActiveApplicationModels::TEACHER_APPLICATION_CLASS.statuses.each do |status|
       application =
         FactoryGirl.create(
           Pd::Application::ActiveApplicationModels::TEACHER_APPLICATION_FACTORY,
