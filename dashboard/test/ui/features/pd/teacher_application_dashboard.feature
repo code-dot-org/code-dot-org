@@ -1,5 +1,6 @@
 @dashboard_db_access
 @eyes
+@need_teacher_application_data
 
 Feature: Teacher Application Dashboard view
 
@@ -12,9 +13,8 @@ Feature: Teacher Application Dashboard view
     Then I wait until element "h2:contains('CS Discoveries Teacher Applications')" is visible
     Then I wait until element "table#quick-view" is visible
 
-    # TODO (mehal): Re-enable these when the test is fixed for this
     And I open my eyes to test "Teacher Application Dashboard"
-    #And I see no difference for "Teacher List View"
+    And I see no difference for "Teacher List View"
 
     # Access the Detail View by navigating to the first row's "view application" button href
     # rather than clicking so it does not open in a new tab.
