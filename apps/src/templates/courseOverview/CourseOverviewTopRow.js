@@ -3,6 +3,8 @@ import React, {Component} from 'react';
 import AssignToSection from './AssignToSection';
 import Button from '@cdo/apps/templates/Button';
 import {stringForType, resourceShape} from './resourceType';
+import experiments from '@cdo/apps/util/experiments';
+import SectionAssigner from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
 
 const styles = {
   main: {
@@ -47,6 +49,9 @@ export default class CourseOverviewTopRow extends Component {
             color={Button.ButtonColor.blue}
           />
         ))}
+        {experiments.isEnabled(experiments.ASSIGNMENT_UPDATES) && (
+          <SectionAssigner sections={sectionsInfo} />
+        )}
       </div>
     );
   }

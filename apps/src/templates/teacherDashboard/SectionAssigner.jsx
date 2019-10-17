@@ -1,9 +1,11 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import {sectionForDropdownShape} from './shapes';
 import TeacherSectionSelector from './TeacherSectionSelector';
 import AssignedButton from '@cdo/apps/templates/AssignedButton';
 import AssignButton from '@cdo/apps/templates/AssignButton';
+import {selectSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 const styles = {
   main: {
@@ -11,14 +13,17 @@ const styles = {
   }
 };
 
-export default class SectionAssigner extends Component {
+class SectionAssigner extends Component {
   static propTypes = {
     sections: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
-    initialSelectedSection: PropTypes.object
+    selectedSectionId: PropTypes.string,
+    selectSection: PropTypes.func.isRequired
   };
 
   state = {
-    selectedSection: this.props.initialSelectedSection
+    selectedSection: this.props.sections.find(
+      section => section.id === parseInt(this.props.selectedSectionId)
+    )
   };
 
   onChangeSection = sectionId => {
@@ -48,3 +53,16 @@ export default class SectionAssigner extends Component {
     );
   }
 }
+
+export const UnconnectedSectionAssigner = SectionAssigner;
+
+export default connect(
+  state => ({
+    selectedSectionId: state.teacherSections.selectedSectionId
+  }),
+  dispatch => ({
+    selectSection(sectionId) {
+      dispatch(selectSection(sectionId));
+    }
+  })
+)(SectionAssigner);
