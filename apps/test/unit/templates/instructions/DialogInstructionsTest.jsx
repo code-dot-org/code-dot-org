@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/deprecatedChai';
 import {UnconnectedDialogInstructions as DialogInstructions} from '@cdo/apps/templates/instructions/DialogInstructions';
 import Instructions from '@cdo/apps/templates/instructions/Instructions';
 import msg from '@cdo/locale';

@@ -1,5 +1,5 @@
 /** @file Who watches the watchers? */
-import {expect} from '../util/configuredChai';
+import {expect} from '../util/deprecatedChai';
 import {forEveryBooleanPermutation} from '../util/testUtils';
 
 describe('forEveryBooleanPermutation', function() {

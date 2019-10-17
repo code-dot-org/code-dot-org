@@ -21,6 +21,7 @@ def get_weather_data
     WeatherForecastOffice.new("Wakefield", "Virginia", "23888")
   ]
   records = []
+  columns = %w(id city state timestamp temp_min temp_max weather icon wind_speed)
   id = 1
   forecast_offices.each do |office|
     url = "http://api.openweathermap.org/data/2.5/forecast?zip=#{office.zip},us&units=imperial&appid=c719e74bc77b787d940386405e0cbb83"
@@ -43,7 +44,7 @@ def get_weather_data
       id += 1
     end
   end
-  return records
+  return records, columns
 end
 
 def parse_csv(filename)
@@ -59,17 +60,18 @@ def parse_csv(filename)
     end
     records.push(record.to_h.to_json)
   end
-  return records
+  return records, table.headers
 end
 
 def main
   fb = FirebaseHelper.new('shared')
   if ARGV.empty?
-    records = get_weather_data
-    fb.upload_shared_table('openweathermap', records)
+    records, columns = get_weather_data
+    fb.delete_shared_table('openweathermap')
+    fb.upload_shared_table('openweathermap', records, columns)
   else
-    records = parse_csv ARGV[0]
-    fb.upload_shared_table(ARGV[1], records)
+    records, columns = parse_csv ARGV[0]
+    fb.upload_shared_table(ARGV[1], records, columns)
   end
 end
 

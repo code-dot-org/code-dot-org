@@ -1,5 +1,5 @@
 import reducer, * as animationPickerModule from '@cdo/apps/p5lab/AnimationPicker/animationPickerModule';
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/deprecatedChai';
 var Goal = animationPickerModule.Goal;
 
 describe('animationPickerModule', function() {
