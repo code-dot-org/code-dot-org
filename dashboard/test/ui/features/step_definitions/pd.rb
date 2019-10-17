@@ -161,6 +161,25 @@ And(/^I make the teacher named "([^"]*)" a workshop admin$/) do |name|
   user.permission = UserPermission::WORKSHOP_ADMIN
 end
 
+And (/^I create some fake teacher applications$/) do
+  time_start = Time.now
+  application_count = 0
+
+  %w(csd csp).each do |course|
+    Pd::Application::ApplicationBase.statuses.each do |status|
+      application =
+        FactoryGirl.create(
+          Pd::Application::ActiveApplicationModels::TEACHER_APPLICATION_FACTORY,
+          course: course
+        )
+      application.update(status: status)
+      application_count += 1
+    end
+  end
+
+  puts "Created #{application_count} applications in #{Time.now - time_start} seconds."
+end
+
 And(/^I create some fake applications of each type and status$/) do
   require_rails_env
   time_start = Time.now
