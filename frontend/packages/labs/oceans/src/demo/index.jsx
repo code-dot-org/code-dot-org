@@ -1,9 +1,7 @@
 import $ from 'jquery';
 import {Modes} from './constants';
 import {init as initRenderer} from './renderer';
-import {init as initTraining} from './modes/training';
-import {init as initPredicting} from './modes/predicting';
-import {init as initPond} from './modes/pond';
+import {initTraining, initPredicting, initPond} from './models';
 import {setState, getState} from './state';
 import {generateRandomFish} from '../utils/generateOcean';
 import SimpleTrainer from '../utils/SimpleTrainer';
