@@ -1,10 +1,10 @@
-Given(/^I am a workshop administrator with some applications of each type and status$/) do
+Given(/^I am a workshop administrator with some facilitator applications of each type and status$/) do
   require_rails_env
   random_name = "TestWorkshopAdmin" + SecureRandom.hex(10)
   steps %Q{
     And I create a teacher named "#{random_name}"
     And I make the teacher named "#{random_name}" a workshop admin
-    And I create some fake applications of each type and status
+    And I create some fake facilitator applications of each type and status
   }
 end
 
@@ -180,7 +180,7 @@ And (/^I create some fake teacher applications$/) do
   puts "Created #{application_count} applications in #{Time.now - time_start} seconds."
 end
 
-And(/^I create some fake applications of each type and status$/) do
+And(/^I create some fake facilitator applications of each type and status$/) do
   require_rails_env
   time_start = Time.now
 
@@ -197,18 +197,6 @@ And(/^I create some fake applications of each type and status$/) do
     end
   end
 
-  if Pd::Application::ActiveApplicationModels::TEACHER_APPLICATION_CLASS.count < 100
-    %w(csd csp).each do |course|
-      (Pd::Application::ApplicationBase.statuses - ['interview']).each do |status|
-        10.times do
-          teacher = FactoryGirl.create(:teacher, school_info: SchoolInfo.first, email: "teacher_#{SecureRandom.hex}@code.org")
-          application_hash = FactoryGirl.build(Pd::Application::ActiveApplicationModels::TEACHER_APPLICATION_HASH_FACTORY, course.to_sym, school: School.first)
-          application = FactoryGirl.create(Pd::Application::ActiveApplicationModels::TEACHER_APPLICATION_FACTORY, form_data_hash: application_hash, course: course, user: teacher)
-          application.update(status: status)
-        end
-      end
-    end
-  end
   time_end = Time.now
   puts "Creating applications took #{time_end - time_start} seconds"
 end
