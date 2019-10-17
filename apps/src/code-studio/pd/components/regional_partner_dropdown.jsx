@@ -87,6 +87,7 @@ export class RegionalPartnerDropdown extends React.Component {
       <FormGroup style={styles.select}>
         <ControlLabel>Select a regional partner</ControlLabel>
         <Select
+          id="regional-partner-dropdown"
           clearable={false}
           value={this.props.regionalPartnerFilter.value}
           onChange={this.props.onChange}

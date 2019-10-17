@@ -161,11 +161,11 @@ And(/^I make the teacher named "([^"]*)" a workshop admin$/) do |name|
   user.permission = UserPermission::WORKSHOP_ADMIN
 end
 
-Given /^Create a regional partner "([^"]*)" with some teacher applications$/ do |partner_name|
+Given /^A regional partner "([^"]*)" with some teacher applications$/ do |partner_name|
   require_rails_env
 
-  regional_partner = RegionalPartner.find_by_name(partner_name)
-  return unless regional_partner
+  # TODO: guarantee to create a new regional partner every time
+  regional_partner = RegionalPartner.find_or_create_by(name: partner_name)
 
   time_start = Time.now
   application_count = 0
@@ -176,6 +176,8 @@ Given /^Create a regional partner "([^"]*)" with some teacher applications$/ do 
           Pd::Application::ActiveApplicationModels::TEACHER_APPLICATION_FACTORY,
           course: course
         )
+      # application.update(status: status)
+      # TODO: assign regional partner to application once we know how to select a partner from react-select dropdown
       application.update(status: status, regional_partner_id: regional_partner.id)
       application_count += 1
     end
@@ -189,9 +191,10 @@ Given /^Create a regional partner "([^"]*)" with some teacher applications$/ do 
   # Teacher2021Application.where(regional_partner_id: regional_partner.id).destroy_all
 end
 
-And /^Delete all applications from regional partner "([^"]*)"$/ do |partner_name|
-  # TODO: find don't create, return if not exist
+And /^I delete all applications from regional partner "([^"]*)"$/ do |partner_name|
   regional_partner = RegionalPartner.find_by_name(partner_name)
+  return unless regional_partner
+
   count_before = Pd::Application::ActiveApplicationModels::TEACHER_APPLICATION_CLASS.where(regional_partner_id: regional_partner.id).count
   Pd::Application::ActiveApplicationModels::TEACHER_APPLICATION_CLASS.where(regional_partner_id: regional_partner.id).destroy_all
   count_after = Pd::Application::ActiveApplicationModels::TEACHER_APPLICATION_CLASS.where(regional_partner_id: regional_partner.id).count
