@@ -128,6 +128,9 @@ class DataVisualizer extends React.Component {
     );
   }
 }
+
+export const UnconnectedDataVisualizer = Radium(DataVisualizer);
+
 export default connect(state => ({
   tableColumns: state.data.tableColumns || [],
   tableRecords: state.data.tableRecords || {},
