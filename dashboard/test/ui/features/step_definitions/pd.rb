@@ -162,6 +162,7 @@ And(/^I make the teacher named "([^"]*)" a workshop admin$/) do |name|
 end
 
 And (/^I create some fake teacher applications$/) do
+  require_rails_env
   time_start = Time.now
   application_count = 0
 
