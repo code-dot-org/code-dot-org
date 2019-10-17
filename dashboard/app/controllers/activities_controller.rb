@@ -96,7 +96,7 @@ class ActivitiesController < ApplicationController
       params[:lines] = MAX_LINES_OF_CODE if params[:lines] > MAX_LINES_OF_CODE
     end
 
-    @level_source_image = find_or_create_level_source_image(params[:image], @level_source.try(:id))
+    @level_source_image = find_or_create_level_source_image(params[:image], @level_source)
 
     @new_level_completed = false
     if current_user
