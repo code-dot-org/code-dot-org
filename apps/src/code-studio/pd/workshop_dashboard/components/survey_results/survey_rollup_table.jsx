@@ -33,7 +33,8 @@ export class SurveyRollupTable extends React.Component {
       // The order is category name first, then questions in that category
       orderedRows.push({
         key: category,
-        label: _.startCase(category)
+        label: _.startCase(category),
+        isCategory: true
       });
 
       let question_found = false;
@@ -110,7 +111,7 @@ export class SurveyRollupTable extends React.Component {
           <tr>
             <th />
             {orderedColumns.map((column, i) => (
-              <td key={i}>{column.label}</td>
+              <th key={i}>{column.label}</th>
             ))}
           </tr>
         </thead>
@@ -125,8 +126,10 @@ export class SurveyRollupTable extends React.Component {
 
           {/*Next rows are average scores of categories and questions*/}
           {orderedRows.map((row, i) => (
-            <tr key={i}>
-              <td>{row.label}</td>
+            <tr key={i} style={row.isCategory ? {borderTop: 'solid'} : {}}>
+              <td style={row.isCategory ? {} : {paddingLeft: '30px'}}>
+                {row.label}
+              </td>
               {orderedColumns.map((column, j) => (
                 <td key={j}>
                   {this.props.rollups[column.key].averages[row.key]}
