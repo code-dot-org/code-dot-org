@@ -9,6 +9,7 @@ import LibraryClientApi from './LibraryClientApi';
 import i18n from '@cdo/locale';
 import PadAndCenter from '@cdo/apps/templates/teacherDashboard/PadAndCenter';
 import {Heading1, Heading2} from '@cdo/apps/lib/ui/Headings';
+import $ from 'jquery';
 
 const styles = {
   alert: {
@@ -70,7 +71,7 @@ class LibraryCreationDialog extends React.Component {
     this.props.onClose();
   };
 
-  publish = () => {
+  getSelectedFunctions = () => {
     let formElements = document.getElementById('selectFunction').elements;
     let selectedFunctionList = [];
     [...formElements].forEach(element => {
@@ -78,9 +79,14 @@ class LibraryCreationDialog extends React.Component {
         selectedFunctionList.push(this.state.sourceFunctionList[element.value]);
       }
     });
+    return selectedFunctionList;
+  };
+
+  publish = () => {
+    let functionList = this.getSelectedFunctions();
     let libraryJson = libraryParser.createLibraryJson(
       this.state.librarySource,
-      selectedFunctionList,
+      functionList,
       this.state.libraryName
     );
     // TODO: Display final version of error and success messages to the user.
@@ -108,7 +114,7 @@ class LibraryCreationDialog extends React.Component {
 
   displayFunctions = () => {
     if (!this.state.loadingFinished) {
-      return <div>Loading...</div>;
+      return <div id="loading">Loading...</div>;
     }
     let keyIndex = -1;
     return (
@@ -180,6 +186,8 @@ class LibraryCreationDialog extends React.Component {
     );
   }
 }
+
+export const UnconnectedLibraryCreationDialog = LibraryCreationDialog;
 
 export default connect(
   state => ({
