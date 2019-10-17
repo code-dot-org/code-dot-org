@@ -196,6 +196,12 @@ Resources:
           Value: !Join ['-', [!Ref 'AWS::StackName', Bastion Host]]
       ImageId: !Ref BastionAmi
       IamInstanceProfile: !Ref RootInstanceProfile
+      BlockDeviceMappings:
+        -
+          DeviceName: /dev/xvda
+          Ebs:
+            VolumeSize: 50
+            VolumeType: gp2
   ## Create CloudWatch Dashboard
   LabDashboard:
     Type: AWS::CloudWatch::Dashboard
