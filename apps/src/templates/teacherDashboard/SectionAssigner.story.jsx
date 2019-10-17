@@ -1,5 +1,5 @@
 import React from 'react';
-import SectionAssigner from './SectionAssigner';
+import {UnconnectedSectionAssigner as SectionAssigner} from './SectionAssigner';
 import {fakeTeacherSectionsForDropdown} from './sectionAssignmentTestHelper';
 
 export default storybook => {
