@@ -12,13 +12,8 @@ export default class Results extends React.Component {
     thisWorkshop: PropTypes.object.isRequired,
     sessions: PropTypes.arrayOf(PropTypes.string).isRequired,
     courseName: PropTypes.string,
-    facilitators: PropTypes.object,
     workshopRollups: PropTypes.object,
     facilitatorRollups: PropTypes.object
-  };
-
-  state = {
-    facilitatorIds: Object.keys(this.props.facilitators)
   };
 
   /**
