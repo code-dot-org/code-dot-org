@@ -22,6 +22,13 @@
         margin: 0 auto;
         user-select: none;
       }
+      #background-canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+      }
       #activity-canvas {
         width: 100%;
       }
@@ -33,20 +40,6 @@
         height: 100%;
       }
       button {
-        background-color: #aaf;
-        color: white;
-        font-size: 40px;
-        border-radius: 10px;
-        padding: 20px;
-        border: none;
-      }
-      #test-button {
-        position: absolute;
-        right: 20px;
-        bottom: 20px;
-      }
-
-      button {
         background-color: #403f3f; /* #4e4e82; */
         color: white;
         font-size: 120%;
@@ -56,27 +49,22 @@
         width: 17%;
         height: 8%;
       }
-
       button:focus {
         outline: white auto 5px;
       }
-
       .ui-button {
         position: absolute;
       }
-
       @media screen and (max-width: 800px) {
         button {
           font-size: 90%;
         }
       }
-
       @media screen and (max-width: 600px) {
         button {
           font-size: 60%;
         }
       }
-
       #like-button {
         right: 30%;
         bottom: 3%;
@@ -85,7 +73,8 @@
         right: 50%;
         bottom: 3%;
       }
-      #next-button {
+      #next-button,
+      #start-over-button {
         right: 3%;
         bottom: 3%;
       }
@@ -97,13 +86,13 @@
         width: 100%;
         text-align: center;
       }
-
     </style>
   </head>
   <body>
     <div id="header"></div>
     <div id="ml-activities"></div>
     <div id="container">
+      <canvas id="background-canvas"></canvas>
       <canvas id="activity-canvas"></canvas>
       <div id="ui-container" />
     </div>
