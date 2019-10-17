@@ -71,24 +71,25 @@ class LibraryCreationDialog extends React.Component {
     this.props.onClose();
   };
 
-  getSelectedFunctions = () => {
+  publish = () => {
     let formElements = document.getElementById('selectFunction').elements;
     let selectedFunctionList = [];
+    let libraryDescription = '';
     [...formElements].forEach(element => {
       if (element.type === 'checkbox' && element.checked) {
         selectedFunctionList.push(this.state.sourceFunctionList[element.value]);
       }
+      if (element.type === 'textarea') {
+        libraryDescription = element.value;
+      }
     });
-    return selectedFunctionList;
-  };
-
-  publish = () => {
-    let functionList = this.getSelectedFunctions();
     let libraryJson = libraryParser.createLibraryJson(
       this.state.librarySource,
-      functionList,
-      this.state.libraryName
+      selectedFunctionList,
+      this.state.libraryName,
+      libraryDescription
     );
+
     // TODO: Display final version of error and success messages to the user.
     this.state.clientApi.publish(
       libraryJson,
