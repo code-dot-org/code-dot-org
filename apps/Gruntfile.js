@@ -304,6 +304,7 @@ describe('entry tests', () => {
           cwd: 'build/package/js',
           // The applab and gamelab exporters need unhashed copies of these files.
           src: [
+            'webpack-runtimewp*.js',
             'webpack-runtimewp*.min.js',
             'applab-apiwp*.min.js',
             'gamelab-apiwp*.min.js'
