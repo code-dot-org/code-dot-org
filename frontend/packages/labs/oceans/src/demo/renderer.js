@@ -2,18 +2,27 @@ import 'babel-polyfill';
 import _ from 'lodash';
 import constants, {Modes, ClassType, strForClassType} from './constants';
 import {FishBodyPart} from '../utils/fishData';
-import {setState} from './state';
+import {setState, getState} from './state';
 
 const FISH_CANVAS_WIDTH = 300;
 const FISH_CANVAS_HEIGHT = 200;
 
-export function render() {}
+export const renderBackground = imgPath => {
+  const canvas = getState().backgroundCanvas;
+  if (!canvas) {
+    return;
+  }
+
+  loadImage(imgPath).then(img => {
+    canvas.getContext('2d').drawImage(img, 0, 0, canvas.width, canvas.height);
+  });
+};
+
+export const render = () => {};
 
 // Initialize the renderer once.
 // This will generate canvases with the fish collection.
 export function init(canvas) {
-  canvas.width = constants.canvasWidth;
-  canvas.height = constants.canvasHeight;
   clearBackground();
   const state = setState({
     canvas,
@@ -35,29 +44,16 @@ export function init(canvas) {
   }
 }
 
-function loadBackgroundImage() {
-  let backgroundImageName;
-  // const currentMode = getState().currentMode;
-  // if (currentMode === Modes.Training) {
-  //   backgroundImageName = 'classroom';
-  // } else if (currentMode === Modes.Predicting) {
-  //   backgroundImageName = 'pipes';
-  // } else if (currentMode === Modes.Pond) {
-  //   backgroundImageName = 'underwater';
-  // }
-
-  backgroundImageName = 'underwater';
-
+const loadImage = imgPath => {
   return new Promise((resolve, reject) => {
     const img = new Image();
-    const srcPath = `images/${backgroundImageName}-background.png`;
     img.addEventListener('load', e => resolve(img));
     img.addEventListener('error', () => {
-      reject(new Error(`failed to load background image at #{srcPath}`));
+      reject(new Error(`failed to load background image at #{imgPath}`));
     });
-    img.src = srcPath;
+    img.src = imgPath;
   });
-}
+};
 
 function renderBackgroundImage(img) {
   const canvas = backgroundCanvas();

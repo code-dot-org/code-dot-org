@@ -1,32 +1,20 @@
 import $ from 'jquery';
-import {Modes} from './constants';
-import {init as initRenderer} from './renderer';
+import constants, {Modes} from './constants';
 import {initTraining, initPredicting, initPond} from './models';
 import {setState, getState} from './state';
-import {generateRandomFish} from '../utils/generateOcean';
-import SimpleTrainer from '../utils/SimpleTrainer';
 
 $(document).ready(() => {
-  // Generate some fish
-  let fishes = [];
-  for (let i = 0; i < 100; i++) {
-    fishes.push(getRandomFish(i));
-  }
-
-  // Set up state
-  const trainer = new SimpleTrainer();
-  trainer.initializeClassifiersWithoutMobilenet();
+  // Set up initial state
   const canvas = document.getElementById('activity-canvas');
-  const initialState = {
-    currentMode: Modes.Training,
-    fishData: fishes,
-    trainer,
-    canvas
-  };
-  setState(initialState);
+  const backgroundCanvas = document.getElementById('background-canvas');
+  canvas.width = backgroundCanvas.width = constants.canvasWidth;
+  canvas.height = backgroundCanvas.height = constants.canvasHeight;
 
-  // Initialize renderer
-  initRenderer(canvas);
+  setState({
+    currentMode: Modes.Training,
+    canvas,
+    backgroundCanvas
+  });
 
   // Initialize current model
   initModel();
@@ -48,11 +36,4 @@ function initModel() {
     default:
       console.error('No mode specified');
   }
-}
-
-function getRandomFish(id) {
-  return {
-    id: id,
-    fish: generateRandomFish()
-  };
 }

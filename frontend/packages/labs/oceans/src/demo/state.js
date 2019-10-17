@@ -1,6 +1,7 @@
 const initialState = {
   currentMode: null,
   fishData: [],
+  backgroundCanvas: null,
   canvas: null,
   ctx: null,
   trainer: null,
