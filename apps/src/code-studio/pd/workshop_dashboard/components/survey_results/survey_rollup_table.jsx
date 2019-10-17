@@ -21,7 +21,7 @@ export class SurveyRollupTable extends React.Component {
   constructor(props) {
     super(props);
 
-    this.questionDenominator = {
+    this.categoryDenominator = {
       facilitator_effectiveness: 7,
       teacher_engagement: props.courseName === COURSE_CSF ? 5 : 7,
       overall_success: 7
@@ -107,7 +107,7 @@ export class SurveyRollupTable extends React.Component {
 
   renderAverage(value, category) {
     return value
-      ? `${value.toFixed(2)} / ${this.questionDenominator[category]}`
+      ? `${value.toFixed(2)} / ${this.categoryDenominator[category]}`
       : '-';
   }
 
