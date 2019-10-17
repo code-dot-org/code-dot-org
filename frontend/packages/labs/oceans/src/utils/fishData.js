@@ -26,7 +26,7 @@ const fish = {
       mouthAnchor: [20, 40],
       pectoralFinAnchor: [50, 77],
       dorsalFinAnchor: [23, -15],
-      tailAnchor: [107, 20],
+      tailAnchor: [107, 41],
       knnData: [0.6],
       type: FishBodyPart.BODY
     },
@@ -37,7 +37,7 @@ const fish = {
       mouthAnchor: [15, 45],
       pectoralFinAnchor: [40, 77],
       dorsalFinAnchor: [53, -25],
-      tailAnchor: [107, 40],
+      tailAnchor: [107, 67],
       knnData: [0],
       type: FishBodyPart.BODY
     },
@@ -61,7 +61,7 @@ const fish = {
       mouthAnchor: [8, 45],
       pectoralFinAnchor: [30, 85],
       dorsalFinAnchor: [20, -18],
-      tailAnchor: [97, 20],
+      tailAnchor: [97, 50],
       knnData: [1.0],
       type: FishBodyPart.BODY
     },
@@ -72,7 +72,7 @@ const fish = {
       mouthAnchor: [15, 40],
       pectoralFinAnchor: [33, 80],
       dorsalFinAnchor: [33, -19],
-      tailAnchor: [92, 20],
+      tailAnchor: [92, 47],
       knnData: [0.8],
       type: FishBodyPart.BODY
     },
@@ -83,7 +83,7 @@ const fish = {
       mouthAnchor: [25, 40],
       pectoralFinAnchor: [57, 78],
       dorsalFinAnchor: [33, -23],
-      tailAnchor: [137, -15],
+      tailAnchor: [139, 19],
       knnData: [0.4],
       type: FishBodyPart.BODY
     }
