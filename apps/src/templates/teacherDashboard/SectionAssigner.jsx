@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import i18n from '@cdo/locale';
 import {sectionForDropdownShape} from './shapes';
 import TeacherSectionSelector from './TeacherSectionSelector';
 import AssignedButton from '@cdo/apps/templates/AssignedButton';
@@ -8,8 +9,15 @@ import AssignButton from '@cdo/apps/templates/AssignButton';
 import {selectSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 const styles = {
-  main: {
+  content: {
     display: 'flex'
+  },
+  label: {
+    width: '100%',
+    fontSize: 16,
+    fontFamily: '"Gotham 5r", sans-serif',
+    paddingTop: 10,
+    paddingBottom: 10
   }
 };
 
@@ -41,14 +49,17 @@ class SectionAssigner extends Component {
     const {selectedSection} = this.state;
 
     return (
-      <div style={styles.main}>
-        <TeacherSectionSelector
-          sections={sections}
-          onChangeSection={this.onChangeSection}
-          selectedSection={selectedSection}
-        />
-        {selectedSection.isAssigned && <AssignedButton />}
-        {!selectedSection.isAssigned && <AssignButton />}
+      <div>
+        <div style={styles.label}>{i18n.currentSection()}</div>
+        <div style={styles.content}>
+          <TeacherSectionSelector
+            sections={sections}
+            onChangeSection={this.onChangeSection}
+            selectedSection={selectedSection}
+          />
+          {selectedSection.isAssigned && <AssignedButton />}
+          {!selectedSection.isAssigned && <AssignButton />}
+        </div>
       </div>
     );
   }
