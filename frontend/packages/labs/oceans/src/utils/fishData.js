@@ -19,7 +19,7 @@ export const FishBodyPart = Object.freeze({
 const fish = {
   // BODY KNN DATA: [height:width ratio]
   bodies: {
-    body1: {
+/*    body1: {
       src: 'images/fish/body/Body_BrushTip.png',
       anchor: [90, 65],
       eyeAnchor: [72, 17],
@@ -29,30 +29,30 @@ const fish = {
       tailAnchor: [-25, 20],
       knnData: [0.37],
       type: FishBodyPart.BODY
-    },
-    body2: {
+    },*/
+    /*body2: {
       src: 'images/fish/body/Body_EyeShape.png',
       anchor: [80, 30],
-      eyeAnchor: [90, 40],
-      mouthAnchor: [125, 55],
-      pectoralFinAnchor: [60, 89],
+      eyeAnchor: [15, 27],
+      mouthAnchor: [8, 55],
+      pectoralFinAnchor: [40, 89],
       dorsalFinAnchor: [35, 15],
-      tailAnchor: [-25, 45],
+      tailAnchor: [120, 45],
       knnData: [0.0],
       type: FishBodyPart.BODY
-    },
+    },*/
     body3: {
       src: 'images/fish/body/Body_Round.png',
       anchor: [100, 50],
-      eyeAnchor: [60, 25],
-      mouthAnchor: [95, 40],
-      pectoralFinAnchor: [30, 75],
-      dorsalFinAnchor: [17, -15],
-      tailAnchor: [-25, 30],
+      eyeAnchor: [10, 15],
+      mouthAnchor: [8, 45],
+      pectoralFinAnchor: [30, 85],
+      dorsalFinAnchor: [23, -15],
+      tailAnchor: [97, 20],
       knnData: [1.0],
       type: FishBodyPart.BODY
     },
-    body4: {
+    /*body4: {
       src: 'images/fish/body/Body_RoundedSquare.png',
       anchor: [100, 50],
       eyeAnchor: [65, 26],
@@ -62,7 +62,7 @@ const fish = {
       tailAnchor: [-30, 50],
       knnData: [0.82],
       type: FishBodyPart.BODY
-    }
+    }*/
   },
   // EYE KNN DATA: [eye area, pupil:eye area ratio]
   eyes: {

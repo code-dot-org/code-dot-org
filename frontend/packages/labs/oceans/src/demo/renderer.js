@@ -43,8 +43,10 @@ export const drawTrainingFish = state => {
   ctx.fillRect(frameXPos, frameYPos, frameSize, frameSize);
 
   const fish = state.fishData[state.trainingIndex];
+  const fishXPos = frameXPos + (frameSize - constants.fishCanvasWidth) / 2;
+  const fishYPos = frameYPos + (frameSize - constants.fishCanvasHeight) / 2;
   loadFishImages(fish).then(results => {
-    drawFish(fish, results, ctx, canvas.width / 2, canvas.height / 2);
+    drawSingleFish(fish, fishXPos, fishYPos, ctx);
   });
 };
 
@@ -52,14 +54,14 @@ export const drawUpcomingFish = state => {
   const fishLeft = state.fishData.length - state.trainingIndex - 1;
   const numUpcomingFish = fishLeft >= 3 ? 3 : fishLeft;
   const canvas = state.canvas;
-  let x = canvas.width / 2 - 300;
+  const ctx = canvas.getContext('2d');
+  let x = canvas.width / 2 - 300 - constants.fishCanvasWidth / 2;
+  const y = canvas.height / 2 - constants.fishCanvasHeight / 2;
 
   for (let i = 1; i <= numUpcomingFish; i++) {
     const fish = state.fishData[state.trainingIndex + i];
-    loadFishImages(fish).then(results => {
-      drawFish(fish, results, canvas.getContext('2d'), x, canvas.height / 2);
-      x -= 200;
-    });
+    drawSingleFish(fish, x, y, ctx);
+    x -= 200;
   }
 };
 
@@ -71,15 +73,12 @@ export const drawUiElements = (container, children) => {
 export const drawPredictingFish = state => {
   const fish = state.fishData[state.trainingIndex];
   const canvas = state.canvas;
-  loadFishImages(fish).then(results => {
-    drawFish(
-      fish,
-      results,
-      canvas.getContext('2d'),
-      canvas.width / 2,
-      canvas.height / 2
-    );
-  });
+  drawSingleFish(
+    fish,
+    canvas.width / 2 - constants.fishCanvasWidth / 2,
+    canvas.height / 2 - constants.fishCanvasHeight / 2,
+    canvas.getContext('2d')
+  );
 };
 
 export const drawPondFish = state => {
@@ -138,7 +137,30 @@ const loadFishImage = fishPart => {
   });
 };
 
+const drawSingleFish = (fish, fishXPos, fishYPos, ctx) => {
+  if (!fish.canvas) {
+    fish.canvas = document.createElement('canvas');
+    fish.canvas.width = constants.fishCanvasWidth;
+    fish.canvas.height = constants.fishCanvasHeight;
+    loadFishImages(fish).then(results => {
+      const fishCtx = fish.canvas.getContext('2d');
+      drawFish(
+        fish,
+        results,
+        fishCtx,
+        constants.fishCanvasWidth / 2,
+        constants.fishCanvasHeight / 2
+      );
+      ctx.drawImage(fish.canvas, fishXPos, fishYPos);
+    });
+  } else {
+    ctx.drawImage(fish.canvas, fishXPos, fishYPos);
+  }
+};
+
 const drawFish = (fish, results, ctx, x = 0, y = 0) => {
+  ctx.translate(constants.fishCanvasWidth, 0);
+  ctx.scale(-1, 1);
   const body = results.find(
     result => result.fishPart.type === FishBodyPart.BODY
   ).fishPart;
