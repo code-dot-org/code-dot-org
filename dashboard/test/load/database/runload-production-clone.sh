@@ -37,8 +37,7 @@ mysql -h$1 -udb -p$PASSWORD -e "drop schema if exists sysbench;create schema sys
 # Launch multiple sysbench clients
 for i in $(seq 1 $num_sysbench_clients)
 do
-	# Execute write-only test
-	(/home/ec2-user/sysbench/src/sysbench ./$2 --mysql-host=$1 --mysql-port=3306 --mysql-db=sysbench --mysql-user=db --mysql-password=$PASSWORD --db-driver=mysql --threads=$threads --time=86400 --mysql-ignore-errors=all run)&
+	(/home/ec2-user/sysbench/src/sysbench ./$2 --mysql-host=$1 --mysql-port=3306 --mysql-db=sysbench --mysql-user=db --mysql-password=$PASSWORD --db-driver=mysql --threads=$threads --time=3600 --mysql-ignore-errors=all run)&
 
 	# Sleep one second
 	sleep 1
