@@ -13,6 +13,12 @@ ph:
   hoc2019_header: 'Learn computer science. Change the world.'
   hoc2019_header_line1_mobile: 'Learn computer science.'
   hoc2019_header_line2_mobile: 'Change the world.'
+  social_hoc2019_every_sudent: 'Every student has the potential to change the world. Help them get started. #CSforGood'
+  social_hoc2019_learn_computer_science: 'Learn computer science. Change the world. #CSforGood #HourOfCode'
+  social_hoc_is_coming: 'The Hour of Code is coming!'
+  social_hoc2019_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn computer science. Change the world.'
+  social_hoc2019_coming_dates: 'The Hour of Code is coming December 9-15, 2019. Computer science is foundational for every student to learn.'
+  social_hoc2019_dance: 'Featuring Katy Perry, Jonas Brothers, Lil Nas X, Panic at the Disco, and many more!'
   codeorg_homepage_hoc2018_curriculum: 'Go further with <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org courses</a>'
   codeorg_homepage_hoc2018_dance_heading: 'Create your own <span class="highlight-word">Dance&nbsp;Party</span>'
   codeorg_homepage_hoc2018_header_line1: 'The Hour of Code is coming...'
@@ -569,7 +575,7 @@ ph:
   tutorial_buildpong_name: "Bumuo ng Pong kasama si Al"
   tutorial_tynkerdrones_name: "Mag-program ng Drones at Robots"
   tutorial_carla_name: "Programming kasama si Carla"
-  tutorial_globaloria_name: "Globaloria MakeQuest"
+  tutorial_zulama_name: "Zulama MakeQuest Video Game Activity"
   tutorial_capost_name: "Bumuo ng isang Digital Postcard sa HTML at CSS"
   tutorial_marco_name: "Takbo Marco!"
   tutorial_codestersflappybike_name: "Flappy na Bike"
@@ -1147,7 +1153,7 @@ ph:
   tutorial_buildpong_shortdescription: "Bumuo ng klasik na arcade at bigyan ang computer ng artipisyal na intelihente para pakipaglaro laban sa iyo."
   tutorial_tynkerdrones_shortdescription: "Mag-program ng isang controller para sa iyong robot o drone."
   tutorial_carla_shortdescription: "Matuto mag-code sa pamamagitan ng pag-program ng isang nagsasalitang tunay na robot na ang pangalan ay Carla!"
-  tutorial_globaloria_shortdescription: "Gawin ang MakeQuest! Baguhin ng code para matalo ang aming laro, tapos bumuo ng iyo!"
+  tutorial_zulama_shortdescription: "Go on a MakeQuest! Modify code to beat our game, then build your own!"
   tutorial_capost_shortdescription: "Gamitin ang code para bumuo ng isang magandang tignan na pista o pang-kaarawang kard."
   tutorial_marco_shortdescription: "Isang nakaka-engganyong laro para gabayan si Marco sa pamamagitan ng isang biswal na programming na wika."
   tutorial_codestersflappybike_shortdescription: "Lumikha ng isang laro na may mga kontrol ang manlalaro. Panatilihing nasa ere ang bike habang iniiwasan ang mga balakid!"
@@ -1725,7 +1731,7 @@ ph:
   tutorial_buildpong_longdescription: "Ang Pong ay isa sa mga naunang arkadang video na mga laro at isa sa pinaka-unang laro na arkadang video. Ito ay isang table tennis na laro na nagtatampok ng simpleng dalawang-dimensyon na grapika. Ang layunin ng laro ay para sa mga MANLALARO upang makapuntos sa COMPUTER habang dini-depensa ang GOAL. Sa proyektong ito, ang COMPUTER na naka-program na may pangunahing artipisyal na katalinuhan upang makatugon sa mga MANLALARO."
   tutorial_tynkerdrones_longdescription: "Matutong mag-program sa mga nakakonektang aparato sa pamamagitan ng paglutas sa \"Crash Course\" na mga palaisipan, kung saan ikaw ay naka-navigate sa isang virtual drones at robot na makalagpas sa mga hadlang. Pagkatapos ay handa ka nang gumawa ng mga program para makontrol ang tunay na drones at mga robot. Nangangailangan ito ng iPad o Android tablet at isang sinusuportahang laruan."
   tutorial_carla_longdescription: "Ang \"Programming with Carla\" ay isang serye ng mga maikling mga aktibidad na gabay sa mga mag-aaral sa pamamagitan ng pagbuo ng mga simpleng chatbot, habang ang pinag-aaralan ang tungkol sa pangunahing mga konsepto tulad ng mga variable at mga kundisyonal. Ang mga gawain na ito ay maingat na dinesenyo upang matugunan ang mga karaniwang mga maling paniniwala sa mga bagong programmer tungkol sa mga paksa sa pamamagitan ng pag-alok ng maraming oportunidad para makapagsanay, pati na rin ang target na mga pahiwatig at feedback.\n"
-  tutorial_globaloria_longdescription: "Sa MakeQuest matutunan mong mag-edit ng JavaScript code sa pamamagitan ng isang mapaglarong aksyon na laro, at kabisahin ang mga konsepto ng computer science  katulad ng mga variable at mga function. Lumikha ng sariling laro sa pamamagitan pagsasama-sama at pagpapalawak ng aming panlarong code sa Sandbox. I-publish at ibahagi ang iyong laro sa mga kaibigan! Mga guro: mga plano ng aralin at extension ng tiyak na asignatura na mga aktibidad ay kasama."
+  tutorial_zulama_longdescription: "In this activity you will learn to edit JavaScript code through a playful action game and master computer science concepts like variables and functions. Create your own game in the Sandbox by remixing and expanding on existing game code. Then publish and share your game with friends and family. A scripted lesson guide is included for teachers."
   tutorial_capost_longdescription: "Simulang matututunan ang HTML at CSS ay madali at masaya sa pamamagitan ng isang digital postcard. Alamin ang tungkol sa pagdadagdag ng mga heading, mga talata, mga larawan at mga link para makalikha ng isang holiday kard o pagdiriwang ng kaarawan para maibahagi sa iyong mga kaibigan at pamilya."
   tutorial_marco_longdescription: "Ang mga mag-aaral ay naglalaro pakikipagsapalarang laro na base sa orihinal na kwento. Ginabayan nila si Marco - ang pangunahing karakter - sa bawat antas sa pamamagitan ng pagbigay ng mga sunod-sunod na tagubilin sa anyo ng visual programming na wika n ginamit ng Hour of Code. Sila ay ipinakilala pagkakasunod-sunod na mga command, iteration at mga kundisyon na hindi mapapansin ang mga ito."
   tutorial_codestersflappybike_longdescription: "Sa aktibidad na ito, ang mga estudyante ay ginagamit ang aming drag-to-text toolkit para simulan ang coding sa Python kaagad! Ang mga estudyante ay ginagabayan sa pamamagitan ng mga serye ng mga aktibidad na nagtuturo sa kanila upang bumuo ng isang kompletong laro! Pagkatapos nila, hinahamon silang gamitin kung ano ang natutunan nila tungkol sa syntax, dot notation, mga kaganapan, mga variable, mga parameter at mga mekaniks ng laro para makalikha ng bagong laro. "
@@ -2303,7 +2309,7 @@ ph:
   tutorial_buildpong_language: "English, Portuguese, Russian, and Spanish"
   tutorial_tynkerdrones_language: "Ingles lamang"
   tutorial_carla_language: "Ingles lamang"
-  tutorial_globaloria_language: "English, Spanish"
+  tutorial_zulama_language: "English, Spanish"
   tutorial_capost_language: "English, Dutch, Spanish, Russian"
   tutorial_marco_language: "Multiple"
   tutorial_codestersflappybike_language: "English, Spanish"
@@ -2881,7 +2887,7 @@ ph:
   tutorial_buildpong_string_detail_grades: "Grades 2+"
   tutorial_tynkerdrones_string_detail_grades: "Grades 2+"
   tutorial_carla_string_detail_grades: "Grades 6+"
-  tutorial_globaloria_string_detail_grades: "Grades 6+"
+  tutorial_zulama_string_detail_grades: "Grades 6+"
   tutorial_capost_string_detail_grades: "Grades 6+"
   tutorial_marco_string_detail_grades: "Grades 2-8"
   tutorial_codestersflappybike_string_detail_grades: "Grades 6+"
@@ -3459,7 +3465,7 @@ ph:
   tutorial_buildpong_string_platforms: "All modern browsers, Android tablet, Android phone, iPad"
   tutorial_tynkerdrones_string_platforms: "Android tablet, iPad"
   tutorial_carla_string_platforms: "All modern browsers"
-  tutorial_globaloria_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari"
+  tutorial_zulama_string_platforms: "Internet Explorer 11, Chrome, Firefox, Safari"
   tutorial_capost_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari"
   tutorial_marco_string_platforms: "All modern browsers, Android tablet, iPad"
   tutorial_codestersflappybike_string_platforms: "All modern browsers"
@@ -4037,7 +4043,7 @@ ph:
   tutorial_buildpong_string_detail_platforms: ""
   tutorial_tynkerdrones_string_detail_platforms: "Parrot drone, Sphero robot, Ollie robot"
   tutorial_carla_string_detail_platforms: ""
-  tutorial_globaloria_string_detail_platforms: ""
+  tutorial_zulama_string_detail_platforms: ""
   tutorial_capost_string_detail_platforms: ""
   tutorial_marco_string_detail_platforms: ""
   tutorial_codestersflappybike_string_detail_platforms: ""
@@ -4615,7 +4621,7 @@ ph:
   tutorial_buildpong_string_detail_programming_languages: "Blocks, Ready, Unity"
   tutorial_tynkerdrones_string_detail_programming_languages: "Blocks"
   tutorial_carla_string_detail_programming_languages: "Coffeescript"
-  tutorial_globaloria_string_detail_programming_languages: "JavaScript"
+  tutorial_zulama_string_detail_programming_languages: "JavaScript"
   tutorial_capost_string_detail_programming_languages: "HTML, CSS"
   tutorial_marco_string_detail_programming_languages: "Blocks"
   tutorial_codestersflappybike_string_detail_programming_languages: "Python"
