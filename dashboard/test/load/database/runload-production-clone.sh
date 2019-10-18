@@ -16,7 +16,7 @@ cd sysbench
 
 # Copy any code-dot-org load test scripts into the sysbench lua directory.
 # TODO:(suresh) Pull the latest from origin in the code-dot-org project
-cp `find /home/ec2-user/code-dot-org/dashboard/test/load/database/sysbench/src/lua -name "cdo*.lua"` /home/ec2-user/sysbench/src/lua
+cp /home/ec2-user/code-dot-org/dashboard/test/load/database/lua/* /home/ec2-user/sysbench/src/lua
 
 cd src
 cd lua
