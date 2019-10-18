@@ -20,7 +20,7 @@ function thread_init()
             AND id = $userId
       ORDER BY id ASC limit 1]],
     [[SELECT *
-      FROM dashboard_production.user_storage_ids
+      FROM pegasus.user_storage_ids
       WHERE user_id = $userId limit 1]]
   }
 end
