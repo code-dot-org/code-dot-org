@@ -52,30 +52,17 @@ describe('LibraryCreationDialog', () => {
     expect(wrapper.find(SUBMIT_SELECTOR)).to.be.disabled();
   });
 
-  it('displays loading while in the loading state', () => {
-    wrapper.setState({
-      loadingFinished: false
-    });
-    wrapper.update();
-    expect(wrapper.find(SUBMIT_SELECTOR)).not.to.exist;
-    expect(wrapper.find('#loading')).to.exist;
-  });
-
   it('publish is enabled when something is checked', () => {
     wrapper.setState({
       libraryName: 'testLibrary',
       librarySource: LIBRARY_SOURCE,
       loadingFinished: true,
-      sourceFunctionList: libraryParser.getFunctions(LIBRARY_SOURCE)
+      sourceFunctionList: libraryParser.getFunctions(LIBRARY_SOURCE),
+      canPublish: true
     });
-
     wrapper.update();
-    wrapper
-      .find(CHECKBOX_SELECTOR)
-      .first()
-      .simulate('click');
 
-    expect(wrapper.find(SUBMIT_SELECTOR)).to.be.disabled();
+    expect(wrapper.find(SUBMIT_SELECTOR)).not.to.be.disabled();
   });
 
   it('checkbox is diabled for items without comments', () => {
@@ -89,5 +76,14 @@ describe('LibraryCreationDialog', () => {
     wrapper.update();
 
     expect(wrapper.find(CHECKBOX_SELECTOR).last()).to.be.disabled();
+  });
+
+  it('displays loading while in the loading state', () => {
+    wrapper.setState({
+      loadingFinished: false
+    });
+    wrapper.update();
+    expect(wrapper.find(SUBMIT_SELECTOR)).not.to.exist;
+    expect(wrapper.find('#loading')).to.exist;
   });
 });
