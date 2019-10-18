@@ -304,6 +304,7 @@ describe('entry tests', () => {
           cwd: 'build/package/js',
           // The applab and gamelab exporters need unhashed copies of these files.
           src: [
+            'webpack-runtimewp*.js',
             'webpack-runtimewp*.min.js',
             'applab-apiwp*.min.js',
             'gamelab-apiwp*.min.js'
@@ -922,15 +923,16 @@ describe('entry tests', () => {
               to: '[path]/[name]wp[contenthash].[ext]',
               toType: 'template'
             },
-            // Always include unminified, unhashed p5.js as this is needed by
-            // unit tests. The order of these rules is important to ensure that
-            // the minified, hashed copy of p5.js appears in the manifest when
-            // minifying.
+            // Always include unminified, unhashed p5.js and p5.play.js as these
+            // are needed by unit tests and gamelab exporter. The order of these
+            // rules is important to ensure that the minified, hashed copy of
+            // these files appear in the manifest when minifying.
             {
               context: 'build/minifiable-lib/',
-              from: '**/p5.js',
+              from: 'p5play/p5*.js',
               to: '[path]/[name].[ext]',
-              toType: 'template'
+              toType: 'template',
+              ignore: '*.min.js'
             },
             // Libraries in this directory are assumed to have .js and .min.js
             // copies of each source file. In development mode, copy only foo.js.
