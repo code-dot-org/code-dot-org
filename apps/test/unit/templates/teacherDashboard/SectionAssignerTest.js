@@ -11,6 +11,7 @@ describe('SectionAssigner', () => {
         initialSelectedSectionId={fakeTeacherSectionsForDropdown[0].id}
         sections={fakeTeacherSectionsForDropdown}
         selectSection={() => {}}
+        showAssignButton={false}
       />
     );
 
@@ -23,10 +24,24 @@ describe('SectionAssigner', () => {
         initialSelectedSectionId={fakeTeacherSectionsForDropdown[0].id}
         sections={fakeTeacherSectionsForDropdown}
         selectSection={() => {}}
+        showAssignButton={true}
       />
     );
 
     expect(wrapper.find('AssignButton').exists()).to.be.true;
+  });
+
+  it('does not render an AssignButton if showAssignButton is false', () => {
+    const wrapper = mount(
+      <SectionAssigner
+        initialSelectedSectionId={fakeTeacherSectionsForDropdown[0].id}
+        sections={fakeTeacherSectionsForDropdown}
+        selectSection={() => {}}
+        showAssignButton={false}
+      />
+    );
+
+    expect(wrapper.find('AssignButton').exists()).to.be.false;
   });
 
   // isAssigned == true for the section at index 1.
@@ -36,6 +51,7 @@ describe('SectionAssigner', () => {
         initialSelectedSectionId={fakeTeacherSectionsForDropdown[1].id}
         sections={fakeTeacherSectionsForDropdown}
         selectSection={() => {}}
+        showAssignButton={false}
       />
     );
 
