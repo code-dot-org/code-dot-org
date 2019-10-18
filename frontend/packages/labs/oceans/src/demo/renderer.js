@@ -5,8 +5,7 @@ import {FishBodyPart} from '../utils/fishData';
 import {getState} from './state';
 import CanvasCache from './canvasCache';
 
-const canvasCache = new CanvasCache();
-
+export const canvasCache = new CanvasCache();
 
 export const drawBackground = imgPath => {
   const canvas = getState().backgroundCanvas;
@@ -143,10 +142,11 @@ const loadFishImage = fishPart => {
 
 const drawSingleFish = (fish, fishXPos, fishYPos, ctx) => {
   if (!fish.canvas) {
-    fish.canvas = document.createElement('canvas');
+    fish.canvas = canvasCache.getClearCanvas();
     fish.canvas.width = constants.fishCanvasWidth;
     fish.canvas.height = constants.fishCanvasHeight;
     loadFishImages(fish).then(results => {
+      canvasCache.pingCanvas(fish.canvas);
       const fishCtx = fish.canvas.getContext('2d');
       drawFish(
         fish,
@@ -158,6 +158,7 @@ const drawSingleFish = (fish, fishXPos, fishYPos, ctx) => {
       ctx.drawImage(fish.canvas, fishXPos, fishYPos);
     });
   } else {
+    canvasCache.pingCanvas(fish.canvas);
     ctx.drawImage(fish.canvas, fishXPos, fishYPos);
   }
 };
@@ -171,8 +172,9 @@ const drawFish = (fish, results, ctx, x = 0, y = 0) => {
   const bodyAnchor = bodyAnchorFromType(body, body.type);
   results = _.orderBy(results, ['fishPart.type']);
 
-  let intermediateCanvas = canvasCache.getClearCanvas();
+  const intermediateCanvas = canvasCache.getClearCanvas();
   results.forEach(result => {
+    canvasCache.pingCanvas(intermediateCanvas);
     intermediateCanvas.width = constants.fishCanvasWidth;
     intermediateCanvas.height = constants.fishCanvasHeight;
     let intermediateCtx = intermediateCanvas.getContext('2d');
@@ -221,7 +223,6 @@ const drawFish = (fish, results, ctx, x = 0, y = 0) => {
       constants.fishCanvasHeight
     );
   });
-  canvasCache.releaseCanvas(intermediateCanvas);
 };
 
 const clearChildren = el => {
