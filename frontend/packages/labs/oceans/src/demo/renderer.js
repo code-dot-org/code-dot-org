@@ -189,7 +189,12 @@ const drawFish = (fish, results, ctx, x = 0, y = 0) => {
     let intermediateCtx = intermediateCanvas.getContext('2d');
     let anchor = [0, 0];
     if (result.fishPart.type !== FishBodyPart.BODY) {
-      anchor = bodyAnchorFromType(body, result.fishPart.type);
+      const bodyAnchor = bodyAnchorFromType(body, result.fishPart.type);
+      anchor[0] = bodyAnchor[0];
+      anchor[1] = bodyAnchor[1];
+    }
+    if (result.fishPart.type === FishBodyPart.TAIL) {
+      anchor[1] -= result.img.height / 2;
     }
 
     const xPos = bodyAnchor[0] + anchor[0];
