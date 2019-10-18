@@ -8,7 +8,7 @@ social:
   og:image:height: '630'
 ---
 :ruby
-  @header["social"]["twitter:url"] = request.host
+  @header["social"]["twitter:url"] = 'https://' + request.host + '/hourofcode/overview'
   @header["social"]["twitter:title"] = hoc_s(:hour_of_code)
   @header["social"]["twitter:description"] = hoc_s(:social_hoc2018_global_movement)
   @header["social"]["twitter:image:src"] = 'https://' + request.host + '/images/social-media/code-2018-creativity.png'
