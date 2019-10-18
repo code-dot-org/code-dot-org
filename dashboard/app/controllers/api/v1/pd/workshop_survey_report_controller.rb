@@ -7,6 +7,7 @@ module Api::V1::Pd
     include ::Pd::WorkshopSurveyReportCsvConverter
     include Pd::WorkshopSurveyResultsHelper
     include Pd::SurveyPipeline::Helper
+    include Pd::WorkshopSurveyConstants
 
     load_and_authorize_resource :workshop, class: 'Pd::Workshop'
 
@@ -110,10 +111,8 @@ module Api::V1::Pd
 
     # GET /api/v1/pd/workshops/:id/generic_survey_report
     def generic_survey_report
-      # 3 separate routes for summer workshop, CSF deep dive (201) workshop, and academic year
-      # workshop. Eventually we want summer workshop to use the same route as academic year workshop.
-      # CSF intro should not use this controller action.
-      return local_workshop_daily_survey_report if @workshop.summer?
+      # 2 separate routes for CSF deep dive (201) workshop and summer/academic year workshop.
+      # We don't compute survey result roll-up for CSF deep dive.
       return create_csf_survey_report if @workshop.csf? && @workshop.subject == SUBJECT_CSF_201
       return create_generic_survey_report if [COURSE_CSP, COURSE_CSD].include?(@workshop.course)
 
@@ -130,16 +129,6 @@ module Api::V1::Pd
     end
 
     private
-
-    def local_workshop_daily_survey_report
-      survey_report = generate_workshop_daily_session_summary(@workshop)
-
-      respond_to do |format|
-        format.json do
-          render json: survey_report
-        end
-      end
-    end
 
     def create_csf_survey_report
       render json: report_single_workshop(@workshop, current_user)
