@@ -306,7 +306,9 @@ describe('entry tests', () => {
           src: [
             'webpack-runtimewp*.js',
             'webpack-runtimewp*.min.js',
+            'applab-apiwp*.js',
             'applab-apiwp*.min.js',
+            'gamelab-apiwp*.js',
             'gamelab-apiwp*.min.js'
           ],
           dest: 'build/package/js',
