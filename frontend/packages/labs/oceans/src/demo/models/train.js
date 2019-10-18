@@ -32,7 +32,7 @@ export const init = () => {
   const trainer = new SimpleTrainer();
   trainer.initializeClassifiersWithoutMobilenet();
 
-  let state = setState({fishData, trainer});
+  const state = setState({fishData, trainer});
 
   drawBackground(backgroundPathForMode(Modes.Training));
   drawTrainingScreen(state);

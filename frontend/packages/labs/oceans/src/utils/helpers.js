@@ -1,24 +1,18 @@
 export const backgroundPathForMode = mode => {
-  let backgroundImageName;
+  let imgName;
+  if (mode === Modes.Training || mode === Modes.Pond) {
+    imgName = 'underwater';
+  }
 
-  // TODO: Replace with actual background images.
-  // if (mode === Modes.Training) {
-  //   backgroundImageName = 'classroom';
-  // } else if (mode === Modes.Predicting) {
-  //   backgroundImageName = 'pipes';
-  // } else if (mode === Modes.Pond) {
-  //   backgroundImageName = 'underwater';
-  // }
-
-  backgroundImageName = 'underwater';
-  return backgroundPath(backgroundImageName);
+  return imgName ? backgroundPath(imgName) : null;
 };
 
 export const backgroundPath = imgName => {
   return `images/${imgName}-background.png`;
 };
 
-// TODO: (maddie) ADD DESCRIPTION
+// Creates a button element, given a button object that contains
+// id, text, and onClick properties.
 export const createButton = button => {
   let btnEl = document.createElement('button');
   btnEl.innerHTML = button.text;
