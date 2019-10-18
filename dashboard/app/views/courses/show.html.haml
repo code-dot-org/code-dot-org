@@ -3,7 +3,7 @@
 - data = {}
 - data[:course_summary] = course.summarize(@current_user)
 - sections = @current_user.try{|u| u.sections.where(hidden: false).select(:id, :name, :course_id)}
-- sections = sections.map { |section| section.attributes.merge!({"isAssigned" => section[:course_id] == course.id})}
+- sections = sections&.map { |section| section.attributes.merge!({"isAssigned" => section[:course_id] == course.id})}
 - data[:sections] = sections || []
 - data[:is_teacher] = @current_user.try(:teacher?) || false
 - data[:is_verified_teacher] = @current_user.try(:authorized_teacher?) || false
