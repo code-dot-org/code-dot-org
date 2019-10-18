@@ -1,15 +1,13 @@
 import 'babel-polyfill';
 import {setState, getState} from '../state';
 import {initModel} from './index';
-import {Modes, ClassType} from '../constants';
+import {Modes} from '../constants';
 import {
   backgroundPathForMode,
   createButton,
   createText,
   strForClassType
 } from '../helpers';
-import SimpleTrainer from '../../utils/SimpleTrainer';
-import {generateOcean} from '../../utils/generateOcean';
 import {
   drawBackground,
   drawPredictingFish,

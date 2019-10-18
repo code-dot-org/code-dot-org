@@ -1,11 +1,8 @@
 import 'babel-polyfill';
 import _ from 'lodash';
-import constants, {Modes, ClassType, strForClassType} from './constants';
+import constants, {ClassType} from './constants';
 import {FishBodyPart} from '../utils/fishData';
-import {setState, getState} from './state';
-
-const FISH_CANVAS_WIDTH = 300;
-const FISH_CANVAS_HEIGHT = 200;
+import {getState} from './state';
 
 export const drawBackground = imgPath => {
   const canvas = getState().backgroundCanvas;
@@ -94,12 +91,12 @@ export const drawPondFish = state => {
     pondFish.forEach(fish => {
       loadFishImages(fish).then(results => {
         const randomX = randomInt(
-          FISH_CANVAS_WIDTH / 4,
-          canvas.width - FISH_CANVAS_WIDTH / 4
+          constants.fishCanvasWidth / 4,
+          canvas.width - constants.fishCanvasWidth / 4
         );
         const randomY = randomInt(
-          FISH_CANVAS_HEIGHT / 4,
-          canvas.height - FISH_CANVAS_HEIGHT / 4
+          constants.fishCanvasHeight / 4,
+          canvas.height - constants.fishCanvasHeight / 4
         );
         drawFish(fish, results, canvas.getContext('2d'), randomX, randomY);
       });
@@ -150,8 +147,8 @@ const drawFish = (fish, results, ctx, x = 0, y = 0) => {
 
   results.forEach(result => {
     let intermediateCanvas = document.createElement('canvas');
-    intermediateCanvas.width = FISH_CANVAS_WIDTH;
-    intermediateCanvas.height = FISH_CANVAS_HEIGHT;
+    intermediateCanvas.width = constants.fishCanvasWidth;
+    intermediateCanvas.height = constants.fishCanvasHeight;
     let intermediateCtx = intermediateCanvas.getContext('2d');
     let anchor = [0, 0];
     if (result.fishPart.type !== FishBodyPart.BODY) {
@@ -188,8 +185,8 @@ const drawFish = (fish, results, ctx, x = 0, y = 0) => {
       intermediateCanvas,
       x - intermediateCanvas.width / 2,
       y - intermediateCanvas.height / 2,
-      FISH_CANVAS_WIDTH,
-      FISH_CANVAS_HEIGHT
+      constants.fishCanvasWidth,
+      constants.fishCanvasHeight
     );
   });
 };
