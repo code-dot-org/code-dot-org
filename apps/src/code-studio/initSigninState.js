@@ -35,7 +35,7 @@ export function getUserSignedInFromCookieAndDom() {
  * Determines signin state and dispatches to the store. Shows a dialog asking
  * the user for their age or to sign in if necessary.
  */
-export default function initSigninState(userType, currentUserId) {
+export default function initSigninState(userType) {
   $(document).ready(() => {
     const store = getStore();
     store.dispatch(setUserSignedIn(getUserSignedInFromCookieAndDom()));
