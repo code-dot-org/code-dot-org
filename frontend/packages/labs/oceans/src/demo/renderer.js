@@ -13,6 +13,11 @@ export const drawBackground = imgPath => {
     return;
   }
 
+  if (!imgPath) {
+    canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
+    return;
+  }
+
   loadImage(imgPath).then(img => {
     canvas.getContext('2d').drawImage(img, 0, 0, canvas.width, canvas.height);
   });
