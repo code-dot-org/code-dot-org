@@ -17,3 +17,14 @@ export const backgroundPathForMode = mode => {
 export const backgroundPath = imgName => {
   return `images/${imgName}-background.png`;
 };
+
+// TODO: (maddie) ADD DESCRIPTION
+export const createButton = button => {
+  let btnEl = document.createElement('button');
+  btnEl.innerHTML = button.text;
+  btnEl.setAttribute('id', button.id);
+  btnEl.setAttribute('class', 'ui-button');
+  btnEl.addEventListener('click', button.onClick);
+
+  return btnEl;
+};

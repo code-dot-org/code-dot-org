@@ -13,7 +13,8 @@ $(document).ready(() => {
   setState({
     currentMode: Modes.Training,
     canvas,
-    backgroundCanvas
+    backgroundCanvas,
+    uiContainer: document.getElementById('ui-container')
   });
 
   // Initialize current model
@@ -34,6 +35,6 @@ function initModel() {
       initPond();
       break;
     default:
-      console.error('No mode specified');
+      console.error('Unrecognized mode specified.');
   }
 }

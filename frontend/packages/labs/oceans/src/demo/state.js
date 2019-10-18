@@ -5,7 +5,8 @@ const initialState = {
   canvas: null,
   ctx: null,
   trainer: null,
-  trainingIndex: 0
+  trainingIndex: 0,
+  uiContainer: null
 };
 let state = {...initialState};
 

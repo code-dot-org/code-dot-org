@@ -7,7 +7,7 @@ import {setState, getState} from './state';
 const FISH_CANVAS_WIDTH = 300;
 const FISH_CANVAS_HEIGHT = 200;
 
-export const renderBackground = imgPath => {
+export const drawBackground = imgPath => {
   const canvas = getState().backgroundCanvas;
   if (!canvas) {
     return;
@@ -17,32 +17,6 @@ export const renderBackground = imgPath => {
     canvas.getContext('2d').drawImage(img, 0, 0, canvas.width, canvas.height);
   });
 };
-
-export const render = () => {};
-
-// Initialize the renderer once.
-// This will generate canvases with the fish collection.
-export function init(canvas) {
-  clearBackground();
-  const state = setState({
-    canvas,
-    ctx: canvas.getContext('2d')
-  });
-
-  switch (state.currentMode) {
-    case Modes.Training:
-      initTrainingScreen(state);
-      break;
-    case Modes.Predicting:
-      initPredictingScreen(state);
-      break;
-    case Modes.Pond:
-      initPondScreen(state);
-      break;
-    default:
-      console.error('Unrecognized mode passed to renderer init method.');
-  }
-}
 
 const loadImage = imgPath => {
   return new Promise((resolve, reject) => {
@@ -55,35 +29,7 @@ const loadImage = imgPath => {
   });
 };
 
-function renderBackgroundImage(img) {
-  const canvas = backgroundCanvas();
-  if (!canvas) {
-    return;
-  }
-
-  canvas.width = constants.canvasWidth;
-  canvas.height = constants.canvasHeight;
-  const ctx = canvas.getContext('2d');
-  ctx.drawImage(img, 0, 0, constants.canvasWidth, constants.canvasHeight);
-}
-
-function initTrainingScreen(state) {
-  // We only want to draw the background and UI elements once,
-  // so render here instead of in drawTrainingScreen().
-  loadBackgroundImage().then(backgroundImg => {
-    renderBackgroundImage(backgroundImg);
-    drawTrainingScreen(state);
-    drawTrainingUiElements(state);
-  });
-}
-
-function drawTrainingScreen(state) {
-  state.ctx.clearRect(0, 0, state.canvas.width, state.canvas.height);
-  drawTrainingFish(state);
-  drawUpcomingFish(state);
-}
-
-function drawTrainingFish(state) {
+export const drawTrainingFish = state => {
   const canvas = state.canvas;
   const ctx = canvas.getContext('2d');
 
@@ -94,66 +40,31 @@ function drawTrainingFish(state) {
   const frameYPos = canvas.height / 2 - frameSize / 2;
   ctx.fillRect(frameXPos, frameYPos, frameSize, frameSize);
 
-  const fishDatum = state.fishData[state.trainingIndex];
-  loadFishImages(fishDatum.fish).then(results => {
-    drawFish(fishDatum.fish, results, ctx, canvas.width / 2, canvas.height / 2);
+  const fish = state.fishData[state.trainingIndex];
+  loadFishImages(fish).then(results => {
+    drawFish(fish, results, ctx, canvas.width / 2, canvas.height / 2);
   });
-}
+};
 
-function drawUpcomingFish(state) {
+export const drawUpcomingFish = state => {
   const fishLeft = state.fishData.length - state.trainingIndex - 1;
   const numUpcomingFish = fishLeft >= 3 ? 3 : fishLeft;
   const canvas = state.canvas;
   let x = canvas.width / 2 - 300;
 
   for (let i = 1; i <= numUpcomingFish; i++) {
-    const fishDatum = state.fishData[state.trainingIndex + i];
-    loadFishImages(fishDatum.fish).then(results => {
-      const ctx = canvas.getContext('2d');
-      drawFish(fishDatum.fish, results, ctx, x, canvas.height / 2);
+    const fish = state.fishData[state.trainingIndex + i];
+    loadFishImages(fish).then(results => {
+      drawFish(fish, results, canvas.getContext('2d'), x, canvas.height / 2);
       x -= 200;
     });
   }
-}
+};
 
-function drawTrainingUiElements(state) {
-  const classifyFish = function(doesLike) {
-    const knnData = state.fishData[state.trainingIndex].fish.knnData;
-    const classId = doesLike ? ClassType.Like : ClassType.Dislike;
-    state.trainer.addExampleData(knnData, classId);
-    state.trainingIndex += 1;
-    setState({trainingIndex: state.trainingIndex});
-    drawTrainingScreen(state);
-  };
-
-  const container = uiContainer();
-  const buttons = [
-    {
-      text: 'like',
-      id: 'like-button',
-      onClick: () => classifyFish(true)
-    },
-    {
-      text: 'dislike',
-      id: 'dislike-button',
-      onClick: () => classifyFish(false)
-    },
-    {
-      text: 'next',
-      id: 'next-button',
-      onClick: () => {
-        clearChildren(container);
-        const canvas = state.canvas;
-        setState({currentMode: Modes.Predicting});
-        init(canvas);
-      }
-    }
-  ];
-
-  buttons.forEach(button =>
-    renderButton(container, button.id, button.text, button.onClick)
-  );
-}
+export const drawUiElements = (container, children) => {
+  clearChildren(container);
+  children.forEach(child => container.appendChild(child));
+};
 
 function initPredictingScreen(state) {
   drawPredictingScreen(state);
@@ -389,6 +300,10 @@ function clearChildren(el) {
   }
 }
 
+export const clearCanvas = canvas => {
+  canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
+};
+
 function uiContainer() {
   return document.getElementById('ui-container');
 }
@@ -403,12 +318,12 @@ function clearBackground() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
 
-function destroyElById(id) {
+const destroyElById = id => {
   const existingEl = document.getElementById(id);
   if (existingEl) {
     existingEl.remove();
   }
-}
+};
 
 function bodyAnchorFromType(body, type) {
   switch (type) {
