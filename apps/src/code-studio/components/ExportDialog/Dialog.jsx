@@ -7,7 +7,7 @@ import color from '../../../util/color';
 import {PLATFORM_ANDROID, DEFAULT_PLATFORM} from '../../../util/exporter';
 import {hideExportDialog} from '../exportDialogRedux';
 import i18n from '@cdo/locale';
-import {SignInState} from '../../progressRedux';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import firehoseClient from '../../../lib/util/firehose';
 import project from '../../initApp/project';
 import commonStyles from './styles';
