@@ -57,7 +57,7 @@ class DataVisualizer extends React.Component {
             displayName="Chart Type"
             options={['Bar Chart', 'Histogram', 'Cross Tab', 'Scatter Plot']}
             value={this.state.chartType}
-            onChange={e => this.setState({chartType: e.target.value})}
+            onChange={event => this.setState({chartType: event.target.value})}
           />
 
           {this.state.chartType === 'Histogram' && (
@@ -76,7 +76,7 @@ class DataVisualizer extends React.Component {
               displayName="Values"
               options={this.props.tableColumns}
               value={this.state.values}
-              onChange={e => this.setState({values: e.target.value})}
+              onChange={event => this.setState({values: event.target.value})}
             />
           )}
 
@@ -87,13 +87,13 @@ class DataVisualizer extends React.Component {
                 displayName="X Values"
                 options={this.props.tableColumns}
                 value={this.state.xValues}
-                onChange={e => this.setState({xValues: e.target.value})}
+                onChange={event => this.setState({xValues: event.target.value})}
               />
               <DropdownField
                 displayName="Y Values"
                 options={this.props.tableColumns}
                 value={this.state.yValues}
-                onChange={e => this.setState({yValues: e.target.value})}
+                onChange={event => this.setState({yValues: event.target.value})}
               />
             </div>
           )}
