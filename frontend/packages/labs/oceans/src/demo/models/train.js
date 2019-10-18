@@ -39,7 +39,7 @@ export const init = () => {
 };
 
 const drawTrainingScreen = state => {
-  // Clear main canvas before re-drawing.
+  // Clear main canvas before drawing.
   clearCanvas(state.canvas);
   drawTrainingFish(state);
   drawUpcomingFish(state);
