@@ -1,14 +1,37 @@
 import {assert} from '../../../util/reconfiguredChai';
 import currentUser, {
-  setCurrentUserId
-} from '@cdo/apps/templates/sectionProgress/currentUserRedux';
+  setCurrentUserId,
+  SignInState,
+  setUserSignedIn,
+  setUserType
+} from '@cdo/apps/templates/currentUserRedux';
 
 describe('currentUserRedux', () => {
   const initialState = currentUser(undefined, {});
 
   describe('setCurrentUserId', () => {
-    it('seting the script id resets the lesson of interest', () => {
+    it('can set the current user id', () => {
       const action = setCurrentUserId(1);
+      const nextState = currentUser(initialState, action);
+
+      assert.deepEqual(nextState.userId, 1);
+    });
+  });
+  describe('setUserSignedIn', () => {
+    it('can update signInState', () => {
+      const signedIn = currentUser(initialState, setUserSignedIn(true));
+      assert.equal(signedIn.signInState, SignInState.SignedIn);
+
+      const signedOut = currentUser(initialState, setUserSignedIn(false));
+      assert.equal(signedOut.signInState, SignInState.SignedOut);
+    });
+    it('initially sets signInState to Unknown', () => {
+      assert.equal(initialState.signInState, SignInState.Unknown);
+    });
+  });
+  describe('setUserType', () => {
+    it('can set the current user type', () => {
+      const action = setUserType(1);
       const nextState = currentUser(initialState, action);
 
       assert.deepEqual(nextState.userId, 1);
