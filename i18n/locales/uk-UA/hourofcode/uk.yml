@@ -1,7 +1,7 @@
 uk:
   site_name: 'Година Коду'
   hour_of_code: 'Година коду'
-  language: 'Українською'
+  language: 'Англійською'
   front_title: 'Приєднуйтесь до найбільшої навчальної події в історії, %{campaign_date}'
   coming_soon: 'Незабаром'
   campaign_date_start_short: "4 грудня"
@@ -9,10 +9,16 @@ uk:
   campaign_date_short: "4-10 грудня"
   campaign_date_full: "4-10 грудня"
   campaign_date_year: "2017"
-  campaign_date_full_year: "5-11 грудня 2016 року"
-  hoc2019_header: 'Вивчайте інформатику. Змінити світ.'
+  campaign_date_full_year: "4-10 грудня 2017 року"
+  hoc2019_header: 'Вивчайте інформатику. Змінюйте світ.'
   hoc2019_header_line1_mobile: 'Вивчайте інформатику.'
-  hoc2019_header_line2_mobile: 'Змінити світ.'
+  hoc2019_header_line2_mobile: 'Змінюйте світ.'
+  social_hoc2019_every_sudent: 'Every student has the potential to change the world. Help them get started. #CSforGood'
+  social_hoc2019_learn_computer_science: 'Learn computer science. Change the world. #CSforGood #HourOfCode'
+  social_hoc_is_coming: 'The Hour of Code is coming!'
+  social_hoc2019_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn computer science. Change the world.'
+  social_hoc2019_coming_dates: 'The Hour of Code is coming December 9-15, 2019. Computer science is foundational for every student to learn.'
+  social_hoc2019_dance: 'Featuring Katy Perry, Jonas Brothers, Lil Nas X, Panic at the Disco, and many more!'
   codeorg_homepage_hoc2018_curriculum: 'Рухайтесь далі з <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">курсами Code.org</a>'
   codeorg_homepage_hoc2018_dance_heading: 'Create your own <span class="highlight-word">Dance&nbsp;Party</span>'
   codeorg_homepage_hoc2018_header_line1: 'Наближається Година коду...'
@@ -22,7 +28,7 @@ uk:
   codeorg_homepage_hoc2018_musician_before: 'Featuring'
   codeorg_homepage_hoc2018_musician_after: 'and more!'
   codeorg_homepage_hoc2018_video: 'Дивіться відео'
-  hourofcode_homepage_hoc2018_header_line1: 'Anyone, anywhere can organize an Hour of Code event. One-hour tutorials in over 45 languages. No experience needed.'
+  hourofcode_homepage_hoc2018_header_line1: 'Кожен, будь-де може організувати подію Години коду. Одно-годинні заняття на 45+ мовах. Попереднього досвіду не потрібно.'
   hourofcode_homepage_hoc2018_header_line2: 'Ages 4 to 104.'
   hoc2018_tutorial_mchoc_description: 'Використовуй блоки коду, щоб провести Алекса чи Стіва через пригоди в цьому світі Майнкрафт.'
   cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
@@ -30,7 +36,7 @@ uk:
   cookie_banner_accept: 'Погоджуюся'
   front_header_banner: 'Приєднуйтесь до найбільшої навчальної події в історії, %{campaign_date}'
   front_intro_default: 'Година Коду є глобальним заходом, який залучає десятки мільйонів учнів у більш, як 180 країнах світу. Кожен може організувати заходи в рамках Години Коду. Одно-годинний курс доступний більш, як 45 мовами. Без попередніх вимог. <strong>Для всіх віком від 4 до 104.</strong>'
-  front_intro_default_2: 'A global movement in 180+ countries.'
+  front_intro_default_2: 'Глобальний рух у 180+ країнах.'
   front_watch_video: 'Дивіться новий ролик'
   front_watch_regular_video: 'Дивіться відео'
   front_volunteers: 'Потрібні технічні волонтери'
@@ -212,10 +218,10 @@ uk:
   front_what_is_hoc: 'Що таке Година коду?'
   front_join_us_header: 'Кожен може навчитися основам і отримати від цього задоволення!'
   front_join_us_volunteer_header: 'Волонтери для Години коду'
-  front_join_us_tutorials: "Спробуйте нові цьогорічні підручники!"
+  front_join_us_tutorials: "Оберіть свій підручник Години коду!"
   front_join_us_tutorials_link: 'Використайте фільтр для перегляду розширеного переліку <i>більш, як 200 підручників та планів уроків</i>! Шукайте вправи для різних предметних тем, апаратних потреб та учнів з різним рівнем досвіду.'
-  front_join_us_robotics: 'Маєте роботів?'
-  front_join_us_robotics_link: 'Дякуємо нашим партнерам робототехніки за підтримку Години коду! Якщо у вас в класі є роботи, клацайте на відповідних логотипах, щоб побачити список робототехнічних вправ!'
+  front_join_us_robotics: 'Вигравайте роботів чи плати!'
+  front_join_us_robotics_link: 'Бажаєте отримати набір роботів чи плат для використання зі своїми учнями? Наші партнери надають такі набори для 100+ класів! Зареєструйте захід Години коду для участі. (Класи обираються компанією Code.org, лише США)'
   front_join_us_teacher: 'Ви вчитель?'
   front_join_us_inspire: 'Надихайте учнів'
   front_join_us_inspire_link: 'Годиною коду на уроці.'
@@ -255,12 +261,12 @@ uk:
   signup_email_label: 'Ваша скринька'
   signup_email_error: 'Email is required'
   signup_invalid_email_error: 'The email address you entered is invalid'
-  signup_organization_name_label: 'Школа чи організація'
+  signup_organization_name_label: 'Назва організації'
   signup_organization_name_error: 'Organization name is required.'
   signup_event_type_label: 'Тип заходу'
   signup_event_type_error: 'Event type is required.'
   signup_event_entire_school_label: 'Вся моя школа бере участь'
-  signup_event_location_label: 'Місце проведення (за бажанням)'
+  signup_event_location_label: 'Місце проведення'
   signup_event_location_error: 'Event location is required.'
   signup_special_event_flag_label: 'Моя подія охоплює цілий район, учасників спільноти, та/або інші заходи поза Годиною коду'
   signup_special_event_details_label: 'Зареєструватись для висвітлення особливої події'
@@ -270,18 +276,18 @@ uk:
   signup_your_event: 'Зареєструйте свій захід'
   signup_host_an_hour: 'Проведіть Годину коду'
   signup_match_volunteer: 'Допоможіть знайти місцевого програміста, щоб надихнути моїх учнів'
-  signup_email_preference_opt_in: 'Can we email you about updates to Code.org courses, local opportunities, or other computer science news?'
+  signup_email_preference_opt_in: 'Ми можемо надсилати оновлення про курси Code.org, локальні можливості чи інші новини інформатики?'
   signup_email_preference_privacy: '(See our privacy policy)'
   signup_email_preference_yes: 'Так'
   signup_email_preference_no: 'No'
   signup_email_preference_error: 'Email preference is required'
   signup_multiple_event_warning: "Якщо Ви проводите кілька заходів, заповніть унікальну назву та електронну скриньку для кожного із них. Ми рахуємо події за комбінацією назви та електронної скриньки."
-  signup_registration_deadline: "Реєстрація на Годину коду завершується 12 грудня."
+  signup_registration_deadline: "Реєстрація на Годину коду завершується 11 грудня."
   signup_name_placeholder: 'Ваше ім''я'
   signup_email_placeholder: 'you@example.com'
   signup_organization_name_placeholder: "Наприклад, СЗШ № 89"
-  signup_event_country_label: "Event country"
-  signup_event_country_error: "Country is required."
+  signup_event_country_label: "Країна заходу"
+  signup_event_country_error: "Країна обов'язкова."
   signup_event_location_placeholder: "Поштовий індекс і країна АБО повна адреса."
   signup_special_event_details_placeholder: 'Опишіть свій захід'
   signup_send_posters_address_placeholder: 'Адреса не буде показана на карті'
@@ -303,14 +309,14 @@ uk:
   social_hoc2018_every_student_try_what_create: "Кожен учень заслуговує на можливість виразити свою креативність в інформатиці. Спробуйте себе у нових підручниках. А що створите Ви?"
   social_hoc2018_hoc_coming_create: "Наближається Година коду. А що створите Ви?"
   social_hoc2018_hoc_here: "The Hour of Code is here!"
-  social_hoc2018_join: "Кожна дитина заслуговує на можливості"
+  social_hoc2018_join: "Година коду: приєднуйтесь до руху"
   social_hoc2018_mc: "Minecraft is back for the Hour of Code, and you’re the hero! Write code to journey through Minecraft biomes."
   social_hoc2018_mc_creativity: "Use your creativity and problem solving skills to explore and build underwater worlds with code."
   social_hoc2018_what_create: "А що створите Ви?"
   social_hoc2018_global_movement: "The Hour of Code is a global movement reaching tens of millions of students. One-hour tutorials are available in 45+ languages for all ages."
   map_title: "Карта Години коду"
   map_header: '# заходів Години коду по всьому світу'
-  map_header_count_year: '%{event_count} events registered in %{year}'
+  map_header_count_year: '%{event_count} подій зареєстровано у %{year}'
   see_all_events: 'Переглянути всі події'
   map_header_company: '# від організаторів'
   map_header_country: '# в %{country}'
@@ -321,9 +327,9 @@ uk:
   map_legend_hoc_events: 'Заходи Години коду'
   map_legend_cs_tech_jam: 'Технічні студії'
   map_warning: "A full list of the events can be viewed on the <a href='%{events_url}'>events page.</a>"
-  meta_tag_og_title: 'Кожна дитина заслуговує на можливості'
+  meta_tag_og_title: 'Година коду: приєднуйтесь до руху'
   meta_tag_og_description: 'Година коду є глобальним рухом, який залучає десятки мільйони учнів із більш, як 180 країн, які розмовляють більш, як 45 мовами. Для будь-якого віку від 4 до 104.'
-  meta_tag_twitter_title: 'Кожна дитина заслуговує на можливості'
+  meta_tag_twitter_title: 'Година коду: приєднуйтесь до руху'
   meta_tag_twitter_description: 'Година коду є глобальним рухом, який залучає десятки мільйони учнів із більш, як 180 країн, які розмовляють більш, як 45 мовами. Для будь-якого віку від 4 до 104.'
   twitter_default_text: "Я беру участь в цьогорічній #HourOfCode, а ви? @codeorg"
   twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
@@ -488,7 +494,7 @@ uk:
   learn_banner_blurb: "Спробуйте одно-годинні підручники, розроблені для будь-якого віку на 45 мовах. Приєднуйтесь до мільйонів учнів та вчителів у більш, як 180 країнах на Годину коду."
   learn_banner_beyond: "Хочете продовжити навчання?  <a id='learn_banner_beyond'>Виходьте за межі години</a>"
   learn_banner_teachers: "Вчителі: <a id='teacher_banner_host'>проведіть Годину коду</a> або <a id='teacher_banner_howto'>ознайомтесь із рекомендаціями</a>"
-  learn_robotics_banner_heading: 'РОБОТОТЕХНІКА'
+  learn_robotics_banner_heading: 'Роботи та плати'
   learn_robotics_banner_blurb: 'Маєте роботів? Використовуйте їх з одним із наведених нижче занять і проведіть практичну Годину коду для учнів будь-якого віку!'
   tutorial_danceparty_name: "Dance Party"
   tutorial_chibitronics_name: "Chibitronics: Illuminated Story"
@@ -569,7 +575,7 @@ uk:
   tutorial_buildpong_name: "Зроби Понг з ШІ"
   tutorial_tynkerdrones_name: "Програмуй дронів та роботів"
   tutorial_carla_name: "Програмування з Карлою"
-  tutorial_globaloria_name: "Globaloria MakeQuest"
+  tutorial_zulama_name: "Zulama MakeQuest Video Game Activity"
   tutorial_capost_name: "Зроби цифрову листівку з HTML та CSS"
   tutorial_marco_name: "Біжи, Марко!"
   tutorial_codestersflappybike_name: "Летючий велосипед"
@@ -1050,7 +1056,7 @@ uk:
   tutorial_gcloops_name: "GameCode: Loops in a video game"
   tutorial_gcvariables_name: "GameCode: Variables in a video game"
   tutorial_beanything_name: "Barbie You Can Be Anything"
-  tutorial_change_name: "Change the World"
+  tutorial_change_name: "Змінюйте світ"
   tutorial_cooking_name: "Cooking Game"
   tutorial_crystal_name: "Crystal Clash "
   tutorial_landscape_name: "Landscape Generator"
@@ -1147,7 +1153,7 @@ uk:
   tutorial_buildpong_shortdescription: "Build the arcade classic and give the computer artificial intelligence to play against you."
   tutorial_tynkerdrones_shortdescription: "Program a controller for your robot or drone."
   tutorial_carla_shortdescription: "Learn to code by programming a talking virtual robot named Carla!"
-  tutorial_globaloria_shortdescription: "Go on a MakeQuest! Modify code to beat our game, then build your own!"
+  tutorial_zulama_shortdescription: "Go on a MakeQuest! Modify code to beat our game, then build your own!"
   tutorial_capost_shortdescription: "Use code to build a great looking holiday or birthday card."
   tutorial_marco_shortdescription: "An immersive game to guide Marco with a visual programming language."
   tutorial_codestersflappybike_shortdescription: "Створи гру з елементами керування. Тримай велосипед в повітрі та ухиляйся від перешкод!"
@@ -1451,7 +1457,7 @@ uk:
   tutorial_lbvariables_shortdescription: "Having fun is not a variable with this littleBits Code Kit tutorial."
   tutorial_lbfunctions_shortdescription: "The fun don't stop when you combine function-based code blocks & littleBits."
   tutorial_lblogic_shortdescription: "The choice is yours with conditional logic & littleBits."
-  tutorial_lbworld_shortdescription: "You can change the world with code, one game at a time."
+  tutorial_lbworld_shortdescription: "Ви можете змінити світ кодом чи грою, рядок за рядком."
   tutorial_lbloops_shortdescription: "From special effects to secret messages, loops are your secret game weapon."
   tutorial_lbtug_shortdescription: "Make the classic Tug of War epic with functions & littleBits."
   tutorial_lbpotato_shortdescription: "Build & code your own game of Hot Potato. Can you stand the heat?"
@@ -1628,7 +1634,7 @@ uk:
   tutorial_gcloops_shortdescription: "Discover loops, one of the key building blocks in coding, and use them to code a video game! Explore digital culture and learn about the echo chamber phenomenon on social networks."
   tutorial_gcvariables_shortdescription: "Discover variables, one of the key building blocks in coding, and use them to code a video game! Explore digital culture and learn about what data is and how it works."
   tutorial_beanything_shortdescription: "Use programming to animate characters, compose music, tell stories, design games, and even create art."
-  tutorial_change_shortdescription: "Create a project that shows how you would change the world! Whether you are passionate about recycling or have an idea to achieve world peace, share your vision with code!"
+  tutorial_change_shortdescription: "Створіть проєкт, який покаже, як можна змінити світ! Це може бути все, що завгодно: від проблеми сміття до миру у всьому світі - поділіться своїм баченням за допомогою коду!"
   tutorial_cooking_shortdescription: "Show off your skills - create an interactive cooking game. Beginners can use the self-guided tutorial while more advanced coders have the option to start off with a blank project."
   tutorial_crystal_shortdescription: "Cast spells, collect power-ups, and defeat enemies as you battle in a wild 4-player arena that is shrinking amidst lava!"
   tutorial_landscape_shortdescription: "Use Python's pen drawing feature to compose a landscape using code. Use the landscape items already created for you or design our own structures. Publish and share your creations!"
@@ -1725,7 +1731,7 @@ uk:
   tutorial_buildpong_longdescription: "Pong is one of the earliest arcade video games and the very first sports arcade video game. It is a table tennis sports game featuring simple two-dimensional graphics. The aim of the game is for the PLAYER to score on the COMPUTER while defending its GOAL. In this project, the COMPUTER is programmed with basic artificial intelligence so it can respond to the PLAYER."
   tutorial_tynkerdrones_longdescription: "Learn to program connected devices by solving the \"Crash Course\" puzzles, where you navigate virtual drones and robots through obstacles. Then you're ready to create programs to control real drones and robots. Requires an iPad or Android tablet and a supported toy."
   tutorial_carla_longdescription: "\"Programming with Carla\" is a series of short activities that guide students through building a simple chatbot, whilst learning about core concepts like variables and conditionals. The activities have been carefully designed to address common misconceptions that new programmers have about these topics by offering many opportunities for practice, as well as targeted hints and feedback.\n"
-  tutorial_globaloria_longdescription: "In MakeQuest you learn to edit JavaScript code through a playful action game, and master computer science concepts like variables and functions. Create your own game by remixing and expanding on our game code in the Sandbox. Publish and share your game with friends!  Teachers: lesson plans and subject-specific extension activities are included."
+  tutorial_zulama_longdescription: "In this activity you will learn to edit JavaScript code through a playful action game and master computer science concepts like variables and functions. Create your own game in the Sandbox by remixing and expanding on existing game code. Then publish and share your game with friends and family. A scripted lesson guide is included for teachers."
   tutorial_capost_longdescription: "Starting to learn HTML and CSS is easy and fun with this digital postcard. Learn about adding headings, paragraphs, images and links to create a holiday card or birthday celebration to share with friends and family."
   tutorial_marco_longdescription: "Students play an adventure game based on an original story. They guide Marco - the main character - through each level by giving him step-by-step instructions in the form of the visual programming language used by the Hour of Code. They get introduced to sequencing commands, iteration and conditions without even noticing it."
   tutorial_codestersflappybike_longdescription: "In this activity, students use our drag-to-text toolkit to start coding in Python right away! Students are guided through a series of learning activities that teach them to build a complete game! After they finish, they are challenged to use what they learned about syntax, dot notation, events, variables, parameters and game mechanics to create a new game. "
@@ -2206,7 +2212,7 @@ uk:
   tutorial_gcloops_longdescription: "Discover loops, one of the key building blocks in coding, and use them to code a video game! Explore digital culture and learn about the echo chamber phenomenon on social networks."
   tutorial_gcvariables_longdescription: "Discover variables, one of the key building blocks in coding, and use them to code a video game! Explore digital culture and learn about what data is and how it works."
   tutorial_beanything_longdescription: "Explore six cool careers and see how coding can be applied to each one! Discover what it's like to be a Robotics Engineer, a Musician, an Astronaut, a Farmer, a Beekeeper, and a Pastry Chef. Use programming to animate characters, compose music, tell stories, design games, and even create art."
-  tutorial_change_longdescription: "Create a project that shows how you would change the world! Whether you are passionate about recycling or have an idea to achieve world peace, share your vision with code!"
+  tutorial_change_longdescription: "Створіть проєкт, який покаже, як можна змінити світ! Це може бути все, що завгодно: від проблеми сміття до миру у всьому світі - поділіться своїм баченням за допомогою коду!"
   tutorial_cooking_longdescription: "Show off your skills - create an interactive cooking game. Beginners can use the self-guided tutorial while more advanced coders have the option to start off with a blank project."
   tutorial_crystal_longdescription: "Battle with friends in this multiplayer game. Apply your own strategies and pit your code against the entire Tynker community to see who the true coding champion is! Cast spells, collect power-ups, and defeat enemies as you battle in a wild 4-player arena that is shrinking amidst lava!"
   tutorial_landscape_longdescription: "Use Python's pen drawing feature to compose a landscape using code. Use the landscape items already created for you or design our own structures. Publish and share your creations!"
@@ -2225,7 +2231,7 @@ uk:
   tutorial_allcancodeapps_longdescription: "Use the Allcancode Platform to create web and mobile apps from design to delivery. Application logic is written in Google Blockly, the programming language used in most Code.org activities."
   tutorial_n2y_longdescription: "In these printable activities, students can help a little robot named Bitt Bott explore different landforms on Earth. Students give Bitt Bott simple directions by choosing and circling appropriate directional arrows. Each of the six activities includes simple directions that are supported with symbols from the n2y® SymbolStix PRIME® collection. The symbols help non-readers and beginning readers understand and follow the directions."
   tutorial_danceparty_language: "Декілька"
-  tutorial_chibitronics_language: "Українською"
+  tutorial_chibitronics_language: "Англійською"
   tutorial_athlete_language: "Англійська, французька, іспанська, італійська, португальська (Бразилія)"
   tutorial_moana_language: "Українська, англійська, арабська, в'єтнамська, данська, індонезійська, іспанська, італійська, китайська (спрощене письмо), китайська (традиційне письмо), корейська, нідерландська, німецька, норвезька, полінезійська (самоанська), польська, португальська, російська, турецька, фінська, французька, шведська, японська"
   tutorial_star-wars_language: "Англійська, арабська, болгарська, грецька, данська, індонезійська, ісландська, іспанська, італійська, китайська, корейська, нідерландська, німецька, норвезька, перська, польська, португальська, румунська, російська, турецька, українська, фінська, французька, хорватська, шведська, японська та ще 19"
@@ -2303,7 +2309,7 @@ uk:
   tutorial_buildpong_language: "Лише англійська"
   tutorial_tynkerdrones_language: "Лише англійська"
   tutorial_carla_language: "Лише англійська"
-  tutorial_globaloria_language: "Лише англійська"
+  tutorial_zulama_language: "Лише англійська"
   tutorial_capost_language: "Лише англійська"
   tutorial_marco_language: "Декілька"
   tutorial_codestersflappybike_language: "Лише англійська"
@@ -2653,9 +2659,9 @@ uk:
   tutorial_bcpy2_language: "Лише англійська"
   tutorial_bcjs1_language: "Лише англійська"
   tutorial_bcjs2_language: "Лише англійська"
-  tutorial_3dbearmars_language: "Українською"
-  tutorial_alexaskill_language: "Українською"
-  tutorial_bitsboxyak_language: "Українською"
+  tutorial_3dbearmars_language: "Англійською"
+  tutorial_alexaskill_language: "Англійською"
+  tutorial_bitsboxyak_language: "Англійською"
   tutorial_blockscadbargraphs_language: "Chinese (Simplified), English, French, German, Japanese, Norwegian (Bokmål), Serbian (Cyrillic), Spanish (Spain), Swedish"
   tutorial_blockscadbirdhouses_language: "Chinese (Simplified), English, French, German, Japanese, Norwegian (Bokmål), Slovenian, Spanish (Spain), Swedish"
   tutorial_blockscadclock_language: "Chinese (Simplified), English, French, German, Japanese, Norwegian (Bokmål), Slovenian, Spanish (Spain), Swedish"
@@ -2663,102 +2669,102 @@ uk:
   tutorial_blockscadicecream_language: "Chinese (Simplified), English, French, German, Japanese, Norwegian (Bokmål), Slovenian, Spanish (Spain), Swedish"
   tutorial_blockscadpizza_language: "Chinese, English, French, German, Japanese, Norwegian, Slovenian, Spanish, Swedish"
   tutorial_blockscadsugar_language: "Chinese, Dutch, English, French, Japanese, Norwegian, Slovenian, Spanish, Swedish"
-  tutorial_bsgridlight_language: "Українською"
-  tutorial_bpartscratch_language: "Українською"
-  tutorial_bpartvid_language: "Українською"
-  tutorial_bpenglishscratch_language: "Українською"
-  tutorial_bpenglishvid_language: "Українською"
-  tutorial_bphealthscratch_language: "Українською"
-  tutorial_bphealthvid_language: "Українською"
-  tutorial_bpmathscratch_language: "Українською"
-  tutorial_bpmathvid_language: "Українською"
-  tutorial_bpmlkscratch_language: "Українською"
-  tutorial_bpmlkvid_language: "Українською"
-  tutorial_bpsafetyscratch_language: "Українською"
-  tutorial_bpsafetyvid_language: "Українською"
-  tutorial_bpsciencescratch_language: "Українською"
-  tutorial_bpsciencevid_language: "Українською"
-  tutorial_bptechscratch_language: "Українською"
-  tutorial_bptechvid_language: "Українською"
-  tutorial_caflags_language: "Українською"
-  tutorial_matariki_language: "Українською"
-  tutorial_carestaurant_language: "Українською"
-  tutorial_casea_language: "Українською"
-  tutorial_cashield_language: "Українською"
-  tutorial_ccwslimer_language: "Українською"
+  tutorial_bsgridlight_language: "Англійською"
+  tutorial_bpartscratch_language: "Англійською"
+  tutorial_bpartvid_language: "Англійською"
+  tutorial_bpenglishscratch_language: "Англійською"
+  tutorial_bpenglishvid_language: "Англійською"
+  tutorial_bphealthscratch_language: "Англійською"
+  tutorial_bphealthvid_language: "Англійською"
+  tutorial_bpmathscratch_language: "Англійською"
+  tutorial_bpmathvid_language: "Англійською"
+  tutorial_bpmlkscratch_language: "Англійською"
+  tutorial_bpmlkvid_language: "Англійською"
+  tutorial_bpsafetyscratch_language: "Англійською"
+  tutorial_bpsafetyvid_language: "Англійською"
+  tutorial_bpsciencescratch_language: "Англійською"
+  tutorial_bpsciencevid_language: "Англійською"
+  tutorial_bptechscratch_language: "Англійською"
+  tutorial_bptechvid_language: "Англійською"
+  tutorial_caflags_language: "Англійською"
+  tutorial_matariki_language: "Англійською"
+  tutorial_carestaurant_language: "Англійською"
+  tutorial_casea_language: "Англійською"
+  tutorial_cashield_language: "Англійською"
+  tutorial_ccwslimer_language: "Англійською"
   tutorial_codinggalaxy_language: "Chinese, English"
   tutorial_boatrace_language: "Arabic, Chinese (Simplified), Czech, Danish, Dutch, French, German, Greek, Hebrew, Hindi, Italian, Japanese, Korean, Other, Polish, Romanian, Serbian (Cyrillic), Spanish, Ukrainian"
-  tutorial_ccplay_language: "Українською"
-  tutorial_grinch_language: "Українською"
-  tutorial_codehsart_language: "Українською"
-  tutorial_codehsbitcoin_language: "Українською"
-  tutorial_codehsblockchain_language: "Українською"
-  tutorial_codehscipher_language: "Українською"
-  tutorial_codehscollision_language: "Українською"
-  tutorial_codehsmath_language: "Українською"
-  tutorial_codehsmusic_language: "Українською"
-  tutorial_codehssports_language: "Українською"
-  tutorial_codemojipizza_language: "Українською"
-  tutorial_moonlander_language: "Українською"
-  tutorial_sushicards_language: "Українською"
+  tutorial_ccplay_language: "Англійською"
+  tutorial_grinch_language: "Англійською"
+  tutorial_codehsart_language: "Англійською"
+  tutorial_codehsbitcoin_language: "Англійською"
+  tutorial_codehsblockchain_language: "Англійською"
+  tutorial_codehscipher_language: "Англійською"
+  tutorial_codehscollision_language: "Англійською"
+  tutorial_codehsmath_language: "Англійською"
+  tutorial_codehsmusic_language: "Англійською"
+  tutorial_codehssports_language: "Англійською"
+  tutorial_codemojipizza_language: "Англійською"
+  tutorial_moonlander_language: "Англійською"
+  tutorial_sushicards_language: "Англійською"
   tutorial_codesparkcreate_language: "Українська, азербайджанська, англійська, арабська, гінді, грецька, індонезійська, ісландська, іспанська, італійська, китайська, корейська, нідерландська, німецька, норвезька, польська, португальська, румунська, російська, сербська, турецька, угорська, французька, шведська, японська"
-  tutorial_hardvsoft_language: "Українською"
+  tutorial_hardvsoft_language: "Англійською"
   tutorial_codestersecard_language: "Chinese, English, Spanish"
   tutorial_codesterslogo_language: "Chinese, English, Spanish"
   tutorial_codesterstshirt_language: "Chinese, English, Spanish"
   tutorial_codewards_language: "English, French, Russian, Spanish, Turkish"
   tutorial_olympics_language: "English, French, Russian, Spanish"
-  tutorial_codinismhero_language: "Українською"
+  tutorial_codinismhero_language: "Англійською"
   tutorial_discovery_language: "English, Spanish (Mexico)"
   tutorial_csfirstname_language: "English, Spanish (Mexico)"
   tutorial_obstaclecourse_language: "Chinese, English, French, German, Italian, Spanish"
-  tutorial_edisonmove_language: "Українською"
-  tutorial_edisonspider_language: "Українською"
-  tutorial_edisonspotlight_language: "Українською"
-  tutorial_firiapython_language: "Українською"
-  tutorial_gamefrootsquid_language: "Українською"
-  tutorial_duckpiano_language: "Українською"
-  tutorial_gpsound_language: "Українською"
-  tutorial_groklearningpython_language: "Українською"
-  tutorial_htmltimetravel_language: "Українською"
-  tutorial_hp_flappy_language: "Українською"
-  tutorial_appytappin_language: "Українською"
-  tutorial_icipher_language: "Українською"
-  tutorial_iguess_language: "Українською"
-  tutorial_imake_language: "Українською"
-  tutorial_imorse_language: "Українською"
-  tutorial_kanohp_language: "Українською"
+  tutorial_edisonmove_language: "Англійською"
+  tutorial_edisonspider_language: "Англійською"
+  tutorial_edisonspotlight_language: "Англійською"
+  tutorial_firiapython_language: "Англійською"
+  tutorial_gamefrootsquid_language: "Англійською"
+  tutorial_duckpiano_language: "Англійською"
+  tutorial_gpsound_language: "Англійською"
+  tutorial_groklearningpython_language: "Англійською"
+  tutorial_htmltimetravel_language: "Англійською"
+  tutorial_hp_flappy_language: "Англійською"
+  tutorial_appytappin_language: "Англійською"
+  tutorial_icipher_language: "Англійською"
+  tutorial_iguess_language: "Англійською"
+  tutorial_imake_language: "Англійською"
+  tutorial_imorse_language: "Англійською"
+  tutorial_kanohp_language: "Англійською"
   tutorial_khanwebpages_language: "English, Italian, Polish, Portuguese, Serbian, Spanish"
-  tutorial_kibobowl_language: "Українською"
-  tutorial_kibodance_language: "Українською"
-  tutorial_buildcharacters_language: "Українською"
-  tutorial_designgames_language: "Українською"
-  tutorial_makelevels_language: "Українською"
-  tutorial_wizard_language: "Українською"
-  tutorial_mbscratchcards_language: "Українською"
-  tutorial_mbswiftplaygrounds_language: "Українською"
-  tutorial_mbbuttons_language: "Українською"
-  tutorial_meteor_language: "Українською"
-  tutorial_ballbounce_language: "Українською"
-  tutorial_mitcodi_language: "Українською"
-  tutorial_mitdoodle_language: "Українською"
-  tutorial_talktome_language: "Українською"
-  tutorial_mobilecspmap_language: "Українською"
-  tutorial_ozorandom_language: "Українською"
-  tutorial_ozotroll_language: "Українською"
-  tutorial_peblioart_language: "Українською"
+  tutorial_kibobowl_language: "Англійською"
+  tutorial_kibodance_language: "Англійською"
+  tutorial_buildcharacters_language: "Англійською"
+  tutorial_designgames_language: "Англійською"
+  tutorial_makelevels_language: "Англійською"
+  tutorial_wizard_language: "Англійською"
+  tutorial_mbscratchcards_language: "Англійською"
+  tutorial_mbswiftplaygrounds_language: "Англійською"
+  tutorial_mbbuttons_language: "Англійською"
+  tutorial_meteor_language: "Англійською"
+  tutorial_ballbounce_language: "Англійською"
+  tutorial_mitcodi_language: "Англійською"
+  tutorial_mitdoodle_language: "Англійською"
+  tutorial_talktome_language: "Англійською"
+  tutorial_mobilecspmap_language: "Англійською"
+  tutorial_ozorandom_language: "Англійською"
+  tutorial_ozotroll_language: "Англійською"
+  tutorial_peblioart_language: "Англійською"
   tutorial_astropi_language: "Arabic, Danish, Dutch, English, Finnish, French, German, Greek, Hungarian, Italian, Norwegian (Nynorsk), Other, Polish, Spanish, Swedish"
-  tutorial_rgart_language: "Українською"
-  tutorial_rgengineer_language: "Українською"
-  tutorial_rgmath_language: "Українською"
-  tutorial_rgscience_language: "Українською"
-  tutorial_rgtech_language: "Українською"
-  tutorial_robotmagic3d_language: "Українською"
-  tutorial_robotmagicflappy_language: "Українською"
+  tutorial_rgart_language: "Англійською"
+  tutorial_rgengineer_language: "Англійською"
+  tutorial_rgmath_language: "Англійською"
+  tutorial_rgscience_language: "Англійською"
+  tutorial_rgtech_language: "Англійською"
+  tutorial_robotmagic3d_language: "Англійською"
+  tutorial_robotmagicflappy_language: "Англійською"
   tutorial_scratchadventure_language: "Лише англійська"
   tutorial_scratchtalk_language: "Лише англійська"
-  tutorial_scratchjrstory_language: "Українською"
-  tutorial_scratchjrtwinkle_language: "Українською"
+  tutorial_scratchjrstory_language: "Англійською"
+  tutorial_scratchjrtwinkle_language: "Англійською"
   tutorial_spherocomm_language: "Arabic, Chinese, English, French, German, Hebrew, Italian, Japanese, Korean, Norwegian, Spanish, Swedish"
   tutorial_spherocommunity_language: "Arabic, Chinese, English, French, German, Hebrew, Italian, Japanese, Korean, Norwegian, Spanish, Swedish"
   tutorial_spherofunctions_language: "Arabic, Chinese, English, French, German, Hebrew, Italian, Japanese, Korean, Norwegian, Spanish, Swedish"
@@ -2770,38 +2776,38 @@ uk:
   tutorial_spherotext3_language: "Arabic, Chinese, English, French, German, Hebrew, Italian, Japanese, Korean, Norwegian, Spanish, Swedish"
   tutorial_spherotext4_language: "Arabic, Chinese, English, French, German, Hebrew, Italian, Japanese, Korean, Norwegian, Spanish, Swedish"
   tutorial_spheroraptor_language: "Arabic, Chinese, English, French, German, Hebrew, Italian, Japanese, Korean, Norwegian, Spanish, Swedish"
-  tutorial_stempiday_language: "Українською"
-  tutorial_stemplanetoids_language: "Українською"
-  tutorial_stempong_language: "Українською"
-  tutorial_algobot_language: "Українською"
-  tutorial_thunkableapps_language: "Українською"
+  tutorial_stempiday_language: "Англійською"
+  tutorial_stemplanetoids_language: "Англійською"
+  tutorial_stempong_language: "Англійською"
+  tutorial_algobot_language: "Англійською"
+  tutorial_thunkableapps_language: "Англійською"
   tutorial_toxicodedot_language: "English, French, German, Indonesian, Italian, Portuguese, Romanian, Spanish, Turkish"
-  tutorial_gcactions_language: "Українською"
-  tutorial_gccomparators_language: "Українською"
-  tutorial_gcconditions_language: "Українською"
+  tutorial_gcactions_language: "Англійською"
+  tutorial_gccomparators_language: "Англійською"
+  tutorial_gcconditions_language: "Англійською"
   tutorial_gccreate_language: "Англійська, французька"
-  tutorial_gcevents_language: "Українською"
-  tutorial_gcloops_language: "Українською"
-  tutorial_gcvariables_language: "Українською"
-  tutorial_beanything_language: "Українською"
-  tutorial_change_language: "Українською"
-  tutorial_cooking_language: "Українською"
-  tutorial_crystal_language: "Українською"
-  tutorial_landscape_language: "Українською"
-  tutorial_pets_language: "Українською"
-  tutorial_petvet_language: "Українською"
-  tutorial_superhero_language: "Українською"
-  tutorial_vidcodeplastic_language: "Українською"
-  tutorial_vidcodetypeface_language: "Українською"
-  tutorial_washustorm_language: "Українською"
-  tutorial_activitypackets_language: "Українською"
-  tutorial_googlerookie_language: "Українською"
-  tutorial_tommyturtle_language: "Українською"
+  tutorial_gcevents_language: "Англійською"
+  tutorial_gcloops_language: "Англійською"
+  tutorial_gcvariables_language: "Англійською"
+  tutorial_beanything_language: "Англійською"
+  tutorial_change_language: "Англійською"
+  tutorial_cooking_language: "Англійською"
+  tutorial_crystal_language: "Англійською"
+  tutorial_landscape_language: "Англійською"
+  tutorial_pets_language: "Англійською"
+  tutorial_petvet_language: "Англійською"
+  tutorial_superhero_language: "Англійською"
+  tutorial_vidcodeplastic_language: "Англійською"
+  tutorial_vidcodetypeface_language: "Англійською"
+  tutorial_washustorm_language: "Англійською"
+  tutorial_activitypackets_language: "Англійською"
+  tutorial_googlerookie_language: "Англійською"
+  tutorial_tommyturtle_language: "Англійською"
   tutorial_mazyad_language: "Arabic, English"
-  tutorial_gamemaker_language: "Українською"
+  tutorial_gamemaker_language: "Англійською"
   tutorial_duckrace_language: "Англійська, німецька"
-  tutorial_allcancodeapps_language: "Українською"
-  tutorial_n2y_language: "Українською"
+  tutorial_allcancodeapps_language: "Англійською"
+  tutorial_n2y_language: "Англійською"
   tutorial_danceparty_string_detail_grades: "Класи 2+"
   tutorial_chibitronics_string_detail_grades: "Дошкільнята - Клас 5"
   tutorial_athlete_string_detail_grades: "Класи 2+"
@@ -2881,7 +2887,7 @@ uk:
   tutorial_buildpong_string_detail_grades: "Класи 2+"
   tutorial_tynkerdrones_string_detail_grades: "Класи 2+"
   tutorial_carla_string_detail_grades: "Класи 6+"
-  tutorial_globaloria_string_detail_grades: "Класи 6+"
+  tutorial_zulama_string_detail_grades: "Класи 6+"
   tutorial_capost_string_detail_grades: "Класи 6+"
   tutorial_marco_string_detail_grades: "Класи 2-8"
   tutorial_codestersflappybike_string_detail_grades: "Класи 6+"
@@ -3459,7 +3465,7 @@ uk:
   tutorial_buildpong_string_platforms: "Всі сучасні браузери, планшет Android, телефон Android, iPad"
   tutorial_tynkerdrones_string_platforms: "Планшет Android, iPad"
   tutorial_carla_string_platforms: "Усі сучасні браузери"
-  tutorial_globaloria_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari"
+  tutorial_zulama_string_platforms: "Internet Explorer 11, Chrome, Firefox, Safari"
   tutorial_capost_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari"
   tutorial_marco_string_platforms: "Всі сучасні браузери, планшет Android, iPad"
   tutorial_codestersflappybike_string_platforms: "Усі сучасні браузери"
@@ -4037,7 +4043,7 @@ uk:
   tutorial_buildpong_string_detail_platforms: ""
   tutorial_tynkerdrones_string_detail_platforms: "Дрон Parrot, робот Sphero, робот Ollie"
   tutorial_carla_string_detail_platforms: ""
-  tutorial_globaloria_string_detail_platforms: ""
+  tutorial_zulama_string_detail_platforms: ""
   tutorial_capost_string_detail_platforms: ""
   tutorial_marco_string_detail_platforms: ""
   tutorial_codestersflappybike_string_detail_platforms: ""
@@ -4615,7 +4621,7 @@ uk:
   tutorial_buildpong_string_detail_programming_languages: "Блоки, Ready, Unity"
   tutorial_tynkerdrones_string_detail_programming_languages: "Блоки"
   tutorial_carla_string_detail_programming_languages: "Coffeescript"
-  tutorial_globaloria_string_detail_programming_languages: "JavaScript"
+  tutorial_zulama_string_detail_programming_languages: "JavaScript"
   tutorial_capost_string_detail_programming_languages: "HTML, CSS"
   tutorial_marco_string_detail_programming_languages: "Блоки"
   tutorial_codestersflappybike_string_detail_programming_languages: "Python"

@@ -10,9 +10,15 @@
   campaign_date_full: "4-10 دسمبر"
   campaign_date_year: "2017"
   campaign_date_full_year: "4-10، 2017"
-  hoc2019_header: 'Learn computer science. Change the world.'
-  hoc2019_header_line1_mobile: 'Learn computer science.'
-  hoc2019_header_line2_mobile: 'Change the world.'
+  hoc2019_header: 'کمپیوٹر سائینس سیکھیے اوردنیا بدلیے'
+  hoc2019_header_line1_mobile: 'کمپیوٹر سائینس سیکھیے'
+  hoc2019_header_line2_mobile: 'دنیا بدلیے'
+  social_hoc2019_every_sudent: 'Every student has the potential to change the world. Help them get started. #CSforGood'
+  social_hoc2019_learn_computer_science: 'Learn computer science. Change the world. #CSforGood #HourOfCode'
+  social_hoc_is_coming: 'The Hour of Code is coming!'
+  social_hoc2019_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn computer science. Change the world.'
+  social_hoc2019_coming_dates: 'The Hour of Code is coming December 9-15, 2019. Computer science is foundational for every student to learn.'
+  social_hoc2019_dance: 'Featuring Katy Perry, Jonas Brothers, Lil Nas X, Panic at the Disco, and many more!'
   codeorg_homepage_hoc2018_curriculum: 'آگے بڑھا <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org کورس</a>'
   codeorg_homepage_hoc2018_dance_heading: 'آپ کے اپنے <span class="highlight-word">رقص&nbsp;پارٹی</span> بنائیں'
   codeorg_homepage_hoc2018_header_line1: 'کوڈ کی گھڑی آ رہا ہے...'
@@ -569,7 +575,7 @@
   tutorial_buildpong_name: "AI کے ساتھ پونگ کی تعمیر کریں"
   tutorial_tynkerdrones_name: "پروگرام ڈرون اور روبوٹ"
   tutorial_carla_name: "کارلا کے ساتھ پروگرامنگ"
-  tutorial_globaloria_name: "گلوبلوریا کویسٹ بنائیں"
+  tutorial_zulama_name: "Zulama MakeQuest Video Game Activity"
   tutorial_capost_name: "HTML اور CSS کے ساتھ ڈیجیٹل پوسٹ کارڈ کی تعمیر کریں"
   tutorial_marco_name: "چلائیں مارکو!"
   tutorial_codestersflappybike_name: "Flappy Bike"
@@ -1147,7 +1153,7 @@
   tutorial_buildpong_shortdescription: "آرکیڈ کلاسک کی تعمیر کریں اور کمپیوٹر مصنوعی انٹیلی جنس کو آپ کے خلاف کھیلنے کے لئے دے دیں."
   tutorial_tynkerdrones_shortdescription: "آپ کے روبوٹ یا ڈرون کے لئے پروگرام کا کنٹرولر."
   tutorial_carla_shortdescription: "کارلا نامی ایک بات چیت مجازی روبوٹ پروگرامنگ کی طرف سے کوڈ جانیں!"
-  tutorial_globaloria_shortdescription: "ایک MakeQuest پر جاؤ! ہمارے کھیل کو شکست دینے کے لئے کوڈ میں ترمیم کریں، پھر اپنا اپنا بنائیں!"
+  tutorial_zulama_shortdescription: "Go on a MakeQuest! Modify code to beat our game, then build your own!"
   tutorial_capost_shortdescription: "ایک اچھی لگتی ہوئی چھٹی یا سالگرہ کے کارڈ کی تعمیر کے لئے کوڈ کا استعمال کریں."
   tutorial_marco_shortdescription: "ایک بصری پروگرامنگ زبان کے ساتھ مارکو کی رہنمائی کے لئے ایک immersive کھیل."
   tutorial_codestersflappybike_shortdescription: "کھلاڑی کنٹرول کے ساتھ کھیل بنائیں. رکاوٹوں کو دور کرنے کے دوران ہوا میں موٹر سائیکل رکھو!"
@@ -1725,7 +1731,7 @@
   tutorial_buildpong_longdescription: "پونگ قدیم ترین آرکیڈ ویڈیو گیمز میں سے ایک ہے اور بہت پہلے کھیل آرکیڈ ویڈیو گیم. یہ ٹیبل ٹینس کھیل کھیل ہے جس میں سادہ دو جہتی گرافکس موجود ہیں. اس کھیل کا مقصد پلیئر کے لئے کمپیوٹر کے سکور پر اسکور کرنے کے لئے ہے. اس منصوبے میں، کمپیوٹر بنیادی مصنوعی انٹیلی جنس کے ساتھ پروگرام کیا جاتا ہے لہذا یہ کھلاڑی کا جواب دے سکتا ہے."
   tutorial_tynkerdrones_longdescription: "\"کریش کورس\" پہیلیاں کو حل کرنے سے منسلک پروگرام کردہ آلات کو جانیں، جہاں آپ کو باہمی مداخلت کے ذریعہ مجازی ڈرونوں اور روبوٹوں کو منتقل کرنا ہے. اس کے بعد آپ حقیقی ڈرون اور روبوٹ کو کنٹرول کرنے کے لئے پروگرام تیار کرنے کے لئے تیار ہیں. ایک رکن یا لوڈ، اتارنا Android کی گولی اور ایک سپورٹ کھلونا کی ضرورت ہوتی ہے."
   tutorial_carla_longdescription: "\"کارلا کے ساتھ پروگرامنگ\" مختصر سرگرمیوں کی ایک سلسلہ ہے جس میں طالب علموں کو ایک سادہ چیٹ بٹ کی تعمیر کے ذریعہ رہنمائی، جبکہ متغیر اور کنسلٹنٹس جیسے بنیادی تصورات کے بارے میں سیکھنے. عام غلط فہمیوں کو حل کرنے کے لئے سرگرمیوں کو احتیاط سے ڈیزائن کیا گیا ہے کہ نئے پروگرامرز اس موضوع کے بارے میں بہت سارے مواقع پیش کرتے ہیں، اور ساتھ ہی نشانہ بنائے گئے اشارے اور آراء."
-  tutorial_globaloria_longdescription: "کویسٹ میں آپ کو ایک پلے باز کارروائی کے کھیل کے ذریعے جاوا اسکرپٹ کوڈ میں ترمیم کرنے اور سیکھنے اور افعال کی طرح ماسٹر کمپیوٹر سائنس تصورات میں ترمیم کرنا سیکھنا ہے. ریت خانے میں ہمارے کھیل کوڈ پر ریمکس اور توسیع کرکے اپنے اپنے کھیل بنائیں. اپنے دوستوں کو دوستوں کے ساتھ شائع اور اشتراک کریں! اساتذہ: سبق کی منصوبہ بندی اور موضوع کی مخصوص توسیع کی سرگرمیاں شامل ہیں."
+  tutorial_zulama_longdescription: "In this activity you will learn to edit JavaScript code through a playful action game and master computer science concepts like variables and functions. Create your own game in the Sandbox by remixing and expanding on existing game code. Then publish and share your game with friends and family. A scripted lesson guide is included for teachers."
   tutorial_capost_longdescription: "ایچ ٹی ایم ایل اور سی ایس ایس سیکھنا شروع کرنا اس ڈیجیٹل پوسٹ کارڈ کے ساتھ آسان اور مزہ ہے. دوستوں اور خاندان کے ساتھ اشتراک کرنے کے لئے چھٹی کارڈ یا سالگرہ کا جشن تخلیق کرنے کیلئے عنوانات، پیراگراف، تصاویر اور لنکس شامل کرنے کے بارے میں جانیں."
   tutorial_marco_longdescription: "طالب علم ایک حقیقی کہانی پر مبنی ایک ساہسک کھیل کھیلتے ہیں. وہ مارکو - مرکزی کردار - ہر سطح کے ذریعہ اس وقت کے کوڈ کی طرف سے استعمال کردہ بصری پروگرامنگ کی زبان کے طور پر قدم قدم قدم ہدایات دے کر رہنمائی کرتا ہے. انہیں حکم دینے کے بغیر حکموں، تکرار اور حالات ترتیب کرنے کے لئے متعارف کرایا جاتا ہے."
   tutorial_codestersflappybike_longdescription: "اس سرگرمی میں، طالب علموں کو اپنے ڈریگ ٹو ٹائٹ ٹول کٹ کو پٹون میں کوڈنگ شروع کرنے کے لئے استعمال کرتے ہیں! طالب علموں کو سیکھنے کی سرگرمیوں کی ایک سلسلہ کے ذریعہ ہدایت کی جاتی ہے جو انہیں مکمل کھیل بنانے کے لئے سکھائیں! وہ ختم کرنے کے بعد، وہ نئے کھیل بنانے کے لئے نحو، ڈاٹ نوٹ، واقعات، متغیرات، پیرامیٹرز اور کھیل میکانکس کے بارے میں کیا سیکھنے کے لئے چیلنج کر رہے ہیں."
@@ -2303,7 +2309,7 @@
   tutorial_buildpong_language: "انگریزی، پرتگالی (برازیل)، ہسپانوی"
   tutorial_tynkerdrones_language: "صرف انگریزی"
   tutorial_carla_language: "صرف انگریزی"
-  tutorial_globaloria_language: "انگریزی، ہسپانوی"
+  tutorial_zulama_language: "انگریزی، ہسپانوی"
   tutorial_capost_language: "انگریزی، ڈچ، ہسپانوی، روسی"
   tutorial_marco_language: "ایک سے زیادہ"
   tutorial_codestersflappybike_language: "انگریزی، ہسپانوی"
@@ -2881,7 +2887,7 @@
   tutorial_buildpong_string_detail_grades: "گریڈ 2+"
   tutorial_tynkerdrones_string_detail_grades: "گریڈ 2+"
   tutorial_carla_string_detail_grades: "Grades 6+"
-  tutorial_globaloria_string_detail_grades: "Grades 6+"
+  tutorial_zulama_string_detail_grades: "Grades 6+"
   tutorial_capost_string_detail_grades: "Grades 6+"
   tutorial_marco_string_detail_grades: "گرڈ 2-8"
   tutorial_codestersflappybike_string_detail_grades: "Grades 6+"
@@ -3459,7 +3465,7 @@
   tutorial_buildpong_string_platforms: "تمام جدید براؤزر، لوڈ، اتارنا Android ٹیبلٹ، لوڈ، اتارنا Android فون، رکن"
   tutorial_tynkerdrones_string_platforms: "لوڈ، اتارنا Android کی گولی، رکن"
   tutorial_carla_string_platforms: "جدید براؤزر"
-  tutorial_globaloria_string_platforms: "انٹرنیٹ ایکسپلورر 11، مائیکروسافٹ ایج، کروم، فائر فاکس، سفاری"
+  tutorial_zulama_string_platforms: "انٹرنیٹ ایکسپلورر 11، کروم، فائر فاکس، سفاری"
   tutorial_capost_string_platforms: "انٹرنیٹ ایکسپلورر 11، مائیکروسافٹ ایج، کروم، فائر فاکس، سفاری"
   tutorial_marco_string_platforms: "تمام جدید براؤزر، لوڈ، اتارنا Android ٹیبلٹ، رکن"
   tutorial_codestersflappybike_string_platforms: "جدید براؤزر"
@@ -4037,7 +4043,7 @@
   tutorial_buildpong_string_detail_platforms: ""
   tutorial_tynkerdrones_string_detail_platforms: "توتا ڈرون، سپیررو روبوٹ، Ollie روبوٹ"
   tutorial_carla_string_detail_platforms: ""
-  tutorial_globaloria_string_detail_platforms: ""
+  tutorial_zulama_string_detail_platforms: ""
   tutorial_capost_string_detail_platforms: ""
   tutorial_marco_string_detail_platforms: ""
   tutorial_codestersflappybike_string_detail_platforms: ""
@@ -4615,7 +4621,7 @@
   tutorial_buildpong_string_detail_programming_languages: "بلاکس، تیار، اتحاد"
   tutorial_tynkerdrones_string_detail_programming_languages: "بلاکس"
   tutorial_carla_string_detail_programming_languages: "کافی سکرپٹ"
-  tutorial_globaloria_string_detail_programming_languages: "جاوا اسکرپٹ"
+  tutorial_zulama_string_detail_programming_languages: "جاوا اسکرپٹ"
   tutorial_capost_string_detail_programming_languages: "ایچ ٹی ایم ایل، سی ایس ایس"
   tutorial_marco_string_detail_programming_languages: "بلاکس"
   tutorial_codestersflappybike_string_detail_programming_languages: "پادری"
