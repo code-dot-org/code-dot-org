@@ -51,7 +51,7 @@
 
     #gdpr-dialog
 
-    %script{src: webpack_asset_path('js/code-studio.js'), data: {gdpr: gdpr_data.to_json, usertype: user_type.to_json}}
+    %script{src: webpack_asset_path('js/code-studio.js'), data: {gdpr: gdpr_data.to_json, usertype: user_type.to_json, currentUserId: current_user.id}}
 
     .wrapper{style: ('background-color: #ffffff' if view_options[:white_background])}
       - unless view_options[:no_header]

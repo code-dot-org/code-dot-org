@@ -23,7 +23,7 @@ import {KeyCodes, TestResults, ResultType} from '../constants';
 var SquareType = tiles.SquareType;
 
 import '../util/svgelement-polyfill';
-import {SignInState} from '../code-studio/progressRedux';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 
 /**
  * Create a namespace for the application.

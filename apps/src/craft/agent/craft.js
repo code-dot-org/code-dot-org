@@ -24,7 +24,7 @@ import Sounds from '../../Sounds';
 
 import {TestResults} from '../../constants';
 import {captureThumbnailFromCanvas} from '../../util/thumbnail';
-import {SignInState} from '../../code-studio/progressRedux';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 
 const MEDIA_URL = '/blockly/media/craft/';
 

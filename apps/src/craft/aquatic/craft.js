@@ -20,7 +20,7 @@ import Sounds from '@cdo/apps/Sounds';
 
 import {TestResults} from '@cdo/apps/constants';
 import {captureThumbnailFromCanvas} from '@cdo/apps/util/thumbnail';
-import {SignInState} from '@cdo/apps/code-studio/progressRedux';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 
 var MEDIA_URL = '/blockly/media/craft/';
 

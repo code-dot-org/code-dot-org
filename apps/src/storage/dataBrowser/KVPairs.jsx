@@ -12,6 +12,7 @@ import React from 'react';
 import {changeView, showWarning} from '../redux/data';
 import {connect} from 'react-redux';
 import * as dataStyles from './dataStyles';
+import experiments from '../../util/experiments';
 
 const styles = {
   container: {
@@ -25,7 +26,7 @@ const styles = {
   }
 };
 
-class DataProperties extends React.Component {
+class KVPairs extends React.Component {
   static propTypes = {
     // from redux state
     view: PropTypes.oneOf(Object.keys(DataView)),
@@ -72,6 +73,32 @@ class DataProperties extends React.Component {
         display: this.state.showDebugView ? '' : 'none'
       }
     ];
+
+    const kvTable = (
+      <table style={keyValueDataStyle}>
+        <tbody>
+          <tr>
+            <th style={dataStyles.headerCell}>Key</th>
+            <th style={dataStyles.headerCell}>Value</th>
+            <th style={dataStyles.headerCell}>Actions</th>
+          </tr>
+
+          <AddKeyRow onShowWarning={this.props.onShowWarning} />
+
+          {Object.keys(this.props.keyValueData).map(key => (
+            <EditKeyRow
+              key={key}
+              keyName={key}
+              value={JSON.parse(this.props.keyValueData[key])}
+            />
+          ))}
+        </tbody>
+      </table>
+    );
+
+    if (experiments.isEnabled(experiments.APPLAB_DATASETS)) {
+      return kvTable;
+    }
     return (
       <div id="dataProperties" style={containerStyle}>
         <div style={dataStyles.viewHeader}>
@@ -101,25 +128,7 @@ class DataProperties extends React.Component {
 
         <div style={debugDataStyle}>{this.getKeyValueJson()}</div>
 
-        <table style={keyValueDataStyle}>
-          <tbody>
-            <tr>
-              <th style={dataStyles.headerCell}>Key</th>
-              <th style={dataStyles.headerCell}>Value</th>
-              <th style={dataStyles.headerCell}>Actions</th>
-            </tr>
-
-            <AddKeyRow onShowWarning={this.props.onShowWarning} />
-
-            {Object.keys(this.props.keyValueData).map(key => (
-              <EditKeyRow
-                key={key}
-                keyName={key}
-                value={JSON.parse(this.props.keyValueData[key])}
-              />
-            ))}
-          </tbody>
-        </table>
+        {kvTable}
       </div>
     );
   }
@@ -138,4 +147,4 @@ export default connect(
       dispatch(changeView(view));
     }
   })
-)(Radium(DataProperties));
+)(Radium(KVPairs));
