@@ -2,11 +2,10 @@ import 'babel-polyfill';
 import {setState, getState} from '../state';
 import {init as initScene} from '../init';
 import {Modes, ClassType} from '../constants';
-import {backgroundPathForMode, createButton} from '../helpers';
+import {createButton} from '../helpers';
 import SimpleTrainer from '../../utils/SimpleTrainer';
 import {generateOcean} from '../../utils/generateOcean';
 import {
-  drawBackground,
   drawTrainingFish,
   drawUpcomingFish,
   drawUiElements,

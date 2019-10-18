@@ -2,13 +2,8 @@ import 'babel-polyfill';
 import {setState, getState} from '../state';
 import {init as initScene} from '../init';
 import {Modes} from '../constants';
-import {backgroundPathForMode, createButton} from '../helpers';
-import {
-  drawBackground,
-  drawPondFish,
-  drawUiElements,
-  clearCanvas
-} from '../renderer';
+import {createButton} from '../helpers';
+import {drawPondFish, drawUiElements, clearCanvas} from '../renderer';
 
 const uiElements = [
   createButton({

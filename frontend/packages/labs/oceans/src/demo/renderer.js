@@ -2,16 +2,24 @@ import 'babel-polyfill';
 import _ from 'lodash';
 import {getState} from './state';
 import constants, {ClassType} from './constants';
-import {backgroundPathForMode} from './helpers';
+import {
+  backgroundPathForMode,
+  bodyAnchorFromType,
+  colorFromType,
+  randomInt
+} from './helpers';
 import {FishBodyPart} from '../utils/fishData';
 
 export const init = state => {
   drawBackground(backgroundPathForMode(state.currentMode));
+  // TODO: draw UI
 
   window.requestAnimFrame(render);
 };
 
 const render = () => {
+  // TODO: draw scene
+
   window.requestAnimFrame(render);
 };
 
@@ -246,43 +254,3 @@ window.requestAnimFrame = (() => {
     }
   );
 })();
-
-const bodyAnchorFromType = (body, type) => {
-  switch (type) {
-    case FishBodyPart.EYE:
-      return body.eyeAnchor;
-    case FishBodyPart.MOUTH:
-      return body.mouthAnchor;
-    case FishBodyPart.DORSAL_FIN:
-      return body.dorsalFinAnchor;
-    case FishBodyPart.PECTORAL_FIN:
-      return body.pectoralFinAnchor;
-    case FishBodyPart.TAIL:
-      return body.tailAnchor;
-    case FishBodyPart.BODY:
-      return body.anchor;
-    default:
-      return [0, 0];
-  }
-};
-
-const colorFromType = (palette, type) => {
-  switch (type) {
-    case FishBodyPart.MOUTH:
-      return palette.mouthRgb;
-    case FishBodyPart.DORSAL_FIN:
-    case FishBodyPart.PECTORAL_FIN:
-    case FishBodyPart.TAIL:
-      return palette.finRgb;
-    case FishBodyPart.BODY:
-      return palette.bodyRgb;
-    default:
-      return null;
-  }
-};
-
-const randomInt = (min, max) => {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-};
