@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import {expect} from '../../../../util/configuredChai';
+import {expect} from '../../../../util/deprecatedChai';
 import {
   CIRCUIT_PLAYGROUND_PORTS,
   CIRCUIT_PLAYGROUND_EXPRESS_PORTS,

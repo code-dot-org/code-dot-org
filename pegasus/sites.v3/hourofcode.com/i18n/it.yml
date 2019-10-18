@@ -13,6 +13,12 @@ it:
   hoc2019_header: 'Impara l''informatica e cambia il mondo.'
   hoc2019_header_line1_mobile: 'Impara l''informatica.'
   hoc2019_header_line2_mobile: 'Cambia il mondo.'
+  social_hoc2019_every_sudent: 'Every student has the potential to change the world. Help them get started. #CSforGood'
+  social_hoc2019_learn_computer_science: 'Learn computer science. Change the world. #CSforGood #HourOfCode'
+  social_hoc_is_coming: 'The Hour of Code is coming!'
+  social_hoc2019_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn computer science. Change the world.'
+  social_hoc2019_coming_dates: 'The Hour of Code is coming December 9-15, 2019. Computer science is foundational for every student to learn.'
+  social_hoc2019_dance: 'Featuring Katy Perry, Jonas Brothers, Lil Nas X, Panic at the Disco, and many more!'
   codeorg_homepage_hoc2018_curriculum: 'Approfondisci i <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">corsi di Code.org</a>'
   codeorg_homepage_hoc2018_dance_heading: 'Crea il tuo progetto in <span class="highlight-word">Ballando&nbsp;col&nbsp;codice</span>'
   codeorg_homepage_hoc2018_header_line1: 'L''Ora del Codice è in arrivo...'
@@ -569,7 +575,7 @@ it:
   tutorial_buildpong_name: "Costruire Pong con l'Intelligenza Artificiale"
   tutorial_tynkerdrones_name: "Programmare droni e robot"
   tutorial_carla_name: "Programmazione con Carla"
-  tutorial_globaloria_name: "Globaloria MakeQuest"
+  tutorial_zulama_name: "Zulama MakeQuest Video Game Activity"
   tutorial_capost_name: "Costruire una cartolina digitale con HTML e CSS"
   tutorial_marco_name: "Run Marco!"
   tutorial_codestersflappybike_name: "Flappy Bike"
@@ -1147,7 +1153,7 @@ it:
   tutorial_buildpong_shortdescription: "Build the arcade classic and give the computer artificial intelligence to play against you."
   tutorial_tynkerdrones_shortdescription: "Programmare un controller per il tuo robot o il tuo drone."
   tutorial_carla_shortdescription: "Imparare a programmare programmando un robot virtuale parlante chiamato Carla!"
-  tutorial_globaloria_shortdescription: "Inizia con MakeQuest! Modifica il codice per battere il nostro gioco, poi costruisci il tuo gioco!"
+  tutorial_zulama_shortdescription: "Go on a MakeQuest! Modify code to beat our game, then build your own!"
   tutorial_capost_shortdescription: "Usa la programmazione per costruire una fantastica cartolina o un biglietto di auguri."
   tutorial_marco_shortdescription: "Un gioco immersivo per guidare Marco usando un linguaggio di programmazione visuale."
   tutorial_codestersflappybike_shortdescription: "Crea un gioco controllato dal giocatore. Tieni la bici in aria mentre schivi gli ostacoli!"
@@ -1725,7 +1731,7 @@ it:
   tutorial_buildpong_longdescription: "Pong is one of the earliest arcade video games and the very first sports arcade video game. It is a table tennis sports game featuring simple two-dimensional graphics. The aim of the game is for the PLAYER to score on the COMPUTER while defending its GOAL. In this project, the COMPUTER is programmed with basic artificial intelligence so it can respond to the PLAYER."
   tutorial_tynkerdrones_longdescription: "Learn to program connected devices by solving the \"Crash Course\" puzzles, where you navigate virtual drones and robots through obstacles. Then you're ready to create programs to control real drones and robots. Requires an iPad or Android tablet and a supported toy."
   tutorial_carla_longdescription: "\"Programming with Carla\" is a series of short activities that guide students through building a simple chatbot, whilst learning about core concepts like variables and conditionals. The activities have been carefully designed to address common misconceptions that new programmers have about these topics by offering many opportunities for practice, as well as targeted hints and feedback.\n"
-  tutorial_globaloria_longdescription: "In MakeQuest you learn to edit JavaScript code through a playful action game, and master computer science concepts like variables and functions. Create your own game by remixing and expanding on our game code in the Sandbox. Publish and share your game with friends!  Teachers: lesson plans and subject-specific extension activities are included."
+  tutorial_zulama_longdescription: "In this activity you will learn to edit JavaScript code through a playful action game and master computer science concepts like variables and functions. Create your own game in the Sandbox by remixing and expanding on existing game code. Then publish and share your game with friends and family. A scripted lesson guide is included for teachers."
   tutorial_capost_longdescription: "Starting to learn HTML and CSS is easy and fun with this digital postcard. Learn about adding headings, paragraphs, images and links to create a holiday card or birthday celebration to share with friends and family."
   tutorial_marco_longdescription: "Students play an adventure game based on an original story. They guide Marco - the main character - through each level by giving him step-by-step instructions in the form of the visual programming language used by the Hour of Code. They get introduced to sequencing commands, iteration and conditions without even noticing it."
   tutorial_codestersflappybike_longdescription: "In questa attività, gli studenti utilizzano la programmazione a blocchi testuali (drag to text) per iniziare subito a programmare in Python! Gli studenti sono guidati attraverso una serie di attività di apprendimento che insegnano loro a costruire un gioco completo! Dopo aver finito, vengono incoraggiati ad utilizzare ciò che hanno imparato su sintassi, notazione col punto, eventi, variabili, parametri e meccaniche di gioco, per creare un nuovo gioco. "
@@ -2303,7 +2309,7 @@ it:
   tutorial_buildpong_language: "Solo in inglese"
   tutorial_tynkerdrones_language: "Solo in inglese"
   tutorial_carla_language: "Solo in inglese"
-  tutorial_globaloria_language: "Solo in inglese"
+  tutorial_zulama_language: "Solo in inglese"
   tutorial_capost_language: "English, Dutch, Spanish, Russian"
   tutorial_marco_language: "Multiple"
   tutorial_codestersflappybike_language: "Solo in inglese"
@@ -2881,7 +2887,7 @@ it:
   tutorial_buildpong_string_detail_grades: "Da 7 anni in su"
   tutorial_tynkerdrones_string_detail_grades: "Da 7 anni in su"
   tutorial_carla_string_detail_grades: "Da 11 anni in su"
-  tutorial_globaloria_string_detail_grades: "Da 11 anni in su"
+  tutorial_zulama_string_detail_grades: "Da 11 anni in su"
   tutorial_capost_string_detail_grades: "Da 11 anni in su"
   tutorial_marco_string_detail_grades: "Da 7 a 13 anni"
   tutorial_codestersflappybike_string_detail_grades: "Da 11 anni in su"
@@ -3459,7 +3465,7 @@ it:
   tutorial_buildpong_string_platforms: "All modern browsers, Android tablet, Android phone, iPad"
   tutorial_tynkerdrones_string_platforms: "Android tablet, iPad"
   tutorial_carla_string_platforms: "All modern browsers"
-  tutorial_globaloria_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari"
+  tutorial_zulama_string_platforms: "Internet Explorer 11, Chrome, Firefox, Safari"
   tutorial_capost_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari"
   tutorial_marco_string_platforms: "Tutti i browser moderni, Android, iOS"
   tutorial_codestersflappybike_string_platforms: "All modern browsers"
@@ -4037,7 +4043,7 @@ it:
   tutorial_buildpong_string_detail_platforms: ""
   tutorial_tynkerdrones_string_detail_platforms: "Parrot drone, Sphero robot, Ollie robot"
   tutorial_carla_string_detail_platforms: ""
-  tutorial_globaloria_string_detail_platforms: ""
+  tutorial_zulama_string_detail_platforms: ""
   tutorial_capost_string_detail_platforms: ""
   tutorial_marco_string_detail_platforms: ""
   tutorial_codestersflappybike_string_detail_platforms: ""
@@ -4615,7 +4621,7 @@ it:
   tutorial_buildpong_string_detail_programming_languages: "Blocks, Ready, Unity"
   tutorial_tynkerdrones_string_detail_programming_languages: "Blocchi"
   tutorial_carla_string_detail_programming_languages: "Coffeescript"
-  tutorial_globaloria_string_detail_programming_languages: "JavaScript"
+  tutorial_zulama_string_detail_programming_languages: "JavaScript"
   tutorial_capost_string_detail_programming_languages: "HTML, CSS"
   tutorial_marco_string_detail_programming_languages: "Blocchi"
   tutorial_codestersflappybike_string_detail_programming_languages: "Python"
