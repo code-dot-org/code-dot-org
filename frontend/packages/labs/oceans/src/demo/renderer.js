@@ -85,48 +85,6 @@ export const drawPredictingFish = state => {
   });
 };
 
-function drawPredictingUiElements(state) {
-  const container = uiContainer();
-  const buttons = [
-    {
-      text: 'predict next fish',
-      id: 'predict-button',
-      onClick: () => {
-        state.trainingIndex += 1;
-        setState(state);
-        drawPredictingScreen(state);
-      }
-    },
-    {
-      text: 'next',
-      id: 'next-button',
-      onClick: () => {
-        clearChildren(container);
-        const canvas = state.canvas;
-        setState({currentMode: Modes.Pond});
-        init(canvas);
-      }
-    }
-  ];
-
-  predictionText(state, res => {
-    const text = `prediction: ${strForClassType(res.predictedClassId)} @ ${
-      res.confidencesByClassId[res.predictedClassId]
-    }`;
-    renderText(container, 'predict-text', text);
-    buttons.forEach(button =>
-      renderButton(container, button.id, button.text, button.onClick)
-    );
-  });
-}
-
-function predictionText(state, onComplete) {
-  const fishDatum = state.fishData[state.trainingIndex];
-  state.trainer.predictFromData(fishDatum.fish.knnData).then(res => {
-    onComplete(res);
-  });
-}
-
 function initPondScreen(state) {
   loadBackgroundImage().then(backgroundImg => {
     renderBackgroundImage(backgroundImg);
@@ -201,11 +159,11 @@ function drawPondUiElements(state) {
   );
 }
 
-function loadFishImages(fish) {
+const loadFishImages = fish => {
   return Promise.all(fish.parts.map(loadFishImage));
-}
+};
 
-function loadFishImage(fishPart) {
+const loadFishImage = fishPart => {
   return new Promise((resolve, reject) => {
     const img = new Image();
     img.addEventListener('load', e => resolve({img, fishPart}));
@@ -214,9 +172,9 @@ function loadFishImage(fishPart) {
     });
     img.src = fishPart.src;
   });
-}
+};
 
-function drawFish(fish, results, ctx, x = 0, y = 0) {
+const drawFish = (fish, results, ctx, x = 0, y = 0) => {
   const body = results.find(
     result => result.fishPart.type === FishBodyPart.BODY
   ).fishPart;
@@ -267,7 +225,7 @@ function drawFish(fish, results, ctx, x = 0, y = 0) {
       FISH_CANVAS_HEIGHT
     );
   });
-}
+};
 
 function renderButton(container, id, text, onClick) {
   // If an element with this id already exists, destroy it.
@@ -291,11 +249,11 @@ function renderText(container, id, text) {
   container.appendChild(textEl);
 }
 
-function clearChildren(el) {
+const clearChildren = el => {
   while (el.firstChild) {
     el.removeChild(el.firstChild);
   }
-}
+};
 
 export const clearCanvas = canvas => {
   canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
@@ -309,12 +267,6 @@ function backgroundCanvas() {
   return document.getElementById('background-canvas');
 }
 
-function clearBackground() {
-  const canvas = backgroundCanvas();
-  const ctx = canvas.getContext('2d');
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-}
-
 const destroyElById = id => {
   const existingEl = document.getElementById(id);
   if (existingEl) {
@@ -322,7 +274,7 @@ const destroyElById = id => {
   }
 };
 
-function bodyAnchorFromType(body, type) {
+const bodyAnchorFromType = (body, type) => {
   switch (type) {
     case FishBodyPart.EYE:
       return body.eyeAnchor;
@@ -339,9 +291,9 @@ function bodyAnchorFromType(body, type) {
     default:
       return [0, 0];
   }
-}
+};
 
-function colorFromType(palette, type) {
+const colorFromType = (palette, type) => {
   switch (type) {
     case FishBodyPart.MOUTH:
       return palette.mouthRgb;
@@ -354,10 +306,10 @@ function colorFromType(palette, type) {
     default:
       return null;
   }
-}
+};
 
-function randomInt(min, max) {
+const randomInt = (min, max) => {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+};
