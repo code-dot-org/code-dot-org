@@ -28,7 +28,7 @@ const loadImage = imgPath => {
     const img = new Image();
     img.addEventListener('load', e => resolve(img));
     img.addEventListener('error', () => {
-      reject(new Error(`failed to load background image at #{imgPath}`));
+      reject(new Error(`failed to load image at #{imgPath}`));
     });
     img.src = imgPath;
   });
