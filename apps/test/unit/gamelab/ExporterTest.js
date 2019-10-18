@@ -410,14 +410,6 @@ describe('The Gamelab Exporter,', function() {
     });
   });
 
-  describe('globally exposed functions', () => {
-    beforeEach(() => {
-      // webpack-runtime must appear exactly once on any page containing webpack entries.
-      require('../../../build/package/js/webpack-runtime.js');
-      require('../../../build/package/js/gamelab-api.js');
-    });
-  });
-
   function runExportedApp(code, animationOpts, done, globalPromiseName) {
     const originalP5 = window.p5;
     const originalPreload = window.preload;
