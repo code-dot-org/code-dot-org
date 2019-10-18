@@ -47,7 +47,10 @@ export default class CourseOverviewTopRow extends Component {
           />
         ))}
         {experiments.isEnabled(experiments.ASSIGNMENT_UPDATES) && (
-          <SectionAssigner sections={sectionsInfo} />
+          <SectionAssigner
+            sections={sectionsInfo}
+            showAssignButton={showAssignButton}
+          />
         )}
       </div>
     );
