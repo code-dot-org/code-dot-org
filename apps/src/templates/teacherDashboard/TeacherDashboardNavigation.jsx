@@ -61,7 +61,8 @@ class TeacherDashboardNavigation extends Component {
         url: PropTypes.string.isRequired
       })
     ),
-    sectionId: PropTypes.number
+    sectionId: PropTypes.number,
+    userId: PropTypes.number
   };
 
   state = {
@@ -129,6 +130,7 @@ class TeacherDashboardNavigation extends Component {
       study: ' teacher_dashboard_actions',
       study_group: currentTab,
       event: 'click_new_tab',
+      user_id: this.props.userId,
       data_json: JSON.stringify({
         section_id: this.props.sectionId,
         new_tab: clickedTab
@@ -183,7 +185,8 @@ class TeacherDashboardNavigation extends Component {
   }
 }
 export default connect(state => ({
-  sectionId: state.sectionData.section.id
+  sectionId: state.sectionData.section.id,
+  userId: state.currentUser.userId
 }))(TeacherDashboardNavigation);
 
 const NAVBAR_HEIGHT = 50;

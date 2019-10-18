@@ -23,7 +23,8 @@ class SelectSectionDropdown extends React.Component {
   static propTypes = {
     // Provided by redux.
     sections: PropTypes.array,
-    selectedSectionId: PropTypes.number
+    selectedSectionId: PropTypes.number,
+    userId: PropTypes.number
   };
 
   onChange = event => {
@@ -40,6 +41,7 @@ class SelectSectionDropdown extends React.Component {
       study: ' teacher_dashboard_actions',
       study_group: currentTab,
       event: 'change_section',
+      user_id: this.props.userId,
       data_json: JSON.stringify({
         section_id: this.props.selectedSectionId,
         old_section_id: this.props.selectedSectionId,
@@ -74,5 +76,6 @@ export const UnconnectedSelectSectionDropdown = SelectSectionDropdown;
 
 export default connect(state => ({
   sections: getVisibleSections(state),
-  selectedSectionId: state.teacherSections.selectedSectionId
+  selectedSectionId: state.teacherSections.selectedSectionId,
+  userId: state.currentUser.userId
 }))(SelectSectionDropdown);
