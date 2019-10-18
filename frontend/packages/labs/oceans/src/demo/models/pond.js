@@ -1,3 +1,47 @@
+import 'babel-polyfill';
+import {setState, getState} from '../state';
+import {initModel} from './index';
+import {Modes, ClassType} from '../constants';
+import {
+  backgroundPathForMode,
+  createButton,
+  createText,
+  strForClassType
+} from '../helpers';
+import SimpleTrainer from '../../utils/SimpleTrainer';
+import {generateOcean} from '../../utils/generateOcean';
+import {
+  drawBackground,
+  drawPondFish,
+  drawUiElements,
+  clearCanvas
+} from '../renderer';
+
+const uiElements = [
+  createButton({
+    id: 'start-over-button',
+    text: 'start over',
+    onClick: () => onClickStartOver()
+  })
+];
+
 export const init = () => {
-  console.log('pond');
+  const state = getState();
+
+  drawBackground(backgroundPathForMode(state.currentMode));
+  drawScene(state);
+};
+
+const drawScene = state => {
+  // Clear main canvas before drawing.
+  clearCanvas(state.canvas);
+  drawPondFish(state);
+  drawUiElements(state.uiContainer, uiElements);
+};
+
+const onClickStartOver = () => {
+  const state = setState({currentMode: Modes.Training});
+  state.trainer.clearAll();
+  clearCanvas(state.canvas);
+  initModel(state);
 };

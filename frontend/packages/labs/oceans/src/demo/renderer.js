@@ -85,46 +85,35 @@ export const drawPredictingFish = state => {
   });
 };
 
-function initPondScreen(state) {
-  loadBackgroundImage().then(backgroundImg => {
-    renderBackgroundImage(backgroundImg);
-    drawPondScreen(state);
-    drawPondUiElements(state);
-  });
-}
-
-function drawPondScreen(state) {
-  drawPondFish(state);
-}
-
-function drawPondFish(state) {
+export const drawPondFish = state => {
   predictAllFish(state, fishWithConfidence => {
     fishWithConfidence = _.sortBy(fishWithConfidence, ['confidence']);
     const pondFish = fishWithConfidence.splice(0, 20);
+    const canvas = state.canvas;
 
-    pondFish.forEach(fishDatum => {
-      loadFishImages(fishDatum.fish).then(results => {
+    pondFish.forEach(fish => {
+      loadFishImages(fish).then(results => {
         const randomX = randomInt(
           FISH_CANVAS_WIDTH / 4,
-          state.canvas.width - FISH_CANVAS_WIDTH / 4
+          canvas.width - FISH_CANVAS_WIDTH / 4
         );
         const randomY = randomInt(
           FISH_CANVAS_HEIGHT / 4,
-          state.canvas.height - FISH_CANVAS_HEIGHT / 4
+          canvas.height - FISH_CANVAS_HEIGHT / 4
         );
-        drawFish(fishDatum.fish, results, state.ctx, randomX, randomY);
+        drawFish(fish, results, canvas.getContext('2d'), randomX, randomY);
       });
     });
   });
-}
+};
 
-function predictAllFish(state, onComplete) {
+const predictAllFish = (state, onComplete) => {
   let fishWithConfidence = [];
-  state.fishData.map((fishDatum, index) => {
-    state.trainer.predictFromData(fishDatum.fish.knnData).then(res => {
+  state.fishData.map((fish, index) => {
+    state.trainer.predictFromData(fish.knnData).then(res => {
       if (res.predictedClassId === ClassType.Like) {
         let data = {
-          ...fishDatum,
+          ...fish,
           confidence: res.confidencesByClassId[res.predictedClassId]
         };
         fishWithConfidence.push(data);
@@ -135,29 +124,7 @@ function predictAllFish(state, onComplete) {
       }
     });
   });
-}
-
-function drawPondUiElements(state) {
-  const container = uiContainer();
-  const buttons = [
-    {
-      text: 'start over',
-      id: 'start-over-button',
-      onClick: () => {
-        clearChildren(container);
-        const canvas = state.canvas;
-        state.currentMode = Modes.Training;
-        state.trainer.clearAll();
-        setState(state);
-        init(canvas);
-      }
-    }
-  ];
-
-  buttons.forEach(button =>
-    renderButton(container, button.id, button.text, button.onClick)
-  );
-}
+};
 
 const loadFishImages = fish => {
   return Promise.all(fish.parts.map(loadFishImage));
