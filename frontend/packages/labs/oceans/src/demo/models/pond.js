@@ -13,30 +13,30 @@ const uiElements = [
   })
 ];
 
-export const init = () => {
-  predictAllFish(getState(), fishWithConfidence => {
-    fishWithConfidence = _.sortBy(fishWithConfidence, ['confidence']);
-    const pondFish = fishWithConfidence.splice(0, 20);
-
-    setState({pondFish, uiElements});
-  });
+export const init = async () => {
+  let fishWithConfidence = await predictAllFish(getState());
+  fishWithConfidence = _.sortBy(fishWithConfidence, ['confidence']);
+  const pondFish = fishWithConfidence.splice(0, 20);
+  setState({pondFish, uiElements});
 };
 
-const predictAllFish = (state, onComplete) => {
-  let fishWithConfidence = [];
-  state.fishData.map((fish, index) => {
-    state.trainer.predictFromData(fish.knnData).then(res => {
-      if (res.predictedClassId === ClassType.Like) {
-        let data = {
-          ...fish,
-          confidence: res.confidencesByClassId[res.predictedClassId]
-        };
-        fishWithConfidence.push(data);
-      }
+const predictAllFish = state => {
+  return new Promise(resolve => {
+    let fishWithConfidence = [];
+    state.fishData.map((fish, index) => {
+      state.trainer.predictFromData(fish.knnData).then(res => {
+        if (res.predictedClassId === ClassType.Like) {
+          let data = {
+            ...fish,
+            confidence: res.confidencesByClassId[res.predictedClassId]
+          };
+          fishWithConfidence.push(data);
+        }
 
-      if (index === state.fishData.length - 1) {
-        onComplete(fishWithConfidence);
-      }
+        if (index === state.fishData.length - 1) {
+          resolve(fishWithConfidence);
+        }
+      });
     });
   });
 };
