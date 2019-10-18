@@ -6,6 +6,8 @@ import PopUpMenu from '../../lib/ui/PopUpMenu';
 import TeacherSectionSelectorMenuItem from './TeacherSectionSelectorMenuItem';
 import {sectionForDropdownShape} from './shapes';
 import SmallChevronLink from '@cdo/apps/templates/SmallChevronLink';
+import {updateQueryParam} from '@cdo/apps/code-studio/utils';
+import {reload} from '@cdo/apps/utils';
 
 const styles = {
   main: {
@@ -76,6 +78,10 @@ export default class TeacherSectionSelector extends Component {
 
   chooseMenuItem = section => {
     this.props.onChangeSection(section.id);
+    updateQueryParam('section_id', section.id);
+    // If we have a user_id when we switch sections we should get rid of it
+    updateQueryParam('user_id', undefined);
+    reload();
     this.closeMenu();
   };
 
