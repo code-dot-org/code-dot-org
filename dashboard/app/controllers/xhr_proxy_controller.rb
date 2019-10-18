@@ -73,9 +73,6 @@ class XhrProxyController < ApplicationController
     rejseplanen.dk
     maker.ifttt.com
     noaa.gov
-    nuevaschool.ngrok.io
-    nuevaschool2.ngrok.io
-    nuevaschool3.ngrok.io
     numbersapi.com
     random.org
     restcountries.eu

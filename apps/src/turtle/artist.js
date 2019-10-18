@@ -53,7 +53,7 @@ import {captureThumbnailFromCanvas} from '../util/thumbnail';
 import {blockAsXmlNode, cleanBlocks} from '../block_utils';
 import ArtistSkins from './skins';
 import dom from '../dom';
-import {SignInState} from '../code-studio/progressRedux';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import Visualization from '@code-dot-org/artist';
 import experiments from '../util/experiments';
 import {ArtistAutorunOptions} from '@cdo/apps/util/sharedConstants';

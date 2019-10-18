@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {SignInState} from '@cdo/apps/code-studio/progressRedux';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import ShareAllowedDialog from './ShareAllowedDialog';
 import ShareDisallowedDialog from './ShareDisallowedDialog';
 

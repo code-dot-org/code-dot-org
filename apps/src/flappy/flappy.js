@@ -24,7 +24,7 @@ import {getStore} from '../redux';
 import {TestResults, ResultType} from '../constants';
 import placeholder from '../../static/flappy/placeholder.jpg';
 import {dataURIFromURI} from '../imageUtils';
-import {SignInState} from '../code-studio/progressRedux';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 
 /**
  * Create a namespace for the application.

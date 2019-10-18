@@ -158,6 +158,7 @@ export default class Results extends React.Component {
           title="Workshop Rollups"
         >
           <SurveyRollupTable
+            courseName={this.props.courseName}
             rollups={this.props.workshopRollups.rollups}
             questions={this.props.workshopRollups.questions}
             facilitators={this.props.workshopRollups.facilitators}
@@ -175,6 +176,7 @@ export default class Results extends React.Component {
           title="Facilitator Rollups"
         >
           <SurveyRollupTable
+            courseName={this.props.courseName}
             rollups={this.props.facilitatorRollups.rollups}
             questions={this.props.facilitatorRollups.questions}
             facilitators={this.props.facilitatorRollups.facilitators}

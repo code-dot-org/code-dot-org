@@ -68,7 +68,7 @@ const turnRight90 = constants.turnRight90;
 const turnLeft90 = constants.turnLeft90;
 
 import {TestResults, ResultType, KeyCodes, SVG_NS} from '../constants';
-import {SignInState} from '../code-studio/progressRedux';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 
 // Whether we are showing debug information
 var showDebugInfo = false;
