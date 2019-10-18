@@ -104,7 +104,8 @@ export default class ScriptOverviewTopRow extends React.Component {
         )}
         {!professionalLearningCourse &&
           viewAs === ViewType.Teacher &&
-          showAssignButton && (
+          showAssignButton &&
+          !experiments.isEnabled(experiments.ASSIGNMENT_UPDATES) && (
             <AssignToSection
               sectionsInfo={sectionsInfo}
               courseId={currentCourseId}
