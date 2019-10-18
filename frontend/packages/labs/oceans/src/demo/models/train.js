@@ -1,5 +1,6 @@
 import 'babel-polyfill';
 import {setState, getState} from '../state';
+import {initModel} from './index';
 import {Modes, ClassType} from '../constants';
 import {backgroundPathForMode, createButton} from '../../utils/helpers';
 import SimpleTrainer from '../../utils/SimpleTrainer';
@@ -56,6 +57,6 @@ const onClassifyFish = doesLike => {
 };
 
 const onClickNext = () => {
-  setState({currentMode: Modes.Pond});
-  // init(canvas);
+  const state = setState({currentMode: Modes.Pond});
+  initModel(state);
 };

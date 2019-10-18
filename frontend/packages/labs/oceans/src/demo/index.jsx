@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import constants, {Modes} from './constants';
-import {initTraining, initPredicting, initPond} from './models';
-import {setState, getState} from './state';
+import {initModel} from './models';
+import {setState} from './state';
 
 $(document).ready(() => {
   // Set up initial state
@@ -10,7 +10,7 @@ $(document).ready(() => {
   canvas.width = backgroundCanvas.width = constants.canvasWidth;
   canvas.height = backgroundCanvas.height = constants.canvasHeight;
 
-  setState({
+  const state = setState({
     currentMode: Modes.Training,
     canvas,
     backgroundCanvas,
@@ -18,23 +18,5 @@ $(document).ready(() => {
   });
 
   // Initialize current model
-  initModel();
+  initModel(state);
 });
-
-// Initialize a model based on mode.
-// Should only be called when mode changes.
-function initModel() {
-  switch (getState().currentMode) {
-    case Modes.Training:
-      initTraining();
-      break;
-    case Modes.Predicting:
-      initPredicting();
-      break;
-    case Modes.Pond:
-      initPond();
-      break;
-    default:
-      console.error('Unrecognized mode specified.');
-  }
-}
