@@ -194,28 +194,6 @@ const drawFish = (fish, results, ctx, x = 0, y = 0) => {
   });
 };
 
-function renderButton(container, id, text, onClick) {
-  // If an element with this id already exists, destroy it.
-  destroyElById(id);
-
-  let btnEl = document.createElement('button');
-  btnEl.innerHTML = text;
-  btnEl.setAttribute('id', id);
-  btnEl.setAttribute('class', 'ui-button');
-  btnEl.addEventListener('click', onClick);
-  container.appendChild(btnEl);
-}
-
-function renderText(container, id, text) {
-  // If an element with this id already exists, destroy it.
-  destroyElById(id);
-
-  let textEl = document.createElement('div');
-  textEl.setAttribute('id', id);
-  textEl.innerHTML = text;
-  container.appendChild(textEl);
-}
-
 const clearChildren = el => {
   while (el.firstChild) {
     el.removeChild(el.firstChild);
@@ -225,14 +203,6 @@ const clearChildren = el => {
 export const clearCanvas = canvas => {
   canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
 };
-
-function uiContainer() {
-  return document.getElementById('ui-container');
-}
-
-function backgroundCanvas() {
-  return document.getElementById('background-canvas');
-}
 
 const destroyElById = id => {
   const existingEl = document.getElementById(id);
