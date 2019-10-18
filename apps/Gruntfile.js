@@ -867,17 +867,7 @@ describe('entry tests', () => {
                 return chunkNames.includes(chunk.name);
               },
               test(module) {
-                return [
-                  'babel-polyfill',
-                  'immutable',
-                  'lodash',
-                  'moment',
-                  'pepjs',
-                  'radium',
-                  'react',
-                  'react-dom',
-                  'wgxpath'
-                ].some(libName =>
+                return [].some(libName =>
                   new RegExp(`/apps/node_modules/${libName}/`).test(
                     module.resource
                   )
