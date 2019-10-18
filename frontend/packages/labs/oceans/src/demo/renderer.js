@@ -71,27 +71,19 @@ export const drawUiElements = (container, children) => {
   children.forEach(child => container.appendChild(child));
 };
 
-function initPredictingScreen(state) {
-  drawPredictingScreen(state);
-}
-
-function drawPredictingScreen(state) {
-  state.canvas
-    .getContext('2d')
-    .clearRect(0, 0, state.canvas.width, state.canvas.height);
-  drawPredictingFish(state);
-  drawPredictingUiElements(state);
-}
-
-function drawPredictingFish(state) {
+export const drawPredictingFish = state => {
+  const fish = state.fishData[state.trainingIndex];
   const canvas = state.canvas;
-  const ctx = canvas.getContext('2d');
-
-  const fishDatum = state.fishData[state.trainingIndex];
-  loadFishImages(fishDatum.fish).then(results => {
-    drawFish(fishDatum.fish, results, ctx, canvas.width / 2, canvas.height / 2);
+  loadFishImages(fish).then(results => {
+    drawFish(
+      fish,
+      results,
+      canvas.getContext('2d'),
+      canvas.width / 2,
+      canvas.height / 2
+    );
   });
-}
+};
 
 function drawPredictingUiElements(state) {
   const container = uiContainer();

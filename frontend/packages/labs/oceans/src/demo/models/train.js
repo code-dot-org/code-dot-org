@@ -2,7 +2,7 @@ import 'babel-polyfill';
 import {setState, getState} from '../state';
 import {initModel} from './index';
 import {Modes, ClassType} from '../constants';
-import {backgroundPathForMode, createButton} from '../../utils/helpers';
+import {backgroundPathForMode, createButton} from '../helpers';
 import SimpleTrainer from '../../utils/SimpleTrainer';
 import {generateOcean} from '../../utils/generateOcean';
 import {
@@ -24,7 +24,11 @@ const uiElements = [
     text: 'dislike',
     onClick: () => onClassifyFish(false)
   }),
-  createButton({id: 'next-button', text: 'next', onClick: onClickNext})
+  createButton({
+    id: 'next-button',
+    text: 'next',
+    onClick: () => onClickNext()
+  })
 ];
 
 export const init = () => {
@@ -34,7 +38,7 @@ export const init = () => {
 
   const state = setState({fishData, trainer});
 
-  drawBackground(backgroundPathForMode(Modes.Training));
+  drawBackground(backgroundPathForMode(state.currentMode));
   drawScene(state);
   drawUiElements(state.uiContainer, uiElements);
 };
@@ -57,6 +61,7 @@ const onClassifyFish = doesLike => {
 };
 
 const onClickNext = () => {
-  const state = setState({currentMode: Modes.Pond});
+  const state = setState({currentMode: Modes.Predicting});
+  clearCanvas(state.canvas);
   initModel(state);
 };

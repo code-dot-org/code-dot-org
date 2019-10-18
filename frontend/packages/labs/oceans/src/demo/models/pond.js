@@ -1,1 +1,3 @@
-export function init() {}
+export const init = () => {
+  console.log('pond');
+};
