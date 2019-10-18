@@ -1,6 +1,6 @@
 import 'babel-polyfill';
 import {setState, getState} from '../state';
-import {initModel} from './index';
+import {init as initScene} from '../init';
 import {Modes, ClassType} from '../constants';
 import {backgroundPathForMode, createButton} from '../helpers';
 import SimpleTrainer from '../../utils/SimpleTrainer';
@@ -37,8 +37,6 @@ export const init = () => {
   trainer.initializeClassifiersWithoutMobilenet();
 
   const state = setState({fishData, trainer});
-
-  drawBackground(backgroundPathForMode(state.currentMode));
   drawScene(state);
   drawUiElements(state.uiContainer, uiElements);
 };
@@ -63,5 +61,5 @@ const onClassifyFish = doesLike => {
 const onClickNext = () => {
   const state = setState({currentMode: Modes.Predicting});
   clearCanvas(state.canvas);
-  initModel(state);
+  initScene();
 };

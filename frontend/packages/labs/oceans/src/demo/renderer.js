@@ -1,8 +1,19 @@
 import 'babel-polyfill';
 import _ from 'lodash';
-import constants, {ClassType} from './constants';
-import {FishBodyPart} from '../utils/fishData';
 import {getState} from './state';
+import constants, {ClassType} from './constants';
+import {backgroundPathForMode} from './helpers';
+import {FishBodyPart} from '../utils/fishData';
+
+export const init = state => {
+  drawBackground(backgroundPathForMode(state.currentMode));
+
+  window.requestAnimFrame(render);
+};
+
+const render = () => {
+  window.requestAnimFrame(render);
+};
 
 export const drawBackground = imgPath => {
   const canvas = getState().backgroundCanvas;
@@ -222,6 +233,19 @@ const clearChildren = el => {
 export const clearCanvas = canvas => {
   canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
 };
+
+window.requestAnimFrame = (() => {
+  return (
+    window.requestAnimationFrame ||
+    window.webkitRequestAnimationFrame ||
+    window.mozRequestAnimationFrame ||
+    window.oRequestAnimationFrame ||
+    window.msRequestAnimationFrame ||
+    function(/* function */ callback, /* DOMElement */ element) {
+      window.setTimeout(callback, 1000 / 60);
+    }
+  );
+})();
 
 const bodyAnchorFromType = (body, type) => {
   switch (type) {

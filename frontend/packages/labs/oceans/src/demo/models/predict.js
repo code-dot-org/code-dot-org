@@ -1,6 +1,6 @@
 import 'babel-polyfill';
 import {setState, getState} from '../state';
-import {initModel} from './index';
+import {init as initScene} from '../init';
 import {Modes} from '../constants';
 import {
   backgroundPathForMode,
@@ -30,8 +30,6 @@ const staticUiElements = [
 
 export const init = () => {
   const state = getState();
-
-  drawBackground(backgroundPathForMode(state.currentMode));
   drawScene(state);
 };
 
@@ -75,5 +73,5 @@ const onClickPredict = () => {
 const onClickNext = () => {
   const state = setState({currentMode: Modes.Pond});
   clearCanvas(state.canvas);
-  initModel(state);
+  initScene();
 };

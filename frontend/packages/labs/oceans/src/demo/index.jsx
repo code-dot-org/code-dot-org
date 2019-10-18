@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import constants, {Modes} from './constants';
-import {initModel} from './models';
 import {setState} from './state';
+import {init as initScene} from './init';
 
 $(document).ready(() => {
   // Set up initial state
@@ -17,6 +17,5 @@ $(document).ready(() => {
     uiContainer: document.getElementById('ui-container')
   });
 
-  // Initialize current model
-  initModel(state);
+  initScene();
 });

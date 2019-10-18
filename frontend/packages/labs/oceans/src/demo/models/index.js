@@ -5,7 +5,7 @@ import {Modes} from '../constants';
 
 // Initialize a model based on mode.
 // Should only be called when mode changes.
-export const initModel = state => {
+export const init = state => {
   switch (state.currentMode) {
     case Modes.Training:
       initTraining();

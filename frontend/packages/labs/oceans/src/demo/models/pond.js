@@ -1,6 +1,6 @@
 import 'babel-polyfill';
 import {setState, getState} from '../state';
-import {initModel} from './index';
+import {init as initScene} from '../init';
 import {Modes} from '../constants';
 import {backgroundPathForMode, createButton} from '../helpers';
 import {
@@ -20,8 +20,6 @@ const uiElements = [
 
 export const init = () => {
   const state = getState();
-
-  drawBackground(backgroundPathForMode(state.currentMode));
   drawScene(state);
 };
 
@@ -36,5 +34,5 @@ const onClickStartOver = () => {
   const state = setState({currentMode: Modes.Training});
   state.trainer.clearAll();
   clearCanvas(state.canvas);
-  initModel(state);
+  initScene();
 };
