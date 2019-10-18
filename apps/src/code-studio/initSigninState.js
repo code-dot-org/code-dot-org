@@ -6,7 +6,6 @@ import cookies from 'js-cookie';
 import SignInOrAgeDialog from '@cdo/apps/templates/SignInOrAgeDialog';
 import {getStore} from './redux';
 import {
-  setCurrentUserId,
   setUserSignedIn,
   setUserType
 } from '@cdo/apps/templates/currentUserRedux';
@@ -40,7 +39,6 @@ export default function initSigninState(userType, currentUserId) {
   $(document).ready(() => {
     const store = getStore();
     store.dispatch(setUserSignedIn(getUserSignedInFromCookieAndDom()));
-    store.dispatch(setCurrentUserId(currentUserId));
     if (userType) {
       store.dispatch(setUserType(userType));
     }
