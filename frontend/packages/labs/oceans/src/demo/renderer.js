@@ -19,18 +19,22 @@ export const render = () => {
   if (prevState.uiElements !== state.uiElements) {
     drawUiElements(state);
   }
-  clearCanvas(state.canvas);
 
   switch (state.currentMode) {
     case Modes.Training:
+      clearCanvas(state.canvas);
       drawTrainingFish(state);
       drawUpcomingFish(state);
       break;
     case Modes.Predicting:
+      clearCanvas(state.canvas);
       drawPredictingFish(state);
       break;
     case Modes.Pond:
-      // drawPondFish(state);
+      if (prevState.pondFish !== state.pondFish) {
+        clearCanvas(state.canvas);
+        drawPondFish(state);
+      }
       break;
     default:
       console.error('Unrecognized mode specified.');
@@ -117,42 +121,18 @@ export const drawPredictingFish = state => {
 };
 
 export const drawPondFish = state => {
-  predictAllFish(state, fishWithConfidence => {
-    fishWithConfidence = _.sortBy(fishWithConfidence, ['confidence']);
-    const pondFish = fishWithConfidence.splice(0, 20);
-    const canvas = state.canvas;
-
-    pondFish.forEach(fish => {
-      loadFishImages(fish).then(results => {
-        const randomX = randomInt(
-          constants.fishCanvasWidth / 4,
-          canvas.width - constants.fishCanvasWidth / 4
-        );
-        const randomY = randomInt(
-          constants.fishCanvasHeight / 4,
-          canvas.height - constants.fishCanvasHeight / 4
-        );
-        drawFish(fish, results, canvas.getContext('2d'), randomX, randomY);
-      });
-    });
-  });
-};
-
-const predictAllFish = (state, onComplete) => {
-  let fishWithConfidence = [];
-  state.fishData.map((fish, index) => {
-    state.trainer.predictFromData(fish.knnData).then(res => {
-      if (res.predictedClassId === ClassType.Like) {
-        let data = {
-          ...fish,
-          confidence: res.confidencesByClassId[res.predictedClassId]
-        };
-        fishWithConfidence.push(data);
-      }
-
-      if (index === state.fishData.length - 1) {
-        onComplete(fishWithConfidence);
-      }
+  const canvas = state.canvas;
+  state.pondFish.forEach(fish => {
+    loadFishImages(fish).then(results => {
+      const randomX = randomInt(
+        constants.fishCanvasWidth / 4,
+        canvas.width - constants.fishCanvasWidth / 4
+      );
+      const randomY = randomInt(
+        constants.fishCanvasHeight / 4,
+        canvas.height - constants.fishCanvasHeight / 4
+      );
+      drawFish(fish, results, canvas.getContext('2d'), randomX, randomY);
     });
   });
 };
