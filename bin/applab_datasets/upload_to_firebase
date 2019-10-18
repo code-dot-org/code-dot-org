@@ -47,6 +47,10 @@ def get_weather_data
   return records, columns
 end
 
+def number?(num)
+  !Float(num).nil? rescue false
+end
+
 def parse_csv(filename)
   records = []
   id = 1
@@ -56,7 +60,8 @@ def parse_csv(filename)
     record.id = id
     id += 1
     table.headers.each do |col|
-      record[col] = row[col]
+      v = (number? row[col]) ? row[col].to_f : row[col]
+      record[col] = v
     end
     records.push(record.to_h.to_json)
   end
@@ -67,10 +72,10 @@ def main
   fb = FirebaseHelper.new('shared')
   if ARGV.empty?
     records, columns = get_weather_data
-    fb.delete_shared_table('openweathermap')
     fb.upload_shared_table('openweathermap', records, columns)
   else
     records, columns = parse_csv ARGV[0]
+    fb.delete_shared_table(ARGV[1])
     fb.upload_shared_table(ARGV[1], records, columns)
   end
 end
