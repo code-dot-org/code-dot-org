@@ -2,18 +2,20 @@
 title: Hour of Code Teacher Resources
 theme: responsive
 social:
-  "twitter:card": photo
-  "twitter:site": "@codeorg"
-  "twitter:url": "https://<%=request.host%>/hourofcode/overview"
-  "twitter:title": "<%= hoc_s(:hour_of_code) %>"
-  "twitter:description": "<%= hoc_s(:social_hoc2018_global_movement) %>"
-  "twitter:image:src": "<%= 'https://' + request.host + '/images/social-media/code-2018-creativity.png' %>"
-  "og:title": "<%= hoc_s(:hour_of_code) %>"
-  "og:description": "<%= hoc_s(:social_hoc2018_global_movement) %>"
-  "og:image" : "<%= 'https://' + request.host + '/images/social-media/code-2018-creativity.png' %>"
-  "og:image:width": '1200'
-  "og:image:height": '630'
+  twitter:card: photo
+  twitter:site: "@codeorg"
+  og:image:width: '1200'
+  og:image:height: '630'
 ---
+:ruby
+  @header["social"]["twitter:url"] = request.host
+  @header["social"]["twitter:title"] = hoc_s(:hour_of_code)
+  @header["social"]["twitter:description"] = hoc_s(:social_hoc2018_global_movement)
+  @header["social"]["twitter:image:src"] = 'https://' + request.host + '/images/social-media/code-2018-creativity.png'
+  @header["social"]["og:title"] = hoc_s(:hour_of_code)
+  @header["social"]["og:description"] = hoc_s(:social_hoc2018_global_movement)
+  @header["social"]["og:image"] = 'https://' + request.host + '/images/social-media/code-2018-creativity.png'
+
 %link{href: "/css/student.css", rel: "stylesheet"}
 %link{href: "/css/tools.css", rel: "stylesheet"}
 %link{href: "/shared/css/course-blocks.css", rel: "stylesheet", type: "text/css"}
