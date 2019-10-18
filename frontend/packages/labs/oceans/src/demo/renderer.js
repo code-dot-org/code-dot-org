@@ -204,13 +204,6 @@ export const clearCanvas = canvas => {
   canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
 };
 
-const destroyElById = id => {
-  const existingEl = document.getElementById(id);
-  if (existingEl) {
-    existingEl.remove();
-  }
-};
-
 const bodyAnchorFromType = (body, type) => {
   switch (type) {
     case FishBodyPart.EYE:
