@@ -122,7 +122,7 @@ class TeacherDashboardNavigation extends Component {
     }
   };
 
-  tabChanged = link => {
+  recordTabChanged = link => {
     const currentTab = _.last(_.split(window.location.pathname, '/'));
     const clickedTab = link.url.substring(1);
 
@@ -168,7 +168,7 @@ class TeacherDashboardNavigation extends Component {
             to={link.url}
             style={styles.linkContainer}
             activeStyle={styles.activeLinkContainer}
-            onClick={() => this.tabChanged(link)}
+            onClick={() => this.recordTabChanged(link)}
           >
             <div style={styles.link}>{link.label}</div>
           </NavLink>
