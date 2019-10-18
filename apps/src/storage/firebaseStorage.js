@@ -11,6 +11,7 @@ import {
   loadConfig,
   fixFirebaseKey,
   getRecordsRef,
+  getProjectCountersRef,
   getProjectDatabase,
   getSharedDatabase,
   resetConfigForTesting,
@@ -262,10 +263,10 @@ FirebaseStorage.readRecords = function(
 ) {
   tableName = fixTableName(tableName, onError);
 
-  const countersRef = getProjectDatabase().child('counters/tables/');
+  const countersRef = getProjectCountersRef(tableName);
   // First, check if table exists using counters/tables/ as source of truth
   countersRef.once('value', countersSnapshot => {
-    if (!countersSnapshot.val() || !countersSnapshot.val()[tableName]) {
+    if (!countersSnapshot.val()) {
       // Table doesn't exist. Return null instead of [] so we can show an error
       onSuccess(null);
       return;
@@ -462,7 +463,8 @@ FirebaseStorage.addCurrentTableToProject = function(
   onSuccess,
   onError
 ) {
-  return incrementRateLimitCounters()
+  return enforceUniqueTableNames(tableName)
+    .then(incrementRateLimitCounters)
     .then(loadConfig)
     .then(config => {
       return enforceTableCount(config, tableName);
@@ -476,7 +478,8 @@ FirebaseStorage.addCurrentTableToProject = function(
 };
 
 FirebaseStorage.copyStaticTable = function(tableName, onSuccess, onError) {
-  return incrementRateLimitCounters()
+  return enforceUniqueTableNames(tableName)
+    .then(incrementRateLimitCounters)
     .then(loadConfig)
     .then(config => {
       return enforceTableCount(config, tableName);
@@ -487,9 +490,7 @@ FirebaseStorage.copyStaticTable = function(tableName, onSuccess, onError) {
         .once('value');
     })
     .then(snapshot => {
-      getProjectDatabase()
-        .child(`counters/tables/${tableName}`)
-        .set(snapshot.val());
+      getProjectCountersRef(tableName).set(snapshot.val());
     })
     .then(() => {
       return getSharedDatabase()
@@ -502,6 +503,26 @@ FirebaseStorage.copyStaticTable = function(tableName, onSuccess, onError) {
     .then(onSuccess, onError);
 };
 
+function enforceUniqueTableNames(tableName) {
+  const checkForExistingTable = (dbRef, tableName) => {
+    return dbRef.once('value').then(snapshot => {
+      if (snapshot.val()) {
+        return Promise.reject(
+          `There is already a table with name "${tableName}"`
+        );
+      }
+    });
+  };
+
+  return Promise.all([
+    checkForExistingTable(getProjectCountersRef(tableName), tableName),
+    checkForExistingTable(
+      getProjectDatabase().child(`current_tables/${tableName}`),
+      tableName
+    )
+  ]);
+}
+
 /**
  * Adds an entry for the table in Firebase under counters/tables, making the table
  * show up in the data browser and also count toward the table count limit.
@@ -510,16 +531,15 @@ FirebaseStorage.copyStaticTable = function(tableName, onSuccess, onError) {
  * @param {function(string)} onError
  */
 FirebaseStorage.createTable = function(tableName, onSuccess, onError) {
-  return validateTableName(tableName)
+  return enforceUniqueTableNames(tableName)
+    .then(() => validateTableName(tableName))
     .then(incrementRateLimitCounters)
     .then(loadConfig)
     .then(config => {
       return enforceTableCount(config, tableName);
     })
     .then(() => {
-      const countersRef = getProjectDatabase().child(
-        `counters/tables/${tableName}`
-      );
+      const countersRef = getProjectCountersRef(tableName);
       countersRef
         .transaction(countersData => {
           if (countersData === null) {
@@ -555,9 +575,7 @@ FirebaseStorage.deleteTable = function(tableName, type, onSuccess, onError) {
       .then(onSuccess, onError);
   } else {
     const tableRef = getProjectDatabase().child(`storage/tables/${tableName}`);
-    const countersRef = getProjectDatabase().child(
-      `counters/tables/${tableName}`
-    );
+    const countersRef = getProjectCountersRef(tableName);
     tableRef
       .set(null)
       .then(() => countersRef.set(null))
@@ -577,9 +595,7 @@ FirebaseStorage.clearTable = function(tableName, onSuccess, onError) {
   tableRef
     .set(null)
     .then(() => {
-      const rowCountRef = getProjectDatabase().child(
-        `counters/tables/${tableName}/rowCount`
-      );
+      const rowCountRef = getProjectCountersRef(tableName).child('rowCount');
       return rowCountRef.set(0);
     })
     .then(onSuccess, onError);
@@ -940,9 +956,7 @@ function overwriteTableData(tableName, recordsData) {
   const recordsRef = getProjectDatabase().child(
     `storage/tables/${tableName}/records`
   );
-  const countersRef = getProjectDatabase().child(
-    `counters/tables/${tableName}`
-  );
+  const countersRef = getProjectCountersRef(tableName);
   return getColumnsRef(getProjectDatabase(), tableName)
     .set(null)
     .then(() => recordsRef.set(recordsData))
