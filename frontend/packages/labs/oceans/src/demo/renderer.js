@@ -3,6 +3,10 @@ import _ from 'lodash';
 import constants, {ClassType} from './constants';
 import {FishBodyPart} from '../utils/fishData';
 import {getState} from './state';
+import CanvasCache from './canvasCache';
+
+const canvasCache = new CanvasCache();
+
 
 export const drawBackground = imgPath => {
   const canvas = getState().backgroundCanvas;
@@ -167,11 +171,12 @@ const drawFish = (fish, results, ctx, x = 0, y = 0) => {
   const bodyAnchor = bodyAnchorFromType(body, body.type);
   results = _.orderBy(results, ['fishPart.type']);
 
+  let intermediateCanvas = canvasCache.getClearCanvas();
   results.forEach(result => {
-    let intermediateCanvas = document.createElement('canvas');
     intermediateCanvas.width = constants.fishCanvasWidth;
     intermediateCanvas.height = constants.fishCanvasHeight;
     let intermediateCtx = intermediateCanvas.getContext('2d');
+    intermediateCtx.clearRect(0,0,constants.fishCanvasWidth, constants.fishCanvasHeight);
     let anchor = [0, 0];
     if (result.fishPart.type !== FishBodyPart.BODY) {
       const bodyAnchor = bodyAnchorFromType(body, result.fishPart.type);
@@ -216,6 +221,7 @@ const drawFish = (fish, results, ctx, x = 0, y = 0) => {
       constants.fishCanvasHeight
     );
   });
+  canvasCache.releaseCanvas(intermediateCanvas);
 };
 
 const clearChildren = el => {
