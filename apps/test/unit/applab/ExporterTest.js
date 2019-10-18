@@ -657,14 +657,6 @@ describe('Applab Exporter,', function() {
     });
   });
 
-  describe('globally exposed functions', () => {
-    beforeEach(() => {
-      // webpack-runtime must appear exactly once on any page containing webpack entries.
-      require('../../../build/package/js/webpack-runtime.js');
-      require('../../../build/package/js/applab-api.js');
-    });
-  });
-
   function runExportedApp(code, html, done, globalPromiseName) {
     server.respondImmediately = true;
     let zipPromise = Exporter.exportAppToZip('my-app', code, html);
