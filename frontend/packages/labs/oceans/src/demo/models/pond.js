@@ -1,9 +1,9 @@
 import 'babel-polyfill';
+import _ from 'lodash';
 import {setState, getState} from '../state';
 import {init as initScene} from '../init';
 import {Modes, ClassType} from '../constants';
 import {createButton} from '../helpers';
-import {drawPondFish, drawUiElements, clearCanvas} from '../renderer';
 
 const uiElements = [
   createButton({

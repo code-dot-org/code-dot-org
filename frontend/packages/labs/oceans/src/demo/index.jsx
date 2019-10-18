@@ -10,7 +10,7 @@ $(document).ready(() => {
   canvas.width = backgroundCanvas.width = constants.canvasWidth;
   canvas.height = backgroundCanvas.height = constants.canvasHeight;
 
-  const state = setState({
+  setState({
     currentMode: Modes.Training,
     canvas,
     backgroundCanvas,

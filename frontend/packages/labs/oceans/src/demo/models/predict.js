@@ -3,7 +3,6 @@ import {setState, getState} from '../state';
 import {init as initScene} from '../init';
 import {Modes} from '../constants';
 import {createButton, createText, strForClassType} from '../helpers';
-import {drawPredictingFish, drawUiElements, clearCanvas} from '../renderer';
 
 const staticUiElements = [
   createButton({

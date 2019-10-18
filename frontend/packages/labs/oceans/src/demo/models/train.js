@@ -5,12 +5,6 @@ import {Modes, ClassType} from '../constants';
 import {createButton} from '../helpers';
 import SimpleTrainer from '../../utils/SimpleTrainer';
 import {generateOcean} from '../../utils/generateOcean';
-import {
-  drawTrainingFish,
-  drawUpcomingFish,
-  drawUiElements,
-  clearCanvas
-} from '../renderer';
 
 const uiElements = [
   createButton({
@@ -35,7 +29,7 @@ export const init = () => {
   const trainer = new SimpleTrainer();
   trainer.initializeClassifiersWithoutMobilenet();
 
-  const state = setState({fishData, trainer, uiElements});
+  setState({fishData, trainer, uiElements});
 };
 
 const onClassifyFish = doesLike => {

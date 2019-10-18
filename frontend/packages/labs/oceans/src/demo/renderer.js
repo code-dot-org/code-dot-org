@@ -1,7 +1,7 @@
 import 'babel-polyfill';
 import _ from 'lodash';
 import {getState} from './state';
-import constants, {Modes, ClassType} from './constants';
+import constants, {Modes} from './constants';
 import {
   backgroundPathForMode,
   bodyAnchorFromType,
