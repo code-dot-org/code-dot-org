@@ -26,6 +26,7 @@ import {
   assignmentVersionShape,
   sectionForDropdownShape
 } from '@cdo/apps/templates/teacherDashboard/shapes';
+import experiments from '@cdo/apps/util/experiments';
 
 /**
  * Stage progress component used in level header and script overview.
@@ -155,7 +156,8 @@ class ScriptOverview extends React.Component {
             />
             {!professionalLearningCourse &&
               viewAs === ViewType.Teacher &&
-              (scriptHasLockableStages || scriptAllowsHiddenStages) && (
+              (scriptHasLockableStages || scriptAllowsHiddenStages) &&
+              !experiments.isEnabled(experiments.ASSIGNMENT_UPDATES) && (
                 <LabeledSectionSelector reloadOnSectionChange={true} />
               )}
             <ScriptOverviewTopRow
