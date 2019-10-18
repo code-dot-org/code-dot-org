@@ -1,7 +1,7 @@
 import fish from './fishData';
 //const _ = require('lodash');
 
-export const generateRandomFish = () => {
+export const generateRandomFish = id => {
   const bodies = Object.values(fish.bodies);
   const eyes = Object.values(fish.eyes);
   const mouths = Object.values(fish.mouths);
@@ -33,6 +33,7 @@ export const generateRandomFish = () => {
   ];
 
   return {
+    id,
     parts: [body, eye, mouth, sideFinFront, sideFinBack, topFin, tail],
     colorPalette,
     knnData
@@ -42,7 +43,7 @@ export const generateRandomFish = () => {
 export const generateOcean = numFish => {
   const ocean = [];
   for (var i = 0; i < numFish; ++i) {
-    ocean.push(generateRandomFish());
+    ocean.push(generateRandomFish(i));
   }
   return ocean;
 };

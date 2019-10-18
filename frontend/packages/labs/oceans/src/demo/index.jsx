@@ -1,60 +1,22 @@
 import $ from 'jquery';
-import {Modes} from './constants';
-import {init as initRenderer} from './renderer';
-import {init as initTraining} from './modes/training';
-import {init as initPredicting} from './modes/predicting';
-import {init as initPond} from './modes/pond';
-import {setState, getState} from './state';
-import {generateRandomFish} from '../utils/generateOcean';
-import SimpleTrainer from '../utils/SimpleTrainer';
+import constants, {Modes} from './constants';
+import {initModel} from './models';
+import {setState} from './state';
 
 $(document).ready(() => {
-  // Generate some fish
-  let fishes = [];
-  for (let i = 0; i < 1000; i++) {
-    fishes.push(getRandomFish(i));
-  }
-
-  // Set up state
-  const trainer = new SimpleTrainer();
-  trainer.initializeClassifiersWithoutMobilenet();
-  const initialState = {
-    currentMode: Modes.Training,
-    fishData: fishes,
-    trainer
-  };
-  setState(initialState);
-
-  // Initialize renderer
+  // Set up initial state
   const canvas = document.getElementById('activity-canvas');
-  initRenderer(canvas);
+  const backgroundCanvas = document.getElementById('background-canvas');
+  canvas.width = backgroundCanvas.width = constants.canvasWidth;
+  canvas.height = backgroundCanvas.height = constants.canvasHeight;
+
+  const state = setState({
+    currentMode: Modes.Training,
+    canvas,
+    backgroundCanvas,
+    uiContainer: document.getElementById('ui-container')
+  });
 
   // Initialize current model
-  initModel();
+  initModel(state);
 });
-
-// Initialize a model based on mode.
-// Should only be called when mode changes.
-function initModel() {
-  switch (getState().currentMode) {
-    case Modes.Training:
-      initTraining();
-      break;
-    case Modes.Predicting:
-      initPredicting();
-      break;
-    case Modes.Pond:
-      initPond();
-      break;
-    default:
-      console.error('No mode specified');
-  }
-}
-
-function getRandomFish(id) {
-  return {
-    id: id,
-    fish: generateRandomFish(),
-    canvas: null
-  };
-}
