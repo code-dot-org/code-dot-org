@@ -1,9 +1,8 @@
 # SurveyRollupDecoratorExperiment combines pieces of survey roll-up data from previous steps
 # of the survey pipeline and organize them in a format that the client view can consume.
-# @note This class will replace Pd::SurveyPipeline::SurveyRollupDecorator.
 
 module Pd::SurveyPipeline
-  class SurveyRollupDecoratorExperiment
+  class SurveyRollupDecorator
     # Create roll-up report to send to client.
     #
     # Return value is a Hash with following keys
