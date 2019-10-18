@@ -56,6 +56,7 @@ export default function initPage(scriptEditorData) {
     <Provider store={store}>
       <ScriptEditor
         beta={scriptEditorData.beta}
+        betaWarning={scriptEditorData.betaWarning}
         name={scriptEditorData.script.name}
         i18nData={scriptEditorData.i18n}
         hidden={valueOr(scriptData.hidden, true)}
