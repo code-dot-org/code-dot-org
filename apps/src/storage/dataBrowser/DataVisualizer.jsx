@@ -3,6 +3,7 @@ import Radium from 'radium';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
+import DropdownField from './DropdownField';
 import * as dataStyles from './dataStyles';
 import * as rowStyle from '@cdo/apps/applab/designElements/rowStyle';
 
@@ -35,49 +36,29 @@ class DataVisualizer extends React.Component {
     this.setState({isVisualizerOpen: false});
   };
 
-  handleChange = (field, value) => {
-    this.setState({[field]: value});
-  };
-
   render() {
-    const dropdownField = (fieldName, displayName, values) => (
-      <div id={fieldName} style={rowStyle.container}>
-        <label style={rowStyle.description}>{displayName}</label>
-        <select
-          value={this.state[fieldName]}
-          onChange={event => this.handleChange(fieldName, event.target.value)}
-        >
-          <option value="">Select</option>
-          {values.map(value => (
-            <option key={value} value={value}>
-              {value}
-            </option>
-          ))}
-        </select>
-      </div>
-    );
-
     const modalBody = (
       <div>
         <h1> Explore {this.props.tableName} </h1>
         <h2> Overview </h2>
         <div id="selection-area">
-          <div id="chartTitleRow" style={rowStyle.container}>
+          <div style={rowStyle.container}>
             <label style={rowStyle.description}>Chart Title</label>
             <input
               style={rowStyle.input}
+              value={this.state.chartTitle}
               onChange={event =>
-                this.handleChange('chartTitle', event.target.value)
+                this.setState({chartTitle: event.target.value})
               }
             />
           </div>
 
-          {dropdownField('chartType', 'Chart Type', [
-            'Bar Chart',
-            'Histogram',
-            'Cross Tab',
-            'Scatter Plot'
-          ])}
+          <DropdownField
+            displayName="Chart Type"
+            options={['Bar Chart', 'Histogram', 'Cross Tab', 'Scatter Plot']}
+            value={this.state.chartType}
+            onChange={e => this.setState({chartType: e.target.value})}
+          />
 
           {this.state.chartType === 'Histogram' && (
             <div id="numBinsRow" style={rowStyle.container}>
@@ -85,21 +66,35 @@ class DataVisualizer extends React.Component {
               <input
                 style={rowStyle.input}
                 value={this.state.numBins}
-                onChange={event =>
-                  this.handleChange('numBins', event.target.value)
-                }
+                onChange={event => this.setState({numBins: event.target.value})}
               />
             </div>
           )}
           {(this.state.chartType === 'Bar Chart' ||
-            this.state.chartType === 'Histogram') &&
-            dropdownField('values', 'Values', this.props.tableColumns)}
+            this.state.chartType === 'Histogram') && (
+            <DropdownField
+              displayName="Values"
+              options={this.props.tableColumns}
+              value={this.state.values}
+              onChange={e => this.setState({values: e.target.value})}
+            />
+          )}
 
           {(this.state.chartType === 'Cross Tab' ||
             this.state.chartType === 'Scatter Plot') && (
             <div>
-              {dropdownField('xValues', 'X Values', this.props.tableColumns)}
-              {dropdownField('yValues', 'Y Values', this.props.tableColumns)}
+              <DropdownField
+                displayName="X Values"
+                options={this.props.tableColumns}
+                value={this.state.xValues}
+                onChange={e => this.setState({xValues: e.target.value})}
+              />
+              <DropdownField
+                displayName="Y Values"
+                options={this.props.tableColumns}
+                value={this.state.yValues}
+                onChange={e => this.setState({yValues: e.target.value})}
+              />
             </div>
           )}
         </div>
@@ -108,7 +103,7 @@ class DataVisualizer extends React.Component {
     );
 
     return (
-      <span style={[{display: 'inline-block'}]}>
+      <span style={{display: 'inline-block'}}>
         <button
           type="button"
           style={dataStyles.whiteButton}
