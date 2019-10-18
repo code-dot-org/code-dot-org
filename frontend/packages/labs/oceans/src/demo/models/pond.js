@@ -14,20 +14,11 @@ const uiElements = [
 ];
 
 export const init = () => {
-  const state = getState();
-  drawScene(state);
-};
-
-const drawScene = state => {
-  // Clear main canvas before drawing.
-  clearCanvas(state.canvas);
-  drawPondFish(state);
-  drawUiElements(state.uiContainer, uiElements);
+  setState({uiElements});
 };
 
 const onClickStartOver = () => {
   const state = setState({currentMode: Modes.Training});
   state.trainer.clearAll();
-  clearCanvas(state.canvas);
   initScene();
 };

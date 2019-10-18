@@ -6,7 +6,8 @@ const initialState = {
   ctx: null,
   trainer: null,
   trainingIndex: 0,
-  uiContainer: null
+  uiContainer: null,
+  uiElements: []
 };
 let state = {...initialState};
 

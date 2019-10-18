@@ -35,16 +35,7 @@ export const init = () => {
   const trainer = new SimpleTrainer();
   trainer.initializeClassifiersWithoutMobilenet();
 
-  const state = setState({fishData, trainer});
-  drawScene(state);
-  drawUiElements(state.uiContainer, uiElements);
-};
-
-const drawScene = state => {
-  // Clear main canvas before drawing.
-  clearCanvas(state.canvas);
-  drawTrainingFish(state);
-  drawUpcomingFish(state);
+  const state = setState({fishData, trainer, uiElements});
 };
 
 const onClassifyFish = doesLike => {
@@ -54,11 +45,9 @@ const onClassifyFish = doesLike => {
   state.trainer.addExampleData(knnData, classId);
   state.trainingIndex += 1;
   setState({trainingIndex: state.trainingIndex});
-  drawScene(state);
 };
 
 const onClickNext = () => {
-  const state = setState({currentMode: Modes.Predicting});
-  clearCanvas(state.canvas);
+  setState({currentMode: Modes.Predicting});
   initScene();
 };

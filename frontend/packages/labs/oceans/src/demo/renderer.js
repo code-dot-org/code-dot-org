@@ -1,7 +1,7 @@
 import 'babel-polyfill';
 import _ from 'lodash';
 import {getState} from './state';
-import constants, {ClassType} from './constants';
+import constants, {Modes, ClassType} from './constants';
 import {
   backgroundPathForMode,
   bodyAnchorFromType,
@@ -10,33 +10,50 @@ import {
 } from './helpers';
 import {FishBodyPart} from '../utils/fishData';
 
-export const init = state => {
-  drawBackground(backgroundPathForMode(state.currentMode));
-  // TODO: draw UI
+let prevState = {};
 
+export const render = () => {
+  const state = getState();
+  drawBackground(state);
+
+  if (prevState.uiElements !== state.uiElements) {
+    drawUiElements(state);
+  }
+  clearCanvas(state.canvas);
+
+  switch (state.currentMode) {
+    case Modes.Training:
+      drawTrainingFish(state);
+      drawUpcomingFish(state);
+      break;
+    case Modes.Predicting:
+      drawPredictingFish(state);
+      break;
+    case Modes.Pond:
+      // drawPondFish(state);
+      break;
+    default:
+      console.error('Unrecognized mode specified.');
+  }
+
+  prevState = {...state};
   window.requestAnimFrame(render);
 };
 
-const render = () => {
-  // TODO: draw scene
-
-  window.requestAnimFrame(render);
-};
-
-export const drawBackground = imgPath => {
-  const canvas = getState().backgroundCanvas;
+export const drawBackground = state => {
+  const canvas = state.backgroundCanvas;
   if (!canvas) {
     return;
   }
 
-  if (!imgPath) {
+  const imgPath = backgroundPathForMode(state.currentMode);
+  if (imgPath) {
+    loadImage(imgPath).then(img => {
+      canvas.getContext('2d').drawImage(img, 0, 0, canvas.width, canvas.height);
+    });
+  } else {
     canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
-    return;
   }
-
-  loadImage(imgPath).then(img => {
-    canvas.getContext('2d').drawImage(img, 0, 0, canvas.width, canvas.height);
-  });
 };
 
 const loadImage = imgPath => {
@@ -64,9 +81,7 @@ export const drawTrainingFish = state => {
   const fish = state.fishData[state.trainingIndex];
   const fishXPos = frameXPos + (frameSize - constants.fishCanvasWidth) / 2;
   const fishYPos = frameYPos + (frameSize - constants.fishCanvasHeight) / 2;
-  loadFishImages(fish).then(results => {
-    drawSingleFish(fish, fishXPos, fishYPos, ctx);
-  });
+  drawSingleFish(fish, fishXPos, fishYPos, ctx);
 };
 
 export const drawUpcomingFish = state => {
@@ -84,9 +99,10 @@ export const drawUpcomingFish = state => {
   }
 };
 
-export const drawUiElements = (container, children) => {
-  clearChildren(container);
-  children.forEach(child => container.appendChild(child));
+export const drawUiElements = state => {
+  const container = state.uiContainer;
+  container.innerHTML = '';
+  state.uiElements.forEach(el => container.appendChild(el));
 };
 
 export const drawPredictingFish = state => {
@@ -230,12 +246,6 @@ const drawFish = (fish, results, ctx, x = 0, y = 0) => {
       constants.fishCanvasHeight
     );
   });
-};
-
-const clearChildren = el => {
-  while (el.firstChild) {
-    el.removeChild(el.firstChild);
-  }
 };
 
 export const clearCanvas = canvas => {
