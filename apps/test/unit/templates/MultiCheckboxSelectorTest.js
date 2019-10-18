@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/deprecatedChai';
 import sinon from 'sinon';
 
 import MultiCheckboxSelector from '@cdo/apps/templates/MultiCheckboxSelector';
