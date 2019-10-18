@@ -6,10 +6,10 @@ import cookies from 'js-cookie';
 import SignInOrAgeDialog from '@cdo/apps/templates/SignInOrAgeDialog';
 import {getStore} from './redux';
 import {
+  setCurrentUserId,
   setUserSignedIn,
   setUserType
-} from '@cdo/apps/code-studio/progressRedux';
-import {setCurrentUserId} from '@cdo/apps/templates/currentUserRedux';
+} from '@cdo/apps/templates/currentUserRedux';
 import {environmentSpecificCookieName} from '@cdo/apps/code-studio/utils';
 
 /**

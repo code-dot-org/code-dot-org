@@ -21,7 +21,7 @@ import {
   setRunIsStarting
 } from './redux';
 import trackEvent from '../util/trackEvent';
-import {SignInState} from '../code-studio/progressRedux';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import logToCloud from '../logToCloud';
 import {saveReplayLog} from '../code-studio/components/shareDialogRedux';
 import {

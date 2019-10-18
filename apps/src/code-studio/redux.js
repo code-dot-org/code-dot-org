@@ -12,7 +12,7 @@ import isRtl from './isRtlRedux';
 import responsive from './responsiveRedux';
 import publishDialog from '../templates/projects/publishDialog/publishDialogRedux';
 import verifiedTeacher from './verifiedTeacherRedux';
-import currentUser from '../templates/currentUserRedux';
+import currentUser from '@cdo/apps/templates/currentUserRedux';
 
 registerReducers({
   header,
