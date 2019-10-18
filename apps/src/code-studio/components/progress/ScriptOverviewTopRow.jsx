@@ -116,6 +116,7 @@ export default class ScriptOverviewTopRow extends React.Component {
           <SectionAssigner
             sections={sections}
             initialSelectedSectionId={selectedSectionId}
+            showAssignButton={showAssignButton}
           />
         )}
         {!professionalLearningCourse &&
