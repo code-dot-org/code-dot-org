@@ -135,7 +135,12 @@ window.CDOSounds = Sounds.getSingleton();
 const userType = document.querySelector(`script[data-usertype]`)
   ? getScriptData('usertype')
   : null;
+
+const currentUserId = document.querySelector(`script[data-currentUserId]`)
+  ? getScriptData('currentUserId')
+  : null;
+
 checkForUnsupportedBrowsersOnLoad();
 initHamburger();
-initSigninState(userType);
+initSigninState(userType, currentUserId);
 initResponsive();

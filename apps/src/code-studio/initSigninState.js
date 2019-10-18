@@ -9,6 +9,7 @@ import {
   setUserSignedIn,
   setUserType
 } from '@cdo/apps/code-studio/progressRedux';
+import {setCurrentUserId} from '@cdo/apps/templates/currentUserRedux';
 import {environmentSpecificCookieName} from '@cdo/apps/code-studio/utils';
 
 /**
@@ -35,10 +36,11 @@ export function getUserSignedInFromCookieAndDom() {
  * Determines signin state and dispatches to the store. Shows a dialog asking
  * the user for their age or to sign in if necessary.
  */
-export default function initSigninState(userType) {
+export default function initSigninState(userType, currentUserId) {
   $(document).ready(() => {
     const store = getStore();
     store.dispatch(setUserSignedIn(getUserSignedInFromCookieAndDom()));
+    store.dispatch(setCurrentUserId(currentUserId));
     if (userType) {
       store.dispatch(setUserType(userType));
     }
