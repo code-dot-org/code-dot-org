@@ -2,6 +2,7 @@ import 'babel-polyfill';
 import _ from 'lodash';
 import {getState} from './state';
 import constants, {Modes} from './constants';
+import CanvasCache from './canvasCache';
 import {
   backgroundPathForMode,
   bodyAnchorFromType,
@@ -19,6 +20,8 @@ var $time =
 let prevState = {};
 
 let currentModeStartTime = $time();
+
+const canvasCache = new CanvasCache();
 
 export const render = () => {
   const state = getState();
@@ -188,7 +191,7 @@ const loadFishImage = fishPart => {
 
 const drawSingleFish = (fish, fishXPos, fishYPos, ctx) => {
   if (!fish.canvas) {
-    fish.canvas = document.createElement('canvas');
+    fish.canvas = canvasCache.getCanvas(fish.id);
     fish.canvas.width = constants.fishCanvasWidth;
     fish.canvas.height = constants.fishCanvasHeight;
     loadFishImages(fish).then(results => {
@@ -216,11 +219,12 @@ const drawFish = (fish, results, ctx, x = 0, y = 0) => {
   const bodyAnchor = bodyAnchorFromType(body, body.type);
   results = _.orderBy(results, ['fishPart.type']);
 
+  const intermediateCanvas = canvasCache.getCanvas(`interediate-${fish.id}`);
   results.forEach(result => {
-    let intermediateCanvas = document.createElement('canvas');
     intermediateCanvas.width = constants.fishCanvasWidth;
     intermediateCanvas.height = constants.fishCanvasHeight;
     let intermediateCtx = intermediateCanvas.getContext('2d');
+    intermediateCtx.clearRect(0,0,constants.fishCanvasWidth, constants.fishCanvasHeight);
     let anchor = [0, 0];
     if (result.fishPart.type !== FishBodyPart.BODY) {
       const bodyAnchor = bodyAnchorFromType(body, result.fishPart.type);
