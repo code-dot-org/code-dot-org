@@ -7,7 +7,7 @@
       0.95
     ],
     "func": "repeatUntilComplete",
-    "blockText": "repeat until complete\n",
+    "blockText": "repeat forever\n",
     "args": [
       {
         "name": "SPRITE",

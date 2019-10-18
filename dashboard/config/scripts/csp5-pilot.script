@@ -52,6 +52,7 @@ level 'U3L07 Free Response Reflection_2018', progression: 'Check Your Understand
 
 stage 'Loops Investigate', flex_category: 'csp_loops'
 level 'CSP U5L6 SFLP 20-21', progression: 'Lesson Overview'
+level 'U5 Loops Investigate Coin Flipper Predict', progression: 'Coin Flipper App'
 level 'U5 Loops Investigate Coin Flipper', progression: 'Coin Flipper App'
 level 'U5 Loops Investigate Font Tester', progression: 'Font Tester App'
 
