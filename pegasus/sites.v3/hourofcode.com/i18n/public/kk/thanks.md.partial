@@ -1,22 +1,22 @@
 ---
-title: <%= hoc_s(:title_signup_thanks) %>
+title: Кодтау Сағатының иесі ретінде тіркелгеніңізге рахмет!
 layout: wide
 nav: how_to_nav
-
 social:
-  "og:title": "<%= hoc_s(:meta_tag_og_title) %>"
-  "og:description": "<%= hoc_s(:meta_tag_og_description) %>"
-  "og:image": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
-  "og:image:width": 1440
-  "og:image:height": 900
-  "og:url": "http://<%=request.host%>"
-
-  "twitter:card": player
-  "twitter:site": "@codeorg"
-  "twitter:url": "http://<%=request.host%>"
-  "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>"
-  "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
-  "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
+  og:title: Кодтау сағаты мұнда
+  og:description: Кодтау сағаты - 180 астам елдегі 45 астам тілде сөйлейтін әр жастағы
+    ондаған миллион оқушыны қамтитын жаһандық қозғалыс.
+  og:image: http://hourofcode.com/images/hourofcode-2015-video-thumbnail.png
+  og:image:width: 1440
+  og:image:height: 900
+  og:url: http://hourofcode.com
+  twitter:card: player
+  twitter:site: "@codeorg"
+  twitter:url: http://hourofcode.com
+  twitter:title: Кодтау сағаты мұнда
+  twitter:description: Кодтау сағаты - 180 астам елдегі 45 астам тілде сөйлейтін әр
+    жастағы ондаған миллион оқушыны қамтитын жаһандық қозғалыс.
+  twitter:image:src: http://hourofcode.com/images/hourofcode-2015-video-thumbnail.png
 ---
 
 # Кодтау Сағатының иесі ретінде тіркелгеніңізге рахмет!
