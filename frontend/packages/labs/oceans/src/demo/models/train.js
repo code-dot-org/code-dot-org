@@ -35,11 +35,11 @@ export const init = () => {
   const state = setState({fishData, trainer});
 
   drawBackground(backgroundPathForMode(Modes.Training));
-  drawTrainingScreen(state);
+  drawScene(state);
   drawUiElements(state.uiContainer, uiElements);
 };
 
-const drawTrainingScreen = state => {
+const drawScene = state => {
   // Clear main canvas before drawing.
   clearCanvas(state.canvas);
   drawTrainingFish(state);
@@ -53,7 +53,7 @@ const onClassifyFish = doesLike => {
   state.trainer.addExampleData(knnData, classId);
   state.trainingIndex += 1;
   setState({trainingIndex: state.trainingIndex});
-  drawTrainingScreen(state);
+  drawScene(state);
 };
 
 const onClickNext = () => {
