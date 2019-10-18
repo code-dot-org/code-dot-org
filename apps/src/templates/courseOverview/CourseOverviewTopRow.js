@@ -3,6 +3,9 @@ import React, {Component} from 'react';
 import AssignToSection from './AssignToSection';
 import Button from '@cdo/apps/templates/Button';
 import {stringForType, resourceShape} from './resourceType';
+import experiments from '@cdo/apps/util/experiments';
+import SectionAssigner from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
+import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 
 const styles = {
   main: {
@@ -13,12 +16,7 @@ const styles = {
 
 export default class CourseOverviewTopRow extends Component {
   static propTypes = {
-    sectionsInfo: PropTypes.arrayOf(
-      PropTypes.shape({
-        id: PropTypes.number.isRequired,
-        name: PropTypes.string.isRequired
-      })
-    ).isRequired,
+    sectionsInfo: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
     id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
     resources: PropTypes.arrayOf(resourceShape).isRequired,
@@ -30,13 +28,14 @@ export default class CourseOverviewTopRow extends Component {
 
     return (
       <div style={styles.main}>
-        {showAssignButton && (
-          <AssignToSection
-            sectionsInfo={sectionsInfo}
-            courseId={id}
-            assignmentName={title}
-          />
-        )}
+        {!experiments.isEnabled(experiments.ASSIGNMENT_UPDATES) &&
+          showAssignButton && (
+            <AssignToSection
+              sectionsInfo={sectionsInfo}
+              courseId={id}
+              assignmentName={title}
+            />
+          )}
         {resources.map(({type, link}) => (
           <Button
             key={type}
@@ -47,6 +46,9 @@ export default class CourseOverviewTopRow extends Component {
             color={Button.ButtonColor.blue}
           />
         ))}
+        {experiments.isEnabled(experiments.ASSIGNMENT_UPDATES) && (
+          <SectionAssigner sections={sectionsInfo} />
+        )}
       </div>
     );
   }
