@@ -12,6 +12,17 @@ function thread_init()
  
   -- con - represents the connection to MySQL
   con = drv:connect()
+
+  query_templates = {
+    [[SELECT *
+      FROM dashboard_production.users
+      WHERE deleted_at is null
+            AND id = $userId
+      ORDER BY id ASC limit 1]],
+    [[SELECT *
+      FROM dashboard_production.user_storage_ids
+      WHERE user_id = $userId limit 1]]
+  }
 end
  
 -- Called by sysbench when script is done executing
@@ -33,10 +44,10 @@ function event()
     userId = sb_rand(1, max_user_level_id)
   }
 
-  local query_template = "SELECT * FROM dashboard_production.users WHERE deleted_at is null AND id = $userId ORDER BY id ASC limit 1"
+  local random_template = query_templates[math.random(#query_templates)]
   -- Simple string interpolation from: https://hisham.hm/2016/01/04/string-interpolation-in-lua/
   -- "variable" names must be alphanumeric characters only.
-  local query = string.gsub(query_template, "%$(%w+)", vars)
+  local query = string.gsub(random_template, "%$(%w+)", vars)
 
   con:query(query)
 end
