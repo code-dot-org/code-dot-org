@@ -1304,9 +1304,9 @@ When /^I debug host$/ do
   puts "CDO.code_org_url: #{CDO.code_org_url}"
   result = @browser.execute_script("return window.dashboard.CODE_ORG_URL;")
   puts "window.dashboard.CODE_ORG_URL: #{result}"
-  href = @browser.execute_script("return $('.ui-test-gdpr-dialog-logout').attr('href')")
-  puts ".ui-test-gdpr-dialog-logout href: #{href}"
-  href = @browser.execute_script("return window.location;")
+  href = @browser.execute_script("return $('.ui-test-gdpr-dialog-privacy-link').attr('href')")
+  puts ".ui-test-gdpr-dialog-privacy-link href: #{href}"
+  href = @browser.execute_script("return window.location.href;")
   puts "window.location.href: #{href}"
 end
 
