@@ -163,7 +163,6 @@ const drawPondFishImages = () => {
   const canvas = getState().canvas;
   const ctx = canvas.getContext('2d');
   getState().pondFish.forEach(fish => {
-
     var swayValue = (($time() * 360) / (20 * 1000) + (fish.id + 1) * 10) % 360;
     var swayOffsetX = Math.sin(((swayValue * Math.PI) / 180) * 2) * 120;
     var swayOffsetY = Math.sin(((swayValue * Math.PI) / 180) * 6) * 8;
@@ -275,15 +274,14 @@ export const clearCanvas = canvas => {
 function drawOverlays() {
   // update fade
   var duration = $time() - currentModeStartTime;
-  var amount = 1 - (duration / 800);
+  var amount = 1 - duration / 800;
   if (amount < 0) {
     amount = 0;
   }
-  DrawFade(amount, "#000");
+  DrawFade(amount, '#000');
 }
 
-function DrawFade(amount, overlayColour)
-{
+function DrawFade(amount, overlayColour) {
   if (amount == 0) {
     return;
   }
@@ -295,8 +293,7 @@ function DrawFade(amount, overlayColour)
   canvasCtx.globalAlpha = 1;
 }
 
-function DrawFilledRect(x, y, w, h)
-{
+function DrawFilledRect(x, y, w, h) {
   x = Math.floor(x / 1);
   y = Math.floor(y / 1);
   w = Math.floor(w / 1);
