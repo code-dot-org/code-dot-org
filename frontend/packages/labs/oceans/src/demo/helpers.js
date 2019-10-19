@@ -1,4 +1,5 @@
 import {Modes, ClassType} from './constants';
+import {FishBodyPart} from '../utils/fishData';
 
 export const backgroundPathForMode = mode => {
   let imgName;
@@ -44,4 +45,44 @@ export const strForClassType = classType => {
     default:
       return 'unknown';
   }
+};
+
+export const bodyAnchorFromType = (body, type) => {
+  switch (type) {
+    case FishBodyPart.EYE:
+      return body.eyeAnchor;
+    case FishBodyPart.MOUTH:
+      return body.mouthAnchor;
+    case FishBodyPart.DORSAL_FIN:
+      return body.dorsalFinAnchor;
+    case FishBodyPart.PECTORAL_FIN:
+      return body.pectoralFinAnchor;
+    case FishBodyPart.TAIL:
+      return body.tailAnchor;
+    case FishBodyPart.BODY:
+      return body.anchor;
+    default:
+      return [0, 0];
+  }
+};
+
+export const colorFromType = (palette, type) => {
+  switch (type) {
+    case FishBodyPart.MOUTH:
+      return palette.mouthRgb;
+    case FishBodyPart.DORSAL_FIN:
+    case FishBodyPart.PECTORAL_FIN:
+    case FishBodyPart.TAIL:
+      return palette.finRgb;
+    case FishBodyPart.BODY:
+      return palette.bodyRgb;
+    default:
+      return null;
+  }
+};
+
+export const randomInt = (min, max) => {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 };

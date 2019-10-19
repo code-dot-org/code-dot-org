@@ -1,19 +1,8 @@
 import 'babel-polyfill';
 import {setState, getState} from '../state';
-import {initModel} from './index';
+import {init as initScene} from '../init';
 import {Modes} from '../constants';
-import {
-  backgroundPathForMode,
-  createButton,
-  createText,
-  strForClassType
-} from '../helpers';
-import {
-  drawBackground,
-  drawPredictingFish,
-  drawUiElements,
-  clearCanvas
-} from '../renderer';
+import {createButton, createText, strForClassType} from '../helpers';
 
 const staticUiElements = [
   createButton({
@@ -29,29 +18,19 @@ const staticUiElements = [
 ];
 
 export const init = () => {
-  const state = getState();
-
-  drawBackground(backgroundPathForMode(state.currentMode));
-  drawScene(state);
+  asyncSetUiElements(getState());
 };
 
-const drawScene = state => {
-  // Clear main canvas before drawing.
-  clearCanvas(state.canvas);
-  drawPredictingFish(state);
-  asyncDrawUiElements(state);
-};
-
-const asyncDrawUiElements = async state => {
-  const text = await loadPredictionText(state);
-  const elements = [
+const asyncSetUiElements = async state => {
+  const text = await predictFish(state);
+  const uiElements = [
     ...staticUiElements,
     createText({id: 'predict-text', text})
   ];
-  drawUiElements(state.uiContainer, elements);
+  setState({uiElements});
 };
 
-const loadPredictionText = state => {
+const predictFish = state => {
   return new Promise(resolve => {
     const fish = state.fishData[state.trainingIndex];
     state.trainer.predictFromData(fish.knnData).then(prediction => {
@@ -68,12 +47,11 @@ const loadPredictionText = state => {
 const onClickPredict = () => {
   let state = getState();
   state.trainingIndex += 1;
-  setState({trainingIndex: state.trainingIndex});
-  drawScene(state);
+  state = setState({trainingIndex: state.trainingIndex});
+  asyncSetUiElements(state);
 };
 
 const onClickNext = () => {
-  const state = setState({currentMode: Modes.Pond});
-  clearCanvas(state.canvas);
-  initModel(state);
+  setState({currentMode: Modes.Pond});
+  initScene();
 };

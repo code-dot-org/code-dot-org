@@ -1,14 +1,9 @@
 import 'babel-polyfill';
+import _ from 'lodash';
 import {setState, getState} from '../state';
-import {initModel} from './index';
-import {Modes} from '../constants';
-import {backgroundPathForMode, createButton} from '../helpers';
-import {
-  drawBackground,
-  drawPondFish,
-  drawUiElements,
-  clearCanvas
-} from '../renderer';
+import {init as initScene} from '../init';
+import {Modes, ClassType} from '../constants';
+import {createButton} from '../helpers';
 
 const uiElements = [
   createButton({
@@ -18,23 +13,36 @@ const uiElements = [
   })
 ];
 
-export const init = () => {
-  const state = getState();
-
-  drawBackground(backgroundPathForMode(state.currentMode));
-  drawScene(state);
+export const init = async () => {
+  let fishWithConfidence = await predictAllFish(getState());
+  fishWithConfidence = _.sortBy(fishWithConfidence, ['confidence']);
+  const pondFish = fishWithConfidence.splice(0, 20);
+  setState({pondFish, uiElements});
 };
 
-const drawScene = state => {
-  // Clear main canvas before drawing.
-  clearCanvas(state.canvas);
-  drawPondFish(state);
-  drawUiElements(state.uiContainer, uiElements);
+const predictAllFish = state => {
+  return new Promise(resolve => {
+    let fishWithConfidence = [];
+    state.fishData.map((fish, index) => {
+      state.trainer.predictFromData(fish.knnData).then(res => {
+        if (res.predictedClassId === ClassType.Like) {
+          let data = {
+            ...fish,
+            confidence: res.confidencesByClassId[res.predictedClassId]
+          };
+          fishWithConfidence.push(data);
+        }
+
+        if (index === state.fishData.length - 1) {
+          resolve(fishWithConfidence);
+        }
+      });
+    });
+  });
 };
 
 const onClickStartOver = () => {
   const state = setState({currentMode: Modes.Training});
   state.trainer.clearAll();
-  clearCanvas(state.canvas);
-  initModel(state);
+  initScene();
 };
