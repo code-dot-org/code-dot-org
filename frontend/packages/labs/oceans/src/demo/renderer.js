@@ -14,10 +14,13 @@ let prevState = {};
 
 export const render = () => {
   const state = getState();
-  drawBackground(state);
 
   if (prevState.uiElements !== state.uiElements) {
     drawUiElements(state);
+  }
+
+  if (state.currentMode !== prevState.currentMode) {
+    drawBackground(state);
   }
 
   switch (state.currentMode) {
