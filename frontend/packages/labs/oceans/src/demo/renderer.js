@@ -155,7 +155,6 @@ const drawPondFishImages = () => {
   const canvas = getState().canvas;
   const ctx = canvas.getContext('2d');
   getState().pondFish.forEach(fish => {
-
     var swayValue = (($time() * 360) / (20 * 1000) + (fish.id + 1) * 10) % 360;
     var swayOffsetX = Math.sin(((swayValue * Math.PI) / 180) * 2) * 120;
     var swayOffsetY = Math.sin(((swayValue * Math.PI) / 180) * 6) * 8;
