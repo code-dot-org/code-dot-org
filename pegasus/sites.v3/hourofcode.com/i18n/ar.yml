@@ -13,6 +13,12 @@ ar:
   hoc2019_header: 'تعلم علوم الحاسوب. غير العالم.'
   hoc2019_header_line1_mobile: 'تعلم علوم الحاسوب.'
   hoc2019_header_line2_mobile: 'غير العالم.'
+  social_hoc2019_every_sudent: 'Every student has the potential to change the world. Help them get started. #CSforGood'
+  social_hoc2019_learn_computer_science: 'Learn computer science. Change the world. #CSforGood #HourOfCode'
+  social_hoc_is_coming: 'The Hour of Code is coming!'
+  social_hoc2019_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn computer science. Change the world.'
+  social_hoc2019_coming_dates: 'The Hour of Code is coming December 9-15, 2019. Computer science is foundational for every student to learn.'
+  social_hoc2019_dance: 'Featuring Katy Perry, Jonas Brothers, Lil Nas X, Panic at the Disco, and many more!'
   codeorg_homepage_hoc2018_curriculum: 'واصل مع <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">دورات code.org</a>'
   codeorg_homepage_hoc2018_dance_heading: 'أنشئ <span class="highlight-word">رقصة&nbsp; الحفل الخاصة بك</span>'
   codeorg_homepage_hoc2018_header_line1: 'ساعة البرمجة قادمة...'
@@ -569,7 +575,7 @@ ar:
   tutorial_buildpong_name: "بناء بونغ مع الذكاء الصناعي"
   tutorial_tynkerdrones_name: "برنامج الطائرات بدون طيار والروبوتات"
   tutorial_carla_name: "البرمجة بواسطة Carla"
-  tutorial_globaloria_name: "البحث في منصة كلوبالوريا"
+  tutorial_zulama_name: "Zulama MakeQuest Video Game Activity"
   tutorial_capost_name: "أنشئ بطاقة بريدية بواسطة HTML وCSS"
   tutorial_marco_name: "شغل ماركو!"
   tutorial_codestersflappybike_name: "الدراجو النطاطة"
@@ -1147,7 +1153,7 @@ ar:
   tutorial_buildpong_shortdescription: "ابن ممرا كلاسيكيا وامنح الكمبيوتر الذكاء الاصطناعي للعب ضدك."
   tutorial_tynkerdrones_shortdescription: "برمج برنامج تحكم لروبوتك أو طائرتك بدون طيار."
   tutorial_carla_shortdescription: "تعلم الكود ببرمجة آلي افتراضي متكلم باسم كارلا!"
-  tutorial_globaloria_shortdescription: "اذهب إلى لعبة (MakeQuest) وغير الكود للفوز على لعبتنا، بعدها ابن لعبتك الخاصة بك!"
+  tutorial_zulama_shortdescription: "Go on a MakeQuest! Modify code to beat our game, then build your own!"
   tutorial_capost_shortdescription: "استعمل الكود لبناء بطاقة رائعة للعطلة أو عيد الميلاد."
   tutorial_marco_shortdescription: "لعبة منغمسة لتقودك بواسطة لغة برمجة بصرية."
   tutorial_codestersflappybike_shortdescription: "أنشئ لعبة مع المتحكمات في اللاعب. حافظ على الدراجة لتبقى في الهواء متجنبا العوائق!"
@@ -1725,7 +1731,7 @@ ar:
   tutorial_buildpong_longdescription: "(Pong) لعبة ممرات في نسخة فيديو من الألعاب القديمة والسباقة في مجال الرياضة. إنها لعبة فيها طاولة تنيس ثنائية الأبعاد. مهمة اللاعب هي تسجيل النقاط على الكمبيوتر بالدفاع عن مرماه. في هذا المشروع، الحاسوب مبرمج بواسطة ذكاء اصطناعي أساسي مما يجعله يتفاعل مع اللاعب."
   tutorial_tynkerdrones_longdescription: "تعلم برمجة الاجهزة المتصلة بحل ألغاز \"Crash Course\" ، حيث تحرك طائرات مسيرة وروبوتات لتجاوز الحواجز. حينها تكون مستعدا لإنشاء برامج للتحكم في طائرات مسيرة وروبوتات حقيقية. يطلب التوفر على أيباد أو لوحة أندرويد ولعبة مدعومة."
   tutorial_carla_longdescription: "\"البرمجة مع كارلا\" هي سلسلة من الأشنطة التي توجه المتعلمين إلى بناء دردشة بسيطة مع آلي (chatbot)، وذلك من خلال تعلم المفاهيم الأساسية مثل المتغيرات، والشرطيات. تم تصميم الأنشطة بعناية لمعالجة المفاهيم الخاطئة في كون المبرمجين لديهم حول هذه المواضيع توفير فرص عدة للتطبيق، وأنهم استهدفوا التلميحات والردود.\n"
-  tutorial_globaloria_longdescription: "في لعبة (MakeQuest) تتعلم تعديل كود جافاسكريبت عبر لعبة، وتتقن مفاهيم علوم الكمبيوتر كالمتغيرات والدوال. أنشئ لعبتك بمزج وتكبير كود اللعبة في بيئة (Sandbox). انشر وتقاسم لعبتك مع الأصدقاء! مدروسن: تخطيط الدروس وأنشطة التمديدات الخاصة للموضوع متضمنة."
+  tutorial_zulama_longdescription: "In this activity you will learn to edit JavaScript code through a playful action game and master computer science concepts like variables and functions. Create your own game in the Sandbox by remixing and expanding on existing game code. Then publish and share your game with friends and family. A scripted lesson guide is included for teachers."
   tutorial_capost_longdescription: "البدء في تعلم HTML و CSS سهل وممتع مع هذه البطاقات الرقمية البريدية. تعلم إضافة العناوين الفقرات الصور والروابط لإنشاء بطاقة الاحتفال بعطلة او بعيد ميلاد لتقاسمها مع الاصدقاء والعائلة."
   tutorial_marco_longdescription: "يلعب الطلاب لعبة مغامرة مبنية على قصة أصلية. تقود ماركو--الشخصية الرئيسية-- في كل مستوى بإعطائه الإرشادات خطوة خطوة على شكل لغة برمجة مرئية مستخدمة من قبل \"ساعة البرمجة\". إنهم يتعرفون على عرض لتسلسل الأوامر والتكرار والظروف دون أن يلاحظوا ذلك."
   tutorial_codestersflappybike_longdescription: "في هذا النشاط، يستعمل المتعلمون أداة السحب لكتابة الكود لبدءالبرمجة في بايتون! يتم توجيه المتعلمين إلى سلسلة من أنشطة التعلم التي تعلمهم بناء لعبة كاملة! بعد الانتهاء، يتم تحديهم في استعمال ما تعلموه حول نص الكود، التنقيط، الأحداث، المتغيرات، الإعدادات وميكانيزم اللعبة لإنشاء لعبة جديدة. "
@@ -2303,7 +2309,7 @@ ar:
   tutorial_buildpong_language: "انجليزية، برتغالية، روسية واسبانية"
   tutorial_tynkerdrones_language: "الإنجليزية فقط"
   tutorial_carla_language: "الإنجليزية فقط"
-  tutorial_globaloria_language: "انجليزية، اسبانية"
+  tutorial_zulama_language: "انجليزية، اسبانية"
   tutorial_capost_language: "انجليزية، هولندية، اسبانية، روسية"
   tutorial_marco_language: "متعددة"
   tutorial_codestersflappybike_language: "انجليزية، اسبانية"
@@ -2881,7 +2887,7 @@ ar:
   tutorial_buildpong_string_detail_grades: "بدايةً من الصف 2"
   tutorial_tynkerdrones_string_detail_grades: "بدايةً من الصف 2"
   tutorial_carla_string_detail_grades: "المستوى 6+"
-  tutorial_globaloria_string_detail_grades: "المستوى 6+"
+  tutorial_zulama_string_detail_grades: "المستوى 6+"
   tutorial_capost_string_detail_grades: "المستوى 6+"
   tutorial_marco_string_detail_grades: "المستويات 2-8"
   tutorial_codestersflappybike_string_detail_grades: "المستوى 6+"
@@ -3459,7 +3465,7 @@ ar:
   tutorial_buildpong_string_platforms: "جميع المتصفحات الحديثة، لوحات الأندرويد، هواتف الأندرويد وآيباد"
   tutorial_tynkerdrones_string_platforms: "لوحات الأندرويد، آيباد"
   tutorial_carla_string_platforms: "المتصفحات الحديثة كافة"
-  tutorial_globaloria_string_platforms: "المتصفحات: Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari"
+  tutorial_zulama_string_platforms: "المتصفحات: Internet Explorer 11, Chrome, Firefox, Safari"
   tutorial_capost_string_platforms: "المتصفحات: Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari"
   tutorial_marco_string_platforms: "المتصفحات الحديثة، لوحات الأندرويد، آي باد، المستقلة"
   tutorial_codestersflappybike_string_platforms: "المتصفحات الحديثة كافة"
@@ -4037,7 +4043,7 @@ ar:
   tutorial_buildpong_string_detail_platforms: ""
   tutorial_tynkerdrones_string_detail_platforms: "الطاشرة المسيرة (Parrot)، روبوت (Sphero)، روبوت (Ollie)"
   tutorial_carla_string_detail_platforms: ""
-  tutorial_globaloria_string_detail_platforms: ""
+  tutorial_zulama_string_detail_platforms: ""
   tutorial_capost_string_detail_platforms: ""
   tutorial_marco_string_detail_platforms: ""
   tutorial_codestersflappybike_string_detail_platforms: ""
@@ -4615,7 +4621,7 @@ ar:
   tutorial_buildpong_string_detail_programming_languages: "الكتل البرمجية، (Ready)، (Unity)"
   tutorial_tynkerdrones_string_detail_programming_languages: "مربعات برمجية"
   tutorial_carla_string_detail_programming_languages: "لغة البرمجة CoffeeScript"
-  tutorial_globaloria_string_detail_programming_languages: "جافاسكريبت"
+  tutorial_zulama_string_detail_programming_languages: "جافاسكريبت"
   tutorial_capost_string_detail_programming_languages: "HTML & CSS"
   tutorial_marco_string_detail_programming_languages: "مربعات برمجية"
   tutorial_codestersflappybike_string_detail_programming_languages: "بايثون (Python)"

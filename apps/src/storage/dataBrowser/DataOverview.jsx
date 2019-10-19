@@ -66,7 +66,8 @@ class DataOverview extends React.Component {
           typeof error === 'string' &&
           (error.includes('maximum number of tables') ||
             error.includes('The table name is invalid') ||
-            error.includes('The table was renamed'))
+            error.includes('The table was renamed') ||
+            error.includes('There is already a table with name'))
         ) {
           this.props.onShowWarning(error);
         } else {

@@ -7,15 +7,16 @@ export default class LibraryClientApi {
     this.libraryApi = clientApi.create('/v3/libraries');
   }
 
-  publish(library) {
+  publish(library, onError, onSuccess) {
     this.libraryApi.put(
       this.channelId,
       JSON.stringify(library),
       LIBRARY_NAME,
       (error, data) => {
         if (error) {
-          // In the future, errors will be surfaced to the user in the publish dialog
-          console.warn('Error publishing library: ' + error);
+          onError(error);
+        } else {
+          onSuccess(data);
         }
       }
     );

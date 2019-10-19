@@ -8,7 +8,7 @@
     ],
     "inline": false,
     "func": "setBackgroundEffectWithPalette",
-    "blockText": "set background effect\n{EFFECT} {PALETTE}",
+    "blockText": "set background effect\n{PALETTE} {EFFECT}",
     "args": [
       {
         "name": "EFFECT",
