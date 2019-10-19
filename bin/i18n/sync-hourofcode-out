@@ -1,5 +1,6 @@
 #! /usr/bin/env ruby
 
+require_relative '../../dashboard/config/environment'
 require File.expand_path('../../../pegasus/src/env', __FILE__)
 require 'cdo/languages'
 require 'fileutils'
@@ -8,7 +9,7 @@ require 'tempfile'
 def push_out_translated_files
   rename_downloads_from_crowdin_code_to_locale
   copy_from_i18n_source_to_hoc
-  clean_crowdin_markdown_errors
+  restore_sanitized_headers
 end
 
 def rename_downloads_from_crowdin_code_to_locale
@@ -62,95 +63,27 @@ def copy_from_i18n_source_to_hoc
   end
 end
 
-def clean_crowdin_markdown_errors
-  puts "Fixing crowdin markdown errors..."
-  # replace * * * with ---
-  Dir.glob("pegasus/sites.v3/hourofcode.com/i18n/public/**/*.{md,md.partial}").each do |file|
-    File.write(file, File.read(file).gsub(/^.*\*\s\*\s\*/, "---"))
-  end
-
-  # fix metadata to be multiline
-  Dir.glob("pegasus/sites.v3/hourofcode.com/i18n/public/**/*.{md,md.partial}").each do |file|
-    puts file
-    metadata_pattern = /(---.*?---)/m
-    metadata_matches = File.read(file).match metadata_pattern
-    next unless metadata_matches
-    original_metadata = metadata_matches.captures.first
-    fixed_metadata = original_metadata.gsub(/ ([a-z]*:)/m, "\n\\1")
-    File.write(file, File.read(file).gsub(original_metadata, fixed_metadata))
-  end
-
-  # fix social media buttons in promote/index
-  Dir.glob("pegasus/sites.v3/hourofcode.com/i18n/public/**/promote/index.md").each do |file|
-    puts file
-    string_replacement = '#{request.host}'  # rubocop:disable Lint/InterpolationCheck
-    social_media_buttons = "<%
-    facebook = {:u=>\"http://#{string_replacement}/us\"}\n
-    twitter = {:url=>\"http://hourofcode.com\", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
-    twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'\n%>"
-    File.write(file, File.read(file).gsub(/^<% facebook.*?%>/m, social_media_buttons))
-  end
-
-  # fix social media buttons in public/thanks
-  Dir.glob("pegasus/sites.v3/hourofcode.com/i18n/public/**/thanks.{md,md.partial}").each do |file|
-    puts file
-    string_replacement = '#{request.host}'  # rubocop:disable Lint/InterpolationCheck
-    social_media_buttons = "<%
-    facebook = {:u=>\"http://#{string_replacement}/us\"}\n
-    twitter = {:url=>\"http://hourofcode.com\", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
-    twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'\n%>"
-    File.write(file, File.read(file).gsub(/^<% facebook.*?%>/m, social_media_buttons))
-  end
-
-  # fix social media metadata in public/thanks
-  Dir.glob("pegasus/sites.v3/hourofcode.com/i18n/public/**/thanks.{md,md.partial}").each do |file|
-    puts file
-    social_media_metada = "---
-title: <%= hoc_s(:title_signup_thanks) %>
-layout: wide
-nav: how_to_nav
-
-social:
-  \"og:title\": \"<%= hoc_s(:meta_tag_og_title) %>\"
-  \"og:description\": \"<%= hoc_s(:meta_tag_og_description) %>\"
-  \"og:image\": \"http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png\"
-  \"og:image:width\": 1440
-  \"og:image:height\": 900
-  \"og:url\": \"http://<%=request.host%>\"
-
-  \"twitter:card\": player
-  \"twitter:site\": \"@codeorg\"
-  \"twitter:url\": \"http://<%=request.host%>\"
-  \"twitter:title\": \"<%= hoc_s(:meta_tag_twitter_title) %>\"
-  \"twitter:description\": \"<%= hoc_s(:meta_tag_twitter_description) %>\"
-  \"twitter:image:src\": \"http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png\"
----"
-    if file.split('/').last(2).first.size == 2
-      File.write(file, File.read(file).gsub(/^---.*?---/m, social_media_metada))
+def restore_sanitized_headers
+  # In the sync in, we slice the YAML headers of the files we upload to crowdin
+  # down to just the part we want to translate (ie, the title). Here, we
+  # reinflate the header with all the values from the source file.
+  Dir.glob("pegasus/sites.v3/hourofcode.com/i18n/public/**/*.md.partial").each do |path|
+    source_path = path.sub(/\/i18n\/public\/..\//, "/public/")
+    unless File.exist? source_path
+      source_path = File.join(File.dirname(source_path), File.basename(source_path, ".partial"))
+    end
+    source_header, _source_content, _source_line = Documents.new.helpers.parse_yaml_header(source_path)
+    header, content, _line = Documents.new.helpers.parse_yaml_header(path)
+    header.slice!("title")
+    restored_header = source_header.merge(header)
+    open(path, 'w') do |f|
+      unless restored_header.empty?
+        f.write(restored_header.to_yaml)
+        f.write("---\n\n")
+      end
+      f.write(content)
     end
   end
-end
-
-# Returns only the code enclosed in <% .. %> blocks in str.
-def strip_code(str)
-  result = ''
-  str.scan(/<%.*?%>/m) do |match|
-    result += match
-  end
-  result
-end
-
-# Returns the contents of the file at path.
-def read_file(path)
-  File.open(path) {|f| return f.read}
-end
-
-# Returns a tempfile containing str.
-def create_tempfile(str)
-  out = Tempfile.new('i18n')
-  out.write(str)
-  out.write("\n")
-  out.flush
 end
 
 push_out_translated_files
