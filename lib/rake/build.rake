@@ -95,9 +95,8 @@ namespace :build do
         end
       end
 
-      # Skip asset precompile in development where `config.assets.digest = false`.
-      # Also skip on CI services (e.g. Circle) where we will precompile assets later, right before UI tests.
-      unless rack_env?(:development) || ENV['CI']
+      # Skip asset precompile in development.
+      if CDO.optimize_rails_assets
         ChatClient.log 'Cleaning <b>dashboard</b> assets...'
         RakeUtils.rake 'assets:clean'
         ChatClient.log 'Precompiling <b>dashboard</b> assets...'
