@@ -5,23 +5,20 @@ export default class CanvasCache {
     this.canvases = [];
     for (var i = 0; i < CACHE_SIZE; ++i) {
       this.canvases.push({
-        lastUse: 0,
+        key: null,
         canvas: document.createElement('canvas')
       });
     }
   }
 
-  getClearCanvas() {
-    //const canvasObject = this.canvases.find(elem => elem.inUse === false);
-    const canvasObject = this.canvases.reduce((minObj, canvasObj) => canvasObj.lastUse < minObj.lastUse ? canvasObj : minObj, this.canvases[0]);
-    canvasObject.lastUse = (new Date()).getTime();
+  getCanvas(key) {
+    const canvasObjectIdx = this.canvases.findIndex(elem => elem.key === key);
+    const canvasObject = this.canvases.splice(canvasObjectIdx !== -1 ? canvasObjectIdx : this.canvases.length - 1, 1)[0];
+    canvasObject.key = key;
+
     const ctx = canvasObject.canvas.getContext('2d');
     ctx.clearRect(0, 0, canvasObject.canvas.width, canvasObject.canvas.height);
+    this.canvases.unshift(canvasObject)
     return canvasObject.canvas;
-  }
-
-  pingCanvas(canvas) {
-    const canvasObject = this.canvases.find(elem => elem.canvas === canvas);
-    canvasObject.lastUse = (new Date()).getTime();
   }
 }
