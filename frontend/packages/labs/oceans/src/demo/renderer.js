@@ -282,7 +282,7 @@ function drawOverlays() {
 }
 
 function DrawFade(amount, overlayColour) {
-  if (amount == 0) {
+  if (amount === 0) {
     return;
   }
 
