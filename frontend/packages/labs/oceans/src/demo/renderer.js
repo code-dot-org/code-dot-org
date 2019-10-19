@@ -32,9 +32,12 @@ export const render = () => {
       break;
     case Modes.Pond:
       if (prevState.pondFish !== state.pondFish) {
+        loadPondFishImages();
         clearCanvas(state.canvas);
-        drawPondFish(state);
+        //drawPondFish(state);
       }
+      clearCanvas(state.canvas);
+      drawPondFishImages();
       break;
     default:
       console.error('Unrecognized mode specified.');
@@ -134,6 +137,20 @@ export const drawPondFish = state => {
       );
       drawFish(fish, results, canvas.getContext('2d'), randomX, randomY);
     });
+  });
+};
+
+const loadPondFishImages = () => {
+  getState().pondFish.forEach(fish => {
+    fish.parts.map(loadFishImage);
+  });
+};
+
+const drawPondFishImages = () => {
+  const canvas = getState().canvas;
+  const ctx = canvas.getContext('2d');
+  getState().pondFish.forEach(fish => {
+    drawSingleFish(fish, fish.x, fish.y, ctx);
   });
 };
 
