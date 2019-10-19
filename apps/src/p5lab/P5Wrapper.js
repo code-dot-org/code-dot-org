@@ -1,6 +1,7 @@
 import {getStore} from '@cdo/apps/redux';
 import {allAnimationsSingleFrameSelector} from './animationListModule';
-window.p5 = require('@code-dot-org/p5');
+import p5 from '@code-dot-org/p5';
+window.p5 = p5;
 import '@code-dot-org/p5.play/lib/p5.play';
 import p5SpriteWrapper from './P5SpriteWrapper';
 import p5GroupWrapper from './P5GroupWrapper';
