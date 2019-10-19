@@ -1,3 +1,4 @@
+import {init as initWords} from './words';
 import {init as initTraining} from './train';
 import {init as initPredicting} from './predict';
 import {init as initPond} from './pond';
@@ -7,6 +8,9 @@ import {Modes} from '../constants';
 // Should only be called when mode changes.
 export const initModel = state => {
   switch (state.currentMode) {
+    case Modes.Words:
+      initWords();
+      break;
     case Modes.Training:
       initTraining();
       break;

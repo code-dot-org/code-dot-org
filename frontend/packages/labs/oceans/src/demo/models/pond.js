@@ -33,7 +33,7 @@ const drawScene = state => {
 };
 
 const onClickStartOver = () => {
-  const state = setState({currentMode: Modes.Training});
+  const state = setState({currentMode: Modes.Words});
   state.trainer.clearAll();
   clearCanvas(state.canvas);
   initModel(state);
