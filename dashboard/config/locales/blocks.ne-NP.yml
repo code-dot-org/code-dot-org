@@ -21,6 +21,11 @@ ne:
           PROPERTY:
             '"scale"': size
             '"height"': height
+      Dancelab_changePropEachBy:
+        options:
+          PROPERTY:
+            '"scale"': size
+            '"height"': height
       Dancelab_doMoveEachLR:
         options:
           DIR:
@@ -53,13 +58,32 @@ ne:
           LOCATION:
             "{x: 100, y: 200}": बाँया
             "{x: 300, y: 200}": दाँया
+      Dancelab_jumpToEach:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": बाँया
+            "{x: 300, y: 200}": दाँया
       Dancelab_makeAnonymousDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': alien
+            '"CAT"': cat
+            '"DOG"': dog
+            '"DUCK"': duck
+            '"ROBOT"': robot
+            '"UNICORN"': unicorn
           LOCATION:
             "{x: 100, y: 200}": बाँया
             "{x: 300, y: 200}": दाँया
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': alien
+            '"CAT"': cat
+            '"DOG"': dog
+            '"DUCK"': duck
+            '"ROBOT"': robot
+            '"UNICORN"': unicorn
           LOCATION:
             "{x: 100, y: 200}": बाँया
             "{x: 300, y: 200}": दाँया
@@ -118,12 +142,27 @@ ne:
           PROPERTY:
             '"scale"': size
             '"height"': height
+      Dancelab_setPropRandomEach:
+        options:
+          PROPERTY:
+            '"scale"': size
+            '"height"': height
       Dancelab_startMapping:
         options:
           PROPERTY:
             '"scale"': size
             '"height"': height
+      Dancelab_startMappingEach:
+        options:
+          PROPERTY:
+            '"scale"': size
+            '"height"': height
       Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': size
+            '"height"': height
+      Dancelab_stopMappingEach:
         options:
           PROPERTY:
             '"scale"': size

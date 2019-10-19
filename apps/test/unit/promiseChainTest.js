@@ -1,5 +1,5 @@
 import sinon from 'sinon';
-import {expect} from '../util/configuredChai';
+import {expect} from '../util/deprecatedChai';
 
 // This set of tests describes a number of problem scenarios we encountered
 // while setting up the test for celebrateSuccessfulConnection().  It turns

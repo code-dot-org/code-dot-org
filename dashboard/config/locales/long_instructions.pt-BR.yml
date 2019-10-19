@@ -13585,8 +13585,8 @@ pt-BR:
         # Faça isso
 
         -   Com o seu parceiro, responda às seguintes perguntas:
-                 1. Qual é o maior número que você pode fazer com esta ferramenta?
-                 2. O recorde de mais saltos de um cão e pessoa em um minuto é 59. Como você codificaria 59 em binário?
+                 1\. Qual é o maior número que você pode fazer com esta ferramenta?
+                 2\. O recorde de mais saltos de um cão e pessoa em um minuto é 59. Como você codificaria 59 em binário?
       CSD U5 binary 2_2018: |-
         # Número de 6 bits
 
@@ -13595,8 +13595,8 @@ pt-BR:
         # Faça isso
 
         -   Com o seu parceiro, responda às seguintes perguntas:
-                 1. Qual é o maior número que você pode fazer com esta ferramenta?
-                 2. O recorde de mais saltos de um cão e pessoa em um minuto é 59. Como você codificaria 59 em binário?
+                 1\. Qual é o maior número que você pode fazer com esta ferramenta?
+                 2\. O recorde de mais saltos de um cão e pessoa em um minuto é 59. Como você codificaria 59 em binário?
       CSD U5 binary 2_2019: |-
         # Número de 6 bits
 
@@ -13605,8 +13605,8 @@ pt-BR:
         # Faça isso
 
         -   Com o seu parceiro, responda às seguintes perguntas:
-                 1. Qual é o maior número que você pode fazer com esta ferramenta?
-                 2. O recorde de mais saltos de um cão e pessoa em um minuto é 59. Como você codificaria 59 em binário?
+                 1\. Qual é o maior número que você pode fazer com esta ferramenta?
+                 2\. O recorde de mais saltos de um cão e pessoa em um minuto é 59. Como você codificaria 59 em binário?
       CSD U5 binary 4-new: |-
         # Decodificando vários números
 
@@ -19532,9 +19532,25 @@ pt-BR:
         Agora que você transmitiu informações representadas como números decimais, é possível mapear esses números para caracteres de texto para enviar e receber informações baseadas em texto. Com um protocolo baseado em texto, você pode representar e comunicar com facilidade todos os tipos de informações.
 
         Seu professor fornecerá instruções mais específicas para esta atividade.
+      OPD-K5 EventsVid: |-
+        Assista este vídeo que define "eventos" e mostra como eles funcionam em Fundamentos de CC. Em seguida, você irá tentar alguns quebra-cabeças que requerem que você codifique eventos.
+
+        > Um evento é uma linha de código que diz ao seu computador para "escutar" alguma coisa acontecer, e em seguida tomar uma ação. Por exemplo, em páginas web você geralmente pode exibir um menu suspenso ao passar sobre a barra de navegação com seu mouse. A "rolagem do mouse" é um "evento" que dispara uma ação.
       OPD-K5 FirstProgram: Assista o vídeo abaixo, que explica o primeiro programa
         que os estudantes irão escrever no [Curso A](https://studio.code.org/s/coursea-2018?section_id=2042045).
         Na próxima página, você mesmo irá escrever um programa parecido!
+      OPD-K5 LessonPlanning: |-
+        Até agora, você foi apresentado a alguns de nossos planos de aulas desplugados. No entanto, existem planos de aula para cada uma das lições em Fundamentos de CC - tanto conectadas quanto on-line. Você pode encontrar a lista completa de planos de aula para cada curso abaixo:
+        <br/>
+        <br/>
+        [Planos de aula do curso A](https://curriculum.code.org/csf-18/coursea/)<br/>
+        [Planos de aula do curso B](https://curriculum.code.org/csf-18/courseb/)<br/>
+        [Planos de aula do curso C](https://curriculum.code.org/csf-18/coursec/)<br/>
+        [Planos de aula do curso D](https://curriculum.code.org/csf-18/coursed/)<br/>
+        [Planos de aula do curso E](https://curriculum.code.org/csf-18/coursee/)<br/>
+        [Planos de aula do curso F](https://curriculum.code.org/csf-18/coursef/)<br/>
+
+        No entanto, você pode querer adaptar essas lições ou criar as suas próprias! O vídeo abaixo explica a estrutura das lições de Fundamentos de CC, mas também fornece dicas, caso você queira desenvolver suas próprias lições.
       OPD-K5 RepeatBlock: Assista o vídeo abaixo, que explica como laços funcionam
         e introduz o bloco 'Repita' em Fundamentos de CC.
       OPD-K5 WhatIsCS: Você já se perguntou "Exatamente, o que é ciência da computação?"

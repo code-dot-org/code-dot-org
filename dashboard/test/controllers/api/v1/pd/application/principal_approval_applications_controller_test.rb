@@ -149,7 +149,7 @@ module Api::V1::Pd::Application
 
       @teacher_application.reload
 
-      assert_equal YES, @teacher_application.response_scores_hash[:meets_scholarship_criteria_scores][:principal_approval]
+      assert_equal YES, @teacher_application.response_scores_hash[:meets_minimum_criteria_scores][:principal_approval]
     end
   end
 end

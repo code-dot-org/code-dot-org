@@ -74,6 +74,28 @@ nl:
             '"rotation"': rotatie
             '"x"': horizontale positie
             '"y"': verticale positie
+      Dancelab_changePropEachBy:
+        options:
+          GROUP:
+            sprites: alles
+            '"ALIEN"': alle buitenaardse wezens
+            '"BEAR"': alle beren
+            '"CAT"': alle katten
+            '"DOG"': alle honden
+            '"DUCK"': alle eenden
+            '"FROG"': alle kikkers
+            '"MOOSE"': alle elanden
+            '"PINEAPPLE"': alle ananassen
+            '"ROBOT"': alle robots
+            '"SHARK"': alle haaien
+            '"UNICORN"': Eenhoorns
+          PROPERTY:
+            '"scale"': grootte
+            '"width"': breedte
+            '"height"': hoogte
+            '"rotation"': rotatie
+            '"x"': horizontale positie
+            '"y"': verticale positie
       Dancelab_doMoveEachLR:
         text: "{GROUP} doe {MOVE} {DIR} een keer"
         options:
@@ -89,7 +111,7 @@ nl:
             '"PINEAPPLE"': alle ananassen
             '"ROBOT"': alle robots
             '"SHARK"': alle haaien
-            '"UNICORN"': alle eenhoorns
+            '"UNICORN"': Eenhoorns
           MOVE:
             '"rand"': "(Willekeurig)"
             MOVES.Roll: Bodyroll
@@ -190,6 +212,32 @@ nl:
             "{x: 100, y: 300}": linksonder
             "{x: 300, y: 300}": rechtsonder
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": willekeurig
+      Dancelab_jumpToEach:
+        options:
+          GROUP:
+            sprites: alles
+            '"ALIEN"': alle buitenaardse wezens
+            '"BEAR"': alle beren
+            '"CAT"': alle katten
+            '"DOG"': alle honden
+            '"DUCK"': alle eenden
+            '"FROG"': alle kikkers
+            '"MOOSE"': alle elanden
+            '"PINEAPPLE"': alle ananassen
+            '"ROBOT"': alle robots
+            '"SHARK"': alle haaien
+            '"UNICORN"': Eenhoorns
+          LOCATION:
+            "{x: 200, y: 100}": boven
+            "{x: 200, y: 300}": onder
+            "{x: 100, y: 200}": links
+            "{x: 300, y: 200}": rechts
+            "{x: 200, y: 200}": midden
+            "{x: 100, y: 100}": linksboven
+            "{x: 300, y: 100}": rechtsboven
+            "{x: 100, y: 300}": linksonder
+            "{x: 300, y: 300}": rechtsonder
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": willekeurig
       Dancelab_layoutSprites:
         text: "{GROUP} indelen als een {FORMAT}"
         options:
@@ -205,7 +253,7 @@ nl:
             '"PINEAPPLE"': alle ananassen
             '"ROBOT"': alle robots
             '"SHARK"': alle haaien
-            '"UNICORN"': alle eenhoorns
+            '"UNICORN"': Eenhoorns
           FORMAT:
             '"border"': grens
             '"inner"': binnenkant vierkant
@@ -218,16 +266,17 @@ nl:
       Dancelab_makeAnonymousDanceSprite:
         options:
           COSTUME:
-            '"ALIEN"': Buitenaards wezen
+            '"ALIEN"': buitenaards wezen
             '"BEAR"': Beer
-            '"CAT"': Kat
-            '"DOG"': Hond
-            '"DUCK"': Eend
+            '"CAT"': kat
+            '"DOG"': hond
+            '"DUCK"': eend
             '"FROG"': Kikker
-            '"MOOSE"': Eland
+            '"MOOSE"': alle elanden
             '"PINEAPPLE"': Ananas
+            '"ROBOT"': robot
             '"SHARK"': Haai
-            '"UNICORN"': Eenhoorn
+            '"UNICORN"': eenhoorn
           LOCATION:
             "{x: 200, y: 100}": boven
             "{x: 200, y: 300}": onder
@@ -253,6 +302,7 @@ nl:
             '"FROG"': Kikker
             '"MOOSE"': Eland
             '"PINEAPPLE"': Ananas
+            '"ROBOT"': robot
             '"SHARK"': Haai
             '"UNICORN"': Eenhoorn
           LOCATION:
@@ -300,6 +350,7 @@ nl:
             '"FROG"': Kikkers
             '"MOOSE"': Eland
             '"PINEAPPLE"': Ananassen
+            '"ROBOT"': alle robots
             '"SHARK"': Haaien
             '"UNICORN"': Eenhoorns
           LAYOUT:
@@ -403,7 +454,7 @@ nl:
             '"PINEAPPLE"': alle ananassen
             '"ROBOT"': alle robots
             '"SHARK"': alle haaien
-            '"UNICORN"': alle eenhoorns
+            '"UNICORN"': Eenhoorns
           SPEED:
             '1': normaal
             '2': snel
@@ -464,7 +515,7 @@ nl:
             '"PINEAPPLE"': alle ananassen
             '"ROBOT"': alle robots
             '"SHARK"': alle haaien
-            '"UNICORN"': alle eenhoorns
+            '"UNICORN"': Eenhoorns
           PROPERTY:
             '"scale"': grootte
             '"width"': breedte
@@ -475,6 +526,28 @@ nl:
       Dancelab_setPropRandom:
         text: maak {SPRITE} {PROPERTY} willekeurig
         options:
+          PROPERTY:
+            '"scale"': grootte
+            '"width"': breedte
+            '"height"': hoogte
+            '"rotation"': rotatie
+            '"x"': horizontale positie
+            '"y"': verticale positie
+      Dancelab_setPropRandomEach:
+        options:
+          GROUP:
+            sprites: alles
+            '"ALIEN"': alle buitenaardse wezens
+            '"BEAR"': alle beren
+            '"CAT"': alle katten
+            '"DOG"': alle honden
+            '"DUCK"': alle eenden
+            '"FROG"': alle kikkers
+            '"MOOSE"': alle elanden
+            '"PINEAPPLE"': alle ananassen
+            '"ROBOT"': alle robots
+            '"SHARK"': alle haaien
+            '"UNICORN"': Eenhoorns
           PROPERTY:
             '"scale"': grootte
             '"width"': breedte
@@ -498,6 +571,7 @@ nl:
             '"PINEAPPLE"': alle ananassen
             '"ROBOT"': alle robots
             '"SHARK"': alle haaien
+            '"UNICORN"': Eenhoorns
       Dancelab_setTintEachInline:
         options:
           THIS:
@@ -512,6 +586,7 @@ nl:
             '"PINEAPPLE"': alle ananassen
             '"ROBOT"': alle robots
             '"SHARK"': alle haaien
+            '"UNICORN"': Eenhoorns
       Dancelab_setTintInline:
         text: stel de tint van {SPRITE} in op {VAL}
       Dancelab_setVisible:
@@ -535,7 +610,7 @@ nl:
             '"PINEAPPLE"': alle ananassen
             '"ROBOT"': alle robots
             '"SHARK"': alle haaien
-            '"UNICORN"': alle eenhoorns
+            '"UNICORN"': Eenhoorns
           VISIBILITY:
             'true': zichtbaar
             'false': onzichtbaar
@@ -549,9 +624,54 @@ nl:
             '"rotation"': rotatie
             '"x"': horizontale positie
             '"y"': verticale positie
+      Dancelab_startMappingEach:
+        options:
+          GROUP:
+            sprites: alles
+            '"ALIEN"': alle buitenaardse wezens
+            '"BEAR"': alle beren
+            '"CAT"': alle katten
+            '"DOG"': alle honden
+            '"DUCK"': alle eenden
+            '"FROG"': alle kikkers
+            '"MOOSE"': alle elanden
+            '"PINEAPPLE"': alle ananassen
+            '"ROBOT"': alle robots
+            '"SHARK"': alle haaien
+            '"UNICORN"': Eenhoorns
+          PROPERTY:
+            '"scale"': grootte
+            '"width"': breedte
+            '"height"': hoogte
+            '"rotation"': rotatie
+            '"x"': horizontale positie
+            '"y"': verticale positie
       Dancelab_stopMapping:
         text: "{SPRITE} stopt {PROPERTY} volgens {RANGE}"
         options:
+          PROPERTY:
+            '"scale"': grootte
+            '"width"': breedte
+            '"height"': hoogte
+            '"rotation"': rotatie
+            '"x"': horizontale positie
+            '"y"': verticale positie
+            '"direction"': bewegingsrichting
+      Dancelab_stopMappingEach:
+        options:
+          GROUP:
+            sprites: alles
+            '"ALIEN"': alle buitenaardse wezens
+            '"BEAR"': alle beren
+            '"CAT"': alle katten
+            '"DOG"': alle honden
+            '"DUCK"': alle eenden
+            '"FROG"': alle kikkers
+            '"MOOSE"': alle elanden
+            '"PINEAPPLE"': alle ananassen
+            '"ROBOT"': alle robots
+            '"SHARK"': alle haaien
+            '"UNICORN"': Eenhoorns
           PROPERTY:
             '"scale"': grootte
             '"width"': breedte

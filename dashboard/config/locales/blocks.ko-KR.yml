@@ -80,6 +80,28 @@ ko:
             '"rotation"': 회전
             '"x"': 수평 위치
             '"y"': 수직 위치
+      Dancelab_changePropEachBy:
+        options:
+          GROUP:
+            sprites: 모두
+            '"ALIEN"': 모든 외계인
+            '"BEAR"': 모든 곰
+            '"CAT"': 모든 고양이
+            '"DOG"': 모든 개
+            '"DUCK"': 모든 오리
+            '"FROG"': 모든 개구리
+            '"MOOSE"': 모든 사슴
+            '"PINEAPPLE"': 모든 파인애플
+            '"ROBOT"': 모든 로봇
+            '"SHARK"': 모든 상어
+            '"UNICORN"': 유니콘
+          PROPERTY:
+            '"scale"': 크기
+            '"width"': 너비
+            '"height"': '높이:'
+            '"rotation"': 회전
+            '"x"': 수평 위치
+            '"y"': 수직 위치
       Dancelab_doMoveEachLR:
         text: "{GROUP}이(가) {MOVE}{DIR}을(를) 한 번 실행"
         options:
@@ -95,7 +117,7 @@ ko:
             '"PINEAPPLE"': 모든 파인애플
             '"ROBOT"': 모든 로봇
             '"SHARK"': 모든 상어
-            '"UNICORN"': 모든 유니콘
+            '"UNICORN"': 유니콘
           MOVE:
             '"rand"': "(임의)"
             MOVES.Roll: 바디롤
@@ -208,6 +230,32 @@ ko:
             "{x: 100, y: 300}": 왼쪽 아래
             "{x: 300, y: 300}": 오른쪽 아래
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": random(랜덤)
+      Dancelab_jumpToEach:
+        options:
+          GROUP:
+            sprites: 모두
+            '"ALIEN"': 모든 외계인
+            '"BEAR"': 모든 곰
+            '"CAT"': 모든 고양이
+            '"DOG"': 모든 개
+            '"DUCK"': 모든 오리
+            '"FROG"': 모든 개구리
+            '"MOOSE"': 모든 사슴
+            '"PINEAPPLE"': 모든 파인애플
+            '"ROBOT"': 모든 로봇
+            '"SHARK"': 모든 상어
+            '"UNICORN"': 유니콘
+          LOCATION:
+            "{x: 200, y: 100}": 맨 위로
+            "{x: 200, y: 300}": 맨 아래로
+            "{x: 100, y: 200}": 왼쪽으로
+            "{x: 300, y: 200}": 오른쪽으로
+            "{x: 200, y: 200}": 중간
+            "{x: 100, y: 100}": 왼쪽 위
+            "{x: 300, y: 100}": 오른쪽 위
+            "{x: 100, y: 300}": 왼쪽 아래
+            "{x: 300, y: 300}": 오른쪽 아래
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": random(랜덤)
       Dancelab_layoutSprites:
         text: "{GROUP}(을)를 {FORMAT}(으)로 레이아웃"
         options:
@@ -223,7 +271,7 @@ ko:
             '"PINEAPPLE"': 모든 파인애플
             '"ROBOT"': 모든 로봇
             '"SHARK"': 모든 상어
-            '"UNICORN"': 모든 유니콘
+            '"UNICORN"': 유니콘
           FORMAT:
             '"border"': 테두리
             '"inner"': 내부 사각형
@@ -240,10 +288,10 @@ ko:
             '"ALIEN"': 외계인
             '"BEAR"': 곰
             '"CAT"': 고양이
-            '"DOG"': 개
+            '"DOG"': 강아지
             '"DUCK"': 오리
             '"FROG"': 개구리
-            '"MOOSE"': 사슴
+            '"MOOSE"': 모든 사슴
             '"PINEAPPLE"': 파인애플
             '"ROBOT"': 로봇
             '"SHARK"': 상어
@@ -430,7 +478,7 @@ ko:
             '"PINEAPPLE"': 모든 파인애플
             '"ROBOT"': 모든 로봇
             '"SHARK"': 모든 상어
-            '"UNICORN"': 모든 유니콘
+            '"UNICORN"': 유니콘
           SPEED:
             '1': 보통
             '2': 빠르게
@@ -478,7 +526,6 @@ ko:
             '"rotation"': 회전
             '"x"': 수평 위치
             '"y"': 수직 위치
-            '"tint"': 색조
       Dancelab_setPropEach:
         text: "{GROUP} {PROPERTY}을(를) {VAL}(으)로 설정"
         options:
@@ -494,7 +541,17 @@ ko:
             '"PINEAPPLE"': 모든 파인애플
             '"ROBOT"': 모든 로봇
             '"SHARK"': 모든 상어
-            '"UNICORN"': 모든 유니콘
+            '"UNICORN"': 유니콘
+          PROPERTY:
+            '"scale"': 크기
+            '"width"': 너비
+            '"height"': '높이:'
+            '"rotation"': 회전
+            '"x"': 수평 위치
+            '"y"': 수직 위치
+      Dancelab_setPropRandom:
+        text: "{SPRITE} {PROPERTY} 무작위로 하기"
+        options:
           PROPERTY:
             '"scale"': 크기
             '"width"': 너비
@@ -503,9 +560,21 @@ ko:
             '"x"': 수평 위치
             '"y"': 수직 위치
             '"tint"': 색조
-      Dancelab_setPropRandom:
-        text: "{SPRITE} {PROPERTY} 무작위로 하기"
+      Dancelab_setPropRandomEach:
         options:
+          GROUP:
+            sprites: 모두
+            '"ALIEN"': 모든 외계인
+            '"BEAR"': 모든 곰
+            '"CAT"': 모든 고양이
+            '"DOG"': 모든 개
+            '"DUCK"': 모든 오리
+            '"FROG"': 모든 개구리
+            '"MOOSE"': 모든 사슴
+            '"PINEAPPLE"': 모든 파인애플
+            '"ROBOT"': 모든 로봇
+            '"SHARK"': 모든 상어
+            '"UNICORN"': 유니콘
           PROPERTY:
             '"scale"': 크기
             '"width"': 너비
@@ -530,6 +599,7 @@ ko:
             '"PINEAPPLE"': 모든 파인애플
             '"ROBOT"': 모든 로봇
             '"SHARK"': 모든 상어
+            '"UNICORN"': 유니콘
       Dancelab_setTintEachInline:
         options:
           THIS:
@@ -544,6 +614,7 @@ ko:
             '"PINEAPPLE"': 모든 파인애플
             '"ROBOT"': 모든 로봇
             '"SHARK"': 모든 상어
+            '"UNICORN"': 유니콘
       Dancelab_setTintInline:
         text: "{SPRITE} 색조를 {VAL}(으)로 설정하기"
       Dancelab_setVisible:
@@ -567,7 +638,7 @@ ko:
             '"PINEAPPLE"': 모든 파인애플
             '"ROBOT"': 모든 로봇
             '"SHARK"': 모든 상어
-            '"UNICORN"': 모든 유니콘
+            '"UNICORN"': 유니콘
           VISIBILITY:
             'true': 보이기
             'false': 보이지 않기
@@ -586,9 +657,64 @@ ko:
             '"bass"': 베이스
             '"mid"': 중간음
             '"treble"': 고음
+      Dancelab_startMappingEach:
+        options:
+          GROUP:
+            sprites: 모두
+            '"ALIEN"': 모든 외계인
+            '"BEAR"': 모든 곰
+            '"CAT"': 모든 고양이
+            '"DOG"': 모든 개
+            '"DUCK"': 모든 오리
+            '"FROG"': 모든 개구리
+            '"MOOSE"': 모든 사슴
+            '"PINEAPPLE"': 모든 파인애플
+            '"ROBOT"': 모든 로봇
+            '"SHARK"': 모든 상어
+            '"UNICORN"': 유니콘
+          PROPERTY:
+            '"scale"': 크기
+            '"width"': 너비
+            '"height"': '높이:'
+            '"rotation"': 회전
+            '"x"': 수평 위치
+            '"y"': 수직 위치
+            '"tint"': 색조
+          RANGE:
+            '"bass"': 베이스
+            '"mid"': 중간음
+            '"treble"': 고음
       Dancelab_stopMapping:
         text: "{SPRITE}이(가) {RANGE}을(를) 따르는 {PROPERTY}을(를) 중지하기"
         options:
+          PROPERTY:
+            '"scale"': 크기
+            '"width"': 너비
+            '"height"': '높이:'
+            '"rotation"': 회전
+            '"x"': 수평 위치
+            '"y"': 수직 위치
+            '"direction"': 움직임 방향
+            '"tint"': 색조
+          RANGE:
+            '"bass"': 베이스
+            '"mid"': 중간음
+            '"treble"': 고음
+      Dancelab_stopMappingEach:
+        options:
+          GROUP:
+            sprites: 모두
+            '"ALIEN"': 모든 외계인
+            '"BEAR"': 모든 곰
+            '"CAT"': 모든 고양이
+            '"DOG"': 모든 개
+            '"DUCK"': 모든 오리
+            '"FROG"': 모든 개구리
+            '"MOOSE"': 모든 사슴
+            '"PINEAPPLE"': 모든 파인애플
+            '"ROBOT"': 모든 로봇
+            '"SHARK"': 모든 상어
+            '"UNICORN"': 유니콘
           PROPERTY:
             '"scale"': 크기
             '"width"': 너비

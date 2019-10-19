@@ -27,6 +27,13 @@ pt:
           PROPERTY:
             '"scale"': tamanho
             '"height"': altura
+      Dancelab_changePropEachBy:
+        options:
+          GROUP:
+            sprites: tudo
+          PROPERTY:
+            '"scale"': tamanho
+            '"height"': altura
       Dancelab_doMoveEachLR:
         options:
           GROUP:
@@ -70,6 +77,14 @@ pt:
             "{x: 100, y: 200}": para a esquerda
             "{x: 300, y: 200}": para a direita
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": aleatório
+      Dancelab_jumpToEach:
+        options:
+          GROUP:
+            sprites: tudo
+          LOCATION:
+            "{x: 100, y: 200}": para a esquerda
+            "{x: 300, y: 200}": para a direita
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": aleatório
       Dancelab_layoutSprites:
         options:
           GROUP:
@@ -78,12 +93,26 @@ pt:
             '"random"': aleatório
       Dancelab_makeAnonymousDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': alienígena
+            '"CAT"': gato
+            '"DOG"': cão
+            '"DUCK"': pato
+            '"ROBOT"': robô
+            '"UNICORN"': unicórnio
           LOCATION:
             "{x: 100, y: 200}": para a esquerda
             "{x: 300, y: 200}": para a direita
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": aleatório
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': alienígena
+            '"CAT"': gato
+            '"DOG"': cão
+            '"DUCK"': pato
+            '"ROBOT"': robô
+            '"UNICORN"': unicórnio
           LOCATION:
             "{x: 100, y: 200}": para a esquerda
             "{x: 300, y: 200}": para a direita
@@ -165,6 +194,13 @@ pt:
           PROPERTY:
             '"scale"': tamanho
             '"height"': altura
+      Dancelab_setPropRandomEach:
+        options:
+          GROUP:
+            sprites: tudo
+          PROPERTY:
+            '"scale"': tamanho
+            '"height"': altura
       Dancelab_setTintEach:
         options:
           THIS:
@@ -182,8 +218,22 @@ pt:
           PROPERTY:
             '"scale"': tamanho
             '"height"': altura
+      Dancelab_startMappingEach:
+        options:
+          GROUP:
+            sprites: tudo
+          PROPERTY:
+            '"scale"': tamanho
+            '"height"': altura
       Dancelab_stopMapping:
         options:
+          PROPERTY:
+            '"scale"': tamanho
+            '"height"': altura
+      Dancelab_stopMappingEach:
+        options:
+          GROUP:
+            sprites: tudo
           PROPERTY:
             '"scale"': tamanho
             '"height"': altura

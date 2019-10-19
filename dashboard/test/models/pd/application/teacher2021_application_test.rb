@@ -306,12 +306,12 @@ module Pd::Application
       csv_header_csd = CSV.parse(Teacher2021Application.csv_header('csd'))[0]
       assert csv_header_csd.include? "To which grades does your school plan to offer CS Discoveries in the 2020-21 school year?"
       refute csv_header_csd.include? "To which grades does your school plan to offer CS Principles in the 2020-21 school year?"
-      assert_equal 98, csv_header_csd.length
+      assert_equal 96, csv_header_csd.length
 
       csv_header_csp = CSV.parse(Teacher2021Application.csv_header('csp'))[0]
       refute csv_header_csp.include? "To which grades does your school plan to offer CS Discoveries in the 2020-21 school year?"
       assert csv_header_csp.include? "To which grades does your school plan to offer CS Principles in the 2020-21 school year?"
-      assert_equal 100, csv_header_csp.length
+      assert_equal 98, csv_header_csp.length
     end
 
     test 'school cache' do
@@ -534,19 +534,15 @@ module Pd::Application
       assert_equal(
         {
           meets_minimum_criteria_scores: {
-            regional_partner_name: YES,
             csd_which_grades: YES,
             plan_to_teach: YES,
             committed: YES,
+            previous_yearlong_cdo_pd: YES,
             replace_existing: YES,
+            principal_approval: YES,
             principal_schedule_confirmed: YES,
           },
           meets_scholarship_criteria_scores: {
-            plan_to_teach: YES,
-            previous_yearlong_cdo_pd: YES,
-            principal_approval: YES,
-            principal_schedule_confirmed: YES,
-            principal_diversity_recruitment: YES,
             free_lunch_percent: YES,
             underrepresented_minority_percent: YES,
           },
@@ -584,19 +580,15 @@ module Pd::Application
       assert_equal(
         {
           meets_minimum_criteria_scores: {
-            regional_partner_name: YES,
             csp_which_grades: YES,
             plan_to_teach: YES,
             committed: YES,
+            previous_yearlong_cdo_pd: YES,
             replace_existing: YES,
+            principal_approval: YES,
             principal_schedule_confirmed: YES,
           },
           meets_scholarship_criteria_scores: {
-            plan_to_teach: YES,
-            previous_yearlong_cdo_pd: YES,
-            principal_approval: YES,
-            principal_schedule_confirmed: YES,
-            principal_diversity_recruitment: YES,
             free_lunch_percent: YES,
             underrepresented_minority_percent: YES,
           },
@@ -628,16 +620,13 @@ module Pd::Application
       assert_equal(
         {
           meets_minimum_criteria_scores: {
-            regional_partner_name: YES,
             csp_which_grades: YES,
             plan_to_teach: YES,
             committed: YES,
+            previous_yearlong_cdo_pd: YES,
             replace_existing: YES,
           },
-          meets_scholarship_criteria_scores: {
-            plan_to_teach: YES,
-            previous_yearlong_cdo_pd: YES
-          },
+          meets_scholarship_criteria_scores: {},
           bonus_points_scores: {
             csp_how_offer: 2,
             race: 2
@@ -673,17 +662,14 @@ module Pd::Application
       assert_equal(
         {
           meets_minimum_criteria_scores: {
-            regional_partner_name: NO,
             csd_which_grades: NO,
             committed: NO,
+            previous_yearlong_cdo_pd: NO,
             replace_existing: NO,
+            principal_approval: NO,
             principal_schedule_confirmed: NO,
           },
           meets_scholarship_criteria_scores: {
-            previous_yearlong_cdo_pd: NO,
-            principal_approval: NO,
-            principal_schedule_confirmed: NO,
-            principal_diversity_recruitment: NO,
             free_lunch_percent: NO,
             underrepresented_minority_percent: NO,
           },
@@ -721,17 +707,14 @@ module Pd::Application
       assert_equal(
         {
           meets_minimum_criteria_scores: {
-            regional_partner_name: NO,
             csp_which_grades: NO,
             committed: NO,
+            previous_yearlong_cdo_pd: NO,
             replace_existing: NO,
+            principal_approval: NO,
             principal_schedule_confirmed: NO,
           },
           meets_scholarship_criteria_scores: {
-            previous_yearlong_cdo_pd: NO,
-            principal_approval: NO,
-            principal_schedule_confirmed: NO,
-            principal_diversity_recruitment: NO,
             free_lunch_percent: NO,
             underrepresented_minority_percent: NO,
           },
@@ -742,15 +725,6 @@ module Pd::Application
         }.deep_stringify_keys,
         JSON.parse(application.response_scores)
       )
-    end
-
-    test 'autoscore is idempotent' do
-      application = create :pd_teacher2021_application, regional_partner: nil
-      application.update(response_scores: {regional_partner_name: YES}.to_json)
-
-      application.auto_score!
-
-      assert_equal YES, JSON.parse(application.response_scores)['regional_partner_name']
     end
 
     test 'principal responses override teacher responses for scoring' do
@@ -800,7 +774,6 @@ module Pd::Application
 
       assert_nil response_scores_hash[:meets_minimum_criteria_scores][:principal_schedule_confirmed]
       assert_nil response_scores_hash[:meets_minimum_criteria_scores][:replace_existing]
-      assert_nil response_scores_hash[:meets_scholarship_criteria_scores][:principal_schedule_confirmed]
     end
 
     test 'principal_approval_state' do

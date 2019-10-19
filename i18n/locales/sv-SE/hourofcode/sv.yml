@@ -10,6 +10,15 @@
   campaign_date_full: "5-11 december"
   campaign_date_year: "2016"
   campaign_date_full_year: "5-11 december 2016"
+  hoc2019_header: 'Lär dig datavetenskap. Förändra världen.'
+  hoc2019_header_line1_mobile: 'Lär dig datavetenskap.'
+  hoc2019_header_line2_mobile: 'Förändra världen.'
+  social_hoc2019_every_sudent: 'Every student has the potential to change the world. Help them get started. #CSforGood'
+  social_hoc2019_learn_computer_science: 'Learn computer science. Change the world. #CSforGood #HourOfCode'
+  social_hoc_is_coming: 'The Hour of Code is coming!'
+  social_hoc2019_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn computer science. Change the world.'
+  social_hoc2019_coming_dates: 'The Hour of Code is coming December 9-15, 2019. Computer science is foundational for every student to learn.'
+  social_hoc2019_dance: 'Featuring Katy Perry, Jonas Brothers, Lil Nas X, Panic at the Disco, and many more!'
   codeorg_homepage_hoc2018_curriculum: 'Fortsätt med <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org-kurser</a>'
   codeorg_homepage_hoc2018_dance_heading: 'Skapa ditt egna <span class="highlight-word">dans&nbsp;party</span>'
   codeorg_homepage_hoc2018_header_line1: 'Hour of Code närmar sig...'
@@ -47,7 +56,7 @@
   not_found_desc: 'Den begärda sidan hittades inte'
   not_found_instructions: 'Kontrollera adressen och försök igen eller välja en länk i listan nedan.'
   company_4-H: 4-H Youth Development
-  company_asa: Afterschool Alliance
+  company_asa: 4-H Youth Development
   company_asos: ASOS
   company_bgca: Boys and Girls Club of America
   company_bsusa: Boy Scouts of America
@@ -566,7 +575,7 @@
   tutorial_buildpong_name: "Bygg Pong med Al"
   tutorial_tynkerdrones_name: "Programmet drönare och robotar"
   tutorial_carla_name: "Programmering med Carla"
-  tutorial_globaloria_name: "Globaloria MakeQuest"
+  tutorial_zulama_name: "Zulama MakeQuest Video Game Activity"
   tutorial_capost_name: "Skapa ett digitalt vykort med HTML och CSS"
   tutorial_marco_name: "Spring Marco!"
   tutorial_codestersflappybike_name: "Flappy cykel"
@@ -789,7 +798,7 @@
   tutorial_hopdropphone_name: "Make \"Don't Drop the Phone\" on iPad/iPhone"
   tutorial_techfaa_name: "Flocking Autonomous Agents"
   tutorial_codehsjsgraph_name: "JavaScript Graphics with CodeHS"
-  tutorial_thunkable_name: "Learn How to Build 10 Apps in 1 Hour!"
+  tutorial_thunkable_name: "Lär dig bygga 10 appar på 1 timme!"
   tutorial_hopcrossyroad_name: "Make Crossy Road on iPad/iPhone"
   tutorial_switchglitch_name: "Switch & Glitch: Robot Adventure"
   tutorial_codecar_name: "Code Car Simulator"
@@ -803,7 +812,7 @@
   tutorial_rgbegin_name: "RoboGarden Coding - Beginner"
   tutorial_myradream_name: "Actimator: Myra's Dream"
   tutorial_thinkfun_name: "Robot Repair: Can You Fix the Robot Brain?"
-  tutorial_hopfireworks_name: "Make a Fireworks App on iPad/iPhone"
+  tutorial_hopfireworks_name: "Skapa Fyverkerier på iPad/iPhone"
   tutorial_grokspace_name: "Space (Blockly)"
   tutorial_codehspython_name: "Code in Python with CodeHS"
   tutorial_codehsjava_name: "Coding in Java with CodeHS"
@@ -818,13 +827,13 @@
   tutorial_techikb_name: "Interactive Kotlin Basics"
   tutorial_kanostreet_name: "Street Artist"
   tutorial_nyblebot_name: "Boogie Bot"
-  tutorial_codemojijs_name: "Beginning JavaScript"
-  tutorial_techapf_name: "Advanced Python Features"
+  tutorial_codemojijs_name: "Nybörjare JavaScript"
+  tutorial_techapf_name: "Avancerad Python"
   tutorial_techfpjs_name: "Practical Introduction to Functional Programming with JS"
   tutorial_techlinq_name: "Using C# LINQ - A Practical Overview"
-  tutorial_gpbcatapult_name: "Build a Catapult"
-  tutorial_quorumastro_name: "Coding in Astronomy"
-  tutorial_alicewonder_name: "Alice in Wonderland"
+  tutorial_gpbcatapult_name: "Bygg en katapult"
+  tutorial_quorumastro_name: "Koda i Astronomin"
+  tutorial_alicewonder_name: "Alice i Underlandet"
   tutorial_rginter_name: "RoboGarden Coding - Intermediate"
   tutorial_cssgrid_name: "Grid Garden"
   tutorial_jshero_name: "JS Hero"
@@ -1144,7 +1153,7 @@
   tutorial_buildpong_shortdescription: "Build the arcade classic and give the computer artificial intelligence to play against you."
   tutorial_tynkerdrones_shortdescription: "Program a controller for your robot or drone."
   tutorial_carla_shortdescription: "Learn to code by programming a talking virtual robot named Carla!"
-  tutorial_globaloria_shortdescription: "Go on a MakeQuest! Modify code to beat our game, then build your own!"
+  tutorial_zulama_shortdescription: "Go on a MakeQuest! Modify code to beat our game, then build your own!"
   tutorial_capost_shortdescription: "Use code to build a great looking holiday or birthday card."
   tutorial_marco_shortdescription: "An immersive game to guide Marco with a visual programming language."
   tutorial_codestersflappybike_shortdescription: "Create a game with player controls. Keep the bike in the air while dodging the obstacles!"
@@ -1381,7 +1390,7 @@
   tutorial_rgbegin_shortdescription: "At RoboGarden, we believe in giving learners the opportunity to take an active role in their education"
   tutorial_myradream_shortdescription: "Use code blocks to help Myra on a journey to get her dream back."
   tutorial_thinkfun_shortdescription: "Enjoy this fun CS activity that teaches Boolean logic concepts."
-  tutorial_hopfireworks_shortdescription: "Make a Fireworks App on iPad/iPhone"
+  tutorial_hopfireworks_shortdescription: "Skapa Fyverkerier på iPad/iPhone"
   tutorial_grokspace_shortdescription: "This activity is designed to give you your first experience programming, and has been specially designed for the Hour of Code. Use the visual programming language Blockly to investigate space and reach for the stars."
   tutorial_codehspython_shortdescription: "Code programs in Python!"
   tutorial_codehsjava_shortdescription: "Code programs in Java!"
@@ -1722,7 +1731,7 @@
   tutorial_buildpong_longdescription: "Pong is one of the earliest arcade video games and the very first sports arcade video game. It is a table tennis sports game featuring simple two-dimensional graphics. The aim of the game is for the PLAYER to score on the COMPUTER while defending its GOAL. In this project, the COMPUTER is programmed with basic artificial intelligence so it can respond to the PLAYER."
   tutorial_tynkerdrones_longdescription: "Learn to program connected devices by solving the \"Crash Course\" puzzles, where you navigate virtual drones and robots through obstacles. Then you're ready to create programs to control real drones and robots. Requires an iPad or Android tablet and a supported toy."
   tutorial_carla_longdescription: "\"Programming with Carla\" is a series of short activities that guide students through building a simple chatbot, whilst learning about core concepts like variables and conditionals. The activities have been carefully designed to address common misconceptions that new programmers have about these topics by offering many opportunities for practice, as well as targeted hints and feedback.\n"
-  tutorial_globaloria_longdescription: "In MakeQuest you learn to edit JavaScript code through a playful action game, and master computer science concepts like variables and functions. Create your own game by remixing and expanding on our game code in the Sandbox. Publish and share your game with friends!  Teachers: lesson plans and subject-specific extension activities are included."
+  tutorial_zulama_longdescription: "In this activity you will learn to edit JavaScript code through a playful action game and master computer science concepts like variables and functions. Create your own game in the Sandbox by remixing and expanding on existing game code. Then publish and share your game with friends and family. A scripted lesson guide is included for teachers."
   tutorial_capost_longdescription: "Starting to learn HTML and CSS is easy and fun with this digital postcard. Learn about adding headings, paragraphs, images and links to create a holiday card or birthday celebration to share with friends and family."
   tutorial_marco_longdescription: "Students play an adventure game based on an original story. They guide Marco - the main character - through each level by giving him step-by-step instructions in the form of the visual programming language used by the Hour of Code. They get introduced to sequencing commands, iteration and conditions without even noticing it."
   tutorial_codestersflappybike_longdescription: "In this activity, students use our drag-to-text toolkit to start coding in Python right away! Students are guided through a series of learning activities that teach them to build a complete game! After they finish, they are challenged to use what they learned about syntax, dot notation, events, variables, parameters and game mechanics to create a new game. "
@@ -2300,7 +2309,7 @@
   tutorial_buildpong_language: "Endast på engelska"
   tutorial_tynkerdrones_language: "Endast på engelska"
   tutorial_carla_language: "Endast på engelska"
-  tutorial_globaloria_language: "Endast på engelska"
+  tutorial_zulama_language: "Endast på engelska"
   tutorial_capost_language: "Endast på engelska"
   tutorial_marco_language: "Multipla"
   tutorial_codestersflappybike_language: "Endast på engelska"
@@ -2878,7 +2887,7 @@
   tutorial_buildpong_string_detail_grades: "Årskurs 2 och uppåt"
   tutorial_tynkerdrones_string_detail_grades: "Årskurs 2 och uppåt"
   tutorial_carla_string_detail_grades: "Årskurs 6+"
-  tutorial_globaloria_string_detail_grades: "Årskurs 6+"
+  tutorial_zulama_string_detail_grades: "Årskurs 6+"
   tutorial_capost_string_detail_grades: "Årskurs 6+"
   tutorial_marco_string_detail_grades: "Årskurs 2-8"
   tutorial_codestersflappybike_string_detail_grades: "Årskurs 6+"
@@ -3456,7 +3465,7 @@
   tutorial_buildpong_string_platforms: "Alla moderna webbläsare, Android-surfplatta, Android-telefon, iPad"
   tutorial_tynkerdrones_string_platforms: "Android tablet, iPad"
   tutorial_carla_string_platforms: "Alla moderna webbläsare"
-  tutorial_globaloria_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari"
+  tutorial_zulama_string_platforms: "Internet Explorer 11, Chrome, Firefox, Safari"
   tutorial_capost_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari"
   tutorial_marco_string_platforms: "Alla moderna webbläsare, Android-surfplatta, iPad"
   tutorial_codestersflappybike_string_platforms: "Alla moderna webbläsare"
@@ -4034,7 +4043,7 @@
   tutorial_buildpong_string_detail_platforms: ""
   tutorial_tynkerdrones_string_detail_platforms: "Parrot drone, Sphero robot, Ollie robot"
   tutorial_carla_string_detail_platforms: ""
-  tutorial_globaloria_string_detail_platforms: ""
+  tutorial_zulama_string_detail_platforms: ""
   tutorial_capost_string_detail_platforms: ""
   tutorial_marco_string_detail_platforms: ""
   tutorial_codestersflappybike_string_detail_platforms: ""
@@ -4612,7 +4621,7 @@
   tutorial_buildpong_string_detail_programming_languages: "Blocks, Ready, Unity"
   tutorial_tynkerdrones_string_detail_programming_languages: "Block"
   tutorial_carla_string_detail_programming_languages: "CoffeeScript"
-  tutorial_globaloria_string_detail_programming_languages: "JavaScript"
+  tutorial_zulama_string_detail_programming_languages: "JavaScript"
   tutorial_capost_string_detail_programming_languages: "HTML, CSS"
   tutorial_marco_string_detail_programming_languages: "Block"
   tutorial_codestersflappybike_string_detail_programming_languages: "Python"

@@ -80,6 +80,28 @@ de:
             '"rotation"': Rotation
             '"x"': horizontale Position
             '"y"': vertikale Position
+      Dancelab_changePropEachBy:
+        options:
+          GROUP:
+            sprites: Alle
+            '"ALIEN"': alle Aliens
+            '"BEAR"': alle Bären
+            '"CAT"': alle Katzen
+            '"DOG"': alle Hunde
+            '"DUCK"': alle Enten
+            '"FROG"': alle Frösche
+            '"MOOSE"': alle Elche
+            '"PINEAPPLE"': alle Ananas
+            '"ROBOT"': alle Roboter
+            '"SHARK"': alle Haie
+            '"UNICORN"': Einhörner
+          PROPERTY:
+            '"scale"': Größe
+            '"width"': Breite
+            '"height"': Höhe
+            '"rotation"': Rotation
+            '"x"': horizontale Position
+            '"y"': vertikale Position
       Dancelab_doMoveEachLR:
         text: "{GROUP} tut {MOVE} {DIR} einmal"
         options:
@@ -95,7 +117,7 @@ de:
             '"PINEAPPLE"': alle Ananas
             '"ROBOT"': alle Roboter
             '"SHARK"': alle Haie
-            '"UNICORN"': alle Einhörner
+            '"UNICORN"': Einhörner
           MOVE:
             '"rand"': "(zufällig)"
             MOVES.XBend: Arme hoch
@@ -240,6 +262,32 @@ de:
             "{x: 100, y: 300}": unten links
             "{x: 300, y: 300}": unten rechts
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": zufällig
+      Dancelab_jumpToEach:
+        options:
+          GROUP:
+            sprites: Alle
+            '"ALIEN"': alle Aliens
+            '"BEAR"': alle Bären
+            '"CAT"': alle Katzen
+            '"DOG"': alle Hunde
+            '"DUCK"': alle Enten
+            '"FROG"': alle Frösche
+            '"MOOSE"': alle Elche
+            '"PINEAPPLE"': alle Ananas
+            '"ROBOT"': alle Roboter
+            '"SHARK"': alle Haie
+            '"UNICORN"': Einhörner
+          LOCATION:
+            "{x: 200, y: 100}": oben
+            "{x: 200, y: 300}": unten
+            "{x: 100, y: 200}": links
+            "{x: 300, y: 200}": rechts
+            "{x: 200, y: 200}": Mitte
+            "{x: 100, y: 100}": oben links
+            "{x: 300, y: 100}": oben rechts
+            "{x: 100, y: 300}": unten links
+            "{x: 300, y: 300}": unten rechts
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": zufällig
       Dancelab_layoutSprites:
         text: Layout {GROUP} als ein {FORMAT}
         options:
@@ -255,7 +303,7 @@ de:
             '"PINEAPPLE"': alle Ananas
             '"ROBOT"': alle Roboter
             '"SHARK"': alle Haie
-            '"UNICORN"': alle Einhörner
+            '"UNICORN"': Einhörner
           FORMAT:
             '"border"': Grenze
             '"inner"': Quadrat im Inneren
@@ -267,15 +315,16 @@ de:
             '"plus"': plus
             '"random"': zufällig
       Dancelab_makeAnonymousDanceSprite:
+        text: erstelle neues {COSTUME} in {LOCATION}
         options:
           COSTUME:
-            '"ALIEN"': Alien
+            '"ALIEN"': Ausserirdischer
             '"BEAR"': Bär
             '"CAT"': Katze
             '"DOG"': Hund
             '"DUCK"': Ente
             '"FROG"': Frosch
-            '"MOOSE"': Elch
+            '"MOOSE"': alle Elche
             '"PINEAPPLE"': Ananas
             '"ROBOT"': Roboter
             '"SHARK"': Hai
@@ -469,7 +518,7 @@ de:
             '"PINEAPPLE"': alle Ananas
             '"ROBOT"': alle Roboter
             '"SHARK"': alle Haie
-            '"UNICORN"': alle Einhörner
+            '"UNICORN"': Einhörner
           SPEED:
             '1': Normal
             '2': schnell
@@ -523,7 +572,6 @@ de:
             '"rotation"': Rotation
             '"x"': horizontale Position
             '"y"': vertikale Position
-            '"tint"': Farbton
       Dancelab_setPropEach:
         text: stellen Sie {GROUP} {PROPERTY} auf {VAL}
         options:
@@ -539,7 +587,17 @@ de:
             '"PINEAPPLE"': alle Ananas
             '"ROBOT"': alle Roboter
             '"SHARK"': alle Haie
-            '"UNICORN"': alle Einhörner
+            '"UNICORN"': Einhörner
+          PROPERTY:
+            '"scale"': Größe
+            '"width"': Breite
+            '"height"': Höhe
+            '"rotation"': Rotation
+            '"x"': horizontale Position
+            '"y"': vertikale Position
+      Dancelab_setPropRandom:
+        text: randomisieren Sie {SPRITE} {PROPERTY}
+        options:
           PROPERTY:
             '"scale"': Größe
             '"width"': Breite
@@ -548,9 +606,21 @@ de:
             '"x"': horizontale Position
             '"y"': vertikale Position
             '"tint"': Farbton
-      Dancelab_setPropRandom:
-        text: randomisieren Sie {SPRITE} {PROPERTY}
+      Dancelab_setPropRandomEach:
         options:
+          GROUP:
+            sprites: Alle
+            '"ALIEN"': alle Aliens
+            '"BEAR"': alle Bären
+            '"CAT"': alle Katzen
+            '"DOG"': alle Hunde
+            '"DUCK"': alle Enten
+            '"FROG"': alle Frösche
+            '"MOOSE"': alle Elche
+            '"PINEAPPLE"': alle Ananas
+            '"ROBOT"': alle Roboter
+            '"SHARK"': alle Haie
+            '"UNICORN"': Einhörner
           PROPERTY:
             '"scale"': Größe
             '"width"': Breite
@@ -576,6 +646,7 @@ de:
             '"PINEAPPLE"': alle Ananas
             '"ROBOT"': alle Roboter
             '"SHARK"': alle Haie
+            '"UNICORN"': Einhörner
       Dancelab_setTintEachInline:
         text: stelle {THIS} Farbton auf {VAL}
         options:
@@ -591,6 +662,7 @@ de:
             '"PINEAPPLE"': alle Ananas
             '"ROBOT"': alle Roboter
             '"SHARK"': alle Haie
+            '"UNICORN"': Einhörner
       Dancelab_setTintInline:
         text: stellen Sie {SPRITE} Farbton auf {VAL}
       Dancelab_setVisible:
@@ -614,7 +686,7 @@ de:
             '"PINEAPPLE"': alle Ananas
             '"ROBOT"': alle Roboter
             '"SHARK"': alle Haie
-            '"UNICORN"': alle Einhörner
+            '"UNICORN"': Einhörner
           VISIBILITY:
             'true': sichtbar
             'false': unsichtbar
@@ -633,9 +705,64 @@ de:
             '"bass"': Bässe
             '"mid"': Mitten
             '"treble"': Höhen
+      Dancelab_startMappingEach:
+        options:
+          GROUP:
+            sprites: Alle
+            '"ALIEN"': alle Aliens
+            '"BEAR"': alle Bären
+            '"CAT"': alle Katzen
+            '"DOG"': alle Hunde
+            '"DUCK"': alle Enten
+            '"FROG"': alle Frösche
+            '"MOOSE"': alle Elche
+            '"PINEAPPLE"': alle Ananas
+            '"ROBOT"': alle Roboter
+            '"SHARK"': alle Haie
+            '"UNICORN"': Einhörner
+          PROPERTY:
+            '"scale"': Größe
+            '"width"': Breite
+            '"height"': Höhe
+            '"rotation"': Rotation
+            '"x"': horizontale Position
+            '"y"': vertikale Position
+            '"tint"': Farbton
+          RANGE:
+            '"bass"': Bässe
+            '"mid"': Mitten
+            '"treble"': Höhen
       Dancelab_stopMapping:
         text: "{SPRITE} stoppt {PROPERTY} nach {RANGE}"
         options:
+          PROPERTY:
+            '"scale"': Größe
+            '"width"': Breite
+            '"height"': Höhe
+            '"rotation"': Rotation
+            '"x"': horizontale Position
+            '"y"': vertikale Position
+            '"direction"': Bewegungsrichtung
+            '"tint"': Farbton
+          RANGE:
+            '"bass"': Bässe
+            '"mid"': Mitten
+            '"treble"': Höhen
+      Dancelab_stopMappingEach:
+        options:
+          GROUP:
+            sprites: Alle
+            '"ALIEN"': alle Aliens
+            '"BEAR"': alle Bären
+            '"CAT"': alle Katzen
+            '"DOG"': alle Hunde
+            '"DUCK"': alle Enten
+            '"FROG"': alle Frösche
+            '"MOOSE"': alle Elche
+            '"PINEAPPLE"': alle Ananas
+            '"ROBOT"': alle Roboter
+            '"SHARK"': alle Haie
+            '"UNICORN"': Einhörner
           PROPERTY:
             '"scale"': Größe
             '"width"': Breite
@@ -748,6 +875,7 @@ de:
         options:
           CHOICE:
             '"this"': dies
+            '"other"': andere
       gamelab_hideTitleScreen:
         text: verstecke Titelbildschirm
       gamelab_jumpTo:
