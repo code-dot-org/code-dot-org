@@ -157,8 +157,8 @@ const drawPondFishImages = () => {
   getState().pondFish.forEach(fish => {
 
     var swayValue = (($time() * 360) / (20 * 1000) + (fish.id + 1) * 10) % 360;
-    var swayOffsetX = Math.sin(((swayValue * Math.PI) / 180) * 5) * 6;
-    var swayOffsetY = Math.sin(((swayValue * Math.PI) / 180) * 6) * 2;
+    var swayOffsetX = Math.sin(((swayValue * Math.PI) / 180) * 2) * 120;
+    var swayOffsetY = Math.sin(((swayValue * Math.PI) / 180) * 6) * 8;
 
     drawSingleFish(fish, fish.x + swayOffsetX, fish.y + swayOffsetY, ctx);
   });

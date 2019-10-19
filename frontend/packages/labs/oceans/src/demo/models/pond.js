@@ -45,12 +45,12 @@ const predictAllFish = state => {
 const arrangeFish = fishes => {
   fishes.forEach(fish => {
     fish.x = randomInt(
-      constants.fishCanvasWidth / 4,
-      constants.canvasWidth - constants.fishCanvasWidth / 4
+      0,
+      constants.canvasWidth - constants.fishCanvasWidth / 2
     );
     fish.y = randomInt(
-      constants.fishCanvasHeight / 4,
-      constants.canvasHeight - constants.fishCanvasHeight / 4
+      0,
+      constants.canvasHeight - constants.fishCanvasHeight / 2
     );
   });
 };
