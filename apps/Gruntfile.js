@@ -1012,6 +1012,19 @@ describe('entry tests', () => {
     }
   };
 
+  config.uglify = {
+    lib: {
+      files: _.fromPairs(
+        ['p5play/p5.play.js', 'p5play/p5.js'].map(function(src) {
+          return [
+            'build/package/js/' + src.replace(/\.js$/, '.min.js'), // dst
+            'build/package/js/' + src // src
+          ];
+        })
+      )
+    }
+  };
+
   config.watch = {
     // JS files watched by webpack
     style: {
@@ -1179,6 +1192,9 @@ describe('entry tests', () => {
 
   grunt.registerTask('build', [
     'prebuild',
+    // For any minifiable libs, generate minified sources if they do not already
+    // exist in our repo. Skip minification in development environment.
+    envConstants.DEV ? 'noop' : 'uglify:lib',
     envConstants.DEV ? 'webpack:build' : 'webpack:uglify',
     'notify:js-build',
     'postbuild',
