@@ -358,6 +358,7 @@
 
   twitter_default_text: "I'm participating in this year's #HourOfCode, are you? @codeorg"
   twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
+  twitter_donor_text_2019: "This year's #HourOfCode is about #CSforGood. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
 
   hoc_faq_title: 'FAQs'
   hoc_faq_what_is_hoc_q: 'What is the Hour of Code?'

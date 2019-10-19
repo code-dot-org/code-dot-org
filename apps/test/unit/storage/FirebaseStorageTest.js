@@ -1,4 +1,4 @@
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/deprecatedChai';
 import {initFirebaseStorage} from '@cdo/apps/storage/firebaseStorage';
 import {tableType} from '@cdo/apps/storage/redux/data';
 import {
@@ -403,6 +403,122 @@ describe('FirebaseStorage', () => {
         );
       }
     });
+
+    it('Cannot overwrite existing project table', done => {
+      const expectedTableData = {
+        1: '{"id":1,"col1":"value1"}'
+      };
+      getSharedDatabase()
+        .child('counters/tables/mytable')
+        .set({lastId: 1, rowCount: 1});
+      getSharedDatabase()
+        .child('storage/tables/mytable/records')
+        .set(expectedTableData);
+
+      FirebaseStorage.copyStaticTable(
+        'mytable',
+        () => {
+          FirebaseStorage.createTable(
+            'mytable',
+            () => {
+              throw 'unexpectedly allowed to overwrite existing table';
+            },
+            err => {
+              expect(err.indexOf('There is already a table with name') !== -1)
+                .to.be.true;
+              done();
+            }
+          );
+        },
+        () => {
+          throw 'error';
+        }
+      );
+    });
+
+    it('Cannot overwrite existing current table', done => {
+      const expectedTableData = {
+        1: '{"id":1,"col1":"value1"}'
+      };
+      getSharedDatabase()
+        .child('counters/tables/mytable')
+        .set({lastId: 1, rowCount: 1});
+      getSharedDatabase()
+        .child('storage/tables/mytable/records')
+        .set(expectedTableData);
+
+      FirebaseStorage.addCurrentTableToProject(
+        'mytable',
+        () => {
+          FirebaseStorage.createTable(
+            'mytable',
+            () => {
+              throw 'unexpectedly allowed to overwrite existing table';
+            },
+            err => {
+              expect(err.indexOf('There is already a table with name') !== -1)
+                .to.be.true;
+              done();
+            }
+          );
+        },
+        () => {
+          throw 'error';
+        }
+      );
+    });
+  });
+
+  describe('addCurrentTableToProject', () => {
+    it('Sets the flag in the current_tables', done => {
+      const expectedTableData = {
+        1: '{"id":1,"col1":"value1"}'
+      };
+      getSharedDatabase()
+        .child('counters/tables/mytable')
+        .set({lastId: 1, rowCount: 1});
+      getSharedDatabase()
+        .child('storage/tables/mytable/records')
+        .set(expectedTableData);
+
+      FirebaseStorage.addCurrentTableToProject(
+        'mytable',
+        () => {
+          getProjectDatabase()
+            .child('current_tables/mytable')
+            .once('value')
+            .then(snapshot => {
+              expect(snapshot.val()).to.be.true;
+              done();
+            });
+        },
+        err => {
+          throw err;
+        }
+      );
+    });
+
+    it('Cannot overwrite existing project table', done => {
+      FirebaseStorage.createTable(
+        'mytable',
+        () => {
+          FirebaseStorage.addCurrentTableToProject(
+            'mytable',
+            () => {
+              throw 'unexpectedly allowed to overwrite existing table';
+            },
+            err => {
+              expect(err.indexOf('There is already a table with name') !== -1)
+                .to.be.true;
+              done();
+            }
+          );
+        },
+        () => {
+          throw 'error';
+        }
+      );
+    });
   });
 
   describe('copyStaticTable', () => {
@@ -422,6 +538,50 @@ describe('FirebaseStorage', () => {
       FirebaseStorage.copyStaticTable(
         'mytable',
         () => validateTableData(expectedTableData, done),
+        () => {
+          throw 'error';
+        }
+      );
+    });
+
+    it('Cannot overwrite an existing project table', done => {
+      FirebaseStorage.createTable(
+        'mytable',
+        () => {
+          FirebaseStorage.copyStaticTable(
+            'mytable',
+            () => {
+              throw 'unexpectedly allowed to overwrite existing table';
+            },
+            err => {
+              expect(err.indexOf('There is already a table with name') !== -1)
+                .to.be.true;
+              done();
+            }
+          );
+        },
+        () => {
+          throw 'error';
+        }
+      );
+    });
+
+    it('Cannot overwrite an existing current table', done => {
+      FirebaseStorage.addCurrentTableToProject(
+        'mytable',
+        () => {
+          FirebaseStorage.copyStaticTable(
+            'mytable',
+            () => {
+              throw 'unexpectedly allowed to overwrite existing table';
+            },
+            err => {
+              expect(err.indexOf('There is already a table with name') !== -1)
+                .to.be.true;
+              done();
+            }
+          );
+        },
         () => {
           throw 'error';
         }

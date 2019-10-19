@@ -207,4 +207,36 @@ export default class ChooseYourProgram extends LabeledFormComponent {
 
     return changes;
   }
+
+  /**
+   * @override
+   */
+  static getErrorMessages(data) {
+    let formatErrors = {};
+    if (
+      data.csHowManyMinutes &&
+      (data.csHowManyMinutes < 1 || data.csHowManyMinutes > 480)
+    ) {
+      formatErrors.csHowManyMinutes =
+        'Class section minutes per day must be between 1 and 480';
+    }
+
+    if (
+      data.csHowManyDaysPerWeek &&
+      (data.csHowManyDaysPerWeek < 1 || data.csHowManyDaysPerWeek > 7)
+    ) {
+      formatErrors.csHowManyDaysPerWeek =
+        'Class section days per week must be between 1 and 7';
+    }
+
+    if (
+      data.csHowManyWeeksPerYear &&
+      (data.csHowManyWeeksPerYear < 1 || data.csHowManyWeeksPerYear > 52)
+    ) {
+      formatErrors.csHowManyWeeksPerYear =
+        'Class section weeks per year must be between 1 and 52';
+    }
+
+    return formatErrors;
+  }
 }

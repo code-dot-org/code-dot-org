@@ -1,4 +1,4 @@
-import {expect, assert} from '../../../../util/configuredChai';
+import {expect, assert} from '../../../../util/deprecatedChai';
 import sinon from 'sinon';
 import Interpreter from '@code-dot-org/js-interpreter';
 import Observer from '@cdo/apps/Observer';

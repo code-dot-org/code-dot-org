@@ -1,4 +1,4 @@
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/deprecatedChai';
 import sinon from 'sinon';
 import {rgb, setSelectionRange, openUrl} from '@cdo/apps/applab/commands';
 import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';

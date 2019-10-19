@@ -277,7 +277,7 @@ class Course < ApplicationRecord
       description_teacher: I18n.t("data.course.name.#{name}.description_teacher", default: ''),
       scripts: scripts_for_user(user).map do |script|
         include_stages = false
-        script.summarize(include_stages).merge!(script.summarize_i18n(include_stages))
+        script.summarize(include_stages, user).merge!(script.summarize_i18n(include_stages))
       end,
       teacher_resources: teacher_resources,
       has_verified_resources: has_verified_resources?,
