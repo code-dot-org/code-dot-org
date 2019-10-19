@@ -54,6 +54,15 @@ dashboard_workers: 5
 skip_seed_all: true
 optimize_webpack_assets: true
 optimize_rails_assets: true
+override_dashboard: \"localhost-studio.code.org\"
+override_pegasus: \"localhost.code.org\"
+no_https_store: true
+dashboard_port: 3000
+pegasus_port: 3000
+animations_s3_directory: animations_circle/$CIRCLE_BUILD_NUM
+assets_s3_directory: assets_circle/$CIRCLE_BUILD_NUM
+files_s3_directory: files_circle/$CIRCLE_BUILD_NUM
+sources_s3_directory: sources_circle/$CIRCLE_BUILD_NUM
 " >> locals.yml
 echo "Wrote secrets from env vars into locals.yml."
 set -x
@@ -63,19 +72,6 @@ RAKE_VERBOSE=true bundle exec rake install --trace
 
 # name: rake build
 RAKE_VERBOSE=true bundle exec rake build --trace
-
-# apply test settings for after unit tests
-echo "
-no_https_store: true
-override_dashboard: \"localhost-studio.code.org\"
-override_pegasus: \"localhost.code.org\"
-dashboard_port: 3000
-pegasus_port: 3000
-animations_s3_directory: animations_circle/$CIRCLE_BUILD_NUM
-assets_s3_directory: assets_circle/$CIRCLE_BUILD_NUM
-files_s3_directory: files_circle/$CIRCLE_BUILD_NUM
-sources_s3_directory: sources_circle/$CIRCLE_BUILD_NUM
-" >> locals.yml
 
 # name: seed ui tests
 bundle exec rake circle:seed_ui_test --trace
