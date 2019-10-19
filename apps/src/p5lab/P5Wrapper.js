@@ -1,9 +1,9 @@
 import {getStore} from '@cdo/apps/redux';
 import {allAnimationsSingleFrameSelector} from './animationListModule';
 window.p5 = require('@code-dot-org/p5');
-require('@code-dot-org/p5.play/lib/p5.play');
-var p5SpriteWrapper = require('./P5SpriteWrapper');
-var p5GroupWrapper = require('./P5GroupWrapper');
+import '@code-dot-org/p5.play/lib/p5.play';
+import p5SpriteWrapper from './P5SpriteWrapper';
+import p5GroupWrapper from './P5GroupWrapper';
 import {backgrounds} from './spritelab/backgrounds.json';
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
 
