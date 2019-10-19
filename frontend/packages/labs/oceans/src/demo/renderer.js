@@ -18,12 +18,18 @@ var $time =
 
 let prevState = {};
 
+let currentModeStartTime = $time();
+
 export const render = () => {
   const state = getState();
   drawBackground(state);
 
   if (prevState.uiElements !== state.uiElements) {
     drawUiElements(state);
+  }
+
+  if (state.currentMode !== prevState.currentMode) {
+    currentModeStartTime = $time();
   }
 
   switch (state.currentMode) {
@@ -47,6 +53,8 @@ export const render = () => {
     default:
       console.error('Unrecognized mode specified.');
   }
+
+  drawOverlays();
 
   prevState = {...state};
   window.requestAnimFrame(render);
@@ -263,6 +271,40 @@ const drawFish = (fish, results, ctx, x = 0, y = 0) => {
 export const clearCanvas = canvas => {
   canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
 };
+
+function drawOverlays() {
+  // update fade
+  var duration = $time() - currentModeStartTime;
+  var amount = 1 - (duration / 800);
+  if (amount < 0) {
+    amount = 0;
+  }
+  DrawFade(amount, "#000");
+}
+
+function DrawFade(amount, overlayColour)
+{
+  if (amount == 0) {
+    return;
+  }
+
+  const canvasCtx = getState().canvas.getContext('2d');
+  canvasCtx.globalAlpha = amount;
+  canvasCtx.fillStyle = overlayColour;
+  DrawFilledRect(0, 0, constants.canvasWidth, constants.canvasHeight);
+  canvasCtx.globalAlpha = 1;
+}
+
+function DrawFilledRect(x, y, w, h)
+{
+  x = Math.floor(x / 1);
+  y = Math.floor(y / 1);
+  w = Math.floor(w / 1);
+  h = Math.floor(h / 1);
+
+  const canvasCtx = getState().canvas.getContext('2d');
+  canvasCtx.fillRect(x, y, w, h);
+}
 
 window.requestAnimFrame = (() => {
   return (
