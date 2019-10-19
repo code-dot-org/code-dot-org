@@ -10,6 +10,12 @@ import {
 } from './helpers';
 import {FishBodyPart} from '../utils/fishData';
 
+var $time =
+  Date.now ||
+  function() {
+    return +new Date();
+  };
+
 let prevState = {};
 
 export const render = () => {
@@ -34,7 +40,6 @@ export const render = () => {
       if (prevState.pondFish !== state.pondFish) {
         loadPondFishImages();
         clearCanvas(state.canvas);
-        //drawPondFish(state);
       }
       clearCanvas(state.canvas);
       drawPondFishImages();
@@ -150,7 +155,12 @@ const drawPondFishImages = () => {
   const canvas = getState().canvas;
   const ctx = canvas.getContext('2d');
   getState().pondFish.forEach(fish => {
-    drawSingleFish(fish, fish.x, fish.y, ctx);
+
+    var swayValue = (($time() * 360) / (20 * 1000) + (fish.id + 1) * 10) % 360;
+    var swayOffsetX = Math.sin(((swayValue * Math.PI) / 180) * 5) * 6;
+    var swayOffsetY = Math.sin(((swayValue * Math.PI) / 180) * 6) * 2;
+
+    drawSingleFish(fish, fish.x + swayOffsetX, fish.y + swayOffsetY, ctx);
   });
 };
 
