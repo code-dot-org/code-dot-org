@@ -121,6 +121,14 @@ module Dashboard
     # Generate digests for assets URLs which do not contain webpack hashes.
     config.assets.digest = CDO.optimize_rails_assets
 
+    # Compress JavaScripts and CSS.
+    # webpack handles js compression for us
+    # config.assets.js_compressor = :uglifier
+    # config.assets.css_compressor = :sass
+
+    # Version of your assets, change this if you want to expire all your assets.
+    config.assets.version = '1.0' if CDO.optimize_rails_assets
+
     config.assets.precompile += %w(
       js/*
       css/*.css

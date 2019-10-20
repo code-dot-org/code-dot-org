@@ -21,19 +21,7 @@ Dashboard::Application.configure do
   config.public_file_server.enabled = true
   config.public_file_server.headers = {'Cache-Control' => "public, max-age=3600, s-maxage=1800"}
 
-  # test environment should use precompiled, minified, digested assets like production,
-  # unless it's being used for unit tests.
   ci_test = !!(ENV['UNIT_TEST'] || ENV['CI'])
-
-  unless ci_test
-    # Compress JavaScripts and CSS.
-    # webpack handles js compression for us
-    # config.assets.js_compressor = :uglifier
-    # config.assets.css_compressor = :sass
-
-    # Version of your assets, change this if you want to expire all your assets.
-    config.assets.version = '1.0'
-  end
 
   config.assets.quiet = true
 
