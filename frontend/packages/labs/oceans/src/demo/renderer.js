@@ -1,23 +1,82 @@
 import 'babel-polyfill';
 import _ from 'lodash';
-import constants, {ClassType} from './constants';
-import {FishBodyPart} from '../utils/fishData';
 import {getState} from './state';
+import constants, {Modes} from './constants';
+import {
+  backgroundPathForMode,
+  bodyAnchorFromType,
+  colorFromType,
+  randomInt
+} from './helpers';
+import {FishBodyPart} from '../utils/fishData';
 
-export const drawBackground = imgPath => {
-  const canvas = getState().backgroundCanvas;
+var $time =
+  Date.now ||
+  function() {
+    return +new Date();
+  };
+
+let prevState = {};
+
+let currentModeStartTime = $time();
+
+export const render = () => {
+  const state = getState();
+
+  if (prevState.uiElements !== state.uiElements) {
+    drawUiElements(state);
+  }
+
+  if (state.currentMode !== prevState.currentMode) {
+    drawBackground(state);
+    currentModeStartTime = $time();
+  }
+
+  switch (state.currentMode) {
+    case Modes.Words:
+      clearCanvas(state.canvas);
+      break;
+    case Modes.Training:
+      clearCanvas(state.canvas);
+      drawTrainingFish(state);
+      drawUpcomingFish(state);
+      break;
+    case Modes.Predicting:
+      clearCanvas(state.canvas);
+      drawPredictingFish(state);
+      break;
+    case Modes.Pond:
+      if (prevState.pondFish !== state.pondFish) {
+        loadPondFishImages();
+        clearCanvas(state.canvas);
+      }
+      clearCanvas(state.canvas);
+      drawPondFishImages();
+      break;
+    default:
+      console.error('Unrecognized mode specified.');
+  }
+
+  drawOverlays();
+
+  prevState = {...state};
+  window.requestAnimFrame(render);
+};
+
+export const drawBackground = state => {
+  const canvas = state.backgroundCanvas;
   if (!canvas) {
     return;
   }
 
-  if (!imgPath) {
+  const imgPath = backgroundPathForMode(state.currentMode);
+  if (imgPath) {
+    loadImage(imgPath).then(img => {
+      canvas.getContext('2d').drawImage(img, 0, 0, canvas.width, canvas.height);
+    });
+  } else {
     canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
-    return;
   }
-
-  loadImage(imgPath).then(img => {
-    canvas.getContext('2d').drawImage(img, 0, 0, canvas.width, canvas.height);
-  });
 };
 
 const loadImage = imgPath => {
@@ -45,9 +104,7 @@ export const drawTrainingFish = state => {
   const fish = state.fishData[state.trainingIndex];
   const fishXPos = frameXPos + (frameSize - constants.fishCanvasWidth) / 2;
   const fishYPos = frameYPos + (frameSize - constants.fishCanvasHeight) / 2;
-  loadFishImages(fish).then(results => {
-    drawSingleFish(fish, fishXPos, fishYPos, ctx);
-  });
+  drawSingleFish(fish, fishXPos, fishYPos, ctx);
 };
 
 export const drawUpcomingFish = state => {
@@ -65,9 +122,10 @@ export const drawUpcomingFish = state => {
   }
 };
 
-export const drawUiElements = (container, children) => {
-  clearChildren(container);
-  children.forEach(child => container.appendChild(child));
+export const drawUiElements = state => {
+  const container = state.uiContainer;
+  container.innerHTML = '';
+  state.uiElements.forEach(el => container.appendChild(el));
 };
 
 export const drawPredictingFish = state => {
@@ -82,43 +140,37 @@ export const drawPredictingFish = state => {
 };
 
 export const drawPondFish = state => {
-  predictAllFish(state, fishWithConfidence => {
-    fishWithConfidence = _.sortBy(fishWithConfidence, ['confidence']);
-    const pondFish = fishWithConfidence.splice(0, 20);
-    const canvas = state.canvas;
-
-    pondFish.forEach(fish => {
-      loadFishImages(fish).then(results => {
-        const randomX = randomInt(
-          constants.fishCanvasWidth / 4,
-          canvas.width - constants.fishCanvasWidth / 4
-        );
-        const randomY = randomInt(
-          constants.fishCanvasHeight / 4,
-          canvas.height - constants.fishCanvasHeight / 4
-        );
-        drawFish(fish, results, canvas.getContext('2d'), randomX, randomY);
-      });
+  const canvas = state.canvas;
+  state.pondFish.forEach(fish => {
+    loadFishImages(fish).then(results => {
+      const randomX = randomInt(
+        constants.fishCanvasWidth / 4,
+        canvas.width - constants.fishCanvasWidth / 4
+      );
+      const randomY = randomInt(
+        constants.fishCanvasHeight / 4,
+        canvas.height - constants.fishCanvasHeight / 4
+      );
+      drawFish(fish, results, canvas.getContext('2d'), randomX, randomY);
     });
   });
 };
 
-const predictAllFish = (state, onComplete) => {
-  let fishWithConfidence = [];
-  state.fishData.map((fish, index) => {
-    state.trainer.predictFromData(fish.knnData).then(res => {
-      if (res.predictedClassId === ClassType.Like) {
-        let data = {
-          ...fish,
-          confidence: res.confidencesByClassId[res.predictedClassId]
-        };
-        fishWithConfidence.push(data);
-      }
+const loadPondFishImages = () => {
+  getState().pondFish.forEach(fish => {
+    fish.parts.map(loadFishImage);
+  });
+};
 
-      if (index === state.fishData.length - 1) {
-        onComplete(fishWithConfidence);
-      }
-    });
+const drawPondFishImages = () => {
+  const canvas = getState().canvas;
+  const ctx = canvas.getContext('2d');
+  getState().pondFish.forEach(fish => {
+    var swayValue = (($time() * 360) / (20 * 1000) + (fish.id + 1) * 10) % 360;
+    var swayOffsetX = Math.sin(((swayValue * Math.PI) / 180) * 2) * 120;
+    var swayOffsetY = Math.sin(((swayValue * Math.PI) / 180) * 6) * 8;
+
+    drawSingleFish(fish, fish.x + swayOffsetX, fish.y + swayOffsetY, ctx);
   });
 };
 
@@ -218,55 +270,51 @@ const drawFish = (fish, results, ctx, x = 0, y = 0) => {
   });
 };
 
-const clearChildren = el => {
-  while (el.firstChild) {
-    el.removeChild(el.firstChild);
-  }
-};
-
 export const clearCanvas = canvas => {
   canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
 };
 
-const bodyAnchorFromType = (body, type) => {
-  switch (type) {
-    case FishBodyPart.EYE:
-      return body.eyeAnchor;
-    case FishBodyPart.MOUTH:
-      return body.mouthAnchor;
-    case FishBodyPart.DORSAL_FIN:
-      return body.dorsalFinAnchor;
-    case FishBodyPart.PECTORAL_FIN_FRONT:
-      return body.pectoralFinFrontAnchor;
-    case FishBodyPart.PECTORAL_FIN_BACK:
-      return body.pectoralFinBackAnchor;
-    case FishBodyPart.TAIL:
-      return body.tailAnchor;
-    case FishBodyPart.BODY:
-      return body.anchor;
-    default:
-      return [0, 0];
+function drawOverlays() {
+  // update fade
+  var duration = $time() - currentModeStartTime;
+  var amount = 1 - duration / 800;
+  if (amount < 0) {
+    amount = 0;
   }
-};
+  DrawFade(amount, '#000');
+}
 
-const colorFromType = (palette, type) => {
-  switch (type) {
-    case FishBodyPart.MOUTH:
-      return palette.mouthRgb;
-    case FishBodyPart.DORSAL_FIN:
-    case FishBodyPart.PECTORAL_FIN_FRONT:
-    case FishBodyPart.PECTORAL_FIN_BACK:
-    case FishBodyPart.TAIL:
-      return palette.finRgb;
-    case FishBodyPart.BODY:
-      return palette.bodyRgb;
-    default:
-      return null;
+function DrawFade(amount, overlayColour) {
+  if (amount === 0) {
+    return;
   }
-};
 
-const randomInt = (min, max) => {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-};
+  const canvasCtx = getState().canvas.getContext('2d');
+  canvasCtx.globalAlpha = amount;
+  canvasCtx.fillStyle = overlayColour;
+  DrawFilledRect(0, 0, constants.canvasWidth, constants.canvasHeight);
+  canvasCtx.globalAlpha = 1;
+}
+
+function DrawFilledRect(x, y, w, h) {
+  x = Math.floor(x / 1);
+  y = Math.floor(y / 1);
+  w = Math.floor(w / 1);
+  h = Math.floor(h / 1);
+
+  const canvasCtx = getState().canvas.getContext('2d');
+  canvasCtx.fillRect(x, y, w, h);
+}
+
+window.requestAnimFrame = (() => {
+  return (
+    window.requestAnimationFrame ||
+    window.webkitRequestAnimationFrame ||
+    window.mozRequestAnimationFrame ||
+    window.oRequestAnimationFrame ||
+    window.msRequestAnimationFrame ||
+    function(/* function */ callback, /* DOMElement */ element) {
+      window.setTimeout(callback, 1000 / 60);
+    }
+  );
+})();

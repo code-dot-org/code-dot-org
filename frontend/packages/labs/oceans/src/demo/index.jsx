@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import constants, {Modes} from './constants';
-import {initModel} from './models';
 import {setState} from './state';
+import {init as initScene} from './init';
 
 $(document).ready(() => {
   // Set up initial state
@@ -10,13 +10,12 @@ $(document).ready(() => {
   canvas.width = backgroundCanvas.width = constants.canvasWidth;
   canvas.height = backgroundCanvas.height = constants.canvasHeight;
 
-  const state = setState({
+  setState({
     currentMode: Modes.Words,
     canvas,
     backgroundCanvas,
     uiContainer: document.getElementById('ui-container')
   });
 
-  // Initialize current model
-  initModel(state);
+  initScene();
 });

@@ -1,12 +1,14 @@
 const initialState = {
   currentMode: null,
   fishData: [],
+  pondFish: [],
   backgroundCanvas: null,
   canvas: null,
   ctx: null,
   trainer: null,
   trainingIndex: 0,
-  uiContainer: null
+  uiContainer: null,
+  uiElements: []
 };
 let state = {...initialState};
 

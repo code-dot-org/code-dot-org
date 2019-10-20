@@ -47,16 +47,18 @@ const uiElements = [
 export const init = () => {
   const state = getState();
 
-  drawBackground(backgroundPathForMode(state.currentMode));
-  drawScene(state);
+  //drawBackground(backgroundPathForMode(state.currentMode));
+  //drawScene(state);
+  setState({uiElements: uiElements});
 };
 
+/*
 const drawScene = state => {
   // Clear main canvas before drawing.
   clearCanvas(state.canvas);
   drawPondFish(state);
   drawUiElements(state.uiContainer, uiElements);
-};
+};*/
 
 const onClickChooseWord = () => {
   const state = setState({currentMode: Modes.Training});

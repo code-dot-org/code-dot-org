@@ -1,17 +1,10 @@
 import 'babel-polyfill';
 import {setState, getState} from '../state';
-import {initModel} from './index';
+import {init as initScene} from '../init';
 import {Modes, ClassType} from '../constants';
-import {backgroundPathForMode, createButton} from '../helpers';
+import {createButton} from '../helpers';
 import SimpleTrainer from '../../utils/SimpleTrainer';
 import {generateOcean} from '../../utils/generateOcean';
-import {
-  drawBackground,
-  drawTrainingFish,
-  drawUpcomingFish,
-  drawUiElements,
-  clearCanvas
-} from '../renderer';
 
 const uiElements = [
   createButton({
@@ -36,18 +29,7 @@ export const init = () => {
   const trainer = new SimpleTrainer();
   trainer.initializeClassifiersWithoutMobilenet();
 
-  const state = setState({fishData, trainer});
-
-  drawBackground(backgroundPathForMode(state.currentMode));
-  drawScene(state);
-  drawUiElements(state.uiContainer, uiElements);
-};
-
-const drawScene = state => {
-  // Clear main canvas before drawing.
-  clearCanvas(state.canvas);
-  drawTrainingFish(state);
-  drawUpcomingFish(state);
+  setState({fishData, trainer, uiElements});
 };
 
 const onClassifyFish = doesLike => {
@@ -57,11 +39,9 @@ const onClassifyFish = doesLike => {
   state.trainer.addExampleData(knnData, classId);
   state.trainingIndex += 1;
   setState({trainingIndex: state.trainingIndex});
-  drawScene(state);
 };
 
 const onClickNext = () => {
-  const state = setState({currentMode: Modes.Predicting});
-  clearCanvas(state.canvas);
-  initModel(state);
+  setState({currentMode: Modes.Predicting});
+  initScene();
 };
