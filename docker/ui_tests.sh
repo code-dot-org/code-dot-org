@@ -66,10 +66,10 @@ echo "Wrote secrets from env vars into locals.yml."
 set -x
 
 # name: rake install
-RAKE_VERBOSE=true bundle exec rake install --trace
+RAKE_VERBOSE=true mispipe "bundle exec rake install --trace" "ts '[%Y-%m-%d %H:%M:%S]'"
 
 # name: rake build
-RAKE_VERBOSE=true bundle exec rake build --trace
+RAKE_VERBOSE=true mispipe "bundle exec rake build --trace" "ts '[%Y-%m-%d %H:%M:%S]'"
 
 # name: seed ui tests
 bundle exec rake circle:seed_ui_test --trace
