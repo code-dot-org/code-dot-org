@@ -10,6 +10,12 @@ import {
 } from './helpers';
 import {FishBodyPart} from '../utils/fishData';
 
+var $time =
+  Date.now ||
+  function() {
+    return +new Date();
+  };
+
 let prevState = {};
 
 export const render = () => {
@@ -32,9 +38,11 @@ export const render = () => {
       break;
     case Modes.Pond:
       if (prevState.pondFish !== state.pondFish) {
+        loadPondFishImages();
         clearCanvas(state.canvas);
-        drawPondFish(state);
       }
+      clearCanvas(state.canvas);
+      drawPondFishImages();
       break;
     default:
       console.error('Unrecognized mode specified.');
@@ -134,6 +142,24 @@ export const drawPondFish = state => {
       );
       drawFish(fish, results, canvas.getContext('2d'), randomX, randomY);
     });
+  });
+};
+
+const loadPondFishImages = () => {
+  getState().pondFish.forEach(fish => {
+    fish.parts.map(loadFishImage);
+  });
+};
+
+const drawPondFishImages = () => {
+  const canvas = getState().canvas;
+  const ctx = canvas.getContext('2d');
+  getState().pondFish.forEach(fish => {
+    var swayValue = (($time() * 360) / (20 * 1000) + (fish.id + 1) * 10) % 360;
+    var swayOffsetX = Math.sin(((swayValue * Math.PI) / 180) * 2) * 120;
+    var swayOffsetY = Math.sin(((swayValue * Math.PI) / 180) * 6) * 8;
+
+    drawSingleFish(fish, fish.x + swayOffsetX, fish.y + swayOffsetY, ctx);
   });
 };
 
