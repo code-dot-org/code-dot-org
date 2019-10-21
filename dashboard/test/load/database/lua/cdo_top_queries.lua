@@ -30,14 +30,14 @@ STORAGE_APPS_VALUE = [[{\"hidden\":true,\"createdAt\":\"2019-09-22T04:05:08.511+
 
 function init_query_templates()
   read_queries = {
-    [[SELECT *
-      FROM dashboard_production.users
-      WHERE deleted_at is null
-            AND id = $userId
-      ORDER BY id ASC limit 1]],
-    [[SELECT *
-      FROM pegasus.user_storage_ids
-      WHERE user_id = $userId limit 1]]
+    {[[ SELECT *
+        FROM dashboard_production.users
+        WHERE deleted_at is null
+              AND id = $userId
+        ORDER BY id ASC limit 1]], 247.24}
+    {[[ SELECT *
+        FROM pegasus.user_storage_ids
+        WHERE user_id = $userId limit 1]], 137.77}
   }
 
   write_queries = {
