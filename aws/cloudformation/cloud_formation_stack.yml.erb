@@ -713,8 +713,7 @@ Resources:
       DBInstanceClass: db.r4.large
       DBSubnetGroupName: !ImportValue VPC-DBSubnetGroup
       Engine: aurora-mysql
-      # We will usually do engine version updates manually, since updating this requires replacement, so this value may be out of sync with instance.
-      EngineVersion: 5.7.12
+      # We will usually do engine version updates manually, so don't specify an EngineVersion for the DBInstance.
 <% end -%>
 
   AuroraClusterDBParameters:
