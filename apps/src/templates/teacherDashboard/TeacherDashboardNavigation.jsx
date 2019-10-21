@@ -5,9 +5,6 @@ import {NavLink} from 'react-router-dom';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import firehoseClient from '../../lib/util/firehose';
-import _ from 'lodash';
-import {connect} from 'react-redux';
 var userAgentParser = require('../../code-studio/initApp/userAgentParser');
 
 export const TeacherDashboardPath = {
@@ -53,7 +50,7 @@ const ListPosition = {
   end: 'end'
 };
 
-class TeacherDashboardNavigation extends Component {
+export default class TeacherDashboardNavigation extends Component {
   static propTypes = {
     links: PropTypes.arrayOf(
       PropTypes.shape({
@@ -122,22 +119,6 @@ class TeacherDashboardNavigation extends Component {
     }
   };
 
-  recordTabChanged = link => {
-    const currentTab = _.last(_.split(window.location.pathname, '/'));
-    const clickedTab = link.url.substring(1);
-
-    firehoseClient.putRecord({
-      study: ' teacher_dashboard_actions',
-      study_group: currentTab,
-      event: 'click_new_tab',
-      user_id: this.props.userId,
-      data_json: JSON.stringify({
-        section_id: this.props.sectionId,
-        new_tab: clickedTab
-      })
-    });
-  };
-
   render() {
     const {listPosition, shouldScroll} = this.state;
     const links = this.props.links || teacherDashboardLinks;
@@ -168,7 +149,6 @@ class TeacherDashboardNavigation extends Component {
             to={link.url}
             style={styles.linkContainer}
             activeStyle={styles.activeLinkContainer}
-            onClick={() => this.recordTabChanged(link)}
           >
             <div style={styles.link}>{link.label}</div>
           </NavLink>
@@ -184,10 +164,6 @@ class TeacherDashboardNavigation extends Component {
     );
   }
 }
-export default connect(state => ({
-  sectionId: state.sectionData.section.id,
-  userId: state.currentUser.userId
-}))(TeacherDashboardNavigation);
 
 const NAVBAR_HEIGHT = 50;
 const PADDING = 10;
