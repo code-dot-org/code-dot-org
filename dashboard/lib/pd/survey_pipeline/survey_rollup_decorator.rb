@@ -1,4 +1,4 @@
-# SurveyRollupDecoratorExperiment combines pieces of survey roll-up data from previous steps
+# SurveyRollupDecorator combines pieces of survey roll-up data from previous steps
 # of the survey pipeline and organize them in a format that the client view can consume.
 
 module Pd::SurveyPipeline
