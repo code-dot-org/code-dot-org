@@ -50,6 +50,8 @@ export default class CourseOverviewTopRow extends Component {
           <SectionAssigner
             sections={sectionsInfo}
             showAssignButton={showAssignButton}
+            courseId={id}
+            assignmentName={title}
           />
         )}
       </div>
