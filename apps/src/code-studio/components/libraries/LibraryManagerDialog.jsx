@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import Dialog, {Body} from '@cdo/apps/templates/Dialog';
-import LibraryClientApi from '@cdo/apps/code-studio/components/Libraries/LibraryClientApi';
+import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
 
 export default class LibraryManagerDialog extends React.Component {
   static propTypes = {

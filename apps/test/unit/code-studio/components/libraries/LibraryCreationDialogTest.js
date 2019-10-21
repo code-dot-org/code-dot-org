@@ -1,8 +1,8 @@
 import {expect} from '../../../../util/reconfiguredChai';
 import React from 'react';
 import {mount} from 'enzyme';
-import {UnconnectedLibraryCreationDialog as LibraryCreationDialog} from '@cdo/apps/code-studio/components/Libraries/LibraryCreationDialog.jsx';
-import libraryParser from '@cdo/apps/code-studio/components/Libraries/libraryParser';
+import {UnconnectedLibraryCreationDialog as LibraryCreationDialog} from '@cdo/apps/code-studio/components/libraries/LibraryCreationDialog.jsx';
+import libraryParser from '@cdo/apps/code-studio/components/libraries/libraryParser';
 
 const LIBRARY_SOURCE =
   '/*\n' +
