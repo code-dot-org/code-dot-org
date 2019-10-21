@@ -1238,6 +1238,42 @@ describe('FirebaseStorage', () => {
       }
     });
 
+    it('can read a current table', done => {
+      const tableData = {
+        1: '{"id":1,"name":"alice","age":7,"male":false}',
+        2: '{"id":2,"name":"bob","age":8,"male":true}',
+        3: '{"id":3,"name":"charlie","age":9,"male":true}'
+      };
+      getSharedDatabase()
+        .child('counters/tables/mytable')
+        .set({lastId: 3, rowCount: 3});
+      getSharedDatabase()
+        .child('storage/tables/mytable/records')
+        .set(tableData);
+
+      getProjectDatabase()
+        .child('current_tables/mytable')
+        .set(true);
+
+      const expectedRecords = [
+        {id: 1, name: 'alice', age: 7, male: false},
+        {id: 2, name: 'bob', age: 8, male: true},
+        {id: 3, name: 'charlie', age: 9, male: true}
+      ];
+
+      FirebaseStorage.readRecords(
+        'mytable',
+        {},
+        records => {
+          expect(records).to.deep.equal(expectedRecords);
+          done();
+        },
+        err => {
+          throw 'error';
+        }
+      );
+    });
+
     it('returns [] for a table with no rows', done => {
       FirebaseStorage.createTable(
         'emptytable',
