@@ -7,7 +7,7 @@
       0.74
     ],
     "func": "sendBad",
-    "blockText": "move left",
+    "blockText": "move object left",
     "args": [
       {
         "name": "SPRITE",
