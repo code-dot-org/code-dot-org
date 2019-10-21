@@ -8,19 +8,14 @@ import {generateOcean} from '../../utils/generateOcean';
 
 const uiElements = [
   createButton({
-    id: 'like-button',
-    text: 'like',
+    id: 'yes-button',
+    text: 'yes',
     onClick: () => onClassifyFish(true)
   }),
   createButton({
-    id: 'dislike-button',
-    text: 'dislike',
+    id: 'no-button',
+    text: 'no',
     onClick: () => onClassifyFish(false)
-  }),
-  createButton({
-    id: 'next-button',
-    text: 'next',
-    onClick: () => onClickNext()
   })
 ];
 

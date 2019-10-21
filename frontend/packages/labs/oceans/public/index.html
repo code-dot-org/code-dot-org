@@ -18,7 +18,8 @@
         margin: 0 auto;
         user-select: none;
       }
-      #header {
+      #header,
+      #footer {
         width: 100%;
         height: 80px;
       }
@@ -41,7 +42,8 @@
         width: 100%;
         height: 100%;
       }
-      button, select {
+      button,
+      select {
         background-color: #403f3f; /* #4e4e82; */
         color: white;
         font-size: 120%;
@@ -51,7 +53,8 @@
         width: 17%;
         height: 8%;
       }
-      button:focus, select:focus {
+      button:focus,
+      select:focus {
         outline: white auto 5px;
       }
       .ui-button {
@@ -63,7 +66,8 @@
         display: block;
       }
       @media screen and (max-width: 800px) {
-        button, select {
+        button,
+        select {
           font-size: 90%;
         }
       }
@@ -72,13 +76,17 @@
           font-size: 60%;
         }
       }
-      #like-button {
+      #yes-button {
+        border: 2px solid black;
+        background-color: #56c568;
         right: 30%;
-        bottom: 3%;
+        bottom: 15%;
       }
-      #dislike-button {
+      #no-button {
+        border: 2px solid black;
+        background-color: #e83a4d;
         right: 50%;
-        bottom: 3%;
+        bottom: 15%;
       }
       #next-button,
       #start-over-button {
@@ -93,7 +101,6 @@
         width: 100%;
         text-align: center;
       }
-
       #select-color {
         top: 40px;
       }
@@ -114,6 +121,7 @@
       <canvas id="background-canvas"></canvas>
       <canvas id="activity-canvas"></canvas>
       <div id="ui-container"></div>
+      <div id="footer"></div>
     </div>
     <script src="demo.js"></script>
   </body>
