@@ -190,12 +190,12 @@ const loadFishImage = fishPart => {
 };
 
 const drawSingleFish = (fish, fishXPos, fishYPos, ctx) => {
-  if (!fish.canvas) {
-    fish.canvas = canvasCache.getCanvas(fish.id);
-    fish.canvas.width = constants.fishCanvasWidth;
-    fish.canvas.height = constants.fishCanvasHeight;
+  const [fishCanvas, hit] = canvasCache.getCanvas(fish.id);
+  if (!hit) {
+    fishCanvas.width = constants.fishCanvasWidth;
+    fishCanvas.height = constants.fishCanvasHeight;
     loadFishImages(fish).then(results => {
-      const fishCtx = fish.canvas.getContext('2d');
+      const fishCtx = fishCanvas.getContext('2d');
       drawFish(
         fish,
         results,
@@ -203,10 +203,10 @@ const drawSingleFish = (fish, fishXPos, fishYPos, ctx) => {
         constants.fishCanvasWidth / 2,
         constants.fishCanvasHeight / 2
       );
-      ctx.drawImage(fish.canvas, fishXPos, fishYPos);
+      ctx.drawImage(fishCanvas, fishXPos, fishYPos);
     });
   } else {
-    ctx.drawImage(fish.canvas, fishXPos, fishYPos);
+    ctx.drawImage(fishCanvas, fishXPos, fishYPos);
   }
 };
 
@@ -219,12 +219,17 @@ const drawFish = (fish, results, ctx, x = 0, y = 0) => {
   const bodyAnchor = bodyAnchorFromType(body, body.type);
   results = _.orderBy(results, ['fishPart.type']);
 
-  const intermediateCanvas = canvasCache.getCanvas(`interediate-${fish.id}`);
+  const intermediateCanvas = canvasCache.getCanvas(`interediate-${fish.id}`)[0];
+  const intermediateCtx = intermediateCanvas.getContext('2d');
+  intermediateCanvas.width = constants.fishCanvasWidth;
+  intermediateCanvas.height = constants.fishCanvasHeight;
   results.forEach(result => {
-    intermediateCanvas.width = constants.fishCanvasWidth;
-    intermediateCanvas.height = constants.fishCanvasHeight;
-    let intermediateCtx = intermediateCanvas.getContext('2d');
-    intermediateCtx.clearRect(0,0,constants.fishCanvasWidth, constants.fishCanvasHeight);
+    intermediateCtx.clearRect(
+      0,
+      0,
+      constants.fishCanvasWidth,
+      constants.fishCanvasHeight
+    );
     let anchor = [0, 0];
     if (result.fishPart.type !== FishBodyPart.BODY) {
       const bodyAnchor = bodyAnchorFromType(body, result.fishPart.type);
