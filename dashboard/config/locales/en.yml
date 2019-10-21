@@ -961,6 +961,10 @@ en:
     time4cs_c3: 'Living in the Everglades'
     time4cs_c4: 'Invasive Impacts on the Everglades'
     time4cs_c5: 'Citizens Affect Change in the Everglades'
+    k5_getting_started: 'Getting Started'
+    k5_csf_intro: 'Get to know the CS Fundamentals Courses'
+    k5_coding_concepts: 'Coding Concepts'
+    k5_next_steps: 'Next Steps'
   external_links:
     disclaimer: Disclaimer
     leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.
