@@ -1,15 +1,13 @@
 import $ from 'jquery';
 import 'babel-polyfill';
 import {setState, getState} from '../state';
-import {initModel} from './index';
 import {Modes} from '../constants';
-import {backgroundPathForMode, createButton} from '../helpers';
-import {
-  drawBackground,
-  drawPondFish,
-  drawUiElements,
-  clearCanvas
-} from '../renderer';
+import {init as initScene} from '../init';
+
+const onChangeWord = event => {
+  setState({word: event.target.value, currentMode: Modes.Training});
+  initScene();
+}
 
 const createDropdowns = () => {
   const listData = [
@@ -30,40 +28,16 @@ const createDropdowns = () => {
     }
     selectList.setAttribute('id', `select-${listItem.type}`);
     selectList.setAttribute('class', 'ui-centered-select');
+    selectList.addEventListener('change', onChangeWord, false);
     results.push(selectList);
   }
   return results;
 };
 
-const uiElements = [
-  createButton({
-    id: 'start-over-button',
-    text: 'choose word',
-    onClick: () => onClickChooseWord()
-  }),
-  ...createDropdowns()
-];
+const uiElements = createDropdowns();
 
 export const init = () => {
-  const state = getState();
-
-  //drawBackground(backgroundPathForMode(state.currentMode));
-  //drawScene(state);
   setState({uiElements: uiElements});
-};
-
-/*
-const drawScene = state => {
-  // Clear main canvas before drawing.
-  clearCanvas(state.canvas);
-  drawPondFish(state);
-  drawUiElements(state.uiContainer, uiElements);
-};*/
-
-const onClickChooseWord = () => {
-  const state = setState({currentMode: Modes.Training});
-  clearCanvas(state.canvas);
-  initModel(state);
 };
 
 
