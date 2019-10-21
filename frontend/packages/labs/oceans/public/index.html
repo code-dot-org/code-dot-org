@@ -19,7 +19,7 @@
         user-select: none;
       }
       #header-container,
-      #footer {
+      #footer-container {
         width: 100%;
         height: 80px;
       }
@@ -50,7 +50,9 @@
         top: 80px; /* accounts for #header-container */
         left: 0;
         width: 100%;
-        height: calc(100% - 160px); /* subtracting 80px header + 80px footer */
+        height: calc(
+          100% - 164px
+        ); /* 80px header + 80px footer + 4px border = 164px */
       }
       button,
       select {
@@ -135,7 +137,7 @@
       <canvas id="background-canvas"></canvas>
       <canvas id="activity-canvas"></canvas>
       <div id="ui-container"></div>
-      <div id="footer"></div>
+      <div id="footer-container"></div>
     </div>
     <script src="demo.js"></script>
   </body>
