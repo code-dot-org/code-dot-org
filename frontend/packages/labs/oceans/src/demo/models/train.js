@@ -2,11 +2,11 @@ import 'babel-polyfill';
 import {setState, getState} from '../state';
 import {init as initScene} from '../init';
 import {Modes, ClassType} from '../constants';
-import {createButton} from '../helpers';
+import {createButton, createText} from '../helpers';
 import SimpleTrainer from '../../utils/SimpleTrainer';
 import {generateOcean} from '../../utils/generateOcean';
 
-const uiElements = [
+const staticUiElements = [
   createButton({
     id: 'yes-button',
     text: 'yes',
@@ -24,7 +24,14 @@ export const init = () => {
   const trainer = new SimpleTrainer();
   trainer.initializeClassifiersWithoutMobilenet();
 
-  setState({fishData, trainer, uiElements});
+  setState({fishData, trainer, uiElements: uiElements(getState())});
+};
+
+const uiElements = state => {
+  return [
+    ...staticUiElements,
+    createText({id: 'train-text', text: `Is this fish ${state.word}?`})
+  ];
 };
 
 const onClassifyFish = doesLike => {

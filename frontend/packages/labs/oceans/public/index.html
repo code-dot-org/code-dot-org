@@ -37,7 +37,7 @@
         border: 2px solid black;
         border-radius: 5px;
         position: absolute;
-        top: 80px; /* accounts for #header */
+        top: 80px; /* accounts for #header-container */
         left: 0;
         width: 100%;
         z-index: -1;
@@ -47,10 +47,10 @@
       }
       #ui-container {
         position: absolute;
-        top: 80px; /* accounts for #header */
+        top: 80px; /* accounts for #header-container */
         left: 0;
         width: 100%;
-        height: 100%;
+        height: calc(100% - 160px); /* subtracting 80px header + 80px footer */
       }
       button,
       select {
@@ -90,18 +90,22 @@
         border: 2px solid black;
         background-color: #56c568;
         right: 30%;
-        bottom: 15%;
+        bottom: 5%;
       }
       #no-button {
         border: 2px solid black;
         background-color: #e83a4d;
         right: 50%;
-        bottom: 15%;
+        bottom: 5%;
       }
       #next-button,
       #start-over-button {
         right: 3%;
         bottom: 3%;
+      }
+      #train-text {
+        text-align: center;
+        font-size: 24px;
       }
       #predict-button {
         right: 40%;
