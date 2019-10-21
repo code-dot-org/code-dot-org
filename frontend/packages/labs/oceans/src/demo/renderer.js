@@ -95,11 +95,18 @@ export const drawTrainingFish = state => {
   const ctx = canvas.getContext('2d');
 
   // Draw frame behind fish
-  ctx.fillStyle = '#FFFFFF';
   const frameSize = 300;
   const frameXPos = canvas.width / 2 - frameSize / 2;
   const frameYPos = canvas.height / 2 - frameSize / 2;
-  ctx.fillRect(frameXPos, frameYPos, frameSize, frameSize);
+  drawRoundedFrame(
+    ctx,
+    frameXPos,
+    frameYPos,
+    frameSize,
+    frameSize,
+    '#FFFFFF',
+    '#000000'
+  );
 
   const fish = state.fishData[state.trainingIndex];
   const fishXPos = frameXPos + (frameSize - constants.fishCanvasWidth) / 2;
@@ -295,6 +302,43 @@ function DrawFade(amount, overlayColour) {
   DrawFilledRect(0, 0, constants.canvasWidth, constants.canvasHeight);
   canvasCtx.globalAlpha = 1;
 }
+
+const drawRoundedFrame = (
+  ctx,
+  x,
+  y,
+  w,
+  h,
+  backgroundColor,
+  borderColor,
+  thickness = 2
+) => {
+  const r = 10;
+  ctx.lineJoin = 'round';
+  ctx.lineWidth = r;
+
+  // Outer frame
+  ctx.strokeStyle = borderColor;
+  ctx.strokeRect(x + r / 2, y + r / 2, w - r, h - r);
+  ctx.fillStyle = borderColor;
+  DrawFilledRect(x + r / 2, y + r / 2, w - r, h - r);
+
+  // Inner frame
+  ctx.strokeStyle = backgroundColor;
+  ctx.strokeRect(
+    x + r / 2 + thickness,
+    y + r / 2 + thickness,
+    w - r - thickness * 2,
+    h - r - thickness * 2
+  );
+  ctx.fillStyle = backgroundColor;
+  DrawFilledRect(
+    x + r / 2 + thickness,
+    y + r / 2 + thickness,
+    w - r - thickness * 2,
+    h - r - thickness * 2
+  );
+};
 
 function DrawFilledRect(x, y, w, h) {
   x = Math.floor(x / 1);
