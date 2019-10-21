@@ -60,8 +60,8 @@ def parse_csv(filename)
     record.id = id
     id += 1
     table.headers.each do |col|
-      v = (number? row[col]) ? row[col].to_f : row[col]
-      record[col] = v
+      value = (number? row[col]) ? row[col].to_f : row[col]
+      record[col] = value
     end
     records.push(record.to_h.to_json)
   end
