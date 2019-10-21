@@ -94,7 +94,7 @@ GRAPH
     sudo-user (>= 0.0.0)
   cdo-cloudwatch-extra-metrics (0.1.8)
     ark (>= 0.0.0)
-  cdo-cloudwatch-logger (0.1.12)
+  cdo-cloudwatch-logger (0.1.14)
     cdo-awscli (>= 0.0.0)
     poise-service (>= 0.0.0)
     sudo-user (>= 0.0.0)

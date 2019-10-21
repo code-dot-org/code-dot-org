@@ -4,6 +4,7 @@
  */
 import ConfirmDeleteButton from './ConfirmDeleteButton';
 import ConfirmImportButton from './ConfirmImportButton';
+import DataVisualizer from './DataVisualizer';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 import React from 'react';
@@ -63,10 +64,12 @@ class TableControls extends React.Component {
           <span style={styles.tableName}>{this.props.tableName}</span>
         </div>{' '}
         <div style={styles.buttonWrapper}>
+          <DataVisualizer />
+
           <ConfirmDeleteButton
             body={applabMsg.confirmClearTable()}
             buttonText="Clear table"
-            containerStyle={{width: 103}}
+            containerStyle={{width: 103, marginLeft: 10}}
             buttonId="clearTableButton"
             onConfirmDelete={this.props.clearTable}
             title="Clear table"
