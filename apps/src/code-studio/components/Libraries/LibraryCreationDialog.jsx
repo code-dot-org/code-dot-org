@@ -65,6 +65,7 @@ class LibraryCreationDialog extends React.Component {
         );
       }
     );
+    dashboard.project.setLibraryName(this.state.libraryName);
   };
 
   displayFunctions = () => {
