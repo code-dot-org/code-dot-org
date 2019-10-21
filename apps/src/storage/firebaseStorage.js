@@ -11,6 +11,7 @@ import {
   loadConfig,
   fixFirebaseKey,
   getRecordsRef,
+  getProjectCountersRef,
   getProjectDatabase,
   getSharedDatabase,
   resetConfigForTesting,
@@ -262,33 +263,49 @@ FirebaseStorage.readRecords = function(
 ) {
   tableName = fixTableName(tableName, onError);
 
-  const countersRef = getProjectDatabase().child('counters/tables/');
-  // First, check if table exists using counters/tables/ as source of truth
-  countersRef.once('value', countersSnapshot => {
-    if (!countersSnapshot.val() || !countersSnapshot.val()[tableName]) {
-      // Table doesn't exist. Return null instead of [] so we can show an error
+  let channelRef;
+  // First check both current tables and project tables
+  Promise.all([
+    getProjectDatabase()
+      .child(`current_tables/${tableName}`)
+      .once('value', snapshot => {
+        if (snapshot.val()) {
+          // This is a current table, so read the records from
+          // the shared channel
+          channelRef = getSharedDatabase();
+        }
+      }),
+    getProjectCountersRef(tableName).once('value', snapshot => {
+      if (snapshot.val()) {
+        // This is a project table, so read the records from
+        // this project's channel
+        channelRef = getProjectDatabase();
+      }
+    })
+  ]).then(() => {
+    if (channelRef) {
+      // We found this table in either current or project, so read the
+      // records and return them
+      channelRef.child(`storage/tables/${tableName}/records`).once(
+        'value',
+        recordsSnapshot => {
+          let recordMap = recordsSnapshot.val() || {};
+          let records = [];
+          // Collect all of the records matching the searchParams.
+          Object.keys(recordMap).forEach(id => {
+            let record = JSON.parse(recordMap[id]);
+            if (matchesSearch(record, searchParams)) {
+              records.push(record);
+            }
+          });
+          onSuccess(records);
+        },
+        onError
+      );
+    } else {
+      // We didn't find this table, so return null so that we can show an error message
       onSuccess(null);
-      return;
     }
-    let recordsRef = getRecordsRef(tableName);
-
-    // Get all records in the table and filter them on the client.
-    recordsRef.once(
-      'value',
-      recordsSnapshot => {
-        let recordMap = recordsSnapshot.val() || {};
-        let records = [];
-        // Collect all of the records matching the searchParams.
-        Object.keys(recordMap).forEach(id => {
-          let record = JSON.parse(recordMap[id]);
-          if (matchesSearch(record, searchParams)) {
-            records.push(record);
-          }
-        });
-        onSuccess(records);
-      },
-      onError
-    );
   });
 };
 
@@ -462,7 +479,8 @@ FirebaseStorage.addCurrentTableToProject = function(
   onSuccess,
   onError
 ) {
-  return incrementRateLimitCounters()
+  return enforceUniqueTableNames(tableName)
+    .then(incrementRateLimitCounters)
     .then(loadConfig)
     .then(config => {
       return enforceTableCount(config, tableName);
@@ -476,7 +494,8 @@ FirebaseStorage.addCurrentTableToProject = function(
 };
 
 FirebaseStorage.copyStaticTable = function(tableName, onSuccess, onError) {
-  return incrementRateLimitCounters()
+  return enforceUniqueTableNames(tableName)
+    .then(incrementRateLimitCounters)
     .then(loadConfig)
     .then(config => {
       return enforceTableCount(config, tableName);
@@ -487,9 +506,7 @@ FirebaseStorage.copyStaticTable = function(tableName, onSuccess, onError) {
         .once('value');
     })
     .then(snapshot => {
-      getProjectDatabase()
-        .child(`counters/tables/${tableName}`)
-        .set(snapshot.val());
+      getProjectCountersRef(tableName).set(snapshot.val());
     })
     .then(() => {
       return getSharedDatabase()
@@ -502,6 +519,26 @@ FirebaseStorage.copyStaticTable = function(tableName, onSuccess, onError) {
     .then(onSuccess, onError);
 };
 
+function enforceUniqueTableNames(tableName) {
+  const checkForExistingTable = (dbRef, tableName) => {
+    return dbRef.once('value').then(snapshot => {
+      if (snapshot.val()) {
+        return Promise.reject(
+          `There is already a table with name "${tableName}"`
+        );
+      }
+    });
+  };
+
+  return Promise.all([
+    checkForExistingTable(getProjectCountersRef(tableName), tableName),
+    checkForExistingTable(
+      getProjectDatabase().child(`current_tables/${tableName}`),
+      tableName
+    )
+  ]);
+}
+
 /**
  * Adds an entry for the table in Firebase under counters/tables, making the table
  * show up in the data browser and also count toward the table count limit.
@@ -510,16 +547,15 @@ FirebaseStorage.copyStaticTable = function(tableName, onSuccess, onError) {
  * @param {function(string)} onError
  */
 FirebaseStorage.createTable = function(tableName, onSuccess, onError) {
-  return validateTableName(tableName)
+  return enforceUniqueTableNames(tableName)
+    .then(() => validateTableName(tableName))
     .then(incrementRateLimitCounters)
     .then(loadConfig)
     .then(config => {
       return enforceTableCount(config, tableName);
     })
     .then(() => {
-      const countersRef = getProjectDatabase().child(
-        `counters/tables/${tableName}`
-      );
+      const countersRef = getProjectCountersRef(tableName);
       countersRef
         .transaction(countersData => {
           if (countersData === null) {
@@ -555,9 +591,7 @@ FirebaseStorage.deleteTable = function(tableName, type, onSuccess, onError) {
       .then(onSuccess, onError);
   } else {
     const tableRef = getProjectDatabase().child(`storage/tables/${tableName}`);
-    const countersRef = getProjectDatabase().child(
-      `counters/tables/${tableName}`
-    );
+    const countersRef = getProjectCountersRef(tableName);
     tableRef
       .set(null)
       .then(() => countersRef.set(null))
@@ -577,9 +611,7 @@ FirebaseStorage.clearTable = function(tableName, onSuccess, onError) {
   tableRef
     .set(null)
     .then(() => {
-      const rowCountRef = getProjectDatabase().child(
-        `counters/tables/${tableName}/rowCount`
-      );
+      const rowCountRef = getProjectCountersRef(tableName).child('rowCount');
       return rowCountRef.set(0);
     })
     .then(onSuccess, onError);
@@ -625,21 +657,15 @@ function getRecordsData(records) {
  *     "table_name2": [{ "city": "Seattle", "state": "WA" }, { "city": "Chicago", "state": "IL"}]
  *   }
  * @param {bool} overwrite Whether to overwrite a table if it already exists.
- * @param {function ()} onSuccess Function to call on success.
- * @param {function} onError Function to call with an error in case of failure.
+ * @returns {Promise} which resolves when all table data has been written
  */
-FirebaseStorage.populateTable = function(
-  jsonData,
-  overwrite,
-  onSuccess,
-  onError
-) {
+FirebaseStorage.populateTable = function(jsonData, overwrite) {
   if (!jsonData || !jsonData.length) {
-    return;
+    return Promise.resolve();
   }
   // Ensure rate limit counters have been initialized, so that updates to the
   // counters/tables node will pass type definition checks in the security rules.
-  incrementRateLimitCounters()
+  return incrementRateLimitCounters()
     .then(() => getExistingTables(overwrite))
     .then(existingTables => {
       const promises = [];
@@ -659,8 +685,7 @@ FirebaseStorage.populateTable = function(
         }
       }
       return Promise.all(promises);
-    })
-    .then(onSuccess, onError);
+    });
 };
 
 /**
@@ -947,9 +972,7 @@ function overwriteTableData(tableName, recordsData) {
   const recordsRef = getProjectDatabase().child(
     `storage/tables/${tableName}/records`
   );
-  const countersRef = getProjectDatabase().child(
-    `counters/tables/${tableName}`
-  );
+  const countersRef = getProjectCountersRef(tableName);
   return getColumnsRef(getProjectDatabase(), tableName)
     .set(null)
     .then(() => recordsRef.set(recordsData))

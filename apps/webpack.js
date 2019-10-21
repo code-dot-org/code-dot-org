@@ -313,7 +313,6 @@ function create(options) {
   var entries = options.entries;
   var minify = options.minify;
   var watch = options.watch;
-  var debugMinify = envConstants.DEBUG_MINIFIED;
   var watchNotify = options.watchNotify;
   var piskelDevMode = options.piskelDevMode;
   var plugins = options.plugins;
@@ -321,11 +320,8 @@ function create(options) {
   var optimization = options.optimization;
   var mode = options.mode;
 
-  // When debugging minified code, use the .js suffix (rather than .min.js)
-  // to allow the application to load minified js locally without running it
-  // through the rails asset pipeline. This is much simpler than hacking the
-  // application to load .min.js locally.
-  const suffix = minify && !debugMinify ? '.min.js' : '.js';
+  // When minifying, this generates a 20-hex-character hash.
+  const suffix = minify ? 'wp[contenthash].min.js' : '.js';
 
   var config = _.extend({}, baseConfig, {
     output: {

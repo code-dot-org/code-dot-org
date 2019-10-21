@@ -249,7 +249,7 @@ const customInputTypes = {
         );
     },
     generateCode(block, arg) {
-      return Blockly.JavaScript.translateVarName(block.getTitleValue(arg.name));
+      return `{name: '${block.getTitleValue(arg.name)}'}`;
     }
   },
   limitedColourPicker: {
@@ -336,7 +336,12 @@ export default {
       },
       removeVar: Blockly.Blocks.variables_get.removeVar
     };
-    generator.sprite_variables_get = generator.variables_get;
+    generator.sprite_variables_get = function() {
+      return [
+        `{name: '${this.getTitleValue('VAR')}'}`,
+        Blockly.JavaScript.ORDER_ATOMIC
+      ];
+    };
     Blockly.Variables.registerGetter(
       Blockly.BlockValueType.SPRITE,
       'sprite_variables_get'

@@ -1,21 +1,30 @@
 ---
-title: 2018 Champions for Computer Science Awards
+title: 2019 Champions of Computer Science Awards
 nav: about_nav
 theme: responsive
 ---
 
 <a id="top"></a>
 
-# 2018 Champions for Computer Science Awards
+# 2019 Champions of Computer Science Awards
 
-In celebration of the 2018 [Computer Science Education Week](https://csedweek.org/) (CSEdWeek), the [Computer Science Teachers Association](http://www.csteachers.org/) (CSTA) and [Code.org](https://code.org/) are pleased to announce the second annual Champions of Computer Science Awards. From developing tools and curriculum for students with disabilities, to providing needed tech equipment to underserved schools, these winners represent the students, teachers, schools, districts, and organizations working to make computer science education accessible for everyone.
+In celebration of the 2019 [Computer Science Education Week](https://csedweek.org/) (CSEdWeek), the [Computer Science Teachers Association](http://www.csteachers.org/) (CSTA) and [Code.org](https://code.org/) are pleased to announce that submissions for the third annual Champions of Computer Science Awards are now open! 
 <br>
 <br>
-Selected from a pool of more than 200 nominees, the winners were presented with their awards at a special 2018 CSEdWeek kickoff event on December 3rd featuring Melinda Gates of the Bill & Melinda Gates Foundation.
+The purpose of the Champions of CS Awards is to identify and celebrate students, teachers, administrators, and organizations who have made a significant impact to improve access to and the quality of CS education.
+<br>
+<br>
+Any K-12 student, teacher, or administrator may be nominated. Organizations that work directly to improve access to and the quality of CS education may also be nominated (examples: afterschool coding clubs, local CSTA chapters, regional or national nonprofits, etc.). This opportunity is only available for US submissions.
+<br>
+<br>
+Award winners and a guest of choice will receive an all-expenses paid trip (travel & hotel) to attend the CSEdWeek event on December 9th (location to be confirmed).
+<br>
+<br>
+Submit your nominations using [this form](https://www.cvent.com/c/abstracts/b2b495a4-4caf-4ed5-88b1-954d5a605b24). The deadline for submission is Monday, October 21, 2019 at midnight PT. Email awards@csteachers.org if you have questions. You can take a look at last year’s winners below!
 <br>
 <br>
 
-# Winners
+# 2018 Winners
 
 [col-25]
 

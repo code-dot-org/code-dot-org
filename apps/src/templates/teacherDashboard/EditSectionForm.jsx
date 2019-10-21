@@ -54,6 +54,8 @@ class EditSectionForm extends Component {
   static propTypes = {
     title: PropTypes.string.isRequired,
     locale: PropTypes.string,
+    //Whether the user is adding a brand new section or editing an existing one.
+    isNewSection: PropTypes.bool,
 
     //Comes from redux
     initialScriptId: PropTypes.number,
@@ -123,8 +125,10 @@ class EditSectionForm extends Component {
       handleClose,
       stageExtrasAvailable,
       assignedScriptName,
-      locale
+      locale,
+      isNewSection
     } = this.props;
+
     if (!section) {
       return null;
     }
@@ -150,6 +154,7 @@ class EditSectionForm extends Component {
             assignmentFamilies={assignmentFamilies}
             disabled={isSaveInProgress}
             locale={locale}
+            isNewSection={isNewSection}
           />
           {stageExtrasAvailable(section.scriptId) && (
             <LessonExtrasField
@@ -273,7 +278,8 @@ const AssignmentField = ({
   validAssignments,
   assignmentFamilies,
   disabled,
-  locale
+  locale,
+  isNewSection
 }) => (
   <div>
     <FieldName>{i18n.course()}</FieldName>
@@ -287,6 +293,7 @@ const AssignmentField = ({
       dropdownStyle={style.dropdown}
       disabled={disabled}
       locale={locale}
+      isNewSection={isNewSection}
     />
   </div>
 );
@@ -296,7 +303,8 @@ AssignmentField.propTypes = {
   validAssignments: PropTypes.objectOf(assignmentShape).isRequired,
   assignmentFamilies: PropTypes.arrayOf(assignmentFamilyShape).isRequired,
   disabled: PropTypes.bool,
-  locale: PropTypes.string
+  locale: PropTypes.string,
+  isNewSection: PropTypes.bool
 };
 
 const LessonExtrasField = ({value, onChange, disabled}) => (

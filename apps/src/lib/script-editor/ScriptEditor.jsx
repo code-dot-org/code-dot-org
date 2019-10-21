@@ -41,6 +41,7 @@ const CURRICULUM_UMBRELLAS = ['CSF', 'CSD', 'CSP'];
 export default class ScriptEditor extends React.Component {
   static propTypes = {
     beta: PropTypes.bool,
+    betaWarning: PropTypes.string,
     name: PropTypes.string.isRequired,
     i18nData: PropTypes.object.isRequired,
     hidden: PropTypes.bool,
@@ -114,6 +115,7 @@ export default class ScriptEditor extends React.Component {
   };
 
   render() {
+    const {betaWarning} = this.props;
     const textAreaRows = this.props.stageLevelData
       ? this.props.stageLevelData.split('\n').length + 5
       : 10;
@@ -475,9 +477,11 @@ export default class ScriptEditor extends React.Component {
           <FlexGroup />
         ) : (
           <div>
-            <a href="?beta=true">
-              Try the beta Script Editor (will reload the page without saving)
-            </a>
+            {betaWarning || (
+              <a href="?beta=true">
+                Try the beta Script Editor (will reload the page without saving)
+              </a>
+            )}
             <textarea
               id="script_text"
               name="script_text"

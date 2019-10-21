@@ -1334,9 +1334,8 @@
   "https://studio.code.org/s/coursee-2018/stage/19/puzzle/4": {
     "short_instructions": "Collect all of the nectar using  as few blocks as possible.",
     "authored_hints": {
-      "courseE_bee_concept3a_a": "Try using nested `repeat` loops to solve this puzzle.",
-      "courseE_bee_concept3a_b": "If you can't figure out where to put the loops, try writing your code step-by-step and looking for patterns.",
-      "courseE_bee_concept3a_c": "There are three groups of flowers, so your outer `repeat` loop should repeat three times."
+      "courseE_bee_concept3a_a": "Try using nested `repeat` or `while` loops to solve this puzzle.",
+      "courseE_bee_concept3a_b": "If you can't figure out where to put the loops, try writing your code step-by-step and looking for patterns."
     }
   },
   "https://studio.code.org/s/coursee-2018/stage/19/puzzle/5": {

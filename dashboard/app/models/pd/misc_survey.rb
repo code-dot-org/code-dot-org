@@ -34,6 +34,9 @@ module Pd
         {tag: "fit-pre-2019",   form_id: "91826716927166", allow_embed: false}, # 2019 FiT Workshop Pre-Survey
         {tag: "fit-post-2019",  form_id: "91883754303159", allow_embed: false}, # 2019 FiT Workshop Post-Survey
         {tag: "other_workshop", form_id: "91477280965166", allow_embed: true},  # Unofficial Workshop Attendance
+        {tag: "virt_k12_f_2019",    form_id: "92175282703154", allow_embed: false}, # 2019 Virtual K-12 Facilitator Survey
+        {tag: "virt_ay_post_1920",  form_id: "92174983603160", allow_embed: false}, # 2019-20 Virtual Academic Year Post-Survey
+        {tag: "virt_ay_m1_1920",    form_id: "92175136628158", allow_embed: false}  # 2019-20 Virtual Academic Year Survey Module 1
       ]
     end
 

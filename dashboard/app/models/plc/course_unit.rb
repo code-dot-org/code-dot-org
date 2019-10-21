@@ -18,6 +18,8 @@
 #  index_plc_course_units_on_script_id      (script_id)
 #
 
+# A named group of learning modules within a PLC course.
+# Corresponds to a Script in our regular curriculum hierarchy.
 class Plc::CourseUnit < ActiveRecord::Base
   belongs_to :script
   belongs_to :plc_course, class_name: '::Plc::Course'

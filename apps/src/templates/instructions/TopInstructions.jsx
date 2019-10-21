@@ -378,7 +378,9 @@ class TopInstructions extends Component {
       HEADER_HEIGHT +
       RESIZER_HEIGHT;
 
-    this.props.setInstructionsMaxHeightNeeded(maxNeededHeight);
+    if (this.props.maxHeight !== maxNeededHeight) {
+      this.props.setInstructionsMaxHeightNeeded(maxNeededHeight);
+    }
     return maxNeededHeight;
   };
 
@@ -451,6 +453,10 @@ class TopInstructions extends Component {
     if (this.state.tabSelected !== TabType.COMMENTS) {
       this.incrementFeedbackVisitCount();
     }
+    firehoseClient.putRecord({
+      study: 'top-instructions',
+      event: 'click-feedback-tab'
+    });
 
     this.setState({tabSelected: TabType.COMMENTS}, () => {
       this.forceTabResizeToMaxHeight();
