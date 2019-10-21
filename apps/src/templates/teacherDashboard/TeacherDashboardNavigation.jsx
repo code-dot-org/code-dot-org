@@ -57,9 +57,7 @@ export default class TeacherDashboardNavigation extends Component {
         label: PropTypes.string.isRequired,
         url: PropTypes.string.isRequired
       })
-    ),
-    sectionId: PropTypes.number,
-    userId: PropTypes.number
+    )
   };
 
   state = {
