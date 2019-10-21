@@ -37,7 +37,7 @@ const createDropdowns = () => {
 const uiElements = createDropdowns();
 
 export const init = () => {
-  setState({uiElements: uiElements});
+  setState({uiElements});
 };
 
 
