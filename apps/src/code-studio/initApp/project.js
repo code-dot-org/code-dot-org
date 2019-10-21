@@ -542,6 +542,13 @@ var projects = (module.exports = {
       this.setTitle(newName);
     }
   },
+  setLibraryName(newName, callback) {
+    current = current || {};
+    if (newName && current.libraryName !== newName) {
+      current.libraryName = newName;
+      this.updateChannels_(callback);
+    }
+  },
   setTitle(newName) {
     if (newName && appOptions.gameDisplayName) {
       document.title = newName + ' - ' + appOptions.gameDisplayName;
@@ -1344,6 +1351,7 @@ var projects = (module.exports = {
     const queryParams = current.id ? {parent: current.id} : null;
     delete current.id;
     delete current.hidden;
+    delete current.libraryName;
     current.projectType = this.getStandaloneApp();
     if (shouldPublish) {
       current.shouldPublish = true;
