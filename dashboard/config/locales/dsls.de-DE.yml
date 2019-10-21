@@ -455,11 +455,28 @@ de-DE:
         content1: hier die Beschreibung
       Begin planning your project_2018_2019:
         content1: hier die Beschreibung
+        markdown: |+
+          # Projektbeispiele
+
+          Du bist dabei, dein Abschlussprojekt zu starten. Bevor du anfängst, solltest du dir einige Zeit damit verbringen, dir die Beispielprojekte anzusehen.
+
+          | Hungriges Eichhörnchen | Alien Story |
+          |---|---|
+          | [![Hungriges Eichhörnchen (Play Lab)](https://images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG "Hungriges Eichhörnchen (Play Lab")](https://studio.code.org/projects/playlab/HN1zAX4Om6zdsxVsBBug9Y8mlzKSWUAXhjzRl-64YRs/view) | [![Alien Story (Play Lab)](https://images.code.org/0bd5ed3674ac9fe3304e27e68974c35f-image-1565115240833.PNG "Alien Story (Play Lab")](https://studio.code.org/projects/playlab/I_8rcKtpLFRAn8flROC15Oc-KnDu-bkKBnSORoIDs0o/view) |
+          | Versuche, diesem Spiel Klänge hinzuzufügen! | Versuche diese Geschichte um eine weitere Szene zu ergänzen! |
+
       BigEvent-Unplugged:
         markdown: |
           # Das große Ereignis
 
           In der Informatik sind Ereignisse Aktionen, die ein Computer überwacht. In dieser Lektion werden Sie je nachdem, welche Taste gedrückt wird, unterschiedlich reagieren.
+      BinaryBracelets-Unplugged:
+        markdown: |
+          # Binäre Armbänder
+
+          Erstelle ein Armband, das deinen Namen in einem System repräsentiert, das Computer verstehen!
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
       BinaryImages-Unplugged:
         markdown: |
           # Binäre Bilder
@@ -663,11 +680,11 @@ de-DE:
       CSD U2 image debug match:
         content1: Ordne den fehlerhaften HTML-Code der Beschreibung des Fehlers zu.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Das `src`-Attribut ist falsch geschrieben.
+        - text: Die Attribute `src` und `alt` sind vertauscht
+        - text: Die Dateierweiterung (.jpg) fehlt in der Bildadresse
+        - text: Die Bildadresse wird nicht als `src`-Attribut angegeben
+        - text: Im Dateinamen ist ein Leerzeichen vorhanden
         answers:
         - {}
         - {}
@@ -1054,6 +1071,11 @@ de-DE:
           # Bedingungen mit Karten
 
           Spielen Sie ein Kartenspiel und erstellen Sie Regeln wie "Wenn ich eine rote Karte ziehe, bekomme ich einen Punkt" und "Wenn ich eine schwarze Karte ziehe, bekommst du einen Punkt"
+      Crowdsourcing-Unplugged:
+        markdown: |
+          # Crowdsourcing
+
+          Schaue wie Crowdsourcing, eine in der Informatik übliche Problemlösungstechnik, Dir helfen kann, eine Aufgabe gemeinsam als Schulklassen effizienter zu erledigen, als wenn du es allein tun müsstest.
       Dance_Party_extras_intro:
         markdown: |
           # Tanze weiter!
@@ -1125,6 +1147,16 @@ de-DE:
           <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
 
           </div>
+      DesigningForAccessibilityMarkdownLevel_2019:
+        markdown: |
+          # Entwerfen für Barrierefreiheit
+
+          * In der Welt der Informatik geht es bei der **Barrierefreiheit** darum, Technologien für Menschen mit Behinderungen zu entwickeln.
+          * Behinderungen umfassen physische, auditive, visuelle und viele andere.
+          * Behinderungen sind vielfältig und beeinflussen Menschen auf unterschiedliche Weise, einschließlich der Art und Weise, wie sie Technologien wie **Smartphone Apps** nutzen.
+          * Das Entwerfen von Apps, die für Menschen mit Behinderungen zugänglich sind, macht diese Apps auch für alle anderen besser!
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
       DigitalCitizenship-Unplugged:
         markdown: |
           # Digitale Staatsbürgerschaft
@@ -1135,6 +1167,16 @@ de-DE:
           # Dein digitaler Fußabdruck
 
           Wenn du Informationen über dich selbst online stellst, entsteht ein digitaler Fußabdruck.
+      DigitalSharing-Unplugged:
+        markdown: |
+          # Digital Sharing
+
+          In dieser Lektion wirst du die Herausforderungen und Vorteile der Achtung von Eigentum und Urheberrecht, insbesondere in digitalen Umgebungen, betrachten.
+      EnvelopeVariables-Unplugged:
+        markdown: |
+          # Envelope Variablen
+
+          Variablen ermöglichen viel Freiheit in der Informatik. Diese Lektion hilft zu erklären, was Variablen sind und wie wir sie auf viele verschiedene Arten verwenden können.
       Example App Types_2018:
         markdown: |
           # Beispiel App-Typen
@@ -1169,6 +1211,11 @@ de-DE:
           Diese Apps sind _Prototypen_; sie ermöglichen es einem Benutzer, mit dem Design zu interagieren, ohne sich um die zugrunde liegende Funktionalität zu kümmern. Wenn du beispielsweise die Quiz-App verwendest, wird jede Frage immer auf die gleiche Weise beantwortet, unabhängig davon, welche Antwort Sie wählen.
 
           Indem du dich zunächst auf einen interaktiven Prototyp konzentrierst, kannst du viel darüber erfahren, wie Benutzer Deine App nutzen können, bevor du zu viel Energie investierst, diese tatsächlich ans Laufen zu bringen.
+      ForLoopFun-Unplugged:
+        markdown: |
+          # For Schleifen Spass
+
+          Wir wissen, dass Schleifen es uns ermöglichen, Dinge immer und immer wieder zu tun, aber jetzt werden wir lernen, wie man Schleifen mit zusätzlicher Struktur verwendet.
       GettingLoopy-Unplugged:
         markdown: |
           # Getting Loopy
@@ -1220,6 +1267,11 @@ de-DE:
           Damit sich die Schüler in der Lobby des Internetsimulators sehen können, müssen sie sich im selben Abschnitt befinden. Vergewissern Sie sich noch einmal, dass Sie die Anweisungen zur Einrichtung des Abschnitts von der vorherigen Seite vollständig ausgefüllt haben und dass die betreffenden Schüler diesem spezifischen Abschnittscode beigetreten sind. Außerdem können einige Schüler in mehreren Abschnitten sein, wenn sie bereits mit Code.org gearbeitet haben, also stellen Sie sicher, dass sie den Namen Ihres Abschnitts kennen und ihn in der Dropdown-Liste ausgewählt haben, bevor sie die Lobby betreten.
 
           <a class="btn btn-large btn-primary next-stage submitButton">Fortsetzen</a>
+      Internet-Unplugged:
+        markdown: |
+          # Das Internet
+
+          Baue Dein eigenes Internet im Klassenzimmer auf, nur mit Papier.
       K-1 Artist 1 Multi 1:
         title: Multiple-Choice
         questions:
@@ -1424,6 +1476,16 @@ de-DE:
       Multi-Screen Apps:
         title: Titel
         content1: hier die Beschreibung
+      MyLoopyRoboticFriends-Unplugged:
+        markdown: |
+          # Meine Roboterfreunde (Schleifen)
+
+          Mache Dein Programme mit Schleifen kürzer!
+      MyRoboticFriends-Unplugged:
+        markdown: |
+          # Meine Roboterfreunde
+
+          Lerne zu programmieren, indem du Code für deine Freunde schreibst!
       New Challenge Introduction:
         title: Titel
         content1: hier die Beschreibung
@@ -1598,6 +1660,18 @@ de-DE:
           eines beliebigen Punktes zu sehen.\n\n<div style=\"width: 100%; text-align:
           center\">\n<img src=\"https://images.code.org/8b346602d75f2877c64e1793b6a04302-image-1476889124747.png\">\n\n<img
           src=\"https://images.code.org/fc7e830fa2ea994b885c76618b484dfa-image-1476889137756.gif\">\n</div>\n"
+      PicturingData-Unplugged:
+        markdown: |
+          # Daten darstellen
+
+          Verwende ein Play Lab-Projekt, um Daten zu sammeln und Vorhersagen zu treffen.
+
+          ![](https://images.code.org/606a78c09a01133a1bbc1aa9c76f3320-image-1557334268558.png)
+      PowerOfWords-Unplugged:
+        markdown: |
+          # Die Macht der Worte
+
+          Heute wirst du lernen, was zu tun ist, wenn jemand online gemein ist.
       PowerfulPasswords-Unplugged:
         markdown: |
           # Starke Passwörter
@@ -1608,6 +1682,13 @@ de-DE:
       Prepare for your presentation:
         title: Titel
         content1: hier die Beschreibung
+      PrivatePersonalInformation-Unplugged:
+        markdown: |
+          # Private und persönliche Daten
+
+          Entwickelt von Common Sense Education, geht es in dieser Lektion um den Unterschied zwischen Informationen, die sicher online ausgetauscht werden können, und Informationen, die dies nicht sind.
+
+          ![](https://images.code.org/872576b170b9d8aec9b29f684a1ad94e-image-1557878406833.png)
       RelayProgramming-Unplugged:
         markdown: |
           # Relais-Programmierung
@@ -1618,6 +1699,16 @@ de-DE:
           # Screen Out the Mean #
 
           Heute wirst du lernen, was zu tun ist, wenn jemand online gemein zu Dir ist.
+      SimonSays-Unplugged:
+        markdown: |
+          # Simon Says
+
+          Spiele ein Spiel und überlege, welche Befehle benötigt werden, um das richtige Ergebnis zu erzielen.
+      Songwriting-Unplugged:
+        markdown: |
+          # Songwriting
+
+          Verwende das Konzept des Refrains in einem Lied, um mehr über die Definition und den Aufruf von Funktionen zu erfahren.
       'Technique: Frequency Analysis':
         title: Wie man eine Substitutions-Verschlüsselung knackt
         content1: hier die Beschreibung
@@ -1717,7 +1808,9 @@ de-DE:
           * [Pixel Filtering](https://docs.google.com/document/d/1R92qKHBC8Bz3P3YXVSziyfpijJ0gMYob2j5RncWdWsA/edit?usp=sharing) - Activity Guide ([PDF](https://docs.google.com/document/d/1R92qKHBC8Bz3P3YXVSziyfpijJ0gMYob2j5RncWdWsA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1R92qKHBC8Bz3P3YXVSziyfpijJ0gMYob2j5RncWdWsA/export?format=doc))
       behaviors 1 predict:
         questions:
-        - {}
+        - text: Klicken Sie auf die Schaltfläche "Bearbeiten", um zu sehen, wie das
+            `Mystery-Verhalten` funktioniert. Studiere den Code im Inneren und mache
+            dann eine Vorhersage.
         answers:
         - text: Das Sprite wird sich drehen
         - text: Das Sprite wird schrumpfen.
@@ -1728,7 +1821,8 @@ de-DE:
           feedback: Falsch
       behaviors 4 predict:
         questions:
-        - {}
+        - text: Machen Sie eine Vorhersage. In welche Richtung wird sich der Satellit
+            in Richtung Galaxie bewegen?
         answers:
         - text: Links dann nach unten
         - text: Diagonal
@@ -2439,6 +2533,26 @@ de-DE:
         - {}
         - {}
         - correct: true
+      courseE_project_exemplars_2019:
+        markdown: |+
+          # Projektbeispiele
+
+          Du bist dabei, dein Abschlussprojekt zu starten. Bevor du anfängst, solltest du dir einige Zeit damit verbringen, dir die Beispielprojekte anzusehen.
+
+          ## Sprite Lab
+
+          | Monster Tanz (Sprite Lab) | Cupcake Spiel (Sprite Lab) |
+          |---|---|
+          | [![Monster Tanz (Sprite Lab)](https://images.code.org/85838ca11b728dce3e1513515c4510e3-image-1556826303297.png "Monster Tanz (Sprite Lab")](https://studio.code.org/projects/spritelab/S2l_b6LHSmSULTBF7CibJm1rTsngztJyu5pgORe7GBs/view) | [![Cupcake Spiel (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png "Cupcake Spiel (Sprite Lab")](https://studio.code.org/projects/spritelab/gXM_YU_qL_QWo1o5Wkam96oiFrYY5VUp27m2xKlp7EQ/view) |
+          | Versuche diesem Spiel Text oder eine Punktzahl hinzuzufügen! | Versuche diesem Spiel Text oder eine Punktzahl hinzuzufügen! |
+
+          ## Zeichner
+
+          | Muster (Zeichner) | Funktionsblumen (Zeichner) |
+          |---|---|
+          | [![Muster (Zeichner)](https://images.code.org/2432878706891dda080b69428ddc4a20-image-1556822714214.png "Muster (Zeichner)")](https://studio.code.org/projects/artist/TznMeJRa4SnHWJvUBEoNUw/view) | [![Function Flowers (Artist)](https://images.code.org/1e6da38baf996dace44581572895a4b8-image-1556822184973.png "Funktionsblumen (Zeichner)")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) |
+          | Lassen Sie uns mit verschachtelten Loops kreativ werden! | Lassen Sie uns mit Funktionen kreativ werden! |
+
       courseF_bee_variables_8a_2018:
         questions:
         - {}
@@ -2583,6 +2697,26 @@ de-DE:
         - {}
         - {}
         - text: Ich weiß es nicht.
+      courseF_project_exemplars_2019:
+        markdown: |+
+          # Projektbeispiele
+
+          Du bist dabei, dein Abschlussprojekt zu starten. Bevor du anfängst, solltest du dir einige Zeit damit verbringen, dir die Beispielprojekte anzusehen.
+
+          ## Sprite Lab
+
+          | Cupcake Spiel (Sprite Lab) | Helikopter Spiel (Sprite Lab) |
+          |---|---|
+          | [![#Bunny Spiel (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png)](https://studio.code.org/projects/spritelab/gXM_YU_qL_QWo1o5Wkam96oiFrYY5VUp27m2xKlp7EQ/view) | [![#Helikopter Spiel (Sprite Lab)](https://images.code.org/1a273fd447b952367792423a70c5087a-image-1556812149075.png)](https://studio.code.org/projects/spritelab/QeROTy1pNyjNPC-ZZdBN1mcpkmTEMUc2FYwXX0SOFAY/view) |
+          | Versuche, diesem Spiel Text oder eine Punktzahl hinzuzufügen! | Versuche, diesem Spiel Text oder eine Punktzahl hinzuzufügen! |
+
+          ## Zeichner
+
+          | Blumen (Zeichner) | Spiralen (Zeichner) |
+          |---|---|
+          | [![Blumen (Zeichner)](https://images.code.org/0f5adf63c318eab8c8acb397d9db7f2a-image-1556821537577.png)](https://studio.code.org/projects/artist/MIMh2pV2IiLm1ZzaiA6N7kKvg534lFck3abLXTsvZU8/view) | [![Spiralen (Zeichner)](https://images.code.org/06514571a8cf2f8b0346006ac1adc219-image-1556819399386.png)](https://studio.code.org/projects/artist/66scPDPWa8RNNHkcXDaXdA/view) |
+          | Lasst uns mit Variablen kreativ werden! | Lasst uns mit For Schleifen kreativ werden! |
+
       coursee_prediction_artistfunction2:
         questions:
         - {}

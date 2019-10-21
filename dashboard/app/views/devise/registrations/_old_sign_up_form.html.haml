@@ -1,6 +1,6 @@
 - require 'geocoder'
 - require 'country_codes'
-- resource.user_type ||= params[:user].try(:fetch, :user_type) || User::TYPE_STUDENT
+- resource.user_type ||= params[:user].try(:fetch, :user_type, User::TYPE_STUDENT) || User::TYPE_STUDENT
 - location = Geocoder.search(request.ip).try(:first)
 - us_ip = location.nil? || ['US', 'RD'].include?(location.country_code.to_s.upcase)
 

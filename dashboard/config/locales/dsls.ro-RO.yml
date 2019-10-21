@@ -10,7 +10,8 @@ ro-RO:
         - text: Începe cu un pătrat<br/>Pune un triunghi deasupra pătratului<br/>Pune
             un triunghi sub pătrat
           correct: true
-        - {}
+        - text: Începe cu un pătrat<br/>Pune un triunghi în dreapta pătratului <br/>Pune
+            un paralelogram sub pătrat<br/>Pune triunghi în dreapta paralelogramului
         - text: Începe cu un pătrat<br/>Pune un paralelogram deasupra pătratului<br/>Pune
             un triunghi în dreapta paralelogramului
           correct: true
@@ -101,12 +102,12 @@ ro-RO:
         - {}
         answers:
         - {}
-        - {}
-        - {}
+        - text: Potriveşte formele
+        - text: Potriveşte formele
       2-3 Maze Multi 2:
         title: Labirint cu opțiuni multiple
         questions:
-        - {}
+        - text: Care grup de blocuri mă va duce la porc?
         answers:
         - correct: true
         - {}
@@ -115,7 +116,7 @@ ro-RO:
       2-3 Relay Programming Multi 1:
         title: Alegere multiplă
         questions:
-        - {}
+        - text: Care program **nu** creează această imagine?
         answers:
         - correct: true
         - correct: true
@@ -129,8 +130,9 @@ ro-RO:
         - correct: true
         - {}
       2-3 artist debug multi 1:
+        title: Depanare Artist Opțiuni Multiple 1
         questions:
-        - {}
+        - text: Ce ar trebui să corectezi pentru a termina acest cerc?
         answers:
         - correct: true
         - {}
@@ -146,6 +148,7 @@ ro-RO:
         - correct: true
         - correct: true
       2-3 artist loops match 1:
+        title: Potrivire Bucle Artist 1
         content2: Potrivește bucla cu forma
         questions:
         - {}
@@ -189,6 +192,7 @@ ro-RO:
         - {}
         - {}
       2-3 bee conditionals multi 1:
+        title: Condiționale Albină Alegere Multiplă 1
         questions:
         - text: Care comparație de mai jos este adevărată?
         answers:
@@ -197,6 +201,7 @@ ro-RO:
         - {}
         - correct: true
       2-3 bee conditionals multi 3:
+        title: Condiționale Albină Alegere Multiplă 2
         questions:
         - text: Alege cele mai bune blocuri.
         answers:
@@ -205,7 +210,7 @@ ro-RO:
         - correct: true
         - correct: true
       2-3 bee loops multi 1:
-        title: Albină Bucle Algere multiplă Unu
+        title: Bucle Albină Algere Multiplă Unu
         questions:
         - text: Care blocuri colectează tot nectarul?
         answers:
@@ -225,7 +230,7 @@ ro-RO:
         - {}
         - {}
       2-3 maze multi 1:
-        title: Labirint Algere multiplă Unu
+        title: Labirint Algere Multiplă Unu
         questions:
         - text: Care set de blocuri reprezintă răspunsul corect?
         answers:
@@ -244,17 +249,18 @@ ro-RO:
         - text: "<h4>4)</h4>"
         answers:
         - text: "<h4>Setează scorul jucătorului 1 la 0</h4>"
-        - text: "<h4>S-au epuizat rundele jucătorului 1</h4>"
-        - text: "<h4>Adăugă runda jucătorului 1 la scorul total</h4>"
+        - text: "<h4>Jucătorul 1 dă cu zarul</h4>"
+        - text: "<h4>Adăugă numărul de pe zarul jucătorului 1 la scorul total</h4>"
         - text: "<h4>Compară scorurile jucătorilor pentru a vedea cine câştigă</h4>"
       4-5 Algorithms Multi 1:
         title: Alegere multiplă
         questions:
-        - text: Pentru care dintre aceste lucruri este mai greu să descriem un algoritm?
+        - text: Pentru care dintre aceste lucruri este cel mai greu să descriem un
+            algoritm?
         answers:
-        - text: Spălarea pe dinți
+        - text: Spălatul pe dinți
           correct: true
-        - text: Coacere prijituri
+        - text: Coacerea prăjiturilor
           correct: true
         - text: Cumpărături de pe o listă de cumpărături
           correct: true
@@ -275,6 +281,8 @@ ro-RO:
         - {}
       4-5 Computational Thinking Multi 1:
         title: Alegere multiplă
+        content1: Aici aveti trei propoziţii. Care dintre șabloanele de mai jos abstractizează
+          corect astfel încât toate trei să se potrivească aceluiaşi model ca şablon?
         questions:
         - text: Seattle este un oraș mare.<br/>Eugene este un oraș mediu<br/>Hillview
             este un oraş mic.
@@ -299,7 +307,7 @@ ro-RO:
         - text: Care dintre aceste activități este cea mai bună pentru a exersa crowdsourcing?
         answers:
         - text: Curățarea camerei tale
-        - text: Consumului desertului
+        - text: Mâncatul desertului
           correct: true
         - text: Perierea părului
           correct: true
@@ -324,32 +332,46 @@ ro-RO:
         - text: Când încerci să te conectezi la code.org, la care adresă de IP este
             cel mai probabil să te ducă DNS-ul?
         answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - {}
+        - text: 23.23.224.106
+          correct: true
+        - text: 54.209.61.132
+          correct: true
+        - text: 64.14.68.10
+          correct: true
+        - text: 54.243.71.82
       4-5 Internet Multi 2:
         title: Alegere multiplă
         questions:
         - text: Dacă DNS-ul te-a trimis la pagina de la adresa IP 100.42.50.110, pe
             care site ești?
         answers:
-        - correct: true
-        - {}
-        - correct: true
-        - correct: true
+        - text: code.org
+          correct: true
+        - text: csisfun.com
+        - text: thinkersmith.org
+          correct: true
+        - text: khanacademy.org
+          correct: true
       4-5 Songwriting Multi 1:
         title: Alegere multiplă
         questions:
-        - {}
+        - text: Care este cel mai mare fragment din acest cântec pe care îl poți defini
+            ca refren, astfel încât corul să îl repete exact de fiecare dată când
+            este apelat?
         answers:
         - text: Lou, Lou, du-mă la al meu Lou,
           correct: true
         - text: Lou, Lou, du-mă la al meu Lou, <br/> Lou, Lou, du-mă la al meu Lou,
             <br/> Lou, Lou, du-mă la al meu Lou, <br/> du-mă la al meu Lou, dragul
             meu/draga mea.
-        - correct: true
-        - correct: true
+        - text: Iubi, Iubi, du-mă la Iubi, <br/>Iubi, Iubi, du-mă la Iubi, <br/>Iubi,
+            Iubi, du-mă la Iubi, <br/> Du-mă la Iubi, drăguța mea. <br/><br/><p>Musca-i
+            în laptele bătut, <br/>Uș, muscă, uș,
+          correct: true
+        - text: Musca-i în laptele bătut, <br/>Uș, muscă, uș, <br/>Musca-i în laptele
+            bătut, <br/>Uș, muscă, uș, <br/>Musca-i în laptele bătut, <br/>Uș, muscă,
+            uș, <br/> Du-mă la Iubi, drăguța mea.
+          correct: true
       4-5 Suncatchers Match 1:
         title: Potrivire
         content1: Asociază fiecare program cuvântului pe care îl face, folosind grupul
@@ -376,7 +398,7 @@ ro-RO:
       4-5 artist loops multi 1:
         title: Artist Bucle Variante Multiple
         questions:
-        - text: Care blocuri vor crea design-ul?
+        - text: Care blocuri vor crea modelul?
         answers:
         - correct: true
         - {}
@@ -402,6 +424,9 @@ ro-RO:
         - correct: true
       4-5 bee conditionals multi 1:
         title: Albină Condiționale Alegere multiplă
+        content2: O floare mov poate avea 3, 2, sau 1 nectar, dar nu ști exact cât.
+          Care blocuri fac verificarea corectă și colectează tot nectarul dintr-o
+          floare mov?
         questions:
         - text: Alege cele mai bune blocuri.
         answers:
@@ -410,7 +435,7 @@ ro-RO:
         - {}
         - correct: true
       4-5 bee debug multi 1:
-        title: Albină Depanare Alegere multiplă
+        title: Depanare Albină Alegere Multiplă
         questions:
         - text: Care versiune a funcției va merge?
         answers:
@@ -419,9 +444,9 @@ ro-RO:
         - correct: true
         - correct: true
       4-5 bee loops multi 1:
-        title: Albină Bucle Alegere multiplă
+        title: Bucle Albină Alegere Multiplă
         questions:
-        - text: Care blocuri vor rezolva puzzle-ul?
+        - text: Care blocuri vor rezolva problema?
         answers:
         - {}
         - correct: true
@@ -875,6 +900,27 @@ ro-RO:
         - correct: true
         - {}
         - correct: true
+      Dance_Party_extras_intro:
+        markdown: "# Continuă să dansezi!\n\nPentru partea a 2-a, vei crea proiectul
+          tau. Nu sunt puzzleuri aici - în schimb sunt un număr de proiecte care arată
+          moduri diferite de a face petreceri complexe.\n\nPoţi face aceste nivele
+          _în orice ordine_. Uită-te cum ceva a fost făcut într-un nivel anterior
+          sau îmbină conceptele între proiecte. Încearcă-le pe toate, alege-ţi preferatul
+          si petrece-ţi timpul adăugând la acel proiect pentru a îl face al tau.\n\n<a
+          class=\"btn btn-large btn-primary next-stage submitButton pull-right\">Continuă</a>\n\n<div
+          class=\"clearfix\"></div>\n\n<div style=\"float: left; margin: 10px\">\n<a
+          href=\"2\">\n<h2>\nIntră în formaţie\n</h2>\n\n<img src=\"https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"3\">\n<h2>\nUnde s-au dus?\n</h2>\n\n<img
+          src=\"https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"4\">\n<h2>\nGrupuri de dansatori\n</h2>\n\n<img
+          src=\"https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"5\">\n<h2>\nSferturi de
+          notă\n</h2>\n\n<img src=\"https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"6\">\n<h2>\nJoase, Medii,
+          Înalte\n</h2>\n\n<img src=\"https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"7\">\n<h2>\nMai Repede,
+          Mai Încet\n</h2>\n\n<img src=\"https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif\"></a>\n\n</div>\n
+          \nhttps://studio.code.org/s/dance-extras/stage/1/puzzle/1 -> dsls -> markdown\n"
       Internet Simulator Setup:
         content1: descrierea aici
       Internet Simulator Setup 2:

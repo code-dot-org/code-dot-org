@@ -1268,6 +1268,27 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 1, user.terms_of_service_version
   end
 
+  test 'sanitize_race_data will set URM to true when appropriate' do
+    @student.update!(races: 'black,hispanic')
+    @student.reload
+    assert @student.urm
+
+    # URM is true when any races are URM
+    @student.update!(races: 'white,black')
+    @student.reload
+    assert @student.urm
+  end
+
+  test 'sanitize_race_data will set URM to false when appropriate' do
+    @student.update!(races: 'white')
+    @student.reload
+    refute @student.urm
+
+    @student.update!(races: 'asian')
+    @student.reload
+    refute @student.urm
+  end
+
   test 'sanitize_race_data sanitizes closed_dialog' do
     @student.update!(races: 'white,closed_dialog')
     @student.reload

@@ -8,23 +8,23 @@ nav: promote_nav
 
 <% if @country == 'la' %>
 
-# Recursos
+# الموارد
 
 ## ¿Qué hacemos cuando hacemos la Hora del Código?
 
 <div class="handout" style="width: 50%; float: left;">
 <a href="/la/files/hacemos-la-Hora-del-Codigo.pdf" target="_blank"><img src="/la/images/fit-260/hacemos-la-Hora-del-Codigo.png"></a>
-<br/>En Español
+<br/>بالاسبانية
 </div>
 
 <div class="handout" style="width: 50%; float: left;">
 <a href="/la/files/hacemos-la-Hora-del-Codigo-Ingles.pdf" target="_blank"><img src="/la/images/fit-260/hacemos-la-Hora-del-Codigo-Ingles.png"></a>
-<br/>En Inglés
+<br/>الانجليزية
 </div>
 
 <div style="clear:both"></div>
 
-## Vídeos
+## مقاطع فيديو
 
 <br/>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/HrBh2165KjE" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
@@ -53,11 +53,11 @@ Mari bersama kita dukung gerakan Hour of Code di Indonesia!
 ## Hour of Code(アワーオブコード) 2015紹介ビデオ
 <iframe width="560" height="315" src="https://www.youtube.com/embed/_C9odNcq3uQ" frameborder="0" allowfullscreen mark="crwd-mark"></iframe><p><a href="https://www.youtube.com/watch?v=_C9odNcq3uQ"><strong>Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)</strong></a>
 
-[Hour of Code Lesson Guide](/files/HourofCodeLessonGuideJapan.pdf)
+[دليل درس ساعة البرمجة](/files/HourofCodeLessonGuideJapan.pdf)
 
 <% elsif @country == 'nl' %>
 
-<br/><br/><br/> <iframe width="560" height="315" src="https://www.youtube.com/embed/0hfb0d5GxSw" frameborder="0" allowfullscreen mark="crwd-mark"></iframe><p><a href="https://www.youtube.com/embed/0hfb0d5GxSw"><strong>Friends of Technology Hour of Code (2 min)</strong></a>
+<br/><br/><br/> <iframe width="560" height="315" src="https://www.youtube.com/embed/0hfb0d5GxSw" frameborder="0" allowfullscreen mark="crwd-mark"></iframe><p><a href="https://www.youtube.com/embed/0hfb0d5GxSw"><strong>أصدقاء تكنولوجيا ساعة البرمجة (2 دقيقتان)</strong></a>
 
 <% elsif @country == 'pk' %>
 
@@ -69,7 +69,7 @@ Va multumim pentru inregistrare, daca doriti materiale printate pentru promovare
 
 <% elsif @country ==  'uk' %>
 
-# How-to Guide for Organizations
+# دليل خاص بالمنظمات
 
 ## Use this handout to recruit corporations
 [<%= localized_image('/images/fit-500x300/corporations.png') %>](%= localized_file('/files/corporations.pdf') %)

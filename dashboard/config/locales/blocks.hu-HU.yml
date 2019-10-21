@@ -80,6 +80,28 @@ hu:
             '"rotation"': forgás
             '"x"': vízszintes helyzet
             '"y"': függőleges helyzet
+      Dancelab_changePropEachBy:
+        options:
+          GROUP:
+            sprites: összes
+            '"ALIEN"': összes földönkívüli
+            '"BEAR"': összes medve
+            '"CAT"': összes macska
+            '"DOG"': összes kutya
+            '"DUCK"': összes kacsa
+            '"FROG"': összes béka
+            '"MOOSE"': összes jávorszarvas
+            '"PINEAPPLE"': összes ananász
+            '"ROBOT"': összes robot
+            '"SHARK"': összes cápa
+            '"UNICORN"': Egyszarvúak
+          PROPERTY:
+            '"scale"': méret
+            '"width"': szélesség
+            '"height"': magasság
+            '"rotation"': forgás
+            '"x"': vízszintes helyzet
+            '"y"': függőleges helyzet
       Dancelab_doMoveEachLR:
         text: "{GROUP} csináld {MOVE} {DIR} egyszer"
         options:
@@ -95,7 +117,7 @@ hu:
             '"PINEAPPLE"': összes ananász
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
-            '"UNICORN"': összes egyszarvú
+            '"UNICORN"': Egyszarvúak
           MOVE:
             '"rand"': "(Véletlen)"
             MOVES.XBend: Hajlít
@@ -240,6 +262,32 @@ hu:
             "{x: 100, y: 300}": balra lent
             "{x: 300, y: 300}": jobbra lent
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": véletlen
+      Dancelab_jumpToEach:
+        options:
+          GROUP:
+            sprites: összes
+            '"ALIEN"': összes földönkívüli
+            '"BEAR"': összes medve
+            '"CAT"': összes macska
+            '"DOG"': összes kutya
+            '"DUCK"': összes kacsa
+            '"FROG"': összes béka
+            '"MOOSE"': összes jávorszarvas
+            '"PINEAPPLE"': összes ananász
+            '"ROBOT"': összes robot
+            '"SHARK"': összes cápa
+            '"UNICORN"': Egyszarvúak
+          LOCATION:
+            "{x: 200, y: 100}": fent
+            "{x: 200, y: 300}": lent
+            "{x: 100, y: 200}": balra
+            "{x: 300, y: 200}": jobbra
+            "{x: 200, y: 200}": közép
+            "{x: 100, y: 100}": balra fent
+            "{x: 300, y: 100}": jobbra fent
+            "{x: 100, y: 300}": balra lent
+            "{x: 300, y: 300}": jobbra lent
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": véletlen
       Dancelab_layoutSprites:
         text: "{GROUP} elrendezése így: {FORMAT}"
         options:
@@ -255,7 +303,7 @@ hu:
             '"PINEAPPLE"': összes ananász
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
-            '"UNICORN"': összes egyszarvú
+            '"UNICORN"': Egyszarvúak
           FORMAT:
             '"border"': határ
             '"inner"': belső négyzet
@@ -267,19 +315,20 @@ hu:
             '"plus"': plusz
             '"random"': véletlen
       Dancelab_makeAnonymousDanceSprite:
+        text: 'készíts új {COSTUME} itt: {LOCATION}'
         options:
           COSTUME:
-            '"ALIEN"': Földönkívüli
+            '"ALIEN"': idegen
             '"BEAR"': Medve
-            '"CAT"': Macska
-            '"DOG"': Kutya
-            '"DUCK"': Kacsa
+            '"CAT"': macska
+            '"DOG"': kutya
+            '"DUCK"': kacsa
             '"FROG"': Béka
-            '"MOOSE"': Jávorszarvas
+            '"MOOSE"': összes jávorszarvas
             '"PINEAPPLE"': Ananász
-            '"ROBOT"': Robot
+            '"ROBOT"': robot
             '"SHARK"': Cápa
-            '"UNICORN"': Egyszarvú
+            '"UNICORN"': unikornis
           LOCATION:
             "{x: 200, y: 100}": fent
             "{x: 200, y: 300}": lent
@@ -469,7 +518,7 @@ hu:
             '"PINEAPPLE"': összes ananász
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
-            '"UNICORN"': összes egyszarvú
+            '"UNICORN"': Egyszarvúak
           SPEED:
             '1': normál
             '2': gyors
@@ -523,7 +572,6 @@ hu:
             '"rotation"': forgás
             '"x"': vízszintes helyzet
             '"y"': függőleges helyzet
-            '"tint"': árnyalat
       Dancelab_setPropEach:
         text: "{GROUP} {PROPERTY} tulajdonságának beállítása: {VAL}"
         options:
@@ -539,7 +587,17 @@ hu:
             '"PINEAPPLE"': összes ananász
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
-            '"UNICORN"': összes egyszarvú
+            '"UNICORN"': Egyszarvúak
+          PROPERTY:
+            '"scale"': méret
+            '"width"': szélesség
+            '"height"': magasság
+            '"rotation"': forgás
+            '"x"': vízszintes helyzet
+            '"y"': függőleges helyzet
+      Dancelab_setPropRandom:
+        text: "{SPRITE} {PROPERTY} legyen véletlenszerű"
+        options:
           PROPERTY:
             '"scale"': méret
             '"width"': szélesség
@@ -548,9 +606,21 @@ hu:
             '"x"': vízszintes helyzet
             '"y"': függőleges helyzet
             '"tint"': árnyalat
-      Dancelab_setPropRandom:
-        text: "{SPRITE} {PROPERTY} legyen véletlenszerű"
+      Dancelab_setPropRandomEach:
         options:
+          GROUP:
+            sprites: összes
+            '"ALIEN"': összes földönkívüli
+            '"BEAR"': összes medve
+            '"CAT"': összes macska
+            '"DOG"': összes kutya
+            '"DUCK"': összes kacsa
+            '"FROG"': összes béka
+            '"MOOSE"': összes jávorszarvas
+            '"PINEAPPLE"': összes ananász
+            '"ROBOT"': összes robot
+            '"SHARK"': összes cápa
+            '"UNICORN"': Egyszarvúak
           PROPERTY:
             '"scale"': méret
             '"width"': szélesség
@@ -576,6 +646,7 @@ hu:
             '"PINEAPPLE"': összes ananász
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
+            '"UNICORN"': Egyszarvúak
       Dancelab_setTintEachInline:
         text: 'állítsd {THIS} árnyalat: {VAL}'
         options:
@@ -591,6 +662,7 @@ hu:
             '"PINEAPPLE"': összes ananász
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
+            '"UNICORN"': Egyszarvúak
       Dancelab_setTintInline:
         text: "{SPRITE} árnyalatának beállítása: {VAL}"
       Dancelab_setVisible:
@@ -614,7 +686,7 @@ hu:
             '"PINEAPPLE"': összes ananász
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
-            '"UNICORN"': összes egyszarvú
+            '"UNICORN"': Egyszarvúak
           VISIBILITY:
             'true': látható
             'false': láthatatlan
@@ -633,9 +705,64 @@ hu:
             '"bass"': basszus
             '"mid"': közepes
             '"treble"': magas
+      Dancelab_startMappingEach:
+        options:
+          GROUP:
+            sprites: összes
+            '"ALIEN"': összes földönkívüli
+            '"BEAR"': összes medve
+            '"CAT"': összes macska
+            '"DOG"': összes kutya
+            '"DUCK"': összes kacsa
+            '"FROG"': összes béka
+            '"MOOSE"': összes jávorszarvas
+            '"PINEAPPLE"': összes ananász
+            '"ROBOT"': összes robot
+            '"SHARK"': összes cápa
+            '"UNICORN"': Egyszarvúak
+          PROPERTY:
+            '"scale"': méret
+            '"width"': szélesség
+            '"height"': magasság
+            '"rotation"': forgás
+            '"x"': vízszintes helyzet
+            '"y"': függőleges helyzet
+            '"tint"': árnyalat
+          RANGE:
+            '"bass"': basszus
+            '"mid"': közepes
+            '"treble"': magas
       Dancelab_stopMapping:
         text: "{SPRITE} {PROPERTY} tulajdonságot befejezi {RANGE} után"
         options:
+          PROPERTY:
+            '"scale"': méret
+            '"width"': szélesség
+            '"height"': magasság
+            '"rotation"': forgás
+            '"x"': vízszintes helyzet
+            '"y"': függőleges helyzet
+            '"direction"': mozgás iránya
+            '"tint"': árnyalat
+          RANGE:
+            '"bass"': basszus
+            '"mid"': közepes
+            '"treble"': magas
+      Dancelab_stopMappingEach:
+        options:
+          GROUP:
+            sprites: összes
+            '"ALIEN"': összes földönkívüli
+            '"BEAR"': összes medve
+            '"CAT"': összes macska
+            '"DOG"': összes kutya
+            '"DUCK"': összes kacsa
+            '"FROG"': összes béka
+            '"MOOSE"': összes jávorszarvas
+            '"PINEAPPLE"': összes ananász
+            '"ROBOT"': összes robot
+            '"SHARK"': összes cápa
+            '"UNICORN"': Egyszarvúak
           PROPERTY:
             '"scale"': méret
             '"width"': szélesség
