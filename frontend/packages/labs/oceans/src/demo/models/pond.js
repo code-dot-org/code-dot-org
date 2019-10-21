@@ -18,7 +18,7 @@ export const init = async () => {
   fishWithConfidence = _.sortBy(fishWithConfidence, ['confidence']);
   const pondFish = fishWithConfidence.splice(0, 20);
   arrangeFish(pondFish);
-  setState({pondFish, uiElements});
+  setState({pondFish, uiElements, headerText: 'A.I. Results'});
 };
 
 const predictAllFish = state => {

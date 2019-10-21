@@ -19,6 +19,7 @@ const staticUiElements = [
 
 export const init = () => {
   asyncSetUiElements(getState());
+  setState({headerText: 'A.I. Sorting'});
 };
 
 const asyncSetUiElements = async state => {

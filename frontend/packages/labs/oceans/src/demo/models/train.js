@@ -28,7 +28,7 @@ export const init = () => {
     fishData,
     trainer,
     uiElements: uiElements(getState()),
-    headerText: 'AI Training'
+    headerText: 'A.I. Training'
   });
 };
 
