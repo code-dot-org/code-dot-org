@@ -43,8 +43,6 @@ class ScriptsController < ApplicationController
 
     @show_redirect_warning = params[:redirect_warning] == 'true'
     @section = current_user&.sections&.find_by(id: params[:section_id])&.summarize
-    sections = current_user.try {|u| u.sections.where(hidden: false).select(:id, :name, :script_id)}
-    @sections_with_assigned_info = sections.map {|section| section.attributes.merge!({"isAssigned" => section[:script_id] == @script.id})}
   end
 
   def index
