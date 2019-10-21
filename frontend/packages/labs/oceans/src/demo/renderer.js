@@ -1,82 +1,99 @@
 import 'babel-polyfill';
 import _ from 'lodash';
+import {getState} from './state';
 import constants, {Modes} from './constants';
+import CanvasCache from './canvasCache';
+import {
+  backgroundPathForMode,
+  bodyAnchorFromType,
+  colorFromType,
+  randomInt
+} from './helpers';
 import {FishBodyPart} from '../utils/fishData';
-import {setState} from './state';
 
-const FISH_CANVAS_WIDTH = 300;
-const FISH_CANVAS_HEIGHT = 200;
+var $time =
+  Date.now ||
+  function() {
+    return +new Date();
+  };
 
-// Initialize the renderer once.
-// This will generate canvases with the fish collection.
-export function init(canvas) {
-  canvas.width = constants.canvasWidth;
-  canvas.height = constants.canvasHeight;
-  const state = setState({
-    canvas,
-    ctx: canvas.getContext('2d')
-  });
+let prevState = {};
+
+let currentModeStartTime = $time();
+
+const canvasCache = new CanvasCache();
+
+export const render = () => {
+  const state = getState();
+
+  if (prevState.uiElements !== state.uiElements) {
+    drawUiElements(state);
+  }
+
+  if (state.currentMode !== prevState.currentMode) {
+    drawBackground(state);
+    currentModeStartTime = $time();
+  }
 
   switch (state.currentMode) {
+    case Modes.Words:
+      clearCanvas(state.canvas);
+      break;
     case Modes.Training:
-      drawTrainingScreen(state);
+      clearCanvas(state.canvas);
+      drawTrainingFish(state);
+      drawUpcomingFish(state);
       break;
     case Modes.Predicting:
-      drawPredictingScreen(state);
+      clearCanvas(state.canvas);
+      drawPredictingFish(state);
+      break;
+    case Modes.Pond:
+      if (prevState.pondFish !== state.pondFish) {
+        loadPondFishImages();
+        clearCanvas(state.canvas);
+      }
+      clearCanvas(state.canvas);
+      drawPondFishImages();
       break;
     default:
-      console.error('not yet implemented');
+      console.error('Unrecognized mode specified.');
   }
-}
 
-function loadBackgroundImage() {
-  let backgroundImageName;
-  // const currentMode = getState().currentMode;
-  // if (currentMode === Modes.Training) {
-  //   backgroundImageName = 'classroom';
-  // } else if (currentMode === Modes.Predicting) {
-  //   backgroundImageName = 'pipes';
-  // } else if (currentMode === Modes.Pond) {
-  //   backgroundImageName = 'underwater';
-  // }
+  drawOverlays();
 
-  backgroundImageName = 'underwater';
+  prevState = {...state};
+  window.requestAnimFrame(render);
+};
 
+export const drawBackground = state => {
+  const canvas = state.backgroundCanvas;
+  if (!canvas) {
+    return;
+  }
+
+  const imgPath = backgroundPathForMode(state.currentMode);
+  if (imgPath) {
+    loadImage(imgPath).then(img => {
+      canvas.getContext('2d').drawImage(img, 0, 0, canvas.width, canvas.height);
+    });
+  } else {
+    canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
+  }
+};
+
+const loadImage = imgPath => {
   return new Promise((resolve, reject) => {
     const img = new Image();
-    const srcPath = `images/${backgroundImageName}-background.png`;
     img.addEventListener('load', e => resolve(img));
     img.addEventListener('error', () => {
-      reject(new Error(`failed to load background image at #{srcPath}`));
+      reject(new Error(`Failed to load image at #{imgPath}`));
     });
-    img.src = srcPath;
+    img.src = imgPath;
   });
-}
+};
 
-function renderBackgroundImage(ctx, img) {
-  ctx.drawImage(img, 0, 0, constants.canvasWidth, constants.canvasHeight);
-}
-
-function drawTrainingScreen(state) {
-  if (state.backgroundImg) {
-    renderBackgroundImage(state.ctx, state.backgroundImg);
-    drawTrainingFish(state);
-    drawUpcomingFish(state);
-    if (!state.uiDrawn) {
-      drawTrainingUiElements(state);
-      state.uiDrawn = true;
-      setState(state);
-    }
-  } else {
-    loadBackgroundImage().then(backgroundImg => {
-      state = {...state, backgroundImg};
-      setState(state);
-      drawTrainingScreen(state);
-    });
-  }
-}
-
-function drawTrainingFish(state) {
+export const drawTrainingFish = state => {
   const canvas = state.canvas;
   const ctx = canvas.getContext('2d');
 
@@ -87,80 +104,84 @@ function drawTrainingFish(state) {
   const frameYPos = canvas.height / 2 - frameSize / 2;
   ctx.fillRect(frameXPos, frameYPos, frameSize, frameSize);
 
-  const fishDatum = state.fishData[state.trainingIndex];
-  loadFishImages(fishDatum.fish).then(results => {
-    drawFish(fishDatum.fish, results, ctx, canvas.width / 2, canvas.height / 2);
-  });
-}
+  const fish = state.fishData[state.trainingIndex];
+  const fishXPos = frameXPos + (frameSize - constants.fishCanvasWidth) / 2;
+  const fishYPos = frameYPos + (frameSize - constants.fishCanvasHeight) / 2;
+  drawSingleFish(fish, fishXPos, fishYPos, ctx);
+};
 
-function drawUpcomingFish(state) {
+export const drawUpcomingFish = state => {
   const fishLeft = state.fishData.length - state.trainingIndex - 1;
   const numUpcomingFish = fishLeft >= 3 ? 3 : fishLeft;
   const canvas = state.canvas;
-  let x = canvas.width / 2 - 300;
+  const ctx = canvas.getContext('2d');
+  let x = canvas.width / 2 - 300 - constants.fishCanvasWidth / 2;
+  const y = canvas.height / 2 - constants.fishCanvasHeight / 2;
 
   for (let i = 1; i <= numUpcomingFish; i++) {
-    const fishDatum = state.fishData[state.trainingIndex + i];
-    loadFishImages(fishDatum.fish).then(results => {
-      const ctx = canvas.getContext('2d');
-      drawFish(fishDatum.fish, results, ctx, x, canvas.height / 2);
-      x -= 200;
-    });
+    const fish = state.fishData[state.trainingIndex + i];
+    drawSingleFish(fish, x, y, ctx);
+    x -= 200;
   }
-}
+};
 
-function drawTrainingUiElements(state) {
-  const container = document.getElementById('ui-container');
-  const classifyFish = function(doesLike) {
-    // TODO: (maddie) classify fish with trainer
-    state.trainingIndex += 1;
-    setState({trainingIndex: state.trainingIndex});
-    drawTrainingScreen(state);
-  };
+export const drawUiElements = state => {
+  const container = state.uiContainer;
+  container.innerHTML = '';
+  state.uiElements.forEach(el => container.appendChild(el));
+};
 
-  const buttons = [
-    {
-      text: 'like',
-      id: 'like-button',
-      onClick: () => classifyFish(true)
-    },
-    {
-      text: 'dislike',
-      id: 'dislike-button',
-      onClick: () => classifyFish(false)
-    },
-    {
-      text: 'next',
-      id: 'next-button',
-      onClick: () => {
-        while (container.firstChild) {
-          container.removeChild(container.firstChild);
-        }
-        const canvas = state.canvas;
-        setState({currentMode: Modes.Predicting});
-        init(canvas);
-      }
-    }
-  ];
+export const drawPredictingFish = state => {
+  const fish = state.fishData[state.trainingIndex];
+  const canvas = state.canvas;
+  drawSingleFish(
+    fish,
+    canvas.width / 2 - constants.fishCanvasWidth / 2,
+    canvas.height / 2 - constants.fishCanvasHeight / 2,
+    canvas.getContext('2d')
+  );
+};
 
-  buttons.forEach(button => {
-    let btnEl = document.createElement('button');
-    btnEl.innerHTML = button.text;
-    btnEl.setAttribute('id', button.id);
-    btnEl.addEventListener('click', button.onClick);
-    container.appendChild(btnEl);
+export const drawPondFish = state => {
+  const canvas = state.canvas;
+  state.pondFish.forEach(fish => {
+    loadFishImages(fish).then(results => {
+      const randomX = randomInt(
+        constants.fishCanvasWidth / 4,
+        canvas.width - constants.fishCanvasWidth / 4
+      );
+      const randomY = randomInt(
+        constants.fishCanvasHeight / 4,
+        canvas.height - constants.fishCanvasHeight / 4
+      );
+      drawFish(fish, results, canvas.getContext('2d'), randomX, randomY);
+    });
   });
-}
+};
 
-function drawPredictingScreen(state) {
-  console.log(state);
-}
+const loadPondFishImages = () => {
+  getState().pondFish.forEach(fish => {
+    fish.parts.map(loadFishImage);
+  });
+};
 
-function loadFishImages(fish) {
+const drawPondFishImages = () => {
+  const canvas = getState().canvas;
+  const ctx = canvas.getContext('2d');
+  getState().pondFish.forEach(fish => {
+    var swayValue = (($time() * 360) / (20 * 1000) + (fish.id + 1) * 10) % 360;
+    var swayOffsetX = Math.sin(((swayValue * Math.PI) / 180) * 2) * 120;
+    var swayOffsetY = Math.sin(((swayValue * Math.PI) / 180) * 6) * 8;
+
+    drawSingleFish(fish, fish.x + swayOffsetX, fish.y + swayOffsetY, ctx);
+  });
+};
+
+const loadFishImages = fish => {
   return Promise.all(fish.parts.map(loadFishImage));
-}
+};
 
-function loadFishImage(fishPart) {
+const loadFishImage = fishPart => {
   return new Promise((resolve, reject) => {
     const img = new Image();
     img.addEventListener('load', e => resolve({img, fishPart}));
@@ -169,23 +190,57 @@ function loadFishImage(fishPart) {
     });
     img.src = fishPart.src;
   });
-}
+};
 
-function drawFish(fish, results, ctx, x = 0, y = 0) {
+const drawSingleFish = (fish, fishXPos, fishYPos, ctx) => {
+  const [fishCanvas, hit] = canvasCache.getCanvas(fish.id);
+  if (!hit) {
+    fishCanvas.width = constants.fishCanvasWidth;
+    fishCanvas.height = constants.fishCanvasHeight;
+    loadFishImages(fish).then(results => {
+      const fishCtx = fishCanvas.getContext('2d');
+      drawFish(
+        fish,
+        results,
+        fishCtx,
+        constants.fishCanvasWidth / 2,
+        constants.fishCanvasHeight / 2
+      );
+      ctx.drawImage(fishCanvas, fishXPos, fishYPos);
+    });
+  } else {
+    ctx.drawImage(fishCanvas, fishXPos, fishYPos);
+  }
+};
+
+const drawFish = (fish, results, ctx, x = 0, y = 0) => {
+  ctx.translate(constants.fishCanvasWidth, 0);
+  ctx.scale(-1, 1);
   const body = results.find(
     result => result.fishPart.type === FishBodyPart.BODY
   ).fishPart;
   const bodyAnchor = bodyAnchorFromType(body, body.type);
   results = _.orderBy(results, ['fishPart.type']);
 
+  const intermediateCanvas = canvasCache.getCanvas(`intermediate-${fish.id}`)[0];
+  const intermediateCtx = intermediateCanvas.getContext('2d');
+  intermediateCanvas.width = constants.fishCanvasWidth;
+  intermediateCanvas.height = constants.fishCanvasHeight;
   results.forEach(result => {
-    let intermediateCanvas = document.createElement('canvas');
-    intermediateCanvas.width = FISH_CANVAS_WIDTH;
-    intermediateCanvas.height = FISH_CANVAS_HEIGHT;
-    let intermediateCtx = intermediateCanvas.getContext('2d');
+    intermediateCtx.clearRect(
+      0,
+      0,
+      constants.fishCanvasWidth,
+      constants.fishCanvasHeight
+    );
     let anchor = [0, 0];
     if (result.fishPart.type !== FishBodyPart.BODY) {
-      anchor = bodyAnchorFromType(body, result.fishPart.type);
+      const bodyAnchor = bodyAnchorFromType(body, result.fishPart.type);
+      anchor[0] = bodyAnchor[0];
+      anchor[1] = bodyAnchor[1];
+    }
+    if (result.fishPart.type === FishBodyPart.TAIL) {
+      anchor[1] -= result.img.height / 2;
     }
 
     const xPos = bodyAnchor[0] + anchor[0];
@@ -218,42 +273,57 @@ function drawFish(fish, results, ctx, x = 0, y = 0) {
       intermediateCanvas,
       x - intermediateCanvas.width / 2,
       y - intermediateCanvas.height / 2,
-      FISH_CANVAS_WIDTH,
-      FISH_CANVAS_HEIGHT
+      constants.fishCanvasWidth,
+      constants.fishCanvasHeight
     );
   });
+};
+
+export const clearCanvas = canvas => {
+  canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
+};
+
+function drawOverlays() {
+  // update fade
+  var duration = $time() - currentModeStartTime;
+  var amount = 1 - duration / 800;
+  if (amount < 0) {
+    amount = 0;
+  }
+  DrawFade(amount, '#000');
 }
 
-function bodyAnchorFromType(body, type) {
-  switch (type) {
-    case FishBodyPart.EYE:
-      return body.eyeAnchor;
-    case FishBodyPart.MOUTH:
-      return body.mouthAnchor;
-    case FishBodyPart.DORSAL_FIN:
-      return body.dorsalFinAnchor;
-    case FishBodyPart.PECTORAL_FIN:
-      return body.pectoralFinAnchor;
-    case FishBodyPart.TAIL:
-      return body.tailAnchor;
-    case FishBodyPart.BODY:
-      return body.anchor;
-    default:
-      return [0, 0];
+function DrawFade(amount, overlayColour) {
+  if (amount === 0) {
+    return;
   }
+
+  const canvasCtx = getState().canvas.getContext('2d');
+  canvasCtx.globalAlpha = amount;
+  canvasCtx.fillStyle = overlayColour;
+  DrawFilledRect(0, 0, constants.canvasWidth, constants.canvasHeight);
+  canvasCtx.globalAlpha = 1;
 }
 
-function colorFromType(palette, type) {
-  switch (type) {
-    case FishBodyPart.MOUTH:
-      return palette.mouthRgb;
-    case FishBodyPart.DORSAL_FIN:
-    case FishBodyPart.PECTORAL_FIN:
-    case FishBodyPart.TAIL:
-      return palette.finRgb;
-    case FishBodyPart.BODY:
-      return palette.bodyRgb;
-    default:
-      return null;
-  }
+function DrawFilledRect(x, y, w, h) {
+  x = Math.floor(x / 1);
+  y = Math.floor(y / 1);
+  w = Math.floor(w / 1);
+  h = Math.floor(h / 1);
+
+  const canvasCtx = getState().canvas.getContext('2d');
+  canvasCtx.fillRect(x, y, w, h);
 }
+
+window.requestAnimFrame = (() => {
+  return (
+    window.requestAnimationFrame ||
+    window.webkitRequestAnimationFrame ||
+    window.mozRequestAnimationFrame ||
+    window.oRequestAnimationFrame ||
+    window.msRequestAnimationFrame ||
+    function(/* function */ callback, /* DOMElement */ element) {
+      window.setTimeout(callback, 1000 / 60);
+    }
+  );
+})();
