@@ -23,7 +23,7 @@ const styles = {
     overflow: 'hidden',
     textOverflow: 'ellipsis',
     marginTop: 10,
-    lineHeight: '15px'
+    lineHeight: '19px'
   },
   moreDetails: {
     position: 'absolute',
@@ -37,6 +37,10 @@ const styles = {
   },
   addButton: {
     marginLeft: 'auto'
+  },
+  author: {
+    color: color.black,
+    fontWeight: 'bold'
   }
 };
 
@@ -86,6 +90,10 @@ export default class LibraryListItem extends React.Component {
         )}
         <span style={styles.description}>
           {this.displayDescription(library.description)}
+          <br />
+          {library.studentName && (
+            <span style={styles.author}>Author: {library.studentName}</span>
+          )}
         </span>
         <span style={this.getMoreDetailsStyle()}>
           {this.moreDetails(library)}
