@@ -222,7 +222,7 @@ const drawFish = (fish, results, ctx, x = 0, y = 0) => {
   const bodyAnchor = bodyAnchorFromType(body, body.type);
   results = _.orderBy(results, ['fishPart.type']);
 
-  const intermediateCanvas = canvasCache.getCanvas(`interediate-${fish.id}`)[0];
+  const intermediateCanvas = canvasCache.getCanvas(`intermediate-${fish.id}`)[0];
   const intermediateCtx = intermediateCanvas.getContext('2d');
   intermediateCanvas.width = constants.fishCanvasWidth;
   intermediateCanvas.height = constants.fishCanvasHeight;
