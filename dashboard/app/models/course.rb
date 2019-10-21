@@ -188,7 +188,7 @@ class Course < ApplicationRecord
       CourseScript.where(course: self, script: script).destroy_all
     end
     # Reload model so that default_course_scripts is up to date
-    reload
+    transaction {reload}
   end
 
   # Get the assignable info for this course, then update translations
