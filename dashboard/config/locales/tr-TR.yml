@@ -18,6 +18,7 @@ tr:
       messages:
         blank: gerekli
         blank_plural: gereklidir
+        invalid: geçersizdir
         invalid_plural: geçersiz
     attributes:
       user:
@@ -36,6 +37,7 @@ tr:
         age: Yaş
         gender: Cinsiyet
         edit_header: Hesap Bilgilerini Düzenle
+        finish_sign_up_header: Hesabınızı oluşturmayı bitirin
         error:
           future: gelecekte olması mümkün değil
   beta: beta
@@ -436,6 +438,7 @@ tr:
     confirm_secret_words: Gizli kelimenizi girerek siz olduğunuzu doğrulayın
     enter_parent_email: Ebeveyn ya da velinizin elektronik posta adresini girin (şifre
       kurtarmak için)
+    update_email: Güncelle
   user_level:
     completed: Tamamlandı
     tried: Denenmiş

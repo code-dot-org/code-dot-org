@@ -1,3 +1,15 @@
+#Files in the config/locales directory are used for internationalization
+#and are automatically loaded by Rails. If you want to use locales other
+#than English, add the necessary files in this directory.
+#To use the locales, use `I18n.t`:
+#I18n.t 'hello'
+#In views, this is aliased to just `t`:
+#<%= t('hello') %>
+#To use a different locale, set it with `I18n.locale`:
+#I18n.locale = :es
+#This would use the information in config/locales/es.yml.
+#To learn more, please read the Rails Internationalization guide
+#available at http://guides.rubyonrails.org/i18n.html.
 tr:
   errors:
     messages:
@@ -10,6 +22,7 @@ tr:
       messages:
         blank: "gerekli"
         blank_plural: "gereklidir"
+        invalid: "geçersizdir"
         invalid_plural: "geçersiz"
     attributes:
       user:
@@ -26,6 +39,7 @@ tr:
         age: 'Yaş'
         gender: 'Cinsiyet'
         edit_header: 'Hesap Bilgilerini Düzenle'
+        finish_sign_up_header: 'Hesabınızı oluşturmayı bitirin'
         error:
           future: gelecekte olması mümkün değil
   beta: "beta"
@@ -383,6 +397,7 @@ tr:
     enter_new_login_info: 'Oturum açma bilgilerini gir'
     confirm_secret_words: 'Gizli kelimenizi girerek siz olduğunuzu doğrulayın'
     enter_parent_email: "Ebeveyn ya da velinizin elektronik posta adresini girin (şifre kurtarmak için)"
+    update_email: "Güncelle"
   user_level:
     completed: 'Tamamlandı'
     tried: 'Denenmiş'

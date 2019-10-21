@@ -571,8 +571,8 @@ zh-CN:
           </block>
           </xml>
       Course 4 Artist Vars 13:
-        Course_4_Artist_Vars_13_a: 你需要两个重复循环(一个循环嵌套在另外一个循环里)，两个循环重复的次数均为“边数”。
-        Course_4_Artist_Vars_13_b: "内部嵌套重复循环绘制一个八边型(左转)。 \n\n然后，你需要在外部循环前行并右转。"
+        Course_4_Artist_Vars_13_a: 你需要两个重复循环（一个循环嵌套在另外一个循环里），两个循环重复的次数均为“边数”。
+        Course_4_Artist_Vars_13_b: "内部嵌套重复循环绘制一个八边型（左转）。 \n\n然后，你需要在外部循环前行并右转。"
         Course_4_Artist_Vars_13_c: 如需在边数改变的同时保持图形的尺寸，可以使用数学模块将长度（像素为单位）除以边数。
       Course 4 Artist Vars 6:
         Course_4_Artist_Vars_6_a: 若要绘制一个正多边形，需每次转动**360/边数**度。
@@ -2188,7 +2188,7 @@ zh-CN:
       course1_artist_loops_challenge2:
         harvey_tictactoe: 您可以使用 "跳转" 模块移动到其他位置。
       course1_artist_loops_challenge3:
-        courseA_artist_loops_challenge2_a: '像这样的块: <xml> <block type="simple_move_up_left"/></xml>将让您的艺术家在斜面上移动!'
+        courseA_artist_loops_challenge2_a: 像这样的块：<xml> <block type="simple_move_up_left"/></xml>将让您的艺术家在斜面上移动!
         courseA_artist_loops_challenge2_b: 当你完成一个鸟舍后，`跳`到下一个!
         courseA_artist_loops_challenge2_c: 在这个挑战中，您需要在循环中放很多模块。
       course1_artist_loops_challenge4:
@@ -6477,7 +6477,7 @@ zh-CN:
 
           不要忘记更改跳多远！
         courseC_artist_loops4a_b: |-
-          你的程序应该类似于这个!
+          你的程序应该类似于这个！
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -6552,7 +6552,7 @@ zh-CN:
           </xml>
         courseC_artist_loops5b_b: 要制作和上面类似设计, 向后移动与向前移动必须是相同的数量。
         courseC_artist_loops5b_c: |-
-          你的程序应该类似于这个!
+          你的程序应该类似于这个！
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -7107,33 +7107,6 @@ zh-CN:
       courseC_harvester_loops_challenge1a_2018:
         courseC_harvester_loops_challenge1_a: 如果不使用循环这太难了。
         courseC_harvester_loops_challenge1_b: 你可以多次重复`前进`和`采摘玉米`，然后在每个角落右转。
-        courseC_harvester_loops_challenge1_c: |-
-          收集前四个玉米的最佳方法是在一个`重复`模块内再使用一个`重复`模块。你也可以在其余的关卡使用这个模式！
-
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="controls_repeat">
-          <title name="TIMES">2</title>
-          <statement name="DO">
-          <block type="controls_repeat">
-          <title name="TIMES">2</title>
-          <statement name="DO">
-          <block type="maze_move">
-          <title name="DIR">moveForward</title>
-          <next>
-          <block type="harvester_corn"/>
-          </next>
-          </block>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block></next></block></xml>
       courseC_harvester_loops_challenge1a_2019:
         courseC_harvester_loops_challenge1_a: 如果不使用循环这太难了。
         courseC_harvester_loops_challenge1_b: 你可以多次重复`前进`和`采摘玉米`，然后在每个角落右转。
@@ -7563,12 +7536,6 @@ zh-CN:
         courseC_starWars_loops4_a: 使用两个`重复`模块。
         courseC_starWars_loops4_b: '每个`重复`循环将只有一个命令在它里面: `向前移动`。'
       courseC_starWars_loops5:
-        courseC_starWars_loops5_b: 要往下走, 你必须转向, 然后向前移动。
-        courseC_starWars_loops5_a: 最好的解决方案是使用一个转向, 然后一个单一的`向前移动` ，另一个转向，然后一个循环。
-      courseC_starWars_loops5_2018:
-        courseC_starWars_loops5_b: 要往下走, 你必须转向, 然后向前移动。
-        courseC_starWars_loops5_a: 最好的解决方案是使用一个转向, 然后一个单一的`向前移动` ，另一个转向，然后一个循环。
-      courseC_starWars_loops5_2019:
         courseC_starWars_loops5_b: 要往下走, 你必须转向, 然后向前移动。
         courseC_starWars_loops5_a: 最好的解决方案是使用一个转向, 然后一个单一的`向前移动` ，另一个转向，然后一个循环。
       courseC_starWars_loops6:
@@ -10100,9 +10067,7 @@ zh-CN:
         courseE_bee_concept3a_b: 不知道在哪里放循环？尝试逐步把代码写下, 并寻找规律。
         courseE_bee_concept3a_c: 有三组花, 所以外面的 `重复`循环应该重复三次。
       courseE_bee_concept3_2018:
-        courseE_bee_concept3a_a: 尝试使用`重复`循环来通过此关卡。
         courseE_bee_concept3a_b: 不知道在哪里放循环？尝试逐步把代码写下, 并寻找规律。
-        courseE_bee_concept3a_c: 有三组花, 所以外面的 `重复`循环应该重复三次。
       courseE_bee_concept4:
         courseE_bee_concept4_a: 一个`如果/否则`的语句真的可以在这里帮到您。
         courseE_bee_concept4_b: 台阶模式可以帮助你穿过所有的花和蜂窝。
@@ -11445,14 +11410,12 @@ zh-CN:
           这是你的艺术家将遵循的模式:
 
           ![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)
-        courseF_artist_variables4_b: "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)"
       courseF_artist_variables4_2019:
         courseF_artist_variables4_a: 你的代码不会和上一关有太大的不同，除了你需要让艺术家转弯往下跳，然后把他转回来准备再次往前跳。
         courseF_artist_variables4_c: |-
           这是你的艺术家将遵循的模式:
 
           ![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)
-        courseF_artist_variables4_b: "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)"
       courseF_artist_variables5:
         courseF_artist_variables5_a: 你的代码的后半部分应该看起来和上半部差不多, 除了你会向_左_转，跳跃, 然后向_右_转。
         courseF_artist_variables5_b: 代码的前半部分将绘制三个三角形, 而第二部分将绘制其他的三个三角形。

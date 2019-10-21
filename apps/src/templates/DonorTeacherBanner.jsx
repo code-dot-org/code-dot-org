@@ -258,7 +258,7 @@ export default class DonorTeacherBanner extends Component {
 
           <form
             id="hidden_form"
-            action="https://afe.qa.amazon-blogs.psdops.com/code-org-afe"
+            action="https://www.amazonfutureengineer.com/teacher-form"
             method="post"
             target="_blank"
           >
@@ -305,7 +305,7 @@ export default class DonorTeacherBanner extends Component {
           notice="Your response has been submitted!"
           details="Thank you for your response.  If you are not redirected to the form in a few moments,"
           detailsLinkText="click here"
-          detailsLink="https://afe.qa.amazon-blogs.psdops.com/code-org-afe"
+          detailsLink="https://www.amazonfutureengineer.com/teacher-form"
           detailsLinkNewWindow={true}
           dismissible={true}
         />

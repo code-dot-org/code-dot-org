@@ -28,9 +28,7 @@ import * as apiTimeoutList from '../lib/util/timeoutList';
 import designMode from './designMode';
 import applabTurtle from './applabTurtle';
 import applabCommands from './commands';
-import JSInterpreter, {
-  getFunctionsAndMetadata
-} from '../lib/tools/jsinterpreter/JSInterpreter';
+import JSInterpreter from '../lib/tools/jsinterpreter/JSInterpreter';
 import JsInterpreterLogger from '../JsInterpreterLogger';
 import * as elementUtils from './designElements/elementUtils';
 import {shouldOverlaysBeVisible} from '../templates/VisualizationOverlay';
@@ -349,10 +347,6 @@ Applab.setLevelHtml = function(html) {
   designMode.serializeToLevelHtml();
 };
 
-Applab.getFunctions = function() {
-  return getFunctionsAndMetadata(Applab.getCode());
-};
-
 Applab.onTick = function() {
   if (!Applab.running) {
     return;
@@ -559,7 +553,8 @@ Applab.init = function(config) {
   config.afterClearPuzzle = function() {
     designMode.resetIds();
     Applab.setLevelHtml(config.level.startHtml || '');
-    Applab.storage.populateTable(level.dataTables, true, () => {}, outputError); // overwrite = true
+    let promise = Applab.storage.populateTable(level.dataTables, true); // overwrite = true
+    promise.catch(outputError);
     Applab.storage.populateKeyValue(
       level.dataProperties,
       true,
@@ -606,13 +601,10 @@ Applab.init = function(config) {
   // Print any json parsing errors to the applab debug console and the browser debug
   // console. If a json parse error is thrown before the applab debug console
   // initializes, the error will be printed only to the browser debug console.
+  let dataLoadedPromise = Promise.resolve();
   if (level.dataTables) {
-    Applab.storage.populateTable(
-      level.dataTables,
-      false,
-      () => {},
-      outputError
-    ); // overwrite = false
+    dataLoadedPromise = Applab.storage.populateTable(level.dataTables, false); // overwrite = false
+    dataLoadedPromise.catch(outputError);
   }
   if (level.dataProperties) {
     Applab.storage.populateKeyValue(
@@ -729,7 +721,7 @@ Applab.init = function(config) {
     });
   }
 
-  loadLibraryBlocks(config);
+  studioApp().loadLibraryBlocks(config);
 
   // Set the custom set of blocks (may have had maker blocks merged in) so
   // we can later pass the custom set to the interpreter.
@@ -772,9 +764,12 @@ Applab.init = function(config) {
           );
         }
       }
-
+    })
+    .then(() => {
       if (getStore().getState().pageConstants.widgetMode) {
-        Applab.runButtonClick();
+        dataLoadedPromise.then(() => {
+          Applab.runButtonClick();
+        });
       }
     });
 
@@ -783,30 +778,6 @@ Applab.init = function(config) {
   }
   return loader;
 };
-
-function loadLibraryBlocks(config) {
-  if (!level.libraries) {
-    return;
-  }
-
-  level.libraryCode = '';
-  level.libraries.forEach(library => {
-    config.dropletConfig.additionalPredefValues.push(library.name);
-    level.libraryCode += library.source;
-    // TODO: add category management for libraries (blocked on spec)
-    // config.dropletConfig.categories['libraryName'] = {
-    //   id: 'libraryName',
-    //   color: 'colorName',
-    //   rgb: 'colorHexCode',
-    //   blocks: []
-    // };
-
-    library.dropletConfig.forEach(dropletConfig => {
-      config.dropletConfig.blocks.push(dropletConfig);
-      level.codeFunctions[dropletConfig.func] = null;
-    });
-  });
-}
 
 function changedToDataMode(state, lastState) {
   return (

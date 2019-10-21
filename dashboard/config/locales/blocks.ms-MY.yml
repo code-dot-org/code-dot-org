@@ -17,6 +17,11 @@ ms:
           PROPERTY:
             '"scale"': saiz
             '"height"': ketinggian
+      Dancelab_changePropEachBy:
+        options:
+          PROPERTY:
+            '"scale"': saiz
+            '"height"': ketinggian
       Dancelab_doMoveEachLR:
         options:
           DIR:
@@ -38,12 +43,30 @@ ms:
             "{x: 100, y: 200}": kiri
             "{x: 300, y: 200}": kanan
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": rawak
+      Dancelab_jumpToEach:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": kiri
+            "{x: 300, y: 200}": kanan
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": rawak
       Dancelab_layoutSprites:
         options:
           FORMAT:
             '"random"': rawak
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': makhluk asing
+            '"DOG"': anjing
+          LOCATION:
+            "{x: 100, y: 200}": kiri
+            "{x: 300, y: 200}": kanan
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": rawak
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': makhluk asing
+            '"DOG"': anjing
           LOCATION:
             "{x: 100, y: 200}": kiri
             "{x: 300, y: 200}": kanan
@@ -105,12 +128,27 @@ ms:
           PROPERTY:
             '"scale"': saiz
             '"height"': ketinggian
+      Dancelab_setPropRandomEach:
+        options:
+          PROPERTY:
+            '"scale"': saiz
+            '"height"': ketinggian
       Dancelab_startMapping:
         options:
           PROPERTY:
             '"scale"': saiz
             '"height"': ketinggian
+      Dancelab_startMappingEach:
+        options:
+          PROPERTY:
+            '"scale"': saiz
+            '"height"': ketinggian
       Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': saiz
+            '"height"': ketinggian
+      Dancelab_stopMappingEach:
         options:
           PROPERTY:
             '"scale"': saiz
@@ -271,45 +309,19 @@ ms:
         text: belok kiri
       RyanLab_turnRight:
         text: belok kanan
-      aalab_changePropByFlexible:
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': saiz
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': apabila
-            '"while"': semasa
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': apabila
-            '"while"': semasa
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': apabila
-            '"while"': semasa
-          KEY:
-            '"up"': atas
-            '"down"': bawah
-            '"left"': kiri
-            '"right"': kanan
-            '"space"': angkasa
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': bandar
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': benar
-            '"false"': palsu
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': saiz
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
         options:
           OPTION:
             '"hide"': sembunyi

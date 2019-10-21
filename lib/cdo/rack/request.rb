@@ -41,6 +41,12 @@ module Cdo
       @site ||= site_from_host
     end
 
+    # Patch: don't use X_FORWARDED_HOST header when determining host from request headers.
+    def host_with_port
+      get_header(Rack::HTTP_HOST) ||
+        "#{get_header(Rack::SERVER_NAME) || get_header(Rack::SERVER_ADDR)}:#{get_header(Rack::SERVER_PORT)}"
+    end
+
     def site_from_host
       host_parts = host
       # staging-studio.code.org -> ['staging', 'studio', 'code', 'org']

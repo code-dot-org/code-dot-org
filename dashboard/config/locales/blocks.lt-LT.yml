@@ -21,6 +21,11 @@ lt:
           PROPERTY:
             '"scale"': dydis
             '"height"': aukštis
+      Dancelab_changePropEachBy:
+        options:
+          PROPERTY:
+            '"scale"': dydis
+            '"height"': aukštis
       Dancelab_doMoveEachLR:
         options:
           DIR:
@@ -54,12 +59,38 @@ lt:
             "{x: 100, y: 200}": kairėn
             "{x: 300, y: 200}": dešinėn
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": atsitiktinis
+      Dancelab_jumpToEach:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": kairėn
+            "{x: 300, y: 200}": dešinėn
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": atsitiktinis
       Dancelab_layoutSprites:
         options:
           FORMAT:
             '"random"': atsitiktinis
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': ateivis
+            '"CAT"': katė
+            '"DOG"': šuo
+            '"DUCK"': antis
+            '"ROBOT"': robotas
+            '"UNICORN"': vienaragis
+          LOCATION:
+            "{x: 100, y: 200}": kairėn
+            "{x: 300, y: 200}": dešinėn
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": atsitiktinis
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': ateivis
+            '"CAT"': katė
+            '"DOG"': šuo
+            '"DUCK"': antis
+            '"ROBOT"': robotas
+            '"UNICORN"': vienaragis
           LOCATION:
             "{x: 100, y: 200}": kairėn
             "{x: 300, y: 200}": dešinėn
@@ -121,12 +152,27 @@ lt:
           PROPERTY:
             '"scale"': dydis
             '"height"': aukštis
+      Dancelab_setPropRandomEach:
+        options:
+          PROPERTY:
+            '"scale"': dydis
+            '"height"': aukštis
       Dancelab_startMapping:
         options:
           PROPERTY:
             '"scale"': dydis
             '"height"': aukštis
+      Dancelab_startMappingEach:
+        options:
+          PROPERTY:
+            '"scale"': dydis
+            '"height"': aukštis
       Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': dydis
+            '"height"': aukštis
+      Dancelab_stopMappingEach:
         options:
           PROPERTY:
             '"scale"': dydis
@@ -322,53 +368,19 @@ lt:
         text: pasisuk į kairę
       RyanLab_turnRight:
         text: pasisuk į dešinę
-      aalab_changePropByFlexible:
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': dydis
-            '"x"': x pozicija
-            '"y"': y pozicija
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': kada
-            '"while"': kol
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': kada
-            '"while"': kol
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': kada
-            '"while"': kol
-          KEY:
-            '"up"': aukštyn
-            '"down"': žemyn
-            '"left"': kairėn
-            '"right"': dešinėn
-            '"space"': kosmosas
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': miestas
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': Taip
-            '"false"': klaida
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': dydis
-            '"x"': x pozicija
-            '"y"': y pozicija
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': amžinai
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
         options:
           OPTION:
             '"show"': parodyk

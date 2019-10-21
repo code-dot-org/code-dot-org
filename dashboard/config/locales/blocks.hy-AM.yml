@@ -21,6 +21,11 @@ hy:
           PROPERTY:
             '"scale"': չափ
             '"height"': բարձրություն
+      Dancelab_changePropEachBy:
+        options:
+          PROPERTY:
+            '"scale"': չափ
+            '"height"': բարձրություն
       Dancelab_doMoveEachLR:
         options:
           DIR:
@@ -54,12 +59,38 @@ hy:
             "{x: 100, y: 200}": ձախ
             "{x: 300, y: 200}": ճիշտ
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": կամայական
+      Dancelab_jumpToEach:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": ձախ
+            "{x: 300, y: 200}": ճիշտ
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": կամայական
       Dancelab_layoutSprites:
         options:
           FORMAT:
             '"random"': կամայական
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': այլմոլորակային
+            '"CAT"': կատու
+            '"DOG"': շուն
+            '"DUCK"': բադ
+            '"ROBOT"': ռոբոտ
+            '"UNICORN"': միաեղջույր
+          LOCATION:
+            "{x: 100, y: 200}": ձախ
+            "{x: 300, y: 200}": ճիշտ
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": կամայական
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': այլմոլորակային
+            '"CAT"': կատու
+            '"DOG"': շուն
+            '"DUCK"': բադ
+            '"ROBOT"': ռոբոտ
+            '"UNICORN"': միաեղջույր
           LOCATION:
             "{x: 100, y: 200}": ձախ
             "{x: 300, y: 200}": ճիշտ
@@ -121,12 +152,27 @@ hy:
           PROPERTY:
             '"scale"': չափ
             '"height"': բարձրություն
+      Dancelab_setPropRandomEach:
+        options:
+          PROPERTY:
+            '"scale"': չափ
+            '"height"': բարձրություն
       Dancelab_startMapping:
         options:
           PROPERTY:
             '"scale"': չափ
             '"height"': բարձրություն
+      Dancelab_startMappingEach:
+        options:
+          PROPERTY:
+            '"scale"': չափ
+            '"height"': բարձրություն
       Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': չափ
+            '"height"': բարձրություն
+      Dancelab_stopMappingEach:
         options:
           PROPERTY:
             '"scale"': չափ
@@ -299,49 +345,19 @@ hy:
         text: դիմել է մնացել
       RyanLab_turnRight:
         text: աջ շրջադարձ
-      aalab_changePropByFlexible:
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': չափ
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': երբ
-            '"while"': ժամանակ
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': երբ
-            '"while"': ժամանակ
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': երբ
-            '"while"': ժամանակ
-          KEY:
-            '"up"': մինչեւ
-            '"down"': ներքեւ
-            '"left"': ձախ
-            '"right"': ճիշտ
-            '"space"': տարածություն
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': քաղաք
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': ճիշտ
-            '"false"': կեղծ
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': չափ
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': ընդմիշտ
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
         options:
           OPTION:
             '"show"': ցուցադրում

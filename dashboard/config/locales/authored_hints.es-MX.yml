@@ -5725,6 +5725,8 @@ es-MX:
           <title name="TIMES">???</title>
           </block></xml>.
       courseA_collector_loops3_2019:
+        courseA_collector_loops3_a: "Intente user un \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title
+          name=\"TIMES\" config=\"3-10\">???</title></block></xml> \n\nbucle!"
         courseA_collector_loops3_b: |-
           Recuerda que puedes poner más de un bloque en un loop <xml><block type="controls_repeat">
 
@@ -9695,18 +9697,18 @@ es-MX:
         courseC_maze_loops_challenge2_b: ¡Utiliza los loops de tal manera de no quedarse
           sin los bloques "recoger"!
       courseC_collector_prog1:
-        courseC_collector_prog1_a: Cuando usted está parado en un espacio de tesoros,
-          utilice el <xml><block type="collector_collect"/></xml> bloque para recogerlo.
+        courseC_collector_prog1_a: Cuando estás parado en un espacio con tesoros,
+          utiliza el <xml><block type="collector_collect"/></xml> bloque para recogerlo.
         courseC_collector_prog1_b: La solución más simple sería avanzar una vez, luego
           recoger el tesoro.
       courseC_collector_prog1_2018:
-        courseC_collector_prog1_a: Cuando usted está parado en un espacio de tesoros,
-          utilice el <xml><block type="collector_collect"/></xml> bloque para recogerlo.
+        courseC_collector_prog1_a: Cuando estás parado en un espacio con tesoros,
+          utiliza el <xml><block type="collector_collect"/></xml> bloque para recogerlo.
         courseC_collector_prog1_b: La solución más simple sería avanzar una vez, luego
           recoger el tesoro.
       courseC_collector_prog1_2019:
-        courseC_collector_prog1_a: Cuando usted está parado en un espacio de tesoros,
-          utilice el <xml><block type="collector_collect"/></xml> bloque para recogerlo.
+        courseC_collector_prog1_a: Cuando estás parado en un espacio con tesoros,
+          utiliza el <xml><block type="collector_collect"/></xml> bloque para recogerlo.
         courseC_collector_prog1_b: La solución más simple sería avanzar una vez, luego
           recoger el tesoro.
       courseC_collector_prog2:
@@ -10138,30 +10140,6 @@ es-MX:
         courseC_harvester_loops_challenge1_b: Puedes repetir 'avanzar' y 'recoger
           maíz' todas las veces que necesites hacerlo, luego gira a la derecha en
           cada esquina.
-        courseC_harvester_loops_challenge1_c: |-
-          La mejor manera de recoger el maíz en el medio usa un bloque `repetir` dentro de otro bloque `repetir`.
-
-          <xml><block type="controls_repeat">
-                  <title name="TIMES">2</title>
-                  <statement name="DO">
-                    <block type="controls_repeat">
-                      <title name="TIMES">4</title>
-                      <statement name="DO">
-                        <block type="maze_move">
-                          <title name="DIR">moveForward</title>
-                          <next>
-                            <block type="harvester_corn"/>
-                          </next>
-                        </block>
-                      </statement>
-                      <next>
-                        <block type="maze_turn">
-                          <title name="DIR">turnRight</title>
-                        </block>
-                      </next>
-                    </block>
-                  </statement>
-                  </block></xml>
       courseC_harvester_loops_challenge1a_2019:
         courseC_harvester_loops_challenge1_a: "¡Esto es demasiado dificil sin ciclos!"
         courseC_harvester_loops_challenge1_b: Puedes repetir 'avanzar' y 'recoger
@@ -10709,14 +10687,6 @@ es-MX:
         courseC_starWars_loops4_b: 'Cada loop ''repetir'' tendrá sólo un comando dentro
           de él: `avanzar`.'
       courseC_starWars_loops5:
-        courseC_starWars_loops5_b: Para moverte hacia abajo, debes girar y luego avanzar.
-        courseC_starWars_loops5_a: La mejor solución utiliza un giro, luego solo un
-          \`avanzar ', otro giro y luego un loop.
-      courseC_starWars_loops5_2018:
-        courseC_starWars_loops5_b: Para moverte hacia abajo, debes girar y luego avanzar.
-        courseC_starWars_loops5_a: La mejor solución utiliza un giro, luego solo un
-          \`avanzar ', otro giro y luego un loop.
-      courseC_starWars_loops5_2019:
         courseC_starWars_loops5_b: Para moverte hacia abajo, debes girar y luego avanzar.
         courseC_starWars_loops5_a: La mejor solución utiliza un giro, luego solo un
           \`avanzar ', otro giro y luego un loop.
@@ -13918,12 +13888,8 @@ es-MX:
         courseE_bee_concept3a_c: Hay tres grupos de flores, por lo que tu loop 'repetir'
           externo debe repetirse tres veces.
       courseE_bee_concept3_2018:
-        courseE_bee_concept3a_a: Intenta usar los loops anidados 'repetir' para resolver
-          este desafío.
         courseE_bee_concept3a_b: Si no puedes descifrar dónde ubicar los loops, intenta
           escribir tu código paso a paso y buscar patrones.
-        courseE_bee_concept3a_c: Hay tres grupos de flores, por lo que tu loop 'repetir'
-          externo debe repetirse tres veces.
       courseE_bee_concept4:
         courseE_bee_concept4_a: Una afirmación `si/ si no` podría ayudarte mucho aquí.
         courseE_bee_concept4_b: El patrón de escalones puede ayudarte a atravesar
@@ -15718,7 +15684,6 @@ es-MX:
           Este es el patrón que seguirá tu artista:
 
           ![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)
-        courseF_artist_variables4_b: "![](https://images.code.org/fc31a4b60dc86d7b820c2d242f83e6ed-image-1477533361197.gif)"
       courseF_artist_variables4_2019:
         courseF_artist_variables4_a: El código no será muy diferente de lo que fue
           en el último desafío, excepto que tendrás que girar al artista para saltar
@@ -15728,7 +15693,6 @@ es-MX:
           Este es el patrón que seguirá tu artista:
 
           ![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)
-        courseF_artist_variables4_b: "![](https://images.code.org/fc31a4b60dc86d7b820c2d242f83e6ed-image-1477533361197.gif)"
       courseF_artist_variables5:
         courseF_artist_variables5_a: La segunda mitad de tu código debe tener casi
           el mismo aspecto que la primera mitad, salvo que girarás a la _izquierda_,

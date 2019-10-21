@@ -1146,7 +1146,7 @@ es-MX:
         <strong>¿Qué es un párrafo?</strong>
         </summary>
 
-        Los párrafos están marcados con etiquetas de apertura (`<p>`) y cierre (`</p>`. Los párrafos de texto en HTML pueden tener cualquier longitud, desde una palabra hasta un grupo de oraciones. Agrupan conjuntos de oraciones y ponen un espacio entre ese grupo de texto y el siguiente.
+        Los párrafos están marcados con etiquetas de apertura (`<p>`) y cierre (`</p>`). Los párrafos de texto en HTML pueden tener cualquier longitud, desde una palabra hasta un grupo de oraciones. Agrupan conjuntos de oraciones y ponen un espacio entre ese grupo de texto y el siguiente.
 
         </details>
         <details>
@@ -16889,6 +16889,9 @@ es-MX:
           <xml><block type="collector_collect"/></xml>
       courseA_collector_loops2_2018: '¡Consigue los tres montones! Acerca a Laurel
         a cada pieza del tesoro y, luego, usa este bloque: <xml><block type="collector_collect"/></xml>'
+      courseA_collector_loops2_2019: 'Obtenga todos los 3 montones! Mueva Laurel a
+        cada pieza de tesoro, y luego use <xml><block type="collector_collect" block-text="get
+        treasure"/></xml> bloque. '
       courseA_collector_loops3: ¿Cómo puede Laurel obtener los cinco montones de tesoros
         con un solo bloque <xml><block type="maze_moveEast"/></xml>?
       courseA_collector_loops3_2018: ¿Cómo puede Laurel obtener los cinco montones
@@ -17108,6 +17111,9 @@ es-MX:
         sobran y agrega los que faltan. ¡Haz que el pájaro llegue hasta el cerdo!
       courseA_maze_seq_challenge2_2019: Traza el camino para que el pájaro llegue
         hasta el cerdo. ¡Evita el TNT o volarán plumas!
+      courseA_playLab_events1_2019: Este es un Play Lab nivel. Mueva bloques al area
+        de trabajo y observe que sucede!
+      courseA_playLab_events2_2019: Jorge el Perro quiere decir "Hola." Puede ayudarle?
       courseA_playLab_events3: |-
         Ayuda a Jorge el Perro a moverse. Conecta el bloque <xml><block type="studio_move">
             <title name="SPRITE">1</title>

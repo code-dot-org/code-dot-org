@@ -448,6 +448,7 @@ ka:
       აღსადგენად)
     update: ანგარიშის განახლება
     account_successfully_updated: ანგარიში წარმატებით განახლდა.
+    update_email: განახლება
   user_level:
     completed: დასრულებულია
     tried: უკვე ნაცადია

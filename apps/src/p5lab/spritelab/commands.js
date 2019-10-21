@@ -38,73 +38,73 @@ export const commands = {
   },
 
   // Action commands
-  changePropBy(spriteId, prop, val) {
-    actionCommands.changePropBy(spriteId, prop, val);
+  changePropBy(spriteArg, prop, val) {
+    actionCommands.changePropBy(spriteArg, prop, val);
   },
 
-  edgesDisplace(spriteId) {
-    actionCommands.edgesDisplace.apply(this, [spriteId]);
+  edgesDisplace(spriteArg) {
+    actionCommands.edgesDisplace.apply(this, [spriteArg]);
   },
 
-  isTouchingEdges(spriteId) {
-    return actionCommands.isTouchingEdges.apply(this, [spriteId]);
+  isTouchingEdges(spriteArg) {
+    return actionCommands.isTouchingEdges.apply(this, [spriteArg]);
   },
 
-  jumpTo(spriteId, location) {
-    actionCommands.jumpTo(spriteId, location);
+  jumpTo(spriteArg, location) {
+    actionCommands.jumpTo(spriteArg, location);
   },
 
-  mirrorSprite(spriteId, direction) {
-    actionCommands.mirrorSprite(spriteId, direction);
+  mirrorSprite(spriteArg, direction) {
+    actionCommands.mirrorSprite(spriteArg, direction);
   },
 
-  moveInDirection(spriteId, distance, direction) {
-    actionCommands.moveInDirection(spriteId, distance, direction);
+  moveInDirection(spriteArg, distance, direction) {
+    actionCommands.moveInDirection(spriteArg, distance, direction);
   },
 
-  moveForward(spriteId, distance) {
-    actionCommands.moveForward(spriteId, distance);
+  moveForward(spriteArg, distance) {
+    actionCommands.moveForward(spriteArg, distance);
   },
 
-  moveToward(spriteId, distance, target) {
-    actionCommands.moveToward(spriteId, distance, target);
+  moveToward(spriteArg, distance, target) {
+    actionCommands.moveToward(spriteArg, distance, target);
   },
 
-  removeTint(spriteId) {
-    actionCommands.setProp(spriteId, 'tint', null);
+  removeTint(spriteArg) {
+    actionCommands.setProp(spriteArg, 'tint', null);
   },
 
-  setProp(spriteId, prop, val) {
-    actionCommands.setProp.apply(this, [spriteId, prop, val]);
+  setProp(spriteArg, prop, val) {
+    actionCommands.setProp.apply(this, [spriteArg, prop, val]);
   },
 
-  setTint(spriteId, color) {
-    actionCommands.setProp(spriteId, 'tint', color);
+  setTint(spriteArg, color) {
+    actionCommands.setProp(spriteArg, 'tint', color);
   },
 
-  turn(spriteId, n, direction) {
-    actionCommands.turn(spriteId, n, direction);
+  turn(spriteArg, n, direction) {
+    actionCommands.turn(spriteArg, n, direction);
   },
 
   // Behavior commands
-  addBehaviorSimple(spriteId, behavior) {
-    behaviorCommands.addBehavior(spriteId, behavior);
+  addBehaviorSimple(spriteArg, behavior) {
+    behaviorCommands.addBehavior(spriteArg, behavior);
   },
 
   Behavior(callback) {
     return behaviorCommands.Behavior(callback);
   },
 
-  draggableFunc(spriteId) {
+  draggableFunc(spriteArg) {
     return behaviorCommands.draggableFunc(this);
   },
 
-  removeAllBehaviors(spriteId) {
-    behaviorCommands.removeAllBehaviors(spriteId);
+  removeAllBehaviors(spriteArg) {
+    behaviorCommands.removeAllBehaviors(spriteArg);
   },
 
-  removeBehaviorSimple(spriteId, behavior) {
-    behaviorCommands.removeBehavior(spriteId, behavior);
+  removeBehaviorSimple(spriteArg, behavior) {
+    behaviorCommands.removeBehavior(spriteArg, behavior);
   },
 
   // Event commands
@@ -116,8 +116,8 @@ export const commands = {
     eventCommands.keyPressed(condition, key, callback);
   },
 
-  spriteClicked(condition, spriteId, callback) {
-    eventCommands.spriteClicked(condition, spriteId, callback);
+  spriteClicked(condition, spriteArg, callback) {
+    eventCommands.spriteClicked(condition, spriteArg, callback);
   },
 
   // Location commands
@@ -129,8 +129,8 @@ export const commands = {
     return locationCommands.locationMouse.apply(this);
   },
 
-  locationOf(spriteId) {
-    return locationCommands.locationOf(spriteId);
+  locationOf(spriteArg) {
+    return locationCommands.locationOf(spriteArg);
   },
 
   randomLocation() {
@@ -142,26 +142,22 @@ export const commands = {
     return spriteCommands.countByAnimation(animation);
   },
 
-  /**
-   * name parameter is unused but needs to be here because the generated code
-   * calls createNewSprite() with name as an argument.
-   * TODO (ajpal): change generated code to not pass assignment arguments
-   * to the generated function.
-   */
   createNewSprite(name, animation, location) {
-    return spriteCommands.makeSprite.apply(this, [animation, location]);
+    return spriteCommands.makeSprite.apply(this, [
+      {name: name.name, animation: animation, location: location}
+    ]);
   },
 
-  destroy(spriteId) {
-    spriteCommands.destroy(spriteId);
+  destroy(spriteArg) {
+    spriteCommands.destroy(spriteArg);
   },
 
-  displace(spriteId, targetSpriteIndex) {
-    spriteCommands.displace(spriteId, targetSpriteIndex);
+  displace(spriteArg, targetSpriteIndex) {
+    spriteCommands.displace(spriteArg, targetSpriteIndex);
   },
 
-  getProp(spriteId, prop) {
-    return spriteCommands.getProp(spriteId, prop);
+  getProp(spriteArg, prop) {
+    return spriteCommands.getProp(spriteArg, prop);
   },
 
   getThisSprite(which, extraArgs) {
@@ -169,11 +165,13 @@ export const commands = {
   },
 
   makeNewSpriteAnon(animation, location) {
-    spriteCommands.makeSprite.apply(this, [animation, location]);
+    spriteCommands.makeSprite.apply(this, [
+      {animation: animation, location: location}
+    ]);
   },
 
-  setAnimation(spriteId, animation) {
-    spriteCommands.setAnimation(spriteId, animation);
+  setAnimation(spriteArg, animation) {
+    spriteCommands.setAnimation(spriteArg, animation);
   },
 
   // World commands

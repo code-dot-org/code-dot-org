@@ -82,6 +82,28 @@ ar:
             '"rotation"': الدوران
             '"x"': وضع أفقي
             '"y"': الموضع الرأسي
+      Dancelab_changePropEachBy:
+        options:
+          GROUP:
+            sprites: الكل
+            '"ALIEN"': كل الكائنات الفضائية
+            '"BEAR"': كل الدببة
+            '"CAT"': كل القطط
+            '"DOG"': كل الكلاب
+            '"DUCK"': كل البط
+            '"FROG"': كل الضفادع
+            '"MOOSE"': كل الغزلان
+            '"PINEAPPLE"': كل الأناناس
+            '"ROBOT"': كل الروبوتات
+            '"SHARK"': كل أسماك القرش
+            '"UNICORN"': وحيدات القرن
+          PROPERTY:
+            '"scale"': الحجم
+            '"width"': العرض
+            '"height"': الارتفاع
+            '"rotation"': الدوران
+            '"x"': وضع أفقي
+            '"y"': الموضع الرأسي
       Dancelab_doMoveEachLR:
         text: "{GROUP} تجري {MOVE} {DIR} مرة واحدة"
         options:
@@ -97,7 +119,7 @@ ar:
             '"PINEAPPLE"': كل الأناناس
             '"ROBOT"': كل الروبوتات
             '"SHARK"': كل أسماك القرش
-            '"UNICORN"': كل وحيدات القرن
+            '"UNICORN"': وحيدات القرن
           MOVE:
             '"rand"': "(عشوائي)"
             MOVES.Roll: الدحرجة
@@ -216,6 +238,32 @@ ar:
             "{x: 100, y: 300}": أسفل اليسار
             "{x: 300, y: 300}": أسفل اليمين
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": عشوائي
+      Dancelab_jumpToEach:
+        options:
+          GROUP:
+            sprites: الكل
+            '"ALIEN"': كل الكائنات الفضائية
+            '"BEAR"': كل الدببة
+            '"CAT"': كل القطط
+            '"DOG"': كل الكلاب
+            '"DUCK"': كل البط
+            '"FROG"': كل الضفادع
+            '"MOOSE"': كل الغزلان
+            '"PINEAPPLE"': كل الأناناس
+            '"ROBOT"': كل الروبوتات
+            '"SHARK"': كل أسماك القرش
+            '"UNICORN"': وحيدات القرن
+          LOCATION:
+            "{x: 200, y: 100}": أعلى
+            "{x: 200, y: 300}": أسفل
+            "{x: 100, y: 200}": اليسار
+            "{x: 300, y: 200}": اليمين
+            "{x: 200, y: 200}": المنتصف
+            "{x: 100, y: 100}": أعلى اليسار
+            "{x: 300, y: 100}": أعلى اليمين
+            "{x: 100, y: 300}": أسفل اليسار
+            "{x: 300, y: 300}": أسفل اليمين
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": عشوائي
       Dancelab_layoutSprites:
         text: تخطيط {GROUP} كـ {FORMAT}
         options:
@@ -231,7 +279,7 @@ ar:
             '"PINEAPPLE"': كل الأناناس
             '"ROBOT"': كل الروبوتات
             '"SHARK"': كل أسماك القرش
-            '"UNICORN"': كل وحيدات القرن
+            '"UNICORN"': وحيدات القرن
           FORMAT:
             '"border"': الحدود
             '"inner"': مربع داخلي
@@ -242,6 +290,31 @@ ar:
             '"x"': متقاطع
             '"plus"': زائد
             '"random"': عشوائي
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': كائن فضائى
+            '"BEAR"': دب
+            '"CAT"': قطه
+            '"DOG"': كلب
+            '"DUCK"': بطة
+            '"FROG"': ضفدع
+            '"MOOSE"': كل الغزلان
+            '"PINEAPPLE"': أناناس
+            '"ROBOT"': روبوت
+            '"SHARK"': سمكة قرش
+            '"UNICORN"': وحيد القرن
+          LOCATION:
+            "{x: 200, y: 100}": أعلى
+            "{x: 200, y: 300}": أسفل
+            "{x: 100, y: 200}": اليسار
+            "{x: 300, y: 200}": اليمين
+            "{x: 200, y: 200}": المنتصف
+            "{x: 100, y: 100}": أعلى اليسار
+            "{x: 300, y: 100}": أعلى اليمين
+            "{x: 100, y: 300}": أسفل اليسار
+            "{x: 300, y: 300}": أسفل اليمين
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": عشوائي
       Dancelab_makeNewDanceSprite:
         text: |-
           أجرِ {COSTUME} جديد
@@ -415,7 +488,7 @@ ar:
             '"PINEAPPLE"': كل الأناناس
             '"ROBOT"': كل الروبوتات
             '"SHARK"': كل أسماك القرش
-            '"UNICORN"': كل وحيدات القرن
+            '"UNICORN"': وحيدات القرن
           SPEED:
             '1': عادي
             '2': سريع
@@ -463,7 +536,6 @@ ar:
             '"rotation"': الدوران
             '"x"': وضع أفقي
             '"y"': الموضع الرأسي
-            '"tint"': لون خفيف
       Dancelab_setPropEach:
         text: عيّن {GROUP} {PROPERTY} على {VAL}
         options:
@@ -479,7 +551,17 @@ ar:
             '"PINEAPPLE"': كل الأناناس
             '"ROBOT"': كل الروبوتات
             '"SHARK"': كل أسماك القرش
-            '"UNICORN"': كل وحيدات القرن
+            '"UNICORN"': وحيدات القرن
+          PROPERTY:
+            '"scale"': الحجم
+            '"width"': العرض
+            '"height"': الارتفاع
+            '"rotation"': الدوران
+            '"x"': وضع أفقي
+            '"y"': الموضع الرأسي
+      Dancelab_setPropRandom:
+        text: رتّب {SPRITE} {PROPERTY} عشوائيًا
+        options:
           PROPERTY:
             '"scale"': الحجم
             '"width"': العرض
@@ -488,9 +570,21 @@ ar:
             '"x"': وضع أفقي
             '"y"': الموضع الرأسي
             '"tint"': لون خفيف
-      Dancelab_setPropRandom:
-        text: رتّب {SPRITE} {PROPERTY} عشوائيًا
+      Dancelab_setPropRandomEach:
         options:
+          GROUP:
+            sprites: الكل
+            '"ALIEN"': كل الكائنات الفضائية
+            '"BEAR"': كل الدببة
+            '"CAT"': كل القطط
+            '"DOG"': كل الكلاب
+            '"DUCK"': كل البط
+            '"FROG"': كل الضفادع
+            '"MOOSE"': كل الغزلان
+            '"PINEAPPLE"': كل الأناناس
+            '"ROBOT"': كل الروبوتات
+            '"SHARK"': كل أسماك القرش
+            '"UNICORN"': وحيدات القرن
           PROPERTY:
             '"scale"': الحجم
             '"width"': العرض
@@ -515,6 +609,22 @@ ar:
             '"PINEAPPLE"': كل الأناناس
             '"ROBOT"': كل الروبوتات
             '"SHARK"': كل أسماك القرش
+            '"UNICORN"': وحيدات القرن
+      Dancelab_setTintEachInline:
+        options:
+          THIS:
+            sprites: الكل
+            '"ALIEN"': كل الكائنات الفضائية
+            '"BEAR"': كل الدببة
+            '"CAT"': كل القطط
+            '"DOG"': كل الكلاب
+            '"DUCK"': كل البط
+            '"FROG"': كل الضفادع
+            '"MOOSE"': كل الغزلان
+            '"PINEAPPLE"': كل الأناناس
+            '"ROBOT"': كل الروبوتات
+            '"SHARK"': كل أسماك القرش
+            '"UNICORN"': وحيدات القرن
       Dancelab_setTintInline:
         text: عيّن اللون الخفيف {SPRITE} على {VAL}
       Dancelab_setVisible:
@@ -538,13 +648,40 @@ ar:
             '"PINEAPPLE"': كل الأناناس
             '"ROBOT"': كل الروبوتات
             '"SHARK"': كل أسماك القرش
-            '"UNICORN"': كل وحيدات القرن
+            '"UNICORN"': وحيدات القرن
           VISIBILITY:
             'true': مرئى
             'false': غير مرئي
       Dancelab_startMapping:
         text: "{SPRITE} يبدأ {PROPERTY} بعد {RANGE}"
         options:
+          PROPERTY:
+            '"scale"': الحجم
+            '"width"': العرض
+            '"height"': الارتفاع
+            '"rotation"': الدوران
+            '"x"': وضع أفقي
+            '"y"': الموضع الرأسي
+            '"tint"': لون خفيف
+          RANGE:
+            '"bass"': جهير
+            '"mid"': أوسط
+            '"treble"': طنين ثلاثي
+      Dancelab_startMappingEach:
+        options:
+          GROUP:
+            sprites: الكل
+            '"ALIEN"': كل الكائنات الفضائية
+            '"BEAR"': كل الدببة
+            '"CAT"': كل القطط
+            '"DOG"': كل الكلاب
+            '"DUCK"': كل البط
+            '"FROG"': كل الضفادع
+            '"MOOSE"': كل الغزلان
+            '"PINEAPPLE"': كل الأناناس
+            '"ROBOT"': كل الروبوتات
+            '"SHARK"': كل أسماك القرش
+            '"UNICORN"': وحيدات القرن
           PROPERTY:
             '"scale"': الحجم
             '"width"': العرض
@@ -567,6 +704,34 @@ ar:
             '"rotation"': الدوران
             '"x"': وضع أفقي
             '"y"': بشكل عمودي
+            '"direction"': اتجاه الحركة
+            '"tint"': لون خفيف
+          RANGE:
+            '"bass"': جهير
+            '"mid"': أوسط
+            '"treble"': طنين ثلاثي
+      Dancelab_stopMappingEach:
+        options:
+          GROUP:
+            sprites: الكل
+            '"ALIEN"': كل الكائنات الفضائية
+            '"BEAR"': كل الدببة
+            '"CAT"': كل القطط
+            '"DOG"': كل الكلاب
+            '"DUCK"': كل البط
+            '"FROG"': كل الضفادع
+            '"MOOSE"': كل الغزلان
+            '"PINEAPPLE"': كل الأناناس
+            '"ROBOT"': كل الروبوتات
+            '"SHARK"': كل أسماك القرش
+            '"UNICORN"': وحيدات القرن
+          PROPERTY:
+            '"scale"': الحجم
+            '"width"': العرض
+            '"height"': الارتفاع
+            '"rotation"': الدوران
+            '"x"': وضع أفقي
+            '"y"': الموضع الرأسي
             '"direction"': اتجاه الحركة
             '"tint"': لون خفيف
           RANGE:
@@ -876,61 +1041,19 @@ ar:
         text: اتجه إلى اليمين
       Vector_positionCenter:
         text: المنتصف
-      aalab_changePropByFlexible:
-        text: غيّر {SPRITE} {PROPERTY} بمقدار {VAL}
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': الحجم
-            '"rotation"': الدوران
-            '"x"': الموضع س
-            '"y"': الموضع ص
-            '"direction"': اتجاه الحركة
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': عندما
-            '"while"': التكرار طالما
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': عندما
-            '"while"': التكرار طالما
-      aalab_jumpTo:
-        text: "{SPRITE} انتقل إلى {LOCATION}"
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': عندما
-            '"while"': التكرار طالما
-          KEY:
-            '"up"': الأعلى
-            '"down"': الأسفل
-            '"left"': اليسار
-            '"right"': اليمين
-            '"space"': الفضاء
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': مدينة
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': صحيح
-            '"false"': خطأ
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': الحجم
-            '"rotation"': الدوران
-            '"x"': الموضع س
-            '"y"': الموضع ص
-            '"direction"': اتجاه الحركة
-            '"tint"': لون خفيف
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': إلى الأبد
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
         options:
           OPTION:
             '"show"': إظهار

@@ -1079,13 +1079,16 @@ exports.createJsWrapperBlockCreator = function(
       }
 
       if (expression) {
+        // If the original expression has a value placeholder, replace it
+        // with the selected value.
+        let valueExpression = expression.replace('VALUE', values[0]);
         if (returnType !== undefined) {
           return [
-            `${prefix}${expression}`,
+            `${prefix}${valueExpression}`,
             orderPrecedence === undefined ? ORDER_NONE : orderPrecedence
           ];
         } else {
-          return `${prefix}${expression}`;
+          return `${prefix}${valueExpression}`;
         }
       }
 

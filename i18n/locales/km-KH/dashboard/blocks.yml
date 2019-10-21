@@ -27,6 +27,13 @@ km:
           PROPERTY:
             '"scale"': ទំហំ
             '"height"': កម្ពស់
+      Dancelab_changePropEachBy:
+        options:
+          GROUP:
+            sprites: ទាំងអស់
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"height"': កម្ពស់
       Dancelab_doMoveEachLR:
         options:
           GROUP:
@@ -70,14 +77,42 @@ km:
             "{x: 100, y: 200}": ឆ្វេង
             "{x: 300, y: 200}": ស្តាំ
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ព្រាវ
+      Dancelab_jumpToEach:
+        options:
+          GROUP:
+            sprites: ទាំងអស់
+          LOCATION:
+            "{x: 100, y: 200}": ឆ្វេង
+            "{x: 300, y: 200}": ស្តាំ
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": ព្រាវ
       Dancelab_layoutSprites:
         options:
           GROUP:
             sprites: ទាំងអស់
           FORMAT:
             '"random"': ព្រាវ
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': មនុស្សក្រៅភព
+            '"CAT"': ឆ្មា
+            '"DOG"': ឆ្កែ
+            '"DUCK"': ទា
+            '"ROBOT"': robot
+            '"UNICORN"': សេះដុះស្នែង
+          LOCATION:
+            "{x: 100, y: 200}": ឆ្វេង
+            "{x: 300, y: 200}": ស្តាំ
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ព្រាវ
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': មនុស្សក្រៅភព
+            '"CAT"': ឆ្មា
+            '"DOG"': ឆ្កែ
+            '"DUCK"': ទា
+            '"ROBOT"': robot
+            '"UNICORN"': សេះដុះស្នែង
           LOCATION:
             "{x: 100, y: 200}": ឆ្វេង
             "{x: 300, y: 200}": ស្តាំ
@@ -159,7 +194,18 @@ km:
           PROPERTY:
             '"scale"': ទំហំ
             '"height"': កម្ពស់
+      Dancelab_setPropRandomEach:
+        options:
+          GROUP:
+            sprites: ទាំងអស់
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"height"': កម្ពស់
       Dancelab_setTintEach:
+        options:
+          THIS:
+            sprites: ទាំងអស់
+      Dancelab_setTintEachInline:
         options:
           THIS:
             sprites: ទាំងអស់
@@ -172,8 +218,22 @@ km:
           PROPERTY:
             '"scale"': ទំហំ
             '"height"': កម្ពស់
+      Dancelab_startMappingEach:
+        options:
+          GROUP:
+            sprites: ទាំងអស់
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"height"': កម្ពស់
       Dancelab_stopMapping:
         options:
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"height"': កម្ពស់
+      Dancelab_stopMappingEach:
+        options:
+          GROUP:
+            sprites: ទាំងអស់
           PROPERTY:
             '"scale"': ទំហំ
             '"height"': កម្ពស់
@@ -401,53 +461,19 @@ km:
         text: បត់​ឆ្វេង
       RyanLab_turnRight:
         text: បត់​ស្ដាំ
-      aalab_changePropByFlexible:
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': ទំហំ
-            '"x"': គូល​x
-            '"y"': គូល​y
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': នៅ​ពេល
-            '"while"': នៅ​ពេល
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': នៅ​ពេល
-            '"while"': នៅ​ពេល
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': នៅ​ពេល
-            '"while"': នៅ​ពេល
-          KEY:
-            '"up"': ឡើង
-            '"down"': ចុះ
-            '"left"': ឆ្វេង
-            '"right"': ស្តាំ
-            '"space"': លំហ​អាកាស
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': ទីក្រុង
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': ពិត
-            '"false"': មិន​ពិត
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': ទំហំ
-            '"x"': គូល​x
-            '"y"': គូល​y
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': ជារៀងរហូត
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
         options:
           OPTION:
             '"show"': បង្ហាញ

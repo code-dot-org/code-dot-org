@@ -16,6 +16,10 @@ ta:
         options:
           PROPERTY:
             '"height"': உயரம்
+      Dancelab_changePropEachBy:
+        options:
+          PROPERTY:
+            '"height"': உயரம்
       Dancelab_doMoveEachLR:
         options:
           DIR:
@@ -34,12 +38,26 @@ ta:
         options:
           LOCATION:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": தொடர்பின்றி எடுக்கப்பட்ட
+      Dancelab_jumpToEach:
+        options:
+          LOCATION:
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": தொடர்பின்றி எடுக்கப்பட்ட
       Dancelab_layoutSprites:
         options:
           FORMAT:
             '"random"': தொடர்பின்றி எடுக்கப்பட்ட
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': வேற்றுகிரகத்துவாசி
+            '"DOG"': நாய்
+          LOCATION:
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": தொடர்பின்றி எடுக்கப்பட்ட
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': வேற்றுகிரகத்துவாசி
+            '"DOG"': நாய்
           LOCATION:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": தொடர்பின்றி எடுக்கப்பட்ட
       Dancelab_makeNewDanceSpriteGroup:
@@ -96,11 +114,23 @@ ta:
         options:
           PROPERTY:
             '"height"': உயரம்
+      Dancelab_setPropRandomEach:
+        options:
+          PROPERTY:
+            '"height"': உயரம்
       Dancelab_startMapping:
         options:
           PROPERTY:
             '"height"': உயரம்
+      Dancelab_startMappingEach:
+        options:
+          PROPERTY:
+            '"height"': உயரம்
       Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"height"': உயரம்
+      Dancelab_stopMappingEach:
         options:
           PROPERTY:
             '"height"': உயரம்
@@ -173,32 +203,18 @@ ta:
         text: இடதுபுறம் திரும்பவும்
       RyanLab_turnRight:
         text: வலதுபுறம் திரும்பவும்
-      aalab_checkTouching:
+      aalab_goToScene:
         options:
-          CONDITION:
-            '"when"': எப்போது
-            '"while"': எப்பொழுது
-      aalab_clickedOn:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': எப்போது
-            '"while"': எப்பொழுது
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': எப்போது
-            '"while"': எப்பொழுது
-          KEY:
-            '"space"': வெளி
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': மாநகர்
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': மெய்
-            '"false"': தவறு
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
       binary_whenKey:
         options:
           KEY:

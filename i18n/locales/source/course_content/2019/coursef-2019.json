@@ -528,7 +528,7 @@
     "authored_hints": {
       "courseF_artist_variables4_a": "Your code won't be much different than it was in the last puzzle, except that you will need to turn the artist to jump down, then turn him back to get ready to draw the next triangle.",
       "courseF_artist_variables4_c": "This is the pattern your artist will be following:\n\n[][0]",
-      "courseF_artist_variables4_b": "[][0]"
+      "courseF_artist_variables4_b": "[blockly block][0]"
     }
   },
   "https://studio.code.org/s/coursef-2019/stage/7/puzzle/7": {

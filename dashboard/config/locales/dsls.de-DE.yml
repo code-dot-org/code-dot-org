@@ -77,17 +77,18 @@ de-DE:
         - {}
         - {}
         answers:
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png"
         - {}
       2-3 Graph Paper Multi 1:
         title: Multiple-Choice
         questions:
         - text: Welches Programm erzeugt dieses Bild?
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png"
       2-3 Maze Match 2:
         title: Labyrinth Übereinstimmung
         content1: Weise die Puzzle den Blöcken zu.
@@ -324,10 +325,11 @@ de-DE:
         - text: Wenn der DNS sie zu der Seite mit der IP-Adresse 100.42.50.110 geleitet
             hat, auf welcher Seite sind sie?
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: code.org
+        - text: csisfun.com
+          correct: true
+        - text: thinkersmith.org
+        - text: khanacademy.org
       4-5 Songwriting Multi 1:
         title: Multiple-Choice
         questions:
@@ -453,6 +455,74 @@ de-DE:
         content1: hier die Beschreibung
       Begin planning your project_2018_2019:
         content1: hier die Beschreibung
+        markdown: |+
+          # Projektbeispiele
+
+          Du bist dabei, dein Abschlussprojekt zu starten. Bevor du anfängst, solltest du dir einige Zeit damit verbringen, dir die Beispielprojekte anzusehen.
+
+          | Hungriges Eichhörnchen | Alien Story |
+          |---|---|
+          | [![Hungriges Eichhörnchen (Play Lab)](https://images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG "Hungriges Eichhörnchen (Play Lab")](https://studio.code.org/projects/playlab/HN1zAX4Om6zdsxVsBBug9Y8mlzKSWUAXhjzRl-64YRs/view) | [![Alien Story (Play Lab)](https://images.code.org/0bd5ed3674ac9fe3304e27e68974c35f-image-1565115240833.PNG "Alien Story (Play Lab")](https://studio.code.org/projects/playlab/I_8rcKtpLFRAn8flROC15Oc-KnDu-bkKBnSORoIDs0o/view) |
+          | Versuche, diesem Spiel Klänge hinzuzufügen! | Versuche diese Geschichte um eine weitere Szene zu ergänzen! |
+
+      BigEvent-Unplugged:
+        markdown: |
+          # Das große Ereignis
+
+          In der Informatik sind Ereignisse Aktionen, die ein Computer überwacht. In dieser Lektion werden Sie je nachdem, welche Taste gedrückt wird, unterschiedlich reagieren.
+      BinaryBracelets-Unplugged:
+        markdown: |
+          # Binäre Armbänder
+
+          Erstelle ein Armband, das deinen Namen in einem System repräsentiert, das Computer verstehen!
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      BinaryImages-Unplugged:
+        markdown: |
+          # Binäre Bilder
+
+          Erfahre ein Bild mit nur zwei einfachen Werten darstellen zu können.
+      Building a UI with Design Mode:
+        markdown: |
+          # Willkommen im App Lab Design Mode
+          Im App Lab "Design Mode" kannst du Elemente der Benutzeroberfläche per Drag & Drop in die App ziehen.
+
+          ### Vokabular
+          ** Benutzeroberfläche (UI)** - Die "Benutzeroberfläche" oder **UI** einer App bezieht sich darauf, wie eine Person (Benutzer) mit dem Computer oder der App interagiert.  Es gibt gemeinsame Bausteine für Benutzeroberflächen, die du wahrscheinlich schon aus der Erfahrung mit anderen Programmen kennst:
+
+          * **UI Elemente** oder Objekte, wie Schaltflächen, Bilder, Textfelder, Pulldown-Menüs, Bildschirme und so weiter.
+          * **UI Events** oder Controls, wie *Klick*, *Scrollen*, *Maus bewegen*, *Tastaturtaste*, etc.
+
+          Mit App Lab kannst du ganz einfach UI-Elemente zu Ihrer App hinzufügen und dann Code hinzufügen, um zu reagieren, wenn ein Benutzer mit diesen Elementen interagiert.  Es ist eine Art zweistufiger Prozess, aber wir werden in dieser Lektion alles darüber erfahren.
+
+          Um damit zu beginnen, schauen wir uns einfach den Designmodus an und fügen ein einzelnes UI-Element (eine Schaltfläche) zu unserer App hinzu.  Wir werden den Code später hinzufügen.
+
+          <div style="column-count: 4; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 100%">
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
+          Du wirst einen neuen Satz von Schaltern oberhalb des App-Bereichs sehen, mit denen du zwischen "Design-Modus" und Code-Modus" hin- und herschalten kannst.</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>Ein Element hinzuzufügen ist so einfach wie das Ziehen und Ablegen in die App, wo immer du willst. Sobald es auf dem App-Bildschirm ist, kannst du es neu positionieren, seine Größe und viele andere Eigenschaften ändern </p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span>Die Registerkarte <em>Eigenschaften</em> zeigt Dir alles, was du über das Aussehen und die Handhabung eines UI-Elements ändern kannst.</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">4.</span>Die <strong>Element-ID</strong> ist wichtig, weil es darum geht, wie Sie auf das Element in Ihrem Code verweisen. Wir werden die Element-IDs später besprechen.</p>
+          </div>
+
+          ![](https://images.code.org/01a31ac3be66deb6d01a92a1edfffd21-image-1476726587662.png)
+
+
+          <div style="column-count: 2; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 66%; float: right">
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">5.</span>Du kannst den Text, den der Benutzer auf dem Button-Text sieht, beliebig gestalten.</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">6.</span><strong>Hinweis:</strong> Nach unten scrollen, um andere Eigenschaften für ein UI-Element zu sehen, die unten "versteckt" sein könnten.</p>
+          </div>
+
+          <div style="clear: both"></div>
+          <hr>
+
+          **Jetzt bist du an der Reihe!**
       CSD Header Size MC:
         answers:
         - {}
@@ -471,6 +541,63 @@ de-DE:
         - correct: true
         - {}
         - {}
+      CSD U1 Lesson 5 Overview:
+        markdown: |
+          # Übersicht
+
+          In dieser Lektion lernen Sie die verschiedenen Arten von Ein- und Ausgabegeräten, die von Computern verwendet werden, und die Arten von Informationen, die sie senden und empfangen.
+
+          ## Vokabular
+
+          * **Eingabe** - Eine Gerät oder eine Komponente, die es ermöglicht, Informationen an einen Computer weiterzugeben.
+          * **Ausgabe** - Ein Gerät oder eine Komponente, die Informationen von einem Computer empfängt.
+
+
+          ## Resourcen
+
+          * [Eingabe und Ausgabe - Aktivitätsleitfaden](https://docs.google.com/document/d/1ObS_kxkXoueaotPYFAEkcCDzn690zumqoLLnrU5kY2Q/export?format=pdf)
+      CSD U1 Lesson 6 Overview:
+        markdown: |
+          # Übersicht
+
+          In dieser Lektion lernen Sie, wie die Datenverarbeitung von Mensch und Computer angewandt wird, um Eingaben in Ausgaben umzuwandeln.
+
+          ## Vokabuar
+
+          * **Algorithmus** - Eine genaue Abfolge von Anweisungen für Prozesse, die von einem Computer ausgeführt werden können.
+
+          ## Resourcen
+
+          * [Kartensortierungsalgorithm - Aktivitätsleitfaden](https://docs.google.com/document/d/1o4kVRnXnigufkS9WsjHjeD38f8MQrX6qCEFpka-F9Oo/export?format=pdf)
+      CSD U1 Lesson 7 Overview:
+        markdown: |
+          # Übersicht
+
+          In dieser Lektion lernen Sie, welche Arten von Informationen Computer speichern können und wie wichtig der Speicher für die Verarbeitung von Informationen ist.
+
+          ## Resourcen
+
+          * [Speicherung und Verarbeitung - Aktivitätsleitfaden](https://docs.google.com/document/d/1I-OzbJizf7m5DK5jfRxDtSYtc_SoSk6vGtSM9tqlGw0/export?format=pdf)
+      CSD U1 Lesson 8 Overview:
+        markdown: |
+          # Übersicht
+
+          In dieser Lektion werden Sie untersuchen, wie Apps verschiedene Arten von Informationen verarbeiten, um Probleme zu lösen.
+
+          ## Resourcen
+
+          * [App Erkundung - Aktivitätsleitfaden](https://docs.google.com/document/d/1OW-fkwA7xeNZWiduWescL-6a6zFigtJVP7hfL1oNgVA/export?format=pdf)
+      CSD U1 Lesson 9 Overview:
+        markdown: |
+          # Übersicht
+
+          Für dieses Projekt entwerfen Sie Ihre eigene App, die ein Problem löst, das Sie definieren können.
+
+          ## Resourcen
+
+          * [Apps und Problemlösungen - Projektleitfaden](https://docs.google.com/document/d/1S7X-B2V1-WuT7ZLk1LAZRO1O5f4u7pgth4F7G00tGak/export?format=pdf)
+          * [Apps and Problem Solving - Peer Review](https://docs.google.com/document/d/13ekhJvtz1vovS6FhGBeDf1mcYFRyJe65bQdi8S8T9lU/export?format=pdf)
+          * [Apps and Problem Solving - Rubric](https://docs.google.com/document/d/1ix0LfgiVglwyC5Bb6PBlfBrnbeCOz2wPIPTgXu-qMZE/export?format=pdf)
       CSD U2 Design Project:
         title: Titel
         content1: hier die Beschreibung
@@ -480,6 +607,24 @@ de-DE:
       CSD U2 Design Project_2018_2019:
         title: Titel
         content1: hier die Beschreibung
+      CSD U2 Expression Exemplars:
+        markdown: |
+          # Persönliche Website-Beispiele
+
+          Klicke auf die untenstehenden Websites, um persönliche Websites zu besuchen, die andere Schüler erstellt haben.
+
+          <a href="https://codeprojects.org/SYRw7CQJzSmAErCEF-mMXQ" target="_blank"><img src="https://images.code.org/25b7284a4cd3d26f9b989a5c3bba6485-image-1493760609250.29.54 PM.png" style="width:200px;float:left"></a>
+
+          <a href="https://codeprojects.org/y6u1W372PZh2MfzxwHQBKA" target="_blank"><img src="https://images.code.org/5929f61d14370a72e2e3b77c1948d5ed-image-1493943243592.13.32 PM.png" style="width:200px;float:left"></a>
+      CSD U2 Expression Exemplars_2018:
+        markdown: |
+          # Persönliche Website-Beispiele
+
+          Klicke auf die untenstehenden Websites, um persönliche Websites zu besuchen, die andere Schüler erstellt haben.
+
+          <a href="https://codeprojects.org/SYRw7CQJzSmAErCEF-mMXQ" target="_blank"><img src="https://images.code.org/25b7284a4cd3d26f9b989a5c3bba6485-image-1493760609250.29.54 PM.png" style="width:200px;float:left"></a>
+
+          <a href="https://codeprojects.org/y6u1W372PZh2MfzxwHQBKA" target="_blank"><img src="https://images.code.org/5929f61d14370a72e2e3b77c1948d5ed-image-1493943243592.13.32 PM.png" style="width:200px;float:left"></a>
       CSD U2 L2 Overview:
         title: Titel
         content1: hier die Beschreibung
@@ -497,6 +642,32 @@ de-DE:
         content1: hier die Beschreibung
       CSD U2 Lesson 6 Overview:
         content1: hier die Beschreibung
+      CSD U2 Top Websites_2018:
+        markdown: |
+          # Top-Websites in den USA
+
+          Nachfolgend finden Sie einige der am häufigsten besuchten Websites in den Vereinigten Staaten. Jede enthält eine kurze Beschreibung der Kernfunktion der Website.
+
+
+          * Google.com - Suchmaschine für Websites, Bilder, Videos und andere Medien
+          * Youtube.com - Vom Benutzer eingereichte Videoseite mit Bewertungen und Kommentaren
+          * Facebook.com - Social Media Community, die es Nutzern ermöglicht, Informationen mit Freunden zu teilen
+          * Amazon.com - Online-Shopping-Seiten für alle Arten von Waren
+          * Yahoo.com - Eine Suchmaschine, ein E-Mail-Anbieter und eine Nachrichtenquelle
+          * Wikipedia.org - Eine kostenlose Enzyklopädie mit Inhalten, die von Nutzern erstellt wurden
+      CSD U2 Top Websites_2018_2019:
+        markdown: |
+          # Top-Websites in den USA
+
+          Nachfolgend finden Sie einige der am häufigsten besuchten Websites in den Vereinigten Staaten. Jede enthält eine kurze Beschreibung der Kernfunktion der Website.
+
+
+          * Google.com - Suchmaschine für Websites, Bilder, Videos und andere Medien
+          * Youtube.com - Vom Benutzer eingereichte Videoseite mit Bewertungen und Kommentaren
+          * Facebook.com - Social Media Community, die es Nutzern ermöglicht, Informationen mit Freunden zu teilen
+          * Amazon.com - Online-Shopping-Seiten für alle Arten von Waren
+          * Yahoo.com - Eine Suchmaschine, ein E-Mail-Anbieter und eine Nachrichtenquelle
+          * Wikipedia.org - Eine kostenlose Enzyklopädie mit Inhalten, die von Nutzern erstellt wurden
       CSD U2 expand project:
         title: Titel
         content1: hier die Beschreibung
@@ -507,12 +678,13 @@ de-DE:
         title: Titel
         content1: hier die Beschreibung
       CSD U2 image debug match:
+        content1: Ordne den fehlerhaften HTML-Code der Beschreibung des Fehlers zu.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Das `src`-Attribut ist falsch geschrieben.
+        - text: Die Attribute `src` und `alt` sind vertauscht
+        - text: Die Dateierweiterung (.jpg) fehlt in der Bildadresse
+        - text: Die Bildadresse wird nicht als `src`-Attribut angegeben
+        - text: Im Dateinamen ist ein Leerzeichen vorhanden
         answers:
         - {}
         - {}
@@ -559,11 +731,16 @@ de-DE:
         - {}
         - {}
       CSD U2 project guide:
+        title: Deine persönliche Webseite
         content1: hier die Beschreibung
       CSD U2 project guide_2018:
+        title: Deine persönliche Webseite
         content1: hier die Beschreibung
       CSD U2 project guide_2018_2019:
+        title: Deine persönliche Webseite
         content1: hier die Beschreibung
+      CSD U2L02 TFMD_2019:
+        markdown: "# Diese Umfrage befindet sich noch in der Entwicklung\n"
       CSD U3 - conditionals - Matching:
         questions:
         - {}
@@ -730,6 +907,17 @@ de-DE:
       CSD U3 combining rep:
         title: Titel
         content1: hier die Beschreibung
+        markdown: |+
+          ### Kannst du diese binäre Zeichenkette dekodieren?
+
+
+
+          # 1000011
+
+
+
+          ### Welche Informationen benötigst du, um sie zu entschlüsseln?
+
       CSD U3 combining rep_2018:
         title: Titel
         content1: hier die Beschreibung
@@ -770,6 +958,10 @@ de-DE:
         content1: hier die Beschreibung
       CSD U3 platform intro_2018_2019:
         content1: hier die Beschreibung
+      CSD U3L02 TFMD_2019:
+        markdown: "# Diese Umfrage befindet sich noch in der Entwicklung\n"
+      CSD U4L02 autoSFLP_2019:
+        markdown: "# Diese Umfrage befindet sich noch in der Entwicklung\n"
       CSD U5 Encryption 1:
         title: Titel
         content1: hier die Beschreibung
@@ -780,19 +972,25 @@ de-DE:
         title: Titel
         content1: hier die Beschreibung
       CSD U5 Encryption 2:
+        title: Dekodierung von binären Zeichenketten
         content1: hier die Beschreibung
       CSD U5 Encryption 2_2018:
+        title: Dekodierung von binären Zeichenketten
         content1: hier die Beschreibung
       CSD U5 Encryption 2_2018_2019:
+        title: Dekodierung von binären Zeichenketten
         content1: hier die Beschreibung
       CSD U5 L13 SFLP Interpreting Data:
         title: Titel
         content1: hier die Beschreibung
       CSD U5 crosstab warmup:
+        title: Pizza Umfrage
         content1: hier die Beschreibung
       CSD U5 crosstab warmup_2018:
+        title: Pizza Umfrage
         content1: hier die Beschreibung
       CSD U5 crosstab warmup_2018_2019:
+        title: Pizza Umfrage
         content1: hier die Beschreibung
       CSD U5 data visualization:
         title: Titel
@@ -812,6 +1010,8 @@ de-DE:
       CSD U5 student record_2018_2019:
         title: Titel
         content1: hier die Beschreibung
+      CSD U5L02 autoSFLP_2019:
+        markdown: "# Diese Umfrage befindet sich noch in der Entwicklung\n"
       CSD U6 LED create intro:
         content1: hier die Beschreibung
       CSD U6 LED create intro_2018:
@@ -864,6 +1064,18 @@ de-DE:
         - {}
         - correct: true
         - {}
+      CSD U6L02 TFMD_2019:
+        markdown: "# Diese Umfrage befindet sich noch in der Entwicklung\n"
+      ConditionalsWithCards-Unplugged:
+        markdown: |
+          # Bedingungen mit Karten
+
+          Spielen Sie ein Kartenspiel und erstellen Sie Regeln wie "Wenn ich eine rote Karte ziehe, bekomme ich einen Punkt" und "Wenn ich eine schwarze Karte ziehe, bekommst du einen Punkt"
+      Crowdsourcing-Unplugged:
+        markdown: |
+          # Crowdsourcing
+
+          Schaue wie Crowdsourcing, eine in der Informatik übliche Problemlösungstechnik, Dir helfen kann, eine Aufgabe gemeinsam als Schulklassen effizienter zu erledigen, als wenn du es allein tun müsstest.
       Dance_Party_extras_intro:
         markdown: |
           # Tanze weiter!
@@ -935,13 +1147,131 @@ de-DE:
           <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
 
           </div>
+      DesigningForAccessibilityMarkdownLevel_2019:
+        markdown: |
+          # Entwerfen für Barrierefreiheit
+
+          * In der Welt der Informatik geht es bei der **Barrierefreiheit** darum, Technologien für Menschen mit Behinderungen zu entwickeln.
+          * Behinderungen umfassen physische, auditive, visuelle und viele andere.
+          * Behinderungen sind vielfältig und beeinflussen Menschen auf unterschiedliche Weise, einschließlich der Art und Weise, wie sie Technologien wie **Smartphone Apps** nutzen.
+          * Das Entwerfen von Apps, die für Menschen mit Behinderungen zugänglich sind, macht diese Apps auch für alle anderen besser!
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+      DigitalCitizenship-Unplugged:
+        markdown: |
+          # Digitale Staatsbürgerschaft
+
+          Einige Informationen sind nicht sicher, um sie online weiterzugeben. Diese Lektion wird Dir helfen, den Unterschied zwischen sicheren und privaten Informationen zu erkennen.
+      DigitalFootprint-Unplugged:
+        markdown: |
+          # Dein digitaler Fußabdruck
+
+          Wenn du Informationen über dich selbst online stellst, entsteht ein digitaler Fußabdruck.
+      DigitalSharing-Unplugged:
+        markdown: |
+          # Digital Sharing
+
+          In dieser Lektion wirst du die Herausforderungen und Vorteile der Achtung von Eigentum und Urheberrecht, insbesondere in digitalen Umgebungen, betrachten.
+      EnvelopeVariables-Unplugged:
+        markdown: |
+          # Envelope Variablen
+
+          Variablen ermöglichen viel Freiheit in der Informatik. Diese Lektion hilft zu erklären, was Variablen sind und wie wir sie auf viele verschiedene Arten verwenden können.
+      Example App Types_2018:
+        markdown: |
+          # Beispiel App-Typen
+
+          In den folgenden Ebenen siehst du verschiedene Beispiel-Apps. Sie geben Dir eine Vorstellung davon, wie die Benutzeroberfläche (User Interface) für Apps mit unterschiedlichen Zielen aussehen könnte.
+
+          Für jede Beispiel-App:
+
+          * Klicke Dich durch das Beispiel, um ein Gefühl dafür zu bekommen, wie es funktioniert.
+          * Notiere Dir in deinem Aktivitätsleitfaden alle Features oder UI-Elemente, die du findest und wofür diese verwendet werden.
+          * Diskutiere mit deiner Gruppen, wie diese App und alle ihre UI-Funktionen auf das von Dir gewählte Thema angewendet werden können.
+
+          # Ein Hinweis zur Funktionalität
+
+          Diese Apps sind _Prototypen_; sie ermöglichen es einem Benutzer, mit dem Design zu interagieren, ohne sich um die zugrunde liegende Funktionalität zu kümmern. Wenn du beispielsweise die Quiz-App verwendest, wird jede Frage immer auf die gleiche Weise beantwortet, unabhängig davon, welche Antwort Sie wählen.
+
+          Indem du dich zunächst auf einen interaktiven Prototyp konzentrierst, kannst du viel darüber erfahren, wie Benutzer Deine App nutzen können, bevor du zu viel Energie investierst, diese tatsächlich ans Laufen zu bringen.
+      Example App Types_2018_2019:
+        markdown: |
+          # Beispiel App-Typen
+
+          In den folgenden Ebenen siehst du verschiedene Beispiel-Apps. Sie geben Dir eine Vorstellung davon, wie die Benutzeroberfläche (User Interface) für Apps mit unterschiedlichen Zielen aussehen könnte.
+
+          Für jede Beispiel-App:
+
+          * Klicke Dich durch das Beispiel, um ein Gefühl dafür zu bekommen, wie es funktioniert.
+          * Notiere Dir in deinem Aktivitätsleitfaden alle Features oder UI-Elemente, die du findest und wofür diese verwendet werden.
+          * Diskutiere mit deiner Gruppen, wie diese App und alle ihre UI-Funktionen auf das von Dir gewählte Thema angewendet werden können.
+
+          # Ein Hinweis zur Funktionalität
+
+          Diese Apps sind _Prototypen_; sie ermöglichen es einem Benutzer, mit dem Design zu interagieren, ohne sich um die zugrunde liegende Funktionalität zu kümmern. Wenn du beispielsweise die Quiz-App verwendest, wird jede Frage immer auf die gleiche Weise beantwortet, unabhängig davon, welche Antwort Sie wählen.
+
+          Indem du dich zunächst auf einen interaktiven Prototyp konzentrierst, kannst du viel darüber erfahren, wie Benutzer Deine App nutzen können, bevor du zu viel Energie investierst, diese tatsächlich ans Laufen zu bringen.
+      ForLoopFun-Unplugged:
+        markdown: |
+          # For Schleifen Spass
+
+          Wir wissen, dass Schleifen es uns ermöglichen, Dinge immer und immer wieder zu tun, aber jetzt werden wir lernen, wie man Schleifen mit zusätzlicher Struktur verwendet.
+      GettingLoopy-Unplugged:
+        markdown: |
+          # Getting Loopy
+
+          Diese Lektion führt in das Programmierkonzept von Schleifen durch eine Tanzaktivität ein.
+      GoingPlacesSafely-unplugged:
+        markdown: |
+          # Sicher an Orte gehen
+
+          Das Internet ist ein mächtiger, aber manchmal auch gefährlicher Ort. Bleiben Sie sicher, während Sie im Internet surfen!
+
+          <p align=center>center>
+      GraphPaperProgramming-Unplugged:
+        markdown: |
+          # Grafische Papierprogrammierung
+
+          Schreibe Algorithmen, mit denen Deine Mitschüler Bilder zeichnen können.
+      HappyLoops-Unplugged:
+        markdown: |
+          # Schleifen
+
+          In dieser Lektion lernen Sie mehr über Schleifen!
+
+          ![](https://images.code.org/6aac7f675f0c69033f42ccac6a733f68-image-1557769673400.png)
+      HappyMaps-Unplugged:
+        markdown: |
+          # Happy Maps
+
+          Erstellen Sie einen Algorithmus, um einen Charakter durch ein Labyrinth zu bewegen.
       Internet Simulator Setup:
+        title: Internet-Simulator Einstellungen
         content1: hier die Beschreibung
       Internet Simulator Setup 2:
         title: Titel
         content1: hier die Beschreibung
       Internet Simulator Setup 3:
+        title: Internet-Simulator Einstellungen 3
         content1: hier die Beschreibung
+        markdown: |
+          # Internet-Simulator: FAQ
+
+          #### Wo finde ich die Aktivitäten, die Sie für den Einsatz mit dem Internetsimulator entwickelt haben?
+          Die Aktivitäten, die wir für unseren Lehrplan der Computer Science Principles entwickelt haben, einschließlich der spezifischen Konfigurationen des Internetsimulators, finden Sie in den Unterrichtsplänen der Einheiten [here](https://code.org/educate/csp). Viele der Unterrichtspläne haben "Lehrer Tipps & Tricks" Unterstützungsvideos, die Demonstrationen des Internetsimulators zeigen, der als Teil der Unterrichtsaktivitäten verwendet wird. Du kannst diese Aktivitäten so verwenden, wie sie sind, oder du kannst sie gerne ändern, um sie am besten für deine Klasse anzupassen!
+
+          #### Kann ich den Internetsimulator für meine Klasse anpassen?
+          Im Moment haben wir leider keine Möglichkeit für Personen außerhalb von Code.org, spezifische Konfigurationen und Anweisungen für den Internetsimulator zu erstellen. Wir haben versucht, eine Vielzahl von verschiedenen Konfigurationen bereitzustellen, die hoffentlich für Ihr Schulklassen und Ihre Aktivität geeignet sind. Langfristig würden wir gerne eine Möglichkeit haben, das Tool von anderen konfigurieren zu lassen.
+
+          #### Meine Schüler können sich nicht sehen, wenn sie auf die URL gehen, die ich ihnen für den Internetsimulator gebe. Was soll ich tun?
+          Damit sich die Schüler in der Lobby des Internetsimulators sehen können, müssen sie sich im selben Abschnitt befinden. Vergewissern Sie sich noch einmal, dass Sie die Anweisungen zur Einrichtung des Abschnitts von der vorherigen Seite vollständig ausgefüllt haben und dass die betreffenden Schüler diesem spezifischen Abschnittscode beigetreten sind. Außerdem können einige Schüler in mehreren Abschnitten sein, wenn sie bereits mit Code.org gearbeitet haben, also stellen Sie sicher, dass sie den Namen Ihres Abschnitts kennen und ihn in der Dropdown-Liste ausgewählt haben, bevor sie die Lobby betreten.
+
+          <a class="btn btn-large btn-primary next-stage submitButton">Fortsetzen</a>
+      Internet-Unplugged:
+        markdown: |
+          # Das Internet
+
+          Baue Dein eigenes Internet im Klassenzimmer auf, nur mit Papier.
       K-1 Artist 1 Multi 1:
         title: Multiple-Choice
         questions:
@@ -1138,67 +1468,410 @@ de-DE:
         - text: SQUARE (QUADRAT)
           correct: true
         - text: SOUTH (SÜD)
+      MoveItMoveIt-Unplugged:
+        markdown: |
+          # Bewege etwas
+
+          Benutze eine Karte und gib Befehle ein, um das Ziel zu erreichen.
       Multi-Screen Apps:
         title: Titel
         content1: hier die Beschreibung
+      MyLoopyRoboticFriends-Unplugged:
+        markdown: |
+          # Meine Roboterfreunde (Schleifen)
+
+          Mache Dein Programme mit Schleifen kürzer!
+      MyRoboticFriends-Unplugged:
+        markdown: |
+          # Meine Roboterfreunde
+
+          Lerne zu programmieren, indem du Code für deine Freunde schreibst!
       New Challenge Introduction:
         title: Titel
         content1: hier die Beschreibung
+        markdown: "### Neue Herausforderung: Knacken Sie eine zufällige Substitutions-Verschlüsslung...mit
+          einem neuen Widget.\n\nWas wäre, wenn wir, anstatt das ganze Alphabet zu
+          verschieben, jeden Buchstaben des Alphabets auf einen anderen Buchstaben
+          des Alphabets abgebildet hätten? Dies wird als **zufällige Substitutions-Verschlüsslung**
+          bezeichnet.\n\n![](https://images.code.org/7837e7fef2f38659f4bf51a29b6dc4d3-image-1473863470440.gif)\n\nNun,
+          anstatt dass die geheime Nachricht mit einer einfachen alphabetischen Verschiebung
+          kodiert wird, wirst du Nachrichten sehen, die mit **zufälliger Substitutions-Verschlüsselung**
+          kodiert sind.  \n\n\n\nDies ist viel schwieriger zu knacken und erfordert
+          ein ausgefeilteres Werkzeug, also...\n\nWenn du auf Weiter klickst, siehst
+          du eine **neue, ausgefeiltere Version des Verschlüsselungstools**, die Dir
+          viele verschiedene Dinge zeigt.\n\nAber was es tut bleibt ein Rätsel!  \n\n####
+          Deine Aufgabe:\n\n * Finde heraus, was in dieser neuen Version des Tools
+          vor sich geht.\n * Welche Informationen werden Dir präsentiert?\n * Finde
+          heraus, was das Tool dir erlaubt.\n * Wie immer: Man kann es nicht brechen.
+          \ Also einfach herumklicken und ausprobieren.\n * Wenn du es herausfindest,
+          kannst du möglicherweise eine Nachricht knacken, die mit zufälliger Substitutions-Verschlüsselung
+          kodiert wurde.\n \n### Hinweis\n\n* Wussten Sie, dass **E** der gebräuchlichste
+          Brief im Englischen ist?\n\n### Rekapitulieren und diskutieren\n Nachdem
+          du einige Zeit damit gespielt hast, solltest du dich mit jemandem - Partner,
+          Kleingruppe, ganze Klasse - treffen, um zu besprechen, was du gefunden hast,
+          und dich vergewissern, dass du weißt, was los ist und wie du das Tool benutzen
+          kannst.\n\n\n"
       OPD-K5 Stage3aGo:
         title: Titel
         content1: hier die Beschreibung
+      'Overview: Design Mode':
+        markdown: |
+          # Willkommen im App Lab Design Mode
+          Im App Lab "Design Mode" kannst du Elemente der Benutzeroberfläche per Drag & Drop in die App ziehen.
+
+          ### Vokabular
+          * **Benutzeroberfläche (UI)** - Wie eine Person (Benutzer) mit dem Computer oder der App interagiert.
+          * **UI Elemente** oder Objekte, wie Schaltflächen, Bilder, Textfelder, Pulldown-Menüs, Bildschirme und so weiter.
+
+          ## Beispiel
+
+          <div style="column-count: 4; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 100%">
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
+          Sie werden einen neuen Satz von Schaltern oberhalb des App-Bereichs sehen, mit denen Sie zwischen "Design-Modus" und Code-Modus" hin- und herschalten können.</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>Ein Element hinzuzufügen ist so einfach wie das Ziehen und Ablegen in die App, wo immer Sie wollen. Sobald es auf dem App-Bildschirm ist, können Sie es neu positionieren, seine Größe ändern und viele andere Eigenschaften ändern </p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span>Die Registerkarte <em>Eigenschaften</em> zeigt Ihnen alles, was Sie über das Aussehen und die Handhabung eines UI-Elements ändern können.</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">4.</span>Die <strong>Element-ID</strong> ist wichtig, weil es darum geht, wie Sie auf das Element in Ihrem Code verweisen. Wir werden die Element-IDs später besprechen.</p>
+          </div>
+
+          ![](https://images.code.org/01a31ac3be66deb6d01a92a1edfffd21-image-1476726587662.png)
+
+
+          <div style="column-count: 2; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 66%; float: right">
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">5.</span>Sie können den Text, den der Benutzer auf dem Button-Text sieht, beliebig gestalten.</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">6.</span><strong>Hinweis:</strong> Nach unten scrollen, um andere Eigenschaften für ein UI-Element zu sehen, das unten "versteckt" sein könnte.</p>
+          </div>
+
+          <div style="clear: both"></div>
+          <hr>
+
+          **Versuche du es nun!**
+      'Overview: If Statements':
+        markdown: |+
+          # Wenn-Anweisung
+
+          ## Wie funktionieren Wenn-Anweisungen?
+
+          <img src="https://images.code.org/361556bbff61bf91e2c737f745582dff-image-1479418505481.png" style="float: right; margin-left: 20px; margin-right: 20px">
+
+          Wenn-Anweisungen erlauben Dir, *eine Entscheidung zu treffen, welche Codezeilen als nächstes ausgeführt werden sollen.*
+
+          Rechts befindet sich ein Diagramm, das die Elemente einer grundlegenden `if`-Anweisung in JavaScript zeigt.
+
+          Es gibt zwei grundlegende Teile einer Wenn-Anweisung.
+
+          1. Eine auszuwertende Bedingung (Ein boolescher Ausdruck, der **true** oder **false** annehmen kann).
+          2. Code, der laufen sollte *wenn* der Ausdruck wahr (true) war - eingeschlossen in geschweiften Klammern.
+
+          ## Ein funktionierendes Beispiel
+          <img src="https://images.code.org/ca716e009ddb8dc397eb5a651a1ac2d7-image-1479420772852.png" style="display: block; margin: auto; float: right">
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 150%;">1.</span>
+          Das Programm führt Zeile für Zeile aus, wie du es erwarten würdest. Es wird eine Meldung angezeigt und der Benutzer wird aufgefordert, eine Nummer einzugeben.  Was auch immer der Benutzer eingegeben hat wird in der Variable <code>age</code> gespeichert. Anschließend geht es mit der nächsten Zeile weiter...
+          </p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 150%;">2.</span>
+          Wenn die Programmausführung an der <code>if</code> Anweisung angekommen ist, ist die <em>erste</em> Sache, die sie passiert, die Bedingung in den Klammern auszuwerten. Es wird überprüft, ob an dieser Stelle im Programm der Wert in der Variablen <code>age</code> größer oder gleich 18 ist.  Wenn das der Fall ist, sagen wir den Ausdruck "<strong>gibt true zurück</strong>".  Andernfalls wird false zurückgegeben.
+          </p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 150%;">3.</span>
+          Die console.log-Anweisungen werden <em>nur</em> ausgeführt, wenn der Ausdruck wahr ist. Die geschweiften Klammern umgeben den gesamten Code, der ausgeführt werden soll, wenn, und nur wenn, der Ausdruck wahr war.  Andernfalls wird der gesamte Abschnitt des Codes, der in der if-Anweisung eingeschlossen (gekapselt) ist, <em>übersprungen</em>.
+          </p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 150%;">4.</span>
+          Die Ausführung setzt anschließend an der ersten Zeile nach der abschließenden geschweiften Klammer der if-Anweisung fort.  Diese Zeile wird <em>immer</em> ausgeführt, aber beachte, dass, wenn der Benutzer ein Alter von weniger als 18 Jahren angegeben hat, die gesamte if-Anweisung übersprungen wird. Es würde nur "Danke für die Überprüfung" sagen.  (Wir werden diese Unannehmlichkeiten bald beheben).
+
+          </p>
+
+          <div style="clear: both">&nbsp;</div>
+
+
+      'Overview: Images':
+        markdown: "# Bilder\n\n## Geben Sie eine URL eines Bildes im Web ein.\n\n<img
+          src=\"https://images.code.org/acf4542eda586e7b73bc27dd8746848c-image-1477675154724.png\"
+          style=\"width: 250px; float: right\">\n\nEs gibt mehrere Möglichkeiten,
+          die URL eines Bildes zu erhalten.  \n\nEine gängige Technik (rechts dargestellt)
+          ist es, ein Bild zu finden, das Dir auf einer Webseite gefällt. Wenn du
+          ein Bild gefunden hast kannst du mit der rechten Maustaste auf das Bild
+          klicken (oder Strg-Klick) und dann die Option \"Bildadresse kopieren\" (oder
+          ähnlich)  auswählen. Anschließend kannst du das Bild in das Textfeld im
+          App Labor einfügen.\n\nWenn Sie unsicher sind, können Sie auch eine Option
+          wie \"Bild in neuem Tab öffnen\" wählen, die das Bild selbst isoliert und
+          die URL wird in der Adressleiste angezeigt, die Sie in App Lab kopieren/einfügen
+          können.\n\n**Gemeinsamer Fehler**: Verwendung der URL einer *Bildsuch-Website*
+          anstelle einer URL des Bildes selbst.\n\n* Stellen Sie sicher, dass Sie
+          den Pfad zu einer aktuellen Bilddatei erhalten - etwas, das mit **.jpg**,
+          **.gif** oder **.png** endet.\n* Eine URL, die so beginnt: `https://www.google.com/search?q=cat&espv=2&biw=1497....`
+          ist wahrscheinlich falsch.\n\n\n## Laden Sie Ihre eigenen Bilder hoch.\n\nWenn
+          Sie Bilder auf Ihrem Computer gespeichert haben, können Sie diese in den
+          **asset manager** von app lab hochladen.  Klicken Sie einfach auf Datei
+          hochladen** und folgen Sie den Dialogen auf dem Bildschirm.\n\nFür Bilder
+          muss die Datei vom Typ sein: **.jpg**, **.png**, oder **.gif**.\n\nSobald
+          Sie das Bild hochgeladen haben, müssen Sie es **Wählen**, um das Bild auf
+          diese Datei einzustellen. Wenn Sie mehrere Bilder hinzufügen, werden diese
+          bei jedem Hochladen einer Datei aufgelistet und Sie können *jede* Datei
+          verwenden, die Sie bereits hochgeladen haben.\n\n![](https://images.code.org/d64d7e3dadc882897e450b00a0fc6cb2-image-1476896824985.gif)\n\n###
+          Klicken Sie auf Weiter, um es auszuprobieren!\n\n\n"
+      'Overview: onEvent':
+        markdown: |
+          # Reaktion auf Benutzereingaben
+
+          Sie müssen in den Code-Modus wechseln, damit du auf Benutzereingaben reagieren kannst. Das App Labor wartet darauf, auf bestimmte **Ereignisse** (Events) zu reagieren, die in einem Programm auftreten. Im `onEvent` Baustein kann angegeben werden, auf welches Oberflächenelement sich das Ereignis beziehen soll.
+
+          ## OnEvent
+
+          <br><br>
+
+          <div style="column-count: 4; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 4; width: 100%">
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">
+          Wechsele in den Code-Modus</p>.
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">
+          Ziehe einen <code>onEvent</code> Baustein aus der Toolbox in den Arbeitsbereich.</p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">
+          Verwende das Pulldown-Menü, um die <em>ID</em> des Oberflächenelements auszuwählen, das du einrichten möchtest, um auf ein Ereignis zu reagieren. Die IDs aller im Designmodus hinzugefügten UI-Elemente werden hier aufgelistet.</p>
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">
+          Verwende das Pulldown-Menü, um den <em>Type</em> des Ereignisses auszuwählen, auf das du reagieren möchtest. (Benutze zunächst nur "click").</p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">
+          Fügen dann Code innerhalb der Funktion hinzu, den du ausführen möchtest <em>wenn</em> der Benutzer das Ereignis auslöst.  Die Funktion wird einmalig ausgeführt, wenn der Benutzer das entsprechende Ereignis auslöst.
+
+          </div>
+
+          ![](https://images.code.org/9b506faaaadf61338dc738a4eafb66b2-image-1476740205599.png)
+      'Overview: setPosition':
+        markdown: "# setPosition und Bildschirmabmessungen einstellen\n\nMit dem Befehl
+          `setPosition` kannst du Oberflächenelemente an eine beliebige Position auf
+          dem Bildschirm verschieben.\n\n<img src=\"https://images.code.org/ee55080bb341528ca7e8ebc79f9f978b-image-1490369263385.27.12
+          AM.png\" style=\"display: block; margin: auto\">\n\nDu musst (vielleicht
+          offensichtlich) tatsächliche Zahlen in diese Parameter von \"setPosition\"
+          eingeben, damit es irgendeine Effekt hat.  Die Zahlen für die setPosition
+          **x und y Koordinaten des Bildschirms**.\n\n**Hinweise:**\n\n* 0,0 ist die
+          linke obere Ecke.\n* Gib, ausgehend von der linken oberen Ecke, eine Position
+          an um die es sich handelt.  \n* Der Bildschirm ist **320 x 450 Pixel**.
+          \ \n* Du kannst mit der Maus **über den Bildschirm** fahren, um die x,y-Koordinate
+          eines beliebigen Punktes zu sehen.\n\n<div style=\"width: 100%; text-align:
+          center\">\n<img src=\"https://images.code.org/8b346602d75f2877c64e1793b6a04302-image-1476889124747.png\">\n\n<img
+          src=\"https://images.code.org/fc7e830fa2ea994b885c76618b484dfa-image-1476889137756.gif\">\n</div>\n"
+      PicturingData-Unplugged:
+        markdown: |
+          # Daten darstellen
+
+          Verwende ein Play Lab-Projekt, um Daten zu sammeln und Vorhersagen zu treffen.
+
+          ![](https://images.code.org/606a78c09a01133a1bbc1aa9c76f3320-image-1557334268558.png)
+      PowerOfWords-Unplugged:
+        markdown: |
+          # Die Macht der Worte
+
+          Heute wirst du lernen, was zu tun ist, wenn jemand online gemein ist.
+      PowerfulPasswords-Unplugged:
+        markdown: |
+          # Starke Passwörter
+
+          Erfahre, warum Menschen Passwörter verwenden. Lerne die Vorteile zur Verwendung von Passwörtern kennen und entdecke Strategien zur Erstellung und Aufbewahrung starker und sicherer Passwörter.
+
+          ![](https://images.code.org/9e082a5564a289bccc8e2dd79a2cae9f-image-1557869939256.png)
       Prepare for your presentation:
         title: Titel
         content1: hier die Beschreibung
+      PrivatePersonalInformation-Unplugged:
+        markdown: |
+          # Private und persönliche Daten
+
+          Entwickelt von Common Sense Education, geht es in dieser Lektion um den Unterschied zwischen Informationen, die sicher online ausgetauscht werden können, und Informationen, die dies nicht sind.
+
+          ![](https://images.code.org/872576b170b9d8aec9b29f684a1ad94e-image-1557878406833.png)
+      RelayProgramming-Unplugged:
+        markdown: |
+          # Relais-Programmierung
+
+          Teilt euch in Teams auf und arbeitet zusammen, um Programme zu schreiben, die Bilder zeichnen.
+      ScreenOutTheMean-Unplugged:
+        markdown: |
+          # Screen Out the Mean #
+
+          Heute wirst du lernen, was zu tun ist, wenn jemand online gemein zu Dir ist.
+      SimonSays-Unplugged:
+        markdown: |
+          # Simon Says
+
+          Spiele ein Spiel und überlege, welche Befehle benötigt werden, um das richtige Ergebnis zu erzielen.
+      Songwriting-Unplugged:
+        markdown: |
+          # Songwriting
+
+          Verwende das Konzept des Refrains in einem Lied, um mehr über die Definition und den Aufruf von Funktionen zu erfahren.
       'Technique: Frequency Analysis':
+        title: Wie man eine Substitutions-Verschlüsselung knackt
         content1: hier die Beschreibung
+        markdown: "# Substitutions-Verschlüsselungen knacken\n\nDie beste Technik
+          zum Knacken einer zufälligen Substitutions-Verschlüsselung ist bekannt als
+          **Frequenzanalyse**. \n\nParaphrasiert von: [wikipedia](https://en.wikipedia.org/wiki/Frequency_analysis)\n\n*
+          **Frequenzanalyse** ist eine Technik, die darauf basiert, wie *häufig* bestimmte
+          Buchstaben in einer Sprache im Vergleich zu anderen erscheinen.\n* Zum Beispiel,
+          wenn man einen Abschnitt des englischen Textes betrachtet, sind *E*, *T*,
+          *A* und *O* die häufigsten, während *Z*, *Q* und *X* selten sind. Ebenso
+          sind *TH*, *ER*, *ON* und *AN* die häufigsten Buchstabenpaare, die nebeneinander
+          vorkommen.\n* Tatsächlich ist die Verteilung der Buchstaben für fast alle
+          Muster des englischen Textes ungefähr gleich. \n\n\nDie Version des Widgets
+          auf der vorherigen Seite soll Dir helfen, **eine Substitutions-Verschlüsselung
+          durch Frequenzanalyse zu knacken**.\n\nIndem du die Häufigkeit der Buchstaben
+          in der verschlüsselten Nachricht im Vergleich zur Häufigkeit der Buchstaben
+          in einem typischen Stück englischer Prosa analysierst, kannst du beginnen,
+          dich darauf zu beschränken, was einige der Buchstabenzuordnungen sein könnten.
+          \n\nDas Tool zeigt Dir, wie sich die Häufigkeit der Buchstaben im verschlüsselten
+          Text (orange) mit der Häufigkeit aus dem typischen Englisch (blau) vergleicht.\n\n###
+          Tipp: Wo soll man anfangen?\n\n1. Finde die kurzen Wörter und \"knacke\"
+          diese zuerst.  Wie viele Wörter mit einem Buchstaben kennst du? (\"a\").
+          \ Ein sehr häufiges Wort mit 3 Buchstaben ist \"the\".\n2. Sobald du das
+          getan hast, hast du Substitionen für einige der häufigsten Buchstaben.  Du
+          solltest in der Lage sein deine Intuition zu nutzen, um mit diesen Teilunterstützungen
+          andere Wörter zu erraten.\n3. Nachdem man nur eine Handvoll hart umkämpfter
+          Buchstaben gefunden hat, wird der Rest einfach.\n4. Der Vergleich der Häufigkeiten
+          von Buchstaben gibt einen guten Einblick, um vernünftige Vermutungen zu
+          treffen.\n\n### Probier das mal:\nDie Animation unten zeigt, wie jemand
+          loslegt.  Hier ist, was sie versucht haben\n\n* Sortiere die Zeichen zunächst
+          nach Häufigkeit. \n* Identifiziere eine Gruppe von Zeichen, die dem Wort
+          \"the\" zugeordnet werden können.  \nDas ist ein guter Anfang!\n\n![](https://images.code.org/4c188dfb0b284810845285b83ce5bcd4-image-1473787694329.gif)\n\n##
+          Ist die zufällige Ersetzung gut?\n* Wie lange dauert es nach ein wenig Übung,
+          bis du eine zufällige Substitutions-Verschlüsselung knacken kannst?\n* Ist
+          das gut oder nicht?\n\n\n"
       Terminology Recap:
+        title: Das war einfach. Was als nächstes?
         content1: hier die Beschreibung
+        markdown: "# Pause und Rekapitulation\n\nNachrichten, die mit der **Caesar-Verschlüsselung**
+          verschlüsselt sind, sind sehr leicht zu knacken, insbesondere mit einem
+          Rechenprogramm. Nun, da du ein wenig Übung hattest, eine alphabetische Verschiebungs-Verschlüsselung
+          zu knacken (ziemlich einfach, oder?), lass uns etwas Schwierigeres versuchen.\n\n**Terminologie:***\n\n*
+          **Verschlüsselung** - ein Prozess zur Verschlüsselung von Nachrichten, um
+          sie geheim zu halten, so dass nur \"autorisierte\" Parteien sie lesen können.\n*
+          **Entschlüsselung** - ein Prozess, der die Verschlüsselung umkehrt, eine
+          geheime Nachricht entgegennimmt und den ursprünglichen Klartext wiedergibt.\n*
+          **Chiffre** - der Oberbegriff für eine Technik (oder einen Algorithmus),
+          die eine Verschlüsselung durchführt.\n* **Caesar's Cipher** (hier auch Caesar
+          Verschlüsselung genannt) - eine Verschlüsselungstechnik, die das Alphabet
+          um eine bestimmte Anzahl von Zeichen verschiebt.\n* **Knacken der Verschlüsselung**
+          - Wenn Sie versuchen, eine geheime Nachricht zu entschlüsseln, *ohne* alle
+          Besonderheiten der Verschlüsselung zu kennen, versuchen Sie, die Verschlüsselung
+          zu **knacken** (englisch: to crack).\n\n\nKlicken Sie auf Weiter, um die
+          **Nächste Herausforderung** zu sehen...\n\n \n"
+      TheRightAppMarkdownLevel_2019:
+        markdown: "# Die richtige App\n\n* Jeder benutzt heutzutage Computer, insbesondere
+          Smartphones. \n* Smartphone-Apps helfen Menschen, Dinge zu tun, wie mit
+          Freunden zu reden, Musik zu hören, einzukaufen oder einfach nur im Internet
+          zu surfen.\n* Es ist wichtig für Programmierer, die Bedürfnisse anderer
+          zu verstehen und Anwendungen mit Blick auf sie zu entwickeln!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)\n"
+      Unit 1 Lesson 2 Overview:
+        markdown: |
+          # Übersicht
+
+          In dieser Lektion lernen Sie einen formalen Problemlösungsprozess, der Ihnen hilft, Ihren Ansatz für eine Vielzahl von Problemen zu strukturieren.
+
+
+          ## Resourcen
+
+          * [Problemlösungsprozess - Aktivitätsleitfaden](https://docs.google.com/document/d/1xEPMYIDy70fWCgyLymBNmxkE-6uJ7BYOXSmV8Vyt-SQ/export?format=pdf)
+      Unit 1 Lesson 3 Overview:
+        markdown: |
+          # Übersicht
+          In dieser Lektion wenden Sie den Problemlösungsprozess auf eine Vielzahl von Problemen an, um zu untersuchen, wie jeder Schritt Ihnen hilft, Problemlösungen zu entwickeln und zu verbessern.
+
+          ## Resourcen
+          * [Problemlösung - Aktivitätsleitfaden](https://docs.google.com/document/d/1cym5lMuy41CbvXYe7F57N2XfI6Afp0hJsHovhR0GD2M/export?format=pdf)
+      Unit 1 Lesson 4 Overview:
+        markdown: |
+          # Übersicht
+
+          In dieser Lektion werden Sie anfangen darüber nachzudenken, wie Computer helfen, bestimmte Arten von Problemen zu lösen und die wichtigsten Funktionen jedes Computers zu erlernen.
+
+          ## Resourcen
+
+          * [What is a Computer - Activity Guide](https://docs.google.com/document/d/1g4dPcsx2xADEZI0FiMYApLr0hh3_-89NDWd2y86sS6I/export?format=pdf)
+      Unit 1 Lesson 6 Overview:
+        markdown: |
+          # Problemlösung - Computer und Logik: Lektion 6 - Verarbeitung von Bits
+
+          ## Hintergrund
+
+          In dieser Lektion lernst du, wie Computer binäre Informationen verarbeiten, während du Bit-Level-Filter für einfache Bilder entwirfst.
+
+          # Ressourcen
+
+          * [Pixel Filtering](https://docs.google.com/document/d/1R92qKHBC8Bz3P3YXVSziyfpijJ0gMYob2j5RncWdWsA/edit?usp=sharing) - Activity Guide ([PDF](https://docs.google.com/document/d/1R92qKHBC8Bz3P3YXVSziyfpijJ0gMYob2j5RncWdWsA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1R92qKHBC8Bz3P3YXVSziyfpijJ0gMYob2j5RncWdWsA/export?format=doc))
       behaviors 1 predict:
         questions:
-        - {}
+        - text: Klicken Sie auf die Schaltfläche "Bearbeiten", um zu sehen, wie das
+            `Mystery-Verhalten` funktioniert. Studiere den Code im Inneren und mache
+            dann eine Vorhersage.
         answers:
-        - {}
-        - correct: true
+        - text: Das Sprite wird sich drehen
+        - text: Das Sprite wird schrumpfen.
+          correct: true
           feedback: Richtig!
-        - {}
-        - feedback: Falsch
+        - text: Das Sprite wird sich bewegen.
+        - text: Das Sprite wird seine Farbe verändern.
+          feedback: Falsch
       behaviors 4 predict:
         questions:
-        - {}
+        - text: Machen Sie eine Vorhersage. In welche Richtung wird sich der Satellit
+            in Richtung Galaxie bewegen?
         answers:
-        - {}
-        - correct: true
+        - text: Links dann nach unten
+        - text: Diagonal
+          correct: true
           feedback: Richtig!
-        - {}
-        - feedback: Falsch
+        - text: Zickzack
+          feedback: 'Falsch. '
+        - text: Runter, dann nach links
+          feedback: Falsch
       courseC_multi_artist_prog6_predict1:
         questions:
-        - {}
+        - text: Schau dir den Code unten genau an. Was passiert, wenn du auf "Ausführen"
+            klickst?
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: Der Künstler will ein Dreieck mit drei gleichen Seiten zeichnen.
+          feedback: Falsch. Der Künstler zeichnet ein Quadrat.
+        - text: Der Künstler wird eine einzelne Linie zeichnen.
+          feedback: Falsch. Der Künstler zeichnet ein Quadrat.
+        - text: Der Künstler zeichnet ein Quadrat.
+          correct: true
           feedback: Richtig!
         - text: Ich weiß es nicht.
+          feedback: Der Künstler zeichnet ein Quadrat.
       courseC_multi_artist_prog6_predict1_2018:
         questions:
-        - {}
+        - text: Schau dir den Code unten genau an. Was passiert, wenn du auf "Ausführen"
+            klickst?
         answers:
-        - {}
-        - {}
+        - text: Der Künstler will ein Dreieck mit drei gleichen Seiten zeichnen.
+          feedback: Falsch. Der Künstler zeichnet ein Quadrat.
+        - text: Der Künstler wird eine einzelne Linie zeichnen.
+          feedback: Falsch. Der Künstler zeichnet ein Quadrat.
         - correct: true
           feedback: Richtig!
         - text: Ich weiß es nicht.
+          feedback: Der Künstler zeichnet ein Quadrat.
       courseC_multi_artist_prog6_predict1_2018_2019:
         questions:
-        - {}
+        - text: Schau dir den Code unten genau an. Was passiert, wenn du auf "Ausführen"
+            klickst?
         answers:
-        - {}
-        - {}
+        - text: Der Künstler will ein Dreieck mit drei gleichen Seiten zeichnen.
+          feedback: Falsch. Der Künstler zeichnet ein Quadrat.
+        - text: Der Künstler wird eine einzelne Linie zeichnen.
+          feedback: Falsch. Der Künstler zeichnet ein Quadrat.
         - correct: true
           feedback: Richtig!
         - text: Ich weiß es nicht.
+          feedback: Der Künstler zeichnet ein Quadrat.
       courseC_multi_harvester_loops11_predict1:
         questions:
         - {}
@@ -1327,58 +2000,142 @@ de-DE:
           feedback: Dieser Code bringt den Vogel genau zum Schwein.
       courseC_multi_starWars_predict1:
         questions:
-        - {}
+        - text: Was glaubst du wird geschehen, wenn du auf "Ausführen" klickst?
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: BB-8 wird sich nicht bewegen.
+          feedback: Falsch. Wegen dem Wiederholen Block wird sich BB-8 fünf mal vorwärts
+            bewegen.
+        - text: BB-8 wird sich nur ein Feld vorwärts bewegen.
+          feedback: Falsch. Wegen dem Wiederholen Block wird sich BB-8 fünf mal vorwärts
+            bewegen.
+        - text: BB-8 wird sich 5 mal vorwärts bewegen und den ganzen Metallschrott
+            aufsammeln.
+          correct: true
           feedback: Richtig!
         - text: Ich weiß nicht
+          feedback: Durch den Wiederholen Block wird BB-8 sich 5 mal vorwärts bewegen.
       courseC_multi_starWars_predict1_2018:
         questions:
-        - {}
+        - text: Was glaubst du wird geschehen, wenn du auf "Ausführen" klickst?
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: BB-8 wird sich nicht bewegen.
+          feedback: Falsch. Wegen dem Wiederholen Block wird sich BB-8 fünf mal vorwärts
+            bewegen.
+        - text: BB-8 wird sich nur ein Feld vorwärts bewegen.
+          feedback: Falsch. Wegen dem Wiederholen Block wird sich BB-8 fünf mal vorwärts
+            bewegen.
+        - text: BB-8 wird sich 5 mal vorwärts bewegen und den ganzen Metallschrott
+            aufsammeln.
+          correct: true
           feedback: Richtig!
         - text: Ich weiß nicht
+          feedback: Durch den Wiederholen Block wird BB-8 sich 5 mal vorwärts bewegen.
       courseC_multi_starWars_predict1_2018_2019:
         questions:
-        - {}
+        - text: Was glaubst du wird geschehen, wenn du auf "Ausführen" klickst?
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: BB-8 wird sich nicht bewegen.
+          feedback: Falsch. Wegen dem Wiederholen Block wird sich BB-8 fünf mal vorwärts
+            bewegen.
+        - text: BB-8 wird sich nur ein Feld vorwärts bewegen.
+          feedback: Falsch. Wegen dem Wiederholen Block wird sich BB-8 fünf mal vorwärts
+            bewegen.
+        - text: BB-8 wird sich 5 mal vorwärts bewegen und den ganzen Metallschrott
+            aufsammeln.
+          correct: true
           feedback: Richtig!
         - text: Ich weiß nicht
+          feedback: Durch den Wiederholen Block wird BB-8 sich 5 mal vorwärts bewegen.
       courseC_multi_starWars_predict2:
         questions:
-        - {}
+        - text: Schau dir den Code unten genau an. Was passiert, wenn du auf "Ausführen"
+            klickst?
         answers:
-        - {}
-        - correct: true
+        - text: BB-8 wird mit der ersten Schleife zu weit fahren.
+          feedback: Falsch. Die erste Schleife bewegt BB-8 nur 2 Felder vorwärts,
+            obwohl er 3 Felder vorwärts fahren müsste.
+        - text: BB-8 wird mit der ersten Schleife nicht weit genug fahren um den ganzen
+            Metallschrott einzusammeln.
+          correct: true
           feedback: Richtig!
-        - {}
+        - text: BB-8 sammelt ohne Probleme den ganzen Metallschrott ein.
+          feedback: Falsch. Die erste Schleife bewegt BB-8 nur 2 Felder vorwärts,
+            obwohl er 3 Felder vorwärts fahren müsste.
         - text: Ich weiß es nicht.
+          feedback: Die erste Schleife bewegt BB-8 nur 2 Felder vorwärts, obwohl er
+            3 Felder vorwärts fahren müsste.
       courseC_multi_starWars_predict2_2018:
         questions:
-        - {}
+        - text: Schau dir den Code unten genau an. Was passiert, wenn du auf "Ausführen"
+            klickst?
         answers:
-        - {}
-        - correct: true
+        - text: BB-8 wird mit der ersten Schleife zu weit fahren.
+          feedback: Falsch. Die erste Schleife bewegt BB-8 nur 2 Felder vorwärts,
+            obwohl er 3 Felder vorwärts fahren müsste.
+        - text: BB-8 wird mit der ersten Schleife nicht weit genug fahren um den ganzen
+            Metallschrott einzusammeln.
+          correct: true
           feedback: Richtig!
-        - {}
+        - text: BB-8 sammelt ohne Probleme den ganzen Metallschrott ein.
+          feedback: Falsch. Die erste Schleife bewegt BB-8 nur 2 Felder vorwärts,
+            obwohl er 3 Felder vorwärts fahren müsste.
         - text: Ich weiß es nicht.
+          feedback: Die erste Schleife bewegt BB-8 nur 2 Felder vorwärts, obwohl er
+            3 Felder vorwärts fahren müsste.
       courseC_multi_starWars_predict2_2018_2019:
         questions:
-        - {}
+        - text: Schau dir den Code unten genau an. Was passiert, wenn du auf "Ausführen"
+            klickst?
         answers:
-        - {}
-        - correct: true
+        - text: BB-8 wird mit der ersten Schleife zu weit fahren.
+          feedback: Falsch. Die erste Schleife bewegt BB-8 nur 2 Felder vorwärts,
+            obwohl er 3 Felder vorwärts fahren müsste.
+        - text: BB-8 wird mit der ersten Schleife nicht weit genug fahren um den ganzen
+            Metallschrott einzusammeln.
+          correct: true
           feedback: Richtig!
-        - {}
+        - text: BB-8 sammelt ohne Probleme den ganzen Metallschrott ein.
+          feedback: Falsch. Die erste Schleife bewegt BB-8 nur 2 Felder vorwärts,
+            obwohl er 3 Felder vorwärts fahren müsste.
         - text: Ich weiß es nicht.
+          feedback: Die erste Schleife bewegt BB-8 nur 2 Felder vorwärts, obwohl er
+            3 Felder vorwärts fahren müsste.
+      courseD_external_binary1:
+        markdown: "<h1>Zeichnen mit Binär</h1>\n \n<h3>Binär ist eine Möglichkeit,
+          Informationen mit nur zwei Optionen darzustellen. In diesem Fall <b>aus</b>
+          und <b>ein</b>.\n<br/>\nHier werden wir die Zahl <b>0</b> als Code für \"off\"
+          und die Zahl <b>1</b> als Code für \"on\" verwenden.\n<br/>\n<table>\n<tr><td><img
+          src=\"https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png\"
+          width=\"75px\"/></td><td><img src=\"https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png\"
+          width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td
+          align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\"
+          float=\"left\"/><h3>In diesem Ebene haben wir Dir ein Raster von \"Pixeln\"
+          zur Verfügung gestellt, durch das du gehen und Designs erstellen kannst,
+          indem du bestimmte Felder einschaltest!</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n"
+      courseD_external_binary1_2018:
+        markdown: "<h1>Zeichnen mit Binär</h1>\n \n<h3>Binär ist eine Möglichkeit,
+          Informationen mit nur zwei Optionen darzustellen. In diesem Fall <b>aus</b>
+          und <b>ein</b>.\n<br/>\nHier werden wir die Zahl <b>0</b> als Code für \"off\"
+          und die Zahl <b>1</b> als Code für \"on\" verwenden.\n<br/>\n<table>\n<tr><td><img
+          src=\"https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png\"
+          width=\"75px\"/></td><td><img src=\"https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png\"
+          width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td
+          align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\"
+          float=\"left\"/><h3>In diesem Ebene haben wir Dir ein Raster von \"Pixeln\"
+          zur Verfügung gestellt, durch das du gehen und Designs erstellen kannst,
+          indem du bestimmte Felder einschaltest!</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n"
+      courseD_external_binary1_2018_2019:
+        markdown: "<h1>Zeichnen mit Binär</h1>\n \n<h3>Binär ist eine Möglichkeit,
+          Informationen mit nur zwei Optionen darzustellen. In diesem Fall <b>aus</b>
+          und <b>ein</b>.\n<br/>\nHier werden wir die Zahl <b>0</b> als Code für \"off\"
+          und die Zahl <b>1</b> als Code für \"on\" verwenden.\n<br/>\n<table>\n<tr><td><img
+          src=\"https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png\"
+          width=\"75px\"/></td><td><img src=\"https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png\"
+          width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td
+          align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\"
+          float=\"left\"/><h3>In diesem Ebene haben wir Dir ein Raster von \"Pixeln\"
+          zur Verfügung gestellt, durch das du gehen und Designs erstellen kannst,
+          indem du bestimmte Felder einschaltest!</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n"
       courseD_multi_artist_binary8_predict1:
         questions:
         - {}
@@ -1486,7 +2243,9 @@ de-DE:
         - text: Ich weiß es nicht.
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         questions:
-        - {}
+        - text: 'Betrachte den untenstehenden Code genau.  Was wird deiner Meinung
+            nach passieren, wenn du auf "Ausführen" klickst? Denke daran: Hinter jeder
+            Wolke wird es immer nur *eine* Wabe oder *eine* Blume geben.'
         answers:
         - correct: true
           feedback: Richtig!
@@ -1774,23 +2533,45 @@ de-DE:
         - {}
         - {}
         - correct: true
+      courseE_project_exemplars_2019:
+        markdown: |+
+          # Projektbeispiele
+
+          Du bist dabei, dein Abschlussprojekt zu starten. Bevor du anfängst, solltest du dir einige Zeit damit verbringen, dir die Beispielprojekte anzusehen.
+
+          ## Sprite Lab
+
+          | Monster Tanz (Sprite Lab) | Cupcake Spiel (Sprite Lab) |
+          |---|---|
+          | [![Monster Tanz (Sprite Lab)](https://images.code.org/85838ca11b728dce3e1513515c4510e3-image-1556826303297.png "Monster Tanz (Sprite Lab")](https://studio.code.org/projects/spritelab/S2l_b6LHSmSULTBF7CibJm1rTsngztJyu5pgORe7GBs/view) | [![Cupcake Spiel (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png "Cupcake Spiel (Sprite Lab")](https://studio.code.org/projects/spritelab/gXM_YU_qL_QWo1o5Wkam96oiFrYY5VUp27m2xKlp7EQ/view) |
+          | Versuche diesem Spiel Text oder eine Punktzahl hinzuzufügen! | Versuche diesem Spiel Text oder eine Punktzahl hinzuzufügen! |
+
+          ## Zeichner
+
+          | Muster (Zeichner) | Funktionsblumen (Zeichner) |
+          |---|---|
+          | [![Muster (Zeichner)](https://images.code.org/2432878706891dda080b69428ddc4a20-image-1556822714214.png "Muster (Zeichner)")](https://studio.code.org/projects/artist/TznMeJRa4SnHWJvUBEoNUw/view) | [![Function Flowers (Artist)](https://images.code.org/1e6da38baf996dace44581572895a4b8-image-1556822184973.png "Funktionsblumen (Zeichner)")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) |
+          | Lassen Sie uns mit verschachtelten Loops kreativ werden! | Lassen Sie uns mit Funktionen kreativ werden! |
+
       courseF_bee_variables_8a_2018:
         questions:
         - {}
         answers:
         - {}
-        - correct: true
+        - text: Die Biene sammelt nur 2 Portionen Nektar.
+          correct: true
           feedback: Richtig!
-        - {}
+        - text: Die Biene sammelt den gesamten Nektar.
         - text: Ich weiß es nicht.
       courseF_bee_variables_8a_2018_2019:
         questions:
         - {}
         answers:
         - {}
-        - correct: true
+        - text: Die Biene sammelt nur 2 Portionen Nektar.
+          correct: true
           feedback: Richtig!
-        - {}
+        - text: Die Biene sammelt den gesamten Nektar.
         - text: Ich weiß es nicht.
       courseF_multi_artist_for10_predict1:
         questions:
@@ -1890,7 +2671,7 @@ de-DE:
         - correct: true
           feedback: Richtig!
         - {}
-        - {}
+        - text: 'Ich weiß es nicht. '
       courseF_multi_bee_for3_predict1_2018_2019:
         questions:
         - {}
@@ -1899,7 +2680,7 @@ de-DE:
         - correct: true
           feedback: Richtig!
         - {}
-        - {}
+        - text: 'Ich weiß es nicht. '
       courseF_multi_bee_fwp9_predict1:
         questions:
         - {}
@@ -1916,6 +2697,26 @@ de-DE:
         - {}
         - {}
         - text: Ich weiß es nicht.
+      courseF_project_exemplars_2019:
+        markdown: |+
+          # Projektbeispiele
+
+          Du bist dabei, dein Abschlussprojekt zu starten. Bevor du anfängst, solltest du dir einige Zeit damit verbringen, dir die Beispielprojekte anzusehen.
+
+          ## Sprite Lab
+
+          | Cupcake Spiel (Sprite Lab) | Helikopter Spiel (Sprite Lab) |
+          |---|---|
+          | [![#Bunny Spiel (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png)](https://studio.code.org/projects/spritelab/gXM_YU_qL_QWo1o5Wkam96oiFrYY5VUp27m2xKlp7EQ/view) | [![#Helikopter Spiel (Sprite Lab)](https://images.code.org/1a273fd447b952367792423a70c5087a-image-1556812149075.png)](https://studio.code.org/projects/spritelab/QeROTy1pNyjNPC-ZZdBN1mcpkmTEMUc2FYwXX0SOFAY/view) |
+          | Versuche, diesem Spiel Text oder eine Punktzahl hinzuzufügen! | Versuche, diesem Spiel Text oder eine Punktzahl hinzuzufügen! |
+
+          ## Zeichner
+
+          | Blumen (Zeichner) | Spiralen (Zeichner) |
+          |---|---|
+          | [![Blumen (Zeichner)](https://images.code.org/0f5adf63c318eab8c8acb397d9db7f2a-image-1556821537577.png)](https://studio.code.org/projects/artist/MIMh2pV2IiLm1ZzaiA6N7kKvg534lFck3abLXTsvZU8/view) | [![Spiralen (Zeichner)](https://images.code.org/06514571a8cf2f8b0346006ac1adc219-image-1556819399386.png)](https://studio.code.org/projects/artist/66scPDPWa8RNNHkcXDaXdA/view) |
+          | Lasst uns mit Variablen kreativ werden! | Lasst uns mit For Schleifen kreativ werden! |
+
       coursee_prediction_artistfunction2:
         questions:
         - {}
@@ -1943,30 +2744,66 @@ de-DE:
           feedback: Richtig!
         - {}
         - {}
+      csd-pre-survey-2017-levelgroup:
+        markdown: |
+          # Übersicht
+
+          Die Klasse arbeitet in Gruppen, um Aluminiumfolienboote zu entwerfen, die so viele Pennys wie möglich tragen.  Am Ende des Unterrichts reflektieren die Gruppen ihre Erfahrungen mit der Aktivität und stellen Verbindungen zu den Arten der Problemlösung her, die sie für den Rest des Kurses durchführen werden.
+
+
+          ## Resourcen
+
+          * [Aluminumfolienboote](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - Activity Guide (copy as [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))
       grade2_multi_collector_A_predict1:
         questions:
-        - {}
+        - text: Schau dir den Code unten genau an. Wenn dieser Code bis zum Ende ausgeführt
+            würde (wenn man die Fehler nicht beachtet), wie viele Schätze würde Laurel
+            sammeln?
         answers:
-        - {}
-        - correct: true
+        - text: Mit diesem Code wird Laurel 4 Schätze einsammeln.
+          feedback: Falsch. Laurel versucht Schätze einzusammeln an Stellen, wo kein
+            Schatz ist, und das verursacht einen Fehler.
+        - text: Laurel wird versuchen Schätze einzusammeln an Stellen, wo kein Schatz
+            ist, und das verursacht einen Fehler.
+          correct: true
           feedback: Richtig!
-        - {}
+        - text: Laurel wird alle Schätze einsammeln.
+          feedback: Falsch. Laurel versucht Schätze einzusammeln an Stellen, wo kein
+            Schatz ist, und das verursacht einen Fehler.
         - text: Ich weiß es nicht.
+          feedback: Laurel versucht Schätze einzusammeln an Stellen, wo kein Schatz
+            ist, und das verursacht einen Fehler.
       grade2_multi_collector_A_predict1_2018:
         questions:
         - {}
         answers:
-        - {}
-        - correct: true
+        - text: Mit diesem Code wird Laurel 4 Schätze einsammeln.
+          feedback: Falsch. Laurel versucht Schätze einzusammeln an Stellen, wo kein
+            Schatz ist, und das verursacht einen Fehler.
+        - text: Laurel wird versuchen Schätze einzusammeln an Stellen, wo kein Schatz
+            ist, und das verursacht einen Fehler.
+          correct: true
           feedback: Richtig!
-        - {}
+        - text: Laurel wird alle Schätze einsammeln.
+          feedback: Falsch. Laurel versucht Schätze einzusammeln an Stellen, wo kein
+            Schatz ist, und das verursacht einen Fehler.
         - text: Ich weiß es nicht.
+          feedback: Laurel versucht Schätze einzusammeln an Stellen, wo kein Schatz
+            ist, und das verursacht einen Fehler.
       grade2_multi_collector_A_predict1_2018_2019:
         questions:
         - {}
         answers:
-        - {}
-        - correct: true
+        - text: Mit diesem Code wird Laurel 4 Schätze einsammeln.
+          feedback: Falsch. Laurel versucht Schätze einzusammeln an Stellen, wo kein
+            Schatz ist, und das verursacht einen Fehler.
+        - text: Laurel wird versuchen Schätze einzusammeln an Stellen, wo kein Schatz
+            ist, und das verursacht einen Fehler.
+          correct: true
           feedback: Richtig!
-        - {}
+        - text: Laurel wird alle Schätze einsammeln.
+          feedback: Falsch. Laurel versucht Schätze einzusammeln an Stellen, wo kein
+            Schatz ist, und das verursacht einen Fehler.
         - text: Ich weiß es nicht.
+          feedback: Laurel versucht Schätze einzusammeln an Stellen, wo kein Schatz
+            ist, und das verursacht einen Fehler.

@@ -27,6 +27,13 @@ fil:
           PROPERTY:
             '"scale"': sukat
             '"height"': taas
+      Dancelab_changePropEachBy:
+        options:
+          GROUP:
+            sprites: lahat
+          PROPERTY:
+            '"scale"': sukat
+            '"height"': taas
       Dancelab_doMoveEachLR:
         options:
           GROUP:
@@ -70,14 +77,42 @@ fil:
             "{x: 100, y: 200}": kaliwa
             "{x: 300, y: 200}": kanan
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": nang hindi pinipili
+      Dancelab_jumpToEach:
+        options:
+          GROUP:
+            sprites: lahat
+          LOCATION:
+            "{x: 100, y: 200}": kaliwa
+            "{x: 300, y: 200}": kanan
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": nang hindi pinipili
       Dancelab_layoutSprites:
         options:
           GROUP:
             sprites: lahat
           FORMAT:
             '"random"': nang hindi pinipili
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': dayuhan
+            '"CAT"': pusa
+            '"DOG"': aso
+            '"DUCK"': duck
+            '"ROBOT"': robot
+            '"UNICORN"': unicorn
+          LOCATION:
+            "{x: 100, y: 200}": kaliwa
+            "{x: 300, y: 200}": kanan
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": nang hindi pinipili
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': dayuhan
+            '"CAT"': pusa
+            '"DOG"': aso
+            '"DUCK"': duck
+            '"ROBOT"': robot
+            '"UNICORN"': unicorn
           LOCATION:
             "{x: 100, y: 200}": kaliwa
             "{x: 300, y: 200}": kanan
@@ -159,7 +194,18 @@ fil:
           PROPERTY:
             '"scale"': sukat
             '"height"': taas
+      Dancelab_setPropRandomEach:
+        options:
+          GROUP:
+            sprites: lahat
+          PROPERTY:
+            '"scale"': sukat
+            '"height"': taas
       Dancelab_setTintEach:
+        options:
+          THIS:
+            sprites: lahat
+      Dancelab_setTintEachInline:
         options:
           THIS:
             sprites: lahat
@@ -172,8 +218,22 @@ fil:
           PROPERTY:
             '"scale"': sukat
             '"height"': taas
+      Dancelab_startMappingEach:
+        options:
+          GROUP:
+            sprites: lahat
+          PROPERTY:
+            '"scale"': sukat
+            '"height"': taas
       Dancelab_stopMapping:
         options:
+          PROPERTY:
+            '"scale"': sukat
+            '"height"': taas
+      Dancelab_stopMappingEach:
+        options:
+          GROUP:
+            sprites: lahat
           PROPERTY:
             '"scale"': sukat
             '"height"': taas
@@ -400,57 +460,19 @@ fil:
         text: kumaliwa
       RyanLab_turnRight:
         text: kumanan
-      aalab_changePropByFlexible:
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': sukat
-            '"x"': x na posisyon
-            '"y"': y na posisyon
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': kelan
-            '"while"': habang
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': kelan
-            '"while"': habang
-      aalab_getThisSprite:
-        options:
-          CHOICE:
-            '"other"': iba
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': kelan
-            '"while"': habang
-          KEY:
-            '"up"': taas
-            '"down"': baba
-            '"left"': kaliwa
-            '"right"': kanan
-            '"space"': space
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': siyudad
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': tama
-            '"false"': mali
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': sukat
-            '"x"': x na posisyon
-            '"y"': y na posisyon
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': magpakailanman
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
         options:
           OPTION:
             '"show"': ipakita

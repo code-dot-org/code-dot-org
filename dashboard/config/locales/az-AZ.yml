@@ -265,6 +265,7 @@ az:
     email_resend_confirm: Təsdiqləmə təlimatlarını yenidən göndər
     new_password_hint: "(dəyişmək istəmirsinizsə, boş buraxın)"
     current_password_hint: "(dəyişikliklərinizi təsdiq etmək üçün cari parolunuz lazımdır)"
+    update_email: Yenilə
   user_level:
     completed: Tamamlandı
     tried: Yoxlanıldı
@@ -540,6 +541,8 @@ az:
       email_opt_in:
         opt_in_yes: Bəli
         opt_in_no: Xeyr
+    international_opt_in:
+      title: Məşğələdə iştirak
   cookie_banner:
     accept: Razıyam
   gdpr_dialog:

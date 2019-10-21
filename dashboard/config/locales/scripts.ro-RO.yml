@@ -633,6 +633,7 @@ ro:
               name: Introducere in Dezvoltarea Profesională
             Teaching Strategies:
               name: Strategii de predare
+          description_audience: "[șir gol]"
         CSPLessonSamples:
           description_audience: "[șir gol]"
           stages:
@@ -4770,3 +4771,25 @@ ro:
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
           description: "[șir gol]"
+        csp6-pilot:
+          title: "[șir gol]"
+          description_audience: "[șir gol]"
+          description_short: "[șir gol]"
+          description: "[șir gol]"
+        denny-science-8:
+          description: "[șir gol]"
+          description_short: "[șir gol]"
+          description_audience: "[șir gol]"
+          stages:
+            'Earthquake Detector: Designing Screens':
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            'Earthquake Detector: Processing with Events':
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+        dance-2019:
+          stages:
+            Dance Party:
+              name: Petrecere cu dans
+          description_audience: "[șir gol]"
+          description_short: "[șir gol]"

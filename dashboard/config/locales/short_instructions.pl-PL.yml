@@ -93,7 +93,10 @@ pl-PL:
       4-5 While Loops 3: "Użyj możliwie jak najmniej bloków, aby ukończyć tę łamigłówkę!
         \\\r \\\r. Doprowadź mnie do sterty śmieci i usuń je, a następnie przejdź
         do otworu i wypełnij go całkowicie."
+      AB_Debug_PlayLab3: Przenieś rycerza do każdej flagi. Jeśli coś pójdzie nie tak,
+        poszukaj błędów!
       Alien Defender: 'Idea projektu: Stwórz grę obronną w Play Lab!'
+      CDEF_debugging_flappy2: Dlaczego ta gra nie działa?
       CSD U3 L5 Freeplay: |-
         Zmień wartość petalSize kilka razy.
         Jak jej wielkość wpływa na Twój rysunek?
@@ -362,9 +365,15 @@ pl-PL:
       K-1 Artist2 Assessment1: 'Sprawdzian: Narysuj kwadrat obok innego kwadratu.'
       K-1 Artist2 Free Draw: Narysuj cokolwiek!
       K-1 Artist2_7: Narysuj prostokąt, aby utworzyć górną szufladę w kredensie (garderobie)!
+      K-1 Bee 1: Przenieś mnie do kwiatka, zbierz nektar, a następnie przenieś mnie
+        do plastra miodu i zrób miód
       K-1 Bee 11: Zbierz trzy nektary i następnie zrób jeden miód
       K-1 Bee 13: Zbierz trzy nektary i następnie zrób jeden miód!
       K-1 Bee 15: Zbierz dwa nektary, by zrobić dwa miody!
+      K-1 Bee 2: Przenieś mnie do kwiatka, zbierz nektar, a następnie przenieś mnie
+        do plastra miodu i zrób miód
+      K-1 Bee 3: Przenieś mnie do kwiatka, zbierz nektar, a następnie przenieś mnie
+        do plastra miodu i zrób miód
       K-1 Bee 4: Zbierz dwa nektary i następnie zrób dwa miody!
       K-1 Bee 5: Zbierz trzy nektary i następnie zrób trzy miody!
       K-1 Bee 6: Zbierz dwa nektary i następnie zrób dwa miody!
@@ -676,6 +685,8 @@ pl-PL:
         aby przejść ten poziom.
       courseA_collector_loops_challenge2kp_2019: Zbierz przynajmniej _3_ części skarbu
         aby przejść ten poziom.
+      courseA_harvester_loops6_2019: Będziesz potrzebować **jednego** klocka `Move
+        South` i **jednego** klocka `Move West`.
       courseA_maze_ramp5a_2018: Doprowadź ptaka do świnki!
       courseA_maze_ramp5a_2019: Doprowadź ptaka do świnki!
       courseA_maze_seq2: Zmień kod, aby doprowadzić mnie do świnki!

@@ -338,6 +338,7 @@ sv:
       konton bort.'
     delete_confirm: Är du säker du vill ta bort ditt konto?
     deleted_user: borttagen användare
+    update_email: Uppdatera
   user_level:
     completed: Avklarade
     tried: Försökte

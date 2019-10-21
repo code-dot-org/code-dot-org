@@ -27,6 +27,13 @@ ga:
           PROPERTY:
             '"scale"': méid
             '"height"': airde
+      Dancelab_changePropEachBy:
+        options:
+          GROUP:
+            sprites: uile
+          PROPERTY:
+            '"scale"': méid
+            '"height"': airde
       Dancelab_doMoveEachLR:
         options:
           GROUP:
@@ -70,14 +77,42 @@ ga:
             "{x: 100, y: 200}": ar chlé
             "{x: 300, y: 200}": ar dheis
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": randamach
+      Dancelab_jumpToEach:
+        options:
+          GROUP:
+            sprites: uile
+          LOCATION:
+            "{x: 100, y: 200}": ar chlé
+            "{x: 300, y: 200}": ar dheis
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": randamach
       Dancelab_layoutSprites:
         options:
           GROUP:
             sprites: uile
           FORMAT:
             '"random"': randamach
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': eachtrán
+            '"CAT"': cat
+            '"DOG"': madra
+            '"DUCK"': lacha
+            '"ROBOT"': róbat
+            '"UNICORN"': aonbheannach
+          LOCATION:
+            "{x: 100, y: 200}": ar chlé
+            "{x: 300, y: 200}": ar dheis
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": randamach
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': eachtrán
+            '"CAT"': cat
+            '"DOG"': madra
+            '"DUCK"': lacha
+            '"ROBOT"': róbat
+            '"UNICORN"': aonbheannach
           LOCATION:
             "{x: 100, y: 200}": ar chlé
             "{x: 300, y: 200}": ar dheis
@@ -159,7 +194,18 @@ ga:
           PROPERTY:
             '"scale"': méid
             '"height"': airde
+      Dancelab_setPropRandomEach:
+        options:
+          GROUP:
+            sprites: uile
+          PROPERTY:
+            '"scale"': méid
+            '"height"': airde
       Dancelab_setTintEach:
+        options:
+          THIS:
+            sprites: uile
+      Dancelab_setTintEachInline:
         options:
           THIS:
             sprites: uile
@@ -172,8 +218,22 @@ ga:
           PROPERTY:
             '"scale"': méid
             '"height"': airde
+      Dancelab_startMappingEach:
+        options:
+          GROUP:
+            sprites: uile
+          PROPERTY:
+            '"scale"': méid
+            '"height"': airde
       Dancelab_stopMapping:
         options:
+          PROPERTY:
+            '"scale"': méid
+            '"height"': airde
+      Dancelab_stopMappingEach:
+        options:
+          GROUP:
+            sprites: uile
           PROPERTY:
             '"scale"': méid
             '"height"': airde
@@ -403,53 +463,19 @@ ga:
         text: cas ar chlé
       RyanLab_turnRight:
         text: cas ar dheis
-      aalab_changePropByFlexible:
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': méid
-            '"x"': ionad x
-            '"y"': ionad y
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': nuair
-            '"while"': chomh fada is atá
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': nuair
-            '"while"': chomh fada is atá
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': nuair
-            '"while"': chomh fada is atá
-          KEY:
-            '"up"': ag an mbarr
-            '"down"': ag an mbun
-            '"left"': ar chlé
-            '"right"': ar dheis
-            '"space"': spás
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': cathair
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': fíor
-            '"false"': bréagach
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': méid
-            '"x"': ionad x
-            '"y"': ionad y
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': go deo na ndeor
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
         options:
           OPTION:
             '"show"': taispeáin

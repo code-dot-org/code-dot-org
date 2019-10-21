@@ -67,8 +67,8 @@ social:
 
 -# Not ideal but we can pull the undigested files from /blockly.
 - js_locale = request.locale.to_s.downcase.tr('-', '_')
-%script{src: asset_path("js/#{js_locale}/tutorialExplorer_locale.js")}
-%script{src: minifiable_asset_path("js/tutorialExplorer.js")}
+%script{src: webpack_asset_path("js/#{js_locale}/tutorialExplorer_locale.js")}
+%script{src: webpack_asset_path("js/tutorialExplorer.js")}
 
 - tutorials_contents = Tutorials.new(:tutorials).contents(request.host_with_port)
 

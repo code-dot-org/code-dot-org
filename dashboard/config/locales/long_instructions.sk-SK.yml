@@ -713,55 +713,55 @@ sk-SK:
       CSD U3 abstraction decelerateX_2018: |-
         # Spomaľovanie
 
-        Keď si si vyskúšal/a zrýchľovanie, dokážeš použiť vzor pre počítanie aj na spomalenie postáv?
+        Keď si si vyskúšal/a zrýchľovanie, dokážeš použiť kód pre počítanie aj na spomalenie "sprite" objektov?
 
         # Urob toto
 
-        Auto sa rúti do vody! Musíš použiť vzor na počítanie, aby si ho spomalil/a.
+        Auto sa rúti do vody! Musíš použiť kód pre počítanie, aby si ho spomalil/a.
 
-        -   Použi `sprite.velocityX` blok so vzorom na počítanie, aby auto spomalilo o 0.25 počas toho, ako sa hýbe po obrazovke;
-        -   Diskutuj s partnerom: Čo sa stane, keď auto konečne zastane?
+        -   Použi blok `sprite.velocityX` a kód pre počítanie, aby auto spomalilo o 0,25 počas toho, ako sa hýbe po obrazovke;
+        -   Diskutuj s partnerom: Čo sa stane, keď auto nakoniec zastane?
 
-        _Výzva: Do programu pridaj kód, ktorý spomalí auto vtedy, ak je jeho vlastnosť velocityX väčšia ako 0._
+        _Výzva: Do programu pridaj kód, ktorý auto spomalí, ak je jeho velocityX väčšia ako 0._
       CSD U3 abstraction decelerateX_2019: |-
         # Spomaľovanie
 
-        Keď si si vyskúšal/a zrýchľovanie, dokážeš použiť vzor pre počítanie aj na spomalenie postáv?
+        Keď si si vyskúšal/a zrýchľovanie, dokážeš použiť kód pre počítanie aj na spomalenie "sprite" objektov?
 
         # Urob toto
 
-        Auto sa rúti do vody! Musíš použiť vzor na počítanie, aby si ho spomalil/a.
+        Auto sa rúti do vody! Musíš použiť kód pre počítanie, aby si ho spomalil/a.
 
-        -   Použi `sprite.velocityX` blok so vzorom na počítanie, aby auto spomalilo o 0.25 počas toho, ako sa hýbe po obrazovke;
-        -   Diskutuj s partnerom: Čo sa stane, keď auto konečne zastane?
+        -   Použi blok `sprite.velocityX` a kód pre počítanie, aby auto spomalilo o 0,25 počas toho, ako sa hýbe po obrazovke;
+        -   Diskutuj s partnerom: Čo sa stane, keď auto nakoniec zastane?
 
-        _Výzva: Do programu pridaj kód, ktorý spomalí auto vtedy, ak je jeho vlastnosť velocityX väčšia ako 0._
+        _Výzva: Do programu pridaj kód, ktorý auto spomalí, ak je jeho velocityX väčšia ako 0._
       CSD U3 abstraction jump_2018: |-
         # Skákanie
 
-        A teraz máš už všetky bloky potrebné na to, aby mohla tvoja postava skákať! Mala by vyskočiť dohora, ak je na zemi a zároveň užívateľ stlačí šípku „hore”. Po dosiahnutí vrcholu výskoku by mala opäť klesnúť nadol.
+        A teraz máš už všetky bloky potrebné na to, aby tvoj "sprite" mohol skákať! Mal by vyskočiť dohora, ak je na zemi a zároveň užívateľ stlačí šípku „hore”. Po dosiahnutí vrcholu výskoku by mal opäť klesnúť nadol.
 
         # Urob toto
 
-        -   Nájdi výraz `if` , ktorý kontroluje, či je postava na zemi. Potom sa pozri sa dovnútra tohto výrazu a nájdi ďalší výraz `if`, ktorý kontroluje, či užívateľ stlačil šípku „hore“ ([Ukáž mi kde](#triggercallout=code_triggered1)).
-            -   Zabezpeč, aby žaba vyskočila, keď užívateľ stlačí šípku „hore“-
+        -   Nájdi výraz `if` , ktorý kontroluje, či je "sprite" na zemi. Potom sa pozri dovnútra tohto výrazu a nájdi ďalší výraz `if`, ktorý kontroluje, či užívateľ stlačil šípku „hore“ ([Ukáž mi kde](#triggercallout=code_triggered1)).
+            -   Zabezpeč, aby žaba vyskočila, keď užívateľ stlačí šípku „hore“
             -   V opačnom prípade zabezpeč, aby sa žaba prestala hýbať.
         -   Pridaj kód, ktorý robí nasledovné ([Ukáž mi kde](#triggercallout=code_triggered2)):
-            -   Skontroluje, či postava  žaby dosiahla svoj najvyšši bod
-            -   Ak áno, nechá postavu klesnúť nadol.
+            -   Skontroluje, či žaba dosiahla svoj najvyšši bod
+            -   Ak áno, nechá ju klesnúť nadol.
       CSD U3 abstraction jump_2018_2019: |-
         # Skákanie
 
-        A teraz máš už všetky bloky potrebné na to, aby mohla tvoja postava skákať! Mala by vyskočiť dohora, ak je na zemi a zároveň užívateľ stlačí šípku „hore”. Po dosiahnutí vrcholu výskoku by mala opäť klesnúť nadol.
+        A teraz máš už všetky bloky potrebné na to, aby tvoj "sprite" mohol skákať! Mal by vyskočiť dohora, ak je na zemi a zároveň užívateľ stlačí šípku „hore”. Po dosiahnutí vrcholu výskoku by mal opäť klesnúť nadol.
 
         # Urob toto
 
-        -   Nájdi výraz `if` , ktorý kontroluje, či je postava na zemi. Potom sa pozri sa dovnútra tohto výrazu a nájdi ďalší výraz `if`, ktorý kontroluje, či užívateľ stlačil šípku „hore“ ([Ukáž mi kde](#triggercallout=code_triggered1)).
-            -   Zabezpeč, aby žaba vyskočila, keď užívateľ stlačí šípku „hore“-
+        -   Nájdi výraz `if` , ktorý kontroluje, či je "sprite" na zemi. Potom sa pozri dovnútra tohto výrazu a nájdi ďalší výraz `if`, ktorý kontroluje, či užívateľ stlačil šípku „hore“ ([Ukáž mi kde](#triggercallout=code_triggered1)).
+            -   Zabezpeč, aby žaba vyskočila, keď užívateľ stlačí šípku „hore“
             -   V opačnom prípade zabezpeč, aby sa žaba prestala hýbať.
         -   Pridaj kód, ktorý robí nasledovné ([Ukáž mi kde](#triggercallout=code_triggered2)):
-            -   Skontroluje, či postava  žaby dosiahla svoj najvyšši bod
-            -   Ak áno, nechá postavu klesnúť nadol.
+            -   Skontroluje, či žaba dosiahla svoj najvyšši bod
+            -   Ak áno, nechá ju klesnúť nadol.
       CSD U3 collisions flyman make it your own_2018: |-
         # Lietajúca hra – Sprav si ju podľa seba
 
@@ -3558,6 +3558,18 @@ sk-SK:
       courseF_artist_for9_2019: |-
         **Inšpirácia:** Použi počítadlo vo vnútri bloku `nastav alfa`, aby si dostal niečo ako tento vyblednutý stred.\
         (Tento šesťuholníkový vzor bol vytvorený otáčaním o 60 stupňov.)
+      courseF_artist_for_challenge1: |-
+        Dokážeš prísť na to, ako vytvoriť tento obrázok?
+
+        <img src="https://images.code.org/724b2efa8aefe863bd0d6491a3f1590f-image-1445563707400.26.50.png" width="350px"/>
+      courseF_artist_for_challenge1_2018: |-
+        Dokážeš prísť na to, ako vytvoriť tento obrázok?
+
+        <img src="https://images.code.org/724b2efa8aefe863bd0d6491a3f1590f-image-1445563707400.26.50.png" width="350px"/>
+      courseF_artist_for_challenge1_2019: |-
+        Dokážeš prísť na to, ako vytvoriť tento obrázok?
+
+        <img src="https://images.code.org/724b2efa8aefe863bd0d6491a3f1590f-image-1445563707400.26.50.png" width="350px"/>
       courseF_artist_variables10: "Tu je tvoj kód z predošlej úlohy. Skús zmeniť premennú
         rôznymi spôsobmi. \n\n-   Čo sa stane, ak začneš s `dĺžka` menšou než 150?\n-
         \  Čo ak zakaždým vynásobiš tvoju premennú číslom 1.25 namiesto pripočítania

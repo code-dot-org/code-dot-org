@@ -5,24 +5,21 @@ var currentSceneNumber = 0;
 var scenes = [];
 
 function addBehaviorUntilBoolean(spriteId, behavior, condition) {
+  // this doesn't work the way it should
   setProp(spriteId, behavior.name, function() { return condition; });
   addBehaviorSimple(spriteId, behavior);
 }
 
 function removeInvalidBehaviors() {
-  var spriteIds = getSpriteIdsInUse();
-  for(var i = 0; i < spriteIds.length; i++) {
-  	var behaviors = getBehaviorsForSpriteId(spriteIds[i]);
-    for(var j = 0; j < behaviors.length; j++) {
-      console.log(getProp(spriteIds[i], behaviors[j])());
-      if(getProp(spriteIds[i], "x") >= 250) {
-      //if(getProp(spriteIds[i], behaviors[j])()) {
-        console.log("you got here");
-      	removeBehaviorSimple(spriteIds[i], behaviors[j]);
-        //removeAllBehaviors(spriteIds[i]);
+  getSpriteIdsInUse().forEach(function(spriteId) {
+  	getBehaviorsForSpriteId(spriteId).forEach(function(behavior) {
+      console.log(getProp(spriteId, behavior)());
+      if(getProp(spriteId, behavior)()) {
+        console.log("oh snap");
+        removeBehaviorSimple(spriteId, behavior);
       }
-    }
-  }
+    });
+  });
 }
 
 function scene(sceneNumber, code) {
@@ -34,33 +31,34 @@ function setupStory(code) {
 }
 
 function runSetup() {
-  for(var i = 0; i < setupCode.length; i++) {
-  	setupCode[i].code();
-  }
+  setupCode.forEach(function(c) {
+  	c.code();
+  });
   setupCode = [];
 }
 
 function goToScene(sceneNumber) {
   getAnimationsInUse().forEach(function(animation) {
-    //removeAllBehaviors(animation);
+    removeAllBehaviors(animation);
   });
   currentSceneNumber = sceneNumber;
 }
 
 function getCurrentScene() {
-  for(var i = 0; i < scenes.length; i++) {
-  	if(scenes[i].sceneNumber === currentSceneNumber) {
-      return scenes[i];
-    }
-  }
+  scenes.find(function(scene) {
+  	return scene.sceneNumber === currentSceneNumber;
+  });
+  return {};
 }
 
 function draw() {
-  //if(setupCode.length > 0) {
-  	//runSetup();
-  //}
-  getCurrentScene().code();
-  removeInvalidBehaviors();
+  /*
+  if(setupCode.length > 0) {
+  	runSetup();
+  }
+  */
+  //getCurrentScene().code();
   //getCurrentScene().code = function(){};
+  removeInvalidBehaviors();
   executeDrawLoopAndCallbacks();
 }

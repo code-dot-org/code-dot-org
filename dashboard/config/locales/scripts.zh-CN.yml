@@ -1034,6 +1034,8 @@ zh-CN:
               name: 舞蹈实验室
             Mini Rubric:
               name: 迷你注释
+            Contained Levels:
+              name: 包含的级别
         algebraPD2b:
           description: 第二阶段在线：混合的暑期学习
           description_short: 第二阶段在线：混合的暑期学习
@@ -8872,7 +8874,7 @@ zh-CN:
             Functions Practice:
               name: 函数练习
             Student Survey (Variables):
-              name: 学生调查 (变量)
+              name: 学生调查(变量)
             Teacher Surveys (Variables):
               name: 教师调查(变量)
             Student Survey (Conditionals):
@@ -8895,7 +8897,7 @@ zh-CN:
             Dance Party - Go Further:
               name: 舞会 - 继续
           title: 继续跳舞
-          description_short: 结束代码一小时活动后，请参照 Code.org的舞蹈聚会教程完成后续练习。
+          description_short: 结束代码一小时活动后，请参照 Code.org 的舞蹈聚会教程完成后续练习。
           description: 通过扩展项目创意，超越第一个小时。
         coursef-2019:
           title: 课程 F （2019）
@@ -9211,7 +9213,7 @@ zh-CN:
             Digital Sharing:
               name: 数字共享
             'Conditionals in Minecraft: Voyage Aquatic':
-              name: "《我的世界》的条件：水上航行"
+              name: "《我的世界：水上航行》的条件"
             Swimming Fish with Sprite Lab:
               name: 精灵实验室的游泳鱼类
             Designing for Accessibility:
@@ -9325,7 +9327,7 @@ zh-CN:
             Dance Party:
               name: 舞蹈派对
             'Conditionals in Minecraft: Voyage Aquatic':
-              name: "《我的世界》的条件：水上航行"
+              name: "《我的世界：水上航行》的条件"
             Concept Practice with Minecraft:
               name: 与《我的世界》往前看
         csd1-2019:
@@ -9422,7 +9424,7 @@ zh-CN:
             Dance Party - Go Further:
               name: 舞会 - 继续
           title: 继续跳舞
-          description_short: 结束代码一小时活动后，请参照 Code.org的舞蹈聚会教程完成后续练习。
+          description_short: 结束代码一小时活动后，请参照 Code.org 的舞蹈聚会教程完成后续练习。
           description: 通过扩展项目创意，超越第一个小时。
         coursec-2019:
           title: 课程 C (2019)
@@ -9626,7 +9628,7 @@ zh-CN:
             Learn to Drag and Drop:
               name: 学习拖放
             Programming in Maze:
-              name: 与斯奎特一起编程
+              name: 迷宫编程
             Programming in Harvester:
               name: 与收割者编程
             Tell a Story in Play Lab:
@@ -10160,7 +10162,7 @@ zh-CN:
             Student Surveys:
               name: 学生调查
             'Teacher Surveys: HIDE':
-              name: '教师调查: 隐藏'
+              name: 教师调查：隐藏
             Teacher Surveys:
               name: 教师调查
             Conditionals Explore:
@@ -10174,7 +10176,7 @@ zh-CN:
             Teacher Surveys (Conditionals):
               name: 教师调查(条件)
             Student Survey (Variables):
-              name: 学生调查 (变量)
+              name: 学生调查(变量)
             Teacher Surveys (Variables):
               name: 教师调查(变量)
             Functions Explore / Investigate:
@@ -10189,7 +10191,7 @@ zh-CN:
               name: 练习 PT 第3部分
             Unit 4 Assessment:
               name: 第4单元评估
-          title: '单元 4: 变量、条件、函数'
+          title: 单元 4：变量、条件、函数
         csp1-2019:
           title: 计算机科学原理单元 1 ：互联网 ('18-'19)
           description: 本单元探讨了在计算机上表示数字信息和在人与计算设备之间传输数据所产生的技术挑战和问题。然后，探讨了互联网的结构和设计以及这些设计决定的影响。
@@ -10307,7 +10309,7 @@ zh-CN:
             Mid-Year Survey:
               name: 中期调查
             'Optional: Data Questions':
-              name: '可选: 数据问题'
+              name: 可选：数据问题
         csp5-2019:
           title: 计算机科学原理单元5 - 构建应用 ('18-'19)
           description: 这个单元介绍了计算机编程的基本概念，开启了制作丰富、有交互的应用程序的能力。这个课程使用JavaScript作为编程语言，应用实验室作为编程环境来创建应用，但这个课程中学到的概念能够扩展到所有的语言和工具中。
@@ -10543,7 +10545,7 @@ zh-CN:
             Variables Practice:
               name: 变量练习
             Student Survey (Variables):
-              name: 学生调查 (变量)
+              name: 学生调查(变量)
             Teacher Surveys (Variables):
               name: 教师调查(变量)
             Conditionals Explore:
@@ -10578,7 +10580,7 @@ zh-CN:
             Variables Practice:
               name: 变量练习
             Student Survey (Variables):
-              name: 学生调查 (变量)
+              name: 学生调查(变量)
             Teacher Surveys (Variables):
               name: 教师调查(变量)
             Conditionals Explore:
@@ -10613,7 +10615,7 @@ zh-CN:
             Variables Practice:
               name: 变量练习
             Student Survey (Variables):
-              name: 学生调查 (变量)
+              name: 学生调查(变量)
             Teacher Surveys (Variables):
               name: 教师调查(变量)
             Conditionals Explore:
@@ -10648,7 +10650,7 @@ zh-CN:
             Variables Practice:
               name: 变量练习
             Student Survey (Variables):
-              name: 学生调查 (变量)
+              name: 学生调查(变量)
             Teacher Surveys (Variables):
               name: 教师调查(变量)
             Conditionals Explore:
@@ -10673,7 +10675,7 @@ zh-CN:
               name: 练习 PT 第3部分
             Unit 4 Assessment:
               name: 第4单元评估
-          title: '单元 4: 变量、条件和函数'
+          title: 单元 4：变量、条件和函数
         csp5-pilot-staging:
           stages:
             Variables Explore:
@@ -10683,7 +10685,7 @@ zh-CN:
             Variables Practice:
               name: 变量练习
             Student Survey (Variables):
-              name: 学生调查 (变量)
+              name: 学生调查(变量)
             Teacher Surveys (Variables):
               name: 教师调查(变量)
             Conditionals Explore:
@@ -10728,7 +10730,7 @@ zh-CN:
             Variables Practice:
               name: 变量练习
             Student Survey (Variables):
-              name: 学生调查 (变量)
+              name: 学生调查(变量)
             Teacher Surveys (Variables):
               name: 教师调查(变量)
             Conditionals Explore:
@@ -10765,7 +10767,7 @@ zh-CN:
             Variables Practice:
               name: 变量练习
             Student Survey (Variables):
-              name: 学生调查 (变量)
+              name: 学生调查(变量)
             Teacher Surveys (Variables):
               name: 教师调查(变量)
             Conditionals Explore:
@@ -10802,7 +10804,7 @@ zh-CN:
             Variables Practice:
               name: 变量练习
             Student Survey (Variables):
-              name: 学生调查 (变量)
+              name: 学生调查(变量)
             Teacher Surveys (Variables):
               name: 教师调查(变量)
             Conditionals Explore:
@@ -10837,7 +10839,7 @@ zh-CN:
             Variables Practice:
               name: 变量练习
             Student Survey (Variables):
-              name: 学生调查 (变量)
+              name: 学生调查(变量)
             Teacher Surveys (Variables):
               name: 教师调查(变量)
             Conditionals Explore:
@@ -10872,7 +10874,7 @@ zh-CN:
             Variables Practice:
               name: 变量练习
             Student Survey (Variables):
-              name: 学生调查 (变量)
+              name: 学生调查(变量)
             Teacher Surveys (Variables):
               name: 教师调查(变量)
             Conditionals Explore:
@@ -11368,3 +11370,8 @@ zh-CN:
               name: 调试简介
             Nested Loops in Frozen:
               name: 冰雪奇缘里的嵌套循环
+        dance-2019:
+          stages:
+            Dance Party:
+              name: 舞蹈派对
+          description: 写出你自己的舞会代码，分享给你的朋友们！

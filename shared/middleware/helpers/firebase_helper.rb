@@ -29,11 +29,15 @@ class FirebaseHelper
   def delete_shared_table(table_name)
     @firebase.delete("/v3/channels/shared/counters/tables/#{table_name}")
     @firebase.delete("/v3/channels/shared/storage/tables/#{table_name}/records")
+    @firebase.delete("/v3/channels/shared/metadata/tables/#{table_name}/columns")
   end
 
-  def upload_shared_table(table_name, records)
+  def upload_shared_table(table_name, records, columns)
     @firebase.set("/v3/channels/shared/counters/tables/#{table_name}", {"lastId": records.length, "rowCount": records.length})
     @firebase.set("/v3/channels/shared/storage/tables/#{table_name}/records", records)
+    columns.each do |column|
+      @firebase.push("v3/channels/shared/metadata/tables/#{table_name}/columns", {columnName: column})
+    end
   end
 
   def self.delete_channel(encrypted_channel_id)

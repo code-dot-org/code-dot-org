@@ -80,6 +80,28 @@ th:
             '"rotation"': การหมุน
             '"x"': ตำแหน่งแนวนอน
             '"y"': ตำแหน่งแนวตั้ง
+      Dancelab_changePropEachBy:
+        options:
+          GROUP:
+            sprites: ทั้งหมด
+            '"ALIEN"': มนุษย์ต่างดาวทั้งหมด
+            '"BEAR"': หมีทั้งหมด
+            '"CAT"': แมวทั้งหมด
+            '"DOG"': สุนัขทั้งหมด
+            '"DUCK"': เป็ดทั้งหมด
+            '"FROG"': กบทั้งหมด
+            '"MOOSE"': กวางมูสทั้งหมด
+            '"PINEAPPLE"': สับปะรดทั้งหมด
+            '"ROBOT"': หุ่นยนต์ทั้งหมด
+            '"SHARK"': ฉลามทั้งหมด
+            '"UNICORN"': ยูนิคอร์น
+          PROPERTY:
+            '"scale"': ขนาด
+            '"width"': ความกว้าง
+            '"height"': ความสูง
+            '"rotation"': การหมุน
+            '"x"': ตำแหน่งแนวนอน
+            '"y"': ตำแหน่งแนวตั้ง
       Dancelab_doMoveEachLR:
         text: "{GROUP} ทำ {MOVE} {DIR} ตลอดไป"
         options:
@@ -95,7 +117,7 @@ th:
             '"PINEAPPLE"': สับปะรดทั้งหมด
             '"ROBOT"': หุ่นยนต์ทั้งหมด
             '"SHARK"': ฉลามทั้งหมด
-            '"UNICORN"': ยูนิคอร์นทั้งหมด
+            '"UNICORN"': ยูนิคอร์น
           MOVE:
             '"rand"': "(สุ่ม)"
             MOVES.Roll: บอดี้โรล
@@ -208,6 +230,32 @@ th:
             "{x: 100, y: 300}": ซ้ายล่าง
             "{x: 300, y: 300}": ขวาล่าง
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": สุ่ม
+      Dancelab_jumpToEach:
+        options:
+          GROUP:
+            sprites: ทั้งหมด
+            '"ALIEN"': มนุษย์ต่างดาวทั้งหมด
+            '"BEAR"': หมีทั้งหมด
+            '"CAT"': แมวทั้งหมด
+            '"DOG"': สุนัขทั้งหมด
+            '"DUCK"': เป็ดทั้งหมด
+            '"FROG"': กบทั้งหมด
+            '"MOOSE"': กวางมูสทั้งหมด
+            '"PINEAPPLE"': สับปะรดทั้งหมด
+            '"ROBOT"': หุ่นยนต์ทั้งหมด
+            '"SHARK"': ฉลามทั้งหมด
+            '"UNICORN"': ยูนิคอร์น
+          LOCATION:
+            "{x: 200, y: 100}": ด้านบน
+            "{x: 200, y: 300}": ด้านล่าง
+            "{x: 100, y: 200}": ซ้าย
+            "{x: 300, y: 200}": ขวา
+            "{x: 200, y: 200}": ตรงกลาง
+            "{x: 100, y: 100}": ซ้ายบน
+            "{x: 300, y: 100}": ขวาบน
+            "{x: 100, y: 300}": ซ้ายล่าง
+            "{x: 300, y: 300}": ขวาล่าง
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": สุ่ม
       Dancelab_layoutSprites:
         text: วางผัง {GROUP} เป็น {FORMAT}
         options:
@@ -223,7 +271,7 @@ th:
             '"PINEAPPLE"': สับปะรดทั้งหมด
             '"ROBOT"': หุ่นยนต์ทั้งหมด
             '"SHARK"': ฉลามทั้งหมด
-            '"UNICORN"': ยูนิคอร์นทั้งหมด
+            '"UNICORN"': ยูนิคอร์น
           FORMAT:
             '"border"': เส้นขอบ
             '"inner"': แถวจตุรัส
@@ -234,6 +282,31 @@ th:
             '"x"': กากบาท
             '"plus"': เครื่องหมายบวก
             '"random"': สุ่ม
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': มนุษย์ต่างดาว
+            '"BEAR"': หมี
+            '"CAT"': แมว
+            '"DOG"': สุนัข
+            '"DUCK"': เป็ด
+            '"FROG"': กบ
+            '"MOOSE"': กวางมูสทั้งหมด
+            '"PINEAPPLE"': สับปะรด
+            '"ROBOT"': หุ่นยนต์
+            '"SHARK"': ฉลาม
+            '"UNICORN"': ยูนิคอร์น
+          LOCATION:
+            "{x: 200, y: 100}": ด้านบน
+            "{x: 200, y: 300}": ด้านล่าง
+            "{x: 100, y: 200}": ซ้าย
+            "{x: 300, y: 200}": ขวา
+            "{x: 200, y: 200}": ตรงกลาง
+            "{x: 100, y: 100}": ซ้ายบน
+            "{x: 300, y: 100}": ขวาบน
+            "{x: 100, y: 300}": ซ้ายล่าง
+            "{x: 300, y: 300}": ขวาล่าง
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": สุ่ม
       Dancelab_makeNewDanceSprite:
         text: |-
           ทำใหม่ {COSTUME}
@@ -405,7 +478,7 @@ th:
             '"PINEAPPLE"': สับปะรดทั้งหมด
             '"ROBOT"': หุ่นยนต์ทั้งหมด
             '"SHARK"': ฉลามทั้งหมด
-            '"UNICORN"': ยูนิคอร์นทั้งหมด
+            '"UNICORN"': ยูนิคอร์น
           SPEED:
             '1': ธรรมดา
             '2': เร็ว
@@ -453,7 +526,6 @@ th:
             '"rotation"': การหมุน
             '"x"': อยู่ที่แกน X
             '"y"': อยู่ที่แกน Y
-            '"tint"': ระดับอ่อนสี
       Dancelab_setPropEach:
         text: กำหนด {GROUP} {PROPERTY} เป็น {VAL}
         options:
@@ -469,7 +541,17 @@ th:
             '"PINEAPPLE"': สับปะรดทั้งหมด
             '"ROBOT"': หุ่นยนต์ทั้งหมด
             '"SHARK"': ฉลามทั้งหมด
-            '"UNICORN"': ยูนิคอร์นทั้งหมด
+            '"UNICORN"': ยูนิคอร์น
+          PROPERTY:
+            '"scale"': ขนาด
+            '"width"': ความกว้าง
+            '"height"': ความสูง
+            '"rotation"': การหมุน
+            '"x"': ตำแหน่งแนวนอน
+            '"y"': ตำแหน่งแนวตั้ง
+      Dancelab_setPropRandom:
+        text: การสุ่ม {SPRITE} {PROPERTY}
+        options:
           PROPERTY:
             '"scale"': ขนาด
             '"width"': ความกว้าง
@@ -478,9 +560,21 @@ th:
             '"x"': ตำแหน่งแนวนอน
             '"y"': ตำแหน่งแนวตั้ง
             '"tint"': ระดับอ่อนสี
-      Dancelab_setPropRandom:
-        text: การสุ่ม {SPRITE} {PROPERTY}
+      Dancelab_setPropRandomEach:
         options:
+          GROUP:
+            sprites: ทั้งหมด
+            '"ALIEN"': มนุษย์ต่างดาวทั้งหมด
+            '"BEAR"': หมีทั้งหมด
+            '"CAT"': แมวทั้งหมด
+            '"DOG"': สุนัขทั้งหมด
+            '"DUCK"': เป็ดทั้งหมด
+            '"FROG"': กบทั้งหมด
+            '"MOOSE"': กวางมูสทั้งหมด
+            '"PINEAPPLE"': สับปะรดทั้งหมด
+            '"ROBOT"': หุ่นยนต์ทั้งหมด
+            '"SHARK"': ฉลามทั้งหมด
+            '"UNICORN"': ยูนิคอร์น
           PROPERTY:
             '"scale"': ขนาด
             '"width"': ความกว้าง
@@ -505,6 +599,22 @@ th:
             '"PINEAPPLE"': สับปะรดทั้งหมด
             '"ROBOT"': หุ่นยนต์ทั้งหมด
             '"SHARK"': ฉลามทั้งหมด
+            '"UNICORN"': ยูนิคอร์น
+      Dancelab_setTintEachInline:
+        options:
+          THIS:
+            sprites: ทั้งหมด
+            '"ALIEN"': มนุษย์ต่างดาวทั้งหมด
+            '"BEAR"': หมีทั้งหมด
+            '"CAT"': แมวทั้งหมด
+            '"DOG"': สุนัขทั้งหมด
+            '"DUCK"': เป็ดทั้งหมด
+            '"FROG"': กบทั้งหมด
+            '"MOOSE"': กวางมูสทั้งหมด
+            '"PINEAPPLE"': สับปะรดทั้งหมด
+            '"ROBOT"': หุ่นยนต์ทั้งหมด
+            '"SHARK"': ฉลามทั้งหมด
+            '"UNICORN"': ยูนิคอร์น
       Dancelab_setTintInline:
         text: กำหนด {SPRITE} ระดับอ่อนสีเป็น {VAL}
       Dancelab_setVisible:
@@ -528,7 +638,7 @@ th:
             '"PINEAPPLE"': สับปะรดทั้งหมด
             '"ROBOT"': หุ่นยนต์ทั้งหมด
             '"SHARK"': ฉลามทั้งหมด
-            '"UNICORN"': ยูนิคอร์นทั้งหมด
+            '"UNICORN"': ยูนิคอร์น
           VISIBILITY:
             'true': มองเห็นได้
             'false': มองไม่เห็น
@@ -547,6 +657,33 @@ th:
             '"bass"': เสียงต่ำ
             '"mid"': เสียงกลาง
             '"treble"': เสียงสูง
+      Dancelab_startMappingEach:
+        options:
+          GROUP:
+            sprites: ทั้งหมด
+            '"ALIEN"': มนุษย์ต่างดาวทั้งหมด
+            '"BEAR"': หมีทั้งหมด
+            '"CAT"': แมวทั้งหมด
+            '"DOG"': สุนัขทั้งหมด
+            '"DUCK"': เป็ดทั้งหมด
+            '"FROG"': กบทั้งหมด
+            '"MOOSE"': กวางมูสทั้งหมด
+            '"PINEAPPLE"': สับปะรดทั้งหมด
+            '"ROBOT"': หุ่นยนต์ทั้งหมด
+            '"SHARK"': ฉลามทั้งหมด
+            '"UNICORN"': ยูนิคอร์น
+          PROPERTY:
+            '"scale"': ขนาด
+            '"width"': ความกว้าง
+            '"height"': ความสูง
+            '"rotation"': การหมุน
+            '"x"': ตำแหน่งแนวนอน
+            '"y"': ตำแหน่งแนวตั้ง
+            '"tint"': ระดับอ่อนสี
+          RANGE:
+            '"bass"': เสียงต่ำ
+            '"mid"': เสียงกลาง
+            '"treble"': เสียงสูง
       Dancelab_stopMapping:
         text: "{SPRITE} หยุด {PROPERTY} หลังจาก {RANGE}"
         options:
@@ -556,6 +693,34 @@ th:
             '"height"': ความสูง
             '"rotation"': การหมุน
             '"x"': อยู่ที่แกน X
+            '"y"': ตำแหน่งแนวตั้ง
+            '"direction"': ทิศทางการเคลื่อนไหว
+            '"tint"': ระดับอ่อนสี
+          RANGE:
+            '"bass"': เสียงต่ำ
+            '"mid"': เสียงกลาง
+            '"treble"': เสียงสูง
+      Dancelab_stopMappingEach:
+        options:
+          GROUP:
+            sprites: ทั้งหมด
+            '"ALIEN"': มนุษย์ต่างดาวทั้งหมด
+            '"BEAR"': หมีทั้งหมด
+            '"CAT"': แมวทั้งหมด
+            '"DOG"': สุนัขทั้งหมด
+            '"DUCK"': เป็ดทั้งหมด
+            '"FROG"': กบทั้งหมด
+            '"MOOSE"': กวางมูสทั้งหมด
+            '"PINEAPPLE"': สับปะรดทั้งหมด
+            '"ROBOT"': หุ่นยนต์ทั้งหมด
+            '"SHARK"': ฉลามทั้งหมด
+            '"UNICORN"': ยูนิคอร์น
+          PROPERTY:
+            '"scale"': ขนาด
+            '"width"': ความกว้าง
+            '"height"': ความสูง
+            '"rotation"': การหมุน
+            '"x"': ตำแหน่งแนวนอน
             '"y"': ตำแหน่งแนวตั้ง
             '"direction"': ทิศทางการเคลื่อนไหว
             '"tint"': ระดับอ่อนสี
@@ -860,61 +1025,19 @@ th:
         text: หันขวา
       Vector_positionCenter:
         text: ตรงกลาง
-      aalab_changePropByFlexible:
-        text: เปลี่ยน {SPRITE} {PROPERTY} โดย {VAL}
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': ขนาด
-            '"rotation"': การหมุน
-            '"x"': ตามแนวแกนนอน
-            '"y"': ตามแนวแกนตั้ง
-            '"direction"': ทิศทางการเคลื่อนไหว
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': เมื่อ (สัมผัสกัน)
-            '"while"': ในขณะที่
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': เมื่อ (สัมผัสกัน)
-            '"while"': ในขณะที่
-      aalab_jumpTo:
-        text: "{SPRITE} ข้ามไปที่ {LOCATION}"
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': เมื่อ (สัมผัสกัน)
-            '"while"': ในขณะที่
-          KEY:
-            '"up"': ขึ้นข้างบน
-            '"down"': เป็นตำแหน่ง
-            '"left"': ซ้าย
-            '"right"': ขวา
-            '"space"': อวกาศ
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': เมือง
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': จริง
-            '"false"': เท็จ
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': ขนาด
-            '"rotation"': การหมุน
-            '"x"': ตามแนวแกนนอน
-            '"y"': ตามแนวแกนตั้ง
-            '"direction"': ทิศทางการเคลื่อนไหว
-            '"tint"': ระดับอ่อนสี
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': ตลอดกาล
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
         options:
           OPTION:
             '"show"': แสดง

@@ -210,6 +210,7 @@ mt:
     delete_text_teacher_note: 'Innota: Billi tħassar tal-kont tiegħek mhux se jħassar
       il-kontijiet ta'' l-istudenti tiegħek.'
     delete_confirm: Żgur tixtieq tħassar l'Account tiegħek?
+    update_email: Aggorna
   user_level:
     completed: Lesta
     tried: Ppruvat

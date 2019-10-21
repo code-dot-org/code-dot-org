@@ -29,6 +29,36 @@ hi-IN:
         CSDU6L10_rainbow: अपना कोड यहां जोड़ें।
       CSD U6 colorLeds intensity_2019:
         CSDU6L10_rainbow: अपना कोड यहां जोड़ें।
+      Course 4 Artist 4:
+        repeat_full_circle: पूरा चक्कर बनाने के लिए जितनी बार ज़ोम्बी को मूव करना
+          होगा, उसकी संख्या दर्ज करें
+      Course 4 Artist 7:
+        repeat_blocks: '"दोहराएं" ब्लॉक का उपयोग करें और इसे वर्कस्पेस में ब्लॉक्स
+          के चारों ओर मिलाएं'
+      Course 4 Artist For Loops 4:
+        place_counter_variable: अपनी काउंटर वेरिएबल को इस ब्लॉक के अंदर खींचें
+      Course 4 Artist Vars 1:
+        repeat_blocks: '"दोहराएं" ब्लॉक का उपयोग करें और इसे वर्कस्पेस में ब्लॉक्स
+          के चारों ओर मिलाएं'
+      Course 4 Artist Vars 12:
+        set_length: '"लम्बाई" को सही मूल्य पर सेट करने के लिए इस ब्लॉक का उपयोग करें।'
+      Course 4 Artist Vars 2:
+        set_length: '"लम्बाई" को सही मूल्य पर सेट करने के लिए इस ब्लॉक का उपयोग करें।'
+      Course 4 Artist Vars 6:
+        degrees_per_side: प्रत्येक कोण के आकार को डिग्रियों में प्राप्त करने के लिए
+          360 को भुजाओं की संख्या से भाग करें।
+      Course 4 Bee Params 2:
+        edit_get_nectar: फंक्शन को संपादित करने और उस दिशा को बदलने के लिए इस बटन
+          का उपयोग करें, जिस तरफ मधुमक्खी मधुरस प्राप्त करने के लिए मुड़ेगी।
+      Course 4 Maze 4:
+        repeat: दोहराएं कमांड्स के लिए लूप के अंदर ब्लॉक रखें
+      Course 4 Play Lab Params 3:
+        edit_function: अपना फंक्शन संपादित करने के लिए यहां क्लिक करें।
+      Course 4 Play Lab Params 6:
+        edit_add_parameter: अपने फंक्शन में मापदंड जोड़ने के लिए संपादित करें पर क्लिक
+          करें
+      Course 4 Play Lab Vars 1:
+        arrows_move_actor: अभिनेता को मूव करने के लिए तीरों का उपयोग करें
       CourseD_Dance_Party_01:
         dance_callout_01: यह ब्लॉक अपने प्रोग्राम में शामिल करें!
       CourseD_Dance_Party_02:
@@ -59,6 +89,34 @@ hi-IN:
         4-5_Artist_Patterns_Free_Play_1: अपने पसंदीदा ब्लॉकों के सभी अब श्रेणियों
           में आयोजित कर रहे हैं ।  इन शब्दों पर क्लिक करें देखने के लिए जहां सब कुछ
           चला गया!
+      Infinity_move_collide:
+        Infinity_move_collide_callout: जब यह इवेंट घटित हो तो ध्वनि प्ले करें।
+      Infinity_move_directions:
+        Infinity_move_directions_callout: जब ऊपर का तीर दबाया जाता है तो कौन-सा ब्लॉक
+          बेमैक्स को ऊपर मूव करेगा?
+        Infinity_move_directions_callout_arrow: अनुकरण करने के लिए इन तीरों का उपयोग
+          करें
+      Infinity_move_right:
+        Infinity_move_right_runbutton: यहां मूव करें ब्लॉक जोड़ें
+      Infinity_repeat:
+        Infinity_repeat_callout: यहां अंदर मूव करें ब्लॉक रखें
+      NEW Course 4 Artist Functions 7:
+        edit_function: अपना फंक्शन संपादित करने के लिए यहां क्लिक करें।
+      NEW Course 4 Artist Functions 8:
+        edit_function: अपना फंक्शन संपादित करने के लिए यहां क्लिक करें।
+      NEW Course 4 Artist Params 10:
+        create_function: '"फंक्शन्स" फ्लाइआउट खोलने के लिए यहां क्लिक करें, फिर "फंक्शन
+          बनाएं" बटन पर क्लिक करें।'
+      NEW Course 4 Artist Params 9:
+        edit_add_parameter: अपने फंक्शन में मापदंड जोड़ने के लिए संपादित करें पर क्लिक
+          करें
+        add_and_drag_parameter: यहां अपने मापदंड का नाम लिखें, जोड़ें पर क्लिक करें,
+          और फिर इसे अपनी फंक्शन परिभाषा में खींचें
+      NEW Course 4 Artist Vars 6:
+        place_length_variable: प्रश्नचिन्हों को बदलने के लिए यहां लम्बाई वेरिएबल खींचें
+      NEW Course 4 Bee For Loops 5:
+        actions_category: टूल बॉक्स नए रूप में आ गया है! "क्रियाएं" ब्लॉक्स अब यहां
+          हैं
       Overworld Chop Trees:
         craft_callout_preplaced: आपके द्वारा शुरूआत करने के लिए हमने यहाँ कुछ ब्लॉक
           रखे हैं
@@ -102,6 +160,9 @@ hi-IN:
           को चलता रखें।
         courseE_artist_functions_challenge2_callout2: यदि आपको यह डिज़ाइन पसंद नहीं
           है, तो इसे अपनी पसंद की किसी भी चीज़ में बदलें!
+      course3_playLab_challenge1:
+        courseC_PlayLab_events_challenge1_1: इस ब्लॉक से आप गेम स्थान के अलग-अलग हिस्सों
+          में अभिनेताओं को मूव कर सकते हैं।
       course4_artist_functions_challenge2:
         courseE_artist_functions_challenge2_callout1: नीचे और कोड जोड़कर इस प्रोग्राम
           को चलता रखें।
@@ -209,11 +270,89 @@ hi-IN:
       courseC19_playLab_EOC3:
         courseE_playLab_scaffold3_1: अगले स्तर तक मूव करने के लिए इस झंडे को अभिनेता
           के पास ले जाएं।
+      courseC_PlayLab_events8:
+        courseC_PlayLab_events8_callout1: इस ब्लॉक का उपयोग करें, जब वैड्डलेस और चॉम्प
+          छूते हैं!
+      courseC_PlayLab_events8_2018:
+        courseC_PlayLab_events8_callout1: इस ब्लॉक का उपयोग करें, जब वैड्डलेस और चॉम्प
+          छूते हैं!
+      courseC_PlayLab_events8_2019:
+        courseC_PlayLab_events8_callout1: इस ब्लॉक का उपयोग करें, जब वैड्डलेस और चॉम्प
+          छूते हैं!
+      courseC_PlayLab_events_challenge1:
+        courseC_PlayLab_events_challenge1_1: इस ब्लॉक से आप गेम स्थान के अलग-अलग हिस्सों
+          में अभिनेताओं को मूव कर सकते हैं।
+      courseC_PlayLab_events_challenge1_2018:
+        courseC_PlayLab_events_challenge1_1: इस ब्लॉक से आप गेम स्थान के अलग-अलग हिस्सों
+          में अभिनेताओं को मूव कर सकते हैं।
+      courseC_PlayLab_events_challenge1_2019:
+        courseC_PlayLab_events_challenge1_1: इस ब्लॉक से आप गेम स्थान के अलग-अलग हिस्सों
+          में अभिनेताओं को मूव कर सकते हैं।
+      courseC_artist_loopsPrePre1a:
+        courseC_artist_loopsPrePre1a_1: कलाकार को स्क्रीन के बीच में ले जाने के लिए
+          इस ब्लॉक का उपयोग करके शुरूआत करें।
+      courseC_artist_loopsPrePre1a_2018:
+        courseC_artist_loopsPrePre1a_1: कलाकार को स्क्रीन के बीच में ले जाने के लिए
+          इस ब्लॉक का उपयोग करके शुरूआत करें।
+      courseC_artist_loopsPrePre1a_2019:
+        courseC_artist_loopsPrePre1a_1: कलाकार को स्क्रीन के बीच में ले जाने के लिए
+          इस ब्लॉक का उपयोग करके शुरूआत करें।
       courseC_collector_prog1:
         courseC_collector_prog1_1: क्या आपको टूलबॉक्स में कुछ नए ब्लॉक दिखाई दे रहे
           हैं?  चिंता न करें, हम आपको बाद में दिखाएंगे कि उनका उपयोग कैसे करना है।
+      courseC_collector_prog7:
+        courseC_collector_prog7_1: यदि आपको जरूरत हो तो आप टूलबॉक्स में से और ब्लॉक्स
+          ले सकते हैं!
+      courseC_collector_prog7_2018:
+        courseC_collector_prog7_1: यदि आपको जरूरत हो तो आप टूलबॉक्स में से और ब्लॉक्स
+          ले सकते हैं!
+      courseC_collector_prog7_2019:
+        courseC_collector_prog7_1: यदि आपको जरूरत हो तो आप टूलबॉक्स में से और ब्लॉक्स
+          ले सकते हैं!
+      courseC_harvester_loops1:
+        courseC_harvester_loops1_callout1: कद्दू पर नंबर चार आपको बताता है कि लेने
+          के लिए चार कद्दू उपलब्ध हैं।
+      courseC_harvester_loops1_2018:
+        courseC_harvester_loops1_callout1: कद्दू पर नंबर चार आपको बताता है कि लेने
+          के लिए चार कद्दू उपलब्ध हैं।
+      courseC_harvester_loops1_2019:
+        courseC_harvester_loops1_callout1: कद्दू पर नंबर चार आपको बताता है कि लेने
+          के लिए चार कद्दू उपलब्ध हैं।
       courseC_maze_debugging5:
         courseC_maze_debugging5_1: स्लेटी ब्लॉक्स को मिटाया नहीं जा सकता!
+      courseC_maze_programming3:
+        courseC_maze_programming3_3: ये ब्लॉक्स पत्थर हैं और इन्हें फेंका नहीं जा
+          सकता।
+      courseC_maze_programming3_2018:
+        courseC_maze_programming3_3: ये ब्लॉक्स पत्थर हैं और इन्हें फेंका नहीं जा
+          सकता।
+      courseC_maze_programming3_2019:
+        courseC_maze_programming3_3: ये ब्लॉक्स पत्थर हैं और इन्हें फेंका नहीं जा
+          सकता।
+      courseC_maze_programming7:
+        courseC_maze_programming7_1: यह आपकी पहली चुनौती पहेली है! ये मुश्किल बनाई
+          गई हैं और इनके लिए कई बार प्रयास करने पड़ सकते हैं।
+        courseC_maze_programming7_2: ये ब्लॉक्स पत्थर से बने हैं और इन्हें फेंका नहीं
+          जा सकता।
+      courseC_maze_programming7_2018:
+        courseC_maze_programming7_1: यह आपकी पहली चुनौती पहेली है! ये मुश्किल बनाई
+          गई हैं और इनके लिए कई बार प्रयास करने पड़ सकते हैं।
+        courseC_maze_programming7_2: ये ब्लॉक्स पत्थर से बने हैं और इन्हें फेंका नहीं
+          जा सकता।
+      courseC_maze_programming7_2019:
+        courseC_maze_programming7_1: यह आपकी पहली चुनौती पहेली है! ये मुश्किल बनाई
+          गई हैं और इनके लिए कई बार प्रयास करने पड़ सकते हैं।
+        courseC_maze_programming7_2: ये ब्लॉक्स पत्थर से बने हैं और इन्हें फेंका नहीं
+          जा सकता।
+      courseC_starWars_loops2:
+        courseC_starWars_loops2: इस पहेली में आपके पास इन ब्लॉक्स में से केवल एक ब्लॉक
+          उपलब्ध है।
+      courseC_starWars_loops2_2018:
+        courseC_starWars_loops2: इस पहेली में आपके पास इन ब्लॉक्स में से केवल एक ब्लॉक
+          उपलब्ध है।
+      courseC_starWars_loops2_2019:
+        courseC_starWars_loops2: इस पहेली में आपके पास इन ब्लॉक्स में से केवल एक ब्लॉक
+          उपलब्ध है।
       courseD_artist_nestedLoops1a:
         courseD_artist_nestedLoops1a_1: इस पहेली को सही करने के लिए आपको रंगों का
           उपयोग करने की जरूरत नहीं है। यदि आप करना चाहते हैं, तो यह `बेतरतीब रंग`
@@ -226,6 +365,10 @@ hi-IN:
         courseD_artist_nestedLoops1a_1: इस पहेली को सही करने के लिए आपको रंगों का
           उपयोग करने की जरूरत नहीं है। यदि आप करना चाहते हैं, तो यह `बेतरतीब रंग`
           ब्लॉक इसे आसान बनाता है!
+      courseD_artist_ramp11:
+        courseD_artist_ramp11_1: आप यह संख्या बदल सकते हैं।
+        courseD_artist_ramp11_2: अपने कोड को दोहराने की संख्या टाइप करने के लिए यहां
+          क्लिक करें।
       courseD_bee_conditionals2:
         4_5_Bee_Conditionals_2_1: याद रखें, यह देखने के लिए जांचें कि क्या प्रत्येक
           बादल में फ्लोअर है या नहीं। आपको हनीकॉम की जांच करने की ज़रूरत नहीं है।
@@ -261,6 +404,9 @@ hi-IN:
         courseD_playLab_condFP_1: हमने आपको खेलने के लिए और कोड देने हेतु ब्लॉक्स
           को श्रेणियों में व्यवस्थित किया है!  यह देखने के लिए यहां क्लिक करें कि
           सब कुछ कहां गया।
+      courseD_scrat_ramp8:
+        courseD_maze_ramp7_1: यह आपकी पहली चुनौती पहेली है! ये मुश्किल बनाई गई हैं
+          और इनके लिए कई बार प्रयास करने पड़ सकते हैं।
       courseE_artist_functions1:
         courseD_artist_functions1_1: आइए पहले वर्ग बनाने में मदद के लिए इस ब्लॉक का
           उपयोग करके शुरुआत करें।
@@ -312,6 +458,14 @@ hi-IN:
           को चलता रखें।
         courseE_artist_functions_challenge2_callout2: यदि आपको यह डिज़ाइन पसंद नहीं
           है, तो इसे अपनी पसंद की किसी भी चीज़ में बदलें!
+      courseE_artist_ramp8:
+        courseE_artist_ramp8_1: आप यह संख्या बदल सकते हैं।
+        courseE_artist_ramp8_2: अपने कोड को दोहराने की संख्या टाइप करने के लिए यहां
+          क्लिक करें।
+      courseE_artist_ramp8_2:
+        courseE_artist_ramp8_1: आप यह संख्या बदल सकते हैं।
+        courseE_artist_ramp8_2: अपने कोड को दोहराने की संख्या टाइप करने के लिए यहां
+          क्लिक करें।
       courseE_farmer_functions1:
         courseE_farmer_functions1_2: इस समय टूलबॉक्स थोड़ा अलग तरह से व्यवस्थित किया
           गया है! यह देखने के लिए विभिन्न श्रेणियों पर क्लिक करें कि आपके पास कौन-से
@@ -348,6 +502,47 @@ hi-IN:
       courseE_farmer_functions2b_2019:
         courseE_farmer_functions1a_1: यह सब्जी अज्ञात है।  जब भी आप प्रोग्राम चलाते
           हैं, यह हर बार बदल जाती है।
+      courseE_playLab_challenge1:
+        courseC_PlayLab_events_challenge1_1: इस ब्लॉक से आप गेम स्थान के अलग-अलग हिस्सों
+          में अभिनेताओं को मूव कर सकते हैं।
       courseE_playLab_scaffold3:
         courseE_playLab_scaffold3_1: अगले स्तर तक मूव करने के लिए इस झंडे को अभिनेता
           के पास ले जाएं।
+      frozen circle function with parameter:
+        frozen_circle_function_with_parameter_circle: '"चक्कर बनाएं" ब्लॉक का उपयोग
+          करें और आकार बदलें।'
+      frozen cross:
+        repeat_blocks_1: "(1) इस ब्लॉक का उपयोग करें और इसे वर्कस्पेस में स्लेटी ब्लॉक्स
+          के चारों ओर रखें"
+        repeat_blocks_2: (2) यहां "दोहराएं" ब्लॉक मूव करें, और अंदर स्लेटी ब्लॉक्स
+          रखें
+      frozen cross rotate:
+        replace_questions_degree: “???" को एक संख्या से बदलने के लिए ड्रॉप-डाउन का
+          उपयोग करें
+      frozen diamond:
+        frozen_diamond_repeat: यह आकृति बनाने के लिए दोहराएं ब्लॉक का उपयोग करें।
+      frozen diamond snowflake:
+        frozen_diamond_repeat: यह आकृति बनाने के लिए दोहराएं ब्लॉक का उपयोग करें।
+      frozen freeplay:
+        snowflake_dropdown: अलग-अलग हिम-पक्षी बनाने के लिए इस ड्रॉप-डाउन मेन्यु का
+          उपयोग करें!
+      frozen line:
+        move_elsa_forward: एल्सा को आगे की ओर मूव करने के लिए सक्रिय करने हेतु “आगे
+          की ओर मूव करें” ब्लॉक को खींचें और इसे "जब चलाया जाए" ब्लॉक  के नीचे जोड़ें
+      frozen perpendicular:
+        turn_elsa: एल्सा को मुड़ने के लिए सक्रिय करने हेतु "मुड़ें" ब्लॉक का उपयोग
+          करें। ड्रॉप-डाउन मेन्यु में संख्या यह निर्धारित करती है कि एल्सा कितना मुड़ती
+          है
+      frozen snowflake branch:
+        frozen_snowflake_branch: '"हिम-पक्षी ब्रांच बनाएं" ब्लॉक का उपयोग करें'
+      frozen square iterative:
+        frozen_create_square: वर्ग बनाने के लिए यहां और ब्लॉक्स जोड़ें
+      frozen square loop:
+        replace_questions: “???" को एक संख्या से बदलने के लिए ड्रॉप-डाउन का उपयोग
+          करें
+      frozen square loop 3x:
+        replace_questions: “???" को एक संख्या से बदलने के लिए ड्रॉप-डाउन का उपयोग
+          करें
+      frozen square snowflake:
+        replace_questions: “???" को एक संख्या से बदलने के लिए ड्रॉप-डाउन का उपयोग
+          करें

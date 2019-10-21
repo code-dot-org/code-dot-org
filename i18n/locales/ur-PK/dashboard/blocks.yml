@@ -38,12 +38,26 @@ ur:
         options:
           LOCATION:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": بےترتیب
+      Dancelab_jumpToEach:
+        options:
+          LOCATION:
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": بےترتیب
       Dancelab_layoutSprites:
         options:
           FORMAT:
             '"random"': بےترتیب
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': اجنبی(Alien)
+            '"CAT"': بلی
+          LOCATION:
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": بےترتیب
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': اجنبی(Alien)
+            '"CAT"': بلی
           LOCATION:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": بےترتیب
       Dancelab_makeNewDanceSpriteGroup:
@@ -180,36 +194,18 @@ ur:
         text: بائیں طرف مڑیں
       RyanLab_turnRight:
         text: دائیں طرف مڑیں
-      aalab_checkTouching:
+      aalab_goToScene:
         options:
-          CONDITION:
-            '"when"': کب
-            '"while"': جب تک
-      aalab_clickedOn:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': کب
-            '"while"': جب تک
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': کب
-            '"while"': جب تک
-          KEY:
-            '"space"': خلاء
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': شہر
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': 'True'
-            '"false"': غلط
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': ہمیشہ کے لئے
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
       binary_whenKey:
         options:
           KEY:

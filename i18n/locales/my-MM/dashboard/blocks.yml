@@ -18,6 +18,10 @@ my:
           DIR:
             '1': "→"
             "-1": "←"
+      Dancelab_changePropEachBy:
+        options:
+          GROUP:
+            sprites: အားလုံး
       Dancelab_doMoveEachLR:
         options:
           GROUP:
@@ -38,6 +42,10 @@ my:
         options:
           DANCE:
             MOVES.Rest: ဘာမှမရှိ
+      Dancelab_jumpToEach:
+        options:
+          GROUP:
+            sprites: အားလုံး
       Dancelab_layoutSprites:
         options:
           GROUP:
@@ -104,13 +112,29 @@ my:
         options:
           GROUP:
             sprites: အားလုံး
+      Dancelab_setPropRandomEach:
+        options:
+          GROUP:
+            sprites: အားလုံး
       Dancelab_setTintEach:
+        options:
+          THIS:
+            sprites: အားလုံး
+      Dancelab_setTintEachInline:
         options:
           THIS:
             sprites: အားလုံး
       Dancelab_setVisibleEach:
         options:
           THIS:
+            sprites: အားလုံး
+      Dancelab_startMappingEach:
+        options:
+          GROUP:
+            sprites: အားလုံး
+      Dancelab_stopMappingEach:
+        options:
+          GROUP:
             sprites: အားလုံး
       Dancelab_whenKey:
         options:
@@ -172,27 +196,18 @@ my:
             MOVES.Rest: ဘာမှမရှိ
       Mikelab_randomColor:
         text: ကျဘန်းအရောင်
-      aalab_checkTouching:
+      aalab_goToScene:
         options:
-          CONDITION:
-            '"when"': အချိန်
-      aalab_clickedOn:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': အချိန်
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': အချိန်
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': 'true'
-            '"false"': 'false'
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': အမြဲတမ်​း
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
       craft_ifPath:
         options:
           DIR:

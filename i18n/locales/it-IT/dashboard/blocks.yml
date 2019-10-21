@@ -82,6 +82,28 @@ it:
             '"rotation"': rotazione
             '"x"': posizione orizzontale
             '"y"': posizione verticale
+      Dancelab_changePropEachBy:
+        options:
+          GROUP:
+            sprites: tutto
+            '"ALIEN"': tutti gli alieni
+            '"BEAR"': tutti gli orsi
+            '"CAT"': tutti i gatti
+            '"DOG"': tutti i cani
+            '"DUCK"': tutti i paperi
+            '"FROG"': tutti i ranocchi
+            '"MOOSE"': tutte le alci
+            '"PINEAPPLE"': tutti gli ananas
+            '"ROBOT"': tutti i robot
+            '"SHARK"': tutti gli squali
+            '"UNICORN"': Unicorni
+          PROPERTY:
+            '"scale"': dimensione
+            '"width"': larghezza
+            '"height"': altezza
+            '"rotation"': rotazione
+            '"x"': posizione orizzontale
+            '"y"': posizione verticale
       Dancelab_doMoveEachLR:
         text: "{GROUP} eseguono la mossa {MOVE} {DIR} una volta"
         options:
@@ -97,7 +119,7 @@ it:
             '"PINEAPPLE"': tutti gli ananas
             '"ROBOT"': tutti i robot
             '"SHARK"': tutti gli squali
-            '"UNICORN"': tutti gli unicorni
+            '"UNICORN"': Unicorni
           MOVE:
             '"rand"': "(Casuale)"
             MOVES.XBend: Butta dietro
@@ -245,6 +267,32 @@ it:
             "{x: 100, y: 300}": in basso a sinistra
             "{x: 300, y: 300}": in basso a destra
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": in un punto casuale
+      Dancelab_jumpToEach:
+        options:
+          GROUP:
+            sprites: tutto
+            '"ALIEN"': tutti gli alieni
+            '"BEAR"': tutti gli orsi
+            '"CAT"': tutti i gatti
+            '"DOG"': tutti i cani
+            '"DUCK"': tutti i paperi
+            '"FROG"': tutti i ranocchi
+            '"MOOSE"': tutte le alci
+            '"PINEAPPLE"': tutti gli ananas
+            '"ROBOT"': tutti i robot
+            '"SHARK"': tutti gli squali
+            '"UNICORN"': Unicorni
+          LOCATION:
+            "{x: 200, y: 100}": in alto
+            "{x: 200, y: 300}": in basso
+            "{x: 100, y: 200}": a sinistra
+            "{x: 300, y: 200}": a destra
+            "{x: 200, y: 200}": al centro
+            "{x: 100, y: 100}": in alto a sinistra
+            "{x: 300, y: 100}": in alto a destra
+            "{x: 100, y: 300}": in basso a sinistra
+            "{x: 300, y: 300}": in basso a destra
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": a caso
       Dancelab_layoutSprites:
         text: disponi {GROUP} in {FORMAT}
         options:
@@ -260,7 +308,7 @@ it:
             '"PINEAPPLE"': tutti gli ananas
             '"ROBOT"': tutti i robot
             '"SHARK"': tutti gli squali
-            '"UNICORN"': tutti gli unicorni
+            '"UNICORN"': Unicorni
           FORMAT:
             '"border"': bordo
             '"inner"': quadrato interno
@@ -271,6 +319,34 @@ it:
             '"x"': croce
             '"plus"': più
             '"random"': a caso
+      Dancelab_makeAnonymousDanceSprite:
+        text: |-
+          crea un nuovo {COSTUME}
+          in {LOCATION}
+        options:
+          COSTUME:
+            '"ALIEN"': alieno
+            '"BEAR"': Orso
+            '"CAT"': gatto
+            '"DOG"': cane
+            '"DUCK"': un'anatra
+            '"FROG"': Ranocchio
+            '"MOOSE"': tutte le alci
+            '"PINEAPPLE"': Ananas
+            '"ROBOT"': robot
+            '"SHARK"': Squalo
+            '"UNICORN"': unicorno
+          LOCATION:
+            "{x: 200, y: 100}": in alto
+            "{x: 200, y: 300}": in basso
+            "{x: 100, y: 200}": a sinistra
+            "{x: 300, y: 200}": a destra
+            "{x: 200, y: 200}": al centro
+            "{x: 100, y: 100}": in alto a sinistra
+            "{x: 300, y: 100}": in alto a destra
+            "{x: 100, y: 300}": in basso a sinistra
+            "{x: 300, y: 300}": in basso a destra
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": a caso
       Dancelab_makeNewDanceSprite:
         text: |-
           crea un nuovo {COSTUME}
@@ -449,7 +525,7 @@ it:
             '"PINEAPPLE"': tutti gli ananas
             '"ROBOT"': tutti i robot
             '"SHARK"': tutti gli squali
-            '"UNICORN"': tutti gli unicorni
+            '"UNICORN"': Unicorni
           SPEED:
             '1': normale
             '2': veloce
@@ -503,7 +579,6 @@ it:
             '"rotation"': rotazione
             '"x"': posizione orizzontale
             '"y"': posizione verticale
-            '"tint"': tonalità
       Dancelab_setPropEach:
         text: imposta la {PROPERTY} di {GROUP} a {VAL}
         options:
@@ -519,7 +594,17 @@ it:
             '"PINEAPPLE"': tutti gli ananas
             '"ROBOT"': tutti i robot
             '"SHARK"': tutti gli squali
-            '"UNICORN"': tutti gli unicorni
+            '"UNICORN"': Unicorni
+          PROPERTY:
+            '"scale"': dimensione
+            '"width"': larghezza
+            '"height"': altezza
+            '"rotation"': rotazione
+            '"x"': posizione orizzontale
+            '"y"': posizione verticale
+      Dancelab_setPropRandom:
+        text: modifica a caso la {PROPERTY} di {SPRITE}
+        options:
           PROPERTY:
             '"scale"': dimensione
             '"width"': larghezza
@@ -528,9 +613,21 @@ it:
             '"x"': posizione orizzontale
             '"y"': posizione verticale
             '"tint"': tonalità
-      Dancelab_setPropRandom:
-        text: modifica a caso la {PROPERTY} di {SPRITE}
+      Dancelab_setPropRandomEach:
         options:
+          GROUP:
+            sprites: tutto
+            '"ALIEN"': tutti gli alieni
+            '"BEAR"': tutti gli orsi
+            '"CAT"': tutti i gatti
+            '"DOG"': tutti i cani
+            '"DUCK"': tutti i paperi
+            '"FROG"': tutti i ranocchi
+            '"MOOSE"': tutte le alci
+            '"PINEAPPLE"': tutti gli ananas
+            '"ROBOT"': tutti i robot
+            '"SHARK"': tutti gli squali
+            '"UNICORN"': Unicorni
           PROPERTY:
             '"scale"': dimensione
             '"width"': larghezza
@@ -556,6 +653,23 @@ it:
             '"PINEAPPLE"': tutti gli ananas
             '"ROBOT"': tutti i robot
             '"SHARK"': tutti gli squali
+            '"UNICORN"': Unicorni
+      Dancelab_setTintEachInline:
+        text: imposta la tonalità di {THIS} a {VAL}
+        options:
+          THIS:
+            sprites: tutto
+            '"ALIEN"': tutti gli alieni
+            '"BEAR"': tutti gli orsi
+            '"CAT"': tutti i gatti
+            '"DOG"': tutti i cani
+            '"DUCK"': tutti i paperi
+            '"FROG"': tutti i ranocchi
+            '"MOOSE"': tutte le alci
+            '"PINEAPPLE"': tutti gli ananas
+            '"ROBOT"': tutti i robot
+            '"SHARK"': tutti gli squali
+            '"UNICORN"': Unicorni
       Dancelab_setTintInline:
         text: imposta la tonalità di {SPRITE} a {VAL}
       Dancelab_setVisible:
@@ -579,13 +693,40 @@ it:
             '"PINEAPPLE"': tutti gli ananas
             '"ROBOT"': tutti i robot
             '"SHARK"': tutti gli squali
-            '"UNICORN"': tutti gli unicorni
+            '"UNICORN"': Unicorni
           VISIBILITY:
             'true': visibile
             'false': invisibile
       Dancelab_startMapping:
         text: "{SPRITE} inizia a modificare la {PROPERTY} seguendo i {RANGE}"
         options:
+          PROPERTY:
+            '"scale"': dimensione
+            '"width"': larghezza
+            '"height"': altezza
+            '"rotation"': rotazione
+            '"x"': posizione orizzontale
+            '"y"': posizione verticale
+            '"tint"': tonalità
+          RANGE:
+            '"bass"': toni bassi
+            '"mid"': toni medi
+            '"treble"': toni acuti
+      Dancelab_startMappingEach:
+        options:
+          GROUP:
+            sprites: tutto
+            '"ALIEN"': tutti gli alieni
+            '"BEAR"': tutti gli orsi
+            '"CAT"': tutti i gatti
+            '"DOG"': tutti i cani
+            '"DUCK"': tutti i paperi
+            '"FROG"': tutti i ranocchi
+            '"MOOSE"': tutte le alci
+            '"PINEAPPLE"': tutti gli ananas
+            '"ROBOT"': tutti i robot
+            '"SHARK"': tutti gli squali
+            '"UNICORN"': Unicorni
           PROPERTY:
             '"scale"': dimensione
             '"width"': larghezza
@@ -608,6 +749,34 @@ it:
             '"rotation"': rotazione
             '"x"': posizione orizzontale
             '"y"': posizione in verticale
+            '"direction"': direzione del movimento
+            '"tint"': tonalità
+          RANGE:
+            '"bass"': toni bassi
+            '"mid"': toni medi
+            '"treble"': toni acuti
+      Dancelab_stopMappingEach:
+        options:
+          GROUP:
+            sprites: tutto
+            '"ALIEN"': tutti gli alieni
+            '"BEAR"': tutti gli orsi
+            '"CAT"': tutti i gatti
+            '"DOG"': tutti i cani
+            '"DUCK"': tutti i paperi
+            '"FROG"': tutti i ranocchi
+            '"MOOSE"': tutte le alci
+            '"PINEAPPLE"': tutti gli ananas
+            '"ROBOT"': tutti i robot
+            '"SHARK"': tutti gli squali
+            '"UNICORN"': Unicorni
+          PROPERTY:
+            '"scale"': dimensione
+            '"width"': larghezza
+            '"height"': altezza
+            '"rotation"': rotazione
+            '"x"': posizione orizzontale
+            '"y"': posizione verticale
             '"direction"': direzione del movimento
             '"tint"': tonalità
           RANGE:
@@ -1193,135 +1362,23 @@ it:
             "'shapeColor'": colore
       aalab_addBehaviorForDuration:
         text: personaggio aalab {SPRITE} inizia {BEHAVIOR} per {SECONDS} secondi
-      aalab_addBehaviorSimpleFlexible:
-        text: personaggio aalab {SPRITE} inizia {BEHAVIOR}
       aalab_addBehaviorUntilBoolean:
         text: il personaggio {SPRITE} inizia {BEHAVIOR} fino a che {CONDITION}
-      aalab_addToSpriteGroup:
-        text: aggiungi il personaggio {SPRITE} al gruppo {GROUP}
-      aalab_allSpritesWithAnimation:
-        text: "{ANIMATION}"
-      aalab_changePropByFlexible:
-        text: modifica la {PROPERTY} di {SPRITE} di {VAL}
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': dimensione
-            '"rotation"': rotazione
-            '"x"': posizione x
-            '"y"': posizione y
-            '"direction"': direzione del movimento
-      aalab_checkTouching:
-        text: "{CONDITION} {SPRITE1} tocca {SPRITE2}"
-        options:
-          CONDITION:
-            '"when"': quando
-            '"while"': mentre
-      aalab_clickedOn:
-        text: "{CONDITION} {SPRITE} cliccato"
-        options:
-          CONDITION:
-            '"when"': quando
-            '"while"': mentre
-      aalab_createNewSprite:
-        text: "aalab fa un nuovo personaggio \n chiamato {NAME} \n con costume {COSTUME} \n a {LOCATION}"
-      aalab_createNewSpriteAdvanced:
-        text: "crea un nuovo personaggio chiamato {NAME} \n con il costume {COSTUME} \n alla posizione {LOCATION}"
-      aalab_createNewSpriteAnon:
-        text: crea un nuovo personaggio {ANIMATION_NAME} alla posizione {LOCATION}
-      aalab_createNewSpriteAnonReturn:
-        text: aalab fa nuova {ANIMATION_NAME} personaggio a {LOCATION}
-      aalab_createPropertyGroup:
-        text: crea un nuovo gruppo di personaggi chiamato {VAR} tutto composto da {COSTUME}
-      aalab_createSpriteGroup:
-        text: crea un nuovo gruppo di personaggi chiamato {VAR}
-      aalab_getSpritesByName:
-        text: ogni personaggio denominato {NAME}
-      aalab_getThisSprite:
-        text: "{CHOICE} personaggio"
-        options:
-          CHOICE:
-            '"this"': questo
-            '"other"': altro
-      aalab_jumpTo:
-        text: "{SPRITE} salta {LOCATION}"
-      aalab_keyPressed:
-        text: "{CONDITION} {KEY} premuto"
-        options:
-          CONDITION:
-            '"when"': quando
-            '"while"': mentre
-          KEY:
-            '"up"': in alto
-            '"down"': in basso
-            '"left"': a sinistra
-            '"right"': a destra
-            '"space"': spazio
-      aalab_locationOf:
-        text: posizione aalab di {SPRITE}
-      aalab_location_picker:
-        text: "{LOCATION}"
-      aalab_moveForward:
-        text: sposta aalab {SPRITE} {DISTANCE} pixel via
-      aalab_moveInDirection:
-        text: sposta aalab {SPRITE} {DISTANCE} pixel {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': Nord
-            '"East"': Est
-            '"South"': Sud
-            '"West"': Ovest
-      aalab_moveToward:
-        text: aalab sposta {SPRITE} distanza {DISTANCE} verso {TARGET}
-      aalab_nameStringSay:
-        text: "{NAMESTRING} dice {MESSAGE}"
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
       aalab_prompt:
         text: chiedi domanda {MESSAGE}
-      aalab_randomLocation:
-        text: posizione casuale
-      aalab_removeOneAndAll:
-        text: elimina {THIS}
-      aalab_setBG:
+      aalab_scene:
         options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': città
-      aalab_setCollidable:
-        text: aalab imposta {SPRITE} collida a {VAL}
-        options:
-          VAL:
-            '"true"': vero
-            '"false"': falso
-      aalab_setDirection:
-        text: aalab imposta {SPRITE} direzione movimento {DIRECTION}
-      aalab_setProp:
-        text: aalab imposta {SPRITE} {PROPERTY} a {VAL}
-        options:
-          PROPERTY:
-            '"scale"': dimensione
-            '"rotation"': rotazione
-            '"x"': posizione x
-            '"y"': posizione y
-            '"direction"': direzione del movimento
-            '"tint"': tonalità
-      aalab_setSpriteVariable:
-        text: aalab imposta {VARIABLE} a {SPRITE}
-      aalab_showCustomText:
-        text: mostra testo {TEXT}posizione{LOCATION}dimensione{SIZE}colore{COLOR}durata{DURATION}
-        options:
-          DURATION:
-            '"1"': 1 secondo
-            '"2"': 2 secondi
-            '"3"': 3 secondi
-            '"4"': 4 secondi
-            '"5"': 5 secondi
-            '"0"': per sempre
-      aalab_showSpriteLabel:
-        text: mostra etichetta{TEXT} {LOCATION} personaggio{SPRITE}
-      aalab_speakerSaysConsole:
-        text: "{SPRITE} dice {MESSAGE}"
-      aalab_spriteSay:
-        text: personaggio {SPRITE} dice {TEXT} per {SECONDS} secondi
-      aalab_toggleHideCustomText:
-        text: "{OPTION} testo personalizzato"
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
         options:
           OPTION:
             '"show"': mostra

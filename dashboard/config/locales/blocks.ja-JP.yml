@@ -80,6 +80,28 @@ ja:
             '"rotation"': 回転
             '"x"': 水平方向の位置
             '"y"': 垂直方向の位置
+      Dancelab_changePropEachBy:
+        options:
+          GROUP:
+            sprites: すべて
+            '"ALIEN"': すべてのエイリアン
+            '"BEAR"': すべてのクマ
+            '"CAT"': すべてのネコ
+            '"DOG"': すべてのイヌ
+            '"DUCK"': すべてのアヒル
+            '"FROG"': すべてのカエル
+            '"MOOSE"': すべてのムース
+            '"PINEAPPLE"': すべてのパイナップル
+            '"ROBOT"': すべてのロボット
+            '"SHARK"': すべてのサメ
+            '"UNICORN"': ユニコーン
+          PROPERTY:
+            '"scale"': 大きさ
+            '"width"': 幅
+            '"height"': 高さ
+            '"rotation"': 回転
+            '"x"': 水平方向の位置
+            '"y"': 垂直方向の位置
       Dancelab_doMoveEachLR:
         text: "{GROUP} で実行 {MOVE} {DIR} いちどだけ"
         options:
@@ -95,7 +117,7 @@ ja:
             '"PINEAPPLE"': すべてのパイナップル
             '"ROBOT"': すべてのロボット
             '"SHARK"': すべてのサメ
-            '"UNICORN"': ユニコーンだらけ
+            '"UNICORN"': ユニコーン
           MOVE:
             '"rand"': "(ランダム)"
             MOVES.Roll: ボディロール
@@ -208,6 +230,32 @@ ja:
             "{x: 100, y: 300}": 左下
             "{x: 300, y: 300}": 右下
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ランダム に
+      Dancelab_jumpToEach:
+        options:
+          GROUP:
+            sprites: すべて
+            '"ALIEN"': すべてのエイリアン
+            '"BEAR"': すべてのクマ
+            '"CAT"': すべてのネコ
+            '"DOG"': すべてのイヌ
+            '"DUCK"': すべてのアヒル
+            '"FROG"': すべてのカエル
+            '"MOOSE"': すべてのムース
+            '"PINEAPPLE"': すべてのパイナップル
+            '"ROBOT"': すべてのロボット
+            '"SHARK"': すべてのサメ
+            '"UNICORN"': ユニコーン
+          LOCATION:
+            "{x: 200, y: 100}": 上
+            "{x: 200, y: 300}": 下
+            "{x: 100, y: 200}": 左 に
+            "{x: 300, y: 200}": 右 に
+            "{x: 200, y: 200}": 中央
+            "{x: 100, y: 100}": 左上
+            "{x: 300, y: 100}": 右上
+            "{x: 100, y: 300}": 左下
+            "{x: 300, y: 300}": 右下
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": ランダム に
       Dancelab_layoutSprites:
         text: "{GROUP} を {FORMAT} にレイアウト"
         options:
@@ -223,7 +271,7 @@ ja:
             '"PINEAPPLE"': すべてのパイナップル
             '"ROBOT"': すべてのロボット
             '"SHARK"': すべてのサメ
-            '"UNICORN"': ユニコーンだらけ
+            '"UNICORN"': ユニコーン
           FORMAT:
             '"border"': 境界
             '"inner"': 四角の中
@@ -234,6 +282,31 @@ ja:
             '"x"': 十字
             '"plus"': プラス
             '"random"': ランダム に
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': エイリアン
+            '"BEAR"': クマ
+            '"CAT"': ねこ
+            '"DOG"': 犬
+            '"DUCK"': アヒル
+            '"FROG"': カエル
+            '"MOOSE"': すべてのムース
+            '"PINEAPPLE"': パイナップル
+            '"ROBOT"': ロボット
+            '"SHARK"': サメ
+            '"UNICORN"': ユニコーン
+          LOCATION:
+            "{x: 200, y: 100}": 上
+            "{x: 200, y: 300}": 下
+            "{x: 100, y: 200}": 左 に
+            "{x: 300, y: 200}": 右 に
+            "{x: 200, y: 200}": 中央
+            "{x: 100, y: 100}": 左上
+            "{x: 300, y: 100}": 右上
+            "{x: 100, y: 300}": 左下
+            "{x: 300, y: 300}": 右下
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ランダム に
       Dancelab_makeNewDanceSprite:
         text: |-
           {COSTUME} を新しくつくる
@@ -405,7 +478,7 @@ ja:
             '"PINEAPPLE"': すべてのパイナップル
             '"ROBOT"': すべてのロボット
             '"SHARK"': すべてのサメ
-            '"UNICORN"': ユニコーンだらけ
+            '"UNICORN"': ユニコーン
           SPEED:
             '1': ノーマル
             '2': はやい
@@ -453,7 +526,6 @@ ja:
             '"rotation"': 回転
             '"x"': 水平方向の位置
             '"y"': 垂直方向の位置
-            '"tint"': 色合い
       Dancelab_setPropEach:
         text: "{GROUP} {PROPERTY} を {VAL} にセット"
         options:
@@ -469,7 +541,17 @@ ja:
             '"PINEAPPLE"': すべてのパイナップル
             '"ROBOT"': すべてのロボット
             '"SHARK"': すべてのサメ
-            '"UNICORN"': ユニコーンだらけ
+            '"UNICORN"': ユニコーン
+          PROPERTY:
+            '"scale"': 大きさ
+            '"width"': 幅
+            '"height"': 高さ
+            '"rotation"': 回転
+            '"x"': 水平方向の位置
+            '"y"': 垂直方向の位置
+      Dancelab_setPropRandom:
+        text: ランダムにする {SPRITE} {PROPERTY}
+        options:
           PROPERTY:
             '"scale"': 大きさ
             '"width"': 幅
@@ -478,9 +560,21 @@ ja:
             '"x"': 水平方向の位置
             '"y"': 垂直方向の位置
             '"tint"': 色合い
-      Dancelab_setPropRandom:
-        text: ランダムにする {SPRITE} {PROPERTY}
+      Dancelab_setPropRandomEach:
         options:
+          GROUP:
+            sprites: すべて
+            '"ALIEN"': すべてのエイリアン
+            '"BEAR"': すべてのクマ
+            '"CAT"': すべてのネコ
+            '"DOG"': すべてのイヌ
+            '"DUCK"': すべてのアヒル
+            '"FROG"': すべてのカエル
+            '"MOOSE"': すべてのムース
+            '"PINEAPPLE"': すべてのパイナップル
+            '"ROBOT"': すべてのロボット
+            '"SHARK"': すべてのサメ
+            '"UNICORN"': ユニコーン
           PROPERTY:
             '"scale"': 大きさ
             '"width"': 幅
@@ -505,6 +599,22 @@ ja:
             '"PINEAPPLE"': すべてのパイナップル
             '"ROBOT"': すべてのロボット
             '"SHARK"': すべてのサメ
+            '"UNICORN"': ユニコーン
+      Dancelab_setTintEachInline:
+        options:
+          THIS:
+            sprites: すべて
+            '"ALIEN"': すべてのエイリアン
+            '"BEAR"': すべてのクマ
+            '"CAT"': すべてのネコ
+            '"DOG"': すべてのイヌ
+            '"DUCK"': すべてのアヒル
+            '"FROG"': すべてのカエル
+            '"MOOSE"': すべてのムース
+            '"PINEAPPLE"': すべてのパイナップル
+            '"ROBOT"': すべてのロボット
+            '"SHARK"': すべてのサメ
+            '"UNICORN"': ユニコーン
       Dancelab_setTintInline:
         text: "{SPRITE} の色合いを {VAL} にセット"
       Dancelab_setVisible:
@@ -528,7 +638,7 @@ ja:
             '"PINEAPPLE"': すべてのパイナップル
             '"ROBOT"': すべてのロボット
             '"SHARK"': すべてのサメ
-            '"UNICORN"': ユニコーンだらけ
+            '"UNICORN"': ユニコーン
           VISIBILITY:
             'true': 見える
             'false': 見えない
@@ -547,9 +657,64 @@ ja:
             '"bass"': ベース
             '"mid"': ミドル
             '"treble"': トレブル
+      Dancelab_startMappingEach:
+        options:
+          GROUP:
+            sprites: すべて
+            '"ALIEN"': すべてのエイリアン
+            '"BEAR"': すべてのクマ
+            '"CAT"': すべてのネコ
+            '"DOG"': すべてのイヌ
+            '"DUCK"': すべてのアヒル
+            '"FROG"': すべてのカエル
+            '"MOOSE"': すべてのムース
+            '"PINEAPPLE"': すべてのパイナップル
+            '"ROBOT"': すべてのロボット
+            '"SHARK"': すべてのサメ
+            '"UNICORN"': ユニコーン
+          PROPERTY:
+            '"scale"': 大きさ
+            '"width"': 幅
+            '"height"': 高さ
+            '"rotation"': 回転
+            '"x"': 水平方向の位置
+            '"y"': 垂直方向の位置
+            '"tint"': 色合い
+          RANGE:
+            '"bass"': ベース
+            '"mid"': ミドル
+            '"treble"': トレブル
       Dancelab_stopMapping:
         text: "{SPRITE} が {PROPERTY} をやめる、{RANGE} のあとに"
         options:
+          PROPERTY:
+            '"scale"': 大きさ
+            '"width"': 幅
+            '"height"': 高さ
+            '"rotation"': 回転
+            '"x"': 水平方向の位置
+            '"y"': 垂直方向の位置
+            '"direction"': 動きの方向
+            '"tint"': 色合い
+          RANGE:
+            '"bass"': ベース
+            '"mid"': ミドル
+            '"treble"': トレブル
+      Dancelab_stopMappingEach:
+        options:
+          GROUP:
+            sprites: すべて
+            '"ALIEN"': すべてのエイリアン
+            '"BEAR"': すべてのクマ
+            '"CAT"': すべてのネコ
+            '"DOG"': すべてのイヌ
+            '"DUCK"': すべてのアヒル
+            '"FROG"': すべてのカエル
+            '"MOOSE"': すべてのムース
+            '"PINEAPPLE"': すべてのパイナップル
+            '"ROBOT"': すべてのロボット
+            '"SHARK"': すべてのサメ
+            '"UNICORN"': ユニコーン
           PROPERTY:
             '"scale"': 大きさ
             '"width"': 幅
@@ -862,61 +1027,19 @@ ja:
         text: みぎに まがる
       Vector_positionCenter:
         text: 中央
-      aalab_changePropByFlexible:
-        text: "{SPRITE} {PROPERTY} を {VAL} 変更"
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': 大きさ
-            '"rotation"': 回転
-            '"x"': x 位置
-            '"y"': y 位置
-            '"direction"': 動きの方向
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': もし
-            '"while"': 以下の間
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': もし
-            '"while"': 以下の間
-      aalab_jumpTo:
-        text: "{SPRITE}　{LOCATION}にとぶ"
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': もし
-            '"while"': 以下の間
-          KEY:
-            '"up"': 上 に
-            '"down"': 下 に
-            '"left"': 左 に
-            '"right"': 右 に
-            '"space"': うちゅう
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': まち
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': 'true'
-            '"false"': 'false'
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': 大きさ
-            '"rotation"': 回転
-            '"x"': x 位置
-            '"y"': y 位置
-            '"direction"': 動きの方向
-            '"tint"': 色合い
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': ずっとくりかえす
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
         options:
           OPTION:
             '"show"': 表示(ひょうじ)する

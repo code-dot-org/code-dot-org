@@ -14,6 +14,12 @@ fr-FR:
       4-5 Bee Conditionals 2:
         4_5_Bee_Conditionals_2_1: Souviens-toi de vérifier si CHAQUE nuage a une FLEUR.
           Tu n’as pas du tout besoin de vérifier s’il y a des gâteaux de miel.
+      AppLab Intro 7 - Change Screen Color:
+        applab_hoc_finish: Est ce que l'écran est passé vert ? Si c'est le cas clique
+          sur 'Terminer', sinon sur 'Reset', modifie to code et clique sur 'Démarrer'
+          à nouveau.
+      AppLab Intro 7 - thisOrThatAddButton:
+        AppLabHoCFinal11: Tu es maintenant en Mode Design.
       CSD U6 colorLeds intensity:
         CSDU6L10_rainbow: Ajoute tes blocs ici
       CSD U6 colorLeds intensity_2018:
@@ -119,6 +125,11 @@ fr-FR:
         Infinity_move_right_runbutton: Ajouter le bloc « Déplacer » ici
       Infinity_repeat:
         Infinity_repeat_callout: Place les bloc « Déplacer » ici à l'intérieur
+      MC HOC 2016 Level 2-2:
+        craft2_run_button_callout: Lorsque tu es prêt, appuie sur "Démarrer" pour
+          tester ton programme.
+      MC HOC 2016 New Walk:
+        MC_HOC_2016_New_Walk_callout2: Appuie sur "Démarrer" pour commencer à bouger.
       MC_HOC_2017_03_Cole:
         MC_HOC_2017_03_Cole_1: Ceci est une boucle « répéter » !  Cliquez dessus dans
           l'espace de travail et ajoutez le code que vous voulez exécuter en boucle.
@@ -192,9 +203,303 @@ fr-FR:
       course2_bee_conditionals_challenge2:
         courseD_bee_conditionals_challenge2_1: Utilise cette boucle pour collecter
           tout le nectar (ou miel) d’une fleur (ou d’un gâteau de miel).
+      course3_artist_functions_challenge1:
+        courseE_artist_functions_challenge1_callout1: Continue ce programme en ajoutant
+          plus de code à la fin.
+        courseE_artist_functions_challenge1_callout2: Si tu n'aime pas ce concept,
+          change le à ta convenance!
+      course3_artist_functions_challenge2:
+        courseE_artist_functions_challenge2_callout1: Continue ce programme en ajoutant
+          plus de code à la fin.
+        courseE_artist_functions_challenge2_callout2: Si tu n'aime pas ce concept,
+          change le à ta convenance!
+      course3_bee_debugging_challenge1:
+        courseD_bee_debugging_challenge1_callout1: Utilise cette commande pour faire
+          reculer l'abeille.
+      course3_playLab_challenge1:
+        courseC_PlayLab_events_challenge1_1: Ce bloc te laisse bouger les acteurs
+          vers différentes parties de l'espace de jeu.
+      course4_artist_functions_challenge2:
+        courseE_artist_functions_challenge2_callout1: Continue ce programme en ajoutant
+          plus de code à la fin.
+        courseE_artist_functions_challenge2_callout2: Si tu n'aime pas ce concept,
+          change le à ta convenance!
+      courseA_artist_loops4:
+        courseA_artist_loops4_1: Ce nombre t'indique combien de ces blocs tu peux
+          utiliser dans le puzzle.
+      courseA_artist_loops4_2018:
+        courseA_artist_loops4_1: Ce nombre t'indique combien de ces blocs tu peux
+          utiliser dans le puzzle.
+      courseA_artist_loops4_2019:
+        courseA_artist_loops4_1: Ce nombre t'indique combien de ces blocs tu peux
+          utiliser dans le puzzle.
+      courseA_artist_loops7:
+        courseA_artist_loops7_1: Ce nombre indique que seulement un bloc de ce type
+          peut être utiliser dans la réponse finale.
+      courseA_artist_loops7_2018:
+        courseA_artist_loops7_1: Ce nombre indique que seulement un bloc de ce type
+          peut être utiliser dans la réponse finale.
+      courseA_artist_loops7_2019:
+        courseA_artist_loops7_1: Ce nombre indique que seulement un bloc de ce type
+          peut être utiliser dans la réponse finale.
+      courseA_artist_loops8:
+        courseA_artist_loops8_1: Tu sais que tu peux reculer en dessinant sur une
+          ligne existante lorsque tu en as besoin?
+      courseA_artist_loops8_2018:
+        courseA_artist_loops8_1: Tu sais que tu peux reculer en dessinant sur une
+          ligne existante lorsque tu en as besoin?
+      courseA_artist_loops8_2019:
+        courseA_artist_loops8_1: Tu sais que tu peux reculer en dessinant sur une
+          ligne existante lorsque tu en as besoin?
+      courseA_collector_loops1:
+        courseA_collector_loops1_1: Y a-t-il de nouveaux blocs dans la boite à outils?
+          Ne t'inquiète pas, nous allons t'aider à les utiliser plus tard dans de
+          futurs étapes.
+      courseA_collector_loops3:
+        gradek_adventurer_loops2_1: Ce nombre t'indique combien de ces blocs tu peux
+          utiliser dans le puzzle.
+      courseA_collector_loops3_2018:
+        gradek_adventurer_loops2_1: Ce nombre t'indique combien de ces blocs tu peux
+          utiliser dans le puzzle.
+      courseA_collector_loops3_2019:
+        gradek_adventurer_loops2_1: Ce nombre t'indique combien de ces blocs tu peux
+          utiliser dans le puzzle.
+      courseA_collector_preLoops2:
+        courseA_collector_loops1_1: Y a-t-il de nouveaux blocs dans la boite à outils?
+          Ne t'inquiète pas, nous allons t'aider à les utiliser plus tard dans de
+          futurs étapes.
+      courseA_collector_preLoops3:
+        courseA_collector_loops1_1: Y a-t-il de nouveaux blocs dans la boite à outils?
+          Ne t'inquiète pas, nous allons t'aider à les utiliser plus tard dans de
+          futurs étapes.
+      courseA_collector_preLoops4:
+        courseA_collector_loops1_1: Y a-t-il de nouveaux blocs dans la boite à outils?
+          Ne t'inquiète pas, nous allons t'aider à les utiliser plus tard dans de
+          futurs étapes.
+      courseA_collector_preLoops5:
+        courseA_collector_loops1_1: Y a-t-il de nouveaux blocs dans la boite à outils?
+          Ne t'inquiète pas, nous allons t'aider à les utiliser plus tard dans de
+          futurs étapes.
+      courseA_collector_preLoops6:
+        courseA_collector_loops1_1: Y a-t-il de nouveaux blocs dans la boite à outils?
+          Ne t'inquiète pas, nous allons t'aider à les utiliser plus tard dans de
+          futurs étapes.
+      courseA_maze_ramp2_2019:
+        courseC_maze_programming2_1: C'est la boite à outils. C'est ici que tu trouves
+          les blocs supplémentaires pour compléter les puzzles.
+      courseA_maze_ramp3a_2018:
+        courseC_maze_programming2_1: C'est la boite à outils. C'est ici que tu trouves
+          les blocs supplémentaires pour compléter les puzzles.
+      courseA_maze_seq1:
+        courseA_maze_seq1_1: Clique dans la bulle si tu as besoin d'une astuce!
+      courseA_maze_seq1_2018:
+        courseA_maze_seq1_1: Clique dans la bulle si tu as besoin d'une astuce!
+      courseA_maze_seq1_2019:
+        courseA_maze_seq1_1: Clique dans la bulle si tu as besoin d'une astuce!
+      courseA_maze_seq2:
+        courseA_maze_seqA_callout1: Utilise le bouton "Etape" pour avancer pas-à-pas
+          dans le programme. Cela t'aidera à trouver le bug!
+      courseA_maze_seq4:
+        made_of_stone: Ces blocs sont en pierre. Tu peux les déplacer, mais tu ne
+          peux pas les effacer!
+      courseA_playLab_events4:
+        courseA_playlab_events4_callout1: C'est un appel
+      courseA_playLab_events4_2018:
+        courseA_playlab_events4_callout1: C'est un appel
+      courseA_playLab_events4_2019:
+        courseA_playlab_events4_callout1: C'est un appel
+      courseA_playLab_events5:
+        courseA_playLab_events5_1: Clique ici pour changer la direction de l'évènement
+          flèche.
+      courseA_playLab_events5_2018:
+        courseA_playLab_events5_1: Clique ici pour changer la direction de l'évènement
+          flèche.
+      courseA_playLab_events5_2019:
+        courseA_playLab_events5_1: Clique ici pour changer la direction de l'évènement
+          flèche.
+      courseA_playLab_events6:
+        courseA_playLab_events6_1: Cela te permet de choisir un son "aléatoire", ce
+          qui veut dire que tu ne sais pas ce que tu auras tant que tu ne l'entendras
+          pas!
+      courseA_playLab_events6_2018:
+        courseA_playLab_events6_1: Cela te permet de choisir un son "aléatoire", ce
+          qui veut dire que tu ne sais pas ce que tu auras tant que tu ne l'entendras
+          pas!
+      courseA_playLab_events6_2019:
+        courseA_playLab_events6_1: Cela te permet de choisir un son "aléatoire", ce
+          qui veut dire que tu ne sais pas ce que tu auras tant que tu ne l'entendras
+          pas!
+      courseB_Scrat_ramp1_2018:
+        grade2_CaringForNewPet_0_1: Après avoir attachés tous les blocs ensemble,
+          appuie sur "Démarrer" pour que ton programme commence.
+      courseB_Scrat_ramp1_2019:
+        grade2_CaringForNewPet_0_1: Après avoir attachés tous les blocs ensemble,
+          appuie sur "Démarrer" pour que ton programme commence.
+      courseB_Scrat_ramp3a_2019:
+        courseC_maze_programming2_1: C'est la boite à outils. C'est ici que tu trouves
+          les blocs supplémentaires pour compléter les puzzles.
+      courseB_collector_loops1:
+        courseB_collector_loops1_1: Y a-t-il de nouveaux blocs dans la boite à outils?
+          Ne t'inquiète pas, nous allons t'aider à les utiliser plus tard dans de
+          futurs étapes.
+      courseB_maze_seq1:
+        courseB_maze_seq1: Clique dans la bulle si tu as besoin d'une astuce!
+      courseB_maze_seq1_2018:
+        courseB_maze_seq1: Clique dans la bulle si tu as besoin d'une astuce!
+      courseB_maze_seq1_2019:
+        courseB_maze_seq1: Clique dans la bulle si tu as besoin d'une astuce!
+      courseB_maze_seq2:
+        courseB_maze_seq2_callout1: Utilise le bouton "Etape" pour avancer pas-à-pas
+          dans le programme. Cela t'aidera à trouver le bug!
+      courseC19_playLab_EOC3:
+        courseE_playLab_scaffold3_1: Amène l'acteur jusqu'au drapeau pour passer au
+          niveau suivant.
+      courseC_PlayLab_events8:
+        courseC_PlayLab_events8_callout1: Utilise ce bloc lorsque Waddles et Chomp
+          se percute!
+      courseC_PlayLab_events8_2018:
+        courseC_PlayLab_events8_callout1: Utilise ce bloc lorsque Waddles et Chomp
+          se percute!
+      courseC_PlayLab_events8_2019:
+        courseC_PlayLab_events8_callout1: Utilise ce bloc lorsque Waddles et Chomp
+          se percute!
+      courseC_PlayLab_events_challenge1:
+        courseC_PlayLab_events_challenge1_1: Ce bloc te laisse bouger les acteurs
+          vers différentes parties de l'espace de jeu.
+      courseC_PlayLab_events_challenge1_2018:
+        courseC_PlayLab_events_challenge1_1: Ce bloc te laisse bouger les acteurs
+          vers différentes parties de l'espace de jeu.
+      courseC_PlayLab_events_challenge1_2019:
+        courseC_PlayLab_events_challenge1_1: Ce bloc te laisse bouger les acteurs
+          vers différentes parties de l'espace de jeu.
+      courseC_artist_loopsPrePre1a:
+        courseC_artist_loopsPrePre1a_1: Commence par utiliser ce bloc pour amener
+          l'artiste au centre de l'écran.
+      courseC_artist_loopsPrePre1a_2018:
+        courseC_artist_loopsPrePre1a_1: Commence par utiliser ce bloc pour amener
+          l'artiste au centre de l'écran.
+      courseC_artist_loopsPrePre1a_2019:
+        courseC_artist_loopsPrePre1a_1: Commence par utiliser ce bloc pour amener
+          l'artiste au centre de l'écran.
+      courseC_collector_prog1:
+        courseC_collector_prog1_1: Y a-t-il de nouveaux blocs dans la boite à outils?
+          Ne t'inquiète pas, nous allons t'aider à les utiliser plus tard dans de
+          futurs étapes.
+      courseC_collector_prog7:
+        courseC_collector_prog7_1: Tu peux prendre plus de blocs de la boite à outils
+          si tu en as besoin!
+      courseC_collector_prog7_2018:
+        courseC_collector_prog7_1: Tu peux prendre plus de blocs de la boite à outils
+          si tu en as besoin!
+      courseC_collector_prog7_2019:
+        courseC_collector_prog7_1: Tu peux prendre plus de blocs de la boite à outils
+          si tu en as besoin!
+      courseC_harvester_loops1:
+        courseC_harvester_loops1_callout1: Le nombre 4 sur la citrouille indique qu'il
+          y a 4 citrouilles que tu peux ramasser.
+      courseC_harvester_loops1_2018:
+        courseC_harvester_loops1_callout1: Le nombre 4 sur la citrouille indique qu'il
+          y a 4 citrouilles que tu peux ramasser.
+      courseC_harvester_loops1_2019:
+        courseC_harvester_loops1_callout1: Le nombre 4 sur la citrouille indique qu'il
+          y a 4 citrouilles que tu peux ramasser.
+      courseC_maze_debugging5:
+        courseC_maze_debugging5_1: Les blocs gris ne peuvent pas être effacés!
+      courseC_maze_programming1:
+        grade2_CaringForNewPet_0_1: Après avoir attachés tous les blocs ensemble,
+          appuie sur "Démarrer" pour que ton programme commence.
+      courseC_maze_programming1_2018:
+        grade2_CaringForNewPet_0_1: Après avoir attachés tous les blocs ensemble,
+          appuie sur "Démarrer" pour que ton programme commence.
+      courseC_maze_programming1_2019:
+        grade2_CaringForNewPet_0_1: Après avoir attachés tous les blocs ensemble,
+          appuie sur "Démarrer" pour que ton programme commence.
+      courseC_maze_programming2:
+        courseC_maze_programming2_1: C'est la boite à outils. C'est ici que tu trouves
+          les blocs supplémentaires pour compléter les puzzles.
+      courseC_maze_programming2_2018:
+        courseC_maze_programming2_1: C'est la boite à outils. C'est ici que tu trouves
+          les blocs supplémentaires pour compléter les puzzles.
+      courseC_maze_programming2_2019:
+        courseC_maze_programming2_1: C'est la boite à outils. C'est ici que tu trouves
+          les blocs supplémentaires pour compléter les puzzles.
+      courseC_maze_programming3:
+        courseC_maze_programming3_2: Tu peux faire glisser d'autres blocs vers la
+          boite à outils pour les enlever.
+        courseC_maze_programming3_3: Ces blocs sont comme des pierres que tu ne peux
+          pas enlever.
+      courseC_maze_programming3_2018:
+        courseC_maze_programming3_2: Tu peux faire glisser d'autres blocs vers la
+          boite à outils pour les enlever.
+        courseC_maze_programming3_3: Ces blocs sont comme des pierres que tu ne peux
+          pas enlever.
+      courseC_maze_programming3_2019:
+        courseC_maze_programming3_2: Tu peux faire glisser d'autres blocs vers la
+          boite à outils pour les enlever.
+        courseC_maze_programming3_3: Ces blocs sont comme des pierres que tu ne peux
+          pas enlever.
+      courseC_maze_programming4:
+        courseC_maze_programming4_1: C'est ton nombre maximum de blocs. Cela te dit
+          combien il te reste de blocs utilisables.
+      courseC_maze_programming4_2018:
+        courseC_maze_programming4_1: C'est ton nombre maximum de blocs. Cela te dit
+          combien il te reste de blocs utilisables.
+      courseC_maze_programming4_2019:
+        courseC_maze_programming4_1: C'est ton nombre maximum de blocs. Cela te dit
+          combien il te reste de blocs utilisables.
+      courseC_maze_programming5:
+        '': Ces blocs n'ont pas de nombres sur eux. Tu peux en utiliser autant que
+          tu veux !
+      courseC_maze_programming5_2018:
+        '': Ces blocs n'ont pas de nombres sur eux. Tu peux en utiliser autant que
+          tu veux !
+      courseC_maze_programming5_2019:
+        '': Ces blocs n'ont pas de nombres sur eux. Tu peux en utiliser autant que
+          tu veux !
+      courseC_maze_programming7:
+        courseC_maze_programming7_1: C'est ton premier défi! Ils sont fait pour être
+          difficile et peuvent demander plusieurs essais.
+        courseC_maze_programming7_2: Ces blocs sont comme des pierres que tu ne peux
+          pas enlever.
+      courseC_maze_programming7_2018:
+        courseC_maze_programming7_1: C'est ton premier défi! Ils sont fait pour être
+          difficile et peuvent demander plusieurs essais.
+        courseC_maze_programming7_2: Ces blocs sont comme des pierres que tu ne peux
+          pas enlever.
+      courseC_maze_programming7_2019:
+        courseC_maze_programming7_1: C'est ton premier défi! Ils sont fait pour être
+          difficile et peuvent demander plusieurs essais.
+        courseC_maze_programming7_2: Ces blocs sont comme des pierres que tu ne peux
+          pas enlever.
+      courseC_starWars_loops2:
+        courseC_starWars_loops2: Tu as seulement un de ces blocs disponible dans le
+          puzzle.
+      courseC_starWars_loops2_2018:
+        courseC_starWars_loops2: Tu as seulement un de ces blocs disponible dans le
+          puzzle.
+      courseC_starWars_loops2_2019:
+        courseC_starWars_loops2: Tu as seulement un de ces blocs disponible dans le
+          puzzle.
+      courseD_artist_nestedLoops1a:
+        courseD_artist_nestedLoops1a_1: Tu n'as pas besoin d'utiliser des couleurs
+          pour réussir ce puzzle. Si tu le souhaites, ce bloc `couleur aléatoire`
+          le fait facilement!
+      courseD_artist_nestedLoops1a_2018:
+        courseD_artist_nestedLoops1a_1: Tu n'as pas besoin d'utiliser des couleurs
+          pour réussir ce puzzle. Si tu le souhaites, ce bloc `couleur aléatoire`
+          le fait facilement!
+      courseD_artist_nestedLoops1a_2019:
+        courseD_artist_nestedLoops1a_1: Tu n'as pas besoin d'utiliser des couleurs
+          pour réussir ce puzzle. Si tu le souhaites, ce bloc `couleur aléatoire`
+          le fait facilement!
+      courseD_artist_ramp11:
+        courseD_artist_ramp11_1: Vous pouvez modifier ce nombre.
+        courseD_artist_ramp11_2: Cliques ici pour taper le nombre de fois que ce code
+          doit se répéter.
       courseD_bee_conditionals2:
         4_5_Bee_Conditionals_2_1: Souviens-toi de vérifier si CHAQUE nuage a une FLEUR.
           Tu n’as pas du tout besoin de vérifier s’il y a des gâteaux de miel.
+        4_5_Bee_Conditionals_2_2: Besoin d'aide? Cliques ici pour une vidéo d'indice!
       courseD_bee_conditionals2_2018:
         4_5_Bee_Conditionals_2_1: Souviens-toi de vérifier si CHAQUE nuage a une FLEUR.
           Tu n’as pas du tout besoin de vérifier s’il y a des gâteaux de miel.
@@ -210,6 +515,215 @@ fr-FR:
       courseD_bee_conditionals_challenge2_2019:
         courseD_bee_conditionals_challenge2_1: Utilise cette boucle pour collecter
           tout le nectar (ou miel) d’une fleur (ou d’un gâteau de miel).
+      courseD_bee_debugging_challenge1:
+        courseD_bee_debugging_challenge1_callout1: Utilise cette commande pour faire
+          reculer l'abeille.
+      courseD_bee_debugging_challenge1a:
+        courseD_bee_debugging_challenge1_callout1: Utilise cette commande pour faire
+          reculer l'abeille.
+      courseD_collector_ramp8:
+        courseD_collector_ramp8_1: 'Utilise ce bloc pour ramasser un diamant.  '
+      courseD_maze_intro4_2019:
+        courseC_maze_programming4_1: C'est ton nombre maximum de blocs. Cela te dit
+          combien il te reste de blocs utilisables.
+      courseD_maze_intro5a_2019:
+        '': Ces blocs n'ont pas de nombres sur eux. Tu peux en utiliser autant que
+          tu veux !
+      courseD_maze_ramp1:
+        grade2_CaringForNewPet_0_1: Après avoir attachés tous les blocs ensemble,
+          appuie sur "Démarrer" pour que ton programme commence.
+      courseD_maze_ramp1_2018:
+        grade2_CaringForNewPet_0_1: Après avoir attachés tous les blocs ensemble,
+          appuie sur "Démarrer" pour que ton programme commence.
+      courseD_maze_ramp1_2019:
+        grade2_CaringForNewPet_0_1: Après avoir attachés tous les blocs ensemble,
+          appuie sur "Démarrer" pour que ton programme commence.
+      courseD_maze_ramp2:
+        courseC_maze_programming2_1: C'est la boite à outils. C'est ici que tu trouves
+          les blocs supplémentaires pour compléter les puzzles.
+      courseD_maze_ramp2_2018:
+        courseC_maze_programming2_1: C'est la boite à outils. C'est ici que tu trouves
+          les blocs supplémentaires pour compléter les puzzles.
+      courseD_maze_ramp2_2019:
+        courseC_maze_programming2_1: C'est la boite à outils. C'est ici que tu trouves
+          les blocs supplémentaires pour compléter les puzzles.
+      courseD_maze_ramp3:
+        courseC_maze_programming3_2: Tu peux faire glisser d'autres blocs vers la
+          boite à outils pour les enlever.
+        stone_block_2: Les blocs gris sont comme des pierres que tu ne peux pas enlever.
+      courseD_maze_ramp3_2018:
+        courseC_maze_programming3_2: Tu peux faire glisser d'autres blocs vers la
+          boite à outils pour les enlever.
+        stone_block_2: Les blocs gris sont comme des pierres que tu ne peux pas enlever.
+      courseD_maze_ramp3_2019:
+        courseC_maze_programming3_2: Tu peux faire glisser d'autres blocs vers la
+          boite à outils pour les enlever.
+      courseD_maze_ramp4:
+        courseC_maze_programming4_1: C'est ton nombre maximum de blocs. Cela te dit
+          combien il te reste de blocs utilisables.
+      courseD_maze_ramp4_2018:
+        courseC_maze_programming4_1: C'est ton nombre maximum de blocs. Cela te dit
+          combien il te reste de blocs utilisables.
+      courseD_maze_ramp4_2019:
+        courseC_maze_programming4_1: C'est ton nombre maximum de blocs. Cela te dit
+          combien il te reste de blocs utilisables.
+      courseD_maze_ramp5:
+        '': Ces blocs n'ont pas de nombres sur eux. Tu peux en utiliser autant que
+          tu veux !
+      courseD_maze_ramp5_2018:
+        '': Ces blocs n'ont pas de nombres sur eux. Tu peux en utiliser autant que
+          tu veux !
+      courseD_maze_ramp5_2019:
+        '': Ces blocs n'ont pas de nombres sur eux. Tu peux en utiliser autant que
+          tu veux !
+      courseD_maze_ramp5a:
+        '': Ces blocs n'ont pas de nombres sur eux. Tu peux en utiliser autant que
+          tu veux !
+      courseD_maze_ramp5a_2018:
+        '': Ces blocs n'ont pas de nombres sur eux. Tu peux en utiliser autant que
+          tu veux !
+      courseD_maze_ramp5a_2019:
+        '': Ces blocs n'ont pas de nombres sur eux. Tu peux en utiliser autant que
+          tu veux !
+      courseD_maze_ramp6:
+        courseD_maze_ramp6_1: Quelque soit le code que tu mettras ici, il se répétera
+          autant de fois que tu lui diras de le faire, puis continuera à exécuter
+          le reste du programme.
+      courseD_playLab_condFP:
+        courseD_playLab_condFP_1: nous avons organisés les blocs en catégories pour
+          que tu aies plus de code pour jouer avec! Appuis ici pour voir ou tout se
+          trouve.
+      courseD_playLab_condFP_2018:
+        courseD_playLab_condFP_1: nous avons organisés les blocs en catégories pour
+          que tu aies plus de code pour jouer avec! Appuis ici pour voir ou tout se
+          trouve.
+      courseD_scrat_ramp1:
+        grade2_CaringForNewPet_0_1: Après avoir attachés tous les blocs ensemble,
+          appuie sur "Démarrer" pour que ton programme commence.
+      courseD_scrat_ramp2:
+        courseC_maze_programming2_1: C'est la boite à outils. C'est ici que tu trouves
+          les blocs supplémentaires pour compléter les puzzles.
+      courseD_scrat_ramp3:
+        courseC_maze_programming3_2: Tu peux faire glisser d'autres blocs vers la
+          boite à outils pour les enlever.
+      courseD_scrat_ramp4:
+        courseC_maze_programming4_1: C'est ton nombre maximum de blocs. Cela te dit
+          combien il te reste de blocs utilisables.
+      courseD_scrat_ramp5:
+        '': Ces blocs n'ont pas de nombres sur eux. Tu peux en utiliser autant que
+          tu veux !
+      courseD_scrat_ramp6:
+        courseD_maze_ramp6_1: Quelque soit le code que tu mettras ici, il se répétera
+          autant de fois que tu lui diras de le faire, puis continuera à exécuter
+          le reste du programme.
+      courseD_scrat_ramp7:
+        courseD_maze_ramp6_1: Quelque soit le code que tu mettras ici, il se répétera
+          autant de fois que tu lui diras de le faire, puis continuera à exécuter
+          le reste du programme.
+      courseD_scrat_ramp8:
+        courseD_maze_ramp7_1: C'est ton premier défi! Ils sont fait pour être difficile
+          et peuvent demander plusieurs essais.
+      courseE_artist_functions1:
+        courseD_artist_functions1_1: Commençons par utiliser ce bloc pour aider à
+          créer le premier carré.
+      courseE_artist_functions2:
+        courseD_artist_functions2_1: Lorsque ce bloc vert s'exécute, tout le code
+          dans la fonction sera exécuté. Qu'est ce que l'artiste doit faire après
+          avoir dessiné le premier carré?
+      courseE_artist_functions2_2018:
+        courseD_artist_functions2_1: Lorsque ce bloc vert s'exécute, tout le code
+          dans la fonction sera exécuté. Qu'est ce que l'artiste doit faire après
+          avoir dessiné le premier carré?
+      courseE_artist_functions2_2019:
+        courseD_artist_functions2_1: Lorsque ce bloc vert s'exécute, tout le code
+          dans la fonction sera exécuté. Qu'est ce que l'artiste doit faire après
+          avoir dessiné le premier carré?
+      courseE_artist_functions8:
+        courseD_artist_functions8_1: Tes blocs pour créer les fonctions ont été déplacées
+          sous cette étiquette dans la boite à outils.
+      courseE_artist_functions8a_2018:
+        courseD_artist_functions8_1: Tes blocs pour créer les fonctions ont été déplacées
+          sous cette étiquette dans la boite à outils.
+      courseE_artist_functions8a_2019:
+        courseD_artist_functions8_1: Tes blocs pour créer les fonctions ont été déplacées
+          sous cette étiquette dans la boite à outils.
+      courseE_artist_functions_challenge1:
+        courseE_artist_functions_challenge1_callout1: Continue ce programme en ajoutant
+          plus de code à la fin.
+        courseE_artist_functions_challenge1_callout2: Si tu n'aime pas ce concept,
+          change le à ta convenance!
+      courseE_artist_functions_challenge1_2018:
+        courseE_artist_functions_challenge1_callout1: Continue ce programme en ajoutant
+          plus de code à la fin.
+        courseE_artist_functions_challenge1_callout2: Si tu n'aime pas ce concept,
+          change le à ta convenance!
+      courseE_artist_functions_challenge1_2019:
+        courseE_artist_functions_challenge1_callout1: Continue ce programme en ajoutant
+          plus de code à la fin.
+        courseE_artist_functions_challenge1_callout2: Si tu n'aime pas ce concept,
+          change le à ta convenance!
+      courseE_artist_functions_challenge2:
+        courseE_artist_functions_challenge2_callout1: Continue ce programme en ajoutant
+          plus de code à la fin.
+        courseE_artist_functions_challenge2_callout2: Si tu n'aime pas ce concept,
+          change le à ta convenance!
+      courseE_artist_functions_challenge2_2018:
+        courseE_artist_functions_challenge2_callout1: Continue ce programme en ajoutant
+          plus de code à la fin.
+        courseE_artist_functions_challenge2_callout2: Si tu n'aime pas ce concept,
+          change le à ta convenance!
+      courseE_artist_functions_challenge2_2019:
+        courseE_artist_functions_challenge2_callout1: Continue ce programme en ajoutant
+          plus de code à la fin.
+        courseE_artist_functions_challenge2_callout2: Si tu n'aime pas ce concept,
+          change le à ta convenance!
+      courseE_artist_ramp8:
+        courseE_artist_ramp8_1: Vous pouvez modifier ce nombre.
+        courseE_artist_ramp8_2: Cliques ici pour taper le nombre de fois que ce code
+          doit se répéter.
+      courseE_artist_ramp8_2:
+        courseE_artist_ramp8_1: Vous pouvez modifier ce nombre.
+        courseE_artist_ramp8_2: Cliques ici pour taper le nombre de fois que ce code
+          doit se répéter.
+      courseE_farmer_functions1:
+        courseE_farmer_functions1_2: La boite à outils est organisé différemment ce
+          coup-ci. Clic sur les différentes catégories pour voir les blocs à disposition.
+      courseE_farmer_functions13_2018:
+        courseE_farmer_functions1a_1: Ce légume est inconnu. Il change à chaque fois
+          que tu exécutes ce programme.
+      courseE_farmer_functions13_2019:
+        courseE_farmer_functions1a_1: Ce légume est inconnu. Il change à chaque fois
+          que tu exécutes ce programme.
+      courseE_farmer_functions1_2018:
+        courseE_farmer_functions1_2: La boite à outils est organisé différemment ce
+          coup-ci. Clic sur les différentes catégories pour voir les blocs à disposition.
+      courseE_farmer_functions1_2019:
+        courseE_farmer_functions1_2: La boite à outils est organisé différemment ce
+          coup-ci. Clic sur les différentes catégories pour voir les blocs à disposition.
+      courseE_farmer_functions1a:
+        courseE_farmer_functions1a_1: Ce légume est inconnu. Il change à chaque fois
+          que tu exécutes ce programme.
+      courseE_farmer_functions1a_2018:
+        courseE_farmer_functions1a_1: Ce légume est inconnu. Il change à chaque fois
+          que tu exécutes ce programme.
+      courseE_farmer_functions1a_2019:
+        courseE_farmer_functions1a_1: Ce légume est inconnu. Il change à chaque fois
+          que tu exécutes ce programme.
+      courseE_farmer_functions2b:
+        courseE_farmer_functions1a_1: Ce légume est inconnu. Il change à chaque fois
+          que tu exécutes ce programme.
+      courseE_farmer_functions2b_2018:
+        courseE_farmer_functions1a_1: Ce légume est inconnu. Il change à chaque fois
+          que tu exécutes ce programme.
+      courseE_farmer_functions2b_2019:
+        courseE_farmer_functions1a_1: Ce légume est inconnu. Il change à chaque fois
+          que tu exécutes ce programme.
+      courseE_playLab_challenge1:
+        courseC_PlayLab_events_challenge1_1: Ce bloc te laisse bouger les acteurs
+          vers différentes parties de l'espace de jeu.
+      courseE_playLab_scaffold3:
+        courseE_playLab_scaffold3_1: Amène l'acteur jusqu'au drapeau pour passer au
+          niveau suivant.
       frozen circle function with parameter:
         frozen_circle_function_with_parameter_circle: Utilise le bloc « Créer un cercle »
           et change la taille.
@@ -229,6 +743,7 @@ fr-FR:
         snowflake_dropdown: Utilise ce menu déroulant pour créer différents flocons
           de neige !
       frozen line:
+        run: Clique sur "Démarrer" pour essayer ton programme!
         move_elsa_forward: Fais glisser un bloc «Avancer» et emboite-le sous le bloc
           « Lors du lancement » pour faire avancer Elsa.
       frozen perpendicular:

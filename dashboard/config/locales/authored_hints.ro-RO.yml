@@ -11,9 +11,9 @@ ro-RO:
         2-3_Artist_11_a: 'Probleme cu unghiurile? Trebuie să parcurgeți 360 de grade
           cu 8 întoarceri.  Cât este 360/8? '
       2-3 Artist 12:
-        2-3_Artist_12_a: Sunt 360 de grade într-un cerc, dacă artistul se întoarce
-          cu un grad la fiecare buclă de cod, el va avea nevoie sa ruleze bucla de
-          360 ori.
+        2-3_Artist_12_a: Sunt 360 de grade într-un cerc, astfel încât, dacă artistul
+          se întoarce cu un grad la fiecare execuţie a buclei, el va avea nevoie sa
+          ruleze bucla de 360 ori.
       2-3 Artist 2 new:
         2-3_Artist_2_new_a: Artistul pare că s-a întreptat în direcţia greşită. Poţi
           tu să-l întorci întâi înainte să deseneze linia?
@@ -26,6 +26,8 @@ ro-RO:
         2-3_Artist_4_a: Pentru a termina casa, tot ce avem de făcut este să desenăm
           un pătrat!
       2-3 Artist 6:
+        2-3_Artist_6_a: 'Pentru a face aceste unghiuri mici, trebuie să virați de
+          fiecare dată _mai mult_ decât ați făcut-o la pătrat.   '
         2-3_Artist_6_b: Din moment ce stau deja cu fața către dreapta, este mai uşor
           să încep prin a merge înainte și, apoi, să fac întoarceri către stânga pentru
           a crea triunghiul.
@@ -39,8 +41,11 @@ ro-RO:
         2-3_Artist_8_a: Dacă tăiaţi 200 în jumătate, cât de mulţi pixeli trebuie să
           aibă fiecare pătrat în lățime?
       2-3 Artist 9 NEW:
-        2-3_Artist_9_a: Acest romb este într-adevăr doar un pătrat rotit într-o parte
+        2-3_Artist_9_a: Acest romb este doar un pătrat rotit într-o parte
       2-3 Artist Debugging 10:
+        2-3_Artist_Debugging_10_a: Aminteşte-ţi, vrei ca panoul de control să fie
+          cu 10 pixeli _mai lat_...deci asigură-te că **adaugi** 10 la orice număr
+          schimbi.
         2-3_Artist_Debugging_10_b: "\\*\\* Încercare şi eroare este perfect în regulă
           aici! \\*\\* \nÎncepeți prin schimbarea unui număr la un moment dat.\\\nCare
           numere fac ce? \nDacă vă pierdeți prea tare, faceţi doar clic pe \"Începe
@@ -54,6 +59,13 @@ ro-RO:
       2-3 Artist Debugging 7:
         2-3_Artist_Debugging_7_a: Ce se întâmplă dacă faceți artistul să se miște
           sau să sară înapoi după ce a desenat prima linie?
+      2-3 Artist Debugging 8:
+        2-3_Artist_Debugging_8_a: |-
+          De câte ori s-a repetat forma mea?
+
+          De câte ori _ar trebui_ să se repete forma?
+
+          Unde poţi schimba acest lucru în program?
       2-3 Artist Debugging 9:
         2-3_Artist_Debugging_9_a: Artistul trebuie să se întoarcă la 60 de grade mai
           în stânga, înainte de a începe să deseneze!
@@ -86,6 +98,49 @@ ro-RO:
         2-3_Artist_Functions_4_a: Artistul trebuie să întoarcă la 120 de grade între
           fiecare pătrat pentru a finaliza acest design.
       2-3 Artist Loops New 11:
+        2-3_Artist_Loops_New_11_a: |-
+          Aminteşte-ţi ca programul din ultimul puzzle a fost:
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">8</title>
+                  <statement name="DO">
+                    <block type="draw_colour" inline="true">
+                      <value name="COLOUR">
+                        <block type="colour_random"/>
+                      </value>
+                      <next>
+                        <block type="draw_turn_by_constant_dropdown">
+                          <title name="DIR">turnRight</title>
+                          <title name="VALUE" config="45,60,90,120,180">45</title>
+                          <next>
+                            <block type="draw_move_by_constant">
+                              <title name="DIR">moveForward</title>
+                              <title name="VALUE">50</title>
+                              <next>
+                                <block type="draw_turn_by_constant_dropdown">
+                                  <title name="DIR">turnLeft</title>
+                                  <title name="VALUE" config="45,60,90,120,180">90</title>
+                                  <next>
+                                    <block type="draw_move_by_constant">
+                                      <title name="DIR">moveForward</title>
+                                      <title name="VALUE">50</title>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </xml>
         2-3_Artist_Loops_New_11_b: Noua ta întoarcere trebuie să fie plasată la **finalul**
           codului din interiorul buclei.
       2-3 Artist Loops New 12:
@@ -100,6 +155,15 @@ ro-RO:
           La sfârșitul fiecărui romb, artistul se află deja cu fața către direcția cea bună pentru a începe următorul.
 
           Din acest motiv, nu mai trebuie să adăugăm un bloc suplimentar "întoarce la stânga" înainte de a începe din nou.
+        2-3_Artist_Loops_New_13_b: |-
+          Pentru a face fiecare fiecare romb, artistul trebuie să facă următorii pași:
+
+          -   mută
+          -   întoarce la dreapta 120 de grade
+          -   mută
+          -   întoarce la dreapta 60 de grade!
+
+          Şi apoi execută totul din nou!
       2-3 Artist Loops New 9:
         2-3_Artist_Loops_New_9_a: Artistul trebuie să se rotească la 45 de grade către
           dreapta înainte de a începe să deseneze.
@@ -140,6 +204,10 @@ ro-RO:
         2-3_Bee_Conditionals_14_b: Dacă floarea roşie ar fi fost violetă, vă puteți
           da seama cum se utilizează o buclă `repetă` suplimentară pentru a reduce
           pe codul?
+        2-3_Bee_Conditionals_14_c: "Încearcă să spargi programul în două bucăți separate:\n\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1.
+          \ Adună nectar de 3 ori\n\n2.  Mută înainte de 5 ori\n\n3.  Verifică să
+          vezi dacă este nectar, dacă da: strânge-l\n\n4.  Întoarce la stânga\n\n5.
+          \ Fă miere \n\n6.  Mută înainte o dată\n\n7.  Fă două (bucați de) miere"
       2-3 Bee Conditionals 15:
         2-3_Bee_Conditionals_15_a: 'Amintiți-vă: florile mov au doar 0 sau 1 nectar
           și se pot modifica de fiecare dată când executați programul.'
@@ -185,8 +253,7 @@ ro-RO:
         2-3_Bee_Loops_2_a: Ar trebui să aveți la final patru blocuri în interiorul
           buclei dvs.
       2-3 Bee Loops 3:
-        2-3_Bee_Loops_3_a: Ar trebui să aveți la final 6 blocuri în interiorul buclei
-          dvs.
+        2-3_Bee_Loops_3_a: Ar trebui să aveți 6 blocuri în interiorul buclei dvs.
       2-3 Bee Loops 3B:
         2-3_Bee_Loops_3B_a: Veți avea nevoie de două bucle diferite de repetare, una
           după alta.
@@ -202,8 +269,8 @@ ro-RO:
           buclă repetată la sfârșit.
       2-3 Bee Loops 5:
         2-3_Bee_Loops_5_a: Dacă nu puteți identifica imediat blocurile de pus în interiorul
-          buclei `repetă`, începeți prin a codifica fiecare mișcare și căutați să
-          observați un tipar structural.
+          buclei `repetă`, începeți prin a coda fiecare mișcare și căutați să observați
+          un tipar structural.
       2-3 Bee Loops 6:
         2-3_Bee_Loops_6_a: Dacă nu vă puteți da seama ce ar trebui să intre în bucla
           `repetă`, încercați să glisați blocurile unul câte unul în afară și să vedeți
@@ -215,9 +282,9 @@ ro-RO:
         2-3_Bee_Loops_7_b: 'Dacă nu puteți imagina destul de bine bucla de la început,
           încercați să o codificați pe calea lungă, apoi căutați un tipar structural.  '
       2-3 Maze 1:
-        2-3_Maze_1_a: Pentru a utiliza un bloc "mută înainte", glisați-l din zona
-          barei de instrumente în spațiul de lucru și conectați-l la blocul \`când
-          rulează '.
+        2-3_Maze_1_a: Pentru a utiliza un bloc "mută înainte", trage-l din zona barei
+          de instrumente în spațiul de lucru și conectați-l la blocul \`când rulează
+          '.
       2-3 Maze 16:
         2-3_Maze_16_a: Dacă modelul structural este greu de identificat, încercați
           să îl codificați în întregime mai întâi și să observați ce anume se repetă
@@ -270,6 +337,11 @@ ro-RO:
         4-5_Artist_4_a: "Sunt 360 de grade într-un cerc! \n\nȘi tot de atâtea ori
           trebuie să repetați acest cod (efectuând o întoarcere de un grad de fiecare
           dată) înainte ca cercul să fie finalizat!"
+      4-5 Artist 5:
+        4-5_Artist_5_a: |-
+          Încercare și eroare este o metodă excelentă, dar puteți rezolva problema și împărțind unghiul de 90 de grade în treimi.
+
+          **90 / 3 = \_\_\_\_\_**
       4-5 Artist 7:
         4-5_Artist_7_a: 'Care unghi este cel mai mic? La ce unghi stă artistul în
           picioare? '
@@ -277,7 +349,13 @@ ro-RO:
         4-5_Artist_8_a: "Laturile lungi sunt de 240 de pixeli fiecare. Aceasta înseamnă
           că cele 2 laturi scurte trebuie să totalizeze:\n\n**800 - 240 - 240 = 320**\n\nCât
           este **320/2**? "
+        4-5_Artist_8_b: "Această imagine poate fi făcută în 2 moduri!  \n\n-   Desenați
+          două dreptunghiuri care sunt de **120** lungime și **160** înălțime, cu
+          o latură suprapusă\n\n-   Desenați un dreptunghi care are **240** lungime
+          și **160** înălțime și apoi adăugați o linie la mijloc."
       4-5 Artist 9:
+        4-5_Artist_9_a: 'Când un triunghi este echilateral, toate laturile și unghiurile
+          acestuia sunt egale.  '
         4-5_Artist_9_b: Va trebui să desenați trei triunghiuri de aceeași mărime.
           Nu uitați să săriți la noua poziție după fiecare dintre ele.
       4-5 Artist Assessment 1:
@@ -285,8 +363,8 @@ ro-RO:
           a completa acest puzzle.
       4-5 Artist Patterns 11:
         4-5_Artist_Patterns_11_a: Dacă există 360 de grade într-un cerc și fiecare
-          buclă întoarce la 3 grade, de câte ori ar trebui să faceți bucle pentru
-          a desena jumătate dintr-un cerc complet?
+          iteraţie se întoarce cu 3 grade, de câte ori ar trebui să se repete bucla
+          pentru a desena jumătate dintr-un cerc complet?
       4-5 Artist Patterns 2:
         4-5_Artist_Patterns_2_a: Observați că, deoarece patratele au latura de 20
           de pixeli lungime, va trebui să săriți 20 de pixeli înainte de a începe
@@ -299,7 +377,8 @@ ro-RO:
       4-5 Artist Patterns 5:
         4-5_Artist_Patterns_5_a: "Acum, când artistul a terminat fiecare romb, el
           se află cu fața către direcția opusă locului de unde trebuie să fie pentru
-          a începe următorul.  \n\nCâte grade trebuie să se întoarcă pentru a se îndrepta?"
+          a-l începe pe următorul.  \n\nCâte grade trebuie să se întoarcă pentru a
+          se îndrepta?"
       4-5 Bee Conditionals 4:
         remember_quantum: "**Amintiți-vă:** Acest puzzle se schimbă de fiecare dată
           când este executat.  \n\nVeți dori să utilizați un bloc condițional (\"dacă\"
@@ -320,7 +399,7 @@ ro-RO:
       4-5 Bee Nested Loops Rows:
         4-5_Bee_Nested_Loops_Rows_a: Încercați să tratați acest puzzle ca un dreptunghi
           lung în care albina trebuie să se deplaseze înainte, apoi să se întoarcă
-          de mai multe ori pentru a termina traseul.
+          la stânga de mai multe ori pentru a termina traseul.
       4-5 Maze 10:
         4-5_Maze_10_a: |-
           Dacă nu puteți vizualiza cum să utilizați buclele pentru a rezolva puzzle-ul imediat, încercați să-l rezolvați mai întâi pe calea lungă, apoi căutați un model structural.
@@ -352,16 +431,16 @@ ro-RO:
           **360 / 6 = ?**
       4-5 Nested Loops 7:
         4-5_Nested_Loops_7_a: |-
-          Acest design va fi de circa 10 ori peste 360 ​​de grade.
+          Acest model se va repeta de 10 ori în 360 ​​de grade.
 
           **360 / 10 = ?**
       4-5 Nested Loops 8:
         4-5_Nested_Loops_8_a: |-
-          Veți face cu bucla această formă de 6 ori peste 360 ​​de grade.
+          Vei repeta această formă de 6 ori în 360 ​​de grade.
 
           **360 / 6 = ?**
       4-5 While Loops 8:
-        4-5_While_Loops_8_a: Fiecare element va avea nevoie de o buclă "în timp ce"
+        4-5_While_Loops_8_a: Fiecare element va avea nevoie de o buclă "cât timp"
           proprie.
       Course 4 Artist 11:
         Course_4_Artist_11_a: 'Jumătatea de hexagon are o **lungime de 30** și se
@@ -371,13 +450,15 @@ ro-RO:
       Course 4 Artist 12:
         Course_4_Artist_12_a: 'Fiecare formă repetată este o combinație de **jumătate
           de hexagon**, urmată de **2/3 din triunghi**. '
-        Course_4_Artist_12_b: 'Forma unității este aproape identică cu cea din ultimul
-          puzzle, cu excepția faptului că jumătatea de hexagon este puțin mai mare. '
+        Course_4_Artist_12_b: 'Forma este aproape identică cu cea din ultimul puzzle,
+          cu excepția faptului că jumătatea de hexagon este puțin mai mare. '
       Course 4 Artist 6:
         Course_4_Artist_6_a: Există 3 triunghiuri în rotația 360 de grade...de câte
           ori intră 3 în 360?
       Course 4 Artist 8a:
         Course_4_Artist_8a: |-
+          Trebuie să-ţi dai seama cât să virezi?
+
           Există 3 triunghiuri în rotația 360 de grade.
 
           De câte ori intră 3 în 360?
@@ -385,12 +466,12 @@ ro-RO:
         Course_4_Artist_9_a: "Trebuie să știi cât de mult să te întorci? \n\nCât este
           360 ​​împărțit la 10?"
       Course 4 Artist Binary Free Play 2b:
-        Course_4_Artist_Binary_Free_Play_2b_a: Acest cod folosește două bucle imbricate`pentru`.
-          Una numără în ordine crescătoare de la 1 la 8, cealaltă în ordine descrescătoare
-          de la 8 la 1.
+        Course_4_Artist_Binary_Free_Play_2b_a: Acest cod folosește două bucle `pentru`
+          îmbricate. Una numără în ordine crescătoare de la 1 la 8, cealaltă în ordine
+          descrescătoare de la 8 la 1.
         Course_4_Artist_Binary_Free_Play_2b_b: Fiecare 'buclă pentru' are trei repetări.  Prima
-          desenează cel mai din stânga set de numere 1, al doilea desenează zerouri
-          la mijloc si al treilea desenează numere 1 în dreapta.
+          desenează cel mai din stânga set de numere 1, a doua desenează zerouri la
+          mijloc şi a treia desenează numărul 1 în dreapta.
         Course_4_Artist_Binary_Free_Play_2b_c: În fiecare repetare aveți nevoie de
           'numărător' pentru cifrele 1 şi '16-(2 x numărător)' pentru zerouri.
         Course_4_Artist_Binary_Free_Play_2b_d: |-
@@ -424,10 +505,10 @@ ro-RO:
         Course_4_Artist_For_Loops_inspire_a: Structura de bază a acestui cod este
           aceeaşi ca și cea a puzzle-ului din provocarea anterioară... cu vreo două
           schimbări.
-        Course_4_Artist_For_Loops_inspire_b: Încercați o buclă imbricată care merge
+        Course_4_Artist_For_Loops_inspire_b: Încercați o buclă "pentru" care merge
           de la 3 la 10 cu un increment de 1.
         Course_4_Artist_For_Loops_inspire_c: Există două iterații ale aceleiași bucle
-          de repetare în interiorul buclei-`pentru`, dar cea de-a doua repetare întoarce
+          de repetare în interiorul buclei `pentru`, dar cea de-a doua repetare întoarce
           în direcția opusă.
         Course_4_Artist_For_Loops_inspire_d: "**Soluție:** \n\n<xml>\n  <block type=\"when_run\"
           deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_for_counter\"
@@ -442,47 +523,47 @@ ro-RO:
           \           <value name=\"TIMES\">\n              <block type=\"math_arithmetic\"
           inline=\"true\">\n                <title name=\"OP\">MINUS</title>\n                <value
           name=\"A\">\n                  <block type=\"variables_get\">\n                    <title
-          name=\"VAR\">numărător</title>\n                  </block>\n                </value>\n
+          name=\"VAR\">counter</title>\n                  </block>\n                </value>\n
           \               <value name=\"B\">\n                  <block type=\"math_number\">\n
           \                   <title name=\"NUM\">1</title>\n                  </block>\n
           \               </value>\n              </block>\n            </value>\n
           \           <statement name=\"DO\">\n              <block type=\"draw_move\"
-          inline=\"true\">\n                <title name=\"DIR\">mutăÎnainte</title>\n
+          inline=\"true\">\n                <title name=\"DIR\">moveForward</title>\n
           \               <value name=\"VALUE\">\n                  <block type=\"math_number\">\n
           \                   <title name=\"NUM\">40</title>\n                  </block>\n
           \               </value>\n                <next>\n                  <block
-          type=\"draw_turn\" inline=\"true\">\n                    <title name=\"DIR\">întoarceDreapta</title>\n
+          type=\"draw_turn\" inline=\"true\">\n                    <title name=\"DIR\">turnRight</title>\n
           \                   <value name=\"VALUE\">\n                      <block
           type=\"math_arithmetic\" inline=\"true\">\n                        <title
-          name=\"OP\">ÎMPARTE</title>\n                        <value name=\"A\">\n
+          name=\"OP\">DIVIDE</title>\n                        <value name=\"A\">\n
           \                         <block type=\"math_number\">\n                            <title
           name=\"NUM\">360</title>\n                          </block>\n                        </value>\n
           \                       <value name=\"B\">\n                          <block
-          type=\"variables_get\">\n                            <title name=\"VAR\">numărător</title>\n
+          type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n
           \                         </block>\n                        </value>\n                      </block>\n
           \                   </value>\n                  </block>\n                </next>\n
           \             </block>\n            </statement>\n            <next>\n              <block
           type=\"controls_repeat_ext\" inline=\"true\">\n                <value name=\"TIMES\">\n
           \                 <block type=\"math_arithmetic\" inline=\"true\">\n                    <title
           name=\"OP\">MINUS</title>\n                    <value name=\"A\">\n                      <block
-          type=\"variables_get\">\n                        <title name=\"VAR\">numărător</title>\n
+          type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n
           \                     </block>\n                    </value>\n                    <value
           name=\"B\">\n                      <block type=\"math_number\">\n                        <title
           name=\"NUM\">1</title>\n                      </block>\n                    </value>\n
           \                 </block>\n                </value>\n                <statement
           name=\"DO\">\n                  <block type=\"draw_move\" inline=\"true\">\n
-          \                   <title name=\"DIR\">mutăÎnainte</title>\n                    <value
+          \                   <title name=\"DIR\">moveForward</title>\n                    <value
           name=\"VALUE\">\n                      <block type=\"math_number\">\n                        <title
           name=\"NUM\">40</title>\n                      </block>\n                    </value>\n
           \                   <next>\n                      <block type=\"draw_turn\"
-          inline=\"true\">\n                        <title name=\"DIR\">întoarceStânga</title>\n
+          inline=\"true\">\n                        <title name=\"DIR\">turnLeft</title>\n
           \                       <value name=\"VALUE\">\n                          <block
           type=\"math_arithmetic\" inline=\"true\">\n                            <title
-          name=\"OP\">ÎMPARTE</title>\n                            <value name=\"A\">\n
+          name=\"OP\">DIVIDE</title>\n                            <value name=\"A\">\n
           \                             <block type=\"math_number\">\n                                <title
           name=\"NUM\">360</title>\n                              </block>\n                            </value>\n
           \                           <value name=\"B\">\n                              <block
-          type=\"variables_get\">\n                                <title name=\"VAR\">numărător</title>\n
+          type=\"variables_get\">\n                                <title name=\"VAR\">counter</title>\n
           \                             </block>\n                            </value>\n
           \                         </block>\n                        </value>\n                      </block>\n
           \                   </next>\n                  </block>\n                </statement>\n
@@ -515,7 +596,7 @@ ro-RO:
           interiorul celeilalte) ambele repetând de atâtea ori cât numărul de`laturi`.
         Course_4_Artist_Vars_13_b: "Bucla interioară de repetiție desenează un octogon
           (întorcând către stânga).   \n\nDupă aceea, este necesar să mutați înainte
-          și să întoarceți la dreaptă doar în cadrul buclei exterioare."
+          și să întoarceți la dreapta doar în cadrul buclei exterioare."
         Course_4_Artist_Vars_13_c: Pentru a ajusta forma ca aceasta să rămână la aceeași
           dimensiune atunci când numărul de laturi se schimbă, utilizați blocul de
           matematică pentru a împărți lungimea în pixeli la numărul de laturi.
@@ -528,7 +609,7 @@ ro-RO:
           va crește.
       Course 4 Bee Params 7:
         notice_pattern: 'Vedeți un model structural în modul în care se schimbă numărul
-          de nectare? '
+          de nectar? '
         count_with_for: Observați că nectarul crește în pași. Ce fel de bloc puteți
           folosi pentru a face același lucru de mai multe ori numărând în ordine crescătoare?
       Course 4 Bee Params 8:
@@ -540,7 +621,7 @@ ro-RO:
           "înălțime".
       Course 4 Play Lab Vars 2:
         Course_4_Play_Lab_Vars_2_a: Asigurați-vă că setați numărul pentru "viteză_câine"
-          la ceva mai mare decât "viteză_pisică".
+          la o valoare ceva mai mare decât "viteză_pisică".
       Course 4 Play Labs For Loops 2:
         Course_4_Play_Labs_For_Loops_2_a: Ce ați adăuga la bucla dvs. `pentru` de
           fiecare dată ca aceasta să sară peste numerele pare?
@@ -551,20 +632,20 @@ ro-RO:
           330 de pixeli în același număr de mișcări cu numere diferite de pornire
           și oprire?
         Course_4_Playlab_For_Loops_4b_c: Amintiți-vă, nu contează cu cât de mult un
-          personaj trece steagul în ultimul său pas, atâta timp cât fiecare caracter
+          personaj trece steagul în ultimul său pas, atâta timp cât fiecare personaj
           face același număr de pași pentru a ajunge la steag.
       Course 4 Playlab For Loops 5b:
-        Course_4_Playlab_For_Loops_5b_a: Personajele se află la aproximativ 330 de
+        Course_4_Playlab_For_Loops_5b_a: Personajele se află la aproximativ 175 de
           pixeli distanță de centru.
         Course_4_Playlab_For_Loops_5b_b: Amintiți-vă că pasul următor al unui personaj
-          va fi mai lung decât ultimul efectuat, din moment ce numărătoarea crește
-          din ce în ce mai mult.
+          va fi mai lung decât ultimul efectuat, din moment ce contorul crește din
+          ce în ce mai mult.
       Course 4 SCF 1:
         Course_4_SCF_1_a: Fiecare hexagon are laturi de 40 de pixeli.
         Course_4_SCF_1_b: În fiecare linie orizontală, există un salt de 120 de pixeli
           între fiecare hexagon.
         Course_4_SCF_1_c: "Înainte de a desena al doilea rând de hexagoane, trebuie
-          să rotiți la dreapta cu 60 de grade și să săriți 40 de pixeli înainte.  \n\nOdată
+          să viraţi la dreapta cu 60 de grade și să săriți 40 de pixeli înainte.  \n\nOdată
           ce vă aflați în poziția verticală corectă, trebuie să întoarceți artistul
           înapoi din nou și să-l faceți să sară înapoi 320 de pixeli."
         Course_4_SCF_1_d: "Înainte de a desena al treilea rând de hexagoane, e necesar
@@ -578,7 +659,7 @@ ro-RO:
           pentru". Nu pentru pași, ci pentru parametrul funcției.
       Course 4 SCF 1b:
         Course_4_SCF_1b_c: Ar trebui să luați în considerare utilizarea unei "bucle
-          for" pentru distanța parcursă de albine.
+          pentru" pentru distanța parcursă de albină.
       Course 4 SCF 2:
         Course_4_SCF_2_a: Fiecare octogon are laturi de 40 de pixeli.
         Course_4_SCF_2_b: În fiecare linie orizontală, există un salt de 136 de pixeli
@@ -598,10 +679,10 @@ ro-RO:
           Celălaltă buclă "pentru" are nevoie doar de o buclă obișnuită pentru a face cantitatea de "miez" indicată de numărător.
       Course 4 SCFL 7:
         Course_4_SCFL_7_b: 'Acest desen este realizat folosind două "bucle pentru"
-          similare. Una merge de la 5 la 200 cu 2, celalaltă merge de la 200 la 5
-          cu 2. '
-        Course_4_SCFL_7_d: Va trebui să întoarceți la stânga cu 225 de grade între
-          cele două "bucle pentru".
+          similare. Una merge de la 5 la 200 din 2 în 2, celalaltă merge de la 200
+          la 5 din 2 în 2. '
+        Course_4_SCFL_7_d: Va trebui să viraţi la stânga cu 225 de grade între cele
+          două "bucle pentru".
       Course 4 SCV 4:
         Course_4_SCV_4_b: 'Va fi foarte util să folosiți trei bucle în interiorul
           buclei dvs. principale. Una pentru mersul înainte, una pentru colectarea
@@ -808,8 +889,17 @@ ro-RO:
         courseA_artist_loops_challenge1_c: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         courseA_artist_loops_challenge1_d: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       course1_artist_loops_challenge3:
+        courseA_artist_loops_challenge2_b: Când termini o căsuţă pentru păsări, `sari`
+          la următoarea!
         courseA_artist_loops_challenge2_c: Veţi avea nevoie de o MULȚIME de blocuri
           în interiorul buclei pentru această provocare.
+      course1_collector_loops_challenge2:
+        courseA_collector_loops_challenge2_b: Va fi nevoie să foloseşti un bloc ![](<https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34
+          PM.png>) pentru a rezolva asta.
+        courseA_collector_loops_challenge2_a: |-
+          Poți să te deplasezi înapoi pe traseu a doua oară înainte de a te deplasa spre sud.
+
+          ![](<https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21 PM.png>)
       course1_collector_loops_challenge3:
         courseB_collector_loops_challenge1_c: |-
           Mutați Est de două ori între fiecare traseu.
@@ -818,25 +908,129 @@ ro-RO:
           <block type="maze_moveEast"></block></next></block>
           </xml>
           Puteți face acest lucru cu doar 14 blocuri. Faceți clic pentru încă un indiciu pentru a vedea o soluție.
+      course1_maze_debugging_challenge1:
+        courseA_maze_seq_challenge1_a: Unele drumuri duc la TNT, dacă te mişti prea
+          departe.
+      course1_maze_debugging_challenge2:
+        courseB_maze_seq_challenge2_b: Rearanjează blocurile şi urmează drumul din
+          mijloc.
+      course1_maze_seq_challenge2:
+        courseB_maze_seq_challenge1_b: Încearcă să mergi spre vest pentru a începe.
+      course1_playlab_events_challenge1:
+        courseA_playlab_events_challenge1_e: "La final, fă-l pe Vrajitorul Wendel
+          să apare când apeşi pe Spiff!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
       course2_artist_nestedLoops_challenge1:
+        courseD_artist_nestedLoops_challenge1_a: Începe prin a face o buclă îmbricată
+          pentru a crea patru octogoane. Virează 45 de grade pentru a face octogonul.
+          Sari, apoi virează 90 de grade după fiecare.
         courseD_artist_nestedLoops_challenge1_b: Adăugați codul pentru a desena un
-          triunghi în bucla dvs. imbricată. Utilizați întoarceri de 120 grade pentru
+          triunghi în bucla dvs. îmbricată. Utilizați întoarceri de 120 grade pentru
           triunghiul dvs.
         courseD_artist_nestedLoops_challenge1_c: |-
-          Utilizați o buclă imbricată:
+          Utilizați o buclă îmbricată:
 
           -   Repetă de 8 ori
           -   desenează un octogon
           -   desenează un triunghi
           -   sări 50 de pixeli înainte
           -   întoarce 90 de grade la dreapta
+      course2_artist_prog_challenge1:
+        courseC_artist_prog_challenge1_a: 'Dreptunghiul are 200 de pixeli laţime si
+          100 de pixeli înălţime. '
+      course2_artist_prog_challenge2:
+        courseC_artist_prog_challenge2_a: "Poţi pune comenzi în interiorul blocului
+          \"repetă\" pentru a le executa de mai multe ori. Încearcă!\n\n<xml>\n  \n
+          \         <block type=\"controls_repeat\">\n            <title name=\"TIMES\">6</title>\n
+          \           <statement name=\"DO\">\n              <block type=\"draw_move_by_constant_dropdown\">\n
+          \               <title name=\"DIR\">moveForward</title>\n                <title
+          name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n                <next>\n
+          \                 <block type=\"jump_by_constant_dropdown\">\n                    <title
+          name=\"DIR\">jumpForward</title>\n                    <title name=\"VALUE\"
+          config=\"25,50,100,150,200,300\">25</title>\n                  </block>\n
+          \               </next>\n              </block>\n              </statement></block></xml>"
+      course2_bee_conditionals_challenge1:
+        courseD_bee_conditionals_challenge1_a: |-
+          Poţi găsi un drum care trece pe la fiecare floare si fiecare fagure fără a lovi vreun copac? Cel mai bun drum este o spirala.
+
+          **Poţi rezolva această problemă fără a te întoarce la stânga.**
+      course2_bee_conditionals_challenge2:
+        courseD_bee_conditionals_challenge1_b: |-
+          La fel ca şi blocul "dacă eşti la floare", codul din interiorul unui bloc "cât timp nectar > 0" va rula doar dacă albina este la o floare. Diferenţa principală este a acest cod se va executa repetat până când nu mai este nectar. Încearcă acest model:
+
+          <xml>  <block type="bee_whileNectarAmount">
+              <title name="ARG1">nectarRemaining</title>
+              <title name="OP">&gt;</title>
+              <title name="ARG2">0</title>                    <statement name="DO">
+                                <block type="maze_nectar"/>
+                              </statement>
+            </block></xml>
+      course2_collector_loops_challenge2:
+        courseC_maze_loops_challenge2_a: Codul original ar merge perfect - doar dacă
+          ar fi o singură comoară in fiecare grămadă!
+      course2_collector_prog_challenge1:
+        courseC_collector_prog_challenge1_a: Poţi folosi comanda "strânge" mai des
+          pentru a obţine comoara suplimentară.
+      course2_collector_prog_challenge2:
+        courseC_collector_prog_challenge1_a: Poţi folosi comanda "strânge" mai des
+          pentru a obţine comoara suplimentară.
       course2_harvester_loops_challenge1:
+        courseC_harvester_loops_challenge1_a: Nici nu te gândi să încerci asta fără
+          bucle!
         courseC_harvester_loops_challenge1_b: Puteți repeta "mută înainte" și "culege
           porumb" ori de câte ori aveți nevoie, apoi "întoarce la dreapta" la fiecare
           colț.
+        courseC_harvester_loops_challenge1_c: |-
+          Cea mai bună metodă de a strânge primii patru porumbi foloseşte un bloc "repetă" în interiorul unui alt bloc "repetă". Poţi folosi acest model şi pentru restul problemei!
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">2</title>
+                  <statement name="DO">
+                    <block type="controls_repeat">
+                      <title name="TIMES">2</title>
+                      <statement name="DO">
+                        <block type="maze_move">
+                          <title name="DIR">moveForward</title>
+                          <next>
+                            <block type="harvester_corn"/>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnRight</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  </block></next></block></xml>
       course2_harvester_loops_challenge2:
         courseC_harvester_loops_challenge2_b: Puteți repeta "mută înainte" și "culege
           porumb" ori de câte ori aveți nevoie, apoi întoarceți la fiecare colț.
+      course2_maze_loops_challenge1:
+        courseC_maze_loops_challenge1_a: Gândeşte-te la acest drum ca având trei bucăţi
+          diferite. Fiecare are un model pe care îl poţi repeta.
+        courseC_maze_loops_challenge1_b: Între blocurile "repetă" vei avea nevoie
+          să "întorci stânga" sau să "întorci dreapta" ca să îl pregăteşti pe Scrat
+          pentru modelul următor.
+        courseC_maze_loops_challenge1_c: |-
+          Dacă ai ajuns până aici, trebuie doar să te "întorci stânga" şi apoi să "mergi înainte" de câteva ori. Nu renunţa!
+
+          ![](<https://images.code.org/7696c5c16b8ddf1d53436cdc7fb6346d-image-1494101728016.14.34 PM.png>)
+      course2_maze_programming_challenge2:
+        courseC_maze_programming_challenge2_a: _Dacă mă trimiţi cu spatele, ai multă
+          grijă să mă întorc în direcţia corectă!_
+        courseC_maze_programming_challenge2_b: Cea mai scurtă soluţie foloseşte doar
+          5 blocuri, dar foloseste blocul "repeta"!
+      course3_artist_functions_challenge1:
+        courseE_artist_functions_challenge1_a: Dacă apelezi funcţia încă o dată, poti
+          crea acelaşi model în ultimul colţ. Poţi de asemenea să "sari la" alte poziţii
+          sau să schimbi tot modelul cum doreşti tu!
       course3_bee_functions_challenge1:
         courseE_bee_functions_challenge1_a: |-
           Dacă puzzle-ul pare a fi o provocare, încercați să vă construiți funcția câte puțin de fiecare dată.
@@ -847,9 +1041,35 @@ ro-RO:
           Dacă puzzle-ul pare a fi o provocare, încercați să vă construiți funcția câte puțin de fiecare dată.
 
           Adăugați câteva blocuri, apoi încercați să vedeți ce se întâmplă. Adăugați mai multe, apoi încercați din nou. În curând, veți reuși!
+      course3_collector_debugging_challenge2:
+        courseD_collector_debugging_challenge2_a: "Începe prin a aduna DOUÂ pietre
+          preţioase din fiecare dintre primele două grămezi.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04
+          AM copy.png>)\nFoloseşte aceste blocuri.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block
+          type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n
+          \ </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title
+          name=\"DIR\">moveForward</title>\n                  </block>\n                  \n
+          \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n
+          \   <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
+      course3_farmer_condLoops_challenge1:
+        courseD_farmer_condLoops_challenge1_a: Butonul `PAS` ar putea fi foarte util
+          pentru această problemă.
       course3_farmer_condLoops_challenge2:
         courseD_farmer_condLoops_challenge2_a: Cantitatea de fiecare tip de legumă
           în fiecare spațiu variază. Utilizați bucle "în timp ce" pentru acestea.
+      course3_maze_debugging_challenge1:
+        courseC_maze_debugging_challenge1_b: Drumul lui Scrat are forma unui dreptunghi!
+          Trebuie să se întorcă în aceeaşi direcţie de fiecare dată!
+        courseC_maze_debugging_challenge1_c: Dacă de blochezi, poţi oricând să o iei
+          de la început sau să ştergi tot codul şi să găseşti soluţia ta!
+      course3_maze_debugging_challenge2:
+        courseC_maze_debugging_challenge2_a: O metodă de rezolvare este să adaugi
+          mai multi paşi "înainte" între întoarceri.
+        courseC_maze_debugging_challenge2_b: Dacă de blochezi, poţi oricând să o iei
+          de la început sau să ştergi tot codul şi să găseşti soluţia ta!
+        courseC_maze_debugging_challenge2_c: |-
+          Sunt două drumuri diferite pe care le poţi urma folosind doar blocul "mută înainte" şi doar patru întoarceri. Daca găseşti o cale să foloseşti blocul "repetă", poate sunt mai multe!
+
+          ![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)
       course4_bee_fwp_challenge1:
         courseF_bee_fwp_challenge1_d: |-
           În interiorul \`buclei pentru ', veți dori să' mutați înainte ', apoi să obțineți nectar **de atâtea ori numărător**.
@@ -1284,31 +1504,6 @@ ro-RO:
         courseC_harvester_loops_challenge1_b: Puteți repeta comenzile "mută înainte"
           și "culege porumb" ori de câte ori aveți nevoie, apoi "întoarceți la dreapta"
           la fiecare colț.
-        courseC_harvester_loops_challenge1_c: |-
-          Cea mai bună modalitate de a colecta primii patru porumbi folosește un bloc `repetă` în interiorul unui alt bloc`repetă`. Puteți folosi acest model și pentru restul puzzle-ului!
-
-          <xml><block type="controls_repeat">
-
-          <title name="TIMES">2</title>
-          <statement name="DO">
-          <block type="controls_repeat">
-          <title name="TIMES">4</title>
-          <statement name="DO">
-          <block type="maze_move">
-          <title name="DIR">mutăÎnainte</title>
-          <next>
-          <block type="harvester_corn"/>
-          </next>
-          </block>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">întoarceLaDreapta</title>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block></xml>
       courseC_harvester_loops_challenge1a_2019:
         courseC_harvester_loops_challenge1_b: Puteți repeta comenzile "mută înainte"
           și "culege porumb" ori de câte ori aveți nevoie, apoi "întoarceți la dreapta"
@@ -1589,10 +1784,6 @@ ro-RO:
       courseF_artist_fwp_challenge2:
         courseF_artist_fwp_challenge1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseF_artist_variables4:
-        courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
-      courseF_artist_variables4_2018:
-        courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
-      courseF_artist_variables4_2019:
         courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseF_bee_conditionals5:
         courseF_bee_conditionals5_c: 'Există 3 laturi cu flori ale dreptunghiului,

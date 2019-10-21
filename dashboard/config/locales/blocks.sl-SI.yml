@@ -23,6 +23,13 @@ sl:
           PROPERTY:
             '"scale"': velikost
             '"height"': višina
+      Dancelab_changePropEachBy:
+        options:
+          GROUP:
+            sprites: vse
+          PROPERTY:
+            '"scale"': velikost
+            '"height"': višina
       Dancelab_doMoveEachLR:
         options:
           GROUP:
@@ -58,14 +65,40 @@ sl:
             "{x: 100, y: 200}": levo
             "{x: 300, y: 200}": desno
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": naključno
+      Dancelab_jumpToEach:
+        options:
+          GROUP:
+            sprites: vse
+          LOCATION:
+            "{x: 100, y: 200}": levo
+            "{x: 300, y: 200}": desno
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": naključno
       Dancelab_layoutSprites:
         options:
           GROUP:
             sprites: vse
           FORMAT:
             '"random"': naključno
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': marsovec
+            '"CAT"': muca
+            '"DOG"': kuža
+            '"DUCK"': raca
+            '"ROBOT"': robot
+          LOCATION:
+            "{x: 100, y: 200}": levo
+            "{x: 300, y: 200}": desno
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": naključno
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': marsovec
+            '"CAT"': muca
+            '"DOG"': kuža
+            '"DUCK"': raca
+            '"ROBOT"': robot
           LOCATION:
             "{x: 100, y: 200}": levo
             "{x: 300, y: 200}": desno
@@ -131,7 +164,18 @@ sl:
           PROPERTY:
             '"scale"': velikost
             '"height"': višina
+      Dancelab_setPropRandomEach:
+        options:
+          GROUP:
+            sprites: vse
+          PROPERTY:
+            '"scale"': velikost
+            '"height"': višina
       Dancelab_setTintEach:
+        options:
+          THIS:
+            sprites: vse
+      Dancelab_setTintEachInline:
         options:
           THIS:
             sprites: vse
@@ -144,8 +188,22 @@ sl:
           PROPERTY:
             '"scale"': velikost
             '"height"': višina
+      Dancelab_startMappingEach:
+        options:
+          GROUP:
+            sprites: vse
+          PROPERTY:
+            '"scale"': velikost
+            '"height"': višina
       Dancelab_stopMapping:
         options:
+          PROPERTY:
+            '"scale"': velikost
+            '"height"': višina
+      Dancelab_stopMappingEach:
+        options:
+          GROUP:
+            sprites: vse
           PROPERTY:
             '"scale"': velikost
             '"height"': višina
@@ -370,53 +428,19 @@ sl:
         text: obrni se levo
       RyanLab_turnRight:
         text: obrni se desno
-      aalab_changePropByFlexible:
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': velikost
-            '"x"': x položaj
-            '"y"': y položaj
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': ko
-            '"while"': dokler
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': ko
-            '"while"': dokler
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': ko
-            '"while"': dokler
-          KEY:
-            '"up"': gor
-            '"down"': dol
-            '"left"': levo
-            '"right"': desno
-            '"space"': vesolje
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': mesto
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': velja
-            '"false"': ne velja
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': velikost
-            '"x"': x položaj
-            '"y"': y položaj
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': neskončno
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
         options:
           OPTION:
             '"show"': prikaži

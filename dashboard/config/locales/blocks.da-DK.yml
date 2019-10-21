@@ -32,11 +32,17 @@ da:
           PROPERTY:
             '"scale"': størrelse
             '"height"': højde
+      Dancelab_changePropEachBy:
+        options:
+          GROUP:
+            sprites: alle
+          PROPERTY:
+            '"scale"': størrelse
+            '"height"': højde
       Dancelab_doMoveEachLR:
         options:
           GROUP:
             sprites: alle
-            '"UNICORN"': alle enhjørninger
           MOVE:
             MOVES.Roll: Rul med kroppen
             MOVES.DoubleJam: Ned to gange
@@ -82,20 +88,45 @@ da:
             "{x: 100, y: 200}": venstre
             "{x: 300, y: 200}": højre
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": tilfældig
+      Dancelab_jumpToEach:
+        options:
+          GROUP:
+            sprites: alle
+          LOCATION:
+            "{x: 100, y: 200}": venstre
+            "{x: 300, y: 200}": højre
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": tilfældig
       Dancelab_layoutSprites:
         options:
           GROUP:
             sprites: alle
-            '"UNICORN"': alle enhjørninger
           FORMAT:
             '"border"': grænse
             '"inner"': indersiden af firkant
             '"x"': kryds og tværs
             '"random"': tilfældig
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': alien
+            '"CAT"': kat
+            '"DOG"': hund
+            '"DUCK"': and
+            '"ROBOT"': robot
+            '"UNICORN"': enhjørning
+          LOCATION:
+            "{x: 100, y: 200}": venstre
+            "{x: 300, y: 200}": højre
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": tilfældig
       Dancelab_makeNewDanceSprite:
         options:
           COSTUME:
+            '"ALIEN"': alien
+            '"CAT"': kat
             '"DOG"': Hund
+            '"DUCK"': and
+            '"ROBOT"': robot
+            '"UNICORN"': enhjørning
           LOCATION:
             "{x: 100, y: 200}": venstre
             "{x: 300, y: 200}": højre
@@ -183,7 +214,6 @@ da:
         options:
           GROUP:
             sprites: alle
-            '"UNICORN"': alle enhjørninger
           SPEED:
             '1': normal
             '2': fast
@@ -219,7 +249,6 @@ da:
         options:
           GROUP:
             sprites: alle
-            '"UNICORN"': alle enhjørninger
           PROPERTY:
             '"scale"': størrelse
             '"height"': højde
@@ -228,7 +257,18 @@ da:
           PROPERTY:
             '"scale"': størrelse
             '"height"': højde
+      Dancelab_setPropRandomEach:
+        options:
+          GROUP:
+            sprites: alle
+          PROPERTY:
+            '"scale"': størrelse
+            '"height"': højde
       Dancelab_setTintEach:
+        options:
+          THIS:
+            sprites: alle
+      Dancelab_setTintEachInline:
         options:
           THIS:
             sprites: alle
@@ -238,14 +278,27 @@ da:
         options:
           THIS:
             sprites: alle
-            '"UNICORN"': alle enhjørninger
       Dancelab_startMapping:
         options:
           PROPERTY:
             '"scale"': størrelse
             '"height"': højde
+      Dancelab_startMappingEach:
+        options:
+          GROUP:
+            sprites: alle
+          PROPERTY:
+            '"scale"': størrelse
+            '"height"': højde
       Dancelab_stopMapping:
         options:
+          PROPERTY:
+            '"scale"': størrelse
+            '"height"': højde
+      Dancelab_stopMappingEach:
+        options:
+          GROUP:
+            sprites: alle
           PROPERTY:
             '"scale"': størrelse
             '"height"': højde
@@ -473,53 +526,19 @@ da:
         text: drej til venstre
       RyanLab_turnRight:
         text: drej til højre
-      aalab_changePropByFlexible:
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': størrelse
-            '"x"': x-position
-            '"y"': y-position
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': når
-            '"while"': mens
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': når
-            '"while"': mens
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': når
-            '"while"': mens
-          KEY:
-            '"up"': op
-            '"down"': ned
-            '"left"': venstre
-            '"right"': højre
-            '"space"': rummet
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': by
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': sandt
-            '"false"': falsk
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': størrelse
-            '"x"': x-position
-            '"y"': y-position
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': for evigt
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
         options:
           OPTION:
             '"show"': vis

@@ -55,6 +55,24 @@ id:
             '"scale"': ukuran
             '"height"': tinggi
             '"rotation"': Perputaran
+      Dancelab_changePropEachBy:
+        options:
+          GROUP:
+            sprites: semua
+            '"ALIEN"': semua aliens
+            '"BEAR"': semua beruang
+            '"CAT"': semua kucing
+            '"DOG"': semua anjing
+            '"DUCK"': semua bebek
+            '"FROG"': semua katak
+            '"MOOSE"': semua rusa
+            '"PINEAPPLE"': semua nanas
+            '"ROBOT"': semua robot
+            '"SHARK"': semua hiu
+          PROPERTY:
+            '"scale"': ukuran
+            '"height"': tinggi
+            '"rotation"': Perputaran
       Dancelab_doMoveEachLR:
         options:
           GROUP:
@@ -128,6 +146,25 @@ id:
             "{x: 300, y: 200}": kanan
             "{x: 200, y: 200}": Tengah
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": acak
+      Dancelab_jumpToEach:
+        options:
+          GROUP:
+            sprites: semua
+            '"ALIEN"': semua aliens
+            '"BEAR"': semua beruang
+            '"CAT"': semua kucing
+            '"DOG"': semua anjing
+            '"DUCK"': semua bebek
+            '"FROG"': semua katak
+            '"MOOSE"': semua rusa
+            '"PINEAPPLE"': semua nanas
+            '"ROBOT"': semua robot
+            '"SHARK"': semua hiu
+          LOCATION:
+            "{x: 100, y: 200}": kiri
+            "{x: 300, y: 200}": kanan
+            "{x: 200, y: 200}": Tengah
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": acak
       Dancelab_layoutSprites:
         options:
           GROUP:
@@ -147,8 +184,31 @@ id:
             '"row"': baris
             '"column"': kolom
             '"random"': acak
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': alien
+            '"CAT"': kucing
+            '"DOG"': anjing
+            '"DUCK"': bebek
+            '"MOOSE"': semua rusa
+            '"ROBOT"': robot
+            '"UNICORN"': unicorn
+          LOCATION:
+            "{x: 100, y: 200}": kiri
+            "{x: 300, y: 200}": kanan
+            "{x: 200, y: 200}": Tengah
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": acak
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': alien
+            '"CAT"': kucing
+            '"DOG"': anjing
+            '"DUCK"': bebek
+            '"MOOSE"': semua rusa
+            '"ROBOT"': robot
+            '"UNICORN"': unicorn
           LOCATION:
             "{x: 100, y: 200}": kiri
             "{x: 300, y: 200}": kanan
@@ -176,6 +236,17 @@ id:
             '18': '18'
             '19': '19'
             '20': '20'
+          COSTUME:
+            '"ALIEN"': semua aliens
+            '"BEAR"': semua beruang
+            '"CAT"': semua kucing
+            '"DOG"': semua anjing
+            '"DUCK"': semua bebek
+            '"FROG"': semua katak
+            '"MOOSE"': semua rusa
+            '"PINEAPPLE"': semua nanas
+            '"ROBOT"': semua robot
+            '"SHARK"': semua hiu
           LAYOUT:
             '"grid"': Kisi
             '"row"': baris
@@ -235,7 +306,6 @@ id:
             '"scale"': ukuran
             '"height"': tinggi
             '"rotation"': Perputaran
-            '"tint"': Mewarnai
       Dancelab_setPropEach:
         options:
           GROUP:
@@ -254,7 +324,6 @@ id:
             '"scale"': ukuran
             '"height"': tinggi
             '"rotation"': Perputaran
-            '"tint"': Mewarnai
       Dancelab_setPropRandom:
         options:
           PROPERTY:
@@ -262,7 +331,40 @@ id:
             '"height"': tinggi
             '"rotation"': Perputaran
             '"tint"': Mewarnai
+      Dancelab_setPropRandomEach:
+        options:
+          GROUP:
+            sprites: semua
+            '"ALIEN"': semua aliens
+            '"BEAR"': semua beruang
+            '"CAT"': semua kucing
+            '"DOG"': semua anjing
+            '"DUCK"': semua bebek
+            '"FROG"': semua katak
+            '"MOOSE"': semua rusa
+            '"PINEAPPLE"': semua nanas
+            '"ROBOT"': semua robot
+            '"SHARK"': semua hiu
+          PROPERTY:
+            '"scale"': ukuran
+            '"height"': tinggi
+            '"rotation"': Perputaran
+            '"tint"': Mewarnai
       Dancelab_setTintEach:
+        options:
+          THIS:
+            sprites: semua
+            '"ALIEN"': semua aliens
+            '"BEAR"': semua beruang
+            '"CAT"': semua kucing
+            '"DOG"': semua anjing
+            '"DUCK"': semua bebek
+            '"FROG"': semua katak
+            '"MOOSE"': semua rusa
+            '"PINEAPPLE"': semua nanas
+            '"ROBOT"': semua robot
+            '"SHARK"': semua hiu
+      Dancelab_setTintEachInline:
         options:
           THIS:
             sprites: semua
@@ -301,8 +403,55 @@ id:
             '"bass"': Kecil
             '"mid"': Sedang
             '"treble"': Besar
+      Dancelab_startMappingEach:
+        options:
+          GROUP:
+            sprites: semua
+            '"ALIEN"': semua aliens
+            '"BEAR"': semua beruang
+            '"CAT"': semua kucing
+            '"DOG"': semua anjing
+            '"DUCK"': semua bebek
+            '"FROG"': semua katak
+            '"MOOSE"': semua rusa
+            '"PINEAPPLE"': semua nanas
+            '"ROBOT"': semua robot
+            '"SHARK"': semua hiu
+          PROPERTY:
+            '"scale"': ukuran
+            '"height"': tinggi
+            '"rotation"': Perputaran
+            '"tint"': Mewarnai
+          RANGE:
+            '"bass"': Kecil
+            '"mid"': Sedang
+            '"treble"': Besar
       Dancelab_stopMapping:
         options:
+          PROPERTY:
+            '"scale"': ukuran
+            '"height"': tinggi
+            '"rotation"': Perputaran
+            '"direction"': Arah pergerakan
+            '"tint"': Mewarnai
+          RANGE:
+            '"bass"': Kecil
+            '"mid"': Sedang
+            '"treble"': Besar
+      Dancelab_stopMappingEach:
+        options:
+          GROUP:
+            sprites: semua
+            '"ALIEN"': semua aliens
+            '"BEAR"': semua beruang
+            '"CAT"': semua kucing
+            '"DOG"': semua anjing
+            '"DUCK"': semua bebek
+            '"FROG"': semua katak
+            '"MOOSE"': semua rusa
+            '"PINEAPPLE"': semua nanas
+            '"ROBOT"': semua robot
+            '"SHARK"': semua hiu
           PROPERTY:
             '"scale"': ukuran
             '"height"': tinggi
@@ -582,58 +731,19 @@ id:
         text: Tengah
       Vector_vectorNorth:
         text: Utara
-      aalab_changePropByFlexible:
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': ukuran
-            '"rotation"': Perputaran
-            '"x"': posisi x
-            '"y"': posisi y
-            '"direction"': Arah pergerakan
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': ketika
-            '"while"': Selagi
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': ketika
-            '"while"': Selagi
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': ketika
-            '"while"': Selagi
-          KEY:
-            '"up"': atas
-            '"down"': turun
-            '"left"': kiri
-            '"right"': kanan
-            '"space"': luar angkasa
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': kota
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': Benar
-            '"false"': Salah
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': ukuran
-            '"rotation"': Perputaran
-            '"x"': posisi x
-            '"y"': posisi y
-            '"direction"': Arah pergerakan
-            '"tint"': Mewarnai
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': selamanya
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
         options:
           OPTION:
             '"show"': tampilkan

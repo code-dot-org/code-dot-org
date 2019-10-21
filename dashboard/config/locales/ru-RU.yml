@@ -472,6 +472,7 @@ ru:
       (для восстановления пароля)
     update: Обновить учетную запись
     account_successfully_updated: Учетная запись успешно обновлена.
+    update_email: Обновить
   user_level:
     completed: Завершено
     tried: Пытался

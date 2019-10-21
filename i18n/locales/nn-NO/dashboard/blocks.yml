@@ -30,7 +30,7 @@ nn:
             '"PINEAPPLE"': alle ananaser
             '"ROBOT"': alle roboter
             '"SHARK"': alle haier
-            '"UNICORN"': alle enhjørninger
+            '"UNICORN"': Einhjørningar
           MOVE:
             '"next"': "(Neste)"
             '"prev"': "(Forrige)"
@@ -80,6 +80,28 @@ nn:
             '"rotation"': rotasjon
             '"x"': horisontal posisjon
             '"y"': vertikal posisjon
+      Dancelab_changePropEachBy:
+        options:
+          GROUP:
+            sprites: alle
+            '"ALIEN"': alle romvesener
+            '"BEAR"': aller bjørner
+            '"CAT"': alle katter
+            '"DOG"': aller hunder
+            '"DUCK"': alle ender
+            '"FROG"': alle frosker
+            '"MOOSE"': alle elger
+            '"PINEAPPLE"': alle ananaser
+            '"ROBOT"': alle roboter
+            '"SHARK"': alle haier
+            '"UNICORN"': Einhjørningar
+          PROPERTY:
+            '"scale"': størrelse
+            '"width"': breidde
+            '"height"': høgd
+            '"rotation"': rotasjon
+            '"x"': horisontal posisjon
+            '"y"': vertikal posisjon
       Dancelab_doMoveEachLR:
         text: "{GROUP} gjør {MOVE} {DIR} for alltid"
         options:
@@ -95,7 +117,7 @@ nn:
             '"PINEAPPLE"': alle ananaser
             '"ROBOT"': alle roboter
             '"SHARK"': alle haier
-            '"UNICORN"': alle enhjørninger
+            '"UNICORN"': Einhjørningar
           MOVE:
             '"rand"': "(Tilfeldig)"
             MOVES.XBend: Bøy
@@ -236,6 +258,32 @@ nn:
             "{x: 100, y: 300}": nedst til venstre
             "{x: 300, y: 300}": nedst til høgre
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": tilfeldig
+      Dancelab_jumpToEach:
+        options:
+          GROUP:
+            sprites: alle
+            '"ALIEN"': alle romvesener
+            '"BEAR"': aller bjørner
+            '"CAT"': alle katter
+            '"DOG"': aller hunder
+            '"DUCK"': alle ender
+            '"FROG"': alle frosker
+            '"MOOSE"': alle elger
+            '"PINEAPPLE"': alle ananaser
+            '"ROBOT"': alle roboter
+            '"SHARK"': alle haier
+            '"UNICORN"': Einhjørningar
+          LOCATION:
+            "{x: 200, y: 100}": øvst
+            "{x: 200, y: 300}": nedst
+            "{x: 100, y: 200}": venstre
+            "{x: 300, y: 200}": høgre
+            "{x: 200, y: 200}": i midten
+            "{x: 100, y: 100}": øvst til venstre
+            "{x: 300, y: 100}": øvst til høgre
+            "{x: 100, y: 300}": nedst til venstre
+            "{x: 300, y: 300}": nedst til høgre
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": tilfeldig
       Dancelab_layoutSprites:
         text: oppsett {GROUP} som {FORMAT}
         options:
@@ -251,7 +299,7 @@ nn:
             '"PINEAPPLE"': alle ananaser
             '"ROBOT"': alle roboter
             '"SHARK"': alle haier
-            '"UNICORN"': alle enhjørninger
+            '"UNICORN"': Einhjørningar
           FORMAT:
             '"border"': kantlinje
             '"inner"': indre kvadrat
@@ -262,6 +310,31 @@ nn:
             '"x"': kryss
             '"plus"': pluss
             '"random"': tilfeldig
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': alien
+            '"BEAR"': Bjørn
+            '"CAT"': katt
+            '"DOG"': hund
+            '"DUCK"': and
+            '"FROG"': Frosk
+            '"MOOSE"': alle elger
+            '"PINEAPPLE"': Ananas
+            '"ROBOT"': robot
+            '"SHARK"': Hai
+            '"UNICORN"': einhjørning
+          LOCATION:
+            "{x: 200, y: 100}": øvst
+            "{x: 200, y: 300}": nedst
+            "{x: 100, y: 200}": venstre
+            "{x: 300, y: 200}": høgre
+            "{x: 200, y: 200}": i midten
+            "{x: 100, y: 100}": øvst til venstre
+            "{x: 300, y: 100}": øvst til høgre
+            "{x: 100, y: 300}": nedst til venstre
+            "{x: 300, y: 300}": nedst til høgre
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": tilfeldig
       Dancelab_makeNewDanceSprite:
         text: |-
           lag ei ny {COSTUME}
@@ -271,12 +344,12 @@ nn:
             '"ALIEN"': Romvesen
             '"BEAR"': Bjørn
             '"CAT"': Katt
-            '"DOG"': Hund
+            '"DOG"': hund
             '"DUCK"': And
             '"FROG"': Frosk
             '"MOOSE"': Elg
             '"PINEAPPLE"': Ananas
-            '"ROBOT"': Robot
+            '"ROBOT"': robot
             '"SHARK"': Hai
             '"UNICORN"': Einhjørning
           LOCATION:
@@ -438,7 +511,7 @@ nn:
             '"PINEAPPLE"': alle ananaser
             '"ROBOT"': alle roboter
             '"SHARK"': alle haier
-            '"UNICORN"': alle enhjørninger
+            '"UNICORN"': Einhjørningar
           SPEED:
             '1': normal
             '2': rask
@@ -492,7 +565,6 @@ nn:
             '"rotation"': rotasjon
             '"x"': horisontal posisjon
             '"y"': vertikal posisjon
-            '"tint"': farge
       Dancelab_setPropEach:
         text: sett {GROUP} {PROPERTY} til {VAL}
         options:
@@ -508,7 +580,17 @@ nn:
             '"PINEAPPLE"': alle ananaser
             '"ROBOT"': alle roboter
             '"SHARK"': alle haier
-            '"UNICORN"': alle enhjørninger
+            '"UNICORN"': Einhjørningar
+          PROPERTY:
+            '"scale"': størrelse
+            '"width"': breidde
+            '"height"': høgd
+            '"rotation"': rotasjon
+            '"x"': horisontal posisjon
+            '"y"': vertikal posisjon
+      Dancelab_setPropRandom:
+        text: gjer {SPRITE} {PROPERTY} tilfeldig
+        options:
           PROPERTY:
             '"scale"': størrelse
             '"width"': breidde
@@ -517,9 +599,21 @@ nn:
             '"x"': horisontal posisjon
             '"y"': vertikal posisjon
             '"tint"': farge
-      Dancelab_setPropRandom:
-        text: gjer {SPRITE} {PROPERTY} tilfeldig
+      Dancelab_setPropRandomEach:
         options:
+          GROUP:
+            sprites: alle
+            '"ALIEN"': alle romvesener
+            '"BEAR"': aller bjørner
+            '"CAT"': alle katter
+            '"DOG"': aller hunder
+            '"DUCK"': alle ender
+            '"FROG"': alle frosker
+            '"MOOSE"': alle elger
+            '"PINEAPPLE"': alle ananaser
+            '"ROBOT"': alle roboter
+            '"SHARK"': alle haier
+            '"UNICORN"': Einhjørningar
           PROPERTY:
             '"scale"': størrelse
             '"width"': breidde
@@ -545,6 +639,23 @@ nn:
             '"PINEAPPLE"': alle ananaser
             '"ROBOT"': alle roboter
             '"SHARK"': alle haier
+            '"UNICORN"': Einhjørningar
+      Dancelab_setTintEachInline:
+        text: sett {THIS} fargetone til {VAL}
+        options:
+          THIS:
+            sprites: alle
+            '"ALIEN"': alle romvesener
+            '"BEAR"': aller bjørner
+            '"CAT"': alle katter
+            '"DOG"': aller hunder
+            '"DUCK"': alle ender
+            '"FROG"': alle frosker
+            '"MOOSE"': alle elger
+            '"PINEAPPLE"': alle ananaser
+            '"ROBOT"': alle roboter
+            '"SHARK"': alle haier
+            '"UNICORN"': Einhjørningar
       Dancelab_setTintInline:
         text: sett fargen på {SPRITE} til {VAL}
       Dancelab_setVisible:
@@ -568,7 +679,7 @@ nn:
             '"PINEAPPLE"': alle ananaser
             '"ROBOT"': alle roboter
             '"SHARK"': alle haier
-            '"UNICORN"': alle enhjørninger
+            '"UNICORN"': Einhjørningar
           VISIBILITY:
             'true': synleg
             'false': usynleg
@@ -587,9 +698,64 @@ nn:
             '"bass"': bass
             '"mid"': mellomtone
             '"treble"': diskant
+      Dancelab_startMappingEach:
+        options:
+          GROUP:
+            sprites: alle
+            '"ALIEN"': alle romvesener
+            '"BEAR"': aller bjørner
+            '"CAT"': alle katter
+            '"DOG"': aller hunder
+            '"DUCK"': alle ender
+            '"FROG"': alle frosker
+            '"MOOSE"': alle elger
+            '"PINEAPPLE"': alle ananaser
+            '"ROBOT"': alle roboter
+            '"SHARK"': alle haier
+            '"UNICORN"': Einhjørningar
+          PROPERTY:
+            '"scale"': størrelse
+            '"width"': breidde
+            '"height"': høgd
+            '"rotation"': rotasjon
+            '"x"': horisontal posisjon
+            '"y"': vertikal posisjon
+            '"tint"': farge
+          RANGE:
+            '"bass"': bass
+            '"mid"': mellomtone
+            '"treble"': diskant
       Dancelab_stopMapping:
         text: "{SPRITE} sluttar med {PROPERTY} etter {RANGE}"
         options:
+          PROPERTY:
+            '"scale"': størrelse
+            '"width"': breidde
+            '"height"': høgd
+            '"rotation"': rotasjon
+            '"x"': horisontal posisjon
+            '"y"': vertikal posisjon
+            '"direction"': retninga til rørsla
+            '"tint"': farge
+          RANGE:
+            '"bass"': bass
+            '"mid"': mellomtone
+            '"treble"': diskant
+      Dancelab_stopMappingEach:
+        options:
+          GROUP:
+            sprites: alle
+            '"ALIEN"': alle romvesener
+            '"BEAR"': aller bjørner
+            '"CAT"': alle katter
+            '"DOG"': aller hunder
+            '"DUCK"': alle ender
+            '"FROG"': alle frosker
+            '"MOOSE"': alle elger
+            '"PINEAPPLE"': alle ananaser
+            '"ROBOT"': alle roboter
+            '"SHARK"': alle haier
+            '"UNICORN"': Einhjørningar
           PROPERTY:
             '"scale"': størrelse
             '"width"': breidde
@@ -1033,78 +1199,19 @@ nn:
         text: tilfeldig sted
       Vector_vectorNorth:
         text: nord
-      aalab_changePropByFlexible:
-        text: endre {SPRITE} {PROPERTY} med {VAL}
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': størrelse
-            '"rotation"': rotasjon
-            '"x"': x-posisjon
-            '"y"': y-posisjon
-            '"direction"': retninga til rørsla
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': når
-            '"while"': så lenge
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': når
-            '"while"': så lenge
-      aalab_getThisSprite:
-        options:
-          CHOICE:
-            '"this"': denne
-      aalab_jumpTo:
-        text: "{SPRITE} hoppar til {LOCATION}"
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': når
-            '"while"': så lenge
-          KEY:
-            '"up"': opp
-            '"down"': ned
-            '"left"': venstre
-            '"right"': høgre
-            '"space"': verdsrommmet
-      aalab_location_picker:
-        text: "{LOCATION}"
-      aalab_moveInDirection:
-        options:
-          DIRECTION:
-            '"North"': Nord
-            '"East"': Øst
-            '"South"': Sør
-            '"West"': Vest
-      aalab_randomLocation:
-        text: tilfeldig sted
-      aalab_removeOneAndAll:
-        text: slett {THIS}
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': by
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': sann
-            '"false"': usann
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': størrelse
-            '"rotation"': rotasjon
-            '"x"': x-posisjon
-            '"y"': y-posisjon
-            '"direction"': retninga til rørsla
-            '"tint"': farge
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': for alltid
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
         options:
           OPTION:
             '"show"': vis
