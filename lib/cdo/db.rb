@@ -68,7 +68,7 @@ def sequel_connect(writer, reader, validation_frequency: nil, query_timeout: nil
     db_options[:flags] = ::Mysql2::Client::MULTI_STATEMENTS
   end
 
-  if (reader_uri = URI(reader)).host != URI(writer).host &&
+  if (reader_uri = URI(reader)) != URI(writer) &&
     Gatekeeper.allows('pegasus_read_replica')
 
     db_options[:servers] = {read_only: Sequel::Database.send(:uri_to_options, reader_uri)}
