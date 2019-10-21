@@ -4,6 +4,7 @@ import {
   getProjectDatabase,
   showRateLimitAlert
 } from './firebaseUtils';
+import {WarningType} from './constants';
 
 /**
  * @fileoverview
@@ -31,12 +32,14 @@ export function enforceTableCount(config, tableName) {
       snapshot.numChildren() >= config.maxTableCount &&
       snapshot.child(tableName).val() === null
     ) {
-      return Promise.reject(
-        `Table '${tableName}' cannot be written to because the ` +
+      return Promise.reject({
+        type: WarningType.MAX_TABLES_EXCEEDED,
+        msg:
+          `Table '${tableName}' cannot be written to because the ` +
           `maximum number of tables (${
             config.maxTableCount
           }) has been exceeded.`
-      );
+      });
     }
     return Promise.resolve(config);
   });
