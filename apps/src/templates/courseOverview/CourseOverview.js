@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import $ from 'jquery';
+import {connect} from 'react-redux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import CourseScript from './CourseScript';
 import LabeledSectionSelector from '@cdo/apps/code-studio/components/progress/LabeledSectionSelector';
@@ -26,6 +27,8 @@ import AssignmentVersionSelector, {
 } from '@cdo/apps/templates/teacherDashboard/AssignmentVersionSelector';
 import StudentFeedbackNotification from '@cdo/apps/templates/feedback/StudentFeedbackNotification';
 import experiments from '@cdo/apps/util/experiments';
+import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 
 const styles = {
   main: {
@@ -56,7 +59,7 @@ const styles = {
   }
 };
 
-export default class CourseOverview extends Component {
+class CourseOverview extends Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
@@ -81,7 +84,9 @@ export default class CourseOverview extends Component {
     showRedirectWarning: PropTypes.bool,
     redirectToCourseUrl: PropTypes.string,
     showAssignButton: PropTypes.bool,
-    userId: PropTypes.number
+    userId: PropTypes.number,
+    // Redux
+    sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
   };
 
   constructor(props) {
@@ -128,6 +133,7 @@ export default class CourseOverview extends Component {
   };
 
   render() {
+    console.log("sectionsForDropdown maybe?", this.props.sectionsForDropdown)
     const {
       name,
       title,
@@ -250,3 +256,9 @@ export default class CourseOverview extends Component {
     );
   }
 }
+
+export const UnconnectedCourseOverview = CourseOverview;
+
+export default connect(state => ({
+  sectionsForDropdown: sectionsForDropdown(state.teacherSections, null, this.props.id)
+}))(CourseOverview);
