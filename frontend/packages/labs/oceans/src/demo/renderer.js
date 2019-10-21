@@ -33,6 +33,9 @@ export const render = () => {
   }
 
   switch (state.currentMode) {
+    case Modes.Words:
+      clearCanvas(state.canvas);
+      break;
     case Modes.Training:
       clearCanvas(state.canvas);
       drawTrainingFish(state);

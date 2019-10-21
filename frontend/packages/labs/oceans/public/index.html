@@ -39,7 +39,7 @@
         width: 100%;
         height: 100%;
       }
-      button {
+      button, select {
         background-color: #403f3f; /* #4e4e82; */
         color: white;
         font-size: 120%;
@@ -49,14 +49,19 @@
         width: 17%;
         height: 8%;
       }
-      button:focus {
+      button:focus, select:focus {
         outline: white auto 5px;
       }
       .ui-button {
         position: absolute;
       }
+      .ui-centered-select {
+        position: relative;
+        margin: 0 auto;
+        display: block;
+      }
       @media screen and (max-width: 800px) {
-        button {
+        button, select {
           font-size: 90%;
         }
       }
@@ -85,6 +90,19 @@
       #predict-text {
         width: 100%;
         text-align: center;
+      }
+
+      #select-color {
+        top: 40px;
+      }
+      #select-shape {
+        top: 80px;
+      }
+      #select-type {
+        top: 120px;
+      }
+      #select-personality {
+        top: 160px;
       }
     </style>
   </head>

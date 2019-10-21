@@ -3,7 +3,7 @@ import {FishBodyPart} from '../utils/fishData';
 
 export const backgroundPathForMode = mode => {
   let imgName;
-  if (mode === Modes.Training || mode === Modes.Pond) {
+  if (mode === Modes.Words || mode === Modes.Training || mode === Modes.Pond) {
     imgName = 'underwater';
   }
 
