@@ -34,7 +34,7 @@ function init_query_templates()
         FROM dashboard_production.users
         WHERE deleted_at is null
               AND id = $userId
-        ORDER BY id ASC limit 1]], 247.24}
+        ORDER BY id ASC limit 1]], 247.24},
     {[[ SELECT *
         FROM pegasus.user_storage_ids
         WHERE user_id = $userId limit 1]], 137.77}
@@ -52,7 +52,10 @@ function init_query_templates()
         VALUES (92938404, '$storageAppsValue', '$date', '$date', '14.229.194.186', 0, NULL, NULL, NULL, 0, 0)]], 11.14},
     {[[ INSERT INTO dashboard_production.user_levels
         (`user_id`, `level_id`, `attempts`, `created_at`, `updated_at`, `best_result`, `script_id`, `submitted`)
-        VALUES ($userId, $levelId, 1, '$date', '$date', 3, $scriptId, 0)]], 11.66}
+        VALUES ($userId, $levelId, 1, '$date', '$date', 3, $scriptId, 0)]], 11.66},
+    {[[ INSERT INTO dashboard_production.sign_ins
+        (`user_id`, `sign_in_at`, `sign_in_count`)
+        VALUES ($userId, '$date', 9)]], 0}
   }
 
   total_qps = 0
@@ -97,7 +100,8 @@ function event()
 
   -- Simple string interpolation from: https://hisham.hm/2016/01/04/string-interpolation-in-lua/
   -- "variable" names must be alphanumeric characters only.
-  local query = string.gsub(random_query_weighted(), "%$(%w+)", vars)
+  local query = string.gsub(write_queries[#write_queries][1], "%$(%w+)", vars)
+  -- local query = string.gsub(random_query_weighted(), "%$(%w+)", vars)
 
   con:query(query)
 end
