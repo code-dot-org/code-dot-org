@@ -1,34 +1,12 @@
 /*global dashboard*/
 import React from 'react';
 import PropTypes from 'prop-types';
-import Dialog, {Body} from '@cdo/apps/templates/Dialog';
+import BaseDialog from '../../../templates/BaseDialog';
 import {connect} from 'react-redux';
 import {hideLibraryCreationDialog} from '../shareDialogRedux';
 import libraryParser from './libraryParser';
 import LibraryClientApi from './LibraryClientApi';
 import i18n from '@cdo/locale';
-import PadAndCenter from '@cdo/apps/templates/teacherDashboard/PadAndCenter';
-import {Heading1, Heading2} from '@cdo/apps/lib/ui/Headings';
-
-const styles = {
-  alert: {
-    color: 'red'
-  },
-  libraryBoundary: {
-    padding: 10
-  },
-  largerCheckbox: {
-    width: 20,
-    height: 20,
-    margin: 10
-  },
-  functionItem: {
-    marginBottom: 20
-  },
-  textarea: {
-    width: 400
-  }
-};
 
 class LibraryCreationDialog extends React.Component {
   static propTypes = {
@@ -40,10 +18,9 @@ class LibraryCreationDialog extends React.Component {
   state = {
     clientApi: new LibraryClientApi(this.props.channelId),
     librarySource: '',
-    sourceFunctionList: [],
+    selectedFunctionList: [],
     loadingFinished: false,
-    libraryName: '',
-    canPublish: false
+    libraryName: ''
   };
 
   componentDidUpdate(prevProps) {
@@ -60,7 +37,7 @@ class LibraryCreationDialog extends React.Component {
         ),
         librarySource: response.source,
         loadingFinished: true,
-        sourceFunctionList: libraryParser.getFunctions(response.source)
+        selectedFunctionList: libraryParser.getFunctions(response.source)
       });
     });
   };
@@ -71,24 +48,11 @@ class LibraryCreationDialog extends React.Component {
   };
 
   publish = () => {
-    let formElements = document.getElementById('selectFunction').elements;
-    let selectedFunctionList = [];
-    let libraryDescription = '';
-    [...formElements].forEach(element => {
-      if (element.type === 'checkbox' && element.checked) {
-        selectedFunctionList.push(this.state.sourceFunctionList[element.value]);
-      }
-      if (element.type === 'textarea') {
-        libraryDescription = element.value;
-      }
-    });
     let libraryJson = libraryParser.createLibraryJson(
       this.state.librarySource,
-      selectedFunctionList,
-      this.state.libraryName,
-      libraryDescription
+      this.state.selectedFunctionList,
+      this.state.libraryName
     );
-
     // TODO: Display final version of error and success messages to the user.
     this.state.clientApi.publish(
       libraryJson,
@@ -103,96 +67,36 @@ class LibraryCreationDialog extends React.Component {
     );
   };
 
-  validateInput = () => {
-    // Check if any of the checkboxes are checked
-    // If this changes the publishable state, update
-    let formElements = document.getElementById('selectFunction').elements;
-    let isChecked = false;
-    [...formElements].forEach(element => {
-      if (element.type === 'checkbox' && element.checked) {
-        isChecked = true;
-      }
-    });
-    if (isChecked !== this.state.canPublish) {
-      this.setState({canPublish: isChecked});
-    }
-  };
-
   displayFunctions = () => {
     if (!this.state.loadingFinished) {
-      return <div id="loading">Loading...</div>;
+      return <div>Loading...</div>;
     }
-    let keyIndex = 0;
     return (
       <div>
-        <Heading2>
-          <b>{i18n.libraryName()}</b>
-          {this.state.libraryName}
-        </Heading2>
-        <form id="selectFunction" onSubmit={this.publish}>
-          <textarea
-            required
-            name="description"
-            rows="2"
-            cols="200"
-            style={styles.textarea}
-            placeholder="Write a description of your library"
-          />
-          {this.state.sourceFunctionList.map(sourceFunction => {
-            let name = sourceFunction.functionName;
-            let comment = sourceFunction.comment;
-            return (
-              <div key={keyIndex} style={styles.functionItem}>
-                <input
-                  type="checkbox"
-                  style={styles.largerCheckbox}
-                  disabled={comment.length === 0}
-                  onClick={this.validateInput}
-                  value={keyIndex++}
-                />
-                {name}
-                <br />
-                {comment.length === 0 && (
-                  <p style={styles.alert}>
-                    {i18n.libraryExportNoCommentError()}
-                  </p>
-                )}
-                <pre>{comment}</pre>
-              </div>
-            );
-          })}
-          <input
-            className="btn btn-primary"
-            type="submit"
-            value={i18n.publish()}
-            disabled={!this.state.canPublish}
-          />
-        </form>
+        <div>{this.state.libraryName}</div>
+        {this.state.selectedFunctionList.map(selectedFunction => {
+          let name = selectedFunction.functionName;
+          return <div key={name}>{name}</div>;
+        })}
       </div>
     );
   };
 
   render() {
     return (
-      <Dialog
+      <BaseDialog
         isOpen={this.props.dialogIsOpen}
         handleClose={this.handleClose}
         useUpdatedStyles
       >
-        <Body>
-          <PadAndCenter>
-            <div style={styles.libraryBoundary}>
-              <Heading1>{i18n.libraryExportTitle()}</Heading1>
-              {this.displayFunctions()}
-            </div>
-          </PadAndCenter>
-        </Body>
-      </Dialog>
+        {this.displayFunctions()}
+        <button type="button" onClick={this.publish}>
+          {i18n.publish()}
+        </button>
+      </BaseDialog>
     );
   }
 }
-
-export const UnconnectedLibraryCreationDialog = LibraryCreationDialog;
 
 export default connect(
   state => ({
