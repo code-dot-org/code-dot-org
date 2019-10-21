@@ -16,7 +16,7 @@ const styles = {
 
 export default class CourseOverviewTopRow extends Component {
   static propTypes = {
-    sectionsInfo: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
+    sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
     id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
     resources: PropTypes.arrayOf(resourceShape).isRequired,
@@ -24,14 +24,20 @@ export default class CourseOverviewTopRow extends Component {
   };
 
   render() {
-    const {sectionsInfo, id, title, resources, showAssignButton} = this.props;
+    const {
+      id,
+      title,
+      resources,
+      showAssignButton,
+      sectionsForDropdown
+    } = this.props;
 
     return (
       <div style={styles.main}>
         {!experiments.isEnabled(experiments.ASSIGNMENT_UPDATES) &&
           showAssignButton && (
             <AssignToSection
-              sectionsInfo={sectionsInfo}
+              sectionsInfo={sectionsForDropdown}
               courseId={id}
               assignmentName={title}
             />
@@ -48,7 +54,7 @@ export default class CourseOverviewTopRow extends Component {
         ))}
         {experiments.isEnabled(experiments.ASSIGNMENT_UPDATES) && (
           <SectionAssigner
-            sections={sectionsInfo}
+            sections={sectionsForDropdown}
             showAssignButton={showAssignButton}
             courseId={id}
             assignmentName={title}

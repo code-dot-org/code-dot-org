@@ -141,14 +141,15 @@ export const toggleSectionHidden = sectionId => (dispatch, getState) => {
 };
 
 /**
- * Changes the hidden state of a given section, persisting these changes to the
- * server
+ * Assigns a course to a given section, persisting these changes * to the server
  * @param {number} sectionId
  * @param {number} courseId
  */
-export const assignCourseToSection = (sectionId, courseId) => (dispatch, getState) => {
+export const assignCourseToSection = (sectionId, courseId) => (
+  dispatch,
+  getState
+) => {
   dispatch(beginEditingSection(sectionId, true));
-  const state = getState();
   dispatch(editSectionProperties({courseId: courseId}));
   return dispatch(finishEditingSection());
 };
@@ -1056,8 +1057,10 @@ export function sectionsForDropdown(state, scriptId, courseId) {
   return state.sectionIds.map(id => ({
     id: parseInt(id, 10),
     name: state.sections[id].name,
-    assigned: state.sections[id].script_id == scriptId || state.sections[id].course_id == courseId
-  }))
+    isAssigned:
+      (scriptId !== null && state.sections[id].scriptId === scriptId) ||
+      (courseId !== null && state.sections[id].courseId === courseId)
+  }));
 }
 
 /**
