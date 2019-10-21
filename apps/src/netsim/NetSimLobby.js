@@ -16,6 +16,7 @@ var NetSimApiError = require('./NetSimApiError');
 var NetSimRouterNode = require('./NetSimRouterNode');
 var NetSimShardSelectionPanel = require('./NetSimShardSelectionPanel');
 var NetSimRemoteNodeSelectionPanel = require('./NetSimRemoteNodeSelectionPanel');
+import {getUserSections} from '@cdo/apps/util/userSectionClient';
 
 var logger = require('./NetSimLogger').getSingleton();
 var NetSimGlobals = require('./NetSimGlobals');
@@ -162,12 +163,10 @@ var NetSimLobby = (module.exports = function(rootDiv, netsim, options) {
   // Figure out the list of user sections, which requires an async request
   // and re-render if the user is signed in.
   if (options.user.isSignedIn) {
-    this.getUserSections_(
-      function(sectionList) {
-        this.buildShardChoiceList_(sectionList, options.sharedShardSeed);
-        this.render();
-      }.bind(this)
-    );
+    getUserSections(sectionList => {
+      this.buildShardChoiceList_(sectionList, options.sharedShardSeed);
+      this.render();
+    });
   } else {
     this.buildShardChoiceList_([], options.sharedShardSeed);
   }
@@ -537,26 +536,26 @@ NetSimLobby.prototype.onWireTableChange_ = function() {
  * @param {function} callback
  * @private
  */
-NetSimLobby.prototype.getUserSections_ = function(callback) {
-  var memberSectionsRequest = $.ajax({
-    dataType: 'json',
-    url: '/api/v1/sections/membership'
-  });
+// NetSimLobby.prototype.getUserSections_ = function(callback) {
+//   var memberSectionsRequest = $.ajax({
+//     dataType: 'json',
+//     url: '/api/v1/sections/membership'
+//   });
 
-  var ownedSectionsRequest = $.ajax({
-    dataType: 'json',
-    url: '/api/v1/sections'
-  });
+//   var ownedSectionsRequest = $.ajax({
+//     dataType: 'json',
+//     url: '/api/v1/sections'
+//   });
 
-  $.when(memberSectionsRequest, ownedSectionsRequest).done(function(
-    result1,
-    result2
-  ) {
-    var memberSectionData = result1[0];
-    var ownedSectionData = result2[0];
-    callback(memberSectionData.concat(ownedSectionData));
-  });
-};
+//   $.when(memberSectionsRequest, ownedSectionsRequest).done(function(
+//     result1,
+//     result2
+//   ) {
+//     var memberSectionData = result1[0];
+//     var ownedSectionData = result2[0];
+//     callback(memberSectionData.concat(ownedSectionData));
+//   });
+// };
 
 /**
  * Populate the internal cache of shard options, given a set of the current
