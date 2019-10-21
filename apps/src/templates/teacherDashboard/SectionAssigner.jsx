@@ -30,10 +30,9 @@ class SectionAssigner extends Component {
   };
 
   state = {
-    selectedSection:
-      this.props.sections.find(
-        section => section.id === this.props.initialSelectedSectionId
-      ) || this.props.sections[0]
+    selectedSection: this.props.sections.find(
+      section => section.id === this.props.initialSelectedSectionId
+    )
   };
 
   onChangeSection = sectionId => {
