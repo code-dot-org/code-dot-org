@@ -7,16 +7,16 @@
 include_recipe 'cdo-awscli'
 
 fifo = '/var/log/cloudwatch'
-script_path = '/usr/local/bin'
 
+execute("mkfifo #{fifo}") {creates fifo}
+file(fifo) {owner 'syslog'; action :touch}
+
+script_path = '/usr/local/bin'
 file 'cloudwatch-logger' do
   path "#{script_path}/#{name}"
   content <<BASH
 #!/bin/bash
-FIFO=#{fifo}
-[ -p "$FIFO" ] || mkfifo $FIFO
-chown syslog: $FIFO
-(while true ; do cat $FIFO ; done) | \
+(while true ; do cat #{fifo} ; done) | \
 aws logs push \
   --log-group-name #{node.environment}-syslog \
   --log-stream-name "$(hostname)-$$" \

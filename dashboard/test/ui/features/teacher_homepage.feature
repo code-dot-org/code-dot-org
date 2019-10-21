@@ -126,6 +126,13 @@ Feature: Using the teacher homepage sections feature
     And I wait until element ".uitest-CourseScript" is visible
     Then unit "CSP Unit 2 - Digital Information ('17-'18)" is marked as visible
 
+  Scenario: Assign a Course assigns first Unit in Course by default
+    Given I am on "http://studio.code.org/home"
+    When I see the section set up box
+    And I create a new section with course "Computer Science Principles", version "'17-'18"
+    Then the section table should have 1 rows
+    And the section table row at index 0 has secondary assignment path "/s/csp1-2017"
+
   Scenario: Assign a CSF course with multiple versions
     Given I am on "http://studio.code.org/home"
     When I see the section set up box
