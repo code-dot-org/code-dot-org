@@ -136,7 +136,7 @@ module Api::V1::Pd
 
     def create_generic_survey_report
       this_ws_report = report_single_workshop(@workshop, current_user)
-      rollup_report = report_rollups_experiment(@workshop, current_user)
+      rollup_report = report_rollups(@workshop, current_user)
 
       render json: this_ws_report.merge(rollup_report)
     end
