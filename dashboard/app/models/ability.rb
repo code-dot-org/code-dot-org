@@ -82,8 +82,7 @@ class Ability
       can [:get_feedbacks, :count, :increment_visit_count, :index], TeacherFeedback, student_id: user.id
 
       can :list_projects, Section do |section|
-        return true if can? :manage, section
-        user.sections_as_student.include?(section)
+        can?(:manage, section) || user.sections_as_student.include?(section)
       end
 
       if user.teacher?
