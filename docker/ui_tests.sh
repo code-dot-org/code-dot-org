@@ -52,6 +52,7 @@ localize_apps: true
 dashboard_enable_pegasus: true
 dashboard_workers: 5
 skip_seed_all: true
+optimize_rails_assets: true
 " >> locals.yml
 echo "Wrote secrets from env vars into locals.yml."
 set -x
