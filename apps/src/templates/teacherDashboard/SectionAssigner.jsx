@@ -5,12 +5,8 @@ import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 import {sectionForDropdownShape} from './shapes';
 import TeacherSectionSelector from './TeacherSectionSelector';
-import AssignedButton from '@cdo/apps/templates/AssignedButton';
 import AssignButton from '@cdo/apps/templates/AssignButton';
-import {
-  selectSection,
-  assignCourseToSection
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {selectSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 const styles = {
@@ -37,31 +33,28 @@ const styles = {
 class SectionAssigner extends Component {
   static propTypes = {
     sections: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
-    initialSelectedSectionId: PropTypes.number,
     selectSection: PropTypes.func.isRequired,
     showAssignButton: PropTypes.bool,
-    courseId: PropTypes.number
-  };
-
-  state = {
-    selectedSection: this.props.sections.find(
-      section => section.id === this.props.initialSelectedSectionId
-    )
+    courseId: PropTypes.number,
+    selectedSectionId: PropTypes.string,
+    assignmentName: PropTypes.string
   };
 
   onChangeSection = sectionId => {
-    const {sections} = this.props;
-    const selectedSection = sections.find(section => section.id === sectionId);
-    this.setSelectedSection(selectedSection);
-  };
-
-  setSelectedSection = section => {
-    this.setState({selectedSection: section});
+    this.props.selectSection(sectionId.toString());
   };
 
   render() {
-    const {sections, showAssignButton, courseId, assignmentName} = this.props;
-    const {selectedSection} = this.state;
+    const {
+      sections,
+      showAssignButton,
+      courseId,
+      assignmentName,
+      selectedSectionId
+    } = this.props;
+    const selectedSection = sections.find(
+      section => section.id.toString() === selectedSectionId
+    );
 
     return (
       <div>
@@ -95,7 +88,7 @@ export const UnconnectedSectionAssigner = SectionAssigner;
 
 export default connect(
   state => ({
-    initialSelectedSectionId: parseInt(state.teacherSections.selectedSectionId)
+    selectedSectionId: state.teacherSections.selectedSectionId
   }),
   dispatch => ({
     selectSection(sectionId) {

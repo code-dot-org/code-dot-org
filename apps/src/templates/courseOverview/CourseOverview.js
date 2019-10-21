@@ -21,14 +21,16 @@ import {
 import RedirectDialog from '@cdo/apps/code-studio/components/RedirectDialog';
 import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import color from '@cdo/apps/util/color';
-import {assignmentVersionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
+import {
+  assignmentVersionShape,
+  sectionForDropdownShape
+} from '@cdo/apps/templates/teacherDashboard/shapes';
 import AssignmentVersionSelector, {
   setRecommendedAndSelectedVersions
 } from '@cdo/apps/templates/teacherDashboard/AssignmentVersionSelector';
 import StudentFeedbackNotification from '@cdo/apps/templates/feedback/StudentFeedbackNotification';
 import experiments from '@cdo/apps/util/experiments';
 import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 
 const styles = {
   main: {
@@ -86,7 +88,7 @@ class CourseOverview extends Component {
     showAssignButton: PropTypes.bool,
     userId: PropTypes.number,
     // Redux
-    sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
+    sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired
   };
 
   constructor(props) {
@@ -133,7 +135,6 @@ class CourseOverview extends Component {
   };
 
   render() {
-    console.log("sectionsForDropdown maybe?", this.props.sectionsForDropdown)
     const {
       name,
       title,
@@ -142,6 +143,7 @@ class CourseOverview extends Component {
       descriptionStudent,
       descriptionTeacher,
       sectionsInfo,
+      sectionsForDropdown,
       teacherResources,
       isTeacher,
       viewAs,
@@ -235,6 +237,7 @@ class CourseOverview extends Component {
             )}
             <CourseOverviewTopRow
               sectionsInfo={sectionsInfo}
+              sectionsForDropdown={sectionsForDropdown}
               id={id}
               title={title}
               resources={teacherResources}
@@ -258,7 +261,10 @@ class CourseOverview extends Component {
 }
 
 export const UnconnectedCourseOverview = CourseOverview;
-
-export default connect(state => ({
-  sectionsForDropdown: sectionsForDropdown(state.teacherSections, null, this.props.id)
+export default connect((state, ownProps) => ({
+  sectionsForDropdown: sectionsForDropdown(
+    state.teacherSections,
+    null,
+    ownProps.id
+  )
 }))(CourseOverview);
