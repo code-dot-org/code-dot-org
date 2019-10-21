@@ -55,7 +55,7 @@ class DataVisualizer extends React.Component {
     const records =
       Object.keys(this.props.tableRecords).length > 0 &&
       this.props.tableRecords.map(tableRecord => JSON.parse(tableRecord));
-    if (this.state.chartType === 'bar' && this.state.values) {
+    if (this.state.chartType === 'Bar Chart' && this.state.values) {
       var chart = new GoogleChart.MaterialBarChart(targetDiv);
       const chartData = this.aggregateRecordsByColumn(
         records,
