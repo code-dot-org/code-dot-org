@@ -24,7 +24,12 @@ export const init = () => {
   const trainer = new SimpleTrainer();
   trainer.initializeClassifiersWithoutMobilenet();
 
-  setState({fishData, trainer, uiElements: uiElements(getState())});
+  setState({
+    fishData,
+    trainer,
+    uiElements: uiElements(getState()),
+    headerText: 'AI Training'
+  });
 };
 
 const uiElements = state => {

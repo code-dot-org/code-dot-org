@@ -64,5 +64,5 @@ const createDropdowns = () => {
 const uiElements = createDropdowns();
 
 export const init = () => {
-  setState({uiElements});
+  setState({uiElements, headerText: 'Choose Fish Type'});
 };

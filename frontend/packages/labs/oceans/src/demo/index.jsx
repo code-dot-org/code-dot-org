@@ -14,7 +14,8 @@ $(document).ready(() => {
     currentMode: Modes.Words,
     canvas,
     backgroundCanvas,
-    uiContainer: document.getElementById('ui-container')
+    uiContainer: document.getElementById('ui-container'),
+    headerContainer: document.getElementById('header-container')
   });
 
   initScene();

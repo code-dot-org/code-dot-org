@@ -6,7 +6,8 @@ import {
   backgroundPathForMode,
   bodyAnchorFromType,
   colorFromType,
-  randomInt
+  randomInt,
+  createText
 } from './helpers';
 import {FishBodyPart} from '../utils/fishData';
 
@@ -22,6 +23,10 @@ let currentModeStartTime = $time();
 
 export const render = () => {
   const state = getState();
+
+  if (state.headerContainer && prevState.headerText !== state.headerText) {
+    drawHeader(state.headerContainer, state.headerText);
+  }
 
   if (prevState.uiElements !== state.uiElements) {
     drawUiElements(state);
@@ -127,6 +132,11 @@ export const drawUpcomingFish = state => {
     drawSingleFish(fish, x, y, ctx);
     x -= 200;
   }
+};
+
+const drawHeader = (container, text) => {
+  container.innerHTML = '';
+  container.appendChild(createText({id: 'header', text}));
 };
 
 export const drawUiElements = state => {
