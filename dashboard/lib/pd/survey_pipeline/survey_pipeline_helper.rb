@@ -3,7 +3,6 @@ require 'pd/survey_pipeline/daily_survey_parser.rb'
 require 'pd/survey_pipeline/daily_survey_joiner.rb'
 require 'pd/survey_pipeline/mapper.rb'
 require 'pd/survey_pipeline/daily_survey_decorator.rb'
-require 'pd/survey_pipeline/survey_rollup_decorator.rb'
 
 module Pd::SurveyPipeline::Helper
   include Pd::JotForm::Constants
@@ -79,83 +78,6 @@ module Pd::SurveyPipeline::Helper
     Pd::SurveyPipeline::SurveyRollupDecoratorExperiment.decorate_facilitator_rollup(
       context, only_facilitator_questions
     )
-  end
-
-  # Roll up facilitator-specific and general workshop results from all related workshops.
-  #
-  # @param workshop [Pd::Workshop] the workshop user selects, which is used to find related workshops
-  # @param current_user [User] the user requesting survey report
-  # @return [Hash] a hash report with these keys :facilitators, :current_workshop,
-  #   :related_workshops, :facilitator_response_counts, :facilitator_averages, and :errors.
-  # @see SurveyRollupDecorator.decorate_facilitator_rollup for detailed return data structure.
-  #
-  def report_rollups(workshop, current_user)
-    # Filter list of facilitators that the current user can see.
-    facilitator_ids =
-      if current_user.program_manager? || current_user.workshop_organizer? || current_user.workshop_admin?
-        workshop.facilitators.pluck(:id)
-      else
-        [current_user.id]
-      end
-
-    # Roll up facilitator-specific results and general workshop results for each facilitator
-    reports = {}
-    facilitator_ids.each do |facilitator_id|
-      reports.deep_merge! report_facilitator_rollup(facilitator_id, workshop)
-      reports.deep_merge! report_workshop_rollup(facilitator_id, workshop)
-    end
-
-    reports
-  end
-
-  # Summarize facilitator-specific results from all related workshops a facilitator have facilitated.
-  #
-  # @param facilitator_id [Integer]
-  # @param workshop [Pd::Workshop]
-  # @return [Hash]
-  #
-  def report_facilitator_rollup(facilitator_id, workshop)
-    context = {
-      current_workshop_id: workshop.id,
-      facilitator_id: facilitator_id,
-      question_categories: [FACILITATOR_EFFECTIVENESS_CATEGORY]
-    }
-
-    # Retrieve data
-    related_ws_ids = find_related_workshop_ids(facilitator_id, workshop.course)
-    context[:related_workshop_ids] = related_ws_ids
-    context.merge! retrieve_facilitator_surveys([facilitator_id], related_ws_ids)
-
-    # Process data
-    process_rollup_data context
-
-    # Decorate
-    Pd::SurveyPipeline::SurveyRollupDecorator.decorate_facilitator_rollup(context)
-  end
-
-  # Summarize general workshop results from all related workshops a facilitator have facilitated.
-  #
-  # @param facilitator_id [Integer]
-  # @param workshop [Pd::Workshop]
-  # @return [Hash]
-  #
-  def report_workshop_rollup(facilitator_id, workshop)
-    context = {
-      current_workshop_id: workshop.id,
-      facilitator_id: facilitator_id,
-      question_categories: [WORKSHOP_OVERALL_SUCCESS_CATEGORY, WORKSHOP_TEACHER_ENGAGEMENT_CATEGORY]
-    }
-
-    # Retrieve data
-    related_ws_ids = find_related_workshop_ids(facilitator_id, workshop.course)
-    context[:related_workshop_ids] = related_ws_ids
-    context.merge! retrieve_workshop_surveys(related_ws_ids)
-
-    # Process data
-    process_rollup_data context
-
-    # Decorate
-    Pd::SurveyPipeline::SurveyRollupDecorator.decorate_facilitator_rollup(context)
   end
 
   def process_rollup_data(context)
