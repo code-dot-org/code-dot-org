@@ -25,6 +25,7 @@ import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import experiments from '@cdo/apps/util/experiments';
 import LibraryCreationDialog from './libraries/LibraryCreationDialog';
+import LibraryClientApi from './libraries/LibraryClientApi';
 
 function recordShare(type) {
   if (!window.dashboard) {
@@ -310,6 +311,7 @@ class ShareAllowedDialog extends React.Component {
       };
     }
     const {canPrint, canPublish, isPublished} = this.props;
+    let libraryClientAPI = new LibraryClientApi(this.props.channelId);
     return (
       <div>
         <BaseDialog
@@ -513,7 +515,7 @@ class ShareAllowedDialog extends React.Component {
           )}
         </BaseDialog>
         <PublishDialog />
-        <LibraryCreationDialog channelId={this.props.channelId} />
+        <LibraryCreationDialog clientApi={libraryClientAPI} />
       </div>
     );
   }

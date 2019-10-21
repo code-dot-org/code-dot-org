@@ -5,7 +5,6 @@ import Dialog, {Body} from '@cdo/apps/templates/Dialog';
 import {connect} from 'react-redux';
 import {hideLibraryCreationDialog} from '../shareDialogRedux';
 import libraryParser from './libraryParser';
-import LibraryClientApi from './LibraryClientApi';
 import i18n from '@cdo/locale';
 import PadAndCenter from '@cdo/apps/templates/teacherDashboard/PadAndCenter';
 import {Heading1, Heading2} from '@cdo/apps/lib/ui/Headings';
@@ -34,11 +33,10 @@ class LibraryCreationDialog extends React.Component {
   static propTypes = {
     dialogIsOpen: PropTypes.bool.isRequired,
     onClose: PropTypes.func.isRequired,
-    channelId: PropTypes.string.isRequired
+    clientApi: PropTypes.object.isRequired
   };
 
   state = {
-    clientApi: new LibraryClientApi(this.props.channelId),
     librarySource: '',
     sourceFunctionList: [],
     loadingFinished: false,
@@ -90,7 +88,7 @@ class LibraryCreationDialog extends React.Component {
     );
 
     // TODO: Display final version of error and success messages to the user.
-    this.state.clientApi.publish(
+    this.props.clientApi.publish(
       libraryJson,
       error => {
         console.warn(`Error publishing library: ${error}`);
