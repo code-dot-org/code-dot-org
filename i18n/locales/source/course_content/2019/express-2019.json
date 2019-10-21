@@ -1770,7 +1770,7 @@
     "long_instructions": "**Challenge:** Collect all of the corn and lettuce, then pick the pumpkin.",
     "authored_hints": {
       "courseD_farmer_condLoops7_a": "Notice that the easiest path to get to all of the crops is still a spiral.\n\n[][0]",
-      "courseD_farmer_condLoops7_b": "Try using `when path ahead` to keep the harvester moving the right number of steps."
+      "courseD_farmer_condLoops7_b": "Try using `while path ahead` to keep the harvester moving the right number of steps."
     }
   },
   "https://studio.code.org/s/express-2019/stage/15/puzzle/9": {
