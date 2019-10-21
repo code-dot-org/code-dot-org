@@ -1,4 +1,4 @@
-import {expect} from '../../../../util/configuredChai';
+import {expect} from '../../../../util/reconfiguredChai';
 import React from 'react';
 import {mount} from 'enzyme';
 import {UnconnectedLibraryCreationDialog as LibraryCreationDialog} from '@cdo/apps/code-studio/components/Libraries/LibraryCreationDialog.jsx';
@@ -37,6 +37,10 @@ describe('LibraryCreationDialog', () => {
     );
   });
 
+  afterEach(() => {
+    wrapper = null;
+  });
+
   const SUBMIT_SELECTOR = 'input[type="submit"]';
   const CHECKBOX_SELECTOR = 'input[type="checkbox"]';
 
@@ -47,9 +51,8 @@ describe('LibraryCreationDialog', () => {
       loadingFinished: true,
       sourceFunctionList: libraryParser.getFunctions(LIBRARY_SOURCE)
     });
-    wrapper.update();
 
-    expect(wrapper.find(SUBMIT_SELECTOR)).to.be.disabled();
+    expect(wrapper.find(SUBMIT_SELECTOR)).to.be.disabled;
   });
 
   it('publish is enabled when something is checked', () => {
@@ -60,9 +63,8 @@ describe('LibraryCreationDialog', () => {
       sourceFunctionList: libraryParser.getFunctions(LIBRARY_SOURCE),
       canPublish: true
     });
-    wrapper.update();
 
-    expect(wrapper.find(SUBMIT_SELECTOR)).not.to.be.disabled();
+    expect(wrapper.find(SUBMIT_SELECTOR)).not.to.be.disabled;
   });
 
   it('checkbox is diabled for items without comments', () => {
@@ -73,17 +75,11 @@ describe('LibraryCreationDialog', () => {
       sourceFunctionList: libraryParser.getFunctions(LIBRARY_SOURCE)
     });
 
-    wrapper.update();
-
-    expect(wrapper.find(CHECKBOX_SELECTOR).last()).to.be.disabled();
+    expect(wrapper.find(CHECKBOX_SELECTOR).last()).to.be.disabled;
   });
 
   it('displays loading while in the loading state', () => {
-    wrapper.setState({
-      loadingFinished: false
-    });
-    wrapper.update();
-    expect(wrapper.find(SUBMIT_SELECTOR)).not.to.exist;
-    expect(wrapper.find('#loading')).to.exist;
+    expect(wrapper.find(SUBMIT_SELECTOR).exists()).to.be.false;
+    expect(wrapper.find('#loading').exists()).to.be.true;
   });
 });
