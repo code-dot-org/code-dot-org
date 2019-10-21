@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import 'babel-polyfill';
-import {setState, getState} from '../state';
+import {setState} from '../state';
 import {Modes} from '../constants';
 import {init as initScene} from '../init';
 
