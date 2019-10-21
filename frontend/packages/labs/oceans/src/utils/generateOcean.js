@@ -51,11 +51,13 @@ export const generateOcean = numFish => {
 export const filterOcean = async (ocean, trainer) => {
   const predictionPromises = [];
   ocean.forEach((fish, idx) => {
-    predictionPromises.push(
-      trainer.predictFromData(fish.knnData).then(res => {
-        fish.result = res;
-      })
-    );
+    if (!fish.result) {
+      predictionPromises.push(
+        trainer.predictFromData(fish.knnData).then(res => {
+          fish.result = res;
+        })
+      );
+    }
   });
   await Promise.all(predictionPromises);
   return ocean;
