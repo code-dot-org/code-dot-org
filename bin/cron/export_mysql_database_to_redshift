@@ -1,0 +1,24 @@
+#!/usr/bin/env ruby
+require_relative '../../lib/cdo/only_one'
+exit unless only_one_running?(__FILE__)
+exit unless rack_env?(:production) && CDO.dashboard_hostname == 'studio.code.org'
+
+require_relative '../../dashboard/config/environment'
+require 'cdo/chat_client'
+
+# Export production Aurora MySQL tables to Redshift once a day.
+# 1) Start Data Migration Service (DMS) Replication Tasks, which are configured to drop existing tables in a parallel
+# set of `import_` Redshift schemas and then carry out full load of Aurora MySQL tables into the temporary `import_` schemas.
+# 2) Verify that all tables have replicated from MySQL to the staging schemas in Redshift within a configurable timeout.
+# 3) Drop the existing tables in the main Redshift schemas and rename / move the newly transferred tables into the main
+# Redshift schemas.
+def main
+  ChatClient.message 'cron-daily', 'Beginning export from Aurora MySQL database to Redshift.'
+
+  ChatClient.message'cron-daily', "Completed export from Aurora MySQL database to Redshift.."
+rescue StandardError => error
+  ChatClient.message'cron-daily', "Error during export from Aurora MySQL database to Redshift #{error.message}", color: 'red'
+  raise error
+end
+
+main
