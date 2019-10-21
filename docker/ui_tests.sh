@@ -52,6 +52,7 @@ localize_apps: true
 dashboard_enable_pegasus: true
 dashboard_workers: 5
 skip_seed_all: true
+optimize_webpack_assets: true
 optimize_rails_assets: true
 no_https_store: true
 override_dashboard: \"localhost-studio.code.org\"
