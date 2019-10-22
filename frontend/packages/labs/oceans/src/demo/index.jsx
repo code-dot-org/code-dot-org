@@ -20,5 +20,7 @@ $(document).ready(() => {
 
   initScene();
 
+  // Start the renderer.  It will self-perpetute by calling
+  // requestAnimationFrame on itself.
   render();
 });
