@@ -9,44 +9,18 @@ require File.expand_path('../../../dashboard/config/environment', __FILE__)
 require 'fileutils'
 require 'json'
 
+require_relative 'hoc_sync_utils'
 require_relative 'i18n_script_utils'
 require_relative 'redact_restore_utils'
 
-I18N_SOURCE_DIR = "i18n/locales/source"
-
 def sync_in
-  localize_hoc_content
+  HocSyncUtils.sync_in
   localize_level_content
   localize_block_content
   puts "Copying source files"
   I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
   redact_level_content
   redact_block_content
-end
-
-# Pulls in all strings that need to be translated for HourOfCode.com. Pulls
-# source files from pegasus/sites.v3/hourofcode.com and collects them to a
-# single source folder i18n/locales/source.
-def localize_hoc_content
-  puts "Localizing Hour of Code content"
-  orig_dir = "pegasus/sites.v3/hourofcode.com/public"
-  dest_dir = File.join(I18N_SOURCE_DIR, "hourofcode")
-
-  # Copy the file containing developer-added strings
-  Dir.mkdir(dest_dir) unless Dir.exist?(dest_dir)
-  FileUtils.cp("pegasus/sites.v3/hourofcode.com/i18n/en.yml", dest_dir)
-
-  # Copy the markdown files representing individual page content
-  Dir.glob(File.join(orig_dir, "**/*.{md,md.partial}")).each do |file|
-    dest = file.sub(orig_dir, dest_dir)
-    if File.extname(dest) == '.partial'
-      dest = File.join(File.dirname(dest), File.basename(dest, '.partial'))
-    end
-
-    FileUtils.mkdir_p(File.dirname(dest))
-    FileUtils.cp(file, dest)
-    HocSyncUtils.sanitize_hoc_file(dest)
-  end
 end
 
 def get_i18n_strings(level)

@@ -1,11 +1,37 @@
 require_relative '../../dashboard/config/environment'
 require File.expand_path('../../../pegasus/src/env', __FILE__)
 
+require_relative 'i18n_script_utils'
 require 'cdo/languages'
 require 'fileutils'
 require 'tempfile'
 
 class HocSyncUtils
+  # Pulls in all strings that need to be translated for HourOfCode.com. Pulls
+  # source files from pegasus/sites.v3/hourofcode.com and collects them to a
+  # single source folder i18n/locales/source.
+  def self.sync_in
+    puts "Localizing Hour of Code content"
+    orig_dir = "pegasus/sites.v3/hourofcode.com/public"
+    dest_dir = File.join(I18N_SOURCE_DIR, "hourofcode")
+
+    # Copy the file containing developer-added strings
+    Dir.mkdir(dest_dir) unless Dir.exist?(dest_dir)
+    FileUtils.cp("pegasus/sites.v3/hourofcode.com/i18n/en.yml", dest_dir)
+
+    # Copy the markdown files representing individual page content
+    Dir.glob(File.join(orig_dir, "**/*.{md,md.partial}")).each do |file|
+      dest = file.sub(orig_dir, dest_dir)
+      if File.extname(dest) == '.partial'
+        dest = File.join(File.dirname(dest), File.basename(dest, '.partial'))
+      end
+
+      FileUtils.mkdir_p(File.dirname(dest))
+      FileUtils.cp(file, dest)
+      sanitize_hoc_file(dest)
+    end
+  end
+
   def self.sync_out
     rename_downloads_from_crowdin_code_to_locale
     copy_from_i18n_source_to_hoc
