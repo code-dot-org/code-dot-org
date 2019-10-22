@@ -16,10 +16,11 @@ const staticUiElements = [
     onClick: () => onClickNext()
   })
 ];
+const headerElements = [createText({id: 'header', text: 'A.I. Sorting'})];
 
 export const init = () => {
   asyncSetUiElements(getState());
-  setState({headerText: 'A.I. Sorting'});
+  setState({headerElements});
 };
 
 const asyncSetUiElements = async state => {

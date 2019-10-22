@@ -3,7 +3,7 @@ import _ from 'lodash';
 import {setState, getState} from '../state';
 import {init as initScene} from '../init';
 import constants, {Modes, ClassType} from '../constants';
-import {createButton, randomInt} from '../helpers';
+import {createButton, createText, randomInt} from '../helpers';
 
 const uiElements = [
   createButton({
@@ -12,13 +12,14 @@ const uiElements = [
     onClick: () => onClickStartOver()
   })
 ];
+const headerElements = [createText({id: 'header', text: 'A.I. Results'})];
 
 export const init = async () => {
   let fishWithConfidence = await predictAllFish(getState());
   fishWithConfidence = _.sortBy(fishWithConfidence, ['confidence']);
   const pondFish = fishWithConfidence.splice(0, 20);
   arrangeFish(pondFish);
-  setState({pondFish, uiElements, headerText: 'A.I. Results'});
+  setState({pondFish, uiElements, headerElements});
 };
 
 const predictAllFish = state => {

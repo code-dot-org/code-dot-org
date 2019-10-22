@@ -18,6 +18,7 @@ const staticUiElements = [
     onClick: () => onClassifyFish(false)
   })
 ];
+const headerElements = [createText({id: 'header', text: 'A.I. Training'})];
 
 export const init = () => {
   const fishData = generateOcean(100);
@@ -28,7 +29,7 @@ export const init = () => {
     fishData,
     trainer,
     uiElements: uiElements(getState()),
-    headerText: 'A.I. Training'
+    headerElements
   });
 };
 

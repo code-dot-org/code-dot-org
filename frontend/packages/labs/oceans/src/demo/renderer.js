@@ -24,12 +24,15 @@ let currentModeStartTime = $time();
 export const render = () => {
   const state = getState();
 
-  if (state.headerContainer && prevState.headerText !== state.headerText) {
-    drawHeader(state.headerContainer, state.headerText);
+  if (
+    state.headerContainer &&
+    prevState.headerElements !== state.headerElements
+  ) {
+    drawUiElements(state.headerContainer, state.headerElements);
   }
 
-  if (prevState.uiElements !== state.uiElements) {
-    drawUiElements(state);
+  if (state.uiContainer && prevState.uiElements !== state.uiElements) {
+    drawUiElements(state.uiContainer, state.uiElements);
   }
 
   if (state.currentMode !== prevState.currentMode) {
@@ -139,10 +142,9 @@ const drawHeader = (container, text) => {
   container.appendChild(createText({id: 'header', text}));
 };
 
-export const drawUiElements = state => {
-  const container = state.uiContainer;
+export const drawUiElements = (container, elements) => {
   container.innerHTML = '';
-  state.uiElements.forEach(el => container.appendChild(el));
+  elements.forEach(el => container.appendChild(el));
 };
 
 export const drawPredictingFish = state => {

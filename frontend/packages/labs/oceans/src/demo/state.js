@@ -10,7 +10,7 @@ const initialState = {
   uiContainer: null,
   uiElements: [],
   headerContainer: null,
-  headerText: '',
+  headerElements: [],
   footerContainer: null,
   footerElements: []
 };

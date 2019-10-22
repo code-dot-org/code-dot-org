@@ -3,6 +3,7 @@ import 'babel-polyfill';
 import {setState} from '../state';
 import {Modes} from '../constants';
 import {init as initScene} from '../init';
+import {createText} from '../helpers';
 
 const onChangeWord = event => {
   setState({word: event.target.value, currentMode: Modes.Training});
@@ -62,7 +63,8 @@ const createDropdowns = () => {
 };
 
 const uiElements = createDropdowns();
+const headerElements = [createText({id: 'header', text: 'Choose Fish Type'})];
 
 export const init = () => {
-  setState({uiElements, headerText: 'Choose Fish Type'});
+  setState({uiElements, headerElements});
 };
