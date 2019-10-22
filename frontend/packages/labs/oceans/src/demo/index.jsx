@@ -15,7 +15,8 @@ $(document).ready(() => {
     currentMode: Modes.Loading,
     canvas,
     backgroundCanvas,
-    uiContainer: document.getElementById('ui-container')
+    uiContainer: document.getElementById('ui-container'),
+    iterationCount: 0
   });
 
   initScene();

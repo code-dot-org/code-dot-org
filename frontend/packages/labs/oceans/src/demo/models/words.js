@@ -1,43 +1,63 @@
 import $ from 'jquery';
 import 'babel-polyfill';
-import {setState} from '../state';
+import {getState, setState} from '../state';
 import {Modes} from '../constants';
 import {init as initScene} from '../init';
+import {createButton} from '../helpers';
 
-const onChangeWord = event => {
-  setState({word: event.target.value, currentMode: Modes.Training});
+const items = [
+  ['Blue', 'Green', 'Red', 'Round', 'Square'],
+  [
+    'Friendly',
+    'Funny',
+    'Bizarre',
+    'Shy',
+    'Glitchy',
+    'Delicious',
+    'Fun',
+    'Angry',
+    'Fast',
+    'Smart',
+    'Brave',
+    'Scary',
+    'Wild',
+    'Fierce',
+    'Tropical'
+  ]
+];
+
+const onChangeWord = itemIndex => {
+  console.log('word:', items[currentItemSet()][itemIndex]);
+  setState({
+    word: items[currentItemSet()][itemIndex],
+    currentMode: Modes.Training
+  });
   initScene();
-}
-
-const createDropdowns = () => {
-  const listData = [
-    { type: "color", title: "Color", options: ["blue", "green", "red", "yellow"] },
-    { type: "shape", title: "Shape", options: ["narrow", "round", "sharp", "square", "wide", "spiky"] },
-    { type: "type", title: "Type", options: ["bizarre", "fast", "scary", "funny", "glitchy"] },
-    { type: "personality", title: "Personality", options: ["angry", "brave", "fierce", "friendly", "fun", "shy", "smart", "wild"] }
-  ];
-
-  let results = [];
-  for (var i = 0; i < 4; i++) {
-    const listItem = listData[i];
-    var selectList = document.createElement("select");
-    $(selectList).append(`<option selected disabled>${listItem.title}</option>`);
-    for (var j = 0; j < listItem.options.length; j++) {
-      const option = listItem.options[j];
-      $(selectList).append(`<option value="${option}">${option}</option>`);
-    }
-    selectList.setAttribute('id', `select-${listItem.type}`);
-    selectList.setAttribute('class', 'ui-centered-select');
-    selectList.addEventListener('change', onChangeWord, false);
-    results.push(selectList);
-  }
-  return results;
 };
 
-const uiElements = createDropdowns();
+const currentItemSet = () => {
+  const state = getState();
+  const iterationCount = state.iterationCount;
+  const itemSet = iterationCount === 0 ? 0 : 1;
+  return itemSet;
+};
+
+const createButtons = () => {
+  let buttons = [];
+  items[currentItemSet()].forEach((item, itemIndex) => {
+    const button = createButton({
+      id: `button-${itemIndex}`,
+      text: item,
+      className: currentItemSet() === 0 ? 'ui-button-1-col' : 'ui-button-3-col',
+      onClick: () => {
+        onChangeWord(itemIndex);
+      }
+    });
+    buttons.push(button);
+  });
+  return buttons;
+};
 
 export const init = () => {
-  setState({uiElements});
+  setState({uiElements: createButtons()});
 };
-
-
