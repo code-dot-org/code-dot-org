@@ -22,12 +22,12 @@ const footerElements = [
   createButton({
     text: 'Select Type',
     onClick: () => onSelectType(),
-    uiButton: false
+    className: ''
   }),
   createButton({
     text: 'Continue',
     onClick: () => toMode(Modes.Predicting),
-    uiButton: false
+    className: ''
   })
 ];
 

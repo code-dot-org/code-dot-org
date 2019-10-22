@@ -16,12 +16,12 @@ const footerElements = [
   createButton({
     text: 'Training',
     onClick: () => toMode(Modes.Training),
-    uiButton: false
+    className: ''
   }),
   createButton({
     text: 'Continue',
     onClick: () => toMode(Modes.Pond),
-    uiButton: false
+    className: ''
   })
 ];
 

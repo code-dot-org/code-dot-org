@@ -9,12 +9,12 @@ const footerElements = [
   createButton({
     text: 'Training',
     onClick: () => toMode(Modes.Training),
-    uiButton: false
+    className: ''
   }),
   createButton({
     text: 'Start Over',
     onClick: () => onClickStartOver(),
-    uiButton: false
+    className: ''
   })
 ];
 
@@ -61,9 +61,10 @@ const arrangeFish = fishes => {
 };
 
 const onClickStartOver = () => {
-  const trainer = getState().trainer;
-  if (trainer) {
-    trainer.clearAll();
-  }
-  toMode(Modes.Words);
+  const state = setState({
+    currentMode: Modes.Words,
+    iterationCount: getState().iterationCount + 1
+  });
+  state.trainer.clearAll();
+  initScene();
 };

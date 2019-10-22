@@ -23,15 +23,13 @@ export const toMode = mode => {
 
 // Creates a button element, given an object that contains
 // id, text, and onClick properties.
-export const createButton = ({id, text, onClick, uiButton = true}) => {
+export const createButton = ({id, text, onClick, className}) => {
   let btnEl = document.createElement('button');
   btnEl.innerHTML = text;
   if (id) {
     btnEl.setAttribute('id', id);
   }
-  if (uiButton) {
-    btnEl.setAttribute('class', 'ui-button');
-  }
+  btnEl.setAttribute('class', className ? className : 'ui-button');
   btnEl.addEventListener('click', onClick);
 
   return btnEl;

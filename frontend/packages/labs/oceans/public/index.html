@@ -57,8 +57,7 @@
           100% - 104px
         ); /* 50px header + 50px footer + 4px border = 104px */
       }
-      button,
-      select {
+      button {
         background-color: #403f3f; /* #4e4e82; */
         color: white;
         font-size: 120%;
@@ -67,21 +66,29 @@
         border: none;
         width: 17%;
       }
-      button:focus,
-      select:focus {
+      button:focus {
         outline: white auto 5px;
       }
       .ui-button {
         position: absolute;
       }
-      .ui-centered-select {
-        position: relative;
-        margin: 0 auto;
+      .ui-button-1-col {
+        width: 20%;
         display: block;
+        margin: 0 auto;
+        margin-top: 2%;
+        margin-bottom: 2%;
       }
+      .ui-button-3-col {
+        width: 20%;
+        margin-left: 6%;
+        margin-right: 6%;
+        margin-top: 2%;
+        margin-bottom: 2%;
+      }
+
       @media screen and (max-width: 800px) {
-        button,
-        select {
+        button {
           font-size: 90%;
         }
       }
@@ -113,18 +120,6 @@
       #predict-text {
         width: 100%;
         text-align: center;
-      }
-      #select-color {
-        top: 40px;
-      }
-      #select-shape {
-        top: 80px;
-      }
-      #select-type {
-        top: 120px;
-      }
-      #select-personality {
-        top: 160px;
       }
     </style>
   </head>
