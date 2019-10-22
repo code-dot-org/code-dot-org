@@ -141,7 +141,6 @@ module Pd
         application_url: "Link to Application",
         assigned_workshop: "Assigned Workshop",
         friendly_registered_workshop: "Registered for workshop?",
-        total_score: "Bonus Points",
         notes: "General Notes",
         notes_2: "Notes 2",
         notes_3: "Notes 3",
