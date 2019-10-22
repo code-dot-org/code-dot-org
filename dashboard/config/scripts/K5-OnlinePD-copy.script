@@ -84,12 +84,15 @@ level 'OPD-K5 Stage6Review_copy'
 
 stage 'Variables'
 level 'OPD-K5 variables'
+level 'OPD-K5 variables unplugged'
 
 stage 'For Loops'
+level 'OPD-K5 for loops intro'
 level 'OPD-K5 for loops'
 
 stage 'Sprite Lab'
 level 'OPD-K5 sprite lab'
+level 'OPD-K5 sprite lab video'
 
 stage 'End-of-course projects'
 level 'OPD-K5 project'
