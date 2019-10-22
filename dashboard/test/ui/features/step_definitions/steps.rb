@@ -1300,17 +1300,6 @@ When /^I debug channel id$/ do
   puts "appOptions.channel: #{@browser.execute_script('return (appOptions && appOptions.channel)')}"
 end
 
-When /^I debug host$/ do
-  puts "CDO.code_org_url: #{CDO.code_org_url}"
-  puts "CDO.override_pegasus: #{CDO.override_pegasus}"
-  result = @browser.execute_script("return window.dashboard.CODE_ORG_URL;")
-  puts "window.dashboard.CODE_ORG_URL: #{result}"
-  href = @browser.execute_script("return $('.ui-test-gdpr-dialog-privacy-link').attr('href')")
-  puts ".ui-test-gdpr-dialog-privacy-link href: #{href}"
-  href = @browser.execute_script("return window.location.href;")
-  puts "window.location.href: #{href}"
-end
-
 And(/^I ctrl-([^"]*)$/) do |key|
   # Note: Safari webdriver does not support actions API
   @browser.action.key_down(:control).send_keys(key).key_up(:control).perform

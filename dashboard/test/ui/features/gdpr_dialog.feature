@@ -32,7 +32,6 @@ Feature: GDPR Dialog - data transfer agreement
     Given I am a teacher
     Given I am on "http://studio.code.org/home?force_in_eu=1"
     Then element ".ui-test-gdpr-dialog" is visible
-    And I debug host
     Then I press the first ".ui-test-gdpr-dialog-privacy-link" element to load a new tab
     Then check that I am on "http://code.org/privacy"
 
