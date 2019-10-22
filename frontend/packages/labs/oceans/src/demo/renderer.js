@@ -6,8 +6,7 @@ import CanvasCache from './canvasCache';
 import {
   backgroundPathForMode,
   bodyAnchorFromType,
-  colorFromType,
-  randomInt
+  colorFromType
 } from './helpers';
 import fishData, {FishBodyPart} from '../utils/fishData';
 

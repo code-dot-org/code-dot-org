@@ -2,7 +2,7 @@ import $ from 'jquery';
 import constants, {Modes} from './constants';
 import {setState} from './state';
 import {init as initScene} from './init';
-import {initRenderer, render} from './renderer';
+import {render} from './renderer';
 
 $(document).ready(() => {
   // Set up initial state
