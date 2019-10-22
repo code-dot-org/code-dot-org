@@ -10,7 +10,7 @@ import {
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import clientState from '@cdo/apps/code-studio/clientState';
 import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenStageRedux';
-import {setUserSignedIn} from '@cdo/apps/code-studio/progressRedux';
+import {setUserSignedIn} from '@cdo/apps/templates/currentUserRedux';
 import {getUserSignedInFromCookieAndDom} from '@cdo/apps/code-studio/initSigninState';
 import {
   setVerified,

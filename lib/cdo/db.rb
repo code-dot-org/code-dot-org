@@ -2,6 +2,7 @@ require 'sequel'
 require 'sequel/connection_pool/threaded'
 require 'cdo/cache'
 require pegasus_dir 'data/static_models'
+require 'dynamic_config/gatekeeper'
 
 # Connects to database.  Uses the Sequel connection_validator:
 #   http://sequel.jeremyevans.net/rdoc-plugins/files/lib/sequel/extensions/connection_validator_rb.html
@@ -67,8 +68,10 @@ def sequel_connect(writer, reader, validation_frequency: nil, query_timeout: nil
     db_options[:flags] = ::Mysql2::Client::MULTI_STATEMENTS
   end
 
-  if (reader_uri = URI(reader)).host != URI(writer).host
-    db_options[:servers] = {read_only: {host: reader_uri.host}}
+  if (reader_uri = URI(reader)) != URI(writer) &&
+    Gatekeeper.allows('pegasus_read_replica')
+
+    db_options[:servers] = {read_only: Sequel::Database.send(:uri_to_options, reader_uri)}
   end
   db = Sequel.connect writer, db_options
 
