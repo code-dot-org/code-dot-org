@@ -1,9 +1,10 @@
-import {expect} from '../../../../util/reconfiguredChai';
+import {expect, assert} from '../../../../util/reconfiguredChai';
 import React from 'react';
 import {mount} from 'enzyme';
 import {UnconnectedLibraryCreationDialog as LibraryCreationDialog} from '@cdo/apps/code-studio/components/libraries/LibraryCreationDialog.jsx';
 import libraryParser from '@cdo/apps/code-studio/components/libraries/libraryParser';
 import LibraryClientApi from '../../../../../src/code-studio/components/libraries/LibraryClientApi';
+import sinon from 'sinon';
 
 const LIBRARY_SOURCE =
   '/*\n' +
@@ -29,25 +30,27 @@ const LIBRARY_SOURCE =
 describe('LibraryCreationDialog', () => {
   let wrapper;
   let clientApi = new LibraryClientApi('123');
+  let publishSpy = sinon.stub(clientApi, 'publish');
 
   const SUBMIT_SELECTOR = 'input[type="submit"]';
   const CHECKBOX_SELECTOR = 'input[type="checkbox"]';
   const DESCRIPTION_SELECTOR = 'textarea';
+
+  beforeEach(() => {
+    wrapper = mount(
+      <LibraryCreationDialog
+        clientApi={clientApi}
+        dialogIsOpen={true}
+        onClose={() => {}}
+      />
+    );
+  });
+
+  afterEach(() => {
+    wrapper = null;
+  });
+
   describe('UI', () => {
-    beforeEach(() => {
-      wrapper = mount(
-        <LibraryCreationDialog
-          clientApi={clientApi}
-          dialogIsOpen={true}
-          onClose={() => {}}
-        />
-      );
-    });
-
-    afterEach(() => {
-      wrapper = null;
-    });
-
     it('publish is disabled when nothing checked', () => {
       wrapper.setState({
         libraryName: 'testLibrary',
@@ -56,7 +59,7 @@ describe('LibraryCreationDialog', () => {
         sourceFunctionList: libraryParser.getFunctions(LIBRARY_SOURCE)
       });
 
-      expect(wrapper.find(SUBMIT_SELECTOR)).to.be.disabled;
+      assert.isTrue(wrapper.find(SUBMIT_SELECTOR).prop('disabled'));
     });
 
     it('publish is enabled when something is checked', () => {
@@ -64,11 +67,18 @@ describe('LibraryCreationDialog', () => {
         libraryName: 'testLibrary',
         librarySource: LIBRARY_SOURCE,
         loadingFinished: true,
-        sourceFunctionList: libraryParser.getFunctions(LIBRARY_SOURCE),
-        canPublish: true
+        sourceFunctionList: libraryParser.getFunctions(LIBRARY_SOURCE)
       });
 
-      expect(wrapper.find(SUBMIT_SELECTOR)).not.to.be.disabled;
+      wrapper
+        .find(CHECKBOX_SELECTOR)
+        .first()
+        .instance().checked = true;
+      wrapper
+        .find(CHECKBOX_SELECTOR)
+        .first()
+        .simulate('click');
+      assert.isFalse(wrapper.find(SUBMIT_SELECTOR).prop('disabled'));
     });
 
     it('checkbox is disabled for items without comments', () => {
@@ -79,7 +89,12 @@ describe('LibraryCreationDialog', () => {
         sourceFunctionList: libraryParser.getFunctions(LIBRARY_SOURCE)
       });
 
-      expect(wrapper.find(CHECKBOX_SELECTOR).last()).to.be.disabled;
+      assert.isTrue(
+        wrapper
+          .find(CHECKBOX_SELECTOR)
+          .last()
+          .prop('disabled')
+      );
     });
 
     it('displays loading while in the loading state', () => {
@@ -95,7 +110,50 @@ describe('LibraryCreationDialog', () => {
         sourceFunctionList: libraryParser.getFunctions(LIBRARY_SOURCE)
       });
 
-      expect(wrapper.find(DESCRIPTION_SELECTOR)).to.be.required;
+      assert.isTrue(
+        wrapper
+          .find(DESCRIPTION_SELECTOR)
+          .last()
+          .prop('required')
+      );
+    });
+  });
+
+  describe('publish', () => {
+    it('publishes only the selected functions and description', () => {
+      let functionList = libraryParser.getFunctions(LIBRARY_SOURCE);
+      wrapper.setState({
+        libraryName: 'testLibrary',
+        librarySource: LIBRARY_SOURCE,
+        loadingFinished: true,
+        sourceFunctionList: functionList
+      });
+
+      // Select a function and write a description
+      wrapper
+        .find(CHECKBOX_SELECTOR)
+        .first()
+        .instance().checked = true;
+      wrapper
+        .find(CHECKBOX_SELECTOR)
+        .first()
+        .simulate('click');
+      assert.isFalse(wrapper.find(SUBMIT_SELECTOR).prop('disabled'));
+
+      wrapper.find(DESCRIPTION_SELECTOR).instance().value =
+        'This is the description';
+      wrapper.find(DESCRIPTION_SELECTOR).simulate('change');
+      assert.isFalse(wrapper.find(SUBMIT_SELECTOR).prop('disabled'));
+
+      wrapper.find(SUBMIT_SELECTOR).simulate('submit');
+      let submitValue = libraryParser.createLibraryJson(
+        LIBRARY_SOURCE,
+        [functionList[0]],
+        'testLibrary',
+        'This is the description'
+      );
+
+      expect(publishSpy).to.have.been.calledOnceWith(submitValue);
     });
   });
 });
