@@ -38,7 +38,7 @@ class SelectSectionDropdown extends React.Component {
     navigateToHref(sectionUrl);
 
     firehoseClient.putRecord({
-      study: ' teacher_dashboard_actions',
+      study: 'teacher_dashboard_actions',
       study_group: currentTab,
       event: 'change_section',
       user_id: this.props.userId,

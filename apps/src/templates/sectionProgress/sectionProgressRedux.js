@@ -78,7 +78,7 @@ export const jumpToLessonDetails = lessonOfInterest => {
     dispatch(setLessonOfInterest(lessonOfInterest));
     dispatch(setCurrentView(ViewType.DETAIL));
     firehoseClient.putRecord({
-      study: ' teacher_dashboard_actions',
+      study: 'teacher_dashboard_actions',
       study_group: 'progress',
       event: 'view_change_toggle',
       user_id: currentUserState.userId,

@@ -91,7 +91,7 @@ class SectionProgress extends Component {
     this.props.loadScript(scriptId);
 
     firehoseClient.putRecord({
-      study: ' teacher_dashboard_actions',
+      study: 'teacher_dashboard_actions',
       study_group: 'progress',
       event: 'change_script',
       user_id: this.props.userId,
@@ -136,7 +136,7 @@ class SectionProgress extends Component {
 
   navigateToScript = () => {
     firehoseClient.putRecord({
-      study: ' teacher_dashboard_actions',
+      study: 'teacher_dashboard_actions',
       study_group: 'progress',
       event: 'go_to_script',
       user_id: this.props.userId,

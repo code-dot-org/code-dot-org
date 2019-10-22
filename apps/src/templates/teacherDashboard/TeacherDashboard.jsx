@@ -34,7 +34,7 @@ class TeacherDashboard extends Component {
     // Log if we switched tabs in the teacher dashboard
     if (prevProps.location !== this.props.location) {
       firehoseClient.putRecord({
-        study: ' teacher_dashboard_actions',
+        study: 'teacher_dashboard_actions',
         study_group: previousTab,
         event: 'click_new_tab',
         user_id: this.props.userId,

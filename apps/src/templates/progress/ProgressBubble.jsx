@@ -118,7 +118,7 @@ class ProgressBubble extends React.Component {
 
   recordProgressTabProgressBubbleClick = () => {
     firehoseClient.putRecord({
-      study: ' teacher_dashboard_actions',
+      study: 'teacher_dashboard_actions',
       study_group: 'progress',
       event: 'go_to_level',
       user_id: this.props.userId,
