@@ -1,4 +1,4 @@
-import {expect} from '../../../../util/configuredChai';
+import {expect} from '../../../../util/deprecatedChai';
 import React from 'react';
 import {mount} from 'enzyme';
 import {UnconnectedLibraryCreationDialog as LibraryCreationDialog} from '@cdo/apps/code-studio/components/Libraries/LibraryCreationDialog.jsx';
