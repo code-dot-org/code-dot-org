@@ -16,11 +16,11 @@ export const backgroundPath = imgName => {
 
 // Creates a button element, given an object that contains
 // id, text, and onClick properties.
-export const createButton = ({id, text, onClick}) => {
+export const createButton = ({id, text, onClick, className}) => {
   let btnEl = document.createElement('button');
   btnEl.innerHTML = text;
   btnEl.setAttribute('id', id);
-  btnEl.setAttribute('class', 'ui-button');
+  btnEl.setAttribute('class', className ? className : 'ui-button');
   btnEl.addEventListener('click', onClick);
 
   return btnEl;
