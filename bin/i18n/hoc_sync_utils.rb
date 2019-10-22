@@ -92,23 +92,23 @@ class HocSyncUtils
     end
   end
 
+  # YAML headers can include a lot of things we don't want translators to mess
+  # with or worry about; layout, navigation settings, social media tags, etc.
+  # However, they also include things like page titles that we DO want
+  # translators to be able to translate, so we can't ignore them completely.
+  # Instead, here we reduce the headers down to contain only the keys we care
+  # about and then in the out step we reinflate the received headers with the
+  # values from the original source.
   def self.sanitize_hoc_file(path)
-    # YAML headers can include a lot of things we don't want translators to mess
-    # with or worry about; layout, navigation settings, social media tags, etc.
-    # However, they also include things like page titles that we DO want
-    # translators to be able to translate, so we can't ignore them completely.
-    # Instead, here we reduce the headers down to contain only the keys we care
-    # about and then in the out step we reinflate the received headers with the
-    # values from the original source.
     header, content, _line = Documents.new.helpers.parse_yaml_header(path)
     sanitize_header(header)
     write_markdown_with_header(content, header, path)
   end
 
+  # In the sync in, we slice the YAML headers of the files we upload to crowdin
+  # down to just the part we want to translate (ie, the title). Here, we
+  # reinflate the header with all the values from the source file.
   def self.restore_sanitized_headers
-    # In the sync in, we slice the YAML headers of the files we upload to crowdin
-    # down to just the part we want to translate (ie, the title). Here, we
-    # reinflate the header with all the values from the source file.
     Dir.glob("pegasus/sites.v3/hourofcode.com/i18n/public/**/*.md.partial").each do |path|
       source_path = path.sub(/\/i18n\/public\/..\//, "/public/")
       unless File.exist? source_path
@@ -135,12 +135,12 @@ class HocSyncUtils
     end
   end
 
+  # Reduce the header metadata we include in markdown files down to just the
+  # subset of content we want to allow translators to translate.
+  #
+  # Right now, this is just page titles but it could be expanded to include
+  # any English content (description, social share stuff, etc).
   def self.sanitize_header!(header)
-    # Reduce the header metadata we include in markdown files down to just the
-    # subset of content we want to allow translators to translate.
-    #
-    # Right now, this is just page titles but it could be expanded to include
-    # any English content (description, social share stuff, etc).
     header.slice!("title")
   end
 end
