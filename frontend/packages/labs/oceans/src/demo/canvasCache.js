@@ -1,4 +1,4 @@
-const CACHE_SIZE = 30;
+const CACHE_SIZE = 25;
 
 export default class CanvasCache {
   /*
