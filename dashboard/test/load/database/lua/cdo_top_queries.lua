@@ -233,8 +233,8 @@ function event()
 
   -- Simple string interpolation from: https://hisham.hm/2016/01/04/string-interpolation-in-lua/
   -- "variable" names must be alphanumeric characters only.
-  local query = string.gsub(write_queries[1]['query'], "%$(%w+)", vars)
-  -- local query = string.gsub(random_query_weighted(), "%$(%w+)", vars)
+  -- local query = string.gsub(write_queries[1]['query'], "%$(%w+)", vars)
+  local query = string.gsub(random_query_weighted(), "%$(%w+)", vars)
 
   con:query(query)
 end
