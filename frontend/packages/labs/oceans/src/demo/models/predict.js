@@ -1,4 +1,5 @@
 import 'babel-polyfill';
+import $ from 'jquery';
 import {setState, getState} from '../state';
 import {Modes} from '../constants';
 import {createButton, createText, strForClassType, toMode} from '../helpers';
@@ -22,6 +23,19 @@ const footerElements = [
     text: 'Continue',
     onClick: () => toMode(Modes.Pond),
     className: ''
+  }),
+  createButton({
+    text: 'Show Code',
+    id: 'show-code',
+    onClick: () => showCode(true),
+    className: 'show-code-toggle'
+  }),
+  createButton({
+    text: 'Hide Code',
+    id: 'hide-code',
+    onClick: () => showCode(false),
+    className: 'show-code-toggle',
+    show: false
   })
 ];
 
@@ -60,4 +74,20 @@ const onClickPredict = () => {
   state.trainingIndex += 1;
   state = setState({trainingIndex: state.trainingIndex});
   asyncSetUiElements(state);
+};
+
+const showCode = (show) => {
+  console.log("show code", show);
+  setState({showCode: show});
+  if (show) {
+    $("#hide-code").show();
+    $("#show-code").hide();
+    // Fade in the code.  Stop the current and any pending jquery animations.
+    $("#code").stop(true, true).fadeIn();
+  } else {
+    $("#show-code").show();
+    $("#hide-code").hide();
+    // Fade out the code.  Stop the current and any pending jquery animations.
+    $("#code").stop(true, true).fadeOut();
+  }
 };
