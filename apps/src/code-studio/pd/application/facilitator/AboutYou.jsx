@@ -13,16 +13,16 @@ import {isEmail, isZipCode} from '@cdo/apps/util/formatValidation';
 const FACILITATOR_URL = 'https://code.org/educate/facilitator';
 const FACILITATOR_EMAIL = 'facilitators@code.org';
 
-export default class Section1AboutYou extends LabeledFormComponent {
+export default class AboutYou extends LabeledFormComponent {
   static propTypes = {
     ...LabeledFormComponent.propTypes,
     accountEmail: PropTypes.string.isRequired
   };
 
-  static labels = PageLabels.section1AboutYou;
+  static labels = PageLabels.aboutYou;
 
   static associatedFields = [
-    ...Object.keys(PageLabels.section1AboutYou).slice(0, 13),
+    ...Object.keys(PageLabels.aboutYou).slice(0, 13),
     'institutionType_other'
   ];
 
@@ -51,7 +51,7 @@ export default class Section1AboutYou extends LabeledFormComponent {
           <strong>The deadline to apply is Jan. 31, 2019.</strong>
         </p>
 
-        <h3>Section 1: {SectionHeaders.section1AboutYou}</h3>
+        <h3>Section 1: {SectionHeaders.aboutYou}</h3>
         {this.selectFor('title', {
           required: false,
           placeholder: 'Select a title'
