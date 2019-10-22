@@ -116,7 +116,7 @@ const fishData = {
     concentric: {
       index: 2,
       src: 'images/fish/eyes/Eyes_Concentric.png',
-      knnData: [1, 1.00],
+      knnData: [1, 1.0],
       type: FishBodyPart.EYE
     },
     side: {
@@ -179,7 +179,7 @@ const fishData = {
     shark: {
       index: 7,
       src: 'images/fish/mouth/Mouth_Shark.png',
-      knnData: [1, 0.00],
+      knnData: [1, 0.0],
       type: FishBodyPart.MOUTH
     },
     sharpTeeth: {
@@ -262,12 +262,12 @@ const fishData = {
       src: 'images/fish/dorsalFin/Dorsal_Fin_Almond.png',
       knnData: [1],
       type: FishBodyPart.DORSAL_FIN
-    },/*
+    } /*
     anglerfish: {
       src: 'images/fish/dorsalFin/Dorsal_Fin_anglerfish.png',
       knnData: [0.125],
       type: FishBodyPart.DORSAL_FIN
-    },*/
+    },*/,
     /*
     horns: {
       src: 'images/fish/dorsalFin/Dorsal_Fin_Horns.png',
@@ -298,12 +298,12 @@ const fishData = {
       src: 'images/fish/dorsalFin/Dorsal_Fin_Spikes.png',
       knnData: [0.75],
       type: FishBodyPart.DORSAL_FIN
-    },/*
+    } /*
     topHat: {
       src: 'images/fish/dorsalFin/Dorsal_Fin_TopHat.png',
       knnData: [0.25],
       type: FishBodyPart.DORSAL_FIN
-    },*/
+    },*/,
     wave: {
       index: 5,
       src: 'images/fish/dorsalFin/Dorsal_Fin_Wave.png',

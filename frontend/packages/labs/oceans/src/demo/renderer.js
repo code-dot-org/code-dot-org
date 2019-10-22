@@ -149,25 +149,32 @@ export const drawPredictingFish = state => {
 // Load all fish part images, and store them in fishPartImages.
 const loadAllFishPartImages = () => {
   let fishPartImagesToLoad = [];
-  Object.keys(fishData).filter(partName => partName !=='colorPalettes').forEach((partName, partIndex) => {
-    Object.keys(fishData[partName]).forEach((variationName, variationIndex) => {
-      const partData = {
-        partIndex: fishData[partName][variationName].type,
-        variationIndex: fishData[partName][variationName].index,
-        src: fishData[partName][variationName].src
-      };
-      fishPartImagesToLoad.push(partData);
+  Object.keys(fishData)
+    .filter(partName => partName !== 'colorPalettes')
+    .forEach((partName, partIndex) => {
+      Object.keys(fishData[partName]).forEach(
+        (variationName, variationIndex) => {
+          const partData = {
+            partIndex: fishData[partName][variationName].type,
+            variationIndex: fishData[partName][variationName].index,
+            src: fishData[partName][variationName].src
+          };
+          fishPartImagesToLoad.push(partData);
+        }
+      );
     });
-  });
 
-  return Promise.all(fishPartImagesToLoad.map(loadFishPartImage)).then(results => {
-    results.forEach(result => {
-      if (fishPartImages[result.data.partIndex] === undefined) {
-        fishPartImages[result.data.partIndex] = {};
-      }
-      fishPartImages[result.data.partIndex][result.data.variationIndex] = result.img;
-    });
-  });
+  return Promise.all(fishPartImagesToLoad.map(loadFishPartImage)).then(
+    results => {
+      results.forEach(result => {
+        if (fishPartImages[result.data.partIndex] === undefined) {
+          fishPartImages[result.data.partIndex] = {};
+        }
+        fishPartImages[result.data.partIndex][result.data.variationIndex] =
+          result.img;
+      });
+    }
+  );
 };
 
 // Load a single fish part image.
@@ -219,9 +226,7 @@ const drawSingleFish = (fish, fishXPos, fishYPos, ctx) => {
 const renderFishFromParts = (fish, ctx, x = 0, y = 0) => {
   ctx.translate(constants.fishCanvasWidth, 0);
   ctx.scale(-1, 1);
-  const body = fish.parts.find(
-    part => part.type === FishBodyPart.BODY
-  );
+  const body = fish.parts.find(part => part.type === FishBodyPart.BODY);
   const bodyAnchor = bodyAnchorFromType(body, body.type);
   const parts = _.orderBy(fish.parts, ['type']);
 
@@ -245,7 +250,6 @@ const renderFishFromParts = (fish, ctx, x = 0, y = 0) => {
 
     const xPos = bodyAnchor[0] + anchor[0];
     const yPos = bodyAnchor[1] + anchor[1];
-
 
     intermediateCtx.drawImage(img, xPos, yPos);
     const rgb = colorFromType(fish.colorPalette, part.type);
