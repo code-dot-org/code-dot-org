@@ -46,9 +46,16 @@ class Api::V1::Projects::SectionProjectsControllerTest < ActionController::TestC
 
   test_user_gets_response_for(
     :index,
-    name: 'student cannot access section projects',
-    response: :forbidden,
+    name: 'student can access their own section projects',
     user: -> {@student},
+    params: -> {{section_id: @section.id}}
+  )
+
+  test_user_gets_response_for(
+    :index,
+    name: 'student cannot access another sections projects',
+    response: :forbidden,
+    user: :student,
     params: -> {{section_id: @section.id}}
   )
 

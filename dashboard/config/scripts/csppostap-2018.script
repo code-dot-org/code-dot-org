@@ -62,7 +62,7 @@ endvariants
 level 'CSP Unit 2 Ch2 Cumulative Assessment MC_2018', assessment: true
 
 stage 'Creating Javascript Objects', flex_category: 'csp_postap_2'
-level 'U4L02 Student Lesson Introduction_2018'
+level 'U4L02 Student Lesson Introduction Video_2018'
 level 'U4 - Objects - eventParameter_2018'
 level 'U4 - Objects - dotNotation_2018'
 level 'U4 - Objects - createDotNotation_2018'

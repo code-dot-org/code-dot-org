@@ -20,6 +20,7 @@ import {reducers as jsDebuggerReducers} from '@cdo/apps/lib/tools/jsdebugger/red
 import project from '@cdo/apps/code-studio/initApp/project';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import progress from '@cdo/apps/code-studio/progressRedux';
+import currentUser from '@cdo/apps/templates/currentUserRedux';
 import FirebaseStorage from '@cdo/apps/storage/firebaseStorage';
 import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
 import loadSource from './util/loadSource';
@@ -121,6 +122,7 @@ describe('Level tests', function() {
       runState,
       isRtl,
       progress,
+      currentUser,
       ...jsDebuggerReducers
     });
 
