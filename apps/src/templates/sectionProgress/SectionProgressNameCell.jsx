@@ -20,7 +20,7 @@ class SectionProgressNameCell extends Component {
 
   recordStudentNameClick = () => {
     firehoseClient.putRecord({
-      study: ' teacher_dashboard_actions',
+      study: 'teacher_dashboard_actions',
       study_group: 'progress',
       event: 'go_to_student',
       user_id: this.props.userId,
