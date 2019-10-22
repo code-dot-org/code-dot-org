@@ -2812,6 +2812,12 @@ pt-BR:
       behaviors 7:
         behaviors_hint1: Voce pode criar um novo comportamento que usa duas ações
           diferentes ou juntar dois comportamentos existentes.
+        sprites_idea1: |-
+          Por diversão, você usar um comportamento semelhante para fazer uma nave escapar para o espaço ou um personagem correr para o plano de frente. Experimente alterar o plano de fundo e as vestimentas das figuras na sua cena!
+
+          ![](<https://images.code.org/7070e44239b53f4b33a5b4fe054bb61c-image-1567714335486.2019-09-05 16_05_19.gif>)
+
+          ![](<https://images.code.org/278494432d56f1f5d41e345a51223695-image-1567714335485.2019-09-05 16_11_12.gif>)
       comment_intro_maze_2018:
         courseC_maze_programming4_a: Comentários também são úteis quando outras pessoas
           tentam ler seu código.
@@ -3360,7 +3366,7 @@ pt-BR:
           \ </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title
           name=\"DIR\">moveForward</title>\n                  </block>\n                  \n
           \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n
-          \   <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>"
+          \   <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
         courseD_collector_debugging_challenge2_b: |-
           Em seguida, colete as gemas restantes nessa linha.
 

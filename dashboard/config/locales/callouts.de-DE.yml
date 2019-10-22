@@ -115,6 +115,9 @@ de-DE:
         dance_callout_11_b: Neuer Block!
       Dance_Party_11_5:
         dance_party_11_5_groups: Schaue hier für "alle Enten" Bausteine
+      Fish Tank 3-validated_2019:
+        spritelab_comment: Verwende diesen Baustein, um dir selbst oder Deinem Lehrer
+          Notizen darüber zu machen, wie Dein Code funktioniert.
       Function intro Ryan:
         Function_intro_Ryan_1: Diese kleine Anweisung sagt dem Computer, dass er ein
           GROSSES Code-Stück mit dem entsprechenden Namen im Arbeitsbereich ausführen
@@ -211,6 +214,22 @@ de-DE:
         craft_what_is_iron: Baue dieses Eisen ab!
       Underground Iron_2019:
         craft_what_is_iron: Baue dieses Eisen ab!
+      Virtual Pet 2_2019:
+        '': Klicke hier!
+      behaviors 1:
+        behaviors_edit: Klicken Sie hier, um zu sehen, wie dieses Verhalten funktioniert.
+      behaviors 3a:
+        behavior_callout: Warum funktioniert dieses Verhalten nicht für den Stern
+          in der Mitte?
+        star2_callout: Entferne diesen Kostümbaustein und benutze stattdessen den
+          Baustein "dieses Sprite".
+        this_sprite_callout: Ersetzen Sie den Kostümbaustein unten durch diesen.
+      behaviors 4:
+        behaviors_edit: Klicken Sie hier, um zu sehen, wie dieses Verhalten funktioniert.
+      behaviors 5:
+        behaviors_edit: Fügen Sie diesem Verhalten Code hinzu.
+      behaviors free play:
+        behaviors_edit: Fügen Sie diesem Verhalten Code hinzu.
       courseA_artist_loops4:
         courseA_artist_loops4_1: Diese Zahl gibt an, wie viele dieser Blöcke in dieser
           Aufgabe verwendet werden können.
@@ -424,6 +443,8 @@ de-DE:
         courseD_maze_ramp7_1: Das hier ist deine erste Herausforderung! Diese Aufgaben
           sind nicht einfach und du brauchst wahrscheinlich mehrere Versuche, bis
           du sie gelöst hast.
+      courseE_aboutme_2:
+        '': Klicke hier!
       express_maze_debugging9_2019:
         express_maze_debugging9_2019_1: Ziehe Bausteine aus der Toolbox in Ihren Arbeitsbereich.
       frozen circle function with parameter:

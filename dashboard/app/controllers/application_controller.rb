@@ -8,9 +8,7 @@ class ApplicationController < ActionController::Base
   include LocaleHelper
   include ApplicationHelper
 
-  # Commenting this stuff out because even if we don't have a reader configured
-  # it will set stuff in the session.
-  # include SeamlessDatabasePool::ControllerFilter
+  include SeamlessDatabasePool::ControllerFilter
   # use_database_pool :all => :master
 
   # Prevent CSRF attacks by raising an exception.
@@ -63,6 +61,8 @@ class ApplicationController < ActionController::Base
     if !current_user && request.format == :html
       # we don't know who you are, you can try to sign in
       authenticate_user!
+    elsif rack_env? :development
+      raise
     else
       # we know who you are, you shouldn't be here
       head :forbidden

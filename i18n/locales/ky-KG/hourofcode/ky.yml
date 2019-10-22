@@ -13,6 +13,12 @@ ky:
   hoc2019_header: 'Learn computer science. Change the world.'
   hoc2019_header_line1_mobile: 'Learn computer science.'
   hoc2019_header_line2_mobile: 'Change the world.'
+  social_hoc2019_every_sudent: 'Every student has the potential to change the world. Help them get started. #CSforGood'
+  social_hoc2019_learn_computer_science: 'Learn computer science. Change the world. #CSforGood #HourOfCode'
+  social_hoc_is_coming: 'The Hour of Code is coming!'
+  social_hoc2019_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn computer science. Change the world.'
+  social_hoc2019_coming_dates: 'The Hour of Code is coming December 9-15, 2019. Computer science is foundational for every student to learn.'
+  social_hoc2019_dance: 'Featuring Katy Perry, Jonas Brothers, Lil Nas X, Panic at the Disco, and many more!'
   codeorg_homepage_hoc2018_curriculum: 'Go further with <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org courses</a>'
   codeorg_homepage_hoc2018_dance_heading: 'Create your own <span class="highlight-word">Dance&nbsp;Party</span>'
   codeorg_homepage_hoc2018_header_line1: 'The Hour of Code is coming...'
@@ -569,7 +575,7 @@ ky:
   tutorial_buildpong_name: "AI менен Pong түзүү"
   tutorial_tynkerdrones_name: "Дрондорду жана роботторду програмдоо"
   tutorial_carla_name: "Карла менен програмдоо"
-  tutorial_globaloria_name: "Globaloria MakeQuest"
+  tutorial_zulama_name: "Zulama MakeQuest Video Game Activity"
   tutorial_capost_name: "HTML жана CSS колдонуп, санариптик почта картачасын түзүү"
   tutorial_marco_name: "Чурка, Марко!"
   tutorial_codestersflappybike_name: "Учма велосипед"
@@ -1147,7 +1153,7 @@ ky:
   tutorial_buildpong_shortdescription: "Классикалык аркада түзүп, компүтер силерге каршы ойносун үчүн ага жасалма интеллект бергиле."
   tutorial_tynkerdrones_shortdescription: "Робот же дронуңарга контроллерди програмдагыла."
   tutorial_carla_shortdescription: "Карла сүйлөгөн виртуалдык роботту програмдоо аркылуу код жазганды үйрөнгүлө!"
-  tutorial_globaloria_shortdescription: "MakeQuest ойнойбуз! Кодду өзгөртүп биздин оюнду жеңип, анан өз оюнуңарды түзгүлө!"
+  tutorial_zulama_shortdescription: "Go on a MakeQuest! Modify code to beat our game, then build your own!"
   tutorial_capost_shortdescription: "Код менен сонун майрам же туулган күн картачасын түзгүлө."
   tutorial_marco_shortdescription: "Маркого визуалдык програмдоо тилин тааныштырган өтө кызык оюн."
   tutorial_codestersflappybike_shortdescription: "Оюнчу башкарган оюн түзгүлө. Мотоциклди тоскоолдордон буйтатып, абада кармагыла!"
@@ -1725,7 +1731,7 @@ ky:
   tutorial_buildpong_longdescription: "Понг – эң алгачкы аркад видео оюндардын бири жана эң биринчи спорттук аркад видео оюну. Бул жөнөкөй 2-D графикалык пинг-понг спорт оюну. Оюндун максаты - ОЮНЧУ өз тарабын коргоп КОМПҮТЕРДИ жеңүүсү. Бул долбоордо КОМПҮТЕР оюнчунун аракеттерине жооп бериши үчүн жасалма интеллекти колдонуп програмдалган."
   tutorial_tynkerdrones_longdescription: "Виртуалдык дрондорду жана роботторду жолтоолордон өткөрүп, “Crash Course” тапшырмаларын аткарып, түзмөктөрдү програмдаганды үйрөнгүлө. Мындан кийин реалдуу дрондорду жана роботторду башкаруучу програмдарды түзгөнгө даяр болосуңар. iPad же Android планшети жана жардамчы оюнчуктун болушу талап кылынат."
   tutorial_carla_longdescription: "\"Карла менен програмдоо\" - окуучулардын өзгөрмөлөр жана шарттуулуктар сыяктуу негизги түшүнүктөрдү үйрөнүп жатып жөнөкөй чатботту түзүүгө жардам берген кыска тапшырмалардын сериясы. Бул тапшырмалар үйрөнчүк програмчыларды алар көп кабылган адашуулардан алып өтүү үчүн кылдаттык менен иштелип чыккан.\n"
-  tutorial_globaloria_longdescription: "MakeQuest'те силер JavaScript кодун өзгөрткөндү оюну аркылуу үйрөнөсүңөр жана компүтер илиминин өзгөрмө жана функциялар сыяктуу негизги түшүнүктөрүн аласыңар. Sandbox'то оюн кодубузду өзгөртүп жана кеңейтип өз оюнуңарды жараткыла. Оюнуңарды жарыялап, досторуңар менен бөлүшкүлө! Окутуучуларга: окуу тартиптери жана атайын сабактарга ылайыктуу кеңейтилген тапшырмалар кошулган."
+  tutorial_zulama_longdescription: "In this activity you will learn to edit JavaScript code through a playful action game and master computer science concepts like variables and functions. Create your own game in the Sandbox by remixing and expanding on existing game code. Then publish and share your game with friends and family. A scripted lesson guide is included for teachers."
   tutorial_capost_longdescription: "Бул санариптик ачык каттын жардамы менен HTML жана CSS'ди жеңил жана көңүлдүү жол менен үйрөнүп башта. Үй-бүлөңөр жана досторуңар менен бөлүшүүгө куттуктоочу ачык каттарды түзүш үчүн баш жазууларды, параграфтарды, сүрөттөрдү жана шилтемелерди кошуу жолдорун үйрөнгүлө."
   tutorial_marco_longdescription: "Окуучулар чындык окуяга негизделген кызык окуялуу оюн ойношот. Окуучулар Маркону башкарып, ага Код саатында колдонулган визуалдык програмдоо тилинин кадамдык жетектемелерин берип, деңгээлдерден өткөрүшөт. Окуучулар байкабастан буйруктарды иреттөөнү, кайталоону жана шарттоону үйрөнүшөт."
   tutorial_codestersflappybike_longdescription: "Бул тапшырмада окуучулар биздин текстке сүйрөө аспаптар жыйнагынын жардамы менен Python'до дароо код жазып башташат! Окуучулар окуу нускамалардын жардамы менен толук кандуу оюн түзүүнү үйрөнүшөт! Бул тапшырмаларды аяктаган соң аларга синтаксис, чекит аркылуу жарыялоо, иш-чаралар, өзгөрмөлөр, параметрлер жана оюн механикасы түшүнүктөрүн пайдаланып жаңы оюн түзүү максаты коюлат. "
@@ -2303,7 +2309,7 @@ ky:
   tutorial_buildpong_language: "Англисче гана"
   tutorial_tynkerdrones_language: "Англисче гана"
   tutorial_carla_language: "Англисче гана"
-  tutorial_globaloria_language: "Англисче, испанча"
+  tutorial_zulama_language: "Англисче, испанча"
   tutorial_capost_language: "Англисче, нидерландча, испанча, орусча"
   tutorial_marco_language: "Бир нече"
   tutorial_codestersflappybike_language: "Англисче, испанча"
@@ -2881,7 +2887,7 @@ ky:
   tutorial_buildpong_string_detail_grades: "2+ класстар"
   tutorial_tynkerdrones_string_detail_grades: "2+ класстар"
   tutorial_carla_string_detail_grades: "6+ класстар"
-  tutorial_globaloria_string_detail_grades: "6+ класстар"
+  tutorial_zulama_string_detail_grades: "6+ класстар"
   tutorial_capost_string_detail_grades: "6+ класстар"
   tutorial_marco_string_detail_grades: "2-8-класстар"
   tutorial_codestersflappybike_string_detail_grades: "6+ класстар"
@@ -3459,7 +3465,7 @@ ky:
   tutorial_buildpong_string_platforms: "All modern browsers, Android планшети, Android телефону, iPad"
   tutorial_tynkerdrones_string_platforms: "Android планшети, iPad"
   tutorial_carla_string_platforms: "Бардык жаңы браузерлер"
-  tutorial_globaloria_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari"
+  tutorial_zulama_string_platforms: "Internet Explorer 11, Chrome, Firefox, Safari"
   tutorial_capost_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari"
   tutorial_marco_string_platforms: "Бардык жаңы браузерлер, Android планшети, iPad"
   tutorial_codestersflappybike_string_platforms: "Бардык жаңы браузерлер"
@@ -4037,7 +4043,7 @@ ky:
   tutorial_buildpong_string_detail_platforms: ""
   tutorial_tynkerdrones_string_detail_platforms: "Тоту куш дрону, Sphero роботу, Ollie роботу"
   tutorial_carla_string_detail_platforms: ""
-  tutorial_globaloria_string_detail_platforms: ""
+  tutorial_zulama_string_detail_platforms: ""
   tutorial_capost_string_detail_platforms: ""
   tutorial_marco_string_detail_platforms: ""
   tutorial_codestersflappybike_string_detail_platforms: ""
@@ -4615,7 +4621,7 @@ ky:
   tutorial_buildpong_string_detail_programming_languages: "Блоктор, Даяр, Биримдик"
   tutorial_tynkerdrones_string_detail_programming_languages: "Блоктор"
   tutorial_carla_string_detail_programming_languages: "Coffeescript"
-  tutorial_globaloria_string_detail_programming_languages: "JavaScript"
+  tutorial_zulama_string_detail_programming_languages: "JavaScript"
   tutorial_capost_string_detail_programming_languages: "HTML, CSS"
   tutorial_marco_string_detail_programming_languages: "Блоктор"
   tutorial_codestersflappybike_string_detail_programming_languages: "Python"

@@ -38,16 +38,26 @@ ur:
         options:
           LOCATION:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": بےترتیب
+      Dancelab_jumpToEach:
+        options:
+          LOCATION:
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": بےترتیب
       Dancelab_layoutSprites:
         options:
           FORMAT:
             '"random"': بےترتیب
       Dancelab_makeAnonymousDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': اجنبی(Alien)
+            '"CAT"': بلی
           LOCATION:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": بےترتیب
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': اجنبی(Alien)
+            '"CAT"': بلی
           LOCATION:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": بےترتیب
       Dancelab_makeNewDanceSpriteGroup:

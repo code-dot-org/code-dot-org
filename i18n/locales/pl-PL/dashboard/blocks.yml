@@ -82,6 +82,28 @@ pl:
             '"rotation"': obrót
             '"x"': pozycja pozioma
             '"y"': pozycja pionowa
+      Dancelab_changePropEachBy:
+        options:
+          GROUP:
+            sprites: wszystkie
+            '"ALIEN"': wszyscy obcy
+            '"BEAR"': wszystkie niedźwiedzie
+            '"CAT"': wszystkie koty
+            '"DOG"': wszystkie psy
+            '"DUCK"': wszystkie kaczki
+            '"FROG"': wszystkie żaby
+            '"MOOSE"': wszystkie łosie
+            '"PINEAPPLE"': wszystkie ananasy
+            '"ROBOT"': wszystkie roboty
+            '"SHARK"': wszystkie rekiny
+            '"UNICORN"': Jednorożce
+          PROPERTY:
+            '"scale"': rozmiar
+            '"width"': szerokość
+            '"height"': wysokość
+            '"rotation"': obrót
+            '"x"': pozycja pozioma
+            '"y"': pozycja pionowa
       Dancelab_doMoveEachLR:
         text: "{GROUP} zrób {MOVE} {DIR} raz"
         options:
@@ -97,7 +119,7 @@ pl:
             '"PINEAPPLE"': wszystkie ananasy
             '"ROBOT"': wszystkie roboty
             '"SHARK"': wszystkie rekiny
-            '"UNICORN"': wszystkie jednorożce
+            '"UNICORN"': Jednorożce
           MOVE:
             '"rand"': "(Losowy)"
             MOVES.XBend: Bend
@@ -247,6 +269,32 @@ pl:
             "{x: 100, y: 300}": dolny lewy róg
             "{x: 300, y: 300}": dolny prawy róg
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": losowy
+      Dancelab_jumpToEach:
+        options:
+          GROUP:
+            sprites: wszystkie
+            '"ALIEN"': wszyscy obcy
+            '"BEAR"': wszystkie niedźwiedzie
+            '"CAT"': wszystkie koty
+            '"DOG"': wszystkie psy
+            '"DUCK"': wszystkie kaczki
+            '"FROG"': wszystkie żaby
+            '"MOOSE"': wszystkie łosie
+            '"PINEAPPLE"': wszystkie ananasy
+            '"ROBOT"': wszystkie roboty
+            '"SHARK"': wszystkie rekiny
+            '"UNICORN"': Jednorożce
+          LOCATION:
+            "{x: 200, y: 100}": u góry
+            "{x: 200, y: 300}": na dole
+            "{x: 100, y: 200}": w lewo
+            "{x: 300, y: 200}": w prawo
+            "{x: 200, y: 200}": środek
+            "{x: 100, y: 100}": górny lewy róg
+            "{x: 300, y: 100}": górny prawy róg
+            "{x: 100, y: 300}": dolny lewy róg
+            "{x: 300, y: 300}": dolny prawy róg
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": losowy
       Dancelab_layoutSprites:
         text: formacja {GROUP} jako {FORMAT}
         options:
@@ -262,7 +310,7 @@ pl:
             '"PINEAPPLE"': wszystkie ananasy
             '"ROBOT"': wszystkie roboty
             '"SHARK"': wszystkie rekiny
-            '"UNICORN"': wszystkie jednorożce
+            '"UNICORN"': Jednorożce
           FORMAT:
             '"border"': brzeg
             '"inner"': wewnątrz kwadratu
@@ -276,17 +324,17 @@ pl:
       Dancelab_makeAnonymousDanceSprite:
         options:
           COSTUME:
-            '"ALIEN"': Obcy
+            '"ALIEN"': obcy
             '"BEAR"': Niedźwiedź
-            '"CAT"': Kot
-            '"DOG"': Pies
-            '"DUCK"': Kaczka
+            '"CAT"': kot
+            '"DOG"': pies
+            '"DUCK"': kaczka
             '"FROG"': Żaba
-            '"MOOSE"': Łoś
+            '"MOOSE"': wszystkie łosie
             '"PINEAPPLE"': Ananas
-            '"ROBOT"': Robot
+            '"ROBOT"': robot
             '"SHARK"': Rekin
-            '"UNICORN"': Jednorożec
+            '"UNICORN"': jednorożec
           LOCATION:
             "{x: 200, y: 100}": u góry
             "{x: 200, y: 300}": na dole
@@ -476,7 +524,7 @@ pl:
             '"PINEAPPLE"': wszystkie ananasy
             '"ROBOT"': wszystkie roboty
             '"SHARK"': wszystkie rekiny
-            '"UNICORN"': wszystkie jednorożce
+            '"UNICORN"': Jednorożce
           SPEED:
             '1': normalny
             '2': szybko
@@ -530,7 +578,6 @@ pl:
             '"rotation"': obrót
             '"x"': pozycja pozioma
             '"y"': pozycja pionowa
-            '"tint"': odcień
       Dancelab_setPropEach:
         text: ustaw {GROUP} {PROPERTY} na {VAL}
         options:
@@ -546,7 +593,17 @@ pl:
             '"PINEAPPLE"': wszystkie ananasy
             '"ROBOT"': wszystkie roboty
             '"SHARK"': wszystkie rekiny
-            '"UNICORN"': wszystkie jednorożce
+            '"UNICORN"': Jednorożce
+          PROPERTY:
+            '"scale"': rozmiar
+            '"width"': szerokość
+            '"height"': wysokość
+            '"rotation"': obrót
+            '"x"': pozycja pozioma
+            '"y"': pozycja pionowa
+      Dancelab_setPropRandom:
+        text: losuj {SPRITE} {PROPERTY}
+        options:
           PROPERTY:
             '"scale"': rozmiar
             '"width"': szerokość
@@ -555,9 +612,21 @@ pl:
             '"x"': pozycja pozioma
             '"y"': pozycja pionowa
             '"tint"': odcień
-      Dancelab_setPropRandom:
-        text: losuj {SPRITE} {PROPERTY}
+      Dancelab_setPropRandomEach:
         options:
+          GROUP:
+            sprites: wszystkie
+            '"ALIEN"': wszyscy obcy
+            '"BEAR"': wszystkie niedźwiedzie
+            '"CAT"': wszystkie koty
+            '"DOG"': wszystkie psy
+            '"DUCK"': wszystkie kaczki
+            '"FROG"': wszystkie żaby
+            '"MOOSE"': wszystkie łosie
+            '"PINEAPPLE"': wszystkie ananasy
+            '"ROBOT"': wszystkie roboty
+            '"SHARK"': wszystkie rekiny
+            '"UNICORN"': Jednorożce
           PROPERTY:
             '"scale"': rozmiar
             '"width"': szerokość
@@ -583,6 +652,7 @@ pl:
             '"PINEAPPLE"': wszystkie ananasy
             '"ROBOT"': wszystkie roboty
             '"SHARK"': wszystkie rekiny
+            '"UNICORN"': Jednorożce
       Dancelab_setTintEachInline:
         text: ustaw odcień {THIS} na {VAL}
         options:
@@ -598,6 +668,7 @@ pl:
             '"PINEAPPLE"': wszystkie ananasy
             '"ROBOT"': wszystkie roboty
             '"SHARK"': wszystkie rekiny
+            '"UNICORN"': Jednorożce
       Dancelab_setTintInline:
         text: ustaw {SPRITE} odcień na {VAL}
       Dancelab_setVisible:
@@ -621,7 +692,7 @@ pl:
             '"PINEAPPLE"': wszystkie ananasy
             '"ROBOT"': wszystkie roboty
             '"SHARK"': wszystkie rekiny
-            '"UNICORN"': wszystkie jednorożce
+            '"UNICORN"': Jednorożce
           VISIBILITY:
             'true': widoczny
             'false': niewidoczny
@@ -640,9 +711,64 @@ pl:
             '"bass"': niski ton
             '"mid"': średni ton
             '"treble"': wysoki ton
+      Dancelab_startMappingEach:
+        options:
+          GROUP:
+            sprites: wszystkie
+            '"ALIEN"': wszyscy obcy
+            '"BEAR"': wszystkie niedźwiedzie
+            '"CAT"': wszystkie koty
+            '"DOG"': wszystkie psy
+            '"DUCK"': wszystkie kaczki
+            '"FROG"': wszystkie żaby
+            '"MOOSE"': wszystkie łosie
+            '"PINEAPPLE"': wszystkie ananasy
+            '"ROBOT"': wszystkie roboty
+            '"SHARK"': wszystkie rekiny
+            '"UNICORN"': Jednorożce
+          PROPERTY:
+            '"scale"': rozmiar
+            '"width"': szerokość
+            '"height"': wysokość
+            '"rotation"': obrót
+            '"x"': pozycja pozioma
+            '"y"': pozycja pionowa
+            '"tint"': odcień
+          RANGE:
+            '"bass"': niski ton
+            '"mid"': średni ton
+            '"treble"': wysoki ton
       Dancelab_stopMapping:
         text: "{SPRITE} zatrzymuje {PROPERTY} po {RANGE}"
         options:
+          PROPERTY:
+            '"scale"': rozmiar
+            '"width"': szerokość
+            '"height"': wysokość
+            '"rotation"': obrót
+            '"x"': pozycja pozioma
+            '"y"': pozycja pionowa
+            '"direction"': kierunku ruchu
+            '"tint"': odcień
+          RANGE:
+            '"bass"': niski ton
+            '"mid"': średni ton
+            '"treble"': wysoki ton
+      Dancelab_stopMappingEach:
+        options:
+          GROUP:
+            sprites: wszystkie
+            '"ALIEN"': wszyscy obcy
+            '"BEAR"': wszystkie niedźwiedzie
+            '"CAT"': wszystkie koty
+            '"DOG"': wszystkie psy
+            '"DUCK"': wszystkie kaczki
+            '"FROG"': wszystkie żaby
+            '"MOOSE"': wszystkie łosie
+            '"PINEAPPLE"': wszystkie ananasy
+            '"ROBOT"': wszystkie roboty
+            '"SHARK"': wszystkie rekiny
+            '"UNICORN"': Jednorożce
           PROPERTY:
             '"scale"': rozmiar
             '"width"': szerokość

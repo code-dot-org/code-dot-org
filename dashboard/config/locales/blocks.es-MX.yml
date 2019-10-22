@@ -81,6 +81,28 @@ es-MX:
             '"rotation"': rotación
             '"x"': posición horizontal
             '"y"': posición vertical
+      Dancelab_changePropEachBy:
+        options:
+          GROUP:
+            sprites: todo
+            '"ALIEN"': todos los extraterrestres
+            '"BEAR"': todos los osos
+            '"CAT"': todos los gatos
+            '"DOG"': todos los perros
+            '"DUCK"': todos los patos
+            '"FROG"': todas las ranas
+            '"MOOSE"': todos los alces
+            '"PINEAPPLE"': todas las piñas
+            '"ROBOT"': todos los robots
+            '"SHARK"': todos los tiburones
+            '"UNICORN"': Unicornios
+          PROPERTY:
+            '"scale"': tamaño
+            '"width"': ancho
+            '"height"': altura
+            '"rotation"': rotación
+            '"x"': posición horizontal
+            '"y"': posición vertical
       Dancelab_doMoveEachLR:
         text: "{GROUP} hacer {MOVE} {DIR} una vez"
         options:
@@ -96,7 +118,7 @@ es-MX:
             '"PINEAPPLE"': todas las piñas
             '"ROBOT"': todos los robots
             '"SHARK"': todos los tiburones
-            '"UNICORN"': todos los unicornios
+            '"UNICORN"': Unicornios
           MOVE:
             '"rand"': "(Al azar)"
             MOVES.XBend: Flexión
@@ -241,6 +263,32 @@ es-MX:
             "{x: 100, y: 300}": abajo a la izquierda
             "{x: 300, y: 300}": abajo a la derecha
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": al azar
+      Dancelab_jumpToEach:
+        options:
+          GROUP:
+            sprites: todo
+            '"ALIEN"': todos los extraterrestres
+            '"BEAR"': todos los osos
+            '"CAT"': todos los gatos
+            '"DOG"': todos los perros
+            '"DUCK"': todos los patos
+            '"FROG"': todas las ranas
+            '"MOOSE"': todos los alces
+            '"PINEAPPLE"': todas las piñas
+            '"ROBOT"': todos los robots
+            '"SHARK"': todos los tiburones
+            '"UNICORN"': Unicornios
+          LOCATION:
+            "{x: 200, y: 100}": arriba
+            "{x: 200, y: 300}": abajo
+            "{x: 100, y: 200}": izquierda
+            "{x: 300, y: 200}": derecha
+            "{x: 200, y: 200}": centro
+            "{x: 100, y: 100}": arriba a la izquierda
+            "{x: 300, y: 100}": arriba a la derecha
+            "{x: 100, y: 300}": abajo a la izquierda
+            "{x: 300, y: 300}": abajo a la derecha
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": al azar
       Dancelab_layoutSprites:
         text: diseño {GROUP} como un {FORMAT}
         options:
@@ -256,7 +304,7 @@ es-MX:
             '"PINEAPPLE"': todas las piñas
             '"ROBOT"': todos los robots
             '"SHARK"': todos los tiburones
-            '"UNICORN"': todos los unicornios
+            '"UNICORN"': Unicornios
           FORMAT:
             '"border"': borde
             '"inner"': cuadrado interno
@@ -268,19 +316,20 @@ es-MX:
             '"plus"': más
             '"random"': al azar
       Dancelab_makeAnonymousDanceSprite:
+        text: crear un nuevo {COSTUME} en {LOCATION}
         options:
           COSTUME:
-            '"ALIEN"': Extraterrestre
+            '"ALIEN"': alien
             '"BEAR"': Oso
-            '"CAT"': Gato
-            '"DOG"': Perro
-            '"DUCK"': Pato
+            '"CAT"': gato
+            '"DOG"': perro
+            '"DUCK"': pato
             '"FROG"': Rana
-            '"MOOSE"': Alce
+            '"MOOSE"': todos los alces
             '"PINEAPPLE"': Piña
-            '"ROBOT"': Robot
+            '"ROBOT"': robot
             '"SHARK"': Tiburón
-            '"UNICORN"': Unicornio
+            '"UNICORN"': unicornio
           LOCATION:
             "{x: 200, y: 100}": arriba
             "{x: 200, y: 300}": abajo
@@ -470,7 +519,7 @@ es-MX:
             '"PINEAPPLE"': todas las piñas
             '"ROBOT"': todos los robots
             '"SHARK"': todos los tiburones
-            '"UNICORN"': todos los unicornios
+            '"UNICORN"': Unicornios
           SPEED:
             '1': normal
             '2': rápido
@@ -524,7 +573,6 @@ es-MX:
             '"rotation"': rotación
             '"x"': posición horizontal
             '"y"': posición vertical
-            '"tint"': tinte
       Dancelab_setPropEach:
         text: definir {GROUP} {PROPERTY} a {VAL}
         options:
@@ -540,7 +588,17 @@ es-MX:
             '"PINEAPPLE"': todas las piñas
             '"ROBOT"': todos los robots
             '"SHARK"': todos los tiburones
-            '"UNICORN"': todos los unicornios
+            '"UNICORN"': Unicornios
+          PROPERTY:
+            '"scale"': tamaño
+            '"width"': ancho
+            '"height"': altura
+            '"rotation"': rotación
+            '"x"': posición horizontal
+            '"y"': posición vertical
+      Dancelab_setPropRandom:
+        text: distribuye aleatoriamente {SPRITE} {PROPERTY}
+        options:
           PROPERTY:
             '"scale"': tamaño
             '"width"': ancho
@@ -549,9 +607,21 @@ es-MX:
             '"x"': posición horizontal
             '"y"': posición vertical
             '"tint"': tinte
-      Dancelab_setPropRandom:
-        text: distribuye aleatoriamente {SPRITE} {PROPERTY}
+      Dancelab_setPropRandomEach:
         options:
+          GROUP:
+            sprites: todo
+            '"ALIEN"': todos los extraterrestres
+            '"BEAR"': todos los osos
+            '"CAT"': todos los gatos
+            '"DOG"': todos los perros
+            '"DUCK"': todos los patos
+            '"FROG"': todas las ranas
+            '"MOOSE"': todos los alces
+            '"PINEAPPLE"': todas las piñas
+            '"ROBOT"': todos los robots
+            '"SHARK"': todos los tiburones
+            '"UNICORN"': Unicornios
           PROPERTY:
             '"scale"': tamaño
             '"width"': ancho
@@ -577,6 +647,7 @@ es-MX:
             '"PINEAPPLE"': todas las piñas
             '"ROBOT"': todos los robots
             '"SHARK"': todos los tiburones
+            '"UNICORN"': Unicornios
       Dancelab_setTintEachInline:
         text: establecer tonalidad {THIS} a {VAL}
         options:
@@ -592,6 +663,7 @@ es-MX:
             '"PINEAPPLE"': todas las piñas
             '"ROBOT"': todos los robots
             '"SHARK"': todos los tiburones
+            '"UNICORN"': Unicornios
       Dancelab_setTintInline:
         text: definir tinte {SPRITE} a {VAL}
       Dancelab_setVisible:
@@ -615,7 +687,7 @@ es-MX:
             '"PINEAPPLE"': todas las piñas
             '"ROBOT"': todos los robots
             '"SHARK"': todos los tiburones
-            '"UNICORN"': todos los unicornios
+            '"UNICORN"': Unicornios
           VISIBILITY:
             'true': visible
             'false': invisible
@@ -634,9 +706,64 @@ es-MX:
             '"bass"': bajo
             '"mid"': medio
             '"treble"': agudos
+      Dancelab_startMappingEach:
+        options:
+          GROUP:
+            sprites: todo
+            '"ALIEN"': todos los extraterrestres
+            '"BEAR"': todos los osos
+            '"CAT"': todos los gatos
+            '"DOG"': todos los perros
+            '"DUCK"': todos los patos
+            '"FROG"': todas las ranas
+            '"MOOSE"': todos los alces
+            '"PINEAPPLE"': todas las piñas
+            '"ROBOT"': todos los robots
+            '"SHARK"': todos los tiburones
+            '"UNICORN"': Unicornios
+          PROPERTY:
+            '"scale"': tamaño
+            '"width"': ancho
+            '"height"': altura
+            '"rotation"': rotación
+            '"x"': posición horizontal
+            '"y"': posición vertical
+            '"tint"': tinte
+          RANGE:
+            '"bass"': bajo
+            '"mid"': medio
+            '"treble"': agudos
       Dancelab_stopMapping:
         text: "{SPRITE} detiene {PROPERTY} siguiendo {RANGE}"
         options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"width"': ancho
+            '"height"': altura
+            '"rotation"': rotación
+            '"x"': posición horizontal
+            '"y"': posición vertical
+            '"direction"': dirección de movimiento
+            '"tint"': tinte
+          RANGE:
+            '"bass"': bajo
+            '"mid"': medio
+            '"treble"': agudos
+      Dancelab_stopMappingEach:
+        options:
+          GROUP:
+            sprites: todo
+            '"ALIEN"': todos los extraterrestres
+            '"BEAR"': todos los osos
+            '"CAT"': todos los gatos
+            '"DOG"': todos los perros
+            '"DUCK"': todos los patos
+            '"FROG"': todas las ranas
+            '"MOOSE"': todos los alces
+            '"PINEAPPLE"': todas las piñas
+            '"ROBOT"': todos los robots
+            '"SHARK"': todos los tiburones
+            '"UNICORN"': Unicornios
           PROPERTY:
             '"scale"': tamaño
             '"width"': ancho

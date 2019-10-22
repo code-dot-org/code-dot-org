@@ -242,6 +242,9 @@ de-DE:
       CourseE_HOC 2018 Level_10:
         voyage_aquatic_10a: Die **Seelaternen**![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
           Kannst du mit ihnen eine Bedingung verwenden, um das Ozeanmonument zu erreichen?
+      CourseE_HOC 2018 Level_7a:
+        aquatic7: Du kannst den ´wenn´ Baustein verwenden, um die richtigen Drehung
+          zu machen.
       CourseE_HOC 2018 Level_9b:
         voyage_aquatic_9a: Was für ein wunderschönes Korallenriff! Die blaue Koralle
           ist der **rechte** Weg. Pass auf, dass die rote Koralle nicht **links**
@@ -351,6 +354,9 @@ de-DE:
       HOC 2018 Level_10:
         voyage_aquatic_10a: Die **Seelaternen**![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
           Kannst du mit ihnen eine Bedingung verwenden, um das Ozeanmonument zu erreichen?
+      HOC 2018 Level_7a:
+        aquatic7: Du kannst den ´wenn´ Baustein verwenden, um die richtigen Drehung
+          zu machen.
       HOC 2018 Level_9b:
         voyage_aquatic_9a: Was für ein wunderschönes Korallenriff! Die blaue Koralle
           ist der **rechte** Weg. Pass auf, dass die rote Koralle nicht **links**
@@ -475,6 +481,33 @@ de-DE:
         mc_8_b: Nutze `wiederholen`-Schleifen um dein Code zu vereinfachen.
       Overworld Avoid Monsters_2019:
         mc_8_b: Nutze `wiederholen`-Schleifen um dein Code zu vereinfachen.
+      behaviors 2:
+        behavior hint: "Versuche, die Verhaltensweisen zu bearbeiten! \n\n-   In welche
+          Richtung muss sich die Rakete bewegen?"
+      behaviors 3:
+        behavior hint: "Versuche, die Verhaltensweisen zu bearbeiten! \n\n-   Welcher
+          Wert steuert die Geschwindigkeit jedes Sprites?"
+      behaviors 3a:
+        behavior hint: "Versuche, die Verhaltensweisen zu bearbeiten! \n\n-   Welcher
+          Wert steuert die Geschwindigkeit jedes Sprites?"
+      behaviors 5:
+        target hint: Du kannst jedes der vier Schiffe auswählen. Welchen will der
+          Astronaut?
+        behavior hint: Bearbeite das Verhalten, um dieses Rätsel zu lösen. Der Astronauten-Sprite
+          muss sich in zwei verschiedene Richtungen bewegen, um am Ende diagonal zu
+          gehen.
+      behaviors 6:
+        behavior hint: "Versuche, die Verhaltensweisen zu bearbeiten! \n\n-   Welcher
+          Wert steuert die Geschwindigkeit jedes Sprites?"
+      behaviors 7:
+        behaviors_hint1: Du kannst ein neues Verhalten erstellen, das zwei verschiedene
+          Aktionen verwendet, oder zwei bestehende Verhaltensweisen kombinieren.
+        sprites_idea1: |-
+          Zum Spaß kannst du ein ähnliches Verhalten verwenden, um ein Schiff in den Weltraum fliegen zu lassen oder einen Charakter in den Vordergrund zu bringen. Versuche, den Hintergrund und Sprite-Kostüme in Deiner Szene zu ändern!
+
+          ![](<https://images.code.org/7070e44239b53f4b33a5b4fe054bb61c-image-1567714335486.2019-09-05 16_05_19.gif>)
+
+          ![](<https://images.code.org/278494432d56f1f5d41e345a51223695-image-1567714335485.2019-09-05 16_11_12.gif>)
       course1_artist_loops_challenge3:
         courseA_artist_loops_challenge2_b: Wenn du ein Vogelhaus fertig hast, spring
           zum nächsten!
@@ -1761,9 +1794,72 @@ de-DE:
         courseB_maze_seq7_a: Füge 1 Block hinzu, um Scrat zur Eichel zu bewegen.
       courseB_maze_seq8:
         courseB_maze_seq8_b: Es gibt zwei Möglichkeiten um dieses Puzzle zu lösen!
+      courseC_PlayLab_eventsFP_2019:
+        idea1: |-
+          Brauchst du eine Idee?
+
+          **Wer ist da?** Lasse Charaktere mit zufälligen Bildern erscheinen, so dass niemand weiß, wer als nächstes erscheint.
+
+          <img src= "https://images.code.org/dbd6ece9d0fb213039ea5dccb91fc425-image-1563577859889.gif" style="width: 200px">
+        idea2: |-
+          _Brauchst du eine Idee?_
+
+          **Ein Abenteuer erleben** - Ändere den Hintergrund, dann lasse die Charaktere darüber reden, wo sie sich gerade befinden.
+
+          <img src= "https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif" style="width: 200px">
+      courseC_artist_loops1b_2019:
+        courseC_artist_loops1b_a: |-
+          Dies ist der erste Baustein, den du benötigst:
+
+          <xml>
+            <block type="draw_turn_by_constant_dropdown">
+              <title name="DIR">???</title>
+              <title name="VALUE" config="45,60,90,120,180">???</title>
+            </block>
+          </xml>
+
+          Du kannst entweder links oder rechts und eine beliebige Anzahl von Grad wählen.
       courseC_artist_loops2a_2019:
         courseC_artist_loops2a_a: Innerhalb deiner Schleife wirst du zur Mitte springen
           wollen, dann drehen Dich, anschließend zeichne einen Aufkleber.
+      courseC_artist_loops3a_2019:
+        courseC_artist_loops3a_a: Du wirst nur einen Block innerhalb deiner Schleife
+          hinzufügen wollen, nach dem ersten Aufkleber.
+        courseC_artist_loops3a_b: |-
+          Dein Programm sollte so aussehen!
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">???</title>
+                  <statement name="DO">
+                    <block type="jump_to">
+                      <title name="VALUE">13</title>
+                      <next>
+                        <block type="draw_turn_by_constant_dropdown">
+                          <title name="DIR">???</title>
+                          <title name="VALUE" config="1,2,5,10,12,20,30,45,60,90,120,180">???</title>
+                          <next>
+                            <block type="sticker">
+                              <title name="VALUE">Cat</title>
+                              <next>
+                                <block type="sticker">
+                                  <title name="VALUE">Dog</title>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </xml>
+
+          Du kannst alle Aufkleber verwenden, die dir gefallen!
       courseC_artist_loops4a_2019:
         courseC_artist_loops4a_b: |-
           Dein Programm sollte so aussehen!
@@ -2530,6 +2626,9 @@ de-DE:
           zu sehen was passiert, auch wenn du der Meinung bist, dass das Rätsel noch
           nicht gelöst ist.
       courseD_maze_ramp4_2019:
+        courseC_maze_programming4_a: Aus Sicht von Scrat kannst du dich nach rechts
+          oder links wenden. Wenn Scrat nach rechts schau, wird eine Drehung nach
+          rechts ihn nach unten führen.
         courseC_maze_programming4_b: Um dem Weg zu folgen, bewege Dich vorwärts und
           drehe dich in eine Richtung. Gehe anschließend weiter und drehen dich dann
           in die andere Richtung. Zuletzt bewege dich noch ein weiteres Mal vorwärts,
@@ -2560,6 +2659,8 @@ de-DE:
           zu sehen was passiert, auch wenn du der Meinung bist, dass das Rätsel noch
           nicht gelöst ist.
       courseD_maze_ramp5a_2019:
+        courseC_maze_programming5_b: Denke daran, dass Kurven aus Sicht von Scrat
+          zu sehen sind.
         courseC_maze_programming5_c: Hab keine Angst, einen Fehler zu machen! Versuche
           weitere Blöcke hinzuzufügen und den Code auszuführen. Manchmal hilft es
           zu sehen was passiert, auch wenn du der Meinung bist, dass das Rätsel noch
@@ -2594,6 +2695,9 @@ de-DE:
           zu sehen was passiert, auch wenn du der Meinung bist, dass das Rätsel noch
           nicht gelöst ist.
       courseD_scrat_ramp4:
+        courseC_maze_programming4_a: Aus Sicht von Scrat kannst du dich nach rechts
+          oder links wenden. Wenn Scrat nach rechts schau, wird eine Drehung nach
+          rechts ihn nach unten führen.
         courseC_maze_programming4_b: Um dem Weg zu folgen, bewege Dich vorwärts und
           drehe dich in eine Richtung. Gehe anschließend weiter und drehen dich dann
           in die andere Richtung. Zuletzt bewege dich noch ein weiteres Mal vorwärts,
@@ -2616,3 +2720,11 @@ de-DE:
           Blöcke hinzuzufügen und den Code auszuführen. Manchmal hilft es zu sehen
           was passiert, auch wenn du der Meinung bist, dass das Rätsel noch nicht
           gelöst ist.
+      courseF_artist_variables4_2019:
+        courseF_artist_variables4_a: Dein Code wird nicht viel anders sein als im
+          letzten Puzzle, außer dass du den Zeichner drehen musst, um herunterzuspringen,
+          und ihn dann zurückdrehen musst, um dich darauf vorzubereiten, das nächste
+          Dreieck zu zeichnen.
+      courseF_bee_variables_4_2019:
+        courseF_bee_variables_4_2019_1: Anstatt 1 von `gather` abzuziehen, addiere
+          stattdessen jedesmal 1. Welchen Wert sollte die Variable zunächst haben?

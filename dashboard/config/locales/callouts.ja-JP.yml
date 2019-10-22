@@ -126,8 +126,10 @@ ja-JP:
         craft_callout_preplaced_house: このコードで家を建ててみましょう
       Overworld Move to Sheep:
         craft_run_button_callout: "「実行」ボタンをおして、プログラムを動かしてください。"
+        craft_drag_block_callout: "`前に すすむ` の下に もうひとつ`前に すすむ`を引っ付けよう。"
       Overworld Move to Sheep_2019:
         craft_run_button_callout: "「実行」ボタンをおして、プログラムを動かしてください。"
+        craft_drag_block_callout: "`前に すすむ` の下に もうひとつ`前に すすむ`を引っ付けよう。"
       Overworld Place Wall:
         craft_inside_repeat: ここにブロックを置いて繰り返しましょう
       Overworld Place Wall_2019:
@@ -148,6 +150,8 @@ ja-JP:
       course3_artist_functions_challenge2:
         courseE_artist_functions_challenge2_callout1: この下にプログラムを書きたそう。
         courseE_artist_functions_challenge2_callout2: このデザインがイマイチなら、好きなデザインに変えてみよう。
+      course3_bee_debugging_challenge1:
+        courseD_bee_debugging_challenge1_callout1: ハチを後ろに進ませるコマンドを使おう。
       course3_playLab_challenge1:
         courseC_PlayLab_events_challenge1_1: このブロックは、キャラを ほかの ばしょに いどうさせるのに つかいます。
       course4_artist_functions_challenge2:
@@ -343,6 +347,10 @@ ja-JP:
         courseD_bee_conditionals_challenge2_1: 花（または、ハチの巣）のところで、すべてのミツを集める（または、ハチミツをつくる）には、これを使います。
       courseD_bee_conditionals_challenge2_2019:
         courseD_bee_conditionals_challenge2_1: 花（または、ハチの巣）のところで、すべてのミツを集める（または、ハチミツをつくる）には、これを使います。
+      courseD_bee_debugging_challenge1:
+        courseD_bee_debugging_challenge1_callout1: ハチを後ろに進ませるコマンドを使おう。
+      courseD_bee_debugging_challenge1a:
+        courseD_bee_debugging_challenge1_callout1: ハチを後ろに進ませるコマンドを使おう。
       courseD_collector_ramp8:
         courseD_collector_ramp8_1: 'このブロックを使えば、たからものを１つ集めることができるよ。  '
       courseD_maze_intro4_2019:
@@ -387,6 +395,8 @@ ja-JP:
         '': ブロックの左上に数字がないので、何回でもそのブロックを使えるよ！
       courseD_maze_ramp5a_2019:
         '': ブロックの左上に数字がないので、何回でもそのブロックを使えるよ！
+      courseD_maze_ramp6:
+        courseD_maze_ramp6_1: ここに書いた回数だけ、中に書いた命令を実行してから、次の命令を実行します。
       courseD_playLab_condFP:
         courseD_playLab_condFP_1: 使えるブロックは やりたいごとに まとまっています。クリックすれば、どんな命令があるか すべて見ることができます。
       courseD_playLab_condFP_2018:
@@ -401,6 +411,10 @@ ja-JP:
         courseC_maze_programming4_1: ブロックの左上にある数字は、そのブロックを使用する回数です。
       courseD_scrat_ramp5:
         '': ブロックの左上に数字がないので、何回でもそのブロックを使えるよ！
+      courseD_scrat_ramp6:
+        courseD_maze_ramp6_1: ここに書いた回数だけ、中に書いた命令を実行してから、次の命令を実行します。
+      courseD_scrat_ramp7:
+        courseD_maze_ramp6_1: ここに書いた回数だけ、中に書いた命令を実行してから、次の命令を実行します。
       courseD_scrat_ramp8:
         courseD_maze_ramp7_1: これが、パズルへの さいしょの チャレンジです。あきらめずに がんばろう。
       courseE_artist_functions1:
@@ -470,6 +484,56 @@ ja-JP:
         courseC_PlayLab_events_challenge1_1: このブロックは、キャラを ほかの ばしょに いどうさせるのに つかいます。
       courseE_playLab_scaffold3:
         courseE_playLab_scaffold3_1: はたに目指して 主人公を動かそう。
+      courseF_artist_for1:
+        courseF_artist_for1_1: ツールボックスは、"カテゴリー"モードです。`まで` は、ここにあります。
+      courseF_artist_for1_2018:
+        courseF_artist_for1_1: ツールボックスは、"カテゴリー"モードです。`まで` は、ここにあります。
+      courseF_artist_for1_2019:
+        courseF_artist_for1_1: ツールボックスは、"カテゴリー"モードです。`まで` は、ここにあります。
+      courseF_artist_variables3:
+        courseF_artist_variables3_a: 変数`length`に値をセットして使ってみよう。
+      courseF_artist_variables3_2018:
+        courseF_artist_variables3_a: 変数`length`に値をセットして使ってみよう。
+      courseF_artist_variables3_2019:
+        courseF_artist_variables3_a: 変数`length`に値をセットして使ってみよう。
+      courseF_artist_variables6:
+        courseF_artist_variables6_1: 変数は、同じ値を 何回も 使うときに とても便利です。
+      courseF_artist_variables6_2018:
+        courseF_artist_variables6_1: 変数は、同じ値を 何回も 使うときに とても便利です。
+      courseF_artist_variables6_2019:
+        courseF_artist_variables6_1: 変数は、同じ値を 何回も 使うときに とても便利です。
+      courseF_artist_variables6a:
+        courseF_artist_variables6a_1: 変数は、同じ値を 何回も 使うときに とても便利です。
+      courseF_artist_variables6a_2018:
+        courseF_artist_variables6a_1: 変数は、同じ値を 何回も 使うときに とても便利です。
+      courseF_artist_variables6a_2019:
+        courseF_artist_variables6a_1: 変数は、同じ値を 何回も 使うときに とても便利です。
+      courseF_bee_conditionals2:
+        courseF_bee_conditionals2_2: ツールボックスはグルーピングされています。ラベルをクリックすれば、必要なブロックが出てきます。
+      courseF_bee_conditionals5:
+        courseF_bee_conditionals5_1: 長方形は辺の長さがちがっているので、このブロックを使います。
+      courseF_bee_for4:
+        courseF_bee_for4_1: "`まつ`は、ここにあります。"
+      courseF_bee_for4_2018:
+        courseF_bee_for4_1: "`まつ`は、ここにあります。"
+      courseF_bee_for4_2019:
+        courseF_bee_for4_1: "`まつ`は、ここにあります。"
+      courseF_bee_for9:
+        courseF_bee_for9_1: "`計算（けいさん）`ブロックは、ここにあります。"
+      courseF_bee_for9_2018:
+        courseF_bee_for9_1: "`計算（けいさん）`ブロックは、ここにあります。"
+      courseF_bee_for9_2019:
+        courseF_bee_for9_1: "`計算（けいさん）`ブロックは、ここにあります。"
+      courseF_bee_functions2:
+        courseF_bee_functions2_1: このブロックを関数と呼びます。中を見るのは、"編集"ボタンをクリックします！
+      courseF_playlab_variables1a:
+        courseF_playlab_variables1a_1: ツールボックスは、必要なブロックを見つけやすいように ブルーピングされています。
+      courseF_playlab_variables5c:
+        courseF_playlab_variables5c_1: 変数はここにあります。
+      courseF_playlab_variables6c:
+        courseF_playlab_variables5c_1: 変数はここにあります。
+      courseF_playlab_variables7c:
+        courseF_playlab_variables7c_1: "`しつもん`ブロックは、ここにあります。"
       frozen circle function with parameter:
         frozen_circle_function_with_parameter_circle: '"円を描く"ブロックを使い、そして大きさを変えてください。'
       frozen cross:
@@ -498,3 +562,9 @@ ja-JP:
         replace_questions: ドロップダウンを使って"???"を数字に変えてください
       frozen square snowflake:
         replace_questions: ドロップダウンを使って"???"を数字に変えてください
+      grade5_artist_variables_triangles1:
+        grade5_artist_variables_triangles1_1: 注意 数字を入れるだけのブロックがあります。数字のブロックは、他のブロックに入れて使います。
+      grade5_artist_variables_triangles1_2018:
+        grade5_artist_variables_triangles1_1: 注意 数字を入れるだけのブロックがあります。数字のブロックは、他のブロックに入れて使います。
+      grade5_artist_variables_triangles1_2019:
+        grade5_artist_variables_triangles1_1: 注意 数字を入れるだけのブロックがあります。数字のブロックは、他のブロックに入れて使います。
