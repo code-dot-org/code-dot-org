@@ -2,6 +2,7 @@ import $ from 'jquery';
 import constants, {Modes} from './constants';
 import {setState} from './state';
 import {init as initScene} from './init';
+import {render} from './renderer';
 
 $(document).ready(() => {
   // Set up initial state
@@ -11,11 +12,15 @@ $(document).ready(() => {
   canvas.height = backgroundCanvas.height = constants.canvasHeight;
 
   setState({
-    currentMode: Modes.Training,
+    currentMode: Modes.Loading,
     canvas,
     backgroundCanvas,
     uiContainer: document.getElementById('ui-container')
   });
 
   initScene();
+
+  // Start the renderer.  It will self-perpetute by calling
+  // requestAnimationFrame on itself.
+  render();
 });

@@ -1,7 +1,8 @@
-import fish from './fishData';
-//const _ = require('lodash');
+import fishData from './fishData';
 
 export const generateRandomFish = id => {
+  const fish = fishData;
+
   const bodies = Object.values(fish.bodies);
   const eyes = Object.values(fish.eyes);
   const mouths = Object.values(fish.mouths);
