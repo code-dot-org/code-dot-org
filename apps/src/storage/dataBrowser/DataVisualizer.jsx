@@ -6,6 +6,7 @@ import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
 import DropdownField from './DropdownField';
 import * as dataStyles from './dataStyles';
 import * as rowStyle from '@cdo/apps/applab/designElements/rowStyle';
+import GoogleChart from '@cdo/apps/applab/GoogleChart';
 
 const INITIAL_STATE = {
   isVisualizerOpen: false,
@@ -36,7 +37,37 @@ class DataVisualizer extends React.Component {
     this.setState({isVisualizerOpen: false});
   };
 
+  aggregateRecordsByColumn = (records, columnName) => {
+    let counts = {};
+    records.forEach(record => {
+      let value = record[columnName];
+      counts[value] = (counts[value] || 0) + 1;
+    });
+    let chartData = [];
+    Object.keys(counts).forEach(key => {
+      chartData.push({[columnName]: key, count: counts[key]});
+    });
+    return chartData;
+  };
+
+  updateChart = () => {
+    const targetDiv = document.getElementById('chart-area');
+    const records =
+      Object.keys(this.props.tableRecords).length > 0 &&
+      this.props.tableRecords.map(tableRecord => JSON.parse(tableRecord));
+    if (this.state.chartType === 'Bar Chart' && this.state.values) {
+      var chart = new GoogleChart.MaterialBarChart(targetDiv);
+      const chartData = this.aggregateRecordsByColumn(
+        records,
+        this.state.values
+      );
+      chart.drawChart(chartData, [this.state.values, 'count']);
+    }
+  };
+
   render() {
+    this.updateChart();
+
     const modalBody = (
       <div>
         <h1> Explore {this.props.tableName} </h1>
