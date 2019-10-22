@@ -101,7 +101,7 @@ class HocSyncUtils
   # values from the original source.
   def self.sanitize_hoc_file(path)
     header, content, _line = Documents.new.helpers.parse_yaml_header(path)
-    sanitize_header(header)
+    sanitize_header!(header)
     write_markdown_with_header(content, header, path)
   end
 
@@ -119,7 +119,7 @@ class HocSyncUtils
       end
       source_header, _source_content, _source_line = Documents.new.helpers.parse_yaml_header(source_path)
       header, content, _line = Documents.new.helpers.parse_yaml_header(path)
-      sanitize_header(header)
+      sanitize_header!(header)
       restored_header = source_header.merge(header)
       write_markdown_with_header(content, restored_header, path)
     end
