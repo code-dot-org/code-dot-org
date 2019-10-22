@@ -1,7 +1,6 @@
 import 'babel-polyfill';
 import _ from 'lodash';
 import {setState, getState} from '../state';
-import {init as initScene} from '../init';
 import constants, {Modes, ClassType} from '../constants';
 import {createButton, createText, randomInt, toMode} from '../helpers';
 
@@ -24,7 +23,7 @@ export const init = async () => {
   fishWithConfidence = _.sortBy(fishWithConfidence, ['confidence']);
   const pondFish = fishWithConfidence.splice(0, 20);
   arrangeFish(pondFish);
-  setState({pondFish, headerElements});
+  setState({pondFish, headerElements, footerElements});
 };
 
 const predictAllFish = state => {

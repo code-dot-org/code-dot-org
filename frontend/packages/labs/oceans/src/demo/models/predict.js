@@ -62,8 +62,3 @@ const onClickPredict = () => {
   state = setState({trainingIndex: state.trainingIndex});
   asyncSetUiElements(state);
 };
-
-const onClickNext = () => {
-  setState({currentMode: Modes.Pond});
-  initScene();
-};
