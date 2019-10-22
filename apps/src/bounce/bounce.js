@@ -1070,7 +1070,7 @@ Bounce.runButtonClick = function() {
  */
 var displayFeedback = function() {
   const isSignedIn =
-    getStore().getState().progress.signInState === SignInState.SignedIn;
+    getStore().getState().currentUser.signInState === SignInState.SignedIn;
   if (!Bounce.waitingForReport) {
     studioApp().displayFeedback({
       feedbackType: Bounce.testResults,

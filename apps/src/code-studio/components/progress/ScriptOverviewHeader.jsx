@@ -275,7 +275,7 @@ export default connect(state => ({
   scriptTitle: state.progress.scriptTitle,
   scriptDescription: state.progress.scriptDescription,
   betaTitle: state.progress.betaTitle,
-  isSignedIn: state.progress.signInState === SignInState.SignedIn,
+  isSignedIn: state.currentUser.signInState === SignInState.SignedIn,
   viewAs: state.viewAs,
   isVerifiedTeacher: state.verifiedTeacher.isVerified,
   hasVerifiedResources: state.verifiedTeacher.hasVerifiedResources

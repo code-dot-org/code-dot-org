@@ -39,5 +39,5 @@ class ShareDialog extends Component {
 export const UnconnectedShareDialog = ShareDialog;
 
 export default connect(state => ({
-  signInState: state.progress.signInState
+  signInState: state.currentUser.signInState
 }))(ShareDialog);

@@ -432,7 +432,7 @@ function loadAppAsync(appOptions) {
         }
 
         const store = getStore();
-        const signInState = store.getState().progress.signInState;
+        const signInState = store.getState().currentUser.signInState;
         if (signInState === SignInState.SignedIn) {
           progress.showDisabledBubblesAlert();
         }
