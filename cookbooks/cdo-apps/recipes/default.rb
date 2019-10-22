@@ -56,13 +56,7 @@ apt_package %w(
   cmake
 )
 
-#multipackage
-
-include_recipe 'cdo-mysql::client'
-# Install local mysql server unless an external db url is provided.
-unless node['cdo-secrets'] && node['cdo-secrets']['db_writer']
-  include_recipe 'cdo-mysql::server'
-end
+include_recipe 'cdo-mysql'
 
 include_recipe 'cdo-ruby'
 
