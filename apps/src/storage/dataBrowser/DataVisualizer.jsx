@@ -33,6 +33,10 @@ class DataVisualizer extends React.Component {
 
   state = {...INITIAL_STATE};
 
+  handleOpen = () => {
+    this.setState({isVisualizerOpen: true});
+  };
+
   handleClose = () => {
     this.setState({isVisualizerOpen: false});
   };
@@ -138,7 +142,7 @@ class DataVisualizer extends React.Component {
         <button
           type="button"
           style={dataStyles.whiteButton}
-          onClick={() => this.setState({isVisualizerOpen: true})}
+          onClick={this.handleOpen}
         >
           Show Viz (Placeholder)
         </button>
@@ -154,6 +158,9 @@ class DataVisualizer extends React.Component {
     );
   }
 }
+
+export const UnconnectedDataVisualizer = Radium(DataVisualizer);
+
 export default connect(state => ({
   tableColumns: state.data.tableColumns || [],
   tableRecords: state.data.tableRecords || {},
