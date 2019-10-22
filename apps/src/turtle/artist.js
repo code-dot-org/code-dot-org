@@ -1341,7 +1341,7 @@ Artist.prototype.displayFeedback_ = function() {
   const saveToProjectGallery =
     !level.impressive && PUBLISHABLE_SKINS.includes(this.skin.id);
   const isSignedIn =
-    getStore().getState().progress.signInState === SignInState.SignedIn;
+    getStore().getState().currentUser.signInState === SignInState.SignedIn;
 
   this.studioApp_.displayFeedback({
     feedbackType: this.testResults,
