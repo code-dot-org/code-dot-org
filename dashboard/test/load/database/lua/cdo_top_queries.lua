@@ -63,7 +63,7 @@ function init_query_templates()
     {
       qps = 12.18,
       query = [[
-        UPDATE `hoc_activity`
+        UPDATE pegasus.hoc_activity
         SET `country` = 'United States', `country_code` = 'US', `state` = 'Nevada', `state_code` = 'NV', `city` = 'Las Vegas', `location` = '36.0588, -115.3104'
         WHERE (`id` = $hocActivityId)
       ]]
@@ -213,28 +213,37 @@ end
 
 function event()
   local vars = {
-    userId = sb_rand(1, MAX_USER_ID),
-    levelId = sb_rand(1, MAX_USER_LEVEL_ID),
-    scriptId = sb_rand(1, MAX_SCRIPT_ID),
-    levelId = sb_rand(1, MAX_LEVEL_ID),
-    levelSourceId = sb_rand(1, MAX_LEVEL_SOURCE_ID),
-    userLevelId = sb_rand(1, MAX_USER_LEVEL_ID),
+    userId = math.random(1, MAX_USER_ID),
+    levelId = math.random(1, MAX_USER_LEVEL_ID),
+    scriptId = math.random(1, MAX_SCRIPT_ID),
+    levelId = math.random(1, MAX_LEVEL_ID),
+    levelSourceId = math.random(1, MAX_LEVEL_SOURCE_ID),
+    userLevelId = math.random(1, MAX_USER_LEVEL_ID),
     date = os.date("%Y-%m-%d %H:%M:%S", os.time()),
     levelSourceData = LEVEL_SOURCE_DATA,
     storageAppsValue = STORAGE_APPS_VALUE,
-    storageAppId = sb_rand(1, MAX_STORAGE_APPS_ID),
-    userStorageId = sb_rand(1, MAX_USER_STORAGE_ID),
-    userScriptId = sb_rand(1, MAX_USER_SCRIPT_ID),
+    storageAppId = math.random(1, MAX_STORAGE_APPS_ID),
+    userStorageId = math.random(1, MAX_USER_STORAGE_ID),
+    userScriptId = math.random(1, MAX_USER_SCRIPT_ID),
     session = sysbench.rand.string(string.rep("@", sysbench.rand.special(36, 36))), -- Random string of length 36
     referer = sysbench.rand.string(string.rep("@", sysbench.rand.special(5, 15))),
     tutorial = sysbench.rand.string(string.rep("@", sysbench.rand.special(5, 15))),
-    hocActivityId = sb_rand(1, MAX_HOC_ACTIVITY_ID),
+    hocActivityId = math.random(1, MAX_HOC_ACTIVITY_ID),
   }
 
   -- Simple string interpolation from: https://hisham.hm/2016/01/04/string-interpolation-in-lua/
   -- "variable" names must be alphanumeric characters only.
   -- local query = string.gsub(write_queries[1]['query'], "%$(%w+)", vars)
   local query = string.gsub(random_query_weighted(), "%$(%w+)", vars)
+  local use_trx = string.find(query, "dashboard_production")
+
+  if use_trx then
+    con:query("BEGIN")
+  end
 
   con:query(query)
+
+  if use_Trx then
+    con:query("COMMIT")
+  end
 end
