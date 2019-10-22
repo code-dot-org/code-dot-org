@@ -28,6 +28,14 @@ Dashboard::Application.configure do
   config.public_file_server.enabled = true
   config.public_file_server.headers = {'Cache-Control' => "public, max-age=86400, s-maxage=43200"}
 
+  # Compress JavaScripts and CSS.
+  # webpack handles js compression for us
+  # config.assets.js_compressor = :uglifier
+  # config.assets.css_compressor = :sass
+
+  # Version of your assets, change this if you want to expire all your assets.
+  config.assets.version = '1.0'
+
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = "X-Sendfile" # for apache
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for nginx
