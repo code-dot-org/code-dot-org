@@ -81,9 +81,6 @@ export const render = () => {
       drawPredictingFish(state);
       break;
     case Modes.Pond:
-      if (prevState.pondFish !== state.pondFish) {
-        clearCanvas(state.canvas);
-      }
       clearCanvas(state.canvas);
       drawPondFishImages();
       break;
