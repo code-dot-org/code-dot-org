@@ -45,6 +45,13 @@ export const render = () => {
     drawUiElements(state.uiContainer, state.uiElements);
   }
 
+  if (
+    state.footerContainer &&
+    prevState.footerElements !== state.footerElements
+  ) {
+    drawUiElements(state.footerContainer, state.footerElements);
+  }
+
   if (state.currentMode !== prevState.currentMode) {
     drawBackground(state);
     currentModeStartTime = $time();

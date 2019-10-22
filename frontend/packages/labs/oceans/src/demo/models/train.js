@@ -1,24 +1,35 @@
 import 'babel-polyfill';
 import {setState, getState} from '../state';
-import {init as initScene} from '../init';
 import {Modes, ClassType} from '../constants';
-import {createButton, createText} from '../helpers';
+import {createButton, createText, toMode} from '../helpers';
 import SimpleTrainer from '../../utils/SimpleTrainer';
 import {generateOcean} from '../../utils/generateOcean';
 
 const staticUiElements = [
   createButton({
     id: 'yes-button',
-    text: 'yes',
+    text: 'Yes',
     onClick: () => onClassifyFish(true)
   }),
   createButton({
     id: 'no-button',
-    text: 'no',
+    text: 'No',
     onClick: () => onClassifyFish(false)
   })
 ];
 const headerElements = [createText({id: 'header', text: 'A.I. Training'})];
+const footerElements = [
+  createButton({
+    text: 'Select Type',
+    onClick: () => toMode(Modes.Words),
+    uiButton: false
+  }),
+  createButton({
+    text: 'Continue',
+    onClick: () => toMode(Modes.Predicting),
+    uiButton: false
+  })
+];
 
 export const init = () => {
   const fishData = generateOcean(100);
@@ -29,7 +40,8 @@ export const init = () => {
     fishData,
     trainer,
     uiElements: uiElements(getState()),
-    headerElements
+    headerElements,
+    footerElements
   });
 };
 
@@ -49,11 +61,6 @@ const onClassifyFish = doesLike => {
   setState({trainingIndex: state.trainingIndex});
   if (state.trainingIndex > state.fishData.length - 5) {
     const fishData = state.fishData.concat(generateOcean(100));
-    setState({fishData})
+    setState({fishData});
   }
-};
-
-const onClickNext = () => {
-  setState({currentMode: Modes.Predicting});
-  initScene();
 };
