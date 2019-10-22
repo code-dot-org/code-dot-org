@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_how_to_companies) %>
+title: Како да се биде домаќин на еден Час на Кодот - Компании
 layout: wide
 nav: how_to_nav
 ---

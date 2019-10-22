@@ -25,6 +25,7 @@ import AssignmentVersionSelector, {
   setRecommendedAndSelectedVersions
 } from '@cdo/apps/templates/teacherDashboard/AssignmentVersionSelector';
 import StudentFeedbackNotification from '@cdo/apps/templates/feedback/StudentFeedbackNotification';
+import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
   main: {
@@ -223,7 +224,9 @@ export default class CourseOverview extends Component {
         {showNotification && <VerifiedResourcesNotification />}
         {isTeacher && (
           <div>
-            <LabeledSectionSelector />
+            {!experiments.isEnabled(experiments.ASSIGNMENT_UPDATES) && (
+              <LabeledSectionSelector />
+            )}
             <CourseOverviewTopRow
               sectionsInfo={sectionsInfo}
               id={id}
@@ -240,6 +243,7 @@ export default class CourseOverview extends Component {
             name={script.name}
             id={script.id}
             description={script.description}
+            assignedSectionId={script.assigned_section_id}
           />
         ))}
       </div>
