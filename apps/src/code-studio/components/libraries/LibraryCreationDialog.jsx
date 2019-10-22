@@ -69,7 +69,7 @@ class LibraryCreationDialog extends React.Component {
   };
 
   publish = () => {
-    let formElements = document.getElementById('selectFunction').elements;
+    let formElements = this.formElements.elements;
     let selectedFunctionList = [];
     let libraryDescription = '';
     [...formElements].forEach(element => {
@@ -104,7 +104,7 @@ class LibraryCreationDialog extends React.Component {
   validateInput = () => {
     // Check if any of the checkboxes are checked
     // If this changes the publishable state, update
-    let formElements = document.getElementById('selectFunction').elements;
+    let formElements = this.formElements.elements;
     let isChecked = false;
     [...formElements].forEach(element => {
       if (element.type === 'checkbox' && element.checked) {
@@ -127,7 +127,12 @@ class LibraryCreationDialog extends React.Component {
           <b>{i18n.libraryName()}</b>
           {this.state.libraryName}
         </Heading2>
-        <form id="selectFunction" onSubmit={this.publish}>
+        <form
+          ref={formElements => {
+            this.formElements = formElements;
+          }}
+          onSubmit={this.publish}
+        >
           <textarea
             required
             name="description"
