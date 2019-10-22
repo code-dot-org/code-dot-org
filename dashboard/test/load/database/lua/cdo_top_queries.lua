@@ -25,8 +25,11 @@ MAX_USER_ID = 50826205
 MAX_LEVEL_ID = 17741
 MAX_SCRIPT_ID = 405
 MAX_LEVEL_SOURCE_ID = 861968845
+MAX_USER_LEVEL_ID = 2378176527
+MAX_USER_SCRIPT_ID = 99495037
 MAX_STORAGE_APPS_ID = 183149199
 MAX_USER_STORAGE_ID = 101520617
+MAX_HOC_ACTIVITY_ID = 807070088
 LEVEL_SOURCE_DATA = [[<xml><block type="craft_whenNight" deletable="false"><statement name="DO"><block type="craft_spawnEntity"><title name="TYPE">zombie</title><title name="DIRECTION">up</title></block></statement></block><block type="craft_zombieSpawnedTouchedClickedDay" deletable="false"><statement name="WHEN_SPAWNED"><block type="craft_wait"><title name="TYPE">0.4</title><next><block type="craft_spawnEntity"><title name="TYPE">zombie</title><title name="DIRECTION">up</title></block></next></block></statement><statement name="WHEN_TOUCHED"><block type="craft_wait"><title name="TYPE">2.0</title><next><block type="craft_attack"><next><block type="craft_moveToward"><title name="TYPE">Player</title></block></next></block></next></block></statement><statement name="WHEN_USED"><block type="craft_flashEntity"><next><block type="craft_destroyEntity"></block></next></block></statement><statement name="WHEN_DAY"><block type="craft_destroyEntity"></block></statement></block></xml>]]
 STORAGE_APPS_VALUE = [[{\"hidden\":true,\"createdAt\":\"2019-09-22T04:05:08.511+00:00\",\"updatedAt\":\"2019-09-22T04:05:08.511+00:00\"}]]
 
@@ -55,8 +58,64 @@ function init_query_templates()
   }
   --]==]
 
-  -- queries per second values taken from Percona for peak hours (~ 7 AM to 12 PM PST on a school day).
+  -- queries per second values taken from Percona for peak hours (~ 7 AM to 12 PM PST on a school day - Oct 21, 2019).
   write_queries = {
+    {
+      qps = 12.18,
+      query = [[
+        UPDATE `hoc_activity`
+        SET `country` = 'United States', `country_code` = 'US', `state` = 'Nevada', `state_code` = 'NV', `city` = 'Las Vegas', `location` = '36.0588, -115.3104'
+        WHERE (`id` = $hocActivityId)
+      ]]
+    },
+    {
+      qps = 24.21,
+      query = [[
+        UPDATE dashboard_production.user_levels
+        SET `best_result` = 11, `attempts` = 2, `level_source_id` = $levelSourceId, `updated_at` = '$date'
+        WHERE `user_levels`.`id` = $userLevelId
+      ]]
+    },
+    {
+      qps = 37.81,
+      query = [[
+        UPDATE dashboard_production.user_levels
+        SET `attempts` = 45, `updated_at` = '$date'
+        WHERE `user_levels`.`id` = $userLevelId
+      ]]
+    },
+    {
+      qps = 80.43,
+      query = [[
+        UPDATE dashboard_production.user_scripts
+        SET `last_progress_at` = '$date', `updated_at` = '$date'
+        WHERE `user_scripts`.`id` = $userScriptId
+      ]]
+    },
+    {
+      qps = 65.30,
+      query = [[
+        UPDATE dashboard_production.user_levels
+        SET `attempts` = 14, `level_source_id` = $levelSourceId, `updated_at` = '$date'
+        WHERE `user_levels`.`id` = $userLevelId
+      ]]
+    },
+    {
+      qps = 70.56,
+      query = [[
+        UPDATE dashboard_production.users
+        SET `users`.`total_lines` = 1206
+        WHERE `users`.`deleted_at` is null AND `users`.`id` = 53596566
+      ]]
+    },
+    {
+      qps = 201.21,
+      query = [[
+        UPDATE pegasus.storage_apps
+        SET `value` = '$storageAppsValue', `updated_at` = '$date', `updated_ip` = '24.86.5.86', `project_type` = 'spritelab'
+        WHERE ((`id` = $storageAppId) AND (`state` != 'deleted'))
+      ]]
+    },
     {
       qps = 10.60,
       query = [[
@@ -159,19 +218,23 @@ function event()
     scriptId = sb_rand(1, MAX_SCRIPT_ID),
     levelId = sb_rand(1, MAX_LEVEL_ID),
     levelSourceId = sb_rand(1, MAX_LEVEL_SOURCE_ID),
+    userLevelId = sb_rand(1, MAX_USER_LEVEL_ID),
     date = os.date("%Y-%m-%d %H:%M:%S", os.time()),
     levelSourceData = LEVEL_SOURCE_DATA,
     storageAppsValue = STORAGE_APPS_VALUE,
     storageAppId = sb_rand(1, MAX_STORAGE_APPS_ID),
     userStorageId = sb_rand(1, MAX_USER_STORAGE_ID),
+    userScriptId = sb_rand(1, MAX_USER_SCRIPT_ID),
     session = sysbench.rand.string(string.rep("@", sysbench.rand.special(36, 36))), -- Random string of length 36
     referer = sysbench.rand.string(string.rep("@", sysbench.rand.special(5, 15))),
     tutorial = sysbench.rand.string(string.rep("@", sysbench.rand.special(5, 15))),
+    hocActivityId = sb_rand(1, MAX_HOC_ACTIVITY_ID),
   }
 
   -- Simple string interpolation from: https://hisham.hm/2016/01/04/string-interpolation-in-lua/
   -- "variable" names must be alphanumeric characters only.
-  local query = string.gsub(random_query_weighted(), "%$(%w+)", vars)
+  local query = string.gsub(write_queries[1]['query'], "%$(%w+)", vars)
+  -- local query = string.gsub(random_query_weighted(), "%$(%w+)", vars)
 
   con:query(query)
 end
