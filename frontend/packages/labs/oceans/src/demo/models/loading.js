@@ -6,6 +6,6 @@ import {init as initScene} from '../init';
 
 export const init = async () => {
   await initRenderer();
-  setState({currentMode: Modes.Training});
+  setState({currentMode: Modes.Words});
   initScene();
 };

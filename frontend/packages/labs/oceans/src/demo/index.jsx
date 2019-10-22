@@ -12,7 +12,7 @@ $(document).ready(() => {
   canvas.height = backgroundCanvas.height = constants.canvasHeight;
 
   setState({
-    currentMode: Modes.Words,
+    currentMode: Modes.Loading,
     canvas,
     backgroundCanvas,
     uiContainer: document.getElementById('ui-container'),
