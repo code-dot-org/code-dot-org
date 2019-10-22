@@ -27,6 +27,10 @@ export const initRenderer = () => {
 };
 
 const canvasCache = new CanvasCache();
+const intermediateCanvas = document.createElement('canvas');
+const intermediateCtx = intermediateCanvas.getContext('2d');
+intermediateCanvas.width = constants.fishCanvasWidth;
+intermediateCanvas.height = constants.fishCanvasHeight;
 
 // Render a single frame of the scene.
 // Sometimes performs special rendering actions, such as when mode has changed.
@@ -230,13 +234,6 @@ const renderFishFromParts = (fish, ctx, x = 0, y = 0) => {
   const body = fish.parts.find(part => part.type === FishBodyPart.BODY);
   const bodyAnchor = bodyAnchorFromType(body, body.type);
   const parts = _.orderBy(fish.parts, ['type']);
-
-  const intermediateCanvas = canvasCache.getCanvas(
-    `intermediate-${fish.id}`
-  )[0];
-  const intermediateCtx = intermediateCanvas.getContext('2d');
-  intermediateCanvas.width = constants.fishCanvasWidth;
-  intermediateCanvas.height = constants.fishCanvasHeight;
 
   parts.forEach((part, partIndex) => {
     intermediateCtx.clearRect(
