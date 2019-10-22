@@ -157,16 +157,14 @@ const loadAllFishPartImages = () => {
   Object.keys(fishData)
     .filter(partName => partName !== 'colorPalettes')
     .forEach((partName, partIndex) => {
-      Object.keys(fishData[partName]).forEach(
-        (variationName, variationIndex) => {
-          const partData = {
-            partIndex: fishData[partName][variationName].type,
-            variationIndex: fishData[partName][variationName].index,
-            src: fishData[partName][variationName].src
-          };
-          fishPartImagesToLoad.push(partData);
-        }
-      );
+      Object.keys(fishData[partName]).forEach(variationName => {
+        const partData = {
+          partIndex: fishData[partName][variationName].type,
+          variationIndex: fishData[partName][variationName].index,
+          src: fishData[partName][variationName].src
+        };
+        fishPartImagesToLoad.push(partData);
+      });
     });
 
   return Promise.all(fishPartImagesToLoad.map(loadFishPartImage)).then(
@@ -233,7 +231,9 @@ const renderFishFromParts = (fish, ctx, x = 0, y = 0) => {
   const bodyAnchor = bodyAnchorFromType(body, body.type);
   const parts = _.orderBy(fish.parts, ['type']);
 
-  const intermediateCanvas = canvasCache.getCanvas(`intermediate-${fish.id}`)[0];
+  const intermediateCanvas = canvasCache.getCanvas(
+    `intermediate-${fish.id}`
+  )[0];
   const intermediateCtx = intermediateCanvas.getContext('2d');
   intermediateCanvas.width = constants.fishCanvasWidth;
   intermediateCanvas.height = constants.fishCanvasHeight;
