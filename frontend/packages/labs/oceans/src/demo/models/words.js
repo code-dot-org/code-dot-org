@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import 'babel-polyfill';
 import {getState, setState} from '../state';
 import {Modes} from '../constants';
