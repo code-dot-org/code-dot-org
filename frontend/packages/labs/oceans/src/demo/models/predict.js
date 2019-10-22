@@ -76,18 +76,22 @@ const onClickPredict = () => {
   asyncSetUiElements(state);
 };
 
-const showCode = (show) => {
-  console.log("show code", show);
+const showCode = show => {
+  console.log('show code', show);
   setState({showCode: show});
   if (show) {
-    $("#hide-code").show();
-    $("#show-code").hide();
+    $('#hide-code').show();
+    $('#show-code').hide();
     // Fade in the code.  Stop the current and any pending jquery animations.
-    $("#code").stop(true, true).fadeIn();
+    $('#code')
+      .stop(true, true)
+      .fadeIn();
   } else {
-    $("#show-code").show();
-    $("#hide-code").hide();
+    $('#show-code').show();
+    $('#hide-code').hide();
     // Fade out the code.  Stop the current and any pending jquery animations.
-    $("#code").stop(true, true).fadeOut();
+    $('#code')
+      .stop(true, true)
+      .fadeOut();
   }
 };
