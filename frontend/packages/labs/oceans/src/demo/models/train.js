@@ -32,14 +32,22 @@ const footerElements = [
 ];
 
 export const init = () => {
-  const fishData = generateOcean(100);
-  const trainer = new SimpleTrainer();
-  trainer.initializeClassifiersWithoutMobilenet();
+  const state = getState();
+  let fishData = [...state.fishData];
+  if (fishData.length === 0) {
+    fishData = fishData.concat(generateOcean(100));
+  }
+
+  let trainer = state.trainer;
+  if (!trainer) {
+    trainer = new SimpleTrainer();
+    trainer.initializeClassifiersWithoutMobilenet();
+  }
 
   setState({
     fishData,
     trainer,
-    uiElements: uiElements(getState()),
+    uiElements: uiElements(state),
     headerElements,
     footerElements
   });
