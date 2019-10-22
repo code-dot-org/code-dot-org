@@ -96,7 +96,6 @@ namespace :build do
       end
 
       # Skip asset precompile in development.
-      # Also skip on CI services (e.g. Circle) where we will precompile assets later, right before UI tests.
       if CDO.optimize_rails_assets
         # If we did not optimize webpack assets, then rails asset precompilation
         # will add digests to the names of webpack assets, after which webpack
