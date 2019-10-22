@@ -168,6 +168,17 @@ var projects = (module.exports = {
   },
 
   /**
+   * @returns {string} name of the most recently published library from the
+   * project, or undefined if we don't have a current project
+   */
+  getCurrentLibraryName() {
+    if (!current) {
+      return;
+    }
+    return current.libraryName;
+  },
+
+  /**
    * This method is used so that it can be mocked for unit tests.
    */
   getUrl() {
