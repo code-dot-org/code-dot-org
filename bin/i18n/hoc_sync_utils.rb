@@ -41,21 +41,24 @@ class HocSyncUtils
   def self.rename_downloads_from_crowdin_code_to_locale
     puts "Updating crowdin codes to our locale codes..."
     Languages.get_hoc_languages.each do |prop|
-      # move downloaded folders to root source directory and rename from language
-      # to locale
-      next unless File.directory?("i18n/locales/source/hourofcode/#{prop[:crowdin_name_s]}/")
+      puts "Renaming #{prop[:locale_s]}.yml to #{prop[:unique_language_s]}.yml"
+      # move downloaded folders to root source directory and rename from
+      # language to locale
+      crowdin_dir = File.join(I18N_SOURCE_DIR, "hourofcode", prop[:crowdin_name_s])
+      dest_dir = "i18n/locales/#{prop[:locale_s]}"
+      next unless File.directory?(crowdin_dir)
 
-      FileUtils.cp_r "i18n/locales/source/hourofcode/#{prop[:crowdin_name_s]}/.", "i18n/locales/#{prop[:locale_s]}"
-      FileUtils.rm_r "i18n/locales/source/hourofcode/#{prop[:crowdin_name_s]}"
+      FileUtils.cp_r File.join(crowdin_dir, '.'), dest_dir
+      FileUtils.rm_r crowdin_dir
 
       # rename yml file from en.yml to code
-      old_path = "i18n/locales/#{prop[:locale_s]}/hourofcode/en.yml"
-      new_path = "i18n/locales/#{prop[:locale_s]}/hourofcode/#{prop[:unique_language_s]}.yml"
-
+      old_path = File.join(dest_dir, "hourofcode/en.yml")
+      new_path = File.join(dest_dir, "hourofcode/#{prop[:unique_language_s]}.yml")
       File.rename(old_path, new_path)
-      file = "i18n/locales/#{prop[:locale_s]}/hourofcode/#{prop[:unique_language_s]}.yml"
-      File.write(file, File.read(file).gsub(/'#{prop[:crowdin_code_s]}':/, "#{prop[:unique_language_s]}:"))
-      puts "Renaming #{prop[:locale_s]}.yml to #{prop[:unique_language_s]}.yml"
+
+      # replace the crowdin code in the file itself with our own unique
+      # language code
+      File.write(new_path, File.read(new_path).gsub(/'#{prop[:crowdin_code_s]}':/, "#{prop[:unique_language_s]}:"))
     end
   end
 
