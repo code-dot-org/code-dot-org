@@ -1,29 +1,32 @@
 name 'OPD-K5 About_copy'
 skip_dialog true
 markdown <<MARKDOWN
-# Getting Started: About this Course
+# Welcome to 'Teaching Computer Science Fundamentals'
 
-## Course Overview
+<img src="https://images.code.org/80a1fa04481359759d2b86ddca9b33a4-image-1433972662378.png" class="level-image">
+
+## What is this course for? 
 
 This course is intended as an introduction to Code.org's Computer Science Fundamentals curriculum and resources for teachers. Through reading, viewing videos, completing interactive puzzles and reflecting on your learning, you'll develop your own understanding while preparing to teach computer science in your classroom.
 
-## Learning Objectives
+## Who is this course for?
 
-By completing this online course, participants will:
+This course is designed for **elementary school teachers who are interested in teaching Computer Science Fundamentals to their students**. This can range from classroom teachers to STEM teachers to librarians and everyone in between. 
 
-- Learn the basics of computer science 
-- Review best practices for teaching these basics to your students 
-- Access free curriculum and resources for teachers 
-- Plan for how you might get started teaching Computer Science Fundamentals
-- Connect with a community of fellow educators who are making positive change in their classrooms through coding 
+If you are a [middle school](https://code.org/educate/csd) or [high school](https://code.org/educate/csp) teacher interested in teaching our middle school or high school courses, we recommend you pursue more [in-depth or ongoing professional development opportunities](https://code.org/educate/professional-learning/middle-high).
 
-## Pre-requisites
+If you are not a teacher, and are simply interested in learning the basics of computer science, we recommend looking into a different resource.
+
+## Will I learn computer science through this course?
+
+While there are opportunities to learn and practice basic coding concepts and see how they are presented to students in the curriculum, it is not meant to be a comprehensive introduction to computer science for adults. We will provide other resources that can help you dive deeper into computer science concepts beyond this course.
+
+## Do I need to have any background in order to take this course?
 
 No previous experience with coding or computer science education is assumed. This is a beginner's course.
 
-> **A Note About Audience:** This course focuses on Code.org’s free Computer Science Fundamentals curriculum in the context of  K-5 learners. Although many of the same concepts can be applied to any computer science course, if you wish to teach a more in-depth computer science curriculum than Computer Science Fundamentals (for example, one of our [Middle](https://code.org/educate/csd) or [High school](https://code.org/educate/csp) courses), we recommend you pursue more [in-depth or ongoing professional development opportunities](https://code.org/educate/professional-learning/middle-high).
+## How long does this course take? 
 
-## Course Duration
+Completing this online course should take between 3-7 hours.
 
-Completing this online course should take between 3-7 hours, depending on your prior knowledge and how deeply you want to dive into the Code.org resources.
 MARKDOWN
