@@ -2,15 +2,13 @@
 title: State advocacy sheet
 chart: true
 state-facts: true
-<%
-  if request.params["pdf_version"]
-%>
-layout: page_print
-theme: pdf
-<%
-  end
-%>
 ---
+
+:ruby
+  if request.params["pdf_version"]
+    @header["layout"] = "page_print"
+    @header["theme"] = "pdf"
+  end
 
 // Generates custom state fact sheets based on the data in cdo-state-promote Google Sheet.
 
