@@ -390,40 +390,40 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
     });
 
     if (isNodeSerialAvailable()) {
-      const queue = [];
-      let sendPending = false;
-      const oldWrite = port.write;
+      port.queue = [];
+      port.sendPending = false;
+      port.oldWrite = port.write;
 
       // eslint-disable-next-line no-inner-declarations
-      function trySend(buffer) {
+      port.trySend = buffer => {
         if (buffer) {
-          queue.push(buffer);
+          port.queue.push(buffer);
         }
 
-        if (sendPending || queue.length === 0) {
+        if (port.sendPending || port.queue.length === 0) {
           // Exhausted pending send buffer.
           return;
         }
 
-        if (queue.length > 512) {
+        if (port.queue.length > 512) {
           throw new Error(
             'Send queue is full! More than 512 pending messages.'
           );
         }
 
-        const toSend = queue.shift();
-        sendPending = true;
-        oldWrite.call(port, toSend, 'binary', function() {
-          sendPending = false;
+        const toSend = port.queue.shift();
+        port.sendPending = true;
+        port.oldWrite(toSend, 'binary', function() {
+          port.sendPending = false;
 
-          if (queue.length !== 0) {
-            trySend();
+          if (port.queue.length !== 0) {
+            port.trySend();
           }
         });
-      }
+      };
 
-      port.write = function() {
-        trySend.apply(port, arguments);
+      port.write = (...args) => {
+        port.trySend(...args);
       };
     }
 
