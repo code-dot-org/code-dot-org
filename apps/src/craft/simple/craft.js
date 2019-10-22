@@ -22,7 +22,7 @@ import Sounds from '../../Sounds';
 
 import {TestResults} from '../../constants';
 import {captureThumbnailFromCanvas} from '../../util/thumbnail';
-import {SignInState} from '../../code-studio/progressRedux';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 
 var MEDIA_URL = '/blockly/media/craft/';
 
@@ -951,7 +951,7 @@ Craft.reportResult = function(success) {
     // for things like e.g. crowdsourced hints & hint blocks
     onComplete: function(response) {
       const isSignedIn =
-        getStore().getState().progress.signInState === SignInState.SignedIn;
+        getStore().getState().currentUser.signInState === SignInState.SignedIn;
       studioApp().displayFeedback({
         feedbackType: testResultType,
         response: response,

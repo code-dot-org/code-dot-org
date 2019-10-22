@@ -37,13 +37,20 @@ describe('Library parser', () => {
     let emptyCode = '';
     let emptyFunctions = [];
     let emptyLibraryName = 'emptyLibrary';
+    let emptyDescription = '';
 
     it('can create an empty library', () => {
       expect(
-        parser.createLibraryJson(emptyCode, emptyFunctions, emptyLibraryName)
+        parser.createLibraryJson(
+          emptyCode,
+          emptyFunctions,
+          emptyLibraryName,
+          emptyDescription
+        )
       ).to.equal(
         JSON.stringify({
           name: emptyLibraryName,
+          description: emptyDescription,
           dropletConfig: [],
           source: closureCreator(emptyLibraryName)
         })
@@ -53,25 +60,45 @@ describe('Library parser', () => {
     describe('will return early', () => {
       it('when no library name is passed', () => {
         expect(
-          parser.createLibraryJson(emptyCode, emptyFunctions, undefined)
+          parser.createLibraryJson(
+            emptyCode,
+            emptyFunctions,
+            undefined,
+            emptyDescription
+          )
         ).to.equal(undefined);
       });
 
       it('when the library name is empty', () => {
         expect(
-          parser.createLibraryJson(emptyCode, emptyFunctions, '')
+          parser.createLibraryJson(
+            emptyCode,
+            emptyFunctions,
+            '',
+            emptyDescription
+          )
         ).to.equal(undefined);
       });
 
       it('when no code is passed', () => {
         expect(
-          parser.createLibraryJson(undefined, emptyFunctions, emptyLibraryName)
+          parser.createLibraryJson(
+            undefined,
+            emptyFunctions,
+            emptyLibraryName,
+            emptyDescription
+          )
         ).to.equal(undefined);
       });
 
       it('when functions are not passed as an array', () => {
         expect(
-          parser.createLibraryJson(emptyCode, '', emptyLibraryName)
+          parser.createLibraryJson(
+            emptyCode,
+            '',
+            emptyLibraryName,
+            emptyDescription
+          )
         ).to.equal(undefined);
       });
 
@@ -81,7 +108,19 @@ describe('Library parser', () => {
           parser.createLibraryJson(
             emptyCode,
             selectedFunctions,
-            emptyLibraryName
+            emptyLibraryName,
+            emptyDescription
+          )
+        ).to.equal(undefined);
+      });
+
+      it('when no description is passed', () => {
+        expect(
+          parser.createLibraryJson(
+            emptyCode,
+            emptyFunctions,
+            emptyLibraryName,
+            undefined
           )
         ).to.equal(undefined);
       });
@@ -90,10 +129,16 @@ describe('Library parser', () => {
     it('is able to parse code with quotes', () => {
       let code = '`"\'';
       expect(
-        parser.createLibraryJson(code, emptyFunctions, emptyLibraryName)
+        parser.createLibraryJson(
+          code,
+          emptyFunctions,
+          emptyLibraryName,
+          emptyDescription
+        )
       ).to.deep.equal(
         JSON.stringify({
           name: emptyLibraryName,
+          description: emptyDescription,
           dropletConfig: [],
           source: closureCreator(emptyLibraryName, code)
         })
@@ -130,10 +175,16 @@ describe('Library parser', () => {
 
       let expectedFunctions = `${firstFunctionName}: ${firstFunctionName},${secondFunctionName}: ${secondFunctionName}`;
       expect(
-        parser.createLibraryJson(emptyCode, selectedFunctions, emptyLibraryName)
+        parser.createLibraryJson(
+          emptyCode,
+          selectedFunctions,
+          emptyLibraryName,
+          emptyDescription
+        )
       ).to.deep.equal(
         JSON.stringify({
           name: emptyLibraryName,
+          description: emptyDescription,
           dropletConfig: expectedDropletConfig,
           source: closureCreator(emptyLibraryName, emptyCode, expectedFunctions)
         })
