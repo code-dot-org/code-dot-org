@@ -21,7 +21,7 @@ const headerElements = [createText({id: 'header', text: 'A.I. Training'})];
 const footerElements = [
   createButton({
     text: 'Select Type',
-    onClick: () => toMode(Modes.Words),
+    onClick: () => onSelectType(),
     uiButton: false
   }),
   createButton({
@@ -63,4 +63,12 @@ const onClassifyFish = doesLike => {
     const fishData = state.fishData.concat(generateOcean(100));
     setState({fishData});
   }
+};
+
+const onSelectType = () => {
+  const trainer = getState().trainer;
+  if (trainer) {
+    trainer.clearAll();
+  }
+  toMode(Modes.Words);
 };

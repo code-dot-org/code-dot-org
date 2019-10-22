@@ -3,23 +3,28 @@ import _ from 'lodash';
 import {setState, getState} from '../state';
 import {init as initScene} from '../init';
 import constants, {Modes, ClassType} from '../constants';
-import {createButton, createText, randomInt} from '../helpers';
+import {createButton, createText, randomInt, toMode} from '../helpers';
 
-const uiElements = [
+const headerElements = [createText({id: 'header', text: 'A.I. Results'})];
+const footerElements = [
   createButton({
-    id: 'start-over-button',
-    text: 'start over',
-    onClick: () => onClickStartOver()
+    text: 'Training',
+    onClick: () => toMode(Modes.Training),
+    uiButton: false
+  }),
+  createButton({
+    text: 'Start Over',
+    onClick: () => onClickStartOver(),
+    uiButton: false
   })
 ];
-const headerElements = [createText({id: 'header', text: 'A.I. Results'})];
 
 export const init = async () => {
   let fishWithConfidence = await predictAllFish(getState());
   fishWithConfidence = _.sortBy(fishWithConfidence, ['confidence']);
   const pondFish = fishWithConfidence.splice(0, 20);
   arrangeFish(pondFish);
-  setState({pondFish, uiElements, headerElements});
+  setState({pondFish, headerElements});
 };
 
 const predictAllFish = state => {
@@ -57,7 +62,9 @@ const arrangeFish = fishes => {
 };
 
 const onClickStartOver = () => {
-  const state = setState({currentMode: Modes.Words});
-  state.trainer.clearAll();
-  initScene();
+  const trainer = getState().trainer;
+  if (trainer) {
+    trainer.clearAll();
+  }
+  toMode(Modes.Words);
 };

@@ -2,7 +2,7 @@ import 'babel-polyfill';
 import {setState, getState} from '../state';
 import {init as initScene} from '../init';
 import {Modes} from '../constants';
-import {createButton, createText, strForClassType} from '../helpers';
+import {createButton, createText, strForClassType, toMode} from '../helpers';
 import {generateOcean} from '../../utils/generateOcean';
 
 const staticUiElements = [
@@ -10,18 +10,25 @@ const staticUiElements = [
     id: 'predict-button',
     text: 'predict',
     onClick: () => onClickPredict()
-  }),
-  createButton({
-    id: 'next-button',
-    text: 'next',
-    onClick: () => onClickNext()
   })
 ];
 const headerElements = [createText({id: 'header', text: 'A.I. Sorting'})];
+const footerElements = [
+  createButton({
+    text: 'Training',
+    onClick: () => toMode(Modes.Training),
+    uiButton: false
+  }),
+  createButton({
+    text: 'Continue',
+    onClick: () => toMode(Modes.Pond),
+    uiButton: false
+  })
+];
 
 export const init = () => {
   asyncSetUiElements(getState());
-  setState({headerElements});
+  setState({headerElements, footerElements});
 };
 
 const asyncSetUiElements = async state => {
