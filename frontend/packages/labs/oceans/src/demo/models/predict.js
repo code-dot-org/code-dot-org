@@ -1,6 +1,5 @@
 import 'babel-polyfill';
 import {setState, getState} from '../state';
-import {init as initScene} from '../init';
 import {Modes} from '../constants';
 import {createButton, createText, strForClassType, toMode} from '../helpers';
 import {generateOcean} from '../../utils/generateOcean';
