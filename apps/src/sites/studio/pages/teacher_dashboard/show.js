@@ -20,6 +20,9 @@ import sectionAssessments from '@cdo/apps/templates/sectionAssessments/sectionAs
 import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import scriptSelection from '@cdo/apps/redux/scriptSelectionRedux';
 import TeacherDashboard from '@cdo/apps/templates/teacherDashboard/TeacherDashboard';
+import currentUser, {
+  setCurrentUserId
+} from '@cdo/apps/templates/currentUserRedux';
 import {setValidScripts} from '../../../../redux/scriptSelectionRedux';
 
 const script = document.querySelector('script[data-dashboard]');
@@ -29,6 +32,7 @@ const sections = scriptData.sections;
 const validScripts = scriptData.validScripts;
 const studentScriptIds = scriptData.studentScriptIds;
 const validCourses = scriptData.validCourses;
+const currentUserId = scriptData.currentUserId;
 const baseUrl = `/teacher_dashboard/sections/${section.id}`;
 
 $(document).ready(function() {
@@ -40,10 +44,12 @@ $(document).ready(function() {
     scriptSelection,
     stats,
     textResponses,
-    sectionAssessments
+    sectionAssessments,
+    currentUser
   });
   const store = getStore();
   // TODO: (madelynkasula) remove duplication in sectionData.setSection and teacherSections.setSections
+  store.dispatch(setCurrentUserId(currentUserId));
   store.dispatch(setSection(section));
   store.dispatch(setSections(sections));
   store.dispatch(selectSection(section.id));
