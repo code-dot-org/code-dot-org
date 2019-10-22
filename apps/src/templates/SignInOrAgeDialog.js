@@ -195,5 +195,5 @@ export const UnconnectedSignInOrAgeDialog = SignInOrAgeDialog;
 
 export default connect(state => ({
   age13Required: state.progress.isAge13Required,
-  signedIn: state.progress.signInState === SignInState.SignedIn
+  signedIn: state.currentUser.signInState === SignInState.SignedIn
 }))(SignInOrAgeDialog);

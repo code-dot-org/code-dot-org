@@ -980,7 +980,7 @@ Craft.reportResult = function(success) {
     // for things like e.g. crowdsourced hints & hint blocks
     onComplete: function(response) {
       const isSignedIn =
-        getStore().getState().progress.signInState === SignInState.SignedIn;
+        getStore().getState().currentUser.signInState === SignInState.SignedIn;
       studioApp().displayFeedback({
         feedbackType: testResultType,
         response: response,
