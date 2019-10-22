@@ -12,7 +12,7 @@ const INITIAL_STATE = {
   isVisualizerOpen: false,
   chartTitle: '',
   chartType: '',
-  numBins: 0,
+  bucketSize: 0,
   values: '',
   xValues: '',
   yValues: ''
@@ -38,7 +38,7 @@ class DataVisualizer extends React.Component {
   };
 
   handleClose = () => {
-    this.setState({isVisualizerOpen: false});
+    this.setState({...INITIAL_STATE});
   };
 
   aggregateRecordsByColumn = (records, columnName) => {
@@ -56,24 +56,75 @@ class DataVisualizer extends React.Component {
 
   updateChart = () => {
     const targetDiv = document.getElementById('chart-area');
+    if (!targetDiv) {
+      return;
+    }
     const records =
       Object.keys(this.props.tableRecords).length > 0 &&
       this.props.tableRecords.map(tableRecord => JSON.parse(tableRecord));
-    if (this.state.chartType === 'Bar Chart' && this.state.values) {
-      var chart = new GoogleChart.MaterialBarChart(targetDiv);
-      const chartData = this.aggregateRecordsByColumn(
-        records,
-        this.state.values
-      );
-      chart.drawChart(chartData, [this.state.values, 'count']);
+
+    let chart;
+    let chartData;
+    const columns = [];
+    const options = {};
+    switch (this.state.chartType) {
+      case 'Bar Chart':
+        if (this.state.values) {
+          chart = new GoogleChart.MaterialBarChart(targetDiv);
+          chartData = this.aggregateRecordsByColumn(records, this.state.values);
+          columns.push(this.state.values, 'count');
+        }
+        break;
+      case 'Histogram':
+        if (this.state.values && this.state.bucketSize) {
+          let min = Infinity;
+          let max = -Infinity;
+          records.forEach(record => {
+            let value = record[this.state.values];
+            if (value < min) {
+              min = value;
+            }
+            if (value > max) {
+              max = value;
+            }
+          });
+          options.histogram = {
+            bucketSize: this.state.bucketSize
+          };
+          chart = new GoogleChart.Histogram(targetDiv);
+
+          // Only use non-empty records.
+          chartData = records.filter(record => !!record);
+
+          columns.push(this.state.values);
+        }
+        break;
+      case 'Cross Tab':
+        console.log('cross tab not yet implemented');
+        break;
+      case 'Scatter Plot':
+        console.log('scatter plot not yet implemented');
+        break;
+      default:
+        console.warn('unknown chart type: ' + this.state.chartType);
+        break;
+    }
+    if (chart && chartData) {
+      chart.drawChart(chartData, columns, options);
     }
   };
 
   render() {
-    this.updateChart();
+    if (
+      this.state.isVisualizerOpen &&
+      this.props.tableRecords &&
+      this.state.chartType
+    ) {
+      this.updateChart();
+    }
 
     const modalBody = (
-      <div>
+      <div style={{overflow: 'auto', maxHeight: '90%'}}>
         <h1> Explore {this.props.tableName} </h1>
         <h2> Overview </h2>
         <div id="selection-area">
@@ -96,12 +147,14 @@ class DataVisualizer extends React.Component {
           />
 
           {this.state.chartType === 'Histogram' && (
-            <div id="numBinsRow" style={rowStyle.container}>
-              <label style={rowStyle.description}>Bins</label>
+            <div style={rowStyle.container}>
+              <label style={rowStyle.description}>Bucket Size</label>
               <input
                 style={rowStyle.input}
-                value={this.state.numBins}
-                onChange={event => this.setState({numBins: event.target.value})}
+                value={this.state.bucketSize}
+                onChange={event =>
+                  this.setState({bucketSize: event.target.value})
+                }
               />
             </div>
           )}
