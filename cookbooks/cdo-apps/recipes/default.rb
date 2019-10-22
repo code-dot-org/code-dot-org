@@ -56,13 +56,7 @@ apt_package %w(
   cmake
 )
 
-#multipackage
-
-include_recipe 'cdo-mysql::client'
-# Install local mysql server unless an external db url is provided.
-unless node['cdo-secrets'] && node['cdo-secrets']['db_writer']
-  include_recipe 'cdo-mysql::server'
-end
+include_recipe 'cdo-mysql'
 
 include_recipe 'cdo-ruby'
 
@@ -133,3 +127,6 @@ include_recipe 'cdo-apps::daemon_ssh' if node['cdo-apps']['daemon'] && node['cdo
 include_recipe 'cdo-apps::lighthouse' if node.chef_environment == 'test'
 
 include_recipe 'cdo-tippecanoe' if node['cdo-apps']['daemon']
+
+# Patch to fix issue with systemd-resolved: https://bugs.launchpad.net/ubuntu/+source/systemd/+bug/1805183
+include_recipe 'cdo-apps::resolved'

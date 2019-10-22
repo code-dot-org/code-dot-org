@@ -3,7 +3,7 @@ import {
   dataURIFromURI,
   dataURIToFramedBlob
 } from '@cdo/apps/imageUtils';
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/deprecatedChai';
 import expected from './expected.png';
 
 describe('image utils', () => {

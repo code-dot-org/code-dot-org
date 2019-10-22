@@ -296,6 +296,29 @@ describe('entry tests', () => {
           dest: 'build/minifiable-lib/fileupload/'
         }
       ]
+    },
+    unhash: {
+      files: [
+        {
+          expand: true,
+          cwd: 'build/package/js',
+          // The applab and gamelab exporters need unhashed copies of these files.
+          src: [
+            'webpack-runtimewp*.js',
+            'webpack-runtimewp*.min.js',
+            'applab-apiwp*.js',
+            'applab-apiwp*.min.js',
+            'gamelab-apiwp*.js',
+            'gamelab-apiwp*.min.js'
+          ],
+          dest: 'build/package/js',
+          // e.g. webpack-runtimewp0123456789aabbccddee.min.js --> webpack-runtime.min.js
+          rename: function(dest, src) {
+            var outputFile = src.replace(/wp[0-9a-f]{20}/, '');
+            return path.join(dest, outputFile);
+          }
+        }
+      ]
     }
   };
 
@@ -902,15 +925,16 @@ describe('entry tests', () => {
               to: '[path]/[name]wp[contenthash].[ext]',
               toType: 'template'
             },
-            // Always include unminified, unhashed p5.js as this is needed by
-            // unit tests. The order of these rules is important to ensure that
-            // the minified, hashed copy of p5.js appears in the manifest when
-            // minifying.
+            // Always include unminified, unhashed p5.js and p5.play.js as these
+            // are needed by unit tests and gamelab exporter. The order of these
+            // rules is important to ensure that the minified, hashed copy of
+            // these files appear in the manifest when minifying.
             {
               context: 'build/minifiable-lib/',
-              from: '**/p5.js',
+              from: 'p5play/p5*.js',
               to: '[path]/[name].[ext]',
-              toType: 'template'
+              toType: 'template',
+              ignore: '*.min.js'
             },
             // Libraries in this directory are assumed to have .js and .min.js
             // copies of each source file. In development mode, copy only foo.js.
@@ -1183,7 +1207,8 @@ describe('entry tests', () => {
     envConstants.DEV ? 'noop' : 'uglify:lib',
     envConstants.DEV ? 'webpack:build' : 'webpack:uglify',
     'notify:js-build',
-    'postbuild'
+    'postbuild',
+    envConstants.DEV ? 'noop' : 'newer:copy:unhash'
   ]);
 
   grunt.registerTask('rebuild', ['clean', 'build']);

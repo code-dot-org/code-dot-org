@@ -49,7 +49,7 @@ Make sure to test tutorials on student computers or devices to ensure they work 
 
 - Explain ways that technology impacts our lives, with examples both boys and girls will care about (talk about saving lives, helping people, connecting people, etc.).
 - Ως τάξη, φτιάξτε μια λίστα με πράγματα που χρησιμοποιούν κώδικα στην καθημερινή ζωή.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- Δείτε [εδώ]({{ urls/girls }}) συμβουλές για το πώς να κάνετε ενδιαφέρουσα την επιστήμη των υπολογιστών στα κορίτσια. 
 
 ## 6. Code!
 

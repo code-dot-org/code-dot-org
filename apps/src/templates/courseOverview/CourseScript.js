@@ -62,6 +62,7 @@ class CourseScript extends Component {
     name: PropTypes.string,
     id: PropTypes.number.isRequired,
     description: PropTypes.string,
+    assignedSectionId: PropTypes.number,
 
     // redux provided
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
@@ -98,7 +99,8 @@ class CourseScript extends Component {
       viewAs,
       selectedSectionId,
       hiddenStageState,
-      hasNoSections
+      hasNoSections,
+      assignedSectionId
     } = this.props;
 
     const isHidden = isScriptHiddenForSection(
@@ -110,6 +112,8 @@ class CourseScript extends Component {
     if (isHidden && viewAs === ViewType.Student) {
       return null;
     }
+
+    const isAssigned = assignedSectionId === parseInt(selectedSectionId);
 
     return (
       <div
@@ -129,7 +133,7 @@ class CourseScript extends Component {
             color={Button.ButtonColor.gray}
             className="uitest-go-to-unit-button"
           />
-          {experiments.isEnabled(experiments.ASSIGNMENT_UPDATES) && (
+          {isAssigned && experiments.isEnabled(experiments.ASSIGNMENT_UPDATES) && (
             <span style={styles.assigned}>
               <FontAwesome icon="check" />
               {i18n.assigned()}

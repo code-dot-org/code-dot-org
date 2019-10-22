@@ -41,6 +41,7 @@
     "CONTROLS_FOREACH_INPUT_ITEM": "за всеки елемент",
     "CONTROLS_FOREACH_TOOLTIP": "За всеки елемент от списъка,  задава променливата '%1' да бъде равна на елемента и след това изпълнява действията.",
     "CONTROLS_FOR_HELPURL": "https://code.google.com/p/blockly/wiki/Loops#count_with",
+    "CONTROLS_FOR_INPUT_COUNTER": "",
     "CONTROLS_FOR_INPUT_FROM_TO_BY": "от %1 до %2 със стъпка %3",
     "CONTROLS_FOR_INPUT_WITH": "за",
     "CONTROLS_FOR_TOOLTIP": "Кара променливата %1 да приеме стойностите от началното до последното число, броейки през зададения интервал, и  я използвай в \"направи\" блокове като условие.",

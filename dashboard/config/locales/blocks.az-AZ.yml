@@ -27,6 +27,13 @@ az:
           PROPERTY:
             '"scale"': ölçü
             '"height"': hündürlük
+      Dancelab_changePropEachBy:
+        options:
+          GROUP:
+            sprites: bütün
+          PROPERTY:
+            '"scale"': ölçü
+            '"height"': hündürlük
       Dancelab_doMoveEachLR:
         options:
           GROUP:
@@ -70,14 +77,42 @@ az:
             "{x: 100, y: 200}": sola
             "{x: 300, y: 200}": sağa
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": təsadüfi
+      Dancelab_jumpToEach:
+        options:
+          GROUP:
+            sprites: bütün
+          LOCATION:
+            "{x: 100, y: 200}": sola
+            "{x: 300, y: 200}": sağa
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": təsadüfi
       Dancelab_layoutSprites:
         options:
           GROUP:
             sprites: bütün
           FORMAT:
             '"random"': təsadüfi
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': yadplanetli
+            '"CAT"': pişik
+            '"DOG"': it
+            '"DUCK"': ördək
+            '"ROBOT"': robot
+            '"UNICORN"': tək buynuzlu at
+          LOCATION:
+            "{x: 100, y: 200}": sola
+            "{x: 300, y: 200}": sağa
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": təsadüfi
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': yadplanetli
+            '"CAT"': pişik
+            '"DOG"': it
+            '"DUCK"': ördək
+            '"ROBOT"': robot
+            '"UNICORN"': tək buynuzlu at
           LOCATION:
             "{x: 100, y: 200}": sola
             "{x: 300, y: 200}": sağa
@@ -159,7 +194,18 @@ az:
           PROPERTY:
             '"scale"': ölçü
             '"height"': hündürlük
+      Dancelab_setPropRandomEach:
+        options:
+          GROUP:
+            sprites: bütün
+          PROPERTY:
+            '"scale"': ölçü
+            '"height"': hündürlük
       Dancelab_setTintEach:
+        options:
+          THIS:
+            sprites: bütün
+      Dancelab_setTintEachInline:
         options:
           THIS:
             sprites: bütün
@@ -172,8 +218,22 @@ az:
           PROPERTY:
             '"scale"': ölçü
             '"height"': hündürlük
+      Dancelab_startMappingEach:
+        options:
+          GROUP:
+            sprites: bütün
+          PROPERTY:
+            '"scale"': ölçü
+            '"height"': hündürlük
       Dancelab_stopMapping:
         options:
+          PROPERTY:
+            '"scale"': ölçü
+            '"height"': hündürlük
+      Dancelab_stopMappingEach:
+        options:
+          GROUP:
+            sprites: bütün
           PROPERTY:
             '"scale"': ölçü
             '"height"': hündürlük

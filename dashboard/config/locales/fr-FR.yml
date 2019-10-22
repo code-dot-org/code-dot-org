@@ -61,7 +61,12 @@ fr:
   heading_x_of_y: "%{heading} (page %{x} sur %{y})"
   join_section:
     code:
+      title: Rejoindre un groupe de classe sur Code.Org
       placeholder: Code de la section (ABCDEF)
+      instructions: 'Merci d''entrer votre code à 6 caractères que votre professeur
+        vous a donné (exemple : "ABCDEF") pour rejoindre son groupe de classe.'
+      instructions_short: Entrez le code à 6 caractères de votre groupe de classe
+      submit: Rejoindre
   add_hint_form:
     placeholder: Écrire un indice ici
     submit: Ajouter un indice
@@ -91,6 +96,9 @@ fr:
     continue_with: Continuer avec %{provider}
     sign_in_with: Se connecter avec %{provider}
     signed_in: Connecté!
+    signed_out_markdown: "### Vous avez fermé la session sur [Code.org](%{url})."
+    sign_out_of_markdown: "#### Vous utilisiez %{provider} pour vous connecter. [Click
+      here](%{url}) pour fermer la session %{provider}."
     already_signedup: Déjà inscrit ?
     notyet_signedup: Pas encore inscrit ?
     google_oauth2: Compte Google
@@ -166,6 +174,10 @@ fr:
     agree_us_website: J’accepte d’utiliser un site Web basé aux États-Unis.
     my_data_to_us: Des informations sur mon utilisation de ce site peuvent être envoyées
       et enregistrées ou traitées aux États-Unis.
+    student_terms_markdown: |-
+      Les adresses de courriel ne sont pas stockées dans un format qui nous permet de contacter les étudiants.
+      Les étudiants ne recevront jamais de courriels de Code.org sauf lors de la procédure de récupération de mot de passe.
+      Voir notre [politique de confidatialité](http://code.org/privacy) pour plus d'informations.
     additional_information: Nous avons besoin de quelques informations supplémentaires
       pour continuer l’inscription.
     user_type_button: Mise à jour du type de compte
@@ -222,6 +234,8 @@ fr:
     login: Connexion
     invalid_login: Erreur d'identifiant, veuillez réessayer
     pair_programming: J'ai un partenaire sur mon ordinateur
+    student_privacy_markdown: Savoir pourquoi vous ne voyez pas votre nom complet
+      [here](%{student_privacy_blog}).
   password:
     reset_form:
       title: Mot de passe oublié ?
@@ -332,6 +346,12 @@ fr:
       professional_learning: Apprentissage professionnel
       documentation: Documentation
       tutorials: Tutoriels
+      app_lab_documentation: Documentation du Laboratoire d'Applications
+      app_lab_tutorials: Tutoriels sur le Laboratoire d'Applications
+      game_lab_documentation: Documentation du Laboratoire de Jeux
+      game_lab_tutorials: Tutoriels sur le Laboratoire de Jeux
+      sprite_lab_documentation: Documentation du Laboratoire de Lutins
+      sprite_lab_tutorials: Tutoriels sur le Laboratoire de Lutins
       educate_overview: Aperçu enseignant
       educate_elementary: École primaire
       educate_middle: Collège
@@ -539,6 +559,10 @@ fr:
     test_videos_help: Essayez notre nouveau lecteur vidéo dans votre école
     try_beta_courses: Nouveau ! Essayez nos cours bêta pour les élèves de CM2
     use_as_teacher: Utiliser ce site en tant qu'enseignant
+    heading_elementary_markdown: |-
+      ## 20 heures de parcours pour les
+
+      # Fondamentaux d'Informatique (tous les ages)
     your_gallery: Galerie
     no_primary_course: Essaye un cours Code Studio
     choose_next_course: Essaye un cours Code Studio en le choisissant ci-dessous
@@ -813,6 +837,8 @@ fr:
     header_artist: L’art du code
     report_abuse: Signaler un abus
   landing:
+    prerelease_tutorial: Ce tutoriel est en **beta**. Il est sujet à révision en fonction
+      des commentaires et des améliorations sont apportées.
     report_bug: Signaler un bogue
     support: Obtenir de l'aide
     support_url: "//support.code.org"
@@ -894,6 +920,12 @@ fr:
   age_interstitial:
     age: Ton âge
     header: Mise à jour des informations du compte
+    warning: Nous sommes en train d'implanter des mises à jour afin de te garantir
+      une protection des données privées encore meilleure. Pour ce faire, nous demandons
+      aux utilisateurs existants d'entrer leur âge.
+    disclaimer: Comme toujours, code.org ne louera pas, ne vendra pas ou ne partagera
+      pas ces informations avec des tiers.
+    sign_out_markdown: Si tu ne souhaites pas fournir ton âge, tu peux [déconnecter](%{url}).
   terms_interstitial:
     title: Mise à jour des conditions d’utilisation et de la politique de confidentialité
     intro_desc: Nous avons mis à jour nos conditions d’utilisation et politique de
@@ -1037,8 +1069,10 @@ fr:
   peer_review:
     accepted:
       name: Accepté
+      description_markdown: "**Oui**, cette soumission **remplit** les critères"
     rejected:
       name: Rejeté
+      description_markdown: "**Non**, cette soumission **ne remplit pas** les critères"
     escalated:
       name: Remonté
       description: Je voudrais qu'un instructeur examine cette proposition
@@ -1070,6 +1104,7 @@ fr:
     csf_variables: variables
     csf_for_loops: Boucles « Pour »
     csf_internet: Internet
+    csf_warmup: Echauffement
     csd1_1: 'Chapitre 1 : Résolution de problèmes'
     csd1_2: 'Chapitre 2 : Ordinateurs et résolution de problèmes'
     csd2_1: 'Chapitre 1 : Contenu Web et HTML'
@@ -1100,6 +1135,7 @@ fr:
     csp_postap_2: 'Chapitre 2 : Application et bases de données'
     csp2_1_2018: 'Unité 2: L’Information numérique'
     csp3_1_2018: 'Unité 3 : Introduction à la programmation'
+    csp4_1_2018: 'Unité 4: Big Data et Confidentialité'
     csp_variables: variables
     csp_conditionals: Instructions conditionnelles
     csp_functions: fonctions
@@ -1108,6 +1144,7 @@ fr:
     csp_loops: boucles
     csp_traversals: Parcours
     csp_libraries: Bibliothèques
+    csp_parameters_return_values: Paramètres et Valeur de Retour
     dlp: Sujets de réflexion
     time4cs_c1: Les Everglades et ses écosystèmes
     time4cs_c2: Les chaînes alimentaires dans les Everglades
@@ -1309,12 +1346,29 @@ fr:
         internationaux de Code.org et 2) vous acceptez de partager vos informations
         avec notre partenaire international dans votre pays agin qu’il puisse vous
         soutenir lors de votre voyage comme professeur d’informatique.
+      thanks_markdown: Merci pour votre soumission ! Nous nous réjouissons de vous
+        soutenir pendant que vous apprenez à connaître les programmes d’études et
+        outils de Code.org. Veuillez continuer à partager vos questions et vos commentaires
+        avec nous en nous écrivant à [support@code.org](%{support_email_url}) ou en
+        postant sur le [forum des enseignants](%{teacher_forum_url})!
     logged_out:
       heading: Merci de votre intérêt pour le programme d’apprentissage professionnel !
       body: Pour commencer, vous devez d’abord être connecté à votre compte de Code.org.
         Si vous désirez plus d’informations sur le programme avant de commencer votre
         demande, veuillez consulter l’<a href="%{url}">aperçu du programme d’apprentissage
         professionnel</a>.
+    not_teacher:
+      body_markdown: Merci de votre intérêt pour le programme d’apprentissage professionnel
+        de Code.org ! Vous êtes actuellement connecté à un compte élève. Veuillez
+        soit créer un compte enseignant, soit [aller dans vos paramètres utilisateur](%{user_settings})
+        pour mettre à niveau votre compte d’élève à enseignant.
+      more_markdown: Si vous désirez plus d’informations sur le programme avant de
+        commencer votre demande, veuillez consulter l’[aperçu du programme d’apprentissage
+        professionnel](%{pl_overview}).
+    no_teacher_email:
+      body_markdown: Votre compte n’est pas associé à une adresse e-mail. Veuillez
+        [consulter les paramètres de votre compte](%{user_registration}) pour ajouter
+        votre adresse e-mail avant de remplir ce formulaire.
   courses_category: Cours complets
   cookie_banner:
     message: En poursuivant votre navigation sur ce site ou en cliquant sur « J’accepte »,

@@ -66,7 +66,7 @@
 
     .checkbox
       = f.label :terms_of_service_version do
-        = f.check_box :terms_of_service_version, {}, User::TERMS_OF_SERVICE_VERSIONS.last
+        = f.check_box :terms_of_service_version, {style: "margin-right: 1em"}, User::TERMS_OF_SERVICE_VERSIONS.last
         = t('terms_interstitial.accept_label', tos_url: CDO.code_org_url('/tos'), privacy_url: CDO.code_org_url('/privacy')).html_safe
         %span#student-consent{style: "display: none;"}
           = t('signup_form.student_consent')
@@ -104,7 +104,8 @@
   script_data = {
     signup: {
       usIp: us_ip,
-      signUpUID: "#{session[:sign_up_uid]}"
+      signUpUID: "#{session[:sign_up_uid]}",
+      provider: @user.provider
     }.to_json
   }
 %script{src: webpack_asset_path('js/devise/registrations/_finish_sign_up.js'), data: script_data}
