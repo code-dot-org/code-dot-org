@@ -22,15 +22,19 @@ let currentModeStartTime = $time();
 
 let fishPartImages = {};
 
+let canvasCache;
+let intermediateCanvas;
+let intermediateCtx;
+
 export const initRenderer = () => {
+  canvasCache = new CanvasCache();
+  intermediateCanvas = document.createElement('canvas');
+  intermediateCtx = intermediateCanvas.getContext('2d');
+  intermediateCanvas.width = constants.fishCanvasWidth;
+  intermediateCanvas.height = constants.fishCanvasHeight;
+
   return loadAllFishPartImages();
 };
-
-const canvasCache = new CanvasCache();
-const intermediateCanvas = document.createElement('canvas');
-const intermediateCtx = intermediateCanvas.getContext('2d');
-intermediateCanvas.width = constants.fishCanvasWidth;
-intermediateCanvas.height = constants.fishCanvasHeight;
 
 // Render a single frame of the scene.
 // Sometimes performs special rendering actions, such as when mode has changed.
