@@ -54,7 +54,7 @@ stage 'Project - Tell a Data Story', flex_category: 'csp_postap_1'
 level 'CSP U2L15 SFLP_2019', named: true
 
 stage 'Creating Javascript Objects', flex_category: 'csp_postap_2'
-level 'U4L02 Student Lesson Introduction_2018_2019'
+level 'U4L02 Student Lesson Introduction Video_2018_2019'
 level 'U4 - Objects - eventParameter_2019'
 level 'U4 - Objects - dotNotation_2019'
 level 'U4 - Objects - createDotNotation_2019'
