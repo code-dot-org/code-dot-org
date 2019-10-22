@@ -1,15 +1,20 @@
 import 'babel-polyfill';
 import _ from 'lodash';
 import {setState, getState} from '../state';
-import {init as initScene} from '../init';
 import constants, {Modes, ClassType} from '../constants';
-import {createButton, randomInt} from '../helpers';
+import {createButton, createText, randomInt, toMode} from '../helpers';
 
-const uiElements = [
+const headerElements = [createText({id: 'header', text: 'A.I. Results'})];
+const footerElements = [
   createButton({
-    id: 'start-over-button',
-    text: 'start over',
-    onClick: () => onClickStartOver()
+    text: 'Training',
+    onClick: () => toMode(Modes.Training),
+    className: ''
+  }),
+  createButton({
+    text: 'Start Over',
+    onClick: () => onClickStartOver(),
+    className: ''
   })
 ];
 
@@ -18,7 +23,7 @@ export const init = async () => {
   fishWithConfidence = _.sortBy(fishWithConfidence, ['confidence']);
   const pondFish = fishWithConfidence.splice(0, 20);
   arrangeFish(pondFish);
-  setState({pondFish, uiElements});
+  setState({pondFish, headerElements, footerElements});
 };
 
 const predictAllFish = state => {
@@ -57,9 +62,8 @@ const arrangeFish = fishes => {
 
 const onClickStartOver = () => {
   const state = setState({
-    currentMode: Modes.Words,
     iterationCount: getState().iterationCount + 1
   });
   state.trainer.clearAll();
-  initScene();
+  toMode(Modes.Words);
 };

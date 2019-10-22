@@ -1,7 +1,12 @@
 import {init as initModel} from './models';
-import {getState} from './state';
+import {setState} from './state';
 
 export const init = () => {
-  const state = getState();
+  // Reset any state that shouldn't persist between modes.
+  const state = setState({
+    uiElements: [],
+    headerElements: [],
+    footerElements: []
+  });
   initModel(state);
 };

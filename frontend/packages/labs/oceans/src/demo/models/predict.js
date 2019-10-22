@@ -1,8 +1,7 @@
 import 'babel-polyfill';
 import {setState, getState} from '../state';
-import {init as initScene} from '../init';
 import {Modes} from '../constants';
-import {createButton, createText, strForClassType} from '../helpers';
+import {createButton, createText, strForClassType, toMode} from '../helpers';
 import {generateOcean} from '../../utils/generateOcean';
 
 const staticUiElements = [
@@ -10,16 +9,25 @@ const staticUiElements = [
     id: 'predict-button',
     text: 'predict',
     onClick: () => onClickPredict()
+  })
+];
+const headerElements = [createText({id: 'header', text: 'A.I. Sorting'})];
+const footerElements = [
+  createButton({
+    text: 'Training',
+    onClick: () => toMode(Modes.Training),
+    className: ''
   }),
   createButton({
-    id: 'next-button',
-    text: 'next',
-    onClick: () => onClickNext()
+    text: 'Continue',
+    onClick: () => toMode(Modes.Pond),
+    className: ''
   })
 ];
 
 export const init = () => {
   asyncSetUiElements(getState());
+  setState({headerElements, footerElements});
 };
 
 const asyncSetUiElements = async state => {
@@ -52,9 +60,4 @@ const onClickPredict = () => {
   state.trainingIndex += 1;
   state = setState({trainingIndex: state.trainingIndex});
   asyncSetUiElements(state);
-};
-
-const onClickNext = () => {
-  setState({currentMode: Modes.Pond});
-  initScene();
 };

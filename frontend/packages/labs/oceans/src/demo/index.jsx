@@ -16,7 +16,8 @@ $(document).ready(() => {
     canvas,
     backgroundCanvas,
     uiContainer: document.getElementById('ui-container'),
-    iterationCount: 0
+    headerContainer: document.getElementById('header-container'),
+    footerContainer: document.getElementById('footer-container')
   });
 
   initScene();

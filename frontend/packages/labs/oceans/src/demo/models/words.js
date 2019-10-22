@@ -2,8 +2,9 @@ import 'babel-polyfill';
 import {getState, setState} from '../state';
 import {Modes} from '../constants';
 import {init as initScene} from '../init';
-import {createButton} from '../helpers';
+import {createButton, createText} from '../helpers';
 
+const headerElements = [createText({id: 'header', text: 'Choose Fish Type'})];
 const items = [
   ['Blue', 'Green', 'Red', 'Round', 'Square'],
   [
@@ -26,7 +27,6 @@ const items = [
 ];
 
 const onChangeWord = itemIndex => {
-  console.log('word:', items[currentItemSet()][itemIndex]);
   setState({
     word: items[currentItemSet()][itemIndex],
     currentMode: Modes.Training
@@ -58,5 +58,5 @@ const createButtons = () => {
 };
 
 export const init = () => {
-  setState({uiElements: createButtons()});
+  setState({uiElements: createButtons(), headerElements});
 };

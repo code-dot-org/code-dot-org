@@ -1,26 +1,33 @@
 import 'babel-polyfill';
 import {setState, getState} from '../state';
-import {init as initScene} from '../init';
 import {Modes, ClassType} from '../constants';
-import {createButton} from '../helpers';
+import {createButton, createText, toMode} from '../helpers';
 import SimpleTrainer from '../../utils/SimpleTrainer';
 import {generateOcean} from '../../utils/generateOcean';
 
-const uiElements = [
+const staticUiElements = [
   createButton({
-    id: 'like-button',
-    text: 'like',
+    id: 'yes-button',
+    text: 'Yes',
     onClick: () => onClassifyFish(true)
   }),
   createButton({
-    id: 'dislike-button',
-    text: 'dislike',
+    id: 'no-button',
+    text: 'No',
     onClick: () => onClassifyFish(false)
+  })
+];
+const headerElements = [createText({id: 'header', text: 'A.I. Training'})];
+const footerElements = [
+  createButton({
+    text: 'Select Type',
+    onClick: () => onSelectType(),
+    className: ''
   }),
   createButton({
-    id: 'next-button',
-    text: 'next',
-    onClick: () => onClickNext()
+    text: 'Continue',
+    onClick: () => toMode(Modes.Predicting),
+    className: ''
   })
 ];
 
@@ -29,7 +36,20 @@ export const init = () => {
   const trainer = new SimpleTrainer();
   trainer.initializeClassifiersWithoutMobilenet();
 
-  setState({fishData, trainer, uiElements});
+  setState({
+    fishData,
+    trainer,
+    uiElements: uiElements(getState()),
+    headerElements,
+    footerElements
+  });
+};
+
+const uiElements = state => {
+  return [
+    ...staticUiElements,
+    createText({id: 'train-text', text: `Is this fish ${state.word}?`})
+  ];
 };
 
 const onClassifyFish = doesLike => {
@@ -41,11 +61,14 @@ const onClassifyFish = doesLike => {
   setState({trainingIndex: state.trainingIndex});
   if (state.trainingIndex > state.fishData.length - 5) {
     const fishData = state.fishData.concat(generateOcean(100));
-    setState({fishData})
+    setState({fishData});
   }
 };
 
-const onClickNext = () => {
-  setState({currentMode: Modes.Predicting});
-  initScene();
+const onSelectType = () => {
+  const trainer = getState().trainer;
+  if (trainer) {
+    trainer.clearAll();
+  }
+  toMode(Modes.Words);
 };

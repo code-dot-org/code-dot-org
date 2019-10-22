@@ -41,8 +41,22 @@ export const initRenderer = () => {
 export const render = () => {
   const state = getState();
 
-  if (prevState.uiElements !== state.uiElements) {
-    drawUiElements(state);
+  if (
+    state.headerContainer &&
+    prevState.headerElements !== state.headerElements
+  ) {
+    drawUiElements(state.headerContainer, state.headerElements);
+  }
+
+  if (state.uiContainer && prevState.uiElements !== state.uiElements) {
+    drawUiElements(state.uiContainer, state.uiElements);
+  }
+
+  if (
+    state.footerContainer &&
+    prevState.footerElements !== state.footerElements
+  ) {
+    drawUiElements(state.footerContainer, state.footerElements);
   }
 
   if (state.currentMode !== prevState.currentMode) {
@@ -119,11 +133,18 @@ export const drawTrainingFish = state => {
   const ctx = canvas.getContext('2d');
 
   // Draw frame behind fish
-  ctx.fillStyle = '#FFFFFF';
   const frameSize = 300;
   const frameXPos = canvas.width / 2 - frameSize / 2;
   const frameYPos = canvas.height / 2 - frameSize / 2;
-  ctx.fillRect(frameXPos, frameYPos, frameSize, frameSize);
+  drawRoundedFrame(
+    ctx,
+    frameXPos,
+    frameYPos,
+    frameSize,
+    frameSize,
+    '#FFFFFF',
+    '#000000'
+  );
 
   const fish = state.fishData[state.trainingIndex];
   const fishXPos = frameXPos + (frameSize - constants.fishCanvasWidth) / 2;
@@ -324,6 +345,43 @@ function DrawFade(amount, overlayColour) {
   canvasCtx.globalAlpha = 1;
 }
 
+const drawRoundedFrame = (
+  ctx,
+  x,
+  y,
+  w,
+  h,
+  backgroundColor,
+  borderColor,
+  thickness = 2
+) => {
+  const r = 10;
+  ctx.lineJoin = 'round';
+  ctx.lineWidth = r;
+
+  // Outer frame
+  ctx.strokeStyle = borderColor;
+  ctx.strokeRect(x + r / 2, y + r / 2, w - r, h - r);
+  ctx.fillStyle = borderColor;
+  DrawFilledRect(x + r / 2, y + r / 2, w - r, h - r);
+
+  // Inner frame
+  ctx.strokeStyle = backgroundColor;
+  ctx.strokeRect(
+    x + r / 2 + thickness,
+    y + r / 2 + thickness,
+    w - r - thickness * 2,
+    h - r - thickness * 2
+  );
+  ctx.fillStyle = backgroundColor;
+  DrawFilledRect(
+    x + r / 2 + thickness,
+    y + r / 2 + thickness,
+    w - r - thickness * 2,
+    h - r - thickness * 2
+  );
+};
+
 // Draw a filled rectangle.
 function DrawFilledRect(x, y, w, h) {
   x = Math.floor(x / 1);
@@ -336,10 +394,9 @@ function DrawFilledRect(x, y, w, h) {
 }
 
 // Attach HTML UI elements to the DOM.
-export const drawUiElements = state => {
-  const container = state.uiContainer;
+export const drawUiElements = (container, elements) => {
   container.innerHTML = '';
-  state.uiElements.forEach(el => container.appendChild(el));
+  elements.forEach(el => container.appendChild(el));
 };
 
 // A single frame of animation.

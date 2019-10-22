@@ -8,7 +8,12 @@ const initialState = {
   trainer: null,
   trainingIndex: 0,
   uiContainer: null,
-  uiElements: []
+  uiElements: [],
+  headerContainer: null,
+  headerElements: [],
+  footerContainer: null,
+  footerElements: [],
+  iterationCount: 0
 };
 let state = {...initialState};
 

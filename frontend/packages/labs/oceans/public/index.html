@@ -11,10 +11,6 @@
       crossorigin="anonymous"
     />
     <style>
-      #header {
-        width: 100%;
-        height: 80px;
-      }
       #container {
         position: relative;
         width: 100%;
@@ -22,9 +18,29 @@
         margin: 0 auto;
         user-select: none;
       }
+      #header-container,
+      #footer-container {
+        width: 100%;
+        height: 50px;
+        display: flex;
+      }
+      #header-container {
+        align-items: center;
+        justify-content: center;
+      }
+      #footer-container {
+        justify-content: space-between;
+      }
+      #header {
+        border: 2px solid black;
+        border-radius: 20px;
+        padding: 10px 20px;
+      }
       #background-canvas {
+        border: 2px solid black;
+        border-radius: 5px;
         position: absolute;
-        top: 0;
+        top: 50px; /* accounts for #header-container */
         left: 0;
         width: 100%;
         z-index: -1;
@@ -34,10 +50,12 @@
       }
       #ui-container {
         position: absolute;
-        top: 0;
+        top: 50px; /* accounts for #header-container */
         left: 0;
         width: 100%;
-        height: 100%;
+        height: calc(
+          100% - 104px
+        ); /* 50px header + 50px footer + 4px border = 104px */
       }
       button {
         background-color: #403f3f; /* #4e4e82; */
@@ -47,7 +65,6 @@
         padding: 1%;
         border: none;
         width: 17%;
-        height: 8%;
       }
       button:focus {
         outline: white auto 5px;
@@ -80,18 +97,21 @@
           font-size: 60%;
         }
       }
-      #like-button {
+      #yes-button {
+        border: 2px solid black;
+        background-color: #56c568;
         right: 30%;
-        bottom: 3%;
+        bottom: 5%;
       }
-      #dislike-button {
+      #no-button {
+        border: 2px solid black;
+        background-color: #e83a4d;
         right: 50%;
-        bottom: 3%;
+        bottom: 5%;
       }
-      #next-button,
-      #start-over-button {
-        right: 3%;
-        bottom: 3%;
+      #train-text {
+        text-align: center;
+        font-size: 24px;
       }
       #predict-button {
         right: 40%;
@@ -104,12 +124,12 @@
     </style>
   </head>
   <body>
-    <div id="header"></div>
-    <div id="ml-activities"></div>
     <div id="container">
+      <div id="header-container"></div>
       <canvas id="background-canvas"></canvas>
       <canvas id="activity-canvas"></canvas>
-      <div id="ui-container" />
+      <div id="ui-container"></div>
+      <div id="footer-container"></div>
     </div>
     <script src="demo.js"></script>
   </body>

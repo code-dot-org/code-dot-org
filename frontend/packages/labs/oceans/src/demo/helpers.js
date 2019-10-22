@@ -1,9 +1,11 @@
+import {setState} from './state';
+import {init as initScene} from './init';
 import {Modes, ClassType} from './constants';
 import {FishBodyPart} from '../utils/fishData';
 
 export const backgroundPathForMode = mode => {
   let imgName;
-  if (mode === Modes.Words || mode === Modes.Training || mode === Modes.Pond) {
+  if (mode === Modes.Words || mode === Modes.Pond) {
     imgName = 'underwater';
   }
 
@@ -14,13 +16,20 @@ export const backgroundPath = imgName => {
   return `images/${imgName}-background.png`;
 };
 
+export const toMode = mode => {
+  setState({currentMode: mode});
+  initScene();
+};
+
 // Creates a button element, given an object that contains
 // id, text, and onClick properties.
-export const createButton = ({id, text, onClick, className}) => {
+export const createButton = ({id, text, onClick, className = 'ui-button'}) => {
   let btnEl = document.createElement('button');
   btnEl.innerHTML = text;
-  btnEl.setAttribute('id', id);
-  btnEl.setAttribute('class', className ? className : 'ui-button');
+  if (id) {
+    btnEl.setAttribute('id', id);
+  }
+  btnEl.setAttribute('class', className);
   btnEl.addEventListener('click', onClick);
 
   return btnEl;
