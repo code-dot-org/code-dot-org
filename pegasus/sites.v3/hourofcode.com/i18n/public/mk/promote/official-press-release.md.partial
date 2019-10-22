@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_press_release) %>
+title: Час на Кодот Соопштение за медиумите за избраните функционери
 layout: wide
 nav: promote_nav
 ---

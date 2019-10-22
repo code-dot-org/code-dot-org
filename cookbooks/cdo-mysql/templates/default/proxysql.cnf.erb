@@ -1,0 +1,145 @@
+# libconfig file format:
+# http://www.hyperrealm.com/libconfig/libconfig_manual.html#Configuration-Files
+
+# Variable definitions:
+# https://github.com/sysown/proxysql/wiki/Global-variables
+
+datadir="/var/lib/proxysql"
+errorlog="/var/lib/proxysql/proxysql.log"
+
+# https://github.com/sysown/proxysql/wiki/Global-variables#admin-variables
+admin_variables=
+{
+  admin_credentials="<%=@admin.user%>:<%=@admin.password%>"
+  mysql_ifaces="<%=@admin.host%>:<%=@admin.port%>"
+}
+
+# https://github.com/sysown/proxysql/wiki/Global-variables#mysql-variables
+mysql_variables=
+{
+  # The number of background threads that ProxySQL uses in order to process MySQL traffic.
+  # https://github.com/sysown/proxysql/wiki/Global-variables#mysql-threads
+  threads=<%=node[:cpu][:total]%>
+
+  # Semicolon-separated list of hostname:port entries for interfaces for incoming MySQL traffic.
+  # https://github.com/sysown/proxysql/wiki/Global-variables#mysql-interfaces
+  interfaces="127.0.0.1:<%= @port %>"
+
+  # The server version with which the proxy will respond to the clients.
+  # https://github.com/sysown/proxysql/wiki/Global-variables#mysql-server_version
+  server_version="5.7.12-proxysql"
+
+  # The user needs only USAGE privileges to connect, ping and check read_only.
+  # The user needs also REPLICATION CLIENT if it needs to monitor replication lag.
+  # https://github.com/sysown/proxysql/wiki/Global-variables#mysql-monitor_username
+  # https://github.com/sysown/proxysql/wiki/Global-variables#mysql-monitor_password
+  monitor_username="<%= @reader.user %>"
+  monitor_password="<%= @reader.password %>"
+
+  # When a node change its read_only value from 1 to 0, this variable determines
+  # if the node should be present in both hostgroups or not.
+  # https://github.com/sysown/proxysql/wiki/Global-variables#mysql-monitor_writer_is_also_reader
+  monitor_writer_is_also_reader=false
+}
+
+# https://github.com/sysown/proxysql/wiki/Main-(runtime)#mysql_servers
+mysql_servers =
+(
+<% [@writer, @reader].each_with_index do |server, hostgroup| -%>
+  {
+    address =        "<%= server.host %>"
+    port =            <%= server.port || 3306 %>
+    hostgroup =       <%= hostgroup %>
+    max_connections = <%= node[:cpu][:total] * 2 %>
+  },
+<% end -%>
+)
+
+<% if @is_aurora -%>
+# https://github.com/sysown/proxysql/wiki/Main-(runtime)#mysql_replication_hostgroups
+mysql_replication_hostgroups:
+(
+  {
+    writer_hostgroup=0
+    reader_hostgroup=1
+    check_type="innodb_read_only"
+  }
+)
+
+mysql_aws_aurora_hostgroups:
+(
+  {
+    writer_hostgroup=0
+    reader_hostgroup=1
+    new_reader_weight=1
+    domain_name="<%=@writer.host.sub(/[^.]*/, '')%>"
+  }
+)
+<% end -%>
+
+# https://github.com/sysown/proxysql/wiki/Main-(runtime)#mysql_users
+mysql_users:
+(
+<% if @writer.user != @reader.user -%>
+  {
+    username = "<%= @reader.user %>"
+    password = "<%= @reader.password %>"
+    # Send all reader-user queries to reader hostgroup (1) by default.
+    default_hostgroup = 1
+  },
+<% end -%>
+  {
+    username = "<%= @writer.user %>"
+    password = "<%= @writer.password %>"
+    default_hostgroup = 0
+  }
+)
+
+# https://github.com/sysown/proxysql/wiki/Main-(runtime)#mysql_query_rules
+mysql_query_rules:
+(
+  {
+    # Workaround for query-cache DEPRECATE_EOF bug:
+    # Rewrite all SELECT queries to include a unique comment.
+    # This will make proxysql queries distinct from any other clients' queries,
+    # so the query cache will store them separately.
+    rule_id=1
+    active=1
+    match_digest="^SELECT "
+    match_pattern="^(\S+) "
+    replace_pattern="SELECT /*proxysql*/ "
+  },
+  {
+    # SELECT .* FOR UPDATE is an exception to read-write splitting on SELECT,
+    # it needs to be sent to writer.
+    rule_id=2
+    active=1
+    match_pattern="^SELECT .* FOR UPDATE$"
+    destination_hostgroup=0
+    apply=1
+  },
+  {
+    # Global read-write split on SELECT, disabled by default (set active=1 to enable).
+    rule_id=3
+    active=0
+    match_pattern="^SELECT"
+    destination_hostgroup=1
+    apply=1
+  },
+  {
+    # ar_internal_metadata performs read-after-write from ActiveRecord DB-setup logic.
+    # Send all queries on this table to writer.
+    rule_id=4
+    active=1
+    match_pattern="FROM `ar_internal_metadata`"
+    destination_hostgroup=0
+    apply=1
+  },
+  {
+    # Handle SET command used by application.
+    rule_id=5
+    active=1
+    match_digest="SET @@wait_timeout"
+    multiplex=2
+  },
+)

@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_how_to_districts) %>
+title: Час на Кодот Како-Да за Области
 layout: wide
 nav: how_to_nav
 ---

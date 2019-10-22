@@ -48,13 +48,14 @@ level 'U5 Lists Make Project Step 6', progression: 'Build the Reminders App'
 stage 'Loops Explore', flex_category: 'csp_loops'
 level 'CSP U5L5 SFLP 20-21', progression: 'Lesson Overview'
 level 'csp_applab_loops_2018', progression: 'Introduction to Loops'
-level 'U3L07 Free Response Reflection_2018', progression: 'Check Your Understanding', assessment: true
+level 'U3L5 CSP CFU Looping', progression: 'Check For Understanding', assessment: true
 
 stage 'Loops Investigate', flex_category: 'csp_loops'
 level 'CSP U5L6 SFLP 20-21', progression: 'Lesson Overview'
 level 'U5 Loops Investigate Coin Flipper Predict', progression: 'Coin Flipper App'
 level 'U5 Loops Investigate Coin Flipper', progression: 'Coin Flipper App'
 level 'U5 Loops Investigate Font Tester', progression: 'Font Tester App'
+level 'U3L6 CSP CFU Element Looping', progression: 'Check For Understanding', assessment: true
 
 stage 'Loops Practice', flex_category: 'csp_loops'
 level 'CSP U5L7 SFLP 20-21', progression: 'Lesson Overview'
@@ -75,12 +76,16 @@ level 'U5 Loops Make Wallpaper App Step 3', progression: 'Build the Lock Screen 
 level 'U5 Loops Make Wallpaper App Step 4', progression: 'Build the Lock Screen Maker'
 level 'U5 Loops Make Wallpaper App Step 5', progression: 'Build the Lock Screen Maker'
 level 'U5 Loops Make Wallpaper App Step 6', progression: 'Build the Lock Screen Maker'
+level 'U5L7 CFU Loops Psuedocode', progression: 'Check For Understanding: AP Practice'
+level 'U5L7 CFU Loops Psuedocode 2', progression: 'Check For Understanding: AP Practice'
 
 stage 'Traversals Explore', flex_category: 'csp_traversals'
+level 'CSP U5L9 SFLP 20-21', progression: 'Lesson Overview'
 level 'Processing Lists with Loops_2018', progression: 'Introduction to Traversal'
 level 'U5 L09 Traversals Exit Ticket', progression: 'Check Your Understanding', assessment: true
 
 stage 'Traversals Investigate', flex_category: 'csp_traversals'
+level 'CSP U5L10 SFLP 20-21', progression: 'Lesson Overview'
 level 'U5 Traversals Investigate Mile Tracker', progression: 'App Investigation'
 level 'U5 Traversals Investigate Word Guess - clone', progression: 'App Investigation'
 level 'U5 Traversals Investigate Dog Finder - clone', progression: 'App Investigation'
@@ -92,6 +97,7 @@ level 'List Filter Pattern', progression: 'Traversal Patterns'
 level 'List Reduce Pattern', progression: 'Traversal Patterns'
 
 stage 'Traversals Practice', flex_category: 'csp_traversals'
+level 'CSP U5L11 SFLP 20-21', progression: 'Lesson Overview'
 level 'U5 Traversals Practice Part 1', progression: 'Traversal Practice'
 level 'U5 Traversals Practice Part 2', progression: 'Traversal Practice'
 level 'U5 Traversals Practice Part 3', progression: 'Traversal Practice'
@@ -102,6 +108,7 @@ level 'U5 Traversals Practice Part 7', progression: 'App Practice'
 level 'U5 Traversals Practice Part 8', progression: 'App Practice'
 
 stage 'Traversals Make', flex_category: 'csp_traversals'
+level 'CSP U5L12 SFLP 20-21', progression: 'Lesson Overview'
 level 'U5 Traversals Make Project Sample App', progression: 'The Wacky Name Generator App'
 level 'U5 Traversals Make Project Step 1', progression: 'Build the Wacky Name Generator App'
 level 'U5 Traversals Make Project Step 2', progression: 'Build the Wacky Name Generator App'
@@ -110,24 +117,33 @@ level 'U5 Traversals Make Project Step 4', progression: 'Build the Wacky Name Ge
 level 'U5 Traversals Make Project Step 5', progression: 'Build the Wacky Name Generator App'
 level 'U5 Traversals Make Project Step 6', progression: 'Build the Wacky Name Generator App', assessment: true
 
-stage 'Student Survey (Traversals)', lockable: true, flex_category: 'csp_traversals'
-level 'Student Late Spring Pilot Survey Traversals', progression: 'Student Survey (Traversals)', assessment: true
+stage 'Semester Hackathon Part 1', flex_category: 'csp_project'
+level 'CSP U5L13 SFLP 20-21', progression: 'Lesson Overview'
 
-stage 'Teacher Survey (Traversals)', lockable: true, flex_category: 'csp_traversals'
-level 'Teacher Late Spring Pilot Survey Traversals', progression: 'Teacher Survey (Traversals)', assessment: true
+stage 'Semester Hackathon Part 2', flex_category: 'csp_project'
+level 'CSP U5L14 SFLP 20-21', progression: 'Lesson Overview'
 
-stage 'Mini PT', flex_category: 'csp_project'
+stage 'Semester Hackathon Part 3', flex_category: 'csp_project'
+level 'CSP U5L15 SFLP 20-21', progression: 'Lesson Overview'
+
+stage 'Semester Hackathon Part 4', flex_category: 'csp_project'
+level 'CSP U5L16 SFLP 20-21', progression: 'Lesson Overview'
+
+stage 'Semester Hackathon Part 5', flex_category: 'csp_project'
+level 'CSP U5L17 SFLP 20-21', progression: 'Lesson Overview'
+
+stage 'Unit 5 Assessment'
+level 'CSP U5L18 SFLP 20-21', progression: 'Lesson Overview'
+
+stage 'Mini PT'
 level 'U5 Mini Practice PT', progression: 'Instructions'
 level 'CSP Pilot U5 Mini PT Project', progression: 'Mini PT', assessment: true
 
-stage 'Student Survey (Mini PT)', lockable: true, flex_category: 'csp_project'
-level 'Student Late Spring Pilot Survey Mini PT', progression: 'Student Survey (Mini PT)', assessment: true
-
-stage 'Unit 5 Mini Assessment', lockable: true, flex_category: 'csp_project'
-level 'CSP 20-21 Unit 5 Pilot Mini Assessment', assessment: true
-
 stage 'Parameters and Return Values Explore', flex_category: 'csp_parameters_return_values'
 level 'U7 L01 More with Functions', progression: 'More with Functions'
+
+stage 'Unit 5 Mini Assessment', lockable: true
+level 'CSP 20-21 Unit 5 Pilot Mini Assessment', assessment: true
 
 stage 'Parameters and Return Values Investigate', flex_category: 'csp_parameters_return_values'
 level 'U7 Param Return Investigate Thermostat Embed', progression: 'App Investigation'
@@ -160,9 +176,3 @@ level 'CSP Pilot U7 Libraries Make Pt 1', progression: 'One Function Library'
 level 'CSP Pilot U7 Libraries Make Pt 2', progression: 'One Function Library'
 level 'CSP Pilot U7 Libraries Make Pt 3', progression: 'Libraries Playground'
 level 'CSP Pilot U7 Libraries Make Pt 4', progression: 'Libraries Playground'
-
-stage 'Student Survey (Libraries)', lockable: true, flex_category: 'csp_libraries'
-level 'Student Late Spring Pilot Survey Libraries', progression: 'Student Survey (Libraries)', assessment: true
-
-stage 'Teacher Survey (Libraries)', lockable: true, flex_category: 'csp_libraries'
-level 'Teacher Late Spring Pilot Survey Libraries', progression: 'Teacher Survey (Libraries)', assessment: true
