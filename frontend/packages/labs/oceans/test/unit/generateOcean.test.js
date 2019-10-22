@@ -64,6 +64,7 @@ describe('Generate ocean test', () => {
     trainer.setTopK(5);
     await trainer.initializeClassifiersWithoutMobilenet();
     trainingOcean.forEach(fish => {
+      console.log(fish.parts[0].knnData[0]);
       const cat = fish.parts[0].knnData[0] > 0.5 ? 1 : 0;
       trainer.addExampleData(Array.from(fish.knnData), cat);
     });

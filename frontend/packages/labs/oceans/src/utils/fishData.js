@@ -1,9 +1,5 @@
 import {PropTypes} from 'react';
 
-const normalizeColorComponent = colorcomp => {
-  return colorcomp / 255;
-};
-
 // Describe the different body parts of the fish. The object
 // is ordered by its render dependency (i.e., dorsalFin should be rendered
 // before body).
@@ -30,7 +26,7 @@ const fishComponents = {
       pectoralFinFrontAnchor: [55, 72],
       dorsalFinAnchor: [23, -15],
       tailAnchor: [107, 41],
-      knnData: [1.46, 7001],
+      knnData: [1.46, 7117],
       type: FishBodyPart.BODY
     },
     eel: {
@@ -43,10 +39,9 @@ const fishComponents = {
       pectoralFinFrontAnchor: [50, 70],
       dorsalFinAnchor: [53, -25],
       tailAnchor: [107, 67],
-      knnData: [1.46, 4368],
+      knnData: [1.46, 4546],
       type: FishBodyPart.BODY
     },
-    /*
     // This image needs to be fixed to get rid of the whitespace
     eyeShape: {
       src: 'images/fish/body/Body_EyeShape.png',
@@ -56,9 +51,9 @@ const fishComponents = {
       pectoralFinAnchor: [40, 77],
       dorsalFinAnchor: [53, -25],
       tailAnchor: [107, 40],
-      knnData: [0.2],
+      knnData: [1.99, 6384],
       type: FishBodyPart.BODY
-    },*/
+    },
     round: {
       index: 2,
       src: 'images/fish/body/Body_Round.png',
@@ -69,7 +64,7 @@ const fishComponents = {
       pectoralFinFrontAnchor: [45, 82],
       dorsalFinAnchor: [20, -18],
       tailAnchor: [97, 50],
-      knnData: [1, 7867],
+      knnData: [1, 8004],
       type: FishBodyPart.BODY
     },
     roundedSquare: {
@@ -82,7 +77,7 @@ const fishComponents = {
       pectoralFinFrontAnchor: [50, 75],
       dorsalFinAnchor: [33, -19],
       tailAnchor: [92, 47],
-      knnData: [1.09, 7823],
+      knnData: [1.09, 7914],
       type: FishBodyPart.BODY
     },
     shark: {
@@ -95,7 +90,7 @@ const fishComponents = {
       pectoralFinFrontAnchor: [77, 68],
       dorsalFinAnchor: [33, -23],
       tailAnchor: [139, 19],
-      knnData: [1.98, 8935],
+      knnData: [1.98, 9064],
       type: FishBodyPart.BODY
     }
   },
@@ -356,53 +351,25 @@ const fishComponents = {
       bodyRgb: [126, 205, 202],
       finRgb: [248, 192, 157],
       mouthRgb: [221, 148, 193],
-      knnData: [
-        normalizeColorComponent(126),
-        normalizeColorComponent(205),
-        normalizeColorComponent(202),
-        normalizeColorComponent(248),
-        normalizeColorComponent(192),
-        normalizeColorComponent(157)
-      ]
+      knnData: [126, 205, 202]
     },
     palette2: {
       bodyRgb: [253, 192, 77],
       finRgb: [235, 120, 50],
       mouthRgb: [235, 120, 50],
-      knnData: [
-        normalizeColorComponent(253),
-        normalizeColorComponent(192),
-        normalizeColorComponent(77),
-        normalizeColorComponent(235),
-        normalizeColorComponent(120),
-        normalizeColorComponent(50)
-      ]
+      knnData: [253, 192, 77]
     },
     palette3: {
       bodyRgb: [39, 116, 186],
       finRgb: [253, 217, 136],
       mouthRgb: [253, 217, 136],
-      knnData: [
-        normalizeColorComponent(39),
-        normalizeColorComponent(116),
-        normalizeColorComponent(186),
-        normalizeColorComponent(253),
-        normalizeColorComponent(217),
-        normalizeColorComponent(136)
-      ]
+      knnData: [39, 116, 186]
     },
     palette4: {
       bodyRgb: [21, 52, 64],
       finRgb: [200, 220, 92],
       mouthRgb: [200, 220, 92],
-      knnData: [
-        normalizeColorComponent(21),
-        normalizeColorComponent(52),
-        normalizeColorComponent(64),
-        normalizeColorComponent(200),
-        normalizeColorComponent(220),
-        normalizeColorComponent(92)
-      ]
+      knnData: [21, 52, 64]
     }
   }
 };
