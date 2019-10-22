@@ -77,7 +77,6 @@ const onClickPredict = () => {
 };
 
 const showCode = show => {
-  console.log('show code', show);
   setState({showCode: show});
   if (show) {
     $('#hide-code').show();
