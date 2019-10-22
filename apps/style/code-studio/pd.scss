@@ -1,5 +1,4 @@
 @import "color";
-
 @import "bootstrap-sass/assets/stylesheets/bootstrap/mixins/buttons";
 @import "bootstrap-sass/assets/stylesheets/bootstrap/variables";
 @import "mixins";
@@ -33,17 +32,19 @@
   @include buttons();
   @include user-selects(auto);
 
-  // Markdown content for label of required answer, as used in various forms,
-  // should get red asterisk at the end of last <p>.
-  .markdown_required p:last-of-type::after {
-    content: ' *';
-    color: $red;
-  }
+  // Markdown rendered with SafeMarkdown in LabeledFormComponent is wrapped in
+  // a <div> and uses <p> tags for each paragraph, but the forms system
+  // expects this content to be entirely inline, and so we provide this styling.
+  .inline_markdown {
+    display: inline;
 
-  // Markdown content for label, as used various in forms, doesn't need margin
-  // below the last <p>.
-  .markdown_label p:last-of-type {
-    margin-bottom: 0px
+    div {
+      display: inline;
+    }
+
+    p {
+      display: inline;
+    }
   }
 
   a:not(.btn) {

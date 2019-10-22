@@ -12,7 +12,7 @@ module Pd
       teaching_background: 'Teaching Background',
       choose_your_program: 'Choose Your Program',
       professional_learning_program_requirements: 'Professional Learning Program Requirements',
-      additional_demographic_information: 'Additional Demographic Information and submission',
+      additional_demographic_information: 'Additional Demographic Information and Submission',
       school_stats_and_principal_approval_section: 'Principal Approval and School Information'
     }
 
@@ -109,6 +109,7 @@ module Pd
         },
       school_stats_and_principal_approval_section: {
         title_i_status: 'Title I status',
+        rural_status: 'Rural Status',
         school_type: 'School Type',
         total_student_enrollment: 'Total Student Enrollment',
         free_lunch_percent: 'Percent of students eligible to receive free/reduced lunch',
@@ -121,9 +122,7 @@ module Pd
         white_percent: 'Percentage of student enrollment by race: White',
         other_races_percent: 'Percentage of student enrollment by race: Other',
         principal_approval: "Do you approve of <Teacher Name> participating in Code.org's 2020-21 Professional Learning Program?",
-        principal_plan_to_teach: 'Is <Teacher Name> planning to teach this course in the 2020-21 school year?',
         principal_schedule_confirmed: 'Are you committed to including Computer Science <Program> on the master schedule in 2020-21 if <Teacher Name> is accepted into the program?',
-        principal_implementation: "To participate in Code.org's Computer Science <Program> Professional Learning Program, we require that this course be offered in one of the following ways. Please select which option will be implemented at your school.",
         principal_diversity_recruitment: 'Do you commit to recruiting and enrolling a diverse group of students in this course, representative of the overall demographics of your school?',
         contact_invoicing: "Contact name for invoicing",
         contact_invoicing_detail: "Contact email or phone number for invoicing",
@@ -177,7 +176,6 @@ module Pd
         school_name: PAGE_LABELS[:about_you][:school_name] + " (provided by principal)",
         district_name: PAGE_LABELS[:about_you][:school_district_name] + " (provided by principal)",
         do_you_approve: "Do you approve of this teacher participating in Code.org's 2020-21 Professional Learning Program?",
-        plan_to_teach: "Is this teacher planning to teach this course in the 2020-21 school year?",
         total_student_enrollment: "Total student enrollment",
         free_lunch_percent: "Percentage of students who are eligible to receive free or reduced lunch (Principal's response)",
         underrepresented_minority_percent: "Percentage of underrepresented minority students (Principal's response)",
@@ -196,11 +194,11 @@ module Pd
         csd_implementation: "How will you implement CS Discoveries at your school?",
         committed_to_diversity: "Do you commit to recruiting and enrolling a diverse group of students in this course, representative of the overall demographics of your school?",
         pay_fee: "If there is a fee for the program, will your teacher or your school be able to pay for the fee?",
-        how_heard: "How did you hear about this program? (Principal's response)",
         share_ap_scores: "Principal authorizes college board to send AP Scores",
       },
       nces: {
         title_i_status: "Title I status code (NCES data)",
+        rural_status: 'Rural Status',
         students_total: "Total student enrollment (NCES data)",
         frl_eligible_total: "Percentage of students who are eligible to receive free or reduced lunch (NCES data)",
         urm_percent: "Percentage of underrepresented minority students (NCES data)",
@@ -226,17 +224,15 @@ module Pd
       principal_last_name: {teacher: :principal_last_name, principal: :principal_response_last_name},
       principal_email: {teacher: :principal_email, principal: :principal_response_email},
 
-      plan_to_teach: {teacher: :plan_to_teach, principal: :principal_plan_to_teach},
       replace_existing: {teacher: :replace_existing, principal: :principal_wont_replace_existing_course},
 
       pay_fee: {teacher: :pay_fee, principal: :principal_pay_fee},
-
-      how_heard: {teacher: :how_heard, principal: :principal_how_heard},
 
       contact_invoicing: {principal: :principal_contact_invoicing},
       contact_invoicing_detail: {principal: :principal_contact_invoicing_detail},
 
       title_i_status: {stats: :title_i_status},
+      rural_status: {stats: :rural_status},
       school_type: {teacher: :school_type, stats: :school_type},
       total_student_enrollment: {principal: :principal_total_enrollment, stats: :students_total},
       free_lunch_percent: {principal: :principal_free_lunch_percent, stats: :frl_eligible_percent},
@@ -256,23 +252,19 @@ module Pd
 
     VALID_SCORES = {
       # Minimum requirements
-      regional_partner_name: YES_NO,
       csd_which_grades: YES_NO,
       csp_which_grades: YES_NO,
-      cs_total_course_hours: YES_NO,
-      plan_to_teach: YES_NO,
       committed: YES_NO,
+      plan_to_teach: YES_NO,
+      previous_yearlong_cdo_pd: YES_NO,
+      replace_existing: YES_NO,
       principal_approval: YES_NO,
       principal_schedule_confirmed: YES_NO,
-      principal_diversity_recruitment: YES_NO,
-      principal_implementation: {meets_minimum_criteria_scores: YES_NO, bonus_points_scores: [2, 0]},
       # Scholarship requirements
-      previous_yearlong_cdo_pd: YES_NO,
+      free_lunch_percent: YES_NO,
+      underrepresented_minority_percent: YES_NO,
       # Bonus Points
       csp_how_offer: [2, 0],
-      replace_existing: [5, 0],
-      free_lunch_percent: [5, 0],
-      underrepresented_minority_percent: [5, 0],
       race: [2, 0]
     }
 
@@ -280,53 +272,33 @@ module Pd
     SCOREABLE_QUESTIONS = {
       bonus_points: [
         :csp_how_offer,
-        :replace_existing,
         :free_lunch_percent,
         :underrepresented_minority_percent,
         :race,
-        :principal_implementation
       ],
       scholarship_questions: [
-        :plan_to_teach,
-        :previous_yearlong_cdo_pd,
-        :principal_approval,
-        :principal_schedule_confirmed,
-        :principal_diversity_recruitment
+        :underrepresented_minority_percent,
+        :free_lunch_percent,
       ],
       criteria_score_questions_csd: [
-        :regional_partner_name,
         :csd_which_grades,
-        :cs_total_course_hours,
-        :plan_to_teach,
         :committed,
-        :principal_implementation
+        :plan_to_teach,
+        :previous_yearlong_cdo_pd,
+        :replace_existing,
+        :principal_approval,
+        :principal_schedule_confirmed,
       ],
       criteria_score_questions_csp: [
-        :regional_partner_name,
         :csp_which_grades,
-        :cs_total_course_hours,
-        :plan_to_teach,
         :committed,
-        :principal_implementation
+        :plan_to_teach,
+        :previous_yearlong_cdo_pd,
+        :replace_existing,
+        :principal_approval,
+        :principal_schedule_confirmed,
       ]
     }
-
-    SCHOLARSHIP_QUESTIONS = [
-      :previous_yearlong_cdo_pd,
-      :principal_approval,
-      :principal_plan_to_teach,
-      :principal_schedule_confirmed,
-      :principal_diversity_recruitment
-    ]
-
-    CRITERIA_SCORE_QUESTIONS_CSP = (
-      VALID_SCORES.select {|_, v| v == YES_NO}.keys -
-        [:csd_which_grades] - SCHOLARSHIP_QUESTIONS
-    ).freeze
-    CRITERIA_SCORE_QUESTIONS_CSD = (
-      VALID_SCORES.select {|_, v| v == YES_NO}.keys -
-        [:csp_how_offer, :csp_which_grades] - SCHOLARSHIP_QUESTIONS
-    ).freeze
 
     CSV_COLUMNS = {
       teacher: [
@@ -400,7 +372,6 @@ module Pd
         :school_name,
         :district_name,
         :do_you_approve,
-        :plan_to_teach,
         :total_student_enrollment,
         :free_lunch_percent,
         :underrepresented_minority_percent,
@@ -419,13 +390,13 @@ module Pd
         :csd_implementation,
         :committed_to_diversity,
         :pay_fee,
-        :how_heard,
         :share_ap_scores,
         :contact_invoicing,
         :contact_invoicing_detail
       ],
       nces: [
         :title_i_status,
+        :rural_status,
         :students_total,
         :frl_eligible_total,
         :urm_percent,

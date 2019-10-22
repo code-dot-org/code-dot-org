@@ -25,4 +25,18 @@
         = t('auth.continue_with', provider: t("auth.#{provider}"))
 
 :javascript
+  $('.oauth-sign-in').click(function() {
+    // record oauth sign in with Optimizely for the old vs new signup page A/B test.
+    //
+    // TODO elijah: remove this logic once the A/B test has been completed
+    window['optimizely'] = window['optimizely'] || [];
+    window['optimizely'].push({
+      type: 'event',
+      eventName: 'oauthSignInClicked',
+      tags: {
+        className: $(this).attr('class')
+      }
+    });
+  });
+
   $('.oauth_sign_in').click(dashboard.clientState.reset);

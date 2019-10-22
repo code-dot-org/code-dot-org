@@ -1,22 +1,22 @@
 ---
-title: <%= hoc_s(:title_signup_thanks) %>
+title: Hour of Code होस्ट गर्नुकोलागी sign up गर्नु भएकोमा धन्यवाद!
 layout: wide
 nav: how_to_nav
-
 social:
-  "og:title": "<%= hoc_s(:meta_tag_og_title) %>"
-  "og:description": "<%= hoc_s(:meta_tag_og_description) %>"
-  "og:image": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
-  "og:image:width": 1440
-  "og:image:height": 900
-  "og:url": "http://<%=request.host%>"
-
-  "twitter:card": player
-  "twitter:site": "@codeorg"
-  "twitter:url": "http://<%=request.host%>"
-  "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>"
-  "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
-  "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
+  og:title: Hour of Code आउँदैछ
+  og:description: Hour of Code 180 देहरूको 30 भन्दा धेरै भाषाहरूमा विद्यार्थीहरूको
+    लाखौँ मानिसमा पहुँच भइरहेको एक विश्वव्यापी आन्दोलन हो।4 देखि 104 उमेर।
+  og:image: http://hourofcode.com/images/hourofcode-2015-video-thumbnail.png
+  og:image:width: 1440
+  og:image:height: 900
+  og:url: http://hourofcode.com
+  twitter:card: player
+  twitter:site: "@codeorg"
+  twitter:url: http://hourofcode.com
+  twitter:title: Hour of Code आउँदैछ
+  twitter:description: Hour of Code 180 देहरूको 30 भन्दा धेरै भाषाहरूमा विद्यार्थीहरूको
+    लाखौँ मानिसमा पहुँच भइरहेको एक विश्वव्यापी आन्दोलन हो।4 देखि 104 उमेर।
+  twitter:image:src: http://hourofcode.com/images/hourofcode-2015-video-thumbnail.png
 ---
 
 # Hour of Code होस्ट गर्नुकोलागी sign up गर्नु भएकोमा धन्यवाद!
