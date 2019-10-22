@@ -475,6 +475,48 @@ describe('project.js', () => {
     });
   });
 
+  describe('setProjectLibraries()', () => {
+    beforeEach(() => {
+      sinon
+        .stub(project, 'saveSourceAndHtml_')
+        .callsFake((source, callback) => {
+          callback();
+        });
+    });
+
+    afterEach(() => {
+      project.saveSourceAndHtml_.restore();
+    });
+
+    it('performs a save with the new library list', () => {
+      let library = ['test'];
+      sourceHandler.getLibrariesList.returns(undefined);
+      project.init(sourceHandler);
+      return project.setProjectLibraries(library).then(() => {
+        expect(project.saveSourceAndHtml_).to.have.been.called;
+        expect(
+          project.saveSourceAndHtml_.getCall(0).args[0].libraries
+        ).to.equal(library);
+      });
+    });
+
+    it('performs a save with no libraries if an empty array is passed', () => {
+      let library = ['test'];
+      let result = [];
+      project.init(sourceHandler);
+      return project.setProjectLibraries(library).then(() => {
+        expect(
+          project.saveSourceAndHtml_.getCall(0).args[0].libraries
+        ).to.equal(library);
+        return project.setProjectLibraries(result).then(() => {
+          expect(
+            project.saveSourceAndHtml_.getCall(1).args[0].libraries
+          ).to.equal(result);
+        });
+      });
+    });
+  });
+
   describe('toggleMakerEnabled()', () => {
     beforeEach(() => {
       sinon
@@ -777,6 +819,8 @@ function createStubSourceHandler() {
     getMakerAPIsEnabled: sinon.stub(),
     setSelectedSong: sinon.stub(),
     getSelectedSong: sinon.stub(),
-    prepareForRemix: sinon.stub().returns(Promise.resolve())
+    prepareForRemix: sinon.stub().returns(Promise.resolve()),
+    setInitialLibrariesList: sinon.stub(),
+    getLibrariesList: sinon.stub()
   };
 }

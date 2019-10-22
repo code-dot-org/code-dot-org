@@ -980,6 +980,20 @@ no-NO:
           tallene i hver løkke.
         courseA_collector_loops_challenge1_b: Du trenger ikke å bruke løkke hvis du
           bare skal gjøre noe én gang.
+      courseA_maze_seq1:
+        courseA_maze_seq1_a: Om du har problemer med å få fuglen til å bevege seg,
+          sjekk at blokkene er koblet sammen med "når den kjører" blokken[0]
+      courseA_maze_seq1_2018:
+        courseA_maze_seq1_a: Om du har problemer med å få fuglen til å bevege seg,
+          sjekk at blokkene er koblet sammen med "når den kjører" blokken[0]
+      courseA_maze_seq1_2019:
+        courseA_maze_seq1_a: Om du har problemer med å få fuglen til å bevege seg,
+          sjekk at blokkene er koblet sammen med "når den kjører" blokken[0]
+      courseA_maze_seq2:
+        courseA_maze_seq2_a: Dette programmet mangler en blokk. Klarer du å finne
+          ut hvilken?
+        courseA_maze_seq2_b: Prøv å kjøre koden først for å se hvor fuglen ender opp.
+          Hvor skal du videre?
       courseA_maze_seq_challenge1:
         courseA_maze_seq_challenge1_a: Det er to løsninger til dette puslespillet.
       courseA_maze_seq_challenge1_2018:
@@ -1514,10 +1528,6 @@ no-NO:
         courseF_artist_fwp_challenge1_e: Både fargen på hver åttekant og vidden på
           pennen kontrolleres av variabelen `teller`.
       courseF_artist_variables4:
-        courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
-      courseF_artist_variables4_2018:
-        courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
-      courseF_artist_variables4_2019:
         courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseF_artist_variables_challenge2:
         courseF_artist_variables_challenge2_a: Variabler er hjelpsomme fordi du kan

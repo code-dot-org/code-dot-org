@@ -129,3 +129,18 @@ If you've made a change that caused an eyes failiure, log into Applitools and ch
 
 * [Testing Production Locally](docs/testing-production-locally.md)
 * [Testing IE9](docs/testing-ie9.md)
+
+# Troubleshooting
+## Linux
+### SyntheticEvent.augmentClass is not a function
+```
+PhantomJS 2.1.1 (Linux 0.0.0) ERROR
+  TypeError: SyntheticEvent.augmentClass is not a function. (In 'SyntheticEvent.augmentClass(SyntheticCompositionEvent, CompositionEventInterface)', 'SyntheticEvent.augmentClass' is undefined)
+  at webpack:///node_modules/react-dom/lib/SyntheticCompositionEvent.js:33:0 <- test/integration-tests.js:322086
+
+```
+There is an issue with PhantomJS and React when running on Linux. The current workaround is to prefix any of your test commands with `BROWSER=Chrome`. For example:
+```
+BROWSER=Chrome bundle exec rake test:all
+```
+This will tell Karma, the testing framework this project uses, to use the Google Chrome browser instead of PhantomJS. *Note* you need to install Google Chrome for this to work. If you would prefer to use Chromium, you can use the prefix `BROWSER=Chrome CHROME_BIN=$(which chromium-browser)` instead.

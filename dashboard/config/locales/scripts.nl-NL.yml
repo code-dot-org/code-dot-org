@@ -2161,3 +2161,8 @@ nl:
               name: Introductie
             Nested Loops:
               name: Genestelde lussen
+        dance-2019:
+          stages:
+            Dance Party:
+              name: Dansfeest
+          description: Programmeer je eigen dansfeest om te delen met je vrienden!

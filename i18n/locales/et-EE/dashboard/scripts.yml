@@ -1865,3 +1865,7 @@ et:
               name: Sissejuhatus
             Nested Loops:
               name: Korduvad tsüklid
+        dance-2019:
+          stages:
+            Dance Party:
+              name: Tantsuõhtu
