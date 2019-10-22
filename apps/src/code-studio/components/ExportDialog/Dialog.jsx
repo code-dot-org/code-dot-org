@@ -761,7 +761,7 @@ export default connect(
     expoCancelApkBuild: state.pageConstants.expoCancelApkBuild,
     isOpen: state.exportDialog.isOpen,
     exportGeneratedProperties: state.exportDialog.exportGeneratedProperties,
-    signInState: state.progress.signInState
+    signInState: state.currentUser.signInState
   }),
   dispatch => ({
     onClose: () => dispatch(hideExportDialog())
