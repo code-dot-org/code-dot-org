@@ -10,9 +10,9 @@ Data informs district and school recruitment by supporting your case and alignin
 
 ## Quick Links
 - [Access Your Data Dashboard](#tableau)
-- [2018 Summer Data Clean-up](#summer)
 - [Data Dashboard How-To Guide](#guide)
 - [Access Report](#access)
+- [2019 Fall Data Clean Up](#cleanupinstructions)
 
 
 <a name="tableau"></a>
@@ -44,7 +44,7 @@ Visit <a href="http://online.tableau.com/" target=_blank>http://online.tableau.c
 
 
 
-<a name="summer"></a>
+<a name="access"></a>
 ## K-12 Computer Science Access Report
 
 This is a report of which schools offer any computer science course in the US (including DOE data and survey data). See the Access Report section of the [2019 State of Computer Science Report](https://advocacy.code.org/2019_state_of_cs.pdf). All the data is made public on our site at <http://code.org/yourschool> and as regional partners, you have access to even [more data via Tableau](https://us-east-1.online.tableau.com/#/site/codeorg/workbooks/124362/views)!
@@ -80,6 +80,7 @@ The data we gather can be an incredible resource to you, but only if it is robus
 </p>
 </details>
 
+<a name="cleanupinstructions"></a>
 ## 2019 Fall Data Clean-up
 Teacher data from your 2019-20 CS Principles and CS Discoveries summer workshops are now available in Tableau. Use the steps outlined below to review your teacher roster and follow up with non-implementing teachers to see if they may be, or planning, to implement.
 

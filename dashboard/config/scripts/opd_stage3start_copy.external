@@ -1,0 +1,11 @@
+name 'OPD-Stage3Start_copy'
+skip_dialog true
+markdown <<MARKDOWN
+# Looking Ahead > Stage Overview
+
+<img src="https://images.code.org/0b8c948f309ae1df3d9920520e4a168c-image-1435004357188.JPG" width="450px" style="border-radius:10px;">
+
+By completing this brief stage, you will:
+
+- Prepare to "master the basics" of computer science by reviewing what's next in the course
+MARKDOWN

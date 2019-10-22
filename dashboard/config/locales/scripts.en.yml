@@ -1999,6 +1999,7 @@ en:
               name: Updating Records
             Visualizing Data:
               name: Visualizing Data
+          description_audience: ''
         CSPPD3-Unit5:
           title: 'Computer Science Principles: Unit 5 PD'
           description: Online Support for CSP Unit 5
@@ -12641,6 +12642,18 @@ en:
               name: Loops Practice
             Loops Make:
               name: Loops Make
+            Semester Hackathon Part 1:
+              name: Semester Hackathon Part 1
+            Semester Hackathon Part 2:
+              name: Semester Hackathon Part 2
+            Semester Hackathon Part 3:
+              name: Semester Hackathon Part 3
+            Semester Hackathon Part 4:
+              name: Semester Hackathon Part 4
+            Semester Hackathon Part 5:
+              name: Semester Hackathon Part 5
+            Unit 5 Assessment:
+              name: Unit 5 Assessment
           title: CSP Unit 5 Pilot - Lists, Loops, and Traversals
           description_audience: ''
           description_short: ''
@@ -13384,3 +13397,57 @@ en:
           description_audience: ''
           description_short: ''
           description: Code your own dance party to share with your friends!
+        K5-OnlinePD-copy:
+          title: Teaching Computer Science Fundamentals
+          description: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course.
+          description_short: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course.
+          description_audience: ''
+          stages:
+            Getting Started:
+              name: Getting Started
+              description_student: ''
+              description_teacher: ''
+            Computer Science Fundamentals:
+              name: Computer Science Fundamentals
+              description_student: ''
+              description_teacher: ''
+            Looking Ahead:
+              name: Looking Ahead
+              description_student: ''
+              description_teacher: ''
+            'Mastering the Basics: Sequencing':
+              name: 'Mastering the Basics: Sequencing'
+              description_student: ''
+              description_teacher: ''
+            'Mastering the Basics: Loops':
+              name: 'Mastering the Basics: Loops'
+              description_student: ''
+              description_teacher: ''
+            'Mastering the Basics: Conditionals':
+              name: 'Mastering the Basics: Conditionals'
+              description_student: ''
+              description_teacher: ''
+            'Mastering the Basics: Functions':
+              name: 'Mastering the Basics: Functions'
+              description_student: ''
+              description_teacher: ''
+            'Mastering the Basics: Events':
+              name: 'Mastering the Basics: Events'
+              description_student: ''
+              description_teacher: ''
+            Best Practices for Teaching Computer Science:
+              name: Best Practices for Teaching Computer Science
+              description_student: ''
+              description_teacher: ''
+            Planning:
+              name: Planning
+              description_student: ''
+              description_teacher: ''
+            Next Steps:
+              name: Next Steps
+              description_student: ''
+              description_teacher: ''
+            Understanding the Computer Science Fundamentals Courses:
+              name: Understanding the Computer Science Fundamentals Courses
+            extra:
+              name: extra

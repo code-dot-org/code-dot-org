@@ -10,6 +10,7 @@ import Radium from 'radium';
 import React from 'react';
 import applabMsg from '@cdo/applab/locale';
 import * as dataStyles from './dataStyles';
+import experiments from '../../util/experiments';
 
 const styles = {
   buttonWrapper: {
@@ -64,7 +65,9 @@ class TableControls extends React.Component {
           <span style={styles.tableName}>{this.props.tableName}</span>
         </div>{' '}
         <div style={styles.buttonWrapper}>
-          <DataVisualizer />
+          {experiments.isEnabled(experiments.APPLAB_DATASETS) && (
+            <DataVisualizer />
+          )}
 
           <ConfirmDeleteButton
             body={applabMsg.confirmClearTable()}

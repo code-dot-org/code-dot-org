@@ -263,33 +263,49 @@ FirebaseStorage.readRecords = function(
 ) {
   tableName = fixTableName(tableName, onError);
 
-  const countersRef = getProjectCountersRef(tableName);
-  // First, check if table exists using counters/tables/ as source of truth
-  countersRef.once('value', countersSnapshot => {
-    if (!countersSnapshot.val()) {
-      // Table doesn't exist. Return null instead of [] so we can show an error
+  let channelRef;
+  // First check both current tables and project tables
+  Promise.all([
+    getProjectDatabase()
+      .child(`current_tables/${tableName}`)
+      .once('value', snapshot => {
+        if (snapshot.val()) {
+          // This is a current table, so read the records from
+          // the shared channel
+          channelRef = getSharedDatabase();
+        }
+      }),
+    getProjectCountersRef(tableName).once('value', snapshot => {
+      if (snapshot.val()) {
+        // This is a project table, so read the records from
+        // this project's channel
+        channelRef = getProjectDatabase();
+      }
+    })
+  ]).then(() => {
+    if (channelRef) {
+      // We found this table in either current or project, so read the
+      // records and return them
+      channelRef.child(`storage/tables/${tableName}/records`).once(
+        'value',
+        recordsSnapshot => {
+          let recordMap = recordsSnapshot.val() || {};
+          let records = [];
+          // Collect all of the records matching the searchParams.
+          Object.keys(recordMap).forEach(id => {
+            let record = JSON.parse(recordMap[id]);
+            if (matchesSearch(record, searchParams)) {
+              records.push(record);
+            }
+          });
+          onSuccess(records);
+        },
+        onError
+      );
+    } else {
+      // We didn't find this table, so return null so that we can show an error message
       onSuccess(null);
-      return;
     }
-    let recordsRef = getRecordsRef(tableName);
-
-    // Get all records in the table and filter them on the client.
-    recordsRef.once(
-      'value',
-      recordsSnapshot => {
-        let recordMap = recordsSnapshot.val() || {};
-        let records = [];
-        // Collect all of the records matching the searchParams.
-        Object.keys(recordMap).forEach(id => {
-          let record = JSON.parse(recordMap[id]);
-          if (matchesSearch(record, searchParams)) {
-            records.push(record);
-          }
-        });
-        onSuccess(records);
-      },
-      onError
-    );
   });
 };
 
