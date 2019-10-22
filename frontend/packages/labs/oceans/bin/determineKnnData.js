@@ -20,6 +20,6 @@ body_image_files.forEach(fileName => {
         numPixels++;
       }
     }
-    console.log(image.src, image.width, image.height, numPixels);
+    console.log(image.src, 1.0 * image.width / image.height, numPixels);
   });
 });

@@ -29,7 +29,7 @@ const fishComponents = {
       pectoralFinFrontAnchor: [55, 72],
       dorsalFinAnchor: [23, -15],
       tailAnchor: [107, 41],
-      knnData: [0.6],
+      knnData: [1.46, 7001],
       type: FishBodyPart.BODY
     },
     eel: {
@@ -41,7 +41,7 @@ const fishComponents = {
       pectoralFinFrontAnchor: [50, 70],
       dorsalFinAnchor: [53, -25],
       tailAnchor: [107, 67],
-      knnData: [0],
+      knnData: [1.46, 4368],
       type: FishBodyPart.BODY
     },
     /*
@@ -66,7 +66,7 @@ const fishComponents = {
       pectoralFinFrontAnchor: [45, 82],
       dorsalFinAnchor: [20, -18],
       tailAnchor: [97, 50],
-      knnData: [1.0],
+      knnData: [1, 7867],
       type: FishBodyPart.BODY
     },
     roundedSquare: {
@@ -78,7 +78,7 @@ const fishComponents = {
       pectoralFinFrontAnchor: [50, 75],
       dorsalFinAnchor: [33, -19],
       tailAnchor: [92, 47],
-      knnData: [0.8],
+      knnData: [1.09, 7823],
       type: FishBodyPart.BODY
     },
     shark: {
@@ -90,7 +90,7 @@ const fishComponents = {
       pectoralFinFrontAnchor: [77, 68],
       dorsalFinAnchor: [33, -23],
       tailAnchor: [139, 19],
-      knnData: [0.4],
+      knnData: [1.98, 8935],
       type: FishBodyPart.BODY
     }
   },
