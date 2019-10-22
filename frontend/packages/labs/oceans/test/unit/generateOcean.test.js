@@ -83,12 +83,13 @@ describe('Generate ocean test', () => {
 
   test('Can predict fish with long tails', async () => {
     const numPredictionFish = 2000;
-    const trainingOcean = trainingFishJson;
+    // This test needs a bit more data to pass for right now
+    const trainingOcean = generateOcean(35);
     const trainer = new SimpleTrainer();
     trainer.setTopK(5);
     await trainer.initializeClassifiersWithoutMobilenet();
     trainingOcean.forEach(fish => {
-      const cat = fish.parts[5].knnData[0] > 0.5 ? 1 : 0;
+      const cat = fish.parts[5].knnData[0] >= 0.5 ? 1 : 0;
       trainer.addExampleData(Array.from(fish.knnData), cat);
     });
     const predictedOcean = await filterOcean(generateOcean(numPredictionFish), trainer);
@@ -97,7 +98,7 @@ describe('Generate ocean test', () => {
     });
     var numLongTailedFish = 0;
     likedFish.forEach(fish => {
-      if (fish.parts[5].knnData[0] > 0.5) {
+      if (fish.parts[5].knnData[0] >= 0.5) {
         numLongTailedFish ++;
       }
     });
