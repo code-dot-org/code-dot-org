@@ -221,10 +221,8 @@ const drawSingleFish = (fish, fishXPos, fishYPos, ctx) => {
       constants.fishCanvasWidth / 2,
       constants.fishCanvasHeight / 2
     );
-    ctx.drawImage(fishCanvas, fishXPos, fishYPos);
-  } else {
-    ctx.drawImage(fishCanvas, fishXPos, fishYPos);
   }
+  ctx.drawImage(fishCanvas, fishXPos, fishYPos);
 };
 
 // Renders a fish into a canvas from its constituent parts.
