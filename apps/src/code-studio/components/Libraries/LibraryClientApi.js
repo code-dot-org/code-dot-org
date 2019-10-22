@@ -7,30 +7,29 @@ export default class LibraryClientApi {
     this.libraryApi = clientApi.create('/v3/libraries');
   }
 
-  publish(library) {
+  publish(library, onError, onSuccess) {
     this.libraryApi.put(
       this.channelId,
       JSON.stringify(library),
       LIBRARY_NAME,
       (error, data) => {
         if (error) {
-          // In the future, errors will be surfaced to the user in the publish dialog
-          console.warn('Error publishing library: ' + error);
+          onError(error);
+        } else {
+          onSuccess(data);
         }
       }
     );
   }
 
-  getLatest() {
+  getLatest(onSuccess, onError) {
     this.libraryApi.fetch(
       this.channelId + '/' + LIBRARY_NAME,
       (error, data) => {
         if (data) {
-          // in the future, responses will be passed back to the import dialog
-          console.log('Library: ' + data);
+          onSuccess(data);
         } else {
-          // In the future, errors will be surfaced to the user in the import dialog
-          console.warn('Error getting library: ' + error);
+          onError(error);
         }
       }
     );

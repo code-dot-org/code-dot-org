@@ -1,5 +1,8 @@
 import Radium from 'radium';
 import React from 'react';
+import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
+import {showWarning} from '../redux/data';
 import LibraryCategory from './LibraryCategory';
 import SearchBar from '@cdo/apps/templates/SearchBar';
 import {categories} from './datasetManifest.json';
@@ -26,18 +29,32 @@ const styles = {
 };
 
 class DataLibraryPane extends React.Component {
+  static propTypes = {
+    // from redux dispatch
+    onShowWarning: PropTypes.func.isRequired
+  };
+
+  onError = error => {
+    if (
+      typeof error === 'string' &&
+      error.includes('There is already a table with name')
+    ) {
+      this.props.onShowWarning(error);
+    }
+  };
+
   importTable = datasetInfo => {
     if (datasetInfo.current) {
       FirebaseStorage.addCurrentTableToProject(
         datasetInfo.name,
         () => console.log('success'),
-        err => console.log(err)
+        this.onError
       );
     } else {
       FirebaseStorage.copyStaticTable(
         datasetInfo.name,
         () => console.log('success'),
-        err => console.log(err)
+        this.onError
       );
     }
   };
@@ -66,4 +83,11 @@ class DataLibraryPane extends React.Component {
   }
 }
 
-export default Radium(DataLibraryPane);
+export default connect(
+  state => ({}),
+  dispatch => ({
+    onShowWarning(warningMsg, warningTitle) {
+      dispatch(showWarning(warningMsg, warningTitle));
+    }
+  })
+)(Radium(DataLibraryPane));

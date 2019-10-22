@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom';
 import sinon from 'sinon';
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/deprecatedChai';
 import GameLab from '@cdo/apps/p5lab/gamelab/GameLab';
 import Sounds from '@cdo/apps/Sounds';
 import {
@@ -56,7 +56,8 @@ describe('GameLab', () => {
         setPageConstants: sinon.spy(),
         init: sinon.spy(),
         isUsingBlockly: () => false,
-        loadLibraries: () => Promise.resolve()
+        loadLibraries: () => Promise.resolve(),
+        loadLibraryBlocks: sinon.spy()
       };
     });
 

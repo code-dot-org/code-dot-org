@@ -1,14 +1,19 @@
 ---
 driver:
-  name: docker
-  use_sudo: false
+  name: dokken
+  chef_version: 15.2.20
+  privileged: true
+verifier:
+  name: inspec
 transport:
-  name: sftp
+  name: dokken
 provisioner:
-  name: chef_zero
-  require_chef_omnibus: 12.7.2
+  name: dokken
 platforms:
-  - name: ubuntu-14.04
+  - name: ubuntu-18.04
+    driver:
+      image: dokken/ubuntu-18.04
+      pid_one_command: /bin/systemd
     run_list:
       - recipe[apt]
 suites:
@@ -19,3 +24,11 @@ suites:
     run_list:
       - recipe[cdo-mysql::server]
       - recipe[test-mysql::stop]
+  - name: readwrite
+    run_list:
+      - recipe[test-mysql::readwrite]
+      - recipe[cdo-mysql::proxy]
+    attributes:
+      cdo-secrets:
+        db_writer: mysql://root:test-password@127.0.0.1:3300
+        db_reader: mysql://root:test-password@127.0.0.1:3301

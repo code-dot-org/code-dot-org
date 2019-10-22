@@ -77,47 +77,47 @@
         "name": "COSTUME",
         "options": [
           [
-            "Aliens",
+            "aliens",
             "\"ALIEN\""
           ],
           [
-            "Bears",
+            "bears",
             "\"BEAR\""
           ],
           [
-            "Cats",
+            "cats",
             "\"CAT\""
           ],
           [
-            "Dogs",
+            "dogs",
             "\"DOG\""
           ],
           [
-            "Ducks",
+            "ducks",
             "\"DUCK\""
           ],
           [
-            "Frogs",
+            "frogs",
             "\"FROG\""
           ],
           [
-            "Moose",
+            "moose",
             "\"MOOSE\""
           ],
           [
-            "Pineapples",
+            "pineapples",
             "\"PINEAPPLE\""
           ],
           [
-            "Robots",
+            "robots",
             "\"ROBOT\""
           ],
           [
-            "Sharks",
+            "sharks",
             "\"SHARK\""
           ],
           [
-            "Unicorns",
+            "unicorns",
             "\"UNICORN\""
           ]
         ]

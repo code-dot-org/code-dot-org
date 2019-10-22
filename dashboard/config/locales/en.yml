@@ -28,6 +28,11 @@ en:
       pair_programmer: 'You are currently pair programming with a student who does not have access to this content. To access this content, stop pair programming and try again.'
   activerecord:
     errors:
+      models:
+        user:
+          attributes:
+            reset_password_token:
+              invalid: "is invalid. Note that each link can only be used once to reset your password, and only the most recently sent link will work."
       messages:
         blank: "is required"
         blank_plural: "are required"
@@ -51,6 +56,7 @@ en:
         finish_sign_up_header: 'Finish creating your account'
         finish_sign_up_subheader: 'Fill out the following information to finish creating a Code.org account for <strong>%{email}</strong>.'
         finish_sign_up_subheader_provider: 'Fill out the following information to finish creating a Code.org account with <strong>%{provider}</strong> for <strong>%{email}</strong>.'
+        reset_password_token: "The reset password link you have followed"
         error:
           future: can't be in the future
 
@@ -955,6 +961,10 @@ en:
     time4cs_c3: 'Living in the Everglades'
     time4cs_c4: 'Invasive Impacts on the Everglades'
     time4cs_c5: 'Citizens Affect Change in the Everglades'
+    k5_getting_started: 'Getting Started'
+    k5_csf_intro: 'Get to know the CS Fundamentals Courses'
+    k5_coding_concepts: 'Coding Concepts'
+    k5_next_steps: 'Next Steps'
   external_links:
     disclaimer: Disclaimer
     leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.
