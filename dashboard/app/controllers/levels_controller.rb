@@ -431,7 +431,7 @@ class LevelsController < ApplicationController
     )
     level_source_image = find_or_create_level_source_image(
       params[:image],
-      level_source.try(:id),
+      level_source,
       true
     )
     @level.properties['solution_image_url'] = level_source_image.s3_url if level_source_image
