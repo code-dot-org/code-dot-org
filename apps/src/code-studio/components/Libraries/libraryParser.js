@@ -82,14 +82,21 @@ function createLibraryClosure(code, functions, libraryName) {
  * @param {string} code The code that makes up the library
  * @param {array} selectedFunctions The list of functions that will be exported from the library
  * @param {string} libraryName The name of the library to be exported
+ * @param {string} libraryDescription The description of the library to be exported
  * @returns {null,string} null if there is an error. Else, a JSON string representing the library
  */
-export function createLibraryJson(code, selectedFunctions, libraryName) {
+export function createLibraryJson(
+  code,
+  selectedFunctions,
+  libraryName,
+  libraryDescription
+) {
   if (
     typeof code !== 'string' ||
     !Array.isArray(selectedFunctions) ||
     typeof libraryName !== 'string' ||
-    !libraryName
+    !libraryName ||
+    typeof libraryDescription !== 'string'
   ) {
     return;
   }
@@ -102,6 +109,7 @@ export function createLibraryJson(code, selectedFunctions, libraryName) {
 
   return JSON.stringify({
     name: libraryName,
+    description: libraryDescription,
     dropletConfig: config,
     source: closure
   });
