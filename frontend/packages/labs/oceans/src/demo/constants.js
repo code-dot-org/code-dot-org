@@ -8,9 +8,10 @@ const constants = {
 export default constants;
 
 export const Modes = Object.freeze({
-  Training: 0,
-  Predicting: 1,
-  Pond: 2
+  Loading: 0,
+  Training: 2,
+  Predicting: 3,
+  Pond: 4
 });
 
 export const ClassType = Object.freeze({
