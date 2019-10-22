@@ -105,7 +105,7 @@ function init_query_templates()
       query = [[
         UPDATE dashboard_production.users
         SET `users`.`total_lines` = 1206
-        WHERE `users`.`deleted_at` is null AND `users`.`id` = 53596566
+        WHERE `users`.`deleted_at` is null AND `users`.`id` = $userId
       ]]
     },
     {
