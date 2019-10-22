@@ -838,7 +838,8 @@ export default class Craft {
         }
 
         const isSignedIn =
-          getStore().getState().progress.signInState === SignInState.SignedIn;
+          getStore().getState().currentUser.signInState ===
+          SignInState.SignedIn;
         studioApp().displayFeedback({
           feedbackType: testResultType,
           response,

@@ -664,7 +664,7 @@ Dance.prototype.onHandleEvents = function(currentFrameEvents) {
  */
 Dance.prototype.displayFeedback_ = function() {
   const isSignedIn =
-    getStore().getState().progress.signInState === SignInState.SignedIn;
+    getStore().getState().currentUser.signInState === SignInState.SignedIn;
 
   const artistTwitterHandle =
     SongTitlesToArtistTwitterHandle[this.level.selectedSong];

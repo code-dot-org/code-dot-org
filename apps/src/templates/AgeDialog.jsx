@@ -144,5 +144,5 @@ class AgeDialog extends Component {
 export const UnconnectedAgeDialog = AgeDialog;
 
 export default connect(state => ({
-  signedIn: state.progress.signInState === SignInState.SignedIn
+  signedIn: state.currentUser.signInState === SignInState.SignedIn
 }))(AgeDialog);
