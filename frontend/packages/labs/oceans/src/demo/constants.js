@@ -9,6 +9,7 @@ export default constants;
 
 export const Modes = Object.freeze({
   Loading: 0,
+  Words: 1,
   Training: 2,
   Predicting: 3,
   Pond: 4

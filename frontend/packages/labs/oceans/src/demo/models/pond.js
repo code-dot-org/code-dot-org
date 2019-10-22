@@ -56,7 +56,7 @@ const arrangeFish = fishes => {
 };
 
 const onClickStartOver = () => {
-  const state = setState({currentMode: Modes.Training});
+  const state = setState({currentMode: Modes.Words});
   state.trainer.clearAll();
   initScene();
 };

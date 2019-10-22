@@ -2,6 +2,7 @@ import 'babel-polyfill';
 import _ from 'lodash';
 import {getState} from './state';
 import constants, {Modes} from './constants';
+import CanvasCache from './canvasCache';
 import {
   backgroundPathForMode,
   bodyAnchorFromType,
@@ -26,6 +27,8 @@ export const initRenderer = () => {
   return loadAllFishPartImages();
 };
 
+const canvasCache = new CanvasCache();
+
 // Render a single frame of the scene.
 // Sometimes performs special rendering actions, such as when mode has changed.
 export const render = () => {
@@ -42,6 +45,9 @@ export const render = () => {
 
   switch (state.currentMode) {
     case Modes.Loading:
+      clearCanvas(state.canvas);
+      break;
+    case Modes.Words:
       clearCanvas(state.canvas);
       break;
     case Modes.Training:
@@ -205,20 +211,20 @@ const drawPondFishImages = () => {
 // Draw a single fish, preferably from cached canvas.
 // Used by drawTrainingFish, drawUpcomingFish, drawPredictingFish.
 const drawSingleFish = (fish, fishXPos, fishYPos, ctx) => {
-  if (!fish.canvas) {
-    fish.canvas = document.createElement('canvas');
-    fish.canvas.width = constants.fishCanvasWidth;
-    fish.canvas.height = constants.fishCanvasHeight;
-    const fishCtx = fish.canvas.getContext('2d');
+  const [fishCanvas, hit] = canvasCache.getCanvas(fish.id);
+  if (!hit) {
+    fishCanvas.width = constants.fishCanvasWidth;
+    fishCanvas.height = constants.fishCanvasHeight;
+    const fishCtx = fishCanvas.getContext('2d');
     renderFishFromParts(
       fish,
       fishCtx,
       constants.fishCanvasWidth / 2,
       constants.fishCanvasHeight / 2
     );
-    ctx.drawImage(fish.canvas, fishXPos, fishYPos);
+    ctx.drawImage(fishCanvas, fishXPos, fishYPos);
   } else {
-    ctx.drawImage(fish.canvas, fishXPos, fishYPos);
+    ctx.drawImage(fishCanvas, fishXPos, fishYPos);
   }
 };
 
@@ -230,11 +236,19 @@ const renderFishFromParts = (fish, ctx, x = 0, y = 0) => {
   const bodyAnchor = bodyAnchorFromType(body, body.type);
   const parts = _.orderBy(fish.parts, ['type']);
 
+  const intermediateCanvas = canvasCache.getCanvas(`intermediate-${fish.id}`)[0];
+  const intermediateCtx = intermediateCanvas.getContext('2d');
+  intermediateCanvas.width = constants.fishCanvasWidth;
+  intermediateCanvas.height = constants.fishCanvasHeight;
+
   parts.forEach((part, partIndex) => {
-    let intermediateCanvas = document.createElement('canvas');
-    intermediateCanvas.width = constants.fishCanvasWidth;
-    intermediateCanvas.height = constants.fishCanvasHeight;
-    let intermediateCtx = intermediateCanvas.getContext('2d');
+    intermediateCtx.clearRect(
+      0,
+      0,
+      constants.fishCanvasWidth,
+      constants.fishCanvasHeight
+    );
+
     let anchor = [0, 0];
     if (part.type !== FishBodyPart.BODY) {
       const bodyAnchor = bodyAnchorFromType(body, part.type);
@@ -242,7 +256,7 @@ const renderFishFromParts = (fish, ctx, x = 0, y = 0) => {
       anchor[1] = bodyAnchor[1];
     }
 
-    const img = fishPartImages[part.type][part.index]; //fishPartImages[part.type][part.variant];
+    const img = fishPartImages[part.type][part.index];
 
     if (part.type === FishBodyPart.TAIL) {
       anchor[1] -= img.height / 2;
