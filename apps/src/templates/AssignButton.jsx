@@ -7,7 +7,6 @@ import ConfirmAssignment from '@cdo/apps/templates/courseOverview/ConfirmAssignm
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import {assignCourseToSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
-
 class AssignButton extends React.Component {
   static propTypes = {
     section: sectionForDropdownShape,
@@ -33,7 +32,7 @@ class AssignButton extends React.Component {
 
   assignCourse = () => {
     const {section, courseId, assignCourseToSection} = this.props;
-    assignCourseToSection(section.id, courseId)
+    assignCourseToSection(section.id, courseId);
     this.setState({dialogOpen: false});
   };
 
@@ -56,7 +55,7 @@ class AssignButton extends React.Component {
             isHiddenFromSection={false}
           />
         )}
-    </div>
+      </div>
     );
   }
 }
@@ -65,7 +64,7 @@ export const UnconnectedAssignButton = AssignButton;
 
 export default connect(
   state => ({
-    sections: state.teacherSections.sections,
+    sections: state.teacherSections.sections
   }),
   {
     assignCourseToSection
