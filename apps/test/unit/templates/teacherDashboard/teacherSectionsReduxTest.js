@@ -547,6 +547,7 @@ describe('teacherSectionsRedux', () => {
         code: '',
         courseId: null,
         scriptId: null,
+        createdAt: undefined,
         hidden: false
       });
     });
@@ -569,6 +570,7 @@ describe('teacherSectionsRedux', () => {
         sharingDisabled: false,
         scriptId: 36,
         courseId: null,
+        createdAt: undefined,
         studentCount: 1,
         hidden: false
       });
