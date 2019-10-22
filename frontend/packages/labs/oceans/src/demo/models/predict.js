@@ -36,7 +36,7 @@ const asyncSetUiElements = async state => {
     ...staticUiElements,
     createText({id: 'predict-text', text})
   ];
-  const fishData = generateOcean(1000);
+  const fishData = generateOcean(200);
   setState({uiElements, fishData});
 };
 
