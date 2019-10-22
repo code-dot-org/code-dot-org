@@ -13131,7 +13131,13 @@ en:
           stages:
             CS Discoveries Deeper Learning Module 3:
               name: CS Discoveries Deeper Learning Module 3
-          title: CS Discoveries Deeper Learning Module 3
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            'Step 1: Develop Understanding':
+              name: 'Step 1: Develop Understanding'
+            'Step 2: Demonstrate Understanding':
+              name: 'Step 2: Demonstrate Understanding'
+          title: CS Discoveries Deeper Learning Module for Workshop 3
           description_audience: CS Discoveries Facilitators in Training 2019
           description_short: ''
           description: ''
@@ -13139,7 +13145,13 @@ en:
           stages:
             CS Discoveries Deeper Learning Module 4:
               name: CS Discoveries Deeper Learning Module 4
-          title: CS Discoveries Deeper Learning Module 4
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            'Step 1: Develop Understanding':
+              name: 'Step 1: Develop Understanding'
+            'Step 2: Demonstrate Understanding':
+              name: 'Step 2: Demonstrate Understanding'
+          title: CS Discoveries Deeper Learning Module  for Workshop 4
           description_audience: CS Discoveries Facilitators in Training 2019
           description_short: ''
           description: ''
@@ -13189,6 +13201,12 @@ en:
           stages:
             CS Principles Deeper Learning Module 4:
               name: CS Principles Deeper Learning Module 4
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            'Step 1: Develop Understanding':
+              name: 'Step 1: Develop Understanding'
+            'Step 2: Demonstrate Understanding':
+              name: 'Step 2: Demonstrate Understanding'
           title: CS Principles Deeper Learning Module 4
           description_audience: CS Principles Facilitators in Training 2019
           description_short: ''
@@ -13451,3 +13469,41 @@ en:
               name: Understanding the Computer Science Fundamentals Courses
             extra:
               name: extra
+            Welcome to this online course:
+              name: Welcome to this online course
+            Understanding the Computer Science Fundamentals courses:
+              name: Understanding the Computer Science Fundamentals courses
+            Best practices for teaching computer science:
+              name: Best practices for teaching computer science
+            Sequencing:
+              name: Sequencing
+            Loops:
+              name: Loops
+            Conditionals:
+              name: Conditionals
+            Events:
+              name: Events
+            Functions:
+              name: Functions
+            Diving Deeper:
+              name: Diving Deeper
+            Next steps:
+              name: Next steps
+            Diving deeper:
+              name: Diving deeper
+            Diving deeper (for Courses E and F):
+              name: Diving deeper (for Courses E and F)
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Welcome to "Teaching Computer Science Fundamentals"
+            Diving Deeper (for Courses E and F):
+              name: Diving Deeper (for Courses E and F)
+            'Diving Deeper: Courses E and F':
+              name: 'Diving Deeper: Courses E and F'
+            Sprite Lab:
+              name: Sprite Lab
+            Variables:
+              name: Variables
+            For Loops:
+              name: For Loops
+            End-of-course projects:
+              name: End-of-course projects
