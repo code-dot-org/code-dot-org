@@ -45,26 +45,7 @@ def localize_hoc_content
 
     FileUtils.mkdir_p(File.dirname(dest))
     FileUtils.cp(file, dest)
-    sanitize_hoc_file(dest)
-  end
-end
-
-def sanitize_hoc_file(path)
-  # YAML headers can include a lot of things we don't want translators to mess
-  # with or worry about; layout, navigation settings, social media tags, etc.
-  # However, they also include things like page titles that we DO want
-  # translators to be able to translate, so we can't ignore them completely.
-  # Instead, here we reduce the headers down to contain only the keys we care
-  # about and then in the out step we reinflate the received headers with the
-  # values from the original source.
-  header, content, _line = Documents.new.helpers.parse_yaml_header(path)
-  header.slice!("title")
-  open(path, 'w') do |f|
-    unless header.empty?
-      f.write(I18nScriptUtils.to_crowdin_yaml(header))
-      f.write("---\n\n")
-    end
-    f.write(content)
+    HocSyncUtils.sanitize_hoc_file(dest)
   end
 end
 
