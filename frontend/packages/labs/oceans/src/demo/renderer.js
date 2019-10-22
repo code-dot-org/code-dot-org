@@ -2,14 +2,14 @@ import 'babel-polyfill';
 import _ from 'lodash';
 import {getState} from './state';
 import constants, {Modes} from './constants';
+import CanvasCache from './canvasCache';
 import {
   backgroundPathForMode,
   bodyAnchorFromType,
   colorFromType,
-  randomInt,
   createText
 } from './helpers';
-import {FishBodyPart} from '../utils/fishData';
+import fishData, {FishBodyPart} from '../utils/fishData';
 
 var $time =
   Date.now ||
@@ -21,6 +21,16 @@ let prevState = {};
 
 let currentModeStartTime = $time();
 
+let fishPartImages = {};
+
+export const initRenderer = () => {
+  return loadAllFishPartImages();
+};
+
+const canvasCache = new CanvasCache();
+
+// Render a single frame of the scene.
+// Sometimes performs special rendering actions, such as when mode has changed.
 export const render = () => {
   const state = getState();
 
@@ -41,6 +51,9 @@ export const render = () => {
   }
 
   switch (state.currentMode) {
+    case Modes.Loading:
+      clearCanvas(state.canvas);
+      break;
     case Modes.Words:
       clearCanvas(state.canvas);
       break;
@@ -55,7 +68,6 @@ export const render = () => {
       break;
     case Modes.Pond:
       if (prevState.pondFish !== state.pondFish) {
-        loadPondFishImages();
         clearCanvas(state.canvas);
       }
       clearCanvas(state.canvas);
@@ -71,6 +83,7 @@ export const render = () => {
   window.requestAnimFrame(render);
 };
 
+// Load and display the background image onto the background canvas.
 export const drawBackground = state => {
   const canvas = state.backgroundCanvas;
   if (!canvas) {
@@ -87,6 +100,8 @@ export const drawBackground = state => {
   }
 };
 
+// Load a single image.
+// Used by drawBackground.
 const loadImage = imgPath => {
   return new Promise((resolve, reject) => {
     const img = new Image();
@@ -98,6 +113,7 @@ const loadImage = imgPath => {
   });
 };
 
+// Draw the fish for training mode.
 export const drawTrainingFish = state => {
   const canvas = state.canvas;
   const ctx = canvas.getContext('2d');
@@ -122,6 +138,7 @@ export const drawTrainingFish = state => {
   drawSingleFish(fish, fishXPos, fishYPos, ctx);
 };
 
+// Draw the upcoming fish for training mode.
 export const drawUpcomingFish = state => {
   const fishLeft = state.fishData.length - state.trainingIndex - 1;
   const numUpcomingFish = fishLeft >= 3 ? 3 : fishLeft;
@@ -137,16 +154,7 @@ export const drawUpcomingFish = state => {
   }
 };
 
-const drawHeader = (container, text) => {
-  container.innerHTML = '';
-  container.appendChild(createText({id: 'header', text}));
-};
-
-export const drawUiElements = (container, elements) => {
-  container.innerHTML = '';
-  elements.forEach(el => container.appendChild(el));
-};
-
+// Draw the fish for predicting mode.
 export const drawPredictingFish = state => {
   const fish = state.fishData[state.trainingIndex];
   const canvas = state.canvas;
@@ -158,29 +166,48 @@ export const drawPredictingFish = state => {
   );
 };
 
-export const drawPondFish = state => {
-  const canvas = state.canvas;
-  state.pondFish.forEach(fish => {
-    loadFishImages(fish).then(results => {
-      const randomX = randomInt(
-        constants.fishCanvasWidth / 4,
-        canvas.width - constants.fishCanvasWidth / 4
-      );
-      const randomY = randomInt(
-        constants.fishCanvasHeight / 4,
-        canvas.height - constants.fishCanvasHeight / 4
-      );
-      drawFish(fish, results, canvas.getContext('2d'), randomX, randomY);
+// Load all fish part images, and store them in fishPartImages.
+const loadAllFishPartImages = () => {
+  let fishPartImagesToLoad = [];
+  Object.keys(fishData)
+    .filter(partName => partName !== 'colorPalettes')
+    .forEach((partName, partIndex) => {
+      Object.keys(fishData[partName]).forEach(variationName => {
+        const partData = {
+          partIndex: fishData[partName][variationName].type,
+          variationIndex: fishData[partName][variationName].index,
+          src: fishData[partName][variationName].src
+        };
+        fishPartImagesToLoad.push(partData);
+      });
     });
+
+  return Promise.all(fishPartImagesToLoad.map(loadFishPartImage)).then(
+    results => {
+      results.forEach(result => {
+        if (fishPartImages[result.data.partIndex] === undefined) {
+          fishPartImages[result.data.partIndex] = {};
+        }
+        fishPartImages[result.data.partIndex][result.data.variationIndex] =
+          result.img;
+      });
+    }
+  );
+};
+
+// Load a single fish part image.
+const loadFishPartImage = data => {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.addEventListener('load', e => resolve({img, data}));
+    img.addEventListener('error', () => {
+      reject(new Error(`failed to load image at ${data.src}`));
+    });
+    img.src = data.src;
   });
 };
 
-const loadPondFishImages = () => {
-  getState().pondFish.forEach(fish => {
-    fish.parts.map(loadFishImage);
-  });
-};
-
+// Draw the fish for pond mode.
 const drawPondFishImages = () => {
   const canvas = getState().canvas;
   const ctx = canvas.getContext('2d');
@@ -193,78 +220,72 @@ const drawPondFishImages = () => {
   });
 };
 
-const loadFishImages = fish => {
-  return Promise.all(fish.parts.map(loadFishImage));
-};
-
-const loadFishImage = fishPart => {
-  return new Promise((resolve, reject) => {
-    const img = new Image();
-    img.addEventListener('load', e => resolve({img, fishPart}));
-    img.addEventListener('error', () => {
-      reject(new Error(`failed to load image at #{fishPart.src}`));
-    });
-    img.src = fishPart.src;
-  });
-};
-
+// Draw a single fish, preferably from cached canvas.
+// Used by drawTrainingFish, drawUpcomingFish, drawPredictingFish.
 const drawSingleFish = (fish, fishXPos, fishYPos, ctx) => {
-  if (!fish.canvas) {
-    fish.canvas = document.createElement('canvas');
-    fish.canvas.width = constants.fishCanvasWidth;
-    fish.canvas.height = constants.fishCanvasHeight;
-    loadFishImages(fish).then(results => {
-      const fishCtx = fish.canvas.getContext('2d');
-      drawFish(
-        fish,
-        results,
-        fishCtx,
-        constants.fishCanvasWidth / 2,
-        constants.fishCanvasHeight / 2
-      );
-      ctx.drawImage(fish.canvas, fishXPos, fishYPos);
-    });
-  } else {
-    ctx.drawImage(fish.canvas, fishXPos, fishYPos);
+  const [fishCanvas, hit] = canvasCache.getCanvas(fish.id);
+  if (!hit) {
+    fishCanvas.width = constants.fishCanvasWidth;
+    fishCanvas.height = constants.fishCanvasHeight;
+    const fishCtx = fishCanvas.getContext('2d');
+    renderFishFromParts(
+      fish,
+      fishCtx,
+      constants.fishCanvasWidth / 2,
+      constants.fishCanvasHeight / 2
+    );
   }
+  ctx.drawImage(fishCanvas, fishXPos, fishYPos);
 };
 
-const drawFish = (fish, results, ctx, x = 0, y = 0) => {
+// Renders a fish into a canvas from its constituent parts.
+const renderFishFromParts = (fish, ctx, x = 0, y = 0) => {
   ctx.translate(constants.fishCanvasWidth, 0);
   ctx.scale(-1, 1);
-  const body = results.find(
-    result => result.fishPart.type === FishBodyPart.BODY
-  ).fishPart;
+  const body = fish.parts.find(part => part.type === FishBodyPart.BODY);
   const bodyAnchor = bodyAnchorFromType(body, body.type);
-  results = _.orderBy(results, ['fishPart.type']);
+  const parts = _.orderBy(fish.parts, ['type']);
 
-  results.forEach(result => {
-    let intermediateCanvas = document.createElement('canvas');
-    intermediateCanvas.width = constants.fishCanvasWidth;
-    intermediateCanvas.height = constants.fishCanvasHeight;
-    let intermediateCtx = intermediateCanvas.getContext('2d');
+  const intermediateCanvas = canvasCache.getCanvas(
+    `intermediate-${fish.id}`
+  )[0];
+  const intermediateCtx = intermediateCanvas.getContext('2d');
+  intermediateCanvas.width = constants.fishCanvasWidth;
+  intermediateCanvas.height = constants.fishCanvasHeight;
+
+  parts.forEach((part, partIndex) => {
+    intermediateCtx.clearRect(
+      0,
+      0,
+      constants.fishCanvasWidth,
+      constants.fishCanvasHeight
+    );
+
     let anchor = [0, 0];
-    if (result.fishPart.type !== FishBodyPart.BODY) {
-      const bodyAnchor = bodyAnchorFromType(body, result.fishPart.type);
+    if (part.type !== FishBodyPart.BODY) {
+      const bodyAnchor = bodyAnchorFromType(body, part.type);
       anchor[0] = bodyAnchor[0];
       anchor[1] = bodyAnchor[1];
     }
-    if (result.fishPart.type === FishBodyPart.TAIL) {
-      anchor[1] -= result.img.height / 2;
+
+    const img = fishPartImages[part.type][part.index];
+
+    if (part.type === FishBodyPart.TAIL) {
+      anchor[1] -= img.height / 2;
     }
 
     const xPos = bodyAnchor[0] + anchor[0];
     const yPos = bodyAnchor[1] + anchor[1];
 
-    intermediateCtx.drawImage(result.img, xPos, yPos);
-    const rgb = colorFromType(fish.colorPalette, result.fishPart.type);
+    intermediateCtx.drawImage(img, xPos, yPos);
+    const rgb = colorFromType(fish.colorPalette, part.type);
 
     if (rgb) {
       let imageData = intermediateCtx.getImageData(
         xPos,
         yPos,
-        result.img.width,
-        result.img.height
+        img.width,
+        img.height
       );
       let data = imageData.data;
 
@@ -289,12 +310,13 @@ const drawFish = (fish, results, ctx, x = 0, y = 0) => {
   });
 };
 
+// Clear the sprite canvas.
 export const clearCanvas = canvas => {
   canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
 };
 
+// Draw an overlay over the whole scene.  Used for fades.
 function drawOverlays() {
-  // update fade
   var duration = $time() - currentModeStartTime;
   var amount = 1 - duration / 800;
   if (amount < 0) {
@@ -303,6 +325,7 @@ function drawOverlays() {
   DrawFade(amount, '#000');
 }
 
+// Draw a fade over the scene.
 function DrawFade(amount, overlayColour) {
   if (amount === 0) {
     return;
@@ -352,6 +375,7 @@ const drawRoundedFrame = (
   );
 };
 
+// Draw a filled rectangle.
 function DrawFilledRect(x, y, w, h) {
   x = Math.floor(x / 1);
   y = Math.floor(y / 1);
@@ -362,6 +386,13 @@ function DrawFilledRect(x, y, w, h) {
   canvasCtx.fillRect(x, y, w, h);
 }
 
+// Attach HTML UI elements to the DOM.
+export const drawUiElements = (container, elements) => {
+  container.innerHTML = '';
+  elements.forEach(el => container.appendChild(el));
+};
+
+// A single frame of animation.
 window.requestAnimFrame = (() => {
   return (
     window.requestAnimationFrame ||

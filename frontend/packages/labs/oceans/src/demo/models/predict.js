@@ -3,6 +3,7 @@ import {setState, getState} from '../state';
 import {init as initScene} from '../init';
 import {Modes} from '../constants';
 import {createButton, createText, strForClassType} from '../helpers';
+import {generateOcean} from '../../utils/generateOcean';
 
 const staticUiElements = [
   createButton({
@@ -29,7 +30,8 @@ const asyncSetUiElements = async state => {
     ...staticUiElements,
     createText({id: 'predict-text', text})
   ];
-  setState({uiElements});
+  const fishData = generateOcean(1000);
+  setState({uiElements, fishData});
 };
 
 const predictFish = state => {
@@ -40,6 +42,7 @@ const predictFish = state => {
       const text = `prediction: ${strForClassType(classId)} @ ${
         prediction.confidencesByClassId[classId]
       }`;
+      fish.result = prediction;
 
       resolve(text);
     });

@@ -47,6 +47,10 @@ const onClassifyFish = doesLike => {
   state.trainer.addExampleData(knnData, classId);
   state.trainingIndex += 1;
   setState({trainingIndex: state.trainingIndex});
+  if (state.trainingIndex > state.fishData.length - 5) {
+    const fishData = state.fishData.concat(generateOcean(100));
+    setState({fishData})
+  }
 };
 
 const onClickNext = () => {
