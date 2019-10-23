@@ -47,7 +47,7 @@ eye_image_files.forEach(fileName => {
       image.src,
       (1.0 * image.width) / image.height,
       numPixels,
-      numPupilPixels
+      numPixels / numPupilPixels
     );
   });
 });
