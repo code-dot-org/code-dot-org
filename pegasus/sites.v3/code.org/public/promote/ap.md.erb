@@ -2,18 +2,21 @@
 title: Dig Deeper into AP Computer Science
 theme: responsive
 social:
-  "og:title": "Dig Deeper into AP Computer Science"
-  "og:description": "View data about the AP Computer Science exam by state"
-  "og:image": "<%= 'https://' + request.host + '/images/middleschool.png' %>"
-  "og:image:width": '1920'
-  "og:image:height": '1080'
-  "twitter:card": player
-  "twitter:site": "@codeorg"
-  "twitter:url": "https://code.org/promote/ap"
-  "twitter:title": "Dig Deeper into AP Computer Science"
-  "twitter:description": "View data about the AP Computer Science exam by state"
-  "twitter:image:src": "<%= 'https://' + request.host + '/images/middleschool.png' %>"
+  og:title: Dig Deeper into AP Computer Science
+  og:description: View data about the AP Computer Science exam by state
+  og:image:width: '1920'
+  og:image:height: '1080'
+  twitter:card: player
+  twitter:site: "@codeorg"
+  twitter:url: https://code.org/promote/ap
+  twitter:title: Dig Deeper into AP Computer Science
+  twitter:description: View data about the AP Computer Science exam by state
 ---
+
+<%
+  @header["social"]["og:image"] = 'https://' + request.host + '/images/middleschool.png'
+  @header["social"]["twitter:image:src"] = 'https://' + request.host + '/images/middleschool.png'
+%>
 
 # Dig Deeper into AP Computer Science
 

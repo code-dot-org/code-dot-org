@@ -38,33 +38,24 @@ def copy_from_i18n_source_to_hoc
     next if prop[:locale_s] == "en-US"
     i18n_path = "i18n/locales/#{prop[:locale_s]}/hourofcode"
     hoc_path = "pegasus/sites.v3/hourofcode.com/i18n"
+
+    # Copy the file containing developer-added strings
     FileUtils.cp(i18n_path + "/#{prop[:unique_language_s]}.yml", hoc_path) if File.exist?(i18n_path + "/#{prop[:unique_language_s]}.yml")
 
-    language_folder = hoc_path + "/public/#{prop[:unique_language_s]}"
-    unless File.directory?(language_folder)
-      FileUtils.mkdir_p(language_folder)
-      FileUtils.mkdir_p(language_folder + "/files")
-      FileUtils.mkdir_p(language_folder + "/images")
-      FileUtils.mkdir_p(language_folder + "/how-to")
-      FileUtils.mkdir_p(language_folder + "/promote")
-    end
+    # Copy the markdown files representing individual page content
+    Dir.glob(File.join(i18n_path, "**/*.md")).each do |source_path|
+      # Copy file from the language-specific i18n directory to the
+      # language-specific pegasus directory.
+      source_dir = File.dirname(source_path)
+      dest_dir = source_dir.sub(i18n_path, File.join(hoc_path, "public", prop[:unique_language_s]))
 
-    # Crowdin didn't place nicely with changing the file extensions from md to md.partial
-    # As a hopefully temporary solution, on the sync in we remove the .partial ending and
-    # here we add it back.
-    i18n_dir = Dir["i18n/locales/#{prop[:locale_s]}/hourofcode/*.md"]
-    i18n_dir.each do |file|
-      FileUtils.cp(file, hoc_path + "/public/#{prop[:unique_language_s]}/#{File.basename(file)}.partial")
-    end
+      # Crowdin didn't place nicely with changing the file extensions from md
+      # to md.partial As a hopefully temporary solution, on the sync in we
+      # remove the .partial ending and here we add it back.
+      dest_name = File.basename(source_path) + ".partial"
 
-    i18n_dir = Dir["i18n/locales/#{prop[:locale_s]}/hourofcode/how-to/*.md"]
-    i18n_dir.each do |file|
-      FileUtils.cp(file, hoc_path + "/public/#{prop[:unique_language_s]}/how-to/#{File.basename(file)}.partial")
-    end
-
-    i18n_dir = Dir["i18n/locales/#{prop[:locale_s]}/hourofcode/promote/*.md"]
-    i18n_dir.each do |file|
-      FileUtils.cp(file, hoc_path + "/public/#{prop[:unique_language_s]}/promote/#{File.basename(file)}.partial")
+      FileUtils.mkdir_p(dest_dir)
+      FileUtils.cp(source_path, File.join(dest_dir, dest_name))
     end
 
     puts "Copied locale #{prop[:unique_language_s]}"

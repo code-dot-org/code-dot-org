@@ -60,4 +60,9 @@ export default class LibraryClientApi {
       }
     });
   }
+
+  getClassLibraries(onSuccess, onError) {
+    // TODO: find all libraries published by other students in a classroom
+    return undefined;
+  }
 }
