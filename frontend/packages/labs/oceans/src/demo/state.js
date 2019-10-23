@@ -13,7 +13,9 @@ const initialState = {
   headerElements: [],
   footerContainer: null,
   footerElements: [],
-  iterationCount: 0
+  iterationCount: 0,
+  yesCount: 0,
+  noCount: 0
 };
 let state = {...initialState};
 

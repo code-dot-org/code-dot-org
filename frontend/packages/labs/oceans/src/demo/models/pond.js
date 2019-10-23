@@ -62,7 +62,9 @@ const arrangeFish = fishes => {
 
 const onClickStartOver = () => {
   const state = setState({
-    iterationCount: getState().iterationCount + 1
+    iterationCount: getState().iterationCount + 1,
+    yesCount: 0,
+    noCount: 0
   });
   state.trainer.clearAll();
   toMode(Modes.Words);
