@@ -353,22 +353,7 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
 
   private
 
-  def create_peer_reviews_for_user_and_level(user, level)
-    level_source = create :level_source, level: level
-    user_level = create :user_level,
-      user: user,
-      level: level,
-      level_source: level_source,
-      script: @course_unit.script,
-      best_result: ActivityConstants::UNREVIEWED_SUBMISSION_RESULT
-
-    PeerReview.create_for_submission(user_level, level_source.id)
-  end
-
-  def create_peer_reviews_for_user(user)
-    course_unit = create :plc_course_unit
-    level = create :free_response, peer_reviewable: true
-    create :script_level, script: course_unit.script, levels: [level]
+  def create_peer_reviews_for_user_and_level(user, level, course_unit = @course_unit)
     level_source = create :level_source, level: level
     user_level = create :user_level,
       user: user,
@@ -378,5 +363,12 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
       best_result: ActivityConstants::UNREVIEWED_SUBMISSION_RESULT
 
     PeerReview.create_for_submission(user_level, level_source.id)
+  end
+
+  def create_peer_reviews_for_user(user)
+    course_unit = create :plc_course_unit
+    level = create :free_response, peer_reviewable: true
+    create :script_level, script: course_unit.script, levels: [level]
+    create_peer_reviews_for_user_and_level(user, level, course_unit)
   end
 end
