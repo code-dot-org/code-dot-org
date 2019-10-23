@@ -553,10 +553,13 @@ var projects = (module.exports = {
       this.setTitle(newName);
     }
   },
-  setLibraryName(newName, callback) {
+  setLibraryData(newName, description, callback) {
     current = current || {};
-    if (newName && current.libraryName !== newName) {
-      current.libraryName = newName;
+    let doUpdate = description && current.libraryDescription !== description;
+    doUpdate = doUpdate || (newName && current.libraryName !== newName);
+    if (doUpdate) {
+      current.libraryName = newName || current.libraryName;
+      current.libraryDescription = description || current.libraryDescription;
       this.updateChannels_(callback);
     }
   },

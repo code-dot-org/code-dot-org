@@ -68,7 +68,8 @@ class LibraryCreationDialog extends React.Component {
     this.props.onClose();
   };
 
-  publish = () => {
+  publish = event => {
+    event.preventDefault();
     let formElements = this.formElements.elements;
     let selectedFunctionList = [];
     let libraryDescription = '';
@@ -99,7 +100,10 @@ class LibraryCreationDialog extends React.Component {
         );
       }
     );
-    dashboard.project.setLibraryName(this.state.libraryName);
+    dashboard.project.setLibraryData(
+      this.state.libraryName,
+      libraryDescription
+    );
   };
 
   validateInput = () => {
