@@ -156,10 +156,6 @@ class ExpiredDeletedAccountPurger
     upload_metrics metrics unless @dry_run
   end
 
-  def manual_review_queue_depth
-    QueuedAccountPurge.count
-  end
-
   def build_metrics(review_queue_depth)
     {
       # Number of accounts purged during this run
