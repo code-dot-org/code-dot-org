@@ -475,6 +475,34 @@ describe('project.js', () => {
     });
   });
 
+  describe('setLibraryName()', () => {
+    it('updates the current library name', () => {
+      let oldName = 'initialLibrary';
+      let newName = 'newLibraryName';
+      setData({libraryName: oldName});
+      sinon.stub(project, 'updateChannels_');
+
+      expect(project.getCurrentLibraryName()).to.equal(oldName);
+      project.setLibraryName(newName);
+      expect(project.getCurrentLibraryName()).to.equal(newName);
+      expect(project.updateChannels_).to.have.been.called;
+
+      setData({});
+      project.updateChannels_.restore();
+    });
+
+    it('does nothing if no name is passed', () => {
+      sinon.stub(project, 'updateChannels_');
+
+      expect(project.getCurrentLibraryName()).to.be.undefined;
+      project.setLibraryName();
+      expect(project.getCurrentLibraryName()).to.be.undefined;
+      expect(project.updateChannels_).to.have.not.been.called;
+
+      project.updateChannels_.restore();
+    });
+  });
+
   describe('setProjectLibraries()', () => {
     beforeEach(() => {
       sinon

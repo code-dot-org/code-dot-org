@@ -15,6 +15,7 @@ import ResourceType from '@cdo/apps/templates/courseOverview/resourceType';
 import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
 
 const defaultProps = {
+  sections: [],
   sectionsInfo: [],
   scriptProgress: NOT_STARTED,
   scriptId: 42,
