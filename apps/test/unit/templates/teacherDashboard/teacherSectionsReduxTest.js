@@ -534,6 +534,7 @@ describe('teacherSectionsRedux', () => {
     it('populates sectionBeingEdited', () => {
       assert.isNull(initialState.sectionBeingEdited);
       const state = reducer(initialState, beginEditingNewSection());
+      state.sectionBeingEdited.createdAt = undefined;
       assert.deepEqual(state.sectionBeingEdited, {
         id: PENDING_NEW_SECTION_ID,
         name: '',
@@ -558,6 +559,7 @@ describe('teacherSectionsRedux', () => {
       const stateWithSections = reducer(initialState, setSections(sections));
       assert.isNull(stateWithSections.sectionBeingEdited);
       const state = reducer(stateWithSections, beginEditingSection(12));
+      state.sectionBeingEdited.createdAt = undefined;
       assert.deepEqual(state.sectionBeingEdited, {
         id: 12,
         name: 'My Other Section',
@@ -679,8 +681,8 @@ describe('teacherSectionsRedux', () => {
       pairing_allowed: true,
       student_count: 0,
       code: 'BCDFGH',
-      course_id: null,
-      script_id: null,
+      courseId: null,
+      scriptId: null,
       hidden: false
     };
 
@@ -826,8 +828,9 @@ describe('teacherSectionsRedux', () => {
           sharingDisabled: undefined,
           studentCount: undefined,
           code: 'BCDFGH',
-          courseId: null,
+          courseId: undefined,
           scriptId: null,
+          createdAt: undefined,
           hidden: false
         }
       });
