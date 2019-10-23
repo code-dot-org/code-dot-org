@@ -8,6 +8,7 @@ import libraryParser from './libraryParser';
 import i18n from '@cdo/locale';
 import PadAndCenter from '@cdo/apps/templates/teacherDashboard/PadAndCenter';
 import {Heading1, Heading2} from '@cdo/apps/lib/ui/Headings';
+import Spinner from '../../pd/components/spinner';
 
 const styles = {
   alert: {
@@ -26,6 +27,10 @@ const styles = {
   },
   textarea: {
     width: 400
+  },
+  centerSpinner: {
+    display: 'flex',
+    justifyContent: 'center'
   }
 };
 
@@ -118,7 +123,11 @@ class LibraryCreationDialog extends React.Component {
 
   displayFunctions = () => {
     if (!this.state.loadingFinished) {
-      return <div id="loading">Loading...</div>;
+      return (
+        <div style={styles.centerSpinner}>
+          <Spinner />
+        </div>
+      );
     }
     let keyIndex = 0;
     return (
