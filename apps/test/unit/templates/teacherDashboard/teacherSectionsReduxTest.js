@@ -833,6 +833,7 @@ describe('teacherSectionsRedux', () => {
           code: 'BCDFGH',
           courseId: undefined,
           scriptId: null,
+          createdAt: createdAt,
           hidden: false
         }
       });
