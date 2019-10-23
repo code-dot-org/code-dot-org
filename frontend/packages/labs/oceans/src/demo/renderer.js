@@ -1,6 +1,6 @@
 import 'babel-polyfill';
 import _ from 'lodash';
-import {getState} from './state';
+import {getState, setState} from './state';
 import constants, {Modes} from './constants';
 import CanvasCache from './canvasCache';
 import {
@@ -68,8 +68,9 @@ export const render = () => {
 
   switch (state.currentMode) {
     case Modes.Training:
-      drawTrainingFish(state);
-      drawUpcomingFish(state);
+      drawTrainingFishNew(state);
+      // drawTrainingFish(state);
+      // drawUpcomingFish(state);
       break;
     case Modes.Predicting:
       drawPredictingFish(state);
@@ -115,6 +116,56 @@ const loadImage = imgPath => {
   });
 };
 
+let lastPauseTime = 0;
+let lastStartTime;
+
+const currentRunningTime = () => {
+  return ($time() - lastStartTime) / 1000;
+};
+
+const getStopwatchTime = state => {
+  if (state.isRunning) {
+    if (!lastStartTime) {
+      lastStartTime = $time();
+    }
+
+    const curr = currentRunningTime();
+    return lastPauseTime + curr;
+  } else {
+    return lastPauseTime;
+  }
+};
+
+const lerp = (start, end, amount) => {
+  return (1 - amount) * start + amount * end;
+};
+
+const drawTrainingFishNew = state => {
+  const stopwatchTime = getStopwatchTime(state) / 1000;
+  const mainFishIdx = Math.floor(stopwatchTime);
+  const ctx = state.canvas.getContext('2d');
+
+  const start = [
+    constants.canvasWidth / 2 - constants.fishCanvasWidth / 2,
+    constants.canvasHeight / 2 - constants.fishCanvasHeight / 2
+  ];
+
+  if (state.isRunning) {
+    const t = currentRunningTime();
+    const end = [start[0] + 100, start[1]];
+    const x = lerp(start[0], end[0], t * 5);
+    drawSingleFish(state.fishData[mainFishIdx], x, start[1], ctx);
+
+    if (t >= 1) {
+      setState({isRunning: false});
+      lastPauseTime += 1000;
+      lastStartTime = null;
+    }
+  } else {
+    drawSingleFish(state.fishData[mainFishIdx], start[0], start[1], ctx);
+  }
+};
+
 // Draw the fish for training mode.
 export const drawTrainingFish = state => {
   const canvas = state.canvas;
@@ -134,7 +185,9 @@ export const drawTrainingFish = state => {
     '#000000'
   );
 
-  const fish = state.fishData[state.trainingIndex];
+  const fishIndex = Math.floor(animationTime / 1000);
+  const fish = state.fishData[fishIndex];
+
   const fishXPos = frameXPos + (frameSize - constants.fishCanvasWidth) / 2;
   const fishYPos = frameYPos + (frameSize - constants.fishCanvasHeight) / 2;
   drawSingleFish(fish, fishXPos, fishYPos, ctx);

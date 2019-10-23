@@ -65,12 +65,17 @@ const onClassifyFish = doesLike => {
   const knnData = state.fishData[state.trainingIndex].knnData;
   const classId = doesLike ? ClassType.Like : ClassType.Dislike;
   state.trainer.addExampleData(knnData, classId);
-  state.trainingIndex += 1;
-  setState({trainingIndex: state.trainingIndex});
+
+  let fishData = [...state.fishData];
   if (state.trainingIndex > state.fishData.length - 5) {
-    const fishData = state.fishData.concat(generateOcean(100));
-    setState({fishData});
+    fishData = fishData.concat(generateOcean(100));
   }
+
+  setState({
+    trainingIndex: state.trainingIndex + 1,
+    fishData,
+    isRunning: true
+  });
 };
 
 const onSelectType = () => {

@@ -13,7 +13,8 @@ const initialState = {
   headerElements: [],
   footerContainer: null,
   footerElements: [],
-  iterationCount: 0
+  iterationCount: 0,
+  isRunning: false
 };
 let state = {...initialState};
 
