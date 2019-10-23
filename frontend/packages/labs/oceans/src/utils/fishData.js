@@ -785,29 +785,33 @@ const fishComponents = {
   },
   // COLOR PALETTE KNN DATA: [...bodyRgb, ...finRgb]
   colorPalettes: {
+    // Blue, peach, pink
     palette1: {
       bodyRgb: [126, 205, 202],
       finRgb: [248, 192, 157],
       mouthRgb: [221, 148, 193],
       knnData: [126, 205, 202]
     },
+    // orange
     palette2: {
       bodyRgb: [253, 192, 77],
       finRgb: [235, 120, 50],
       mouthRgb: [235, 120, 50],
       knnData: [253, 192, 77]
     },
+    // red
     palette3: {
-      bodyRgb: [39, 116, 186],
+      bodyRgb: [164, 3, 31],
       finRgb: [253, 217, 136],
       mouthRgb: [253, 217, 136],
-      knnData: [39, 116, 186]
+      knnData: [164, 3, 31]
     },
+    // green
     palette4: {
-      bodyRgb: [21, 52, 64],
+      bodyRgb: [72, 139, 73],
       finRgb: [200, 220, 92],
       mouthRgb: [200, 220, 92],
-      knnData: [21, 52, 64]
+      knnData: [72, 139, 73]
     }
   }
 };
