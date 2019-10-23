@@ -147,7 +147,7 @@ class ExpiredDeletedAccountPurger
     log_link = upload_activity_log
     if rack_env? :production
       if manual_reviews_needed > 0
-        notify "#{summary} #{log_link}"
+        warn "#{summary} #{log_link}"
       else
         say "#{summary} #{log_link}"
       end
@@ -225,7 +225,7 @@ class ExpiredDeletedAccountPurger
   end
 
   # Send warning messages to #cron-daily and #user-accounts
-  def notify(message)
+  def warn(message)
     say message, 'cron-daily', color: 'yellow'
     say message, 'user-accounts', color: 'yellow'
   end
