@@ -1021,8 +1021,8 @@ export class DetailViewContents extends React.Component {
   renderDetailViewTableLayout = () => {
     const sectionsToRemove =
       this.props.applicationData.application_type === ApplicationTypes.teacher
-        ? ['section5AdditionalDemographicInformation', 'section6Submission']
-        : ['section6Submission'];
+        ? ['additionalDemographicInformation']
+        : ['submission'];
 
     return (
       <div>
