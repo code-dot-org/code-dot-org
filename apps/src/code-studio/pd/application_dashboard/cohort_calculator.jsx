@@ -83,7 +83,7 @@ export default class CohortCalculator extends React.Component {
               <td>
                 {this.state.loadingEnrollmentCount
                   ? 'Loading...'
-                  : this.state.enrolled}
+                  : this.state.enrolled || '-'}
               </td>
             </tr>
           </tbody>
