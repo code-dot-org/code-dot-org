@@ -101,6 +101,43 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
     end
   end
 
+  test 'Peer reviews are sorted by most recent submission, descending' do
+    teacher1 = create :teacher
+    teacher2 = create :teacher
+    teacher3 = create :teacher
+    instructor = create :plc_reviewer
+
+    Timecop.freeze(7.days.ago) do
+      # Make three peer review submissions at different times.
+      create_peer_reviews_for_user teacher1
+      Timecop.travel 1.day
+      create_peer_reviews_for_user teacher2
+      Timecop.travel 1.day
+      create_peer_reviews_for_user teacher3
+
+      # Simulate an instructor review of the oldest submission, to show that
+      # it doesn't affect the sort order.
+      Timecop.travel 1.day
+      PeerReview.where(submitter: teacher1, status: :escalated).update(
+        reviewer: instructor,
+        from_instructor: true,
+        data: 'Great work!',
+        status: :accepted
+      )
+    end
+
+    # Get all submissions
+    get :index
+    assert_response :success
+    submissions = JSON.parse(@response.body)['submissions']
+
+    # Expect to see most recent submission first
+    assert_equal(
+      [teacher3.name, teacher2.name, teacher1.name],
+      submissions.map {|s| s['submitter']}
+    )
+  end
+
   test 'All peer reviews gets the first page of peer reviews submissions' do
     common_scenario
     get :index
