@@ -52,6 +52,8 @@ const {
   USER_EDITABLE_SECTION_PROPS
 } = __testInterface__;
 
+const createdAt = '2019-10-21T23:45:34.345Z';
+
 const sections = [
   {
     id: 11,
@@ -65,6 +67,7 @@ const sections = [
     sharing_disabled: false,
     script: null,
     course_id: 29,
+    createdAt: createdAt,
     studentCount: 10,
     hidden: false
   },
@@ -83,6 +86,7 @@ const sections = [
       name: 'course3'
     },
     course_id: null,
+    createdAt: createdAt,
     studentCount: 1,
     hidden: false
   },
@@ -101,6 +105,7 @@ const sections = [
       name: 'csp1'
     },
     course_id: 29,
+    createdAt: createdAt,
     studentCount: 0,
     hidden: false
   }
@@ -534,7 +539,6 @@ describe('teacherSectionsRedux', () => {
     it('populates sectionBeingEdited', () => {
       assert.isNull(initialState.sectionBeingEdited);
       const state = reducer(initialState, beginEditingNewSection());
-      state.sectionBeingEdited.createdAt = undefined;
       assert.deepEqual(state.sectionBeingEdited, {
         id: PENDING_NEW_SECTION_ID,
         name: '',
@@ -548,7 +552,6 @@ describe('teacherSectionsRedux', () => {
         code: '',
         courseId: null,
         scriptId: null,
-        createdAt: undefined,
         hidden: false
       });
     });
@@ -559,7 +562,6 @@ describe('teacherSectionsRedux', () => {
       const stateWithSections = reducer(initialState, setSections(sections));
       assert.isNull(stateWithSections.sectionBeingEdited);
       const state = reducer(stateWithSections, beginEditingSection(12));
-      state.sectionBeingEdited.createdAt = undefined;
       assert.deepEqual(state.sectionBeingEdited, {
         id: 12,
         name: 'My Other Section',
@@ -572,7 +574,7 @@ describe('teacherSectionsRedux', () => {
         sharingDisabled: false,
         scriptId: 36,
         courseId: null,
-        createdAt: undefined,
+        createdAt: createdAt,
         studentCount: 1,
         hidden: false
       });
@@ -683,6 +685,7 @@ describe('teacherSectionsRedux', () => {
       code: 'BCDFGH',
       courseId: null,
       scriptId: null,
+      createdAt: createdAt,
       hidden: false
     };
 
@@ -830,7 +833,6 @@ describe('teacherSectionsRedux', () => {
           code: 'BCDFGH',
           courseId: undefined,
           scriptId: null,
-          createdAt: undefined,
           hidden: false
         }
       });
@@ -1113,6 +1115,7 @@ describe('teacherSectionsRedux', () => {
       pairing_allowed: true,
       script: null,
       course_id: 29,
+      createdAt: createdAt,
       studentCount: 10,
       hidden: false
     };
