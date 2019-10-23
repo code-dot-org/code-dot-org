@@ -52,10 +52,6 @@ export default class LibraryListItem extends React.Component {
     onAdd: PropTypes.func
   };
 
-  displayDescription = _ => {
-    return "My Library's very long description that goes off the page.";
-  };
-
   moreDetails = _ => {
     return 'See More Details';
   };

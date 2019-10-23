@@ -179,6 +179,17 @@ var projects = (module.exports = {
   },
 
   /**
+   * @returns {string} description of the most recently published library from the
+   * project, or undefined if we don't have a current project
+   */
+  getCurrentLibraryDescription() {
+    if (!current) {
+      return;
+    }
+    return current.libraryDescription;
+  },
+
+  /**
    * This method is used so that it can be mocked for unit tests.
    */
   getUrl() {
@@ -553,13 +564,23 @@ var projects = (module.exports = {
       this.setTitle(newName);
     }
   },
-  setLibraryData(newName, description, callback) {
+  deleteLibraryData(callback) {
     current = current || {};
-    let doUpdate = description && current.libraryDescription !== description;
-    doUpdate = doUpdate || (newName && current.libraryName !== newName);
-    if (doUpdate) {
-      current.libraryName = newName || current.libraryName;
-      current.libraryDescription = description || current.libraryDescription;
+    current.libraryName = undefined;
+    current.libraryDescription = undefined;
+    this.updateChannels_(callback);
+  },
+  setLibraryDescription(description, callback) {
+    current = current || {};
+    if (description && current.libraryDescription !== description) {
+      current.libraryDescription = description;
+      this.updateChannels_(callback);
+    }
+  },
+  setLibraryName(newName, callback) {
+    current = current || {};
+    if (newName && current.libraryName !== newName) {
+      current.libraryName = newName;
       this.updateChannels_(callback);
     }
   },
