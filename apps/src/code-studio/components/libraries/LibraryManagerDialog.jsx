@@ -4,6 +4,7 @@ import React from 'react';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
 import LibraryListItem from '@cdo/apps/code-studio/components/libraries/LibraryListItem';
+import libraryParser from './libraryParser';
 import color from '@cdo/apps/util/color';
 
 const DEFAULT_MARGIN = 7;
@@ -76,11 +77,13 @@ export default class LibraryManagerDialog extends React.Component {
   addLibrary = channelId => {
     let libraryToImport = channelId ? channelId : this.state.importLibraryId;
     let libraryClient = new LibraryClientApi(libraryToImport);
+    // TODO: Check for naming collisions between libraries.
     libraryClient.getLatest(
       data => {
+        let updatedjson = libraryParser.prepareLibraryForImport(data);
         dashboard.project.setProjectLibraries([
           ...this.state.libraries,
-          JSON.parse(data)
+          updatedjson
         ]);
       },
       error => {
