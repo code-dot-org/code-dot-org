@@ -116,11 +116,15 @@ const loadImage = imgPath => {
   });
 };
 
+let lastPauseTime = 0;
+let lastStartTime;
+
 const getOffsetForTime = (t, totalFish) => {
   return (
     constants.fishCanvasWidth * totalFish -
-    constants.canvasWidth -
-    Math.round(t / 3)
+    constants.canvasWidth / 2 +
+    constants.fishCanvasWidth / 2 -
+    Math.round((t * constants.fishCanvasWidth) / 1000)
   );
 };
 
@@ -133,9 +137,6 @@ const getXForFish = (numFish, fishIdx, offsetX) => {
   return (numFish - fishIdx) * constants.fishCanvasWidth - offsetX;
 };
 
-let lastPauseTime = 0;
-let lastStartTime;
-
 const drawTrainingFishNew = state => {
   let t = lastPauseTime;
   let currentRunTime = 0;
@@ -145,6 +146,10 @@ const drawTrainingFishNew = state => {
     }
 
     currentRunTime = $time() - lastStartTime;
+    if (currentRunTime > 1000) {
+      currentRunTime = 1000;
+    }
+
     t += currentRunTime;
   }
 
@@ -170,9 +175,9 @@ const drawTrainingFishNew = state => {
     drawSingleFish(fish, x, y, ctx);
   }
 
-  if (currentRunTime >= 1000) {
+  if (currentRunTime === 1000) {
     setState({isRunning: false});
-    lastPauseTime = t;
+    lastPauseTime += 1000;
     lastStartTime = null;
   }
 };
