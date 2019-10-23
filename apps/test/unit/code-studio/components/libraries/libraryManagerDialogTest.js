@@ -1,9 +1,9 @@
 import {expect} from '../../../../util/reconfiguredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
-import LibraryManagerDialog from '@cdo/apps/code-studio/components/Libraries/LibraryManagerDialog';
-import LibraryListItem from '@cdo/apps/code-studio/components/Libraries/LibraryListItem';
-import LibraryClientApi from '@cdo/apps/code-studio/components/Libraries/LibraryClientApi';
+import LibraryManagerDialog from '@cdo/apps/code-studio/components/libraries/LibraryManagerDialog';
+import LibraryListItem from '@cdo/apps/code-studio/components/libraries/LibraryListItem';
+import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
 import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
 import sinon from 'sinon';
 
