@@ -51,8 +51,7 @@ const asyncSetUiElements = async state => {
     createText({id: 'predict-text', text})
   ];
   const fishData = generateOcean(200);
-  const trainingIndex = 0 ;
-  setState({uiElements, fishData, trainingIndex});
+  setState({uiElements, fishData});
 };
 
 const predictFish = state => {

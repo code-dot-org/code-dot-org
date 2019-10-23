@@ -73,9 +73,6 @@ export const render = () => {
       break;
     case Modes.Training:
       clearCanvas(state.canvas);
-      if (state.trainingIndex !== prevState.trainingIndex) {
-        console.log(state.fishData[state.trainingIndex]);
-      }
       drawTrainingFish(state);
       drawUpcomingFish(state);
       break;
