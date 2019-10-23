@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 import FormController from '../../form_components/FormController';
-import Section1AboutYou from './Section1AboutYou';
-import Section2ChooseYourProgram from './Section2ChooseYourProgram';
-import Section3ExperienceAndCommitments from './Section3ExperienceAndCommitments';
-import Section4LeadingStudents from './Section4LeadingStudents';
-import Section5YourApproachToLearningAndLeading from './Section5YourApproachToLearningAndLeading';
-import Section6Submission from './Section6Submission';
+import AboutYou from './AboutYou';
+import ChooseYourProgram from './ChooseYourProgram';
+import ExperienceAndCommitments from './ExperienceAndCommitments';
+import LeadingStudents from './LeadingStudents';
+import YourApproachToLearningAndLeading from './YourApproachToLearningAndLeading';
+import Submission from './Submission';
 
 export default class FacilitatorApplication extends FormController {
   static propTypes = {
@@ -22,12 +22,12 @@ export default class FacilitatorApplication extends FormController {
    */
   getPageComponents() {
     return [
-      Section1AboutYou,
-      Section2ChooseYourProgram,
-      Section3ExperienceAndCommitments,
-      Section4LeadingStudents,
-      Section5YourApproachToLearningAndLeading,
-      Section6Submission
+      AboutYou,
+      ChooseYourProgram,
+      ExperienceAndCommitments,
+      LeadingStudents,
+      YourApproachToLearningAndLeading,
+      Submission
     ];
   }
 

@@ -306,12 +306,12 @@ module Pd::Application
       csv_header_csd = CSV.parse(Teacher2021Application.csv_header('csd'))[0]
       assert csv_header_csd.include? "To which grades does your school plan to offer CS Discoveries in the 2020-21 school year?"
       refute csv_header_csd.include? "To which grades does your school plan to offer CS Principles in the 2020-21 school year?"
-      assert_equal 96, csv_header_csd.length
+      assert_equal 95, csv_header_csd.length
 
       csv_header_csp = CSV.parse(Teacher2021Application.csv_header('csp'))[0]
       refute csv_header_csp.include? "To which grades does your school plan to offer CS Discoveries in the 2020-21 school year?"
       assert csv_header_csp.include? "To which grades does your school plan to offer CS Principles in the 2020-21 school year?"
-      assert_equal 98, csv_header_csp.length
+      assert_equal 97, csv_header_csp.length
     end
 
     test 'school cache' do
@@ -451,26 +451,6 @@ module Pd::Application
       application = build :pd_teacher2021_application, form_data_hash: application_hash
       refute application.valid?
       assert_equal %w(cspWhichGrades cspHowOffer), application.errors.messages[:form_data]
-    end
-
-    test 'queue_email skips principal_approval_completed_partner with no partner email address' do
-      application = build :pd_teacher2021_application
-      application.expects(:formatted_partner_contact_email).returns(nil)
-      CDO.log.expects(:info).with("Skipping principal_approval_completed_partner for application id #{application.id}")
-
-      assert_does_not_create Email do
-        application.queue_email :principal_approval_completed_partner
-      end
-    end
-
-    test 'queue_email queues up principal_approval_completed_partner with a partner email address' do
-      application = build :pd_teacher2021_application
-      application.expects(:formatted_partner_contact_email).returns('partner@ex.net')
-      CDO.log.expects(:info).never
-
-      assert_creates Email do
-        application.queue_email :principal_approval_completed_partner
-      end
     end
 
     test 'should_send_decision_email?' do
