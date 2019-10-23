@@ -25,7 +25,7 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
     per = params[:per] || params[:limit] || 50
     user_query = params[:user_q]
 
-    reviews = PeerReview.all
+    reviews = PeerReview.all.order(created_at: :desc)
 
     if user_query.presence
       reviews =
