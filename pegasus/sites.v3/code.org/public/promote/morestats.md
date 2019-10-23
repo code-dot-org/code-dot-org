@@ -89,6 +89,7 @@ We are interested in seeing what's happening in computer science education inter
 - Change the Equation has a [summary](http://ecs.force.com/studies/rstempg?id=a0r0g000009U7Uo) of untapped minority talent in computing.
 - For each new high-tech job in a city, five jobs outside of tech are [ultimately created](http://eml.berkeley.edu//~moretti/book.htm).
 - A [comprehensive framework](https://www.kaporcenter.org/wp-content/uploads/2018/02/KC18001_report_v6-1.pdf) for understanding and addressing the lack of diversity across the tech ecosystem, including the benefits of a diverse workforce.
+- [Surveys from the Kauffman Foundation](https://www.kauffman.org/currents/2019/09/new-survey-highlights-disconnect-between-high-school-and-real-world) found that 88% of students and 85% of adults say that computer science jobs will be in [greater demand in 10 years](https://twitter.com/codeorg/status/1184493205607407619) - moreso than any other job category.
 
 ### Landscape of K-12 Computer Science Education in the US
 This [series of reports](http://csedu.gallup.com/home.aspx) from Gallup and Google describes the landscape of computer science education across the states.
