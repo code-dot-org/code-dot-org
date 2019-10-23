@@ -936,7 +936,6 @@ module Api::V1::Pd
         "Meets minimum requirements?",
         "Meets scholarship requirements?",
         "Scholarship teacher?",
-        "Bonus Points",
         "General Notes",
         "Notes 2",
         "Notes 3",

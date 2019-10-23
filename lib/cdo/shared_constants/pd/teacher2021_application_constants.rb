@@ -307,7 +307,6 @@ module Pd
         :meets_criteria,
         :meets_scholarship_criteria,
         :friendly_scholarship_status,
-        :total_score,
         :notes,
         :notes_2,
         :notes_3,
