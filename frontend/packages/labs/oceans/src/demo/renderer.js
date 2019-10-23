@@ -116,53 +116,52 @@ const loadImage = imgPath => {
   });
 };
 
+const getOffsetForTime = (t, numFish) => {
+  return constants.fishCanvasWidth * numFish - Math.round(t / 3);
+};
+
+const getFishIdxForLocation = (screenX, offsetX) => {
+  return Math.floor((screenX + offsetX) / constants.fishCanvasWidth);
+};
+
+const getXForFish = (fishIdx, offsetX) => {
+  return fishIdx * constants.fishCanvasWidth - offsetX;
+};
+
 let lastPauseTime = 0;
 let lastStartTime;
 
-const currentRunningTime = () => {
-  return ($time() - lastStartTime) / 1000;
-};
-
-const getStopwatchTime = state => {
+const drawTrainingFishNew = state => {
+  let t = lastPauseTime;
+  let currentRunTime = 0;
   if (state.isRunning) {
     if (!lastStartTime) {
       lastStartTime = $time();
     }
 
-    const curr = currentRunningTime();
-    return lastPauseTime + curr;
-  } else {
-    return lastPauseTime;
+    currentRunTime = $time() - lastStartTime;
+    t += currentRunTime;
   }
-};
 
-const lerp = (start, end, amount) => {
-  return (1 - amount) * start + amount * end;
-};
-
-const drawTrainingFishNew = state => {
-  const stopwatchTime = getStopwatchTime(state) / 1000;
-  const mainFishIdx = Math.floor(stopwatchTime);
+  const offsetX = getOffsetForTime(t, 5);
+  const startFishIdx = Math.max(getFishIdxForLocation(0, offsetX), 0);
+  const lastFishIdx = Math.min(
+    getFishIdxForLocation(constants.canvasWidth, offsetX),
+    state.fishData.length - 1
+  );
   const ctx = state.canvas.getContext('2d');
+  const y = constants.canvasHeight / 2 - constants.fishCanvasHeight / 2;
 
-  const start = [
-    constants.canvasWidth / 2 - constants.fishCanvasWidth / 2,
-    constants.canvasHeight / 2 - constants.fishCanvasHeight / 2
-  ];
+  for (let i = startFishIdx; i <= lastFishIdx; i++) {
+    const x = getXForFish(i, offsetX);
+    const fish = state.fishData[i];
+    drawSingleFish(fish, x, y, ctx);
+  }
 
-  if (state.isRunning) {
-    const t = currentRunningTime();
-    const end = [start[0] + 100, start[1]];
-    const x = lerp(start[0], end[0], t * 5);
-    drawSingleFish(state.fishData[mainFishIdx], x, start[1], ctx);
-
-    if (t >= 1) {
-      setState({isRunning: false});
-      lastPauseTime += 1000;
-      lastStartTime = null;
-    }
-  } else {
-    drawSingleFish(state.fishData[mainFishIdx], start[0], start[1], ctx);
+  if (currentRunTime >= 1000) {
+    setState({isRunning: false});
+    lastPauseTime = t;
+    lastStartTime = null;
   }
 };
 
