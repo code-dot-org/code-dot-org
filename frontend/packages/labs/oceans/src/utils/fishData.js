@@ -20,7 +20,7 @@ const MouthExpression = Object.freeze({
 });
 
 const fishComponents = {
-  // BODY KNN DATA: [height:width ratio]
+  // BODY KNN DATA: [height:width ratio, area]
   bodies: {
     fish6: {
       index: 0,
@@ -257,7 +257,7 @@ const fishComponents = {
       type: FishBodyPart.BODY
     }
   },
-  // EYE KNN DATA: [eye area, eye:pupil ratio, []
+  // EYE KNN DATA: [eye area, eye:pupil ratio]
   eyes: {
     narrow1: {
       index: 0,
@@ -573,7 +573,7 @@ const fishComponents = {
     }
   },
 
-  // TOP FIN KNN DATA: [pointiness rank]
+  // TOP FIN KNN DATA: []
   topFins: {
     fish1: {
       index: 0,
@@ -678,7 +678,7 @@ const fishComponents = {
       type: FishBodyPart.DORSAL_FIN
     }
   },
-  // TAIL KNN DATA: [sections, width]
+  // TAIL KNN DATA: []
   tails: {
     fish1: {
       index: 0,
