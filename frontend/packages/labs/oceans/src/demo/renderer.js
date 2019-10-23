@@ -8,7 +8,7 @@ import {
   bodyAnchorFromType,
   colorFromType
 } from './helpers';
-import fishData, {FishBodyPart} from '../utils/fishData';
+import {fishData, FishBodyPart} from '../utils/fishData';
 
 var $time =
   Date.now ||

@@ -1,9 +1,5 @@
 import {PropTypes} from 'react';
 
-const normalizeColorComponent = colorcomp => {
-  return colorcomp / 255;
-};
-
 // Describe the different body parts of the fish. The object
 // is ordered by its render dependency (i.e., dorsalFin should be rendered
 // before body).
@@ -17,7 +13,7 @@ export const FishBodyPart = Object.freeze({
   EYE: 6
 });
 
-const fishData = {
+const fishComponents = {
   // BODY KNN DATA: [height:width ratio]
   bodies: {
     fish6: {
@@ -30,7 +26,7 @@ const fishData = {
       pectoralFinFrontAnchor: [55, 72],
       dorsalFinAnchor: [23, -15],
       tailAnchor: [107, 41],
-      knnData: [0.6],
+      knnData: [1.46, 7117],
       type: FishBodyPart.BODY
     },
     fish3: {
@@ -56,7 +52,7 @@ const fishData = {
       pectoralFinFrontAnchor: [45, 82],
       dorsalFinAnchor: [20, -18],
       tailAnchor: [97, 50],
-      knnData: [1.0],
+      knnData: [1, 8004],
       type: FishBodyPart.BODY
     },
     fish2: {
@@ -69,7 +65,7 @@ const fishData = {
       pectoralFinFrontAnchor: [50, 75],
       dorsalFinAnchor: [33, -19],
       tailAnchor: [92, 47],
-      knnData: [0.8],
+      knnData: [1.09, 7914],
       type: FishBodyPart.BODY
     },
     fish4: {
@@ -81,8 +77,8 @@ const fishData = {
       pectoralFinBackAnchor: [52, 73],
       pectoralFinFrontAnchor: [77, 68],
       dorsalFinAnchor: [33, -23],
-      tailAnchor: [144, 19],
-      knnData: [0.4],
+      tailAnchor: [139, 19],
+      knnData: [1.98, 9064],
       type: FishBodyPart.BODY
     },
     wide1: {
@@ -793,58 +789,61 @@ const fishData = {
       bodyRgb: [126, 205, 202],
       finRgb: [248, 192, 157],
       mouthRgb: [221, 148, 193],
-      knnData: [
-        normalizeColorComponent(126),
-        normalizeColorComponent(205),
-        normalizeColorComponent(202),
-        normalizeColorComponent(248),
-        normalizeColorComponent(192),
-        normalizeColorComponent(157)
-      ]
+      knnData: [126, 205, 202]
     },
     palette2: {
       bodyRgb: [253, 192, 77],
       finRgb: [235, 120, 50],
       mouthRgb: [235, 120, 50],
-      knnData: [
-        normalizeColorComponent(253),
-        normalizeColorComponent(192),
-        normalizeColorComponent(77),
-        normalizeColorComponent(235),
-        normalizeColorComponent(120),
-        normalizeColorComponent(50)
-      ]
+      knnData: [253, 192, 77]
     },
     palette3: {
       bodyRgb: [39, 116, 186],
       finRgb: [253, 217, 136],
       mouthRgb: [253, 217, 136],
-      knnData: [
-        normalizeColorComponent(39),
-        normalizeColorComponent(116),
-        normalizeColorComponent(186),
-        normalizeColorComponent(253),
-        normalizeColorComponent(217),
-        normalizeColorComponent(136)
-      ]
+      knnData: [39, 116, 186]
     },
     palette4: {
       bodyRgb: [21, 52, 64],
       finRgb: [200, 220, 92],
       mouthRgb: [200, 220, 92],
-      knnData: [
-        normalizeColorComponent(21),
-        normalizeColorComponent(52),
-        normalizeColorComponent(64),
-        normalizeColorComponent(200),
-        normalizeColorComponent(220),
-        normalizeColorComponent(92)
-      ]
+      knnData: [21, 52, 64]
     }
   }
 };
 
-export default fishData;
+const generateKnnData = () => {
+  Object.keys(fishComponents).forEach(key => {
+    const knnDataLength = Object.values(fishComponents[key])[0].knnData.length;
+    const minArray = new Array(knnDataLength);
+    minArray.fill(Number.POSITIVE_INFINITY);
+    const maxArray = new Array(knnDataLength);
+    maxArray.fill(Number.NEGATIVE_INFINITY);
+    Object.values(fishComponents[key]).forEach(component => {
+      for (var i = 0; i < component.knnData.length; ++i) {
+        if (component.knnData[i] < minArray[i]) {
+          minArray[i] = component.knnData[i];
+        }
+        if (component.knnData[i] > maxArray[i]) {
+          maxArray[i] = component.knnData[i];
+        }
+      }
+    });
+    Object.values(fishComponents[key]).forEach(component => {
+      for (var i = 0; i < component.knnData.length; ++i) {
+        if (maxArray[i] === minArray[i]) {
+          component.knnData[i] = 0;
+        } else {
+          component.knnData[i] =
+            (component.knnData[i] - minArray[i]) / (maxArray[i] - minArray[i]);
+        }
+      }
+    });
+  });
+  return fishComponents;
+};
+
+export const fishData = generateKnnData();
 
 export const bodyShape = PropTypes.shape({
   src: PropTypes.string.isRequired,

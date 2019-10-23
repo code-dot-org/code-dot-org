@@ -1,4 +1,4 @@
-import fishData from './fishData';
+import {fishData} from './fishData';
 
 export const generateRandomFish = id => {
   const fish = fishData;
