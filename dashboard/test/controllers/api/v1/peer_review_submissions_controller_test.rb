@@ -3,7 +3,12 @@ require 'test_helper'
 class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
   self.use_transactional_test_case = true
 
-  setup_all do
+  setup do
+    @plc_reviewer = create :plc_reviewer
+    sign_in(@plc_reviewer)
+  end
+
+  def common_scenario
     @course_unit = create :plc_course_unit
     @level_1, @level_2, @level_3 = create_list :free_response, 3, peer_reviewable: true
 
@@ -17,7 +22,6 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
     create :plc_user_course_enrollment, user: @submitter, plc_course: @course_unit.plc_course
     @teacher_reviewer = create :teacher
     create :plc_user_course_enrollment, user: @teacher_reviewer, plc_course: @course_unit.plc_course
-    @plc_reviewer = create :plc_reviewer
 
     levels.each do |level|
       create_peer_reviews_for_user_and_level(@submitter, level)
@@ -39,11 +43,9 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
     assert_equal 6, PeerReview.count
   end
 
-  setup do
-    sign_in(@plc_reviewer)
-  end
-
   test 'Peer reviews with email filter only gets those peer reviews' do
+    common_scenario
+
     # Create some for another submitter
     other_submitter = create :teacher
     create_peer_reviews_for_user_and_level(other_submitter, @level_3)
@@ -74,9 +76,9 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
     danielle = create :teacher, name: 'Danielle B'
     gerbil = create :teacher, name: 'Toothy the Gerbil'
 
-    create_peer_reviews_for_user_and_level daneel, @level_3
-    create_peer_reviews_for_user_and_level danielle, @level_3
-    create_peer_reviews_for_user_and_level gerbil, @level_3
+    create_peer_reviews_for_user daneel
+    create_peer_reviews_for_user danielle
+    create_peer_reviews_for_user gerbil
 
     # Try to find "Daneel" and "Danielle" but not "Toothy"
     get :index, params: {user_q: 'Dan'}
@@ -100,6 +102,7 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
   end
 
   test 'All peer reviews gets the first page of peer reviews submissions' do
+    common_scenario
     get :index
     assert_response :success
     response = JSON.parse(@response.body)
@@ -129,6 +132,8 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
   end
 
   test 'can retrieve a different page of peer review results' do
+    common_scenario
+
     test_page_size = 5
 
     # Create many peer reviews to test pagination
@@ -282,6 +287,7 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
   end
 
   test 'Peer Review report returns expected columns' do
+    common_scenario
     create :peer_review, reviewer: @submitter, script: @course_unit.script
     create :peer_review, reviewer: @submitter
 
@@ -349,7 +355,27 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
 
   def create_peer_reviews_for_user_and_level(user, level)
     level_source = create :level_source, level: level
-    user_level = create :user_level, user: user, level: level, level_source: level_source, script: @course_unit.script, best_result: ActivityConstants::UNREVIEWED_SUBMISSION_RESULT
+    user_level = create :user_level,
+      user: user,
+      level: level,
+      level_source: level_source,
+      script: @course_unit.script,
+      best_result: ActivityConstants::UNREVIEWED_SUBMISSION_RESULT
+
+    PeerReview.create_for_submission(user_level, level_source.id)
+  end
+
+  def create_peer_reviews_for_user(user)
+    course_unit = create :plc_course_unit
+    level = create :free_response, peer_reviewable: true
+    create :script_level, script: course_unit.script, levels: [level]
+    level_source = create :level_source, level: level
+    user_level = create :user_level,
+      user: user,
+      level: level,
+      level_source: level_source,
+      script: course_unit.script,
+      best_result: ActivityConstants::UNREVIEWED_SUBMISSION_RESULT
 
     PeerReview.create_for_submission(user_level, level_source.id)
   end
