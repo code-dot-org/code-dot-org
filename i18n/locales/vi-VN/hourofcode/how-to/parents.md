@@ -1,13 +1,14 @@
 ---
-title: <%= hoc_s(:title_how_to_parents).inspect %>
+title: How-to guide for parents
 layout: wide
 nav: how_to_nav
 ---
-<%= view :signup_button %>
 
-# How to do an Hour of Code with your child
+{{ signup_button }}
 
-### Complete an Hour of Code at home or volunteer to bring it to your child’s classroom!
+# Làm thế nào để cùng thực hiện Giờ lập trình với con của bạn
+
+### Hoàn thành Giờ lập trình tại nhà hoặc các bạn tình nguyện viên sẽ đến hướng dẫn tại ngay lớp học của con bạn!
 
 * * *
 
@@ -15,11 +16,11 @@ nav: how_to_nav
 
 ## 2) Choose a tutorial
 
-We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
+We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
 
 **All Hour of Code tutorials are self-guided - allowing your child to work at their own pace and skill level**
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
+[![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
 ## 3) Lên kế hoạch nhu cầu công nghệ của bạn
 
@@ -36,13 +37,13 @@ Khởi động Một Giờ Lập Trình của bạn bằng cách truyền cảm 
 - Video giới thiệu chính thức của Code.org, với các nhân vật là Bill Gates, Mark Zuckerberg,Ngôi sao NBA, Chris Bosh (Độ dài lần lượt [1 phút](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 phút](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 phút](https://www.youtube.com/watch?v=dU1xS07N-FA)).
 - The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A).
 - [ Tổng thống Obama kêu gọi tất cả các sinh viên học khoa học máy tính](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-- Find more inspirational [resources](%= codeorg_url('/inspire') %) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 Chẳng sao cả nếu cả bạn và học sinh đều chưa biết gì về khoa học máy tính. Dưới đây là một số ý tưởng để bạn có thể giới thiệu hoạt động Giờ Lập Trình của mình:
 
 - Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
 - Lên danh sách những thứ sử dụng mã hóa trong đời sống hằng ngày.
-- See tips for getting girls interested in computer science [here](%= codeorg_url('/girls') %).
+- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
 
 Cần thêm ý tưởng? Hãy vào xem [các chương trình dạy mẫu](/files/AfterschoolEducatorLessonPlanOutline.docx) thực tiễn tốt nhất từ các giáo viên dày dạn kinh nghiệm.
 
@@ -62,7 +63,7 @@ Bạn có thể trả lời:
 
 ## 6) Ăn mừng
 
-[Print certificates](%= codeorg_url('/certificates') %) for your child (and yourself!).
+[Print certificates]({{ urls/certificates }}) for your child (and yourself!).
 
 Chia sẻ hình ảnh và video lớp học Một Giờ Lập Trình của bạn lên các phương tiện truyền thông xã hội. Sử dụng #HourOfCode và @codeorg để chúng tôi cũng có thể ghi nhận thành công của bạn!
 
@@ -72,7 +73,7 @@ Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/20014
 
 The Hour of Code is just the first step in a journey to learn more about how technology works and how to create software applications. To continue this journey:
 
-- Encourage your child to continue [to learn online](%= codeorg_url('/learn/beyond') %).
-- Help [promote](%= resolve_url('/promote') %) computer science education in your child’s school district.
+- Encourage your child to continue [to learn online]({{ urls/learn_beyond }}).
+- Help [promote]({{ urls/promote }}) computer science education in your child’s school district.
 
-<%= view :signup_button %>
+{{ signup_button }}

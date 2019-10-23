@@ -31,6 +31,7 @@ class ScriptDSL < BaseDSL
     @is_stable = nil
     @supported_locales = []
     @pilot_experiment = nil
+    @editor_experiment = nil
     @project_sharing = nil
     @curriculum_umbrella = nil
   end
@@ -58,6 +59,7 @@ class ScriptDSL < BaseDSL
   string :version_year
   string :curriculum_path
   string :pilot_experiment
+  string :editor_experiment
   string :curriculum_umbrella
 
   def teacher_resources(resources)
@@ -120,6 +122,7 @@ class ScriptDSL < BaseDSL
       is_stable: @is_stable,
       supported_locales: @supported_locales,
       pilot_experiment: @pilot_experiment,
+      editor_experiment: @editor_experiment,
       project_sharing: @project_sharing,
       curriculum_umbrella: @curriculum_umbrella
     }
@@ -295,6 +298,7 @@ class ScriptDSL < BaseDSL
     s << 'is_stable true' if script.is_stable
     s << "supported_locales #{script.supported_locales}" if script.supported_locales
     s << "pilot_experiment '#{script.pilot_experiment}'" if script.pilot_experiment
+    s << "editor_experiment '#{script.editor_experiment}'" if script.editor_experiment
     s << 'project_sharing true' if script.project_sharing
     s << "curriculum_umbrella '#{script.curriculum_umbrella}'" if script.curriculum_umbrella
 
@@ -306,9 +310,9 @@ class ScriptDSL < BaseDSL
   def self.serialize_stages(script)
     s = []
     script.stages.each do |stage|
-      t = "stage '#{stage.name}'"
+      t = "stage '#{escape(stage.name)}'"
       t += ', lockable: true' if stage.lockable
-      t += ", flex_category: '#{stage.flex_category}'" if stage.flex_category
+      t += ", flex_category: '#{escape(stage.flex_category)}'" if stage.flex_category
       s << t
       stage.script_levels.each do |sl|
         type = 'level'
@@ -362,15 +366,19 @@ class ScriptDSL < BaseDSL
 
       s << "level_concept_difficulty '#{level.summarize_concept_difficulty}'" if level.level_concept_difficulty
     end
-    l = "#{type} '#{level.key.gsub("'") {"\\'"}}'"
+    l = "#{type} '#{escape(level.key)}'"
     l += ', active: false' if experiments.empty? && active == false
     l += ', active: true' if experiments.any? && (active == true || active.nil?)
     l += ", experiments: #{experiments.to_json}" if experiments.any?
-    l += ", progression: '#{progression}'" if progression
+    l += ", progression: '#{escape(progression)}'" if progression
     l += ', named: true' if named
     l += ', assessment: true' if assessment
     l += ', challenge: true' if challenge
     s << l
     s
+  end
+
+  def self.escape(str)
+    str.gsub("'") {"\\'"}
   end
 end

@@ -69,7 +69,7 @@ def restore_redacted_files
       $stdout.flush
 
       if original_path.include? "course_content"
-        restored_data = RedactRestoreUtils.restore_file(original_path, translated_path)
+        restored_data = RedactRestoreUtils.restore_file(original_path, translated_path, ['blockly'])
         translated_data = JSON.parse(File.read(translated_path))
         File.open(translated_path, "w") do |file|
           file.write(JSON.pretty_generate(translated_data.deep_merge(restored_data)))

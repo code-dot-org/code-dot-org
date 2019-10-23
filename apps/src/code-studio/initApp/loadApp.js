@@ -4,7 +4,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {TestResults} from '@cdo/apps/constants';
 import {getStore} from '../redux';
-import {SignInState, mergeProgress} from '../progressRedux';
+import {mergeProgress} from '../progressRedux';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
 import {files} from '@cdo/apps/clientApi';
 var renderAbusive = require('./renderAbusive');
@@ -148,9 +149,13 @@ export function setupApp(appOptions) {
           lastSavedProgram
         );
       }
-      // report.callback will already have the correct milestone post URL in
-      // the contained level case, unless we're editing blocks
+      // Our report will already have the correct callback and program
+      // in the contained level case, unless we're editing blocks.
       if (appOptions.level.edit_blocks || !appOptions.hasContainedLevels) {
+        if (appOptions.hasContainedLevels) {
+          var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+          report.program = Blockly.Xml.domToText(xml);
+        }
         report.callback = appOptions.report.callback;
       }
       trackEvent('Activity', 'Lines of Code', window.script_path, report.lines);
@@ -427,7 +432,7 @@ function loadAppAsync(appOptions) {
         }
 
         const store = getStore();
-        const signInState = store.getState().progress.signInState;
+        const signInState = store.getState().currentUser.signInState;
         if (signInState === SignInState.SignedIn) {
           progress.showDisabledBubblesAlert();
         }
@@ -472,6 +477,12 @@ const sourceHandler = {
   },
   getLevelHtml() {
     return window.Applab && Applab.getHtml();
+  },
+  setInitialLibrariesList(libraries) {
+    getAppOptions().level.libraries = libraries;
+  },
+  getLibrariesList() {
+    return getAppOptions().level.libraries;
   },
   setInitialLevelSource(levelSource) {
     getAppOptions().level.lastAttempt = levelSource;

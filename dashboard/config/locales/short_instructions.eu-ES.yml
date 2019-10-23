@@ -178,6 +178,9 @@ eu-ES:
       K-1 Bee Loops 12: 'Ebaluazioa: erabili begiztak nektarra eta eztia jasotzeko
         eta mugitzeko!'
       K-1 Bee Loops 5: Erabili begiztak nektarra eta eztia jasotzeko!
+      K-1 Bee Loops 7: Jaso nektarra eztia egiteko!
+      K-1 Bee Loops 8: Jaso nektarra eztia egiteko!
+      K-1 Bee Loops 9: Jaso nektar guztia eta egin ahal den ezti guztia.
       K-1 Maze 10: 'Inguratu TNTa zerriarekin elkar nadin! '
       K-1 Maze 2: Mugi nazazu ekialdera zerriarekin elkartzeko!
       K-1 Maze 3: Mugi nazazu hegoaldera zerriarekin elkartzeko!
@@ -349,6 +352,8 @@ eu-ES:
         guztiei. Errebotatu pilota bandera jotzen duen arte.
       bounce_7_sports: Itsatsi blokeak "... jotzean" eta "... sakatzean" bloke guztiei.
         Errebotatu pilota bandera jotzen duen arte.
+      course1_artist_loops_challenge3: '"Laguntzen ahal didazu txorientzat bi etxetxo
+        egiten?"'
       course4_artist_fwp_challenge1: Saia zaitez programa hau exekutatzen. Aldaketak
         egin, zer gertatzen den ikusteko. Asma dezakezu nola funtzionatzen duen? (edo
         ezabatu eta guztiz desberdina den zerbaitekin aldatu)

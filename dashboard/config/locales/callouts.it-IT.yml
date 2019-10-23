@@ -16,6 +16,9 @@ it-IT:
       4-5 Bee Conditionals 2:
         4_5_Bee_Conditionals_2_1: Ricorda di controllare OGNI nuvola per vedere se
           ha un FIORE. Invece non devi proprio cercare favi.
+      AppLab Intro 7 - Change Screen Color:
+        applab_hoc_finish: Lo schermo è diventato verde? Se sì, clicca 'Fine'. Sennò,
+          clicca 'Resetta', modifica il tuo codice, e clicca di nuovo 'Esegui'.
       AppLab Intro 7 - thisOrThatAddButton:
         AppLabHoCFinal11: Ora sei in Modalità Interfaccia.
       CSD U3 Variables Predict Where X:
@@ -825,6 +828,15 @@ it-IT:
       courseF_artist_for1_2019:
         courseF_artist_for1_1: La cassetta degli attrezzi è organizzata in categorie,
           in modo da lasciare più spazio per il codice.  I cicli li trovi qui.
+      courseF_artist_variables3:
+        courseF_artist_variables3_a: Usa questo blocco per impostare il valore della
+          variabile `length` (lunghezza)
+      courseF_artist_variables3_2018:
+        courseF_artist_variables3_a: Usa questo blocco per impostare il valore della
+          variabile `length` (lunghezza)
+      courseF_artist_variables3_2019:
+        courseF_artist_variables3_a: Usa questo blocco per impostare il valore della
+          variabile `length` (lunghezza)
       courseF_bee_conditionals2:
         courseF_bee_conditionals2_2: La sezione degli strumenti è ora in modalità
           categorie. Tutti i blocchi di cui hai bisogno sono al di sotto di queste

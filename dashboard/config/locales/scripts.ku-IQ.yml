@@ -24,6 +24,16 @@ ku:
               name: 'هونەرمەند: خولانەوەکان'
             'Artist: Sequence':
               name: 'هونەر: ریز'
+            Conditionals:
+              name: مەرجیەکان
+            Graph Paper Programming:
+              name: بەرنامەڕێژی پەڕەی هێڵکاری
+        course3:
+          stages:
+            Bounce:
+              name: هەڵبەزینەوە
+            Computational Thinking:
+              name: بیرکردنەوەی ژمارەیی
         Course4pre:
           stages:
             'Artist: Loops':
@@ -34,44 +44,129 @@ ku:
           stages:
             Variables:
               name: گۆڕاوەکان
+        algebra:
+          stages:
+            'Eval: Conditionals':
+              name: مەرجیەکان
+        netsim:
+          title: هاوشێوەسازی ئینتەرنێت
         20-hour:
           stages:
+            Abstraction:
+              name: پوختە
+            Algorithms:
+              name: خوارزمیەکان
+            Computational Thinking:
+              name: بیرکردنەوەی ژمارەیی
+            Conditionals:
+              name: مەرجیەکان
+            Functions:
+              name: فرمانەکان
+            Graph Paper Programming:
+              name: بەرنامەڕێژی پەڕەی هێڵکاری
             Introduction to Computer Science:
-              name: پێسەكی زانستی كۆمپیتەر
+              name: پێشەكیەک بۆ زانستی کۆمپیوتەر
+            Relay Programming:
+              name: بەرنامەڕێژی بە پێشبڕکێ
             Song Writing:
               name: گۆرانی نووسین
             The Artist:
-              name: هونەرەكە
+              name: هونەرمەندەکە
             The Artist 2:
-              name: هونەرەكە ٢
+              name: هونەرمەندەکە 2
             The Artist 3:
-              name: هونەرەكە ٣
+              name: هونەرمەندەكە ٣
             The Artist 4:
-              name: هونەرەكە ٤
+              name: هونەرمەندەکە 4
             The Artist 5:
-              name: هونەرەكە ٥
+              name: هونەرمەندەکە 5
             The Farmer:
-              name: جوتیارەكە
+              name: جووتیارەكە
+            The Farmer 2:
+              name: جووتیارەكە 2
             The Farmer 3:
-              name: جووتیارەكە ٣
+              name: جووتیارەكە 3
             The Internet:
-              name: ئینترنێت
+              name: ئینتەرنێت
             The Maze:
-              name: Labyrint
+              name: مەتەڵە ڕێگا
+            Wrap-up:
+              name: پوختەی بابەت
         edit-code:
           stages:
             The Artist:
-              name: هونەرەكە
+              name: هونەرمەندەکە
             The Maze:
-              name: Labyrint
+              name: مەتەڵە ڕێگا
+        events:
+          stages:
+            Bounce:
+              name: هەڵبەزینەوە
+        jigsaw:
+          title: مەتەڵە وێنە
+          stages:
+            Jigsaw:
+              name: مەتەڵە وێنە
+        allthethings:
+          stages:
+            Bounce:
+              name: هەڵبەزینەوە
+            Jigsaw:
+              name: مەتەڵە وێنە
+        cspfacilitator:
+          stages:
+            App Lab:
+              name: تاقیگەی ئاپ
+            Internet Simulator:
+              name: هاوشێوەسازی ئینتەرنێت
+        ECSPD2:
+          stages:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            Wrap-up:
+              name: پوختەی بابەت
+        ECSPD2-iZone:
+          stages:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            Wrap-up:
+              name: پوختەی بابەت
+        ECSPD2-NexTech:
+          stages:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            Wrap-up:
+              name: پوختەی بابەت
         asUnplugged:
           stages:
+            Graph Paper Programming:
+              name: بەرنامەڕێژی پەڕەی هێڵکاری
             Happy Maps:
               name: نەخشەی دڵخۆش
         csp1-2017:
           stages:
             The Internet:
-              name: ئینترنێت
+              name: ئینتەرنێت
+        CSDU3-Draft:
+          stages:
+            Functions:
+              name: فرمانەکان
+        allthehiddenthings:
+          stages:
+            Game Lab:
+              name: تاقیگەی یاری
         gradeKinder:
           stages:
             Loops:
@@ -80,24 +175,58 @@ ku:
           stages:
             Loops:
               name: گرێکان
+        ecs-unit1:
+          stages:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            Wrap-up:
+              name: پوختەی بابەت
+        grade3:
+          stages:
+            Bounce:
+              name: هەڵبەزینەوە
         csd3-2017:
           stages:
+            Functions:
+              name: فرمانەکان
             Variables:
               name: گۆڕاوەکان
+            Conditionals:
+              name: مەرجیەکان
         k5concepts:
           stages:
+            Conditionals:
+              name: مەرجیەکان
+            Functions:
+              name: فرمانەکان
             Loops:
               name: گرێکان
             Variables:
               name: گۆڕاوەکان
+        basketball:
+          stages:
+            Bounce:
+              name: هەڵبەزینەوە
         csd2-2017:
           stages:
             Lists:
               name: لیستەکان
+        coursee-draft:
+          stages:
+            Conditionals:
+              name: مەرجیەکان
         csd6-draft:
           stages:
             Lists:
               name: لیستەکان
+        coursee-ramp:
+          stages:
+            Conditionals:
+              name: مەرجیەکان
         csd6-2017:
           stages:
             Lists:
@@ -106,6 +235,14 @@ ku:
           stages:
             Variables:
               name: گۆڕاوەکان
+            Conditionals:
+              name: مەرجیەکان
+            Functions:
+              name: فرمانەکان
+        csd3-old:
+          stages:
+            Functions:
+              name: فرمانەکان
         csd2-draft:
           stages:
             Lists:
@@ -114,8 +251,28 @@ ku:
           stages:
             Variables:
               name: گۆڕاوەکان
+            Conditionals:
+              name: مەرجیەکان
+            Functions:
+              name: فرمانەکان
             'null':
               name: بەتاڵ
+        artist-and-bb8:
+          stages:
+            Bounce:
+              name: هەڵبەزینەوە
+        e-f-ramp:
+          stages:
+            Conditionals:
+              name: مەرجیەکان
+        new-e:
+          stages:
+            Conditionals:
+              name: مەرجیەکان
+        course-e-2018:
+          stages:
+            Conditionals:
+              name: مەرجیەکان
         csd6-old:
           stages:
             Lists:
@@ -124,10 +281,18 @@ ku:
           stages:
             Variables:
               name: گۆڕاوەکان
+            Conditionals:
+              name: مەرجیەکان
+            Functions:
+              name: فرمانەکان
         csd3-2018:
           stages:
             Variables:
               name: گۆڕاوەکان
+            Conditionals:
+              name: مەرجیەکان
+            Functions:
+              name: فرمانەکان
         csd2-2018:
           stages:
             Lists:
@@ -138,26 +303,52 @@ ku:
               name: نەخشەی دڵخۆش
         express-2018:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: بەرنامەڕێژی پەڕەی هێڵکاری
             Internet:
-              name: ئینترنێت
+              name: ئینتەرنێت
+            Relay Programming:
+              name: بەرنامەڕێژی بە پێشبڕکێ
+            Graph Paper Programming:
+              name: بەرنامەڕێژی پەڕەی هێڵکاری
+        coursed-2018:
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: بەرنامەڕێژی پەڕەی هێڵکاری
+            Graph Paper Programming:
+              name: بەرنامەڕێژی پەڕەی هێڵکاری
+            Relay Programming:
+              name: بەرنامەڕێژی بە پێشبڕکێ
         coursee-2018:
           stages:
             Internet:
-              name: ئینترنێت
+              name: ئینتەرنێت
         csp1-2018:
           stages:
             The Internet:
-              name: ئینترنێت
+              name: ئینتەرنێت
         coursef-2019:
           stages:
             The Artist:
-              name: هونەرەكە
+              name: هونەرمەندەکە
             Internet:
-              name: ئینترنێت
+              name: ئینتەرنێت
+        coursed-2019:
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: بەرنامەڕێژی پەڕەی هێڵکاری
+            Relay Programming:
+              name: بەرنامەڕێژی بە پێشبڕکێ
+        express-2019:
+          stages:
+            Relay Programming:
+              name: بەرنامەڕێژی بە پێشبڕکێ
         andrea-test:
           stages:
             'null':
               name: بەتاڵ
+        gamelab:
+          title: تاقیگەی یاری
         coursea-2019:
           stages:
             'Programming: Happy Maps':
@@ -170,10 +361,18 @@ ku:
           stages:
             Variables:
               name: گۆڕاوەکان
+            Conditionals:
+              name: مەرجیەکان
+            Functions:
+              name: فرمانەکان
         csp1-2019:
           stages:
             The Internet:
-              name: ئینترنێت
+              name: ئینتەرنێت
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: بەرنامەڕێژی پەڕەی هێڵکاری
         csd2-pilot:
           stages:
             Lists:
@@ -182,3 +381,7 @@ ku:
           stages:
             Variables:
               name: گۆڕاوەکان
+            Conditionals:
+              name: مەرجیەکان
+            Functions:
+              name: فرمانەکان

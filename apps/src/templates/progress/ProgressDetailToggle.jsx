@@ -96,6 +96,7 @@ class ProgressDetailToggle extends React.Component {
           type="button"
           value="detail"
           style={whiteBorder ? styles.whiteBorder : undefined}
+          className="uitest-toggle-detail"
         >
           <img
             src={isSummaryView ? images.detailInactive : images.detailActive}

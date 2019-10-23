@@ -1,5 +1,5 @@
 import React from 'react';
-import {sort} from 'reactabular';
+import * as sort from 'sortabular';
 import FontAwesome from '../FontAwesome';
 
 /**

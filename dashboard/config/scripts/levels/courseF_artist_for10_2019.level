@@ -40,16 +40,22 @@
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
     "parent_level_id": 11023,
-    "preload_asset_list": null,
     "encrypted": "false",
     "encrypted_examples": "dqIHymIqnn0C792x4xLmbqc5B8ePan6ZCqMfe8zCulRpF+gSmTg9QQlr3zK0\nffZk/UULNs7iW++jG3pdagbrkU0ndiI17q64GEXQbtnWg3XzyckjOIcL2Qvg\nlSDOhBDmvPQrZaqZew2H+znS/cAdfQ==\n",
     "mini_rubric": "false",
-    "teacher_markdown": "This level is a “free play”. These levels have some characteristics you may want to explore before starting. \r\n\r\n* These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have created something they like. There is no one right answer! \r\n* Example solutions are available for this level which can be viewed by opening the teacher panel to the right.\r\n"
+    "teacher_markdown": "This level is a “free play”. These levels have some characteristics you may want to explore before starting. \r\n\r\n* These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have created something they like. There is no one right answer! \r\n* Example solutions are available for this level which can be viewed by opening the teacher panel to the right.\r\n",
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2017-06-20 20:45:14 +0000\",\"changed\":[\"toolbox_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-18 18:03:14 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-10 00:07:09 +0000\",\"changed\":[],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-10 00:07:44 +0000\",\"changed\":[\"toolbox_blocks\",\"authored_hints\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-10 00:08:20 +0000\",\"changed\":[\"toolbox_blocks\",\"authored_hints\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-10 00:08:37 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2018-05-09 02:54:34 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-05 00:42:20 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-18 19:48:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-18 20:03:50 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2019-07-10 23:14:58 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":958,\"changed_by_email\":\"stephanie.wong@code.org\"},{\"changed_at\":\"2019-07-10 23:17:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":958,\"changed_by_email\":\"stephanie.wong@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 1,
+    "repeat_loops": 1,
+    "for_loops": 1,
+    "variables": 1,
+    "functions": 1
   }
 }]]></config>
   <blocks>

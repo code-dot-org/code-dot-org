@@ -43,6 +43,7 @@ sk:
           vytvorenia Code.org účtu s <strong>%{provider}</strong> pre <strong>%{email}</strong>.
         error:
           future: nemôže byť v budúcnosti
+  beta: beta
   hello: Ahoj svet
   welcome_back: Vitaj späť, %{name}
   your_professional_learning_plan: Tvoj profesionálny učebný plán
@@ -56,14 +57,9 @@ sk:
   okay: Dobre
   or: alebo
   heading_x_of_y: "%{heading} (strana %{x} z %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Pridať učiteľa:'
       placeholder: Kód sekcie (ABCDEF)
-      instructions: Zadaj prosím kód, ktorý si dostal od tvojho učiteľa. Je to 6 písmenový
-        kód, niečo ako "ABCDEF".
-      instructions_short: Zadaj 6-miestný kód triedy
-    submit: Pridať učiteľa
   add_hint_form:
     placeholder: Prosím zadaj sem svoj tip
     submit: Pridať tip
@@ -92,9 +88,6 @@ sk:
     continue_with: Pokračovať s %{provider}
     sign_in_with: Prihlásiť sa cez %{provider}
     signed_in: Prihlásený!
-    signed_out: Úspešne si sa odhlásil z <a href="%{url}">Code.org</a>.
-    sign_out_of: Prihlásenie prebehlo cez %{provider}. <a href="%{url}">Kliknutím
-      sem</a> sa odhlásiš z %{provider}.
     already_signedup: Už ste zaregistrovaní?
     notyet_signedup: Ešte ste sa nepridali?
     google_oauth2: Google
@@ -155,9 +148,6 @@ sk:
     valid_password: Platné heslo!
     invalid_password: Heslo musí obsahovať aspoň 6 znakov
     mismatch_password: Zadané dve heslá sa nezhodujú
-    agree_tos_privacy: Súhlasím s <a href='http://code.org/tos'>Podmienkami používania
-      služby</a> a so <a href='http://code.org/privacy'>Zásadami ochrany osobných
-      údajov</a>.
     under_13_consent: Ak mám menej ako 13 rokov potvrdzujem že mám súhlas rodiča alebo
       zákonného zástupcu používať stránku a služby Code.org.
     student_consent: Potvrdzujem, že mám súhlas rodiča alebo zákonného zástupcu používať
@@ -166,13 +156,6 @@ sk:
       štátov amerických (USA).
     my_data_to_us: Údaje z používania tejto stránky môžu byť zaslané a uložené alebo
       spracované v Spojených štátoch amerických (USA).
-    student_terms: Emailové adresy nie sú ukladané vo forme, ktorá by nám umožňovala
-      kontaktovať študentov. Študenti nikdy nedostanú emaily od Code.org okrem emailov
-      na obnovenie hesla. Pre viac informácií si pozrite naše <a href='http://code.org/privacy'>
-      Zásady ochrany osobných údajov</a>.
-    teacher_terms: Súhlasím, že budem dodržiavať Podmienky používania služby. Pre
-      viac informácií o ochrane súkromia, kliknite na <a href='http://code.org/privacy'>
-      Zásady ochrany osobných údajov</a>.
     additional_information: Potrebujeme niektoré ďalšie informácie pre pokračovanie
       vášho prihlásenia/registrácie.
     user_type_button: Zmeniť typ účtu
@@ -229,8 +212,6 @@ sk:
     login: Prihlásiť sa
     invalid_login: Neplatné prihlasovacie meno, prosím, skús to ešte raz
     pair_programming: Mám partnera pri počítači
-    student_privacy: Zisti, prečo nevidíš tvoje plné meno <a href='%{student_privacy_blog}'
-      target='_blank'>na tomto odkaze</a>.
   password:
     reset_form:
       title: Zabudli ste heslo?
@@ -499,15 +480,12 @@ sk:
       obnovenie hesla)
     update: Aktualizujte konto
     account_successfully_updated: Konto bolo úspešne aktualizované.
+    update_email: Aktualizovať
   user_level:
     completed: Dokončené
     tried: Vyskúšaný
   home:
     title: Štúdio kódu
-    description: Code Studio je domov pre online kurzy vytvorené Code.org
-    lines_of_code: "%{lines_count} RIADKOV KÓDU BOLO NAPÍSANÝCH ŠTUDENTAMI"
-    lines_of_code_linebreak: "%{lines_count} RIADKOV KÓDU<br/>NAPÍSANÉ %{students_count}
-      MILIÓNMI ŠTUDENTOV"
     all_courses: Prehľad kurzov 1, 2 a 3
     lesson_plans: Plány lekcií
     signin_message: Máte účet? %{link}
@@ -545,128 +523,10 @@ sk:
     test_videos_help: Otestujte naše nové video prehrávače na vašej škole
     try_beta_courses: Novinka! Vyskúšajte naše beta kurzy pre žiakov 1. stupňa ZŠ
     use_as_teacher: Použiť túto stránku ako učiteľ
-    heading_hoc2014: "<h2>Hodina Kódu pre</h2><h1>všetky vekové kategórie</h1>"
-    heading_elementary: "<h2>20 hodinové kurzy pre </h2><h1> Základy informatiky (všetky
-      vekové kategórie)</h1>"
-    heading_apps: "<h2>Zábava pre</h2><h1>všetkých</h1>"
-    heading_tools: "<h2>Pripravený na ďalší krok?</h2> <h1> Nástroje pre 2. stupeň
-      základných škôl a stredné školy</h1>"
-    heading_legacy: "<h2>Náš zrýchlený kurz pre</h2><h1>všetky vekové kategórie</h1>"
     your_gallery: Galéria
     no_primary_course: Vyskúšaj kurz v Code Studiu
     choose_next_course: Vyskúšaj kurz Code Štúdia výberom niektorého z kurzov nižšie
     print_certificate: Vytlačiť certifikát
-    announcement_title: Oznámenia
-    announcement_message_fall2016_features: Celé leto sme pracovali na zapracovávaní
-      vašich pripomienok. Odteraz môžete <a href="%{pp_url}" target="_blank">sledovať
-      pokrok viacerých študentov</a> aj keď spoločne programujú na jednom zariadení.
-      Môžete takisto použiť <a href="%{csp_widgets_url}" target="_blank">najlepšie
-      interaktívne nástroje</a> z našich kurzov Základov informatiky v <i>ktorejkoľvek</i>
-      triede. Vaši študenti si už môžu <a href="%{unused_code_url}" target="_blank">ponechať
-      nepoužitý kód</a> na svojej pracovnej ploche a experimentovať s ním! Pozrite
-      si všetky nové funkcionality a dajte nám vedieť, čo si o nich myslíte.
-    announcement_csp_widgets_message: Hľadáte zábavnú formu ako vyučovať ako funguje
-      internet, ako kryptografia pomáha uchovať dáta v bezpečí a podobne? Vybrali
-      sme najlepšie interaktívne nástroje z našich osnov Základy informatiky a vydali
-      sme ich ako samostatné časti, ktoré možete kedykoľvek použiť!
-    announcement_learn_more_button: Zistiť viac
-    announcement_try_now_button: Skúsiť teraz
-    announcement_host_an_hour_button: Hosťuj Hodinu Kódu
-    announcement_watch_video_button: Prehrať video
-    announcement_petition: Ako učiteľ patríte medzi propagátorov hnutia za to, aby
-      každý študent v každej škole dostal príležitosť učiť sa informatiku. A teraz
-      je čas, aby si vaši zástupcovia vypočuli váš názor. Tento týždeň sa zástupcovia
-      učiteľov, 28 guvernérov a generálni riaditelia najväčších amerických spoločností
-      spojili v otvorenom liste, kde žiadajú, aby americký kongres financoval výuku
-      informatiky v rámci celej školskej dochádzky na základných i stredných školách.
-    announcement_petition_button: Pridaj svoje meno
-    announcement_go_beyond_button: Pokračovať ďalej
-    announcement_apply_now: Použiť teraz
-    announcement_all: Sleduj nové vlastnosti a aktualizácie na našom učiteľskom blogu.
-      <a href='%{teacher_blog_url}' target='_blank'>Pozri posledné oznámenia.</a>
-    announcement_hoc_launch: Tisíce vyučujúcich vo viac než 180 krajinách odštartujú
-      výučbu informatiky prostredníctvom Hodiny Kódu 5-11 decembra. Počítame aj s
-      vašou pomocou zaangažovať ešte viac študentov než kedykoľvek predtým. <a href='%{signup_url}'
-      target='_blank'>Zaregistruj si svoju vlastnú Hodinu Kódu</a> a daj vedieť svojím
-      kolegom o tom, že ktokoľvek môže začať vyučovať informatiku.
-    announcement_mc_launch: Jeden z našich najpopulárnejších kurzov má teraz pokračovanie!
-      Celkom nová Hodina Kódu Minecraft Dizajnér umožní študentom vytvoriť vlastné
-      pravidlá pre svet Minecraftu. Žiaci vytvoria unikátne Minecraftové zážitky,
-      ktoré následne môžu zdieľať s priateľmi, či zahrať sa s nimi na telefóne. Prejdite
-      si kurz vo vašej triede na Hodine Kódu.
-    announcement_how_code_studio: Nepotrebujete žiadne skúsenosti nato, aby ste začali
-      vyučovať informatiku vo vašej triede. Code.org ponúka osnovy, učebné plány,
-      vysoko-kvalitné profesionálne vyučovacie programy a tony skvelých nástrojov
-      pre všetky úrovne&mdash;všetko, čo potrebujete, všetko zadarmo. Hľadáte, kde
-      začať? Stiahnite si <a href='%{video_download_url}'>toto video</a>!
-    announcement_go_beyond: Pokračujte aj nad rámec Hodiny Kódu a objavujte koncepty
-      v informatike každý týždeň. Code.org ponúka osnovy, učebné plány, vysoko kvalitné
-      vzdelávacie programy pre učiteľov a veľa výborných nástrojov pre všetky ročníky&mdash;a
-      to všetko zadarmo. :) Nepotrebujete mať žiadne skúsenosti pre začatie výučby
-      informatiky vo Vašej triede. <b>Zistite, aký ďaľší krok je najvhodnejší pre
-      Vašu triedu.</b>
-    announcement_teacher_recruitment: Učitelia ako vy sú vedúcimi osobnosťami hnutia
-      za informatiku. Môžete sa zúčastniť profesionálnych výučbových programov pre
-      učiteľov základných a stredných škôl <strong>zadarmo a bez nákladov pre Vás
-      či Vašu školu</strong>. Staňte sa lídrom v informatike na Vašej škole a prihláste
-      sa na profesionálne školenie.
-    announcement_teacher_recruitment2: Učitelia ako vy sú vedúcimi osobnosťami hnutia
-      za informatiku. Môžete sa zúčastniť profesionálnych výučbových programov pre
-      učiteľov základných a stredných škôl <strong>zadarmo a bez nákladov pre Vás
-      i Vašu školu</strong>. Staňte sa lídrom v informatike na Vašej škole a prihláste
-      sa na profesionálne školenie. Učitelia 2. stupňa ZŠ a stredných škôl sa môžu
-      prihlásiť do 17. marca.
-    announcement_csf_pilot: "<strong>Učitelia základných škôl:</strong> Staňte sa
-      súčasťou aktualizácií našich kurzov Základy informatiky! Hľadáme učiteľov pre
-      pilotnú fázu testovania aktualizovaných osnov Základy informatiky počas zimy
-      a jari v roku 2017. Veľmi radi si vypočujeme Vaše názory pred spustením aktualizácií
-      plánovaných na august 2017."
-    announcement_student_privacy: V Code.org pristupujeme k ochrane súkromia študentov
-      veľmi zodpovedne. Pre ochranu súkromia študentov sme upravili prihlasovaciu
-      stránku vašej triedy tak, že nezobrazuje celé mená. Aj keď táto zmena prispeje
-      k ochrane osobných údajov, naďalej odporúčame používateľom stránky <i>nepoužívať
-      celé mená študentov</i>.
-    announcement_apcsp_recruitment: '<strong>Učitelia Základov informatiky:</strong>
-      Vaši žiaci môžu účinkovať v ďalšom virálnom videu Code.org a podporiť rovesníkov
-      v absolvovaní tohtoročnej skúšky AP Základy informatiky. Pozývame všetkých študentov
-      Základov informatiky, aby nahrali 10-20 sekundové video na Twitter, Instagram
-      alebo Facebook, v ktorom hovoria "Zúčastňujem sa #APCSP skúšky lebo...". Najlepšie
-      príspevky použijeme v našom videu a výhercovia získaju darčekové predmety od
-      Code.org!'
-    announcement_apcsp_recruitment2: Tento rok očakávame, že AP skúška Základov informatiky
-      prelomí rekordy. Účasť študentov na skúške môže dramaticky zlepšiť diverzitu
-      v AP Informatike, ale potrebujeme na o aj Vašu pomoc. Podporte každého študenta
-      informatiky pri absolvovaní AP skúšky Základov informatiky a my vám <a href='%{gift_url}'
-      target='_blank'>zašleme darček</a> (platí len pre vybrané krajiny). Študenti
-      môžu takisto podporiť rovesníkov v celej krajine v našej <a href='%{challenge_url}'
-      target='_blank'>#APCSP video výzve</a>.
-    announcement_apcsp_recruitment3: Tento rok očakávame, že AP skúška Základov informatiky
-      prelomí rekordy. Účasť študentov na skúške môže dramaticky zlepšiť diverzitu
-      v AP Informatike, ale potrebujeme na o aj Vašu pomoc. Podporte každého študenta
-      informatiky pri absolvovaní AP skúšky Základov informatiky a môžete vyhrať <a
-      href='%{gift_url}' target='_blank'>darčekové karty, notebooky alebo iné super
-      ceny</a> (platí len pre vybrané krajiny)! Zdieľajte <a href='%{video_url}' target='_blank'>toto
-      video</a>, aby si študenti mohli vypočuť rovesníkov, ktorí sa zúčastnia skúšky.
-    announcement_csp_deadline: Posledná výzva pre stredoškolských učiteľov. Staňte
-      sa lídrom v informatike na Vašej škole a zúčastnite sa našich vysoko kvalitných
-      výučbových programov pre profesionálov <strong>zadarmo a bez nákladov pre Vás
-      i Vašu školu</strong>. Prihlásiť sa môžete do 14. apríla.
-    announcement_applab_export: App Lab, naše webové programovacie prostredie odteraz
-      podporuje export tvojho kódu! Môžeš začať tvoriť aplikácie presúvaním JavaScriptových
-      blokov, potom si vyexportovať tvoj kód a pokračovať v ktoromkoľvek profesionálnom
-      vývojovom prostredí.
-    announcement_csp_survey: "<b>Gratulujeme všetkým učiteľom Základov informatiky!</b><br
-      />Vaši žiaci z kurzu Základov informatiky, ktorí sa zúčastňujú skúšky AP v informatike
-      sa pridajú k ďalším viac než 50 000 študentom v najväčšej AP skúške v histórií.
-      Nechajme teraz znieť hlas vašich študentov - pripomeňte im, aby na konci vyplnili
-      anketu! Budete si môcť prezrieť odpovede vašich študentov a takisto vám poskytneme
-      súhrnný report z celej krajiny."
-    announcement_navigation_redesign: "<b>Nadchádzajúce zmeny v navigácií na stránke</b><br
-      />Už toto leto vylepšíme navigáciu na Code.org, aby ste vždy mali prístup k
-      Vašim najpoužívanejším položkám z akéhokoľvek miesta na tejto stránke. Hneď
-      po prihlásení sa do vášho učiteľského účtu bude na každej stránke nová navigačná
-      lišta s odkazmi na Vašu domovskú stránku, kurzy, galériu projektov, triedy a
-      profesionálne vzdelávanie."
   move_students:
     new_section_dne: Ospravedlňujeme sa, ale sekcia %{new_section_code} neexistuje.
       Zadajte kód inej sekcie.
@@ -920,11 +780,6 @@ sk:
     header_artist: Code umenie
     report_abuse: Nahlásenie zneužitia
   landing:
-    prerelease: Tento kurz je v <span class='betatext'> beta verzii</span>.  To znamená,
-      že to nie je finálna verzia kurzu a kurz môže byť zmenený na základe prijatých
-      pripomienok a následných vylepšení.
-    prerelease_hoc2014: Tento tutoriál je v <span class='betatext'> beta verzii</span>
-      a je predmetom revízie na základe pripomienok a vylepšení, ktoré sú vykonané.
     report_bug: Nahlásiť chybu
     support: Získať pomoc
     support_url: support.code.org
@@ -1001,11 +856,6 @@ sk:
   age_interstitial:
     age: Váš vek
     header: Aktualizácia údajov na účte
-    message: Sme v procese aktualizácie našich skúseností, ktoré vám poskytnú ešte
-      silnejšiu ochranu súkromia. K tomu potrebujeme aby existujúci používatelia zadali
-      ich vek. <br/> Ako vždy, code.org nikdy neprenajme, nepredá alebo nezdieľa tieto
-      informácie s tretími stranami.
-    sign_out: Ak si neželáte poskytnúť váš vek, môžete sa <a href="%{url}"> odhlásiť</a>.
   terms_interstitial:
     title: Aktualizované podmienky poskytovania služby a ochrany súkromia
     intro_desc: Aktualizovali sme naše Zmluvné podmienky a Zásady ochrany osobných
@@ -1139,10 +989,8 @@ sk:
   peer_review:
     accepted:
       name: Prijaté
-      description: "<strong>Áno</strong>, toto zadanie<strong>spĺňa</strong> požiadavky"
     rejected:
       name: Odmietnuté
-      description: "<strong>Nie</strong>, toto zadanie<strong>nespĺňa</strong> požiadavky"
     escalated:
       name: Vyriešené
       description: Chcel by som, aby inštruktor preskúmal tento návrh
@@ -1288,10 +1136,6 @@ sk:
     download_in_Vietnamese: 'Stiahnuť vo vietnamčine:'
     windows: Windows (64-bitová verzia)
     mac: Mac OS X
-  stage_extras_teacher_message: Pre niektoré z vašich tried máte vypnuté Extra úrovne.
-    Vaši študenti neuvidia túto stránku až kým ich nezapnete. Extra úrovne môžete
-    zapnúť navštívením vášho <a href='http://code.org/teacher-dashboard'>hlavného
-    panelu učiteľa</a>.
   locked_stage: Obsah tejto úrovne nie je viditeľný, pretože táto úroveň je momentálne
     zamknutá. Tvoj učiteľ odomkne túto úroveň, keď sa na nej bude pracovať, alebo
     keď bude kontrolovať tvoje odpovede.
@@ -1408,27 +1252,11 @@ sk:
         Code.org partnerov, a 2) súhlasíte so zdieľaním Vašich údajov s naším medzinárodným
         Code.org partnerom vo vašej krajine, aby sme vám mohli pomôcť pri vašej práci
         - výučbe informatiky.
-      thanks: Ďakujeme za odoslanie! Tešíme sa, že Vás budeme môcť podporovať pri
-        spoznávaní Code.org a našich nástrojov. Dajte nám prosím vedieť Vaše nápady,
-        otázky a postrehy emailom na <a href='%{support_email_url}'>support@code.org</a>
-        alebo príspevkom na <a href='%{teacher_forum_url}' target='_blank'>fóre pre
-        učiteľov</a>!
     logged_out:
       heading: Ďakujeme vám za prejavený záujem o Vzdelávací program pre profesionálov!
       body: Ak chcete začať, musíte sa najprv prihlásiť do vášho účtu na Code.org.
         Pre viac informácií o programe predtým, než začnete vypĺňať prihlášku, navštívte
         <a href="%{url}">Prehľad Vzdelávacieho programu pre profesionálov</a>.
-    not_teacher:
-      body: Ďakujeme vám za záujem o Profesionálny vzdelávací program Code.org! Momentálne
-        ste prihlásený ako študent. Vytvorte si prosím konto pre učiteľa alebo prejdite
-        do <a href="%{user_settings}">nastavení užívateľa</a> pre zmenu typu vášho
-        konta zo študentského na učiteľské.
-      more: Pre viac informácií o programe predtým, než začnete vypĺňať prihlášku,
-        navštívte <a href="%{pl_overview}">Prehľad Vzdelávacieho programu pre profesionálov</a>.
-    no_teacher_email:
-      body: Váš účet nemá priradenú emailovú adresu. Navštívte prosím <a href="%{user_registration}">stránku
-        s nastaveniami vášho účtu</a> pre pridanie emailovej adresy predtým, než vyplníte
-        tento formulár.
   courses_category: Všetky kurzy
   cookie_banner:
     message: Prehliadaním našej stránky alebo kliknutím na "Súhlasím" súhlasite s

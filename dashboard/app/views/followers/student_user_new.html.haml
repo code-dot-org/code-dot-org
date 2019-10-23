@@ -1,12 +1,10 @@
-- if !@section
-  = t('add_teacher_form.code.instructions')
-  %br/
-  = form_tag(student_user_new_path, method: 'GET') do
-    = text_field_tag(:section_code, params[:section_code], placeholder: I18n.t('add_teacher_form.code.placeholder'))
+- if current_user || !@section
+  %h2= t('join_section.code.title')
+  %p= t('join_section.code.instructions')
+  = form_tag(student_user_new_path) do
+    = text_field_tag(:section_code, params[:section_code], placeholder: I18n.t('join_section.code.placeholder'))
     %br/
-    = submit_tag 'Go', class: 'btn btn-primary'
-- elsif current_user
-  You are currently signed in. #{link_to 'Return home', root_path} or #{link_to('log out', destroy_user_session_path)} to proceed.
+    = submit_tag t('join_section.code.submit'), class: 'btn btn-primary'
 - else
   %h2 Register to join the class #{@section.name} taught by #{@section.user.name}
   %p
@@ -82,7 +80,7 @@
             = submit_tag 'Register', class: 'btn btn-primary'
 
         #student-terms
-          != t('signup_form.student_terms')
+          != t('signup_form.student_terms_markdown', markdown: true)
           %br/
           %br/
           %br/

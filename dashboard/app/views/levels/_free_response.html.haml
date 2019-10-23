@@ -4,6 +4,11 @@
 - left_align = local_assigns[:left_align]
 - is_contained_level ||= false
 
+- if level.solution.present? && is_contained_level && can_view_teacher_markdown?
+  %div{id: "containedLevelAnswer0"}
+    .free-response{class: "contained"}
+      = render partial: 'levels/teacher_markdown', locals: {data: {'teacher_markdown' => level.solution}}
+
 - if in_level_group # The LevelGroup will collect results for each level.
   :javascript
     window.dashboard.codeStudioLevels.registerLevel(#{level.id}, new FreeResponse(#{level.id}, #{!!level.optional}));
@@ -30,8 +35,8 @@
     %div= render(inline: level.long_instructions, type: :md)
 
   - if level.allow_user_uploads?
-    %script{src: minifiable_asset_path('js/fileupload/jquery.iframe-transport.js')}
-    %script{src: minifiable_asset_path('js/fileupload/jquery.fileupload.js')}
+    %script{src: webpack_asset_path('js/fileupload/jquery.iframe-transport.js')}
+    %script{src: webpack_asset_path('js/fileupload/jquery.fileupload.js')}
     %p#free-response-upload
     :javascript
       dashboard.project.getCurrentId = function () {
@@ -45,4 +50,4 @@
 
   -# Don't render the dialog partial if we're inside a LevelGroup.
   = render partial: 'levels/dialog', locals: {app: 'free_response'} unless in_level_group
-  = render partial: 'levels/teacher_markdown', locals: {data: {'teacher_markdown' => level.solution}}
+  = render partial: 'levels/teacher_markdown', locals: {data: {'teacher_markdown' => level.solution}} unless is_contained_level

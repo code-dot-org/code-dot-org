@@ -1332,6 +1332,7 @@
   sphero_beyond_longdescription: "Öğretmen veya ebeveyn olun,SPRK dersleri çocukların matematik ve fen yeteneklerini geliştirirken eğlenceli robot çarpışma dersi vermektedir."
   compatibility_hide_this_warning: "Bu uyarıyı gizle"
   compatibility_unsupported_browser: "Tarayıcınız desteklenmiyor. Lütfen tarayıcınızı <a href='%{supported_browsers_url}', target='_blank'> desteklenen tarayıcılardan birine</a> yükseltin. Sayfayı görüntüleyebilirsiniz ama önemli özellikler çalışmayabilir."
+  compatibility_unsupported_browser_markdown: "Tarayıcınız desteklenmiyor. Lütfen tarayıcınızı <a href='%{supported_browsers_url}', target='_blank'> desteklenen tarayıcılardan birine</a> yükseltin. Sayfayı görüntüleyebilirsiniz ama önemli özellikler çalışmayabilir."
   starwars_shortcode: "yıldız"
   flappy_shortcode: "kanat çırp"
   header_home: "Ana Sayfa"

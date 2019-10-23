@@ -1355,6 +1355,7 @@
   sphero_beyond_longdescription: "Is cuma an múinteoir nó tuismitheoir thú, tugann na ceachtanna SPRK dianchúrsa ríomhchláraithe le róbait do pháistí a ghéaraíonn a scileanna sa matamaitic agus san eolaíocht ag an am céanna."
   compatibility_hide_this_warning: "Folaigh an rabhadh seo"
   compatibility_unsupported_browser: "Ní thacaímid le do bhrabhsálaí. Ba chóir duit <a href='%{supported_browsers_url}', target='_blank'>ceann de na brabhsálaithe tacaithe</a> a shuiteáil. Nó is féidir leat dul ar aghaidh ar aon nós, ach seans go mbeidh roinnt gnéithe ar an leathanach briste."
+  compatibility_unsupported_browser_markdown: "Ní thacaímid le do bhrabhsálaí. Ba chóir duit <a href='%{supported_browsers_url}', target='_blank'>ceann de na brabhsálaithe tacaithe</a> a shuiteáil. Nó is féidir leat dul ar aghaidh ar aon nós, ach seans go mbeidh roinnt gnéithe ar an leathanach briste."
   flappy_shortcode: "gread"
   header_home: "Baile"
   header_my_dashboard: "Mo Phainéal"

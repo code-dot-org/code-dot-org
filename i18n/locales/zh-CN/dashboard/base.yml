@@ -1,3 +1,15 @@
+#Files in the config/locales directory are used for internationalization
+#and are automatically loaded by Rails. If you want to use locales other
+#than English, add the necessary files in this directory.
+#To use the locales, use `I18n.t`:
+#I18n.t 'hello'
+#In views, this is aliased to just `t`:
+#<%= t('hello') %>
+#To use a different locale, set it with `I18n.locale`:
+#I18n.locale = :es
+#This would use the information in config/locales/es.yml.
+#To learn more, please read the Rails Internationalization guide
+#available at http://guides.rubyonrails.org/i18n.html.
 zh-CN:
   errors:
     messages:
@@ -32,6 +44,7 @@ zh-CN:
         finish_sign_up_subheader_provider: '填写信息，来使用 <strong>%{provider}</strong> 的 <strong>%{email}</strong> 创建 Code.org 账户。'
         error:
           future: 不能选择将来的时间
+  beta: "测试版"
   hello: "世界你好"
   welcome_back: "欢迎回来，%{name}"
   your_professional_learning_plan: "你的专业学习计划"
@@ -45,13 +58,13 @@ zh-CN:
   okay: "好吧"
   or: "或"
   heading_x_of_y: "%{heading} (第%{x} 页 共%{y} 页)"
-  add_teacher_form:
+  join_section:
     code:
-      label: '添加一个老师：'
+      title: '加入一个小组。'
       placeholder: "小组代码（ABCDEF）"
-      instructions: "请输入与你的老师共享的代码。这是一个像“ABCDEF”的6位字母代码。"
-      instructions_short: "输入你的6位小组代码"
-    submit: '添加老师'
+      instructions: "请输入老师给您的 6 字代码, 参加小组。（比如：“ABCDEF”。）"
+      instructions_short: "输入您的6位小组代码。"
+      submit: '加入'
   add_hint_form:
     placeholder: '请在这里输入您的密码提示'
     submit: '添加密码提示'
@@ -80,8 +93,7 @@ zh-CN:
     continue_with: '用%{provider}继续'
     sign_in_with: '用%{provider}登录'
     signed_in: '登录成功！'
-    signed_out: '您已注销 <a href="%{url}"> Code.org</a>。'
-    sign_out_of: '%{provider} 用于登录 <a href="%{url}"> 点击这里</a> 来注销 %{provider}.'
+    signed_out_markdown: '###，您已注销 [Code.org](%{url})'
     already_signedup: '已经注册了吗？'
     notyet_signedup: "还未注册吗？"
     google_oauth2: '谷歌'
@@ -127,13 +139,10 @@ zh-CN:
     valid_password: "有效的密码 ！"
     invalid_password: "密码必须至少为 6 个字符"
     mismatch_password: "您输入的两个密码不匹配"
-    agree_tos_privacy: "我同意 <a href='http://code.org/tos'>服务条款</a> 和 <a href='http://code.org/privacy'>隐私策略</a>。"
     under_13_consent: "如果我未满 13 岁，我确认在使用 Code.org 服务时已征得父母或法定监护人的同意。"
     student_consent: "我确认我的父母或法定监护人同意我使用 Code.org 的服务。"
     agree_us_website: "我同意使用美国的网站。"
     my_data_to_us: "我使用本网站产生的数据可能会被传输至美国并在美国存储或处理。"
-    student_terms: "电子邮箱不会用来与学生进行联系。除了密码恢复的邮件，学生永远不会收到从 Code.org 寄来的任何邮件。更多信息请查看<a href='http://code.org/privacy'>隐私政策</a>。"
-    teacher_terms: "我同意 Code.org 的服务条款。有关隐私的详细信息，请参阅我们的 <a href='http://code.org/privacy'> 隐私政策</a>。"
     additional_information: "我们需要一些额外的信息来继续为你注册."
     user_type_button: "更新帐户类型"
     user_type_label: "帐户类型"
@@ -172,7 +181,7 @@ zh-CN:
     title: '已经有账号了？登录'
     login: '电子邮件'
     login_username: '邮箱/用户名'
-    password: '密码:'
+    password: '密码：'
     remember: '记住我'
     submit: '登录'
   signin:
@@ -187,7 +196,6 @@ zh-CN:
     login: '登录'
     invalid_login: '登录无效，请重试'
     pair_programming: '我在我的电脑上有伙伴'
-    student_privacy: "了解更多：<a href='%{student_privacy_blog}' target='_blank'>为什么你看不到你的名字？</a>"
   password:
     reset_form:
       title: '忘记了您的密码吗？'
@@ -333,7 +341,7 @@ zh-CN:
       algebra_game: '代数'
       applab: '应用实验室'
       artist: '小艺术家'
-      artist_k1: '艺术家（学龄前学生）'
+      artist_k1: '小艺术家（学龄前学生）'
       basketball: '篮球'
       bounce: '跳'
       calc: '计算'
@@ -431,14 +439,12 @@ zh-CN:
     enter_parent_email: "输入你的父母或监护人的电子邮件地址（用于恢复密码）"
     update: "更新帐户"
     account_successfully_updated: "账号已成功更新。"
+    update_email: "更新"
   user_level:
     completed: '已完成'
     tried: '试过了'
   home:
     title: "代码工作室"
-    description: '代码工作室是 Code.org 创办的在线课程的家园'
-    lines_of_code: "由学生编写了 %{lines_count} 行代码"
-    lines_of_code_linebreak: "有 %{students_count} 百万学生编写了<br/>%{lines_count} 行程序代码。"
     all_courses: "课程1、 2 和 3 的概要"
     lesson_plans: "课程计划"
     signin_message: "已经注册了吗？%{link}"
@@ -468,42 +474,10 @@ zh-CN:
     test_videos_help: '在你的学校测试我们新的视频。'
     try_beta_courses: '新增功能！尝试我们为 K-5 学生准备的 beta 版课程'
     use_as_teacher: '做为教师来使用本网站'
-    heading_hoc2014: "<h2>编程一小时</h2>适合<h1>所有年龄</h1>"
-    heading_elementary: "<h2>20 小时课程</h2><h1>初学者 （所有年龄）</h1>"
-    heading_apps: "<h1>为每个人</h1><h2>的乐趣</h2>"
-    heading_tools: "<h2>准备好进行下一步了吗？</h2><h1>高中的 JavaScript 工具</h1>"
-    heading_legacy: "<h1>为所有年龄</h1><h2>的加速课程</h2>"
     your_gallery: 作品
     no_primary_course: "试试代码工作室的课程"
     choose_next_course: "从下面代码工作室的课程中选一个体验"
     print_certificate: "打印证书"
-    announcement_title: "公告"
-    announcement_message_fall2016_features: "我们利用夏天的时间将您的反馈意见变成新的功能。现在，即使学生们结对编程在一台设备，您也可以 <a href=\"%{pp_url}\" target=\"_blank\">跟踪多个学生的进展</a> 。你可以在<i>任何</i>课堂中，使用计算机科学课程的<a href=\"%{csp_widgets_url}\" target=\"_blank\">最佳互动的工具</a>。并且你的学生可以在他们的空间里<a href=\"%{unused_code_url}\" target=\"_blank\">保留未使用的代码</a>，从而鼓励他们多尝试！试试所有的新功能，让我们知道你的想法。"
-    announcement_csp_widgets_message: "您在寻找一些有趣的方法来教您的班级一些计算机科学的概念吗？比如互联网如何工作，密码学如何为数学保密？我们已经从计算机科学原理课程中找到了最好的互动工具，并且你可以在任何时候，使用这些独立的小工具！"
-    announcement_learn_more_button: "了解详情"
-    announcement_try_now_button: "现在就试试"
-    announcement_host_an_hour_button: "主办一小时"
-    announcement_watch_video_button: "观看视频"
-    announcement_petition: "作为一名教师，你在这项活动中以领先的方式给在每一个学校的每一位学生机会，学习计算机科学。现在，是时候让你的代表们听到你的消息了。本周，教育领导人、 28位州长和美国一些最大的公司的首席执行官们一起在一封公开信里要求美国国会资助 K-12 计算机科学教育。"
-    announcement_petition_button: "添加您的姓名"
-    announcement_go_beyond_button: "超越"
-    announcement_apply_now: "立即申请"
-    announcement_all: "关注我们老师的博客以追踪最新的新功能和更新。<a href='%{teacher_blog_url}' target='_blank'> 看以前的公告。</a>"
-    announcement_hoc_launch: "在12月5日至11日的《编程一小时》活动中，来自180多个国家数以千计的教育工作者会开始教授计算机科学。我们期待你来帮助比以往更多的学生。<a href='%{signup_url}' target='_blank'>注册你的《编程一小时》活动</a>，并且让其他老师知道，任何人都可以教授计算机科学课程。"
-    announcement_mc_launch: "现在，一个我们最受欢迎的教程有了续集！全新的《我的世界》“编程一小时”设计师让学生们为《我的世界》里的世界设置规则。他们可以获得一个完全独一无二的《我的世界》体验，并可以将它分享给朋友或在他们的手机上玩。立即与你的班级参与到“编程一小时”。"
-    announcement_how_code_studio: "你不需要任何经验来在你的课堂中教授计算机科学。Code.org 为所有年级提供教案、 课程计划、 高质量专业学习程序和很多的好工具&mdash; 一切你所需要的，都是免费的。想知道如何开始？下载 <a href='%{video_download_url}'> 这个视频</a> ！"
-    announcement_go_beyond: "每周抽出一个小时的时间，与你的学生共同探索计算机科学概念。Code.org 为所有年级学生提供课程教案、 课程计划以及高质量的专业学习程序，还有很多有用的工具。&mdash;而且全部免费。:)你不需要任何计算机教学经验，<b>为你的课堂找到合适的内容。</b>"
-    announcement_teacher_recruitment: "和您一样的教师在领导计算机科学教育的潮流。你可以参加高质量的12年级的专业学习课程，<strong>这对您和您的学校都是完全免费的</strong>。成为您的学校的计算机科学领头羊，并申请专业学习。"
-    announcement_teacher_recruitment2: "和您一样的教师在领导计算机科学教育的潮流。你可以参加高质量的12年级的专业学习课程，<strong>这对您和您的学校都是完全免费的</strong>。成为您的学校的计算机科学领头羊，并申请专业学习。中学老师请于3月17日前申请。"
-    announcement_csf_pilot: "<strong>小学教师们：</strong>加入我们来更新计算机基础教育课程！我们在寻找教师于2017年冬季春季，来试用计算机科学基础教程。我们希望能在2017年8月更新前听到您的反馈。"
-    announcement_student_privacy: "Code.org对于保护学生的隐私有着非常认真的态度。为了保护您的学生的隐私，我们已经对您的小组的登录页面做了修改，不显示全名。尽管这个修改应能减低登录页面所带来的隐私风险，我们仍鼓励用户<i>不使用学生的全名</i>。"
-    announcement_apcsp_recruitment: "<strong>计算机科学原理教师们：</strong> 您的学生有可能被下一个病毒式视频所选中，这个视频用来鼓励学生们获得计算机科学原理课程考试的绩点。我们正在邀请所有的计算机科学原理的学生来提交一个10到20秒的短片到各种社交网站上：“我正在学习 #APCSP 课程，因为...”。 最佳视频会被我们选到视频中，获胜的学生也会受到Code.org的礼物！"
-    announcement_apcsp_recruitment2: "今年的计算机科学原理考试有望打破纪录。参与学生的多样性的到了很大的提升，但我们仍然需要你的帮助。鼓励每个学习计算机科学原理的学生来参加考试，我们会<a href='%{gift_url}' target='_blank'>送出礼物</a>。学生们也可以在我们的 <a href='%{challenge_url}' target='_blank'>#APCSP 视频挑战</a>中相互激励。"
-    announcement_apcsp_recruitment3: "今年的计算机科学原理考试有望打破纪录。参与学生的多样性的到了很大的提升，但我们仍然需要你的帮助。鼓励每个学习计算机科学原理的学生来参加考试，您有可能会得到<a href='%{gift_url}' target='_blank'>礼品卡、笔记本电脑或其它很酷的奖品</a>！分享<a href='%{video_url}' target='_blank'>这个视频</a>，这样学生们能够从参加考试的同伴那里知道它。"
-    announcement_csp_deadline: "给高中老师的最后召唤！率先在您的学校里教授计算机科学，并申请我们的高质量的<strong>完全免费的</strong>专业学习课程。申请将在4月14日关闭。"
-    announcement_applab_export: "应用实验室是我们的网络编程环境，现在支持导出代码了！你可以通过拖放Javascript代码块来创建应用，然后将代码导出到任何专业的开发环境中继续编辑。"
-    announcement_csp_survey: "<b>祝贺计算机科学原理的教师们！</b><br/>您的正在参加AP计算机科学测验的学生们，会和超过50000名学生一起参加历史上最大的AP考试。现在，让您学生的声音被大家听到吧 ——记住完成课后调查！你能看到学生们的回答，我们也会将合计后全国的报告分享给您。"
-    announcement_navigation_redesign: "<b>即将到来的站点导航的变化</b><br/>夏天即将来临，我们正在改进整个Code.org站点的导航，以便你能从任何位置都访问自己的最常用的资源。一旦您登录了自己的教师账号，每一页都会有一个新的导航栏，里面的链接包括你的主页、课程、项目集、小组和专业课程。"
   move_students:
     new_section_dne: "抱歉，章节 %{new_section_code} 不存在。请输入不同的章节代码。"
     section_code_cant_be_current_section: "当前章节不能与新建单元相同。"
@@ -695,8 +669,6 @@ zh-CN:
     header_artist: "艺术家"
     report_abuse: "举报滥用"
   landing:
-    prerelease: "本课程是 <span class='betatext'>beta 版</span>中。这表示它不是最终版本。它会根据反馈而被修订和改善"
-    prerelease_hoc2014: "本教程是<span class='betatext'> beta 版</span>。它会根据反馈而被修订和改善。"
     report_bug: "报告错误"
     support: "获取帮助"
     support_url: "//support.code.org"
@@ -764,8 +736,7 @@ zh-CN:
   age_interstitial:
     age: 你的年龄
     header: 帐户信息更新
-    message: "我们正在更新我们的经验，为您提供更强的隐私保护。要做到这一点，我们需要现有用户在这里输入自己的年龄。<br/>一如往常，code.org 将永远不会出租、 出售或与任何第三方共享此信息。"
-    sign_out: '如果你不想提供你的年龄你可以 <a href="%{url}">注销</a>。'
+    disclaimer: "Code.org 永远不会把这信息租，或买给第三方。"
   terms_interstitial:
     title: "更新的服务条款和隐私政策"
     intro_desc: "我们更新了我们的服务条款和隐私政策，如下所示。这些变化自 2016 年 8 月 24 日起生效。 最大的变化是︰ 我们将 <i>不再将学生帐户的电子邮件地址存储在代码工作室。</i>这是对我们来说，一个大改变，我们希望它在教育技术中设置学生隐私的新标准。我们已经通过电子邮件给你发送了其它更改的摘要。"
@@ -861,10 +832,8 @@ zh-CN:
   peer_review:
     accepted:
       name: '已接受'
-      description: '<strong>是的</strong>，这个提交<strong>符合</strong>要求'
     rejected:
       name: '已拒绝'
-      description: '<strong>不</strong>，这个提交<strong>不能满足</strong> 要求'
     escalated:
       name: '升级'
       description: '我想让老师来审查此提交'
@@ -953,7 +922,7 @@ zh-CN:
   hoc_download:
     title: '《编程一小时》下载'
     capsule_title: '你有网络吗？'
-    capsule_desc: '使用在线的，基于网页的 <a href="%{url}">%{app_name}</a>。'
+    capsule_desc: '使用在线、 基于 web 的 <a href="%{url}">%{app_name}</a>。'
     instructions_headline: '没有网络？'
     instructions: '给教师的提示︰ 如果你的网络条件不好，这些《编程一小时》教程都是可用于下载和安装供离线使用。选择您的语言和平台、下载和安装在你的教室里所有的计算机上。你可能想要使用 USB 驱动器一次下载并安装在所有计算机上。注︰ 学生将不能登录到代码工作室、保存进度或打印证书。教师可提前<a href="%{url}">打印证书</a>。'
     minecraft_name: '《我的世界》编程一小时'
@@ -1004,7 +973,6 @@ zh-CN:
     download_in_Vietnamese: '下载越南语版本︰'
     windows: 'Windows（64位）'
     mac: 'Mac OS X'
-  stage_extras_teacher_message: "您已经关闭了一些小组的课程附加内容。除非重新打开，否则您的学生将看不到此页。可以通过访问<a href='http://code.org/teacher-dashboard'>教师控制台</a>来打开课程附加内容。"
   locked_stage: '这一阶段的内容不可见是因为这一阶段当前已锁定。在你需要工作或审查你的答案的时候，你的老师可以解锁这一阶段。'
   hidden_stage: "你的老师没有预料到你来到这里。请询问你的老师你应该上什么课。"
   hidden_script: "你的老师不期待你来这里。请询问你的老师应该上哪个单元。"
@@ -1099,15 +1067,9 @@ zh-CN:
       title: '工作坊参与者'
       intro: "非常感谢您抽出时间接受 Code.org 的培训课程。没有像您这样的人的帮助，我们让世界各地所有学校的孩子们都能有机会学习计算机科学知识的使命或许永远也不会成功。"
       instructions: "请填写下方的表格，表明 1) 你参加了一个由 Code.org 的国际合作伙伴运作的培训研讨班，并且 2) 你同意我们将你的情况告知我们在你所在国家的国际合作伙伴，以便他们支持你作为计算机科学教师的工作。"
-      thanks: "感谢您的提交！我们期待着能帮助您熟悉 Code.org 的课程及教学工具。请与我们分享你的问题和反馈，可发邮件至<a href='%{support_email_url}'>support@code.org</a>，或在<a href='%{teacher_forum_url}' target='_blank'>教师论坛</a>上发帖！"
     logged_out:
       heading: '感谢您对专业学习计划的兴趣！'
       body: '开始前，首先需要登录到 Code.org 帐户。如果希望在启动应用程序之前了解有关该程序的更多信息，请查看 <a href="%{url}">专业学习计划概述</a>。'
-    not_teacher:
-      body: '感谢对 Code.org 专业学习项目的兴趣。现在已经注册了一个学生账户，请创建教师账户或<a href="%{user_settings}">转到用户设置</a>将账户升级为教师账户。'
-      more: '如果在开始申请前希望看到更多信息，点击 <a href="%{pl_overview}">专业学习计划概述</a>。'
-    no_teacher_email:
-      body: '账号还没有填写电子邮件地址。请<a href="%{user_registration}">访问帐户设置</a>以在完成表单前添加电子邮件地址。'
   courses_category: '完整课程'
   cookie_banner:
     message: '通过继续浏览我们的网站或单击"我同意"，您同意在你的计算机或设备上存储 cookies。'

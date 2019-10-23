@@ -1,3 +1,15 @@
+#Files in the config/locales directory are used for internationalization
+#and are automatically loaded by Rails. If you want to use locales other
+#than English, add the necessary files in this directory.
+#To use the locales, use `I18n.t`:
+#I18n.t 'hello'
+#In views, this is aliased to just `t`:
+#<%= t('hello') %>
+#To use a different locale, set it with `I18n.locale`:
+#I18n.locale = :es
+#This would use the information in config/locales/es.yml.
+#To learn more, please read the Rails Internationalization guide
+#available at http://guides.rubyonrails.org/i18n.html.
 ms:
   activerecord:
     errors:
@@ -17,16 +29,15 @@ ms:
         edit_header: 'Edit Maklumat Akaun'
         error:
           future: tidak boleh ada di masa depan
+  beta: "beta"
   hello: "Helo dunia"
   welcome_back: "Selamat datang kembali, % {nama}"
   submit: Hantar
   cancel: "Batal"
   or: "atau"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Tambahkan guru:'
       placeholder: "Kod Seksyen (ABCDEF)"
-    submit: 'Tambah guru'
   add_hint_form:
     placeholder: 'Sila masukkan petunjuk anda di sini'
     submit: 'Tambah petunjuk'
@@ -51,8 +62,6 @@ ms:
   auth:
     sign_in_with: 'Daftar Masuk dengan % {pembekal}'
     signed_in: 'Daftar masuk!'
-    signed_out: 'Anda telah mendaftar keluar daripada <a href="%{url}">Code.org</a>.'
-    sign_out_of: 'Anda telah mengunakkan %{provider} untuk mendaftar masuk. <a href="%{url}">Klik di sini</a> untuk mendaftar keluar daripada %{provider}.'
     already_signedup: 'Sudah mendaftar?'
     notyet_signedup: "Belum menyertai lagi?"
     google_oauth2: 'Akaun Google'
@@ -192,6 +201,7 @@ ms:
     email_resend_confirm: 'Hantar semula arahan pengesahan'
     new_password_hint: "(biarkan kosong jika anda tidak mahu mengubahnya)"
     current_password_hint: '(kami memerlukan kata laluan semasa anda untuk mengesahkan perubahan anda)'
+    update_email: "Kemas kini"
   user_level:
     completed: 'Lengkap'
     tried: 'Telah dicuba'
@@ -221,8 +231,6 @@ ms:
     add_hint_help: 'Sila bantu kami untuk menambah petunjuk pintar ke tutorial Code.org'
     20hour_overview: 'Kursus 20 jam ini memperkenalkan asas Sains komputer dan konsep programming. Kursus ini direka untuk kegunaan di bilik darjah bagi gred K-8, tetapi ia adalah menyeronokkan untuk belajar di semua peringkat umur.'
     test_videos_help: 'Uji pemain video baru kami di sekolah anda'
-    announcement_learn_more_button: "Ketahui lebih lanjut"
-    announcement_try_now_button: "Cuba sekarang"
   gender:
     male: 'Lelaki'
     female: 'Perempuan'

@@ -229,7 +229,13 @@ class Section < ActiveRecord::Base
       link_to_assigned = script_path(script)
     end
 
-    unique_students = students.uniq(&:id)
+    # Remove ordering from scope when not including full
+    # list of students, in order to improve query performance.
+    unique_students = include_students ?
+      students.distinct(&:id) :
+      students.unscope(:order).distinct(&:id)
+    num_students = unique_students.size
+
     {
       id: id,
       name: name,
@@ -239,7 +245,7 @@ class Section < ActiveRecord::Base
       linkToAssigned: link_to_assigned,
       currentUnitTitle: title_of_current_unit,
       linkToCurrentUnit: link_to_current_unit,
-      numberOfStudents: unique_students.length,
+      numberOfStudents: num_students,
       linkToStudents: "#{base_url}#{id}/manage",
       code: code,
       stage_extras: stage_extras,
@@ -252,7 +258,7 @@ class Section < ActiveRecord::Base
         name: script.try(:name),
         project_sharing: script.try(:project_sharing)
       },
-      studentCount: unique_students.size,
+      studentCount: num_students,
       grade: grade,
       providerManaged: provider_managed?,
       hidden: hidden,
@@ -335,4 +341,20 @@ class Section < ActiveRecord::Base
   def unused_random_code
     CodeGeneration.random_unique_code length: 6, model: Section
   end
+
+  # Drops unicode characters not supported by utf8mb3 strings (most commonly emoji)
+  # from the section name.
+  # We make a best-effort to make the name usable without the removed characters.
+  # We can remove this once our database has utf8mb4 support everywhere.
+  def strip_emoji_from_name
+    # We don't want to fill in a default name if the caller intentionally tried to clear it.
+    return unless name.present?
+
+    # Drop emoji and other unsupported characters
+    self.name = name&.strip_utf8mb4&.strip
+
+    # If dropping emoji resulted in a blank name, use a default
+    self.name = I18n.t('sections.default_name', default: 'Untitled Section') unless name.present?
+  end
+  before_validation :strip_emoji_from_name
 end

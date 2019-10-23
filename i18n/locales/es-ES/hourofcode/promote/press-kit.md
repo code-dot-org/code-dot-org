@@ -1,9 +1,10 @@
 ---
-title: <%= hoc_s(:title_press_kit).inspect %>
+title: Paquete de prensa
 layout: wide
 nav: promote_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # How to attract media to your Hour of Code event
 
@@ -18,17 +19,17 @@ nav: promote_nav
 - Contactar con los medios de comunicación dos semanas antes de su evento por correo electrónico. Continua por correo electrónico y teléfono si no recibe una respuesta inicial.
 - Pide algún personal escolar o voluntario que haga fotos para compartirlas en línea o enviar a la prensa.
 - Escriba sobre la Horal de Código en la página principal de su sitio web y en el periódico de la escuela. Publique los detalles de su evento y fotos de las actividades de tus estudiantes.
-- On Facebook and Twitter, share updates on your plans, announce your events, and post pictures during <%= campaign_date('year') %>. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
+- On Facebook and Twitter, share updates on your plans, announce your events, and post pictures during {{ campaign_date/year }}. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
 
 ## Step-by-step guide
 
 ### 1. Plan your event
 
 - Haga una reunión para iniciar la Hora del Código.
-- Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to parents and ask them to spread the word.
-- Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to invite your local mayor, member of Congress, governor, or influential businessperson to attend and speak to your students.
+- Send [a letter]({{ promote/sample_emails }}) to parents and ask them to spread the word.
+- Send [a letter]({{ promote/sample_emails }}) to invite your local mayor, member of Congress, governor, or influential businessperson to attend and speak to your students.
 - Organice actividades grupales (como una demostración de una actividad de programación 'fuera de línea'), o muestre lo que han hecho los estudiantes y guíe las actividades.
-- Show Code.org’s [Hour of Code video](%= resolve_url('/') %) or one of [these videos](%= resolve_url('/promote/resources#videos') %) to inspire students. <br />
+- Show Code.org’s [Hour of Code video]({{ urls/home }}) or one of [these videos]({{ promote/videos }}) to inspire students. <br />
 
 ### 2. Identify specific reporters that cover education or local events
 
@@ -36,7 +37,7 @@ Like local newspapers, TV station or radio stations, or blogs. <br />
 
 ### 3. Contact local media
 
-The best way to reach out is by email. It should be short and should communicate "why should other people care about this event"? Include contact information (including a cellphone number) for who will be on site at the event. **[See a sample pitch to media](%= resolve_url('/promote/press-kit#sample-emails') %)**.
+The best way to reach out is by email. It should be short and should communicate "why should other people care about this event"? Include contact information (including a cellphone number) for who will be on site at the event. **[See a sample pitch to media]({{ promote/press-kit-emails }})**.
 
 Look online to find reporter contact information. If you can't find it, call the publication to ask, or email the organization's general email address and ask for your message to be directed to the correct reporter. <br />
 
@@ -78,9 +79,9 @@ I look forward to being in touch. <br />
 
 #### Acerca de Code.org
 
-Code.org® es un una organizacion 501c3-pública, sin fines de lucro dedicada a expandir la participación en ciencias de la computación y aumentar la participación de las mujeres y los estudiantes subrepresentados de color. Its vision is that every student in every school has the opportunity to learn computer programming. Después de su lanzamiento en 2013, Code.org organizó la campaña la Hora del Código – que ha introducido más de 100 millones de estudiantes en ciencias de la computación hasta la fecha – y se ha asociado con 70 distritos de escuelas públicas en todo el país para expandir programas de ciencias de la computación. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. Para obtener más información, visite: [ < % = resolve_url('code.org') %>](%= resolve_url('https://code.org') %).
+Code.org® es un una organizacion 501c3-pública, sin fines de lucro dedicada a expandir la participación en ciencias de la computación y aumentar la participación de las mujeres y los estudiantes subrepresentados de color. Its vision is that every student in every school has the opportunity to learn computer programming. Después de su lanzamiento en 2013, Code.org organizó la campaña la Hora del Código – que ha introducido más de 100 millones de estudiantes en ciencias de la computación hasta la fecha – y se ha asociado con 70 distritos de escuelas públicas en todo el país para expandir programas de ciencias de la computación. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ urls/codeorg }}).
 
   
-Find more resources and sample emails [here](%= resolve_url('/promote/resources#sample-emails') %).
+Find more resources and sample emails [here]({{ promote/sample_emails }}).
 
-<%= view :signup_button %>
+{{ signup_button }}

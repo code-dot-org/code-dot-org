@@ -112,7 +112,7 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
 
   # Only show implementation questions if this is the CSD Units 2 and 3 workshop survey
   def show_implementation_questions?
-    pd_enrollment.workshop.subject == Pd::Workshop::SUBJECT_CSD_UNITS_2_3
+    pd_enrollment.workshop.subject == Pd::Workshop::SUBJECT_CSD_WORKSHOP_1
   end
 
   # Returns whether the associated user has been deleted, returning false if the user does not

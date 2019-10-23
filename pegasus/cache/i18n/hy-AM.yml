@@ -1673,6 +1673,10 @@ hy-AM:
     your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
     supported browsers</a>. You can try viewing the page, but expect functionality
     to be broken.
+  compatibility_unsupported_browser_markdown: Your browser is not supported. Please
+    upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one
+    of our supported browsers</a>. You can try viewing the page, but expect functionality
+    to be broken.
   flappy_shortcode: տատանվել
   header_courses: Դասընթացներ
   header_project_gallery: ծրագրեր

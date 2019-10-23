@@ -20,6 +20,9 @@ Scenario: Submit three answers.
 
   And I press ".submitButton:first" using jQuery
   And I wait to see ".modal"
+  And element ".modal-body" contains text "You cannot edit your assessment after submitting it."
+  And element ".modal-body" contains text "You left some questions incomplete."
+
   And I press ".modal #ok-button" using jQuery to load a new page
 
   # Go back to the page to see that same options are selected.
@@ -88,3 +91,40 @@ Scenario: Match levels within level group
 
   # no answers are draggable
   And element ".ui-draggable" is not visible
+
+@no_ie
+Scenario: Submit all answers, including match levels
+  Given I am on "http://studio.code.org/s/allthethings/stage/33/puzzle/1?noautoplay=true"
+  And I wait to see ".submitButton"
+  And element ".submitButton" is visible
+
+  When element ".level-group-content:nth(1) .multi-question" contains text "The standard QWERTY keyboard has"
+
+  # Select answers to all three multis.
+
+  And I press ".level-group-content:nth(0) .answerbutton[index=0]" using jQuery
+  And I press ".level-group-content:nth(1) .answerbutton[index=0]" using jQuery
+  And I press ".level-group-content:nth(2) .answerbutton[index=0]" using jQuery
+  And I press ".level-group-content:nth(2) .answerbutton[index=1]" using jQuery
+
+  # Select answers to both match levels.
+
+  And I scroll the ".level-group-content:nth(3)" element into view
+  And I drag match level 0 unplaced answer 0 to empty slot 0
+  And I drag match level 0 unplaced answer 0 to empty slot 0
+  And I drag match level 0 unplaced answer 0 to empty slot 0
+  And I drag match level 0 unplaced answer 0 to empty slot 0
+  And match level 0 contains 0 empty slots
+
+  And I scroll the ".level-group-content:nth(4)" element into view
+  And I drag match level 1 unplaced answer 0 to empty slot 0
+  And I drag match level 1 unplaced answer 0 to empty slot 0
+  And I drag match level 1 unplaced answer 0 to empty slot 0
+  And I drag match level 1 unplaced answer 0 to empty slot 0
+  And I drag match level 1 unplaced answer 0 to empty slot 0
+  And match level 1 contains 0 empty slots
+
+  Given I press ".submitButton:first" using jQuery
+  And I wait to see ".modal"
+  And element ".modal-body" contains text "You cannot edit your assessment after submitting it."
+  And element ".modal-body" does not contain text "You left some questions incomplete."

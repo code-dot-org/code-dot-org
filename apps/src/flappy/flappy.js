@@ -24,7 +24,7 @@ import {getStore} from '../redux';
 import {TestResults, ResultType} from '../constants';
 import placeholder from '../../static/flappy/placeholder.jpg';
 import {dataURIFromURI} from '../imageUtils';
-import {SignInState} from '../code-studio/progressRedux';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 
 /**
  * Create a namespace for the application.
@@ -768,7 +768,7 @@ Flappy.runButtonClick = function() {
  */
 var displayFeedback = function() {
   const isSignedIn =
-    getStore().getState().progress.signInState === SignInState.SignedIn;
+    getStore().getState().currentUser.signInState === SignInState.SignedIn;
   if (!Flappy.waitingForReport) {
     dataURIFromURI(placeholder).then(feedbackImageUri => {
       studioApp().displayFeedback({

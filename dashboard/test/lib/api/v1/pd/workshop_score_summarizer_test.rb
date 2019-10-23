@@ -11,7 +11,7 @@ module Api::V1::Pd
         create(:facilitator, name: facilitator_name)
       end
 
-      @workshop = create :pd_workshop, facilitators: @facilitators, enrolled_and_attending_users: 2, num_sessions: 1
+      @workshop = create :workshop, facilitators: @facilitators, enrolled_and_attending_users: 2, num_sessions: 1
       create(:pd_enrollment, workshop: @workshop)
       @workshops = Pd::Workshop.where(id: @workshop.id)
 
@@ -79,13 +79,13 @@ module Api::V1::Pd
 
       AWS::S3.stubs(:download_from_bucket).returns(Hash[@workshop.course.to_sym, {}].to_json)
 
-      @workshop_for_course = create :pd_workshop, num_facilitators: 1, enrolled_and_attending_users: 2, num_sessions: 1
-      @other_workshop_for_course = create :pd_workshop, organizer: @workshop_for_course.organizer, num_facilitators: 1, enrolled_and_attending_users: 2
+      @workshop_for_course = create :workshop, num_facilitators: 1, enrolled_and_attending_users: 2, num_sessions: 1
+      @other_workshop_for_course = create :workshop, organizer: @workshop_for_course.organizer, num_facilitators: 1, enrolled_and_attending_users: 2
     end
 
     test 'generate summary report returns expected columns for one good workshop, and one bad workshop' do
       # The first workshop went great
-      good_workshop = create :pd_workshop, facilitators: @facilitators[0..1], enrolled_and_attending_users: 2, num_sessions: 1
+      good_workshop = create :workshop, facilitators: @facilitators[0..1], enrolled_and_attending_users: 2, num_sessions: 1
       happy_response_1 = @happy_teacher_question_responses.merge(
         {
           how_clearly_presented_s: {'Curly' => 'Extremely clearly'},
@@ -115,7 +115,7 @@ module Api::V1::Pd
       good_workshop_responses = [{data: happy_response_1.to_json}, {data: happy_response_2.to_json}]
 
       # The second workshop went poorly
-      bad_workshop = create :pd_workshop, facilitators: @facilitators[1..2], enrolled_and_attending_users: 2, num_sessions: 1
+      bad_workshop = create :workshop, facilitators: @facilitators[1..2], enrolled_and_attending_users: 2, num_sessions: 1
       bad_response = @angry_teacher_question_responses.merge(
         {
           how_clearly_presented_s: {'Moe' => 'Not at all clearly', 'Larry' => 'Not at all clearly'},

@@ -8,7 +8,7 @@
 #  created_at            :datetime
 #  updated_at            :datetime
 #  level_num             :string(255)
-#  ideal_level_source_id :integer
+#  ideal_level_source_id :integer          unsigned
 #  user_id               :integer
 #  properties            :text(65535)
 #  type                  :string(255)
@@ -22,6 +22,7 @@
 #  index_levels_on_game_id  (game_id)
 #  index_levels_on_name     (name)
 #
+
 require 'cdo/script_constants'
 
 # Levels defined using a text-based ruby DSL syntax.
@@ -155,7 +156,7 @@ class DSLDefined < Level
     return dsl_text
   end
 
-  def clone_with_name(new_name)
+  def clone_with_name(new_name, editor_experiment: nil)
     raise "A level named '#{new_name}' already exists" if Level.find_by_name(new_name)
     old_dsl = dsl_text
     new_dsl = old_dsl.try(:sub, "name '#{name}'", "name '#{new_name}'")
@@ -163,6 +164,12 @@ class DSLDefined < Level
     # raises unless the name is formatted with single, non-curly quotes, e.g.:
     # name 'level-name', or the dsl_text is entirely blank as during unit tests
     raise "name not formatted correctly in dsl text for level: '#{name}'" if old_dsl && old_dsl == new_dsl
+
+    if new_dsl && editor_experiment
+      # define editor_experiment on the second line of the dsl file.
+      index = new_dsl.index("\n")
+      new_dsl = new_dsl.insert(index, "\neditor_experiment '#{editor_experiment}'") if index
+    end
 
     level_params = {}
     level_params[:encrypted] = level_encrypted? if level_encrypted?

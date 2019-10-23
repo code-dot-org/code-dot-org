@@ -110,8 +110,6 @@ module Dashboard
       I18n.fallbacks.map(es: :'es-MX')
     end
 
-    config.pretty_sharedjs = CDO.pretty_js
-
     config.assets.gzip = false # cloudfront gzips everything for us on the fly.
     config.assets.paths << Rails.root.join('./public/blockly')
     config.assets.paths << Rails.root.join('../shared/css')
@@ -120,8 +118,7 @@ module Dashboard
     config.assets.precompile += %w(
       js/*
       css/*.css
-      assets/**/*
-      levels/*
+      levels/*.css
       jquery.handsontable.full.css
       jquery.handsontable.full.js
       video-js/*.css

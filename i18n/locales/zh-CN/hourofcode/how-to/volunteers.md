@@ -1,9 +1,10 @@
 ---
-title: <%= hoc_s(:title_how_to_volunteers).inspect %>
+title: 如何主办编程一小时 —— 志愿者
 layout: wide
 nav: how_to_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # 志愿者的操作指南
 
@@ -21,11 +22,11 @@ nav: how_to_nav
 
 ## 任何人都可以做志愿者
 
-### 技术志愿者和演讲者:
+### 技术志愿者和演讲者：
 
 Do you have a connection to CS or tech? 任何在技术公司从事软件工程开发，不论职位（工程师或非工程师），或者是由上过计算机科学课程的人都可以激励我们的学生。 很多学生从没有遇过在科技行业工作的人，我们的老师也乐意让他们班级的学生和专业人士和大学学生联系起来。
 
-你可以到课堂做客座演讲，或者帮助老师一起来展开教学。通过到当地课堂做客来鼓励学生继续学习计算机科学. <br /> <br />
+你可以到课堂做客座演讲，或者帮助老师一起来展开教学。通过到当地课堂做客来鼓励学生继续学习计算机科学。<br /> <br />
 
 <a href="https://code.org/volunteer"><button>Sign up today to be a tech volunteer!</button> <br /> <br /></p> 
 
@@ -43,11 +44,11 @@ Do you have a connection to CS or tech? 任何在技术公司从事软件工程�
 
 <ol>
   <li>
-    <a href="%= resolve_url('/promote/resources#help-schools') %">发送邮件</a> 来告诉你孩子的教师：你愿意协助举办编程一小时的活动。
+    <a href="{{ promote/help_schools }}">Send this email</a> to your child’s teacher offering to help them run an Hour of Code.
   </li>
   
   <li>
-    提议并帮助在你孩子的学校举办一次《编程一小时》的课余活动。你可以借助这份<a href="%= resolve_url('/how-to') %">引导指南</a>来筹划活动。
+    Offer to host an Hour of Code event after school at a local school. <a href="{{ urls/how_to_guide }}">Use this How-To Guide</a> to help you plan.
   </li>
 </ol>
 
@@ -56,7 +57,7 @@ Do you have a connection to CS or tech? 任何在技术公司从事软件工程�
 </h2>
 
 <p>
-  把编程一小时告诉给你的朋友和同事们。 Thousands of teachers are looking for volunteers, so ask them to <a href="https://code.org/volunteer">sign up as a volunteer</a>. Ask your employer to get involved. <a href="%= resolve_url('/promote/resources#sample-email') %">Send this email</a> to your manager or the CEO to get everyone on board.
+  把编程一小时告诉给你的朋友和同事们。 Thousands of teachers are looking for volunteers, so ask them to <a href="https://code.org/volunteer">sign up as a volunteer</a>. Ask your employer to get involved. <a href="{{ promote/sample_emails }}">Send this email</a> to your manager or the CEO to get everyone on board.
 </p>
 
 <h2>
@@ -65,13 +66,13 @@ Do you have a connection to CS or tech? 任何在技术公司从事软件工程�
 
 <ul>
   <li>
-    <a href="%= resolve_url('/promote/resources#videos') %">播放视频</a>，以让学生了解何为《编程一小时》，并吸引他们的注意力。
+    <a href="{{ promote/videos }}">Pick out a video</a> to show to help focus the class and get them excited to do an Hour of Code.
   </li>
   <li>
     查阅<a href="/files/hoc-volunteer-toolkit.pdf">编程一小时志愿者工具册</a>，它含有教程概括，时间准备材料和推广材料。 所有你需要的志愿服务资料都在其中！
   </li>
   <li>
-    如果你在这过程中需要做课程指南的话，花30 分钟的时间至少完成<a href="%= resolve_url('/learn') %">编程一小时课程指南</a>的演示。
+    If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one <a href="{{ urls/learn }}">Hour of Code tutorial</a>.
   </li>
   <li>
     如果你要参观学校，请先完成背景调查或提供其他要求的文件。
@@ -86,7 +87,7 @@ Do you have a connection to CS or tech? 任何在技术公司从事软件工程�
     和教师探讨你要演讲的内容
   </li>
   <li>
-    如果你是网络远程志愿者，在开始前请测试A/V 和屏幕共享的功能。
+    如果你是网络远程志愿者，在开始前请测试A/V和屏幕共享的功能。
   </li>
 </ul>
 
@@ -119,7 +120,7 @@ Do you have a connection to CS or tech? 任何在技术公司从事软件工程�
     </td>
     
     <td>
-      <a href="%= resolve_url('promote/resources#videos') %">播放预热视频</a>
+      <a href="{{ promote/videos }}">Show an inspirational video</a>.
     </td>
   </tr>
   
@@ -244,5 +245,5 @@ Do you have a connection to CS or tech? 任何在技术公司从事软件工程�
           Code.org 和我们的伙伴设计了编程一小时相关的所有活动，并鼓励各种背景、各个年级/年龄段的、无论男孩还是女孩参与其中。任何人，甚至是成年人都可以在其中获得乐趣！
         </p>
         <p>
-          <%= view :signup_button %>
+          {{ signup_button }}
         </p>

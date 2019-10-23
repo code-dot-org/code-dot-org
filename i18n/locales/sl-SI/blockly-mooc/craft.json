@@ -3,7 +3,7 @@
   "agentGenericFailureMessage": "",
   "agentTooFewBlocksFailureMessage": "Poskušaj dodajati vsak blok posebej, da ti uspe spraviti Agenta na pravo mesto.",
   "at": "pri",
-  "agentDiamondPathCongrats": "Čestitam, našel si diamantno pot! Do sedaj si pobral {count, plural, one {1 diamant} two {dva diamanta} other {# diamante\/-ov}}!",
+  "agentDiamondPathCongrats": "Čestitam, našel si diamantno pot! Do sedaj si pobral {count, plural, one {1 diamant} two {dva diamanta} other {# diamante/-ov}}!",
   "blockActionAdd": "dodaj",
   "blockActionAttack": "napadi",
   "blockActionClone": "podvoji bloke",

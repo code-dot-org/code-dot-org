@@ -6,19 +6,19 @@ Feature: Using the assessments tab in the teacher dashboard
     And I submit the assessment on "http://studio.code.org/s/csp-post-survey/stage/1/puzzle/1/page/6"
 
     And I create a student named "Student2"
-    And I navigate to the section url
+    And I join the section
     And I submit the assessment on "http://studio.code.org/s/csp-post-survey/stage/1/puzzle/1/page/6"
 
     And I create a student named "Student3"
-    And I navigate to the section url
+    And I join the section
     And I submit the assessment on "http://studio.code.org/s/csp-post-survey/stage/1/puzzle/1/page/6"
 
     And I create a student named "Student4"
-    And I navigate to the section url
+    And I join the section
     And I submit the assessment on "http://studio.code.org/s/csp-post-survey/stage/1/puzzle/1/page/6"
 
     And I create a student named "Student5"
-    And I navigate to the section url
+    And I join the section
     And I submit the assessment on "http://studio.code.org/s/csp-post-survey/stage/1/puzzle/1/page/6"
 
     # Assign a script with an unlocked survey

@@ -7,7 +7,7 @@ module Pd::Application
 
     self.use_transactional_test_case = true
     setup_all do
-      @workshop = create :pd_workshop
+      @workshop = create :workshop
       @application = create TEACHER_APPLICATION_FACTORY, pd_workshop_id: @workshop.id
 
       @application_no_workshop = create FACILITATOR_APPLICATION_FACTORY, pd_workshop_id: nil
@@ -40,7 +40,7 @@ module Pd::Application
     end
 
     test 'registered_workshop? handles deleted workshops gracefully' do
-      deleted_workshop = create :pd_workshop
+      deleted_workshop = create :workshop
       application = create FACILITATOR_APPLICATION_FACTORY, pd_workshop_id: deleted_workshop.id
       create :pd_enrollment, workshop: deleted_workshop, user: application.user
       deleted_workshop.destroy
@@ -92,7 +92,7 @@ module Pd::Application
     end
 
     test 'prefetch scales without additional queries' do
-      workshops = create_list :pd_workshop, 10
+      workshops = create_list :workshop, 10
       applications = 10.times.map do |i|
         create FACILITATOR_APPLICATION_FACTORY, pd_workshop_id: workshops[i].id
       end

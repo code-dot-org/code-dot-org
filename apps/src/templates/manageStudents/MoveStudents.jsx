@@ -2,11 +2,13 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
-import {Table, sort} from 'reactabular';
+import * as Table from 'reactabular-table';
+import * as sort from 'sortabular';
 import wrappedSortable from '../tables/wrapped_sortable';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import Immutable from 'immutable';
 import {orderBy, compact} from 'lodash';
+import {getVisibleSections} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import Button from '../Button';
 import BaseDialog from '../BaseDialog';
 import DialogFooter from '../teacherDashboard/DialogFooter';
@@ -106,7 +108,7 @@ class MoveStudents extends Component {
     }),
 
     // redux provided
-    sections: PropTypes.objectOf(
+    sections: PropTypes.arrayOf(
       PropTypes.shape({
         name: PropTypes.string.isRequired,
         id: PropTypes.number.isRequired,
@@ -178,13 +180,11 @@ class MoveStudents extends Component {
   };
 
   selectedStudentFormatter = (_, {rowData}) => {
-    const isChecked = this.props.transferData.studentIds.includes(rowData.id);
-
     return (
       <input
         style={styles.checkbox}
         type="checkbox"
-        checked={isChecked}
+        checked={rowData.isChecked}
         onChange={() => this.toggleStudentSelected(rowData.id)}
       />
     );
@@ -196,7 +196,7 @@ class MoveStudents extends Component {
         property: 'selected',
         header: {
           label: '',
-          format: this.selectedStudentHeaderFormatter,
+          formatters: [this.selectedStudentHeaderFormatter],
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
@@ -205,7 +205,7 @@ class MoveStudents extends Component {
           }
         },
         cell: {
-          format: this.selectedStudentFormatter,
+          formatters: [this.selectedStudentFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell,
@@ -347,6 +347,8 @@ class MoveStudents extends Component {
   };
 
   render() {
+    const {studentData, transferData, transferStatus} = this.props;
+
     // Define a sorting transform that can be applied to each column
     const sortable = wrappedSortable(
       this.getSortingColumns,
@@ -355,14 +357,16 @@ class MoveStudents extends Component {
     );
     const columns = this.getColumns(sortable);
     const sortingColumns = this.getSortingColumns();
+    const decoratedRows = studentData.map(row => ({
+      ...row,
+      isChecked: transferData.studentIds.includes(row.id)
+    }));
 
     const sortedRows = sort.sorter({
       columns,
       sortingColumns,
       sort: orderBy
-    })(this.props.studentData);
-
-    const {transferData, transferStatus} = this.props;
+    })(decoratedRows);
 
     return (
       <div>
@@ -466,7 +470,7 @@ export const UnconnectedMoveStudents = MoveStudents;
 
 export default connect(
   state => ({
-    sections: state.teacherSections.sections,
+    sections: getVisibleSections(state),
     currentSectionId: state.sectionData.section.id
   }),
   dispatch => ({

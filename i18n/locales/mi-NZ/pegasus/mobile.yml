@@ -219,6 +219,7 @@
   frozen_longdescription: "Me whakamahi i te tuhiwaehere kia hono atu ki a Anna rāua ko Elsa i a rāua e tūhura ana i te wana me te ihi o te tio. Ka waihangahia e koe ngā whā hukarere me ngā tauira i a koe e reti hukapapa ana, ā, ka waihangahia tētahi ao hōtoke hei tiritiri atu ki ō hoa!"
   starwars_longdescription: "Ako pēhea te whakahaere karetao, me te waihanga i tōhou ake kēmu Star Wars ki tētahi ikarangi tawhiti rawa."
   compatibility_unsupported_browser: "Kāore tō pūtirotiro i te tautokona. Tēnā whakahoungia tō pūtirotiro kia rite ki<a href='%{supported_browsers_url}', target='_blank'> tētahi o ā mātou pūtirotiro </a>. E āhei ana te whakamātau te titiro ki te whārangi, heoi anō, kia takatū i te whatinga o te taumahinga."
+  compatibility_unsupported_browser_markdown: "Kāore tō pūtirotiro i te tautokona. Tēnā whakahoungia tō pūtirotiro kia rite ki<a href='%{supported_browsers_url}', target='_blank'> tētahi o ā mātou pūtirotiro </a>. E āhei ana te whakamātau te titiro ki te whārangi, heoi anō, kia takatū i te whatinga o te taumahinga."
   flappy_shortcode: "paki"
   header_courses: "Akoranga"
   header_project_gallery: "Ngā Tūmahi"

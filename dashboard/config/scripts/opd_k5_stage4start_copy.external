@@ -1,0 +1,20 @@
+name 'OPD-K5 Stage4Start_copy'
+skip_dialog true
+markdown <<MARKDOWN
+# Overview
+
+<img src="https://images.code.org/fcd3262b1c25e70426ac90e6f9fa65ac-image-1434152998854.JPG" width="450px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+## Coding concept: Loops
+- Practice coding simple loops
+- Important in all CS Fundamentals courses (Courses A-F)
+
+
+## Teaching practice: Pair programming
+- Two programmers working together at one computer
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

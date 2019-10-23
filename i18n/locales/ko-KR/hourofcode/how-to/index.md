@@ -1,15 +1,16 @@
 ---
-title: <%= hoc_s(:title_how_to).inspect %>
+title: How-to 가이드
 layout: wide
 nav: how_to_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # How to teach one Hour of Code with your class
 
-### 이 운동에 참여하신 다음에는, 첫번째 컴퓨터 과학 시간에 이 철차대로 해보세요. Hour of Code는 초보자에게도 사용하기 쉽습니다! If you'd like an extra set of hands to help out, you can find a [local volunteer](%= codeorg_url('/volunteer/local') %) to help run an Hour of Code in your class.
+### 이 운동에 참여하신 다음에는, 첫번째 컴퓨터 과학 시간에 이 철차대로 해보세요. Hour of Code는 초보자에게도 사용하기 쉽습니다! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your class.
 
-### Take a look at our [participation guide if you still have questions](%= localized_file('/files/participation-guide.pdf') %).
+### Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}).
 
 * * *
 
@@ -17,11 +18,11 @@ nav: how_to_nav
 
 ## 2. Choose a tutorial for your hour
 
-We provide a variety of fun, [student-guided tutorials](%= resolve_url('/learn') %) for all age groups and experience levels. Students do the activities on their own, though many activities include lesson plans for teachers (you'll see the link when you click the activity) to guide discussion or extend the activity. [![](/images/fit-700/tutorials.png)](%=resolve_url('/learn') %)
+We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for all age groups and experience levels. Students do the activities on their own, though many activities include lesson plans for teachers (you'll see the link when you click the activity) to guide discussion or extend the activity. [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
 ## 3. Promote your Hour of Code
 
-Promote your Hour of Code [with these tools](%= resolve_url('/promote/resources') %) and encourage others to host their own events.
+Promote your Hour of Code [with these tools]({{ urls/promote_resources }}) and encourage others to host their own events.
 
 ## 4. Plan your technology needs - computers are optional
 
@@ -37,24 +38,24 @@ Hour of Code를 경험하기 위한 최고의 선택은 인터넷이 연결된 �
 
 ## 5. Start your Hour of Code off with an inspiring speaker or video
 
-**Invite a [local volunteer](%= codeorg_url('/volunteer/local') %) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
+**Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
 
 **영감을 주는 동영상을 보여주세요:**
 
 - The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh. (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available)
-- Find more inspirational [resources](%= codeorg_url('/inspire') %) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
 - Explain ways that technology impacts our lives, with examples both boys and girls will care about (talk about saving lives, helping people, connecting people, etc.).
 - 수업에서, 일상생활 속에서 코드를 사용하는 것들을 나열하세요.
-- See tips for getting girls interested in computer science [here](%= codeorg_url('/girls')%).
+- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
 
 ## 6. Code!
 
 **Direct students to the activity**
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn')%) under the number of participants.
+- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
 
 **When your students come across difficulties it's okay to respond:**
 
@@ -64,7 +65,7 @@ Hour of Code를 경험하기 위한 최고의 선택은 인터넷이 연결된 �
 
 **What if a student finishes early?**
 
-- Students can see all tutorials and [try another Hour of Code activity](%= resolve_url('/learn')%).
+- Students can see all tutorials and [try another Hour of Code activity]({{ urls/learn }}).
 - 또는, 일찍 완료한 학생들에게 어려워서 잘 해결하지 못하고 있는 다른 학생들을 도와달라고 이야기 해보세요.
 
 [col-33]
@@ -83,8 +84,8 @@ Hour of Code를 경험하기 위한 최고의 선택은 인터넷이 연결된 �
 
 [/col-33]
 
-- [Print certificates](%= codeorg_url('/certificates')%) for your students.
-- 여러분의 학생들을 위한 ["나는 Hour of Code를 해냈다!"라는 스티커를 인쇄하세요.](%= resolve_url('/promote/resources#stickers') %)
+- [Print certificates]({{ urls/certificates }}) for your students.
+- [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
 - [행사 T-셔츠 주문](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) 하기.
 - 소셜 미디어에 여러분의 Hour of Code 이벤트 사진이나 동영상을 공유하세요. #HourOfCode 와 @codeorg를 이용하면 우리도 여러분의 성공을 강조할 수 있어요.
 
@@ -98,14 +99,14 @@ Hour of Code를 경험하기 위한 최고의 선택은 인터넷이 연결된 �
 
 ## 교육자를 위한 다른 Hour of Code 리소스들
 
-- 다른 교육자들로부터 조언, 통찰력, 지원을 얻을 수 있는 [Hour of Code 교사 포럼](http://forum.code.org/c/plc/hour-of-code)을 방문하세요. <% if @country == 'us' %>
-- [Hour of Code의 FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)를 검토해보세요. <% end %>
+- 다른 교육자들로부터 조언, 통찰력, 지원을 얻을 수 있는 [Hour of Code 교사 포럼](http://forum.code.org/c/plc/hour-of-code)을 방문하세요.
+- [Hour of Code의 FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)를 검토해보세요.
 
 ## Hour of Code 이후에는 어떤 것들이 있나요?
 
 Hour of Code 는 컴퓨터과학기술이 어떻게 동작하고, 응용프로그램(앱) 들을 어떻게 만들어 낼 수 있는지 배울 수 있는 긴 여행의 첫 번째 시작입니다. 이 여행을 계속하려면:
 
-- Encourage students to continue to [learn online](%= codeorg_url('/learn/beyond')%).
-- [Attend](%= codeorg_url('/professional-development-workshops') %) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+- Encourage students to continue to [learn online]({{ urls/learn_beyond }}).
+- [Attend]({{ urls/professional_development_workshops }}) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
-<%= view :signup_button %>
+{{ signup_button }}

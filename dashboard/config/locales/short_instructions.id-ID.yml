@@ -275,17 +275,25 @@ id-ID:
       Course 4 SCV 6: Klik disini untuk melihat petunjuk lagi.
       CourseE_HOC 2018 Level_1: Kumpulkan perahu dari peti.
       CourseE_HOC 2018 Level_10: Menuju jalan masuk Ocean Monument.
+      CourseE_HOC 2018 Level_11: Bangun pipa dengan prismarin di dalam Ocean Monument.
+      CourseE_HOC 2018 Level_2: Menuju ke ujung galangan kapal.
+      CourseE_HOC 2018 Level_3: Menyebrangi lautan terbuka untuk ikan kod.
       CourseE_HOC 2018 Level_4: Gunakan sebuah pengulangan untuk sampai ke lumba-lumba.
+      CourseE_HOC 2018 Level_5: Eksplorasi kapal karam untuk menjangkau peti.
       CourseE_HOC 2018 Level_6: Navigasi lewat es untuk meraih salmon.
       CourseE_HOC 2018 Level_7a: Pencarian di reruntuhan bawah laut untuk sebuah peti.
       CourseE_HOC 2018 Level_9b: Gunakan karang sebagai titik acuan untuk mencapai
         harta karun.
       Crack Random Substitution: instruksi
       Crack a Caesar Cipher: instruksi
+      Dance Party 2_2019: Ganti blok perilaku dalam blok 'peri mulai' menjadi berbeda
+        yang membuat alien mulai berputar!
       Dance Party 3_2019: 'Buat peri baru yang nampak seperti alien pink dan buat
         agar melakukan berbagai gerakan saat di klik.  '
       Dance Party 4_2019: Buat peri ketiga yang terlihat seperti alien kuning, buat
         dia berdansa saat diklik. dan atur semua alien untuk berdiri di garis hirizontal.
+      Dance Party 5_2019: Buat sebuah keypress event menggunakan blok keypress event.
+        Untuk event ini, buatlah sehingga ketika ditekan, setiap alien berubah warna!
       Dance Party 6_2019: Tambahkan peri yang terlihat seperti bel, kemudian tambahkan
         acara yang membuat alien berhenti menari saat diklik.
       Dance Party 7_2019: Buat alien biru memulai sebuah tarian baru saat alien pink
@@ -299,8 +307,13 @@ id-ID:
         untuk rincian)
       Dance_Party_extras_visible: Kemana mereka pergi? (Klik "lainnya" untuk rincian)
       Fish Tank 2-validated_2019: Ubah tumbleweed ke berbagai macam ikan!
+      Fish Tank 3-validated_2019: Ubah perilaku ikan sehingga ikannya berenang ke
+        kiri dan kanan.
       Fish Tank 4-validated_2019: Gunakan blok 'atur warna latar'untuk membuat berbagai
         warna latar.
+      Fish Tank 5-validated_2019: Ikan adalah petualang dan ingin bertemu dengan mahluk
+        baru di laut. Tambahkan peri lain ke kolam ikan. Peri ini bisa memiliki berbagai
+        macam kostum lain selain yang anda gunakan untuk ikan!
       FoodFight: Ini adalah contoh sebuah permainan yang dapat Anda buat di play lab.
       Function intro Ryan: Gunakan fungsi `bangun jembatan` dua kali untuk membuat
         jalur menuju obor.
@@ -308,8 +321,12 @@ id-ID:
         jalur menuju obor.
       HOC 2018 Level_1: Kumpulkan perahu dari peti.
       HOC 2018 Level_10: Menuju jalan masuk Ocean Monument.
+      HOC 2018 Level_11: Bangun pipa dengan prismarin di dalam Ocean Monument.
       HOC 2018 Level_12: Rancang lingkungan bawah airmu, terserah padamu!
+      HOC 2018 Level_2: Menuju ke ujung galangan kapal.
+      HOC 2018 Level_3: Menyebrangi lautan terbuka untuk ikan kod.
       HOC 2018 Level_4: Gunakan sebuah pengulangan untuk sampai ke lumba-lumba.
+      HOC 2018 Level_5: Eksplorasi kapal karam untuk menjangkau peti.
       HOC 2018 Level_6: Navigasi lewat es untuk meraih salmon.
       HOC 2018 Level_7a: Pencarian di reruntuhan bawah laut untuk sebuah peti.
       HOC 2018 Level_9b: Gunakan karang sebagai titik acuan untuk mencapai harta karun.
@@ -700,6 +717,8 @@ id-ID:
       courseD_maze_nestedLoops6: Bawa aku ke bunga matahari!
       courseD_maze_nestedLoops6_2018: Bawa aku ke bunga matahari!
       courseD_maze_nestedLoops6_2019: Bawa aku ke bunga matahari!
+      courseD_maze_ramp4_2019: Bantu Scrat meraih biji pohon ek.
+      courseD_maze_ramp5c_2019: Awas pecahan es! bantu Scrat mencapai biji pohon ek.
       courseE_artist_functions1: |-
         Hello. Saya artis zombie. Saya suka menggambar!
         Bantu saya menggambar kacamata persegi. Petunjuk: jembatan antara gelas adalah

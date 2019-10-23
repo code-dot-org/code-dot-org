@@ -1,0 +1,88 @@
+name 'OPD-K5 Outline_copy'
+skip_dialog true
+markdown <<MARKDOWN
+# Course outline
+
+The course is divided into nine stages, and each stage is made up of "levels" or "puzzles." Here's an overview of what you'll learn if you complete the entire course:
+
+## Stage 1: Welcome to 'Teaching Computer Science Fundamentals' (TIME)
+
+By completing Stage 1, you will:
+
+- Review the course details
+- Plan your participation in this course
+- Understand what computer science is and differentiate between "coding" and computer science"
+- Identify the benefits of teaching and learning computer science
+
+## Stage 2: Getting to know the Computer Science Fundamentals Courses (TIME)
+
+By completing Stage 2, you will:
+
+- Become familiar with the content and organization of the Computer Science Fundamentals courses
+- Understand different types of Computer Science Fundamentals lessons
+- Identify which course(s) are most appropriate for your students
+- Understand the importance of the teacher in the Computer Science Fundamentals curriculum
+
+## Stage 3: Sequencing (TIME)
+
+By completing Stage 3, you will:
+
+- Define "program" and "algorithm"
+- Use the Code.org visual programming engine to write simple programs
+- Explore unplugged lessons on sequencing and reflect on classroom application
+- Understand how to find and utilize Code.org lesson plans
+
+## Stage 5: Loops (TIME)
+
+By completing Stage 4, you will:
+
+- Define "loops" and explain their importance
+- Explore unplugged lessons on loops and reflect on classroom application
+- Practice coding simple loops
+- Understand the benefits of pair programming
+
+## Stage 8: Events (TIME)
+
+By completing Stage 5, you will:
+
+- Define "events" and explain their importance
+- Explore unplugged lessons on events and reflect on classroom application
+- Practice coding simple events
+- Understand the debugging process
+
+## Stage 6: Conditionals (TIME)
+
+By completing Stage 6, you will:
+
+- Define "conditionals" and explain their importance
+- Explore unplugged lessons on conditionals and reflect on classroom application
+- Practice coding simple conditionals
+- Understand the teaching practice of journaling
+
+## Stage 7: Functions (TIME)
+
+By completing Stage 7, you will:
+
+- Define "functions" and explain their importance
+- Explore unplugged lessons on functions and reflect on classroom application
+- Practice coding simple functions
+- Understand the steps in the problem solving process
+
+## Stage 8: Diving deeper (for Courses E and F) (TIME)
+
+By completing Stage 8, you will:
+
+- Identify if you will be teaching Courses E or F to students
+- Learn about aspects of these courses that are unique, including working with Sprites, end-of-course projects, and more advanced kinds of loops (nested loops and for loops).
+
+## Stage 9: Next Steps (TIME)
+
+By completing Stage 9, you will
+
+- Reflect on your learning
+- Plan for next steps you can take to continue your learning
+- Connect with a global community of fellow educators interested in computer science education
+- Share your takeaways and feedback on this course
+
+> **Note**: Suggested times are provided above to help you plan your learning. Please note that you may want to spend more or less time on a given stage, depending on your prior knowledge, interest and capacity. Keep in mind that this course is entirely self-paced; you can always leave the course and come back or revisit any stage or level at any time.
+MARKDOWN

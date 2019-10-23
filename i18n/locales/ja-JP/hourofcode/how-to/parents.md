@@ -1,9 +1,10 @@
 ---
-title: <%= hoc_s(:title_how_to_parents).inspect %>
+title: 保護者用の手引き
 layout: wide
 nav: how_to_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # How to do an Hour of Code with your child
 
@@ -15,11 +16,11 @@ nav: how_to_nav
 
 ## 2) Choose a tutorial
 
-We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
+We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
 
 **All Hour of Code tutorials are self-guided - allowing your child to work at their own pace and skill level**
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
+[![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
 ## 3) 必要なテクノロジーを準備する
 
@@ -36,13 +37,13 @@ The best Hour of Code experience will be with Internet-connected computers. But 
 - ビル・ゲイツ、マーク・ザッカーバーグ、NBAスターのクリス・ボッシュが出演したCode.org設立時のオリジナルビデオ（[1分](https://www.youtube.com/watch?v=qYZF6oIZtfc)、[5分](https://www.youtube.com/watch?v=nKIu9yen5nc)、[9分](https://www.youtube.com/watch?v=dU1xS07N-FA)のバージョンがあります）。
 - The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A).
 - [アメリカのオバマ大統領が生徒たちにコンピューターサイエンスを学ぶよう呼びかけている映像](https://www.youtube.com/watch?v=6XvmhE1J9PY)。
-- その他の[資料](%= codeorg_url('/inspire') %)や[ビデオ](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP)
+- Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 あなたとお子さんの両方がコンピュータサイエンスについてよく知らなくても問題ありません。以下のようなやり方でHour of Codeのアクティビティについて説明してみてはどうでしょう。
 
 - Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
 - コンピュータが使われているシーンをリストアップしてみましょう。
-- 女の子にコンピュータサイエンスに対する興味を持ってもらうヒントは[こちら](%= codeorg_url('/girls') %)をご覧ください。
+- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
 
 **もっと多くのアイデアが必要ですか？**経験豊富な教育者からのベストプラクティスとして、[レッスンプランのテンプレート](/files/AfterschoolEducatorLessonPlanOutline.docx)をご確認ください。
 
@@ -62,7 +63,7 @@ The best Hour of Code experience will be with Internet-connected computers. But 
 
 ## 6) ほめてあげる
 
-お子さんにあげる（そしてあなたにも）[認定書](%= codeorg_url('/certificates') %)を印刷します。
+[Print certificates]({{ urls/certificates }}) for your child (and yourself!).
 
 Hour of Codeのイベントの様子を撮影した写真やビデオをソーシャルメディア上で共有しましょう。 #HourOfCodeハッシュタグや@codeorg参照を使うと、我々があなたの取り組みをハイライトすることもできます！
 
@@ -72,7 +73,7 @@ Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/20014
 
 The Hour of Code is just the first step in a journey to learn more about how technology works and how to create software applications. To continue this journey:
 
-- Encourage your child to continue [to learn online](%= codeorg_url('/learn/beyond') %).
-- Help [promote](%= resolve_url('/promote') %) computer science education in your child’s school district.
+- Encourage your child to continue [to learn online]({{ urls/learn_beyond }}).
+- Help [promote]({{ urls/promote }}) computer science education in your child’s school district.
 
-<%= view :signup_button %>
+{{ signup_button }}

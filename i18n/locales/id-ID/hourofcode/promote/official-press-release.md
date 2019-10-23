@@ -1,9 +1,10 @@
 ---
-title: <%= hoc_s(:title_press_release).inspect %>
+title: Siaran pers Hour of Code untuk pejabat terpilih
 layout: wide
 nav: promote_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # Contoh siaran pers untuk pejabat terpilih
 
@@ -44,4 +45,4 @@ Over 100 million students worldwide have already tried an Hour of Code. Thanks t
 
 For more information about [**EVENT/PROGRAM/ETC**], visit [**INSERT WEBSITE**] or contact [**INSERT CONTACT INFORMATION**]
 
-<%= view :signup_button %>
+{{ signup_button }}

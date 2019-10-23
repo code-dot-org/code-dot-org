@@ -1,47 +1,49 @@
 ---
-title: <%= hoc_s(:title_press_release).inspect %>
+title: آور-آف-کوڈ پریس ریلیز برائے الیکٹڈ آفیشیلز
 layout: wide
 nav: promote_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # سیمپل پریس ریلیز برائے الیکٹڈ آفیشیلز
 
-### Use this sample press release language to help craft your message about participating in the Hour of Code.
+### ضابطہ اخلاق پڑھیں آپ پہلے ہی اس ویڈیو پر غلط استعمال کی رپورٹ دے چکے / چکی ہیں. ہیلپ ڈیسک جلد از جلد اسے معاملے کو دیکھنے کی کوشش کرے گا
 
 * * *
 
-#### For Immediate Release  
+#### فوری رہائی کے لئے  
 
 
 #### [DATE]  
 
 
-#### Contact: [CONTACT INFORMATION]
+#### رابطہ کریں: [رابطے کی معلومات]
 
 <br />
 
-**GOVERNOR/SENATOR/ASSEMBLYMEMBER/REPRESENTATIVE/MAYOR/ COUNCILMEMBER [INSERT NAME] PARTICIPATED IN THE HOUR OF CODE WITH LOCAL STUDENTS** <br />
+** گورنمنٹ / سینسر / ایسوسی ایشن / نمائندگی / میجر / کونسلر [اندراج NAME] مقامی طلباء کے ساتھ کوڈ کا ہدف میں حصہ لیا </ strong> <br /></p> 
 
-Community comes together to raise awareness about importance of computer science education by participating in Computer Science Education Week <br /> <br />
+کمپیوٹر سائنس تعلیم ہفتہ میں شرکت کرکے کمپیوٹر سائنس کی تعلیم کے بارے میں بیداری بڑھانے کے لئے کمیونٹی کے ساتھ مل کر آتا ہے<br /> <br />
 
-**DATE** - [**INSERT NAME**] joined the principal and faculty members of [**INSERT NAME OF SCHOOL**], business leaders, and local families today for [**NAME OF EVENT**] and participated in the Hour of Code as part of Computer Science Education Week . [**INSERT NAME**] and community members were among tens of millions of people around the world to take part in the largest learning event in history. <br />
+** DATE </ strong> - [** INSERT NAME </ strong>] آج [[strong> INSERT NAME OF SCHOOL </ strong>]، کاروباری رہنماؤں، اور مقامی خاندانوں کے پرنسپل اور فیکلٹی کے ارکان میں شامل ہوئیں [ ** ایونٹ کا نام </ strong>] اور کمپیوٹر سائنس تعلیم ہفتہ کے حصے کے طور پر کوڈ آفس میں حصہ لیا. [** INSERT NAME </ strong>] اور کمیونٹی کے ارکان دنیا بھر میں دس لاکھ لوگوں میں سے تھے جو تاریخ میں سب سے بڑا سیکھنے والے واقعہ میں شرکت کرتے تھے. <br /></p> 
 
-[**INSERT DETAILS OF EVENT, USE DESCRIPTIVE AND QUANTIFIABLE LANGUAGE. FOR EXAMPLE:**]  
-“Daniels Run Elementary school held a school-wide Hour of Code event to introduce its students to computer science. More than 700 students from all grades did at least one Hour of Code. A dozen parents and volunteers from the community helped with the day and brought the kids together for an assembly showcasing why computer science matters in the lives of these students.” <br />
+[** ایونٹ کے اندراج کی تفصیلات، استعمال کی وضاحت اور قابل اطمینان زبان کا استعمال کریں. مثال کے طور پر: </ strong>]   
+"ڈینیلس چلائیں ایلیمریٹری اسکول نے اپنے طالب علموں کو کمپیوٹر سائنس میں متعارف کرایا تاکہ اسکول کے وسیع پیمانے پر کوڈ آف ایونٹ منعقد کریں. تمام گریڈوں سے 700 سے زائد طلباء نے کم سے کم ایک گھنٹے کوڈ کیا. کمیونٹی کے ایک درجن والدین اور رضاکاروں نے دن کے ساتھ مدد کی اور بچوں کو ایک ساتھ اسمبلی کی نمائش کے لئے لایا کیوں کہ ان طالب علموں کی زندگی میں کمپیوٹر سائنس کیوں ہے. " <br /></p> 
 
-[**SAMPLE STOCK TEXT FOR CONTEXT:**]  
-Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and students of color are severely underrepresented. The good news is we’re changing this for the better. The Hour of Code is gateway toward providing all students with access to high-quality computer science education. <br />
+[** متن کے لئے SAMPLE سٹاک متن: </ strong>]   
+  
+کمپیوٹرز ہر جگہ ہیں، لیکن 10 سال پہلے سے کم اسکول کمپیوٹر سائنس سیکھتے ہیں. رنگوں اور لڑکیوں کے طالب علموں کو شدید کمزوری سے کم کیا جاتا ہے. اچھی خبر یہ ہے کہ ہم اسے بہتر بنانے کے لئے تبدیل کر رہے ہیں. کوڈ کا قیام گیٹ وے ہے جس میں تمام طالب علموں کو اعلی معیار کے کمپیوٹر سائنس کی تعلیم تک رسائی فراہم کی جاتی ہے <br /></p> 
 
-Over 100 million students worldwide have already tried an Hour of Code. Thanks to the Hour of Code, computer science was on homepages of Google, MSN, Yahoo!, and Disney. President Obama, Shakira, and Ashton Kutcher have all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement. <br />
+دنیا بھر میں 100 ملین سے زائد طالب علموں کو پہلے سے ہی ایک گھنٹہ کوڈ کی کوشش کی ہے. کوڈ آفس کا شکریہ، کمپیوٹر سائنس گوگل، MSN، یاہو، اور ڈزنی کے گھروں پر تھا. صدر اوبامہ، شاکرا، اور اشٹن کوچ نے ویڈیوز کے ساتھ قیامت کا کوڈ ختم کر دیا ہے. اس تحریک کی حمایت کے لئے 100 سے زیادہ شراکت داروں کے ساتھ مل کر آئے. <br />
 
-[**INSERT QUOTE FROM SPOKESPERSON, EXAMPLE BELOW:**]  
-“We need to encourage and embrace our students’ interest in computer science,” said [**INSERT NAME**]. “Every student deserves the chance to learn computer science to access the best careers of the 21st century.” <br />
+[** سپیکس پیپرسن سے اندراج QUOTE، ذیل میں نمٹنے: </ strong>]   
+"ہمیں کمپیوٹر سائنس میں ہمارے طالب علموں کے دلچسپی کی حوصلہ افزائی اور گلے لگانے کی ضرورت ہے،" انہوں نے کہا کہ [** INSERT NAME </ strong>]. "ہر طالب علم نے 21st صدی کے بہترین کیریئرز تک رسائی حاصل کرنے کے لئے کمپیوٹر سائنس سیکھنے کا موقع مستحق ہے." <br /></p> 
 
-[**INSERT MORE INFORMATION ABOUT YOUR EVENT AND/OR YOUR ORGANIZATION**] <br />
+] **اپنے ایونٹ یا/اور آرگنائزیشن کے بارے میں مزید معلومات داخل کریں**[ <br />
 
-[**INSERT QUOTE FROM ANOTHER ORGANIZATION OR SOMEONE WHO ATTENDED THE EVENT**] <br />
+] **اسپوکس-پرسن کی جانب سے کوٹس داخل کریں، مثال درج ذیل ہے:**[ <1/> ” ہمیں اپنے اسٹوڈینٹس کی کمپیوٹر سائنس میں دلچسپی کو سراہنا اور حوصلہ افزائی کرنا چاہیے،“ ] <0>نام داخل کریں</0>[ نے کہا۔ <br />
 
-For more information about [**EVENT/PROGRAM/ETC**], visit [**INSERT WEBSITE**] or contact [**INSERT CONTACT INFORMATION**]
+اس کے بارے میں مزید معلومات کے لیے ] **ایونٹ/پروگرام/وغیرہ**[ ، وزٹ ] ** ویب سائیٹ داخل کریں**[ یا رابطہ ] ** کانٹیکٹ انفارمیشن داخل کریں**[ 
 
-<%= view :signup_button %>
+{{ signup_button }}

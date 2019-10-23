@@ -273,7 +273,7 @@ module Poste2
       hadi_partovi@code.org
       survey@code.org
       facilitators@code.org
-      tanya_parker@code.org
+      volunteers@code.org
       partner@code.org
     ]
 

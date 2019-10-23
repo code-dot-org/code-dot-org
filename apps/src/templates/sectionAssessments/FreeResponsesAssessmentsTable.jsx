@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import {Table, sort} from 'reactabular';
+import * as Table from 'reactabular-table';
+import * as sort from 'sortabular';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import {freeResponsesDataPropType} from './assessmentDataShapes';
 import i18n from '@cdo/locale';
@@ -114,7 +115,7 @@ class FreeResponsesAssessmentsTable extends Component {
           }
         },
         cell: {
-          format: this.responseCellFormatter,
+          formatters: [this.responseCellFormatter],
           props: {style: tableLayoutStyles.cell}
         }
       }

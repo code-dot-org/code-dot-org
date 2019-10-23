@@ -729,7 +729,7 @@
   "throwSpriteN": "lanzamiento del actor {spriteIndex}",
   "throwTooltip": "Lanza un proyectil desde el actor especificado.",
   "toSet": "establecer",
-  "toTouchedSpriteName": "a el\/la {spriteName} tocado\/a",
+  "toTouchedSpriteName": "a el/la {spriteName} tocado/a",
   "toWander": "pasear",
   "turnLeft": "girar a la izquierda",
   "turnRight": "girar a la derecha",

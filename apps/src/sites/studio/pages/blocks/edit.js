@@ -7,12 +7,13 @@ import initializeCodeMirror, {
 import jsonic from 'jsonic';
 import {parseElement} from '@cdo/apps/xml';
 import {installCustomBlocks} from '@cdo/apps/block_utils';
-import {customInputTypes} from '@cdo/apps/gamelab/blocks';
-import {valueTypeTabShapeMap} from '@cdo/apps/gamelab/GameLab';
+import {customInputTypes as spritelabCustomInputTypes} from '@cdo/apps/p5lab/spritelab/blocks';
+import {customInputTypes as dancelabCustomInputTypes} from '@cdo/apps/dance/blocks';
+import {valueTypeTabShapeMap} from '@cdo/apps/p5lab/P5Lab';
 import animationListModule, {
   setInitialAnimationList
-} from '@cdo/apps/gamelab/animationListModule';
-import defaultSprites from '@cdo/apps/gamelab/defaultSprites.json';
+} from '@cdo/apps/p5lab/animationListModule';
+import defaultSprites from '@cdo/apps/p5lab/spritelab/defaultSprites.json';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 
 let poolField, nameField, helperEditor;
@@ -54,6 +55,12 @@ function onChange(editor) {
 
   const parsedConfig = jsonic(config);
 
+  // Only Dancelab and Spritelab use customInputTypes.
+  const customInputTypes =
+    poolField.value === 'Dancelab'
+      ? dancelabCustomInputTypes
+      : spritelabCustomInputTypes;
+
   const blocksInstalled = installCustomBlocks({
     blockly: Blockly,
     blockDefinitions: [
@@ -65,7 +72,7 @@ function onChange(editor) {
         helperCode: helperEditor && helperEditor.getValue()
       }
     ],
-    customInputTypes // TODO: generalize for other app types.
+    customInputTypes
   });
   const blockName = Object.values(blocksInstalled)[0][0];
   nameField.value = blockName;

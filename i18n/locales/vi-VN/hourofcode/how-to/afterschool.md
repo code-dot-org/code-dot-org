@@ -1,13 +1,14 @@
 ---
-title: <%= hoc_s(:title_how_to).inspect %>
+title: Hướng dẫn Sử dụng
 layout: wide
 nav: how_to_nav
 ---
-<%= view :signup_button %>
 
-# Làm thế nào để dạy Giờ lập trình trong các lớp sau giờ học và các câu lạc bộ
+{{ signup_button }}
 
-### Tham gia và giới thiệu với các học sinh về giờ đầu tiên của họ cùng với khoá học lập trình với những bước sau. Hour of Code (Giờ Lập Trình) rất dễ dàng để chạy - ngay cả với người mới luôn đấy! If you'd like an extra set of hands to help out, you can find a [local volunteer](%= codeorg_url('/volunteer/local') %) to help run an Hour of Code in your after-school class or club.
+# Làm thế nào để dạy một Giờ lập trình sau các buổi học ở trường và trong các câu lạc bộ
+
+### Cùng tham gia và giới thiệu với nhóm học sinh về giờ học khoa học máy tính đầu tiên của họ theo những bước sau. Hour of Code (Giờ Lập Trình) rất dễ dàng để thực hiện - ngay cả với những người mới! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
 
 * * *
 
@@ -15,17 +16,17 @@ nav: how_to_nav
 
 ## 2. Chọn một bài hướng dẫn
 
-We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for participants all ages, created by a variety of partners. [Hãy thử chúng!](%= resolve_url('/learn') %)
+We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for participants all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
 
 **All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
+[![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
 **Cần giáo trình cho Giờ Lập Trình sau giờ học?**Hãy xem [bản mẫu](/files/AfterschoolEducatorLessonPlanOutline.docx) này!
 
 ## 3. Quảng bá Giờ Lập Trình của bạn
 
-Quảng bá Giờ Lập Trình của bạn [với những công cụ này](%= resolve_url('/promote') %) và khuyến khích những người khác tổ chức các sự kiện của riêng họ.
+Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage others to host their own events.
 
 ## 4. Lên kế hoạch các yêu cầu công nghệ - máy tính là tùy chọn không bắt buộc
 
@@ -52,22 +53,22 @@ Khởi động Giờ Lập Trình của bạn bằng cách truyền cảm hứng
 
 - Diễn giải cách mà công nghệ đã tác động đến đời sống của ta, với các ví dụ giữa những chàng trai và những cô gái sẽ quan tâm đến (Nói về các ứng dụng và công nghệ được sử dụng để tiết kiệm cuộc sống, giúp đỡ, kết nối mọi người, vv).
 - Lên danh sách những thứ sử dụng mã hóa trong đời sống hằng ngày.
-- Xem những bí kíp khiến cho các bé gái quan tâm đến khoa học máy vi tính [tại đây](%= resolve_url('https://code.org/girls') %).
+- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
 
 **Bạn cần được hướng dẫn thêm?** Tải [chương trình bài học chuẩn](/files/AfterschoolEducatorLessonPlanOutline.docx) này.
 
 ## 6. Lập trình!
 
-**Direct participants to the activity** - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
+**Direct participants to the activity** - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
 
 **When someone comes across difficulties it's okay to respond:** - “I don’t know. Let’s figure this out together.” - “Technology doesn’t always work out the way we want.” - “Learning to program is like learning a new language; you won’t be fluent right away.”
 
-**What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](%= resolve_url('/learn') %) - Or, ask those who finish early to help others who are having trouble.
+**What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn]({{ urls/learn }}) - Or, ask those who finish early to help others who are having trouble.
 
 ## 7. Ăn mừng
 
-- [In chứng chỉ](%= codeorg_url('/certificates') %) cho học sinh của bạn.
-- [In nhãn dán "Tôi đã hoàn thành Giờ Lập Trình!"](%= resolve_url('/promote/resources#stickers') %)cho các học sinh của bạn.
+- [Print certificates]({{ urls/certificates }}) for your students.
+- [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers for your students.
 - [Đặt áo phông riêng](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) cho thành viên.
 - Chia sẻ hình ảnh và video lớp học Một Giờ Lập Trình của bạn lên các phương tiện truyền thông xã hội. Sử dụng #HourOfCode và @codeorg để chúng tôi cũng có thể ghi nhận thành công của bạn!
 
@@ -75,11 +76,11 @@ Khởi động Giờ Lập Trình của bạn bằng cách truyền cảm hứng
 
 - Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers.
 - Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
-- Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
-- Xem lại [ câu hỏi thường gặp (FAQ) của một Giờ Lập Trình](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
+- Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers.
+- Xem lại [ câu hỏi thường gặp (FAQ) của một Giờ Lập Trình](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
 ## Tiếp theo Hour of Code sẽ là gì?
 
 The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](%= codeorg_url('/learn/beyond') %)!
 
-<%= view :signup_button %>
+{{ signup_button }}

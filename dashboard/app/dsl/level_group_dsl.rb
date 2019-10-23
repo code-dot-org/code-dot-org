@@ -1,4 +1,4 @@
-class LevelGroupDSL < BaseDSL
+class LevelGroupDSL < LevelDSL
   def initialize
     super
     @id = nil
@@ -17,10 +17,6 @@ class LevelGroupDSL < BaseDSL
   string :title
   string :description_short
   string :description
-
-  def parse_output
-    {name: @name, properties: @hash}
-  end
 
   def title(text) @hash[:title] = text end
 

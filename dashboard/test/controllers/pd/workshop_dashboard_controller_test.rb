@@ -53,17 +53,6 @@ class Pd::WorkshopDashboardControllerTest < ::ActionController::TestCase
     assert_equal %w(Organizer ProgramManager), permission_list
   end
 
-  test 'partners have partner permissions' do
-    # PLPs are also organizers
-    user = create(:workshop_organizer)
-    create :regional_partner, contact: user
-
-    sign_in user
-    get :index
-    assert_response :success
-    assert_equal %w(Organizer Partner), permission_list
-  end
-
   test_user_gets_response_for :index, user: :teacher, response: :not_found
 
   private

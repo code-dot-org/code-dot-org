@@ -774,15 +774,16 @@ class UserTest < ActiveSupport::TestCase
   test "find_for_authentication finds migrated multi-auth email user first" do
     email = 'test@foo.bar'
     migrated_student = create(:student, email: email)
-    migrated_student.primary_contact_info = migrated_student.primary_contact_info
-    migrated_student.primary_contact_info.update(authentication_id: User.hash_email(email))
+
     legacy_student = build(:student, email: email)
-    # skip duplicate email validation
-    legacy_student.save(validate: false)
+    # ignore "Email has already been taken" error
+    assert_raises(ActiveRecord::RecordInvalid) do
+      legacy_student.save(validate: false)
+    end
+    legacy_student.demigrate_from_multi_auth
+    assert_equal legacy_student.hashed_email, migrated_student.hashed_email
 
     looked_up_user = User.find_for_authentication(hashed_email: User.hash_email(email))
-
-    assert_equal legacy_student.hashed_email, migrated_student.hashed_email
     assert_equal migrated_student, looked_up_user
   end
 
@@ -798,6 +799,126 @@ class UserTest < ActiveSupport::TestCase
   test "creating manual provider user without username generates username" do
     user = User.create(@good_data.merge({provider: User::PROVIDER_MANUAL}))
     assert_equal 'tester', user.username
+  end
+
+  test 'can get next_unpassed_visible_progression_level, no progress, none hidden' do
+    user = create :user
+    twenty_hour = Script.twenty_hour_script
+    assert twenty_hour.script_levels.first.level.unplugged?
+    assert_equal(2, user.next_unpassed_visible_progression_level(twenty_hour).chapter)
+  end
+
+  test 'can get next_unpassed_visible_progression_level, progress, none hidden' do
+    user = create :user
+    twenty_hour = Script.twenty_hour_script
+    second_script_level = twenty_hour.get_script_level_by_chapter(2)
+    UserLevel.create(
+      user: user,
+      level: second_script_level.level,
+      script: twenty_hour,
+      attempts: 1,
+      best_result: Activity::MINIMUM_PASS_RESULT
+    )
+    assert_equal(3, user.next_unpassed_visible_progression_level(twenty_hour).chapter)
+  end
+
+  test 'can get next_unpassed_visible_progression_level, user skips level, none hidden' do
+    user = create :user
+    twenty_hour = Script.twenty_hour_script
+    first_script_level = twenty_hour.get_script_level_by_chapter(1)
+    UserLevel.create(
+      user: user,
+      level: first_script_level.level,
+      script: twenty_hour,
+      attempts: 1,
+      best_result: Activity::MINIMUM_PASS_RESULT
+    )
+
+    third_script_level = twenty_hour.get_script_level_by_chapter(3)
+    UserLevel.create(
+      user: user,
+      level: third_script_level.level,
+      script: twenty_hour,
+      attempts: 1,
+      best_result: Activity::MINIMUM_PASS_RESULT
+    )
+
+    assert_equal(4, user.next_unpassed_visible_progression_level(twenty_hour).chapter)
+  end
+
+  test 'can get next_unpassed_visible_progression_level, out of order progress, none hidden' do
+    user = create :user
+    twenty_hour = Script.twenty_hour_script
+    first_script_level = twenty_hour.get_script_level_by_chapter(1)
+    UserLevel.create(
+      user: user,
+      level: first_script_level.level,
+      script: twenty_hour,
+      attempts: 1,
+      best_result: Activity::MINIMUM_PASS_RESULT
+    )
+
+    third_script_level = twenty_hour.get_script_level_by_chapter(3)
+    UserLevel.create(
+      user: user,
+      level: third_script_level.level,
+      script: twenty_hour,
+      attempts: 1,
+      best_result: Activity::MINIMUM_PASS_RESULT
+    )
+
+    second_script_level = twenty_hour.get_script_level_by_chapter(2)
+    UserLevel.create(
+      user: user,
+      level: second_script_level.level,
+      script: twenty_hour,
+      attempts: 1,
+      best_result: Activity::MINIMUM_PASS_RESULT
+    )
+
+    assert_equal(4, user.next_unpassed_visible_progression_level(twenty_hour).chapter)
+  end
+
+  test 'can get next_unpassed_visible_progression_level, completed script, none hidden' do
+    user = create :user
+    twenty_hour = Script.twenty_hour_script
+
+    twenty_hour.script_levels.each do |sl|
+      UserLevel.create(
+        user: user,
+        level: sl.level,
+        script: twenty_hour,
+        attempts: 1,
+        best_result: Activity::MINIMUM_PASS_RESULT
+      )
+    end
+    assert twenty_hour.script_levels.first.level.unplugged?
+    assert_equal(2, user.next_unpassed_visible_progression_level(twenty_hour).chapter)
+  end
+
+  test 'can get next_unpassed_visible_progression_level, last level complete, but script not complete, none hidden' do
+    user = create :user
+    twenty_hour = Script.twenty_hour_script
+
+    twenty_hour.script_levels.take(3).each do |sl|
+      UserLevel.create(
+        user: user,
+        level: sl.level,
+        script: twenty_hour,
+        attempts: 1,
+        best_result: Activity::MINIMUM_PASS_RESULT
+      )
+    end
+
+    UserLevel.create(
+      user: user,
+      level: twenty_hour.script_levels.last.level,
+      script: twenty_hour,
+      attempts: 1,
+      best_result: Activity::MINIMUM_PASS_RESULT
+    )
+
+    assert_equal(4, user.next_unpassed_visible_progression_level(twenty_hour).chapter)
   end
 
   test 'can get next_unpassed_progression_level if not completed any unplugged levels' do
@@ -971,51 +1092,6 @@ class UserTest < ActiveSupport::TestCase
 
     next_script_level = user.next_unpassed_progression_level(script)
     refute next_script_level.nil?
-  end
-
-  test 'script with inactive level completed is completed' do
-    user = create :user
-    level = create :maze, name: 'maze 1'
-    level2 = create :maze, name: 'maze 2'
-    script = create :script
-    script_level = create(
-      :script_level,
-      script: script,
-      levels: [level, level2],
-      properties: {'maze 2': {'active': false}}
-    )
-    create :user_script, user: user, script: script
-    UserLevel.create(
-      user: user, level: script_level.levels[1],
-      script: script,
-      attempts: 1,
-      best_result: Activity::MINIMUM_PASS_RESULT
-    )
-
-    assert user.completed?(script)
-  end
-
-  test 'script with active level completed is completed' do
-    user = create :user
-    level = create :maze, name: 'maze 1'
-    level2 = create :maze, name: 'maze 2'
-    script = create :script
-    script_level = create(
-      :script_level,
-      script: script,
-      levels: [level, level2],
-      properties: {'maze 2': {'active': false}}
-    )
-    create :user_script, user: user, script: script
-    UserLevel.create(
-      user: user,
-      level: script_level.levels[0],
-      script: script,
-      attempts: 1,
-      best_result: Activity::MINIMUM_PASS_RESULT
-    )
-
-    assert user.completed?(script)
   end
 
   test 'user is created with secret picture and word' do
@@ -1192,6 +1268,27 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 1, user.terms_of_service_version
   end
 
+  test 'sanitize_race_data will set URM to true when appropriate' do
+    @student.update!(races: 'black,hispanic')
+    @student.reload
+    assert @student.urm
+
+    # URM is true when any races are URM
+    @student.update!(races: 'white,black')
+    @student.reload
+    assert @student.urm
+  end
+
+  test 'sanitize_race_data will set URM to false when appropriate' do
+    @student.update!(races: 'white')
+    @student.reload
+    refute @student.urm
+
+    @student.update!(races: 'asian')
+    @student.reload
+    refute @student.urm
+  end
+
   test 'sanitize_race_data sanitizes closed_dialog' do
     @student.update!(races: 'white,closed_dialog')
     @student.reload
@@ -1220,37 +1317,6 @@ class UserTest < ActiveSupport::TestCase
     @student.reload
     assert_equal 'black,hispanic', @student.races
     assert @student.urm
-  end
-
-  test 'urm_from_races with nil' do
-    @student.update!(races: nil)
-    assert_nil @student.urm_from_races
-  end
-
-  test 'urm_from_races with empty string' do
-    @student.update!(races: '')
-    assert_nil @student.urm_from_races
-  end
-
-  test 'urm_from_races with non-answer responses' do
-    %w(opt_out nonsense closed_dialog).each do |response|
-      @student.update!(races: response)
-      assert_nil @student.urm_from_races
-    end
-  end
-
-  test 'urm_from_races with urm responses' do
-    ['white,black', 'hispanic,hawaiian', 'american_indian'].each do |response|
-      @student.update!(races: response)
-      assert @student.urm_from_races
-    end
-  end
-
-  test 'urm_from_races with non-urm response' do
-    ['white', 'white,asian', 'asian'].each do |response|
-      @student.update!(races: response)
-      refute @student.urm_from_races
-    end
   end
 
   test 'under 13' do
@@ -1467,92 +1533,6 @@ class UserTest < ActiveSupport::TestCase
 
     # changed password
     assert student.reload.encrypted_password != old_password
-  end
-
-  test 'user in_progress_and_completed_scripts does not include deleted scripts' do
-    user = create :user
-    real_script = Script.starwars_script
-    fake_script = create :script
-
-    user_script_1 = create :user_script, user: user, script: real_script
-    user_script_2 = create :user_script, user: user, script: fake_script
-
-    fake_script.destroy!
-
-    # Preconditions for test: The script is gone, but the associated UserScript still exists.
-    # If we start failing this setup assertion (that is, we do automated cleanup
-    # when deleting a script) then we can probably delete this test.
-    refute Script.exists?(fake_script.id), "Precondition for test: Expected Script #{fake_script.id} to be deleted."
-    assert UserScript.exists?(user_script_2.id), "Precondition for test: Expected UserScript #{user_script_2.id} to still exist."
-
-    # Test: We only get back the userscript for the script that still exists
-    scripts = user.in_progress_and_completed_scripts
-    assert_equal scripts.size, 1
-    assert scripts.include?(user_script_1)
-  end
-
-  test 'user is working on script' do
-    user = create :user
-    s1 = create :user_script, user: user, started_at: (Time.now - 10.days), last_progress_at: (Time.now - 4.days)
-    assert user.working_on?(s1.script)
-  end
-
-  test 'user is working on scripts' do
-    user = create :user
-    s1 = create :user_script, user: user, started_at: (Time.now - 10.days), last_progress_at: (Time.now - 4.days)
-    s2 = create :user_script, user: user, started_at: (Time.now - 50.days), last_progress_at: (Time.now - 3.days)
-    c = create :user_script, user: user, started_at: (Time.now - 10.days), completed_at: (Time.now - 8.days)
-
-    # all scripts
-    assert_equal [s2, s1, c], user.user_scripts
-    assert_equal [s2.script, s1.script, c.script], user.scripts
-
-    # working on scripts
-    assert_equal [s2.script, s1.script], user.working_on_scripts
-    # primary script -- most recently progressed in
-    assert_equal s2.script, user.primary_script
-
-    # add an assigned script that's more recent
-    a = create :user_script, user: user, started_at: (Time.now - 1.day)
-    assert_equal [a.script, s2.script, s1.script], user.working_on_scripts
-    assert_equal a.script, user.primary_script
-
-    # make progress on an older script
-    s1.update_attribute(:last_progress_at, Time.now - 3.hours)
-    assert_equal [s1.script, a.script, s2.script], user.working_on_scripts
-    assert_equal s1.script, user.primary_script
-  end
-
-  test 'user has completed script' do
-    user = create :user
-    s1 = create :user_script, user: user, started_at: (Time.now - 10.days), completed_at: (Time.now - 4.days)
-    assert user.completed?(s1.script)
-  end
-
-  test 'user has completed script but no completed_at' do
-    # We have some users in our system who have completed all levels but don't have completed_at set.
-    # This test exercises this case by not setting completed_at, but because the script has no levels there
-    # is no next level for the user to go to, and so completed? succeeds using a fallback code path.
-
-    user = create :user
-    s1 = create :user_script, user: user, started_at: (Time.now - 10.days), last_progress_at: (Time.now - 4.days)
-
-    assert s1.completed_at.nil?
-    assert user.completed?(s1.script)
-  end
-
-  test 'user should prefer working on 20hour instead of hoc' do
-    user = create :user
-
-    twenty_hour = Script.twenty_hour_script
-    hoc = Script.find_by(name: 'hourofcode')
-
-    # do a level that is both in script 1 and hoc
-    [twenty_hour, hoc].each do |script|
-      UserScript.create! user: user, script: script
-    end
-
-    assert_equal [twenty_hour, hoc], user.working_on_scripts
   end
 
   def complete_script_for_user(user, script, completed_date = Time.now)
@@ -2514,32 +2494,6 @@ class UserTest < ActiveSupport::TestCase
     ).level_source_id
   end
 
-  test 'normalize_gender' do
-    assert_equal 'f', User.normalize_gender('f')
-    assert_equal 'm', User.normalize_gender('m')
-    assert_equal 'n', User.normalize_gender('n')
-    assert_equal 'o', User.normalize_gender('o')
-
-    assert_equal 'f', User.normalize_gender('F')
-    assert_equal 'm', User.normalize_gender('M')
-    assert_equal 'n', User.normalize_gender('N')
-    assert_equal 'o', User.normalize_gender('O')
-
-    assert_equal 'f', User.normalize_gender('Female')
-    assert_equal 'm', User.normalize_gender('Male')
-    assert_equal 'n', User.normalize_gender('NonBinary')
-    assert_equal 'o', User.normalize_gender('NotListed')
-
-    assert_equal 'f', User.normalize_gender('female')
-    assert_equal 'm', User.normalize_gender('male')
-    assert_equal 'n', User.normalize_gender('non-binary')
-    assert_equal 'o', User.normalize_gender('notlisted')
-
-    assert_nil User.normalize_gender('some nonsense')
-    assert_nil User.normalize_gender('')
-    assert_nil User.normalize_gender(nil)
-  end
-
   test 'can create user with same name as deleted user' do
     create(:user, :deleted, name: 'Same Name')
     assert_creates(User) do
@@ -2690,91 +2644,9 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
-  test 'should_see_inline_answer? returns true in levelbuilder' do
-    Rails.application.config.stubs(:levelbuilder_mode).returns true
-
-    assert @student.should_see_inline_answer?(nil)
-    assert @student.should_see_inline_answer?(create(:script_level))
-  end
-
-  test 'should_see_inline_answer? returns false for non teachers' do
-    assert_not @student.should_see_inline_answer?(create(:script_level))
-  end
-
-  test 'should_see_inline_answer? returns true for authorized teachers in csp' do
-    user = create :teacher
-    create(:plc_user_course_enrollment, plc_course: (create :plc_course), user: user)
-    assert user.should_see_inline_answer?((create :script_level))
-  end
-
   test 'account_age_days should return days since account creation' do
     student = create :student, created_at: DateTime.now - 10
     assert student.account_age_days == 10
-  end
-
-  def mock_geocoder_result(result)
-    mock_us_object = OpenStruct.new(country_code: result)
-    Geocoder.stubs(:search).returns([mock_us_object])
-  end
-
-  test 'do not show race interstitial to teacher' do
-    mock_geocoder_result('US')
-    teacher = create :teacher, created_at: DateTime.now - 8
-    refute teacher.show_race_interstitial?('ignored_ip')
-  end
-
-  test 'do not show race interstitial to user accounts under 13' do
-    mock_geocoder_result('US')
-    student = User.create(@good_data_young)
-    student.created_at = DateTime.now - 8
-    refute student.show_race_interstitial?('ignored_ip')
-  end
-
-  test 'do not show race interstitial to user accounts less than one week old' do
-    mock_geocoder_result('US')
-    student = create :student, created_at: DateTime.now - 3
-    refute student.show_race_interstitial?('ignored_ip')
-  end
-
-  test 'do not show race interstitial to user accounts that have already entered race information' do
-    mock_geocoder_result('US')
-    student = create :student, created_at: DateTime.now - 8
-    student.update_columns(races: 'white,black')
-    refute student.show_race_interstitial?('ignored_ip')
-  end
-
-  test 'do not show race interstitial to user accounts that have closed the dialog already' do
-    mock_geocoder_result('US')
-    student = create :student, created_at: DateTime.now - 8
-    student.update_columns(races: 'closed_dialog')
-    refute student.show_race_interstitial?('ignored_ip')
-  end
-
-  test 'do not show race interstitial if IP address is nil' do
-    mock_geocoder_result('US')
-    student = create :student, created_at: DateTime.now - 8
-    mock_ip = nil
-    refute RaceInterstitialHelper.show_race_interstitial?(student, mock_ip)
-  end
-
-  test 'do not show race interstitial to non-US users' do
-    mock_geocoder_result('CA')
-    student = create :student, created_at: DateTime.now - 8
-    unused_ip = 'ignored'
-    refute RaceInterstitialHelper.show_race_interstitial?(student, unused_ip)
-  end
-
-  test 'show race interstitial to US users' do
-    mock_geocoder_result('US')
-    student = create :student, created_at: DateTime.now - 8
-    unused_ip = 'ignored'
-    assert RaceInterstitialHelper.show_race_interstitial?(student, unused_ip)
-  end
-
-  test 'show race interstitial for student over 13 with account more than 1 week old' do
-    mock_geocoder_result('US')
-    student = create :student, created_at: DateTime.now - 8
-    assert student.show_race_interstitial?('ignored_ip')
   end
 
   test 'new users must have valid email addresses' do
@@ -3607,6 +3479,59 @@ class UserTest < ActiveSupport::TestCase
 
       # script 3 hidden in section 2
       SectionHiddenScript.create(section_id: section2.id, script_id: @script3.id)
+    end
+
+    test 'can get next_unpassed_visible_progression_level, progress, hidden' do
+      student = create :student
+      teacher = create :teacher
+      twenty_hour = Script.twenty_hour_script
+
+      # User completed the second stage
+      twenty_hour.stages[1].script_levels.each do |sl|
+        UserLevel.create(
+          user: student,
+          level: sl.level,
+          script: twenty_hour,
+          attempts: 1,
+          best_result: Activity::MINIMUM_PASS_RESULT
+        )
+      end
+
+      # Hide the fifth lesson/stage
+      SectionHiddenStage.create(
+        section_id: put_student_in_section(student, teacher, twenty_hour).id,
+        stage_id: 5
+      )
+
+      # Find the seventh stage, since the 5th is hidden and 6th is unplugged
+      next_visible_stage = twenty_hour.stages.find {|stage| stage.relative_position == 7}
+
+      assert_equal(next_visible_stage.script_levels.first, student.next_unpassed_visible_progression_level(twenty_hour))
+    end
+
+    test 'can get next_unpassed_visible_progression_level, last level complete, but script not complete, first hidden' do
+      student = create :student
+      teacher = create :teacher
+      twenty_hour = Script.twenty_hour_script
+
+      UserLevel.create(
+        user: student,
+        level: twenty_hour.script_levels.last.level,
+        script: twenty_hour,
+        attempts: 1,
+        best_result: Activity::MINIMUM_PASS_RESULT
+      )
+
+      # Hide the first lesson/stage
+      SectionHiddenStage.create(
+        section_id: put_student_in_section(student, teacher, twenty_hour).id,
+        stage_id: 1
+      )
+
+      # Find the second stage, since the 1st is hidden
+      next_visible_stage = twenty_hour.stages.find {|stage| stage.relative_position == 2}
+
+      assert_equal(next_visible_stage.script_levels.first, student.next_unpassed_visible_progression_level(twenty_hour))
     end
 
     test "user in two sections, both attached to script" do

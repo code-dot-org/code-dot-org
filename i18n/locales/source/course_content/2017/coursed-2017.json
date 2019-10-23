@@ -99,7 +99,7 @@
     "short_instructions": "Help Laurel collect all of the treasure.",
     "long_instructions": "Walk Laurel around this square collecting the treasure as you find it.",
     "authored_hints": {
-      "courseD_artist_ramp10_a": "Instead of using four `move forward` blocks for each side, try putting one `move forward` block inside of a `repeat` loop, like this:\n\n<xml><block type=\"controls_repeat\">\n                                            <title name=\"TIMES\">4</title>\n                                            <statement name=\"DO\">\n                                              <block type=\"maze_moveForward\"/>\n                                            </statement>\n                                          </block></xml>",
+      "courseD_artist_ramp10_a": "Instead of using four `move forward` blocks for each side, try putting one `move forward` block inside of a `repeat` loop, like this:\n\n[blockly block][0]",
       "courseD_artist_ramp10_b": "Don't forget to collect one piece of treasure, then turn to start on a new side of the square!",
       "courseD_artist_ramp10_c": "If you want to simplify your code, you can put one loop inside of another! This is called a **nested loop**."
     }
@@ -677,7 +677,7 @@
     "authored_hints": {
       "courseD_bee_debugging_challenge1_a": "Why does the first half of this program work? Think about why the bee needs to move backward. How much nectar does the bee collect each time it moves over a flower?",
       "courseD_bee_debugging_challenge1_b": "To solve this puzzle, have the bee follow the same pattern to make honey that it does when collecting nectar.",
-      "courseD_bee_debugging_challenge1_c": "After the bee makes it to the bottom row, have it repeat these commands:\n\n<xml><block type=\"controls_repeat\">\n                    <title name=\"TIMES\">2</title>\n                    <statement name=\"DO\">\n                      <block type=\"maze_move\">\n                        <title name=\"DIR\">moveForward</title>\n                        <next>\n                          <block type=\"maze_honey\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_move\">\n                        <title name=\"DIR\">moveBackward</title>\n                      </block>\n                    </next>\n                  </block></xml>"
+      "courseD_bee_debugging_challenge1_c": "After the bee makes it to the bottom row, have it repeat these commands:\n\n[blockly block][0]"
     },
     "callouts": {
       "courseD_bee_debugging_challenge1_callout1": "Use this command to move the bee backward."
@@ -686,10 +686,10 @@
   "https://studio.code.org/s/coursed-2017/stage/8/extras?level_name=courseD_collector_debugging_challenge2": {
     "short_instructions": "Are you an expert at nested loops? Use what you have learned so far to collect all the treasure!",
     "authored_hints": {
-      "courseD_collector_debugging_challenge2_a": "Start by collecting just **two** gems from each of the first **two** piles.\n\n[][0]\nUse these blocks.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>",
-      "courseD_collector_debugging_challenge2_b": "Next, collect the remaining gems in this row.\n\n[][0]\nAdd these blocks to your program.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n\n        </statement>\n      </block>\n\n</xml>",
-      "courseD_collector_debugging_challenge2_c": "Finally, collect the remaining treasure. Add these blocks to your program.\n\n<xml>\n  <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
-      "courseD_collector_debugging_challenge2_d": "Here is the complete solution for this puzzle.\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat\">\n                <title name=\"TIMES\">2</title>\n                <statement name=\"DO\">\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <next>\n                      <block type=\"controls_repeat\">\n                        <title name=\"TIMES\">2</title>\n                        <statement name=\"DO\">\n                          <block type=\"collector_collect\"/>\n                        </statement>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
+      "courseD_collector_debugging_challenge2_a": "Start by collecting just **two** gems from each of the first **two** piles.\n\n[][0]\nUse these blocks.\n\n[blockly block][1]",
+      "courseD_collector_debugging_challenge2_b": "Next, collect the remaining gems in this row.\n\n[][0]\nAdd these blocks to your program.\n\n[blockly block][1]",
+      "courseD_collector_debugging_challenge2_c": "Finally, collect the remaining treasure. Add these blocks to your program.\n\n[blockly block][0]",
+      "courseD_collector_debugging_challenge2_d": "Here is the complete solution for this puzzle.\n\n[blockly block][0]"
     }
   },
   "https://studio.code.org/s/coursed-2017/stage/9/puzzle/1": {
@@ -927,7 +927,7 @@
       "courseD_bee_conditionals4_hintVid1": "Need help getting started?  Watch the video!",
       "courseD_bee_conditionals4_a": "You can still treat every space as if there is a cloud over it, even though you can see the whole path.",
       "courseD_bee_conditionals4_b": "Use an `if` statement inside your loop to check each space for nectar. ",
-      "courseD_bee_conditionals4_c": "Using <xml><block type=\"maze_untilBlocked\"/></xml> block, you should move forward and check for a flower. If there is a flower, what should the bee do?",
+      "courseD_bee_conditionals4_c": "Using [blockly block][0] block, you should move forward and check for a flower. If there is a flower, what should the bee do?",
       "courseD_bee_conditionals4_hintVid2": "Watch this video for help solving this puzzle."
     }
   },
@@ -1034,7 +1034,7 @@
     "short_instructions": "Collect all of the nectar and make all the honey.",
     "long_instructions": "Collect all of the nectar and make all the honey. You can collect all of the nectar in one flower by using the `while nectar > 0` loop.",
     "authored_hints": {
-      "courseD_bee_conditionals_challenge1_b": "Just like the `if at flower` blocks, the code inside a `while nectar > 0` will only run if the bee is at a flower. The difference is that the code inside will run over and over until there is no nectar left.  Try this pattern:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+      "courseD_bee_conditionals_challenge1_b": "Just like the `if at flower` blocks, the code inside a `while nectar > 0` will only run if the bee is at a flower. The difference is that the code inside will run over and over until there is no nectar left.  Try this pattern:\n\n[blockly block][0]"
     },
     "callouts": {
       "courseD_bee_conditionals_challenge2_1": "Use this loop to collect all of the nectar (or honey) from one flower (or honeycomb)."

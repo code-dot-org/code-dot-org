@@ -34,8 +34,8 @@ vi-VN:
         - {}
         - {}
         answers:
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
         - {}
         - {}
       2-3 Binary Match 1:
@@ -92,7 +92,7 @@ vi-VN:
       2-3 Maze Match 2:
         title: Nối Mê Cung
         content1: Nối các câu đố với các khối phù hợp
-        pre_title: lời chỉ đẫn
+        pre_title: Hướng dẫn
         questions:
         - {}
         - {}
@@ -423,7 +423,7 @@ vi-VN:
       4-5 maze match 1:
         title: Nối Mê Cung
         content1: Nối các câu đố với các khối phù hợp
-        pre_title: lời chỉ đẫn
+        pre_title: Hướng dẫn
         questions:
         - {}
         - {}
@@ -443,6 +443,13 @@ vi-VN:
         - {}
       Begin planning your project:
         title: tiêu đề
+        content1: mô tả ở đây
+      Begin planning your project_2018:
+        title: Bắt đầu kế hoạch dự án của bạn
+        content1: mô tả ở đây
+      Begin planning your project_2018_2019:
+        title: Bắt đầu kế hoạch dự án của bạn
+        content1: mô tả ở đây
       CSD Header Size MC:
         answers:
         - {}
@@ -463,26 +470,39 @@ vi-VN:
         - {}
       CSD U2 Design Project:
         title: tiêu đề
+        content1: mô tả ở đây
       CSD U2 Design Project_2018:
         title: tiêu đề
+        content1: mô tả ở đây
       CSD U2 Design Project_2018_2019:
         title: tiêu đề
+        content1: mô tả ở đây
       CSD U2 L2 Overview:
         title: tiêu đề
+        content1: mô tả ở đây
       CSD U2 L3 Overview:
         title: tiêu đề
+        content1: mô tả ở đây
       CSD U2 L4 Overview:
         title: tiêu đề
+        content1: mô tả ở đây
       CSD U2 L5 Overview:
         title: tiêu đề
+        content1: mô tả ở đây
       CSD U2 L6 Overview:
         title: tiêu đề
+        content1: mô tả ở đây
+      CSD U2 Lesson 6 Overview:
+        content1: mô tả ở đây
       CSD U2 expand project:
         title: tiêu đề
+        content1: mô tả ở đây
       CSD U2 expand project_2018:
         title: tiêu đề
+        content1: mô tả ở đây
       CSD U2 expand project_2018_2019:
         title: tiêu đề
+        content1: mô tả ở đây
       CSD U2 image debug match:
         questions:
         - {}
@@ -535,6 +555,15 @@ vi-VN:
         - {}
         - {}
         - {}
+      CSD U2 project guide:
+        title: Trang web cá nhân của bạn
+        content1: mô tả ở đây
+      CSD U2 project guide_2018:
+        title: Trang web cá nhân của bạn
+        content1: mô tả ở đây
+      CSD U2 project guide_2018_2019:
+        title: Trang web cá nhân của bạn
+        content1: mô tả ở đây
       CSD U3 - conditionals - Matching:
         questions:
         - {}
@@ -601,6 +630,12 @@ vi-VN:
         - {}
         - {}
         - {}
+      CSD U3 Card Examples_2018:
+        title: Tạo một thẻ tương tác
+        content1: mô tả ở đây
+      CSD U3 Card Examples_2018_2019:
+        title: Tạo một thẻ tương tác
+        content1: mô tả ở đây
       CSD U3 Functions Prediction define first:
         answers:
         - {}
@@ -696,10 +731,13 @@ vi-VN:
         - {}
       CSD U3 combining rep:
         title: tiêu đề
+        content1: mô tả ở đây
       CSD U3 combining rep_2018:
         title: tiêu đề
+        content1: mô tả ở đây
       CSD U3 combining rep_2018_2019:
         title: tiêu đề
+        content1: mô tả ở đây
       CSD U3 drawSprites placement match:
         questions:
         - {}
@@ -722,26 +760,78 @@ vi-VN:
         - {}
         - {}
         - {}
+      CSD U3 game intro:
+        title: Tạo trò chơi riêng
+        content1: mô tả ở đây
+      CSD U3 game intro_2018:
+        title: Tạo trò chơi riêng
+        content1: mô tả ở đây
+      CSD U3 game intro_2018_2019:
+        title: Tạo trò chơi riêng
+        content1: mô tả ở đây
+      CSD U3 platform intro:
+        title: Xây dựng một sàn nhảy
+        content1: mô tả ở đây
+      CSD U3 platform intro_2018:
+        title: Xây dựng một sàn nhảy
+        content1: mô tả ở đây
+      CSD U3 platform intro_2018_2019:
+        title: Xây dựng một sàn nhảy
+        content1: mô tả ở đây
       CSD U5 Encryption 1:
         title: tiêu đề
+        content1: mô tả ở đây
       CSD U5 Encryption 1_2018:
         title: tiêu đề
+        content1: mô tả ở đây
       CSD U5 Encryption 1_2018_2019:
         title: tiêu đề
+        content1: mô tả ở đây
+      CSD U5 Encryption 2:
+        title: Chuỗi nhị phân giải mã
+        content1: mô tả ở đây
+      CSD U5 Encryption 2_2018:
+        title: Chuỗi nhị phân giải mã
+        content1: mô tả ở đây
+      CSD U5 Encryption 2_2018_2019:
+        title: Chuỗi nhị phân giải mã
+        content1: mô tả ở đây
       CSD U5 L13 SFLP Interpreting Data:
         title: tiêu đề
+        content1: mô tả ở đây
+      CSD U5 crosstab warmup:
+        content1: mô tả ở đây
+      CSD U5 crosstab warmup_2018:
+        content1: mô tả ở đây
+      CSD U5 crosstab warmup_2018_2019:
+        content1: mô tả ở đây
       CSD U5 data visualization:
         title: tiêu đề
+        content1: mô tả ở đây
       CSD U5 data visualization_2018:
         title: tiêu đề
+        content1: mô tả ở đây
       CSD U5 data visualization_2018_2019:
         title: tiêu đề
+        content1: mô tả ở đây
       CSD U5 student record:
         title: tiêu đề
+        content1: mô tả ở đây
       CSD U5 student record_2018:
         title: tiêu đề
+        content1: mô tả ở đây
       CSD U5 student record_2018_2019:
         title: tiêu đề
+        content1: mô tả ở đây
+      CSD U6 LED create intro:
+        title: Làm một ứng dụng bằng cách sử dụng LED
+        content1: mô tả ở đây
+      CSD U6 LED create intro_2018:
+        title: Làm một ứng dụng bằng cách sử dụng LED
+        content1: mô tả ở đây
+      CSD U6 LED create intro_2018_2019:
+        title: Làm một ứng dụng bằng cách sử dụng LED
+        content1: mô tả ở đây
       CSD U6 array multi:
         questions:
         - {}
@@ -766,6 +856,12 @@ vi-VN:
         - {}
         - {}
         - {}
+      CSD U6 final intro:
+        content1: mô tả ở đây
+      CSD U6 final intro_2018:
+        content1: mô tả ở đây
+      CSD U6 final intro_2018_2019:
+        content1: mô tả ở đây
       CSD U6 setProperty predict multi:
         questions:
         - {}
@@ -782,8 +878,14 @@ vi-VN:
         - {}
         - {}
         - {}
+      Internet Simulator Setup:
+        title: Thiết lập trình mô phỏng internet
+        content1: mô tả ở đây
       Internet Simulator Setup 2:
         title: tiêu đề
+        content1: mô tả ở đây
+      Internet Simulator Setup 3:
+        content1: mô tả ở đây
       K-1 Artist 1 Multi 1:
         title: Nhiều lựa chọn
         questions:
@@ -854,8 +956,8 @@ vi-VN:
         - {}
         - {}
         answers:
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
         - {}
       K-1 Digital Footprint Multi 1:
         title: Nhiều lựa chọn
@@ -919,7 +1021,7 @@ vi-VN:
       K-1 Maze Match 1:
         title: Phù hợp với/ khớp với / Chính xác với
         content2: Nối câu đố với khối lệnh phù hợp
-        pre_title: lời chỉ đẫn
+        pre_title: Hướng dẫn
         questions:
         - {}
         - {}
@@ -982,12 +1084,21 @@ vi-VN:
         - text: PHÍA NAM
       Multi-Screen Apps:
         title: tiêu đề
+        content1: mô tả ở đây
       New Challenge Introduction:
         title: tiêu đề
+        content1: mô tả ở đây
       OPD-K5 Stage3aGo:
         title: tiêu đề
+        content1: mô tả ở đây
       Prepare for your presentation:
         title: tiêu đề
+        content1: mô tả ở đây
+      'Technique: Frequency Analysis':
+        content1: mô tả ở đây
+      Terminology Recap:
+        title: Dễ thôi, tiếp theo là gì?
+        content1: mô tả ở đây
       behaviors 1 predict:
         questions:
         - {}
@@ -1148,6 +1259,12 @@ vi-VN:
         - {}
         - {}
         - {}
+      courseD_external_binary1:
+        title: Bản vẽ nhị phân
+      courseD_external_binary1_2018:
+        title: Bản vẽ nhị phân
+      courseD_external_binary1_2018_2019:
+        title: Bản vẽ nhị phân
       courseD_multi_artist_binary8_predict1:
         questions:
         - {}
@@ -1668,3 +1785,5 @@ vi-VN:
         - {}
         - {}
         - {}
+      gradek1_activity_beNice:
+        title: Máy tính là bạn của bạn

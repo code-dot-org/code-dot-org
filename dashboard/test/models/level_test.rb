@@ -888,6 +888,46 @@ EOS
     assert_equal contained_level_2_copy, level_2_copy.contained_levels.last
   end
 
+  test 'clone with suffix sets editor experiment' do
+    old_level = create :level, name: 'old level'
+    new_level = old_level.clone_with_suffix(' copy', editor_experiment: 'level-editors')
+    assert_equal 'old level copy', new_level.name
+    assert_equal 'level-editors', new_level.editor_experiment, 'clone_with_suffix adds editor experiment'
+  end
+
+  test 'cloning multi level sets editor experiment' do
+    old_dsl_text = <<EOS
+name 'old multi level'
+title 'Multiple Choice'
+question 'What is your favorite color?'
+wrong 'Red'
+wrong 'Green'
+right 'Blue'
+EOS
+
+    expected_new_dsl_text = <<EOS
+name 'old multi level copy'
+editor_experiment 'level-editors'
+title 'Multiple Choice'
+question 'What is your favorite color?'
+wrong 'Red'
+wrong 'Green'
+right 'Blue'
+EOS
+
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    File.expects(:write).once.with do |_pathname, new_dsl_text|
+      new_dsl_text == expected_new_dsl_text
+    end
+
+    old_level = create :multi, name: 'old multi level'
+    old_level.stubs(:dsl_text).returns(old_dsl_text)
+
+    new_level = old_level.clone_with_suffix(' copy', editor_experiment: 'level-editors')
+    assert_equal 'old multi level copy', new_level.name
+    assert_equal 'level-editors', new_level.editor_experiment
+  end
+
   test 'contained_level_names filters blank names before validation' do
     level = build :level
     level.contained_level_names = ['', 'real_name']

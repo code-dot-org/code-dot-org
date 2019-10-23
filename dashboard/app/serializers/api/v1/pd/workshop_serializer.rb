@@ -34,7 +34,7 @@ class Api::V1::Pd::WorkshopSerializer < ActiveModel::Serializer
     :enrolled_teacher_count, :sessions, :account_required_for_attendance?,
     :enrollment_code, :on_map, :funded, :funding_type, :ready_to_close?,
     :date_and_location_name, :regional_partner_name, :regional_partner_id,
-    :scholarship_workshop?, :potential_organizers
+    :scholarship_workshop?, :can_delete
 
   def sessions
     object.sessions.map do |session|
@@ -62,5 +62,9 @@ class Api::V1::Pd::WorkshopSerializer < ActiveModel::Serializer
 
   def regional_partner_name
     object.regional_partner.try(:name)
+  end
+
+  def can_delete
+    @scope.try(:[], :current_user) && object.can_user_delete?(@scope[:current_user])
   end
 end

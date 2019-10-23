@@ -1,13 +1,14 @@
 ---
-title: <%= hoc_s(:title_how_to_events).inspect %>
+title: Útmutató
 layout: wide
 nav: how_to_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # Így tarts meg egy Hour of Code eseményt egy iskola utáni foglalkozáson
 
-### Csatlakozz a mozgalomhoz és tartsd meg egy csapat diáknak az első számítástudomány óráját az alábbi útmutató alapján. Egy "Hour of Code" alkalmat könnyű megszervezni, sőt tapasztalat sem szükséges hozzá! Amennyiben jól jönne egy segítő kéz, keressen oldalunkon egy [helyi önkéntest](%= codeorg_url('/volunteer/local') %), aki segít lebonyolítani egy "Hour of Code" rendezvényt.
+### Csatlakozz a mozgalomhoz és tartsd meg egy csapat diáknak az első számítástudomány óráját az alábbi útmutató alapján. Egy "Hour of Code" alkalmat könnyű megszervezni, sőt tapasztalat sem szükséges hozzá! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
 
 * * *
 
@@ -15,17 +16,17 @@ nav: how_to_nav
 
 ## 2. Válassz egy gyakorlatot
 
-Minden korosztály számára kínálunk a partnereink által elkészített [1 óra hosszú, mókás gyakorlatot](%= resolve_url('/learn') %). [Próbáld ki!](%= resolve_url('/learn') %)
+We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for participants all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
 
 **Minden "Hour of Code" gyakorlat** egy minimális felkészülési igényel a szervezőtől, de az eseményen mindenki a saját tempójában tud haladni, a képességének megfelelően.
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
+[![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
 **Szükséged lenne egy óratervre a "Hour of Code" eseményhez?** Tekints meg egy [mintatervet](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
 ## 3. Népszerűsítsd a "Hour of Code" eseményedet
 
-Segítsd a saját "Hour of Code" eseményedet [ezekkel az eszközökkel](%= resolve_url('/promote') %), valamint biztass másokat arra, hogy szintén vegyenek részt, és szervezzék meg a saját "Hour of Code" eseményüket.
+Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage others to host their own events.
 
 ## Tervezd meg, hogy milyen technikai feltételek szükségesek - a számítógép opcionális dolog
 
@@ -52,22 +53,22 @@ Indítsa el a Kódolás Óráját azáltal, hogyinspirálja a résztvevőket, va
 
 - Magyarázd el milyen hatással van a modern technológia az életünkre, keress olyan magyarázatot, ami a fiúknak és a lányoknak is érdekes lehet! (Például olyan esetekről, amikor a technológia életet menthet, segíti az embereket, összeköti az embereket, stb.).
 - Sorolj fel olyan dolgokat a midennapi életből amely programkód alapján működik.
-- Nézd meg [itt](%= resolve_url('https://code.org/girls') %), hogy hogyan keltheted fel a lányok érdeklődését a számítástechnika iránt.
+- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
 
 **További segítségre van szükséged? **Töltsd le ezt az [óraterv mintát](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
 ## 6. Kódoljunk!
 
-**Közvetlen résztvevőknek az eseményen** Írd fel a gyakorlat linkjét a táblára! Ezeket a linkeket megtalálod az [alábbi oldalon](%= resolve_url('/learn') %) a résztvevők száma alatt.
+**Közvetlen résztvevőknek az eseményen** Írd fel a gyakorlat linkjét a táblára! Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
 
 **Ha valaki nehézségekbe ütközik, akkor természetes válasz az, hogy:** - Nem tudom! Találjuk meg együtt a problémát. - "A technológia nem mindig úgy működik, ahogy mi azt szeretnénk." - "Amikor programozni tanulunk az olyan, mint ha egy új nyelvet tanulnánk beszélni. Azonnal senki sem tud folyékonyan kommunikálni."
 
-**Mit tegyünk ha valaki hamarabb végig ért?** - Győzd meg, hogy próbáljon ki másik "Hour of Code" feladatot a [hourofcode.com/learn](%= resolve_url('/learn') %) oldalon. - Vagy kérd meg, hogy segítsen másoknak, akik elakadtak.
+**What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn]({{ urls/learn }}) - Or, ask those who finish early to help others who are having trouble.
 
 ## 7. Ünnepelj!
 
-- [Nyomtass oklevelet](%= resolve_url('https://code. org/certificates') %) a tanulóknak.
-- [Nyomtass "Teljesítettem a Kódolás Óráját!"](%= resolve_url('/promote/resources#stickers') %) matricákat a tanulóknak.
+- [Print certificates]({{ urls/certificates }}) for your students.
+- [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers for your students.
 - [Rendelj egyedi pólókat](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) a résztvevőknek.
 - Oszd meg a "Hour of Code"-hoz kapcsolódó fotóidat, videóidat a közösségi hálón. Használd a #HourOfCode és a @codeorg tageket, így mi is ki tudjuk emelni az eredményeidet!
 
@@ -75,11 +76,11 @@ Indítsa el a Kódolás Óráját azáltal, hogyinspirálja a résztvevőket, va
 
 - Nézd meg a [legjobb gyakorlatokat](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) a legutóbbi "Hour of Code" rendezvényt szervező szervezetektől.
 - Nézd meg az [oktatóknak szóló webináriumunk](https://youtu.be/EJeMeSW2-Mw) felvételét.
-- Látogass el az ["Hour of Code" fórumra](http://forum.code.org/c/plc/hour-of-code) tanácsokért, továbbá itt más szervezetektől támogatást is kérhetsz. <% if @country == 'us' %>
-- Olvasd át a [Kódolás Órája GYIK](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) részét. <% end %>
+- Látogass el az ["Hour of Code" fórumra](http://forum.code.org/c/plc/hour-of-code) tanácsokért, továbbá itt más szervezetektől támogatást is kérhetsz.
+- Olvasd át a [Kódolás Órája GYIK](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) részét.
 
 ## Mi jön a "Hour of Code" esemény után?
 
 Az "Hour of Code" esemény csak az első lépés, hogy újat tanulj a technológia működéséről, és hogy készíts új szoftvereket. Segítsd a diákokat az útjaikon és biztasd őket, hogy [tanuljanak online még többet](%= codeorg_url('/learn/beyond') %)!
 
-<%= view :signup_button %>
+{{ signup_button }}

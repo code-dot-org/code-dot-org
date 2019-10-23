@@ -1,144 +1,41 @@
 ---
-title: <%= hoc_s(:title_partners).inspect %>
+title: Partner
 ---
-The Hour of Code is driven by the Hour of Code and Computer Science Education Week Advisory and Review Committees.
 
-The [Advisory Committee](%= resolve_url('/advisory-committee') %) is composed of representatives from K-12, academia, nonprofits, for-profits, and international organizations. This committee guides the strategy for the Hour of Code campaign.
+Die Hour of Code wird von Beratungs- und Überprüfungsausschüssen für 'Hour of Code' und 'Computer Science Education Week' gesteuert.
 
-The [Review Committee](%= resolve_url('/review-committee') %) is composed of 15 educators across K-12 grade bands that assess and recommend activities using the Advisory Committee's rubric. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
+Der [Beiratsausschuss]({{ urls/advisory_committee }}) setzt sich aus Vertretern von K-12, Wissenschaft, Non-Profit-Organisationen, For-Profits und internationalen Organisationen zusammen. Dieses Komitee leitet die Strategie für die Kampagne "Hour of Code".
 
-Both committees' work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
+Das [Fallprüfungskomitee]({{ urls/review_committee }}) besteht aus 15 Pädagogen aus K-12-Gruppen, die Aktivitäten der Rubrik des Beratungsausschusses bewerten und empfehlen. Diese Pädagogen überprüfen schülergeführte Aktivitäten und lehrergeführte Unterrichtspläne, die von Hunderten von Aktivitätspartnern eingereicht wurden, und bewerten den Bildungswert der Aktivitäten, die Fähigkeit, die Lernenden zu engagieren, und die potenzielle Anziehungskraft auf verschiedene Gruppen von Schülern.
 
-<% if @country == 'la' %>
+Die Arbeit und das Engagement beider Ausschüsse haben zum Erfolg der "Hour of Code" und ihrer Vision beigetragen, jedem Studenten eine Einführung in die Informatik zu bieten.
 
-# Latin America Partners
+# Wichtige Partner und Unterstützer von Unternehmen
 
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'la') %>
-
-<% end %>
-
-<% if @country == 'ac' %>
-
-# Africa Partners
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ac') %>
-
-<% end %>
-
-<% if @country == 'au' %>
-
-# Australia Partners
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'au') %>
-
-<% end %>
-
-<% if @country == 'cn' %>
-
-# China Partners
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'cn') %>
-
-<% end %>
-
-<% if @country == 'fr' %>
-
-# France Partners
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'fr') %>
-
-<% end %>
-
-<% if @country == 'id' %>
-
-# Indonesia Partners
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'id') %>
-
-<% end %>
-
-<% if @country == 'ie' %>
-
-# Ireland Partners
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ie') %>
-
-<% end %>
-
-<% if @country == 'in' %>
-
-# India Partners
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'in') %>
-
-<% end %>
-
-<% if @country == 'jp' %>
-
-# Japan Partners
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'jp') %>
-
-<% end %>
-
-<% if @country == 'nl' %>
-
-# Netherlands Partners
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'nl') %>
-
-<% end %>
-
-<% if @country == 'nz' %>
-
-# New Zealand Partners
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'nz') %>
-
-<% end %>
-
-<% if @country == 'uk' %>
-
-# United Kingdom Partners
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'uk') %>
-
-<% end %>
-
-<% if @country == 'ca' %>
-
-# Canada Partners
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ca') %>
-
-<% end %>
-
-# Major Partners and Corporate Supporters
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'major') %>
+{{ partners/major_partners_corporate_supporters }}
 
 * * *
 
-# International Partners
+# Internationale Partner
 
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'international') %>
-
-* * *
-
-# Curriculum and Tutorial Partners
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
+{{ partners/international_partners }}
 
 * * *
 
-# Infrastructure Partners and Tools
+# Curriculum und Tutorial Partner
 
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
+{{ partners/curriculum_tutorial_partners }}
 
 * * *
 
-# Additional Partners
+# Infrastruktur Partner und Werkzeuge
 
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
+{{ partners/infrastructure_partners_tools }}
 
-<%= view :signup_button %>
+* * *
+
+# Weitere Partner
+
+{{ partners/additional_partners }}
+
+{{ signup_button }}

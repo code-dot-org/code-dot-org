@@ -1,9 +1,10 @@
 ---
-title: <%= hoc_s(:title_how_to_volunteers).inspect %>
+title: Anleitung für freiwillige "Hour of Code"-Teinehmer
 layout: wide
 nav: how_to_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # Anleitung für Ehrenamtliche
 
@@ -43,11 +44,11 @@ Sie können in einer Schulklasse als Gastredner auftreten oder die Lehrern bei d
 
 <ol>
   <li>
-    Bieten Sie den Lehrern Ihres Kindes an, bei der Durchführung einer Hour of Code mitzuhelfen und senden Sie ihnen <a href="%= resolve_url('/promote/resources#help-schools') %">diese E-Mail</a>.
+    <a href="{{ promote/help_schools }}">Send this email</a> to your child’s teacher offering to help them run an Hour of Code.
   </li>
   
   <li>
-    Bieten Sie einer Schule in Ihrer Nähe an, eine Hour of Code nach dem Unterricht in der Schule durchzuführen. Nutzen Sie diesen <a href="%= resolve_url('/how-to') %">Leitfaden</a>, um Ihre Veranstaltung zu planen.
+    Offer to host an Hour of Code event after school at a local school. <a href="{{ urls/how_to_guide }}">Use this How-To Guide</a> to help you plan.
   </li>
 </ol>
 
@@ -56,7 +57,7 @@ Sie können in einer Schulklasse als Gastredner auftreten oder die Lehrern bei d
 </h2>
 
 <p>
-  Erzählen Sie Ihren Freunden und Kollegen von der Hour of Code. Bitten Sie sie, sich als <a href="https://code.org/volunteer">Freiwillige zu registrieren</a>, denn Tausende von Lehrern suchen nach Helfern. Bitten Sie auch ihren Arbeitgeber, sich zu engagieren. Schicken Sie <a href="%= resolve_url('/promote/resources#sample-email') %">diese E-Mail</a> an Ihren Chef, um alle mit ins Boot zu holen.
+  Erzählen Sie Ihren Freunden und Kollegen von der Hour of Code. Bitten Sie sie, sich als <a href="https://code.org/volunteer">Freiwillige zu registrieren</a>, denn Tausende von Lehrern suchen nach Helfern. Bitten Sie auch ihren Arbeitgeber, sich zu engagieren. <a href="{{ promote/sample_emails }}">Send this email</a> to your manager or the CEO to get everyone on board.
 </p>
 
 <h2>
@@ -65,13 +66,13 @@ Sie können in einer Schulklasse als Gastredner auftreten oder die Lehrern bei d
 
 <ul>
   <li>
-    <a href="%= resolve_url('/promote/resources#videos') %">Suchen Sie sich eines unserer Videos aus</a>. Das können Sie zu Begin als Einführung zeigen, um die Schüler für die Hour of Code zu begeistern.
+    <a href="{{ promote/videos }}">Pick out a video</a> to show to help focus the class and get them excited to do an Hour of Code.
   </li>
   <li>
     Schauen Sie sich unser <a href="/files/hoc-volunteer-toolkit.pdf">"Hour of Code"-Toolkit für Ehrenamtliche</a> an, das eine Übersicht, einen Zeitplan, sowie Vorbereitungs- und Reklamematerial enthält. Das ist alles, was Sie brauchen, um für Ihre erste "Hour of Code"-Erfahrung vorbereitet zu sein!
   </li>
   <li>
-    Wenn Sie während Ihrer Veranstaltung einen "Hour of Code"-Kurs durchführen wollen, nehmen Sie sich mindestens 30 Minuten Zeit, um einen <a href="%= resolve_url('/learn') %">"Hour of Code"-Kurs</a> auszuprobieren.
+    If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one <a href="{{ urls/learn }}">Hour of Code tutorial</a>.
   </li>
   <li>
     Wenn Sie eine Schule besuchen wollen, füllen Sie alle notwendigen Formulare aus.
@@ -119,7 +120,7 @@ Sie können in einer Schulklasse als Gastredner auftreten oder die Lehrern bei d
     </td>
     
     <td>
-      <a href="%= resolve_url('promote/resources#videos') %">Zeigen Sie ein motivierendes Video.</a>
+      <a href="{{ promote/videos }}">Show an inspirational video</a>.
     </td>
   </tr>
   
@@ -244,5 +245,5 @@ Sie können in einer Schulklasse als Gastredner auftreten oder die Lehrern bei d
           Code.org and our partners design all the Hour of Code activities to engage students of all grade levels (K-12), boys and girls, from all backgrounds. Everyone, even adults can have fun playing!
         </p>
         <p>
-          <%= view :signup_button %>
+          {{ signup_button }}
         </p>

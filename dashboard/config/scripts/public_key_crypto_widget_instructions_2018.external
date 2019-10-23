@@ -14,13 +14,13 @@ In this activity you will **simulate public key cryptography** by:
 
 ### To do the activity...
 
-* Form a group of 3 people.  
 <img src="https://images.code.org/add9a646598698d2a91f0f6a61bc2a1e-image-1485720751532.png" style="width: 300px; float: right">
+
+* Form a group of 3 people.
 * **Choose your character:** Alice, Bob, or Eve
 * **Follow the instructions on the screen**, each are individual to the character.
 * **NOTE:** Alice acts first - announcing two numbers publicly.
 * Notice that Bob's first instruction (shown at right), for example, is to *wait* until he hears Alice announce something.
-
 * This diagram shows the basic setup of computers and who says what.
 
 <img src="https://images.code.org/cebab663f00482bf9600186c3daf01b5-image-1485719895961.png" style="display: block; margin: auto; width: 400px">

@@ -1,9 +1,10 @@
 ---
-title: <%= hoc_s(:title_how_to_events).inspect %>
+title: Ako na udalosť Hodina hódu
 layout: wide
 nav: how_to_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # How to organize an Hour of Code assembly or event
 
@@ -14,13 +15,13 @@ nav: how_to_nav
 ## 1. Pripravte sa na akciu
 
 - Zabezpečte priestory, vyberte dátum a čas.
-- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to your local mayor, member of Congress, governor, or influential business person and invite them to speak. Pozrite si [návod](%=localized_file('/files/elected-official.pdf')%), ako zorganizovať návštevu verejného činiteľa počas Hodiny Kódu.
-- Pozvite médiá/tlač, napr. lokálnu televíziu, rádio, regionálne noviny, blogera píšuceho o vzdelávaní či technológiách. Pozrite si náš [tlačový balíček](%= resolve_url('/promote/press-kit') %) ako pomocníka.
+- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to your local mayor, member of Congress, governor, or influential business person and invite them to speak. Check out our [how-to toolkit]({{ localized_files/elected_official }}) when hosting an elected official during an Hour of Code for more info.
+- Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit]({{ promote/press_kit_url }}) for help.
 
 ## 2. Počas Vašej akcie
 
-- Začnite Hodinu s jedným z našich [motivačných videí](%= resolve_url('/promote/resources#videos') %).
-- Ukážte na úvod význam informatiky, použite tieto [štatistiky a infografiky](%= resolve_url('/promote/stats') %).   
+- Kick off your event with one of our [inspirational videos]({{ promote/videos }}).
+- Give an intro overviewing the importance of computer science, using these [stats and infographics]({{ promote/stats_url }}).   
       
     
 - **Other event ideas**: 
@@ -46,7 +47,7 @@ Consider hosting a K-5 evening event and invite parents to join their students f
 
 **Event:** School-wide Computer Science Education Week kick-off assembly
 
-**Date:** <%= campaign_date('start-short') %> (start of Computer Science Education Week)
+**Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
 
 **Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
@@ -56,11 +57,11 @@ Consider hosting a K-5 evening event and invite parents to join their students f
 
 | Čas           | Činnosť                                                                                                                                                            |
 | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 10:00 - 10:05 | Open with one of our [inspirational videos](%= resolve_url('/promote/resources#videos') %).                                                                        |
-| 10:05 - 10:15 | Riaditeľ na úvod odprezentuje dôležitosť informatiky. Použite tieto [štatistiky a infografiky](%= resolve_url('/promote/stats') %).                                |
+| 10:00 - 10:05 | Open with one of our [inspirational videos]({{ promote/videos }}).                                                                                                 |
+| 10:05 - 10:15 | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics]({{ promote/stats_url }}).                              |
 | 10:15 - 10:30 | Špeciálny hosť porozpráva o svojom zázemí a o tom, akú dôležitú úlohu zohrávajú technológie a informatika v jeho každodennom živote.                               |
 | 10:30 - 10:40 | Študenti predvedú vzorovú Hodinu Kódu na škole. Pre spestrenie môžete nechať študentov, aby naučili programovať riaditeľa, prítomných hostí alebo iných študentov! |
 | 10:40 - 11:00 | Študenti predvedú aktivity bez počítačov a ukážu, ako sa dá informatika učiť bez použitia počítačov.                                                               |
 | 11:00 - 11:05 | Učiteľ, ktorý organizuje toto podujatie, prednesie záverečné slová.                                                                                                |
 
-<%= view :signup_button %>
+{{ signup_button }}

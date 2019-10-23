@@ -47,13 +47,10 @@ class PeerReviewsController < ApplicationController
   end
 
   def update
-    begin
-      @peer_review.update!(peer_review_params.merge(reviewer: current_user, from_instructor: current_user.permission?('plc_reviewer')))
-    rescue ActiveRecord::RecordNotSaved, ActiveRecord::RecordInvalid => error
-      Honeybadger.notify(error, error_message: "Error updating peer review", context: {peer_review: @peer_review})
-      redirect_to peer_review_path(@peer_review)
-      return
-    end
+    @peer_review.update! peer_review_params.merge(
+      reviewer: current_user,
+      from_instructor: current_user.plc_reviewer?
+    )
 
     flash[:notice] = t('peer_review.review_submitted')
 

@@ -31,6 +31,8 @@ uz-UZ:
         do something: nimadir qilish
       NEW Course 4 Artist Params 9:
         do something: nimadir qilish
+      Standalone_Artist_9:
+        my function: mening funksiyam
       course3_artist_functions_challenge1:
         do something: nimadir qilish
       course3_artist_functions_challenge2:

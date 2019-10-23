@@ -1,0 +1,29 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2019-08-01T17:45:09.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Reflection: Sending Complex Messages",
+    "placeholder": "Enter your reflection here.",
+    "long_instructions": "Recall when you built your binary message sending device. Why did we decide to send a message as a sequence of states (A and B) rather than modifying our devices to represent more states (State C, State D, State E, ...)?\r\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "submittable": "false",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "instructions_important": "false",
+    "parent_level_id": 16721,
+    "name_suffix": "_2019",
+    "encrypted_solution": "4jf0Xvc3I88LiFStSqVwiy7hBxYVMJ9GHQAKfklNYKd5NU3SLLQJkTeCGnoL\nCMtHTbLcrkqSPU2DTfIOyeMSJRivJboYbFAoGZ9UY02m9Lgdp1rItJxSVsRq\n8Gxw/ZoMbvU21bJwQCr0IV8leksre5I4L+WrPFCgXeHFJ8V9cEsRzqorkr9C\nQgHDPCHNKpXBNEtsng3N04pod/Bxa84+gWy8qSyvtHl5B8jsX1rrN5F1qjQZ\ncapuWuWtAykxgheCAHV3yJrCZldaUJLEFurQjdNXnSVBBTCg6QDWPJ2Nxk0c\nq2OmwQEYQo9ABmrHvKxf1obowl8s1Ea1o08Vni560bxlJHKFjfOUdunQi7cG\nKUkV1gybDSN0zJDuUzxIH2G1L9HdBVpfanQxoUcV0nccWMmFmQx673Sj5c3Z\nel4HkSo7x77B70GDH0auZUju9Vuo2LIM/1T2NNhGSM9faQoi5k/BiSzt8ztX\nvVaJEkL1VH9Wvd0aHPNYZzypazOdbyxrjQNu4iUH8L6/KnzbnEb9CjXd70UG\nPOoxGktuxcNIMai2wwpQtRLGIRd18Xbef6Dg2vXRkqOtZ2oMitw1bF4jLQXT\nCvM+UPxgM2wt9YFRPiwNno5pE+URIiRSd73VOQ1/vXOr2QkQ7bmK284AuZe2\nIch5WNdgHs2+8bX6hI0TqAqDFzCYfd/MpBuuI6Hk0fy8cAOc0TIftSqqytWH\nY2Lml6djY1XKXWqqWdeIMz5JtUYJpV/YAAp91OlRV9MX0Xoo8EC4n7lu3t+a\nltWXw5q2CWlcBIlTP6ouTo5huJ7Y0Z0TBrHZujD2YIVv94m10UZe\n",
+    "encrypted": "false",
+    "optional": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-08-24 17:19:24 +0000\",\"changed\":[],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2018-08-24 17:30:45 +0000\",\"changed\":[\"encrypted_solution\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-08-01 17:48:08 +0000\",\"changed\":[\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

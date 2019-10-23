@@ -19,6 +19,7 @@ export const REDIRECT_RESPONSE = {
 const CHANGE_INTERFACE_MODE = 'applab/CHANGE_INTERFACE_MODE';
 const ADD_REDIRECT_NOTICE = 'applab/ADD_REDIRECT_NOTICE';
 const DISMISS_REDIRECT_NOTICE = 'applab/DISMISS_REDIRECT_NOTICE';
+const SET_LEVEL_DATA = 'applab/SET_LEVEL_DATA';
 
 /**
  * Change the interface mode between Design Mode and Code Mode
@@ -59,10 +60,22 @@ function dismissRedirectNotice() {
   };
 }
 
+/**
+ * Store data about the current Applab level (e.g., level name).
+ * @returns {{type: string, levelData: object}}
+ */
+function setLevelData(data) {
+  return {
+    type: SET_LEVEL_DATA,
+    data
+  };
+}
+
 export const actions = {
   changeInterfaceMode,
   addRedirectNotice,
-  dismissRedirectNotice
+  dismissRedirectNotice,
+  setLevelData
 };
 
 // Reducers
@@ -102,11 +115,26 @@ function redirectDisplay(state, action) {
   }
 }
 
+function level(state, action) {
+  state = state || {};
+
+  switch (action.type) {
+    case SET_LEVEL_DATA:
+      return {
+        ...state,
+        ...action.data
+      };
+    default:
+      return state;
+  }
+}
+
 export const reducers = {
   ...jsDebuggerReducers,
   maker,
   data,
   interfaceMode,
   redirectDisplay,
-  screens
+  screens,
+  level
 };

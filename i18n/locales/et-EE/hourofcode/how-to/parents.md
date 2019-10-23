@@ -1,9 +1,10 @@
 ---
-title: <%= hoc_s(:title_how_to_parents).inspect %>
+title: Juhend lapsevanematele
 layout: wide
 nav: how_to_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # Kuidas KoodiTund lapsega koos läbi teha
 
@@ -15,11 +16,11 @@ nav: how_to_nav
 
 ## 2) Valige juhendmaterjal
 
-Pakume erinevaid lõbusaid tund aega kestvaid õpetusi igas vanuses lasetele, mille on loonud mitmed meie partneid.[ Tee proovi!](%= resolve_url('/learn') %)
+We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
 
 **Kõik KoodiTund juhendid on koos selgitustega, mis lubavad lapsel töötada iseseisvalt oma tempole ja oskustasemele vastavalt**
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
+[![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
 ## 3) Planeeri, mis vahendeid vajad
 
@@ -36,13 +37,13 @@ Alusta oma KoodiTund läbiviimist osalejate inspireerimisega ning aruteluga, kui
 - Originaalvideo Code.org algatuse algusest, kus esinevad Bill Gates, Mark Zuckerberg ja NBA korvpallitäht Chris Bosh (olemas on[ 1-minutiline ](https://www.youtube.com/watch?v=qYZF6oIZtfc), [ 5-minutiline ](https://www.youtube.com/watch?v=nKIu9yen5nc) ja [ 9-minutiline](https://www.youtube.com/watch?v=dU1xS07N-FA) versioon).
 - [KoodiTund üle maailma video](https://www.youtube.com/watch?v=KsOIlDT145A).
 - [President Obama kutsub kõiki õpilasi arvutiteadust õppima](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-- Veel inspireerivaid [materjale ](%= codeorg_url('/inspire') %) ja [ videosid](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 Ära muretse, kui sa ei tunne arvutiteaduse valdkonda. Siin on mõned ideed, kuidas KoodiTund sisse juhatada:
 
 - Selgita, kuidas tehnoloogia mõjutab meie elusid ning too näiteid, mis on nii poistele kui tüdrukutele arusaadavad. Räägi äppidest ja tehnoloogiatest, mida kasutades saab päästa inimelusid, aidata inimesi, suhelda ka kaugel asuvate inimestega jne.
 - Nimeta asju, mis igapäevaelus kasutavad programmeerimist.
-- Nõuandeid, kuidas tüdrukutes arvutiteaduse vastu huvi äratada, leiad[ siit](%= resolve_url('https://code. org/girls') %).
+- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
 
 Tahad veel ideid? Vaata meie [ tunniplaani](/files/AfterschoolEducatorLessonPlanOutline.docx), mille on koostanud kogemustega õpetajad.
 
@@ -62,7 +63,7 @@ Siis võib vastata näiteks nii:
 
 ## 6) Tähista
 
-[Trüki tunnistused ](%= codeorg_url('/certificates') %)oma lapsele (ja endale!).
+[Print certificates]({{ urls/certificates }}) for your child (and yourself!).
 
 Jagage KoodiTund ürituse fotosid ja videosid sotsiaalmeedias. Kasuta #HourOfCode ja @codeord, kes saaksime samuti teie edusamme jagada!
 
@@ -72,7 +73,7 @@ Vaata ka [KoodiTund KKK](https://support.code.org/hc/en-us/categories/200147083-
 
 KoodiTund on alles esimene samm, kus õpime, kuidas tehnoloogia töötab ning kuidas programmeerida. Järgmised sammud:
 
-- Julgustade õpilasi jätkama [ internetis õppimist](%= codeorg_url('/learn/beyond') %).
-- Aita [reklaamida](%= resolve_url('/promote') %) arvutiteadust oma lapse koolis.
+- Encourage your child to continue [to learn online]({{ urls/learn_beyond }}).
+- Help [promote]({{ urls/promote }}) computer science education in your child’s school district.
 
-<%= view :signup_button %>
+{{ signup_button }}

@@ -1,15 +1,16 @@
 ---
-title: <%= hoc_s(:title_how_to).inspect %>
+title: 操作方法指南
 layout: wide
 nav: how_to_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # How to teach one Hour of Code with your class
 
-### 参与活动，并用下面的步骤向学生们介绍他们第一个小时的计算机科学。 编程一小时的课程哪怕是对初学者来说都非常容易上手！ 如果需要额外帮助的话，您可以通过[寻找本地志愿者](%= codeorg_url('/volunteer/local') %)来开展“编程一小时”课程。
+### 参与活动，并用下面的步骤向学生们介绍他们第一个小时的计算机科学。 编程一小时的课程哪怕是对初学者来说都非常容易上手！ If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your class.
 
-### Take a look at our [participation guide if you still have questions](%= localized_file('/files/participation-guide.pdf') %).
+### Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}).
 
 * * *
 
@@ -17,11 +18,11 @@ nav: how_to_nav
 
 ## 2. 选择教程
 
-We provide a variety of fun, [student-guided tutorials](%= resolve_url('/learn') %) for all age groups and experience levels. Students do the activities on their own, though many activities include lesson plans for teachers (you'll see the link when you click the activity) to guide discussion or extend the activity. [![](/images/fit-700/tutorials.png)](%=resolve_url('/learn') %)
+We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for all age groups and experience levels. Students do the activities on their own, though many activities include lesson plans for teachers (you'll see the link when you click the activity) to guide discussion or extend the activity. [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
 ## 3. 推广您的编程一小时活动
 
-Promote your Hour of Code [with these tools](%= resolve_url('/promote/resources') %) and encourage others to host their own events.
+Promote your Hour of Code [with these tools]({{ urls/promote_resources }}) and encourage others to host their own events.
 
 ## 4. 您所需的教学设备——电脑不是必需的
 
@@ -37,24 +38,24 @@ Promote your Hour of Code [with these tools](%= resolve_url('/promote/resources'
 
 ## 5）以一段激励演讲或视频来开始编程一小时活动
 
-**Invite a [local volunteer](%= codeorg_url('/volunteer/local') %) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
+**Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
 
 **播放鼓舞人心的视频：**
 
 - 正版的 Code.org 推出包括比尔盖茨、马克·扎克伯格和 NBA 球星克里斯. 波什的视频。 （有[1 分钟的](https://www.youtube.com/watch?v=qYZF6oIZtfc)，[5 分钟的](https://www.youtube.com/watch?v=nKIu9yen5nc)和[9 分钟的](https://www.youtube.com/watch?v=dU1xS07N-FA)）
-- 找到更多鼓舞人心的 [资源](%= codeorg_url('/inspire') %) 和[视频](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP)。
+- Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
 - 通过男孩和女孩们都关心的例子，介绍科技如何影响我们的生活（比如拯救生命，帮助人们，连接人们等）
 - 让全班一起来列出每天生活中用到编程的地方。
-- 帮助女孩对计算机科学感兴趣的小贴士见[这里](%= codeorg_url('/girls')%)。
+- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
 
 ## 6. 编程！
 
 **Direct students to the activity**
 
-- 把教学指南的链接写在白板上。在参加人员数量下面可以找到[你选择的指南链接](%= resolve_url('/learn')%)。
+- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
 
 **When your students come across difficulties it's okay to respond:**
 
@@ -64,7 +65,7 @@ Promote your Hour of Code [with these tools](%= resolve_url('/promote/resources'
 
 **What if a student finishes early?**
 
-- 学生可以看所有的课程指南和[尝试另一个编程一小时的内容](%= resolve_url('/learn')%)
+- Students can see all tutorials and [try another Hour of Code activity]({{ urls/learn }}).
 - 或者可以让提早完成的学生去帮助那些在活动中遇到困难的同学。
 
 [col-33]
@@ -83,8 +84,8 @@ Promote your Hour of Code [with these tools](%= resolve_url('/promote/resources'
 
 [/col-33]
 
-- 为您的学生[打印证书](%= resolve_url('https://code. org/certificates') %) 。
-- 为你的学生[打印"我学过《编程一小时》!"](%= resolve_url('/promote/resources#stickers') %) 贴纸。
+- [Print certificates]({{ urls/certificates }}) for your students.
+- [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
 - 为你的学校[预订定制T恤](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more)。
 - 在社交媒体上分享关于您的编程一小时活动的照片或视频。请使用 #HourOfCode 和 @codeorg，这样我们也可以突出显示您活动的成功 ！
 
@@ -98,14 +99,14 @@ Promote your Hour of Code [with these tools](%= resolve_url('/promote/resources'
 
 ## 给教育工作者的其他编程一小时的资源
 
-- 访问[编程一小时教师论坛](http://forum.code.org/c/plc/hour-of-code)来从其他教育工作者那里获取建议、了解和支持。 <% if @country == 'us' %>
-- 阅读 [编程一小时常见问题](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)。 <% end %>
+- 访问[编程一小时教师论坛](http://forum.code.org/c/plc/hour-of-code)来从其他教育工作者那里获取建议、了解和支持。
+- 阅读 [编程一小时常见问题](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)。
 
 ## 编程一小时之后该做什么？
 
 编程一小时只是学习技术的工作原理和创建软件应用旅程的第一步。继续这个旅程：
 
-- 鼓励学生[在线学习](%= codeorg_url('/learn/beyond')%)
-- [参加](%= codeorg_url('/professional-development-workshops') %) 1 天的面对面的研讨会，接受有经验的计算机科学推动者的指导。（仅美国教育者）
+- Encourage students to continue to [learn online]({{ urls/learn_beyond }}).
+- [Attend]({{ urls/professional_development_workshops }}) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
-<%= view :signup_button %>
+{{ signup_button }}

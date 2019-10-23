@@ -1,13 +1,12 @@
 ---
-title: <%= hoc_s(:title_stats).inspect %>
+title: Blurbs and useful stats
 layout: wide
 nav: promote_nav
 ---
 
-
 <a id="blurb"></a>
 
-<%= view :signup_button %>
+{{ signup_button }}
 
 # Blurbs and useful stats
 
@@ -33,7 +32,7 @@ Esperamos que despierte el interes en nuestros estudiantes para seguir aprendien
 
 #### ¿Por qué es esto importante?
 
-La tecnologia esta transformando todas las industrias en el planeta. En el ano 2015, 7 millones de empleos en los Estados Unidos fueron en ocupaciones -incluyendo arte y diseno- que valoran las destrezas de codificacion. But 65 percent of schools in the U.S. don't teach computer science. Es tiempo para nosotros de avanzar al siglo Xxi. Sabemos que sin importar la decisión que tomen nuestros estudiantes respecto a lo que harán de grandes; medicina, negocios, política o artes. Saber cómo se desarrolla la tecnología les dará confianza y aprendizaje para triunfar. <br /> <br />
+La tecnologia esta transformando todas las industrias en el planeta. En el ano 2015, 7 millones de empleos en los Estados Unidos fueron en ocupaciones -incluyendo arte y diseno- que valoran las destrezas de codificacion. But 55 percent of schools in the U.S. don't teach computer science. Es tiempo para nosotros de avanzar al siglo Xxi. Sabemos que sin importar la decisión que tomen nuestros estudiantes respecto a lo que harán de grandes; medicina, negocios, política o artes. Saber cómo se desarrolla la tecnología les dará confianza y aprendizaje para triunfar. <br /> <br />
 
 #### A quote you can use in materials
 
@@ -41,7 +40,7 @@ La tecnologia esta transformando todas las industrias en el planeta. En el ano 2
 
 #### Acerca de Code.org
 
-Code.org® es un una organizacion 501c3-pública, sin fines de lucro dedicada a expandir la participación en ciencias de la computación y aumentar la participación de las mujeres y los estudiantes subrepresentados de color. Its vision is that every student in every school has the opportunity to learn computer programming. Después de su lanzamiento en 2013, Code.org organizó la campaña la Hora del Código – que ha introducido más de 100 millones de estudiantes en ciencias de la computación hasta la fecha – y se ha asociado con 70 distritos de escuelas públicas en todo el país para expandir programas de ciencias de la computación. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. Para obtener más información, visite: [ < % = resolve_url('code.org') %>](%= resolve_url('https://code.org') %).
+Code.org® es un una organizacion 501c3-pública, sin fines de lucro dedicada a expandir la participación en ciencias de la computación y aumentar la participación de las mujeres y los estudiantes subrepresentados de color. Its vision is that every student in every school has the opportunity to learn computer programming. Después de su lanzamiento en 2013, Code.org organizó la campaña la Hora del Código – que ha introducido más de 100 millones de estudiantes en ciencias de la computación hasta la fecha – y se ha asociado con 70 distritos de escuelas públicas en todo el país para expandir programas de ciencias de la computación. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ codeorg_link }}).
 
 ## Share these on social media and in emails
 
@@ -51,6 +50,6 @@ Code.org® es un una organizacion 501c3-pública, sin fines de lucro dedicada a 
 
 ## Infographics
 
-<%= view :stats_carousel %>
+{{ stats_carousel }}
 
-<%= view :signup_button %>
+{{ signup_button }}

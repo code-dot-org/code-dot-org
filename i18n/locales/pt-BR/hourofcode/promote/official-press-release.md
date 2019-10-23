@@ -1,9 +1,10 @@
 ---
-title: <%= hoc_s(:title_press_release).inspect %>
+title: Comunicado de imprensa da Hora do Código para representantes políticos
 layout: wide
 nav: promote_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # Exemplo de comunicado de imprensa para representantes políticos
 
@@ -11,13 +12,13 @@ nav: promote_nav
 
 * * *
 
-#### For Immediate Release  
+#### Para Divulgação Imediata  
 
 
 #### [DATA]  
 
 
-#### Contact: [CONTACT INFORMATION]
+#### Contato: [INFORMAÇÕES DE CONTATO]
 
 <br />
 
@@ -33,15 +34,15 @@ Community comes together to raise awareness about importance of computer science
 [**SAMPLE STOCK TEXT FOR CONTEXT:**]  
 Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and students of color are severely underrepresented. The good news is we’re changing this for the better. The Hour of Code is gateway toward providing all students with access to high-quality computer science education. <br />
 
-Over 100 million students worldwide have already tried an Hour of Code. Thanks to the Hour of Code, computer science was on homepages of Google, MSN, Yahoo!, and Disney. President Obama, Shakira, and Ashton Kutcher have all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement. <br />
+Over 100 million students worldwide have already tried an Hour of Code. Thanks to the Hour of Code, computer science was on homepages of Google, MSN, Yahoo!, and Disney. President Obama, Shakira, and Ashton Kutcher have all kicked off the Hour of Code with videos. Mais de 100 parceiros se uniram para apoiar este movimento. <br />
 
 [**INSERT QUOTE FROM SPOKESPERSON, EXAMPLE BELOW:**]  
-“We need to encourage and embrace our students’ interest in computer science,” said [**INSERT NAME**]. “Every student deserves the chance to learn computer science to access the best careers of the 21st century.” <br />
+“We need to encourage and embrace our students’ interest in computer science,” said [**INSERT NAME**]. "Todos os alunos merecem a oportunidade de aprender a ciência da computação para ter acesso às melhores carreiras profissionais do século XXI" <br />
 
-[**INSERT MORE INFORMATION ABOUT YOUR EVENT AND/OR YOUR ORGANIZATION**] <br />
+[**INSERIR MAIS INFORMAÇÕES SOBRE SEU EVENTO E/OU ORGANIZAÇÃO**] <br />
 
-[**INSERT QUOTE FROM ANOTHER ORGANIZATION OR SOMEONE WHO ATTENDED THE EVENT**] <br />
+[**INSERIR CITAÇÃO DE OUTRA ORGANIZAÇÃO OU PESSOA QUE ESTEVE PRESENTE NO EVENTO**] <br />
 
-For more information about [**EVENT/PROGRAM/ETC**], visit [**INSERT WEBSITE**] or contact [**INSERT CONTACT INFORMATION**]
+Para saber mais sobre o [**EVENTO/PROGRAMA/ETC.**], acesse [**INSERIR SITE**] ou entre em contato com [**INSERIR INFORMAÇÕES DE CONTATO**]
 
-<%= view :signup_button %>
+{{ signup_button }}

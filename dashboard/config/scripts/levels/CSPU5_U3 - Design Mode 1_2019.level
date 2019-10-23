@@ -38,7 +38,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "free_play": "false",
-    "show_turtle_before_run": "false",
+    "show_turtle_before_run": "true",
     "autocomplete_palette_apis_only": "false",
     "text_mode_at_start": "false",
     "design_mode_at_start": "false",
@@ -58,10 +58,17 @@
     "show_debug_watch": "true",
     "parent_level_id": 13344,
     "name_suffix": "_2019",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "expand_debugger": "false"
   },
   "published": true,
-  "notes": "Baker 10.17.16 Remove embed video from here?"
+  "notes": "Baker 10.17.16 Remove embed video from here?",
+  "audit_log": "[{\"changed_at\":\"2019-07-30 17:35:09 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"show_turtle_before_run\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":958,\"changed_by_email\":\"stephanie.wong@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

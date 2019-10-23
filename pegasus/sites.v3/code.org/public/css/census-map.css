@@ -24,6 +24,10 @@
   float: right;
 }
 
+#mapbox {
+  height: 500px;
+}
+
 #footer-text {
   font-family: 'Gotham 4r', sans-serif;
   vertical-align: top;
@@ -48,6 +52,11 @@
   #belowmaplegend {
     display: none;
   }
+  #inmaplegend {
+    width: 200px;
+    bottom: 30px;
+    position: absolute;
+  }
 }
 
 .legend {
@@ -56,7 +65,8 @@
   margin: 5px;
   font-size: 10px;
   font-family: Arial, sans-serif;
-  width: 200px;
+  left: 10px;
+  z-index: 1;
 }
 
 .caption {

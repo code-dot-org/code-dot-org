@@ -111,6 +111,18 @@ da-DK:
         craft_what_is_iron: Udvind jern!
       Underground Iron_2019:
         craft_what_is_iron: Udvind jern!
+      courseA_maze_seq1:
+        courseA_maze_seq1_1: Klik på TIP! hvis du har brug for hjælp!
+      courseA_maze_seq1_2018:
+        courseA_maze_seq1_1: Klik på TIP! hvis du har brug for hjælp!
+      courseA_maze_seq1_2019:
+        courseA_maze_seq1_1: Klik på TIP! hvis du har brug for hjælp!
+      courseB_maze_seq1:
+        courseB_maze_seq1: Klik på TIP! hvis du har brug for hjælp!
+      courseB_maze_seq1_2018:
+        courseB_maze_seq1: Klik på TIP! hvis du har brug for hjælp!
+      courseB_maze_seq1_2019:
+        courseB_maze_seq1: Klik på TIP! hvis du har brug for hjælp!
       frozen circle function with parameter:
         frozen_circle_function_with_parameter_circle: Brug "lav en cirkel" blokken
           og skift størrelsen.

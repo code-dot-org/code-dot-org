@@ -71,6 +71,8 @@ class ExpiredDeletedAccountPurger
       QueuedAccountPurge.create(user: account, reason_for_review: err.message) unless @dry_run
       @num_accounts_queued += 1
     end
+
+    QueuedAccountPurge.clean_up_resolved_records!
   rescue StandardError => err
     yell err.message
     raise
@@ -117,7 +119,7 @@ class ExpiredDeletedAccountPurger
   end
 
   def expired_soft_deleted_accounts
-    user_ids_needing_manual_review = QueuedAccountPurge.pluck(:user_id)
+    user_ids_needing_manual_review = QueuedAccountPurge.needing_manual_review.pluck(:user_id)
     soft_deleted_accounts.
       where(
         'deleted_at BETWEEN :start_date AND :end_date',

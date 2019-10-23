@@ -133,22 +133,22 @@ nl:
       courseA_unplugged_loops:
         desc: In deze les leert je over lussen!
       courseB_unplugged_MRF:
-        title: UNPLUGGED ACTIVITEIT
+        title: Unplugged Activiteit
         desc: In deze les 'programmeer' je je vrienden!
       courseB_unplugged_loopyMRF:
-        title: UNPLUGGED ACTIVITEIT
+        title: Unplugged Activiteit
         desc: Net als in "Mijn Robot vrienden", zal je je vrienden "programmeren", maar deze keer met loops!
       courseC_Unplugged_ScreenOutTheMean:
-        title: UNPLUGGED ACTIVITEIT
+        title: Unplugged Activiteit
         desc: Vandaag leert je wat je kunt doen als iemand online gemeen doet.
       courseD_unplugged_digitalCitizenship:
-        title: UNPLUGGED ACTIVITEIT
+        title: Unplugged Activiteit
         desc: Vandaag leert je wat het betekent om een digitale burger te zijn.
       courseE_unplugged_privateInformation:
         title: 'Gezond verstand onderwijs: Privé en persoonlijke informatie '
         desc: Vandaag leert je het verschil tussen privé en persoonlijke informatie!
       courseF_unplugged_powerOfWords:
-        title: UNPLUGGED ACTIVITEIT
+        title: Unplugged Activiteit
         desc: Vandaag leert je wat je kunt doen als iemand online gemeen doet.
       deeper learning description:
         desc: 'vertaling ontbreekt: nl-US.data.unplugged.desc'
@@ -238,10 +238,10 @@ nl:
         title: Programmeren op Ruitjespapier
         desc: Leerlingen schrijven een algoritme (een reeks instructies) waarbij ze een set van vooraf gedefinieerde opdrachten gebruiken om hun klasgenoten aanwijzingen te geven hoe ze een tekening moeten namaken.
       courseD_unplugged_digitalCitizenship_2018:
-        title: UNPLUGGED ACTIVITEIT
+        title: Unplugged Activiteit
         desc: Vandaag leert je wat het betekent om een digitale burger te zijn.
       courseC_Unplugged_ScreenOutTheMean_2018:
-        title: UNPLUGGED ACTIVITEIT
+        title: Unplugged Activiteit
         desc: Vandaag leert je wat je kunt doen als iemand online gemeen doet.
       Conditionals_2018:
         title: Voorwaardelijke instructies
@@ -276,7 +276,7 @@ nl:
       RelayProgramming_2018_2019:
         title: Estafette Programmeren
       courseD_unplugged_digitalCitizenship_2019:
-        title: UNPLUGGED ACTIVITEIT
+        title: Unplugged Activiteit
         desc: Vandaag leert je wat het betekent om een digitale burger te zijn.
       BinaryImages_2019:
         title: Binaire afbeeldingen
@@ -285,7 +285,7 @@ nl:
         title: Rondjes lopen
         desc: Deze les behandelt het programmeerconcept van lussen (herhaalde instructies) door middel van een dansactiviteit. Leerlingen zullen een eenvoudige choreografie leren, waarna ze de instructie krijgen om het te herhalen.
       courseC_Unplugged_ScreenOutTheMean_2019:
-        title: UNPLUGGED ACTIVITEIT
+        title: Unplugged Activiteit
         desc: Vandaag leert je wat je kunt doen als iemand online gemeen doet.
       BigEvent_2019:
         title: De grote gebeurtenis

@@ -1,29 +1,30 @@
 ---
-title: <%= hoc_s(:title_how_to_events).inspect %>
+title: دليل حدث ساعة البرمجة
 layout: wide
 nav: how_to_nav
 ---
-<%= view :signup_button %>
 
-# How to organize an Hour of Code assembly or event
+{{ signup_button }}
 
-### Get your entire school or community involved in an Hour of Code!
+# كيف تنظم اجتماع أو حدث ساعة البرمجة
+
+### اجعل كل مؤسستك أو مجموعتك تشارك في ساعة البرمجة!
 
 * * *
 
 ## 1. التحضير للحدث الخاص بك
 
 - بدلا من ذلك ، تقرر اليوم والوقت.
-- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to your local mayor, member of Congress, governor, or influential business person and invite them to speak. لمزيد من التعليمات اطلع على [أداوات كيف تفعل](%=localized_file('/files/elected-official.pdf')%) خاصتنا عندما تستضيف شخصية رسمية خلال ساعة برمجة.
-- دعوة وسائل الإعلام والصحفيين. أي محطة أخبار محلية، صحيفة، مدونين التعليم/التكنولوجيا. انظر الى مجموعة صحافتنا للحصول على مساعدة.
+- أرسل [رسالة](https://hourofcode.com/promote/resources#sample-emails) دعوة لرئيس البلدية، أعضاء المجلس الحكومي، او تاجر له نفوذ، لدعوتهم للتحدث. لمزيد من المعلومات اطلع على [أداوات كيفية الاستخدام](%=localized_file('/files/elected-official. pdf')%) عندما تستضيف منتخبا رسميا خلال ساعة برمجة.
+- قم بدعوة وسائل الإعلام والصحفيين. أي محطة أخبار محلية، صحيفة، مدونوا التعليم/التكنولوجيا. ألق نظرة على [ مجموعة صحافتنا]({{ promote/press_kit_url }}) للمساعدة.
 
 ## 2-وخلال الحدث
 
-- ابدأ حدثك بأحد [الفيديوهات المشجعة](%= resolve_url('/promote/resources#videos') %) الخاصة بنا.
-- هذا[الإحصاءات والرسوم البيانية](%= resolve_url('/promote/stats') %)تقديم خطاب استهلالي يشير إلى اهميه علوم الحاسب الألى باستخدام.   
+- أعط انطلاقة حدثك بواسطة أحد [فيديوهاتنا الملهمة]({{ promote/videos }}).
+- أعط مقدمة شاملة حول أهمية علوم الكمبيوتر، باستعمال [هذه الإحصائيات والبيانات]({{ promote/stats_url }}).   
       
     
-- **Other event ideas**: 
+- **أفكار الحدث الأخرى**: 
     - دعوه صاحب الشركة الذي يعمل مع علم الحاسوب في الميدان.
     - دعوه سياسي محلي ونقول للطالب ان أقول لكم كيفيه ترميز الشخص الذي تدعوه.
     - لإظهار نشاط لا يتطلب اتصال إنترنت ، حدد مجموعه من الطلاب.
@@ -32,35 +33,35 @@ nav: how_to_nav
 
 ## 3. حصة كيف ذهب
 
-Share pictures of your event on Facebook and Twitter and use the hashtag **#HourOfCode**.
+شارك صور حدثك على فايسبوك وتويتر واستعمل الهاشتاك **#HourOfCode**.
 
 * * *
 
 ## المضيف ليله الاسره كودلويور الحدث مع رمز الوقت ، ودعوه الأسر للانضمام
 
-Consider hosting a K-5 evening event and invite parents to join their students for an hour of computer science. This is a great way to engage the larger community and encourage parent support for computer science at your school. Our partners at Family Code Night have created an all-in-one event kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints, and more to run your own event. [Click here to download the Event Kit](http://www.familycodenight.org/DownloadCodeDotOrg.html).
+فكر في تنظيم حدث أمسية K-5 وقم بدعوة آباء الطلاب إلى ساعتنا لعلوم الكمبيوتر. هذه طريقه رائعه لإشراك جماعات الأوسع وتشجيع الآباء على دعم علوم الكمبيوتر في مدرستك. أنشأ شركاؤنا في (Family Code Night) حدثا على الأنترنت شاملا مع لائحة البرنامج، دعوات الإيميلات، الملصقات، العروض، وأكثر لإنجاز حدثك. [انقر هنا لتحميل عدة الحدث](http://www.familycodenight.org/DownloadCodeDotOrg.html).
 
 * * *
 
-## Example plan for a school assembly or event
+## مثال تخطيط لاجتماع أو حدث مدرسي
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+**الحدث:**انطلاق أسبوع تدريس علوم الكمبيوتر على صعيد المؤسسة
 
-**Date:** <%= campaign_date('start-short') %> (start of Computer Science Education Week)
+**التاريخ:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+**التوقيت:** خلال توقيت الدراسة. من الأفضل الفترة الصباحية. تقريبا 1 ساعة واحدة.
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)
+**المكان:** قاعة الاجتماعات بالمؤسسة (مثلا، المسرح أو مكان الرياضة أو المقصف
 
 ## بدء العرض
 
-| Time                | نشاط                                                                                                                                      |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00 - 10:05 صباحا | Open with one of our [inspirational videos](%= resolve_url('/promote/resources#videos') %).                                               |
-| 10:05 - 10:15 صباحا | ويلقي مدير المدرسة خطابا افتتاحيا يشير إلى اهميه علم الحاسوب. هذا[الإحصاءات والرسوم البيانية](%= resolve_url('/promote/stats') %)استخدام. |
-| 10:15 - 10:30 صباحا | المتكلم الضيف يجعل الحديث عن نفسه ، قليلا من التكنولوجيا وكيف علم الحاسوب ياخذ دورا هاما في حياتنا اليومية.                               |
-| 10:30 - 10:40 صباحا | يقوم الطلاب بساعة برمجة استعراضية للمدرسة. لمسة اضافية: دعهم يشرحوا للمدير، للسياسي، او الطلاب الاخرين!                                   |
-| 10:40 - 11:00 صباحا | يستعرض الطلاب نشاط بدون اتصال وكيف ان علوم الكمبيوتر يمكن ان تدرس بدون استخدام الكمبيوترات.                                               |
-| 11:00 - 11:05 صباحا | يعطي المعلم الذي ساعد في وجود هذا الحدث العام للمدرسة ملاحظاته الختامية.                                                                  |
+| التوقيت             | نشاط                                                                                                                   |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| 10:00 - 10:05 صباحا | أعط انطلاقة حدثك بواسطة أحد [فيديوهاتنا الملهمة]({{ promote/videos }}).                                                |
+| 10:05 - 10:15 صباحا | يفتتح المدير بإعطاء مقدمة شاملة حول أهمية علوم الكمبيوتر. استعمل [هذه الإحصائيات والمبيانات]({{ promote/stats_url }}). |
+| 10:15 - 10:30 صباحا | المتكلم الضيف يجعل الحديث عن نفسه ، قليلا من التكنولوجيا وكيف علم الحاسوب ياخذ دورا هاما في حياتنا اليومية.            |
+| 10:30 - 10:40 صباحا | يقوم الطلاب بساعة برمجة استعراضية للمدرسة. لمسة اضافية: دعهم يشرحوا للمدير، للسياسي، او الطلاب الاخرين!                |
+| 10:40 - 11:00 صباحا | يستعرض الطلاب نشاط بدون اتصال وكيف ان علوم الكمبيوتر يمكن ان تدرس بدون استخدام الكمبيوترات.                            |
+| 11:00 - 11:05 صباحا | يعطي المعلم الذي ساعد في وجود هذا الحدث العام للمدرسة ملاحظاته الختامية.                                               |
 
-<%= view :signup_button %>
+{{ signup_button }}

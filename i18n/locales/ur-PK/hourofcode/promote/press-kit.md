@@ -1,46 +1,47 @@
 ---
-title: <%= hoc_s(:title_press_kit).inspect %>
+title: پریس کٹ
 layout: wide
 nav: promote_nav
 ---
-<%= view :signup_button %>
 
-# How to attract media to your Hour of Code event
+{{ signup_button }}
 
-### Make a splash with your Hour of Code event and invite local media to see why computer science is important at your school.
+# اپنے آور-آف-کوڈ ایونٹ میں میڈیا کو کیسے متوجہ کیا جائے
+
+### اپنے قیامت کا کوڈ ایونٹ کے ساتھ ایک نمونہ بنائیں اور مقامی ذرائع ابلاغ کو مدعو کریں تاکہ دیکھیں کہ کمپیوٹر سائنس آپ کے اسکول میں اہم کیوں ہے.
 
 *تمام پریس اور میڈیا کی تحقیقات کیلئے، <press@code.org> سے رابطہ کریں*
 
 * * *
 
-## Key Tips
+## اہم تجاویز – کی-ٹپس
 
 - اپنے ایونٹ سے تقریباً دو ہفتے پہلے ای میل کے ذریعے میڈیا تک رسائی اور آگاہ کریں۔ اگر آپ کو ابتدائی جواب موصول نہ ہو تو، ای-میل اور فون سے فالو-اَپ کرتے رہیں۔.
 - اپنے اسکول کے اسٹاف میمبرز یا والیئنٹرز سے کہیں کہ وہ تصاویر لیں اور اسے آن-لائن شیئر کریں یا پریس کو بھیج دیں۔.
 - اپنی ویب سائیٹ کے ھوم پیج اور اسکول کے نیوز-پیپر (جریدے) پر آور-آف-کوڈ کے بارے میں لکھیں اور ایونٹ کی تفصیلات، تصاویر، اور اسٹوڈینٹس ایکٹیویٹیز پوسٹ کریں۔.
-- On Facebook and Twitter, share updates on your plans, announce your events, and post pictures during <%= campaign_date('year') %>. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
+- On Facebook and Twitter, share updates on your plans, announce your events, and post pictures during {{ campaign_date/year }}. ہیش-ٹیگ استعمال کریں تاکہ ** #آور-آف-کوڈ# ** Code.org (@code.org) اسے دیکھ اور اس کی معاونت کو فروغ دے سکے۔
 
-## Step-by-step guide
+## اسٹیپ-بائی-اسٹیپ گائیڈ:
 
-### 1. Plan your event
+### 1. اپنے ایونٹ کی منصوبہ بندی کریں
 
 - آور-آف-کوڈ کو بھرپور طریقہ سے کرنے کے لیے اسمبلی پلان کریں۔.
-- Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to parents and ask them to spread the word.
-- Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to invite your local mayor, member of Congress, governor, or influential businessperson to attend and speak to your students.
+- Send [a letter]({{ promote/sample_emails }}) to parents and ask them to spread the word.
+- Send [a letter]({{ promote/sample_emails }}) to invite your local mayor, member of Congress, governor, or influential businessperson to attend and speak to your students.
 - گروپ ایکٹیویٹیز آرگنائز کریں (جیسا کہ ایک 'اَن-پلگڈ' پروگرامنگ ایکٹیویٹی)، یا اسٹوڈینٹ کی جانب سے تخلیق کردہ اور لیڈ-ایکٹیویٹیز کا مظاہرہ کرنا۔.
-- Show Code.org’s [Hour of Code video](%= resolve_url('/') %) or one of [these videos](%= resolve_url('/promote/resources#videos') %) to inspire students. <br />
+- Show Code.org’s [Hour of Code video]({{ urls/home }}) or one of [these videos]({{ promote/videos }}) to inspire students. <br />
 
-### 2. Identify specific reporters that cover education or local events
+### 2. مخصوص مقامی صحافیوں کی شناخت کریں جو تعلیم یا مقامی واقعات کا احاطہ کرتے ہیں.
 
-Like local newspapers, TV station or radio stations, or blogs. <br />
+ایک مقامی اخبار، ٹی وی اسٹیشن، ریڈیو اسٹیشن یا بلاگ پر غور کریں،.<br />
 
-### 3. Contact local media
+### 3. مقامی میڈیا سے رابطہ کریں
 
-The best way to reach out is by email. It should be short and should communicate "why should other people care about this event"? Include contact information (including a cellphone number) for who will be on site at the event. **[See a sample pitch to media](%= resolve_url('/promote/press-kit#sample-emails') %)**.
+پہنچنے کا بہترین طریقہ ای میل کے ذریعہ ہے. یہ مختصر ہونا چاہئے اور بات چیت کرنا چاہئے: دوسرے لوگوں کو اس واقعہ کے بارے میں کیوں خیال رکھنا چاہئے? رابطے کی معلومات شامل کریں (سیل فون نمبر بھی شامل ہے)، جسے اس واقعہ میں سائٹ پر ہو گا. **[See a sample pitch to media]({{ promote/press-kit-emails }})**.
 
-Look online to find reporter contact information. If you can't find it, call the publication to ask, or email the organization's general email address and ask for your message to be directed to the correct reporter. <br />
+رپورٹر رابطہ کی معلومات کو تلاش کرنے کے لئے آن لائن دیکھو. اگر آپ اسے نہیں ڈھونڈ سکتے ہیں، تبلیغ کرنے کے لئے اشاعت کو کال کریں، یا عمومی تجاویز@PUBLICATIONNAME.com ای میل پتہ ای میل کریں اور اپنے پیغام کو صحیح رپورٹر کو ہدایت کی جائے. <br />
 
-### 4. Prepare to field questions about your school event. Here are some examples:
+### 4. آپ کے اسکول کے ایونٹ کے بارے میں فیلڈ کے سوالات تیار کریں. یہاں کچھ مثالیں ہیں:
 
 #### آپ کا اسکول کیوں کوڈ کا قیام کر رہا ہے?
 
@@ -50,37 +51,37 @@ Look online to find reporter contact information. If you can't find it, call the
 
 #### یہ کیوں اہم ہے?
 
-ٹیکنالوجی سیارے پر ہر صنعت کو تبدیل کر رہی ہے. 2015 میں، امریکہ میں 7 ملین افتتاحی پر قبضے میں تھے - فن فن اور ڈیزائن - جس قدر قیمت کوڈنگ کی مہارت. But 60 percent of schools in the U.S. don't teach computer science. It’s time for us to catch up to the 21st-century. ہم جانتے ہیں کہ ہمارے طالب علموں کو جب وہ بڑے ہوتے ہیں، چاہے وہ دوا، کاروبار، سیاست، یا آرٹس میں جائیں، جانیں کہ ٹیکنالوجی کیسے بنائے گی، انہیں اعتماد اور مسابقتی برتری ملے گی. <br />
+ٹیکنالوجی سیارے پر ہر صنعت کو تبدیل کر رہی ہے. 2015 میں، امریکہ میں 7 ملین افتتاحی پر قبضے میں تھے - فن فن اور ڈیزائن - جس قدر قیمت کوڈنگ کی مہارت. لیکن امریکہ میں 75 فیصد اسکول کمپیوٹر سائنس نہیں سکھاتے ہیں.  . ہمیں 21 ویں صدی تک پکڑنے کا وقت ہے. ہم جانتے ہیں کہ ہمارے طالب علموں کو جب وہ بڑے ہوتے ہیں، چاہے وہ دوا، کاروبار، سیاست، یا آرٹس میں جائیں، جانیں کہ ٹیکنالوجی کیسے بنائے گی، انہیں اعتماد اور مسابقتی برتری ملے گی. <br />
 
 <a id="sample-emails"></a>
 
-## Sample email to send to invite local media to your event
+## اپنے ایونٹ میں مقامی میڈیا کو مدعو کرنے کے لئے نمونہ ای میل
 
-**Subject line**: Local school joins mission to introduce students to computer science
+** موضوع کی لائن: </ strong> مقامی اسکول کمپیوٹر سائنس میں طلباء کو متعارف کرانے کا مشن شامل ہے</p> 
 
 کمپیوٹر ہر جگہ ہیں، ہر سیارے کو سیارے میں تبدیل کر لیتے ہیں، لیکن نصف اسکولوں میں سے کم کمپیوٹر کمپیوٹر سائنس سیکھتے ہیں. کمپیوٹر سائنس کی کلاسیں اور ٹیک صنعت میں گرلز اور اقلیتوں کو سختی سے کمتر قرار دیا جاتا ہے. اچھی خبر یہ ہے کہ ہم اس کو تبدیل کرنے کے لیے اپنے راستے پر ہیں ۔.
 
 کوڈ کے قیام کے ساتھ، کمپیوٹر سائنس گوگل، MSN، یاہو، اور ڈزنی کے گھروں پر ہے. اس تحریک کی حمایت کے لئے 100 سے زیادہ شراکت داروں کے ساتھ مل کر شامل ہو گئے ہیں. دنیا میں ہر ایپل سٹور نے ایک گھنٹہ کوڈ کی میزبانی کی ہے. یہاں تک کہ صدر اوبامہ نے اپنی پہلی لائن کو ایک مہم کے طور پر لکھا تھا.
 
-That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (December 3-9).
+اس وجہ سے [XII] طالب علموں میں سے ہر ایک کو [اسکول NAME] تاریخ میں سب سے بڑا سیکھنے کے واقعہ پر شامل ہو رہا ہے: کوڈ آفس، کمپیوٹر سائنس تعلیم ہفتہ کے دوران (<٪ = campaign_date ('full')٪>) .
 
 میں لکھ رہا ہوں کہ آپ کو ہماری کٹوف اسمبلی میں شرکت کرنے کے لئے مدعو کرنا اور بچوں کو دیکھنے کے لئے [DATE] پر سرگرمی شروع کرنا ہے.
 
 کوڈ کا قیام، غیر منافع بخش Code.org اور 100 سے زائد دیگر، ایک عالمی تحریک ہے جس کا یقین ہے کہ آج کے طالب علموں کو 21st صدی کی کامیابی کے لئے اہم مہارت حاصل کرنے کے لئے تیار ہیں. براہ مہربانی ہمارے ساتھ شامل ہوں.
 
-Contact: [YOUR NAME], [TITLE], cell: (212) 555-5555 When: [DATE and TIME of your event] Where: [ADDRESS and DIRECTIONS]
+رابطہ: [آپ کا نام], [TITLE], سیل: (212) 555-5555 جب: [کی تاریخ اور وقت آپ واقعہ] جہاں: [پتہ اور ہدایات]
 
-I look forward to being in touch. <br />
+میں آپ سے رابطہ کے لیے چشم براہ ہوں۔<br />
 
-## Additional details and a quote you can use in materials
+## مزید تفصیلات اور ایک اقتباس آپ مواد میں استعمال کرسکتے ہیں. مزید تفصیلات اور ایک اقتباس آپ مواد میں استعمال کرسکتے ہیں
 
-Code.org کے بانی اور سی ای او ہادی پارویو نے کہا، "کوڈ کا قیام کوڈ کو ڈیسسٹیٹ کرنے کے لئے ڈیزائن کیا گیا ہے اور ظاہر ہوتا ہے کہ کمپیوٹر سائنس راکٹ سائنس نہیں ہے. "دنیا بھر میں 100 ملین سے زائد طالب علموں نے ایک گھنٹہ کوڈ کی کوشش کی ہے. The demand for relevant 21st-century computer science education crosses all borders and knows no boundaries." <br /> <br />
+Code.org کے بانی اور سی ای او ہادی پارویو نے کہا، "کوڈ کا قیام کوڈ کو ڈیسسٹیٹ کرنے کے لئے ڈیزائن کیا گیا ہے اور ظاہر ہوتا ہے کہ کمپیوٹر سائنس راکٹ سائنس نہیں ہے. "دنیا بھر میں 100 ملین سے زائد طالب علموں نے ایک گھنٹہ کوڈ کی کوشش کی ہے. متعلقہ 21 ویں صدی کمپیوٹر سائنس کی تعلیم کے لئے تمام سرحدیں پار کرتی ہیں اور کوئی حد نہیں جانتی. " <br /> <br />
 
 #### Code.org کے بارے میں
 
-Code.org ایک 501c3 عوامی غیر منافع بخش ہے جو کمپیوٹر سائنس میں شمولیت کی توسیع اور رنگوں کے تحت خواتین اور underrepresented طلباء میں حصہ لینے کے لئے وقف ہے. Its vision is that every student in every school has the opportunity to learn computer programming. 2013 میں لانچ کرنے کے بعد، Code.org نے کوڈ آفس کی مہم کا اہتمام کیا - جس نے کمپیوٹر سائنس سے 100 ملین سے زائد طالب علموں کو آج تک متعارف کرایا اور ملک بھر میں 70 سرکاری اسکولوں کے ساتھ مل کر کمپیوٹر سائنس سائنس کو بڑھانے کے لئے شراکت داری کی. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. مزید معلومات کے لئے، ملاحظہ کریں: [ <٪ = solution_url ('code.org')٪> ](٪= solution_url('https://code.org') ٪).
+Code.org ایک 501c3 عوامی غیر منافع بخش ہے جو کمپیوٹر سائنس میں شمولیت کی توسیع اور رنگوں کے تحت خواتین اور underrepresented طلباء میں حصہ لینے کے لئے وقف ہے. اس کے نقطہ نظر یہ ہے کہ ہر اسکول میں ہر طالب علم کو کمپیوٹر پروگرامنگ سیکھنے کا موقع ہونا چاہئے. 2013 میں لانچ کرنے کے بعد، Code.org نے کوڈ آفس کی مہم کا اہتمام کیا - جس نے کمپیوٹر سائنس سے 100 ملین سے زائد طالب علموں کو آج تک متعارف کرایا اور ملک بھر میں 70 سرکاری اسکولوں کے ساتھ مل کر کمپیوٹر سائنس سائنس کو بڑھانے کے لئے شراکت داری کی. Code.org مائیکروسافٹ، انفسیوز فائونڈیشن، امریکہ، بالر خاندان دینے، Omidyar نیٹ ورک اور دیگر سمیت کارپوریشنز، بنیادوں اور ادار افراد، کی طرف سے فلسفہ عطیہ کی حمایت کی جاتی ہے. For more information, please visit: [code.org]({{ urls/codeorg }}).
 
   
-Find more resources and sample emails [here](%= resolve_url('/promote/resources#sample-emails') %).
+Find more resources and sample emails [here]({{ promote/sample_emails }}).
 
-<%= view :signup_button %>
+{{ signup_button }}

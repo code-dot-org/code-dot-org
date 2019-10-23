@@ -6,13 +6,13 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
     @program_manager = create :program_manager
     @facilitator = create :facilitator
 
-    @organizer_workshop = create :pd_workshop, organizer: @organizer, facilitators: [@facilitator]
+    @organizer_workshop = create :workshop, organizer: @organizer, facilitators: [@facilitator]
     @organizer_workshop_enrollment = create :pd_enrollment, workshop: @organizer_workshop
 
-    @workshop = create :pd_workshop, :with_codes_assigned, organizer: @program_manager, facilitators: [@facilitator], num_sessions: 1
+    @workshop = create :workshop, :with_codes_assigned, organizer: @program_manager, facilitators: [@facilitator], num_sessions: 1
     @enrollment = create :pd_enrollment, workshop: @workshop
 
-    @unrelated_workshop = create :pd_workshop
+    @unrelated_workshop = create :workshop
     @unrelated_enrollment = create :pd_enrollment, workshop: @unrelated_workshop
   end
 
@@ -44,6 +44,13 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
     assert_routing(
       {method: :post, path: "/api/v1/pd/enrollment/#{@enrollment.id}/scholarship_info"},
       {controller: CONTROLLER_PATH, action: 'update_scholarship_info', enrollment_id: @enrollment.id.to_s}
+    )
+
+    assert_routing(
+      {method: :post, path: "/api/v1/pd/enrollments/move"},
+      {controller: CONTROLLER_PATH, action: 'move', enrollment_ids: [@enrollment.id], destination_workshop_id: @unrelated_workshop.id},
+      {},
+      {enrollment_ids: [@enrollment.id], destination_workshop_id: @unrelated_workshop.id}
     )
   end
 
@@ -306,7 +313,7 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
   end
 
   test 'admin can update scholarship info' do
-    workshop = create :pd_workshop, :local_summer_workshop_upcoming, organizer: @program_manager, facilitators: [@facilitator]
+    workshop = create :summer_workshop
     enrollment = create :pd_enrollment, :from_user, workshop: workshop
     sign_in create(:admin)
 
@@ -318,7 +325,7 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
   end
 
   test 'program managers can update scholarship info' do
-    workshop = create :pd_workshop, :local_summer_workshop_upcoming, organizer: @program_manager, facilitators: [@facilitator]
+    workshop = create :summer_workshop, organizer: @program_manager
     enrollment = create :pd_enrollment, :from_user, workshop: workshop
     sign_in @program_manager
 
@@ -330,14 +337,53 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
   end
 
   test 'facilitators cannot update scholarship info' do
-    workshop = create :pd_workshop, :local_summer_workshop_upcoming, facilitators: [@facilitator]
+    workshop = create :summer_workshop
     enrollment = create :pd_enrollment, :from_user, workshop: workshop
-    sign_in @facilitator
+    sign_in workshop.facilitators.first
 
     assert_nil enrollment.scholarship_status
     post :update_scholarship_info, params: {enrollment_id: enrollment.id, scholarship_status: Pd::ScholarshipInfoConstants::YES_OTHER}
     assert_response 403
     assert_nil enrollment.scholarship_status
+  end
+
+  test 'move' do
+    origin_workshop = create :pd_workshop, num_sessions: 1, enrolled_and_attending_users: 1,
+      enrolled_unattending_users: 1
+    attendance = Pd::Attendance.for_workshop(origin_workshop).first
+    attendance.update(pd_enrollment_id: origin_workshop.enrollments.first.id)
+    destination_workshop = create :pd_workshop
+
+    admin = create :workshop_admin
+    sign_in admin
+
+    assert_equal 2, origin_workshop.enrollments.length
+    assert_equal 1, Pd::Attendance.for_workshop(origin_workshop).count
+
+    assert_equal 0, destination_workshop.enrollments.length
+
+    post :move, params: {
+      destination_workshop_id: destination_workshop.id,
+      enrollment_ids: origin_workshop.enrollments.pluck(:id)
+    }
+
+    origin_workshop.reload
+    destination_workshop.reload
+
+    assert_equal 0, origin_workshop.enrollments.length
+    assert_equal 0, Pd::Attendance.for_workshop(origin_workshop).count
+
+    assert_equal 2, destination_workshop.enrollments.length
+  end
+
+  test 'non-workshop-admins cannot move enrollments' do
+    sign_in @program_manager
+
+    post :move, params: {
+      destination_workshop_id: @unrelated_workshop.id,
+      enrollment_ids: [@enrollment.id]
+    }
+    assert_response 403
   end
 
   private

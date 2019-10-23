@@ -1,0 +1,19 @@
+name 'U2L4 CSP CFU scale'
+title 'The Growing Internet'
+type 'multi2'
+question 'Choose the two statements that contribute to the Internet\’s ability to add additional users and devices.'
+
+wrong 'Companies focus on installing broadband service in more populated urban areas rather than rural areas.' 
+wrong 'A government can censor or block websites it deems inappropriate for its citizens.'
+right 'All devices and servers use the same language, HyperText Transfer Protocol (HTTP), to send and receive web pages.'
+right 'The Internet was built for scalability, meaning it can easily grow in size by adding additional routers and networks.'
+
+
+
+
+
+teacher_markdown <<MARKDOWN
+**Correct Answers:** 
+- make informed choices to support or oppose decisions my government makes about access to the internet.
+- right 'make informed choices about my privacy on the internet.
+MARKDOWN

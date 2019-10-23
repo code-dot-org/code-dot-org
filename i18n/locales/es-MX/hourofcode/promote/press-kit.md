@@ -1,46 +1,47 @@
 ---
-title: <%= hoc_s(:title_press_kit).inspect %>
+title: Paquete de prensa
 layout: wide
 nav: promote_nav
 ---
-<%= view :signup_button %>
 
-# Como atraer a los medios de comunicación a tu evento de la Hora del Código
+{{ signup_button }}
 
-### Haz viral tu evento de la Hora del Código e invita a los medios locales a ver por que es importante la ciencia de la computación en tu escuela.
+# Cómo atraer a los medios de comunicación a tu Hora del Código
 
-*Para preguntas de los medios o la prensa, póngase en contacto con <press@code.org>*
+### Promueve tu Hora del Código e invita a los medios locales a que vean por qué las ciencias de la computación son importantes en tu escuela.
+
+*Para peticiones de prensa y medios, ponte en contacto con <press@code.org>*
 
 * * *
 
 ## Consejos clave
 
-- Contactar los medios dos semanas antes de su evento por correo electrónico. Continua de contactar con teléfono o con correo electrónico si no recibes respuesta.
+- Ponte en contacto con los medios por correo electrónico dos semanas antes de tu evento. Si no recibes respuesta, sigue intentándolo por teléfono o correo electrónico.
 - Pide algún personal escolar o voluntario que haga fotos para compartirlas en línea o enviar a la prensa.
 - Escriba sobre la Horal de Código en la página principal de su sitio web y en el periódico de la escuela. Publique los detalles de su evento y fotos de las actividades de tus estudiantes.
-- En Facebook y Twitter, comparte actualizaciones de tus planes, anuncia tus eventos, y publica fotografías durante <%= campaign_date('year') %>. Utiliza el hashtag **#HourOfCode** para que Code.org pueda ver y promover tus eventos.
+- Comparte actualizaciones sobre tus planes, anuncia tus eventos y publica fotografías durante {{ campaign_date/year }} en Facebook y Twitter. Utiliza el hashtag **#HourOfCode** para que Code.org pueda ver y promover tus eventos.
 
 ## Guía paso a paso
 
 ### 1. Planifique su evento
 
 - Haga una reunión para iniciar la Hora del Código.
-- Envíe [una carta](%= resolve_url('/promote/resources#sample-emails') %) a los padres y pídeles que corran la voz.
-- Envíe [una carta](%= resolve_url('/promote/resources#sample-emails') %) para invitar a su alcalde, diputado, gobernador o un empresario influyente a asistir y conversar con sus estudiantes.
+- Envía [una carta]({{ promote/sample_emails }}) a los padres y pídeles que difundan el mensaje.
+- Envía [una carta]({{ promote/sample_emails }}) para invitar a tus autoridades locales, diputados, congresistas, gobernador o personas influyentes en el mundo de los negocios a que conversen con tus estudiantes.
 - Organice actividades grupales (como una demostración de una actividad de programación 'fuera de línea'), o muestre lo que han hecho los estudiantes y guíe las actividades.
-- Muestre [un video de la Hora de Código](%= resolve_url('/') %) de Code.org o uno de [estos](%= resolve_url('/promote/resources#videos') %) para motivar estudiantes. <br />
+- Muestra [un video de la Hora del Código]({{ urls/home }}) de Code.org o uno de [estos videos]({{ promote/videos }}) para inspirar a los estudiantes. <br />
 
-### 2. Identifique a los reporteros que cubren notas escolares o eventos locales
+### 2. Identifica a los periodistas que cubren eventos escolares o locales
 
-Como periodicos locales, estaciones de televisión y radio, o blogs. <br />
+Como periódicos locales, estaciones de televisión y radio, o blogs. <br />
 
-### 3. Contacta con medios locales
+### 3. Ponte en contacto con medios locales
 
-La mejor forma de contacto es por correo electrónico. Debería ser corto y comunicar "por qué las personas deberían informarse sobre este evento"? Incluye información de contacto (sobretodo un número de teléfono móvil) para quien esté en el sitio del evento. **[Mira un ejemplo sobre lanzamiento a los medios](%= resolve_url('/promote/press-kit#sample-emails') %)**.
+La mejor forma de ponerse en contacto es por correo electrónico. Debería ser breve y comunicar "por qué las personas deberían interesarse en este evento". Incluye información de contacto (como un número de teléfono móvil) para quien esté en el lugar el día del evento. **[Mira un ejemplo de mensaje para los medios]({{ promote/press-kit-emails }})**.
 
-Busca en línea la información de contacto de un reportero. Si no puedes encontrarla, llama a la editora para preguntar, o enviar un correo electrónico a la dirección de atención del medio pidiendo que le redirijan tu mensaje al reportero adecuado. <br />
+Busca en línea la información de contacto de un periodista. Si no puedes encontrarla, llama a la editora para preguntar o envía un correo electrónico a la dirección del medio y pide que reenvíen tu mensaje al periodista adecuado. <br />
 
-### 4. Prepárate para las preguntas que te hagan acerca de tu evento escolar. Aquí hay unos ejemplos:
+### 4. Prepárate para las preguntas que te hagan acerca de tu evento escolar. Estos son algunos ejemplos:
 
 #### ¿Por que hace tu escuela una Hora del Código?
 
@@ -50,37 +51,37 @@ Esperamos que despierte inquietud en nuestros estudiantes para seguir aprendiend
 
 #### ¿Por qué es importante?
 
-La tecnologia esta transformando todas las industrias en el planeta. En el ano 2015, 7 millones de empleos en los Estados Unidos fueron en ocupaciones -incluyendo arte y diseno- que valoran las destrezas de codificacion. Pero 60 por ciento de las escuelas en los Estados Unidos no ensenan ciencias de computacion. Es tiempo para nosotros de avanzar al siglo XXI. Sabemos que sin importar la decisión que tomen nuestros estudiantes respecto a lo que harán de grandes; medicina, negocios, política o artes. Saber cómo se desarrolla la tecnología les dará confianza y aprendizaje para triunfar. <br />
+La tecnologia esta transformando todas las industrias en el planeta. En el ano 2015, 7 millones de empleos en los Estados Unidos fueron en ocupaciones -incluyendo arte y diseno- que valoran las destrezas de codificacion. Pero el 60 por ciento de las escuelas en los Estados Unidos no enseñan ciencias de la computación. Es tiempo de avanzar al siglo 21. Sabemos que sin importar la decisión que tomen nuestros estudiantes respecto a lo que harán de grandes; medicina, negocios, política o artes. Saber cómo se desarrolla la tecnología les dará confianza y aprendizaje para triunfar. <br />
 
 <a id="sample-emails"></a>
 
-## Ejemplo de un correo electrónico enviado para invitar a los medios locales a tu evento
+## Ejemplo de un correo electrónico que puedes enviar para invitar a los medios locales a tu evento
 
-**Asunto**: La escuela local se une a la misión de introducir a los estudiantes en las Ciencias de la computación
+**Asunto**: Escuela local se une a la misión de introducir a los estudiantes en las ciencias de la computación
 
-Los ordenadores están por todas partes, cambiando todas las industrias en el planeta, pero menos de la mitad de todas las escuelas enseñan Ciencias de la computación. Las niñas y las minorías están seriamente subrepresentadas en clases de informática y en la industria de la tecnología. La buena noticia es que estamos trabajando para cambiar esto.
+Las computadoras están en todas partes, cambian todas las industrias del planeta, pero menos de la mitad de las escuelas enseñan ciencias de la computación. Las niñas y las minorías no tienen presencia suficiente en las clases de ciencias de la computación y en la industria de la tecnología. La buena noticia es que estamos trabajando para cambiar esto.
 
-Con la Hora del Código, la informática ha estado en las páginas principales de Google, MSN, Yahoo! y Disney. Más de 100 socios se han unido para apoyar este movimiento. Cada tienda de Apple en el mundo ha organizado una hora de código. Incluso el presidente Obama escribió su primera línea de código como parte de la campaña.
+Con la Hora del Código, las ciencias de la computación han estado en las páginas principales de Google, MSN, Yahoo! y Disney. Más de 100 socios se han unido para apoyar este movimiento. Todos los Apple Store del mundo han organizado una Hora del Código. Incluso el presidente Obama escribió su primera línea de código como parte de la campaña.
 
-Es por eso que cada uno de los [NÚMERO DE ESTUDIANTES] estudiantes en [NOMBRE DE LA ESCUELA] se están uniendo al evento de aprendizaje más grande en la historia: la Hora del Código.
+Es por eso que cada uno de los [número X] estudiantes en [NOMBRE DE LA ESCUELA] se unen al evento de aprendizaje más grande de la historia: la Hora del Código, durante la Semana por la Educación en Ciencias de la Computación (del 3 al 9 de diciembre).
 
-Le escribo para invitarle a asistir a nuestra Asamblea de comienzo y a ver cómo los niños comienzan la actividad el [DATE].
+Te escribo para invitarte el [DATE] a nuestra reunión inicial y ver cómo los niños comienzan la actividad.
 
-La Hora del Código, organizada por la entidad sin ánimo de lucro Code.org y más de otros 100, es un movimiento que cree los estudiantes de hoy están listos para aprender las habilidades cruciales para el éxito en el siglo 21. Por favor, únete a nosotros.
+La Hora del Código, organizada por la entidad sin fines de lucro Code.org y más de 100 socios, es un movimiento que cree los estudiantes de hoy están listos para aprender las habilidades cruciales que garantizan el éxito en el siglo 21. Únete a nosotros.
 
-Contacto: [TU NOMBRE], [TITLE]. Teléfono: (212) 555-5555. Cuándo: [FECHA y HORA del tu evento]. Dónde: [DIRECCIÓN e INDICACIONES PARA LLEGAR]
+Contacto: [TU NOMBRE], [TITLE], Teléfono: (212) 555-5555 Cuándo: [FECHA y HORA de tu evento]. Dónde: [DIRECCIÓN e INSTRUCCIONES PARA LLEGAR]
 
-Estoy deseando estar en contacto.<br />
+Espero tu contacto. <br />
 
-## Más detalles y frases que puedes usar para tus materiales
+## Más detalles y frases que puedes usar en tus materiales
 
 "La Hora del Código ha sido diseñada para desmitificar el código y mostrar que las Ciencias de la Computación no es dificil, cualquiera puede aprender lo basico," dijo Hadi Partovi, fundador y gerente general de Code.org. "Más de 100 millones de estudiantes de todo el mundo han hecho la Hora del Código. La demanda por educación relevante en del siglo Xxi en Ciencias de la Computación cruza todas las fronteras y no conoce límites." <br /> <br />
 
 #### Acerca de Code.org
 
-Code.org® es un una organizacion 501c3-pública, sin fines de lucro dedicada a expandir la participación en ciencias de la computación y aumentar la participación de las mujeres y los estudiantes subrepresentados de color. Su visión es que todos los estudiantes en todas las escuelas tengan la oportunidad de aprender programación informática. Después de su lanzamiento en 2013, Code.org organizó la campaña la Hora del Código – que ha introducido más de 100 millones de estudiantes en ciencias de la computación hasta la fecha – y se ha asociado con 70 distritos de escuelas públicas en todo el país para expandir programas de ciencias de la computación. Code.org es apoyado por donaciones filantrópicas de las corporaciones, fundaciones y personas generosas, incluyendo Microsoft, Facebook, Fundación de Infosys, USA, Amazon, y otros. Para obtener más información, visite: [ < % = resolve_url('code.org') %>](%= resolve_url('https://code.org') %).
+Code.org® es un una organizacion 501c3-pública, sin fines de lucro dedicada a expandir la participación en ciencias de la computación y aumentar la participación de las mujeres y los estudiantes subrepresentados de color. Su visión es que todos los estudiantes en todas las escuelas tengan la oportunidad de aprender programación informática. Después de su lanzamiento en 2013, Code.org organizó la campaña la Hora del Código – que ha introducido más de 100 millones de estudiantes en ciencias de la computación hasta la fecha – y se ha asociado con 70 distritos de escuelas públicas en todo el país para expandir programas de ciencias de la computación. Code.org es apoyado por donaciones filantrópicas de las corporaciones, fundaciones y personas generosas, incluyendo Microsoft, Facebook, Fundación de Infosys, USA, Amazon, y otros. Para obtener más información, visita [code.org]({{ urls/codeorg }}).
 
   
-Encuentre más recursos y muestras de correos electrónicos [aquí](%= resolve_url('/promote') %).
+Encuentra más recursos y ejemplos de correos electrónicos [aquí]({{ promote/sample_emails }}).
 
-<%= view :signup_button %>
+{{ signup_button }}

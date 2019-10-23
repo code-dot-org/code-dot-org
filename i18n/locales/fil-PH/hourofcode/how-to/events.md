@@ -1,9 +1,10 @@
 ---
-title: <%= hoc_s(:title_how_to_events).inspect %>
+title: Paano-gawin ang kaganapan ng Hour of Code
 layout: wide
 nav: how_to_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # How to organize an Hour of Code assembly or event
 
@@ -14,13 +15,13 @@ nav: how_to_nav
 ## 1. Maghanda para sa iyong kaganapan
 
 - Tukuyin ang lugar, petsa, at oras.
-- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to your local mayor, member of Congress, governor, or influential business person and invite them to speak. Check out our [how-to toolkit](%=localized_file('/files/elected-official.pdf')%) when hosting an elected official during an Hour of Code for more info.
-- Mag-imbita ng media/press. i.e. lokal na istasyong balitaan, pahayagaan, edukasyon/tech bloggers. Tignan ang aming [press kit](%= resolve_url('/promote/press-kit') %) para sa tulong.
+- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to your local mayor, member of Congress, governor, or influential business person and invite them to speak. Check out our [how-to toolkit]({{ localized_files/elected_official }}) when hosting an elected official during an Hour of Code for more info.
+- Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit]({{ promote/press_kit_url }}) for help.
 
 ## 2. Sa panahon ng iyong kaganapan
 
-- I-kick off ang iyong kaganapan sa isa sa aming [nakakapukaw damdaming mga video](%= resolve_url('/promote/resources#videos') %).
-- Bigyan ng intro ang pangkalahatang pananaw sa kahalagahan ng computer science, gamit ang mga ito [stats at infographics](%= resolve_url('/promote/stats') %).   
+- Kick off your event with one of our [inspirational videos]({{ promote/videos }}).
+- Give an intro overviewing the importance of computer science, using these [stats and infographics]({{ promote/stats_url }}).   
       
     
 - **Other event ideas**: 
@@ -46,7 +47,7 @@ Consider hosting a K-5 evening event and invite parents to join their students f
 
 **Event:** School-wide Computer Science Education Week kick-off assembly
 
-**Date:** <%= campaign_date('start-short') %> (start of Computer Science Education Week)
+**Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
 
 **Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
@@ -56,11 +57,11 @@ Consider hosting a K-5 evening event and invite parents to join their students f
 
 | Oras                   | Aksyon                                                                                                                                                                                                    |
 | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00 - 10:05 ng umaga | Open with one of our [inspirational videos](%= resolve_url('/promote/resources#videos') %).                                                                                                               |
-| 10:05 - 10:15 ng umaga | Nagbibigay ang Principal ng isang intro na sumisiyasat sa kahalagahan ng computer science. Gamitin ang mga ito [stats at infographics](%= resolve_url('/promote/stats') %).                               |
+| 10:00 - 10:05 ng umaga | Open with one of our [inspirational videos]({{ promote/videos }}).                                                                                                                                        |
+| 10:05 - 10:15 ng umaga | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics]({{ promote/stats_url }}).                                                                     |
 | 10:15 - 10:30 ng umaga | Ang mga espesyal na panauhin at magsasalita tungkol sa kanilang background at kung paano ang teknolohiya at computer science ay gumaganap ng importanteng katungkulan sa kanilang araw araw na pamumuhay. |
 | 10:30 - 10:40 ng umaga | Ang mga estudyante ay gumawa ng demo ng Hour of Code para sa paaralan. Masyang twist: hayaan silang turuan ang punong guro, pulitiko, o ibang estudyante!                                                 |
 | 10:40 - 11:00 ng umaga | Ang mga estudyante ay nag demo ng isang unplugged na aktibidad at kung paano ituturo ang computer science ng hindi gumagamit ng mga computer.                                                             |
 | 11:00 - 11:05 ng umaga | Ang mga gurong tumulong para magdala nag kaganapang school-wide ay magbibigay na pagtatapos na salita.                                                                                                    |
 
-<%= view :signup_button %>
+{{ signup_button }}

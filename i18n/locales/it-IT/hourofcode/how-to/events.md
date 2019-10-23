@@ -1,9 +1,10 @@
 ---
-title: <%= hoc_s(:title_how_to_events).inspect %>
+title: Come organizzare un evento dell'Ora del Codice
 layout: wide
 nav: how_to_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # How to organize an Hour of Code assembly or event
 
@@ -14,13 +15,13 @@ nav: how_to_nav
 ## 1. Prepara il tuo evento
 
 - Stabilisci un luogo, la data e l'ora.
-- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to your local mayor, member of Congress, governor, or influential business person and invite them to speak. Check out our [how-to toolkit](%=localized_file('/files/elected-official.pdf')%) when hosting an elected official during an Hour of Code for more info.
-- Invita la stampa, ad es. giornalisti o blogger. Guarda il nostro [kit per la stampa](%= resolve_url('/promote/press-kit') %) per avere qualche suggerimento.
+- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to your local mayor, member of Congress, governor, or influential business person and invite them to speak. Check out our [how-to toolkit]({{ localized_files/elected_official }}) when hosting an elected official during an Hour of Code for more info.
+- Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit]({{ promote/press_kit_url }}) for help.
 
 ## 2. Durante il tuo evento
 
-- Dai il via al tuo evento con uno dei nostri [ video stimolanti](%= resolve_url('/promote/resources#videos') %).
-- Fai una panoramica introduttiva sull'importanza dell'informatica usando questi [grafici e statistiche utili](%= resolve_url('/promote/stats') %).   
+- Kick off your event with one of our [inspirational videos]({{ promote/videos }}).
+- Give an intro overviewing the importance of computer science, using these [stats and infographics]({{ promote/stats_url }}).   
       
     
 - **Other event ideas**: 
@@ -46,7 +47,7 @@ Consider hosting a K-5 evening event and invite parents to join their students f
 
 **Event:** School-wide Computer Science Education Week kick-off assembly
 
-**Date:** <%= campaign_date('start-short') %> (start of Computer Science Education Week)
+**Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
 
 **Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
@@ -56,11 +57,11 @@ Consider hosting a K-5 evening event and invite parents to join their students f
 
 | Ora              | Attività                                                                                                                                                                                                               |
 | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00 - 10:05 am | Open with one of our [inspirational videos](%= resolve_url('/promote/resources#videos') %).                                                                                                                            |
-| 10:05 - 10:15 am | Il Dirigente Scolastico fa una panoramica introduttiva sull'importanza dell'informatica. Può utilizzare questi [grafici e statistiche utili](%= resolve_url('/promote/stats') %).                                      |
+| 10:00 - 10:05 am | Open with one of our [inspirational videos]({{ promote/videos }}).                                                                                                                                                     |
+| 10:05 - 10:15 am | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics]({{ promote/stats_url }}).                                                                                  |
 | 10:15 - 10:30 am | Intervento di ospiti speciali che raccontano le loro esperienze e come la tecnologia e l'informatica giocano un ruolo fondamentale nella loro vita quotidiana.                                                         |
 | 10:30 - 10:40 am | Gli studenti svolgono una dimostrazione di un'Ora del Codice al resto della scuola. Scambio delle parti: lasciate che siano loro ad insegnare al dirigente scolastico, ai rappresentanti politici o agli altri alunni! |
 | 10:40 - 11:00 am | Alcuni studenti mostrano un'attività tradizionale e come l'informatica possa essere insegnata senza l'uso di computer.                                                                                                 |
 | 11:00 - 11:05 am | L'insegnante che ha aiutato ad organizzare l'evento terrà il discorso conclusivo.                                                                                                                                      |
 
-<%= view :signup_button %>
+{{ signup_button }}

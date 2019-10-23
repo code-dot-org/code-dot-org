@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Table, sort} from 'reactabular';
+import * as Table from 'reactabular-table';
+import * as sort from 'sortabular';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import commonMsg from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
@@ -143,7 +144,7 @@ class ProjectsList extends React.Component {
         props: {style: tableLayoutStyles.headerCell}
       },
       cell: {
-        format: thumbnailFormatter,
+        formatters: [thumbnailFormatter],
         props: {style: tableLayoutStyles.cell}
       }
     };
@@ -156,7 +157,7 @@ class ProjectsList extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          format: this.nameFormatter,
+          formatters: [this.nameFormatter],
           props: {style: tableLayoutStyles.cell}
         }
       },
@@ -179,7 +180,7 @@ class ProjectsList extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          format: typeFormatter,
+          formatters: [typeFormatter],
           props: {style: tableLayoutStyles.cell}
         }
       },
@@ -191,7 +192,7 @@ class ProjectsList extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          format: dateFormatter,
+          formatters: [dateFormatter],
           props: {style: tableLayoutStyles.cell}
         }
       }

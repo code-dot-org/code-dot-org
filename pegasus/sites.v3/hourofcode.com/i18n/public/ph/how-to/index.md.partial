@@ -1,0 +1,112 @@
+---
+title: Paano-gawin na Gabay
+layout: wide
+nav: how_to_nav
+---
+
+{{ signup_button }}
+
+# How to teach one Hour of Code with your class
+
+### Sumali sa kilusan at ipakilala ang grupo ng mga studyante sa kanilang unang oras ng computer science sa mga hakbang na ito. Ang Oras ng Code ay madaling gumana - kahit para sa mga baguhan! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your class.
+
+### Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}).
+
+---
+
+## 1. Panoorin ang video kung paano <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+
+## 2. Piliin ang pagtuturo para sa iyong oras
+
+We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for all age groups and experience levels. Students do the activities on their own, though many activities include lesson plans for teachers (you'll see the link when you click the activity) to guide discussion or extend the activity. [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
+
+## 3. Paunlarin ang iyong Hour of Code
+
+Promote your Hour of Code [with these tools]({{ urls/promote_resources }}) and encourage others to host their own events.
+
+## 4. Planuhin ang pangangailangan ng iyong teknolohiya - ang computer ay opsyonal
+
+Ang pinakamahusay na karanasan sa Hour of Code ay kabilang ang internet-connected computers. Ngunit **hindi** mo na Kailangan ng computer sa bawat child, at pwede mong gawin ang Hour of Code kahit wala kang computer.
+
+Siguruhing subukan ang mga pagtuturo sa computer ng mga studyante o sa mga aparato para masigurong gumagana ito ng maaayos sa mga browsers ng may kasamang tunog at video. **Mayroong mababang bandwidth?** Plano mo bang magpakita ng video sa harap ng klase, para hindi na kailangang mag-download ng sariling video ng bawat studyante. O subukan ang unplugged/ offline na mga pagtuturo.
+
+Maglaan ng headphones para sa iyong klase, o kaya ay pagdalhin ang mga studyante ng sarili nila, kung ang pagtuturong napili mo ay mas maayos kung may tunog.
+
+**Walang sapat na aparato**Gumamit ng [pares na programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Kapag nag kapareha ang mga studyante, tinutulungan nila ang isa't isa at hindi masyadong umaasa sa guro. Makikita din nila na ang computer science ay panlipunan at pakikipagtulungan.
+
+<img src="/images/fit-350/group_ipad.jpg" />
+
+## 5. Simulan ang iyong Hour of Code sa isang nakakapukaw damdaming tagapagsalita o video
+
+**Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
+
+**Magpakita ng nakakapukaw na video:**
+
+- Ang orihinal na Code.org na inilunsad na video, nabilang sina Bill Gates, Mark Zuckerberg, at NBA star na si Chris Bosh. (Mayroong [1 minuto](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minuto](https://www.youtube.com/watch?v=nKIu9yen5nc), at[9 minuto](https://www.youtube.com/watch?v=dU1xS07N-FA) na mga version available)
+- Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+
+**It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
+
+- Ipaliwanag ang mga paraan kung paano naapektuhan ng teknolohiya ang ating mga buhay, sa mga halimbawa ang parehong lalaki at babae ay aasikasuhin (makipag-usap tungkol sa pag-save ng mga buhay, pagtulong sa mga tao, pagkonekta sa mga tao, atbp.).
+- Bilang isang klase, mag lista ng mga bagay na ginagamitan ng code sa araw araw na buhay.
+- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+
+## 6. Mag-Code!
+
+**Direct students to the activity**
+
+- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+
+**When your students come across difficulties it's okay to respond:**
+
+- "Hindi ko alam. Subukan nating alaman ito ng magkasama"
+- "Ang teknolohiya ay hindi palaging nakaayon sa ating kagustuhan."
+- "Ang pag-aaral kung paano mag-program ay katulad ng pag-aaral ng isang bagong wika; hindi ka kaagad maging mahusay."
+
+**What if a student finishes early?**
+
+- Students can see all tutorials and [try another Hour of Code activity]({{ urls/learn }}).
+- O, tanungin ang mga estudyanteng maagang natapos kung pwedeng makatulong sila sa mga nahihirapan sa aktibidad.
+
+[col-33]
+
+![](/images/fit-250/highschoolgirls.jpeg)
+
+[/col-33]
+
+<p style="clear:both">&nbsp;</p>
+
+## 7. Magdiwang
+
+[col-33]
+
+![](/images/fit-300/boy-certificate.jpg)
+
+[/col-33]
+
+- [Print certificates]({{ urls/certificates }}) for your students.
+- [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
+- [Umorder ng pasadyang mga t-shirt](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) para sa iyong paaralan.
+- Ibahagi ang mga larawan at video sa mga nangyayari sa iyong Hour of Code sa social media. Gamitin ang #HourOfCode at @codeorg para maaari rin naming i-highlight ang iyong pinagtatagumpayan!
+
+[col-33]
+
+![](/images/fit-260/highlight-certificates.jpg)
+
+[/col-33]
+
+<p style="clear:both">&nbsp;</p>
+
+## Ibang pagkukunan sa Hour of Code para sa mga tagapagturo:
+
+- Bisitahin ang [Hour of Code Teacher Forum](http://forum.code.org/c/plc/hour-of-code) para makakuha ng payo, pananaw at suporta mula sa ibang mga tagapagturo.
+- I-review ang [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+
+## Ano ang susunod pagkatapos ng Hour of Code?
+
+Ang Hour of Code ay unang hakbang lamang sa ekspedisyon upang mas matutunan kung paano gumagana ang teknolohiya at kung paano gumawa ng software applications. Para magpatuloy sa ekspedisyon:
+
+- Encourage students to continue to [learn online]({{ urls/learn_beyond }}).
+- [Attend]({{ urls/professional_development_workshops }}) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+
+{{ signup_button }}

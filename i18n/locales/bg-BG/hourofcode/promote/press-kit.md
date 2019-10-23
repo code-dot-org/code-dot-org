@@ -1,9 +1,10 @@
 ---
-title: <%= hoc_s(:title_press_kit).inspect %>
+title: Изявления за пресата
 layout: wide
 nav: promote_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # How to attract media to your Hour of Code event
 
@@ -18,17 +19,17 @@ nav: promote_nav
 - Информирайте медиите две седмици преди Вашето събитие по електронната поща. Следете по имейл и телефон, ако не получите първоначален отговор.
 - Попитайте дали е възможно в училището да се правят снимки и дали може те да се споделят онлайн.
 - Пишете за инициативата на началната страница на вашия сайт и в училищния вестник. Публикувате информация за събитието и снимки на учебната дейност.
-- On Facebook and Twitter, share updates on your plans, announce your events, and post pictures during <%= campaign_date('year') %>. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
+- On Facebook and Twitter, share updates on your plans, announce your events, and post pictures during {{ campaign_date/year }}. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
 
 ## Step-by-step guide
 
 ### 1. Plan your event
 
 - План и програма на събитието.
-- Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to parents and ask them to spread the word.
-- Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to invite your local mayor, member of Congress, governor, or influential businessperson to attend and speak to your students.
+- Send [a letter]({{ promote/sample_emails }}) to parents and ask them to spread the word.
+- Send [a letter]({{ promote/sample_emails }}) to invite your local mayor, member of Congress, governor, or influential businessperson to attend and speak to your students.
 - Организирайте групови дейности (като демонстриране на "unplugged" уроците без компютър), или покажете създадени от учениците дейности и ги оставете сами да ги представят.
-- Show Code.org’s [Hour of Code video](%= resolve_url('/') %) or one of [these videos](%= resolve_url('/promote/resources#videos') %) to inspire students. <br />
+- Show Code.org’s [Hour of Code video]({{ urls/home }}) or one of [these videos]({{ promote/videos }}) to inspire students. <br />
 
 ### 2. Identify specific reporters that cover education or local events
 
@@ -36,7 +37,7 @@ Like local newspapers, TV station or radio stations, or blogs. <br />
 
 ### 3. Contact local media
 
-The best way to reach out is by email. It should be short and should communicate "why should other people care about this event"? Include contact information (including a cellphone number) for who will be on site at the event. **[See a sample pitch to media](%= resolve_url('/promote/press-kit#sample-emails') %)**.
+The best way to reach out is by email. It should be short and should communicate "why should other people care about this event"? Include contact information (including a cellphone number) for who will be on site at the event. **[See a sample pitch to media]({{ promote/press-kit-emails }})**.
 
 Look online to find reporter contact information. If you can't find it, call the publication to ask, or email the organization's general email address and ask for your message to be directed to the correct reporter. <br />
 
@@ -78,9 +79,9 @@ I look forward to being in touch. <br />
 
 #### За Code.org
 
-Code.org® е обществено движение с нестопанска цел, посветено на разширяване изучаването на компютърните науки и увеличаване броя на заетите жени и социално слабите ученици в програмирането. Its vision is that every student in every school has the opportunity to learn computer programming. След като Code.org стартира кампанията пре 2013г.,до сега в нея са взели участие повече от 100 милиона ученици - организацията си парнира с 70 училищни района за разширяване изучаването на компютърните науки. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [<%= resolve_url('code.org') %>](%= resolve_url('https://code.org') %).
+Code.org® е обществено движение с нестопанска цел, посветено на разширяване изучаването на компютърните науки и увеличаване броя на заетите жени и социално слабите ученици в програмирането. Its vision is that every student in every school has the opportunity to learn computer programming. След като Code.org стартира кампанията пре 2013г.,до сега в нея са взели участие повече от 100 милиона ученици - организацията си парнира с 70 училищни района за разширяване изучаването на компютърните науки. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ urls/codeorg }}).
 
   
-Find more resources and sample emails [here](%= resolve_url('/promote/resources#sample-emails') %).
+Find more resources and sample emails [here]({{ promote/sample_emails }}).
 
-<%= view :signup_button %>
+{{ signup_button }}

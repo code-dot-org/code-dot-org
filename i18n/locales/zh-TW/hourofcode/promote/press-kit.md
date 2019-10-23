@@ -1,9 +1,10 @@
 ---
-title: <%= hoc_s(:title_press_kit).inspect %>
+title: Press Kit
 layout: wide
 nav: promote_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # How to attract media to your Hour of Code event
 
@@ -18,17 +19,17 @@ nav: promote_nav
 - 在活動舉辦兩週前，透過電子郵件聯繫媒體。若沒有收到任何回應，則再進一步用電子郵件與電話追蹤。
 - 請求學校行政人員或志工拍攝照片分享於網路上或寄送給記者。
 - 在您的網站首頁及學校刊物上撰寫有關一小時玩程式的文章。報導你的活動細節，以及學生的活動照片。
-- On Facebook and Twitter, share updates on your plans, announce your events, and post pictures during <%= campaign_date('year') %>. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
+- On Facebook and Twitter, share updates on your plans, announce your events, and post pictures during {{ campaign_date/year }}. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
 
 ## Step-by-step guide
 
 ### 1. Plan your event
 
 - 規劃如何為一小時玩程式活動開場。
-- Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to parents and ask them to spread the word.
-- Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to invite your local mayor, member of Congress, governor, or influential businessperson to attend and speak to your students.
+- Send [a letter]({{ promote/sample_emails }}) to parents and ask them to spread the word.
+- Send [a letter]({{ promote/sample_emails }}) to invite your local mayor, member of Congress, governor, or influential businessperson to attend and speak to your students.
 - 組織系列活動（如示範不插電的程式設計活動），或展示學生創建和領導的活動。
-- Show Code.org’s [Hour of Code video](%= resolve_url('/') %) or one of [these videos](%= resolve_url('/promote/resources#videos') %) to inspire students. <br />
+- Show Code.org’s [Hour of Code video]({{ urls/home }}) or one of [these videos]({{ promote/videos }}) to inspire students. <br />
 
 ### 2. Identify specific reporters that cover education or local events
 
@@ -36,7 +37,7 @@ Like local newspapers, TV station or radio stations, or blogs. <br />
 
 ### 3. Contact local media
 
-The best way to reach out is by email. It should be short and should communicate "why should other people care about this event"? Include contact information (including a cellphone number) for who will be on site at the event. **[See a sample pitch to media](%= resolve_url('/promote/press-kit#sample-emails') %)**.
+The best way to reach out is by email. It should be short and should communicate "why should other people care about this event"? Include contact information (including a cellphone number) for who will be on site at the event. **[See a sample pitch to media]({{ promote/press-kit-emails }})**.
 
 Look online to find reporter contact information. If you can't find it, call the publication to ask, or email the organization's general email address and ask for your message to be directed to the correct reporter. <br />
 
@@ -60,13 +61,13 @@ Look online to find reporter contact information. If you can't find it, call the
 
 計算機無處不在，正在改變著地球上每一個行業，但我們只有不到一半的學校有在講授計算機科學。 計算機課堂上的女性和少數族裔學生嚴重不足，在整個科技產業亦是如此。 好消息是我們正在改變此狀況。
 
-因為《編程一小時》，計算機科學已經登上谷歌，MSN，雅虎和迪斯尼的主頁。 超過100位合作夥伴共同支持這項活動。 世界上每個蘋果專賣店都有舉辦過《編程一小時》。 甚至連奧巴馬總統也曾在競選活動中寫下了自己的第一行編程。
+因為《編程一小時》，計算機科學已經登上谷歌，MSN，雅虎和迪斯尼的主頁。 超過 100 個合作夥伴共同支持這項活動。 世界上每個蘋果專賣店都有舉辦過《編程一小時》。 甚至連奧巴馬總統也曾在競選活動中寫下了自己的第一行編程。
 
 That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (December 3-9).
 
 我誠邀您參加我們的開幕式，來看看孩子們如何在[日期] 開始他們的編程之旅。
 
-《編程一小時》，由非營利機構Code.org和其他100多個單位共同組織，是一個全球性的運動，宗旨是讓今天的學生都能準備好了學習能在21世紀取得成功的關鍵技能。 請加入我們。
+《編程一小時》，由非營利機構Code.org和其他100多個單位共同組織，是一個全球性的運動，宗旨是讓今天的學生都能準備好了學習能在21世紀取得成功的關鍵技能。 加入我們的行列吧。
 
 Contact: [YOUR NAME], [TITLE], cell: (212) 555-5555 When: [DATE and TIME of your event] Where: [ADDRESS and DIRECTIONS]
 
@@ -78,9 +79,9 @@ I look forward to being in touch. <br />
 
 #### 關於 Code.org
 
-Code.org®是501c3公立非營利項目，致力於擴展計算機科學，增加女性和有色弱勢學生群體的參與。 Its vision is that every student in every school has the opportunity to learn computer programming. 自 2013 年成立以來，Code.org 發起了一小時玩程式（Hour of Code）運動 – 這個運動是要把計算機科學介紹給上百萬的學生 – 並與國內超過 70 所公立學校聯盟，以推展計算機科學與編程。 Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. 更多詳情, 請訪問: [ <%= resolve_url('code.org')%> ](%= resolve_url('https://code.org') %)。
+Code.org®是501c3公立非營利項目，致力於擴展計算機科學，增加女性和有色弱勢學生群體的參與。 Its vision is that every student in every school has the opportunity to learn computer programming. 自 2013 年成立以來，Code.org 發起了一小時玩程式（Hour of Code）運動 – 這個運動是要把計算機科學介紹給上百萬的學生 – 並與國內超過 70 所公立學校聯盟，以推展計算機科學與編程。 Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ urls/codeorg }}).
 
   
-Find more resources and sample emails [here](%= resolve_url('/promote/resources#sample-emails') %).
+Find more resources and sample emails [here]({{ promote/sample_emails }}).
 
-<%= view :signup_button %>
+{{ signup_button }}

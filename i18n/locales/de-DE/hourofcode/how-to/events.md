@@ -1,9 +1,10 @@
 ---
-title: <%= hoc_s(:title_how_to_events).inspect %>
+title: Anleitung für "Hour of Code"-Veranstaltung
 layout: wide
 nav: how_to_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # How to organize an Hour of Code assembly or event
 
@@ -14,13 +15,13 @@ nav: how_to_nav
 ## 1. Bereiten Sie Ihre Veranstaltung vor
 
 - Legen Sie einen Veranstaltungsort, Datum und Uhrzeit fest.
-- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to your local mayor, member of Congress, governor, or influential business person and invite them to speak. Check out our [how-to toolkit](%=localized_file('/files/elected-official.pdf')%) when hosting an elected official during an Hour of Code for more info.
-- Laden Sie Medien, wie z.B. lokale Zeitungen, Lokalsender (Radio/Fernsehen) und Blogger aus dem Technik- und Bildungsbereich ein. Weitere Tipps finden Sie in unserem [Presse-Leitfaden](%=resolve_url('/files/elected-official.pdf')%).
+- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to your local mayor, member of Congress, governor, or influential business person and invite them to speak. Check out our [how-to toolkit]({{ localized_files/elected_official }}) when hosting an elected official during an Hour of Code for more info.
+- Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit]({{ promote/press_kit_url }}) for help.
 
 ## 2. Während der Veranstaltung
 
-- Starten Sie Ihre Veranstaltung mit einem unserer [inspirierenden Videos](%= resolve_url('/promote/resources#videos') %).
-- Geben Sie zu Beginn einen Überblick über die Wichtigkeit der Informatik. Sie können dazu diese [ diese Statistiken und Info-Abbildungen](%= resolve_url('/promote/stats') %) verwenden.   
+- Kick off your event with one of our [inspirational videos]({{ promote/videos }}).
+- Give an intro overviewing the importance of computer science, using these [stats and infographics]({{ promote/stats_url }}).   
       
     
 - **Other event ideas**: 
@@ -46,7 +47,7 @@ Consider hosting a K-5 evening event and invite parents to join their students f
 
 **Event:** School-wide Computer Science Education Week kick-off assembly
 
-**Date:** <%= campaign_date('start-short') %> (start of Computer Science Education Week)
+**Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
 
 **Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
@@ -56,11 +57,11 @@ Consider hosting a K-5 evening event and invite parents to join their students f
 
 | Zeit                    | Programm                                                                                                                                                                                                                                              |
 | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00 Uhr - 10:05 Uhr   | Open with one of our [inspirational videos](%= resolve_url('/promote/resources#videos') %).                                                                                                                                                           |
-| 10:05 Uhr - 10:15 Uhr   | Einführung und Überblick über die Wichtigkeit der Informatik durch den Direktor/Direktorin. Diese [Statistiken und Diagramme](%= resolve_url('/promote/stats') %) können verwendet werden.                                                            |
+| 10:00 Uhr - 10:05 Uhr   | Open with one of our [inspirational videos]({{ promote/videos }}).                                                                                                                                                                                    |
+| 10:05 Uhr - 10:15 Uhr   | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics]({{ promote/stats_url }}).                                                                                                                 |
 | 10:15 Uhr bis 10:30 Uhr | Eingeladene Gäste sprechen über ihren Hintergrund und warum Technologie und Informatik einen großen Einfluss auf deren tägliches Leben haben.                                                                                                         |
 | 10:30 Uhr - 10:40 Uhr   | Schülerinnen und Schüler präsentieren ein Beispiel von "Hour of Code" in der Schule. Idee: Lassen Sie die eingeladenen Politiker, die Direktorin/den Direktor und anderen Schülerinnen und Schülern von Ihren Schülerinnen und Schülern unterrichten! |
 | 10:40 Uhr - 11:00 Uhr   | Schülerinnen und Schüler präsentieren eine "unplugged"-Aktivität und zeigen, wie Informatik ohne die Verwendung von Computern erklärt werden kann.                                                                                                    |
 | 11:00 Uhr - 11:05 Uhr   | Alle an der Veranstaltung beteiligten Lehrerinnen und Lehrer geben ein kurzes Schlussstatement ab.                                                                                                                                                    |
 
-<%= view :signup_button %>
+{{ signup_button }}

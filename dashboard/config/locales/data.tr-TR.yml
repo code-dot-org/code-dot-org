@@ -718,6 +718,7 @@ tr:
         csd_applab_parameters: Fonksiyon parametreleri
         csd_problem_solving_process: Problem çözme süreci
         CSF_Spritelab_MakeSprite_v2: Nesne Oluşturma
+        csd_debugging: Hata Ayıklama (Debugging)
     callout:
       text:
         drag_blocks: '"taşı" bloğunu tutup diğer bloğun altına yapıştırın'

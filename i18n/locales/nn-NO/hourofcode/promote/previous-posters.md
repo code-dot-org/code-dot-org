@@ -1,18 +1,19 @@
 ---
-title: <%= hoc_s(:title_past_posters).inspect %>
+title: Tidlegare plakatar til Kodetimen
 layout: wide
 nav: promote_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # Tidlegare plakatar til Kodetimen
 
-### Finn våre plakatar frå tidlegare år, skriv dei ut og heng dei i klasserommet! Ser du etter nyare plakatar? [Klikk her](<%= resolve_url('/promote/resources#posters') %>).
+### Find our posters from previous years to print and hang in your classroom! Looking for the newest posters? [Click here]({{ promote/promote_posters_url }}).
 
 * * *
 
 <br />
 
-<%= view :promote_posters %>
+{{ promote_posters }}
 
-<%= view :signup_button %>
+{{ signup_button }}

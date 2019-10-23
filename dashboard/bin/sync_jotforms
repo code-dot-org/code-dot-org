@@ -7,6 +7,7 @@ require_relative '../../lib/cdo/only_one'
 exit unless only_one_running?(__FILE__)
 
 require_relative '../config/environment'
+require 'honeybadger/ruby'
 
 JOT_FORM_CLASSES = [
   Pd::WorkshopFacilitatorDailySurvey,
@@ -14,8 +15,29 @@ JOT_FORM_CLASSES = [
   Pd::MiscSurvey
 ].freeze
 
+def sync_submissions
+  JOT_FORM_CLASSES.each do |survey_class|
+    survey_class.all_form_ids.each do |form_id|
+      survey_class.sync_from_jotform form_id
+    rescue => e
+      # One form fails to sync doesn't stop other forms from syncing
+      Honeybadger.notify e
+    end
+  end
+end
+
+def sync_questions
+  Pd::SurveyQuestion.all.each do |survey|
+    survey.sync_from_jotform
+  rescue => e
+    # One form fails to sync doesn't stop other forms from syncing
+    Honeybadger.notify e
+  end
+end
+
 def main
-  JOT_FORM_CLASSES.each(&:sync_from_jotform)
+  sync_questions
+  sync_submissions
 end
 
 main

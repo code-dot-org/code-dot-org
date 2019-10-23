@@ -42,7 +42,7 @@ Scenario: Submit anything, teacher is able to unsubmit
   And I click selector "#teacher-panel-container tr:nth(1)" to load a new page
   And I wait to see "#teacher-panel-container"
   Then I wait until element "#unsubmit-button-uitest" is visible
-  And I press "#unsubmit-button-uitest" using jQuery
+  And I press "#unsubmit-button-uitest" using jQuery to load a new page
 
   # Unsubmit should be disabled now
   And I wait for the page to fully load

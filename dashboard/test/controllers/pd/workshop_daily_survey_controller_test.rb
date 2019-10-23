@@ -96,8 +96,8 @@ module Pd
           sessionId: nil,
           userName: @enrolled_summer_teacher.name,
           userEmail: @enrolled_summer_teacher.email,
-          workshopCourse: COURSE_CSP,
-          workshopSubject: SUBJECT_TEACHER_CON,
+          workshopCourse: @summer_workshop.course,
+          workshopSubject: @summer_workshop.subject,
           regionalPartnerName: @regional_partner.name,
           submitRedirect: submit_redirect
         }
@@ -115,8 +115,8 @@ module Pd
         {
           route: 'GET /pd/workshop_survey/day/0',
           form_id: FAKE_DAILY_FORM_IDS[0],
-          workshop_course: COURSE_CSP,
-          workshop_subject: SUBJECT_TEACHER_CON,
+          workshop_course: @summer_workshop.course,
+          workshop_subject: @summer_workshop.subject,
           regional_partner_name: @regional_partner.name
         }
       )
@@ -204,8 +204,8 @@ module Pd
           sessionId: @summer_workshop.sessions[0].id,
           userName: @enrolled_summer_teacher.name,
           userEmail: @enrolled_summer_teacher.email,
-          workshopCourse: COURSE_CSP,
-          workshopSubject: SUBJECT_TEACHER_CON,
+          workshopCourse: @summer_workshop.course,
+          workshopSubject: @summer_workshop.subject,
           regionalPartnerName: @regional_partner.name,
           submitRedirect: submit_redirect
         }
@@ -249,8 +249,8 @@ module Pd
 
     test 'enrollment code override is used when fetching the workshop for a user' do
       setup_academic_year_workshop
-      other_academic_workshop = create :pd_workshop, course: COURSE_CSP, subject: SUBJECT_CSP_WORKSHOP_1,
-        num_sessions: 1, regional_partner: @regional_partner, facilitators: @facilitators, sessions_from: Date.today + 1.month
+      other_academic_workshop = create :csp_academic_year_workshop,
+        regional_partner: @regional_partner, facilitators: @facilitators, sessions_from: Date.today + 1.month
       other_enrollment = create :pd_enrollment, :from_user, workshop: other_academic_workshop, user: @enrolled_academic_year_teacher
       create :pd_attendance, session: other_academic_workshop.sessions[0], teacher: @enrolled_academic_year_teacher, enrollment: other_enrollment
 
@@ -342,7 +342,6 @@ module Pd
     end
 
     test 'facilitator specific survey redirects to next facilitator when response exists' do
-      skip 'Investigate flaky test failures'
       setup_summer_workshop
       Session.any_instance.expects(:open_for_attendance?).returns(true)
       create :pd_attendance, session: @summer_workshop.sessions[0], teacher: @enrolled_summer_teacher, enrollment: @summer_enrollment
@@ -355,7 +354,6 @@ module Pd
     end
 
     test 'last facilitator specific survey redirects to thanks when response exists' do
-      skip 'Investigate flaky test failures'
       setup_summer_workshop
       Session.any_instance.expects(:open_for_attendance?).returns(true)
       create :pd_attendance, session: @summer_workshop.sessions[0], teacher: @enrolled_summer_teacher, enrollment: @summer_enrollment
@@ -368,7 +366,6 @@ module Pd
     end
 
     test 'facilitator specific survey with open session attendance displays embedded JotForm' do
-      skip 'Investigate flaky test failures'
       setup_summer_workshop
       Session.any_instance.expects(:open_for_attendance?).returns(true)
       create :pd_attendance, session: @summer_workshop.sessions[0], teacher: @enrolled_summer_teacher, enrollment: @summer_enrollment
@@ -388,8 +385,8 @@ module Pd
           workshopId: @summer_workshop.id,
           userName: @enrolled_summer_teacher.name,
           userEmail: @enrolled_summer_teacher.email,
-          workshopCourse: COURSE_CSP,
-          workshopSubject: SUBJECT_TEACHER_CON,
+          workshopCourse: @summer_workshop.course,
+          workshopSubject: @summer_workshop.subject,
           regionalPartnerName: @regional_partner.name,
           day: 1,
           facilitatorPosition: 1,
@@ -411,8 +408,8 @@ module Pd
         {
           route: "GET /pd/workshop_survey/facilitators/#{@summer_workshop.sessions[0].id}/0",
           form_id: FAKE_FACILITATOR_FORM_ID,
-          workshop_course: COURSE_CSP,
-          workshop_subject: SUBJECT_TEACHER_CON,
+          workshop_course: @summer_workshop.course,
+          workshop_subject: @summer_workshop.subject,
           regional_partner_name: @regional_partner.name
         }
       )
@@ -578,8 +575,8 @@ module Pd
           sessionId: @summer_workshop.sessions[4].id,
           userName: @enrolled_summer_teacher.name,
           userEmail: @enrolled_summer_teacher.email,
-          workshopCourse: COURSE_CSP,
-          workshopSubject: SUBJECT_TEACHER_CON,
+          workshopCourse: @summer_workshop.course,
+          workshopSubject: @summer_workshop.subject,
           regionalPartnerName: @regional_partner.name,
           submitRedirect: submit_redirect,
           enrollmentCode: @summer_enrollment.code
@@ -915,15 +912,13 @@ module Pd
     end
 
     test 'csf facilitator survey: show 1st facilitator survey to attended teacher' do
-      skip 'Investigate flaky test failures'
-
       setup_csf201_in_progress_workshop
       teacher = create :teacher
       create :pd_enrollment, user: teacher, workshop: @csf201_in_progress_workshop
       session = @csf201_in_progress_workshop.sessions.first
       create :pd_attendance, session: session, teacher: teacher
 
-      first_facilitator = @csf201_in_progress_workshop.facilitators.first
+      first_facilitator = @csf201_in_progress_workshop.facilitators.order(:name, :id).first
       first_facilitator_index = 0
 
       actual_form_id = nil
@@ -956,7 +951,7 @@ module Pd
       session = @csf201_in_progress_workshop.sessions.first
       create :pd_attendance, session: session, teacher: teacher
 
-      first_facilitator = @csf201_in_progress_workshop.facilitators.first
+      first_facilitator = @csf201_in_progress_workshop.facilitators.order(:name, :id).first
       first_facilitator_index = 0
 
       search_params = {
@@ -994,15 +989,13 @@ module Pd
     end
 
     test 'csf facilitator survey: redirect to 2nd facilitator survey if response exists for 1st one' do
-      skip 'Investigate flaky test failures'
-
       setup_csf201_in_progress_workshop
       teacher = create :teacher
       create :pd_enrollment, user: teacher, workshop: @csf201_in_progress_workshop
       session = @csf201_in_progress_workshop.sessions.first
       create :pd_attendance, session: session, teacher: teacher
 
-      first_facilitator = @csf201_in_progress_workshop.facilitators.first
+      first_facilitator = @csf201_in_progress_workshop.facilitators.order(:name, :id).first
       first_facilitator_index = 0
 
       WorkshopFacilitatorDailySurvey.create_placeholder!(
@@ -1024,15 +1017,14 @@ module Pd
     end
 
     test 'csf facilitator survey: show thanks page if response exists for all facilitators' do
-      skip 'Investigate flaky test failures'
-
+      setup_csf201_in_progress_workshop
       teacher = create :teacher
       create :pd_enrollment, user: teacher, workshop: @csf201_in_progress_workshop
       session = @csf201_in_progress_workshop.sessions.first
       create :pd_attendance, session: session, teacher: teacher
 
       first_facilitator_index = 0
-      @csf201_in_progress_workshop.facilitators.each_with_index do |facilitator, index|
+      @csf201_in_progress_workshop.facilitators.order(:name, :id).each_with_index do |facilitator, index|
         WorkshopFacilitatorDailySurvey.create_placeholder!(
           user_id: teacher.id,
           day: csf_post201_params[:day],
@@ -1064,51 +1056,51 @@ module Pd
 
     def setup_summer_workshop
       @regional_partner = create :regional_partner
-      @summer_workshop = create :pd_workshop, course: COURSE_CSP, subject: SUBJECT_TEACHER_CON,
-        num_sessions: 5, num_facilitators: 2, regional_partner: @regional_partner
+      @summer_workshop = create :summer_workshop, regional_partner: @regional_partner
       @summer_enrollment = create :pd_enrollment, :from_user, workshop: @summer_workshop
       @enrolled_summer_teacher = @summer_enrollment.user
-      @facilitators = @summer_workshop.facilitators
+      @facilitators = @summer_workshop.facilitators.order(:name, :id)
     end
 
     def setup_academic_year_workshop
       @regional_partner = create :regional_partner
-      @academic_year_workshop = create :pd_workshop, course: COURSE_CSP, subject: SUBJECT_CSP_WORKSHOP_1,
-        num_sessions: 1, num_facilitators: 2, regional_partner: @regional_partner
+      @academic_year_workshop = create :csp_academic_year_workshop, regional_partner: @regional_partner
       @academic_year_enrollment = create :pd_enrollment, :from_user, workshop: @academic_year_workshop
       @enrolled_academic_year_teacher = @academic_year_enrollment.user
-      @facilitators = @academic_year_workshop.facilitators
+      @facilitators = @academic_year_workshop.facilitators.order(:name, :id)
     end
 
     def setup_two_day_academic_year_workshop
       @regional_partner = create :regional_partner
-      @two_day_academic_year_workshop = create :pd_workshop, course: COURSE_CSP, subject: SUBJECT_CSP_WORKSHOP_5,
-        num_sessions: 2, num_facilitators: 2, regional_partner: @regional_partner
+      @two_day_academic_year_workshop = create :csp_academic_year_workshop, :two_day,
+        regional_partner: @regional_partner
       @two_day_academic_year_enrollment = create :pd_enrollment, :from_user,
         workshop: @two_day_academic_year_workshop
       @enrolled_two_day_academic_year_teacher = @two_day_academic_year_enrollment.user
-      @facilitators = @two_day_academic_year_workshop.facilitators
+      @facilitators = @two_day_academic_year_workshop.facilitators.order(:name, :id)
     end
 
     def setup_csf201_not_started_workshop
       @regional_partner = create :regional_partner
-      @csf201_not_started_workshop = create :pd_workshop,
-        course: COURSE_CSF, subject: SUBJECT_CSF_201, regional_partner: @regional_partner,
-        num_sessions: 1, num_facilitators: 2
+      @csf201_not_started_workshop = create :csf_deep_dive_workshop,
+        regional_partner: @regional_partner,
+        num_facilitators: 2
     end
 
     def setup_csf201_in_progress_workshop
       @regional_partner = create :regional_partner
-      @csf201_in_progress_workshop = create :pd_workshop,
-        course: COURSE_CSF, subject: SUBJECT_CSF_201, regional_partner: @regional_partner,
-        num_sessions: 1, num_facilitators: 2, started_at: DateTime.now
+      @csf201_in_progress_workshop = create :csf_deep_dive_workshop,
+        :in_progress,
+        regional_partner: @regional_partner,
+        num_facilitators: 2
     end
 
     def setup_csf201_ended_workshop
       @regional_partner = create :regional_partner
-      @csf201_ended_workshop = create :pd_ended_workshop,
-        course: COURSE_CSF, subject: SUBJECT_CSF_201, regional_partner: @regional_partner,
-        num_sessions: 1, num_facilitators: 2
+      @csf201_ended_workshop = create :csf_deep_dive_workshop,
+        :ended,
+        regional_partner: @regional_partner,
+        num_facilitators: 2
     end
 
     def unenrolled_teacher
@@ -1171,7 +1163,7 @@ module Pd
           userId: user.id,
           sessionId: workshop.sessions[day - 1].id,
           day: day,
-          facilitatorId: workshop.facilitators[facilitator_index].id,
+          facilitatorId: workshop.facilitators.order(:name, :id)[facilitator_index].id,
           facilitatorIndex: facilitator_index,
           formId: FAKE_FACILITATOR_FORM_ID,
         }

@@ -2424,6 +2424,10 @@ bg:
           stages:
             Number Systems:
               name: Бройни системи
+            Sending Binary Messages:
+              name: Изпращане на бинарни съобщения
+            Binary Numbers:
+              name: Бинарни числа
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -2451,3 +2455,11 @@ bg:
               name: Скорост
             Functions:
               name: Функции
+            Sprite Properties:
+              name: Свойства на Спрайта
+        peru-2019:
+          stages:
+            Introduction:
+              name: Въведение
+            Nested Loops:
+              name: Вмъкнати цикли

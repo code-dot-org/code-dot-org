@@ -173,6 +173,14 @@ class Stage < ActiveRecord::Base
     stage_summary.freeze
   end
 
+  def summarize_for_edit
+    summary = summarize.dup
+    # Do not let script name override stage name when there is only one stage
+    summary[:name] = I18n.t("data.script.name.#{script.name}.stages.#{name}.name")
+    summary[:flex_category] = flex_category
+    summary.freeze
+  end
+
   # Provides a JSON summary of a particular stage, that is consumed by tools used to
   # build lesson plans
   def summary_for_lesson_plans
@@ -242,9 +250,20 @@ class Stage < ActiveRecord::Base
     script_levels.reverse.find(&:valid_progression_level?)
   end
 
-  def next_level_path_for_stage_extras(user)
+  def next_level_for_stage_extras(user)
     level_to_follow = script_levels.last.next_level
     level_to_follow = level_to_follow.next_level while level_to_follow.try(:locked_or_hidden?, user)
-    level_to_follow ? build_script_level_path(level_to_follow) : script_completion_redirect(script)
+    level_to_follow
+  end
+
+  def next_level_path_for_stage_extras(user)
+    next_level = next_level_for_stage_extras(user)
+    next_level ?
+      build_script_level_path(next_level) : script_completion_redirect(script)
+  end
+
+  def next_level_number_for_stage_extras(user)
+    next_level = next_level_for_stage_extras(user)
+    next_level ? next_level.stage.relative_position : nil
   end
 end

@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e
 
+NPROC=$(nproc)
 MEM_PER_PROCESS=4096
 GRUNT_CMD="node --max_old_space_size=${MEM_PER_PROCESS} `npm bin`/grunt"
 
@@ -9,6 +10,9 @@ if [ -n "$DRONE" ]; then
   curl -s https://codecov.io/bash > ${CODECOV}
   chmod +x ${CODECOV}
   CODECOV="$CODECOV -C $DRONE_COMMIT_SHA"
+
+  # Limit parallelism on Drone to reduce chances of PhantomJS crashes.
+  NPROC=2
 else
   # For non-Drone runs, stub-out codecov.
   CODECOV=: # stub
@@ -23,7 +27,6 @@ fi
 
 # Don't run more processes than can fit in free memory.
 MEM_PROCS=$(awk "/${MEM_METRIC}/ {printf \"%d\", \$2/1024/${MEM_PER_PROCESS}}" /proc/meminfo)
-NPROC=$(nproc)
 PROCS=$(( ${MEM_PROCS} < ${NPROC} ? ${MEM_PROCS} : ${NPROC} ))
 
 if [ $PROCS -eq 0 ]; then
@@ -51,8 +54,10 @@ npm run lint
 # then uncomment this
 # (PORT=9878 $GRUNT_CMD scratchTest && ${CODECOV} -cF scratch)
 (PORT=9879 LEVEL_TYPE='turtle' $GRUNT_CMD karma:integration && ${CODECOV} -cF integration)
-(PORT=9880 LEVEL_TYPE='maze|bounce|calc|eval|flappy|studio' $GRUNT_CMD karma:integration && ${CODECOV} -cF integration)
-(PORT=9881 LEVEL_TYPE='applab' $GRUNT_CMD karma:integration && ${CODECOV} -cF integration)
-(PORT=9882 LEVEL_TYPE='gamelab' $GRUNT_CMD karma:integration && ${CODECOV} -cF integration)
-(PORT=9883 LEVEL_TYPE='craft' $GRUNT_CMD karma:integration && ${CODECOV} -cF integration)
+(PORT=9880 LEVEL_TYPE='maze|bounce|calc|eval|flappy' $GRUNT_CMD karma:integration && ${CODECOV} -cF integration)
+(PORT=9881 LEVEL_TYPE='gamelab' $GRUNT_CMD karma:integration && ${CODECOV} -cF integration)
+(PORT=9882 LEVEL_TYPE='craft' $GRUNT_CMD karma:integration && ${CODECOV} -cF integration)
+(PORT=9883 LEVEL_TYPE='applab1' $GRUNT_CMD karma:integration && ${CODECOV} -cF integration)
+(PORT=9884 LEVEL_TYPE='applab2' $GRUNT_CMD karma:integration && ${CODECOV} -cF integration)
+(PORT=9885 LEVEL_TYPE='studio' $GRUNT_CMD karma:integration && ${CODECOV} -cF integration)
 SCRIPT

@@ -2031,6 +2031,10 @@ pl-PL:
     uaktualnić przeglądarkę do <a href='%{supported_browsers_url}', target='_blank'>jednej
     z obsługiwanych przez nas przeglądarek</a>. Możesz wyświetlić stronę, ale może
     nie działać właściwie.
+  compatibility_unsupported_browser_markdown: Twoja przeglądarka nie jest obsługiwana.
+    Prosimy uaktualnić przeglądarkę do <a href='%{supported_browsers_url}', target='_blank'>jednej
+    z obsługiwanych przez nas przeglądarek</a>. Możesz wyświetlić stronę, ale może
+    nie działać właściwie.
   flappy_shortcode: pofruń
   header_home: Strona główna
   header_my_dashboard: Mój pulpit

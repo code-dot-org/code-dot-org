@@ -5,10 +5,10 @@ const shapes = {
     seen_on_feedback_page_at: PropTypes.string,
     student_first_visited_at: PropTypes.string,
     lessonName: PropTypes.string.isRequired,
+    lessonNum: PropTypes.number.isRequired,
     levelNum: PropTypes.number.isRequired,
     linkToLevel: PropTypes.string.isRequired,
     unitName: PropTypes.string,
-    linkToUnit: PropTypes.string,
     created_at: PropTypes.oneOfType([
       PropTypes.string,
       PropTypes.instanceOf(Date)

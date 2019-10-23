@@ -1,144 +1,41 @@
 ---
-title: <%= hoc_s(:title_partners).inspect %>
+title: Өнөктөр
 ---
+
 Код сааты долбоорун Код сааты жана Информатика аптасы сыяктуу кеңеш берүүчү жана текшерүүчү комитеттери түзгөн.
 
-[Кеңеш берүүчү комитети](%= resolve_url('/advisory-committee') %) K-12 өкүлдөрүнөн, илимий мекемелерден, коммерциялык эмес жана коммерциялык уюмдардан жана эл аралык уюмдардан түзүлгөн. Бул комитет Код сааты өнөктөштүгүнүн стратегиясын аныктайт.
+The [Advisory Committee]({{ urls/advisory_committee }}) is composed of representatives from K-12, academia, nonprofits, for-profits, and international organizations. Бул комитет Код сааты өнөктөштүгүнүн стратегиясын аныктайт.
 
-[Текшерүүчү комитетине](%= resolve_url('/review-committee') %) Кеңеш берүүчү комитетинин рубрикасы менен кошо тапшырмаларды баалап тастыктаган K-12 класстардын 15 окутуучусу кирет. Бул окутуучулар тапшырмалардын билим берүү баалуулугун, окуучуларды кызыктыра алгандыгын жана ар түрдүү окуучуларга потенциалдуу чакырык болуп бергендигин текшерип, окуучулар тарабынан аткарылган тапшырмаларды жана аткара турган жүздөгөн өнөктөрдүн окуу тартиптерин карап чыгышат.
+The [Review Committee]({{ urls/review_committee }}) is composed of 15 educators across K-12 grade bands that assess and recommend activities using the Advisory Committee's rubric. Бул окутуучулар тапшырмалардын билим берүү баалуулугун, окуучуларды кызыктыра алгандыгын жана ар түрдүү окуучуларга потенциалдуу чакырык болуп бергендигин текшерип, окуучулар тарабынан аткарылган тапшырмаларды жана аткара турган жүздөгөн өнөктөрдүн окуу тартиптерин карап чыгышат.
 
 Ушул эки коммитеттин ишмердүүлүгү жана берилгендиктери Код сааты долбоорунун өнүгүүсүнө жана ар бир окуучунун компүтер илими менен таанышуусуна бир кыйла пайда көрсөткөн.
 
-<% if @country == 'la' %>
+# Major Partners and Corporate Supporters
 
-# Латын Америкасындагы өнөктөрүбүз
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'la') %>
-
-<% end %>
-
-<% if @country == 'ac' %>
-
-# Африкадагы өнөктөрүбүз
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ac') %>
-
-<% end %>
-
-<% if @country == 'au' %>
-
-# Австралиядагы өнөктөрүбүз
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'au') %>
-
-<% end %>
-
-<% if @country == 'cn' %>
-
-# Кытайдагы өнөктөрүбүз
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'cn') %>
-
-<% end %>
-
-<% if @country == 'fr' %>
-
-# Франциядагы өнөктөрүбүз
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'fr') %>
-
-<% end %>
-
-<% if @country == 'id' %>
-
-# Индонезиядагы өнөктөрүбүз
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'id') %>
-
-<% end %>
-
-<% if @country == 'ie' %>
-
-# Ирландиядагы өнөктөрүбүз
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ie') %>
-
-<% end %>
-
-<% if @country == 'in' %>
-
-# Индиядагы өнөктөрүбүз
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'in') %>
-
-<% end %>
-
-<% if @country == 'jp' %>
-
-# Жапониядагы өнөктөрүбүз
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'jp') %>
-
-<% end %>
-
-<% if @country == 'nl' %>
-
-# Нидерланддагы өнөктөрүбүз
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'nl') %>
-
-<% end %>
-
-<% if @country == 'nz' %>
-
-# Жаңы Зеландиядагы өнөктөрүбүз
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'nz') %>
-
-<% end %>
-
-<% if @country == 'uk' %>
-
-# Бириккен Королдугундагы өнөктөрүбүз
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'uk') %>
-
-<% end %>
-
-<% if @country == 'ca' %>
-
-# Канададагы өнөктөрүбүз
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ca') %>
-
-<% end %>
-
-# Башкы өнөктөр жан колдогон компаниялар
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'major') %>
+{{ partners/major_partners_corporate_supporters }}
 
 * * *
 
 # International Partners
 
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'international') %>
+{{ partners/international_partners }}
 
 * * *
 
 # Curriculum and Tutorial Partners
 
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
+{{ partners/curriculum_tutorial_partners }}
 
 * * *
 
 # Infrastructure Partners and Tools
 
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
+{{ partners/infrastructure_partners_tools }}
 
 * * *
 
 # Additional Partners
 
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
+{{ partners/additional_partners }}
 
-<%= view :signup_button %>
+{{ signup_button }}

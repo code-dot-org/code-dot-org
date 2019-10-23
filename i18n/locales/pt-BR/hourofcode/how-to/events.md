@@ -1,9 +1,10 @@
 ---
-title: <%= hoc_s(:title_how_to_events).inspect %>
+title: Guia para fazer um evento da Hora do Código
 layout: wide
 nav: how_to_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # How to organize an Hour of Code assembly or event
 
@@ -14,13 +15,13 @@ nav: how_to_nav
 ## 1. Prepare-se para seu evento
 
 - Defina um local, data e hora.
-- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to your local mayor, member of Congress, governor, or influential business person and invite them to speak. Check out our [how-to toolkit](%=localized_file('/files/elected-official.pdf')%) when hosting an elected official during an Hour of Code for more info.
-- Convide a imprensa, isto é, a rádio ou TV local, jornal, blogueiro, etc. Consulte nosso [kit para a imprensa](<%= resolve_url('/promote/press-kit') %>) para ter mais informações.
+- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to your local mayor, member of Congress, governor, or influential business person and invite them to speak. Check out our [how-to toolkit]({{ localized_files/elected_official }}) when hosting an elected official during an Hour of Code for more info.
+- Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit]({{ promote/press_kit_url }}) for help.
 
 ## 2. Durante seu evento
 
-- Comece seu evento com um de nossos [vídeos inspiradores](%= resolve_url('/promote/resources#videos') %).
-- Faça uma introdução falando sobre a importância da ciência da computação, usando estes [infográficos e estatísticas](<%= resolve_url('/promote/stats') %>).   
+- Kick off your event with one of our [inspirational videos]({{ promote/videos }}).
+- Give an intro overviewing the importance of computer science, using these [stats and infographics]({{ promote/stats_url }}).   
       
     
 - **Other event ideas**: 
@@ -46,7 +47,7 @@ Consider hosting a K-5 evening event and invite parents to join their students f
 
 **Event:** School-wide Computer Science Education Week kick-off assembly
 
-**Date:** <%= campaign_date('start-short') %> (start of Computer Science Education Week)
+**Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
 
 **Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
@@ -54,13 +55,13 @@ Consider hosting a K-5 evening event and invite parents to join their students f
 
 ## Programação do evento
 
-| Hora          | Ação                                                                                                                                                                |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10h00 - 10h05 | Open with one of our [inspirational videos](%= resolve_url('/promote/resources#videos') %).                                                                         |
-| 10h05 - 10h15 | O Diretor/a faz uma introdução falando sobre a importância da ciência da computação. Use estes [infográficos e estatísticas](<%= resolve_url('/promote/stats') %>). |
-| 10h15 - 10h30 | Um convidado especial falará sobre sua experiência e sobre como a tecnologia e a ciência da computação desempenham um importante papel em sua vida cotidiana.       |
-| 10h30 - 10h40 | Os alunos farão uma demonstração da Hora do Código para a escola. Inversão de papéis: eles deverão ensinar o diretor, representante político ou outros alunos!      |
-| 10h40 - 11h00 | Os alunos farão a demonstração de uma atividade off-line para mostrar como a ciência da computação pode ser ensinada sem o uso de computadores.                     |
-| 11h00 - 11h05 | O professor que ajudou a trazer o evento para a escola fará os comentários finais.                                                                                  |
+| Hora          | Ação                                                                                                                                                           |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 10h00 - 10h05 | Open with one of our [inspirational videos]({{ promote/videos }}).                                                                                             |
+| 10h05 - 10h15 | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics]({{ promote/stats_url }}).                          |
+| 10h15 - 10h30 | Um convidado especial falará sobre sua experiência e sobre como a tecnologia e a ciência da computação desempenham um importante papel em sua vida cotidiana.  |
+| 10h30 - 10h40 | Os alunos farão uma demonstração da Hora do Código para a escola. Inversão de papéis: eles deverão ensinar o diretor, representante político ou outros alunos! |
+| 10h40 - 11h00 | Os alunos farão a demonstração de uma atividade off-line para mostrar como a ciência da computação pode ser ensinada sem o uso de computadores.                |
+| 11h00 - 11h05 | O professor que ajudou a trazer o evento para a escola fará os comentários finais.                                                                             |
 
-<%= view :signup_button %>
+{{ signup_button }}

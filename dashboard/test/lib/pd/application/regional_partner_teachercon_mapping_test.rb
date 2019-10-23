@@ -22,28 +22,28 @@ module Pd::Application
     test 'find_teachercon_workshop' do
       Pd::Workshop.any_instance.stubs(:process_location)
 
-      create :pd_workshop, course: Pd::Workshop::COURSE_CSD,
+      create :workshop, course: Pd::Workshop::COURSE_CSD,
         subject: Pd::Workshop::SUBJECT_TEACHER_CON, location_address: 'Some place in Phoenix, AZ',
         num_sessions: 5, sessions_from: Time.new(2018, 7, 22, 9)
 
-      create :pd_workshop, course: Pd::Workshop::COURSE_CSP,
+      create :workshop, course: Pd::Workshop::COURSE_CSP,
         subject: Pd::Workshop::SUBJECT_TEACHER_CON, location_address: 'Some place in Phoenix, AZ',
         num_sessions: 5, sessions_from: Time.new(2018, 7, 22, 9)
 
-      create :pd_workshop, course: Pd::Workshop::COURSE_CSD,
+      create :workshop, course: Pd::Workshop::COURSE_CSD,
         subject: Pd::Workshop::SUBJECT_TEACHER_CON, location_address: 'Some place in Atlanta, GA',
         num_sessions: 5, sessions_from: Time.new(2018, 7, 22, 9)
 
-      create :pd_workshop, course: Pd::Workshop::COURSE_CSP,
+      create :workshop, course: Pd::Workshop::COURSE_CSP,
         subject: Pd::Workshop::SUBJECT_TEACHER_CON, location_address: 'Some place in Atlanta, GA',
         num_sessions: 5, sessions_from: Time.new(2018, 7, 22, 9)
 
       # Last year, same city
-      create :pd_workshop, course: Pd::Workshop::COURSE_CSD,
+      create :workshop, course: Pd::Workshop::COURSE_CSD,
         subject: Pd::Workshop::SUBJECT_TEACHER_CON, location_address: 'Some place in Phoenix, AZ',
         num_sessions: 5, sessions_from: Time.new(2017, 7, 22, 9)
 
-      create :pd_workshop, course: Pd::Workshop::COURSE_CSP,
+      create :workshop, course: Pd::Workshop::COURSE_CSP,
         subject: Pd::Workshop::SUBJECT_TEACHER_CON, location_address: 'Some place in Phoenix, AZ',
         num_sessions: 5, sessions_from: Time.new(2017, 7, 22, 9)
 
