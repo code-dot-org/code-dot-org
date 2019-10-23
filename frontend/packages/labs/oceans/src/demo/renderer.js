@@ -116,16 +116,21 @@ const loadImage = imgPath => {
   });
 };
 
-const getOffsetForTime = (t, numFish) => {
-  return constants.fishCanvasWidth * numFish - Math.round(t / 3);
+const getOffsetForTime = (t, totalFish) => {
+  return (
+    constants.fishCanvasWidth * totalFish -
+    constants.canvasWidth -
+    Math.round(t / 3)
+  );
 };
 
-const getFishIdxForLocation = (screenX, offsetX) => {
-  return Math.floor((screenX + offsetX) / constants.fishCanvasWidth);
+const getFishIdxForLocation = (screenX, offsetX, totalFish) => {
+  const n = Math.floor((screenX + offsetX) / constants.fishCanvasWidth);
+  return totalFish - n;
 };
 
-const getXForFish = (fishIdx, offsetX) => {
-  return fishIdx * constants.fishCanvasWidth - offsetX;
+const getXForFish = (numFish, fishIdx, offsetX) => {
+  return (numFish - fishIdx) * constants.fishCanvasWidth - offsetX;
 };
 
 let lastPauseTime = 0;
@@ -143,17 +148,24 @@ const drawTrainingFishNew = state => {
     t += currentRunTime;
   }
 
-  const offsetX = getOffsetForTime(t, 5);
-  const startFishIdx = Math.max(getFishIdxForLocation(0, offsetX), 0);
+  const offsetX = getOffsetForTime(t, state.fishData.length);
+  const startFishIdx = Math.max(
+    getFishIdxForLocation(
+      constants.canvasWidth,
+      offsetX,
+      state.fishData.length
+    ),
+    0
+  );
   const lastFishIdx = Math.min(
-    getFishIdxForLocation(constants.canvasWidth, offsetX),
+    getFishIdxForLocation(0, offsetX, state.fishData.length),
     state.fishData.length - 1
   );
   const ctx = state.canvas.getContext('2d');
   const y = constants.canvasHeight / 2 - constants.fishCanvasHeight / 2;
 
   for (let i = startFishIdx; i <= lastFishIdx; i++) {
-    const x = getXForFish(i, offsetX);
+    const x = getXForFish(state.fishData.length - 1, i, offsetX);
     const fish = state.fishData[i];
     drawSingleFish(fish, x, y, ctx);
   }
