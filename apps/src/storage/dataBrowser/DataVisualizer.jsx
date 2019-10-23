@@ -103,7 +103,11 @@ class DataVisualizer extends React.Component {
         console.log('cross tab not yet implemented');
         break;
       case 'Scatter Plot':
-        console.log('scatter plot not yet implemented');
+        if (this.state.xValues && this.state.yValues) {
+          chart = new GoogleChart.MaterialScatterChart(targetDiv);
+          chartData = records.filter(record => !!record);
+          columns.push(this.state.xValues, this.state.yValues);
+        }
         break;
       default:
         console.warn('unknown chart type: ' + this.state.chartType);
