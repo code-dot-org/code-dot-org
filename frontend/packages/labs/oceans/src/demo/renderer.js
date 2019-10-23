@@ -64,28 +64,19 @@ export const render = () => {
     currentModeStartTime = $time();
   }
 
+  clearCanvas(state.canvas);
+
   switch (state.currentMode) {
-    case Modes.Loading:
-      clearCanvas(state.canvas);
-      break;
-    case Modes.Words:
-      clearCanvas(state.canvas);
-      break;
     case Modes.Training:
-      clearCanvas(state.canvas);
       drawTrainingFish(state);
       drawUpcomingFish(state);
       break;
     case Modes.Predicting:
-      clearCanvas(state.canvas);
       drawPredictingFish(state);
       break;
     case Modes.Pond:
-      clearCanvas(state.canvas);
       drawPondFishImages();
       break;
-    default:
-      console.error('Unrecognized mode specified.');
   }
 
   drawOverlays();
