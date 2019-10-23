@@ -30,6 +30,7 @@ MAX_USER_SCRIPT_ID = 99495037
 MAX_STORAGE_APPS_ID = 183149199
 MAX_USER_STORAGE_ID = 101520617
 MAX_HOC_ACTIVITY_ID = 807070088
+MAX_AUTH_OPTION_ID = 11806501
 LEVEL_SOURCE_DATA = [[<xml><block type="craft_whenNight" deletable="false"><statement name="DO"><block type="craft_spawnEntity"><title name="TYPE">zombie</title><title name="DIRECTION">up</title></block></statement></block><block type="craft_zombieSpawnedTouchedClickedDay" deletable="false"><statement name="WHEN_SPAWNED"><block type="craft_wait"><title name="TYPE">0.4</title><next><block type="craft_spawnEntity"><title name="TYPE">zombie</title><title name="DIRECTION">up</title></block></next></block></statement><statement name="WHEN_TOUCHED"><block type="craft_wait"><title name="TYPE">2.0</title><next><block type="craft_attack"><next><block type="craft_moveToward"><title name="TYPE">Player</title></block></next></block></next></block></statement><statement name="WHEN_USED"><block type="craft_flashEntity"><next><block type="craft_destroyEntity"></block></next></block></statement><statement name="WHEN_DAY"><block type="craft_destroyEntity"></block></statement></block></xml>]]
 STORAGE_APPS_VALUE = [[{\"hidden\":true,\"createdAt\":\"2019-09-22T04:05:08.511+00:00\",\"updatedAt\":\"2019-09-22T04:05:08.511+00:00\"}]]
 
@@ -60,6 +61,30 @@ function init_query_templates()
 
   -- queries per second values taken from Percona for peak hours (~ 7 AM to 12 PM PST on a school day - Oct 21, 2019).
   write_queries = {
+    {
+      qps = 8.82,
+      query = [[
+        UPDATE pegasus.storage_apps
+        SET `value` = '$storageAppsValue', `updated_at` = '$date', `updated_ip` = '71.80.212.17'
+        WHERE ((`id` = $storageAppId) AND (`state` != 'deleted'))
+      ]]
+    },
+    {
+      qps = 6.57,
+      query = [[
+        UPDATE dashboard_production.users
+        SET `current_sign_in_at` = '$date', `last_sign_in_at` = '$date', `sign_in_count` = 9, `updated_at` = '$date'
+        WHERE `users`.`id` = $userId
+      ]]
+    },
+    {
+      qps = 6.12,
+      query = [[
+        UPDATE dashboard_production.authentication_options
+        SET `data` = '$authOptionsData' , `updated_at` = '$date'
+        WHERE `authentication_options` . `id` = $authOptionId
+      ]]
+    },
     {
       qps = 12.18,
       query = [[
@@ -229,6 +254,8 @@ function event()
     referer = sysbench.rand.string(string.rep("@", sysbench.rand.special(5, 15))),
     tutorial = sysbench.rand.string(string.rep("@", sysbench.rand.special(5, 15))),
     hocActivityId = math.random(1, MAX_HOC_ACTIVITY_ID),
+    authOptionId = math.random(1, MAX_AUTH_OPTION_ID),
+    authOptionsData = sysbench.rand.string(string.rep("@", sysbench.rand.special(10, 400)))
   }
 
   -- Simple string interpolation from: https://hisham.hm/2016/01/04/string-interpolation-in-lua/
