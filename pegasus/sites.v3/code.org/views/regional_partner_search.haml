@@ -1,6 +1,6 @@
 - js_locale = request.locale.to_s.downcase.tr('-', '_')
-%script{src: asset_path("js/#{js_locale}/common_locale.js")}
-%script{src: minifiable_asset_path('js/code.org/views/regional_partner_search.js')}
+%script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
+%script{src: webpack_asset_path('js/code.org/views/regional_partner_search.js')}
 
 :javascript
   window.pegasus = window.pegasus || {};

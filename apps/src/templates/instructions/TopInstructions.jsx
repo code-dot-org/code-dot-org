@@ -9,6 +9,7 @@ import TeacherOnlyMarkdown from './TeacherOnlyMarkdown';
 import TeacherFeedback from './TeacherFeedback';
 import InlineAudio from './InlineAudio';
 import ContainedLevel from '../ContainedLevel';
+import ContainedLevelAnswer from '../ContainedLevelAnswer';
 import PaneHeader, {PaneButton} from '../../templates/PaneHeader';
 import InstructionsTab from './InstructionsTab';
 import HelpTabContents from './HelpTabContents';
@@ -28,6 +29,7 @@ import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import queryString from 'query-string';
 import InstructionsCSF from './InstructionsCSF';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {WIDGET_WIDTH} from '@cdo/apps/applab/constants';
 
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
@@ -177,7 +179,8 @@ class TopInstructions extends Component {
     hidden: PropTypes.bool.isRequired,
     shortInstructions: PropTypes.string,
     isMinecraft: PropTypes.bool.isRequired,
-    isRtl: PropTypes.bool.isRequired
+    isRtl: PropTypes.bool.isRequired,
+    widgetMode: PropTypes.bool
   };
 
   constructor(props) {
@@ -244,7 +247,7 @@ class TopInstructions extends Component {
     if (serverLevelId) {
       promises.push(
         $.ajax({
-          url: `/levels/${serverLevelId}/get_rubric/`,
+          url: `/levels/${serverLevelId}/get_rubric`,
           method: 'GET',
           contentType: 'application/json;charset=UTF-8'
         }).done(data => {
@@ -375,7 +378,9 @@ class TopInstructions extends Component {
       HEADER_HEIGHT +
       RESIZER_HEIGHT;
 
-    this.props.setInstructionsMaxHeightNeeded(maxNeededHeight);
+    if (this.props.maxHeight !== maxNeededHeight) {
+      this.props.setInstructionsMaxHeightNeeded(maxNeededHeight);
+    }
     return maxNeededHeight;
   };
 
@@ -423,7 +428,10 @@ class TopInstructions extends Component {
 
   handleHelpTabClick = () => {
     this.scrollToTopOfTab();
-    this.setState({tabSelected: TabType.RESOURCES}, this.scrollToTopOfTab);
+    this.setState({tabSelected: TabType.RESOURCES}, () => {
+      this.scrollToTopOfTab();
+      this.adjustMaxNeededHeight();
+    });
     firehoseClient.putRecord({
       study: 'top-instructions',
       event: 'click-help-and-tips-tab'
@@ -432,7 +440,10 @@ class TopInstructions extends Component {
 
   handleInstructionTabClick = () => {
     this.scrollToTopOfTab();
-    this.setState({tabSelected: TabType.INSTRUCTIONS}, this.scrollToTopOfTab);
+    this.setState({tabSelected: TabType.INSTRUCTIONS}, () => {
+      this.scrollToTopOfTab();
+      this.adjustMaxNeededHeight();
+    });
   };
 
   handleCommentTabClick = () => {
@@ -442,6 +453,10 @@ class TopInstructions extends Component {
     if (this.state.tabSelected !== TabType.COMMENTS) {
       this.incrementFeedbackVisitCount();
     }
+    firehoseClient.putRecord({
+      study: 'top-instructions',
+      event: 'click-feedback-tab'
+    });
 
     this.setState({tabSelected: TabType.COMMENTS}, () => {
       this.forceTabResizeToMaxHeight();
@@ -450,7 +465,10 @@ class TopInstructions extends Component {
   };
 
   handleTeacherOnlyTabClick = () => {
-    this.setState({tabSelected: TabType.TEACHER_ONLY}, this.scrollToTopOfTab);
+    this.setState({tabSelected: TabType.TEACHER_ONLY}, () => {
+      this.scrollToTopOfTab();
+      this.adjustMaxNeededHeight();
+    });
     firehoseClient.putRecord({
       study: 'top-instructions',
       event: 'click-teacher-only-tab'
@@ -459,7 +477,7 @@ class TopInstructions extends Component {
 
   scrollToTopOfTab = () => {
     var myDiv = document.getElementById('scroll-container');
-    myDiv.scrollTo(0, 0);
+    myDiv.scrollTop = 0;
   };
 
   /**
@@ -497,6 +515,7 @@ class TopInstructions extends Component {
 
     const isCSF = !this.props.noInstructionsWhenCollapsed;
     const isCSDorCSP = this.props.noInstructionsWhenCollapsed;
+    const widgetWidth = WIDGET_WIDTH + 'px';
 
     const mainStyle = [
       this.props.isRtl ? styles.mainRtl : styles.main,
@@ -504,7 +523,9 @@ class TopInstructions extends Component {
         height: this.props.height - RESIZER_HEIGHT
       },
       this.props.noVisualization && styles.noViz,
-      this.props.isEmbedView && styles.embedView
+      this.props.isEmbedView && styles.embedView,
+      this.props.widgetMode &&
+        (this.props.isRtl ? {right: widgetWidth} : {left: widgetWidth})
     ];
     const ttsUrl = this.props.ttsLongInstructionsUrl;
     const videoData = this.props.levelVideos ? this.props.levelVideos[0] : [];
@@ -556,6 +577,12 @@ class TopInstructions extends Component {
     ) {
       return <div />;
     }
+
+    /* TODO: When we move CSD and CSP to the Teacher Only tab remove CSF restriction here*/
+    const showContainedLevelAnswer =
+      this.props.hasContainedLevels &&
+      isCSF &&
+      $('#containedLevelAnswer0').length > 0;
 
     return (
       <div style={mainStyle} className="editor-column">
@@ -621,9 +648,10 @@ class TopInstructions extends Component {
                     isRtl={this.props.isRtl}
                   />
                 )}
+              {/* TODO: When we move CSD and CSP to the Teacher Only tab remove CSF restriction here*/}
               {isCSF &&
                 this.props.viewAs === ViewType.Teacher &&
-                this.props.teacherMarkdown && (
+                (this.props.teacherMarkdown || showContainedLevelAnswer) && (
                   <InstructionsTab
                     className="uitest-teacherOnlyTab"
                     onClick={this.handleTeacherOnlyTabClick}
@@ -663,10 +691,22 @@ class TopInstructions extends Component {
           >
             <div ref="instructions">
               {this.props.hasContainedLevels && (
-                <ContainedLevel
-                  ref="instructions"
-                  hidden={this.state.tabSelected !== TabType.INSTRUCTIONS}
-                />
+                <div>
+                  <ContainedLevel
+                    ref="instructions"
+                    hidden={this.state.tabSelected !== TabType.INSTRUCTIONS}
+                  />
+                  {/* TODO: When we move CSD and CSP to the Teacher Only tab remove this*/}
+                  {!isCSF && this.props.viewAs === ViewType.Teacher && (
+                    <div>
+                      <ContainedLevelAnswer
+                        ref="teacherOnlyTab"
+                        hidden={this.state.tabSelected !== TabType.INSTRUCTIONS}
+                      />
+                      {this.props.teacherMarkdown && <TeacherOnlyMarkdown />}
+                    </div>
+                  )}
+                </div>
               )}
               {!this.props.hasContainedLevels &&
                 isCSF &&
@@ -691,7 +731,7 @@ class TopInstructions extends Component {
                       onResize={this.adjustMaxNeededHeight}
                       inTopPane
                     />
-                    <TeacherOnlyMarkdown />
+                    {this.props.teacherMarkdown && <TeacherOnlyMarkdown />}
                   </div>
                 )}
             </div>
@@ -718,11 +758,21 @@ class TopInstructions extends Component {
                 token={this.state.token}
               />
             )}
+            {/* TODO: When we move CSD and CSP to the Teacher Only tab remove CSF restriction here*/}
             {isCSF &&
               this.props.viewAs === ViewType.Teacher &&
-              this.props.teacherMarkdown &&
-              this.state.tabSelected === TabType.TEACHER_ONLY && (
-                <TeacherOnlyMarkdown ref="teacherOnlyTab" />
+              (this.props.hasContainedLevels || this.props.teacherMarkdown) && (
+                <div>
+                  {this.props.hasContainedLevels && (
+                    <ContainedLevelAnswer
+                      ref="teacherOnlyTab"
+                      hidden={this.state.tabSelected !== TabType.TEACHER_ONLY}
+                    />
+                  )}
+                  {this.state.tabSelected === TabType.TEACHER_ONLY && (
+                    <TeacherOnlyMarkdown ref="teacherOnlyTab" />
+                  )}
+                </div>
               )}
           </div>
           {!this.props.isEmbedView && (
@@ -764,7 +814,8 @@ export default connect(
     teacherMarkdown: state.instructions.teacherMarkdown,
     hidden: state.pageConstants.isShareView,
     shortInstructions: state.instructions.shortInstructions,
-    isRtl: state.isRtl
+    isRtl: state.isRtl,
+    widgetMode: state.pageConstants.widgetMode
   }),
   dispatch => ({
     toggleInstructionsCollapsed() {

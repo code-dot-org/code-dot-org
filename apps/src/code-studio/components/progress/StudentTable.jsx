@@ -4,6 +4,7 @@ import Radium from 'radium';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 import {TeacherPanelProgressBubble} from '@cdo/apps/code-studio/components/progress/TeacherPanelProgressBubble';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 const styles = {
   table: {
@@ -30,16 +31,24 @@ const styles = {
   },
   studentTableRow: {
     display: 'flex',
-    alignItems: 'center'
+    alignItems: 'center',
+    width: '100%'
   },
   meRow: {
     padding: '1px 1px 1px 5px'
   },
   nameInScript: {
-    paddingLeft: 5
+    paddingLeft: 5,
+    margin: '1px 1px 1px 0',
+    flexGrow: 1
   },
   nameWithBubble: {
-    paddingLeft: 5
+    paddingLeft: 5,
+    margin: '1px 1px 1px 0',
+    flexGrow: 1
+  },
+  linkIcon: {
+    marginLeft: 10
   }
 };
 
@@ -102,24 +111,25 @@ class StudentTable extends React.Component {
               onClick={() => onSelectUser(student.id)}
             >
               <td key={`td-${student.id}`} style={styles.td}>
-                <a href={this.getRowLink(student.id)} style={{width: '100%'}}>
-                  <div style={styles.studentTableRow}>
-                    {levels && (
-                      <TeacherPanelProgressBubble
-                        level={levels.find(
-                          level => student.id === level.user_id
-                        )}
-                      />
-                    )}
-                    <span
-                      style={
-                        levels ? styles.nameWithBubble : styles.nameInScript
-                      }
+                <div style={styles.studentTableRow}>
+                  {levels && (
+                    <TeacherPanelProgressBubble
+                      level={levels.find(level => student.id === level.user_id)}
+                    />
+                  )}
+                  <div
+                    style={levels ? styles.nameWithBubble : styles.nameInScript}
+                  >
+                    {student.name}
+                    <a
+                      href={this.getRowLink(student.id)}
+                      target="_blank"
+                      style={styles.linkIcon}
                     >
-                      {student.name}
-                    </span>
+                      <FontAwesome icon="external-link" />
+                    </a>
                   </div>
-                </a>
+                </div>
               </td>
             </tr>
           ))}

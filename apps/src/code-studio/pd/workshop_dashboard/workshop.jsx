@@ -13,6 +13,7 @@ import moment from 'moment';
 import {Grid, Row, Col, Panel, ButtonToolbar, Button} from 'react-bootstrap';
 import {DATE_FORMAT} from './workshopConstants';
 import ConfirmationDialog from '../components/confirmation_dialog';
+import MoveEnrollmentsDialog from './components/move_enrollments_dialog';
 import WorkshopForm from './components/workshop_form';
 import WorkshopEnrollment from './components/workshop_enrollment';
 import Spinner from '../components/spinner';
@@ -32,6 +33,11 @@ const styles = {
   },
   adminActionButton: {
     float: 'right'
+  },
+  error: {
+    color: 'red',
+    display: 'inline',
+    paddingLeft: '10px'
   }
 };
 
@@ -59,7 +65,9 @@ export class Workshop extends React.Component {
         loadingEnrollments: true,
         enrollmentActiveTab: 0,
         pendingAdminAction: null,
-        showAdminEditConfirmation: false
+        showAdminEditConfirmation: false,
+        selectedEnrollments: [],
+        isMoveEnrollmentsDialogOpen: false
       };
     }
   }
@@ -164,6 +172,75 @@ export class Workshop extends React.Component {
       this.loadEnrollments();
       this.deleteEnrollmentRequest = null;
     });
+  };
+
+  handleMoveEnrollments = (destinationWorkshopId, selectedEnrollments) => {
+    const enrollmentIds = selectedEnrollments.map(enrollment => {
+      return enrollment.id;
+    });
+    const urlParams = `destination_workshop_id=${destinationWorkshopId}&enrollment_ids[]=${enrollmentIds.join(
+      '&enrollment_ids[]='
+    )}`;
+    this.moveEnrollmentRequest = $.ajax({
+      method: 'POST',
+      url: `/api/v1/pd/enrollments/move?${urlParams}`,
+      traditional: true
+    })
+      .done(() => {
+        // reload
+        this.loadEnrollments();
+        this.moveEnrollmentRequest = null;
+      })
+      .fail(() => {
+        this.setState({
+          error: 'Error: unable to move enrollments'
+        });
+        this.loadEnrollments();
+        this.moveEnrollmentRequest = null;
+      });
+  };
+
+  handleClickSelect = enrollment => {
+    if (
+      this.state.selectedEnrollments.findIndex(e => e.id === enrollment.id) >= 0
+    ) {
+      this.setState(state => {
+        const selectedEnrollments = state.selectedEnrollments.filter(e => {
+          return e.id !== enrollment.id;
+        });
+        return {selectedEnrollments};
+      });
+    } else {
+      this.setState(state => {
+        state.selectedEnrollments.push({
+          id: enrollment.id,
+          email: enrollment.email,
+          first_name: enrollment.first_name,
+          last_name: enrollment.last_name
+        });
+      });
+    }
+  };
+
+  handleClickMove = () => {
+    this.setState({isMoveEnrollmentsDialogOpen: true});
+  };
+
+  handleMoveEnrollmentsCanceled = () => {
+    this.setState({
+      isMoveEnrollmentsDialogOpen: false
+    });
+  };
+
+  handleMoveEnrollmentsConfirmed = destinationWorkshopId => {
+    this.setState({
+      isMoveEnrollmentsDialogOpen: false,
+      selectedEnrollments: []
+    });
+    this.handleMoveEnrollments(
+      destinationWorkshopId,
+      this.state.selectedEnrollments
+    );
   };
 
   componentWillUnmount() {
@@ -746,6 +823,22 @@ export class Workshop extends React.Component {
         >
           <i className="fa fa-arrow-circle-down" />
         </Button>
+        {this.props.permission.has(WorkshopAdmin) && (
+          <Button
+            bsSize="xsmall"
+            disabled={this.state.selectedEnrollments.length === 0}
+            onClick={this.handleClickMove}
+          >
+            Move (admin)
+            <MoveEnrollmentsDialog
+              show={this.state.isMoveEnrollmentsDialogOpen}
+              selectedEnrollments={this.state.selectedEnrollments}
+              onCancel={this.handleMoveEnrollmentsCanceled}
+              onMove={this.handleMoveEnrollmentsConfirmed}
+            />
+          </Button>
+        )}
+        <p style={styles.error}>{this.state.error}</p>
       </div>
     );
 
@@ -765,12 +858,14 @@ export class Workshop extends React.Component {
           numSessions={this.state.workshop.sessions.length}
           enrollments={this.state.enrollments}
           onDelete={this.handleDeleteEnrollment}
+          onClickSelect={this.handleClickSelect}
           accountRequiredForAttendance={
             this.state.workshop['account_required_for_attendance?']
           }
           scholarshipWorkshop={this.state.workshop['scholarship_workshop?']}
           activeTab={this.state.enrollmentActiveTab}
           onTabSelect={this.handleEnrollmentActiveTabSelect}
+          selectedEnrollments={this.state.selectedEnrollments}
         />
       );
     }
@@ -782,7 +877,12 @@ export class Workshop extends React.Component {
     return (
       <Row>
         <Col sm={12}>
-          <Panel header={header}>{content}</Panel>
+          <Panel>
+            <Panel.Heading>
+              <Panel.Title>{header}</Panel.Title>
+            </Panel.Heading>
+            <Panel.Body>{content}</Panel.Body>
+          </Panel>
         </Col>
       </Row>
     );

@@ -23,7 +23,7 @@ import {
   onColumnNames,
   addMissingColumns
 } from '../storage/firebaseMetadata';
-import {getDatabase} from '../storage/firebaseUtils';
+import {getProjectDatabase, getSharedDatabase} from '../storage/firebaseUtils';
 import * as apiTimeoutList from '../lib/util/timeoutList';
 import designMode from './designMode';
 import applabTurtle from './applabTurtle';
@@ -47,6 +47,7 @@ const {ApplabInterfaceMode} = applabConstants;
 import {DataView} from '../storage/constants';
 import consoleApi from '../consoleApi';
 import {
+  tableType,
   addTableName,
   deleteTableName,
   updateTableColumns,
@@ -147,7 +148,10 @@ function loadLevel() {
   // This led to lots of hackery in the code to properly scale the visualization
   // area. Width/height are now constant, but much of the hackery still remains
   // since I don't understand it well enough.
-  Applab.appWidth = applabConstants.APP_WIDTH;
+  Applab.appWidth = level.widgetMode
+    ? applabConstants.WIDGET_WIDTH
+    : applabConstants.APP_WIDTH;
+
   Applab.appHeight = applabConstants.APP_HEIGHT;
 
   // In share mode we need to reserve some number of pixels for our in-app
@@ -401,6 +405,14 @@ Applab.init = function(config) {
   );
   config.getGeneratedProperties = getGeneratedProperties;
 
+  // Set information about the current Applab level being displayed.
+  getStore().dispatch(
+    actions.setLevelData({
+      name: config.level.name,
+      isStartMode: config.isStartMode
+    })
+  );
+
   // replace studioApp methods with our own
   studioApp().reset = this.reset.bind(this);
   studioApp().runButtonClick = this.runButtonClick.bind(this);
@@ -541,7 +553,8 @@ Applab.init = function(config) {
   config.afterClearPuzzle = function() {
     designMode.resetIds();
     Applab.setLevelHtml(config.level.startHtml || '');
-    Applab.storage.populateTable(level.dataTables, true, () => {}, outputError); // overwrite = true
+    let promise = Applab.storage.populateTable(level.dataTables, true); // overwrite = true
+    promise.catch(outputError);
     Applab.storage.populateKeyValue(
       level.dataProperties,
       true,
@@ -588,13 +601,10 @@ Applab.init = function(config) {
   // Print any json parsing errors to the applab debug console and the browser debug
   // console. If a json parse error is thrown before the applab debug console
   // initializes, the error will be printed only to the browser debug console.
+  let dataLoadedPromise = Promise.resolve();
   if (level.dataTables) {
-    Applab.storage.populateTable(
-      level.dataTables,
-      false,
-      () => {},
-      outputError
-    ); // overwrite = false
+    dataLoadedPromise = Applab.storage.populateTable(level.dataTables, false); // overwrite = false
+    dataLoadedPromise.catch(outputError);
   }
   if (level.dataProperties) {
     Applab.storage.populateKeyValue(
@@ -644,7 +654,7 @@ Applab.init = function(config) {
 
   // Push initial level properties into the Redux store
   studioApp().setPageConstants(config, {
-    playspacePhoneFrame: !config.share,
+    playspacePhoneFrame: !(config.share || config.level.widgetMode),
     channelId: config.channel,
     allowExportExpo: experiments.isEnabled('exportExpo'),
     exportApp: Applab.exportApp,
@@ -665,8 +675,8 @@ Applab.init = function(config) {
     ),
     nonResponsiveVisualizationColumnWidth: applabConstants.APP_WIDTH,
     visualizationHasPadding: !config.noPadding,
-    hasDataMode: !config.level.hideViewDataButton,
-    hasDesignMode: !config.level.hideDesignMode,
+    hasDataMode: !(config.level.hideViewDataButton || config.level.widgetMode),
+    hasDesignMode: !(config.level.hideDesignMode || config.level.widgetMode),
     isIframeEmbed: !!config.level.iframeEmbed,
     isProjectLevel: !!config.level.isProjectLevel,
     isSubmittable: !!config.level.submittable,
@@ -677,7 +687,8 @@ Applab.init = function(config) {
     showDebugWatch:
       !!config.level.isProjectLevel || config.level.showDebugWatch,
     showMakerToggle:
-      !!config.level.isProjectLevel || config.level.makerlabEnabled
+      !!config.level.isProjectLevel || config.level.makerlabEnabled,
+    widgetMode: config.level.widgetMode
   });
 
   config.dropletConfig = dropletConfig;
@@ -709,6 +720,8 @@ Applab.init = function(config) {
       level.codeFunctions[key] = null;
     });
   }
+
+  studioApp().loadLibraryBlocks(config);
 
   // Set the custom set of blocks (may have had maker blocks merged in) so
   // we can later pass the custom set to the interpreter.
@@ -750,6 +763,13 @@ Applab.init = function(config) {
             'scale(' + ratio + ', ' + ratio + ')'
           );
         }
+      }
+    })
+    .then(() => {
+      if (getStore().getState().pageConstants.widgetMode) {
+        dataLoadedPromise.then(() => {
+          Applab.runButtonClick();
+        });
       }
     });
 
@@ -797,6 +817,12 @@ function setupReduxSubscribers(store) {
       );
     }
 
+    const lastIsPreview = lastState.data && lastState.data.isPreviewOpen;
+    const isPreview = state.data && state.data.isPreviewOpen;
+    if (isDataMode && isPreview && !lastIsPreview) {
+      onDataPreview(state.data.tableName);
+    }
+
     if (
       !lastState.runState ||
       state.runState.isRunning !== lastState.runState.isRunning
@@ -805,24 +831,53 @@ function setupReduxSubscribers(store) {
     }
   });
 
-  if (store.getState().pageConstants.hasDataMode) {
-    // Initialize redux's list of tables from firebase, and keep it up to date as
-    // new tables are added and removed.
-    const tablesRef = getDatabase(Applab.channelId).child('counters/tables');
-    tablesRef.on('child_added', snapshot => {
+  // Initialize redux's list of tables from firebase, and keep it up to date as
+  // new tables are added and removed.
+  let subscribeToTable = function(tableRef, tableType) {
+    tableRef.on('child_added', snapshot => {
       store.dispatch(
         addTableName(
-          typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key
+          typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key,
+          tableType
         )
       );
     });
-    tablesRef.on('child_removed', snapshot => {
+    tableRef.on('child_removed', snapshot => {
       store.dispatch(
         deleteTableName(
           typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key
         )
       );
     });
+  };
+
+  if (store.getState().pageConstants.hasDataMode) {
+    subscribeToTable(
+      getProjectDatabase().child('counters/tables'),
+      tableType.PROJECT
+    );
+
+    if (experiments.isEnabled(experiments.APPLAB_DATASETS)) {
+      // /v3/channels/<channel_id>/current_tables tracks which
+      // current tables the project has imported. Here we initialize the
+      // redux list of current tables and keep it in sync
+      let currentTableRef = getProjectDatabase().child('current_tables');
+      currentTableRef.on('child_added', snapshot => {
+        store.dispatch(
+          addTableName(
+            typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key,
+            tableType.SHARED
+          )
+        );
+      });
+      currentTableRef.on('child_removed', snapshot => {
+        store.dispatch(
+          deleteTableName(
+            typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key
+          )
+        );
+      });
+    }
   }
 }
 
@@ -1184,6 +1239,7 @@ Applab.execute = function() {
     // Initialize the interpreter and parse the student code
     Applab.JSInterpreter.parse({
       code: codeWhenRun,
+      libraryCode: level.libraryCode,
       blocks: level.levelBlocks,
       blockFilter: level.executePaletteApisOnly && level.codeFunctions,
       enableEvents: true
@@ -1258,6 +1314,18 @@ function onInterfaceModeChange(mode) {
   requestAnimationFrame(() => showHideWorkspaceCallouts());
 }
 
+function onDataPreview(tableName) {
+  onColumnNames(getSharedDatabase(), tableName, columnNames => {
+    getStore().dispatch(updateTableColumns(tableName, columnNames));
+  });
+
+  getSharedDatabase()
+    .child(`storage/tables/${tableName}/records`)
+    .once('value', snapshot => {
+      getStore().dispatch(updateTableRecords(tableName, snapshot.val()));
+    });
+}
+
 /**
  * Handle a view change within data mode.
  * @param {DataView} view
@@ -1266,37 +1334,53 @@ function onDataViewChange(view, oldTableName, newTableName) {
   if (!getStore().getState().pageConstants.hasDataMode) {
     throw new Error('onDataViewChange triggered without data mode enabled');
   }
-  const storageRef = getDatabase(Applab.channelId).child('storage');
+
+  const projectStorageRef = getProjectDatabase().child('storage');
+  const sharedStorageRef = getSharedDatabase().child('storage');
 
   // Unlisten from previous data view. This should not interfere with events listened to
   // by onRecordEvent, which listens for added/updated/deleted events, whereas we are
   // only unlistening from 'value' events here.
-  storageRef.child('keys').off('value');
-  storageRef.child(`tables/${oldTableName}/records`).off('value');
-  getColumnsRef(oldTableName).off();
+  projectStorageRef.child('keys').off('value');
+  projectStorageRef.child(`tables/${oldTableName}/records`).off('value');
+  sharedStorageRef.child(`tables/${oldTableName}/records`).off('value');
+  getColumnsRef(getProjectDatabase(), oldTableName).off();
 
   switch (view) {
     case DataView.PROPERTIES:
-      storageRef.child('keys').on('value', snapshot => {
+      projectStorageRef.child('keys').on('value', snapshot => {
         getStore().dispatch(updateKeyValueData(snapshot.val()));
       });
       return;
-    case DataView.TABLE:
-      // Add any columns which appear in records in Firebase to the list of columns in
-      // Firebase. Do NOT do this every time the records change, to avoid adding back
-      // a column shortly after it was explicitly renamed or deleted.
-      addMissingColumns(newTableName);
+    case DataView.TABLE: {
+      let newTableType = getStore().getState().data.tableListMap[newTableName];
+      let storageRef;
+      if (
+        experiments.isEnabled(experiments.APPLAB_DATASETS) &&
+        newTableType === tableType.SHARED
+      ) {
+        storageRef = sharedStorageRef.child(`tables/${newTableName}/records`);
+      } else {
+        storageRef = projectStorageRef.child(`tables/${newTableName}/records`);
+      }
+      if (newTableType === tableType.PROJECT) {
+        addMissingColumns(newTableName);
+      }
+      onColumnNames(
+        newTableType === tableType.PROJECT
+          ? getProjectDatabase()
+          : getSharedDatabase(),
+        newTableName,
+        columnNames => {
+          getStore().dispatch(updateTableColumns(newTableName, columnNames));
+        }
+      );
 
-      onColumnNames(newTableName, columnNames => {
-        getStore().dispatch(updateTableColumns(newTableName, columnNames));
+      storageRef.on('value', snapshot => {
+        getStore().dispatch(updateTableRecords(newTableName, snapshot.val()));
       });
-
-      storageRef
-        .child(`tables/${newTableName}/records`)
-        .on('value', snapshot => {
-          getStore().dispatch(updateTableRecords(newTableName, snapshot.val()));
-        });
       return;
+    }
     default:
       return;
   }

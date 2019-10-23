@@ -15,8 +15,7 @@
       },
       {
         "name": "CONDITION",
-        "type": "Boolean",
-        "defer": true
+        "type": "Boolean"
       }
     ]
   }

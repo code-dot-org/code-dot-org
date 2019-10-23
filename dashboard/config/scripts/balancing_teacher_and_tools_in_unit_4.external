@@ -2,6 +2,7 @@ name 'Balancing Teacher and Tools in Unit 4'
 css 'unplugged'
 markdown <<MARKDOWN
 # Balancing Teacher and Tools in Unit 4
+
 <img src="https://images.code.org/e9e49e55692dbb71b738c2997830d696-image-1481695867022.38.35 PM.png" style="float:right; margin-left:15px; width:65%">
 
 All of the lessons in unit 4 require the use of a computer in order to do the core activities. The snapshot on the right indicates lessons that use external tools and websites with a solid red rectangle, and lessons that use widgets in Code Studio with a dashed red rectangle. 
@@ -9,6 +10,7 @@ All of the lessons in unit 4 require the use of a computer in order to do the co
 As previously discussed, there are two aspects to keep in mind on the topic of balancing the teacher and the tools - giving students space to discover through the activities and the tools while also managing the realities of a classroom that is using computers heavily.
 
 ## External Tools
+
 The external tools used in unit 4 are primarily websites that help students better understand how data is collected and used. There's a mix of curated websites along with opportunities for students to find and highlight their own. In addition to these information-disseminating websites, students will use the following interactive external sites: 
 
 - Lesson 3: [Visualization tool that shows data breaches](http://www.informationisbeautiful.net/visualizations/worlds-biggest-data-breaches-hacks/)  

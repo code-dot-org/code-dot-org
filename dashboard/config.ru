@@ -1,5 +1,9 @@
 # This file is used by Rack-based servers to start the application.
 
+require_relative '../deployment'
+# Ensure all application secrets are loaded.
+CDO.cdo_secrets&.required! unless rack_env?(:development)
+
 require ::File.expand_path('../config/environment',  __FILE__)
 
 unless rack_env?(:development)

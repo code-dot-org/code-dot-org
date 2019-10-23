@@ -2,4 +2,4 @@
 -# It now redirects all users to the new teacher dashboard served from dashboard.
 - data = {}
 - data[:studio_url] = CDO.studio_url('', CDO.default_scheme)
-%script{src: minifiable_asset_path('js/code.org/public/teacher-dashboard/index.js'), data: {teacherdashboard: data.to_json}}
+%script{src: webpack_asset_path('js/code.org/public/teacher-dashboard/index.js'), data: {teacherdashboard: data.to_json}}

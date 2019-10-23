@@ -2,7 +2,9 @@
 
 - data = {}
 - data[:course_summary] = course.summarize(@current_user)
-- data[:sections] = @current_user.try{|u| u.sections.where(hidden: false).select(:id, :name)} || []
+- sections = @current_user.try{|u| u.sections.where(hidden: false).select(:id, :name, :course_id)}
+- sections = sections&.map { |section| section.attributes.merge!({"isAssigned" => section[:course_id] == course.id})}
+- data[:sections] = sections || []
 - data[:is_teacher] = @current_user.try(:teacher?) || false
 - data[:is_verified_teacher] = @current_user.try(:authorized_teacher?) || false
 - data[:hidden_scripts] = @current_user.try(:get_hidden_script_ids, course)
@@ -12,6 +14,6 @@
 - data[:user_id] = @current_user.try(:id)
 
 - content_for(:head) do
-  %script{ src: minifiable_asset_path('js/courses/show.js'), data: {courses_show: data.to_json}}
+  %script{ src: webpack_asset_path('js/courses/show.js'), data: {courses_show: data.to_json}}
 
 #course_overview

@@ -1,0 +1,47 @@
+name 'csd-pre-survey-levelgroup_2019'
+title 'CS Discoveries Student Pre-Course Survey'
+submittable 'true'
+anonymous 'true'
+
+page
+text 'csp-pre-survey-2017 preamble 1_2018'
+level 'csp-pre-survey-2017-q3_2018'
+level 'csp-pre-survey-2017-q4_2018'
+level 'csp-pre-survey-2017-q9_2018'
+
+page
+text 'csp-pre-survey-2017 preamble 2 cs in general_2018'
+level 'csp-pre-survey-2017-q10_2018'
+level 'csp-pre-survey-2017-q11_2018'
+level 'csp-pre-survey-2017-q16_2018'
+level 'csp-pre-survey-2017-q12_2018'
+level 'csp-pre-survey-2017-q13_2018'
+level 'csp-pre-survey-2017-q17_2018'
+level 'csp-pre-survey-2017-q18_2018'
+level 'naturally-better-at-cs'
+level 'csp-post-survey-2017-q33_2018'
+level 'same-ability'
+
+page
+text 'csp-pre-survey-2017 preamble 3 this class_2018'
+level 'csp-pre-survey-2017-q19_2018'
+level 'csp-pre-survey-2017-q20_2018'
+level 'csp-pre-survey-2017-q22_2018'
+level 'will-be-myself-in-cs'
+level 'worried-less-capable'
+level 'reasons-took-course'
+level 'csp-post-survey-who-encouraged-csp'
+
+page
+text 'csp-pre-survey-2017 preamble 4 the future_2018'
+level 'csp-pre-survey-2017-q36-b_2018'
+level 'csp-post-survey-2017-q36-a_2018'
+level 'csp-pre-survey-2017-q29_2018'
+level 'csp-pre-survey-2017-q30_2018'
+level 'csp-pre-survey-2017-q31_2018'
+
+page
+text 'csp-pre-survey-2017 preamble 5 demographics_2018'
+level 'taken-other-cs'
+level 'taken-other-code-org'
+level 'outside-school-cs'

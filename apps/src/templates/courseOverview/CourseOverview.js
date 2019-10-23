@@ -187,9 +187,7 @@ export default class CourseOverview extends Component {
             redirectButtonText={i18n.goToAssignedVersion()}
           />
         )}
-        {experiments.isEnabled(experiments.FEEDBACK_NOTIFICATION) && userId && (
-          <StudentFeedbackNotification studentId={userId} />
-        )}
+        {userId && <StudentFeedbackNotification studentId={userId} />}
         {showRedirectWarning && !dismissedRedirectWarning(name) && (
           <Notification
             type={NotificationType.warning}
@@ -226,7 +224,9 @@ export default class CourseOverview extends Component {
         {showNotification && <VerifiedResourcesNotification />}
         {isTeacher && (
           <div>
-            <LabeledSectionSelector />
+            {!experiments.isEnabled(experiments.ASSIGNMENT_UPDATES) && (
+              <LabeledSectionSelector />
+            )}
             <CourseOverviewTopRow
               sectionsInfo={sectionsInfo}
               id={id}
@@ -243,6 +243,7 @@ export default class CourseOverview extends Component {
             name={script.name}
             id={script.id}
             description={script.description}
+            assignedSectionId={script.assigned_section_id}
           />
         ))}
       </div>

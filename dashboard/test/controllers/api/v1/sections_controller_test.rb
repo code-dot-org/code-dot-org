@@ -240,11 +240,22 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_equal 'Glulx', returned_section.name
   end
 
-  test 'default name is New Section' do
+  test 'default name is Untitled Section' do
     sign_in @teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
       name: '',
+    }
+
+    assert_equal 'Untitled Section', returned_json['name']
+    assert_equal 'Untitled Section', returned_section.name
+  end
+
+  test 'default name is used if provided name is all whitespace' do
+    sign_in @teacher
+    post :create, params: {
+      login_type: Section::LOGIN_TYPE_EMAIL,
+      name: " \r\n\t",
     }
 
     assert_equal 'Untitled Section', returned_json['name']
@@ -561,6 +572,22 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_equal(false, section_with_script.stage_extras)
     assert_equal(true, section_with_script.pairing_allowed)
     assert_equal(false, section_with_script.hidden)
+  end
+
+  test "update: name is ignored if empty or all whitespace" do
+    Course.stubs(:valid_course_id?).returns(true)
+
+    section = create :section, name: 'Old section name'
+    sign_in section.teacher
+
+    post :update, params: {
+      id: section.id,
+      name: " \r\n\t"
+    }
+    assert_response :success
+
+    section.reload
+    assert_equal 'Old section name', section.name
   end
 
   test "update: course_id is cleared if not provided and script has no default course" do

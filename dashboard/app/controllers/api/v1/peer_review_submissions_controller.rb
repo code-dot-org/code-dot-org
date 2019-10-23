@@ -15,7 +15,7 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
   # Optional queryparams:
   #   page:               Which page of results to return.  Default: 1 (first page)
   #   per -or- limit:     How many results to return. Default: 50. Maximum: 500
-  #   emailFilter:        Filters results by submitter email
+  #   user_q:             Filters results by submitter email or fuzzy name lookup
   #   plc_course_id:      Filters results by course id
   #   plc_course_unit_id: Filters results by unit id
   def index
@@ -23,11 +23,26 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
     submissions = Hash.new
     page = params[:page] || 1
     per = params[:per] || params[:limit] || 50
+    user_query = params[:user_q]
 
     reviews = PeerReview.all
 
-    if params[:email].presence
-      reviews = reviews.where(submitter: User.find_by_email(params[:email]))
+    if user_query.presence
+      reviews =
+        if user_query.include? '@'
+          reviews.
+            joins(submitter: [:primary_contact_info]).
+            where(authentication_options: {email: user_query})
+        else
+          # I feel safe-ish using fuzzy search against user display names because we are already
+          # constrained by our join to the set of users submitting for peer review, which is below
+          # 500 as of August 2019, and the total number of peer_reviews rows being examined post-join
+          # does not exceed 20,000 at this time.
+          # sanitize_sql_like will be public in Rails 5.2+
+          reviews.
+            joins(:submitter).
+            where("users.name LIKE ?", "%#{PeerReview.send(:sanitize_sql_like, user_query)}%")
+        end
     end
 
     if params[:plc_course_unit_id].presence
@@ -53,6 +68,8 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
     }
   end
 
+  # Generate CSV of peer review data for a particular course unit
+  # /api/v1/peer_review_submissions/report_csv?plc_course_unit_id=:id
   def report_csv
     course_unit = Plc::CourseUnit.find(params[:plc_course_unit_id])
     enrollments = Plc::EnrollmentUnitAssignment.where(plc_course_unit: course_unit)
@@ -61,13 +78,26 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
     script = Plc::CourseUnit.find(params[:plc_course_unit_id]).script
     peer_reviewable_levels = ScriptLevel.where(script: script).select {|sl| sl.level.try(:peer_reviewable?)}.map(&:level).uniq
 
+    # We create peer reviews whenever an eligible submission occurs, so their creation timestamps
+    # are our best source of truth for submission dates.
+    # Here, gather all the submission dates we need in one query and organize them for easy
+    # access while generating the report.
+    submission_times_by_user_script_level = PeerReview.
+      where(submitter_id: enrollments.map(&:user_id)).
+      pluck(:submitter_id, :script_id, :level_id, :created_at).
+      group_by {|pr| pr[0..2]}. # group by [submitter_id, script_id, level_id]
+      map {|k, prs| [k, prs.map {|pr| pr[3]}]}. # only keep :created_at in values
+      to_h
+
     enrollments.each do |enrollment|
       peer_review_submissions = Hash.new
 
       UserLevel.where(user: enrollment.user, level: peer_reviewable_levels).each do |user_level|
+        submission_times = submission_times_by_user_script_level[[user_level.user_id, user_level.script_id, user_level.level_id]]
         peer_review_submissions[user_level.level.name] = {
           status: result_to_status(user_level.best_result),
-          date: user_level.created_at.strftime("%-m/%-d/%Y")
+          first_submission_date: submission_times.min&.strftime("%-m/%-d/%Y"),
+          last_submission_date: submission_times.max&.strftime("%-m/%-d/%Y")
         }
       end
 
@@ -88,10 +118,12 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
           if enrollment_submission[:submissions].key? level.name
             submission = enrollment_submission[:submissions][level.name]
             row[level.name] = submission[:status]
-            row["#{level.name} submit date"] = submission[:date]
+            row["#{level.name} First Submit Date"] = submission[:first_submission_date] || ''
+            row["#{level.name} Latest Submit Date"] = submission[:last_submission_date] || ''
           else
             row[level.name] = 'Unsubmitted'
-            row["#{level.name} submit date"] = ''
+            row["#{level.name} First Submit Date"] = ''
+            row["#{level.name} Latest Submit Date"] = ''
           end
         end
 

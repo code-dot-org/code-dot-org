@@ -14,8 +14,8 @@
   "https://studio.code.org/s/pre-express-2017/stage/7/puzzle/2": {
     "short_instructions": "Play with these blocks to see what they make the bird do! \n\nGet the bird to the pig to complete the level.",
     "authored_hints": {
-      "courseB_maze_seq1_a": "Connect blocks to the <xml><block type=\"when_run\"/></xml> block to make the bird move!",
-      "courseB_maze_seq1_b": "Drag three of these <xml><block type=\"maze_moveSouth\"/></xml> arrows out and connect them to the <xml><block type=\"when_run\"/></xml> block to get your bird to the pig."
+      "courseB_maze_seq1_a": "Connect blocks to the [blockly block][0] block to make the bird move!",
+      "courseB_maze_seq1_b": "Drag three of these [blockly block][0] arrows out and connect them to the [blockly block][1] block to get your bird to the pig."
     },
     "callouts": {
       "courseB_maze_seq1": "Click the lightbulb when you need a hint!"
@@ -37,7 +37,7 @@
     "authored_hints": {
       "courseB_maze_seq3_a": "One of the blocks is moving the bird in the wrong direction. Can you figure out which one and replace it with the correct block?",
       "courseB_maze_seq3_b": "Try using the step button to find where the program goes wrong. Is it the first step? The second?",
-      "courseB_maze_seq3_c": "The <xml><block type=\"maze_moveWest\"/></xml> block doesn't seem to be moving the bird in the right direction."
+      "courseB_maze_seq3_c": "The [blockly block][0] block doesn't seem to be moving the bird in the right direction."
     },
     "callouts": {
       "courseB_maze_seq3_1": "The grey blocks are made of stone and can't be thrown away."
@@ -47,7 +47,7 @@
     "short_instructions": "Add 2 blocks to get the bird to the pig.",
     "authored_hints": {
       "courseB_maze_seq4_a": "Try adding one instruction at a time until you get to the pig.",
-      "courseB_maze_seq4_b": "You will want to use the <xml><block type=\"maze_moveEast\"/></xml> block to solve this puzzle."
+      "courseB_maze_seq4_b": "You will want to use the [blockly block][0] block to solve this puzzle."
     }
   },
   "https://studio.code.org/s/pre-express-2017/stage/7/puzzle/7": {
@@ -115,7 +115,7 @@
     "long_instructions": "You only have four of each move block. Can you find a path before you run out of blocks?",
     "authored_hints": {
       "courseB_maze_seq_challenge1_a": "The shortest path might not work this time.",
-      "courseB_maze_seq_challenge1_b": "Try using the <xml><block type=\"maze_moveWest\"/></xml> block to start."
+      "courseB_maze_seq_challenge1_b": "Try using the [blockly block][0] block to start."
     }
   },
   "https://studio.code.org/s/pre-express-2017/stage/7/extras?level_name=courseB_maze_seq_challenge2": {
@@ -130,7 +130,7 @@
     "long_instructions": "[Rey][0]_\"Go get the scrap metal, BB-8!\"_\n\nWatch out for walls and crates. Scrap metal looks like this: [picture of scrap metal][1]",
     "authored_hints": {
       "courseB_starWars_prog1_a": "Try adding blocks one at a time, then click \"Run\" to see what happens.",
-      "courseB_starWars_prog1_b": "You will want to move East to solve this puzzle. How far do you need to move?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
+      "courseB_starWars_prog1_b": "You will want to move East to solve this puzzle. How far do you need to move?\n\n[blockly block][0]"
     }
   },
   "https://studio.code.org/s/pre-express-2017/stage/8/puzzle/2": {
@@ -153,7 +153,7 @@
     "long_instructions": "[][0] _\"Get it, BB-8!\"_",
     "authored_hints": {
       "courseB_starWars_prog4_a": "Build one piece of code at a time. Run it to figure out where to go from there.",
-      "courseB_starWars_prog4_b": "Try using the `repeat` block for shorter code.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+      "courseB_starWars_prog4_b": "Try using the `repeat` block for shorter code.\n\n[blockly block][0]"
     }
   },
   "https://studio.code.org/s/pre-express-2017/stage/8/puzzle/5": {
@@ -171,7 +171,7 @@
     "long_instructions": "[][0] _\"You can do it!\"_",
     "authored_hints": {
       "courseB_starWars_prog6_a": "This pattern is just a stair step with two moves per direction!",
-      "courseB_starWars_prog6_b": "Try using the `repeat` block for shorter code.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+      "courseB_starWars_prog6_b": "Try using the `repeat` block for shorter code.\n\n[blockly block][0]"
     }
   },
   "https://studio.code.org/s/pre-express-2017/stage/8/puzzle/7": {
@@ -188,7 +188,7 @@
     "long_instructions": "[][0] _\"Keep it up, BB-8.\"_\n\n**Challenge**: Gather all the scrap metal.",
     "authored_hints": {
       "courseB_starWars_prog8_a": "It is okay to go back over a set of spaces where you have already traveled.",
-      "courseB_starWars_prog8_b": "Try using the `repeat` block to see what happens to the code that you put inside.\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+      "courseB_starWars_prog8_b": "Try using the `repeat` block to see what happens to the code that you put inside.\n\n[blockly block][0]"
     }
   },
   "https://studio.code.org/s/pre-express-2017/stage/8/puzzle/9": {
@@ -212,7 +212,7 @@
     "short_instructions": "This is Laurel the Adventurer!  Can you move her around and get treasure?",
     "long_instructions": "**Free Play:** This is Laurel the Adventurer! Move her around and get as much treasure as you can.\n\nDrag blocks into the workspace and try to figure out how to get treasure.  Get at least one item to pass this level.",
     "authored_hints": {
-      "courseB_collector_loops1_a": "The <xml><block type=\"collector_collect_simplified\"/></xml> block can be used to pick up treasure when you are standing on top of it."
+      "courseB_collector_loops1_a": "The [blockly block][0] block can be used to pick up treasure when you are standing on top of it."
     },
     "callouts": {
       "courseB_collector_loops1_1": "Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage."
@@ -220,17 +220,17 @@
   },
   "https://studio.code.org/s/pre-express-2017/stage/10/puzzle/3": {
     "short_instructions": "Get all four piles to pass this level.",
-    "long_instructions": "Move Laurel to the treasure, then use the<xml><block type=\"collector_collect\"/></xml>block to pick it up.\n\nGet all four piles to pass this level.",
+    "long_instructions": "Move Laurel to the treasure, then use the[blockly block][0]block to pick it up.\n\nGet all four piles to pass this level.",
     "authored_hints": {
       "courseB_collector_loops2_a": "You'll have to move before you can collect any treasure.",
-      "courseB_collector_loops2_b": "When you have reached a spot with treasure, use the <xml><block type=\"collector_collect\"/></xml> block to pick it up."
+      "courseB_collector_loops2_b": "When you have reached a spot with treasure, use the [blockly block][0] block to pick it up."
     }
   },
   "https://studio.code.org/s/pre-express-2017/stage/10/puzzle/5": {
     "short_instructions": "How can Laurel get all five piles of treasure using only one `E -->` block?",
-    "long_instructions": "How can Laurel get all five piles of treasure using only one <xml><block type=\"maze_moveEast\"/></xml> block?",
+    "long_instructions": "How can Laurel get all five piles of treasure using only one [blockly block][0] block?",
     "authored_hints": {
-      "courseB_collector_prog3_a": "Try using a <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block></xml> block to collect your treasure.",
+      "courseB_collector_prog3_a": "Try using a [blockly block][0] block to collect your treasure.",
       "courseB_collector_prog3_b": "Remember you can put more than one block inside a repeat loop."
     }
   },
@@ -291,18 +291,18 @@
   "https://studio.code.org/s/pre-express-2017/stage/10/extras?level_name=courseB_collector_loops_challenge1": {
     "short_instructions": "This time you have limited blocks. Get all of the treasure! ",
     "authored_hints": {
-      "courseB_collector_loops_challenge1_b": "Start by looping the following commands:\n\n<xml>\n  <block type=\"maze_moveSouth\">\n    <next>\n    <block type=\"collector_collect\"></block>\n    </next>\n    </block>\n</xml>",
-      "courseB_collector_loops_challenge1_c": "Move East twice between each path.\n\n<xml>\n  <block type=\"maze_moveEast\"><next>\n  <block type=\"maze_moveEast\"></block></next></block>\n  </xml>\n\nYou can do this with only 14 blocks. Click for one more hint to see a solution. ",
-      "courseB_collector_loops_challenge1_d": "Try this!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">5</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveSouth\">\n            <next>\n              <block type=\"collector_collect\"/>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\">\n                <next>\n                  <block type=\"controls_repeat_simplified\">\n                    <title name=\"TIMES\">5</title>\n                    <statement name=\"DO\">\n                      <block type=\"collector_collect\">\n                        <next>\n                          <block type=\"maze_moveNorth\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"maze_moveEast\">\n                            <next>\n                              <block type=\"controls_repeat_simplified\">\n                                <title name=\"TIMES\">5</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_moveSouth\">\n                                    <next>\n                                      <block type=\"collector_collect\"/>\n                                    </next>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+      "courseB_collector_loops_challenge1_b": "Start by looping the following commands:\n\n[blockly block][0]",
+      "courseB_collector_loops_challenge1_c": "Move East twice between each path.\n\n[blockly block][0]\n\nYou can do this with only 14 blocks. Click for one more hint to see a solution. ",
+      "courseB_collector_loops_challenge1_d": "Try this!\n\n[blockly block][0]"
     }
   },
   "https://studio.code.org/s/pre-express-2017/stage/10/extras?level_name=courseB_collector_loops_challenge2": {
     "short_instructions": "Let's get the treasure! Help me across each row then come back to start the next row. Can you find a pattern?",
     "authored_hints": {
       "courseB_collector_loops_challenge2_a": "If something goes wrong, don't be afraid to start over. Don't give up!",
-      "courseB_collector_loops_challenge2_b": "If you repeat this pattern, Laurel won't hit the wall at the bottom of the cave!\n\n<xml><block type=\"maze_moveEast\">\n            <next>\n              <block type=\"collector_collect\">\n                <next>\n                  <block type=\"maze_moveWest\">\n                    <next>\n                      <block type=\"maze_moveWest\">\n                        <next>\n                          <block type=\"maze_moveSouth\"/>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block></xml>",
+      "courseB_collector_loops_challenge2_b": "If you repeat this pattern, Laurel won't hit the wall at the bottom of the cave!\n\n[blockly block][0]",
       "courseB_collector_loops_challenge2_c": "Try using a `repeat` block to collect the final pile of treasure!",
-      "courseB_collector_loops_challenge2_d": "Try this solution:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified_dropdown\">\n        <title name=\"TIMES\" config=\"3-10\">4</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"collector_collect\">\n                <next>\n                  <block type=\"maze_moveWest\">\n                    <next>\n                      <block type=\"maze_moveWest\">\n                        <next>\n                          <block type=\"maze_moveSouth\"/>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"controls_repeat_simplified_dropdown\">\n            <title name=\"TIMES\" config=\"3-10\">6</title>\n            <statement name=\"DO\">\n              <block type=\"collector_collect\"/>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+      "courseB_collector_loops_challenge2_d": "Try this solution:\n\n[blockly block][0]"
     }
   },
   "https://studio.code.org/s/pre-express-2017/stage/11/puzzle/2": {
@@ -381,7 +381,7 @@
     "short_instructions": "\"It's time to toss the dice! Can you help me draw these?\"",
     "long_instructions": "_\"It's time to toss the dice! Can you help me draw these?\"_",
     "authored_hints": {
-      "courseB_artist_loops_challenge1_a": "Blocks like this: <xml>  <block type=\"simple_move_up_right\"/></xml> will let your artist move at a slant!",
+      "courseB_artist_loops_challenge1_a": "Blocks like this: [blockly block][0] will let your artist move at a slant!",
       "courseB_artist_loops_challenge1_b": "When you finish one of the dice, `jump` to the next!",
       "courseB_artist_loops_challenge1_c": "You will need to `move` or `jump` over some of the same lines twice. "
     }
@@ -407,37 +407,37 @@
   "https://studio.code.org/s/pre-express-2017/stage/13/puzzle/3": {
     "short_instructions": "Have Daisy the Dragon say something when you click \"Run\".",
     "authored_hints": {
-      "courseB_playlab_events2_a": "This is the block to have Daisy say something:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n  </xml>"
+      "courseB_playlab_events2_a": "This is the block to have Daisy say something:\n\n[blockly block][0]"
     }
   },
   "https://studio.code.org/s/pre-express-2017/stage/13/puzzle/4": {
     "short_instructions": "Use an event to make Daisy the Dragon switch to a random mood when you click on her.",
     "long_instructions": "Use an event to make Daisy the Dragon switch to a random [][0] mood when you click on her.",
     "authored_hints": {
-      "courseB_playlab_events3_a": "This is the block you should use to add the event:\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">0</title>\n  </block>\n  </xml>",
-      "courseB_playlab_events3_b": "This is the block you need to switch Daisy's mood:\n\n<xml>\n<block type=\"studio_setSpriteEmotion\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">random</title>\n  </block>\n  </xml>"
+      "courseB_playlab_events3_a": "This is the block you should use to add the event:\n\n[blockly block][0]",
+      "courseB_playlab_events3_b": "This is the block you need to switch Daisy's mood:\n\n[blockly block][0]"
     }
   },
   "https://studio.code.org/s/pre-express-2017/stage/13/puzzle/5": {
     "short_instructions": "Knight time!  Add an event so that the knight moves toward the dragon when the left arrow is clicked.",
     "long_instructions": "Knight time!  \n\nAdd an event so that the knight moves toward the dragon when the left arrow is clicked.",
     "authored_hints": {
-      "courseB_playlab_events4_a": "This is the event that controls the left arrow:\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block>\n  </xml>",
-      "courseB_playlab_events4_b": "This is the block that makes the knight move left.\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block>\n  </xml>"
+      "courseB_playlab_events4_a": "This is the event that controls the left arrow:\n\n[blockly block][0]",
+      "courseB_playlab_events4_b": "This is the block that makes the knight move left.\n\n[blockly block][0]"
     }
   },
   "https://studio.code.org/s/pre-express-2017/stage/13/puzzle/6": {
     "short_instructions": "Now add an event so that the knight runs away from the dragon when you press the right arrow.",
     "authored_hints": {
-      "courseB_playlab_events5_a": "This is the event block that controls the right arrow: \n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n  </block>\n  </xml>",
-      "courseB_playlab_events5_b": "This is the block that makes the knight run away. \n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block>\n</xml>"
+      "courseB_playlab_events5_a": "This is the event block that controls the right arrow: \n\n[blockly block][0]",
+      "courseB_playlab_events5_b": "This is the block that makes the knight run away. \n\n[blockly block][0]"
     }
   },
   "https://studio.code.org/s/pre-express-2017/stage/13/puzzle/7": {
     "short_instructions": "Help your knight get all of the flags!\n\nTo do this, you'll need to add events to help the knight move up, down, left, and right.",
     "long_instructions": "Help your knight get all of the flags!\n\nTo do this, you'll need to add events to help the knight move up, down, left, and right.",
     "authored_hints": {
-      "courseB_playlab_events6_a": "You will need these event blocks:\n\n<xml>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">up</title>\n  </block>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">down</title>\n  </block>\n  </xml>",
+      "courseB_playlab_events6_a": "You will need these event blocks:\n\n[blockly block][0]",
       "courseB_playlab_events6_b": "Use the drop down arrows on the green `when ___ arrow pressed` event blocks to choose different directions.\n\n[][0]",
       "courseB_playlab_events6_c": "Get to all of the flags to pass!"
     },
@@ -449,9 +449,9 @@
     "short_instructions": "Make this game fun by setting the knight to vanish when he runs into the dragon on his way to get the flags!  Play a sound when they collide to make it feel more real.",
     "long_instructions": "Make this game fun by setting the knight to vanish when he runs into the dragon on his way to get the flags! \n\nPlay a sound when they collide to make it feel more real.\n\nVisit all of the goals, then run into the dragon to pass the level.",
     "authored_hints": {
-      "courseB_playlab_events7_a": "This is the event block that you will need:\n\n<xml>\n<block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">0</title>\n    <title name=\"SPRITE2\">1</title>\n  </block>\n</xml>",
-      "courseB_playlab_events7_b": "This is the block you need to play a sound.\n\n<xml>\n<block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n</xml>",
-      "courseB_playlab_events7_c": "This is the block you need to make the knight vanish:\n\n<xml>\n<block type=\"studio_vanish\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n</xml>"
+      "courseB_playlab_events7_a": "This is the event block that you will need:\n\n[blockly block][0]",
+      "courseB_playlab_events7_b": "This is the block you need to play a sound.\n\n[blockly block][0]",
+      "courseB_playlab_events7_c": "This is the block you need to make the knight vanish:\n\n[blockly block][0]"
     }
   },
   "https://studio.code.org/s/pre-express-2017/stage/13/puzzle/9": {
@@ -461,9 +461,9 @@
     "short_instructions": "Make the animals move down when you press ▼. ",
     "long_instructions": "It's time for the Great Animal Race! Make the animals move down when you press `▼`. \n\nWho will run the fastest?",
     "authored_hints": {
-      "courseB_playlab_events_challenge1_a": "Make the other animals move down when you press `▼`. \n\n<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n    <title name=\"VALUE\">down</title>\n  </block>\n</xml>",
-      "courseB_playlab_events_challenge1_b": "Change the speed of the animals by using this block:\n\n<xml>\n  <block type=\"studio_setSpriteSpeed\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Studio.SpriteSpeed.NORMAL</title>\n  </block></xml>",
-      "courseB_playlab_events_challenge1_c": "What will the everyone say when the race is over? Make them talk with this event:\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_saySpriteChoices\">\n        <title name=\"SPRITE\">2</title>\n        <title name=\"VALUE\">Woo hoo!</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+      "courseB_playlab_events_challenge1_a": "Make the other animals move down when you press `▼`. \n\n[blockly block][0]",
+      "courseB_playlab_events_challenge1_b": "Change the speed of the animals by using this block:\n\n[blockly block][0]",
+      "courseB_playlab_events_challenge1_c": "What will the everyone say when the race is over? Make them talk with this event:\n\n[blockly block][0]"
     }
   },
   "https://studio.code.org/s/pre-express-2017/stage/13/extras?level_name=courseB_playlab_events_challenge2": {
@@ -471,8 +471,8 @@
     "long_instructions": "Let's make the animals disappear when you click on them.\nTry playing with the dog now, then help the other animals join in the fun. You can also add sounds and score points to create a game of Animal Tag!\n\n[][0]",
     "authored_hints": {
       "courseB_playlab_events_challenge2_a": "Each animal in the game should disappear when clicked. It should also come back after a second or two!",
-      "courseB_playlab_events_challenge2_b": "Use other event blocks to make the other animals disappear!\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n  </xml>",
-      "courseB_playlab_events_challenge2_c": "Use extra commands to play sounds or score points when you click the animals!\n\n<xml>\n  <block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n  <block type=\"studio_changeScore\"/></xml>",
+      "courseB_playlab_events_challenge2_b": "Use other event blocks to make the other animals disappear!\n\n[blockly block][0]",
+      "courseB_playlab_events_challenge2_c": "Use extra commands to play sounds or score points when you click the animals!\n\n[blockly block][0]",
       "courseB_playlab_events_challenge2_d": "Mix it up!\n\nMake some animals give more points than others.\nUse different sounds.\nChange the animals' moods!"
     }
   }

@@ -12,7 +12,7 @@ import {ScholarshipDropdownOptions} from '@cdo/apps/generated/pd/scholarshipInfo
 import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 const CSF = 'CS Fundamentals';
-const DEEP_DIVE = 'Deep Dive';
+const DEEP_DIVE = SubjectNames.SUBJECT_CSF_201;
 const NA = 'N/A';
 const LOCAL_SUMMER = SubjectNames.SUBJECT_SUMMER_WORKSHOP;
 
@@ -128,6 +128,23 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
     }
   }
 
+  renderSelectCell(enrollment) {
+    const checkBoxClass =
+      this.props.selectedEnrollments.findIndex(e => e.id === enrollment.id) >= 0
+        ? 'fa fa-check-square-o'
+        : 'fa fa-square-o';
+    return (
+      <td>
+        <div
+          style={styles.contents}
+          onClick={this.props.onClickSelect.bind(this, enrollment)}
+        >
+          <i className={checkBoxClass} />
+        </div>
+      </td>
+    );
+  }
+
   render() {
     const enrollmentRows = this.state.enrollments.map((enrollment, i) => {
       let deleteCell;
@@ -152,6 +169,8 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
       return (
         <tr key={i}>
           {deleteCell}
+          {this.props.permissionList.has(WorkshopAdmin) &&
+            this.renderSelectCell(enrollment)}
           <td>{i + 1}</td>
           <td>{enrollment.first_name}</td>
           <td>{enrollment.last_name}</td>
@@ -236,6 +255,9 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
         <thead>
           <tr>
             <th style={styles.th} />
+            {this.props.permissionList.has(WorkshopAdmin) && (
+              <th style={styles.th} />
+            )}
             <th style={styles.th}>#</th>
             <th style={styles.th}>First Name</th>
             <th style={styles.th}>Last Name</th>
@@ -284,9 +306,11 @@ WorkshopEnrollmentSchoolInfo.propTypes = {
   accountRequiredForAttendance: PropTypes.bool.isRequired,
   scholarshipWorkshop: PropTypes.bool.isRequired,
   onDelete: PropTypes.func.isRequired,
+  onClickSelect: PropTypes.func.isRequired,
   workshopCourse: PropTypes.string.isRequired,
   workshopSubject: PropTypes.string.isRequired,
-  numSessions: PropTypes.number.isRequired
+  numSessions: PropTypes.number.isRequired,
+  selectedEnrollments: PropTypes.array
 };
 
 export default connect(state => ({

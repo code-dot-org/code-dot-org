@@ -1,0 +1,18 @@
+name 'csp-u3-exam1-debug2_2020'
+height 'auto'
+
+question ‘If the user does NOT click the button what color will “topButton” be when this program finishes running?’
+
+wrong ‘red’
+right ‘blue’
+wrong ‘green’
+wrong ‘orange’
+
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
+
+markdown <<MARKDOWN
+<img src="https://images.code.org/84cf5c7294f13fc09ab06a1934c78347-image-1567611702644.41.28 AM.png" style="width:600px">
+MARKDOWN

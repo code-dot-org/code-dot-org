@@ -32,7 +32,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
   ONLINE_URL = 'https://studio.code.org/my-professional-learning'
   INITIAL_PRE_SURVEY_DAYS_BEFORE = 10
 
-  after_action :save_timestamp
+  after_action :save_timestamp, :check_should_send
 
   def teacher_enrollment_receipt(enrollment)
     @enrollment = enrollment
@@ -226,6 +226,13 @@ class Pd::WorkshopMailer < ActionMailer::Base
   def save_timestamp
     return unless @enrollment && @enrollment.persisted?
     Pd::EnrollmentNotification.create(enrollment: @enrollment, name: action_name)
+  end
+
+  # Virtual workshops should not have any mail sent.
+  def check_should_send
+    if @workshop.subject&.include? "Virtual"
+      mail.perform_deliveries = false
+    end
   end
 
   def generate_csf_certificate

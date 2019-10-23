@@ -176,6 +176,15 @@ FactoryGirl.define do
           create :single_user_experiment, min_user_id: teacher.id, name: evaluator.pilot_experiment
         end
       end
+      transient {editor_experiment nil}
+      after(:create) do |teacher, evaluator|
+        if evaluator.editor_experiment
+          create :single_user_experiment, min_user_id: teacher.id, name: evaluator.editor_experiment
+        end
+      end
+      factory :platformization_partner do
+        editor_experiment 'platformization-partners'
+      end
 
       # We have some teacher records in our system that do not pass validation because they have
       # no email address.  Sometimes we want to test against this case because we still want features
@@ -1102,7 +1111,6 @@ FactoryGirl.define do
 
   factory :regional_partner do
     sequence(:name) {|n| "Partner#{n}"}
-    contact {create :teacher}
     group 1
   end
 
@@ -1119,7 +1127,16 @@ FactoryGirl.define do
     csp_cost 12
     cost_scholarship_information "Additional scholarship information will be here."
     additional_program_information "Additional program information will be here."
-    pd_workshops {[create(:pd_workshop, :local_summer_workshop_upcoming, location_name: "Training building", location_address: "3 Smith Street")]}
+    pd_workshops do
+      [
+        create(
+          :summer_workshop,
+          location_name: "Training building",
+          location_address: "3 Smith Street",
+          sessions_from: (Date.current + 3.months)
+        )
+      ]
+    end
 
     trait :with_apps_priority_deadline_date do
       apps_priority_deadline_date {(Date.current + 5.days).strftime("%Y-%m-%d")}
@@ -1195,5 +1212,6 @@ FactoryGirl.define do
     association :student
     association :teacher
     association :level
+    association :script_level
   end
 end

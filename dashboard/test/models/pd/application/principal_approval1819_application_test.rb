@@ -61,10 +61,10 @@ module Pd::Application
 
     test 'create placeholder and send mail creates a placeholder and sends principal approval' do
       teacher_application = create :pd_teacher1819_application
-      Pd::Application::Teacher1819ApplicationMailer.stubs(:principal_approval).returns(
+      Pd::Application::TeacherApplicationMailer.stubs(:principal_approval).returns(
         mock {|mail| mail.stubs(:deliver_now)}
       )
-      Pd::Application::Teacher1819ApplicationMailer.expects(:principal_approval).
+      Pd::Application::TeacherApplicationMailer.expects(:principal_approval).
         with(instance_of(Pd::Application::Teacher1819Application)).
         returns(mock {|mail| mail.expects(:deliver_now)})
 

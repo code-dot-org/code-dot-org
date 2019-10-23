@@ -110,72 +110,80 @@ export default class FilterHeader extends React.Component {
       <div style={styles.header}>
         {this.props.backButton && <BackButton />}
 
-        <Sticky style={{zIndex: 1}}>
-          <div
-            style={getResponsiveValue({
-              xs: styles.barMobile,
-              md: styles.barDesktop
-            })}
-          >
-            {!this.props.mobileLayout && (
-              <div style={styles.full}>
-                {filterGroupGrade && (
-                  <FilterGroupHeaderSelection
-                    containerStyle={styles.filterGroupGradeContainer}
-                    filterGroup={filterGroupGrade}
-                    selection={this.props.selection['grade']}
-                    onUserInput={this.props.onUserInputFilter}
-                  />
-                )}
-                {filterGroupHeaderStudentExperience && (
-                  <FilterGroupHeaderSelection
-                    containerStyle={
-                      styles.filterGroupStudentExperienceContainer
-                    }
-                    filterGroup={filterGroupHeaderStudentExperience}
-                    selection={this.props.selection['student_experience']}
-                    onUserInput={this.props.onUserInputFilter}
-                  />
-                )}
-              </div>
-            )}
-
-            {this.props.mobileLayout && (
-              <div>
-                <div style={styles.left}>
-                  <span style={styles.mobileCount}>{tutorialCountString}</span>
-                </div>
-
-                <div style={styles.right}>
-                  {this.shouldShowOpenFiltersButton() && (
-                    <span>
-                      <button
-                        type="button"
-                        onClick={this.props.showModalFilters}
-                        style={styles.button}
-                        className="noFocusButton"
-                      >
-                        {i18n.filterHeaderShowFilters()}
-                      </button>
-                    </span>
+        <Sticky>
+          {({style}) => (
+            <div
+              style={{
+                ...style,
+                zIndex: 1,
+                ...getResponsiveValue({
+                  xs: styles.barMobile,
+                  md: styles.barDesktop
+                })
+              }}
+            >
+              {!this.props.mobileLayout && (
+                <div style={styles.full}>
+                  {filterGroupGrade && (
+                    <FilterGroupHeaderSelection
+                      containerStyle={styles.filterGroupGradeContainer}
+                      filterGroup={filterGroupGrade}
+                      selection={this.props.selection['grade']}
+                      onUserInput={this.props.onUserInputFilter}
+                    />
                   )}
-
-                  {this.shouldShowCloseFiltersButton() && (
-                    <span>
-                      <button
-                        type="button"
-                        onClick={this.props.hideModalFilters}
-                        style={styles.button}
-                        className="noFocusButton"
-                      >
-                        {i18n.filterHeaderHideFilters()}
-                      </button>
-                    </span>
+                  {filterGroupHeaderStudentExperience && (
+                    <FilterGroupHeaderSelection
+                      containerStyle={
+                        styles.filterGroupStudentExperienceContainer
+                      }
+                      filterGroup={filterGroupHeaderStudentExperience}
+                      selection={this.props.selection['student_experience']}
+                      onUserInput={this.props.onUserInputFilter}
+                    />
                   )}
                 </div>
-              </div>
-            )}
-          </div>
+              )}
+
+              {this.props.mobileLayout && (
+                <div>
+                  <div style={styles.left}>
+                    <span style={styles.mobileCount}>
+                      {tutorialCountString}
+                    </span>
+                  </div>
+
+                  <div style={styles.right}>
+                    {this.shouldShowOpenFiltersButton() && (
+                      <span>
+                        <button
+                          type="button"
+                          onClick={this.props.showModalFilters}
+                          style={styles.button}
+                          className="noFocusButton"
+                        >
+                          {i18n.filterHeaderShowFilters()}
+                        </button>
+                      </span>
+                    )}
+
+                    {this.shouldShowCloseFiltersButton() && (
+                      <span>
+                        <button
+                          type="button"
+                          onClick={this.props.hideModalFilters}
+                          style={styles.button}
+                          className="noFocusButton"
+                        >
+                          {i18n.filterHeaderHideFilters()}
+                        </button>
+                      </span>
+                    )}
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
         </Sticky>
       </div>
     );

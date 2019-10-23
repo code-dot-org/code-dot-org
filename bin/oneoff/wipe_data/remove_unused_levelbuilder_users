@@ -1,0 +1,97 @@
+#!/usr/bin/env ruby
+
+# Logically delete User accounts that have been manually flagged for removal by the team in the following sheet:
+# https://docs.google.com/spreadsheets/d/1l7kIyOjd6FWhC1-GEtAg7lHFFvfQaYznUa12jzZl4_w/edit#gid=1545381978
+
+require_relative '../../../dashboard/config/environment'
+
+exit unless rack_env?(:levelbuilder) && CDO.dashboard_hostname == 'levelbuilder-studio.code.org'
+
+# This script is a dry-run unless we change this line.
+DRY_RUN = true
+
+USERS_TO_DELETE = %w(
+  2
+  14
+  15
+  20
+  48
+  53
+  57
+  62
+  63
+  71
+  73
+  105
+  164
+  175
+  183
+  191
+  204
+  206
+  217
+  219
+  220
+  221
+  225
+  255
+  286
+  293
+  294
+  296
+  297
+  299
+  300
+  302
+  305
+  306
+  311
+  312
+  313
+  325
+  340
+  357
+  358
+  529
+  532
+  540
+  541
+  542
+  543
+  544
+  545
+  546
+  547
+  554
+  555
+  556
+  566
+  568
+  653
+  684
+  689
+  692
+  725
+  726
+  739
+  743
+  766
+  772
+  806
+  842
+  896
+).map(&:to_i).freeze
+
+# ActiveRecord `destroy` can take an array argument, but carrying out all destroys in a single database transaction
+# caused the entire operation to be rolledback when an error was raised destroying a single malformed User.
+USERS_TO_DELETE.each do |user_id|
+  ActiveRecord::Base.transaction do
+    User.destroy(user_id)
+
+    raise ActiveRecord::Rollback.new, "Intentional rollback" if DRY_RUN
+
+    puts "User ID successfully destroyed - #{user_id}"
+  end
+rescue StandardError => error
+  puts "Error destroying User ID - #{user_id} / #{error.message}"
+end

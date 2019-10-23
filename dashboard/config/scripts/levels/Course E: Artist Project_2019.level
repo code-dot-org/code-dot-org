@@ -44,7 +44,13 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-22 14:52:53 +0000\",\"changed\":[\"disable_param_editing\",\"contained_level_names\"],\"changed_by_id\":42,\"changed_by_email\":\"sarah.filman@code.org\"},{\"changed_at\":\"2018-01-04 20:26:00 +0000\",\"changed\":[\"disable_if_else_editing\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-02-28 18:43:18 +0000\",\"changed\":[\"project_template_level_name\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-06-18 20:47:29 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-22 14:52:53 +0000\",\"changed\":[\"disable_param_editing\",\"contained_level_names\"],\"changed_by_id\":42,\"changed_by_email\":\"sarah.filman@code.org\"},{\"changed_at\":\"2018-01-04 20:26:00 +0000\",\"changed\":[\"disable_if_else_editing\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-02-28 18:43:18 +0000\",\"changed\":[\"project_template_level_name\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-06-18 20:47:29 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "repeat_loops": 1,
+    "for_loops": 1,
+    "functions": 1
+  }
 }]]></config>
   <blocks/>
 </Artist>

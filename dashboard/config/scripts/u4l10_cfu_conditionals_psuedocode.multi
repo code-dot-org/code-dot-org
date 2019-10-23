@@ -1,0 +1,23 @@
+name 'U4L10 CFU Conditionals Psuedocode'
+title 'AP Pseudocode: Conditionals'
+description ''
+wrong 'Perfect Game!'
+right 'You Win!'
+wrong 'You Lose!'
+wrong 'Nothing will be displayed'
+
+markdown <<MARKDOWN
+## AP Reference Sheet 
+
+The AP Reference Sheet shows how Conditional-type questions will be represented on the exam. Read through these sections of the Reference Sheet and answer the question below. 
+
+![](https://images.code.org/53a8d7f6bc53164ed891740fdf7dfe2b-image-1567708424472.png)
+![](https://images.code.org/a75bb15a7c18311618edd611f5d3e99b-image-1567696845161.png)
+![](https://images.code.org/3d92c62368372cfae377bf7d8e07b11e-image-1567696864636.png)
+
+## Practice Question
+
+What will be displayed after this code segment is run?
+
+![](https://images.code.org/83c829d8942524414e0b5b2cb5151917-image-1567706962530.png)
+MARKDOWN

@@ -13,9 +13,16 @@
     "submittable": "false",
     "peer_reviewable": "false",
     "parent_level_id": 13010,
-    "name_suffix": "_2019"
+    "name_suffix": "_2019",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "encrypted_solution": "ivyiCcXVqHIPf0WzSAzzomBFOrB3FitzVC/pVGotMRuij3u4N71SSqC6SIRn\nZNz57x+Ke4D+bTaMHnE28xbT9kS2GgQKYDgUs35IS2xQBH5IkOlSqkvYsr6e\nF+O2cTKm0XuvTkVyk9i8MNqTIWO9FMPLidKb/ell32VRoXC+2hY=\n",
+    "optional": "false"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-10-12 00:12:43 +0000\",\"changed\":[],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </FreeResponse>

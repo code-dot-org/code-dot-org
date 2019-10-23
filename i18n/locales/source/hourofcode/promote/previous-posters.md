@@ -1,20 +1,20 @@
 ---
-title: <%= hoc_s(:title_past_posters).inspect %>
+title: Past Hour of Code Posters
 layout: wide
 nav: promote_nav
 ---
 
-<%= view :signup_button %>
+{{ signup_button }}
 
 # Past Hour of Code Posters
 
-### Find our posters from previous years to print and hang in your classroom! Looking for the newest posters? <a href="<%= resolve_url('/promote/resources#posters') %>">Click here</a>.
+### Find our posters from previous years to print and hang in your classroom! Looking for the newest posters? [Click here]({{ promote/promote_posters_url }}).
 
 
 ***
 
 <br>
 
-<%= view :promote_posters %>
+{{ promote_posters }}
 
-<%= view :signup_button %>
+{{ signup_button }}

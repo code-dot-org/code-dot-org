@@ -42,19 +42,19 @@ class Api::V1::Pd::TeacherAttendanceReportControllerTest < ::ActionController::T
     @program_manager = create :program_manager
 
     # CSF workshop from this program manager with 10 teachers.
-    @pm_workshop = create :pd_ended_workshop, organizer: @program_manager, course: Pd::Workshop::COURSE_CSF
+    @pm_workshop = create :workshop, :ended, organizer: @program_manager, course: Pd::Workshop::COURSE_CSF
     10.times do
       create :pd_workshop_participant, workshop: @pm_workshop, enrolled: true, attended: true
     end
 
     # CSF workshop from this organizer with 10 teachers.
-    @workshop = create :pd_ended_workshop, organizer: @organizer, course: Pd::Workshop::COURSE_CSF
+    @workshop = create :workshop, :ended, organizer: @organizer, course: Pd::Workshop::COURSE_CSF
     10.times do
       create :pd_workshop_participant, workshop: @workshop, enrolled: true, attended: true
     end
 
     # Non-CSF workshop from a different organizer, with 1 teacher.
-    @other_workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_ECS,
+    @other_workshop = create :workshop, :ended, course: Pd::Workshop::COURSE_ECS,
       subject: Pd::Workshop::SUBJECT_ECS_PHASE_2
     create :pd_workshop_participant, workshop: @other_workshop, enrolled: true, attended: true
   end
@@ -133,7 +133,7 @@ class Api::V1::Pd::TeacherAttendanceReportControllerTest < ::ActionController::T
   test 'Returns only workshops that have ended and have teachers' do
     # Workshop, not ended, with teachers
     # This workshop should not be returned
-    workshop_in_progress = create :pd_workshop, num_sessions: 1
+    workshop_in_progress = create :workshop
     workshop_in_progress.start!
     5.times do
       create :pd_workshop_participant, workshop: workshop_in_progress, enrolled: true, attended: true
@@ -141,7 +141,7 @@ class Api::V1::Pd::TeacherAttendanceReportControllerTest < ::ActionController::T
 
     # Workshop, ended, with no teachers
     # This workshop should not be returned
-    teacherless_workshop = create :pd_ended_workshop
+    teacherless_workshop = create :workshop, :ended
 
     sign_in @workshop_admin
     get :index
@@ -163,14 +163,14 @@ class Api::V1::Pd::TeacherAttendanceReportControllerTest < ::ActionController::T
     start_date = Date.today - 6.months
     end_date = start_date + 1.month
 
-    workshop_in_range = create :pd_ended_workshop, sessions_from: start_date + 2.weeks
+    workshop_in_range = create :workshop, :ended, sessions_from: start_date + 2.weeks
     teacher_in_range = create :pd_workshop_participant, workshop: workshop_in_range, enrolled: true, attended: true
 
     # Noise
-    workshop_before = create :pd_ended_workshop, sessions_from: start_date - 1.day
+    workshop_before = create :workshop, :ended, sessions_from: start_date - 1.day
     create :pd_workshop_participant, workshop: workshop_before, enrolled: true, attended: true
 
-    workshop_after = create :pd_ended_workshop, sessions_from: end_date + 1.day
+    workshop_after = create :workshop, :ended, sessions_from: end_date + 1.day
     create :pd_workshop_participant, workshop: workshop_after, enrolled: true, attended: true
 
     sign_in @workshop_admin
@@ -187,14 +187,14 @@ class Api::V1::Pd::TeacherAttendanceReportControllerTest < ::ActionController::T
     start_date = Date.today - 6.months
     end_date = start_date + 1.month
 
-    workshop_in_range = create :pd_ended_workshop, ended_at: start_date + 2.weeks
+    workshop_in_range = create :workshop, :ended, ended_at: start_date + 2.weeks
     teacher_in_range = create :pd_workshop_participant, workshop: workshop_in_range, enrolled: true, attended: true
 
     # Noise
-    workshop_before = create :pd_ended_workshop, ended_at: start_date - 1.day
+    workshop_before = create :workshop, :ended, ended_at: start_date - 1.day
     create :pd_workshop_participant, workshop: workshop_before, enrolled: true, attended: true
 
-    workshop_after = create :pd_ended_workshop, ended_at: end_date + 1.day
+    workshop_after = create :workshop, :ended, ended_at: end_date + 1.day
     create :pd_workshop_participant, workshop: workshop_after, enrolled: true, attended: true
 
     sign_in @workshop_admin

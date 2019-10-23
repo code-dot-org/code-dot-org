@@ -7,6 +7,7 @@ import {borderRadius, ControlTypes} from './constants';
 import OrderControls from './OrderControls';
 import StageCard from './StageCard';
 import {NEW_LEVEL_ID, addStage, addGroup} from './editorRedux';
+import FlexCategorySelector from './FlexCategorySelector';
 
 const styles = {
   groupHeader: {
@@ -39,22 +40,45 @@ const styles = {
     border: '1px solid #ccc',
     boxShadow: 'none',
     margin: '0 10px 10px 10px'
+  },
+  flexCategorySelector: {
+    height: 30,
+    marginBottom: 30
   }
 };
+
+// Replace ' with \'
+const escape = str => str.replace(/'/, "\\'");
 
 class FlexGroup extends Component {
   static propTypes = {
     addGroup: PropTypes.func.isRequired,
     addStage: PropTypes.func.isRequired,
     stages: PropTypes.array.isRequired,
-    levelKeyList: PropTypes.object.isRequired
+    levelKeyList: PropTypes.object.isRequired,
+    flexCategoryMap: PropTypes.object.isRequired
   };
 
-  handleAddGroup = () => {
-    this.props.addGroup(
-      prompt('Enter new stage name'),
-      prompt('Enter new group name')
-    );
+  state = {
+    addingFlexCategory: false
+  };
+
+  handleAddFlexCategory = () => {
+    this.setState({
+      addingFlexCategory: true
+    });
+  };
+
+  createFlexCategory = newFlexCategory => {
+    this.hideFlexCategorySelector();
+    const newStageName = prompt('Enter new stage name');
+    if (newStageName) {
+      this.props.addGroup(newStageName, newFlexCategory);
+    }
+  };
+
+  hideFlexCategorySelector = () => {
+    this.setState({addingFlexCategory: false});
   };
 
   handleAddStage = position => {
@@ -69,12 +93,12 @@ class FlexGroup extends Component {
   serializeStages = stages => {
     let s = [];
     stages.forEach(stage => {
-      let t = `stage '${stage.name}'`;
+      let t = `stage '${escape(stage.name)}'`;
       if (stage.lockable) {
         t += ', lockable: true';
       }
       if (stage.flex_category) {
-        t += `, flex_category: '${stage.flex_category}'`;
+        t += `, flex_category: '${escape(stage.flex_category)}'`;
       }
       s.push(t);
       stage.levels.forEach(level => {
@@ -102,24 +126,26 @@ class FlexGroup extends Component {
     const key = this.props.levelKeyList[id];
     if (/^blockly:/.test(key)) {
       if (level.skin) {
-        s.push(`skin '${level.skin}'`);
+        s.push(`skin '${escape(level.skin)}'`);
       }
       if (level.videoKey) {
-        s.push(`video_key_for_next_level '${level.videoKey}'`);
+        s.push(`video_key_for_next_level '${escape(level.videoKey)}'`);
       }
       if (level.concepts) {
+        // concepts is a comma-separated list of single-quoted strings, so do
+        // not escape its single quotes.
         s.push(`concepts ${level.concepts}`);
       }
       if (level.conceptDifficulty) {
-        s.push(`level_concept_difficulty '${level.conceptDifficulty}'`);
+        s.push(`level_concept_difficulty '${escape(level.conceptDifficulty)}'`);
       }
     }
-    let l = `level '${key.replace(/'/, "\\'")}'`;
+    let l = `level '${escape(key)}'`;
     if (active === false) {
       l += ', active: false';
     }
     if (level.progression) {
-      l += `, progression: '${level.progression}'`;
+      l += `, progression: '${escape(level.progression)}'`;
     }
     if (level.named) {
       l += `, named: true`;
@@ -137,16 +163,18 @@ class FlexGroup extends Component {
   render() {
     const groups = _.groupBy(
       this.props.stages,
-      stage => stage.flex_category || 'Default'
+      stage => stage.flex_category || ''
     );
     let afterStage = 1;
+    const {flexCategoryMap} = this.props;
 
     return (
       <div>
-        {_.keys(groups).map((group, groupIndex) => (
+        {_.keys(groups).map(group => (
           <div key={group}>
             <div style={styles.groupHeader}>
-              Group {groupIndex + 1}: {group}
+              Flex Category: {group || '(none)'}: "
+              {flexCategoryMap[group] || 'Content'}"
               <OrderControls
                 type={ControlTypes.Group}
                 position={afterStage}
@@ -176,15 +204,27 @@ class FlexGroup extends Component {
             </div>
           </div>
         ))}
-        <button
-          onMouseDown={this.handleAddGroup}
-          className="btn"
-          style={styles.addGroup}
-          type="button"
-        >
-          <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-          Add Group
-        </button>
+        {!this.state.addingFlexCategory && (
+          <button
+            onMouseDown={this.handleAddFlexCategory}
+            className="btn"
+            style={styles.addGroup}
+            type="button"
+          >
+            <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+            Add Flex Category
+          </button>
+        )}
+        {this.state.addingFlexCategory && (
+          <div style={styles.flexCategorySelector}>
+            <FlexCategorySelector
+              labelText="New Flex Category"
+              confirmButtonText="Create"
+              onConfirm={this.createFlexCategory}
+              onCancel={this.hideFlexCategorySelector}
+            />
+          </div>
+        )}
         <input
           type="hidden"
           name="script_text"
@@ -198,7 +238,8 @@ class FlexGroup extends Component {
 export default connect(
   state => ({
     levelKeyList: state.levelKeyList,
-    stages: state.stages
+    stages: state.stages,
+    flexCategoryMap: state.flexCategoryMap
   }),
   dispatch => ({
     addGroup(stageName, groupName) {

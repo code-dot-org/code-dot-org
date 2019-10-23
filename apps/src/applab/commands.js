@@ -25,6 +25,7 @@ import {AllowedWebRequestHeaders} from '@cdo/apps/util/sharedConstants';
 import {actions, REDIRECT_RESPONSE} from './redux/applab';
 import {getStore} from '../redux';
 import $ from 'jquery';
+import i18n from '@cdo/applab/locale';
 
 // For proxying non-https xhr requests
 var XHR_PROXY_PATH = '//' + location.host + '/xhr';
@@ -919,6 +920,8 @@ applabCommands.textLabel = function(opts) {
   newLabel.id = opts.elementId;
   newLabel.style.position = 'relative';
   newLabel.style.borderStyle = 'solid';
+  // Set optimizeSpeed to ensure better text size consistency between Safari and Chrome
+  newLabel.style.textRendering = 'optimizeSpeed';
   elementLibrary.setAllPropertiesToCurrentTheme(
     newLabel,
     Applab.activeScreen()
@@ -1829,6 +1832,38 @@ var handleSetKeyValueSyncError = function(opts, message) {
   outputWarning(message);
 };
 
+applabCommands.getColumn = function(opts) {
+  apiValidateType(opts, 'getColumn', 'table', opts.table, 'string');
+  apiValidateType(opts, 'getColumn', 'column', opts.column, 'string');
+
+  Applab.storage.readRecords(
+    opts.table,
+    {},
+    handleGetColumn.bind(this, opts),
+    handleGetColumnError.bind(this, opts)
+  );
+};
+
+var handleGetColumn = function(opts, records) {
+  let columnList = [];
+  let columnName = opts.column;
+  let tableName = opts.table;
+  if (records === null) {
+    outputError(i18n.tableDoesNotExistError({tableName}));
+  } else {
+    records.forEach(row => columnList.push(row[opts.column]));
+    if (columnList.every(element => element === undefined)) {
+      outputError(i18n.columnDoesNotExistError({columnName, tableName}));
+    }
+  }
+  opts.callback(columnList);
+};
+
+var handleGetColumnError = function(opts, message) {
+  opts.callback([]);
+  outputWarning(message);
+};
+
 applabCommands.readRecords = function(opts) {
   // PARAMNAME: readRecords: table vs. tableName
   // PARAMNAME: readRecords: callback vs. callbackFunction
@@ -1860,6 +1895,10 @@ applabCommands.readRecords = function(opts) {
 };
 
 applabCommands.handleReadRecords = function(opts, records) {
+  if (records === null) {
+    let tableName = opts.table;
+    outputError(i18n.tableDoesNotExistError({tableName}));
+  }
   if (opts.onSuccess) {
     opts.onSuccess.call(null, records);
   }

@@ -6,6 +6,12 @@ theme: responsive
 
 Do you need to create a slide deck or one-pager to advocate for computer science in your state or city? The blog posts and links below contain resources and statistics that you can use to make your own custom materials!
 
+## Code.org Policy Resources
+* See [state-by-state data](https://docs.google.com/spreadsheets/d/1YtTVcpQXoZz0IchihwGOihaCNeqCz2HyLwaXYpyb2SQ/pubhtml) on our 9 model policies for computer science education.
+* Code.org partnered with CSTA and ECEP to create the [2019 State of Computer Science Education](https://advocacy.code.org/2019_state_of_cs.pdf) report on state-level policies that support equitable K-12 computer science education. You can also view the 2018 report [here](https://code.org/files/2018_state_of_cs.pdf), and the 2017 report (authored by Code.org, MassCAN, EDC, ECEP, SageFox, and ECS) [here](http://code.org/files/State_of_the_states.pdf).
+* [Computer science and ESSA](http://code.org/files/CS_and_ESSA.pdf): Read our recommendations for how states can add computer science to their state ESSA plans.
+* Download a [master slide deck](https://docs.google.com/presentation/d/1SUGh9QdyXoXPepD1vC5YXRnicxp-th_yWX8dNM_vywc/edit?usp=sharing) that you can use to create your own presentations.
+
 
 ## Code.org blog posts
 ### Why computer science?
@@ -40,13 +46,6 @@ Do you need to create a slide deck or one-pager to advocate for computer science
 * [Exploding demand for computer science in universities](https://www.geekwire.com/2014/analysis-examining-computer-science-education-explosion/)
 * AP Computer Science A is the [fastest-growing](http://codeorg.tumblr.com/post/150040749703/another-year-of-record-growth-for-ap-computer) AP course of the decade.
 * Code.org [updated our position](http://codeorg.tumblr.com/post/154518222573/computer-science-really-is-computer-science) on [Making Computer Science Count](https://docs.google.com/document/d/1ksKYCmYVK7cNS6Pfc7OL9Cre2SsFsWWTyvW7faPPIZc/edit?usp=sharing).
-
-
-## Other Code.org Resources
-* See [state-by-state data](https://docs.google.com/spreadsheets/d/1YtTVcpQXoZz0IchihwGOihaCNeqCz2HyLwaXYpyb2SQ/pubhtml) on our 9 model policies for computer science education.
-* Code.org partnered with MassCAN, EDC, ECEP, SageFox, and ECS to create the 2017 [State of the States Landscape Report](http://code.org/files/State_of_the_states.pdf) on state-level policies that support equitable K-12 computer science education. See the updated report for 2018 [here](https://code.org/files/2018_state_of_cs.pdf).
-* [Computer science and ESSA](http://code.org/files/CS_and_ESSA.pdf): Read our recommendations for how states can add computer science to their state ESSA plans.
-* Download a [master slide deck](https://docs.google.com/presentation/d/1SUGh9QdyXoXPepD1vC5YXRnicxp-th_yWX8dNM_vywc/edit?usp=sharing) that you can use to create your own presentations.
 
 
 ## International K-12 computer science

@@ -155,8 +155,13 @@ class FirehoseClient {
    * NOTE: In scenarios where userId is not in pageConstants, such as in the
    * project gallery, we can also directly pass user_id as a field on the data * object. In this case, includeUserId should be false to avoid overriding
    * the manually set user_id.
+   * NOTE: In scenarios where the script_id we want to log is different than
+   * that inferred by progress (such as in tracking which scripts a teacher has
+   * hidden), we can directly pass script_id as a field on the data object by
+   * setting useProgressScriptId to false to avoid overriding the manually set
+   * script_id.
    */
-  addCommonValues(data, includeUserId) {
+  addCommonValues(data, includeUserId, useProgressScriptId) {
     data['created_at'] = new Date().toISOString();
     data['environment'] = this.getEnvironment();
     data['uuid'] = this.getAnalyticsUuid();
@@ -171,7 +176,7 @@ class FirehoseClient {
         }
       }
       const progress = state.progress;
-      if (progress) {
+      if (progress && useProgressScriptId) {
         data['script_id'] = progress.scriptId;
         data['level_id'] = parseInt(progress.currentLevelId);
       }
@@ -209,9 +214,18 @@ class FirehoseClient {
    */
   putRecord(
     data,
-    options = {alwaysPut: false, includeUserId: false, callback: null}
+    options = {
+      alwaysPut: false,
+      includeUserId: false,
+      callback: null,
+      useProgressScriptId: true
+    }
   ) {
-    data = this.addCommonValues(data, options.includeUserId);
+    data = this.addCommonValues(
+      data,
+      options.includeUserId,
+      options.useProgressScriptId
+    );
     const handleError = this.handleError.bind(this, data);
     if (!this.shouldPutRecord(options['alwaysPut'])) {
       console.groupCollapsed('Skipped sending record to ' + deliveryStreamName);
@@ -248,9 +262,20 @@ class FirehoseClient {
    * @option options [boolean] alwaysPut Forces the record to be sent.
    * @option options [boolean] includeUserId Include userId in records, if signed in
    */
-  putRecordBatch(data, options = {alwaysPut: false, includeUserId: false}) {
+  putRecordBatch(
+    data,
+    options = {
+      alwaysPut: false,
+      includeUserId: false,
+      useProgressScriptId: true
+    }
+  ) {
     data.map(function(record) {
-      return this.AddCommonValues(record, options.includeUserId);
+      return this.AddCommonValues(
+        record,
+        options.includeUserId,
+        options.useProgressScriptId
+      );
     });
 
     if (!this.shouldPutRecord(options['alwaysPut'])) {

@@ -1232,14 +1232,30 @@ uk-UA:
   course2_gradelevel: Вік 6-18
   course3_gradelevel: Вік 8-18
   course4_gradelevel: Вік 10-18
+  coursea_gradelevel: Вік 4-7
+  courseb_gradelevel: Вік 5-8
+  coursec_gradelevel: Вік 6-10
   coursed_gradelevel: 8+ класи
   coursee_gradelevel: Вік 8-12
+  coursef_gradelevel: Вік 9-13
+  coursea-2017_gradelevel: Вік 4-7
+  courseb-2017_gradelevel: Вік 5-8
+  coursec-2017_gradelevel: Вік 6-10
   coursed-2017_gradelevel: 8+ класи
   coursee-2017_gradelevel: Вік 8-12
+  coursef-2017_gradelevel: Вік 9-13
+  coursea-2018_gradelevel: Вік 4-7
+  courseb-2018_gradelevel: Вік 5-8
+  coursec-2018_gradelevel: Вік 6-10
   coursed-2018_gradelevel: 8+ класи
   coursee-2018_gradelevel: Вік 8-12
+  coursef-2018_gradelevel: Вік 9-13
+  coursea-2019_gradelevel: Вік 4-7
+  courseb-2019_gradelevel: Вік 5-8
+  coursec-2019_gradelevel: Вік 6-10
   coursed-2019_gradelevel: 8+ класи
   coursee-2019_gradelevel: Вік 8-12
+  coursef-2019_gradelevel: Вік 9-13
   accelerated_gradelevel: Вік 10-18
   codeorg_platformtext: Сучасні браузери, смартфони, планшети
   codeintl_platformtext: Сучасні браузери, смартфони, планшети
@@ -1843,11 +1859,16 @@ uk-UA:
   compatibility_unsupported_browser: Ваш браузер не підтримується. Оновіть свій браузер
     до <a href='%{supported_browsers_url}', target='_blank'>одного із підтримуваних</a>.
     Можете продовжити перегляд, але деякі функції, ймовірно, не працюватимуть.
+  compatibility_unsupported_browser_markdown: Ваш браузер не підтримується. Оновіть
+    свій браузер до <a href='%{supported_browsers_url}', target='_blank'>одного із
+    підтримуваних</a>. Можете продовжити перегляд, але деякі функції, ймовірно, не
+    працюватимуть.
   flappy_shortcode: махати
   header_home: Головна
   header_courses: курси
   header_course_catalog: Каталог курсів
   header_project_gallery: Проекти
+  header_sections: Секції
   header_educate_overview: Огляд для педагога
   header_educate_elementary: Початкова школа
   header_educate_middle: Середня школа
@@ -1873,6 +1894,10 @@ uk-UA:
   header_stats: Статистика
   header_help_us: Допомога нам
   header_about: Про
+  header_teacher_community: Спільнота вчителів
+  header_report_bug: Повідомити про помилку
+  header_tutorials: Навчальні матеріали
+  header_documentation: Документація
   user_header_label: Привіт %{username}
   user_header_team: Команда
   user_header_settings: Мій профіль
@@ -1886,6 +1911,10 @@ uk-UA:
   user_header_flappy: Пурх
   applab_tile_start_tutorial: Початок
   aquatic_name: 'Minecraft: Водна подорож'
+  account_sign_up_email_opt_in: Чи можемо ми сповіщати вас про оновлення курсів, локальних
+    можливості та інші новини з області інформатики за допомогою електронної пошти?
+  account_sign_up_child_accept_terms: Я підтверджую що у мене є згода моїх батьків
+    і законних опікунів на дозвіл використання Code.org.
   hoc_overview_dance_title: Танцювальна вечірка
   hoc_overview_start_tutorial: Початок
   hoc2018_creativity: творчість

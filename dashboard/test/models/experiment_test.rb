@@ -170,4 +170,14 @@ class ExperimentTest < ActiveSupport::TestCase
 
     assert_equal active_experiments, Experiment.experiments
   end
+
+  test 'editor experiments' do
+    teacher = create :teacher
+    platformization_partner = create :platformization_partner
+    levelbuilder = create :levelbuilder
+
+    assert_nil Experiment.get_editor_experiment(teacher)
+    assert_equal 'platformization-partners', Experiment.get_editor_experiment(platformization_partner)
+    assert_nil Experiment.get_editor_experiment(levelbuilder)
+  end
 end

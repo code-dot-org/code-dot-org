@@ -1902,6 +1902,9 @@ tr-TR:
   compatibility_unsupported_browser: Tarayıcınız desteklenmiyor. Lütfen tarayıcınızı
     <a href='%{supported_browsers_url}', target='_blank'> desteklenen tarayıcılardan
     birine</a> yükseltin. Sayfayı görüntüleyebilirsiniz ama önemli özellikler çalışmayabilir.
+  compatibility_unsupported_browser_markdown: Tarayıcınız desteklenmiyor. Lütfen tarayıcınızı
+    <a href='%{supported_browsers_url}', target='_blank'> desteklenen tarayıcılardan
+    birine</a> yükseltin. Sayfayı görüntüleyebilirsiniz ama önemli özellikler çalışmayabilir.
   starwars_shortcode: yıldız
   flappy_shortcode: kanat çırp
   header_home: Ana Sayfa

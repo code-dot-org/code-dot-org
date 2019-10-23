@@ -12,10 +12,15 @@
     "hide_share_and_remix": "true",
     "submittable": "false",
     "parent_level_id": 15848,
-    "name_suffix": "_pilot"
+    "name_suffix": "_pilot",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "teacher_markdown": "After giving students some time to explore the tool, ask them to share out anything that they have discovered.  The video on the next level will give them a short tour, so it's okay if they don't notice everything."
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-12 23:29:30 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-12 23:29:30 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-07-30 21:03:08 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-17 20:51:25 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </Weblab>

@@ -1,4 +1,4 @@
-import {assert} from '../../util/configuredChai';
+import {assert} from '../../util/deprecatedChai';
 import {assertOwnProperty} from '../../util/assertions';
 var NetSimTestUtils = require('../../util/netsimTestUtils');
 var _ = require('lodash');
@@ -864,6 +864,8 @@ describe('NetSimRouterNode', function() {
     var clientA = makeRemoteClient();
 
     NetSimGlobals.getLevelConfig().automaticReceive = true;
+    NetSimGlobals.getLevelConfig().messageGranularity =
+      NetSimConstants.MessageGranularity.PACKETS;
     var time = 1;
     var fakeReceivedLog = makeFakeMessageLog();
 

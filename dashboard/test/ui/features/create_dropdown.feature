@@ -1,6 +1,7 @@
 @no_mobile
 # Dropdown hidden in 1024x768 Safari with fixed scrollbar due to media query.
 @no_safari
+@no_firefox
 @single_session
 Feature: Create Dropdown in Header
 
@@ -62,7 +63,7 @@ Scenario: Young Student, In Section - Correct Create Links
   Given I create a teacher named "Ms_Frizzle"
   And I create a new section
   Given I create a young student named "Young Student - In Section"
-  And I navigate to the section url
+  And I join the section
   And I wait until element ".create_menu" is visible
   And I click selector ".create_menu"
   And I wait until element "#create_dropdown_spritelab" is visible

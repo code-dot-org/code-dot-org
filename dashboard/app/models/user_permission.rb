@@ -53,6 +53,8 @@ class UserPermission < ActiveRecord::Base
     AUTHORIZED_TEACHER,
   ].freeze
 
+  ASSIGNABLE_PERMISSIONS = (VALID_PERMISSIONS - [WORKSHOP_ORGANIZER]).freeze
+
   validates_inclusion_of :permission, in: VALID_PERMISSIONS
 
   after_save :log_permission_save

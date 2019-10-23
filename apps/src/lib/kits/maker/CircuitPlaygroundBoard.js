@@ -10,6 +10,7 @@ import Firmata from 'firmata';
 import {
   createCircuitPlaygroundComponents,
   cleanupCircuitPlaygroundComponents,
+  enableCircuitPlaygroundComponents,
   componentConstructors
 } from './PlaygroundComponents';
 import {
@@ -102,7 +103,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
         this.serialPort_ = serialPort;
         this.fiveBoard_ = board;
         this.fiveBoard_.samplingInterval(100);
-        this.detectBoardType();
+        this.boardType_ = this.detectBoardType();
         if (experiments.isEnabled('detect-board')) {
           this.detectFirmwareVersion(playground);
         }
@@ -139,19 +140,19 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
       this.port_ && this.port_.productId
         ? parseInt(this.port_.productId, 16)
         : null;
+    let boardType = BOARD_TYPE.OTHER;
     if (vendorId === ADAFRUIT_VID && productId === CIRCUIT_PLAYGROUND_PID) {
-      this.boardType_ = BOARD_TYPE.CLASSIC;
+      boardType = BOARD_TYPE.CLASSIC;
     } else if (
       vendorId === ADAFRUIT_VID &&
       productId === CIRCUIT_PLAYGROUND_EXPRESS_PID
     ) {
-      this.boardType_ = BOARD_TYPE.EXPRESS;
+      boardType = BOARD_TYPE.EXPRESS;
       if (this.fiveBoard_) {
         this.fiveBoard_.isExpressBoard = true;
       }
-    } else {
-      this.boardType_ = BOARD_TYPE.OTHER;
     }
+    return boardType;
   }
 
   /**
@@ -192,6 +193,15 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
     }
 
     this.fiveBoard_.on('disconnect', () => this.emit('disconnect'));
+  }
+
+  /**
+   * Enable existing board components
+   */
+  enableComponents() {
+    if (this.prewiredComponents_) {
+      enableCircuitPlaygroundComponents(this.prewiredComponents_);
+    }
   }
 
   /**
@@ -375,9 +385,46 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
       ? SerialPort
       : ChromeSerialPort.SerialPort;
 
-    return new SerialPortType(portName, {
+    const port = new SerialPortType(portName, {
       baudRate: SERIAL_BAUD
     });
+
+    if (isNodeSerialAvailable()) {
+      const queue = [];
+      let sendPending = false;
+      const oldWrite = port.write;
+
+      const trySend = buffer => {
+        if (buffer) {
+          queue.push(buffer);
+        }
+
+        if (sendPending || queue.length === 0) {
+          // Exhausted pending send buffer.
+          return;
+        }
+
+        if (queue.length > 512) {
+          throw new Error(
+            'Send queue is full! More than 512 pending messages.'
+          );
+        }
+
+        const toSend = queue.shift();
+        sendPending = true;
+        oldWrite.call(port, toSend, 'binary', function() {
+          sendPending = false;
+
+          if (queue.length !== 0) {
+            trySend();
+          }
+        });
+      };
+
+      port.write = (...args) => trySend(...args);
+    }
+
+    return port;
   }
 
   /**

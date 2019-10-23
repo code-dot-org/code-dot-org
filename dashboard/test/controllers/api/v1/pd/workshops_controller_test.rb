@@ -6,9 +6,6 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
 
   self.use_transactional_test_case = true
   setup_all do
-    @admin = create(:admin)
-    @workshop_admin = create(:workshop_admin)
-
     @regional_partner = create(:regional_partner)
     @program_manager = create(:program_manager, regional_partner: @regional_partner)
     @organizer = @program_manager
@@ -17,7 +14,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     @csf_facilitator = create(:pd_course_facilitator, course: Pd::Workshop::COURSE_CSF).facilitator
 
     @workshop = create(
-      :pd_workshop,
+      :workshop,
       :funded,
       organizer: @organizer,
       facilitators: [@facilitator],
@@ -25,14 +22,15 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
       on_map: true
     )
     @organizer_workshop = create(
-      :pd_workshop,
+      :workshop,
       :funded,
       organizer: @workshop_organizer,
       facilitators: [@facilitator],
-      on_map: true
+      on_map: true,
+      num_sessions: 0
     )
 
-    @standalone_workshop = create(:pd_workshop)
+    @standalone_workshop = create(:workshop)
   end
 
   setup do
@@ -45,7 +43,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   test_user_gets_response_for :index, user: nil, response: :forbidden
 
   test 'admins can list all workshops' do
-    sign_in @admin
+    sign_in create :admin
     assert_equal 3, Pd::Workshop.count
 
     get :index
@@ -70,7 +68,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
 
   # TODO: remove this test when workshop_organizer is deprecated
   test 'with the facilitated param, workshop organizers only view workshops they facilitated' do
-    workshop_2 = create(:pd_workshop, organizer: @workshop_organizer, facilitators: [@workshop_organizer])
+    workshop_2 = create(:workshop, organizer: @workshop_organizer, facilitators: [@workshop_organizer])
 
     sign_in @workshop_organizer
     get :index, params: {facilitator_view: 1}
@@ -81,7 +79,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   end
 
   test 'with the facilitated param, program manager workshop organizers only view workshops they facilitated' do
-    workshop_2 = create(:pd_workshop, organizer: @organizer, facilitators: [@organizer])
+    workshop_2 = create(:workshop, organizer: @organizer, facilitators: [@organizer])
 
     sign_in @organizer
     get :index, params: {facilitator_view: 1}
@@ -92,7 +90,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   end
 
   test 'with the organizer view param, program managers can view workshops in their regional partner and workshops they organized' do
-    workshop_in_my_region = create :pd_workshop, regional_partner: @regional_partner, organizer: @workshop_organizer
+    workshop_in_my_region = create :workshop, regional_partner: @regional_partner, organizer: @workshop_organizer
     sign_in @organizer
 
     get :index, params: {organizer_view: 1}
@@ -105,7 +103,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   test 'exclude local summer workshops if exclude_summer present' do
     sign_in @organizer
 
-    create :pd_workshop, :local_summer_workshop, organizer: @organizer
+    create :summer_workshop, organizer: @organizer
 
     get :index, params: {exclude_summer: 1}
     assert_response :success
@@ -117,7 +115,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   test 'includes local summer workshop if exclude_summer not present' do
     sign_in @organizer
 
-    summer_workshop = create :pd_workshop, :local_summer_workshop, organizer: @organizer
+    summer_workshop = create :summer_workshop, organizer: @organizer
 
     get :index, params: {}
     response = JSON.parse(@response.body)
@@ -133,7 +131,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     sign_in(teacher)
     other_teacher = create :teacher
 
-    workshop_2 = create :pd_workshop
+    workshop_2 = create :workshop
 
     enrollment_1 = create(:pd_enrollment, workshop: @workshop, email: teacher.email, user_id: nil)
     enrollment_2 = create(:pd_enrollment, workshop: workshop_2, email: 'other@example.com', user_id: teacher.id)
@@ -152,25 +150,17 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     teacher = create :teacher
     sign_in(teacher)
 
-    teachercon = create(
-      :pd_workshop,
+    teachercon = create :workshop,
       :teachercon,
       :funded,
       organizer: @organizer,
       facilitators: [@facilitator],
-      regional_partner: @regional_partner,
-      num_sessions: 1
-    )
+      regional_partner: @regional_partner
 
-    fit_weekend = create(
-      :pd_workshop,
-      :funded,
-      subject: Pd::Workshop::SUBJECT_CSD_FIT,
-      course: Pd::Workshop::COURSE_CSD,
+    fit_weekend = create :fit_workshop,
       organizer: @organizer,
       facilitators: [@facilitator],
       regional_partner: @regional_partner
-    )
 
     create(:pd_enrollment, workshop: teachercon, email: teacher.email, user_id: teacher.id)
     create(:pd_enrollment, workshop: fit_weekend, email: teacher.email, user_id: teacher.id)
@@ -191,24 +181,19 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     teacher = create :teacher
     sign_in(teacher)
 
-    teachercon = create(
-      :pd_ended_workshop,
+    teachercon = create :workshop,
+      :ended,
       :teachercon,
       :funded,
       organizer: @organizer,
       facilitators: [@facilitator],
       regional_partner: @regional_partner
-    )
 
-    fit_weekend = create(
-      :pd_ended_workshop,
-      :funded,
-      subject: Pd::Workshop::SUBJECT_CSD_FIT,
-      course: Pd::Workshop::COURSE_CSD,
+    fit_weekend = create :fit_workshop,
+      :ended,
       organizer: @organizer,
       facilitators: [@facilitator],
       regional_partner: @regional_partner
-    )
 
     teachercon_enrollment = create(:pd_enrollment, workshop: teachercon, email: teacher.email, user_id: teacher.id)
     fit_weekend_enrollment = create(:pd_enrollment, workshop: fit_weekend, email: teacher.email, user_id: teacher.id)
@@ -259,8 +244,8 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   end
 
   test 'filter by state' do
-    sign_in @admin
-    workshop_in_progress = create :pd_workshop, num_sessions: 1
+    sign_in create :admin
+    workshop_in_progress = create :workshop
     workshop_in_progress.start!
     assert_equal Pd::Workshop::STATE_IN_PROGRESS, workshop_in_progress.state
 
@@ -273,7 +258,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
 
   # Action: filter
   test 'admins can filter' do
-    sign_in @admin
+    sign_in create :admin
     get :filter
     assert_response :success
   end
@@ -298,7 +283,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   end
 
   test 'filter defaults' do
-    sign_in @admin
+    sign_in create :admin
     get :filter
     response = JSON.parse(@response.body)
     assert_nil response['limit']
@@ -310,10 +295,10 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   test 'filter limit' do
     # 10 more workshops, bringing the total to 12
     10.times do
-      create :pd_workshop
+      create :workshop
     end
 
-    sign_in @admin
+    sign_in create :admin
     get :filter, params: {limit: 5}
     response = JSON.parse(@response.body)
     assert_equal 5, response['limit']
@@ -325,15 +310,15 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   test 'filters' do
     # 10 workshops from different organizers that will be filtered out
     10.times do
-      create :pd_workshop, num_sessions: 1
+      create :workshop
     end
 
     # Same organizer
     organizer = create :workshop_organizer
-    earlier_workshop = create :pd_workshop, organizer: organizer, num_sessions: 1, sessions_from: Time.now
-    later_workshop = create :pd_workshop, organizer: organizer, num_sessions: 1, sessions_from: Time.now + 1.week
+    earlier_workshop = create :workshop, organizer: organizer, sessions_from: Time.now
+    later_workshop = create :workshop, organizer: organizer, sessions_from: Time.now + 1.week
 
-    sign_in @workshop_admin
+    sign_in create :workshop_admin
     filters = {organizer_id: organizer.id.to_s, order_by: 'date desc'}
     get :filter, params: filters
     response = JSON.parse(@response.body)
@@ -346,7 +331,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   # Action: Show
 
   test 'admins can view workshops' do
-    [@admin, @workshop_admin].each do |admin|
+    [create(:admin), create(:workshop_admin)].each do |admin|
       sign_in admin
       get :show, params: {id: @workshop.id}
       assert_response :success
@@ -405,7 +390,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   )
 
   test 'program managers can view a workshop associated with their regional partner' do
-    workshop = create :pd_workshop, regional_partner: @regional_partner
+    workshop = create :workshop, regional_partner: @regional_partner
     sign_in @program_manager
 
     get :show, params: {id: workshop.id}
@@ -413,7 +398,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   end
 
   test 'program managers cannot view a workshop not associated with their regional partner' do
-    workshop = create :pd_workshop
+    workshop = create :workshop
     sign_in @program_manager
 
     get :show, params: {id: workshop.id}
@@ -423,7 +408,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   # Action: Create
 
   test 'admins can create workshops' do
-    sign_in @admin
+    sign_in create :admin
 
     assert_creates(Pd::Workshop) do
       post :create, params: {pd_workshop: workshop_params}
@@ -463,12 +448,25 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     params: -> {{pd_workshop: workshop_params}}
   )
 
-  test 'csf facilitators can create workshops' do
+  test 'csf facilitators can create csf workshops' do
     sign_in(@csf_facilitator)
 
     assert_creates(Pd::Workshop) do
       post :create, params: {pd_workshop: workshop_params}
       assert_response :success
+    end
+  end
+
+  test 'csf facilitators can not create non-csf workshops' do
+    sign_in(@csf_facilitator)
+
+    params = workshop_params.merge(
+      {course: Pd::Workshop::COURSE_CSD}
+    )
+
+    assert_does_not_create(Pd::Workshop) do
+      post :create, params: {pd_workshop: params}
+      assert_response :forbidden
     end
   end
 
@@ -500,11 +498,32 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   end
 
   test 'admins can delete any workshop' do
-    sign_in @admin
+    sign_in create :admin
     assert_destroys(Pd::Workshop) do
       delete :destroy, params: {id: @workshop.id}
     end
     assert_response :success
+  end
+
+  test 'CSF facilitator can delete a workshop where they are the organizer' do
+    csf_facilitator_organizer = create(:pd_course_facilitator, course: Pd::Workshop::COURSE_CSF).facilitator
+    workshop = create :pd_workshop, facilitators: [csf_facilitator_organizer], organizer: csf_facilitator_organizer
+    sign_in csf_facilitator_organizer
+    assert_destroys(Pd::Workshop) do
+      delete :destroy, params: {id: workshop.id}
+    end
+    assert_response :success
+  end
+
+  test 'CSF facilitator can not delete a workshop where they are not the organizer' do
+    csf_facilitator_organizer = create(:pd_course_facilitator, course: Pd::Workshop::COURSE_CSF).facilitator
+    csf_facilitator_nonorganizer = create(:pd_course_facilitator, course: Pd::Workshop::COURSE_CSF).facilitator
+    workshop = create :pd_workshop, facilitators: [csf_facilitator_organizer, csf_facilitator_nonorganizer], organizer: csf_facilitator_organizer
+    sign_in csf_facilitator_nonorganizer
+    assert_does_not_destroy(Pd::Workshop) do
+      delete :destroy, params: {id: workshop.id}
+    end
+    assert_response :forbidden
   end
 
   # TODO: remove this test when workshop_organizer is deprecated
@@ -538,7 +557,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   # Action: Update
 
   test 'admins can update any workshop' do
-    sign_in @admin
+    sign_in create :admin
     put :update, params: {id: @workshop.id, pd_workshop: workshop_params}
     assert_response :success
   end
@@ -547,7 +566,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   test 'organizers can update their workshops, including regional partner' do
     sign_in @workshop_organizer
     params_with_regional_partner = workshop_params.merge({regional_partner_id: @regional_partner.id})
-    workshop = create :pd_workshop, organizer: @workshop_organizer
+    workshop = create :workshop, organizer: @workshop_organizer
 
     put :update, params: {id: workshop.id, pd_workshop: params_with_regional_partner}
     assert_response :success
@@ -558,7 +577,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   test 'program manager organizers can update their workshops, including regional_partner' do
     sign_in @organizer
     params_with_regional_partner = workshop_params.merge({regional_partner_id: @regional_partner.id})
-    workshop = create :pd_workshop, organizer: @organizer
+    workshop = create :workshop, organizer: @organizer
 
     put :update, params: {id: workshop.id, pd_workshop: params_with_regional_partner}
     assert_response :success
@@ -588,7 +607,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   test 'Facilitators can update workshops they organized but not the regional parter' do
     sign_in(@facilitator)
 
-    workshop = create :pd_workshop, organizer: @facilitator
+    workshop = create :workshop, organizer: @facilitator
     put :update, params: {
       id: workshop.id,
       pd_workshop: workshop_params.merge({regional_partner_id: @regional_partner.id})
@@ -601,7 +620,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   test 'CSF Facilitators can update workshops they are assigned to' do
     sign_in(@csf_facilitator)
 
-    workshop = create :pd_workshop, facilitators: [@csf_facilitator]
+    workshop = create :workshop, facilitators: [@csf_facilitator]
     put :update, params: {
       id: workshop.id,
       pd_workshop: workshop_params.merge({regional_partner_id: @regional_partner.id})
@@ -621,13 +640,14 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   )
 
   test 'updating with notify true sends detail change notification emails' do
-    sign_in @admin
+    sign_in create :admin
 
     # create some enrollments
     5.times do
       create :pd_enrollment, workshop: @workshop
     end
     mock_mail = stub(deliver_now: nil)
+    Pd::WorkshopMailer.any_instance.expects(:check_should_send).times(7)
     Pd::WorkshopMailer.any_instance.expects(:detail_change_notification).times(5).returns(mock_mail)
     Pd::WorkshopMailer.any_instance.expects(:facilitator_detail_change_notification).returns(mock_mail)
     Pd::WorkshopMailer.any_instance.expects(:organizer_detail_change_notification).returns(mock_mail)
@@ -640,7 +660,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   end
 
   test 'updating with notify false does not send detail change notification emails' do
-    sign_in @admin
+    sign_in create :admin
 
     # create some enrollments
     5.times do
@@ -675,19 +695,20 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   end
 
   test 'program manager organizers can add workshop sessions' do
-    sign_in @organizer
-    assert_equal 0, @workshop.sessions.count
+    program_manager = create :program_manager
+    workshop = create :workshop, organizer: program_manager, num_sessions: 0
+    sign_in program_manager
 
     session_start = tomorrow_at 9
     session_end = tomorrow_at 17
     params = {sessions_attributes: [{start: session_start, end: session_end}]}
 
-    put :update, params: {id: @workshop.id, pd_workshop: params}
+    put :update, params: {id: workshop.id, pd_workshop: params}
     assert_response :success
-    @workshop.reload
-    assert_equal 1, @workshop.sessions.count
-    assert_equal session_start, @workshop.sessions.first[:start]
-    assert_equal session_end, @workshop.sessions.first[:end]
+    workshop.reload
+    assert_equal 1, workshop.sessions.count
+    assert_equal session_start, workshop.sessions.first[:start]
+    assert_equal session_end, workshop.sessions.first[:end]
   end
 
   # TODO: remove this test when workshop_organizer is deprecated
@@ -715,26 +736,28 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   end
 
   test 'program manager organizers can update existing workshop sessions' do
-    sign_in @organizer
+    program_manager = create :program_manager
+    workshop = create :workshop, organizer: program_manager, num_sessions: 0
     session_initial_start = tomorrow_at 9
     session_initial_end = tomorrow_at 15
     session = create(:pd_session, start: session_initial_start, end: session_initial_end)
-    @workshop.sessions << session
-    @workshop.save!
-    assert_equal 1, @workshop.sessions.count
+    workshop.sessions << session
+    workshop.save!
+    assert_equal 1, workshop.sessions.count
 
+    sign_in program_manager
     session_updated_start = session_initial_start + 2.days
     session_updated_end = session_initial_end + 2.days + 2.hours
     params = {
       sessions_attributes: [{id: session.id, start: session_updated_start, end: session_updated_end}]
     }
-
-    put :update, params: {id: @workshop.id, pd_workshop: params}
+    put :update, params: {id: workshop.id, pd_workshop: params}
     assert_response :success
-    @workshop.reload
-    assert_equal 1, @workshop.sessions.count
-    assert_equal session_updated_start, @workshop.sessions.first[:start]
-    assert_equal session_updated_end, @workshop.sessions.first[:end]
+
+    workshop.reload
+    assert_equal 1, workshop.sessions.count
+    assert_equal session_updated_start, workshop.sessions.first[:start]
+    assert_equal session_updated_end, workshop.sessions.first[:end]
   end
 
   # TODO: remove this test when workshop_organizer is deprecated
@@ -754,18 +777,17 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   end
 
   test 'program manager organizers can destroy workshop sessions' do
-    sign_in @organizer
-    session = create(:pd_session)
-    @workshop.sessions << session
-    @workshop.save!
-    assert_equal 1, @workshop.sessions.count
+    program_manager = create :program_manager
+    workshop = create :workshop, organizer: program_manager
+    session = workshop.sessions.first
 
+    sign_in program_manager
     params = {sessions_attributes: [{id: session.id, _destroy: true}]}
-
-    put :update, params: {id: @workshop.id, pd_workshop: params}
+    put :update, params: {id: workshop.id, pd_workshop: params}
     assert_response :success
-    @workshop.reload
-    assert_equal 0, @workshop.sessions.count
+
+    workshop.reload
+    assert_equal 0, workshop.sessions.count
   end
 
   # TODO: remove this test when workshop_organizer is deprecated
@@ -804,27 +826,24 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   # Actions: Start, End
 
   test 'admins can start and end workshops' do
-    Pd::AsyncWorkshopHandler.expects(:process_ended_workshop).with(@workshop.id)
+    workshop = create :workshop
 
-    sign_in @admin
-    @workshop.sessions << create(:pd_session)
-    assert_equal 'Not Started', @workshop.state
+    sign_in create :admin
+    assert_equal 'Not Started', workshop.state
 
-    post :start, params: {id: @workshop.id}
+    post :start, params: {id: workshop.id}
     assert_response :success
-    @workshop.reload
-    assert_equal 'In Progress', @workshop.state
+    workshop.reload
+    assert_equal 'In Progress', workshop.state
 
-    post :end, params: {id: @workshop.id}
+    post :end, params: {id: workshop.id}
     assert_response :success
-    @workshop.reload
-    assert_equal 'Ended', @workshop.state
+    workshop.reload
+    assert_equal 'Ended', workshop.state
   end
 
   # TODO: remove this test when workshop_organizer is deprecated
   test 'organizers can start and stop their workshops' do
-    Pd::AsyncWorkshopHandler.expects(:process_ended_workshop).with(@organizer_workshop.id)
-
     sign_in @workshop_organizer
     @organizer_workshop.sessions << create(:pd_session)
     assert_equal 'Not Started', @organizer_workshop.state
@@ -841,21 +860,20 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   end
 
   test 'program manager organizers can start and stop their workshops' do
-    Pd::AsyncWorkshopHandler.expects(:process_ended_workshop).with(@workshop.id)
+    program_manager = create :program_manager
+    workshop = create :workshop, organizer: program_manager
+    assert_equal 'Not Started', workshop.state
 
-    sign_in @organizer
-    @workshop.sessions << create(:pd_session)
-    assert_equal 'Not Started', @workshop.state
-
-    post :start, params: {id: @workshop.id}
+    sign_in program_manager
+    post :start, params: {id: workshop.id}
     assert_response :success
-    @workshop.reload
-    assert_equal 'In Progress', @workshop.state
+    workshop.reload
+    assert_equal 'In Progress', workshop.state
 
-    post :end, params: {id: @workshop.id}
+    post :end, params: {id: workshop.id}
     assert_response :success
-    @workshop.reload
-    assert_equal 'Ended', @workshop.state
+    workshop.reload
+    assert_equal 'Ended', workshop.state
   end
 
   # TODO: remove this test when workshop_organizer is deprecated
@@ -875,16 +893,16 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
 
   test 'program manager organizers cannot start and stop workshops they are not organizing' do
     sign_in create(:workshop_organizer)
-    @workshop.sessions << create(:pd_session)
-    assert_equal 'Not Started', @workshop.state
+    workshop = create :workshop
+    assert_equal 'Not Started', workshop.state
 
-    post :start, params: {id: @workshop.id}
+    post :start, params: {id: workshop.id}
     assert_response :forbidden
 
-    post :end, params: {id: @workshop.id}
+    post :end, params: {id: workshop.id}
     assert_response :forbidden
-    @workshop.reload
-    assert_equal 'Not Started', @workshop.state
+    workshop.reload
+    assert_equal 'Not Started', workshop.state
   end
 
   # No access
@@ -947,8 +965,8 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   )
 
   test 'summary' do
-    sign_in @admin
-    workshop = create :pd_workshop, num_sessions: 3
+    sign_in create :admin
+    workshop = create :workshop, num_sessions: 3
     workshop.start!
 
     get :summary, params: {id: workshop.id}
@@ -961,7 +979,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
 
   # Multi-facilitator special loading for index
   test 'Loads both facilitators when calling index' do
-    workshop = create :pd_workshop, num_facilitators: 2
+    workshop = create :workshop, num_facilitators: 2
     sign_in(workshop.facilitators.first)
     get :index
     assert_response :success
@@ -971,7 +989,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   end
 
   test 'Loads both facilitators when calling show' do
-    workshop = create :pd_workshop, num_facilitators: 2
+    workshop = create :workshop, num_facilitators: 2
     sign_in(workshop.facilitators.first)
     get :show, params: {id: workshop.id}
     assert_response :success
@@ -985,10 +1003,10 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     user = create :workshop_organizer
     user.permission = UserPermission::FACILITATOR
     expected_workshops = [
-      create(:pd_workshop, facilitators: [user]),
-      create(:pd_workshop, num_facilitators: 1, organizer: user),
-      create(:pd_workshop, facilitators: [user], organizer: user),
-      create(:pd_workshop, organizer: user)
+      create(:workshop, facilitators: [user]),
+      create(:workshop, num_facilitators: 1, organizer: user),
+      create(:workshop, facilitators: [user], organizer: user),
+      create(:workshop, organizer: user)
     ]
 
     sign_in(user)
@@ -999,23 +1017,21 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
 
   test 'Admins can view all Teachercon workshops' do
     phoenix = create(
-      :pd_workshop,
+      :workshop,
       course: Pd::Workshop::COURSE_CSD,
-      num_sessions: 1,
       organizer: @organizer,
       subject: Pd::Workshop::SUBJECT_TEACHER_CON,
       location_address: "Phoenix"
     )
     atlanta = create(
-      :pd_workshop,
+      :workshop,
       course: Pd::Workshop::COURSE_CSD,
-      num_sessions: 1,
       organizer: @organizer,
       subject: Pd::Workshop::SUBJECT_TEACHER_CON,
       location_address: "Atlanta"
     )
 
-    sign_in @admin
+    sign_in create :admin
 
     get :upcoming_teachercons
     assert_response :success
@@ -1026,21 +1042,19 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
 
   test 'Teachercon workshops can be filtered by course' do
     csd = create(
-      :pd_workshop,
+      :workshop,
       course: Pd::Workshop::COURSE_CSD,
-      num_sessions: 1,
       organizer: @organizer,
       subject: Pd::Workshop::SUBJECT_TEACHER_CON,
     )
     csp = create(
-      :pd_workshop,
+      :workshop,
       course: Pd::Workshop::COURSE_CSP,
-      num_sessions: 1,
       organizer: @organizer,
       subject: Pd::Workshop::SUBJECT_TEACHER_CON,
     )
 
-    sign_in @admin
+    sign_in create :admin
 
     get :upcoming_teachercons, params: {course: Pd::Workshop::COURSE_CSD}
     assert_response :success
@@ -1054,26 +1068,26 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   end
 
   test 'workshop admins can unstart' do
-    @workshop.sessions << create(:pd_session)
-    @workshop.start!
+    workshop = create :workshop
+    workshop.start!
 
-    sign_in @workshop_admin
-    post :unstart, params: {id: @workshop.id}
+    sign_in create :workshop_admin
+    post :unstart, params: {id: workshop.id}
     assert_response :success
-    @workshop.reload
-    assert_equal 'Not Started', @workshop.state
+    workshop.reload
+    assert_equal 'Not Started', workshop.state
   end
 
   test 'workshop admins can reopen' do
-    @workshop.sessions << create(:pd_session)
-    @workshop.start!
-    @workshop.end!
+    workshop = create :workshop
+    workshop.start!
+    workshop.end!
 
-    sign_in @workshop_admin
-    post :reopen, params: {id: @workshop.id}
+    sign_in create :workshop_admin
+    post :reopen, params: {id: workshop.id}
     assert_response :success
-    @workshop.reload
-    assert_equal 'In Progress', @workshop.state
+    workshop.reload
+    assert_equal 'In Progress', workshop.state
   end
 
   test 'program managers cannot unstart' do

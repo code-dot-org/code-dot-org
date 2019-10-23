@@ -332,7 +332,9 @@ module Api::V1::Pd
     end
 
     test 'update appends to the timestamp log if fit workshop is changed' do
-      fit_workshop = create :pd_workshop, :fit, num_sessions: 3, sessions_from: Date.new(2019, 6, 1), processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
+      fit_workshop = create :fit_workshop,
+        sessions_from: Date.new(2019, 6, 1),
+        processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
 
       sign_in @program_manager
       @csp_facilitator_application.update(status_timestamp_change_log: '[]')
@@ -354,7 +356,9 @@ module Api::V1::Pd
     end
 
     test 'update appends to the timestamp log if summer workshop is changed' do
-      summer_workshop = create :pd_workshop, :local_summer_workshop, num_sessions: 5, sessions_from: Date.new(2019, 6, 1), processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
+      summer_workshop = create :summer_workshop,
+        sessions_from: Date.new(2019, 6, 1),
+        processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
 
       sign_in @program_manager
       @csp_facilitator_application.update(status_timestamp_change_log: '[]')
@@ -376,8 +380,12 @@ module Api::V1::Pd
     end
 
     test 'update does not append to the timestamp log if fit and summer workshop are not changed' do
-      summer_workshop = create :pd_workshop, :local_summer_workshop, num_sessions: 5, sessions_from: Date.new(2019, 6, 1), processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
-      fit_workshop = create :pd_workshop, :fit, num_sessions: 3, sessions_from: Date.new(2019, 6, 1), processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
+      summer_workshop = create :summer_workshop,
+        sessions_from: Date.new(2019, 6, 1),
+        processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
+      fit_workshop = create :fit_workshop,
+        sessions_from: Date.new(2019, 6, 1),
+        processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
 
       sign_in @program_manager
       @csp_facilitator_application.update(status_timestamp_change_log: '[]')
@@ -645,10 +653,12 @@ module Api::V1::Pd
 
     # TODO: remove this test when workshop_organizer is deprecated
     test 'cohort view as a workshop organizer returns expected columns for a teacher' do
-      time = Date.new(2017, 3, 15)
+      time = Date.new(2020, 3, 15)
 
       Timecop.freeze(time) do
-        workshop = create :pd_workshop, :local_summer_workshop, num_sessions: 3, sessions_from: Date.new(2017, 1, 1), processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
+        workshop = create :summer_workshop,
+          sessions_from: Date.new(2020, 1, 1),
+          processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
         create :pd_enrollment, workshop: workshop, user: @serializing_teacher
 
         application = create(
@@ -670,12 +680,12 @@ module Api::V1::Pd
         assert_equal(
           {
             id: application.id,
-            date_accepted: '2017-03-15',
+            date_accepted: '2020-03-15',
             applicant_name: 'Minerva McGonagall',
             district_name: 'A School District',
             school_name: 'A Seattle Public School',
             email: 'minerva@hogwarts.edu',
-            assigned_workshop: 'January 1-3, 2017, Orchard Park NY',
+            assigned_workshop: 'January 1-5, 2020, Orchard Park NY',
             registered_workshop: 'Yes',
             status: 'accepted_not_notified',
             notes: nil,
@@ -691,7 +701,7 @@ module Api::V1::Pd
 
     # TODO: remove this test when workshop_organizer is deprecated
     test 'cohort view as a workshop organizer returns expected columns for a teacher without a workshop' do
-      time = Date.new(2017, 3, 15)
+      time = Date.new(2020, 3, 15)
 
       Timecop.freeze(time) do
         application = create(
@@ -712,7 +722,7 @@ module Api::V1::Pd
         assert_equal(
           {
             id: application.id,
-            date_accepted: '2017-03-15',
+            date_accepted: '2020-03-15',
             applicant_name: 'Minerva McGonagall',
             district_name: 'A School District',
             school_name: 'A Seattle Public School',
@@ -733,7 +743,7 @@ module Api::V1::Pd
 
     # TODO: remove this test when workshop_organizer is deprecated
     test 'cohort view as a workshop organizer returns expected columns for a facilitator' do
-      time = Date.new(2017, 3, 15)
+      time = Date.new(2020, 3, 15)
 
       Timecop.freeze(time) do
         application = create(
@@ -755,7 +765,7 @@ module Api::V1::Pd
         assert_equal(
           {
             id: application.id,
-            date_accepted: '2017-03-15',
+            date_accepted: '2020-03-15',
             applicant_name: 'Minerva McGonagall',
             district_name: 'A School District',
             school_name: 'Hogwarts',
@@ -777,10 +787,12 @@ module Api::V1::Pd
     end
 
     test 'cohort view returns expected columns for a teacher' do
-      time = Date.new(2017, 3, 15)
+      time = Date.new(2020, 3, 15)
 
       Timecop.freeze(time) do
-        workshop = create :pd_workshop, :local_summer_workshop, num_sessions: 3, sessions_from: Date.new(2017, 1, 1), processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
+        workshop = create :summer_workshop,
+          sessions_from: Date.new(2020, 1, 1),
+          processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
         create :pd_enrollment, workshop: workshop, user: @serializing_teacher
 
         application = create(
@@ -804,12 +816,12 @@ module Api::V1::Pd
         assert_equal(
           {
             id: application.id,
-            date_accepted: '2017-03-15',
+            date_accepted: '2020-03-15',
             applicant_name: 'Minerva McGonagall',
             district_name: 'A School District',
             school_name: 'A Seattle Public School',
             email: 'minerva@hogwarts.edu',
-            assigned_workshop: 'January 1-3, 2017, Orchard Park NY',
+            assigned_workshop: 'January 1-5, 2020, Orchard Park NY',
             registered_workshop: 'Yes',
             status: 'accepted_not_notified',
             notes: nil,
@@ -824,7 +836,7 @@ module Api::V1::Pd
     end
 
     test 'cohort view returns expected columns for a teacher without a workshop' do
-      time = Date.new(2017, 3, 15)
+      time = Date.new(2020, 3, 15)
 
       Timecop.freeze(time) do
         application = create(
@@ -845,7 +857,7 @@ module Api::V1::Pd
         assert_equal(
           {
             id: application.id,
-            date_accepted: '2017-03-15',
+            date_accepted: '2020-03-15',
             applicant_name: 'Minerva McGonagall',
             district_name: 'A School District',
             school_name: 'A Seattle Public School',
@@ -865,7 +877,7 @@ module Api::V1::Pd
     end
 
     test 'cohort view returns expected columns for a facilitator' do
-      time = Date.new(2017, 3, 15)
+      time = Date.new(2020, 3, 15)
 
       Timecop.freeze(time) do
         application = create(
@@ -887,7 +899,7 @@ module Api::V1::Pd
         assert_equal(
           {
             id: application.id,
-            date_accepted: '2017-03-15',
+            date_accepted: '2020-03-15',
             applicant_name: 'Minerva McGonagall',
             district_name: 'A School District',
             school_name: 'Hogwarts',
@@ -910,7 +922,7 @@ module Api::V1::Pd
 
     test 'cohort csv download returns expected columns for teachers' do
       application = create TEACHER_APPLICATION_FACTORY, course: 'csp'
-      create :pd_principal_approval1920_application, teacher_application: application
+      create PRINCIPAL_APPROVAL_FACTORY, teacher_application: application
       application.update(status: 'accepted_not_notified')
       sign_in @workshop_admin
       get :cohort_view, format: 'csv', params: {role: 'csp_teachers'}
@@ -956,19 +968,16 @@ module Api::V1::Pd
         "Current role",
         "Are you completing this application on behalf of someone else?",
         "If yes, please include the full name and role of the teacher and why you are applying on behalf of this teacher.",
-        "Which professional learning program would you like to join for the 2018-19 school year?",
-        "To which grades does your school plan to offer CS Principles in the 2019-20 school year?",
+        "Which professional learning program would you like to join for the 2020-21 school year?",
+        "To which grades does your school plan to offer CS Principles in the 2020-21 school year?",
         "How will you offer CS Principles?",
         "How many minutes will your CS Program class last?",
         "How many days per week will your CS program class be offered to one section of students?",
         "How many weeks during the year will this course be taught to one section of students?",
         "Total course hours",
-        "How will you be offering this CS program course to students?",
-        "Do you plan to personally teach this course in the 2019-20 school year?",
+        "Do you plan to personally teach this course in the 2020-21 school year?",
         "Will this course replace an existing computer science course in the master schedule? (Teacher's response)",
-        "If yes, please describe the course it will be replacing and why:",
-        "What subjects are you teaching this year (2018-19)?",
-        "Have you taught computer science courses or activities in the past?",
+        "Which existing course or curriculum will it replace? Mark all that apply.",
         "Have you participated in previous yearlong Code.org Professional Learning Programs?",
         "Are you committed to participating in the entire Professional Learning Program?",
         "Please indicate which workshops you are able to attend.",
@@ -987,8 +996,7 @@ module Api::V1::Pd
         "Principal's email address (provided by principal)",
         "School name (provided by principal)",
         "School district (provided by principal)",
-        "Do you approve of this teacher participating in Code.org's 2019-20 Professional Learning Program?",
-        "Is this teacher planning to teach this course in the 2019-20 school year?",
+        "Do you approve of this teacher participating in Code.org's 2020-21 Professional Learning Program?",
         "Total student enrollment",
         "Percentage of students who are eligible to receive free or reduced lunch (Principal's response)",
         "Percentage of underrepresented minority students (Principal's response)",
@@ -999,17 +1007,17 @@ module Api::V1::Pd
         "Percentage of student enrollment by race - Native Hawaiian or other Pacific Islander",
         "Percentage of student enrollment by race - American Indian or Native Alaskan",
         "Percentage of student enrollment by race - Other",
-        "Are you committed to including this course on the master schedule in 2019-20 if this teacher is accepted into the program?",
+        "Are you committed to including this course on the master schedule in 2020-21 if this teacher is accepted into the program?",
         "Will this course replace an existing computer science course in the master schedule? (Principal's response)",
         "Which existing course or curriculum will CS Principles replace?",
         "How will you implement CS Principles at your school?",
         "Do you commit to recruiting and enrolling a diverse group of students in this course, representative of the overall demographics of your school?",
         "If there is a fee for the program, will your teacher or your school be able to pay for the fee?",
-        "How did you hear about this program? (Principal's response)",
         "Principal authorizes college board to send AP Scores",
         "Contact name for invoicing",
         "Contact email or phone number for invoicing",
         "Title I status code (NCES data)",
+        "Rural Status",
         "Total student enrollment (NCES data)",
         "Percentage of students who are eligible to receive free or reduced lunch (NCES data)",
         "Percentage of underrepresented minority students (NCES data)",
@@ -1120,7 +1128,7 @@ module Api::V1::Pd
     end
 
     test 'fit_cohort' do
-      fit_workshop = create :pd_workshop, :fit
+      fit_workshop = create :fit_workshop
 
       # create some applications to be included in fit_cohort
       create FACILITATOR_APPLICATION_FACTORY, :locked, fit_workshop_id: fit_workshop.id, status: :accepted

@@ -935,10 +935,12 @@ StudioApp.prototype.toggleRunReset = function(button) {
 
   var run = document.getElementById('runButton');
   var reset = document.getElementById('resetButton');
-  run.style.display = showRun ? 'inline-block' : 'none';
-  run.disabled = !showRun;
-  reset.style.display = !showRun ? 'inline-block' : 'none';
-  reset.disabled = showRun;
+  if (run || reset) {
+    run.style.display = showRun ? 'inline-block' : 'none';
+    run.disabled = !showRun;
+    reset.style.display = !showRun ? 'inline-block' : 'none';
+    reset.disabled = showRun;
+  }
 
   // Toggle soft-buttons (all have the 'arrow' class set):
   $('.arrow').prop('disabled', showRun);
@@ -2131,6 +2133,34 @@ StudioApp.prototype.handleHideSource_ = function(options) {
 };
 
 /**
+ * Adds any library blocks in the project to the toolbox.
+ * @param {object} config The object containing all metadata about the project
+ */
+StudioApp.prototype.loadLibraryBlocks = function(config) {
+  if (!config.level.libraries) {
+    return;
+  }
+
+  config.level.libraryCode = '';
+  config.level.libraries.forEach(library => {
+    config.dropletConfig.additionalPredefValues.push(library.name);
+    config.level.libraryCode += library.source;
+    // TODO: add category management for libraries (blocked on spec)
+    // config.dropletConfig.categories['libraryName'] = {
+    //   id: 'libraryName',
+    //   color: 'colorName',
+    //   rgb: 'colorHexCode',
+    //   blocks: []
+    // };
+
+    library.dropletConfig.forEach(dropletConfig => {
+      config.dropletConfig.blocks.push(dropletConfig);
+      config.level.codeFunctions[dropletConfig.func] = null;
+    });
+  });
+};
+
+/**
  * Move the droplet cursor to the first token at a specific line number.
  * @param {Number} line zero-based line index
  */
@@ -3213,6 +3243,7 @@ StudioApp.prototype.setPageConstants = function(config, appSpecificConstants) {
       is13Plus: config.is13Plus,
       isSignedIn: config.isSignedIn,
       userId: config.userId,
+      verifiedTeacher: config.verifiedTeacher,
       textToSpeechEnabled: config.textToSpeechEnabled,
       isK1: config.level.isK1,
       appType: config.app,

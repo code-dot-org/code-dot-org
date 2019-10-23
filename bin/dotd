@@ -116,7 +116,6 @@ def do_dtp(dotd_name)
     )
   end
   GitHub.open_url GitHub.url(production_pr_number) unless dtp_auto_merged
-  delete_branch branch_name
   @logger.info "DTPs #{test_green_commit} in #{GitHub.url(production_pr_number)}"
 end
 
@@ -136,7 +135,6 @@ def do_dtl(dotd_name)
     head: branch_name,
     title: "DTL (Test > Levelbuilder: #{test_green_commit})"
   )
-  delete_branch branch_name
   puts "MERGED DTL: PR#{levelbuilder_pr_number} (#{GitHub.url(levelbuilder_pr_number)})"
   @logger.info "DTLs #{test_green_commit} in #{GitHub.url(levelbuilder_pr_number)}"
 end
@@ -485,21 +483,6 @@ def create_branch_from_commit(branch_name, commit)
       'cd test',
       "git branch --no-track #{branch_name} #{commit}",
       "git push origin #{branch_name}"
-    ].join(' && ')
-  )
-end
-
-# Deletes the specified branch, both from the test server and from GitHub.
-# @param [String] branch_name The name of the branch to delete.
-def delete_branch(branch_name)
-  # We use the test server as a workspace because we don't want to require that
-  # the DOTD script be run from within the repo.
-  run_on(
-    'test',
-    [
-      'cd test',
-      "git branch -D #{branch_name}",
-      "git push origin --delete #{branch_name}"
     ].join(' && ')
   )
 end

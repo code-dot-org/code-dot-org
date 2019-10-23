@@ -409,8 +409,6 @@ module Pd::Application
         "\"#{regional_partner.contact_name}\" <#{regional_partner.contact_email}>"
       elsif regional_partner.program_managers&.first.present?
         "\"#{regional_partner.program_managers.first.name}\" <#{regional_partner.program_managers.first.email}>"
-      elsif regional_partner.contact&.email.present?
-        "\"#{regional_partner.contact.name}\" <#{regional_partner.contact.email}>"
       end
     end
 

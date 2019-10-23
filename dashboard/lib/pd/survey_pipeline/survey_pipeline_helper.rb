@@ -3,25 +3,25 @@ require 'pd/survey_pipeline/daily_survey_parser.rb'
 require 'pd/survey_pipeline/daily_survey_joiner.rb'
 require 'pd/survey_pipeline/mapper.rb'
 require 'pd/survey_pipeline/daily_survey_decorator.rb'
-require 'pd/survey_pipeline/survey_rollup_decorator.rb'
 
 module Pd::SurveyPipeline::Helper
+  include Pd::JotForm::Constants
+
   QUESTION_CATEGORIES = [
     FACILITATOR_EFFECTIVENESS_CATEGORY = 'facilitator_effectiveness',
     WORKSHOP_OVERALL_SUCCESS_CATEGORY = 'overall_success',
     WORKSHOP_TEACHER_ENGAGEMENT_CATEGORY = 'teacher_engagement'
   ]
 
-  # Summarize facilitator-specific and general workshop results from all workshops
-  # that a group of selected facilitators have facilitated.
+  # Roll up facilitator-specific and general workshop survey results from all related workshops.
   #
-  # @param workshop [Pd::Workshop]
-  # @param current_user [User]
-  #
-  # @return [Hash]
+  # @param workshop [Pd::Workshop] the workshop user selects, which is used to find related workshops
+  # @param current_user [User] the user requesting survey report
+  # @return [Hash] {:workshopRollups, :facilitatorRollups => rollup_content}
+  # @see SurveyRollupDecorator.decorate_facilitator_rollup for data structure of rollup_content
   #
   def report_rollups(workshop, current_user)
-    # Filter list of facilitators that the current user can see.
+    # Get list of facilitators this user can see
     facilitator_ids =
       if current_user.program_manager? || current_user.workshop_organizer? || current_user.workshop_admin?
         workshop.facilitators.pluck(:id)
@@ -29,73 +29,53 @@ module Pd::SurveyPipeline::Helper
         [current_user.id]
       end
 
-    # Roll up facilitator-specific results and general workshop results for each facilitator
-    results = {}
-    facilitator_ids.each do |facilitator_id|
-      results.deep_merge! report_facilitator_rollup(facilitator_id, workshop)
-      results.deep_merge! report_workshop_rollup(facilitator_id, workshop)
+    # Roll up facilitator-specific and general workshop results
+    reports = {facilitator_rollups: {}, workshop_rollups: {}}
+
+    facilitator_ids.each do |fid|
+      reports[:facilitator_rollups].deep_merge! report_facilitator_rollup(fid, workshop, true)
+      reports[:workshop_rollups].deep_merge! report_facilitator_rollup(fid, workshop, false)
+
+      # TODO: report_partner_rollup()
+      # TODO: report_cdo_rollup()
     end
 
-    results
+    reports
   end
 
-  # Summarize facilitator-specific results from all related workshops
-  # that a facilitator have facilitated.
+  # Summarize facilitator-specific results from all related workshops a facilitator have facilitated.
   #
-  # @param facilitator_id [Number] a valid user id
-  # @param workshop [Pd::Workshop] a valid workshop
+  # @param facilitator_id [Integer]
+  # @param workshop [Pd::Workshop]
+  # @param only_facilitator_questions [Boolean]
+  # @return [Hash]
   #
-  # @return [Hash{:facilitators, :facilitator_response_counts, :facilitator_averages, :errors => Hash, Array}]
-  #   facilitators: {facilitator_id => fac_name}
-  #   facilitator_response_counts: {this_workshop, all_my_workshops => {facilitator_id => count}}
-  #   facilitator_averages: {
-  #     fac_name => {qcategory, qname => {this_workshop, all_my_workshops => score}},
-  #     questions => {qname => qtext}
-  #    }
-  #   errors: Array
-  #
-  def report_facilitator_rollup(facilitator_id, workshop)
+  def report_facilitator_rollup(facilitator_id, workshop, only_facilitator_questions)
     context = {
       current_workshop_id: workshop.id,
       facilitator_id: facilitator_id,
-      question_categories: [FACILITATOR_EFFECTIVENESS_CATEGORY],
-      submission_type: 'Facilitator'
     }
 
-    # Retrieve data
+    context[:question_categories] = only_facilitator_questions ?
+      [FACILITATOR_EFFECTIVENESS_CATEGORY] :
+      [WORKSHOP_OVERALL_SUCCESS_CATEGORY, WORKSHOP_TEACHER_ENGAGEMENT_CATEGORY]
+
     related_ws_ids = find_related_workshop_ids(facilitator_id, workshop.course)
     context[:related_workshop_ids] = related_ws_ids
-    context.merge! retrieve_facilitator_surveys([facilitator_id], related_ws_ids)
+
+    # Retrieve data
+    context.merge!(only_facilitator_questions ?
+      retrieve_facilitator_surveys([facilitator_id], related_ws_ids) :
+      retrieve_workshop_surveys(related_ws_ids)
+    )
 
     # Process data
     process_rollup_data context
 
     # Decorate
-    Pd::SurveyPipeline::FacilitatorSurveyRollupDecorator.process_data context
-
-    context[:decorated_summaries]
-  end
-
-  def report_workshop_rollup(facilitator_id, workshop)
-    context = {
-      current_workshop_id: workshop.id,
-      facilitator_id: facilitator_id,
-      question_categories: [WORKSHOP_OVERALL_SUCCESS_CATEGORY, WORKSHOP_TEACHER_ENGAGEMENT_CATEGORY],
-      submission_type: 'Workshop'
-    }
-
-    # Retrieve data
-    related_ws_ids = find_related_workshop_ids(facilitator_id, workshop.course)
-    context[:related_workshop_ids] = related_ws_ids
-    context.merge! retrieve_workshop_surveys(related_ws_ids)
-
-    # Process data
-    process_rollup_data context
-
-    # Decorate
-    Pd::SurveyPipeline::WorkshopSurveyRollupDecorator.process_data context
-
-    context[:decorated_summaries]
+    Pd::SurveyPipeline::SurveyRollupDecorator.decorate_facilitator_rollup(
+      context, only_facilitator_questions
+    )
   end
 
   def process_rollup_data(context)
@@ -134,8 +114,8 @@ module Pd::SurveyPipeline::Helper
     group_config_this_ws = [:workshop_id, :name, :type, :answer_type]
 
     is_selected_question_this_ws = lambda do |hash|
-      hash[:workshop_id] == context[:current_workshop_id] &&
-      context[:question_categories].any? {|category| hash[:name]&.start_with? category}
+      (hash[:workshop_id] == context[:current_workshop_id]) &&
+        context[:question_categories].any? {|category| hash[:name]&.start_with? category}
     end
 
     map_config_this_ws = [
@@ -155,58 +135,44 @@ module Pd::SurveyPipeline::Helper
   #
   # @param workshop [Pd::Workshop]
   # @param current_user [User]
-  #
   # @return [Hash]
   #
   def report_single_workshop(workshop, current_user)
-    # Fields used to group survey answers
-    group_config = [:workshop_id, :form_id, :facilitator_id, :name, :type, :answer_type]
-
-    # Rules to map groups of survey answers to reducers
-    is_single_select_answer = lambda {|hash| hash.dig(:answer_type) == 'singleSelect'}
-    is_free_format_question = lambda {|hash| ['textbox', 'textarea'].include?(hash[:type])}
-
-    map_config = [
-      {
-        condition: is_single_select_answer,
-        field: :answer,
-        reducers: [Pd::SurveyPipeline::HistogramReducer]
-      },
-      {
-        condition: is_free_format_question,
-        field: :answer,
-        reducers: [Pd::SurveyPipeline::NoOpReducer]
-      }
-    ]
-
     # Centralized context object shared by all workers in the pipeline.
     # Workers read from and write to this object.
     context = {
       current_user: current_user,
-      filters: {workshop_ids: @workshop.id}
+      filters: {workshop_ids: workshop.id}
     }
 
-    # Assembly line to summarize CSF surveys
-    workers = [
-      Pd::SurveyPipeline::DailySurveyRetriever,
-      Pd::SurveyPipeline::DailySurveyParser,
-      Pd::SurveyPipeline::DailySurveyJoiner,
-      Pd::SurveyPipeline::GenericMapper.new(
-        group_config: group_config, map_config: map_config
-      ),
-      Pd::SurveyPipeline::DailySurveyDecorator
+    Pd::SurveyPipeline::DailySurveyRetriever.process_data context
+    Pd::SurveyPipeline::DailySurveyParser.process_data context
+    Pd::SurveyPipeline::DailySurveyJoiner.process_data context
+
+    # Fields used to group survey answers
+    group_config = [:workshop_id, :day, :facilitator_id, :form_id, :name, :type, :answer_type]
+
+    # Rules to map groups of survey answers to reducers
+    is_single_select_answer =
+      lambda {|hash| [ANSWER_SINGLE_SELECT, ANSWER_SCALE].include? hash.dig(:answer_type)}
+    not_single_select_answer =
+      lambda {|hash| ![ANSWER_SINGLE_SELECT, ANSWER_SCALE].include?(hash.dig(:answer_type))}
+
+    map_config = [
+      {condition: is_single_select_answer, field: :answer, reducers: [Pd::SurveyPipeline::HistogramReducer]},
+      {condition: not_single_select_answer, field: :answer, reducers: [Pd::SurveyPipeline::NoOpReducer]}
     ]
 
-    create_generic_survey_report context, workers
-    context[:decorated_summaries]
+    Pd::SurveyPipeline::GenericMapper.
+      new(group_config: group_config, map_config: map_config).
+      process_data(context)
+
+    Pd::SurveyPipeline::DailySurveyModifier.augment_questions_for_display context[:parsed_questions]
+
+    Pd::SurveyPipeline::DailySurveyDecorator.decorate_single_workshop context
   end
 
-  # Create survey report by having a group of workers process data in the same context.
-  def create_generic_survey_report(context, workers)
-    workers&.each do |w|
-      w.process_data context
-    end
-  end
+  private
 
   # Find all workshops of the same course and facilitated by a facilitator.
   #

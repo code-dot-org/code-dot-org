@@ -10,6 +10,9 @@ import {
   isScriptHiddenForSection,
   toggleHiddenScript
 } from '@cdo/apps/code-studio/hiddenStageRedux';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
+import experiments from '@cdo/apps/util/experiments';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 const styles = {
   main: {
@@ -42,6 +45,14 @@ const styles = {
     marginBottom: 12,
     marginLeft: 0,
     marginRight: 0
+  },
+  assigned: {
+    color: color.level_perfect,
+    fontSize: 16,
+    fontFamily: '"Gotham 5r", sans-serif',
+    lineHeight: '36px',
+    marginLeft: 10,
+    verticalAlign: 'top'
   }
 };
 
@@ -51,6 +62,7 @@ class CourseScript extends Component {
     name: PropTypes.string,
     id: PropTypes.number.isRequired,
     description: PropTypes.string,
+    assignedSectionId: PropTypes.number,
 
     // redux provided
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
@@ -63,6 +75,19 @@ class CourseScript extends Component {
   onClickHiddenToggle = value => {
     const {name, selectedSectionId, id, toggleHiddenScript} = this.props;
     toggleHiddenScript(name, selectedSectionId, id, value === 'hidden');
+    firehoseClient.putRecord(
+      {
+        study: 'hidden-units',
+        study_group: 'v0',
+        event: value,
+        script_id: id,
+        data_json: JSON.stringify({
+          script_name: name,
+          section_id: selectedSectionId
+        })
+      },
+      {useProgressScriptId: false}
+    );
   };
 
   render() {
@@ -74,7 +99,8 @@ class CourseScript extends Component {
       viewAs,
       selectedSectionId,
       hiddenStageState,
-      hasNoSections
+      hasNoSections,
+      assignedSectionId
     } = this.props;
 
     const isHidden = isScriptHiddenForSection(
@@ -86,6 +112,8 @@ class CourseScript extends Component {
     if (isHidden && viewAs === ViewType.Student) {
       return null;
     }
+
+    const isAssigned = assignedSectionId === parseInt(selectedSectionId);
 
     return (
       <div
@@ -105,6 +133,12 @@ class CourseScript extends Component {
             color={Button.ButtonColor.gray}
             className="uitest-go-to-unit-button"
           />
+          {isAssigned && experiments.isEnabled(experiments.ASSIGNMENT_UPDATES) && (
+            <span style={styles.assigned}>
+              <FontAwesome icon="check" />
+              {i18n.assigned()}
+            </span>
+          )}
         </div>
         {viewAs === ViewType.Teacher && !hasNoSections && (
           <CourseScriptTeacherInfo

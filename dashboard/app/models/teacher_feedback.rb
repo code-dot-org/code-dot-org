@@ -5,8 +5,8 @@
 #  id                       :integer          not null, primary key
 #  comment                  :text(65535)
 #  student_id               :integer
-#  level_id                 :integer
-#  teacher_id               :integer
+#  level_id                 :integer          not null
+#  teacher_id               :integer          not null
 #  created_at               :datetime         not null
 #  updated_at               :datetime         not null
 #  deleted_at               :datetime
@@ -14,18 +14,17 @@
 #  student_visit_count      :integer
 #  student_first_visited_at :datetime
 #  student_last_visited_at  :datetime
-#  script_level_id          :integer
+#  script_level_id          :integer          not null
 #  seen_on_feedback_page_at :datetime
 #
 # Indexes
 #
-#  index_feedback_on_student_and_level                 (student_id,level_id)
 #  index_feedback_on_student_and_level_and_teacher_id  (student_id,level_id,teacher_id)
 #
 
 class TeacherFeedback < ApplicationRecord
   acts_as_paranoid # use deleted_at column instead of deleting rows
-  validates_presence_of :student_id, :level_id, :teacher_id, unless: :deleted?
+  validates_presence_of :student_id, :level_id, :teacher_id, :script_level_id, unless: :deleted?
   belongs_to :student, class_name: 'User'
   has_many :student_sections, class_name: 'Section', through: :student, source: 'sections_as_student'
   belongs_to :level

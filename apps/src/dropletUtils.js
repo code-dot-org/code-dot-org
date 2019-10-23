@@ -62,7 +62,7 @@ export const dropletGlobalConfigBlocks = [
     parent: globalFunctions,
     category: 'Math',
     type: 'value',
-    params: ['__']
+    params: ['1', '10']
   },
   {
     func: 'prompt',
@@ -162,7 +162,7 @@ standardConfig.blocks = [
   // Note: We use randomNumber as our base docFunc here so that we get the benefits of param descriptions
   {
     func: 'randomNumber_min_max',
-    block: 'randomNumber(__, __)',
+    block: 'randomNumber(1, 10)',
     category: 'Math',
     docFunc: 'randomNumber'
   },

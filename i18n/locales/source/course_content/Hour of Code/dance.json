@@ -12,7 +12,7 @@
   },
   "https://studio.code.org/s/dance/stage/1/puzzle/2": {
     "short_instructions": "Make the moose start a new move after 4 measures!",
-    "long_instructions": "Let's get this moose dancing!\n\nDrag out the <xml><block type=\"Dancelab_changeMoveLR\"><title name=\"SPRITE\">new\\_dancer</title><title name=\"MOVE\" config=\"MOVES.Dab, MOVES.Drop, MOVES.Floss\">Floss</title><title name=\"DIR\">-1</title></block></xml> block onto the workspace. Connect it underneath the <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">4</title><title name=\"UNIT\">\"measures\"</title></block></xml> block. Your dancer should start a new move after the fourth measure.\n\n**Measures** are used to count time in music. In this tutorial, a measure is four beats long.",
+    "long_instructions": "Let's get this moose dancing!\n\nDrag out the [blockly block][0] block onto the workspace. Connect it underneath the [blockly block][1] block. Your dancer should start a new move after the fourth measure.\n\n**Measures** are used to count time in music. In this tutorial, a measure is four beats long.",
     "authored_hints": {
       "validation": "**How do I pass this level?**\n\n-   The dancer needs to switch to a new move after 4 measures.\n\n_The level ends after 7 measures._"
     },
@@ -22,7 +22,7 @@
   },
   "https://studio.code.org/s/dance/stage/1/puzzle/3": {
     "short_instructions": "Now make the dancer start a new move after 6 measures!",
-    "long_instructions": "_Now we're grooving!_ \n\nAdd an <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml> block to your workspace. Make the dancer start a new move after 6 measures.",
+    "long_instructions": "_Now we're grooving!_ \n\nAdd an [blockly block][0] block to your workspace. Make the dancer start a new move after 6 measures.",
     "authored_hints": {
       "validation": "**How do I pass this level?**\n\n-   After 6 measures, your dancer needs to be doing a different dance than it was after 4 measures.\n\n_The level ends after 11 measures._"
     }
@@ -32,7 +32,7 @@
     "long_instructions": "_This dance needs some flash!_\n\nLook for a new block in your toolbox that adds a background effect behind your dancer. Watch the effects change in time with the music!",
     "authored_hints": {
       "validation": "**How do I pass this level?**\n\n-   You need to make the background effect change sometime before the seventh measure of the song.\n\n_This level ends after 9 measures._",
-      "challenges": "**Optional Challenge**\n\nChange the background effect at different points during the song by connecting the new block under the <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"measures\"</title></block></xml> events."
+      "challenges": "**Optional Challenge**\n\nChange the background effect at different points during the song by connecting the new block under the [blockly block][0] events."
     },
     "callouts": {
       "dance_callout_04": "Add this block to your program!"
@@ -70,14 +70,14 @@
   },
   "https://studio.code.org/s/dance/stage/1/puzzle/9": {
     "short_instructions": "Make the other dancer respond to the music using the `begins following` block, too.",
-    "long_instructions": "Now we know how to change a dancer's properties. We can also make the same properties automatically respond to the music using this block:\n<xml>\n  <block type=\"Dancelab_startMapping\">\n    <title name=\"SPRITE\">right\\_unicorn</title>\n    <title name=\"PROPERTY\">\"scale\"</title>\n    <title name=\"RANGE\">\"bass\"</title>\n  </block></xml>\n\nThis program uses the music's \"bass\" volume (the low sounds) to control one dancer's height. Can you make the other dancer respond to the music too?",
+    "long_instructions": "Now we know how to change a dancer's properties. We can also make the same properties automatically respond to the music using this block:\n[blockly block][0]\n\nThis program uses the music's \"bass\" volume (the low sounds) to control one dancer's height. Can you make the other dancer respond to the music too?",
     "authored_hints": {
       "validation": "**How do I pass this level?**\n\n-   Properties for two or more dancers must change.\n\n_This level ends after 7 measures._"
     }
   },
   "https://studio.code.org/s/dance/stage/1/puzzle/10": {
     "short_instructions": "The `when up pressed` block lets you run code when the up arrow is pressed. Try to make the dancer do a quick move when you press up.",
-    "long_instructions": "The <xml><block type=\"Dancelab_whenKey\"></block></xml> block lets you run code when the up arrow is pressed. \n\nYou might change the dance move, change a dancer's properties, or do a quick move just once. Be creative and look out for new blocks!",
+    "long_instructions": "The [blockly block][0] block lets you run code when the up arrow is pressed. \n\nYou might change the dance move, change a dancer's properties, or do a quick move just once. Be creative and look out for new blocks!",
     "authored_hints": {
       "validation": "**How do I pass this level?**\n\n-   Just be creative!\n\n_This level ends after 7 measures._"
     },
@@ -95,7 +95,7 @@
   },
   "https://studio.code.org/s/dance/stage/1/puzzle/12": {
     "short_instructions": "Use the \"all ducks\" blocks to make the ducks dance together.",
-    "long_instructions": "Check out this block:\n\n<xml>\n  <block type=\"Dancelab_makeNewDanceSpriteGroup\">\n    <title name=\"N\">6</title>\n    <title name=\"COSTUME\">\"DUCK\"</title>\n    <title name=\"LAYOUT\">\"circle\"</title>\n  </block></xml>\n  \nNow you can create a bunch of dancers at once!\n\nTry using some of the \"all ducks\" blocks to write code that will make all of the ducks dance together.",
+    "long_instructions": "Check out this block:\n\n[blockly block][0]\n\nNow you can create a bunch of dancers at once!\n\nTry using some of the \"all ducks\" blocks to write code that will make all of the ducks dance together.",
     "authored_hints": {
       "validation": "**How do I pass this level?**\n\n-   Just be creative!\n\n_This level ends after 7 measures._"
     },

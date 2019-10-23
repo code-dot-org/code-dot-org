@@ -1466,6 +1466,25 @@ endvariants
     assert_match Regexp.new(new_dsl_regex), ScriptDSL.serialize_to_string(script_copy)
   end
 
+  test 'clone with suffix and add editor experiment' do
+    scripts, _ = Script.setup([@script_file])
+    script = scripts[0]
+    assert_equal 1, script.script_announcements.count
+
+    Script.stubs(:script_directory).returns(self.class.fixture_path)
+    script_copy = script.clone_with_suffix('copy', editor_experiment: 'script-editors')
+    assert_equal 'test-fixture-copy', script_copy.name
+    assert_equal 'script-editors', script_copy.editor_experiment
+
+    # Validate levels.
+    assert_equal 5, script_copy.levels.count
+    script_copy.levels.each_with_index do |level, i|
+      level_num = i + 1
+      assert_equal "Level #{level_num}_copy", level.name
+      assert_equal 'script-editors', level.editor_experiment
+    end
+  end
+
   test "assignable_info: returns assignable info for a script" do
     script = create(:script, name: 'fake-script', hidden: true, stage_extras_available: true)
     assignable_info = script.assignable_info

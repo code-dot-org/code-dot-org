@@ -10,6 +10,7 @@ import ReactDOM from 'react-dom';
 import {reload} from '@cdo/apps/utils';
 import {updateQueryParam} from '@cdo/apps/code-studio/utils';
 import {setStudentsForCurrentSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
 import TeacherPanel from './components/progress/TeacherPanel';
 
 /**
@@ -21,7 +22,8 @@ export function renderTeacherPanel(
   section,
   scriptName,
   sectionData = null,
-  pageType = null
+  pageType = null,
+  isAsync = false
 ) {
   const div = document.createElement('div');
   div.setAttribute('id', 'teacher-panel-container');
@@ -32,7 +34,7 @@ export function renderTeacherPanel(
 
   const onSelectUser = id => {
     updateQueryParam('user_id', id);
-    reload();
+    isAsync ? store.dispatch(queryUserProgress(id)) : reload();
   };
 
   const getSelectedUserId = () => {

@@ -2,7 +2,7 @@
 
 import assert from 'assert';
 import {searchAssets} from '@cdo/apps/code-studio/assets/searchAssets';
-import animationLibrary from '@cdo/apps/gamelab/animationLibrary.json';
+import animationLibrary from '@cdo/apps/p5lab/gamelab/animationLibrary.json';
 import soundLibrary from '@cdo/apps/code-studio/soundLibrary.json';
 
 describe('search assets from animation library', function() {

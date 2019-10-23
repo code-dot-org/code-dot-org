@@ -5,7 +5,7 @@ class Pd::AttendanceTest < ActiveSupport::TestCase
 
   self.use_transactional_test_case = true
   setup_all do
-    @workshop = create :pd_workshop
+    @workshop = create :workshop
     2.times {@workshop.sessions << create(:pd_session)}
 
     @teacher1 = create :teacher
@@ -14,7 +14,7 @@ class Pd::AttendanceTest < ActiveSupport::TestCase
     create :pd_attendance, session: @workshop.sessions[0], teacher: @teacher2
     create :pd_attendance, session: @workshop.sessions[1], teacher: @teacher1
 
-    @another_workshop = create :pd_workshop
+    @another_workshop = create :workshop
     @another_workshop.sessions << create(:pd_session)
     @unrelated_teacher = create :teacher
     create :pd_attendance, session: @another_workshop.sessions[0], teacher: @unrelated_teacher

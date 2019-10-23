@@ -56,9 +56,9 @@ Scenario: Pair Programming
   Given I create a teacher named "Dr_Seuss"
   And I create a new section
   Given I create a student named "Thing_One"
-  And I navigate to the section url
+  And I join the section
   Given I create a student named "Thing_Two"
-  And I navigate to the section url
+  And I join the section
   Given I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/7?noautoplay=true"
   And I wait until element ".display_name" is visible
   And element ".display_name" contains text "Thing_Two"

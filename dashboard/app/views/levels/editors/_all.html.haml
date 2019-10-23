@@ -1,14 +1,14 @@
 - content_for(:head) do
   = stylesheet_link_tag 'css/levelbuilder', media: 'all'
   = stylesheet_link_tag 'jquery.handsontable.full', media: 'all'
-  %script{src: minifiable_asset_path('js/levelbuilder.js')}
+  %script{src: webpack_asset_path('js/levelbuilder.js')}
   = javascript_include_tag 'jquery.handsontable.full'
 
 - content_for :body_scripts do
   - video_infos = {}
   - Video.all.each { |video| video_infos[video.key] = video.summarize(false) }
   - script_data = { editorall: { video_infos: video_infos }.to_json }
-  %script{src: minifiable_asset_path('js/levels/editors/_all.js'), data: script_data}
+  %script{src: webpack_asset_path('js/levels/editors/_all.js'), data: script_data}
 
 .field
   = f.label 'Documentation'
@@ -115,3 +115,9 @@
 - if @level.respond_to? :coordinate_grid_background
   .field
     = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :coordinate_grid_background, description: "Coordinate grid background"}
+
+-if current_user.levelbuilder?
+  .field
+    = f.label :editor_experiment, 'Editor Experiment'
+    %p If specified, users with this experiment on the levelbuilder machine will be able to edit this level.
+    = f.text_field :editor_experiment, placeholder: 'Editor Experiment'

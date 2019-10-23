@@ -17,6 +17,7 @@ During the first two weeks of the unit students will research and discuss **inno
 <br><br>
 
 <img src="https://images.code.org/34a8cac51f6051639e6800934924b03d-image-1481669775598.gif" style="width:400px; float:right; margin-left:20px">
+
 The activities in the third week around data encryption follow a pattern: introduce an encryption concept through an unplugged activity or thinking prompt, and then “plug it in” by using a Code.org widget to explore the concept further. The purpose of the widgets is to allow students time to play with some of the ideas - often mathematical in nature - underlying different methods of encryption and why they might be susceptible to being “cracked.”  These explorations lead towards an understanding of computationally hard problems and the fact that **algorithms can solve many but not all computational problems (4.2).** In particular students should come away with a high level understanding of how asymmetric encryption works and why it makes certain things possible (sending encrypted data without a shared key) and certain things basically impossible (cracking a key). By investigating some of the mathematical foundations of encryption we build toward the enduring understanding that **cybersecurity is an important concern for the Internet and the systems built on it (6.3) and as always There are trade offs when representing information as digital data (3.3).**
 
 ## Building Toward the Explore Task
