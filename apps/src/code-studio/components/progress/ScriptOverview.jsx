@@ -22,7 +22,11 @@ import {
   onDismissRedirectDialog,
   dismissedRedirectDialog
 } from '@cdo/apps/util/dismissVersionRedirect';
-import {assignmentVersionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
+import {
+  assignmentVersionShape,
+  sectionForDropdownShape
+} from '@cdo/apps/templates/teacherDashboard/shapes';
+import experiments from '@cdo/apps/util/experiments';
 
 /**
  * Stage progress component used in level header and script overview.
@@ -56,6 +60,7 @@ class ScriptOverview extends React.Component {
         name: PropTypes.string.isRequired
       })
     ).isRequired,
+    sections: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
     currentCourseId: PropTypes.number,
     scriptHasLockableStages: PropTypes.bool.isRequired,
     scriptAllowsHiddenStages: PropTypes.bool.isRequired,
@@ -94,6 +99,7 @@ class ScriptOverview extends React.Component {
       viewAs,
       isRtl,
       sectionsInfo,
+      sections,
       currentCourseId,
       scriptHasLockableStages,
       scriptAllowsHiddenStages,
@@ -150,11 +156,14 @@ class ScriptOverview extends React.Component {
             />
             {!professionalLearningCourse &&
               viewAs === ViewType.Teacher &&
-              (scriptHasLockableStages || scriptAllowsHiddenStages) && (
+              (scriptHasLockableStages || scriptAllowsHiddenStages) &&
+              !experiments.isEnabled(experiments.ASSIGNMENT_UPDATES) && (
                 <LabeledSectionSelector reloadOnSectionChange={true} />
               )}
             <ScriptOverviewTopRow
               sectionsInfo={sectionsInfo}
+              sections={sections}
+              selectedSectionId={parseInt(selectedSectionId)}
               professionalLearningCourse={professionalLearningCourse}
               scriptProgress={scriptProgress}
               scriptId={scriptId}

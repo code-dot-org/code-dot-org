@@ -1,7 +1,8 @@
 ---
 from: 'Sarah Fairweather (Code.org) <teacher@code.org>'  
+subject: "Congratulations from <%= regional_partner_name_s %> and Code.org! Respond by April 21st"
+
 ---
-<% @header["subject"] = "Congratulations from #{regional_partner_name_s} and Code.org! Respond by April 21st" %>
 
 Hi <%= preferred_first_name_s %>,
 
