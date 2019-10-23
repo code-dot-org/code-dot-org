@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import 'babel-polyfill';
 import {setState, getState} from '../state';
 import {Modes, ClassType} from '../constants';
@@ -56,7 +57,9 @@ export const init = () => {
 const uiElements = state => {
   return [
     ...staticUiElements,
-    createText({id: 'train-text', text: `Is this fish ${state.word}?`})
+    createText({id: 'train-text', text: `Is this fish ${state.word}?`}),
+    createText({id: 'train-counter-yes-text', text: ""}),
+    createText({id: 'train-counter-no-text', text: ""})
   ];
 };
 
@@ -70,6 +73,16 @@ const onClassifyFish = doesLike => {
   if (state.trainingIndex > state.fishData.length - 5) {
     const fishData = state.fishData.concat(generateOcean(100));
     setState({fishData});
+  }
+  if (doesLike) {
+    const newValue = getState().yesCount + 1;
+    setState({yesCount: newValue});
+    $("#train-counter-yes-text").text(newValue);
+
+  } else {
+    const newValue = getState().noCount + 1;
+    setState({noCount: newValue});
+    $("#train-counter-no-text").text(newValue);
   }
 };
 
