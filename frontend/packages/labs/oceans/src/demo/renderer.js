@@ -6,7 +6,8 @@ import CanvasCache from './canvasCache';
 import {
   backgroundPathForMode,
   bodyAnchorFromType,
-  colorFromType
+  colorFromType,
+  randomInt
 } from './helpers';
 import fishData, {FishBodyPart} from '../utils/fishData';
 
@@ -285,6 +286,10 @@ const renderFishFromParts = (fish, ctx, x = 0, y = 0) => {
     const rgb = colorFromType(fish.colorPalette, part.type);
 
     if (rgb) {
+      rgb[0] += randomInt(-10, 10);
+      rgb[1] += randomInt(-10, 10);
+      rgb[2] += randomInt(-10, 10);
+
       let imageData = intermediateCtx.getImageData(
         xPos,
         yPos,
