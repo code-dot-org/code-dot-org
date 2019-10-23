@@ -89,7 +89,7 @@ export default class LibraryListItem extends React.Component {
           </button>
         )}
         <span style={styles.description}>
-          {this.displayDescription(library.description)}
+          {library.description}
           <br />
           {library.studentName && (
             <span style={styles.author}>Author: {library.studentName}</span>
