@@ -15,10 +15,6 @@ const staticUiElements = [
   createImage({
     id: 'pond-ai-bot',
     src: 'images/ai-bot-closed.png'
-  }),
-  createText({
-    id: 'pond-title',
-    text: 'How did A.I. do?'
   })
 ];
 const staticFooterElements = [
@@ -69,11 +65,12 @@ const continueText = state => {
 };
 
 const uiElements = (state, pondCount) => {
-  const pondText = `Out of ${
+  let pondText = '<h3>How did A.I. do?</h3>';
+  pondText += `Out of ${
     state.fishData.length
-  } objects, A.I. identified ${pondCount} that it classified as ${state.word.toUpperCase()}. To help A.I. do better, you can train A.I. more and try again. Otherwise, click '${continueText(
-    state
-  )}'.`;
+  } objects, A.I. identified ${pondCount} that it classified as ${state.word.toUpperCase()}.`;
+  pondText += `To help A.I. do better, you can train A.I. more and try again.`;
+  pondText += `Otherwise, click '${continueText(state)}'.`;
   return [...staticUiElements, createText({id: 'pond-text', text: pondText})];
 };
 
