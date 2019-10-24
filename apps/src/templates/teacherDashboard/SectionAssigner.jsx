@@ -76,7 +76,7 @@ export const UnconnectedSectionAssigner = SectionAssigner;
 
 export default connect(
   state => ({
-    selectedSectionId: state.teacherSections.selectedSectionId
+    selectedSectionId: parseInt(state.teacherSections.selectedSectionId)
   }),
   dispatch => ({
     selectSection(sectionId) {
