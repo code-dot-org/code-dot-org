@@ -1,8 +1,13 @@
+const {initFishData} = require('../../src/utils/fishData');
 const {generateOcean, filterOcean} = require('../../src/utils/generateOcean');
 const SimpleTrainer = require('../../src/utils/SimpleTrainer');
 const trainingFishJson = require('./data/trainingFish.json');
 
 describe('Generate ocean test', () => {
+  beforeAll(() => {
+    initFishData();
+  });
+
   test('Can generate ocean', () => {
     const numFish = 20;
     const ocean = generateOcean(numFish);
