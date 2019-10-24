@@ -158,15 +158,6 @@ module Pd::Application
     end
 
     # @override
-    def queue_email(email_type, deliver_now: false)
-      if email_type == :principal_approval_completed_partner && formatted_partner_contact_email.nil?
-        CDO.log.info "Skipping principal_approval_completed_partner for application id #{id}"
-      else
-        super
-      end
-    end
-
-    # @override
     def self.options
       super.merge(
         {
