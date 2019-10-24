@@ -16,7 +16,7 @@ class InlineFeedback extends Component {
 
   /**
    * Note: InlineFeedback will only convert XML to blockly when it is initially mounted, not on
-   * subsequent updates.  Recommended workaround while we are on React 15 is to add a changin `key`
+   * subsequent updates.  Recommended workaround while we are on React 15 is to add a changing `key`
    * prop when rendering the component which will force it to re-mount.
    * Once we are on React 16, it may be possible to convert on componentDidUpdate, which would
    * make the workaround unnecessary.
