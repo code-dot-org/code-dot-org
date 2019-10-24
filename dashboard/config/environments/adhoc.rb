@@ -17,18 +17,12 @@ Dashboard::Application.configure do
   # https://github.com/rails/rails/issues/27273
   config.consider_all_requests_local = false
 
-  # Use digests.
-  config.assets.digest = true
-
   config.action_controller.perform_caching = true
   config.public_file_server.enabled = true
   config.public_file_server.headers = {'Cache-Control' => "public, max-age=86400, s-maxage=43200"}
 
   # Set to :debug to see everything in the log.
   config.log_level = :info
-
-  # Do not fallback to assets pipeline if a precompiled asset is missed.
-  config.assets.compile = false
 
   # Version of your assets, change this if you want to expire all your assets.
   config.assets.version = '1.0'
