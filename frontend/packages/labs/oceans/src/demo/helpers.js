@@ -53,6 +53,8 @@ export const createText = ({id, text}) => {
   return textEl;
 };
 
+// Creates an image element, given an object that contains
+// id and src properties.
 export const createImage = ({id, src}) => {
   let imageEl = document.createElement('IMG');
   imageEl.src = src;
