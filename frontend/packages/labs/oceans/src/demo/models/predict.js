@@ -1,9 +1,8 @@
 import 'babel-polyfill';
 import $ from 'jquery';
-import {setState, getState} from '../state';
+import {setState} from '../state';
 import {Modes} from '../constants';
-import {createButton, createText, strForClassType, toMode} from '../helpers';
-import {generateOcean} from '../../utils/generateOcean';
+import {createButton, createText, toMode} from '../helpers';
 
 const headerElements = [createText({id: 'header', text: 'A.I. Sorting'})];
 const footerElements = [
