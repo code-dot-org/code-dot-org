@@ -822,6 +822,7 @@ const fishComponents = {
   }
 };
 
+// Normalize the KNN data for all components.
 const generateKnnData = () => {
   Object.keys(fishComponents).forEach(key => {
     const knnDataLength = Object.values(fishComponents[key])[0].knnData.length;
