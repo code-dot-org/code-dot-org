@@ -462,7 +462,7 @@ de:
             '"vintage"': Altmodisch
             '"warm"': Rottöne
       Dancelab_setBackgroundEffectWithPalette:
-        text: Hintergrundeffekt einstellen {EFFECT} {PALETTE}
+        text: Hintergrundeffekt einstellen {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': Keiner
@@ -1208,6 +1208,12 @@ de:
         text: zufällige Farbe
       Mikelab_removeBehaviorSimple:
         text: Sprite {SPRITE} stoppt {BEHAVIOR}
+      Mikelab_repeatUntilComplete:
+        text: ewig wiederholen
+      Mikelab_sendBad:
+        text: nach links bewegen
+      Mikelab_sendGood:
+        text: nach rechts bewegen
       Mikelab_setBG:
         options:
           BG:
