@@ -464,7 +464,7 @@ zh-TW:
             '"vintage"': 復古
             '"warm"': 暖色系
       Dancelab_setBackgroundEffectWithPalette:
-        text: 背景效果設為 {EFFECT} {PALETTE}
+        text: 背景效果設為 {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': 無
@@ -1228,6 +1228,12 @@ zh-TW:
         text: 角色 {SPRITE} 停止 {BEHAVIOR}
       Mikelab_removeTint:
         text: 角色 {SPRITE} 顏色移除
+      Mikelab_repeatUntilComplete:
+        text: 重複無限次
+      Mikelab_sendBad:
+        text: 移動-向左
+      Mikelab_sendGood:
+        text: 移動-向右
       Mikelab_setBG:
         text: 背景設為 {BG}
         options:
