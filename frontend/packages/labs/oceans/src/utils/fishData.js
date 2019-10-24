@@ -858,7 +858,6 @@ export const initializeKnnData = () => {
     });
     initialized = true;
   }
-  //return fishComponents;
 };
 
 export const fishData = fishComponents;
