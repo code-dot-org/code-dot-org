@@ -2,7 +2,7 @@ import $ from 'jquery';
 import 'babel-polyfill';
 import {setState, getState} from '../state';
 import {Modes, ClassType} from '../constants';
-import {createButton, createText, toMode} from '../helpers';
+import {createButton, createText, createImage, toMode} from '../helpers';
 import SimpleTrainer from '../../utils/SimpleTrainer';
 import {generateOcean} from '../../utils/generateOcean';
 
@@ -16,6 +16,10 @@ const staticUiElements = [
     id: 'no-button',
     text: 'No',
     onClick: () => onClassifyFish(false)
+  }),
+  createImage({
+    id: 'training-ai-bot',
+    src: 'images/ai-bot-closed.png'
   })
 ];
 const headerElements = [createText({id: 'header', text: 'A.I. Training'})];

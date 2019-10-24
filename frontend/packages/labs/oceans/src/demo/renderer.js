@@ -172,7 +172,7 @@ const drawMovingFish = state => {
   const offsetX = getOffsetForTime(t, state.fishData.length);
   const startFishIdx = Math.max(
     getFishIdxForLocation(
-      constants.canvasWidth + constants.fishCanvasWidth,
+      constants.canvasWidth - 100,
       offsetX,
       state.fishData.length
     ),
