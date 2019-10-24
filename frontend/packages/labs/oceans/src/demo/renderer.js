@@ -183,7 +183,12 @@ const drawMovingFish = state => {
     state.fishData.length - 1
   );
   const ctx = state.canvas.getContext('2d');
-  const y = constants.canvasHeight / 2 - constants.fishCanvasHeight / 2;
+  let y = constants.canvasHeight / 2 - constants.fishCanvasHeight / 2;
+
+  // Move fish down a little on predict screen.
+  if (state.currentMode === Modes.Predicting) {
+    y += 100;
+  }
 
   for (let i = startFishIdx; i <= lastFishIdx; i++) {
     const x = getXForFish(state.fishData.length - 1, i, offsetX);

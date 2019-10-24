@@ -2,9 +2,15 @@ import 'babel-polyfill';
 import $ from 'jquery';
 import {setState} from '../state';
 import {Modes} from '../constants';
-import {createButton, createText, toMode} from '../helpers';
+import {createButton, createText, createImage, toMode} from '../helpers';
 
 const headerElements = [createText({id: 'header', text: 'A.I. Sorting'})];
+const uiElements = [
+  createImage({
+    id: 'predict-ai-bot',
+    src: 'images/ai-bot-closed.png'
+  })
+];
 const footerElements = [
   createButton({
     text: 'Training',
@@ -32,7 +38,7 @@ const footerElements = [
 ];
 
 export const init = () => {
-  setState({headerElements, footerElements, isRunning: true});
+  setState({headerElements, uiElements, footerElements, isRunning: true});
 };
 
 export const predictFish = (state, idx) => {
