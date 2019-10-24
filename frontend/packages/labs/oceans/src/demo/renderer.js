@@ -118,6 +118,7 @@ const loadImage = imgPath => {
   });
 };
 
+// Calculate the screen's current X offset.
 const getOffsetForTime = (t, totalFish) => {
   return (
     constants.fishCanvasWidth * totalFish -
@@ -127,15 +128,18 @@ const getOffsetForTime = (t, totalFish) => {
   );
 };
 
+// Given X (screenX + offsetX), calculate the fish index at that X.
 const getFishIdxForLocation = (screenX, offsetX, totalFish) => {
   const n = Math.floor((screenX + offsetX) / constants.fishCanvasWidth);
   return totalFish - n;
 };
 
+// Calculate a given fish's X position.
 const getXForFish = (numFish, fishIdx, offsetX) => {
   return (numFish - fishIdx) * constants.fishCanvasWidth - offsetX;
 };
 
+// Draw fish for the training screen.
 const drawTrainingFish = state => {
   let t = lastPauseTime;
   let currentRunTime = 0;
