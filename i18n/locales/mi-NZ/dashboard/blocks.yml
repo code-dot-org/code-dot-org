@@ -348,6 +348,12 @@ mi:
             '"all"': katoa
       Mikelab_randomColor:
         text: tae matapōkere
+      Mikelab_repeatUntilComplete:
+        text: tōaitia mō ake ake
+      Mikelab_sendBad:
+        text: neke whakatemauī
+      Mikelab_sendGood:
+        text: neke whakatematau
       Mikelab_setBG:
         options:
           BG:
