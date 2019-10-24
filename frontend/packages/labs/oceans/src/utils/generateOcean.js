@@ -1,4 +1,4 @@
-import {fishData, initializeKnnData} from './fishData';
+import {fishData} from './fishData';
 
 export const generateRandomFish = id => {
   const fish = fishData;
@@ -42,7 +42,6 @@ export const generateRandomFish = id => {
 };
 
 export const generateOcean = numFish => {
-  initializeKnnData();
   const ocean = [];
   for (var i = 0; i < numFish; ++i) {
     ocean.push(generateRandomFish(i));
