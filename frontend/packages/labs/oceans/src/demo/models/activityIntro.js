@@ -8,7 +8,7 @@ export const init = () => {
     createButton({
       text: 'Continue',
       onClick: () => toMode(Modes.Words),
-      className: ''
+      className: 'continue-end'
     })
   ];
   const uiElements = [

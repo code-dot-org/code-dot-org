@@ -9,13 +9,13 @@ export const init = () => {
     createButton({
       text: 'Continue',
       onClick: () => toMode(Modes.Training),
-      className: ''
+      className: 'continue-end'
     })
   ];
   const uiElements = [
     createText({
       id: 'training-intro-text',
-      text: `Now let's teach AI bot what <b>${state.word.toUpperCase()}</b> fish looks like`
+      text: `Now let's teach AI bot what <b>${state.word.toUpperCase()}</b> fish looks like.`
     }),
     createImage({
       id: 'training-intro-ai-bot',
