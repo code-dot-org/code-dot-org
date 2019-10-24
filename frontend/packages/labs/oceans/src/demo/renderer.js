@@ -206,6 +206,7 @@ const drawMovingFish = state => {
   }
 };
 
+// Draw a prediction to the canvas.
 const drawPrediction = (predictedClassId, text, x, y, ctx) => {
   const centeredX = x + constants.fishCanvasWidth / 2;
   const doesLike = predictedClassId === ClassType.Like;
