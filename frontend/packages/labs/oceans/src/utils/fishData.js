@@ -41,7 +41,7 @@ const fishComponents = {
       pectoralFinFrontAnchor: [55, 72],
       dorsalFinAnchor: [23, -15],
       tailAnchor: [107, 41],
-      knnData: [1.46, 7120, BodyShape.OVAL],
+      knnData: [7120, BodyShape.OVAL],
       type: FishBodyPart.BODY
     },
     fish3: {
@@ -53,7 +53,7 @@ const fishComponents = {
       pectoralFinFrontAnchor: [68, 52],
       dorsalFinAnchor: [53, -25],
       tailAnchor: [120, 38],
-      knnData: [1.99, 6384, BodyShape.OVAL],
+      knnData: [6384, BodyShape.OVAL],
       type: FishBodyPart.BODY
     },
     fish1: {
@@ -65,7 +65,7 @@ const fishComponents = {
       pectoralFinFrontAnchor: [45, 82],
       dorsalFinAnchor: [20, -18],
       tailAnchor: [97, 50],
-      knnData: [1, 8004, BodyShape.CIRCLE],
+      knnData: [8004, BodyShape.CIRCLE],
       type: FishBodyPart.BODY
     },
     fish2: {
@@ -77,7 +77,7 @@ const fishComponents = {
       pectoralFinFrontAnchor: [50, 75],
       dorsalFinAnchor: [33, -19],
       tailAnchor: [92, 47],
-      knnData: [1.1, 7895, BodyShape.SQUARE],
+      knnData: [7895, BodyShape.SQUARE],
       type: FishBodyPart.BODY
     },
     fish4: {
@@ -89,7 +89,7 @@ const fishComponents = {
       pectoralFinFrontAnchor: [77, 68],
       dorsalFinAnchor: [33, -23],
       tailAnchor: [139, 19],
-      knnData: [1.96, 9078, BodyShape.TRIANGLE],
+      knnData: [9078, BodyShape.TRIANGLE],
       type: FishBodyPart.BODY
     },
     wide1: {
@@ -101,7 +101,7 @@ const fishComponents = {
       pectoralFinFrontAnchor: [55, 146],
       dorsalFinAnchor: [40, -23],
       tailAnchor: [157, 81],
-      knnData: [1, 20864, BodyShape.CIRCLE],
+      knnData: [20864, BodyShape.CIRCLE],
       type: FishBodyPart.BODY
     },
     fish5: {
@@ -113,7 +113,7 @@ const fishComponents = {
       pectoralFinFrontAnchor: [55, 115],
       dorsalFinAnchor: [30, -18],
       tailAnchor: [125, 68],
-      knnData: [1.01, 12844, BodyShape.CIRCLE],
+      knnData: [12844, BodyShape.CIRCLE],
       type: FishBodyPart.BODY
     },
     wide2: {
@@ -125,7 +125,7 @@ const fishComponents = {
       pectoralFinFrontAnchor: [100, 110],
       dorsalFinAnchor: [60, -23],
       tailAnchor: [154, 81],
-      knnData: [1.13, 17970, BodyShape.OVAL],
+      knnData: [17970, BodyShape.OVAL],
       type: FishBodyPart.BODY
     },
     square1: {
@@ -137,7 +137,7 @@ const fishComponents = {
       pectoralFinFrontAnchor: [64, 80],
       dorsalFinAnchor: [25, -23],
       tailAnchor: [97, 45],
-      knnData: [1.13, 8463, BodyShape.SQUARE],
+      knnData: [8463, BodyShape.SQUARE],
       type: FishBodyPart.BODY
     },
     square2: {
@@ -149,7 +149,7 @@ const fishComponents = {
       pectoralFinFrontAnchor: [65, 90],
       dorsalFinAnchor: [27, -23],
       tailAnchor: [93, 59],
-      knnData: [0.96, 12327, BodyShape.SQUARE],
+      knnData: [12327, BodyShape.SQUARE],
       type: FishBodyPart.BODY
     },
     spikey1: {
@@ -161,7 +161,7 @@ const fishComponents = {
       pectoralFinFrontAnchor: [82, 110],
       dorsalFinAnchor: [53, -23],
       tailAnchor: [125, 74],
-      knnData: [1, 13584, BodyShape.CIRCLE],
+      knnData: [13584, BodyShape.CIRCLE],
       type: FishBodyPart.BODY
     },
     spikey2: {
@@ -173,7 +173,7 @@ const fishComponents = {
       pectoralFinFrontAnchor: [67, 126],
       dorsalFinAnchor: [43, -20],
       tailAnchor: [125, 64],
-      knnData: [1, 14558, BodyShape.CIRCLE],
+      knnData: [14558, BodyShape.CIRCLE],
       type: FishBodyPart.BODY
     },
     sharp1: {
@@ -185,7 +185,7 @@ const fishComponents = {
       pectoralFinFrontAnchor: [108, 98],
       dorsalFinAnchor: [76, -13],
       tailAnchor: [144, 56],
-      knnData: [1.44, 12419, BodyShape.TRIANGLE],
+      knnData: [12419, BodyShape.TRIANGLE],
       type: FishBodyPart.BODY
     },
     sharp2: {
@@ -197,7 +197,7 @@ const fishComponents = {
       pectoralFinFrontAnchor: [77, 66],
       dorsalFinAnchor: [43, -20],
       tailAnchor: [144, 56],
-      knnData: [1.87, 9732, BodyShape.TRIANGLE],
+      knnData: [9732, BodyShape.TRIANGLE],
       type: FishBodyPart.BODY
     },
     round1: {
@@ -209,7 +209,7 @@ const fishComponents = {
       pectoralFinFrontAnchor: [80, 98],
       dorsalFinAnchor: [41, -13],
       tailAnchor: [118, 62],
-      knnData: [0.99, 12466, BodyShape.CIRCLE],
+      knnData: [12466, BodyShape.CIRCLE],
       type: FishBodyPart.BODY
     },
     round2: {
@@ -221,7 +221,7 @@ const fishComponents = {
       pectoralFinFrontAnchor: [58, 58],
       dorsalFinAnchor: [25, -20],
       tailAnchor: [74, 39],
-      knnData: [1, 4876, BodyShape.CIRCLE],
+      knnData: [4876, BodyShape.CIRCLE],
       type: FishBodyPart.BODY
     },
     narrow1: {
@@ -233,7 +233,7 @@ const fishComponents = {
       pectoralFinFrontAnchor: [48, 98],
       dorsalFinAnchor: [22, -13],
       tailAnchor: [62, 62],
-      knnData: [0.536, 6714, BodyShape.OVAL],
+      knnData: [6714, BodyShape.OVAL],
       type: FishBodyPart.BODY
     },
     narrow2: {
@@ -245,7 +245,7 @@ const fishComponents = {
       pectoralFinFrontAnchor: [100, 30],
       dorsalFinAnchor: [76, -20],
       tailAnchor: [154, 19],
-      knnData: [4.26, 7120, BodyShape.OVAL],
+      knnData: [7120, BodyShape.OVAL],
       type: FishBodyPart.BODY
     }
   },

@@ -1,10 +1,15 @@
+const {initFishData} = require('../../src/utils/fishData');
 const {generateOcean, filterOcean} = require('../../src/utils/generateOcean');
 const SimpleTrainer = require('../../src/utils/SimpleTrainer');
 const trainingFishJson = require('./data/trainingFish.json');
 
 describe('Generate ocean test', () => {
+  beforeAll(() => {
+    initFishData();
+  });
+
   test('Can generate ocean', () => {
-    const numFish = 20;
+    const numFish = 50;
     const ocean = generateOcean(numFish);
     expect(ocean.length).toEqual(numFish);
   });
@@ -14,7 +19,7 @@ describe('Generate ocean test', () => {
     const ocean = generateOcean(numFish);
     expect(ocean.length).toEqual(numFish);
     const knnDataLength = ocean[0].knnData.length;
-    var knnDataSameLength= true;
+    var knnDataSameLength = true;
     ocean.forEach(fish => {
       if (fish.knnData.length != knnDataLength) {
         knnDataSameLength = false;
@@ -41,20 +46,26 @@ describe('Generate ocean test', () => {
     const trainer = new SimpleTrainer();
     await trainer.initializeClassifiersWithoutMobilenet();
     trainingOcean.forEach(fish => {
-      trainer.addExampleData(Array.from(fish.knnData), fish.colorPalette.bodyRgb[0] > 100 ? 1 : 0);
+      trainer.addExampleData(
+        Array.from(fish.knnData),
+        fish.colorPalette.bodyRgb[0] > 200 ? 1 : 0
+      );
     });
-    const predictedOcean = await filterOcean(generateOcean(numPredictionFish), trainer);
+    const predictedOcean = await filterOcean(
+      generateOcean(numPredictionFish),
+      trainer
+    );
     const likedFish = predictedOcean.filter(fish => {
       return fish.result.predictedClassId === 1;
     });
     var numRedFish = 0;
     likedFish.forEach(fish => {
-      if (fish.colorPalette.bodyRgb[0] > 100) {
-        numRedFish ++;
+      if (fish.colorPalette.bodyRgb[0] > 200) {
+        numRedFish++;
       }
     });
     expect(predictedOcean.length).toEqual(numPredictionFish);
-    expect(1.0 * numRedFish / likedFish.length).toBeGreaterThanOrEqual(0.7);
+    expect((1.0 * numRedFish) / likedFish.length).toBeGreaterThanOrEqual(0.7);
   });
 
   test('Can predict round fish when only picking round fish', async () => {
@@ -64,20 +75,23 @@ describe('Generate ocean test', () => {
     trainer.setTopK(5);
     await trainer.initializeClassifiersWithoutMobilenet();
     trainingOcean.forEach(fish => {
-      const cat = fish.parts[0].knnData[0] > 0.25 ? 1 : 0;
+      const cat = fish.parts[0].knnData[1] === 0 ? 1 : 0;
       trainer.addExampleData(Array.from(fish.knnData), cat);
     });
-    const predictedOcean = await filterOcean(generateOcean(numPredictionFish), trainer);
+    const predictedOcean = await filterOcean(
+      generateOcean(numPredictionFish),
+      trainer
+    );
     const likedFish = predictedOcean.filter(fish => {
       return fish.result.predictedClassId === 1;
     });
     var numRoundFish = 0;
     likedFish.forEach(fish => {
-      if (fish.parts[0].knnData[0] > 0.2) {
-        numRoundFish ++;
+      if (fish.parts[0].knnData[1] === 0) {
+        numRoundFish++;
       }
     });
     expect(predictedOcean.length).toEqual(numPredictionFish);
-    expect(1.0 * numRoundFish / likedFish.length).toBeGreaterThanOrEqual(0.7);
+    expect((1.0 * numRoundFish) / likedFish.length).toBeGreaterThanOrEqual(0.7);
   });
 });

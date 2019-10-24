@@ -70,6 +70,10 @@ export const render = () => {
     lastStartTime = null;
   }
 
+  if (state.trainingIndex !== prevState.trainingIndex) {
+    console.log(state.fishData[state.trainingIndex]);
+  }
+
   clearCanvas(state.canvas);
 
   switch (state.currentMode) {
