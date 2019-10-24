@@ -63,6 +63,12 @@ const uiElements = state => {
 
 const onClassifyFish = doesLike => {
   const state = getState();
+
+  // No-op if animation is currently in progress.
+  if (state.isRunning) {
+    return;
+  }
+
   const knnData = state.fishData[state.trainingIndex].knnData;
   const classId = doesLike ? ClassType.Like : ClassType.Dislike;
   state.trainer.addExampleData(knnData, classId);
