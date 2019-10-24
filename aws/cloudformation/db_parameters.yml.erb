@@ -190,7 +190,6 @@ AuroraWriter:
   # wait events to be logged in Performance Insights, so we do NOT set it.
   # https://docs.aws.amazon.com/en_pv/AmazonRDS/latest/AuroraUserGuide/USER_PerfInsights.Enabling.html
   # Note that our Percona Monitoring server also relies on performance_schema=1 being set automatically by RDS.
-  performance_schema: null
 
   # Relax transaction isolation for improved concurrency under load.
   tx_isolation: READ-COMMITTED
