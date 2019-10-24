@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import 'babel-polyfill';
 import _ from 'lodash';
 import {getState, setState} from './state';
@@ -73,6 +74,7 @@ export const render = () => {
 
   switch (state.currentMode) {
     case Modes.Training:
+      updateTrainText(state);
       drawFrame(state);
       drawMovingFish(state);
       break;
@@ -88,6 +90,15 @@ export const render = () => {
 
   prevState = {...state};
   window.requestAnimFrame(render);
+};
+
+const updateTrainText = state => {
+  // No-op if animation is currently in progress.
+  if (state.isRunning) {
+    $("#train-text").hide();
+  } else {
+    $("#train-text").show();
+  }
 };
 
 // Load and display the background image onto the background canvas.
