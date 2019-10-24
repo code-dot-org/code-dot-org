@@ -36,8 +36,7 @@ class SectionAssigner extends Component {
     selectSection: PropTypes.func.isRequired,
     showAssignButton: PropTypes.bool,
     courseId: PropTypes.number,
-    selectedSectionId: PropTypes.number,
-    assignmentName: PropTypes.string
+    selectedSectionId: PropTypes.number
   };
 
   onChangeSection = sectionId => {
@@ -49,7 +48,6 @@ class SectionAssigner extends Component {
       sections,
       showAssignButton,
       courseId,
-      assignmentName,
       selectedSectionId
     } = this.props;
     const selectedSection = sections.find(
@@ -72,11 +70,7 @@ class SectionAssigner extends Component {
             </span>
           )}
           {!selectedSection.isAssigned && showAssignButton && (
-            <AssignButton
-              section={selectedSection}
-              courseId={courseId}
-              assignmentName={assignmentName}
-            />
+            <AssignButton sectionId={selectedSection.id} courseId={courseId} />
           )}
         </div>
       </div>
@@ -88,7 +82,7 @@ export const UnconnectedSectionAssigner = SectionAssigner;
 
 export default connect(
   state => ({
-    selectedSectionId: state.teacherSections.selectedSectionId
+    selectedSectionId: parseInt(state.teacherSections.selectedSectionId)
   }),
   dispatch => ({
     selectSection(sectionId) {
