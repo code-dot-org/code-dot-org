@@ -25,7 +25,6 @@ const fishComponents = {
   // BODY KNN DATA: [height:width ratio, area]
   bodies: {
     fish6: {
-      index: 0,
       src: 'images/fish/body/Body_Fish6.png',
       anchor: [100, 50],
       eyeAnchor: [17, 12],
@@ -38,7 +37,6 @@ const fishComponents = {
       type: FishBodyPart.BODY
     },
     fish3: {
-      index: 1,
       src: 'images/fish/body/Body_Fish3.png',
       anchor: [100, 50],
       eyeAnchor: [17, 10],
@@ -51,7 +49,6 @@ const fishComponents = {
       type: FishBodyPart.BODY
     },
     fish1: {
-      index: 2,
       src: 'images/fish/body/Body_Fish1.png',
       anchor: [100, 50],
       eyeAnchor: [10, 15],
@@ -64,7 +61,6 @@ const fishComponents = {
       type: FishBodyPart.BODY
     },
     fish2: {
-      index: 3,
       src: 'images/fish/body/Body_Fish2.png',
       anchor: [100, 50],
       eyeAnchor: [15, 11],
@@ -77,7 +73,6 @@ const fishComponents = {
       type: FishBodyPart.BODY
     },
     fish4: {
-      index: 4,
       src: 'images/fish/body/Body_Fish4.png',
       anchor: [80, 50],
       eyeAnchor: [18, 12],
@@ -90,7 +85,6 @@ const fishComponents = {
       type: FishBodyPart.BODY
     },
     wide1: {
-      index: 5,
       src: 'images/fish/body/Body_Wide1.png',
       anchor: [80, 20],
       eyeAnchor: [17, 17],
@@ -103,7 +97,6 @@ const fishComponents = {
       type: FishBodyPart.BODY
     },
     fish5: {
-      index: 6,
       src: 'images/fish/body/Body_Fish5.png',
       anchor: [100, 30],
       eyeAnchor: [20, 17],
@@ -116,7 +109,6 @@ const fishComponents = {
       type: FishBodyPart.BODY
     },
     wide2: {
-      index: 7,
       src: 'images/fish/body/Body_Wide2.png',
       anchor: [80, 20],
       eyeAnchor: [20, 27],
@@ -129,7 +121,6 @@ const fishComponents = {
       type: FishBodyPart.BODY
     },
     square1: {
-      index: 8,
       src: 'images/fish/body/Body_Square1.png',
       anchor: [80, 40],
       eyeAnchor: [9, 17],
@@ -142,7 +133,6 @@ const fishComponents = {
       type: FishBodyPart.BODY
     },
     square2: {
-      index: 9,
       src: 'images/fish/body/Body_Square2.png',
       anchor: [80, 40],
       eyeAnchor: [10, 20],
@@ -155,7 +145,6 @@ const fishComponents = {
       type: FishBodyPart.BODY
     },
     spikey1: {
-      index: 10,
       src: 'images/fish/body/Body_Spikey1.png',
       anchor: [80, 40],
       eyeAnchor: [19, 27],
@@ -168,7 +157,6 @@ const fishComponents = {
       type: FishBodyPart.BODY
     },
     spikey2: {
-      index: 11,
       src: 'images/fish/body/Body_Spikey2.png',
       anchor: [80, 40],
       eyeAnchor: [21, 21],
@@ -181,7 +169,6 @@ const fishComponents = {
       type: FishBodyPart.BODY
     },
     sharp1: {
-      index: 12,
       src: 'images/fish/body/Body_Sharp1.png',
       anchor: [80, 40],
       eyeAnchor: [30, 40],
@@ -194,7 +181,6 @@ const fishComponents = {
       type: FishBodyPart.BODY
     },
     sharp2: {
-      index: 13,
       src: 'images/fish/body/Body_Sharp2.png',
       anchor: [80, 40],
       eyeAnchor: [21, 11],
@@ -207,7 +193,6 @@ const fishComponents = {
       type: FishBodyPart.BODY
     },
     round1: {
-      index: 14,
       src: 'images/fish/body/Body_Round1.png',
       anchor: [80, 40],
       eyeAnchor: [16, 10],
@@ -220,7 +205,6 @@ const fishComponents = {
       type: FishBodyPart.BODY
     },
     round2: {
-      index: 15,
       src: 'images/fish/body/Body_Round2.png',
       anchor: [80, 40],
       eyeAnchor: [3, 11],
@@ -233,7 +217,6 @@ const fishComponents = {
       type: FishBodyPart.BODY
     },
     narrow1: {
-      index: 16,
       src: 'images/fish/body/Body_Narrow1.png',
       anchor: [80, 40],
       eyeAnchor: [3, 20],
@@ -246,7 +229,6 @@ const fishComponents = {
       type: FishBodyPart.BODY
     },
     narrow2: {
-      index: 17,
       src: 'images/fish/body/Body_Narrow2.png',
       anchor: [80, 40],
       eyeAnchor: [20, 3],
@@ -262,73 +244,61 @@ const fishComponents = {
   // EYE KNN DATA: [eye area, eye:pupil ratio]
   eyes: {
     narrow1: {
-      index: 0,
       src: 'images/fish/eyes/Eyes_Narrow1.png',
       knnData: [1524, 6.1],
       type: FishBodyPart.EYE
     },
     narrow2: {
-      index: 1,
       src: 'images/fish/eyes/Eyes_Narrow2.png',
       knnData: [1524, 7.74],
       type: FishBodyPart.EYE
     },
     round1: {
-      index: 2,
       src: 'images/fish/eyes/Eyes_Round1.png',
       knnData: [2903, 13.26],
       type: FishBodyPart.EYE
     },
     round2: {
-      index: 3,
       src: 'images/fish/eyes/Eyes_Round2.png',
       knnData: [1390, 3.75],
       type: FishBodyPart.EYE
     },
     sharp1: {
-      index: 4,
       src: 'images/fish/eyes/Eyes_Sharp1.png',
       knnData: [250, 4.24],
       type: FishBodyPart.EYE
     },
     sharp2: {
-      index: 5,
       src: 'images/fish/eyes/Eyes_Sharp2.png',
       knnData: [638, 6.13],
       type: FishBodyPart.EYE
     },
     spikey1: {
-      index: 6,
       src: 'images/fish/eyes/Eyes_Spikey1.png',
       knnData: [891, 3.44],
       type: FishBodyPart.EYE
     },
     spikey2: {
-      index: 7,
       src: 'images/fish/eyes/Eyes_Spikey2.png',
       knnData: [2256, 4.74],
       type: FishBodyPart.EYE
     },
     square1: {
-      index: 8,
       src: 'images/fish/eyes/Eyes_Square1.png',
       knnData: [1250, 6.94],
       type: FishBodyPart.EYE
     },
     square2: {
-      index: 9,
       src: 'images/fish/eyes/Eyes_Square2.png',
       knnData: [2238, 2.79],
       type: FishBodyPart.EYE
     },
     wide1: {
-      index: 10,
       src: 'images/fish/eyes/Eyes_Wide1.png',
       knnData: [712, 4],
       type: FishBodyPart.EYE
     },
     wide2: {
-      index: 11,
       src: 'images/fish/eyes/Eyes_Wide2.png',
       knnData: [76, 9.5],
       type: FishBodyPart.EYE
@@ -337,98 +307,84 @@ const fishComponents = {
   // MOUTH KNN DATA: [numTeeth, ratio of height:width, MouthExpression]
   mouths: {
     fish2: {
-      index: 1,
       src: 'images/fish/mouth/Mouth_Fish2.png',
       knnData: [0, 1.5, MouthExpression.NEUTRAL],
       tinted: true,
       type: FishBodyPart.MOUTH
     },
     fish3: {
-      index: 2,
       src: 'images/fish/mouth/Mouth_Fish3.png',
       knnData: [0, 0.76, MouthExpression.NEUTRAL],
       tinted: true,
       type: FishBodyPart.MOUTH
     },
     fish6: {
-      index: 5,
       src: 'images/fish/mouth/Mouth_Fish6.png',
       knnData: [0, 0.39, MouthExpression.NEUTRAL],
       tinted: true,
       type: FishBodyPart.MOUTH
     },
     narrow1: {
-      index: 6,
       src: 'images/fish/mouth/Mouth_Narrow1.png',
       knnData: [0, 1.06, MouthExpression.NEUTRAL],
       tinted: true,
       type: FishBodyPart.MOUTH
     },
     narrow2: {
-      index: 7,
       src: 'images/fish/mouth/Mouth_Narrow2.png',
       knnData: [0, 2.17, MouthExpression.FROWN],
       tinted: false,
       type: FishBodyPart.MOUTH
     },
     round1: {
-      index: 8,
       src: 'images/fish/mouth/Mouth_Round1.png',
       knnData: [0, 1, MouthExpression.NEUTRAL],
       tinted: false,
       type: FishBodyPart.MOUTH
     },
     round2: {
-      index: 9,
       src: 'images/fish/mouth/Mouth_Round2.png',
       knnData: [0, 2.17, MouthExpression.NEUTRAL],
       tinted: true,
       type: FishBodyPart.MOUTH
     },
     sharp1: {
-      index: 10,
       src: 'images/fish/mouth/Mouth_Sharp1.png',
       knnData: [10, 1.83, MouthExpression.SMILE],
       tinted: false,
       type: FishBodyPart.MOUTH
     },
     sharp2: {
-      index: 11,
       src: 'images/fish/mouth/Mouth_Sharp2.png',
       knnData: [2, 2.13, MouthExpression.SMILE],
       tinted: false,
       type: FishBodyPart.MOUTH
     },
     spikey1: {
-      index: 12,
       src: 'images/fish/mouth/Mouth_Spikey1.png',
       knnData: [6, 2, MouthExpression.SMILE],
       tinted: false,
       type: FishBodyPart.MOUTH
     },
     square1: {
-      index: 14,
       src: 'images/fish/mouth/Mouth_Square1.png',
       knnData: [2, 2.91, MouthExpression.FROWN],
       tinted: false,
       type: FishBodyPart.MOUTH
     },
     square2: {
-      index: 15,
       src: 'images/fish/mouth/Mouth_Square2.png',
       knnData: [1, 0.63, MouthExpression.FROWN],
       tinted: false,
       type: FishBodyPart.MOUTH
     },
     wide1: {
-      index: 16,
       src: 'images/fish/mouth/Mouth_Wide1.png',
       knnData: [0, 1.06, MouthExpression.NEUTRAL],
       tinted: true,
       type: FishBodyPart.MOUTH
     },
     wide2: {
-      index: 17,
       src: 'images/fish/mouth/Mouth_Wide2.png',
       knnData: [0, 3.71, MouthExpression.FROWN],
       tinted: true,
@@ -438,61 +394,51 @@ const fishComponents = {
   // SIDE FIN KNN DATA: [pointiness rank]
   pectoralFinsFront: {
     fish2: {
-      index: 0,
       src: 'images/fish/pectoralFin/Pectoral_Fin_Fish2.png',
       knnData: [9],
       type: FishBodyPart.PECTORAL_FIN_FRONT
     },
     fish4: {
-      index: 1,
       src: 'images/fish/pectoralFin/Pectoral_Fin_Fish4.png',
       knnData: [1],
       type: FishBodyPart.PECTORAL_FIN_FRONT
     },
     fish6: {
-      index: 2,
       src: 'images/fish/pectoralFin/Pectoral_Fin_Fish6.png',
       knnData: [15],
       type: FishBodyPart.PECTORAL_FIN_FRONT
     },
     narrow1: {
-      index: 3,
       src: 'images/fish/pectoralFin/Pectoral_Fin_Narrow1.png',
       knnData: [4],
       type: FishBodyPart.PECTORAL_FIN_FRONT
     },
     narrow2: {
-      index: 4,
       src: 'images/fish/pectoralFin/Pectoral_Fin_Narrow2.png',
       knnData: [5],
       type: FishBodyPart.PECTORAL_FIN_FRONT
     },
     round2: {
-      index: 5,
       src: 'images/fish/pectoralFin/Pectoral_Fin_Round2.png',
       knnData: [7],
       type: FishBodyPart.PECTORAL_FIN_FRONT
     },
     sharp1: {
-      index: 6,
       src: 'images/fish/pectoralFin/Pectoral_Fin_Sharp1.png',
       knnData: [2],
       type: FishBodyPart.PECTORAL_FIN_FRONT
     },
     spikey1: {
-      index: 7,
       src: 'images/fish/pectoralFin/Pectoral_Fin_Spikey1.png',
       knnData: [3],
       type: FishBodyPart.PECTORAL_FIN_FRONT
     },
     square2: {
-      index: 8,
       src: 'images/fish/pectoralFin/Pectoral_Fin_Square2.png',
       knnData: [10],
       type: FishBodyPart.PECTORAL_FIN_FRONT
     },
     wide1: {
-      index: 9,
       src: 'images/fish/pectoralFin/Pectoral_Fin_Wide1.png',
       knnData: [14],
       type: FishBodyPart.PECTORAL_FIN_FRONT
@@ -500,61 +446,51 @@ const fishComponents = {
   },
   pectoralFinsBack: {
     fish2: {
-      index: 0,
       src: 'images/fish/pectoralFin/Pectoral_Fin_Fish2.png',
       knnData: [],
       type: FishBodyPart.PECTORAL_FIN_BACK
     },
     fish4: {
-      index: 1,
       src: 'images/fish/pectoralFin/Pectoral_Fin_Fish4.png',
       knnData: [],
       type: FishBodyPart.PECTORAL_FIN_BACK
     },
     fish6: {
-      index: 2,
       src: 'images/fish/pectoralFin/Pectoral_Fin_Fish6.png',
       knnData: [],
       type: FishBodyPart.PECTORAL_FIN_BACK
     },
     narrow1: {
-      index: 3,
       src: 'images/fish/pectoralFin/Pectoral_Fin_Narrow1.png',
       knnData: [],
       type: FishBodyPart.PECTORAL_FIN_BACK
     },
     narrow2: {
-      index: 4,
       src: 'images/fish/pectoralFin/Pectoral_Fin_Narrow2.png',
       knnData: [],
       type: FishBodyPart.PECTORAL_FIN_BACK
     },
     round2: {
-      index: 5,
       src: 'images/fish/pectoralFin/Pectoral_Fin_Round2.png',
       knnData: [],
       type: FishBodyPart.PECTORAL_FIN_BACK
     },
     sharp1: {
-      index: 6,
       src: 'images/fish/pectoralFin/Pectoral_Fin_Sharp1.png',
       knnData: [],
       type: FishBodyPart.PECTORAL_FIN_BACK
     },
     spikey1: {
-      index: 7,
       src: 'images/fish/pectoralFin/Pectoral_Fin_Spikey1.png',
       knnData: [],
       type: FishBodyPart.PECTORAL_FIN_BACK
     },
     square2: {
-      index: 8,
       src: 'images/fish/pectoralFin/Pectoral_Fin_Square2.png',
       knnData: [],
       type: FishBodyPart.PECTORAL_FIN_BACK
     },
     wide1: {
-      index: 9,
       src: 'images/fish/pectoralFin/Pectoral_Fin_Wide1.png',
       knnData: [],
       type: FishBodyPart.PECTORAL_FIN_BACK
@@ -564,97 +500,81 @@ const fishComponents = {
   // TOP FIN KNN DATA: []
   topFins: {
     fish1: {
-      index: 0,
       src: 'images/fish/dorsalFin/Dorsal_Fin_Fish1.png',
       knnData: [],
       type: FishBodyPart.DORSAL_FIN
     },
     fish2: {
-      index: 1,
       src: 'images/fish/dorsalFin/Dorsal_Fin_Fish2.png',
       knnData: [],
       type: FishBodyPart.DORSAL_FIN
     },
     fish3: {
-      index: 2,
       src: 'images/fish/dorsalFin/Dorsal_Fin_Fish3.png',
       knnData: [],
       type: FishBodyPart.DORSAL_FIN
     },
     fish4: {
-      index: 3,
       src: 'images/fish/dorsalFin/Dorsal_Fin_Fish4.png',
       knnData: [],
       type: FishBodyPart.DORSAL_FIN
     },
     fish6: {
-      index: 5,
       src: 'images/fish/dorsalFin/Dorsal_Fin_Fish6.png',
       knnData: [],
       type: FishBodyPart.DORSAL_FIN
     },
     narrow1: {
-      index: 6,
       src: 'images/fish/dorsalFin/Dorsal_Fin_Narrow1.png',
       knnData: [],
       type: FishBodyPart.DORSAL_FIN
     },
     round1: {
-      index: 8,
       src: 'images/fish/dorsalFin/Dorsal_Fin_Round1.png',
       knnData: [],
       type: FishBodyPart.DORSAL_FIN
     },
     round2: {
-      index: 9,
       src: 'images/fish/dorsalFin/Dorsal_Fin_Round2.png',
       knnData: [],
       type: FishBodyPart.DORSAL_FIN
     },
     sharp1: {
-      index: 10,
       src: 'images/fish/dorsalFin/Dorsal_Fin_Sharp1.png',
       knnData: [],
       type: FishBodyPart.DORSAL_FIN
     },
     sharp2: {
-      index: 11,
       src: 'images/fish/dorsalFin/Dorsal_Fin_Sharp2.png',
       knnData: [],
       type: FishBodyPart.DORSAL_FIN
     },
     spikey1: {
-      index: 12,
       src: 'images/fish/dorsalFin/Dorsal_Fin_Spikey1.png',
       knnData: [],
       type: FishBodyPart.DORSAL_FIN
     },
     spikey2: {
-      index: 13,
       src: 'images/fish/dorsalFin/Dorsal_Fin_Spikey2.png',
       knnData: [],
       type: FishBodyPart.DORSAL_FIN
     },
     square1: {
-      index: 14,
       src: 'images/fish/dorsalFin/Dorsal_Fin_Square1.png',
       knnData: [],
       type: FishBodyPart.DORSAL_FIN
     },
     square2: {
-      index: 15,
       src: 'images/fish/dorsalFin/Dorsal_Fin_Square2.png',
       knnData: [],
       type: FishBodyPart.DORSAL_FIN
     },
     wide1: {
-      index: 16,
       src: 'images/fish/dorsalFin/Dorsal_Fin_Wide1.png',
       knnData: [],
       type: FishBodyPart.DORSAL_FIN
     },
     wide2: {
-      index: 17,
       src: 'images/fish/dorsalFin/Dorsal_Fin_Wide2.png',
       knnData: [],
       type: FishBodyPart.DORSAL_FIN
@@ -663,91 +583,76 @@ const fishComponents = {
   // TAIL KNN DATA: []
   tails: {
     fish1: {
-      index: 0,
       src: 'images/fish/tailFin/Tail_Fin_Fish1.png',
       knnData: [],
       type: FishBodyPart.TAIL
     },
     fish2: {
-      index: 1,
       src: 'images/fish/tailFin/Tail_Fin_Fish2.png',
       knnData: [],
       type: FishBodyPart.TAIL
     },
     fish3: {
-      index: 2,
       src: 'images/fish/tailFin/Tail_Fin_Fish3.png',
       knnData: [],
       type: FishBodyPart.TAIL
     },
     fish4: {
-      index: 3,
       src: 'images/fish/tailFin/Tail_Fin_Fish4.png',
       knnData: [],
       type: FishBodyPart.TAIL
     },
    fish6: {
-      index: 5,
       src: 'images/fish/tailFin/Tail_Fin_Fish6.png',
       knnData: [],
       type: FishBodyPart.TAIL
     },
     narrow1: {
-      index: 6,
       src: 'images/fish/tailFin/Tail_Fin_Narrow1.png',
       knnData: [],
       type: FishBodyPart.TAIL
     },
     narrow2: {
-      index: 7,
       src: 'images/fish/tailFin/Tail_Fin_Narrow2.png',
       knnData: [],
       type: FishBodyPart.TAIL
     },
     round1: {
-      index: 8,
       src: 'images/fish/tailFin/Tail_Fin_Round1.png',
       knnData: [],
       type: FishBodyPart.TAIL
     },
     sharp1: {
-      index: 10,
       src: 'images/fish/tailFin/Tail_Fin_Sharp1.png',
       knnData: [],
       type: FishBodyPart.TAIL
     },
     sharp2: {
-      index: 11,
       src: 'images/fish/tailFin/Tail_Fin_Sharp2.png',
       knnData: [],
       type: FishBodyPart.TAIL
     },
     spikey1: {
-      index: 12,
       src: 'images/fish/tailFin/Tail_Fin_Spikey1.png',
       knnData: [],
       type: FishBodyPart.TAIL
     },
     square1: {
-      index: 14,
       src: 'images/fish/tailFin/Tail_Fin_Square1.png',
       knnData: [],
       type: FishBodyPart.TAIL
     },
     square2: {
-      index: 15,
       src: 'images/fish/tailFin/Tail_Fin_Square2.png',
       knnData: [],
       type: FishBodyPart.TAIL
     },
     wide1: {
-      index: 16,
       src: 'images/fish/tailFin/Tail_Fin_Wide1.png',
       knnData: [],
       type: FishBodyPart.TAIL
     },
     wide2: {
-      index: 17,
       src: 'images/fish/tailFin/Tail_Fin_Wide2.png',
       knnData: [],
       type: FishBodyPart.TAIL
@@ -787,7 +692,7 @@ const fishComponents = {
 };
 
 // Normalize the KNN data for all components.
-export const initializeKnnData = () => {
+export const initFishData = () => {
   if (!initialized) {
     Object.keys(fishComponents).forEach(key => {
       const knnDataLength = Object.values(fishComponents[key])[0].knnData
@@ -806,7 +711,8 @@ export const initializeKnnData = () => {
           }
         }
       });
-      Object.values(fishComponents[key]).forEach(component => {
+      Object.values(fishComponents[key]).forEach((component, idx) => {
+        component.index = idx;
         for (var i = 0; i < component.knnData.length; ++i) {
           if (maxArray[i] === minArray[i]) {
             component.knnData[i] = 0;
