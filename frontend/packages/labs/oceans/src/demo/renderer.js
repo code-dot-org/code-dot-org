@@ -1,6 +1,6 @@
 import 'babel-polyfill';
 import _ from 'lodash';
-import {getState} from './state';
+import {getState, setState} from './state';
 import constants, {Modes} from './constants';
 import CanvasCache from './canvasCache';
 import {
@@ -19,14 +19,13 @@ var $time =
   };
 
 let prevState = {};
-
 let currentModeStartTime = $time();
-
 let fishPartImages = {};
-
 let canvasCache;
 let intermediateCanvas;
 let intermediateCtx;
+let lastPauseTime = 0;
+let lastStartTime;
 
 export const initRenderer = () => {
   canvasCache = new CanvasCache();
@@ -64,30 +63,23 @@ export const render = () => {
   if (state.currentMode !== prevState.currentMode) {
     drawBackground(state);
     currentModeStartTime = $time();
+    lastPauseTime = 0;
+    lastStartTime = null;
   }
 
+  clearCanvas(state.canvas);
+
   switch (state.currentMode) {
-    case Modes.Loading:
-      clearCanvas(state.canvas);
-      break;
-    case Modes.Words:
-      clearCanvas(state.canvas);
-      break;
     case Modes.Training:
-      clearCanvas(state.canvas);
+      drawFrame(state);
       drawTrainingFish(state);
-      drawUpcomingFish(state);
       break;
     case Modes.Predicting:
-      clearCanvas(state.canvas);
       drawPredictingFish(state);
       break;
     case Modes.Pond:
-      clearCanvas(state.canvas);
       drawPondFishImages();
       break;
-    default:
-      console.error('Unrecognized mode specified.');
   }
 
   drawOverlays();
@@ -126,45 +118,88 @@ const loadImage = imgPath => {
   });
 };
 
-// Draw the fish for training mode.
-export const drawTrainingFish = state => {
-  const canvas = state.canvas;
-  const ctx = canvas.getContext('2d');
+// Calculate the screen's current X offset.
+const getOffsetForTime = (t, totalFish) => {
+  return (
+    constants.fishCanvasWidth * totalFish -
+    constants.canvasWidth / 2 +
+    constants.fishCanvasWidth / 2 -
+    Math.round((t * constants.fishCanvasWidth) / 1000)
+  );
+};
 
-  // Draw frame behind fish
-  const frameSize = 300;
-  const frameXPos = canvas.width / 2 - frameSize / 2;
-  const frameYPos = canvas.height / 2 - frameSize / 2;
+// Given X (screenX + offsetX), calculate the fish index at that X.
+const getFishIdxForLocation = (screenX, offsetX, totalFish) => {
+  const n = Math.floor((screenX + offsetX) / constants.fishCanvasWidth);
+  return totalFish - n;
+};
+
+// Calculate a given fish's X position.
+const getXForFish = (numFish, fishIdx, offsetX) => {
+  return (numFish - fishIdx) * constants.fishCanvasWidth - offsetX;
+};
+
+// Draw fish for the training screen.
+const drawTrainingFish = state => {
+  let t = lastPauseTime;
+  let currentRunTime = 0;
+  if (state.isRunning) {
+    if (!lastStartTime) {
+      lastStartTime = $time();
+    }
+
+    currentRunTime = $time() - lastStartTime;
+    if (currentRunTime > 1000) {
+      currentRunTime = 1000;
+    }
+
+    t += currentRunTime;
+  }
+
+  const offsetX = getOffsetForTime(t, state.fishData.length);
+  const startFishIdx = Math.max(
+    getFishIdxForLocation(
+      constants.canvasWidth + constants.fishCanvasWidth,
+      offsetX,
+      state.fishData.length
+    ),
+    0
+  );
+  const lastFishIdx = Math.min(
+    getFishIdxForLocation(0, offsetX, state.fishData.length),
+    state.fishData.length - 1
+  );
+  const ctx = state.canvas.getContext('2d');
+  const y = constants.canvasHeight / 2 - constants.fishCanvasHeight / 2;
+
+  for (let i = startFishIdx; i <= lastFishIdx; i++) {
+    const x = getXForFish(state.fishData.length - 1, i, offsetX);
+    const fish = state.fishData[i];
+    drawSingleFish(fish, x, y, ctx);
+  }
+
+  if (currentRunTime === 1000) {
+    setState({isRunning: false});
+    lastPauseTime += 1000;
+    lastStartTime = null;
+  }
+};
+
+// Draw frame in the center of the screen.
+const drawFrame = state => {
+  const canvas = state.canvas;
+  const size = constants.fishCanvasWidth;
+  const frameXPos = canvas.width / 2 - size / 2;
+  const frameYPos = canvas.height / 2 - size / 2;
   drawRoundedFrame(
-    ctx,
+    canvas.getContext('2d'),
     frameXPos,
     frameYPos,
-    frameSize,
-    frameSize,
+    size,
+    size,
     '#F0F0F0',
     '#000000'
   );
-
-  const fish = state.fishData[state.trainingIndex];
-  const fishXPos = frameXPos + (frameSize - constants.fishCanvasWidth) / 2;
-  const fishYPos = frameYPos + (frameSize - constants.fishCanvasHeight) / 2;
-  drawSingleFish(fish, fishXPos, fishYPos, ctx);
-};
-
-// Draw the upcoming fish for training mode.
-export const drawUpcomingFish = state => {
-  const fishLeft = state.fishData.length - state.trainingIndex - 1;
-  const numUpcomingFish = fishLeft >= 3 ? 3 : fishLeft;
-  const canvas = state.canvas;
-  const ctx = canvas.getContext('2d');
-  let x = canvas.width / 2 - 300 - constants.fishCanvasWidth / 2;
-  const y = canvas.height / 2 - constants.fishCanvasHeight / 2;
-
-  for (let i = 1; i <= numUpcomingFish; i++) {
-    const fish = state.fishData[state.trainingIndex + i];
-    drawSingleFish(fish, x, y, ctx);
-    x -= 200;
-  }
 };
 
 // Draw the fish for predicting mode.

@@ -63,6 +63,8 @@ const arrangeFish = fishes => {
 const onClickStartOver = () => {
   const state = setState({
     iterationCount: getState().iterationCount + 1,
+    trainingIndex: 0,
+    fishData: [],
     yesCount: 0,
     noCount: 0
   });
