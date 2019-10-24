@@ -832,7 +832,8 @@ module Api::V1::Pd
             notes_3: nil,
             notes_4: nil,
             notes_5: nil,
-            friendly_scholarship_status: 'No'
+            friendly_scholarship_status:
+              Pd::ScholarshipInfo.get_scholarship_label(Pd::ScholarshipInfoConstants::NO)
           }.stringify_keys, JSON.parse(@response.body).first
         )
       end
