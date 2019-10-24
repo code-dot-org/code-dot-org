@@ -15,7 +15,8 @@ const INITIAL_STATE = {
   numBins: 0,
   values: '',
   xValues: '',
-  yValues: ''
+  yValues: '',
+  parsedRecords: []
 };
 
 class DataVisualizer extends React.Component {
@@ -56,21 +57,71 @@ class DataVisualizer extends React.Component {
 
   updateChart = () => {
     const targetDiv = document.getElementById('chart-area');
-    const records =
-      Object.keys(this.props.tableRecords).length > 0 &&
-      this.props.tableRecords.map(tableRecord => JSON.parse(tableRecord));
-    if (this.state.chartType === 'Bar Chart' && this.state.values) {
-      var chart = new GoogleChart.MaterialBarChart(targetDiv);
-      const chartData = this.aggregateRecordsByColumn(
-        records,
-        this.state.values
-      );
-      chart.drawChart(chartData, [this.state.values, 'count']);
+    if (!targetDiv) {
+      return;
+    }
+
+    let chart;
+    let chartData;
+    const columns = [];
+    const options = {};
+    switch (this.state.chartType) {
+      case 'Bar Chart':
+        if (this.state.values) {
+          chart = new GoogleChart.MaterialBarChart(targetDiv);
+          chartData = this.aggregateRecordsByColumn(
+            this.state.parsedRecords,
+            this.state.values
+          );
+          columns.push(this.state.values, 'count');
+        }
+        break;
+      case 'Histogram':
+        console.warn(`${this.state.chartType} not yet implemented`);
+        break;
+      case 'Cross Tab':
+        console.warn(`${this.state.chartType} not yet implemented`);
+        break;
+      case 'Scatter Plot':
+        console.warn(`${this.state.chartType} not yet implemented`);
+        break;
+      default:
+        console.warn(`unknown chart type ${this.state.chartType}`);
+        break;
+    }
+    if (chart && chartData) {
+      chart.drawChart(chartData, columns, options);
     }
   };
 
+  parseRecords = () => {
+    if (Object.keys(this.props.tableRecords).length === 0) {
+      return [];
+    } else {
+      let parsedRecords = [];
+      this.props.tableRecords.forEach(record => {
+        if (record) {
+          parsedRecords.push(JSON.parse(record));
+        }
+      });
+      return parsedRecords;
+    }
+  };
+
+  componentDidUpdate(previousProps, prevState) {
+    if (this.props !== previousProps) {
+      this.setState({parsedRecords: this.parseRecords()});
+    }
+  }
+
   render() {
-    this.updateChart();
+    if (
+      this.state.isVisualizerOpen &&
+      this.props.tableRecords &&
+      this.state.chartType
+    ) {
+      this.updateChart();
+    }
 
     const modalBody = (
       <div>
