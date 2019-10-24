@@ -30,7 +30,7 @@ const BodyShape = Object.freeze({
 let initialized = false;
 
 const fishComponents = {
-  // BODY KNN DATA: [height:width ratio, area]
+  // BODY KNN DATA: [area, BodyShape]
   bodies: {
     fish6: {
       src: 'images/fish/body/Body_Fish6.png',
@@ -731,6 +731,7 @@ export const initFishData = () => {
           }
         }
         component.index = idx;
+        // Add an "id" to each component to train on
         if (variations.length > 1) {
           component.knnData.push(idx / (variations.length - 1));
         }
