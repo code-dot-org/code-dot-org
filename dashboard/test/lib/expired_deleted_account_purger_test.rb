@@ -276,15 +276,17 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
   end
 
   test 'moves account to queue when purge fails' do
-    student_a = create :student, deleted_at: 3.days.ago
-    student_b = create :student, deleted_at: 3.days.ago
+    student_succeeds = create :student, deleted_at: 3.days.ago
+    student_needs_review = create :student, deleted_at: 3.days.ago
+    student_autoretryable = create :student, deleted_at: 3.days.ago
 
     edap = ExpiredDeletedAccountPurger.new \
       deleted_after: 4.days.ago,
       deleted_before: 2.days.ago
 
     DeleteAccountsHelper.any_instance.stubs(:purge_user).with do |account|
-      raise 'Intentional failure' if account == student_b
+      raise 'Intentional failure' if account == student_needs_review
+      raise 'Pardot::InvalidApiKeyException' if account == student_autoretryable
       account.update!(purged_at: Time.now); true
     end
 
@@ -292,18 +294,18 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       'DeletedAccountPurger',
       includes_metrics(
         AccountsPurged: 1,
-        AccountsQueued: 1,
+        AccountsQueued: 2,
         ManualReviewQueueDepth: is_a(Integer)
       )
     )
 
-    assert_creates QueuedAccountPurge do
+    assert_difference(-> {QueuedAccountPurge.count}, 2) do
       edap.purge_expired_deleted_accounts!
     end
 
     purged = User.with_deleted.where.not(purged_at: nil)
-    assert_includes purged, student_a
-    refute_includes purged, student_b
+    assert_includes purged, student_succeeds
+    refute_includes purged, student_needs_review
 
     assert_equal <<~LOG, edap.log.string
       Starting purge_expired_deleted_accounts!
@@ -311,15 +313,16 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       deleted_before: #{2.days.ago}
       max_teachers_to_purge: #{edap.max_teachers_to_purge}
       max_accounts_to_purge: #{edap.max_accounts_to_purge}
-      Purging user_id #{student_a.id}
-      Done purging user_id #{student_a.id}
-      Purging user_id #{student_b.id}
+      Purging user_id #{student_succeeds.id}
+      Done purging user_id #{student_succeeds.id}
+      Purging user_id #{student_needs_review.id}
+      Purging user_id #{student_autoretryable.id}
       AccountsPurged: 1
-      AccountsQueued: 1
+      AccountsQueued: 2
       ManualReviewQueueDepth: #{QueuedAccountPurge.count}
       Purged 1 account(s).
-      Queued 1 account(s) for manual review.
-      1 account(s) require review.
+      Queued 2 account(s) for retry or review.
+      #{QueuedAccountPurge.needing_manual_review.count} account(s) require review.
       🕐 00:00:00
     LOG
   end
@@ -391,7 +394,7 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       AccountsQueued: 1
       ManualReviewQueueDepth: #{QueuedAccountPurge.count}
       Would have purged 1 account(s).
-      Would have queued 1 account(s) for manual review.
+      Would have queued 1 account(s) for retry or review.
       🕐 00:00:00
     LOG
   end

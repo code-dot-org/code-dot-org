@@ -1,4 +1,6 @@
+/* globals $ */
 import clientApi from '@cdo/apps/code-studio/initApp/clientApi';
+import {getUserSections} from '@cdo/apps/util/userSectionClient';
 
 const LIBRARY_NAME = 'library.json';
 export default class LibraryClientApi {
@@ -61,8 +63,53 @@ export default class LibraryClientApi {
     });
   }
 
-  getClassLibraries(onSuccess, onError) {
-    // TODO: find all libraries published by other students in a classroom
-    return undefined;
+  async getClassLibraries(onSuccess, onError) {
+    getUserSections(sections => {
+      // TODO: Add backend controller action so this doesn't require multiple AJAX requests or this super clunky promise structure.
+      let requests = [];
+      let allLibraries = [];
+      let promises = [];
+      let libraryIds = {};
+      sections.forEach(section => {
+        requests.push(
+          $.ajax({
+            url: `/dashboardapi/v1/projects/section/${section.id}`,
+            method: 'GET',
+            dataType: 'json'
+          })
+        );
+      });
+      requests.forEach(request => {
+        promises.push(
+          new Promise((resolve, reject) => {
+            $.when(request)
+              .done(data => {
+                if (data) {
+                  let libraries = data
+                    .filter(library => !!library.libraryName)
+                    .map(library => {
+                      library.name = library.libraryName;
+                      return library;
+                    });
+                  libraries.forEach(library => {
+                    if (!libraryIds[library.channel]) {
+                      allLibraries.push(library);
+                      libraryIds[library.channel] = true;
+                    }
+                  });
+                }
+                resolve();
+              })
+              .fail(error => {
+                console.warn('Error finding class libraries: ' + error);
+                reject();
+              });
+          })
+        );
+      });
+      Promise.all(promises).then(() => {
+        onSuccess(allLibraries);
+      });
+    });
   }
 }

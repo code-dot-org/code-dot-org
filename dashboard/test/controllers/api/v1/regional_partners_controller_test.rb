@@ -249,13 +249,13 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
   test 'show regional partner summer workshops for valid partner ID' do
     regional_partner = create :regional_partner_beverly_hills
 
-    get :show, partner_id: regional_partner.id
+    get :show, params: {partner_id: regional_partner.id}
     assert_response :success
     assert_equal regional_partner.contact_name, JSON.parse(@response.body)['contact_name']
   end
 
   test 'show regional partner summer workshops for invalid partner ID' do
-    get :show, partner_id: "YY"
+    get :show, params: {partner_id: "YY"}
     assert_response :success
     assert_equal "no_partner", JSON.parse(@response.body)['error']
   end
@@ -265,7 +265,7 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
 
     regional_partner = create :regional_partner_beverly_hills
 
-    get :find, zip_code: 90210
+    get :find, params: {zip_code: 90210}
     assert_response :success
     assert_equal regional_partner.contact_name, JSON.parse(@response.body)['contact_name']
   end
@@ -276,7 +276,7 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
 
     regional_partner = create :regional_partner_illinois
 
-    get :find, zip_code: 60415
+    get :find, params: {zip_code: 60415}
     assert_response :success
     assert_equal regional_partner.contact_name, JSON.parse(@response.body)['contact_name']
   end
@@ -285,13 +285,13 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
     mock_washington_object = OpenStruct.new(state_code: "WA")
     Geocoder.expects(:search).returns([mock_washington_object])
 
-    get :find, zip_code: 98104
+    get :find, params: {zip_code: 98104}
     assert_response :success
     assert_equal "no_partner", JSON.parse(@response.body)['error']
   end
 
   test 'find no regional partner summer workshops for invalid ZIP code' do
-    get :find, zip_code: "XX"
+    get :find, params: {zip_code: "XX"}
     assert_response :success
     assert_equal "no_state", JSON.parse(@response.body)['error']
   end
@@ -299,7 +299,7 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
   test 'find no regional partner summer workshops for non-existent ZIP code' do
     Geocoder.expects(:search).returns([])
 
-    get :find, zip_code: 11111
+    get :find, params: {zip_code: 11111}
     assert_response :success
     assert_equal "no_state", JSON.parse(@response.body)['error']
   end
