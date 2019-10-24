@@ -5,6 +5,12 @@ import {init as initScene} from '../init';
 import {createButton, createText} from '../helpers';
 
 const headerElements = [createText({id: 'header', text: 'Choose Fish Type'})];
+const staticUiElements = [
+  createText({
+    id: 'words-text',
+    text: 'What type of fish do you want to train A.I. to detect?'
+  })
+];
 const items = [
   ['Blue', 'Green', 'Red', 'Round', 'Square'],
   [
@@ -58,5 +64,6 @@ const createButtons = () => {
 };
 
 export const init = () => {
-  setState({uiElements: createButtons(), headerElements});
+  const uiElements = [...staticUiElements, ...createButtons()];
+  setState({uiElements, headerElements});
 };
