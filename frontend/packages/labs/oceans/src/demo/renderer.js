@@ -95,9 +95,9 @@ export const render = () => {
 const updateTrainText = state => {
   // No-op if animation is currently in progress.
   if (state.isRunning) {
-    $("#train-text").hide();
+    $('#train-text').hide();
   } else {
-    $("#train-text").show();
+    $('#train-text').show();
   }
 };
 
@@ -174,6 +174,36 @@ const getXForFish = (numFish, fishIdx, offsetX) => {
   return (numFish - fishIdx) * constants.fishCanvasWidth - offsetX;
 };
 
+// Calculate a given fish's Y position.
+// It will begin dropping as they pass the midpoint on the screen if not
+// liked.
+const getYForFish = (numFish, fishIdx, state, offsetX, predictedClassId) => {
+  let y = constants.canvasHeight / 2 - constants.fishCanvasHeight / 2;
+
+  // Move fish down a little on predict screen.
+  if (state.currentMode === Modes.Predicting) {
+    y += 100;
+
+    // And drop the fish down even more if they are not liked.
+    const doesLike = predictedClassId === ClassType.Like;
+    if (!doesLike) {
+      const midScreenX =
+        constants.canvasWidth / 2 - constants.fishCanvasWidth / 2;
+      const midFishIndex = getFishIdxForLocation(
+        midScreenX,
+        offsetX,
+        state.fishData.length
+      );
+      const screenX = getXForFish(numFish, fishIdx, offsetX);
+      if (screenX > midScreenX) {
+        y += screenX - midScreenX;
+      }
+    }
+  }
+
+  return y;
+};
+
 const drawMovingFish = state => {
   const runtime = currentRunTime(
     state.isRunning,
@@ -194,16 +224,18 @@ const drawMovingFish = state => {
     state.fishData.length - 1
   );
   const ctx = state.canvas.getContext('2d');
-  let y = constants.canvasHeight / 2 - constants.fishCanvasHeight / 2;
-
-  // Move fish down a little on predict screen.
-  if (state.currentMode === Modes.Predicting) {
-    y += 100;
-  }
 
   for (let i = startFishIdx; i <= lastFishIdx; i++) {
-    const x = getXForFish(state.fishData.length - 1, i, offsetX);
     const fish = state.fishData[i];
+    const x = getXForFish(state.fishData.length - 1, i, offsetX);
+    const y = getYForFish(
+      state.fishData.length - 1,
+      i,
+      state,
+      offsetX,
+      fish.result ? fish.result.predictedClassId : false
+    );
+
     drawSingleFish(fish, x, y, ctx);
 
     if (state.currentMode === Modes.Predicting) {
