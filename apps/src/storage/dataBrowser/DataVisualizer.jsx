@@ -77,17 +77,6 @@ class DataVisualizer extends React.Component {
         break;
       case 'Histogram':
         if (this.state.values && this.state.bucketSize) {
-          let min = Infinity;
-          let max = -Infinity;
-          records.forEach(record => {
-            let value = record[this.state.values];
-            if (value < min) {
-              min = value;
-            }
-            if (value > max) {
-              max = value;
-            }
-          });
           options.histogram = {
             bucketSize: this.state.bucketSize
           };

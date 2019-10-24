@@ -105,17 +105,27 @@ export default class GoogleChart {
    * Makes sure data looks okay, throws errors and logs warnings as appropriate.
    * @param {string[]} columns
    * @param {Object[]} data
+   * @param {number} [minColumns = 2]
+   * @param {number} [maxColumns]
    * @private
    */
-  verifyData_(data, columns, minColumns = 2) {
+  verifyData_(data, columns, minColumns = 2, maxColumns) {
     // Warn when no rows are present
     if (data.length === 0) {
       this.warn('No data.');
     }
 
+    if (maxColumns && columns.length > maxColumns) {
+      this.warn(
+        `Too many columns for pie chart; only using the first ${maxColumns}.`
+      );
+    }
+
     // Error when not enough columns are provided
     if (columns.length < minColumns) {
-      throw new Error('Not enough columns for chart; expected at least 2.');
+      throw new Error(
+        `Not enough columns for chart; expected at least ${minColumns}.`
+      );
     }
 
     // Warn on empty columns?
@@ -178,11 +188,7 @@ class PieChart extends GoogleChart {
    * @override
    */
   verifyData_(data, columns) {
-    super.verifyData_(data, columns);
-
-    if (columns.length > 2) {
-      this.warn('Too many columns for pie chart; only using the first 2.');
-    }
+    super.verifyData_(data, columns, /* minColumns */ 2, /* maxColumns */ 2);
   }
 }
 GoogleChart.PieChart = PieChart;
@@ -196,7 +202,7 @@ class Histogram extends GoogleChart {
   }
 
   verifyData_(data, columns) {
-    super.verifyData_(data, columns, 1);
+    super.verifyData_(data, columns, /* minColumns */ 1, /* maxColumns */ 1);
   }
 }
 GoogleChart.Histogram = Histogram;
