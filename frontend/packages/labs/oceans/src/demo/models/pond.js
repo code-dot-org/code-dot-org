@@ -21,15 +21,10 @@ const staticUiElements = [
     text: 'How did A.I. do?'
   })
 ];
-const footerElements = [
+const staticFooterElements = [
   createButton({
     text: 'Training',
     onClick: () => toMode(Modes.Training),
-    className: ''
-  }),
-  createButton({
-    text: 'Start Over',
-    onClick: () => onClickStartOver(),
     className: ''
   })
 ];
@@ -44,7 +39,7 @@ export const init = async () => {
     pondFish,
     headerElements,
     uiElements: uiElements(state, pondFish.length),
-    footerElements
+    footerElements: footerElements(state)
   });
 };
 
@@ -69,11 +64,27 @@ const predictAllFish = state => {
   });
 };
 
+const continueText = state => {
+  return state.iterationCount === 0 ? 'Continue' : 'Complete';
+};
+
 const uiElements = (state, pondCount) => {
   const pondText = `Out of ${
     state.fishData.length
-  } objects, A.I. identified ${pondCount} that it classified as ${state.word.toUpperCase()}. To help A.I. do better, you can train A.I. more and try again. Otherwise, click 'Complete'.`;
+  } objects, A.I. identified ${pondCount} that it classified as ${state.word.toUpperCase()}. To help A.I. do better, you can train A.I. more and try again. Otherwise, click ${continueText(
+    state
+  )}.`;
   return [...staticUiElements, createText({id: 'pond-text', text: pondText})];
+};
+
+const footerElements = state => {
+  const continueButton = createButton({
+    text: continueText(state),
+    onClick: () => onClickContinue(),
+    className: ''
+  });
+
+  return [...staticFooterElements, continueButton];
 };
 
 const arrangeFish = fishes => {
@@ -89,7 +100,7 @@ const arrangeFish = fishes => {
   });
 };
 
-const onClickStartOver = () => {
+const onClickContinue = () => {
   const state = setState({
     iterationCount: getState().iterationCount + 1,
     trainingIndex: 0,
