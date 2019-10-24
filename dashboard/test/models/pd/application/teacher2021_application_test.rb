@@ -825,6 +825,29 @@ module Pd::Application
       end
     end
 
+    test 'meets_scholarship_criteria' do
+      application = create :pd_teacher2021_application
+      test_cases = [
+        {underrepresented_minority_percent: YES, free_lunch_percent: YES, verdict: YES},
+        {underrepresented_minority_percent: YES, free_lunch_percent: nil, verdict: YES},
+        {underrepresented_minority_percent: YES, free_lunch_percent: NO, verdict: YES},
+        {underrepresented_minority_percent: nil, free_lunch_percent: YES, verdict: YES},
+        {underrepresented_minority_percent: nil, free_lunch_percent: nil, verdict: REVIEWING_INCOMPLETE},
+        {underrepresented_minority_percent: nil, free_lunch_percent: NO, verdict: REVIEWING_INCOMPLETE},
+        {underrepresented_minority_percent: NO, free_lunch_percent: YES, verdict: YES},
+        {underrepresented_minority_percent: NO, free_lunch_percent: nil, verdict: REVIEWING_INCOMPLETE},
+        {underrepresented_minority_percent: NO, free_lunch_percent: NO, verdict: NO}
+      ]
+
+      test_cases.each do |test_case|
+        input = test_case.slice(:underrepresented_minority_percent, :free_lunch_percent)
+        application.update(response_scores: {meets_scholarship_criteria_scores: input}.to_json)
+
+        output = application.meets_scholarship_criteria
+        assert_equal test_case[:verdict], output, "Wrong result for case #{input}"
+      end
+    end
+
     test 'test update scholarship status' do
       application = create :pd_teacher2021_application
       assert_nil application.scholarship_status
