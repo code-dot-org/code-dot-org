@@ -1,7 +1,7 @@
 import 'babel-polyfill';
 import _ from 'lodash';
 import {getState, setState} from './state';
-import constants, {Modes} from './constants';
+import constants, {Modes, ClassType} from './constants';
 import CanvasCache from './canvasCache';
 import {
   backgroundPathForMode,
@@ -11,6 +11,7 @@ import {
   clamp
 } from './helpers';
 import fishData, {FishBodyPart} from '../utils/fishData';
+import {predictFish} from './models/predict';
 
 var $time =
   Date.now ||
@@ -73,10 +74,10 @@ export const render = () => {
   switch (state.currentMode) {
     case Modes.Training:
       drawFrame(state);
-      drawTrainingFish(state);
+      drawMovingFish(state);
       break;
     case Modes.Predicting:
-      drawPredictingFish(state);
+      drawMovingFish(state);
       break;
     case Modes.Pond:
       drawPondFishImages();
@@ -119,7 +120,7 @@ const loadImage = imgPath => {
   });
 };
 
-const currentRunTime = isRunning => {
+const currentRunTime = (isRunning, clampTime) => {
   let t = 0;
   if (isRunning) {
     if (!lastStartTime) {
@@ -127,12 +128,18 @@ const currentRunTime = isRunning => {
     }
 
     t = $time() - lastStartTime;
-    if (t > MOVE_TIME) {
+    if (clampTime && t > MOVE_TIME) {
       t = MOVE_TIME;
     }
   }
 
   return t;
+};
+
+const finishMovement = () => {
+  setState({isRunning: false});
+  lastPauseTime += MOVE_TIME;
+  lastStartTime = null;
 };
 
 const getOffsetForTime = (t, totalFish) => {
@@ -153,8 +160,11 @@ const getXForFish = (numFish, fishIdx, offsetX) => {
   return (numFish - fishIdx) * constants.fishCanvasWidth - offsetX;
 };
 
-const drawTrainingFish = state => {
-  const runtime = currentRunTime(state.isRunning);
+const drawMovingFish = state => {
+  const runtime = currentRunTime(
+    state.isRunning,
+    state.currentMode === Modes.Training
+  );
   const t = lastPauseTime + runtime;
   const offsetX = getOffsetForTime(t, state.fishData.length);
   const startFishIdx = Math.max(
@@ -176,12 +186,22 @@ const drawTrainingFish = state => {
     const x = getXForFish(state.fishData.length - 1, i, offsetX);
     const fish = state.fishData[i];
     drawSingleFish(fish, x, y, ctx);
+
+    if (state.currentMode === Modes.Predicting) {
+      if (fish.result) {
+        ctx.fillStyle =
+          fish.result.predictedClassId === ClassType.Like ? 'green' : 'red';
+        ctx.fillRect(x, y, 10, 10);
+      } else {
+        predictFish(state, i).then(prediction => {
+          fish.result = prediction;
+        });
+      }
+    }
   }
 
-  if (runtime === MOVE_TIME) {
-    setState({isRunning: false});
-    lastPauseTime += MOVE_TIME;
-    lastStartTime = null;
+  if (state.currentMode === Modes.Training && runtime === MOVE_TIME) {
+    finishMovement();
   }
 };
 
@@ -199,18 +219,6 @@ const drawFrame = state => {
     size,
     '#FFFFFF',
     '#000000'
-  );
-};
-
-// Draw the fish for predicting mode.
-export const drawPredictingFish = state => {
-  const fish = state.fishData[state.trainingIndex];
-  const canvas = state.canvas;
-  drawSingleFish(
-    fish,
-    canvas.width / 2 - constants.fishCanvasWidth / 2,
-    canvas.height / 2 - constants.fishCanvasHeight / 2,
-    canvas.getContext('2d')
   );
 };
 
