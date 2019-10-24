@@ -85,10 +85,13 @@ export const bodyAnchorFromType = (body, type) => {
   }
 };
 
-export const colorFromType = (palette, type) => {
-  switch (type) {
+export const colorForFishPart = (palette, part) => {
+  switch (part.type) {
     case FishBodyPart.MOUTH:
-      return palette.mouthRgb;
+      // If the mouth should be tinted, return the mouth
+      // color. Otherwise, return null so that it is
+      // not tinted.
+      return part.tinted ? palette.mouthRgb : null;
     case FishBodyPart.DORSAL_FIN:
     case FishBodyPart.PECTORAL_FIN_FRONT:
     case FishBodyPart.PECTORAL_FIN_BACK:
