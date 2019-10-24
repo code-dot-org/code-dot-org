@@ -1,5 +1,7 @@
 import {init as initLoading} from './loading';
+import {init as initActivingIntro} from './activityIntro';
 import {init as initWords} from './words';
+import {init as initTrainingIntro} from './trainingIntro';
 import {init as initTraining} from './train';
 import {init as initPredicting} from './predict';
 import {init as initPond} from './pond';
@@ -12,8 +14,14 @@ export const init = state => {
     case Modes.Loading:
       initLoading();
       break;
+    case Modes.ActivityIntro:
+      initActivingIntro();
+      break;
     case Modes.Words:
       initWords();
+      break;
+    case Modes.TrainingIntro:
+      initTrainingIntro();
       break;
     case Modes.Training:
       initTraining();

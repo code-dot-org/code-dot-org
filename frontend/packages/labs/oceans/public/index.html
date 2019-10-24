@@ -86,10 +86,20 @@
         margin-top: 2%;
         margin-bottom: 2%;
       }
-
+      #activity-intro-text {
+        position: absolute;
+        font-size: 24px;
+        top: 5%;
+        width: 98%;
+        left: 1%;
+        text-align: center;
+      }
       @media screen and (max-width: 800px) {
         button {
           font-size: 90%;
+        }
+        #activity-intro-text {
+          font-size: 14px;
         }
       }
       @media screen and (max-width: 600px) {
@@ -113,6 +123,31 @@
         text-align: center;
         font-size: 24px;
       }
+      #activity-intro-ai-bot {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 50%;
+        transform: translateX(-50%);
+      }
+      #training-intro-text {
+        position: absolute;
+        font-size: 24px;
+        top: 20%;
+        width: 100%;
+        text-align: center;
+        font-size: 24px;
+      }
+      #training-intro-ai-bot {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        height: 50%;
+        transform: translateX(-50%);
+      }
+      .continue-end {
+        margin-left: auto;
+      }
       #predict-button {
         right: 40%;
         bottom: 3%;
@@ -128,7 +163,7 @@
         font-size: 24px;
         color: green;
       }
-      #train-counter-no-text {
+     #train-counter-no-text {
         position: absolute;
         top: 0px;
         right: 10%;

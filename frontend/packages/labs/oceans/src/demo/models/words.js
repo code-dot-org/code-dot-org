@@ -29,7 +29,7 @@ const items = [
 const onChangeWord = itemIndex => {
   setState({
     word: items[currentItemSet()][itemIndex],
-    currentMode: Modes.Training
+    currentMode: Modes.TrainingIntro
   });
   initScene();
 };

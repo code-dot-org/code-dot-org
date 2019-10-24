@@ -53,6 +53,16 @@ export const createText = ({id, text}) => {
   return textEl;
 };
 
+// Creates an image element, given an object that contains
+// id and src properties.
+export const createImage = ({id, src}) => {
+  let imageEl = document.createElement('IMG');
+  imageEl.src = src;
+  imageEl.id = id;
+
+  return imageEl;
+};
+
 export const bodyAnchorFromType = (body, type) => {
   switch (type) {
     case FishBodyPart.EYE:
