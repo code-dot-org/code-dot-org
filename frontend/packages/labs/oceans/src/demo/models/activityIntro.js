@@ -15,7 +15,7 @@ export const init = () => {
     createText({
       id: 'activity-intro-text',
       text:
-        'Meet A.I.<br><br>Machine learning and AI can give recommendations, like when a computer suggests videos to watch or products to buy. What else can we teach a computer?<br><br>Next, you’re going to teach A.I. a new word just by showing examples of that type of fish.'
+        '<b>Meet A.I.</b><br><br>Machine learning and Artificial Intelligence (AI) can give recommendations, like when a computer suggests videos to watch or products to buy. What else can we teach a computer?<br><br>Next, you’re going to teach A.I. a new word just by showing examples of that type of fish.'
     }),
     createImage({
       id: 'activity-intro-ai-bot',
