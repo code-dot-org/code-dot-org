@@ -36,28 +36,109 @@ STORAGE_APPS_VALUE = [[{\"hidden\":true,\"createdAt\":\"2019-09-22T04:05:08.511+
 
 function init_query_templates()
   -- TODO: read_queries are currently not used 
-  --[==[
   read_queries = {
     {
-      qps = 0,
+      qps = 276.88,
+      query = [[
+        SELECT SQL_NO_CACHE .*
+        FROM dashboard_production.user_levels
+        WHERE `user_levels`.`user_id` = 53678641
+          AND `user_levels`.`script_id` = 18
+        ORDER BY id desc
+      ]]
+    },
+    {
+      qps = 841.26,
       query = [[
         SELECT *
         FROM dashboard_production.users
-        WHERE deleted_at is null
-              AND id = $userId
-        ORDER BY id ASC limit 1
+        WHERE `users`.`deleted_at` IS NULL
+          AND `users`.`id` = $userId
+          ORDER BY `users`.`id` ASC LIMIT 1
       ]]
     },
     {
-      qps = 0,
+      qps = 877.01,
+      query = [[
+        SELECT SQL_NO_CACHE *
+        FROM dashboard_production.user_levels
+        WHERE `user_levels`.`user_id` = 46298294
+          AND `user_levels`.`level_id` = 11984
+          AND `user_levels`.`script_id` = 302
+        ORDER BY updated_at DESC LIMIT 1
+      ]]
+    },
+    {
+      qps = 167.14,
+      query = [[
+        SELECT SQL_NO_CACHE `navigator_user_level_id`
+        FROM dashboard_production.paired_user_levels
+        WHERE `paired_user_levels`.`navigator_user_level_id` IN (2262860859, 2262857656, 2262662932, 2262661336, 2262660893, 2262660349, 2262660085, 2262656913, 2262656652, 2262656439, 2262656271, 2262656174, 2262656150, 2262654225, 2262652487, 2262651301, 2262650520, 2262648116, 2262647732, 2260334910, 2260333466, 2260331176, 2260324612, 2260321573, 2260315040, 2260314054, 2260313713, 2260312107, 2260309438, 2260308371, 2260307343, 2260305577, 2260304574, 2260304144, 2260303825, 2260303111, 2260302649, 2260302433, 2260302070, 2260301498, 2260301300, 2260301066)
+      ]]
+    },
+    {
+      qps = 167.13,
+      query = [[
+        SELECT SQL_NO_CACHE `driver_user_level_id`
+        FROM dashboard_production.paired_user_levels
+        WHERE `paired_user_levels`.`driver_user_level_id` IN (2262860859, 2262857656, 2262662932, 2262661336, 2262660893, 2262660349, 2262660085, 2262656913, 2262656652, 2262656439, 2262656271, 2262656174, 2262656150, 2262654225, 2262652487, 2262651301, 2262650520, 2262648116, 2262647732, 2260334910, 2260333466, 2260331176, 2260324612, 2260321573, 2260315040, 2260314054, 2260313713, 2260312107, 2260309438, 2260308371, 2260307343, 2260305577, 2260304574, 2260304144, 2260303825, 2260303111, 2260302649, 2260302433, 2260302070, 2260301498, 2260301300, 2260301066)
+      ]]
+    },
+    {
+      qps = 472.48,
+      query = [[
+        SELECT SQL_NO_CACHE 1 AS one
+        FROM dashboard_production.sections as sections
+        INNER JOIN dashboard_production.followers as followers
+           ON `sections`.`id` = `followers`.`section_id`
+        WHERE `sections`.`deleted_at` is null
+                AND `followers`.`deleted_at` is null
+                AND `followers`.`student_user_id` = 13140377 limit 1
+      ]]
+    },
+    {
+      qps = 162.83,
+      query = [[
+        SELECT SQL_NO_CACHE `level_sources`.*
+        FROM dashboard_production.level_sources
+        WHERE `level_id` = 901
+          AND `md5` = 'cfcd208495d565ef66e7dff9f98764da'
+        ORDER BY `level_sources`.`id` ASC LIMIT 1
+      ]]
+    },
+    {
+      qps = 571.23,
       query = [[
         SELECT *
         FROM pegasus.user_storage_ids
-        WHERE user_id = $userId limit 1
+        WHERE (`user_id` = $userId)
+        LIMIT 1
+      ]]
+    },
+    {
+      qps = 260.01,
+      query = [[
+        SELECT SQL_NO_CACHE *
+        FROM dashboard_production.section_hidden_stages
+        WHERE `stage_id` = 1020
+          AND `section_id` = 2280903
+        LIMIT 1
+      ]]
+    },
+    {
+      qps = 58.13,
+      query = [[
+        SELECT SQL_NO_CACHE `users`.*
+        FROM dashboard_production.users as users
+        INNER JOIN dashboard_production.followers as followers
+          ON `users`.`id` = `followers`.`student_user_id`
+        WHERE `users`.`deleted_at` IS NULL
+          AND `followers`.`deleted_at` IS NULL
+          AND `followers`.`section_id` = 2297605
+        ORDER BY name
       ]]
     },
   }
-  --]==]
 
   -- queries per second values taken from Percona for peak hours (~ 7 AM to 12 PM PST on a school day - Oct 21, 2019).
   write_queries = {
@@ -262,7 +343,8 @@ function event()
   -- "variable" names must be alphanumeric characters only.
   -- local query = string.gsub(write_queries[1]['query'], "%$(%w+)", vars)
   local query = string.gsub(random_query_weighted(), "%$(%w+)", vars)
-  local use_trx = string.find(query, "dashboard_production")
+  -- local use_trx = string.find(query, "dashboard_production")
+  local use_trx = false
 
   if use_trx then
     con:query("BEGIN")
