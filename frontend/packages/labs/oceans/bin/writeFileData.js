@@ -1,3 +1,4 @@
+// Outputs a skeleteon of the code for each png to be put in fishData
 var fs = require('fs');
 
 const dir = 'public/images/fish/pectoralFin/';

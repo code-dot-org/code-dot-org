@@ -1,3 +1,4 @@
+// Outputs some data about body, eye, and mouth images.
 var fs = require('fs');
 var {loadImage, createCanvas} = require('canvas');
 
