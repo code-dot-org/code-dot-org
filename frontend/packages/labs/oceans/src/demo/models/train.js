@@ -62,7 +62,10 @@ export const init = () => {
 const uiElements = state => {
   return [
     ...staticUiElements,
-    createText({id: 'train-text', text: `Is this fish ${state.word}?`}),
+    createText({
+      id: 'train-text',
+      text: `Is this fish <b>${state.word.toUpperCase()}</b>?`
+    }),
     createText({id: 'train-counter-yes-text', text: ''}),
     createText({id: 'train-counter-no-text', text: ''})
   ];
