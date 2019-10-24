@@ -128,6 +128,20 @@ class PosteTest < SequelTestCase
     CDO.log.expects(:warn).with('Unable to decrypt poste id: invalid. Error: invalid base64')
     assert_nil Poste.decrypt_id('invalid')
   end
+
+  def test_deliverer_render
+    opts = {
+      address: CDO.poste_smtp_server,
+      port: 587,
+      domain: 'code.org',
+    }.freeze
+    deliverer = Deliverer.new opts
+    template = deliverer.load_template("dashboard")
+    header, html, text = template.render
+    assert_equal "Code.org <noreply@code.org>", header["from"]
+    refute_nil html
+    assert_nil text
+  end
 end
 
 class Poste2Test < SequelTestCase

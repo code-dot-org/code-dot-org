@@ -268,19 +268,6 @@ class Deliverer
     end
   end
 
-  private
-
-  def format_address(address)
-    email = address[:email].to_s.strip
-    raise ArgumentError, 'No :email' if email.empty?
-
-    name = address[:name].to_s.strip
-    return email if name.empty?
-
-    name = "\"#{name.tr('"', '\"').tr("'", "\'")}\"" if name =~ /[;,\"\'\(\)]/
-    "#{name} <#{email}>".strip
-  end
-
   def load_template(name)
     template = @templates[name]
     return template if template
@@ -297,6 +284,19 @@ class Deliverer
     }[File.extname(path).downcase]
 
     @templates[name] = Poste::Template.new IO.read(path), engine
+  end
+
+  private
+
+  def format_address(address)
+    email = address[:email].to_s.strip
+    raise ArgumentError, 'No :email' if email.empty?
+
+    name = address[:name].to_s.strip
+    return email if name.empty?
+
+    name = "\"#{name.tr('"', '\"').tr("'", "\'")}\"" if name =~ /[;,\"\'\(\)]/
+    "#{name} <#{email}>".strip
   end
 
   def parse_address(address, defaults={})
