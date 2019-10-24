@@ -36,9 +36,12 @@
         border-radius: 20px;
         padding: 10px 20px;
       }
+      #activity-canvas,
       #background-canvas {
         border: 2px solid black;
         border-radius: 5px;
+      }
+      #background-canvas {
         position: absolute;
         top: 50px; /* accounts for #header-container */
         left: 0;
@@ -122,13 +125,7 @@
       #train-text {
         text-align: center;
         font-size: 24px;
-      }
-      #activity-intro-ai-bot {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        height: 50%;
-        transform: translateX(-50%);
+        margin-top: 5%;
       }
       #training-intro-text {
         position: absolute;
@@ -136,14 +133,30 @@
         top: 20%;
         width: 100%;
         text-align: center;
-        font-size: 24px;
       }
-      #training-intro-ai-bot {
+      #activity-intro-ai-bot,
+      #training-intro-ai-bot,
+      #training-ai-bot,
+      #predict-ai-bot,
+      #pond-ai-bot {
         position: absolute;
-        top: 30%;
-        left: 50%;
         height: 50%;
         transform: translateX(-50%);
+        top: 50%;
+        left: 50%;
+      }
+      #training-intro-ai-bot {
+        top: 30%;
+      }
+      #training-ai-bot {
+        top: 20%;
+        left: 83%;
+      }
+      #predict-ai-bot {
+        top: -6%;
+      }
+      #pond-ai-bot {
+        top: 20%;
       }
       .continue-end {
         margin-left: auto;
@@ -163,7 +176,7 @@
         font-size: 24px;
         color: green;
       }
-     #train-counter-no-text {
+      #train-counter-no-text {
         position: absolute;
         top: 0px;
         right: 10%;
@@ -191,6 +204,21 @@
         margin-top: 20px;
         border-radius: 5px;
       }
+      #pond-title {
+        position: absolute;
+        font-size: 24px;
+        font-weight: bold;
+        top: 75%;
+        left: 41%;
+      }
+      #pond-text {
+        position: absolute;
+        top: 82%;
+        left: 27%;
+        max-width: 50%;
+        font-weight: bold;
+        text-align: center;
+      }
     </style>
   </head>
   <body>
@@ -201,7 +229,7 @@
       <div id="ui-container"></div>
       <div id="footer-container"></div>
       <div id="code">
-        <img id="code-blocks-image" src="images/code-blocks-predict.png"/>
+        <img id="code-blocks-image" src="images/code-blocks-predict.png" />
       </div>
     </div>
     <script src="demo.js"></script>

@@ -181,12 +181,12 @@ const drawMovingFish = state => {
   );
   const t = lastPauseTime + runtime;
   const offsetX = getOffsetForTime(t, state.fishData.length);
+  const maxScreenX =
+    state.currentMode === Modes.Training
+      ? constants.canvasWidth - 100
+      : constants.canvasWidth + constants.fishCanvasWidth;
   const startFishIdx = Math.max(
-    getFishIdxForLocation(
-      constants.canvasWidth + constants.fishCanvasWidth,
-      offsetX,
-      state.fishData.length
-    ),
+    getFishIdxForLocation(maxScreenX, offsetX, state.fishData.length),
     0
   );
   const lastFishIdx = Math.min(
@@ -194,7 +194,12 @@ const drawMovingFish = state => {
     state.fishData.length - 1
   );
   const ctx = state.canvas.getContext('2d');
-  const y = constants.canvasHeight / 2 - constants.fishCanvasHeight / 2;
+  let y = constants.canvasHeight / 2 - constants.fishCanvasHeight / 2;
+
+  // Move fish down a little on predict screen.
+  if (state.currentMode === Modes.Predicting) {
+    y += 100;
+  }
 
   for (let i = startFishIdx; i <= lastFishIdx; i++) {
     const x = getXForFish(state.fishData.length - 1, i, offsetX);
