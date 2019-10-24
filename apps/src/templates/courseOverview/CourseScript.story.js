@@ -27,7 +27,7 @@ const defaultProps = {
     'explores the structure and design of the internet and the implications of ' +
     'those design decisions.',
   viewAs: ViewType.Teacher,
-  selectedSectionId: '',
+  selectedSectionId: 11,
   hiddenStageState: unhiddenState,
   hasNoSections: true,
   toggleHiddenScript: () => {}
