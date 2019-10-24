@@ -4,7 +4,6 @@ import {Modes} from '../constants';
 import {init as initScene} from '../init';
 import {createButton, createText} from '../helpers';
 
-const headerElements = [createText({id: 'header', text: 'Choose Fish Type'})];
 const items = [
   ['Blue', 'Green', 'Red', 'Round', 'Square'],
   [
@@ -29,16 +28,9 @@ const items = [
 const onChangeWord = itemIndex => {
   setState({
     word: items[currentItemSet()][itemIndex],
-    currentMode: Modes.TrainingIntro
+    currentMode: Modes.Training
   });
   initScene();
-};
-
-const currentItemSet = () => {
-  const state = getState();
-  const iterationCount = state.iterationCount;
-  const itemSet = iterationCount === 0 ? 0 : 1;
-  return itemSet;
 };
 
 const createButtons = () => {
@@ -58,5 +50,19 @@ const createButtons = () => {
 };
 
 export const init = () => {
-  setState({uiElements: createButtons(), headerElements});
+  const state = getState();
+const footerElements = [
+  createButton({
+    text: 'Select Type',
+    onClick: () => onSelectType(),
+    className: ''
+  }),
+  createButton({
+    text: 'Continue',
+    onClick: () => toMode(Modes.Predicting),
+    className: ''
+  })
+];
+  const uiElements = [createText({id: 'teach-text', text: `Now let's teach AI bot what  ${state.word.toUpperCase()} fish looks like`})];
+  setState({uiElements, footerElements});
 };
