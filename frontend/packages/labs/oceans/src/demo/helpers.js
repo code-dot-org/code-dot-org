@@ -1,6 +1,6 @@
 import {setState} from './state';
 import {init as initScene} from './init';
-import {Modes, ClassType} from './constants';
+import {Modes} from './constants';
 import {FishBodyPart} from '../utils/fishData';
 
 export const backgroundPathForMode = mode => {
@@ -51,17 +51,6 @@ export const createText = ({id, text}) => {
   textEl.innerHTML = text;
 
   return textEl;
-};
-
-export const strForClassType = classType => {
-  switch (classType) {
-    case ClassType.Like:
-      return 'like';
-    case ClassType.Dislike:
-      return 'dislike';
-    default:
-      return 'unknown';
-  }
 };
 
 export const bodyAnchorFromType = (body, type) => {
