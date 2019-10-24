@@ -170,12 +170,12 @@ const drawMovingFish = state => {
   );
   const t = lastPauseTime + runtime;
   const offsetX = getOffsetForTime(t, state.fishData.length);
+  const maxScreenX =
+    state.currentMode === Modes.Training
+      ? constants.canvasWidth - 100
+      : constants.canvasWidth + constants.fishCanvasWidth;
   const startFishIdx = Math.max(
-    getFishIdxForLocation(
-      constants.canvasWidth - 100,
-      offsetX,
-      state.fishData.length
-    ),
+    getFishIdxForLocation(maxScreenX, offsetX, state.fishData.length),
     0
   );
   const lastFishIdx = Math.min(
