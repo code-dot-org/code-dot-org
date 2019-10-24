@@ -868,6 +868,7 @@
   "puzzle": "Пъзел",
   "puzzleTitle": "Пъзел {puzzle_number} от {stage_total}",
   "question": "Въпрос",
+  "random": "случаен",
   "readonlyWorkspaceHeader": "Само за преглед: ",
   "recommended": "Препоръчано",
   "recommendedBlockContextualHintTitle": "Опитайте да използвате блока по този начин за решаване на пъзела.",
