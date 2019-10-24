@@ -9,11 +9,12 @@ export default constants;
 
 export const Modes = Object.freeze({
   Loading: 0,
-  Words: 1,
-  TrainingIntro: 2,
-  Training: 3,
-  Predicting: 4,
-  Pond: 5
+  ActivityIntro: 1,
+  Words: 2,
+  TrainingIntro: 3,
+  Training: 4,
+  Predicting: 5,
+  Pond: 6
 });
 
 export const ClassType = Object.freeze({

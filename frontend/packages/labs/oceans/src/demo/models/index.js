@@ -1,4 +1,5 @@
 import {init as initLoading} from './loading';
+import {init as initActivingIntro} from './activityIntro';
 import {init as initWords} from './words';
 import {init as initTrainingIntro} from './trainingIntro';
 import {init as initTraining} from './train';
@@ -12,6 +13,9 @@ export const init = state => {
   switch (state.currentMode) {
     case Modes.Loading:
       initLoading();
+      break;
+    case Modes.ActivityIntro:
+      initActivingIntro();
       break;
     case Modes.Words:
       initWords();
