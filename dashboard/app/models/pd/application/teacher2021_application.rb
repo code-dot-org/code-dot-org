@@ -657,6 +657,7 @@ module Pd::Application
 
       scores = scored_questions.map {|q| response_scores[q]}
 
+      # Need all criteria to be YES to be qualified
       if scores.uniq == [YES]
         YES
       elsif NO.in? scores
@@ -672,12 +673,13 @@ module Pd::Application
 
       scores = scored_questions.map {|q| response_scores[q]}
 
-      if scores.uniq == [YES]
+      # Only need one of the criteria to be YES to be qualified for scholarship
+      if YES.in? scores
         YES
-      elsif NO.in? scores
-        NO
-      else
+      elsif nil.in? scores
         REVIEWING_INCOMPLETE
+      else
+        NO
       end
     end
 
