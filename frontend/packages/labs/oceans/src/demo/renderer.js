@@ -192,9 +192,7 @@ const drawMovingFish = state => {
 
     if (state.currentMode === Modes.Predicting) {
       if (fish.result) {
-        ctx.fillStyle =
-          fish.result.predictedClassId === ClassType.Like ? 'green' : 'red';
-        ctx.fillRect(x, y, 10, 10);
+        drawPrediction(fish.result.predictedClassId, state.word, x, y, ctx);
       } else {
         predictFish(state, i).then(prediction => {
           fish.result = prediction;
@@ -206,6 +204,19 @@ const drawMovingFish = state => {
   if (state.currentMode === Modes.Training && runtime === MOVE_TIME) {
     finishMovement();
   }
+};
+
+const drawPrediction = (predictedClassId, text, x, y, ctx) => {
+  const centeredX = x + constants.fishCanvasWidth / 2;
+  const doesLike = predictedClassId === ClassType.Like;
+
+  ctx.fillStyle = doesLike ? 'green' : 'red';
+  ctx.font = '20px Arial';
+  ctx.textAlign = 'center';
+  if (!doesLike) {
+    text = 'not ' + text;
+  }
+  ctx.fillText(text.toUpperCase(), centeredX, y);
 };
 
 // Draw frame in the center of the screen.
