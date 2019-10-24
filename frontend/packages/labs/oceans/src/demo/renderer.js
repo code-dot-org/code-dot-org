@@ -6,11 +6,11 @@ import CanvasCache from './canvasCache';
 import {
   backgroundPathForMode,
   bodyAnchorFromType,
-  colorFromType,
+  colorForFishPart,
   randomInt,
   clamp
 } from './helpers';
-import fishData, {FishBodyPart} from '../utils/fishData';
+import {fishData, FishBodyPart} from '../utils/fishData';
 import {predictFish} from './models/predict';
 
 var $time =
@@ -142,6 +142,7 @@ const finishMovement = () => {
   lastStartTime = null;
 };
 
+// Calculate the screen's current X offset.
 const getOffsetForTime = (t, totalFish) => {
   return (
     constants.fishCanvasWidth * totalFish -
@@ -151,11 +152,13 @@ const getOffsetForTime = (t, totalFish) => {
   );
 };
 
+// Given X (screenX + offsetX), calculate the fish index at that X.
 const getFishIdxForLocation = (screenX, offsetX, totalFish) => {
   const n = Math.floor((screenX + offsetX) / constants.fishCanvasWidth);
   return totalFish - n;
 };
 
+// Calculate a given fish's X position.
 const getXForFish = (numFish, fishIdx, offsetX) => {
   return (numFish - fishIdx) * constants.fishCanvasWidth - offsetX;
 };
@@ -217,7 +220,7 @@ const drawFrame = state => {
     frameYPos,
     size,
     size,
-    '#FFFFFF',
+    '#F0F0F0',
     '#000000'
   );
 };
@@ -327,7 +330,7 @@ const renderFishFromParts = (fish, ctx, x = 0, y = 0) => {
     const yPos = bodyAnchor[1] + anchor[1];
 
     intermediateCtx.drawImage(img, xPos, yPos);
-    const rgb = colorFromType(fish.colorPalette, part.type);
+    const rgb = colorForFishPart(fish.colorPalette, part);
 
     if (rgb) {
       // Add some random tint to the RGB value.
@@ -346,7 +349,8 @@ const renderFishFromParts = (fish, ctx, x = 0, y = 0) => {
       let data = imageData.data;
 
       for (let i = 0; i < data.length; i += 4) {
-        if (data[i] === 255 && data[i + 1] === 255 && data[i + 2] === 255) {
+        // Tint any visible pixels
+        if (data[i + 3] > 0) {
           data[i] = newRgb[0];
           data[i + 1] = newRgb[1];
           data[i + 2] = newRgb[2];
