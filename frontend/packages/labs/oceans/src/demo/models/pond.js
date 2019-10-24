@@ -64,7 +64,9 @@ const onClickStartOver = () => {
   const state = setState({
     iterationCount: getState().iterationCount + 1,
     trainingIndex: 0,
-    fishData: []
+    fishData: [],
+    yesCount: 0,
+    noCount: 0
   });
   state.trainer.clearAll();
   toMode(Modes.Words);

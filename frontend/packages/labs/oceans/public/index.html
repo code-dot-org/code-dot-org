@@ -121,6 +121,41 @@
         width: 100%;
         text-align: center;
       }
+      #train-counter-yes-text {
+        position: absolute;
+        top: 0px;
+        right: 3%;
+        font-size: 24px;
+        color: green;
+      }
+      #train-counter-no-text {
+        position: absolute;
+        top: 0px;
+        right: 10%;
+        font-size: 24px;
+        color: red;
+      }
+      .show-code-toggle {
+        position: absolute;
+        top: 5px;
+        left: 0px;
+      }
+      #code {
+        background-color: #c3c3c3;
+        position: absolute;
+        top: 60px;
+        left: 20px;
+        opacity: 0.8;
+        width: 40%;
+        height: 60%;
+        border-radius: 10px;
+        display: none;
+      }
+      #code-blocks-image {
+        margin-left: 20px;
+        margin-top: 20px;
+        border-radius: 5px;
+      }
     </style>
   </head>
   <body>
@@ -130,6 +165,9 @@
       <canvas id="activity-canvas"></canvas>
       <div id="ui-container"></div>
       <div id="footer-container"></div>
+      <div id="code">
+        <img id="code-blocks-image" src="images/code-blocks-predict.png"/>
+      </div>
     </div>
     <script src="demo.js"></script>
   </body>

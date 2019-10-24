@@ -14,7 +14,9 @@ const initialState = {
   footerContainer: null,
   footerElements: [],
   iterationCount: 0,
-  isRunning: false
+  isRunning: false,
+  yesCount: 0,
+  noCount: 0
 };
 let state = {...initialState};
 

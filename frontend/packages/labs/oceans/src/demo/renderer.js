@@ -6,7 +6,9 @@ import CanvasCache from './canvasCache';
 import {
   backgroundPathForMode,
   bodyAnchorFromType,
-  colorFromType
+  colorFromType,
+  randomInt,
+  clamp
 } from './helpers';
 import fishData, {FishBodyPart} from '../utils/fishData';
 
@@ -316,6 +318,13 @@ const renderFishFromParts = (fish, ctx, x = 0, y = 0) => {
     const rgb = colorFromType(fish.colorPalette, part.type);
 
     if (rgb) {
+      // Add some random tint to the RGB value.
+      const tintAmount = 20;
+      let newRgb = [];
+      newRgb[0] = clamp(rgb[0] + randomInt(-tintAmount, tintAmount), 0, 255);
+      newRgb[1] = clamp(rgb[1] + randomInt(-tintAmount, tintAmount), 0, 255);
+      newRgb[2] = clamp(rgb[2] + randomInt(-tintAmount, tintAmount), 0, 255);
+
       let imageData = intermediateCtx.getImageData(
         xPos,
         yPos,
@@ -326,9 +335,9 @@ const renderFishFromParts = (fish, ctx, x = 0, y = 0) => {
 
       for (let i = 0; i < data.length; i += 4) {
         if (data[i] === 255 && data[i + 1] === 255 && data[i + 2] === 255) {
-          data[i] = rgb[0];
-          data[i + 1] = rgb[1];
-          data[i + 2] = rgb[2];
+          data[i] = newRgb[0];
+          data[i + 1] = newRgb[1];
+          data[i + 2] = newRgb[2];
         }
       }
 

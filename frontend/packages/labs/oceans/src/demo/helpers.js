@@ -23,7 +23,13 @@ export const toMode = mode => {
 
 // Creates a button element, given an object that contains
 // id, text, and onClick properties.
-export const createButton = ({id, text, onClick, className = 'ui-button'}) => {
+export const createButton = ({
+  id,
+  text,
+  onClick,
+  className = 'ui-button',
+  show = true
+}) => {
   let btnEl = document.createElement('button');
   btnEl.innerHTML = text;
   if (id) {
@@ -31,7 +37,9 @@ export const createButton = ({id, text, onClick, className = 'ui-button'}) => {
   }
   btnEl.setAttribute('class', className);
   btnEl.addEventListener('click', onClick);
-
+  if (!show) {
+    btnEl.style.display = 'none';
+  }
   return btnEl;
 };
 
@@ -97,4 +105,8 @@ export const randomInt = (min, max) => {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;
+};
+
+export const clamp = (value, min, max) => {
+  return Math.min(Math.max(value, min), max);
 };

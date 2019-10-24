@@ -352,6 +352,7 @@ const fishData = {
   },
   // COLOR PALETTE KNN DATA: [...bodyRgb, ...finRgb]
   colorPalettes: {
+    // Blue, peach, pink
     palette1: {
       bodyRgb: [126, 205, 202],
       finRgb: [248, 192, 157],
@@ -365,6 +366,7 @@ const fishData = {
         normalizeColorComponent(157)
       ]
     },
+    // orange
     palette2: {
       bodyRgb: [253, 192, 77],
       finRgb: [235, 120, 50],
@@ -378,27 +380,29 @@ const fishData = {
         normalizeColorComponent(50)
       ]
     },
+    // red
     palette3: {
-      bodyRgb: [39, 116, 186],
+      bodyRgb: [164, 3, 31],
       finRgb: [253, 217, 136],
       mouthRgb: [253, 217, 136],
       knnData: [
-        normalizeColorComponent(39),
-        normalizeColorComponent(116),
-        normalizeColorComponent(186),
+        normalizeColorComponent(164),
+        normalizeColorComponent(3),
+        normalizeColorComponent(31),
         normalizeColorComponent(253),
         normalizeColorComponent(217),
         normalizeColorComponent(136)
       ]
     },
+    // green
     palette4: {
-      bodyRgb: [21, 52, 64],
+      bodyRgb: [72, 139, 73],
       finRgb: [200, 220, 92],
       mouthRgb: [200, 220, 92],
       knnData: [
-        normalizeColorComponent(21),
-        normalizeColorComponent(52),
-        normalizeColorComponent(64),
+        normalizeColorComponent(72),
+        normalizeColorComponent(139),
+        normalizeColorComponent(73),
         normalizeColorComponent(200),
         normalizeColorComponent(220),
         normalizeColorComponent(92)
