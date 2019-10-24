@@ -71,9 +71,9 @@ const continueText = state => {
 const uiElements = (state, pondCount) => {
   const pondText = `Out of ${
     state.fishData.length
-  } objects, A.I. identified ${pondCount} that it classified as ${state.word.toUpperCase()}. To help A.I. do better, you can train A.I. more and try again. Otherwise, click ${continueText(
+  } objects, A.I. identified ${pondCount} that it classified as ${state.word.toUpperCase()}. To help A.I. do better, you can train A.I. more and try again. Otherwise, click '${continueText(
     state
-  )}.`;
+  )}'.`;
   return [...staticUiElements, createText({id: 'pond-text', text: pondText})];
 };
 
