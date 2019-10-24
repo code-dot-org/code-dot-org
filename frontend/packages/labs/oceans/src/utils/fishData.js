@@ -350,13 +350,6 @@ const fishComponents = {
       tinted: true,
       type: FishBodyPart.MOUTH
     },
-    fish5: {
-      index: 4,
-      src: 'images/fish/mouth/Mouth_Fish5.png',
-      knnData: [0, 1.04, MouthExpression.NEUTRAL],
-      tinted: true,
-      type: FishBodyPart.MOUTH
-    },
     fish6: {
       index: 5,
       src: 'images/fish/mouth/Mouth_Fish6.png',
@@ -411,13 +404,6 @@ const fishComponents = {
       src: 'images/fish/mouth/Mouth_Spikey1.png',
       knnData: [6, 2, MouthExpression.SMILE],
       tinted: false,
-      type: FishBodyPart.MOUTH
-    },
-    spikey2: {
-      index: 13,
-      src: 'images/fish/mouth/Mouth_Spikey2.png',
-      knnData: [0, 1.04, MouthExpression.NEUTRAL],
-      tinted: true,
       type: FishBodyPart.MOUTH
     },
     square1: {
@@ -613,12 +599,6 @@ const fishComponents = {
       knnData: [],
       type: FishBodyPart.DORSAL_FIN
     },
-    narrow2: {
-      index: 7,
-      src: 'images/fish/dorsalFin/Dorsal_Fin_Narrow2.png',
-      knnData: [],
-      type: FishBodyPart.DORSAL_FIN
-    },
     round1: {
       index: 8,
       src: 'images/fish/dorsalFin/Dorsal_Fin_Round1.png',
@@ -706,13 +686,7 @@ const fishComponents = {
       knnData: [],
       type: FishBodyPart.TAIL
     },
-    fish5: {
-      index: 4,
-      src: 'images/fish/tailFin/Tail_Fin_Fish5.png',
-      knnData: [],
-      type: FishBodyPart.TAIL
-    },
-    fish6: {
+   fish6: {
       index: 5,
       src: 'images/fish/tailFin/Tail_Fin_Fish6.png',
       knnData: [],
@@ -736,12 +710,6 @@ const fishComponents = {
       knnData: [],
       type: FishBodyPart.TAIL
     },
-    round2: {
-      index: 9,
-      src: 'images/fish/tailFin/Tail_Fin_Round2.png',
-      knnData: [],
-      type: FishBodyPart.TAIL
-    },
     sharp1: {
       index: 10,
       src: 'images/fish/tailFin/Tail_Fin_Sharp1.png',
@@ -757,12 +725,6 @@ const fishComponents = {
     spikey1: {
       index: 12,
       src: 'images/fish/tailFin/Tail_Fin_Spikey1.png',
-      knnData: [],
-      type: FishBodyPart.TAIL
-    },
-    spikey2: {
-      index: 13,
-      src: 'images/fish/tailFin/Tail_Fin_Spikey2.png',
       knnData: [],
       type: FishBodyPart.TAIL
     },
