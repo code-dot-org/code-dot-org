@@ -145,17 +145,17 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
     response = JSON.parse(@response.body)
     assert_equal [
       [
-        [@level_1_reviews.first.id, nil, @level_1_reviews.first.updated_at],
-        [@level_1_reviews.second.id, 'escalated', @level_1_reviews.second.updated_at]
+        [@level_3_reviews.first.id, nil, @level_3_reviews.first.updated_at],
+        [@level_3_reviews.second.id, 'escalated', @level_3_reviews.second.updated_at]
       ],
       [
         [@level_2_reviews.first.id, nil, @level_2_reviews.first.updated_at],
         [@level_2_reviews.second.id, 'accepted', @level_2_reviews.second.updated_at]
       ],
       [
-        [@level_3_reviews.first.id, nil, @level_3_reviews.first.updated_at],
-        [@level_3_reviews.second.id, 'escalated', @level_3_reviews.second.updated_at]
-      ],
+        [@level_1_reviews.first.id, nil, @level_1_reviews.first.updated_at],
+        [@level_1_reviews.second.id, 'escalated', @level_1_reviews.second.updated_at]
+      ]
     ], response['submissions'].map {|submission| submission['review_ids']}
 
     # Verify expected pagination metadata
@@ -169,12 +169,12 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
   end
 
   test 'can retrieve a different page of peer review results' do
-    common_scenario
-
     test_page_size = 5
 
     # Create many peer reviews to test pagination
-    create_list :peer_review, 20, reviewer: @submitter, script: @course_unit.script
+    30.times do
+      create_peer_reviews_for_user create :teacher
+    end
 
     get :index, params: {page: 3, per: test_page_size}
     assert_response :success
