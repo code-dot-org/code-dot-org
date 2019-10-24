@@ -8,7 +8,7 @@ const headerElements = [createText({id: 'header', text: 'Choose Fish Type'})];
 const staticUiElements = [
   createText({
     id: 'words-text',
-    text: 'What type of fish do you want to train the A.I. to detect?'
+    text: 'What type of fish do you want to train A.I. to detect?'
   })
 ];
 const items = [
