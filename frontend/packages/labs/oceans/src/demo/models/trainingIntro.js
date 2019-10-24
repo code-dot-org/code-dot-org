@@ -15,7 +15,7 @@ export const init = () => {
   const uiElements = [
     createText({
       id: 'training-intro-text',
-      text: `Now let's teach AI bot what <b>${state.word.toUpperCase()}</b> fish look like.`
+      text: `Now let's teach A.I. what <b>${state.word.toUpperCase()}</b> fish look like.`
     }),
     createImage({
       id: 'training-intro-ai-bot',

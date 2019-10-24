@@ -27,7 +27,6 @@ export const generateRandomFish = id => {
     ...eye.knnData,
     ...mouth.knnData,
     ...sideFinFront.knnData,
-    ...sideFinBack.knnData,
     ...topFin.knnData,
     ...tail.knnData,
     ...colorPalette.knnData

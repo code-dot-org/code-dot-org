@@ -28,7 +28,8 @@ let intermediateCanvas;
 let intermediateCtx;
 let lastPauseTime = 0;
 let lastStartTime;
-const MOVE_TIME = 1000;
+let defaultMoveTime = 1000;
+let moveTime;
 
 export const initRenderer = () => {
   canvasCache = new CanvasCache();
@@ -68,6 +69,12 @@ export const render = () => {
     currentModeStartTime = $time();
     lastPauseTime = 0;
     lastStartTime = null;
+
+    if (state.currentMode === Modes.Training) {
+      moveTime = defaultMoveTime / 2;
+    } else {
+      moveTime = defaultMoveTime;
+    }
   }
 
   clearCanvas(state.canvas);
@@ -139,8 +146,8 @@ const currentRunTime = (isRunning, clampTime) => {
     }
 
     t = $time() - lastStartTime;
-    if (clampTime && t > MOVE_TIME) {
-      t = MOVE_TIME;
+    if (clampTime && t > moveTime) {
+      t = moveTime;
     }
   }
 
@@ -149,7 +156,7 @@ const currentRunTime = (isRunning, clampTime) => {
 
 const finishMovement = () => {
   setState({isRunning: false});
-  lastPauseTime += MOVE_TIME;
+  lastPauseTime += moveTime;
   lastStartTime = null;
 };
 
@@ -159,7 +166,7 @@ const getOffsetForTime = (t, totalFish) => {
     constants.fishCanvasWidth * totalFish -
     constants.canvasWidth / 2 +
     constants.fishCanvasWidth / 2 -
-    Math.round((t * constants.fishCanvasWidth) / MOVE_TIME)
+    Math.round((t * constants.fishCanvasWidth) / moveTime)
   );
 };
 
@@ -249,7 +256,7 @@ const drawMovingFish = state => {
     }
   }
 
-  if (state.currentMode === Modes.Training && runtime === MOVE_TIME) {
+  if (state.currentMode === Modes.Training && runtime === moveTime) {
     finishMovement();
   }
 };
