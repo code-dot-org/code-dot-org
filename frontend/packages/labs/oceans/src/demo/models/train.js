@@ -50,7 +50,8 @@ export const init = () => {
     trainer,
     uiElements: uiElements(state),
     headerElements,
-    footerElements
+    footerElements,
+    isRunning: true
   });
 };
 
@@ -58,38 +59,54 @@ const uiElements = state => {
   return [
     ...staticUiElements,
     createText({id: 'train-text', text: `Is this fish ${state.word}?`}),
-    createText({id: 'train-counter-yes-text', text: ""}),
-    createText({id: 'train-counter-no-text', text: ""})
+    createText({id: 'train-counter-yes-text', text: ''}),
+    createText({id: 'train-counter-no-text', text: ''})
   ];
 };
 
 const onClassifyFish = doesLike => {
   const state = getState();
+
+  // No-op if animation is currently in progress.
+  if (state.isRunning) {
+    return;
+  }
+
   const knnData = state.fishData[state.trainingIndex].knnData;
   const classId = doesLike ? ClassType.Like : ClassType.Dislike;
   state.trainer.addExampleData(knnData, classId);
-  state.trainingIndex += 1;
-  setState({trainingIndex: state.trainingIndex});
+
+  let fishData = [...state.fishData];
   if (state.trainingIndex > state.fishData.length - 5) {
-    const fishData = state.fishData.concat(generateOcean(100));
-    setState({fishData});
+    fishData = fishData.concat(generateOcean(100));
   }
+
   if (doesLike) {
     const newValue = getState().yesCount + 1;
     setState({yesCount: newValue});
-    $("#train-counter-yes-text").text(newValue);
-
+    $('#train-counter-yes-text').text(newValue);
   } else {
     const newValue = getState().noCount + 1;
     setState({noCount: newValue});
-    $("#train-counter-no-text").text(newValue);
+    $('#train-counter-no-text').text(newValue);
   }
+
+  setState({
+    trainingIndex: state.trainingIndex + 1,
+    fishData,
+    isRunning: true
+  });
 };
 
 const onSelectType = () => {
-  const trainer = getState().trainer;
-  if (trainer) {
-    trainer.clearAll();
+  const state = setState({
+    trainingIndex: 0,
+    fishData: [],
+    noCount: 0,
+    yesCount: 0
+  });
+  if (state.trainer) {
+    state.trainer.clearAll();
   }
   toMode(Modes.Words);
 };
