@@ -68,6 +68,7 @@ export const render = () => {
 
   switch (state.currentMode) {
     case Modes.Training:
+      drawFrame(state);
       drawTrainingFishNew(state);
       // drawTrainingFish(state);
       // drawUpcomingFish(state);
@@ -180,6 +181,23 @@ const drawTrainingFishNew = state => {
     lastPauseTime += 1000;
     lastStartTime = null;
   }
+};
+
+// Draw frame in the center of the screen.
+const drawFrame = state => {
+  const canvas = state.canvas;
+  const size = constants.fishCanvasWidth;
+  const frameXPos = canvas.width / 2 - size / 2;
+  const frameYPos = canvas.height / 2 - size / 2;
+  drawRoundedFrame(
+    canvas.getContext('2d'),
+    frameXPos,
+    frameYPos,
+    size,
+    size,
+    '#FFFFFF',
+    '#000000'
+  );
 };
 
 // Draw the fish for training mode.
