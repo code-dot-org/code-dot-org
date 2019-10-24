@@ -2,9 +2,25 @@ import 'babel-polyfill';
 import _ from 'lodash';
 import {setState, getState} from '../state';
 import constants, {Modes, ClassType} from '../constants';
-import {createButton, createText, randomInt, toMode} from '../helpers';
+import {
+  createButton,
+  createText,
+  createImage,
+  randomInt,
+  toMode
+} from '../helpers';
 
 const headerElements = [createText({id: 'header', text: 'A.I. Results'})];
+const staticUiElements = [
+  createImage({
+    id: 'pond-ai-bot',
+    src: 'images/ai-bot-closed.png'
+  }),
+  createText({
+    id: 'pond-title',
+    text: 'How did A.I. do?'
+  })
+];
 const footerElements = [
   createButton({
     text: 'Training',
@@ -19,11 +35,17 @@ const footerElements = [
 ];
 
 export const init = async () => {
-  let fishWithConfidence = await predictAllFish(getState());
+  const state = getState();
+  let fishWithConfidence = await predictAllFish(state);
   fishWithConfidence = _.sortBy(fishWithConfidence, ['confidence']);
   const pondFish = fishWithConfidence.splice(0, 20);
   arrangeFish(pondFish);
-  setState({pondFish, headerElements, footerElements});
+  setState({
+    pondFish,
+    headerElements,
+    uiElements: uiElements(state, pondFish.length),
+    footerElements
+  });
 };
 
 const predictAllFish = state => {
@@ -45,6 +67,13 @@ const predictAllFish = state => {
       });
     });
   });
+};
+
+const uiElements = (state, pondCount) => {
+  const pondText = `Out of ${
+    state.fishData.length
+  } objects, A.I. identified ${pondCount} that it classified as ${state.word.toUpperCase()}. To help A.I. do better, you can train A.I. more and try again. Otherwise, click 'Complete'.`;
+  return [...staticUiElements, createText({id: 'pond-text', text: pondText})];
 };
 
 const arrangeFish = fishes => {
