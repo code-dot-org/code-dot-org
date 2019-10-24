@@ -49,7 +49,8 @@ export const init = () => {
     trainer,
     uiElements: uiElements(state),
     headerElements,
-    footerElements
+    footerElements,
+    isRunning: true
   });
 };
 
@@ -79,9 +80,12 @@ const onClassifyFish = doesLike => {
 };
 
 const onSelectType = () => {
-  const trainer = getState().trainer;
-  if (trainer) {
-    trainer.clearAll();
+  const state = setState({
+    trainingIndex: 0,
+    fishData: []
+  });
+  if (state.trainer) {
+    state.trainer.clearAll();
   }
   toMode(Modes.Words);
 };

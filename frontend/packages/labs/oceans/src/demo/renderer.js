@@ -17,14 +17,13 @@ var $time =
   };
 
 let prevState = {};
-
 let currentModeStartTime = $time();
-
 let fishPartImages = {};
-
 let canvasCache;
 let intermediateCanvas;
 let intermediateCtx;
+let lastPauseTime = 0;
+let lastStartTime;
 
 export const initRenderer = () => {
   canvasCache = new CanvasCache();
@@ -62,6 +61,8 @@ export const render = () => {
   if (state.currentMode !== prevState.currentMode) {
     drawBackground(state);
     currentModeStartTime = $time();
+    lastPauseTime = 0;
+    lastStartTime = null;
   }
 
   clearCanvas(state.canvas);
@@ -116,9 +117,6 @@ const loadImage = imgPath => {
     img.src = imgPath;
   });
 };
-
-let lastPauseTime = 0;
-let lastStartTime;
 
 const getOffsetForTime = (t, totalFish) => {
   return (
