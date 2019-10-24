@@ -101,7 +101,9 @@ const onClassifyFish = doesLike => {
 const onSelectType = () => {
   const state = setState({
     trainingIndex: 0,
-    fishData: []
+    fishData: [],
+    noCount: 0,
+    yesCount: 0
   });
   if (state.trainer) {
     state.trainer.clearAll();
