@@ -70,9 +70,7 @@ export const render = () => {
   switch (state.currentMode) {
     case Modes.Training:
       drawFrame(state);
-      drawTrainingFishNew(state);
-      // drawTrainingFish(state);
-      // drawUpcomingFish(state);
+      drawTrainingFish(state);
       break;
     case Modes.Predicting:
       drawPredictingFish(state);
@@ -136,7 +134,7 @@ const getXForFish = (numFish, fishIdx, offsetX) => {
   return (numFish - fishIdx) * constants.fishCanvasWidth - offsetX;
 };
 
-const drawTrainingFishNew = state => {
+const drawTrainingFish = state => {
   let t = lastPauseTime;
   let currentRunTime = 0;
   if (state.isRunning) {
@@ -155,7 +153,7 @@ const drawTrainingFishNew = state => {
   const offsetX = getOffsetForTime(t, state.fishData.length);
   const startFishIdx = Math.max(
     getFishIdxForLocation(
-      constants.canvasWidth,
+      constants.canvasWidth + constants.fishCanvasWidth,
       offsetX,
       state.fishData.length
     ),
@@ -196,49 +194,6 @@ const drawFrame = state => {
     '#FFFFFF',
     '#000000'
   );
-};
-
-// Draw the fish for training mode.
-export const drawTrainingFish = state => {
-  const canvas = state.canvas;
-  const ctx = canvas.getContext('2d');
-
-  // Draw frame behind fish
-  const frameSize = 300;
-  const frameXPos = canvas.width / 2 - frameSize / 2;
-  const frameYPos = canvas.height / 2 - frameSize / 2;
-  drawRoundedFrame(
-    ctx,
-    frameXPos,
-    frameYPos,
-    frameSize,
-    frameSize,
-    '#FFFFFF',
-    '#000000'
-  );
-
-  const fishIndex = Math.floor(animationTime / 1000);
-  const fish = state.fishData[fishIndex];
-
-  const fishXPos = frameXPos + (frameSize - constants.fishCanvasWidth) / 2;
-  const fishYPos = frameYPos + (frameSize - constants.fishCanvasHeight) / 2;
-  drawSingleFish(fish, fishXPos, fishYPos, ctx);
-};
-
-// Draw the upcoming fish for training mode.
-export const drawUpcomingFish = state => {
-  const fishLeft = state.fishData.length - state.trainingIndex - 1;
-  const numUpcomingFish = fishLeft >= 3 ? 3 : fishLeft;
-  const canvas = state.canvas;
-  const ctx = canvas.getContext('2d');
-  let x = canvas.width / 2 - 300 - constants.fishCanvasWidth / 2;
-  const y = canvas.height / 2 - constants.fishCanvasHeight / 2;
-
-  for (let i = 1; i <= numUpcomingFish; i++) {
-    const fish = state.fishData[state.trainingIndex + i];
-    drawSingleFish(fish, x, y, ctx);
-    x -= 200;
-  }
 };
 
 // Draw the fish for predicting mode.
