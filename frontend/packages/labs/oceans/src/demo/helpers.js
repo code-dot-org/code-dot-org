@@ -53,6 +53,14 @@ export const createText = ({id, text}) => {
   return textEl;
 };
 
+export const createImage = ({id, src}) => {
+  let imageEl = document.createElement('IMG');
+  imageEl.src = src;
+  imageEl.id = id;
+
+  return imageEl;
+};
+
 export const strForClassType = classType => {
   switch (classType) {
     case ClassType.Like:
