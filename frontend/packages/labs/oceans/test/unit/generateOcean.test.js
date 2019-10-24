@@ -9,7 +9,7 @@ describe('Generate ocean test', () => {
   });
 
   test('Can generate ocean', () => {
-    const numFish = 20;
+    const numFish = 50;
     const ocean = generateOcean(numFish);
     expect(ocean.length).toEqual(numFish);
   });
@@ -48,7 +48,7 @@ describe('Generate ocean test', () => {
     trainingOcean.forEach(fish => {
       trainer.addExampleData(
         Array.from(fish.knnData),
-        fish.colorPalette.bodyRgb[0] > 100 ? 1 : 0
+        fish.colorPalette.bodyRgb[0] > 200 ? 1 : 0
       );
     });
     const predictedOcean = await filterOcean(
@@ -60,13 +60,12 @@ describe('Generate ocean test', () => {
     });
     var numRedFish = 0;
     likedFish.forEach(fish => {
-      if (fish.colorPalette.bodyRgb[0] > 100) {
+      if (fish.colorPalette.bodyRgb[0] > 200) {
         numRedFish++;
       }
     });
     expect(predictedOcean.length).toEqual(numPredictionFish);
-    // TODO: Raise expected confidence when fish data has stabilized.
-    expect((1.0 * numRedFish) / likedFish.length).toBeGreaterThanOrEqual(0.6);
+    expect((1.0 * numRedFish) / likedFish.length).toBeGreaterThanOrEqual(0.7);
   });
 
   test('Can predict round fish when only picking round fish', async () => {
@@ -76,7 +75,7 @@ describe('Generate ocean test', () => {
     trainer.setTopK(5);
     await trainer.initializeClassifiersWithoutMobilenet();
     trainingOcean.forEach(fish => {
-      const cat = fish.parts[0].knnData[0] > 0.25 ? 1 : 0;
+      const cat = fish.parts[0].knnData[1] === 0 ? 1 : 0;
       trainer.addExampleData(Array.from(fish.knnData), cat);
     });
     const predictedOcean = await filterOcean(
@@ -88,12 +87,11 @@ describe('Generate ocean test', () => {
     });
     var numRoundFish = 0;
     likedFish.forEach(fish => {
-      if (fish.parts[0].knnData[0] > 0.2) {
+      if (fish.parts[0].knnData[1] === 0) {
         numRoundFish++;
       }
     });
     expect(predictedOcean.length).toEqual(numPredictionFish);
-    // TODO: Raise expected confidence when fish data has stabilized.
-    expect((1.0 * numRoundFish) / likedFish.length).toBeGreaterThanOrEqual(0.6);
+    expect((1.0 * numRoundFish) / likedFish.length).toBeGreaterThanOrEqual(0.7);
   });
 });
