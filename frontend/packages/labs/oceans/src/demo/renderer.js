@@ -75,7 +75,7 @@ export const render = () => {
       break;
     case Modes.TrainingIntro:
       clearCanvas(state.canvas);
-      break; 
+      break;
     case Modes.Training:
       clearCanvas(state.canvas);
       drawTrainingFish(state);
