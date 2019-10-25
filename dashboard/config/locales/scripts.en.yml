@@ -13151,7 +13151,7 @@ en:
               name: 'Step 1: Develop Understanding'
             'Step 2: Demonstrate Understanding':
               name: 'Step 2: Demonstrate Understanding'
-          title: CS Discoveries Deeper Learning Module  for Workshop 4
+          title: CS Discoveries Deeper Learning Module for Workshop 4
           description_audience: CS Discoveries Facilitators in Training 2019
           description_short: ''
           description: ''
@@ -13207,7 +13207,7 @@ en:
               name: 'Step 1: Develop Understanding'
             'Step 2: Demonstrate Understanding':
               name: 'Step 2: Demonstrate Understanding'
-          title: CS Principles Deeper Learning Module 4
+          title: CS Principles Deeper Learning Module for Workshop 4
           description_audience: CS Principles Facilitators in Training 2019
           description_short: ''
           description: ''
@@ -13415,9 +13415,9 @@ en:
           description_audience: ''
           description_short: ''
           description: Code your own dance party to share with your friends!
-        K5-OnlinePD-copy:
+        k5-onlinepd-copy:
           title: Teaching Computer Science Fundamentals
-          description: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course.
+          description: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course!
           description_short: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course.
           description_audience: ''
           stages:
@@ -13507,3 +13507,5 @@ en:
               name: For Loops
             End-of-course projects:
               name: End-of-course projects
+            Who is this section for?:
+              name: Who is this section for?

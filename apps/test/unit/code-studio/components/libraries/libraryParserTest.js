@@ -122,6 +122,42 @@ describe('Library parser', () => {
       });
     });
 
+    it('is able to parse functions with comments', () => {
+      let functionName = 'func';
+      let comment = 'comment';
+      let category = 'Functions';
+      let selectedFunctions = [
+        {
+          functionName: functionName,
+          comment: comment
+        }
+      ];
+
+      let expectedDropletConfig = [
+        {
+          func: functionName,
+          category: category,
+          comment: comment
+        }
+      ];
+
+      expect(
+        parser.createLibraryJson(
+          emptyCode,
+          selectedFunctions,
+          emptyLibraryName,
+          emptyDescription
+        )
+      ).to.deep.equal(
+        JSON.stringify({
+          name: emptyLibraryName,
+          description: emptyDescription,
+          dropletConfig: expectedDropletConfig,
+          source: emptyCode
+        })
+      );
+    });
+
     it('is able to parse functions with parameters', () => {
       let firstFunctionName = 'first';
       let secondFunctionName = 'second';

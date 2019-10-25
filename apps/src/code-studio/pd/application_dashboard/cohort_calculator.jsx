@@ -28,22 +28,13 @@ export default class CohortCalculator extends React.Component {
     super(props);
 
     this.state = {
-      loadingCapacity: null,
-      capacity: null,
-      loadingRegistrationCount: null,
-      registered: null
+      loadingEnrollmentCount: null,
+      enrolled: null
     };
   }
 
   componentDidMount() {
     this.loadData();
-  }
-
-  getPartnerCapacity(role, regional_partner_value) {
-    return $.get({
-      url: `/api/v1/regional_partners/capacity?role=${role}&regional_partner_value=${regional_partner_value}`,
-      dataType: 'json'
-    });
   }
 
   getPartnerRegistrationCount(role, regional_partner_value) {
@@ -54,21 +45,7 @@ export default class CohortCalculator extends React.Component {
   }
 
   loadData(regionalPartnerFilterValue) {
-    this.setState({loadingCapacity: true, loadingRegistrationCount: true});
-
-    this.getPartnerCapacity(
-      this.props.role,
-      this.props.regionalPartnerFilterValue
-    )
-      .done(data => {
-        this.setState({
-          loadingCapacity: false,
-          capacity: data.capacity
-        });
-      })
-      .fail(() => {
-        this.setState({loadingCapacity: false});
-      });
+    this.setState({loadingEnrollmentCount: true});
 
     this.getPartnerRegistrationCount(
       this.props.role,
@@ -76,61 +53,42 @@ export default class CohortCalculator extends React.Component {
     )
       .done(data => {
         this.setState({
-          loadingRegistrationCount: false,
-          registered: data.enrolled
+          loadingEnrollmentCount: false,
+          enrolled: data.enrolled
         });
       })
       .fail(() => {
-        this.setState({loadingRegistrationCount: false});
+        this.setState({loadingEnrollmentCount: false});
       });
   }
 
   render() {
     return (
-      this.state.capacity && (
-        <div style={styles.tableWrapper}>
-          <Table striped condensed>
-            <caption>Cohort Calculator</caption>
-            <thead>
-              <tr>
-                <th />
-                <th>Total</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Available Seats</td>
-                <td>
-                  {this.state.loadingCapacity
-                    ? 'Loading...'
-                    : this.state.capacity}
-                </td>
-              </tr>
-              <tr>
-                {/*TODO: add hover text explaining what these fields represent*/}
-                <td>Accepted</td>
-                <td>{this.props.accepted}</td>
-              </tr>
-              <tr>
-                <td>Remaining Capacity</td>
-                <td>
-                  {this.state.capacity &&
-                    this.state.capacity -
-                      Math.max(this.props.accepted, this.state.registered)}
-                </td>
-              </tr>
-              <tr>
-                <td>Registered</td>
-                <td>
-                  {this.state.loadingRegistrationCount
-                    ? 'Loading...'
-                    : this.state.registered}
-                </td>
-              </tr>
-            </tbody>
-          </Table>
-        </div>
-      )
+      <div style={styles.tableWrapper}>
+        <Table striped condensed>
+          <caption>Cohort Calculator</caption>
+          <thead>
+            <tr>
+              <th />
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Accepted</td>
+              <td>{this.props.accepted}</td>
+            </tr>
+            <tr>
+              <td>Registered</td>
+              <td>
+                {this.state.loadingEnrollmentCount
+                  ? 'Loading...'
+                  : this.state.enrolled || '-'}
+              </td>
+            </tr>
+          </tbody>
+        </Table>
+      </div>
     );
   }
 }
