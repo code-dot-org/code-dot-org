@@ -51,8 +51,6 @@ Dashboard::Application.configure do
   # number of complex assets.
   # config.assets.debug = true
 
-  config.assets.digest = false
-
   config.assets.quiet = true
 
   # skip precompiling of all assets on the first request for any asset.

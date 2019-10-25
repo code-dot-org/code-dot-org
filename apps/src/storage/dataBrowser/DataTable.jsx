@@ -15,6 +15,7 @@ import color from '../../util/color';
 import {connect} from 'react-redux';
 import PaginationWrapper from '../../templates/PaginationWrapper';
 import msg from '@cdo/locale';
+import {WarningType} from '../constants';
 
 const MIN_TABLE_WIDTH = 600;
 const MAX_ROWS_PER_PAGE = 500;
@@ -184,11 +185,11 @@ class DataTable extends React.Component {
         columnName,
         columnType,
         this.resetColumnState,
-        msg => {
-          if (String(msg).includes('Not all values in column')) {
-            this.props.onShowWarning(msg);
+        err => {
+          if (err.type === WarningType.CANNOT_CONVERT_COLUMN_TYPE) {
+            this.props.onShowWarning(err.msg);
           } else {
-            console.warn(msg);
+            console.warn(err.msg ? err.msg : err);
           }
         }
       );

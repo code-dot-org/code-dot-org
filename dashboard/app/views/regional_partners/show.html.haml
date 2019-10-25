@@ -17,12 +17,6 @@
 %p
   %strong Urban:
   = @regional_partner.urban? ? 'Yes' : 'No'
-%p
-  %strong CSD Cohort Capacity:
-  = @regional_partner.cohort_capacity_csd
-%p
-  %strong CSP Cohort Capacity:
-  = @regional_partner.cohort_capacity_csp
 - %w(csd csp).each do |course|
   - %w(teacher facilitator).each do |role|
     - %w(open close).each do |state|
