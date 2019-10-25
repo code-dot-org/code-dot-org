@@ -171,8 +171,11 @@ class FirehoseClient {
     if (state) {
       if (includeUserId) {
         const constants = state.pageConstants;
+        const currentUserId = state.currentUser.userId;
         if (constants) {
           data['user_id'] = constants.userId;
+        } else if (currentUserId) {
+          data['user_id'] = currentUserId;
         }
       }
       const progress = state.progress;

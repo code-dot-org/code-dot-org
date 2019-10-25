@@ -78,8 +78,7 @@ class SectionProgress extends Component {
     setScriptId: PropTypes.func.isRequired,
     setLessonOfInterest: PropTypes.func.isRequired,
     isLoadingProgress: PropTypes.bool.isRequired,
-    scriptFriendlyName: PropTypes.string.isRequired,
-    userId: PropTypes.number
+    scriptFriendlyName: PropTypes.string.isRequired
   };
 
   componentDidMount() {
@@ -90,17 +89,19 @@ class SectionProgress extends Component {
     this.props.setScriptId(scriptId);
     this.props.loadScript(scriptId);
 
-    firehoseClient.putRecord({
-      study: 'teacher_dashboard_actions',
-      study_group: 'progress',
-      event: 'change_script',
-      user_id: this.props.userId,
-      data_json: JSON.stringify({
-        section_id: this.props.section.id,
-        old_script_id: this.props.scriptId,
-        new_script_id: scriptId
-      })
-    });
+    firehoseClient.putRecord(
+      {
+        study: 'teacher_dashboard_actions',
+        study_group: 'progress',
+        event: 'change_script',
+        data_json: JSON.stringify({
+          section_id: this.props.section.id,
+          old_script_id: this.props.scriptId,
+          new_script_id: scriptId
+        })
+      },
+      {includeUserId: true}
+    );
   };
 
   onChangeLevel = lessonOfInterest => {
@@ -135,16 +136,18 @@ class SectionProgress extends Component {
   }
 
   navigateToScript = () => {
-    firehoseClient.putRecord({
-      study: 'teacher_dashboard_actions',
-      study_group: 'progress',
-      event: 'go_to_script',
-      user_id: this.props.userId,
-      data_json: JSON.stringify({
-        section_id: this.props.section.id,
-        script_id: this.props.scriptId
-      })
-    });
+    firehoseClient.putRecord(
+      {
+        study: 'teacher_dashboard_actions',
+        study_group: 'progress',
+        event: 'go_to_script',
+        data_json: JSON.stringify({
+          section_id: this.props.section.id,
+          script_id: this.props.scriptId
+        })
+      },
+      {includeUserId: true}
+    );
   };
 
   render() {
@@ -259,8 +262,7 @@ export default connect(
     scriptData: getCurrentScriptData(state),
     studentLevelProgress: getCurrentProgress(state),
     isLoadingProgress: state.sectionProgress.isLoadingProgress,
-    scriptFriendlyName: getSelectedScriptFriendlyName(state),
-    userId: state.currentUser.userId
+    scriptFriendlyName: getSelectedScriptFriendlyName(state)
   }),
   dispatch => ({
     loadScript(scriptId) {

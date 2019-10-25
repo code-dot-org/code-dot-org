@@ -82,7 +82,6 @@ $(document).ready(function() {
               sectionId={section.id}
               sectionName={section.name}
               studentCount={section.students.length}
-              userId={currentUserId}
             />
           )}
         />

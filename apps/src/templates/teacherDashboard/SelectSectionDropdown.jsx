@@ -23,8 +23,7 @@ class SelectSectionDropdown extends React.Component {
   static propTypes = {
     // Provided by redux.
     sections: PropTypes.array,
-    selectedSectionId: PropTypes.number,
-    userId: PropTypes.number
+    selectedSectionId: PropTypes.number
   };
 
   onChange = event => {
@@ -37,17 +36,19 @@ class SelectSectionDropdown extends React.Component {
       : baseUrl;
     navigateToHref(sectionUrl);
 
-    firehoseClient.putRecord({
-      study: 'teacher_dashboard_actions',
-      study_group: currentTab,
-      event: 'change_section',
-      user_id: this.props.userId,
-      data_json: JSON.stringify({
-        section_id: this.props.selectedSectionId,
-        old_section_id: this.props.selectedSectionId,
-        new_section_id: sectionId
-      })
-    });
+    firehoseClient.putRecord(
+      {
+        study: 'teacher_dashboard_actions',
+        study_group: currentTab,
+        event: 'change_section',
+        data_json: JSON.stringify({
+          section_id: this.props.selectedSectionId,
+          old_section_id: this.props.selectedSectionId,
+          new_section_id: sectionId
+        })
+      },
+      {includeUserId: true}
+    );
   };
 
   render() {
@@ -76,6 +77,5 @@ export const UnconnectedSelectSectionDropdown = SelectSectionDropdown;
 
 export default connect(state => ({
   sections: getVisibleSections(state),
-  selectedSectionId: state.teacherSections.selectedSectionId,
-  userId: state.currentUser.userId
+  selectedSectionId: state.teacherSections.selectedSectionId
 }))(SelectSectionDropdown);

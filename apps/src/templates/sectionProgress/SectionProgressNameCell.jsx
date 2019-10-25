@@ -14,22 +14,23 @@ class SectionProgressNameCell extends Component {
 
     // Provided by redux.
     scriptName: PropTypes.string,
-    scriptId: PropTypes.number,
-    userId: PropTypes.number
+    scriptId: PropTypes.number
   };
 
   recordStudentNameClick = () => {
-    firehoseClient.putRecord({
-      study: 'teacher_dashboard_actions',
-      study_group: 'progress',
-      event: 'go_to_student',
-      user_id: this.props.userId,
-      data_json: JSON.stringify({
-        section_id: this.props.sectionId,
-        script_id: this.props.scriptId,
-        student_id: this.props.studentId
-      })
-    });
+    firehoseClient.putRecord(
+      {
+        study: 'teacher_dashboard_actions',
+        study_group: 'progress',
+        event: 'go_to_student',
+        data_json: JSON.stringify({
+          section_id: this.props.sectionId,
+          script_id: this.props.scriptId,
+          student_id: this.props.studentId
+        })
+      },
+      {includeUserId: true}
+    );
   };
 
   render() {
@@ -56,6 +57,5 @@ class SectionProgressNameCell extends Component {
 export const UnconnectedSectionProgressNameCell = SectionProgressNameCell;
 export default connect(state => ({
   scriptName: getSelectedScriptName(state),
-  scriptId: state.scriptSelection.scriptId,
-  userId: state.currentUser.userId
+  scriptId: state.scriptSelection.scriptId
 }))(SectionProgressNameCell);

@@ -4,7 +4,6 @@ import {expect} from '../../../util/deprecatedChai';
 import {UnconnectedVirtualizedSummaryView} from '@cdo/apps/templates/sectionProgress/VirtualizedSummaryView';
 import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import scriptSelection from '@cdo/apps/redux/scriptSelectionRedux';
-import currentUser from '@cdo/apps/templates/currentUserRedux';
 import {
   getStore,
   registerReducers,
@@ -24,7 +23,7 @@ describe('VirtualizedSummaryView', () => {
 
   beforeEach(() => {
     stubRedux();
-    registerReducers({sectionProgress, scriptSelection, currentUser});
+    registerReducers({sectionProgress, scriptSelection});
     defaultProps = {
       getLevels: () => {
         return [{id: 789, status: 'perfect'}];
