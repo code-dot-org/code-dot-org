@@ -1,9 +1,9 @@
 import {expect} from '../../../../util/reconfiguredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
-import LibraryManagerDialog from '@cdo/apps/code-studio/components/Libraries/LibraryManagerDialog';
-import LibraryListItem from '@cdo/apps/code-studio/components/Libraries/LibraryListItem';
-import LibraryClientApi from '@cdo/apps/code-studio/components/Libraries/LibraryClientApi';
+import LibraryManagerDialog from '@cdo/apps/code-studio/components/libraries/LibraryManagerDialog';
+import LibraryListItem from '@cdo/apps/code-studio/components/libraries/LibraryListItem';
+import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
 import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
 import sinon from 'sinon';
 
@@ -40,12 +40,11 @@ describe('LibraryManagerDialog', () => {
     sinon
       .stub(window.dashboard.project, 'getProjectLibraries')
       .returns([{name: 'first'}, {name: 'second'}]);
-    sinon
-      .stub(LibraryClientApi.prototype, 'getClassLibraries')
-      .returns(undefined);
+    sinon.stub(LibraryClientApi.prototype, 'getClassLibraries');
     const wrapper = shallow(
       <LibraryManagerDialog onClose={() => {}} isOpen={true} />
     );
+    wrapper.instance().onOpen();
     expect(wrapper.find(LibraryListItem)).to.have.lengthOf(2);
     expect(wrapper.state().classLibraries).to.have.lengthOf(0);
     expect(wrapper.state().libraries).to.have.lengthOf(2);
@@ -59,10 +58,11 @@ describe('LibraryManagerDialog', () => {
       .returns(undefined);
     sinon
       .stub(LibraryClientApi.prototype, 'getClassLibraries')
-      .returns([{name: 'first'}, {name: 'second'}]);
+      .callsFake(callback => callback([{channel: '1'}, {channel: '2'}]));
     const wrapper = shallow(
       <LibraryManagerDialog onClose={() => {}} isOpen={true} />
     );
+    wrapper.instance().onOpen();
     expect(wrapper.find(LibraryListItem)).to.have.lengthOf(2);
     expect(wrapper.state().classLibraries).to.have.lengthOf(2);
     expect(wrapper.state().libraries).to.have.lengthOf(0);
@@ -76,10 +76,11 @@ describe('LibraryManagerDialog', () => {
       .returns([{name: 'first'}, {name: 'second'}]);
     sinon
       .stub(LibraryClientApi.prototype, 'getClassLibraries')
-      .returns([{name: 'first'}, {name: 'second'}]);
+      .callsFake(callback => callback([{channel: '1'}, {channel: '2'}]));
     const wrapper = shallow(
       <LibraryManagerDialog onClose={() => {}} isOpen={true} />
     );
+    wrapper.instance().onOpen();
     expect(wrapper.find(LibraryListItem)).to.have.lengthOf(4);
     expect(wrapper.state().classLibraries).to.have.lengthOf(2);
     expect(wrapper.state().libraries).to.have.lengthOf(2);
@@ -91,12 +92,11 @@ describe('LibraryManagerDialog', () => {
     sinon
       .stub(window.dashboard.project, 'getProjectLibraries')
       .returns(undefined);
-    sinon
-      .stub(LibraryClientApi.prototype, 'getClassLibraries')
-      .returns(undefined);
+    sinon.stub(LibraryClientApi.prototype, 'getClassLibraries');
     const wrapper = shallow(
       <LibraryManagerDialog onClose={() => {}} isOpen={true} />
     );
+    wrapper.instance().onOpen();
     wrapper.instance().setLibraryToImport({target: {value: 'id'}});
     expect(wrapper.state().importLibraryId).to.equal('id');
     window.dashboard.project.getProjectLibraries.restore();
@@ -107,9 +107,7 @@ describe('LibraryManagerDialog', () => {
     sinon
       .stub(window.dashboard.project, 'getProjectLibraries')
       .returns([{name: 'first'}, {name: 'second'}]);
-    sinon
-      .stub(LibraryClientApi.prototype, 'getClassLibraries')
-      .returns(undefined);
+    sinon.stub(LibraryClientApi.prototype, 'getClassLibraries');
     let setProjectLibraries = sinon.spy(
       window.dashboard.project,
       'setProjectLibraries'
@@ -117,6 +115,7 @@ describe('LibraryManagerDialog', () => {
     const wrapper = shallow(
       <LibraryManagerDialog onClose={() => {}} isOpen={true} />
     );
+    wrapper.instance().onOpen();
     expect(setProjectLibraries.notCalled).to.be.true;
     wrapper.instance().removeLibrary('first');
     expect(setProjectLibraries.withArgs([{name: 'second'}]).calledOnce).to.be

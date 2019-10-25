@@ -8,7 +8,7 @@ theme: responsive
 
 # 2019 Champions of Computer Science Awards
 
-In celebration of the 2019 [Computer Science Education Week](https://csedweek.org/) (CSEdWeek), the [Computer Science Teachers Association](http://www.csteachers.org/) (CSTA) and [Code.org](https://code.org/) are pleased to announce that submissions for the third annual Champions of Computer Science Awards are now open! 
+In celebration of the 2019 [Computer Science Education Week](https://csedweek.org/) (CSEdWeek), the [Computer Science Teachers Association](http://www.csteachers.org/) (CSTA) and [Code.org](https://code.org/) are pleased to present the third annual Champions of Computer Science Awards! 
 <br>
 <br>
 The purpose of the Champions of CS Awards is to identify and celebrate students, teachers, administrators, and organizations who have made a significant impact to improve access to and the quality of CS education.
@@ -17,14 +17,14 @@ The purpose of the Champions of CS Awards is to identify and celebrate students,
 Any K-12 student, teacher, or administrator may be nominated. Organizations that work directly to improve access to and the quality of CS education may also be nominated (examples: afterschool coding clubs, local CSTA chapters, regional or national nonprofits, etc.). This opportunity is only available for US submissions.
 <br>
 <br>
-Award winners and a guest of choice will receive an all-expenses paid trip (travel & hotel) to attend the CSEdWeek event on December 9th (location to be confirmed).
+Award winners and a guest of choice will receive an all-expenses paid trip (travel & hotel) to attend the CSEdWeek event on December 9th in Santa Fe, New Mexico.
 <br>
 <br>
-Submit your nominations using [this form](https://www.cvent.com/c/abstracts/b2b495a4-4caf-4ed5-88b1-954d5a605b24). The deadline for submission is Monday, October 21, 2019 at midnight PT. Email awards@csteachers.org if you have questions. You can take a look at last year’s winners below!
+<strong>Award submissions are now closed. Check back soon to meet the winners!</strong>
 <br>
 <br>
 
-# 2018 Winners
+# Last year's Winners
 
 [col-25]
 

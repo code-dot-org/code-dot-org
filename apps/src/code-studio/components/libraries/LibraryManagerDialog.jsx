@@ -2,8 +2,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import LibraryClientApi from '@cdo/apps/code-studio/components/Libraries/LibraryClientApi';
-import LibraryListItem from '@cdo/apps/code-studio/components/Libraries/LibraryListItem';
+import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
+import LibraryListItem from '@cdo/apps/code-studio/components/libraries/LibraryListItem';
 import color from '@cdo/apps/util/color';
 
 const DEFAULT_MARGIN = 7;
@@ -55,20 +55,26 @@ export default class LibraryManagerDialog extends React.Component {
     classLibraries: []
   };
 
-  componentDidMount = () => {
+  componentDidUpdate(prevProps) {
+    if (prevProps.isOpen === false && this.props.isOpen === true) {
+      this.onOpen();
+    }
+  }
+
+  onOpen = () => {
     let libraryClient = new LibraryClientApi();
     this.setState({libraries: dashboard.project.getProjectLibraries() || []});
-    this.setState({classLibraries: libraryClient.getClassLibraries() || []});
+    libraryClient.getClassLibraries(libraries => {
+      this.setState({classLibraries: libraries});
+    });
   };
 
   setLibraryToImport = event => {
     this.setState({importLibraryId: event.target.value});
   };
 
-  addLibrary = event => {
-    let libraryToImport = event.target.value
-      ? event.target.value
-      : this.state.importLibraryId;
+  addLibrary = channelId => {
+    let libraryToImport = channelId ? channelId : this.state.importLibraryId;
     let libraryClient = new LibraryClientApi(libraryToImport);
     libraryClient.getLatest(
       data => {
@@ -130,9 +136,9 @@ export default class LibraryManagerDialog extends React.Component {
     return classLibraries.map(library => {
       return (
         <LibraryListItem
-          key={library.name}
+          key={library.channel}
           library={library}
-          onAdd={this.addLibrary}
+          onAdd={() => this.addLibrary(library.channel)}
         />
       );
     });
