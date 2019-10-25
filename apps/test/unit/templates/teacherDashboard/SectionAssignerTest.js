@@ -35,14 +35,14 @@ describe('SectionAssigner', () => {
     expect(wrapper.find('Connect(AssignButton)').exists()).to.be.true;
   });
 
-  it('renders an assigned checkmark', () => {
-    const wrapper = mount(
+  it('renders an UnassignButton', () => {
+    const wrapper = shallow(
       <SectionAssigner
         {...defaultProps}
         selectedSectionId={assignedSection.id}
       />
     );
 
-    expect(wrapper.find('.fa-check').exists()).to.be.true;
+    expect(wrapper.find('Connect(UnassignButton)').exists()).to.be.true;
   });
 });
