@@ -2133,6 +2133,34 @@ StudioApp.prototype.handleHideSource_ = function(options) {
 };
 
 /**
+ * Adds any library blocks in the project to the toolbox.
+ * @param {object} config The object containing all metadata about the project
+ */
+StudioApp.prototype.loadLibraryBlocks = function(config) {
+  if (!config.level.libraries) {
+    return;
+  }
+
+  config.level.libraryCode = '';
+  config.level.libraries.forEach(library => {
+    config.dropletConfig.additionalPredefValues.push(library.name);
+    config.level.libraryCode += library.source;
+    // TODO: add category management for libraries (blocked on spec)
+    // config.dropletConfig.categories['libraryName'] = {
+    //   id: 'libraryName',
+    //   color: 'colorName',
+    //   rgb: 'colorHexCode',
+    //   blocks: []
+    // };
+
+    library.dropletConfig.forEach(dropletConfig => {
+      config.dropletConfig.blocks.push(dropletConfig);
+      config.level.codeFunctions[dropletConfig.func] = null;
+    });
+  });
+};
+
+/**
  * Move the droplet cursor to the first token at a specific line number.
  * @param {Number} line zero-based line index
  */

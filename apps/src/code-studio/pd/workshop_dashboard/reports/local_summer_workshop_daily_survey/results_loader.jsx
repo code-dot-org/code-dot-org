@@ -4,7 +4,6 @@ import $ from 'jquery';
 import Spinner from '../../../components/spinner';
 import Results from './results';
 import color from '@cdo/apps/util/color';
-import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
   errorContainer: {
@@ -33,17 +32,9 @@ export class ResultsLoader extends React.Component {
   }
 
   load() {
-    const inExperiment = experiments.isEnabled(
-      experiments.ROLLUP_SURVEY_REPORT
-    );
-
-    const url = inExperiment
-      ? `/api/v1/pd/workshops/${
-          this.props.params['workshopId']
-        }/experiment_survey_report`
-      : `/api/v1/pd/workshops/${
-          this.props.params['workshopId']
-        }/generic_survey_report`;
+    const url = `/api/v1/pd/workshops/${
+      this.props.params['workshopId']
+    }/generic_survey_report`;
 
     this.loadRequest = $.ajax({
       method: 'GET',
@@ -51,28 +42,15 @@ export class ResultsLoader extends React.Component {
       dataType: 'json'
     })
       .done(data => {
-        if (inExperiment) {
-          this.setState({
-            loading: false,
-            questions: data['questions'],
-            thisWorkshop: data['this_workshop'],
-            sessions: Object.keys(data['this_workshop']),
-            courseName: data['course_name'],
-            workshopRollups: data['workshop_rollups'],
-            facilitatorRollups: data['facilitator_rollups']
-          });
-        } else {
-          this.setState({
-            loading: false,
-            questions: data['questions'],
-            thisWorkshop: data['this_workshop'],
-            sessions: Object.keys(data['this_workshop']),
-            facilitators: data['facilitators'],
-            facilitatorAverages: data['facilitator_averages'],
-            facilitatorResponseCounts: data['facilitator_response_counts'],
-            courseName: data['course_name']
-          });
-        }
+        this.setState({
+          loading: false,
+          questions: data['questions'],
+          thisWorkshop: data['this_workshop'],
+          sessions: Object.keys(data['this_workshop']),
+          courseName: data['course_name'],
+          workshopRollups: data['workshop_rollups'],
+          facilitatorRollups: data['facilitator_rollups']
+        });
       })
       .fail(jqXHR => {
         this.setState({

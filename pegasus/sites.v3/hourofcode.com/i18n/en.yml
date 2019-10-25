@@ -11,10 +11,16 @@
   campaign_date_full: "December 4-10"
   campaign_date_year: "2017"
   campaign_date_full_year: "December 4-10, 2017"
-  
+
   hoc2019_header: 'Learn computer science. Change the world.'
   hoc2019_header_line1_mobile: 'Learn computer science.'
   hoc2019_header_line2_mobile: 'Change the world.'
+  social_hoc2019_every_sudent: 'Every student has the potential to change the world. Help them get started. #CSforGood'
+  social_hoc2019_learn_computer_science: 'Learn computer science. Change the world. #CSforGood #HourOfCode'
+  social_hoc_is_coming: 'The Hour of Code is coming!'
+  social_hoc2019_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn computer science. Change the world.'
+  social_hoc2019_coming_dates: 'The Hour of Code is coming December 9-15, 2019. Computer science is foundational for every student to learn.'
+  social_hoc2019_dance: 'Featuring Katy Perry, Jonas Brothers, Lil Nas X, Panic at the Disco, and many more!'
 
   codeorg_homepage_hoc2018_curriculum: 'Go further with <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org courses</a>'
   codeorg_homepage_hoc2018_dance_heading: 'Create your own <span class="highlight-word">Dance&nbsp;Party</span>'
@@ -231,7 +237,7 @@
   front_join_us_tutorials: "Choose your Hour of Code tutorial!"
   front_join_us_tutorials_link: 'Filter and browse <i>over 200 tutorials and lesson plans</i>! Find activities for different subject areas, multiple hardware needs, and students at any experience level.'
   front_join_us_robotics: 'Win robots or circuits!'
-  front_join_us_robotics_link: 'Do you want a set of robots or physical computing kits to use with your students? Our generous partners are donating sets to over 100 classrooms! Sign up for the Hour of Code to participate. (Classrooms selected by Code.org, US Only)'
+  front_join_us_robotics_link: 'Do you want a set of robots or physical computing kits to use with your students? Our generous partners are donating sets to 75 classrooms! Sign up for the Hour of Code to participate. (Classrooms selected by Code.org, US Only)'
   front_join_us_teacher: 'Are you a teacher?'
   front_join_us_inspire: 'Inspire students with'
   front_join_us_inspire_link: 'an Hour of Code in the classroom.'
@@ -352,6 +358,7 @@
 
   twitter_default_text: "I'm participating in this year's #HourOfCode, are you? @codeorg"
   twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
+  twitter_donor_text_2019: "This year's #HourOfCode is about #CSforGood. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
 
   hoc_faq_title: 'FAQs'
   hoc_faq_what_is_hoc_q: 'What is the Hour of Code?'

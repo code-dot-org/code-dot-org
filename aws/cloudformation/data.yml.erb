@@ -21,6 +21,8 @@ Parameters:
     NoEcho: true
   RDSHost:
     Type: String
+  AuroraReaderHost:
+    Type: String
   ReportingCluster:
     Type: String
   RedshiftDatabase:
@@ -79,6 +81,17 @@ Resources:
       Username: !Ref RDSUsername
       Password: !Ref RDSPassword
       ExtraConnectionAttributes: ResumeFetchForXRows=0;UnloadTimeout=86400
+  AuroraReaderEndpoint:
+    Type: AWS::DMS::Endpoint
+    Properties:
+      EndpointIdentifier: !Sub "AuroraReaderEndpoint-${AWS::StackName}"
+      EndpointType: source
+      EngineName: aurora
+      ServerName: !Ref AuroraReaderHost
+      Port: 3306
+      Username: !Ref RDSUsername
+      Password: !Ref RDSPassword
+      ExtraConnectionAttributes: ResumeFetchForXRows=0;UnloadTimeout=86400
   RedshiftEndpoint:
     Type: AWS::DMS::Endpoint
     Properties:
@@ -109,18 +122,22 @@ Resources:
          writeBufferSize: 8.megabytes / 1.kilobyte
       }.map{|x|x.join('=')}.join(';')%>
 <% Cdo::DMS.tasks(aws_dir('dms/tasks.yml')).each do |task_name, table_mappings| -%>
-  DMS<%=task_name.underscore.camelize%>:
+  DMS<%=task_name.underscore.camelize%>FullLoad:
     Type: AWS::DMS::ReplicationTask
     Properties:
-      MigrationType: full-load-and-cdc
+      MigrationType: full-load
       ReplicationInstanceArn: !Ref TableauSync
-      ReplicationTaskIdentifier: <%= task_name %>
-      SourceEndpointArn: !Ref RDSEndpoint
+      ReplicationTaskIdentifier: <%= task_name %>-full-load-no-cdc
+      SourceEndpointArn: !Ref AuroraReaderEndpoint
       TargetEndpointArn: !Ref RedshiftEndpoint
       ReplicationTaskSettings: !Sub |
         <%= YAML.load(erb_file(aws_dir('dms/replication-task-settings.yml.erb'))).to_json %>
       TableMappings: !Sub |
-        <%= table_mappings.to_json %>
+          <%= table_mappings.to_json %>
+      Tags:
+        -
+          Key: environment
+          Value: <%=rack_env.to_s%>
 <% end -%>
   DMSS3Role:
     Type: AWS::IAM::Role

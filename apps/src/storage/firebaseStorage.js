@@ -11,6 +11,7 @@ import {
   loadConfig,
   fixFirebaseKey,
   getRecordsRef,
+  getProjectCountersRef,
   getProjectDatabase,
   getSharedDatabase,
   resetConfigForTesting,
@@ -31,6 +32,7 @@ import {
   getColumnsRef
 } from './firebaseMetadata';
 import {tableType} from './redux/data';
+import {WarningType} from './constants';
 
 /**
  * Namespace for Firebase storage.
@@ -77,10 +79,12 @@ FirebaseStorage.getKeyValue = function(key, onSuccess, onError) {
 function fixKeyName(key, onError) {
   const newKey = fixFirebaseKey(key);
   if (newKey !== key) {
-    onError(
-      `The key was renamed from "${key}" to "${newKey}" because the characters ` +
+    onError({
+      type: WarningType.KEY_RENAMED,
+      msg:
+        `The key was renamed from "${key}" to "${newKey}" because the characters ` +
         '".", "$", "#", "[", "]", and "/" are not allowed in key names.'
-    );
+    });
     key = newKey;
   }
   return key;
@@ -89,10 +93,12 @@ function fixKeyName(key, onError) {
 function fixTableName(tableName, onError) {
   const newTableName = fixFirebaseKey(tableName);
   if (newTableName !== tableName) {
-    onError(
-      `The table was renamed from "${tableName}" to "${newTableName}" because the characters ` +
+    onError({
+      type: WarningType.TABLE_RENAMED,
+      msg:
+        `The table was renamed from "${tableName}" to "${newTableName}" because the characters ` +
         '".", "$", "#", "[", "]", and "/" are not allowed in table names.'
-    );
+    });
     tableName = newTableName;
   }
   return tableName;
@@ -120,7 +126,10 @@ FirebaseStorage.setKeyValue = function(key, value, onSuccess, onError) {
       try {
         validateFirebaseKey(key);
       } catch (e) {
-        return Promise.reject(`The key is invalid. ${e.message}`);
+        return Promise.reject({
+          type: WarningType.KEY_INVALID,
+          msg: `The key is invalid. ${e.message}`
+        });
       }
       if (jsonValue && jsonValue.length > config.maxPropertySize) {
         return Promise.reject(
@@ -211,7 +220,10 @@ function validateTableName(tableName) {
     validateFirebaseKey(tableName);
     return Promise.resolve();
   } catch (e) {
-    return Promise.reject(`The table name is invalid. ${e.message}`);
+    return Promise.reject({
+      type: WarningType.TABLE_NAME_INVALID,
+      msg: `The table name is invalid. ${e.message}`
+    });
   }
 }
 
@@ -262,33 +274,49 @@ FirebaseStorage.readRecords = function(
 ) {
   tableName = fixTableName(tableName, onError);
 
-  const countersRef = getProjectDatabase().child('counters/tables/');
-  // First, check if table exists using counters/tables/ as source of truth
-  countersRef.once('value', countersSnapshot => {
-    if (!countersSnapshot.val() || !countersSnapshot.val()[tableName]) {
-      // Table doesn't exist. Return null instead of [] so we can show an error
+  let channelRef;
+  // First check both current tables and project tables
+  Promise.all([
+    getProjectDatabase()
+      .child(`current_tables/${tableName}`)
+      .once('value', snapshot => {
+        if (snapshot.val()) {
+          // This is a current table, so read the records from
+          // the shared channel
+          channelRef = getSharedDatabase();
+        }
+      }),
+    getProjectCountersRef(tableName).once('value', snapshot => {
+      if (snapshot.val()) {
+        // This is a project table, so read the records from
+        // this project's channel
+        channelRef = getProjectDatabase();
+      }
+    })
+  ]).then(() => {
+    if (channelRef) {
+      // We found this table in either current or project, so read the
+      // records and return them
+      channelRef.child(`storage/tables/${tableName}/records`).once(
+        'value',
+        recordsSnapshot => {
+          let recordMap = recordsSnapshot.val() || {};
+          let records = [];
+          // Collect all of the records matching the searchParams.
+          Object.keys(recordMap).forEach(id => {
+            let record = JSON.parse(recordMap[id]);
+            if (matchesSearch(record, searchParams)) {
+              records.push(record);
+            }
+          });
+          onSuccess(records);
+        },
+        onError
+      );
+    } else {
+      // We didn't find this table, so return null so that we can show an error message
       onSuccess(null);
-      return;
     }
-    let recordsRef = getRecordsRef(tableName);
-
-    // Get all records in the table and filter them on the client.
-    recordsRef.once(
-      'value',
-      recordsSnapshot => {
-        let recordMap = recordsSnapshot.val() || {};
-        let records = [];
-        // Collect all of the records matching the searchParams.
-        Object.keys(recordMap).forEach(id => {
-          let record = JSON.parse(recordMap[id]);
-          if (matchesSearch(record, searchParams)) {
-            records.push(record);
-          }
-        });
-        onSuccess(records);
-      },
-      onError
-    );
   });
 };
 
@@ -462,7 +490,8 @@ FirebaseStorage.addCurrentTableToProject = function(
   onSuccess,
   onError
 ) {
-  return incrementRateLimitCounters()
+  return enforceUniqueTableNames(tableName)
+    .then(incrementRateLimitCounters)
     .then(loadConfig)
     .then(config => {
       return enforceTableCount(config, tableName);
@@ -476,7 +505,8 @@ FirebaseStorage.addCurrentTableToProject = function(
 };
 
 FirebaseStorage.copyStaticTable = function(tableName, onSuccess, onError) {
-  return incrementRateLimitCounters()
+  return enforceUniqueTableNames(tableName)
+    .then(incrementRateLimitCounters)
     .then(loadConfig)
     .then(config => {
       return enforceTableCount(config, tableName);
@@ -487,9 +517,7 @@ FirebaseStorage.copyStaticTable = function(tableName, onSuccess, onError) {
         .once('value');
     })
     .then(snapshot => {
-      getProjectDatabase()
-        .child(`counters/tables/${tableName}`)
-        .set(snapshot.val());
+      getProjectCountersRef(tableName).set(snapshot.val());
     })
     .then(() => {
       return getSharedDatabase()
@@ -502,6 +530,27 @@ FirebaseStorage.copyStaticTable = function(tableName, onSuccess, onError) {
     .then(onSuccess, onError);
 };
 
+function enforceUniqueTableNames(tableName) {
+  const checkForExistingTable = (dbRef, tableName) => {
+    return dbRef.once('value').then(snapshot => {
+      if (snapshot.val()) {
+        return Promise.reject({
+          type: WarningType.DUPLICATE_TABLE_NAME,
+          msg: `There is already a table with name "${tableName}"`
+        });
+      }
+    });
+  };
+
+  return Promise.all([
+    checkForExistingTable(getProjectCountersRef(tableName), tableName),
+    checkForExistingTable(
+      getProjectDatabase().child(`current_tables/${tableName}`),
+      tableName
+    )
+  ]);
+}
+
 /**
  * Adds an entry for the table in Firebase under counters/tables, making the table
  * show up in the data browser and also count toward the table count limit.
@@ -510,16 +559,15 @@ FirebaseStorage.copyStaticTable = function(tableName, onSuccess, onError) {
  * @param {function(string)} onError
  */
 FirebaseStorage.createTable = function(tableName, onSuccess, onError) {
-  return validateTableName(tableName)
+  return enforceUniqueTableNames(tableName)
+    .then(() => validateTableName(tableName))
     .then(incrementRateLimitCounters)
     .then(loadConfig)
     .then(config => {
       return enforceTableCount(config, tableName);
     })
     .then(() => {
-      const countersRef = getProjectDatabase().child(
-        `counters/tables/${tableName}`
-      );
+      const countersRef = getProjectCountersRef(tableName);
       countersRef
         .transaction(countersData => {
           if (countersData === null) {
@@ -555,9 +603,7 @@ FirebaseStorage.deleteTable = function(tableName, type, onSuccess, onError) {
       .then(onSuccess, onError);
   } else {
     const tableRef = getProjectDatabase().child(`storage/tables/${tableName}`);
-    const countersRef = getProjectDatabase().child(
-      `counters/tables/${tableName}`
-    );
+    const countersRef = getProjectCountersRef(tableName);
     tableRef
       .set(null)
       .then(() => countersRef.set(null))
@@ -577,9 +623,7 @@ FirebaseStorage.clearTable = function(tableName, onSuccess, onError) {
   tableRef
     .set(null)
     .then(() => {
-      const rowCountRef = getProjectDatabase().child(
-        `counters/tables/${tableName}/rowCount`
-      );
+      const rowCountRef = getProjectCountersRef(tableName).child('rowCount');
       return rowCountRef.set(0);
     })
     .then(onSuccess, onError);
@@ -865,9 +909,10 @@ FirebaseStorage.coerceColumn = function(
         recordsData[recordId] = JSON.stringify(record);
       });
       if (!allConverted) {
-        onError(
-          `Not all values in column "${columnName}" could be converted to type "${columnType}".`
-        );
+        onError({
+          type: WarningType.CANNOT_CONVERT_COLUMN_TYPE,
+          msg: `Not all values in column "${columnName}" could be converted to type "${columnType}".`
+        });
       }
       return recordsRef.set(recordsData);
     })
@@ -910,20 +955,24 @@ function parseRecordsDataFromCsv(csvData) {
 function validateRecordsData(recordsData) {
   return loadConfig().then(config => {
     if (Object.keys(recordsData).length > config.maxTableRows) {
-      return Promise.reject(
-        `Import failed because the data is too large. ` +
+      return Promise.reject({
+        type: WarningType.IMPORT_FAILED,
+        msg:
+          `Import failed because the data is too large. ` +
           `A table may only contain ${config.maxTableRows} rows.`
-      );
+      });
     }
     if (
       Object.keys(recordsData).some(
         id => recordsData[id].length > config.maxRecordSize
       )
     ) {
-      return Promise.reject(
-        `Import failed because one of of the records is too large. ` +
+      return Promise.reject({
+        type: WarningType.IMPORT_FAILED,
+        msg:
+          `Import failed because one of of the records is too large. ` +
           `The maximum allowable size is ${config.maxRecordSize} bytes.`
-      );
+      });
     }
     return recordsData;
   });
@@ -940,9 +989,7 @@ function overwriteTableData(tableName, recordsData) {
   const recordsRef = getProjectDatabase().child(
     `storage/tables/${tableName}/records`
   );
-  const countersRef = getProjectDatabase().child(
-    `counters/tables/${tableName}`
-  );
+  const countersRef = getProjectCountersRef(tableName);
   return getColumnsRef(getProjectDatabase(), tableName)
     .set(null)
     .then(() => recordsRef.set(recordsData))

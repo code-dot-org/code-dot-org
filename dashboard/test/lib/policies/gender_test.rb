@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class GenderTest < ActiveSupport::TestCase
+class Policies::GenderTest < ActiveSupport::TestCase
   test 'normalize' do
     assert_equal 'f', Policies::Gender.normalize('f')
     assert_equal 'm', Policies::Gender.normalize('m')

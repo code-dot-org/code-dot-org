@@ -903,10 +903,10 @@
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/@code-dot-org/craft/-/craft-0.2.2.tgz#4b117337a5a601613f2d38514aa50ba972362939"
 
-"@code-dot-org/dance-party@0.0.43":
-  version "0.0.43"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/dance-party/-/dance-party-0.0.43.tgz#de78bee12d80c43aa45b614797ce1403b02cdcf6"
-  integrity sha512-YPPxfBm7Nj/amzbGIwG+TbJ/kJZVDC5aWDCExkbOXV4772tuHqRZQTqgGPlvLMIdsTJOpA3sg2bGlW8aH2vOlg==
+"@code-dot-org/dance-party@0.0.44":
+  version "0.0.44"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/dance-party/-/dance-party-0.0.44.tgz#35c6932733ad91b4f06e80a1876d4153d58ad28a"
+  integrity sha512-7THP3gBzIlHMXGie17kRGeNAaCmtUhvQIKpcZ5kkDUjcJtqZ5D8kOZ9gO8kZIoTfabpett0TpnrzTH6wlsEH4Q==
   optionalDependencies:
     canvas "^1.6.13"
 
@@ -2772,6 +2772,11 @@ babel-plugin-syntax-async-functions@^6.8.0:
 babel-plugin-syntax-class-properties@^6.8.0:
   version "6.13.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-syntax-class-properties/-/babel-plugin-syntax-class-properties-6.13.0.tgz#d7eb23b79a317f8543962c505b827c7d6cac27de"
+
+babel-plugin-syntax-dynamic-import@^6.18.0:
+  version "6.18.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-syntax-dynamic-import/-/babel-plugin-syntax-dynamic-import-6.18.0.tgz#8d6a26229c83745a9982a441051572caa179b1da"
+  integrity sha1-jWomIpyDdFqZgqRBBRVyyqF5sdo=
 
 babel-plugin-syntax-exponentiation-operator@^6.8.0:
   version "6.13.0"
@@ -8162,7 +8167,7 @@ hoist-non-react-statics@^2.3.1, hoist-non-react-statics@^2.5.0:
   version "2.5.5"
   resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-2.5.5.tgz#c5903cf409c0dfd908f388e619d86b9c1174cb47"
 
-hoist-non-react-statics@^3.3.0:
+hoist-non-react-statics@^3.0.1, hoist-non-react-statics@^3.3.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-3.3.0.tgz#b09178f0122184fb95acf525daaecb4d8f45958b"
   integrity sha512-0XsbTXxgiaCDYDIWFcwkmerZPSwywfUqYmwT4jzewKTQSWoE6FCMoUVOeBJWK3E/CrWbxRG3m5GzY4lnIwGRBA==
@@ -9637,6 +9642,14 @@ load-json-file@^1.0.0:
     pify "^2.0.0"
     pinkie-promise "^2.0.0"
     strip-bom "^2.0.0"
+
+loadable-components@2.2.3:
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/loadable-components/-/loadable-components-2.2.3.tgz#6fd1e02cc3716f6dbbd885a90d2bb36bf19cd7e1"
+  integrity sha512-M5NYoClnlWxSbIMvKtyrtod00gf2rfBDitbTvdGjF1bGxt7nMZbCGP1N7g8CgWQWyTV7HtL86G3lunv+1GRvEg==
+  dependencies:
+    babel-plugin-syntax-dynamic-import "^6.18.0"
+    hoist-non-react-statics "^3.0.1"
 
 loader-runner@^2.3.0:
   version "2.3.0"

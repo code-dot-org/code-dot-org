@@ -129,7 +129,8 @@ function unpackSources(data) {
     animations: data.animations,
     makerAPIsEnabled: data.makerAPIsEnabled,
     generatedProperties: data.generatedProperties,
-    selectedSong: data.selectedSong
+    selectedSong: data.selectedSong,
+    libraries: data.libraries
   };
 }
 
@@ -164,6 +165,28 @@ var projects = (module.exports = {
       return;
     }
     return current.name;
+  },
+
+  /**
+   * @returns {string} name of the most recently published library from the
+   * project, or undefined if we don't have a current project
+   */
+  getCurrentLibraryName() {
+    if (!current) {
+      return;
+    }
+    return current.libraryName;
+  },
+
+  /**
+   * @returns {string} description of the most recently published library from the
+   * project, or undefined if we don't have a current project
+   */
+  getCurrentLibraryDescription() {
+    if (!current) {
+      return;
+    }
+    return current.libraryDescription;
   },
 
   /**
@@ -541,6 +564,20 @@ var projects = (module.exports = {
       this.setTitle(newName);
     }
   },
+  setLibraryDescription(description, callback) {
+    current = current || {};
+    if (description && current.libraryDescription !== description) {
+      current.libraryDescription = description;
+      this.updateChannels_(callback);
+    }
+  },
+  setLibraryName(newName, callback) {
+    current = current || {};
+    if (newName && current.libraryName !== newName) {
+      current.libraryName = newName;
+      this.updateChannels_(callback);
+    }
+  },
   setTitle(newName) {
     if (newName && appOptions.gameDisplayName) {
       document.title = newName + ' - ' + appOptions.gameDisplayName;
@@ -589,6 +626,10 @@ var projects = (module.exports = {
 
       if (currentSources.animations) {
         sourceHandler.setInitialAnimationList(currentSources.animations);
+      }
+
+      if (currentSources.libraries) {
+        sourceHandler.setInitialLibrariesList(currentSources.libraries);
       }
 
       if (currentSources.generatedProperties) {
@@ -1100,13 +1141,15 @@ var projects = (module.exports = {
         const makerAPIsEnabled = this.sourceHandler.getMakerAPIsEnabled();
         const selectedSong = this.sourceHandler.getSelectedSong();
         const generatedProperties = this.sourceHandler.getGeneratedProperties();
+        const libraries = this.sourceHandler.getLibrariesList();
         callback({
           source,
           html,
           animations,
           makerAPIsEnabled,
           selectedSong,
-          generatedProperties
+          generatedProperties,
+          libraries
         });
       })
     );
@@ -1140,6 +1183,25 @@ var projects = (module.exports = {
         );
       });
     });
+  },
+  setProjectLibraries(updatedLibrariesList) {
+    return new Promise(resolve => {
+      this.getUpdatedSourceAndHtml_(sourceAndHtml => {
+        this.saveSourceAndHtml_(
+          {
+            ...sourceAndHtml,
+            libraries: updatedLibrariesList
+          },
+          () => {
+            resolve();
+            utils.reload();
+          }
+        );
+      });
+    });
+  },
+  getProjectLibraries() {
+    return currentSources.libraries;
   },
   showSaveError_(errorType, errorCount, errorText) {
     header.showProjectSaveError();
@@ -1318,6 +1380,7 @@ var projects = (module.exports = {
     const queryParams = current.id ? {parent: current.id} : null;
     delete current.id;
     delete current.hidden;
+    delete current.libraryName;
     current.projectType = this.getStandaloneApp();
     if (shouldPublish) {
       current.shouldPublish = true;
