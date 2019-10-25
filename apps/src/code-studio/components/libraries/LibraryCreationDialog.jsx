@@ -9,6 +9,7 @@ import i18n from '@cdo/locale';
 import PadAndCenter from '@cdo/apps/templates/teacherDashboard/PadAndCenter';
 import {Heading1, Heading2} from '@cdo/apps/lib/ui/Headings';
 import Spinner from '../../pd/components/spinner';
+import Button from '@cdo/apps/templates/Button';
 
 const styles = {
   alert: {
@@ -34,6 +35,20 @@ const styles = {
   }
 };
 
+function select(event) {
+  event.target.select();
+}
+
+/**
+ * @readonly
+ * @enum {string}
+ */
+export const LoadingState = {
+  LOADING: 'loading',
+  DONE_LOADING: 'done_loading',
+  PUBLISHED: 'published'
+};
+
 class LibraryCreationDialog extends React.Component {
   static propTypes = {
     dialogIsOpen: PropTypes.bool.isRequired,
@@ -44,7 +59,7 @@ class LibraryCreationDialog extends React.Component {
   state = {
     librarySource: '',
     sourceFunctionList: [],
-    loadingFinished: false,
+    loadingState: LoadingState.LOADING,
     libraryName: '',
     canPublish: false
   };
@@ -62,18 +77,26 @@ class LibraryCreationDialog extends React.Component {
           dashboard.project.getCurrentName()
         ),
         librarySource: response.source,
-        loadingFinished: true,
+        loadingState: LoadingState.DONE_LOADING,
         sourceFunctionList: libraryParser.getFunctions(response.source)
       });
     });
   };
 
   handleClose = () => {
-    this.setState({loadingFinished: false});
+    this.setState({loadingState: LoadingState.LOADING});
     this.props.onClose();
   };
 
-  publish = () => {
+  copyChannelId = () => {
+    let channelId = document.getElementById('library-sharing');
+    channelId.select();
+    channelId.setSelectionRange(0, 999);
+
+    document.execCommand('copy');
+  };
+
+  publish = event => {
     let formElements = this.formElements.elements;
     let selectedFunctionList = [];
     let libraryDescription = '';
@@ -98,13 +121,12 @@ class LibraryCreationDialog extends React.Component {
       error => {
         console.warn(`Error publishing library: ${error}`);
       },
-      data => {
-        console.log(
-          `Successfully published library. VersionID: ${data.versionId}`
-        );
+      () => {
+        this.setState({loadingState: LoadingState.PUBLISHED});
       }
     );
     dashboard.project.setLibraryName(this.state.libraryName);
+    event.preventDefault();
   };
 
   validateInput = () => {
@@ -123,66 +145,94 @@ class LibraryCreationDialog extends React.Component {
   };
 
   displayFunctions = () => {
-    if (!this.state.loadingFinished) {
+    if (this.state.loadingState === LoadingState.LOADING) {
       return (
         <div style={styles.centerSpinner}>
           <Spinner />
         </div>
       );
+    } else if (this.state.loadingState === LoadingState.DONE_LOADING) {
+      let keyIndex = 0;
+      return (
+        <div>
+          <Heading2>
+            <b>{i18n.libraryName()}</b>
+            {this.state.libraryName}
+          </Heading2>
+          <form
+            ref={formElements => {
+              this.formElements = formElements;
+            }}
+            onSubmit={this.publish}
+          >
+            <textarea
+              required
+              name="description"
+              rows="2"
+              cols="200"
+              style={styles.textarea}
+              placeholder="Write a description of your library"
+            />
+            {this.state.sourceFunctionList.map(sourceFunction => {
+              let name = sourceFunction.functionName;
+              let comment = sourceFunction.comment;
+              return (
+                <div key={keyIndex} style={styles.functionItem}>
+                  <input
+                    type="checkbox"
+                    style={styles.largerCheckbox}
+                    disabled={comment.length === 0}
+                    onClick={this.validateInput}
+                    value={keyIndex++}
+                  />
+                  {name}
+                  <br />
+                  {comment.length === 0 && (
+                    <p style={styles.alert}>
+                      {i18n.libraryExportNoCommentError()}
+                    </p>
+                  )}
+                  <pre>{comment}</pre>
+                </div>
+              );
+            })}
+            <input
+              className="btn btn-primary"
+              type="submit"
+              value={i18n.publish()}
+              disabled={!this.state.canPublish}
+            />
+          </form>
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          <Heading2>
+            <b>{i18n.libraryPublishTitle()}</b>
+            {this.state.libraryName}
+          </Heading2>
+          <div>
+            <p style={{fontSize: 20}}>{i18n.libraryPublishExplanation()}</p>
+            <div style={{display: 'flex', justifyContent: 'center'}}>
+              <input
+                type="text"
+                id="library-sharing"
+                onClick={select}
+                readOnly="true"
+                value={dashboard.project.getCurrentId()}
+                style={{cursor: 'copy', width: 300}}
+              />
+              <Button
+                onClick={this.copyChannelId}
+                text={i18n.copyID()}
+                style={{marginLeft: 10, marginRight: 10}}
+              />
+            </div>
+          </div>
+        </div>
+      );
     }
-    let keyIndex = 0;
-    return (
-      <div>
-        <Heading2>
-          <b>{i18n.libraryName()}</b>
-          {this.state.libraryName}
-        </Heading2>
-        <form
-          ref={formElements => {
-            this.formElements = formElements;
-          }}
-          onSubmit={this.publish}
-        >
-          <textarea
-            required
-            name="description"
-            rows="2"
-            cols="200"
-            style={styles.textarea}
-            placeholder="Write a description of your library"
-          />
-          {this.state.sourceFunctionList.map(sourceFunction => {
-            let name = sourceFunction.functionName;
-            let comment = sourceFunction.comment;
-            return (
-              <div key={keyIndex} style={styles.functionItem}>
-                <input
-                  type="checkbox"
-                  style={styles.largerCheckbox}
-                  disabled={comment.length === 0}
-                  onClick={this.validateInput}
-                  value={keyIndex++}
-                />
-                {name}
-                <br />
-                {comment.length === 0 && (
-                  <p style={styles.alert}>
-                    {i18n.libraryExportNoCommentError()}
-                  </p>
-                )}
-                <pre>{comment}</pre>
-              </div>
-            );
-          })}
-          <input
-            className="btn btn-primary"
-            type="submit"
-            value={i18n.publish()}
-            disabled={!this.state.canPublish}
-          />
-        </form>
-      </div>
-    );
   };
 
   render() {
