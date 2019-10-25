@@ -46,7 +46,8 @@ function select(event) {
 export const LoadingState = {
   LOADING: 'loading',
   DONE_LOADING: 'done_loading',
-  PUBLISHED: 'published'
+  PUBLISHED: 'published',
+  ERROR_PUBLISH: 'error_publish'
 };
 
 class LibraryCreationDialog extends React.Component {
@@ -120,6 +121,7 @@ class LibraryCreationDialog extends React.Component {
       libraryJson,
       error => {
         console.warn(`Error publishing library: ${error}`);
+        this.setState({loadingState: LoadingState.ERROR_PUBLISH});
       },
       () => {
         this.setState({loadingState: LoadingState.PUBLISHED});
@@ -151,7 +153,10 @@ class LibraryCreationDialog extends React.Component {
           <Spinner />
         </div>
       );
-    } else if (this.state.loadingState === LoadingState.DONE_LOADING) {
+    } else if (
+      this.state.loadingState === LoadingState.DONE_LOADING ||
+      this.state.loadingState === LoadingState.ERROR_PUBLISH
+    ) {
       let keyIndex = 0;
       return (
         <div>
@@ -196,12 +201,20 @@ class LibraryCreationDialog extends React.Component {
                 </div>
               );
             })}
-            <input
-              className="btn btn-primary"
-              type="submit"
-              value={i18n.publish()}
-              disabled={!this.state.canPublish}
-            />
+            <div>
+              <input
+                className="btn btn-primary"
+                type="submit"
+                value={i18n.publish()}
+                disabled={!this.state.canPublish}
+              />
+              {this.state.loadingState === LoadingState.ERROR_PUBLISH && (
+                <p style={styles.alert}>
+                  There was an error publishing your library. Please check your
+                  internet connection and try again.
+                </p>
+              )}
+            </div>
           </form>
         </div>
       );
@@ -225,7 +238,7 @@ class LibraryCreationDialog extends React.Component {
               />
               <Button
                 onClick={this.copyChannelId}
-                text={i18n.copyID()}
+                text={i18n.copyId()}
                 style={{marginLeft: 10, marginRight: 10}}
               />
             </div>
