@@ -225,7 +225,7 @@ class LibraryCreationDialog extends React.Component {
               />
               <Button
                 onClick={this.copyChannelId}
-                text={i18n.copyID()}
+                text={i18n.copyId()}
                 style={{marginLeft: 10, marginRight: 10}}
               />
             </div>
