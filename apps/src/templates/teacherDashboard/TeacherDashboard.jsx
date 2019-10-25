@@ -11,6 +11,8 @@ import TextResponses from '@cdo/apps/templates/textResponses/TextResponses';
 import SectionAssessments from '@cdo/apps/templates/sectionAssessments/SectionAssessments';
 import SectionLoginInfo from '@cdo/apps/templates/teacherDashboard/SectionLoginInfo';
 import EmptySection from './EmptySection';
+import _ from 'lodash';
+import firehoseClient from '../../lib/util/firehose';
 
 class TeacherDashboard extends Component {
   static propTypes = {
@@ -23,6 +25,27 @@ class TeacherDashboard extends Component {
     // Provided by React router in parent.
     location: PropTypes.object.isRequired
   };
+
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    const previousTab = _.last(_.split(prevProps.location.pathname, '/'));
+    const newTab = _.last(_.split(this.props.location.pathname, '/'));
+
+    // Log if we switched tabs in the teacher dashboard
+    if (prevProps.location !== this.props.location) {
+      firehoseClient.putRecord(
+        {
+          study: 'teacher_dashboard_actions',
+          study_group: previousTab,
+          event: 'click_new_tab',
+          data_json: JSON.stringify({
+            section_id: this.props.sectionId,
+            new_tab: newTab
+          })
+        },
+        {includeUserId: true}
+      );
+    }
+  }
 
   render() {
     const {
