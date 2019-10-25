@@ -5,7 +5,7 @@
 - level = source_level || @level
 
 - content_for(:head) do
-  %script{src: minifiable_asset_path('js/levels/_content.js')}
+  %script{src: webpack_asset_path('js/levels/_content.js')}
 
 - unless data['title'].blank? || hide_header
   %h1!= render_multi_or_match_content(level.localized_property('title')) unless app == 'external'
