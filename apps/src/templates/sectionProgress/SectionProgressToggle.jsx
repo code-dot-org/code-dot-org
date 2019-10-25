@@ -22,7 +22,8 @@ const styles = {
 class SectionProgressToggle extends React.Component {
   static propTypes = {
     currentView: PropTypes.string.isRequired,
-    setCurrentView: PropTypes.func.isRequired
+    setCurrentView: PropTypes.func.isRequired,
+    sectionId: PropTypes.number
   };
 
   state = {
@@ -44,22 +45,38 @@ class SectionProgressToggle extends React.Component {
     // Timeouts forces a render of the local state before dispatching
     // the action.
     if (this.state.selectedToggle === ViewType.SUMMARY) {
-      firehoseClient.putRecord({
-        study: 'teacher-dashboard',
-        study_group: 'react',
-        event: 'progress-detailed'
-      });
+      firehoseClient.putRecord(
+        {
+          study: 'teacher_dashboard_actions',
+          study_group: 'progress',
+          event: 'view_change_toggle',
+          data_json: JSON.stringify({
+            section_id: this.props.sectionId,
+            old_view: ViewType.SUMMARY,
+            new_view: ViewType.DETAIL
+          })
+        },
+        {includeUserId: true}
+      );
       this.setState({selectedToggle: ViewType.DETAIL}, () => {
         setTimeout(() => {
           this.props.setCurrentView(ViewType.DETAIL);
         }, 0);
       });
     } else {
-      firehoseClient.putRecord({
-        study: 'teacher-dashboard',
-        study_group: 'react',
-        event: 'progress-summary'
-      });
+      firehoseClient.putRecord(
+        {
+          study: 'teacher_dashboard_actions',
+          study_group: 'progress',
+          event: 'view_change_toggle',
+          data_json: JSON.stringify({
+            section_id: this.props.sectionId,
+            old_view: ViewType.DETAIL,
+            new_view: ViewType.SUMMARY
+          })
+        },
+        {includeUserId: true}
+      );
       this.setState({selectedToggle: ViewType.SUMMARY}, () => {
         setTimeout(() => {
           this.props.setCurrentView(ViewType.SUMMARY);
@@ -101,7 +118,8 @@ export const UnconnectedSectionProgressToggle = SectionProgressToggle;
 
 export default connect(
   state => ({
-    currentView: state.sectionProgress.currentView
+    currentView: state.sectionProgress.currentView,
+    sectionId: state.sectionProgress.section.id
   }),
   dispatch => ({
     setCurrentView(viewType) {
