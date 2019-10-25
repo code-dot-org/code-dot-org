@@ -112,9 +112,9 @@ class HocSyncUtils
     Dir.glob("pegasus/sites.v3/hourofcode.com/i18n/public/**/*.md.partial").each do |path|
       source_path = path.sub(/\/i18n\/public\/..\//, "/public/")
       unless File.exist? source_path
-        # Because we give _all_ files coming from crowdin the partial extension,
-        # we can't know for sure whether or not the source did unless we check
-        # both with and without.
+        # Because we give _all_ files coming from crowdin the partial
+        # extension, we can't know for sure whether or not the source also uses
+        # that extension unless we check both with and without.
         source_path = File.join(File.dirname(source_path), File.basename(source_path, ".partial"))
       end
       source_header, _source_content, _source_line = Documents.new.helpers.parse_yaml_header(source_path)

@@ -30,6 +30,7 @@ import {
 } from '@cdo/apps/redux/scriptSelectionRedux';
 import {stageIsAllAssessment} from '@cdo/apps/templates/progress/progressHelpers';
 import color from '../../util/color';
+import firehoseClient from '../../lib/util/firehose';
 
 const styles = {
   heading: {
@@ -87,6 +88,20 @@ class SectionProgress extends Component {
   onChangeScript = scriptId => {
     this.props.setScriptId(scriptId);
     this.props.loadScript(scriptId);
+
+    firehoseClient.putRecord(
+      {
+        study: 'teacher_dashboard_actions',
+        study_group: 'progress',
+        event: 'change_script',
+        data_json: JSON.stringify({
+          section_id: this.props.section.id,
+          old_script_id: this.props.scriptId,
+          new_script_id: scriptId
+        })
+      },
+      {includeUserId: true}
+    );
   };
 
   onChangeLevel = lessonOfInterest => {
@@ -119,6 +134,21 @@ class SectionProgress extends Component {
     const {scriptData, section} = this.props;
     return scriptData ? `${scriptData.path}?section_id=${section.id}` : null;
   }
+
+  navigateToScript = () => {
+    firehoseClient.putRecord(
+      {
+        study: 'teacher_dashboard_actions',
+        study_group: 'progress',
+        event: 'go_to_script',
+        data_json: JSON.stringify({
+          section_id: this.props.section.id,
+          script_id: this.props.scriptId
+        })
+      },
+      {includeUserId: true}
+    );
+  };
 
   render() {
     const {
@@ -171,7 +201,11 @@ class SectionProgress extends Component {
                 style={{...h3Style, ...styles.heading, ...styles.tableHeader}}
               >
                 <span>{i18n.lessonsAttempted() + ' '}</span>
-                <a href={linkToOverview} style={styles.scriptLink}>
+                <a
+                  href={linkToOverview}
+                  style={styles.scriptLink}
+                  onClick={this.navigateToScript}
+                >
                   {scriptFriendlyName}
                 </a>
               </div>
@@ -191,7 +225,11 @@ class SectionProgress extends Component {
                 style={{...h3Style, ...styles.heading, ...styles.tableHeader}}
               >
                 <span>{i18n.levelsAttempted() + ' '}</span>
-                <a href={linkToOverview} style={styles.scriptLink}>
+                <a
+                  href={linkToOverview}
+                  style={styles.scriptLink}
+                  onClick={this.navigateToScript}
+                >
                   {scriptFriendlyName}
                 </a>
               </div>

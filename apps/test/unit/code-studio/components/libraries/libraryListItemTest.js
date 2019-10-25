@@ -1,7 +1,7 @@
 import {expect} from '../../../../util/reconfiguredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
-import LibraryListItem from '@cdo/apps/code-studio/components/Libraries/LibraryListItem';
+import LibraryListItem from '@cdo/apps/code-studio/components/libraries/LibraryListItem';
 
 describe('LibraryListItem', () => {
   it('displays no buttons if there are no action props', () => {

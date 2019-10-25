@@ -158,15 +158,6 @@ module Pd::Application
     end
 
     # @override
-    def queue_email(email_type, deliver_now: false)
-      if email_type == :principal_approval_completed_partner && formatted_partner_contact_email.nil?
-        CDO.log.info "Skipping principal_approval_completed_partner for application id #{id}"
-      else
-        super
-      end
-    end
-
-    # @override
     def self.options
       super.merge(
         {
@@ -356,7 +347,9 @@ module Pd::Application
     end
 
     def friendly_scholarship_status
-      Pd::ScholarshipInfo.find_by(user: user, application_year: application_year, course: course)&.friendly_status_name
+      Pd::ScholarshipInfo.
+        find_by(user: user, application_year: application_year, course: course)&.
+        friendly_status_name
     end
 
     def allow_sending_principal_email?
@@ -666,6 +659,7 @@ module Pd::Application
 
       scores = scored_questions.map {|q| response_scores[q]}
 
+      # Need all criteria to be YES to be qualified
       if scores.uniq == [YES]
         YES
       elsif NO.in? scores
@@ -681,12 +675,13 @@ module Pd::Application
 
       scores = scored_questions.map {|q| response_scores[q]}
 
-      if scores.uniq == [YES]
+      # Only need one of the criteria to be YES to be qualified for scholarship
+      if YES.in? scores
         YES
-      elsif NO.in? scores
-        NO
-      else
+      elsif nil.in? scores
         REVIEWING_INCOMPLETE
+      else
+        NO
       end
     end
 
