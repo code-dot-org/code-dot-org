@@ -68,7 +68,7 @@ module Pd::SurveyPipeline::Helper
     # Retrieve data
     if only_facilitator_questions
       context[:survey_questions], context[:facilitator_submissions] =
-        Pd::SurveyPipeline::DailySurveyRetriever.retrieve_facilitator_surveys [facilitator_id], related_ws_ids
+        Pd::SurveyPipeline::DailySurveyRetriever.retrieve_facilitator_surveys facilitator_id, related_ws_ids
     else
       context[:survey_questions], context[:workshop_submissions] =
         Pd::SurveyPipeline::DailySurveyRetriever.retrieve_general_workshop_surveys related_ws_ids
