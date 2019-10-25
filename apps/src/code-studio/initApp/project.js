@@ -564,12 +564,6 @@ var projects = (module.exports = {
       this.setTitle(newName);
     }
   },
-  deleteLibraryData(callback) {
-    current = current || {};
-    current.libraryName = undefined;
-    current.libraryDescription = undefined;
-    this.updateChannels_(callback);
-  },
   setLibraryDescription(description, callback) {
     current = current || {};
     if (description && current.libraryDescription !== description) {
