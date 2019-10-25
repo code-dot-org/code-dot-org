@@ -6,7 +6,7 @@ import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import {UnconnectedDataVisualizer as DataVisualizer} from '@cdo/apps/storage/dataBrowser/DataVisualizer';
 
 const DEFAULT_PROPS = {
-  tableColumns: ['Name', 'Age', 'Male'],
+  tableColumns: [],
   tableName: 'testTable',
   tableRecords: []
 };
@@ -89,6 +89,59 @@ describe('DataVisualizer', () => {
         expectedParsedRecords
       );
       expect(wrapper.instance().parseRecords).to.have.been.calledTwice;
+    });
+  });
+
+  describe('findNumericColumns', () => {
+    let wrapper;
+    beforeEach(() => {
+      wrapper = shallow(<DataVisualizer {...DEFAULT_PROPS} />);
+      wrapper.instance().handleOpen();
+    });
+
+    it('finds the columns with all numeric values', () => {
+      wrapper.setProps({
+        tableColumns: ['id', 'name', 'age', 'male'],
+        tableRecords: [
+          '{"id":1,"name":"alice","age":7,"male":false}',
+          '{"id":2,"name":"bob","age":8,"male":true}',
+          '{"id":3,"name":"charlie","age":9,"male":true}'
+        ]
+      });
+      let expectedNumericColumns = ['id', 'age'];
+      expect(wrapper.instance().state.numericColumns).to.deep.equal(
+        expectedNumericColumns
+      );
+    });
+
+    it('ignores blank cells', () => {
+      wrapper.setProps({
+        tableColumns: ['id', 'name', 'age', 'male'],
+        tableRecords: [
+          '{"id":1,"name":"alice","age":7,"male":"false"}',
+          '{"id":2,"name":"bob","male":"true"}',
+          '{"id":3,"name":"charlie","age":9,"male":"true"}'
+        ]
+      });
+      let expectedNumericColumns = ['id', 'age'];
+      expect(wrapper.instance().state.numericColumns).to.deep.equal(
+        expectedNumericColumns
+      );
+    });
+
+    it('interprets columns with some numeric and some non-numeric values as non-numeric', () => {
+      wrapper.setProps({
+        tableColumns: ['id', 'name', 'age', 'partially numeric'],
+        tableRecords: [
+          '{"id":1,"name":"alice","age":7,"partially numeric":4}',
+          '{"id":2,"name":"bob","partially numeric":"not a number"}',
+          '{"id":3,"name":"charlie","age":9,"partially numeric":5}'
+        ]
+      });
+      let expectedNumericColumns = ['id', 'age'];
+      expect(wrapper.instance().state.numericColumns).to.deep.equal(
+        expectedNumericColumns
+      );
     });
   });
 });

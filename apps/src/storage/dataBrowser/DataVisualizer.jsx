@@ -105,7 +105,12 @@ class DataVisualizer extends React.Component {
 
   findNumericColumns = records => {
     return this.props.tableColumns.filter(
-      column => records.filter(record => isNaN(record[column])).length === 0
+      column =>
+        records.filter(
+          record =>
+            typeof record[column] === 'undefined' ||
+            typeof record[column] === 'number'
+        ).length === records.length
     );
   };
 
