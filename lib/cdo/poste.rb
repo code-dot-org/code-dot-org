@@ -174,11 +174,12 @@ class Deliverer
     File.join(POSTE_BASE_URL, *parts)
   end
 
-  MESSAGE_TEMPLATES = {}.tap do |results|
-    POSTE_DB[:poste_messages].all.each do |message|
-      results[message[:id]] = message
-    end
+  # lazily-populate this constant so we aren't trying to make database queries
+  # whenever this file gets required, just once it starts to get used.
+  MESSAGE_TEMPLATES = Hash.new do |h, key|
+    h[key] = POSTE_DB[:poste_messages].where(id: key).first
   end
+
   def send(delivery)
     recipient = POSTE_DB[:contacts].where(id: delivery[:contact_id]).first
     message = MESSAGE_TEMPLATES[delivery[:message_id]]
