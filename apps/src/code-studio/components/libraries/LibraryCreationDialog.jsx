@@ -5,7 +5,6 @@ import Dialog, {Body} from '@cdo/apps/templates/Dialog';
 import {connect} from 'react-redux';
 import {hideLibraryCreationDialog} from '../shareDialogRedux';
 import libraryParser from './libraryParser';
-import LibraryClientApi from './LibraryClientApi';
 import i18n from '@cdo/locale';
 import PadAndCenter from '@cdo/apps/templates/teacherDashboard/PadAndCenter';
 import {Heading1, Heading2} from '@cdo/apps/lib/ui/Headings';
@@ -34,11 +33,10 @@ class LibraryCreationDialog extends React.Component {
   static propTypes = {
     dialogIsOpen: PropTypes.bool.isRequired,
     onClose: PropTypes.func.isRequired,
-    channelId: PropTypes.string.isRequired
+    clientApi: PropTypes.object.isRequired
   };
 
   state = {
-    clientApi: new LibraryClientApi(this.props.channelId),
     librarySource: '',
     sourceFunctionList: [],
     loadingFinished: false,
@@ -71,7 +69,7 @@ class LibraryCreationDialog extends React.Component {
   };
 
   publish = () => {
-    let formElements = document.getElementById('selectFunction').elements;
+    let formElements = this.formElements.elements;
     let selectedFunctionList = [];
     let libraryDescription = '';
     [...formElements].forEach(element => {
@@ -90,7 +88,7 @@ class LibraryCreationDialog extends React.Component {
     );
 
     // TODO: Display final version of error and success messages to the user.
-    this.state.clientApi.publish(
+    this.props.clientApi.publish(
       libraryJson,
       error => {
         console.warn(`Error publishing library: ${error}`);
@@ -101,12 +99,13 @@ class LibraryCreationDialog extends React.Component {
         );
       }
     );
+    dashboard.project.setLibraryName(this.state.libraryName);
   };
 
   validateInput = () => {
     // Check if any of the checkboxes are checked
     // If this changes the publishable state, update
-    let formElements = document.getElementById('selectFunction').elements;
+    let formElements = this.formElements.elements;
     let isChecked = false;
     [...formElements].forEach(element => {
       if (element.type === 'checkbox' && element.checked) {
@@ -129,7 +128,12 @@ class LibraryCreationDialog extends React.Component {
           <b>{i18n.libraryName()}</b>
           {this.state.libraryName}
         </Heading2>
-        <form id="selectFunction" onSubmit={this.publish}>
+        <form
+          ref={formElements => {
+            this.formElements = formElements;
+          }}
+          onSubmit={this.publish}
+        >
           <textarea
             required
             name="description"

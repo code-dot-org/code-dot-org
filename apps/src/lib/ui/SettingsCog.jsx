@@ -11,7 +11,7 @@ import project from '../../code-studio/initApp/project';
 import * as makerToolkitRedux from '../kits/maker/redux';
 import PopUpMenu from './PopUpMenu';
 import ConfirmEnableMakerDialog from './ConfirmEnableMakerDialog';
-import LibraryManagerDialog from '@cdo/apps/code-studio/components/Libraries/LibraryManagerDialog';
+import LibraryManagerDialog from '@cdo/apps/code-studio/components/libraries/LibraryManagerDialog';
 import {getStore} from '../../redux';
 import experiments from '@cdo/apps/util/experiments';
 

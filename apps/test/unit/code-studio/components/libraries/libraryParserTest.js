@@ -1,5 +1,5 @@
 import {expect} from '../../../../util/reconfiguredChai';
-import parser from '@cdo/apps/code-studio/components/Libraries/libraryParser';
+import parser from '@cdo/apps/code-studio/components/libraries/libraryParser';
 
 describe('Library parser', () => {
   describe('sanitizeName', () => {
