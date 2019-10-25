@@ -385,9 +385,46 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
       ? SerialPort
       : ChromeSerialPort.SerialPort;
 
-    return new SerialPortType(portName, {
+    const port = new SerialPortType(portName, {
       baudRate: SERIAL_BAUD
     });
+
+    if (isNodeSerialAvailable()) {
+      const queue = [];
+      let sendPending = false;
+      const oldWrite = port.write;
+
+      const trySend = buffer => {
+        if (buffer) {
+          queue.push(buffer);
+        }
+
+        if (sendPending || queue.length === 0) {
+          // Exhausted pending send buffer.
+          return;
+        }
+
+        if (queue.length > 512) {
+          throw new Error(
+            'Send queue is full! More than 512 pending messages.'
+          );
+        }
+
+        const toSend = queue.shift();
+        sendPending = true;
+        oldWrite.call(port, toSend, 'binary', function() {
+          sendPending = false;
+
+          if (queue.length !== 0) {
+            trySend();
+          }
+        });
+      };
+
+      port.write = (...args) => trySend(...args);
+    }
+
+    return port;
   }
 
   /**
