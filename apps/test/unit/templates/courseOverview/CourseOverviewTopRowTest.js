@@ -5,7 +5,7 @@ import CourseOverviewTopRow from '@cdo/apps/templates/courseOverview/CourseOverv
 import ResourceType from '@cdo/apps/templates/courseOverview/resourceType';
 
 const defaultProps = {
-  sectionsInfo: [],
+  sectionsForDropdown: [],
   id: 30,
   title: 'Computer Science Principles',
   resources: [

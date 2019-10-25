@@ -113,7 +113,11 @@ class CourseScript extends Component {
       return null;
     }
 
-    const isAssigned = assignedSectionId === parseInt(selectedSectionId);
+    const assignedToStudent = viewAs === ViewType.Student && assignedSectionId;
+    const assignedByTeacher =
+      viewAs === ViewType.Teacher &&
+      assignedSectionId === parseInt(selectedSectionId);
+    const isAssigned = assignedToStudent || assignedByTeacher;
 
     return (
       <div
