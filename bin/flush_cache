@@ -24,6 +24,6 @@ unless app_servers.empty?
     execute varnish_ban_cmd, raise_on_non_zero_exit: false
   end
 end
-CDO.log.info 'Flushing CloudFront caches (up to 15 min)...'
+CDO.log.info 'Flushing CloudFront caches...'
 AWS::CloudFront.invalidate_caches
 CDO.log.info 'All done!'
