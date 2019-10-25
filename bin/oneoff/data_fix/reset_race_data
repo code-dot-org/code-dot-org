@@ -11,15 +11,18 @@ File.readlines(ARGV[0]).each do |line|
   id = line.to_i
   user = User.find_by_id(id)
   if user.nil?
-    puts("user #{id} does not exist")
+    puts("user #{id} - ERROR - does not exist")
     next
   end
 
   unless user.races
-    puts("user #{id} has no race data")
+    puts("user #{id} - ERROR - has no race data")
     next
   end
 
   user.races = nil
   user.save!
+  puts("user #{id} - success")
+rescue
+  puts("user #{id} - ERROR - other")
 end
