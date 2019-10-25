@@ -27,10 +27,15 @@ class DelivererTest < Minitest::Test
   def test_deliverer_send
     email = "test@deliverer.send"
     contact = Poste2.create_recipient(email, {ip_address: '5.6.7.8.'})
+
+    # Sequel doesn't have a "find or create by", so we implement it manually
+    message = POSTE_DB[:poste_messages].where(name: "dashboard").first
+    message_id = message.nil? ? POSTE_DB[:poste_messages].insert({name: "dashboard"}) : message[:id]
+
     delivery = {
       id: 1,
       contact_id: contact[:id],
-      message_id: 3,
+      message_id: message_id,
       params: {}.to_json
     }
     @deliverer.send(delivery)
