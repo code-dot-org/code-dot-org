@@ -162,11 +162,17 @@ const finishMovement = () => {
 
 // Calculate the screen's current X offset.
 const getOffsetForTime = (t, totalFish) => {
+  // Normalize the fish movement amount from 0 to 1.
+  let amount = t / moveTime;
+
+  // Apply an S-curve to that amount.
+  amount = amount - Math.sin(amount*2*Math.PI) / (2*Math.PI);
+
   return (
     constants.fishCanvasWidth * totalFish -
     constants.canvasWidth / 2 +
     constants.fishCanvasWidth / 2 -
-    Math.round((t * constants.fishCanvasWidth) / moveTime)
+    Math.round(amount * constants.fishCanvasWidth)
   );
 };
 
