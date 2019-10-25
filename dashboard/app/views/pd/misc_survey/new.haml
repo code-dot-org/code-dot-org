@@ -1,4 +1,4 @@
-- if SchoolInfoInterstitial.show?(current_user) || @force_school_info_interstitial
+- if SchoolInfoInterstitialHelper.show?(current_user) || @force_school_info_interstitial
   = render partial: 'layouts/school_info_interstitial', locals: {show_header: false, user: current_user, form_name: "user[school_info_attributes]"}
 
 = render partial: 'pd/jotform_loader'
