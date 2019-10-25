@@ -18,8 +18,14 @@ def main
   ChatClient.message 'cron-daily', 'Beginning export from Aurora MySQL database to Redshift.'
   dms_client = Aws::DatabaseMigrationService::Client.new
   replication_tasks = dms_client.describe_replication_tasks({without_settings: true}).replication_tasks
-  replication_tasks.each do |replication_task|
-    puts dms_client.list_tags_for_resource({resource_arn: replication_task.replication_task_arn}).tag_list
+  production_tasks = replication_tasks.select do |task|
+    dms_client.
+      list_tags_for_resource({resource_arn: task.replication_task_arn}).
+      tag_list.
+      any? {|tag| tag.key == 'environment' && tag.value == 'production'}
+  end
+  production_tasks.each do |task|
+    puts task.replication_task_identifier
   end
   ChatClient.message'cron-daily', "Completed export from Aurora MySQL database to Redshift."
 rescue StandardError => error
