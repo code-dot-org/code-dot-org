@@ -75,8 +75,7 @@ export default class LibraryManagerDialog extends React.Component {
   };
 
   addLibrary = channelId => {
-    let libraryToImport = channelId ? channelId : this.state.importLibraryId;
-    let libraryClient = new LibraryClientApi(libraryToImport);
+    let libraryClient = new LibraryClientApi(channelId);
     // TODO: Check for naming collisions between libraries.
     libraryClient.getLatest(
       data => {
@@ -166,7 +165,11 @@ export default class LibraryManagerDialog extends React.Component {
             value={this.state.importLibraryId}
             onChange={this.setLibraryToImport}
           />
-          <button style={styles.add} onClick={this.addLibrary} type="button">
+          <button
+            style={styles.add}
+            onClick={() => this.addLibrary(this.state.libraryToImport)}
+            type="button"
+          >
             Add
           </button>
         </div>
