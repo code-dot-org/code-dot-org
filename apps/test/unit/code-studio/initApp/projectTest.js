@@ -531,25 +531,6 @@ describe('project.js', () => {
     });
   });
 
-  describe('deleteLibraryData()', () => {
-    it('deletes the library name and description', () => {
-      let oldDescription = 'description';
-      let oldName = 'Name';
-      setData({libraryDescription: oldDescription, libraryName: oldName});
-      sinon.stub(project, 'updateChannels_');
-
-      expect(project.getCurrentLibraryDescription()).to.equal(oldDescription);
-      expect(project.getCurrentLibraryName()).to.equal(oldName);
-      project.deleteLibraryData();
-      expect(project.getCurrentLibraryDescription()).to.be.undefined;
-      expect(project.getCurrentLibraryName()).to.be.undefined;
-      expect(project.updateChannels_).to.have.been.called;
-
-      setData({});
-      project.updateChannels_.restore();
-    });
-  });
-
   describe('setProjectLibraries()', () => {
     beforeEach(() => {
       sinon
