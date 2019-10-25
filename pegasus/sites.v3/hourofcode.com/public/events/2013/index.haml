@@ -1,8 +1,10 @@
 ---
-title: <%= hoc_s(:events_all_title) %>
 layout: wide
 nav: events_nav
 ---
+:ruby
+  @header["title"] = hoc_s(:events_all_title)
+
 :ruby
   require pegasus_dir 'helper_modules/forms'
   HOC_YEAR = 2013.freeze

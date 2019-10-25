@@ -1,6 +1,7 @@
 default['cdo-mysql'] = {
   proxy: {
-    enabled: false,
+    # Enable proxy on non-daemon app-servers by default.
+    enabled: node['cdo-apps'] && !node['cdo-apps']['daemon'],
     port: 6033,
     admin: 'mysql2://admin:admin@127.0.0.1:6032'
   }

@@ -4,7 +4,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Sequencing > Unplugged Lessons
 
-As we mentioned, we like to introduce computer science topics with unplugged lessons. Then, we use bridging activities to transition into the online lessons later. Beginning with these unplugged lessons introduces concepts in a fun and friendly way. Then, students already feel familiar with the concept by the time that they get to the online lessons, and can relate the online lessons back to the unplugged activity.
+We like to introduce computer science topics with unplugged lessons. Then, we use bridging activities to transition into the online lessons later. Beginning with these unplugged lessons introduces concepts in a fun and friendly way. Then, students already feel familiar with the concept by the time that they get to the online lessons, and can relate the online lessons back to the unplugged activity.
 
 For these programming stages that you will be going through, we will also start with examples of unplugged lessons. Read through the following lesson plan and watch the accompanying videos, thinking about how you would implement this in your classroom with your students.
 <br/>
@@ -16,7 +16,7 @@ We will start with sequencing. At its base, this style of computer science is ab
 
 **1. Review the "[Happy Maps](https://curriculum.code.org/csf/coursea/5/)" Lesson Plan from Course A.**
 <br/>
-Remember that Course A is meant for Kindergarten students. Sequencing comes up in other courses, as well, and you can find examples of those lessons at the bottom of this page.
+Course A is meant for Kindergarten students. Sequencing comes up in other courses, as well, and you can find examples of those lessons at the bottom of this page.
 
 <br/>
 
@@ -40,24 +40,15 @@ This is a video that you would show your students to help introduce the concept 
 
 **4. Review other unplugged lessons that introduce sequencing:**
 
-- Course A (Kindergarten): [Real-Life Algorithms: Plant a Seed](https://curriculum.code.org/csf-18/coursea/3/)
-- Course B (Grade 1): [My Robotic Friends Jr.](https://curriculum.code.org/csf-18/coursea/3/), [Move It, Move It](https://curriculum.code.org/csf-18/courseb/1/)
-- Course C (Grade 2): [Paper Planes](https://curriculum.code.org/csf-18/coursec/4/)
-- Course D (Grade 3): [Graph Paper Programming](https://curriculum.code.org/csf-18/coursed/1/)
-- Course E, Course F (Grades 4, 5): [My Robotic Friends](https://curriculum.code.org/csf-18/coursee/1/)
-
+- Course B (Grade 1): [Move It, Move It](https://curriculum.code.org/csf-19/courseb/2/)
+- Course C (Grade 2): [My Robotic Friends, Jr.](https://curriculum.code.org/csf-19/coursec/3/)
+- Course D (Grade 3): [Graph Paper Programming](https://curriculum.code.org/csf-19/coursed/1/)
 
 ---
 
 
 > ## Reflect
-> How would you explain the concept of programming (including sequencing and algorithms) to your students? Share your thoughts in <a href="http://forum.code.org/t/teaching-sequencing/408">our forum</a>.
-
-> <a href="http://forum.code.org/t/teaching-sequencing/408" target="blank"><button class="plc">Discuss in the forums >></button></a>
-
-After commenting in the forum, return here and click below to move on.
-
-In the next stage, we'll add some complexity to our programs through the addition of loops.
+> How would you explain the concept of programming (including sequencing and algorithms) to your students?
 MARKDOWN
 
 teacher_markdown <<MARKDOWN

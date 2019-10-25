@@ -963,8 +963,10 @@ en:
     time4cs_c5: 'Citizens Affect Change in the Everglades'
     k5_getting_started: 'Getting Started'
     k5_csf_intro: 'Get to know the CS Fundamentals Courses'
-    k5_coding_concepts: 'Coding Concepts'
+    k5_coding_concepts: 'Coding Concepts and Teaching Strategies'
     k5_next_steps: 'Next Steps'
+    k5_basic_concepts: 'Basic Coding Concepts and Teaching Practices: Courses A-D'
+    k5_diving_deeper: 'Diving Deeper: Courses E and F'
   external_links:
     disclaimer: Disclaimer
     leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.
@@ -1176,3 +1178,7 @@ en:
     privacy_policy: 'privacy policy'
     logout: 'Logout'
     yes: 'Yes'
+  page_not_found_title: "Page Not Found"
+  page_not_found_header: '404: Page Not Found'
+  page_not_found_description: "The page you are looking for doesn't exist at this address. Check the web address and resubmit. Or, go back to our homepage."
+  page_not_found_button: "Return home"
