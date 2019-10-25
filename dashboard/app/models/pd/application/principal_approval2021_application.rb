@@ -117,29 +117,6 @@ module Pd::Application
           'We’ve created our own course',
           TEXT_FIELDS[:other_please_explain]
         ],
-        csd_which_units: [
-          'Unit 0: Problem Solving',
-          'Unit 1: Web Development',
-          'Unit 2: Animations & Games',
-          'Unit 3: What is a Computer?',
-          'Unit 4: The Design Process',
-          'Unit 5: Data & Society',
-          'Unit 6: Physical Computing',
-          'I am not sure which units will be delivered. I trust the teacher to decide.'
-        ],
-        csp_which_units: [
-          'Unit 1: Digital Information',
-          'Unit 2: Internet',
-          'Unit 3: Intro App Development',
-          'Unit 4:  Variables, Conditionals, and Functions',
-          'Unit 5: Lists and Loops',
-          'Unit 6: Algorithms',
-          'Unit 7: Functions with Parameters, Return Values, and Libraries',
-          'Unit 8: AP Create Performance Task',
-          'Unit 9: Data',
-          'Unit 10: Cybersecurity and Global Impact',
-          'I am not sure which units will be delivered. I trust the teacher to decide.'
-        ],
         committed_to_diversity: [YES, NO, TEXT_FIELDS[:other_please_explain]],
         pay_fee: [
           'Yes, my school will be able to pay the full program fee.',

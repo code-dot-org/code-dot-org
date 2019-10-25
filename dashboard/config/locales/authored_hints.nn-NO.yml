@@ -1095,6 +1095,20 @@ nn-NO:
           tallene i hver løkke.
         courseA_collector_loops_challenge1_b: Du trenger ikke å bruke løkke hvis du
           bare skal gjøre noe én gang.
+      courseA_maze_seq1:
+        courseA_maze_seq1_a: Om du har problemer med å få fuglen til å bevege seg,
+          sjekk at blokkene er koblet sammen med "når den kjører" blokken[0]
+      courseA_maze_seq1_2018:
+        courseA_maze_seq1_a: Om du har problemer med å få fuglen til å bevege seg,
+          sjekk at blokkene er koblet sammen med "når den kjører" blokken[0]
+      courseA_maze_seq1_2019:
+        courseA_maze_seq1_a: Om du har problemer med å få fuglen til å bevege seg,
+          sjekk at blokkene er koblet sammen med "når den kjører" blokken[0]
+      courseA_maze_seq2:
+        courseA_maze_seq2_a: Dette programmet mangler en blokk. Klarer du å finne
+          ut hvilken?
+        courseA_maze_seq2_b: Prøv å kjøre koden først for å se hvor fuglen ender opp.
+          Hvor skal du videre?
       courseA_maze_seq_challenge1:
         courseA_maze_seq_challenge1_a: Det er to løsninger til dette puslespillet.
       courseA_maze_seq_challenge1_2018:

@@ -11,10 +11,13 @@
         = t('auth.already_signedup')
         = link_to t('nav.user.signin'), new_session_path(resource_name)
 
-  - if SignUpTracking.new_sign_up_experience?(session)
-    = render 'new_sign_up_form'
-  - else
+  -# Render both old and new signup forms to the page, with the new form
+  -# hidden. This setup will then be used by optimizely to situationally
+  -# switch which form is displayed.
+  .old_form
     = render 'old_sign_up_form'
+  .new_form{style: "display: none"}
+    = render 'new_sign_up_form'
 
 %div{style: "clear:both"}
 %br/

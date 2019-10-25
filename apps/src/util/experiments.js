@@ -21,10 +21,10 @@ const EXPERIMENT_LIFESPAN_HOURS = 12;
 experiments.REDUX_LOGGING = 'reduxLogging';
 experiments.SCHOOL_AUTOCOMPLETE_DROPDOWN_NEW_SEARCH =
   'schoolAutocompleteDropdownNewSearch';
-experiments.ROLLUP_SURVEY_REPORT = 'rollupSurveyReport';
 experiments.APPLAB_DATASETS = 'applabDatasets';
 experiments.CENSUS_MAP_ON_MAPBOX = 'censusMapOnMapbox';
 experiments.ASSIGNMENT_UPDATES = 'assignmentUpdates';
+experiments.STUDENT_LIBRARIES = 'student-libraries';
 
 /**
  * Get our query string. Provided as a method so that tests can mock this.

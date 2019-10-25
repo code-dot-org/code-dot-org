@@ -687,6 +687,7 @@ module Api::V1::Pd
             email: 'minerva@hogwarts.edu',
             assigned_workshop: 'January 1-5, 2020, Orchard Park NY',
             registered_workshop: 'Yes',
+            registered_workshop_id: workshop.id,
             status: 'accepted_not_notified',
             notes: nil,
             notes_2: nil,
@@ -729,6 +730,7 @@ module Api::V1::Pd
             email: 'minerva@hogwarts.edu',
             assigned_workshop: nil,
             registered_workshop: nil,
+            registered_workshop_id: nil,
             status: 'accepted_not_notified',
             notes: nil,
             notes_2: nil,
@@ -823,13 +825,15 @@ module Api::V1::Pd
             email: 'minerva@hogwarts.edu',
             assigned_workshop: 'January 1-5, 2020, Orchard Park NY',
             registered_workshop: 'Yes',
+            registered_workshop_id: workshop.id,
             status: 'accepted_not_notified',
             notes: nil,
             notes_2: nil,
             notes_3: nil,
             notes_4: nil,
             notes_5: nil,
-            friendly_scholarship_status: 'No'
+            friendly_scholarship_status:
+              Pd::ScholarshipInfo.get_scholarship_label(Pd::ScholarshipInfoConstants::NO)
           }.stringify_keys, JSON.parse(@response.body).first
         )
       end
@@ -864,6 +868,7 @@ module Api::V1::Pd
             email: 'minerva@hogwarts.edu',
             assigned_workshop: nil,
             registered_workshop: nil,
+            registered_workshop_id: nil,
             status: 'accepted_not_notified',
             notes: nil,
             notes_2: nil,
@@ -936,7 +941,6 @@ module Api::V1::Pd
         "Meets minimum requirements?",
         "Meets scholarship requirements?",
         "Scholarship teacher?",
-        "Bonus Points",
         "General Notes",
         "Notes 2",
         "Notes 3",
@@ -997,7 +1001,6 @@ module Api::V1::Pd
         "School name (provided by principal)",
         "School district (provided by principal)",
         "Do you approve of this teacher participating in Code.org's 2020-21 Professional Learning Program?",
-        "Is this teacher planning to teach this course in the 2020-21 school year?",
         "Total student enrollment",
         "Percentage of students who are eligible to receive free or reduced lunch (Principal's response)",
         "Percentage of underrepresented minority students (Principal's response)",
@@ -1014,7 +1017,6 @@ module Api::V1::Pd
         "How will you implement CS Principles at your school?",
         "Do you commit to recruiting and enrolling a diverse group of students in this course, representative of the overall demographics of your school?",
         "If there is a fee for the program, will your teacher or your school be able to pay for the fee?",
-        "How did you hear about this program? (Principal's response)",
         "Principal authorizes college board to send AP Scores",
         "Contact name for invoicing",
         "Contact email or phone number for invoicing",

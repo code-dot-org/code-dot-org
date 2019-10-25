@@ -3737,6 +3737,54 @@ pt-BR:
           <br/>
 
           > Isto é tudo! Fique à vontade para retornar a este nível sempre que você sentir necessidade de relembrar como esta plataforma funciona.
+      OPD-K5 Congrats:
+        markdown: |
+          # Eventos > Revisão
+
+          Nesta etapa, você criou um jogo divertido, combinando conceitos essenciais e demonstrando seu aprendizado. Por nos permitir disparar ações baseadas em outras partes do nosso programa, eventos nos permitem esticar nossos músculos de codificação.
+
+          **Tome um momento agora para revisar como eventos são introduzidos no currículo de Fundamentos de CC, e pondere como você poderia implementar as atividades sugeridas em sua sala de aula.**
+
+          ![](https://images.code.org/8312823c84d52d7119ab0b5e99363d39-image-1549054807593.jpg)
+      OPD-K5 CongratsFinal:
+        markdown: |
+          # Congratulações!
+
+          <img src="https://images.code.org/3e21c6e68f0b6565ba16ad2b63b892f0-image-1434398206115.jpg" width="450px">
+          <br/><br/>
+          Por agora você deve ter completado as Etapas 1-8 e aprendido os fundamentos básicos de ciência da computação. Nós esperamos que você tenha se divertido durante o caminho! Nós também esperamos que você tenha considerado como você poderia aplicar seu conhecimento à sua prática de ensino.
+          <br/><br/>
+          Na próxima etapa, nós vamos considerar algumas melhores práticas para ensino destes fundamentos em sala de aula.
+      OPD-K5 Culture:
+        markdown: |+
+          # Melhores Práticas > Cultura de Sala de Aula
+
+          Como podemos promover uma cultura saudável em nossas aulas de ciências da computação? Primeiro, podemos ter certeza que todos na sala de aula, incluindo nós mesmos, entendemos as maneiras como podemos agir como cientistas da computação e o que deveremos ter em mente. Isto mantém todos na mesma página e facilita nosso trabalho em classe.
+
+          <img src="https://images.code.org/b5d9ae18a882a4359f096b9c6ade135e-image-1434398703448.jpg" width="450px" style="margin-right:45px; border-radius:10px;">
+
+          ## Maneiras de agir como um cientista da computação:
+
+          - **Seja curioso:** Quando você está curioso, você faz coisas como cutucar em menus diversos, rodar trechos de código para ver o que acontece, ou verificar os efeitos de diferentes configurações. A curiosidade frequentemente nos torna capazes de responder às nossas próprias perguntas.
+          - **Faça perguntas:** Colabore com outros quando você tiver tentado descobrir a solução de um problema você mesmo.
+          - **Seja perseverante:** Tenha confiança ao lidar com problemas abertos complexos, e mantenha-se concentrado neles. Isso fica mais fácil quando você já tiver tido sucesso escrito programas, e sabe o quanto bem você se sente ao conseguir resolver um problema difícil de programação.
+          - **Quebre problemas grandes em problemas menores, mais gerenciáveis:** Isto é chamado *decomposição**.
+          - **Leia atentamente seu código:** O computador segue exatamente suas instruções. Rastreando através do código passo a passos (como se você fosse o computador processando as instruções) irá ajudá-lo a encontrar erros na sua lógica ou passos faltantes.
+          - **Não se sinta mal ao cometer erros:** Erros não são fracassos; eles somente levam você a um estágio mais próximo de criar a solução correta ou o produto final.
+          - **Saia de frente da tela:** Isto pode te dar um tempo necessário, e tipicamente você retorna ao problema com uma perspectiva nova.
+
+          ## Coisas para ter em mente enquanto aprende ciência da computação:
+
+          - O mundo da programação de computadores se move tão rápido que não há mestres, na realidade. **Todos somos aprendizes** em estágios diferentes, mas ainda assim todos somos aprendizes.
+          - A programação se torna mais confortável a cada vez que você volta a ela. **Você não vai se tornar um especialista na primeira vez.**
+          - Não há como contornar isto, o ato de programar e **aprender a programar leva tempo, mas qualquer um pode fazê-lo!**
+          - Você pode compartilhar **sua própria experiência autêntica de aprender a programar** com seus alunos!
+
+          > ## Reflexão:
+          > Como você pretende criar uma cultura positiva em sala de aula quando estiver lecionando ciência da computação? [Envie suas ideias no Tweeter](https://twitter.com/codeorg) lembrando de incluir a tag @codeorg na sua mensagem para que possamos responder.
+
+          > <a href="http://ctt.ec/pdL3a" target="blank"><button class="default">Compartilhe no Tweeter >></button></a>
+
       OPD-K5 Outline:
         markdown: |
           # Vamos Começar > Linhas Gerais do Curso
@@ -4160,6 +4208,130 @@ pt-BR:
           >**O que Esperar desta Etapa:** Primeiramente iremos introduzir uma aula desplugada do Curso D (destinada ao Ano 3) que apresenta a ideia de condicionais. A seguir, você irá completar uma série de quebra-cabeças para aplicar seus conhecimentos usando condicionais. Terminaremos com uma oportunidade para reflexão. Você deverá gastar entre 20-45 minutos nesta etapa.
 
           Tudo pronto? Vamos lá!
+      OPD-K5 Stage6Go:
+        markdown: "# Funções > Aulas desplugadas\n\nProgramadores estão sempre à busca
+          de maneiras para tornar seus códigos mais eficientes. Uma forma que eles
+          fazem isso é através de **funções**, que permitem a eles reutilizar trechos
+          de código.\n\n**1. Revise \"[Funções: Composição musical](https://curriculum.code.org/csf-18/coursee/14/)\"
+          Plano de Aulas do Curso E.**\n<br/>\nO Curso E é destinado a estudantes
+          do Ano 4. Funções não fazem parte dos cursos A-D. \n\n<br/>\n\n**2. Assista
+          ao vídeo de alunos: Funções: Composição musical**\n<br/>\nEste é um vídeo
+          que você poderia apresentar aos seus alunos para ajudar a introduzir o conceito
+          de funções, e dar início à aula desplugada. <iframe width=\"560\" height=\"315\"
+          src=\"https://www.youtube.com/embed/5iDCKkI6y2Y?ecver=1\" frameborder=\"0\"
+          allowfullscreen></iframe><br/>\n[Não consegue ver o vídeo? Clique aqui](http://videos.code.org/2014/C3-songwriting-with-parameters.mp4)\n\n<br/>\n\n**3.
+          Assista a um professor apresentar esta aula: \"Funções: Composição musical\"**\n<br/>\nEste
+          vídeo tem por objetivo suportá-lo como professor, se você estiver procurando
+          por dicas em como apresentar esta lição.\n\n<iframe width=\"560\" height=\"315\"
+          src=\"https://www.youtube.com/embed/QuIMLel1mmw?ecver=1\" frameborder=\"0\"
+          allowfullscreen></iframe>\n[Não consegue ver o vídeo? Clique aqui](https://videos.code.org/levelbuilder/unplugged-lessoninaction-songwritingwithfunctions-mp4.mp4)\n<br/>\n\n---\n\n>
+          ## Reflexão\n> Como você explicaria o conceito de funções para seus alunos?
+          Compartilhe suas ideias em <a href=\"http://forum.code.org/t/teaching-functions/407/1\"
+          target=\"blank\">nosso fórum</a>.\n\n> <a href=\"http://forum.code.org/t/teaching-functions/407/1\"
+          target=\"blank\"><button class=\"plc\">Discuta nos fóruns >></button></a>\n\nApós
+          comentar no fórum, volte aqui e clique abaixo para prosseguir à próxima
+          página.\n"
+      OPD-K5 Stage6Review:
+        markdown: |
+          # Funções > Reflexão
+
+          Nesta etapa, exploramos como funções podem torná-lo um programador mais veloz e melhor, permitindo a você reutilizar segmentos do seu código. Na próxima etapa, iremos nos debruçar sobre o conceito essencial de eventos, e testar suas habilidades de codificação.
+
+          **Tome um momento para revisar como funções são introduzidas no currículo Fundamentos de CC e considere como você poderia implementar as atividades sugeridas em sua sala de aula.**
+
+          ![](https://images.code.org/47e2d3956aaafb745e462f0017c2a2b1-image-1549053916687.jpg)
+      OPD-K5 Stage6Start:
+        markdown: |+
+          # Funções > Visão Geral da Etapa
+
+          <img src="https://images.code.org/6ac5cc9f26b87a62b0558947d4cfd457-image-1501267730981.jpg" width="450px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+          Durante as primeiras etapas, você aprendeu como escrever um programa, adicionar laços, e usar condicionais. Nesta etapa, iremos introduzir o conceito de **funções**.
+
+          Ao completar a Etapa 7, você irá:
+
+          - Praticar a codificação de funções simples
+          - Refletir sobre sua aplicação em sala de aula
+
+          > **O que Esperar neste Estágio:** Primeiro, você irá assistir uma aula desplugada do Curso E (destinado ao Ano 4) que apresenta funções. Depois você irá aprender sobre funções através de um vídeo, e praticar seu uso em quebra-cabeças variados. Por fim você irá refletir sobre o que praticou. Você deverá gastar entre 20-45 minutos nesta etapa.
+
+          Tudo pronto? Vamos lá!
+
+      OPD-K5 Stage7Go:
+        markdown: |
+          # Eventos > Aulas Desplugadas
+
+          <br/>
+
+          **1. Reveja "[O Grande Evento](https://curriculum.code.org/csf-18/coursec/11/)" Plano de Aulas do Curso C.**
+          <br/>
+          O Curso C é destinado a alunos do Ano 2. Eventos surgem em todos os cursos de Fundamentos de CC, de A-F. Nem todos os cursos possuem uma aula desplugada para a cobertura de eventos, mas você pode ver a aula desplugada para o Curso A e Curso B ao final desta página.
+          <br/><br/>
+
+          **2. Assista ao vídeo de alunos: O Grande Evento**
+          <br/>
+          Este é um vídeo que você poderia mostrar aos seus alunos para ajudar a introduzir o conceito de eventos, e dar início à aula desplugada.
+
+          <iframe width="640" height="390" src="https://www.youtube.com/embed/u0WV9shCoak" frameborder="0" allowfullscreen></iframe>
+
+          [Não consegue ver o vídeo? Clique aqui](http://videos.code.org/2014/C1-bigevent-unplugged.mp4)
+          <br/><br/>
+
+          **3. Assista ao vídeo do professor: Como facilitar "O Grande Evento"**
+          <br/>
+          Este vídeo se destina a suportar você como o professor, se você estiver à busca de dicas em como ministrar esta aula.
+
+          <iframe width="640" height="390" src="https://www.youtube.com/embed/aYECW6V8nQA" frameborder="0" allowfullscreen></iframe>
+          <br/><br/>
+
+          **4. Reveja outras aulas desplugadas que introduzem eventos**
+
+          - Curso A, Curso B (Pré-escola, Ano 1): [O Grande Evento Jr.](https://curriculum.code.org/csf-18/courseb/12/)
+
+          ---
+
+          > ## Reflexão
+          > Como você explicaria o conceito de eventos para seus alunos? Compartilhe suas ideias em <a href="http://forum.code.org/t/teaching-events/409/1">nosso fórum</a>.
+
+          > <a href="http://forum.code.org/t/teaching-events/409/1" target="blank"><button class="plc">Discuta nos fóruns >></button></a>
+
+          Após comentar no fórum, volte aqui e clique abaixo para seguir em frente.
+      OPD-K5 Stage7Start:
+        markdown: "# Eventos > Visão Geral da Etapa\n\n<img src=\"https://images.code.org/319df539d56b2795d659a56e9334a5fb-image-1434397946590.JPG\"
+          width=\"450px\" style=\"border-radius: 10px; float: right; margin: 0 0 40px
+          40px;\">\n\nAté aqui, você aprendeu como sequenciar um programa, adicionar
+          laços, e usar condicionais e funções. Estamos quase terminando! \n\nNesta
+          etapa, iremos olhar em *eventos*, um outro conceito essencial em ciência
+          da computação. À media que exploramos eventos, você irá sintetizar o que
+          você aprendeu até agora e escrever programas mais complexos.\n\nAo completar
+          a Etapa 8, você irá:\n\n- Praticar a codificação de eventos simples\n- Refletir
+          sobre sua aplicação em sala de aula\n\n>**O que Esperar nesta Etapa:** Você
+          irá começar com uma aula desplugada do Curso C (destinado ao Ano 2) apresentando
+          eventos. Então, você irá explorar alguns quebra-cabeças do Curso F (destinado
+          ao Ano 5) para experimentação com blocos de evento. Iremos fechar com uma
+          oportunidade para reflexão. Você deverá gastar entre 20-45 minutos nesta
+          etapa.\n\nTudo pronto? Vamos lá!\n"
+      OPD-K5 Stage8Start:
+        markdown: "# Melhores Práticas > Visão Geral da Etapa\n\n<img src=\"https://images.code.org/1faca2c2dd1c9bd64ab5def347524d9c-image-1434398377360.JPG\"
+          width=\"450px\" style=\"border-radius:10px; float:right; margin: 0 0 40px
+          40px;\">\n\n**Você trihou seu caminho através da maior parte do conteúdo
+          deste curso. Parabéns!** \n\nNa Etapa 1, você revisou as informações do
+          curso.\nNa Etapa 2, você explorou ciência da computação como uma disciplina.
+          \nNa Etapa 3, você se preparou para conhecer o básico de ciência da computação.
+          \nNas Etapas 4-8, você assumiu o papel do aluno. \nAgora, vamos fazer a
+          transição para explorar como você poderia ensinar o que você aprendeu para
+          alunos jovens. \n\n\nAo completar a Etapa 9, você irá:\n\n- Revisar as melhores
+          práticas para lecionar ciência da computação\n\n> ## Olhando Adiante:\n>
+          As melhores práticas que iremos cobrir nesta etapa incluem:\n\n>- Estabelecer
+          uma cultura positiva em sala de aula que suporte o aprendizado auto direcionado,
+          experimentação e fracasso\n- Saber quando e como aplicar estratégias de
+          instruções obtidas de outras áreas\n- Usar estratégias de trabalho em grupo
+          como \"programação em pares\"\n- Ensinar explicitamente estratégias meta
+          cognitivas para a solução de problemas\n- \"Desplugar\" e ensinar alguns
+          conceitos essenciais com recursos de tecnologia mínimos ou inexistentes\n-
+          Outras melhores práticas sugeridas pela comunidade de professores da Code.org\n\nTambém
+          iremos prover uma oportunidade para você compartilhar suas melhores práticas
+          com a comunidade.\n"
       OPD-K5 Unplugged:
         markdown: |
           # Olhando à Frente > Ficando "Desplugado"

@@ -8,7 +8,7 @@ nav: how_to_nav
 
 # Jak poprowadzić Godzinę Kodowania w ramach zajęć pozalekcyjnych i w klubach
 
-### Przyłącz się do tej inicjatywy i pomóż grupie uczniów, by rozpoczęli swoją pierwszą godzinę informatyki postępując następująco. Godzina Kodowania jest łatwa do wykonania - nawet dla początkujących! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+### Przyłącz się do tej inicjatywy i pomóż grupie uczniów, by rozpoczęli swoją pierwszą godzinę informatyki postępując następująco. Godzina Kodowania jest łatwa do wykonania - nawet dla początkujących! Jeśli szukasz dodatkowych rąk do pomocy, możesz znaleźć [wolontariusza w okolicy]({{ urls/volunteer_local }}), by wsparł Cię w przeprowadzeniu zajęć Godziny Kodowania poza lekcjami lub w klubie.
 
 * * *
 
@@ -16,7 +16,7 @@ nav: how_to_nav
 
 ## 2. Wybierz samouczek
 
-We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for participants all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
+Oferujemy różnorodne [ zabawne samouczki na godzinę]({{ urls/learn }}) dla uczestników w każdym wieku, utworzone przez różnych partnerów. [ Wypróbuj je! ]({{ urls/learn }})
 
 **Wszystkie samouczki Godziny Kodowania** wymagają niewielkiego czasu na przygotowanie i są samo objaśniające się, umożliwiając uczestnikom pracę we własnym tempie i na własnym poziomie przygotowania.
 
@@ -26,7 +26,7 @@ We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for partici
 
 ## 3. Promuj swoją Godzinę Kodowania
 
-Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage others to host their own events.
+Promuj swoją Godzinę Kodowania [przy pomocy tych narzędzi]({{ urls/promote }}) i zachęć innych do organizowania ich własnych wydarzeń.
 
 ## 4. Zaplanuj potrzebny sprzęt - komputery nie są niezbędne
 
@@ -52,23 +52,23 @@ Rozpocznij Godzinę Kodowania inspirując uczestników i dyskutując, jaki jest 
 **Nic nie szkodzi, jeśli jesteś nowicjuszem w informatyce. Oto kilka pomysłów na wprowadzenie aktywności Godziny Kodowania:**
 
 - Wyjaśnij, w jaki sposób technologia wpływa na nasze życie, użyj przykładów, które zainteresują zarówno chłopców, jak i dziewczęta (Opowiedz o aplikacjach i technologii, które ratują życie, pomagają ludziom, łączą ludzi itp.).
-- Wymień rzeczy, które używają kodu w codziennym życiu.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- Wymień rzeczy, które używają oprogramowania w codziennym życiu.
+- Wskazówki, jak zainteresować dziewczęta informatyką, zobacz [tutaj]({{ urls/girls }}).
 
-**Potrzebujesz więcej wskazówek?** Ściągnij ten [szablonowy plan zajęć](/files/AfterschoolEducatorLessonPlanOutline.docx).
+**Czy potrzebujesz więcej wskazówek?** Ściągnij ten [szablonowy plan zajęć](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
 ## 6. Programuj!
 
-** Skieruj uczestników do aktywności ** - Napisz link do samouczka na tablicy. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+** Skieruj uczestników do aktywności ** - Napisz link do samouczka na tablicy. Znajdź link wymieniony [w informacji dla wybranego przez Ciebie samouczka]({{ urls/learn }}) pod liczbą uczestników.
 
 ** Gdy ktoś napotka trudności, to w porządku jest odpowiedzieć: ** - „Nie wiem. Rozwiążmy to razem.” - „Technologia nie zawsze działa tak, jak chcemy”. - „Nauka programowania jest jak nauka nowego języka; nie od razu będziesz biegły. ”
 
-**What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn]({{ urls/learn }}) - Or, ask those who finish early to help others who are having trouble.
+** Co zrobić, jeśli ktoś skończy wcześniej? ** - Zachęć uczestników do wypróbowania kolejnej aktywności w Godzinie Kodowania na [hourofcode.com/learn]({{ urls/learn }}) - Lub poproś tych, którzy skończą wcześniej, aby pomogli innym, którzy mają kłopoty.
 
 ## 7. Świętuj
 
-- [Print certificates]({{ urls/certificates }}) for your students.
-- [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers for your students.
+- [Wydrukuj certyfikaty]({{ urls/certificates }}) dla swoich uczniów.
+- [Wydrukuj naklejki "I did an Hour of Code!"]({{ promote/resources_stickers }}) dla swoich uczniów.
 - [Zamów t-shirts ](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) dla swoich uczniów.
 - Udostępnij w mediach społecznościowych zdjęcia i wideo ze swojej Godziny Kodowania. Użyj #HourOfCode i @codeorg, byśmy również mogli wyróżnić Twój sukces!
 

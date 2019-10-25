@@ -281,6 +281,11 @@ ja-JP:
       course3_bee_functions_challenge2:
         do something: 何かしてください
         move and collect: 集めて回ろう
+      course3_bee_functions_challenge3:
+        check nectar or honey: ミツかハチミツか調べる
+      course3_bee_functions_challenge4:
+        check nectar or honey: ミツかハチミツか調べる
+        move and check: 進むと調べる
       course3_playLab_challenge1:
         win game: 勝ち
         lose game: 負け
@@ -299,6 +304,8 @@ ja-JP:
       course4_artist_fwp_challenge1:
         draw a polygon: 多角形を描く
         do something: 何かしてください
+      course4_bee_for_challenge1:
+        move and get nectar with counter: counterを使って、すすむと花のミツをとるを行います。
       courseA_artist_loops_challenge1:
         '"simple" solution': 解答例
       courseC_artist_prog3:
@@ -697,8 +704,32 @@ ja-JP:
         do something: 何かしてください
       courseF_artist_fwp_challenge2:
         do something: 何かしてください
+      courseF_bee_conditionals2:
+        move and check: 進むと調べる
+        check nectar or honey: ミツかハチミツか調べる
+      courseF_bee_for_challenge1:
+        move and get nectar with counter: counterを使って、すすむと花のミツをとるを行います。
+      courseF_bee_for_challenge1_2018:
+        move and get nectar with counter: counterを使って、すすむと花のミツをとるを行います。
+      courseF_bee_for_challenge1_2019:
+        move and get nectar with counter: counterを使って、すすむと花のミツをとるを行います。
+      courseF_bee_functions2:
+        get only nectar: ミツを集めよう
+      courseF_bee_functions3a:
+        check nectar or honey: ミツかハチミツか調べる
+      courseF_bee_functions4:
+        move and check: 進むと調べる
+        check nectar or honey: ミツかハチミツか調べる
+      courseF_bee_functions5a:
+        move and check: 進むと調べる
+        check nectar or honey: ミツかハチミツか調べる
       courseF_bee_functions8a:
         do something: 何かしてください
+      courseF_bee_functions_challenge1:
+        check nectar or honey: ミツかハチミツか調べる
+      courseF_bee_functions_challenge2:
+        move and check: 進むと調べる
+        check nectar or honey: ミツかハチミツか調べる
       courseF_bee_variables_7_2018:
         collect: あつめる
       courseF_bee_variables_7_2019:

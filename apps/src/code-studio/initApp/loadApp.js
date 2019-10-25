@@ -4,7 +4,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {TestResults} from '@cdo/apps/constants';
 import {getStore} from '../redux';
-import {SignInState, mergeProgress} from '../progressRedux';
+import {mergeProgress} from '../progressRedux';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
 import {files} from '@cdo/apps/clientApi';
 var renderAbusive = require('./renderAbusive');
@@ -431,7 +432,7 @@ function loadAppAsync(appOptions) {
         }
 
         const store = getStore();
-        const signInState = store.getState().progress.signInState;
+        const signInState = store.getState().currentUser.signInState;
         if (signInState === SignInState.SignedIn) {
           progress.showDisabledBubblesAlert();
         }
@@ -476,6 +477,12 @@ const sourceHandler = {
   },
   getLevelHtml() {
     return window.Applab && Applab.getHtml();
+  },
+  setInitialLibrariesList(libraries) {
+    getAppOptions().level.libraries = libraries;
+  },
+  getLibrariesList() {
+    return getAppOptions().level.libraries;
   },
   setInitialLevelSource(levelSource) {
     getAppOptions().level.lastAttempt = levelSource;

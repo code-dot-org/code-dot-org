@@ -47,8 +47,7 @@ describe('Principal Approval Component', () => {
     const expectedFields = [
       ...ALWAYS_REQUIRED_FIELDS,
       ...REQUIRED_SCHOOL_INFO_FIELDS,
-      'replaceWhichCourseCsd',
-      'csdWhichUnits'
+      'replaceWhichCourseCsd'
     ].sort();
     const actualFields = PrincipalApprovalComponent.getDynamicallyRequiredFields(
       {
@@ -64,8 +63,7 @@ describe('Principal Approval Component', () => {
     const expectedFields = [
       ...ALWAYS_REQUIRED_FIELDS,
       ...REQUIRED_SCHOOL_INFO_FIELDS,
-      'replaceWhichCourseCsp',
-      'cspWhichUnits'
+      'replaceWhichCourseCsp'
     ].sort();
     const actualFields = PrincipalApprovalComponent.getDynamicallyRequiredFields(
       {
@@ -77,7 +75,7 @@ describe('Principal Approval Component', () => {
     expect(actualFields).to.deep.equal(expectedFields);
   });
 
-  it('Expect student enrollment to be an integer', () => {
+  it('Expect student enrollment to be a positive integer', () => {
     ['10000', '1,000,000'].forEach(validEnrollmentNumber => {
       expect(
         PrincipalApprovalComponent.getErrorMessages({
@@ -87,14 +85,14 @@ describe('Principal Approval Component', () => {
     });
   });
 
-  it('Non integers create errors for student enrollments', () => {
-    ['10.5', 'So many', '0x1234'].forEach(invalidEnrollmentNumber => {
+  it('Invalid values create errors for student enrollments', () => {
+    ['0', '10.5', 'So many', '0x1234'].forEach(invalidEnrollmentNumber => {
       expect(
         PrincipalApprovalComponent.getErrorMessages({
           totalStudentEnrollment: invalidEnrollmentNumber
         })
       ).to.deep.equal({
-        totalStudentEnrollment: 'Must be a valid number'
+        totalStudentEnrollment: 'Must be a valid and positive number'
       });
     });
   });

@@ -1,11 +1,11 @@
-import {assert} from '../../../util/configuredChai';
+import {assert} from '../../../util/deprecatedChai';
 import React from 'react';
 import {shallow} from 'enzyme';
 import CourseOverviewTopRow from '@cdo/apps/templates/courseOverview/CourseOverviewTopRow';
 import ResourceType from '@cdo/apps/templates/courseOverview/resourceType';
 
 const defaultProps = {
-  sectionsInfo: [],
+  sectionsForDropdown: [],
   id: 30,
   title: 'Computer Science Principles',
   resources: [

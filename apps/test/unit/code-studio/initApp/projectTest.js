@@ -475,6 +475,104 @@ describe('project.js', () => {
     });
   });
 
+  describe('setLibraryName()', () => {
+    it('updates the current library name', () => {
+      let oldName = 'initialLibrary';
+      let newName = 'newLibraryName';
+      setData({libraryName: oldName});
+      sinon.stub(project, 'updateChannels_');
+
+      expect(project.getCurrentLibraryName()).to.equal(oldName);
+      project.setLibraryName(newName);
+      expect(project.getCurrentLibraryName()).to.equal(newName);
+      expect(project.updateChannels_).to.have.been.called;
+
+      setData({});
+      project.updateChannels_.restore();
+    });
+
+    it('does nothing if no name is passed', () => {
+      sinon.stub(project, 'updateChannels_');
+
+      expect(project.getCurrentLibraryName()).to.be.undefined;
+      project.setLibraryName();
+      expect(project.getCurrentLibraryName()).to.be.undefined;
+      expect(project.updateChannels_).to.have.not.been.called;
+
+      project.updateChannels_.restore();
+    });
+  });
+
+  describe('setLibraryDescription()', () => {
+    it('updates the current library description', () => {
+      let oldDescription = 'description';
+      let newDescription = 'My library does something cool';
+      setData({libraryDescription: oldDescription});
+      sinon.stub(project, 'updateChannels_');
+
+      expect(project.getCurrentLibraryDescription()).to.equal(oldDescription);
+      project.setLibraryDescription(newDescription);
+      expect(project.getCurrentLibraryDescription()).to.equal(newDescription);
+      expect(project.updateChannels_).to.have.been.called;
+
+      setData({});
+      project.updateChannels_.restore();
+    });
+
+    it('does nothing if no description is passed', () => {
+      sinon.stub(project, 'updateChannels_');
+
+      expect(project.getCurrentLibraryDescription()).to.be.undefined;
+      project.setLibraryDescription();
+      expect(project.getCurrentLibraryDescription()).to.be.undefined;
+      expect(project.updateChannels_).to.have.not.been.called;
+
+      project.updateChannels_.restore();
+    });
+  });
+
+  describe('setProjectLibraries()', () => {
+    beforeEach(() => {
+      sinon
+        .stub(project, 'saveSourceAndHtml_')
+        .callsFake((source, callback) => {
+          callback();
+        });
+    });
+
+    afterEach(() => {
+      project.saveSourceAndHtml_.restore();
+    });
+
+    it('performs a save with the new library list', () => {
+      let library = ['test'];
+      sourceHandler.getLibrariesList.returns(undefined);
+      project.init(sourceHandler);
+      return project.setProjectLibraries(library).then(() => {
+        expect(project.saveSourceAndHtml_).to.have.been.called;
+        expect(
+          project.saveSourceAndHtml_.getCall(0).args[0].libraries
+        ).to.equal(library);
+      });
+    });
+
+    it('performs a save with no libraries if an empty array is passed', () => {
+      let library = ['test'];
+      let result = [];
+      project.init(sourceHandler);
+      return project.setProjectLibraries(library).then(() => {
+        expect(
+          project.saveSourceAndHtml_.getCall(0).args[0].libraries
+        ).to.equal(library);
+        return project.setProjectLibraries(result).then(() => {
+          expect(
+            project.saveSourceAndHtml_.getCall(1).args[0].libraries
+          ).to.equal(result);
+        });
+      });
+    });
+  });
+
   describe('toggleMakerEnabled()', () => {
     beforeEach(() => {
       sinon
@@ -777,6 +875,8 @@ function createStubSourceHandler() {
     getMakerAPIsEnabled: sinon.stub(),
     setSelectedSong: sinon.stub(),
     getSelectedSong: sinon.stub(),
-    prepareForRemix: sinon.stub().returns(Promise.resolve())
+    prepareForRemix: sinon.stub().returns(Promise.resolve()),
+    setInitialLibrariesList: sinon.stub(),
+    getLibrariesList: sinon.stub()
   };
 }

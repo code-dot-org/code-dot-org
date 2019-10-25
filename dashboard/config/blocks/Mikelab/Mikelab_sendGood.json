@@ -1,0 +1,20 @@
+{
+  "category": "Actions",
+  "config": {
+    "color": [
+      184,
+      1,
+      0.74
+    ],
+    "func": "sendGood",
+    "blockText": "move object right",
+    "args": [
+      {
+        "name": "SPRITE",
+        "assignment": true,
+        "customInput": "spritePicker"
+      }
+    ],
+    "methodCall": true
+  }
+}

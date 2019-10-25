@@ -217,7 +217,7 @@ the following:
 
 0. Make sure you have `build_apps: true` and `use_my_apps: true` in locals.yml.
 
-1. set `pretty_js: false` in locals.yml. This will make dashboard and pegasus
+1. set `optimize_webpack_assets: true` in locals.yml. This will make dashboard and pegasus
    use the webpack manifest to find your js assets (which now have content 
    hashes in the filename) rather than looking for unhashed filenames.
 
@@ -238,8 +238,7 @@ To further approximate production behavior locally, you can use the rails asset
 pipeline to precompile all assets locally. Once you have built minified js
 locally as described above, here are the additional steps:
 
-1. Edit `dashboard/config/environments/development.rb` by changing 
-   `config.assets.digest` to `true` and `config.assets.compile` to `false`. 
+1. Set `optimize_rails_assets: true` in locals.yml. 
    This will make the rails app look for js files and other assets that have
    already been processed by the rails asset pipeline.
 

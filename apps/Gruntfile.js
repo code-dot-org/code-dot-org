@@ -223,18 +223,19 @@ describe('entry tests', () => {
           src: ['**/*.js'],
           dest: 'build/package/js/ace/'
         },
-        // Pull p5.js and p5.play.js into the package from our forks.
+        // Pull p5.js and p5.play.js into the package from our forks. These are
+        // needed by the gamelab exporter code in production and development.
         {
           expand: true,
           cwd: './node_modules/@code-dot-org/p5/lib',
           src: ['p5.js'],
-          dest: 'build/minifiable-lib/p5play/'
+          dest: 'build/package/js/p5play/'
         },
         {
           expand: true,
           cwd: './node_modules/@code-dot-org/p5.play/lib',
           src: ['p5.play.js'],
-          dest: 'build/minifiable-lib/p5play/'
+          dest: 'build/package/js/p5play/'
         },
         // Piskel must not be minified or digested in order to work properly.
         {
@@ -304,8 +305,11 @@ describe('entry tests', () => {
           cwd: 'build/package/js',
           // The applab and gamelab exporters need unhashed copies of these files.
           src: [
+            'webpack-runtimewp*.js',
             'webpack-runtimewp*.min.js',
+            'applab-apiwp*.js',
             'applab-apiwp*.min.js',
+            'gamelab-apiwp*.js',
             'gamelab-apiwp*.min.js'
           ],
           dest: 'build/package/js',
@@ -922,16 +926,6 @@ describe('entry tests', () => {
               to: '[path]/[name]wp[contenthash].[ext]',
               toType: 'template'
             },
-            // Always include unminified, unhashed p5.js as this is needed by
-            // unit tests. The order of these rules is important to ensure that
-            // the minified, hashed copy of p5.js appears in the manifest when
-            // minifying.
-            {
-              context: 'build/minifiable-lib/',
-              from: '**/p5.js',
-              to: '[path]/[name].[ext]',
-              toType: 'template'
-            },
             // Libraries in this directory are assumed to have .js and .min.js
             // copies of each source file. In development mode, copy only foo.js.
             // In production mode, copy only foo.min.js and rename it to foo.js.
@@ -1023,8 +1017,8 @@ describe('entry tests', () => {
       files: _.fromPairs(
         ['p5play/p5.play.js', 'p5play/p5.js'].map(function(src) {
           return [
-            'build/minifiable-lib/' + src.replace(/\.js$/, '.min.js'), // dst
-            'build/minifiable-lib/' + src // src
+            'build/package/js/' + src.replace(/\.js$/, '.min.js'), // dst
+            'build/package/js/' + src // src
           ];
         })
       )
