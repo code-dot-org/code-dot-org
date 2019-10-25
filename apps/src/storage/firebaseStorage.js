@@ -32,6 +32,7 @@ import {
   getColumnsRef
 } from './firebaseMetadata';
 import {tableType} from './redux/data';
+import {WarningType} from './constants';
 
 /**
  * Namespace for Firebase storage.
@@ -78,10 +79,12 @@ FirebaseStorage.getKeyValue = function(key, onSuccess, onError) {
 function fixKeyName(key, onError) {
   const newKey = fixFirebaseKey(key);
   if (newKey !== key) {
-    onError(
-      `The key was renamed from "${key}" to "${newKey}" because the characters ` +
+    onError({
+      type: WarningType.KEY_RENAMED,
+      msg:
+        `The key was renamed from "${key}" to "${newKey}" because the characters ` +
         '".", "$", "#", "[", "]", and "/" are not allowed in key names.'
-    );
+    });
     key = newKey;
   }
   return key;
@@ -90,10 +93,12 @@ function fixKeyName(key, onError) {
 function fixTableName(tableName, onError) {
   const newTableName = fixFirebaseKey(tableName);
   if (newTableName !== tableName) {
-    onError(
-      `The table was renamed from "${tableName}" to "${newTableName}" because the characters ` +
+    onError({
+      type: WarningType.TABLE_RENAMED,
+      msg:
+        `The table was renamed from "${tableName}" to "${newTableName}" because the characters ` +
         '".", "$", "#", "[", "]", and "/" are not allowed in table names.'
-    );
+    });
     tableName = newTableName;
   }
   return tableName;
@@ -121,7 +126,10 @@ FirebaseStorage.setKeyValue = function(key, value, onSuccess, onError) {
       try {
         validateFirebaseKey(key);
       } catch (e) {
-        return Promise.reject(`The key is invalid. ${e.message}`);
+        return Promise.reject({
+          type: WarningType.KEY_INVALID,
+          msg: `The key is invalid. ${e.message}`
+        });
       }
       if (jsonValue && jsonValue.length > config.maxPropertySize) {
         return Promise.reject(
@@ -212,7 +220,10 @@ function validateTableName(tableName) {
     validateFirebaseKey(tableName);
     return Promise.resolve();
   } catch (e) {
-    return Promise.reject(`The table name is invalid. ${e.message}`);
+    return Promise.reject({
+      type: WarningType.TABLE_NAME_INVALID,
+      msg: `The table name is invalid. ${e.message}`
+    });
   }
 }
 
@@ -523,9 +534,10 @@ function enforceUniqueTableNames(tableName) {
   const checkForExistingTable = (dbRef, tableName) => {
     return dbRef.once('value').then(snapshot => {
       if (snapshot.val()) {
-        return Promise.reject(
-          `There is already a table with name "${tableName}"`
-        );
+        return Promise.reject({
+          type: WarningType.DUPLICATE_TABLE_NAME,
+          msg: `There is already a table with name "${tableName}"`
+        });
       }
     });
   };
@@ -897,9 +909,10 @@ FirebaseStorage.coerceColumn = function(
         recordsData[recordId] = JSON.stringify(record);
       });
       if (!allConverted) {
-        onError(
-          `Not all values in column "${columnName}" could be converted to type "${columnType}".`
-        );
+        onError({
+          type: WarningType.CANNOT_CONVERT_COLUMN_TYPE,
+          msg: `Not all values in column "${columnName}" could be converted to type "${columnType}".`
+        });
       }
       return recordsRef.set(recordsData);
     })
@@ -942,20 +955,24 @@ function parseRecordsDataFromCsv(csvData) {
 function validateRecordsData(recordsData) {
   return loadConfig().then(config => {
     if (Object.keys(recordsData).length > config.maxTableRows) {
-      return Promise.reject(
-        `Import failed because the data is too large. ` +
+      return Promise.reject({
+        type: WarningType.IMPORT_FAILED,
+        msg:
+          `Import failed because the data is too large. ` +
           `A table may only contain ${config.maxTableRows} rows.`
-      );
+      });
     }
     if (
       Object.keys(recordsData).some(
         id => recordsData[id].length > config.maxRecordSize
       )
     ) {
-      return Promise.reject(
-        `Import failed because one of of the records is too large. ` +
+      return Promise.reject({
+        type: WarningType.IMPORT_FAILED,
+        msg:
+          `Import failed because one of of the records is too large. ` +
           `The maximum allowable size is ${config.maxRecordSize} bytes.`
-      );
+      });
     }
     return recordsData;
   });
