@@ -1,5 +1,7 @@
 require 'base64'
 require 'cdo/db'
+require 'cdo/parse_email_address_string'
+require 'cdo/pegasus/text_render'
 require 'digest/md5'
 require_relative 'email_validator'
 require 'mail'
