@@ -136,11 +136,11 @@ a.category-link {
 
 @media screen and (min-width: 1201px) {
   .announcements-body {
-    min-width: 40%;
+    min-width: 100%;
   }
 
   .robotics-provider {
-    max-width: 25%;
+    max-width: 30%;
   }
 
   .front-header-banner h4 {

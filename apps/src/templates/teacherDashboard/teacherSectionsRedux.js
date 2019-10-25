@@ -141,7 +141,8 @@ export const toggleSectionHidden = sectionId => (dispatch, getState) => {
 };
 
 /**
- * Assigns a course to a given section, persisting these changes * to the server
+ * Assigns a course to a given section, persisting these changes to
+ * the server
  * @param {number} sectionId
  * @param {number} courseId
  */
@@ -151,6 +152,17 @@ export const assignCourseToSection = (sectionId, courseId) => (
 ) => {
   dispatch(beginEditingSection(sectionId, true));
   dispatch(editSectionProperties({courseId: courseId}));
+  return dispatch(finishEditingSection());
+};
+
+/**
+ * Removes assignments from the given section, persisting these changes to
+ * the server
+ * @param {number} sectionId
+ */
+export const unassignSection = sectionId => (dispatch, getState) => {
+  dispatch(beginEditingSection(sectionId, true));
+  dispatch(editSectionProperties({courseId: '', scriptId: ''}));
   return dispatch(finishEditingSection());
 };
 
