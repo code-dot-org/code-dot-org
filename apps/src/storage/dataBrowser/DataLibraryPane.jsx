@@ -10,6 +10,7 @@ import color from '../../util/color';
 import msg from '@cdo/locale';
 import PreviewModal from './PreviewModal';
 import FirebaseStorage from '../firebaseStorage';
+import {WarningType} from '../constants';
 
 const styles = {
   container: {
@@ -35,10 +36,7 @@ class DataLibraryPane extends React.Component {
   };
 
   onError = error => {
-    if (
-      typeof error === 'string' &&
-      error.includes('There is already a table with name')
-    ) {
+    if (error.type === WarningType.DUPLICATE_TABLE_NAME) {
       this.props.onShowWarning(error);
     }
   };
