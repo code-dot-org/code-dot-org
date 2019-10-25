@@ -1,6 +1,5 @@
 # Tests for the routes in form_routes.rb
 
-require 'timecop'
 require_relative './test_helper'
 require_relative 'fixtures/fake_dashboard'
 require_relative 'fixtures/mock_pegasus'
@@ -36,8 +35,8 @@ class FormRoutesTest < SequelTestCase
       # Delete all volunteer sign-ups in the test database before each test
       ::PEGASUS_DB[:forms].where(kind: 'VolunteerEngineerSubmission2015').delete
 
-      stubs(:dashboard_user).returns(nil)
-      Pegasus.stubs(:logger).returns(nil)
+      Pegasus.stubs(:logger)
+      stubs(:dashboard_user)
       stubs(:request).returns(stub(ip: '1.2.3.4'))
     end
 
@@ -48,22 +47,23 @@ class FormRoutesTest < SequelTestCase
     end
 
     it 'uses reverse chronological order' do
-      Timecop.freeze 3.years.ago do
-        create_volunteer name: 'First Person', location: '35.774929,-122.419416'
-        Timecop.travel 1.year
-        create_volunteer name: 'Second Person', location: '35.774929,-122.419416'
-        Timecop.travel 1.year
-        create_volunteer name: 'Last Person', location: '35.774929,-122.419416'
-      end
-
-      results = search location: '35.774368,-122.428760'
-      assert_equal ['Last Person', 'Second Person', 'First Person'], results.map {|r| r['name_s']}
+      here = '35.774929,-122.419416'
+      create_volunteer name: 'Oldest', created_at: 3.years.ago, location: here
+      create_volunteer name: 'Middle', created_at: 2.years.ago, location: here
+      create_volunteer name: 'Newest', created_at: 1.year.ago, location: here
+      results = search location: here
+      assert_equal %w(Newest Middle Oldest), results.map {|r| r['name_s']}
     end
 
-    def create_volunteer(name:, location:)
-      row = insert_or_upsert_form('VolunteerEngineerSubmission2015', DEFAULT_DATA.dup.merge(name_s: name))
-      form = Form.find(id: row[:id])
-      form.update(processed_data: {location_p: location}.to_json)
+    def create_volunteer(name:, location:, created_at: DateTime.now)
+      row = insert_or_upsert_form(
+        'VolunteerEngineerSubmission2015',
+        DEFAULT_DATA.dup.merge(name_s: name)
+      )
+      Form.find(id: row[:id]).update(
+        processed_data: {location_p: location}.to_json,
+        created_at: created_at
+      )
     end
 
     def search(location:)
