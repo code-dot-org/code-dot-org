@@ -15,25 +15,14 @@ Workshops are the core of Code.org's Teacher [Professional Learning Program](htt
 - **[Announcements](#announce)**
 - **[K-5 Workshops](#csf)**
 - **[6-12 Workshops](#csp)**
-- **[Local Summer Workshop Specific](#local)**
+- **[Summer Workshop Specific](#local)**
 - **[Academic Year Workshop Specific](#academic)**
 - **[Virtual PL Specific](#virtual)**
 - **[Workshop Dashboard](#dashboard)**
 - **[Professional Learning Program One-Pager](https://code.org/files/PLProgramsOverview_1-Pager.pdf)**
 
 
-________________
-<a id="announce"></a>
 
-## Announcements
-
-- **New** guidance is available for ordering Local Summer Workshop materials for [K-5 Workshops](#local) and [6-12 Workshops](#local) from the CS Discoveries & CS Principles Mimeo Marketplace
-- **New** resources for the '19-'20 Virtual Professional Learning Program are available [here](#virtual)
-- **New** resources for the CS Fundamentals Deep Dive workshop are available [here](#csf)
-
-
-[**Back to the top**](#top)
-<br/>
 
 ________________
 <a id="csf"></a>
@@ -110,12 +99,12 @@ Always accommodate vegetarian needs, roughly ⅓ of the order. In communications
 
 ### Local Summer Workshop Specific
 
-Updated guidance for hosting 2019 Local Summer Workshops is now available!
+Updated guidance for hosting 2019 Summer Workshops is now available!
 
-- **[2019 Local Summer Workshop Process Document](https://docs.google.com/document/d/1-1c0JqqnIDjMyj0MpCGVpT8WI75g05Cx3CJ4Tdf5tsw/edit?usp=sharing)**
+- **[2019 Summer Workshop Process Document](https://docs.google.com/document/d/1-1c0JqqnIDjMyj0MpCGVpT8WI75g05Cx3CJ4Tdf5tsw/edit?usp=sharing)**
 - **[Sample Logistics Questions for Registration](https://docs.google.com/document/d/1PPnxnoWYim-8qWqOEdwHi0fadx2y-Hc2PWd4QWKd3p8/edit?ts=5c5dc1e6#heading=h.9xw1ckl4l6ru)**
-- **[2019-20 6-12 Supplies Plan for Local Summer Workshops](https://docs.google.com/document/d/1NJHr2B469TqUjIOFSGomN5yUyu9Pqg9jTI_aYPFmGlY/edit#heading=h.gum5nuvbu7rr)**
-- **[2019 Local Summer Workshop Mimeo Marketplace Order Guidance](https://docs.google.com/document/d/1AEsSE76mqM6wehXGUWxwTQZzvfbXoEgRB767hF7JEtI/edit)**
+- **[2019-20 6-12 Supplies Plan for Summer Workshops](https://docs.google.com/document/d/1NJHr2B469TqUjIOFSGomN5yUyu9Pqg9jTI_aYPFmGlY/edit#heading=h.gum5nuvbu7rr)**
+- **[2019 Summer Workshop Mimeo Marketplace Order Guidance](https://docs.google.com/document/d/1AEsSE76mqM6wehXGUWxwTQZzvfbXoEgRB767hF7JEtI/edit)**
 
 
 
