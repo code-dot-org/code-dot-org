@@ -21,7 +21,6 @@ class TeacherDashboard extends Component {
     sectionId: PropTypes.number.isRequired,
     sectionName: PropTypes.string.isRequired,
     studentCount: PropTypes.number.isRequired,
-    userId: PropTypes.number,
 
     // Provided by React router in parent.
     location: PropTypes.object.isRequired
@@ -33,16 +32,18 @@ class TeacherDashboard extends Component {
 
     // Log if we switched tabs in the teacher dashboard
     if (prevProps.location !== this.props.location) {
-      firehoseClient.putRecord({
-        study: 'teacher_dashboard_actions',
-        study_group: previousTab,
-        event: 'click_new_tab',
-        user_id: this.props.userId,
-        data_json: JSON.stringify({
-          section_id: this.props.sectionId,
-          new_tab: newTab
-        })
-      });
+      firehoseClient.putRecord(
+        {
+          study: 'teacher_dashboard_actions',
+          study_group: previousTab,
+          event: 'click_new_tab',
+          data_json: JSON.stringify({
+            section_id: this.props.sectionId,
+            new_tab: newTab
+          })
+        },
+        {includeUserId: true}
+      );
     }
   }
 

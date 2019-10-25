@@ -20,7 +20,6 @@ import ProgressPill from '@cdo/apps/templates/progress/ProgressPill';
 import TooltipWithIcon from './TooltipWithIcon';
 import {SmallAssessmentIcon} from './SmallAssessmentIcon';
 import firehoseClient from '../../lib/util/firehose';
-import {connect} from 'react-redux';
 
 /**
  * A ProgressBubble represents progress for a specific level. It can be a circle
@@ -106,10 +105,7 @@ class ProgressBubble extends React.Component {
     pairingIconEnabled: PropTypes.bool,
     hideToolTips: PropTypes.bool,
     stageExtrasEnabled: PropTypes.bool,
-    hideAssessmentIcon: PropTypes.bool,
-
-    //redux
-    userId: PropTypes.number
+    hideAssessmentIcon: PropTypes.bool
   };
 
   static defaultProps = {
@@ -117,17 +113,19 @@ class ProgressBubble extends React.Component {
   };
 
   recordProgressTabProgressBubbleClick = () => {
-    firehoseClient.putRecord({
-      study: 'teacher_dashboard_actions',
-      study_group: 'progress',
-      event: 'go_to_level',
-      user_id: this.props.userId,
-      data_json: JSON.stringify({
-        student_id: this.props.selectedStudentId,
-        level_url: this.props.level.url,
-        section_id: this.props.selectedSectionId
-      })
-    });
+    firehoseClient.putRecord(
+      {
+        study: 'teacher_dashboard_actions',
+        study_group: 'progress',
+        event: 'go_to_level',
+        data_json: JSON.stringify({
+          student_id: this.props.selectedStudentId,
+          level_url: this.props.level.url,
+          section_id: this.props.selectedSectionId
+        })
+      },
+      {includeUserId: true}
+    );
   };
 
   render() {
@@ -280,8 +278,5 @@ class ProgressBubble extends React.Component {
     return bubble;
   }
 }
-connect(state => ({
-  userId: state.currentUser.userId
-}))(ProgressBubble);
 
 export default Radium(ProgressBubble);
