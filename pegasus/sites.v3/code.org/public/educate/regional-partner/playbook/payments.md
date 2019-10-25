@@ -20,17 +20,6 @@ ________________
 
 ________________
 
-## Announcements
-
-**March 8 -**
-
-Instructions for requesting reimbursement towards the [Teacher Recruitment Fund](https://code.org/educate/regional-partner/playbook/teacher-recruitment#recruitment) is now available. Jump to the [Teacher Recruitment Fund](#recruitment) section below.
-
-
-
-**March 1 -**
-
-All invoices should be submitted by completing the form and attaching the required documentation at [bit.ly/codeinvoices](http://bit.ly/codeinvoices).
 
 Please note that invoices submitted to invoices@code.org on or after March 1 will be redirected to the new submission form. Invoices submitted more than 30 days after the event or workshop date will not be paid per our existing policy.
 
