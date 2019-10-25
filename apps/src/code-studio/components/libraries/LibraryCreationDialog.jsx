@@ -209,14 +209,11 @@ class LibraryCreationDialog extends React.Component {
       return (
         <div>
           <Heading2>
-            <b>Successfully published your library: </b>
+            <b>{i18n.libraryPublishTitle()}</b>
             {this.state.libraryName}
           </Heading2>
           <div>
-            <p style={{fontSize: 20}}>
-              Share this code with others so they can use your library in their
-              project:
-            </p>
+            <p style={{fontSize: 20}}>{i18n.libraryPublishExplanation()}</p>
             <div style={{display: 'flex', justifyContent: 'center'}}>
               <input
                 type="text"
@@ -228,7 +225,7 @@ class LibraryCreationDialog extends React.Component {
               />
               <Button
                 onClick={this.copyChannelId}
-                text={'Copy code'}
+                text={i18n.copyCode()}
                 style={{marginLeft: 10, marginRight: 10}}
               />
             </div>
