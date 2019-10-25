@@ -9,7 +9,7 @@ script_announcements [{"notice"=>"New: Choose Which Lessons to Show or Hide for 
 family_name 'pre-express'
 version_year '2018'
 is_stable true
-supported_locales ["sk-SK"]
+supported_locales ["it-IT", "sk-SK"]
 curriculum_umbrella 'CSF'
 
 stage 'Debugging: Unspotted Bugs'
