@@ -34,8 +34,9 @@ function createDropletConfig(functions, libraryName) {
     }
 
     let individualConfig = {
-      func: `${libraryName}.${currentFunction.functionName}`,
-      category: 'Functions'
+      func: currentFunction.functionName,
+      category: 'Functions',
+      comment: currentFunction.comment
     };
 
     if (currentFunction.parameters && currentFunction.parameters.length > 0) {
@@ -61,19 +62,46 @@ function createDropletConfig(functions, libraryName) {
  * @param {string} libraryName The name of the library
  * @returns {null,string} null if there is an error. Else, the library closure
  */
-function createLibraryClosure(code, functions, libraryName) {
+function createLibraryClosure(code, functionNames, libraryName) {
   let exportedFunctions = [];
-  for (let currentFunction of functions) {
-    if (!currentFunction.functionName) {
-      return;
-    }
-    exportedFunctions.push(
-      `${currentFunction.functionName}: ${currentFunction.functionName}`
-    );
+  for (let functionName of functionNames) {
+    exportedFunctions.push(`${functionName}: ${functionName}`);
   }
 
   let functionsInClosure = exportedFunctions.join(',');
   return `var ${libraryName} = (function() {${code}; return {${functionsInClosure}}})();`;
+}
+
+/**
+ * Given a library json, migrates it into a consumable format. This function
+ * creates the library closure and edits the droplet config so each function
+ * references the closure using the correct name of the library.
+ *
+ * @param {string} json The raw string json of the library as imported from S3
+ * @param {string} newName An alternate name for the library if the user renamed
+ *                         it on import.
+ * @returns {obejct} The json representation of the library with the source
+ *                   wrapped in a closure and the functions named Library.func
+ */
+export function prepareLibraryForImport(json, newName) {
+  let libraryJson = JSON.parse(json);
+  libraryJson.originalName = libraryJson.name;
+  if (newName) {
+    libraryJson.name = newName;
+  }
+
+  let functionNames = [];
+  libraryJson.dropletConfig.forEach(functionConfig => {
+    functionNames.push(functionConfig.func);
+    functionConfig.func = `${libraryJson.name}.${functionConfig.func}`;
+  });
+
+  libraryJson.source = createLibraryClosure(
+    libraryJson.source,
+    functionNames,
+    libraryJson.name
+  );
+  return libraryJson;
 }
 
 /**
@@ -102,8 +130,7 @@ export function createLibraryJson(
   }
 
   let config = createDropletConfig(selectedFunctions, libraryName);
-  let closure = createLibraryClosure(code, selectedFunctions, libraryName);
-  if (!config || !closure) {
+  if (!config) {
     return;
   }
 
@@ -111,7 +138,7 @@ export function createLibraryJson(
     name: libraryName,
     description: libraryDescription,
     dropletConfig: config,
-    source: closure
+    source: code
   });
 }
 
@@ -133,4 +160,9 @@ export function sanitizeName(libraryName) {
   return sanitizedName;
 }
 
-export default {getFunctions, createLibraryJson, sanitizeName};
+export default {
+  prepareLibraryForImport,
+  getFunctions,
+  createLibraryJson,
+  sanitizeName
+};
