@@ -57,14 +57,7 @@ describe('InstructionsCSF', () => {
   }
 
   function assertFeedbackContainsText(wrapper, text) {
-    assert.include(
-      wrapper
-        .getDOMNode()
-        .querySelector(
-          '.uitest-topInstructions-inline-feedback xml svg:nth-of-type(2)'
-        ).innerHTML,
-      text
-    );
+    assert.include(wrapper.getDOMNode().querySelector('xml').innerHTML, text);
   }
 });
 
