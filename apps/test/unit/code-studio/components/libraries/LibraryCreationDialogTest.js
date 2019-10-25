@@ -1,11 +1,15 @@
 import {expect, assert} from '../../../../util/reconfiguredChai';
 import React from 'react';
 import {mount} from 'enzyme';
-import {UnconnectedLibraryCreationDialog as LibraryCreationDialog} from '@cdo/apps/code-studio/components/libraries/LibraryCreationDialog.jsx';
+import {
+  UnconnectedLibraryCreationDialog as LibraryCreationDialog,
+  LoadingState
+} from '@cdo/apps/code-studio/components/libraries/LibraryCreationDialog.jsx';
 import libraryParser from '@cdo/apps/code-studio/components/libraries/libraryParser';
 import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
 import sinon from 'sinon';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
+import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
 
 const LIBRARY_SOURCE =
   '/*\n' +
@@ -30,12 +34,30 @@ const LIBRARY_SOURCE =
 
 describe('LibraryCreationDialog', () => {
   let wrapper;
-  let clientApi = new LibraryClientApi('123');
-  let publishSpy = sinon.stub(clientApi, 'publish');
+  let clientApi;
+  let publishSpy;
 
   const SUBMIT_SELECTOR = 'input[type="submit"]';
   const CHECKBOX_SELECTOR = 'input[type="checkbox"]';
   const DESCRIPTION_SELECTOR = 'textarea';
+  const CHANNEL_ID_SELECTOR = 'input[type="text"]';
+
+  before(() => {
+    replaceOnWindow('dashboard', {
+      project: {
+        setLibraryName: () => {},
+        getCurrentId: () => {}
+      }
+    });
+    sinon.stub(window.dashboard.project, 'setLibraryName').returns(undefined);
+    sinon.stub(window.dashboard.project, 'getCurrentId').returns('123');
+    clientApi = new LibraryClientApi('123');
+    publishSpy = sinon.stub(clientApi, 'publish');
+  });
+
+  after(() => {
+    restoreOnWindow('dashboard');
+  });
 
   beforeEach(() => {
     wrapper = mount(
@@ -56,7 +78,7 @@ describe('LibraryCreationDialog', () => {
       wrapper.setState({
         libraryName: 'testLibrary',
         librarySource: LIBRARY_SOURCE,
-        loadingFinished: true,
+        loadingState: LoadingState.DONE_LOADING,
         sourceFunctionList: libraryParser.getFunctions(LIBRARY_SOURCE)
       });
 
@@ -67,7 +89,7 @@ describe('LibraryCreationDialog', () => {
       wrapper.setState({
         libraryName: 'testLibrary',
         librarySource: LIBRARY_SOURCE,
-        loadingFinished: true,
+        loadingState: LoadingState.DONE_LOADING,
         sourceFunctionList: libraryParser.getFunctions(LIBRARY_SOURCE)
       });
 
@@ -86,7 +108,7 @@ describe('LibraryCreationDialog', () => {
       wrapper.setState({
         libraryName: 'testLibrary',
         librarySource: LIBRARY_SOURCE,
-        loadingFinished: true,
+        loadingState: LoadingState.DONE_LOADING,
         sourceFunctionList: libraryParser.getFunctions(LIBRARY_SOURCE)
       });
 
@@ -107,7 +129,7 @@ describe('LibraryCreationDialog', () => {
       wrapper.setState({
         libraryName: 'testLibrary',
         librarySource: LIBRARY_SOURCE,
-        loadingFinished: true,
+        loadingState: LoadingState.DONE_LOADING,
         sourceFunctionList: libraryParser.getFunctions(LIBRARY_SOURCE)
       });
 
@@ -118,6 +140,19 @@ describe('LibraryCreationDialog', () => {
           .prop('required')
       );
     });
+
+    it('displays channel id when in published state', () => {
+      wrapper.setState({
+        libraryName: 'testLibrary',
+        librarySource: LIBRARY_SOURCE,
+        loadingState: LoadingState.PUBLISHED,
+        sourceFunctionList: libraryParser.getFunctions(LIBRARY_SOURCE)
+      });
+
+      assert.isTrue(
+        wrapper.find(CHANNEL_ID_SELECTOR).instance().value === '123'
+      );
+    });
   });
 
   describe('publish', () => {
@@ -126,7 +161,7 @@ describe('LibraryCreationDialog', () => {
       wrapper.setState({
         libraryName: 'testLibrary',
         librarySource: LIBRARY_SOURCE,
-        loadingFinished: true,
+        loadingState: LoadingState.DONE_LOADING,
         sourceFunctionList: functionList
       });
 

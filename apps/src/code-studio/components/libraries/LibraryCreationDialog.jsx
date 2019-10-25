@@ -9,6 +9,7 @@ import i18n from '@cdo/locale';
 import PadAndCenter from '@cdo/apps/templates/teacherDashboard/PadAndCenter';
 import {Heading1, Heading2} from '@cdo/apps/lib/ui/Headings';
 import Spinner from '../../pd/components/spinner';
+import Button from '@cdo/apps/templates/Button';
 
 const styles = {
   alert: {
@@ -42,7 +43,7 @@ function select(event) {
  * @readonly
  * @enum {string}
  */
-const LoadingState = {
+export const LoadingState = {
   LOADING: 'loading',
   DONE_LOADING: 'done_loading',
   PUBLISHED: 'published'
@@ -85,6 +86,14 @@ class LibraryCreationDialog extends React.Component {
   handleClose = () => {
     this.setState({loadingState: LoadingState.LOADING});
     this.props.onClose();
+  };
+
+  copyChannelId = () => {
+    let channelId = document.getElementById('library-sharing');
+    channelId.select();
+    channelId.setSelectionRange(0, 999);
+
+    document.execCommand('copy');
   };
 
   publish = event => {
@@ -208,14 +217,21 @@ class LibraryCreationDialog extends React.Component {
               Share this code with others so they can use your library in their
               project:
             </p>
-            <input
-              type="text"
-              id="library-sharing"
-              onClick={select}
-              readOnly="true"
-              value={dashboard.project.getCurrentId()}
-              style={{cursor: 'copy', width: 500}}
-            />
+            <div style={{display: 'flex', justifyContent: 'center'}}>
+              <input
+                type="text"
+                id="library-sharing"
+                onClick={select}
+                readOnly="true"
+                value={dashboard.project.getCurrentId()}
+                style={{cursor: 'copy', width: 300}}
+              />
+              <Button
+                onClick={this.copyChannelId}
+                text={'Copy code'}
+                style={{marginLeft: 10, marginRight: 10}}
+              />
+            </div>
           </div>
         </div>
       );
