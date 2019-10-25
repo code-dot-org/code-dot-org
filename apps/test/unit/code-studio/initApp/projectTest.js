@@ -503,6 +503,34 @@ describe('project.js', () => {
     });
   });
 
+  describe('setLibraryDescription()', () => {
+    it('updates the current library description', () => {
+      let oldDescription = 'description';
+      let newDescription = 'My library does something cool';
+      setData({libraryDescription: oldDescription});
+      sinon.stub(project, 'updateChannels_');
+
+      expect(project.getCurrentLibraryDescription()).to.equal(oldDescription);
+      project.setLibraryDescription(newDescription);
+      expect(project.getCurrentLibraryDescription()).to.equal(newDescription);
+      expect(project.updateChannels_).to.have.been.called;
+
+      setData({});
+      project.updateChannels_.restore();
+    });
+
+    it('does nothing if no description is passed', () => {
+      sinon.stub(project, 'updateChannels_');
+
+      expect(project.getCurrentLibraryDescription()).to.be.undefined;
+      project.setLibraryDescription();
+      expect(project.getCurrentLibraryDescription()).to.be.undefined;
+      expect(project.updateChannels_).to.have.not.been.called;
+
+      project.updateChannels_.restore();
+    });
+  });
+
   describe('setProjectLibraries()', () => {
     beforeEach(() => {
       sinon
