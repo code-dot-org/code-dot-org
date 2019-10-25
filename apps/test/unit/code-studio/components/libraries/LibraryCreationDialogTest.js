@@ -3,8 +3,9 @@ import React from 'react';
 import {mount} from 'enzyme';
 import {UnconnectedLibraryCreationDialog as LibraryCreationDialog} from '@cdo/apps/code-studio/components/libraries/LibraryCreationDialog.jsx';
 import libraryParser from '@cdo/apps/code-studio/components/libraries/libraryParser';
-import LibraryClientApi from '../../../../../src/code-studio/components/libraries/LibraryClientApi';
+import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
 import sinon from 'sinon';
+import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 
 const LIBRARY_SOURCE =
   '/*\n' +
@@ -99,7 +100,7 @@ describe('LibraryCreationDialog', () => {
 
     it('displays loading while in the loading state', () => {
       expect(wrapper.find(SUBMIT_SELECTOR).exists()).to.be.false;
-      expect(wrapper.find('#loading').exists()).to.be.true;
+      expect(wrapper.find(Spinner).exists()).to.be.true;
     });
 
     it('description is required', () => {
