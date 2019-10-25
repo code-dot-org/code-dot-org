@@ -167,7 +167,7 @@ export default class LibraryManagerDialog extends React.Component {
           />
           <button
             style={styles.add}
-            onClick={() => this.addLibrary(this.state.libraryToImport)}
+            onClick={() => this.addLibrary(this.state.importLibraryId)}
             type="button"
           >
             Add
