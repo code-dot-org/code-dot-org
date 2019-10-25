@@ -127,7 +127,7 @@ Resources:
     Properties:
       MigrationType: full-load
       ReplicationInstanceArn: !Ref TableauSync
-      ReplicationTaskIdentifier: <%= task_name %>-full-load
+      ReplicationTaskIdentifier: <%= task_name %>-full-load-no-cdc
       SourceEndpointArn: !Ref AuroraReaderEndpoint
       TargetEndpointArn: !Ref RedshiftEndpoint
       ReplicationTaskSettings: !Sub |
