@@ -58,6 +58,7 @@ import {showHideWorkspaceCallouts} from '@cdo/apps/code-studio/callouts';
 import defaultSprites from './spritelab/defaultSprites.json';
 import wrap from './gamelab/debugger/replay';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import header from '../code-studio/header';
 import {
   clearMarks,
   clearMeasures,
@@ -227,7 +228,15 @@ P5Lab.prototype.init = function(config) {
       new JavaScriptModeErrorHandler(() => this.JSInterpreter, this)
     );
   }
+
   this.level = config.level;
+  if (!this.isSpritelab && this.level.editBlocks) {
+    config.level.lastAttempt = '';
+    header.showLevelBuilderSaveButton(() => ({
+      start_blocks: this.studioApp_.getCode(),
+      start_libraries: JSON.stringify(project.getProjectLibraries())
+    }));
+  }
 
   this.level.helperLibraries = this.level.helperLibraries || [];
 

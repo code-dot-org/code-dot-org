@@ -424,9 +424,11 @@ Applab.init = function(config) {
   }
 
   if (config.level.editBlocks) {
+    config.level.lastAttempt = '';
     header.showLevelBuilderSaveButton(() => ({
       start_blocks: Applab.getCode(),
-      start_html: Applab.getHtml()
+      start_html: Applab.getHtml(),
+      start_libraries: JSON.stringify(project.getProjectLibraries())
     }));
   }
   Applab.channelId = config.channel;
