@@ -18,9 +18,13 @@
         max-width: 970px;
         margin: 0 auto;
         user-select: none;
+        font-family: arial, sans-serif;
+        font-size: 18px;
+        color: rgb(30,30,30);
       }
       #header-container,
       #footer-container {
+        position: absolute;
         opacity: 0.4;
         width: 100%;
         height: 50px;
@@ -38,14 +42,13 @@
         border-radius: 20px;
         padding: 10px 45px;
       }
-      #activity-canvas,
       #background-canvas {
         border: 2px solid black;
         border-radius: 5px;
       }
       #background-canvas {
         position: absolute;
-        top: 50px; /* accounts for #header-container */
+        xtop: 50px; /* accounts for #header-container */
         left: 0;
         width: 100%;
         z-index: -1;
@@ -56,7 +59,7 @@
       #ui-container {
         opacity: 0.4;
         position: absolute;
-        top: 50px; /* accounts for #header-container */
+        xtop: 50px; /* accounts for #header-container */
         left: 0;
         width: 100%;
         height: calc(

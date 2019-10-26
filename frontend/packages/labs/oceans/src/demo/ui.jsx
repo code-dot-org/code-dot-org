@@ -1,54 +1,72 @@
 import React from 'react';
-import {getState} from './state';
+import {getState, setState} from './state';
 import {Modes} from './constants';
 import {toMode} from './helpers';
+import {init as initScene} from './init';
+import {onClassifyFish} from './models/train';
 
 const styles = {
-  headerContainer: {
+  Header: {
+    position: 'absolute',
+    top: 0,
     width: '100%',
-    height: 50,
+    //height: 50,
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    fontSize: 32
   },
-  footerContainer: {
+  Footer: {
+    position: 'absolute',
+    bottom: 0,
     width: '100%',
     height: 50,
     display: 'flex',
     justifyContent: 'space-between'
   },
-  bodyContainer: {
+  Body: {
     position: 'relative',
     width: '100%',
     paddingTop: '56.25%' // for 16:9
   },
-  bodyContent: {
+  Content: {
     position: 'absolute',
-    top: 0,
+    top: '10%',
     left: 0,
     width: '100%'
+  },
+  button: {
+    cursor: 'pointer'
   },
   heading: {
     border: '2px solid black',
     borderRadius: 20,
-    padding: '10px 45px'
+    padding: '10px 45px',
+    fontSize: 24
   },
   activityIntroText: {
     position: 'absolute',
     fontSize: 24,
-    top: '5%',
+    top: '20%',
     width: '98%',
     left: '1%',
     textAlign: 'center'
   },
+  trainingIntroBot: {
+    position: 'absolute',
+    //height: '50%',
+    transform: 'translateX(-50%)',
+    top: '30%',
+    left: '50%'
+  },
   activityIntroBot: {
     position: 'absolute',
-    height: '50%',
+    //height: '50%',
     transform: 'translateX(-50%)',
     top: '50%',
     left: '50%'
   },
-  activityIntroContinueButton: {
+  continueButton: {
     marginLeft: 'auto'
   },
   wordsText: {
@@ -62,35 +80,81 @@ const styles = {
     margin: '0 auto',
     marginTop: '2%',
     marginBottom: '2%'
+  },
+  trainQuestionText: {
+    position: 'absolute',
+    top: '20%',
+    left: '50%',
+    transform: 'translateX(-50%)'
+  },
+  trainButtonYes: {
+    position: 'absolute',
+    top: '80%',
+    left: '30%'
+  },
+  trainButtonNo: {
+    position: 'absolute',
+    top: '80%',
+    left: '60%'
+  },
+  pondText: {
+    position: 'absolute',
+    top: '90%',
+    left: '50%',
+    transform: 'translateX(-50%)'
+  },
+  trainBot: {
+    position: 'absolute',
+    height: '50%',
+    top: '20%',
+    left: '70%'
+  },
+  predictBot: {
+    position: 'absolute',
+    height: '50%',
+    top: '2%',
+    left: '50%',
+    transform: 'translateX(-50%)'
+  },
+  pondBot: {
+    position: 'absolute',
+    height: '50%',
+    left: '10%',
+    bottom: '5%'
   }
 };
 
-class HeaderContainer extends React.Component {
+class Body extends React.Component {
   render() {
-    return <div style={styles.headerContainer}>{this.props.children}</div>;
+    return <div style={styles.Body}>{this.props.children}</div>;
   }
 }
 
-class BodyContainer extends React.Component {
+class Header extends React.Component {
   render() {
-    return (
-      <div style={styles.bodyContainer}>
-        <div style={styles.bodyContent}>{this.props.children}</div>
-      </div>
-    );
+    return <div style={styles.Header}>{this.props.children}</div>;
   }
 }
 
-class FooterContainer extends React.Component {
+class Content extends React.Component {
   render() {
-    return <div style={styles.footerContainer}>{this.props.children}</div>;
+    return <div style={styles.Content}>{this.props.children}</div>;
+  }
+}
+
+class Footer extends React.Component {
+  render() {
+    return <div style={styles.Footer}>{this.props.children}</div>;
   }
 }
 
 class Button extends React.Component {
   render() {
     return (
-      <button style={this.props.style} onClick={this.props.onClick}>
+      <button
+        style={{...this.props.style, ...styles.button}}
+        onClick={this.props.onClick}
+      >
         {this.props.children}
       </button>
     );
@@ -101,12 +165,9 @@ class ActivityIntro extends React.Component {
   render() {
     return (
       <div>
-        <HeaderContainer>headerContainer</HeaderContainer>
-        <BodyContainer>
+        <Body>
+          <Header>Meet A.I.</Header>
           <div style={styles.activityIntroText}>
-            <b>Meet A.I.</b>
-            <br />
-            <br />
             Machine learning and Artificial Intelligence (AI) can give
             recommendations, like when a computer suggests videos to watch or
             products to buy. What else can we teach a computer?
@@ -116,15 +177,15 @@ class ActivityIntro extends React.Component {
             of that type of fish.
           </div>
           <img style={styles.activityIntroBot} src="images/ai-bot-closed.png" />
-        </BodyContainer>
-        <FooterContainer>
-          <Button
-            style={styles.activityIntroContinueButton}
-            onClick={() => toMode(Modes.Words)}
-          >
-            Continue
-          </Button>
-        </FooterContainer>
+          <Footer>
+            <Button
+              style={styles.continueButton}
+              onClick={() => toMode(Modes.Words)}
+            >
+              Continue
+            </Button>
+          </Footer>
+        </Body>
       </div>
     );
   }
@@ -160,7 +221,7 @@ class Words extends React.Component {
     return this.items[itemSet];
   }
 
-  onChangeWord() {
+  onChangeWord(itemIndex) {
     setState({
       word: this.currentItems()[itemIndex],
       currentMode: Modes.TrainingIntro
@@ -173,11 +234,9 @@ class Words extends React.Component {
     const buttonStyle = styles.button1col;
 
     return (
-      <div>
-        <HeaderContainer>
-          <div style={styles.heading}>Choose Fish Type</div>
-        </HeaderContainer>
-        <BodyContainer>
+      <Body>
+        <Header>Choose Fish Type</Header>
+        <Content>
           <div style={styles.wordsText}>
             What type of fish do you want to train A.I. to detect?
           </div>
@@ -190,9 +249,106 @@ class Words extends React.Component {
               {item}
             </Button>
           ))}
-        </BodyContainer>
-        <FooterContainer />
-      </div>
+        </Content>
+      </Body>
+    );
+  }
+}
+
+class TrainingIntro extends React.Component {
+  render() {
+    const state = getState();
+
+    return (
+      <Body>
+        <Header />
+        <div style={styles.activityIntroText}>
+          Now let's teach A.I. what <b>{state.word.toUpperCase()}</b> fish look
+          like.
+        </div>
+        <img style={styles.trainingIntroBot} src="images/ai-bot-closed.png" />
+        <Footer>
+          <Button
+            style={styles.continueButton}
+            onClick={() => toMode(Modes.Training)}
+          >
+            Continue
+          </Button>
+        </Footer>
+      </Body>
+    );
+  }
+}
+
+class Train extends React.Component {
+  render() {
+    const state = getState();
+    const questionText = `Is this fish ${state.word.toUpperCase()}?`;
+
+    return (
+      <Body>
+        <Header>A.I. Training</Header>
+        <div style={styles.trainQuestionText}>{questionText}</div>
+        <img style={styles.trainBot} src="images/ai-bot-closed.png" />
+        <Button
+          style={styles.trainButtonYes}
+          onClick={() => onClassifyFish(true)}
+        >
+          Yes
+        </Button>
+        <Button
+          style={styles.trainButtonNo}
+          onClick={() => onClassifyFish(false)}
+        >
+          No
+        </Button>
+        <Footer>
+          <Button
+            style={styles.continueButton}
+            onClick={() => toMode(Modes.Predicting)}
+          >
+            Continue
+          </Button>
+        </Footer>
+      </Body>
+    );
+  }
+}
+
+class Predict extends React.Component {
+  render() {
+    return (
+      <Body>
+        <Header>A.I. Sorting</Header>
+        <img style={styles.predictBot} src="images/ai-bot-closed.png" />
+        <Footer>
+          <Button
+            style={styles.continueButton}
+            onClick={() => toMode(Modes.Pond)}
+          >
+            Continue
+          </Button>
+        </Footer>
+      </Body>
+    );
+  }
+}
+
+class Pond extends React.Component {
+  render() {
+    const state = getState();
+    const pondText = `Out of ${
+      state.fishData.length
+    } objects, A.I. identified ${
+      state.pondFish.length
+    } that it classified as ${state.word.toUpperCase()}.`;
+
+    return (
+      <Body>
+        <Header>A.I. Results</Header>
+        <div style={styles.pondText}>{pondText}</div>
+        <img style={styles.pondBot} src="images/ai-bot-closed.png" />
+      </Body>
     );
   }
 }
@@ -205,6 +361,10 @@ module.exports = class UI extends React.Component {
       <div>
         {mode === Modes.ActivityIntro && <ActivityIntro />}
         {mode === Modes.Words && <Words />}
+        {mode === Modes.TrainingIntro && <TrainingIntro />}
+        {mode === Modes.Training && <Train />}
+        {mode === Modes.Predicting && <Predict />}
+        {mode === Modes.Pond && <Pond />}
       </div>
     );
   }

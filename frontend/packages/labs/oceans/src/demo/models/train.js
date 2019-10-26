@@ -71,7 +71,7 @@ const uiElements = state => {
   ];
 };
 
-const onClassifyFish = doesLike => {
+export const onClassifyFish = doesLike => {
   const state = getState();
 
   // No-op if animation is currently in progress.
