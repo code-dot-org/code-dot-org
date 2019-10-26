@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {getState, setState} from './state';
 import {Modes} from './constants';
 import {toMode} from './helpers';
@@ -132,33 +133,56 @@ const styles = {
 };
 
 class Body extends React.Component {
+  static propTypes = {
+    children: PropTypes.node
+  };
+
   render() {
     return <div style={styles.body}>{this.props.children}</div>;
   }
 }
 
 class Header extends React.Component {
+  static propTypes = {
+    children: PropTypes.node
+  };
+
   render() {
     return <div style={styles.header}>{this.props.children}</div>;
   }
 }
 
 class Content extends React.Component {
+  static propTypes = {
+    children: PropTypes.node
+  };
+
   render() {
     return <div style={styles.content}>{this.props.children}</div>;
   }
 }
 
 class Footer extends React.Component {
+  static propTypes = {
+    children: PropTypes.node
+  };
+
   render() {
     return <div style={styles.footer}>{this.props.children}</div>;
   }
 }
 
 class Button extends React.Component {
+  static propTypes = {
+    style: PropTypes.object,
+    children: PropTypes.node,
+    onClick: PropTypes.func
+  };
+
   render() {
     return (
       <button
+        type="button"
         style={{...this.props.style, ...styles.button}}
         onClick={this.props.onClick}
       >
