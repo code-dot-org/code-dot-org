@@ -89,6 +89,14 @@ const styles = {
     transform: 'translateX(-50%)',
     fontSize: 22
   },
+  trainQuestionTextDisabled: {
+    position: 'absolute',
+    top: '18%',
+    left: '50%',
+    transform: 'translateX(-50%)',
+    fontSize: 22,
+    opacity: 0.5
+  },
   trainButtonYes: {
     position: 'absolute',
     top: '80%',
@@ -317,11 +325,14 @@ class Train extends React.Component {
   render() {
     const state = getState();
     const questionText = `Is this fish ${state.word.toUpperCase()}?`;
+    const trainQuestionTextStyle = state.isRunning
+      ? styles.trainQuestionTextDisabled
+      : styles.trainQuestionText;
 
     return (
       <Body>
         <Header>A.I. Training</Header>
-        <div style={styles.trainQuestionText}>{questionText}</div>
+        <div style={trainQuestionTextStyle}>{questionText}</div>
         <img style={styles.trainBot} src="images/ai-bot-closed.png" />
         <Button
           style={styles.trainButtonYes}
