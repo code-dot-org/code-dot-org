@@ -1,48 +1,6 @@
 module Pd::SurveyPipeline
-  class DailySurveyParser < SurveyPipelineWorker
+  class DailySurveyParser
     include Pd::JotForm::Constants
-
-    REQUIRED_INPUT_KEYS = [:survey_questions]
-    OPTIONAL_INPUT_KEYS = [:workshop_submissions, :facilitator_submissions]
-    OUTPUT_KEYS = [:parsed_questions, :parsed_submissions]
-
-    # @param context [Hash] contains necessary input for this worker to process.
-    #   Results are added back to the context object.
-    #
-    # @return [Hash] the same context object.
-    #
-    # @raise [RuntimeError] if required input keys are missing.
-    #
-    def self.process_data(context)
-      check_required_input_keys REQUIRED_INPUT_KEYS, context
-
-      results = transform_data context.slice(*(REQUIRED_INPUT_KEYS + OPTIONAL_INPUT_KEYS))
-
-      OUTPUT_KEYS.each do |key|
-        context[key] ||= {}
-        context[key].deep_merge! results[key]
-      end
-
-      context
-    end
-
-    # Parse input records into hashes.
-    #
-    # @param survey_questions [Array<Pd::SurveyQuestion>]
-    # @param workshop_submissions [Array<Pd::WorkshopDailySurvey>]
-    # @param facilitator_submissions [Array<Pd::WorkshopFacilitatorDailySurvey>]
-    #
-    # @return [Hash{:questions, :submissions => Hash}]
-    #
-    def self.transform_data(survey_questions:, workshop_submissions: [], facilitator_submissions: [])
-      workshop_submissions = parse_submissions(workshop_submissions)
-      facilitator_submissions = parse_submissions(facilitator_submissions)
-
-      {
-        parsed_questions: parse_questions(survey_questions),
-        parsed_submissions: workshop_submissions.merge(facilitator_submissions)
-      }
-    end
 
     # Parse an array of submissions into hashes.
     #
