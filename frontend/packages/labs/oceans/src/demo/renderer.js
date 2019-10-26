@@ -166,7 +166,7 @@ const getOffsetForTime = (t, totalFish) => {
   let amount = t / moveTime;
 
   // Apply an S-curve to that amount.
-  amount = amount - Math.sin(amount*2*Math.PI) / (2*Math.PI);
+  amount = amount - Math.sin(amount * 2 * Math.PI) / (2 * Math.PI);
 
   return (
     constants.fishCanvasWidth * totalFish -
@@ -209,7 +209,8 @@ const getYForFish = (numFish, fishIdx, state, offsetX, predictedClassId) => {
     }
 
     // And sway fish vertically on the predicting screen.
-    const swayValue = (($time() * 360) / (20 * 1000) + (fishIdx + 1) * 10) % 360;
+    const swayValue =
+      (($time() * 360) / (20 * 1000) + (fishIdx + 1) * 10) % 360;
     const swayOffsetY = Math.sin(((swayValue * Math.PI) / 180) * 6) * 8;
     y += swayOffsetY;
   }
@@ -253,7 +254,11 @@ const drawMovingFish = state => {
 
     if (state.currentMode === Modes.Predicting) {
       if (fish.result) {
-        drawPrediction(fish.result.predictedClassId, state.word, x, y, ctx);
+        const midScreenX =
+          constants.canvasWidth / 2 - constants.fishCanvasWidth / 2;
+        if (x > midScreenX) {
+          drawPrediction(fish.result.predictedClassId, state.word, x, y, ctx);
+        }
       } else {
         predictFish(state, i).then(prediction => {
           fish.result = prediction;
@@ -344,7 +349,8 @@ const drawPondFishImages = () => {
   const canvas = getState().canvas;
   const ctx = canvas.getContext('2d');
   getState().pondFish.forEach(fish => {
-    const swayValue = (($time() * 360) / (20 * 1000) + (fish.id + 1) * 10) % 360;
+    const swayValue =
+      (($time() * 360) / (20 * 1000) + (fish.id + 1) * 10) % 360;
     const swayOffsetX = Math.sin(((swayValue * Math.PI) / 180) * 2) * 120;
     const swayOffsetY = Math.sin(((swayValue * Math.PI) / 180) * 6) * 8;
 
