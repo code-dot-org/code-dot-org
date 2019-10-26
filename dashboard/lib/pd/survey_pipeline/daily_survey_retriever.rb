@@ -28,7 +28,7 @@ module Pd::SurveyPipeline
     # in a selected list of workshops.
     #
     # @param facilitator_id [Integer]
-    # @param workshop_ids [Array<Integer>] non-empty list of workshop ids
+    # @param workshop_ids [Integer, Array<Integer>] a workshop id or a list of workshop ids
     # @return [Array<Array>, nil] An array of 2 arrays: Array<Pd::SurveyQuestion> and
     #   Array<Pd::WorkshopFacilitatorDailySurvey>.
     #   Returns nil if either of the input parameter is nil.
@@ -47,7 +47,7 @@ module Pd::SurveyPipeline
 
     # Retrieve general workshop survey submissions and questions for selected workshops.
     #
-    # @param workshop_ids [Array<Integer>] non-empty list of workshop ids
+    # @param workshop_ids [Integer, Array<Integer>] a workshop id or a list of workshop ids
     # @return [Array<Array>] An array of 2 arrays: Array<Pd::SurveyQuestion> and
     #   Array<Pd::WorkshopDailySurvey>. Returns nil if the input parameter is nil.
     #
