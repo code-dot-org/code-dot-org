@@ -289,7 +289,7 @@ const drawFrame = state => {
     size,
     size,
     '#F0F0F0',
-    '#000000'
+    '#F0F0F0'
   );
 };
 

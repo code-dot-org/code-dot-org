@@ -9,6 +9,9 @@ export const backgroundPathForMode = mode => {
     imgName = 'underwater';
   }
 
+  // Temporarily show background for every mode.
+  imgName = 'underwater';
+
   return imgName ? backgroundPath(imgName) : null;
 };
 

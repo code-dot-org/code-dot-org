@@ -8,19 +8,17 @@ import {onClassifyFish} from './models/train';
 const styles = {
   Header: {
     position: 'absolute',
-    top: 0,
+    top: 10,
     width: '100%',
-    //height: 50,
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    fontSize: 32
+    fontSize: 48
   },
   Footer: {
     position: 'absolute',
     bottom: 0,
     width: '100%',
-    height: 50,
     display: 'flex',
     justifyContent: 'space-between'
   },
@@ -38,18 +36,13 @@ const styles = {
   button: {
     cursor: 'pointer'
   },
-  heading: {
-    border: '2px solid black',
-    borderRadius: 20,
-    padding: '10px 45px',
-    fontSize: 24
-  },
   activityIntroText: {
     position: 'absolute',
-    fontSize: 24,
+    fontSize: 22,
     top: '20%',
-    width: '98%',
-    left: '1%',
+    left: '50%',
+    width: '80%',
+    transform: 'translateX(-50%)',
     textAlign: 'center'
   },
   trainingIntroBot: {
@@ -67,12 +60,14 @@ const styles = {
     left: '50%'
   },
   continueButton: {
-    marginLeft: 'auto'
+    marginLeft: 'auto',
+    marginRight: 10,
+    marginBottom: 10
   },
   wordsText: {
     textAlign: 'center',
     marginTop: 20,
-    fontSize: 24
+    fontSize: 22
   },
   button1col: {
     width: '20%',
@@ -83,9 +78,10 @@ const styles = {
   },
   trainQuestionText: {
     position: 'absolute',
-    top: '20%',
+    top: '18%',
     left: '50%',
-    transform: 'translateX(-50%)'
+    transform: 'translateX(-50%)',
+    fontSize: 22
   },
   trainButtonYes: {
     position: 'absolute',
@@ -99,9 +95,15 @@ const styles = {
   },
   pondText: {
     position: 'absolute',
-    top: '90%',
-    left: '50%',
-    transform: 'translateX(-50%)'
+    bottom: '10%',
+    left: '60%',
+    transform: 'translateX(-50%)',
+    fontSize: 22,
+    width: '60%',
+    backgroundColor: 'rgba(0,0,0,0.7)',
+    padding: '3%',
+    borderRadius: 10,
+    color: 'white'
   },
   trainBot: {
     position: 'absolute',
@@ -119,8 +121,8 @@ const styles = {
   pondBot: {
     position: 'absolute',
     height: '50%',
-    left: '10%',
-    bottom: '5%'
+    left: 0,
+    bottom: 0
   }
 };
 
