@@ -4,15 +4,16 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>ML Activities Playground</title>
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-      crossorigin="anonymous"
-    />
     <style>
       #container {
         position: relative;
+        width: 100%;
+        max-width: 970px;
+        margin: 0 auto;
+        user-select: none;
+      }
+      #container-react {
+        position: absolute;
         width: 100%;
         max-width: 970px;
         margin: 0 auto;
@@ -52,6 +53,15 @@
         width: 100%;
       }
       #ui-container {
+        position: absolute;
+        top: 50px; /* accounts for #header-container */
+        left: 0;
+        width: 100%;
+        height: calc(
+          100% - 104px
+        ); /* 50px header + 50px footer + 4px border = 104px */
+      }
+      #ui-container-react {
         position: absolute;
         top: 50px; /* accounts for #header-container */
         left: 0;
@@ -232,6 +242,8 @@
   </head>
   <body>
     <div id="container">
+      <div id="container-react"></div>
+
       <div id="header-container"></div>
       <canvas id="background-canvas"></canvas>
       <canvas id="activity-canvas"></canvas>
@@ -240,6 +252,7 @@
       <div id="code">
         <img id="code-blocks-image" src="images/code-blocks-predict.png" />
       </div>
+
     </div>
     <script src="demo.js"></script>
   </body>
