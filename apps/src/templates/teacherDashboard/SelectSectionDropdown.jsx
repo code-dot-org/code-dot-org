@@ -6,6 +6,7 @@ import {navigateToHref} from '@cdo/apps/utils';
 import {getVisibleSections} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {TeacherDashboardPath} from '@cdo/apps/templates/teacherDashboard/TeacherDashboardNavigation';
 import _ from 'lodash';
+import firehoseClient from '../../lib/util/firehose';
 
 const styles = {
   container: {
@@ -34,6 +35,20 @@ class SelectSectionDropdown extends React.Component {
       ? baseUrl.concat(currentTab)
       : baseUrl;
     navigateToHref(sectionUrl);
+
+    firehoseClient.putRecord(
+      {
+        study: 'teacher_dashboard_actions',
+        study_group: currentTab,
+        event: 'change_section',
+        data_json: JSON.stringify({
+          section_id: this.props.selectedSectionId,
+          old_section_id: this.props.selectedSectionId,
+          new_section_id: sectionId
+        })
+      },
+      {includeUserId: true}
+    );
   };
 
   render() {

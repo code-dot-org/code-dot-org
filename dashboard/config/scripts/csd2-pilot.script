@@ -29,7 +29,7 @@ level 'CSD U2 Pair Programming Video_pilot', named: true
 level 'CSD U2 Heading debug', progression: 'Headings'
 level 'CSD U2 Heading Demo_pilot', progression: 'Headings'
 level 'CSD U2 Heading Sizes_pilot', progression: 'Headings'
-level 'CSD Web Debugging', progression: 'Headings'
+level 'CSD Web Debugging', progression: 'Video: Debugging'
 level 'CSD Web Headings practice', progression: 'Headings'
 level 'CSD Header Size MC_2018_2019_pilot', progression: 'Headings', assessment: true
 level 'CSD U2 Heading Test_pilot', progression: 'Headings', assessment: true
