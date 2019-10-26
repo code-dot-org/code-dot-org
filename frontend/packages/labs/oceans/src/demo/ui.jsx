@@ -22,6 +22,17 @@ const styles = {
     width: '100%',
     paddingTop: '56.25%' // for 16:9
   },
+  bodyContent: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '100%'
+  },
+  heading: {
+    border: '2px solid black',
+    borderRadius: 20,
+    padding: '10px 45px'
+  },
   activityIntroText: {
     position: 'absolute',
     fontSize: 24,
@@ -39,6 +50,18 @@ const styles = {
   },
   activityIntroContinueButton: {
     marginLeft: 'auto'
+  },
+  wordsText: {
+    textAlign: 'center',
+    marginTop: 20,
+    fontSize: 24
+  },
+  button1col: {
+    width: '20%',
+    display: 'block',
+    margin: '0 auto',
+    marginTop: '2%',
+    marginBottom: '2%'
   }
 };
 
@@ -50,7 +73,11 @@ class HeaderContainer extends React.Component {
 
 class BodyContainer extends React.Component {
   render() {
-    return <div style={styles.bodyContainer}>{this.props.children}</div>;
+    return (
+      <div style={styles.bodyContainer}>
+        <div style={styles.bodyContent}>{this.props.children}</div>
+      </div>
+    );
   }
 }
 
@@ -103,6 +130,73 @@ class ActivityIntro extends React.Component {
   }
 }
 
+class Words extends React.Component {
+  items = [
+    ['Blue', 'Green', 'Red', 'Round', 'Square'],
+    [
+      'Friendly',
+      'Funny',
+      'Bizarre',
+      'Shy',
+      'Glitchy',
+      'Delicious',
+      'Fun',
+      'Angry',
+      'Fast',
+      'Smart',
+      'Brave',
+      'Scary',
+      'Wild',
+      'Fierce',
+      'Tropical'
+    ]
+  ];
+
+  currentItems() {
+    const state = getState();
+    const iterationCount = state.iterationCount;
+    const itemSet = iterationCount === 0 ? 0 : 1;
+
+    return this.items[itemSet];
+  }
+
+  onChangeWord() {
+    setState({
+      word: this.currentItems()[itemIndex],
+      currentMode: Modes.TrainingIntro
+    });
+    initScene();
+  }
+
+  render() {
+    const currentItems = this.currentItems();
+    const buttonStyle = styles.button1col;
+
+    return (
+      <div>
+        <HeaderContainer>
+          <div style={styles.heading}>Choose Fish Type</div>
+        </HeaderContainer>
+        <BodyContainer>
+          <div style={styles.wordsText}>
+            What type of fish do you want to train A.I. to detect?
+          </div>
+          {currentItems.map((item, itemIndex) => (
+            <Button
+              key={itemIndex}
+              style={buttonStyle}
+              onClick={() => this.onChangeWord(itemIndex)}
+            >
+              {item}
+            </Button>
+          ))}
+        </BodyContainer>
+        <FooterContainer />
+      </div>
+    );
+  }
+}
+
 module.exports = class UI extends React.Component {
   render() {
     const mode = getState().currentMode;
@@ -110,7 +204,7 @@ module.exports = class UI extends React.Component {
     return (
       <div>
         {mode === Modes.ActivityIntro && <ActivityIntro />}
-        {mode === Modes.Words && <div />}
+        {mode === Modes.Words && <Words />}
       </div>
     );
   }
