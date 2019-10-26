@@ -209,7 +209,9 @@ class LibraryCreationDialog extends React.Component {
                 disabled={!this.state.canPublish}
               />
               {this.state.loadingState === LoadingState.ERROR_PUBLISH && (
-                <p style={styles.alert}>{i18n.libraryPublishFail()}</p>
+                <p id="error-alert" style={styles.alert}>
+                  {i18n.libraryPublishFail()}
+                </p>
               )}
             </div>
           </form>
