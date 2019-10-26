@@ -326,7 +326,7 @@ class Predict extends React.Component {
             style={styles.continueButton}
             onClick={() => toMode(Modes.Pond)}
           >
-            Continue
+            Skip
           </Button>
         </Footer>
       </Body>
