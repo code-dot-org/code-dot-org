@@ -41,6 +41,7 @@ describe('LibraryCreationDialog', () => {
   const CHECKBOX_SELECTOR = 'input[type="checkbox"]';
   const DESCRIPTION_SELECTOR = 'textarea';
   const CHANNEL_ID_SELECTOR = 'input[type="text"]';
+  const PUBLISH_ERROR_SELECTOR = '#error-alert';
 
   before(() => {
     replaceOnWindow('dashboard', {
@@ -152,6 +153,28 @@ describe('LibraryCreationDialog', () => {
       assert.isTrue(
         wrapper.find(CHANNEL_ID_SELECTOR).instance().value === '123'
       );
+    });
+
+    it('does not display publish error message when loading is finished before publish', () => {
+      wrapper.setState({
+        libraryName: 'testLibrary',
+        librarySource: LIBRARY_SOURCE,
+        loadingState: LoadingState.LOADING,
+        sourceFunctionList: libraryParser.getFunctions(LIBRARY_SOURCE)
+      });
+
+      expect(wrapper.find(PUBLISH_ERROR_SELECTOR).exists()).to.be.false;
+    });
+
+    it('displays publish error message after being set to error state', () => {
+      wrapper.setState({
+        libraryName: 'testLibrary',
+        librarySource: LIBRARY_SOURCE,
+        loadingState: LoadingState.ERROR_PUBLISH,
+        sourceFunctionList: libraryParser.getFunctions(LIBRARY_SOURCE)
+      });
+
+      expect(wrapper.find(PUBLISH_ERROR_SELECTOR).exists()).to.be.true;
     });
   });
 
