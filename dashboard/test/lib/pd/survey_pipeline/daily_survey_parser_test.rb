@@ -32,19 +32,6 @@ module Pd::SurveyPipeline
           '{"Sub question 1": "Option 1", "Sub question 2": "Option 2", "Sub question 3": "Option 3"}}'
     end
 
-    test 'produce output keys' do
-      context = {
-        survey_questions: [@ws_survey_questions],
-        workshop_submissions: [@ws_submission],
-        facilitator_submissions: []
-      }
-
-      DailySurveyParser.process_data context
-
-      assert context[:parsed_questions].present?
-      assert context[:parsed_submissions].present?
-    end
-
     test 'can parse questions' do
       expected_result = {
         @ws_form_id => {
