@@ -122,15 +122,16 @@ const styles = {
   },
   pondText: {
     position: 'absolute',
-    bottom: '10%',
-    left: '60%',
-    transform: 'translateX(-50%)',
+    bottom: '3%',
+    left: '55%',
+    transform: 'translateX(-45%)',
     fontSize: 22,
-    width: '60%',
-    backgroundColor: 'rgba(0,0,0,0.7)',
-    padding: '3%',
+    width: '70%',
+    backgroundColor: 'rgba(0,0,0,0.5)',
+    padding: '2%',
     borderRadius: 10,
-    color: 'white'
+    color: 'white',
+    lineHeight: '32px'
   },
   pondBot: {
     position: 'absolute',
