@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import constants, {Modes} from './constants';
-import {setState} from './state';
+import {setState, setSetStateCallback} from './state';
 import {init as initScene} from './init';
 import {render} from './renderer';
 
@@ -33,9 +33,15 @@ $(document).ready(() => {
   // requestAnimationFrame on itself.
   render();
 
-  // Start the React renderer.
-  const renderElement = document.getElementById('container-react');
-  setInterval(() => {
-    ReactDOM.render(<UI />, renderElement);
-  }, 1000);
+  // Render the UI.
+  renderUI();
+
+  // And have the render UI handler be called every time state is set.
+  setSetStateCallback(renderUI);
 });
+
+// Tell React to explicitly render the UI.
+export const renderUI = () => {
+  const renderElement = document.getElementById('container-react');
+  ReactDOM.render(<UI />, renderElement);
+};
