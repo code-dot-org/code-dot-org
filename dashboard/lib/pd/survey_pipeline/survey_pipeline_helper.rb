@@ -83,7 +83,14 @@ module Pd::SurveyPipeline::Helper
 
   def process_rollup_data(context)
     # Transform data
-    Pd::SurveyPipeline::DailySurveyParser.process_data context
+    context[:parsed_questions] =
+      Pd::SurveyPipeline::DailySurveyParser.parse_questions context[:survey_questions]
+
+    all_submissions =
+      (context[:workshop_submissions] || []) + (context[:facilitator_submissions] || [])
+    context[:parsed_submissions] =
+      Pd::SurveyPipeline::DailySurveyParser.parse_submissions all_submissions
+
     Pd::SurveyPipeline::DailySurveyJoiner.process_data context
 
     # Convert string answers to numbers
@@ -148,7 +155,14 @@ module Pd::SurveyPipeline::Helper
     context[:survey_questions], context[:workshop_submissions], context[:facilitator_submissions] =
       Pd::SurveyPipeline::DailySurveyRetriever.retrieve_all_workshop_surveys workshop.id
 
-    Pd::SurveyPipeline::DailySurveyParser.process_data context
+    context[:parsed_questions] =
+      Pd::SurveyPipeline::DailySurveyParser.parse_questions context[:survey_questions]
+
+    all_submissions =
+      (context[:workshop_submissions] || []) + (context[:facilitator_submissions] || [])
+    context[:parsed_submissions] =
+      Pd::SurveyPipeline::DailySurveyParser.parse_submissions all_submissions
+
     Pd::SurveyPipeline::DailySurveyJoiner.process_data context
 
     # Fields used to group survey answers
