@@ -165,6 +165,8 @@ class ActivitiesController < ApplicationController
       level_source_id: @level_source.try(:id)
     }
 
+    record_time_spent
+
     allow_activity_writes = Gatekeeper.allows('activities', where: {script_name: @script_level.script.name}, default: true)
     if allow_activity_writes
       @activity = Activity.new(attributes).tap(&:atomic_save!)
@@ -210,6 +212,34 @@ class ActivitiesController < ApplicationController
         level_source_id: @level_source_image.level_source_id,
         autosaved: true
       )
+    end
+  end
+
+  def record_time_spent
+    user_level = UserLevel.find_by(
+      user_id: current_user.id,
+      level_id: @script_level.level.id,
+      script_id: @script_level.script.id
+    )
+
+    if user_level
+      user_level_info = UserLevelInfo.find_by(
+        user_level_id: user_level.id
+      )
+    end
+    # Add past time spent to current time spent on level
+    # Although it looks like if you hit keep playing it is not adding correctly
+    if user_level_info
+      puts user_level_info.time_spent
+      puts [params[:time].to_i, 0].max
+      #user_level_info.update(time_spent: [user_level_info.time_spent + [params[:time].to_i, 0].max, MAX_INT_MILESTONE].min)
+    else
+      user_level = UserLevel.create(
+        user_id: current_user.id,
+        level_id: @script_level.level.id,
+        script_id: @script_level.script.id
+      )
+      UserLevelInfo.create(user_level_id: user_level.id, time_spent: [[params[:time].to_i, 0].max, MAX_INT_MILESTONE].min)
     end
   end
 
