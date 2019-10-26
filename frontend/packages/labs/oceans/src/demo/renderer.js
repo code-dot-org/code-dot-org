@@ -195,7 +195,7 @@ const getYForFish = (numFish, fishIdx, state, offsetX, predictedClassId) => {
 
   // Move fish down a little on predict screen.
   if (state.currentMode === Modes.Predicting) {
-    y += 100;
+    y += 130;
 
     // And drop the fish down even more if they are not liked.
     const doesLike = predictedClassId === ClassType.Like;
@@ -207,6 +207,11 @@ const getYForFish = (numFish, fishIdx, state, offsetX, predictedClassId) => {
         y += screenX - midScreenX;
       }
     }
+
+    // And sway fish vertically on the predicting screen.
+    const swayValue = (($time() * 360) / (20 * 1000) + (fishIdx + 1) * 10) % 360;
+    const swayOffsetY = Math.sin(((swayValue * Math.PI) / 180) * 6) * 8;
+    y += swayOffsetY;
   }
 
   return y;
@@ -339,9 +344,9 @@ const drawPondFishImages = () => {
   const canvas = getState().canvas;
   const ctx = canvas.getContext('2d');
   getState().pondFish.forEach(fish => {
-    var swayValue = (($time() * 360) / (20 * 1000) + (fish.id + 1) * 10) % 360;
-    var swayOffsetX = Math.sin(((swayValue * Math.PI) / 180) * 2) * 120;
-    var swayOffsetY = Math.sin(((swayValue * Math.PI) / 180) * 6) * 8;
+    const swayValue = (($time() * 360) / (20 * 1000) + (fish.id + 1) * 10) % 360;
+    const swayOffsetX = Math.sin(((swayValue * Math.PI) / 180) * 2) * 120;
+    const swayOffsetY = Math.sin(((swayValue * Math.PI) / 180) * 6) * 8;
 
     drawSingleFish(fish, fish.x + swayOffsetX, fish.y + swayOffsetY, ctx);
   });
@@ -445,8 +450,8 @@ export const clearCanvas = canvas => {
 
 // Draw an overlay over the whole scene.  Used for fades.
 function drawOverlays() {
-  var duration = $time() - currentModeStartTime;
-  var amount = 1 - duration / 800;
+  const duration = $time() - currentModeStartTime;
+  let amount = 1 - duration / 800;
   if (amount < 0) {
     amount = 0;
   }

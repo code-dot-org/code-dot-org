@@ -6,7 +6,7 @@ import {init as initScene} from './init';
 import {onClassifyFish} from './models/train';
 
 const styles = {
-  Header: {
+  header: {
     position: 'absolute',
     top: 10,
     width: '100%',
@@ -15,19 +15,19 @@ const styles = {
     justifyContent: 'center',
     fontSize: 48
   },
-  Footer: {
+  footer: {
     position: 'absolute',
     bottom: 0,
     width: '100%',
     display: 'flex',
     justifyContent: 'space-between'
   },
-  Body: {
+  body: {
     position: 'relative',
     width: '100%',
     paddingTop: '56.25%' // for 16:9
   },
-  Content: {
+  content: {
     position: 'absolute',
     top: '10%',
     left: 0,
@@ -35,6 +35,25 @@ const styles = {
   },
   button: {
     cursor: 'pointer'
+  },
+  continueButton: {
+    marginLeft: 'auto',
+    marginRight: 10,
+    marginBottom: 10
+  },
+  button1col: {
+    width: '20%',
+    display: 'block',
+    margin: '0 auto',
+    marginTop: '2%',
+    marginBottom: '2%'
+  },
+  button3col: {
+    width: '20%',
+    marginLeft: '6%',
+    marginRight: '6%',
+    marginTop: '2%',
+    marginBottom: '2%'
   },
   activityIntroText: {
     position: 'absolute',
@@ -47,34 +66,20 @@ const styles = {
   },
   trainingIntroBot: {
     position: 'absolute',
-    //height: '50%',
     transform: 'translateX(-50%)',
     top: '30%',
     left: '50%'
   },
   activityIntroBot: {
     position: 'absolute',
-    //height: '50%',
     transform: 'translateX(-50%)',
     top: '50%',
     left: '50%'
-  },
-  continueButton: {
-    marginLeft: 'auto',
-    marginRight: 10,
-    marginBottom: 10
   },
   wordsText: {
     textAlign: 'center',
     marginTop: 20,
     fontSize: 22
-  },
-  button1col: {
-    width: '20%',
-    display: 'block',
-    margin: '0 auto',
-    marginTop: '2%',
-    marginBottom: '2%'
   },
   trainQuestionText: {
     position: 'absolute',
@@ -93,18 +98,6 @@ const styles = {
     top: '80%',
     left: '60%'
   },
-  pondText: {
-    position: 'absolute',
-    bottom: '10%',
-    left: '60%',
-    transform: 'translateX(-50%)',
-    fontSize: 22,
-    width: '60%',
-    backgroundColor: 'rgba(0,0,0,0.7)',
-    padding: '3%',
-    borderRadius: 10,
-    color: 'white'
-  },
   trainBot: {
     position: 'absolute',
     height: '50%',
@@ -118,6 +111,18 @@ const styles = {
     left: '50%',
     transform: 'translateX(-50%)'
   },
+  pondText: {
+    position: 'absolute',
+    bottom: '10%',
+    left: '60%',
+    transform: 'translateX(-50%)',
+    fontSize: 22,
+    width: '60%',
+    backgroundColor: 'rgba(0,0,0,0.7)',
+    padding: '3%',
+    borderRadius: 10,
+    color: 'white'
+  },
   pondBot: {
     position: 'absolute',
     height: '50%',
@@ -128,25 +133,25 @@ const styles = {
 
 class Body extends React.Component {
   render() {
-    return <div style={styles.Body}>{this.props.children}</div>;
+    return <div style={styles.body}>{this.props.children}</div>;
   }
 }
 
 class Header extends React.Component {
   render() {
-    return <div style={styles.Header}>{this.props.children}</div>;
+    return <div style={styles.header}>{this.props.children}</div>;
   }
 }
 
 class Content extends React.Component {
   render() {
-    return <div style={styles.Content}>{this.props.children}</div>;
+    return <div style={styles.content}>{this.props.children}</div>;
   }
 }
 
 class Footer extends React.Component {
   render() {
-    return <div style={styles.Footer}>{this.props.children}</div>;
+    return <div style={styles.footer}>{this.props.children}</div>;
   }
 }
 
@@ -217,8 +222,7 @@ class Words extends React.Component {
 
   currentItems() {
     const state = getState();
-    const iterationCount = state.iterationCount;
-    const itemSet = iterationCount === 0 ? 0 : 1;
+    const itemSet = state.smallWordSet ? 0 : 1;
 
     return this.items[itemSet];
   }
@@ -232,8 +236,11 @@ class Words extends React.Component {
   }
 
   render() {
+    const state = getState();
     const currentItems = this.currentItems();
-    const buttonStyle = styles.button1col;
+    const buttonStyle = state.smallWordSet
+      ? styles.button1col
+      : styles.button3col;
 
     return (
       <Body>

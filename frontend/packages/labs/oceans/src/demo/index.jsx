@@ -16,6 +16,9 @@ $(document).ready(() => {
   canvas.width = backgroundCanvas.width = constants.canvasWidth;
   canvas.height = backgroundCanvas.height = constants.canvasHeight;
 
+  // Temporarily use URL parameter to set some state.
+  const smallWordSet = window.location.href.indexOf("words=small") !== -1;
+
   // Set initial state for UI elements.
   setState({
     currentMode: Modes.Loading,
@@ -23,7 +26,8 @@ $(document).ready(() => {
     backgroundCanvas,
     uiContainer: document.getElementById('ui-container'),
     headerContainer: document.getElementById('header-container'),
-    footerContainer: document.getElementById('footer-container')
+    footerContainer: document.getElementById('footer-container'),
+    smallWordSet: smallWordSet
   });
 
   // Initialize our first model.
