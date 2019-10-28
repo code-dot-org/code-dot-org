@@ -47,6 +47,7 @@
   "jumpBackward": "salta cap enrere",
   "jumpForward": "salta cap endevant",
   "jumpToOverDown": "",
+  "jumpToPosition": "",
   "jumpByDirection": "",
   "jumpTooltip": "Mou l'artista sense deixar ninguna marca.",
   "jumpEastTooltip": "Mou l'artista a l'est sense deixar cap marca.",

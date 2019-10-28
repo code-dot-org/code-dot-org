@@ -89,6 +89,7 @@ export default class LibraryClientApi {
                     .filter(library => !!library.libraryName)
                     .map(library => {
                       library.name = library.libraryName;
+                      library.description = library.libraryDescription;
                       return library;
                     });
                   libraries.forEach(library => {

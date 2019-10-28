@@ -406,7 +406,7 @@ ca:
             '"neon"': Neó
             '"warm"': Vermells
       Dancelab_setBackgroundEffectWithPalette:
-        text: definir l'efecte de fons {EFFECT} {PALETTE}
+        text: definir l'efecte de fons {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': Cap
@@ -861,6 +861,12 @@ ca:
             MOVES.Rest: Cap
       Mikelab_randomColor:
         text: color aleatori
+      Mikelab_repeatUntilComplete:
+        text: repetir per sempre
+      Mikelab_sendBad:
+        text: desplaça a l'esquerra
+      Mikelab_sendGood:
+        text: Desplaça a la dreta
       Mikelab_setBG:
         options:
           BG:

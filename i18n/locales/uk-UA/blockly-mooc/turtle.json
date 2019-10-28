@@ -47,6 +47,7 @@
   "jumpBackward": "перескочити назад на",
   "jumpForward": "перескочити вперед на",
   "jumpToOverDown": "",
+  "jumpToPosition": "",
   "jumpByDirection": "",
   "jumpTooltip": "Переміщує художника, не залишаючи слідів.",
   "jumpEastTooltip": "Переміщує художника на схід, не залишаючи сліду.",
