@@ -477,7 +477,7 @@ en:
       Dancelab_setBackgroundEffectWithPalette:
         text: |-
           set background effect
-          [EFFECT][0] [PALETTE][1]
+          [PALETTE][0] [EFFECT][1]
         options:
           EFFECT:
             '"none"': None
@@ -1134,6 +1134,17 @@ en:
         text: y coordinate of [SPRITE][0]
       Mikelab_addBehaviorSimple:
         text: sprite [SPRITE][0] begins [BEHAVIOR][1]
+      Mikelab_addTrainingData:
+        text: 'add training data: [NAME][0],[LOCATION][1]'
+        options:
+          NAME:
+            "{x: 201, y: 100}": object
+            "{x: 200, y: 100}": fish
+          LOCATION:
+            "{x: randomNumber(51, 350), y: randomNumber(50, 350)}": fish
+            "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": not fish
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": my-label
+            "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": not my-label
       Mikelab_changeAnim:
         text: set [SPRITE][0]'s to costume to [COSTUME][1]
       Mikelab_changePropBy:
@@ -1169,6 +1180,8 @@ en:
         text: eval [CODE][0]
       Mikelab_getAnim:
         text: "[SPRITE][0]'s costume"
+      Mikelab_getNext:
+        text: get next object
       Mikelab_getProp:
         text: "[SPRITE][0]'s [PROPERTY][1]"
         options:
@@ -1280,6 +1293,12 @@ en:
           [STATEMENT][2]
       Mikelab_hasBehavior:
         text: "[SPRITE][0] is currently [BEHAVIOR][1]"
+      Mikelab_hideFish:
+        text: remove [TRASH][0]
+        options:
+          TRASH:
+            object: object
+            fish: fish
       Mikelab_ifDanceIs:
         text: |-
           if [SPRITE][0] is doing [DANCE][1]
@@ -1298,6 +1317,30 @@ en:
             MOVES.ThisOrThat: This or That
             MOVES.Thriller: Zombie
             MOVES.Rest: None
+      Mikelab_ifLabel:
+        text: |-
+          if [DANCE][0]
+           do [DO1][1] else [DO2][2]
+        options:
+          DANCE:
+            MOVES.ClapHigh: fish
+            MOVES.Clown: my-label
+      Mikelab_ifRecognizeLabel:
+        text: |-
+          if recognize object as [DANCE][0]
+           do [DO1][1] else [DO2][2]
+        options:
+          DANCE:
+            MOVES.ClapHigh: fish
+            MOVES.Clown: my-label
+      Mikelab_ifRecognizeLabelOnly:
+        text: |-
+          if recognize object as [DANCE][0]
+           do [DO1][1]
+        options:
+          DANCE:
+            MOVES.ClapHigh: fish
+            MOVES.Clown: not my-label
       Mikelab_isAnim:
         text: "[SPRITE][0]'s costume is [COSTUME][1]"
       Mikelab_locationAt:
@@ -1312,6 +1355,12 @@ en:
         text: sprite [SPRITE][0] stops [BEHAVIOR][1]
       Mikelab_removeTint:
         text: remove color from [SPRITE][0]
+      Mikelab_repeatUntilComplete:
+        text: repeat forever
+      Mikelab_sendBad:
+        text: move left
+      Mikelab_sendGood:
+        text: move right
       Mikelab_setBG:
         text: set background to [BG][0]
         options:
@@ -1406,6 +1455,12 @@ en:
         text: when mouse released
       Mikelab_whenTouchesAny:
         text: when[SPRITE][0] touches any sprite
+      Mikelab_whenYesNoClicked:
+        text: when [KEY][0] clicked
+        options:
+          KEY:
+            '"yes"': 'yes'
+            '"no"': 'no'
       Mikelab_whileClicked:
         text: while clicking on[SPRITE][0]
       Mikelab_whileKeyPressed:

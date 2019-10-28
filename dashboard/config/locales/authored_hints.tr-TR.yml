@@ -5944,14 +5944,6 @@ tr-TR:
           "toplama" komutunu kullanabilirsiniz.
         courseC_collector_prog_challenge1_b: Yolunuzu mu kaybettiniz? Bulmacayı çözmek
           için bu yolu deneyin!
-      courseC_data wizard:
-        courseA_playLab_events7_a: |-
-          Aktörler çarpıştığında ne olacağını kontrol etmek için bu bloğu kullanın.
-          <xml><block type="studio_whenSpriteCollided">
-
-          <title name="SPRITE1">1</title>
-          <title name="SPRITE2">0</title>
-          </block></xml>
       courseC_flappy_events1:
         courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseC_flappy_events1_2018:

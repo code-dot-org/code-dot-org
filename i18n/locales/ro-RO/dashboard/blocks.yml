@@ -81,6 +81,7 @@ ro:
             '"x"': poziţie orizontală
             '"y"': poziţie verticală
       Dancelab_changePropEachBy:
+        text: schimbă {GROUP} {PROPERTY} cu {VAL}
         options:
           GROUP:
             sprites: toate
@@ -246,6 +247,7 @@ ro:
             '"seconds"': secunde
           OP:
             '">"': ">"
+            '"<"': "<"
             '"="': "="
       Dancelab_jumpTo:
         text: "{SPRITE} sare la {LOCATION}"
@@ -262,6 +264,7 @@ ro:
             "{x: 300, y: 300}": dreapta jos
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": aleator
       Dancelab_jumpToEach:
+        text: sari {GROUP} la {LOCATION}
         options:
           GROUP:
             sprites: toate
@@ -446,6 +449,7 @@ ro:
             '"rainbow"': Curcubeu
             '"snowflakes"': Zăpadă
             '"text"': Nume cântec
+            '"galaxy"': Spaţiu
             '"sparkles"': Scântei
             '"spiral"': Spirală
             '"disco"': Pătrate
@@ -463,7 +467,7 @@ ro:
       Dancelab_setBackgroundEffectWithPalette:
         text: |-
           setează efectul de fundal la
-          {EFFECT} {PALETTE}
+          {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': Nici unul
@@ -480,6 +484,7 @@ ro:
             '"rainbow"': Curcubeu
             '"snowflakes"': Zăpadă
             '"text"': Nume cântec
+            '"galaxy"': Spaţiu
             '"sparkles"': Scântei
             '"spiral"': Spirală
             '"disco"': Pătrate
@@ -607,6 +612,7 @@ ro:
             '"y"': poziţie verticală
             '"tint"': tentă
       Dancelab_setPropRandomEach:
+        text: alege aleatoriu {GROUP} {PROPERTY}
         options:
           GROUP:
             sprites: toate
@@ -706,6 +712,7 @@ ro:
             '"mid"': sunet mediu
             '"treble"': sunet înalt
       Dancelab_startMappingEach:
+        text: "{GROUP} începe {PROPERTY} urmând {RANGE}"
         options:
           GROUP:
             sprites: toate
@@ -749,6 +756,7 @@ ro:
             '"mid"': sunet mediu
             '"treble"': sunet înalt
       Dancelab_stopMappingEach:
+        text: "{GROUP} opreşte {PROPERTY} urmând {RANGE}"
         options:
           GROUP:
             sprites: toate
@@ -787,7 +795,12 @@ ro:
             '"space"': spaţiu
             '"enter"': enter
             '"a"': a
+            '"b"': b
+            '"c"': c
             '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
             '"h"': h
             '"i"': i
             '"j"': j
@@ -797,6 +810,7 @@ ro:
             '"n"': 'n'
             '"o"': o
             '"p"': p
+            '"q"': q
             '"r"': r
             '"s"': s
             '"t"': t
@@ -806,6 +820,16 @@ ro:
             '"x"': x
             '"y"': 'y'
             '"z"': z
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
       Dancelab_whenPeak:
         text: când {RANGE} vârf(uri)
         options:
@@ -815,6 +839,8 @@ ro:
             '2': sunet înalt
       Dancelab_whenSetup:
         text: configurare
+      gamelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
       gamelab_changePropBy:
         text: schimbă {SPRITE} {PROPERTY} cu {VAL}
         options:
@@ -829,6 +855,10 @@ ro:
           CONDITION:
             '"when"': când
             '"while"': în timp ce
+      gamelab_clickedOn:
+        text: când {SPRITE} e apăsat
+      gamelab_comment:
+        text: 'comentariu: {COMMENT}'
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -855,7 +885,12 @@ ro:
             '"right"': dreapta
             '"space"': spaţiu
             '"a"': a
+            '"b"': b
+            '"c"': c
             '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
             '"h"': h
             '"i"': i
             '"j"': j
@@ -865,6 +900,7 @@ ro:
             '"n"': 'n'
             '"o"': o
             '"p"': p
+            '"q"': q
             '"r"': r
             '"s"': s
             '"t"': t
@@ -1093,6 +1129,12 @@ ro:
             MOVES.Rest: Nici unul
       Mikelab_randomColor:
         text: culoare aleatorie
+      Mikelab_repeatUntilComplete:
+        text: repetă pentru totdeauna
+      Mikelab_sendBad:
+        text: mută la stânga
+      Mikelab_sendGood:
+        text: mută la dreapta
       Mikelab_setBG:
         options:
           BG:
@@ -1123,6 +1165,8 @@ ro:
             "{x: 100, y: 300}": stânga jos
             "{x: 300, y: 300}": dreapta jos
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Aleatoriu
+      Mikelab_whenClickedOn:
+        text: când {SPRITE} e apăsat
       Mikelab_whenKeyPressed:
         text: când {KEY} apăsat(ă)
         options:
@@ -1163,10 +1207,16 @@ ro:
         text: ia-o la dreapta
       Vector_positionCenter:
         text: centru
+      Vector_push:
+        text: setează viteza {VECTOR}
       Vector_randomLocation:
         text: locație aleatorie
       Vector_vectorNorth:
         text: nord
+      Vector_where:
+        options:
+          PROPERTY:
+            "'shapeColor'": culoare
       aalab_goToScene:
         options:
           SCENE:
@@ -1174,6 +1224,7 @@ ro:
             '2': '2'
             '3': '3'
       aalab_scene:
+        text: scena {SCENE}
         options:
           SCENE:
             '1': '1'

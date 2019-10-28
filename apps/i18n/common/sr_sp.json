@@ -355,6 +355,7 @@
   "puzzle": "Пузла",
   "puzzleTitle": "Мозгалица {puzzle_number} од {stage_total}",
   "question": "Питање",
+  "random": "насумичан",
   "readonlyWorkspaceHeader": "Прикажи само: ",
   "recommendedBlockContextualHintTitle": "Покушајте да користите блок као што је овај да решите ову мозгалицу.",
   "repeat": "понављај",

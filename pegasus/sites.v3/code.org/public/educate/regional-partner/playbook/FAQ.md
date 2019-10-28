@@ -8,7 +8,12 @@ noindex: true
 # Regional Partner FAQs
 
 
-Still have questions? See below for answers to commonly asked questions or email [partner@code.org](partner@code.org).
+Still have questions? Try the following
+
+- See below for commonly asked questions
+- Use the [Partner Program Manager Slack channel] (csregionalpartners.slack.com)
+- Ask your Regional Manager
+- Email <partner@code.org>
 <br/><br/>
 **General questions:**<br/>
 
@@ -18,7 +23,6 @@ Still have questions? See below for answers to commonly asked questions or email
 
 **Questions about in-person workshops:**<br/>
 
-- [Does my organization need to provide facilitators for CS Principles and CS Discoveries?](#facilitators)
 - [What is counselor/administrator professional development?](#ca)
 - [What are the technology requirements for Code.org tutorials?](#it)
 
@@ -48,18 +52,6 @@ ________________
 ### **If we are selected as the Code.org Regional Partner in our region, can we publish a press release?**
 
 Of course! Anyone accepted to be a partner can publish a press release. We ask that your organization take the lead on the content and that Code.org is provided the opportunity to review it prior to print.
-
-[**Back to the top**](#top)
-<br/>
-________________
-<a id="facilitators"></a>
-<br/>
-<br/>
-### **Does my organization need to provide facilitators for CS Principles and CS Discoveries?**
-
-Your organization does not need to have its own facilitators. Code.org Regional Partners contracts with facilitators and alumni from Code.org's [facilitator development program](https://code.org/facilitator).
-<br/>
-
 
 [**Back to the top**](#top)
 <br/>

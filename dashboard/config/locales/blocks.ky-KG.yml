@@ -408,6 +408,12 @@ ky:
             MOVES.Rest: Жок
       Mikelab_randomColor:
         text: кокус түс
+      Mikelab_repeatUntilComplete:
+        text: дайым кайтала
+      Mikelab_sendBad:
+        text: солго жылдыр
+      Mikelab_sendGood:
+        text: оңго жылдыр
       Mikelab_setBG:
         options:
           BG:

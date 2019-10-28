@@ -382,6 +382,7 @@
   "puzzleRatingQuestion": "Ti je ta naloga všeč?",
   "puzzleTitle": "Uganka {puzzle_number} od {stage_total}",
   "question": "Vprašanje",
+  "random": "naključno",
   "readonlyWorkspaceHeader": "Prikaži samo: ",
   "recommendedBlockContextualHintTitle": "Poskusite uporabiti kocko, kot je ta, da rešite uganko.",
   "recording": "Snemanje",

@@ -12764,6 +12764,10 @@ tr:
           stages:
             Deeper Learning Overview:
               name: Derin Öğrenime Genel Bakış
+        dlp19-csp-mod-w3:
+          stages:
+            Deeper Learning Overview:
+              name: Derin Öğrenime Genel Bakış
         csd4-pilot:
           stages:
             What is a Computer?:

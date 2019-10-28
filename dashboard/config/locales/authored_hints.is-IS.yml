@@ -9901,15 +9901,6 @@ is-IS:
           skipunin á hverjum stað.
         courseC_collector_prog_challenge1_b: Finnurðu ekki leiðina?  Prófaðu þessa
           slóð til að leysa þrautina!
-      courseC_data wizard:
-        courseA_playLab_events7_a: |-
-          Notaðu þennan kubb til að stjórna því hvað gerist þegar leikmennirnir rekast á.
-
-          <xml><block type="studio_whenSpriteCollided">
-
-          <title name="SPRITE1">1</title>
-          <title name="SPRITE2">0</title>
-          </block></xml>
       courseC_flappy_events1:
         courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseC_flappy_events1_2018:
@@ -12805,8 +12796,6 @@ is-IS:
           Auðveldasta slóðin til að safna öllu er spírall.
 
           ![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)
-        courseD_farmer_condLoops7_b: Prófaðu að nota `meðan slóð framundan` til að
-          láta hirðinn færast réttan fjölda reita.
       courseD_farmer_condLoops_challenge1:
         courseD_farmer_condLoops_challenge1_a: Í þessari áskorun gæti `Þrep` hnappurinn
           reynst gagnlegur.
