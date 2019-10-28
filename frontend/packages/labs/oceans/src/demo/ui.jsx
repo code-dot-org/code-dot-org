@@ -362,17 +362,21 @@ class Train extends React.Component {
 
 class Predict extends React.Component {
   render() {
+    const state = getState();
+
     return (
       <Body>
         <Header>A.I. Sorting</Header>
         <img style={styles.predictBot} src="images/ai-bot-closed.png" />
         <Footer>
-          <Button
-            style={styles.continueButton}
-            onClick={() => toMode(Modes.Pond)}
-          >
-            Skip
-          </Button>
+          {state.canSkipPredict && (
+            <Button
+              style={styles.continueButton}
+              onClick={() => toMode(Modes.Pond)}
+            >
+              Skip
+            </Button>
+          )}
         </Footer>
       </Body>
     );

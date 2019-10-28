@@ -18,7 +18,8 @@ const initialState = {
   iterationCount: 0,
   isRunning: false,
   yesCount: 0,
-  noCount: 0
+  noCount: 0,
+  canSkipPredict: false
 };
 let state = {...initialState};
 
