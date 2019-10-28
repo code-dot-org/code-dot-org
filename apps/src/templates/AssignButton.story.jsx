@@ -9,10 +9,9 @@ export default storybook => {
       name: 'Assign to section button',
       story: () => (
         <AssignButton
-          section={fakeTeacherSectionsForDropdown[0]}
+          sectionId={fakeTeacherSectionsForDropdown[0].id}
           courseId={100}
           scriptId={20}
-          assignmentName={'Fake Course'}
           assignCourseToSection={action('assignCourseToSection')}
         />
       )
