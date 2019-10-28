@@ -2,6 +2,7 @@ module Pd::SurveyPipeline
   class DailySurveyParser
     include Pd::JotForm::Constants
 
+    # TODO: separate parsing 1 submission or question, and indexing parsed results of multiple submissions/questions
     # Parse an array of submissions into hashes.
     #
     # @param survey_submissions [Array<Pd::WorkshopDailySurvey or Pd::WorkshopFacilitatorDailySurvey>]
@@ -76,6 +77,7 @@ module Pd::SurveyPipeline
         JSON.parse(sq.questions).each do |question|
           question.symbolize_keys!
 
+          # TODO: move these transformation/enhancement to Modifier
           # Map question options to numbers
           if question[:options]
             question[:option_map] = question[:options].each_with_index.
