@@ -24,48 +24,6 @@ export const toMode = mode => {
   initModel(state);
 };
 
-// Creates a button element, given an object that contains
-// id, text, and onClick properties.
-export const createButton = ({
-  id,
-  text,
-  onClick,
-  className = 'ui-button',
-  show = true
-}) => {
-  let btnEl = document.createElement('button');
-  btnEl.innerHTML = text;
-  if (id) {
-    btnEl.setAttribute('id', id);
-  }
-  btnEl.setAttribute('class', className);
-  btnEl.addEventListener('click', onClick);
-  if (!show) {
-    btnEl.style.display = 'none';
-  }
-  return btnEl;
-};
-
-// Creates a div element with text, given an object that contains
-// id and text properties.
-export const createText = ({id, text}) => {
-  let textEl = document.createElement('div');
-  textEl.setAttribute('id', id);
-  textEl.innerHTML = text;
-
-  return textEl;
-};
-
-// Creates an image element, given an object that contains
-// id and src properties.
-export const createImage = ({id, src}) => {
-  let imageEl = document.createElement('IMG');
-  imageEl.src = src;
-  imageEl.id = id;
-
-  return imageEl;
-};
-
 export const bodyAnchorFromType = (body, type) => {
   switch (type) {
     case FishBodyPart.EYE:
