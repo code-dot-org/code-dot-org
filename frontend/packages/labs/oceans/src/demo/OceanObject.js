@@ -132,6 +132,10 @@ export class FishOceanObject extends OceanObject {
     this.parts = [body, eye, mouth, sideFinFront, sideFinBack, topFin, tail];
   }
 
+  getColorPalette() {
+    return this.colorPalette;
+  }
+
   drawToCanvas(fishCanvas) {
     const ctx = fishCanvas.getContext('2d');
     ctx.translate(constants.fishCanvasWidth, 0);

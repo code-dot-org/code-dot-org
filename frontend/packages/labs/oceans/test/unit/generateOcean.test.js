@@ -21,7 +21,7 @@ describe('Generate ocean test', () => {
     const knnDataLength = ocean[0].knnData.length;
     var knnDataSameLength = true;
     ocean.forEach(fish => {
-      if (fish.knnData.length != knnDataLength) {
+      if (fish.getKnnData().length != knnDataLength) {
         knnDataSameLength = false;
       }
     });
@@ -34,7 +34,7 @@ describe('Generate ocean test', () => {
     const trainer = new SimpleTrainer();
     await trainer.initializeClassifiersWithoutMobilenet();
     trainingOcean.forEach(fish => {
-      trainer.addExampleData(fish.knnData, Math.round(Math.random()));
+      trainer.addExampleData(fish.getKnnData(), Math.round(Math.random()));
     });
     const predictedOcean = await filterOcean(generateOcean(numFish), trainer);
     expect(predictedOcean.length).toEqual(numFish);
@@ -47,8 +47,8 @@ describe('Generate ocean test', () => {
     await trainer.initializeClassifiersWithoutMobilenet();
     trainingOcean.forEach(fish => {
       trainer.addExampleData(
-        Array.from(fish.knnData),
-        fish.colorPalette.bodyRgb[0] > 200 ? 1 : 0
+        Array.from(fish.getKnnData()),
+        fish.getColorPalette().bodyRgb[0] > 200 ? 1 : 0
       );
     });
     const predictedOcean = await filterOcean(
@@ -60,7 +60,7 @@ describe('Generate ocean test', () => {
     });
     var numRedFish = 0;
     likedFish.forEach(fish => {
-      if (fish.colorPalette.bodyRgb[0] > 200) {
+      if (fish.getColorPalette().bodyRgb[0] > 200) {
         numRedFish++;
       }
     });
@@ -75,7 +75,7 @@ describe('Generate ocean test', () => {
     trainer.setTopK(5);
     await trainer.initializeClassifiersWithoutMobilenet();
     trainingOcean.forEach(fish => {
-      const cat = fish.parts[0].knnData[1] === 0 ? 1 : 0;
+      const cat = fish.getKnnData()[1] === 0 ? 1 : 0;
       trainer.addExampleData(Array.from(fish.knnData), cat);
     });
     const predictedOcean = await filterOcean(
@@ -87,7 +87,7 @@ describe('Generate ocean test', () => {
     });
     var numRoundFish = 0;
     likedFish.forEach(fish => {
-      if (fish.parts[0].knnData[1] === 0) {
+      if (fish.getKnnData()[1] === 0) {
         numRoundFish++;
       }
     });
