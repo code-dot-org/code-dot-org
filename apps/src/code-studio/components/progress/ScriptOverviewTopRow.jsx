@@ -113,13 +113,18 @@ export default class ScriptOverviewTopRow extends React.Component {
               assignmentName={scriptTitle}
             />
           )}
-        {experiments.isEnabled(experiments.ASSIGNMENT_UPDATES) && (
-          <SectionAssigner
-            sections={sections}
-            initialSelectedSectionId={selectedSectionId}
-            showAssignButton={showAssignButton}
-          />
-        )}
+        {!professionalLearningCourse &&
+          viewAs === ViewType.Teacher &&
+          showAssignButton &&
+          experiments.isEnabled(experiments.ASSIGNMENT_UPDATES) && (
+            <SectionAssigner
+              sections={sections}
+              selectedSectionId={selectedSectionId}
+              showAssignButton={showAssignButton}
+              courseId={currentCourseId}
+              scriptId={scriptId}
+            />
+          )}
         {!professionalLearningCourse &&
           viewAs === ViewType.Teacher &&
           resources.length > 0 && (
