@@ -9,6 +9,9 @@ var GameLab = function() {
 GameLab.prototype = Object.create(P5Lab.prototype);
 
 GameLab.prototype.init = function(config) {
+  if (!this.studioApp_) {
+    throw new Error('GameLab requires a StudioApp');
+  }
   if (config.level.editBlocks) {
     config.level.lastAttempt = '';
     showLevelBuilderSaveButton(() => ({
