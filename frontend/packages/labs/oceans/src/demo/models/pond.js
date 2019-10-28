@@ -10,33 +10,13 @@ import {
   toMode
 } from '../helpers';
 
-const headerElements = [createText({id: 'header', text: 'A.I. Results'})];
-const staticUiElements = [
-  createImage({
-    id: 'pond-ai-bot',
-    src: 'images/ai-bot-closed.png'
-  })
-];
-const staticFooterElements = [
-  createButton({
-    text: 'Training',
-    onClick: () => toMode(Modes.Training),
-    className: ''
-  })
-];
-
 export const init = async () => {
   const state = getState();
   let fishWithConfidence = await predictAllFish(state);
   fishWithConfidence = _.sortBy(fishWithConfidence, ['confidence']);
   const pondFish = fishWithConfidence.splice(0, 20);
   arrangeFish(pondFish);
-  setState({
-    pondFish,
-    headerElements,
-    uiElements: uiElements(state, pondFish.length),
-    footerElements: footerElements(state)
-  });
+  setState({pondFish});
 };
 
 const predictAllFish = state => {
@@ -60,30 +40,6 @@ const predictAllFish = state => {
   });
 };
 
-const continueText = state => {
-  return state.iterationCount === 0 ? 'Continue' : 'Complete';
-};
-
-const uiElements = (state, pondCount) => {
-  let pondText = '<h3>How did A.I. do?</h3>';
-  pondText += `Out of ${
-    state.fishData.length
-  } objects, A.I. identified ${pondCount} that it classified as ${state.word.toUpperCase()}.`;
-  pondText += `To help A.I. do better, you can train A.I. more and try again.`;
-  pondText += `Otherwise, click '${continueText(state)}'.`;
-  return [...staticUiElements, createText({id: 'pond-text', text: pondText})];
-};
-
-const footerElements = state => {
-  const continueButton = createButton({
-    text: continueText(state),
-    onClick: () => onClickContinue(),
-    className: ''
-  });
-
-  return [...staticFooterElements, continueButton];
-};
-
 const arrangeFish = fishes => {
   fishes.forEach(fish => {
     fish.x = randomInt(
@@ -95,16 +51,4 @@ const arrangeFish = fishes => {
       constants.canvasHeight - constants.fishCanvasHeight / 2
     );
   });
-};
-
-const onClickContinue = () => {
-  const state = setState({
-    iterationCount: getState().iterationCount + 1,
-    trainingIndex: 0,
-    fishData: [],
-    yesCount: 0,
-    noCount: 0
-  });
-  state.trainer.clearAll();
-  toMode(Modes.Words);
 };
