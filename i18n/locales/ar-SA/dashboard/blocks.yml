@@ -436,7 +436,7 @@ ar:
             '"vintage"': عتيق
             '"warm"': الأحمر بدرجاته
       Dancelab_setBackgroundEffectWithPalette:
-        text: عيّن تأثيرات الخلفية {EFFECT} {PALETTE}
+        text: عيّن تأثيرات الخلفية {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': لا شيء
@@ -974,6 +974,12 @@ ar:
             MOVES.Rest: لا شيء
       Mikelab_randomColor:
         text: لون عشوائي
+      Mikelab_repeatUntilComplete:
+        text: التكرار للأبد
+      Mikelab_sendBad:
+        text: تحرك لليسار
+      Mikelab_sendGood:
+        text: تحريك لليمين
       Mikelab_setBG:
         options:
           BG:

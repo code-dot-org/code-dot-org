@@ -11336,6 +11336,12 @@ es-MX:
           stages:
             CS Principles Deeper Learning Module 3:
               name: Módulo 3 de Aprendizaje Profundo de Principios de Ciencias de la Computación
+            Deeper Learning Overview:
+              name: Resumen del aprendizaje profundo
+            'Step 1: Develop Understanding':
+              name: 'Paso 1: desarrollar la comprensión'
+            'Step 2: Demonstrate Understanding':
+              name: 'Paso 2: demostrar la comprensión'
           title: Módulo 3 de Aprendizaje Profundo de Principios de Ciencias de la Computación
         dlp19-csp-mod-w4:
           stages:

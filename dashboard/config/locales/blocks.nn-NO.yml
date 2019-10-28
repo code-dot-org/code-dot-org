@@ -456,7 +456,7 @@ nn:
             '"vintage"': Retro
             '"warm"': Rødfarger
       Dancelab_setBackgroundEffectWithPalette:
-        text: vel bakgrunnseffekt {EFFECT} {PALETTE}
+        text: vel bakgrunnseffekt {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': Ingen
@@ -1125,6 +1125,12 @@ nn:
         text: tilfeldig farge
       Mikelab_removeBehaviorSimple:
         text: figur {SPRITE} stopper {BEHAVIOR}
+      Mikelab_repeatUntilComplete:
+        text: gjenta for alltid
+      Mikelab_sendBad:
+        text: flytt til venstre
+      Mikelab_sendGood:
+        text: flytt høgre
       Mikelab_setBG:
         options:
           BG:

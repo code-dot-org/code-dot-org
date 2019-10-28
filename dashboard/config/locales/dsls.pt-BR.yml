@@ -3677,6 +3677,32 @@ pt-BR:
 
           > <a href="http://ctt.ec/Bfjw3" target="blank"><button class="default">Compartilhe no Tweeter >></button></a><br><br>
           Não possui uma conta no Twitter? Você também pode nos encontrar no [Facebook](https://www.facebook.com/Code.org/) ou no [Instagram](https://www.instagram.com/codeorg/).
+      OPD-K5 CS Courses:
+        markdown: "# Planejamento > Primeiros passos com Code.org\n\n\n## Passo 1:
+          Escolha um curso\nTodos os nossos cursos - desde a alfabetização até os
+          níveis avançados - estão listados em nosso **[catálogo de cursos](https://studio.code.org/courses)**.
+          Para encontrar as lições de Fundamentos de CC que você esteve praticando,
+          vá à nosso **[página da ensino elementar](https://code.org/educate/curriculum/elementary-school)**
+          e role para baixo até a seção \"Cursos\". Todos os nossos cursos estão disponíveis
+          sem custos. Converse com colegas na sua escola para definir como o currículo
+          do curso pode ser integrado com uma variedade de disciplinas. \n![](https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)\n***\n##
+          Passo 2: Prepare a seção de sua sala de aula\nPrepare uma seção de sala
+          de aula para acompanhar a evolução de seus alunos, imprimir cartões de login
+          para seus estudantes, gerenciar suas contas, e imprimir os certificados
+          que eles poderão levar para casa quando terminarem o curso. Clique neste
+          link para **[assistir um breve vídeo](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)**
+          que demostra como preparar sua primeira sala de aula na Code.org. Você pode
+          encontrar os passos neste **[artigo de apoio](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)**.\n![](https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)\n***\n##
+          Passo 3: Associe o curso à sua seção\nClique sobre o curso que estiver lecionando
+          - você deverá ver uma tela que se parece com a tela mostrada abaixo. Você
+          pode a seguir clicar em \"associar curso\" para associar este curso a uma
+          de suas seções.\n![](https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)\n***\n##
+          Passo 4: Comece a lecionar!\nUma aula é tudo o que você precisa para trazer
+          conceitos de ciência da computação à sua sala de aula. Quando você ver o
+          entusiasmo dos seus alunos por CC, siga em frente com planoejamento de aulas
+          diárias para guiar seus estudantes, com atividades desplugadas que você
+          pode fazer sem um computador, e com os fóruns para se conectar a outros
+          professores.\n\n\n"
       OPD-K5 CS Tips:
         markdown: |
           Vamos Começar > Navegando por este Curso Online
@@ -3877,6 +3903,31 @@ pt-BR:
           - Compartilhar os benefícios que você obteve e considerações sobre o curso
 
           > **Nota**: Os tempos sugeridos são providos acima para ajudá-lo a planejar seu tempo. Por favor veja que você poderá querer gastar mais ou menos tempo em determinada etapa, a depender de seu conhecimento prévio, interesse e disponibilidade. Tenha em mente que o andamento deste curso é totalmente definido por você; você sempre poderá deixar o curso para retomá-lo depois, ou revistar qualquer etapa ou nível a qualquer tempo.
+      OPD-K5 Pair:
+        markdown: |
+          # Melhores Práticas > Programação em Pares
+
+          Uma importante estratégia de gerenciamento de salas de aula que é usada por muitos educadores é o agrupamento estratégico. Na Code.org, nós sugerimos tentar o agrupamento estratégico que é usado pelas principais empresas de tecnologia: programação em pares.
+
+          >**Programação em pares** é quando dois estudantes utilizam um único computador para escreverem um programa juntos. O Centro Nacional para Mulheres e Tecnologia de Informação dos Estados Unidos (NCWIT) possui um [ótimo material sobre os benefícios da programação em pares](http://www.ncwit.org/sites/default/files/resources/pairprogramming_retainingwomencollaborativelearning_practice.pdf).
+
+          Pesquisas mostram que a programação em pares:
+
+          - Leva à codificação, pelos estudantes, de programas de melhor qualidade em relação a programas que foram codificados individualmente
+          - Reduz a chamada "lacuna de confiança" entre estudantes homens e mulheres, ao mesmo tempo que aumenta a confiança de todos os alunos
+          <br/><br/>
+
+          Assista a este vídeo para entender como funciona a programação em pares, e ouça diretamente dos estudantes como isto aprimora seu aprendizado.
+
+          <iframe width="640" height="390" src="https://www.youtube.com/embed/vgkahOzFH2Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          [Não consegue ver o vídeo? Clique aqui](http://videos.code.org/2014/C1-pair-programming.mp4)
+          <br/><br/>
+
+          A programação em pares não é somente benéfica para estudantes, ela é também praticada por alguns programadores profissionais. Veja este vídeo para aprender como introduzir a programação em pares para seus alunos.
+
+          <iframe width="640" height="390" src="https://www.youtube.com/embed/sxToW3ixrwo" frameborder="0" allowfullscreen></iframe>
+          [Não consegue ver o vídeo? Clique aqui](https://videos.code.org/levelbuilder/06pairprogramming_small-mp4.mp4)
+          <br/>
       OPD-K5 Participation:
         markdown: |
           # Vamos começar > Planejando sua participação
@@ -4311,6 +4362,30 @@ pt-BR:
           ao Ano 5) para experimentação com blocos de evento. Iremos fechar com uma
           oportunidade para reflexão. Você deverá gastar entre 20-45 minutos nesta
           etapa.\n\nTudo pronto? Vamos lá!\n"
+      OPD-K5 Stage8Go:
+        markdown: |
+          # Melhores Práticas > Reflexão
+
+          A Etapa 8 apresentou diversas melhores práticas para o ensino de ciência da computação. Tome um momento para considerar quais estratégias apresentadas neste etapa você poderá usar em sua prática. Na próxima etapa, você irá criar um plano simples e refletir sobre o curso como um todo.
+
+          ## Quais estratégias você irá usar ao facilitar o ensino de ciência da computação em sua classe?
+
+          Aqui estão alguns exemplos que foram extraídos da comunidade de professores:
+
+          - **Facilite atividades "desplugadas"** para ensinar conceitos essenciais (clique [aqui para uma lista completa de atividades desplugadas](https://code.org/curriculum/unplugged.)
+          - Implemente a regra **pergunte a 3 pessoas e depois para mim** em sua classe, em que os alunos devem antes pedir ajuda para 3 colegas antes que possam fazer a mesma pergunta ao professor. Isto reduz o número de alunos que você deverá responder individualmente, e promove o aprendizado a partir dos colegas.
+          - **Seja calmo e persistente** quando os problemas surgirem (e eles irão surgir). Sua reação irá dar o tom para os alunos. Se ao primeiro sinal de problema você disser "eu sou péssimo em tecnologia, eu desisto", seus alunos irão pensar que eles poderão fazer isto também.
+          - **Faça-os se sentir orgulhosos** de seus programas. Exiba-os, faça-os funcionar, publique-os online. É uma grande realização para você e para seus alunos que deve ser comemorada.
+          - **Faça perguntas para sondar** os alunos (mesmo se você não souber as respostas). Pergunte à classe se alguém tem a resposta. Fique confortável ao dizer "Eu não sei, vamos descobrir isto juntos!"
+
+          ---
+
+          > ## Reflita
+          Reveja mais estratégias ou acrescente suas próprias <a href ="http://forum.code.org/t/code-org-k5-professional-development-computer-science-pedagogy-6/14/4">em nossos fóruns.</a>:
+
+          > <a href="http://forum.code.org/t/code-org-k5-professional-development-computer-science-pedagogy-6/14/4" target="blank"><button class="plc">Compartilhe suas estratégias >></button></a>
+
+          Após explorar os fios do fórum e acrescentar suas ideias, clique abaixo para seguir à Etapa 9.
       OPD-K5 Stage8Start:
         markdown: "# Melhores Práticas > Visão Geral da Etapa\n\n<img src=\"https://images.code.org/1faca2c2dd1c9bd64ab5def347524d9c-image-1434398377360.JPG\"
           width=\"450px\" style=\"border-radius:10px; float:right; margin: 0 0 40px
@@ -4332,6 +4407,22 @@ pt-BR:
           Outras melhores práticas sugeridas pela comunidade de professores da Code.org\n\nTambém
           iremos prover uma oportunidade para você compartilhar suas melhores práticas
           com a comunidade.\n"
+      OPD-K5 Stage9Start:
+        markdown: "# Planejamento > Explorando o Material do Professor\n\nDurante
+          as Etapas 4-8, você conheceu alguns dos recursos \"desplugados\" e online
+          que estão disponíveis para Fundamentos de CC, quando estavam alinhados com
+          os conceitos de CC que você estava aprendendo. \n\nAgora que você tem algum
+          conhecimento em como codificar, assim como em como lecionar ciência da computação,
+          é hora de começar a planejar suas aulas. Nesta etapa, iremos visitar outras
+          áreas da plataforma Code.org e o **[Painel do Professor](http://studio.code.org/)**.
+          \n\nAo completar esta etapa, você irá:\n\n- Explorar os materiais disponíveis
+          para professores\n- Explorar o **[Painel do Professor](http://studio.code.org/)**
+          da Code.org\n- Planejar como você poderia integrar ciência da computação
+          à sua prática\n\n***\n\nUma captura de tela do Painel do Professor é mostrada
+          abaixo. Para visualizá-la, você terá que se autenticar na sua conta de professor
+          na Code.org - quando você estiver autenticado, esta deverá ser a tela padrão
+          que você verá no website da Code.org. Se você não tiver uma conta de professor,
+          você pode **[cadastrar-se aqui para obter uma](https://studio.code.org/users/sign_up)**.\n\n![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)\n"
       OPD-K5 Unplugged:
         markdown: |
           # Olhando à Frente > Ficando "Desplugado"
@@ -4349,6 +4440,26 @@ pt-BR:
           <br/>
           <br/>
           **À medida que você percorrer as Etapas 4-8**, você terá a oportunidade de rever algumas das nossas atividades desplugadas para cada um dos conceitos essenciais que são tratados neste curso.
+      OPD-K5 Using CS:
+        markdown: |+
+          # Planejamento > Preparando-se para uma aula com Code Studio
+
+          Vamos dar uma olhada como funciona o Code Studio para você e para seus alunos em um ambiente de sala de aula.
+
+          ## Passo 1: Escolha um curso
+          Verifique nossa [página de ensino elementar](https://code.org/educate/curriculum/elementary-school) e encontre os planos de aulas e cursos completos para Fundamentos de CC, A-F. Ou, se você estiver interessado em nossos cursos de ensino médio, você irá encontrar cursos para todos os níveis - desde a pré-alfabetização até alunos sêniores, e todos os níveis intermediários. Todos os nossos cursos são disponíveis de forma gratuita. Converse com seus colegas na escola para definir como o currículo do curso poderá ser integrado à variedade de disciplinas.
+
+          ## Passo 2: Prepare a seção da sala de aula
+          Configure uma seção de sala de aula para visualizar a evolução dos alunos, imprimir cartões de login para seus alunos, gerenciar suas contas, e imprimir certificados que eles poderão levar para casa após terminar o curso. Clique neste link para [assistir um breve vídeo](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b) que demonstra como criar sua primeira sala de aulas de ciência da computação na Code.org. Você pode também encontrar os passos [neste artigo de apoio](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).
+
+          ## Passo 3: Associe o curso à sua seção
+          Clique sobre o curso que você está lecionando - você deve ver uma tela semelhate à tela mostrada abaixo. Você pode a seguir clicar em "Associar Curso" para associar este curso a uma de suas seções.
+
+          ## Passo 4: Comece a lecionar!
+          Uma aula é tudo o que você precisa para trazer conceitos de ciência da computação à sua sala de aula. Quando você vir o entusiasmo dos seus alunos por CC, vá em frente com planos de aulas diárias para orientar seus alunos, com atividades desplugadas que não requerem um computador, e com os fóruns para se conectar a outros professores.
+
+
+
       OPD-K5 Vocabulary:
         markdown: |
           # Fundamentos de CC > Vocabulário Chave
@@ -4807,6 +4918,17 @@ pt-BR:
           ## Recursos
 
           * [O que é um Computador - Guia de Atividade](https://docs.google.com/document/d/1g4dPcsx2xADEZI0FiMYApLr0hh3_-89NDWd2y86sS6I/export?format=pdf)
+      Unit 1 Lesson 6 Overview:
+        markdown: |
+          # Solução de problemas - Computadores e lógica: Lição 6 - Processando com bits
+
+          ## Fundo
+
+          Nesta lição, você aprenderá como os computadores processam informações binárias ao projetar filtros no nível de bit de imagens simples.
+
+          # Recursos
+
+          * [Filtragem de pixels] (https://docs.google.com/document/d/1R92qKHBC8Bz3P3YXVSziyfpijJ0gMYob2j5RncWdWsA/edit?usp=sharing) - Guia de atividades ([PDF] (https://docs.google.com/document/d/1R92qKHBC8Bz3P3YXVSziyfpijJ0gMYob2j5RncWdWsA/export?format=pdf) | [DOCX] (https://docs.google.com/document/d/1R92qKHBC8Bz3P3YXVSziyfpijJ0gMYob2j5RncWdWsA/export?format=doc))
       Unit 2 Lesson 10 Overview:
         markdown: |
           # Visão global

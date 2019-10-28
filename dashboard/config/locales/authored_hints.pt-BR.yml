@@ -3366,7 +3366,7 @@ pt-BR:
           \ </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title
           name=\"DIR\">moveForward</title>\n                  </block>\n                  \n
           \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n
-          \   <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
+          \   <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>"
         courseD_collector_debugging_challenge2_b: |-
           Em seguida, colete as gemas restantes nessa linha.
 
@@ -8367,15 +8367,6 @@ pt-BR:
           para cada espaço.
         courseC_collector_prog_challenge1_b: Se perdeu? Tente este caminho para resolver
           o problema!
-      courseC_data wizard:
-        courseA_playLab_events7_a: |-
-          Use este bloco para controlar o que acontece quando os atores se chocam.
-
-          <xml><block type="studio_whenSpriteCollided">
-
-          <title name="SPRITE1">1</title>
-          <title name="SPRITE2">0</title>
-          </block></xml>
       courseC_flappy_events1:
         courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
       courseC_flappy_events1_2018:
@@ -11147,8 +11138,6 @@ pt-BR:
           Observe que o caminho mais fácil para chegar a todas as culturas ainda é uma espiral.
 
           ![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)
-        courseD_farmer_condLoops7_b: Tente usar `quando caminho à frente` para manter
-          o harvester movendo o número correto de etapas.
       courseD_farmer_condLoops_challenge1:
         courseD_farmer_condLoops_challenge1_a: O botão "Passo" pode ser muito útil
           neste desafio.
