@@ -553,6 +553,11 @@ Applab.init = function(config) {
   };
 
   config.afterClearPuzzle = function() {
+    let startLibraries;
+    if (config.level.startLibraries) {
+      startLibraries = JSON.parse(config.level.startLibraries);
+    }
+    project.sourceHandler.setInitialLibrariesList(startLibraries);
     designMode.resetIds();
     Applab.setLevelHtml(config.level.startHtml || '');
     let promise = Applab.storage.populateTable(level.dataTables, true); // overwrite = true
