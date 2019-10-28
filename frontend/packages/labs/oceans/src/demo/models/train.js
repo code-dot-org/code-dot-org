@@ -6,36 +6,6 @@ import {createButton, createText, createImage, toMode} from '../helpers';
 import SimpleTrainer from '../../utils/SimpleTrainer';
 import {generateOcean} from '../../utils/generateOcean';
 
-const staticUiElements = [
-  createButton({
-    id: 'yes-button',
-    text: 'Yes',
-    onClick: () => onClassifyFish(true)
-  }),
-  createButton({
-    id: 'no-button',
-    text: 'No',
-    onClick: () => onClassifyFish(false)
-  }),
-  createImage({
-    id: 'training-ai-bot',
-    src: 'images/ai-bot-closed.png'
-  })
-];
-const headerElements = [createText({id: 'header', text: 'A.I. Training'})];
-const footerElements = [
-  createButton({
-    text: 'Select Type',
-    onClick: () => onSelectType(),
-    className: ''
-  }),
-  createButton({
-    text: 'Continue',
-    onClick: () => toMode(Modes.Predicting),
-    className: ''
-  })
-];
-
 export const init = () => {
   const state = getState();
   let fishData = [...state.fishData];
@@ -52,23 +22,8 @@ export const init = () => {
   setState({
     fishData,
     trainer,
-    uiElements: uiElements(state),
-    headerElements,
-    footerElements,
     isRunning: true
   });
-};
-
-const uiElements = state => {
-  return [
-    ...staticUiElements,
-    createText({
-      id: 'train-text',
-      text: `Is this fish <b>${state.word.toUpperCase()}</b>?`
-    }),
-    createText({id: 'train-counter-yes-text', text: ''}),
-    createText({id: 'train-counter-no-text', text: ''})
-  ];
 };
 
 export const onClassifyFish = doesLike => {
@@ -103,17 +58,4 @@ export const onClassifyFish = doesLike => {
     fishData,
     isRunning: true
   });
-};
-
-const onSelectType = () => {
-  const state = setState({
-    trainingIndex: 0,
-    fishData: [],
-    noCount: 0,
-    yesCount: 0
-  });
-  if (state.trainer) {
-    state.trainer.clearAll();
-  }
-  toMode(Modes.Words);
 };

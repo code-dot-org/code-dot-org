@@ -1,5 +1,5 @@
 import {setState} from './state';
-import {init as initScene} from './init';
+import {init as initModel} from './models';
 import {Modes} from './constants';
 import {FishBodyPart} from '../utils/fishData';
 
@@ -20,8 +20,8 @@ export const backgroundPath = imgName => {
 };
 
 export const toMode = mode => {
-  setState({currentMode: mode});
-  initScene();
+  const state = setState({currentMode: mode});
+  initModel(state);
 };
 
 // Creates a button element, given an object that contains

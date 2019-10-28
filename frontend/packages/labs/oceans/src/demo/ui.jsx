@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {getState, setState} from './state';
 import {Modes} from './constants';
 import {toMode} from './helpers';
-import {init as initScene} from './init';
+import {init as initModel} from './models';
 import {onClassifyFish} from './models/train';
 
 const styles = {
@@ -261,11 +261,11 @@ class Words extends React.Component {
   }
 
   onChangeWord(itemIndex) {
-    setState({
+    const state = setState({
       word: this.currentItems()[itemIndex],
       currentMode: Modes.TrainingIntro
     });
-    initScene();
+    initModel(state);
   }
 
   render() {
@@ -398,7 +398,7 @@ class Pond extends React.Component {
   }
 }
 
-module.exports = class UI extends React.Component {
+export default class UI extends React.Component {
   render() {
     const mode = getState().currentMode;
 
@@ -413,4 +413,4 @@ module.exports = class UI extends React.Component {
       </div>
     );
   }
-};
+}
