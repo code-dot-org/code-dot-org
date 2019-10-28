@@ -82,7 +82,7 @@ stage 'Lesson 11: Unit Assessment', lockable: true
 level 'CSP Unit 3 MC Assessment _2020', assessment: true
 
 stage 'Unit 3 STUDENT Survey', lockable: true, flex_category: 'required'
-level 'CSP U3 20-21 Student Pilot Survey', progression: 'Unit 1 STUDENT Survey', assessment: true
+level 'CSP U3 20-21 Student Pilot Survey', progression: 'Unit 3 STUDENT Survey', assessment: true
 
 stage 'Unit 3 TEACHER Survey', lockable: true, flex_category: 'required'
-level 'CSP U3 20-21 Teacher Pilot Survey', progression: 'Unit 1 TEACHER Survey', assessment: true
+level 'CSP U3 20-21 Teacher Pilot Survey', progression: 'Unit 3 TEACHER Survey', assessment: true
