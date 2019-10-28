@@ -232,17 +232,18 @@ module Api::V1::Pd
     end
 
     test 'generic_survey_report: return empty result for workshop without responds' do
-      ayw_ws = create :csp_academic_year_workshop
+      workshop = create :csf_201_workshop
 
       expected_result = {
-        "course_name" => nil,
+        "course_name" => workshop.course,
         "questions" => {},
         "this_workshop" => {},
+        "errors" => []
       }
 
       sign_in @admin
-      get :generic_survey_report, params: {workshop_id: ayw_ws.id}
-      result = JSON.parse(@response.body).slice(*expected_result.keys)
+      get :generic_survey_report, params: {workshop_id: workshop.id}
+      result = JSON.parse(@response.body)
 
       assert_equal expected_result, result
       assert_response :success
