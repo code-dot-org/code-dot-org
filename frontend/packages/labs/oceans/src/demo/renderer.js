@@ -86,6 +86,9 @@ export const render = () => {
       drawMovingFish(state);
       break;
     case Modes.Predicting:
+      const timeBeforeCanSkipPredict = 5000;
+      setState({canSkipPredict: $time() >= currentModeStartTime + timeBeforeCanSkipPredict});
+
       drawMovingFish(state);
       break;
     case Modes.Pond:
