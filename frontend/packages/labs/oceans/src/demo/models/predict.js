@@ -1,8 +1,5 @@
 import 'babel-polyfill';
-import $ from 'jquery';
 import {setState} from '../state';
-import {Modes} from '../constants';
-import {createButton, createText, createImage, toMode} from '../helpers';
 
 export const init = () => {
   setState({isRunning: true});

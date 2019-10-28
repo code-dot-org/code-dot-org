@@ -1,14 +1,8 @@
 import 'babel-polyfill';
 import _ from 'lodash';
 import {setState, getState} from '../state';
-import constants, {Modes, ClassType} from '../constants';
-import {
-  createButton,
-  createText,
-  createImage,
-  randomInt,
-  toMode
-} from '../helpers';
+import constants, {ClassType} from '../constants';
+import {randomInt} from '../helpers';
 
 export const init = async () => {
   const state = getState();

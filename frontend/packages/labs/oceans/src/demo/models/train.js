@@ -1,8 +1,7 @@
 import $ from 'jquery';
 import 'babel-polyfill';
 import {setState, getState} from '../state';
-import {Modes, ClassType} from '../constants';
-import {createButton, createText, createImage, toMode} from '../helpers';
+import {ClassType} from '../constants';
 import SimpleTrainer from '../../utils/SimpleTrainer';
 import {generateOcean} from '../../utils/generateOcean';
 
