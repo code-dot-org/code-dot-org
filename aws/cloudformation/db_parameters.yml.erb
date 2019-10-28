@@ -144,7 +144,7 @@ Replica:
 # System variables for the Aurora DB cluster.
 AuroraCluster: &aurora
   # Disable binary logging to improve write performance.
-  binlog_format: OFF
+  binlog_format: 'OFF'
 
   # Enable GTIDs: https://aws.amazon.com/blogs/database/amazon-aurora-for-mysql-compatibility-now-supports-global-transaction-identifiers-gtids-replication/
   gtid-mode: ON_PERMISSIVE
