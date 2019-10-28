@@ -13,7 +13,7 @@ import {
 } from './helpers';
 import {fishData, FishBodyPart} from '../utils/fishData';
 import {predictFish} from './models/predict';
-import {loadAllFishPartImages, loadAllTrashImages} from './OceanObject';
+import {loadAllFishPartImages, loadAllTrashImages, initMobilenet} from './OceanObject';
 
 var $time =
   Date.now ||
@@ -29,10 +29,15 @@ let lastStartTime;
 let defaultMoveTime = 1000;
 let moveTime;
 
-export const initRenderer = () => {
+export const initRenderer = (mobilenet = false) => {
   canvasCache = new CanvasCache();
-  loadAllTrashImages();
-  return loadAllFishPartImages();
+  let promises = [];
+  promises.push(loadAllFishPartImages());
+  if (getState().loadTrashImages) {
+    promises.push(loadAllTrashImages());
+    promises.push(initMobilenet());
+  }
+  return Promise.all(promises);
 };
 
 // Render a single frame of the scene.

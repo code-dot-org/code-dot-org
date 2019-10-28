@@ -18,7 +18,7 @@ let intermediateCtx;
 let mobilenet;
 
 // Load a single fish part image.
-const loadFishPartImage = data => {
+const loadImage = data => {
   return new Promise((resolve, reject) => {
     const img = new Image();
     img.addEventListener('load', e => resolve({img, data}));
@@ -32,10 +32,10 @@ const loadFishPartImage = data => {
 // Load all fish part images, and store them in fishPartImages.
 export const loadAllFishPartImages = () => {
   intermediateCanvas = document.createElement('canvas');
-  tmpCanvas = document.createElement('canvas');
   intermediateCtx = intermediateCanvas.getContext('2d');
   intermediateCanvas.width = constants.fishCanvasWidth;
   intermediateCanvas.height = constants.fishCanvasHeight;
+  tmpCanvas = document.createElement('canvas');
 
   let fishPartImagesToLoad = [];
   Object.keys(fishData)
@@ -50,26 +50,31 @@ export const loadAllFishPartImages = () => {
         fishPartImagesToLoad.push(partData);
       });
     });
-  mobilenetModule.load().then(res => (mobilenet = res));
-  return Promise.all(fishPartImagesToLoad.map(loadFishPartImage)).then(
-    results => {
-      results.forEach(result => {
-        if (fishPartImages[result.data.partIndex] === undefined) {
-          fishPartImages[result.data.partIndex] = {};
-        }
-        fishPartImages[result.data.partIndex][result.data.variationIndex] =
-          result.img;
-      });
-    }
-  );
+  return Promise.all(fishPartImagesToLoad.map(loadImage)).then(results => {
+    results.forEach(result => {
+      if (fishPartImages[result.data.partIndex] === undefined) {
+        fishPartImages[result.data.partIndex] = {};
+      }
+      fishPartImages[result.data.partIndex][result.data.variationIndex] =
+        result.img;
+    });
+  });
+};
+
+export const initMobilenet = () => {
+  return mobilenetModule.load().then(res => (mobilenet = res));
 };
 
 export const loadAllTrashImages = () => {
-  imagePaths.forEach((path, idx) => {
-    trashImages[idx] = new Image();
-    trashImages[idx].src = path;
+  const loadImagePromises = imagePaths.map((src, idx) => {
+    return loadImage({src, idx});
   });
-}
+  return Promise.all(loadImagePromises).then(results => {
+    results.forEach(result => {
+      trashImages[result.data.idx] = result.img;
+    });
+  });
+};
 
 export const generateOceanObject = (allowedClasses, id) => {
   const idx = Math.floor(Math.random() * allowedClasses.length);
@@ -82,6 +87,7 @@ export class OceanObject {
   constructor(id) {
     this.id = id;
     this.knnData = null;
+    this.logits = null;
     this.result = null;
   }
   randomize() {}
@@ -91,10 +97,14 @@ export class OceanObject {
   }
   getKnnData() {
     //return this.knnData;
-    if (!this.logits) {
-      this.drawToCanvas(tmpCanvas);
+    if (mobilenet) {
+      if (!this.logits) {
+        this.drawToCanvas(tmpCanvas);
+      }
+      return this.logits;
+    } else {
+      return this.knnData;
     }
-    return this.logits;
   }
   setResult(result) {
     this.result = result;
@@ -107,6 +117,12 @@ export class OceanObject {
   }
   getXY() {
     return this.xy;
+  }
+  generateLogits(canvas) {
+    if (mobilenet && !this.logits) {
+      const infer = () => mobilenet.infer(canvas, 'conv_preds');
+      this.logits = infer();
+    }
   }
 }
 
@@ -219,10 +235,7 @@ export class FishOceanObject extends OceanObject {
         constants.fishCanvasWidth,
         constants.fishCanvasHeight
       );
-      if (!this.logits) {
-        const infer = () => mobilenet.infer(fishCanvas, 'conv_preds');
-        this.logits = infer();
-      }
+      this.generateLogits(fishCanvas);
     });
   }
 }
@@ -245,9 +258,6 @@ export class TrashOceanObject extends OceanObject {
       constants.fishCanvasWidth,
       constants.fishCanvasHeight
     );
-    if (!this.logits) {
-      const infer = () => mobilenet.infer(canvas, 'conv_preds');
-      this.logits = infer();
-    }
+    this.generateLogits(canvas);
   }
 }

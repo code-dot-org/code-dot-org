@@ -16,7 +16,8 @@ const initialState = {
   iterationCount: 0,
   isRunning: false,
   yesCount: 0,
-  noCount: 0
+  noCount: 0,
+  loadTrashImages: true
 };
 let state = {...initialState};
 
