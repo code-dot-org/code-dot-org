@@ -450,7 +450,7 @@ bs:
       Dancelab_setBackgroundEffectWithPalette:
         text: |-
           podesi efekat pozadine
-          {EFFECT} {PALETTE}
+          {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': Nijedno
@@ -986,6 +986,12 @@ bs:
             MOVES.Rest: Nijedno
       Mikelab_randomColor:
         text: nasumična boja
+      Mikelab_repeatUntilComplete:
+        text: ponavljaj zauvijek
+      Mikelab_sendBad:
+        text: pomakni lijevo
+      Mikelab_sendGood:
+        text: pomakni desno
       Mikelab_setBG:
         options:
           BG:

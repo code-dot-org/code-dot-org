@@ -469,7 +469,7 @@ it:
             '"vintage"': Vintage
             '"warm"': Rossi
       Dancelab_setBackgroundEffectWithPalette:
-        text: imposta effetto di sfondo {EFFECT} {PALETTE}
+        text: imposta effetto di sfondo {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': Nessuno
@@ -1259,6 +1259,12 @@ it:
         text: colore scelto a caso
       Mikelab_removeBehaviorSimple:
         text: il personaggio {SPRITE} interrompe {BEHAVIOR}
+      Mikelab_repeatUntilComplete:
+        text: ripeti per sempre
+      Mikelab_sendBad:
+        text: vai a sinistra
+      Mikelab_sendGood:
+        text: vai a destra
       Mikelab_setBG:
         options:
           BG:

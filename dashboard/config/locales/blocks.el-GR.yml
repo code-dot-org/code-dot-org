@@ -462,7 +462,7 @@ el:
             '"vintage"': Βίντατζ
             '"warm"': Κόκκινα
       Dancelab_setBackgroundEffectWithPalette:
-        text: ορισμός εφέ φόντου {EFFECT} {PALETTE}
+        text: ορισμός εφέ φόντου {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': Κανένα
@@ -1199,6 +1199,12 @@ el:
         text: τυχαίο χρώμα
       Mikelab_removeBehaviorSimple:
         text: χαρακτήρας {SPRITE} σταματάει {BEHAVIOR}
+      Mikelab_repeatUntilComplete:
+        text: επαναλάμβανε για πάντα
+      Mikelab_sendBad:
+        text: Προχώρησε αριστερά
+      Mikelab_sendGood:
+        text: Προχώρησε δεξιά
       Mikelab_setBG:
         options:
           BG:

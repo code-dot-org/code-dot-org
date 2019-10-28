@@ -47,6 +47,7 @@
   "jumpBackward": "hop baglæns ved",
   "jumpForward": "hop fremad ved",
   "jumpToOverDown": "",
+  "jumpToPosition": "",
   "jumpByDirection": "",
   "jumpTooltip": "Flytter kunstneren uden at efterlade nogen mærker.",
   "jumpEastTooltip": "Flytter markør øst uden at efterlade spor.",

@@ -1838,14 +1838,6 @@ vi-VN:
       courseC19_playLab_EOC2:
         courseE_playLab_scaffold1_c: Khi bạn hoàn thành, bạn có thể di chuyển nhân
           vật anh hùng của bạn bằng các phím mũi tên!
-      courseC_data wizard:
-        courseA_playLab_events7_a: |-
-          Dùng khối này khi các nhân vật va vào nhau.
-
-          <xml><block type="studio_whenSpriteCollided">
-              <title name="SPRITE1">1</title>
-              <title name="SPRITE2">0</title>
-            </block></xml>
       courseC_maze_programming6:
         courseC_maze_programming6_a: Có hai cách để giải câu đố này!
       courseC_maze_programming6_2018:

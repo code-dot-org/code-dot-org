@@ -417,6 +417,7 @@
   "puzzle": "Galvosūkis",
   "puzzleTitle": "Užduotis {puzzle_number} iš {stage_total}",
   "question": "Klausimas",
+  "random": "atsitiktinis",
   "readonlyWorkspaceHeader": "Rodyti tik: ",
   "recommended": "Rekomenduojama",
   "recommendedBlockContextualHintTitle": "Norėdama(-s) išspręsti galvosūkį, pabandyk blokelį panaudoti štai taip.",

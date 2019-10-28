@@ -232,9 +232,9 @@ fr-FR:
         vos amis.
       Dance_Party_extras_battle: Equipe de danse (Clic "Plus" pour les détails)
       Dance_Party_extras_every_beat: Noires (Clic "Plus" pour les détails)
-      Dance_Party_extras_layout: Soyons informés! (Clic "Plus" pour les détails)
+      Dance_Party_extras_layout: Allons en formation! (Clic "Plus" pour les détails)
       Dance_Party_extras_on_beat: Grave, Medium et Aigü (Clic "Plus" pour les détails)
-      Dance_Party_extras_speed: Accélérer, Ralentir (Clic "Plus" pour les détails)
+      Dance_Party_extras_speed: Accélére la, Ralenti la (Clic "Plus" pour les détails)
       Dance_Party_extras_visible: Où iraient-ils? (Clic "Plus" pour les détails)
       FoodFight: C'est un exemple de jeu que tu peux créer dans le Labo de jeux.
       Function intro Ryan: Utilisez deux fois la fonction « construire un pont » pour
@@ -739,31 +739,31 @@ fr-FR:
       courseA_artist_loops_challenge2a: _"Aide moi à monter ces 3 tentes!"_
       courseA_artist_loops_challenge2a_2018: _"Aide moi à monter ces 3 tentes!"_
       courseA_artist_loops_challenge2a_2019: _"Aide moi à monter ces 3 tentes!"_
-      courseA_collector_loops1: Déplace Laurel et récupère autant de trésors que tu
-        peux!
-      courseA_collector_loops10: Aide Laurel à récupérer tous les trésors de cette
-        vallée profonde.
-      courseA_collector_loops10_2018: Aide Laurel à récupérer tous les trésors de
-        cette vallée profonde.
-      courseA_collector_loops10_2019: Aide Laurel à récupérer tous les trésors de
-        cette vallée profonde.
-      courseA_collector_loops11: Aide Laurel à récupérer tous les trésors de cette
-        cave.
-      courseA_collector_loops11_2018: Aide Laurel à récupérer tous les trésors de
-        cette cave.
-      courseA_collector_loops11_2019: Aide Laurel à récupérer tous les trésors de
-        cette cave.
-      courseA_collector_loops12: Eurêka !  Récupère autant de trésors que tu peux!
-      courseA_collector_loops12_2018: Eurêka !  Récupère autant de trésors que tu
-        peux!
-      courseA_collector_loops12_2019: Eurêka !  Récupère autant de trésors que tu
-        peux!
-      courseA_collector_loops1_2018: Déplace Laurel et récupère autant de trésors
+      courseA_collector_loops1: Déplace Laurel et récupère autant de diamants que
+        tu peux!
+      courseA_collector_loops10: Aide Laurel à récupérer tous les diamants le long
+        du chemin.
+      courseA_collector_loops10_2018: Aide Laurel à récupérer tous les diamants le
+        long du chemin.
+      courseA_collector_loops10_2019: Aide Laurel à récupérer tous les diamants le
+        long du chemin.
+      courseA_collector_loops11: Aide Laurel à récupérer tous les diamants de cette
+        grotte.
+      courseA_collector_loops11_2018: Aide Laurel à récupérer tous les diamants de
+        cette grotte.
+      courseA_collector_loops11_2019: Aide Laurel à récupérer tous les diamants de
+        cette grotte.
+      courseA_collector_loops12: _"Eurêka !  Récupère autant de diamants que tu peux!"_
+      courseA_collector_loops12_2018: _"Eurêka !  Récupère autant de diamants que
+        tu peux!"_
+      courseA_collector_loops12_2019: _"Eurêka !  Récupère autant de diamants que
+        tu peux!"_
+      courseA_collector_loops1_2018: Déplace Laurel et récupère autant de diamants
         que tu peux!
-      courseA_collector_loops1_2019: Déplace Laurel et récupère autant de trésors
+      courseA_collector_loops1_2019: Déplace Laurel et récupère autant de diamants
         que tu peux!
-      courseA_collector_loops2: Recupère les 4 tas pour ce finir ce niveau.
-      courseA_collector_loops2_2018: Recupère les 4 tas pour ce finir ce niveau.
+      courseA_collector_loops2: Recupère les 3 tas pour passer ce niveau.
+      courseA_collector_loops2_2018: Recupère les 3 tas pour passer ce niveau.
       courseA_collector_loops2_2019: Ramasse les trois tas! Déplace Laurel jusqu'à
         chaque partie du trésor, puis utilise le bloc ramasser.
       courseA_collector_loops4: Modifie le chemin de Laurel pour récupérer tous les
@@ -810,7 +810,7 @@ fr-FR:
         pour passer ce niveau.
       courseA_collector_loops_challenge2kp_2019: Récupère au moins **3** diamants
         pour passer ce niveau.
-      courseA_collector_preLoops7: Recupère les 4 tas pour ce finir ce niveau.
+      courseA_collector_preLoops7: Recupère les 3 tas pour passer ce niveau.
       courseA_harvester_loops6_2019: Vous aurez besoin de **un** bloc `Bouger au sud`
         et de **un** bloc `Bouger à l'ouest`.
       courseA_maze_ramp5a_2018: Amène l’oiseau jusqu'au cochon !
@@ -848,18 +848,18 @@ fr-FR:
       courseA_maze_seq8_2019: Résoud ce niveau et amène l'oiseau jusqu'au cochon!
       courseA_maze_seq9: Corrige ce niveau en ajoutant des blocs pour amener l'oiseau
         jusqu'au cochon!
-      courseA_maze_seq_challenge1: Il y a une problème. Corrige ce code pour m'amener
-        jusqu'au cochon!
-      courseA_maze_seq_challenge1_2018: Il y a une problème. Corrige ce code pour
-        m'amener jusqu'au cochon!
-      courseA_maze_seq_challenge1_2019: Il y a une problème. Corrige ce code pour
-        m'amener jusqu'au cochon!
-      courseA_maze_seq_challenge2: Trouve le chemin pour m'amener jusqu'au cochon.
-        Evite la TNT sinon les plumes vont voler!
-      courseA_maze_seq_challenge2_2018: Trouve le chemin pour m'amener jusqu'au cochon.
-        Evite la TNT sinon les plumes vont voler!
-      courseA_maze_seq_challenge2_2019: Trouve le chemin pour m'amener jusqu'au cochon.
-        Evite la TNT sinon les plumes vont voler!
+      courseA_maze_seq_challenge1: Il y a un problème. Corrige ce code pour amener
+        l'oiseau jusqu'au cochon!
+      courseA_maze_seq_challenge1_2018: Il y a un problème. Corrige ce code pour amener
+        l'oiseau jusqu'au cochon!
+      courseA_maze_seq_challenge1_2019: Il y a un problème. Corrige ce code pour amener
+        l'oiseau jusqu'au cochon!
+      courseA_maze_seq_challenge2: Trouve le chemin pour amener l'oiseau jusqu'au
+        cochon. Evite la TNT sinon les plumes vont voler!
+      courseA_maze_seq_challenge2_2018: Trouve le chemin pour amener l'oiseau jusqu'au
+        cochon. Evite la TNT sinon les plumes vont voler!
+      courseA_maze_seq_challenge2_2019: Trouve le chemin pour amener l'oiseau jusqu'au
+        cochon. Evite la TNT sinon les plumes vont voler!
       courseA_playLab_events1: Ce niveau est un labo de jeux. Bouge les blocs dans
         l'espace de travail et regarde ce qui se passe!
       courseA_playLab_events1_2018: Ce niveau est un labo de jeux. Bouge les blocs
@@ -869,27 +869,27 @@ fr-FR:
       courseA_playLab_events2: Le chien Jorge veut dire "Salut." Tu peux l'aider?
       courseA_playLab_events2_2018: Le chien Jorge veut dire "Salut." Tu peux l'aider?
       courseA_playLab_events2_2019: Jorge le chien veut dire "Salut." Peux-tu l'aider?
-      courseA_playLab_events3: Attache le bloc `move left` au bloc d'évènement `when
-        left` qui est déjà dans l'espace de travail.
-      courseA_playLab_events3_2018: Attache le bloc `move left` au bloc d'évènement
-        `when left` qui est déjà dans l'espace de travail.
-      courseA_playLab_events3_2019: Attache le bloc `move left` au bloc d'évènement
-        `when left` qui est déjà dans l'espace de travail.
-      courseA_playLab_events4: Ajoute les bocs pour bouger à droite lorsque le bouton
-        `right` est cliqué.
-      courseA_playLab_events5: Ajoute des événements pour déplacer Jorge vers le haut
-        et vers le bas lorsque les boutons `en haut` et `en bas` sont pressés.
-      courseA_playLab_events5_2018: Ajoute des événements pour déplacer Jorge vers
-        le haut et vers le bas lorsque les boutons `en haut` et `en bas` sont pressés.
-      courseA_playLab_events5_2019: Ajoute des événements pour déplacer Jorge vers
-        le haut et vers le bas lorsque les boutons `en haut` et `en bas` sont pressés.
+      courseA_playLab_events3: Attache le bloc `déplacer <-` au bloc d'évènement `Quand
+        <-` qui est déjà dans l'espace de travail.
+      courseA_playLab_events3_2018: Attache le bloc `déplacer <-` au bloc d'évènement
+        `Quand <-` qui est déjà dans l'espace de travail.
+      courseA_playLab_events3_2019: Attache le bloc `déplacer <-` au bloc d'évènement
+        `Quand <-` qui est déjà dans l'espace de travail.
+      courseA_playLab_events4: Ajoute les blocs pour bouger à droite lorsque le bouton
+        `droite` est cliqué.
+      courseA_playLab_events5: Ajoute des évènements pour que Jorge monte et descende
+        lorsque les touches `monter` et `descendre` sont pressés.
+      courseA_playLab_events5_2018: Ajoute des évènements pour que Jorge monte et
+        descende lorsque les touches `monter` et `descendre` sont pressés.
+      courseA_playLab_events5_2019: Ajoute des évènements pour que Jorge monte et
+        descende lorsque les touches `monter` et `descendre` sont pressés.
       courseA_playLab_events6: Change le fond d'écran et joue un son aléatoire lorsque
         tu cliques sur Jorge pour que ce soit plus intéressant.
       courseA_playLab_events6_2018: Change le fond d'écran et joue un son aléatoire
         lorsque tu cliques sur Jorge pour que ce soit plus intéressant.
       courseA_playLab_events6_2019: Change le fond d'écran et joue un son aléatoire
         lorsque tu cliques sur Jorge pour que ce soit plus intéressant.
-      courseA_playLab_events7: Ajoute ce que tu veux à ce jeu. Tu peux faire disparaitre
+      courseA_playLab_events7: Ajoute ce que tu veux à ce jeu. Peux-tu faire disparaitre
         le dinosaure lorsque Jorge lui coure après?
       courseA_playlab_events_challenge1: Peux-tu écrire du code pour montrer le reste
         de mes amis? Les conseils t'aideront à compléter ce projet étape par étape.
@@ -900,11 +900,11 @@ fr-FR:
         le reste de mes amis? Les conseils t'aideront à compléter ce projet étape
         par étape.
       courseA_playlab_events_challenge2: Donne à chacun quelque chose à faire lorsque
-        tu leur clique dessus.
+        tu leur cliques dessus.
       courseA_playlab_events_challenge2_2018: Donne à chacun quelque chose à faire
-        lorsque tu leur clique dessus.
+        lorsque tu leur cliques dessus.
       courseA_playlab_events_challenge2_2019: Donne à chacun quelque chose à faire
-        lorsque tu leur clique dessus.
+        lorsque tu leur cliques dessus.
       courseA_video_events: Besoin d'un meilleur combo Labo de jeux/Evènements
       courseA_video_events_2018: Besoin d'un meilleur combo Labo de jeux/Evènements
       courseA_video_events_2019: Besoin d'un meilleur combo Labo de jeux/Evènements
@@ -914,12 +914,12 @@ fr-FR:
         ce niveau et dessine quelque chose d'amusant.
       courseB_artist_loops1_2019: C'est un nouveau puzzle appelé "Artiste". Joue avec
         ce niveau et dessine quelque chose d'amusant.
-      courseB_collector_loops10: Aide Laurel à récupérer tous les trésors de cette
-        cave.
-      courseB_collector_loops10_2018: Aide Laurel à récupérer tous les trésors de
-        cette cave.
-      courseB_collector_loops10_2019: Aide Laurel à récupérer tous les trésors de
-        cette cave.
+      courseB_collector_loops10: Aide Laurel à récupérer tous les diamants de cette
+        grotte.
+      courseB_collector_loops10_2018: Aide Laurel à récupérer tous les diamants de
+        cette grotte.
+      courseB_collector_loops10_2019: Aide Laurel à récupérer tous les diamants de
+        cette grotte.
       courseB_collector_loops11: Eurêka !  Récupère autant de trésors que tu peux!
       courseB_collector_loops11_2018: Eurêka !  Récupère autant de trésors que tu
         peux!
@@ -1508,6 +1508,8 @@ fr-FR:
         le ferraille!
       courseC_starWars_loops9_2019: Utilse ce que tu as appris pour ramasser tout
         le ferraille!
+      courseD_artist_5_2018: Joue avec les flocons de neige!
+      courseD_artist_5_2018_2019: Joue avec les flocons de neige!
       courseD_artist_binary1: |-
         Le binaire est une manière de représenter des informations à l'aide de seulement deux options.  Ici, nous allons utiliser les options « Éteint » (représentée par le numéro 0) et « Allumé » (représentée par le numéro 1).
 
@@ -1667,18 +1669,57 @@ fr-FR:
         pixels de large. Cela peut être n''importe quelle forme que tu aimes.  '
       courseD_artist_project1_2019: 'Dessine une petite forme, entre **20 et 50**
         pixels de large. Cela peut être n''importe quelle forme que tu aimes.  '
+      courseD_artist_project1a: Dessine un modèle d'escalier qui utilise des angles
+        entre 75 et 105 degrés.
+      courseD_artist_project1a_2018: Dessine un modèle d'escalier qui utilise des
+        angles entre 75 et 105 degrés.
+      courseD_artist_project1a_2019: Dessine un modèle d'escalier qui utilise des
+        angles entre 75 et 105 degrés.
       courseD_artist_project2: Maintenant prends ta forme et dessines en 2 ou 3 dans
         une rangée!
       courseD_artist_project2_2018: Maintenant prends ta forme et dessines en 2 ou
         3 dans une rangée!
       courseD_artist_project2_2019: Maintenant prends ta forme et dessines en 2 ou
         3 dans une rangée!
+      courseD_artist_project2a: Maintenant, tourne à 180 degrés et dessine les marches
+        de l'escalier à nouveau!
+      courseD_artist_project2a_2018: Maintenant, tourne à 180 degrés et dessine les
+        marches de l'escalier à nouveau!
+      courseD_artist_project2a_2019: Maintenant, tourne à 180 degrés et dessine les
+        marches de l'escalier à nouveau!
       courseD_artist_project3: Fais tourner autour cette ligne de formes!
       courseD_artist_project3_2018: Fais tourner autour cette ligne de formes!
       courseD_artist_project3_2019: Fais tourner autour cette ligne de formes!
+      courseD_artist_project3a: Fais tourner cette forme environ 5 ou 6 fois dans
+        un cercle.
+      courseD_artist_project3a_2018: Fais tourner cette forme environ 5 ou 6 fois
+        dans un cercle.
+      courseD_artist_project3a_2019: Fais tourner cette forme environ 5 ou 6 fois
+        dans un cercle.
       courseD_artist_project4: Il est temps de superposer ces formes!
       courseD_artist_project4_2018: Il est temps de superposer ces formes!
       courseD_artist_project4_2019: Il est temps de superposer ces formes!
+      courseD_artist_project4a: |-
+        Essaie de t'amuser avec ce que tu as créé. Dessine ce que tu veux!
+
+        -   Que se passe-t-il si tu utilises 2 angles différents dans ton modèle d'escalier ?
+        -   Que se passe-t-il si tu fais ton modèle de diamand plus ou moins long ?
+        -   A quoi ressemble le dessin de 2 flocons de neige l'un sur l'autre ?
+      courseD_artist_project4a_2018: |-
+        Essaie de t'amuser avec ce que tu as créé. Dessine ce que tu veux!
+
+        -   Que se passe-t-il si tu utilises 2 angles différents dans ton modèle d'escalier ?
+        -   Que se passe-t-il si tu fais ton modèle de diamand plus ou moins long ?
+        -   A quoi ressemble le dessin de 2 flocons de neige l'un sur l'autre ?
+      courseD_artist_project4a_2019: |-
+        Essaie de t'amuser avec ce que tu as créé. Dessine ce que tu veux!
+
+        -   Que se passe-t-il si tu utilises 2 angles différents dans ton modèle d'escalier ?
+        -   Que se passe-t-il si tu fais ton modèle de diamand plus ou moins long ?
+        -   A quoi ressemble le dessin de 2 flocons de neige l'un sur l'autre ?
+      courseD_artist_project5: Joue avec les flocons de neige!
+      courseD_artist_project5_2018: Joue avec les flocons de neige!
+      courseD_artist_project5_2019: Joue avec les flocons de neige!
       courseD_artist_ramp11: Maintenant crée un carré en utilisant Artist!
       courseD_artist_ramp12: Utilise ce que tu as appris pour dessine ce triangle
         à l'intérieur d'un carré.
@@ -1824,6 +1865,78 @@ fr-FR:
       courseD_collector_ramp10: Aide Laurel à ramasser tous les diamants.
       courseD_collector_ramp8: Aide Laurel à ramasser tous les diamants.
       courseD_collector_ramp9: Aide Laurel à ramasser tous les diamants.
+      courseD_farmer_while1: Bouge jusqu'au tas de saletés et utilises le bloc `retirer`
+        pour l'enlever.
+      courseD_farmer_while10: 'Aplatis tous ces tas en utilisant le moins de blocs
+        possible. '
+      courseD_farmer_while10_2018: 'Aplatis tous ces tas en utilisant le moins de
+        blocs possible. '
+      courseD_farmer_while10_2019: 'Aplatis tous ces tas en utilisant le moins de
+        blocs possible. '
+      courseD_farmer_while10_predict2: 'Aplatis tous ces tas en utilisant le moins
+        de blocs possible. '
+      courseD_farmer_while10_predict2_2018: 'Aplatis tous ces tas en utilisant le
+        moins de blocs possible. '
+      courseD_farmer_while10_predict2_2019: 'Aplatis tous ces tas en utilisant le
+        moins de blocs possible. '
+      courseD_farmer_while1_2018: Bouge jusqu'au tas de saletés et utilises le bloc
+        `retirer` pour l'enlever.
+      courseD_farmer_while1_2019: Bouge jusqu'au tas de saletés et utilises le bloc
+        `retirer` pour l'enlever.
+      courseD_farmer_while2: Bouge jusqu'au trou et remplis avec six pelletés de saletés,
+        en utilisant le bloc `remplir`.
+      courseD_farmer_while2_2018: Bouge jusqu'au trou et remplis avec six pelletés
+        de saletés, en utilisant le bloc `remplir`.
+      courseD_farmer_while2_2019: Bouge jusqu'au trou et remplis avec six pelletés
+        de saletés, en utilisant le bloc `remplir`.
+      courseD_farmer_while3: Utilise aussi peu de blocs que possible pour résoudre
+        ce puzzle.
+      courseD_farmer_while3_2018: Utilise aussi peu de blocs que possible pour résoudre
+        ce puzzle.
+      courseD_farmer_while3_2019: Utilise aussi peu de blocs que possible pour résoudre
+        ce puzzle.
+      courseD_farmer_while4: Aide la fernière à enlever ce tas entier en utilisant
+        une boucle `tant que`.
+      courseD_farmer_while4_2018: Aide la fernière à enlever ce tas entier en utilisant
+        une boucle `tant que`.
+      courseD_farmer_while4_2019: Aide la fernière à enlever ce tas entier en utilisant
+        une boucle `tant que`.
+      courseD_farmer_while4_predict1: Aide la fernière à enlever ce tas entier en
+        utilisant une boucle `tant que`.
+      courseD_farmer_while4_predict1_2018: Aide la fernière à enlever ce tas entier
+        en utilisant une boucle `tant que`.
+      courseD_farmer_while4_predict1_2019: Aide la fernière à enlever ce tas entier
+        en utilisant une boucle `tant que`.
+      courseD_farmer_while5: 'Aide moi à enlever toute cette saleté. '
+      courseD_farmer_while5_2018: 'Aide moi à enlever toute cette saleté. '
+      courseD_farmer_while5_2019: 'Aide moi à enlever toute cette saleté. '
+      courseD_farmer_while6: Utilise la boucle `tant que` pour remplir facilement
+        tous les trous.
+      courseD_farmer_while6_2018: Utilise la boucle `tant que` pour remplir facilement
+        tous les trous.
+      courseD_farmer_while6_2019: Utilise la boucle `tant que` pour remplir facilement
+        tous les trous.
+      courseD_farmer_while7: Remplis le trou à la fin de chacun de ses chemins.
+      courseD_farmer_while7_2018: Remplis le trou à la fin de chacun de ses chemins.
+      courseD_farmer_while7_2019: Remplis le trou à la fin de chacun de ses chemins.
+      courseD_farmer_while8: 'Défi: Remplis tous ces trous en utilisant le moins de
+        blocs possible. '
+      courseD_farmer_while8_2018: 'Défi: Remplis tous ces trous en utilisant le moins
+        de blocs possible. '
+      courseD_farmer_while8_2019: 'Défi: Remplis tous ces trous en utilisant le moins
+        de blocs possible. '
+      courseD_farmer_while9: 'Aplatis tous ces tas en utilisant le moins de blocs
+        possible. '
+      courseD_farmer_while9_2018: 'Aplatis tous ces tas en utilisant le moins de blocs
+        possible. '
+      courseD_farmer_while9_2019: 'Aplatis tous ces tas en utilisant le moins de blocs
+        possible. '
+      courseD_farmer_while_challenge1: Remplis tous les trous et enlève tous les tas.
+      courseD_farmer_while_challenge1_2018: Remplis tous les trous et enlève tous
+        les tas.
+      courseD_farmer_while_challenge1_2019: Remplis tous les trous et enlève tous
+        les tas.
+      courseD_farmer_while_challenge2: Remplis tous les trous et enlève tous les tas.
       courseD_harvester_nested_loops_challenge1: '"J''ai besoin d''aide à la ferme!
         Aide moi à récolter ce maïs en utilisant uniquement les blocs présent dans
         la boite à outils."'
@@ -1890,9 +2003,49 @@ fr-FR:
         le cochon!
       courseD_maze_ramp5c: Aide l'oiseau à atteindre le cochon.
       courseD_maze_ramp5c_2018: Aide l'oiseau à atteindre le cochon.
+      courseD_maze_ramp5d: Amène l'oiseau jusqu'au sale cochon.
+      courseD_maze_ramp5d_2018: Amène l'oiseau jusqu'au sale cochon.
+      courseD_maze_ramp5d_2019: Amène l'oiseau jusqu'au sale cochon.
       courseD_maze_ramp6: '"Reste calme et aide moi a trouver ce vilain cochon. Autrement
         je pourrais m''énerver!"'
       courseD_maze_ramp7: Amène l’oiseau jusqu'au cochon !
+      courseD_maze_until1: Amène l'oiseau en colère jusqu'au cochon.
+      courseD_maze_until10: Aide e zombie à rejoindre le tournesol.
+      courseD_maze_until10_2018: Aide e zombie à rejoindre le tournesol.
+      courseD_maze_until10_2019: Aide e zombie à rejoindre le tournesol.
+      courseD_maze_until10_predict2: Aide e zombie à rejoindre le tournesol.
+      courseD_maze_until10_predict2_2018: Aide e zombie à rejoindre le tournesol.
+      courseD_maze_until10_predict2_2019: Aide e zombie à rejoindre le tournesol.
+      courseD_maze_until1_2018: Amène l'oiseau en colère jusqu'au cochon.
+      courseD_maze_until1_2019: Amène l'oiseau en colère jusqu'au cochon.
+      courseD_maze_until3: Amène l'oiseau jusqu'au sale cochon.
+      courseD_maze_until3_2018: Amène l'oiseau jusqu'au sale cochon.
+      courseD_maze_until3_2019: Amène l'oiseau jusqu'au sale cochon.
+      courseD_maze_until4: Peux-tu amener le zombie jusqu'au tournesol en utilisant
+        seulement les blocs disponibles?
+      courseD_maze_until4_2018: Peux-tu amener le zombie jusqu'au tournesol en utilisant
+        seulement les blocs disponibles?
+      courseD_maze_until4_2019: Peux-tu amener le zombie jusqu'au tournesol en utilisant
+        seulement les blocs disponibles?
+      courseD_maze_until5: Utilise le bloc `si chemin` pour aider le zombie à savoir
+        quand tourner, puis amène le zombie jusqu'au tournesol.
+      courseD_maze_until5_2018: Utilise le bloc `si chemin` pour aider le zombie à
+        savoir quand tourner, puis amène le zombie jusqu'au tournesol.
+      courseD_maze_until5_2019: Utilise le bloc `si chemin` pour aider le zombie à
+        savoir quand tourner, puis amène le zombie jusqu'au tournesol.
+      courseD_maze_until6: Aide e zombie à rejoindre le tournesol.
+      courseD_maze_until6_2018: Aide e zombie à rejoindre le tournesol.
+      courseD_maze_until6_2019: Aide e zombie à rejoindre le tournesol.
+      courseD_maze_until7: Aide e zombie à rejoindre le tournesol.
+      courseD_maze_until7_2018: Aide e zombie à rejoindre le tournesol.
+      courseD_maze_until7_2019: Aide e zombie à rejoindre le tournesol.
+      courseD_maze_until8: Aide e zombie à rejoindre le tournesol.
+      courseD_maze_until9: "**Défi:** Evite les plantes carnivores et aide le zombie
+        à atteindre le tournesol."
+      courseD_maze_until9_2018: "**Défi:** Evite les plantes carnivores et aide le
+        zombie à atteindre le tournesol."
+      courseD_maze_until9_2019: "**Défi:** Evite les plantes carnivores et aide le
+        zombie à atteindre le tournesol."
       courseD_playLab_cond1: Amène Pegleg au drapeau pour résoudre ce puzzle.
       courseD_playLab_cond1_2018: Amène Pegleg au drapeau pour résoudre ce puzzle.
       courseD_playLab_cond2: 'Donne un point à Pegleg à chaque fois qu''il atteint
@@ -2060,6 +2213,8 @@ fr-FR:
         jusqu'à ce que le sol affleure?
       courseE_farmer_concept2: Rammasse toutes les citrouilles.
       courseE_farmer_concept2_2018: Rammasse toutes les citrouilles.
+      courseE_farmer_concept3: Remplis le trou à la fin de chacun de ses chemins.
+      courseE_farmer_concept3_2018: Remplis le trou à la fin de chacun de ses chemins.
       courseE_farmer_functions1: Aide le cueilleur à aller à la citrouille et à la
         ramasser.
       courseE_farmer_functions10b: Utilise ta nouvelle fonction 2 fois pour résoudre
