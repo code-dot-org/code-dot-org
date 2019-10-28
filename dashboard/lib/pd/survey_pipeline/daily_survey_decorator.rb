@@ -29,10 +29,11 @@ module Pd::SurveyPipeline
     # Create single-workshop survey summary report to send to client.
     #
     # @param data [Hash] a hash contains pieces of information from previous steps in the pipeline
-    # @option data [Array<Hash>] :summaries survey result summaries
+    # @option data [User] :current_user user requesting survey report
+    # @option data [Pd::Workshop] :workshop the main workshop user is requesting survey results for
     # @option data [Hash] :parsed_questions questions parsed from Pd::SurveyQuestion
     # @option data [Hash] :parsed_submissions submission parsed from Pd::Workshop(Facilitator)DailySurvey
-    # @option data [User] :current_user user requesting survey report
+    # @option data [Array<Hash>] :summaries survey result summaries
     # @option data [Array<String>] :errors non-fatal errors from previous steps
     #
     # @return [Hash] a hash report contains 4 keys.
@@ -50,7 +51,7 @@ module Pd::SurveyPipeline
     #
     def self.decorate_single_workshop(data)
       report = {
-        course_name: nil,
+        course_name: data[:workshop].course,
         questions: {},
         this_workshop: {},
         errors: data[:errors] || []
@@ -72,7 +73,6 @@ module Pd::SurveyPipeline
         q_name = summary[:name]
 
         # Create top structures if not already created
-        report[:course_name] ||= Pd::Workshop.find_by_id(workshop_id)&.course
         report[:this_workshop][context_name] ||= {
           response_count: data[:parsed_submissions][form_id].size,
           general: {},

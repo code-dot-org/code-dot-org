@@ -143,7 +143,7 @@ module Pd::SurveyPipeline::Helper
   def report_single_workshop(workshop, current_user)
     # Centralized context object shared by all workers in the pipeline.
     # Workers read from and write to this object.
-    context = {current_user: current_user}
+    context = {workshop: workshop, current_user: current_user}
 
     context[:survey_questions], context[:workshop_submissions], context[:facilitator_submissions] =
       Pd::SurveyPipeline::DailySurveyRetriever.retrieve_all_workshop_surveys workshop.id
