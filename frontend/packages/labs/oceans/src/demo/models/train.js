@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import 'babel-polyfill';
 import {setState, getState} from '../state';
 import {ClassType} from '../constants';
@@ -45,11 +44,9 @@ export const onClassifyFish = doesLike => {
   if (doesLike) {
     const newValue = getState().yesCount + 1;
     setState({yesCount: newValue});
-    $('#train-counter-yes-text').text(newValue);
   } else {
     const newValue = getState().noCount + 1;
     setState({noCount: newValue});
-    $('#train-counter-no-text').text(newValue);
   }
 
   setState({
