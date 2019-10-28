@@ -227,7 +227,6 @@ P5Lab.prototype.init = function(config) {
       new JavaScriptModeErrorHandler(() => this.JSInterpreter, this)
     );
   }
-
   this.level = config.level;
 
   this.level.helperLibraries = this.level.helperLibraries || [];

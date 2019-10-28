@@ -1196,7 +1196,7 @@ var projects = (module.exports = {
    * name.
    */
   getLevelName() {
-    let name = !!current && current.name;
+    let name = current && current.name;
     name = name || appOptions.level.name;
     return name;
   },
