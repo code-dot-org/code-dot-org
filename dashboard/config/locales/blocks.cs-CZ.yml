@@ -437,7 +437,7 @@ cs:
             '"tropical"': Tropické
             '"warm"': Červené
       Dancelab_setBackgroundEffectWithPalette:
-        text: nastavit efekt pozadí {EFFECT} {PALETTE}
+        text: nastavit efekt pozadí {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': Žádný
@@ -1032,6 +1032,12 @@ cs:
         text: náhodná barva
       Mikelab_removeBehaviorSimple:
         text: postava {SPRITE} zastaví {BEHAVIOR}
+      Mikelab_repeatUntilComplete:
+        text: opakuj do nekonečna
+      Mikelab_sendBad:
+        text: pohnout vlevo
+      Mikelab_sendGood:
+        text: pohnout vpravo
       Mikelab_setBG:
         options:
           BG:

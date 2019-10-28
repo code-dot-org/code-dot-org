@@ -453,7 +453,7 @@ hi:
             '"vintage"': विंटेज
             '"warm"': गरम
       Dancelab_setBackgroundEffectWithPalette:
-        text: पृष्ठभूमि प्रभाव सेट करें {EFFECT} {PALETTE}
+        text: पृष्ठभूमि प्रभाव सेट करें {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': कोई नहीं
@@ -1215,6 +1215,12 @@ hi:
         text: यादृच्छिक रंग
       Mikelab_removeBehaviorSimple:
         text: स्प्राइट {SPRITE} ने{BEHAVIOR} बंद कर दिया
+      Mikelab_repeatUntilComplete:
+        text: हमेशा दोहराएं
+      Mikelab_sendBad:
+        text: बायें चले
+      Mikelab_sendGood:
+        text: दाहिना चले
       Mikelab_setBG:
         options:
           BG:

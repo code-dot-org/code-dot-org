@@ -81,6 +81,7 @@ ru:
             '"x"': горизонтальное положение
             '"y"': вертикальное положение
       Dancelab_changePropEachBy:
+        text: изменить {GROUP} {PROPERTY} на {VAL}
         options:
           GROUP:
             sprites: все
@@ -429,7 +430,7 @@ ru:
             '"vintage"': Винтаж
             '"warm"': Красный
       Dancelab_setBackgroundEffectWithPalette:
-        text: задать фоновый эффект {EFFECT} {PALETTE}
+        text: задать фоновый эффект {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': Нет
@@ -1011,6 +1012,12 @@ ru:
             MOVES.Rest: Нет
       Mikelab_randomColor:
         text: случайный цвет
+      Mikelab_repeatUntilComplete:
+        text: повторять бесконечно
+      Mikelab_sendBad:
+        text: переместить влево
+      Mikelab_sendGood:
+        text: Переместить вправо
       Mikelab_setBG:
         options:
           BG:

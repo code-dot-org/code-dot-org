@@ -264,6 +264,7 @@
   "puzzle": "Басқатырғыш",
   "puzzleTitle": " {stage_total}-тің {puzzle_number} бас қатырғышы ",
   "question": "Сұрақ",
+  "random": "кездейсоқ",
   "readonlyWorkspaceHeader": "Тек қана көру: ",
   "recommendedBlockContextualHintTitle": "Басқатырғышты шешу үшін осы сияқты блокты қолданып көр.",
   "remix": "Ремикс",

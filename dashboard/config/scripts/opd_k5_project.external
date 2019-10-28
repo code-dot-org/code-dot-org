@@ -1,0 +1,13 @@
+name 'OPD-K5 project'
+title 'End-of-course projects'
+description 'description here'
+markdown <<MARKDOWN
+# Overview: End-of-course projects
+
+## New teaching practice: End-of-course projects
+
+Each course offers the opportunity for students to take what they’ve learned at the end of a lesson and put it together into a unique project that represents their own creativity. 
+
+In the Courses E and F, project development takes the stage. Here, students are encouraged to plan, build, revise, and present projects of their own. Following a project from inception to delivery offers an inside look at the software development cycle. These guided projects offer scaffolded rubrics for the benefit of both student and teacher.
+
+MARKDOWN

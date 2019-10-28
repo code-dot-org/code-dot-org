@@ -51,11 +51,18 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
       reviews = reviews.where(script: Plc::Course.find(params[:plc_course_id]).plc_course_units.map(&:script))
     end
 
-    reviews = reviews.distinct {|review| [review.submitter, review.level]}
+    # This query gets the latest submission for each user+level, paginated, and returns a
+    # recordset with pagination metadata and correctly-ordered, partially-populated models.
+    reviews = reviews.
+      page(page).
+      per(per).
+      order('id DESC').
+      group(:submitter_id, :level_id).
+      select('max(peer_reviews.id) id, submitter_id, level_id')
 
-    reviews = reviews.page(page).per(per)
-
-    reviews.each do |review|
+    # This query gets matching fully-hydrated models in the correct order.
+    real_reviews = PeerReview.find(reviews.map(&:id))
+    real_reviews.each do |review|
       submissions[review.user_level.id] = PeerReview.get_submission_summary_for_user_level(review.user_level, review.script)
     end
 

@@ -5373,6 +5373,10 @@ vi:
           stages:
             Deeper Learning Overview:
               name: Tổng quan học tập sâu
+        dlp19-csp-mod-w3:
+          stages:
+            Deeper Learning Overview:
+              name: Tổng quan học tập sâu
         csd4-pilot:
           stages:
             What is a Computer?:

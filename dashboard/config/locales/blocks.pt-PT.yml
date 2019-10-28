@@ -407,6 +407,12 @@ pt:
             MOVES.Rest: Nenhum
       Mikelab_randomColor:
         text: cor aleatória
+      Mikelab_repeatUntilComplete:
+        text: repetir para sempre
+      Mikelab_sendBad:
+        text: mover para a esquerda
+      Mikelab_sendGood:
+        text: mover para a direita
       Mikelab_setBG:
         options:
           BG:
