@@ -1,14 +1,15 @@
-import 'babel-polyfill';
+import 'idempotent-babel-polyfill';
 import $ from 'jquery';
 import {setState} from '../state';
 import {Modes} from '../constants';
 import {createButton, createText, createImage, toMode} from '../helpers';
+import aiBotClosed from '../../../public/images/ai-bot-closed.png';
 
 const headerElements = [createText({id: 'header', text: 'A.I. Sorting'})];
 const uiElements = [
   createImage({
     id: 'predict-ai-bot',
-    src: 'images/ai-bot-closed.png'
+    src: aiBotClosed
   })
 ];
 const footerElements = [

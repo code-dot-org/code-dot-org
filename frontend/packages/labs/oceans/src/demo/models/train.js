@@ -1,10 +1,11 @@
 import $ from 'jquery';
-import 'babel-polyfill';
+import 'idempotent-babel-polyfill';
 import {setState, getState} from '../state';
 import {Modes, ClassType} from '../constants';
 import {createButton, createText, createImage, toMode} from '../helpers';
 import SimpleTrainer from '../../utils/SimpleTrainer';
 import {generateOcean} from '../../utils/generateOcean';
+import aiBotClosed from '../../../public/images/ai-bot-closed.png';
 
 const staticUiElements = [
   createButton({
@@ -19,7 +20,7 @@ const staticUiElements = [
   }),
   createImage({
     id: 'training-ai-bot',
-    src: 'images/ai-bot-closed.png'
+    src: aiBotClosed
   })
 ];
 const headerElements = [createText({id: 'header', text: 'A.I. Training'})];

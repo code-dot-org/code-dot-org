@@ -1,4 +1,4 @@
-import 'babel-polyfill';
+import 'idempotent-babel-polyfill';
 import _ from 'lodash';
 import {setState, getState} from '../state';
 import constants, {Modes, ClassType} from '../constants';
@@ -9,12 +9,13 @@ import {
   randomInt,
   toMode
 } from '../helpers';
+import aiBotClosed from '../../../public/images/ai-bot-closed.png';
 
 const headerElements = [createText({id: 'header', text: 'A.I. Results'})];
 const staticUiElements = [
   createImage({
     id: 'pond-ai-bot',
-    src: 'images/ai-bot-closed.png'
+    src: aiBotClosed
   })
 ];
 const staticFooterElements = [

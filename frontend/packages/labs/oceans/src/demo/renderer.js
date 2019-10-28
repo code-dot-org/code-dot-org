@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import 'babel-polyfill';
+import 'idempotent-babel-polyfill';
 import _ from 'lodash';
 import {getState, setState} from './state';
 import constants, {Modes, ClassType} from './constants';

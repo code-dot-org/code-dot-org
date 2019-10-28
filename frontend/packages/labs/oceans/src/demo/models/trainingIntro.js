@@ -1,7 +1,8 @@
-import 'babel-polyfill';
+import 'idempotent-babel-polyfill';
 import {getState, setState} from '../state';
 import {Modes} from '../constants';
 import {createButton, createImage, createText, toMode} from '../helpers';
+import aiBotClosed from '../../../public/images/ai-bot-closed.png';
 
 export const init = () => {
   const state = getState();
@@ -19,7 +20,7 @@ export const init = () => {
     }),
     createImage({
       id: 'training-intro-ai-bot',
-      src: 'images/ai-bot-closed.png'
+      src: aiBotClosed
     })
   ];
   setState({uiElements, footerElements});

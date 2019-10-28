@@ -2,6 +2,7 @@ import {setState} from './state';
 import {init as initScene} from './init';
 import {Modes} from './constants';
 import {FishBodyPart} from '../utils/fishData';
+import underwaterBackground from '../../public/images/underwater-background.png';
 
 export const backgroundPathForMode = mode => {
   let imgName;
@@ -9,7 +10,9 @@ export const backgroundPathForMode = mode => {
     imgName = 'underwater';
   }
 
-  return imgName ? backgroundPath(imgName) : null;
+  // return imgName ? backgroundPath(imgName) : null;
+  // TODO: fix this
+  return imgName ? underwaterBackground : null;
 };
 
 export const backgroundPath = imgName => {

@@ -28,6 +28,13 @@ module.exports = {
           plugins: ["transform-class-properties"]
         }
       }]
+    },
+    {
+      test: /\.png$/,
+      loader: "url-loader",
+      options: {
+        limit: true, // everything
+      }
     }],
   },
 };
