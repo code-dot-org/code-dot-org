@@ -79,7 +79,7 @@ const onClassifyFish = doesLike => {
     return;
   }
 
-  const knnData = state.fishData[state.trainingIndex].knnData;
+  const knnData = state.fishData[state.trainingIndex].getKnnData();
   const classId = doesLike ? ClassType.Like : ClassType.Dislike;
   state.trainer.addExampleData(knnData, classId);
 

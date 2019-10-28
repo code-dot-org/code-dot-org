@@ -1,3 +1,4 @@
+import * as mobilenetModule from '@tensorflow-models/mobilenet';
 import {fishData, FishBodyPart} from '../utils/fishData';
 import constants, {Modes, ClassType} from './constants';
 import {
@@ -7,10 +8,14 @@ import {
   randomInt,
   clamp
 } from './helpers';
+import {imagePaths} from '../utils/trashImages';
 
 let fishPartImages = {};
 let intermediateCanvas;
+let tmpCanvas;
 let intermediateCtx;
+let mobilenet;
+
 // Load a single fish part image.
 const loadFishPartImage = data => {
   return new Promise((resolve, reject) => {
@@ -26,6 +31,7 @@ const loadFishPartImage = data => {
 // Load all fish part images, and store them in fishPartImages.
 export const loadAllFishPartImages = () => {
   intermediateCanvas = document.createElement('canvas');
+  tmpCanvas = document.createElement('canvas');
   intermediateCtx = intermediateCanvas.getContext('2d');
   intermediateCanvas.width = constants.fishCanvasWidth;
   intermediateCanvas.height = constants.fishCanvasHeight;
@@ -43,7 +49,7 @@ export const loadAllFishPartImages = () => {
         fishPartImagesToLoad.push(partData);
       });
     });
-
+  mobilenetModule.load().then(res => (mobilenet = res));
   return Promise.all(fishPartImagesToLoad.map(loadFishPartImage)).then(
     results => {
       results.forEach(result => {
@@ -76,7 +82,11 @@ export class OceanObject {
     return this.id;
   }
   getKnnData() {
-    return this.knnData;
+    //return this.knnData;
+    if (!this.logits) {
+      this.drawToCanvas(tmpCanvas);
+    }
+    return this.logits;
   }
   setResult(result) {
     this.result = result;
@@ -201,6 +211,36 @@ export class FishOceanObject extends OceanObject {
         constants.fishCanvasWidth,
         constants.fishCanvasHeight
       );
+      if (!this.logits) {
+        const infer = () => mobilenet.infer(fishCanvas, 'conv_preds');
+        this.logits = infer();
+      }
     });
+  }
+}
+
+export class TrashOceanObject extends OceanObject {
+  randomize() {
+    const idx = Math.floor(Math.random() * imagePaths.length);
+    this.image = new Image();
+    this.image.src = imagePaths[idx];
+  }
+  drawToCanvas(canvas) {
+    const ctx = canvas.getContext('2d');
+    //const xpos = constants.fishCanvasWidth / 2 - this.image.width / 2;
+    //const ypos = constants.fishCanvasHeight / 2 - this.image.height / 2;
+    const xpos = 0;
+    const ypos = 0;
+    ctx.drawImage(
+      this.image,
+      xpos,
+      ypos,
+      constants.fishCanvasWidth,
+      constants.fishCanvasHeight
+    );
+    if (!this.logits) {
+      const infer = () => mobilenet.infer(canvas, 'conv_preds');
+      this.logits = infer();
+    }
   }
 }

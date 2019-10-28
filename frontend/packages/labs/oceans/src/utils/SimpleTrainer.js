@@ -42,8 +42,8 @@ export default class SimpleTrainer {
    * @param {number} classId
    */
   addExampleData(data, classId) {
-    const tensor = tf.tensor(data);
-    this.knn.addExample(tensor, classId);
+//    const tensor = tf.tensor(data);
+    this.knn.addExample(data, classId);
   }
 
   /**
@@ -70,7 +70,8 @@ export default class SimpleTrainer {
    * @returns {Promise<{confidencesByClassId: [], predictedClassId: null}>}
    */
   async predictFromData(data) {
-    const tensor = tf.tensor(data);
+    //const tensor = tf.tensor(data);
+    const tensor = data;
     let result = {
       predictedClassId: null,
       confidencesByClassId: []
