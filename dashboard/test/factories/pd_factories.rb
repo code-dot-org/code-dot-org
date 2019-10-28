@@ -1523,7 +1523,7 @@ FactoryGirl.define do
 
   factory :pd_survey_question, class: 'Pd::SurveyQuestion' do
     form_id 12345
-    questions '{}'
+    questions '[]'
   end
 
   factory :pd_application_email, class: 'Pd::Application::Email' do
