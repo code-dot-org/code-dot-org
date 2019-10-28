@@ -1,12 +1,12 @@
 import {fishData, FishBodyPart} from '../utils/fishData';
-import constants, {Modes, ClassType} from './constants';
+import constants from './constants';
 import {
-  backgroundPathForMode,
   bodyAnchorFromType,
   colorForFishPart,
   randomInt,
   clamp
 } from './helpers';
+import _ from 'lodash';
 
 let fishPartImages = {};
 let intermediateCanvas;

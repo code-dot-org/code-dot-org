@@ -1,17 +1,11 @@
 import $ from 'jquery';
 import 'babel-polyfill';
-import _ from 'lodash';
 import {getState, setState} from './state';
 import constants, {Modes, ClassType} from './constants';
 import CanvasCache from './canvasCache';
 import {
   backgroundPathForMode,
-  bodyAnchorFromType,
-  colorForFishPart,
-  randomInt,
-  clamp
 } from './helpers';
-import {fishData, FishBodyPart} from '../utils/fishData';
 import {predictFish} from './models/predict';
 import {loadAllFishPartImages} from './OceanObject';
 

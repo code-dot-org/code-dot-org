@@ -1,4 +1,3 @@
-import {fishData} from './fishData';
 import {FishOceanObject, generateOceanObject} from '../demo/OceanObject';
 
 export const generateOcean = numFish => {
