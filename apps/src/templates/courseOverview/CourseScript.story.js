@@ -3,7 +3,7 @@ import Immutable from 'immutable';
 import {UnconnectedCourseScript as CourseScript} from './CourseScript';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 
-const sectionId = '11';
+const sectionId = 11;
 const courseId = 123;
 const unhiddenState = Immutable.fromJS({
   initialized: false,
@@ -12,7 +12,7 @@ const unhiddenState = Immutable.fromJS({
   scriptsBySection: {}
 });
 const hiddenState = unhiddenState.setIn(
-  ['stagesBySection', sectionId, courseId.toString()],
+  ['stagesBySection', sectionId.toString(), courseId.toString()],
   true
 );
 
