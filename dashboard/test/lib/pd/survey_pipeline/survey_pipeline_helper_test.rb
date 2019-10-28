@@ -1,5 +1,4 @@
 require 'test_helper'
-# require 'pd/survey_pipeline/survey_pipeline_helper.rb'
 
 module Pd::SurveyPipeline
   class SurveyPipelineHelperTest < ActiveSupport::TestCase
@@ -24,7 +23,7 @@ module Pd::SurveyPipeline
       create :pd_survey_question, form_id: TEST_FAC, questions: questions.to_json
     end
 
-    test 'report_single_workshop without submissions' do
+    test 'report_single_workshop for workshop without submissions' do
       ws = create :csf_deep_dive_workshop
 
       expected_report = {
@@ -39,7 +38,7 @@ module Pd::SurveyPipeline
       assert_equal expected_report, report
     end
 
-    test 'report_single_workshop with submissions' do
+    test 'report_single_workshop for workshop with submissions' do
       # Set context = CSF workshop
       ws = create :csf_deep_dive_workshop
 
