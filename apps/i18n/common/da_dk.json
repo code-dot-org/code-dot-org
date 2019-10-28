@@ -550,6 +550,7 @@
   "puzzle": "Opgave",
   "puzzleTitle": "Opgave {puzzle_number} af {stage_total}",
   "question": "Spørgsmål",
+  "random": "tilfældig",
   "readonlyWorkspaceHeader": "Se kun: ",
   "recommended": "Anbefalet",
   "recommendedBlockContextualHintTitle": "Prøv at bruge en blok som denne til at løse gåden.",

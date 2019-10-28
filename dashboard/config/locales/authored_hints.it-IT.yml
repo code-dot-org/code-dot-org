@@ -9321,14 +9321,6 @@ it-IT:
           ad ogni casella.
         courseC_collector_prog_challenge1_b: Ti sei perso? Prova questo percorso per
           risolvere l'esercizio!
-      courseC_data wizard:
-        courseA_playLab_events7_a: |-
-          Usa questo blocco per definire cosa deve succedere quando i personaggi si scontrano.
-
-          <xml><block type="studio_whenSpriteCollided">
-              <title name="SPRITE1">1</title>
-              <title name="SPRITE2">0</title>
-            </block></xml>
       courseC_flappy_events1:
         courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
       courseC_flappy_events1_2018:
@@ -12183,8 +12175,6 @@ it-IT:
           Nota che il percorso più facile per raggiungere tutte le colture è ancora una spirale.
 
           ![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)
-        courseD_farmer_condLoops7_b: Prova ad usare un blocco `mentre c'è strada in
-          avanti` per far muovere la contadina lungo il percorso corretto.
       courseD_farmer_condLoops_challenge1:
         courseD_farmer_condLoops_challenge1_a: Il pulsante "Fai un passo" potrebbe
           rivelarsi molto utile per portare a termine questa sfida.

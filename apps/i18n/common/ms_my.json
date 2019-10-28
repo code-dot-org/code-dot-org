@@ -249,6 +249,7 @@
   "projectWarning": "Nota: Anda sedang berada pada tahap yang merupakan sebahagian daripada projek yang lebih panjang. Perubahan yang dibuat pada tahap ini juga akan muncul dalam tahap-tahap lain dalam projek ini.",
   "puzzle": "Teka-teki",
   "puzzleTitle": "Puzzle {puzzle_number} dari {stage_total}",
+  "random": "rawak",
   "readonlyWorkspaceHeader": "Lihat sahaja: ",
   "recommendedBlockContextualHintTitle": "Cuba gunakan blok seperti ini untuk menyelesaikan teka-teki.",
   "relockStage": "Mengunci semula peringkat",

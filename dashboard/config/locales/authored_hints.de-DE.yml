@@ -2179,14 +2179,6 @@ de-DE:
           auf jedem Feld verwenden.
         courseC_collector_prog_challenge1_b: Hast du dich verlaufen? Versuche diesen
           Weg zu nehmen um die Aufgabe zu lösen!
-      courseC_data wizard:
-        courseA_playLab_events7_a: |-
-          Nimm diesen Block um zu regeln was passiert, wenn die Figuren kollidieren.
-
-          <xml><block type="studio_whenSpriteCollided">
-              <title name="SPRITE1">1</title>
-              <title name="SPRITE2">0</title>
-            </block></xml>
       courseC_maze_debugging2:
         courseC_maze_debugging2_c: Du findest nicht heraus, was schief läuft? Führe
           den Code ein paar mal aus um zu sehen, was passiert.

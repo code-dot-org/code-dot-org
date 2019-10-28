@@ -233,6 +233,7 @@ ru:
       picture: 'Графический пароль'
       word: 'Тайные слова'
       email: 'Электронная почта'
+      google_classroom: 'Google Classroom'
   follower:
     invite_sent: 'Приглашение отправлено'
     added_teacher: '%{name} добавлен как твой учитель'

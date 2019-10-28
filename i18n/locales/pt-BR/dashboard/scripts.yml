@@ -13,6 +13,7 @@ pt-BR:
         csf2_draft_category_name: 'Em desenvolvimento: Cursos A - F'
         csp_category_name: "Princípios da CC - 15-16"
         csp_2018_category_name: Princípios de Ciência da Computação (18-19)
+        csp_2019_category_name: Princípios de Ciência da Computação (2019-2020)
         cspexams_category_name: Teste prático dos princípios da CC
         csp17_category_name: Princípios da CC (2017-2018)
         full_course_category_name: Cursos Completos
@@ -2377,8 +2378,14 @@ pt-BR:
               name: Teste de perguntas RQB
         cspexam1-mWU7ilDYM9:
           description_short: Esta avaliação de múltipla escolha cobre questões de 7 grandes ideias da ciência da computação. É a parte 1 de duas partes de um exame de 50 questões.
+          stages:
+            CS Principles Culminating Assessment Part 1:
+              name: Avaliação Culminante dos Princípios da CS Parte 1
         cspexam2-AKwgAh1ac5:
           description_short: Esta avaliação de múltipla escolha cobre questões de 7 grandes ideias da ciência da computação. É a parte 2 de duas partes de um exame de 50 questões.
+          stages:
+            CS Principles Culminating Assessment Part 2:
+              name: Avaliação Culminante dos Princípios da CS Parte 2
         CSDU4-Draft:
           stages:
             Adding Functionality (optional):
