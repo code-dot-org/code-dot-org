@@ -116,6 +116,7 @@ module Api::V1::Pd
       return create_csf_survey_report if @workshop.csf? && @workshop.subject == SUBJECT_CSF_201
       return create_generic_survey_report if [COURSE_CSP, COURSE_CSD].include?(@workshop.course)
 
+      # CSF Intro (101), for example, shouldn't use this action
       raise 'Action generic_survey_report should not be used for this workshop'
     rescue => e
       notify_error e

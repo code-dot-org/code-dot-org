@@ -15,6 +15,7 @@ module Pd::SurveyPipeline
       teacher = create :teacher
       day = 0
 
+      # TODO: move these out of setup_all and into each individual tests
       @ws_survey_questions = create :pd_survey_question, form_id: @ws_form_id,
         questions: '['\
           '{"id": 1, "type": "number", "name": "overallRating", "text": "Overall rating"},'\
@@ -26,6 +27,7 @@ module Pd::SurveyPipeline
           '"sub_questions": ["Sub question 1", "Sub question 2", "Sub question 3"]}'\
         ']'
 
+      # TODO: add more submissions
       @ws_submission = create :pd_workshop_daily_survey,
         form_id: @ws_form_id, pd_workshop: ws, user: teacher, day: day,
         answers: '{"1":"5.0", "2":"Option 2", "3":"Like it", "4": '\
