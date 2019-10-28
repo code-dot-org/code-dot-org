@@ -1,3 +1,5 @@
+let setStateCallback = null;
+
 const initialState = {
   currentMode: null,
   fishData: [],
@@ -26,5 +28,14 @@ export const getState = function() {
 
 export const setState = function(newState) {
   state = {...state, ...newState};
+
+  if (setStateCallback) {
+    setStateCallback();
+  }
+
   return state;
 };
+
+export const setSetStateCallback = (callback) => {
+  setStateCallback = callback;
+}

@@ -4,12 +4,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>ML Activities Playground</title>
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-      crossorigin="anonymous"
-    />
     <style>
       #container {
         position: relative;
@@ -18,51 +12,29 @@
         margin: 0 auto;
         user-select: none;
       }
-      #header-container,
-      #footer-container {
+      #container-react {
+        position: absolute;
         width: 100%;
-        height: 50px;
-        display: flex;
-      }
-      #header-container {
-        align-items: center;
-        justify-content: center;
-      }
-      #footer-container {
-        justify-content: space-between;
-      }
-      #header {
-        border: 2px solid black;
-        border-radius: 20px;
-        padding: 10px 45px;
-      }
-      #activity-canvas,
-      #background-canvas {
-        border: 2px solid black;
-        border-radius: 5px;
+        max-width: 970px;
+        margin: 0 auto;
+        user-select: none;
+        font-family: arial, sans-serif;
+        font-size: 18px;
+        color: rgb(30,30,30);
       }
       #background-canvas {
         position: absolute;
-        top: 50px; /* accounts for #header-container */
         left: 0;
         width: 100%;
         z-index: -1;
+        border-radius: 10px;
       }
       #activity-canvas {
         width: 100%;
-      }
-      #ui-container {
-        position: absolute;
-        top: 50px; /* accounts for #header-container */
-        left: 0;
-        width: 100%;
-        height: calc(
-          100% - 104px
-        ); /* 50px header + 50px footer + 4px border = 104px */
+        border-radius: 10px;
       }
       button {
-        background-color: #403f3f; /* #4e4e82; */
-        color: white;
+        background-color: white;
         font-size: 120%;
         border-radius: 5px;
         padding: 1%;
@@ -71,31 +43,6 @@
       }
       button:focus {
         outline: white auto 5px;
-      }
-      .ui-button {
-        position: absolute;
-      }
-      .ui-button-1-col {
-        width: 20%;
-        display: block;
-        margin: 0 auto;
-        margin-top: 2%;
-        margin-bottom: 2%;
-      }
-      .ui-button-3-col {
-        width: 20%;
-        margin-left: 6%;
-        margin-right: 6%;
-        margin-top: 2%;
-        margin-bottom: 2%;
-      }
-      #activity-intro-text {
-        position: absolute;
-        font-size: 24px;
-        top: 5%;
-        width: 98%;
-        left: 1%;
-        text-align: center;
       }
       @media screen and (max-width: 800px) {
         button {
@@ -110,129 +57,13 @@
           font-size: 60%;
         }
       }
-      #yes-button {
-        border: 2px solid black;
-        background-color: #56c568;
-        right: 30%;
-        bottom: 5%;
-      }
-      #no-button {
-        border: 2px solid black;
-        background-color: #e83a4d;
-        right: 50%;
-        bottom: 5%;
-      }
-      #words-text {
-        text-align: center;
-        margin-top: 20px;
-        font-size: 24px;
-      }
-      #train-text {
-        text-align: center;
-        font-size: 24px;
-        margin-top: 5%;
-      }
-      #training-intro-text {
-        position: absolute;
-        font-size: 24px;
-        top: 20%;
-        width: 100%;
-        text-align: center;
-      }
-      #activity-intro-ai-bot,
-      #training-intro-ai-bot,
-      #training-ai-bot,
-      #predict-ai-bot,
-      #pond-ai-bot {
-        position: absolute;
-        height: 50%;
-        transform: translateX(-50%);
-        top: 50%;
-        left: 50%;
-      }
-      #training-intro-ai-bot {
-        top: 30%;
-      }
-      #training-ai-bot {
-        top: 20%;
-        left: 83%;
-      }
-      #predict-ai-bot {
-        top: -6%;
-      }
-      #pond-ai-bot {
-        left: 12%;
-      }
-      .continue-end {
-        margin-left: auto;
-      }
-      #predict-button {
-        right: 40%;
-        bottom: 3%;
-      }
-      #predict-text {
-        width: 100%;
-        text-align: center;
-      }
-      #train-counter-yes-text {
-        position: absolute;
-        top: 0px;
-        right: 3%;
-        font-size: 24px;
-        color: green;
-      }
-      #train-counter-no-text {
-        position: absolute;
-        top: 0px;
-        right: 10%;
-        font-size: 24px;
-        color: red;
-      }
-      .show-code-toggle {
-        position: absolute;
-        top: 5px;
-        left: 0px;
-      }
-      #code {
-        background-color: #c3c3c3;
-        position: absolute;
-        top: 60px;
-        left: 20px;
-        opacity: 0.8;
-        width: 40%;
-        height: 60%;
-        border-radius: 10px;
-        display: none;
-      }
-      #code-blocks-image {
-        margin-left: 20px;
-        margin-top: 20px;
-        border-radius: 5px;
-      }
-      #pond-text {
-        position: absolute;
-        top: 71%;
-        left: 27%;
-        max-width: 50%;
-        font-weight: bold;
-        text-align: center;
-        padding: 0 20px 20px 20px;
-        color: white;
-        background-color: rgba(64, 63, 63, 0.8);
-        border-radius: 5px;
-      }
     </style>
   </head>
   <body>
     <div id="container">
-      <div id="header-container"></div>
+      <div id="container-react"></div>
       <canvas id="background-canvas"></canvas>
       <canvas id="activity-canvas"></canvas>
-      <div id="ui-container"></div>
-      <div id="footer-container"></div>
-      <div id="code">
-        <img id="code-blocks-image" src="images/code-blocks-predict.png" />
-      </div>
     </div>
     <script src="demo.js"></script>
   </body>
