@@ -1,5 +1,6 @@
 import {expect} from '../../util/deprecatedChai';
 import {initFirebaseStorage} from '@cdo/apps/storage/firebaseStorage';
+import {WarningType} from '@cdo/apps/storage/constants';
 import {tableType} from '@cdo/apps/storage/redux/data';
 import {
   getProjectDatabase,
@@ -117,7 +118,7 @@ describe('FirebaseStorage', () => {
           throw 'unexpectedly allowed key name with ascii control code';
         },
         error => {
-          expect(error.indexOf('illegal character code') !== -1).to.be.true;
+          expect(error.type).to.equal(WarningType.KEY_INVALID);
           verifyNoKeys();
         }
       );
@@ -140,7 +141,7 @@ describe('FirebaseStorage', () => {
         'baz',
         () => verifyValueAndWarning(),
         error => {
-          expect(error.indexOf('renamed') !== -1).to.be.true;
+          expect(error.type).to.equal(WarningType.KEY_RENAMED);
           didWarn = true;
         }
       );
@@ -165,7 +166,7 @@ describe('FirebaseStorage', () => {
 
       function getKeyValue() {
         FirebaseStorage.getKeyValue('key/slash', verifyGetKeyValue, error => {
-          expect(error).to.include('renamed');
+          expect(error.type).to.equal(WarningType.KEY_RENAMED);
           didWarn = true;
         });
       }
@@ -240,7 +241,7 @@ describe('FirebaseStorage', () => {
             throw 'unexpectedly allowed to create 4th table';
           },
           error => {
-            expect(error.indexOf('maximum number of tables') !== -1).to.be.true;
+            expect(error.type).to.equal(WarningType.MAX_TABLES_EXCEEDED);
             done();
           }
         );
@@ -397,7 +398,7 @@ describe('FirebaseStorage', () => {
             throw 'unexpectedly allowed to create 4th table';
           },
           error => {
-            expect(error.indexOf('maximum number of tables') !== -1).to.be.true;
+            expect(error.type).to.equal(WarningType.MAX_TABLES_EXCEEDED);
             done();
           }
         );
@@ -423,9 +424,8 @@ describe('FirebaseStorage', () => {
             () => {
               throw 'unexpectedly allowed to overwrite existing table';
             },
-            err => {
-              expect(err.indexOf('There is already a table with name') !== -1)
-                .to.be.true;
+            error => {
+              expect(error.type).to.equal(WarningType.DUPLICATE_TABLE_NAME);
               done();
             }
           );
@@ -455,9 +455,8 @@ describe('FirebaseStorage', () => {
             () => {
               throw 'unexpectedly allowed to overwrite existing table';
             },
-            err => {
-              expect(err.indexOf('There is already a table with name') !== -1)
-                .to.be.true;
+            error => {
+              expect(error.type).to.equal(WarningType.DUPLICATE_TABLE_NAME);
               done();
             }
           );
@@ -507,9 +506,8 @@ describe('FirebaseStorage', () => {
             () => {
               throw 'unexpectedly allowed to overwrite existing table';
             },
-            err => {
-              expect(err.indexOf('There is already a table with name') !== -1)
-                .to.be.true;
+            error => {
+              expect(error.type).to.equal(WarningType.DUPLICATE_TABLE_NAME);
               done();
             }
           );
@@ -553,9 +551,8 @@ describe('FirebaseStorage', () => {
             () => {
               throw 'unexpectedly allowed to overwrite existing table';
             },
-            err => {
-              expect(err.indexOf('There is already a table with name') !== -1)
-                .to.be.true;
+            error => {
+              expect(error.type).to.equal(WarningType.DUPLICATE_TABLE_NAME);
               done();
             }
           );
@@ -575,9 +572,8 @@ describe('FirebaseStorage', () => {
             () => {
               throw 'unexpectedly allowed to overwrite existing table';
             },
-            err => {
-              expect(err.indexOf('There is already a table with name') !== -1)
-                .to.be.true;
+            error => {
+              expect(error.type).to.equal(WarningType.DUPLICATE_TABLE_NAME);
               done();
             }
           );
@@ -911,10 +907,8 @@ describe('FirebaseStorage', () => {
       }
 
       let onErrorCalled = false;
-      function validateError(msg) {
-        expect(msg).to.equal(
-          'Not all values in column "foo" could be converted to type "boolean".'
-        );
+      function validateError(error) {
+        expect(error.type).to.equal(WarningType.CANNOT_CONVERT_COLUMN_TYPE);
         onErrorCalled = true;
       }
 
@@ -965,10 +959,8 @@ describe('FirebaseStorage', () => {
       }
 
       let onErrorCalled = false;
-      function validateError(msg) {
-        expect(msg).to.equal(
-          'Not all values in column "foo" could be converted to type "number".'
-        );
+      function validateError(error) {
+        expect(error.type).to.equal(WarningType.CANNOT_CONVERT_COLUMN_TYPE);
         onErrorCalled = true;
       }
 
@@ -1360,7 +1352,7 @@ describe('FirebaseStorage', () => {
           throw 'expected import to fail on large record';
         },
         error => {
-          expect(error).to.contain('one of of the records is too large');
+          expect(error.type).to.equal(WarningType.IMPORT_FAILED);
           done();
         }
       );
@@ -1375,7 +1367,7 @@ describe('FirebaseStorage', () => {
           throw 'expected import to fail on large table';
         },
         error => {
-          expect(error).to.contain('the data is too large');
+          expect(error.type).to.equal(WarningType.IMPORT_FAILED);
           done();
         }
       );

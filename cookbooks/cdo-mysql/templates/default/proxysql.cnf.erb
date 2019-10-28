@@ -40,6 +40,14 @@ mysql_variables=
   # if the node should be present in both hostgroups or not.
   # https://github.com/sysown/proxysql/wiki/Global-variables#mysql-monitor_writer_is_also_reader
   monitor_writer_is_also_reader=false
+
+  # If this variable is set, after an OK packet with `last_insert_id` is received,
+  # multiplexing is temporary disabled for the number of queries specified (default 5).
+  # This prevents inconsistent results if a query containing `LAST_INSERT_ID()` uses a
+  # different connection from the one where auto-increment was used.
+  # We can disable (set to 0) since our application doesn't use `LAST_INSERT_ID()` in any queries.
+  # https://github.com/sysown/proxysql/wiki/Global-variables#mysql-auto_increment_delay_multiplex
+  auto_increment_delay_multiplex=0
 }
 
 # https://github.com/sysown/proxysql/wiki/Main-(runtime)#mysql_servers

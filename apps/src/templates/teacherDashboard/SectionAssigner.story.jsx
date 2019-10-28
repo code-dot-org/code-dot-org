@@ -10,7 +10,7 @@ export default storybook => {
       story: () => (
         <div>
           <SectionAssigner
-            initialSelectedSectionId={fakeTeacherSectionsForDropdown[0].id}
+            selectedSectionId={fakeTeacherSectionsForDropdown[0].id}
             sections={fakeTeacherSectionsForDropdown}
             selectSection={action('selectSection')}
           />
