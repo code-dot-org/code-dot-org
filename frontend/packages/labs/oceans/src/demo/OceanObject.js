@@ -11,6 +11,7 @@ import {
 import {imagePaths} from '../utils/trashImages';
 
 let fishPartImages = {};
+let trashImages = {};
 let intermediateCanvas;
 let tmpCanvas;
 let intermediateCtx;
@@ -62,6 +63,13 @@ export const loadAllFishPartImages = () => {
     }
   );
 };
+
+export const loadAllTrashImages = () => {
+  imagePaths.forEach((path, idx) => {
+    trashImages[idx] = new Image();
+    trashImages[idx].src = path;
+  });
+}
 
 export const generateOceanObject = (allowedClasses, id) => {
   const idx = Math.floor(Math.random() * allowedClasses.length);
@@ -222,8 +230,7 @@ export class FishOceanObject extends OceanObject {
 export class TrashOceanObject extends OceanObject {
   randomize() {
     const idx = Math.floor(Math.random() * imagePaths.length);
-    this.image = new Image();
-    this.image.src = imagePaths[idx];
+    this.image = trashImages[idx];
   }
   drawToCanvas(canvas) {
     const ctx = canvas.getContext('2d');

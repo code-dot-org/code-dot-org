@@ -13,7 +13,7 @@ import {
 } from './helpers';
 import {fishData, FishBodyPart} from '../utils/fishData';
 import {predictFish} from './models/predict';
-import {loadAllFishPartImages} from './OceanObject';
+import {loadAllFishPartImages, loadAllTrashImages} from './OceanObject';
 
 var $time =
   Date.now ||
@@ -31,6 +31,7 @@ let moveTime;
 
 export const initRenderer = () => {
   canvasCache = new CanvasCache();
+  loadAllTrashImages();
   return loadAllFishPartImages();
 };
 
