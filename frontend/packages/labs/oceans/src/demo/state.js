@@ -1,3 +1,5 @@
+let setStateCallback = null;
+
 const initialState = {
   currentMode: null,
   fishData: [],
@@ -17,6 +19,7 @@ const initialState = {
   isRunning: false,
   yesCount: 0,
   noCount: 0,
+  canSkipPredict: false,
   loadTrashImages: true
 };
 let state = {...initialState};
@@ -27,5 +30,14 @@ export const getState = function() {
 
 export const setState = function(newState) {
   state = {...state, ...newState};
+
+  if (setStateCallback) {
+    setStateCallback();
+  }
+
   return state;
 };
+
+export const setSetStateCallback = (callback) => {
+  setStateCallback = callback;
+}

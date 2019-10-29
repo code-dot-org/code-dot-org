@@ -1,14 +1,14 @@
 import * as mobilenetModule from '@tensorflow-models/mobilenet';
 import {fishData, FishBodyPart} from '../utils/fishData';
-import constants, {Modes, ClassType} from './constants';
+import constants from './constants';
 import {
-  backgroundPathForMode,
   bodyAnchorFromType,
   colorForFishPart,
   randomInt,
   clamp
 } from './helpers';
 import {imagePaths} from '../utils/trashImages';
+import _ from 'lodash';
 
 let fishPartImages = {};
 let trashImages = {};
@@ -90,8 +90,12 @@ export class OceanObject {
     this.logits = null;
     this.result = null;
   }
-  randomize() {}
-  drawToCanvas(canvas) {}
+  randomize() {
+    throw 'Not yet implemented!';
+  }
+  drawToCanvas(canvas) {
+    throw 'Not yet implemented!';
+  }
   getId() {
     return this.id;
   }
@@ -164,6 +168,10 @@ export class FishOceanObject extends OceanObject {
       ...this.colorPalette.knnData
     ];
     this.parts = [body, eye, mouth, sideFinFront, sideFinBack, topFin, tail];
+  }
+
+  getColorPalette() {
+    return this.colorPalette;
   }
 
   drawToCanvas(fishCanvas) {

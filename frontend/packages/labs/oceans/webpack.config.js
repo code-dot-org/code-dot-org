@@ -4,7 +4,6 @@ module.exports = {
     extensions: ['.js', '.jsx'],
   },
   entry: {
-    main: './src/index.js',
     demo: './src/demo/index.jsx',
   },
   output: {

@@ -1,5 +1,3 @@
-import {setState} from './state';
-import {init as initScene} from './init';
 import {Modes} from './constants';
 import {FishBodyPart} from '../utils/fishData';
 
@@ -9,58 +7,14 @@ export const backgroundPathForMode = mode => {
     imgName = 'underwater';
   }
 
+  // Temporarily show background for every mode.
+  imgName = 'underwater';
+
   return imgName ? backgroundPath(imgName) : null;
 };
 
 export const backgroundPath = imgName => {
   return `images/${imgName}-background.png`;
-};
-
-export const toMode = mode => {
-  setState({currentMode: mode});
-  initScene();
-};
-
-// Creates a button element, given an object that contains
-// id, text, and onClick properties.
-export const createButton = ({
-  id,
-  text,
-  onClick,
-  className = 'ui-button',
-  show = true
-}) => {
-  let btnEl = document.createElement('button');
-  btnEl.innerHTML = text;
-  if (id) {
-    btnEl.setAttribute('id', id);
-  }
-  btnEl.setAttribute('class', className);
-  btnEl.addEventListener('click', onClick);
-  if (!show) {
-    btnEl.style.display = 'none';
-  }
-  return btnEl;
-};
-
-// Creates a div element with text, given an object that contains
-// id and text properties.
-export const createText = ({id, text}) => {
-  let textEl = document.createElement('div');
-  textEl.setAttribute('id', id);
-  textEl.innerHTML = text;
-
-  return textEl;
-};
-
-// Creates an image element, given an object that contains
-// id and src properties.
-export const createImage = ({id, src}) => {
-  let imageEl = document.createElement('IMG');
-  imageEl.src = src;
-  imageEl.id = id;
-
-  return imageEl;
 };
 
 export const bodyAnchorFromType = (body, type) => {
