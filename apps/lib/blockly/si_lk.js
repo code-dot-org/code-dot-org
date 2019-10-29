@@ -40,6 +40,7 @@ Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST_TAIL = "";
 Blockly.Msg.CONTROLS_FOREACH_INPUT_ITEM = "සියලු ආයිතම් සඳහා";
 Blockly.Msg.CONTROLS_FOREACH_TOOLTIP = "ලැස්තුවේ ඇති සෑම අයිතමයක් සදහා '%1' විචල්‍ය ගළපා, ඉන්පසු ප්‍රකාශන කීපයක් සිදුකරන්න.";
 Blockly.Msg.CONTROLS_FOR_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#count_with";
+Blockly.Msg.CONTROLS_FOR_INPUT_COUNTER = "for %1 from %2 to %3 count by %4";
 Blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY = "%1 සිට %2 දක්වා %3 බැගින් ගණන් කිරීම";
 Blockly.Msg.CONTROLS_FOR_INPUT_WITH = "for";
 Blockly.Msg.CONTROLS_FOR_TOOLTIP = "%1 විචල්‍ය සදහා ආරම්බක අංකයේ සිට අවසාන අංකය දක්වා අගයන් නිරූපිත විරාමය මගින් ගණනය කිරීම සහ නිරූපිත බ්ලොක්ස් සිදු කිරීම.";

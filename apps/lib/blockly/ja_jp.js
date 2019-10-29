@@ -40,6 +40,7 @@ Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST_TAIL = "";
 Blockly.Msg.CONTROLS_FOREACH_INPUT_ITEM = "各項目の";
 Blockly.Msg.CONTROLS_FOREACH_TOOLTIP = "リストの各項目に対してアイテムに変数 '%1' を設定し、いくつかのステートメントをしてください。";
 Blockly.Msg.CONTROLS_FOR_HELPURL = "";
+Blockly.Msg.CONTROLS_FOR_INPUT_COUNTER = "for %1 from %2 to %3 count by %4";
 Blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY = "%1から%2まで%3ずつ";
 Blockly.Msg.CONTROLS_FOR_INPUT_WITH = "まつ";
 Blockly.Msg.CONTROLS_FOR_TOOLTIP = "変数%1は、始めの数字から終わりの数字まで指定した間隔で値をとり、指定したブロックを実行します。";
