@@ -27,8 +27,6 @@ const BodyShape = Object.freeze({
   OTHER: 4
 });
 
-let initialized = false;
-
 const fishComponents = {
   // BODY KNN DATA: [area, BodyShape]
   bodies: {
@@ -700,6 +698,7 @@ const fishComponents = {
 };
 
 // Normalize the KNN data for all components.
+let initialized = false;
 export const initFishData = () => {
   if (!initialized) {
     Object.keys(fishComponents).forEach(key => {
