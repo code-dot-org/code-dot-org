@@ -1,7 +1,5 @@
 ---
 title: Οδηγίες για δημόσιους αξιωματούχους
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}
