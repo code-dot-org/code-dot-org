@@ -1,7 +1,5 @@
 ---
 title: بسته مطبوعات
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}
