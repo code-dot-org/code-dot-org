@@ -285,6 +285,7 @@
   "puzzle": "ধাঁধা",
   "puzzleTitle": "{stage_total} এর মধ্যে ধাঁধা {puzzle_number}",
   "question": "প্রশ্ন",
+  "random": "এলোমেলো",
   "readonlyWorkspaceHeader": "শুধু দেখা যাবে: ",
   "recommendedBlockContextualHintTitle": "এই মত একটি ব্লক ব্যবহার পাজল সমাধান করার চেষ্টা করুন।",
   "relockStage": "পুনরায় তালাবদ্ধ অবস্থায়",

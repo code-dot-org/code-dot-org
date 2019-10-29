@@ -272,6 +272,10 @@ ms:
             '"scale"': saiz
       Mikelab_randomColor:
         text: warna rawak
+      Mikelab_sendBad:
+        text: gerak ke kiri
+      Mikelab_sendGood:
+        text: gerak ke kanan
       Mikelab_setBG:
         options:
           BG:

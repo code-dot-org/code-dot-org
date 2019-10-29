@@ -312,6 +312,12 @@ gl:
             '"y"': posición y
       Mikelab_randomColor:
         text: cor aleatoria
+      Mikelab_repeatUntilComplete:
+        text: Repetir para sempre
+      Mikelab_sendBad:
+        text: mover hacia a esquerda
+      Mikelab_sendGood:
+        text: mover cara a dereita
       Mikelab_setBG:
         options:
           BG:

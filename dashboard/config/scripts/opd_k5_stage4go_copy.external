@@ -6,8 +6,8 @@ markdown <<MARKDOWN
 In this stage, we saw how adding loops to a program is more efficient when coding repetitive actions. In the next stage, we'll look at coding **if-statements** and other conditionals.  
 <br/>
 
-**1. Review "[Getting Loopy](https://levelbuilder.code.org/curriculum/coursec/7/Teacher)" Lesson Plan from Course C:**
-<br/>Course C is meant for Grade 2 students. Loops comes up in other courses, as well, and you can find examples of those lessons at the bottom of this page.
+**1. Review "[Getting Loopy](https://curriculum.code.org/csf-19/courseb/6/)" Lesson Plan from Course B:**
+<br/>Course B is meant for Grade 1 students. Loops comes up in other courses, as well, and you can find examples of those lessons at the bottom of this page.
 
 <br/>
 
@@ -31,18 +31,13 @@ This video is meant to be support for you as the teacher, if you are looking for
 
 **4. Review other unplugged lessons that introduce loops:**
 
-- Course A (Kindergarten): [Happy Loops](https://curriculum.code.org/csf-18/coursea/9/)
-- Course B (Grade 1): [My Loopy Robotic Friends Jr.](https://curriculum.code.org/csf-18/courseb/8/)
-- Course E, F (Grade 4, 5): [My Loopy Robotic Friends](https://curriculum.code.org/csf-18/coursee/6/)
+- Course A (Kindergarten): [Happy Loops](https://curriculum.code.org/csf-19/coursea/7/)
+- Course C (Grade 2): [My Loopy Robotic Friends, Jr.](https://curriculum.code.org/csf-19/coursec/9/)
 
 ***
 
 > ## Reflect
-> How would you explain the concept of loops to your students?<br><br> [Share your thoughts in our forum.](http://forum.code.org/t/teaching-loops-and-efficiency/405/1)
-
-> <a href="http://forum.code.org/t/teaching-loops-and-efficiency/405/1" target="blank"><button class="plc">Discuss in the forums >></button></a>
-
-After commenting in the forum, return here and click below to move on to the next stage.
+> How would you explain the concept of loops to your students?
 
 MARKDOWN
 

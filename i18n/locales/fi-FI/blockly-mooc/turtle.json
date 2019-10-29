@@ -47,6 +47,7 @@
   "jumpBackward": "hyppää taaksepäin",
   "jumpForward": "hyppää eteenpäin",
   "jumpToOverDown": "",
+  "jumpToPosition": "",
   "jumpByDirection": "",
   "jumpTooltip": "Liikuttaa taiteilijaa piirtämättä jälkeä.",
   "jumpEastTooltip": "Liikuttaa taiteilijaa itään piirtämättä jälkeä.",

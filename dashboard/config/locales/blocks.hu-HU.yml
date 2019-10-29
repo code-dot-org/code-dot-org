@@ -462,7 +462,7 @@ hu:
             '"vintage"': Régi
             '"warm"': Vörösek
       Dancelab_setBackgroundEffectWithPalette:
-        text: háttéreffekt beállítása {EFFECT} {PALETTE}
+        text: háttéreffekt beállítása {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': Egyik sem
@@ -1198,6 +1198,12 @@ hu:
         text: Véletlen szín
       Mikelab_removeBehaviorSimple:
         text: sprite {SPRITE} abbahagyja {BEHAVIOR}
+      Mikelab_repeatUntilComplete:
+        text: ismételd végtelenszer
+      Mikelab_sendBad:
+        text: balra
+      Mikelab_sendGood:
+        text: jobbra
       Mikelab_setBG:
         options:
           BG:

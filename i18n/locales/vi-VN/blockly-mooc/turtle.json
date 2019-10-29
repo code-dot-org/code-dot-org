@@ -47,6 +47,7 @@
   "jumpBackward": "di chuyển bút lui về mà không ghi",
   "jumpForward": "di chuyển tới trước (mà không ghi)",
   "jumpToOverDown": "",
+  "jumpToPosition": "",
   "jumpByDirection": "",
   "jumpTooltip": "di chuyển nghệ sĩ mà không để lại bất kì dấu gì.",
   "jumpEastTooltip": "Di chuyển về phía đông nghệ sĩ mà không để lại bất cứ dấu hiệu nào.",

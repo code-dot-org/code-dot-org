@@ -2,6 +2,7 @@ import React from 'react';
 import Radium from 'radium';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
+import _ from 'lodash';
 import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
 import DropdownField from './DropdownField';
 import * as dataStyles from './dataStyles';
@@ -15,7 +16,9 @@ const INITIAL_STATE = {
   bucketSize: 0,
   values: '',
   xValues: '',
-  yValues: ''
+  yValues: '',
+  parsedRecords: [],
+  numericColumns: []
 };
 
 class DataVisualizer extends React.Component {
@@ -42,16 +45,9 @@ class DataVisualizer extends React.Component {
   };
 
   aggregateRecordsByColumn = (records, columnName) => {
-    let counts = {};
-    records.forEach(record => {
-      let value = record[columnName];
-      counts[value] = (counts[value] || 0) + 1;
-    });
-    let chartData = [];
-    Object.keys(counts).forEach(key => {
-      chartData.push({[columnName]: key, count: counts[key]});
-    });
-    return chartData;
+    const counts = _.countBy(records, r => r[columnName]);
+
+    return _.map(counts, (count, key) => ({[columnName]: key, count}));
   };
 
   updateChart = () => {
@@ -59,9 +55,6 @@ class DataVisualizer extends React.Component {
     if (!targetDiv) {
       return;
     }
-    const records =
-      Object.keys(this.props.tableRecords).length > 0 &&
-      this.props.tableRecords.map(tableRecord => JSON.parse(tableRecord));
 
     let chart;
     let chartData;
@@ -71,52 +64,77 @@ class DataVisualizer extends React.Component {
       case 'Bar Chart':
         if (this.state.values) {
           chart = new GoogleChart.MaterialBarChart(targetDiv);
-          chartData = this.aggregateRecordsByColumn(records, this.state.values);
+          chartData = this.aggregateRecordsByColumn(
+            this.state.parsedRecords,
+            this.state.values
+          );
           columns.push(this.state.values, 'count');
         }
         break;
       case 'Histogram':
-        if (this.state.values && this.state.bucketSize) {
-          let min = Infinity;
-          let max = -Infinity;
-          records.forEach(record => {
-            let value = record[this.state.values];
-            if (value < min) {
-              min = value;
-            }
-            if (value > max) {
-              max = value;
-            }
-          });
-          options.histogram = {
-            bucketSize: this.state.bucketSize
-          };
-          chart = new GoogleChart.Histogram(targetDiv);
-
-          // Only use non-empty records.
-          chartData = records.filter(record => !!record);
-
-          columns.push(this.state.values);
-        }
+        console.warn(`${this.state.chartType} not yet implemented`);
         break;
       case 'Cross Tab':
-        console.log('cross tab not yet implemented');
+        console.warn(`${this.state.chartType} not yet implemented`);
         break;
       case 'Scatter Plot':
         if (this.state.xValues && this.state.yValues) {
           chart = new GoogleChart.MaterialScatterChart(targetDiv);
-          chartData = records.filter(record => !!record);
+          chartData = this.state.parsedRecords;
           columns.push(this.state.xValues, this.state.yValues);
         }
         break;
       default:
-        console.warn('unknown chart type: ' + this.state.chartType);
+        console.warn(`unknown chart type ${this.state.chartType}`);
         break;
     }
     if (chart && chartData) {
       chart.drawChart(chartData, columns, options);
     }
   };
+
+  parseRecords = () => {
+    if (Object.keys(this.props.tableRecords).length === 0) {
+      return [];
+    } else {
+      let parsedRecords = [];
+      this.props.tableRecords.forEach(record => {
+        if (record) {
+          parsedRecords.push(JSON.parse(record));
+        }
+      });
+      return parsedRecords;
+    }
+  };
+
+  findNumericColumns = records => {
+    return this.props.tableColumns.filter(
+      column =>
+        records.filter(
+          record =>
+            typeof record[column] === 'undefined' ||
+            typeof record[column] === 'number'
+        ).length === records.length
+    );
+  };
+
+  componentDidUpdate(previousProps, prevState) {
+    const visualizerJustOpened =
+      !prevState.isVisualizerOpen && this.state.isVisualizerOpen;
+
+    const recordsChangedWithVisualizerOpen =
+      this.props.tableRecords !== previousProps.tableRecords &&
+      this.state.isVisualizerOpen;
+
+    if (visualizerJustOpened || recordsChangedWithVisualizerOpen) {
+      let parsedRecords = this.parseRecords();
+      let numericColumns = this.findNumericColumns(parsedRecords);
+      this.setState({
+        parsedRecords: parsedRecords,
+        numericColumns: numericColumns
+      });
+    }
+  }
 
   render() {
     if (
@@ -125,6 +143,20 @@ class DataVisualizer extends React.Component {
       this.state.chartType
     ) {
       this.updateChart();
+    }
+
+    let options = this.props.tableColumns;
+    let disabledOptions = [];
+
+    const disableNonNumericColumns =
+      this.state.chartType === 'Scatter Plot' ||
+      this.state.chartType === 'Histogram';
+
+    if (disableNonNumericColumns) {
+      disabledOptions = _.difference(
+        this.props.tableColumns,
+        this.state.numericColumns
+      );
     }
 
     const modalBody = (
@@ -166,7 +198,8 @@ class DataVisualizer extends React.Component {
             this.state.chartType === 'Histogram') && (
             <DropdownField
               displayName="Values"
-              options={this.props.tableColumns}
+              options={options}
+              disabledOptions={disabledOptions}
               value={this.state.values}
               onChange={event => this.setState({values: event.target.value})}
             />
@@ -177,13 +210,15 @@ class DataVisualizer extends React.Component {
             <div>
               <DropdownField
                 displayName="X Values"
-                options={this.props.tableColumns}
+                options={options}
+                disabledOptions={disabledOptions}
                 value={this.state.xValues}
                 onChange={event => this.setState({xValues: event.target.value})}
               />
               <DropdownField
                 displayName="Y Values"
-                options={this.props.tableColumns}
+                options={options}
+                disabledOptions={disabledOptions}
                 value={this.state.yValues}
                 onChange={event => this.setState({yValues: event.target.value})}
               />

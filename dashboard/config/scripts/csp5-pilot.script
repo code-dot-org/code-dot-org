@@ -1,14 +1,16 @@
 login_required true
 hideable_stages true
 has_verified_resources true
+has_lesson_plan true
+curriculum_path 'https://curriculum.code.org/{LOCALE}/cspilot/unit5/{LESSON}'
 pilot_experiment 'csp-piloters'
 curriculum_umbrella 'CSP'
 
 stage 'Lists Explore', flex_category: 'csp_lists'
 level 'CSP U5L1 SFLP 20-21', progression: 'Lesson Overview'
-level 'csp-20-21-u5-assess-lists', progression: 'Check Your Understanding', assessment: true
 level 'U5 L01 Introduction to Lists', progression: 'Introduction to Lists'
 level 'Introduction to Lists - Part 2_2018', progression: 'Introduction to Lists'
+level 'csp-20-21-u5-assess-lists', progression: 'Check Your Understanding', assessment: true
 
 stage 'Lists Investigate', flex_category: 'csp_lists'
 level 'CSP U5L2 SFLP 20-21', progression: 'Lesson Overview'
@@ -67,6 +69,8 @@ level 'U5 Loops Practice Part 5', progression: 'For Loop Practice'
 level 'U5 Loops Practice Part 6', progression: 'For Loop Practice'
 level 'U5 Loops Practice Sentence Randomizer', progression: 'Loops and Screen Elements'
 level 'U5 Loops Practice Dice Roller', progression: 'Loops and Screen Elements'
+level 'U5L7 CFU Loops Psuedocode', progression: 'Check For Understanding: AP Practice'
+level 'U5L7 CFU Loops Psuedocode 2', progression: 'Check For Understanding: AP Practice'
 
 stage 'Loops Make', flex_category: 'csp_loops'
 level 'CSP U5L8 SFLP 20-21', progression: 'Lesson Overview'
@@ -76,8 +80,6 @@ level 'U5 Loops Make Wallpaper App Step 3', progression: 'Build the Lock Screen 
 level 'U5 Loops Make Wallpaper App Step 4', progression: 'Build the Lock Screen Maker'
 level 'U5 Loops Make Wallpaper App Step 5', progression: 'Build the Lock Screen Maker'
 level 'U5 Loops Make Wallpaper App Step 6', progression: 'Build the Lock Screen Maker'
-level 'U5L7 CFU Loops Psuedocode', progression: 'Check For Understanding: AP Practice'
-level 'U5L7 CFU Loops Psuedocode 2', progression: 'Check For Understanding: AP Practice'
 
 stage 'Traversals Explore', flex_category: 'csp_traversals'
 level 'CSP U5L9 SFLP 20-21', progression: 'Lesson Overview'
@@ -106,16 +108,17 @@ level 'U5 Traversals Practice Part 5', progression: 'Filter and Reduce Practice'
 level 'U5 Traversals Practice Part 6', progression: 'Filter and Reduce Practice'
 level 'U5 Traversals Practice Part 7', progression: 'App Practice'
 level 'U5 Traversals Practice Part 8', progression: 'App Practice'
+level 'U5L11 CFU For Each Psuedocode', progression: 'Check For Understanding: AP Practice'
 
 stage 'Traversals Make', flex_category: 'csp_traversals'
 level 'CSP U5L12 SFLP 20-21', progression: 'Lesson Overview'
-level 'U5 Traversals Make Project Sample App', progression: 'The Wacky Name Generator App'
-level 'U5 Traversals Make Project Step 1', progression: 'Build the Wacky Name Generator App'
-level 'U5 Traversals Make Project Step 2', progression: 'Build the Wacky Name Generator App'
-level 'U5 Traversals Make Project Step 3', progression: 'Build the Wacky Name Generator App'
-level 'U5 Traversals Make Project Step 4', progression: 'Build the Wacky Name Generator App'
-level 'U5 Traversals Make Project Step 5', progression: 'Build the Wacky Name Generator App'
-level 'U5 Traversals Make Project Step 6', progression: 'Build the Wacky Name Generator App', assessment: true
+level 'U5 Traversals Make Project Sample App', progression: 'Try the Poem Personalizer'
+level 'U5 Traversals Make Project Step 1', progression: 'Build the Poem Personalizer'
+level 'U5 Traversals Make Project Step 2', progression: 'Build the Poem Personalizer'
+level 'U5 Traversals Make Project Step 3', progression: 'Build the Poem Personalizer'
+level 'U5 Traversals Make Project Step 4', progression: 'Build the Poem Personalizer'
+level 'U5 Traversals Make Project Step 5', progression: 'Build the Poem Personalizer'
+level 'U5 Traversals Make Project Step 6', progression: 'Build the Poem Personalizer', assessment: true
 
 stage 'Semester Hackathon Part 1', flex_category: 'csp_project'
 level 'CSP U5L13 SFLP 20-21', progression: 'Lesson Overview'
