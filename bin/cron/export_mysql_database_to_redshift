@@ -27,6 +27,7 @@ def main
 
   # Spawn one thread for each replication task, so we can start and monitor them independently.
   threads = []
+  Thread.abort_on_exception = true
   production_tasks.each do |task|
     threads << Thread.new {execute_replication_task(task.replication_task_arn)}
   end
