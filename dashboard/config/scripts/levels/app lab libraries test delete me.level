@@ -1,7 +1,7 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2019-10-22T21:07:26.000Z",
+  "created_at": "2019-10-29T19:46:18.000Z",
   "level_num": "custom",
   "user_id": 324,
   "properties": {
@@ -189,9 +189,41 @@
       "toggleSwitch.isOpen": null,
       "onBoardEvent": null
     },
-    "preload_asset_list": null
+    "embed": "false",
+    "instructions_important": "false",
+    "mini_rubric": "false",
+    "never_autoplay_video": "false",
+    "hide_share_and_remix": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "submittable": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "execute_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "hide_view_data_button": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "fail_on_lint_errors": "false",
+    "debugger_disabled": "false",
+    "makerlab_enabled": "false",
+    "widget_mode": "false",
+    "start_blocks": "// detect a collision between two elements\r\n// return a Boolean\r\nfunction detectCollision(element1, element2) {\r\n  var verticalDistance = Math.abs(getYPosition(element1) - getYPosition(element2));\r\n  var verticalBuffer = (getProperty(element1, \"height\") + getProperty(element2, \"height\")) / 2;\r\n  var verticalOverlap = (verticalBuffer > verticalDistance);\r\n  var horizontalDistance = Math.abs(getXPosition(element1) - getXPosition(element2));\r\n  var horizontalBuffer = (getProperty(element2, \"width\") + getProperty(element2, \"width\")) / 2;\r\n  var horizontalOverlap = (horizontalBuffer > horizontalDistance);\r\n  return verticalOverlap && horizontalOverlap;\r\n}",
+    "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"></div></div>",
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-10-29 19:46:25 +0000\",\"changed\":[\"notes\",\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-10-29 19:54:28 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-10-29 19:54:41 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>
