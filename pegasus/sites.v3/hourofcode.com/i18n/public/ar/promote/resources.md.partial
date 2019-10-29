@@ -12,7 +12,7 @@ nav: promote_nav
 
 ### اعثر على كل الموارد التي تحتاجها لجلب الانتباه إلى حدثك لساعة البرمجة. لست متأكدا من أين ستبدأ؟ ابدأ ب[دليلنا لاستضافة ساعة البرمجة]({{ how_to_url }})!
 
----
+* * *
 
 {{ promote_handouts }} {{ promote_videos }}
 
@@ -69,7 +69,7 @@ nav: promote_nav
 
 ### اعثر على [المويد من التفاصيل واللغات التي يمكن أن تستخدمها]({{ promote/stats_url }}) عند الحديث عن ساعة البرمجة.
 
----
+* * *
 
 <a id="email"></a>
 
@@ -87,7 +87,7 @@ nav: promote_nav
 
 Hبدأ على http://hourofcode.com/{{ country }} <br />
 
----
+* * *
 
 <a id="help-schools"></a>
 
@@ -107,7 +107,7 @@ Hبدأ على http://hourofcode.com/{{ country }} <br />
 
 يمكنك قراءة المزيد عن الحدث على http://hourofcode.com. أو، إن كنت ستحدد موعدا للتحدث عن كيف يمكن للمدرسة [school name] المشاركة. <br />
 
----
+* * *
 
 <a id="parents"></a>
 
@@ -127,7 +127,7 @@ Hبدأ على http://hourofcode.com/{{ country }} <br />
 
 للمزيد من التفاصيل شاهد http://hourofcode.com/{{ country }}، وساعد على نشر الرسالة. <br />
 
----
+* * *
 
 <a id="media-pitch"></a>
 
@@ -151,7 +151,7 @@ Hبدأ على http://hourofcode.com/{{ country }} <br />
 
 أتطلع لأان نكون على اتصال. <br />
 
----
+* * *
 
 <a id="politicians"></a>
 
