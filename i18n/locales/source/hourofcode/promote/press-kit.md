@@ -1,7 +1,5 @@
 ---
 title: Press Kit
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}
