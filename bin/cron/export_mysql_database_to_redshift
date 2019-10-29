@@ -43,6 +43,17 @@ end
 # @replication_task_arn [String]
 def execute_replication_task(replication_task_arn)
   ChatClient.message 'cron-daily', "Starting DMS Replication Task: #{replication_task_arn}"
+  dms_client = Aws::DatabaseMigrationService::Client.new
+  start_task_response = dms_client.start_replication_task(
+    {
+      replication_task_arn: replication_task_arn,
+      start_replication_task_type: "start-replication"
+    }
+  )
+  ChatClient.message 'cron-daily', "Start DMS Task Response: #{replication_task_arn} - #{start_task_response}"
+rescue StandardError => error
+  ChatClient.message 'cron-daily', "Error executing DMS Replication Task #{replication_task_arn} - #{error.message}", color: 'red'
+  raise error
 end
 
 main
