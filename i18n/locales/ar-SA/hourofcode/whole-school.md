@@ -1,6 +1,5 @@
 ---
 title: المشاركة الكلية للمدرسة
-layout: wide
 ---
 
 {{ signup_button }}

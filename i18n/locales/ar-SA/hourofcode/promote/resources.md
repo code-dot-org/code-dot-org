@@ -1,7 +1,5 @@
 ---
 title: الموارد
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}
