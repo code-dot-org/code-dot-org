@@ -1,5 +1,3 @@
-import {PropTypes} from 'react';
-
 // Describe the different body parts of the fish. The object
 // is ordered by its render dependency (i.e., dorsalFin should be rendered
 // before body).
