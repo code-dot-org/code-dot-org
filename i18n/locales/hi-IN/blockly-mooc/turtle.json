@@ -47,6 +47,7 @@
   "jumpBackward": "इस तक पीछे की ओर कूदें",
   "jumpForward": "इस तक आगे की ओर कूदें",
   "jumpToOverDown": "",
+  "jumpToPosition": "",
   "jumpByDirection": "",
   "jumpTooltip": "बिना कोई निशान छोड़े कलाकार को मूव करता है।",
   "jumpEastTooltip": "बिना कोई निशान छोड़े कलाकार को पूर्व की ओर मूव करता है।",

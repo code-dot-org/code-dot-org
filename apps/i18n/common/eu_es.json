@@ -453,6 +453,7 @@
   "puzzle": "Ariketa",
   "puzzleTitle": "{puzzle_number}. ariketa, {stage_total}tik",
   "question": "Galdera",
+  "random": "ausazkoa",
   "readonlyWorkspaceHeader": "Ikusteko bakarrik: ",
   "recommended": "Gomendatua",
   "recommendedBlockContextualHintTitle": "Saia zaitez hau bezalako bloke bat erabiltzen ariketa ebazteko.",

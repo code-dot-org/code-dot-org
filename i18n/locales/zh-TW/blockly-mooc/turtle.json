@@ -47,6 +47,7 @@
   "jumpBackward": "跳躍-向後",
   "jumpForward": "跳躍-向前",
   "jumpToOverDown": "",
+  "jumpToPosition": "",
   "jumpByDirection": "",
   "jumpTooltip": "讓小藝術家移動，且不留下任何筆跡。",
   "jumpEastTooltip": "讓小藝術家往東移動，且不留下任何筆跡。",

@@ -47,6 +47,7 @@
   "jumpBackward": "กระโดดถอยหลังไป",
   "jumpForward": "กระโดดไปข้างหน้า",
   "jumpToOverDown": "",
+  "jumpToPosition": "",
   "jumpByDirection": "",
   "jumpTooltip": "พาศิลปินมุ่งไปไหน โดยไม่ทำเครื่องหมายใดๆ",
   "jumpEastTooltip": "พาศิลปินมุ่งไปทางตะวันออก โดยไม่ทำเครื่องหมายใดๆ",

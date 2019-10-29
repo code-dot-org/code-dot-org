@@ -427,7 +427,7 @@ ku:
       Dancelab_setBackgroundEffectWithPalette:
         text: |-
           ئیفێکتی پاشبنەما دیاریبکە
-          {EFFECT} {PALETTE}
+          {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"rand"': "(هەڕەمەکی)"
@@ -1100,6 +1100,8 @@ ku:
         text: رەنگێکی هەڕەمەکی
       Mikelab_removeBehaviorSimple:
         text: سپڕایت {SPRITE} دەستپێدەکات {BEHAVIOR}
+      Mikelab_sendGood:
+        text: بڕۆ بۆ دەستە ڕاست
       Mikelab_setBG:
         options:
           BG:
