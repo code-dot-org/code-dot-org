@@ -5403,6 +5403,10 @@ zh-TW:
           stages:
             Deeper Learning Overview:
               name: 深度學習概覽
+        dlp19-csp-mod-w3:
+          stages:
+            Deeper Learning Overview:
+              name: 深度學習概覽
         csd4-pilot:
           stages:
             What is a Computer?:

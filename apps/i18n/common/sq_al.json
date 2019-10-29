@@ -402,6 +402,7 @@
   "projectWarning": "Shenim: Ju jeni në një nivel që është pjesë e një projekti më të gjatë. Ndryshimet e bëra në këtë nivel do të shfaqen gjithashtu në nivelet e tjera.",
   "puzzle": "Enigmë",
   "puzzleTitle": "Puzzle  {puzzle_number} nga {stage_total}",
+  "random": "zakonshëm",
   "readonlyWorkspaceHeader": "Vetëm shfaq: ",
   "recommendedBlockContextualHintTitle": "Provo të përdorësh një bllok si ky për ta zgjidhur problemin.",
   "relockStage": "Ri-mbyll fazën",

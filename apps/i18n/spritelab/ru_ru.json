@@ -1,3 +1,26 @@
 {
-  "shareGame": "Поделиться твоей игрой:"
+  "errorLoadingAnimation": "Похоже у нас проблемы с загрузкой вашей анимации \"{animationName}\". Убедитесь, что у вас хорошее соединение с интернетом и попробуйте перезагрузить страницу. Если проблема остаётся, возможно анимация повреждена. В этом случае вы можете продолжить, удалив анимацию.",
+  "reinfFeedbackMsg": "Вы справились! Нажмите \"Продолжить\", чтобы перейти на следующий уровень.",
+  "shareGame": "Поделиться твоей игрой:",
+  "spritelabFeedbackCreateFishWithBehavior": "Надо сделать хотя бы один спрайт рыбы и прописать ему поведение.",
+  "spritelabFeedbackMoveFishLeftRight": "Ваш спрайт рыбы должен двигаться влево или вправо. Попробуйте изменить его поведение.",
+  "spritelabFeedbackChangeBackgroundColor": "Вам нужно изменить белый фон на что-то другое.",
+  "spritelabFeedbackCreateTwoSprites": "Вам нужно создать ровно два спрайта.",
+  "spritelabFeedbackTwoSpritesWithCostumes": "Ваши два спрайта должны иметь разные костюмы.",
+  "spritelabFeedbackTwoSpritesWithCostumesAndBehaviors": "Вам нужно создать два спрайта с разными костюмами. У каждого должно быть поведение.",
+  "spritelabFeedbackClickSprite": "Нажмите на ваш спрайт после нажатия \"Выполнить\".",
+  "spritelabFeedbackUseSpinningBehavior": "Ваш спрайт должен начать вращаться. Попробуйте изменить его поведение.",
+  "spritelabFeedbackPinkAlienBehavior": "Спрайт розовый инопланетянин ничего не делает.",
+  "spritelabFeedbackCreateThreeAliens": "Вам нужно создать голубого, розового и жёлтого инопланетян.",
+  "spritelabFeedbackAliensNotInLine": "Ваши три инопланетянина должны быть выстроены в горизонтальную линию (в пределах 50 пикселей).",
+  "spritelabFeedbackYellowAlienBehavior": "Жёлтый инопланетянин ничего не делает.",
+  "spritelabFeedbackNoAlienColor": "Как минимум один из ваших инопланетян не сменил цвет.",
+  "spritelabFeedbackNeedAlienStopBehavior": "Ваши инопланетяне должны прекратить все свои действия.",
+  "spritelabFeedbackBlueAlienBehavior": "Ваш голубой инопланетянин должен начать новое поведение.",
+  "spritelabFeedbackUseCostume": "Вы должны использовать хотя бы один костюм.",
+  "spritelabFeedbackThreeSpritesWithCostumes": "Нужно создать три спрайта с разными костюмами.",
+  "spritelabFeedbackMoveUpNotDown": "Ваш спрайт должен двигаться вверх (на север), а не вниз (на юг).",
+  "spritelabFeedbackRobotFasterThanRover": "Робот достиг правого края экрана раньше бродяги.",
+  "spritelabFeedbackDifferentStarRotation": "Спрайты с обоими костюмами звёзд должны повернуться одинаково.",
+  "spritelabFeedbackAstronautMoveToCorner": "Спрайт астронавта должен двигаться в один из четырёх углов."
 }

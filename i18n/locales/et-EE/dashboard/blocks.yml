@@ -419,7 +419,7 @@ et:
       Dancelab_setBackgroundEffectWithPalette:
         text: |-
           määra taustaefekt
-          {EFFECT} {PALETTE}
+          {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': Mitte ükski
@@ -971,6 +971,12 @@ et:
             MOVES.Rest: Mitte ükski
       Mikelab_randomColor:
         text: juhuslik värv
+      Mikelab_repeatUntilComplete:
+        text: korda igavesti
+      Mikelab_sendBad:
+        text: liigu vasakule
+      Mikelab_sendGood:
+        text: liigu paremale
       Mikelab_setBG:
         options:
           BG:

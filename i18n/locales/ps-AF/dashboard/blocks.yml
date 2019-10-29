@@ -80,6 +80,10 @@ ps:
             '"while"': کله چي
       Mikelab_randomColor:
         text: نا ټاکلۍ رنګ
+      Mikelab_sendBad:
+        text: چپ اړخ ته لاړ شۍ
+      Mikelab_sendGood:
+        text: راسته اړځ ته لاړ شۍ
       aalab_goToScene:
         options:
           SCENE:

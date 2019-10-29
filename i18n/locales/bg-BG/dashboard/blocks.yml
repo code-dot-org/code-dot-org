@@ -836,6 +836,12 @@ bg:
         text: "{LOCATION}"
       Mikelab_randomColor:
         text: случаен цвят
+      Mikelab_repeatUntilComplete:
+        text: повтаряй завинаги
+      Mikelab_sendBad:
+        text: премести наляво
+      Mikelab_sendGood:
+        text: Премести надясно
       Mikelab_setBG:
         options:
           BG:

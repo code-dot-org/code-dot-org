@@ -750,6 +750,7 @@
   "puzzle": "Desafio",
   "puzzleTitle": "Desafio {puzzle_number} de {stage_total}",
   "question": "Pergunta",
+  "random": "aleatório",
   "readonlyWorkspaceHeader": "Ver apenas: ",
   "recommendedBlockContextualHintTitle": "Experimenta resolver o desafio com um bloco como este.",
   "relockStage": "Volte a fechar a etapa",

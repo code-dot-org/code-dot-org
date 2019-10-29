@@ -59,7 +59,7 @@ class LibraryCreationDialog extends React.Component {
     dashboard.project.getUpdatedSourceAndHtml_(response => {
       this.setState({
         libraryName: libraryParser.sanitizeName(
-          dashboard.project.getCurrentName()
+          dashboard.project.getLevelName()
         ),
         librarySource: response.source,
         loadingFinished: true,
@@ -73,7 +73,8 @@ class LibraryCreationDialog extends React.Component {
     this.props.onClose();
   };
 
-  publish = () => {
+  publish = event => {
+    event.preventDefault();
     let formElements = this.formElements.elements;
     let selectedFunctionList = [];
     let libraryDescription = '';
@@ -105,6 +106,7 @@ class LibraryCreationDialog extends React.Component {
       }
     );
     dashboard.project.setLibraryName(this.state.libraryName);
+    dashboard.project.setLibraryDescription(libraryDescription);
   };
 
   validateInput = () => {
