@@ -333,6 +333,7 @@ bs:
   meta_tag_twitter_description: 'Sat Kodiranja je globalni pokret koji doseže desetine miliona učenika svih uzrasta u 180 i više zemalja svijeta, i preveden je na 45 i više jezika.'
   twitter_default_text: "Ja sudjelujem u ovogodišnjem #HourOfCode. Sudjeluješ li ti? @codeorg"
   twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
+  twitter_donor_text_2019: "This year's #HourOfCode is about #CSforGood. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'ČESTO POSTAVLJANA PITANJA'
   hoc_faq_what_is_hoc_q: 'Što je Sat kodiranja? '
   hoc_faq_what_is_hoc_a: "Sata Kodiranja je počeo kao jednosatni uvod u računarstvo, i dizajniran je da demistifikuje \"kodiranje\", i da demonstrira da svako može naučiti osnove i proširiti sudjelovanje u polju računarstva. Sat Kodiranja je od tada postao svjetski napor za promoviranje računarstva počevši sa jednim satom aktivnosti kodiranja, nakon čega je uslijedilo brzo proširenje. Pogledajte <a href='%{tutorials}'> tutorijale i aktivnosti</a>. Ova rasprostranjena kampanja je podržana sa preko <a href='%{partners}'> 400 partnera</a> i 200.000 edukatora diljem svijeta."
