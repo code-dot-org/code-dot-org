@@ -3,7 +3,12 @@ require 'test_helper'
 class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
   self.use_transactional_test_case = true
 
-  setup_all do
+  setup do
+    @plc_reviewer = create :plc_reviewer
+    sign_in(@plc_reviewer)
+  end
+
+  def common_scenario
     @course_unit = create :plc_course_unit
     @level_1, @level_2, @level_3 = create_list :free_response, 3, peer_reviewable: true
 
@@ -17,7 +22,6 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
     create :plc_user_course_enrollment, user: @submitter, plc_course: @course_unit.plc_course
     @teacher_reviewer = create :teacher
     create :plc_user_course_enrollment, user: @teacher_reviewer, plc_course: @course_unit.plc_course
-    @plc_reviewer = create :plc_reviewer
 
     levels.each do |level|
       create_peer_reviews_for_user_and_level(@submitter, level)
@@ -39,11 +43,9 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
     assert_equal 6, PeerReview.count
   end
 
-  setup do
-    sign_in(@plc_reviewer)
-  end
-
   test 'Peer reviews with email filter only gets those peer reviews' do
+    common_scenario
+
     # Create some for another submitter
     other_submitter = create :teacher
     create_peer_reviews_for_user_and_level(other_submitter, @level_3)
@@ -74,9 +76,9 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
     danielle = create :teacher, name: 'Danielle B'
     gerbil = create :teacher, name: 'Toothy the Gerbil'
 
-    create_peer_reviews_for_user_and_level daneel, @level_3
-    create_peer_reviews_for_user_and_level danielle, @level_3
-    create_peer_reviews_for_user_and_level gerbil, @level_3
+    create_peer_reviews_for_user daneel
+    create_peer_reviews_for_user danielle
+    create_peer_reviews_for_user gerbil
 
     # Try to find "Daneel" and "Danielle" but not "Toothy"
     get :index, params: {user_q: 'Dan'}
@@ -99,23 +101,61 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
     end
   end
 
+  test 'Peer reviews are sorted by most recent submission, descending' do
+    teacher1 = create :teacher
+    teacher2 = create :teacher
+    teacher3 = create :teacher
+    instructor = create :plc_reviewer
+
+    Timecop.freeze(7.days.ago) do
+      # Make three peer review submissions at different times.
+      create_peer_reviews_for_user teacher1
+      Timecop.travel 1.day
+      create_peer_reviews_for_user teacher2
+      Timecop.travel 1.day
+      create_peer_reviews_for_user teacher3
+
+      # Simulate an instructor review of the oldest submission, to show that
+      # it doesn't affect the sort order.
+      Timecop.travel 1.day
+      PeerReview.where(submitter: teacher1, status: :escalated).update(
+        reviewer: instructor,
+        from_instructor: true,
+        data: 'Great work!',
+        status: :accepted
+      )
+    end
+
+    # Get all submissions
+    get :index
+    assert_response :success
+    submissions = JSON.parse(@response.body)['submissions']
+
+    # Expect to see most recent submission first
+    assert_equal(
+      [teacher3.name, teacher2.name, teacher1.name],
+      submissions.map {|s| s['submitter']}
+    )
+  end
+
   test 'All peer reviews gets the first page of peer reviews submissions' do
+    common_scenario
     get :index
     assert_response :success
     response = JSON.parse(@response.body)
     assert_equal [
       [
-        [@level_1_reviews.first.id, nil, @level_1_reviews.first.updated_at],
-        [@level_1_reviews.second.id, 'escalated', @level_1_reviews.second.updated_at]
+        [@level_3_reviews.first.id, nil, @level_3_reviews.first.updated_at],
+        [@level_3_reviews.second.id, 'escalated', @level_3_reviews.second.updated_at]
       ],
       [
         [@level_2_reviews.first.id, nil, @level_2_reviews.first.updated_at],
         [@level_2_reviews.second.id, 'accepted', @level_2_reviews.second.updated_at]
       ],
       [
-        [@level_3_reviews.first.id, nil, @level_3_reviews.first.updated_at],
-        [@level_3_reviews.second.id, 'escalated', @level_3_reviews.second.updated_at]
-      ],
+        [@level_1_reviews.first.id, nil, @level_1_reviews.first.updated_at],
+        [@level_1_reviews.second.id, 'escalated', @level_1_reviews.second.updated_at]
+      ]
     ], response['submissions'].map {|submission| submission['review_ids']}
 
     # Verify expected pagination metadata
@@ -132,7 +172,9 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
     test_page_size = 5
 
     # Create many peer reviews to test pagination
-    create_list :peer_review, 20, reviewer: @submitter, script: @course_unit.script
+    30.times do
+      create_peer_reviews_for_user create :teacher
+    end
 
     get :index, params: {page: 3, per: test_page_size}
     assert_response :success
@@ -282,6 +324,7 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
   end
 
   test 'Peer Review report returns expected columns' do
+    common_scenario
     create :peer_review, reviewer: @submitter, script: @course_unit.script
     create :peer_review, reviewer: @submitter
 
@@ -347,10 +390,22 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
 
   private
 
-  def create_peer_reviews_for_user_and_level(user, level)
+  def create_peer_reviews_for_user_and_level(user, level, course_unit = @course_unit)
     level_source = create :level_source, level: level
-    user_level = create :user_level, user: user, level: level, level_source: level_source, script: @course_unit.script, best_result: ActivityConstants::UNREVIEWED_SUBMISSION_RESULT
+    user_level = create :user_level,
+      user: user,
+      level: level,
+      level_source: level_source,
+      script: course_unit.script,
+      best_result: ActivityConstants::UNREVIEWED_SUBMISSION_RESULT
 
     PeerReview.create_for_submission(user_level, level_source.id)
+  end
+
+  def create_peer_reviews_for_user(user)
+    course_unit = create :plc_course_unit
+    level = create :free_response, peer_reviewable: true
+    create :script_level, script: course_unit.script, levels: [level]
+    create_peer_reviews_for_user_and_level(user, level, course_unit)
   end
 end
