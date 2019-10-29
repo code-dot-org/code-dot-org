@@ -4,7 +4,10 @@
   "description": "",
   "main": "dist/main.js",
   "jest": {
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "moduleNameMapper": {
+      ".+\\.(jpg|jpeg|png)$": "identity-obj-proxy"
+    }
   },
   "scripts": {
     "build": "webpack -p",
@@ -46,6 +49,7 @@
     "eslint": ">=4.18.2",
     "eslint-plugin-react": "^7.11.0",
     "idempotent-babel-polyfill": "6.26.0-1",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^15.0.0",
     "jquery": "1.12.1",
     "jquery-ui": "^1.12.1",
