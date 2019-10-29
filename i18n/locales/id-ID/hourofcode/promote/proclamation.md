@@ -1,7 +1,5 @@
 ---
 title: Sampel Resolusi Dukungan Minggu Edukasi Ilmu Komputer dan Hour of Code
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}
