@@ -1,3 +1,4 @@
+import queryString from 'query-string';
 import {Modes} from './constants';
 import {FishBodyPart} from '../utils/fishData';
 
@@ -65,4 +66,9 @@ export const randomInt = (min, max) => {
 
 export const clamp = (value, min, max) => {
   return Math.min(Math.max(value, min), max);
+};
+
+// Given a key, returns the value from the browser's current query params.
+export const queryStrFor = key => {
+  return queryString.parse(location.search)[key];
 };

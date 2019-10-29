@@ -24,8 +24,7 @@ export const ClassType = Object.freeze({
 
 // Describes the current data set and whether it is restricted
 // (e.g., if DataSet.Small === true, we may restrict which words
-// or fish the student sees)
+// or fish the student sees).
 export const DataSet = Object.freeze({
-  None: 0,
-  Small: 1
+  Small: 'small'
 });

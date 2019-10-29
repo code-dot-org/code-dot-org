@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 import {getState, setState} from './state';
-import {Modes} from './constants';
+import {Modes, DataSet} from './constants';
 import {toMode} from './toMode';
 import {init as initModel} from './models';
 import {onClassifyFish} from './models/train';
@@ -266,7 +266,7 @@ class Words extends React.Component {
 
   currentItems() {
     const state = getState();
-    const itemSet = state.smallWordSet ? 0 : 1;
+    const itemSet = state.dataSet === DataSet.Small ? 0 : 1;
 
     return this.state.choices[itemSet];
   }
@@ -282,9 +282,8 @@ class Words extends React.Component {
   render() {
     const state = getState();
     const currentItems = this.currentItems();
-    const buttonStyle = state.smallWordSet
-      ? styles.button1col
-      : styles.button3col;
+    const buttonStyle =
+      state.dataSet === DataSet.Small ? styles.button1col : styles.button3col;
 
     return (
       <Body>

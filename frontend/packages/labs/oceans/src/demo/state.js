@@ -2,6 +2,7 @@ let setStateCallback = null;
 
 const initialState = {
   currentMode: null,
+  dataSet: null,
   fishData: [],
   pondFish: [],
   backgroundCanvas: null,
