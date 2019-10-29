@@ -11,6 +11,8 @@ ru-RU:
       2-3 Artist 3.4:
         draw a circle: нарисовать круг
         draw a car: нарисовать машину
+      2-3 Artist 7:
+        draw_rect: draw_rect
       2-3 Artist Debugging 10:
         draw square: нарисовать квадрат
         jump to middle: перейти к центру

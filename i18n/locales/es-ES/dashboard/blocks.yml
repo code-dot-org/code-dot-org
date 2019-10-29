@@ -462,7 +462,7 @@ es:
             '"vintage"': Vintage
             '"warm"': Rojos
       Dancelab_setBackgroundEffectWithPalette:
-        text: stablecer efecto de fondo {EFFECT} {PALETTE}
+        text: stablecer efecto de fondo {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': Ninguno
@@ -1220,6 +1220,12 @@ es:
         text: color aleatorio
       Mikelab_removeBehaviorSimple:
         text: gráfico {SPRITE} detiene {BEHAVIOR}
+      Mikelab_repeatUntilComplete:
+        text: Repetir para siempre
+      Mikelab_sendBad:
+        text: mover hacia la izquierda
+      Mikelab_sendGood:
+        text: mover hacia la derecha
       Mikelab_setBG:
         options:
           BG:

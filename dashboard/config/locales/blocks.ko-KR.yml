@@ -426,7 +426,7 @@ ko:
             '"vintage"': 빈티지
             '"warm"': 빨간색
       Dancelab_setBackgroundEffectWithPalette:
-        text: 배경 효과 {EFFECT} {PALETTE} 설정
+        text: 배경 효과 {PALETTE} {EFFECT} 설정
         options:
           EFFECT:
             '"none"': 없음
@@ -960,6 +960,12 @@ ko:
             MOVES.Rest: 없음
       Mikelab_randomColor:
         text: 랜덤 색
+      Mikelab_repeatUntilComplete:
+        text: 무한반복
+      Mikelab_sendBad:
+        text: 왼쪽으로 이동하기
+      Mikelab_sendGood:
+        text: 오른쪽으로 이동하기
       Mikelab_setBG:
         options:
           BG:
