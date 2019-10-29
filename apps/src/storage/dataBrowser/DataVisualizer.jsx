@@ -2,6 +2,7 @@ import React from 'react';
 import Radium from 'radium';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
+import _ from 'lodash';
 import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
 import DropdownField from './DropdownField';
 import * as dataStyles from './dataStyles';
@@ -16,7 +17,8 @@ const INITIAL_STATE = {
   values: '',
   xValues: '',
   yValues: '',
-  parsedRecords: []
+  parsedRecords: [],
+  numericColumns: []
 };
 
 class DataVisualizer extends React.Component {
@@ -43,16 +45,9 @@ class DataVisualizer extends React.Component {
   };
 
   aggregateRecordsByColumn = (records, columnName) => {
-    let counts = {};
-    records.forEach(record => {
-      let value = record[columnName];
-      counts[value] = (counts[value] || 0) + 1;
-    });
-    let chartData = [];
-    Object.keys(counts).forEach(key => {
-      chartData.push({[columnName]: key, count: counts[key]});
-    });
-    return chartData;
+    const counts = _.countBy(records, r => r[columnName]);
+
+    return _.map(counts, (count, key) => ({[columnName]: key, count}));
   };
 
   updateChart = () => {
@@ -108,6 +103,17 @@ class DataVisualizer extends React.Component {
     }
   };
 
+  findNumericColumns = records => {
+    return this.props.tableColumns.filter(
+      column =>
+        records.filter(
+          record =>
+            typeof record[column] === 'undefined' ||
+            typeof record[column] === 'number'
+        ).length === records.length
+    );
+  };
+
   componentDidUpdate(previousProps, prevState) {
     const visualizerJustOpened =
       !prevState.isVisualizerOpen && this.state.isVisualizerOpen;
@@ -117,7 +123,12 @@ class DataVisualizer extends React.Component {
       this.state.isVisualizerOpen;
 
     if (visualizerJustOpened || recordsChangedWithVisualizerOpen) {
-      this.setState({parsedRecords: this.parseRecords()});
+      let parsedRecords = this.parseRecords();
+      let numericColumns = this.findNumericColumns(parsedRecords);
+      this.setState({
+        parsedRecords: parsedRecords,
+        numericColumns: numericColumns
+      });
     }
   }
 
@@ -128,6 +139,20 @@ class DataVisualizer extends React.Component {
       this.state.chartType
     ) {
       this.updateChart();
+    }
+
+    let options = this.props.tableColumns;
+    let disabledOptions = [];
+
+    const disableNonNumericColumns =
+      this.state.chartType === 'Scatter Plot' ||
+      this.state.chartType === 'Histogram';
+
+    if (disableNonNumericColumns) {
+      disabledOptions = _.difference(
+        this.props.tableColumns,
+        this.state.numericColumns
+      );
     }
 
     const modalBody = (
@@ -167,7 +192,8 @@ class DataVisualizer extends React.Component {
             this.state.chartType === 'Histogram') && (
             <DropdownField
               displayName="Values"
-              options={this.props.tableColumns}
+              options={options}
+              disabledOptions={disabledOptions}
               value={this.state.values}
               onChange={event => this.setState({values: event.target.value})}
             />
@@ -178,13 +204,15 @@ class DataVisualizer extends React.Component {
             <div>
               <DropdownField
                 displayName="X Values"
-                options={this.props.tableColumns}
+                options={options}
+                disabledOptions={disabledOptions}
                 value={this.state.xValues}
                 onChange={event => this.setState({xValues: event.target.value})}
               />
               <DropdownField
                 displayName="Y Values"
-                options={this.props.tableColumns}
+                options={options}
+                disabledOptions={disabledOptions}
                 value={this.state.yValues}
                 onChange={event => this.setState({yValues: event.target.value})}
               />
