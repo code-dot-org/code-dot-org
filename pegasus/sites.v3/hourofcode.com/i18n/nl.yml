@@ -333,6 +333,7 @@ nl:
   meta_tag_twitter_description: '''Hour of Code'' is een wereldwijde beweging die tientallen miljoenen leerlingen wil bereiken in 180+ landen en in meer dan 30 talen. Leeftijd: 4 t/m 104.'
   twitter_default_text: "Ik neem dit jaar deel aan het #HourOfCode, jij ook? @codeorg"
   twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
+  twitter_donor_text_2019: "This year's #HourOfCode is about #CSforGood. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'Veelgestelde vragen'
   hoc_faq_what_is_hoc_q: 'Wat is ''Hour of Code''?'
   hoc_faq_what_is_hoc_a: "'Hour of Code' is een één uur durende introductie in de wereld van informatica, ontworpen om coderen begrijpbaar te maken en aan te tonen dat iederen de basis kan leren. <a href='%{tutorials}'>Bekijk de handleidingen</a>. Deze vrijwilligerscampagne wordt ondersteund door meer dan <a href='%{partners}'>400 partners</a> en 200.000 leerkrachten van over de hele wereld."
