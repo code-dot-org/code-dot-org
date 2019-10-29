@@ -107,14 +107,14 @@ export default class GoogleChart {
    * @param {Object[]} data
    * @private
    */
-  verifyData_(data, columns, minColumns = 2) {
+  verifyData_(data, columns) {
     // Warn when no rows are present
     if (data.length === 0) {
       this.warn('No data.');
     }
 
     // Error when not enough columns are provided
-    if (columns.length < minColumns) {
+    if (columns.length < 2) {
       throw new Error('Not enough columns for chart; expected at least 2.');
     }
 
@@ -186,20 +186,6 @@ class PieChart extends GoogleChart {
   }
 }
 GoogleChart.PieChart = PieChart;
-
-class Histogram extends GoogleChart {
-  render_(dataTable, options) {
-    const apiChart = new GoogleChart.lib.visualization.Histogram(
-      this.targetDiv_
-    );
-    apiChart.draw(dataTable, options);
-  }
-
-  verifyData_(data, columns) {
-    super.verifyData_(data, columns, 1);
-  }
-}
-GoogleChart.Histogram = Histogram;
 
 /**
  * Google Charts API Bar Chart
