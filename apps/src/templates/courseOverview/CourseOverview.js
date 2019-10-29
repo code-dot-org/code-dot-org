@@ -253,7 +253,6 @@ class CourseOverview extends Component {
             id={script.id}
             description={script.description}
             assignedSectionId={script.assigned_section_id}
-            courseId={id}
           />
         ))}
       </div>

@@ -5,12 +5,6 @@ import Button from './Button';
 import i18n from '@cdo/locale';
 import {unassignSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
-const styles = {
-  buttonMargin: {
-    marginLeft: 10
-  }
-};
-
 class UnassignButton extends React.Component {
   static propTypes = {
     sectionId: PropTypes.number.isRequired,
@@ -39,11 +33,7 @@ class UnassignButton extends React.Component {
   render() {
     const {text, icon} = this.state;
     return (
-      <div
-        onMouseOver={this.onMouseOver}
-        onMouseLeave={this.onMouseOut}
-        style={styles.buttonMargin}
-      >
+      <div onMouseOver={this.onMouseOver} onMouseLeave={this.onMouseOut}>
         <Button
           color={Button.ButtonColor.green}
           text={text}

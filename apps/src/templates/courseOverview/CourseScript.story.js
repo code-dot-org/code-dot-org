@@ -30,14 +30,7 @@ const defaultProps = {
   selectedSectionId: 11,
   hiddenStageState: unhiddenState,
   hasNoSections: true,
-  toggleHiddenScript: () => {},
-  sectionsForDropdown: [
-    {
-      name: 'Section 11',
-      id: 11,
-      isAssigned: false
-    }
-  ]
+  toggleHiddenScript: () => {}
 };
 
 export default storybook => {
