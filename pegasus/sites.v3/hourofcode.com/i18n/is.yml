@@ -333,6 +333,7 @@ is:
   meta_tag_twitter_description: 'Klukkustund kóðunar er alþjóðleg hreyfing sem nær til tuga miljóna nemenda í yfir 180 löndum og meira en 30 tungumála. Fyrir 4 til 104 ára.'
   twitter_default_text: "Ég tek þátt í #HourOfCode þetta árið. Hvað með þig? @codeorg"
   twitter_donor_text: "#HourOfCode snýst um sköpunargleði. Ég er með! Hvað með þig? (Takk %{random_donor} fyrir að styðja @codeorg)"
+  twitter_donor_text_2019: "This year's #HourOfCode is about #CSforGood. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'Spurt & svarað'
   hoc_faq_what_is_hoc_q: 'Hvað er Klukkustund kóðunar?'
   hoc_faq_what_is_hoc_a: "Klukkustund kóðunar er einnar klukkustundar kynning á tölvunarfræði sem er ætlað að svipta hulunni af forritun og sýna að allir geti lært grunnatriðin. <a href='http://code.org/learn'>Skoða kennsluefnið</a>."
