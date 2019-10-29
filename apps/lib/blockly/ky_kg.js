@@ -40,6 +40,7 @@ Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST_TAIL = "";
 Blockly.Msg.CONTROLS_FOREACH_INPUT_ITEM = "ар бир элементке";
 Blockly.Msg.CONTROLS_FOREACH_TOOLTIP = "";
 Blockly.Msg.CONTROLS_FOR_HELPURL = "";
+Blockly.Msg.CONTROLS_FOR_INPUT_COUNTER = "for %1 from %2 to %3 count by %4";
 Blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY = "%1ден %2 чейин %3 кадамы менен сана";
 Blockly.Msg.CONTROLS_FOR_INPUT_WITH = "үчүн";
 Blockly.Msg.CONTROLS_FOR_TOOLTIP = "Өзгөрмөгө баштапкы номурдан тартып аягына чейин белгиленген кадамы %1 болгон маани берилсин жана көрсөтүлгөн блокторду аткарсын.";
