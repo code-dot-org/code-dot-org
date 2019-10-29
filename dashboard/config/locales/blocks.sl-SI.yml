@@ -375,10 +375,6 @@ sl:
         text: naključna barva
       Mikelab_repeatUntilComplete:
         text: ponavljaj kar naprej
-      Mikelab_sendBad:
-        text: premakni se levo
-      Mikelab_sendGood:
-        text: premakni se desno
       Mikelab_setBG:
         options:
           BG:
