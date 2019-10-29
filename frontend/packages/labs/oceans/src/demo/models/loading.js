@@ -2,12 +2,12 @@ import 'idempotent-babel-polyfill';
 import {initRenderer} from '../renderer';
 import {setState} from '../state';
 import {Modes} from '../constants';
-import {init as initScene} from '../init';
+import {init as initModel} from './index';
 import {initFishData} from '../../utils/fishData';
 
 export const init = async () => {
   initFishData();
   await initRenderer();
-  setState({currentMode: Modes.ActivityIntro});
-  initScene();
+  const state = setState({currentMode: Modes.ActivityIntro});
+  initModel(state);
 };

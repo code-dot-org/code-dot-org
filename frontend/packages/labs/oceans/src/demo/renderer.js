@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import 'idempotent-babel-polyfill';
 import _ from 'lodash';
 import {getState, setState} from './state';
@@ -46,24 +45,6 @@ export const initRenderer = () => {
 export const render = () => {
   const state = getState();
 
-  if (
-    state.headerContainer &&
-    prevState.headerElements !== state.headerElements
-  ) {
-    drawUiElements(state.headerContainer, state.headerElements);
-  }
-
-  if (state.uiContainer && prevState.uiElements !== state.uiElements) {
-    drawUiElements(state.uiContainer, state.uiElements);
-  }
-
-  if (
-    state.footerContainer &&
-    prevState.footerElements !== state.footerElements
-  ) {
-    drawUiElements(state.footerContainer, state.footerElements);
-  }
-
   if (state.currentMode !== prevState.currentMode) {
     drawBackground(state);
     currentModeStartTime = $time();
@@ -79,13 +60,15 @@ export const render = () => {
 
   clearCanvas(state.canvas);
 
+  const timeBeforeCanSkipPredict = 5000;
+
   switch (state.currentMode) {
     case Modes.Training:
-      updateTrainText(state);
       drawFrame(state);
       drawMovingFish(state);
       break;
     case Modes.Predicting:
+      setState({canSkipPredict: $time() >= currentModeStartTime + timeBeforeCanSkipPredict});
       drawMovingFish(state);
       break;
     case Modes.Pond:
@@ -97,15 +80,6 @@ export const render = () => {
 
   prevState = {...state};
   window.requestAnimFrame(render);
-};
-
-const updateTrainText = state => {
-  // No-op if animation is currently in progress.
-  if (state.isRunning) {
-    $('#train-text').hide();
-  } else {
-    $('#train-text').show();
-  }
 };
 
 // Load and display the background image onto the background canvas.
@@ -166,7 +140,7 @@ const getOffsetForTime = (t, totalFish) => {
   let amount = t / moveTime;
 
   // Apply an S-curve to that amount.
-  amount = amount - Math.sin(amount*2*Math.PI) / (2*Math.PI);
+  amount = amount - Math.sin(amount * 2 * Math.PI) / (2 * Math.PI);
 
   return (
     constants.fishCanvasWidth * totalFish -
@@ -195,7 +169,7 @@ const getYForFish = (numFish, fishIdx, state, offsetX, predictedClassId) => {
 
   // Move fish down a little on predict screen.
   if (state.currentMode === Modes.Predicting) {
-    y += 100;
+    y += 130;
 
     // And drop the fish down even more if they are not liked.
     const doesLike = predictedClassId === ClassType.Like;
@@ -207,6 +181,12 @@ const getYForFish = (numFish, fishIdx, state, offsetX, predictedClassId) => {
         y += screenX - midScreenX;
       }
     }
+
+    // And sway fish vertically on the predicting screen.
+    const swayValue =
+      (($time() * 360) / (20 * 1000) + (fishIdx + 1) * 10) % 360;
+    const swayOffsetY = Math.sin(((swayValue * Math.PI) / 180) * 6) * 8;
+    y += swayOffsetY;
   }
 
   return y;
@@ -248,7 +228,11 @@ const drawMovingFish = state => {
 
     if (state.currentMode === Modes.Predicting) {
       if (fish.result) {
-        drawPrediction(fish.result.predictedClassId, state.word, x, y, ctx);
+        const midScreenX =
+          constants.canvasWidth / 2 - constants.fishCanvasWidth / 2;
+        if (x > midScreenX) {
+          drawPrediction(fish.result.predictedClassId, state.word, x, y, ctx);
+        }
       } else {
         predictFish(state, i).then(prediction => {
           fish.result = prediction;
@@ -289,7 +273,7 @@ const drawFrame = state => {
     size,
     size,
     '#F0F0F0',
-    '#000000'
+    '#F0F0F0'
   );
 };
 
@@ -339,9 +323,10 @@ const drawPondFishImages = () => {
   const canvas = getState().canvas;
   const ctx = canvas.getContext('2d');
   getState().pondFish.forEach(fish => {
-    var swayValue = (($time() * 360) / (20 * 1000) + (fish.id + 1) * 10) % 360;
-    var swayOffsetX = Math.sin(((swayValue * Math.PI) / 180) * 2) * 120;
-    var swayOffsetY = Math.sin(((swayValue * Math.PI) / 180) * 6) * 8;
+    const swayValue =
+      (($time() * 360) / (20 * 1000) + (fish.id + 1) * 10) % 360;
+    const swayOffsetX = Math.sin(((swayValue * Math.PI) / 180) * 2) * 120;
+    const swayOffsetY = Math.sin(((swayValue * Math.PI) / 180) * 6) * 8;
 
     drawSingleFish(fish, fish.x + swayOffsetX, fish.y + swayOffsetY, ctx);
   });
@@ -445,8 +430,8 @@ export const clearCanvas = canvas => {
 
 // Draw an overlay over the whole scene.  Used for fades.
 function drawOverlays() {
-  var duration = $time() - currentModeStartTime;
-  var amount = 1 - duration / 800;
+  const duration = $time() - currentModeStartTime;
+  let amount = 1 - duration / 800;
   if (amount < 0) {
     amount = 0;
   }
@@ -513,12 +498,6 @@ function DrawFilledRect(x, y, w, h) {
   const canvasCtx = getState().canvas.getContext('2d');
   canvasCtx.fillRect(x, y, w, h);
 }
-
-// Attach HTML UI elements to the DOM.
-export const drawUiElements = (container, elements) => {
-  container.innerHTML = '';
-  elements.forEach(el => container.appendChild(el));
-};
 
 // A single frame of animation.
 window.requestAnimFrame = (() => {
