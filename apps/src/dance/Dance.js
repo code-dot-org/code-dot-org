@@ -21,7 +21,7 @@ import {
   setRunIsStarting
 } from './redux';
 import trackEvent from '../util/trackEvent';
-import {SignInState} from '../code-studio/progressRedux';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import logToCloud from '../logToCloud';
 import {saveReplayLog} from '../code-studio/components/shareDialogRedux';
 import {
@@ -664,7 +664,7 @@ Dance.prototype.onHandleEvents = function(currentFrameEvents) {
  */
 Dance.prototype.displayFeedback_ = function() {
   const isSignedIn =
-    getStore().getState().progress.signInState === SignInState.SignedIn;
+    getStore().getState().currentUser.signInState === SignInState.SignedIn;
 
   const artistTwitterHandle =
     SongTitlesToArtistTwitterHandle[this.level.selectedSong];

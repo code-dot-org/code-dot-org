@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import $ from 'jquery';
 import {OAuthSectionTypes} from './shapes';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 /**
  * @const {string[]} The only properties that can be updated by the user
@@ -137,6 +138,32 @@ export const toggleSectionHidden = sectionId => (dispatch, getState) => {
   const state = getState();
   const currentlyHidden = getRoot(state).sections[sectionId].hidden;
   dispatch(editSectionProperties({hidden: !currentlyHidden}));
+  return dispatch(finishEditingSection());
+};
+
+/**
+ * Assigns a course to a given section, persisting these changes to
+ * the server
+ * @param {number} sectionId
+ * @param {number} courseId
+ */
+export const assignCourseToSection = (sectionId, courseId) => (
+  dispatch,
+  getState
+) => {
+  dispatch(beginEditingSection(sectionId, true));
+  dispatch(editSectionProperties({courseId: courseId}));
+  return dispatch(finishEditingSection());
+};
+
+/**
+ * Removes assignments from the given section, persisting these changes to
+ * the server
+ * @param {number} sectionId
+ */
+export const unassignSection = sectionId => (dispatch, getState) => {
+  dispatch(beginEditingSection(sectionId, true));
+  dispatch(editSectionProperties({courseId: '', scriptId: ''}));
   return dispatch(finishEditingSection());
 };
 
@@ -648,6 +675,8 @@ export default function teacherSections(state = initialState, action) {
         );
     return {
       ...state,
+      initialCourseId: initialSectionData.courseId,
+      initialScriptId: initialSectionData.scriptId,
       sectionBeingEdited: initialSectionData,
       showSectionEditDialog: !action.silent
     };
@@ -715,6 +744,25 @@ export default function teacherSections(state = initialState, action) {
       } else {
         newSectionIds = [section.id, ...state.sectionIds];
       }
+    }
+
+    let assignmentData = {
+      section_id: section.id,
+      section_creation_timestamp: section.createdAt
+    };
+    if (section.scriptId !== state.initialScriptId) {
+      assignmentData.script_id = section.scriptId;
+    }
+    if (section.courseId !== state.initialCourseId) {
+      assignmentData.course_id = section.courseId;
+    }
+    if (assignmentData.script_id || assignmentData.course_id) {
+      firehoseClient.putRecord({
+        study: 'assignment',
+        study_group: 'v0',
+        event: newSection ? 'create_section' : 'edit_section_details',
+        data_json: JSON.stringify(assignmentData)
+      });
     }
 
     // When updating a persisted section, oldSectionId will be identical to
@@ -914,6 +962,7 @@ export function getSectionRows(state, sectionIds) {
 export const sectionFromServerSection = serverSection => ({
   id: serverSection.id,
   name: serverSection.name,
+  createdAt: serverSection.createdAt,
   loginType: serverSection.login_type,
   grade: serverSection.grade,
   providerManaged: serverSection.providerManaged || false, // TODO: (josh) make this required when /v2/sections API is deprecated
@@ -1036,6 +1085,16 @@ export function sectionsNameAndId(state) {
   return state.sectionIds.map(id => ({
     id: parseInt(id, 10),
     name: state.sections[id].name
+  }));
+}
+
+export function sectionsForDropdown(state, scriptId, courseId) {
+  return state.sectionIds.map(id => ({
+    id: parseInt(id, 10),
+    name: state.sections[id].name,
+    isAssigned:
+      (scriptId !== null && state.sections[id].scriptId === scriptId) ||
+      (courseId !== null && state.sections[id].courseId === courseId)
   }));
 }
 
