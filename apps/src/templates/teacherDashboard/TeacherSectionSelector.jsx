@@ -8,9 +8,6 @@ import {sectionForDropdownShape} from './shapes';
 import SmallChevronLink from '@cdo/apps/templates/SmallChevronLink';
 
 const styles = {
-  main: {
-    marginRight: 10
-  },
   select: {
     height: 34
   },
@@ -86,7 +83,7 @@ export default class TeacherSectionSelector extends Component {
     const value = selectedSection ? selectedSection.id : '';
 
     return (
-      <div style={styles.main}>
+      <div>
         <select
           value={value}
           onChange={this.props.onChangeSection}
