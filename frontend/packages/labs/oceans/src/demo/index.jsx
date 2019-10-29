@@ -1,8 +1,8 @@
 import $ from 'jquery';
 import constants, {Modes} from './constants';
 import {setState, setSetStateCallback} from './state';
-import {init as initScene} from './init';
-import {render} from './renderer';
+import {init as initModel} from './models';
+import {render as renderCanvas} from './renderer';
 
 import 'babel-polyfill';
 import ReactDOM from 'react-dom';
@@ -17,25 +17,25 @@ $(document).ready(() => {
   canvas.height = backgroundCanvas.height = constants.canvasHeight;
 
   // Temporarily use URL parameter to set some state.
-  const smallWordSet = window.location.href.indexOf("words=small") !== -1;
+  const smallWordSet = window.location.href.indexOf('words=small') !== -1;
 
   // Set initial state for UI elements.
-  setState({
+  const state = setState({
     currentMode: Modes.Loading,
     canvas,
     backgroundCanvas,
     uiContainer: document.getElementById('ui-container'),
     headerContainer: document.getElementById('header-container'),
     footerContainer: document.getElementById('footer-container'),
-    smallWordSet: smallWordSet
+    smallWordSet
   });
 
   // Initialize our first model.
-  initScene();
+  initModel(state);
 
   // Start the canvas renderer.  It will self-perpetute by calling
   // requestAnimationFrame on itself.
-  render();
+  renderCanvas();
 
   // Render the UI.
   renderUI();

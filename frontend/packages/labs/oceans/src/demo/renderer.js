@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import 'babel-polyfill';
 import {getState, setState} from './state';
 import constants, {Modes, ClassType} from './constants';
@@ -33,24 +32,6 @@ export const initRenderer = () => {
 export const render = () => {
   const state = getState();
 
-  if (
-    state.headerContainer &&
-    prevState.headerElements !== state.headerElements
-  ) {
-    drawUiElements(state.headerContainer, state.headerElements);
-  }
-
-  if (state.uiContainer && prevState.uiElements !== state.uiElements) {
-    drawUiElements(state.uiContainer, state.uiElements);
-  }
-
-  if (
-    state.footerContainer &&
-    prevState.footerElements !== state.footerElements
-  ) {
-    drawUiElements(state.footerContainer, state.footerElements);
-  }
-
   if (state.currentMode !== prevState.currentMode) {
     drawBackground(state);
     currentModeStartTime = $time();
@@ -70,7 +51,6 @@ export const render = () => {
 
   switch (state.currentMode) {
     case Modes.Training:
-      updateTrainText(state);
       drawFrame(state);
       drawMovingFish(state);
       break;
@@ -87,15 +67,6 @@ export const render = () => {
 
   prevState = {...state};
   window.requestAnimFrame(render);
-};
-
-const updateTrainText = state => {
-  // No-op if animation is currently in progress.
-  if (state.isRunning) {
-    $('#train-text').hide();
-  } else {
-    $('#train-text').show();
-  }
 };
 
 // Load and display the background image onto the background canvas.
@@ -404,12 +375,6 @@ function DrawFilledRect(x, y, w, h) {
   const canvasCtx = getState().canvas.getContext('2d');
   canvasCtx.fillRect(x, y, w, h);
 }
-
-// Attach HTML UI elements to the DOM.
-export const drawUiElements = (container, elements) => {
-  container.innerHTML = '';
-  elements.forEach(el => container.appendChild(el));
-};
 
 // A single frame of animation.
 window.requestAnimFrame = (() => {
