@@ -1,7 +1,6 @@
 const {initFishData} = require('../../src/utils/fishData');
 const {generateOcean, filterOcean} = require('../../src/utils/generateOcean');
 const SimpleTrainer = require('../../src/utils/SimpleTrainer');
-const trainingFishJson = require('./data/trainingFish.json');
 
 describe('Generate ocean test', () => {
   beforeAll(() => {
@@ -42,7 +41,7 @@ describe('Generate ocean test', () => {
 
   test('Can predict red fish when only picking red fish', async () => {
     const numPredictionFish = 2000;
-    const trainingOcean = trainingFishJson;
+    const trainingOcean = generateOcean(50);
     const trainer = new SimpleTrainer();
     await trainer.initializeClassifiersWithoutMobilenet();
     trainingOcean.forEach(fish => {
@@ -70,7 +69,7 @@ describe('Generate ocean test', () => {
 
   test('Can predict round fish when only picking round fish', async () => {
     const numPredictionFish = 2000;
-    const trainingOcean = trainingFishJson;
+    const trainingOcean = generateOcean(50);
     const trainer = new SimpleTrainer();
     trainer.setTopK(5);
     await trainer.initializeClassifiersWithoutMobilenet();
