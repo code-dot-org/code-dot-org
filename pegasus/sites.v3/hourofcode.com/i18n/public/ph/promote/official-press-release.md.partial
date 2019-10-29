@@ -1,9 +1,10 @@
 ---
-title: <%= hoc_s(:title_press_release).inspect %>
+title: Hour of Code na Press Release para sa mga Napiling mga Opisyal
 layout: wide
 nav: promote_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # Halimbawa ng pahayag para sa nahalal na mga opisyal
 
@@ -44,4 +45,4 @@ Over 100 million students worldwide have already tried an Hour of Code. Thanks t
 
 For more information about [**EVENT/PROGRAM/ETC**], visit [**INSERT WEBSITE**] or contact [**INSERT CONTACT INFORMATION**]
 
-<%= view :signup_button %>
+{{ signup_button }}

@@ -16,7 +16,6 @@
  * @property {string} baseUrl
  * @property {string} app
  * @property {boolean} droplet
- * @property {'.min'|''} pretty - todo: no longer used?
  * @property {Level|Artist|Blockly} level
  * @property {boolean} showUnusedBlocks
  * @property {boolean} fullWidth

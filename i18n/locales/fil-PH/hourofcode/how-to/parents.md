@@ -1,9 +1,10 @@
 ---
-title: <%= hoc_s(:title_how_to_parents).inspect %>
+title: Paano-gawin na gabay para sa mga magulang
 layout: wide
 nav: how_to_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # How to do an Hour of Code with your child
 
@@ -15,11 +16,11 @@ nav: how_to_nav
 
 ## 2) Choose a tutorial
 
-We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
+We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
 
 **All Hour of Code tutorials are self-guided - allowing your child to work at their own pace and skill level**
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
+[![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
 ## 3) Planuhin ang pangangailangan ng iyong teknolohiya
 
@@ -36,13 +37,13 @@ I-kick off ang iyong Hour of Code sa pamamagitan ng pagpukaw sa iyong anak at pi
 - Ang orihinal na Code.org na inilunsad na video, kasama sina Bilk Gates, Mark Zuckerberg, at NBA star na si Chris Bosh (mayroong [1 minuto](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minuto](https://www.youtube.com/watch?v=nKIu9yen5nc), at [9 minuto](https://www.youtube.com/watch?v=dU1xS07N-FA) na mga version).
 - The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A).
 - [Si Presidente Obama ay nananawagan sa lahat ng mga estudyante na pag aralan ang computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-- Find more inspirational [resources](%= codeorg_url('/inspire') %) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 Ayos lang kung ikaw at ang iyong anak ay baguhan sa computer science. Narito ang ilang mga ideya para ipakilala ang iyong Hour of Code na aktibidad:
 
 - Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
 - Ilista ang mga bagay na ginagamit ang code sa pang-araw-araw na buhay.
-- See tips for getting girls interested in computer science [here](%= codeorg_url('/girls') %).
+- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
 
 Gusto ng iba pang ideya? Tignan ang aming [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx) para sa mahusay na pagsusubok mula sa may karanasang mga tagapagturo.
 
@@ -62,7 +63,7 @@ Ayos lang na tumugon:
 
 ## 6) Magdiwang
 
-[Print certificates](%= codeorg_url('/certificates') %) for your child (and yourself!).
+[Print certificates]({{ urls/certificates }}) for your child (and yourself!).
 
 Ibahagi ang mga larawan at video sa mga nangyayari sa iyong Hour of Code sa social media. Gamitin ang #HourOfCode at @codeorg para maaari rin naming i-highlight ang iyong pinagtatagumpayan!
 
@@ -72,7 +73,7 @@ Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/20014
 
 The Hour of Code is just the first step in a journey to learn more about how technology works and how to create software applications. To continue this journey:
 
-- Encourage your child to continue [to learn online](%= codeorg_url('/learn/beyond') %).
-- Help [promote](%= resolve_url('/promote') %) computer science education in your child’s school district.
+- Encourage your child to continue [to learn online]({{ urls/learn_beyond }}).
+- Help [promote]({{ urls/promote }}) computer science education in your child’s school district.
 
-<%= view :signup_button %>
+{{ signup_button }}

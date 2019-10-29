@@ -2810,9 +2810,14 @@ pt-BR:
           Tente editar os comportamentos!
           \*Qual valor controla a velocidade de cada sprite?
       behaviors 7:
-        behavior hint: |-
-          Tente editar os comportamentos!
-          \*Qual valor controla a velocidade de cada sprite?
+        behaviors_hint1: Voce pode criar um novo comportamento que usa duas ações
+          diferentes ou juntar dois comportamentos existentes.
+        sprites_idea1: |-
+          Por diversão, você usar um comportamento semelhante para fazer uma nave escapar para o espaço ou um personagem correr para o plano de frente. Experimente alterar o plano de fundo e as vestimentas das figuras na sua cena!
+
+          ![](<https://images.code.org/7070e44239b53f4b33a5b4fe054bb61c-image-1567714335486.2019-09-05 16_05_19.gif>)
+
+          ![](<https://images.code.org/278494432d56f1f5d41e345a51223695-image-1567714335485.2019-09-05 16_11_12.gif>)
       comment_intro_maze_2018:
         courseC_maze_programming4_a: Comentários também são úteis quando outras pessoas
           tentam ler seu código.
@@ -3354,6 +3359,14 @@ pt-BR:
           </block>
           </xml>
       course3_collector_debugging_challenge2:
+        courseD_collector_debugging_challenge2_a: "Inicie focando-se em coletar DUAS
+          pedras preciosas de cada uma das duas primeiras pilhas.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04
+          AM copy.png>)\nUse estes blocos.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block
+          type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n
+          \ </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title
+          name=\"DIR\">moveForward</title>\n                  </block>\n                  \n
+          \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n
+          \   <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>"
         courseD_collector_debugging_challenge2_b: |-
           Em seguida, colete as gemas restantes nessa linha.
 
@@ -4481,6 +4494,11 @@ pt-BR:
         courseA_collector_loops_challenge1_d: |-
           O programa inicial não coleta as ultimas 2 gemas. Tente adicionar esse code ao final:
           <xml><block type="maze_moveEast"> <next> <block type="collector_collect_simplified"> <next> <block type="maze_moveSouth"> <next> <block type="collector_collect"/> </next> </block> </next> </block> </next> </block></xml>
+      courseA_collector_loops_challenge2:
+        courseA_collector_loops_challenge2_b: Você precisa usar apenas 1 bloco para
+          resolver isso.
+        courseA_collector_loops_challenge2_a: Você pode se mover para trás sobre o
+          caminho uma segunda vez antes de se mover para o sul.
       courseA_collector_loops_challenge2kp:
         courseA_collector_loops_challenge2kp_b: Tente esse caminho para chegar a solução.
         courseA_collector_loops_challenge2kp_a: Você consegue usar laços para resolver
@@ -4493,6 +4511,16 @@ pt-BR:
         courseA_collector_loops_challenge2kp_b: Tente esse caminho para chegar a solução.
         courseA_collector_loops_challenge2kp_a: Você consegue usar laços para resolver
           esse problema?
+      courseA_collector_preLoops4:
+        courseA_collector_preLoops4_a: Para pegar o tesouro, encaixe dois blocos ![](https://images.code.org/2df8a25d7e96207f57d1a6b504950b70-image-1508906116743.34.37.png)
+          e um bloco ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)
+          na parte inferior do programa e clique em "Executar"!
+      courseA_collector_preLoops5:
+        courseA_collector_preLoops5_a: Você vai precisar ir em duas direções diferentes
+          até para pegar uma gema!
+      courseA_collector_preLoops6:
+        courseA_collector_preLoops6_a: Vai vai precisar usar dois blocos ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)
+          para resolver este quebra-cabeças.
       courseA_collector_preLoops7:
         courseA_collector_loops2_b: |-
           Após você ter se movido para um quadrado com tesouro, use esse bloco para pegá-lo.
@@ -8339,15 +8367,6 @@ pt-BR:
           para cada espaço.
         courseC_collector_prog_challenge1_b: Se perdeu? Tente este caminho para resolver
           o problema!
-      courseC_data wizard:
-        courseA_playLab_events7_a: |-
-          Use este bloco para controlar o que acontece quando os atores se chocam.
-
-          <xml><block type="studio_whenSpriteCollided">
-
-          <title name="SPRITE1">1</title>
-          <title name="SPRITE2">0</title>
-          </block></xml>
       courseC_flappy_events1:
         courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
       courseC_flappy_events1_2018:
@@ -8618,31 +8637,6 @@ pt-BR:
         courseC_harvester_loops_challenge1_a: Isto é muito difícil sem loops!
         courseC_harvester_loops_challenge1_b: Você pode repetir `avançar` e `pegar
           milho` quantas vezes precisar, depois `virar à direita` em cada esquina.
-        courseC_harvester_loops_challenge1_c: |-
-          O melhor jeito de coler o milho no meio é usar um bloco 'repetir' dentro de outro bloco 'repetir'.
-
-          <xml><block type="controls_repeat">
-
-          <title name="TIMES">2</title>
-          <statement name="DO">
-          <block type="controls_repeat">
-          <title name="TIMES">4</title>
-          <statement name="DO">
-          <block type="maze_move">
-          <title name="DIR">moveForward</title>
-          <next>
-          <block type="harvester_corn"/>
-          </next>
-          </block>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block></xml>
       courseC_harvester_loops_challenge1a_2019:
         courseC_harvester_loops_challenge1_a: Isto é muito difícil sem loops!
         courseC_harvester_loops_challenge1_b: Você pode repetir `avançar` e `pegar
@@ -9163,16 +9157,6 @@ pt-BR:
         courseC_starWars_loops4_b: 'Cada laço ''repetir'' terá apenas um comando dentro
           dele: ''mover à frente''.'
       courseC_starWars_loops5:
-        courseC_starWars_loops5_b: Para mover para baixo você deve virar e então mover
-          adiante.
-        courseC_starWars_loops5_a: A melhor solução utiliza uma volta, então um único
-          'mover à frente', outra volta, e então um laço.
-      courseC_starWars_loops5_2018:
-        courseC_starWars_loops5_b: Para mover para baixo você deve virar e então mover
-          adiante.
-        courseC_starWars_loops5_a: A melhor solução utiliza uma volta, então um único
-          'mover à frente', outra volta, e então um laço.
-      courseC_starWars_loops5_2019:
         courseC_starWars_loops5_b: Para mover para baixo você deve virar e então mover
           adiante.
         courseC_starWars_loops5_a: A melhor solução utiliza uma volta, então um único
@@ -11154,8 +11138,6 @@ pt-BR:
           Observe que o caminho mais fácil para chegar a todas as culturas ainda é uma espiral.
 
           ![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)
-        courseD_farmer_condLoops7_b: Tente usar `quando caminho à frente` para manter
-          o harvester movendo o número correto de etapas.
       courseD_farmer_condLoops_challenge1:
         courseD_farmer_condLoops_challenge1_a: O botão "Passo" pode ser muito útil
           neste desafio.
@@ -12572,12 +12554,8 @@ pt-BR:
         courseE_bee_concept3a_c: Existem três grupos de flores, então o laço externo
           de `repetição` deve repetir três vezes.
       courseE_bee_concept3_2018:
-        courseE_bee_concept3a_a: Tente usar laços `repetir` aninhados para resolver
-          esse quebra-cabeça.
         courseE_bee_concept3a_b: Se você não consegue descobrir onde colocar os laços
           de repetições, tente escrever seu código passo a passo e procurar por padrões.
-        courseE_bee_concept3a_c: Existem três grupos de flores, então o laço externo
-          de `repetição` deve repetir três vezes.
       courseE_bee_concept4:
         courseE_bee_concept4_a: Uma declaração `se/senão` poderia ajudá-lo aqui.
         courseE_bee_concept4_b: O padrão de degrau da escada pode ajudá-lo a passar
@@ -14164,6 +14142,10 @@ pt-BR:
           de cada iteração. '
         courseF_artist_fwp_challenge1_e: Tanto a cor de cada octógono como a largura
           da caneta são controladas pela variável 'contador'.
+        courseF_artist_fwp_challenge1_f: |-
+          **Solução:**
+
+          ![Bloco de Soluções](https://images.code.org/a82cfea836b95ce6625b08afcc3b7b37-image-1469727289590.png)
       courseF_artist_variables10:
         courseF_artist_variables10_a: Divirta-se com este nível! Veja o que as pequenas
           alterações podem fazer no seu código.
@@ -14229,7 +14211,6 @@ pt-BR:
           Este é o padrão que seu(sua) artista irá seguir:
 
           ![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)
-        courseF_artist_variables4_b: "![](https://images.code.org/fc31a4b60dc86d7b820c2d242f83e6ed-image-1477533361197.gif)"
       courseF_artist_variables4_2019:
         courseF_artist_variables4_a: Seu código não será muito diferente do que foi
           no último desafio, exceto que você vai precisar virar o artista para que
@@ -14239,7 +14220,6 @@ pt-BR:
           Este é o padrão que seu(sua) artista irá seguir:
 
           ![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)
-        courseF_artist_variables4_b: "![](https://images.code.org/fc31a4b60dc86d7b820c2d242f83e6ed-image-1477533361197.gif)"
       courseF_artist_variables5:
         courseF_artist_variables5_a: A segunda metade do seu código deve parecer quase
           o mesmo que a primeira metade, exceto você estará virando para _esquerda_,

@@ -8,7 +8,7 @@ nav: how_to_nav
 
 # كيف تدرس " ساعة من البرمجة" لفصول وأندية "ما بعد المدرسة"
 
-### انضم للحراك وقدم لمجموعة من طلابك ساعتهم الأولى من علوم الحاسب بهذه الخطوات. "ساعة من البرمجة" سهلة العمل - حتى للمبتدئين! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+### انضم للحراك وقدم لمجموعة من طلابك ساعتهم الأولى من علوم الحاسب بهذه الخطوات. "ساعة من البرمجة" سهلة العمل - حتى للمبتدئين! اذا اردت مساعدة إضافية، يمكنك ان تجد [متطوعا محليا](%= codeorg_url('/volunteer/local') %) ليساعدك في القيام بساعة برمجة بعد المدرسة أو في لنادي.
 
 * * *
 
@@ -16,7 +16,7 @@ nav: how_to_nav
 
 ## 2. اختر برنامجاً تعليمياً
 
-We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for participants all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
+نوفر متعة متنوعة، [دورات طويلة]({{ urls/learn }}) للمشاركين من كل الأعمار، مصممة من طرف شركاء مختلفين. [جربها]({{ urls/learn }})
 
 **كل دروس "ساعة من البرمجة"** تتطلب اقل وقت ممكن من الاعداد من المنظمين, وهي ذاتية الاسترشاد - بحيث تسمح للطلاب بالتعلم حسب مستوى مهارة كل فرد.
 
@@ -26,7 +26,7 @@ We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for partici
 
 ## ٣. عزّز ساعة البرمجة لديك
 
-Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage others to host their own events.
+روج لحدثك لساعة البرمجة [مع هذه الأدوات]({{ urls/promote }}) وشجع الآخرين على استضافتها.
 
 ## ٤. حدد احتياجاتك من التقنية - أجهزة الحاسب الآلي اختيارية
 
@@ -53,22 +53,22 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 - اشرح كيف أن التكنولوجيا تؤثر على حياتنا بطرق متعددة، مع أمثلة بحيث أن كلا من الأولاد والبنات يهتمون ب (النقاش حول كيف أن التطبيقات التكنولوجية تستخدم في إنقاذ الأرواح، ومساعدة الناس، وربط الناس ببعضهم البعض وإلى أخره).
 - بمشاركة الفصل، اسرد الاشياء التي نستخدم فيها البرمجة في حياتنا اليومية.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- هذه بعض التوجيهات لجعل الفتيات يهتمن بعلوم الكمبيوتر[هنا]({{ urls/girls }}).
 
 **بحاجة إلى المزيد من التوجيه؟** حمل هذا [ النموذج من الخطة الدراسية](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
 ## ٦- برمج!
 
-**توجيه المشاركين الى النشاط** -اكتب رابط الدرس في لوح المعلومات. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+**توجيه المشاركين الى النشاط** -اكتب رابط الدرس في لوح المعلومات. اعثر على الرابط المدرج في [معلومات حول دورتك المختارة]({{ urls/learn }}) تحت عدد المشاركين.
 
 **عندما يأتي شخص عبر الصعوبات لا بأس بأن يجاوب:** --"أنا لا أعرف. دعونا نتخيل هذا معا. " -"التكنولوجيا لا تعمل دائماً بالطريقة التي نريد". -"تعلم البرمجة مثل تعلم لغة جديدة; لا يمكن ان تجيدها على الفور. "
 
-**What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn]({{ urls/learn }}) - Or, ask those who finish early to help others who are having trouble.
+**ماذ تفعل إن أنهى أحد عمله باكرا؟** - شجع المشاركين لإجراء نشاط ساعة برمجة آ على [خر hourofcode.com/learn]({{ urls/learn }}) - أو اطلب ممن أنهوا باكرا ليساعدوا المتعثرين.
 
 ## ٧- احتفل
 
-- [Print certificates]({{ urls/certificates }}) for your students.
-- [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers for your students.
+- [اطبع الشهادات](%= codeorg_url('/certificates')%) لطلابك.
+- [اطبع "أجريت ساعة البرمجة"]({{ promote/resources_stickers }}) ملصقات لطلابك.
 - [اطلب قمصان خاصة](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) لمدرستك.
 - شارك صور وفيديوهات حدث ساعة برمجة الذي قمت به على وسائل التواصل الاجتماعي. استخدم #HourOfCode و @codeorg حتى نسلط الضوء على نجاحك ايضا!
 

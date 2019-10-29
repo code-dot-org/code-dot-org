@@ -7,7 +7,7 @@ class FirebaseHelper
   def initialize(channel_id)
     raise "channel_id must be non-empty" if channel_id.nil? || channel_id.empty?
     @firebase = FirebaseHelper.create_client
-    @channel_id = channel_id + CDO.firebase_channel_id_suffix
+    @channel_id = channel_id == 'shared' ? channel_id : channel_id + CDO.firebase_channel_id_suffix
   end
 
   # @param [String] table_name The name of the table to query.
@@ -24,6 +24,20 @@ class FirebaseHelper
 
     records.map! {|record| JSON.parse(record)}
     table_to_csv(records, column_order: ['id'])
+  end
+
+  def delete_shared_table(table_name)
+    @firebase.delete("/v3/channels/shared/counters/tables/#{table_name}")
+    @firebase.delete("/v3/channels/shared/storage/tables/#{table_name}/records")
+    @firebase.delete("/v3/channels/shared/metadata/tables/#{table_name}/columns")
+  end
+
+  def upload_shared_table(table_name, records, columns)
+    @firebase.set("/v3/channels/shared/counters/tables/#{table_name}", {"lastId": records.length, "rowCount": records.length})
+    @firebase.set("/v3/channels/shared/storage/tables/#{table_name}/records", records)
+    columns.each do |column|
+      @firebase.push("v3/channels/shared/metadata/tables/#{table_name}/columns", {columnName: column})
+    end
   end
 
   def self.delete_channel(encrypted_channel_id)

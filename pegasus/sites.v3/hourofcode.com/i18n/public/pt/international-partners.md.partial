@@ -13,15 +13,15 @@ layout: wide
 
 # Contact International Partners
 
-Code.org works with many organizations around the world to make the Hour of Code a truly international movement. Did you know that in 2017, 60% of all Hour of Code events occurred outside of the U.S.?
+Code.org trabalha com várias organizações mundiais para fazer da Hora do Código um verdadeiro movimento internacional. Você sabia que em 2017, 60% dos eventos Hora do Código ocorreram fora dos Estados Unidos?
 
-You, too, can play a leading role to get more people in your country involved! If you're in one of the countries below, reach out to the listed partner and get connected with your local Hour of Code.
+Você também pode desempenhar um papel importante para envolver mais pessoas de seu país! Se você está em um desses países, entre em contato com o parceiro listado abaixo e se conecte com a Hora de Código de sua região.
 
-*Don't see your country listed here?* [Apply to become an Hour of Code International Partner](https://goo.gl/forms/PZQEsqvet7yBE5ps2)! <br /> <br />
+*Seu país não está listado aqui?* [Se inscreva para se tornar um parceito internacional do evento A Hora do Código](https://goo.gl/forms/PZQEsqvet7yBE5ps2)! <br /> <br />
 
-| Country                               | Organization                                                      | Contact Name                       | Email or Website                                                                              |
+| País                                  | Organização                                                       | Nome para contato                  | Email ou Website                                                                              |
 | ------------------------------------- | ----------------------------------------------------------------- | ---------------------------------- | --------------------------------------------------------------------------------------------- |
-| Albania                               | ALMOOC                                                            | Ridvan Aliu   
+| Albânia                               | ALMOOC                                                            | Ridvan Aliu   
 Isak Bilalli        | ridvan@eduongo.com   
 isaactiral@gmail.com                                                    |
 | Antigua and Barbuda                   | iLabGlobal                                                        |                                    | http://ilabglobal.com                                                                         |
@@ -30,7 +30,7 @@ www.program.ar                                                 |
 | Argentina                             | Nuc Ba Academia                                                   |                                    | http://academia.nucba.com.ar                                                                  |
 | Australia                             | Google                                                            | Marie Efstathiou                   | https://www.google.com/edu/cs                                                                 |
 | Australia                             | Conhecendo o Grok                                                 | Jane Abrams                        | https://groklearning.com                                                                      |
-| Brazil                                | Programaê! - Fundaçao Lemann                                      |                                    | http://programae.org.br/horadocodigo                                                          |
+| Brazil                                | Programaê! - Fundação Telefônica Vivo                             |                                    | http://programae.org.br/horadocodigo                                                          |
 | Cameroon                              | Big IT Company Ltd                                                |                                    |                                                                                               |
 | Canada                                | Brilliant Labs Inc.                                               |                                    | https://www.brilliantlabs.ca                                                                  |
 | Canada                                | Hatch Canada                                                      |                                    | www.hatchcanada.com                                                                           |

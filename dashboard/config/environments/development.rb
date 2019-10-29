@@ -51,15 +51,10 @@ Dashboard::Application.configure do
   # number of complex assets.
   # config.assets.debug = true
 
-  config.assets.digest = false
-
   config.assets.quiet = true
 
   # skip precompiling of all assets on the first request for any asset.
   config.assets.check_precompiled_asset = false
-
-  # Whether or not to display pretty apps (formerly called blockly).
-  config.pretty_apps = true
 
   # Whether or not to skip script preloading. Setting this to true
   # significantly speeds up server startup time

@@ -683,8 +683,7 @@
     "short_instructions": "Get BB-8 to pick up all the scrap metal as quickly as possible!",
     "long_instructions": "[][0] _\"Go BB-8!\"_",
     "authored_hints": {
-      "courseC_starWars_loops5_b": "To move down, you have to turn and then move forward.",
-      "courseC_starWars_loops5_a": "The best solution uses a turn, then a single `move forward`, another turn, then a loop."
+      "courseC_starWars_loops5_a": "The best solution uses a single `move forward`, then a turn, then a loop."
     }
   },
   "https://studio.code.org/s/express-2019/stage/6/puzzle/8": {
@@ -1771,7 +1770,7 @@
     "long_instructions": "**Challenge:** Collect all of the corn and lettuce, then pick the pumpkin.",
     "authored_hints": {
       "courseD_farmer_condLoops7_a": "Notice that the easiest path to get to all of the crops is still a spiral.\n\n[][0]",
-      "courseD_farmer_condLoops7_b": "Try using `when path ahead` to keep the harvester moving the right number of steps."
+      "courseD_farmer_condLoops7_b": "Try using `while path ahead` to keep the harvester moving the right number of steps."
     }
   },
   "https://studio.code.org/s/express-2019/stage/15/puzzle/9": {
@@ -2488,7 +2487,7 @@
     "authored_hints": {
       "courseF_artist_variables4_a": "Your code won't be much different than it was in the last puzzle, except that you will need to turn the artist to jump down, then turn him back to get ready to draw the next triangle.",
       "courseF_artist_variables4_c": "This is the pattern your artist will be following:\n\n[][0]",
-      "courseF_artist_variables4_b": "[][0]"
+      "courseF_artist_variables4_b": "[blockly block][0]"
     }
   },
   "https://studio.code.org/s/express-2019/stage/19/puzzle/8": {
@@ -3131,7 +3130,7 @@
     "callouts": {
       "behavior_callout": "Why isn't this behavior working for the middle star?",
       "star2_callout": "Remove this costume block and use the \"this sprite\" block instead.",
-      "this_sprite_callout": "Testing"
+      "this_sprite_callout": "Replace the costume block below with this."
     }
   },
   "https://studio.code.org/s/express-2019/stage/26/puzzle/5": {
@@ -3194,16 +3193,17 @@
   },
   "https://studio.code.org/s/express-2019/stage/26/extras?level_name=behaviors+6": {
     "short_instructions": "Make the ball roll.",
-    "long_instructions": "Make the ball roll.\n\n-   Create a new behavior and use it to make the ball roll. Your behavior should combine two different actions.",
+    "long_instructions": "Make the ball roll.\n\n-   Create a new behavior and use it to make the ball roll. Your behavior should combine two different actions.\n\n[][0]",
     "authored_hints": {
       "behavior hint": "Try editing the behaviors! \n\n-   Which value is controlling the speed of each sprite?"
     }
   },
   "https://studio.code.org/s/express-2019/stage/26/extras?level_name=behaviors+7": {
     "short_instructions": "Drive off into the horizon!",
-    "long_instructions": "Drive off into the horizon!\n\n-   Create a new behavior and use it to make the car move up and shrink. If you do it right, it could look like it is driving off into the horizon.",
+    "long_instructions": "Drive off into the horizon!\n\n-   Create a new behavior and use it to make the car move up (north) and shrink. If you do it right, it could look like it is driving off into the horizon.\n\n[][0]",
     "authored_hints": {
-      "behavior hint": "Try editing the behaviors! \n\n-   Which value is controlling the speed of each sprite?"
+      "behaviors_hint1": "You can create a new behavior that uses two different actions or combine two existing behaviors.",
+      "sprites_idea1": "For fun, you can use a similar behavior to make a ship fly off into space or a character run to the foreground. Try changing the background and sprite costumes in your scene!\n\n[][0]\n\n[][1]"
     }
   },
   "https://studio.code.org/s/express-2019/stage/27/puzzle/1": {

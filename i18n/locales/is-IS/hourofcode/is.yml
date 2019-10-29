@@ -10,6 +10,15 @@ is:
   campaign_date_full: "5. - 11. desember"
   campaign_date_year: "2016"
   campaign_date_full_year: "5.-11. desember 2016"
+  hoc2019_header: 'Learn computer science. Change the world.'
+  hoc2019_header_line1_mobile: 'Learn computer science.'
+  hoc2019_header_line2_mobile: 'Change the world.'
+  social_hoc2019_every_sudent: 'Every student has the potential to change the world. Help them get started. #CSforGood'
+  social_hoc2019_learn_computer_science: 'Learn computer science. Change the world. #CSforGood #HourOfCode'
+  social_hoc_is_coming: 'The Hour of Code is coming!'
+  social_hoc2019_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn computer science. Change the world.'
+  social_hoc2019_coming_dates: 'The Hour of Code is coming December 9-15, 2019. Computer science is foundational for every student to learn.'
+  social_hoc2019_dance: 'Featuring Katy Perry, Jonas Brothers, Lil Nas X, Panic at the Disco, and many more!'
   codeorg_homepage_hoc2018_curriculum: 'Náðu lengra með <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org námskeiðum</a>'
   codeorg_homepage_hoc2018_dance_heading: 'Búðu til þitt eigið <span class="highlight-word">Danspartý</span>'
   codeorg_homepage_hoc2018_header_line1: 'Klukkustund kóðunar er á næsta leiti...'
@@ -473,7 +482,7 @@ is:
   highlights_constant_ny_heading: After an epic battle, 80% of Brooklyn schools did the Hour of Code vs. 60% in Chicago. Not bad!
   highlights_constant_ny_short_heading: Brooklyn beats Chicago
   highlights_constant_athletes_heading: Champions and gold medalists Serena Williams, Neymar Jr, Carmelo Anthony and more inspire students to push themselves.
-  highlights_constant_athletes_short_heading: Push yourself
+  highlights_constant_athletes_short_heading: Ögraðu þér
   footer_copyright_message: 'Höfundarréttur 2015 Code.org. Öll réttindi áskilin.'
   footer_trademark_message: 'Hour of Code™ er vörumerki Code.org.'
   footer_menu_partners: 'Samstarfsaðilar'
@@ -488,7 +497,7 @@ is:
   learn_robotics_banner_heading: 'Þjarkar og rafrásir'
   learn_robotics_banner_blurb: 'Eru til vélmenni eða sett fyrir forritun vélbúnaðar? Notaðu þennan búnað með verkefnunum hér fyrir neðan og búðu til áþreifanlega Klukkustund kóðunar fyrir nemendur á öllum aldri! Sum verkefnin eru meira að segja með herma svo það er hægt að byrja án nokkurs vélbúnaðar.'
   tutorial_danceparty_name: "Danspartý"
-  tutorial_chibitronics_name: "Chibitronics: Illuminated Story"
+  tutorial_chibitronics_name: "Chibitronics: Ljómandi saga"
   tutorial_athlete_name: "Code your own sports game"
   tutorial_moana_name: "Moana: Wayfinding with Code"
   tutorial_star-wars_name: "Star Wars: Building a Galaxy with Code"
@@ -498,12 +507,12 @@ is:
   tutorial_kodable-pre_name: "Kodable (pre-readers welcome)"
   tutorial_highseas_name: "Adventure on the High Seas"
   tutorial_capython_name: "Python Turtle Graphics"
-  tutorial_frzn_name: "Code with Anna and Elsa"
-  tutorial_cocom_name: "CodeCombat: Escape the Dungeon!"
-  tutorial_play-lab_name: "Play Lab"
+  tutorial_frzn_name: "Kóðað með Önnu og Elsu"
+  tutorial_cocom_name: "CodeCombat: Flýðu úr dýflissunni!"
+  tutorial_play-lab_name: "Leikjasmiðjan"
   tutorial_boxisland_name: "Box Island"
-  tutorial_textcomp_name: "Text Compression"
-  tutorial_encryption_name: "Simple Encryption"
+  tutorial_textcomp_name: "Þjöppun texta"
+  tutorial_encryption_name: "Einföld dulkóðun"
   tutorial_kanopixel_name: "Kano Pixel Hack"
   tutorial_foos_name: "codeSpark Academy with The Foos"
   tutorial_tynkerdd_name: "Dragon Dash"
@@ -517,10 +526,10 @@ is:
   tutorial_tinspire_name: "10 Minutes of Code for the TI-Nspire CX"
   tutorial_itchbounceball_name: "ITCH Bouncing Ball (in Scratch)"
   tutorial_vidclim_name: "Vidcode: Climate Science & Code"
-  tutorial_matlab_name: "Learn to Code with MATLAB"
-  tutorial_flap_name: "Make a Flappy game"
+  tutorial_matlab_name: "Lærðu að kóða með MATLAB"
+  tutorial_flap_name: "Búðu til Flappy leik"
   tutorial_galaxy_name: "Galaxy Game Jam"
-  tutorial_inf_name: "Infinity Play Lab"
+  tutorial_inf_name: "Infinity Leikjasmiðja"
   tutorial_tynkersol_name: "Solar System STEM Kit"
   tutorial_itchg_name: "ITCH Name IT - Geography"
   tutorial_como_name: "Coding Adventure"
@@ -566,7 +575,7 @@ is:
   tutorial_buildpong_name: "Build Pong with AI"
   tutorial_tynkerdrones_name: "Program Drones and Robots"
   tutorial_carla_name: "Programming with Carla"
-  tutorial_globaloria_name: "Globaloria MakeQuest"
+  tutorial_zulama_name: "Zulama MakeQuest Video Game Activity"
   tutorial_capost_name: "Build a Digital Postcard with HTML and CSS"
   tutorial_marco_name: "Run Marco!"
   tutorial_codestersflappybike_name: "Flappy Bike"
@@ -722,7 +731,7 @@ is:
   tutorial_minecraft-2016_name: "Minecraft Hour of Code"
   tutorial_thinkersmith-es_name: "Mis Amigos Roboticos"
   tutorial_pixie_name: "PIXIE Challenges"
-  tutorial_play_name: "Play Lab"
+  tutorial_play_name: "Leikjasmiðjan"
   tutorial_robomind-nl_name: "Program a virtual robot"
   tutorial_spheroi_name: "Blocks 1: Intro"
   tutorial_spherol_name: "Blocks 3: Lights"
@@ -1144,7 +1153,7 @@ is:
   tutorial_buildpong_shortdescription: "Build the arcade classic and give the computer artificial intelligence to play against you."
   tutorial_tynkerdrones_shortdescription: "Program a controller for your robot or drone."
   tutorial_carla_shortdescription: "Learn to code by programming a talking virtual robot named Carla!"
-  tutorial_globaloria_shortdescription: "Go on a MakeQuest! Modify code to beat our game, then build your own!"
+  tutorial_zulama_shortdescription: "Go on a MakeQuest! Modify code to beat our game, then build your own!"
   tutorial_capost_shortdescription: "Use code to build a great looking holiday or birthday card."
   tutorial_marco_shortdescription: "An immersive game to guide Marco with a visual programming language."
   tutorial_codestersflappybike_shortdescription: "Create a game with player controls. Keep the bike in the air while dodging the obstacles!"
@@ -1722,7 +1731,7 @@ is:
   tutorial_buildpong_longdescription: "Pong is one of the earliest arcade video games and the very first sports arcade video game. It is a table tennis sports game featuring simple two-dimensional graphics. The aim of the game is for the PLAYER to score on the COMPUTER while defending its GOAL. In this project, the COMPUTER is programmed with basic artificial intelligence so it can respond to the PLAYER."
   tutorial_tynkerdrones_longdescription: "Learn to program connected devices by solving the \"Crash Course\" puzzles, where you navigate virtual drones and robots through obstacles. Then you're ready to create programs to control real drones and robots. Requires an iPad or Android tablet and a supported toy."
   tutorial_carla_longdescription: "\"Programming with Carla\" is a series of short activities that guide students through building a simple chatbot, whilst learning about core concepts like variables and conditionals. The activities have been carefully designed to address common misconceptions that new programmers have about these topics by offering many opportunities for practice, as well as targeted hints and feedback.\n"
-  tutorial_globaloria_longdescription: "In MakeQuest you learn to edit JavaScript code through a playful action game, and master computer science concepts like variables and functions. Create your own game by remixing and expanding on our game code in the Sandbox. Publish and share your game with friends!  Teachers: lesson plans and subject-specific extension activities are included."
+  tutorial_zulama_longdescription: "In this activity you will learn to edit JavaScript code through a playful action game and master computer science concepts like variables and functions. Create your own game in the Sandbox by remixing and expanding on existing game code. Then publish and share your game with friends and family. A scripted lesson guide is included for teachers."
   tutorial_capost_longdescription: "Starting to learn HTML and CSS is easy and fun with this digital postcard. Learn about adding headings, paragraphs, images and links to create a holiday card or birthday celebration to share with friends and family."
   tutorial_marco_longdescription: "Students play an adventure game based on an original story. They guide Marco - the main character - through each level by giving him step-by-step instructions in the form of the visual programming language used by the Hour of Code. They get introduced to sequencing commands, iteration and conditions without even noticing it."
   tutorial_codestersflappybike_longdescription: "In this activity, students use our drag-to-text toolkit to start coding in Python right away! Students are guided through a series of learning activities that teach them to build a complete game! After they finish, they are challenged to use what they learned about syntax, dot notation, events, variables, parameters and game mechanics to create a new game. "
@@ -2300,7 +2309,7 @@ is:
   tutorial_buildpong_language: "English, Portuguese, Russian, and Spanish"
   tutorial_tynkerdrones_language: "English only"
   tutorial_carla_language: "English only"
-  tutorial_globaloria_language: "English, Spanish"
+  tutorial_zulama_language: "English, Spanish"
   tutorial_capost_language: "English, Dutch, Spanish, Russian"
   tutorial_marco_language: "Multiple"
   tutorial_codestersflappybike_language: "English, Spanish"
@@ -2878,7 +2887,7 @@ is:
   tutorial_buildpong_string_detail_grades: "7 ára og eldri"
   tutorial_tynkerdrones_string_detail_grades: "7 ára og eldri"
   tutorial_carla_string_detail_grades: "11 ára og eldri"
-  tutorial_globaloria_string_detail_grades: "11 ára og eldri"
+  tutorial_zulama_string_detail_grades: "11 ára og eldri"
   tutorial_capost_string_detail_grades: "11 ára og eldri"
   tutorial_marco_string_detail_grades: "7 - 13 ára"
   tutorial_codestersflappybike_string_detail_grades: "11 ára og eldri"
@@ -3456,7 +3465,7 @@ is:
   tutorial_buildpong_string_platforms: "All modern browsers, Android tablet, Android phone, iPad"
   tutorial_tynkerdrones_string_platforms: "Android tablet, iPad"
   tutorial_carla_string_platforms: "All modern browsers"
-  tutorial_globaloria_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari"
+  tutorial_zulama_string_platforms: "Internet Explorer 11, Chrome, Firefox, Safari"
   tutorial_capost_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari"
   tutorial_marco_string_platforms: "All modern browsers, Android tablet, iPad"
   tutorial_codestersflappybike_string_platforms: "All modern browsers"
@@ -4034,7 +4043,7 @@ is:
   tutorial_buildpong_string_detail_platforms: ""
   tutorial_tynkerdrones_string_detail_platforms: "Parrot drone, Sphero robot, Ollie robot"
   tutorial_carla_string_detail_platforms: ""
-  tutorial_globaloria_string_detail_platforms: ""
+  tutorial_zulama_string_detail_platforms: ""
   tutorial_capost_string_detail_platforms: ""
   tutorial_marco_string_detail_platforms: ""
   tutorial_codestersflappybike_string_detail_platforms: ""
@@ -4612,7 +4621,7 @@ is:
   tutorial_buildpong_string_detail_programming_languages: "Blocks, Ready, Unity"
   tutorial_tynkerdrones_string_detail_programming_languages: "Kubbar"
   tutorial_carla_string_detail_programming_languages: "Coffeescript"
-  tutorial_globaloria_string_detail_programming_languages: "JavaScript"
+  tutorial_zulama_string_detail_programming_languages: "JavaScript"
   tutorial_capost_string_detail_programming_languages: "HTML, CSS"
   tutorial_marco_string_detail_programming_languages: "Kubbar"
   tutorial_codestersflappybike_string_detail_programming_languages: "Python"

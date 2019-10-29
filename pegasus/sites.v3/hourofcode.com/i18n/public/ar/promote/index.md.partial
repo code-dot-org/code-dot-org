@@ -6,28 +6,28 @@ nav: promote_nav
 
 {{ signup_button }}
 
-# Get your community involved in the Hour of Code
+# اجعل جماعتك تشارك في ساعة البرمجة
 
 ## انشر الكلمة
 
-Tell your friends about the **#HourOfCode**!
+أخبر أصدقاءك عن **#HourOfCode**!
 
 {{ promote/share_buttons }}
 
 ## اطلب من مدرستك كلها أن تشارك في حدث "ساعة من الكود البرمجي"
 
-[Send this email]({{ promote/sample_emails }}) to your principal and challenge every classroom at your school to sign up.
+[ارسل هذا الإيميل]({{ promote/sample_emails }}) إلى مديرك وتحد كل الفصول في مدرستك لتسجيل الدخول.
 
 ## 3.أطلب من مشغلك/صاحب العمل الخاص بك أن يشارك في هدا الحدث
 
-[Send this email]({{ promote/sample_emails }}) to your manager or company's CEO.
+[أرسل هذا الإيميل]({{ promote/sample_emails }}) إلى المسير أو المدير العام للشركة.
 
-## 4. Promote Hour of Code in your community
+## 4. روج لساعة البرمجة في جماعتك
 
-[Recruit a local group]({{ promote/sample_emails }})— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. Use these [posters, banners, stickers, videos and more](/promote/resources) for your own event.
+[جند مجموعة محلية]({{ promote/sample_emails }})- فتيات وفتيان نادي الكشافة، كنيسة، جامعة، مجموعة قدماء المقاومين، اتحاد العمال، أو حتى بعض الأصدقاء. لست بحاجة لأن تكون في المدرسة لتعلم مهارات جديدة. استخدم هذه [ملصقات، ولافتات، ومقاطع فيديو والمزيد](%= resolve_url('/promote/resources')%)لحدثك الخاص.
 
 ## 5. أطلب من مسؤول محلي لدعم حدث "ساعة من الكود البرمجي"
 
-[Send this email]({{ promote/sample_emails }}) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. It can help build support for computer science in your area beyond one hour.
+[أرسل هذه الإيميل]({{ promote/sample_emails }}) إلى ممثليك المحليين، مجلس المدينة، مجلس المؤسسة وقم بدعوتهم لزيارة مؤسستك من أجل ساعة البرمجة. يمكن أن تساعد في دعم لعلوم الكمبيوتر في منطقتك بعد ساعة واحدة.
 
 {{ signup_button }}

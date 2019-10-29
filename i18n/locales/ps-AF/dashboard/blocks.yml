@@ -80,15 +80,19 @@ ps:
             '"while"': کله چي
       Mikelab_randomColor:
         text: نا ټاکلۍ رنګ
-      aalab_checkTouching:
+      Mikelab_sendBad:
+        text: چپ اړخ ته لاړ شۍ
+      Mikelab_sendGood:
+        text: راسته اړځ ته لاړ شۍ
+      aalab_goToScene:
         options:
-          CONDITION:
-            '"while"': کله چي
-      aalab_clickedOn:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"while"': کله چي
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"while"': کله چي
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'

@@ -1,4 +1,4 @@
-import {assert} from '../../util/configuredChai';
+import {assert} from '../../util/deprecatedChai';
 import sinon from 'sinon';
 
 var testUtils = require('../../util/testUtils');
@@ -654,14 +654,6 @@ describe('Applab Exporter,', function() {
         assert.property(zipFiles, 'my-app/CustomAsset.js');
         assert.property(zipFiles, 'my-app/app.json');
       });
-    });
-  });
-
-  describe('globally exposed functions', () => {
-    beforeEach(() => {
-      // webpack-runtime must appear exactly once on any page containing webpack entries.
-      require('../../../build/package/js/webpack-runtime.js');
-      require('../../../build/package/js/applab-api.js');
     });
   });
 

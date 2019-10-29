@@ -915,6 +915,22 @@ es-ES:
         _"¡Cacemos el tesoro- usando bucles!_
 
         Ayuda al coleccionista a alcanzar al menos dos pilas de tesoro usando únicamente los bloques de la caja de herramientas. Es posible recoger los 4.
+      courseA_artist_loops7_2019: |-
+        Use el <xml><block type="controls_repeat_simplified_dropdown" block-text="repeat"><title name="TIMES" config="3-10">???</title></block></xml> bucle para añadir olas al agua.
+
+        ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
+      courseA_collector_loops2_2019: 'Obtenga todos los 3 montones! Mueva Laurel a
+        cada pieza de tesoro, y luego use <xml><block type="collector_collect" block-text="get
+        treasure"/></xml> bloque. '
+      courseA_maze_ramp3a_2019: Tome un <xml><block type="maze_moveNorth" block-text="move
+        north"/></xml> bloque de la caja de herramientas y agréguelo al final de otros
+        bloques para completar el código, luego presione "▶ Run".
+      courseA_playLab_events1_2019: Este es un Play Lab nivel. Mueva bloques al area
+        de trabajo y observe que sucede!
+      courseA_playLab_events2_2019: Jorge el Perro quiere decir "Hola." Puede ayudarle?
+      courseB_Scrat_ramp3a_2019: Tome un <xml><block type="maze_moveNorth" block-text="move
+        north"/></xml> bloque de la caja de herramientas y agréguelo al final de otros
+        bloques para completar el código, luego presione "▶ Run".
       courseB_collector_loops_challenge2a: '"¡Busquemos el tesoro!"'
       courseB_collector_loops_challenge2a_2018: '"¡Busquemos el tesoro!"'
       courseB_collector_loops_challenge2a_2019: '"¡Busquemos el tesoro!"'

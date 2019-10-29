@@ -11,268 +11,268 @@ layout: wide
 
 {{ signup_button }}
 
-# Lesson guidelines for the Hour of Code™ and Computer Science Education Week
+# دليل الدرس ل (Hour of Code™) وأسبوع تدريس علوم الكمبيوتر
 
-Code.org hosts a variety of Hour of Code™ activities, lessons, and videos on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [hourofcode.com/learn]({{ urls/learn }}).
+تستضيف Code.org أنشطة متنوعة ل (Hour of Code™)، وفيديوهات على Code.org، ساعة البرمجة، وواقع أسبوع تدريس علوم الكمبيوتر. اللائحة الحالية هي على [hourofcode.com/learn]({{ urls/learn }}).
 
-Want to submit your own self-guided game, teacher-led lesson, or activity that explains a computer science principle? Join this global movement and help participants around the world get started with an hour of code or go further with multi-lesson, day long, or week long activities.
+تريد تقديم لعبتك الموجهة الخاصة بك، أو الدرس الذي يقدمه المدرس، أو نشاطا يشرح مبادئ علوم الكمبيوتر؟ انضم إلى هذه الحركة العالمية وساعد المشاركين حول العالم وابدأ مع ساعة البرمجة أو تقدم مع دروس متعددة، طول اليوم، أو أنشطة طول الأسبوع.
 
-**After reading the guidelines, you can submit your activity through our [Hour of Code™ Activity Submission page](http://bit.ly/29zt9ki). You can submit an activity at any time, but the deadline for inclusion in any given calendar year is October 1. (For example, any activities received after October 1, {{ campaign_date/year }} will not be listed for {{ campaign_date/year }}'s Hour of Code.)** If you have any questions about your activitiy submission, please reach out to us at support@code.org.
+**بعد قراءة الإرشادات، يمكنك إرسال نشاطك في [صفحتنا لتسجيل أنشطة (Hour of Code™)](http://bit.ly/29zt9ki). يمكنك تقديم نشاطك في أي وقت، لكن آخر أجل لإدماجه في السنة هو 1 أكتوبر. مثلا، أي نشاط تم التوصل إليهبعد 1 أكتوبر، {{ campaign_date/year }} لن يتم إدراجه لساعة برمجة {{ campaign_date/year }}.)إذا كان لديك أسئلة حول إلرسال نشاطك، المرجو الاطلاع على support@code.org.</p> 
 
-A few tips:
+بعض التوجيهات:
 
-1. **Submit more than one activity**: If you’ve built activities for different levels, different ages, or other categories, we list your activities separately so each teacher can find the right thing for their classroom. So if you previously built a landing page and gave us a single URL to promote, don’t do that anymore. Submit each tutorial or activity individually. Given the number of submissions we have seen in recent years, we will have time to review up to 5 activities per partner. After that, we will make a best effort to review as many as possible before Hour of Code begins.
+1. **أرسل أكثر من نشاط**: إذا كنت قد أعددت أنشطة لمستويات متعددة، لأعمار مختلفة، أو لأصناف أخر، سنعر أنشطتك منفردة ليتمكن المدرس من العثور على شيء جيد لفصله الدراسي. لذلك إذا قمت بإنشاء صفحة أعطيتنا عنوانها الالكتروني، فلا تفعلذلك مجددا. أرسل كل دورة أو نشاط بشكل فردي. نظرا للعدد الكبير من الأنشطة المتوصل بها في هذه السنة، سيكون لدينا الوقت لمراجعة 5 أنشطة لكل شريك. بعد ذلك سنبذل قصارى جهدنا لمراجعة عدد أكبر قبل بداية ساعة البرمجة.
 
-2. **Beyond beginner lessons**: In addition to lessons for teachers and students who are learning computer science for the first time, we list learning experiences for computer science-savvy classrooms that want to go a little bit further! Help us by submitting lessons for classes that are already comfortable with the basics. These learners could be any age from 9 to 99.
+2. **دروس أكثر للمبتدئين**: بالإضافة إلى دروس المدرسين والمتعلمين الذين يتعلمونعلوم الكمبيوتر للمرة الأولى، سنعرض التجارب التعليمية لفصل علوم الكمبيوتر الذكي الذي يريد أن يتعلم أكثر! ساعدنا لنقدم دروسا لأقسام تعلمت الأساسيات. يمكن أن يكون عمر هؤلاء المتعملنن من 9 إلى 99.
 
-3. **Subject areas**: Have a great lesson idea that integrates Computer Science in Math? History? Language Arts? Science? Art? Or another subject? We’ve had numerous requests from teachers who want to connect the Hour of Code to their subject area (particularly with the upgraded ISTE standards for students including “innovative designer” and “computational thinker”). Teachers can filter for their classroom type (grade band or subject area) so we need your help filling in gaps to offer classroom activities or lesson plans that relate CS to every major subject area for different grade bands. We also continue to have a “Computer Science” category for teachers who are looking for generic CS activities.
+3. **مجالات المواضيع**: لديك فكرة رائعة تدمج علوم الكمبيوتر في الرياضيات؟ السجل؟ فنون اللغة؟ علوم؟ فن؟ أو موضوع آخر؟ تلقينا العديد من الطلبات من المدرسين الذين يريدون ربط ساعة البرمجة نجال مواضعيهم (خاصة مع معايير (ISTE) المطَوَّرة للمتعلمين متضمنة "المصمم المبدع" و"المفكر المعلومياتي"). يمكن للمدرسين الانتقاء حسب نوع الفصل الدراسي (المستوى أو مجال الموضوع)، لذلك نحتاج مساعدتك لملء الفجوات لمنح الفصل الأنشطة أو تخطيط الدرس لربط علوم الكمبيوتر بمجال الموضوع الرئيسي لمختلف الفصول الدراسية. نواصل أيضا ليكون لدينا صنف "علوم الكمبيوتر" للمدرسين الذين يبحثون عن أنشطة علوم الكمبيوتر الشاملة.
 
 <a id="top"></a>
 
-## Index:
+## الفهرس:
 
-- [What to Submit](#whatsubmit)
-- [General guidelines for creating an Hour of Code™ activity](#guidelines)
-- [How to Submit](#submit)
-- [How activities will be evaluated](#inclusion)
-- [Suggestions for designing your activity](#design)
-- [Trademark Guidelines](#tm)
-- [Tracking Pixel](#pixel)
-- [Promoting your activity, CSEdWeek, and Hour of Code](#promote)
+- [ماذا تقدم](#whatsubmit)
+- [مبادئ توجيهية عامة لنشاط "Hour of Code™"](#guidelines)
+- [كيف تقدم](#submit)
+- [كيفسيتم تقييم الأنشطة](#inclusion)
+- [اقتراحات لتصميم نشاطك](#design)
+- [المبادئ التوجيهية للعلامة التجارية](#tm)
+- [عداد الزوار](#pixel)
+- [عرف بانشطتك، أسبوع تدريس علوم الكمبيوتر، و ساعة البرمجة](#promote)
 
 <a id="whatsubmit"></a>
 
-## What to Submit
+## ماذا تقدم
 
-**Self-guided puzzle or game ([example](https://code.org/mc))**
+**لغز ذاتي التوجيه أو لعبة ([مثال](https://code.org/mc))**
 
-These activities are designed for students to self-direct through a tutorial. They don’t require much instruction from a teacher or teacher prep work.
+هذه الأنشطة مصمم للمتعلمين للتوجه الذاتي إلى الدورة. لا تتطلب العدد من التعليمات من المدرس أو الإعداد القبلي للمدرس.
 
-**Teacher Facilitated lesson ([example](https://csedweek.org/csteacher/computerhistory.pdf), [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
+**درس ميسر من ظرف المدرس([مثال](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA)، [هيكل](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
 
-Now that tens of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative activities that teach the basics of computer science. To help more advanced teachers find inspiration, we collect and curate "teacher-led" lessons and activity plans for Hour of Code veterans.
+الآن وقد جرب عشرات الآلاف من المدرسين ساعة البرمجةساعة البرمجة، العديد من الفصول جاهظة لمظيد من الأنشطة الإبداعية لتدريس أساسيات علوم الكمبيوتر. لمساعدة المدرسين الأكثر تقدما لإيجاد الإلهام، نجمع ونرتب الدروس وتخطيط الأنشطة التي يسيرها المدرسون لساعة برمجة قدماء المحاربين.
 
-One type of activity that we will feature for experienced teachers are “open sandbox” creation projects. Activities that encourage students to build their own app, game, website or other project. If facilitated properly, more open-ended activities can better showcase the creative nature of computer science.
+أحد أنواع الأنشطة اللتي سنقدمها للمدرسين ذوي التجربة هو إنشاء مشروع "الصندوق المفتوح". الأنشطة التي تشجع الطلاب على بناء تطبيقهم الخاصة، لعبة، موقع أو مشروع آخر. إذا كانت سهلة، مزيد من أنشطة مفتوحة ستعرض جيدا الطبيعة الإبداعية لعلوم الكمبيوتر.
 
-Some educators may also prefer to host Hour of Code activities that follow a traditional lesson format rather than a guided-puzzle/game experience.
+يمكن لبعض لمدرسين أن يفضلوا استضافة أنشطة ساعة البرمجة التي تتبع شكل الدرس التقليدي أكثر من ألغاز موجهة/لعبة مجربة.
 
-You can start with this [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA) for your lesson plan.
+يمكنك البدء مع هذا [النموذج](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA)لتخطيط الدرس.
 
-**Activities for teachers in other subjects/fields**
+**أنشطة المدرس في مواضيع/مجالات**
 
-We also feature lesson plans designed for different subject areas. For example, a one-hour lesson plan for teaching code in a geometry class. Or a mad-lib exercise for English class. Or a creative quiz-creation activity for history class. These can help recruit teachers in other subject areas to guide an Hour of Code activity that is unique to their field, while demonstrating how CS can influence and enhance many different subject areas.
+نقدم أيضا خطط درس مصممة لمواضع من مجالات مختلفة. مثلا، تخطيط درس ساعة واحدة لتدريس البرمجة في فصل الهندسة. أو تمرين لعبة الكلمات (mad-lib) لفصل الانجليزية. أو نشاط لإنشاء مسابفة إبداعية لفصل التاريخ. هذا يمكن أن يجذب مدرسين من مجالات أخرى لتسيير نشاط ساعة البرمجة الذي فريد لمجالهم، من خلال تبيان كيف تؤثر وتغني علوم الكمبيوتر مواضيع مجالات مختلفة.
 
-Examples:
+أمثلة:
 
-- Mirror Images (an activity for an art teacher)
-- An arduino activity for a physics teacher
-- A history of technology activity for a history teacher
-- And see [this list](https://docs.google.com/document/d/19jQ2VhBUyIn30VFbfdHOVpmlymhNiB0AkEqRxHz3dr0/edit) for more ideas from educators (or add your own to the list to inspire others)
+- صور المرآة (نشاط لمدرس الفن)
+- نشاط (arduino) (اللوحة الأم الالكترونية) لمدرس الفيزياء
+- نشاط تاريخ التكنولوجيا لمدرس التاريخ
+- وشاهد [هذه اللائحة](https://docs.google.com/document/d/19jQ2VhBUyIn30VFbfdHOVpmlymhNiB0AkEqRxHz3dr0/edit) للمزيد من الأفكار من المدرسين (أو أضف فكرتك إلى اللائحة لإلهام الآخرين)
 
-**For students with special needs**
+**للطلاب ذوي احتياجات خاصة**
 
-If you create an activity or tutorial that is designed for special needs students, please call that out in the description. In particular, there are very few options for the vision-impaired. If your activity is designed for this audience, please let us know.
+إذا أنشأت نشاطا أو دورة مصممة للطلاب ذوي احتياجات ختصة، المرجو الإشارة إليها في الوصف. علة وجه الخصوص، هناك خيارات قليلة لضعاف البصر. إذا كان نشاطك مصمما لهذه الفئة، المرجو إخبارنا بذلك.
 
-[**Back to the top**](#top)
+[**عودة إلى أعلى**](#top)
 
 <a id="guidelines"></a>
 
-## General guidelines for creating an Hour of Code activity
+## مبادئ توجيهية عامة لإنشاء نشاط لساعة البرمجة
 
-The goal of an Hour of Code is to give beginners an accessible first taste of computer science or programming. The tone should be that:
+الهجف من ساعة البرمجة هو إعطاء المبتدئين رؤية حول علوم الكمبيوتر أو البرمجة. يجب أن تكون النغمة هكذا:
 
-- Anybody can learn computer science - regardless of age, gender, or race. 
-- Computer science is connected to a wide variety of fields and interests. Everybody should learn it!
-- Encourage students to create something unique that can be shared with parents/friends or online. 
+- كل شخص يمكنه تعلم علوم الكمبيوتر - بغض النظر عن العم، الجنس أو العرق. 
+- علوم الكمبيوتر مرتبطة بمجموعة متنوعة من المجالات والاهتمامات. ينبغي على الجميع أن يتعلم!
+- شجع الطلاب على إنشاء أشياء فريدة يمكن مشاركتها مع الآباء/الأصدقاء على الإنترنت. 
 
-The activities should teach a computer science concept such as loops, conditionals, encryption, or how the Internet works. An activity can also teach about how computer science connects to real world occupations, events, or history. For example, teaching UX design to make apps that are meaningful for an audience or cause. We discourage activities that focus on the syntax of programming rather than the concepts. For example, we will list, but not highlight, activities that teach HTML. Similarly, we discourage block programming lessons that focus on setting/changing configuration options rather than learning how to model an algorithm or process.
+يجب أن تدرس الأنشطة مفهوما من مفاهيم علوم الكمبيوتر كالحلقات، الشرطيات، التفير، أو كيف يعمل الأنترنت. يمكن لنشاط أن يدرس كيفية ارتباط علوم الكمبيوتر بمهن العالم الواقعي، أحداثه، أو التاريخ. كمثال، تدريس تصميم (UX) (تجربة المستعمل) لجعل التطبيق ذو معنى وأهمية لمستخدميه. لا ننصح بالأنشطة التي تركز على تركيب الكود أكثر من المفاهيم في البرمجة. كمثال، سندرج لائحة -دون تفاصيل- الأنشطة التي تدرس HTML. نفس الشيء، لا ننصح دروس الكتل البرمجية التي تركز على إعداد/تغيير خيارات الترتيب أكثر من تعلم كيفية نمذجة خوارزمية أو عملية.
 
-*Technical requirements:* Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Activities that require an app-install, desktop app, or game-console experiences are okay but not ideal. We will not list activities that require sign up or payment. (Robotics activities can require robotics purchase.)
+*المتطلبات التقنية* بسبب اختلاف الإعدادات التكنولوجية للمؤسسات والأقسام الدراسية، أفضل الأنشطة هي التي تعتمد على الويب أو الهواتف الذكية، أو حتى المستقلة التي تدرس مفاهيم علوم الكمبيوتر بدون استعمال الحاسوب (انظر <http://csunplugged.com/>). تجارب الأنشطة التي تتطلب تثبيت تطبيق، تطبيق الحاسوب، أو عدة للألعاب مقبولة لكنها غير مثالية. لن نعرض الأنشطة التي تتطلب تسجيل دخول أو دفعا ماليا. (أنشطة الروبوتيات يمكن أن تتطلب شراء روبوتات.)
 
-*Student-led (Self-Guided) Format:* The original Hour of Code was built mostly on the success of self-guided tutorials or lessons, optionally facilitated by the teacher. There are plenty of existing options, but if you want to create a new one, these activities should be designed so they can be fun for a student working alone, or in a classroom whose teacher has minimal prep or CS background. They should provide directions for students as opposed to an open-ended hour-long challenge. Ideally, the instructions and tutorials are integrated directly into the programming platform, to avoid switching tabs or windows between the tutorial and the programming platform.
+*صيغة يقودها المتعلمون (قيادة ذاتية):* ساعة البرمجة الأصلية تم بناؤها أساسا على نجاح الدروس والدورات الموجهة، والميسرة من قبل المدرس. هناك خيارات كثيرة، لكن إذا أردت إنشاء خيار جديد، فهذا النشاط يجب أن يصمم ليكون ممتعا لطالب يعمل لمفرده، أو لفثل مدرسه له إعداد أو معارف علوم الكمبيوتر قليلة. يجب أن يوفروا توجيهات للطلاب بدلا من تحد مفتوح لمدة ساعة طويلة. مثاليا، التوجيهات والدورات تكون في منصة البرمجة، لتجنب الانتقال من صفحة منصة البرمجة إلى صفحة الدورة التعليمية.
 
-[**Back to the top**](#top)
+[**عودة إلى أعلى**](#top)
 
 <a id="submit"></a>
 
-## How to submit
+## كيف تقدم
 
-Visit the [Hour of Code™ Activity Submission page](http://bit.ly/29zt9ki) and complete the questions to submit your activity.
+قم بزيارة [صفحة إرسال نشاط (Hour of Code™)](http://bit.ly/29zt9ki) واتمم الأسئلة لإرسال نشاطك.
 
-What you’ll need:
+ما ستحتاجه:
 
-* Name and email of the primary contact representing the submitted activity
-* Activity Name (cannot include “Hour of Code” in the name)
-* URL link to the activity
-* Activity descriptions 
-    * Longer description for desktop-view with max character count: 400
-    * Shorter description for mobile-view with max character count: 75
-    * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
-* Recommended grade level(s) for intended users. You may refer to the \[Computer Science Teachers’ Association’s K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) for grade-appropriate computer science concepts. Example grade levels include: 
-    * Kindergarten - Grade 1 (ages 4-6)
-    * Grades 2-5 (ages 7-10)
-    * Grades 6-8 (ages 11-13)
-    * Grades 9+ (ages 14+)
-* A list of subject areas your activity covers (in addition to Computer Science). For example, if a math teacher can use your activity to teach about angles or parabolas, list as math. If you have a mad libs activity that teaches verbs/nouns/etc. choose language arts.
-* A list of programming languages your activity teaches. I.e. C/C++, Java, JavaScript, etc. or language independent (for lesson plans that can be taught in multiple languages)
-* A list of supported natural languages. Note: Language-detection is the responsibility of the activity provider; we will redirect all users to the single URL provided.
-* What level of experience should an educator have to use your activity? (e.g. Beginner or Comfortable.) And, what level of experience should the students have? If you’d like to prepare more advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
-* The length of your activity 
-    * 1 hour only
-    * 1 hour with follow-on course
-    * 2-6 hours (can be multiple lessons)
+* الاسم والإيميل الرئيسي للاتصال الذي يمثل النشاط المقدم
+* اسم الناشاط (لا يمكن أن يتضمن "Hour of Code" في الاسم)
+* الرابط الالكتوني إلى النشاط
+* وصف النشاط 
+    * وصف مفصل لنسخة الحاسوب مع عدد أحرف أقصى: 400
+    * وصف قصير لنسخة الهاتف مع عدد حروف أقصى: 75
+    * الرجاء الإشارة اذا كان النشاط موجها ذاتيا او يستوجب وجود استاذ ميسر في الوصف. بالإضافة إلى ذلك، بعض المدارس تريد معرفة ما إن كان أنشطة ساعة البرمجة تتناول معايير مشتركة أو معايير العلوم للجيل القادم. إذا كان النشاط يتناول معايير محددة، يجب تضمينه هذه المعلومات.
+* المستوى أو المستويات الموصى بها للمستعملين المستهدفين. يمكنك الرجوع إلى \[Computer Science Teachers’ Association’s K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) للمفاهيم المناسبة لمستوى الفصل. مثال مستويات الصف تتضمن: 
+    * روض الأطفال - المستوى 1 (أعمار 4-6)
+    * المستويات 2-5 (أعمار 7-10)
+    * المستويات 6-8 (أعمار 11-13)
+    * المستويات 9+ (عمر 14+)
+* لائحة المجالات التي تغطيها أنشطتك (بالإضافة إلى علوم الكمبيوتر). مثلا، إذا أمكن لمدرس الرياضيات استعمال نشاطك لتدريس الزوايا والسلاجم، فأدرجها كرياضيات. إذاكان لديك نشاط جنوني لتدريس الأفعال/الأسماء/الخ. اختر فنون اللغة.
+* لائحة لغات البرمجة التي يدرسها نشاطك. I.e. C/C++، جافا، جافاسكريبت،. أو لغة مستقلة (بالنسبة لتخطيط الدروس التي يمكن أن تدرس بعدة لغات)
+* لائحة لغات طبيعية معتمدة. ملاحظة: التعرف على اللغة هي وظيفة مقدم النشاط، ونحن سوف نعيد توجيه كل المستعملين إلى عنوان URL واحد مقدم.
+* أي مستوى من التجربة يجب على المدرس لاستعمال نشاطك؟ (مثال المبتدئين أو المعتادين)، أي مستوى من التجربة يجب أن يكون لدى المتعلمين؟ إذا أحببت إعداد مزيدا من أنشطة (Hour of Code™)، المرجو تضمين المعارف ذات أولوية التي يتم احتياجها في وصف نشاطك.
+* طول نشاطك 
+    * ساعة واحدة
+    * ساعة واحدة مع دورات المتابعة
+    * 2-6 ساعات (يمكن أن يكون عدو دروس)
 
-#### Additional things you’ll need when submitting Lesson Plans
+#### الأشياء الإضافية ستحتاج إليها عند تقديم خطط الدرس
 
 * اسمُكَ
-* Link to your lesson plan. This can be a web page, dropbox link, google drive or similar service. 
-* School where you teach, city, and state (optional)
-* Grade(s) and subjects(s) you teach (optional)
-* Your picture (optional)
-* What software the teacher will need to do your lesson plan (Scratch? Robots? Nothing?)
+* رابط لمخطط درسك. هذا يمكن ان يكون صفحة موقع، رابط دروب بوكس، غوغل درايف أو خجمات مماثلة. 
+* المؤسسة التي تدرس بها، المدينة، الولاية (اختيارية)
+* المستوى(يات) والموضوع (المواضيع) التي تدرسها (اختياري)
+* صورتك (اختيارية)
+* أي برنامج سيحتاج إليه المدرس لإنجاز تخطيط درسك (سكراتش؟ روبوتات؟ لا شيء؟)
 
-#### Additional things you’ll need when submitting Online Activities
+#### الأشياء الإضافية التي ستحتاجها عند إجراء الأنشطة على الأنترنت
 
-* Name and logo of your organization
-* whether it is COPPA compliant or not
-* a URL link to teacher notes (optional)
-* A list of tested/compatible platforms: 
-    * Web based: Which platforms have you tested? 
-        * OS - Mac, Win, and other versions
-        * Browsers - IE11, Edge, Firefox, Chrome, Safari
-        * iOS mobile Safari (mobile-optimized)
-        * Android Chrome (mobile-optimized)
-    * Non web-based: specify platform for native code (Mac, Win, iOS, Android, xBox, other)
-    * Unplugged
-* Screenshot or marketing image of the Hour of Code activity. Please send at least one image with 4:3 dimensions. It should be at least 520px by 390px. If an appropriate image is not provided, we may take our own screenshot of your tutorial OR we may choose not to list it. All images must be submitted as a URL link to a .jpg, .jpeg, or .png.
-* In order to more accurately track participation, third party tutorial partners need to include 1-pixel tracking images on the first page of their Hour of Code tutorials. Place a starting pixel-image on the start page. Do not place pixels on interim pages). See the Tracking Pixel section below for more details.
-* Upon finishing your activity, users should be directed to [code.org/api/hour/finish](https://code.org/api/hour/finish) where they will be able to: 
-    * Share on social media that they completed the Hour of Code
-    * Receive a certificate that they completed the Hour of Code
-    * See leaderboards about which countries/cities have the highest participation rates in Hour of Code activities
-    * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [code.org/api/hour/finish](https://code.org/api/hour/finish) as well.
-* (Optional) We may follow-up with an online survey/form link asking for a report of the following activity metrics for the week of Dec. 9, 12:01 am through Dec. 15, 11:59 pm) 
-    * For online activities (especially smartphone/tablet apps): 
-        * Number of users
-        * How many completed the task
-        * Average time on task
-        * Number of total lines of code written over all users
-        * How many continued on to further learning (measured as any user who finishes the task and goes onto additional tasks at your site)
-    * For offline activities 
-        * Number of downloads of paper version of activity (if applicable)
+* اسم وعلامة منظمتك
+* سواء كان متوافقا مع (COPPA) أم لا
+* رابط عنوان الكتروني لملاحظات المدرس (اختياري)
+* لائحة للمنصات المجربة والمناسبة: 
+    * في إطار الويب: ما هي المنصات التي جربتها؟ 
+        * الماك، الويندوز، ونسخ أخرى
+        * محركات البحث - IE11, Edge, Firefox, Chrome, Safari
+        * iOS mobile Safari (الخاصة بالهواتف)
+        * كروم على نظام اندرويد (الخاصة بالهواتف)
+    * التي لا تعتمد على الويب: حدد منصة لكود أصلي (Mac, Win, iOS, Android, xBox, وأخر)
+    * مستقلة
+* التقط صورة للشاشة أو صورة تسويقية لنشاط ساعة البرمجة. المرجو إرسال صورة على الأقل بألعاد 4:3. يجب أن تكون على الأقل 520px × 390px. إن لم يتم إرسال صورة مناسبة، سنلتقط صورة للشاشة لدورتك أو يمكن ألا ندرجها. كل الصور يجب أن ترسل تحت صيغة jpg, .jpeg., أو png.
+* من أجل تتبع المشاركة بدقة، تحتاج الأطراف الثالثة الشريكة في البرامج التعليمية تضمين برنامج تتبع زوار المواقع (1-pixel image) في صفحتهم الأولى لدورات ساعة البرمجة الخاصة بهم. ضع برنامج (pixel-image) في الصفحة الأولى. لا تضع برنامج عد المشاركين في صفحات أخرى). للمزيد من المعلومات اطلع على فقرة (Pixel) أسفله.
+* عند الانتهاء من النشاط، يجب توجيه المستعملين إلى [code.org/api/hour/finish](https://code.org/api/hour/finish) حيث يمكنهم: 
+    * تقاسم عملهم في ساعة البرمجة على مواقع التواصل
+    * احصل على شهادة إنهاء ساعة البرمجة
+    * شاهد متصدري البلدان/المدن الحاصلين على تنقيط أعلى في أنشطة ساعة البرمجة
+    * بالنسبة للذين قضوا وقتا في نشاطك ولم ينهوه، فالمرجو إضافة زر "أنهيت ساعة البرمجة" كرابط إلى [code.org/api/hour/finish](https://code.org/api/hour/finish) أيضا.
+* (اختياري) يمكن لنا المتابعة على الأنترنت من خلال رابط للاستطلاع حول لتقرير حول مقاييس النشاط القادم في الأسبوع من دجنبر. 12:01 صباحا 9دجنبر. 11:59 ليلا، 15) 
+    * للأنشطة على الأنترنت (خاصة الهاتف الذكي/تطبيقات اللوحات): 
+        * عدد المستعملين
+        * كم عدد من أنهوا المهمة
+        * معدل الوقت للمهمة
+        * عدد السطور النهائي للكود المكتوب لكل المستعملين
+        * عدد الذين وصلوا تعلما متقدما (يتم عد كل مستعمل أنهى المهمة وواصل المهمات الإضافية على موقعك)
+    * للأنشطة دون ربط بالأنترنت 
+        * عدد تحميلات النسخة الورقية للأنشطة (في حالة توفر ذلك)
 
-#### Additional things you’ll need when submitting Robotics
+#### الأشياء الإضافية يمكنك ان تحتاجها عند استعمال الروبوتيات
 
-* If you submit a robotics activity, we need to know the cost per student for robotics
-* To evaluate robotics activities for inclusion on the website, we will need you to send sample kits to reviewers.
+* إذا قدمت نشاط روبوت، نحتاج لمعرفة تكلفة الروبوتيات لكل طالب
+* لتقييم أنشطة الروبوتيات لإدماجها في الموافع، سنحتاج إليك لترسل مثالا لعينة للمراجعين.
 
-[**Back to the top**](#top)
+[**عودة إلى أعلى**](#top)
 
 <a id="inclusion"></a>
 
-## How activities will be evaluated
+## كيفسيتم تقييم الأنشطة
 
-A diverse committee of computer science educators will rank submissions based on qualitative and quantitative criteria. All activities that fit the basic criteria will be listed. Teachers will be able to filter and sort to find the best activities for their classroom.
+ستقوم لجنة مختلطة لمدرسي علوم الكمبيوتر بتصنيف الطلبات حسب معايير كمية وكيفية. سيتم إدراج كل الأنشطة التي تناسب المعايير العادية. سيتمكن المدرسون من البحث وتصنيف الأنشطة الأفضل لفصولهم الدراسية.
 
-The rubric for evaluating activities and lesson plans will look for the following criteria on all activities and rank them accordingly:
+سيبحث التقييم وخطط الدرس في المعايير التالية لكل الأنشطة لتصنيفها وفق:
 
-- High production quality
-- Promote learning by all demographic groups (esp. under-represented groups)
-- Educational (teaches computer science concepts well)
-- Fun and engaging
-- Encourages students to create something unique they can share (For younger students: with parents and classmates. For olders students: on the Internet)
+- جودة الإنتاج العالي
+- ترويج التعلم من قبل كل المجموعات الديموغرافية (esp. المجموعات ذات تمثيلة أقل)
+- تربوي (يعلم مفاهيم علوم الكمبيوتر جيدا)
+- ممتع وجذاب
+- يشجع الطلاب على إنشاء شيء فريد يمكنهم تقاسمه (للتلاميذ الصغار: مع آبائهم أو زملائهم. للتلاميذ الكبار: على الأنترنت)
 
-If the review committee rates the activity a zero in production quality (due to bad bugs or instructions that make it very hard to use), in promoting learning in underrepresented groups (due to racist/sexist material), in educational value (does not teach CS concepts), or fun/engaging (due to being difficult/discouraging for students to work through), the activity will not be listed.
+إذا نقطت لجنة المراجعة نشاطا بنقطة 0 في جودة الإنتاج (بسبب مشكلات أو تعليمات غير واضحة تجعله صعبا)، أو في الترويج للتعلم أقليات (بسبب التمييز العنصري/الجنسي)، أو في القيمة التربوية (حيث لا يدرس مفاهيم علوم الكمبيوتر)، أو في المتعة والجاذبية (بسبب صعوبته/تنفير الطلاب من العمل فيه)، فالنشاط لن يتم إدراجه.
 
-In addition, in order to be listed, all activities must:
+بالإضافة إلى ذلك، ليتم إدراجه ضمن اللائحة، يجب على كل الأنشطة أن:
 
-- Be appropriate for a public school classroom (no guns, no explicit/mature content, no religious content, etc.)
-- Require no sign up 
-- Require no payment (exception for robotics activities these can require robot/kit purchase) For self-directed activities for new teachers and students the review committee will be looking for whether:
-- Teachers can use the tutorial or activity with no background in computer science
-- Students can be successful with no background in computer science
-- Students can direct themselves through the tutorial without parental or teacher guidance
+- تتناسب مع مجتمع طلاب الفصل الدراسي (لا أسلحة، لا محتوى صريح/ناضج، لا محتوى ديني، الخ)
+- لا يحتاج إلى تسجيل الدخول 
+- مجاني (باستثناء أنشطة الروبوتيات فهي تتطلب شراء مجموعة الروبوت) بالنسبة للأنشطة ذاتية التوجيه للمدرسين الجدد والمتعلمين فلجنة المراجعة ستبحث لمعرفة:
+- يمكن للمدرسين استعمال الدورات أو الأنشطة دون خلفيات في علوم الكمبيوتر
+- يمكن للطلاب النجاح بدون خلفيات في علوم الكمبيوتر
+- يمكن للطلاب توجيه أنفسهم في الدورات بدون توجيه الآباء أو المدرسين
 
-Teachers and students will be able to search through and filter our list of activities based on filters such as grade, experience level, subject, hardware, etc. By default, we will show lesson plans and activities first that:
+سيكون المدرسون والطلبة قادرين على البحث وتصنيف لائحة الأنشطة المرتبة حسب المستويات، مستوى التجربة، الموضوع والأجهزة إلى غير ذلك. بشكل ابتدائي، سنظهر خطط الدرس والأنشطة أولا:
 
-- Receive the highest ratings from the review committee
-- Are one hour self-directed activities designed for beginners (students and teachers)
-- Appeal to a wide range of users (across platforms, languages, and ages)
-- Require no installation
-- Are new this year
+- احصل على أعلى تنقيط من لجنة المراجعة
+- هي ساعة أنشطة ذاتية التوجيه مصممة للمبتدئين (طلاب ومدرسون)
+- ناد مجموعة واسعة من المستعملين (عبر المنصات، اللغات، والأعمار)
+- لا يطلب التثبيت
+- جدد هذه السنة
 
-[**Back to the top**](#top)
+[**عودة إلى أعلى**](#top)
 
 <a id="design"></a>
 
-## Suggestions for designing one hour self guided tutorials
+## افتراحات لتصميم ساعة دورات موجهة ذاتيا
 
-You can include the [Hour of Code logo](https://hourofcode.com/us/promote/resources#logo) in your tutorial, but this is not required. If you use the Hour of Code logo, see the trademark guidelines below. <u>Under no circumstances can the Code.org logo and name be used.</u> Both are trademarked, and can’t be co-mingled with a 3rd party brand name without express written permission.
+يمكن إدماج [علامة ساعة البرمجة](https://hourofcode.com/us/promote/resources#logo) في دورتك، لكنه غير مطلوب. إذا كنت تستعمل علامة ساعة البرمجة، انظر دليل استعمالها أسفله. <u>لا يمكن استعمال اسم وعلامة Code.org تحت أية ظروف.</u> كل منها لها حقوق محفوظة، ولا يمكن إدماجها مع طرف ثالث دون إذن صريح كتابي.
 
-**Make sure that the average student can finish comfortably in an hour.** Consider adding an open-ended activity at the end for students who move more quickly through the lesson. Remember that most kids will be absolute beginners to computer science and coding.
+**تأكد من كون الطالب المتوسط سينهي العمل خلال ساعة بشكل مريح.** يمكن إضافة نشاط في النهاية للطلاب الذين ينتقلون بسرعة في الدرس. تذكر أن جل الأطفال سيكونون مبتدئين في علوم الكمبيوتر والبرمجة.
 
-**Include teacher notes.** Most activities should be student-directed, but if an activity is facilitated or managed by a teacher, please include clear and simple directions for the teacher in the form of teacher-notes at a separate URL submitted with your activity. Not only are the students novices, some of the teachers are as well. Include info such as:
+**ضَمِّن ملاحظات المدرس.** يجب أن تكون معظم الأنشطة موجهة للطالب، لكن إذا النشاط مبسطا أو مسيرا من طرف المدرس، فالمرجو تضمين توجيهات بسيطة وواضحة للمدرس كملاحظات للمدرس في عنوان الكتروني مستقل يقدم مع أنشطتك. ليس الطلاب هم من تنقصهم التجربة لوحدهم، لكن أيضا بعض المدرسين. ضَمِّن المعلومة مثل:
 
-- What platforms and browsers does the tutorial work best on?
-- Does it work on smartphones? Tablets?
-- Do you recommend pair programming? 
-- Considerations for use in a classroom? E.g. if there are videos, advise teachers to show the videos on a projected screen for the entire classroom to view together
+- ما هي المنصة أو محرك البحص الذي تعمل عليه الدورة جيدا؟
+- هل يشتغل على الهاتف الذكي؟ اللوحات الالكترونية؟
+- هل تنصح بالبرمجة الثنائية؟ 
+- اعتبارات للاستعمال في قسم؟ مثلا إذا كان هناك فيديوهات، انصح المدرسين بعرضها في مسلاط لكل الفصل لمشاهتها جماعيا
 
-**Incorporate feedback at the end of the activity.** (E.g. “You finished 10 levels and learned about loops! Great job!”)
+**ضَمِّن التعليقات في نهاية النشاط.**(مثلا "أنهيت 10 مستويات وتعلم الحلقات! عمل رائع
 
-**Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourOfCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
+**شجع الطلاب على النشر في مواقع التواصل (إذا أمكن) عند الانتهاء.** مثلا "شاركت في ساعة البرمجة مع ________ هل قمت بذلك أيضا؟ #HourOfCode” أو "قمت ب #HourOfCode كجزء من #CSEdWeek. هل فعلت ذلك؟ @Scratch.” استعمل الهاشتاك **#HourOfCode** (بالحروف الكبيرة H, O, C)
 
-**Create your activity in Spanish or in other languages besides English.**
+**أنشئ نشاطك بالاسبانية أو بلغات أخرى إلى جانب الانجليزية.**
 
-**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
+**اشرح النشاط أو اربطه بسياق اجتماعي دال.** أصبحت برمجة الكمبيوتر قوة خارقة عندما يشاهد الطلاب كيف يمكن للعالم أن يتغير نحو الأفضل!
 
-**Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
+**تأكد من إمكانية استعمال الدورة في نموذج [البرمجة الثنائية](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). هذا مفيد خاصة لساعة البرمجة لأن العديد من الفصول الدراسية لا تتوفر على حاسوب لكل طالب.</p> 
 
-[**Back to the top**](#top)
+[**عودة إلى أعلى**](#top)
 
 <a id="tm"></a>
 
-## Trademark Guidelines
+## المبادئ التوجيهية للعلامة التجارية
 
-Many of our tutorial partners have used our trademark "Hour of Code" on their web sites. We don't want to prevent this usage, but we want to make sure usage falls within a few limits:
+العديد من دوراتنا استعملت علامة "ساعة البرمجة" على مواقعها الالكترونية. لا نريد منع هذا الاستعمال، لكن نريد أن يتم هذا الاستعمال في حدوده:
 
-1. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but that it rather references the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code™ at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
-2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
-3. Include language on the page (or in the the footer), including links to the Hour of Code, CSEdWeek and Code.org web sites, that says the following: a. “The '[Hour of Code](http://hourofcode.com)™' is a nationwide initiative by [Computer Science Education Week](http://csedweek.org) and [Code.org](http://code.org) to introduce millions of students to one hour of computer science and computer programming.”
-4. No use of "Hour of Code" in app names.
+1. كل إشارة إلى "ساعة البرمجية" يجب أن تستعمل دون الإيحاء إلى أنها اسم علامتك التجارية، لكن أن توحي إلى ساعة البرمجة كحركة مجتمعية. مثال جيد:" شارك في "Hour of Code™" على "ACMECorp.com". مثال سيء: "جرب ساعة البرمجة المقدمة من شركة "ACME Corp".
+2. استعمل العلامة "TM" في الأماكن التي تضع فيها "ساعة البرمجة"، في كل من موقعك الالكتروني أو توصيفات تطبيقك.
+3. ضَمِّن اللغة على الصفحة (أو في أسفلها)، ضَمِّن الروابط إلى مواقع ساعة البرمجة، أسبوع تدريس علوم الكمبيوتر و Code.org، التي تقول ما يلي. "[ساعة البرمجة](http://hourofcode.com)™' هي مبادرة وطنية من [أسبوع تدريس علوم الكمبيوتر](http://csedweek.org) و[Code.org](http://code.org) لتعريف ملايين الطلاب بساعة علوم الكمبيوتر والبرمجة المعلوماتية."
+4. لا تستعمل "Hour of Code" في أسماء التطبيقات.
 
-[**Back to the top**](#top)
+[**عودة إلى أعلى**](#top)
 
 <a id="pixel"></a>
 
-## Tracking Pixel
+## عداد الزوار
 
-In order to more accurately track participation we ask every tutorial partner to include a 1-pixel tracking image on the first page of their Hour of Code tutorials. The pixel-image must be on the start page only. Do not include on any interim pages of your tutorial.
+من أجل تتبع المشاركة نطلب من كل شريك البرامج التعليمية تضمين برنامج تتبع زوار المواقع (1-pixel image) في صفحتهم الأولى لدورات ساعة البرمجة الخاصة بهم. يجن أن يكون برنامج (1-pixel image) في صفحة البدائة فقط. لا تضعها في أي مكان آخر من صفحات دوراتك.
 
-This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
+هذا سيمكننا من عد مستعملي دورتك لساعة البرمجة. سيقودنا إلى عد دقيق لمستعملي دورتك.
 
-If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
+إذا تمت الموافقة على برنامجك التعليمي وتم إدراجه في اللائحة النهائية، فستمنحك Code.org برنامج تتبع وحيد خاص بك لتضمينه في دورتك. انظر المثال أسفله.
 
-NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
+ملاحظة: هذا غير مهم للتطبيقات التي يمكن تثبيتها (اليوس، الأندرويد، تطبيقات التي تثبت على الحاسوب)
 
-Example tracking pixels for AppInventor:
+مثال متابعة البيكسيلات لتطبيق (AppInventor):
 
 IMG SRC = <http://code.org/api/hour/begin_appinventor.png>   
 
 
-[**Back to the top**](#top)
+[**عودة إلى أعلى**](#top)
 
 <a id="promote"></a>
 
-## Promoting your activities, CSEdWeek, and Hour of Code
+## عرف بانشطتك، أسبوع تعليم الحاسوب، و ساعة البرمجة
 
-Please promote your activity to your network! Direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach 100 million total participants.
+المرجو الترويج لنشاطك على شبكتك! قم بتوجيههم إلى صفحة ساعة البرمجة الخاصة بك. مستعملو انشطتك سيتفاعلون معها بإيجابية اكثر عند تلقي رسائلك حول الانشطة المقدمة. استخدم حملة ساعة البرمجة الدولية لأسبوع تعليم علوم الحاسوب كذريعة لتشجيع المستعملين على دعوة الآخرين للانضمام، وتساعدنا على الوصول إلى 100 مليون مشترك.
 
-- Feature Hour of Code and CSEdWeek on your website. Ex: <http://www.tynker.com/hour-of-code>
-- Promote Hour of Code using social media, traditional media, mailing lists, etc, using hashtag #HourOfCode (with capital letters H, O, C)
-- Host a local event or ask your employees to host an event at local schools or community groups.
-- See our resource kit for further information (coming soon).
+- أعد ساعة البرمجة وأسبوع تدريس علوم الكمبيوتر على موقعك. مثال: <http://www.tynker.com/hour-of-code>
+- قم بدعاية لساعة البرمجة باستخدام الشبكات الاجتماعية، وسائل الإعلام التقليدية، البريد الالكتروني، إلخ، باستخدام الهاشتاك **#HourOfCode** (مع حروف H، O، C)
+- استضف حدثا محليا، أو أطلب من موظفيك استضافته في المدارس المحلية أو الجماعات المحلية.
+- راجع قائمة الموارد للحصول على مزيد من المعلومات (قريبا).
 
-[**Back to the top**](#top)
+[**عودة إلى أعلى**](#top)
 
 {{ signup_button }}

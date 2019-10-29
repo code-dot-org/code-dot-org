@@ -266,12 +266,18 @@ P5Lab.prototype.init = function(config) {
   });
 
   config.afterClearPuzzle = function() {
+    let startLibraries;
+    if (config.level.startLibraries) {
+      startLibraries = JSON.parse(config.level.startLibraries);
+    }
+    project.sourceHandler.setInitialLibrariesList(startLibraries);
     getStore().dispatch(setInitialAnimationList(this.startAnimations));
     this.studioApp_.resetButtonClick();
   }.bind(this);
 
   config.dropletConfig = dropletConfig;
   config.appMsg = this.isSpritelab ? spritelabMsg : gamelabMsg;
+  this.studioApp_.loadLibraryBlocks(config);
 
   // hide makeYourOwn on the share page
   config.makeYourOwn = false;
@@ -319,7 +325,8 @@ P5Lab.prototype.init = function(config) {
 
     // Store p5specialFunctions in the unusedConfig array so we don't give warnings
     // about these functions not being called:
-    config.unusedConfig = this.p5Wrapper.p5specialFunctions;
+    // Clone p5specialFunctions so we can remove 'setup' from unusedConfig but not p5specialFunctions
+    config.unusedConfig = [...this.p5Wrapper.p5specialFunctions];
     // remove 'setup' from unusedConfig so that we can show a warning for redefining it.
     if (config.unusedConfig.indexOf('setup') !== -1) {
       config.unusedConfig.splice(config.unusedConfig.indexOf('setup'), 1);
@@ -1017,6 +1024,7 @@ P5Lab.prototype.initInterpreter = function(attachDebugger = true) {
   code += this.studioApp_.getCode();
   this.JSInterpreter.parse({
     code,
+    libraryCode: this.level.libraryCode,
     blocks: dropletConfig.blocks,
     blockFilter: this.level.executePaletteApisOnly && this.level.codeFunctions,
     enableEvents: true,

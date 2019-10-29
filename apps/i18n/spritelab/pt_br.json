@@ -8,7 +8,7 @@
   "spritelabFeedbackCreateTwoSprites": "Você precisa criar exatamente dois sprites.",
   "spritelabFeedbackTwoSpritesWithCostumes": "Seus dois sprites precisam de roupas diferentes.",
   "spritelabFeedbackTwoSpritesWithCostumesAndBehaviors": "Você precisa criar dois sprites com trajes diferentes, cada um com um comportamento.",
-  "spritelabFeedbackClickSprite": "Certifique-se de clicar no seu sprite depois de pressionar \"Executar\".",
+  "spritelabFeedbackClickSprite": "Certifique-se de clicar no seu sprite depois de pressionar `Executar`.",
   "spritelabFeedbackUseSpinningBehavior": "Seu sprite precisa começar a girar. Tente mudar seu comportamento.",
   "spritelabFeedbackPinkAlienBehavior": "Seu sprite alienígena rosa não iniciou um comportamento.",
   "spritelabFeedbackCreateThreeAliens": "Você precisa criar um alien azul, um alien rosa e um alien amarelo.",

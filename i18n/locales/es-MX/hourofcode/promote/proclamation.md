@@ -6,55 +6,55 @@ nav: promote_nav
 
 {{ signup_button }}
 
-# Ejemplo de resolución de la semana para la educación de las ciencias de la computación
+# Ejemplo de resolución de la Semana por la Educación en Ciencias de la Computación
 
-### A continuación hay una muestra de resolución de apoyo a la Semana de Educación en Ciencias de la Computación y sus metas que puedan ser utilizados por los legisladores locales y estatales.
+### A continuación encontrarás un ejemplo de resolución de apoyo para la Semana por la Educación en Ciencias de la Computación y las metas que pueden seguir los legisladores locales y estatales.
 
 * * *
 
 #### **RESOLUCIÓN**  
 
 
-#### Apoya las metas y los ideales de "La Semana por la Educación de las Ciencias de la Computación"
+#### Apoyar las metas y los ideales de la "Semana por la Educación en Ciencias de la Computación"
 
-Mientras que la Semana por la Educación de la Informática resalta el rol crucial que la Informática juega transformando nuestra sociedad y cómo habilita la inovación y las oportunidades de reactivar la economía;
+Considerando que la Semana por la Educación en Ciencias de la Computación resalta el rol crucial que las ciencias de la computación tienen a la hora de transformar nuestra sociedad y cómo impulsan la innovación y crean oportunidades económicas;
 
-Visto que la tecnología de computación es una parte integral de la cultura y está transformando cómo la gente interactúa unos con otros y con el mundo alrededor de ellos;
+Considerando que la tecnología informática es una parte integral de la cultura moderna y transforma la manera en que las personas se relacionan entre sí y con el mundo que las rodea;
 
-Considerando que Ciencias de la Computación están transformando la industria, creando nuevos campos de comercio, impulsando la innovación en todos los campos de la ciencia y fortaleciendo la productividad en los sectores económicos establecidos;
+Considerando que las ciencias de la computación transforman la industria, crean nuevos campos de comercio, impulsan la innovación en todos los campos de la ciencia y fortalecen la productividad en los sectores económicos establecidos;
 
-Considerando que el campo de las Ciencias de computación sustenta el sector de tecnología de la información de nuestra economía, que es un contribuyente significativo al Pib de Estados Unidos;
+Considerando que el campo de las ciencias de la computación sustenta al sector de tecnologías de la información de nuestra economía, que es un contribuyente significativo al PBI de los Estados Unidos;
 
-Considerando que el campo de las Ciencias de la Computación es una ciencia fundamental para la era digital;
+Considerando que el campo de las ciencias de la computación es fundamental para la era digital;
 
-Considerando que el sector de tecnología de la información está posicionada excepcionalmente para ayudar con la recuperación económica a través de la investigación y desarrollo de nuevas innovaciones;
+Considerando que el sector de tecnologías de la información está en una posición única para ayudar a la recuperación económica a través de la investigación y el desarrollo de nuevas innovaciones;
 
-Considerando que las perspectivas para los trabajos de informática son brillantes, con más de 500,000 puestos vacantes en todo el país;
+Considerando que las perspectivas para los empleos en ciencias de la computación son prometedoras, con más de 500,000 puestos vacantes en todo el país;
 
-Considerando que proporcionan a los estudiantes la oportunidad de participar en actividades de alta calidad de Ciencias de la Computación que los expone a las generosas oportunidades que ofrece el campo y les proporciona la habilidad de pensamiento crítico que le servirá a lo largo de sus vidas;
+Considerando que proporcionar a los estudiantes la oportunidad de participar en actividades de ciencias de la computación de alta calidad, los expone a las generosas oportunidades que ofrece el campo y les proporciona la habilidad de pensamiento crítico que le servirá a lo largo de sus vidas;
 
-Considerando que todos los estudiantes merecen una preparación a fondo en la enseñanza en Ciencias de la Computación, incluyendo el acceso a maestros calificados, tecnología y la necesidad de un currículo apropiado para su edad para aprender Ciencias de la Computación en los niveles de educación primaria y secundaria;
+Considerando que todos los estudiantes merecen una enseñanza profunda en ciencias de la computación, que incluya el acceso a docentes calificados, tecnología y un plan de estudios adecuado para que puedan aprender ciencias de la computación en los niveles de educación primaria y secundaria;
 
-Considerando que la enseñanza de las Ciencias de la Computación tiene desafíos para abordar, incluyendo que las clases de Ciencias de la Computación cuenten para los requisitos de graduación de la secundaria y proveer desarrollo profesional para maestros de Ciencias de la Computación;
+Considerando que la enseñanza de las ciencias de la computación presenta desafíos, como la obligatoriedad de tomar clases de ciencias de la computación para graduarse de la escuela secundaria y el desarrollo profesional para docentes de ciencias de la computación;
 
-Considerando que la participación en la Hora del Código en la semana de la educación en Ciencias de la Computación puede servir para desmitificar el campo de las Ciencias de la Computación y alentar a más estudiantes a hacer estudios más avanzados de Ciencias de la Computación;
+Considerando que la participación en la Hora del Código durante la Semana por la Educación en Ciencias de la Computación puede servir para romper las barreras en el campo de las ciencias de la computación y alentar a más estudiantes a que sigan aprendiendo;
 
-Considerando que el campo de las Ciencias de la Computación abordan importantes problemas de equidad, que incluye atraer más la participación de mujeres y minorías subrepresentadas en todos los niveles y ramas;
+Considerando que el campo de las ciencias de la computación tiene importantes problemas de equidad que hay que resolver, como la necesidad de aumentar la participación de mujeres y minorías poco representadas en todos los niveles y ramas;
 
-Considerando que Grace Murray Hopper, una de las primeras mujeres en el campo de las Ciencias de la Computación, diseñó nuevos lenguajes de programación y fue pionera en las normas para los sistemas informáticos que sentaron las bases de muchos adelantos en Ciencias de la Computación; y
+Considerando que Grace Murray Hopper, una de las primeras mujeres en el campo de las ciencias de la computación, diseñó nuevos lenguajes de programación y fue pionera en las normas para los sistemas informáticos que sentaron las bases de muchos adelantos en ciencias de la computación; y
 
-Whereas the week of {{ campaign_date/start_long }}, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it <br />
+Considerando que la semana de {{ campaign_date/start_long }}, en honor al cumpleaños de Grace Hopper, es conocida como la 'Semana por la Educación en Ciencias de la Computación': por lo tanto, se <br />
 
-Resuelta, que la (CÁMARA o SENADO, ESTADO, CONDADO, CIUDAD o JUNTA ESCOLAR) --
+Resuelve que (CÁMARA o SENADO, ESTADO, CONDADO, CIUDAD o JUNTA ESCOLAR):
 
-(1) supports the designation of Computer Science Education Week ({{ campaign_date/full }});
+(1) apoya la designación de la Semana por la Educación en Ciencias de la Computación ({{ campaign_date/full }});
 
-(2) motivar a las escuelas, educadores, padres y legisladores a participar en la Semana de la Educación en Ciencias de la Computación permitiendo a sus estudiantes a participar en la Hora del Código;
+(2) motiva a escuelas, educadores, padres y legisladores a participar en la Semana por la Educación en Ciencias de la Computación al animar a sus estudiantes a que participen en la Hora del Código;
 
-(3) motivar a las escuelas, profesores, investigadores, universidades, empresarios y las autoridades para identificar mecanismos para que los profesores reciban desarrollo profesional de vanguardia para proporcionar experiencias de aprendizaje sostenible en Ciencias de la Computación en todos los niveles educativos y animar a los estudiantes a estar expuestos a conceptos de Ciencias de la Computación;
+(3) motiva a escuelas, docentes, investigadores, universidades, empresarios y legisladores a identificar mecanismos para que los docentes reciban desarrollo profesional de primer nivel para proporcionar experiencias de aprendizaje sostenibles en ciencias de la computación en todos los niveles educativos y animen a los estudiantes a incorporar los conceptos de las ciencias de la computación;
 
-(4) motivan a los legisladores para eliminar las barreras que impiden que las clases de Ciencias de la Computación sean tomadas en cuenta como los créditos de matemáticas o ciencias en los requisitos de graduación;
+(4) motiva a los legisladores a eliminar las barreras que impiden que las clases de ciencias de la computación sean tomadas en cuenta como créditos de matemáticas o ciencias en los requisitos de graduación;
 
-(5) fomenta oportunidades, incluso a través de los programas existentes, para mujeres y minorías subrepresentadas en Ciencias de la Computación.
+(5) fomenta oportunidades, incluso a través de los programas existentes, para mujeres y minorías poco representadas en ciencias de la computación.
 
 {{ signup_button }}

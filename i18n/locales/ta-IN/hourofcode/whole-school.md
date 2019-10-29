@@ -3,7 +3,7 @@ title: Whole School Participation
 layout: wide
 ---
 
-{{ signup_button }}
+{{signup_button}}
 
 # Get your whole school to participate
 

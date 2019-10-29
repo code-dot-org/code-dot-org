@@ -4,11 +4,14 @@ markdown <<MARKDOWN
 
 In some circumstances, it may be beneficial to use one compression format over the other. In lesson 5, students will explore different types of file formats and get a better understanding of the type of compression that’s working under the hood. According to the CSP Framework, students should know the general pros and cons of both types of compression as well as the trade-offs. 
 
->Essential Knowledge Statements Related to Compression:
 
+>Essential Knowledge Statements Related to Compression:
+>
 >- **EK 3.3.1C** There are trade-offs in using lossy and lossless compression techniques for storing and transmitting data.
-- **EK 3.3.1D** Lossless data compression reduces the number of bits stored or transmitted but allows complete reconstruction of the original data. 
-- **EK 3.3.1E** Lossy data compression can significantly reduce the number of bits stored or transmitted at the cost of being able to reconstruct only an approximation of the original data.
+>- **EK 3.3.1D** Lossless data compression reduces the number of bits stored or transmitted but allows complete reconstruction of the original data. 
+>- **EK 3.3.1E** Lossy data compression can significantly reduce the number of bits stored or transmitted at the cost of being able to reconstruct only an approximation of the original data.
+
+
 
 ## When to use Lossy or Lossless Compression: 
 

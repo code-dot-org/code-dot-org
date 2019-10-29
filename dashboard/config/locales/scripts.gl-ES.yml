@@ -1562,3 +1562,9 @@ gl:
               name: Condicionais
             Functions:
               name: Funcións
+        peru-2019:
+          stages:
+            Introduction:
+              name: Introdución
+            Nested Loops:
+              name: Bucles aniñados

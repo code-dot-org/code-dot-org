@@ -23,14 +23,18 @@ const styles = {
   tableName: {
     fontFamily: '"Gotham 5r", sans-serif',
     color: color.cyan
+  },
+  collapsibleContainer: {
+    paddingLeft: '16px'
   }
 };
 
 class LibraryCategory extends React.Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
-    datasets: PropTypes.arrayOf(PropTypes.object).isRequired,
-    description: PropTypes.string.isRequired
+    datasets: PropTypes.arrayOf(PropTypes.string).isRequired,
+    description: PropTypes.string.isRequired,
+    importTable: PropTypes.func.isRequired
   };
 
   state = {
@@ -47,7 +51,7 @@ class LibraryCategory extends React.Component {
     return (
       <div>
         <a style={styles.categoryName} onClick={this.toggleCollapsed}>
-          <FontAwesome icon={icon} />
+          <FontAwesome className="fa fa-fw" icon={icon} />
           <span>{this.props.name}</span>
           <span style={styles.tableNumber}>
             {this.props.datasets.length}{' '}
@@ -55,15 +59,15 @@ class LibraryCategory extends React.Component {
           </span>
         </a>
         {!this.state.collapsed && (
-          <div>
+          <div style={styles.collapsibleContainer}>
             <span style={styles.categoryDescription}>
               {this.props.description}
             </span>
-            {this.props.datasets.map(dataset => (
+            {this.props.datasets.map(tableName => (
               <LibraryTable
-                key={dataset.name}
-                name={dataset.name}
-                description={dataset.description}
+                key={tableName}
+                name={tableName}
+                importTable={this.props.importTable}
               />
             ))}
           </div>

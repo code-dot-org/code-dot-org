@@ -21,6 +21,10 @@ export const commands = {
     return coreLibrary.getNumBehaviorsForSpriteId(spriteId);
   },
 
+  getBehaviorsForSpriteId(spriteId) {
+    return coreLibrary.getBehaviorsForSpriteId(spriteId);
+  },
+
   getSpriteIdsInUse() {
     return coreLibrary.getSpriteIdsInUse();
   }

@@ -80,6 +80,7 @@ const SILENCED = [
   'tutorialExplorer',
   'cookieBanner',
   'regionalPartnerMiniContact',
+  'donorTeacherBanner',
 
   // other entry points
   'blockly',

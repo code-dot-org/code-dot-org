@@ -6,44 +6,44 @@ nav: promote_nav
 
 {{ signup_button }}
 
-# Write an op-ed in support of Computer Science Education Week
+# اكتب مقالا افتتاحيا لدعم أسبوع تدريس علوم الكمبيوتر
 
-### Below is a sample op-ed supportive of Computer Science Education Week–and its goals–that can be used by state and local legislators, business leaders, and more.
+### فيما يلي مثال مقال داعم لأسبوع تدريس علوم الكمبيوتر - وأهدافه- التي يمكن استعمالها من طرف مشرعين جهويين أو محليين، تجار كبار، وأكثر.
 
-### Visit [advocacy.code.org]({{ urls/advocacy }}) to find state specific information about computer science.
+### قم بزيارة [advocacy.code.org]({{ urls/advocacy }}) لإيجاد معلومات خاصة في الجهة حول علوم الكمبيوتر.
 
 ---
 
-#### Title: Computing…Where the Jobs Are
+#### عنوان: الحوسبة... حيث توجد الوظائف
 
-#### By [NAME] and [CONSIDER CO-AUTHORING WITH EDUCATOR, SUPERINTENDENT OR BUSINESS LEADER]
+#### بواسطة [NAME] و[CONSIDER CO-AUTHORING WITH EDUCATOR, SUPERINTENDENT OR BUSINESS LEADER]
 
-Computers are everywhere. They’re in our pockets. They’re on our walls. They’re in our cars. They’re a critical piece of our infrastructure, from power grids to traffic lights to the inner workings of our financial markets. And all of these computers have one thing in common. They depend on software to tell them what to do.
+الحواسب في كل مكان. إنها في جيوبنا. إنها في جدراننا. إنها في سياراتنا. إنها جزء مهم في بنيتنا التحتية، من شبكة الكهرباء إلى إشارات المرور إلى الاشتغال الداخلي لأسواقنا المالية. وكل هذه الحواسيب لديها شيء مشترك واحد. تتعلق بالبرنامج لتطلب منها ما ستقوم به.
 
-But who exactly is going to write this software?
+لكن ما الذي سيكتبه بالضبط هذا البرنامج؟
 
-Considering how fast our world is being transformed by technology, you might expect the number of students studying computer science in K-12 education today to be at an all-time high. You’d be wrong. In fact, fewer students are studying computer science, and fewer schools are teaching it, than a decade ago.
+بالنظر إلى سرعة تحول عالمنا بواسطة التكنولوجيا، يمكن أن تتوقع أن يكون عدد الطلاب الذين يدرسون علوم الكمبيوتر في K-12 اليوم هو الأعلى على الإطلاق. ستكون مخطئا. في الحقيقة، قليل من الطلاب يدرسون علوم الكمبيوتر، وقليل من المدارس تدرسها قبل عقد من الزمن.
 
-At a time when demand for skilled programmers has never been higher, we’re turning out fewer computer scientists. Even in this time of high unemployment, thousands of jobs, many of them right here in **[INSERT STATE/CITY]**, are going unfilled for lack of enough individuals with the right skill sets.
+في وقت لم يكن فيه الطلب على المبرمجين كبيرا، لدينا عدد قليل من الإعلامياتيين. حتى في هذه الفترة من معدل بطالة كبير، آلاف الوظائف. العديد منها هنافي **[INSERT STATE/CITY]**، تبقى شاغرة بسبب عدم امتلاك الأفراد المهارات المطلوبة.
 
-Why is this? And how can we address it?
+لماذا هذا؟ وكيف سنعالجه؟
 
-The problem begins in our middle and high schools. Nine out of ten of our schools do not offer computer programming classes. In **[SCHOOL DISTRICT]** last year, only **[NUMBER]** students took the college-level Advanced Placement (AP) Computer Science Exam, just **[%]** of all students who took an AP in our state. We’re simply not doing enough to prepare or encourage our students to pursue these high-paying, vital careers.
+المشكل يبدأ في مؤسساتنا الإعدادية والثانوية. تسعة من عشرة مدارس لا تتوفر على أقسام لتدريس البرمجة على الحاسوب. في **[SCHOOL DISTRICT]** خلال السنة الماضية، فقط **[NUMBER]** من الطلاب اجتازوا امتحان علوم الكمبيوتر في المستوى الإعدادي المتقدم، فقط **[%]** من الذلاب من نجحوا فيه في ولايتنا. ببساطة لا نبذل جهدا أكبر لإعداد أو تشجيع طلابنا لمتابعة هذه المهن الحيوية العالية الأجر.
 
-Nearly all major computing innovations were invented here in this country, but we’re at risk of losing that leadership if we don’t do something now.
+كل الاختراعات الرئيسية تم اختراعها تقريبا في هذا البلد، لكننا معرضون لخطر فقدان الريادة إن لم شيئا الآن.
 
-We need to make some changes.
+نحتاج إلى القيام ببعض التغييرات.
 
 **[OPTIONAL FOR STATES WHERE THIS APPLIES]**
 
-One positive change would be to allow rigorous computer science courses to satisfy a high school math or science graduation requirement. In **[INSERT STATE]**, computer science courses are electives. Given academic demands, students cannot afford to take elective computer science courses. And making this change can have a big impact. In states where computer science courses count toward graduation requirements, courses are fifty percent larger with much higher rates of participation by underserved minorities than states that treat computer science as an elective.
+تغيير إيجابي يجب أن يحصل وهو إتاحة الفرصة لدروس صارمة في علوم الكمبيوتر لتلبية الرياضيات والعلوم في التخرج من المدارس الثانوية. في **[INSERT STATE]**، دورات علوم الكمبيوتر اختيارية. نظرا للمتطلبات الأكاديمية، فالطلاب لن يستطيعوا تحمل دراسة دروس اختيارية في علوم الكمبيوتر. والقيام بهذا التغيير سيكون له تأثير كبير. في الولايات التي يتم فيها احتساب دروس علوم الكمبيوتر كمعيار للنجاح، تكون فيها الدروس أكبر بخمسين بالمئة ونسب المشاركة للأقليات تمثيليا مرتفعة أكثر من الولايات التي تكون فيها علوم الكمبيوتر اختيارية.
 
-We should also work with students at a young age to spark their interest in computer science and coding. Our children should not just know how to use apps and play video games – they should know how to create them. Children can learn the basics of coding as early as the second grade.
+يجب علينا أيضا أن نعمل مع الطلاب في سن مبكرة لإثارة اهتمامهم بعلوم الكمبيوتر والبرمجة. يجب على أطفالنا ألا يعرفوا فقط كيفية استعمال ولعب ألعاب الفيديو - يجب عليهم معرفة كيفية إنشائها. يمكن للأطفال تعلم أساسيات البرمجة باكرا في المستوى الثاني.
 
-We need to recruit more computer science teachers and encourage professional development within their field. Today there are many online resources that can help teachers access and keep up to date with the latest technology for their students.
+نحتاج لتوظيف مدرسي علوم الكمبيوتر أكثر لتشجيع التطوير المهني في مجالهم. اليوم، هناك العديد من موارد على الأنترنت التي يمكن أن تساعد المدرسين على الولوج إلى أحدث التكنولوجيات لطلابهم ومواكبتها.
 
-According to the Bureau of Labor Statistics, by 2020, there will be 9.2 million jobs in STEM fields. Half of those jobs—4.6 million—will be in computing or information technology. And computer science is increasingly foundational knowledge for the 21st Century. Who will fill these jobs if our children are not given the opportunity to gain the skills needed?
+حسب إحصائيات مكتب دراسات، في 2020 سيكون هنا 9.2 مليون منصب عمل في مجال العلوم والتكنولوجيا والهندسة والرياضيات. نصف هذه الوظائف -4.6 ملوين- سيكون حول تكنولوجيا المعلوميات. وعلوم الكمبيوتر أصبحت معرفة ضرورية أساسية للقرن 21. من سيتولى هذه المناصب إن لم يكن لأولادنا فرصة اكتساب المهارات المطلوبة؟
 
-This week, {{ campaign_date/full }}, is Computer Science Education Week. In schools throughout **[STATE]**, our students will be participating in a national Hour of Code, demystifying the subject of computer science and hopefully whetting their appetites to go on and learn more. I will be joining them, and I invite you to join in as well. Everyone should learn how to code. Visit https://hourofcode.com/{{ country }} to learn more and get started. And support our efforts to bring computer science to more schools in **[STATE]**.
+هذه الأسبوع، {{ campaign_date/full }}، هو أسبوع تدريس علوم الكمبيوتر. في المدراس في **[STATE]**، سيشارك طلابنا في ساعة البرمجة وطنية، لإزالة الغموض حول موضوع علوم الكمبيوتر آملين فتح شهيتهم للذهاب أبعد والتعلم أكثر. سأنضم إلهم، وأدعوك للانضمام ايضا. يجب أن يتعلم كل واحد كيف يبرمج. زر https://hourofcode.com/{{ country }} للمزيد من التفاصيل والبدء. وادعم مجهوداتنا لحمل علوم الكمبيوتر إلى مدارس أكثر في **[STATE]**.
 
 {{ signup_button }}

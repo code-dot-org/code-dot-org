@@ -614,10 +614,12 @@ sk-SK:
         - {}
         - {}
       CSD U3 Card Examples_2018:
+        title: Vytvorenie interaktívnej pohľadnice
         markdown: "# Tvoja interaktívna pohľadnica\n\nV nasledujúcich cvičeniach dokonči
           vlastnú interaktívnu pohľadnicu. Príklady pohľadníc si pozri nižšie. Nezabudni
           sa pozrieť aj na kód, aby si zistil/a ako funguje. \n\n## Príklady\n\n[![](https://images.code.org/7bbdbbb01c354a7c09bb4b9b5182a951-image-1522780803299.png)](https://studio.code.org/projects/gamelab/OzdFqrZ4oHPYsTddaRWaZxtTvdj9NzZVwCq6NkyONXM/edit)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/ed307e22854e4958a006d8023636cfd5-image-1522780803295.png)](https://studio.code.org/projects/gamelab/fmFrWsocELzP19CfbGI5P_hsgxN5ewVaB5f0Bw5S1_E/edit)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/ae0eca1dab46f13fcb21d4d0e264d637-image-1522780803298.png)](https://studio.code.org/projects/gamelab/z4XDrC0lsqoRY0xzYaXdJfChmyCl5O6YM-EOByecscc/edit)\n"
       CSD U3 Card Examples_2018_2019:
+        title: Vytvorenie interaktívnej pohľadnice
         markdown: "# Tvoja interaktívna pohľadnica\n\nV nasledujúcich cvičeniach dokonči
           vlastnú interaktívnu pohľadnicu. Príklady pohľadníc si pozri nižšie. Nezabudni
           sa pozrieť aj na kód, aby si zistil/a ako funguje. \n\n## Príklady\n\n[![](https://images.code.org/7bbdbbb01c354a7c09bb4b9b5182a951-image-1522780803299.png)](https://studio.code.org/projects/gamelab/OzdFqrZ4oHPYsTddaRWaZxtTvdj9NzZVwCq6NkyONXM/edit)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/ed307e22854e4958a006d8023636cfd5-image-1522780803295.png)](https://studio.code.org/projects/gamelab/fmFrWsocELzP19CfbGI5P_hsgxN5ewVaB5f0Bw5S1_E/edit)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/ae0eca1dab46f13fcb21d4d0e264d637-image-1522780803298.png)](https://studio.code.org/projects/gamelab/z4XDrC0lsqoRY0xzYaXdJfChmyCl5O6YM-EOByecscc/edit)\n"
@@ -742,27 +744,47 @@ sk-SK:
       CSD U3 combining rep_2018_2019:
         title: nadpis
       CSD U3 drawSprites placement match:
+        title: drawSprites
+        content1: Spoj kód s obrázkom, ktorý vytvorí.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: <img src="https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08
+            AM.png">
+        - text: <img src="https://images.code.org/653dff2d49f07341b2f2552747212b34-image-1523901253222.59.21
+            AM.png">
+        - text: <img src="https://images.code.org/db71e0cde6861faabc0b5a55d67c739e-image-1523901253227.58.12
+            AM.png">
+        - text: <img src="https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34
+            AM.png">
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: <img width="300px" src="https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48
+            AM.png">
+        - text: <img src="https://images.code.org/2fbe4029dc47f6f048e7c9f90ac99cac-image-1523902103485.25.09
+            AM.png">
+        - text: <img src="https://images.code.org/c4cb49e00f7087765865da87cff37549-image-1523902103477.58.00
+            AM.png">
+        - text: <img src="https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28
+            AM.png">
       CSD U3 drawSprites placement match_2019:
+        title: drawSprites
+        content1: Spoj kód s obrázkom, ktorý vytvorí.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: <img src="https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08
+            AM.png">
+        - text: <img src="https://images.code.org/653dff2d49f07341b2f2552747212b34-image-1523901253222.59.21
+            AM.png">
+        - text: <img src="https://images.code.org/db71e0cde6861faabc0b5a55d67c739e-image-1523901253227.58.12
+            AM.png">
+        - text: <img src="https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34
+            AM.png">
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: <img width="300px" src="https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48
+            AM.png">
+        - text: <img src="https://images.code.org/2fbe4029dc47f6f048e7c9f90ac99cac-image-1523902103485.25.09
+            AM.png">
+        - text: <img src="https://images.code.org/c4cb49e00f7087765865da87cff37549-image-1523902103477.58.00
+            AM.png">
+        - text: <img src="https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28
+            AM.png">
       CSD U3 game intro:
         markdown: "# Vytvor svoju vlastnú hru\n\nKeď si sa naučil/a všetko, čo potrebuješ,
           je čas urobiť si vlastnú hru! S partnerom popremýšľajte nad rôznymi nápadmi.
@@ -1924,27 +1946,39 @@ sk-SK:
 
       courseF_multi_artist_for10_predict1:
         questions:
-        - {}
+        - text: Čo sa stane, ked stlačíš "Spustiť"?
         answers:
-        - {}
-        - {}
-        - feedback: Správne!
+        - text: Umelec nakreslí rovnú čiaru, ktorá zväčšuje svoju šírku ako ide z
+            jednej strany hracej plochy ku druhej.
+        - text: 'Umelec nakreslí špirálu a vždy, keď prejde cez cyklus `for`, tak
+            čiara bude dlhšia a tenšía. '
+        - text: Umelec nakreslí špirálu a vždy, keď prejde cez cyklus `for`, tak čiara
+            bude dlhšia a hrubšia.
+          feedback: Správne!
         - text: Neviem.
       courseF_multi_artist_for10_predict1_2018:
         questions:
-        - {}
+        - text: Čo sa stane, ked stlačíš "Spustiť"?
         answers:
-        - {}
-        - {}
-        - feedback: Správne!
+        - text: Umelec nakreslí rovnú čiaru, ktorá zväčšuje svoju šírku ako ide z
+            jednej strany hracej plochy ku druhej.
+        - text: 'Umelec nakreslí špirálu a vždy, keď prejde cez cyklus `for`, tak
+            čiara bude dlhšia a tenšía. '
+        - text: Umelec nakreslí špirálu a vždy, keď prejde cez cyklus `for`, tak čiara
+            bude dlhšia a hrubšia.
+          feedback: Správne!
         - text: Neviem.
       courseF_multi_artist_for10_predict1_2018_2019:
         questions:
-        - {}
+        - text: Čo sa stane, ked stlačíš "Spustiť"?
         answers:
-        - {}
-        - {}
-        - feedback: Správne!
+        - text: Umelec nakreslí rovnú čiaru, ktorá zväčšuje svoju šírku ako ide z
+            jednej strany hracej plochy ku druhej.
+        - text: 'Umelec nakreslí špirálu a vždy, keď prejde cez cyklus `for`, tak
+            čiara bude dlhšia a tenšía. '
+        - text: Umelec nakreslí špirálu a vždy, keď prejde cez cyklus `for`, tak čiara
+            bude dlhšia a hrubšia.
+          feedback: Správne!
         - text: Neviem.
       courseF_multi_artist_fwp2_predict1:
         questions:
@@ -2039,7 +2073,7 @@ sk-SK:
         - text: 'Neviem. '
       courseF_multi_bee_fwp9_predict1:
         questions:
-        - {}
+        - text: Čo sa stane, ked stlačíš "Spustiť"?
         answers:
         - {}
         - {}

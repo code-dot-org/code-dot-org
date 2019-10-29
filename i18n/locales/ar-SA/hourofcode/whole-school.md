@@ -5,6 +5,6 @@ layout: wide
 
 {{ signup_button }}
 
-# Get your whole school to participate
+# اجعل مدرستك تشارك بأكملها
 
-Information about getting whole schools to participate in the Hour of Code will go here.
+المعلومات حول مشاركة المدارس بأكملها في ساعة البرمجة ستكون هنا.

@@ -25,16 +25,10 @@ db_writer: 'mysql://root@localhost/'
 <% end -%>
 
 db_cluster_id: test-cluster
-pegasus_skip_asset_map: <%=ci_test%>
 netsim_enable_metrics: true
 stub_school_data: true
 daemon: true
 use_pusher: <%=!ci_test%>
-
-# test environment should use precompiled, minified, digested assets like production,
-# unless it's being used for unit tests. This logic should be kept in sync with
-# the logic for setting config.assets.* under dashboard/config/.
-pretty_js: <%=ci_test%>
 
 # Since channel ids are derived from user id and other sequential integer ids
 # use a new S3 sources directory for each Test Build to prevent a UI test

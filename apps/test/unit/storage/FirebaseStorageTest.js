@@ -1,7 +1,10 @@
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/deprecatedChai';
 import {initFirebaseStorage} from '@cdo/apps/storage/firebaseStorage';
+import {WarningType} from '@cdo/apps/storage/constants';
+import {tableType} from '@cdo/apps/storage/redux/data';
 import {
   getProjectDatabase,
+  getSharedDatabase,
   getConfigRef
 } from '@cdo/apps/storage/firebaseUtils';
 
@@ -31,6 +34,25 @@ describe('FirebaseStorage', () => {
         getProjectDatabase().set(null);
       });
   });
+
+  function validateTableData(expectedTableData, done) {
+    const rowCountRef = getProjectDatabase().child(
+      'counters/tables/mytable/rowCount'
+    );
+    rowCountRef
+      .once('value')
+      .then(snapshot => {
+        expect(snapshot.val()).to.equal(Object.keys(expectedTableData).length);
+        const recordsRef = getProjectDatabase().child(
+          'storage/tables/mytable/records'
+        );
+        return recordsRef.once('value');
+      })
+      .then(snapshot => {
+        expect(snapshot.val()).to.deep.equal(expectedTableData);
+        done();
+      });
+  }
 
   describe('setKeyValue', () => {
     it('sets a string value', done => {
@@ -96,7 +118,7 @@ describe('FirebaseStorage', () => {
           throw 'unexpectedly allowed key name with ascii control code';
         },
         error => {
-          expect(error.indexOf('illegal character code') !== -1).to.be.true;
+          expect(error.type).to.equal(WarningType.KEY_INVALID);
           verifyNoKeys();
         }
       );
@@ -119,7 +141,7 @@ describe('FirebaseStorage', () => {
         'baz',
         () => verifyValueAndWarning(),
         error => {
-          expect(error.indexOf('renamed') !== -1).to.be.true;
+          expect(error.type).to.equal(WarningType.KEY_RENAMED);
           didWarn = true;
         }
       );
@@ -144,7 +166,7 @@ describe('FirebaseStorage', () => {
 
       function getKeyValue() {
         FirebaseStorage.getKeyValue('key/slash', verifyGetKeyValue, error => {
-          expect(error).to.include('renamed');
+          expect(error.type).to.equal(WarningType.KEY_RENAMED);
           didWarn = true;
         });
       }
@@ -219,7 +241,7 @@ describe('FirebaseStorage', () => {
             throw 'unexpectedly allowed to create 4th table';
           },
           error => {
-            expect(error.indexOf('maximum number of tables') !== -1).to.be.true;
+            expect(error.type).to.equal(WarningType.MAX_TABLES_EXCEEDED);
             done();
           }
         );
@@ -376,11 +398,190 @@ describe('FirebaseStorage', () => {
             throw 'unexpectedly allowed to create 4th table';
           },
           error => {
-            expect(error.indexOf('maximum number of tables') !== -1).to.be.true;
+            expect(error.type).to.equal(WarningType.MAX_TABLES_EXCEEDED);
             done();
           }
         );
       }
+    });
+
+    it('Cannot overwrite existing project table', done => {
+      const expectedTableData = {
+        1: '{"id":1,"col1":"value1"}'
+      };
+      getSharedDatabase()
+        .child('counters/tables/mytable')
+        .set({lastId: 1, rowCount: 1});
+      getSharedDatabase()
+        .child('storage/tables/mytable/records')
+        .set(expectedTableData);
+
+      FirebaseStorage.copyStaticTable(
+        'mytable',
+        () => {
+          FirebaseStorage.createTable(
+            'mytable',
+            () => {
+              throw 'unexpectedly allowed to overwrite existing table';
+            },
+            error => {
+              expect(error.type).to.equal(WarningType.DUPLICATE_TABLE_NAME);
+              done();
+            }
+          );
+        },
+        () => {
+          throw 'error';
+        }
+      );
+    });
+
+    it('Cannot overwrite existing current table', done => {
+      const expectedTableData = {
+        1: '{"id":1,"col1":"value1"}'
+      };
+      getSharedDatabase()
+        .child('counters/tables/mytable')
+        .set({lastId: 1, rowCount: 1});
+      getSharedDatabase()
+        .child('storage/tables/mytable/records')
+        .set(expectedTableData);
+
+      FirebaseStorage.addCurrentTableToProject(
+        'mytable',
+        () => {
+          FirebaseStorage.createTable(
+            'mytable',
+            () => {
+              throw 'unexpectedly allowed to overwrite existing table';
+            },
+            error => {
+              expect(error.type).to.equal(WarningType.DUPLICATE_TABLE_NAME);
+              done();
+            }
+          );
+        },
+        () => {
+          throw 'error';
+        }
+      );
+    });
+  });
+
+  describe('addCurrentTableToProject', () => {
+    it('Sets the flag in the current_tables', done => {
+      const expectedTableData = {
+        1: '{"id":1,"col1":"value1"}'
+      };
+      getSharedDatabase()
+        .child('counters/tables/mytable')
+        .set({lastId: 1, rowCount: 1});
+      getSharedDatabase()
+        .child('storage/tables/mytable/records')
+        .set(expectedTableData);
+
+      FirebaseStorage.addCurrentTableToProject(
+        'mytable',
+        () => {
+          getProjectDatabase()
+            .child('current_tables/mytable')
+            .once('value')
+            .then(snapshot => {
+              expect(snapshot.val()).to.be.true;
+              done();
+            });
+        },
+        err => {
+          throw err;
+        }
+      );
+    });
+
+    it('Cannot overwrite existing project table', done => {
+      FirebaseStorage.createTable(
+        'mytable',
+        () => {
+          FirebaseStorage.addCurrentTableToProject(
+            'mytable',
+            () => {
+              throw 'unexpectedly allowed to overwrite existing table';
+            },
+            error => {
+              expect(error.type).to.equal(WarningType.DUPLICATE_TABLE_NAME);
+              done();
+            }
+          );
+        },
+        () => {
+          throw 'error';
+        }
+      );
+    });
+  });
+
+  describe('copyStaticTable', () => {
+    it('Copies the records and counters from shared channel', done => {
+      const expectedTableData = {
+        1: '{"id":1,"name":"alice","age":7,"male":false}',
+        2: '{"id":2,"name":"bob","age":8,"male":true}',
+        3: '{"id":3,"name":"charlie","age":9,"male":true}'
+      };
+      getSharedDatabase()
+        .child('counters/tables/mytable')
+        .set({lastId: 3, rowCount: 3});
+      getSharedDatabase()
+        .child('storage/tables/mytable/records')
+        .set(expectedTableData);
+
+      FirebaseStorage.copyStaticTable(
+        'mytable',
+        () => validateTableData(expectedTableData, done),
+        () => {
+          throw 'error';
+        }
+      );
+    });
+
+    it('Cannot overwrite an existing project table', done => {
+      FirebaseStorage.createTable(
+        'mytable',
+        () => {
+          FirebaseStorage.copyStaticTable(
+            'mytable',
+            () => {
+              throw 'unexpectedly allowed to overwrite existing table';
+            },
+            error => {
+              expect(error.type).to.equal(WarningType.DUPLICATE_TABLE_NAME);
+              done();
+            }
+          );
+        },
+        () => {
+          throw 'error';
+        }
+      );
+    });
+
+    it('Cannot overwrite an existing current table', done => {
+      FirebaseStorage.addCurrentTableToProject(
+        'mytable',
+        () => {
+          FirebaseStorage.copyStaticTable(
+            'mytable',
+            () => {
+              throw 'unexpectedly allowed to overwrite existing table';
+            },
+            error => {
+              expect(error.type).to.equal(WarningType.DUPLICATE_TABLE_NAME);
+              done();
+            }
+          );
+        },
+        () => {
+          throw 'error';
+        }
+      );
     });
   });
 
@@ -419,9 +620,14 @@ describe('FirebaseStorage', () => {
       );
 
       function deleteTable() {
-        FirebaseStorage.deleteTable('mytable', verifyNoTable, error => {
-          throw error;
-        });
+        FirebaseStorage.deleteTable(
+          'mytable',
+          tableType.PROJECT,
+          verifyNoTable,
+          error => {
+            throw error;
+          }
+        );
       }
 
       function verifyNoTable() {
@@ -701,10 +907,8 @@ describe('FirebaseStorage', () => {
       }
 
       let onErrorCalled = false;
-      function validateError(msg) {
-        expect(msg).to.equal(
-          'Not all values in column "foo" could be converted to type "boolean".'
-        );
+      function validateError(error) {
+        expect(error.type).to.equal(WarningType.CANNOT_CONVERT_COLUMN_TYPE);
         onErrorCalled = true;
       }
 
@@ -755,10 +959,8 @@ describe('FirebaseStorage', () => {
       }
 
       let onErrorCalled = false;
-      function validateError(msg) {
-        expect(msg).to.equal(
-          'Not all values in column "foo" could be converted to type "number".'
-        );
+      function validateError(error) {
+        expect(error.type).to.equal(WarningType.CANNOT_CONVERT_COLUMN_TYPE);
         onErrorCalled = true;
       }
 
@@ -824,9 +1026,7 @@ describe('FirebaseStorage', () => {
 
     it('loads new table data when no previous data exists', done => {
       const overwrite = false;
-      FirebaseStorage.populateTable(
-        NEW_TABLE_DATA_JSON,
-        overwrite,
+      FirebaseStorage.populateTable(NEW_TABLE_DATA_JSON, overwrite).then(
         () => verifyTable(NEW_TABLE_DATA).then(done),
         error => {
           throw error;
@@ -845,9 +1045,7 @@ describe('FirebaseStorage', () => {
             .set(EXISTING_COUNTER_DATA)
         )
         .then(() => {
-          FirebaseStorage.populateTable(
-            NEW_TABLE_DATA_JSON,
-            overwrite,
+          FirebaseStorage.populateTable(NEW_TABLE_DATA_JSON, overwrite).then(
             () => verifyTable(EXISTING_TABLE_DATA).then(done),
             error => {
               throw error;
@@ -865,9 +1063,7 @@ describe('FirebaseStorage', () => {
         .child(`storage/tables`)
         .set(EXISTING_TABLE_DATA)
         .then(() => {
-          FirebaseStorage.populateTable(
-            NEW_TABLE_DATA_JSON,
-            overwrite,
+          FirebaseStorage.populateTable(NEW_TABLE_DATA_JSON, overwrite).then(
             () => verifyTable(NEW_TABLE_DATA).then(done),
             error => {
               throw error;
@@ -887,9 +1083,7 @@ describe('FirebaseStorage', () => {
             .set(EXISTING_COUNTER_DATA)
         )
         .then(() => {
-          FirebaseStorage.populateTable(
-            NEW_TABLE_DATA_JSON,
-            overwrite,
+          FirebaseStorage.populateTable(NEW_TABLE_DATA_JSON, overwrite).then(
             () => verifyTable(NEW_TABLE_DATA).then(done),
             error => {
               throw error;
@@ -901,14 +1095,9 @@ describe('FirebaseStorage', () => {
     it('prints a friendly error message when given bad table json', done => {
       const overwrite = false;
 
-      FirebaseStorage.populateTable(
-        BAD_JSON,
-        overwrite,
-        () => {
-          throw 'expected JSON error to be reported';
-        },
-        validateError
-      );
+      FirebaseStorage.populateTable(BAD_JSON, overwrite).then(() => {
+        throw 'expected JSON error to be reported';
+      }, validateError);
 
       function validateError(error) {
         expect(error).to.contain('SyntaxError');
@@ -1041,6 +1230,42 @@ describe('FirebaseStorage', () => {
       }
     });
 
+    it('can read a current table', done => {
+      const tableData = {
+        1: '{"id":1,"name":"alice","age":7,"male":false}',
+        2: '{"id":2,"name":"bob","age":8,"male":true}',
+        3: '{"id":3,"name":"charlie","age":9,"male":true}'
+      };
+      getSharedDatabase()
+        .child('counters/tables/mytable')
+        .set({lastId: 3, rowCount: 3});
+      getSharedDatabase()
+        .child('storage/tables/mytable/records')
+        .set(tableData);
+
+      getProjectDatabase()
+        .child('current_tables/mytable')
+        .set(true);
+
+      const expectedRecords = [
+        {id: 1, name: 'alice', age: 7, male: false},
+        {id: 2, name: 'bob', age: 8, male: true},
+        {id: 3, name: 'charlie', age: 9, male: true}
+      ];
+
+      FirebaseStorage.readRecords(
+        'mytable',
+        {},
+        records => {
+          expect(records).to.deep.equal(expectedRecords);
+          done();
+        },
+        err => {
+          throw 'error';
+        }
+      );
+    });
+
     it('returns [] for a table with no rows', done => {
       FirebaseStorage.createTable(
         'emptytable',
@@ -1087,30 +1312,11 @@ describe('FirebaseStorage', () => {
       FirebaseStorage.importCsv(
         'mytable',
         csvData,
-        validateTableData,
+        () => validateTableData(expectedTableData, done),
         error => {
           throw error;
         }
       );
-
-      function validateTableData() {
-        const rowCountRef = getProjectDatabase().child(
-          'counters/tables/mytable/rowCount'
-        );
-        rowCountRef
-          .once('value')
-          .then(snapshot => {
-            expect(snapshot.val()).to.equal(3);
-            const recordsRef = getProjectDatabase().child(
-              'storage/tables/mytable/records'
-            );
-            return recordsRef.once('value');
-          })
-          .then(snapshot => {
-            expect(snapshot.val()).to.deep.equal(expectedTableData);
-            done();
-          });
-      }
     });
 
     it('overwrites existing data', done => {
@@ -1127,30 +1333,11 @@ describe('FirebaseStorage', () => {
         FirebaseStorage.importCsv(
           'mytable',
           csvData,
-          validateTableData,
+          () => validateTableData(expectedTableData, done),
           error => {
             throw error;
           }
         );
-      }
-
-      function validateTableData() {
-        const rowCountRef = getProjectDatabase().child(
-          'counters/tables/mytable/rowCount'
-        );
-        rowCountRef
-          .once('value')
-          .then(snapshot => {
-            expect(snapshot.val()).to.equal(3);
-            const recordsRef = getProjectDatabase().child(
-              'storage/tables/mytable/records'
-            );
-            return recordsRef.once('value');
-          })
-          .then(snapshot => {
-            expect(snapshot.val()).to.deep.equal(expectedTableData);
-            done();
-          });
       }
     });
 
@@ -1165,7 +1352,7 @@ describe('FirebaseStorage', () => {
           throw 'expected import to fail on large record';
         },
         error => {
-          expect(error).to.contain('one of of the records is too large');
+          expect(error.type).to.equal(WarningType.IMPORT_FAILED);
           done();
         }
       );
@@ -1180,7 +1367,7 @@ describe('FirebaseStorage', () => {
           throw 'expected import to fail on large table';
         },
         error => {
-          expect(error).to.contain('the data is too large');
+          expect(error.type).to.equal(WarningType.IMPORT_FAILED);
           done();
         }
       );

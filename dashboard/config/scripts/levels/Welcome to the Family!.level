@@ -1,0 +1,18 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2019-10-07T23:23:41.000Z",
+  "level_num": "custom",
+  "user_id": 948,
+  "properties": {
+    "encrypted": "false",
+    "video_key": "csp-pd-welcome",
+    "instructions_important": "false",
+    "long_instructions": "When you're ready, click continue below to get started with your Online Introduction to Professional Development.",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</StandaloneVideo>

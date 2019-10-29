@@ -1,5 +1,6 @@
 class Ability
   include CanCan::Ability
+  include Pd::Application::ActiveApplicationModels
 
   # Define abilities for the passed in user here. For more information, see the
   # wiki at https://github.com/ryanb/cancan/wiki/Defining-Abilities.
@@ -32,7 +33,6 @@ class Ability
       :pd_teacher_attendance_report,
       :pd_workshop_summary_report,
       Pd::CourseFacilitator,
-      Pd::TeacherApplication,
       :workshop_organizer_survey_report,
       :pd_workshop_user_management,
       :pd_workshop_admins,
@@ -45,9 +45,21 @@ class Ability
       Pd::Application::Facilitator1920Application,
       Pd::Application::Teacher1819Application,
       Pd::Application::Teacher1920Application,
+      Pd::Application::Teacher2021Application,
       Pd::InternationalOptIn,
       :maker_discount
     ]
+    cannot :index, Level
+
+    # If you can see a level, you can also do these things:
+    can [:embed_level, :get_rubric], Level do |level|
+      can? :read, level
+    end
+
+    # If you can update a level, you can also do these things:
+    can [:edit_blocks, :update_blocks, :update_properties], Level do |level|
+      can? :update, level
+    end
 
     if user.persisted?
       can :manage, user
@@ -62,13 +74,16 @@ class Ability
       can :destroy, Follower, student_user_id: user.id
       can :read, UserPermission, user_id: user.id
       can [:show, :pull_review, :update], PeerReview, reviewer_id: user.id
-      can :create, Pd::TeacherApplication, user_id: user.id
       can :create, Pd::RegionalPartnerProgramRegistration, user_id: user.id
       can :read, Pd::Session
       can :manage, Pd::Enrollment, user_id: user.id
       can :workshops_user_enrolled_in, Pd::Workshop
       can :index, Section, user_id: user.id
       can [:get_feedbacks, :count, :increment_visit_count, :index], TeacherFeedback, student_id: user.id
+
+      can :list_projects, Section do |section|
+        can?(:manage, section) || user.sections_as_student.include?(section)
+      end
 
       if user.teacher?
         can :manage, Section, user_id: user.id
@@ -86,10 +101,8 @@ class Ability
           !script.professional_learning_course?
         end
         can [:read, :find], :regional_partner_workshops
-        can [:new, :create, :read], Pd::Application::Facilitator1819Application, user_id: user.id
-        can [:new, :create, :read], Pd::Application::Facilitator1920Application, user_id: user.id
-        can [:new, :create, :read], Pd::Application::Teacher1819Application, user_id: user.id
-        can [:new, :create, :read], Pd::Application::Teacher1920Application, user_id: user.id
+        can [:new, :create, :read], FACILITATOR_APPLICATION_CLASS, user_id: user.id
+        can [:new, :create, :read], TEACHER_APPLICATION_CLASS, user_id: user.id
         can :create, Pd::InternationalOptIn, user_id: user.id
         can :manage, :maker_discount
         can :update_last_confirmation_date, UserSchoolInfo, user_id: user.id
@@ -138,7 +151,7 @@ class Ability
             can :manage, Pd::Application::ApplicationBase, regional_partner_id: group_3_partner_ids
             cannot :delete, Pd::Application::ApplicationBase, regional_partner_id: group_3_partner_ids
           end
-          can [:send_principal_approval, :principal_approval_not_required], Pd::Application::Teacher1920Application, regional_partner_id: user.regional_partners.pluck(:id)
+          can [:send_principal_approval, :principal_approval_not_required], TEACHER_APPLICATION_CLASS, regional_partner_id: user.regional_partners.pluck(:id)
         end
       end
 
@@ -148,15 +161,14 @@ class Ability
         can :manage, :workshop_organizer_survey_report
         can :manage, :pd_workshop_summary_report
         can :manage, :pd_teacher_attendance_report
-        can :manage, Pd::TeacherApplication
         can :manage, :pd_workshop_user_management
         can :manage, :pd_workshop_admins
         can :manage, RegionalPartner
         can :report_csv, :peer_review_submissions
         can :manage, Pd::RegionalPartnerMapping
         can :manage, Pd::Application::ApplicationBase
-        can :manage, Pd::Application::Facilitator1920Application
-        can :manage, Pd::Application::Teacher1920Application
+        can :manage, FACILITATOR_APPLICATION_CLASS
+        can :manage, TEACHER_APPLICATION_CLASS
         can :move, :workshop_enrollments
         can :update_scholarship_info, Pd::Enrollment
       end
@@ -221,7 +233,7 @@ class Ability
       ]
 
       # Only custom levels are editable.
-      cannot [:update, :destroy], Level do |level|
+      cannot [:clone, :update, :destroy], Level do |level|
         !level.custom?
       end
 
@@ -233,6 +245,8 @@ class Ability
     if user.persisted?
       editor_experiment = Experiment.get_editor_experiment(user)
       if editor_experiment
+        can :index, Level
+        can :clone, Level, &:custom?
         can :manage, Level, editor_experiment: editor_experiment
         can [:edit, :update], Script, editor_experiment: editor_experiment
       end

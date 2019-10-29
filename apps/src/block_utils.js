@@ -440,14 +440,20 @@ exports.appendNewFunctions = function(blocksXml, functionsXml) {
   const sharedFunctionsDom = xml.parseElement(functionsXml);
   const functions = [...sharedFunctionsDom.ownerDocument.firstChild.childNodes];
   for (let func of functions) {
-    const name = document.evaluate(
+    let ownerDocument = func.ownerDocument.evaluate
+      ? func.ownerDocument
+      : document;
+    let startBlocksDocument = startBlocksDom.ownerDocument.evaluate
+      ? startBlocksDom.ownerDocument
+      : document;
+    const name = ownerDocument.evaluate(
       'title[@name="NAME"]/text()',
       func,
       null,
       XPathResult.STRING_TYPE,
       null
     ).stringValue;
-    const type = document.evaluate(
+    const type = ownerDocument.evaluate(
       '@type',
       func,
       null,
@@ -455,7 +461,7 @@ exports.appendNewFunctions = function(blocksXml, functionsXml) {
       null
     ).stringValue;
     const alreadyPresent =
-      document.evaluate(
+      startBlocksDocument.evaluate(
         `//block[@type="${type}"]/title[@name="NAME"][text()="${name}"]`,
         startBlocksDom,
         null,
@@ -1073,13 +1079,16 @@ exports.createJsWrapperBlockCreator = function(
       }
 
       if (expression) {
+        // If the original expression has a value placeholder, replace it
+        // with the selected value.
+        let valueExpression = expression.replace('VALUE', values[0]);
         if (returnType !== undefined) {
           return [
-            `${prefix}${expression}`,
+            `${prefix}${valueExpression}`,
             orderPrecedence === undefined ? ORDER_NONE : orderPrecedence
           ];
         } else {
-          return `${prefix}${expression}`;
+          return `${prefix}${valueExpression}`;
         }
       }
 

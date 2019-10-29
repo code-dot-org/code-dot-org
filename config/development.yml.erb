@@ -3,14 +3,14 @@
 
 census_map_table_id:
 dashboard_enable_pegasus: true
-pegasus_skip_asset_map: true
 
 firebase_name: cdo-v3-dev
 # provide a unique path for firebase channels data for development, to avoid conflicts in channel ids.
 firebase_channel_id_suffix: -DEVELOPMENT-<%=ENV['USER']%>
 
 lint: true
-pretty_js: true
+optimize_webpack_assets: false
+optimize_rails_assets: false
 stub_school_data: true
 daemon: true
 

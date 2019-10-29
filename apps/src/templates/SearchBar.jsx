@@ -13,13 +13,11 @@ const styles = {
     width: '100%',
     boxSizing: 'border-box',
     padding: '3px 7px',
-    marginLeft: 0,
-    marginRight: 0,
+    margin: 0,
     borderStyle: 'solid',
     borderWidth: BORDER_WIDTH,
     borderColor: BORDER_COLOR,
     borderRadius: BORDER_RADIUS,
-    marginBottom: 10,
     textIndent: 22
   },
   icon: {

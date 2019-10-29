@@ -74,7 +74,8 @@ const styles = {
   },
   searchBarContainer: {
     width: '300px',
-    float: 'right'
+    float: 'right',
+    marginBottom: 10
   }
 };
 

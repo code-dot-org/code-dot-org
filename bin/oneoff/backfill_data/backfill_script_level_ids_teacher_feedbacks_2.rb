@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 # Backfill existing TeacherFeedbacks to set script_level_id based on user progress.
 
-require_relative '../../config/environment'
+require_relative '../../../dashboard/config/environment'
 
 def feedbacks_without_script_level_id
   TeacherFeedback.where(script_level_id: nil)

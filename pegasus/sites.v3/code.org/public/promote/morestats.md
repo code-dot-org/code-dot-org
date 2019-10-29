@@ -6,6 +6,12 @@ theme: responsive
 
 Do you need to create a slide deck or one-pager to advocate for computer science in your state or city? The blog posts and links below contain resources and statistics that you can use to make your own custom materials!
 
+## Code.org Policy Resources
+* See [state-by-state data](https://docs.google.com/spreadsheets/d/1YtTVcpQXoZz0IchihwGOihaCNeqCz2HyLwaXYpyb2SQ/pubhtml) on our 9 model policies for computer science education.
+* Code.org partnered with CSTA and ECEP to create the [2019 State of Computer Science Education](https://advocacy.code.org/2019_state_of_cs.pdf) report on state-level policies that support equitable K-12 computer science education. You can also view the 2018 report [here](https://code.org/files/2018_state_of_cs.pdf), and the 2017 report (authored by Code.org, MassCAN, EDC, ECEP, SageFox, and ECS) [here](http://code.org/files/State_of_the_states.pdf).
+* [Computer science and ESSA](http://code.org/files/CS_and_ESSA.pdf): Read our recommendations for how states can add computer science to their state ESSA plans.
+* Download a [master slide deck](https://docs.google.com/presentation/d/1SUGh9QdyXoXPepD1vC5YXRnicxp-th_yWX8dNM_vywc/edit?usp=sharing) that you can use to create your own presentations.
+
 
 ## Code.org blog posts
 ### Why computer science?
@@ -42,13 +48,6 @@ Do you need to create a slide deck or one-pager to advocate for computer science
 * Code.org [updated our position](http://codeorg.tumblr.com/post/154518222573/computer-science-really-is-computer-science) on [Making Computer Science Count](https://docs.google.com/document/d/1ksKYCmYVK7cNS6Pfc7OL9Cre2SsFsWWTyvW7faPPIZc/edit?usp=sharing).
 
 
-## Other Code.org Resources
-* See [state-by-state data](https://docs.google.com/spreadsheets/d/1YtTVcpQXoZz0IchihwGOihaCNeqCz2HyLwaXYpyb2SQ/pubhtml) on our 9 model policies for computer science education.
-* Code.org partnered with MassCAN, EDC, ECEP, SageFox, and ECS to create the 2017 [State of the States Landscape Report](http://code.org/files/State_of_the_states.pdf) on state-level policies that support equitable K-12 computer science education. See the updated report for 2018 [here](https://code.org/files/2018_state_of_cs.pdf).
-* [Computer science and ESSA](http://code.org/files/CS_and_ESSA.pdf): Read our recommendations for how states can add computer science to their state ESSA plans.
-* Download a [master slide deck](https://docs.google.com/presentation/d/1SUGh9QdyXoXPepD1vC5YXRnicxp-th_yWX8dNM_vywc/edit?usp=sharing) that you can use to create your own presentations.
-
-
 ## International K-12 computer science
 We are interested in seeing what's happening in computer science education internationally. [This](https://docs.google.com/document/d/1H171Mu2RKzD9Qvp38sjKu1vuXX524XqdHtUf0BFzpWI/edit?usp=sharing) crowd-sourced document tracks what we know about current policy and in-progress efforts.
 
@@ -58,6 +57,7 @@ We are interested in seeing what's happening in computer science education inter
 ### K-12 education
 
 - The [K-12 Computer Science Framework](https://k12cs.org/) provides a vision for computer science education for all students, including concepts and practices by grade band.
+- The International Society for Technology in Education (ISTE) recently released [guidelines](https://www.iste.org/standards/computational-thinking) regarding the integration of computational thinking across disciplines. 
 - The [Pre-College Computer Science Education: A Survey of the Field] (https://services.google.com/fh/files/misc/pre-college-computer-science-education-report.pdf) report from Google reviews the current state of the research into computer science education.
 - [Arkansas has seen a major boost in computer science enrollment and diversity](http://amppob.com/nearly-4000-arkansas-students-enrolled-in-computer-science-in-fall-15/). Arkansas passed a law requiring (and funding) every high school to teach computer science. Months later, Arkansas saw a 260% increase in total CS enrollment, a 300% increase among female students, and a 600% increase among African American female students. This shows the massive impact of state policy on CS, and helps our advocacy efforts in other states.
 - [Low-income](http://ecs.force.com/studies/rstempg?id=a0r0g000009TLeI) or [underrepresented minority students](https://pbs.twimg.com/media/Dls3NzoU8AAASYB.jpg:large) are less likely than other demographic groups to attend a school that offers computer science.
@@ -80,6 +80,7 @@ We are interested in seeing what's happening in computer science education inter
 - [Twice as many Americans](http://ecs.force.com/studies/rstempg?id=a0r0g000009TLfB) use computing in their jobs than previously reported, and half of those are in non-STEM fields. Outside of STEM fields, 40% of those doing complex computing work are women.
 - A quarter of all jobs are now "highly digitalized" and they're the highest paying quartile of jobs (up from 5% of jobs in 2002), according to a [Brookings report](https://www.brookings.edu/research/digitalization-and-the-american-workforce/).
 - Computer science skills are [increasingly valued] (https://blogs.oracle.com/certification/five-job-categories-increasingly-requiring-computer-science-skills) in marketing and design jobs.
+- A survey from Microsoft Education and YouGov found that [half of parents believed coding and computer programming to be the most beneficial subject](https://educationblog.microsoft.com/en-us/2018/08/new-survey-what-parents-think-about-technology-in-the-classroom) to their child's future employability.
 
 ### Jobs in computing
 
@@ -90,6 +91,7 @@ We are interested in seeing what's happening in computer science education inter
 - Change the Equation has a [summary](http://ecs.force.com/studies/rstempg?id=a0r0g000009U7Uo) of untapped minority talent in computing.
 - For each new high-tech job in a city, five jobs outside of tech are [ultimately created](http://eml.berkeley.edu//~moretti/book.htm).
 - A [comprehensive framework](https://www.kaporcenter.org/wp-content/uploads/2018/02/KC18001_report_v6-1.pdf) for understanding and addressing the lack of diversity across the tech ecosystem, including the benefits of a diverse workforce.
+- [Surveys from the Kauffman Foundation](https://www.kauffman.org/currents/2019/09/new-survey-highlights-disconnect-between-high-school-and-real-world) found that 88% of students and 85% of adults say that computer science jobs will be in [greater demand in 10 years](https://twitter.com/codeorg/status/1184493205607407619) - moreso than any other job category.
 
 ### Landscape of K-12 Computer Science Education in the US
 This [series of reports](http://csedu.gallup.com/home.aspx) from Gallup and Google describes the landscape of computer science education across the states.

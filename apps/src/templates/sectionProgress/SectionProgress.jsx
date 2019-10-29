@@ -8,7 +8,6 @@ import SectionProgressToggle from '@cdo/apps/templates/sectionProgress/SectionPr
 import VirtualizedDetailView from './VirtualizedDetailView';
 import VirtualizedSummaryView from './VirtualizedSummaryView';
 import SummaryViewLegend from './SummaryViewLegend';
-import SmallChevronLink from '../SmallChevronLink';
 import LessonSelector from './LessonSelector';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
@@ -26,9 +25,12 @@ import {tooltipIdForLessonNumber} from './multiGridConstants';
 import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
 import {
   setScriptId,
-  validScriptPropType
+  validScriptPropType,
+  getSelectedScriptFriendlyName
 } from '@cdo/apps/redux/scriptSelectionRedux';
 import {stageIsAllAssessment} from '@cdo/apps/templates/progress/progressHelpers';
+import color from '../../util/color';
+import firehoseClient from '../../lib/util/firehose';
 
 const styles = {
   heading: {
@@ -39,9 +41,6 @@ const styles = {
     alignItems: 'flex-end',
     marginBottom: 10
   },
-  toggle: {
-    margin: '0 10px 5px 10px'
-  },
   chevronLink: {
     display: 'flex',
     flex: 1,
@@ -49,6 +48,15 @@ const styles = {
   },
   icon: {
     paddingRight: 5
+  },
+  toggle: {
+    margin: '0px 30px'
+  },
+  tableHeader: {
+    marginBottom: 10
+  },
+  scriptLink: {
+    color: color.teal
   }
 };
 
@@ -69,7 +77,8 @@ class SectionProgress extends Component {
     loadScript: PropTypes.func.isRequired,
     setScriptId: PropTypes.func.isRequired,
     setLessonOfInterest: PropTypes.func.isRequired,
-    isLoadingProgress: PropTypes.bool.isRequired
+    isLoadingProgress: PropTypes.bool.isRequired,
+    scriptFriendlyName: PropTypes.string.isRequired
   };
 
   componentDidMount() {
@@ -79,6 +88,20 @@ class SectionProgress extends Component {
   onChangeScript = scriptId => {
     this.props.setScriptId(scriptId);
     this.props.loadScript(scriptId);
+
+    firehoseClient.putRecord(
+      {
+        study: 'teacher_dashboard_actions',
+        study_group: 'progress',
+        event: 'change_script',
+        data_json: JSON.stringify({
+          section_id: this.props.section.id,
+          old_script_id: this.props.scriptId,
+          new_script_id: scriptId
+        })
+      },
+      {includeUserId: true}
+    );
   };
 
   onChangeLevel = lessonOfInterest => {
@@ -112,6 +135,21 @@ class SectionProgress extends Component {
     return scriptData ? `${scriptData.path}?section_id=${section.id}` : null;
   }
 
+  navigateToScript = () => {
+    firehoseClient.putRecord(
+      {
+        study: 'teacher_dashboard_actions',
+        study_group: 'progress',
+        event: 'go_to_script',
+        data_json: JSON.stringify({
+          section_id: this.props.section.id,
+          script_id: this.props.scriptId
+        })
+      },
+      {includeUserId: true}
+    );
+  };
+
   render() {
     const {
       section,
@@ -119,7 +157,8 @@ class SectionProgress extends Component {
       currentView,
       scriptId,
       scriptData,
-      isLoadingProgress
+      isLoadingProgress,
+      scriptFriendlyName
     } = this.props;
 
     const levelDataInitialized = scriptData && !isLoadingProgress;
@@ -139,20 +178,13 @@ class SectionProgress extends Component {
               onChange={this.onChangeScript}
             />
           </div>
-          <span style={styles.toggle}>
+          <div style={styles.toggle}>
+            <div style={{...h3Style, ...styles.heading}}>{i18n.viewBy()}</div>
             <SectionProgressToggle />
-          </span>
+          </div>
+
           {currentView === ViewType.DETAIL && lessons.length !== 0 && (
             <LessonSelector lessons={lessons} onChange={this.onChangeLevel} />
-          )}
-          {linkToOverview && (
-            <span style={styles.chevronLink}>
-              <SmallChevronLink
-                link={linkToOverview}
-                linkText={i18n.viewCourse()}
-                isRtl={false}
-              />
-            </span>
           )}
         </div>
         <div style={{clear: 'both'}}>
@@ -165,6 +197,18 @@ class SectionProgress extends Component {
           )}
           {levelDataInitialized && currentView === ViewType.SUMMARY && (
             <div id="uitest-summary-view">
+              <div
+                style={{...h3Style, ...styles.heading, ...styles.tableHeader}}
+              >
+                <span>{i18n.lessonsAttempted() + ' '}</span>
+                <a
+                  href={linkToOverview}
+                  style={styles.scriptLink}
+                  onClick={this.navigateToScript}
+                >
+                  {scriptFriendlyName}
+                </a>
+              </div>
               <VirtualizedSummaryView
                 section={section}
                 scriptData={scriptData}
@@ -177,6 +221,18 @@ class SectionProgress extends Component {
           )}
           {levelDataInitialized && currentView === ViewType.DETAIL && (
             <div id="uitest-detail-view">
+              <div
+                style={{...h3Style, ...styles.heading, ...styles.tableHeader}}
+              >
+                <span>{i18n.levelsAttempted() + ' '}</span>
+                <a
+                  href={linkToOverview}
+                  style={styles.scriptLink}
+                  onClick={this.navigateToScript}
+                >
+                  {scriptFriendlyName}
+                </a>
+              </div>
               <VirtualizedDetailView
                 section={section}
                 stageExtrasEnabled={section.stageExtras}
@@ -205,7 +261,8 @@ export default connect(
     currentView: state.sectionProgress.currentView,
     scriptData: getCurrentScriptData(state),
     studentLevelProgress: getCurrentProgress(state),
-    isLoadingProgress: state.sectionProgress.isLoadingProgress
+    isLoadingProgress: state.sectionProgress.isLoadingProgress,
+    scriptFriendlyName: getSelectedScriptFriendlyName(state)
   }),
   dispatch => ({
     loadScript(scriptId) {

@@ -1,36 +1,33 @@
 ---
-title: <%= hoc_s(:title_how_to_promote).inspect %>
+title: Proširi riječ
 layout: wide
 nav: promote_nav
 ---
-<%= view :signup_button %>
 
-<% facebook = {:u=>"http://#{request.host}/us"}
-
-twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_donor_text).gsub(/%{random_donor}/, get_random_donor_twitter)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_donor_text).include? '#HourOfCode' %>
+{{ signup_button }}
 
 # Uključi svoju zajednicu u Čas Kodiranja
 
 ## 1. Reci svima
 
-Recite svojim prijateljima o **#HourOfCode**!
+Tell your friends about the **#HourOfCode**!
 
-<%= view :share_buttons, facebook:facebook, twitter:twitter %>
+{{ promote/share_buttons }}
 
 ## 2. Pitajte cijelu školu da ugoste Sat programiranja
 
-[Send this email](%= resolve_url('/promote/resources#sample-emails') %) to your principal and challenge every classroom at your school to sign up.
+[Send this email]({{ promote/sample_emails }}) to your principal and challenge every classroom at your school to sign up.
 
 ## 3. Pitajte svog poslodavca da se uključite
 
-[Send this email](%= resolve_url('/promote/resources#sample-emails') %) to your manager or company's CEO.
+[Send this email]({{ promote/sample_emails }}) to your manager or company's CEO.
 
 ## 4. Promote Hour of Code in your community
 
-[Regrutiraj lokalnu grupu](%= resolve_url('/promote/resources#sample-emails') %)dječak/djevojčica klub izviđača, crkvu, univerzitet, grupu veterana, sindikat, ili čak neke prijatelje. Ne morate biti u školi da naučite nove vještine. Use these [posters, banners, stickers, videos and more](%= resolve_url('/promote/resources') %) for your own event.
+[Recruit a local group]({{ promote/sample_emails }})— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. Ne morate biti u školi da naučite nove vještine. Use these [posters, banners, stickers, videos and more](/promote/resources) for your own event.
 
 ## 5. Pitajte lokalno izabranog u zajednici da podrži Sata programiranja
 
-[Send this email](%= resolve_url('/promote/resources#sample-emails') %) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. It can help build support for computer science in your area beyond one hour.
+[Send this email]({{ promote/sample_emails }}) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. It can help build support for computer science in your area beyond one hour.
 
-<%= view :signup_button %>
+{{ signup_button }}

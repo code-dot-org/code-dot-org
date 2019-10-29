@@ -10,8 +10,6 @@ class CoursesControllerTest < ActionController::TestCase
     @levelbuilder = create :levelbuilder
 
     Script.stubs(:should_cache?).returns true
-    plc_course = create :plc_course, name: 'My Plc'
-    @course_plc = plc_course.course
     @course_regular = create :course, name: 'non-plc-course'
 
     # stub writes so that we dont actually make updates to filesystem
@@ -27,16 +25,6 @@ class CoursesControllerTest < ActionController::TestCase
   test_user_gets_response_for :index, response: :success, user: :user, queries: 3
 
   # Tests for show
-
-  test "show: plc courses get sent to user_course_enrollments_controller" do
-    get :show, params: {course_name: @course_plc.name}
-    assert_template 'plc/user_course_enrollments/index'
-  end
-
-  test "show: plc course names get titleized" do
-    get :show, params: {course_name: 'my_plc'}
-    assert_template 'plc/user_course_enrollments/index'
-  end
 
   test "show: regular courses get sent to show" do
     get :show, params: {course_name: @course_regular.name}

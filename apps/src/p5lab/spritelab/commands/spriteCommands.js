@@ -2,11 +2,11 @@ import * as coreLibrary from '../coreLibrary';
 
 export const commands = {
   countByAnimation(animation) {
-    let sprites = coreLibrary.getSpriteArray(animation);
+    let sprites = coreLibrary.getSpriteArray({costume: animation});
     return sprites.length;
   },
-  destroy(spriteId) {
-    let sprites = coreLibrary.getSpriteArray(spriteId);
+  destroy(spriteArg) {
+    let sprites = coreLibrary.getSpriteArray(spriteArg);
     sprites.forEach(sprite => {
       sprite.destroy();
       coreLibrary.removeAllBehaviors(sprite);
@@ -14,16 +14,16 @@ export const commands = {
     });
   },
 
-  displace(spriteId, targetSpriteIndex) {
-    let sprites = coreLibrary.getSpriteArray(spriteId);
+  displace(spriteArg, targetSpriteIndex) {
+    let sprites = coreLibrary.getSpriteArray(spriteArg);
     let targetSprites = coreLibrary.getSpriteArray(targetSpriteIndex);
     sprites.forEach(sprite => {
       targetSprites.forEach(target => sprite.displace(target));
     });
   },
 
-  getProp(spriteId, prop) {
-    let sprite = coreLibrary.getSpriteArray(spriteId)[0];
+  getProp(spriteArg, prop) {
+    let sprite = coreLibrary.getSpriteArray(spriteArg)[0];
     if (sprite !== undefined) {
       if (prop === 'scale') {
         return sprite.getScale() * 100;
@@ -40,15 +40,19 @@ export const commands = {
   getThisSprite(which, extraArgs) {
     if (extraArgs) {
       if (which === 'this') {
-        return extraArgs.sprite;
+        return {id: extraArgs.sprite};
       }
       if (which === 'other') {
-        return extraArgs.target;
+        return {id: extraArgs.target};
       }
     }
   },
 
-  makeSprite(animation, location) {
+  makeSprite(opts) {
+    opts = opts || {};
+    let name = opts.name;
+    let location = opts.location;
+    let animation = opts.animation;
     if (!location) {
       location = {x: 200, y: 200};
     }
@@ -64,7 +68,7 @@ export const commands = {
     sprite.getScale = function() {
       return sprite.scale / sprite.baseScale;
     };
-    let spriteId = coreLibrary.addSprite(sprite);
+    let spriteArg = coreLibrary.addSprite(sprite, name);
     if (animation) {
       sprite.setAnimation(animation);
       sprite.scale /= sprite.baseScale;
@@ -77,11 +81,11 @@ export const commands = {
         );
       sprite.scale *= sprite.baseScale;
     }
-    return spriteId;
+    return spriteArg;
   },
 
-  setAnimation(spriteId, animation) {
-    let sprites = coreLibrary.getSpriteArray(spriteId);
+  setAnimation(spriteArg, animation) {
+    let sprites = coreLibrary.getSpriteArray(spriteArg);
     sprites.forEach(sprite => {
       sprite.setAnimation(animation);
       sprite.scale /= sprite.baseScale;

@@ -24,7 +24,6 @@ import color from '../../util/color';
 import commonStyles from '../../commonStyles';
 import Instructions from './Instructions';
 import styleConstants from '../../styleConstants';
-import {setInstructionsMaxHeightNeeded} from '../../redux/instructions';
 
 var instructions = require('../../redux/instructions');
 
@@ -171,8 +170,7 @@ class InstructionsCSF extends React.Component {
 
     height: PropTypes.number.isRequired,
     maxHeight: PropTypes.number.isRequired,
-    setInstructionsRenderedHeight: PropTypes.func.isRequired,
-    setInstructionsMaxHeightNeeded: PropTypes.func.isRequired
+    setInstructionsRenderedHeight: PropTypes.func.isRequired
   };
 
   static defaultProps = {
@@ -283,7 +281,6 @@ class InstructionsCSF extends React.Component {
         minHeight
       );
       this.props.setInstructionsRenderedHeight(newHeight);
-      this.props.setInstructionsMaxHeightNeeded(maxHeight);
     }
 
     this.props.adjustMaxNeededHeight();
@@ -642,8 +639,15 @@ class InstructionsCSF extends React.Component {
                   video={hint.hintVideo}
                 />
               ))}
+            {/*
+              The `key` prop on the InlineFeedback component is a workaround for a React 15.x problem
+              with efficiently updating inline blockly xml within this message. By providing a
+              changing key prop, we force the component to entirely unmount and re-mount when the
+              message contents change.  This may not be a problem once we upgrade to React 16.
+            */}
             {this.props.feedback && !this.props.collapsed && (
               <InlineFeedback
+                key={this.props.feedback.message}
                 borderColor={
                   this.props.isMinecraft ? color.white : color.charcoal
                 }
@@ -702,7 +706,7 @@ class InstructionsCSF extends React.Component {
   }
 }
 
-module.exports = connect(
+export default connect(
   function propsFromStore(state) {
     return {
       overlayVisible: state.instructions.overlayVisible,
@@ -742,9 +746,6 @@ module.exports = connect(
       },
       clearFeedback(height) {
         dispatch(instructions.setFeedback(null));
-      },
-      setInstructionsMaxHeightNeeded(height) {
-        dispatch(setInstructionsMaxHeightNeeded(height));
       }
     };
   },

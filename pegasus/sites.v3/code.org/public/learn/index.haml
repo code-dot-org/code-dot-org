@@ -3,19 +3,21 @@ title: Learn
 theme: responsive_wide
 layout: wide
 social:
-  "twitter:card": photo
-  "twitter:site": "@codeorg"
-  "twitter:url": "https://<%=request.host%>/learn"
-  "twitter:title": "<%= hoc_s(:hour_of_code) %>"
-  "twitter:description": "<%= hoc_s(:social_hoc2018_global_movement) %>"
-  "twitter:image:src": "<%= 'https://' + request.host + '/images/social-media/hoc-2018-creativity.png' %>"
-  "og:title": "<%= hoc_s(:hour_of_code) %>"
-  "og:description": "<%= hoc_s(:social_hoc2018_global_movement) %>"
-  "og:image" : "<%= 'https://' + request.host + '/images/social-media/hoc-2018-creativity.png' %>"
-  "og:image:width": '1200'
-  "og:image:height": '630'
+  twitter:card: photo
+  twitter:site: "@codeorg"
+  og:image:width: '1200'
+  og:image:height: '630'
 style_min: false
 ---
+:ruby
+  @header["social"]["twitter:url"] = "https://#{request.host}/learn"
+  @header["social"]["twitter:title"] = hoc_s(:hour_of_code)
+  @header["social"]["twitter:description"] = hoc_s(:social_hoc2018_global_movement)
+  @header["social"]["twitter:image:src"] = 'https://' + request.host + '/images/social-media/hoc-2018-creativity.png'
+  @header["social"]["og:title"] = hoc_s(:hour_of_code)
+  @header["social"]["og:description"] = hoc_s(:social_hoc2018_global_movement)
+  @header["social"]["og:image"] = 'https://' + request.host + '/images/social-media/hoc-2018-creativity.png'
+
 :css
   .noFocusButton:focus {
     outline: 0;
@@ -95,8 +97,8 @@ style_min: false
 
 -# Not ideal but we can pull the undigested files from /blockly.
 - js_locale = request.locale.to_s.downcase.tr('-', '_')
-%script{src: asset_path("js/#{js_locale}/tutorialExplorer_locale.js")}
-%script{src: minifiable_asset_path("js/tutorialExplorer.js")}
+%script{src: webpack_asset_path("js/#{js_locale}/tutorialExplorer_locale.js")}
+%script{src: webpack_asset_path("js/tutorialExplorer.js")}
 
 - tutorials_contents = Tutorials.new(:tutorials).contents(request.host_with_port)
 

@@ -160,3 +160,26 @@ da-DK:
           ekstra opmærksom på, jeg vender den rigtige vej!
         courseC_maze_programming_challenge2_b: Den korteste løsning er på kun 5 blokke,
           og der bruges en "gentag"-blok!
+      courseA_maze_seq1:
+        courseA_maze_seq1_a: |-
+          Hvis du har problemer med at få fuglen til at flytte sig, så skal du sikre dig at blokkene klikker til toppen<xml>
+            <block type="when_run"/>
+          </xml>
+        courseA_maze_seq1_b: Fuglen skal bevæge sig 3 gange mod vest for at komme
+          til grisen. Bruge denne blok:<xml><block type="maze_moveWest"/></xml>
+      courseA_maze_seq1_2018:
+        courseA_maze_seq1_a: |-
+          Hvis du har problemer med at få fuglen til at flytte sig, så skal du sikre dig at blokkene klikker til toppen<xml>
+            <block type="when_run"/>
+          </xml>
+        courseA_maze_seq1_b: Fuglen skal bevæge sig 3 gange mod vest for at komme
+          til grisen. Bruge denne blok:<xml><block type="maze_moveWest"/></xml>
+      courseA_maze_seq1_2019:
+        courseA_maze_seq1_a: |-
+          Hvis du har problemer med at få fuglen til at flytte sig, så skal du sikre dig at blokkene klikker til toppen<xml>
+            <block type="when_run"/>
+          </xml>
+        courseA_maze_seq1_b: Fuglen skal bevæge sig 3 gange mod vest for at komme
+          til grisen. Bruge denne blok:<xml><block type="maze_moveWest"/></xml>
+      courseA_maze_seq2:
+        courseA_maze_seq2_a: Her mangler programmet 1 Blok. Kan du finde ud af hvilken?

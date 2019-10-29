@@ -106,11 +106,16 @@ export default class DetailViewResponse extends React.Component {
         );
 
         return (
-          <Panel header={heading} style={styles.panel}>
-            <Row>
-              <Col xs={scoredQuestion ? 9 : 12}>{renderedValue}</Col>
-              {scoredQuestion && <Col xs={3}>{this.renderScore()}</Col>}
-            </Row>
+          <Panel style={styles.panel}>
+            <Panel.Heading>
+              <Panel.Title>{heading}</Panel.Title>
+            </Panel.Heading>
+            <Panel.Body>
+              <Row>
+                <Col xs={scoredQuestion ? 9 : 12}>{renderedValue}</Col>
+                {scoredQuestion && <Col xs={3}>{this.renderScore()}</Col>}
+              </Row>
+            </Panel.Body>
           </Panel>
         );
       }

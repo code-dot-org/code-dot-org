@@ -1,5 +1,6 @@
 {
   "startButton": "शुरू करें",
+  "filterOrgNamesAll": "सभी",
   "filterGrades": "ग्रेड",
   "filterGradesPre": "पूर्व रीडर",
   "filterGrades25": "ग्रेड 2-5",
@@ -27,6 +28,7 @@
   "filterProgrammingLanguage": "भाषा",
   "filterProgrammingLanguageBlocks": "ब्लाकों",
   "filterProgrammingLanguageTyping": "टाइपिंग",
+  "filterProgrammingLanguageOther": "अन्य",
   "filterActivityTypeRobotics": "रोबोटिक्स",
   "backButtonBack": "सभी गतिविधियों के लिए वापस",
   "filterHeaderShowFilters": "छानना",
@@ -37,6 +39,7 @@
   "tutorialDetailsTeacherNotes": "शिक्षक नोट्स",
   "tutorialDetailsShortLink": "कम लिंक",
   "tutorialDetailInternationalLanguages": "भाषाएँ",
+  "tutorialDetailStandards": "मानक",
   "headingTutorialsYourLanguage": "अपनी भाषा में गतिविधियाँ",
   "showAllTutorialsButton": "कई भाषाओं के लिए गतिविधियों दिखाएँ",
   "hideAllTutorialsButton": "कई भाषाओं के लिए गतिविधियों को छिपाने"
