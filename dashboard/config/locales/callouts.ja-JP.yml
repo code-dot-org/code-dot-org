@@ -83,6 +83,8 @@ ja-JP:
         Infinity_move_right_runbutton: うごかすブロックをここに足してください。
       Infinity_repeat:
         Infinity_repeat_callout: 移動ブロックをこの中に置いてください
+      InspirationalArtwork:
+        InspirationalArtwork_1: プログラムにメモを入れるための`コメント`ブロックは、この中にあります。
       MC HOC 2016 Level 2-2:
         craft2_run_button_callout: 用意ができたら、「実行」をクリックして君のプログラムを試してみよう。
       MC HOC 2016 New Walk:
@@ -134,6 +136,10 @@ ja-JP:
         craft_inside_repeat: ここにブロックを置いて繰り返しましょう
       Overworld Place Wall_2019:
         craft_inside_repeat: ここにブロックを置いて繰り返しましょう
+      Robot Doodle:
+        4-5_Artist_Patterns_Free_Play_2: プログラムにメモを入れるための`コメント`ブロックは、この中にあります。
+      Robot Doodle_2018:
+        4-5_Artist_Patterns_Free_Play_2: プログラムにメモを入れるための`コメント`ブロックは、この中にあります。
       Underground Avoiding Lava:
         craft_callout_moveforward: 溶岩を調べるコードに前進のコマンドを追加しましょう
       Underground Avoiding Lava_2019:
@@ -152,17 +158,22 @@ ja-JP:
         courseE_artist_functions_challenge2_callout2: このデザインがイマイチなら、好きなデザインに変えてみよう。
       course3_bee_debugging_challenge1:
         courseD_bee_debugging_challenge1_callout1: ハチを後ろに進ませるコマンドを使おう。
+      course3_bee_functions_challenge3:
+        courseF_bee_functions_challenge1_1: 関数の中にどんなプログラムを入れますか？
+        courseF_bee_functions_challenge1_2: ハチミツを何回も作るときに、 関数"ミツかハチミツか調べる" を使うことができます。
       course3_playLab_challenge1:
         courseC_PlayLab_events_challenge1_1: このブロックは、キャラを ほかの ばしょに いどうさせるのに つかいます。
       course4_artist_functions_challenge2:
         courseE_artist_functions_challenge2_callout1: この下にプログラムを書きたそう。
         courseE_artist_functions_challenge2_callout2: このデザインがイマイチなら、好きなデザインに変えてみよう。
+      course4_bee_fwp_challenge2:
+        courseF_bee_fwp_challenge2_callout1: 関数でトウモロコシをとることはできますが、他の作物はどうですか？
       courseA_artist_loops4:
-        courseA_artist_loops4_1: いくつのブロックが つかえるか、この すうじを みてください。
+        courseA_artist_loops4_1: ひだりうえのすうじは、このブロックが つかえる かいすう です。
       courseA_artist_loops4_2018:
-        courseA_artist_loops4_1: いくつのブロックが つかえるか、この すうじを みてください。
+        courseA_artist_loops4_1: ひだりうえのすうじは、このブロックが つかえる かいすう です。
       courseA_artist_loops4_2019:
-        courseA_artist_loops4_1: いくつのブロックが つかえるか、この すうじを みてください。
+        courseA_artist_loops4_1: ひだりうえのすうじは、このブロックが つかえる かいすう です。
       courseA_artist_loops7:
         courseA_artist_loops7_1: ブロックの左上のかずは このブロックをつかう かいすうです。
       courseA_artist_loops7_2018:
@@ -178,11 +189,11 @@ ja-JP:
       courseA_collector_loops1:
         courseA_collector_loops1_1: ツールボックスに あたらしい ブロックが ありますよ。あとで せつめいを するので、まっててね。
       courseA_collector_loops3:
-        gradek_adventurer_loops2_1: いくつのブロックが つかえるか、この すうじを みてください。
+        gradek_adventurer_loops2_1: ひだりうえのすうじは、このブロックが つかえる かいすう です。
       courseA_collector_loops3_2018:
-        gradek_adventurer_loops2_1: いくつのブロックが つかえるか、この すうじを みてください。
+        gradek_adventurer_loops2_1: ひだりうえのすうじは、このブロックが つかえる かいすう です。
       courseA_collector_loops3_2019:
-        gradek_adventurer_loops2_1: いくつのブロックが つかえるか、この すうじを みてください。
+        gradek_adventurer_loops2_1: ひだりうえのすうじは、このブロックが つかえる かいすう です。
       courseA_collector_preLoops2:
         courseA_collector_loops1_1: ツールボックスに あたらしい ブロックが ありますよ。あとで せつめいを するので、まっててね。
       courseA_collector_preLoops3:
@@ -206,7 +217,7 @@ ja-JP:
       courseA_maze_seq2:
         courseA_maze_seqA_callout1: ステップ ボタンを つかうと プログラムが ひとつずつ うごきます。これで バグを みつけよう！
       courseA_maze_seq4:
-        made_of_stone: このブロックは いしで できてます。うごかす ことは できるけど、けす ことは できません！
+        made_of_stone: このブロックは うごかす ことは できるけど、けす ことは できません！
       courseA_playLab_events4:
         courseA_playlab_events4_callout1: これは吹き出し
       courseA_playLab_events4_2018:
@@ -256,11 +267,11 @@ ja-JP:
       courseC_PlayLab_events_challenge1_2019:
         courseC_PlayLab_events_challenge1_1: このブロックは、キャラを ほかの ばしょに いどうさせるのに つかいます。
       courseC_artist_loopsPrePre1a:
-        courseC_artist_loopsPrePre1a_1: さいしょに このブロックを つかって、プレイエリアの まんなかに 行きます。
+        courseC_artist_loopsPrePre1a_1: さいしょに このブロックを つかって、プレイエリアの まん中に 行きます。
       courseC_artist_loopsPrePre1a_2018:
-        courseC_artist_loopsPrePre1a_1: さいしょに このブロックを つかって、プレイエリアの まんなかに 行きます。
+        courseC_artist_loopsPrePre1a_1: さいしょに このブロックを つかって、プレイエリアの まん中に 行きます。
       courseC_artist_loopsPrePre1a_2019:
-        courseC_artist_loopsPrePre1a_1: さいしょに このブロックを つかって、プレイエリアの まんなかに 行きます。
+        courseC_artist_loopsPrePre1a_1: さいしょに このブロックを つかって、プレイエリアの まん中に 行きます。
       courseC_collector_prog1:
         courseC_collector_prog1_1: ツールボックスに あたらしい ブロックが ありますよ。あとで せつめいを するので、まっててね。
       courseC_collector_prog7:
@@ -270,11 +281,11 @@ ja-JP:
       courseC_collector_prog7_2019:
         courseC_collector_prog7_1: ひつようなブロックがあれば、ツールボックスからとり出そう。
       courseC_harvester_loops1:
-        courseC_harvester_loops1_callout1: かぼちゃは、かぼちゃの右下に 書いてある数だけ あります。
+        courseC_harvester_loops1_callout1: カボチャは、カボチャの右下に 書いてある数だけ あります。
       courseC_harvester_loops1_2018:
-        courseC_harvester_loops1_callout1: かぼちゃは、かぼちゃの右下に 書いてある数だけ あります。
+        courseC_harvester_loops1_callout1: カボチャは、カボチャの右下に 書いてある数だけ あります。
       courseC_harvester_loops1_2019:
-        courseC_harvester_loops1_callout1: かぼちゃは、かぼちゃの右下に 書いてある数だけ あります。
+        courseC_harvester_loops1_callout1: カボチャは、カボチャの右下に 書いてある数だけ あります。
       courseC_maze_debugging5:
         courseC_maze_debugging5_1: 灰色のブロックは消せません！
       courseC_maze_programming1:
@@ -291,13 +302,13 @@ ja-JP:
         courseC_maze_programming2_1: これはツールボックスで パズルをクリアするのに必要なブロックが入っています。
       courseC_maze_programming3:
         courseC_maze_programming3_2: 余計なブロックを消すには、ドラックしてツールボックスに持っていきます。
-        courseC_maze_programming3_3: はい色のブロックをけすことができません。
+        courseC_maze_programming3_3: はい色のブロックは けすことが できません。
       courseC_maze_programming3_2018:
         courseC_maze_programming3_2: 余計なブロックを消すには、ドラックしてツールボックスに持っていきます。
-        courseC_maze_programming3_3: はい色のブロックをけすことができません。
+        courseC_maze_programming3_3: はい色のブロックは けすことが できません。
       courseC_maze_programming3_2019:
         courseC_maze_programming3_2: 余計なブロックを消すには、ドラックしてツールボックスに持っていきます。
-        courseC_maze_programming3_3: はい色のブロックをけすことができません。
+        courseC_maze_programming3_3: はい色のブロックは けすことが できません。
       courseC_maze_programming4:
         courseC_maze_programming4_1: ブロックの左上にある数字は、そのブロックを使用する回数です。
       courseC_maze_programming4_2018:
@@ -312,13 +323,13 @@ ja-JP:
         '': ブロックの左上に数字がないので、何回でもそのブロックを使えるよ！
       courseC_maze_programming7:
         courseC_maze_programming7_1: これが、パズルへの さいしょの チャレンジです。あきらめずに がんばろう。
-        courseC_maze_programming7_2: はい色のブロックはけすことができません。
+        courseC_maze_programming7_2: はい色のブロックは、けすことが できません。
       courseC_maze_programming7_2018:
         courseC_maze_programming7_1: これが、パズルへの さいしょの チャレンジです。あきらめずに がんばろう。
-        courseC_maze_programming7_2: はい色のブロックはけすことができません。
+        courseC_maze_programming7_2: はい色のブロックは、けすことが できません。
       courseC_maze_programming7_2019:
         courseC_maze_programming7_1: これが、パズルへの さいしょの チャレンジです。あきらめずに がんばろう。
-        courseC_maze_programming7_2: はい色のブロックはけすことができません。
+        courseC_maze_programming7_2: はい色のブロックは、けすことが できません。
       courseC_starWars_loops2:
         courseC_starWars_loops2: １つだけブロックを入れます。
       courseC_starWars_loops2_2018:
@@ -326,11 +337,11 @@ ja-JP:
       courseC_starWars_loops2_2019:
         courseC_starWars_loops2: １つだけブロックを入れます。
       courseD_artist_nestedLoops1a:
-        courseD_artist_nestedLoops1a_1: パズルをクリアするのに色を変えるひつようはないけど、見本みたいにするのなら、`てきとうな色`を使ってみましょう。
+        courseD_artist_nestedLoops1a_1: パズルをクリアするのに色を変えるひつようはないけど、見本みたいにするのなら、`てきとうな色`を使ってみよう。
       courseD_artist_nestedLoops1a_2018:
-        courseD_artist_nestedLoops1a_1: パズルをクリアするのに色を変えるひつようはないけど、見本みたいにするのなら、`てきとうな色`を使ってみましょう。
+        courseD_artist_nestedLoops1a_1: パズルをクリアするのに色を変えるひつようはないけど、見本みたいにするのなら、`てきとうな色`を使ってみよう。
       courseD_artist_nestedLoops1a_2019:
-        courseD_artist_nestedLoops1a_1: パズルをクリアするのに色を変えるひつようはないけど、見本みたいにするのなら、`てきとうな色`を使ってみましょう。
+        courseD_artist_nestedLoops1a_1: パズルをクリアするのに色を変えるひつようはないけど、見本みたいにするのなら、`てきとうな色`を使ってみよう。
       courseD_artist_ramp11:
         courseD_artist_ramp11_1: この数字は かえることができます。
         courseD_artist_ramp11_2: ここをクリックして、くりかえしの回数をかえてみよう。
@@ -398,9 +409,9 @@ ja-JP:
       courseD_maze_ramp6:
         courseD_maze_ramp6_1: ここに書いた回数だけ、中に書いた命令を実行してから、次の命令を実行します。
       courseD_playLab_condFP:
-        courseD_playLab_condFP_1: 使えるブロックは やりたいごとに まとまっています。クリックすれば、どんな命令があるか すべて見ることができます。
+        courseD_playLab_condFP_1: 使えるブロックは やりたいことごとに まとまっています。クリックすれば、どんな命令があるか すべて見ることができます。
       courseD_playLab_condFP_2018:
-        courseD_playLab_condFP_1: 使えるブロックは やりたいごとに まとまっています。クリックすれば、どんな命令があるか すべて見ることができます。
+        courseD_playLab_condFP_1: 使えるブロックは やりたいことごとに まとまっています。クリックすれば、どんな命令があるか すべて見ることができます。
       courseD_scrat_ramp1:
         grade2_CaringForNewPet_0_1: すべてのブロックをつなげたら「実行」を押してプログラムを開始してください。
       courseD_scrat_ramp2:
@@ -418,13 +429,13 @@ ja-JP:
       courseD_scrat_ramp8:
         courseD_maze_ramp7_1: これが、パズルへの さいしょの チャレンジです。あきらめずに がんばろう。
       courseE_artist_functions1:
-        courseD_artist_functions1_1: この命令で四角形をかくことから始めよう。
+        courseD_artist_functions1_1: この命令で正方形をかくことから始めよう。
       courseE_artist_functions2:
-        courseD_artist_functions2_1: この緑のブロックが実行されるとき関数内のすべてのプログラムが実行されます。最初の四角を描いた後、アーティストは何をすべきでしょう？
+        courseD_artist_functions2_1: 緑色の関数ブロックが実行されると、関数の中のすべてのブロックが実行されます。最初の正方形をかいたら、アーティストはつぎに何をしますか？
       courseE_artist_functions2_2018:
-        courseD_artist_functions2_1: この緑のブロックが実行されるとき関数内のすべてのプログラムが実行されます。最初の四角を描いた後、アーティストは何をすべきでしょう？
+        courseD_artist_functions2_1: 緑色の関数ブロックが実行されると、関数の中のすべてのブロックが実行されます。最初の正方形をかいたら、アーティストはつぎに何をしますか？
       courseE_artist_functions2_2019:
-        courseD_artist_functions2_1: この緑のブロックが実行されるとき関数内のすべてのプログラムが実行されます。最初の四角を描いた後、アーティストは何をすべきでしょう？
+        courseD_artist_functions2_1: 緑色の関数ブロックが実行されると、関数の中のすべてのブロックが実行されます。最初の正方形をかいたら、アーティストはつぎに何をしますか？
       courseE_artist_functions8:
         courseD_artist_functions8_1: 関数を作る命令は、ここをクリックすると出てきます。
       courseE_artist_functions8a_2018:
@@ -490,6 +501,12 @@ ja-JP:
         courseF_artist_for1_1: ツールボックスは、"カテゴリー"モードです。`まで` は、ここにあります。
       courseF_artist_for1_2019:
         courseF_artist_for1_1: ツールボックスは、"カテゴリー"モードです。`まで` は、ここにあります。
+      courseF_artist_fwp1:
+        courseF_artist_fwp1_1: '"編集"ボタンをクリックすれば、関数の中身を編集することができます。'
+      courseF_artist_fwp4:
+        courseF_artist_fwp4_1: 多角形をかくには、曲がる角度を360 ÷ `角数`にします。
+      courseF_artist_fwp5:
+        courseF_artist_fwp5_1: 多角形をかく関数は、ここにあります。
       courseF_artist_variables3:
         courseF_artist_variables3_a: 変数`length`に値をセットして使ってみよう。
       courseF_artist_variables3_2018:
@@ -526,6 +543,21 @@ ja-JP:
         courseF_bee_for9_1: "`計算（けいさん）`ブロックは、ここにあります。"
       courseF_bee_functions2:
         courseF_bee_functions2_1: このブロックを関数と呼びます。中を見るのは、"編集"ボタンをクリックします！
+      courseF_bee_functions6:
+        courseF_bee_functions6_1: ここをクリックすれば簡単に必要な命令を見つけることができます。
+      courseF_bee_functions_challenge1:
+        courseF_bee_functions_challenge1_1: 関数の中にどんなプログラムを入れますか？
+        courseF_bee_functions_challenge1_2: ハチミツを何回も作るときに、 関数"ミツかハチミツか調べる" を使うことができます。
+      courseF_bee_fwp1:
+        courseF_bee_fwp1_1: "`もし` はここにあります。"
+      courseF_bee_fwp2:
+        courseF_bee_fwp2_a: 関数はここにあります。
+      courseF_bee_fwp3:
+        courseF_bee_fwp3_1: くもと同じよう何かあるか調べるときに使った関数と同じものを使います。
+      courseF_bee_fwp4:
+        courseF_bee_fwp4_1: '"編集"ボタンをクリックして、関数にパラメータを追加しよう。'
+      courseF_bee_fwp_challenge2:
+        courseF_bee_fwp_challenge2_callout1: 関数でトウモロコシをとることはできますが、他の作物はどうですか？
       courseF_playlab_variables1a:
         courseF_playlab_variables1a_1: ツールボックスは、必要なブロックを見つけやすいように ブルーピングされています。
       courseF_playlab_variables5c:

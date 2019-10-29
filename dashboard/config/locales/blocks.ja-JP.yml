@@ -426,7 +426,7 @@ ja:
             '"vintage"': ヴィンテージ
             '"warm"': 赤
       Dancelab_setBackgroundEffectWithPalette:
-        text: 背景エフェクトを {EFFECT} {PALETTE} にセット
+        text: 背景エフェクトを {PALETTE} {EFFECT} にセット
         options:
           EFFECT:
             '"none"': 設定なし
@@ -960,6 +960,12 @@ ja:
             MOVES.Rest: 設定なし
       Mikelab_randomColor:
         text: てきとうな色
+      Mikelab_repeatUntilComplete:
+        text: ずっと
+      Mikelab_sendBad:
+        text: 左に うごかす
+      Mikelab_sendGood:
+        text: 右に うごかす
       Mikelab_setBG:
         options:
           BG:

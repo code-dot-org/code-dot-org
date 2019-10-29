@@ -47,6 +47,7 @@
   "jumpBackward": "скок назад с",
   "jumpForward": "скок напред с",
   "jumpToOverDown": "",
+  "jumpToPosition": "",
   "jumpByDirection": "",
   "jumpTooltip": "Премества художника без да оставя никакви следи.",
   "jumpEastTooltip": "Премества художника на изток без да оставя следи.",
