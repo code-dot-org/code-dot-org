@@ -218,7 +218,7 @@ const drawMovingFish = state => {
         const midScreenX =
           constants.canvasWidth / 2 - constants.fishCanvasWidth / 2;
         if (x > midScreenX) {
-          drawPrediction(fish.getResult.predictedClassId, state.word, x, y, ctx);
+          drawPrediction(fish.getResult().predictedClassId, state.word, x, y, ctx);
         }
       } else {
         predictFish(state, i).then(prediction => {
