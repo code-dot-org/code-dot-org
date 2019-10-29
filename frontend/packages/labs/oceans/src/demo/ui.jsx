@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import _ from 'lodash';
 import {getState, setState} from './state';
 import {Modes} from './constants';
 import {toMode} from './toMode';
@@ -231,33 +232,43 @@ class ActivityIntro extends React.Component {
   }
 }
 
+const wordChoices = [
+  ['Blue', 'Green', 'Red', 'Round', 'Square'],
+  [
+    'Friendly',
+    'Funny',
+    'Bizarre',
+    'Shy',
+    'Glitchy',
+    'Delicious',
+    'Fun',
+    'Angry',
+    'Fast',
+    'Smart',
+    'Brave',
+    'Scary',
+    'Wild',
+    'Fierce',
+    'Tropical'
+  ]
+];
+
 class Words extends React.Component {
-  items = [
-    ['Blue', 'Green', 'Red', 'Round', 'Square'],
-    [
-      'Friendly',
-      'Funny',
-      'Bizarre',
-      'Shy',
-      'Glitchy',
-      'Delicious',
-      'Fun',
-      'Angry',
-      'Fast',
-      'Smart',
-      'Brave',
-      'Scary',
-      'Wild',
-      'Fierce',
-      'Tropical'
-    ]
-  ];
+  constructor(props) {
+    super(props);
+
+    // Randomize word choices and set in state.
+    const choices = wordChoices.map(wordSet => {
+      return _.shuffle(wordSet);
+    });
+    this.state = {choices};
+  }
 
   currentItems() {
     const state = getState();
     const itemSet = state.smallWordSet ? 0 : 1;
 
-    return this.items[itemSet];
+    return this.state.choices[itemSet];
   }
 
   onChangeWord(itemIndex) {
