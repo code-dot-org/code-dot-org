@@ -70,8 +70,12 @@ export class OceanObject {
     this.knnData = null;
     this.result = null;
   }
-  randomize() {}
-  drawToCanvas(canvas) {}
+  randomize() {
+    throw 'Not yet implemented!';
+  }
+  drawToCanvas(canvas) {
+    throw 'Not yet implemented!';
+  }
   getId() {
     return this.id;
   }

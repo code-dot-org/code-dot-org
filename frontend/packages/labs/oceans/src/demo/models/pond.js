@@ -38,8 +38,8 @@ const predictAllFish = state => {
   });
 };
 
-const arrangeFish = fishWithConfidence => {
-  fishWithConfidence.forEach(fish => {
+const arrangeFish = fishesWithConfidence => {
+  fishesWithConfidence.forEach(fishesWithConfidence => {
     const x = randomInt(
       0,
       constants.canvasWidth - constants.fishCanvasWidth / 2
@@ -48,6 +48,6 @@ const arrangeFish = fishWithConfidence => {
       0,
       constants.canvasHeight - constants.fishCanvasHeight / 2
     );
-    fish.fish.setXY({x, y});
+    fishesWithConfidence.fish.setXY({x, y});
   });
 };

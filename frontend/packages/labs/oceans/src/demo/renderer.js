@@ -2,9 +2,7 @@ import 'babel-polyfill';
 import {getState, setState} from './state';
 import constants, {Modes, ClassType} from './constants';
 import CanvasCache from './canvasCache';
-import {
-  backgroundPathForMode,
-} from './helpers';
+import {backgroundPathForMode} from './helpers';
 import {predictFish} from './models/predict';
 import {loadAllFishPartImages} from './OceanObject';
 
@@ -55,7 +53,10 @@ export const render = () => {
       drawMovingFish(state);
       break;
     case Modes.Predicting:
-      setState({canSkipPredict: $time() >= currentModeStartTime + timeBeforeCanSkipPredict});
+      setState({
+        canSkipPredict:
+          $time() >= currentModeStartTime + timeBeforeCanSkipPredict
+      });
       drawMovingFish(state);
       break;
     case Modes.Pond:
@@ -218,7 +219,13 @@ const drawMovingFish = state => {
         const midScreenX =
           constants.canvasWidth / 2 - constants.fishCanvasWidth / 2;
         if (x > midScreenX) {
-          drawPrediction(fish.getResult().predictedClassId, state.word, x, y, ctx);
+          drawPrediction(
+            fish.getResult().predictedClassId,
+            state.word,
+            x,
+            y,
+            ctx
+          );
         }
       } else {
         predictFish(state, i).then(prediction => {
@@ -286,15 +293,6 @@ const drawSingleFish = (fish, fishXPos, fishYPos, ctx) => {
   if (!hit) {
     fishCanvas.width = constants.fishCanvasWidth;
     fishCanvas.height = constants.fishCanvasHeight;
-    /*const fishCtx = fishCanvas.getContext('2d');
-    renderFishFromParts(
-      fish,
-      fishCtx,
-      constants.fishCanvasWidth / 2,
-      constants.fishCanvasHeight / 2
-    );*/
-    //ctx.translate(constants.fishCanvasWidth, 0);
-    //ctx.scale(-1, 1);
     fish.drawToCanvas(fishCanvas);
   }
   ctx.drawImage(fishCanvas, fishXPos, fishYPos);
