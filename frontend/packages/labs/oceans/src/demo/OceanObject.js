@@ -247,17 +247,11 @@ export class TrashOceanObject extends OceanObject {
   }
   drawToCanvas(canvas) {
     const ctx = canvas.getContext('2d');
-    //const xpos = constants.fishCanvasWidth / 2 - this.image.width / 2;
-    //const ypos = constants.fishCanvasHeight / 2 - this.image.height / 2;
-    const xpos = 0;
-    const ypos = 0;
-    ctx.drawImage(
-      this.image,
-      xpos,
-      ypos,
-      constants.fishCanvasWidth,
-      constants.fishCanvasHeight
-    );
+    const xpos = constants.fishCanvasWidth / 2 - this.image.width / 2;
+    const ypos = constants.fishCanvasHeight / 2 - this.image.height / 2;
+    //const xpos = 0;
+    //const ypos = 0;
+    ctx.drawImage(this.image, xpos, ypos);
     this.generateLogits(canvas);
   }
 }
