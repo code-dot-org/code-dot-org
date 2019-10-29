@@ -8,8 +8,12 @@ export const init = async () => {
   const state = getState();
   let fishWithConfidence = await predictAllFish(state);
   fishWithConfidence = _.sortBy(fishWithConfidence, ['confidence']);
-  const pondFish = fishWithConfidence.splice(0, 20);
-  arrangeFish(pondFish);
+  const pondFishWithConfidence = fishWithConfidence.splice(0, 20);
+  arrangeFish(pondFishWithConfidence);
+  const pondFish = [];
+  pondFishWithConfidence.map(fishWithConfidence => {
+    pondFish.push(fishWithConfidence.fish);
+  });
   setState({pondFish});
 };
 
@@ -17,10 +21,10 @@ const predictAllFish = state => {
   return new Promise(resolve => {
     let fishWithConfidence = [];
     state.fishData.map((fish, index) => {
-      state.trainer.predictFromData(fish.knnData).then(res => {
+      state.trainer.predictFromData(fish.getKnnData()).then(res => {
         if (res.predictedClassId === ClassType.Like) {
           let data = {
-            ...fish,
+            fish,
             confidence: res.confidencesByClassId[res.predictedClassId]
           };
           fishWithConfidence.push(data);
@@ -34,15 +38,16 @@ const predictAllFish = state => {
   });
 };
 
-const arrangeFish = fishes => {
-  fishes.forEach(fish => {
-    fish.x = randomInt(
+const arrangeFish = fishesWithConfidence => {
+  fishesWithConfidence.forEach(fishesWithConfidence => {
+    const x = randomInt(
       0,
       constants.canvasWidth - constants.fishCanvasWidth / 2
     );
-    fish.y = randomInt(
+    const y = randomInt(
       0,
       constants.canvasHeight - constants.fishCanvasHeight / 2
     );
+    fishesWithConfidence.fish.setXY({x, y});
   });
 };

@@ -1,5 +1,3 @@
-import {setState} from './state';
-import {init as initModel} from './models';
 import {Modes} from './constants';
 import {FishBodyPart} from '../utils/fishData';
 
@@ -17,11 +15,6 @@ export const backgroundPathForMode = mode => {
 
 export const backgroundPath = imgName => {
   return `images/${imgName}-background.png`;
-};
-
-export const toMode = mode => {
-  const state = setState({currentMode: mode});
-  initModel(state);
 };
 
 export const bodyAnchorFromType = (body, type) => {
