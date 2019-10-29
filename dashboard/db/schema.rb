@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190904030041) do
+ActiveRecord::Schema.define(version: 20191023192120) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -1430,6 +1430,11 @@ ActiveRecord::Schema.define(version: 20190904030041) do
     t.decimal  "longitude",   precision: 9, scale: 6
     t.index ["indexed_at"], name: "index_user_geos_on_indexed_at", using: :btree
     t.index ["user_id"], name: "index_user_geos_on_user_id", using: :btree
+  end
+
+  create_table "user_level_infos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer "time_spent",    default: 0
+    t.bigint  "user_level_id",             unsigned: true
   end
 
   create_table "user_levels", id: :bigint, unsigned: true, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|

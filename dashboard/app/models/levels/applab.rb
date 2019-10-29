@@ -52,6 +52,7 @@ class Applab < Blockly
     helper_libraries
     widget_mode
     starter_assets
+    start_libraries
   )
 
   # List of possible skins, the first is used as a default.
