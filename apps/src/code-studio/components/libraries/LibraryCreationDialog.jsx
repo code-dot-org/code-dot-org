@@ -59,7 +59,7 @@ class LibraryCreationDialog extends React.Component {
     dashboard.project.getUpdatedSourceAndHtml_(response => {
       this.setState({
         libraryName: libraryParser.sanitizeName(
-          dashboard.project.getCurrentName()
+          dashboard.project.getLevelName()
         ),
         librarySource: response.source,
         loadingFinished: true,
