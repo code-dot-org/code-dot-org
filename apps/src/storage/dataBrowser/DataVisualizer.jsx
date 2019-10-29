@@ -115,7 +115,14 @@ class DataVisualizer extends React.Component {
   };
 
   componentDidUpdate(previousProps, prevState) {
-    if (this.props !== previousProps) {
+    const visualizerJustOpened =
+      !prevState.isVisualizerOpen && this.state.isVisualizerOpen;
+
+    const recordsChangedWithVisualizerOpen =
+      this.props.tableRecords !== previousProps.tableRecords &&
+      this.state.isVisualizerOpen;
+
+    if (visualizerJustOpened || recordsChangedWithVisualizerOpen) {
       let parsedRecords = this.parseRecords();
       let numericColumns = this.findNumericColumns(parsedRecords);
       this.setState({
