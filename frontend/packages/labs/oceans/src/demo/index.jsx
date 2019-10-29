@@ -24,9 +24,6 @@ $(document).ready(() => {
     currentMode: Modes.Loading,
     canvas,
     backgroundCanvas,
-    uiContainer: document.getElementById('ui-container'),
-    headerContainer: document.getElementById('header-container'),
-    footerContainer: document.getElementById('footer-container'),
     smallWordSet
   });
 
