@@ -742,37 +742,3 @@ export const initFishData = () => {
 };
 
 export const fishData = fishComponents;
-
-export const bodyShape = PropTypes.shape({
-  src: PropTypes.string.isRequired,
-  anchor: PropTypes.array.isRequired,
-  eyeAnchor: PropTypes.array.isRequired,
-  mouthAnchor: PropTypes.array.isRequired,
-  sideFinAnchor: PropTypes.array.isRequired,
-  topFinAnchor: PropTypes.array.isRequired,
-  tailAnchor: PropTypes.array.isRequired,
-  knnData: PropTypes.array.isRequired
-});
-
-export const bodyPartShape = PropTypes.shape({
-  src: PropTypes.string.isRequired,
-  knnData: PropTypes.array.isRequired
-});
-
-export const colorPaletteShape = PropTypes.shape({
-  bodyColor: PropTypes.string.isRequired,
-  finColor: PropTypes.string.isRequired,
-  mouthColor: PropTypes.string.isRequired,
-  knnData: PropTypes.array.isRequired
-});
-
-export const fishShape = PropTypes.shape({
-  body: bodyShape.isRequired,
-  eye: bodyPartShape.isRequired,
-  mouth: bodyPartShape.isRequired,
-  sideFin: bodyPartShape.isRequired,
-  topFin: bodyPartShape.isRequired,
-  tail: bodyPartShape.isRequired,
-  colorPalette: colorPaletteShape.isRequired,
-  canvasId: PropTypes.string.isRequired
-});
