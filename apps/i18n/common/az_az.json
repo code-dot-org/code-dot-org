@@ -297,6 +297,7 @@
   "puzzle": "Tapmaca",
   "puzzleTitle": "Tapmaca {puzzle_number} (cəmi {stage_total} tapmaca var)",
   "question": "Sual",
+  "random": "təsadüfi",
   "readonlyWorkspaceHeader": "Ancaq baxış: ",
   "recommendedBlockContextualHintTitle": "Tapmacanı həll etmək üçün buna bənzər bir bloku istifadə etməyə çalışın.",
   "relockStage": "Mərhələni təkrar kilidlə",

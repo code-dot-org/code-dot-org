@@ -409,7 +409,7 @@ vi:
             '"vintage"': Cổ điển
             '"warm"': Đỏ
       Dancelab_setBackgroundEffectWithPalette:
-        text: thiết lập hiệu ứng nền {EFFECT} {PALETTE}
+        text: thiết lập hiệu ứng nền {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': Không có
@@ -944,6 +944,12 @@ vi:
             MOVES.Rest: Không có
       Mikelab_randomColor:
         text: màu ngẫu nhiên
+      Mikelab_repeatUntilComplete:
+        text: lặp lại mãi mãi
+      Mikelab_sendBad:
+        text: qua trái
+      Mikelab_sendGood:
+        text: qua phải
       Mikelab_setBG:
         options:
           BG:

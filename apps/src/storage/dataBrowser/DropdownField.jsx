@@ -8,6 +8,7 @@ class DropdownField extends React.Component {
     displayName: PropTypes.string.isRequired,
     onChange: PropTypes.func.isRequired,
     options: PropTypes.array.isRequired,
+    disabledOptions: PropTypes.array,
     value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired
   };
 
@@ -18,7 +19,14 @@ class DropdownField extends React.Component {
         <select value={this.props.value} onChange={this.props.onChange}>
           <option value="">Select</option>
           {this.props.options.map(option => (
-            <option key={option} value={option}>
+            <option
+              key={option}
+              disabled={
+                this.props.disabledOptions &&
+                this.props.disabledOptions.includes(option)
+              }
+              value={option}
+            >
               {option}
             </option>
           ))}

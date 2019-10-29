@@ -47,10 +47,14 @@ describe('LibraryCreationDialog', () => {
     replaceOnWindow('dashboard', {
       project: {
         setLibraryName: () => {},
+        setLibraryDescription: () => {},
         getCurrentId: () => {}
       }
     });
     sinon.stub(window.dashboard.project, 'setLibraryName').returns(undefined);
+    sinon
+      .stub(window.dashboard.project, 'setLibraryDescription')
+      .returns(undefined);
     sinon.stub(window.dashboard.project, 'getCurrentId').returns('123');
     clientApi = new LibraryClientApi('123');
     publishSpy = sinon.stub(clientApi, 'publish');

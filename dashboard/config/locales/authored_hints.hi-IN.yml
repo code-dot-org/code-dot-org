@@ -2086,14 +2086,6 @@ hi-IN:
           ब्लॉक उपयोग कर सकते हैं।
         courseC_collector_prog_challenge1_b: क्या आप रास्ता भूल गए हैं?  पहेली को
           हल करने के लिए यह रास्ता आजमाएं!
-      courseC_data wizard:
-        courseA_playLab_events7_a: |-
-          अभिनेताओं के टकराने पर जो होता है, उसे नियंत्रित करने के लिए इस ब्लॉक का उपयोग करें
-
-          <xml><block type="studio_whenSpriteCollided">
-              <title name="SPRITE1">1</title>
-              <title name="SPRITE2">0</title>
-            </block></xml>
       courseC_flappy_events2:
         courseC_flappy_events2_a: आपको जो ब्लॉक जोड़ने की जरूरत है, उसे `गति तय करें`
           कहा जाता है।
@@ -3557,7 +3549,7 @@ hi-IN:
 
           <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">&gt;</title>
+              <title name="OP">></title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>
@@ -3568,7 +3560,7 @@ hi-IN:
 
           <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">&gt;</title>
+              <title name="OP">></title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>
@@ -3579,7 +3571,7 @@ hi-IN:
 
           <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">&gt;</title>
+              <title name="OP">></title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>

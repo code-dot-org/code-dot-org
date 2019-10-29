@@ -47,6 +47,7 @@
   "jumpBackward": "spring achteruit met",
   "jumpForward": "spring vooruit met",
   "jumpToOverDown": "",
+  "jumpToPosition": "",
   "jumpByDirection": "",
   "jumpTooltip": "Verplaatst de artiest zonder sporen na te laten.",
   "jumpEastTooltip": "Beweegt de tekenaar richting oost zonder iets achter te laten.",

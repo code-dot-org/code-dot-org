@@ -280,6 +280,7 @@
   "puzzle": "վարանում",
   "puzzleTitle": "Puzzle {puzzle_number} անձնագիրը {stage_total}",
   "question": "Question",
+  "random": "կամայական",
   "readonlyWorkspaceHeader": "Դիտել միայն:",
   "recommendedBlockContextualHintTitle": "Փորձեք օգտագործելով բլոկ նման է լուծել հանելուկ.",
   "remix": "remix",

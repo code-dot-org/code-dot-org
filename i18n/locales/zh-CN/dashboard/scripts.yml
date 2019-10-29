@@ -10578,6 +10578,10 @@ zh-CN:
           stages:
             Deeper Learning Overview:
               name: 更深的学习概览
+        dlp19-csp-mod-w3:
+          stages:
+            Deeper Learning Overview:
+              name: 更深的学习概览
         csd4-pilot:
           stages:
             What is a Computer?:
