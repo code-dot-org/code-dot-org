@@ -2,6 +2,10 @@ require_relative 'test_helper'
 require 'cdo/poste'
 
 class FakeSmtp
+  # make these instance variables easily accessible, so we can make assertions
+  # about the values passed to send_message
+  attr_reader :message, :from_address, :to_addresses
+
   def send_message(message, from_address, *to_addresses)
     @message = message
     @from_address = from_address
@@ -39,10 +43,9 @@ class DelivererTest < Minitest::Test
       params: {}.to_json
     }
     @deliverer.send(delivery)
-    message = @fake_smtp.instance_variable_get(:@message)
-    assert_match "To: #{email}", message
-    assert_match "<html><body>", message
-    assert_equal "noreply@code.org", @fake_smtp.instance_variable_get(:@from_address)
-    assert_equal [email], @fake_smtp.instance_variable_get(:@to_addresses)
+    assert_match "To: #{email}", @fake_smtp.message
+    assert_match "<html><body>", @fake_smtp.message
+    assert_equal "noreply@code.org", @fake_smtp.from_address
+    assert_equal [email], @fake_smtp.to_addresses
   end
 end
