@@ -1,4 +1,5 @@
 import * as mobilenetModule from '@tensorflow-models/mobilenet';
+import * as tf from '@tensorflow/tfjs';
 import {fishData, FishBodyPart} from '../utils/fishData';
 import constants from './constants';
 import {
@@ -100,7 +101,6 @@ export class OceanObject {
     return this.id;
   }
   getKnnData() {
-    //return this.knnData;
     if (mobilenet) {
       if (!this.logits) {
         this.drawToCanvas(tmpCanvas);
@@ -124,7 +124,8 @@ export class OceanObject {
   }
   generateLogits(canvas) {
     if (mobilenet && !this.logits) {
-      const infer = () => mobilenet.infer(canvas, 'conv_preds');
+      const image = tf.fromPixels(canvas);
+      const infer = () => mobilenet.infer(image, 'conv_preds');
       this.logits = infer();
     }
   }
@@ -158,7 +159,7 @@ export class FishOceanObject extends OceanObject {
     this.colorPalette = this.colorPalettes[
       Math.floor(Math.random() * this.colorPalettes.length)
     ];
-    this.knnData = [
+    this.knnData = tf.tensor([
       ...body.knnData,
       ...eye.knnData,
       ...mouth.knnData,
@@ -166,7 +167,7 @@ export class FishOceanObject extends OceanObject {
       ...topFin.knnData,
       ...tail.knnData,
       ...this.colorPalette.knnData
-    ];
+    ]);
     this.parts = [body, eye, mouth, sideFinFront, sideFinBack, topFin, tail];
   }
 
@@ -257,8 +258,6 @@ export class TrashOceanObject extends OceanObject {
     const ctx = canvas.getContext('2d');
     const xpos = constants.fishCanvasWidth / 2 - this.image.width / 2;
     const ypos = constants.fishCanvasHeight / 2 - this.image.height / 2;
-    //const xpos = 0;
-    //const ypos = 0;
     ctx.drawImage(this.image, xpos, ypos);
     this.generateLogits(canvas);
   }

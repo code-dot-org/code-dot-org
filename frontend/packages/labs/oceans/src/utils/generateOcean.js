@@ -1,9 +1,13 @@
 import {FishOceanObject, TrashOceanObject, generateOceanObject} from '../demo/OceanObject';
 
-export const generateOcean = numFish => {
+export const generateOcean = (numFish, generateTrash=true) => {
   const ocean = [];
+  let objectsToGenerate = [FishOceanObject];
+  if (generateTrash) {
+      objectsToGenerate.push(TrashOceanObject);
+  }
   for (var i = 0; i < numFish; ++i) {
-    ocean.push(generateOceanObject([FishOceanObject, TrashOceanObject], i));
+    ocean.push(generateOceanObject(objectsToGenerate, i));
   }
   return ocean;
 };
@@ -13,7 +17,7 @@ export const filterOcean = async (ocean, trainer) => {
   ocean.forEach((fish, idx) => {
     if (!fish.getResult()) {
       predictionPromises.push(
-        trainer.predictFromData(fish.knnData).then(res => {
+        trainer.predictFromTensor(fish.knnData).then(res => {
           fish.setResult(res);
         })
       );

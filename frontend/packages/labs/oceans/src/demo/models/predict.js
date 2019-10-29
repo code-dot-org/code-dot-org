@@ -8,7 +8,7 @@ export const init = () => {
 export const predictFish = (state, idx) => {
   return new Promise(resolve => {
     const fish = state.fishData[idx];
-    state.trainer.predictFromData(fish.getKnnData()).then(prediction => {
+    state.trainer.predictFromTensor(fish.getKnnData()).then(prediction => {
       fish.setResult(prediction);
       resolve(prediction);
     });

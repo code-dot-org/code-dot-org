@@ -8,7 +8,7 @@ export const init = () => {
   const state = getState();
   let fishData = [...state.fishData];
   if (fishData.length === 0) {
-    fishData = fishData.concat(generateOcean(100));
+    fishData = fishData.concat(generateOcean(100, state.loadTrashImages));
   }
 
   let trainer = state.trainer;
@@ -34,11 +34,11 @@ export const onClassifyFish = doesLike => {
 
   const knnData = state.fishData[state.trainingIndex].getKnnData();
   const classId = doesLike ? ClassType.Like : ClassType.Dislike;
-  state.trainer.addExampleData(knnData, classId);
+  state.trainer.addExampleTensor(knnData, classId);
 
   let fishData = [...state.fishData];
   if (state.trainingIndex > state.fishData.length - 5) {
-    fishData = fishData.concat(generateOcean(100));
+    fishData = fishData.concat(generateOcean(100, state.loadTrashImages));
   }
 
   if (doesLike) {

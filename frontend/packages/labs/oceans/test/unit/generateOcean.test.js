@@ -33,7 +33,7 @@ describe('Generate ocean test', () => {
     const trainer = new SimpleTrainer();
     await trainer.initializeClassifiersWithoutMobilenet();
     trainingOcean.forEach(fish => {
-      trainer.addExampleData(fish.getKnnData(), Math.round(Math.random()));
+      trainer.addExampleTensor(fish.getKnnData(), Math.round(Math.random()));
     });
     const predictedOcean = await filterOcean(generateOcean(numFish), trainer);
     expect(predictedOcean.length).toEqual(numFish);
@@ -45,7 +45,7 @@ describe('Generate ocean test', () => {
     const trainer = new SimpleTrainer();
     await trainer.initializeClassifiersWithoutMobilenet();
     trainingOcean.forEach(fish => {
-      trainer.addExampleData(
+      trainer.addExampleTensor(
         Array.from(fish.getKnnData()),
         fish.getColorPalette().bodyRgb[0] > 200 ? 1 : 0
       );
@@ -75,7 +75,7 @@ describe('Generate ocean test', () => {
     await trainer.initializeClassifiersWithoutMobilenet();
     trainingOcean.forEach(fish => {
       const cat = fish.getKnnData()[1] === 0 ? 1 : 0;
-      trainer.addExampleData(Array.from(fish.knnData), cat);
+      trainer.addExampleTensor(Array.from(fish.knnData), cat);
     });
     const predictedOcean = await filterOcean(
       generateOcean(numPredictionFish),
