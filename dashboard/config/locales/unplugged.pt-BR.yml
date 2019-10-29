@@ -649,6 +649,25 @@ pt-BR:
         desc: Esta lição mostra como usamos algoritmos em nossa vida, especificamente
           na hora de fazer aviões de papel. Esta lição também apresenta a ciência
           da computação de forma geral, e como os algoritmos têm um papel essencial.
+      test-uid-passthrough:
+        desc: "# Sessão de Cenários de Recrutamento\r\n\r\n## Deslize à direita para
+          CS\r\nPara esta sessão usaremos uma ferramenta chamada \"Deslize à Direita
+          para CC\", que foi desenvolida por nossos parceiros no MIT. Em Deslize à
+          Direita para CC, você irá ler os perfis de alguns estudantes e considerar
+          argumentos que você poderia usar para convencer ele ou ela a se inscrever
+          no curso de Princípios de CC. \r\n\r\n## Como funciona\r\nAo jogar Deslize
+          à Direita para CC você verá várias frases que você poderá dizer a cada estudante.
+          Você irá deslizar à direita sobre as frases que você acha que serão efetivas
+          para convencer este estudante em particular a se increver no curso, e deslizar
+          à esquerda sobre as frases que você acha que não serão efetivas. Durante
+          a sessão nós iremos discutir em grupo suas considerações sobre os tipos
+          de frases que são mais efetivas para fazer os estudantes se inscreverem
+          em CC, e você poderá ver como outras pessoas no seu grupo de trabalho deslizaram
+          em cada uma das frases.\r\n<br><br><br><br>\r\n\r\n<span style=\"display:none\">submitButton
+          next-stage</span>\r\n\r\n<a class=\"btn btn-large btn-primary submitButton\"
+          href=\"https://swipe-right-for-cs.teachingsystemslab.org/start?cuid=<user_id/>\">
+          Clique aqui para jogar Deslize à direita para CC!</a>\r\n\r\n \nroot ->
+          data -> unplugged -> test-uid-passthrough -> desc\n"
       PlantASeed_2019:
         title: 'Algoritmos da vida real: plante uma semente'
         desc: Esta lição apresenta como usamos algoritmos em nossa vida diária, usando

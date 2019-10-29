@@ -263,8 +263,6 @@ fil-PH:
         craft_what_is_iron: Minahin ang bakal na ito!
       Underground Iron_2019:
         craft_what_is_iron: Minahin ang bakal na ito!
-      behaviors 3a:
-        this_sprite_callout: Pagsubok
       course2_bee_conditionals_challenge2:
         courseD_bee_conditionals_challenge2_1: Gamitin ang loop na ito para kolektahin
           ang lahat ng nektar (o pulot) mula sa isang bulaklak (o pulot-pukyutan).

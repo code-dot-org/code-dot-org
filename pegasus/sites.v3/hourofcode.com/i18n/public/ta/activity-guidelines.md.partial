@@ -9,7 +9,7 @@ layout: wide
   }
 </style>
 
-{{ signup_button }}
+{{signup_button}}
 
 # Lesson guidelines for the Hour of Code™ and Computer Science Education Week
 
@@ -275,4 +275,4 @@ Please promote your activity to your network! Direct them to your Hour of Code p
 
 [**Back to the top**](#top)
 
-{{ signup_button }}
+{{signup_button}}

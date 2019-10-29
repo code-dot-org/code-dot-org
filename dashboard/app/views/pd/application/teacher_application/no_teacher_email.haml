@@ -2,7 +2,7 @@
   = stylesheet_link_tag 'css/pd', media: 'all'
 
 %p
-  != I18n.t('pd.no_teacher_email.body', user_registration: edit_user_registration_path)
+  != I18n.t('pd.no_teacher_email.body_markdown', user_registration: edit_user_registration_path, markdown: true)
 
 - ga_link = "/pd/application/teacher/no_teacher_email"
 - ga_link += "?nominated=true" if params[:nominated]

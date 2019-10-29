@@ -1,10 +1,9 @@
 ---
 title: Beteiligung der gesamten Schule
-layout: wide
 ---
 
 {{ signup_button }}
 
-# Get your whole school to participate
+# Lassen Sie Ihre ganze Schule teilnehmen
 
-Information about getting whole schools to participate in the Hour of Code will go here.
+Informationen darüber, wie man als ganze Schulen an der Hour of Code teilnehmen kann, finden Sie hier.

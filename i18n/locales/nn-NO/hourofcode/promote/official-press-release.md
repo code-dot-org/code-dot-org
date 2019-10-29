@@ -1,7 +1,5 @@
 ---
 title: Kodetimen - pressemelding til folkevalde
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

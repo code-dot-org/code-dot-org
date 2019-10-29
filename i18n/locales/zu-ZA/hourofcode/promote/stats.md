@@ -1,7 +1,5 @@
 ---
 title: Blurbs and useful stats
-layout: wide
-nav: promote_nav
 ---
 
 <a id="blurb"></a>
@@ -32,7 +30,7 @@ Sithemba ukuba izoletha intshisakalo kubafundi ukuba beqhubeke nefundo. Ucwaning
 
 #### Kungani lokhu kubalulekile?
 
-Ithekhinoloji ikuqula imikhakha yonke emhlabeni. Ngo 2015, ukuvuleka okuyizigidi eziyisikhombisa emelika bezikumisebenzi-efaka ubuciko nokusongoza-lapho ikhono lokufinqqwa kuyigugu. But 65 percent of schools in the U.S. don't teach computer science. Sifikile sikhathi sokuba sifike esikhathini samanje. Siyazi ukuthi akhathaliseki ukuba abafundi bethu benzani umabekhulile, noma baya emithini, kwezebhizinisi, kwezepolotiki okanye kwezobuciko, ulwazi lwethekhinoloji luzobanika ukuzethemba kanye nonqenqema wokuncintisana. <br /> <br />
+Ithekhinoloji ikuqula imikhakha yonke emhlabeni. Ngo 2015, ukuvuleka okuyizigidi eziyisikhombisa emelika bezikumisebenzi-efaka ubuciko nokusongoza-lapho ikhono lokufinqqwa kuyigugu. But 55 percent of schools in the U.S. don't teach computer science. Sifikile sikhathi sokuba sifike esikhathini samanje. Siyazi ukuthi akhathaliseki ukuba abafundi bethu benzani umabekhulile, noma baya emithini, kwezebhizinisi, kwezepolotiki okanye kwezobuciko, ulwazi lwethekhinoloji luzobanika ukuzethemba kanye nonqenqema wokuncintisana. <br /> <br />
 
 #### A quote you can use in materials
 

@@ -1,5 +1,5 @@
 ---
-title: Contact International Partners
+title: Kontakt zu internationalen Partnern
 layout: wide
 ---
 
@@ -11,7 +11,7 @@ layout: wide
 
 {{ signup_button }}
 
-# Contact International Partners
+# Kontakt zu internationalen Partnern
 
 Code.org works with many organizations around the world to make the Hour of Code a truly international movement. Did you know that in 2017, 60% of all Hour of Code events occurred outside of the U.S.?
 
@@ -30,7 +30,7 @@ www.program.ar                                                 |
 | Argentina                             | Nuc Ba Academia                                                   |                                    | http://academia.nucba.com.ar                                                                  |
 | Australia                             | Google                                                            | Marie Efstathiou                   | https://www.google.com/edu/cs                                                                 |
 | Australia                             | Grok Learning                                                     | Jane Abrams                        | https://groklearning.com                                                                      |
-| Brazil                                | Programaê! - Fundaçao Lemann                                      |                                    | http://programae.org.br/horadocodigo                                                          |
+| Brazil                                | Programaê! - Fundação Telefônica Vivo                             |                                    | http://programae.org.br/horadocodigo                                                          |
 | Cameroon                              | Big IT Company Ltd                                                |                                    |                                                                                               |
 | Canada                                | Brilliant Labs Inc.                                               |                                    | https://www.brilliantlabs.ca                                                                  |
 | Canada                                | Hatch Canada                                                      |                                    | www.hatchcanada.com                                                                           |

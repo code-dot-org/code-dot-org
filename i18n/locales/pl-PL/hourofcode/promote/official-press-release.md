@@ -1,7 +1,5 @@
 ---
 title: Komunikat prasowy Godziny Kodowania dla urzędników publicznych
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

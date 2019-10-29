@@ -503,11 +503,6 @@ class ContactRollups
     log_completion(start)
 
     start = Time.now
-    log "Updating Regional Partner role"
-    append_regional_partner_to_role_list
-    log_completion(start)
-
-    start = Time.now
     log "Updating CSF/CSD/CSP teacher roles"
     # CSF scripts don't have a course mapping - identify CSF teachers by
     # specific scripts

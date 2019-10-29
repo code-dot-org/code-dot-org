@@ -1,7 +1,5 @@
 ---
 title: Régebbi "Hour of Code" poszterek
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

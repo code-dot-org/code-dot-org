@@ -1,7 +1,5 @@
 ---
 title: آور-آف-کوڈ کس طرح ھوسٹ (منعقد) کریں۔ آرگنائزیشنز
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

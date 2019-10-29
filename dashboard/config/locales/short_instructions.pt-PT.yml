@@ -422,13 +422,16 @@ pt-PT:
       course4_artist_fwp_challenge1: Tenta executar este programa e faz as alterações
         para ver o que acontece. Podes descobrir como funciona? (Ou apagá-lo e substituí-lo
         por algo totalmente diferente)
+      courseA_maze_seq1: Leve o pássaro até o porquinho!
+      courseA_maze_seq1_2018: Leve o pássaro até o porquinho!
+      courseA_maze_seq1_2019: Leve o pássaro até o porquinho!
       courseA_maze_seq2: Altere o código para me levar até o porco!
-      courseC_artist_prog5: 'Essa casa precisa de um telhado! Desenhe o triângulo.
-        Dica: todos os 3 lados têm o mesmo comprimento.'
-      courseC_artist_prog5_2018: 'Essa casa precisa de um telhado! Desenhe o triângulo.
-        Dica: todos os 3 lados têm o mesmo comprimento.'
-      courseC_artist_prog5_2019: 'Essa casa precisa de um telhado! Desenhe o triângulo.
-        Dica: todos os 3 lados têm o mesmo comprimento.'
+      courseC_artist_prog5: 'Esta casa precisa de um telhado! Desenha um triângulo.  Dica:
+        os três lados têm o mesmo comprimento.'
+      courseC_artist_prog5_2018: 'Esta casa precisa de um telhado! Desenha um triângulo.  Dica:
+        os três lados têm o mesmo comprimento.'
+      courseC_artist_prog5_2019: 'Esta casa precisa de um telhado! Desenha um triângulo.  Dica:
+        os três lados têm o mesmo comprimento.'
       courseD_artist_binary4: |-
         Você consegue desenhar este padrão usando
         a repetição de uma string binária de 3 dígitos?

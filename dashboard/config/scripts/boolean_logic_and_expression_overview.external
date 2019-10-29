@@ -5,9 +5,11 @@ markdown <<MARKDOWN
 # Boolean Logic and Expression Overview
 
 A Boolean expression is a logical statement that evaluates to either `TRUE` or `FALSE`. Boolean expressions are used inside conditional statements to represent the question that is being asked. For example, 3 < 4 is a boolean expression that evaluates to `TRUE`. If used in a conditional statement like this:
-<img src=”https://images.code.org/d8a37725510f7fa3ae614322bb017d5c-image-1446430205641.09.52.png”>
+<img src="https://images.code.org/d8a37725510f7fa3ae614322bb017d5c-image-1446430205641.09.52.png">
+
 then the code inside the if-statement will always run, which is not very interesting. But when used in combination with variables, whose value may change over the course of a program, the boolean expression will not always evaluate to true and becomes a powerful decision-making tool. For example, the conditional statement below depends on the value of the `lives` variable, which will change over the course of the game.
-<img src=”https://images.code.org/e172350177512fcb9056772cded70272-image-1446430205647.09.35.png”>
+<img src="https://images.code.org/e172350177512fcb9056772cded70272-image-1446430205647.09.35.png">
+
 Boolean expressions can be used to evaluate many different statements depending on the **comparison operator** that is used. This is the symbols used in boolean expressions to compare two things. Note that there is always question implied - the statement 4 < 3 simply evaluates to the boolean `False` and is not meant to melt your mathematical brain, which of course knows that 4 is not less than 3! Below are the comparison operators and their implied questions:<br>
 - Is less than? `<` <br>
 - Is less than or equal to? `<=` <br>
@@ -16,23 +18,23 @@ Boolean expressions can be used to evaluate many different statements depending 
 - Is equal to? `==` <br>
 
 In addition to the mathematical symbols, there are a few **Boolean operators** that are particularly helpful. The simple words `AND`, `OR`, and `NOT`, which are represented with the symbols &&, ||, and ! in JavaScript, respectively, can be used to create more complex boolean expressions that evaluate to `TRUE` or `FALSE` depending on the rules of these operators. In the example below, the AND boolean operator, which is represented with the symbol `&&` is used to check in one single expression if the variable x is greater than 5 AND is less than 15. Only if both sides of the expression are true does the code inside the conditional statement run. 
-<img src=”https://images.code.org/31c05927767cf9ec175c3fab5c658404-image-1446430205650.09.17.png”>
+<img src="https://images.code.org/31c05927767cf9ec175c3fab5c658404-image-1446430205650.09.17.png">
 
 The following links provide additional links and information about booleans.  These links are also found in the curriculum, but are consolidated here for convenience.
 
 **Stage 8**
 
-- <a href = “https://studio.code.org/s/csp5/stage/8/puzzle/3” target=_blank> Comparison Operators reference guide <i class="fa fa-external-link-square"></i></a>
+- <a href = "https://studio.code.org/s/csp5/stage/8/puzzle/3" target=_blank> Comparison Operators reference guide <i class="fa fa-external-link-square"></i></a>
 
 **Stage 9**
 
-- <a href = “https://studio.code.org/s/csp5/stage/9/puzzle/9” target=_blank> Boolean Operators && and || and !<i class="fa fa-external-link-square"></i></a>
-- <a href = “https://studio.code.org/s/csp5/stage/9/puzzle/12” target=_blank> How Compound Boolean Expressions Work<i class="fa fa-external-link-square"></i></a>
+- <a href = "https://studio.code.org/s/csp5/stage/9/puzzle/9" target=_blank> Boolean Operators && and || and !<i class="fa fa-external-link-square"></i></a>
+- <a href = "https://studio.code.org/s/csp5/stage/9/puzzle/12" target=_blank> How Compound Boolean Expressions Work<i class="fa fa-external-link-square"></i></a>
 
 **External**
 
-- <a href = “http://www.w3schools.com/js/js_booleans.asp” target=_blank> Javascript Booleans - w3schools <i class="fa fa-external-link-square"></i></a>
-- <a href = “http://www.quirksmode.org/js/boolean.html” target=_blank> The Basic Theory of Boolean Logic<i class="fa fa-external-link-square"></i></a>
+- <a href = "http://www.w3schools.com/js/js_booleans.asp" target=_blank> Javascript Booleans - w3schools <i class="fa fa-external-link-square"></i></a>
+- <a href = "http://www.quirksmode.org/js/boolean.html" target=_blank> The Basic Theory of Boolean Logic<i class="fa fa-external-link-square"></i></a>
 
 
 

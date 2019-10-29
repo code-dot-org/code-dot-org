@@ -4,13 +4,13 @@ layout: wide
 nav: how_to_nav
 ---
 
-{{ signup_button }}
+{{signup_button}}
 
 # எப்படி தொண்டர்கள் வழிகாட்டி
 
 ### இன்றைய வகுப்பறையில் ஒரு வித்தியாசத்தை!
 
----
+* * *
 
 ## ஏன் தன்னார்வ?
 
@@ -255,5 +255,5 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
                         </p>
                         
                         <p>
-                          {{ signup_button }}
+                          {{signup_button}}
                         </p>

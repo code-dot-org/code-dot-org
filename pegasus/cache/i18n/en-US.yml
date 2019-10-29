@@ -955,6 +955,7 @@
   pre-express-2018_name: Pre-reader Express Course (2018)
   express-2019_name: Express Course (2019)
   pre-express-2019_name: Pre-reader Express Course (2019)
+  csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Animation and Games'
   accelerated_name: "Accelerated Course"
   express_name: "Express Course"
@@ -1466,6 +1467,8 @@
   app_lab_tutorials: "App Lab Tutorials"
   game_lab_documentation: "Game Lab Documentation"
   game_lab_tutorials: "Game Lab Tutorials"
+  sprite_lab_documentation: "Sprite Lab Documentation"
+  sprite_lab_tutorials: "Sprite Lab Tutorials"
   header_documentation: "Documentation"
   user_header_label: "Hi %{username}"
   user_header_team: "Team"

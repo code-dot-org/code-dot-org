@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/deprecatedChai';
 import RecentCourses from '@cdo/apps/templates/studioHomepages/RecentCourses';
 import ContentContainer from '@cdo/apps/templates/ContentContainer';
 import SetUpCourses from '@cdo/apps/templates/studioHomepages/SetUpCourses';
@@ -24,6 +24,16 @@ describe('RecentCourses', () => {
     expect(wrapper.find('TopCourse').exists()).to.be.false;
     expect(wrapper.find('CourseCard').exists()).to.be.false;
     expect(wrapper.find('SeeMoreCourses').exists()).to.be.false;
+  });
+
+  it('SetUpCourses has no course when topCourse is null', () => {
+    const wrapper = shallow(<RecentCourses topCourse={null} />);
+    expect(wrapper.find('SetUpCourses').prop('hasCourse')).to.be.false;
+  });
+
+  it('SetUpCourses has no course when topCourse is undefined', () => {
+    const wrapper = shallow(<RecentCourses topCourse={undefined} />);
+    expect(wrapper.find('SetUpCourses').prop('hasCourse')).to.be.false;
   });
 
   it('shows a TopCourse if there is one course', () => {

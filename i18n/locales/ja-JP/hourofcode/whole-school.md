@@ -1,6 +1,5 @@
 ---
 title: 全校での参加
-layout: wide
 ---
 
 {{ signup_button }}

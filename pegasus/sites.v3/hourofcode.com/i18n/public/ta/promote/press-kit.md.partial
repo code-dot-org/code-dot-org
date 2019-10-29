@@ -4,7 +4,7 @@ layout: wide
 nav: promote_nav
 ---
 
-{{ signup_button }}
+{{signup_button}}
 
 # How to attract media to your Hour of Code event
 
@@ -12,7 +12,7 @@ nav: promote_nav
 
 *அனைத்து பத்திரிகை மற்றும் ஊடக விசாரணங்களுக்கும், <press@code.org> உடன் தொடர்பு கொள்ளவும்*
 
----
+* * *
 
 ## Key Tips
 
@@ -84,4 +84,4 @@ Code.org என்பது ஒரு 501c3 பொது லாபமல்ல�
   
 Find more resources and sample emails [here]({{ promote/sample_emails }}).
 
-{{ signup_button }}
+{{signup_button}}

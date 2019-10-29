@@ -10,34 +10,43 @@
   campaign_date_full: "Del 7 al 13 de diciembre"
   campaign_date_year: "2017"
   campaign_date_full_year: "Del 4 al 10 de diciembre de 2017"
-  codeorg_homepage_hoc2018_curriculum: 'Go further with <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org courses</a>'
-  codeorg_homepage_hoc2018_dance_heading: 'Create your own <span class="highlight-word">Dance&nbsp;Party</span>'
-  codeorg_homepage_hoc2018_header_line1: 'The Hour of Code is coming...'
-  codeorg_homepage_hoc2018_header_line2_desktop: 'What will you <span class="hoc2018-highlight-word">create?</span>'
+  hoc2019_header: 'Aprende a programar. Cambia el mundo.'
+  hoc2019_header_line1_mobile: 'Aprende a programar.'
+  hoc2019_header_line2_mobile: 'Cambia el mundo.'
+  social_hoc2019_every_sudent: 'Cada estudiantes tiene el potencial de cambiar el mundo. Ayúdelos a comenzar. #CSforGood'
+  social_hoc2019_learn_computer_science: 'Aprender informática. Cambia el mundo. #CSforGood #HourOfCode'
+  social_hoc_is_coming: 'La Hora del Código esta llegando!'
+  social_hoc2019_hoc_is_about_csforgood: 'EL #HourOfCode se trada de #CSforGood. Aprender informática. Cambia el mundo.'
+  social_hoc2019_coming_dates: 'La Hora del Código llegará el 9-15 de diciembre del 2019. La informática es fundamental para que cada estudiante aprenda.'
+  social_hoc2019_dance: '¡Con la presencia de Katy Perry, Jonas Brothers, Lil Nas X, Panic at the Disco, y muchos más!'
+  codeorg_homepage_hoc2018_curriculum: 'Ve más con <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org cursos</a>'
+  codeorg_homepage_hoc2018_dance_heading: 'Crea tu propio <span class="highlight-word">Fiesta&nbsp;Baile</span>'
+  codeorg_homepage_hoc2018_header_line1: 'La Hora del Código está llegando...'
+  codeorg_homepage_hoc2018_header_line2_desktop: '¿Qué vas a <span class="hoc2018-highlight-word">crear?</span>'
   codeorg_homepage_hoc2018_header_line2_mobile: '¿Qué vas a crear?'
-  codeorg_homepage_hoc2018_header_line3: 'Give flight to imagination and birth to innovation. Start with an Hour of Code and your own brand of creativity, whatever it may be.'
-  codeorg_homepage_hoc2018_musician_before: 'Featuring'
-  codeorg_homepage_hoc2018_musician_after: 'and more!'
-  codeorg_homepage_hoc2018_video: 'Watch our video'
+  codeorg_homepage_hoc2018_header_line3: 'Deja volar la imaginación y da lugar a la innovación. Empieza con un Hora de Código y tu propia marca de creatividad, sea cual sea.'
+  codeorg_homepage_hoc2018_musician_before: 'Con la presencia'
+  codeorg_homepage_hoc2018_musician_after: '¡ y más!'
+  codeorg_homepage_hoc2018_video: 'Vea nuestro video'
   hourofcode_homepage_hoc2018_header_line1: 'Cualquiera, en cualquier lugar puede organizar un evento "Hora de Código". Tutoriales de una hora en más de 45 idiomas. No hace falta experiencia.'
   hourofcode_homepage_hoc2018_header_line2: 'Edades entre 4 y 104.'
   hoc2018_tutorial_mchoc_description: 'Utiliza bloques de código para hacer que Alex o Steve participen en una aventura por el mundo de Minecraft.'
-  cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
-  cookie_banner_more_information: "See Code.org's Privacy Policy."
-  cookie_banner_accept: 'I agree'
+  cookie_banner_message: 'Si continúas navegando en nuestro sitio web o haces clic en "Acepto", aceptas que se almacenen cookies en tu ordenador o dispositivo.'
+  cookie_banner_more_information: "Vea Políticas de Privacidad de Code.org."
+  cookie_banner_accept: 'Acepto'
   front_header_banner: 'Únete al mayor evento educativo de la historia, %{campaign_date}'
   front_intro_default: 'La Hora del Código es un movimiento global, que llega a decenas de millones de estudiantes en más de 180 países. Cualquier persona, en cualquier lugar del mundo puede organizar una Hora del Código. Los tutoriales, de una hora de duración, están disponibles en más de 30 idiomas. No se necesita experiencia. <strong>Para edades entre 4 y 104 años.</strong>'
-  front_intro_default_2: 'A global movement in 180+ countries.'
+  front_intro_default_2: 'Un movimiento global en más de 180 países.'
   front_watch_video: 'Ver el vídeo 2015'
   front_watch_regular_video: 'Ver el vídeo'
   front_volunteers: 'Se necesitan Técnicos voluntarios'
   front_start_learning: 'Empieza a aprender'
-  gdpr_dialog_heading: 'Do you agree to using a web site based in the United States?'
-  gdpr_dialog_message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
-  gdpr_dialog_link_intro: 'For details see our'
-  gdpr_dialog_privacy_policy: 'privacy policy'
-  gdpr_dialog_logout: 'Logout'
-  gdpr_dialog_yes: 'Yes'
+  gdpr_dialog_heading: '¿Aceptas utilizar un sitio web con sede en los Estados Unidos?'
+  gdpr_dialog_message: 'Datos de tu uso de este sitio tal vez se envíen para almacenarse y procesarse en los Estados Unidos.'
+  gdpr_dialog_link_intro: 'Para mas detalles vea nuestro'
+  gdpr_dialog_privacy_policy: 'política de privacidad'
+  gdpr_dialog_logout: 'Cerrar sessión'
+  gdpr_dialog_yes: 'Si'
   header_menu_resources: 'Recursos'
   header_menu_faq: 'Preguntas Frecuentes'
   header_menu_how_to: '¿Cómo?'
@@ -244,7 +253,7 @@
   front_join_us_challenge: "¡Gana un video chat para tu clase con una celebridad!"
   front_join_us_learn_more: "Aprenda más"
   signup_closed: 'El registro para Hour of Code está cerrado. Por favor intente nuevamente en Octubre para inscribirse para el próximo Hour of Code.'
-  signup_registration_not_required: "You don't need to register to participate! The Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan an event for your class."
+  signup_registration_not_required: "No necesitas registrarte para participar! Las actividades de la Hora del Código están disponibles durante todo el año. <a href='%{hoc_activities_url}'>Prueba una actividad</a> o lea nuestra <a href='%{howto_guide_url}'>guía de como</a> para planear un evento para tu clase."
   signup_registration_closed: "And every year in December, your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. We'll open registration for the annual celebration in October."
   signup_header: 'Organiza una hora de código del %{campaign_date} y regístrate.'
   signup_name_label: 'Tu nombre'
@@ -269,7 +278,7 @@
   signup_match_volunteer: 'Ayúdame a encontrar un ingeniero de software que motive e inspire a mis estudiantes'
   signup_email_preference_opt_in: 'Can we email you about updates to Code.org courses, local opportunities, or other computer science news?'
   signup_email_preference_privacy: '(See our privacy policy)'
-  signup_email_preference_yes: 'Yes'
+  signup_email_preference_yes: 'Si'
   signup_email_preference_no: 'No'
   signup_email_preference_error: 'Email preference is required'
   signup_multiple_event_warning: "Si estas realizando varios eventos, por favor, envía un único nombre o correo electrónico por cada uno. Sólo contamos un evento por cada combinación de nombre y correo electrónico."
@@ -292,14 +301,14 @@
   signup_continue_label: 'Continuar'
   signup_thank_you_header: "Gracias por registrarse para organizar una Hora del Código."
   signup_thank_you_message: 'Te enviamos un email de confirmación con información que te ayudará a comenzar.'
-  social_hoc2018_code_org_what_create: "Code.org: What will you create?"
-  social_hoc2018_creativity_in_are_you: "The #HourOfCode is about creativity. I’m in! Are you?"
+  social_hoc2018_code_org_what_create: "Code.org: ¿Qué vas a crear?"
+  social_hoc2018_creativity_in_are_you: "El #HourOfCode es sobre creatividad. ¡Yo estoy! ¿Y tú?"
   social_hoc2018_dance_party: "Hour of Code: Dance Party"
   social_hoc2018_dance_what_create: "Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!"
   social_hoc2018_every_student: "Every student deserves the opportunity to express their creativity with computer science."
   social_hoc2018_every_student_try_what_create: "Every student deserves the opportunity to express their creativity with computer science. Try your hand at the new tutorials. What will you create?"
   social_hoc2018_hoc_coming_create: "The Hour of Code is coming. What will you create?"
-  social_hoc2018_hoc_here: "The Hour of Code is here!"
+  social_hoc2018_hoc_here: "¡La Hora del Código está aquí!"
   social_hoc2018_join: "La Hora del Código está aquí"
   social_hoc2018_mc: "Minecraft is back for the Hour of Code, and you’re the hero! Write code to journey through Minecraft biomes."
   social_hoc2018_mc_creativity: "Use your creativity and problem solving skills to explore and build underwater worlds with code."
@@ -307,7 +316,7 @@
   social_hoc2018_global_movement: "The Hour of Code is a global movement reaching tens of millions of students. One-hour tutorials are available in 45+ languages for all ages."
   map_title: "Mapa de la Hora de Código"
   map_header: '# eventos de la Hora del Código alrededor del mundo'
-  map_header_count_year: '%{event_count} events registered in %{year}'
+  map_header_count_year: '%{event_count} eventos registrados en %{year}'
   see_all_events: 'Ver todos los eventos'
   map_header_company: '# por los organizadores de la compañía'
   map_header_country: '# en España / %{country}'
@@ -324,6 +333,7 @@
   meta_tag_twitter_description: 'La hora del código es un movimiento global en el que participan decenas de millones de estudiantes en más de 180 países y en más de 40 idiomas, con edades entre 4 y 104 años.'
   twitter_default_text: "Yo participo este año en #HourOfCode, ¿Y tú? @codeorg"
   twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
+  twitter_donor_text_2019: "This year's #HourOfCode is about #CSforGood. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'Preguntas más frecuentes'
   hoc_faq_what_is_hoc_q: '¿Qué es la Hora del Código?'
   hoc_faq_what_is_hoc_a: "La Hora del Código es una introducción de una hora de duración a las Ciencias de la Computación, diseñada para mostrar que todo el mundo puede aprender a programar y así comprender los fundamentos básicos de la disciplina. \n<a href='http://code.org/learn'>Accede a los tutoriales</a>."
@@ -417,8 +427,8 @@
   videos_hoc_2014: La Hora del Código ha llegado - Todo el mundo puede aprender
   videos_obama_cs: El presidente Obama en las ciencias de la computación
   videos_anybody_can_learn: Todo el mundo puede aprender (1 min)
-  videos_creativity: What is Creativity?
-  videos_creativity_series: What is Creativity? View Full Series.
+  videos_creativity: '¿Qué es la Creatividad?'
+  videos_creativity_series: '¿Qué es la Creatividad? Vea las Series completas.'
   title_country_resources: Recursos para países específicos
   title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
   title_hoc_review_committee: Hour of Code and CSEdWeek Review Committee
@@ -487,7 +497,7 @@
   learn_banner_teachers: "Profesores: <a id='teacher_banner_host'>Organizar una hora</a> o <a id='teacher_banner_howto'> Leer la Guía de Cómo</a>"
   learn_robotics_banner_heading: 'ROBÓTICA'
   learn_robotics_banner_blurb: '¿Tienes robots? ¡Utilízalos con las actividades a continuación y haz una Hora de programación tangible para estudiantes de cualquier edad!'
-  tutorial_danceparty_name: "Dance Party"
+  tutorial_danceparty_name: "Fiesta de baile"
   tutorial_chibitronics_name: "Chibitronics: Illuminated Story"
   tutorial_athlete_name: "Programa tu propio juego de deportes"
   tutorial_moana_name: "Moana: Busca el camino con Code"
@@ -566,7 +576,7 @@
   tutorial_buildpong_name: "Construye Pong con AI"
   tutorial_tynkerdrones_name: "Programa Drones y Robots"
   tutorial_carla_name: "Programando con Carla"
-  tutorial_globaloria_name: "Globaloria MakeQuest"
+  tutorial_zulama_name: "Zulama MakeQuest Video Game Activity"
   tutorial_capost_name: "Crea una postal digital con HTML y CSS"
   tutorial_marco_name: "¡Ejecutar Marco!"
   tutorial_codestersflappybike_name: "Bicicleta de Flappy"
@@ -953,9 +963,9 @@
   tutorial_boatrace_name: "Boat Race"
   tutorial_ccplay_name: "CodeCombat: Code, Play, Create"
   tutorial_grinch_name: "The Grinch: Saving Christmas with Code"
-  tutorial_codehsart_name: "Generating Art with Code"
-  tutorial_codehsbitcoin_name: "Cryptocurrency: Explore the Bitcoin Ledger "
-  tutorial_codehsblockchain_name: "Cryptocurrency: Explore Blockchain Technology"
+  tutorial_codehsart_name: "Generar Arte con código"
+  tutorial_codehsbitcoin_name: "Criptomoneda: Explore el libro mayor de Bitcoin "
+  tutorial_codehsblockchain_name: "Criptomoneda: Explore la Tecnología Blockchain"
   tutorial_codehscipher_name: "Caesar Cipher Wheel"
   tutorial_codehscollision_name: "Coding Collision Simulations"
   tutorial_codehsmath_name: "Coding Mathematical Models"
@@ -1065,7 +1075,7 @@
   tutorial_duckrace_name: "The Big Duck Race"
   tutorial_allcancodeapps_name: "Allcancode Platform: Build web and mobile apps in Blockly"
   tutorial_n2y_name: "Bitt Bott Explores Earth"
-  tutorial_danceparty_shortdescription: "Code a Dance Party to share with your friends. Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!"
+  tutorial_danceparty_shortdescription: "Programa una Fiesta de baile y compártela con tus amigos. ¡Con Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara y 25 artistas más!"
   tutorial_chibitronics_shortdescription: "Program a paper circuit to light up your own story."
   tutorial_athlete_shortdescription: "¡Elige entre hacer un juego de baloncesto o mezclar y combinar deportes!"
   tutorial_moana_shortdescription: "Moana es valiente, intrépida y está decidida a encontrar su propio camino."
@@ -1144,7 +1154,7 @@
   tutorial_buildpong_shortdescription: "Construye el clásico de Arcade y dale al ordenador inteligencia artificial para jugar contra ti."
   tutorial_tynkerdrones_shortdescription: "Programa un controlador para tu robot o drone."
   tutorial_carla_shortdescription: "¡Aprende código programando un robot virtual parlante llamado Carla!"
-  tutorial_globaloria_shortdescription: "¡Vete a MakeQuest! ¡Modifica el código para vencer a nuestro juego, luego construye el tuyo!"
+  tutorial_zulama_shortdescription: "Go on a MakeQuest! Modify code to beat our game, then build your own!"
   tutorial_capost_shortdescription: "Usa el código para construir una tarjeta genial de vacaciones o de cumpleaños."
   tutorial_marco_shortdescription: "Un juego envolvente para guiar a Marco con un lenguaje de programación visual."
   tutorial_codestersflappybike_shortdescription: "Crea un juego con controles de jugador. ¡Mantenga la bicicleta en el aire mientras esquiva los obstáculos!"
@@ -1643,7 +1653,7 @@
   tutorial_duckrace_shortdescription: "In this course you will solve programming tasks to help Toni the duck collect coins for its holiday savings. At the end of the course you create your own game."
   tutorial_allcancodeapps_shortdescription: "Use the Allcancode Platform to create web and mobile apps from design to delivery."
   tutorial_n2y_shortdescription: "Help Bitt Bott explore Earth using direction arrows."
-  tutorial_danceparty_longdescription: "Code a Dance Party to share with your friends. Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!"
+  tutorial_danceparty_longdescription: "Programa una Fiesta de baile y compártela con tus amigos. ¡Con Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara y 25 artistas más!"
   tutorial_chibitronics_longdescription: "Program a paper circuit to light up your own story."
   tutorial_athlete_longdescription: "¡Elige entre hacer un juego de baloncesto o mezclar y combinar deportes!"
   tutorial_moana_longdescription: "El nuevo tutorial de Disney Hour of Code usa un lenguaje de programación visual que usa bloques donde los estudiantes simplemente arrastran y sueltan bloques visuales para escribir el código. La programación visual es una forma divertida y fácil de entender para enseñar la lógica de la codificación. La exposición a la programación visual sienta las bases para la programación basada en texto, una actividad más compleja. El tutorial está dirigido a niños mayores de 8 años y aquellos que intentan programar por primera vez. Disponible en 23 idiomas y localizado fuera de los Estados Unidos. Este tutorial está disponible en línea gratis e incluye un juego de herramientas digital en inglés y español para educadores y organizadores de eventos."
@@ -1722,7 +1732,7 @@
   tutorial_buildpong_longdescription: "Pong es uno de los primeros videojuegos arcade y el primer videojuego deportivo de videojuegos. Es un juego deportivo de tenis de mesa con gráficos bidimensionales simples. El objetivo del juego es que el JUGADOR anote en la COMPUTADORA mientras defiende su META. En este proyecto, la COMPUTADORA está programada con inteligencia artificial básica para que pueda responder al JUGADOR."
   tutorial_tynkerdrones_longdescription: "Aprenda a programar dispositivos conectados resolviendo los acertijos del \"Crash Course\", donde navega robots virtuales y robots a través de obstáculos. Entonces estás listo para crear programas para controlar drones y robots reales. Requiere una tableta iPad o Android y un juguete compatible."
   tutorial_carla_longdescription: "\"Programación con Carla\" es una serie de actividades cortas que guían a los estudiantes a través de la construcción de un chatbot simple, al tiempo que aprenden conceptos básicos como variables y condicionales. Las actividades se han diseñado cuidadosamente para abordar conceptos erróneos comunes que los programadores nuevos tienen sobre estos temas, ya que ofrecen muchas oportunidades para la práctica, así como sugerencias y comentarios específicos.\n"
-  tutorial_globaloria_longdescription: "En MakeQuest, aprendes a editar el código JavaScript a través de un juego de acción lúdico y dominas conceptos de informática como variables y funciones. Cree su propio juego remezclando y expandiendo nuestro código de juego en el Sandbox. ¡Publica y comparte tu juego con amigos! Docentes: se incluyen planes de clase y actividades de extensión específicas para cada tema."
+  tutorial_zulama_longdescription: "In this activity you will learn to edit JavaScript code through a playful action game and master computer science concepts like variables and functions. Create your own game in the Sandbox by remixing and expanding on existing game code. Then publish and share your game with friends and family. A scripted lesson guide is included for teachers."
   tutorial_capost_longdescription: "Empezar a aprender HTML y CSS es fácil y divertido con esta postal digital. Aprenda a agregar encabezados, párrafos, imágenes y enlaces para crear una tarjeta navideña o una celebración de cumpleaños para compartir con amigos y familiares."
   tutorial_marco_longdescription: "Los estudiantes juegan un juego de aventuras basado en una historia original. Ellos guían a Marco, el personaje principal, a través de cada nivel dándole instrucciones paso a paso en la forma del lenguaje de programación visual utilizado por la Hora del Código. Se les presenta la secuencia de comandos, iteraciones y condiciones sin siquiera darse cuenta."
   tutorial_codestersflappybike_longdescription: "¡En esta actividad, los estudiantes usan nuestro juego de herramientas de arrastrar y escribir para comenzar a codificar en Python de inmediato! Los estudiantes son guiados a través de una serie de actividades de aprendizaje que les enseñan a construir un juego completo. Después de que terminan, tienen el desafío de usar lo que aprendieron sobre sintaxis, notación de puntos, eventos, variables, parámetros y mecánica del juego para crear un nuevo juego. "
@@ -2300,7 +2310,7 @@
   tutorial_buildpong_language: "Sólo en inglés"
   tutorial_tynkerdrones_language: "Sólo en inglés"
   tutorial_carla_language: "Sólo en inglés"
-  tutorial_globaloria_language: "Inglés, español"
+  tutorial_zulama_language: "Inglés, español"
   tutorial_capost_language: "Inglés, holandés, español, ruso"
   tutorial_marco_language: "Múltiple"
   tutorial_codestersflappybike_language: "Inglés, español"
@@ -2878,7 +2888,7 @@
   tutorial_buildpong_string_detail_grades: "A partir de siete años"
   tutorial_tynkerdrones_string_detail_grades: "A partir de siete años"
   tutorial_carla_string_detail_grades: "6+ años"
-  tutorial_globaloria_string_detail_grades: "6+ años"
+  tutorial_zulama_string_detail_grades: "6+ años"
   tutorial_capost_string_detail_grades: "6+ años"
   tutorial_marco_string_detail_grades: "2-8 años"
   tutorial_codestersflappybike_string_detail_grades: "6+ años"
@@ -3456,7 +3466,7 @@
   tutorial_buildpong_string_platforms: "Todos los navegadores modernos, tablet Android, teléfono Android, iPad"
   tutorial_tynkerdrones_string_platforms: "Tablet Android, iPad"
   tutorial_carla_string_platforms: "Todos los navegadores modernos"
-  tutorial_globaloria_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari"
+  tutorial_zulama_string_platforms: "Internet Explorer 11, Chrome, Firefox, Safari"
   tutorial_capost_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari"
   tutorial_marco_string_platforms: "Todos los navegadores modernos, tablets Android, iPad"
   tutorial_codestersflappybike_string_platforms: "Todos los navegadores modernos"
@@ -4034,7 +4044,7 @@
   tutorial_buildpong_string_detail_platforms: ""
   tutorial_tynkerdrones_string_detail_platforms: "Parrot drone, Sphero robot, Ollie robot"
   tutorial_carla_string_detail_platforms: ""
-  tutorial_globaloria_string_detail_platforms: ""
+  tutorial_zulama_string_detail_platforms: ""
   tutorial_capost_string_detail_platforms: ""
   tutorial_marco_string_detail_platforms: ""
   tutorial_codestersflappybike_string_detail_platforms: ""
@@ -4612,7 +4622,7 @@
   tutorial_buildpong_string_detail_programming_languages: "Blocks, Ready, Unity"
   tutorial_tynkerdrones_string_detail_programming_languages: "Bloques"
   tutorial_carla_string_detail_programming_languages: "CoffeeScript"
-  tutorial_globaloria_string_detail_programming_languages: "JavaScript"
+  tutorial_zulama_string_detail_programming_languages: "JavaScript"
   tutorial_capost_string_detail_programming_languages: "HTML, CSS"
   tutorial_marco_string_detail_programming_languages: "Bloques"
   tutorial_codestersflappybike_string_detail_programming_languages: "Python"
@@ -5029,7 +5039,7 @@
   tutorial_duckpiano_string_detail_programming_languages: "Bloques"
   tutorial_gpsound_string_detail_programming_languages: "Bloques"
   tutorial_groklearningpython_string_detail_programming_languages: "Python"
-  tutorial_htmltimetravel_string_detail_programming_languages: "HTML and CSS"
+  tutorial_htmltimetravel_string_detail_programming_languages: "HTML y CSS"
   tutorial_hp_flappy_string_detail_programming_languages: "Blocks, hyperPad Visual Behaviours"
   tutorial_appytappin_string_detail_programming_languages: "BitsBox"
   tutorial_icipher_string_detail_programming_languages: ""

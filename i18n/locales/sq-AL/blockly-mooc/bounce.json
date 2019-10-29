@@ -26,7 +26,7 @@
   "ifPathAhead": "nëse ka vend përpara",
   "ifTooltip": "Nëse ka vend në një drejtim të caktuar, atëherë bëj një veprim të caktuar.",
   "ifelseTooltip": "Nëse është një rrugë në drejtimin e caktuar, atëherë bëj veprimet e grupit të parë. Përndryshe, bëj veprimet e grupit të dytë.",
-  "incrementOpponentScore": "rezultati i kundërshtarit\/es",
+  "incrementOpponentScore": "rezultati i kundërshtarit/es",
   "incrementOpponentScoreTooltip": "Shto një pikë në rezultatin aktual të kundërshtarit.",
   "incrementPlayerScore": "rezultati",
   "incrementPlayerScoreTooltip": "Shto një në rezultatin aktual të lojtarit.",

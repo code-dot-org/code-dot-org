@@ -8,7 +8,7 @@ In these lessons, arrays are going to be used to stores variables.  In the futur
 
 >An array can be used like any other variable and gives us the ability to store information for use while the program is running. With an array we can keep track of lots of pieces of information all under one name. 
 
-When creating an array we often add some initial items to the list. For example, `var numList = [2,4,8,16,32]`.  You can also store string in an array `var studentNames = ["Nancy", "Bill", "Marcus"]` Note that although this is common practice, it is not required to pass values into the array when we create it. We could just as easily create `var studentNames = [ ]` and add the names in later in our program.
+When creating an array we often add some initial items to the list. For example, `var numList = [2,4,8,16,32]`.  You can also store string in an array `var studentNames = ["Nancy", "Bill", "Marcus"]`. Note that although this is common practice, it is not required to pass values into the array when we create it. We could just as easily create `var studentNames = [ ]` and add the names in later in our program.
 
 The elements stored in an array are each assigned an `index`, or numeric value related the position of the item relative to the list. Indexes start at 0. In the example above, `Nancy` is stored at index 0 and `Bill` is at index 1.
 
@@ -46,7 +46,7 @@ The `for` loop repeats statements like a `while` loop, but adds an initializatio
     <br>
 `}`
 
-<img src="https://images.code.org/d0d8f34d0f4aabaf66084ceac282448e-image-1447343652405.png"style="float:right; margin-left:30px">
+<img src="https://images.code.org/d0d8f34d0f4aabaf66084ceac282448e-image-1447343652405.png" style="float:right; margin-left:30px">
 
 **for** loops are a convenient way to wrap up into one statement these three things you need to do to make a repeat loop.  You can achieve the same thing with a while loop but the code gets spread out (as shown on the right).
 
@@ -62,13 +62,13 @@ The following links provide additional links and information about booleans.  Ma
 
 **Stage 13:**
 
-- <a href = “https://studio.code.org/s/csp5/stage/13/puzzle/2” target=_blank> Video - Introduction to Lists part 1 <i class="fa fa-external-link-square"></i></a>
-- <a href = “https://studio.code.org/s/csp5/stage/13/puzzle/5” target=_blank> Video - Introduction to Lists part 2 <i class="fa fa-external-link-square"></i></a>
-- <a href = “https://studio.code.org/s/csp5/stage/13/puzzle/8” target=_blank> Video - Introduction to Lists part 3 <i class="fa fa-external-link-square"></i></a>
-- <a href = “https://studio.code.org/s/csp5/stage/13/puzzle/16” target=_blank> Video - Introduction to Lists part 4 <i class="fa fa-external-link-square"></i></a>
+- <a href = "https://studio.code.org/s/csp5/stage/13/puzzle/2" target=_blank> Video - Introduction to Lists part 1 <i class="fa fa-external-link-square"></i></a>
+- <a href = "https://studio.code.org/s/csp5/stage/13/puzzle/5" target=_blank> Video - Introduction to Lists part 2 <i class="fa fa-external-link-square"></i></a>
+- <a href = "https://studio.code.org/s/csp5/stage/13/puzzle/8" target=_blank> Video - Introduction to Lists part 3 <i class="fa fa-external-link-square"></i></a>
+- <a href = "https://studio.code.org/s/csp5/stage/13/puzzle/16" target=_blank> Video - Introduction to Lists part 4 <i class="fa fa-external-link-square"></i></a>
 
 **Stage 15:**
 
-- <a href = “https://studio.code.org/s/csp5/stage/15/puzzle/2” target=_blank> Video - Processing Lists with Loops <i class="fa fa-external-link-square"></i></a>
+- <a href = "https://studio.code.org/s/csp5/stage/15/puzzle/2" target=_blank> Video - Processing Lists with Loops <i class="fa fa-external-link-square"></i></a>
 
 MARKDOWN

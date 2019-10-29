@@ -571,8 +571,8 @@ zh-CN:
           </block>
           </xml>
       Course 4 Artist Vars 13:
-        Course_4_Artist_Vars_13_a: 你需要两个重复循环(一个循环嵌套在另外一个循环里)，两个循环重复的次数均为“边数”。
-        Course_4_Artist_Vars_13_b: "内部嵌套重复循环绘制一个八边型(左转)。 \n\n然后，你需要在外部循环前行并右转。"
+        Course_4_Artist_Vars_13_a: 你需要两个重复循环（一个循环嵌套在另外一个循环里），两个循环重复的次数均为“边数”。
+        Course_4_Artist_Vars_13_b: "内部嵌套重复循环绘制一个八边型（左转）。 \n\n然后，你需要在外部循环前行并右转。"
         Course_4_Artist_Vars_13_c: 如需在边数改变的同时保持图形的尺寸，可以使用数学模块将长度（像素为单位）除以边数。
       Course 4 Artist Vars 6:
         Course_4_Artist_Vars_6_a: 若要绘制一个正多边形，需每次转动**360/边数**度。
@@ -905,7 +905,7 @@ zh-CN:
         Course_4_SCFL_1_a: |-
           看看这个移动选项:
 
-          \!\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
+          !\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
         Course_4_SCFL_1_b: '试着用两个 "计数" 循环: 一个用于攀爬和抓取花蜜, 另一种用于攀爬和制作蜂蜜。'
         Course_4_SCFL_1_c: |-
           注意，一个`计数循环`里需要几个普通的循环来重复`counter`（计数器）次数来增加楼梯图案。
@@ -972,7 +972,7 @@ zh-CN:
         Course_4_SCFL_1a_b: |-
           看看这个移动选项:
 
-          \!\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
+          !\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
         Course_4_SCFL_1a_c: "`计数循环` 将帮助您执行相同的模式，但步骤数不断变化。请注意，所需步骤的数量从7开始，每次减1，直到 5。"
         Course_4_SCFL_1a_d: |-
           \*\* 解决方案: \*
@@ -1035,7 +1035,7 @@ zh-CN:
         Course_4_SCFL_1b_b: |-
           看看这个移动选项:
 
-          \!\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
+          !\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
         Course_4_SCFL_1b_c: |-
           \*\* 解决方案: \*
 
@@ -1096,7 +1096,7 @@ zh-CN:
         Course_4_SCFL_2_a: |-
           看看这个移动选项:
 
-          \!\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
+          !\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
         Course_4_SCFL_2_b: 请注意，在`计数循环` 的每次迭代中，在你停止与目标互动后，都有3个点。
         Course_4_SCFL_2_c: 在`计数循环`的每次迭代中，每个对象的数字都与 `counter`（计数器）变量有某种关联。
         Course_4_SCFL_2_d: |-
@@ -1581,7 +1581,7 @@ zh-CN:
         Course_4_SCV_4_c: |-
           看看这个移动选项:
 
-          \!\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
+          !\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
         Course_4_SCV_4_d: |-
           \*\* 解决方案: \*
 
@@ -2178,10 +2178,6 @@ zh-CN:
         behavior hint: |-
           尝试编辑行为！
           \*哪个值控制每个精灵的速度？
-      behaviors 7:
-        behavior hint: |-
-          尝试编辑行为！
-          \*哪个值控制每个精灵的速度？
       comment_intro_maze_2018:
         courseC_maze_programming4_a: 当其他人试图读取您的代码时，注释也很有用。
         courseC_maze_programming4_b: 当你更改方向时，增加一条注释 - 如果转向另一条路，会发生什么情况？
@@ -2192,7 +2188,7 @@ zh-CN:
       course1_artist_loops_challenge2:
         harvey_tictactoe: 您可以使用 "跳转" 模块移动到其他位置。
       course1_artist_loops_challenge3:
-        courseA_artist_loops_challenge2_a: '像这样的块: <xml> <block type="simple_move_up_left"/></xml>将让您的艺术家在斜面上移动!'
+        courseA_artist_loops_challenge2_a: 像这样的块：<xml> <block type="simple_move_up_left"/></xml>将让您的艺术家在斜面上移动!
         courseA_artist_loops_challenge2_b: 当你完成一个鸟舍后，`跳`到下一个!
         courseA_artist_loops_challenge2_c: 在这个挑战中，您需要在循环中放很多模块。
       course1_artist_loops_challenge4:
@@ -6278,6 +6274,18 @@ zh-CN:
 
           **弹球游戏**- 使用箭头键让一个人物移动（使用`当上方向键按下时`，`当下方向键按下时`模块），然后当与屏幕上的其他人物相撞的时候播放随机声音。
       courseC_PlayLab_eventsFP_2019:
+        idea1: |-
+          _需要一点提示?_
+
+          **谁在那里?** 让随机的人物显示在图片中， 这样没人知道下一次会显示谁？
+
+          <img src= "https://images.code.org/dbd6ece9d0fb213039ea5dccb91fc425-image-1563577859889.gif" style="width: 200px">
+        idea2: |-
+          _需要一点提示?_
+
+          **一起去探险** - 修改背景，然后让所有的演员谈谈他们的冒险之地。
+
+          <img src= "https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif" style="width: 200px">
         idea3: |-
           _需要一个想法？_
 
@@ -6469,7 +6477,7 @@ zh-CN:
 
           不要忘记更改跳多远！
         courseC_artist_loops4a_b: |-
-          你的程序应该类似于这个!
+          你的程序应该类似于这个！
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -6544,7 +6552,7 @@ zh-CN:
           </xml>
         courseC_artist_loops5b_b: 要制作和上面类似设计, 向后移动与向前移动必须是相同的数量。
         courseC_artist_loops5b_c: |-
-          你的程序应该类似于这个!
+          你的程序应该类似于这个！
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -6925,9 +6933,6 @@ zh-CN:
       courseC_collector_prog_challenge2_2019:
         courseC_collector_prog_challenge1_a: 你可以使用多个`收集`命令来收集额外的宝藏。
         courseC_collector_prog_challenge1_b: 迷路了？ 请尝试此路径来通过这个关卡!
-      courseC_data wizard:
-        courseA_playLab_events7_a: "使用此块来控制当演员碰撞时会发生什么。 \n\n<xml><block type=\"studio_whenSpriteCollided\">\n\n<title
-          name=\"SPRITE1\">1</title>\n<title name=\"SPRITE2\">0</title>\n</block></xml>"
       courseC_flappy_events1:
         courseC_flappy_events1_a: "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)"
       courseC_flappy_events1_2018:
@@ -7099,33 +7104,6 @@ zh-CN:
       courseC_harvester_loops_challenge1a_2018:
         courseC_harvester_loops_challenge1_a: 如果不使用循环这太难了。
         courseC_harvester_loops_challenge1_b: 你可以多次重复`前进`和`采摘玉米`，然后在每个角落右转。
-        courseC_harvester_loops_challenge1_c: |-
-          收集前四个玉米的最佳方法是在一个`重复`模块内再使用一个`重复`模块。你也可以在其余的关卡使用这个模式！
-
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="controls_repeat">
-          <title name="TIMES">2</title>
-          <statement name="DO">
-          <block type="controls_repeat">
-          <title name="TIMES">2</title>
-          <statement name="DO">
-          <block type="maze_move">
-          <title name="DIR">moveForward</title>
-          <next>
-          <block type="harvester_corn"/>
-          </next>
-          </block>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block></next></block></xml>
       courseC_harvester_loops_challenge1a_2019:
         courseC_harvester_loops_challenge1_a: 如果不使用循环这太难了。
         courseC_harvester_loops_challenge1_b: 你可以多次重复`前进`和`采摘玉米`，然后在每个角落右转。
@@ -7555,12 +7533,6 @@ zh-CN:
         courseC_starWars_loops4_a: 使用两个`重复`模块。
         courseC_starWars_loops4_b: '每个`重复`循环将只有一个命令在它里面: `向前移动`。'
       courseC_starWars_loops5:
-        courseC_starWars_loops5_b: 要往下走, 你必须转向, 然后向前移动。
-        courseC_starWars_loops5_a: 最好的解决方案是使用一个转向, 然后一个单一的`向前移动` ，另一个转向，然后一个循环。
-      courseC_starWars_loops5_2018:
-        courseC_starWars_loops5_b: 要往下走, 你必须转向, 然后向前移动。
-        courseC_starWars_loops5_a: 最好的解决方案是使用一个转向, 然后一个单一的`向前移动` ，另一个转向，然后一个循环。
-      courseC_starWars_loops5_2019:
         courseC_starWars_loops5_b: 要往下走, 你必须转向, 然后向前移动。
         courseC_starWars_loops5_a: 最好的解决方案是使用一个转向, 然后一个单一的`向前移动` ，另一个转向，然后一个循环。
       courseC_starWars_loops6:
@@ -9133,7 +9105,6 @@ zh-CN:
           请注意, 获取所有农作物的最简单途径仍然是螺旋形。
 
           ![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)
-        courseD_farmer_condLoops7_b: 尝试使用`当前面有路时`使收割者移动正确的步数。
       courseD_farmer_condLoops_challenge1:
         courseD_farmer_condLoops_challenge1_a: 在这个挑战中, "步进" 按钮可能非常有用。
         courseD_farmer_condLoops_challenge1_b: 通常情况下, 如果你是在南瓜那里, 你只会`摘南瓜`。如果你在南瓜那里,
@@ -10092,9 +10063,7 @@ zh-CN:
         courseE_bee_concept3a_b: 不知道在哪里放循环？尝试逐步把代码写下, 并寻找规律。
         courseE_bee_concept3a_c: 有三组花, 所以外面的 `重复`循环应该重复三次。
       courseE_bee_concept3_2018:
-        courseE_bee_concept3a_a: 尝试使用`重复`循环来通过此关卡。
         courseE_bee_concept3a_b: 不知道在哪里放循环？尝试逐步把代码写下, 并寻找规律。
-        courseE_bee_concept3a_c: 有三组花, 所以外面的 `重复`循环应该重复三次。
       courseE_bee_concept4:
         courseE_bee_concept4_a: 一个`如果/否则`的语句真的可以在这里帮到您。
         courseE_bee_concept4_b: 台阶模式可以帮助你穿过所有的花和蜂窝。
@@ -11437,14 +11406,12 @@ zh-CN:
           这是你的艺术家将遵循的模式:
 
           ![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)
-        courseF_artist_variables4_b: "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)"
       courseF_artist_variables4_2019:
         courseF_artist_variables4_a: 你的代码不会和上一关有太大的不同，除了你需要让艺术家转弯往下跳，然后把他转回来准备再次往前跳。
         courseF_artist_variables4_c: |-
           这是你的艺术家将遵循的模式:
 
           ![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)
-        courseF_artist_variables4_b: "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)"
       courseF_artist_variables5:
         courseF_artist_variables5_a: 你的代码的后半部分应该看起来和上半部差不多, 除了你会向_左_转，跳跃, 然后向_右_转。
         courseF_artist_variables5_b: 代码的前半部分将绘制三个三角形, 而第二部分将绘制其他的三个三角形。
@@ -12283,7 +12250,7 @@ zh-CN:
         courseF_bee_for_challenge2_a: |-
           看看这个移动选项:
 
-          \!\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
+          !\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
         courseF_bee_for_challenge2_b: '试着用两个 "计数" 循环: 一个用于攀爬和抓取花蜜, 另一种用于攀爬和制作蜂蜜。'
         courseF_bee_for_challenge2_c: |-
           注意，一个`计数循环`里需要几个普通的循环来重复`counter`（计数器）次数来增加楼梯图案。
@@ -12426,7 +12393,7 @@ zh-CN:
         courseF_bee_for_challenge2_a: |-
           看看这个移动选项:
 
-          \!\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
+          !\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
         courseF_bee_for_challenge2_b: '试着用两个 "计数" 循环: 一个用于攀爬和抓取花蜜, 另一种用于攀爬和制作蜂蜜。'
         courseF_bee_for_challenge2_c: |-
           注意，一个`计数循环`里需要几个普通的循环来重复`counter`（计数器）次数来增加楼梯图案。
@@ -12492,7 +12459,7 @@ zh-CN:
         courseF_bee_for_challenge2_a: |-
           看看这个移动选项:
 
-          \!\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
+          !\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
         courseF_bee_for_challenge2_b: '试着用两个 "计数" 循环: 一个用于攀爬和抓取花蜜, 另一种用于攀爬和制作蜂蜜。'
         courseF_bee_for_challenge2_c: |-
           注意，一个`计数循环`里需要几个普通的循环来重复`counter`（计数器）次数来增加楼梯图案。

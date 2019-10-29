@@ -1440,3 +1440,9 @@ mi:
               name: Ngā Here
             Functions:
               name: Ngā Taumahi
+        peru-2019:
+          stages:
+            Introduction:
+              name: Kupu Whakataki
+            Nested Loops:
+              name: Ngā Koromeke Tauroto

@@ -19,6 +19,7 @@ import {BOARD_TYPE} from '../CircuitPlaygroundBoard';
 import experiments from '@cdo/apps/util/experiments';
 import _ from 'lodash';
 import yaml from 'js-yaml';
+import Button from '@cdo/apps/templates/Button';
 
 const STATUS_SUPPORTED_BROWSER = 'statusSupportedBrowser';
 const STATUS_APP_INSTALLED = 'statusAppInstalled';
@@ -345,18 +346,32 @@ export default class SetupChecklist extends Component {
             .{this.contactSupport()}
           </ValidationStep>
           {experiments.isEnabled('flash-classic') &&
-            this.state.boardTypeDetected === BOARD_TYPE.CLASSIC && (
+            this.state.boardTypeDetected !== BOARD_TYPE.OTHER && (
               <ValidationStep
                 stepStatus={this.state[STATUS_BOARD_FIRMWARE]}
                 stepName={i18n.validationStepBoardFirmware()}
               >
-                <div>{i18n.updateFirmwareExplanation()}</div>
-                <button
-                  type="button"
-                  onClick={() => this.updateBoardFirmware()}
-                >
-                  {i18n.updateFirmware()}
-                </button>
+                <div>
+                  <p>{i18n.updateFirmwareExplanation()}</p>
+                  <p>
+                    {this.state.boardTypeDetected === BOARD_TYPE.CLASSIC
+                      ? i18n.updateFirmwareExplanationClassic()
+                      : i18n.updateFirmwareExplanationExpress()}
+                  </p>
+                  <Button
+                    text={i18n.updateFirmware()}
+                    onClick={
+                      this.state.boardTypeDetected === BOARD_TYPE.CLASSIC
+                        ? () => this.updateBoardFirmware()
+                        : null
+                    }
+                    href={
+                      this.state.boardTypeDetected === BOARD_TYPE.CLASSIC
+                        ? null
+                        : 'https://learn.adafruit.com/adafruit-circuit-playground-express/code-org-csd'
+                    }
+                  />
+                </div>
               </ValidationStep>
             )}
         </div>

@@ -1,8 +1,8 @@
 import * as coreLibrary from '../coreLibrary';
 
 export const commands = {
-  addBehavior(spriteId, behavior) {
-    let sprites = coreLibrary.getSpriteArray(spriteId);
+  addBehavior(spriteArg, behavior) {
+    let sprites = coreLibrary.getSpriteArray(spriteArg);
     sprites.forEach(sprite => coreLibrary.addBehavior(sprite, behavior));
   },
 
@@ -11,8 +11,8 @@ export const commands = {
   },
 
   draggableFunc(p5Inst) {
-    return spriteId => {
-      let sprite = coreLibrary.getSpriteArray(spriteId)[0];
+    return spriteArg => {
+      let sprite = coreLibrary.getSpriteArray(spriteArg)[0];
       if (p5Inst.mousePressedOver(sprite) && !sprite.dragging) {
         sprite.dragging = true;
         sprite.xOffset = sprite.x - p5Inst.World.mouseX;
@@ -28,13 +28,13 @@ export const commands = {
     };
   },
 
-  removeAllBehaviors(spriteId) {
-    let sprites = coreLibrary.getSpriteArray(spriteId);
+  removeAllBehaviors(spriteArg) {
+    let sprites = coreLibrary.getSpriteArray(spriteArg);
     sprites.forEach(sprite => coreLibrary.removeAllBehaviors(sprite));
   },
 
-  removeBehavior(spriteId, behavior) {
-    let sprites = coreLibrary.getSpriteArray(spriteId);
+  removeBehavior(spriteArg, behavior) {
+    let sprites = coreLibrary.getSpriteArray(spriteArg);
     sprites.forEach(sprite => coreLibrary.removeBehavior(sprite, behavior));
   }
 };

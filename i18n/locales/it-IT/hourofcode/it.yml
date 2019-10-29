@@ -4,12 +4,21 @@ it:
   language: 'Italiano'
   front_title: 'Partecipa all''evento didattico più popolare del mondo, %{campaign_date}'
   coming_soon: 'Sta arrivando'
-  campaign_date_start_short: "4 Dic."
-  campaign_date_start_long: "4 dicembre"
-  campaign_date_short: "4-10 Dic."
-  campaign_date_full: "dal 4 al 10 dicembre"
+  campaign_date_start_short: "9 dic."
+  campaign_date_start_long: "9 dicembre"
+  campaign_date_short: "9-15 dic."
+  campaign_date_full: "dal 9 al 15 dicembre"
   campaign_date_year: "2017"
-  campaign_date_full_year: "dal 4 al 10 dicembre 2017"
+  campaign_date_full_year: "dal 9 al 15 dicembre 2019"
+  hoc2019_header: 'Impara l''informatica e cambia il mondo.'
+  hoc2019_header_line1_mobile: 'Impara l''informatica.'
+  hoc2019_header_line2_mobile: 'Cambia il mondo.'
+  social_hoc2019_every_sudent: 'Every student has the potential to change the world. Help them get started. #CSforGood'
+  social_hoc2019_learn_computer_science: 'Learn computer science. Change the world. #CSforGood #HourOfCode'
+  social_hoc_is_coming: 'The Hour of Code is coming!'
+  social_hoc2019_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn computer science. Change the world.'
+  social_hoc2019_coming_dates: 'The Hour of Code is coming December 9-15, 2019. Computer science is foundational for every student to learn.'
+  social_hoc2019_dance: 'Featuring Katy Perry, Jonas Brothers, Lil Nas X, Panic at the Disco, and many more!'
   codeorg_homepage_hoc2018_curriculum: 'Approfondisci i <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">corsi di Code.org</a>'
   codeorg_homepage_hoc2018_dance_heading: 'Crea il tuo progetto in <span class="highlight-word">Ballando&nbsp;col&nbsp;codice</span>'
   codeorg_homepage_hoc2018_header_line1: 'L''Ora del Codice è in arrivo...'
@@ -212,7 +221,7 @@ it:
   front_join_us_tutorials: "Scegli la tua esercitazione dell'Ora del Codice!"
   front_join_us_tutorials_link: 'Filtra e sfoglia un elenco di <i>oltre 200 corsi</i>! Trova attività per diverse aree tematiche, molteplici esigenze hardware, e studenti di qualsiasi livello di esperienza.'
   front_join_us_robotics: 'Hai dei robot?'
-  front_join_us_robotics_link: 'Grazie ai nostri partner di robotica, sotto elencati, per sostenere l''Ora del Codice! Se la tua classe ha dei robot a disposizione, clicca sui loghi per trovare un elenco di attività legate ai robot!'
+  front_join_us_robotics_link: 'Un ringraziamento ai nostri partner di robotica per il loro sostegno all''Ora del Codice! Se la tua classe ha dei robot a disposizione, clicca sui loghi per trovare un elenco di attività legate ai robot!'
   front_join_us_teacher: 'Sei un insegnante?'
   front_join_us_inspire: 'Stimola gli studenti con'
   front_join_us_inspire_link: 'un''Ora del Codice in aula.'
@@ -273,7 +282,7 @@ it:
   signup_email_preference_no: 'No'
   signup_email_preference_error: 'Email preference is required'
   signup_multiple_event_warning: "Se stai organizzando più eventi dell'Ora del Codice, per favore indica un differente nome o indirizzo di posta elettronica per ognuno di essi. Contiamo solo un evento per ogni differente combinazione di nome e indirizzo di posta elettronica."
-  signup_registration_deadline: "Le iscrizioni per l'Ora del Codice si chiudono il 10 dicembre 2018."
+  signup_registration_deadline: "Le iscrizioni per l'Ora del Codice del 2019 si chiudono il 16 dicembre."
   signup_name_placeholder: 'Il tuo nome'
   signup_email_placeholder: 'Per esempio, nome@istruzione.it'
   signup_organization_name_placeholder: "Per esempio, Liceo Dante Alighieri"
@@ -324,6 +333,7 @@ it:
   meta_tag_twitter_description: 'L''Ora del Codice è un movimento globale che coinvolge decine di milioni di studenti in più di 180 nazioni e in più di 45 lingue.'
   twitter_default_text: "Io partecipo all' #OradelCodice #HourOfCode quest'anno, e tu? @codeorg @programmafuturo"
   twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
+  twitter_donor_text_2019: "This year's #HourOfCode is about #CSforGood. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'FAQ'
   hoc_faq_what_is_hoc_q: 'Cosa è l''Ora del Codice?'
   hoc_faq_what_is_hoc_a: "L'Ora del Codice è iniziata come una lezione di introduzione all'informatica della durata di un'ora, progettata per rimuovere l'alone di mistero che spesso avvolge la programmazione dei computer e per mostrare che l'informatica non è affatto difficile da capire, chiunque può impararne le basi. Da allora è diventata uno sforzo mondiale per diffondere l'informatica, iniziando con attività di programmazione della durata di 1 ora, ed espandendosi grazie ad un incredibile impegno collettivo.<a href='%{tutorials}'> Guarda le esercitazioni disponibili</a>. Lo sforzo viene supportato da più di <a href='%{partners}'>400 partner</a> e 200,000 insegnanti in tutto il mondo."
@@ -331,20 +341,20 @@ it:
   hoc_faq_when_is_hoc_q: 'Quando è l''Ora del Codice?'
   hoc_faq_when_is_hoc_a: "L'Ora del Codice si svolge ogni anno durante la <a href='%{csedweek_url}'>Settimana di Educazione all'Informatica</a>. La Settimana di Educazione all'Informatica del %{campaign_date_year} sarà nel periodo %{campaign_date_full}, ma puoi organizzare un'Ora del Codice durante tutto l'anno. La Settimana di Educazione all'Informatica viene svolta ogni anno nel periodo in cui ricade la data di nascita della pioniera dell'Informatica <a href='%{grace_hopper}'>Ammiraglio Grace Murray Hopper</a> (9 dicembre 1906)."
   hoc_faq_why_cs_q: 'Perché l''informatica?'
-  hoc_faq_why_cs_a: "<i>Ogni</i> studente dovrebbe avere l'opportunità di imparare l'informatica. Aiuta a coltivare abilità riguardanti la risoluzione di problemi, la logica e la creatività. Iniziando in giovane età gli studenti avranno le basi per raggiungere il successo in qualsiasi tipo di carriera del XXI secolo. Vedi ulteriori statistiche <a href='%{stats_url}'>qua</a>. Se sei in Italia vedi il sito <a href=\"https://programmailfuturo.it\">Programma il Futuro</a>."
+  hoc_faq_why_cs_a: "<i>Ogni</i> studente dovrebbe avere l'opportunità di imparare l'informatica. Aiuta a coltivare abilità riguardanti la risoluzione di problemi, la logica e la creatività. Iniziando in giovane età, gli studenti avranno le basi per raggiungere il successo in qualsiasi tipo di carriera del XXI secolo. Vedi ulteriori statistiche <a href='%{stats_url}'>qua</a>. Se sei in Italia visita il sito <a href=\"https://programmailfuturo.it\">Programma il Futuro</a>."
   hoc_faq_how_participate_q: 'Come partecipare all''Ora del Codice?'
-  hoc_faq_how_participate_a: "<a href='/how-to'>Inizia la progettazione qui</a> esaminando la nostra guida. Puoi organizzare un evento dell'Ora del Codice nella tua scuola o nel tua comunità &mdash; come, ad esempio, in un circolo, o in un'associazione senza scopo di lucro oppure al lavoro. In alternativa, puoi provarlo tu stesso nel periodo %{campaign_date}."
+  hoc_faq_how_participate_a: "<a href='/how-to'>Inizia la progettazione qui</a> esaminando la nostra guida. Puoi organizzare un evento dell'Ora del Codice nella tua scuola o nel tua comunità &mdash; come, ad esempio, in un circolo, o in un'associazione senza scopo di lucro oppure al lavoro. In alternativa, puoi provarlo tu stesso a partire dal %{campaign_date}."
   hoc_faq_behind_hoc_q: 'Chi c''è dietro l''Ora del Codice?'
   hoc_faq_behind_hoc_a: "L'Ora di Codice è organizzata con il supporto del <a href='%{partner_url}'>Comitato Consultivo della Settimana di Educazione all'Informatica</a> così come di un raggruppamento senza precedenti di partner che si sono uniti per supportare l'Ora del Codice &mdash; compresi Microsoft, Apple, Amazon, Boys and Girls Clubs of America e la College Board."
   hoc_faq_host_q: "Non so nulla di programmazione e di informatica. Posso organizzare ugualmente un evento?"
   hoc_faq_host_a: "Naturalmente. Le attività dell'Ora del Codice sono autogestite. Tutto ciò che devi fare è <a href='%{codeorg_url}/learn'>provare le nostre esercitazioni </a>, scegliere quello che preferisci e un orario &mdash; noi pensiamo a tutto il resto. Abbiamo materiali adatti ad ogni età e livello di esperienza, a partire dall'età prescolare. Inizia a pianificare il tuo evento leggendo la <a href='/how-to'>guida che spiega come farlo</a>."
   hoc_faq_devices_q: "Quali dispositivi dovrei usare per i miei studenti?"
-  hoc_faq_devices_a: "I corsi di Code.org funzionano su tutti i browser e dispositivi. È possibile vedere ulteriori informazioni circa i requisiti tecnologici dei corsi di Code.org <a href='%{codeorg_url}/educate/it'> qui</a>. I requisiti tecnologici per i corsi che non sono di Code.org possono essere trovati su <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> nella descrizione degli specifici corsi. Non dimenticate che offriamo anche <a href='%{unplugged_url}'> corsi tradizionali</a> se la scuola non ha strumentazione informatica!"
+  hoc_faq_devices_a: "I corsi di Code.org funzionano su tutti i browser e dispositivi. È possibile vedere ulteriori informazioni circa i requisiti tecnologici dei corsi di Code.org <a href='%{codeorg_url}/educate/it'> qui</a>. I requisiti tecnologici per i corsi che non sono di Code.org possono essere trovati su <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> nella descrizione degli specifici corsi. Non dimenticate che offriamo anche <a href='%{unplugged_url}'> corsi tradizionali</a> se la scuola non ha strumentazione informatica! Sul sito di Programma il Futuro si possono trovare <a href=\"https://programmailfuturo.it/come/lezioni-tradizionali\">alcune lezioni tradizionali tradotte in italiano</a>."
   hoc_faq_need_computers_q: 'Ho bisogno di un computer per ogni partecipante?'
-  hoc_faq_need_computers_a: "No. Abbiamo lezioni dell'Ora del Codice che funzionano su PC, su smartphone, su tablet oltre a lezioni che non necessitano di alcun computer! Puoi prendere parte a questo evento dovunque tu sia con qualsiasi strumento tu abbia a disposizione. <p><i>Ecco alcune opzioni:</i><br><ul><li><b> Lavorare in coppia.</b> <a href='%{pair_programming_research}'>Le ricerche dimostrano</a> come gli studenti imparino meglio attraverso la <a href='%{pair_programming_video}'>programmazione in coppia</a>, condividendo un computer e lavorando insieme. Incoraggiate i vostri studenti a lavorare insieme. <li><b>Utilizzare un proiettore.</b> Se avete un proiettore e un computer connesso ad internet, il vostro gruppo potrà partecipare all'Ora del Codice tutti insieme. Guardate insieme le parti dei video e a turno risolvete gli esercizi o rispondete alle domande.<li><b> Usa le lezioni tradizionali.</b> <a href='%{unplugged_url}'>Offriamo anche lezioni che non richiedono alcun computer.</a></ul>"
+  hoc_faq_need_computers_a: "No. Abbiamo lezioni dell'Ora del Codice che funzionano su PC, su smartphone, su tablet oltre a lezioni che non necessitano di alcun computer! Puoi prendere parte a questo evento dovunque tu sia con qualsiasi strumento tu abbia a disposizione. <p><i>Ecco alcune opzioni:</i><br><ul><li><b> Lavorare in coppia.</b> <a href='%{pair_programming_research}'>Le ricerche dimostrano</a> come gli studenti imparino meglio attraverso la <a href='%{pair_programming_video}'>programmazione in coppia</a> (<a href=\"https://youtu.be/sTJ85VIYDRE\">video doppiato in italiano</a>), condividendo un computer e lavorando insieme. Incoraggiate i vostri studenti a lavorare insieme. <li><b>Utilizzare un proiettore.</b> Se avete un proiettore e un computer connesso ad internet, il vostro gruppo potrà partecipare all'Ora del Codice tutti insieme. Guardate insieme le parti dei video e a turno risolvete gli esercizi o rispondete alle domande.<li><b> Usa le lezioni tradizionali.</b> <a href='%{unplugged_url}'>Offriamo anche lezioni che non richiedono alcun computer.</a> (<a href=\"https://programmailfuturo.it/come/lezioni-tradizionali\">alcune lezioni tradizionali tradotte in italiano</a>)</ul>"
   hoc_faq_international_q: "Io sono in Italia. Come posso partecipare a livello internazionale?"
   hoc_faq_international_a: "Tutti possono organizzare un evento dell'Ora del Codice, in tutto il mondo. L'anno scorso hanno partecipato all'Ora del Codice studenti di ogni parte del mondo. Per saperne di più clicca <a href='/promote'>qui</a>."
-  hoc_faq_tutorial_q: 'Come posso creare un corso per l''Ora del Codice?'
+  hoc_faq_tutorial_q: 'Come posso creare un''esercitazione dell''Ora del Codice?'
   hoc_faq_tutorial_a: "Se sei interessato a creare un'esercitazione, <a href='/tutorial-guidelines'>leggi le nostre linee guida e le istruzioni</a>. Ci piacerebbe offrire una grande varietà di opzioni coinvolgenti, ma l'obiettivo primario è ottimizzare l'esperienza per gli studenti e gli insegnanti che si affacciano per la prima volta all'informatica."
   hoc_faq_account_q: "Gli studenti devono accedere utilizzando un account?"
   hoc_faq_account_a: "Assolutamente no. Non è richiesta alcuna registrazione o login agli studenti che vogliono provare l'Ora del Codice. La maggior parte dei <a href='%{codeorg_url}/learn/beyond'> corsi di approfondimento</a> invece richiede un account per registrare i percorsi e i progressi degli studenti. Inoltre, iscriversi all'Ora del Codice NON crea automaticamente un account sulla piattaforma Code studio. Se sei in Italia iscriviti attraverso il sito di <a href=\"http://programmailfuturo.it\">Programma il Futuro</a>."
@@ -566,7 +576,7 @@ it:
   tutorial_buildpong_name: "Costruire Pong con l'Intelligenza Artificiale"
   tutorial_tynkerdrones_name: "Programmare droni e robot"
   tutorial_carla_name: "Programmazione con Carla"
-  tutorial_globaloria_name: "Globaloria MakeQuest"
+  tutorial_zulama_name: "Zulama MakeQuest Video Game Activity"
   tutorial_capost_name: "Costruire una cartolina digitale con HTML e CSS"
   tutorial_marco_name: "Run Marco!"
   tutorial_codestersflappybike_name: "Flappy Bike"
@@ -1144,7 +1154,7 @@ it:
   tutorial_buildpong_shortdescription: "Build the arcade classic and give the computer artificial intelligence to play against you."
   tutorial_tynkerdrones_shortdescription: "Programmare un controller per il tuo robot o il tuo drone."
   tutorial_carla_shortdescription: "Imparare a programmare programmando un robot virtuale parlante chiamato Carla!"
-  tutorial_globaloria_shortdescription: "Inizia con MakeQuest! Modifica il codice per battere il nostro gioco, poi costruisci il tuo gioco!"
+  tutorial_zulama_shortdescription: "Go on a MakeQuest! Modify code to beat our game, then build your own!"
   tutorial_capost_shortdescription: "Usa la programmazione per costruire una fantastica cartolina o un biglietto di auguri."
   tutorial_marco_shortdescription: "Un gioco immersivo per guidare Marco usando un linguaggio di programmazione visuale."
   tutorial_codestersflappybike_shortdescription: "Crea un gioco controllato dal giocatore. Tieni la bici in aria mentre schivi gli ostacoli!"
@@ -1722,7 +1732,7 @@ it:
   tutorial_buildpong_longdescription: "Pong is one of the earliest arcade video games and the very first sports arcade video game. It is a table tennis sports game featuring simple two-dimensional graphics. The aim of the game is for the PLAYER to score on the COMPUTER while defending its GOAL. In this project, the COMPUTER is programmed with basic artificial intelligence so it can respond to the PLAYER."
   tutorial_tynkerdrones_longdescription: "Learn to program connected devices by solving the \"Crash Course\" puzzles, where you navigate virtual drones and robots through obstacles. Then you're ready to create programs to control real drones and robots. Requires an iPad or Android tablet and a supported toy."
   tutorial_carla_longdescription: "\"Programming with Carla\" is a series of short activities that guide students through building a simple chatbot, whilst learning about core concepts like variables and conditionals. The activities have been carefully designed to address common misconceptions that new programmers have about these topics by offering many opportunities for practice, as well as targeted hints and feedback.\n"
-  tutorial_globaloria_longdescription: "In MakeQuest you learn to edit JavaScript code through a playful action game, and master computer science concepts like variables and functions. Create your own game by remixing and expanding on our game code in the Sandbox. Publish and share your game with friends!  Teachers: lesson plans and subject-specific extension activities are included."
+  tutorial_zulama_longdescription: "In this activity you will learn to edit JavaScript code through a playful action game and master computer science concepts like variables and functions. Create your own game in the Sandbox by remixing and expanding on existing game code. Then publish and share your game with friends and family. A scripted lesson guide is included for teachers."
   tutorial_capost_longdescription: "Starting to learn HTML and CSS is easy and fun with this digital postcard. Learn about adding headings, paragraphs, images and links to create a holiday card or birthday celebration to share with friends and family."
   tutorial_marco_longdescription: "Students play an adventure game based on an original story. They guide Marco - the main character - through each level by giving him step-by-step instructions in the form of the visual programming language used by the Hour of Code. They get introduced to sequencing commands, iteration and conditions without even noticing it."
   tutorial_codestersflappybike_longdescription: "In questa attività, gli studenti utilizzano la programmazione a blocchi testuali (drag to text) per iniziare subito a programmare in Python! Gli studenti sono guidati attraverso una serie di attività di apprendimento che insegnano loro a costruire un gioco completo! Dopo aver finito, vengono incoraggiati ad utilizzare ciò che hanno imparato su sintassi, notazione col punto, eventi, variabili, parametri e meccaniche di gioco, per creare un nuovo gioco. "
@@ -2300,7 +2310,7 @@ it:
   tutorial_buildpong_language: "Solo in inglese"
   tutorial_tynkerdrones_language: "Solo in inglese"
   tutorial_carla_language: "Solo in inglese"
-  tutorial_globaloria_language: "Solo in inglese"
+  tutorial_zulama_language: "Solo in inglese"
   tutorial_capost_language: "English, Dutch, Spanish, Russian"
   tutorial_marco_language: "Multiple"
   tutorial_codestersflappybike_language: "Solo in inglese"
@@ -2878,7 +2888,7 @@ it:
   tutorial_buildpong_string_detail_grades: "Da 7 anni in su"
   tutorial_tynkerdrones_string_detail_grades: "Da 7 anni in su"
   tutorial_carla_string_detail_grades: "Da 11 anni in su"
-  tutorial_globaloria_string_detail_grades: "Da 11 anni in su"
+  tutorial_zulama_string_detail_grades: "Da 11 anni in su"
   tutorial_capost_string_detail_grades: "Da 11 anni in su"
   tutorial_marco_string_detail_grades: "Da 7 a 13 anni"
   tutorial_codestersflappybike_string_detail_grades: "Da 11 anni in su"
@@ -3456,7 +3466,7 @@ it:
   tutorial_buildpong_string_platforms: "All modern browsers, Android tablet, Android phone, iPad"
   tutorial_tynkerdrones_string_platforms: "Android tablet, iPad"
   tutorial_carla_string_platforms: "All modern browsers"
-  tutorial_globaloria_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari"
+  tutorial_zulama_string_platforms: "Internet Explorer 11, Chrome, Firefox, Safari"
   tutorial_capost_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari"
   tutorial_marco_string_platforms: "Tutti i browser moderni, Android, iOS"
   tutorial_codestersflappybike_string_platforms: "All modern browsers"
@@ -4034,7 +4044,7 @@ it:
   tutorial_buildpong_string_detail_platforms: ""
   tutorial_tynkerdrones_string_detail_platforms: "Parrot drone, Sphero robot, Ollie robot"
   tutorial_carla_string_detail_platforms: ""
-  tutorial_globaloria_string_detail_platforms: ""
+  tutorial_zulama_string_detail_platforms: ""
   tutorial_capost_string_detail_platforms: ""
   tutorial_marco_string_detail_platforms: ""
   tutorial_codestersflappybike_string_detail_platforms: ""
@@ -4612,7 +4622,7 @@ it:
   tutorial_buildpong_string_detail_programming_languages: "Blocks, Ready, Unity"
   tutorial_tynkerdrones_string_detail_programming_languages: "Blocchi"
   tutorial_carla_string_detail_programming_languages: "Coffeescript"
-  tutorial_globaloria_string_detail_programming_languages: "JavaScript"
+  tutorial_zulama_string_detail_programming_languages: "JavaScript"
   tutorial_capost_string_detail_programming_languages: "HTML, CSS"
   tutorial_marco_string_detail_programming_languages: "Blocchi"
   tutorial_codestersflappybike_string_detail_programming_languages: "Python"

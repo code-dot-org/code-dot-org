@@ -1,7 +1,7 @@
 {
   "https://studio.code.org/s/coursea-2019/stage/1/puzzle/1": {
     "dsls": {
-      "markdown": "# Going Places Safely\n\nThe Internet is a powerful, but sometimes dangerous place. Stay safe while navigating the Internet!\n"
+      "markdown": "# Going Places Safely\n\nThe Internet is a powerful, but sometimes dangerous place. Stay safe while navigating the Internet!\n\n<p align=center>\n"
     }
   },
   "https://studio.code.org/s/coursea-2019/stage/3/puzzle/1": {
@@ -532,7 +532,7 @@
   },
   "https://studio.code.org/s/coursea-2019/stage/11/puzzle/1": {
     "dsls": {
-      "markdown": "# The Big Event\n\nIn computer science, events are actions that a computer monitors. In this lesson react differently depending on which button is pressed.\n"
+      "markdown": "# The Big Event\n\nIn computer science, events are actions that a computer monitors. In this lesson you will react differently depending on which button is pressed.\n"
     }
   },
   "https://studio.code.org/s/coursea-2019/stage/12/puzzle/1": {

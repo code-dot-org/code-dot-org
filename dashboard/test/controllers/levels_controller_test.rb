@@ -19,7 +19,7 @@ class LevelsControllerTest < ActionController::TestCase
     enable_level_source_image_s3_urls
 
     @default_update_blocks_params = {
-      level_id: @level.id,
+      id: @level.id,
       game_id: @level.game.id,
       type: 'toolbox_blocks',
       program: @program,
@@ -27,15 +27,8 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should get rubric" do
-    level = create(:level,
-      mini_rubric: 'true',
-      rubric_key_concept: 'This is the key concept',
-      rubric_performance_level_1: 'This is great',
-      rubric_performance_level_2: 'This is good',
-      rubric_performance_level_3: 'This is okay',
-      rubric_performance_level_4: 'This is bad'
-    )
-    get :get_rubric, params: {level_id: level.id}
+    level = create_level_with_rubric
+    get :get_rubric, params: {id: level.id}
     assert_equal JSON.parse(@response.body), {
       "keyConcept" => "This is the key concept",
       "performanceLevel1" => "This is great",
@@ -45,11 +38,55 @@ class LevelsControllerTest < ActionController::TestCase
     }
   end
 
+  test "anonymous user can get_rubric" do
+    sign_out @levelbuilder
+    level = create_level_with_rubric
+    get :get_rubric, params: {id: level.id}
+    assert_equal JSON.parse(@response.body), {
+      "keyConcept" => "This is the key concept",
+      "performanceLevel1" => "This is great",
+      "performanceLevel2" => "This is good",
+      "performanceLevel3" => "This is okay",
+      "performanceLevel4" => "This is bad"
+    }
+  end
+
+  test "empty success response for get_rubric on rubricless level" do
+    level = create :level
+    get :get_rubric, params: {id: level.id}
+    assert_response :no_content
+    assert_equal '', @response.body
+  end
+
+  def create_level_with_rubric
+    create(:level,
+      mini_rubric: 'true',
+      rubric_key_concept: 'This is the key concept',
+      rubric_performance_level_1: 'This is great',
+      rubric_performance_level_2: 'This is good',
+      rubric_performance_level_3: 'This is okay',
+      rubric_performance_level_4: 'This is bad'
+    )
+  end
+
   test "should get index" do
     get :index, params: {game_id: @level.game}
     assert_response :success
     assert_not_nil assigns(:levels)
   end
+
+  test_user_gets_response_for(
+    :index,
+    response: :success,
+    user: :platformization_partner
+  )
+
+  # non-levelbuilder can't index levels
+  test_user_gets_response_for(
+    :index,
+    response: :forbidden,
+    user: :teacher
+  )
 
   test "should get new" do
     get :new, params: {game_id: @level.game}
@@ -328,7 +365,7 @@ class LevelsControllerTest < ActionController::TestCase
 
   test "should update App Lab starter code and starter HTML" do
     post :update_properties, params: {
-      level_id: create(:applab).id,
+      id: create(:applab).id,
     }, body: {
       start_html: '<h1>foo</h1>',
       start_blocks: 'console.log("hello world");',
@@ -338,6 +375,18 @@ class LevelsControllerTest < ActionController::TestCase
     level = assigns(:level)
     assert_equal '<h1>foo</h1>', level.properties['start_html']
     assert_equal 'console.log("hello world");', level.properties['start_blocks']
+  end
+
+  test "non-levelbuilder cannot update_properties" do
+    sign_out @levelbuilder
+    sign_in create(:teacher)
+    post :update_properties, params: {
+      id: create(:applab).id,
+    }, body: {
+      start_html: '<h1>foo</h1>'
+    }.to_json
+
+    assert_response :forbidden
   end
 
   test "should update solution image when updating solution blocks" do
@@ -393,11 +442,10 @@ class LevelsControllerTest < ActionController::TestCase
 
   test "should not edit level if not custom level" do
     level = Script.twenty_hour_script.levels.first
-    can_edit = Ability.new(@levelbuilder).can? :edit, level
-    assert_equal false, can_edit
+    refute Ability.new(@levelbuilder).can? :edit, level
 
     post :update_blocks, params: @default_update_blocks_params.merge(
-      level_id: level.id,
+      id: level.id,
       game_id: level.game.id,
     )
     assert_response :forbidden
@@ -440,7 +488,7 @@ class LevelsControllerTest < ActionController::TestCase
 
   test "should get edit blocks" do
     @level.update(toolbox_blocks: @program)
-    get :edit_blocks, params: {level_id: @level.id, type: 'toolbox_blocks'}
+    get :edit_blocks, params: {id: @level.id, type: 'toolbox_blocks'}
     assert_equal @program, assigns[:level_view_options_map][@level.id][:start_blocks]
   end
 
@@ -690,13 +738,58 @@ class LevelsControllerTest < ActionController::TestCase
     game = Game.find_by_name("Custom")
     old = create(:level, game_id: game.id, name: "Fun Level")
     assert_creates(Level) do
-      post :clone, params: {level_id: old.id, name: "Fun Level (copy 1)"}
+      post :clone, params: {id: old.id, name: "Fun Level (copy 1)"}
     end
 
-    new_level = assigns(:level)
+    new_level = assigns(:new_level)
+    assert_equal old.game, new_level.game
+    assert_equal "Fun Level (copy 1)", new_level.name
+    assert_equal "/levels/#{new_level.id}/edit", URI(JSON.parse(@response.body)['redirect']).path
+  end
+
+  test "cannot clone hard-coded levels" do
+    old = create(:level, game_id: Game.first.id, name: "Fun Level", user_id: nil)
+    refute old.custom?
+    refute_creates(Level) do
+      post :clone, params: {id: old.id, name: "Fun Level (copy 1)"}
+      assert_response :forbidden
+    end
+  end
+
+  test "cloning a level requires a name parameter" do
+    old = create(:level, game_id: Game.first.id, name: "Fun Level")
+    assert_raise ActionController::ParameterMissing do
+      post :clone, params: {id: old.id, name: ''}
+    end
+  end
+
+  test "platformization partner should own cloned level" do
+    sign_out @levelbuilder
+    sign_in @platformization_partner
+
+    game = Game.find_by_name("Custom")
+    old = create(:level, game_id: game.id, name: "Fun Level")
+    assert_creates(Level) do
+      post :clone, params: {id: old.id, name: "Fun Level (copy 1)"}
+    end
+
+    new_level = assigns(:new_level)
     assert_equal new_level.game, old.game
     assert_equal new_level.name, "Fun Level (copy 1)"
     assert_equal "/levels/#{new_level.id}/edit", URI(JSON.parse(@response.body)['redirect']).path
+    assert_equal 'platformization-partners', new_level.editor_experiment
+  end
+
+  test "platformization partner cannot clone hard-coded levels" do
+    sign_out @levelbuilder
+    sign_in @platformization_partner
+
+    old = create(:level, game_id: Game.first.id, name: "Fun Level", user_id: nil)
+    refute old.custom?
+    refute_creates(Level) do
+      post :clone, params: {id: old.id, name: "Fun Level (copy 1)"}
+      assert_response :forbidden
+    end
   end
 
   test 'cannot update level name with just a case change' do
@@ -769,11 +862,12 @@ class LevelsControllerTest < ActionController::TestCase
     level = create :artist
     sign_out @levelbuilder
 
-    get :embed_level, params: {level_id: level}
+    get :embed_level, params: {id: level}
     assert_response :success
   end
 
   test 'external markdown levels will render <user_id/> as the actual user id' do
+    File.stubs(:write)
     dsl_text = <<DSL
 name 'user_id_replace'
 title 'title for user_id_replace'

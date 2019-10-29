@@ -5,10 +5,10 @@ driver:
 provisioner:
   name: chef_zero
   data_path: test/shared
-  require_chef_omnibus: 12.7.2
+  require_chef_omnibus: 15.2.20
 
 platforms:
-  - name: ubuntu-14.04
+  - name: ubuntu-18.04
     run_list:
       - recipe[apt]
       - recipe[sudo-user]

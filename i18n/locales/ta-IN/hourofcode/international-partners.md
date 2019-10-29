@@ -1,6 +1,5 @@
 ---
 title: Contact International Partners
-layout: wide
 ---
 
 <style>
@@ -9,7 +8,7 @@ layout: wide
   }
 </style>
 
-{{ signup_button }}
+{{signup_button}}
 
 # Contact International Partners
 
@@ -30,7 +29,7 @@ www.program.ar                                                 |
 | Argentina                             | Nuc Ba Academia                                                   |                                    | http://academia.nucba.com.ar                                                                  |
 | Australia                             | Google                                                            | Marie Efstathiou                   | https://www.google.com/edu/cs                                                                 |
 | Australia                             | Grok Learning                                                     | Jane Abrams                        | https://groklearning.com                                                                      |
-| Brazil                                | Programaê! - Fundaçao Lemann                                      |                                    | http://programae.org.br/horadocodigo                                                          |
+| Brazil                                | Programaê! - Fundação Telefônica Vivo                             |                                    | http://programae.org.br/horadocodigo                                                          |
 | Cameroon                              | Big IT Company Ltd                                                |                                    |                                                                                               |
 | Canada                                | Brilliant Labs Inc.                                               |                                    | https://www.brilliantlabs.ca                                                                  |
 | Canada                                | Hatch Canada                                                      |                                    | www.hatchcanada.com                                                                           |
@@ -179,4 +178,4 @@ compatsch@bcs.uk                                       |
 nhile@microsoft.com                                        |
 
 
-{{ signup_button }}
+{{signup_button}}

@@ -67,7 +67,9 @@ class HttpCache
     # Students younger than 13 shouldn't see App Lab and Game Lab unless they
     # are in a teacher's section for privacy reasons.
     limit_project_types = "_limit_project_types#{env_suffix}"
-    default_cookies = DEFAULT_COOKIES + [user_type, limit_project_types]
+    # Whether admin has assumed current identity
+    assumed_identity = "_assumed_identity#{env_suffix}"
+    default_cookies = DEFAULT_COOKIES + [user_type, limit_project_types, assumed_identity]
 
     # These cookies are whitelisted on all session-specific (not cached) pages.
     whitelisted_cookies = [
@@ -162,6 +164,7 @@ class HttpCache
               /v3/assets/*
               /v3/animations/*
               /v3/files/*
+              /v3/libraries/*
             ),
             headers: WHITELISTED_HEADERS,
             cookies: whitelisted_cookies

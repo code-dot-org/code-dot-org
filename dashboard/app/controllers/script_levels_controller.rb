@@ -65,7 +65,7 @@ class ScriptLevelsController < ApplicationController
       return
     end
     configure_caching(@script)
-    if @script.finish_url && current_user.try(:completed?, @script)
+    if @script.finish_url && Policies::ScriptActivity.completed?(current_user, @script)
       redirect_to @script.finish_url
       return
     end
@@ -74,6 +74,7 @@ class ScriptLevelsController < ApplicationController
     redirect_to(path) && return
   end
 
+  use_database_pool show: :persistent
   def show
     @current_user = current_user && User.includes(:teachers).where(id: current_user.id).first
     authorize! :read, ScriptLevel
@@ -179,10 +180,6 @@ class ScriptLevelsController < ApplicationController
   def stage_extras
     authorize! :read, ScriptLevel
 
-    if current_user&.teacher? && !current_user&.sections&.all?(&:stage_extras)
-      flash[:info] = I18n.t(:stage_extras_teacher_message).html_safe
-    end
-
     if current_user&.teacher?
       if params[:section_id]
         @section = current_user.sections.find_by(id: params[:section_id])
@@ -192,6 +189,7 @@ class ScriptLevelsController < ApplicationController
         @section = current_user.sections[0]
         @user = @section&.students&.find_by(id: params[:user_id])
       end
+      @show_stage_extras_warning = !@section&.stage_extras
     end
 
     # Explicitly return 404 here so that we don't get a 5xx in get_from_cache.
@@ -218,6 +216,7 @@ class ScriptLevelsController < ApplicationController
     @stage = Script.get_from_cache(params[:script_id]).stage_by_relative_position(params[:stage_position].to_i)
     @script = @stage.script
     @stage_extras = {
+      next_stage_number: @stage.next_level_number_for_stage_extras(current_user),
       stage_number: @stage.relative_position,
       next_level_path: @stage.next_level_path_for_stage_extras(current_user),
       bonus_levels: @script.get_bonus_script_levels(@stage),
@@ -282,7 +281,7 @@ class ScriptLevelsController < ApplicationController
 
   def user_or_session_level
     if current_user
-      current_user.next_unpassed_progression_level(@script).try(:or_next_progression_level)
+      current_user.next_unpassed_visible_progression_level(@script)
     else
       find_next_level_for_session(@script)
     end
@@ -319,7 +318,11 @@ class ScriptLevelsController < ApplicationController
       readonly_view_options
     elsif @user && current_user && @user != current_user
       # load other user's solution for teachers viewing their students' solution
-      @user_level = @user.user_level_for(@script_level, @level)
+      @user_level = UserLevel.find_by(
+        user: @user,
+        script: @script_level.script,
+        level: @level
+      )
       level_source = @user_level.try(:level_source)
       readonly_view_options
     elsif current_user
@@ -327,7 +330,11 @@ class ScriptLevelsController < ApplicationController
       @last_activity = current_user.last_attempt(@level, @script)
       level_source = @last_activity.try(:level_source)
 
-      user_level = current_user.user_level_for(@script_level, @level)
+      user_level = UserLevel.find_by(
+        user: current_user,
+        script: @script_level.script,
+        level: @level
+      )
       if user_level && user_level.submitted?
         level_view_options(
           @level.id,

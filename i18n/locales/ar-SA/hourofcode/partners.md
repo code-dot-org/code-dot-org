@@ -4,37 +4,37 @@ title: الشركاء
 
 يدير ساعة البرمجة لجان المراجعة والاستشارة لساعة البرمجة، ولأسبوع تدريس علوم الكمبيوتر.
 
-The [Advisory Committee]({{ urls/advisory_committee }}) is composed of representatives from K-12, academia, nonprofits, for-profits, and international organizations. هذه اللجنة تضع استراتيجية حملة ساعة البرمجة.
+تتألف [لجنة الاستشارة](%= resolve_url('/advisory-committee') %) من ممثلي K-12، والأكاديميين، والمنظمات الدولية الربحية وغير الربحية. هذه اللجنة تضع استراتيجية حملة ساعة البرمجة.
 
-The [Review Committee]({{ urls/review_committee }}) is composed of 15 educators across K-12 grade bands that assess and recommend activities using the Advisory Committee's rubric. يقوم المدرسون بمراجعة أنشطة الطلاب وتخطيط الدروس التي يرسلها مئات الشركاء، لتقييم القيم الممررة، القدرة على إشراك المتعلمين، والجاذبية لكل الطلاب.
+تتكون [لجنة المراجعة](%= resolve_url('/review-committee') %) من 15 مدرس المستويات حتى المستوى K-12 التي تقيم وتوصي بالأنشطة باعتماد نموذج تقييم اللجنة الاستشارية,. يقوم المدرسون بمراجعة أنشطة الطلاب وتخطيط الدروس التي يرسلها مئات الشركاء، لتقييم القيم الممررة، القدرة على إشراك المتعلمين، والجاذبية لكل الطلاب.
 
 عمل وإهداء كلا اللجنتين ساهما في نجاح ساعة البرمجة ورؤيتها في توفير مقدمة حول علوم الكمبيوتر لكل الطلاب.
 
-# Major Partners and Corporate Supporters
+# الشركاء الرئيسيون و الشركات الداعمة
 
 {{ partners/major_partners_corporate_supporters }}
 
 * * *
 
-# International Partners
+# الشركاء الدوليون
 
 {{ partners/international_partners }}
 
 * * *
 
-# Curriculum and Tutorial Partners
+# شركاء المنهاج والدورات
 
 {{ partners/curriculum_tutorial_partners }}
 
 * * *
 
-# Infrastructure Partners and Tools
+# شركاء وأدوات البنية التحتية
 
 {{ partners/infrastructure_partners_tools }}
 
 * * *
 
-# Additional Partners
+# شركاء إضافيون
 
 {{ partners/additional_partners }}
 

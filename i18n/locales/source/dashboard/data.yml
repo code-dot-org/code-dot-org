@@ -575,6 +575,11 @@ en:
         CSF_Spritelab_MakeSprite_v2: How to Make a Sprite
         CSF_SpriteLab_SpritesInAction_v2: Sprites in Action
         csd_debugging: Debugging
+        csd_applab_designmode_short: App Lab Design Mode
+        csp-pd-welcome: Welcome to the Family!
+        CSF-Teaching-Problem-Solving: CSF Teaching Problem Solving
+        u5-traversals-get-list-explanation: Code.org [levelbuilder] - Pilot Video - Data block
+        u7-libraries-explanation: 'App Lab: Make Your Own Blocks - How to Use Libraries'
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

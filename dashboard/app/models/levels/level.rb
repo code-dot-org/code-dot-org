@@ -73,7 +73,6 @@ class Level < ActiveRecord::Base
     editor_experiment
     teacher_markdown
     bubble_choice_description
-    starter_assets
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495
@@ -559,7 +558,9 @@ class Level < ActiveRecord::Base
   def clone_with_name(new_name, editor_experiment: nil)
     level = dup
     # specify :published to make should_write_custom_level_file? return true
-    level.update!(name: new_name, parent_level_id: id, published: true)
+    level_params = {name: new_name, parent_level_id: id, published: true}
+    level_params[:editor_experiment] = editor_experiment if editor_experiment
+    level.update!(level_params)
     level
   end
 
@@ -605,26 +606,6 @@ class Level < ActiveRecord::Base
 
   def age_13_required?
     false
-  end
-
-  # Add a starter asset to the level and save it in properties.
-  # Starter assets are stored as an object, where the key is the
-  # friendly filename and the value is the UUID filename stored in S3:
-  # {
-  #   # friendly_name => uuid_name
-  #   "welcome.png" => "123-abc-456.png"
-  # }
-  def add_starter_asset!(friendly_name, uuid_name)
-    self.starter_assets ||= {}
-    self.starter_assets[friendly_name] = uuid_name
-    save!
-  end
-
-  # Remove a starter asset by its key (friendly_name) from the level's properties.
-  def remove_starter_asset!(friendly_name)
-    return true unless starter_assets
-    starter_assets.delete(friendly_name)
-    save!
   end
 
   private

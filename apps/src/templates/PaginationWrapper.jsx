@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import Radium, {Style} from 'radium';
 import color from '../util/color';
-import Pagination from 'react-bootstrap/lib/Pagination';
+import {Pagination} from '@react-bootstrap/pagination';
 
 const styles = {
   label: {

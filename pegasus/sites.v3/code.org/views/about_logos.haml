@@ -1,14 +1,16 @@
+%link{:rel=>'stylesheet', :type=>'text/css', :href=>'/css/logos.css'}
+
 #logos{:style=>'width: 100%; padding: 0; margin: 0;'}
 
 -logos.each do |logo|
   - avatar_url = avatar_image(logo[:name_s])
   - unless logo[:url_s].nil_or_empty?
-    .col-25.col-mobile-50{:style => 'text-align: center;'}
+    .col-25.col-mobile-30{:style => 'text-align: center;'}
       %div{:style => 'width: 160px; height: 190px; line-height:190px; text-align: center;'}
         %a{:href=>logo[:url_s], :style => 'vertical-align: middle;'}
           %img{:src=>avatar_url, :style => 'width: 140px; max-height: 140px;'}
   - else
-    .col-25.col-mobile-50{:style => 'text-align: center;'}
+    .col-25.col-mobile-30{:style => 'text-align: center;'}
       %div{:style => 'width: 160px; height: 190px; line-height:190px; text-align: center;'}
         %img{:src=>avatar_url, :style => 'max-width: 140px; max-height: 140px;'}
         %p= logo[:description_t]

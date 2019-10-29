@@ -1,7 +1,5 @@
 ---
 title: Kodtimmen evenemang så-gör-du
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

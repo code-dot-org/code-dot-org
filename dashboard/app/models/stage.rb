@@ -177,8 +177,7 @@ class Stage < ActiveRecord::Base
     summary = summarize.dup
     # Do not let script name override stage name when there is only one stage
     summary[:name] = I18n.t("data.script.name.#{script.name}.stages.#{name}.name")
-    # Do not use a default value if flex_category is nil
-    summary[:flex_category] = flex_category && I18n.t("flex_category.#{flex_category}")
+    summary[:flex_category] = flex_category
     summary.freeze
   end
 
@@ -251,9 +250,20 @@ class Stage < ActiveRecord::Base
     script_levels.reverse.find(&:valid_progression_level?)
   end
 
-  def next_level_path_for_stage_extras(user)
+  def next_level_for_stage_extras(user)
     level_to_follow = script_levels.last.next_level
     level_to_follow = level_to_follow.next_level while level_to_follow.try(:locked_or_hidden?, user)
-    level_to_follow ? build_script_level_path(level_to_follow) : script_completion_redirect(script)
+    level_to_follow
+  end
+
+  def next_level_path_for_stage_extras(user)
+    next_level = next_level_for_stage_extras(user)
+    next_level ?
+      build_script_level_path(next_level) : script_completion_redirect(script)
+  end
+
+  def next_level_number_for_stage_extras(user)
+    next_level = next_level_for_stage_extras(user)
+    next_level ? next_level.stage.relative_position : nil
   end
 end

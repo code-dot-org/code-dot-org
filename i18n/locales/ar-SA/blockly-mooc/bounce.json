@@ -131,7 +131,7 @@
   "whenBallInGoalTooltip": "تنفيذ الإجراءات أدناه عندما تدخل الكرة في الهدف.",
   "whenBallMissesPaddle": "عندما لا تصيب الكرة المضرب",
   "whenBallMissesPaddleTooltip": "تنفيذ الإجراءات أدناه عندما لا تصيب الكرة المضرب.",
-  "whenBallMissesPlayer": "عندما لا تصطدم الكرة باللاّعب",
+  "whenBallMissesPlayer": "عندما لا تُصب الكرة أيَّ لاعب",
   "whenDown": "عند الضغط على السهم لأسفل",
   "whenDownTooltip": "تنفيذ الإجراءات أدناه عند الضغط على مفتاح السهم لأسفل.",
   "whenGameStarts": "عند بدء تشغيل اللعبة",

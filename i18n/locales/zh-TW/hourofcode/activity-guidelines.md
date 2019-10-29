@@ -1,6 +1,5 @@
 ---
 title: 活動指南
-layout: wide
 ---
 
 <style>

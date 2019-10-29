@@ -1,0 +1,77 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2016-10-14T22:10:18.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "onEvent": {
+        "params": [
+          "\"id\"",
+          "\"click\"",
+          "function(){\n\n}"
+        ]
+      },
+      "randomNumber_min_max": null,
+      "setPosition": null,
+      "setWidth": null,
+      "hideElement": null,
+      "showElement": null,
+      "setSize": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "short_instructions": "Introducing the setPosition command! Replace the moveTo in the button-click event handler to use setPosition to move the button itself to a random location when it's clicked.",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "true",
+    "long_instructions": "# Add an Image and Make a Chaser Game!\r\n<img src=\"https://images.code.org/ed1e9852b33ca368cf8cd8e0b0159de7-image-1444336815528.gif\" style=\"float: right\">\r\n\r\n**Now You Try it** - add an image to your app and modify the code so that the image jumps around the screen rather than the button.  Your little game should have:\r\n\r\n* **Text** on the top of the screen with a title or instructions for what to do.\r\n* **An image** that \"runs away\" (moves randomly) based on some mouse event.\r\n\r\n**Tips:**\r\n  * **Hint** - the easy way to do this is to simply change the IDs in `onEvent` and `setPosition` to respond to the image instead of the button.\r\n  * Remove the button from the app after the image is working.  We don't need it anymore.\r\n  * Change the label text so that the instructions make sense for your game.\r\n  * The game is even more fun if you use  the `mouseover` event instead of `click`\r\n\r\n**Optional Extensions**:\r\n  * Make the background interesting\r\n  * Add another image that runs away.\r\n  * See what happens with the commands `hideElement` and `showElement`\r\n  * Have two UI elements where interacting with one controls or does something to the other.\r\n\r\n**Finalize your \"Chaser Game v.1\"** and click Finish.\r\n\r\n  * **Note**: We'll revisit this game in the next lesson where you can improve it.  This is **just version 1**\r\n\r\n",
+    "never_autoplay_video": "false",
+    "slider_speed": "1",
+    "examples_required": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "true",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "project_template_level_name": "CSPU5_clickerGame_v1_template",
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "true",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
+    "instructions_important": "false",
+    "encrypted_examples": "WZEKaU5dwqXt17HK5muon0ZrofzjnSSy7raiieVO5BD9XFcMoQfmzgOQfigC\n00RC\n",
+    "show_debug_watch": "false",
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "expand_debugger": "false",
+    "widget_mode": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-09-24 00:34:48 +0000\",\"changed\":[\"name\",\"code_functions\",\"encrypted_examples\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Applab>

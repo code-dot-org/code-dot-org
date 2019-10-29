@@ -3,9 +3,8 @@ cwlogs = cwlogs
 
 [default]
 region = <%= node['cdo-awscli']['region'] || 'us-east-1' %>
-metadata_service_num_attempts = 30
-metadata_service_timeout = 30
-
+metadata_service_num_attempts = 3
+metadata_service_timeout = 5
 
 <% if node['cdo-awscli']['access_key_id'] &&
     node['cdo-awscli']['access_key_secret']

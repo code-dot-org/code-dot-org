@@ -45,6 +45,11 @@ class Experiment < ApplicationRecord
     platformization-partners
   )
 
+  PILOT_EXPERIMENTS = %w(
+    csd-piloters
+    csp-piloters
+  )
+
   def self.get_editor_experiment(user)
     LEVEL_EDITOR_EXPERIMENTS.find do |experiment|
       Experiment.enabled?(user: user, experiment_name: experiment)

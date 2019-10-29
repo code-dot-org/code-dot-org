@@ -1,7 +1,5 @@
 ---
 title: Przykładowy artykuł wspierający Tydzień Edukacji Informatycznej oraz Godzinę Kodowania
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

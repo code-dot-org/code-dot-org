@@ -119,7 +119,7 @@ class AnimationPickerBody extends React.Component {
     let hideUploadOption = this.props.spriteLab;
 
     return (
-      <div>
+      <div style={{marginBottom: 10}}>
         <h1 style={styles.title}>{msg.animationPicker_title()}</h1>
         {!this.props.is13Plus && !hideUploadOption && (
           <WarningLabel>{msg.animationPicker_warning()}</WarningLabel>

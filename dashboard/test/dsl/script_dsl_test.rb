@@ -718,4 +718,34 @@ DSL
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
     assert_equal expected, output
   end
+
+  test 'script DSL with single quotes' do
+    input_dsl = <<~DSL
+      stage 'Bob\\'s stage'
+      level 'Level 1', progression: 'Bob\\'s progression'
+      level 'Level 2'
+    DSL
+    assert_includes(input_dsl, "Bob\\'s stage")
+    assert_includes(input_dsl, "Bob\\'s progression")
+    output, i18n = ScriptDSL.parse(input_dsl, 'test.script', 'test')
+    expected = DEFAULT_PROPS.merge(
+      {
+        stages: [
+          {
+            stage: "Bob's stage",
+            scriptlevels: [
+              {stage: "Bob's stage", levels: [{name: 'Level 1'}], properties: {progression: "Bob's progression"}},
+              {stage: "Bob's stage", levels: [{name: 'Level 2'}]},
+            ]
+          }
+        ],
+      }
+    )
+
+    i18n_expected = {'test' => {'stages' => {
+      "Bob's stage" => {'name' => "Bob's stage"},
+    }}}
+    assert_equal expected, output
+    assert_equal i18n_expected, i18n
+  end
 end

@@ -926,8 +926,8 @@ it-IT:
       Function intro Ryan: "Nella tua area di lavoro c'è una **funzione** chiamata
         `costruisci un ponte`.  Tutto il codice che ti serve per attraversare il fiume
         è lì dentro! \n\nTrascina due volte il piccolo blocco verde <xml> <block type=\"procedures_callnoreturn\"
-        id=\"callMe\"><mutation name=\"costruisci un ponte\"/></block></xml> nell'area
-        di lavoro per preparare il percorso che conduce {currentPlayerName} alla torcia
+        id=\"callMe\"><mutation name=\"build bridge\"/></block></xml> nell'area di
+        lavoro per preparare il percorso che conduce {currentPlayerName} alla torcia
         di pietrarossa [redstone_torch]."
       Function intro Ryan_2019: |-
         Usa due volte la funzione `costruisci un ponte` per creare un sentiero fino alla torcia di pietrarossa.
@@ -1033,7 +1033,9 @@ it-IT:
       MC_HOC_2017_05_Cole: |-
         Oh no, non c'è più il ponte!
 
-        Programma l'Agente per ricostruire il ponte usando il blocco  <xml> <block type="craft_placeBlock">     <title name="TYPE"> </title>   </block></xml> in modo che {currentPlayerName} possa raggiungere la **pala** [diamond_shovel].
+        Programma l'Agente per ricostruire il ponte usando il blocco <xml>  <block type="craft_placeBlock">
+            <title name="TYPE">       </title>
+          </block></xml> in modo che {currentPlayerName} possa raggiungere la **pala** [diamond_shovel].
       MC_HOC_2017_05_Cole_2019: |-
         Oh no, non c'è più il ponte!
 
@@ -1194,9 +1196,9 @@ it-IT:
         \ Aggiungi sullo schermo un nuovo personaggio sapone.\n2.  Puoi crearlo in
         modo che quando la giraffa e il sapone si toccano, la giraffa ritorni al suo
         colore normale?\n\n* * *\n\nPer ripristinare il colore, usa il blocco:\n<xml><block
-        type=\"gamelab_removeTint\" inline=\"true\">\n       <value name=\"THIS\">\n
-        \        <block type=\"sprite_variables_get\">\n           <title name=\"VAR\">mySprite</title>\n
-        \        </block>\n       </value>\n     </block></xml>"
+        type=\"gamelab_removeTint\" inline=\"true\">\n      <value name=\"THIS\">\n
+        \       <block type=\"sprite_variables_get\">\n          <title name=\"VAR\">mySprite</title>\n
+        \       </block>\n      </value>\n    </block></xml>"
       Virtual Pet 3_2019: "Non possiamo lasciare in giro una giraffa tutta sporca!
         \ \n\n1.  Aggiungi sullo schermo un nuovo personaggio Sapone.\n2.  Puoi crearlo
         in modo che quando la giraffa e il sapone si toccano, la giraffa ritorni al
@@ -1397,11 +1399,11 @@ it-IT:
       courseA_artist_loops4: |-
         Ora usa un ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml> per disegnare questa linea cinque volte!
 
-        <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml>
+        ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
       courseA_artist_loops4_2018: |-
         Ora usa un ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml> per disegnare questa linea cinque volte!
 
-        <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml>
+        ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
       courseA_artist_loops4_2019: |-
         Ora usa un ciclo <xml><block type="controls_repeat_simplified_dropdown" block-text="repeat"><title name="TIMES" config="2-6">5</title></block></xml> per disegnare questa linea cinque volte!
 
@@ -1433,11 +1435,11 @@ it-IT:
       courseA_artist_loops7: |-
         ## Usa il ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> per aggiungere le onde all'acqua.
 
-        <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+        ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
       courseA_artist_loops7_2018: |-
         ## Usa il ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> per aggiungere le onde all'acqua.
 
-        <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+        ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
       courseA_artist_loops7_2019: |-
         ## Usa il ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> per aggiungere le onde all'acqua.
 
@@ -1532,8 +1534,8 @@ it-IT:
       courseA_collector_loops2: |-
         Raccogli tutti e tre i diamanti! Muovi Laura su ogni diamante e poi usa questo blocco:
           <xml><block type="collector_collect"/></xml>
-      courseA_collector_loops2_2018: "Raccogli tutte e tre le perle! Muovi Laurel
-        su ogni pezzo del tesoro e poi usa questo blocco:\\\r\n <xml><block type=\"collector_collect\"/></xml>"
+      courseA_collector_loops2_2018: 'Raccogli tutte e tre le perle! Muovi Laurel
+        su ogni pezzo del tesoro e poi usa questo blocco: <xml><block type="collector_collect"/></xml>'
       courseA_collector_loops3: Come può Laura raccogliere tutti e cinque i diamanti
         usando un solo blocco <xml><block type="maze_moveEast"/></xml>?
       courseA_collector_loops3_2018: Come può Laura raccogliere tutti e cinque i diamanti
@@ -1585,9 +1587,9 @@ it-IT:
         la contadina raccolga tutte le pannocchie?
       courseA_harvester_loops5b_2019: Puoi modificare il programma per fare in modo
         che la contadina raccolga tutte le pannocchie?
-      courseA_harvester_loops6: Avrai bisogno di **un** blocco <xml><block type="maze_moveWest"></block></xml>
-        e di **un** blocco <xml><block type="maze_moveNorth"></block></xml> per finire
-        questo esercizio!
+      courseA_harvester_loops6: Avrai bisogno di **un** blocco <xml><block type="maze_moveWest"
+        block-text="move west"></block></xml> e di **un** blocco <xml><block type="maze_moveNorth"
+        block-text="move north"></block></xml> per finire questo esercizio!
       courseA_harvester_loops6_2019: Avrai bisogno di **un** blocco <xml><block type="maze_moveWest"></block></xml>
         e di **un** blocco <xml><block type="maze_moveNorth"></block></xml> per finire
         questo esercizio!
@@ -1607,8 +1609,8 @@ it-IT:
       courseA_harvester_seq13: Aiuta la contadina a raccogliere le pannocchie!
       courseA_harvester_seq13_2019: Aiuta la contadina a raccogliere le pannocchie!
       courseA_harvester_seq1_2019: Aiuta la contadina a raccogliere la pannocchia!
-      courseA_harvester_seq2: Usa **tre** volte il blocco <xml><block type="maze_moveWest"/></xml>
-        per far arrivare la contadina fino alla pannocchia!
+      courseA_harvester_seq2: 'Usa **tre** volte il blocco <xml><block type="maze_moveWest"/></xml>
+        per far arrivare la contadina fino alla pannocchia! '
       courseA_harvester_seq2_2019: Usa **tre** volte il blocco <xml><block type="maze_moveWest"/></xml>
         per far arrivare la contadina fino alla pannocchia!
       courseA_harvester_seq3: Usa **tre** volte il blocco <xml><block type="maze_moveNorth"/></xml>
@@ -1636,15 +1638,15 @@ it-IT:
         volte!
       courseA_harvester_seq9: Aggiungi due blocchi per completare l'esercizio!
       courseA_harvester_seq9_2019: Aggiungi due blocchi per completare l'esercizio!
-      courseA_maze_ramp2_2018: "Per completare l'esercizio, connetti entrambi i blocchi
-        <xml><block type=\"maze_moveEast\"/></xml> al blocco <xml><block type=\"when_run\"/></xml>,
-        quindi clicca su  \"▶ Esegui\".  \n\n* * *"
+      courseA_maze_ramp2_2018: Per completare l'esercizio, connetti entrambi i blocchi
+        <xml><block type="maze_moveEast"/></xml> al blocco <xml><block type="when_run"/></xml>,
+        quindi clicca su "▶ Esegui".
       courseA_maze_ramp2_2019: "Per completare l'esercizio, connetti entrambi i blocchi
         <xml><block type=\"maze_moveEast\"/></xml> al blocco <xml><block type=\"when_run\"/></xml>,
         quindi clicca su  \"▶ Esegui\".  \n\n* * *"
-      courseA_maze_ramp3a_2018: "Per completare il programma, trascina un blocco <xml><block
-        type=\"maze_moveNorth\"/></xml> dalla cassetta degli attrezzi e aggiungilo
-        sotto a tutti gli altri, poi clicca su \"▶ Esegui\". \n\n* * *"
+      courseA_maze_ramp3a_2018: Per completare il programma, trascina un blocco <xml><block
+        type="maze_moveNorth"/></xml> dalla cassetta degli attrezzi e aggiungilo sotto
+        a tutti gli altri, poi clicca su "▶ Esegui".
       courseA_maze_ramp3a_2019: "Per completare il programma, trascina un blocco <xml><block
         type=\"maze_moveNorth\"/></xml> dalla cassetta degli attrezzi e aggiungilo
         sotto a tutti gli altri, poi clicca su \"▶ Esegui\". \n\n* * *"
@@ -1759,22 +1761,18 @@ it-IT:
       courseA_playLab_events3: |-
         Aiuta il cane a muoversi unendo il blocco <xml><block type="studio_move">
             <title name="SPRITE">1</title>
-            <title
-        name="DIR">8</title>
+            <title name="DIR">8</title>
           </block></xml> al blocco evento <xml><block type="studio_whenArrow">
-            <title
-        name="VALUE">left</title>
+            <title name="VALUE">left</title>
           </block></xml> che si trova già nell'area di lavoro.
 
         Fai arrivare il cane alla bandierina per completare l'esercizio!
       courseA_playLab_events3_2018: |-
         Aiuta il cane a muoversi unendo il blocco <xml><block type="studio_move">
             <title name="SPRITE">1</title>
-            <title
-        name="DIR">8</title>
+            <title name="DIR">8</title>
           </block></xml> al blocco evento <xml><block type="studio_whenArrow">
-            <title
-        name="VALUE">left</title>
+            <title name="VALUE">left</title>
           </block></xml> che si trova già nell'area di lavoro.
 
         Fai arrivare il cane alla bandierina per completare l'esercizio!
@@ -2527,7 +2525,7 @@ it-IT:
       courseC_artist_loopsPrePre1a_2018: |-
         ### L'artista si trova nella posizione sbagliata!
 
-        Usa il blocco <xml><block type="jump_to_xy" id="callMe"><title name="XPOS">200</title><title name="YPOS">200</title></block></xml> per portare l'artista al centro dell'area di gioco.
+        Usa il blocco <xml><block type="jump_to_xy" id="callMe"><title name="XPOS">200</title><title name="YPOS">200</title></block></xml> per portare l'artista al centro dell'area di gioco.\
         Quindi disegna una linea lunga 50 pixel con il blocco <xml><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">50</title></block></xml>
       courseC_artist_loopsPrePre1a_2019: |-
         Usa il blocco <xml><block type="jump_to_xy" id="callMe"><title name="XPOS">200</title><title name="YPOS">200</title></block></xml> per portare l'artista al centro dell'area di gioco.
@@ -4337,13 +4335,14 @@ it-IT:
             <title name="DIR">turnLeft</title>
           </block></xml> per raggiungere la ghianda!
       courseD_iceage_loops2_2019: |-
-        Usa un blocco <xml><block type="maze_turn">
+        Usa un blocco <xml><block type="maze_turn" block-text="turn left">
             <title name="DIR">turnLeft</title>
           </block></xml> per raggiungere la ghianda!
       courseD_iceage_loops3: Riesci a raggiungere la ghianda con un solo blocco <xml><block
         type="maze_moveForward"/></xml>? Prova con un ciclo!
       courseD_iceage_loops3_2019: Riesci a raggiungere la ghianda con un solo blocco
-        `O ←` <xml><block type="maze_moveWest"/></xml>? Prova con un ciclo!
+        `O ←` <xml><block type="maze_moveForward" block-text="move forward"/></xml>?
+        Prova con un ciclo!
       courseD_iceage_loops4: Aggiungi un blocco per far percorrere a Scrat tutto il
         tragitto per raggiungere la ghianda!
       courseD_iceage_loops4_2019: Aggiungi un blocco per far percorrere a Scrat tutto
@@ -5207,18 +5206,15 @@ it-IT:
         modifiche al codice del precedente esercizio!
       courseF_artist_for7_2019: Per ottenere questo disegno bastano solo tre piccole
         modifiche al codice del precedente esercizio!
-      courseF_artist_for9: "**Ispirazione:** Usa la variabile `counter` (_contatore_)
-        all'interno del blocco `imposta l'opacità` per ottenere un tratto più leggero
-        al centro del disegno. \\\\ \n(Questo schema con esagono è stato creato usando
-        un angolo di 60 gradi.)"
-      courseF_artist_for9_2018: "**Ispirazione:** Usa la variabile `counter` (_contatore_)
-        all'interno del blocco `imposta l'opacità` per ottenere un tratto più leggero
-        al centro del disegno. \\\\ \n(Questo schema con esagono è stato creato usando
-        un angolo di 60 gradi.)"
-      courseF_artist_for9_2019: "**Ispirazione:** Usa la variabile `counter` (_contatore_)
-        all'interno del blocco `imposta l'opacità` per ottenere un tratto più leggero
-        al centro del disegno. \\\\ \n(Questo schema con esagono è stato creato usando
-        un angolo di 60 gradi.)"
+      courseF_artist_for9: |-
+        **Ispirazione:** Usa la variabile `counter` (_contatore_) all'interno del blocco `imposta l'opacità` per ottenere un tratto più leggero al centro del disegno.
+        (Questo schema con esagono è stato creato usando un angolo di 60 gradi.)
+      courseF_artist_for9_2018: |-
+        **Ispirazione:** Usa la variabile `counter` (_contatore_) all'interno del blocco `imposta l'opacità` per ottenere un tratto più leggero al centro del disegno.
+        (Questo schema con esagono è stato creato usando un angolo di 60 gradi.)
+      courseF_artist_for9_2019: |-
+        **Ispirazione:** Usa la variabile `counter` (_contatore_) all'interno del blocco `imposta l'opacità` per ottenere un tratto più leggero al centro del disegno.
+        (Questo schema con esagono è stato creato usando un angolo di 60 gradi.)
       courseF_artist_for_challenge1: |-
         Riesci a ricreare questo disegno?
 
@@ -5559,9 +5555,9 @@ it-IT:
         _"Incredibile!"_
 
         Modifica il codice in modo che funzioni per questo esercizio.
-      coursea_maze_ramp1_2018: "Per far arrivare l'uccellino fino al maialino, trascina
-        il blocco <xml><block type=\"maze_moveEast\"/></xml> sotto al blocco <xml><block
-        type=\"when_run\"/></xml>, poi premi \"▶ Esegui\"!  \n\n* * *"
+      coursea_maze_ramp1_2018: Per far arrivare l'uccellino fino al maialino, trascina
+        il blocco <xml><block type="maze_moveEast"/></xml> sotto al blocco <xml><block
+        type="when_run"/></xml>, poi premi "▶ Esegui"!
       coursea_maze_ramp1_2019: "Per far arrivare l'uccellino fino al maialino, trascina
         il blocco <xml><block type=\"maze_moveEast\"/></xml> sotto al blocco <xml><block
         type=\"when_run\"/></xml>, poi premi \"▶ Esegui\"!  \n\n* * *"

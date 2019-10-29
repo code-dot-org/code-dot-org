@@ -1,7 +1,5 @@
 ---
 title: როგორ მოვაწყოთ კოდის ერთი საათი უბანში
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

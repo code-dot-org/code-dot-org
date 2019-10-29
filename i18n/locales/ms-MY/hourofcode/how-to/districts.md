@@ -1,7 +1,5 @@
 ---
 title: Panduan Bagaimana Hour of Code untuk Pihak Berkuasa
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

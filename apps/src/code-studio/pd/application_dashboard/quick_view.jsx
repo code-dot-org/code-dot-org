@@ -12,7 +12,7 @@ import {connect} from 'react-redux';
 import Select from 'react-select';
 import 'react-select/dist/react-select.css';
 import {SelectStyleProps} from '../constants';
-import CohortCalculator from './cohort_calculator';
+import CohortCalculator, {countAcceptedApplications} from './cohort_calculator';
 import RegionalPartnerDropdown, {
   RegionalPartnerPropType
 } from '../components/regional_partner_dropdown';
@@ -129,24 +129,13 @@ export class QuickView extends React.Component {
   };
 
   render() {
-    let accepted = 0;
-    let registered = 0;
-    if (this.state.applications !== null) {
-      accepted = this.state.applications.filter(
-        app => app.status === 'accepted'
-      ).length;
-      registered = this.state.applications.filter(
-        app => app.registered_workshop === 'Yes'
-      ).length;
-    }
     return (
       <div>
         {this.state.applications && (
           <CohortCalculator
             role={this.props.route.role}
             regionalPartnerFilterValue={this.props.regionalPartnerFilter.value}
-            accepted={accepted}
-            registered={registered}
+            accepted={countAcceptedApplications(this.state.applications)}
           />
         )}
         {this.props.showRegionalPartnerDropdown && <RegionalPartnerDropdown />}
@@ -157,14 +146,9 @@ export class QuickView extends React.Component {
             <Button style={styles.button} onClick={this.handleDownloadCsvClick}>
               Download CSV
             </Button>
-            {accepted > 0 && (
-              <Button
-                style={styles.button}
-                onClick={this.handleViewCohortClick}
-              >
-                View accepted cohort
-              </Button>
-            )}
+            <Button style={styles.button} onClick={this.handleViewCohortClick}>
+              View accepted cohort
+            </Button>
           </Col>
           <Col md={6} sm={6}>
             <FormGroup className="pull-right">

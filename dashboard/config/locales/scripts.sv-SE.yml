@@ -2054,3 +2054,14 @@ sv:
               name: Villkor
             Functions:
               name: funktioner
+        peru-2019:
+          stages:
+            Introduction:
+              name: Introduktion
+            Nested Loops:
+              name: Kapslade slingor(loopar)
+        dance-2019:
+          stages:
+            Dance Party:
+              name: Dansparty
+          description: Koda ditt egna dansparty som du kan dela med dina vänner.

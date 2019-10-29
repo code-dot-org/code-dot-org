@@ -663,9 +663,13 @@ cs-CZ:
       courseA_maze_seq12: 'Dostaň to prase! '
       courseA_maze_seq12_2018: 'Dostaň to prase! '
       courseA_maze_seq12_2019: 'Dostaň to prase! '
+      courseA_maze_seq13: Dostaň to prase jakýmkoliv způsobem!
+      courseA_maze_seq13_2018: Dostaň to prase jakýmkoliv způsobem!
+      courseA_maze_seq13_2019: Dostaň to prase jakýmkoliv způsobem!
       courseA_maze_seq1_2018: Dostaň mne k prasátku!
       courseA_maze_seq1_2019: Dostaň mne k prasátku!
       courseA_maze_seq2: Změň kód, abys mne dostal k prasátku!
+      courseA_maze_seq5: Zkus toto sám ze začátku.
       courseC_PlayLab_events3: Můžete napsat program, aby se Jorge (pes) posunul směrem
         k Olivii (kočka)?
       courseC_PlayLab_events3_2018: Můžete napsat program, aby se Jorge (pes) posunul

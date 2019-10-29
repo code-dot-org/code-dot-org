@@ -11,7 +11,6 @@ end
 
 include_recipe 'apt'
 include_recipe 'sudo-user'
-include_recipe 'cdo-networking'
 
 include_recipe 'cdo-apps::hostname'
 
@@ -25,10 +24,22 @@ apt_package %w(
 )
 
 # Used by lesson plan generator.
+pdftk_file = 'pdftk-java_3.0.2-2_all.deb'
+pdftk_local_file = "#{Chef::Config[:file_cache_path]}/#{pdftk_file}"
+remote_file pdftk_local_file do
+  source "https://mirrors.kernel.org/ubuntu/pool/universe/p/pdftk-java/#{pdftk_file}"
+  checksum "92af8960406698d2e1c4f1f0c10b397e9391729c9c63070d2c3ed472850f16a9"
+end
+# Dependencies of pdftk-java.
 apt_package %w(
-  pdftk
-  enscript
+  default-jre-headless
+  libbcprov-java
+  libcommons-lang3-java
 )
+dpkg_package("pdftk-java") {source pdftk_local_file}
+
+# Used by lesson plan generator.
+apt_package 'enscript'
 
 # Provides a Dashboard database fixture for Pegasus tests.
 apt_package 'libsqlite3-dev'
@@ -45,13 +56,7 @@ apt_package %w(
   cmake
 )
 
-#multipackage
-
-include_recipe 'cdo-mysql::client'
-# Install local mysql server unless an external db url is provided.
-unless node['cdo-secrets'] && node['cdo-secrets']['db_writer']
-  include_recipe 'cdo-mysql::server'
-end
+include_recipe 'cdo-mysql'
 
 include_recipe 'cdo-ruby'
 
@@ -95,6 +100,10 @@ if node['cdo-secrets']["build_apps"] ||
   include_recipe 'cdo-nodejs'
 end
 
+# Workaround for lack of zoneinfo in docker: https://forums.docker.com/t/synchronize-timezone-from-host-to-container/39116/3
+# which causes this error: https://github.com/tzinfo/tzinfo/wiki/Resolving-TZInfo::DataSourceNotFound-Errors
+apt_package 'tzdata'
+
 include_recipe 'cdo-apps::dashboard'
 include_recipe 'cdo-apps::pegasus'
 include_recipe node['cdo-apps']['nginx_enabled'] ?
@@ -118,3 +127,6 @@ include_recipe 'cdo-apps::daemon_ssh' if node['cdo-apps']['daemon'] && node['cdo
 include_recipe 'cdo-apps::lighthouse' if node.chef_environment == 'test'
 
 include_recipe 'cdo-tippecanoe' if node['cdo-apps']['daemon']
+
+# Patch to fix issue with systemd-resolved: https://bugs.launchpad.net/ubuntu/+source/systemd/+bug/1805183
+include_recipe 'cdo-apps::resolved'

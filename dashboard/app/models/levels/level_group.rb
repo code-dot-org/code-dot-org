@@ -168,7 +168,11 @@ ruby
       # anonymity.
       results = section.students.map do |student|
         # Skip student if they haven't submitted for this LevelGroup.
-        user_level = student.user_level_for(script_level, script_level.level)
+        user_level = UserLevel.find_by(
+          user: student,
+          script: script_level.script,
+          level: script_level.level
+        )
         next unless user_level.try(:submitted)
 
         get_sublevel_result(sublevel, student.last_attempt(sublevel).try(:level_source).try(:data))

@@ -1,3 +1,6 @@
+- content_for(:head) do
+  %meta{name: "robots", content: "noindex"}/
+
 - if current_user || !@section
   %h2= t('join_section.code.title')
   %p= t('join_section.code.instructions')
@@ -80,7 +83,7 @@
             = submit_tag 'Register', class: 'btn btn-primary'
 
         #student-terms
-          != t('signup_form.student_terms')
+          != t('signup_form.student_terms_markdown', markdown: true)
           %br/
           %br/
           %br/

@@ -40,6 +40,7 @@ Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST_TAIL = "";
 Blockly.Msg.CONTROLS_FOREACH_INPUT_ITEM = "为每个项目";
 Blockly.Msg.CONTROLS_FOREACH_TOOLTIP = "将变量'%1'赋值给列表里的每一项，然后执行一些语句。";
 Blockly.Msg.CONTROLS_FOR_HELPURL = "";
+Blockly.Msg.CONTROLS_FOR_INPUT_COUNTER = "for %1 from %2 to %3 count by %4";
 Blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY = "从 %1 到 %2 间隔 %3";
 Blockly.Msg.CONTROLS_FOR_INPUT_WITH = "为";
 Blockly.Msg.CONTROLS_FOR_TOOLTIP = "让变量%1从开始的数字，以设定的间隔改变，直到结束的数字为止，在这个过程中，持续执行当前块中所包含的块。";
