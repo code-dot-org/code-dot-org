@@ -1,7 +1,5 @@
 ---
 title: Guía para voluntarios de la hora del código
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

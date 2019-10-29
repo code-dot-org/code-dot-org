@@ -1,7 +1,5 @@
 ---
 title: Beispiel für einen Aufruf zur Unterstützung einer Informatikwoche und der Hour of Code
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

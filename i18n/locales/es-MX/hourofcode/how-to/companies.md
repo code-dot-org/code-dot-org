@@ -1,7 +1,5 @@
 ---
 title: Cómo alojar un Hour of Code - Compañías
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

@@ -333,6 +333,7 @@ bg:
   meta_tag_twitter_description: 'Hour of Code е глобално движение, достигащо до десетки милиони ученици от 180+ страни на над 30 езика. Допустима възраст от 4 до 104.'
   twitter_default_text: "Аз ще участвам тази година в #HourOfCode, а ти? @codeorg"
   twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
+  twitter_donor_text_2019: "This year's #HourOfCode is about #CSforGood. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'Често задавани въпроси'
   hoc_faq_what_is_hoc_q: 'Какво е Hour of Code?'
   hoc_faq_what_is_hoc_a: "Hour of Code е един час въведение в компютърните науки, предназначен да демитологизира програмирането и да се покаже, че всеки може да научи основите.<a href='%{codeorg_url}'>Вижте уроците ни</a>."

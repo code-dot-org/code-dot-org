@@ -3,22 +3,8 @@ title: Děkujeme za přihlášení k hostování akce Hodina kódu!
 layout: wide
 nav: how_to_nav
 social:
-  og:title: Hodina kódu se blíží
-  og:description: Hodina Kódu je celosvětové hnutí, do kterého se zapojily desítky
-    milionů žáků z více než 180 zemí mluvících 30 jazyky, lidé ve věku od 4 do 104
-    let.
-  og:image: http://hourofcode.com/images/hourofcode-2015-video-thumbnail.png
-  og:image:width: 1440
-  og:image:height: 900
-  og:url: http://hourofcode.com
   twitter:card: player
   twitter:site: "@codeorg"
-  twitter:url: http://hourofcode.com
-  twitter:title: Hodina kódu se blíží
-  twitter:description: Hodina Kódu je celosvětové hnutí, do kterého se zapojily desítky
-    milionů žáků z více než 180 zemí mluvících 30 jazyky, lidé ve věku od 4 do 104
-    let.
-  twitter:image:src: http://hourofcode.com/images/hourofcode-2015-video-thumbnail.png
 ---
 
 # Děkujeme za přihlášení k hostování akce Hodina kódu!

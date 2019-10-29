@@ -1,6 +1,5 @@
 ---
 title: Buong Paaralang Partisipasyon
-layout: wide
 ---
 
 {{ signup_button }}

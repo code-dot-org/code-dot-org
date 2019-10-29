@@ -1,7 +1,5 @@
 ---
 title: کمپیوٹر سائنس ایجوکیشن ویک اور آور-آف-کوڈ ریزولوشن سپورٹو سیمپل
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

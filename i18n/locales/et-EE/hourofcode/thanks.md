@@ -1,10 +1,5 @@
 ---
 title: Täname, et ühinesite Hour of Code'iga!
-layout: wide
-nav: how_to_nav
-social:
-  "twitter:card": player
-  "twitter:site": "@codeorg"
 ---
 
 # Täname, et ühinesite KoodiTund kampaaniaga!

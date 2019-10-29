@@ -1,7 +1,5 @@
 ---
 title: みんなに広めよう
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

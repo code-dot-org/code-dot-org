@@ -1,14 +1,12 @@
 ---
 title: Guia prático
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}
 
 # Como ensinar a Hora do Código em aulas extracurriculares e em clubes
 
-### Junte-se ao movimento e apresente para um grupo de estudantes a sua primeira hora de Ciência da Computação com estes passos. É fácil realizar uma Hora do Código, mesmo para principiantes! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+### Junte-se ao movimento e apresente para um grupo de estudantes a sua primeira hora de Ciência da Computação com estes passos. É fácil realizar uma Hora do Código, mesmo para principiantes! Se você quiser ajuda de outras pessoas, você pode localizar um [voluntário local]({{ urls/volunteer_local }}) para te ajudar a realizar a Hora do Código na escola, como atividade extra-curricular, ou ainda no clube.
 
 * * *
 

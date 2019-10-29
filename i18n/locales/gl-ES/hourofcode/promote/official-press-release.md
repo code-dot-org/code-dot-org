@@ -1,7 +1,5 @@
 ---
 title: Versión de prensa da Hora do Código para representantes politicos
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

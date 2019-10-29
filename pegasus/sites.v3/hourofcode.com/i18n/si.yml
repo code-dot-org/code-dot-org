@@ -333,6 +333,7 @@
   meta_tag_twitter_description: 'Hour of Code යනු රටවල් 180කට වැඩිගණනක් හා භාෂා 45කට අධික සංඛ්‍යාවකින් අන්තර්ජාතිකව සිසුන් දහස් ගණනින් පරිගණක විද්‍යාවට සමීපකිරීමට පවත්වනුලබන වැඩසටහණකි. වයස 4 සිට 104.'
   twitter_default_text: "මම මේ වර්ෂයේ #Hour of Code වැසටහනට සභාගී වෙමි ඔබ? @code. rg"
   twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
+  twitter_donor_text_2019: "This year's #HourOfCode is about #CSforGood. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'නිති අසන පැණ'
   hoc_faq_what_is_hoc_q: 'මොකක්ද මේ Hour of Code?'
   hoc_faq_what_is_hoc_a: "Hour of Code මුලින්ම ඇරඹෙන්නේ පරිගණක විද්‍යාව පිලිබඳ පැයක හඳුන්වාදීමක් ලෙසිනි. අපගේ අරමුණ වූයේ ඕනෑම අයෙකුට මූලික සිද්ධාන්ත ඉගෙනගත හැකි බව පෙන්වීමයි. දැන් මෙය ලෝක ව්‍යාප්ත කාර්යයක් බවට පත්වී ඇත. පාඩම් සහ ක්‍රියාකාරකම් <a href='%{tutorials}'>මෙතනින්</a> බලන්න. මෙම කාර්යය <a href='%{partners}'>හවුල්කරුවන් 400ක්</a> සහ අධ්‍යාපනඥයින් 200000කින් බල ගැන්වී ඇත."

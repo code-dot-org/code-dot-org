@@ -333,6 +333,7 @@ id:
   meta_tag_twitter_description: 'Hour of Code adalah gerakan mendunia yang mencapai sepuluh juta pelajar dari lebih 180+ negara dan lebih dari 30 bahasa. Dari umur 4 sampai 104.'
   twitter_default_text: "Saya berpartisipasi dalam #HourOfCode tahun ini, Bagaimana dengan Anda? @codeorg"
   twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
+  twitter_donor_text_2019: "This year's #HourOfCode is about #CSforGood. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'FAQ'
   hoc_faq_what_is_hoc_q: 'Apa itu Hour of Code?'
   hoc_faq_what_is_hoc_a: "Hour of Code adalah satu jam perkenalan mengenai ilmu komputer, didesain untuk melawan mitos tentang kode dan menunjukkan pada siapa pun bisa belajar dasar-dasarnya. <a href='%{codeorg_url}'>Lihat tutorial</a>."
@@ -340,7 +341,7 @@ id:
   hoc_faq_when_is_hoc_q: 'Kapan Hour of Code dilaksanakan?'
   hoc_faq_when_is_hoc_a: "Semua orang dapat menyelenggarakan Hour of Code akapan saja, namun tujuan awal kampanye ini adalah untuk remaja dari jutaan siswa untuk mencoba Hour of Code selama %{campaign_date}, dalam perayaan dari <a href='http://csedweek.org'>Pekan Edukasi Ilmu Komputer</a>. Apakah harus <i>satu jam</i> spesifik? Tidak. Anda dapat melakukan Hour of Code kapanpun selama minggu ini. (Dan bila Anda tidak dapat melakukannya di minggu tersebut, lakukan di minggu sebelum atau sesudah)."
   hoc_faq_why_cs_q: 'Mengapa ilmu komputer?'
-  hoc_faq_why_cs_a: "<i>Setiap</i> pelajar harus mendapatkan kesempatan untuk mempelajari ilmu komputer. Hal ini membantu untuk menumbuhkan kemampuan pemecahan masalah, logika dan kreativitas. Dengan dimulai sejak dini, pelajar-pelajar akan memiliki fondasi untuk sukses dalam karir pada abad 21 ini. Lihat mengenai statistiknya pada <a href='%{codeorg_url}'>%{partner_url}</a>."
+  hoc_faq_why_cs_a: "<i>Setiap</i> pelajar harus mendapatkan kesempatan untuk mempelajari ilmu komputer. Hal ini membantu untuk menumbuhkan kemampuan pemecahan masalah, logika dan kreativitas. Dengan dimulai sejak dini, pelajar-pelajar akan memiliki fondasi untuk sukses dalam karir pada abad 21 ini. Lihat mengenai statistiknya pada <a href='%{stats_url}'>here</a>."
   hoc_faq_how_participate_q: 'Bagaimana saya berpartisipasi dalam Hour of Code?'
   hoc_faq_how_participate_a: "<a href='/how-to'>Mulai perencanaan disini</a> dengan melihat panduan how-to kami. Anda dapat mengadakan event Hour of Code di sekolah atau di komunitas &mdash; seperti klub ekstrakulikuler, nirlaba atau pekerjaan. Atau, coba sendiri ketika %{campaign_date} tiba."
   hoc_faq_behind_hoc_q: 'Siapa di balik dari Hour of Code?'

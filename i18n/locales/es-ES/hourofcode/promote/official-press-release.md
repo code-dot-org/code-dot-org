@@ -1,7 +1,5 @@
 ---
 title: Versión de prensa de la hora del código para funcionarios electos
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

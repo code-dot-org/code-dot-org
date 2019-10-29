@@ -1,7 +1,5 @@
 ---
 title: Un esempio di articolo per supportare la Settimana di Educazione all'Informatica e l'Ora del Codice
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

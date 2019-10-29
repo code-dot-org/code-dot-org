@@ -1,7 +1,5 @@
 ---
 title: Ыктыярчылар үчүн Код саатын өткөзүү жетектемеси
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

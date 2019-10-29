@@ -1,7 +1,5 @@
 ---
 title: How-to guide para sa mga opisyales ng gobyerno
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

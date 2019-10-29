@@ -1,6 +1,5 @@
 ---
 title: Leiðarvísar kennsluefnis
-layout: wide
 ---
 
 <style>

@@ -1,10 +1,5 @@
 ---
 title: Kiitos osallistumisestasi Kooditunnin ylläpitäjäksi!
-layout: wide
-nav: how_to_nav
-social:
-  "twitter:card": player
-  "twitter:site": "@codeorg"
 ---
 
 # Kiitos osallistumisestasi Kooditunnin ylläpitäjäksi!

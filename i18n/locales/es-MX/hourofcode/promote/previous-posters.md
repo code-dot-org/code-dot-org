@@ -1,7 +1,5 @@
 ---
 title: Carteles de actividades de la Hora del Código anteriores
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

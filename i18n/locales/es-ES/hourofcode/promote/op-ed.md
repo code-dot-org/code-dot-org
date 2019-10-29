@@ -1,7 +1,5 @@
 ---
 title: Ejemplo de página de opinión de apoyo a la Semana de Educación para las Ciencias de la Computación y la Hora del Código
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

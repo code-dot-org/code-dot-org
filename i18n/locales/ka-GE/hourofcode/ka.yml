@@ -333,6 +333,7 @@ ka:
   meta_tag_twitter_description: 'კოდის ერთი საათი არის გლობალური მოძრაობა, რომელიც აერთიანებს ათობით მილიონ მოსწავლეს 180+ ქვეყნიდან, 40 ენაზე მისაწვდომი ტუტორიალებით. ასაკი: 4-დან 104-მდე.'
   twitter_default_text: "მე ვიღებ მონაწილეობას წლევანდელ #HourOfCode–ში, და შენ? @codeorg"
   twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
+  twitter_donor_text_2019: "This year's #HourOfCode is about #CSforGood. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'ხშირად დასმული კითხვები'
   hoc_faq_what_is_hoc_q: 'რა არის კოდის ერთი საათი?'
   hoc_faq_what_is_hoc_a: "კოდის ერთი საათი არის ერთსაათიანი შესავალი კურსი კომპიუტერულ მეცნიერებებში, რომლის მიზანიცაა აჩვენოს, რომ პროგრამირების საწყისების სწავლა შეუძლია ყველას. <a href='http://code.org/learn'>გაეცანით ტუტორიალებს</a>."
