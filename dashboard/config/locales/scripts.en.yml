@@ -5673,7 +5673,7 @@ en:
           assignment_family_title: Course D
           description_audience: 'Ages: 7-11'
           description_short: Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more.
-          description: Learn new coding concepts including algorithms, nested loops, while loops, conditionals, and events. Get an introduction to digital citizenship before   creating your very own game or story that you can share.
+          description: Learn new coding concepts including algorithms, nested loops, while loops, conditionals, and events. Get an introduction to digital citizenship before creating your very own game or story that you can share.
         coursee-2017:
           stages:
             'Algorithms: Tangrams':
@@ -7622,7 +7622,7 @@ en:
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie and the Big Project
         express-2018:
-          title: Express Course (2018)
+          title: Express Course
           assignment_family_title: Express Course
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
           description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
@@ -11358,6 +11358,10 @@ en:
               name: Unit 4 Assessment
             'Lesson 15: Unit 4 Assessment':
               name: 'Lesson 15: Unit 4 Assessment'
+            Unit 4 STUDENT Survey:
+              name: Unit 4 STUDENT Survey
+            Unit 4 TEACHER Survey:
+              name: Unit 4 TEACHER Survey
           title: CSP Unit 4 Pilot - Variables, Conditionals, and Functions
           description_audience: ''
           description_short: ''
@@ -13131,7 +13135,13 @@ en:
           stages:
             CS Discoveries Deeper Learning Module 3:
               name: CS Discoveries Deeper Learning Module 3
-          title: CS Discoveries Deeper Learning Module 3
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            'Step 1: Develop Understanding':
+              name: 'Step 1: Develop Understanding'
+            'Step 2: Demonstrate Understanding':
+              name: 'Step 2: Demonstrate Understanding'
+          title: CS Discoveries Deeper Learning Module for Workshop 3
           description_audience: CS Discoveries Facilitators in Training 2019
           description_short: ''
           description: ''
@@ -13139,7 +13149,13 @@ en:
           stages:
             CS Discoveries Deeper Learning Module 4:
               name: CS Discoveries Deeper Learning Module 4
-          title: CS Discoveries Deeper Learning Module 4
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            'Step 1: Develop Understanding':
+              name: 'Step 1: Develop Understanding'
+            'Step 2: Demonstrate Understanding':
+              name: 'Step 2: Demonstrate Understanding'
+          title: CS Discoveries Deeper Learning Module for Workshop 4
           description_audience: CS Discoveries Facilitators in Training 2019
           description_short: ''
           description: ''
@@ -13189,7 +13205,13 @@ en:
           stages:
             CS Principles Deeper Learning Module 4:
               name: CS Principles Deeper Learning Module 4
-          title: CS Principles Deeper Learning Module 4
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            'Step 1: Develop Understanding':
+              name: 'Step 1: Develop Understanding'
+            'Step 2: Demonstrate Understanding':
+              name: 'Step 2: Demonstrate Understanding'
+          title: CS Principles Deeper Learning Module for Workshop 4
           description_audience: CS Principles Facilitators in Training 2019
           description_short: ''
           description: ''
@@ -13397,9 +13419,9 @@ en:
           description_audience: ''
           description_short: ''
           description: Code your own dance party to share with your friends!
-        K5-OnlinePD-copy:
+        k5-onlinepd-copy:
           title: Teaching Computer Science Fundamentals
-          description: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course.
+          description: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course!
           description_short: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course.
           description_audience: ''
           stages:
@@ -13451,3 +13473,43 @@ en:
               name: Understanding the Computer Science Fundamentals Courses
             extra:
               name: extra
+            Welcome to this online course:
+              name: Welcome to this online course
+            Understanding the Computer Science Fundamentals courses:
+              name: Understanding the Computer Science Fundamentals courses
+            Best practices for teaching computer science:
+              name: Best practices for teaching computer science
+            Sequencing:
+              name: Sequencing
+            Loops:
+              name: Loops
+            Conditionals:
+              name: Conditionals
+            Events:
+              name: Events
+            Functions:
+              name: Functions
+            Diving Deeper:
+              name: Diving Deeper
+            Next steps:
+              name: Next steps
+            Diving deeper:
+              name: Diving deeper
+            Diving deeper (for Courses E and F):
+              name: Diving deeper (for Courses E and F)
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Welcome to "Teaching Computer Science Fundamentals"
+            Diving Deeper (for Courses E and F):
+              name: Diving Deeper (for Courses E and F)
+            'Diving Deeper: Courses E and F':
+              name: 'Diving Deeper: Courses E and F'
+            Sprite Lab:
+              name: Sprite Lab
+            Variables:
+              name: Variables
+            For Loops:
+              name: For Loops
+            End-of-course projects:
+              name: End-of-course projects
+            Who is this section for?:
+              name: Who is this section for?

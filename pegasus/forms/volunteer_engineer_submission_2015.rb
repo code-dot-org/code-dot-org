@@ -186,6 +186,16 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
       fl.push distance_query.as(:distance)
     end
 
+    # The condition here is a workaround for a performance issue introduced in
+    # https://github.com/code-dot-org/code-dot-org/pull/31493
+    # Our initial query on the volunteer map retrieves 5000 rows with a 3000km radius, and this
+    # order clause slowed it down significantly.
+    # Subsequent queries on the page are limited to 50 rows, 32km, and don't have this perf issue
+    # so we still want to make sure we retrieve the more recent sign-ups.
+    if rows <= 50
+      query = query.order(Sequel.desc(:created_at))
+    end
+
     docs = query.select(
       *fl,
       Forms.json('processed_data.location_p').as(:location_p),

@@ -620,6 +620,19 @@ pt-BR:
 
         -   Como você acompanhou o processo de solução de problemas na última aula?
         -   Como você poderia usar este processo em um problema do seu dia a dia?
+      CSD U1 - PixFilter 1x1 intro: |-
+        # 3 Bit Cores
+
+        Cada pixel é um quadrado em uma tela que emite luz. Cada pixel pode ter um certo número de bits atribuído a ele, e os bits por pixel determinam as cores que podem ser renderizadas.
+
+        Nesta ferramenta, estamos usando 3 bits para definir o único pixel preto grande. O primeiro bit afeta a tonalidade vermelha. O segundo bit afeta a tonalidade verde. O terceiro bit afeta a tonalidade azul.
+
+        # Faça isto
+
+        -   Clique no botão "Executar" para iniciar o componente
+        -   Clique nas lâmpadas para ativar ou desativar cada cor e ver o que acontece com seu pixel
+        -   Veja quantas cores diferentes você pode criar com apenas três bits
+        -   Anote o binário associado a cada cor que você criar
       CSD U1 - PixFilter Filter Intro: |-
         # Filtragem de pixels
 
@@ -632,6 +645,46 @@ pt-BR:
         -   Veja como os números na seção Binário refletem alterações nas cores
         -   Com base em como os bits mudam, você pode formular o que a substituição está fazendo? Converse com seu parceiro e veja se você consegue descobrir.
         -   Complete a tabela Nível 2 no seu Guia de atividades
+      CSD U1 - PixFilter Filter Revisit: |-
+        # Combinando filtros
+
+        Agora que você brincou com a filtragem de um único canal de cores, é hora de ver o que acontece se filtrarmos mais de uma cor.
+
+        # Faça isto
+
+        -   Usando as listas suspensas de cores na seção de filtro, crie um filtro que altere o valor de mais de um canal de cores
+        -   Clique na linha superior das lâmpadas na seção Diagrama para ver como o filtro converterá a entrada (lâmpadas superiores) na saída (lâmpadas inferiores)
+        -   Veja como os números na seção Binário refletem alterações nas cores
+        -   Complete a tabela Nível 4 no seu Guia de atividades
+      CSD U1 - PixFilter FreePlay: |-
+        # Jogo grátis
+
+        Faça como quiser, faça algo incrível
+      CSD U1 - PixFilter Mushroom: |-
+        # Filtrando imagens
+
+        Agora que vimos como um único pixel pode ser filtrado para alterar sua cor, vamos tentar aplicar um filtro a uma imagem composta de vários pixels. O filtro que você criar será aplicado a cada pixel da imagem - e você ainda terá as lâmpadas disponíveis para experimentar como o filtro funcionará com cores individuais.
+
+        # Faça isto
+
+        Aqui está uma foto de um cogumelo vermelho - você vai tentar transformá-lo em um cogumelo amarelo.
+
+        -   Primeiro, determine qual bit precisa mudar para ficar vermelho em amarelo
+        -   Depois de descobrir qual bit precisa ser alterado, use as listas suspensas de filtros para fazer com que todas as áreas vermelhas fiquem amarelas
+        -   Depois que o filtro estiver funcionando para que o vermelho fique amarelo, veja se você consegue criar filtros que transformem o cogumelo em outras cores
+
+        \_ Quantas tentativas você levou para encontrar o filtro certo? \_
+      CSD U1 - PixFilter UnFilter: |-
+        # Faça isto
+
+        <img src="https://images.code.org/c15636bda16e8792c59ac955332e37a5-image-1471372091393.22.56.png" style="float:right; width: 200px"/>
+        Aqui está a aparência do nosso pássaro. Use o filtro para recuperá-lo ao normal.
+
+        -   Decida quais cores (e quais bits) você precisa alterar. Você pode precisar escrever seus pensamentos com lápis e papel.
+        -   Depois de saber quais bits precisam ser alterados, defina o menu suspenso do filtro adequadamente para testar sua resposta
+        -   Depois de corrigir a imagem, anote seu processo e seu filtro final na seção Nível 6 do Guia de atividades
+
+        \_ Quantas tentativas você levou para encontrar o filtro certo? \_
       CSD U2 CSS explore CSS: |-
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
         <details>
@@ -13926,6 +13979,39 @@ pt-BR:
         Escreva sua resposta na caixa abaixo, depois execute o código e veja o que acontece.
       CSD U6 Catch the Mouse_2018: Previsão Integrada
       CSD U6 Catch the Mouse_2019: Previsão Integrada
+      CSD U6 Driver pt1: |-
+        # Volante
+
+        Este jogo é semelhante ao jogo de goleiro que você acabou de jogar, exceto um pouco diferente. Use sua placa como um volante para o carro (movendo-se de um lado para o outro). Você tem que chegar à bandeira quadriculada enquanto evita as bandeiras vermelhas ao longo do caminho!
+
+        # Faça isto
+
+        -   Faça o carro descer na tela enquanto o programa é executado.
+        -   Dê ao carro a capacidade de dirigir de um lado para o outro.
+
+        Pense nos programas que você criou até esse momento. Como você pode atualizar esses valores?
+      CSD U6 Driver pt1_2018: |-
+        # Volante
+
+        Este jogo é semelhante ao jogo de goleiro que você acabou de jogar, exceto um pouco diferente. Use sua placa como um volante para o carro (movendo-se de um lado para o outro). Você tem que chegar à bandeira quadriculada enquanto evita as bandeiras vermelhas ao longo do caminho!
+
+        # Faça isto
+
+        -   Faça o carro descer na tela enquanto o programa é executado.
+        -   Dê ao carro a capacidade de dirigir de um lado para o outro.
+
+        Pense nos programas que você criou até esse momento. Como você pode atualizar esses valores?
+      CSD U6 Driver pt1_2019: |-
+        # Volante
+
+        Este jogo é semelhante ao jogo de goleiro que você acabou de jogar, exceto um pouco diferente. Use sua placa como um volante para o carro (movendo-se de um lado para o outro). Você tem que chegar à bandeira quadriculada enquanto evita as bandeiras vermelhas ao longo do caminho!
+
+        # Faça isto
+
+        -   Faça o carro descer na tela enquanto o programa é executado.
+        -   Dê ao carro a capacidade de dirigir de um lado para o outro.
+
+        Pense nos programas que você criou até esse momento. Como você pode atualizar esses valores?
       CSD U6 LED all: |-
         # Luz multifuncional
 
@@ -14031,6 +14117,33 @@ pt-BR:
         # Faça isso
 
         Use o comando `.color()` para configurar cada um dos LEDs de cor para uma cor diferente.
+      CSD U6 Pedometer: |-
+        # Corredor
+
+        Este programa deve usar o evento `shake`, que é acionado quando o painel é sacudido. Ele deve adicionar um passo ao total do corredor sempre que o usuário sacode o tabuleiro.
+
+        # Fazem isto
+
+        -   Altere o evento para que seja acionado toda vez que o quadro for sacudido.
+        -   Adicione código dentro do evento para que os `passos` aumentem sempre que o quadro for sacudido.
+      CSD U6 Pedometer_2018: |-
+        # Corredor
+
+        Este programa deve usar o evento `shake`, que é acionado quando o painel é sacudido. Ele deve adicionar um passo ao total do corredor sempre que o usuário sacode o tabuleiro.
+
+        # Fazem isto
+
+        -   Altere o evento para que seja acionado toda vez que o quadro for sacudido.
+        -   Adicione código dentro do evento para que os `passos` aumentem sempre que o quadro for sacudido.
+      CSD U6 Pedometer_2019: |-
+        # Corredor
+
+        Este programa deve usar o evento `shake`, que é acionado quando o painel é sacudido. Ele deve adicionar um passo ao total do corredor sempre que o usuário sacode o tabuleiro.
+
+        # Fazem isto
+
+        -   Altere o evento para que seja acionado toda vez que o quadro for sacudido.
+        -   Adicione código dentro do evento para que os `passos` aumentem sempre que o quadro for sacudido.
       CSD U6 add LED button: |-
         Usando eventos
 
@@ -15388,6 +15501,34 @@ pt-BR:
         -   Altere o nome de `minhaFuncao` para`definirCorLEDs`
         -   Altere o parâmetro de `n` para "vermelho"(observe as aspas!)
         -   Teste seu programa, o botão "Vermelho" deve acender todos os seus LEDs
+      CSD U6 for loop led function finish: |-
+        # Finalize o aplicativo
+
+        Se o botão vermelho funcionou, a única coisa que resta é chamar sua nova função quando todos os botões restantes forem pressionados.
+
+        # Faça isto
+
+        Para cada um dos botões restantes (verde, azul e branco):
+
+        -   Crie um novo manipulador de eventos
+        -   Chame sua função `setLedsColor` com a cor apropriada (" verde "," azul "ou" branco ")
+        -   Teste seu programa para garantir que todos os botões funcionem
+
+        Quando todos os botões estiverem funcionando corretamente, clique em "Enviar" para ativar o programa.
+      CSD U6 for loop led function finish_2018: |-
+        # Finalize o aplicativo
+
+        Se o botão vermelho funcionou, a única coisa que resta é chamar sua nova função quando todos os botões restantes forem pressionados.
+
+        # Faça isto
+
+        Para cada um dos botões restantes (verde, azul e branco):
+
+        -   Crie um novo manipulador de eventos
+        -   Chame sua função `setLedsColor` com a cor apropriada (" verde "," azul "ou" branco ")
+        -   Teste seu programa para garantir que todos os botões funcionem
+
+        Quando todos os botões estiverem funcionando corretamente, clique em "Enviar" para ativar o programa.
       CSD U6 for loop led function_2018: |-
         # Trocando cores com uma função
 
@@ -15507,6 +15648,18 @@ pt-BR:
 
         -   Como os parâmetros tornam as funções mais úteis?
         -   Como você sabe a hora em que você pode combinar várias funções em uma só?
+      CSD U6 game project board events: |-
+        # Eventos de tabuleiro
+
+        Volte para a seção Eventos do seu guia de atividades e encontre quaisquer eventos que respondam ao seu quadro (aqueles que usariam `onBoardEvent ()`). Crie manipuladores de eventos para cada um deles agora. Se esses eventos dependem de funções que você ainda não escreveu, deixe um comentário no código.
+      CSD U6 game project board events_2018: |-
+        # Eventos de tabuleiro
+
+        Volte para a seção Eventos do seu guia de atividades e encontre quaisquer eventos que respondam ao seu quadro (aqueles que usariam `onBoardEvent ()`). Crie manipuladores de eventos para cada um deles agora. Se esses eventos dependem de funções que você ainda não escreveu, deixe um comentário no código.
+      CSD U6 game project board events_2019: |-
+        # Eventos de tabuleiro
+
+        Volte para a seção Eventos do seu guia de atividades e encontre quaisquer eventos que respondam ao seu quadro (aqueles que usariam `onBoardEvent ()`). Crie manipuladores de eventos para cada um deles agora. Se esses eventos dependem de funções que você ainda não escreveu, deixe um comentário no código.
       CSD U6 game project finish: |-
         # Toques Finais e Testes
 
@@ -15786,6 +15939,30 @@ pt-BR:
 
         -   Leia o programa para entender como ele deve funcionar.
         -   Encontre e corrija os erros para que o programa funcione corretamente.
+      CSD U6 goalie: |-
+        # Atualizando valores com dados
+
+        Neste programa, o goleiro está tentando bloquear a bola de futebol, mas agora a bola não está se movendo.
+
+        # Faça isto
+
+        -   Use o padrão do contador para atualizar o valor `x` da bola para que ela se mova pela tela.
+      CSD U6 goalie_2018: |-
+        # Atualizando valores com dados
+
+        Neste programa, o goleiro está tentando bloquear a bola de futebol, mas agora a bola não está se movendo.
+
+        # Faça isto
+
+        -   Use o padrão do contador para atualizar o valor `x` da bola para que ela se mova pela tela.
+      CSD U6 goalie_2019: |-
+        # Atualizando valores com dados
+
+        Neste programa, o goleiro está tentando bloquear a bola de futebol, mas agora a bola não está se movendo.
+
+        # Faça isto
+
+        -   Use o padrão do contador para atualizar o valor `x` da bola para que ela se mova pela tela.
       CSD U6 hardware software video_2019: |-
         ## Perguntas a Considerar
 
@@ -15818,6 +15995,30 @@ pt-BR:
         -   Leia o código e preveja o que o programa fará, depois clique em "Executar" para testar sua previsão.
       CSD U6 interval_2018: Prever nível
       CSD U6 interval_2019: Prever nível
+      CSD U6 iter create notes: |-
+        # Reprodutor de música
+
+        Este programa permite tocar música agitando uma varinha sobre as diferentes notas, mas falta uma definição de função.
+
+        # Fazem isto
+
+        -   Crie uma função `verificarNotas()` que chamará `verificarNota(nota)` em tudo no array "notas".
+      CSD U6 iter create notes_2018: |-
+        # Reprodutor de música
+
+        Este programa permite tocar música agitando uma varinha sobre as diferentes notas, mas falta uma definição de função.
+
+        # Fazem isto
+
+        -   Crie uma função `verificarNotas()` que chamará `verificarNota(nota)` em tudo no array "notas".
+      CSD U6 iter create notes_2019: |-
+        # Reprodutor de música
+
+        Este programa permite tocar música agitando uma varinha sobre as diferentes notas, mas falta uma definição de função.
+
+        # Fazem isto
+
+        -   Crie uma função `verificarNotas()` que chamará `verificarNota(nota)` em tudo no array "notas".
       CSD U6 iter predict bubbles: "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)"
       CSD U6 iter predict bubbles_2018: "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)"
       CSD U6 iter predict bubbles_2019: "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)"
@@ -15910,6 +16111,33 @@ pt-BR:
 
         -   Leia o programa e discuta com seu parceiro como o botão esquerdo faz a motocicleta subir.
         -   Usando o botão esquerdo de trabalho como um exemplo, programe o botão direito para fazer a motocicleta abaixar.
+      CSD U6 params create colors: |-
+        # Seletor de cores
+
+        Neste programa, pressionar os botões na parte inferior da tela altera a cor das imagens e os LEDs coloridos.
+
+        # Faça isto
+
+        -   Crie uma função `escolherCor(cor)` que altere cada uma das imagens e os LEDs de cores para a cor especificada.
+        -   Chame sua função nos blocos de eventos para que todos os botões funcionem.
+      CSD U6 params create colors_2018: |-
+        # Seletor de cores
+
+        Neste programa, pressionar os botões na parte inferior da tela altera a cor das imagens e os LEDs coloridos.
+
+        # Faça isto
+
+        -   Crie uma função `escolherCor(cor)` que altere cada uma das imagens e os LEDs de cores para a cor especificada.
+        -   Chame sua função nos blocos de eventos para que todos os botões funcionem.
+      CSD U6 params create colors_2019: |-
+        # Seletor de cores
+
+        Neste programa, pressionar os botões na parte inferior da tela altera a cor das imagens e os LEDs coloridos.
+
+        # Faça isto
+
+        -   Crie uma função `escolherCor(cor)` que altere cada uma das imagens e os LEDs de cores para a cor especificada.
+        -   Chame sua função nos blocos de eventos para que todos os botões funcionem.
       CSD U6 params modify clouds_2019: |-
         # Nuvens
 
@@ -16282,6 +16510,45 @@ pt-BR:
 
         -   Examine o código e encontre o bug que impede que a duração seja definida corretamente.
                  \- (Dica: passe o mouse sobre os triângulos amarelos para obter pistas sobre o que pode estar errado com o código.)
+      CSD U6 stillness game predict code: |-
+        # Mude com o acelerômetro
+
+        Este programa usa o evento de mudança para aumentar um medidor de movimento toda vez que o quadro se move. Quando o medidor de movimento atinge 100, o alarme soa.
+
+        # Faça isto
+
+        Este programa possui dois erros que você precisa corrigir:
+
+        -   O medidor de movimento está sendo acionado pressionando o botão, em vez do evento `change` do acelerômetro.
+        -   O programador esqueceu como usar o padrão do contador para aumentar a variável de movimento.
+
+        Depois de encontrar os bugs, execute o programa e tente passar a placa para o seu parceiro sem disparar o alarme.
+      CSD U6 stillness game predict code_2018: |-
+        # Mude com o acelerômetro
+
+        Este programa usa o evento de mudança para aumentar um medidor de movimento toda vez que o quadro se move. Quando o medidor de movimento atinge 100, o alarme soa.
+
+        # Faça isto
+
+        Este programa possui dois erros que você precisa corrigir:
+
+        -   O medidor de movimento está sendo acionado pressionando o botão, em vez do evento `change` do acelerômetro.
+        -   O programador esqueceu como usar o padrão do contador para aumentar a variável de movimento.
+
+        Depois de encontrar os bugs, execute o programa e tente passar a placa para o seu parceiro sem disparar o alarme.
+      CSD U6 stillness game predict code_2019: |-
+        # Mude com o acelerômetro
+
+        Este programa usa o evento de mudança para aumentar um medidor de movimento toda vez que o quadro se move. Quando o medidor de movimento atinge 100, o alarme soa.
+
+        # Faça isto
+
+        Este programa possui dois erros que você precisa corrigir:
+
+        -   O medidor de movimento está sendo acionado pressionando o botão, em vez do evento `change` do acelerômetro.
+        -   O programador esqueceu como usar o padrão do contador para aumentar a variável de movimento.
+
+        Depois de encontrar os bugs, execute o programa e tente passar a placa para o seu parceiro sem disparar o alarme.
       CSD U6 test LED: |-
         # Controlar o LED
 

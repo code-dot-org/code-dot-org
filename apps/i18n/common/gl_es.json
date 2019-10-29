@@ -454,6 +454,7 @@
   "puzzle": "Quebracabeza",
   "puzzleTitle": "Puzzle {puzzle_number} de {stage_total}",
   "question": "Pregunta",
+  "random": "aleatorio",
   "readonlyWorkspaceHeader": "Ver só: ",
   "recommended": "Recomendado",
   "recommendedBlockContextualHintTitle": "Intenta usar un bloque como este para resolver o crebacabezas.",

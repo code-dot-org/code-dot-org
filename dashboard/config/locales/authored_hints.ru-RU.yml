@@ -8,22 +8,24 @@ ru-RU:
         2-3_Artist_1_new_b: Сложности с поворотами на углах? Используй блок "повернуть
           направо на 90 градусов".
       2-3 Artist 11:
-        2-3_Artist_11_a: 'Возникли проблемы с углами? Тебе нужно измерить 360 градусов
-          в 8 ходов. Что значит 360/8? '
+        2-3_Artist_11_a: 'Возникли проблемы с углами? Тебе нужно пройти 360 градусов
+          за 8 ходов. Сколько будет 360 разделить на 8? '
       2-3 Artist 12:
         2-3_Artist_12_a: Всего в круге 360 градусов, так что если художник во время
           цикла будет поворачиваться на 1 градус, то ему надо сделать это 360 раз.
       2-3 Artist 2 new:
-        2-3_Artist_2_new_a: Кажется, художник не видит текущего направления. Можешь
-          ли ты сперва повернуть его, чтобы он начал рисовать линию?
+        2-3_Artist_2_new_a: Кажется, художник смотрит не в ту сторону. Можешь ли ты
+          повернуть его перед тем, как он начнёт рисовать?
       2-3 Artist 3new:
-        2-3_Artist_3new_a: Что такое 100-70? Основываясь на проблеме истории, то такая
-          должна быть высокая шляпа!
-        2-3_Artist_3new_b: Кажется, художник не видит текущего направления. Можешь
-          ли ты сперва повернуть его, чтобы он начал рисовать линию?
+        2-3_Artist_3new_a: Сколько будет 100 - 70? По условию задачи, это и есть высота
+          шляпы!
+        2-3_Artist_3new_b: Кажется, художник смотрит не в ту сторону. Можешь ли ты
+          повернуть его перед тем, как он начнёт рисовать?
       2-3 Artist 4:
         2-3_Artist_4_a: Чтобы закончить дом, всё, что нам нужно, это нарисовать квадрат!
       2-3 Artist 6:
+        2-3_Artist_6_a: 'Чтобы рисовать острые углы, тебе нужно поворачивать _больше_,
+          чем при рисовании квадрата.   '
         2-3_Artist_6_b: Поскольку я уже повёрнут направо, лучше всего двигаться вперёд,
           а затем повернуться налево, чтобы создать треугольник.
         2-3_Artist_6_c: Каждая сторона треугольника имеет ту же длину, что и каждая
@@ -36,8 +38,10 @@ ru-RU:
         2-3_Artist_8_a: Если ты поделишь 200 пополам, то сколько пикселей в ширину
           нужно каждому квадрату?
       2-3 Artist 9 NEW:
-        2-3_Artist_9_a: Этот бриллиант всего лишь квадрат на его стороне
+        2-3_Artist_9_a: Этот ромб на самом деле - обычный квадрат
       2-3 Artist Debugging 10:
+        2-3_Artist_Debugging_10_a: Помни, что тебе нужна крестовина на 10 пикселей
+          _шире_... Так что убедись что **добавил** 10 к числу, которое ты меняешь.
         2-3_Artist_Debugging_10_b: "**Проба и ошибка здесь находятся просто!**\nНачни
           с одновременного изменения числа. \nКоторые номера делать надо? \nЕсли ты
           зайдёшь чересчур далеко, просто нажми на \"Начать сначала\", и твой код
@@ -51,6 +55,13 @@ ru-RU:
       2-3 Artist Debugging 7:
         2-3_Artist_Debugging_7_a: Что будет, если художник пройдёт или прыгнет назад
           после того, как он нарисовал первую линию?
+      2-3 Artist Debugging 8:
+        2-3_Artist_Debugging_8_a: |-
+          Сколько раз моя фигура повторилась?
+
+          Сколько раз она _должна_ повториться?
+
+          Где ты можешь изменить это в программе?
       2-3 Artist Debugging 9:
         2-3_Artist_Debugging_9_a: Художник должен повернуться на 60 градусов влево,
           прежде чем начинать рисовать!
@@ -82,6 +93,25 @@ ru-RU:
         2-3_Artist_Functions_4_a: Художник должен повернуться на 120 градусов между
           каждым квадратом, чтобы завершить эту задачу.
       2-3 Artist Loops New 11:
+        2-3_Artist_Loops_New_11_a: "Вспомни код из прошлой задачи: \n\n<xml>\n  <block
+          type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block
+          type=\"controls_repeat\">\n        <title name=\"TIMES\">8</title>\n        <statement
+          name=\"DO\">\n          <block type=\"draw_colour\" inline=\"true\">\n            <value
+          name=\"COLOUR\">\n              <block type=\"colour_random\"/>\n            </value>\n
+          \           <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n
+          \               <title name=\"DIR\">turnRight</title>\n                <title
+          name=\"VALUE\" config=\"45,60,90,120,180\">45</title>\n                <next>\n
+          \                 <block type=\"draw_move_by_constant\">\n                    <title
+          name=\"DIR\">moveForward</title>\n                    <title name=\"VALUE\">50</title>\n
+          \                   <next>\n                      <block type=\"draw_turn_by_constant_dropdown\">\n
+          \                       <title name=\"DIR\">turnLeft</title>\n                        <title
+          name=\"VALUE\" config=\"45,60,90,120,180\">90</title>\n                        <next>\n
+          \                         <block type=\"draw_move_by_constant\">\n                            <title
+          name=\"DIR\">moveForward</title>\n                            <title name=\"VALUE\">50</title>\n
+          \                         </block>\n                        </next>\n                      </block>\n
+          \                   </next>\n                  </block>\n                </next>\n
+          \             </block>\n            </next>\n          </block>\n        </statement>\n
+          \     </block>\n    </next>\n  </block>\n</xml>"
         2-3_Artist_Loops_New_11_b: Ваш новый поворот должен идти в конце **конец**
           кода внутри цикла.
       2-3 Artist Loops New 12:
@@ -95,6 +125,9 @@ ru-RU:
         2-3_Artist_Loops_New_13_a: После рисования ромба, художник стоит в правильнои
           направлени для рисования следующего ромба. Поэтому, тебе не нужен дополнительный
           блок "повернуть влево на".
+        2-3_Artist_Loops_New_13_b: "Чтобы нарисовать каждый алмаз, художник должен:
+          \n\n-   двигаться\n-   повернуть вправо на 120 градусов\n-   двигаться\n-
+          \  повернуть вправо на 60 градусов\n\nЗатем всё это повторить!"
       2-3 Artist Loops New 9:
         2-3_Artist_Loops_New_9_a: Художнику необходимо повернуть направо, прежде чем
           он начнет рисовать.
@@ -115,7 +148,10 @@ ru-RU:
 
           Если твои квадраты 20 пикселей в высоту и находятся на растоянии в 20 пикселей друг от друга, как далеко тебе нужно прыгнуть?
       2-3 Artist Nested Loops 7:
-        2-3_Artist_Nested_Loops_7_a: Насколько тебе нужно повернуть в каждом цикле?
+        2-3_Artist_Nested_Loops_7_a: |-
+          На сколько тебе нужно повернуть в каждом цикле?
+
+          Сколько будет 360 разделить на 10?
       2-3 Artist Nested Loops 9:
         2-3_Artist_Nested_Loops_9_a: |-
           Нуждаешься в помощи в поиске правильного угла?
@@ -127,6 +163,18 @@ ru-RU:
         2-3_Bee_Conditionals_14_b: Если бы вместо красного цветка был фиолетовый,
           смог бы ты понять, как использовать дополнительный цикл `повторить`, чтобы
           сократить количество кода?
+        2-3_Bee_Conditionals_14_c: |-
+          Попробуй разделить задачу на две отдельные:
+
+          ![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)
+
+          1.  Собери нектар 3 раза
+              -   Двигаться вперёд 5 раз
+              -   Проверь, есть ли в клетке нектар, если да: собери его
+              -   Повернуть влево
+          2.  Приготовь мёд
+              -   Двигайся вперёд один раз
+                  Приготовь два мёда
       2-3 Bee Conditionals 15:
         2-3_Bee_Conditionals_15_a: 'Помните: У фиолетовых цветов есть только 0 или
           1 нектар, и они могут меняться с каждым запуском программы.'
@@ -942,6 +990,91 @@ ru-RU:
         courseB_maze_seq_challenge2_b: Переставь блоки и пройди путь посередине.
       course1_maze_seq_challenge2:
         courseB_maze_seq_challenge1_b: Для начала попробуй переместиться на запад.
+      course2_artist_prog_challenge1:
+        courseC_artist_prog_challenge1_a: 'Ширина прямоугольника 200 пикселей, длина
+          - 100 пикселей. '
+      course2_artist_prog_challenge2:
+        courseC_artist_prog_challenge2_a: "Ты можешь вставлять команды внутрь блока
+          `повторить`, чтобы повторять их снова и снова. Попробуй!\n\n<xml>\n  \n
+          \         <block type=\"controls_repeat\">\n            <title name=\"TIMES\">6</title>\n
+          \           <statement name=\"DO\">\n              <block type=\"draw_move_by_constant_dropdown\">\n
+          \               <title name=\"DIR\">moveForward</title>\n                <title
+          name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n                <next>\n
+          \                 <block type=\"jump_by_constant_dropdown\">\n                    <title
+          name=\"DIR\">jumpForward</title>\n                    <title name=\"VALUE\"
+          config=\"25,50,100,150,200,300\">25</title>\n                  </block>\n
+          \               </next>\n              </block>\n              </statement></block></xml>"
+      course2_bee_conditionals_challenge1:
+        courseD_bee_conditionals_challenge1_a: |-
+          Найдёшь путь, который проходит через каждый цветок и соту, не врезаясь деревья? Лучший путь - по спирали.
+
+          **Ты можешь решить эту головоломку даже не поворачивая влево!**
+      course2_bee_conditionals_challenge2:
+        courseD_bee_conditionals_challenge1_b: |-
+          Как и в блоке `если на цветке` код внутри `пока нектар > 0` будет выполняться только если пчёлка на цветке. Основное отличие в том, что код внутри будет повторяться пока не останется нектара. Попробуй этот пример:
+
+          <xml>  <block type="bee_whileNectarAmount">
+              <title name="ARG1">nectarRemaining</title>
+              <title name="OP">></title>
+              <title name="ARG2">0</title>                    <statement name="DO">
+                                <block type="maze_nectar"/>
+                              </statement>
+            </block></xml>
+      course2_collector_loops_challenge2:
+        courseC_maze_loops_challenge2_a: Исходный код работает отлично - если в клетке
+          всего одно сокровище!
+      course2_collector_prog_challenge1:
+        courseC_collector_prog_challenge1_a: Ты можешь использовать команду `собрать`
+          несколько раз, чтобы собрать больше сокровищ.
+      course2_collector_prog_challenge2:
+        courseC_collector_prog_challenge1_a: Ты можешь использовать команду `собрать`
+          несколько раз, чтобы собрать больше сокровищ.
+      course2_harvester_loops_challenge1:
+        courseC_harvester_loops_challenge1_a: Не вздумай решать это без циклов!
+        courseC_harvester_loops_challenge1_b: Ты можешь повторить `двигаться вперёд`
+          и `собрать кукурузу` сколько потребуется, затем `повернуть вправо` в каждом
+          углу.
+        courseC_harvester_loops_challenge1_c: |-
+          Лучший способ собрать первые четыре пучка - использовать блок `повторить` внутри другого блока `повторить`. Ты можешь использовать этот подход и для остальной головоломки!
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">2</title>
+                  <statement name="DO">
+                    <block type="controls_repeat">
+                      <title name="TIMES">2</title>
+                      <statement name="DO">
+                        <block type="maze_move">
+                          <title name="DIR">moveForward</title>
+                          <next>
+                            <block type="harvester_corn"/>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnRight</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  </block></next></block></xml>
+      course2_maze_loops_challenge1:
+        courseC_maze_loops_challenge1_a: Подумай об этом пути как о трёх разных частях.
+          У каждой из них есть шаблон, который ты можешь повторить.
+        courseC_maze_loops_challenge1_b: Во всех промежутках между циклами нужно `повернуть
+          налево` или `повернуть направо`, чтобы подготовить Скрэта к следующему циклу.
+        courseC_maze_loops_challenge1_c: |-
+          Если ты зашёл так далеко, осталось лишь `повернуть налево`, а затем `двигаться вперёд` несколько раз. Не сдавайся!
+
+          ![](<https://images.code.org/7696c5c16b8ddf1d53436cdc7fb6346d-image-1494101728016.14.34 PM.png>)
+      course2_maze_programming_challenge2:
+        courseC_maze_programming_challenge2_a: _Если отправишь меня назад, будь очень
+          внимателен, выбирая направление поворота!_
+        courseC_maze_programming_challenge2_b: Кратчайший путь использует всего 5
+          блоков, но там используется блок "повторить"!
       course3_bee_functions_challenge1:
         courseE_bee_functions_challenge1_a: |-
           Если головоломка кажется сложной, то попробуйте построить немного функцию в то время.

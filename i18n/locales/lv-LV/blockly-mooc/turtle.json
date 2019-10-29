@@ -47,6 +47,7 @@
   "jumpBackward": "lekt atpakaļ par",
   "jumpForward": "lekt uz priekšu par",
   "jumpToOverDown": "",
+  "jumpToPosition": "",
   "jumpByDirection": "",
   "jumpTooltip": "Pārvieto zīmējumu neatstājot pēdas.",
   "jumpEastTooltip": "Pārvieto zīmējumu uz austrumiem neatstājot pēdas.",

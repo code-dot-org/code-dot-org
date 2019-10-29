@@ -447,7 +447,7 @@ sv:
             '"tropical"': Tropisk
             '"warm"': Röda
       Dancelab_setBackgroundEffectWithPalette:
-        text: täll in bakgrundseffekt {EFFECT} {PALETTE}
+        text: täll in bakgrundseffekt {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': Ingen
@@ -980,6 +980,12 @@ sv:
             MOVES.Rest: Ingen
       Mikelab_randomColor:
         text: slumpad färg
+      Mikelab_repeatUntilComplete:
+        text: upprepa för evigt
+      Mikelab_sendBad:
+        text: flytta vänster
+      Mikelab_sendGood:
+        text: flytta höger
       Mikelab_setBG:
         options:
           BG:

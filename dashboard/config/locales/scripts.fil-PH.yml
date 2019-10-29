@@ -14564,6 +14564,10 @@ fil:
           stages:
             Deeper Learning Overview:
               name: Buod ng Mas Malalim na Pag-aaral
+        dlp19-csp-mod-w3:
+          stages:
+            Deeper Learning Overview:
+              name: Buod ng Mas Malalim na Pag-aaral
         csd4-pilot:
           stages:
             What is a Computer?:

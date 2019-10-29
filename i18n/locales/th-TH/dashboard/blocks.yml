@@ -426,7 +426,7 @@ th:
             '"vintage"': วินเทจ
             '"warm"': แดง
       Dancelab_setBackgroundEffectWithPalette:
-        text: กำหนดแบ็กกราวนด์เอฟเฟกต์ {EFFECT} {PALETTE}
+        text: กำหนดแบ็กกราวนด์เอฟเฟกต์ {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': ไม่มี
@@ -958,6 +958,12 @@ th:
             MOVES.Rest: ไม่มี
       Mikelab_randomColor:
         text: สุ่มสี
+      Mikelab_repeatUntilComplete:
+        text: ทำซ้ำตลอดไป
+      Mikelab_sendBad:
+        text: ย้ายไปทางซ้าย
+      Mikelab_sendGood:
+        text: ย้ายไปทางขวา
       Mikelab_setBG:
         options:
           BG:
