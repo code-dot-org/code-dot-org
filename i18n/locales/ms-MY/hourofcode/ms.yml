@@ -333,6 +333,7 @@ ms:
   meta_tag_twitter_description: 'Hour of Code adalah adalah gerakan global mencapai puluhan juta pelajar di 180 + negara dan lebih daripada 30 bahasa. Usia 4 hingga 104.'
   twitter_default_text: "Saya menyertai #HourOfCode tahun ini, bagaimana dengan anda? @codeorg"
   twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
+  twitter_donor_text_2019: "This year's #HourOfCode is about #CSforGood. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'FAQ'
   hoc_faq_what_is_hoc_q: 'Apakah Hour of Code?'
   hoc_faq_what_is_hoc_a: "Acara Hour of Code bermula sebagai pengenalan kepada Sains Komputer yang disampaikan dalam masa satu jam, ia bertujuan untuk menjadikan \"kod\" lebih mudah difahami, sesiapa sahaja dapat belajar asasnya dan juga untuk menggalakkan penyertaan dalam bidang Sains Komputer. Sejak Hour of Code dilaksanakan, ia telah menjadi satu usaha seluruh dunia untuk meraikan Sains Komputer, bermula dengan 1 jam aktiviti koding telah memperluas menjadi berbagai-bagai usaha masyarakat. Cubalah tutorial-tutorial <a href='%{tutorials}'> dan aktiviti-aktiviti</a>. Kempen yang bermula dari akar umbi ini disokong oleh <a href='%{partners}'> lebih daripada 400 rakan kongsi dan 200,000 pendidik</a> di seluruh dunia."

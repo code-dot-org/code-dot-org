@@ -1,7 +1,5 @@
 ---
 title: Hour of Code වැඩසටහන් සඳහා උපදෙස්
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

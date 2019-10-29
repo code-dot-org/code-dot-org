@@ -333,6 +333,7 @@
   meta_tag_twitter_description: 'Hour of Code är en global rörelse som når tiotals miljoner elever i 180+ länder och på över 45 språk. Åldrarna 4-104.'
   twitter_default_text: "Jag deltar i årets #HourOfCode, gör du? @codeorg"
   twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
+  twitter_donor_text_2019: "This year's #HourOfCode is about #CSforGood. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'Vanliga frågor'
   hoc_faq_what_is_hoc_q: 'Vad är Hour of Code?'
   hoc_faq_what_is_hoc_a: "Hour of Code började som en timmes introduktion till datavetenskap, med syftet att avdramatisera \"att koda\", att visa att alla kan lära sig grunderna, och att öka mångfalden inom IT-branchen. Idag är det en världsomspännande satsning på datavetenskap, där allt börjar med en timmes programmering men utvecklar sig i en massa olika initiativ. Kolla in <a href='%{tutorials}'>guider och aktiviter</a>. Denna gräsrotsrörelse stöttas av över <a href='%{partners}'> 400 partners </a>och 200000 lärare över hela världen."

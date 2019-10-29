@@ -3,22 +3,8 @@ title: Danke, dass du dich als Veranstalter für eine Hour of Code angemeldet ha
 layout: wide
 nav: how_to_nav
 social:
-  og:title: Die Hour of Code kommt
-  og:description: Die Hour of Code ist eine weltweite Bewegung, die Millionen von
-    Schülern in über 180 Ländern mit über 30 Sprachen erreicht. Alter von 4 bis 104
-    Jahre.
-  og:image: http://hourofcode.com/images/hourofcode-2015-video-thumbnail.png
-  og:image:width: 1440
-  og:image:height: 900
-  og:url: http://hourofcode.com
   twitter:card: player
   twitter:site: "@codeorg"
-  twitter:url: http://hourofcode.com
-  twitter:title: Die Hour of Code kommt
-  twitter:description: Die Hour of Code ist eine weltweite Bewegung, die Millionen
-    von Schülern in über 180 Ländern mit über 30 Sprachen erreicht. Alter von 4 bis
-    104 Jahre.
-  twitter:image:src: http://hourofcode.com/images/hourofcode-2015-video-thumbnail.png
 ---
 
 # Danke, dass du dich als Veranstalter für eine Hour of Code angemeldet hast!

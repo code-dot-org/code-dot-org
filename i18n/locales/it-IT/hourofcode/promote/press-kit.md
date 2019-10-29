@@ -1,7 +1,5 @@
 ---
 title: Kit per la stampa
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

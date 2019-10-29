@@ -1,7 +1,5 @@
 ---
 title: Έντυπη ανακοίνωση της Ώρας Κώδικα για εκλεγμένες αρχές
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

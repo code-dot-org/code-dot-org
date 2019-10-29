@@ -333,6 +333,7 @@ uk:
   meta_tag_twitter_description: 'Година коду є глобальним рухом, який залучає десятки мільйони учнів із більш, як 180 країн, які розмовляють більш, як 45 мовами. Для будь-якого віку від 4 до 104.'
   twitter_default_text: "Я беру участь в цьогорічній #HourOfCode, а ви? @codeorg"
   twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
+  twitter_donor_text_2019: "This year's #HourOfCode is about #CSforGood. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'Запитання й відповіді'
   hoc_faq_what_is_hoc_q: 'Що таке Година коду?'
   hoc_faq_what_is_hoc_a: "Година коду є одно-годинним вступом до інформатики, призначеним для демістифікації програмування, а також демонстрації того, що кожен може опанувати його основи, і залучення учасників до сфери інформатики. Ця кампанія стала всесвітнім заходом визнання інформатики, починаючи з одно-годинних вправ з кодування, і далі поширюючись на інші події у спільнотах. Перегляньте <a href='%{tutorials}'>підручники та вправи</a>. Ця масова кампанія підтримується більш, як <a href='%{partners}'>400 партнерами</a> та 200000 вчителями з усього світу."

@@ -1,10 +1,5 @@
 ---
 title: Takk fyrir að skrá þig fyrir Klukkustund kóðunar!
-layout: wide
-nav: how_to_nav
-social:
-  "twitter:card": player
-  "twitter:site": "@codeorg"
 ---
 
 # Takk fyrir að skrá þig fyrir Klukkustund kóðunar!

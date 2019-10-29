@@ -1,6 +1,5 @@
 ---
 title: Partisipasi seluruh sekolah
-layout: wide
 ---
 
 {{ signup_button }}

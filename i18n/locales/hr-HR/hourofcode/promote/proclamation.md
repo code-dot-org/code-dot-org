@@ -1,7 +1,5 @@
 ---
 title: Primjer Rezolucije podrške tjednu podučavanja informatike i Satu kodiranja
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

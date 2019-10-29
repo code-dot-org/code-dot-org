@@ -1,10 +1,5 @@
 ---
 title: Хвала Вам што сте се регистровали да будете домаћин Часа кода!
-layout: wide
-nav: how_to_nav
-social:
-  "twitter:card": player
-  "twitter:site": "@codeorg"
 ---
 
 # Хвала Вам што сте се регистровали да будете домаћин Часа кода!
