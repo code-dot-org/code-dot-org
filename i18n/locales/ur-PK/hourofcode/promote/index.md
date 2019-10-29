@@ -1,7 +1,5 @@
 ---
 title: اس بات کو عام کریں
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}
