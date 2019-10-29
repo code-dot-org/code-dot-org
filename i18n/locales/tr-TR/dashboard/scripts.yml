@@ -8440,6 +8440,14 @@ tr:
               name: yeni kademe
             Deeper Learning Overview:
               name: Derin Öğrenime Genel Bakış
+        dlp19-csd-mod-w3:
+          stages:
+            Deeper Learning Overview:
+              name: Derin Öğrenime Genel Bakış
+        dlp19-csd-mod-w4:
+          stages:
+            Deeper Learning Overview:
+              name: Derin Öğrenime Genel Bakış
         dlp19-csp-mod-w1:
           stages:
             Deeper Learning Overview:
@@ -8449,6 +8457,10 @@ tr:
             Deeper Learning Overview:
               name: Derin Öğrenime Genel Bakış
         dlp19-csp-mod-w3:
+          stages:
+            Deeper Learning Overview:
+              name: Derin Öğrenime Genel Bakış
+        dlp19-csp-mod-w4:
           stages:
             Deeper Learning Overview:
               name: Derin Öğrenime Genel Bakış
@@ -8489,3 +8501,39 @@ tr:
             Dance Party:
               name: Dans Partisi
           description: Kendi dans partinizi kodlayın ve arkadaşlarınızla paylaşın!
+        k5-onlinepd-copy:
+          stages:
+            Getting Started:
+              name: İlk adım
+            Computer Science Fundamentals:
+              name: Bilgisayar Bilimi Temelleri
+            Looking Ahead:
+              name: Geleceğe bakış
+            'Mastering the Basics: Sequencing':
+              name: 'Temellerde uzmanlaşma: Sıralama'
+            'Mastering the Basics: Loops':
+              name: 'Temellerde uzmanlaşma-Döngüler'
+            'Mastering the Basics: Conditionals':
+              name: 'Temellerde uzmanlaşma: Koşullar'
+            'Mastering the Basics: Functions':
+              name: 'Temellerde uzmanlaşma: Fonksiyonlar'
+            'Mastering the Basics: Events':
+              name: 'Temellerde uzmanlaşma-Olaylar'
+            Best Practices for Teaching Computer Science:
+              name: Bilgisayar Bilimleri öğretim için en iyi yöntemler
+            Planning:
+              name: Planlama
+            Next Steps:
+              name: Sonraki Adımlar
+            Loops:
+              name: Döngüler
+            Conditionals:
+              name: Koşullar
+            Events:
+              name: Olaylar
+            Functions:
+              name: Fonksiyonlar
+            Variables:
+              name: Değişkenler
+            For Loops:
+              name: For Döngüleri
