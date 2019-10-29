@@ -397,7 +397,7 @@ const fishComponents = {
       type: FishBodyPart.MOUTH
     }
   },
-  // SIDE FIN KNN DATA: [pointiness rank]
+  // PECTORAL FIN KNN DATA: [pointiness rank]
   pectoralFinsFront: {
     fish2: {
       src: 'images/fish/pectoralFin/Pectoral_Fin_Fish2.png',
@@ -503,8 +503,8 @@ const fishComponents = {
     }
   },
 
-  // TOP FIN KNN DATA: []
-  topFins: {
+  // DORSAL FIN KNN DATA: []
+  dorsalFins: {
     fish1: {
       src: 'images/fish/dorsalFin/Dorsal_Fin_Fish1.png',
       knnData: [],
