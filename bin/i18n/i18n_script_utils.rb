@@ -12,6 +12,8 @@ HOUROFCODE_IDENTITY_FILE = File.join(File.dirname(__FILE__), "hourofcode_credent
 CODEORG_MARKDOWN_CONFIG_FILE = File.join(File.dirname(__FILE__), "codeorg_markdown_crowdin.yml")
 CODEORG_MARKDOWN_IDENTITY_FILE = File.join(File.dirname(__FILE__), "codeorg_markdown_credentials.yml")
 
+I18N_SOURCE_DIR = "i18n/locales/source"
+
 class I18nScriptUtils
   # Output the given data to YAML that will be consumed by Crowdin. Includes a
   # couple changes to the default `data.to_yaml` serialization:
