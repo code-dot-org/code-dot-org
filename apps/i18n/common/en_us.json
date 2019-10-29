@@ -1282,6 +1282,7 @@
   "selectStudent": "Filter by student",
   "selectGoogleClassroom": "Select a Google Classroom",
   "selectCleverSection": "Select a Clever section",
+  "selectSectionOption": "Select a section",
   "selectSection": "Select Section",
   "selectSectionLabel": "Select section:",
   "selectSectionInstructions": "Select a section to be able to lock and unlock assessments or surveys. Click the lock settings button in the stage to the left.",
