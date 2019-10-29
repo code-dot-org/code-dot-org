@@ -286,7 +286,9 @@ class Pd::Enrollment < ActiveRecord::Base
 
   def friendly_scholarship_status
     if workshop.scholarship_workshop?
-      Pd::ScholarshipInfo.find_by(user: user, application_year: workshop.school_year, course: workshop.course_key)&.friendly_status_name
+      Pd::ScholarshipInfo.
+        find_by(user: user, application_year: workshop.school_year, course: workshop.course_key)&.
+        friendly_status_name
     end
   end
 

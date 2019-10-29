@@ -5673,7 +5673,7 @@ en:
           assignment_family_title: Course D
           description_audience: 'Ages: 7-11'
           description_short: Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more.
-          description: Learn new coding concepts including algorithms, nested loops, while loops, conditionals, and events. Get an introduction to digital citizenship before   creating your very own game or story that you can share.
+          description: Learn new coding concepts including algorithms, nested loops, while loops, conditionals, and events. Get an introduction to digital citizenship before creating your very own game or story that you can share.
         coursee-2017:
           stages:
             'Algorithms: Tangrams':
@@ -7622,7 +7622,7 @@ en:
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie and the Big Project
         express-2018:
-          title: Express Course (2018)
+          title: Express Course
           assignment_family_title: Express Course
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
           description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
@@ -11358,6 +11358,10 @@ en:
               name: Unit 4 Assessment
             'Lesson 15: Unit 4 Assessment':
               name: 'Lesson 15: Unit 4 Assessment'
+            Unit 4 STUDENT Survey:
+              name: Unit 4 STUDENT Survey
+            Unit 4 TEACHER Survey:
+              name: Unit 4 TEACHER Survey
           title: CSP Unit 4 Pilot - Variables, Conditionals, and Functions
           description_audience: ''
           description_short: ''

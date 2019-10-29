@@ -66,7 +66,7 @@ class CourseScript extends Component {
 
     // redux provided
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
-    selectedSectionId: PropTypes.string.isRequired,
+    selectedSectionId: PropTypes.number.isRequired,
     hiddenStageState: PropTypes.object.isRequired,
     hasNoSections: PropTypes.bool.isRequired,
     toggleHiddenScript: PropTypes.func.isRequired
@@ -160,7 +160,7 @@ export const UnconnectedCourseScript = CourseScript;
 export default connect(
   state => ({
     viewAs: state.viewAs,
-    selectedSectionId: state.teacherSections.selectedSectionId,
+    selectedSectionId: parseInt(state.teacherSections.selectedSectionId),
     hiddenStageState: state.hiddenStage,
     hasNoSections:
       state.teacherSections.sectionsAreLoaded &&
