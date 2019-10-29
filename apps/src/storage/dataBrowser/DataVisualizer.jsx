@@ -187,10 +187,8 @@ class DataVisualizer extends React.Component {
               <label style={rowStyle.description}>Bins</label>
               <input
                 style={rowStyle.input}
-                value={this.state.bucketSize}
-                onChange={event =>
-                  this.setState({bucketSize: event.target.value})
-                }
+                value={this.state.numBins}
+                onChange={event => this.setState({numBins: event.target.value})}
               />
             </div>
           )}
