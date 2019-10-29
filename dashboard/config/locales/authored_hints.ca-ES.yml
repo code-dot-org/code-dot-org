@@ -2,6 +2,10 @@
 ca-ES:
   data:
     authored_hints:
+      2-3 Artist 7:
+        2-3_Artist_7_a: La millor manera de resoldre aquest nivell és dibuixant el
+          primer quadre deixant el personatge mirant cap avall abans de començar el
+          segon quadre.
       CourseD_Dance_Party_01:
         validation: |-
           **Com passo aquest nivell?**
