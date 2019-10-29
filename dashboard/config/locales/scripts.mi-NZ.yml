@@ -1446,3 +1446,17 @@ mi:
               name: Kupu Whakataki
             Nested Loops:
               name: Ngā Koromeke Tauroto
+        k5-onlinepd-copy:
+          stages:
+            Loops:
+              name: Ngā Koromeke
+            Conditionals:
+              name: Ngā Here
+            Events:
+              name: Ngā Takunetanga
+            Functions:
+              name: Ngā Taumahi
+            Variables:
+              name: Ngā Taurangi
+            For Loops:
+              name: Mō Ngā Koromeke
