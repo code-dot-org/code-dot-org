@@ -21,5 +21,5 @@
   / Markdown will be rendered clientside by _content.js
   - if data['markdown'].present?
     - level_markdown = level.try(:localized_replaced_markdown, current_user) || level.localized_property('markdown')
-    #markdown{data: {markdown: level_markdown}}
+    .markdown-container{data: {markdown: level_markdown}}
   = postcontent
