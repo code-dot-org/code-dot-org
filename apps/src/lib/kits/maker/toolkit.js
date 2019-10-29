@@ -5,6 +5,7 @@
 import {getStore} from '../../../redux';
 import trackEvent from '../../../util/trackEvent';
 import CircuitPlaygroundBoard from './CircuitPlaygroundBoard';
+import FakeBoard from './FakeBoard';
 import * as commands from './commands';
 import * as dropletConfig from './dropletConfig';
 import MakerError, {
@@ -152,13 +153,21 @@ function confirmSupportedBrowser() {
  * @returns {Promise.<MakerBoard>}
  */
 function getBoard() {
-  return findPortWithViableDevice().then(
-    port => new CircuitPlaygroundBoard(port)
-  );
+  if (shouldRunWithFakeBoard()) {
+    return Promise.resolve(new FakeBoard());
+  } else {
+    return findPortWithViableDevice().then(
+      port => new CircuitPlaygroundBoard(port)
+    );
+  }
 }
 
 function isConnecting() {
   return redux.isConnecting(getStore().getState());
+}
+
+function shouldRunWithFakeBoard() {
+  return redux.shouldRunWithFakeBoard(getStore().getState());
 }
 
 /**
