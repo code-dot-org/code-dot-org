@@ -196,6 +196,10 @@ my:
             MOVES.Rest: ဘာမှမရှိ
       Mikelab_randomColor:
         text: ကျဘန်းအရောင်
+      Mikelab_sendBad:
+        text: ဘယ်ဘက်သို့ရွှေ့ပါ
+      Mikelab_sendGood:
+        text: ညာဘက်သို့ရွှေ့ပါ
       aalab_goToScene:
         options:
           SCENE:

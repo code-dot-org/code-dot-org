@@ -47,6 +47,7 @@
   "jumpBackward": "κάνε άλμα προς τα πίσω κατά",
   "jumpForward": "κάνε άλμα προς τα εμπρός κατά",
   "jumpToOverDown": "",
+  "jumpToPosition": "",
   "jumpByDirection": "",
   "jumpTooltip": "Μετακινεί τον καλλιτέχνη χωρίς να αφήνει ίχνη.",
   "jumpEastTooltip": "Μετακινεί τον καλλιτέχνη ανατολικά χωρίς να αφήνει σημάδια.",

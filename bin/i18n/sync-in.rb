@@ -9,12 +9,12 @@ require File.expand_path('../../../dashboard/config/environment', __FILE__)
 require 'fileutils'
 require 'json'
 
+require_relative 'hoc_sync_utils'
 require_relative 'i18n_script_utils'
 require_relative 'redact_restore_utils'
 
-I18N_SOURCE_DIR = "i18n/locales/source"
-
 def sync_in
+  HocSyncUtils.sync_in
   localize_level_content
   localize_block_content
   puts "Copying source files"

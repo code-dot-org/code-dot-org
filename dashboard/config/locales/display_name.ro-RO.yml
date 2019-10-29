@@ -2,12 +2,14 @@
 ro-RO:
   data:
     display_name:
+      AB_Debug_Artist1: 'Depanarea Artist #1 (AB)'
       AppLab Intro 7 - thisOrThatAddButton: Asta ori aia
       AppLab Intro 7 - thisOrThatAddScreen: Asta ori aia
       AppLab Intro 7 - thisOrThatPersonalize: Asta ori aia
       AppLab Intro 7 - thisOrThatSetScreen: Asta ori aia
       CDEF_video_SpritesInAction: Cum să Faci un Desen
       CDEF_video_SpritesInAction_2019: Cum să Faci un Desen
+      CSD Problem Solving Process Video: 'Video: Procesul de rezolvare a problemei'
       CSD U2 Pair Programming Video: Programare în perechi
       CSD U2 Pair Programming Video_2018: Programare în perechi
       CSD U2 Pair Programming Video_2019: Programare în perechi

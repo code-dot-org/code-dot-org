@@ -977,6 +977,18 @@ id-ID:
           # Untuk Loop menyenangkan
 
           Kami tahu bahwa loops mengijinkan kita untuk melakukan berbagai hal lagi dan lagi, tetapi sekarang kami akan belajar bagaimana menggunakan loops dengan struktur ekstra yang dibangun dengan tepat.
+      GoingPlacesSafely-unplugged:
+        markdown: |
+          # Going Places Safely
+
+          Internet sangat bermanfaat, tapi kadang menjadi tempat yang berbahaya. Bertindaklah dengan aman saat menjelajah di internet.
+
+          <p align=center>
+      HappyMaps-Unplugged:
+        markdown: |
+          # Happy Maps
+
+          Buat algoritma untuk menggerakkan karakter melalui sebuah maze.
       Internet Simulator Setup:
         title: Internet simulator setup
         content1: desekripsi di sini
