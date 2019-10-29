@@ -53,7 +53,7 @@ export default class ScriptOverviewTopRow extends React.Component {
         name: PropTypes.string.isRequired
       })
     ).isRequired,
-    sections: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
+    sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
     selectedSectionId: PropTypes.number,
     currentCourseId: PropTypes.number,
     professionalLearningCourse: PropTypes.bool,
@@ -70,7 +70,7 @@ export default class ScriptOverviewTopRow extends React.Component {
   render() {
     const {
       sectionsInfo,
-      sections,
+      sectionsForDropdown,
       selectedSectionId,
       currentCourseId,
       professionalLearningCourse,
@@ -118,7 +118,7 @@ export default class ScriptOverviewTopRow extends React.Component {
           showAssignButton &&
           experiments.isEnabled(experiments.ASSIGNMENT_UPDATES) && (
             <SectionAssigner
-              sections={sections}
+              sections={sectionsForDropdown}
               selectedSectionId={selectedSectionId}
               showAssignButton={showAssignButton}
               courseId={currentCourseId}
