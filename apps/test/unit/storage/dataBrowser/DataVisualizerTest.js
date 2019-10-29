@@ -32,7 +32,12 @@ describe('DataVisualizer', () => {
     beforeEach(() => {
       wrapper = shallow(<DataVisualizer {...DEFAULT_PROPS} />);
       sinon.spy(wrapper.instance(), 'parseRecords');
+    });
+
+    it('parses records immediately when the visualizer opens', () => {
+      expect(wrapper.instance().parseRecords).not.toHaveBeenCalled;
       wrapper.instance().handleOpen();
+      expect(wrapper.instance().parseRecords).to.have.been.calledOnce;
     });
 
     it('ignores empty records', () => {
@@ -46,6 +51,7 @@ describe('DataVisualizer', () => {
       ];
 
       wrapper.setProps({tableRecords: tableRecords});
+      wrapper.instance().handleOpen();
       expect(wrapper.instance().state.parsedRecords).to.deep.equal(
         expectedParsedRecords
       );
@@ -66,6 +72,7 @@ describe('DataVisualizer', () => {
           '{"id":3,"name":"charlie","age":9,"male":true}'
         ]
       });
+      wrapper.instance().handleOpen();
       expect(wrapper.instance().state.parsedRecords).to.deep.equal(
         expectedParsedRecords
       );
