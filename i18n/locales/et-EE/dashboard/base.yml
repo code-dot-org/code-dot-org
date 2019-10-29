@@ -700,6 +700,7 @@ et:
     csp_functions: 'Funktsioonid'
     csp_lists: 'Loendid'
     csp_loops: 'Tsüklid'
+    k5_next_steps: 'Järgmised sammud'
   external_links:
     disclaimer: Lahtiütlemine
     leaving_domain: Olete lahkumas sellest domeenist leheküljele, mida ei halda Code.org.
