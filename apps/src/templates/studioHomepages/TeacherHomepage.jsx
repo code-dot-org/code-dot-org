@@ -175,7 +175,7 @@ export default class TeacherHomepage extends Component {
     const showSpecialAnnouncement = false;
 
     // Hide the regular announcement/notification for now.
-    const showAnnouncement = true;
+    const showAnnouncement = false;
 
     return (
       <div>
@@ -194,7 +194,7 @@ export default class TeacherHomepage extends Component {
               type={announcement.type || 'bullhorn'}
               notice={announcement.heading}
               details={announcement.description}
-              dismissible={false}
+              dismissible={true}
               buttonText={announcement.buttonText}
               buttonLink={announcement.link}
               newWindow={true}
