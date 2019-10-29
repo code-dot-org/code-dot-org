@@ -3658,25 +3658,26 @@ pt-BR:
           ## Duração do Curso
 
           A conclusão deste curso on-line deve levar entre 3-7 horas, dependendo do seu conhecimento prévio e do quão profundo nos recursos do Code.org você deseja ir.
-      OPD-K5 CS:
+      OPD-K5 Assessment:
         markdown: |
-          # Vamos Começar > Por que Fundamentos de Ciências da Computação (CC)?
+          # Planejamento > Outros Materiais
 
-          Você irá completar este curso gratuíto, em seu próprio passo, usando a mesma plataforma de aprendizado que você poderá usar em sua sala de aula com seus alunos.
+          Quando você está autenticado em Code.org como professor, você tem acesso a muitos recursos que seus alunos não têm. Você já viu como localizar um curso, criar uma seção, e associar sua sala de aula a esta seção. Entretanto, você pode também:
 
-          Vamos começar aprendendo um pouco sobre o que são os Fundamentos de Ciências da Computação (CC), e como eles têm trabalhado para professores e alunos ao redor do mundo. No próximo nível, iremos cobrir como interagir com a plataforma de Fundamentos de CC, que você irá usar para completar o curso.
+          - **Acompanhar o Progresso de Alunos**: [Avalie o aprendizado](https://support.code.org/hc/en-us/articles/115000693231-Viewing-student-progress) de todos os seus alunos.
+          - **Sua Evolução no Curso**: Veja sua própria evolução nas aulas da Code.org, como um estudante. Seus alunos também serão capazes de visualizar suas evoluções em suas contas. Entretanto, como professor, você também poderá ver os planos de aulas e ver as soluções para cada quebra-cabeça.
+          - **Ajuda e Comunidade**: Acesse [support.code.org](https://support.code.org/), onde você poderá enviar perguntas, responder a perguntas de outros professores, e ler as perguntas mais frequentes dos colaboradores da Code.org. Nesta página, você poderá também contatar diretamente a Code.org para resolver quaisquer dúvidas que você possa ter.
+          - **Desenvolvimento Profissional**: Acesse [treinamento pessoal](https://code.org/professional-development-workshops) para professores.
+          - **Palestrantes Convidados de Ciência da Computação**: [Localize profissionais de TI que sejam engajados e apaixonados pelo que fazem](https://code.org/volunteer/local) e que adorariam falar aos seus alunos sobre suas atividades.
 
-          <iframe width="640" height="390" src="https://youtubeeducation.com/embed/rNIM1fzJ8u0" frameborder="0" allowfullscreen></iframe>
+          <br/>
+          ---
+          > ## Visite support.code.org
+          > Se você travar ou tiver perguntas, não deixe de verificar nossos artigos de suporte em suport.code.org! Você pode também entrar em contato diretamente conosco através desta página. [nosso forum](http://forum.code.org/t/teaching-conditionals/406/1).
 
-          **[Não consegue assistir o vídeo? Clique aqui para descarregar.](http://videos.code.org/k5-pd/how-to-k5-workshops.mp4)**
+          > <a href="http://support.code.org" target="blank"><button class="plc">Obtenha ajuda >></button></a>
 
-          > ## Reflita
-          Quais são suas primeiras impressões de Fundamentos de CC?
-
-          > [Envie suas impressões pelo Tweeter](https://twitter.com/teachcode) e não se esqueça de usar a tag @teachcode na sua mensagem para que possamos responder.
-
-          > <a href="http://ctt.ec/Bfjw3" target="blank"><button class="default">Compartilhe no Tweeter >></button></a><br><br>
-          Não possui uma conta no Twitter? Você também pode nos encontrar no [Facebook](https://www.facebook.com/Code.org/) ou no [Instagram](https://www.instagram.com/codeorg/).
+          Após inserir comentários no fórum, volte aqui e clique abaixo para ir à próxima etapa.
       OPD-K5 CS Courses:
         markdown: "# Planejamento > Primeiros passos com Code.org\n\n\n## Passo 1:
           Escolha um curso\nTodos os nossos cursos - desde a alfabetização até os
@@ -3763,6 +3764,20 @@ pt-BR:
           <br/>
 
           > Isto é tudo! Fique à vontade para retornar a este nível sempre que você sentir necessidade de relembrar como esta plataforma funciona.
+      OPD-K5 Celebrate:
+        markdown: |
+          # Próximos Passos > Comemore!
+
+          Congratulações por completar este curso de desenvolvimento profissional online. Considerando que você finalizou todos os níveis deste treinamento, você pode baixar e imprimir o certificado de conclusão agora através dos seguintes passos:
+
+          1. Visite [este link](https://code.org/certificates?course=Teaching%20Computer%20Science%20Fundamentals).
+          2. Preencha seu nome no campo de entrada.
+          3. Clique em Imprimir Certificados
+          4. Clique com o botão direito na imagem do certificado, e escolha "Salvar Imagem Como..." para que você possa baixar para seu computador.
+
+          E não esqueça... você pode retornar a este curso online a qualquer hora para rever seu aprendizado, acessar links ou materiais, ou somente refrescar sua memória!
+
+          Obrigado por sua participação! Mal podemos esperar para saber como você implementa ciência da computação e Code Studio em sua sala de aula!
       OPD-K5 Congrats:
         markdown: |
           # Eventos > Revisão
@@ -3781,6 +3796,25 @@ pt-BR:
           Por agora você deve ter completado as Etapas 1-8 e aprendido os fundamentos básicos de ciência da computação. Nós esperamos que você tenha se divertido durante o caminho! Nós também esperamos que você tenha considerado como você poderia aplicar seu conhecimento à sua prática de ensino.
           <br/><br/>
           Na próxima etapa, nós vamos considerar algumas melhores práticas para ensino destes fundamentos em sala de aula.
+      OPD-K5 Connect:
+        markdown: "# Próximos Passos > Conecte-se\n\nAlém dos treinamentos formais
+          posteriores, você poderá considerar acessar a comunidade da code.org para
+          continuar a aprender informalmente a partir de outras pessoas, ou somente
+          para obter suporte e uma rede de colegas. Veja como:\n\n<br/><br/>\n\n>
+          **Continue participando da Comunidade de Ensino Profissinal (PLC):** O fórum
+          que você esteve usando durante o curso será um grande recurso para você
+          seguir adiante. Você poderá usá-lo não somente para consultar seu aprendizado
+          deste curso, mas também para obter suporte à medida que você continuar sua
+          jornada, ou mesmo para oferecer suporte a outros que necessitam seu conhecimento.
+          Lembre-se de adicionar este site nos favoritos e visite com frequência:
+          [http://forum.code.org/c/csf](http://forum.code.org/c/csf)  \n\n<br/>\n\n>
+          **Conecte-se com [@teachcode](http://twitter.com/teachcode) no Twitter.**\n\n<br/>\n\n>
+          **Associe-se à Associação de Professores de Ciência da Computação (CSTA):**
+          [A CSTA](http://csta.acm.org/index.html) é uma comunidade de educadores
+          que está comprometida em trazer o ensino de ciência da computação aos seus
+          alunos, enquanto eleva a percepção do assunto no público em geral. Eles
+          sediam uma conferência anual e também possuem seções regionais que promovem
+          eventos locais.\n"
       OPD-K5 Culture:
         markdown: |+
           # Melhores Práticas > Cultura de Sala de Aula
@@ -3965,6 +3999,18 @@ pt-BR:
           ## Qual é o seu plano?
 
           Tome um momento para considerar como e quando você irá completar este curso online para garantir que você obtenha o benefício máximo desta experiência. Quando você tiver um bom plano esboçado, continue a mergulhar mais profundamente na Etapa 1.
+      OPD-K5 PostSurvey:
+        markdown: |+
+          # Vamos começar - Preencha a pesquisa de encerramento
+
+          Obrigado por utilizar o curso online de desenvolvimento profissional Ensinando Fundamentos de Ciência da Computação!
+
+          Tendo você terminado o curso completo ou não, nós gostaríamos de conhecer suas impressões. Por favor preencha esta pequena pesquisa para ajudar-nos a aprimorar o curso e seguir em frente!
+
+          [Isto é um teste de encadeamente utilizando markdown](https://form.jotform.com/90557778075168?user_id=<user_id/>) <-- remova isto após testar (tentativa por Baker).
+
+          <a class="btn btn-large btn-primary submitButton" href="https://form.jotform.com/90557778075168?user_id=<user_id/>"> Preencha a pesquisa de encerramento</a>
+
       OPD-K5 PreSurvey:
         markdown: |+
           # Vamos começar -> Responda à pesquisa preliminar
@@ -4015,6 +4061,21 @@ pt-BR:
           de CC](http://studio.code.org/) por conta própria, a qualquer momento. Mas
           este curso dará a você uma boa noção sobre o que esperar, ao apresentar
           a você alguns dos desafios mais fundamentais em um curto espaço de tempo.\n"
+      OPD-K5 Stage10Start:
+        markdown: |
+          # Próximos Passos > Vamos Revisar
+
+          <img src="https://images.code.org/606dbb1b30885387e25bc1265f8966b2-image-1434150440566.JPG" width="450px">
+
+          ## Estamos quase lá!
+
+          Até aqui você aprendeu o básico de codificação, explorou como você poderá lecionar ciência da computação, e criou um plano simples com os próximos passos.
+
+          Ao completar a Etapa 11, você irá:
+
+          - Refletir no seu aprendizado
+          - Planejar os próximos passos que você poderá dar para continuar seu aprendizado
+          - Conectar-se com uma comunidade global de educadores interessados no ensino de ciência da computação
       OPD-K5 Stage1Go:
         markdown: |
           # Vamos Começar > Tudo pronto? Vamos!
@@ -4407,6 +4468,22 @@ pt-BR:
           Outras melhores práticas sugeridas pela comunidade de professores da Code.org\n\nTambém
           iremos prover uma oportunidade para você compartilhar suas melhores práticas
           com a comunidade.\n"
+      OPD-K5 Stage9Go:
+        markdown: |
+          # Planejamento > Revisão
+
+          <img src="https://images.code.org/34e1d20a6ae73e28c6c88c5981fd6be6-image-1434411459379.JPG" width="450px">
+
+          Nesta etapa, você deve ter:
+
+          - Revisado o Painel do Professor e outros materiais na Code.org
+          - Planejado a forma como você poderá integrar ciência da computação à sua prática
+
+          Na etapa 11, nossa etapa final, você irá
+
+          - Refletir no seu aprendizado
+          - Planejar os próximos passos que você poderá tomar para continuar seu aprendizado
+          - Conectar-se com a comunidade global de educadores interessados no ensino de ciência da computação
       OPD-K5 Stage9Start:
         markdown: "# Planejamento > Explorando o Material do Professor\n\nDurante
           as Etapas 4-8, você conheceu alguns dos recursos \"desplugados\" e online
@@ -4423,23 +4500,6 @@ pt-BR:
           na Code.org - quando você estiver autenticado, esta deverá ser a tela padrão
           que você verá no website da Code.org. Se você não tiver uma conta de professor,
           você pode **[cadastrar-se aqui para obter uma](https://studio.code.org/users/sign_up)**.\n\n![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)\n"
-      OPD-K5 Unplugged:
-        markdown: |
-          # Olhando à Frente > Ficando "Desplugado"
-
-          <img src="https://images.code.org/ae83fdee9390a1155e5173b2a06f9773-image-1434399991310.JPG" class="level-image">
-
-          Ao lecionar ciência da computação, você pode pensar que seria melhor ter acesso a tecnologias de primeira linha - computadores novos, internet rápida, os últimos aplicativos. Mas em Code.org, nós descobrimos que algumas das aulas mais impactantes de ciência da computação são na verdade "desplugadas", ou ministradas com pouca ou nenhuma tecnologia. Nestas aulas, os alunos aprendem conceitos de computadores sem um computador.
-
-          É por isso que nossos cursos de Fundamentos de CC usam atividades desplugadas para introduzir conceitos de computação com o manuseio de conceitos físicos antes que os alunos escrevam programas usando estes conceitos. Um exemplo disto seria fazer uma dança com movimentos repetidos em classe, para entender o conceito de como os laços repetem comandos em um programa de computador. Desta forma, quando os alunos começam a escrever os programas usando laços, a atividade desplugada forneceu a eles algo com que eles já estão acostumados, e podem relacionar este novo conceito com esta atividade.
-
-          Assista o vídeo abaixo para compreender os benefícios do uso de atividades desplugadas para o ensino de ciência da computação.
-
-          <iframe width="640" height="390" src="https://youtubeeducation.com/embed/-7lcnNcONHY" frameborder="0" allowfullscreen></iframe>
-          [Baixe o video](https://videos.code.org/levelbuilder/unplugged-whyshouldteachunpluggedactivities-mp4.mp4)
-          <br/>
-          <br/>
-          **À medida que você percorrer as Etapas 4-8**, você terá a oportunidade de rever algumas das nossas atividades desplugadas para cada um dos conceitos essenciais que são tratados neste curso.
       OPD-K5 Using CS:
         markdown: |+
           # Planejamento > Preparando-se para uma aula com Code Studio
@@ -4553,6 +4613,24 @@ pt-BR:
 
           > <a href="http://ctt.ec/Bfjw3" target="blank"><button class="default">Compartilhe no Tweeter >></button></a><br><br>
           Não possui uma conta no Tweeter? Você também pode nos encontrar no [Facebook](https://www.facebook.com/Code.org/) ou [Instagram](https://www.instagram.com/codeorg/).
+      OPD-K5 Your Plan:
+        markdown: |
+          # Planejamento > Seu Plano
+
+          Nós esperamos que esta etapa tenha ajudado a apresentar a você os recursos disponíveis no Code Studio. Enquanto você pensa em como você poderá no futuro lecionar ciência da computação usando quaisquer recursos da code.org ou do Code Studio, tome um momento para [compartilhar seu plano com a Comunidade Profissional de Ensino (PLC)](http://forum.code.org/t/teaching-computer-science-your-plans/412).
+
+          Compartilhe conosco:
+
+          - Quais são suas metas para sua sala de aula? Como CC ou os recursos da code.org ajudam você a atingir estas metas?
+          - O que torna você mais empolgado quando se trata de colocar em prática alguns destes recursos?
+          - Quais desafios você antevê durante o percurso para atingir suas metas?
+          - Quais dúvidas você têm que esta comunidade poderá ajudá-lo a resolver?
+
+          Após postar seu plano inicial, fique à vontade para revisitar [este fio](http://forum.code.org/t/teaching-computer-science-your-plans/412) no futuro para nos manter atualizados de como as coisas estão indo!
+
+          <a href="http://forum.code.org/t/teaching-computer-science-your-plans/412" target="blank"><button class="plc">Publique seu plano >></button></a>
+
+          Após comentar no fórum, volte aqui e clique abaixo para continuar.
       OPD-Stage3Start:
         markdown: |
           # Olhando à Frente > Visão Geral desta Etapa
@@ -5298,10 +5376,37 @@ pt-BR:
             na realidade precisa avançar 3 espaços.
       courseD_external_binary1:
         title: Desenho Binário
+        markdown: "<h1>Desenhe com Binário</h1>\n \n<h3>Binário é uma forma de representar
+          informação usando somente duas opções. Neste caso, <b>desligado</b> e <b>ligado</b>.\n<br/>\nAqui,
+          nós iremos usar o número <b>0</b> como código para \"desligado\" e o número
+          <b>1</b> como código para \"ligado\".\n<br/>\n<table>\n<tr><td><img src=\"https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png\"
+          width=\"75px\"/></td><td><img src=\"https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png\"
+          width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td
+          align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\"
+          float=\"left\"/><h3>Nesta etapa, nós fornecemos a você uma grade com \"pixels\"
+          que você pode percorrer e fazer desenhos ligando quadrados específicos!</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n"
       courseD_external_binary1_2018:
         title: Desenho Binário
+        markdown: "<h1>Desenhe com Binário</h1>\n \n<h3>Binário é uma forma de representar
+          informação usando somente duas opções. Neste caso, <b>desligado</b> e <b>ligado</b>.\n<br/>\nAqui,
+          nós iremos usar o número <b>0</b> como código para \"desligado\" e o número
+          <b>1</b> como código para \"ligado\".\n<br/>\n<table>\n<tr><td><img src=\"https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png\"
+          width=\"75px\"/></td><td><img src=\"https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png\"
+          width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td
+          align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\"
+          float=\"left\"/><h3>Nesta etapa, nós fornecemos a você uma grade com \"pixels\"
+          que você pode percorrer e fazer desenhos ligando quadrados específicos!</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n"
       courseD_external_binary1_2018_2019:
         title: Desenho Binário
+        markdown: "<h1>Desenhe com Binário</h1>\n \n<h3>Binário é uma forma de representar
+          informação usando somente duas opções. Neste caso, <b>desligado</b> e <b>ligado</b>.\n<br/>\nAqui,
+          nós iremos usar o número <b>0</b> como código para \"desligado\" e o número
+          <b>1</b> como código para \"ligado\".\n<br/>\n<table>\n<tr><td><img src=\"https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png\"
+          width=\"75px\"/></td><td><img src=\"https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png\"
+          width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td
+          align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\"
+          float=\"left\"/><h3>Nesta etapa, nós fornecemos a você uma grade com \"pixels\"
+          que você pode percorrer e fazer desenhos ligando quadrados específicos!</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n"
       courseD_multi_artist_binary8_predict1:
         questions:
         - text: Olhe com atenção o código abaixo. Qual imagem será criada quando você
