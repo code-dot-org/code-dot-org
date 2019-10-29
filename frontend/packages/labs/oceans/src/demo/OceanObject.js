@@ -104,9 +104,9 @@ export class FishOceanObject extends OceanObject {
     this.bodies = Object.values(fish.bodies);
     this.eyes = Object.values(fish.eyes);
     this.mouths = Object.values(fish.mouths);
-    this.sideFinsFront = Object.values(fish.pectoralFinsFront);
-    this.sideFinsBack = Object.values(fish.pectoralFinsBack);
-    this.topFins = Object.values(fish.topFins);
+    this.pectoralFinsFront = Object.values(fish.pectoralFinsFront);
+    this.pectoralFinsBack = Object.values(fish.pectoralFinsBack);
+    this.dorsalFins = Object.values(fish.dorsalFins);
     this.tails = Object.values(fish.tails);
     this.colorPalettes = Object.values(fish.colorPalettes);
   }
@@ -115,11 +115,11 @@ export class FishOceanObject extends OceanObject {
     const body = this.bodies[Math.floor(Math.random() * this.bodies.length)];
     const eye = this.eyes[Math.floor(Math.random() * this.eyes.length)];
     const mouth = this.mouths[Math.floor(Math.random() * this.mouths.length)];
-    const finIdx = Math.floor(Math.random() * this.sideFinsFront.length);
-    const sideFinFront = this.sideFinsFront[finIdx];
-    const sideFinBack = this.sideFinsBack[finIdx];
-    const topFin = this.topFins[
-      Math.floor(Math.random() * this.topFins.length)
+    const finIdx = Math.floor(Math.random() * this.pectoralFinsFront.length);
+    const pectoralFinFront = this.pectoralFinsFront[finIdx];
+    const pectoralFinBack = this.pectoralFinsBack[finIdx];
+    const dorsalFin = this.dorsalFins[
+      Math.floor(Math.random() * this.dorsalFins.length)
     ];
     const tail = this.tails[Math.floor(Math.random() * this.tails.length)];
     this.colorPalette = this.colorPalettes[
@@ -129,12 +129,20 @@ export class FishOceanObject extends OceanObject {
       ...body.knnData,
       ...eye.knnData,
       ...mouth.knnData,
-      ...sideFinFront.knnData,
-      ...topFin.knnData,
+      ...pectoralFinFront.knnData,
+      ...dorsalFin.knnData,
       ...tail.knnData,
       ...this.colorPalette.knnData
     ];
-    this.parts = [body, eye, mouth, sideFinFront, sideFinBack, topFin, tail];
+    this.parts = [
+      body,
+      eye,
+      mouth,
+      pectoralFinFront,
+      pectoralFinBack,
+      dorsalFin,
+      tail
+    ];
   }
 
   getColorPalette() {
