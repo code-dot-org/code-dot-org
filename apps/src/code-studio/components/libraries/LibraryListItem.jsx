@@ -10,7 +10,8 @@ const styles = {
     color: color.dark_charcoal,
     textAlign: 'left',
     display: 'flex',
-    position: 'relative'
+    backgroundColor: color.offwhite_gray,
+    borderBottom: 'inset'
   },
   libraryName: {
     fontSize: 'large',
@@ -23,11 +24,13 @@ const styles = {
     overflow: 'hidden',
     textOverflow: 'ellipsis',
     marginTop: 10,
-    lineHeight: '19px'
+    lineHeight: '19px',
+    position: 'relative',
+    flexGrow: 1,
+    marginRight: 5
   },
   moreDetails: {
     position: 'absolute',
-    bottom: 0,
     right: 0
   },
   moreDetailsWithAdd: {
@@ -65,14 +68,21 @@ export default class LibraryListItem extends React.Component {
     return (
       <div className="assetRow" style={styles.listItem}>
         <span style={styles.libraryName}>{library.name}</span>
-        {this.props.onRemove && (
+        <span style={styles.description}>
+          {library.description}
+          <br />
+          {library.studentName && (
+            <span style={styles.author}>Author: {library.studentName}</span>
+          )}
+          <span style={styles.moreDetails}>{this.moreDetails(library)}</span>
+        </span>
+        {this.props.onAdd && (
           <button
+            style={styles.addButton}
             type="button"
-            onClick={() => this.props.onRemove(library.name)}
-            style={styles.deleteButton}
-            className="btn-danger"
+            onClick={() => this.props.onAdd(library.id)}
           >
-            <FontAwesome icon="trash-o" />
+            <FontAwesome icon="plus" />
           </button>
         )}
         {this.props.onRefresh && (
@@ -84,23 +94,14 @@ export default class LibraryListItem extends React.Component {
             <FontAwesome icon="refresh" />
           </button>
         )}
-        <span style={styles.description}>
-          {library.description}
-          <br />
-          {library.studentName && (
-            <span style={styles.author}>Author: {library.studentName}</span>
-          )}
-        </span>
-        <span style={this.getMoreDetailsStyle()}>
-          {this.moreDetails(library)}
-        </span>
-        {this.props.onAdd && (
+        {this.props.onRemove && (
           <button
-            style={styles.addButton}
             type="button"
-            onClick={() => this.props.onAdd(library.id)}
+            onClick={() => this.props.onRemove(library.name)}
+            style={styles.deleteButton}
+            className="btn-danger"
           >
-            <FontAwesome icon="plus" />
+            <FontAwesome icon="trash-o" />
           </button>
         )}
       </div>
