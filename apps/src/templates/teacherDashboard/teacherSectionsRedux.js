@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import $ from 'jquery';
 import {OAuthSectionTypes} from './shapes';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 /**
  * @const {string[]} The only properties that can be updated by the user
@@ -674,6 +675,8 @@ export default function teacherSections(state = initialState, action) {
         );
     return {
       ...state,
+      initialCourseId: initialSectionData.courseId,
+      initialScriptId: initialSectionData.scriptId,
       sectionBeingEdited: initialSectionData,
       showSectionEditDialog: !action.silent
     };
@@ -741,6 +744,25 @@ export default function teacherSections(state = initialState, action) {
       } else {
         newSectionIds = [section.id, ...state.sectionIds];
       }
+    }
+
+    let assignmentData = {
+      section_id: section.id,
+      section_creation_timestamp: section.createdAt
+    };
+    if (section.scriptId !== state.initialScriptId) {
+      assignmentData.script_id = section.scriptId;
+    }
+    if (section.courseId !== state.initialCourseId) {
+      assignmentData.course_id = section.courseId;
+    }
+    if (assignmentData.script_id || assignmentData.course_id) {
+      firehoseClient.putRecord({
+        study: 'assignment',
+        study_group: 'v0',
+        event: newSection ? 'create_section' : 'edit_section_details',
+        data_json: JSON.stringify(assignmentData)
+      });
     }
 
     // When updating a persisted section, oldSectionId will be identical to
@@ -940,6 +962,7 @@ export function getSectionRows(state, sectionIds) {
 export const sectionFromServerSection = serverSection => ({
   id: serverSection.id,
   name: serverSection.name,
+  createdAt: serverSection.createdAt,
   loginType: serverSection.login_type,
   grade: serverSection.grade,
   providerManaged: serverSection.providerManaged || false, // TODO: (josh) make this required when /v2/sections API is deprecated

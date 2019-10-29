@@ -2137,6 +2137,9 @@ StudioApp.prototype.handleHideSource_ = function(options) {
  * @param {object} config The object containing all metadata about the project
  */
 StudioApp.prototype.loadLibraryBlocks = function(config) {
+  if (!config.level.libraries && config.level.startLibraries) {
+    config.level.libraries = JSON.parse(config.level.startLibraries);
+  }
   if (!config.level.libraries) {
     return;
   }
