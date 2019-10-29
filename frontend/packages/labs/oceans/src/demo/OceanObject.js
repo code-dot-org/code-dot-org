@@ -11,6 +11,7 @@ import _ from 'lodash';
 let fishPartImages = {};
 let intermediateCanvas;
 let intermediateCtx;
+
 // Load a single fish part image.
 const loadFishPartImage = data => {
   return new Promise((resolve, reject) => {
