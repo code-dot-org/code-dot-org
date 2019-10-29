@@ -1,6 +1,5 @@
 ---
 title: Mga gabay sa aktibidad
-layout: wide
 ---
 
 <style>

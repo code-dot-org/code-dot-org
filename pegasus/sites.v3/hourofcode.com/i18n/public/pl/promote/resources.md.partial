@@ -12,7 +12,7 @@ nav: promote_nav
 
 ### Znajdź wszystkie zasoby których potrzebujesz, aby przykuć uwagę do Twojej Godziny Kodowania. Nie jesteś pewien gdzie zacząć? Zacznij z naszym [poradnikiem jak zostać gospodarzem Godziny Kodowania]({{ how_to_url }})!
 
----
+* * *
 
 {{ promote_handouts }} {{ promote_videos }}
 
@@ -69,7 +69,7 @@ Dostępny jest nowy zestaw plakatów, z gościnnie występującymi na nich Malal
 
 ### [Tutaj]({{ promote/stats_url }}) znajdziesz więcej informacji i o sposobach, jak rozmawiać o Godzinie Kodowania.
 
----
+* * *
 
 <a id="email"></a>
 
@@ -87,7 +87,7 @@ Opowiedz o nas. Zorganizuj wydarzenie. Poproś lokalną szkołę o rejestrację.
 
 Zacznij na http://hourofcode.com/{{ country }} <br />
 
----
+* * *
 
 <a id="help-schools"></a>
 
@@ -107,7 +107,7 @@ Komputery znajdują się wszędzie, zmieniają każdą branżę na świecie. Ale
 
 Możesz przeczytać więcej o tej inicjatywie na http://hourofcode.com. Lub daj nam znać, jeśli chcesz zarezerwować czas na rozmowę o tym, w jaki sposób [nazwa szkoły] może wziąć udział. <br />
 
----
+* * *
 
 <a id="parents"></a>
 
@@ -127,7 +127,7 @@ To jest szansa na zmianę przyszłości edukacji w [NAZWA MIASTA].
 
 Odwiedź http://hourofcode.com/{{ country }} po szczegółowe informacje i pomagaj promować to przedsięwzięcie. <br />
 
----
+* * *
 
 <a id="media-pitch"></a>
 
@@ -151,7 +151,7 @@ Kontakt: [YOUR NAME], [TITLE], Phone: (212) 555-5555, Kiedy: [DATE i TIME Twojeg
 
 Czekam na kontakt. <br />
 
----
+* * *
 
 <a id="politicians"></a>
 

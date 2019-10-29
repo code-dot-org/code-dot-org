@@ -1,7 +1,5 @@
 ---
 title: Hour of Code прессъобщение за официални гости
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

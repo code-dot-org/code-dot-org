@@ -221,7 +221,7 @@ km:
   front_join_us_tutorials: "សាកល្បងឯកសារបង្រៀនឆ្នាំនេះ"
   front_join_us_tutorials_link: 'Filter and browse <i>over 200 tutorials and lesson plans</i>! Find activities for different subject areas, multiple hardware needs, and students at any experience level.'
   front_join_us_robotics: 'Win robots or circuits!'
-  front_join_us_robotics_link: 'Do you want a set of robots or physical computing kits to use with your students? Our generous partners are donating sets to over 100 classrooms! Sign up for the Hour of Code to participate. (Classrooms selected by Code.org, US Only)'
+  front_join_us_robotics_link: 'Do you want a set of robots or physical computing kits to use with your students? Our generous partners are donating sets to 75 classrooms! Sign up for the Hour of Code to participate. (Classrooms selected by Code.org, US Only)'
   front_join_us_teacher: 'តើអ្នកជាគ្រូបង្រៀន?'
   front_join_us_inspire: 'ជម្រុញ​ចិត្ត​សិស្ស​ជាមួយ'
   front_join_us_inspire_link: 'Hour of Code នៅ​ក្នុង​ថ្នាក់​រៀន។'
@@ -333,6 +333,7 @@ km:
   meta_tag_twitter_description: 'ម៉ោងសំរាប់កូដគឺជាចលនាសកលក្នុងការឈោងចាប់សិស្ស និស្សិតរាប់លានអ្នកនៅក្នុង ១៨០ប្រទេស នឹងមានភាសាច្រើនជាង៣០។ អាយុចាប់ពី ៤ ដល់ ១០៤ឆ្នាំ'
   twitter_default_text: "ខ្ញំុចូលរួមក្នុងឆ្នាំនេះ #HourOfCode, are you? @codeorg"
   twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
+  twitter_donor_text_2019: "This year's #HourOfCode is about #CSforGood. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'FAQs'
   hoc_faq_what_is_hoc_q: 'តើម៉ោងសំរាប់កូដជាអ្វី?'
   hoc_faq_what_is_hoc_a: "The Hour of Code started as a one-hour introduction to computer science, designed to demystify \"code\", to show that anybody can learn the basics, and to broaden participation in the field of computer science. It has since become a worldwide effort to celebrate computer science, starting with 1-hour coding activities but expanding to all sorts of community efforts. Check out the <a href='%{tutorials}'>tutorials and activities</a>. This grassroots campaign is supported by over <a href='%{partners}'>400 partners</a> and 200,000 educators worldwide."

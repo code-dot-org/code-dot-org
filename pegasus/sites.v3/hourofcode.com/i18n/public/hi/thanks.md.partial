@@ -3,20 +3,8 @@ title: Thanks for signing up to host an Hour of Code!
 layout: wide
 nav: how_to_nav
 social:
-  og:title: एक घंटा कोड का आ रहा है
-  og:description: एक घंटा कोड का ये एक जागतिक आंदोलन है जो १८० से भी ज्यादा देशोंके
-    आयु ४ से १०४ के करोडो लोगोसे बानी हुई है
-  og:image: http://hourofcode.com/images/hourofcode-2015-video-thumbnail.png
-  og:image:width: 1440
-  og:image:height: 900
-  og:url: http://hourofcode.com
   twitter:card: player
   twitter:site: "@codeorg"
-  twitter:url: http://hourofcode.com
-  twitter:title: एक घंटा कोड का आ रहा है
-  twitter:description: एक घंटा कोड का ये एक जागतिक आंदोलन है जो १८० से भी ज्यादा देशोंके
-    आयु ४ से १०४ के करोडो लोगोसे बानी हुई है
-  twitter:image:src: http://hourofcode.com/images/hourofcode-2015-video-thumbnail.png
 ---
 
 # Thanks for signing up to host an Hour of Code!

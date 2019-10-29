@@ -1,7 +1,5 @@
 ---
 title: Anleitung für "Hour of Code"-Veranstaltung
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

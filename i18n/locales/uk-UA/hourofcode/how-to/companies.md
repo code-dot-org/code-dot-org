@@ -1,7 +1,5 @@
 ---
 title: Як провести Годину коду - компанії
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

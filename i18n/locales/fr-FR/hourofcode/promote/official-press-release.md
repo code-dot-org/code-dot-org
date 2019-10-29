@@ -1,7 +1,5 @@
 ---
 title: Une Heure de Code - communiqué de presse pour les élus
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

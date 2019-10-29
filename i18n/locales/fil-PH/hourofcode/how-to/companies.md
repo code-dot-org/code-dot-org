@@ -1,7 +1,5 @@
 ---
 title: Paano mag-host ng Hour of Code - Mga kumpanya
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

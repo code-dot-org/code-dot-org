@@ -1,7 +1,5 @@
 ---
 title: Tidlegare plakatar til Kodetimen
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

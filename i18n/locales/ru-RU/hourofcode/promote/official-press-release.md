@@ -1,7 +1,5 @@
 ---
 title: Пресс-релизы Часа Кода для избранных чиновников
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

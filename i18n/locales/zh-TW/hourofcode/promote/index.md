@@ -1,7 +1,5 @@
 ---
 title: 傳播這個訊息
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

@@ -1,6 +1,5 @@
 ---
 title: Contact International Partners
-layout: wide
 ---
 
 <style>

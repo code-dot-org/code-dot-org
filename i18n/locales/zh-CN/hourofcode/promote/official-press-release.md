@@ -1,7 +1,5 @@
 ---
 title: 当地官员使用的编程一小时新闻稿
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

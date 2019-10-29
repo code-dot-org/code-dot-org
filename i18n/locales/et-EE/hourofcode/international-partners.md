@@ -1,6 +1,5 @@
 ---
 title: Rahvusvahelised partnerid
-layout: wide
 ---
 
 <style>

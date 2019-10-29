@@ -1,7 +1,5 @@
 ---
 title: ملصقات ساعة البرمجة الماضية
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

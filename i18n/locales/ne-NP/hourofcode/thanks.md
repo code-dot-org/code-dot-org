@@ -1,10 +1,5 @@
 ---
 title: Hour of Code होस्ट गर्नुकोलागी sign up गर्नु भएकोमा धन्यवाद!
-layout: wide
-nav: how_to_nav
-social:
-  "twitter:card": player
-  "twitter:site": "@codeorg"
 ---
 
 # Hour of Code होस्ट गर्नुकोलागी sign up गर्नु भएकोमा धन्यवाद!
