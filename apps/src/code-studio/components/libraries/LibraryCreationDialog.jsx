@@ -9,6 +9,7 @@ import i18n from '@cdo/locale';
 import PadAndCenter from '@cdo/apps/templates/teacherDashboard/PadAndCenter';
 import {Heading1, Heading2} from '@cdo/apps/lib/ui/Headings';
 import Spinner from '../../pd/components/spinner';
+import Button from '@cdo/apps/templates/Button';
 
 const styles = {
   alert: {
@@ -28,10 +29,33 @@ const styles = {
   textarea: {
     width: 400
   },
-  centerSpinner: {
+  centerContent: {
     display: 'flex',
     justifyContent: 'center'
+  },
+  copy: {
+    cursor: 'copy',
+    width: 300,
+    height: 25
+  },
+  button: {
+    marginLeft: 10,
+    marginRight: 10
   }
+};
+
+function select(event) {
+  event.target.select();
+}
+
+/**
+ * @readonly
+ * @enum {string}
+ */
+export const LoadingState = {
+  LOADING: 'loading',
+  DONE_LOADING: 'done_loading',
+  PUBLISHED: 'published'
 };
 
 class LibraryCreationDialog extends React.Component {
@@ -44,7 +68,7 @@ class LibraryCreationDialog extends React.Component {
   state = {
     librarySource: '',
     sourceFunctionList: [],
-    loadingFinished: false,
+    loadingState: LoadingState.LOADING,
     libraryName: '',
     canPublish: false
   };
@@ -59,18 +83,24 @@ class LibraryCreationDialog extends React.Component {
     dashboard.project.getUpdatedSourceAndHtml_(response => {
       this.setState({
         libraryName: libraryParser.sanitizeName(
-          dashboard.project.getCurrentName()
+          dashboard.project.getLevelName()
         ),
         librarySource: response.source,
-        loadingFinished: true,
+        loadingState: LoadingState.DONE_LOADING,
         sourceFunctionList: libraryParser.getFunctions(response.source)
       });
     });
   };
 
   handleClose = () => {
-    this.setState({loadingFinished: false});
+    this.setState({loadingState: LoadingState.LOADING});
     this.props.onClose();
+  };
+
+  copyChannelId = () => {
+    let channelId = document.getElementById('library-sharing');
+    channelId.select();
+    document.execCommand('copy');
   };
 
   publish = event => {
@@ -99,10 +129,8 @@ class LibraryCreationDialog extends React.Component {
       error => {
         console.warn(`Error publishing library: ${error}`);
       },
-      data => {
-        console.log(
-          `Successfully published library. VersionID: ${data.versionId}`
-        );
+      () => {
+        this.setState({loadingState: LoadingState.PUBLISHED});
       }
     );
     dashboard.project.setLibraryName(this.state.libraryName);
@@ -124,14 +152,15 @@ class LibraryCreationDialog extends React.Component {
     }
   };
 
+  displayLoadingState = () => {
+    return (
+      <div style={styles.centerContent}>
+        <Spinner />
+      </div>
+    );
+  };
+
   displayFunctions = () => {
-    if (!this.state.loadingFinished) {
-      return (
-        <div style={styles.centerSpinner}>
-          <Spinner />
-        </div>
-      );
-    }
     let keyIndex = 0;
     return (
       <div>
@@ -176,18 +205,65 @@ class LibraryCreationDialog extends React.Component {
               </div>
             );
           })}
-          <input
-            className="btn btn-primary"
-            type="submit"
-            value={i18n.publish()}
-            disabled={!this.state.canPublish}
-          />
+          <div>
+            <input
+              className="btn btn-primary"
+              type="submit"
+              value={i18n.publish()}
+              disabled={!this.state.canPublish}
+            />
+            {this.state.loadingState === LoadingState.ERROR_PUBLISH && (
+              <p id="error-alert" style={styles.alert}>
+                {i18n.libraryPublishFail()}
+              </p>
+            )}
+          </div>
         </form>
       </div>
     );
   };
 
+  displaySuccess = () => {
+    return (
+      <div>
+        <Heading2>
+          <b>{i18n.libraryPublishTitle()}</b>
+          {this.state.libraryName}
+        </Heading2>
+        <div>
+          <p>{i18n.libraryPublishExplanation()}</p>
+          <div style={styles.centerContent}>
+            <input
+              type="text"
+              id="library-sharing"
+              onClick={select}
+              readOnly="true"
+              value={dashboard.project.getCurrentId()}
+              style={styles.copy}
+            />
+            <Button
+              onClick={this.copyChannelId}
+              text={i18n.copyId()}
+              style={styles.button}
+            />
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   render() {
+    let bodyContent;
+    switch (this.state.loadingState) {
+      case LoadingState.LOADING:
+        bodyContent = this.displayLoadingState();
+        break;
+      case LoadingState.PUBLISHED:
+        bodyContent = this.displaySuccess();
+        break;
+      default:
+        bodyContent = this.displayFunctions();
+    }
     return (
       <Dialog
         isOpen={this.props.dialogIsOpen}
@@ -198,7 +274,7 @@ class LibraryCreationDialog extends React.Component {
           <PadAndCenter>
             <div style={styles.libraryBoundary}>
               <Heading1>{i18n.libraryExportTitle()}</Heading1>
-              {this.displayFunctions()}
+              {bodyContent}
             </div>
           </PadAndCenter>
         </Body>

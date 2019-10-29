@@ -1,3 +1,6 @@
+- content_for(:head) do
+  %meta{name: "robots", content: "noindex"}/
+
 - if current_user || !@section
   %h2= t('join_section.code.title')
   %p= t('join_section.code.instructions')
