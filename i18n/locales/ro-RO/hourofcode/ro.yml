@@ -333,6 +333,7 @@ ro:
   meta_tag_twitter_description: 'Hour of Code este o mişcare globală care ajunge la zeci de milioane de elevi si studenţi din peste 180 de ţări şi peste 30 de limbi vorbite. Vârstele de la 4 la 104 ani.'
   twitter_default_text: "În acest an particip la #HourOfCode, tu? @codeorg"
   twitter_donor_text: "Anul acesta, #HourOfCode se concentrează mai mult pe creativitate. Eu mă implic! Tu? (Mulțumim %{random_donor} pentru suportul acordat @codeorg)"
+  twitter_donor_text_2019: "This year's #HourOfCode is about #CSforGood. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'Întrebări frecvente'
   hoc_faq_what_is_hoc_q: 'Ce reprezintă Hour of Code?'
   hoc_faq_what_is_hoc_a: "Ora de Programare reprezinta o introducere de o ora in stiinta computerului si programare, cu scopul de a demistifica limbajul specific si de a arata ca oricine poate invata bazele acestuia. Incearcarea de a apropia elevii de tehnologia computerelor si programare a devenit un efort global. Acesta incepe printr parcurgerea unor activitati de o ora, insa se extinde la tot felul de eforturi ale comunitatii. Iata <a href='%{tutorials}'> tutorialele si activitatile </a>. Aceasta campanie este sustinuta de peste <a href='%{partners}'> 400 de parteneri</a> si 200.000 de educatori din toata lumea."
