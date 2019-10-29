@@ -24,13 +24,25 @@ def main
       tag_list.
       any? {|tag| tag.key == 'environment' && tag.value == 'production'}
   end
+
+  # Spawn one thread for each replication task, so we can start and monitor them independently.
+  threads = []
   production_tasks.each do |task|
-    puts task.replication_task_identifier
+    threads << Thread.new {execute_replication_task(task.replication_task_arn)}
   end
+  threads.each(&:join)
+
   ChatClient.message'cron-daily', "Completed export from Aurora MySQL database to Redshift."
 rescue StandardError => error
   ChatClient.message'cron-daily', "Error during export from Aurora MySQL database to Redshift #{error.message}", color: 'red'
   raise error
+end
+
+# Start a replication task and wait until it completes, raising an error if the task did not complete within a
+# configurable time period or did not complete successfully.
+# @replication_task_arn [String]
+def execute_replication_task(replication_task_arn)
+  ChatClient.message 'cron-daily', "Starting DMS Replication Task: #{replication_task_arn}"
 end
 
 main
