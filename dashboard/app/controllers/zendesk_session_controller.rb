@@ -32,6 +32,14 @@ class ZendeskSessionController < ApplicationController
       @error = I18n.t('zendesk_unverified_codeorg_account_message')
       return false
     end
+    # Change our controller that does Single Sign On from Code Studio to ZenDesk to do nothing for
+    # external users (non @code.org users).  It would just redirect them to support.code.org and they
+    # would use it as an anonymous / non-authenticated user.
+    if user.email.present? && Mail::Address.new(user.email).domain != "code.org"
+      redirect_to "https://support.code.org"
+      return false
+    end
+
     return true
   end
 

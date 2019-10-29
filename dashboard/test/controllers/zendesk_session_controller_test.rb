@@ -41,6 +41,14 @@ class ZendeskSessionControllerTest < ActionController::TestCase
     assert_response :success # good old 200 success on failure..
   end
 
+  test "does not sign into Zendesk when non-codeorg user account" do
+    user = create :teacher, email: 'cornmaze@gmail.com'
+    sign_in user
+
+    get :index
+    assert_redirected_to "https://support.code.org"
+  end
+
   test "does sign in to zendesk when google oauth codeorg account" do
     user = create :teacher, :google_sso_provider, email: 'employee@code.org'
     sign_in user
