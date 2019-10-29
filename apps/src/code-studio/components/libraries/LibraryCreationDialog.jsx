@@ -13,10 +13,12 @@ import Button from '@cdo/apps/templates/Button';
 
 const styles = {
   alert: {
-    color: 'red'
+    color: 'red',
+    width: '90%'
   },
   libraryBoundary: {
-    padding: 10
+    padding: 10,
+    width: '90%'
   },
   largerCheckbox: {
     width: 20,
@@ -55,7 +57,8 @@ function select(event) {
 export const LoadingState = {
   LOADING: 'loading',
   DONE_LOADING: 'done_loading',
-  PUBLISHED: 'published'
+  PUBLISHED: 'published',
+  ERROR_PUBLISH: 'error_publish'
 };
 
 class LibraryCreationDialog extends React.Component {
@@ -128,6 +131,7 @@ class LibraryCreationDialog extends React.Component {
       libraryJson,
       error => {
         console.warn(`Error publishing library: ${error}`);
+        this.setState({loadingState: LoadingState.ERROR_PUBLISH});
       },
       () => {
         this.setState({loadingState: LoadingState.PUBLISHED});
@@ -213,9 +217,11 @@ class LibraryCreationDialog extends React.Component {
               disabled={!this.state.canPublish}
             />
             {this.state.loadingState === LoadingState.ERROR_PUBLISH && (
-              <p id="error-alert" style={styles.alert}>
-                {i18n.libraryPublishFail()}
-              </p>
+              <div>
+                <p id="error-alert" style={styles.alert}>
+                  {i18n.libraryPublishFail()}
+                </p>
+              </div>
             )}
           </div>
         </form>
