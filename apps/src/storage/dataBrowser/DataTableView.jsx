@@ -2,7 +2,7 @@
  * @overview Component for detailed view of a data table.
  */
 import TableControls from './TableControls';
-import {DataView} from '../constants';
+import {DataView, WarningType} from '../constants';
 import DataTable from './DataTable';
 import FirebaseStorage from '../firebaseStorage';
 import FontAwesome from '../../templates/FontAwesome';
@@ -116,11 +116,11 @@ class DataTableView extends React.Component {
         this.setState(INITIAL_STATE);
         onComplete();
       },
-      msg => {
-        if (String(msg).includes('data is too large')) {
-          this.props.onShowWarning(msg);
+      err => {
+        if (err.type === WarningType.IMPORT_FAILED) {
+          this.props.onShowWarning(err.msg);
         } else {
-          console.warn(msg);
+          console.warn(err.msg ? err.msg : err);
         }
         onComplete();
       }
