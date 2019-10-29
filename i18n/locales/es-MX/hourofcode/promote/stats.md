@@ -1,7 +1,5 @@
 ---
 title: Propagandas y estadísticas útiles
-layout: wide
-nav: promote_nav
 ---
 
 <a id="blurb"></a>
