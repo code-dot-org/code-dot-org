@@ -1185,6 +1185,9 @@ var projects = (module.exports = {
     });
   },
   setProjectLibraries(updatedLibrariesList) {
+    // If we're in start_blocks on levelbuilder, reload is disabled, so we need
+    // to set currentSources so it can be saved when the save button is clicked.
+    currentSources.libraries = updatedLibrariesList;
     return new Promise(resolve => {
       this.getUpdatedSourceAndHtml_(sourceAndHtml => {
         this.saveSourceAndHtml_(
@@ -1201,7 +1204,19 @@ var projects = (module.exports = {
     });
   },
   getProjectLibraries() {
-    return currentSources.libraries;
+    let startLibraries = appOptions.level.startLibraries;
+    return (
+      currentSources.libraries || (startLibraries && JSON.parse(startLibraries))
+    );
+  },
+  /**
+   * @returns {string} searches through all data we have on a level to find its
+   * name.
+   */
+  getLevelName() {
+    let name = current && current.name;
+    name = name || appOptions.level.name;
+    return name;
   },
   showSaveError_(errorType, errorCount, errorText) {
     header.showProjectSaveError();
@@ -1381,6 +1396,7 @@ var projects = (module.exports = {
     delete current.id;
     delete current.hidden;
     delete current.libraryName;
+    delete current.libraryDescription;
     current.projectType = this.getStandaloneApp();
     if (shouldPublish) {
       current.shouldPublish = true;
