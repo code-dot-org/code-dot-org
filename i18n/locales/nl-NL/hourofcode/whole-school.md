@@ -1,6 +1,5 @@
 ---
 title: Doe mee met de hele School
-layout: wide
 ---
 
 {{ signup_button }}

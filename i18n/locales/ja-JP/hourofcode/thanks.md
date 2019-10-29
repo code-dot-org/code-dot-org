@@ -1,10 +1,5 @@
 ---
 title: Hour of Codeのイベント主催への登録にご協力頂き大変ありがとうございます！
-layout: wide
-nav: how_to_nav
-social:
-  "twitter:card": player
-  "twitter:site": "@codeorg"
 ---
 
 # Hour of Codeのイベント主催への登録にご協力頂き大変ありがとうございます！

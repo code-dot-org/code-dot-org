@@ -333,6 +333,7 @@ tr:
   meta_tag_twitter_description: 'Kodlama Saati 180''den fazla ülkede gerçekleşen 10 milyonlarca öğrenciye ulaşmış küresel bir harekettir. 4''ten 104 yaşına kadar herkes için.'
   twitter_default_text: "Ben bu yıl #KodlamaSaati 'ne katılıyorum, ya siz? @codeorg"
   twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
+  twitter_donor_text_2019: "This year's #HourOfCode is about #CSforGood. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'SSS'
   hoc_faq_what_is_hoc_q: 'Kodlama Saati nedir?'
   hoc_faq_what_is_hoc_a: "Kodlama Saati bilgisayar bilimine bir saatlik bir giriştir, kodlamanın sırrını çözmeniz ve herkesin temelleri öğrenebileceğini görmeniz için tasarlanmıştır. <a href='http://code.org/learn'>Öğreticileri inceleyin</a>."

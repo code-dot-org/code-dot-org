@@ -333,6 +333,7 @@ mi:
   meta_tag_twitter_description: 'He kuhunga ā-ao te Hour of Code kua pā ki ngā ākonga piriona pakeke katoa, kua horapa ki ngā whenua 180 neke atu, kua whakamāoritia hoki ki ngā reo e 45 neke atu.'
   twitter_default_text: "E whai wāhi ahau ki te #HourOfCode o tēnei tau, ka pēnā hoki koe? @codeorg"
   twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
+  twitter_donor_text_2019: "This year's #HourOfCode is about #CSforGood. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'Ngā Pātai Auau (FAQ)'
   hoc_faq_what_is_hoc_q: 'He aha te Hour of Code?'
   hoc_faq_what_is_hoc_a: "I tīmata te Hour of Code hei whakamāramatanga o te pūtaiao rorohiko kotahi haora te roa. Ko tāna he hiki i te kohu o te \"waehere\" ki te whakaatu atu e taea ana e te katoa ngā waiwaitanga te ako ka tahi, ka rua ki te whakawhānui hoki i te urunga mai o te tangata ki te ngā mahi o te pūtaiao rorohiko. Nō taua wā kua tipu ia hei kawenga mā te ao ki te whakanui i te pūtaiao rorohiko mā te tīmata ki ētahi ngohe whakawaehere 1-haora te roa, heo anō, kua tipu hoki ngā āhuatanga tautoko a ngā hapori. Tirohia ngā <a href='%{tutorials}'>whakaakoranga me ngā ngohe</a>. Kei te tautokotia tēnei whakamataaratanga e te <a href='%{partners}'> 400 hoa</a>, e te 200,000 kaiwhakaako puta noa i te ao."
@@ -569,7 +570,7 @@ mi:
   tutorial_khan_name: "Khan Academy: Drawing with Code"
   tutorial_tynkerd_name: "Debugger"
   tutorial_cdmy_name: "Codecademy"
-  tutorial_codestersdance_name: "Dance Moves"
+  tutorial_codestersdance_name: "Nekenekehanga Kanikani"
   tutorial_codestersbasketball_name: "Basketball"
   tutorial_nclkarel_name: "Learn How to Code with Karel the Robot"
   tutorial_buildpong_name: "Build Pong with AI"

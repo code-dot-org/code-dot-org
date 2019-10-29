@@ -221,7 +221,7 @@ ca:
   front_join_us_tutorials: "Choose your Hour of Code tutorial!"
   front_join_us_tutorials_link: 'Filter and browse <i>over 200 tutorials and lesson plans</i>! Find activities for different subject areas, multiple hardware needs, and students at any experience level.'
   front_join_us_robotics: 'Win robots or circuits!'
-  front_join_us_robotics_link: 'Do you want a set of robots or physical computing kits to use with your students? Our generous partners are donating sets to over 100 classrooms! Sign up for the Hour of Code to participate. (Classrooms selected by Code.org, US Only)'
+  front_join_us_robotics_link: 'Do you want a set of robots or physical computing kits to use with your students? Our generous partners are donating sets to 75 classrooms! Sign up for the Hour of Code to participate. (Classrooms selected by Code.org, US Only)'
   front_join_us_teacher: 'Ets un mestre?'
   front_join_us_inspire: 'Inspira als alumnes amb'
   front_join_us_inspire_link: 'una Hora del Codi a l''aula.'
@@ -333,6 +333,7 @@ ca:
   meta_tag_twitter_description: 'L''Hora de Codi és un moviment mundial que arriba a desenes de milions d''estudiants en més de 180 països i més de 30 llengües. Edat 4 a 104.'
   twitter_default_text: "Jo estic participant en aquest any de #HourOfCode, i tu? @codeorg"
   twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
+  twitter_donor_text_2019: "This year's #HourOfCode is about #CSforGood. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'Preguntes freqüents'
   hoc_faq_what_is_hoc_q: 'Què és l''Hora de Codi?'
   hoc_faq_what_is_hoc_a: "The Hour of Code started as a one-hour introduction to computer science, designed to demystify \"code\", to show that anybody can learn the basics, and to broaden participation in the field of computer science. It has since become a worldwide effort to celebrate computer science, starting with 1-hour coding activities but expanding to all sorts of community efforts. Check out the <a href='%{tutorials}'>tutorials and activities</a>. This grassroots campaign is supported by over <a href='%{partners}'>400 partners</a> and 200,000 educators worldwide."

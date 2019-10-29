@@ -1,6 +1,5 @@
 ---
 title: 全校参与
-layout: wide
 ---
 
 {{ signup_button }}

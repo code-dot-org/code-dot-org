@@ -221,7 +221,7 @@ az:
   front_join_us_tutorials: "Kod Saatı dərsliyinizi seçin!"
   front_join_us_tutorials_link: 'Filter and browse <i>over 200 tutorials and lesson plans</i>! Find activities for different subject areas, multiple hardware needs, and students at any experience level.'
   front_join_us_robotics: 'Robotunuz var?'
-  front_join_us_robotics_link: 'Do you want a set of robots or physical computing kits to use with your students? Our generous partners are donating sets to over 100 classrooms! Sign up for the Hour of Code to participate. (Classrooms selected by Code.org, US Only)'
+  front_join_us_robotics_link: 'Do you want a set of robots or physical computing kits to use with your students? Our generous partners are donating sets to 75 classrooms! Sign up for the Hour of Code to participate. (Classrooms selected by Code.org, US Only)'
   front_join_us_teacher: 'Müəllimsiniz?'
   front_join_us_inspire: 'Şagirdləri həvəsləndirin'
   front_join_us_inspire_link: 'sinifdə bir Kod Saatı keçirməklə.'
@@ -333,6 +333,7 @@ az:
   meta_tag_twitter_description: 'Kod Saatı 180-dən çox ölkədə və 30-dan çox dildə on milyonlarla şagirdi əhatə edən qlobal bir hərəkatdır. 4 yaşlıdan tutmuş 104 yaşlıya qədər.'
   twitter_default_text: "Mən builki #HourOfCode Kod Saatında iştirak edirəm, bəs siz? @codeorg"
   twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
+  twitter_donor_text_2019: "This year's #HourOfCode is about #CSforGood. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'Tez-tez verilən suallar'
   hoc_faq_what_is_hoc_q: 'Kod Saatı nədir? '
   hoc_faq_what_is_hoc_a: "Kod Saatı proqramlaşdırmanın üzərdindən sehr pərdəsini götürərək, hər kəsin onun əsaslarını öyrənə biləcəyini göstərmək üçün hazırlanmış informatikaya bir saatlıq giriş kursudur. <a href='http://code.org/learn'>Dərslikləri nəzərdən keçirin</a>."

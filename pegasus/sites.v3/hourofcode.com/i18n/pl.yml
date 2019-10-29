@@ -333,6 +333,7 @@ pl:
   meta_tag_twitter_description: 'The Hour of Code to globalny ruch docierający do dziesiątek milionów uczniów w ponad 180 krajach, posługujących się ponad 30 językami. Wiek od 4 do 104 lat.'
   twitter_default_text: "Biorę udział w tegorocznym #HourOfCode, a Ty? @codeorg"
   twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
+  twitter_donor_text_2019: "This year's #HourOfCode is about #CSforGood. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'FAQ - Najczęściej zadawane pytania'
   hoc_faq_what_is_hoc_q: 'Czym jest Godzina kodowania?'
   hoc_faq_what_is_hoc_a: "Godzina kodowania to jednogodzinne wprowadzenie do informatyki, mające na celu demistyfikację \"code\" - programowania - i pokazanie, że każdy może nauczyć się podstaw i poszerzyć swój udział w obszarze informatyki. Od tego czasu ta inicjatywa stała się ogólnoświatowym wydarzeniem na rzecz informatyki, zapoczątkowana 1 godziną programowania, rozwijaja się następnie jako różnorodne przedsięwzięcia środowiska. Sprawdź <a href='%{tutorials}'> samouczki i działania </a>. Ta kampania jest wspierana przez ponad <a href='%{partners}'> 400 partnerów </a> i 200 000 nauczycieli na całym świecie."

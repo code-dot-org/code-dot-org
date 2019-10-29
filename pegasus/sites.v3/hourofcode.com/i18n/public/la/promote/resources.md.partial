@@ -12,7 +12,7 @@ nav: promote_nav
 
 ### Encuentra todos los recursos que necesitas para atraer la atención hacia tu Hora del Código. ¿No sabes por dónde empezar? ¡Comienza con nuestra [guía práctica para organizar una Hora del Código]({{ how_to_url }})!
 
----
+* * *
 
 {{ promote_handouts }} {{ promote_videos }}
 
@@ -69,7 +69,7 @@ nav: promote_nav
 
 ### Encuentra [más información y mensajes que puedes utilizar]({{ promote/stats_url }}) cuando hablas sobre la Hora del Código.
 
----
+* * *
 
 <a id="email"></a>
 
@@ -87,7 +87,7 @@ Corre la voz. Organiza un evento. Pide a una escuela local que se inscriba. O pr
 
 Comienza en http://hourofcode.com/{{ country }} <br />
 
----
+* * *
 
 <a id="help-schools"></a>
 
@@ -107,7 +107,7 @@ Las computadoras están en todas partes, cambiando todas las industrias del plan
 
 Puedes leer más sobre el evento en http://hourofcode.com. También puedes planificar una reunión con nosotros para hablar sobre cómo [nombre de la escuela] puede participar. <br />
 
----
+* * *
 
 <a id="parents"></a>
 
@@ -127,7 +127,7 @@ Aprovecha la oportunidad de cambiar el futuro de la educación en [NOMBRE DE LA 
 
 Visita http://hourofcode.com/{{ country }} para ver más detalles y ayudar a difundir la noticia. <br />
 
----
+* * *
 
 <a id="media-pitch"></a>
 
@@ -151,7 +151,7 @@ Contacto: [TU NOMBRE], [TITLE], Teléfono: (212) 555-5555 Cuándo: [FECHA y HORA
 
 Espero tu contacto. <br />
 
----
+* * *
 
 <a id="politicians"></a>
 

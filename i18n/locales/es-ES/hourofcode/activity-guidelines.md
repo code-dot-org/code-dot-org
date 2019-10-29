@@ -1,6 +1,5 @@
 ---
 title: Guía del tutorial
-layout: wide
 ---
 
 <style>

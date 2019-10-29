@@ -1,7 +1,5 @@
 ---
 title: Προηγούμενα Posters της Ώρας του Κώδικα
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

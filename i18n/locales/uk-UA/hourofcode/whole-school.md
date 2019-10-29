@@ -1,6 +1,5 @@
 ---
 title: Участь всієї школи
-layout: wide
 ---
 
 {{ signup_button }}

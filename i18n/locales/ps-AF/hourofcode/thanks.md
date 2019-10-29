@@ -1,10 +1,5 @@
 ---
 title: مننه، چې د کوډ ساعت د کوربونې لپاره مو ځان ثبت کړ!
-layout: wide
-nav: how_to_nav
-social:
-  "twitter:card": player
-  "twitter:site": "@codeorg"
 ---
 
 # مننه، چې د کوډ ساعت د کوربونې لپاره مو ځان ثبت کړ!

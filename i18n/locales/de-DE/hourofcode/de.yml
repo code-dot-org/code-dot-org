@@ -333,6 +333,7 @@ de:
   meta_tag_twitter_description: 'Die Hour of Code ist eine weltweite Bewegung, die Millionen von Schülern in über 180 Ländern mit über 30 Sprachen erreicht. Alter von 4 bis 104 Jahre.'
   twitter_default_text: "Ich nehme dieses Jahr an der #HourOfCode teil, und Du? @codeorg"
   twitter_donor_text: "Beim diesjährigen #HourOfCode geht es um Kreativität. Ich bin dabei! Bist du das? (Danke %{random_donor} für die Unterstützung von @codeorg)"
+  twitter_donor_text_2019: "This year's #HourOfCode is about #CSforGood. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'Häufig gestellte Fragen'
   hoc_faq_what_is_hoc_q: 'Was ist die Hour of Code?'
   hoc_faq_what_is_hoc_a: "Hour of Code ist eine einstündige Einführung in die Informatik, entwickelt um hinter das Geheimnis der Programmierung zu schauen und die Grundlagen kennen zu lernen. <a href='%{codeorg_url}'>Probieren Sie die Tutorials aus</a>."

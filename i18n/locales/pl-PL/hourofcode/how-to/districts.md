@@ -1,7 +1,5 @@
 ---
 title: Poradnik Godziny Kodowania dla jednostek
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

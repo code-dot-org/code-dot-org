@@ -333,6 +333,7 @@ vi:
   meta_tag_twitter_description: 'Giờ Mã là một trào lưu toàn cầu tiếp cận hàng chục triệu học sinh, sinh viên trên 180+ quốc gia và có sẵn trong hơn 30 ngôn ngữ. Độ tuổi từ 4 đến 104.'
   twitter_default_text: "Tôi đang đang tham gia #HourofCode vào năm nay? còn bạn"
   twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
+  twitter_donor_text_2019: "This year's #HourOfCode is about #CSforGood. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'Câu hỏi thường gặp'
   hoc_faq_what_is_hoc_q: 'Hour of Code là gì?'
   hoc_faq_what_is_hoc_a: "Hour of Cpde là một giờ giới thiệu về khoa học máy tính, được thiết kế để mã rõ ràng và hiển thị mà bất cứ ai có thể học những điều cơ bản. <a href='http://code.org/learn'> kiểm tra các hướng dẫn."

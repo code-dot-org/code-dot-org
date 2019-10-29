@@ -13,12 +13,12 @@ el:
   hoc2019_header: 'Μάθετε πληροφορική. Αλλάξτε τον κόσμο.'
   hoc2019_header_line1_mobile: 'Μάθετε πληροφορική.'
   hoc2019_header_line2_mobile: 'Αλλάξτε τον κόσμο.'
-  social_hoc2019_every_sudent: 'Every student has the potential to change the world. Help them get started. #CSforGood'
-  social_hoc2019_learn_computer_science: 'Learn computer science. Change the world. #CSforGood #HourOfCode'
-  social_hoc_is_coming: 'The Hour of Code is coming!'
-  social_hoc2019_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn computer science. Change the world.'
-  social_hoc2019_coming_dates: 'The Hour of Code is coming December 9-15, 2019. Computer science is foundational for every student to learn.'
-  social_hoc2019_dance: 'Featuring Katy Perry, Jonas Brothers, Lil Nas X, Panic at the Disco, and many more!'
+  social_hoc2019_every_sudent: 'Κάθε μαθητής ή μαθήτρια μπορεί να αλλάξει τον κόσμο. Βοηθήστε τους να ξεκινήσουν. #CSforGood'
+  social_hoc2019_learn_computer_science: 'Μάθετε πληροφορική. Αλλάξτε τον κόσμο. #CSforGood #HourOfCode'
+  social_hoc_is_coming: 'Η Ώρα του Κώδικα πλησιάζει!'
+  social_hoc2019_hoc_is_about_csforgood: 'Η ώρα του κώδικα (#HourOfCode) αφορά τη χρήση της πληροφορικής για καλό σκοπό (#CSforGood). Μάθετε πληροφορική. Αλλάξτε τον κόσμο.'
+  social_hoc2019_coming_dates: 'Η Ώρα του Κώδικα έρχεται στις 9-15 Δεκεμβρίου 2019. Η πληροφορική είναι μια από τις θεμελιώδεις γνώσεις κάθε μαθητή.'
+  social_hoc2019_dance: 'Με ονόματα όπως Katy Perry, Jonas Brothers, Lil Nas X, Panic at the Disco και πολλούς άλλους!'
   codeorg_homepage_hoc2018_curriculum: 'Προχωρήστε παραπέρα με <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">μαθήματα Code.org</a>'
   codeorg_homepage_hoc2018_dance_heading: 'Δημιουργήστε το δικό σας <span class="highlight-word">χορευτικό&nbsp;πάρτυ</span>'
   codeorg_homepage_hoc2018_header_line1: 'Η Ώρα του Κώδικα πλησιάζει...'
@@ -333,6 +333,7 @@ el:
   meta_tag_twitter_description: 'Η Ώρα του Κώδικα είναι ένα παγκόσμιο κίνημα που φτάνει σε δεκάδες εκατομμύρια μαθητές σε 200 χώρες και σε πάνω από 30 γλώσσες. Για ηλικίες 4 έως 104.'
   twitter_default_text: "Συμμετέχω στη φετινή #HourOfCode, εσύ; @codeorg"
   twitter_donor_text: "Το φετινό #HourOfCode έχει σχέση με τη δημιουργικότητα. Είμαι μέσα! Εσείς; (Ευχαριστούμε %{random_donor} για τη στήριξη του @codeorg)"
+  twitter_donor_text_2019: "This year's #HourOfCode is about #CSforGood. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'Συχνές ερωτήσεις'
   hoc_faq_what_is_hoc_q: 'Τι είναι το Hour of Code;'
   hoc_faq_what_is_hoc_a: "Η Ώρα του Κώδικα ξεκίνησε ως εισαγωγή μιας ώρας μαθήματος στην επιστήμη των υπολογιστών, σχεδιασμένη να απομυθοποιήσει την έννοια του προγραμματισμού (κώδικα), να δείξει ότι ο καθένας μπορεί να μάθει τα βασικά και να διευρύνει τη συμμετοχή στον τομέα της πληροφορικής. Από τότε έχει γίνει μια παγκόσμια προσπάθεια να τιμήσει την επιστήμη των υπολογιστών, ξεκινώντας με δραστηριότητες κωδικοποίησης μιας ώρας, αλλά και επεκτείνοντας όλες τις προσπάθειες της κοινότητας υπολογιστών. Ρίξτε μια ματιά στα έτοιμα μαθήματα/ δραστηριότητες (<a href='%{tutorials}'>tutorials and activities</a>). Αυτή η βασική εκστρατεία υποστηρίζεται από περισσότερους από 400 συνεργάτες (<a href='%{partners}'>400 partners</a>) και 200.000 εκπαιδευτικούς παγκοσμίως."

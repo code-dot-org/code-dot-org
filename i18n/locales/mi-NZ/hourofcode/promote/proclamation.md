@@ -1,7 +1,5 @@
 ---
 title: Whakataunga Tautoko i Te Wiki o te Mātauranga Pūtaiao Rorohiko me te Hour of Code hei tauira
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

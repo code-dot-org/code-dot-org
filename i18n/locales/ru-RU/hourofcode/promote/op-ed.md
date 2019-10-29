@@ -1,7 +1,5 @@
 ---
 title: Образец заявления в поддержку Образовательной Недели информатики
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

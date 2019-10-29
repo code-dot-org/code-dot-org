@@ -1,7 +1,5 @@
 ---
 title: Руководство по Часу Кода для районов
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}
