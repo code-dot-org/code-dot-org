@@ -1,6 +1,5 @@
 ---
 title: Bütün Okul Katılımı
-layout: wide
 ---
 
 {{ signup_button }}
