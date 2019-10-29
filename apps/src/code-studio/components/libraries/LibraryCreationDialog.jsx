@@ -106,6 +106,7 @@ class LibraryCreationDialog extends React.Component {
       }
     );
     dashboard.project.setLibraryName(this.state.libraryName);
+    dashboard.project.setLibraryDescription(libraryDescription);
   };
 
   validateInput = () => {

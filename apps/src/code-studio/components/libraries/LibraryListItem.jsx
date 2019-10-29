@@ -52,10 +52,6 @@ export default class LibraryListItem extends React.Component {
     onAdd: PropTypes.func
   };
 
-  displayDescription = _ => {
-    return "My Library's very long description that goes off the page.";
-  };
-
   moreDetails = _ => {
     return 'See More Details';
   };
@@ -89,7 +85,7 @@ export default class LibraryListItem extends React.Component {
           </button>
         )}
         <span style={styles.description}>
-          {this.displayDescription(library.description)}
+          {library.description}
           <br />
           {library.studentName && (
             <span style={styles.author}>Author: {library.studentName}</span>

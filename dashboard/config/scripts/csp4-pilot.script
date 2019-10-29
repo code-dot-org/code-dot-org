@@ -136,3 +136,9 @@ level 'U4 L14 Practice PT 2', progression: 'Submit Your Decision Maker App', ass
 stage 'Lesson 15: Unit 4 Assessment', lockable: true
 level 'CSP U4L15 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP 20-21 Unit 4 Assessment', assessment: true
+
+stage 'Unit 4 STUDENT Survey', lockable: true, flex_category: 'required'
+level 'CSP U4 20-21 Student Pilot Survey', progression: 'Unit 4 STUDENT Survey', assessment: true
+
+stage 'Unit 4 TEACHER Survey', lockable: true, flex_category: 'required'
+level 'CSP U4 20-21 Teacher Pilot Survey', progression: 'Unit 4 TEACHER Survey', assessment: true
