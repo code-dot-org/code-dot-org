@@ -153,12 +153,13 @@ progress.renderCourseProgress = function(scriptData) {
   );
 
   store.dispatch(initializeHiddenScripts(scriptData.section_hidden_unit_info));
-
   const mountPoint = document.createElement('div');
   $('.user-stats-block').prepend(mountPoint);
   ReactDOM.render(
     <Provider store={store}>
       <ScriptOverview
+        id={scriptData.id}
+        courseId={scriptData.course_id}
         onOverviewPage={true}
         excludeCsfColumnInLegend={scriptData.excludeCsfColumnInLegend}
         teacherResources={teacherResources}
@@ -173,7 +174,7 @@ progress.renderCourseProgress = function(scriptData) {
         locale={scriptData.locale}
         showAssignButton={scriptData.show_assign_button}
         userId={scriptData.user_id}
-        sections={scriptData.sections}
+        sectionsForDropdown={scriptData.sections}
       />
     </Provider>,
     mountPoint

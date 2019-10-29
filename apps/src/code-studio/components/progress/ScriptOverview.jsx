@@ -36,6 +36,8 @@ import experiments from '@cdo/apps/util/experiments';
  */
 class ScriptOverview extends React.Component {
   static propTypes = {
+    id: PropTypes.number,
+    courseId: PropTypes.number,
     onOverviewPage: PropTypes.bool.isRequired,
     excludeCsfColumnInLegend: PropTypes.bool.isRequired,
     teacherResources: PropTypes.arrayOf(resourceShape).isRequired,
@@ -165,7 +167,7 @@ class ScriptOverview extends React.Component {
               )}
             <ScriptOverviewTopRow
               sectionsInfo={sectionsInfo}
-              sections={sectionsForDropdown}
+              sectionsForDropdown={sectionsForDropdown}
               selectedSectionId={parseInt(selectedSectionId)}
               professionalLearningCourse={professionalLearningCourse}
               scriptProgress={scriptProgress}
