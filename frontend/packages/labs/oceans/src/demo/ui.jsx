@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {getState, setState} from './state';
 import {Modes} from './constants';
-import {toMode} from './helpers';
+import {toMode} from './toMode';
 import {init as initModel} from './models';
 import {onClassifyFish} from './models/train';
 
