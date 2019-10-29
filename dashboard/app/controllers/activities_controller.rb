@@ -232,7 +232,7 @@ class ActivitiesController < ApplicationController
     if user_level_info
       puts user_level_info.time_spent
       puts [params[:time].to_i, 0].max
-      #user_level_info.update(time_spent: [user_level_info.time_spent + [params[:time].to_i, 0].max, MAX_INT_MILESTONE].min)
+      user_level_info.update(time_spent: [user_level_info.time_spent + [params[:time].to_i, 0].max, MAX_INT_MILESTONE].min)
     else
       user_level = UserLevel.create(
         user_id: current_user.id,
