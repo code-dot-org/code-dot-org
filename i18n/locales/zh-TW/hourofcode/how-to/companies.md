@@ -1,7 +1,5 @@
 ---
 title: 如何辦理一小時玩程式活動 - 企業
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}
