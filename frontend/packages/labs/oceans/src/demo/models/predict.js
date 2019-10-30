@@ -1,4 +1,4 @@
-import 'babel-polyfill';
+import 'idempotent-babel-polyfill';
 import {setState} from '../state';
 import {generateOcean} from '../../utils/generateOcean';
 

@@ -1,4 +1,4 @@
-import 'babel-polyfill';
+import 'idempotent-babel-polyfill';
 import {initRenderer} from '../renderer';
 import {setState} from '../state';
 import {Modes} from '../constants';

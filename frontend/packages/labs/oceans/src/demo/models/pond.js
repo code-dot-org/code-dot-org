@@ -1,4 +1,4 @@
-import 'babel-polyfill';
+import 'idempotent-babel-polyfill';
 import _ from 'lodash';
 import {setState, getState} from '../state';
 import constants, {ClassType} from '../constants';

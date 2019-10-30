@@ -4,6 +4,7 @@ module.exports = {
     extensions: ['.js', '.jsx'],
   },
   entry: {
+    main: './src/index.js',
     demo: './src/demo/index.jsx',
   },
   output: {
@@ -27,6 +28,13 @@ module.exports = {
           plugins: ["transform-class-properties"]
         }
       }]
+    },
+    {
+      test: /\.png$/,
+      loader: "url-loader",
+      options: {
+        limit: true, // everything
+      }
     }],
   },
 };

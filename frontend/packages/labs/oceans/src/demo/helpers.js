@@ -1,6 +1,7 @@
 import queryString from 'query-string';
 import {Modes} from './constants';
 import {FishBodyPart} from '../utils/fishData';
+import underwaterBackground from '../../public/images/underwater-background.png';
 
 export const backgroundPathForMode = mode => {
   let imgName;
@@ -11,7 +12,8 @@ export const backgroundPathForMode = mode => {
   // Temporarily show background for every mode.
   imgName = 'underwater';
 
-  return imgName ? backgroundPath(imgName) : null;
+  // TODO: fix this
+  return imgName ? underwaterBackground : null;
 };
 
 export const backgroundPath = imgName => {
