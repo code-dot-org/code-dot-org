@@ -10,7 +10,6 @@ const styles = {
     color: color.dark_charcoal,
     textAlign: 'left',
     display: 'flex',
-    backgroundColor: color.offwhite_gray,
     borderBottom: 'inset'
   },
   libraryName: {
