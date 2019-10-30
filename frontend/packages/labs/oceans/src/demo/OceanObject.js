@@ -61,7 +61,7 @@ export const loadAllFishPartImages = () => {
 export const generateOceanObject = (
   allowedClasses,
   id,
-  allowedComponents = fishData
+  allowedComponents = null
 ) => {
   const idx = Math.floor(Math.random() * allowedClasses.length);
   const newOceanObject = new allowedClasses[idx](id, allowedComponents);
@@ -102,7 +102,7 @@ export class OceanObject {
 }
 
 export class FishOceanObject extends OceanObject {
-  constructor(id, componentOptions) {
+  constructor(id, componentOptions = fishData) {
     super(id);
     this.bodies = Object.values(componentOptions.bodies);
     this.eyes = Object.values(componentOptions.eyes);

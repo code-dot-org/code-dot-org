@@ -4,12 +4,14 @@ import {fishData} from './fishData';
 import {filterFishComponents} from '../demo/helpers';
 
 export const generateOcean = numFish => {
-  const state = getState();
-  const filteredComponents = filterFishComponents(fishData, state.dataSet);
+  // Right now, all ocean objects are FishOceanObjects. This will need to be
+  // refactored when we add other object types.
+  const allowedClasses = [FishOceanObject];
+  const allowedComponents = filterFishComponents(fishData, getState().dataSet);
 
   const ocean = [];
   for (var i = 0; i < numFish; ++i) {
-    ocean.push(generateOceanObject([FishOceanObject], i, filteredComponents));
+    ocean.push(generateOceanObject(allowedClasses, i, allowedComponents));
   }
   return ocean;
 };
