@@ -3,6 +3,7 @@ import {shallow} from 'enzyme';
 import sinon from 'sinon';
 import {expect} from '../../../util/reconfiguredChai';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
+import GoogleChart from '@cdo/apps/applab/GoogleChart';
 import {UnconnectedDataVisualizer as DataVisualizer} from '@cdo/apps/storage/dataBrowser/DataVisualizer';
 
 const DEFAULT_PROPS = {
@@ -25,6 +26,52 @@ describe('DataVisualizer', () => {
 
     wrapper.instance().handleOpen();
     expect(wrapper.find(BaseDialog).prop('isOpen')).to.be.true;
+  });
+
+  describe('updateChart', () => {
+    let wrapper;
+    let spy;
+    beforeEach(() => {
+      GoogleChart.lib = {};
+      spy = sinon.stub(GoogleChart.prototype, 'drawChart');
+      const STARTING_PROPS = {
+        tableColumns: ['category1', 'category2'],
+        tableName: 'testTable',
+        tableRecords: [
+          '{"category1" : "red", "category2": 1, "category3": 10}',
+          '{"category1" : "blue", "category2": 1, "category3": 20}',
+          '{"category1" : "red", "category2": 3, "category3": 10}',
+          '{"category1" : "green", "category2": 4, "category3": 10}'
+        ]
+      };
+      wrapper = shallow(<DataVisualizer {...STARTING_PROPS} />);
+      wrapper.instance().handleOpen();
+      var chartArea = document.createElement('div');
+      chartArea.setAttribute('id', 'chart-area');
+      document.body.appendChild(chartArea);
+    });
+
+    afterEach(() => spy.restore());
+
+    it('can show a scatter plot', () => {
+      const expectedChartData = [
+        {category1: 'red', category2: 1, category3: 10},
+        {category1: 'blue', category2: 1, category3: 20},
+        {category1: 'red', category2: 3, category3: 10},
+        {category1: 'green', category2: 4, category3: 10}
+      ];
+      wrapper.instance().setState({
+        chartType: 'Scatter Plot',
+        xValues: 'category2',
+        yValues: 'category3'
+      });
+      expect(spy).to.have.been.calledOnce;
+      expect(spy.getCalls()[0].args).to.deep.equal([
+        expectedChartData,
+        ['category2', 'category3'],
+        {}
+      ]);
+    });
   });
 
   describe('parseRecords', () => {
