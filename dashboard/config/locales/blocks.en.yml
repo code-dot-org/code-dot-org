@@ -1362,9 +1362,9 @@ en:
 
 '
       Mikelab_sendBad:
-        text: move left
+        text: move object left
       Mikelab_sendGood:
-        text: move right
+        text: move object right
       Mikelab_setBG:
         text: set background to {BG}
         options:

@@ -580,6 +580,9 @@ en:
         CSF-Teaching-Problem-Solving: CSF Teaching Problem Solving
         u5-traversals-get-list-explanation: Code.org [levelbuilder] - Pilot Video - Data block
         u7-libraries-explanation: 'App Lab: Make Your Own Blocks - How to Use Libraries'
+        how-to-k5-workshops: 'Code.org''s CS Fundamentals: Kid Tested, Teacher Approved'
+        why-should-teach-unplugged-activities: 'FAQ: Why should I teach "unplugged" activities?'
+        cs-principles-intro-to-objects: 'CS Principles: Intro to Objects'
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

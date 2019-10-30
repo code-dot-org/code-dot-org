@@ -1,5 +1,6 @@
 ---
-title: Ejemplo de página de opinión de apoyo a la Semana de Educación para las Ciencias de la Computación y la Hora del Código
+title: Ejemplo de página de opinión de apoyo a la Semana de Educación para las Ciencias
+  de la Computación y la Hora del Código
 layout: wide
 nav: promote_nav
 ---
@@ -12,7 +13,7 @@ nav: promote_nav
 
 ### Visit [advocacy.code.org]({{ urls/advocacy }}) to find state specific information about computer science.
 
----
+* * *
 
 #### Title: Computing…Where the Jobs Are
 
