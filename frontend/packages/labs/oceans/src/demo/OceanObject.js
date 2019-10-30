@@ -63,10 +63,7 @@ export const loadAllFishPartImages = () => {
 };
 
 export const initMobilenet = () => {
-  return mobilenetModule.load(
-    1,
-    0.25
-  ).then(res => (mobilenet = res));
+  return mobilenetModule.load(1, 0.25).then(res => (mobilenet = res));
 };
 
 export const loadAllTrashImages = () => {
@@ -127,9 +124,11 @@ export class OceanObject {
   }
   generateLogits(canvas) {
     if (mobilenet && !this.logits) {
-      const image = tf.fromPixels(canvas);
-      const infer = () => mobilenet.infer(image, 'conv_preds');
-      this.logits = infer();
+      new Promise((resolve) => {
+        const image = tf.fromPixels(canvas);
+        const infer = () => mobilenet.infer(image, 'conv_preds');
+        this.logits = infer();
+      });
     }
   }
 }
@@ -261,8 +260,8 @@ export class TrashOceanObject extends OceanObject {
     const ctx = canvas.getContext('2d');
     ctx.translate(canvas.width / 2, canvas.height / 2);
     ctx.rotate(Math.random() * 2 * Math.PI);
-    const xpos = -1 * this.image.width / 2;
-    const ypos = -1 * this.image.height / 2;
+    const xpos = (-1 * this.image.width) / 2;
+    const ypos = (-1 * this.image.height) / 2;
     ctx.drawImage(this.image, xpos, ypos);
     this.generateLogits(canvas);
   }

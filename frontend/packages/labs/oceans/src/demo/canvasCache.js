@@ -35,12 +35,8 @@ export default class CanvasCache {
       cacheHit = false;
       canvasObject.key = key;
       const ctx = canvasObject.canvas.getContext('2d');
-      ctx.clearRect(
-        0,
-        0,
-        canvasObject.canvas.width,
-        canvasObject.canvas.height
-      );
+      ctx.restore();
+      ctx.save();
     }
     // Add this canvas to the front of the array (most recently used)
     this.canvases.unshift(canvasObject);
