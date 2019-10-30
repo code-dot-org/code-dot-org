@@ -1,7 +1,5 @@
 ---
 title: Mga pwedeng makatulong
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

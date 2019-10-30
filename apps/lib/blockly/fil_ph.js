@@ -40,6 +40,7 @@ Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST_TAIL = "";
 Blockly.Msg.CONTROLS_FOREACH_INPUT_ITEM = "sa bawat item";
 Blockly.Msg.CONTROLS_FOREACH_TOOLTIP = "Para sa bawat item na nasa listahan, i-set ang baryabol ng '% 1' sa bawat item, at pagkatapos gumawa ng ilan pang statements.";
 Blockly.Msg.CONTROLS_FOR_HELPURL = "";
+Blockly.Msg.CONTROLS_FOR_INPUT_COUNTER = "for %1 from %2 to %3 count by %4";
 Blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY = "mula %1 hanggang %2 ng %3";
 Blockly.Msg.CONTROLS_FOR_INPUT_WITH = "para sa";
 Blockly.Msg.CONTROLS_FOR_TOOLTIP = "Magkaroon ng mga variable na %1 na tanggalin ng mga halaga mula sa simulang numero hanggang sa dulong numero, at bilangin sa pamamagitan ng tinukoy na agwat, at gawin ang mga tinukoy na mga blocks.";

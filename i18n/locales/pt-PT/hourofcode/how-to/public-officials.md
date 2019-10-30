@@ -1,7 +1,5 @@
 ---
 title: Guia prático para funcionários públicos
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

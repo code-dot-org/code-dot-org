@@ -1,7 +1,5 @@
 ---
 title: Voorbeeld-motie ter ondersteuning van Computer Science Education Week en 'Hour of Code'
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

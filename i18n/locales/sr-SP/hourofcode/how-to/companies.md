@@ -1,7 +1,5 @@
 ---
 title: Како угостити Час кодирања - компаније
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

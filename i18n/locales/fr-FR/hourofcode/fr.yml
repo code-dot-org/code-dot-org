@@ -333,6 +333,7 @@ fr:
   meta_tag_twitter_description: 'Une Heure de Code est un mouvement mondial qui touche des dizaines de millions d’élèves dans plus de 180 pays et plus de 30 langues. De 4 à 104 ans.'
   twitter_default_text: "Je participe à #HourOfCode cette année, et vous ? @codeorg"
   twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
+  twitter_donor_text_2019: "This year's #HourOfCode is about #CSforGood. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'FAQs'
   hoc_faq_what_is_hoc_q: 'Une Heure de Code, qu''est-ce que c''est?'
   hoc_faq_what_is_hoc_a: "Une Heure de Code est une introduction d'une heure à l'informatique. Ce programme est conçu pour démystifier la programmation et montrer que n'importe qui peut en apprendre les rudiments. <a href='%{codeorg_url}'>Découvrez les tutoriels</a>."

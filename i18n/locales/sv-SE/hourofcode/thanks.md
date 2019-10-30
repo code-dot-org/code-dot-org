@@ -1,10 +1,5 @@
 ---
 title: Tack för att du anmält dig att hålla ett Hour of Code-evenemang!
-layout: wide
-nav: how_to_nav
-social:
-  "twitter:card": player
-  "twitter:site": "@codeorg"
 ---
 
 # Tack för att du anmält dig att hålla ett Hour of Code-evenemang!

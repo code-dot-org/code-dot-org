@@ -1,7 +1,5 @@
 ---
 title: Примерни откриване-закриване изявления в подкрепа на Csew и Hour of Code
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

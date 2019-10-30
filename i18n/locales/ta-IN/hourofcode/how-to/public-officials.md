@@ -1,7 +1,5 @@
 ---
 title: பொது அதிகாரிகளுக்கு வழிகாட்ட எப்படி
-layout: wide
-nav: how_to_nav
 ---
 
 {{signup_button}}

@@ -1,6 +1,5 @@
 ---
 title: Deltagelse - hele skoler
-layout: wide
 ---
 
 {{ signup_button }}

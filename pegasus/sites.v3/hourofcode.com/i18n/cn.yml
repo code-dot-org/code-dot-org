@@ -333,6 +333,7 @@ cn:
   meta_tag_twitter_description: '编程一小时活动是一个全球性的活动，在全球180多个国家，有使用30多种语言的数千万学生参与了这个活动。4岁以上即可参与。'
   twitter_default_text: "我正在参加今年的 #HourOfCode，你呢？@codeorg"
   twitter_donor_text: "今年的 #HourOfCode 是关于创造力的。我已加入，你呢？（感谢 %{random_donor} 支持 @codeorg）"
+  twitter_donor_text_2019: "This year's #HourOfCode is about #CSforGood. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: '常见问题'
   hoc_faq_what_is_hoc_q: '编程一小时是什么？'
   hoc_faq_what_is_hoc_a: "编程一小时以一个小时的时间开始，介绍计算机科学，并让人们快速了解编码。让人们轻而易举学习最基本的知识，让人们更加广泛了解计算机科学。这是一个国际运动，从一小时训练营开始到社区运动。查看<a href='%{tutorials}'>教程和活动</a>。这草根活动被超过<a href='%{partners}'>400位伙伴</a>和200千全球工作者所支持。"

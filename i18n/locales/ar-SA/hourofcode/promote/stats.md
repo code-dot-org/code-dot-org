@@ -1,7 +1,5 @@
 ---
 title: ملخصات وإحصائيات مفيدة
-layout: wide
-nav: promote_nav
 ---
 
 <a id="blurb"></a>

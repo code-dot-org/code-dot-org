@@ -3,22 +3,8 @@ title: Obrigado por se inscrever para promover uma Hora de Código!
 layout: wide
 nav: how_to_nav
 social:
-  og:title: A Hora de Código está a chegar
-  og:description: A Hora de Código é um movimento global que chega a dezenas de milhões
-    de estudantes em mais de 180 países e 30 diferentes línguas. Para todos, desde
-    os 4 aos 104 anos.
-  og:image: http://hourofcode.com/images/hourofcode-2015-video-thumbnail.png
-  og:image:width: 1440
-  og:image:height: 900
-  og:url: http://hourofcode.com
   twitter:card: player
   twitter:site: "@codeorg"
-  twitter:url: http://hourofcode.com
-  twitter:title: A Hora de Código está a chegar
-  twitter:description: A Hora de Código é um movimento global que chega a dezenas
-    de milhões de estudantes em mais de 180 países e 30 diferentes línguas. Para todos,
-    desde os 4 aos 104 anos.
-  twitter:image:src: http://hourofcode.com/images/hourofcode-2015-video-thumbnail.png
 ---
 
 # Obrigado por se inscrever para promover uma Hora de Código!

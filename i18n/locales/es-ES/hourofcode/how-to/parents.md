@@ -1,7 +1,5 @@
 ---
 title: Guía para familias
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}
@@ -43,7 +41,7 @@ No importe si usted y sus estudiantes son nuevos en la Informática. Aquí tiene
 
 - Explica algunas formas en las que la tecnología hace impacto en nuestras vidas, con ejemplos que les interesen tanto a niños como a niñas (habla acerca de las tecnologías que salvan vidas, ayudando a las personas, conectándolas, etc.).
 - Haga una lista de las cosas que utilizan código en la vida cotidiana.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- Vea consejos para que la chicas se interesen ciencia de la computación [aquí]({{ urls/girls }}).
 
 ¿Quiere más ideas? Revise nuestra [plantilla de plan de clase](/files/AfterschoolEducatorLessonPlanOutline.docx) con las mejores prácticas de experimentados educadores.
 
