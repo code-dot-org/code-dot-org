@@ -1716,6 +1716,10 @@ StudioApp.prototype.report = function(options) {
     lines: this.feedback_.getNumBlocksUsed()
   });
 
+  // After we log the reported time we should update the init time
+  // otherwise if we don't leave the page we are compounding the total time
+  this.initTime = new Date().getTime();
+
   this.lastTestResult = options.testResult;
 
   const readOnly = getStore().getState().pageConstants.isReadOnlyWorkspace;
