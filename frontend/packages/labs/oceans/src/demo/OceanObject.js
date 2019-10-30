@@ -60,9 +60,27 @@ export const loadAllFishPartImages = () => {
 
 export const generateOceanObject = (allowedClasses, id, dataSet = null) => {
   const idx = Math.floor(Math.random() * allowedClasses.length);
-  const newOceanObject = new allowedClasses[idx](id, dataSet);
+  const newOceanObject = new allowedClasses[idx](
+    id,
+    filterFishComponents(dataSet)
+  );
   newOceanObject.randomize();
   return newOceanObject;
+};
+
+const filterFishComponents = dataSet => {
+  if (!dataSet) {
+    return fishData;
+  }
+
+  let filteredCopy = {...fishData};
+  Object.keys(filteredCopy).forEach(key => {
+    filteredCopy[key] = Object.values(filteredCopy[key]).filter(
+      option => !(option.exclusions || []).includes(dataSet)
+    );
+  });
+
+  return filteredCopy;
 };
 
 export class OceanObject {
@@ -97,22 +115,17 @@ export class OceanObject {
   }
 }
 
-const filterExclusions = (component, dataSet) => {
-  return Object.values(component).filter(
-    option => !(option.exclusions || []).includes(dataSet)
-  );
-};
-
 export class FishOceanObject extends OceanObject {
-  constructor(id, dataSet = null) {
+  constructor(id, componentOptions) {
     super(id);
-    let scopedThis = this;
-    Object.keys(fishData).forEach(componentKey => {
-      scopedThis[componentKey] = filterExclusions(
-        fishData[componentKey],
-        dataSet
-      );
-    });
+    this.bodies = Object.values(componentOptions.bodies);
+    this.eyes = Object.values(componentOptions.eyes);
+    this.mouths = Object.values(componentOptions.mouths);
+    this.pectoralFinsFront = Object.values(componentOptions.pectoralFinsFront);
+    this.pectoralFinsBack = Object.values(componentOptions.pectoralFinsBack);
+    this.dorsalFins = Object.values(componentOptions.dorsalFins);
+    this.tails = Object.values(componentOptions.tails);
+    this.colorPalettes = Object.values(componentOptions.colorPalettes);
   }
 
   randomize() {
