@@ -1,5 +1,4 @@
 require 'erb'
-require 'haml'
 require 'ostruct'
 require 'redcarpet'
 require 'yaml'
@@ -100,59 +99,18 @@ module TextRender
   #
   # Markdown
   #
+
+  require 'commonjs'
+  require 'v8'
+
   class MarkdownEngine
-    class HTMLWithDivBrackets < Redcarpet::Render::HTML
-      def postprocess(full_document)
-        process_div_brackets(full_document)
-      end
-
-      private
-
-      # CDO-Markdown div_brackets extension.
-      # Convert `[tag]...[/tag]` to `<div class='tag'>...</div>`.
-      def process_div_brackets(full_document)
-        full_document.
-          gsub(/<p>\[\/(.*)\]<\/p>/, '</div>').
-          gsub(/<p>\[(.*)\]<\/p>/) do
-          value = $1
-          if value[0] == '#'
-            attribute = 'id'
-            value = value[1..-1]
-          else
-            attribute = 'class'
-          end
-
-          "<div #{attribute}='#{value}'>"
-        end
-      end
-    end
-
-    class HTMLWithTags < HTMLWithDivBrackets
-      def preprocess(full_document)
-        wrap_details_tags_in_divs(full_document)
-      end
-
-      private
-
-      def wrap_details_tags_in_divs(full_document)
-        full_document.
-            gsub(/<details>/, "\n<div><details>").
-            gsub(/<\/details>/, "</details></div>\n")
-      end
-    end
-
     def initialize(template)
-      @template = ErbEngine.new(template)
-      @engine = Redcarpet::Markdown.new(
-        HTMLWithTags,
-        autolink: true,
-        tables: true,
-        space_after_headers: true
-      )
+      @template = template
+      runtime = V8::Context.new
+      @env = CommonJS::Environment.new(runtime, path: './remark.js')
     end
 
-    def result(binding=nil)
-      @engine.render(@template.result(binding))
+    def result
     end
   end
 
