@@ -83,7 +83,7 @@ function createLibraryClosure(code, functionNames, libraryName) {
  * @returns {obejct} The json representation of the library with the source
  *                   wrapped in a closure and the functions named Library.func
  */
-export function prepareLibraryForImport(json, newName) {
+export function prepareLibraryForImport(json, channelId, versionId, newName) {
   let libraryJson = JSON.parse(json);
   libraryJson.originalName = libraryJson.name;
   if (newName) {
@@ -101,6 +101,9 @@ export function prepareLibraryForImport(json, newName) {
     functionNames,
     libraryJson.name
   );
+
+  libraryJson.versionId = versionId;
+  libraryJson.channelId = channelId;
   return libraryJson;
 }
 
