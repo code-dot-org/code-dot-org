@@ -73,6 +73,22 @@ export const queryStrFor = key => {
   return queryString.parse(location.search)[key];
 };
 
+/**
+ * Given fishComponents and a dataSet, will filter any components that should be excluded in that dataSet.
+ * Example input: {
+ *   bodies: {
+ *     body1: {src: 'images/body1.png'},
+ *     body2: {
+ *       src: 'images/body2.png',
+ *       exclusions: [DataSet.Small]
+ *     }
+ *   }
+ * }, DataSet.Small
+ *
+ * Example output: {
+ *   bodies: [{src: 'images/body1.png'}]
+ * }
+ */
 export const filterFishComponents = (fishComponents, dataSet) => {
   if (!dataSet) {
     return fishComponents;
