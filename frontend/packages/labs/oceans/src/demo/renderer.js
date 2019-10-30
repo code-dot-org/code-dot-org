@@ -20,7 +20,7 @@ let lastStartTime;
 let defaultMoveTime = 1000;
 let moveTime;
 
-export const initRenderer = (mobilenet = false) => {
+export const initRenderer = () => {
   canvasCache = new CanvasCache();
   let promises = [];
   promises.push(loadAllFishPartImages());

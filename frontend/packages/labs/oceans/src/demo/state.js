@@ -20,7 +20,7 @@ const initialState = {
   yesCount: 0,
   noCount: 0,
   canSkipPredict: false,
-  loadTrashImages: true
+  loadTrashImages: null
 };
 let state = {...initialState};
 

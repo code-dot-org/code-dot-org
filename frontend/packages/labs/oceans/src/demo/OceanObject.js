@@ -13,12 +13,14 @@ import _ from 'lodash';
 
 let fishPartImages = {};
 let trashImages = {};
+// Used to tint the fish components
 let intermediateCanvas;
+// Used to draw the object in order to evaluate it when using mobilenet
 let tmpCanvas;
 let intermediateCtx;
 let mobilenet;
 
-// Load a single fish part image.
+// Load a single image.
 const loadImage = data => {
   return new Promise((resolve, reject) => {
     const img = new Image();
@@ -66,6 +68,7 @@ export const initMobilenet = () => {
   return mobilenetModule.load(1, 0.25).then(res => (mobilenet = res));
 };
 
+// Load all of the trash assets and store them
 export const loadAllTrashImages = () => {
   const loadImagePromises = imagePaths.map((src, idx) => {
     return loadImage({src, idx});
@@ -77,6 +80,8 @@ export const loadAllTrashImages = () => {
   });
 };
 
+// Generate a single object with an even change of being
+// any of the allowed classes
 export const generateOceanObject = (allowedClasses, id) => {
   const idx = Math.floor(Math.random() * allowedClasses.length);
   const newOceanObject = new allowedClasses[idx](id);
@@ -106,7 +111,6 @@ export class OceanObject {
   getTensor() {
     if (mobilenet) {
       if (!this.logits) {
-        console.log('get knnData without logits');
         this.drawToCanvas(tmpCanvas, false);
         this.generateLogits(tmpCanvas);
       }
@@ -132,6 +136,7 @@ export class OceanObject {
     this.generateLogits(canvas);
   }
 
+  // If using mobilenet, generate a tensor that represents the canvas
   generateLogits(canvas) {
     if (mobilenet && !this.logits) {
       const image = tf.fromPixels(canvas);
@@ -141,6 +146,10 @@ export class OceanObject {
   }
 }
 
+/*
+ * Fish object that is generated from FishData
+ *
+ * */
 export class FishOceanObject extends OceanObject {
   constructor(id) {
     super(id);
@@ -267,6 +276,10 @@ export class FishOceanObject extends OceanObject {
   }
 }
 
+/*
+ * Trash object that uses one of the images from TrashImages
+ *
+ * */
 export class TrashOceanObject extends OceanObject {
   randomize() {
     const idx = Math.floor(Math.random() * imagePaths.length);
