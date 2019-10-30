@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import _ from 'lodash';
 import {getState, setState} from './state';
-import {Modes} from './constants';
-import {toMode} from './helpers';
+import {Modes, DataSet} from './constants';
+import {toMode} from './toMode';
 import {init as initModel} from './models';
 import {onClassifyFish} from './models/train';
 import aiBotClosed from '../../public/images/ai-bot-closed.png';
@@ -232,33 +233,43 @@ class ActivityIntro extends React.Component {
   }
 }
 
+const wordChoices = [
+  ['Blue', 'Green', 'Red', 'Round', 'Square'],
+  [
+    'Friendly',
+    'Funny',
+    'Bizarre',
+    'Shy',
+    'Glitchy',
+    'Delicious',
+    'Fun',
+    'Angry',
+    'Fast',
+    'Smart',
+    'Brave',
+    'Scary',
+    'Wild',
+    'Fierce',
+    'Tropical'
+  ]
+];
+
 class Words extends React.Component {
-  items = [
-    ['Blue', 'Green', 'Red', 'Round', 'Square'],
-    [
-      'Friendly',
-      'Funny',
-      'Bizarre',
-      'Shy',
-      'Glitchy',
-      'Delicious',
-      'Fun',
-      'Angry',
-      'Fast',
-      'Smart',
-      'Brave',
-      'Scary',
-      'Wild',
-      'Fierce',
-      'Tropical'
-    ]
-  ];
+  constructor(props) {
+    super(props);
+
+    // Randomize word choices and set in state.
+    const choices = wordChoices.map(wordSet => {
+      return _.shuffle(wordSet);
+    });
+    this.state = {choices};
+  }
 
   currentItems() {
     const state = getState();
-    const itemSet = state.smallWordSet ? 0 : 1;
+    const itemSet = state.dataSet === DataSet.Small ? 0 : 1;
 
-    return this.items[itemSet];
+    return this.state.choices[itemSet];
   }
 
   onChangeWord(itemIndex) {
@@ -272,9 +283,8 @@ class Words extends React.Component {
   render() {
     const state = getState();
     const currentItems = this.currentItems();
-    const buttonStyle = state.smallWordSet
-      ? styles.button1col
-      : styles.button3col;
+    const buttonStyle =
+      state.dataSet === DataSet.Small ? styles.button1col : styles.button3col;
 
     return (
       <Body>

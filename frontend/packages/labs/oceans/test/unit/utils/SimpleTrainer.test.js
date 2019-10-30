@@ -1,4 +1,4 @@
-const SimpleTrainer = require('../../src/utils/SimpleTrainer');
+import SimpleTrainer from '../../../src/utils/SimpleTrainer';
 
 describe('Simple Trainer tests', () => {
   test('SimpleTrainer predicts', async () => {

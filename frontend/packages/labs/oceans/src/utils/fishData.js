@@ -1,4 +1,4 @@
-import {PropTypes} from 'react';
+import {DataSet} from '../demo/constants';
 
 import Body_Fish1 from '../../public/images/fish/body/Body_Fish1.png';
 import Body_Fish2 from '../../public/images/fish/body/Body_Fish2.png';
@@ -118,8 +118,6 @@ const BodyShape = Object.freeze({
   OTHER: 4
 });
 
-let initialized = false;
-
 const fishComponents = {
   // BODY KNN DATA: [area, BodyShape]
   bodies: {
@@ -133,7 +131,8 @@ const fishComponents = {
       dorsalFinAnchor: [23, -15],
       tailAnchor: [107, 41],
       knnData: [7120, BodyShape.OVAL],
-      type: FishBodyPart.BODY
+      type: FishBodyPart.BODY,
+      exclusions: [DataSet.Small]
     },
     fish3: {
       src: Body_Fish3,
@@ -145,7 +144,8 @@ const fishComponents = {
       dorsalFinAnchor: [53, -25],
       tailAnchor: [120, 38],
       knnData: [6384, BodyShape.OVAL],
-      type: FishBodyPart.BODY
+      type: FishBodyPart.BODY,
+      exclusions: [DataSet.Small]
     },
     fish1: {
       src: Body_Fish1,
@@ -181,7 +181,8 @@ const fishComponents = {
       dorsalFinAnchor: [33, -23],
       tailAnchor: [139, 19],
       knnData: [9078, BodyShape.TRIANGLE],
-      type: FishBodyPart.BODY
+      type: FishBodyPart.BODY,
+      exclusions: [DataSet.Small]
     },
     wide1: {
       src: Body_Wide1,
@@ -277,7 +278,8 @@ const fishComponents = {
       dorsalFinAnchor: [76, -13],
       tailAnchor: [144, 56],
       knnData: [12419, BodyShape.TRIANGLE],
-      type: FishBodyPart.BODY
+      type: FishBodyPart.BODY,
+      exclusions: [DataSet.Small]
     },
     sharp2: {
       src: Body_Sharp2,
@@ -289,7 +291,8 @@ const fishComponents = {
       dorsalFinAnchor: [43, -20],
       tailAnchor: [144, 56],
       knnData: [9732, BodyShape.TRIANGLE],
-      type: FishBodyPart.BODY
+      type: FishBodyPart.BODY,
+      exclusions: [DataSet.Small]
     },
     round1: {
       src: Body_Round1,
@@ -490,7 +493,7 @@ const fishComponents = {
       type: FishBodyPart.MOUTH
     }
   },
-  // SIDE FIN KNN DATA: [pointiness rank]
+  // PECTORAL FIN KNN DATA: [pointiness rank]
   pectoralFinsFront: {
     fish2: {
       src: Pectoral_Fin_Fish2,
@@ -596,8 +599,8 @@ const fishComponents = {
     }
   },
 
-  // TOP FIN KNN DATA: []
-  topFins: {
+  // DORSAL FIN KNN DATA: []
+  dorsalFins: {
     fish1: {
       src: Dorsal_Fin_Fish1,
       knnData: [],
@@ -791,6 +794,7 @@ const fishComponents = {
 };
 
 // Normalize the KNN data for all components.
+let initialized = false;
 export const initFishData = () => {
   if (!initialized) {
     Object.keys(fishComponents).forEach(key => {
@@ -833,37 +837,3 @@ export const initFishData = () => {
 };
 
 export const fishData = fishComponents;
-
-export const bodyShape = PropTypes.shape({
-  src: PropTypes.string.isRequired,
-  anchor: PropTypes.array.isRequired,
-  eyeAnchor: PropTypes.array.isRequired,
-  mouthAnchor: PropTypes.array.isRequired,
-  sideFinAnchor: PropTypes.array.isRequired,
-  topFinAnchor: PropTypes.array.isRequired,
-  tailAnchor: PropTypes.array.isRequired,
-  knnData: PropTypes.array.isRequired
-});
-
-export const bodyPartShape = PropTypes.shape({
-  src: PropTypes.string.isRequired,
-  knnData: PropTypes.array.isRequired
-});
-
-export const colorPaletteShape = PropTypes.shape({
-  bodyColor: PropTypes.string.isRequired,
-  finColor: PropTypes.string.isRequired,
-  mouthColor: PropTypes.string.isRequired,
-  knnData: PropTypes.array.isRequired
-});
-
-export const fishShape = PropTypes.shape({
-  body: bodyShape.isRequired,
-  eye: bodyPartShape.isRequired,
-  mouth: bodyPartShape.isRequired,
-  sideFin: bodyPartShape.isRequired,
-  topFin: bodyPartShape.isRequired,
-  tail: bodyPartShape.isRequired,
-  colorPalette: colorPaletteShape.isRequired,
-  canvasId: PropTypes.string.isRequired
-});
