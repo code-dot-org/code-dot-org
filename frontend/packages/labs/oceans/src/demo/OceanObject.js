@@ -4,7 +4,8 @@ import {
   bodyAnchorFromType,
   colorForFishPart,
   randomInt,
-  clamp
+  clamp,
+  filterFishComponents
 } from './helpers';
 import _ from 'lodash';
 
@@ -58,9 +59,12 @@ export const loadAllFishPartImages = () => {
   );
 };
 
-export const generateOceanObject = (allowedClasses, id) => {
+export const generateOceanObject = (allowedClasses, id, dataSet = null) => {
   const idx = Math.floor(Math.random() * allowedClasses.length);
-  const newOceanObject = new allowedClasses[idx](id);
+  const newOceanObject = new allowedClasses[idx](
+    id,
+    filterFishComponents(fishData, dataSet)
+  );
   newOceanObject.randomize();
   return newOceanObject;
 };
@@ -98,17 +102,16 @@ export class OceanObject {
 }
 
 export class FishOceanObject extends OceanObject {
-  constructor(id) {
+  constructor(id, componentOptions) {
     super(id);
-    const fish = fishData;
-    this.bodies = Object.values(fish.bodies);
-    this.eyes = Object.values(fish.eyes);
-    this.mouths = Object.values(fish.mouths);
-    this.pectoralFinsFront = Object.values(fish.pectoralFinsFront);
-    this.pectoralFinsBack = Object.values(fish.pectoralFinsBack);
-    this.dorsalFins = Object.values(fish.dorsalFins);
-    this.tails = Object.values(fish.tails);
-    this.colorPalettes = Object.values(fish.colorPalettes);
+    this.bodies = Object.values(componentOptions.bodies);
+    this.eyes = Object.values(componentOptions.eyes);
+    this.mouths = Object.values(componentOptions.mouths);
+    this.pectoralFinsFront = Object.values(componentOptions.pectoralFinsFront);
+    this.pectoralFinsBack = Object.values(componentOptions.pectoralFinsBack);
+    this.dorsalFins = Object.values(componentOptions.dorsalFins);
+    this.tails = Object.values(componentOptions.tails);
+    this.colorPalettes = Object.values(componentOptions.colorPalettes);
   }
 
   randomize() {

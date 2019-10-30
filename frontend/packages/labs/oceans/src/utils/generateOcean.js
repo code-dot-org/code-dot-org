@@ -1,9 +1,11 @@
 import {FishOceanObject, generateOceanObject} from '../demo/OceanObject';
+import {getState} from '../demo/state';
 
 export const generateOcean = numFish => {
+  const state = getState();
   const ocean = [];
   for (var i = 0; i < numFish; ++i) {
-    ocean.push(generateOceanObject([FishOceanObject], i));
+    ocean.push(generateOceanObject([FishOceanObject], i, state.dataSet));
   }
   return ocean;
 };

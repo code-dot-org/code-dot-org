@@ -1,3 +1,5 @@
+import {DataSet} from '../demo/constants';
+
 // Describe the different body parts of the fish. The object
 // is ordered by its render dependency (i.e., dorsalFin should be rendered
 // before body).
@@ -25,8 +27,6 @@ const BodyShape = Object.freeze({
   OTHER: 4
 });
 
-let initialized = false;
-
 const fishComponents = {
   // BODY KNN DATA: [area, BodyShape]
   bodies: {
@@ -40,7 +40,8 @@ const fishComponents = {
       dorsalFinAnchor: [23, -15],
       tailAnchor: [107, 41],
       knnData: [7120, BodyShape.OVAL],
-      type: FishBodyPart.BODY
+      type: FishBodyPart.BODY,
+      exclusions: [DataSet.Small]
     },
     fish3: {
       src: 'images/fish/body/Body_Fish3.png',
@@ -52,7 +53,8 @@ const fishComponents = {
       dorsalFinAnchor: [53, -25],
       tailAnchor: [120, 38],
       knnData: [6384, BodyShape.OVAL],
-      type: FishBodyPart.BODY
+      type: FishBodyPart.BODY,
+      exclusions: [DataSet.Small]
     },
     fish1: {
       src: 'images/fish/body/Body_Fish1.png',
@@ -88,7 +90,8 @@ const fishComponents = {
       dorsalFinAnchor: [33, -23],
       tailAnchor: [139, 19],
       knnData: [9078, BodyShape.TRIANGLE],
-      type: FishBodyPart.BODY
+      type: FishBodyPart.BODY,
+      exclusions: [DataSet.Small]
     },
     wide1: {
       src: 'images/fish/body/Body_Wide1.png',
@@ -184,7 +187,8 @@ const fishComponents = {
       dorsalFinAnchor: [76, -13],
       tailAnchor: [144, 56],
       knnData: [12419, BodyShape.TRIANGLE],
-      type: FishBodyPart.BODY
+      type: FishBodyPart.BODY,
+      exclusions: [DataSet.Small]
     },
     sharp2: {
       src: 'images/fish/body/Body_Sharp2.png',
@@ -196,7 +200,8 @@ const fishComponents = {
       dorsalFinAnchor: [43, -20],
       tailAnchor: [144, 56],
       knnData: [9732, BodyShape.TRIANGLE],
-      type: FishBodyPart.BODY
+      type: FishBodyPart.BODY,
+      exclusions: [DataSet.Small]
     },
     round1: {
       src: 'images/fish/body/Body_Round1.png',
@@ -698,6 +703,7 @@ const fishComponents = {
 };
 
 // Normalize the KNN data for all components.
+let initialized = false;
 export const initFishData = () => {
   if (!initialized) {
     Object.keys(fishComponents).forEach(key => {
