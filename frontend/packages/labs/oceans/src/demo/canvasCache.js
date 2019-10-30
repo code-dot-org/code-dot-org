@@ -16,6 +16,10 @@ export default class CanvasCache {
     }
   }
 
+  clearCache() {
+    this.canvases.map(canvas => canvas.key = null);
+  }
+
   /*
    * Takes a cache key and returns an array of [canvas, hit]
    * canvas is a canvas reserved for the caller.

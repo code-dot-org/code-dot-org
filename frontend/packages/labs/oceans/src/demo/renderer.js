@@ -37,6 +37,7 @@ export const render = () => {
   const state = getState();
 
   if (state.currentMode !== prevState.currentMode) {
+    canvasCache.clearCache();
     drawBackground(state);
     currentModeStartTime = $time();
     lastPauseTime = 0;
