@@ -60,7 +60,7 @@ class FormRoutesTest < SequelTestCase
     it 'does not try to order results for large requests' do
       Sequel::Dataset.any_instance.expects(:order).never
       # 5000 is the default rows retrieved on initial page load for the volunteer map.
-      search location: '35.774929,-122.419416', num_volunteers: 5000
+      search location: '35.774929,-122.419416', num_volunteers: '5000'
     end
 
     def create_volunteer(name:, location:, created_at: DateTime.now)
