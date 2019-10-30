@@ -301,7 +301,8 @@ const drawSingleFish = (fish, fishXPos, fishYPos, ctx) => {
     fishCanvas.height = constants.fishCanvasHeight;
     fish.drawToCanvas(fishCanvas);
   }
-  ctx.drawImage(fishCanvas, fishXPos, fishYPos);
+
+  ctx.drawImage(fishCanvas, Math.round(fishXPos), Math.round(fishYPos));
 };
 
 // Clear the sprite canvas.
