@@ -320,6 +320,7 @@ class Level < ActiveRecord::Base
     'EvaluationMulti', # unknown
     'External', # dsl defined, covered in dsl
     'ExternalLink', # no user submitted content
+    'Fish', # no ideal solution
     'FreeResponse', # no ideal solution
     'FrequencyAnalysis', # widget
     'Flappy', # no ideal solution
