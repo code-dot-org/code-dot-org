@@ -4,7 +4,8 @@ import {
   bodyAnchorFromType,
   colorForFishPart,
   randomInt,
-  clamp
+  clamp,
+  filterFishComponents
 } from './helpers';
 import _ from 'lodash';
 
@@ -62,25 +63,10 @@ export const generateOceanObject = (allowedClasses, id, dataSet = null) => {
   const idx = Math.floor(Math.random() * allowedClasses.length);
   const newOceanObject = new allowedClasses[idx](
     id,
-    filterFishComponents(dataSet)
+    filterFishComponents(fishData, dataSet)
   );
   newOceanObject.randomize();
   return newOceanObject;
-};
-
-const filterFishComponents = dataSet => {
-  if (!dataSet) {
-    return fishData;
-  }
-
-  let filteredCopy = {...fishData};
-  Object.keys(filteredCopy).forEach(key => {
-    filteredCopy[key] = Object.values(filteredCopy[key]).filter(
-      option => !(option.exclusions || []).includes(dataSet)
-    );
-  });
-
-  return filteredCopy;
 };
 
 export class OceanObject {

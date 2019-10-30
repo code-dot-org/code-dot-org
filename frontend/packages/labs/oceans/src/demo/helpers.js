@@ -72,3 +72,18 @@ export const clamp = (value, min, max) => {
 export const queryStrFor = key => {
   return queryString.parse(location.search)[key];
 };
+
+export const filterFishComponents = (fishComponents, dataSet) => {
+  if (!dataSet) {
+    return fishComponents;
+  }
+
+  let filteredCopy = {...fishComponents};
+  Object.keys(filteredCopy).forEach(key => {
+    filteredCopy[key] = Object.values(filteredCopy[key]).filter(
+      option => !(option.exclusions || []).includes(dataSet)
+    );
+  });
+
+  return filteredCopy;
+};
