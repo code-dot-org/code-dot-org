@@ -215,6 +215,8 @@ class ActivitiesController < ApplicationController
     end
   end
 
+  # Record the time spent on a level by creating or updating the UserLevelInfo table
+  # for the UserLevel for the current user, level, and script
   def record_time_spent
     user_level = UserLevel.find_by(
       user_id: current_user.id,
@@ -227,11 +229,9 @@ class ActivitiesController < ApplicationController
         user_level_id: user_level.id
       )
     end
-    # Add past time spent to current time spent on level
-    # Although it looks like if you hit keep playing it is not adding correctly
+
     if user_level_info
-      puts user_level_info.time_spent
-      puts [params[:time].to_i, 0].max
+      # Add past time spent to current time spent on level
       user_level_info.update(time_spent: [user_level_info.time_spent + [params[:time].to_i, 0].max, MAX_INT_MILESTONE].min)
     else
       user_level = UserLevel.create(
