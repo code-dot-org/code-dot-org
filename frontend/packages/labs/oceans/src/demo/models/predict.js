@@ -1,8 +1,10 @@
 import 'babel-polyfill';
 import {setState} from '../state';
+import {generateOcean} from '../../utils/generateOcean';
 
 export const init = () => {
-  setState({isRunning: true});
+  const fishData = generateOcean(100);
+  setState({isRunning: true, fishData});
 };
 
 export const predictFish = (state, idx) => {
