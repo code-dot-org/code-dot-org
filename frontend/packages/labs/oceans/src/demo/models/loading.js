@@ -1,6 +1,6 @@
 import 'babel-polyfill';
 import {initRenderer} from '../renderer';
-import {setState} from '../state';
+import {getState, setState} from '../state';
 import {Modes} from '../constants';
 import {init as initModel} from './index';
 import {initFishData} from '../../utils/fishData';

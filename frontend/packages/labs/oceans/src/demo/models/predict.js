@@ -1,9 +1,10 @@
 import 'babel-polyfill';
-import {setState} from '../state';
+import {setState, getState} from '../state';
 import {generateOcean} from '../../utils/generateOcean';
 
 export const init = () => {
-  const fishData = generateOcean(100);
+  const state = getState();
+  const fishData = generateOcean(100, state.loadTrashImages);
   setState({isRunning: true, fishData});
 };
 

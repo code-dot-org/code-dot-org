@@ -224,9 +224,10 @@ class ActivityIntro extends React.Component {
               onClick={() => {
                 const state = getState();
                 if (state.loadTrashImages) {
-                  setState({word: 'Fishy'});
-                  toMode(Modes.Training);
-                } else toMode(Modes.Words);
+                  setState({currentMode: Modes.TrainingIntro, word: 'FISHY'});
+                } else {
+                  toMode(Modes.Words);
+                }
               }}
             >
               Continue

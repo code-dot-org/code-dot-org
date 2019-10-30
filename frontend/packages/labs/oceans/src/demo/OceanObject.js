@@ -131,6 +131,9 @@ export class OceanObject {
       });
     }
   }
+  getImage() {
+    return this.image;
+  }
 }
 
 export class FishOceanObject extends OceanObject {

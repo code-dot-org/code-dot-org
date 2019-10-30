@@ -1,13 +1,14 @@
 import {FishOceanObject, TrashOceanObject, generateOceanObject} from '../demo/OceanObject';
 
-export const generateOcean = (numFish, generateTrash=true) => {
+export const generateOcean = (numFish, loadTrashImages) => {
   const ocean = [];
-  let objectsToGenerate = [FishOceanObject];
-  if (generateTrash) {
-      objectsToGenerate.push(TrashOceanObject);
+  let possibleObjects = [FishOceanObject];
+  if (loadTrashImages) {
+    possibleObjects.push(TrashOceanObject);
   }
+
   for (var i = 0; i < numFish; ++i) {
-    ocean.push(generateOceanObject(objectsToGenerate, i));
+    ocean.push(generateOceanObject(possibleObjects, i));
   }
   return ocean;
 };

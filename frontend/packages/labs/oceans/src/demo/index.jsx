@@ -18,13 +18,15 @@ $(document).ready(() => {
 
   // Temporarily use URL parameter to set some state.
   const smallWordSet = window.location.href.indexOf('words=small') !== -1;
+  const loadTrashImages = window.location.href.indexOf('mode=fishvtrash') !== -1;
 
   // Set initial state for UI elements.
   const state = setState({
     currentMode: Modes.Loading,
     canvas,
     backgroundCanvas,
-    smallWordSet
+    smallWordSet,
+    loadTrashImages
   });
 
   // Initialize our first model.

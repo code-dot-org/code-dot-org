@@ -10,7 +10,6 @@ export const init = () => {
   if (fishData.length === 0) {
     fishData = fishData.concat(generateOcean(100, state.loadTrashImages));
   }
-
   let trainer = state.trainer;
   if (!trainer) {
     trainer = new SimpleTrainer();
