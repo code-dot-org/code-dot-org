@@ -333,6 +333,7 @@ ky:
   meta_tag_twitter_description: 'Код сааты - 180+ өлкөдөн бардык курактагы он миллиондогон окуучулар катышкан, 45тен ашык тилде жеткиликтүү глобалдык кыймыл.'
   twitter_default_text: "Мен быйыл #HourOfCode катышып жатам, сенчи? @codeorg"
   twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
+  twitter_donor_text_2019: "This year's #HourOfCode is about #CSforGood. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'КБС'
   hoc_faq_what_is_hoc_q: 'Код сааты деген эмне?'
   hoc_faq_what_is_hoc_a: "Код сааты - компүтердик илим менен тааныштыруу, анын негиздерин ар ким өздөштүрө ала тургандыгын, \"код жазуу\" татаал эместигин көрсөтүү жана буга кеңири катмарларды тартуу үчүн уюштурулган бир сааттык иш-чара катары башталган. Алгачкы жолкусунан тартып эле 1 сааттык код жазуу иш-чарасы компүтердик илимди майрамдоонун дүйнөлүк аракетине айланып кетти. Бул <a href='%{tutorials}'> жетектемелерди жана тапшырмаларды карагыла.</a> Бул өнөктөштүккө дүйнө боюнча <a href='%{partners}'>400 өнөк</a> жана 200 000 мугалим колдоого алган."

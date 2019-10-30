@@ -1,7 +1,5 @@
 ---
 title: Eksempel på klumme/artikel til støtte for Computer Sceince Education Week og Hour of Code
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

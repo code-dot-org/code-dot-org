@@ -1,7 +1,5 @@
 ---
 title: Nguồn tài liệu
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

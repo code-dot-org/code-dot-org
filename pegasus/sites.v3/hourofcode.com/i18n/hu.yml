@@ -333,6 +333,7 @@ hu:
   meta_tag_twitter_description: 'A Kódolás Órája egy globális mozgalom, ami különböző életkorú tanulók tízmillióit éri el 180+ országban, és több mint 45 nyelven.'
   twitter_default_text: "Én részt veszek az idei #HourOfCode eseményen. És Te? @codeorg"
   twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
+  twitter_donor_text_2019: "This year's #HourOfCode is about #CSforGood. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'GYIK'
   hoc_faq_what_is_hoc_q: 'Mi a Hour of Code?'
   hoc_faq_what_is_hoc_a: "A Kódolás Órája egy egy órás bevezetés a számítástudomány alapjaiba, célja, hogy eloszlassa a kód homályát, és megmutassa, hogy bárki megtanulhatja az alapokat.  <a href='http://code.org/learn'>Próbáld ki az oktatóanyagokat</a>."

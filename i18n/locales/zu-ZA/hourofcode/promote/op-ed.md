@@ -1,7 +1,5 @@
 ---
 title: Isampula ye Op-ed Esekela Iviki leMfundiso yeKhompyutha Sayensi kanye neHora loKufingqwa
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

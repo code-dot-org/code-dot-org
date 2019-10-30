@@ -25,7 +25,7 @@ const styles = {
     marginTop: 20
   },
   libraryList: {
-    maxHeight: '110px',
+    maxHeight: '162px',
     overflowY: 'auto'
   },
   message: {
@@ -84,6 +84,7 @@ export default class LibraryManagerDialog extends React.Component {
           ...this.state.libraries,
           updatedjson
         ]);
+        this.setState({libraries: dashboard.project.getProjectLibraries()});
       },
       error => {
         console.log('ERROR: ' + error);
@@ -101,6 +102,7 @@ export default class LibraryManagerDialog extends React.Component {
         return library.name !== libraryName;
       })
     );
+    this.setState({libraries: dashboard.project.getProjectLibraries()});
   };
 
   displayProjectLibraries = () => {

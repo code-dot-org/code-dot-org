@@ -1,6 +1,5 @@
 ---
 title: Ukuzibandakanya kweSikole Sonke
-layout: wide
 ---
 
 {{ signup_button }}

@@ -1,7 +1,5 @@
 ---
 title: 由政治人員發佈的一小時玩程式活動新聞
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

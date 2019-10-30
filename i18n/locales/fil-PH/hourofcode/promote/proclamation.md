@@ -1,7 +1,5 @@
 ---
 title: Halimbawang Resolusyon na Sumusuporta sa Computer Science Education Week at Hour of Code
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

@@ -1,7 +1,5 @@
 ---
 title: 각종 자료
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

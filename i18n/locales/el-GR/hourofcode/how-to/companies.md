@@ -1,7 +1,5 @@
 ---
 title: Πώς να φιλοξενήσετε μια ώρα του κώδικα - εταιρείες
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

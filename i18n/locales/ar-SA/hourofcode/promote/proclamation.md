@@ -1,7 +1,5 @@
 ---
 title: مثال قرار داعم لأسبوع تدريس علوم الكمبيوتر وساعة البرمجة
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

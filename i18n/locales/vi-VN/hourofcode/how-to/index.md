@@ -1,7 +1,5 @@
 ---
 title: Hướng dẫn Sử dụng
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

@@ -1,6 +1,5 @@
 ---
 title: Вказівки до підручника
-layout: wide
 ---
 
 <style>

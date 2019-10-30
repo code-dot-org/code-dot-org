@@ -1,7 +1,5 @@
 ---
 title: Örnek Bilgisayar Destekli Eğitim Öğretim haftası ve Kodlama Saati
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

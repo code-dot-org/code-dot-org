@@ -1,7 +1,5 @@
 ---
 title: بلربز اور قابل استعمال شماریات (اسٹیٹس)
-layout: wide
-nav: promote_nav
 ---
 
 <a id="blurb"></a>

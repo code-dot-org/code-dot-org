@@ -1,6 +1,5 @@
 ---
 title: 教程指南
-layout: wide
 ---
 
 <style>
