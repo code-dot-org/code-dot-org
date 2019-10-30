@@ -192,7 +192,7 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
     # order clause slowed it down significantly.
     # Subsequent queries on the page are limited to 50 rows, 32km, and don't have this perf issue
     # so we still want to make sure we retrieve the more recent sign-ups.
-    if rows <= 50
+    if rows.to_i <= 50
       query = query.order(Sequel.desc(:created_at))
     end
 
