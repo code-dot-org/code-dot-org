@@ -54,12 +54,17 @@ class SectionAssigner extends Component {
             onChangeSection={this.onChangeSection}
             selectedSection={selectedSection}
           />
-          {selectedSection.isAssigned && (
+          {selectedSection && selectedSection.isAssigned && (
             <UnassignButton sectionId={selectedSection.id} />
           )}
-          {!selectedSection.isAssigned && showAssignButton && (
-            <AssignButton sectionId={selectedSection.id} courseId={courseId} />
-          )}
+          {selectedSection &&
+            !selectedSection.isAssigned &&
+            showAssignButton && (
+              <AssignButton
+                sectionId={selectedSection.id}
+                courseId={courseId}
+              />
+            )}
         </div>
       </div>
     );

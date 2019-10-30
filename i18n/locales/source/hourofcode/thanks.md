@@ -1,11 +1,5 @@
 ---
 title: Thanks for signing up to host an Hour of Code!
-layout: wide
-nav: how_to_nav
-
-social:
-  "twitter:card": player
-  "twitter:site": "@codeorg"
 ---
 
 # Thanks for signing up to host an Hour of Code!

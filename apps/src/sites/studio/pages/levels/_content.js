@@ -6,13 +6,14 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 $(document).ready(() => {
   // Render Markdown
-  const container = document.getElementById('markdown');
-  if (!container || !container.dataset.markdown) {
-    return;
-  }
+  $('.content-level > .markdown-container').each(function() {
+    if (!this.dataset.markdown) {
+      return;
+    }
 
-  ReactDom.render(
-    React.createElement(SafeMarkdown, container.dataset, null),
-    container
-  );
+    ReactDom.render(
+      React.createElement(SafeMarkdown, this.dataset, null),
+      this
+    );
+  });
 });
