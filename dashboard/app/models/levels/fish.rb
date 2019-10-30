@@ -23,24 +23,20 @@
 #  index_levels_on_name     (name)
 #
 
-class Weblab < Level
-  before_save :fix_examples
-
+class Fish < Level
   serialized_attrs %w(
     project_template_level_name
     start_sources
     hide_share_and_remix
     is_project_level
-    encrypted_examples
     submittable
-    thumbnail_url
   )
 
   def self.create_from_level_builder(params, level_params)
     create!(
       level_params.merge(
         user: params[:user],
-        game: Game.weblab,
+        game: Game.fish,
         level_num: 'custom',
         properties: {}
       )
@@ -70,15 +66,5 @@ class Weblab < Level
       level_prop.reject! {|_, value| value.nil?}
     end
     options.freeze
-  end
-
-  def fix_examples
-    # remove nil and empty strings from examples
-    return if examples.nil?
-    self.examples = examples.select(&:present?)
-  end
-
-  def age_13_required?
-    true
   end
 end
