@@ -1131,7 +1131,7 @@ describe('teacherSectionsRedux', () => {
 
     it('maps from a script object to a script_id', () => {
       const sectionWithoutScript = sectionFromServerSection(serverSection);
-      assert.strictEqual(sectionWithoutScript.scriptId, undefined);
+      assert.strictEqual(sectionWithoutScript.scriptId, null);
 
       const sectionWithScript = sectionFromServerSection({
         ...serverSection,
