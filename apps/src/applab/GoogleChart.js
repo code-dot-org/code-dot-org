@@ -76,7 +76,7 @@ export default class GoogleChart {
   async drawChart(rawData, columnList, options) {
     await this.loadDependencies();
 
-    this.verifyData_(rawData, columnList);
+    this.verifyData_({data: rawData, columns: columnList});
     const dataTable = GoogleChart.dataTableFromRowsAndColumns(
       rawData,
       columnList
@@ -103,13 +103,16 @@ export default class GoogleChart {
 
   /**
    * Makes sure data looks okay, throws errors and logs warnings as appropriate.
-   * @param {string[]} columns
-   * @param {Object[]} data
-   * @param {number} [minColumns = 2]
-   * @param {number} [maxColumns]
+   * @param {Object} options
+   * @param {Object[]} options.data
+   * @param {string[]} options.columns
+   * @param {number} options.minColumns
+   * @param {number} options.maxColumns
    * @private
    */
-  verifyData_(data, columns, minColumns = 2, maxColumns) {
+  verifyData_(options) {
+    let {data, columns, minColumns = 2, maxColumns} = options;
+
     // Warn when no rows are present
     if (data.length === 0) {
       this.warn('No data.');
@@ -117,7 +120,7 @@ export default class GoogleChart {
 
     if (maxColumns && columns.length > maxColumns) {
       this.warn(
-        `Too many columns for pie chart; only using the first ${maxColumns}.`
+        `Too many columns for chart; only using the first ${maxColumns}.`
       );
     }
 
@@ -182,13 +185,14 @@ class PieChart extends GoogleChart {
 
   /**
    *
-   * @param {string[]} columns
-   * @param {Object[]} data
+   * @param {Object} options
    * @private
    * @override
    */
-  verifyData_(data, columns) {
-    super.verifyData_(data, columns, /* minColumns */ 2, /* maxColumns */ 2);
+  verifyData_(options) {
+    options.minColumns = 2;
+    options.maxColumns = 2;
+    super.verifyData_(options);
   }
 }
 GoogleChart.PieChart = PieChart;
@@ -201,8 +205,10 @@ class Histogram extends GoogleChart {
     apiChart.draw(dataTable, options);
   }
 
-  verifyData_(data, columns) {
-    super.verifyData_(data, columns, /* minColumns */ 1, /* maxColumns */ 1);
+  verifyData_(options) {
+    options.minColumns = 1;
+    options.maxColumns = 1;
+    super.verifyData_(options);
   }
 }
 GoogleChart.Histogram = Histogram;
