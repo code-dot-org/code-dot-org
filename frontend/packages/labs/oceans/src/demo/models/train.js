@@ -31,7 +31,7 @@ export const onClassifyFish = doesLike => {
     return;
   }
 
-  const knnData = state.fishData[state.trainingIndex].getKnnData();
+  const knnData = state.fishData[state.trainingIndex].getTensor();
   const classId = doesLike ? ClassType.Like : ClassType.Dislike;
   state.trainer.addExampleTensor(knnData, classId);
 

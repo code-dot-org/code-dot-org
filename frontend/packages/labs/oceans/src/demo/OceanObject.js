@@ -101,6 +101,9 @@ export class OceanObject {
     return this.id;
   }
   getKnnData() {
+    return this.knnData
+  }
+  getTensor() {
     if (mobilenet) {
       if (!this.logits) {
         console.log('get knnData without logits');
@@ -109,7 +112,7 @@ export class OceanObject {
       }
       return this.logits;
     } else {
-      return this.knnData;
+      return tf.tensor(this.knnData);
     }
   }
   setResult(result) {
@@ -166,7 +169,7 @@ export class FishOceanObject extends OceanObject {
     this.colorPalette = this.colorPalettes[
       Math.floor(Math.random() * this.colorPalettes.length)
     ];
-    this.knnData = tf.tensor([
+    this.knnData = [
       ...body.knnData,
       ...eye.knnData,
       ...mouth.knnData,
@@ -174,7 +177,7 @@ export class FishOceanObject extends OceanObject {
       ...dorsalFin.knnData,
       ...tail.knnData,
       ...this.colorPalette.knnData
-    ]);
+    ];
     this.parts = [
       body,
       eye,
