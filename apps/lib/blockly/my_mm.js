@@ -40,6 +40,7 @@ Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST_TAIL = "";
 Blockly.Msg.CONTROLS_FOREACH_INPUT_ITEM = "ပစ္စည်းတစ်ခုခြင်းစီ အတွက်";
 Blockly.Msg.CONTROLS_FOREACH_TOOLTIP = "";
 Blockly.Msg.CONTROLS_FOR_HELPURL = "";
+Blockly.Msg.CONTROLS_FOR_INPUT_COUNTER = "for %1 from %2 to %3 count by %4";
 Blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY = "%1 မှ %2 %3 ထိရေတွက်ပါ";
 Blockly.Msg.CONTROLS_FOR_INPUT_WITH = "အတွက်";
 Blockly.Msg.CONTROLS_FOR_TOOLTIP = "တိကျသောကြားပိုင်းများကို အသုံးပြု၍ ရေတွက်ခြင်းဖြင့် စဂဏန်းမှ ဆုံးဂဏန်းထိ variable %1ကို ရယူပါ။ထို့နောက်တိကျသော blockများပြုလုပ်ပါ";

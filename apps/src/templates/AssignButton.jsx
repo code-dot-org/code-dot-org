@@ -3,36 +3,29 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import Button from './Button';
 import i18n from '@cdo/locale';
-import {assignToSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-
-const styles = {
-  buttonMargin: {
-    marginLeft: 10
-  }
-};
+import {assignCourseToSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 class AssignButton extends React.Component {
   static propTypes = {
     sectionId: PropTypes.number.isRequired,
     courseId: PropTypes.number,
-    scriptId: PropTypes.number,
     // Redux
-    assignToSection: PropTypes.func.isRequired
+    assignCourseToSection: PropTypes.func.isRequired
   };
 
-  assign = () => {
-    const {sectionId, courseId, scriptId, assignToSection} = this.props;
-    assignToSection(sectionId, courseId, scriptId);
+  assignCourse = () => {
+    const {sectionId, courseId, assignCourseToSection} = this.props;
+    assignCourseToSection(sectionId, courseId);
   };
 
   render() {
     return (
-      <div style={styles.buttonMargin}>
+      <div>
         <Button
           color={Button.ButtonColor.orange}
           text={i18n.assignToSection()}
           icon="plus"
-          onClick={this.assign}
+          onClick={this.assignCourse}
         />
       </div>
     );
@@ -46,6 +39,6 @@ export default connect(
     sections: state.teacherSections.sections
   }),
   {
-    assignToSection
+    assignCourseToSection
   }
 )(AssignButton);

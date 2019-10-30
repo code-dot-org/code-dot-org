@@ -1,7 +1,5 @@
 ---
 title: Hour of Code How-To for Districts
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}
