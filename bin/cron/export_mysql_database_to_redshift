@@ -52,6 +52,39 @@ def execute_replication_task(replication_task_arn)
     }
   )
   ChatClient.message 'cron-daily', "Start DMS Task Response: #{replication_task_arn} - #{start_task_response}"
+  dms_client.wait_until(
+    :replication_task_stopped,
+    {
+      filters: [
+        {
+          name: 'replication-task-arn',
+          value: replication_task_arn
+        }
+      ]
+    }
+  ) do |waiter|
+    # Poll once an hour for 36 hours.
+    waiter.max_attempts = 36
+    waiter.delay = 3600
+  end
+  task_status = dms_client.describe_replication_tasks(
+    {
+      filters: [
+        {
+          name: 'replication-task-arn',
+          value: replication_task_arn
+        }
+      ]
+    },
+    max_records: 1,
+    without_settings: true
+  ).replication_task[0]
+  # TODO: (suresh) Check detailed task status and raise error if it did not complete successfully.
+  ChatClient.message 'cron-daily', "DMS Task Completed: #{replication_task_arn} - #{task_status}"
+rescue Aws::Waiters::Errors::WaiterFailed => error
+  # TODO: (suresh) Customize error handling for failed waiter.
+  ChatClient.message 'cron-daily', "Error executing DMS Replication Task #{replication_task_arn} - #{error.message}", color: 'red'
+  raise error
 rescue StandardError => error
   ChatClient.message 'cron-daily', "Error executing DMS Replication Task #{replication_task_arn} - #{error.message}", color: 'red'
   raise error
