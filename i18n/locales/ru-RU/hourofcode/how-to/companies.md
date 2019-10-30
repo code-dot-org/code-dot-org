@@ -1,7 +1,5 @@
 ---
 title: Инструкции по проведению Часа Кода для компаний
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

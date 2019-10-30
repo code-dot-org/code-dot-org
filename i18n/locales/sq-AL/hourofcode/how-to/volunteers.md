@@ -1,7 +1,5 @@
 ---
 title: Udhëzues për vullnetarët e Orës së Kodimit
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

@@ -1,6 +1,5 @@
 ---
 title: 联系国际合作伙伴
-layout: wide
 ---
 
 <style>

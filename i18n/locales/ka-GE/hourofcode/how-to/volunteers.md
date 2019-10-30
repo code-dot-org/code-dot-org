@@ -1,7 +1,5 @@
 ---
 title: როგორ–უნდა სახელმძღვანელო კოდის ერთი საათის მოხალისეებისთვის
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

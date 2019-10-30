@@ -1,10 +1,5 @@
 ---
 title: Спасибо за регистрацию на проведение Часа Кода!
-layout: wide
-nav: how_to_nav
-social:
-  "twitter:card": player
-  "twitter:site": "@codeorg"
 ---
 
 # Спасибо за регистрацию на проведение Часа Кода!

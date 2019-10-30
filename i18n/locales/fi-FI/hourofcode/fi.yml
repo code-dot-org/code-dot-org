@@ -221,7 +221,7 @@ fi:
   front_join_us_tutorials: "Choose your Hour of Code tutorial!"
   front_join_us_tutorials_link: 'Filter and browse <i>over 200 tutorials and lesson plans</i>! Find activities for different subject areas, multiple hardware needs, and students at any experience level.'
   front_join_us_robotics: 'Win robots or circuits!'
-  front_join_us_robotics_link: 'Do you want a set of robots or physical computing kits to use with your students? Our generous partners are donating sets to over 100 classrooms! Sign up for the Hour of Code to participate. (Classrooms selected by Code.org, US Only)'
+  front_join_us_robotics_link: 'Do you want a set of robots or physical computing kits to use with your students? Our generous partners are donating sets to 75 classrooms! Sign up for the Hour of Code to participate. (Classrooms selected by Code.org, US Only)'
   front_join_us_teacher: 'Oletko opettaja?'
   front_join_us_inspire: 'Inspiroi oppilaita'
   front_join_us_inspire_link: 'Koodaustunnilla luokassa.'
@@ -333,6 +333,7 @@ fi:
   meta_tag_twitter_description: 'Koodaustunti on maailmanlaajuinen liike, joka tavoittaa kymmeniä miljoonia ihmisiä yli 180:ssä maassa ja yli 30 eri kielellä. Sopii 4 - 104-vuotiaille.'
   twitter_default_text: "Osallistun tänä vuonna #HourOfCode, entäs sinä? @codeorg"
   twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
+  twitter_donor_text_2019: "This year's #HourOfCode is about #CSforGood. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'UKK'
   hoc_faq_what_is_hoc_q: 'Mikä Koodaustunti oikein on?'
   hoc_faq_what_is_hoc_a: "Kooditunti on yhden tunnin johdatus tietotekniikkaan, joka on suunniteltu selventämään koodausta ja näyttämään, että jokainen voi oppia perusteet. <a href='http://code.org/learn'>Katso oppituokiot</a>."

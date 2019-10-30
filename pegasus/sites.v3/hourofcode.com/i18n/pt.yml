@@ -333,6 +333,7 @@ pt:
   meta_tag_twitter_description: 'A Hora do Código é um movimento global que atinge dezenas de milhões de estudantes de todas as idades em mais de 180 países e mais de 45 idiomas.'
   twitter_default_text: "Vou participar da #HoraDoCodigo deste ano, e você? @codeorg"
   twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
+  twitter_donor_text_2019: "This year's #HourOfCode is about #CSforGood. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'Perguntas frequentes'
   hoc_faq_what_is_hoc_q: 'O que é a Hora do Código?'
   hoc_faq_what_is_hoc_a: "A Hora do Código começou como uma introdução de uma hora à ciência da computação, criada para desmistificar a programação e mostrar que qualquer pessoa pode aprender os fundamentos básicos e ampliar a participação na área desta ciência. Desde então ela tornou-se um esforço global para celebrar a ciência da computação, começando com atividades de programação com 1 hora de duração, mas expandindo-se para todos os tipos de esforços de comunidade. Confira os <a href='%{tutorials}'>tutoriais e atividades</a>. Esta campanha popular é apoiada por mais de <a href='%{partners}'>400 parceiros</a> e 200 mil educadores no mundo todo."

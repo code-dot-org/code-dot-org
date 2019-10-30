@@ -1,7 +1,5 @@
 ---
 title: Bấm Kit
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

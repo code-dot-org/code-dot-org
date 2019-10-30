@@ -1,6 +1,5 @@
 ---
 title: Guía para las actividades
-layout: wide
 ---
 
 <style>

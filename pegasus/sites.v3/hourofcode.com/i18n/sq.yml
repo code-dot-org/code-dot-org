@@ -333,6 +333,7 @@ sq:
   meta_tag_twitter_description: 'Ora e Kodimit është lëvizje globale që i përfshin dhjetëra miliona studentë në mbi 180 shtete dhe mbi 45 gjuhë.'
   twitter_default_text: "Këtë vit jam pjesëmarres në #OraeKodimit, po ju? @codeorg"
   twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
+  twitter_donor_text_2019: "This year's #HourOfCode is about #CSforGood. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'PESH (Pyetjet e shpeshta)'
   hoc_faq_what_is_hoc_q: 'Çfarë është Ora e Kodimit?'
   hoc_faq_what_is_hoc_a: "Ora e Kodimit është prezantim një orësh për shkencat kompjuterike, i dizenjuar të çmitizojë kodimin dhe të dëshmojë që çdo kush mund të mësojë gjërat bazike. <a href='%{tutorials}'>Shikoni tutorialet dhe aktivitetet</a>.Kjo fushatë bazë është mbështetur nga mbi <a href='%{partners}'> 400 partnerë </a> dhe 200.000 edukatorët në mbarë botën."

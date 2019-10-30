@@ -333,6 +333,7 @@ kk:
   meta_tag_twitter_description: 'Кодтау сағаты - 180 астам елдегі 45 астам тілде сөйлейтін әр жастағы ондаған миллион оқушыны қамтитын жаһандық қозғалыс.'
   twitter_default_text: "Мен осы жылы #HourOfCode (#КодтауСағаты-на) қатысамын, сен ше? @codeorg"
   twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
+  twitter_donor_text_2019: "This year's #HourOfCode is about #CSforGood. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'Жиі қойылатын сұрақтар'
   hoc_faq_what_is_hoc_q: 'Кодтау сағаты - ол не?'
   hoc_faq_what_is_hoc_a: "Кодтау сағаты бағдарламалауды көпшілікке таныстыратын әрі оның негіздерін әркім игеріп әрі қарай алып кете алатындығын көрсететін, компьютерлік ғылымға (информатикаға) бірсағаттық кіріспе ретінде басталған болатын. Бұл бірсағаттық бағдарламалау шаралары қауыдмастықтың көмегімен бірге информатиканың атын шығаруға үлес қосатын әлемдік қозғалысқа ұласып кетті. <a href='%{tutorials}'>Үйрену материалдары мен іс-шараларды</a> қарап шығыңыз. Бұл бұқаралық науқанды әлем бойынша <a href='%{partners}'>400 астам серіктес</a> пен 200 000 астам оқытушы қолдайды."
