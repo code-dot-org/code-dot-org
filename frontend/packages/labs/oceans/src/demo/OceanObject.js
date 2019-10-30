@@ -94,7 +94,7 @@ export class OceanObject {
   randomize() {
     throw 'Not yet implemented!';
   }
-  drawToCanvas(canvas, generateLogits = true){
+  drawToCanvas(canvas, generateLogits = true) {
     throw 'Not yet implemented!';
   }
   getId() {
@@ -135,9 +135,6 @@ export class OceanObject {
       const infer = () => mobilenet.infer(image, 'conv_preds');
       this.logits = infer();
     }
-  }
-  getImage() {
-    return this.image;
   }
 }
 
