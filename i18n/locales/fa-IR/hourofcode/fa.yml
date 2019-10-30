@@ -221,7 +221,7 @@ fa:
   front_join_us_tutorials: "آموزش های جدید امسال را امتحان کنید!"
   front_join_us_tutorials_link: 'Filter and browse <i>over 200 tutorials and lesson plans</i>! Find activities for different subject areas, multiple hardware needs, and students at any experience level.'
   front_join_us_robotics: 'ربات دارید؟'
-  front_join_us_robotics_link: 'Do you want a set of robots or physical computing kits to use with your students? Our generous partners are donating sets to over 100 classrooms! Sign up for the Hour of Code to participate. (Classrooms selected by Code.org, US Only)'
+  front_join_us_robotics_link: 'Do you want a set of robots or physical computing kits to use with your students? Our generous partners are donating sets to 75 classrooms! Sign up for the Hour of Code to participate. (Classrooms selected by Code.org, US Only)'
   front_join_us_teacher: 'آيا معلم هستيد؟'
   front_join_us_inspire: 'به دانش آموزان با'
   front_join_us_inspire_link: 'یک ساعت کدزدن در کلاس الهام بدهید.'
@@ -333,6 +333,7 @@ fa:
   meta_tag_twitter_description: 'ساعت کد نويسي يك حركت جهاني در راستاي رسيدن به ده ها ميليون دانش آموز در بيش از ١٨٠ كشور با بيش از ٣٠ زبان است. براي سنین ٤ تا ١٠٤ سال.'
   twitter_default_text: "من در\"ساعت كد نويسي\" #HourOfCode امسال شركت مي كنم، شما چطور؟ @codeorg"
   twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
+  twitter_donor_text_2019: "This year's #HourOfCode is about #CSforGood. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'سوالات متداول'
   hoc_faq_what_is_hoc_q: 'ساعت برنامه نویسی چیست؟ '
   hoc_faq_what_is_hoc_a: "ساعت کد معرفی یک ساعته علوم کامپیوتر، طراحی شده برای ساده کردن کد و نشان  دادن این که هر کسی می تواند  اصول اولیه را یاد بگیرد. <a href='http://code.org/learn'> این آموزشات را بررسی کنید.</a>."

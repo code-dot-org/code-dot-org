@@ -1,7 +1,5 @@
 ---
 title: පුවත් එකතුව
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

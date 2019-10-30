@@ -3,20 +3,8 @@ title: Täname, et ühinesite Hour of Code'iga!
 layout: wide
 nav: how_to_nav
 social:
-  og:title: 'KoodiTund: Liitu liikumisega'
-  og:description: KoodiTund on globaalne liikumine, mis jõuab miljonite õpilasteni
-    180+ riigis ning rohkem kui 45 erinevas keeles.
-  og:image: http://hourofcode.com/images/hourofcode-2015-video-thumbnail.png
-  og:image:width: 1440
-  og:image:height: 900
-  og:url: http://hourofcode.com
   twitter:card: player
   twitter:site: "@codeorg"
-  twitter:url: http://hourofcode.com
-  twitter:title: 'KoodiTund: Liitu liikumisega'
-  twitter:description: KoodiTund on globaalne liikumine, mis jõuab miljonite õpilasteni
-    180+ riigis ning rohkem kui 45 erinevas keeles.
-  twitter:image:src: http://hourofcode.com/images/hourofcode-2015-video-thumbnail.png
 ---
 
 # Täname, et ühinesite KoodiTund kampaaniaga!

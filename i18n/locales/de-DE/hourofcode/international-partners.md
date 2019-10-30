@@ -1,6 +1,5 @@
 ---
 title: Kontakt zu internationalen Partnern
-layout: wide
 ---
 
 <style>

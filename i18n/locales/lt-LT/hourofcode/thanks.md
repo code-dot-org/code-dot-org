@@ -1,10 +1,5 @@
 ---
 title: Ačiū už registraciją surengti Programavimo valandą!
-layout: wide
-nav: how_to_nav
-social:
-  "twitter:card": player
-  "twitter:site": "@codeorg"
 ---
 
 # Ačiū už registraciją surengti Programavimo valandą!

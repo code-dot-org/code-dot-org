@@ -55,6 +55,14 @@ class FormRoutesTest < SequelTestCase
       assert_equal %w(Newest Middle Oldest), results.map {|r| r['name_s']}
     end
 
+    # Regression test: Ordering results when trying to retrieve a large number of rows
+    # slowed this query down significantly, so we avoid doing it over a certain size.
+    it 'does not try to order results for large requests' do
+      Sequel::Dataset.any_instance.expects(:order).never
+      # 5000 is the default rows retrieved on initial page load for the volunteer map.
+      search location: '35.774929,-122.419416', num_volunteers: '5000'
+    end
+
     def create_volunteer(name:, location:, created_at: DateTime.now)
       row = insert_or_upsert_form(
         'VolunteerEngineerSubmission2015',
@@ -66,9 +74,12 @@ class FormRoutesTest < SequelTestCase
       )
     end
 
-    def search(location:)
+    def search(location:, num_volunteers: nil)
       JSON.parse(
-        VolunteerEngineerSubmission2015.query('coordinates' => location)
+        VolunteerEngineerSubmission2015.query(
+          'coordinates' => location,
+          'num_volunteers' => num_volunteers
+        )
       )['response']['docs']
     end
 

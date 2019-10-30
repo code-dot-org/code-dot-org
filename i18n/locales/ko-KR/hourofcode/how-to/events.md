@@ -1,7 +1,5 @@
 ---
 title: Hour of Code 이벤트 행상 방법
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

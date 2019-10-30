@@ -333,6 +333,7 @@
   meta_tag_twitter_description: 'کوڈ کا قیام ایک عالمی تحریک ہے جس میں 180+ ممالک اور 45 سے زائد زبانوں میں ہر عمر کی دس لاکھ طالب علم تک پہنچ جاتے ہیں.'
   twitter_default_text: "میں اس سال کے #HourOfCode میں شرکت کر رہا ہوں، کیا آپ ہیں؟ codeorg"
   twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
+  twitter_donor_text_2019: "This year's #HourOfCode is about #CSforGood. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'اکثر پوچھے گئے سوالات'
   hoc_faq_what_is_hoc_q: 'آور-آف-کوڈ کیا ہے؟'
   hoc_faq_what_is_hoc_a: "کوڈ کا قیام کمپیوٹر سائنس کے ایک گھنٹہ تعارف کے طور پر شروع ہوا، \"کوڈ\" کو نمائش کرنے کے لئے ڈیزائن کیا گیا تھا، یہ ظاہر کرنے کے لئے کہ کسی کو بنیادی طور پر سیکھ سکیں اور کمپیوٹر سائنس کے میدان میں حصہ لینے کے لۓ. اس کے بعد سے، 1 گھنٹہ کوڈنگ کی سرگرمیوں سے شروع ہونے والے تمام کمیونٹی کی کوششوں میں توسیع کے ساتھ کمپیوٹر سائنس کا جشن منانے کے لئے دنیا بھر میں کوشش کی گئی ہے.  سبق اور سرگرمیاں  چیک کریں. یہ گھاس کی مہم کو شراکت دار ور دنیا بھر میں 200،000 تعلیم دہندگان کے ذریعے تعاون کی جاتی ہے.<a href='%{partners}'><a href='%{tutorials}"

@@ -1,6 +1,5 @@
 ---
 title: Te Whakaurutanga ā-Kura Whānui
-layout: wide
 ---
 
 {{ signup_button }}

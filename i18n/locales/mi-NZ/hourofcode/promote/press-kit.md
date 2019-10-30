@@ -1,7 +1,5 @@
 ---
 title: Kete Pāpāho
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

@@ -1,7 +1,5 @@
 ---
 title: Прес-кіт
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

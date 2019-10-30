@@ -333,6 +333,7 @@ cs:
   meta_tag_twitter_description: 'Hodina Kódu je celosvětové hnutí, do kterého se zapojily desítky milionů žáků z více než 180 zemí mluvících 30 jazyky, lidé ve věku od 4 do 104 let.'
   twitter_default_text: "Účastním se letošní akce #HourOfCode, co ty? @codeorg"
   twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
+  twitter_donor_text_2019: "This year's #HourOfCode is about #CSforGood. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'Nejčastější dotazy'
   hoc_faq_what_is_hoc_q: 'Co je Hodina kódu? '
   hoc_faq_what_is_hoc_a: "Hodina kódu je hodinovým úvodem do informatiky, který má za cíl přiblížit programování a ukázat, že každý se může naučit jeho základy. <a href='%{codeorg_url}'> Podívejte se na kurzy</a>."

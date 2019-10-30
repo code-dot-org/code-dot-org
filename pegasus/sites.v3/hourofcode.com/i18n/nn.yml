@@ -333,6 +333,7 @@
   meta_tag_twitter_description: 'Kodetimen er ei verdensomsfattande rørsle som når ut til titalls millionar elevar i meir enn 180 land og fins på over 45 språk.'
   twitter_default_text: "Eg skal vera med på #kodetime #HourOfCode i år, skal du? @codeorg"
   twitter_donor_text: "I år handlar #Kodetimen om kreativitet. Eg er med! Er du? (Takk %{random_donor} for at du støtter @codeorg)"
+  twitter_donor_text_2019: "This year's #HourOfCode is about #CSforGood. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'Vanlege spørsmål'
   hoc_faq_what_is_hoc_q: 'Kva er Kodetimen? '
   hoc_faq_what_is_hoc_a: "Kodetimen starta som ein timeslang introduksjon til datavitskap, designa for å avmystifisere koding og vise at alle kan lære det grunnleggande og for å auka deltaking innan dataprogrammering.\n Det har sidan blitt ein verdsomfattande innsatsi å feire dataprogrammering, som starta som aktivitetar på ein time, men som har utvida seg til all slags engasjement i samfunnet. Sjekk ut <a href='%{tutorials}'>øvingar og aktivitetar</a>. Denne grasrotkampanjen er støtta av over <a href='%{partners}'>400 partnarar</a> og 200.000 lærarar og pedagogar over heile verda."
