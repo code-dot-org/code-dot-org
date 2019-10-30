@@ -92,8 +92,12 @@ export default class LibraryManagerDialog extends React.Component {
     );
   };
 
-  refreshLibrary = libraryName => {
-    console.log('refreshed ' + libraryName + '!');
+  shouldRefresh = _ => {
+    return false;
+  };
+
+  refreshLibrary = _ => {
+    console.warn('refresh is not available yet');
   };
 
   removeLibrary = libraryName => {
@@ -116,11 +120,15 @@ export default class LibraryManagerDialog extends React.Component {
       );
     }
     return libraries.map(library => {
+      let onRefresh;
+      if (this.shouldRefresh(library)) {
+        onRefresh = () => this.refreshLibrary(library);
+      }
       return (
         <LibraryListItem
           key={library.name}
           library={library}
-          onRefresh={this.refreshLibrary}
+          onRefresh={onRefresh}
           onRemove={this.removeLibrary}
         />
       );
