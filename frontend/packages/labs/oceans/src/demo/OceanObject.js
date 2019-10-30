@@ -58,9 +58,9 @@ export const loadAllFishPartImages = () => {
   );
 };
 
-export const generateOceanObject = (allowedClasses, id) => {
+export const generateOceanObject = (allowedClasses, id, dataSet = null) => {
   const idx = Math.floor(Math.random() * allowedClasses.length);
-  const newOceanObject = new allowedClasses[idx](id);
+  const newOceanObject = new allowedClasses[idx](id, dataSet);
   newOceanObject.randomize();
   return newOceanObject;
 };
@@ -97,18 +97,22 @@ export class OceanObject {
   }
 }
 
+const filterExclusions = (component, dataSet) => {
+  return Object.values(component).filter(
+    option => !(option.exclusions || []).includes(dataSet)
+  );
+};
+
 export class FishOceanObject extends OceanObject {
-  constructor(id) {
+  constructor(id, dataSet = null) {
     super(id);
-    const fish = fishData;
-    this.bodies = Object.values(fish.bodies);
-    this.eyes = Object.values(fish.eyes);
-    this.mouths = Object.values(fish.mouths);
-    this.pectoralFinsFront = Object.values(fish.pectoralFinsFront);
-    this.pectoralFinsBack = Object.values(fish.pectoralFinsBack);
-    this.dorsalFins = Object.values(fish.dorsalFins);
-    this.tails = Object.values(fish.tails);
-    this.colorPalettes = Object.values(fish.colorPalettes);
+    let scopedThis = this;
+    Object.keys(fishData).forEach(componentKey => {
+      scopedThis[componentKey] = filterExclusions(
+        fishData[componentKey],
+        dataSet
+      );
+    });
   }
 
   randomize() {

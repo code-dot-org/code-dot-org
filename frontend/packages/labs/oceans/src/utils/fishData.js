@@ -50,7 +50,8 @@ const fishComponents = {
       dorsalFinAnchor: [53, -25],
       tailAnchor: [120, 38],
       knnData: [6384, BodyShape.OVAL],
-      type: FishBodyPart.BODY
+      type: FishBodyPart.BODY,
+      exclusions: ['small']
     },
     fish1: {
       src: 'images/fish/body/Body_Fish1.png',
@@ -62,7 +63,8 @@ const fishComponents = {
       dorsalFinAnchor: [20, -18],
       tailAnchor: [97, 50],
       knnData: [8004, BodyShape.CIRCLE],
-      type: FishBodyPart.BODY
+      type: FishBodyPart.BODY,
+      exclusions: ['small']
     },
     fish2: {
       src: 'images/fish/body/Body_Fish2.png',
@@ -74,7 +76,8 @@ const fishComponents = {
       dorsalFinAnchor: [33, -19],
       tailAnchor: [92, 47],
       knnData: [7895, BodyShape.SQUARE],
-      type: FishBodyPart.BODY
+      type: FishBodyPart.BODY,
+      exclusions: ['small']
     },
     fish4: {
       src: 'images/fish/body/Body_Fish4.png',
@@ -86,7 +89,8 @@ const fishComponents = {
       dorsalFinAnchor: [33, -23],
       tailAnchor: [139, 19],
       knnData: [9078, BodyShape.TRIANGLE],
-      type: FishBodyPart.BODY
+      type: FishBodyPart.BODY,
+      exclusions: ['small']
     },
     wide1: {
       src: 'images/fish/body/Body_Wide1.png',
@@ -98,7 +102,8 @@ const fishComponents = {
       dorsalFinAnchor: [40, -23],
       tailAnchor: [157, 81],
       knnData: [20864, BodyShape.CIRCLE],
-      type: FishBodyPart.BODY
+      type: FishBodyPart.BODY,
+      exclusions: ['small']
     },
     fish5: {
       src: 'images/fish/body/Body_Fish5.png',
@@ -110,7 +115,8 @@ const fishComponents = {
       dorsalFinAnchor: [30, -18],
       tailAnchor: [125, 68],
       knnData: [12844, BodyShape.CIRCLE],
-      type: FishBodyPart.BODY
+      type: FishBodyPart.BODY,
+      exclusions: ['small']
     },
     wide2: {
       src: 'images/fish/body/Body_Wide2.png',
@@ -122,7 +128,8 @@ const fishComponents = {
       dorsalFinAnchor: [60, -23],
       tailAnchor: [154, 81],
       knnData: [17970, BodyShape.OVAL],
-      type: FishBodyPart.BODY
+      type: FishBodyPart.BODY,
+      exclusions: ['small']
     },
     square1: {
       src: 'images/fish/body/Body_Square1.png',
@@ -134,7 +141,8 @@ const fishComponents = {
       dorsalFinAnchor: [25, -23],
       tailAnchor: [97, 45],
       knnData: [8463, BodyShape.SQUARE],
-      type: FishBodyPart.BODY
+      type: FishBodyPart.BODY,
+      exclusions: ['small']
     },
     square2: {
       src: 'images/fish/body/Body_Square2.png',
@@ -146,7 +154,8 @@ const fishComponents = {
       dorsalFinAnchor: [27, -23],
       tailAnchor: [93, 59],
       knnData: [12327, BodyShape.SQUARE],
-      type: FishBodyPart.BODY
+      type: FishBodyPart.BODY,
+      exclusions: ['small']
     },
     spikey1: {
       src: 'images/fish/body/Body_Spikey1.png',
@@ -158,7 +167,8 @@ const fishComponents = {
       dorsalFinAnchor: [53, -23],
       tailAnchor: [125, 74],
       knnData: [13584, BodyShape.CIRCLE],
-      type: FishBodyPart.BODY
+      type: FishBodyPart.BODY,
+      exclusions: ['small']
     },
     spikey2: {
       src: 'images/fish/body/Body_Spikey2.png',
@@ -170,7 +180,8 @@ const fishComponents = {
       dorsalFinAnchor: [43, -20],
       tailAnchor: [125, 64],
       knnData: [14558, BodyShape.CIRCLE],
-      type: FishBodyPart.BODY
+      type: FishBodyPart.BODY,
+      exclusions: ['small']
     },
     sharp1: {
       src: 'images/fish/body/Body_Sharp1.png',
@@ -182,7 +193,8 @@ const fishComponents = {
       dorsalFinAnchor: [76, -13],
       tailAnchor: [144, 56],
       knnData: [12419, BodyShape.TRIANGLE],
-      type: FishBodyPart.BODY
+      type: FishBodyPart.BODY,
+      exclusions: ['small']
     },
     sharp2: {
       src: 'images/fish/body/Body_Sharp2.png',
@@ -194,7 +206,8 @@ const fishComponents = {
       dorsalFinAnchor: [43, -20],
       tailAnchor: [144, 56],
       knnData: [9732, BodyShape.TRIANGLE],
-      type: FishBodyPart.BODY
+      type: FishBodyPart.BODY,
+      exclusions: ['small']
     },
     round1: {
       src: 'images/fish/body/Body_Round1.png',
@@ -206,7 +219,8 @@ const fishComponents = {
       dorsalFinAnchor: [41, -13],
       tailAnchor: [118, 62],
       knnData: [12466, BodyShape.CIRCLE],
-      type: FishBodyPart.BODY
+      type: FishBodyPart.BODY,
+      exclusions: ['small']
     },
     round2: {
       src: 'images/fish/body/Body_Round2.png',
@@ -218,7 +232,8 @@ const fishComponents = {
       dorsalFinAnchor: [25, -20],
       tailAnchor: [74, 39],
       knnData: [4876, BodyShape.CIRCLE],
-      type: FishBodyPart.BODY
+      type: FishBodyPart.BODY,
+      exclusions: ['small']
     },
     narrow1: {
       src: 'images/fish/body/Body_Narrow1.png',
@@ -230,7 +245,8 @@ const fishComponents = {
       dorsalFinAnchor: [22, -13],
       tailAnchor: [62, 62],
       knnData: [6714, BodyShape.OVAL],
-      type: FishBodyPart.BODY
+      type: FishBodyPart.BODY,
+      exclusions: ['small']
     },
     narrow2: {
       src: 'images/fish/body/Body_Narrow2.png',
@@ -242,7 +258,8 @@ const fishComponents = {
       dorsalFinAnchor: [76, -20],
       tailAnchor: [154, 19],
       knnData: [7120, BodyShape.OVAL],
-      type: FishBodyPart.BODY
+      type: FishBodyPart.BODY,
+      exclusions: ['small']
     }
   },
   // EYE KNN DATA: [eye area, eye:pupil ratio]
