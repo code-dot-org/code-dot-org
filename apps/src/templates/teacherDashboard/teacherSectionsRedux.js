@@ -146,13 +146,19 @@ export const toggleSectionHidden = sectionId => (dispatch, getState) => {
  * the server
  * @param {number} sectionId
  * @param {number} courseId
+ * @param {number} scriptId
  */
-export const assignCourseToSection = (sectionId, courseId) => (
+export const assignToSection = (sectionId, courseId, scriptId) => (
   dispatch,
   getState
 ) => {
   dispatch(beginEditingSection(sectionId, true));
-  dispatch(editSectionProperties({courseId: courseId}));
+  dispatch(
+    editSectionProperties({
+      courseId: courseId,
+      scriptId: scriptId
+    })
+  );
   return dispatch(finishEditingSection());
 };
 
@@ -972,7 +978,9 @@ export const sectionFromServerSection = serverSection => ({
   studentCount: serverSection.studentCount,
   code: serverSection.code,
   courseId: serverSection.course_id,
-  scriptId: serverSection.script ? serverSection.script.id : null,
+  scriptId: serverSection.script
+    ? serverSection.script.id
+    : serverSection.script_id,
   hidden: serverSection.hidden
 });
 
@@ -1092,6 +1100,8 @@ export function sectionsForDropdown(state, scriptId, courseId) {
   return state.sectionIds.map(id => ({
     id: parseInt(id, 10),
     name: state.sections[id].name,
+    scriptId: state.sections[id].scriptId,
+    courseId: state.sections[id].courseId,
     isAssigned:
       (scriptId !== null && state.sections[id].scriptId === scriptId) ||
       (courseId !== null && state.sections[id].courseId === courseId)

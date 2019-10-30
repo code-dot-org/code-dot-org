@@ -12,7 +12,7 @@ export default storybook => {
           sectionId={fakeTeacherSectionsForDropdown[0].id}
           courseId={100}
           scriptId={20}
-          assignCourseToSection={action('assignCourseToSection')}
+          assignToSection={action('assignToSection')}
         />
       )
     }
