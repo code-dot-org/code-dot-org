@@ -40,6 +40,7 @@ Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST_TAIL = "";
 Blockly.Msg.CONTROLS_FOREACH_INPUT_ITEM = "với mỗi phần tử";
 Blockly.Msg.CONTROLS_FOREACH_TOOLTIP = "Với mỗi vật trong danh sách, lấy từng thành phần, gán vào biến \"%1\", rồi thực hiện một số lệnh.";
 Blockly.Msg.CONTROLS_FOR_HELPURL = "";
+Blockly.Msg.CONTROLS_FOR_INPUT_COUNTER = "for %1 from %2 to %3 count by %4";
 Blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY = "từ %1 đến %2 mỗi lần thêm %3";
 Blockly.Msg.CONTROLS_FOR_INPUT_WITH = "đếm theo";
 Blockly.Msg.CONTROLS_FOR_TOOLTIP = "Gán từng số, từ số đầu đến số cuối với bước đếm đã được xác định, vào biến %1, và thực hiện các khối đã định sẵn.";
