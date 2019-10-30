@@ -1,11 +1,15 @@
 import {FishOceanObject, generateOceanObject} from '../demo/OceanObject';
 import {getState} from '../demo/state';
+import {fishData} from './fishData';
+import {filterFishComponents} from '../demo/helpers';
 
 export const generateOcean = numFish => {
   const state = getState();
+  const filteredComponents = filterFishComponents(fishData, state.dataSet);
+
   const ocean = [];
   for (var i = 0; i < numFish; ++i) {
-    ocean.push(generateOceanObject([FishOceanObject], i, state.dataSet));
+    ocean.push(generateOceanObject([FishOceanObject], i, filteredComponents));
   }
   return ocean;
 };

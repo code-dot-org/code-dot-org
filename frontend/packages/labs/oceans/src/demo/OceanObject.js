@@ -4,8 +4,7 @@ import {
   bodyAnchorFromType,
   colorForFishPart,
   randomInt,
-  clamp,
-  filterFishComponents
+  clamp
 } from './helpers';
 import _ from 'lodash';
 
@@ -59,12 +58,13 @@ export const loadAllFishPartImages = () => {
   );
 };
 
-export const generateOceanObject = (allowedClasses, id, dataSet = null) => {
+export const generateOceanObject = (
+  allowedClasses,
+  id,
+  allowedComponents = fishData
+) => {
   const idx = Math.floor(Math.random() * allowedClasses.length);
-  const newOceanObject = new allowedClasses[idx](
-    id,
-    filterFishComponents(fishData, dataSet)
-  );
+  const newOceanObject = new allowedClasses[idx](id, allowedComponents);
   newOceanObject.randomize();
   return newOceanObject;
 };
