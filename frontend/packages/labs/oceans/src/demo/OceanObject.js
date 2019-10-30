@@ -94,7 +94,7 @@ export class OceanObject {
   randomize() {
     throw 'Not yet implemented!';
   }
-  drawToCanvas(canvas) {
+  drawToCanvas(canvas, generateLogits = true){
     throw 'Not yet implemented!';
   }
   getId() {
@@ -103,7 +103,9 @@ export class OceanObject {
   getKnnData() {
     if (mobilenet) {
       if (!this.logits) {
-        this.drawToCanvas(tmpCanvas);
+        console.log('get knnData without logits');
+        this.drawToCanvas(tmpCanvas, false);
+        this.generateLogits(tmpCanvas);
       }
       return this.logits;
     } else {
@@ -122,13 +124,16 @@ export class OceanObject {
   getXY() {
     return this.xy;
   }
+
+  async generateLogitsAsync(canvas) {
+    this.generateLogits(canvas);
+  }
+
   generateLogits(canvas) {
     if (mobilenet && !this.logits) {
-      new Promise(resolve => {
-        const image = tf.fromPixels(canvas);
-        const infer = () => mobilenet.infer(image, 'conv_preds');
-        this.logits = infer();
-      });
+      const image = tf.fromPixels(canvas);
+      const infer = () => mobilenet.infer(image, 'conv_preds');
+      this.logits = infer();
     }
   }
   getImage() {
@@ -188,7 +193,7 @@ export class FishOceanObject extends OceanObject {
     return this.colorPalette;
   }
 
-  drawToCanvas(fishCanvas) {
+  drawToCanvas(fishCanvas, generateLogits = true) {
     const ctx = fishCanvas.getContext('2d');
     ctx.translate(constants.fishCanvasWidth, 0);
     ctx.scale(-1, 1);
@@ -257,7 +262,7 @@ export class FishOceanObject extends OceanObject {
         constants.fishCanvasWidth,
         constants.fishCanvasHeight
       );
-      this.generateLogits(fishCanvas);
+      this.generateLogitsAsync(fishCanvas);
     });
   }
 }
@@ -267,13 +272,13 @@ export class TrashOceanObject extends OceanObject {
     const idx = Math.floor(Math.random() * imagePaths.length);
     this.image = trashImages[idx];
   }
-  drawToCanvas(canvas) {
+  drawToCanvas(canvas, generateLogits = true) {
     const ctx = canvas.getContext('2d');
     ctx.translate(canvas.width / 2, canvas.height / 2);
     ctx.rotate(Math.random() * 2 * Math.PI);
     const xpos = (-1 * this.image.width) / 2;
     const ypos = (-1 * this.image.height) / 2;
     ctx.drawImage(this.image, xpos, ypos);
-    this.generateLogits(canvas);
+    this.generateLogitsAsync(canvas);
   }
 }
