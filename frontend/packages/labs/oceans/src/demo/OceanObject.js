@@ -118,6 +118,13 @@ export class OceanObject {
   getTensor() {
     if (mobilenet) {
       if (!this.logits) {
+        const evaluationCtx = evaluationCanvas.getContext('2d');
+        evaluationCtx.clearRect(
+          0,
+          0,
+          evaluationCanvas.width,
+          evaluationCanvas.height
+        );
         this.drawToCanvas(evaluationCanvas, false);
         this.generateLogits(evaluationCanvas);
       }
