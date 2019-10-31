@@ -587,58 +587,58 @@ const fishComponents = {
     fish2: {
       src: Pectoral_Fin_Fish2,
       knnData: [],
-      type: FishBodyPart.PECTORAL_FIN_FRONT,
+      type: FishBodyPart.PECTORAL_FIN_BACK,
       exclusions: [DataSet.Small]
     },
     fish4: {
       src: Pectoral_Fin_Fish4,
       knnData: [],
-      type: FishBodyPart.PECTORAL_FIN_FRONT,
+      type: FishBodyPart.PECTORAL_FIN_BACK,
       exclusions: [DataSet.Small]
     },
     fish6: {
       src: Pectoral_Fin_Fish6,
       knnData: [],
-      type: FishBodyPart.PECTORAL_FIN_FRONT,
+      type: FishBodyPart.PECTORAL_FIN_BACK,
       exclusions: [DataSet.Small]
     },
     narrow1: {
       src: Pectoral_Fin_Narrow1,
       knnData: [],
-      type: FishBodyPart.PECTORAL_FIN_FRONT
+      type: FishBodyPart.PECTORAL_FIN_BACK
     },
     narrow2: {
       src: Pectoral_Fin_Narrow2,
       knnData: [],
-      type: FishBodyPart.PECTORAL_FIN_FRONT
+      type: FishBodyPart.PECTORAL_FIN_BACK
     },
     round2: {
       src: Pectoral_Fin_Round2,
       knnData: [],
-      type: FishBodyPart.PECTORAL_FIN_FRONT
+      type: FishBodyPart.PECTORAL_FIN_BACK
     },
     sharp1: {
       src: Pectoral_Fin_Sharp1,
       knnData: [],
-      type: FishBodyPart.PECTORAL_FIN_FRONT,
+      type: FishBodyPart.PECTORAL_FIN_BACK,
       exclusions: [DataSet.Small]
     },
     spikey1: {
       src: Pectoral_Fin_Spikey1,
       knnData: [],
-      type: FishBodyPart.PECTORAL_FIN_FRONT,
+      type: FishBodyPart.PECTORAL_FIN_BACK,
       exclusions: [DataSet.Small]
     },
     square2: {
       src: Pectoral_Fin_Square2,
       knnData: [],
-      type: FishBodyPart.PECTORAL_FIN_FRONT,
+      type: FishBodyPart.PECTORAL_FIN_BACK,
       exclusions: [DataSet.Small]
     },
     wide1: {
       src: Pectoral_Fin_Wide1,
       knnData: [],
-      type: FishBodyPart.PECTORAL_FIN_FRONT,
+      type: FishBodyPart.PECTORAL_FIN_BACK,
       exclusions: [DataSet.Small]
     }
   },
