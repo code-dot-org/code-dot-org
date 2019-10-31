@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2019-08-19T15:59:32.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "long_instructions": "## Redundant Paths\r\n\r\nDescribe two different paths that a message could take from Person A to Person D. \r\n\r\n<img src=https://images.code.org/2add28bbb25b056dda6f653744e48b3a-image-1566230419874.PNG width=200>",
+    "encrypted_solution": "97MWEpqAHQ+Lsv4EtyEzt7gNw9E0KQgGmEAOd66lZBacWPuj/GNo6y5aIMcQ\nb+QwSYNDYOrebrzwix3qKpcLyFWbbgd0iWFHWd/BAzSfqNcwMC/beJyDwcee\ne4hkZXWEJ8IYx5QW/WD0D7yaW7bXiA==\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 16766,
+    "name_suffix": "_2019",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-08-19 16:02:07 +0000\",\"changed\":[\"notes\",\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

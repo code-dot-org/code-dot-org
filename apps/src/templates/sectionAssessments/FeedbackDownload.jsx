@@ -11,7 +11,7 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {CSVLink} from 'react-csv';
 import Button from '@cdo/apps/templates/Button';
 import color from '@cdo/apps/util/color';
-import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 const CSV_FEEDBACK_RUBRIC_HEADERS = [
   {label: i18n.studentName(), key: 'studentName'},
@@ -86,7 +86,7 @@ class FeedbackDownload extends Component {
           />
         </CSVLink>
         <div>
-          <UnsafeRenderedMarkdown
+          <SafeMarkdown
             markdown={i18n.feedbackDownloadOverview({
               sectionName: sectionName,
               scriptName: scriptName

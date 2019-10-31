@@ -25,7 +25,7 @@ style_min: true
 | [ScratchEd](http://scratched.gse.harvard.edu/guide) | A 6-unit intro to Scratch, FREE | In-person educator meet-ups and online MOOC, FREE |
 | [Tynker](https://www.tynker.com/) | 1 FREE Starter course, 6 Visual Coding courses, 1 Lego WeDo coding course, 6 STEM courses. Each visual coding course has around 16 1-hour lessons. STEM courses include coding projects and quizzes in English, Math, Science, and Social Studies. Prices vary, district pricing available. | Free 1-hour online PD; custom online training solutions for schools and districts; $2,000/day for in-person PD. |
 | [UC Davis C-STEM Center](http://c-stem.ucdavis.edu/) | Integrating coding into math education. Coding, robotics, math activities, and teaching resources for grades 1-6. Coding in Blockly and user-friendly C/C++ Interpreter Ch. Free teaching resources available including PDF textbooks.  School site licenses $600. | Nearly 100 free interactive and video tutorials. $150/day training held at UC Davis campus and nationwide. Costs vary for custom-tailored on-site training. |
-| [Vidcode](https://www.vidcode.com/) | First course and teacher resources are free. Over 12 creative coding courses, 10 hours each, that teach JavaScript and computational thinking. Includes cross-disciplinary, interaction design, and game design courses. School site licenses $2500, a la carte $30/student. Group discounts available. | Free onboarding call, animated online PD course, $250/webinar, $3500/onsite PD |
+| [Vidcode](https://www.vidcode.com/) | First course and teacher resources are free. Over 12 creative coding courses, 10 hours each, that teach JavaScript and computational thinking. Includes cross-disciplinary, interaction design, and game design courses. Unlimited classroom accounts starting at $299/year [https://www.vidcode.com/pay](https://www.vidcode.com/pay) | Free onboarding call, animated online PD course, $250/webinar, $3500/onsite PD |
 | [Wonder Workshop](https://www.makewonder.com/classroom/curriculum/) | The Learn to Code curriculum for K-5 contains 6 levels. Each level has five 50-minute lessons and one Assessment lesson that is 2 hours for the first 2 levels and 2 days for the other levels. The Applied Robotics curriculum for K-8 contains 3 units. Each unit has 10 lessons that range from 40-60 minutes. Learn to Code Challenge Cards + Curriculum Guide: $99.99. Cue Applied Robotics Curriculum Guide: $79.99. Student Design Process Notebooks: $16.99. Code to Learn Cross-Curricular Library Subscription: $60 | Introduction to Coding and Robotics with Dash & Dot: $200. Introduction to Coding and Robotics with Cue: $200. Webinars: free |
 
 <br />
@@ -42,7 +42,7 @@ style_min: true
 | [Code Monkey](https://www.playcodemonkey.com/) | Over 300 story modes & skill mode challenges. Can be taught full year, 1/2 year, or quarterly. $10/student | Free online course, $250/webinar, $3500/onsite PD |
 | [Code.org](/educate/csd) | Year-long CS Discoveries introductory course that consists of six modular units, FREE  | In-person and online workshops available to partner districts |
 | [CodeCombat](https://codecombat.com/) | 11 game-based courses teaching Python and JavaScript. Includes 5 game and web development courses. First course and teacher resources are free. School site licenses start at $2500 | Free onboarding call, $500/online PD |
-| [CodeHS](https://codehs.com) | 6th-12th grade CS pathway. All curriculum is FREE! Middle school courses include Web Design, Cybersecurity, Computing Ideas,  Coding with Karel the Dog (JavaScript), Coding with Tracy the Turtle (Python), and more. Pro plans for schools start at $2500. | Online PD courses are available for $1500. In-person PD workshops are available for schools and districts. Free summer workshops in select cities. For more information, visit codehs.com/pd. |
+| [CodeHS](https://codehs.com) | 6th-12th grade CS pathway. All curriculum is FREE! Middle school courses include Web Design, Cybersecurity, Computing Ideas, Coding with Karel the Dog (JavaScript), Coding with Tracy the Turtle (Python), and more. Pro plans for schools start at $2400. For a full course list, visit [https://codehs.com/course/catalog](https://codehs.com/course/catalog) | Online PD courses are available for $1750. In-person PD workshops are available for schools and districts. Free summer workshops in select cities. For more information, visit [https://codehs.com/pd](https://codehs.com/pd). |
 | [Codesters](https://www.codesters.com/) | Three course options, pricing varies. Intro to Codesters: 5 project-based lessons. Intro to Python 1: 20 project-based lessons. Intro to Python 2: 20 project based lessons. Each lesson takes approximately two 45-minute class periods. | Online PD consists of two 1-hour web-based learning sessions with asynchronous coursework to be completed between sessions. Half day, 1-day, and 3-day workshops available, pricing varies. Follow-on support via email/phone through implementation. |
 | [Edhesive](https://edhesive.com/) | Each a full-year blended course, Explorations in Coding I and II cover foundational concepts and skills of C and build understanding of programming through coding explorations, practices and projects in block-based and text-based Python. Supplemental online and unplugged activities. Starts at $500/site for up to 50 students; unlimited school license available. | 10-hour, online support professional development course. $500-$1,000 |
 | [NCLab](https://nclab.com/solutions/schools/) | Karel Coding, 3D Modeling, and Python Courses | NCLab includes setup and support with all subscriptions. Teachers can request access to courses for their own self-paced learning. PD webinars and live trainings focus on concept development; use of courses, the student management system and supporting materials; context building; and application of skills to projects. |
@@ -52,7 +52,7 @@ style_min: true
 | [ScratchEd](http://scratched.gse.harvard.edu/guide/) | 6-unit course, FREE | In-person educator meet-ups and online MOOC, FREE|
 | [Tynker](https://www.tynker.com/) | 1 FREE Starter Course, 4 Visual Coding Courses, 2 Text Coding Courses, 1 drone coding course, 6 STEM courses. Each coding course has around 16 1-hour lessons. STEM courses include coding projects and quizzes in English, Math, Science, and Social Studies. Courses are aligned with Common Core ELA and Math, CSTA K-8 and NGSS standards. Pricing varies, district pricing available. | In-person one-day workshop available year round for; additional days can be added. $2,000/day. Online PD: free and premium online PD, one hour long. Can be booked at [https://www.tynker.com/training](https://www.tynker.com/training) |
 | [UC Davis C-STEM Center](http://c-stem.ucdavis.edu/) | 5 year-long CS,  robotics,  math 7  with computing and robotics, math 8 with computing and robotics, Arduino courses for grades 7-8. Coding in Blockly and user-friendly C/C++ Interpreter Ch.  Free teaching resources available  including PDF textbooks.  School site licenses  only $800. | Nearly 100 free interactive and video tutorials. $150/day training held at UC Davis campus and nationwide. Costs vary for custom-tailored on-site training. |
-| [Vidcode](https://www.vidcode.com/) | First course and teacher resources are free. Over 12 creative coding courses, 10 hours each, that teach JavaScript and computational thinking. Includes cross-disciplinary, interaction design, and game design courses. School site licenses $2500, a la carte $30/student. Group discounts available. | Free onboarding call, animated online PD course, $250/webinar, $3500/onsite PD |
+| [Vidcode](https://www.vidcode.com/) | First course and teacher resources are free. Over 12 creative coding courses, 10 hours each, that teach JavaScript and computational thinking. Includes cross-disciplinary, interaction design, and game design courses. Unlimited classroom accounts starting at $299/year [https://www.vidcode.com/pay](https://www.vidcode.com/pay) | Free onboarding call, animated online PD course, $250/webinar, $3500/onsite PD |
 
 <br />
 <a target="_blank" href="https://docs.google.com/spreadsheets/d/1-lbIKCkcVWWTFhcmpZkw8AcGv0iPj-hEqvO0Eu0N1hU/pubhtml?gid=1162176811&single=true"><button>See full details and comparison</button></a>
@@ -72,7 +72,7 @@ Looking for resources specifically for AP Computer Science Principles A in Java?
 | [Code Avengers](https://www.codeavengers.com/edu) | Learn by doing and create real world objects and outcomes through the 100s of hours of learning on the PRO platform. Develop skills in web development, programming, design and much more.  $12.50 - $25/student. Bulk discounts available. | Free onboarding PD session with any school license purchase. Pro courses to learn in-depth content of digital technologies/ computer science included with Teacher License.  Additional PD Training Session USD $200 per teacher per half day session delivered via video conference. |
 | [Code.org](/educate) | Year-long CS Discoveries intro course that consists of six modular units, FREE. Year-long AP Computer Science Principles course, FREE. | In-person and online workshops available to partner districts |
 | [CodeCombat](https://codecombat.com/) | 11 game-based courses teaching Python and JavaScript. Includes 5 game and web development courses. College Board endorsed provider of curriculum and PD for AP CS Principles. First course and teacher resources are free. School site licenses start at $2500 | Free onboarding call, $500/online PD |
-| [CodeHS](https://codehs.com) | 6th-12th grade CS pathway. All curriculum is FREE! Middle school courses include Web Design, Cybersecurity, Computing Ideas,  Coding with Karel the Dog (JavaScript), Coding with Tracy the Turtle (Python), and more. Pro plans for schools start at $2500. | Online PD courses are available for $1500. In-person PD workshops are available for schools and districts. Free summer workshops in select cities. For more information, visit codehs.com/pd. |
+| [CodeHS](https://codehs.com) | 6th-12th grade CS pathway. All curriculum is FREE! High school courses include introductory courses in JavaScript, Python, and Web Design, AP CSP, AP CS A, Cybersecurity, and Mobile Apps. Pro plans for schools start at $2400. For a full course list, visit [https://codehs.com/course/catalog](https://codehs.com/course/catalog). | Online PD courses are available for $1750. In-person PD workshops are available for schools and districts. Free summer workshops in select cities. For more information, visit [https://codehs.com/pd](https://codehs.com/pd). |
 | [CompuScholar](https://www.compuscholar.com/schools) | Full-year or single-semester courses for middle and high school students, with subjects like Java, C#, Python, HTML/CSS, Unity Video Game Design, Digital Literacy and AP CS A. Turn-key teaching system includes full solutions and teacher support. Flexible licensing options (per-student, site license, etc.). | FREE onboarding, FREE monthly webinars, FREE dedicated CSR for 1:1 support, FREE opportunities to take CompuScholar courses for personal growth |
 | [CS50](https://ap.cs50.school/) | Our curriculum includes 7 core units and 2 additional units that go beyond the scope of AP CSP. The curriculum includes all that teachers might need in order to teach CS50 in their own classrooms, including assignments, notes, slides, software, videos, and more. CS50 is free and open source. | 3 day in-person workshop, $1200/teacher + travel, tuition waivers available |
 | [Edhesive](https://edhesive.com/) | 3 full-year, blended courses: Intro to CS, AP CS Principles, AP CSA - Java; Intro CS also available as half-year course. Programming languages include Python, Scratch, Processing and Java. AP CSP is College Board-endorsed curriculum, and both AP CSP and AP CSA prepare students for the AP Exams. | 40-hour, self-paced online course; in-person PD available - please inquire. $1000 for full online PD course. |
@@ -87,18 +87,12 @@ Looking for resources specifically for AP Computer Science Principles A in Java?
 | [Swift CSP](https://www.makeschool.com/online-courses/swift-computer-science-principles) | Full year course, plus tons of extra advanced curriculum for differentiation, FREE | Three day in-person workshop, with materials and curriculum supplied before the training. In-person training costs $250, to support costs for running PD.  Any online support, resources, and/or online-PD is free. |
 | [TEALS](http://www.tealsk12.org/schools/) | 3 courses, including AP CS A, FREE | Program implemented by TEALS volunteers, $5000 |
 | [UC Davis C-STEM Center](http://c-stem.ucdavis.edu/) | 14 year-long CS, robotics,  Algebra 1, Geometry, and Algebra 2 with computing and robotics, Arduino, Raspberry Pi courses for grades 9-12. Coding in Blockly and user-friendly C/C++ Interpreter Ch. Free teaching resources available  including PDF textbooks.  School site licenses  only $1,000. | Nearly 100 free interactive and video tutorials. $150/day training held at UC Davis campus and nationwide. Costs vary for custom-tailored on-site training. |
-| [UTeach CS Principles](https://cs.uteach.utexas.edu/) | Developed by the UTeach Institute at The University of Texas at Austin, the UTeach AP CS Principles course encourages computational thinking through an engaging, student-centered and project-based curriculum. Developed by experts in STEM teaching and learning, UTeach CS Principles is comprehensive and classroom-ready, including detailed project-based lesson plans, AP-style test banks, pacing guides, and more. Scratch and Processing are the primary programming languages. Curriclum and year-round, on-demand support is $1,200/teacher for one year. Renewals are $300/year. | UTeach offers five-day in-person professional learning workshops or a six-week online course to prepare teachers to implement the course. Texas teachers may be eligible to receive two years of curriculum, PD, and support free of charge. See our website for details. 5-day, in-person PD is available for $1,200/teacher. Online is available for $600/teacher. |
-| [Vidcode](https://www.vidcode.com/) | First course and teacher resources are free. Over 12 creative coding courses, 10 hours each, that teach JavaScript and computational thinking. Includes cross-disciplinary, interaction design, and game design courses. School site licenses $2500, a la carte $30/student. Group discounts available. | Free onboarding call, animated online PD course, $250/webinar, $3500/onsite PD |
+| [UTeach CS Principles](https://cs.uteach.utexas.edu/) | Developed by the UTeach Institute at The University of Texas at Austin, UTeach CS offers engaging, project-based curriculum for AP CS Principles and AP CS A courses. UTeach CS was designed to engage all students in computing, with an emphasis on young women and historically underrepresented minorities. Classroom-tested activities, comprehensive teacher materials, AP-style test banks, and pacing guides, plus access to a robust teacher professional learning community help ensure successful implementation by teachers with a variety of content backgrounds and levels of expertise. Scratch and Processing are the primary programming languages for CS Principles, while CS A is Java-based. Licenses for curriculum and year-round, on-demand support are $1,200 per teacher for the first year, and $600 for renewals. See our website for current funding opportunities. | UTeach CS offers 5-day in-person professional learning workshops and 6- or 10-week, self-paced online workshops for current and future teachers of CS Principles and CS A. Teachers will leave the workshop ready to successfully implement the UTeach CS curriculum and prepared to meet AP course requirements. 5-day, in-person PD is available for $1,200/teacher. Online PD is available for $600/teacher. See our website for current funding opportunities. |
+| [Vidcode](https://www.vidcode.com/) | First course and teacher resources are free. Over 12 creative coding courses, 10 hours each, that teach JavaScript and computational thinking. Includes cross-disciplinary, interaction design, and game design courses. Unlimited classroom accounts starting at $299/year [https://www.vidcode.com/pay](https://www.vidcode.com/pay) | Free onboarding call, animated online PD course, $250/webinar, $3500/onsite PD |
 
 
 <br />
 <a target="_blank" href="https://docs.google.com/spreadsheets/d/1-lbIKCkcVWWTFhcmpZkw8AcGv0iPj-hEqvO0Eu0N1hU/pubhtml?gid=705822074&single=true"><button>See full details and comparison</button></a>
-
-## For school counselors and administrators
-[NCWIT Counselors for Computing (C4C)](https://www.ncwit.org/project/counselors-computing-c4c) provides school counselors with
-up-to-date information and resources they can use to guide students toward education and
-careers in computing. Free professional development webinars and 1-day workshops are available
-across the US.   
 
 ## Funding for computer science programs
 
@@ -108,28 +102,10 @@ Your school or district may be able to use Title I or Title II funds, and other 
 
 The National Science Foundation (NSF) has several existing funding opportunities to support CS for All initiatives. The NSF outlined invitations for proposals in a [Dear Colleague Letter](http://www.nsf.gov/publications/pub_summ.jsp?ods_key=nsf16057) issued in March 2016. If you are an organization focused on the learning of computer science and computational thinking for all students, consider [submitting a proposal](http://www.nsf.gov/publications/pub_summ.jsp?ods_key=nsf16057).
 
-## Scholarship opportunities for students
-Raise.me is a college preparedness platform empowering millions of high school students to reach their full potential by helping them earn scholarship dollars from colleges for all the things that set them up to succeed - whether that’s getting good grades, volunteering in the community, or joining extracurriculars.
-
- <p>
-Click below to learn more about how Raise.me can help your students earn scholarships to stay motivated and pursue computer science education in preparation for college.
-</p>
-
-[<button>Learn more</button>](/educate/scholarships)
-
 ## More resources &mdash; for classrooms, afterschool clubs or learning online
-
-### [Khan Academy](http://khanacademy.org/cs/programming)
-Online curriculum that teaches JavaScript programming, HTML/CSS, and SQL, in an interactive online environment, plus courses on Algorithms and Cryptography. Includes teaching tools to track student progress.
-
-### [Kodu](http://www.kodugamelab.com/)
-Create games on the PC and XBox via a simple visual programming language. Can be used to teach creativity, problem solving, storytelling, as well as programming.
 
 ### [Alice](http://www.alice.org/)
 3D programming environment that makes it easy to create an animation for telling a story, playing an interactive game, or a video to share on the web.
-
-### [Pencil Code](//pencilcode.net)
-Pencil Code lets beginners be real web real developers, starting with turtle graphics and moving on to HTML5, CSS, and jQuery.  Create art, music, games, and stories in Coffeescript and Javascript using a unique switchable editor that lets you work in either blocks or text.
 
 ### [Codecademy](https://www.codecademy.com/learn)
 Codecademy is an online interactive platform that offers free coding classes in 12 different programming languages
@@ -140,12 +116,20 @@ Fun classroom exercises to teach computer science principles, no computers neede
 ### [CS First](http://cs-first.com/)
 Free curriculum from Google that uses online, project-based tutorials for elementary and middle school students and offers free club plans and resources to create an easy computer science entry point for educators and students alike.
 
+### [Khan Academy](http://khanacademy.org/cs/programming)
+Online curriculum that teaches JavaScript programming, HTML/CSS, and SQL, in an interactive online environment, plus courses on Algorithms and Cryptography. Includes teaching tools to track student progress.
+
+### [Kodu](http://www.kodugamelab.com/)
+Create games on the PC and XBox via a simple visual programming language. Can be used to teach creativity, problem solving, storytelling, as well as programming.
+
+### [Pencil Code](//pencilcode.net)
+Pencil Code lets beginners be real web real developers, starting with turtle graphics and moving on to HTML5, CSS, and jQuery.  Create art, music, games, and stories in Coffeescript and Javascript using a unique switchable editor that lets you work in either blocks or text.
+
+### [Riot Games](https://www.riotgames.com/en/urf-academy)
+Riot Games’ Game Design curriculum is an entry-level course that teaches high school students the fundamental elements of game design using a framework and interactive workshops created by professional game designers. Course includes 6 modules containing 14 lessons.
+
 ### [Teaching Kids Programming ](http://teachingkidsprogramming.org)
 Build the next generation of creators using free, open-source Java courseware.
-
-## Other lists of resources for curriculum or PD
-- AskATeacher's [Hour of Code suggestions by grade level](http://askatechteacher.com/2015/11/09/hour-of-code-3/)
-- [LeadCS.org](http://www.leadcs.org) - a list of many resources for schools to embrace CS
 
 ## Frequently Asked Questions
 

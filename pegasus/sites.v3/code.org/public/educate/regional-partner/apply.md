@@ -9,10 +9,7 @@ We're so excited that you are interested in becoming a Code.org Regional Partner
 
 We are particularly looking for new Regional Partners in:
 
-- Arizona
 - Montana
-- North Dakota
-- Wyoming
 
 
 ### Application Process ###

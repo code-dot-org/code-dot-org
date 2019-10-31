@@ -8,7 +8,7 @@
 #  created_at            :datetime
 #  updated_at            :datetime
 #  level_num             :string(255)
-#  ideal_level_source_id :integer
+#  ideal_level_source_id :integer          unsigned
 #  user_id               :integer
 #  properties            :text(65535)
 #  type                  :string(255)
@@ -48,8 +48,8 @@ class Weblab < Level
   end
 
   # Return an 'appOptions' hash derived from the level contents
-  def weblab_level_options
-    options = Rails.cache.fetch("#{cache_key}/weblab_level_options/v2") do
+  def non_blockly_puzzle_level_options
+    options = Rails.cache.fetch("#{cache_key}/non_blockly_puzzle_level_options/v2") do
       level_prop = {}
 
       properties.keys.each do |dashboard|

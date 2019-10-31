@@ -14,14 +14,8 @@
   - else
     = f.hidden_field :name
   .edit_container
-  - scriptData = {script: @script ? @script.summarize(false) : {},
-                  i18n: @script ? @script.summarize_i18n : {},
-                  stageLevelData: @script_file,
-                  locales: options_for_locale_select,
-                  script_families: ScriptConstants::FAMILY_NAMES,
-                  version_year_options: Script.get_version_year_options}
-  %script{src: minifiable_asset_path('js/levelbuilder_edit_script.js'),
-          data: {levelBuilderEditScript: scriptData.to_json}}
+  %script{src: webpack_asset_path('js/scripts/_form.js'),
+          data: {levelBuilderEditScript: @script_data.to_json}}
 
 - if @show_all_instructions
   - @script.stages.each do |stage|

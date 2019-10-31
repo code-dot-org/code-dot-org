@@ -3,7 +3,7 @@
  */
 import React from 'react';
 import {FacilitatorPropType} from './enrollmentConstants';
-import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 export default class FacilitatorBio extends React.Component {
   static propTypes = {
@@ -20,7 +20,7 @@ export default class FacilitatorBio extends React.Component {
     if (this.props.facilitator.bio) {
       return (
         <div>
-          <UnsafeRenderedMarkdown markdown={this.props.facilitator.bio} />
+          <SafeMarkdown markdown={this.props.facilitator.bio} />
         </div>
       );
     } else {

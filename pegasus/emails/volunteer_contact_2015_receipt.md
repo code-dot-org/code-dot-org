@@ -6,7 +6,7 @@ def format_email_address(email, name='')
 end
 %>
 to: <%= format_email_address(volunteer_email_s, volunteer_name_s).inspect %>
-from: 'Tanya Parker (Code.org) <tanya_parker@code.org>'
+from: 'Code.org Volunteers <volunteers@code.org>'
 reply-to: <%= format_email_address(email_s, name_s).inspect %>
 subject: "A teacher is requesting your help"
 ---
@@ -15,7 +15,7 @@ subject: "A teacher is requesting your help"
 
 Hi <%= volunteer_name_s %>,
 
-<%= name_s %> is a teacher at <%= school_name_s %>. S/he found you on the [volunteer site](https://code.org/volunteer/local) and after reviewing your profile specifically requested if you could help their class. S/he would like it if you could:
+<%= name_s %> is a teacher at <%= school_name_s %>. They found you on the [volunteer site](https://code.org/volunteer/local) and after reviewing your profile specifically requested if you could help their class. They would like it if you could:
 
 <ul>
 <% if type_task_onsite_b %>
@@ -25,11 +25,11 @@ Hi <%= volunteer_name_s %>,
   <li> Skype into the classroom to say a few words of inspiration to the kids
 <% end %>
 <% if type_task_mentor_b %>
-  <li> be a mentor to help prepare him/her for coding with his/her students
+  <li> be a mentor to help prepare them for coding with their students
 <% end %>
 </ul>
 
-We won't release your email directly to a teacher, so s/he's waiting for you to write back.
+We won't release your email directly to a teacher, so they're waiting for you to write back.
 
 Most schools still don’t teach computer science. Most students don’t know that it’s about solving big problems and connecting us all closer together. This is your chance to inspire at least one young person in your area. If you are available to volunteer with this teacher, **please contact <%= name_s %> directly at [<%= email_s %>](<%= "mailto:" + email_s %>)**.
 
@@ -40,8 +40,10 @@ In your email to <%= name_s %>, please be sure to share the following informatio
 - Why you chose to volunteer to inspire students
 - Ask if there is any paperwork you need to fill out before volunteering
 
-Tanya Parker<br>
-Product Manager, Code.org
+Best,
+Alice Steinglass<br/>
+President, Code.org
+
 
 Contact information from teacher:
 

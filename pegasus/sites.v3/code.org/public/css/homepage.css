@@ -128,11 +128,27 @@ body.modal-open .supreme-container{
 }
 
 #homepage .hero-message {
-  font-size: 28px;
-  line-height: 28px;
+  font-family: 'Gotham 5r', sans-serif !important;
+  font-size: 44px;
+  line-height: 44px;
   color: white;
-  margin-bottom: 60px;
-  margin-top: 60px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+#homepage .hero-message-second {
+  font-family: 'Gotham 5r', sans-serif !important;
+  font-size: 44px;
+  line-height: 44px;
+  color: white;
+  margin-bottom: 40px;
+}
+
+#homepage .hero-sub-message {
+  color: white;
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 40px;
 }
 
 #homepage .action .video-play-icon {
@@ -152,6 +168,12 @@ body.modal-open .supreme-container{
   font-size: 15px;
 }
 
+.curriculum-banner a {
+  color: white !important;
+  font-family: 'Gotham 4r', sans-serif !important;
+  text-decoration: underline !important;
+}
+
 .curriculum-link {
   color: white !important;
   font-family: 'Gotham 4r', sans-serif !important;
@@ -159,7 +181,7 @@ body.modal-open .supreme-container{
 }
 
 #homepage .action_buttons {
-  margin-bottom: 100px;
+  margin-bottom: 20px;
 }
 
 #homepage #actions a {

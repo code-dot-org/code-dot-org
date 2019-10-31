@@ -1,14 +1,10 @@
 /* Droplet.
- * Copyright (c) 2018 Anthony Bau.
+ * Copyright (c) 2019 Anthony Bau.
  * MIT License.
  *
- * Date: 2018-04-03
+ * Date: 2019-07-24
  */
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.droplet = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-
-},{}],2:[function(require,module,exports){
-arguments[4][1][0].apply(exports,arguments)
-},{"dup":1}],3:[function(require,module,exports){
 var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
 
 ;(function (exports) {
@@ -134,7 +130,11 @@ var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
 	exports.fromByteArray = uint8ToBase64
 }(typeof exports === 'undefined' ? (this.base64js = {}) : exports))
 
-},{}],4:[function(require,module,exports){
+},{}],2:[function(require,module,exports){
+
+},{}],3:[function(require,module,exports){
+arguments[4][2][0].apply(exports,arguments)
+},{"dup":2}],4:[function(require,module,exports){
 (function (global){
 /*!
  * The buffer module from node.js, for the browser.
@@ -1686,7 +1686,7 @@ function blitBuffer (src, dst, offset, length) {
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"base64-js":3,"ieee754":19,"isarray":5}],5:[function(require,module,exports){
+},{"base64-js":1,"ieee754":8,"isarray":5}],5:[function(require,module,exports){
 var toString = {}.toString;
 
 module.exports = Array.isArray || function (arr) {
@@ -1694,6 +1694,117 @@ module.exports = Array.isArray || function (arr) {
 };
 
 },{}],6:[function(require,module,exports){
+(function (Buffer){
+// Copyright Joyent, Inc. and other Node contributors.
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the
+// "Software"), to deal in the Software without restriction, including
+// without limitation the rights to use, copy, modify, merge, publish,
+// distribute, sublicense, and/or sell copies of the Software, and to permit
+// persons to whom the Software is furnished to do so, subject to the
+// following conditions:
+//
+// The above copyright notice and this permission notice shall be included
+// in all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+// USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+// NOTE: These type checking functions intentionally don't use `instanceof`
+// because it is fragile and can be easily faked with `Object.create()`.
+
+function isArray(arg) {
+  if (Array.isArray) {
+    return Array.isArray(arg);
+  }
+  return objectToString(arg) === '[object Array]';
+}
+exports.isArray = isArray;
+
+function isBoolean(arg) {
+  return typeof arg === 'boolean';
+}
+exports.isBoolean = isBoolean;
+
+function isNull(arg) {
+  return arg === null;
+}
+exports.isNull = isNull;
+
+function isNullOrUndefined(arg) {
+  return arg == null;
+}
+exports.isNullOrUndefined = isNullOrUndefined;
+
+function isNumber(arg) {
+  return typeof arg === 'number';
+}
+exports.isNumber = isNumber;
+
+function isString(arg) {
+  return typeof arg === 'string';
+}
+exports.isString = isString;
+
+function isSymbol(arg) {
+  return typeof arg === 'symbol';
+}
+exports.isSymbol = isSymbol;
+
+function isUndefined(arg) {
+  return arg === void 0;
+}
+exports.isUndefined = isUndefined;
+
+function isRegExp(re) {
+  return objectToString(re) === '[object RegExp]';
+}
+exports.isRegExp = isRegExp;
+
+function isObject(arg) {
+  return typeof arg === 'object' && arg !== null;
+}
+exports.isObject = isObject;
+
+function isDate(d) {
+  return objectToString(d) === '[object Date]';
+}
+exports.isDate = isDate;
+
+function isError(e) {
+  return (objectToString(e) === '[object Error]' || e instanceof Error);
+}
+exports.isError = isError;
+
+function isFunction(arg) {
+  return typeof arg === 'function';
+}
+exports.isFunction = isFunction;
+
+function isPrimitive(arg) {
+  return arg === null ||
+         typeof arg === 'boolean' ||
+         typeof arg === 'number' ||
+         typeof arg === 'string' ||
+         typeof arg === 'symbol' ||  // ES6 symbol
+         typeof arg === 'undefined';
+}
+exports.isPrimitive = isPrimitive;
+
+exports.isBuffer = Buffer.isBuffer;
+
+function objectToString(o) {
+  return Object.prototype.toString.call(o);
+}
+
+}).call(this,{"isBuffer":require("../../is-buffer/index.js")})
+},{"../../is-buffer/index.js":10}],7:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -1996,10 +2107,339 @@ function isUndefined(arg) {
   return arg === void 0;
 }
 
-},{}],7:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
+exports.read = function (buffer, offset, isLE, mLen, nBytes) {
+  var e, m
+  var eLen = (nBytes * 8) - mLen - 1
+  var eMax = (1 << eLen) - 1
+  var eBias = eMax >> 1
+  var nBits = -7
+  var i = isLE ? (nBytes - 1) : 0
+  var d = isLE ? -1 : 1
+  var s = buffer[offset + i]
+
+  i += d
+
+  e = s & ((1 << (-nBits)) - 1)
+  s >>= (-nBits)
+  nBits += eLen
+  for (; nBits > 0; e = (e * 256) + buffer[offset + i], i += d, nBits -= 8) {}
+
+  m = e & ((1 << (-nBits)) - 1)
+  e >>= (-nBits)
+  nBits += mLen
+  for (; nBits > 0; m = (m * 256) + buffer[offset + i], i += d, nBits -= 8) {}
+
+  if (e === 0) {
+    e = 1 - eBias
+  } else if (e === eMax) {
+    return m ? NaN : ((s ? -1 : 1) * Infinity)
+  } else {
+    m = m + Math.pow(2, mLen)
+    e = e - eBias
+  }
+  return (s ? -1 : 1) * m * Math.pow(2, e - mLen)
+}
+
+exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
+  var e, m, c
+  var eLen = (nBytes * 8) - mLen - 1
+  var eMax = (1 << eLen) - 1
+  var eBias = eMax >> 1
+  var rt = (mLen === 23 ? Math.pow(2, -24) - Math.pow(2, -77) : 0)
+  var i = isLE ? 0 : (nBytes - 1)
+  var d = isLE ? 1 : -1
+  var s = value < 0 || (value === 0 && 1 / value < 0) ? 1 : 0
+
+  value = Math.abs(value)
+
+  if (isNaN(value) || value === Infinity) {
+    m = isNaN(value) ? 1 : 0
+    e = eMax
+  } else {
+    e = Math.floor(Math.log(value) / Math.LN2)
+    if (value * (c = Math.pow(2, -e)) < 1) {
+      e--
+      c *= 2
+    }
+    if (e + eBias >= 1) {
+      value += rt / c
+    } else {
+      value += rt * Math.pow(2, 1 - eBias)
+    }
+    if (value * c >= 2) {
+      e++
+      c /= 2
+    }
+
+    if (e + eBias >= eMax) {
+      m = 0
+      e = eMax
+    } else if (e + eBias >= 1) {
+      m = ((value * c) - 1) * Math.pow(2, mLen)
+      e = e + eBias
+    } else {
+      m = value * Math.pow(2, eBias - 1) * Math.pow(2, mLen)
+      e = 0
+    }
+  }
+
+  for (; mLen >= 8; buffer[offset + i] = m & 0xff, i += d, m /= 256, mLen -= 8) {}
+
+  e = (e << mLen) | m
+  eLen += mLen
+  for (; eLen > 0; buffer[offset + i] = e & 0xff, i += d, e /= 256, eLen -= 8) {}
+
+  buffer[offset + i - d] |= s * 128
+}
+
+},{}],9:[function(require,module,exports){
+if (typeof Object.create === 'function') {
+  // implementation from standard node.js 'util' module
+  module.exports = function inherits(ctor, superCtor) {
+    if (superCtor) {
+      ctor.super_ = superCtor
+      ctor.prototype = Object.create(superCtor.prototype, {
+        constructor: {
+          value: ctor,
+          enumerable: false,
+          writable: true,
+          configurable: true
+        }
+      })
+    }
+  };
+} else {
+  // old school shim for old browsers
+  module.exports = function inherits(ctor, superCtor) {
+    if (superCtor) {
+      ctor.super_ = superCtor
+      var TempCtor = function () {}
+      TempCtor.prototype = superCtor.prototype
+      ctor.prototype = new TempCtor()
+      ctor.prototype.constructor = ctor
+    }
+  }
+}
+
+},{}],10:[function(require,module,exports){
+/*!
+ * Determine if an object is a Buffer
+ *
+ * @author   Feross Aboukhadijeh <https://feross.org>
+ * @license  MIT
+ */
+
+// The _isBuffer check is for Safari 5-7 support, because it's missing
+// Object.prototype.constructor. Remove this eventually
+module.exports = function (obj) {
+  return obj != null && (isBuffer(obj) || isSlowBuffer(obj) || !!obj._isBuffer)
+}
+
+function isBuffer (obj) {
+  return !!obj.constructor && typeof obj.constructor.isBuffer === 'function' && obj.constructor.isBuffer(obj)
+}
+
+// For Node v0.10 support. Remove this eventually.
+function isSlowBuffer (obj) {
+  return typeof obj.readFloatLE === 'function' && typeof obj.slice === 'function' && isBuffer(obj.slice(0, 0))
+}
+
+},{}],11:[function(require,module,exports){
+module.exports = Array.isArray || function (arr) {
+  return Object.prototype.toString.call(arr) == '[object Array]';
+};
+
+},{}],12:[function(require,module,exports){
+// shim for using process in browser
+var process = module.exports = {};
+
+// cached from whatever global is present so that test runners that stub it
+// don't break things.  But we need to wrap it in a try catch in case it is
+// wrapped in strict mode code which doesn't define any globals.  It's inside a
+// function because try/catches deoptimize in certain engines.
+
+var cachedSetTimeout;
+var cachedClearTimeout;
+
+function defaultSetTimout() {
+    throw new Error('setTimeout has not been defined');
+}
+function defaultClearTimeout () {
+    throw new Error('clearTimeout has not been defined');
+}
+(function () {
+    try {
+        if (typeof setTimeout === 'function') {
+            cachedSetTimeout = setTimeout;
+        } else {
+            cachedSetTimeout = defaultSetTimout;
+        }
+    } catch (e) {
+        cachedSetTimeout = defaultSetTimout;
+    }
+    try {
+        if (typeof clearTimeout === 'function') {
+            cachedClearTimeout = clearTimeout;
+        } else {
+            cachedClearTimeout = defaultClearTimeout;
+        }
+    } catch (e) {
+        cachedClearTimeout = defaultClearTimeout;
+    }
+} ())
+function runTimeout(fun) {
+    if (cachedSetTimeout === setTimeout) {
+        //normal enviroments in sane situations
+        return setTimeout(fun, 0);
+    }
+    // if setTimeout wasn't available but was latter defined
+    if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
+        cachedSetTimeout = setTimeout;
+        return setTimeout(fun, 0);
+    }
+    try {
+        // when when somebody has screwed with setTimeout but no I.E. maddness
+        return cachedSetTimeout(fun, 0);
+    } catch(e){
+        try {
+            // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
+            return cachedSetTimeout.call(null, fun, 0);
+        } catch(e){
+            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
+            return cachedSetTimeout.call(this, fun, 0);
+        }
+    }
+
+
+}
+function runClearTimeout(marker) {
+    if (cachedClearTimeout === clearTimeout) {
+        //normal enviroments in sane situations
+        return clearTimeout(marker);
+    }
+    // if clearTimeout wasn't available but was latter defined
+    if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
+        cachedClearTimeout = clearTimeout;
+        return clearTimeout(marker);
+    }
+    try {
+        // when when somebody has screwed with setTimeout but no I.E. maddness
+        return cachedClearTimeout(marker);
+    } catch (e){
+        try {
+            // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
+            return cachedClearTimeout.call(null, marker);
+        } catch (e){
+            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
+            // Some versions of I.E. have different rules for clearTimeout vs setTimeout
+            return cachedClearTimeout.call(this, marker);
+        }
+    }
+
+
+
+}
+var queue = [];
+var draining = false;
+var currentQueue;
+var queueIndex = -1;
+
+function cleanUpNextTick() {
+    if (!draining || !currentQueue) {
+        return;
+    }
+    draining = false;
+    if (currentQueue.length) {
+        queue = currentQueue.concat(queue);
+    } else {
+        queueIndex = -1;
+    }
+    if (queue.length) {
+        drainQueue();
+    }
+}
+
+function drainQueue() {
+    if (draining) {
+        return;
+    }
+    var timeout = runTimeout(cleanUpNextTick);
+    draining = true;
+
+    var len = queue.length;
+    while(len) {
+        currentQueue = queue;
+        queue = [];
+        while (++queueIndex < len) {
+            if (currentQueue) {
+                currentQueue[queueIndex].run();
+            }
+        }
+        queueIndex = -1;
+        len = queue.length;
+    }
+    currentQueue = null;
+    draining = false;
+    runClearTimeout(timeout);
+}
+
+process.nextTick = function (fun) {
+    var args = new Array(arguments.length - 1);
+    if (arguments.length > 1) {
+        for (var i = 1; i < arguments.length; i++) {
+            args[i - 1] = arguments[i];
+        }
+    }
+    queue.push(new Item(fun, args));
+    if (queue.length === 1 && !draining) {
+        runTimeout(drainQueue);
+    }
+};
+
+// v8 likes predictible objects
+function Item(fun, array) {
+    this.fun = fun;
+    this.array = array;
+}
+Item.prototype.run = function () {
+    this.fun.apply(null, this.array);
+};
+process.title = 'browser';
+process.browser = true;
+process.env = {};
+process.argv = [];
+process.version = ''; // empty string to avoid regexp issues
+process.versions = {};
+
+function noop() {}
+
+process.on = noop;
+process.addListener = noop;
+process.once = noop;
+process.off = noop;
+process.removeListener = noop;
+process.removeAllListeners = noop;
+process.emit = noop;
+process.prependListener = noop;
+process.prependOnceListener = noop;
+
+process.listeners = function (name) { return [] }
+
+process.binding = function (name) {
+    throw new Error('process.binding is not supported');
+};
+
+process.cwd = function () { return '/' };
+process.chdir = function (dir) {
+    throw new Error('process.chdir is not supported');
+};
+process.umask = function() { return 0; };
+
+},{}],13:[function(require,module,exports){
 module.exports = require("./lib/_stream_duplex.js")
 
-},{"./lib/_stream_duplex.js":8}],8:[function(require,module,exports){
+},{"./lib/_stream_duplex.js":14}],14:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -2092,7 +2532,7 @@ function forEach (xs, f) {
 }
 
 }).call(this,require('_process'))
-},{"./_stream_readable":10,"./_stream_writable":12,"_process":23,"core-util-is":18,"inherits":20}],9:[function(require,module,exports){
+},{"./_stream_readable":16,"./_stream_writable":18,"_process":12,"core-util-is":6,"inherits":9}],15:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -2140,7 +2580,7 @@ PassThrough.prototype._transform = function(chunk, encoding, cb) {
   cb(null, chunk);
 };
 
-},{"./_stream_transform":11,"core-util-is":18,"inherits":20}],10:[function(require,module,exports){
+},{"./_stream_transform":17,"core-util-is":6,"inherits":9}],16:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -3095,7 +3535,7 @@ function indexOf (xs, x) {
 }
 
 }).call(this,require('_process'))
-},{"./_stream_duplex":8,"_process":23,"buffer":4,"core-util-is":18,"events":6,"inherits":20,"isarray":22,"stream":17,"string_decoder/":25,"util":1}],11:[function(require,module,exports){
+},{"./_stream_duplex":14,"_process":12,"buffer":4,"core-util-is":6,"events":7,"inherits":9,"isarray":11,"stream":24,"string_decoder/":25,"util":2}],17:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -3306,7 +3746,7 @@ function done(stream, er) {
   return stream.push(null);
 }
 
-},{"./_stream_duplex":8,"core-util-is":18,"inherits":20}],12:[function(require,module,exports){
+},{"./_stream_duplex":14,"core-util-is":6,"inherits":9}],18:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -3787,10 +4227,10 @@ function endWritable(stream, state, cb) {
 }
 
 }).call(this,require('_process'))
-},{"./_stream_duplex":8,"_process":23,"buffer":4,"core-util-is":18,"inherits":20,"stream":17}],13:[function(require,module,exports){
+},{"./_stream_duplex":14,"_process":12,"buffer":4,"core-util-is":6,"inherits":9,"stream":24}],19:[function(require,module,exports){
 module.exports = require("./lib/_stream_passthrough.js")
 
-},{"./lib/_stream_passthrough.js":9}],14:[function(require,module,exports){
+},{"./lib/_stream_passthrough.js":15}],20:[function(require,module,exports){
 (function (process){
 exports = module.exports = require('./lib/_stream_readable.js');
 exports.Stream = require('stream');
@@ -3804,578 +4244,13 @@ if (!process.browser && process.env.READABLE_STREAM === 'disable') {
 }
 
 }).call(this,require('_process'))
-},{"./lib/_stream_duplex.js":8,"./lib/_stream_passthrough.js":9,"./lib/_stream_readable.js":10,"./lib/_stream_transform.js":11,"./lib/_stream_writable.js":12,"_process":23,"stream":17}],15:[function(require,module,exports){
+},{"./lib/_stream_duplex.js":14,"./lib/_stream_passthrough.js":15,"./lib/_stream_readable.js":16,"./lib/_stream_transform.js":17,"./lib/_stream_writable.js":18,"_process":12,"stream":24}],21:[function(require,module,exports){
 module.exports = require("./lib/_stream_transform.js")
 
-},{"./lib/_stream_transform.js":11}],16:[function(require,module,exports){
+},{"./lib/_stream_transform.js":17}],22:[function(require,module,exports){
 module.exports = require("./lib/_stream_writable.js")
 
-},{"./lib/_stream_writable.js":12}],17:[function(require,module,exports){
-// Copyright Joyent, Inc. and other Node contributors.
-//
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the
-// "Software"), to deal in the Software without restriction, including
-// without limitation the rights to use, copy, modify, merge, publish,
-// distribute, sublicense, and/or sell copies of the Software, and to permit
-// persons to whom the Software is furnished to do so, subject to the
-// following conditions:
-//
-// The above copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
-// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
-// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
-// USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-module.exports = Stream;
-
-var EE = require('events').EventEmitter;
-var inherits = require('inherits');
-
-inherits(Stream, EE);
-Stream.Readable = require('readable-stream/readable.js');
-Stream.Writable = require('readable-stream/writable.js');
-Stream.Duplex = require('readable-stream/duplex.js');
-Stream.Transform = require('readable-stream/transform.js');
-Stream.PassThrough = require('readable-stream/passthrough.js');
-
-// Backwards-compat with node 0.4.x
-Stream.Stream = Stream;
-
-
-
-// old-style streams.  Note that the pipe method (the only relevant
-// part of this class) is overridden in the Readable class.
-
-function Stream() {
-  EE.call(this);
-}
-
-Stream.prototype.pipe = function(dest, options) {
-  var source = this;
-
-  function ondata(chunk) {
-    if (dest.writable) {
-      if (false === dest.write(chunk) && source.pause) {
-        source.pause();
-      }
-    }
-  }
-
-  source.on('data', ondata);
-
-  function ondrain() {
-    if (source.readable && source.resume) {
-      source.resume();
-    }
-  }
-
-  dest.on('drain', ondrain);
-
-  // If the 'end' option is not supplied, dest.end() will be called when
-  // source gets the 'end' or 'close' events.  Only dest.end() once.
-  if (!dest._isStdio && (!options || options.end !== false)) {
-    source.on('end', onend);
-    source.on('close', onclose);
-  }
-
-  var didOnEnd = false;
-  function onend() {
-    if (didOnEnd) return;
-    didOnEnd = true;
-
-    dest.end();
-  }
-
-
-  function onclose() {
-    if (didOnEnd) return;
-    didOnEnd = true;
-
-    if (typeof dest.destroy === 'function') dest.destroy();
-  }
-
-  // don't leave dangling pipes when there are errors.
-  function onerror(er) {
-    cleanup();
-    if (EE.listenerCount(this, 'error') === 0) {
-      throw er; // Unhandled stream error in pipe.
-    }
-  }
-
-  source.on('error', onerror);
-  dest.on('error', onerror);
-
-  // remove all the event listeners that were added.
-  function cleanup() {
-    source.removeListener('data', ondata);
-    dest.removeListener('drain', ondrain);
-
-    source.removeListener('end', onend);
-    source.removeListener('close', onclose);
-
-    source.removeListener('error', onerror);
-    dest.removeListener('error', onerror);
-
-    source.removeListener('end', cleanup);
-    source.removeListener('close', cleanup);
-
-    dest.removeListener('close', cleanup);
-  }
-
-  source.on('end', cleanup);
-  source.on('close', cleanup);
-
-  dest.on('close', cleanup);
-
-  dest.emit('pipe', source);
-
-  // Allow for unix-like usage: A.pipe(B).pipe(C)
-  return dest;
-};
-
-},{"events":6,"inherits":20,"readable-stream/duplex.js":7,"readable-stream/passthrough.js":13,"readable-stream/readable.js":14,"readable-stream/transform.js":15,"readable-stream/writable.js":16}],18:[function(require,module,exports){
-(function (Buffer){
-// Copyright Joyent, Inc. and other Node contributors.
-//
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the
-// "Software"), to deal in the Software without restriction, including
-// without limitation the rights to use, copy, modify, merge, publish,
-// distribute, sublicense, and/or sell copies of the Software, and to permit
-// persons to whom the Software is furnished to do so, subject to the
-// following conditions:
-//
-// The above copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
-// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
-// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
-// USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-// NOTE: These type checking functions intentionally don't use `instanceof`
-// because it is fragile and can be easily faked with `Object.create()`.
-
-function isArray(arg) {
-  if (Array.isArray) {
-    return Array.isArray(arg);
-  }
-  return objectToString(arg) === '[object Array]';
-}
-exports.isArray = isArray;
-
-function isBoolean(arg) {
-  return typeof arg === 'boolean';
-}
-exports.isBoolean = isBoolean;
-
-function isNull(arg) {
-  return arg === null;
-}
-exports.isNull = isNull;
-
-function isNullOrUndefined(arg) {
-  return arg == null;
-}
-exports.isNullOrUndefined = isNullOrUndefined;
-
-function isNumber(arg) {
-  return typeof arg === 'number';
-}
-exports.isNumber = isNumber;
-
-function isString(arg) {
-  return typeof arg === 'string';
-}
-exports.isString = isString;
-
-function isSymbol(arg) {
-  return typeof arg === 'symbol';
-}
-exports.isSymbol = isSymbol;
-
-function isUndefined(arg) {
-  return arg === void 0;
-}
-exports.isUndefined = isUndefined;
-
-function isRegExp(re) {
-  return objectToString(re) === '[object RegExp]';
-}
-exports.isRegExp = isRegExp;
-
-function isObject(arg) {
-  return typeof arg === 'object' && arg !== null;
-}
-exports.isObject = isObject;
-
-function isDate(d) {
-  return objectToString(d) === '[object Date]';
-}
-exports.isDate = isDate;
-
-function isError(e) {
-  return (objectToString(e) === '[object Error]' || e instanceof Error);
-}
-exports.isError = isError;
-
-function isFunction(arg) {
-  return typeof arg === 'function';
-}
-exports.isFunction = isFunction;
-
-function isPrimitive(arg) {
-  return arg === null ||
-         typeof arg === 'boolean' ||
-         typeof arg === 'number' ||
-         typeof arg === 'string' ||
-         typeof arg === 'symbol' ||  // ES6 symbol
-         typeof arg === 'undefined';
-}
-exports.isPrimitive = isPrimitive;
-
-exports.isBuffer = Buffer.isBuffer;
-
-function objectToString(o) {
-  return Object.prototype.toString.call(o);
-}
-
-}).call(this,{"isBuffer":require("../../is-buffer/index.js")})
-},{"../../is-buffer/index.js":21}],19:[function(require,module,exports){
-exports.read = function (buffer, offset, isLE, mLen, nBytes) {
-  var e, m
-  var eLen = nBytes * 8 - mLen - 1
-  var eMax = (1 << eLen) - 1
-  var eBias = eMax >> 1
-  var nBits = -7
-  var i = isLE ? (nBytes - 1) : 0
-  var d = isLE ? -1 : 1
-  var s = buffer[offset + i]
-
-  i += d
-
-  e = s & ((1 << (-nBits)) - 1)
-  s >>= (-nBits)
-  nBits += eLen
-  for (; nBits > 0; e = e * 256 + buffer[offset + i], i += d, nBits -= 8) {}
-
-  m = e & ((1 << (-nBits)) - 1)
-  e >>= (-nBits)
-  nBits += mLen
-  for (; nBits > 0; m = m * 256 + buffer[offset + i], i += d, nBits -= 8) {}
-
-  if (e === 0) {
-    e = 1 - eBias
-  } else if (e === eMax) {
-    return m ? NaN : ((s ? -1 : 1) * Infinity)
-  } else {
-    m = m + Math.pow(2, mLen)
-    e = e - eBias
-  }
-  return (s ? -1 : 1) * m * Math.pow(2, e - mLen)
-}
-
-exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
-  var e, m, c
-  var eLen = nBytes * 8 - mLen - 1
-  var eMax = (1 << eLen) - 1
-  var eBias = eMax >> 1
-  var rt = (mLen === 23 ? Math.pow(2, -24) - Math.pow(2, -77) : 0)
-  var i = isLE ? 0 : (nBytes - 1)
-  var d = isLE ? 1 : -1
-  var s = value < 0 || (value === 0 && 1 / value < 0) ? 1 : 0
-
-  value = Math.abs(value)
-
-  if (isNaN(value) || value === Infinity) {
-    m = isNaN(value) ? 1 : 0
-    e = eMax
-  } else {
-    e = Math.floor(Math.log(value) / Math.LN2)
-    if (value * (c = Math.pow(2, -e)) < 1) {
-      e--
-      c *= 2
-    }
-    if (e + eBias >= 1) {
-      value += rt / c
-    } else {
-      value += rt * Math.pow(2, 1 - eBias)
-    }
-    if (value * c >= 2) {
-      e++
-      c /= 2
-    }
-
-    if (e + eBias >= eMax) {
-      m = 0
-      e = eMax
-    } else if (e + eBias >= 1) {
-      m = (value * c - 1) * Math.pow(2, mLen)
-      e = e + eBias
-    } else {
-      m = value * Math.pow(2, eBias - 1) * Math.pow(2, mLen)
-      e = 0
-    }
-  }
-
-  for (; mLen >= 8; buffer[offset + i] = m & 0xff, i += d, m /= 256, mLen -= 8) {}
-
-  e = (e << mLen) | m
-  eLen += mLen
-  for (; eLen > 0; buffer[offset + i] = e & 0xff, i += d, e /= 256, eLen -= 8) {}
-
-  buffer[offset + i - d] |= s * 128
-}
-
-},{}],20:[function(require,module,exports){
-if (typeof Object.create === 'function') {
-  // implementation from standard node.js 'util' module
-  module.exports = function inherits(ctor, superCtor) {
-    ctor.super_ = superCtor
-    ctor.prototype = Object.create(superCtor.prototype, {
-      constructor: {
-        value: ctor,
-        enumerable: false,
-        writable: true,
-        configurable: true
-      }
-    });
-  };
-} else {
-  // old school shim for old browsers
-  module.exports = function inherits(ctor, superCtor) {
-    ctor.super_ = superCtor
-    var TempCtor = function () {}
-    TempCtor.prototype = superCtor.prototype
-    ctor.prototype = new TempCtor()
-    ctor.prototype.constructor = ctor
-  }
-}
-
-},{}],21:[function(require,module,exports){
-/*!
- * Determine if an object is a Buffer
- *
- * @author   Feross Aboukhadijeh <https://feross.org>
- * @license  MIT
- */
-
-// The _isBuffer check is for Safari 5-7 support, because it's missing
-// Object.prototype.constructor. Remove this eventually
-module.exports = function (obj) {
-  return obj != null && (isBuffer(obj) || isSlowBuffer(obj) || !!obj._isBuffer)
-}
-
-function isBuffer (obj) {
-  return !!obj.constructor && typeof obj.constructor.isBuffer === 'function' && obj.constructor.isBuffer(obj)
-}
-
-// For Node v0.10 support. Remove this eventually.
-function isSlowBuffer (obj) {
-  return typeof obj.readFloatLE === 'function' && typeof obj.slice === 'function' && isBuffer(obj.slice(0, 0))
-}
-
-},{}],22:[function(require,module,exports){
-module.exports = Array.isArray || function (arr) {
-  return Object.prototype.toString.call(arr) == '[object Array]';
-};
-
-},{}],23:[function(require,module,exports){
-// shim for using process in browser
-var process = module.exports = {};
-
-// cached from whatever global is present so that test runners that stub it
-// don't break things.  But we need to wrap it in a try catch in case it is
-// wrapped in strict mode code which doesn't define any globals.  It's inside a
-// function because try/catches deoptimize in certain engines.
-
-var cachedSetTimeout;
-var cachedClearTimeout;
-
-function defaultSetTimout() {
-    throw new Error('setTimeout has not been defined');
-}
-function defaultClearTimeout () {
-    throw new Error('clearTimeout has not been defined');
-}
-(function () {
-    try {
-        if (typeof setTimeout === 'function') {
-            cachedSetTimeout = setTimeout;
-        } else {
-            cachedSetTimeout = defaultSetTimout;
-        }
-    } catch (e) {
-        cachedSetTimeout = defaultSetTimout;
-    }
-    try {
-        if (typeof clearTimeout === 'function') {
-            cachedClearTimeout = clearTimeout;
-        } else {
-            cachedClearTimeout = defaultClearTimeout;
-        }
-    } catch (e) {
-        cachedClearTimeout = defaultClearTimeout;
-    }
-} ())
-function runTimeout(fun) {
-    if (cachedSetTimeout === setTimeout) {
-        //normal enviroments in sane situations
-        return setTimeout(fun, 0);
-    }
-    // if setTimeout wasn't available but was latter defined
-    if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
-        cachedSetTimeout = setTimeout;
-        return setTimeout(fun, 0);
-    }
-    try {
-        // when when somebody has screwed with setTimeout but no I.E. maddness
-        return cachedSetTimeout(fun, 0);
-    } catch(e){
-        try {
-            // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
-            return cachedSetTimeout.call(null, fun, 0);
-        } catch(e){
-            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
-            return cachedSetTimeout.call(this, fun, 0);
-        }
-    }
-
-
-}
-function runClearTimeout(marker) {
-    if (cachedClearTimeout === clearTimeout) {
-        //normal enviroments in sane situations
-        return clearTimeout(marker);
-    }
-    // if clearTimeout wasn't available but was latter defined
-    if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
-        cachedClearTimeout = clearTimeout;
-        return clearTimeout(marker);
-    }
-    try {
-        // when when somebody has screwed with setTimeout but no I.E. maddness
-        return cachedClearTimeout(marker);
-    } catch (e){
-        try {
-            // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
-            return cachedClearTimeout.call(null, marker);
-        } catch (e){
-            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
-            // Some versions of I.E. have different rules for clearTimeout vs setTimeout
-            return cachedClearTimeout.call(this, marker);
-        }
-    }
-
-
-
-}
-var queue = [];
-var draining = false;
-var currentQueue;
-var queueIndex = -1;
-
-function cleanUpNextTick() {
-    if (!draining || !currentQueue) {
-        return;
-    }
-    draining = false;
-    if (currentQueue.length) {
-        queue = currentQueue.concat(queue);
-    } else {
-        queueIndex = -1;
-    }
-    if (queue.length) {
-        drainQueue();
-    }
-}
-
-function drainQueue() {
-    if (draining) {
-        return;
-    }
-    var timeout = runTimeout(cleanUpNextTick);
-    draining = true;
-
-    var len = queue.length;
-    while(len) {
-        currentQueue = queue;
-        queue = [];
-        while (++queueIndex < len) {
-            if (currentQueue) {
-                currentQueue[queueIndex].run();
-            }
-        }
-        queueIndex = -1;
-        len = queue.length;
-    }
-    currentQueue = null;
-    draining = false;
-    runClearTimeout(timeout);
-}
-
-process.nextTick = function (fun) {
-    var args = new Array(arguments.length - 1);
-    if (arguments.length > 1) {
-        for (var i = 1; i < arguments.length; i++) {
-            args[i - 1] = arguments[i];
-        }
-    }
-    queue.push(new Item(fun, args));
-    if (queue.length === 1 && !draining) {
-        runTimeout(drainQueue);
-    }
-};
-
-// v8 likes predictible objects
-function Item(fun, array) {
-    this.fun = fun;
-    this.array = array;
-}
-Item.prototype.run = function () {
-    this.fun.apply(null, this.array);
-};
-process.title = 'browser';
-process.browser = true;
-process.env = {};
-process.argv = [];
-process.version = ''; // empty string to avoid regexp issues
-process.versions = {};
-
-function noop() {}
-
-process.on = noop;
-process.addListener = noop;
-process.once = noop;
-process.off = noop;
-process.removeListener = noop;
-process.removeAllListeners = noop;
-process.emit = noop;
-process.prependListener = noop;
-process.prependOnceListener = noop;
-
-process.listeners = function (name) { return [] }
-
-process.binding = function (name) {
-    throw new Error('process.binding is not supported');
-};
-
-process.cwd = function () { return '/' };
-process.chdir = function (dir) {
-    throw new Error('process.chdir is not supported');
-};
-process.umask = function() { return 0; };
-
-},{}],24:[function(require,module,exports){
+},{"./lib/_stream_writable.js":18}],23:[function(require,module,exports){
 (function (Buffer){
 // wrapper for non-node envs
 ;(function (sax) {
@@ -5809,7 +5684,136 @@ if (!String.fromCodePoint) {
 })(typeof exports === "undefined" ? sax = {} : exports);
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":4,"stream":17,"string_decoder":25}],25:[function(require,module,exports){
+},{"buffer":4,"stream":24,"string_decoder":25}],24:[function(require,module,exports){
+// Copyright Joyent, Inc. and other Node contributors.
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the
+// "Software"), to deal in the Software without restriction, including
+// without limitation the rights to use, copy, modify, merge, publish,
+// distribute, sublicense, and/or sell copies of the Software, and to permit
+// persons to whom the Software is furnished to do so, subject to the
+// following conditions:
+//
+// The above copyright notice and this permission notice shall be included
+// in all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+// USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+module.exports = Stream;
+
+var EE = require('events').EventEmitter;
+var inherits = require('inherits');
+
+inherits(Stream, EE);
+Stream.Readable = require('readable-stream/readable.js');
+Stream.Writable = require('readable-stream/writable.js');
+Stream.Duplex = require('readable-stream/duplex.js');
+Stream.Transform = require('readable-stream/transform.js');
+Stream.PassThrough = require('readable-stream/passthrough.js');
+
+// Backwards-compat with node 0.4.x
+Stream.Stream = Stream;
+
+
+
+// old-style streams.  Note that the pipe method (the only relevant
+// part of this class) is overridden in the Readable class.
+
+function Stream() {
+  EE.call(this);
+}
+
+Stream.prototype.pipe = function(dest, options) {
+  var source = this;
+
+  function ondata(chunk) {
+    if (dest.writable) {
+      if (false === dest.write(chunk) && source.pause) {
+        source.pause();
+      }
+    }
+  }
+
+  source.on('data', ondata);
+
+  function ondrain() {
+    if (source.readable && source.resume) {
+      source.resume();
+    }
+  }
+
+  dest.on('drain', ondrain);
+
+  // If the 'end' option is not supplied, dest.end() will be called when
+  // source gets the 'end' or 'close' events.  Only dest.end() once.
+  if (!dest._isStdio && (!options || options.end !== false)) {
+    source.on('end', onend);
+    source.on('close', onclose);
+  }
+
+  var didOnEnd = false;
+  function onend() {
+    if (didOnEnd) return;
+    didOnEnd = true;
+
+    dest.end();
+  }
+
+
+  function onclose() {
+    if (didOnEnd) return;
+    didOnEnd = true;
+
+    if (typeof dest.destroy === 'function') dest.destroy();
+  }
+
+  // don't leave dangling pipes when there are errors.
+  function onerror(er) {
+    cleanup();
+    if (EE.listenerCount(this, 'error') === 0) {
+      throw er; // Unhandled stream error in pipe.
+    }
+  }
+
+  source.on('error', onerror);
+  dest.on('error', onerror);
+
+  // remove all the event listeners that were added.
+  function cleanup() {
+    source.removeListener('data', ondata);
+    dest.removeListener('drain', ondrain);
+
+    source.removeListener('end', onend);
+    source.removeListener('close', onclose);
+
+    source.removeListener('error', onerror);
+    dest.removeListener('error', onerror);
+
+    source.removeListener('end', cleanup);
+    source.removeListener('close', cleanup);
+
+    dest.removeListener('close', cleanup);
+  }
+
+  source.on('end', cleanup);
+  source.on('close', cleanup);
+
+  dest.on('close', cleanup);
+
+  dest.emit('pipe', source);
+
+  // Allow for unix-like usage: A.pipe(B).pipe(C)
+  return dest;
+};
+
+},{"events":7,"inherits":9,"readable-stream/duplex.js":13,"readable-stream/passthrough.js":19,"readable-stream/readable.js":20,"readable-stream/transform.js":21,"readable-stream/writable.js":22}],25:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6255,6 +6259,7 @@ exports.Editor = Editor = (function() {
     this.dragCanvas.style.transform = 'translate(-9999px,-9999px)';
     this.draw = new draw.Draw(this.mainCanvas);
     this.dropletElement.style.left = this.paletteWrapper.clientWidth + 'px';
+    this.dropletElement.style.zIndex = 1;
     this.draw.refreshFontCapital();
     this.standardViewSettings = {
       padding: 5,
@@ -6278,7 +6283,6 @@ exports.Editor = Editor = (function() {
       this.wrapperElement = this.aceEditor;
       this.wrapperElement.style.position = 'absolute';
       this.wrapperElement.style.right = this.wrapperElement.style.left = this.wrapperElement.style.top = this.wrapperElement.style.bottom = '0px';
-      this.wrapperElement.style.overflow = 'hidden';
       this.aceElement = document.createElement('div');
       this.aceElement.className = 'droplet-ace';
       this.wrapperElement.appendChild(this.aceElement);
@@ -6295,12 +6299,12 @@ exports.Editor = Editor = (function() {
       this.wrapperElement = document.createElement('div');
       this.wrapperElement.style.position = 'absolute';
       this.wrapperElement.style.right = this.wrapperElement.style.left = this.wrapperElement.style.top = this.wrapperElement.style.bottom = '0px';
-      this.wrapperElement.style.overflow = 'hidden';
       this.aceElement = this.aceEditor.container;
       this.aceElement.className += ' droplet-ace';
       this.aceEditor.container.parentElement.appendChild(this.wrapperElement);
       this.wrapperElement.appendChild(this.aceEditor.container);
     }
+    this.aceElement.style.zIndex = 1;
     this.wrapperElement.appendChild(this.dropletElement);
     this.wrapperElement.appendChild(this.paletteWrapper);
     this.wrapperElement.style.backgroundColor = '#FFF';
@@ -6451,18 +6455,22 @@ exports.Editor = Editor = (function() {
   };
 
   Editor.prototype.resizeBlockMode = function() {
+    var ref1;
     if (this.session == null) {
       return;
     }
     this.resizeTextMode();
-    this.dropletElement.style.height = this.wrapperElement.clientHeight + "px";
+    if ((ref1 = this.session) != null ? ref1.currentlyUsingBlocks : void 0) {
+      this.dropletElement.style.bottom = "0px";
+    } else {
+      this.dropletElement.style.bottom = "9999px";
+    }
     if (this.session.paletteEnabled) {
       this.dropletElement.style.left = this.paletteWrapper.clientWidth + "px";
-      this.dropletElement.style.width = (this.wrapperElement.clientWidth - this.paletteWrapper.clientWidth) + "px";
     } else {
       this.dropletElement.style.left = "0px";
-      this.dropletElement.style.width = this.wrapperElement.clientWidth + "px";
     }
+    this.dropletElement.style.right = "0px";
     this.session.viewports.main.height = this.dropletElement.clientHeight;
     this.session.viewports.main.width = this.dropletElement.clientWidth - this.gutter.clientWidth;
     this.mainCanvas.style.left = this.gutter.clientWidth + "px";
@@ -6477,14 +6485,11 @@ exports.Editor = Editor = (function() {
   };
 
   Editor.prototype.resizePalette = function() {
-    var binding, j, len, ref1, ref2, ref3, ref4;
+    var binding, j, len, ref1;
     ref1 = editorBindings.resize_palette;
     for (j = 0, len = ref1.length; j < len; j++) {
       binding = ref1[j];
       binding.call(this);
-    }
-    if (!(((ref2 = this.session) != null ? ref2.currentlyUsingBlocks : void 0) || ((ref3 = this.session) != null ? ref3.showPaletteInTextMode : void 0) && ((ref4 = this.session) != null ? ref4.paletteEnabled : void 0))) {
-      this.paletteWrapper.style.left = (-this.paletteWrapper.clientWidth) + "px";
     }
     return this.rebuildPalette();
   };
@@ -6544,13 +6549,16 @@ Editor.prototype.clearCanvas = function(canvas) {};
 
 Editor.prototype.clearMain = function(opts) {};
 
-Editor.prototype.setTopNubbyStyle = function(height, color) {
+Editor.prototype.setTopNubbyStyle = function(height, color, addedWidth) {
   var nubbyWidth, points;
   if (height == null) {
     height = 10;
   }
   if (color == null) {
     color = '#EBEBEB';
+  }
+  if (addedWidth == null) {
+    addedWidth = 0;
   }
   this.nubbyHeight = Math.max(0, height);
   this.nubbyColor = color;
@@ -6560,7 +6568,7 @@ Editor.prototype.setTopNubbyStyle = function(height, color) {
   this.topNubbyPath.activate();
   this.topNubbyPath.setParent(this.mainCanvas);
   points = [];
-  nubbyWidth = this.computeMainCanvasWidth();
+  nubbyWidth = this.computeMainCanvasWidth(addedWidth);
   points.push(new this.draw.Point(nubbyWidth, -5));
   points.push(new this.draw.Point(nubbyWidth, height));
   points.push(new this.draw.Point(this.session.view.opts.tabOffset + this.session.view.opts.tabWidth, height));
@@ -6573,11 +6581,13 @@ Editor.prototype.setTopNubbyStyle = function(height, color) {
   points.push(new this.draw.Point(-5, -5));
   this.topNubbyPath.setPoints(points);
   this.topNubbyPath.style.fillColor = color;
-  return this.redrawMain();
+  return this.redrawMain({
+    addedWidth: addedWidth
+  });
 };
 
-Editor.prototype.resizeNubby = function() {
-  return this.setTopNubbyStyle(this.nubbyHeight, this.nubbyColor);
+Editor.prototype.resizeNubby = function(addedWidth) {
+  return this.setTopNubbyStyle(this.nubbyHeight, this.nubbyColor, addedWidth);
 };
 
 Editor.prototype.initializeFloatingBlock = function(record, i) {
@@ -6673,12 +6683,15 @@ hook('populate', 0, function() {
   return this.currentlyDrawnFloatingBlocks = [];
 });
 
-Editor.prototype.computeMainCanvasWidth = function() {
-  return Math.max(this.session.view.getViewNodeFor(this.session.tree).totalBounds.width, this.dropletElement.clientWidth - this.gutter.clientWidth);
+Editor.prototype.computeMainCanvasWidth = function(addedWidth) {
+  if (addedWidth == null) {
+    addedWidth = 0;
+  }
+  return Math.max(this.session.view.getViewNodeFor(this.session.tree).totalBounds.width, this.dropletElement.clientWidth + addedWidth - this.gutter.clientWidth);
 };
 
 Editor.prototype.redrawMain = function(opts) {
-  var binding, el, element, endWidth, i, j, k, l, layoutResult, len, len1, len2, options, record, rect, ref1, ref2, ref3, ref4, ref5, ref6, startWidth;
+  var binding, el, element, endWidth, i, j, k, l, layoutResult, len, len1, len2, options, record, rect, ref1, ref2, ref3, ref4, ref5, ref6, ref7, startWidth;
   if (opts == null) {
     opts = {};
   }
@@ -6698,11 +6711,11 @@ Editor.prototype.redrawMain = function(opts) {
     layoutResult = this.session.view.getViewNodeFor(this.session.tree).layout(0, this.nubbyHeight);
     this.session.view.getViewNodeFor(this.session.tree).draw(rect, options);
     this.session.view.getViewNodeFor(this.session.tree).root();
-    this.mainCanvas.setAttribute('width', this.computeMainCanvasWidth());
-    ref2 = this.currentlyDrawnFloatingBlocks;
-    for (i = j = 0, len = ref2.length; j < len; i = ++j) {
-      el = ref2[i];
-      if (ref3 = el.record, indexOf.call(this.session.floatingBlocks, ref3) < 0) {
+    this.mainCanvas.setAttribute('width', this.computeMainCanvasWidth((ref2 = opts.addedWidth) != null ? ref2 : 0));
+    ref3 = this.currentlyDrawnFloatingBlocks;
+    for (i = j = 0, len = ref3.length; j < len; i = ++j) {
+      el = ref3[i];
+      if (ref4 = el.record, indexOf.call(this.session.floatingBlocks, ref4) < 0) {
         el.record.grayBoxPath.destroy();
         el.record.startText.destroy();
         el.record.endText.destroy();
@@ -6711,9 +6724,9 @@ Editor.prototype.redrawMain = function(opts) {
     this.currentlyDrawnFloatingBlocks = [];
     startWidth = this.session.mode.startComment.length * this.session.fontWidth;
     endWidth = this.session.mode.endComment.length * this.session.fontWidth;
-    ref4 = this.session.floatingBlocks;
-    for (k = 0, len1 = ref4.length; k < len1; k++) {
-      record = ref4[k];
+    ref5 = this.session.floatingBlocks;
+    for (k = 0, len1 = ref5.length; k < len1; k++) {
+      record = ref5[k];
       element = this.drawFloatingBlock(record, startWidth, endWidth, rect, opts);
       this.currentlyDrawnFloatingBlocks.push({
         record: record
@@ -6722,14 +6735,14 @@ Editor.prototype.redrawMain = function(opts) {
     this.redrawCursors();
     this.redrawHighlights();
     this.resizeGutter();
-    ref5 = editorBindings.redraw_main;
-    for (l = 0, len2 = ref5.length; l < len2; l++) {
-      binding = ref5[l];
+    ref6 = editorBindings.redraw_main;
+    for (l = 0, len2 = ref6.length; l < len2; l++) {
+      binding = ref6[l];
       binding.call(this, layoutResult);
     }
     if (this.session.changeEventVersion !== this.session.tree.version) {
       this.session.changeEventVersion = this.session.tree.version;
-      if ((ref6 = this.session) != null ? ref6.currentlyUsingBlocks : void 0) {
+      if ((ref7 = this.session) != null ? ref7.currentlyUsingBlocks : void 0) {
         this.setAceValue(this.getValue());
       }
       this.fireEvent('change', []);
@@ -8257,16 +8270,20 @@ hook('populate', 1, function() {
 });
 
 Editor.prototype.resizeAceElement = function() {
-  var left, ref1, ref2, width;
+  var left, ref1, ref2, ref3, width;
   width = this.wrapperElement.clientWidth;
   left = 0;
   if (((ref1 = this.session) != null ? ref1.showPaletteInTextMode : void 0) && ((ref2 = this.session) != null ? ref2.paletteEnabled : void 0)) {
     width -= this.paletteWrapper.clientWidth;
     left = this.paletteWrapper.clientWidth;
   }
-  this.aceElement.style.width = width + "px";
   this.aceElement.style.left = left + "px";
-  return this.aceElement.style.height = this.wrapperElement.clientHeight + "px";
+  this.aceElement.style.right = "0px";
+  if ((ref3 = this.session) != null ? ref3.currentlyUsingBlocks : void 0) {
+    return this.aceElement.style.bottom = "9999px";
+  } else {
+    return this.aceElement.style.bottom = "0px";
+  }
 };
 
 last_ = function(array) {
@@ -9421,7 +9438,7 @@ Editor.prototype.performMeltAnimation = function(fadeTime, translateTime, cb) {
       this.sideScroller.style.overflowX = 'hidden';
     }
     this.mainScroller.style.overflowY = 'hidden';
-    this.dropletElement.style.width = this.wrapperElement.clientWidth + 'px';
+    this.dropletElement.style.right = "0px";
     this.session.currentlyUsingBlocks = false;
     this.currentlyAnimating = this.currentlyAnimating_suppressRedraw = true;
     ref1 = this.computePlaintextTranslationVectors(), textElements = ref1.textElements, translationVectors = ref1.translationVectors;
@@ -9491,24 +9508,23 @@ Editor.prototype.performMeltAnimation = function(fadeTime, translateTime, cb) {
       this.paletteHeader.style.zIndex = 0;
       setTimeout(((function(_this) {
         return function() {
-          _this.dropletElement.style.transition = _this.paletteWrapper.style.transition = "left " + translateTime + "ms";
-          _this.dropletElement.style.left = '0px';
-          return _this.paletteWrapper.style.left = (-_this.paletteWrapper.clientWidth) + "px";
+          _this.dropletElement.style.transition = "left " + translateTime + "ms";
+          return _this.dropletElement.style.left = '0px';
         };
       })(this)), fadeTime);
     }
     setTimeout(((function(_this) {
       return function() {
         var l, len1;
-        _this.dropletElement.style.transition = _this.paletteWrapper.style.transition = '';
-        _this.aceElement.style.top = '0px';
+        _this.dropletElement.style.transition = '';
+        _this.aceElement.style.top = _this.aceElement.style.right = _this.aceElement.style.bottom = '0px';
         if (_this.session.showPaletteInTextMode && _this.session.paletteEnabled) {
           _this.aceElement.style.left = _this.paletteWrapper.clientWidth + "px";
         } else {
           _this.aceElement.style.left = '0px';
         }
-        _this.dropletElement.style.top = '-9999px';
-        _this.dropletElement.style.left = '-9999px';
+        _this.dropletElement.style.top = _this.dropletElement.style.left = '-9999px';
+        _this.dropletElement.style.bottom = _this.dropletElement.style.right = '9999px';
         _this.currentlyAnimating = false;
         _this.showScrollbars();
         for (l = 0, len1 = translatingElements.length; l < len1; l++) {
@@ -9575,20 +9591,19 @@ Editor.prototype.performFreezeAnimation = function(fadeTime, translateTime, cb) 
       return function() {
         var aceScrollTop, bottom, div, fn1, fn2, i, j, k, len, line, lineHeight, paletteAppearingWithFreeze, ref1, ref2, ref3, textElement, textElements, top, translatingElements, translationVectors, treeView;
         _this.showScrollbars(false);
-        _this.dropletElement.style.width = _this.wrapperElement.clientWidth + 'px';
+        _this.dropletElement.style.right = "0px";
         _this.redrawMain({
           noText: true
         });
         _this.currentlyAnimating_suppressRedraw = true;
-        _this.aceElement.style.top = "-9999px";
-        _this.aceElement.style.left = "-9999px";
+        _this.aceElement.style.top = _this.aceElement.style.left = "-9999px";
+        _this.aceElement.style.bottom = _this.aceElement.style.right = "9999px";
         paletteAppearingWithFreeze = _this.session.paletteEnabled && !_this.session.showPaletteInTextMode;
         if (paletteAppearingWithFreeze) {
           _this.paletteWrapper.style.top = '0px';
-          _this.paletteWrapper.style.left = (-_this.paletteWrapper.clientWidth) + "px";
           _this.paletteHeader.style.zIndex = 0;
         }
-        _this.dropletElement.style.top = "0px";
+        _this.dropletElement.style.top = _this.dropletElement.style.right = _this.dropletElement.style.bottom = "0px";
         if (_this.session.paletteEnabled && !paletteAppearingWithFreeze) {
           _this.dropletElement.style.left = _this.paletteWrapper.clientWidth + "px";
         } else {
@@ -9657,13 +9672,12 @@ Editor.prototype.performFreezeAnimation = function(fadeTime, translateTime, cb) 
         }), translateTime);
         _this.dropletElement.style.transition = "left " + fadeTime + "ms";
         if (paletteAppearingWithFreeze) {
-          _this.paletteWrapper.style.transition = _this.dropletElement.style.transition;
           _this.dropletElement.style.left = _this.paletteWrapper.clientWidth + "px";
           _this.paletteWrapper.style.left = '0px';
         }
         return setTimeout((function() {
           var l, len1;
-          _this.dropletElement.style.transition = _this.paletteWrapper.style.transition = '';
+          _this.dropletElement.style.transition = '';
           _this.showScrollbars();
           _this.currentlyAnimating = false;
           _this.lineNumberWrapper.style.display = 'block';
@@ -9698,33 +9712,33 @@ Editor.prototype.enablePalette = function(enabled) {
       activeElement = this.aceElement;
     }
     if (!this.session.paletteEnabled) {
-      activeElement.style.transition = this.paletteWrapper.style.transition = "left 500ms";
+      activeElement.style.transition = "left 500ms";
       activeElement.style.left = '0px';
-      this.paletteWrapper.style.left = (-this.paletteWrapper.clientWidth) + "px";
       this.paletteHeader.style.zIndex = 0;
       this.resize();
+      this.resizeNubby(this.paletteWrapper.clientWidth);
       return setTimeout(((function(_this) {
         return function() {
-          activeElement.style.transition = _this.paletteWrapper.style.transition = '';
+          activeElement.style.transition = '';
           _this.currentlyAnimating = false;
-          _this.redrawMain();
+          _this.resize();
+          _this.resizeNubby();
           return _this.fireEvent('palettetoggledone', [_this.session.paletteEnabled]);
         };
       })(this)), 500);
     } else {
       this.paletteWrapper.style.top = '0px';
-      this.paletteWrapper.style.left = (-this.paletteWrapper.clientWidth) + "px";
       this.paletteHeader.style.zIndex = 257;
       return setTimeout(((function(_this) {
         return function() {
-          activeElement.style.transition = _this.paletteWrapper.style.transition = "left 500ms";
+          activeElement.style.transition = "left 500ms";
           activeElement.style.left = _this.paletteWrapper.clientWidth + "px";
           _this.paletteWrapper.style.left = '0px';
           return setTimeout((function() {
-            activeElement.style.transition = _this.paletteWrapper.style.transition = '';
+            activeElement.style.transition = '';
             _this.resize();
             _this.currentlyAnimating = false;
-            _this.redrawMain();
+            _this.resizeNubby();
             return _this.fireEvent('palettetoggledone', [_this.session.paletteEnabled]);
           }), 500);
         };
@@ -9785,9 +9799,8 @@ hook('populate', 2, function() {
 });
 
 Editor.prototype.resizeMainScroller = function() {
-  this.mainScroller.style.width = this.dropletElement.clientWidth + "px";
-  this.mainScroller.style.height = this.dropletElement.clientHeight + "px";
-  return this.sideScroller.style.width = this.dropletElement.clientWidth + "px";
+  this.mainScroller.style.right = "0px";
+  return this.sideScroller.style.right = "0px";
 };
 
 hook('resize_palette', 0, function() {
@@ -10075,7 +10088,7 @@ Editor.prototype.hasEvent = function(event) {
 
 Editor.prototype.setEditorState = function(useBlocks) {
   var oldScrollTop, paletteVisibleInNewState, ref1, ref2, ref3;
-  this.mainCanvas.style.transition = this.paletteWrapper.style.transition = this.highlightCanvas.style.transition = '';
+  this.mainCanvas.style.transition = this.highlightCanvas.style.transition = '';
   if (useBlocks) {
     if (this.session == null) {
       throw new ArgumentError('cannot switch to blocks if a session has not been set up.');
@@ -10083,16 +10096,16 @@ Editor.prototype.setEditorState = function(useBlocks) {
     if (!this.session.currentlyUsingBlocks) {
       this.setValue_raw(this.getAceValue());
     }
-    this.dropletElement.style.top = '0px';
+    this.dropletElement.style.top = this.dropletElement.style.right = this.dropletElement.style.bottom = '0px';
     if (this.session.paletteEnabled) {
       this.paletteWrapper.style.top = this.paletteWrapper.style.left = '0px';
       this.dropletElement.style.left = this.paletteWrapper.clientWidth + "px";
     } else {
       this.paletteWrapper.style.top = '0px';
-      this.paletteWrapper.style.left = (-this.paletteWrapper.clientWidth) + "px";
       this.dropletElement.style.left = '0px';
     }
     this.aceElement.style.top = this.aceElement.style.left = '-9999px';
+    this.aceElement.style.bottom = this.aceElement.style.right = '9999px';
     this.session.currentlyUsingBlocks = true;
     this.lineNumberWrapper.style.display = 'block';
     this.mainCanvas.style.opacity = this.highlightCanvas.style.opacity = 1;
@@ -10112,13 +10125,9 @@ Editor.prototype.setEditorState = function(useBlocks) {
     this.aceEditor.resize(true);
     this.aceEditor.session.setScrollTop(oldScrollTop);
     this.dropletElement.style.top = this.dropletElement.style.left = '-9999px';
-    if (paletteVisibleInNewState) {
-      this.paletteWrapper.style.top = this.paletteWrapper.style.left = '0px';
-    } else {
-      this.paletteWrapper.style.top = '0px';
-      this.paletteWrapper.style.left = (-this.paletteWrapper.clientWidth) + "px";
-    }
-    this.aceElement.style.top = '0px';
+    this.dropletElement.style.bottom = this.dropletElement.style.right = '9999px';
+    this.paletteWrapper.style.top = this.paletteWrapper.style.left = '0px';
+    this.aceElement.style.top = this.aceElement.style.right = this.aceElement.style.bottom = '0px';
     if (paletteVisibleInNewState) {
       this.aceElement.style.left = this.paletteWrapper.clientWidth + "px";
     } else {
@@ -12116,7 +12125,7 @@ exports.PairDict = PairDict = (function() {
 })();
 
 
-},{"sax":24}],29:[function(require,module,exports){
+},{"sax":23}],29:[function(require,module,exports){
 var CATEGORIES, CLASS_EXCEPTIONS, DEFAULT_INDENT_DEPTH, JavaScriptParser, KNOWN_FUNCTIONS, LOGICAL_OPERATORS, NEVER_PAREN, NODE_CATEGORIES, OPERATOR_PRECEDENCES, STATEMENT_NODE_TYPES, acorn, helper, isStandardForLoop, model, parser,
   extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
   hasProp = {}.hasOwnProperty,
@@ -14825,7 +14834,7 @@ module.exports = {
 };
 
 
-},{"./languages/c.coffee":2,"./languages/coffee.coffee":2,"./languages/html.coffee":2,"./languages/java.coffee":2,"./languages/javascript.coffee":29,"./languages/python.coffee":2}],33:[function(require,module,exports){
+},{"./languages/c.coffee":3,"./languages/coffee.coffee":3,"./languages/html.coffee":3,"./languages/java.coffee":3,"./languages/javascript.coffee":29,"./languages/python.coffee":3}],33:[function(require,module,exports){
 var Parser, ParserFactory, YES, _extend, getDefaultSelectionRange, hasSomeTextAfter, helper, isPrefix, model, sax, stripFlaggedBlocks,
   extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
   hasProp = {}.hasOwnProperty;
@@ -15454,7 +15463,7 @@ exports.wrapParser = function(CustomParser) {
 };
 
 
-},{"./helper.coffee":28,"./model.coffee":31,"sax":24}],34:[function(require,module,exports){
+},{"./helper.coffee":28,"./model.coffee":31,"sax":23}],34:[function(require,module,exports){
 var ANY_DROP, BLOCK_ONLY, BUTTON_TEXT_HEIGHT_OFFSET, CARRIAGE_ARROW_INDENT, CARRIAGE_ARROW_NONE, CARRIAGE_ARROW_SIDEALONG, CARRIAGE_GROW_DOWN, DEFAULT_OPTIONS, DROPDOWN_ARROW_HEIGHT, DROP_TRIANGLE_COLOR, MOSTLY_BLOCK, MOSTLY_VALUE, MULTILINE_END, MULTILINE_END_START, MULTILINE_MIDDLE, MULTILINE_START, NO, NO_MULTILINE, SVG_STANDARD, VALUE_ONLY, View, YES, arrayEq, avgColor, dedupe, draw, helper, model, toHex, toRGB, twoDigitHex, zeroPad,
   indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; },
   extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },

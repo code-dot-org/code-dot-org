@@ -3,18 +3,18 @@ var child_process = require('child_process');
 var path = require('path');
 var fs = require('fs');
 var _ = require('lodash');
-var logBuildTimes = require('./script/log-build-times');
 var webpackConfig = require('./webpack');
 var envConstants = require('./envConstants');
 var checkEntryPoints = require('./script/checkEntryPoints');
 var {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer');
+var CopyPlugin = require('copy-webpack-plugin');
 var {StatsWriterPlugin} = require('webpack-stats-plugin');
 var UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
+var sass = require('node-sass');
+var UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+var ManifestPlugin = require('webpack-manifest-plugin');
 
 module.exports = function(grunt) {
-  // Decorate grunt to record and report build durations.
-  var buildTimeLogger = logBuildTimes(grunt);
-
   process.env.mocha_entry = grunt.option('entry') || '';
   if (process.env.mocha_entry) {
     if (
@@ -74,8 +74,10 @@ describe('entry tests', () => {
     'craft',
     'dance',
     'eval',
+    'fish',
     'flappy',
     'gamelab',
+    'spritelab',
     'jigsaw',
     'maze',
     'netsim',
@@ -201,7 +203,7 @@ describe('entry tests', () => {
           expand: true,
           cwd: 'lib/blockly',
           src: ['??_??.js'],
-          dest: 'build/package/js',
+          dest: 'build/locales',
           // e.g., ar_sa.js -> ar_sa/blockly_locale.js
           rename: function(dest, src) {
             var outputPath = src.replace(
@@ -211,17 +213,22 @@ describe('entry tests', () => {
             return path.join(dest, outputPath);
           }
         },
+        // minifying ace code requires some advanced configuration:
+        // https://github.com/ajaxorg/ace/blob/b808ac14ec6d6afa74b36ff5c03452a2832b32a4/Makefile.dryice.js#L620-L638
+        // instead of replicating that configuration here, we keep minified
+        // and unminified js in our repo and provide the correct one
+        // based on whether we are in development or production mode.
         {
           expand: true,
           cwd: 'lib/ace/src' + ace_suffix + '-noconflict/',
           src: ['**/*.js'],
           dest: 'build/package/js/ace/'
         },
-        // Pull p5.js and p5.play.js into the package from our fork of the
-        // p5.play repo at https://github.com/code-dot-org/p5.play
+        // Pull p5.js and p5.play.js into the package from our forks. These are
+        // needed by the gamelab exporter code in production and development.
         {
           expand: true,
-          cwd: './node_modules/@code-dot-org/p5.play/examples/lib',
+          cwd: './node_modules/@code-dot-org/p5/lib',
           src: ['p5.js'],
           dest: 'build/package/js/p5play/'
         },
@@ -231,12 +238,7 @@ describe('entry tests', () => {
           src: ['p5.play.js'],
           dest: 'build/package/js/p5play/'
         },
-        {
-          expand: true,
-          cwd: 'lib',
-          src: ['p5.sound.min.js'],
-          dest: 'build/package/js/p5play/'
-        },
+        // Piskel must not be minified or digested in order to work properly.
         {
           expand: true,
           // For some reason, if we provide piskel root as an absolute path here,
@@ -246,6 +248,7 @@ describe('entry tests', () => {
           src: ['**'],
           dest: 'build/package/js/piskel/'
         },
+        // Bramble must not be minified or digested in order to work properly.
         {
           expand: true,
           cwd: './node_modules/@code-dot-org/bramble/dist',
@@ -256,7 +259,7 @@ describe('entry tests', () => {
           expand: true,
           cwd: 'lib/droplet',
           src: ['droplet-full*.js'],
-          dest: 'build/package/js/droplet/'
+          dest: 'build/minifiable-lib/droplet/'
         },
         {
           expand: true,
@@ -268,19 +271,19 @@ describe('entry tests', () => {
           expand: true,
           cwd: 'lib/tooltipster',
           src: ['*.js'],
-          dest: 'build/package/js/tooltipster/'
+          dest: 'build/minifiable-lib/tooltipster/'
         },
         {
           expand: true,
           cwd: 'lib/marked',
           src: ['marked*.js'],
-          dest: 'build/package/js/marked/'
+          dest: 'build/minifiable-lib/marked/'
         },
         {
           expand: true,
           cwd: 'lib/phaser',
           src: ['*.js'],
-          dest: 'build/package/js/phaser/'
+          dest: 'build/minifiable-lib/phaser/'
         },
         {
           expand: true,
@@ -292,7 +295,30 @@ describe('entry tests', () => {
           expand: true,
           cwd: 'lib/fileupload',
           src: ['*.js'],
-          dest: 'build/package/js/fileupload/'
+          dest: 'build/minifiable-lib/fileupload/'
+        }
+      ]
+    },
+    unhash: {
+      files: [
+        {
+          expand: true,
+          cwd: 'build/package/js',
+          // The applab and gamelab exporters need unhashed copies of these files.
+          src: [
+            'webpack-runtimewp*.js',
+            'webpack-runtimewp*.min.js',
+            'applab-apiwp*.js',
+            'applab-apiwp*.min.js',
+            'gamelab-apiwp*.js',
+            'gamelab-apiwp*.min.js'
+          ],
+          dest: 'build/package/js',
+          // e.g. webpack-runtimewp0123456789aabbccddee.min.js --> webpack-runtime.min.js
+          rename: function(dest, src) {
+            var outputFile = src.replace(/wp[0-9a-f]{20}/, '');
+            return path.join(dest, outputFile);
+          }
         }
       ]
     }
@@ -303,7 +329,8 @@ describe('entry tests', () => {
       options: {
         // Compression currently occurs at the ../dashboard sprockets layer.
         outputStyle: 'nested',
-        includePaths: ['node_modules', '../shared/css/']
+        includePaths: ['node_modules', '../shared/css/'],
+        implementation: sass
       },
       files: _.fromPairs(
         [
@@ -353,7 +380,7 @@ describe('entry tests', () => {
           },
           expand: true,
           src: ['i18n/**/*.json'],
-          dest: 'build/package/js/'
+          dest: 'build/locales'
         }
       ]
     }
@@ -496,6 +523,8 @@ describe('entry tests', () => {
     'courses/show': './src/sites/studio/pages/courses/show.js',
     'devise/registrations/_finish_sign_up':
       './src/sites/studio/pages/devise/registrations/_finish_sign_up.js',
+    'devise/registrations/_old_sign_up_form':
+      './src/sites/studio/pages/devise/registrations/_old_sign_up_form.js',
     'devise/registrations/edit':
       './src/sites/studio/pages/devise/registrations/edit.js',
     'home/_homepage': './src/sites/studio/pages/home/_homepage.js',
@@ -510,6 +539,7 @@ describe('entry tests', () => {
       './src/sites/studio/pages/layouts/_terms_interstitial.js',
     'levels/_bubble_choice':
       './src/sites/studio/pages/levels/_bubble_choice.js',
+    'levels/_content': './src/sites/studio/pages/levels/_content.js',
     'levels/_contract_match':
       './src/sites/studio/pages/levels/_contract_match.js',
     'levels/_curriculum_reference':
@@ -536,15 +566,16 @@ describe('entry tests', () => {
     'projects/featured': './src/sites/studio/pages/projects/featured.js',
     'projects/index': './src/sites/studio/pages/projects/index.js',
     'projects/public': './src/sites/studio/pages/projects/public.js',
-    scriptOverview: './src/sites/studio/pages/scriptOverview.js',
+    'scripts/show': './src/sites/studio/pages/scripts/show.js',
     'scripts/stage_extras': './src/sites/studio/pages/scripts/stage_extras.js',
     'sections/show': './src/sites/studio/pages/sections/show.js',
     'shared/_header_progress':
       './src/sites/studio/pages/shared/_header_progress.js',
     'shared/_school_info': './src/sites/studio/pages/shared/_school_info.js',
-    signup: './src/sites/studio/pages/signup.js',
     'teacher_dashboard/show':
-      './src/sites/studio/pages/teacher_dashboard/show.js'
+      './src/sites/studio/pages/teacher_dashboard/show.js',
+    'teacher_feedbacks/index':
+      './src/sites/studio/pages/teacher_feedbacks/index.js'
   };
 
   var internalEntries = {
@@ -552,8 +583,6 @@ describe('entry tests', () => {
     'blocks/index': './src/sites/studio/pages/blocks/index.js',
     'courses/edit': './src/sites/studio/pages/courses/edit.js',
     levelbuilder: './src/sites/studio/pages/levelbuilder.js',
-    levelbuilder_edit_script:
-      './src/sites/studio/pages/levelbuilder_edit_script.js',
     'levels/editors/_all': './src/sites/studio/pages/levels/editors/_all.js',
     'levels/editors/_applab':
       './src/sites/studio/pages/levels/editors/_applab.js',
@@ -571,6 +600,7 @@ describe('entry tests', () => {
     'levels/editors/_studio':
       './src/sites/studio/pages/levels/editors/_studio.js',
     'libraries/edit': './src/sites/studio/pages/libraries/edit.js',
+    'scripts/_form': './src/sites/studio/pages/scripts/_form.js',
     'shared_blockly_functions/edit':
       './src/sites/studio/pages/shared_blockly_functions/edit.js'
   };
@@ -606,6 +636,8 @@ describe('entry tests', () => {
       './src/sites/hourofcode.com/pages/public/index.js',
     'hourofcode.com/views/theme_common_head_after':
       './src/sites/hourofcode.com/pages/views/theme_common_head_after.js',
+    'hourofcode.com/views/hoc_events_map':
+      './src/sites/hourofcode.com/pages/views/hoc_events_map.js',
 
     // shared between code.org and hourofcode.com
     tutorialExplorer: './src/tutorialExplorer/tutorialExplorer.js'
@@ -676,7 +708,7 @@ describe('entry tests', () => {
     brambleHost: './src/weblab/brambleHost.js',
 
     'applab-api': './src/applab/api-entry.js',
-    'gamelab-api': './src/gamelab/api-entry.js',
+    'gamelab-api': './src/p5lab/gamelab/api-entry.js',
 
     'shared/_check_admin': './src/sites/studio/pages/shared/_check_admin.js',
 
@@ -685,6 +717,8 @@ describe('entry tests', () => {
 
     regionalPartnerMiniContact:
       './src/regionalPartnerMiniContact/regionalPartnerMiniContact',
+
+    donorTeacherBanner: './src/donorTeacherBanner/donorTeacherBanner',
 
     cookieBanner: './src/cookieBanner/cookieBanner.js'
   };
@@ -695,7 +729,7 @@ describe('entry tests', () => {
     var watch = options.watch;
 
     return webpackConfig.create({
-      output: path.resolve(__dirname, OUTPUT_DIR),
+      outputDir: path.resolve(__dirname, OUTPUT_DIR),
       entries: _.mapValues(
         _.extend(
           {},
@@ -732,15 +766,14 @@ describe('entry tests', () => {
       mode: minify ? 'production' : 'development',
       optimization: {
         minimizer: [
-          compiler => {
-            const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-            const plugin = new UglifyJsPlugin({
-              cache: true,
-              parallel: true,
-              sourceMap: envConstants.DEBUG_MINIFIED
-            });
-            plugin.apply(compiler);
-          }
+          new UglifyJsPlugin({
+            // Excludes these from minification to avoid breaking functionality,
+            // but still adds .min to the output filename suffix.
+            exclude: [/\/blockly.js$/, /\/brambleHost.js$/],
+            cache: true,
+            parallel: true,
+            sourceMap: envConstants.DEBUG_MINIFIED
+          })
         ],
 
         // We use a single, named runtimeChunk in order to be able to load
@@ -765,6 +798,10 @@ describe('entry tests', () => {
           name: 'webpack-runtime'
         },
         splitChunks: {
+          // Override the default limit of 3 concurrent downloads on page load,
+          // which only makes sense for HTTP 1.1 servers. HTTP 2 performance has
+          // been observed to degrade only with > 200 simultaneous downloads.
+          maxInitialRequests: 100,
           cacheGroups: {
             // Pull any module shared by 2+ appsEntries into the "common" chunk.
             common: {
@@ -780,7 +817,7 @@ describe('entry tests', () => {
               name: 'code-studio-common',
               minChunks: 2,
               chunks: chunk => {
-                const chunkNames = _.keys(codeStudioEntries);
+                const chunkNames = Object.keys(codeStudioEntries);
                 return chunkNames.includes(chunk.name);
               },
               priority: 10
@@ -809,14 +846,54 @@ describe('entry tests', () => {
             // For more information see: https://webpack.js.org/guides/code-splitting/
             'code-studio-multi': {
               name: 'code-studio-common',
-              minChunks: _.keys(appsEntries).length + 1,
+              minChunks: Object.keys(appsEntries).length + 1,
               chunks: chunk => {
-                const chunkNames = _.keys(codeStudioEntries).concat(
-                  _.keys(appsEntries)
+                const chunkNames = Object.keys(codeStudioEntries).concat(
+                  Object.keys(appsEntries)
                 );
                 return chunkNames.includes(chunk.name);
               },
               priority: 20
+            },
+            vendors: {
+              name: 'vendors',
+              priority: 30,
+              chunks: chunk => {
+                // all 'initial' chunks except otherEntries
+                const chunkNames = _.concat(
+                  Object.keys(codeStudioEntries),
+                  Object.keys(appsEntries),
+                  Object.keys(pegasusEntries),
+                  Object.keys(professionalDevelopmentEntries),
+                  Object.keys(internalEntries)
+                );
+                return chunkNames.includes(chunk.name);
+              },
+              test(module) {
+                return [
+                  'babel-polyfill',
+                  'immutable',
+                  'lodash',
+                  'moment',
+                  'pepjs',
+                  'radium',
+                  'react',
+                  'react-dom',
+                  'wgxpath'
+                ].some(libName =>
+                  new RegExp(`/apps/node_modules/${libName}/`).test(
+                    module.resource
+                  )
+                );
+              }
+            },
+            p5lab: {
+              name: 'p5-dependencies',
+              priority: 10,
+              minChunks: 2,
+              chunks: chunk =>
+                ['spritelab', 'gamelab', 'dance'].includes(chunk.name),
+              test: module => /p5/.test(module.resource)
             }
           }
         }
@@ -833,9 +910,62 @@ describe('entry tests', () => {
         new StatsWriterPlugin({
           fields: ['assetsByChunkName', 'assets']
         }),
-        // Needed because our production environment relies on an unminified
-        // (but digested) version of certain files such as blockly.js.
-        new UnminifiedWebpackPlugin()
+        // The [contenthash] placeholder generates a 32-character hash when
+        // used within the copy plugin.
+        new CopyPlugin(
+          [
+            // Always include unhashed locale files in the package, since unit
+            // tests rely on these in both minified and unminified environments.
+            // The order of these rules is important to ensure that the hashed
+            // locale files appear in the manifest when minifying.
+            {
+              from: 'build/locales',
+              to: '[path]/[name].[ext]',
+              toType: 'template'
+            },
+            minify && {
+              from: 'build/locales',
+              to: '[path]/[name]wp[contenthash].[ext]',
+              toType: 'template'
+            },
+            // Libraries in this directory are assumed to have .js and .min.js
+            // copies of each source file. In development mode, copy only foo.js.
+            // In production mode, copy only foo.min.js and rename it to foo.js.
+            // This allows the manifest to contain a single mapping from foo.js
+            // to a target file with the correct contents given the mode.
+            //
+            // Ideally, the target file would have the .min.js suffix in
+            // production mode. This could be accomplished by nesting these files
+            // within a minifiable-lib directory in the output package so that the
+            // manifest plugin could do special processing on these files.
+            {
+              context: 'build/minifiable-lib/',
+              from: minify ? `**/*.min.js` : '**/*.js',
+              to: minify
+                ? '[path]/[name]wp[contenthash].[ext]'
+                : '[path]/[name].[ext]',
+              toType: 'template',
+              ignore: minify ? [] : ['*.min.js'],
+              transformPath: targetPath => targetPath.replace(/\.min/, '')
+            }
+          ].filter(entry => !!entry)
+        ),
+        // Unit tests require certain unminified files to have been built.
+        new UnminifiedWebpackPlugin({
+          include: [/^webpack-runtime/, /^applab-api/, /^gamelab-api/]
+        }),
+        new ManifestPlugin({
+          basePath: 'js/',
+          map: file => {
+            if (minify) {
+              // Remove contenthash in manifest key from files generated via
+              // copy-webpack-plugin. See:
+              // https://github.com/webpack-contrib/copy-webpack-plugin/issues/104#issuecomment-370174211
+              file.name = file.name.replace(/wp[a-f0-9]{32}\./, '.');
+            }
+            return file;
+          }
+        })
       ],
       minify: minify,
       watch: watch,
@@ -889,8 +1019,8 @@ describe('entry tests', () => {
       files: _.fromPairs(
         ['p5play/p5.play.js', 'p5play/p5.js'].map(function(src) {
           return [
-            OUTPUT_DIR + src.replace(/\.js$/, '.min.js'), // dst
-            OUTPUT_DIR + src // src
+            'build/package/js/' + src.replace(/\.js$/, '.min.js'), // dst
+            'build/package/js/' + src // src
           ];
         })
       )
@@ -974,7 +1104,8 @@ describe('entry tests', () => {
         'common',
         'tutorialExplorer',
         'regionalPartnerSearch',
-        'regionalPartnerMiniContact'
+        'regionalPartnerMiniContact',
+        'donorTeacherBanner'
       )
       .map(function(item) {
         var localeType = item === 'common' ? 'locale' : 'appLocale';
@@ -1063,11 +1194,13 @@ describe('entry tests', () => {
 
   grunt.registerTask('build', [
     'prebuild',
+    // For any minifiable libs, generate minified sources if they do not already
+    // exist in our repo. Skip minification in development environment.
+    envConstants.DEV ? 'noop' : 'uglify:lib',
     envConstants.DEV ? 'webpack:build' : 'webpack:uglify',
     'notify:js-build',
-    // Skip minification in development environment.
-    envConstants.DEV ? 'noop' : 'uglify:lib',
-    'postbuild'
+    'postbuild',
+    envConstants.DEV ? 'noop' : 'newer:copy:unhash'
   ]);
 
   grunt.registerTask('rebuild', ['clean', 'build']);
@@ -1099,11 +1232,6 @@ describe('entry tests', () => {
 
   // Run Scratch tests in a separate target so `window.Blockly` doesn't collide.
   grunt.registerTask('scratchTest', ['preconcat', 'karma:scratch']);
-
-  grunt.registerTask('logBuildTimes', function() {
-    var done = this.async();
-    buildTimeLogger.upload(console.log, done);
-  });
 
   grunt.registerTask('default', ['rebuild', 'test']);
 };

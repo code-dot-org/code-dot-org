@@ -1,98 +1,6 @@
 FactoryGirl.allow_class_lookup = false
 
 FactoryGirl.define do
-  factory :pd_workshop, class: 'Pd::Workshop' do
-    association :organizer, factory: :workshop_organizer
-    funded false
-    on_map true
-    location_name 'Hogwarts School of Witchcraft and Wizardry'
-    course Pd::Workshop::COURSES.first
-    subject {Pd::Workshop::SUBJECTS[course].try(&:first)}
-    trait :teachercon do
-      course Pd::Workshop::COURSE_CSP
-      subject Pd::Workshop::SUBJECT_CSP_TEACHER_CON
-    end
-    trait :local_summer_workshop do
-      course Pd::Workshop::COURSE_CSP
-      subject Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP
-    end
-    trait :local_summer_workshop_upcoming do
-      local_summer_workshop
-      num_sessions 5
-      sessions_from {Date.current + 3.months}
-    end
-    trait :fit do
-      course Pd::Workshop::COURSE_CSP
-      subject Pd::Workshop::SUBJECT_CSP_FIT
-    end
-    capacity 10
-    transient do
-      num_sessions 0
-      num_facilitators 0
-      sessions_from {Date.current + 9.hours} # Start time of the first session, then one per day after that.
-      each_session_hours 6
-      num_enrollments 0
-      enrolled_and_attending_users 0
-      enrolled_unattending_users 0
-      num_completed_surveys 0
-      randomized_survey_answers false
-      assign_session_code false
-    end
-    trait :with_codes_assigned do
-      assign_session_code true
-    end
-    after(:build) do |workshop, evaluator|
-      # Sessions, one per day starting today
-      evaluator.num_sessions.times do |i|
-        params = [{
-          workshop: workshop,
-          start: evaluator.sessions_from + i.days,
-          duration_hours: evaluator.each_session_hours
-        }]
-        params.prepend :with_assigned_code if evaluator.assign_session_code
-        workshop.sessions << build(:pd_session, *params)
-      end
-      evaluator.num_enrollments.times do
-        workshop.enrollments << build(:pd_enrollment, workshop: workshop)
-      end
-      evaluator.enrolled_and_attending_users.times do
-        teacher = create :teacher
-        workshop.enrollments << build(:pd_enrollment, workshop: workshop, user: teacher)
-        workshop.sessions.each do |session|
-          session.attendances << build(:pd_attendance, session: session, teacher: teacher)
-        end
-      end
-      evaluator.enrolled_unattending_users.times do
-        teacher = create :teacher
-        workshop.enrollments << build(:pd_enrollment, workshop: workshop, user: teacher)
-      end
-    end
-
-    trait :funded do
-      funded true
-      funding_type {course == Pd::Workshop::COURSE_CSF ? Pd::Workshop::FUNDING_TYPE_FACILITATOR : nil}
-    end
-
-    after(:create) do |workshop, evaluator|
-      workshop.sessions.map(&:save)
-
-      evaluator.num_facilitators.times do
-        workshop.facilitators << (create :facilitator, course: workshop.course)
-      end
-
-      evaluator.num_completed_surveys.times do
-        enrollment = create :pd_enrollment, workshop: workshop
-        if workshop.teachercon?
-          create :pd_teachercon_survey, pd_enrollment: enrollment, randomized_survey_answers: evaluator.randomized_survey_answers
-        elsif workshop.local_summer?
-          create :pd_local_summer_workshop_survey, pd_enrollment: enrollment, randomized_survey_answers: evaluator.randomized_survey_answers
-        else
-          raise 'Num_completed_surveys trait unsupported for this workshop type'
-        end
-      end
-    end
-  end
-
   # example zip: 35010
   factory :regional_partner_alabama, parent: :regional_partner_with_summer_workshops do
     mappings {[create(:pd_regional_partner_mapping, state: "AL")]}
@@ -157,76 +65,16 @@ FactoryGirl.define do
     mappings {[create(:pd_regional_partner_mapping, zip_code: "90210", state: nil)]}
   end
 
-  factory :pd_ended_workshop, parent: :pd_workshop, class: 'Pd::Workshop' do
-    num_sessions 1
-    started_at {Time.zone.now}
-    ended_at {Time.zone.now}
-  end
-
   factory :pd_session, class: 'Pd::Session' do
     transient do
       duration_hours 6
     end
-    association :workshop, factory: :pd_workshop
+    association :workshop, factory: :workshop
     start {Date.current + 9.hours}
     self.end {start + duration_hours.hours}
 
     trait :with_assigned_code do
       after :build, &:assign_code
-    end
-  end
-
-  factory :pd_teacher_application, class: 'Pd::TeacherApplication' do
-    association :user, factory: :teacher, strategy: :create
-    transient do
-      application_hash {build :pd_teacher_application_hash, user: user}
-    end
-    application {application_hash.to_json}
-    primary_email {application_hash['primaryEmail']}
-    secondary_email {application_hash['secondaryEmail']}
-  end
-
-  # The raw attributes as returned by the teacher application form, and saved in Pd::TeacherApplication.application.
-  factory :pd_teacher_application_hash, class: 'Hash' do
-    transient do
-      user nil
-      association :school, factory: :public_school, strategy: :build
-      association :school_district, strategy: :build
-      course 'csd'
-    end
-
-    initialize_with do
-      {
-        school: school.id,
-        'school-district' => school_district.id,
-        firstName: 'Rubeus',
-        lastName: 'Hagrid',
-        primaryEmail: user ? user.email : 'rubeus@hogwarts.co.uk',
-        secondaryEmail: 'rubeus+also@hogwarts.co.uk',
-        principalPrefix: 'Mrs.',
-        principalFirstName: 'Minerva',
-        principalLastName: 'McGonagall',
-        principalEmail: 'minerva@hogwarts.co.uk',
-        selectedCourse: course,
-        phoneNumber: '555-555-5555',
-        gradesAtSchool: [10],
-        genderIdentity: 'Male',
-        grades2016: [7, 8],
-        subjects2016: ['Math', 'Care of Magical Creatures'],
-        grades2017: [10, 11],
-        subjects2017: ['Computer Science', 'Care of Magical Creatures'],
-        committedToSummer: 'Yes',
-        ableToAttendAssignedSummerWorkshop: 'Yes',
-        allStudentsShouldLearn: '4',
-        allStudentsCanLearn: '4',
-        newApproaches: '4',
-        allAboutContent: '4',
-        allAboutProgramming: '4',
-        csCreativity: '4',
-        currentCsOpportunities: ['lunch clubs'],
-        whyCsIsImportant: 'robots',
-        whatTeachingSteps: 'learn and practice'
-      }.stringify_keys
     end
   end
 
@@ -280,7 +128,7 @@ FactoryGirl.define do
       form_data_hash {build :pd_regional_partner_program_registration_hash}
       regional_partner {create :regional_partner}
     end
-    user {regional_partner.contact}
+    user {(create :regional_partner_program_manager, regional_partner: regional_partner).program_manager}
     teachercon 1
     form_data {form_data_hash.to_json}
   end
@@ -541,13 +389,6 @@ FactoryGirl.define do
     end
   end
 
-  factory :pd_accepted_program, class: 'Pd::AcceptedProgram' do
-    workshop_name '2017: workshop'
-    course 'csd'
-    association :user, factory: :teacher, strategy: :create
-    association :teacher_application, factory: :pd_teacher_application, strategy: :create
-  end
-
   factory :pd_facilitator_teachercon_attendance, class: 'Pd::FacilitatorTeacherconAttendance' do
     association :user, factory: :facilitator, strategy: :create
     tc1_arrive {Date.new(2017, 8, 23)}
@@ -555,7 +396,7 @@ FactoryGirl.define do
   end
 
   factory :pd_enrollment, class: 'Pd::Enrollment' do
-    association :workshop, factory: :pd_workshop
+    association :workshop
     sequence(:first_name) {|n| "Participant#{n}"}
     last_name 'Codeberg'
     email {"participant_#{(User.maximum(:id) || 0) + 1}@example.com.xx"}
@@ -589,18 +430,6 @@ FactoryGirl.define do
   factory :pd_course_facilitator, class: 'Pd::CourseFacilitator' do
     association :facilitator
     course Pd::Workshop::COURSES.first
-  end
-
-  factory :pd_workshop_material_order, class: 'Pd::WorkshopMaterialOrder' do
-    association :enrollment, factory: :pd_enrollment
-    association :user, factory: :teacher
-    street '1501 4th Ave'
-    apartment_or_suite 'Suite 900'
-    city 'Seattle'
-    state 'WA'
-    add_attribute :zip_code, '98101'
-    phone_number '555-111-2222'
-    address_override "0"
   end
 
   factory :pd_pre_workshop_survey, class: 'Pd::PreWorkshopSurvey' do
@@ -1134,6 +963,164 @@ FactoryGirl.define do
         application.lock!
       end
     end
+  end
+
+  # default to csp
+  factory :pd_teacher2021_application_hash, parent: :pd_teacher2021_application_hash_common do
+    csp
+  end
+
+  factory :pd_teacher2021_application_hash_common, class: 'Hash' do
+    country 'United States'
+    first_name 'Severus'
+    last_name 'Snape'
+    alternate_email 'ilovepotions@gmail.com'
+    phone '5558675309'
+    gender_identity 'Male'
+    race ['Other']
+    add_attribute :zip_code, '98101'
+    association :school
+    principal_first_name 'Albus'
+    principal_last_name 'Dumbledore'
+    principal_title 'Dr.'
+    principal_email 'socks@hogwarts.edu'
+    principal_confirm_email 'socks@hogwarts.edu'
+    principal_phone_number '5555882300'
+    current_role 'Teacher'
+    previous_yearlong_cdo_pd ['CS in Science']
+    committed 'Yes'
+    willing_to_travel 'Up to 50 miles'
+    agree 'Yes'
+    completing_on_behalf_of_someone_else 'No'
+    cs_how_many_minutes 45
+    cs_how_many_days_per_week 5
+    cs_how_many_weeks_per_year 20
+    cs_total_course_hours 75
+    replace_existing 'No, this course will be added to the schedule in addition to an existing computer science course'
+    pay_fee 'Yes, my school will be able to pay the full program fee.'
+    plan_to_teach Pd::Application::Teacher2021Application.options[:plan_to_teach].first
+    interested_in_online_program 'Yes'
+
+    initialize_with do
+      attributes.dup.tap do |hash|
+        # School in the form data is meant to be an id, but in the factory it can be provided as a School object
+        # In that case, replace it with the id from the associated model
+        hash[:school] = hash[:school].id if hash[:school].is_a? School
+      end.transform_keys(&ruby_to_js_style_keys)
+    end
+
+    trait :csp do
+      program Pd::Application::TeacherApplicationBase::PROGRAMS[:csp]
+      csp_which_grades ['11', '12']
+      csp_which_units ['Unit 1: Digital Information', 'Unit 2: Internet']
+      csp_how_offer 'As an AP course'
+    end
+
+    trait :csd do
+      program Pd::Application::TeacherApplicationBase::PROGRAMS[:csd]
+      csd_which_grades ['6', '7']
+      csd_which_units ['Unit 0: Problem Solving', 'Unit 1: Web Development']
+    end
+
+    trait :with_custom_school do
+      school(-1)
+      school_name 'Code.org'
+      school_address '1501 4th Ave'
+      school_city 'Seattle'
+      school_state 'Washington'
+      school_zip_code '98101'
+      school_type 'Public school'
+    end
+
+    trait :with_multiple_workshops do
+      able_to_attend_multiple ['December 11-15, 2017 in Indiana, USA']
+
+      after(:build) do |hash|
+        hash.delete 'ableToAttendSingle'
+      end
+    end
+  end
+
+  factory :pd_teacher2021_application, class: 'Pd::Application::Teacher2021Application' do
+    association :user, factory: [:teacher, :with_school_info], strategy: :create
+    course 'csp'
+    transient do
+      form_data_hash {build :pd_teacher2021_application_hash_common, course.to_sym}
+    end
+    form_data {form_data_hash.to_json}
+  end
+
+  # default to do_you_approve: other
+  factory :pd_principal_approval2021_application_hash, parent: :pd_principal_approval2021_application_hash_common do
+    approved_other
+  end
+
+  factory :pd_principal_approval2021_application_hash_common, parent: :form_data_hash do
+    title 'Dr.'
+    first_name 'Albus'
+    last_name 'Dumbledore'
+    email 'albus@hogwarts.edu'
+    confirm_principal true
+
+    trait :approved_no do
+      do_you_approve 'No'
+    end
+
+    trait :approved_yes do
+      do_you_approve 'Yes'
+      with_approval_fields
+    end
+
+    trait :approved_other do
+      do_you_approve 'Other:'
+      with_approval_fields
+    end
+
+    trait :with_approval_fields do
+      school 'Hogwarts Academy of Witchcraft and Wizardry'
+      total_student_enrollment 200
+      free_lunch_percent '50'
+      white '16'
+      black '15'
+      hispanic '14'
+      asian '13'
+      pacific_islander '12'
+      american_indian '11'
+      other '10'
+      committed_to_master_schedule Pd::Application::PrincipalApproval2021Application.options[:committed_to_master_schedule][0]
+      replace_course Pd::Application::PrincipalApproval2021Application.options[:replace_course][1]
+      committed_to_diversity 'Yes'
+      understand_fee 'Yes'
+      pay_fee Pd::Application::PrincipalApproval2021Application.options[:pay_fee][0]
+    end
+
+    trait :replace_course_yes_csp do
+      replace_course 'Yes'
+      replace_which_course_csp ['Beauty and Joy of Computing']
+    end
+
+    trait :replace_course_yes_csd do
+      replace_course 'Yes'
+      replace_which_course_csd ['CodeHS']
+    end
+  end
+
+  factory :pd_principal_approval2021_application, class: 'Pd::Application::PrincipalApproval2021Application' do
+    association :teacher_application, factory: :pd_teacher2021_application
+    course 'csp'
+    transient do
+      approved 'Yes'
+      replace_course Pd::Application::PrincipalApproval2021Application.options[:replace_course][1]
+      form_data_hash do
+        build(
+          :pd_principal_approval2021_application_hash_common,
+          "approved_#{approved.downcase}".to_sym,
+          course: course,
+          replace_course: replace_course
+        )
+      end
+    end
+    form_data {form_data_hash.to_json}
   end
 
   # default to csp

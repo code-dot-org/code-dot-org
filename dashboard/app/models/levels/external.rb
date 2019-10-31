@@ -8,7 +8,7 @@
 #  created_at            :datetime
 #  updated_at            :datetime
 #  level_num             :string(255)
-#  ideal_level_source_id :integer
+#  ideal_level_source_id :integer          unsigned
 #  user_id               :integer
 #  properties            :text(65535)
 #  type                  :string(255)
@@ -52,10 +52,11 @@ class External < DSLDefined
     true
   end
 
-  # returns a properties hash in which USER_ID_REPLACE_STRING is replaced by the current user's id
-  # in markdown
-  def properties_with_replaced_markdown(user)
+  # returns a version of the markdown for this level in which
+  # USER_ID_REPLACE_STRING is replaced by the current user's id
+  def localized_replaced_markdown(user)
     user_id = user.try(:id).to_s
-    properties.merge({'markdown' => properties['markdown'].gsub(USER_ID_REPLACE_STRING, user_id)})
+    localized_markdown = localized_property('markdown')
+    return localized_markdown.gsub(USER_ID_REPLACE_STRING, user_id)
   end
 end

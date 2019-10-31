@@ -54,6 +54,7 @@ var ALLOWED_KEYS = new Set([
   'is13Plus',
   'isSignedIn',
   'userId',
+  'verifiedTeacher',
   'isK1',
   'textToSpeechEnabled',
   'documentationUrl',
@@ -61,8 +62,13 @@ var ALLOWED_KEYS = new Set([
   'nextLevelUrl',
   'showProjectTemplateWorkspaceIcon',
   'serverLevelId',
+  'serverScriptLevelId',
   'exportApp',
-  'allowExportExpo'
+  'expoGenerateApk',
+  'expoCheckApkBuild',
+  'expoCancelApkBuild',
+  'allowExportExpo',
+  'widgetMode'
 ]);
 
 const initialState = {

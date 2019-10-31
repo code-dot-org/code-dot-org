@@ -7,6 +7,7 @@ teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-19/unit4/"],
 has_verified_resources true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/csd-19/unit4/{LESSON}'
+script_announcements [{"notice"=>"Check out the new CS Discoveries resources for 2019-2020!", "details"=>"Read more about our new teacher guides, learning frameworks, OneNote Journal, and Flipgrid Disco Library!", "link"=>"https://forum.code.org/t/new-resources-for-2019-2020/30676", "type"=>"bullhorn", "visibility"=>"Teacher-only"}]
 family_name 'csd4'
 version_year '2019'
 is_stable true
@@ -99,4 +100,4 @@ level 'CSD User Centered Design Post-Project Test', assessment: true
 
 stage 'CS Discoveries Post Course survey', lockable: true, flex_category: 'cspSurvey'
 level 'csd-post-survey-intro-2019'
-level 'csd-post-survey-2017-levelgroup_2018_2019', assessment: true
+level 'csd-post-survey-levelgroup_2019', assessment: true

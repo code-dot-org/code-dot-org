@@ -3,7 +3,7 @@ login_required true
 hideable_stages true
 exclude_csf_column_in_legend true
 student_detail_progress_view true
-teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-19/unit1/"], ["teacherForum", "https://forum.code.org/c/csp1"], ["vocabulary", "https://curriculum.code.org/csp-19/unit1/vocab/"], ["standardMappings", "https://curriculum.code.org/csp-19/unit1/standards/"], ["professionalLearning", "https://studio.code.org/s/csp1-support"]]
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-19/unit1/"], ["teacherForum", "https://forum.code.org/c/csp1"], ["vocabulary", "https://curriculum.code.org/csp-19/unit1/vocab/"], ["standardMappings", "https://curriculum.code.org/csp-19/unit1/standards/"], ["professionalLearning", "https://code.org/educate/professional-learning/middle-high"]]
 has_verified_resources true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csp-19/unit1/{LESSON}'
@@ -14,7 +14,7 @@ project_sharing true
 curriculum_umbrella 'CSP'
 
 stage 'CS Principles Pre-survey', lockable: true, flex_category: 'cspSurvey'
-level 'csp-pre-survey-2017-levelgroup_2018_2019', assessment: true
+level 'csp-pre-survey-levelgroup_2019', assessment: true
 
 stage 'Personal Innovations', flex_category: 'csp1_1'
 level 'CSP U1L01 SFLP_2019', named: true

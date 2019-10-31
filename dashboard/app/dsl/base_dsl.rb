@@ -7,17 +7,6 @@ class BaseDSL
     @name = text
   end
 
-  def encrypted(text)
-    @hash['encrypted'] = '1'
-
-    begin
-      instance_eval(Encryption.decrypt_object(text))
-    rescue OpenSSL::Cipher::CipherError, Encryption::KeyMissingError
-      puts "warning: unable to decrypt level #{@name}, skipping"
-      return
-    end
-  end
-
   # returns 'xyz' from 'XyzDSL' subclasses
   def prefix
     self.class.to_s.tap {|s| s.slice!('DSL')}.underscore
@@ -43,8 +32,7 @@ class BaseDSL
   # after parse has been done, this function returns a hash of all the user-visible strings from this instance
   def i18n_hash
     # Filter out any entries with nil key or value
-    hash = i18n_strings.select {|key, value| key && value}
-    {"en" => {"data" => {prefix => hash}}}
+    i18n_strings.select {|key, value| key && value}
   end
 
   # Implement in subclass

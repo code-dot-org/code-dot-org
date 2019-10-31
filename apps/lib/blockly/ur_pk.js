@@ -40,6 +40,7 @@ Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST_TAIL = "";
 Blockly.Msg.CONTROLS_FOREACH_INPUT_ITEM = ".her aik cheez k liye";
 Blockly.Msg.CONTROLS_FOREACH_TOOLTIP = " Fehrist mein her cheez k liye, her variable ko '%1' ker daein aur phir kuch bayanaat (Statments) daein ";
 Blockly.Msg.CONTROLS_FOR_HELPURL = "";
+Blockly.Msg.CONTROLS_FOR_INPUT_COUNTER = "for %1 from %2 to %3 count by %4";
 Blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY = "1% سے 2% تک 3%  کے فرق سے";
 Blockly.Msg.CONTROLS_FOR_INPUT_WITH = "شمار سے";
 Blockly.Msg.CONTROLS_FOR_TOOLTIP = "کیا متغیر %1 اقدار کےآغازی قیمت سے اختتامی قیمت تک لیتا ہے، جو مخصوص وقفوں کے حساب سے گنتا اور مخصوص رکاوٹ پیدا کرتا ہے۔";
@@ -311,8 +312,10 @@ Blockly.Msg.PROCEDURES_IFRETURN_WARNING = "وارننگ: یہ بلاک صرف ف
 Blockly.Msg.PROCEDURES_MUTATORARG_TITLE = "اِن-پُٹ کا نام:";
 Blockly.Msg.PROCEDURES_MUTATORCONTAINER_TITLE = "اِن-پُٹس";
 Blockly.Msg.REMOVE_COMMENT = "کمنٹ ہٹائیں";
+Blockly.Msg.RENAME_ALL = "Rename all %1";
 Blockly.Msg.RENAME_PARAMETER = "پیرامیٹر ری-نیم کریں۔۔۔";
 Blockly.Msg.RENAME_PARAMETER_TITLE = "تمام '%1' پیرامیٹرز کو ری-نیم کریں:";
+Blockly.Msg.RENAME_THIS = "Rename this %1";
 Blockly.Msg.RENAME_VARIABLE = "ویری-ایبل کو ری-نیم کریں۔۔۔";
 Blockly.Msg.RENAME_VARIABLE_TITLE = "تمام '%1' ویری-ایبلز کو ری-نیم کریں:";
 Blockly.Msg.TEXT_APPEND_APPENDTEXT = "اپینڈ ٹیکسٹ";
@@ -377,6 +380,7 @@ Blockly.Msg.TEXT_TRIM_OPERATOR_LEFT = "لیفٹ سائڈ سے اسپیسز ٹر�
 Blockly.Msg.TEXT_TRIM_OPERATOR_RIGHT = "رائٹ سائڈ سے اسپیسز ٹزم کریں";
 Blockly.Msg.TEXT_TRIM_TOOLTIP = "ایک یا دونوں جانب سے اسپیسز نکال کر ٹیسکٹ کی ایک کاپی ریٹرن کریں۔";
 Blockly.Msg.UNUSED_CODE = "غیر استعمال شدہ ضابطہ";
+Blockly.Msg.VARIABLE = "variable";
 Blockly.Msg.VARIABLES_DEFAULT_NAME = "آئیٹم";
 Blockly.Msg.VARIABLES_GET_CREATE_SET = "'set %1' کری-ایٹ کریں";
 Blockly.Msg.VARIABLES_GET_HELPURL = "";

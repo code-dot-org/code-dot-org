@@ -40,8 +40,10 @@ Feature: Using the teacher dashboard
     And I click selector "#uitest-teacher-dashboard-nav a:contains(Manage Students)" once I see it
     And I wait until element "#uitest-manage-students-table" is visible
     And element "#uitest-manage-students-table tr:eq(1)" contains text "Sally"
+    And I wait until element "#uitest-privacy-text" is visible
+    And element "#uitest-privacy-text" contains text "Protecting your students' privacy"
     And I wait until element "#uitest-privacy-link" is visible
-    And element "#uitest-privacy-link" contains text "privacy document"
+    And element "#uitest-privacy-link" contains text "View parent letter"
 
     # Text responses tab
     And I click selector "#uitest-teacher-dashboard-nav a:contains(Text Responses)" once I see it

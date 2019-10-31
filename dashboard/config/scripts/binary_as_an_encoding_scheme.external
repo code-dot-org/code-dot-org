@@ -1,20 +1,24 @@
 name 'Binary as an Encoding Scheme'
 markdown <<MARKDOWN
-<h1> Binary as an Encoding Scheme </h1>
-<h2>Background</h2>
-Binary as we know it has existed long before computers.  It was invented in the 17th century, but many ancient cultures also had their own binary counting systems.  Binary was chosen as an encoding scheme for computers because it can be simply mapped to electronic circuitry.<a href=”http://binarytranslator.com/what-is-binary/” target=_blank> Learn more about the history of the binary number system >> </a>
+# Binary as an Encoding Scheme
 
-<h2>Binary is a STATE </h2>
+## Background
+
+Binary as we know it has existed long before computers.  It was invented in the 17th century, but many ancient cultures also had their own binary counting systems.  Binary was chosen as an encoding scheme for computers because it can be simply mapped to electronic circuitry. [Learn more about the history of the binary number system >>](http://binarytranslator.com/what-is-binary/)
+
+## Binary is a STATE
+
 Often when people think of binary, they think of the symbols 1 and 0. These directly map to the states of ‘on’ or ‘off’ in the context of electricity.  When there is electricity flowing through a wire or is on, it is denoted with a 1.  When there is no electricity, it is denoted with a 0.  In reality, however, binary can represent many different things.  The key is that the information that needs to be represented has one of two possible states and each of those states.
 
-<h2>Binary as a SYSTEM </h2>
-It is not simply enough to say that binary information exists in two different states.  It is important also to have a way of communicating each of these states.  In computing, the binary number system is used to indicate these things - each option mapping to a physical state of high or low voltage.  
+## Binary as a SYSTEM
 
-<h2>Binary in a LESSON </h2>
+It is not simply enough to say that binary information exists in two different states.  It is important also to have a way of communicating each of these states.  In computing, the binary number system is used to indicate these things - each option mapping to a physical state of high or low voltage.
+
+## Binary in a LESSON
+
 At the beginning of this unit, binary is introduced simply as something that has two states.  Students are encouraged to think about how these two states can be communicated through the physical system of the internet (what is the protocol).  They will later call a single piece of binary information a bit, which can exist in one of two states.  This is important because it helps ground them in data structures and the understanding of how information is transmitted.  As students begin to broaden the scope -  considering situations in which they want to share information that may exist in more than two states - they begin to think about how bits can be strung together to indicate a larger set of information.
 
-<h2> Binary in COMPUTERS </h2>
-Although computers have traditionally used binary to store and communicate information, this could change in the future.  Through quantum computing, it is possible to store more than two states into a single particle. <a href=”http://www.explainthatstuff.com/quantum-computing.html”> Learn more about quantum computing</a> 
+## Binary in COMPUTERS
 
-
+Although computers have traditionally used binary to store and communicate information, this could change in the future.  Through quantum computing, it is possible to store more than two states into a single particle. [Learn more about quantum computing](http://www.explainthatstuff.com/quantum-computing.html)
 MARKDOWN

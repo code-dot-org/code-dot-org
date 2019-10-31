@@ -599,12 +599,11 @@ lt-LT:
   course2_name: Kursas 2
   course3_name: Kursas 3
   course4_name: Kursas 4
+  accelerated_name: Pagreitintas kursas
   20-hour_name: Pagreitintas kursas
   classicmaze_name: Klasikinis labirintas
   iceage_name: Ledynmetis
   minecraft_name: Minecraft
-  math_category_name: Matematika
-  hoc_category_name: "„Programavimo valanda“"
   applab_name: App Lab
   gamelab_name: Žaidimų laboratorija
   basketball_name: Sukurk kreipšinio žaidimą

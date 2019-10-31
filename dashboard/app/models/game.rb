@@ -54,6 +54,7 @@ class Game < ActiveRecord::Base
   SCRATCH = 'scratch'.freeze
   DANCE = 'dance'.freeze
   SPRITELAB = 'spritelab'.freeze
+  FISH = 'fish'.freeze
 
   def self.bounce
     @@game_bounce ||= find_by_name("Bounce")
@@ -161,6 +162,10 @@ class Game < ActiveRecord::Base
 
   def self.spritelab
     @@game_spritelab ||= find_by_name('Spritelab')
+  end
+
+  def self.fish
+    @@game_fish ||= find_by_name('Fish')
   end
 
   def unplugged?
@@ -294,8 +299,9 @@ class Game < ActiveRecord::Base
     CustomFlappy:flappy
     Scratch:scratch
     Dance:dance
-    Spritelab:gamelab
+    Spritelab:spritelab
     BubbleChoice:bubble_choice
+    Fish:fish
   )
 
   def self.setup

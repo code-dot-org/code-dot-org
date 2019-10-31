@@ -8,16 +8,16 @@ After students have gotten comfortable working with Event-Based programming and 
 
 ## The requirements for apps are: 
 
-- The app must have some kind of purpose.
-- The app will have **at least 4 screens**.
- - *Students should be comfortable using events to navigate between screens.*
-- The app should include **text, images, and buttons** (and optionally sound).
- - *Students will have the opportunity to include multiple events and have them react in different ways through the inclusion of multiple design elements.*
-- **No “getting stuck” on a screen.**  It should always be possible to navigate from a screen in the app to some other screen.  The user should also be able to “get back to the start” somehow.
- - *As students begin to make more complicated apps, it is important that they think about their projects in an organized way and plan for a user to want to respond in multiple ways.
-- The program code should follow good style, particularly by giving UI elements **descriptive and meaningful IDs**.
- - *Again, because programs increase in complexity it is important to start good habits at an early stage so that students continue these conventions when the code becomes more difficult to follow.
-- The user interface should be **intuitive to use**.
+* The app must have some kind of purpose.
+* The app will have **at least 4 screens**.
+	* *Students should be comfortable using events to navigate between screens.*
+* The app should include **text, images, and buttons** (and optionally sound).
+ 	* Students will have the opportunity to include multiple events and have them react in different ways through the inclusion of multiple design elements.*
+* **No “getting stuck” on a screen.**  It should always be possible to navigate from a screen in the app to some other screen.  The user should also be able to “get back to the start” somehow.
+	* *As students begin to make more complicated apps, it is important that they think about their projects in an organized way and plan for a user to want to respond in multiple ways.*
+* The program code should follow good style, particularly by giving UI elements **descriptive and meaningful IDs**.
+	* *Again, because programs increase in complexity it is important to start good habits at an early stage so that students continue these conventions when the code becomes more difficult to follow.*
+* The user interface should be **intuitive to use**.
 
 
 MARKDOWN

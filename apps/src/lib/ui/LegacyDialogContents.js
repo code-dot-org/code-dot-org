@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import i18n from '@cdo/locale';
 import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
-import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 export const SingleLevelGroupDialog = ({id, title, body}) => (
   <ProtectedStatefulDiv id={id}>
@@ -141,7 +141,7 @@ export const InstructionsDialog = ({title, markdown}) => (
       <p className="dialog-title">{title}</p>
       <p />
       <div className="instructions-markdown scrollable-element">
-        <UnsafeRenderedMarkdown markdown={markdown} />
+        <SafeMarkdown markdown={markdown} />
       </div>
       <div id="buttons">
         <button type="button" id="ok-button" style={{float: 'right'}}>

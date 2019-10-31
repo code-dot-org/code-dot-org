@@ -53,9 +53,9 @@ describe('UsPhoneNumberInput', () => {
       usPhoneNumberInput.setProps({onChange});
 
       sendText('xxx(123');
-      expect(onChange).inOrder.to.be.calledWith({phone: '1'});
-      expect(onChange).subsequently.to.be.calledWith({phone: '12'});
-      expect(onChange).subsequently.to.be.calledWith({phone: '123'});
+      expect(onChange.calledWith({phone: '1'})).to.be.true;
+      expect(onChange.calledWith({phone: '12'})).to.be.true;
+      expect(onChange.calledWith({phone: '123'})).to.be.true;
     });
   });
 

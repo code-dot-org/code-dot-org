@@ -68,7 +68,7 @@ const turnRight90 = constants.turnRight90;
 const turnLeft90 = constants.turnLeft90;
 
 import {TestResults, ResultType, KeyCodes, SVG_NS} from '../constants';
-import {SignInState} from '../code-studio/progressRedux';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 
 // Whether we are showing debug information
 var showDebugInfo = false;
@@ -3036,7 +3036,7 @@ Studio.displayFeedback = function() {
   if (!Studio.waitingForReport) {
     const saveToProjectGallery = PUBLISHABLE_SKINS.includes(skin.id);
     const isSignedIn =
-      getStore().getState().progress.signInState === SignInState.SignedIn;
+      getStore().getState().currentUser.signInState === SignInState.SignedIn;
 
     studioApp().displayFeedback({
       feedbackType: Studio.testResults,
@@ -5511,7 +5511,7 @@ Studio.setMap = function(opts) {
   // Use the actual map for collisions, rendering, etc.
   Studio.wallMap = useMap;
   Studio.wallMapCollisions = true;
-  Studio.walls.setWallMapRequested(useMap);
+  Studio.walls.setWallMapRequested(mapValue);
 
   // Remember the requested name so that we can reuse it next time the
   // background is changed.

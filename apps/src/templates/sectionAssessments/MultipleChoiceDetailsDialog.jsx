@@ -13,7 +13,7 @@ import {
 import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import MultipleChoiceByQuestionTable from './MultipleChoiceByQuestionTable';
-import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 const styles = {
   dialog: {
@@ -69,7 +69,7 @@ class MultipleChoiceDetailsDialog extends Component {
           <div>
             <h2>{i18n.questionDetails()}</h2>
             <div style={styles.instructions}>
-              <UnsafeRenderedMarkdown markdown={questionAndAnswers.question} />
+              <SafeMarkdown markdown={questionAndAnswers.question} />
             </div>
             {questionAndAnswers.answers &&
               questionAndAnswers.answers.length > 0 && (
@@ -88,7 +88,7 @@ class MultipleChoiceDetailsDialog extends Component {
                         </div>
                         <div style={styles.answerLetter}>{answer.letter}</div>
                         <div style={styles.answers} />
-                        <UnsafeRenderedMarkdown markdown={answer.text} />
+                        <SafeMarkdown markdown={answer.text} />
                         <div style={{clear: 'both'}} />
                       </div>
                     );

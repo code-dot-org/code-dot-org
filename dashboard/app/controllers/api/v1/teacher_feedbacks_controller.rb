@@ -35,30 +35,21 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
     render json: @level_feedbacks, each_serializer: Api::V1::TeacherFeedbackSerializer
   end
 
-  # Use student_id to lookup feedback from any teacher who has provided feedback to that
-  # student on any level
-  def index
-    # Setting CSRF token header allows us to access the token manually in subsequent POST requests.
-    headers['csrf-token'] = form_authenticity_token
-
-    @all_feedbacks = TeacherFeedback.where(
-      student_id: params.require(:student_id)
-    )
-
-    render json: @all_feedbacks, each_serializer: Api::V1::TeacherFeedbackSerializer
-  end
-
-  # Use student_id to determine how many feedback entries from any teacher
-  # for any level are associated with the given student
+  # Determine how many not yet seen feedback entries from any verified teacher
+  # for any level are associated with the current user
   def count
     # Setting CSRF token header allows us to access the token manually in subsequent POST requests.
     headers['csrf-token'] = form_authenticity_token
 
-    @all_feedbacks_count = TeacherFeedback.where(
-      student_id: params.require(:student_id)
-    ).length
+    @all_unseen_feedbacks = TeacherFeedback.where(
+      student_id: current_user.id,
+      seen_on_feedback_page_at: nil,
+      student_first_visited_at: nil
+    ).select do |feedback|
+      User.find(feedback.teacher_id).authorized_teacher?
+    end
 
-    render json: @all_feedbacks_count, each_serializer: Api::V1::TeacherFeedbackSerializer
+    render json: @all_unseen_feedbacks.count, each_serializer: Api::V1::TeacherFeedbackSerializer
   end
 
   # POST /teacher_feedbacks
@@ -87,6 +78,6 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def teacher_feedback_params
-    params.require(:teacher_feedback).permit(:student_id, :level_id, :comment, :teacher_id, :performance)
+    params.require(:teacher_feedback).permit(:student_id, :level_id, :script_level_id, :comment, :teacher_id, :performance)
   end
 end

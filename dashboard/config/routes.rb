@@ -1,6 +1,9 @@
 # For documentation see, e.g., http://guides.rubyonrails.org/routing.html.
 
 Dashboard::Application.routes.draw do
+  # Override Error Codes
+  get "404", to: "application#render_404", via: :all
+
   # React-router will handle sub-routes on the client.
   get 'teacher_dashboard/sections/:section_id/*path', to: 'teacher_dashboard#show', via: :all
   get 'teacher_dashboard/sections/:section_id', to: 'teacher_dashboard#show'
@@ -17,7 +20,6 @@ Dashboard::Application.routes.draw do
 
   get '/terms-and-privacy', to: 'home#terms_and_privacy'
   get '/dashboardapi/terms-and-privacy', to: "home#terms_and_privacy"
-  get '/dashboardapi/teacher-announcements', to: "home#teacher_announcements"
   get '/dashboardapi/hoc-courses-teacher-guides', to: "home#hoc_courses_teacher_guides"
   get '/dashboardapi/hoc-courses-challenge', to: "home#hoc_courses_challenge"
 
@@ -222,15 +224,25 @@ Dashboard::Application.routes.draw do
   resources :libraries
 
   resources :levels do
-    get 'get_rubric', to: 'levels#get_rubric'
-    get 'edit_blocks/:type', to: 'levels#edit_blocks', as: 'edit_blocks'
-    get 'embed_level', to: 'levels#embed_level', as: 'embed_level'
-    post 'update_blocks/:type', to: 'levels#update_blocks', as: 'update_blocks'
-    post 'update_properties'
-    post 'clone', to: 'levels#clone'
+    member do
+      get 'get_rubric'
+      get 'embed_level'
+      get 'edit_blocks/:type', to: 'levels#edit_blocks', as: 'edit_blocks'
+      post 'update_properties'
+      post 'update_blocks/:type', to: 'levels#update_blocks', as: 'update_blocks'
+      post 'clone'
+    end
   end
 
   post 'level_assets/upload', to: 'level_assets#upload'
+
+  resources :level_starter_assets, only: [:show], param: 'level_name', constraints: {level_name: /[^\/]+/} do
+    member do
+      get '/:filename', to: 'level_starter_assets#file'
+      post '', to: 'level_starter_assets#upload'
+      delete '/:filename', to: 'level_starter_assets#destroy'
+    end
+  end
 
   resources :scripts, path: '/s/' do
     # /s/xxx/reset
@@ -285,9 +297,6 @@ Dashboard::Application.routes.draw do
 
   get '/weblab/host', to: 'weblab_host#index'
 
-  resources :followers, only: [:create]
-  post '/followers/remove', to: 'followers#remove', as: 'remove_follower'
-
   get '/join(/:section_code)', to: 'followers#student_user_new', as: 'student_user_new'
   post '/join(/:section_code)', to: 'followers#student_register', as: 'student_register'
 
@@ -316,6 +325,7 @@ Dashboard::Application.routes.draw do
   get '/admin/lookup_section', to: 'admin_search#lookup_section', as: 'lookup_section'
   post '/admin/lookup_section', to: 'admin_search#lookup_section'
   post '/admin/undelete_section', to: 'admin_search#undelete_section', as: 'undelete_section'
+  get '/admin/pilots/:pilot_name', to: 'admin_search#show_pilot', as: 'show_pilot'
 
   # internal engineering dashboards
   get '/admin/dynamic_config', to: 'dynamic_config#show', as: 'dynamic_config_state'
@@ -388,6 +398,7 @@ Dashboard::Application.routes.draw do
           post :end
           post :reopen
           get  :summary
+          get  :potential_organizers
         end
         resources :enrollments, controller: 'workshop_enrollments', only: [:index, :destroy, :create]
 
@@ -412,9 +423,7 @@ Dashboard::Application.routes.draw do
       get 'workshop_organizer_survey_report_for_course/:course', action: :index, controller: 'workshop_organizer_survey_report'
       delete 'enrollments/:enrollment_code', action: 'cancel', controller: 'workshop_enrollments'
       post 'enrollment/:enrollment_id/scholarship_info', action: 'update_scholarship_info', controller: 'workshop_enrollments'
-
-      get :teacher_applications, to: 'teacher_applications#index'
-      post :teacher_applications, to: 'teacher_applications#create'
+      post 'enrollments/move', action: 'move', controller: 'workshop_enrollments'
 
       # persistent namespace for FiT Weekend registrations, can be updated/replaced each year
       post 'fit_weekend_registrations', to: 'fit_weekend_registrations#create'
@@ -463,16 +472,6 @@ Dashboard::Application.routes.draw do
     get 'workshop_dashboard/*path', to: 'workshop_dashboard#index'
     get 'workshop_dashboard', to: 'workshop_dashboard#index'
 
-    get 'teacher_application', to: 'teacher_application#new'
-    get 'teacher_application/international_teachers', to: 'teacher_application#international_teachers'
-    get 'teacher_application/thanks', to: 'teacher_application#thanks'
-    get 'teacher_application/manage', to: 'teacher_application#manage'
-    get 'teacher_application/manage/:teacher_application_id', to: 'teacher_application#edit'
-    patch 'teacher_application/manage/:teacher_application_id', to: 'teacher_application#update'
-    post 'teacher_application/manage/:teacher_application_id/upgrade_to_teacher', to: 'teacher_application#upgrade_to_teacher'
-    get 'teacher_application/manage/:teacher_application_id/email', to: 'teacher_application#construct_email'
-    post 'teacher_application/manage/:teacher_application_id/email', to: 'teacher_application#send_email'
-
     get 'misc_survey/thanks', to: 'misc_survey#thanks'
     get 'misc_survey/:form_tag', to: 'misc_survey#new'
     post 'misc_survey/submit', to: 'misc_survey#submit'
@@ -507,14 +506,9 @@ Dashboard::Application.routes.draw do
     get 'workshop_enrollment/:code/thanks', action: 'thanks', controller: 'workshop_enrollment'
     get 'workshop_enrollment/:code/cancel', action: 'cancel', controller: 'workshop_enrollment'
 
-    get 'workshop_materials/:enrollment_code', action: 'new', controller: 'workshop_material_orders'
-    post 'workshop_materials/:enrollment_code', action: 'create', controller: 'workshop_material_orders'
-    get 'workshop_materials', action: 'admin_index', controller: 'workshop_material_orders'
-
     get 'pre_workshop_survey/:enrollment_code', action: 'new', controller: 'pre_workshop_survey', as: 'new_pre_workshop_survey'
     get 'teachercon_survey/:enrollment_code', action: 'new', controller: 'teachercon_survey', as: 'new_teachercon_survey'
 
-    get 'generate_csf_certificate/:enrollment_code', controller: 'csf_certificate', action: 'generate_certificate'
     get 'generate_workshop_certificate/:enrollment_code', controller: 'workshop_certificate', action: 'generate_certificate'
 
     get 'attend/:session_code', controller: 'session_attendance', action: 'attend'
@@ -603,6 +597,7 @@ Dashboard::Application.routes.draw do
       get 'users/:user_id/using_text_mode', to: 'users#get_using_text_mode'
       get 'users/:user_id/contact_details', to: 'users#get_contact_details'
       get 'users/:user_id/school_name', to: 'users#get_school_name'
+      get 'users/:user_id/school_donor_name', to: 'users#get_school_donor_name'
 
       patch 'user_school_infos/:id/update_last_confirmation_date', to: 'user_school_infos#update_last_confirmation_date'
 
@@ -612,6 +607,7 @@ Dashboard::Application.routes.draw do
 
       post 'users/:user_id/postpone_census_banner', to: 'users#postpone_census_banner'
       post 'users/:user_id/dismiss_census_banner', to: 'users#dismiss_census_banner'
+      post 'users/:user_id/dismiss_donor_teacher_banner', to: 'users#dismiss_donor_teacher_banner'
 
       get 'school-districts/:state', to: 'school_districts#index', defaults: {format: 'json'}
       get 'schools/:school_district_id/:school_type', to: 'schools#index', defaults: {format: 'json'}
@@ -619,6 +615,7 @@ Dashboard::Application.routes.draw do
       get 'regional_partners/:school_district_id/:course', to: 'regional_partners#for_school_district_and_course', defaults: {format: 'json'}
       get 'regional_partners', to: 'regional_partners#index', defaults: {format: 'json'}
       get 'regional_partners/capacity', to: 'regional_partners#capacity'
+      get 'regional_partners/enrolled', to: 'regional_partners#enrolled'
 
       get 'projects/gallery/public/:project_type/:limit(/:published_before)', to: 'projects/public_gallery#index', defaults: {format: 'json'}
 
@@ -645,7 +642,11 @@ Dashboard::Application.routes.draw do
     end
   end
 
+  resources :feedback, controller: 'teacher_feedbacks'
+
   get '/dashboardapi/v1/users/:user_id/contact_details', to: 'api/v1/users#get_contact_details'
+  get '/dashboardapi/v1/users/:user_id/donor_teacher_banner_details', to: 'api/v1/users#get_donor_teacher_banner_details'
+  get '/dashboardapi/v1/users/:user_id/school_donor_name', to: 'api/v1/users#get_school_donor_name'
   post '/dashboardapi/v1/users/accept_data_transfer_agreement', to: 'api/v1/users#accept_data_transfer_agreement'
   get '/dashboardapi/v1/school-districts/:state', to: 'api/v1/school_districts#index', defaults: {format: 'json'}
   get '/dashboardapi/v1/schools/:school_district_id/:school_type', to: 'api/v1/schools#index', defaults: {format: 'json'}
@@ -653,6 +654,9 @@ Dashboard::Application.routes.draw do
 
   # Routes used by census
   post '/dashboardapi/v1/census/:form_version', to: 'api/v1/census/census#create', defaults: {format: 'json'}
+
+  # Routes used by donor teacher banner
+  post '/dashboardapi/v1/users/:user_id/dismiss_donor_teacher_banner', to: 'api/v1/users#dismiss_donor_teacher_banner'
 
   # We want to allow searchs with dots, for instance "St. Paul", so we specify
   # the constraint on :q to match anything but a slash.

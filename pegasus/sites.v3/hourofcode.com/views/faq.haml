@@ -57,7 +57,7 @@
 %div= hoc_s(:hoc_faq_count_hoc_a).gsub(/%{codeorg_url}\/?/, codeorg_url('/'))
 
 %h2= hoc_s(:hoc_faq_map_q)
-%div= hoc_s(:hoc_faq_map_a)
+%div= hoc_s(:hoc_faq_map_a).gsub(/%{events_url}/, resolve_url('/events'))
 
 %h2= hoc_s(:hoc_faq_one_hour_q)
 %div= hoc_s(:hoc_faq_one_hour_a)

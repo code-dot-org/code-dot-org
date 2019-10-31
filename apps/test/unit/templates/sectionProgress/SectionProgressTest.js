@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/deprecatedChai';
 import {UnconnectedSectionProgress} from '@cdo/apps/templates/sectionProgress/SectionProgress';
 import {ViewType} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 
@@ -37,7 +37,8 @@ describe('SectionProgress', () => {
         ],
         excludeCsfColumnInLegend: true
       },
-      isLoadingProgress: false
+      isLoadingProgress: false,
+      scriptFriendlyName: 'My Script'
     };
   });
 
@@ -51,14 +52,6 @@ describe('SectionProgress', () => {
   it('done loading data does not show loading icon', () => {
     const wrapper = shallow(<UnconnectedSectionProgress {...DEFAULT_PROPS} />);
     expect(wrapper.find('#uitest-spinner').exists()).to.be.false;
-  });
-
-  it('shows viewCourse link with section id', () => {
-    const wrapper = shallow(<UnconnectedSectionProgress {...DEFAULT_PROPS} />);
-    const backLink = wrapper.find(
-      'SmallChevronLink[link="/scripts/myscript?section_id=2"]'
-    );
-    expect(backLink.exists()).to.be.true;
   });
 
   it('summary view shows summary view and legend', () => {

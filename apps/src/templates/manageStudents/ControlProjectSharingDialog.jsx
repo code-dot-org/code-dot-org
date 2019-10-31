@@ -6,7 +6,7 @@ import Button from '../Button';
 import i18n from '@cdo/locale';
 import BaseDialog from '../BaseDialog';
 import DialogFooter from '../teacherDashboard/DialogFooter';
-import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 const styles = {
   dialog: {
@@ -44,9 +44,7 @@ class ControlProjectSharingDialog extends Component {
         >
           <h2>{i18n.projectSharingDialogHeader()}</h2>
           <div>
-            <UnsafeRenderedMarkdown
-              markdown={i18n.projectSharingDialogInstructions()}
-            />
+            <SafeMarkdown markdown={i18n.projectSharingDialogInstructions()} />
           </div>
           <DialogFooter>
             <Button

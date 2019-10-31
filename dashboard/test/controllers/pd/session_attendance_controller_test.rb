@@ -4,7 +4,7 @@ class Pd::SessionAttendanceControllerTest < ::ActionController::TestCase
 
   self.use_transactional_test_case = true
   setup_all do
-    @workshop = create :pd_workshop, num_sessions: 1
+    @workshop = create :workshop, num_sessions: 1
     @workshop.start!
     @session = @workshop.sessions.first
 

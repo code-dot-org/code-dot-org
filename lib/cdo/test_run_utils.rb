@@ -49,6 +49,17 @@ module TestRunUtils
   def self.run_pegasus_tests
     Dir.chdir(pegasus_dir) do
       ChatClient.wrap('pegasus tests') do
+        # Make sure the pegasus database is created before running pegasus
+        # tests. This might be pegasus_test (on development machines) or
+        # pegasus_unittest (during ci on the test machine).
+        #
+        # This does not enforce that all migrations have been applied.
+        # Strangely, during our CI process, this is taken care of by the
+        # prepare_dbs step in shared/rake/test.rake which works because shared
+        # tests run before pegasus tests.
+        with_rack_env(:test) do
+          RakeUtils.rake_stream_output 'db:ensure_created'
+        end
         RakeUtils.rake_stream_output 'test'
       end
     end

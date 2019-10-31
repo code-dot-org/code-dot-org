@@ -102,7 +102,6 @@ class DeleteAccountsHelper
     @log.puts "Cleaning PD content"
     application_ids = Pd::Application::ApplicationBase.with_deleted.where(user_id: user_id).pluck(:id)
     pd_enrollment_ids = Pd::Enrollment.with_deleted.where(user_id: user_id).pluck(:id)
-    workshop_material_order_ids = Pd::WorkshopMaterialOrder.where(user_id: user_id).pluck(:id)
 
     # Two different paths to anonymizing attendance records
     Pd::Attendance.with_deleted.where(teacher_id: user_id).update_all(teacher_id: nil, deleted_at: Time.now)
@@ -111,9 +110,18 @@ class DeleteAccountsHelper
     Pd::FacilitatorProgramRegistration.where(user_id: user_id).update_all(form_data: '{}')
     Pd::RegionalPartnerProgramRegistration.where(user_id: user_id).update_all(form_data: '{}', teachercon: 0)
     Pd::Teachercon1819Registration.where(user_id: user_id).update_all(form_data: '{}', user_id: nil)
-    Pd::TeacherApplication.where(user_id: user_id).update_all(primary_email: '', secondary_email: '', application: '')
     Pd::RegionalPartnerContact.where(user_id: user_id).update_all(form_data: '{}')
 
+    # SQL query to anonymize Pd::TeacherApplication (2017-18 application) because the model no longer exists
+    ActiveRecord::Base.connection.exec_query(
+      <<-SQL
+        UPDATE `pd_teacher_applications`
+        SET `pd_teacher_applications`.`primary_email` = '',
+          `pd_teacher_applications`.`secondary_email` = '',
+          `pd_teacher_applications`.`application` = ''
+        WHERE `pd_teacher_applications`.`user_id` = #{user_id}
+      SQL
+    )
     # Peer reviews might be associated with a purged submitter or viewer
     PeerReview.where(submitter_id: user_id).update_all(submitter_id: nil, audit_trail: nil)
     PeerReview.where(reviewer_id: user_id).update_all(reviewer_id: nil, data: nil, audit_trail: nil)
@@ -128,23 +136,10 @@ class DeleteAccountsHelper
     end
 
     unless pd_enrollment_ids.empty?
-      workshop_material_order_ids += Pd::WorkshopMaterialOrder.where(pd_enrollment_id: pd_enrollment_ids).pluck(:id)
       Pd::PreWorkshopSurvey.where(pd_enrollment_id: pd_enrollment_ids).update_all(form_data: '{}')
       Pd::WorkshopSurvey.where(pd_enrollment_id: pd_enrollment_ids).update_all(form_data: '{}')
       Pd::TeacherconSurvey.where(pd_enrollment_id: pd_enrollment_ids).update_all(form_data: '{}')
       Pd::Enrollment.with_deleted.where(id: pd_enrollment_ids).each(&:clear_data)
-    end
-
-    unless workshop_material_order_ids.empty?
-      Pd::WorkshopMaterialOrder.where(id: workshop_material_order_ids).update_all(
-        school_or_company: nil,
-        street: '',
-        apartment_or_suite: nil,
-        city: '',
-        state: '',
-        zip_code: '',
-        phone_number: ''
-      )
     end
   end
 
@@ -277,8 +272,6 @@ class DeleteAccountsHelper
       'Automated purging of accounts with WORKSHOP_ORGANIZER permission is not supported at this time.'
     assert_constraint !user.program_manager?,
       'Automated purging of accounts with PROGRAM_MANAGER permission is not supported at this time.'
-    assert_constraint RegionalPartner.with_deleted.where(contact_id: user.id).empty?,
-      'Automated purging of an account listed as the contact for a regional partner is not supported at this time.'
     assert_constraint RegionalPartnerProgramManager.where(program_manager_id: user.id).empty?,
       'Automated purging of an account listed as a program manager for a regional partner is not supported at this time.'
   end

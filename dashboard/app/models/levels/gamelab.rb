@@ -8,7 +8,7 @@
 #  created_at            :datetime
 #  updated_at            :datetime
 #  level_num             :string(255)
-#  ideal_level_source_id :integer
+#  ideal_level_source_id :integer          unsigned
 #  user_id               :integer
 #  properties            :text(65535)
 #  type                  :string(255)
@@ -46,6 +46,7 @@ class Gamelab < Blockly
     start_animations
     validation_code
     helper_libraries
+    start_libraries
   )
 
   # List of possible skins, the first is used as a default.

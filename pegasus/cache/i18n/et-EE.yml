@@ -843,13 +843,12 @@ et-EE:
   course2_name: Kursus 2
   course3_name: Kursus 3
   course4_name: Kursus 4
+  accelerated_name: Kiirendatud kursus
   20-hour_name: Kiirendatud kursus
   classicmaze_name: Klassikaline labürint
   iceage_name: Jääaeg
   minecraft_name: Minecraft
   starwarsblocks_name: Star Wars (plokid)
-  math_category_name: Matemaatika
-  hoc_category_name: KoodiTund
   applab_name: App Lab
   gamelab_name: Game Lab
   basketball_name: Tee korvpallimäng
@@ -1482,6 +1481,10 @@ et-EE:
     oma veebilehitseja<a href='%{supported_browsers_url}', target='_blank'>ühe veebilehitsejaga,
     mida me toetame</a>. Võite proovida veebilehte vaadata, kuid selle toimimine võib
     olla häiritud.
+  compatibility_unsupported_browser_markdown: Sinu veebilehitsejat ei toetata. Palun
+    asenda oma veebilehitseja<a href='%{supported_browsers_url}', target='_blank'>ühe
+    veebilehitsejaga, mida me toetame</a>. Võite proovida veebilehte vaadata, kuid
+    selle toimimine võib olla häiritud.
   starwars_shortcode: star
   mc_shortcode: mc
   flappy_shortcode: laksuta tiibu

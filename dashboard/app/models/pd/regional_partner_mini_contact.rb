@@ -18,7 +18,7 @@
 class Pd::RegionalPartnerMiniContact < ApplicationRecord
   include Pd::Form
 
-  UNMATCHED_FORM_EMAIL = 'anthonette@code.org'
+  UNMATCHED_FORM_EMAIL = 'liz.gauthier@code.org'
 
   belongs_to :user
   belongs_to :regional_partner

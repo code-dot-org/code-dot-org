@@ -82,6 +82,11 @@ class SchoolInfo < ActiveRecord::Base
   # Only sync from school on create to avoid unintended updates to old data
   before_validation :sync_from_schools, on: :create
 
+  # Set SchoolInfo to read-only.  readonly method overrides the default ActiveRecord::Core#readonly?
+  def readonly?
+    !new_record?
+  end
+
   def sync_from_schools
     # If a SchoolInfo is linked to a School then the SchoolInfo pulls its data from the School
     # It seems like there is some code that is passing in mismatched data at times.

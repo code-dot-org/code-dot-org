@@ -1,7 +1,7 @@
 class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
   include Api::CsvDownload
   include ::Pd::WorkshopConstants
-  load_and_authorize_resource :workshop, class: 'Pd::Workshop', except: ['create', 'cancel']
+  load_and_authorize_resource :workshop, class: 'Pd::Workshop', except: ['create', 'cancel', 'move']
 
   before_action :authorize_update_scholarship_info!, only: 'update_scholarship_info'
   def authorize_update_scholarship_info!
@@ -100,6 +100,16 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
     enrollment.destroy!
     Pd::WorkshopMailer.teacher_cancel_receipt(enrollment).deliver_now
     Pd::WorkshopMailer.organizer_cancel_receipt(enrollment).deliver_now
+  end
+
+  # POST /api/v1/pd/enrollments/move
+  def move
+    return head :forbidden unless current_user.workshop_admin?
+    Pd::Enrollment.transaction do
+      enrollments = Pd::Enrollment.where(id: params[:enrollment_ids])
+      Pd::Attendance.where(pd_enrollment_id: enrollments).delete_all
+      enrollments.each {|e| e.update!(pd_workshop_id: params[:destination_workshop_id])}
+    end
   end
 
   private

@@ -74,7 +74,7 @@ namespace :circle do
   end
 
   desc 'Runs UI tests only if the tag specified is present in the most recent commit message.'
-  task run_ui_tests: [:recompile_assets] do
+  task :run_ui_tests do
     unless CircleUtils.ui_test_container?
       ChatClient.log "Wrong container, skipping"
       next
@@ -95,9 +95,9 @@ namespace :circle do
     use_saucelabs = !ui_test_browsers.empty?
     if use_saucelabs || test_eyes?
       start_sauce_connect
-      RakeUtils.system_stream_output 'until $(curl --output /dev/null --silent --head --fail http://localhost:4445); do sleep 5; done'
+      RakeUtils.wait_for_url('http://localhost:4445')
     end
-    RakeUtils.system_stream_output 'until $(curl --output /dev/null --silent --head --fail http://localhost-studio.code.org:3000); do sleep 5; done'
+    RakeUtils.wait_for_url('http://localhost-studio.code.org:3000')
     Dir.chdir('dashboard/test/ui') do
       container_features = `find ./features -name '*.feature' | sort`.split("\n").map {|f| f[2..-1]}
       eyes_features = `grep -lr '@eyes' features`.split("\n")
@@ -161,19 +161,6 @@ namespace :circle do
 
     Dir.chdir('dashboard') do
       RakeUtils.rake_stream_output 'seed:cached_ui_test'
-    end
-  end
-
-  desc 'Rebuild dashboard assets with updated locals.yml settings before running UI tests'
-  task :recompile_assets do
-    if CircleUtils.tagged?(SKIP_UI_TESTS_TAG)
-      ChatClient.log "Commit message: '#{CircleUtils.circle_commit_message}' contains [#{SKIP_UI_TESTS_TAG}], skipping UI tests for this run."
-      next
-    end
-
-    system 'rm', '-rf', dashboard_dir('tmp', 'cache', 'assets')
-    Dir.chdir(dashboard_dir) do
-      RakeUtils.rake 'assets:precompile'
     end
   end
 end

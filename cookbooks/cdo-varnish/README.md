@@ -2,12 +2,12 @@
 Installs and configures Varnish HTTP cache.
 
 ## Requirements
-Ubuntu 14.04
+Ubuntu 18.04
 
 #### apt packages installed (from PPA)
 - `varnish`
-- `libvmod-cookie`
-- `libvmod-header`
+- `varnish-modules`
+- `libvmod-accept` (built from source)
 
 ## Attributes
 `node['cdo-varnish']['cookie_headers']`: Map of [cookie key] => [HTTP header] extractions.

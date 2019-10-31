@@ -26,6 +26,8 @@ ami = commit[0..4]
 frontends = @frontends = rack_env?(:production) || ENV['FRONTENDS']
 database = @database = [:staging, :test, :levelbuilder].include?(rack_env) || ENV['DATABASE']
 load_balancer = @load_balancer = !rack_env?(:adhoc) || ENV['FRONTENDS']
+alarms = @alarms = !rack_env?(:adhoc) || ENV['ALARMS']
+chef_version = '15.2.20'
 
 unless dry_run
   update_certs.call unless load_balancer
@@ -42,10 +44,10 @@ self.log_resource_filter.push 'FrontendLaunchConfig', 'ASGCount'
 # TODO migrate stacks to cloudformation-provisioned instances.
 if %w(autoscale-prod test staging levelbuilder).include? stack_name
   self.daemon_instance_id = {
-    'autoscale-prod' => 'i-436d69dd',
-    'test' => 'i-f85e6666',
-    'staging' => 'i-57a3afc7',
-    'levelbuilder' => 'i-03a540ccf70cc8138'
+    'autoscale-prod' => 'i-08f5f8ace0a473b8d',
+    'test' => 'i-004727200191f3251',
+    'staging' => 'i-02e6cdc765421ab34',
+    'levelbuilder' => 'i-0907b146f7e6503f6'
   }[stack_name]
 else
   self.daemon = 'Daemon'
@@ -79,16 +81,17 @@ Resources:
       PolicyDocument:
         Version: 2012-10-17
         Statement:
-<% if database -%>
           # Read-only access to current secrets.
           - Effect: Allow
             Action: 'secretsmanager:GetSecretValue'
             Resource:
+              - !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:<%=environment%>/cdo/*"
+<% if database -%>
               - !Ref DatabaseSecret
+<% end -%>
             Condition:
               StringEquals:
                 secretsmanager:VersionStage: AWSCURRENT
-<% end -%>
           # Read-only access to bootstrap scripts.
           - Effect: Allow
             Action: 's3:GetObject'
@@ -132,15 +135,17 @@ Resources:
           - Effect: Allow
             Action: 'firehose:PutRecord'
             Resource: !Sub "arn:aws:firehose:${AWS::Region}:${AWS::AccountId}:deliverystream/analysis-events"
-          # Send messages to SQS queues for asynchronous processing.
+          # S3 access for student-libraries bucket
           - Effect: Allow
-            Action: 'sqs:SendMessage'
-            Resource:
-<% unless daemon -%>
-              - !GetAtt ActivitiesQueue.Arn
-<% end -%>
-              # TODO: Import pd_workshop resources into stack.
-              - !Sub "arn:aws:sqs:${AWS::Region}:${AWS::AccountId}:pd_workshop-<%=environment%>"
+            Action:
+              - 's3:DeleteObject'
+              - 's3:DeleteObjectVersion'
+              - 's3:GetObject'
+              - 's3:GetObjectVersion'
+              - 's3:PutObject'
+              - 's3:ReplicateObject'
+              - 's3:RestoreObject'
+            Resource: 'arn:aws:s3:::cdo-v3-libraries/libraries_<%=environment%>/*'
           # General s3 access.
           # TODO: Further restrict permissions to grant least privilege.
           - Effect: Allow
@@ -169,7 +174,7 @@ Resources:
     DependsOn: WebServerAMI
     CreationPolicy:
       ResourceSignal:
-        Timeout: PT60M
+        Timeout: PT120M
         Count: 1
   WebServerAMI:
     Type: AWS::EC2::Instance
@@ -195,7 +200,8 @@ Resources:
           ],
           commit: commit,
           shutdown: true,
-          daemon: false
+          daemon: false,
+          chef_version: chef_version
         )%>
   AMI<%=ami%>: <%= lambda_fn.call 'AMIManager',
     DependsOn: "AMICreate#{ami}",
@@ -246,8 +252,8 @@ Resources:
       ConnectionDrainingPolicy:
         Enabled: true
         Timeout: 300
-<%   if !frontends && daemon -%>
-      Instances: [!Ref <%=daemon%>]
+<%   if !frontends && daemon_instance_id -%>
+      Instances: [<%=daemon_instance_id%>]
 <%   end -%>
 <% end -%>
 
@@ -503,23 +509,6 @@ Resources:
       PreferredAvailabilityZones: <%= availability_zones.first(2).to_json %>
       VpcSecurityGroupIds: [!ImportValue VPC-MemcachedSecurityGroup]
 <% end -%>
-<% unless daemon -%>
-  ActivitiesQueue:
-    Type: AWS::SQS::Queue
-    Properties:
-      ReceiveMessageWaitTimeSeconds: 20
-      VisibilityTimeout: 15
-      QueueName: !Sub "activities-${AWS::StackName}"
-      RedrivePolicy:
-        maxReceiveCount: 3
-        deadLetterTargetArn: !GetAtt [ActivitiesDeadQueue, Arn]
-  ActivitiesDeadQueue:
-    Type: AWS::SQS::Queue
-    Properties:
-      ReceiveMessageWaitTimeSeconds: 20
-      VisibilityTimeout: 15
-      QueueName: !Sub "activities_dead-${AWS::StackName}"
-<% end -%>
   DaemonRole:
     Type: AWS::IAM::Role
     Properties:
@@ -528,20 +517,6 @@ Resources:
         - PolicyName: Daemon
           PolicyDocument:
             Statement:
-              # SQS queues for Asynchronous batch processing by the `process_queues` service.
-              - Effect: Allow
-                Action:
-                  - 'sqs:ReceiveMessage'
-                  - 'sqs:DeleteMessageBatch'
-                  - 'sqs:DeleteMessage'
-                Resource:
-<% unless daemon -%>
-                  - !GetAtt ActivitiesQueue.Arn
-                  - !GetAtt ActivitiesDeadQueue.Arn
-<% end -%>
-                  # TODO: Import pd_workshop resources into stack.
-                  - !Sub "arn:aws:sqs:${AWS::Region}:${AWS::AccountId}:pd_workshop-<%=environment%>"
-                  - !Sub "arn:aws:sqs:${AWS::Region}:${AWS::AccountId}:pd_workshop_dead-<%=environment%>"
               # APIs used by ci:flush_cache task.
               - Effect: Allow
                 Action:
@@ -656,7 +631,8 @@ Resources:
           ],
           commit: nil, # track branch
           shutdown: false,
-          daemon: true
+          daemon: true,
+          chef_version: chef_version
         )%>
       NetworkInterfaces:
       - AssociatePublicIpAddress: true
@@ -668,7 +644,11 @@ Resources:
 <%  unless load_balancer -%>
           - !ImportValue VPC-ELBSecurityGroup # Accept HTTP traffic on daemon
 <%  end -%>
+<% if database %>
+    DependsOn: Aurora1
+<% end -%>
 <%end-%>
+<% if alarms %>
   DaemonStorageUtilizationAlarm:
     Type: "AWS::CloudWatch::Alarm"
     Properties:
@@ -709,6 +689,7 @@ Resources:
       Statistic: Maximum
       Threshold: 87
       TreatMissingData: missing
+<% end -%>
 <% if database -%>
   AuroraCluster:
     Type: AWS::RDS::DBCluster
@@ -723,16 +704,17 @@ Resources:
       VpcSecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
       DBSubnetGroupName: !ImportValue VPC-DBSubnetGroup
 
-  AuroraMaster:
+<% 2.times do |i| %>
+  Aurora<%=i%>:
     Type: AWS::RDS::DBInstance
     Properties:
-      DBInstanceIdentifier: !Sub "${AWS::StackName}-master"
+      DBInstanceIdentifier: !Sub "${AWS::StackName}-<%=i%>"
       DBClusterIdentifier: !Ref AuroraCluster
       DBInstanceClass: db.r4.large
       DBSubnetGroupName: !ImportValue VPC-DBSubnetGroup
       Engine: aurora-mysql
-      # We will usually do engine version updates manually, since updating this requires replacement, so this value may be out of sync with instance.
-      EngineVersion: 5.7.12
+      # We will usually do engine version updates manually, so don't specify an EngineVersion for the DBInstance.
+<% end -%>
 
   AuroraClusterDBParameters:
     Type: AWS::RDS::DBClusterParameterGroup

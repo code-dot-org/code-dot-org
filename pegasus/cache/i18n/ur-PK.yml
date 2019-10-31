@@ -5,6 +5,8 @@ ur-PK:
   'yes': جی
   'no': نہيں
   select_language: براہ مہربانی اپنی زبان منتخب کریں
+  upgrade_ie_message: کوڈ ڈاٹ او آر جی جلد ہی انٹرنیٹ ایکسپلورر 8 ، 9 اور 10 کی مدد
+    کو دور کردے گا۔ براہ کرم جدید براؤزر میں اپ گریڈ کریں.
   upgrade_ie_link: مزید سیکھے
   en: کمپیوٹر سائنس
   computer_science_edweek: کمپیوٹر سائنس کا تعلیمی ہفتہ
@@ -350,8 +352,6 @@ ur-PK:
   frozen_name: اینا اور ایلسا کے ساتھ کوڈ
   blockly_name: بلاکلی
   iceage_name: برفانی عہد
-  math_category_name: ریاضی
-  hoc_category_name: آور-آف-کوڈ
   lightbot_gradelevel: Her umer k log
   thinkersmith_gradelevel: Her umer k log
   lightbotintl_gradelevel: Her umer k log

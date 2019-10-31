@@ -236,7 +236,7 @@ module UsersHelper
     unless exclude_level_progress
       user_levels_by_level = user.user_levels_by_level(script)
       paired_user_levels = PairedUserLevel.pairs(user_levels_by_level.values.map(&:id))
-      user_data[:completed] = user.completed?(script)
+      user_data[:completed] = Policies::ScriptActivity.completed?(user, script)
       user_data[:levels] = merge_user_progress_by_level(
         script: script,
         user: user,
@@ -265,7 +265,7 @@ module UsersHelper
       sl.level_ids.each do |level_id|
         # if we have a contained level or BubbleChoice level, use that to represent progress
         level = Level.cache_find(level_id)
-        sublevel_id = sl.bubble_choice? ? level.best_result_sublevel(user)&.id : nil
+        sublevel_id = level.is_a?(BubbleChoice) ? level.best_result_sublevel(user)&.id : nil
         contained_level_id = level.contained_levels.try(:first).try(:id)
 
         ul = user_levels_by_level.try(:[], sublevel_id || contained_level_id || level_id)

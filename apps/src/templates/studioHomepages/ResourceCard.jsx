@@ -5,7 +5,7 @@ import Button from '../Button';
 import color from '../../util/color';
 import {connect} from 'react-redux';
 
-import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 // If you want to include an image, you're probably looking for a ImageResourceCard.
 
@@ -126,7 +126,7 @@ class ResourceCard extends Component {
 
     let descriptionContent = description;
     if (allowMarkdown) {
-      descriptionContent = <UnsafeRenderedMarkdown markdown={description} />;
+      descriptionContent = <SafeMarkdown markdown={description} />;
     }
 
     return (

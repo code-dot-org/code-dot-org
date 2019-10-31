@@ -1,5 +1,6 @@
 /* global appOptions */
 import $ from 'jquery';
+import MD5 from 'crypto-js/md5';
 import msg from '@cdo/locale';
 import * as utils from '../../utils';
 import {CIPHER, ALPHABET} from '../../constants';
@@ -127,7 +128,9 @@ function unpackSources(data) {
     html: data.html,
     animations: data.animations,
     makerAPIsEnabled: data.makerAPIsEnabled,
-    selectedSong: data.selectedSong
+    generatedProperties: data.generatedProperties,
+    selectedSong: data.selectedSong,
+    libraries: data.libraries
   };
 }
 
@@ -162,6 +165,28 @@ var projects = (module.exports = {
       return;
     }
     return current.name;
+  },
+
+  /**
+   * @returns {string} name of the most recently published library from the
+   * project, or undefined if we don't have a current project
+   */
+  getCurrentLibraryName() {
+    if (!current) {
+      return;
+    }
+    return current.libraryName;
+  },
+
+  /**
+   * @returns {string} description of the most recently published library from the
+   * project, or undefined if we don't have a current project
+   */
+  getCurrentLibraryDescription() {
+    if (!current) {
+      return;
+    }
+    return current.libraryDescription;
   },
 
   /**
@@ -263,6 +288,19 @@ var projects = (module.exports = {
    */
   useMakerAPIs() {
     return currentSources.makerAPIsEnabled;
+  },
+
+  /**
+   * Calculates a md5 hash for everything within sources except the
+   * generatedProperties.
+   * @return {string} md5 hash string.
+   */
+  md5CurrentSources() {
+    const {
+      generatedProperties, // eslint-disable-line no-unused-vars
+      ...sourcesWithoutProperties
+    } = currentSources;
+    return MD5(JSON.stringify(sourcesWithoutProperties)).toString();
   },
 
   getCurrentSourceVersionId() {
@@ -493,7 +531,9 @@ var projects = (module.exports = {
     return (
       (appOptions.level && appOptions.level.hideShareAndRemix) ||
       (appOptions.embed &&
-        (appOptions.app === 'applab' || appOptions.app === 'gamelab'))
+        (appOptions.app === 'applab' ||
+          appOptions.app === 'gamelab' ||
+          appOptions.app === 'spritelab'))
     );
   },
 
@@ -504,7 +544,7 @@ var projects = (module.exports = {
     const {hideShareAndRemix} = level;
     return (
       !hideShareAndRemix &&
-      app === 'applab' &&
+      (app === 'applab' || app === 'gamelab') &&
       experiments.isEnabled('exportExpo')
     );
   },
@@ -522,6 +562,20 @@ var projects = (module.exports = {
     if (newName) {
       current.name = newName;
       this.setTitle(newName);
+    }
+  },
+  setLibraryDescription(description, callback) {
+    current = current || {};
+    if (description && current.libraryDescription !== description) {
+      current.libraryDescription = description;
+      this.updateChannels_(callback);
+    }
+  },
+  setLibraryName(newName, callback) {
+    current = current || {};
+    if (newName && current.libraryName !== newName) {
+      current.libraryName = newName;
+      this.updateChannels_(callback);
     }
   },
   setTitle(newName) {
@@ -543,6 +597,8 @@ var projects = (module.exports = {
    * @param {function(): string} sourceHandler.getLevelSource
    * @param {function(SerializedAnimationList)} sourceHandler.setInitialAnimationList
    * @param {function(function(): SerializedAnimationList)} sourceHandler.getAnimationList
+   * @param {function(Object)} sourceHandler.setInitialGeneratedProperties
+   * @param {function(): Object} sourceHandler.getGeneratedProperties
    * @param {function(boolean)} sourceHandler.setMakerAPIsEnabled
    * @param {function(): boolean} sourceHandler.getMakerAPIsEnabled
    * @param {function(): boolean} sourceHandler.setSelectedSong
@@ -570,6 +626,16 @@ var projects = (module.exports = {
 
       if (currentSources.animations) {
         sourceHandler.setInitialAnimationList(currentSources.animations);
+      }
+
+      if (currentSources.libraries) {
+        sourceHandler.setInitialLibrariesList(currentSources.libraries);
+      }
+
+      if (currentSources.generatedProperties) {
+        sourceHandler.setInitialGeneratedProperties(
+          currentSources.generatedProperties
+        );
       }
 
       if (isEditing) {
@@ -652,6 +718,8 @@ var projects = (module.exports = {
         return msg.defaultProjectNameAppLab();
       case 'gamelab':
         return msg.defaultProjectNameGameLab();
+      case 'spritelab':
+        return msg.defaultProjectNameSpriteLab();
       case 'weblab':
         return msg.defaultProjectNameWebLab();
       case 'turtle':
@@ -713,12 +781,9 @@ var projects = (module.exports = {
       case 'flappy':
       case 'scratch':
       case 'weblab':
-        return appOptions.app; // Pass through type exactly
       case 'gamelab':
-        if (appOptions.droplet) {
-          return 'gamelab';
-        }
-        return 'spritelab';
+      case 'spritelab':
+        return appOptions.app; // Pass through type exactly
       case 'turtle':
         if (appOptions.skinId === 'elsa' || appOptions.skinId === 'anna') {
           return 'frozen';
@@ -1071,18 +1136,31 @@ var projects = (module.exports = {
    */
   getUpdatedSourceAndHtml_(callback) {
     this.sourceHandler.getAnimationList(animations =>
-      this.sourceHandler.getLevelSource().then(response => {
-        const source = response;
+      this.sourceHandler.getLevelSource().then(source => {
         const html = this.sourceHandler.getLevelHtml();
         const makerAPIsEnabled = this.sourceHandler.getMakerAPIsEnabled();
         const selectedSong = this.sourceHandler.getSelectedSong();
-        callback({source, html, animations, makerAPIsEnabled, selectedSong});
+        const generatedProperties = this.sourceHandler.getGeneratedProperties();
+        const libraries = this.sourceHandler.getLibrariesList();
+        callback({
+          source,
+          html,
+          animations,
+          makerAPIsEnabled,
+          selectedSong,
+          generatedProperties,
+          libraries
+        });
       })
     );
   },
 
   getSelectedSong() {
     return currentSources.selectedSong;
+  },
+
+  getGeneratedProperties() {
+    return currentSources.generatedProperties;
   },
 
   /**
@@ -1105,6 +1183,40 @@ var projects = (module.exports = {
         );
       });
     });
+  },
+  setProjectLibraries(updatedLibrariesList) {
+    // If we're in start_blocks on levelbuilder, reload is disabled, so we need
+    // to set currentSources so it can be saved when the save button is clicked.
+    currentSources.libraries = updatedLibrariesList;
+    return new Promise(resolve => {
+      this.getUpdatedSourceAndHtml_(sourceAndHtml => {
+        this.saveSourceAndHtml_(
+          {
+            ...sourceAndHtml,
+            libraries: updatedLibrariesList
+          },
+          () => {
+            resolve();
+            utils.reload();
+          }
+        );
+      });
+    });
+  },
+  getProjectLibraries() {
+    let startLibraries = appOptions.level.startLibraries;
+    return (
+      currentSources.libraries || (startLibraries && JSON.parse(startLibraries))
+    );
+  },
+  /**
+   * @returns {string} searches through all data we have on a level to find its
+   * name.
+   */
+  getLevelName() {
+    let name = current && current.name;
+    name = name || appOptions.level.name;
+    return name;
   },
   showSaveError_(errorType, errorCount, errorText) {
     header.showProjectSaveError();
@@ -1283,6 +1395,8 @@ var projects = (module.exports = {
     const queryParams = current.id ? {parent: current.id} : null;
     delete current.id;
     delete current.hidden;
+    delete current.libraryName;
+    delete current.libraryDescription;
     current.projectType = this.getStandaloneApp();
     if (shouldPublish) {
       current.shouldPublish = true;

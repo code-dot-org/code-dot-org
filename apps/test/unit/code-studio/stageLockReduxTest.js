@@ -229,7 +229,7 @@ describe('saveLockDialog', () => {
     newLockStatus[1].lockStatus = LockStatus.ReadonlyAnswers;
     newLockStatus[2].lockStatus = LockStatus.Editable;
 
-    reducerSpy.reset();
+    reducerSpy.resetHistory();
 
     store.dispatch(saveLockDialog(section1Id, newLockStatus));
 
@@ -273,7 +273,7 @@ describe('saveLockDialog', () => {
   it('successfully lockStage without dialog', () => {
     store.dispatch(setSectionLockStatus(fakeSectionData));
 
-    reducerSpy.reset();
+    reducerSpy.resetHistory();
 
     store.dispatch(lockStage(section1Id, stage1Id));
 

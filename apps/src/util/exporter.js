@@ -3,7 +3,8 @@
  */
 
 import $ from 'jquery';
-import {SnackSession} from '@code-dot-org/snack-sdk';
+import {SnackSession} from 'snack-sdk';
+import {buildAsync, cancelBuild} from 'snack-build';
 import project from '@cdo/apps/code-studio/initApp/project';
 import download from '../assetManagement/download';
 import {EXPO_SESSION_SECRET} from '../constants';
@@ -11,6 +12,13 @@ import * as assetPrefix from '../assetManagement/assetPrefix';
 import exportExpoAppJsonEjs from '../templates/export/expo/app.json.ejs';
 import exportExpoPackagedFilesEjs from '../templates/export/expo/packagedFiles.js.ejs';
 import exportExpoPackagedFilesEntryEjs from '../templates/export/expo/packagedFilesEntry.js.ejs';
+
+export const EXPO_SDK_VERSION = '34.0.0';
+export const EXPO_REACT_NATIVE_WEBVIEW_VERSION = '7.2.4';
+
+export const PLATFORM_ANDROID = 'android';
+export const PLATFORM_IOS = 'ios';
+export const DEFAULT_PLATFORM = PLATFORM_ANDROID;
 
 export function createPackageFilesFromZip(zip, appName) {
   const moduleList = [];
@@ -42,21 +50,29 @@ export function createPackageFilesFromExpoFiles(files) {
   return exportExpoPackagedFilesEjs({entries});
 }
 
-export async function generateExpoApk(options, config) {
-  const {appName, expoSnackId, iconUri, splashImageUri} = options;
-  const session = new SnackSession({
+export function createSnackSession(files, expoSession) {
+  return new SnackSession({
     sessionId: `${getEnvironmentPrefix()}-${project.getCurrentId()}`,
+    files,
     name: `project-${project.getCurrentId()}`,
-    sdkVersion: '31.0.0',
-    snackId: expoSnackId,
+    sdkVersion: EXPO_SDK_VERSION,
+    dependencies: {
+      'react-native-webview': {version: EXPO_REACT_NATIVE_WEBVIEW_VERSION}
+    },
     user: {
-      sessionSecret: config.expoSession || EXPO_SESSION_SECRET
+      sessionSecret: expoSession || EXPO_SESSION_SECRET
     }
   });
+}
+
+async function expoBuildOrCheckApk(options, mode, sessionSecret) {
+  const {iconUri, splashImageUri, apkBuildId} = options;
+  const buildMode = mode === 'generate';
 
   const appJson = JSON.parse(
     exportExpoAppJsonEjs({
-      appName,
+      appName: project.getCurrentName() || 'my-app',
+      sdkVersion: EXPO_SDK_VERSION,
       projectId: project.getCurrentId(),
       iconPath: iconUri,
       splashImagePath: splashImageUri
@@ -73,9 +89,141 @@ export async function generateExpoApk(options, config) {
   } = appJson.expo;
   appJson.expo = onlineOnlyExpo;
 
-  const artifactUrl = await session.getApkUrlAsync(appJson);
+  // Expo requires that these additional keys (iconUrl, imageUrl)
+  // are passed when the files are not provided locally
+  appJson.expo.iconUrl = appJson.expo.icon;
+  appJson.expo.splash.imageUrl = appJson.expo.splash.image;
 
-  return artifactUrl;
+  // Starting with SDK 33, the turtle build system requires that
+  // we specify our dependencies here:
+  appJson.expo.dependencies = [
+    'expo',
+    'expo-asset',
+    'expo-file-system',
+    'react-native-webview'
+  ];
+
+  if (buildMode) {
+    return buildApk(sessionSecret, appJson.expo);
+  } else {
+    return checkApk(sessionSecret, appJson.expo, apkBuildId);
+  }
+}
+
+async function buildApk(sessionSecret, manifest) {
+  const result = await buildAsync(manifest, {
+    platform: PLATFORM_ANDROID,
+    mode: 'create',
+    isSnack: true,
+    sdkVersion: EXPO_SDK_VERSION,
+    sessionSecret: sessionSecret || EXPO_SESSION_SECRET
+  });
+  const {id} = result;
+  return id;
+}
+
+async function checkApk(sessionSecret, manifest, apkBuildId) {
+  const result = await buildAsync(manifest, {
+    platform: PLATFORM_ANDROID,
+    mode: 'status',
+    current: false,
+    sessionSecret: sessionSecret || EXPO_SESSION_SECRET
+  });
+  const {jobs = []} = result;
+  const job = jobs.find(job => apkBuildId && job.id === apkBuildId);
+  if (!job) {
+    throw new Error(`Expo build not found: ${apkBuildId}`);
+  }
+  if (job.status === 'finished') {
+    return job.artifactId
+      ? `https://expo.io/artifacts/${job.artifactId}`
+      : job.artifacts.url;
+  } else if (job.status === 'errored') {
+    throw new Error(`Expo build failed: Job status: ${job.status}`);
+  } else {
+    // In-progress, return undefined
+    return;
+  }
+}
+
+/**
+ * Generate Android APK using Expo
+ * @param {string} sessionSecret Expo session secret for snack APIs
+ * @param {function} setAndroidPropsCallback called when ready to update generated Android export props
+ * @param {Object} options
+ * @return {Promise.<string>} APK build id
+ */
+export async function expoGenerateApk(
+  sessionSecret,
+  setAndroidPropsCallback,
+  options
+) {
+  const {md5SavedSources: md5ApkSavedSources, expoSnackId: snackId} = options;
+  const apkBuildId = await expoBuildOrCheckApk(
+    options,
+    'generate',
+    sessionSecret
+  );
+  setAndroidPropsCallback({
+    md5ApkSavedSources,
+    snackId,
+    apkBuildId
+  });
+  return apkBuildId;
+}
+
+/**
+ * Check on Android APK build status using Expo
+ * @param {string} sessionSecret Expo session secret for snack APIs
+ * @param {function} setAndroidPropsCallback called when ready to update generated Android export props
+ * @param {Object} options
+ * @return {Promise.<string>} APK URI (if build has completed)
+ */
+export async function expoCheckApkBuild(
+  sessionSecret,
+  setAndroidPropsCallback,
+  options
+) {
+  const {md5SavedSources: md5ApkSavedSources, expoSnackId: snackId} = options;
+  try {
+    const apkUri = await expoBuildOrCheckApk(options, 'check', sessionSecret);
+    if (apkUri) {
+      const {apkBuildId} = options;
+      setAndroidPropsCallback({
+        md5ApkSavedSources,
+        snackId,
+        apkBuildId,
+        apkUri
+      });
+    }
+    return apkUri;
+  } catch (err) {
+    // Clear any android export props since the build failed:
+    setAndroidPropsCallback({});
+    throw err;
+  }
+}
+
+/**
+ * Cancel Android APK build using Expo
+ * @param {string} sessionSecret Expo session secret for snack APIs
+ * @param {function} setAndroidPropsCallback called when ready to update generated Android export props
+ * @param {Object} options
+ * @return {Promise} GraphQL Request
+ */
+export async function expoCancelApkBuild(
+  sessionSecret,
+  setAndroidPropsCallback,
+  options
+) {
+  // Clear any android export props since we are canceling the build:
+  setAndroidPropsCallback({});
+
+  const {apkBuildId} = options;
+  return cancelBuild(
+    {sessionSecret: sessionSecret || EXPO_SESSION_SECRET},
+    apkBuildId
+  );
 }
 
 const soundRegex = /(\bsound:\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/gi;

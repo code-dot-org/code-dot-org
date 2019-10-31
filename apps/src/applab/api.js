@@ -364,6 +364,14 @@ export function setKeyValueSync(key, value, callback) {
   });
 }
 
+export function getColumn(table, column, callback) {
+  return Applab.executeCmd(null, 'getColumn', {
+    table: table,
+    column: column,
+    callback: callback
+  });
+}
+
 export function createRecord(table, record, onSuccess, onError) {
   return Applab.executeCmd(null, 'createRecord', {
     table: table,
@@ -497,22 +505,6 @@ export function penColor(color) {
 
 export function penRGB(r, g, b, a) {
   return Applab.executeCmd(null, 'penRGB', {r: r, g: g, b: b, a: a});
-}
-
-export function insertItem(array, index, item) {
-  return Applab.executeCmd(null, 'insertItem', {
-    array: array,
-    index: index,
-    item: item
-  });
-}
-
-export function appendItem(array, item) {
-  return Applab.executeCmd(null, 'appendItem', {array: array, item: item});
-}
-
-export function removeItem(array, index) {
-  return Applab.executeCmd(null, 'removeItem', {array: array, index: index});
 }
 
 export function drawChart(chartId, chartType, chartData, options, callback) {

@@ -1,4 +1,3 @@
 #!/bin/bash -e
 trap "echo 'Add --no-verify to skip Git pre-push hook.'" ERR
 
-ruby tools/hooks/check_circle_config.rb $@

@@ -14,6 +14,7 @@ import moment from 'moment';
 import Spinner from '../../components/spinner';
 import SessionListFormPart from './session_list_form_part';
 import FacilitatorListFormPart from './facilitator_list_form_part';
+import OrganizerFormPart from './organizer_form_part';
 import {
   Grid,
   Row,
@@ -35,7 +36,6 @@ import {
   Organizer,
   Facilitator,
   ProgramManager,
-  Partner,
   CsfFacilitator
 } from '../permission';
 import {
@@ -82,7 +82,11 @@ export class WorkshopForm extends React.Component {
       sessions: PropTypes.array.isRequired,
       enrolled_teacher_count: PropTypes.number.isRequired,
       regional_partner_name: PropTypes.string,
-      regional_partner_id: PropTypes.number
+      regional_partner_id: PropTypes.number,
+      organizer: PropTypes.shape({
+        id: PropTypes.number,
+        name: PropTypes.string
+      })
     }),
     onSaved: PropTypes.func,
     readOnly: PropTypes.bool,
@@ -131,7 +135,8 @@ export class WorkshopForm extends React.Component {
           'course',
           'subject',
           'notes',
-          'regional_partner_id'
+          'regional_partner_id',
+          'organizer'
         ])
       );
       initialState.sessions = this.prepareSessionsForForm(
@@ -293,8 +298,13 @@ export class WorkshopForm extends React.Component {
       destroyedSessions
     });
   };
+
   handleFacilitatorsChange = facilitators => {
     this.setState({facilitators: facilitators});
+  };
+
+  handleOrganizerChange = event => {
+    this.setState({organizer: {id: parseInt(event.target.value)}});
   };
 
   renderCourseSelect(validation) {
@@ -473,8 +483,7 @@ export class WorkshopForm extends React.Component {
       (!this.props.permission.hasAny(
         WorkshopAdmin,
         Organizer,
-        ProgramManager,
-        Partner
+        ProgramManager
       ) &&
         // Enabled for CSF facilitators when they are creating a new workshop
         !(this.props.permission.has(CsfFacilitator) && !this.props.workshop));
@@ -530,13 +539,21 @@ export class WorkshopForm extends React.Component {
 
   renderSubjectSelect(validation) {
     if (this.shouldRenderSubject()) {
-      const options = Subjects[this.state.course].map((subject, i) => {
-        return (
-          <option key={i} value={subject}>
-            {subject}
-          </option>
-        );
-      });
+      const options = Subjects[this.state.course]
+        .filter(subject => {
+          // Only a WorkshopAdmin should be shown a Virtual workshop.
+          return (
+            subject.indexOf('Virtual') === -1 ||
+            this.props.permission.has(WorkshopAdmin)
+          );
+        })
+        .map((subject, i) => {
+          return (
+            <option key={i} value={subject}>
+              {subject}
+            </option>
+          );
+        });
       const placeHolder = this.state.subject ? null : <option />;
       return (
         <FormGroup validationState={validation.style.subject}>
@@ -547,7 +564,7 @@ export class WorkshopForm extends React.Component {
             id="subject"
             name="subject"
             onChange={this.handleFieldChange}
-            style={this.props.readOnly && styles.readOnlyInput}
+            style={this.getInputStyle()}
             disabled={this.props.readOnly}
           >
             {placeHolder}
@@ -689,6 +706,10 @@ export class WorkshopForm extends React.Component {
       ),
       regional_partner_id: this.state.regional_partner_id
     };
+
+    if (this.state.organizer) {
+      workshop_data.organizer_id = this.state.organizer.id;
+    }
 
     let method, url;
     if (this.props.workshop) {
@@ -954,6 +975,15 @@ export class WorkshopForm extends React.Component {
               facilitators={this.state.facilitators}
               course={this.state.course}
               onChange={this.handleFacilitatorsChange}
+              readOnly={this.props.readOnly}
+            />
+          )}
+          {this.props.permission.has(WorkshopAdmin) && this.props.workshop && (
+            <OrganizerFormPart
+              workshopId={this.props.workshop.id}
+              organizerId={this.state.organizer.id}
+              organizerName={this.state.organizer.name}
+              onChange={this.handleOrganizerChange}
               readOnly={this.props.readOnly}
             />
           )}

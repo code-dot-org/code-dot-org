@@ -1,0 +1,16 @@
+name 'csp-u2-exam1-scalability_2020'
+height 'auto'
+
+question 'Which of the following is true of how the Internet has responded to the increasing number of devices now using the network?'
+wrong ‘The Internet protocols are changed every year to adapt to the new devices that have been connected to the network'
+wrong ‘While the number of devices connected to the Internet has grown, the network itself has not grown’
+right ‘The protocols of the Internet were designed to scale as new devices are added’
+wrong ‘The protocols of the Internet are no longer necessary thanks to the large number of devices now connected to the network’
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
+
+markdown <<MARKDOWN
+
+MARKDOWN

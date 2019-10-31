@@ -7,7 +7,7 @@ import {
 import {RegionalPartnerMiniContactPopupLink} from '@cdo/apps/code-studio/pd/regional_partner_mini_contact/RegionalPartnerMiniContact';
 import Notification from '@cdo/apps/templates/Notification';
 import * as color from '../util/color';
-import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
@@ -371,16 +371,14 @@ class RegionalPartnerSearch extends Component {
             <div style={styles.clear} />
 
             <div style={styles.action}>
-              {appState !== WorkshopApplicationStates.now_closed &&
-                (workshopCollections[0].workshops.length > 0 ||
-                  workshopCollections[1].workshops.length > 0) && (
-                  <div>
-                    In addition to attending a five-day summer workshop, the
-                    professional learning program includes up to 4 required
-                    one-day, in-person academic year workshops during the
-                    2019-20 school year.
-                  </div>
-                )}
+              {appState !== WorkshopApplicationStates.now_closed && (
+                <div>
+                  The Professional Learning Program is a yearlong commitment,
+                  consisting of a five-day in-person summer workshop, plus
+                  follow up academic year workshops hosted in-person or
+                  virtually.
+                </div>
+              )}
 
               {appState === WorkshopApplicationStates.now_closed && (
                 <h3>Applications are now closed.</h3>
@@ -414,21 +412,22 @@ class RegionalPartnerSearch extends Component {
               className="professional_learning_information"
               id={`id-${partnerInfo.id}`}
             >
-              {partnerInfo.cost_scholarship_information && (
-                <div>
-                  <h3>Scholarship, discounts, and cost information:</h3>
-                  <div style={styles.scholarship}>
-                    <UnsafeRenderedMarkdown
-                      markdown={partnerInfo.cost_scholarship_information}
-                    />
+              {appState !== WorkshopApplicationStates.now_closed &&
+                partnerInfo.cost_scholarship_information && (
+                  <div>
+                    <h3>Program information</h3>
+                    <div style={styles.scholarship}>
+                      <SafeMarkdown
+                        markdown={partnerInfo.cost_scholarship_information}
+                      />
+                    </div>
                   </div>
-                </div>
-              )}
+                )}
 
               {partnerInfo.additional_program_information && (
                 <div>
-                  <h3>Additional program information:</h3>
-                  <UnsafeRenderedMarkdown
+                  <h3>More about your Regional Partner</h3>
+                  <SafeMarkdown
                     markdown={partnerInfo.additional_program_information}
                   />
                 </div>
@@ -516,7 +515,7 @@ const StartApplicationButton = ({
     notificationText = 'Sign up now to reserve your space!';
   } else {
     notificationHeading =
-      'We still have spaces in the professional learning program!';
+      'We still have spaces in the Professional Learning Program!';
     notificationText = 'It’s not too late to sign up.';
   }
 

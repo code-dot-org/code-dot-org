@@ -41,4 +41,12 @@ class RequestTest < Minitest::Test
     )
     assert Rack::Request.new('REMOTE_ADDR' => user_ip).gdpr?
   end
+
+  def test_x_forwarded_host
+    request = Rack::Request.new(
+      'HTTP_X_FORWARDED_HOST' => 'code.org',
+      'HTTP_HOST' => 'hourofcode.com'
+    )
+    assert_equal 'hourofcode.com', request.site
+  end
 end

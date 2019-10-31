@@ -5,17 +5,22 @@
   "level_num": "custom",
   "user_id": 155,
   "properties": {
-    "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html> \\n<html> \\n<head>\\n</head>\\n <body>\\n   <h1> Dogs vs Cats </h1> \\n \\n    <h3>Dogs</h3> \\n  <img src=\\\"dog.jpg\\\" \\n      alt=\\\"dog jumping\\\"> \\n \\n  <p>Cpl Ian Houlding - Wikimedia Commons - OGL</p>\\n \\n  <h3>Cats</h3> \\n </body> \\n</html>\"\r\n    },\r\n{\r\n      \"name\": \"dog.jpg\",\r\n      \"url\": \"https://images.code.org/b575b7ad219a2cbd7992f13338d61280-image-1494355841913.jgp.jpg\"\r\n    },\r\n{\r\n      \"name\": \"cat.jpeg\",\r\n      \"url\": \"https://images.code.org/7298b8608b5b197372dcd682a8f7f4e5-image-1477532468013.jpeg\"\r\n    }\r\n  ]\r\n}",
+    "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html> \\r\\n<html> \\r\\n<head>\\r\\n  <link rel=\\\"stylesheet\\\" href=\\\"animals.css\\\">\\r\\n<\\/head>\\r\\n <body>\\r\\n   <h1> Dogs vs Cats <\\/h1> \\r\\n \\r\\n    <h3>Dogs<\\/h3> \\r\\n  <img src=\\\"dog.jpg\\\" \\r\\n      alt=\\\"dog jumping\\\"> \\r\\n \\r\\n  <p>Cpl Ian Houlding - Wikimedia Commons - OGL<\\/p>\\r\\n \\r\\n  <h3>Cats<\\/h3> \\r\\n <\\/body> \\r\\n<\\/html>\"\r\n    },\r\n{\r\n      \"name\": \"dog.jpg\",\r\n      \"url\": \"https://images.code.org/b575b7ad219a2cbd7992f13338d61280-image-1494355841913.jgp.jpg\"\r\n    },\r\n{\r\n      \"name\": \"cat.jpeg\",\r\n      \"url\": \"https://images.code.org/7298b8608b5b197372dcd682a8f7f4e5-image-1477532468013.jpeg\"\r\n    },\r\n{\r\n      \"name\": \"animals.css\",\r\n      \"data\": \"p {\\r\\n  color: gray;\\r\\n  font-style: italic;\\r\\n}\\r\\nh1 {\\r\\n  color: navy;\\r\\n  font-weight: bold;\\r\\n  font-family: Helvetica, sans-serif;\\r\\n}\\r\\n\\r\\nh3 {\\r\\n  color: navy;\\r\\n  font-weight: bold;\\r\\n  text-decoration: underline;\\r\\n  font-family: Helvetica, sans-serif;\\r\\n}\"\r\n}\r\n  ]\r\n}",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "submittable": "false",
     "parent_level_id": 15881,
     "name_suffix": "_pilot",
     "encrypted": "false",
-    "mini_rubric": "false"
+    "mini_rubric": "false",
+    "encrypted_examples": [
+
+    ]
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-12 18:56:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2017-10-09 17:54:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2019-04-04 01:31:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-07-12 18:56:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2017-10-09 17:54:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2019-04-04 01:31:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-06 19:21:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-06 21:58:31 +0000\",\"changed\":[\"start_sources\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </Weblab>

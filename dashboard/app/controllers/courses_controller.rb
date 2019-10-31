@@ -1,3 +1,5 @@
+require 'cdo/honeybadger'
+
 class CoursesController < ApplicationController
   include VersionRedirectOverrider
 
@@ -10,7 +12,7 @@ class CoursesController < ApplicationController
     view_options(full_width: true, responsive_content: true, has_i18n: true)
     respond_to do |format|
       format.html do
-        @is_teacher = (current_user && current_user.teacher?) || (!current_user && params[:view] == 'teacher')
+        @is_teacher = (current_user && current_user.teacher?) || params[:view] == 'teacher'
         @is_english = request.language == 'en'
         @is_signed_out = current_user.nil?
         @force_race_interstitial = params[:forceRaceInterstitial]
@@ -54,6 +56,7 @@ class CoursesController < ApplicationController
       course = Course.get_from_cache(course_name)
       # only support this alternative course name for plc courses
       raise ActiveRecord::RecordNotFound unless course.try(:plc_course)
+      Honeybadger.notify "Deprecated PLC course name logic used for course #{course_name}"
     end
 
     if course.plc_course
@@ -69,6 +72,9 @@ class CoursesController < ApplicationController
       redirect_to "/courses/#{redirect_course.name}/?redirect_warning=true"
       return
     end
+
+    sections = current_user.try {|u| u.sections.where(hidden: false).select(:id, :name, :course_id, :script_id)}
+    @sections_with_assigned_info = sections&.map {|section| section.attributes.merge!({"isAssigned" => section[:course_id] == course.id})}
 
     render 'show', locals: {course: course, redirect_warning: params[:redirect_warning] == 'true'}
   end

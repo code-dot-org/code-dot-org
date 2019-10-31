@@ -19,4 +19,6 @@
   .row
     .col-lg-12
       - join_route_options = {controller: 'pd/workshop_enrollment', action: 'join_session', session_code: @session.code}
-      = link_to 'My name is not on this list.', join_route_options
+      = link_to join_route_options do
+        %button{class: "btn btn-primary", style: "font-size: 18px"}
+          My name is not on this list
