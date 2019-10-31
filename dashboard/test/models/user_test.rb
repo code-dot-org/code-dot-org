@@ -4140,21 +4140,31 @@ class UserTest < ActiveSupport::TestCase
     assert_equal teacher.user_school_infos.count, 2
   end
 
-  # test 'does set admin to true when google oauth codeorg account' do
-  #   user = create :teacher, :google_sso_provider, email: 'simone@code.org'
-  #   assert user.admin
-  # end
-
   test 'does set admin to true when google oauth codeorg account' do
     email = 'simone@code.org'
     migrated_teacher = create(:teacher, :with_google_authentication_option, email: email)
-    puts "*****#{migrated_teacher.email}"
+
+    migrated_teacher.admin = true
+    migrated_teacher.save!
+
     assert migrated_teacher.admin
   end
 
   test 'does set admin to false when it is not a google oauth codeorg account' do
+    email = 'me+admin@code.org'
+    migrated_teacher = create(:teacher, email: email)
+
+    migrated_teacher.admin = false
+
+    refute migrated_teacher.admin
   end
 
   test 'does set admin to false when it is not a codeorg account' do
+    email = 'milesmorales@gmail.com'
+    migrated_teacher = create(:teacher, :with_google_authentication_option, email: email)
+
+    migrated_teacher.admin = false
+
+    refute migrated_teacher.admin
   end
 end
