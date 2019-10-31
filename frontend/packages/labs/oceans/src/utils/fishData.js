@@ -587,52 +587,59 @@ const fishComponents = {
     fish2: {
       src: Pectoral_Fin_Fish2,
       knnData: [],
-      type: FishBodyPart.PECTORAL_FIN_BACK
+      type: FishBodyPart.PECTORAL_FIN_FRONT,
+      exclusions: [DataSet.Small]
     },
     fish4: {
       src: Pectoral_Fin_Fish4,
       knnData: [],
-      type: FishBodyPart.PECTORAL_FIN_BACK
+      type: FishBodyPart.PECTORAL_FIN_FRONT,
+      exclusions: [DataSet.Small]
     },
     fish6: {
       src: Pectoral_Fin_Fish6,
       knnData: [],
-      type: FishBodyPart.PECTORAL_FIN_BACK
+      type: FishBodyPart.PECTORAL_FIN_FRONT,
+      exclusions: [DataSet.Small]
     },
     narrow1: {
       src: Pectoral_Fin_Narrow1,
       knnData: [],
-      type: FishBodyPart.PECTORAL_FIN_BACK
+      type: FishBodyPart.PECTORAL_FIN_FRONT
     },
     narrow2: {
       src: Pectoral_Fin_Narrow2,
       knnData: [],
-      type: FishBodyPart.PECTORAL_FIN_BACK
+      type: FishBodyPart.PECTORAL_FIN_FRONT
     },
     round2: {
       src: Pectoral_Fin_Round2,
       knnData: [],
-      type: FishBodyPart.PECTORAL_FIN_BACK
+      type: FishBodyPart.PECTORAL_FIN_FRONT
     },
     sharp1: {
       src: Pectoral_Fin_Sharp1,
       knnData: [],
-      type: FishBodyPart.PECTORAL_FIN_BACK
+      type: FishBodyPart.PECTORAL_FIN_FRONT,
+      exclusions: [DataSet.Small]
     },
     spikey1: {
       src: Pectoral_Fin_Spikey1,
       knnData: [],
-      type: FishBodyPart.PECTORAL_FIN_BACK
+      type: FishBodyPart.PECTORAL_FIN_FRONT,
+      exclusions: [DataSet.Small]
     },
     square2: {
       src: Pectoral_Fin_Square2,
       knnData: [],
-      type: FishBodyPart.PECTORAL_FIN_BACK
+      type: FishBodyPart.PECTORAL_FIN_FRONT,
+      exclusions: [DataSet.Small]
     },
     wide1: {
       src: Pectoral_Fin_Wide1,
       knnData: [],
-      type: FishBodyPart.PECTORAL_FIN_BACK
+      type: FishBodyPart.PECTORAL_FIN_FRONT,
+      exclusions: [DataSet.Small]
     }
   },
 
@@ -646,27 +653,32 @@ const fishComponents = {
     fish2: {
       src: Dorsal_Fin_Fish2,
       knnData: [],
-      type: FishBodyPart.DORSAL_FIN
+      type: FishBodyPart.DORSAL_FIN,
+      exclusions: [DataSet.Small]
     },
     fish3: {
       src: Dorsal_Fin_Fish3,
       knnData: [],
-      type: FishBodyPart.DORSAL_FIN
+      type: FishBodyPart.DORSAL_FIN,
+      exclusions: [DataSet.Small]
     },
     fish4: {
       src: Dorsal_Fin_Fish4,
       knnData: [],
-      type: FishBodyPart.DORSAL_FIN
+      type: FishBodyPart.DORSAL_FIN,
+      exclusions: [DataSet.Small]
     },
     fish6: {
       src: Dorsal_Fin_Fish6,
       knnData: [],
-      type: FishBodyPart.DORSAL_FIN
+      type: FishBodyPart.DORSAL_FIN,
+      exclusions: [DataSet.Small]
     },
     narrow1: {
       src: Dorsal_Fin_Narrow1,
       knnData: [],
-      type: FishBodyPart.DORSAL_FIN
+      type: FishBodyPart.DORSAL_FIN,
+      exclusions: [DataSet.Small]
     },
     round1: {
       src: Dorsal_Fin_Round1,
@@ -676,37 +688,44 @@ const fishComponents = {
     round2: {
       src: Dorsal_Fin_Round2,
       knnData: [],
-      type: FishBodyPart.DORSAL_FIN
+      type: FishBodyPart.DORSAL_FIN,
+      exclusions: [DataSet.Small]
     },
     sharp1: {
       src: Dorsal_Fin_Sharp1,
       knnData: [],
-      type: FishBodyPart.DORSAL_FIN
+      type: FishBodyPart.DORSAL_FIN,
+      exclusions: [DataSet.Small]
     },
     sharp2: {
       src: Dorsal_Fin_Sharp2,
       knnData: [],
-      type: FishBodyPart.DORSAL_FIN
+      type: FishBodyPart.DORSAL_FIN,
+      exclusions: [DataSet.Small]
     },
     spikey1: {
       src: Dorsal_Fin_Spikey1,
       knnData: [],
-      type: FishBodyPart.DORSAL_FIN
+      type: FishBodyPart.DORSAL_FIN,
+      exclusions: [DataSet.Small]
     },
     spikey2: {
       src: Dorsal_Fin_Spikey2,
       knnData: [],
-      type: FishBodyPart.DORSAL_FIN
+      type: FishBodyPart.DORSAL_FIN,
+      exclusions: [DataSet.Small]
     },
     square1: {
       src: Dorsal_Fin_Square1,
       knnData: [],
-      type: FishBodyPart.DORSAL_FIN
+      type: FishBodyPart.DORSAL_FIN,
+      exclusions: [DataSet.Small]
     },
     square2: {
       src: Dorsal_Fin_Square2,
       knnData: [],
-      type: FishBodyPart.DORSAL_FIN
+      type: FishBodyPart.DORSAL_FIN,
+      exclusions: [DataSet.Small]
     },
     wide1: {
       src: Dorsal_Fin_Wide1,
@@ -716,7 +735,8 @@ const fishComponents = {
     wide2: {
       src: Dorsal_Fin_Wide2,
       knnData: [],
-      type: FishBodyPart.DORSAL_FIN
+      type: FishBodyPart.DORSAL_FIN,
+      exclusions: [DataSet.Small]
     }
   },
   // TAIL KNN DATA: []
@@ -724,12 +744,14 @@ const fishComponents = {
     fish1: {
       src: Tail_Fin_Fish1,
       knnData: [],
-      type: FishBodyPart.TAIL
+      type: FishBodyPart.TAIL,
+      exclusions: [DataSet.Small]
     },
     fish2: {
       src: Tail_Fin_Fish2,
       knnData: [],
-      type: FishBodyPart.TAIL
+      type: FishBodyPart.TAIL,
+      exclusions: [DataSet.Small]
     },
     fish3: {
       src: Tail_Fin_Fish3,
@@ -739,7 +761,8 @@ const fishComponents = {
     fish4: {
       src: Tail_Fin_Fish4,
       knnData: [],
-      type: FishBodyPart.TAIL
+      type: FishBodyPart.TAIL,
+      exclusions: [DataSet.Small]
     },
     fish6: {
       src: Tail_Fin_Fish6,
@@ -749,52 +772,61 @@ const fishComponents = {
     narrow1: {
       src: Tail_Fin_Narrow1,
       knnData: [],
-      type: FishBodyPart.TAIL
+      type: FishBodyPart.TAIL,
+      exclusions: [DataSet.Small]
     },
     narrow2: {
       src: Tail_Fin_Narrow2,
       knnData: [],
-      type: FishBodyPart.TAIL
+      type: FishBodyPart.TAIL,
+      exclusions: [DataSet.Small]
     },
     round1: {
       src: Tail_Fin_Round1,
       knnData: [],
-      type: FishBodyPart.TAIL
+      type: FishBodyPart.TAIL,
+      exclusions: [DataSet.Small]
     },
     sharp1: {
       src: Tail_Fin_Sharp1,
       knnData: [],
-      type: FishBodyPart.TAIL
+      type: FishBodyPart.TAIL,
+      exclusions: [DataSet.Small]
     },
     sharp2: {
       src: Tail_Fin_Sharp2,
       knnData: [],
-      type: FishBodyPart.TAIL
+      type: FishBodyPart.TAIL,
+      exclusions: [DataSet.Small]
     },
     spikey1: {
       src: Tail_Fin_Spikey1,
       knnData: [],
-      type: FishBodyPart.TAIL
+      type: FishBodyPart.TAIL,
+      exclusions: [DataSet.Small]
     },
     square1: {
       src: Tail_Fin_Square1,
       knnData: [],
-      type: FishBodyPart.TAIL
+      type: FishBodyPart.TAIL,
+      exclusions: [DataSet.Small]
     },
     square2: {
       src: Tail_Fin_Square2,
       knnData: [],
-      type: FishBodyPart.TAIL
+      type: FishBodyPart.TAIL,
+      exclusions: [DataSet.Small]
     },
     wide1: {
       src: Tail_Fin_Wide1,
       knnData: [],
-      type: FishBodyPart.TAIL
+      type: FishBodyPart.TAIL,
+      exclusions: [DataSet.Small]
     },
     wide2: {
       src: Tail_Fin_Wide2,
       knnData: [],
-      type: FishBodyPart.TAIL
+      type: FishBodyPart.TAILv
     }
   },
   // COLOR PALETTE KNN DATA: [...bodyRgb, ...finRgb]
