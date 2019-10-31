@@ -300,7 +300,6 @@ export default class JSInterpreter {
     codeFunctions.forEach(codeFunction => {
       let fullComment = '';
       let comment = getPrecedingComment(allComments, codeFunction.start);
-      // let commentText = comment ? comment.text : '';
       if (comment && comment.isBlockComment) {
         fullComment = comment.text;
         if (fullComment[0] === '*') {
