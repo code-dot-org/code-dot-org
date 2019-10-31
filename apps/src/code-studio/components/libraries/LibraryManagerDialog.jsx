@@ -92,14 +92,6 @@ export default class LibraryManagerDialog extends React.Component {
     );
   };
 
-  shouldRefresh = _ => {
-    return false;
-  };
-
-  refreshLibrary = _ => {
-    console.warn('refresh is not available yet');
-  };
-
   removeLibrary = libraryName => {
     dashboard.project.setProjectLibraries(
       this.state.libraries.filter(library => {
@@ -120,15 +112,11 @@ export default class LibraryManagerDialog extends React.Component {
       );
     }
     return libraries.map(library => {
-      let onRefresh;
-      if (this.shouldRefresh(library)) {
-        onRefresh = () => this.refreshLibrary(library);
-      }
       return (
         <LibraryListItem
           key={library.name}
           library={library}
-          onRefresh={onRefresh}
+          onRefresh={undefined}
           onRemove={this.removeLibrary}
         />
       );
