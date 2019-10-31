@@ -342,7 +342,7 @@ Devise.setup do |config|
     manager.failure_app = CustomDeviseFailure
   end
 
-  require 'cookie_helpers'
+  require 'cdo/cookie_helpers'
   Warden::Manager.after_set_user do |user, auth|
     user_type =
       if user.teacher?
