@@ -1464,3 +1464,17 @@ ne:
               name: Introduction
             Nested Loops:
               name: Nested Loops
+        k5-onlinepd-copy:
+          stages:
+            Loops:
+              name: Loops
+            Conditionals:
+              name: Conditionals
+            Events:
+              name: कार्य
+            Functions:
+              name: Functions
+            Variables:
+              name: Variables
+            For Loops:
+              name: For Loops

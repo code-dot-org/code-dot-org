@@ -408,10 +408,6 @@ km:
         text: ពណ៌​ព្រាវ
       Mikelab_repeatUntilComplete:
         text: ធ្វើ​ឡើង​វិញ​ជា​រៀង​រហូត
-      Mikelab_sendBad:
-        text: ផ្លាស់​ទី​ទៅ​ឆ្វេង
-      Mikelab_sendGood:
-        text: ផ្លាស់​ទី​ទៅ​ស្តាំ
       Mikelab_setBG:
         options:
           BG:

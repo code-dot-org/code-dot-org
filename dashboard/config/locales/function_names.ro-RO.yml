@@ -144,7 +144,16 @@ ro-RO:
       Course 4 Play Lab Params 3:
         jump: sari
       Course 4 Play Lab Params 4:
+        patrol: patrulează
         do something: facă ceva
+      Course 4 Play Lab Params 5:
+        patrol: patrulează
+      Course 4 Play Lab Params 6:
+        patrol: patrulează
+      Course 4 Play Lab Params 7:
+        patrol: patrulează
+      Course 4 Play Lab Params 8:
+        patrol: patrulează
       Course 4 Play Lab Vars 1:
         set score: Setează scor
       Course 4 Play Lab Vars 2:
@@ -156,6 +165,8 @@ ro-RO:
         shift down/backward: deplasează jos/înapoi
       Course 4 SCF 1a:
         get nectar: obţine nectar
+      Course 4 SCF 1b:
+        make honey up and over: fă miere şi întoarce-te
       Course 4 SCF 2:
         draw octagons: desenează octogoane
         shift down: deplasează jos
@@ -248,6 +259,7 @@ ro-RO:
         draw a polygon: desenează un poligon
       NEW Course 4 Play Lab Params 11:
         jump: sari
+        patrol: patrulează
       Robot Doodle:
         draw head: desenează cap
       Robot Doodle_2018:
