@@ -896,8 +896,9 @@ export const initFishData = () => {
         }
         component.index = idx;
         // Add an "id" to each component to train on
-        if (variations.length > 1) {
-          component.knnData.push(idx / (variations.length - 1));
+        const numVariations = Object.keys(variations).length;
+        if (numVariations > 1) {
+          component.knnData.push(idx / (numVariations - 1));
         }
       });
     });
