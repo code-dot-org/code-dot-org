@@ -106,7 +106,7 @@ class LibraryCreationDialog extends React.Component {
         ),
         librarySource: response.source,
         loadingState: LoadingState.DONE_LOADING,
-        sourceFunctionList: libraryParser.getFunctions(response.source)
+        sourceFunctionList: functionsList
       });
     });
   };

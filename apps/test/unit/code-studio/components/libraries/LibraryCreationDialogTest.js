@@ -10,6 +10,7 @@ import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/Library
 import sinon from 'sinon';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
+import annotationList from '@cdo/apps/acemode/annotationList';
 
 const LIBRARY_SOURCE =
   '/*\n' +
@@ -48,7 +49,9 @@ describe('LibraryCreationDialog', () => {
       project: {
         setLibraryName: () => {},
         setLibraryDescription: () => {},
-        getCurrentId: () => {}
+        getCurrentId: () => {},
+        getUpdatedSourceAndHtml_: () => {},
+        getLevelName: () => {}
       }
     });
     sinon.stub(window.dashboard.project, 'setLibraryName').returns(undefined);
@@ -76,6 +79,60 @@ describe('LibraryCreationDialog', () => {
 
   afterEach(() => {
     wrapper = null;
+  });
+
+  describe('onOpen', () => {
+    it('sets the loading state to CODE_ERROR when a code error exists', () => {
+      sinon
+        .stub(annotationList, 'getJSLintAnnotations')
+        .returns([{type: 'error'}]);
+      wrapper.instance().onOpen();
+      wrapper.update();
+      expect(wrapper.state().loadingState).to.equal(LoadingState.CODE_ERROR);
+      annotationList.getJSLintAnnotations.restore();
+    });
+
+    it('sets loading state to NO_FUNCTIONS when there are no functions', () => {
+      sinon.stub(annotationList, 'getJSLintAnnotations').returns([]);
+      let sourceStub = sinon.stub(
+        window.dashboard.project,
+        'getUpdatedSourceAndHtml_'
+      );
+      sourceStub.yields({source: ''});
+      sinon.stub(libraryParser, 'getFunctions').returns([]);
+
+      wrapper.instance().onOpen();
+      wrapper.update();
+      expect(wrapper.state().loadingState).to.equal(LoadingState.NO_FUNCTIONS);
+
+      annotationList.getJSLintAnnotations.restore();
+      window.dashboard.project.getUpdatedSourceAndHtml_.restore();
+      libraryParser.getFunctions.restore();
+    });
+
+    it('sets loading state to DONE_LOADING on success', () => {
+      sinon.stub(annotationList, 'getJSLintAnnotations').returns([]);
+      sinon
+        .stub(libraryParser, 'getFunctions')
+        .returns([{functionName: 'foo', comment: ''}]);
+      sinon.stub(libraryParser, 'sanitizeName').returns('name');
+      sinon.stub(window.dashboard.project, 'getLevelName').returns('name');
+      let sourceStub = sinon.stub(
+        window.dashboard.project,
+        'getUpdatedSourceAndHtml_'
+      );
+      sourceStub.yields({source: 'function foo() {}'});
+
+      wrapper.instance().onOpen();
+      wrapper.update();
+      expect(wrapper.state().loadingState).to.equal(LoadingState.DONE_LOADING);
+
+      annotationList.getJSLintAnnotations.restore();
+      libraryParser.getFunctions.restore();
+      libraryParser.sanitizeName.restore();
+      window.dashboard.project.getLevelName.restore();
+      window.dashboard.project.getUpdatedSourceAndHtml_.restore();
+    });
   });
 
   describe('UI', () => {
