@@ -1,11 +1,15 @@
 ---
-ku-IQ:
+ku:
   data:
     block_categories:
       Actions: کردەوەکان
-      Color: ڕەنگ
-      Logic: لۆژيك
       Loops: گرێکان
+      Color: ڕەنگ
       Math: بیرکاری
-      Text: دەق
+      Logic: لۆژيك
       Variables: گۆڕاوەکان
+      Text: دەق
+      Start: دەستپێبکە
+      test: تاقیکردنەوە
+      Name: ناو
+      Function: فرمان

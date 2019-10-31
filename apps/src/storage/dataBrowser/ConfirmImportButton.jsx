@@ -36,8 +36,8 @@ class ConfirmImportButton extends React.Component {
     const file = this.importFileInput.files[0];
     const reader = new FileReader();
     reader.onload = e => {
-      // It is safe to pass a callback to be called by DataTable, because this component
-      // will always live as long as DataTable.
+      // It is safe to pass a callback to be called by DataTableView, because this component
+      // will always live as long as DataTableView.
       this.props.importCsv(e.target.result, this.handleImportComplete);
       // Make sure we get another change event if the same file is selected again.
       this.importFileInput.value = '';

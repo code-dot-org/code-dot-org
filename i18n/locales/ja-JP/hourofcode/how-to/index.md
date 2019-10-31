@@ -1,27 +1,26 @@
 ---
-title: <%= hoc_s(:title_how_to).inspect %>
-layout: wide
-nav: how_to_nav
+title: イベント開催ガイド
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # クラスで Hour of Code を教える方法
 
-### この運動に参加して、以下のステップで初めてのコンピュータサイエンスを生徒たちへ紹介しましょう。 Hour of Code(アワーオブコード) は、とっても簡単です。はじめての方でもご心配いりません！ 誰かのサポートが必要ならば、Hour of Codeの実施をサポートしてくれる[ローカルボランティア](%= codeorg_url('/volunteer/local') %)を探すことができます。
+### この運動に参加して、以下のステップで初めてのコンピュータサイエンスを生徒たちへ紹介しましょう。 Hour of Codeの運営は簡単です。初めての方でも心配いりません！ 誰かのサポートが必要ならば、Hour of Codeの実施をサポートしてくれる[地元のボランティア]({{ urls/volunteer_local }})を探すことができます。
 
-### 分からないことがあったら、[参加案内ページ](%= localized_file('/files/participation-guide.pdf') %)を見てください。
+### 分からないことがあれば、[イベント開催ガイド]({{ localized_files/participation_guide }})をご一読ください。
 
 * * *
 
-## 1. この「やり方を説明している動画」を見る <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. この手引きビデオを見る <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 2. イベント用のチュートリアルを選ぶ
 
-We provide a variety of fun, [student-guided tutorials](%= resolve_url('/learn') %) for all age groups and experience levels. Students do the activities on their own, though many activities include lesson plans for teachers (you'll see the link when you click the activity) to guide discussion or extend the activity. [![](/images/fit-700/tutorials.png)](%=resolve_url('/learn') %)
+生徒が自らのペースで学習できるバラエティに富んだ楽しい[チュートリアル]({{ urls/learn }})を年齢層や経験レベルに応じて提供しています。 生徒は自分自身でアクティビティに取り組みますが、教師が議論を導いたりアクティビティの幅を広げることができるよう、多くのアクティビティにはレッスンプラン（アクティビティをクリックするとリンクが表示されます）が含まれています。 [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
 ## 3. あなたのHour of Codeを宣伝する
 
-Promote your Hour of Code [with these tools](%= resolve_url('/promote/resources') %) and encourage others to host their own events.
+[これらのツールを使って]({{ urls/promote_resources }})あなたのHour of Codeを宣伝して、他の人たちが自身のイベントを開催するように促しましょう。
 
 ## 4. 必要なテクノロジーを準備する（コンピュータは必須ではありません）
 
@@ -37,34 +36,34 @@ Promote your Hour of Code [with these tools](%= resolve_url('/promote/resources'
 
 ## 5. Hour of Codeの冒頭は興味がわく話やビデオで始める
 
-**Invite a [local volunteer](%= codeorg_url('/volunteer/local') %) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
+**コンピューターサイエンスの広範な可能性について話すことで、生徒たちにひらめきを与える[地元のボランティア]({{ urls/volunteer_local }})を招待します。**世界中の数千人ものボランティアが、教室に出向いたり生徒たちとビデオチャットすることであなたのHour of Codeを手助けしてくれます！
 
 **以下のビデオを見せると効果的です。**
 
 - ビル・ゲイツ、マーク・ザッカーバーグ、そしてNBAスターのクリス・ボッシュを特集したCode.org設立時のオリジナルビデオ （[1分](https://www.youtube.com/watch?v=qYZF6oIZtfc)、[5分](https://www.youtube.com/watch?v=nKIu9yen5nc)、[9分](https://www.youtube.com/watch?v=dU1xS07N-FA)のバージョンがあります）
-- その他の[資料](%= codeorg_url('/inspire') %)や[ビデオ](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP)
+- Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
+**あなたと生徒たちの両方がコンピューターサイエンスを学んだことがなくても問題ありません。以下のようなやり方でHour of Codeのアクティビティについて説明してみてはどうでしょう。**
 
 - テクノロジーが私たちの生活にどのような影響を与えているかを、男の子と女の子がともに興味を持つような実例を交えて説明する。例えば、コンピュータが医療の分野でどの様に使われているのか、人々を助けるためにどんな役割を担っているのか、もしくは人々を国境を超えてつなげるためにどんなアプリケーションが使われているのかなど。
 - クラス全体で、コンピュータが使われているシーンをリストアップしてみる。
-- コンピューターサイエンスをもっと女の子に興味持ってもらうヒントは[/girls">こちら](%= codeorg_url('/girls')%)。
+- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
 
 ## 6. コードを書く！
 
-**Direct students to the activity**
+**生徒たちに何をするのか指示する**
 
-- 黒板にチュートリアルへのリンクを書きましょう。[あなたが選択したチュートリアルの情報](%= resolve_url('/learn') %)にあるリンクを探してください。
+- 黒板にチュートリアルへのリンクを書きましょう。[あなたが選択したチュートリアルの情報]({{ urls/learn }})にあるリンクを探してください。
 
-**When your students come across difficulties it's okay to respond:**
+**生徒たちが困っていたら以下のように声をかけてみてもよいです**
 
 - 「私もわからないから、一緒にやってみよう。」
 - 「コンピュータは、思った通りに動くとは限らないんだよ。」
 - 「プログラミングを学ぶということは、新しい言葉を学ぶことと同じなんだ。すぐにペラペラにはなれないよ。」
 
-**What if a student finishes early?**
+**早く終わってしまった生徒がいたらどうすればよいでしょう？**
 
-- 生徒たちはチュートリアルの一覧を確認して、[他のHour of Codeアクティビティを試してみる](%= resolve_url('/learn')%)ことができます。
+- 生徒たちは、チュートリアルの一覧を確認して[他のHour of Codeアクティビティを試してみる]({{ urls/learn }})ことができます。
 - もしくは、困っている他の生徒を助けてあげるように伝えましょう。
 
 [col-33]
@@ -83,8 +82,8 @@ Promote your Hour of Code [with these tools](%= resolve_url('/promote/resources'
 
 [/col-33]
 
-- 生徒へ配る[認定書](%= codeorg_url('/certificates')%)を印刷します。
-- 生徒へ配る[「Hour of Codeをやったよ！」](%= resolve_url('/promote/resources#stickers') %)ステッカーを印刷します。
+- [Print certificates]({{ urls/certificates }}) for your students.
+- 生徒へ配る[「Hour of Codeをやったよ！」]({{ urls/promote_stickers }})ステッカーを印刷します。
 - あなたの学校向けの[特製Tシャツを注文](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more)します。
 - Hour of Codeのイベントの様子を撮影した写真やビデオをソーシャルメディア上で共有しましょう。 #HourOfCodeハッシュタグや@codeorg参照を使うと、我々があなたの取り組みをハイライトすることもできます！
 
@@ -98,14 +97,14 @@ Promote your Hour of Code [with these tools](%= resolve_url('/promote/resources'
 
 ## Hour of Codeの教育者向けその他資料
 
-- [Hour of Code教育者フォーラム](http://forum.code.org/c/plc/hour-of-code)でアドバイスをもらったり、他の教育者からのサポートを得ることができます。 <% if @country == 'us' %>
-- Hour of Codeの[よくある質問](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)を読みましょう。 <% end %>
+- [Hour of Code教育者フォーラム](http://forum.code.org/c/plc/hour-of-code)でアドバイスをもらったり、他の教育者からのサポートを得ることができます。
+- Hour of Codeの[よくある質問](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)を読みましょう。
 
 ## Hour of Codeを終えたら？
 
 Hour of Codeは、あくまでテクノロジーがどう動作するかやアプリケーションをどうやって作るのかを理解する最初の一歩にすぎません。以下のようにして継続します。
 
-- 継続して[オンラインで学習する](%= codeorg_url('/learn/beyond')%)よう生徒たちに推奨しましょう。
-- コンピュータサイエンスの経験豊富な進行役からの教えを受けられる、対面式の1日ワークショップに[参加する](%= codeorg_url('/professional-development-workshops') %)。(米国教育者のみ)
+- Encourage students to continue to [learn online]({{ urls/learn_beyond }}).
+- [Attend]({{ urls/professional_development_workshops }}) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
-<%= view :signup_button %>
+{{ signup_button }}

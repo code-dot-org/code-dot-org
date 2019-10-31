@@ -21,6 +21,7 @@ const defaultProps = {
   viewAs: ViewType.Teacher,
   isRtl: false,
   sectionsInfo: [],
+  sections: [],
   scriptHasLockableStages: false,
   scriptAllowsHiddenStages: false,
   versions: []

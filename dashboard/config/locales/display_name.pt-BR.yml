@@ -45,12 +45,11 @@ pt-BR:
       CSD LEDs Map: 'Circuit Playground: LEDs'
       CSD LEDs Map_2018: 'Circuit Playground: LEDs'
       CSD LEDs Map_2019: 'Circuit Playground: LEDs'
-      CSD Problem Solving Process Video: 'Vídeo: Processo de Resolução de Problemas'
+      CSD Problem Solving Process Video: 'Vídeo: Processo de resolução de problemas'
       CSD Set Scale Map: Alterando a escala do Sensor
       CSD Set Scale Map_2018: Alterando a escala do Sensor
       CSD Set Scale Map_2019: Alterando a escala do Sensor
       CSD U1L02 TFMD_2018: Visão geral da aula
-      CSD U1L02 TFMD_2019: Visão geral da aula
       CSD U1L03 TFMD_2018: Visão geral da aula
       CSD U1L03 TFMD_2019: Visão geral da aula
       CSD U1L04 TFMD_2018: Visão geral da aula
@@ -63,6 +62,9 @@ pt-BR:
       CSD U1L07 TFMD_2019: Visão geral da aula
       CSD U1L09 TFMD_2018: Visão geral da aula
       CSD U1L09 TFMD_2019: Visão geral da aula
+      CSD U2 CC Search Map: Busca Creative Commons
+      CSD U2 CC Search Map_2018: Busca Creative Commons
+      CSD U2 CC Search Map_2019: Busca Creative Commons
       CSD U2 CSS Classes Map: Classes CSS
       CSD U2 CSS Classes Map_2018: Classes CSS
       CSD U2 CSS Classes Map_2019: Classes CSS
@@ -119,9 +121,7 @@ pt-BR:
       CSD U2 lists map_2019: Listas em HTML
       CSD U2 publish video: Publicando seu site
       CSD U2L01 TFMD_2018: Visão geral da aula
-      CSD U2L01 TFMD_2019: Visão geral da aula
       CSD U2L02 TFMD_2018: Visão geral da aula
-      CSD U2L02 TFMD_2019: Visão geral da aula
       CSD U2L03 TFMD_2018: Visão geral da aula
       CSD U2L03 TFMD_2019: Visão geral da aula
       CSD U2L04 TFMD_2018: Visão geral da aula
@@ -233,7 +233,6 @@ pt-BR:
       CSD U3 L9 Freeplay_2019: Atividade livre
       CSD U3 Plotting Shapes Shape Lab: Desenhando Formas
       CSD U3 Plotting Shapes Shape Lab_2018: Desenhando Formas
-      CSD U3 Plotting Shapes Shape Lab_2019: Desenhando Formas
       CSD U3 Random Number Map Level: Números Aleatórios
       CSD U3 Random Number Map Level_2018: Números Aleatórios
       CSD U3 Random Number Map Level_2019: Números Aleatórios
@@ -323,10 +322,7 @@ pt-BR:
       CSD U3 velocity map: Velocidade de Sprite
       CSD U3 velocity map_2018: Velocidade de Sprite
       CSD U3 velocity map_2019: Velocidade de Sprite
-      CSD U3L01 TFMD_2018: Visão geral da aula
-      CSD U3L01 TFMD_2019: Visão geral da aula
       CSD U3L02 TFMD_2018: Visão geral da aula
-      CSD U3L02 TFMD_2019: Visão geral da aula
       CSD U3L03 TFMD_2018: Visão geral da aula
       CSD U3L03 TFMD_2019: Visão geral da aula
       CSD U3L04 TFMD_2018: Visão geral da aula
@@ -389,9 +385,7 @@ pt-BR:
       CSD U4 User Input Map_2018: Respondendo a Entradas de Usuário
       CSD U4 User Input Map_2019: Respondendo a Entradas de Usuário
       CSD U4L01 autoSFLP_2018: Visão geral da aula
-      CSD U4L01 autoSFLP_2019: Visão geral da aula
       CSD U4L02 autoSFLP_2018: Visão geral da aula
-      CSD U4L02 autoSFLP_2019: Visão geral da aula
       CSD U4L03 autoSFLP_2018: Visão geral da aula
       CSD U4L03 autoSFLP_2019: Visão geral da aula
       CSD U4L04 autoSFLP_2018: Visão geral da aula
@@ -422,11 +416,11 @@ pt-BR:
       CSD U4L16 autoSFLP_2019: Visão geral da aula
       CSD U5 Amazon Data Video: Coletando Informações sobre Usuários
       CSD U5 Amazon Data Video_2018: Coletando Informações sobre Usuários
-      CSD U5 Amazon Data Video_2019: Coletando Informações sobre Usuários
-      CSD U5 Netflix Data Video_2019: Como a Netflix usa dados
+      CSD U5 Amazon Data Video_2019: Como a Amazon Usa Dados
+      CSD U5 Netflix Data Video_2019: Como a Netflix Usa Dados
       CSD U5 Waze Data Video: Coletando Informações sobre Usuários
       CSD U5 Waze Data Video_2018: Coletando Informações sobre Usuários
-      CSD U5 Waze Data Video_2019: Coletando Informações sobre Usuários
+      CSD U5 Waze Data Video_2019: Como o Waze usa Dados
       CSD U5 binary video: Binário e Dados
       CSD U5 binary video_2018: Binário e Dados
       CSD U5 binary video_2019: Binário e Dados
@@ -456,9 +450,7 @@ pt-BR:
       CSD U5 black white images pixelation_2019: Widget de pixelização em preto e
         branco
       CSD U5L01 autoSFLP_2018: Visão geral da aula
-      CSD U5L01 autoSFLP_2019: Visão geral da aula
       CSD U5L02 autoSFLP_2018: Visão geral da aula
-      CSD U5L02 autoSFLP_2019: Visão geral da aula
       CSD U5L03 autoSFLP_2018: Visão geral da aula
       CSD U5L03 autoSFLP_2019: Visão geral da aula
       CSD U5L04 autoSFLP_2018: Visão geral da aula
@@ -539,12 +531,9 @@ pt-BR:
       CSD U6 tugowar final: Torne-o Seu
       CSD U6 tugowar final_2018: Torne-o Seu
       CSD U6 tugowar final_2019: Torne-o Seu
-      CSD U6L01 TFMD: Visão geral da aula
       CSD U6L01 TFMD_2018: Visão geral da aula
-      CSD U6L01 TFMD_2019: Visão geral da aula
       CSD U6L02 TFMD: Visão geral da aula
       CSD U6L02 TFMD_2018: Visão geral da aula
-      CSD U6L02 TFMD_2019: Visão geral da aula
       CSD U6L03 TFMD: Visão geral da aula
       CSD U6L03 TFMD_2018: Visão geral da aula
       CSD U6L03 TFMD_2019: Visão geral da aula
@@ -653,13 +642,22 @@ pt-BR:
       CSS U2 Body Map: O elemento do corpo
       CSS U2 Body Map_2018: O elemento do corpo
       CSS U2 Body Map_2019: O elemento do corpo
+      'Course E: Artist Project': Curso E Projeto Artístico
+      'Course E: Artist Project_2018': Curso E Projeto Artístico
+      'Course E: Artist Project_2019': Curso E Projeto Artístico
+      'Course F: Artist Project - Revise_2018': Revisar Projeto Artista
       'Course F: Artist Project_2018': Curso F Projeto Artista
       'Course F: Artist Project_2019': Curso F Projeto Artista
       CourseEF_video_IntroSpriteLab: Este é o Laboratório de Sprites
       CourseEF_video_IntroSpriteLab_2019: Este é o Laboratório de Sprites
       CourseEF_video_MakeSprite: Como fazer um Sprite
       CourseEF_video_MakeSprite_2019: Como fazer um Sprite
+      CourseE_Project_SpriteLab: Projeto de Laboratório de Sprite do Curso E
+      CourseE_Project_SpriteLab_2019: Projeto de Laboratório de Sprite do Curso E
       CourseE_hoops: 'Coelho '
+      CourseF_Project_Revise_SpriteLab: Revisar o Projeto de Laboratório de Sprite
+      CourseF_Project_SpriteLab: Projeto de Laboratório de Sprite do Curso F
+      CourseF_Project_SpriteLab_2019: Projeto de Laboratório de Sprite do Curso F
       Dance_Party_extras_battle: Equipes de dança
       Dance_Party_extras_every_beat: Semínimas
       Dance_Party_extras_layout: Entrar em formação
@@ -679,6 +677,8 @@ pt-BR:
       Intro to Web Lab - Part 2_2019: 'Vídeo: Introdução ao Web Lab - Parte 2'
       Introduction to Variables - Part 1_2018: Introdução a Variáveis
       Introduction to Variables - Part 1_2019: Introdução a Variáveis
+      MC_HOC_2017_01_RETRY: Propriedade
+      MC_HOC_2017_01_RETRY_2019: Propriedade
       MC_HOC_2017_02_Cole: A Fazenda
       MC_HOC_2017_02_Cole_2019: A Fazenda
       MC_HOC_2017_03_Cole: As florestas
@@ -689,15 +689,26 @@ pt-BR:
       MC_HOC_2017_04_Cole_2019: O Pântano
       MC_HOC_2017_05_Cole: O Rio
       MC_HOC_2017_05_Cole_2019: O Rio
+      MC_HOC_2017_06_Cole: Maré alta
+      MC_HOC_2017_06_Cole_2019: Maré alta
+      MC_HOC_2017_07_Cole: Passagem nevada
+      MC_HOC_2017_07_Cole_2019: Passagem nevada
       MC_HOC_2017_10_RETRY: A Caverna
       MC_HOC_2017_10_RETRY_2019: A Caverna
+      MC_HOC_2017_Ali: A fortaleza Nether
+      MC_HOC_2017_Ali_2019: A fortaleza Nether
       MC_HOC_2017_FP20x20: Jogo livre
       MC_HOC_2017_FP20x20_2019: Jogo livre
       Making Music_2018: Fazendo Música
       Making Music_2019: Fazendo Música
       OPD-K5 WhatIsCS: O que é ciência da computação?
+      Revisiting the Counter Pattern_2018: Revisitando o Padrão do Contador
+      Revisiting the Counter Pattern_2019: Revisitando o Padrão do Contador
+      Robot Doodle_2018: Desenho de Robô
       The Accelerometer_2018: O Acelerômetro
       The Accelerometer_2019: O Acelerômetro
+      Using Accelerometer Events_2018: Usando eventos do acelerômetro
+      Using Accelerometer Events_2019: Usando eventos do acelerômetro
       'Video: Intro to CSS Part 2_2018': 'Vídeo: Introdução a CSS Parte 2'
       'Video: Intro to CSS Part 2_2019': 'Vídeo: Introdução a CSS Parte 2'
       'Video: Intro to CSS_2018': 'Vídeo: Introdução a CSS'
@@ -706,9 +717,18 @@ pt-BR:
       courseA_video_Stevie_2018: Stevie e o Grande Projeto
       courseB_video_Unspotted: Erros Não Reportados
       courseB_video_Unspotted_2018: Erros Não Reportados
+      courseE_Dogger_2: Exemplo do Cachorrinho
+      courseF_artist_for1: Atividade livre de laços para (Iniciando)
+      courseF_artist_for1_2018: Atividade livre de laços para (Iniciando)
+      courseF_artist_for1_2019: Atividade livre de laços para (Iniciando)
+      courseF_project_1: Projeto de Exemplo do Laboratório de Sprite
+      courseF_video_csMatters: Projetos de conclusão de curso
+      courseF_video_csMatters_2018: 'Vídeo: Ciência da Computação Importa'
       csd U3 conditional statements video: 'Vídeo: Declarações Condicionais'
       csd U3 conditional statements video_2019: 'Vídeo: Declarações Condicionais'
       csd u5 recommender sample: Aplicativo exemplo
       csd u5 recommender sample_2019: Aplicativo exemplo
       csd-pre-survey-2017-levelgroup_2018: Visão geral da aula
-      csd-pre-survey-2017-levelgroup_2018_2019: Visão geral da aula
+      csd-pre-survey-levelgroup_2019: Visão geral da aula
+      scrat_loops_C-F_video: Repetições no vídeo da Era do Gelo
+      scrat_loops_C-F_video_2019: Repetições no vídeo da Era do Gelo

@@ -49,7 +49,6 @@ class ScriptLevel < ActiveRecord::Base
   serialized_attrs %w(
     variants
     progression
-    target
     challenge
   )
 
@@ -138,7 +137,7 @@ class ScriptLevel < ActiveRecord::Base
       # next stage)
       level_to_follow = next_progression_level(user)
     else
-      # don't ever continue continue to a locked/hidden level
+      # don't ever continue to a locked/hidden level
       level_to_follow = next_level
       level_to_follow = level_to_follow.next_level while level_to_follow.try(:locked_or_hidden?, user)
     end
@@ -206,7 +205,11 @@ class ScriptLevel < ActiveRecord::Base
     # in the stage, which is an assessment. Thus, to answer the question of
     # whether the nth level is locked, we must look at the last level
     last_script_level = stage.script_levels.last
-    user_level = user.user_level_for(last_script_level, last_script_level.oldest_active_level)
+    user_level = UserLevel.find_by(
+      user: user,
+      script: last_script_level.script,
+      level: last_script_level.oldest_active_level
+    )
     # There will initially be no user_level for the assessment level, at which
     # point it is considered locked. As soon as it gets unlocked, we will always
     # have a user_level
@@ -237,7 +240,7 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def bubble_choice?
-    level.is_a? BubbleChoice
+    oldest_active_level.is_a? BubbleChoice
   end
 
   def name
@@ -315,6 +318,8 @@ class ScriptLevel < ActiveRecord::Base
       summary[:videoKey] = level.video_key
       summary[:concepts] = level.summarize_concepts
       summary[:conceptDifficulty] = level.summarize_concept_difficulty
+      summary[:assessment] = !!assessment
+      summary[:challenge] = !!challenge
     end
 
     if include_prev_next
@@ -445,6 +450,18 @@ class ScriptLevel < ActiveRecord::Base
     end
 
     teacher_panel_summary
+  end
+
+  def summary_for_feedback
+    lesson_num = stage.lockable ? stage.absolute_position : stage.relative_position
+
+    {
+      lessonName: stage.name,
+      lessonNum: lesson_num,
+      levelNum: position,
+      linkToLevel: path,
+      unitName: stage.script.localized_title
+    }
   end
 
   def self.cache_find(id)

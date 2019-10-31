@@ -458,8 +458,6 @@ ru-RU:
       courseD_scrat_ramp4:
         courseC_maze_programming4_1: Это твой предел блоков. Он говорит сколько таких
           блоков ты ещё можешь использовать.
-      courseD_scrat_ramp8:
-        courseE_artist_ramp8_1: Вы можете изменить это число.
       courseE_artist_functions1:
         courseD_artist_functions1_1: Давай начнём использовать этот блок, чтобы помочь
           создать первый квадрат.

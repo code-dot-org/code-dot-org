@@ -1,73 +1,762 @@
 ---
-ka:
+ka-GE:
   data:
-    external:
+    dsls:
+      2-3 Algorithms Multi 1:
+        title: მრავლობითი არჩევანი
+        questions:
+        - text: აირჩიეთ ნახატის შესამაბისი ალგორითმი.
+        answers:
+        - text: დაიწყეთ კვადრატით<br/>კვადრატის ზემოთ დასვით სამკუთხედი<br/>კვადრატის
+            ქვემოთ დასვით სამკუთხედი
+        - {}
+        - text: დაიწყეთ კვადრატით <br/>კვადრატის ზემოთ დასვით პარალელოგრამი<br/>პარალელოგრამის
+            მარჯვნივ დასვით სამკუთხედი
+        - text: დაიწყეთ კვადრატით<br/>კვადრატის ქვემოთ დასვით სამკუთხედი<br/> სამკუთხედის
+            მარჯვნივ დასვით პარალელოგრამი
+      2-3 Algorithms Multi 2:
+        title: მრავლობითი არჩევანი
+        content1: დაიწყეთ სამკუთხედით<br/>სამკუთხედის ქვეშ დასვით კვადრატი<br/>კვადრატის
+          ქვეშ დასვით კიდევ ერთი სამკუთხედი
+        questions:
+        - text: რომელი ნახატი <em>არ</em> შეესაბამება ამ ალგორითმს?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Big Event Match 1:
+        title: შესაბამისობა
+        content2: შეუსაბამეთ ღილაკების კომბინაციები ცეკვის მოძრაობებს.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Binary Match 1:
+        title: შესაბამისობა
+        content2: გამოიყენეთ ცხრილი და შეუსაბამეთ ერთმანეთს კოდი და ასო
+        questions:
+        - text: "<strong>N</strong>"
+        - text: "<strong>O</strong>"
+        - text: "<strong>P</strong>"
+        - text: "<strong>Q</strong>"
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Conditionals Multi 1:
+        title: მრავლობითი არჩევანი
+        questions:
+        - text: თამაშის წესების მიხედვით, კარტების რომელი დასტაა სწორად დათვლილი?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Getting Loopy Multi 1:
+        title: მრავლობითი არჩევანი
+        questions:
+        - text: როგორ გაამარტივებდით ამ თანმიმდევრობას ციკლების მეშვეობით?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Graph Paper Match 1:
+        title: შესაბამისობა
+        content1: შეუსაბამეთ ბადე პროგრამას.
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 Graph Paper Multi 1:
+        title: მრავლობითი არჩევანი
+        questions:
+        - text: რომელი პროგრამა ქმნის ამ სურათს?
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 Maze Match 2:
+        title: ლაბირინთი შესაბამისობა
+        content1: შეუსაბამეთ ბლოკები თავსატეხებს
+        pre_title: ინსტრუქციები
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 Maze Multi 2:
+        title: 'ლაბირინთი: მრავლობითი არჩევანი'
+        questions:
+        - text: ბლოკების რომელი ნაკრები მიმიყვანს ღორამდე?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Relay Programming Multi 1:
+        title: მრავლობითი არჩევანი
+        questions:
+        - text: რომელი პროგრამა **არ ქმნის** ამ სურათს?
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 Relay Programming Multi 2:
+        title: მრავლობითი არჩევანი
+        questions:
+        - text: რომელი სურათისა და პროგრამის წყვილი არ შეიცავს შეცდომებს?
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 artist debug multi 1:
+        title: 'მხატვარი, შეცდომების გასწორება: მრავლობითი არჩევანი 1'
+        questions:
+        - text: რა უნდა შეასწოროთ, რომ ეს წრე დაასრულოთ?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 artist functions multi 1:
+        title: 'მხატვარი, ფუნქციები: მრავლობითი არჩევანი 1'
+        questions:
+        - text: აირჩიეთ შესაბამისი ბლოკები, მოცემული ფუნქციების გამოყენებით ამ ნახატის
+            დასახატად
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 artist loops match 1:
+        title: 'მხატვარი: ციკლების შესაბამისობა 1'
+        content2: შეუსაბამე ფორმას ციკლი
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 artist loops multi 1:
+        title: 'მხატვარი, ციკლები: მრავლობითი არჩევანი'
+        questions:
+        - text: რომელი ფიგურაა შექმნილი ამ ციკლით?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 artist loops multi 2:
+        title: 'მხატვარი, ციკლები: მრავლობითი არჩევანი'
+        questions:
+        - text: რომელი ფიგურაა შექმნილი ამ პროგრამით?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 artist match 1:
+        title: 'მხატვარი: შესაბამისობა'
+        content1: შეუსაბამეთ ფორმა და ბლოკები, რომელიც მას ასრულებს.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 bee conditionals multi 1:
+        title: 'ფუტკარი, პირობითები: მრავლობითი არჩევანი 1'
+        questions:
+        - text: ქვემოთ მოყვანილი შედარებებიდან რომელია სწორი?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 bee conditionals multi 3:
+        title: 'ფუტკარი, პირობითები: მრავლობითი არჩევანი 2'
+        questions:
+        - text: აირჩიეთ საუკეთესო ბლოკები.
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 bee loops multi 1:
+        title: 'ფუტკარი, ციკლები: მრავლობითი არჩევანი 1'
+        questions:
+        - text: რომელი ბლოკები მოაგროვებენ მთელ ნექტარს?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 maze match 1:
+        title: 'ლაბირინთი: შესაბამისობა 1'
+        content1: შეუსაბამეთ ბლოკები თავსატეხებს
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 maze multi 1:
+        title: 'ლაბირინთი: მრავლობითი არჩევანი 1'
+        questions:
+        - text: ბლოკების რომელი ნაკრები წარმოადგენს სწორ პასუხს?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 Algorithms Match 1:
+        title: შესაბამისობა
+        content1: შეუსაბამეთ ნაბიჯები კამათლის თამაშში იმ თანმიმდევრობას, რომლის მიხედვითაც
+          ისინი ალგორითმში უნდა გამოჩდნენ.
+        questions:
+        - text: "<h4>1)</h4>"
+        - text: "<h4>2)</h4>"
+        - text: "<h4>3)</h4>"
+        - text: "<h4>4)</h4>"
+        answers:
+        - text: "<h4> დააყენეთ 1 მოთამაშის ქულა 0-ზე</h4>"
+        - text: "<h4>მოთამაშე 1 აგორებს კამათელს</h4>"
+        - text: "<h4>დაუმატე მოთამაშე 1-ის გაგორების შედეგი სართო ჯამს</h4>"
+        - text: "<h4>გამარჯვებულის გამოსავლენად შეადარეთ მოთამაშეების შედეგები</h4>"
+      4-5 Algorithms Multi 1:
+        title: მრავლობითი არჩევანი
+        questions:
+        - text: ამ ელემენტებიდან, რომლის ალგორითმის აღწერაა ყველაზე რთული?
+        answers:
+        - text: კბილების გახეხვა
+        - text: ორცხობილების გამოცხობა
+        - text: საყიდლები სიის მიხედვით
+        - text: ბანანი
+      4-5 Computational Thinking Match 1:
+        title: შესაბამისობა
+        content1: ყველა ეს სატრანსპორტო საშუალება პატარა ნაწილებად დაშალეს. დაუკავშირეთ
+          ყოველი ტრანსპორტი მისი ნაწილების სიას.
+        questions:
+        - text: "<h3>ბორბლები/მხარე: 2<br/> ფანჯრები/ მხარე: 0</h3>"
+        - text: "<h3>ბორბლები/მხარე: 2<br/> ფანჯრები/მხარე: 1</h3>"
+        - text: "<h3>ბორბლები/მხარე: 2<br/>ფანჯრები/ მხარე: 6</h3>"
+        - text: "<h3>ბორბლები/მხარე: 3<br/>ფანჯრები/მხარე: 2</h3>"
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 Computational Thinking Multi 1:
+        title: მრავლობითი არჩევანი
+        questions:
+        - text: სიეტლი დიდი ქალაქია.<br/>ეუგენი არის საშუალო ქალაქი<br/>ჰილვიუ პატარა
+            ქალაქია.
+        answers:
+        - text: სიეტლი _____ _____ _____.
+        - text: _____ არის _____ ქალაქი.
+        - text: _____ არის _____ _____.
+        - text: ეუგენი არის _____ ქალაქი.
+      4-5 Crowdsourcing Multi 1:
+        title: მრავლობითი არჩევანი
+        questions:
+        - text: ამ სურათებიდან რომელი ასახავს ქრაუდსორსინგს ყველაზე კარგად?
+        answers:
+        - {}
+        - {}
+      4-5 Crowdsourcing Multi 2:
+        title: მრავლობითი არჩევანი
+        questions:
+        - text: ამ აქტივობებიდან, რომელი იქნებოდა საუკეთესო ქრაუდსორსინგის გამოსაყენებლად?
+        answers:
+        - text: ოთახის დალაგება
+        - text: დესერტის მირთმევა
+        - text: თმის დავარცხნა
+        - text: სახის დაბანა
+      4-5 Digital Footprint Multi 1:
+        title: მრავლობითი არჩევანი
+        questions:
+        - text: ქვემოთ ჩამოთვლილი ინფორმაციიდან, ინტერნეტში რომლის გაზიარებაა მისაღები?
+        answers:
+        - text: დაბადების თარიღი
+        - text: თქვენი საყვარელი საჭმელი
+        - text: თქვენი მისამართი
+        - text: მშობლების საკრედიტო ბარათის ნომერი
+      4-5 Internet Multi 1:
+        title: მრავლობითი არჩევანი
+        questions:
+        - text: რომელ IP მისამართზე გადაგიყვანთ DNS-ი ყველაზე დიდი ალბათობით, როცა
+            code.org-ზე შედიხართ?
+        answers:
+        - text: 23.23.224.106
+        - text: 54.209.61.132
+        - text: 64.14.68.10
+        - text: 54.243.71.82
+      4-5 Internet Multi 2:
+        title: მრავლობითი არჩევანი
+        questions:
+        - text: თუ DNS-ი გაგზავნით გვერდზე IP მისამართით 100.42.50.110, რომელ ვებ-საიტზე
+            იმყოფებით?
+        answers:
+        - text: code.org
+        - text: csisfun.com
+        - text: thinkersmith.org
+        - text: khanacademy.org
+      4-5 Songwriting Multi 1:
+        title: მრავლობითი არჩევანი
+        questions:
+        - {}
+        answers:
+        - text: ლუ, ლუ, გადახტი ჩემს სიყვარულზე,
+        - text: ლუ, ლუ, გადახტი ჩემს სიყვარულზე, <br/>ლუ, ლუ, გადახტი ჩემს სიყვარულზე,
+            <br/>ლუ, ლუ, გადახტი ჩემს სიყვარულზე, <br/>გადახტი ძვირფასო.
+        - {}
+        - {}
+      4-5 Suncatchers Match 1:
+        title: შესაბამისობა
+        content1: შეუსაბამეთ ყოველი პროგრამა სიტყვას, რომელსაც იგი ქმნის, უნარების
+          ჯგუფების გამოყენებით.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - text: "<h4>STACK</h4>"
+        - text: "<h4>STAMP</h4>"
+        - text: "<h4>STAR</h4>"
+        - text: "<h4>RAMP</h4>"
+      4-5 Suncatchers Multi 1:
+        title: მრავლობითი არჩევანი
+        questions:
+        - text: რომელი პროგრამა <em>არ</em> ქმნის იგივე თანმიმდევრობას რაც პროგრამა
+            1?
+        answers:
+        - {}
+        - {}
+        - {}
+      4-5 artist loops multi 1:
+        title: 'მხატვარი, ციკლები: მრავლობითი არჩევანი'
+        questions:
+        - text: რომელი ბლოკები ქმნიან ასეთ დიზაინს?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 artist multi 1:
+        title: 'მხატვარი: მრავლობითი არჩევანი'
+        questions:
+        - text: რომელი ბლოკები ხატავენ მართკუთხედს პერიმეტრით 100?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 artist multi 2:
+        title: 'მხატვარი: მრავლობითი არჩევანი'
+        questions:
+        - text: რომელი ნახატია სიმეტრიული?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 bee conditionals multi 1:
+        title: 'ფუტკარი, პირობითები: მრავლობითი არჩევანი'
+        questions:
+        - text: აირჩიეთ საუკეთესო ბლოკები.
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 bee debug multi 1:
+        title: 'ფუტკარი, შეცდომების გასწორება: მრავლობითი არჩევანი'
+        questions:
+        - text: ფუნქციის რომელი ვერსია იმუშავებს?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 bee loops multi 1:
+        title: 'ფუტკარი, ციკლები: მრავლობითი არჩევანი'
+        questions:
+        - text: რომელი ბლოკები ამოხსნის თავსატეხს?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 maze conditionals multi 1:
+        title: 'ლაბირინთი, პირობითები: მრავლობითი არჩევანი'
+        questions:
+        - text: რომელი ბლოკებით ამოიხსნება თავსატეხი?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 maze match 1:
+        title: ლაბირინთი შესაბამისობა
+        content1: შეუსაბამეთ ბლოკები თავსატეხებს
+        pre_title: ინსტრუქციები
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      4-5 maze multi 1:
+        title: 'ლაბირინთი: მრავლობითი არჩევანი'
+        questions:
+        - text: რომელი ბლოკებით ამოიხსნება თავსატეხი?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       Begin planning your project:
-        content1: მიუთითეთ აღწერა
         title: დასახელება
+        content1: მიუთითეთ აღწერა
       Begin planning your project_2018:
-        content1: მიუთითეთ აღწერა
         title: დაიწწყეთ პროექტის დაგეგმვა
+        content1: მიუთითეთ აღწერა
       Begin planning your project_2018_2019:
-        content1: მიუთითეთ აღწერა
         title: დაიწწყეთ პროექტის დაგეგმვა
+        content1: მიუთითეთ აღწერა
+      CSD Header Size MC:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD Header Size MC_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD Header Size MC_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U2 Design Project:
-        content1: მიუთითეთ აღწერა
         title: დასახელება
+        content1: მიუთითეთ აღწერა
       CSD U2 Design Project_2018:
-        content1: მიუთითეთ აღწერა
         title: დასახელება
+        content1: მიუთითეთ აღწერა
       CSD U2 Design Project_2018_2019:
-        content1: მიუთითეთ აღწერა
         title: დასახელება
-      CSD U2 L1 Overview:
         content1: მიუთითეთ აღწერა
-        title: დასახელება
       CSD U2 L2 Overview:
-        content1: მიუთითეთ აღწერა
         title: დასახელება
+        content1: მიუთითეთ აღწერა
       CSD U2 L3 Overview:
-        content1: მიუთითეთ აღწერა
         title: დასახელება
+        content1: მიუთითეთ აღწერა
       CSD U2 L4 Overview:
-        content1: მიუთითეთ აღწერა
         title: დასახელება
+        content1: მიუთითეთ აღწერა
       CSD U2 L5 Overview:
-        content1: მიუთითეთ აღწერა
         title: დასახელება
+        content1: მიუთითეთ აღწერა
       CSD U2 L6 Overview:
-        content1: მიუთითეთ აღწერა
         title: დასახელება
+        content1: მიუთითეთ აღწერა
       CSD U2 Lesson 6 Overview:
         content1: მიუთითეთ აღწერა
       CSD U2 expand project:
-        content1: მიუთითეთ აღწერა
         title: დასახელება
+        content1: მიუთითეთ აღწერა
       CSD U2 expand project_2018:
-        content1: მიუთითეთ აღწერა
         title: დასახელება
+        content1: მიუთითეთ აღწერა
       CSD U2 expand project_2018_2019:
-        content1: მიუთითეთ აღწერა
         title: დასახელება
+        content1: მიუთითეთ აღწერა
+      CSD U2 image debug match:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 lists match:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 lists match_2018:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 lists match_2018_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U2 project guide:
         content1: მიუთითეთ აღწერა
       CSD U2 project guide_2018:
         content1: მიუთითეთ აღწერა
       CSD U2 project guide_2018_2019:
         content1: მიუთითეთ აღწერა
+      CSD U3 - conditionals - Matching:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 - conditionals - Matching_2018:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 - conditionals - Matching_2018_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC:
+        title: დასახელება
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018:
+        title: დასახელება
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018_2019:
+        title: დასახელება
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U3 Card Examples_2018:
         content1: მიუთითეთ აღწერა
       CSD U3 Card Examples_2018_2019:
         content1: მიუთითეთ აღწერა
+      CSD U3 Functions Prediction define first:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Functions Prediction define first_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Functions Prediction define first_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Keypress Matching:
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      CSD U3 Keypress Matching_2018:
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      CSD U3 Keypress Matching_2018_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprite Movement Predict Multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprites intro predict multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprites intro predict multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprites intro predict multi_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U3 combining rep:
-        content1: მიუთითეთ აღწერა
         title: დასახელება
+        content1: მიუთითეთ აღწერა
       CSD U3 combining rep_2018:
-        content1: მიუთითეთ აღწერა
         title: დასახელება
+        content1: მიუთითეთ აღწერა
       CSD U3 combining rep_2018_2019:
-        content1: მიუთითეთ აღწერა
         title: დასახელება
+        content1: მიუთითეთ აღწერა
+      CSD U3 drawSprites placement match:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 drawSprites placement match_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U3 game intro:
         content1: მიუთითეთ აღწერა
       CSD U3 game intro_2018:
@@ -81,14 +770,14 @@ ka:
       CSD U3 platform intro_2018_2019:
         content1: მიუთითეთ აღწერა
       CSD U5 Encryption 1:
-        content1: მიუთითეთ აღწერა
         title: დასახელება
+        content1: მიუთითეთ აღწერა
       CSD U5 Encryption 1_2018:
-        content1: მიუთითეთ აღწერა
         title: დასახელება
+        content1: მიუთითეთ აღწერა
       CSD U5 Encryption 1_2018_2019:
-        content1: მიუთითეთ აღწერა
         title: დასახელება
+        content1: მიუთითეთ აღწერა
       CSD U5 Encryption 2:
         content1: მიუთითეთ აღწერა
       CSD U5 Encryption 2_2018:
@@ -96,8 +785,8 @@ ka:
       CSD U5 Encryption 2_2018_2019:
         content1: მიუთითეთ აღწერა
       CSD U5 L13 SFLP Interpreting Data:
-        content1: მიუთითეთ აღწერა
         title: დასახელება
+        content1: მიუთითეთ აღწერა
       CSD U5 crosstab warmup:
         content1: მიუთითეთ აღწერა
       CSD U5 crosstab warmup_2018:
@@ -105,1375 +794,1041 @@ ka:
       CSD U5 crosstab warmup_2018_2019:
         content1: მიუთითეთ აღწერა
       CSD U5 data visualization:
-        content1: მიუთითეთ აღწერა
         title: დასახელება
+        content1: მიუთითეთ აღწერა
       CSD U5 data visualization_2018:
-        content1: მიუთითეთ აღწერა
         title: დასახელება
+        content1: მიუთითეთ აღწერა
       CSD U5 data visualization_2018_2019:
-        content1: მიუთითეთ აღწერა
         title: დასახელება
+        content1: მიუთითეთ აღწერა
       CSD U5 student record:
-        content1: მიუთითეთ აღწერა
         title: დასახელება
+        content1: მიუთითეთ აღწერა
       CSD U5 student record_2018:
-        content1: მიუთითეთ აღწერა
         title: დასახელება
+        content1: მიუთითეთ აღწერა
       CSD U5 student record_2018_2019:
-        content1: მიუთითეთ აღწერა
         title: დასახელება
+        content1: მიუთითეთ აღწერა
       CSD U6 LED create intro:
         content1: მიუთითეთ აღწერა
       CSD U6 LED create intro_2018:
         content1: მიუთითეთ აღწერა
       CSD U6 LED create intro_2018_2019:
         content1: მიუთითეთ აღწერა
+      CSD U6 array multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U6 array multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U6 array multi_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U6 final intro:
         content1: მიუთითეთ აღწერა
       CSD U6 final intro_2018:
         content1: მიუთითეთ აღწერა
       CSD U6 final intro_2018_2019:
         content1: მიუთითეთ აღწერა
+      CSD U6 setProperty predict multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U6 setProperty predict multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       Internet Simulator Setup:
         content1: მიუთითეთ აღწერა
       Internet Simulator Setup 2:
-        content1: მიუთითეთ აღწერა
         title: დასახელება
+        content1: მიუთითეთ აღწერა
       Internet Simulator Setup 3:
         content1: მიუთითეთ აღწერა
+      K-1 Artist 1 Multi 1:
+        title: მრავლობითი არჩევანი
+        questions:
+        - text: რომელი ბლოკებით ამოიხსნება ეს თავსატეხი?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Artist 1 Multi 2:
+        title: მრავლობითი არჩევანი
+        questions:
+        - text: რომელი ბლოკებით იხატება კვადრატი?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Artist 2 Match 2:
+        title: შესაბამისობა
+        content2: დააკავშირეთ ფიგურები ტიპის მიხედვით.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Bee 1 Multi 1:
+        title: მრავლობითი არჩევანი
+        questions:
+        - text: რამდენი პორცია ნექტარია აქ?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Bee 1 Multi 2:
+        title: მრავლობითი არჩევანი
+        questions:
+        - text: რამდენი პორცია ნექტარია აქ?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Bee Loops Match 1:
+        title: შესაბამისობა
+        content2: ბლოკების დაკავშირება
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Big Event Match 1:
+        title: შესაბამისობა
+        content2: შეუსაბამეთ ღილაკების კომბინაციები ცეკვის მოძრაობებს.
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Digital Footprint Multi 1:
+        title: მრავლობითი არჩევანი
+        questions:
+        - text: რომელ ცხოველს ეკუთვნის ციფრული კვალი, რომლის გამოც ის <strong>ყველაზე
+            დიდ საფრთხეშია</strong>?
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Getting Loopy Multi 1:
+        title: მრავლობითი არჩევანი
+        questions:
+        - text: როგორ გაამარტივებდით ამ თანმიმდევრობას ციკლების მეშვეობით?
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Happy Maps Multi 1:
+        title: მრავლობითი არჩევანი
+        questions:
+        - text: რომელი ისარი მიიყვანს ფლარბის განძამდე?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Keep it Private Multi 1:
+        title: მრავლობითი არჩევანი
+        questions:
+        - text: რომელი ინფორმაცია <strong>არ</strong> უნდა გააზიაროთ ონლაინ?
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Maze Debugging Multi 1:
+        title: მრავლობითი არჩევანი
+        questions:
+        - text: რომელი ბლოკი უნდა იყოს ბოლო?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Maze Loops Multi 1:
+        title: მრავლობითი არჩევანი
+        questions:
+        - text: Which repeat block is the same?
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Maze Loops Multi 2:
+        title: მრავლობითი არჩევანი
+        questions:
+        - text: აირჩიეთ გამეორების სწორი ბლოკი.
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Maze Match 1:
+        title: შესაბამისობა
+        content2: დააკავშირეთ თავსატეხები და ბლოკები
+        pre_title: ინსტრუქციები
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Maze Multiple Choice 2:
+        title: ლაბირინთი
+        questions:
+        - text: რომელი პასუხი ამოხსნის ამ დონეს?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Move It Multi 1:
+        title: მრავლობითი არჩევანი
+        questions:
+        - text: რომელი ალგორითმი მიიყვანს ფლარბის ყვავილებამდე?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Plant a Seed Multi 1:
+        title: მრავლობითი არჩევანი
+        questions:
+        - text: რომელი ნაბიჯი უნდა გადავიდეს ამ ალგორითმში პირველ ადგილზე?
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Plant a Seed Multi 2:
+        title: მრავლობითი არჩევანი
+        questions:
+        - text: რომელი ნაბიჯი უნდა ჩაისვას ამ ალგორითმში გამოტოვებულ ადგილზე?
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Word Search Multi 1:
+        title: მრავლობითი არჩევანი
+        questions:
+        - text: რომელი ბლოკი ჰყოფს სიტყვას "MOVE" ასო-ასო?
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Word Search Multi 3:
+        title: მრავლობითი არჩევანი
+        questions:
+        - text: რომელი სიტყვაა ჩაწერილი?
+        answers:
+        - text: SET
+        - text: SQUARE
+        - text: SOUTH
       Multi-Screen Apps:
-        content1: მიუთითეთ აღწერა
         title: დასახელება
+        content1: მიუთითეთ აღწერა
       New Challenge Introduction:
-        content1: მიუთითეთ აღწერა
         title: დასახელება
+        content1: მიუთითეთ აღწერა
       OPD-K5 Stage3aGo:
-        content1: მიუთითეთ აღწერა
         title: დასახელება
+        content1: მიუთითეთ აღწერა
       Prepare for your presentation:
-        content1: მიუთითეთ აღწერა
         title: დასახელება
+        content1: მიუთითეთ აღწერა
       Prepare for your presentation_2018:
         title: მოამზადეთ თქვენი პრეზენტაცია
       'Technique: Frequency Analysis':
         content1: მიუთითეთ აღწერა
       Terminology Recap:
         content1: მიუთითეთ აღწერა
+      behaviors 1 predict:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - feedback: არასწორია
+      behaviors 4 predict:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - feedback: არასწორია
+      courseC_multi_artist_prog6_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseC_multi_artist_prog6_predict1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseC_multi_artist_prog6_predict1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseC_multi_harvester_loops11_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseC_multi_harvester_loops11_predict1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseC_multi_harvester_loops11_predict1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseC_multi_maze_debugging8_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseC_multi_maze_debugging8_predict1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseC_multi_maze_debugging8_predict1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseC_multi_maze_programming8_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseC_multi_maze_programming8_predict1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseC_multi_maze_programming8_predict1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseC_multi_starWars_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - text: არ ვიცი
+      courseC_multi_starWars_predict1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - text: არ ვიცი
+      courseC_multi_starWars_predict1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - text: არ ვიცი
+      courseC_multi_starWars_predict2:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseC_multi_starWars_predict2_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseC_multi_starWars_predict2_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_external_binary1:
         title: ორობითი ხატვა
       courseD_external_binary1_2018:
         title: ორობითი ხატვა
       courseD_external_binary1_2018_2019:
         title: ორობითი ხატვა
+      courseD_multi_artist_binary8_predict1:
+        questions:
+        - {}
+        answers:
+        - text: ა
+        - text: ბ
+        - text: გ
+        - text: დ
+      courseD_multi_artist_binary8_predict1_2018:
+        questions:
+        - {}
+        answers:
+        - text: ა
+        - text: ბ
+        - text: გ
+        - text: დ
+      courseD_multi_artist_binary8_predict1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - text: ა
+        - text: ბ
+        - text: გ
+        - text: დ
+      courseD_multi_artist_nestedLoops9_predict1:
+        questions:
+        - {}
+        answers:
+        - text: ა
+        - text: ბ
+        - text: გ
+        - {}
+      courseD_multi_artist_nestedLoops9_predict1_2018:
+        questions:
+        - {}
+        answers:
+        - text: ა
+        - text: ბ
+        - text: გ
+        - {}
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - text: ა
+        - text: ბ
+        - text: გ
+        - {}
+      courseD_multi_bee_conditionals1_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_bee_conditionals7_predict2:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_bee_conditionals7_predict2_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_bee_conditionals7_predict2_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_bee_nestedLoops9_predict2:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_bee_nestedLoops9_predict2_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_collector_debugging10_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_farmer_condLoops9_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_farmer_condLoops9_predict1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_farmer_condLoops9_predict1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_farmer_ramp13:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_farmer_while10_predict2:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_farmer_while10_predict2_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_farmer_while10_predict2_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_farmer_while4_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_farmer_while4_predict1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_farmer_while4_predict1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_maze_until10_predict2:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_maze_until10_predict2_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_maze_until10_predict2_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_maze_until2_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_maze_until2_predict1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_maze_until2_predict1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_scrat_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseE_multi_bee_functions_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseE_multi_farmer_functions11_predict:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseE_multi_farmer_functions11_predict_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseE_multi_farmer_functions11_predict_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseE_prediction_artistFunction1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseE_prediction_artistFunction1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseE_prediction_artistFunction1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_project_exemplars_2019:
-        content1: ტესტის გაფორმების სახელმძღვანელოს გვერდი
         title: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+        content1: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+      courseF_bee_variables_8a_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseF_bee_variables_8a_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_markdown_algorithms_end:
-        content1: ტესტის გაფორმების სახელმძღვანელოს გვერდი
         title: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+        content1: ტესტის გაფორმების სახელმძღვანელოს გვერდი
       courseF_markdown_algorithms_intro:
-        content1: ტესტის გაფორმების სახელმძღვანელოს გვერდი
         title: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+        content1: ტესტის გაფორმების სახელმძღვანელოს გვერდი
       courseF_markdown_conditionals_end:
-        content1: ტესტის გაფორმების სახელმძღვანელოს გვერდი
         title: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+        content1: ტესტის გაფორმების სახელმძღვანელოს გვერდი
       courseF_markdown_conditionals_intro:
-        content1: ტესტის გაფორმების სახელმძღვანელოს გვერდი
         title: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+        content1: ტესტის გაფორმების სახელმძღვანელოს გვერდი
       courseF_markdown_debugging_end:
-        content1: ტესტის გაფორმების სახელმძღვანელოს გვერდი
         title: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+        content1: ტესტის გაფორმების სახელმძღვანელოს გვერდი
       courseF_markdown_debugging_intro:
-        content1: ტესტის გაფორმების სახელმძღვანელოს გვერდი
         title: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+        content1: ტესტის გაფორმების სახელმძღვანელოს გვერდი
       courseF_markdown_forloops_end:
-        content1: ტესტის გაფორმების სახელმძღვანელოს გვერდი
         title: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+        content1: ტესტის გაფორმების სახელმძღვანელოს გვერდი
       courseF_markdown_forloops_end_2019:
-        content1: ტესტის გაფორმების სახელმძღვანელოს გვერდი
         title: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+        content1: ტესტის გაფორმების სახელმძღვანელოს გვერდი
       courseF_markdown_forloops_intro:
-        content1: ტესტის გაფორმების სახელმძღვანელოს გვერდი
         title: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+        content1: ტესტის გაფორმების სახელმძღვანელოს გვერდი
       courseF_markdown_forloops_intro_2019:
-        content1: ტესტის გაფორმების სახელმძღვანელოს გვერდი
         title: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+        content1: ტესტის გაფორმების სახელმძღვანელოს გვერდი
       courseF_markdown_loops_end:
-        content1: ტესტის გაფორმების სახელმძღვანელოს გვერდი
         title: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+        content1: ტესტის გაფორმების სახელმძღვანელოს გვერდი
       courseF_markdown_loops_intro:
-        content1: ტესტის გაფორმების სახელმძღვანელოს გვერდი
         title: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+        content1: ტესტის გაფორმების სახელმძღვანელოს გვერდი
       courseF_markdown_nestedloops_end:
-        content1: ტესტის გაფორმების სახელმძღვანელოს გვერდი
         title: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+        content1: ტესტის გაფორმების სახელმძღვანელოს გვერდი
       courseF_markdown_nestedloops_intro:
-        content1: ტესტის გაფორმების სახელმძღვანელოს გვერდი
         title: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+        content1: ტესტის გაფორმების სახელმძღვანელოს გვერდი
       courseF_markdown_variables_end:
-        content1: ტესტის გაფორმების სახელმძღვანელოს გვერდი
         title: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+        content1: ტესტის გაფორმების სახელმძღვანელოს გვერდი
       courseF_markdown_variables_end_2019:
-        content1: ტესტის გაფორმების სახელმძღვანელოს გვერდი
         title: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+        content1: ტესტის გაფორმების სახელმძღვანელოს გვერდი
       courseF_markdown_variables_intro:
-        content1: ტესტის გაფორმების სახელმძღვანელოს გვერდი
         title: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+        content1: ტესტის გაფორმების სახელმძღვანელოს გვერდი
       courseF_markdown_variables_intro_2019:
-        content1: ტესტის გაფორმების სახელმძღვანელოს გვერდი
         title: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+        content1: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+      courseF_multi_artist_for10_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseF_multi_artist_for10_predict1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseF_multi_artist_for10_predict1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseF_multi_artist_fwp2_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseF_multi_artist_variables3a_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseF_multi_artist_variables3a_predict1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseF_multi_artist_variables3a_predict1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseF_multi_bee_conditionals1_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseF_multi_bee_conditionals7_predict2:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseF_multi_bee_for3_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseF_multi_bee_for3_predict1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseF_multi_bee_for3_predict1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseF_multi_bee_fwp9_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseF_multi_playlab_variables4c_predictive1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_project_exemplars_2019:
-        content1: ტესტის გაფორმების სახელმძღვანელოს გვერდი
         title: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+        content1: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+      coursee_prediction_artistfunction2:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      coursee_prediction_artistfunction2_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      coursee_prediction_artistfunction2_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      grade2_multi_collector_A_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      grade2_multi_collector_A_predict1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      grade2_multi_collector_A_predict1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       gradek1_activity_beNice:
         title: კომპიუტერი შენი მეგობარია
-    match:
-      2-3 Big Event Match 1:
-        content2: შეუსაბამეთ ღილაკების კომბინაციები ცეკვის მოძრაობებს.
-        title: შესაბამისობა
-      2-3 Binary Match 1:
-        content2: გამოიყენეთ ცხრილი და შეუსაბამეთ ერთმანეთს კოდი და ასო
-        questions:
-        - text: "<strong>N</strong>"
-        - text: "<strong>O</strong>"
-        - text: "<strong>P</strong>"
-        - text: "<strong>Q</strong>"
-        title: შესაბამისობა
-      2-3 Graph Paper Match 1:
-        content1: შეუსაბამეთ ბადე პროგრამას.
-        title: შესაბამისობა
-      2-3 Maze Match 2:
-        content1: შეუსაბამეთ ბლოკები თავსატეხებს
-        pre_title: ინსტრუქციები
-        title: ლაბირინთი შესაბამისობა
-      2-3 artist loops match 1:
-        content2: შეუსაბამე ფორმას ციკლი
-        title: 'მხატვარი: ციკლების შესაბამისობა 1'
-      2-3 artist match 1:
-        content1: შეუსაბამეთ ფორმა და ბლოკები, რომელიც მას ასრულებს.
-        title: 'მხატვარი: შესაბამისობა'
-      2-3 maze match 1:
-        content1: შეუსაბამეთ ბლოკები თავსატეხებს
-        title: 'ლაბირინთი: შესაბამისობა 1'
-      4-5 Algorithms Match 1:
-        answers:
-        - text: "<h4> დააყენეთ 1 მოთამაშის ქულა 0-ზე</h4>"
-        - text: "<h4>მოთამაშე 1 აგორებს კამათელს</h4>"
-        - text: "<h4>დაუმატე მოთამაშე 1-ის გაგორების შედეგი სართო ჯამს</h4>"
-        - text: "<h4>გამარჯვებულის გამოსავლენად შეადარეთ მოთამაშეების შედეგები</h4>"
-        content1: შეუსაბამეთ ნაბიჯები კამათლის თამაშში იმ თანმიმდევრობას, რომლის მიხედვითაც
-          ისინი ალგორითმში უნდა გამოჩდნენ.
-        questions:
-        - text: "<h4>1)</h4>"
-        - text: "<h4>2)</h4>"
-        - text: "<h4>3)</h4>"
-        - text: "<h4>4)</h4>"
-        title: შესაბამისობა
-      4-5 Computational Thinking Match 1:
-        content1: ყველა ეს სატრანსპორტო საშუალება პატარა ნაწილებად დაშალეს. დაუკავშირეთ
-          ყოველი ტრანსპორტი მისი ნაწილების სიას.
-        questions:
-        - text: "<h3>ბორბლები/მხარე: 2<br/> ფანჯრები/ მხარე: 0</h3>"
-        - text: "<h3>ბორბლები/მხარე: 2<br/> ფანჯრები/მხარე: 1</h3>"
-        - text: "<h3>ბორბლები/მხარე: 2<br/>ფანჯრები/ მხარე: 6</h3>"
-        - text: "<h3>ბორბლები/მხარე: 3<br/>ფანჯრები/მხარე: 2</h3>"
-        title: შესაბამისობა
-      4-5 Suncatchers Match 1:
-        answers:
-        - text: "<h4>STACK</h4>"
-        - text: "<h4>STAMP</h4>"
-        - text: "<h4>STAR</h4>"
-        - text: "<h4>RAMP</h4>"
-        content1: შეუსაბამეთ ყოველი პროგრამა სიტყვას, რომელსაც იგი ქმნის, უნარების
-          ჯგუფების გამოყენებით.
-        title: შესაბამისობა
-      4-5 maze match 1:
-        content1: შეუსაბამეთ ბლოკები თავსატეხებს
-        pre_title: ინსტრუქციები
-        title: ლაბირინთი შესაბამისობა
-      K-1 Artist 2 Match 2:
-        content2: დააკავშირეთ ფიგურები ტიპის მიხედვით.
-        title: შესაბამისობა
-      K-1 Bee Loops Match 1:
-        content2: ბლოკების დაკავშირება
-        title: შესაბამისობა
-      K-1 Big Event Match 1:
-        content2: შეუსაბამეთ ღილაკების კომბინაციები ცეკვის მოძრაობებს.
-        title: შესაბამისობა
-      K-1 Maze Match 1:
-        content2: დააკავშირეთ თავსატეხები და ბლოკები
-        pre_title: ინსტრუქციები
-        title: შესაბამისობა
-    multi:
-      2-3 Algorithms Multi 1:
-        answers:
-        - text: დაიწყეთ კვადრატით<br/>კვადრატის ზემოთ დასვით სამკუთხედი<br/>კვადრატის
-            ქვემოთ დასვით სამკუთხედი
-          correct: false
-        - correct: true
-        - text: დაიწყეთ კვადრატით <br/>კვადრატის ზემოთ დასვით პარალელოგრამი<br/>პარალელოგრამის
-            მარჯვნივ დასვით სამკუთხედი
-          correct: false
-        - text: დაიწყეთ კვადრატით<br/>კვადრატის ქვემოთ დასვით სამკუთხედი<br/> სამკუთხედის
-            მარჯვნივ დასვით პარალელოგრამი
-          correct: false
-        questions:
-        - text: აირჩიეთ ნახატის შესამაბისი ალგორითმი.
-        title: მრავლობითი არჩევანი
-      2-3 Algorithms Multi 2:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        content1: დაიწყეთ სამკუთხედით<br/>სამკუთხედის ქვეშ დასვით კვადრატი<br/>კვადრატის
-          ქვეშ დასვით კიდევ ერთი სამკუთხედი
-        questions:
-        - text: რომელი ნახატი <em>არ</em> შეესაბამება ამ ალგორითმს?
-        title: მრავლობითი არჩევანი
-      2-3 Conditionals Multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: თამაშის წესების მიხედვით, კარტების რომელი დასტაა სწორად დათვლილი?
-        title: მრავლობითი არჩევანი
-      2-3 Getting Loopy Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: როგორ გაამარტივებდით ამ თანმიმდევრობას ციკლების მეშვეობით?
-        title: მრავლობითი არჩევანი
-      2-3 Graph Paper Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: რომელი პროგრამა ქმნის ამ სურათს?
-        title: მრავლობითი არჩევანი
-      2-3 Maze Multi 2:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: ბლოკების რომელი ნაკრები მიმიყვანს ღორამდე?
-        title: 'ლაბირინთი: მრავლობითი არჩევანი'
-      2-3 Relay Programming Multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: რომელი პროგრამა **არ ქმნის** ამ სურათს?
-        title: მრავლობითი არჩევანი
-      2-3 Relay Programming Multi 2:
-        answers:
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: რომელი სურათისა და პროგრამის წყვილი არ შეიცავს შეცდომებს?
-        title: მრავლობითი არჩევანი
-      2-3 artist debug multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: რა უნდა შეასწოროთ, რომ ეს წრე დაასრულოთ?
-        title: 'მხატვარი, შეცდომების გასწორება: მრავლობითი არჩევანი 1'
-      2-3 artist functions multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: აირჩიეთ შესაბამისი ბლოკები, მოცემული ფუნქციების გამოყენებით ამ ნახატის
-            დასახატად
-        title: 'მხატვარი, ფუნქციები: მრავლობითი არჩევანი 1'
-      2-3 artist loops multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: რომელი ფიგურაა შექმნილი ამ ციკლით?
-        title: 'მხატვარი, ციკლები: მრავლობითი არჩევანი'
-      2-3 artist loops multi 2:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: რომელი ფიგურაა შექმნილი ამ პროგრამით?
-        title: 'მხატვარი, ციკლები: მრავლობითი არჩევანი'
-      2-3 bee conditionals multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: ქვემოთ მოყვანილი შედარებებიდან რომელია სწორი?
-        title: 'ფუტკარი, პირობითები: მრავლობითი არჩევანი 1'
-      2-3 bee conditionals multi 3:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: აირჩიეთ საუკეთესო ბლოკები.
-        title: 'ფუტკარი, პირობითები: მრავლობითი არჩევანი 2'
-      2-3 bee loops multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: რომელი ბლოკები მოაგროვებენ მთელ ნექტარს?
-        title: 'ფუტკარი, ციკლები: მრავლობითი არჩევანი 1'
-      2-3 maze multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: ბლოკების რომელი ნაკრები წარმოადგენს სწორ პასუხს?
-        title: 'ლაბირინთი: მრავლობითი არჩევანი 1'
-      4-5 Algorithms Multi 1:
-        answers:
-        - text: კბილების გახეხვა
-          correct: false
-        - text: ორცხობილების გამოცხობა
-          correct: false
-        - text: საყიდლები სიის მიხედვით
-          correct: false
-        - text: ბანანი
-          correct: true
-        questions:
-        - text: ამ ელემენტებიდან, რომლის ალგორითმის აღწერაა ყველაზე რთული?
-        title: მრავლობითი არჩევანი
-      4-5 Computational Thinking Multi 1:
-        answers:
-        - text: სიეტლი _____ _____ _____.
-          correct: false
-        - text: _____ არის _____ ქალაქი.
-          correct: true
-        - text: _____ არის _____ _____.
-          correct: false
-        - text: ეუგენი არის _____ ქალაქი.
-          correct: false
-        questions:
-        - text: სიეტლი დიდი ქალაქია.<br/>ეუგენი არის საშუალო ქალაქი<br/>ჰილვიუ პატარა
-            ქალაქია.
-        title: მრავლობითი არჩევანი
-      4-5 Crowdsourcing Multi 1:
-        answers:
-        - 
-        - correct: true
-        questions:
-        - text: ამ სურათებიდან რომელი ასახავს ქრაუდსორსინგს ყველაზე კარგად?
-        title: მრავლობითი არჩევანი
-      4-5 Crowdsourcing Multi 2:
-        answers:
-        - text: ოთახის დალაგება
-          correct: true
-        - text: დესერტის მირთმევა
-          correct: false
-        - text: თმის დავარცხნა
-          correct: false
-        - text: სახის დაბანა
-          correct: false
-        questions:
-        - text: ამ აქტივობებიდან, რომელი იქნებოდა საუკეთესო ქრაუდსორსინგის გამოსაყენებლად?
-        title: მრავლობითი არჩევანი
-      4-5 Digital Footprint Multi 1:
-        answers:
-        - text: დაბადების თარიღი
-          correct: false
-        - text: თქვენი საყვარელი საჭმელი
-          correct: true
-        - text: თქვენი მისამართი
-          correct: false
-        - text: მშობლების საკრედიტო ბარათის ნომერი
-          correct: false
-        questions:
-        - text: ქვემოთ ჩამოთვლილი ინფორმაციიდან, ინტერნეტში რომლის გაზიარებაა მისაღები?
-        title: მრავლობითი არჩევანი
-      4-5 Internet Multi 1:
-        answers:
-        - text: 23.23.224.106
-          correct: false
-        - text: 54.209.61.132
-          correct: false
-        - text: 64.14.68.10
-          correct: false
-        - text: 54.243.71.82
-          correct: true
-        questions:
-        - text: რომელ IP მისამართზე გადაგიყვანთ DNS-ი ყველაზე დიდი ალბათობით, როცა
-            code.org-ზე შედიხართ?
-        title: მრავლობითი არჩევანი
-      4-5 Internet Multi 2:
-        answers:
-        - text: code.org
-          correct: false
-        - text: csisfun.com
-          correct: true
-        - text: thinkersmith.org
-          correct: false
-        - text: khanacademy.org
-          correct: false
-        questions:
-        - text: თუ DNS-ი გაგზავნით გვერდზე IP მისამართით 100.42.50.110, რომელ ვებ-საიტზე
-            იმყოფებით?
-        title: მრავლობითი არჩევანი
-      4-5 Songwriting Multi 1:
-        answers:
-        - text: ლუ, ლუ, გადახტი ჩემს სიყვარულზე,
-          correct: false
-        - text: ლუ, ლუ, გადახტი ჩემს სიყვარულზე, <br/>ლუ, ლუ, გადახტი ჩემს სიყვარულზე,
-            <br/>ლუ, ლუ, გადახტი ჩემს სიყვარულზე, <br/>გადახტი ძვირფასო.
-          correct: true
-        - 
-        - 
-        title: მრავლობითი არჩევანი
-      4-5 Suncatchers Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: რომელი პროგრამა <em>არ</em> ქმნის იგივე თანმიმდევრობას რაც პროგრამა
-            1?
-        title: მრავლობითი არჩევანი
-      4-5 artist loops multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: რომელი ბლოკები ქმნიან ასეთ დიზაინს?
-        title: 'მხატვარი, ციკლები: მრავლობითი არჩევანი'
-      4-5 artist multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: რომელი ბლოკები ხატავენ მართკუთხედს პერიმეტრით 100?
-        title: 'მხატვარი: მრავლობითი არჩევანი'
-      4-5 artist multi 2:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: რომელი ნახატია სიმეტრიული?
-        title: 'მხატვარი: მრავლობითი არჩევანი'
-      4-5 bee conditionals multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: აირჩიეთ საუკეთესო ბლოკები.
-        title: 'ფუტკარი, პირობითები: მრავლობითი არჩევანი'
-      4-5 bee debug multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: ფუნქციის რომელი ვერსია იმუშავებს?
-        title: 'ფუტკარი, შეცდომების გასწორება: მრავლობითი არჩევანი'
-      4-5 bee loops multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: რომელი ბლოკები ამოხსნის თავსატეხს?
-        title: 'ფუტკარი, ციკლები: მრავლობითი არჩევანი'
-      4-5 maze conditionals multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: რომელი ბლოკებით ამოიხსნება თავსატეხი?
-        title: 'ლაბირინთი, პირობითები: მრავლობითი არჩევანი'
-      4-5 maze multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: რომელი ბლოკებით ამოიხსნება თავსატეხი?
-        title: 'ლაბირინთი: მრავლობითი არჩევანი'
-      CSD Header Size MC:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD Header Size MC_2018:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD Header Size MC_2018_2019:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD U3 Boolean MC:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        title: დასახელება
-      CSD U3 Boolean MC_2018:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        title: დასახელება
-      CSD U3 Boolean MC_2018_2019:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        title: დასახელება
-      CSD U3 Functions Prediction define first:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Functions Prediction define first_2018:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Functions Prediction define first_2018_2019:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Sprite Movement Predict Multi:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Sprite Movement Predict Multi_2018:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Sprite Movement Predict Multi_2018_2019:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Sprites intro predict multi:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD U3 Sprites intro predict multi_2018:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD U3 Sprites intro predict multi_2018_2019:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD U6 array multi:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-      CSD U6 array multi_2018:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-      CSD U6 array multi_2018_2019:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-      CSD U6 setProperty predict multi:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U6 setProperty predict multi_2018:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U6 setProperty predict multi_2018_2019:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      K-1 Artist 1 Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: რომელი ბლოკებით ამოიხსნება ეს თავსატეხი?
-        title: მრავლობითი არჩევანი
-      K-1 Artist 1 Multi 2:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: რომელი ბლოკებით იხატება კვადრატი?
-        title: მრავლობითი არჩევანი
-      K-1 Bee 1 Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: რამდენი პორცია ნექტარია აქ?
-        title: მრავლობითი არჩევანი
-      K-1 Bee 1 Multi 2:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: რამდენი პორცია ნექტარია აქ?
-        title: მრავლობითი არჩევანი
-      K-1 Digital Footprint Multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: რომელ ცხოველს ეკუთვნის ციფრული კვალი, რომლის გამოც ის <strong>ყველაზე
-            დიდ საფრთხეშია</strong>?
-        title: მრავლობითი არჩევანი
-      K-1 Getting Loopy Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: როგორ გაამარტივებდით ამ თანმიმდევრობას ციკლების მეშვეობით?
-        title: მრავლობითი არჩევანი
-      K-1 Happy Maps Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: რომელი ისარი მიიყვანს ფლარბის განძამდე?
-        title: მრავლობითი არჩევანი
-      K-1 Keep it Private Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: რომელი ინფორმაცია <strong>არ</strong> უნდა გააზიაროთ ონლაინ?
-        title: მრავლობითი არჩევანი
-      K-1 Maze Debugging Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: რომელი ბლოკი უნდა იყოს ბოლო?
-        title: მრავლობითი არჩევანი
-      K-1 Maze Loops Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Which repeat block is the same?
-        title: მრავლობითი არჩევანი
-      K-1 Maze Loops Multi 2:
-        answers:
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: აირჩიეთ გამეორების სწორი ბლოკი.
-        title: მრავლობითი არჩევანი
-      K-1 Maze Multiple Choice 2:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: რომელი პასუხი ამოხსნის ამ დონეს?
-        title: ლაბირინთი
-      K-1 Move It Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: რომელი ალგორითმი მიიყვანს ფლარბის ყვავილებამდე?
-        title: მრავლობითი არჩევანი
-      K-1 Plant a Seed Multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: რომელი ნაბიჯი უნდა გადავიდეს ამ ალგორითმში პირველ ადგილზე?
-        title: მრავლობითი არჩევანი
-      K-1 Plant a Seed Multi 2:
-        answers:
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: რომელი ნაბიჯი უნდა ჩაისვას ამ ალგორითმში გამოტოვებულ ადგილზე?
-        title: მრავლობითი არჩევანი
-      K-1 Word Search Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: რომელი ბლოკი ჰყოფს სიტყვას "MOVE" ასო-ასო?
-        title: მრავლობითი არჩევანი
-      K-1 Word Search Multi 3:
-        answers:
-        - text: SET
-          correct: false
-        - text: SQUARE
-          correct: true
-        - text: SOUTH
-          correct: false
-        questions:
-        - text: რომელი სიტყვაა ჩაწერილი?
-        title: მრავლობითი არჩევანი
-      behaviors 1 predict:
-        answers:
-        - 
-        - correct: true
-        - 
-        - correct: false
-          feedback: არასწორია
-      behaviors 4 predict:
-        answers:
-        - 
-        - correct: true
-        - 
-        - correct: false
-          feedback: არასწორია
-      courseC_multi_artist_prog6_predict1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      courseC_multi_artist_prog6_predict1_2018:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      courseC_multi_artist_prog6_predict1_2018_2019:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      courseC_multi_harvester_loops11_predict1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseC_multi_harvester_loops11_predict1_2018:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseC_multi_harvester_loops11_predict1_2018_2019:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseC_multi_maze_debugging8_predict1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseC_multi_maze_debugging8_predict1_2018:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseC_multi_maze_debugging8_predict1_2018_2019:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseC_multi_maze_programming8_predict1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseC_multi_maze_programming8_predict1_2018:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseC_multi_maze_programming8_predict1_2018_2019:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseC_multi_starWars_predict1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - text: არ ვიცი
-          correct: false
-      courseC_multi_starWars_predict1_2018:
-        answers:
-        - 
-        - 
-        - correct: true
-        - text: არ ვიცი
-          correct: false
-      courseC_multi_starWars_predict1_2018_2019:
-        answers:
-        - 
-        - 
-        - correct: true
-        - text: არ ვიცი
-          correct: false
-      courseC_multi_starWars_predict2:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseC_multi_starWars_predict2_2018:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseC_multi_starWars_predict2_2018_2019:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseD_multi_artist_binary8_predict1:
-        answers:
-        - text: ა
-          correct: false
-        - text: ბ
-          correct: false
-        - text: გ
-          correct: false
-        - text: დ
-          correct: true
-      courseD_multi_artist_binary8_predict1_2018:
-        answers:
-        - text: ა
-          correct: false
-        - text: ბ
-          correct: false
-        - text: გ
-          correct: false
-        - text: დ
-          correct: true
-      courseD_multi_artist_binary8_predict1_2018_2019:
-        answers:
-        - text: ა
-          correct: false
-        - text: ბ
-          correct: false
-        - text: გ
-          correct: false
-        - text: დ
-          correct: true
-      courseD_multi_artist_nestedLoops9_predict1:
-        answers:
-        - text: ა
-          correct: true
-        - text: ბ
-          correct: false
-        - text: გ
-          correct: false
-        - 
-      courseD_multi_artist_nestedLoops9_predict1_2018:
-        answers:
-        - text: ა
-          correct: true
-        - text: ბ
-          correct: false
-        - text: გ
-          correct: false
-        - 
-      courseD_multi_artist_nestedLoops9_predict1_2018_2019:
-        answers:
-        - text: ა
-          correct: true
-        - text: ბ
-          correct: false
-        - text: გ
-          correct: false
-        - 
-      courseD_multi_bee_conditionals1_predict1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseD_multi_bee_conditionals1_predict1_2018:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseD_multi_bee_conditionals1_predict1_2018_2019:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseD_multi_bee_conditionals7_predict2:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-      courseD_multi_bee_conditionals7_predict2_2018:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-      courseD_multi_bee_conditionals7_predict2_2018_2019:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-      courseD_multi_bee_nestedLoops2_predict1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      courseD_multi_bee_nestedLoops2_predict1_2018:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      courseD_multi_bee_nestedLoops2_predict1_2018_2019:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      courseD_multi_bee_nestedLoops9_predict2:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseD_multi_bee_nestedLoops9_predict2_2018:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseD_multi_bee_nestedLoops9_predict2_2018_2019:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseD_multi_collector_debugging10_predict1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      courseD_multi_farmer_condLoops9_predict1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      courseD_multi_farmer_condLoops9_predict1_2018:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      courseD_multi_farmer_condLoops9_predict1_2018_2019:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      courseD_multi_farmer_ramp13:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseD_multi_farmer_while10_predict2:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseD_multi_farmer_while10_predict2_2018:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseD_multi_farmer_while10_predict2_2018_2019:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseD_multi_farmer_while4_predict1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      courseD_multi_farmer_while4_predict1_2018:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      courseD_multi_farmer_while4_predict1_2018_2019:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      courseD_multi_maze_until10_predict2:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-      courseD_multi_maze_until10_predict2_2018:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-      courseD_multi_maze_until10_predict2_2018_2019:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-      courseD_multi_maze_until2_predict1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseD_multi_maze_until2_predict1_2018:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseD_multi_maze_until2_predict1_2018_2019:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseD_multi_scrat_predict1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseE_multi_artist_predict1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-      courseE_multi_bee_functions_predict1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-      courseE_multi_farmer_functions11_predict:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-      courseE_multi_farmer_functions11_predict_2018:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      courseE_multi_farmer_functions11_predict_2018_2019:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      courseE_multi_farmer_predict1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - text: არ ვიცი
-          correct: false
-      courseE_multi_farmer_predict2:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseE_multi_maze_predict1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseE_prediction_artistFunction1:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-      courseE_prediction_artistFunction1_2018:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-      courseE_prediction_artistFunction1_2018_2019:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-      courseF_bee_variables_8a_2018:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseF_bee_variables_8a_2018_2019:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseF_multi_artist_for10_predict1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      courseF_multi_artist_for10_predict1_2018:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      courseF_multi_artist_for10_predict1_2018_2019:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      courseF_multi_artist_fwp2_predict1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-      courseF_multi_artist_predict1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-      courseF_multi_artist_variables3a_predict1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-      courseF_multi_artist_variables3a_predict1_2018:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-      courseF_multi_artist_variables3a_predict1_2018_2019:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-      courseF_multi_bee_conditionals1_predict1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseF_multi_bee_conditionals7_predict2:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-      courseF_multi_bee_for3_predict1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseF_multi_bee_for3_predict1_2018:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseF_multi_bee_for3_predict1_2018_2019:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseF_multi_bee_fwp9_predict1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseF_multi_playlab_variables4c_predictive1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-      coursee_prediction_artistfunction2:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      coursee_prediction_artistfunction2_2018:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      coursee_prediction_artistfunction2_2018_2019:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      grade2_multi_collector_A_predict1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      grade2_multi_collector_A_predict1_2018:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      grade2_multi_collector_A_predict1_2018_2019:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 

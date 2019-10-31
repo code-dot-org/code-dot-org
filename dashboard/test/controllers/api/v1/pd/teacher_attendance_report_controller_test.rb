@@ -42,19 +42,19 @@ class Api::V1::Pd::TeacherAttendanceReportControllerTest < ::ActionController::T
     @program_manager = create :program_manager
 
     # CSF workshop from this program manager with 10 teachers.
-    @pm_workshop = create :pd_ended_workshop, organizer: @program_manager, course: Pd::Workshop::COURSE_CSF
+    @pm_workshop = create :workshop, :ended, organizer: @program_manager, course: Pd::Workshop::COURSE_CSF
     10.times do
       create :pd_workshop_participant, workshop: @pm_workshop, enrolled: true, attended: true
     end
 
     # CSF workshop from this organizer with 10 teachers.
-    @workshop = create :pd_ended_workshop, organizer: @organizer, course: Pd::Workshop::COURSE_CSF
+    @workshop = create :workshop, :ended, organizer: @organizer, course: Pd::Workshop::COURSE_CSF
     10.times do
       create :pd_workshop_participant, workshop: @workshop, enrolled: true, attended: true
     end
 
     # Non-CSF workshop from a different organizer, with 1 teacher.
-    @other_workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_ECS,
+    @other_workshop = create :workshop, :ended, course: Pd::Workshop::COURSE_ECS,
       subject: Pd::Workshop::SUBJECT_ECS_PHASE_2
     create :pd_workshop_participant, workshop: @other_workshop, enrolled: true, attended: true
   end
@@ -131,36 +131,46 @@ class Api::V1::Pd::TeacherAttendanceReportControllerTest < ::ActionController::T
   end
 
   test 'Returns only workshops that have ended and have teachers' do
-    # New workshop, not ended, with teachers that should not be returned.
-    workshop_in_progress = create :pd_workshop, num_sessions: 1
+    # Workshop, not ended, with teachers
+    # This workshop should not be returned
+    workshop_in_progress = create :workshop
     workshop_in_progress.start!
     5.times do
       create :pd_workshop_participant, workshop: workshop_in_progress, enrolled: true, attended: true
     end
 
-    # Workshop, ended, with no teachers.
-    create :pd_ended_workshop
+    # Workshop, ended, with no teachers
+    # This workshop should not be returned
+    teacherless_workshop = create :workshop, :ended
 
     sign_in @workshop_admin
     get :index
     assert_response :success
     response = JSON.parse(@response.body)
-    assert_equal 21, response.count
-    assert_equal [@pm_workshop.id, @workshop.id, @other_workshop.id].sort, response.map {|r| r['workshop_id']}.uniq.sort
+    workshops_returned = response.map {|r| r['workshop_id']}.uniq
+
+    # Ensure we see responses for the eligible workshops (see setup_all)
+    assert_includes workshops_returned, @pm_workshop.id
+    assert_includes workshops_returned, @workshop.id
+    assert_includes workshops_returned, @other_workshop.id
+
+    # Ensure we do not see responses for the ineligible workshops
+    refute_includes workshops_returned, workshop_in_progress.id
+    refute_includes workshops_returned, teacherless_workshop.id
   end
 
   test 'filter by schedule' do
     start_date = Date.today - 6.months
     end_date = start_date + 1.month
 
-    workshop_in_range = create :pd_ended_workshop, sessions_from: start_date + 2.weeks
+    workshop_in_range = create :workshop, :ended, sessions_from: start_date + 2.weeks
     teacher_in_range = create :pd_workshop_participant, workshop: workshop_in_range, enrolled: true, attended: true
 
     # Noise
-    workshop_before = create :pd_ended_workshop, sessions_from: start_date - 1.day
+    workshop_before = create :workshop, :ended, sessions_from: start_date - 1.day
     create :pd_workshop_participant, workshop: workshop_before, enrolled: true, attended: true
 
-    workshop_after = create :pd_ended_workshop, sessions_from: end_date + 1.day
+    workshop_after = create :workshop, :ended, sessions_from: end_date + 1.day
     create :pd_workshop_participant, workshop: workshop_after, enrolled: true, attended: true
 
     sign_in @workshop_admin
@@ -177,14 +187,14 @@ class Api::V1::Pd::TeacherAttendanceReportControllerTest < ::ActionController::T
     start_date = Date.today - 6.months
     end_date = start_date + 1.month
 
-    workshop_in_range = create :pd_ended_workshop, ended_at: start_date + 2.weeks
+    workshop_in_range = create :workshop, :ended, ended_at: start_date + 2.weeks
     teacher_in_range = create :pd_workshop_participant, workshop: workshop_in_range, enrolled: true, attended: true
 
     # Noise
-    workshop_before = create :pd_ended_workshop, ended_at: start_date - 1.day
+    workshop_before = create :workshop, :ended, ended_at: start_date - 1.day
     create :pd_workshop_participant, workshop: workshop_before, enrolled: true, attended: true
 
-    workshop_after = create :pd_ended_workshop, ended_at: end_date + 1.day
+    workshop_after = create :workshop, :ended, ended_at: end_date + 1.day
     create :pd_workshop_participant, workshop: workshop_after, enrolled: true, attended: true
 
     sign_in @workshop_admin
@@ -219,9 +229,17 @@ class Api::V1::Pd::TeacherAttendanceReportControllerTest < ::ActionController::T
     assert_response :success
     response = CSV.parse(@response.body)
 
-    # 22 rows (header + 21 teacher rows)
-    assert_equal 22, response.count
+    # Check that we have the expected number of columns in the header row
     assert_equal EXPECTED_COMMON_FIELDS.count + EXPECTED_PAYMENT_FIELDS.count, response.first.count
+
+    # Check that column 11 in the header row is workshop id
+    assert_equal 'Workshop Id', response.first[11]
+
+    # Check expected row counts for our test workshops
+    # (We don't count all rows to insulate this test against existing state)
+    assert_equal 10, response.select {|row| row[11] == @pm_workshop.id.to_s}.count
+    assert_equal 10, response.select {|row| row[11] == @workshop.id.to_s}.count
+    assert_equal 1, response.select {|row| row[11] == @other_workshop.id.to_s}.count
   end
 
   private

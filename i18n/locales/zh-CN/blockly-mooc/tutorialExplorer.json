@@ -48,6 +48,7 @@
   "roboticsButtonText": "机器人和电路",
   "roboticsText": "有机器人？使用这些活动，给任何年龄的学生一个有形的《编程一小时》！",
   "tutorialSetNoTutorials": "您的搜索未返回任何结果。请尝试删除一些条件，以查看更多的活动。",
+  "tutorialDetailsMoreResources": "",
   "tutorialDetailsTeacherNotes": "教师提示",
   "tutorialDetailsShortLink": "短链接",
   "tutorialDetailInternationalLanguages": "语言",
@@ -57,6 +58,6 @@
   "showAllTutorialsButton": "显示各种语言的活动",
   "hideAllTutorialsButton": "隐藏各种语言的活动",
   "noTutorialsYourLanguage": "没有任何当前语言的活动。通过单击下面的按钮来尝试在其他语言的活动。",
-  "bottomGuidelinesLink": "单击此处查看提交代码一小时教程的指南和标准。",
+  "bottomGuidelinesLink": "单击此处查看提交编程一小时教程的指南和标准。",
   "bottomSpecialNeedsLink": "点击这里以获取有关帮助有特殊需求学生的更多信息。"
 }

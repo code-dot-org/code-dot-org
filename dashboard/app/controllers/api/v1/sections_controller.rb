@@ -43,7 +43,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     section = Section.create(
       {
         user_id: current_user.id,
-        name: !params[:name].to_s.empty? ? params[:name].to_s : I18n.t('sections.default_name', default: 'Untitled Section'),
+        name: params[:name].present? ? params[:name].to_s : I18n.t('sections.default_name', default: 'Untitled Section'),
         login_type: params[:login_type],
         grade: Section.valid_grade?(params[:grade].to_s) ? params[:grade].to_s : nil,
         script_id: script_to_assign ? script_to_assign.id : params[:script_id],
@@ -90,7 +90,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     fields = {}
     fields[:course_id] = set_course_id(course_id)
     fields[:script_id] = set_script_id(script_id)
-    fields[:name] = params[:name] unless params[:name].nil_or_empty?
+    fields[:name] = params[:name] if params[:name].present?
     fields[:login_type] = params[:login_type] if Section.valid_login_type?(params[:login_type])
     fields[:grade] = params[:grade] if Section.valid_grade?(params[:grade])
     fields[:stage_extras] = params[:stage_extras] unless params[:stage_extras].nil?

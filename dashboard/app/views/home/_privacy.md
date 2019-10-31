@@ -1,4 +1,4 @@
-Date of Last Revision: May 16, 2019
+Date of Last Revision: October 8, 2019
 
 ## About Code.org
 Code.org® is a nonprofit dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color.
@@ -196,9 +196,9 @@ In particular, we do not share any Personal Information you provide with our don
 
 If a Student belongs to a Teacher’s section, we will share Student account information, course progress, and standalone projects with that Teacher so the Teacher can help manage the Student’s progress. The Student will also see limited information about their Teacher including their Teacher’s display name and section information.
 
-### We may share Student achievement data with your school or school district
+### We may share Classroom usage and Student achievement data with your school or school district
 
-We may allow your school or school district to access the same Student progress report that is also shared with your Teacher(s). If teachers choose to give students feedback on coursework and projects through Code.org, we may also share this with school or district administrators upon request.
+In order to support school and district needs to oversee Code.org usage in their classrooms, we may allow your school or school district to access reporting data on student progress and achievement, presented on a student-level, classroom-level, teacher-level, grade-level or school-level basis for Students enrolled in a Teacher’s section.  The reports available to school and district administrators will be based on the same data that is displayed on the Student progress report that is also shared with the Student's Teacher(s). If Teachers choose to give Students feedback on coursework and projects through Code.org, we may also share this with school or district administrators upon request. For more information about the data we may be sharing with your school or school district, please [click here](https://docs.google.com/document/d/e/2PACX-1vSmzbakhPmJsmtv3JiKqwOprSmY32p5ybvvjhMDJl-2LbI54Se170UBm8rsNDPZitItxNermUcUREvv/pub).
 
 ### We may share teacher information with the teacher's training facilitators, Local Partner, and school district, as well as other partners
 
@@ -207,6 +207,8 @@ Part of our educational program is to offer professional learning workshops to p
 We may also share the list of schools (solely the school identities, without any personal or identifying information about teachers or students) that use Code.org or have participated in our professional learning program with select partners, such as a local government department of education or regional and national ministries, so long as such partners agree to treat the information as confidential. 
 
 We also provide teachers other opportunities (such as when adding their school to the map of schools teaching Computer Science) to share their contact information (name, school, email) — at their option and under their control — with a Code.org Local Partner so that teachers can be contacted about local professional learning workshops, resources, and events.
+
+Our partners can sometimes provide additional programs or services such as scholarships or free supplies for schools. When these services or programs are available locally, teachers will have the option to share their email address, school name, and school ID with a specific partner to opt in to a specific service or program to support their classroom.
 
 ### We may share de-identified information on school or district usage with our Local Partners
 

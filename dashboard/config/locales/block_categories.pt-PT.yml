@@ -1,14 +1,20 @@
 ---
-pt-PT:
+pt:
   data:
     block_categories:
       Actions: Ações
+      Loops: ciclos
+      Functions: Funções
       Color: Cor
+      Math: Matemática
+      Logic: Lógica
+      Variables: variáveis
       Conditionals: Condicionais
       Events: Eventos
-      Functions: Funções
-      Logic: Lógica
-      Loops: ciclos
-      Math: Matemática
       Text: texto
-      Variables: variáveis
+      Location: Localização
+      Start: Começar
+      Booleans: Booleanos
+      test: teste
+      Name: Nome
+      Function: Função

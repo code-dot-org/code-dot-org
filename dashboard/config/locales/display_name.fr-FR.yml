@@ -2,17 +2,16 @@
 fr-FR:
   data:
     display_name:
-      AB_Debug_Artist1: 'Débogage artiste #1 (AB)'
       Alien Defender: Défenseur alien
       App Lab Intro 8 - Video Design Mode: 'Vidéo : Mode création'
       App Lab Intro 8 - Video Getting Started: 'Vidéo : Démarrer'
       App Lab Intro 8 - Video Images and Sounds: 'Vidéo : Images et sons'
-      App Lab Intro 8 - Video Make It Interactive: 'Vidéo : Rendre interactif'
+      App Lab Intro 8 - Video Make It Interactive: 'Vidéo : Rend le intéractif'
       App Lab Intro 8 - Video Share Your App: 'Vidéo : Partage ton appli'
       AppLab Intro 7 - Change Screen Color: Modifier la couleur de l’écran
-      AppLab Intro 7 - Change Text 2: Modifier le texte
+      AppLab Intro 7 - Change Text 2: Modifie le texte
       AppLab Intro 7 - Full Text: Deux boutons
-      AppLab Intro 7 - onEvent intro: Faire fonctionner des boutons
+      AppLab Intro 7 - onEvent intro: Fais fonctionner les boutons
       AppLab Intro 7 - onEvent twoButtons: Plus d’entraînement onEvent
       AppLab Intro 7 - playSound: Utiliser playSound
       AppLab Intro 7 - thisOrThatAddButton: Ceci ou cela
@@ -49,7 +48,6 @@ fr-FR:
       CSD Set Scale Map_2018: Modifier l’échelle des capteurs
       CSD Set Scale Map_2019: Modifier l’échelle des capteurs
       CSD U1L02 TFMD_2018: Aperçu de la leçon
-      CSD U1L02 TFMD_2019: Aperçu de la leçon
       CSD U1L03 TFMD_2018: Aperçu de la leçon
       CSD U1L03 TFMD_2019: Aperçu de la leçon
       CSD U1L04 TFMD_2018: Aperçu de la leçon
@@ -117,9 +115,7 @@ fr-FR:
       CSD U2 lists map_2018: Listes en HTML
       CSD U2 lists map_2019: Listes en HTML
       CSD U2L01 TFMD_2018: Aperçu de la leçon
-      CSD U2L01 TFMD_2019: Aperçu de la leçon
       CSD U2L02 TFMD_2018: Aperçu de la leçon
-      CSD U2L02 TFMD_2019: Aperçu de la leçon
       CSD U2L03 TFMD_2018: Aperçu de la leçon
       CSD U2L03 TFMD_2019: Aperçu de la leçon
       CSD U2L04 TFMD_2018: Aperçu de la leçon
@@ -228,7 +224,6 @@ fr-FR:
       CSD U3 L9 Freeplay_2019: Activité libre
       CSD U3 Plotting Shapes Shape Lab: Dessiner des formes
       CSD U3 Plotting Shapes Shape Lab_2018: Dessiner des formes
-      CSD U3 Plotting Shapes Shape Lab_2019: Dessiner des formes
       CSD U3 Random Number Map Level: Nombres aléatoires
       CSD U3 Random Number Map Level_2018: Nombres aléatoires
       CSD U3 Random Number Map Level_2019: Nombres aléatoires
@@ -313,10 +308,7 @@ fr-FR:
       CSD U3 velocity map: Vélocité des sprites
       CSD U3 velocity map_2018: Vélocité des sprites
       CSD U3 velocity map_2019: Vélocité des sprites
-      CSD U3L01 TFMD_2018: Aperçu de la leçon
-      CSD U3L01 TFMD_2019: Aperçu de la leçon
       CSD U3L02 TFMD_2018: Aperçu de la leçon
-      CSD U3L02 TFMD_2019: Aperçu de la leçon
       CSD U3L03 TFMD_2018: Aperçu de la leçon
       CSD U3L03 TFMD_2019: Aperçu de la leçon
       CSD U3L04 TFMD_2018: Aperçu de la leçon
@@ -376,9 +368,7 @@ fr-FR:
       CSD U4 User Input Map_2018: Répondre à l’entrée de l’utilisateur
       CSD U4 User Input Map_2019: Répondre à l’entrée de l’utilisateur
       CSD U4L01 autoSFLP_2018: Aperçu de la leçon
-      CSD U4L01 autoSFLP_2019: Aperçu de la leçon
       CSD U4L02 autoSFLP_2018: Aperçu de la leçon
-      CSD U4L02 autoSFLP_2019: Aperçu de la leçon
       CSD U4L03 autoSFLP_2018: Aperçu de la leçon
       CSD U4L03 autoSFLP_2019: Aperçu de la leçon
       CSD U4L04 autoSFLP_2018: Aperçu de la leçon
@@ -409,10 +399,8 @@ fr-FR:
       CSD U4L16 autoSFLP_2019: Aperçu de la leçon
       CSD U5 Amazon Data Video: Collecte d’informations sur les utilisateurs
       CSD U5 Amazon Data Video_2018: Collecte d’informations sur les utilisateurs
-      CSD U5 Amazon Data Video_2019: Collecte d’informations sur les utilisateurs
       CSD U5 Waze Data Video: Collecte d’informations sur les utilisateurs
       CSD U5 Waze Data Video_2018: Collecte d’informations sur les utilisateurs
-      CSD U5 Waze Data Video_2019: Collecte d’informations sur les utilisateurs
       CSD U5 black white images pixelation: Widget de pixellisation en noir et blanc
       CSD U5 black white images pixelation 2: Widget de pixellisation en noir et blanc
       CSD U5 black white images pixelation 2_2018: Widget de pixellisation en noir
@@ -439,9 +427,7 @@ fr-FR:
       CSD U5 black white images pixelation_2019: Widget de pixellisation en noir et
         blanc
       CSD U5L01 autoSFLP_2018: Aperçu de la leçon
-      CSD U5L01 autoSFLP_2019: Aperçu de la leçon
       CSD U5L02 autoSFLP_2018: Aperçu de la leçon
-      CSD U5L02 autoSFLP_2019: Aperçu de la leçon
       CSD U5L03 autoSFLP_2018: Aperçu de la leçon
       CSD U5L03 autoSFLP_2019: Aperçu de la leçon
       CSD U5L04 autoSFLP_2018: Aperçu de la leçon
@@ -527,12 +513,9 @@ fr-FR:
       CSD U6 tugowar final: Fais-le tien
       CSD U6 tugowar final_2018: Fais-le tien
       CSD U6 tugowar final_2019: Fais-le tien
-      CSD U6L01 TFMD: Aperçu de la leçon
       CSD U6L01 TFMD_2018: Aperçu de la leçon
-      CSD U6L01 TFMD_2019: Aperçu de la leçon
       CSD U6L02 TFMD: Aperçu de la leçon
       CSD U6L02 TFMD_2018: Aperçu de la leçon
-      CSD U6L02 TFMD_2019: Aperçu de la leçon
       CSD U6L03 TFMD: Aperçu de la leçon
       CSD U6L03 TFMD_2018: Aperçu de la leçon
       CSD U6L03 TFMD_2019: Aperçu de la leçon
@@ -624,16 +607,19 @@ fr-FR:
       CSDU6 buzzer 2d arrays_2019: Tableaux 2D
       CSDU6 buzzer.stop_2018: Arrêter la musique
       CSDU6 buzzer.stop_2019: Arrêter la musique
+      'Course E: Artist Project': Cours E Projet Artistique
+      'Course E: Artist Project_2018': Cours E Projet Artistique
+      'Course E: Artist Project_2019': Cours E Projet Artistique
       CourseEF_video_IntroSpriteLab: Voici Sprite Lab
       CourseEF_video_IntroSpriteLab_2019: Voici Sprite Lab
       CourseEF_video_MakeSprite: Comment créer un sprite
       CourseEF_video_MakeSprite_2019: Comment créer un sprite
       Dance_Party_extras_battle: Équipes de danse
       Dance_Party_extras_every_beat: Noires
-      Dance_Party_extras_layout: Soyez informé
-      Dance_Party_extras_on_beat: grave, médium et aigu
-      Dance_Party_extras_speed: Accélérer, ralentir
-      Dance_Party_extras_visible: Où iraient-ils\_?
+      Dance_Party_extras_layout: Restons en formation
+      Dance_Party_extras_on_beat: Grave, médium et aigü
+      Dance_Party_extras_speed: Accélére la, ralenti la
+      Dance_Party_extras_visible: Où iraient-ils?
       Geometric Sun_2018: Soleil géométrique
       InspirationalArtwork_2018: Inspiration !
       Intro to Web Lab - Part 1: 'Vidéo : Introduction au labo du web - Partie 1'
@@ -682,6 +668,6 @@ fr-FR:
       csd u5 recommender sample: Appli d’exemple
       csd u5 recommender sample_2019: Appli d’exemple
       csd-pre-survey-2017-levelgroup_2018: Aperçu de la leçon
-      csd-pre-survey-2017-levelgroup_2018_2019: Aperçu de la leçon
+      csd-pre-survey-levelgroup_2019: Aperçu de la leçon
       scrat_loops_C-F_video: Vidéo des boucles dans l’Âge de Glace
       scrat_loops_C-F_video_2019: Vidéo des boucles dans l’Âge de Glace

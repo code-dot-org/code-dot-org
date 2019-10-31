@@ -11,7 +11,7 @@ import EventRow from './EventRow';
 import EnumPropertyRow from './EnumPropertyRow';
 import FontFamilyPropertyRow from './FontFamilyPropertyRow';
 import BorderProperties from './BorderProperties';
-import themeColor from '../themeColor';
+import themeValues from '../themeValues';
 import {ICON_PREFIX_REGEX} from '../constants';
 import * as elementUtils from './elementUtils';
 import designMode from '../designMode';
@@ -208,84 +208,8 @@ const DEFAULT_BUTTON_HEIGHT_SMALL = '30px';
 export default {
   PropertyTab: ButtonProperties,
   EventTab: ButtonEvents,
-  themeValues: {
-    backgroundColor: {
-      type: 'color',
-      ...themeColor.buttonBackground
-    },
-    borderRadius: {
-      default: 4,
-      orange: 0,
-      citrus: 2,
-      ketchupAndMustard: 5,
-      lemonade: 6,
-      forest: 6,
-      watermelon: 20,
-      area51: 10,
-      polar: 20,
-      glowInTheDark: 10,
-      bubblegum: 20,
-      millennial: 20,
-      robot: 0,
-      classic: 0
-    },
-    borderWidth: {
-      default: 1,
-      orange: 2,
-      citrus: 2,
-      ketchupAndMustard: 0,
-      lemonade: 0,
-      forest: 2,
-      watermelon: 4,
-      area51: 2,
-      polar: 2,
-      glowInTheDark: 2,
-      bubblegum: 2,
-      millennial: 0,
-      robot: 2,
-      classic: 0
-    },
-    borderColor: {
-      type: 'color',
-      ...themeColor.buttonBorder
-    },
-    textColor: {
-      type: 'color',
-      ...themeColor.buttonText
-    },
-    fontFamily: {
-      default: 'Arial Black',
-      orange: 'Verdana',
-      citrus: 'Georgia',
-      ketchupAndMustard: 'Georgia',
-      lemonade: 'Arial',
-      forest: 'Verdana',
-      watermelon: 'Georgia',
-      area51: 'Arial Black',
-      polar: 'Verdana',
-      glowInTheDark: 'Tahoma',
-      bubblegum: 'Georgia',
-      millennial: 'Verdana',
-      robot: 'Arial Black',
-      classic: 'Arial'
-    },
-    fontSize: {
-      default: 15,
-      orange: 15,
-      citrus: 15,
-      ketchupAndMustard: 15,
-      lemonade: 15,
-      forest: 15,
-      watermelon: 15,
-      area51: 15,
-      polar: 15,
-      glowInTheDark: 15,
-      bubblegum: 15,
-      millennial: 15,
-      robot: 15,
-      classic: 14
-    }
-  },
+  themeValues: themeValues.button,
+
   create: function() {
     const element = document.createElement('button');
     element.appendChild(document.createTextNode('Button'));

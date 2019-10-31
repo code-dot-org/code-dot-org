@@ -14,7 +14,7 @@ import {
   ADD_A_PERSONAL_LOGIN_HELP_URL,
   RELEASE_OR_DELETE_RECORDS_EXPLANATION
 } from '@cdo/apps/lib/util/urlHelpers';
-import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 const studentName = MINIMUM_TEST_PROPS.studentName;
 
@@ -63,7 +63,7 @@ describe('ConfirmRemoveStudentDialog', () => {
         <div>
           <Header text={i18n.removeStudentAndRecordsHeader({studentName})} />
           <div>
-            <UnsafeRenderedMarkdown markdown={i18n.removeStudentBody1()} />
+            <SafeMarkdown markdown={i18n.removeStudentBody1()} />
             <p>
               <a href={RELEASE_OR_DELETE_RECORDS_EXPLANATION} target="_blank">
                 {i18n.learnMore()}
@@ -97,7 +97,7 @@ describe('ConfirmRemoveStudentDialog', () => {
         <div>
           <Header text={i18n.removeStudentAndRecordsHeader({studentName})} />
           <div>
-            <UnsafeRenderedMarkdown markdown={i18n.removeStudentBody1()} />
+            <SafeMarkdown markdown={i18n.removeStudentBody1()} />
             <p>
               <a href={RELEASE_OR_DELETE_RECORDS_EXPLANATION} target="_blank">
                 {i18n.learnMore()}

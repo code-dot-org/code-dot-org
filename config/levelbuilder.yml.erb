@@ -1,1 +1,20 @@
 daemon: true
+firebase_name: cdo-v3-lb
+use_acapela:                true
+use_pusher:                 true
+jotform_api_key:
+lti_credentials:
+devinternal_db_writer:
+db_admin:
+dashboard_microsoft_key:
+dashboard_microsoft_secret:
+zendesk_secret:
+
+acapela_ephemeral_app: !Secret
+acapela_ephemeral_password: !Secret
+acapela_login: !Secret
+acapela_storage_app: !Secret
+acapela_storage_password: !Secret
+
+# Curriculum team needs to be able to see raw HTTP error pages so they can debug the content they are implementing.
+custom_error_response: false

@@ -21,11 +21,11 @@ The `setPosition` command (now added to the Toolbox) lets you move UI elements t
 
 <img src="https://images.code.org/6db4a1aa3b8a6d300a93e68314980ab7-image-1476887961934.png" style="display: block; margin: auto">
 
-The little arrow on the right side mean that some of the parameters are optional.  You can click the arrows to collapse or expand the available parameters.
+The little arrows on the right side mean that some of the parameters are optional.  You can click the arrows to collapse or expand the available parameters.
 
 <img src="https://images.code.org/85555ba95bc3b3b82d1b2c8d2c54e695-image-1476887867008.gif" style="display: block; margin: auto">
 
-You (perhaps obviously) need to plug actual numbers into these parameters of `setPosition` for it to have any effect.  The numbers for setPosition **x and y coordinates of the screen**. This is similar to the turtle's `moveTo(x,y)` command.
+You (perhaps obviously) need to plug actual numbers into these parameters of `setPosition` for it to have any effect.  The numbers for setPosition are **x and y coordinates of the screen**. This is similar to the turtle's `moveTo(x,y)` command.
 
 **Remember:**
 

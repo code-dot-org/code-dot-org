@@ -8,42 +8,38 @@ ar-SA:
         2-3_Artist_1_new_b: هل تواجه مشكلة في الدوارن عند الزاوية؟ استخدم " اتجه لليمين
           90 درجة".
       2-3 Artist 11:
-        2-3_Artist_11_a: 'هل تواجه مشكلة مع الزوايا؟ تحتاج إلى الدوران 360 درجة في
-          8 استدارات، ما هو ناتج 360/8 ؟ '
+        2-3_Artist_11_a: 'هل تواجه مشكلة عند الزوايا؟ تحتاج إلى الانتقال 360 درجة
+          في 8 اتجاهات, ما هو ناتج 360/8 ؟ '
       2-3 Artist 12:
-        2-3_Artist_12_a: هناك 360 درجة في الدائرة، إذا استدار الرسام درجة واحدة في
-          كل مرة داخل الحلقة التكرارية، سوف يحتاج أن يقوم بهذا العمل 360 مرة.
+        2-3_Artist_12_a: هناك 360 درجة للدائرة, أذا إلتف الرسام درجة واحدة في كل مرة
+          داخل الدائرة, سوف يحتاج إلى أن يقوم بها 360 مرة.
       2-3 Artist 2 new:
-        2-3_Artist_2_new_a: يبدو أن الرسام ليس متوجهاً في الاتجاه الصحيح. هل يمكنك
-          جعله يستدير أولا قبل رسم الخط؟
+        2-3_Artist_2_new_a: يظهر ان الرسام ليس موجه عند الاتجاه الصحيح, هل يمكنك تغير
+          اتجاهه أولا قبل رسم الخط؟
       2-3 Artist 3new:
         2-3_Artist_3new_a: ما هو ناتج 100-70؟ طبقاً للقصة، هذا هو طول القبعة الذي
           يجب أن يكون!
-        2-3_Artist_3new_b: يبدو أن الرسام ليس متوجهاً في الاتجاه الصحيح. هل يمكنك
-          جعله يستدير أولا قبل رسم الخط؟
+        2-3_Artist_3new_b: يظهر ان الرسام ليس موجه عند الاتجاه الصحيح, هل يمكنك تغير
+          اتجاهه أولا قبل رسم الخط؟
       2-3 Artist 4:
-        2-3_Artist_4_a: لإكمال البيت، كل ما علينا القيام به هو رسم مربع!
+        2-3_Artist_4_a: لإنهاء البيت, كل ما علينا القيام به هو رسم مربع!
       2-3 Artist 6:
-        2-3_Artist_6_a: 'لعمل هذه الزوايا الصغيرة، عليك الاستدارة _أكثر_ كل مرة مما
-          فعلت عند رسم المربع.   '
-        2-3_Artist_6_b: بما أني متجه إلى اليمين، فمن الأسهل البدء بالتحرك إلى الامام،
-          ثم الاتجاه إلى اليسار لرسم المثلث.
+        2-3_Artist_6_b: بما إني مواجه لجهة اليمين, من الأسهل البدء بالانتقال إلى الامام
+          ثم الاتجاه لليسار لإنشاء مثلث.
         2-3_Artist_6_c: طول كل ضلع في المثلث مماثل لطول كل ضلع في المربع... 100 نقطة!
       2-3 Artist 7:
         2-3_Artist_7_a: أسهل طريقة لحل هذا اللغز هي رسم المربع الأول وعند الانتهاء
           نوجه الرسام إلى الأسفل قبل البدء برسم المربع الثاني.
       2-3 Artist 8:
         2-3_Artist_8_a: إذا قمت بقص 200 إلى نصفين، كم يجب أن يكون عرض المربع بالنقاط؟
-      2-3 Artist 9:
+      2-3 Artist 9 NEW:
         2-3_Artist_9_a: هذا المعين هو في الحقيقة مجرد مربع مائل على أحد جوانبه
       2-3 Artist Debugging 10:
-        2-3_Artist_Debugging_10_a: تذكر، أنت تريد لوحة التحكم _أعرض_ بمقدار 10 نقطة...لذا
-          كن متأكداً من **إضافة** 10 لأي رقم تقوم بتغييره.
         2-3_Artist_Debugging_10_b: "**التجربة و الخطأ جيدة تماما هنا!** \n\nابدأ بتغيير
           رقم واحد في كل مرة. \n\nماذا يفعل كل رقم؟ \n\nإذا ضعت، فقط اضغط \"البدء
           من جديد\" وسيتم إعادة البرنامج إلى البداية."
       2-3 Artist Debugging 2:
-        2-3_Artist_Debugging_2_a: 'ملحوظة: كل شعرة في شارب القطة طولها 75 نقطة.'
+        2-3_Artist_Debugging_2_a: كل مسافة قدرها 75 بكسل.
       2-3 Artist Debugging 3:
         2-3_Artist_Debugging_3_a: إحدى الاستدارات أصغر من اللازم بـ 15 درحة.
         2-3_Artist_Debugging_3_b: إذا كان البرنامج يعمل بسرعة كبيرة لا تسمح برؤية
@@ -51,18 +47,11 @@ ar-SA:
       2-3 Artist Debugging 7:
         2-3_Artist_Debugging_7_a: ماذا يحدث إذا جعلت الرسام يتحرك أو يقفز إلى الخلف
           بعد أن رسم الخط الأول؟
-      2-3 Artist Debugging 8:
-        2-3_Artist_Debugging_8_a: |-
-          كم مرة تكرر شكلي؟
-
-          كم مرة _يجب_ أن يتكرر الشكل؟
-
-          أين يمكنك تغيير ذلك في البرنامج؟
       2-3 Artist Debugging 9:
-        2-3_Artist_Debugging_9_a: يحتاج الفنان أن يستدير 60 درجة أكثر نحو اليسار قبل
-          البدء بالرسم!
-        2-3_Artist_Debugging_9_b: ليست بحاجة لإضافة كتلة أخرى للحصول على دورة كاملة،
-          فقط أضف 60 درجة لكتلة "اتجه إلى اليسار" الموجودة هناك مسبقا!
+        2-3_Artist_Debugging_9_a: يحتاج الفنان أن يستدير 60 درجة نحو اليسار قبل البدء
+          بالرسم!
+        2-3_Artist_Debugging_9_b: ليس عليك إضافة كتلة أخرى للحصول على دورة كاملة،
+          فقط أضف 60 درجة لكتلة "استدر يسارا" الموجودة هناك مسبقا!
       2-3 Artist Functions 1:
         2-3_Artist_Functions_1_a: لكل من المربعات جوانب بطول 100 بكسل، هذا يعني أن
           عليك التحرك نحو الأمام بمقدار 175 بكسل قبل رسم مربعك الثاني.
@@ -85,49 +74,6 @@ ar-SA:
         2-3_Artist_Functions_4_a: يحتاج الفنان أن يستدير 120 درجة بين كل مربع لإكمال
           التصميم.
       2-3 Artist Loops New 11:
-        2-3_Artist_Loops_New_11_a: |-
-          تذكر أن البرنامج من اللغز السابق كان:
-
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="controls_repeat">
-          <title name="TIMES">8</title>
-          <statement name="DO">
-          <block type="draw_colour" inline="true">
-          <value name="COLOUR">
-          <block type="colour_random"/>
-          </value>
-          <next>
-          <block type="draw_turn_by_constant_dropdown">
-          <title name="DIR">اتجه إلى اليمين</title>
-          <title name="VALUE" config="45,60,90,120,180">45</title>
-          <next>
-          <block type="draw_move_by_constant">
-          <title name="DIR">تحرك إلى الأمام</title>
-          <title name="VALUE">50</title>
-          <next>
-          <block type="draw_turn_by_constant_dropdown">
-          <title name="DIR">اتجه إلى اليسار</title>
-          <title name="VALUE" config="45,60,90,120,180">90</title>
-          <next>
-          <block type="draw_move_by_constant">
-          <title name="DIR">تحرك إلى الأمام</title>
-          <title name="VALUE">50</title>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </xml>
         2-3_Artist_Loops_New_11_b: استدارتك الجديدة يجب أن تكون في **نهاية** البرنامج
           وداخل الحلقة التكرارية.
       2-3 Artist Loops New 12:
@@ -141,9 +87,6 @@ ar-SA:
         2-3_Artist_Loops_New_13_a: "في نهاية كل معين، يكون الفنان فعلاً متوجهاً بالاتجاه
           الصحيح لبدء المعين التالي. \n\nبسبب ذلك، لا نحتاج لإضافة كتلة \"اتجه إلى
           اليسار\" إضافية قبل البدء مجدداً."
-        2-3_Artist_Loops_New_13_b: "لرسم كل معين، يحتاج الفنان:  \n\n-   التحرك\n-
-          \  الاستدارة إلى اليمين 120 درجة\n-   التحرك\n-   الاستدارة إلى اليمين 60
-          درجة\n\nثم تكرار كل ما سبق مرة أخرى!"
       2-3 Artist Loops New 9:
         2-3_Artist_Loops_New_9_a: يحتاج الفنان أن يستدير 45 درجة إلى اليمين قبل أن
           يبدأ الرسم.
@@ -176,10 +119,6 @@ ar-SA:
           حاول معاملة الزهرة الحمراء بنفس طريقة الزهرة البنفسجية!
         2-3_Bee_Conditionals_14_b: لو كانت الوردة الحمراء وردة بنفسجية، هل يمكنك معرفة
           كيفية استخدام كتلة "كرر" إضافية لتختصر البرنامج؟
-        2-3_Bee_Conditionals_14_c: "حاول تقسيم هذا إلى مجموعتين منفصلتين: \n\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1.
-          \ جمع الرحيق 3 مرات\n\n2.  تحرك إلى الأمام 5 مرات\n\n3.  تحقق من وجود رحيق،
-          إذا كان موجود: اجمعه\n\n4.  اتجه إلى اليسار\n\n5.  اصنع العسل \n\n6.  تحرك
-          إلى الأمام مرة واحدة\n\n7.  اصنع عسل مرتين"
       2-3 Bee Conditionals 15:
         2-3_Bee_Conditionals_15_a: 'تذكر: الأزهار البنفسجية تحتوي فقط على 0 أو 1 رحيق
           ويمكن للرحيق أن يتغير كل مرة يتم فيها تشغيل البرنامج.'
@@ -296,23 +235,13 @@ ar-SA:
       4-5 Artist 4:
         4-5_Artist_4_a: "هناك 360 درجة في الدائرة! \n\nهذا هو عدد المرات التي تحتاجه
           لتكرار هذا الجزء البرمجي (الاستدارة درجة واحدة في كل مرة) قبل اكتمال الدائرة!"
-      4-5 Artist 5:
-        4-5_Artist_5_a: |-
-          تعتبر التجربة والخطأ طريقة رائعة، ولكن يمكنك أيضًا حل المسالة عن طريق تقسيم الزاوية 90 درجة إلى أثلاث.
-
-          **90 / 3 = **\_****
       4-5 Artist 7:
         4-5_Artist_7_a: 'أي زاوية هي الأصغر؟ في أي زاوية يقف الرسام؟ '
       4-5 Artist 8:
         4-5_Artist_8_a: "الأضلاع الطويلة هي بطول 240 نقطة لكل منهما. وهذا يعني أن
           الجانبين القصيرين يجب أن يكون مجموع طوليهما:\n\n**800 - 240 - 240 = 320**\n\nما
           هو  **320/2** ؟ "
-        4-5_Artist_8_b: "يمكن القيام بهذه الصورة بطريقتين! \n\n-   ارسم مستطيلين بطول
-          **120** وارتفاع **160**، مع ضلع متشابك.\n\n-   ارسم مستطيلاً بطول \\*\\*
-          240 \\*\\* وارتفاع **160**، ثم أضف خطاً في الوسط."
       4-5 Artist 9:
-        4-5_Artist_9_a: عندما يكون المثلث متساوي الأضلاع، تكون كل الأضلاع وكل الزوايا
-          متساوية.
         4-5_Artist_9_b: ستحتاج إلى رسم ثلاثة مثلثات بنفس الحجم. لا تنس أن تقفز إلى
           موقع جديد بعد رسم كل مثلث.
       4-5 Artist Assessment 1:
@@ -399,64 +328,6 @@ ar-SA:
           مثلث**. '
         Course_4_Artist_12_b: 'شكل الوحدة هو نفسه تقريبا كما هو في اللغز الأخير، باستثناء
           أن نصف السداسي أكبر قليلاً. '
-        Course_4_Artist_12_c: "1.  يبلغ طول الخطوط الثلاثة الأولى 60 بكسل وتحتاج الاستدارة
-          60 درجة.  \n2.  يبلغ طول الخطين التاليين 80 بكسل وتحتاج إلى الاستدارة 120
-          درجة "
-        Course_4_Artist_12_d: |-
-          **الحل:**
-
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="draw_colour" inline="true" id="draw-color">
-          <value name="COLOUR">
-          <block type="colour_picker">
-          <title name="COLOUR">#843179</title>
-          </block>
-          </value>
-          <next>
-          <block type="controls_repeat">
-          <title name="TIMES">6</title>
-          <statement name="DO">
-          <block type="controls_repeat">
-          <title name="TIMES">3</title>
-          <statement name="DO">
-          <block type="draw_move_by_constant">
-          <title name="DIR">تحرك إلى الأمام</title>
-          <title name="VALUE">60</title>
-          <next>
-          <block type="draw_turn_by_constant">
-          <title name="DIR">اتجه إلى اليمين</title>
-          <title name="VALUE">60</title>
-          </block>
-          </next>
-          </block>
-          </statement>
-          <next>
-          <block type="controls_repeat">
-          <title name="TIMES">2</title>
-          <statement name="DO">
-          <block type="draw_move_by_constant">
-          <title name="DIR">تحرك إلى الأمام</title>
-          <title name="VALUE">80</title>
-          <next>
-          <block type="draw_turn_by_constant">
-          <title name="DIR">اتجه إلى اليمين</title>
-          <title name="VALUE">120</title>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
       Course 4 Artist 6:
         Course_4_Artist_6_a: هناك 3 مثلثات داخل استدارة 360 درجة... كم استدارة تحتاج
           المثلثات لتستدير بزاروية 360 درجة؟
@@ -495,9 +366,12 @@ ar-SA:
         Course_4_Artist_For_Loops_3_a: لجعل حلقة "العد" تقود حركتك، تأكد من أنك تستخدم
           "عداد" كمسافة.
       Course 4 Artist For Loops 4:
-        Course_4_Artist_For_Loops_4_a: "\\*\\* ما هو الرقم الأصغر الذي ستحتاجه؟  \nما
-          هو أكبر رقم؟  \nما هو مقدر الزيادة في كل مرة؟ \\*\\*\n\nتلك هي الأسئلة التي
-          تحتاج طرحها لملأ الفراغات الموجودة في حلقة \"العد\"."
+        Course_4_Artist_For_Loops_4_a: |-
+          \*\* ما هو الرقم الأصغر الذي ستحتاجه؟\
+          ما هو أكبر رقم؟\
+          ما هو مقدر الزيادة في كل مرة؟ \*\*
+
+          تلك هي الأسئلة التي تحتاج طرحها لملأ الفراغات الموجودة في حلقة "العد".
       Course 4 Artist For Loops Challenge:
         Course_4_Artist_For_Loops_Challenge_a: أكبر شكل لديه 19 ضلغ. أصغر شكل لديه
           ضلعين فقط.
@@ -573,72 +447,6 @@ ar-SA:
           وأضف "اتجه إلى اليمين" من 3 درجات داخل حلقة التكرار.
         Course_4_Artist_Functions_Inspiration_b: حاول الاستدارة بأكثر من 90 درجة خارج
           حلقة "تكرار"، لكن تبقى داخل حلقة "العد".
-        Course_4_Artist_Functions_Inspiration_c: |-
-          **الحل:**
-
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="controls_for_counter" inline="true">
-          <mutation counter="counter"></mutation>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">14</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="draw_colour" inline="true" id="draw-color">
-          <value name="COLOUR">
-          <block type="colour_random"/>
-          </value>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">عداد</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="procedures_callnoreturn">
-          <mutation name="draw a square 20"></mutation>
-          <next>
-          <block type="jump_by_constant">
-          <title name="DIR">قفز إلى الأمام</title>
-          <title name="VALUE">20</title>
-          <next>
-          <block type="draw_turn_by_constant">
-          <title name="DIR">اتجه إلى اليمين</title>
-          <title name="VALUE">3</title>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          <next>
-          <block type="draw_turn_by_constant">
-          <title name="DIR">اتجه إلى اليسار</title>
-          <title name="VALUE">100</title>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </xml>
       Course 4 Artist Functions challenge:
         Course_4_Artist_Functions_challenge_a: جزء من فهم كيفية استخدام الدوال هو
           معرفة أيها تحتاج، وأيها لا تحتاج إليها.
@@ -655,179 +463,6 @@ ar-SA:
           إلى اليسار بينهما) لإنشاء مروحة كاملة.
         Course_4_Artist_Inspire_c: كل مروحة يتم تكرارها أيضا 4 مرات، مع استداره إلى
           اليمين بمقدار **360/جهة**.
-        Course_4_Artist_Inspire_d: |-
-          **الحل:**
-
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="draw_colour" inline="true" id="draw-color">
-          <value name="COLOUR">
-          <block type="colour_picker">
-          <title name="COLOUR">#843179</title>
-          </block>
-          </value>
-          <next>
-          <block type="variables_set" inline="false">
-          <title name="VAR">جهات</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">4</title>
-          </block>
-          </value>
-          <next>
-          <block type="variables_set" inline="false">
-          <title name="VAR">طول</title>
-          <value name="VALUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">قسمة</title>
-          <value name="A">
-          <block type="math_number">
-          <title name="NUM">200</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="variables_get">
-          <title name="VAR">جهات</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">جهات</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">جهات</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">جهات</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="draw_move" inline="true">
-          <title name="DIR">تحرك إلى الأمام</title>
-          <value name="VALUE">
-          <block type="variables_get">
-          <title name="VAR">طول</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">اتجه إلى اليمين</title>
-          <value name="VALUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">قسمة</title>
-          <value name="A">
-          <block type="math_number">
-          <title name="NUM">360</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="variables_get">
-          <title name="VAR">جهات</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </statement>
-          <next>
-          <block type="jump" inline="true">
-          <title name="DIR">قفز إلى الأمام</title>
-          <value name="VALUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">قسمة</title>
-          <value name="A">
-          <block type="variables_get">
-          <title name="VAR">طول</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">اتجه إلى اليسار</title>
-          <value name="VALUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">قسمة</title>
-          <value name="A">
-          <block type="math_number">
-          <title name="NUM">360</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="variables_get">
-          <title name="VAR">جهات</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          <next>
-          <block type="jump" inline="true">
-          <title name="DIR">قفز إلى الأمام</title>
-          <value name="VALUE">
-          <block type="variables_get">
-          <title name="VAR">طول</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">اتجه إلى اليمين</title>
-          <value name="VALUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">قسمة</title>
-          <value name="A">
-          <block type="math_number">
-          <title name="NUM">360</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="variables_get">
-          <title name="VAR">جهات</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
       Course 4 Artist Vars 13:
         Course_4_Artist_Vars_13_a: تحتاج حلقتين تكراريتين (واحدة داخل الأخرى) كلاهما
           تكرر بعدد الجهات.
@@ -880,536 +515,15 @@ ar-SA:
           درجة إلى اليمين ثم القفز إلى الأمام بمقدار 40 نقطة. \n\nوبمجرد أن تكون في
           المكان العمودي الصحيح، يجب أن تجعل الرسام يستدير عائداً مرة أخرى ثم القفز
           للخلف 440 نقطة (120 نقطة أكثر من الدالة \"الانتقال إلى الأسفل/إلى الأمام\"). "
-        Course_4_SCF_1_e: |-
-          **الحل:**
-
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="procedures_callnoreturn">
-          <mutation name="draw a line of hexagons"></mutation>
-          <next>
-          <block type="procedures_callnoreturn">
-          <mutation name="shift down/forward"></mutation>
-          <next>
-          <block type="procedures_callnoreturn">
-          <mutation name="draw a line of hexagons"></mutation>
-          <next>
-          <block type="procedures_callnoreturn">
-          <mutation name="shift down/backward"></mutation>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          <block type="procedures_defnoreturn">
-          <mutation></mutation>
-          <title name="NAME">ارسم شكلاً سداسياً</title>
-          <statement name="STACK">
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="math_number">
-          <title name="NUM">6</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="draw_move" inline="true">
-          <title name="DIR">تحرك إلى الأمام</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">40</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">اتجه إلى اليمين</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">60</title>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </statement>
-          </block>
-          <block type="procedures_defnoreturn">
-          <mutation></mutation>
-          <title name="NAME">الانتقال إلى الأسفل/إلى الخلف</title>
-          <statement name="STACK">
-          <block type="draw_turn" inline="true">
-          <title name="DIR">اتجه إلى اليمين</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">60</title>
-          </block>
-          </value>
-          <next>
-          <block type="jump" inline="true">
-          <title name="DIR">اقفز إلى الأمام</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">40</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">اتجه إلى اليسار</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">60</title>
-          </block>
-          </value>
-          <next>
-          <block type="jump" inline="true">
-          <title name="DIR">اقفز إلى الخلف</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">440</title>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          <block type="procedures_defnoreturn">
-          <mutation></mutation>
-          <title name="NAME">ارسم سطراً من السداسيات</title>
-          <statement name="STACK">
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="math_number">
-          <title name="NUM">3</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="procedures_callnoreturn">
-          <mutation name="draw a hexagon"></mutation>
-          <next>
-          <block type="jump" inline="true">
-          <title name="DIR">اقفز إلى الأمام</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">120</title>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </statement>
-          </block>
-          <block type="procedures_defnoreturn">
-          <mutation></mutation>
-          <title name="NAME">الانتقال إلى الأسفل/إلى الأمام</title>
-          <statement name="STACK">
-          <block type="draw_turn" inline="true">
-          <title name="DIR">اتجه إلى اليمين</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">60</title>
-          </block>
-          </value>
-          <next>
-          <block type="jump" inline="true">
-          <title name="DIR">اقفز إلى الأمام</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">40</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">اتجه إلى اليسار</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">60</title>
-          </block>
-          </value>
-          <next>
-          <block type="jump" inline="true">
-          <title name="DIR">اقفز إلى الخلف</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">320</title>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </xml>
       Course 4 SCF 1a:
         Course_4_SCF_1a_a: تذكر الدوال من المرحلة 16.
-        Course_4_SCF_1a_b: 'انظر لهذا المسار على أنه طريقك الرئيسي:  '
         Course_4_SCF_1a_c: يجب أن تأخذ في الاعتبار استخدام حلقة "لأجل". ليس من أجل
           الخطوات، بل من أجل عوامل الدالة.
-        Course_4_SCF_1a_d: |-
-          **الحل:**
-
-          <xml>
-          <block type="when_run" deletable="false" movable="false" uservisible="false" y="14">
-          <next>
-          <block type="variables_set" inline="false" uservisible="false">
-          <title name="VAR">يسار</title>
-          <value name="VALUE">
-          <block type="math_number" uservisible="false">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <next>
-          <block type="variables_set" inline="false" uservisible="false">
-          <title name="VAR">يمين</title>
-          <value name="VALUE">
-          <block type="math_number" uservisible="false">
-          <title name="NUM">0</title>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="controls_for" inline="true">
-          <title name="VAR">عداد</title>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">3</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">21</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">3</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_move">
-          <title name="DIR">تحرك إلى الأمام</title>
-          <next>
-          <block type="maze_if">
-          <title name="DIR">يوجد طريق على اليسار</title>
-          <statement name="DO">
-          <block type="procedures_callnoreturn" inline="false">
-          <mutation name="get nectar">
-          <arg name="dir"></arg>
-          <arg name="counter"></arg>
-          </mutation>
-          <value name="ARG0">
-          <block type="variables_get">
-          <title name="VAR">يسار</title>
-          </block>
-          </value>
-          <value name="ARG1">
-          <block type="variables_get">
-          <title name="VAR">عداد</title>
-          </block>
-          </value>
-          </block>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">اتجه إلى اليمين</title>
-          <next>
-          <block type="maze_move">
-          <title name="DIR">تحرك إلى الأمام</title>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">اتجه إلى اليسار</title>
-          <next>
-          <block type="maze_if">
-          <title name="DIR">يوجد طريق على اليمين</title>
-          <statement name="DO">
-          <block type="procedures_callnoreturn" inline="false">
-          <mutation name="get nectar">
-          <arg name="dir"></arg>
-          <arg name="counter"></arg>
-          </mutation>
-          <value name="ARG0">
-          <block type="variables_get">
-          <title name="VAR">يمين</title>
-          </block>
-          </value>
-          <value name="ARG1">
-          <block type="variables_get">
-          <title name="VAR">عداد</title>
-          </block>
-          </value>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          <block type="procedures_defnoreturn" editable="false" usercreated="true">
-          <mutation>
-          <arg name="dir"></arg>
-          <arg name="counter"></arg>
-          </mutation>
-          <title name="NAME">الحصول على الرحيق</title>
-          <statement name="STACK">
-          <block type="controls_if" inline="false">
-          <mutation else="1"></mutation>
-          <value name="IF0">
-          <block type="logic_compare" inline="true" movable="false">
-          <title name="OP">EQ</title>
-          <value name="A">
-          <block type="parameters_get">
-          <title name="VAR">dir</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="variables_get">
-          <title name="VAR">يسار</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <statement name="DO0">
-          <block type="maze_turn">
-          <title name="DIR">اتجه إلى اليسار</title>
-          </block>
-          </statement>
-          <statement name="ELSE">
-          <block type="maze_turn">
-          <title name="DIR">اتجه إلى اليمين</title>
-          </block>
-          </statement>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="math_number">
-          <title name="NUM">3</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_move">
-          <title name="DIR">تحرك إلى الأمام</title>
-          </block>
-          </statement>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="parameters_get">
-          <title name="VAR">عداد</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_nectar"></block>
-          </statement>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="math_number">
-          <title name="NUM">3</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_move">
-          <title name="DIR">تحرك إلى الخلف</title>
-          </block>
-          </statement>
-          <next>
-          <block type="controls_if" inline="false">
-          <mutation else="1"></mutation>
-          <value name="IF0">
-          <block type="logic_compare" inline="true" movable="false">
-          <title name="OP">EQ</title>
-          <value name="A">
-          <block type="parameters_get">
-          <title name="VAR">dir</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="variables_get">
-          <title name="VAR">يسار</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <statement name="DO0">
-          <block type="maze_turn">
-          <title name="DIR">اتجه إلى اليمين</title>
-          </block>
-          </statement>
-          <statement name="ELSE">
-          <block type="maze_turn">
-          <title name="DIR">اتجه إلى اليسار</title>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </xml>
       Course 4 SCF 1b:
         Course_4_SCF_1b_a: "لاحظ أن أقراص العسل تحتوي على نفس العدد. \n\nهذا مناسب
           لإنشاء دالة!"
-        Course_4_SCF_1b_b: "انظر لهذه الفكرة عن كيفية حركة النحلة:  \n\n![](https://images.code.org/996ab4a2de6048cbb99b84c56cc4ad61-image-1469726859769.png)"
         Course_4_SCF_1b_c: يجب أن تأخذ في الاعتبار استخدام حلقة "لأجل" من أجل المسافة
           التي تتحركها النحلة.
-        Course_4_SCF_1b_d: |-
-          **الحل:**
-
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="controls_for" inline="true">
-          <title name="VAR">عداد</title>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">4</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="procedures_callnoreturn">
-          <mutation name="make honey up and over"></mutation>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">اتجه إلى اليسار</title>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">عداد</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_move">
-          <title name="DIR">تحرك إلى الأمام</title>
-          </block>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">اتجه إلى اليمين</title>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">عداد</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_move">
-          <title name="DIR">تحرك إلى الأمام</title>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          <block type="procedures_defnoreturn" editable="false" usercreated="true">
-          <mutation></mutation>
-          <title name="NAME">اصنع عسل وارجع</title>
-          <statement name="STACK">
-          <block type="maze_move">
-          <title name="DIR">تحرك إلى الأمام</title>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">اتجه إلى اليمين</title>
-          <next>
-          <block type="maze_move">
-          <title name="DIR">تحرك إلى الأمام</title>
-          <next>
-          <block type="maze_honey">
-          <next>
-          <block type="maze_honey">
-          <next>
-          <block type="maze_move">
-          <title name="DIR">تحرك إلى الخلف</title>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">اتجه إلى اليسار</title>
-          <next>
-          <block type="maze_move">
-          <title name="DIR">تحرك إلى الخلف</title>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </xml>
       Course 4 SCF 2:
         Course_4_SCF_2_a: كل ثماني لديه أضلاع بطول 40 نقطة.
         Course_4_SCF_2_b: هناك قفزة مقدارها 136 نقطة بين الثمانيات في كل خط أفقي.
@@ -1420,175 +534,6 @@ ar-SA:
         Course_4_SCF_2_d: "لاحظ أنه بسبب وجود ثمانيات أقل في السطور الفردية، فلن تحتاج
           أن تقفز للخلف بمقدار مسافة أكبر كي تصل إلى بداية السطر الزوجي.  \n\nهذا
           يعني أنه يمكنك استخدام نفس الدالة من أجل كل السطور."
-        Course_4_SCF_2_e: |-
-          **الحل:**
-
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="procedures_callnoreturn" inline="false">
-          <mutation name="draw octagons">
-          <arg name="numOctagons"></arg>
-          </mutation>
-          <value name="ARG0">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <next>
-          <block type="procedures_callnoreturn">
-          <mutation name="shift down"></mutation>
-          <next>
-          <block type="procedures_callnoreturn" inline="false">
-          <mutation name="draw octagons">
-          <arg name="numOctagons"></arg>
-          </mutation>
-          <value name="ARG0">
-          <block type="math_number">
-          <title name="NUM">3</title>
-          </block>
-          </value>
-          <next>
-          <block type="procedures_callnoreturn">
-          <mutation name="shift down"></mutation>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          <next>
-          <block type="procedures_callnoreturn" inline="false">
-          <mutation name="draw octagons">
-          <arg name="numOctagons"></arg>
-          </mutation>
-          <value name="ARG0">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          <block type="procedures_defnoreturn" editable="false">
-          <mutation>
-          <arg name="numOctagons"></arg>
-          </mutation>
-          <title name="NAME">ارسم صفا من الثمانيات</title>
-          <statement name="STACK">
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="parameters_get">
-          <title name="VAR">عدد الثمانيات</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="procedures_callnoreturn">
-          <mutation name="draw an octagon"></mutation>
-          <next>
-          <block type="jump" inline="true">
-          <title name="DIR">اقفز إلى الأمام</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">136</title>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </statement>
-          </block>
-          <block type="procedures_defnoreturn" editable="false">
-          <mutation></mutation>
-          <title name="NAME">ارسم ثماني</title>
-          <statement name="STACK">
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="math_number">
-          <title name="NUM">8</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="draw_move" inline="true">
-          <title name="DIR">تحرك إلى الأمام</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">40</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">اتجه إلى اليمين</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">45</title>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </statement>
-          </block>
-          <block type="procedures_defnoreturn" editable="false">
-          <mutation></mutation>
-          <title name="NAME">انتقل إلى السطر التالي</title>
-          <statement name="STACK">
-          <block type="draw_turn" inline="true">
-          <title name="DIR">اتجه إلى اليمين</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">45</title>
-          </block>
-          </value>
-          <next>
-          <block type="jump" inline="true">
-          <title name="DIR">اقفز إلى الأمام</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">96</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">اتجه إلى اليسار</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">45</title>
-          </block>
-          </value>
-          <next>
-          <block type="jump" inline="true">
-          <title name="DIR">اقفز إلى الخلف</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">408</title>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </xml>
       Course 4 SCF 3:
         Course_4_SCF_3_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         Course_4_SCF_3_b: هذه سلسلة من الثمانيات طول ضلع كل منها يساوي قيمة متغير
@@ -1598,152 +543,6 @@ ar-SA:
         Course_4_SCF_3_d: 'لا تنس أن تستدير بمقدار 22.5 درجة بعد نهاية كل تكرار. '
         Course_4_SCF_3_e: كلاً من لون الثماني وعرض القلم يتم التحكم به باستخدام المتغير
           "عداد".
-        Course_4_SCF_3_f: |-
-          **الحل:**
-
-          <xml>
-          <block type="procedures_defnoreturn" editable="false">
-          <mutation>
-          <arg name="length"></arg>
-          </mutation>
-          <title name="NAME">ارسم ثماني</title>
-          <statement name="STACK">
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="math_number">
-          <title name="NUM">8</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="draw_move" inline="true">
-          <title name="DIR">تحرك إلى الأمام</title>
-          <value name="VALUE">
-          <block type="parameters_get">
-          <title name="VAR">الطول</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">اتجه إلى اليمين</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">45</title>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </statement>
-          </block>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="controls_for_counter" inline="true">
-          <mutation counter="counter"></mutation>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">200</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="draw_colour" inline="true" id="draw-color">
-          <value name="COLOUR">
-          <block type="colour_rgb" inline="false">
-          <value name="RED">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">ناقص</title>
-          <value name="A">
-          <block type="math_number">
-          <title name="NUM">255</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="variables_get">
-          <title name="VAR">عداد</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <value name="GREEN">
-          <block type="variables_get">
-          <title name="VAR">عداد</title>
-          </block>
-          </value>
-          <value name="BLUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">ضرب</title>
-          <value name="A">
-          <block type="variables_get">
-          <title name="VAR">عداد</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          </block>
-          </value>
-          <next>
-          <block type="draw_width" inline="false">
-          <value name="WIDTH">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">قسمة</title>
-          <value name="A">
-          <block type="variables_get">
-          <title name="VAR">عداد</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="math_number">
-          <title name="NUM">4</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <next>
-          <block type="procedures_callnoreturn" inline="false">
-          <mutation name="draw an octagon">
-          <arg name="length"></arg>
-          </mutation>
-          <value name="ARG0">
-          <block type="variables_get">
-          <title name="VAR">عداد</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">اتجه إلى اليسار</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">22.5</title>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </xml>
       Course 4 SCFL 1:
         Course_4_SCFL_1_a: "ألق نظرة على هذا الخيار للحركة:  \n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)"
         Course_4_SCFL_1_b: 'حاول استخدام حلقتي "لأجل": حلقة للصعود والحصول على الرحيق،
@@ -1751,139 +550,6 @@ ar-SA:
         Course_4_SCFL_1_c: "لاحظ أن حلقة \"لأجل\" الأولى تحتاج مجموعة من حلقات \"التكرار\"
           داخلها لتكرر بمقدار الـ \"عداد\" لعمل نمط الصعود المتزايد. \n\nوالحلقة \"لأجل\"
           الأخرى تحتاج فقط حلقة واحدة \"التكرار\" لصنع عسل بمقدار الـ \"عداد\"."
-        Course_4_SCFL_1_d: |-
-          **الحل:**
-
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="controls_for" inline="true">
-          <title name="VAR">عداد</title>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">3</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">عداد</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_moveForward"/>
-          </statement>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">عداد</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_nectar"/>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">اتجه إلى اليسار</title>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">عداد</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_moveForward"/>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">اتجه إلى اليمين</title>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">اتجه إلى اليمين</title>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">اتجه إلى اليمين</title>
-          <next>
-          <block type="controls_for" inline="true">
-          <title name="VAR">عداد</title>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">10</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_moveForward">
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">اتجه إلى اليسار</title>
-          <next>
-          <block type="maze_moveForward">
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">اتجه إلى اليمين</title>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">عداد</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_honey"/>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
       Course 4 SCFL 1a:
         Course_4_SCFL_1a_a: قد تحتاج أن تتحرك أبعد مما فعلت كي تستخدم أقل عدد من الكتل
           البرمجية.
@@ -1891,411 +557,21 @@ ar-SA:
         Course_4_SCFL_1a_c: حلقة "لأجل" سوف تساعدك على تنفيذ النمط نفسه، لكن مع عدد
           متغير من الخطوات. لاحظ أن عدد الخطوات المطلوبة تتناقص من 7 إلى 5 بمقدار
           1.
-        Course_4_SCFL_1a_d: |-
-          **الحل:**
-
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="controls_for" inline="true">
-          <title name="VAR">عداد</title>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">7</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">5</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_moveForward"/>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">اتجه إلى اليسار</title>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">عداد</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_moveForward"/>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">اتجه إلى اليسار</title>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_moveForward"/>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">اتجه إلى اليسار</title>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </xml>
       Course 4 SCFL 1b:
         Course_4_SCFL_1b_a: جرب استخدام حلقة "لأجل".
         Course_4_SCFL_1b_b: "ألق نظرة على هذا الخيار للحركة:  \n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)"
-        Course_4_SCFL_1b_c: |-
-          **الحل:**
-
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="controls_for" inline="true">
-          <title name="VAR">عداد</title>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">3</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">عداد</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_moveForward"/>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">اتجه إلى اليسار</title>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">عداد</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_moveForward"/>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">اتجه إلى اليمين</title>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </xml>
       Course 4 SCFL 2:
         Course_4_SCFL_2_a: "ألق نظرة على هذا الخيار للحركة:  \n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)"
         Course_4_SCFL_2_b: لاحظ أن هناك ثلاث نقاط خلال كل تكرار في الحلقة "لأجل" وذلك
           عندما تتوقف لتتفاعل مع الأشياء.
         Course_4_SCFL_2_c: خلال كل تكرار في الحلقة "لأجل"، يكون عدد الأشياء متناسب
           مع قيمة المتغير "عداد" بطريقة ما.
-        Course_4_SCFL_2_d: |-
-          **الحل:**
-
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="controls_for" inline="true">
-          <title name="VAR">عداد</title>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">4</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_moveForward">
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">عداد</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_nectar"/>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">اتجه إلى اليمين</title>
-          <next>
-          <block type="maze_moveForward">
-          <next>
-          <block type="maze_moveForward">
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">ضرب</title>
-          <value name="A">
-          <block type="variables_get">
-          <title name="VAR">عداد</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="math_number">
-          <title name="NUM">3</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_honey"/>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">اتجه إلى اليسار</title>
-          <next>
-          <block type="maze_moveForward">
-          <next>
-          <block type="maze_moveForward">
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">اتجه إلى اليمين</title>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">أس</title>
-          <value name="A">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="variables_get">
-          <title name="VAR">عداد</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_nectar"/>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </xml>
       Course 4 SCFL 3:
         Course_4_SCFL_3_a: عرض القلم هو 1. المربع الأول طول ضلعه 50 نقطة، وضلع كل
           مربع أكبر من السابق بـ 50 نقطة.
         Course_4_SCFL_3_b: قتامة الفرشاة تكون دائما "عداد" قسمة 2.
         Course_4_SCFL_3_c: بعد رسم كل مربع، لا تنس أن تقفز للخلف، ثم تستدير، ثم تقفز
           مرة أخرى، ثم تستدير عائداً!
-        Course_4_SCFL_3_d: |-
-          **الحل:**
-
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="draw_width" inline="false">
-          <value name="WIDTH">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_colour" inline="true" id="draw-color">
-          <value name="COLOUR">
-          <block type="colour_picker">
-          <title name="COLOUR">#0000cd</title>
-          </block>
-          </value>
-          <next>
-          <block type="controls_for_counter" inline="true">
-          <mutation counter="counter"></mutation>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">50</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">350</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">50</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="alpha" inline="true" id="alpha">
-          <value name="VALUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">قسمة</title>
-          <value name="A">
-          <block type="variables_get">
-          <title name="VAR">عداد</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="math_number">
-          <title name="NUM">4</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="draw_move" inline="true">
-          <title name="DIR">تحرك إلى الأمام</title>
-          <value name="VALUE">
-          <block type="variables_get">
-          <title name="VAR">عداد</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">اتجه إلى اليمين</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">90</title>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </statement>
-          <next>
-          <block type="jump" inline="true">
-          <title name="DIR">اقفز إلى الخلف</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">25</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">اتجه إلى اليمين</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">90</title>
-          </block>
-          </value>
-          <next>
-          <block type="jump" inline="true">
-          <title name="DIR">اقفز إلى الخلف</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">25</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">اتجه إلى اليسار</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">90</title>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
       Course 4 SCFL 4:
         Course_4_SCFL_4_a: تغيير اللون يحدث باستخدام الكتلة البرمجية "تعيين اللون
           - التلوين مع أحمر أخضر أزرق". الأحمر يكون دائماً بقيمة المتغير "عداد"، أما
@@ -2303,110 +579,6 @@ ar-SA:
         Course_4_SCFL_4_b: كل شكل هو عبارة عن مربع أطوال أضلاعه تساوي المتغير "عداد"،
           ويبدأ بقيمة 5 نقاط، ثم يتزايد بمقدار 5 نقاط وصولاً إلى 200 نقطة.
         Course_4_SCFL_4_c: يستدير الرسام بمقدار 15 درجة بين كل مربعين.
-        Course_4_SCFL_4_d: |-
-          **الحل:**
-
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="draw_width" inline="false">
-          <value name="WIDTH">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <next>
-          <block type="controls_for_counter" inline="true">
-          <mutation counter="counter"></mutation>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">5</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">200</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">5</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="draw_colour" inline="true" id="draw-color">
-          <value name="COLOUR">
-          <block type="colour_rgb" inline="false">
-          <value name="RED">
-          <block type="variables_get">
-          <title name="VAR">عداد</title>
-          </block>
-          </value>
-          <value name="GREEN">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">ناقص</title>
-          <value name="A">
-          <block type="math_number">
-          <title name="NUM">255</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="variables_get">
-          <title name="VAR">عداد</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <value name="BLUE">
-          <block type="math_number">
-          <title name="NUM">255</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="math_number">
-          <title name="NUM">4</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="draw_move" inline="true">
-          <title name="DIR">تحرك إلى الأمام</title>
-          <value name="VALUE">
-          <block type="variables_get">
-          <title name="VAR">عداد</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn_by_constant">
-          <title name="DIR">اتجه إلى اليمين</title>
-          <title name="VALUE">90</title>
-          </block>
-          </next>
-          </block>
-          </statement>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">اتجه إلى اليسار</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">15</title>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
       Course 4 SCFL 6:
         Course_4_SCFL_6_a: تغيير اللون يحدث باستخدام الكتلة البرمجية "تعيين اللون
           - التلوين مع أحمر أخضر أزرق". الأحمر يكون ثابتاً بقيمة 255، والأخضر يكون
@@ -2414,95 +586,6 @@ ar-SA:
         Course_4_SCFL_6_b: التعليمات البرمجية أبسط بكثير مما تظن. فقط قم بتعيين اللون
           داخل الحلقة "لأجل"، ثم تحرك إلى الأمام، ثم استدر.
         Course_4_SCFL_6_c: 'تعد الحلقة "لأجل" من 5 إلى 250 بزيادة مقدارها 2. '
-        Course_4_SCFL_6_d: |-
-          **الحل:**
-
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="draw_width" inline="false">
-          <value name="WIDTH">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <next>
-          <block type="controls_for_counter" inline="true">
-          <mutation counter="counter"></mutation>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">5</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">250</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="draw_colour" inline="true" id="draw-color">
-          <value name="COLOUR">
-          <block type="colour_rgb" inline="false">
-          <value name="RED">
-          <block type="math_number">
-          <title name="NUM">255</title>
-          </block>
-          </value>
-          <value name="GREEN">
-          <block type="variables_get">
-          <title name="VAR">عداد</title>
-          </block>
-          </value>
-          <value name="BLUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">ناقص</title>
-          <value name="A">
-          <block type="math_number">
-          <title name="NUM">255</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="variables_get">
-          <title name="VAR">عداد</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          </block>
-          </value>
-          <next>
-          <block type="draw_move" inline="true">
-          <title name="DIR">تحرك إلى الأمام</title>
-          <value name="VALUE">
-          <block type="variables_get">
-          <title name="VAR">عداد</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">اتجه إلى اليمين</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">80</title>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
       Course 4 SCFL 7:
         Course_4_SCFL_7_a: تغيير اللون يحدث باستخدام الكتلة البرمجية "تعيين اللون
           - التلوين مع أحمر أخضر أزرق". الأحمر يكون دائماً بقيمة المتغير "عداد"، أما
@@ -2514,216 +597,6 @@ ar-SA:
           بمقدار "360/عداد". لا تنس أن تعين عرض القلم إلى "عداد" قبل أن تبدأ!
         Course_4_SCFL_7_d: سوف تحتاج أن تستدير إلى اليسار بمقدار 225 درجة بين حلقتي
           "لأجل".
-        Course_4_SCFL_7_e: |-
-          **الحل:**
-
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="alpha" inline="true" id="alpha">
-          <value name="VALUE">
-          <block type="math_number_dropdown">
-          <title name="NUM" config="100,90,80,70,60,50,40,30,20,10,0">20</title>
-          </block>
-          </value>
-          <next>
-          <block type="controls_for_counter" inline="true">
-          <mutation counter="counter"></mutation>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">5</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">200</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="draw_width" inline="false">
-          <value name="WIDTH">
-          <block type="variables_get">
-          <title name="VAR">عداد</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_colour" inline="true" id="draw-color">
-          <value name="COLOUR">
-          <block type="colour_rgb" inline="false">
-          <value name="RED">
-          <block type="variables_get">
-          <title name="VAR">عداد</title>
-          </block>
-          </value>
-          <value name="GREEN">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">ناقص</title>
-          <value name="A">
-          <block type="math_number">
-          <title name="NUM">255</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="variables_get">
-          <title name="VAR">عداد</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <value name="BLUE">
-          <block type="math_number">
-          <title name="NUM">255</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <next>
-          <block type="draw_move" inline="true">
-          <title name="DIR">تحرك إلى الأمام</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">5</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">اتجه إلى اليسار</title>
-          <value name="VALUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">قسمة</title>
-          <value name="A">
-          <block type="math_number">
-          <title name="NUM">360</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="variables_get">
-          <title name="VAR">عداد</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">اتجه إلى اليسار</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">225</title>
-          </block>
-          </value>
-          <next>
-          <block type="controls_for_counter" inline="true">
-          <mutation counter="counter"></mutation>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">200</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">5</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="draw_width" inline="false">
-          <value name="WIDTH">
-          <block type="variables_get">
-          <title name="VAR">عداد</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_colour" inline="true" id="draw-color">
-          <value name="COLOUR">
-          <block type="colour_rgb" inline="false">
-          <value name="RED">
-          <block type="variables_get">
-          <title name="VAR">عداد</title>
-          </block>
-          </value>
-          <value name="GREEN">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">ناقص</title>
-          <value name="A">
-          <block type="math_number">
-          <title name="NUM">255</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="variables_get">
-          <title name="VAR">عداد</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <value name="BLUE">
-          <block type="math_number">
-          <title name="NUM">255</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <next>
-          <block type="draw_move" inline="true">
-          <title name="DIR">تحرك إلى الأمام</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">5</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">اتجه إلى اليمين</title>
-          <value name="VALUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">قسمة</title>
-          <value name="A">
-          <block type="math_number">
-          <title name="NUM">360</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="variables_get">
-          <title name="VAR">عداد</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
       Course 4 SCV 1:
         Course_4_SCV_1_a: 'المتغيرات مفيدة لأنه يمكنك الإضافة إليها في كل مرة خلال
           الحلقة. '
@@ -2733,159 +606,7 @@ ar-SA:
         Course_4_SCV_1_c: استخدام متغير لـ "أضلاع" ومتغير لـ "طول الضلع" يجعل البرنامج
           أسهل لأنه يمكنك تكرار نفس التعليمات البرمجية عدة مرات ، بدلاً من من عمل
           نسخة من التعليمات لكل مجموعة من المضلعات.
-        Course_4_SCV_1_d: |-
-          **الحل:**
-
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="draw_width" inline="false">
-          <value name="WIDTH">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <next>
-          <block type="variables_set" inline="false">
-          <title name="VAR">الطول</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">500</title>
-          </block>
-          </value>
-          <next>
-          <block type="variables_set" inline="false">
-          <title name="VAR">الأضلاع</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">0</title>
-          </block>
-          </value>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="draw_colour" inline="true" id="draw-color">
-          <value name="COLOUR">
-          <block type="colour_random"/>
-          </value>
-          <next>
-          <block type="variables_set" inline="false">
-          <title name="VAR">الأضلاع</title>
-          <value name="VALUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">أضف</title>
-          <value name="A">
-          <block type="variables_get">
-          <title name="VAR">الأضلاع</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="math_number">
-          <title name="NUM">5</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">الأضلاع</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">الأضلاع</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="draw_move" inline="true">
-          <title name="DIR">تحرك إلى الأمام</title>
-          <value name="VALUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">قسمة</title>
-          <value name="A">
-          <block type="variables_get">
-          <title name="VAR">الطول</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="variables_get">
-          <title name="VAR">الأضلاع</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">اتجه إلى اليسار</title>
-          <value name="VALUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">قسمة</title>
-          <value name="A">
-          <block type="math_number">
-          <title name="NUM">360</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="variables_get">
-          <title name="VAR">الأضلاع</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </statement>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">اتجه إلى اليمين</title>
-          <value name="VALUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">قسمة</title>
-          <value name="A">
-          <block type="math_number">
-          <title name="NUM">360</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="variables_get">
-          <title name="VAR">الأضلاع</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
       Course 4 SCV 2:
-        Course_4_SCV_2_a: "الصورة المكتملة مكونة من 10 من هذه \"الأزهار\":  \n![](https://images.code.org/bac2a606dfa59c00409294499540267d-image-1469641972385.png)\n\n...والتي
-          تتكون من 10 أشكال عشارية:  \n![](https://images.code.org/1e15f278c9c1606f90a2490ec3a94eb4-image-1469642051512.png)"
         Course_4_SCV_2_b: 'هذا التصميم يستخدم حلقات متداخلة (على ثلاث مستويات). كل
           حلقة تتكرر بقيمة المتغير "أضلاع". '
         Course_4_SCV_2_c: الرسام يستدير إلى اليسار عند رسم كل شكل عشاري، لكنه يستدير
@@ -2893,178 +614,6 @@ ar-SA:
         Course_4_SCV_2_d: لمنع أزهارك ذات الـ 10 بتلات من أن يتم رسمها في نفس المكان،
           تأكد من أن تقفز بمقدار "طول الضلع" / "عدد الأضلاع" قبل أن تستدير بزاوية
           360 / "عدد الأضلاع" كجزء من حلقتك الخارجية.
-        Course_4_SCV_2_e: |-
-          **الحل:**
-
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="draw_width" inline="false">
-          <value name="WIDTH">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <next>
-          <block type="variables_set" inline="false">
-          <title name="VAR">الطول</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">400</title>
-          </block>
-          </value>
-          <next>
-          <block type="variables_set" inline="false">
-          <title name="VAR">الأضلاع</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">10</title>
-          </block>
-          </value>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">الأضلاع</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="draw_colour" inline="true" id="draw-color">
-          <value name="COLOUR">
-          <block type="colour_picker">
-          <title name="COLOUR">#ff0000</title>
-          </block>
-          </value>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">الأضلاع</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">الأضلاع</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="draw_move" inline="true">
-          <title name="DIR">تحرك إلى الأمام</title>
-          <value name="VALUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">قسمة</title>
-          <value name="A">
-          <block type="variables_get">
-          <title name="VAR">الطول</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="variables_get">
-          <title name="VAR">الأضلاع</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">turnLeft</title>
-          <value name="VALUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">DIVIDE</title>
-          <value name="A">
-          <block type="math_number">
-          <title name="NUM">360</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="variables_get">
-          <title name="VAR">الأضلاع</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </statement>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">turnRight</title>
-          <value name="VALUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">DIVIDE</title>
-          <value name="A">
-          <block type="math_number">
-          <title name="NUM">360</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="variables_get">
-          <title name="VAR">الأضلاع</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </statement>
-          <next>
-          <block type="jump" inline="true">
-          <title name="DIR">jumpForward</title>
-          <value name="VALUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">DIVIDE</title>
-          <value name="A">
-          <block type="variables_get">
-          <title name="VAR">length</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="variables_get">
-          <title name="VAR">الأضلاع</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">اتجه إلى اليمين</title>
-          <value name="VALUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">قسمة</title>
-          <value name="A">
-          <block type="math_number">
-          <title name="NUM">360</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="variables_get">
-          <title name="VAR">الأضلاع</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
       Course 4 SCV 3:
         Course_4_SCV_3_a: 'استخدم الكتلة البرمجية الحسابية لإضافة أو طرح نقاطة من
           المتغير "نقاط" عندما يتصادم الممثلون. '
@@ -3398,10 +947,6 @@ ar-SA:
         brush_width: حددنا عرض الفرشاة الى 1، ثم لونها الى أزرق قبل أن نقوم بأي شيء
           آخر.
         double_loop: حاول وضع حلقة "العد أو for" داخل حلقةت"تكرار".
-        specifics: |-
-          تعمل حلقة "العد أو for" من 3 إلى 17 لكل بتلة قبل الانتقال لرسم الأشكال التالية، حيث يتم رسم أشكال بأضلاع فردية فقط.
-
-          تستخدم القطعة "تعيين alpha" القسمة لعمل خفوت في اللون كلما زادت قيمة العداد.
         after: عند الانتهاء من كل بتلة، تأكد من التحرك إلى الأمام 20 بكسل قبل الاستدارة
           60 درجة.
       behaviors 2:
@@ -3418,6 +963,22 @@ ar-SA:
         courseA_artist_loops_challenge1_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         courseA_artist_loops_challenge1_c: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         courseA_artist_loops_challenge1_d: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      course2_collector_loops_challenge2:
+        courseC_maze_loops_challenge2_b: استخدم دالة كرر لكي لاتنتهي بلوكات "اجمع"!
+      course2_harvester_loops_challenge2:
+        courseC_harvester_loops_challenge2_a: إحدى الطرق لحل اللغز هو السير بمسار
+          يشبه الخط المتعرج. وطريقة أخرى هو السير بمسار يشبه الحلزون! هناك العديد
+          من الحلول لحل هذا اللغز. كن مثابراً!
+        courseC_harvester_loops_challenge2_b: يمكنك تكرار "تحريك إلى الامام" و " التقط
+          خس" على قدر ماتحتاج, ومن ثم الاتفاف عند كل زاوية.
+        courseC_harvester_loops_challenge2_c: |-
+          هذا النمط المتعرج يمكن تكراره مرتين لحل اللغز باستخدام 20 بلوكة
+
+          ![](<https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png>)
+        courseC_harvester_loops_challenge2_d: |-
+          النمط الحلزوني يمكن برمجته باستخدام 18 بلوكة!
+
+          ![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)
       course3_bee_functions_challenge1:
         courseE_bee_functions_challenge1_a: "إذا كان اللغز يبدو صعباً، حاول بناء جزء
           من الدالة كل مرة. \n\nأضف بعض القطع، ثم جربها. أضف المزيد، ثم حاول مرة اخرى.
@@ -3426,8 +987,616 @@ ar-SA:
         courseE_bee_functions_challenge1_a: "إذا كان اللغز يبدو صعباً، حاول بناء جزء
           من الدالة كل مرة. \n\nأضف بعض القطع، ثم جربها. أضف المزيد، ثم حاول مرة اخرى.
           قريبا، سوف تنجح!"
+      courseA_harvester_loops6:
+        courseA_harvester_loops6_a: إذا علقت, جرب كتابة الخطوات على ورقة وابحث عن
+          نمط متكرر.
+      courseA_harvester_loops6_2019:
+        courseA_harvester_loops6_a: إذا علقت, جرب كتابة الخطوات على ورقة وابحث عن
+          نمط متكرر.
       courseB_maze_seq8:
         courseB_maze_seq8_b: هناك طريقتان لحل هذا اللغز!
+      courseC_PlayLab_events1:
+        courseC_PlayLab_events1_a: |-
+          اضف هذه البواكة إلى بلوكة "عند التشغيل":
+
+          <xml>
+            <block type="studio_saySpriteChoices">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">Hi there.</title>
+            </block>
+          </xml>
+      courseC_PlayLab_events1_2018:
+        courseC_PlayLab_events1_a: |-
+          اضف هذه البواكة إلى بلوكة "عند التشغيل":
+
+          <xml>
+            <block type="studio_saySpriteChoices">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">Hi there.</title>
+            </block>
+          </xml>
+      courseC_PlayLab_events1_2019:
+        courseC_PlayLab_events1_a: |-
+          اضف هذه البواكة إلى بلوكة "عند التشغيل":
+
+          <xml>
+            <block type="studio_saySpriteChoices">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">Hi there.</title>
+            </block>
+          </xml>
+      courseC_PlayLab_events2:
+        courseC_PlayLab_events2_a: |-
+          ألصق بلوكتينمن هذه البلوكات إلى بلوكة "عند التشغيل":
+
+          <xml>
+            <block type="studio_saySpriteChoices">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">Hi there.</title>
+            </block>
+          </xml>
+        courseC_PlayLab_events2_b: استخدم القائمة المنسدلة في بلوكة "يقول الممثل"
+          الثانية لتغير أي شخصية تتحدث.
+      courseC_PlayLab_events2_2018:
+        courseC_PlayLab_events2_a: |-
+          ألصق بلوكتينمن هذه البلوكات إلى بلوكة "عند التشغيل":
+
+          <xml>
+            <block type="studio_saySpriteChoices">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">Hi there.</title>
+            </block>
+          </xml>
+        courseC_PlayLab_events2_b: استخدم القائمة المنسدلة في بلوكة "يقول الممثل"
+          الثانية لتغير أي شخصية تتحدث.
+      courseC_PlayLab_events2_2019:
+        courseC_PlayLab_events2_a: |-
+          ألصق بلوكتينمن هذه البلوكات إلى بلوكة "عند التشغيل":
+
+          <xml>
+            <block type="studio_saySpriteChoices">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">Hi there.</title>
+            </block>
+          </xml>
+        courseC_PlayLab_events2_b: استخدم القائمة المنسدلة في بلوكة "يقول الممثل"
+          الثانية لتغير أي شخصية تتحدث.
+      courseC_PlayLab_events3:
+        courseC_PlayLab_events3_a: سوف تحتاج فقط إلى تحريك جورج إلى اليمين بمقدار
+          25 بكسل لتحل هذا اللغز.
+        courseC_PlayLab_events3_b: هل هناك بلوكة في صندوق الأدوات تظهر وكأنها ستحرك
+          الممثل؟
+        courseC_PlayLab_events3_c: |-
+          اضف هذه البواكة إلى بلوكة "عند التشغيل":
+
+          <xml>
+          <block type="studio_moveDistance">
+              <title name="SPRITE">0</title>
+              <title name="DIR">2</title>
+              <title name="DISTANCE">25</title>
+            </block>
+          </xml>
+      courseC_PlayLab_events3_2018:
+        courseC_PlayLab_events3_a: سوف تحتاج فقط إلى تحريك جورج إلى اليمين بمقدار
+          25 بكسل لتحل هذا اللغز.
+        courseC_PlayLab_events3_b: هل هناك بلوكة في صندوق الأدوات تظهر وكأنها ستحرك
+          الممثل؟
+        courseC_PlayLab_events3_c: |-
+          اضف هذه البواكة إلى بلوكة "عند التشغيل":
+
+          <xml>
+          <block type="studio_moveDistance">
+              <title name="SPRITE">0</title>
+              <title name="DIR">2</title>
+              <title name="DISTANCE">25</title>
+            </block>
+          </xml>
+      courseC_PlayLab_events3_2019:
+        courseC_PlayLab_events3_a: سوف تحتاج فقط إلى تحريك جورج إلى اليمين بمقدار
+          25 بكسل لتحل هذا اللغز.
+        courseC_PlayLab_events3_b: هل هناك بلوكة في صندوق الأدوات تظهر وكأنها ستحرك
+          الممثل؟
+        courseC_PlayLab_events3_c: |-
+          اضف هذه البواكة إلى بلوكة "عند التشغيل":
+
+          <xml>
+          <block type="studio_moveDistance">
+              <title name="SPRITE">0</title>
+              <title name="DIR">2</title>
+              <title name="DISTANCE">25</title>
+            </block>
+          </xml>
+      courseC_PlayLab_events4:
+        courseC_PlayLab_events4_b: عند الضغط على "تشغيل", يحتاج جورج إلى التحرك لليمين
+          بمقدار **100** بكسل ليصل إلى زيتونة القطة.
+        courseC_PlayLab_events4_a: ستحتاج إلى توصيل بلوكة "يقول الممثل" في بلوكة حدث
+          " عندما الممثل يلمس" لتحل اللغز.
+      courseC_PlayLab_events4_2018:
+        courseC_PlayLab_events4_b: عند الضغط على "تشغيل", يحتاج جورج إلى التحرك لليمين
+          بمقدار **100** بكسل ليصل إلى زيتونة القطة.
+        courseC_PlayLab_events4_a: ستحتاج إلى توصيل بلوكة "يقول الممثل" في بلوكة حدث
+          " عندما الممثل يلمس" لتحل اللغز.
+      courseC_PlayLab_events4_2019:
+        courseC_PlayLab_events4_b: عند الضغط على "تشغيل", يحتاج جورج إلى التحرك لليمين
+          بمقدار **100** بكسل ليصل إلى زيتونة القطة.
+        courseC_PlayLab_events4_a: ستحتاج إلى توصيل بلوكة "يقول الممثل" في بلوكة حدث
+          " عندما الممثل يلمس" لتحل اللغز.
+      courseC_PlayLab_events5:
+        courseC_PlayLab_events5_a: تحتاج إلى النقر على القائمة المنسدلة في بلوكة "الممثل
+          يقول" لتجد النص "مالجديد؟"
+        courseC_PlayLab_events5_b: انقر على الاخطبوط عند تشغيل البرنامج لتتأكد أنها
+          تعمل!
+      courseC_PlayLab_events5_2018:
+        courseC_PlayLab_events5_a: تحتاج إلى النقر على القائمة المنسدلة في بلوكة "الممثل
+          يقول" لتجد النص "مالجديد؟"
+        courseC_PlayLab_events5_b: انقر على الاخطبوط عند تشغيل البرنامج لتتأكد أنها
+          تعمل!
+      courseC_PlayLab_events5_2019:
+        courseC_PlayLab_events5_a: تحتاج إلى النقر على القائمة المنسدلة في بلوكة "الممثل
+          يقول" لتجد النص "مالجديد؟"
+        courseC_PlayLab_events5_b: انقر على الاخطبوط عند تشغيل البرنامج لتتأكد أنها
+          تعمل!
+      courseC_PlayLab_events6:
+        courseC_PlayLab_events6_a: كل بلوكة خضراء "عند الضغط على السهم" يجب أن تحتوي
+          على حدث اسفلها.
+        courseC_PlayLab_events6_b: استخدم القائمة المنسدلة في بلوكة "تحريك الممثل
+          1" لتغير اتجاه حركة البطريق.
+        courseC_PlayLab_events6_c: عندما تنتهي, يجب أن تكون قادراً على تحريك البطريق
+          باستخدام مفاتيح الأسهم على كمبيوترك!
+      courseC_PlayLab_events6_2018:
+        courseC_PlayLab_events6_a: كل بلوكة خضراء "عند الضغط على السهم" يجب أن تحتوي
+          على حدث اسفلها.
+        courseC_PlayLab_events6_b: استخدم القائمة المنسدلة في بلوكة "تحريك الممثل
+          1" لتغير اتجاه حركة البطريق.
+        courseC_PlayLab_events6_c: عندما تنتهي, يجب أن تكون قادراً على تحريك البطريق
+          باستخدام مفاتيح الأسهم على كمبيوترك!
+      courseC_PlayLab_events6_2019:
+        courseC_PlayLab_events6_a: كل بلوكة خضراء "عند الضغط على السهم" يجب أن تحتوي
+          على حدث اسفلها.
+        courseC_PlayLab_events6_b: استخدم القائمة المنسدلة في بلوكة "تحريك الممثل
+          1" لتغير اتجاه حركة البطريق.
+        courseC_PlayLab_events6_c: عندما تنتهي, يجب أن تكون قادراً على تحريك البطريق
+          باستخدام مفاتيح الأسهم على كمبيوترك!
+      courseC_PlayLab_events7:
+        courseC_PlayLab_events7_a: 'استخدم كلا من "حرك المثل 2 للأعلى 400 بكسل" و
+          "حرك الممثل 2 للأسفل 400 بكسل" داخل دالة تكرار " التكرار للأبد" لتحل اللغز. '
+        courseC_PlayLab_events7_b: بلوكة "تكرار للأبد" لا تحتاج أن تكون موصلة بأي
+          بلوكة أحداث, سوف تعمل من نفسها.
+      courseC_PlayLab_events7_2018:
+        courseC_PlayLab_events7_a: 'استخدم كلا من "حرك المثل 2 للأعلى 400 بكسل" و
+          "حرك الممثل 2 للأسفل 400 بكسل" داخل دالة تكرار " التكرار للأبد" لتحل اللغز. '
+        courseC_PlayLab_events7_b: بلوكة "تكرار للأبد" لا تحتاج أن تكون موصلة بأي
+          بلوكة أحداث, سوف تعمل من نفسها.
+      courseC_PlayLab_events7_2019:
+        courseC_PlayLab_events7_a: 'استخدم كلا من "حرك المثل 2 للأعلى 400 بكسل" و
+          "حرك الممثل 2 للأسفل 400 بكسل" داخل دالة تكرار " التكرار للأبد" لتحل اللغز. '
+        courseC_PlayLab_events7_b: بلوكة "تكرار للأبد" لا تحتاج أن تكون موصلة بأي
+          بلوكة أحداث, سوف تعمل من نفسها.
+      courseC_PlayLab_events8:
+        courseC_PlayLab_events8_a: سوفتحتاج لتوصيل البلوكة ببلوكة " عندما الممثل يلمس"
+          لتجعل ذلك يحدث بطريقة صحيحة.
+        courseC_PlayLab_events8_b: بلوكة "يقول الممثل" و "تشغيل صوت" في صندوق الأدوات
+          سوف تساعدك!
+      courseC_PlayLab_events8_2018:
+        courseC_PlayLab_events8_a: سوفتحتاج لتوصيل البلوكة ببلوكة " عندما الممثل يلمس"
+          لتجعل ذلك يحدث بطريقة صحيحة.
+        courseC_PlayLab_events8_b: بلوكة "يقول الممثل" و "تشغيل صوت" في صندوق الأدوات
+          سوف تساعدك!
+      courseC_PlayLab_events8_2019:
+        courseC_PlayLab_events8_a: سوفتحتاج لتوصيل البلوكة ببلوكة " عندما الممثل يلمس"
+          لتجعل ذلك يحدث بطريقة صحيحة.
+        courseC_PlayLab_events8_b: بلوكة "يقول الممثل" و "تشغيل صوت" في صندوق الأدوات
+          سوف تساعدك!
+      courseC_PlayLab_events9:
+        courseC_PlayLab_events9_a: بلوكة "تحصيل النقاط" ستساعدك لحل هذا اللغز.
+        courseC_PlayLab_events9_b: تأكد من أن بلوكتك الجديدة "عندما الممثل يلمس" تستخدم
+          الممثل **1** و الممثل **3**.
+        courseC_PlayLab_events9_c: يمكنك استخدام أكثر من "عندما الممثل يلمس"في عملك
+          في نفس الوقت, لذلك لست بحاجة إلى حذف الأولات!
+      courseC_PlayLab_events9_2018:
+        courseC_PlayLab_events9_a: بلوكة "تحصيل النقاط" ستساعدك لحل هذا اللغز.
+        courseC_PlayLab_events9_b: تأكد من أن بلوكتك الجديدة "عندما الممثل يلمس" تستخدم
+          الممثل **1** و الممثل **3**.
+        courseC_PlayLab_events9_c: يمكنك استخدام أكثر من "عندما الممثل يلمس"في عملك
+          في نفس الوقت, لذلك لست بحاجة إلى حذف الأولات!
+      courseC_PlayLab_events9_2019:
+        courseC_PlayLab_events9_a: بلوكة "تحصيل النقاط" ستساعدك لحل هذا اللغز.
+        courseC_PlayLab_events9_b: تأكد من أن بلوكتك الجديدة "عندما الممثل يلمس" تستخدم
+          الممثل **1** و الممثل **3**.
+        courseC_PlayLab_events9_c: يمكنك استخدام أكثر من "عندما الممثل يلمس"في عملك
+          في نفس الوقت, لذلك لست بحاجة إلى حذف الأولات!
+      courseC_PlayLab_eventsA:
+        courseC_PlayLab_eventsA_a: استخدم بلوكة "تعيين الخلفية" و "تعيين الممثل إلى
+          سرعة" لتحل اللغز.
+        courseC_PlayLab_eventsA_b: سوف تحتاج إلى سحب بلوكة الحدث " عند التشغيل" إلى
+          منطقة العمل لتحل اللغز.
+      courseC_PlayLab_eventsA_2018:
+        courseC_PlayLab_eventsA_a: استخدم بلوكة "تعيين الخلفية" و "تعيين الممثل إلى
+          سرعة" لتحل اللغز.
+        courseC_PlayLab_eventsA_b: سوف تحتاج إلى سحب بلوكة الحدث " عند التشغيل" إلى
+          منطقة العمل لتحل اللغز.
+      courseC_PlayLab_eventsA_2019:
+        courseC_PlayLab_eventsA_a: استخدم بلوكة "تعيين الخلفية" و "تعيين الممثل إلى
+          سرعة" لتحل اللغز.
+        courseC_PlayLab_eventsA_b: سوف تحتاج إلى سحب بلوكة الحدث " عند التشغيل" إلى
+          منطقة العمل لتحل اللغز.
+      courseC_PlayLab_eventsA_embed_2019:
+        courseC_PlayLab_eventsA_a: استخدم بلوكة "تعيين الخلفية" و "تعيين الممثل إلى
+          سرعة" لتحل اللغز.
+        courseC_PlayLab_eventsA_b: سوف تحتاج إلى سحب بلوكة الحدث " عند التشغيل" إلى
+          منطقة العمل لتحل اللغز.
+      courseC_PlayLab_eventsFP:
+        idea1: |-
+          _تحتاج إلى فكرة؟_
+
+          \*\* من هناك؟\*\* اجعل الشخصيات تظهر بصور مختلفة, كي لا أحد يعلم من سيظهر تالياً.
+
+          ![](https://images.code.org/a56e03479801995d93ad5a4e4384a79e-image-1475340154498.gif)
+        idea2: |-
+          _تحتاج إلى فكرة؟_
+
+          **الذهاب في مغامرة**- غيرالخلفية, واجعل الشخصيات تتحدث عن مكانهاالآن.
+
+          ![](https://images.code.org/010c4d919f841d6049caf9211ab65ccc-image-1475340583052.gif)
+        idea3: |-
+          _تحتاج إلى فكرة؟_
+
+          **الكرة المرتدة** اجعل أحد الشخصيات تتحرك بالأسهم (استخدم بلوكة "عندما السهم الأعلى" و "عندما السهم الأسفل"), وشغل أصوات عشوائية عندما تصطدم بالشخصيات على الشاشة.
+      courseC_PlayLab_eventsFP_2018:
+        idea1: |-
+          _تحتاج إلى فكرة؟_
+
+          \*\* من هناك؟\*\* اجعل الشخصيات تظهر بصور مختلفة, كي لا أحد يعلم من سيظهر تالياً.
+
+          ![](https://images.code.org/a56e03479801995d93ad5a4e4384a79e-image-1475340154498.gif)
+        idea2: |-
+          _تحتاج إلى فكرة؟_
+
+          **الذهاب في مغامرة**- غيرالخلفية, واجعل الشخصيات تتحدث عن مكانهاالآن.
+
+          ![](https://images.code.org/010c4d919f841d6049caf9211ab65ccc-image-1475340583052.gif)
+        idea3: |-
+          _تحتاج إلى فكرة؟_
+
+          **الكرة المرتدة** اجعل أحد الشخصيات تتحرك بالأسهم (استخدم بلوكة "عندما السهم الأعلى" و "عندما السهم الأسفل"), وشغل أصوات عشوائية عندما تصطدم بالشخصيات على الشاشة.
+      courseC_PlayLab_eventsFP_2019:
+        idea1: |-
+          _تحتاج فكرة؟_
+
+          **من هناك؟** أجعل الشخصيات تظهر بصوة عشوائية, لكي لا يستطيع أحد معرفة من سيظهر.
+
+          <img src= "https://images.code.org/dbd6ece9d0fb213039ea5dccb91fc425-image-1563577859889.gif" style="width: 200px">
+        idea2: |-
+          _تحتاج فكرة؟_
+
+          **الذهاب إلى مغامرة**- غير الخلفية, ومن ثم أجعل الشخصية تتكلم عن مكانها الآن.
+
+          <img src= "https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif" style="width: 200px">
+        idea3: |-
+          _تحتاج إلى فكرة؟_
+
+          **الكرة المرتدة** اجعل أحد الشخصيات تتحرك بالأسهم (استخدم بلوكة "عندما السهم الأعلى" و "عندما السهم الأسفل"), وشغل أصوات عشوائية عندما تصطدم بالشخصيات على الشاشة.
+      courseC_PlayLab_events_challenge1:
+        courseC_PlayLab_events_challenge_a: |-
+          يمكنك استخدام هذه البلوكة لتحرك اللاعب إلى مكان آخر في مساحة اللعب
+
+          <xml> <block type="studio_setSpritePosition">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">12</title>
+            </block></xml>
+        courseC_PlayLab_events_challenge_b: جرب استخدام "تعيين الممثل 1 إلى الموضع
+          الأوسط الأيسر" عندما يلامس أحد اللاعبين الآخرين. هذا الخيار سوف يعيد إعدادات
+          اللعبة ليتمكن اللاعب من المحاولة مرة أخرى!
+        courseC_PlayLab_events_challenge_c: |-
+          يمكنك أيضاً تغيير سرعة الاعب الآخر لتجعل اللعبة أسهل أو أكثر تحدياً!
+
+          <xml>  <block type="studio_setSpriteSpeed">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">Studio.SpriteSpeed.FAST</title>
+            </block></xml>
+      courseC_PlayLab_events_challenge1_2018:
+        courseC_PlayLab_events_challenge_a: |-
+          يمكنك استخدام هذه البلوكة لتحرك اللاعب إلى مكان آخر في مساحة اللعب
+
+          <xml> <block type="studio_setSpritePosition">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">12</title>
+            </block></xml>
+        courseC_PlayLab_events_challenge_b: جرب استخدام "تعيين الممثل 1 إلى الموضع
+          الأوسط الأيسر" عندما يلامس أحد اللاعبين الآخرين. هذا الخيار سوف يعيد إعدادات
+          اللعبة ليتمكن اللاعب من المحاولة مرة أخرى!
+        courseC_PlayLab_events_challenge_c: |-
+          يمكنك أيضاً تغيير سرعة الاعب الآخر لتجعل اللعبة أسهل أو أكثر تحدياً!
+
+          <xml>  <block type="studio_setSpriteSpeed">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">Studio.SpriteSpeed.FAST</title>
+            </block></xml>
+      courseC_PlayLab_events_challenge1_2019:
+        courseC_PlayLab_events_challenge_a: |-
+          يمكنك استخدام هذه البلوكة لتحرك اللاعب إلى مكان آخر في مساحة اللعب
+
+          <xml> <block type="studio_setSpritePosition">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">12</title>
+            </block></xml>
+        courseC_PlayLab_events_challenge_b: جرب استخدام "تعيين الممثل 1 إلى الموضع
+          الأوسط الأيسر" عندما يلامس أحد اللاعبين الآخرين. هذا الخيار سوف يعيد إعدادات
+          اللعبة ليتمكن اللاعب من المحاولة مرة أخرى!
+        courseC_PlayLab_events_challenge_c: |-
+          يمكنك أيضاً تغيير سرعة الاعب الآخر لتجعل اللعبة أسهل أو أكثر تحدياً!
+
+          <xml>  <block type="studio_setSpriteSpeed">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">Studio.SpriteSpeed.FAST</title>
+            </block></xml>
+      courseC_artist_loop1:
+        courseC_artist_loop1_a: ليس عليك أن تحدث أي تغيرات في دالة كرر, فقط أضف بلوكة
+          واحدة فوقها.
+        courseC_artist_loop1_b: |-
+          <xml>
+          <block type="draw_line_style_pattern">
+              <title name="VALUE">DEFAULT</title>
+            </block>
+          </xml>
+
+          استخدم أي نمط ترغب به!
+      courseC_artist_loop1_2018:
+        courseC_artist_loop1_a: ليس عليك أن تحدث أي تغيرات في دالة كرر, فقط أضف بلوكة
+          واحدة فوقها.
+        courseC_artist_loop1_b: |-
+          <xml>
+          <block type="draw_line_style_pattern">
+              <title name="VALUE">DEFAULT</title>
+            </block>
+          </xml>
+
+          استخدم أي نمط ترغب به!
+      courseC_artist_loop1_2019:
+        courseC_artist_loop1_a: ليس عليك أن تحدث أي تغيرات في دالة كرر, فقط أضف بلوكة
+          واحدة فوقها.
+        courseC_artist_loop1_b: |-
+          <xml>
+          <block type="draw_line_style_pattern">
+              <title name="VALUE">DEFAULT</title>
+            </block>
+          </xml>
+
+          استخدم أي نمط ترغب به!
+      courseC_artist_loops1b_2019:
+        courseC_artist_loops1b_a: |-
+          هذه البلوكة الأولى التي سوف تحتاجها:
+
+          <xml>
+            <block type="draw_turn_by_constant_dropdown">
+              <title name="DIR">???</title>
+              <title name="VALUE" config="45,60,90,120,180">???</title>
+            </block>
+          </xml>
+
+          يمكنك استخدام اليمين أو اليسار بالإضافة إلى رقم درجة الدوران.
+      courseC_artist_loops2a_2019:
+        courseC_artist_loops2a_a: داخل التكرار, يجب عليك القفز إلى المنتصف, ومن ثم
+          الالتفاف, ومن ثم رسم الملصق.
+      courseC_artist_loops3a_2019:
+        courseC_artist_loops3a_a: يجب عليك إضافة بلوكة واحدة داخر دالةكرر, بعد الملصق
+          الأول.
+        courseC_artist_loops3a_b: |-
+          يجب أن يكون برنامجك كالتالي!
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">???</title>
+                  <statement name="DO">
+                    <block type="jump_to">
+                      <title name="VALUE">13</title>
+                      <next>
+                        <block type="draw_turn_by_constant_dropdown">
+                          <title name="DIR">???</title>
+                          <title name="VALUE" config="1,2,5,10,12,20,30,45,60,90,120,180">???</title>
+                          <next>
+                            <block type="sticker">
+                              <title name="VALUE">Cat</title>
+                              <next>
+                                <block type="sticker">
+                                  <title name="VALUE">Dog</title>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </xml>
+
+          يمكنك استخدام أي ملصق يعجبك!
+      courseC_artist_loops4a_2019:
+        courseC_artist_loops4a_b: |-
+          يجب أن يظهر برنامجك كالتالي!
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">???</title>
+                  <statement name="DO">
+                    <block type="jump_to">
+                      <title name="VALUE">13</title>
+                      <next>
+                        <block type="draw_turn_by_constant_dropdown">
+                          <title name="DIR">???</title>
+                          <title name="VALUE" config="1,2,5,10,12,20,30,45,60,90,120,180">???</title>
+                          <next>
+                            <block type="sticker">
+                              <title name="VALUE">Cat</title>
+                              <next>
+                                <block type="jump_by_constant">
+                                  <title name="DIR">jumpForward</title>
+                                  <title name="VALUE">???</title>
+                                  <next>
+                                    <block type="sticker">
+                                      <title name="VALUE">Dog</title>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseC_artist_loops5a:
+        courseC_artist_loops5a_a: استخدم القائمة المنسدلة في بلوكة "ارسم ملصق" لتغير
+          الرسمة.
+      courseC_artist_loops5a_2018:
+        courseC_artist_loops5a_a: استخدم القائمة المنسدلة في بلوكة "ارسم ملصق" لتغير
+          الرسمة.
+      courseC_artist_loops5a_2019:
+        courseC_artist_loops5a_a: استخدم القائمة المنسدلة في بلوكة "ارسم ملصق" لتغير
+          الرسمة.
+      courseC_artist_loops5b_2019:
+        courseC_artist_loops5b_c: |-
+          يجب أن يظهر برنامجك كالتالي!
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="draw_line_style_pattern">
+                  <title name="VALUE">rainbowLine</title>
+                  <next>
+                    <block type="controls_repeat">
+                      <title name="TIMES">4</title>
+                      <statement name="DO">
+                        <block type="jump_to">
+                          <title name="VALUE">13</title>
+                          <next>
+                            <block type="draw_move_by_constant">
+                              <title name="DIR">moveForward</title>
+                              <title name="VALUE">???</title>
+                              <next>
+                                <block type="draw_move_by_constant">
+                                  <title name="DIR">moveBackward</title>
+                                  <title name="VALUE">???</title>
+                                  <next>
+                                    <block type="draw_turn_by_constant_dropdown">
+                                      <title name="DIR">???</title>
+                                      <title name="VALUE" config="1,2,5,10,12,20,30,45,60,90,120,180">???</title>
+                                      <next>
+                                        <block type="sticker">
+                                          <title name="VALUE">Cat</title>
+                                          <next>
+                                            <block type="jump_by_constant">
+                                              <title name="DIR">jumpForward</title>
+                                              <title name="VALUE">???</title>
+                                              <next>
+                                                <block type="sticker">
+                                                  <title name="VALUE">Dog</title>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseC_artist_loops6a:
+        courseC_artist_loops6a_a: لتحصل على تصميم مشابه للأعلى, اقفز للامام أقل من
+          مقدار 75 بكسل بين كل ملصق.
+      courseC_artist_loops6a_2018:
+        courseC_artist_loops6a_a: لتحصل على تصميم مشابه للأعلى, اقفز للامام أقل من
+          مقدار 75 بكسل بين كل ملصق.
+      courseC_artist_loops6a_2019:
+        courseC_artist_loops6a_a: لتحصل على تصميم مشابه للأعلى, اقفز للامام أقل من
+          مقدار 75 بكسل بين كل ملصق.
+      courseC_artist_loops7a:
+        courseC_artist_loops7a_a: |-
+          الدائرة لها 360 درجة. اضرب عدد الدرجات في الالتفافة بعدد مرات التكرار. هل تساوي 360؟
+          جرب الالتفاف المقترح لتتأكد من تحقيق الحل!
+      courseC_artist_loops7a_2018:
+        courseC_artist_loops7a_a: |-
+          الدائرة لها 360 درجة. اضرب عدد الدرجات في الالتفافة بعدد مرات التكرار. هل تساوي 360؟
+          جرب الالتفاف المقترح لتتأكد من تحقيق الحل!
+      courseC_artist_loops7a_2019:
+        courseC_artist_loops7a_a: |-
+          الدائرة لها 360 درجة. اضرب عدد الدرجات في الالتفافة بعدد مرات التكرار. هل تساوي 360؟
+          جرب الالتفاف المقترح لتتأكد من تحقيق الحل!
+      courseC_artist_loopsPre1a:
+        courseC_artist_loopsPre1a_a: لا تنسى ان تضع بلوكة" الاتجاه" داخل دالة كرر.
+        courseC_artist_loopsPre1a_b: 'دالة "كرر" يجب ان تحتوي على ثلاث بلوكات داخلها:
+          اقفز إلى 200 فوق و200 للاسفل, اتجه للامام بمقدار 50 بكسل, و اتجه لليمين
+          بمقدار 60 درجة.'
+      courseC_artist_loopsPre1a_2018:
+        courseC_artist_loopsPre1a_a: لا تنسى ان تضع بلوكة" الاتجاه" داخل دالة كرر.
+        courseC_artist_loopsPre1a_b: 'دالة "كرر" يجب ان تحتوي على ثلاث بلوكات داخلها:
+          اقفز إلى 200 فوق و200 للاسفل, اتجه للامام بمقدار 50 بكسل, و اتجه لليمين
+          بمقدار 60 درجة.'
+      courseC_artist_loopsPre1a_2019:
+        courseC_artist_loopsPre1a_a: لا تنسى ان تضع بلوكة" الاتجاه" داخل دالة كرر.
+        courseC_artist_loopsPre1a_b: 'دالة "كرر" يجب ان تحتوي على ثلاث بلوكات داخلها:
+          اقفز إلى 200 فوق و200 للاسفل, اتجه للامام بمقدار 50 بكسل, و اتجه لليمين
+          بمقدار 60 درجة.'
+      courseC_artist_loopsPrePre1a:
+        courseC_artist_loopsPrePre1a_a: |-
+          البلوكة الاولى التي تحتاجها هي:
+
+          ![](<https://images.code.org/60e3354a2e7dd37b64833eac1e8694be-image-1499710228373.08.14 AM.png>)
+        courseC_artist_loopsPrePre1a_b: |-
+          لتتقدم إلى الامام بمقدار 50 بكسل استخدم:
+
+          ![](<https://images.code.org/411fca4606a09641e6eedf5069ac4efa-image-1499710237929.08.27 AM.png>)
+      courseC_artist_loopsPrePre1a_2018:
+        courseC_artist_loopsPrePre1a_a: |-
+          البلوكة الاولى التي تحتاجها هي:
+
+          <xml>  <block type="jump_to_xy" id="callMe">
+              <title name="XPOS">200</title>
+              <title name="YPOS">200</title>
+            </block></xml>
+        courseC_artist_loopsPrePre1a_b: |-
+          لتتقدم إلى الامام بمقدار 50 بكسل استخدم:
+
+          <xml><block type="draw_move_by_constant">
+              <title name="DIR">moveForward</title>
+              <title name="VALUE">50</title>
+            </block></xml>
+      courseC_artist_loopsPrePre1a_2019:
+        courseC_artist_loopsPrePre1a_a: |-
+          البلوكة الاولى التي تحتاجها هي:
+
+          <xml>  <block type="jump_to_xy" id="callMe">
+              <title name="XPOS">200</title>
+              <title name="YPOS">200</title>
+            </block></xml>
+        courseC_artist_loopsPrePre1a_b: |-
+          لتتقدم إلى الامام بمقدار 50 بكسل استخدم:
+
+          <xml><block type="draw_move_by_constant">
+              <title name="DIR">moveForward</title>
+              <title name="VALUE">50</title>
+            </block></xml>
       courseC_artist_prog2:
         courseC_artist_prog2_a: '*"إذا استخدمت كتلة <xml><block type="draw_move_by_constant"><title
           name="DIR">تحرك إلى الأمام</title><title name="VALUE">100</title></block></xml>
@@ -3449,18 +1618,815 @@ ar-SA:
         courseC_artist_prog2_b: هل تواجه صعوبة في الاستدارة عند الزوايا؟ استخدم كتلة
           <xml><block type="draw_turn_by_constant_dropdown"><title name="DIR">اتجه
           إلى اليمين</title><title name="VALUE" config="45,60,90,120,180">90</title></block></xml>.
+      courseC_artist_prog5_2018:
+        courseC_artist_prog5_c: يمكنك استخدام القائمة المنسدلةفي البلوكة لتغير كيفية
+          استخدامها!
+      courseC_artist_prog5_2019:
+        courseC_artist_prog5_c: يمكنك استخدام القائمة المنسدلةفي البلوكة لتغير كيفية
+          استخدامها!
+      courseC_collector_loops_challenge2:
+        courseC_maze_loops_challenge2_b: استخدم دالة كرر لكي لاتنتهي بلوكات "اجمع"!
+      courseC_collector_loops_challenge2_2018:
+        courseC_maze_loops_challenge2_b: استخدم دالة كرر لكي لاتنتهي بلوكات "اجمع"!
+      courseC_collector_loops_challenge2_2019:
+        courseC_maze_loops_challenge2_b: استخدم دالة كرر لكي لاتنتهي بلوكات "اجمع"!
+      courseC_collector_prog1:
+        courseC_collector_prog1_a: عندما تقف في مكان يحتوي على حوهرة استخدم بلوكة
+          <xml><block type="collector_collect"/></xml> لتجمعها.
+        courseC_collector_prog1_b: أسهل حل يمكنك استخدامه هو الاتجاه للامام مره واحدة.
+          ومن ثم جمع الجوهرة.
+      courseC_collector_prog1_2018:
+        courseC_collector_prog1_a: عندما تقف في مكان يحتوي على حوهرة استخدم بلوكة
+          <xml><block type="collector_collect"/></xml> لتجمعها.
+        courseC_collector_prog1_b: أسهل حل يمكنك استخدامه هو الاتجاه للامام مره واحدة.
+          ومن ثم جمع الجوهرة.
+      courseC_collector_prog1_2019:
+        courseC_collector_prog1_a: عندما تقف في مكان يحتوي على حوهرة استخدم بلوكة
+          <xml><block type="collector_collect"/></xml> لتجمعها.
+        courseC_collector_prog1_b: أسهل حل يمكنك استخدامه هو الاتجاه للامام مره واحدة.
+          ومن ثم جمع الجوهرة.
+      courseC_collector_prog2:
+        courseC_collector_prog2_a: يمكنك استخدام 4 بلوكات <xml><block type="maze_move"><title
+          name="DIR">moveForward</title></block></xml> أو استخدم <xml><block type="controls_repeat_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> لتجعل برنامجك قصيراً.
+      courseC_collector_prog2_2018:
+        courseC_collector_prog2_a: يمكنك استخدام 4 بلوكات <xml><block type="maze_move"><title
+          name="DIR">moveForward</title></block></xml> أو استخدم <xml><block type="controls_repeat_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> لتجعل برنامجك قصيراً.
+      courseC_collector_prog2_2019:
+        courseC_collector_prog2_a: يمكنك استخدام 4 بلوكات <xml><block type="maze_move"><title
+          name="DIR">moveForward</title></block></xml> أو استخدم <xml><block type="controls_repeat_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> لتجعل برنامجك قصيراً.
+      courseC_collector_prog3:
+        courseC_collector_prog3_a: البرنامج سوف يشغل البلوكات المتصلة فقط بـ <xml><block
+          type="when_run"/></xml> block.
+        courseC_collector_prog3_b: جرب استخدام زر "خطوة" لتشغل برنامجك سطرا سطرا.
+          هل يمكنك معرفة مكان الخطأ؟
+        courseC_collector_prog3_c: إذا كنت تواجه مشكلة في حل هذا اللغز, حاول كتابة
+          الخطوات في ورقة خارجية.
+      courseC_collector_prog3_2018:
+        courseC_collector_prog3_a: البرنامج سوف يشغل البلوكات المتصلة فقط بـ <xml><block
+          type="when_run"/></xml> block.
+        courseC_collector_prog3_b: جرب استخدام زر "خطوة" لتشغل برنامجك سطرا سطرا.
+          هل يمكنك معرفة مكان الخطأ؟
+        courseC_collector_prog3_c: إذا كنت تواجه مشكلة في حل هذا اللغز, حاول كتابة
+          الخطوات في ورقة خارجية.
+      courseC_collector_prog3_2019:
+        courseC_collector_prog3_a: البرنامج سوف يشغل البلوكات المتصلة فقط بـ <xml><block
+          type="when_run"/></xml> block.
+        courseC_collector_prog3_b: جرب استخدام زر "خطوة" لتشغل برنامجك سطرا سطرا.
+          هل يمكنك معرفة مكان الخطأ؟
+        courseC_collector_prog3_c: إذا كنت تواجه مشكلة في حل هذا اللغز, حاول كتابة
+          الخطوات في ورقة خارجية.
+      courseC_collector_prog4:
+        courseC_collector_prog4_a: إذا عجزت عن الحل, جرب كتابة الخطوات على ورقة.
+        courseC_collector_prog4_c: استخدم هذا الخيار للمسار.
+      courseC_collector_prog4_2018:
+        courseC_collector_prog4_a: إذا عجزت عن الحل, جرب كتابة الخطوات على ورقة.
+        courseC_collector_prog4_c: استخدم هذا الخيار للمسار.
+      courseC_collector_prog4_2019:
+        courseC_collector_prog4_a: إذا عجزت عن الحل, جرب كتابة الخطوات على ورقة.
+        courseC_collector_prog4_c: استخدم هذا الخيار للمسار.
+      courseC_collector_prog5:
+        courseC_collector_prog5_a: |-
+          "هل الخطوة الأولى تعمل؟
+          هل الخطوة الثانية تعمل؟
+          أين هو الخطأ؟"
+        courseC_collector_prog5_b: إذا اصلحت خطأً واحد ولكن البرنامج لازال لايعمل,
+          استخدم الخطوات في الأعلى لتجد أخطاء أخرى.
+        courseC_collector_prog5_c: إذا عجزت عن الحل, جرب كتابة الخطوات على ورقة.
+        courseC_collector_prog5_d: اتبع المسار لتجمع المجوهرات.
+      courseC_collector_prog5_2018:
+        courseC_collector_prog5_a: |-
+          "هل الخطوة الأولى تعمل؟
+          هل الخطوة الثانية تعمل؟
+          أين هو الخطأ؟"
+        courseC_collector_prog5_b: إذا اصلحت خطأً واحد ولكن البرنامج لازال لايعمل,
+          استخدم الخطوات في الأعلى لتجد أخطاء أخرى.
+        courseC_collector_prog5_c: إذا عجزت عن الحل, جرب كتابة الخطوات على ورقة.
+        courseC_collector_prog5_d: اتبع المسار لتجمع المجوهرات.
+      courseC_collector_prog5_2019:
+        courseC_collector_prog5_a: |-
+          "هل الخطوة الأولى تعمل؟
+          هل الخطوة الثانية تعمل؟
+          أين هو الخطأ؟"
+        courseC_collector_prog5_b: إذا اصلحت خطأً واحد ولكن البرنامج لازال لايعمل,
+          استخدم الخطوات في الأعلى لتجد أخطاء أخرى.
+        courseC_collector_prog5_c: إذا عجزت عن الحل, جرب كتابة الخطوات على ورقة.
+        courseC_collector_prog5_d: اتبع المسار لتجمع المجوهرات.
+      courseC_collector_prog6:
+        courseC_collector_prog6_a: |-
+          هل يمكنك معرفة الخطأ؟
+
+          جرب استخدام زر "خطوة" للبحث عن الأخطاء عن طريق تشغيل برنامجك سطراً سطراً.
+        courseC_collector_prog6_b: هل أنت عالق؟ اتبع المسار لتجمع المجوهرات.
+      courseC_collector_prog6_2018:
+        courseC_collector_prog6_a: |-
+          هل يمكنك معرفة الخطأ؟
+
+          جرب استخدام زر "خطوة" للبحث عن الأخطاء عن طريق تشغيل برنامجك سطراً سطراً.
+        courseC_collector_prog6_b: هل أنت عالق؟ اتبع المسار لتجمع المجوهرات.
+      courseC_collector_prog6_2019:
+        courseC_collector_prog6_a: |-
+          هل يمكنك معرفة الخطأ؟
+
+          جرب استخدام زر "خطوة" للبحث عن الأخطاء عن طريق تشغيل برنامجك سطراً سطراً.
+        courseC_collector_prog6_b: هل أنت عالق؟ اتبع المسار لتجمع المجوهرات.
+      courseC_collector_prog7:
+        courseC_collector_prog7_a: 'يوجد العديد من الأكواد البرمجية الجيدة في مساحة
+          العمل. لايجب عليك حذف أيمنها لتحل اللغز.  '
+        courseC_collector_prog7_b: لايمكنك رؤية البلوكة التي تحتاجها لتنقل المغامر
+          إلى الاتجاه الصحيح؟ اسحب واحدة م صندوق الأدوات.
+        courseC_collector_prog7_c: هل تواجه مشكلة في معرفة الطريق لجمع كل المجوهرات؟
+          جرب استخدام هذا الطريق!
+      courseC_collector_prog7_2018:
+        courseC_collector_prog7_a: 'يوجد العديد من الأكواد البرمجية الجيدة في مساحة
+          العمل. لايجب عليك حذف أيمنها لتحل اللغز.  '
+        courseC_collector_prog7_b: لايمكنك رؤية البلوكة التي تحتاجها لتنقل المغامر
+          إلى الاتجاه الصحيح؟ اسحب واحدة م صندوق الأدوات.
+        courseC_collector_prog7_c: هل تواجه مشكلة في معرفة الطريق لجمع كل المجوهرات؟
+          جرب استخدام هذا الطريق!
+      courseC_collector_prog7_2019:
+        courseC_collector_prog7_a: 'يوجد العديد من الأكواد البرمجية الجيدة في مساحة
+          العمل. لايجب عليك حذف أيمنها لتحل اللغز.  '
+        courseC_collector_prog7_b: لايمكنك رؤية البلوكة التي تحتاجها لتنقل المغامر
+          إلى الاتجاه الصحيح؟ اسحب واحدة م صندوق الأدوات.
+        courseC_collector_prog7_c: هل تواجه مشكلة في معرفة الطريق لجمع كل المجوهرات؟
+          جرب استخدام هذا الطريق!
+      courseC_collector_prog_challenge1:
+        courseC_collector_prog_challenge1_a: يمكنك استخدام بلوكة "اجمع" أكثر من مرة
+          لتجمع المجوهرات الإضافية.
+      courseC_collector_prog_challenge1_2018:
+        courseC_collector_prog_challenge1_a: يمكنك استخدام بلوكة "اجمع" أكثر من مرة
+          لتجمع المجوهرات الإضافية.
+      courseC_collector_prog_challenge1_2019:
+        courseC_collector_prog_challenge1_a: يمكنك استخدام بلوكة "اجمع" أكثر من مرة
+          لتجمع المجوهرات الإضافية.
+      courseC_collector_prog_challenge2:
+        courseC_collector_prog_challenge1_a: يمكنك استخدام من بلوكة "اجمع"أكثر من
+          مرة في نفس المكان.
+        courseC_collector_prog_challenge1_b: أضعت الطريق؟ استخدم هذا المسار لحل اللغز!
+      courseC_collector_prog_challenge2_2018:
+        courseC_collector_prog_challenge1_a: يمكنك استخدام من بلوكة "اجمع"أكثر من
+          مرة في نفس المكان.
+        courseC_collector_prog_challenge1_b: أضعت الطريق؟ استخدم هذا المسار لحل اللغز!
+      courseC_collector_prog_challenge2_2019:
+        courseC_collector_prog_challenge1_a: يمكنك استخدام من بلوكة "اجمع"أكثر من
+          مرة في نفس المكان.
+        courseC_collector_prog_challenge1_b: أضعت الطريق؟ استخدم هذا المسار لحل اللغز!
       courseC_flappy_events1:
         courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseC_flappy_events1_2018:
         courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseC_flappy_events1_2019:
         courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseC_flappy_events2:
+        courseC_flappy_events2_a: 'البلوكة التي تحتاج إضافتها هي "تعيين سرعة". '
+        courseC_flappy_events2_b: ألصق بلوكة "تعيين سرعة" إلى بلوكة "عند التشغيل"
+          لتحل اللغز.
+      courseC_flappy_events2_2018:
+        courseC_flappy_events2_a: 'البلوكة التي تحتاج إضافتها هي "تعيين سرعة". '
+        courseC_flappy_events2_b: ألصق بلوكة "تعيين سرعة" إلى بلوكة "عند التشغيل"
+          لتحل اللغز.
+      courseC_flappy_events2_2019:
+        courseC_flappy_events2_a: 'البلوكة التي تحتاج إضافتها هي "تعيين سرعة". '
+        courseC_flappy_events2_b: ألصق بلوكة "تعيين سرعة" إلى بلوكة "عند التشغيل"
+          لتحل اللغز.
+      courseC_flappy_events3:
+        courseC_flappy_events3_a: إذا كان هناك شيء لايعمل بالطريقة الصحيحة, تأكد من
+          أن البلوكات متصلة بالأحداث الصحيحة في منطقة العمل.
+      courseC_flappy_events3_2018:
+        courseC_flappy_events3_a: إذا كان هناك شيء لايعمل بالطريقة الصحيحة, تأكد من
+          أن البلوكات متصلة بالأحداث الصحيحة في منطقة العمل.
+      courseC_flappy_events3_2019:
+        courseC_flappy_events3_a: إذا كان هناك شيء لايعمل بالطريقة الصحيحة, تأكد من
+          أن البلوكات متصلة بالأحداث الصحيحة في منطقة العمل.
+      courseC_flappy_events4:
+        courseC_flappy_events4_a: ألصق بلوكة "إنهاء اللعبة" ببلوكة "عند الارتطام بعقبة"
+          لتحل هذا اللغز.
+      courseC_flappy_events4_2018:
+        courseC_flappy_events4_a: ألصق بلوكة "إنهاء اللعبة" ببلوكة "عند الارتطام بعقبة"
+          لتحل هذا اللغز.
+      courseC_flappy_events4_2019:
+        courseC_flappy_events4_a: ألصق بلوكة "إنهاء اللعبة" ببلوكة "عند الارتطام بعقبة"
+          لتحل هذا اللغز.
+      courseC_flappy_events5:
+        courseC_flappy_events5_a: سوف تحتاج إلى استخدام بلوكة "تسجيل نقطة" لتتخطى
+          هذه المرحلة.
+      courseC_flappy_events5_2018:
+        courseC_flappy_events5_a: سوف تحتاج إلى استخدام بلوكة "تسجيل نقطة" لتتخطى
+          هذه المرحلة.
+      courseC_flappy_events5_2019:
+        courseC_flappy_events5_a: سوف تحتاج إلى استخدام بلوكة "تسجيل نقطة" لتتخطى
+          هذه المرحلة.
+      courseC_flappy_events6:
+        courseC_flappy_events6_a: جرب إلصاق بلوكة "رفرف بمقدار" بحدث "عند النقر".
+      courseC_flappy_events6_2018:
+        courseC_flappy_events6_a: جرب إلصاق بلوكة "رفرف بمقدار" بحدث "عند النقر".
+      courseC_flappy_events6_2019:
+        courseC_flappy_events6_a: جرب إلصاق بلوكة "رفرف بمقدار" بحدث "عند النقر".
+      courseC_flappy_events7:
+        courseC_flappy_events7_a: 'يمكنك تغيير الخلفية باستخدام بلوكة "تعيين الخفية". '
+      courseC_flappy_events7_2018:
+        courseC_flappy_events7_a: 'يمكنك تغيير الخلفية باستخدام بلوكة "تعيين الخفية". '
+      courseC_flappy_events7_2019:
+        courseC_flappy_events7_a: 'يمكنك تغيير الخلفية باستخدام بلوكة "تعيين الخفية". '
+      courseC_flappy_events8:
+        courseC_flappy_events8_a: جرب إلصاق بلوكة "تعيين مشهد" ثانية تحت حدث "عند
+          اجتياز عقبة" لتتخطى هذه المرحلة.
+      courseC_flappy_events8_2018:
+        courseC_flappy_events8_a: جرب إلصاق بلوكة "تعيين مشهد" ثانية تحت حدث "عند
+          اجتياز عقبة" لتتخطى هذه المرحلة.
+      courseC_flappy_events8_2019:
+        courseC_flappy_events8_a: جرب إلصاق بلوكة "تعيين مشهد" ثانية تحت حدث "عند
+          اجتياز عقبة" لتتخطى هذه المرحلة.
+      courseC_flappy_events9:
+        courseC_flappy_events9_a: ألصق بلوكة "تعيين النتيجة 0" في بلوكة حدث "عند الارتطام
+          بالأرض" لتنجح في هذه المرحلة.
+      courseC_flappy_events9_2018:
+        courseC_flappy_events9_a: ألصق بلوكة "تعيين النتيجة 0" في بلوكة حدث "عند الارتطام
+          بالأرض" لتنجح في هذه المرحلة.
+      courseC_flappy_events9_2019:
+        courseC_flappy_events9_a: ألصق بلوكة "تعيين النتيجة 0" في بلوكة حدث "عند الارتطام
+          بالأرض" لتنجح في هذه المرحلة.
+      courseC_harvester_loops1:
+        courseC_harvester_loops1_a: عندما تصل القرعة استخدم <xml><block type="harvester_pumpkin"/></xml>
+          لتجمعها.
+        courseC_harvester_loops1_b: يمكنك استخدام دالة كرر مع <xml><block type="harvester_pumpkin"/></xml>
+          لتجمع أكثر من قرعة من المربع.
+      courseC_harvester_loops1_2018:
+        courseC_harvester_loops1_a: عندما تصل القرعة استخدم <xml><block type="harvester_pumpkin"/></xml>
+          لتجمعها.
+        courseC_harvester_loops1_b: يمكنك استخدام دالة كرر مع <xml><block type="harvester_pumpkin"/></xml>
+          لتجمع أكثر من قرعة من المربع.
+      courseC_harvester_loops1_2019:
+        courseC_harvester_loops1_a: عندما تصل القرعة استخدم <xml><block type="harvester_pumpkin"/></xml>
+          لتجمعها.
+        courseC_harvester_loops1_b: يمكنك استخدام دالة كرر مع <xml><block type="harvester_pumpkin"/></xml>
+          لتجمع أكثر من قرعة من المربع.
+      courseC_harvester_loops2:
+        courseC_harvester_loops2_a: إذا علقت, جرب كتابة الخطوات على ورقة وابحث عن
+          نمط متكرر.
+        courseC_harvester_loops2_b: تحتاج إلى دالة كرر واحدة بعد الأخرى.
+        courseC_harvester_loops2_c: دالة كرر واحدة لتكرار أمر " تحريك إلى الأمام"
+          والأخرى لتكرار أمر "التقط يقطين".
+      courseC_harvester_loops2_2018:
+        courseC_harvester_loops2_a: إذا علقت, جرب كتابة الخطوات على ورقة وابحث عن
+          نمط متكرر.
+        courseC_harvester_loops2_b: تحتاج إلى دالة كرر واحدة بعد الأخرى.
+        courseC_harvester_loops2_c: دالة كرر واحدة لتكرار أمر " تحريك إلى الأمام"
+          والأخرى لتكرار أمر "التقط يقطين".
+      courseC_harvester_loops2_2019:
+        courseC_harvester_loops2_a: إذا علقت, جرب كتابة الخطوات على ورقة وابحث عن
+          نمط متكرر.
+        courseC_harvester_loops2_b: تحتاج إلى دالة كرر واحدة بعد الأخرى.
+        courseC_harvester_loops2_c: دالة كرر واحدة لتكرار أمر " تحريك إلى الأمام"
+          والأخرى لتكرار أمر "التقط يقطين".
+      courseC_harvester_loops3:
+        courseC_harvester_loops3_b: لليقطينة الاولى, يمكنك استخدام كود برمجي مشابه
+          للغز السابق. أي اتجاه تحتاج الالتفاف له فيما بعد؟
+        courseC_harvester_loops3_c: إذا اردت تبسيط كودك البرمجي, يمكنك أن تضع دالة
+          "كرر" داخل أخرى! هذه تسمى \*\* دالة التكرار المتداخلة\*\*.
+      courseC_harvester_loops3_2018:
+        courseC_harvester_loops3_b: لليقطينة الاولى, يمكنك استخدام كود برمجي مشابه
+          للغز السابق. أي اتجاه تحتاج الالتفاف له فيما بعد؟
+        courseC_harvester_loops3_c: إذا اردت تبسيط كودك البرمجي, يمكنك أن تضع دالة
+          "كرر" داخل أخرى! هذه تسمى \*\* دالة التكرار المتداخلة\*\*.
+      courseC_harvester_loops3_2019:
+        courseC_harvester_loops3_b: لليقطينة الاولى, يمكنك استخدام كود برمجي مشابه
+          للغز السابق. أي اتجاه تحتاج الالتفاف له فيما بعد؟
+        courseC_harvester_loops3_c: إذا اردت تبسيط كودك البرمجي, يمكنك أن تضع دالة
+          "كرر" داخل أخرى! هذه تسمى \*\* دالة التكرار المتداخلة\*\*.
+      courseC_harvester_loops4:
+        courseC_harvester_loops4_a: استخدم بلوكة "التقط الذرة" الجديدة لتجمع الذرة.
+        courseC_harvester_loops4_b: يمكنك استخدام العديد من دوال التكرار داخل الكود
+          البرمجي, بعضها لجمع الذرة والآخر لجمع اليقطينات.
+        courseC_harvester_loops4_c: إذا اردت تبسيط كودك البرمجي, يمكنك أن تضع دالة
+          "كرر" داخل أخرى! هذه تسمى \*\* دالة التكرار المتداخلة\*\*.
+      courseC_harvester_loops4_2018:
+        courseC_harvester_loops4_a: استخدم بلوكة "التقط الذرة" الجديدة لتجمع الذرة.
+        courseC_harvester_loops4_b: يمكنك استخدام العديد من دوال التكرار داخل الكود
+          البرمجي, بعضها لجمع الذرة والآخر لجمع اليقطينات.
+        courseC_harvester_loops4_c: إذا اردت تبسيط كودك البرمجي, يمكنك أن تضع دالة
+          "كرر" داخل أخرى! هذه تسمى \*\* دالة التكرار المتداخلة\*\*.
+      courseC_harvester_loops4_2019:
+        courseC_harvester_loops4_a: استخدم بلوكة "التقط الذرة" الجديدة لتجمع الذرة.
+        courseC_harvester_loops4_b: يمكنك استخدام العديد من دوال التكرار داخل الكود
+          البرمجي, بعضها لجمع الذرة والآخر لجمع اليقطينات.
+        courseC_harvester_loops4_c: إذا اردت تبسيط كودك البرمجي, يمكنك أن تضع دالة
+          "كرر" داخل أخرى! هذه تسمى \*\* دالة التكرار المتداخلة\*\*.
+      courseC_harvester_loops5:
+        courseC_harvester_loops5_a: إذا علقت, جرب رسم البرنامج كامل وابحث عن نمط متكرر.
+        courseC_harvester_loops5_b: هل درجة السلم تبدو مألوفة لك من المراحل السابقة؟
+          الحركة ستبدو مشابهة لها, فقط تذكر جمع المحاصيل في طريقك.
+      courseC_harvester_loops5_2018:
+        courseC_harvester_loops5_a: إذا علقت, جرب رسم البرنامج كامل وابحث عن نمط متكرر.
+        courseC_harvester_loops5_b: هل درجة السلم تبدو مألوفة لك من المراحل السابقة؟
+          الحركة ستبدو مشابهة لها, فقط تذكر جمع المحاصيل في طريقك.
+      courseC_harvester_loops5_2019:
+        courseC_harvester_loops5_a: إذا علقت, جرب رسم البرنامج كامل وابحث عن نمط متكرر.
+        courseC_harvester_loops5_b: هل درجة السلم تبدو مألوفة لك من المراحل السابقة؟
+          الحركة ستبدو مشابهة لها, فقط تذكر جمع المحاصيل في طريقك.
+      courseC_harvester_loops6:
+        courseC_harvester_loops6_a: تذكر يمكنك إضافة أكثر من بلوكة برمجية داخل دالة
+          التكرار.
+        courseC_harvester_loops6_b: لا تنسى الاتفاف في ىخر صف الذرة.
+      courseC_harvester_loops6_2018:
+        courseC_harvester_loops6_a: تذكر يمكنك إضافة أكثر من بلوكة برمجية داخل دالة
+          التكرار.
+        courseC_harvester_loops6_b: لا تنسى الاتفاف في ىخر صف الذرة.
+      courseC_harvester_loops6_2019:
+        courseC_harvester_loops6_a: تذكر يمكنك إضافة أكثر من بلوكة برمجية داخل دالة
+          التكرار.
+        courseC_harvester_loops6_b: لا تنسى الاتفاف في ىخر صف الذرة.
+      courseC_harvester_loops7:
+        courseC_harvester_loops7_a: يمكن حل اللغز بطريقتين, إما اجمع الذرة أولا أو
+          اليطينات.
+        courseC_harvester_loops7_b: ستحتاج إلى أكثر من دالة "كرر" لحل اللغز.
+      courseC_harvester_loops7_2018:
+        courseC_harvester_loops7_a: يمكن حل اللغز بطريقتين, إما اجمع الذرة أولا أو
+          اليطينات.
+        courseC_harvester_loops7_b: ستحتاج إلى أكثر من دالة "كرر" لحل اللغز.
+      courseC_harvester_loops7_2019:
+        courseC_harvester_loops7_a: يمكن حل اللغز بطريقتين, إما اجمع الذرة أولا أو
+          اليطينات.
+        courseC_harvester_loops7_b: ستحتاج إلى أكثر من دالة "كرر" لحل اللغز.
+      courseC_harvester_loops8:
+        courseC_harvester_loops8_a: هل درجة السلم تبدو مألوفة لك من المراحل السابقة؟
+          الحركة ستبدو مشابهة لها, فقط تذكر جمع المحاصيل في طريقك.
+        courseC_harvester_loops8_b: إذا اردت تبسيط كودك البرمجي, يمكنك أن تضع دالة
+          "كرر" داخل أخرى! هذه تسمى \*\* دالة التكرار المتداخلة\*\*.
+      courseC_harvester_loops8_2018:
+        courseC_harvester_loops8_a: هل درجة السلم تبدو مألوفة لك من المراحل السابقة؟
+          الحركة ستبدو مشابهة لها, فقط تذكر جمع المحاصيل في طريقك.
+        courseC_harvester_loops8_b: إذا اردت تبسيط كودك البرمجي, يمكنك أن تضع دالة
+          "كرر" داخل أخرى! هذه تسمى \*\* دالة التكرار المتداخلة\*\*.
+      courseC_harvester_loops8_2019:
+        courseC_harvester_loops8_a: هل درجة السلم تبدو مألوفة لك من المراحل السابقة؟
+          الحركة ستبدو مشابهة لها, فقط تذكر جمع المحاصيل في طريقك.
+        courseC_harvester_loops8_b: إذا اردت تبسيط كودك البرمجي, يمكنك أن تضع دالة
+          "كرر" داخل أخرى! هذه تسمى \*\* دالة التكرار المتداخلة\*\*.
+      courseC_harvester_loops_challenge1a:
+        courseC_harvester_loops_challenge1_a: هذا صعب بدون دالة كرر!
+        courseC_harvester_loops_challenge1_b: يمكنك تكرار "تحريك إلى الامام" و " التقط
+          ذرة" على قدر ماتحتاج, ومن ثم استخدم "اتجه إلى اليمين" عند كل زاوية.
+        courseC_harvester_loops_challenge1_c: |-
+          أفضل طريقة لجمع الذرة في المنتصف استخدم بلوكة "كرر" داخل بلوكة "كرر" أخرى.
+
+          <xml><block type="controls_repeat">
+                  <title name="TIMES">2</title>
+                  <statement name="DO">
+                    <block type="controls_repeat">
+                      <title name="TIMES">4</title>
+                      <statement name="DO">
+                        <block type="maze_move">
+                          <title name="DIR">moveForward</title>
+                          <next>
+                            <block type="harvester_corn"/>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnRight</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  </block></xml>
+      courseC_harvester_loops_challenge1a_2018:
+        courseC_harvester_loops_challenge1_a: هذا صعب بدون دالة كرر!
+        courseC_harvester_loops_challenge1_b: يمكنك تكرار "تحريك إلى الامام" و " التقط
+          ذرة" على قدر ماتحتاج, ومن ثم استخدم "اتجه إلى اليمين" عند كل زاوية.
+        courseC_harvester_loops_challenge1_c: |-
+          بعد أول محاولتين لجمع الذرة, يمكنك استخدام دالة تكرار متداخلة لتجمع 8 حبات التالية.
+
+          <xml><block type="controls_repeat">
+                  <title name="TIMES">2</title>
+                  <statement name="DO">
+                    <block type="controls_repeat">
+                      <title name="TIMES">4</title>
+                      <statement name="DO">
+                        <block type="maze_move">
+                          <title name="DIR">moveForward</title>
+                          <next>
+                            <block type="harvester_corn"/>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnRight</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  </block></xml>
+      courseC_harvester_loops_challenge1a_2019:
+        courseC_harvester_loops_challenge1_a: هذا صعب بدون دالة كرر!
+        courseC_harvester_loops_challenge1_b: يمكنك تكرار "تحريك إلى الامام" و " التقط
+          ذرة" على قدر ماتحتاج, ومن ثم استخدم "اتجه إلى اليمين" عند كل زاوية.
+        courseC_harvester_loops_challenge1_c: |-
+          أفضل طريقة لجمع الذرة في المنتصف استخدم بلوكة "كرر" داخل بلوكة "كرر" أخرى.
+
+          <xml><block type="controls_repeat">
+                  <title name="TIMES">2</title>
+                  <statement name="DO">
+                    <block type="controls_repeat">
+                      <title name="TIMES">4</title>
+                      <statement name="DO">
+                        <block type="maze_move">
+                          <title name="DIR">moveForward</title>
+                          <next>
+                            <block type="harvester_corn"/>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnRight</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  </block></xml>
+      courseC_harvester_loops_challenge2:
+        courseC_harvester_loops_challenge2_a: إحدى الطرق لحل اللغز هو السير بمسار
+          يشبه الخط المتعرج. وطريقة أخرى هو السير بمسار يشبه الحلزون! هناك العديد
+          من الحلول لحل هذا اللغز. كن مثابراً!
+        courseC_harvester_loops_challenge2_b: يمكنك تكرار "تحريك إلى الامام" و " التقط
+          خس" على قدر ماتحتاج, ومن ثم الاتفاف عند كل زاوية.
+        courseC_harvester_loops_challenge2_c: |-
+          هذا النمط المتعرج يمكن تكراره مرتين لحل اللغز باستخدام 20 بلوكة
+
+          ![](<https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png>)
+        courseC_harvester_loops_challenge2_d: |-
+          النمط الحلزوني يمكن برمجته باستخدام 18 بلوكة!
+
+          ![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)
+      courseC_harvester_loops_challenge2_2018:
+        courseC_harvester_loops_challenge2_a: إحدى الطرق لحل اللغز هو السير بمسار
+          يشبه الخط المتعرج. وطريقة أخرى هو السير بمسار يشبه الحلزون! هناك العديد
+          من الحلول لحل هذا اللغز. كن مثابراً!
+        courseC_harvester_loops_challenge2_b: يمكنك تكرار "تحريك إلى الامام" و " التقط
+          خس" على قدر ماتحتاج, ومن ثم الاتفاف عند كل زاوية.
+        courseC_harvester_loops_challenge2_c: |-
+          هذا النمط المتعرج يمكن تكراره مرتين لحل اللغز باستخدام 20 بلوكة
+
+          ![](<https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png>)
+        courseC_harvester_loops_challenge2_d: |-
+          النمط الحلزوني يمكن برمجته باستخدام 18 بلوكة!
+
+          ![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)
+      courseC_harvester_loops_challenge2_2019:
+        courseC_harvester_loops_challenge2_a: إحدى الطرق لحل اللغز هو السير بمسار
+          يشبه الخط المتعرج. وطريقة أخرى هو السير بمسار يشبه الحلزون! هناك العديد
+          من الحلول لحل هذا اللغز. كن مثابراً!
+        courseC_harvester_loops_challenge2_b: يمكنك تكرار "تحريك إلى الامام" و " التقط
+          خس" على قدر ماتحتاج, ومن ثم الاتفاف عند كل زاوية.
+        courseC_harvester_loops_challenge2_c: |-
+          هذا النمط المتعرج يمكن تكراره مرتين لحل اللغز باستخدام 20 بلوكة
+
+          ![](<https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png>)
+        courseC_harvester_loops_challenge2_d: |-
+          النمط الحلزوني يمكن برمجته باستخدام 18 بلوكة!
+
+          ![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)
+      courseC_maze_debugging5_2018:
+        courseC_maze_debugging5_c: يمكن أن تغير اتجاه الالتفاف عن طريق الضغط على القائمة
+          المنسدلة.
+      courseC_maze_debugging5_2019:
+        courseC_maze_debugging5_c: يمكن أن تغير اتجاه الالتفاف عن طريق الضغط على القائمة
+          المنسدلة.
+      courseC_maze_loops_challenge1a:
+        courseC_maze_loops_challenge1_a: فكر في هذا المسار على أنه مكون من مسارين.
+          كل واحد منهم له نمط يمكن تكراره.
+        courseC_maze_loops_challenge1_b: هل يمكنك تذكر كيف يمكنك استخدام دالة كرر
+          لتكرر نمط درجة السلم؟
+      courseC_maze_loops_challenge1a_2018:
+        courseC_maze_loops_challenge1_a: فكر في هذا المسار على أنه مكون من مسارين.
+          كل واحد منهم له نمط يمكن تكراره.
+        courseC_maze_loops_challenge1_b: هل يمكنك تذكر كيف يمكنك استخدام دالة كرر
+          لتكرر نمط درجة السلم؟
+      courseC_maze_loops_challenge1a_2019:
+        courseC_maze_loops_challenge1_a: فكر في هذا المسار على أنه مكون من مسارين.
+          كل واحد منهم له نمط يمكن تكراره.
+        courseC_maze_loops_challenge1_b: هل يمكنك تذكر كيف يمكنك استخدام دالة كرر
+          لتكرر نمط درجة السلم؟
+      courseC_maze_programming1:
+        courseC_maze_programming1_0: تأكد من أن جميع البلوكات ملتصقة ببعضها ومن ثم
+          اضغط على زر " تشغيل" مرة اخرى.
+      courseC_maze_programming1_2018:
+        courseC_maze_programming1_0: تأكد من أن جميع البلوكات ملتصقة ببعضها ومن ثم
+          اضغط على زر " تشغيل" مرة اخرى.
+      courseC_maze_programming1_2019:
+        courseC_maze_programming1_0: تأكد من أن جميع البلوكات ملتصقة ببعضها ومن ثم
+          اضغط على زر " تشغيل" مرة اخرى.
+      courseC_maze_programming2:
+        courseC_maze_programming2_a: لتستخدم <xml><block type="maze_moveForward"/></xml>
+          اسحبها من صندوق الادوات والصقها ببلوكة <xml><block type="when_run"/></xml>.
+        courseC_maze_programming2_b: تأكد من أن جميع البلوكات ملتصقة ببعضها ومن ثم
+          اضغط على زر " تشغيل" مرة اخرى.
+      courseC_maze_programming2_2018:
+        courseC_maze_programming2_a: لتستخدم <xml><block type="maze_moveForward"/></xml>
+          اسحبها من صندوق الادوات والصقها ببلوكة <xml><block type="when_run"/></xml>.
+        courseC_maze_programming2_b: تأكد من أن جميع البلوكات ملتصقة ببعضها ومن ثم
+          اضغط على زر " تشغيل" مرة اخرى.
+      courseC_maze_programming2_2019:
+        courseC_maze_programming2_a: لتستخدم <xml><block type="maze_moveForward"/></xml>
+          اسحبها من صندوق الادوات والصقها ببلوكة <xml><block type="when_run"/></xml>.
+        courseC_maze_programming2_b: تأكد من أن جميع البلوكات ملتصقة ببعضها ومن ثم
+          اضغط على زر " تشغيل" مرة اخرى.
+      courseC_maze_programming3:
+        courseC_maze_programming3_a: جرب تشغيل الكود البرمجي أولاً لتحدد مكان الخطأ.
+        courseC_maze_programming3_b: |-
+          ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
+
+          لتحذف بلوكة من منتصف الكود البرمجي, اسحب جميع البلوكات إلى أي مكان في منطقة العمل.
+
+          ومن ثم اسحب البلوكة التي تريد حذفها إلى صندوق الادوات.
+
+          أخيرا, أعد البلوكات إلى مكانها.
+      courseC_maze_programming3_2018:
+        courseC_maze_programming3_a: جرب تشغيل الكود البرمجي أولاً لتحدد مكان الخطأ.
+        courseC_maze_programming3_b: |-
+          ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
+
+          لتحذف بلوكة من منتصف الكود البرمجي, اسحب جميع البلوكات إلى أي مكان في منطقة العمل.
+
+          ومن ثم اسحب البلوكة التي تريد حذفها إلى صندوق الادوات.
+
+          أخيرا, أعد البلوكات إلى مكانها.
+      courseC_maze_programming3_2019:
+        courseC_maze_programming3_a: جرب تشغيل الكود البرمجي أولاً لتحدد مكان الخطأ.
+        courseC_maze_programming3_b: |-
+          ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
+
+          لتحذف بلوكة من منتصف الكود البرمجي, اسحب جميع البلوكات إلى أي مكان في منطقة العمل.
+
+          ومن ثم اسحب البلوكة التي تريد حذفها إلى صندوق الادوات.
+
+          أخيرا, أعد البلوكات إلى مكانها.
+      courseC_maze_programming4:
+        courseC_maze_programming4_a: تذكر أنه عند الالتفاف فانك تتجه من وجهة نظر الطائر,
+          إذا اتجهت لليمين سيتجه الطائر إلى أسفل.
+        courseC_maze_programming4_b: |-
+          لتتبع الطريق:
+
+          -   تحرك غلى الأمام
+          -   اتجه إلى أحد الجهات
+          -   تحرك إلى الأمام
+              اتجه إلى عكس الجهة السابقة
+          -   تحرك إلى الأمام
+      courseC_maze_programming4_2018:
+        courseC_maze_programming4_a: تذكر أنه عند الالتفاف فانك تتجه من وجهة نظر الطائر,
+          إذا اتجهت لليمين سيتجه الطائر إلى أسفل.
+        courseC_maze_programming4_b: |-
+          لتتبع الطريق:
+
+          -   تحرك غلى الأمام
+          -   اتجه إلى أحد الجهات
+          -   تحرك إلى الأمام
+              اتجه إلى عكس الجهة السابقة
+          -   تحرك إلى الأمام
+      courseC_maze_programming4_2019:
+        courseC_maze_programming4_a: تذكر أنه عند الالتفاف فانك تتجه من وجهة نظر الطائر,
+          إذا اتجهت لليمين سيتجه الطائر إلى أسفل.
+        courseC_maze_programming4_b: |-
+          لتتبع الطريق:
+
+          -   تحرك غلى الأمام
+          -   اتجه إلى أحد الجهات
+          -   تحرك إلى الأمام
+              اتجه إلى عكس الجهة السابقة
+          -   تحرك إلى الأمام
+      courseC_maze_programming5:
+        courseC_maze_programming5_b: يحتاج الطائر إلى الاتجاه ليكمل حل اللغز. هل يمكنك
+          معرفة أي اتجاه؟
+        courseC_maze_programming5_c: الحل سوف يشمل بلوكتين من " تحرك إلى الامام" و
+          بلوكة "اتجه إلى" بالاضافة إلى بلوكتين "تحرك إلى الامام".
+      courseC_maze_programming5_2018:
+        courseC_maze_programming5_b: يحتاج الطائر إلى الاتجاه ليكمل حل اللغز. هل يمكنك
+          معرفة أي اتجاه؟
+        courseC_maze_programming5_c: الحل سوف يشمل بلوكتين من " تحرك إلى الامام" و
+          بلوكة "اتجه إلى" بالاضافة إلى بلوكتين "تحرك إلى الامام".
+      courseC_maze_programming5_2019:
+        courseC_maze_programming5_b: يحتاج الطائر إلى الاتجاه ليكمل حل اللغز. هل يمكنك
+          معرفة أي اتجاه؟
+        courseC_maze_programming5_c: الحل سوف يشمل بلوكتين من " تحرك إلى الامام" و
+          بلوكة "اتجه إلى" بالاضافة إلى بلوكتين "تحرك إلى الامام".
       courseC_maze_programming6:
         courseC_maze_programming6_a: هناك طريقتان لحل هذا اللغز!
+        courseC_maze_programming6_b: تتبع باصبعك الطريق من الطائر إلى الخنزير, ماهي
+          الخطوات التي استخدمتها؟
+        courseC_maze_programming6_c: تذكر يجب عليك الالتفاف أولاً, بما أن الطائر أصبح
+          مواجها للجدار.
+        courseC_maze_programming6_d: هل علقت؟ انظر إلى هذا الطريق!
       courseC_maze_programming6_2018:
         courseC_maze_programming6_a: هناك طريقتان لحل هذا اللغز!
+        courseC_maze_programming6_b: تتبع باصبعك الطريق من الطائر إلى الخنزير, ماهي
+          الخطوات التي استخدمتها؟
+        courseC_maze_programming6_c: تذكر يجب عليك الالتفاف أولاً, بما أن الطائر أصبح
+          مواجها للجدار.
+        courseC_maze_programming6_d: هل علقت؟ انظر إلى هذا الطريق!
       courseC_maze_programming6_2019:
         courseC_maze_programming6_a: هناك طريقتان لحل هذا اللغز!
+        courseC_maze_programming6_b: تتبع باصبعك الطريق من الطائر إلى الخنزير, ماهي
+          الخطوات التي استخدمتها؟
+        courseC_maze_programming6_c: تذكر يجب عليك الالتفاف أولاً, بما أن الطائر أصبح
+          مواجها للجدار.
+        courseC_maze_programming6_d: هل علقت؟ انظر إلى هذا الطريق!
+      courseC_maze_programming7:
+        courseC_maze_programming7_a: لاتنسى أن تستخدم زر " الخطوة" لتراجع الكود البرمجي
+          بلوكة بلوكة لتكتشف الخطأ.
+        courseC_maze_programming7_b: إذا كنت تواجه مشكلة في حل هذا اللغز, حاول كتابة
+          الخطوات في ورقة خارجية.
+      courseC_maze_programming7_2018:
+        courseC_maze_programming7_a: لاتنسى أن تستخدم زر " الخطوة" لتراجع الكود البرمجي
+          بلوكة بلوكة لتكتشف الخطأ.
+        courseC_maze_programming7_b: إذا كنت تواجه مشكلة في حل هذا اللغز, حاول كتابة
+          الخطوات في ورقة خارجية.
+      courseC_maze_programming7_2019:
+        courseC_maze_programming7_a: لاتنسى أن تستخدم زر " الخطوة" لتراجع الكود البرمجي
+          بلوكة بلوكة لتكتشف الخطأ.
+        courseC_maze_programming7_b: إذا كنت تواجه مشكلة في حل هذا اللغز, حاول كتابة
+          الخطوات في ورقة خارجية.
+      courseC_maze_programming8:
+        courseC_maze_programming8_a: تذكر يمكنك استخدام زر " الخطوة" لتتبع كودك البرمجي
+          سطرا سطرا في حال واجهتك مشكلة.
+      courseC_maze_programming8_2018:
+        courseC_maze_programming8_a: تذكر يمكنك استخدام زر " الخطوة" لتتبع كودك البرمجي
+          سطرا سطرا في حال واجهتك مشكلة.
+      courseC_maze_programming8_2019:
+        courseC_maze_programming8_a: تذكر يمكنك استخدام زر " الخطوة" لتتبع كودك البرمجي
+          سطرا سطرا في حال واجهتك مشكلة.
+      courseC_maze_programming_challenge1:
+        courseC_maze_programming_challenge1_a: يوجد هناك العديد من الطرق للوصول إلى
+          الخنزير. تتبع باصبعك الطريق الصحيح ومن ثم برمج!
+      courseC_maze_programming_challenge1_2018:
+        courseC_maze_programming_challenge1_a: يوجد هناك العديد من الطرق للوصول إلى
+          الخنزير. تتبع باصبعك الطريق الصحيح ومن ثم برمج!
+      courseC_maze_programming_challenge1_2019:
+        courseC_maze_programming_challenge1_a: يوجد هناك العديد من الطرق للوصول إلى
+          الخنزير. تتبع باصبعك الطريق الصحيح ومن ثم برمج!
+      courseC_maze_programming_challenge2:
+        courseC_maze_programming_challenge2_a: _" إذا ارسلتني للخلف, كن حذراً واجعلني
+          اتتخذ الاتجاه الصحيح"_
+        courseC_maze_programming_challenge2_b: |-
+          الحل الأقصر سوف يستخدم 5 بلوكات فقط, لكنه سيستخدم هذه البلوكة:
+
+          <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+      courseC_maze_programming_challenge2_2018:
+        courseC_maze_programming_challenge2_a: _" إذا ارسلتني للخلف, كن حذراً واجعلني
+          اتتخذ الاتجاه الصحيح"_
+        courseC_maze_programming_challenge2_b: |-
+          الحل الأقصر سوف يستخدم 5 بلوكات فقط, لكنه سيستخدم هذه البلوكة:
+
+          <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+      courseC_maze_programming_challenge2_2019:
+        courseC_maze_programming_challenge2_a: _" إذا ارسلتني للخلف, كن حذراً واجعلني
+          اتتخذ الاتجاه الصحيح"_
+        courseC_maze_programming_challenge2_b: |-
+          الحل الأقصر سوف يستخدم 5 بلوكات فقط, لكنه سيستخدم هذه البلوكة:
+
+          <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+      courseC_starWars_loops1:
+        courseC_starWars_loops1_a: عندما يتدحرج BB-8 على قطع الحديد فإنه سوف يجمعها
+          تلقائياً.
+        courseC_starWars_loops1_c: يجب عليك أن "تتحرك إلى الامام" خمس مرات لتحل اللغز.
+      courseC_starWars_loops10:
+        courseC_starWars_loops10_a: أليس هذا النمط يبدوا كانه خطوة كبيرة في السلم؟
+          جرب أن تستخدم ماتعلمته من الالغاز السابقة لتقول بكل الاتجاهات.
+        courseC_starWars_loops10_b: إذا اردت استخدام القليل من الكود برمجي, يمكنك
+          أن تضع دالة "كرر" داخل أخرى!/ هذه تسمى \*\* دالة التكرار المتداخلة\*\*.
+      courseC_starWars_loops10_2018:
+        courseC_starWars_loops10_a: أليس هذا النمط يبدوا كانه خطوة كبيرة في السلم؟
+          جرب أن تستخدم ماتعلمته من الالغاز السابقة لتقول بكل الاتجاهات.
+        courseC_starWars_loops10_b: إذا اردت استخدام القليل من الكود برمجي, يمكنك
+          أن تضع دالة "كرر" داخل أخرى!/ هذه تسمى \*\* دالة التكرار المتداخلة\*\*.
+      courseC_starWars_loops10_2019:
+        courseC_starWars_loops10_a: أليس هذا النمط يبدوا كانه خطوة كبيرة في السلم؟
+          جرب أن تستخدم ماتعلمته من الالغاز السابقة لتقول بكل الاتجاهات.
+        courseC_starWars_loops10_b: إذا اردت استخدام القليل من الكود برمجي, يمكنك
+          أن تضع دالة "كرر" داخل أخرى!/ هذه تسمى \*\* دالة التكرار المتداخلة\*\*.
+      courseC_starWars_loops1_2018:
+        courseC_starWars_loops1_a: عندما يتدحرج BB-8 على قطع الحديد فإنه سوف يجمعها
+          تلقائياً.
+        courseC_starWars_loops1_c: يجب عليك أن "تتحرك إلى الامام" خمس مرات لتحل اللغز.
+      courseC_starWars_loops1_2019:
+        courseC_starWars_loops1_a: عندما يتدحرج BB-8 على قطع الحديد فإنه سوف يجمعها
+          تلقائياً.
+        courseC_starWars_loops1_c: يجب عليك أن "تتحرك إلى الامام" خمس مرات لتحل اللغز.
+      courseC_starWars_loops2:
+        courseC_starWars_loops2_a: لتكرر الكود البرمجي, اسحب دالة "كرر" ومن ثم استخدم
+          البلوكات التي تريدها في الداخل.
+      courseC_starWars_loops2_2018:
+        courseC_starWars_loops2_a: لتكرر الكود البرمجي, اسحب دالة "كرر" ومن ثم استخدم
+          البلوكات التي تريدها في الداخل.
+      courseC_starWars_loops2_2019:
+        courseC_starWars_loops2_a: لتكرر الكود البرمجي, اسحب دالة "كرر" ومن ثم استخدم
+          البلوكات التي تريدها في الداخل.
+      courseC_starWars_loops4:
+        courseC_starWars_loops4_c: عند الضغط على السهم الصغير الموجود بجانب كلمة "يسار"
+          في بلوكة "اتجه إلى" ستتمكن من تغييرها إلى "يمين".
+        courseC_starWars_loops4_a: استخدم اثنان من بلوكات "كرر".
+        courseC_starWars_loops4_b: 'كل حلقة تكرار "كرر" سوف تحوي على أمر واحد داخلها
+          وهو: "تحرك غلى الامام".'
+      courseC_starWars_loops4_2018:
+        courseC_starWars_loops4_c: عند الضغط على السهم الصغير الموجود بجانب كلمة "يسار"
+          في بلوكة "اتجه إلى" ستتمكن من تغييرها إلى "يمين".
+        courseC_starWars_loops4_a: استخدم اثنان من بلوكات "كرر".
+        courseC_starWars_loops4_b: 'كل حلقة تكرار "كرر" سوف تحوي على أمر واحد داخلها
+          وهو: "تحرك غلى الامام".'
+      courseC_starWars_loops4_2019:
+        courseC_starWars_loops4_c: عند الضغط على السهم الصغير الموجود بجانب كلمة "يسار"
+          في بلوكة "اتجه إلى" ستتمكن من تغييرها إلى "يمين".
+        courseC_starWars_loops4_a: استخدم اثنان من بلوكات "كرر".
+        courseC_starWars_loops4_b: 'كل حلقة تكرار "كرر" سوف تحوي على أمر واحد داخلها
+          وهو: "تحرك غلى الامام".'
+      courseC_starWars_loops5:
+        courseC_starWars_loops5_b: لتتجه إلى الأسفل عليك أولاً الاتجاه ومن ثم التحرك
+          للامام.
+        courseC_starWars_loops5_a: أفضل حل باستخام الاتجاه ومن ثم التحرك للامام مرة
+          واحدة ومن ثم الاتجاه مرة اخرى واخيرا التكرار.
+      courseC_starWars_loops5_2018:
+        courseC_starWars_loops5_a: افضل حل استخدم "تحريك إلى الأمام" ومن ثم "اتجه
+          إلى", ومن ثم كرر.
+      courseC_starWars_loops5_2019:
+        courseC_starWars_loops5_a: افضل حل استخدم "تحريك إلى الأمام" ومن ثم "اتجه
+          إلى", ومن ثم كرر.
+      courseC_starWars_loops6:
+        courseC_starWars_loops6_a: حاول كتابة كل الحركات على ورقة وابحث عن النمط.
+        courseC_starWars_loops6_b: إذا اردت استخدام القليل من الكود برمجي, يمكنك أن
+          تضع دالة "كرر" داخل أخرى!/ هذه تسمى \*\* دالة التكرار المتداخلة\*\*.
+      courseC_starWars_loops6_2018:
+        courseC_starWars_loops6_a: حاول كتابة كل الحركات على ورقة وابحث عن النمط.
+        courseC_starWars_loops6_b: إذا اردت استخدام القليل من الكود برمجي, يمكنك أن
+          تضع دالة "كرر" داخل أخرى!/ هذه تسمى \*\* دالة التكرار المتداخلة\*\*.
+      courseC_starWars_loops6_2019:
+        courseC_starWars_loops6_a: حاول كتابة كل الحركات على ورقة وابحث عن النمط.
+        courseC_starWars_loops6_b: إذا اردت استخدام القليل من الكود برمجي, يمكنك أن
+          تضع دالة "كرر" داخل أخرى!/ هذه تسمى \*\* دالة التكرار المتداخلة\*\*.
+      courseC_starWars_loops7:
+        courseC_starWars_loops7_a: هذا النمط يبدو صعباً! ابدأ بخطوة في السلم. هل هذه
+          الخطوة تجمع كل قطع الحديد؟
+        courseC_starWars_loops7_b: إذا كنت تواجه مشكلة مع هذا اللغز, حاول كتابة كل
+          الخطوات على ورقة وابحث عن نمط.
+      courseC_starWars_loops7_2018:
+        courseC_starWars_loops7_a: هذا النمط يبدو صعباً! ابدأ بخطوة في السلم. هل هذه
+          الخطوة تجمع كل قطع الحديد؟
+        courseC_starWars_loops7_b: إذا كنت تواجه مشكلة مع هذا اللغز, حاول كتابة كل
+          الخطوات على ورقة وابحث عن نمط.
+      courseC_starWars_loops7_2019:
+        courseC_starWars_loops7_a: هذا النمط يبدو صعباً! ابدأ بخطوة في السلم. هل هذه
+          الخطوة تجمع كل قطع الحديد؟
+        courseC_starWars_loops7_b: إذا كنت تواجه مشكلة مع هذا اللغز, حاول كتابة كل
+          الخطوات على ورقة وابحث عن نمط.
+      courseC_starWars_loops8:
+        course_starWars_loops8_a: حاول التفكير في هذه المشكلة عن طريق تجزيئها. خذ
+          وقتك. لا تحتاج أن تحلها من المرة الاولى!
+        course_starWars_loops8_b: فكر في النصف الاول من المشكلة وكانها درجة في السلم.
+          كيف قمت بحلها سابقاَ؟
+        course_starWars_loops8_c: |-
+          ألقي نظرة على هذا المسار.
+
+          ![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)
+      courseC_starWars_loops8_2018:
+        course_starWars_loops8_a: حاول التفكير في هذه المشكلة عن طريق تجزيئها. خذ
+          وقتك. لا تحتاج أن تحلها من المرة الاولى!
+        course_starWars_loops8_b: فكر في النصف الاول من المشكلة وكانها درجة في السلم.
+          كيف قمت بحلها سابقاَ؟
+        course_starWars_loops8_c: |-
+          ألقي نظرة على هذا المسار.
+
+          ![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)
+      courseC_starWars_loops8_2019:
+        course_starWars_loops8_a: حاول التفكير في هذه المشكلة عن طريق تجزيئها. خذ
+          وقتك. لا تحتاج أن تحلها من المرة الاولى!
+        course_starWars_loops8_b: فكر في النصف الاول من المشكلة وكانها درجة في السلم.
+          كيف قمت بحلها سابقاَ؟
+        course_starWars_loops8_c: |-
+          ألقي نظرة على هذا المسار.
+
+          ![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)
+      courseC_starWars_loops9:
+        course_starWars_loops9_b: يمكنك وضع أكثر من بلوكة داخل دالة "كرر".
+        course_starWars_loops9_c: |-
+          لا تحتاج الاتجاه لليسار لحل هذا اللغز. كل اتجاهاتك يمكن أن تكون لليمين.
+
+          ![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)
+      courseC_starWars_loops9_2018:
+        course_starWars_loops9_b: يمكنك وضع أكثر من بلوكة داخل دالة "كرر".
+        course_starWars_loops9_c: |-
+          لا تحتاج الاتجاه لليسار لحل هذا اللغز. كل اتجاهاتك يمكن أن تكون لليمين.
+
+          ![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)
+      courseC_starWars_loops9_2019:
+        course_starWars_loops9_b: يمكنك وضع أكثر من بلوكة داخل دالة "كرر".
+        course_starWars_loops9_c: |-
+          لا تحتاج الاتجاه لليسار لحل هذا اللغز. كل اتجاهاتك يمكن أن تكون لليمين.
+
+          ![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)
       courseD_artist_nestedLoops3:
         courseD_artist_nestedLoops3_a: "حاول أن تستخدم الكتلة \"القفز إلى الأمام\"
           للانتقال من أعلى مربع إلى المكان الذي سوف تبدأ منه رسم المربع التالي. \n\nإذا
@@ -3488,12 +2454,19 @@ ar-SA:
         courseD_bee_conditionals8_a: "\\*\\* تذكر: \\*\\* هذا اللغز يتغير في كل مرة
           يتم تشغيله. \n\nستحتاج أن تستخدم كتلة شرطية (\"إذا\" أو \"إذا/وإلا\") لحل
           هذا التحدي."
+      courseD_collector_ramp8:
+        courseD_collector_ramp8_b: إذا اردت تبسيط كودك البرمجي, يمكنك أن تضع دالة
+          "كرر" داخل أخرى! هذه تسمى \*\* دالة التكرار المتداخلة\*\*.
       courseD_maze_ramp6:
         courseC_maze_programming6_a: هناك طريقتان لحل هذا اللغز!
-      courseD_scrat_predict1:
-        courseF_maze_ramp6_a: هناك طريقتان لحل هذا اللغز!
-      courseD_scrat_ramp6:
-        courseC_maze_programming6_a: هناك طريقتان لحل هذا اللغز!
+      courseD_maze_ramp7:
+        courseD_maze_ramp7_b: لاتنسى أن تستخدم زر " الخطوة" لتراجع الكود البرمجي بلوكة
+          بلوكة لتكتشف الخطأ.
+      courseD_scrat_ramp7:
+        courseD_scrat_programming6_a: هناك طريقتان لحل هذا اللغز!
+      courseD_scrat_ramp8:
+        courseD_maze_ramp7_b: لاتنسى أن تستخدم زر " الخطوة" لتراجع الكود البرمجي بلوكة
+          بلوكة لتكتشف الخطأ.
       courseE_artist_concept_challenge1:
         courseE_artist_concept_challenge1_a: 'يمتلك نصف السداسي **طول 30** ويستدير
           يميناً بمقدار **60 درجة**.  '
@@ -3556,17 +2529,26 @@ ar-SA:
           من الدالة كل مرة. \n\nأضف بعض القطع، ثم جربها. أضف المزيد، ثم حاول مرة اخرى.
           قريبا، سوف تنجح!"
       courseF_artist_for4:
-        courseF_artist_for4_a: "\\*\\* ما هو الرقم الأصغر الذي ستحتاجه؟  \nما هو أكبر
-          رقم؟  \nما هو مقدر الزيادة في كل مرة؟ \\*\\*\n\nتلك هي الأسئلة التي تحتاج
-          طرحها لملأ الفراغات الموجودة في حلقة \"العد\"."
+        courseF_artist_for4_a: |-
+          \*\* ما هو الرقم الأصغر الذي ستحتاجه؟\
+          ما هو أكبر رقم؟\
+          ما هو مقدر الزيادة في كل مرة؟ \*\*
+
+          تلك هي الأسئلة التي تحتاج طرحها لملأ الفراغات الموجودة في حلقة "العد".
       courseF_artist_for4_2018:
-        courseF_artist_for4_a: "\\*\\* ما هو الرقم الأصغر الذي ستحتاجه؟  \nما هو أكبر
-          رقم؟  \nما هو مقدر الزيادة في كل مرة؟ \\*\\*\n\nتلك هي الأسئلة التي تحتاج
-          طرحها لملأ الفراغات الموجودة في حلقة \"العد\"."
+        courseF_artist_for4_a: |-
+          \*\* ما هو الرقم الأصغر الذي ستحتاجه؟\
+          ما هو أكبر رقم؟\
+          ما هو مقدر الزيادة في كل مرة؟ \*\*
+
+          تلك هي الأسئلة التي تحتاج طرحها لملأ الفراغات الموجودة في حلقة "العد".
       courseF_artist_for4_2019:
-        courseF_artist_for4_a: "\\*\\* ما هو الرقم الأصغر الذي ستحتاجه؟  \nما هو أكبر
-          رقم؟  \nما هو مقدر الزيادة في كل مرة؟ \\*\\*\n\nتلك هي الأسئلة التي تحتاج
-          طرحها لملأ الفراغات الموجودة في حلقة \"العد\"."
+        courseF_artist_for4_a: |-
+          \*\* ما هو الرقم الأصغر الذي ستحتاجه؟\
+          ما هو أكبر رقم؟\
+          ما هو مقدر الزيادة في كل مرة؟ \*\*
+
+          تلك هي الأسئلة التي تحتاج طرحها لملأ الفراغات الموجودة في حلقة "العد".
       courseF_artist_for_challenge1:
         courseF_artist_for_challenge1_a: عرض القلم هو 1. المربع الأول طول ضلعه 50
           نقطة، وضلع كل مربع أكبر من السابق بـ 50 نقطة.
@@ -3712,278 +2694,12 @@ ar-SA:
         courseF_artist_for_challenge1_b: قتامة الفرشاة تكون دائما "عداد" قسمة 2.
         courseF_artist_for_challenge1_c: بعد رسم كل مربع، لا تنس أن تقفز للخلف، ثم
           تستدير، ثم تقفز مرة أخرى، ثم تستدير عائداً!
-        courseF_artist_for_challenge1_d: |-
-          **الحل:**
-
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="draw_width" inline="false">
-          <value name="WIDTH">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_colour" inline="true" id="draw-color">
-          <value name="COLOUR">
-          <block type="colour_picker">
-          <title name="COLOUR">#0000cd</title>
-          </block>
-          </value>
-          <next>
-          <block type="controls_for_counter" inline="true">
-          <mutation counter="counter"></mutation>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">50</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">350</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">50</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="alpha" inline="true" id="alpha">
-          <value name="VALUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">قسمة</title>
-          <value name="A">
-          <block type="variables_get">
-          <title name="VAR">عداد</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="math_number">
-          <title name="NUM">4</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="draw_move" inline="true">
-          <title name="DIR">تحرك إلى الأمام</title>
-          <value name="VALUE">
-          <block type="variables_get">
-          <title name="VAR">عداد</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">اتجه إلى اليمين</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">90</title>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </statement>
-          <next>
-          <block type="jump" inline="true">
-          <title name="DIR">اقفز إلى الخلف</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">25</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">اتجه إلى اليمين</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">90</title>
-          </block>
-          </value>
-          <next>
-          <block type="jump" inline="true">
-          <title name="DIR">اقفز إلى الخلف</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">25</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">اتجه إلى اليسار</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">90</title>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
       courseF_artist_for_challenge1_2019:
         courseF_artist_for_challenge1_a: عرض القلم هو 1. المربع الأول طول ضلعه 50
           نقطة، وضلع كل مربع أكبر من السابق بـ 50 نقطة.
         courseF_artist_for_challenge1_b: قتامة الفرشاة تكون دائما "عداد" قسمة 2.
         courseF_artist_for_challenge1_c: بعد رسم كل مربع، لا تنس أن تقفز للخلف، ثم
           تستدير، ثم تقفز مرة أخرى، ثم تستدير عائداً!
-        courseF_artist_for_challenge1_d: |-
-          **الحل:**
-
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="draw_width" inline="false">
-          <value name="WIDTH">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_colour" inline="true" id="draw-color">
-          <value name="COLOUR">
-          <block type="colour_picker">
-          <title name="COLOUR">#0000cd</title>
-          </block>
-          </value>
-          <next>
-          <block type="controls_for_counter" inline="true">
-          <mutation counter="counter"></mutation>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">50</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">350</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">50</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="alpha" inline="true" id="alpha">
-          <value name="VALUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">قسمة</title>
-          <value name="A">
-          <block type="variables_get">
-          <title name="VAR">عداد</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="math_number">
-          <title name="NUM">4</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="draw_move" inline="true">
-          <title name="DIR">تحرك إلى الأمام</title>
-          <value name="VALUE">
-          <block type="variables_get">
-          <title name="VAR">عداد</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">اتجه إلى اليمين</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">90</title>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </statement>
-          <next>
-          <block type="jump" inline="true">
-          <title name="DIR">اقفز إلى الخلف</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">25</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">اتجه إلى اليمين</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">90</title>
-          </block>
-          </value>
-          <next>
-          <block type="jump" inline="true">
-          <title name="DIR">اقفز إلى الخلف</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">25</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">اتجه إلى اليسار</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">90</title>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
       courseF_artist_for_challenge2:
         courseF_artist_for_challenge2_c: 'تعد الحلقة "لأجل" من 5 إلى 250 بزيادة مقدارها
           2. '
@@ -4102,10 +2818,6 @@ ar-SA:
         courseF_artist_fwp_challenge1_e: كلاً من لون الثماني وعرض القلم يتم التحكم
           به باستخدام المتغير "عداد".
       courseF_artist_variables4:
-        courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
-      courseF_artist_variables4_2018:
-        courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
-      courseF_artist_variables4_2019:
         courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseF_bee_conditionals8:
         courseF_bee_conditionals8_a: "\\*\\* تذكر: \\*\\* هذا اللغز يتغير في كل مرة
@@ -4260,139 +2972,6 @@ ar-SA:
           حلقات \"التكرار\" داخلها لتكرر بمقدار الـ \"عداد\" لعمل نمط الصعود المتزايد.
           \n\nوالحلقة \"لأجل\" الأخرى تحتاج فقط حلقة واحدة \"التكرار\" لصنع عسل بمقدار
           الـ \"عداد\"."
-        courseF_bee_for_challenge2_d: |-
-          **الحل:**
-
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="controls_for" inline="true">
-          <title name="VAR">عداد</title>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">3</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">عداد</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_moveForward"/>
-          </statement>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">عداد</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_nectar"/>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">اتجه إلى اليسار</title>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">عداد</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_moveForward"/>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">اتجه إلى اليمين</title>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">اتجه إلى اليمين</title>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">اتجه إلى اليمين</title>
-          <next>
-          <block type="controls_for" inline="true">
-          <title name="VAR">عداد</title>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">10</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_moveForward">
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">اتجه إلى اليسار</title>
-          <next>
-          <block type="maze_moveForward">
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">اتجه إلى اليمين</title>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">عداد</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_honey"/>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
       courseF_bee_for_challenge2_2019:
         courseF_bee_for_challenge2_a: "ألق نظرة على هذا الخيار للحركة:  \n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)"
         courseF_bee_for_challenge2_b: 'حاول استخدام حلقتي "لأجل": حلقة للصعود والحصول
@@ -4401,139 +2980,6 @@ ar-SA:
           حلقات \"التكرار\" داخلها لتكرر بمقدار الـ \"عداد\" لعمل نمط الصعود المتزايد.
           \n\nوالحلقة \"لأجل\" الأخرى تحتاج فقط حلقة واحدة \"التكرار\" لصنع عسل بمقدار
           الـ \"عداد\"."
-        courseF_bee_for_challenge2_d: |-
-          **الحل:**
-
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="controls_for" inline="true">
-          <title name="VAR">عداد</title>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">3</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">عداد</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_moveForward"/>
-          </statement>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">عداد</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_nectar"/>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">اتجه إلى اليسار</title>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">عداد</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_moveForward"/>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">اتجه إلى اليمين</title>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">اتجه إلى اليمين</title>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">اتجه إلى اليمين</title>
-          <next>
-          <block type="controls_for" inline="true">
-          <title name="VAR">عداد</title>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">10</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_moveForward">
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">اتجه إلى اليسار</title>
-          <next>
-          <block type="maze_moveForward">
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">اتجه إلى اليمين</title>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">عداد</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_honey"/>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
       courseF_bee_functions8a:
         courseF_bee_functions8a_a: "إذا كان اللغز يبدو صعباً، حاول بناء جزء من الدالة
           كل مرة. \n\nأضف بعض القطع، ثم جربها. أضف المزيد، ثم حاول مرة اخرى. قريبا،

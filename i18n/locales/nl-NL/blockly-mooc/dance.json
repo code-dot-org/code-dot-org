@@ -5,11 +5,11 @@
   "danceFeedbackTooManyDancers": "Kijk uit! Als je een 'maak een nieuw' blok binnen 'elke 2 maten' plaatst, krijg je een heleboel dansers.",
   "danceFeedbackUseSetSize": "Gebruik het blok 'set backup_dancer2 size' om die danser kleiner te maken.",
   "danceFeedbackUseSetTint": "Gebruik het blok 'tint instellen' om de kleur van een danser te veranderen.",
-  "danceFeedbackUseStartMapping": "Probeer het <xml> <block type=\"Dancelab_startMapping\"> <title name=\"SPRITE\">right_pineapple</title><title name=\"PROPERTY\">\"scale\"</title><title name=\"RANGE\">\"bass\"</title> </block> </xml> blok aan je programma toe te voegen.",
-  "danceFeedbackStartNewMove": "Je danser deed geen nieuwe move na de vierde maat.",
+  "danceFeedbackUseStartMapping": "Probeer het <xml> <block type=\"Dancelab_startMapping\"> <title name=\"SPRITE\">right_unicorn</title><title name=\"PROPERTY\">\"scale\"</title><title name=\"RANGE\">\"bass\"</title> </block> </xml> blok aan je programma toe te voegen.",
+  "danceFeedbackStartNewMove": "Je danser deed geen nieuwe beweging na de vierde maat.",
   "danceFeedbackNeedDifferentDance": "Je moet een andere dans gebruiken.",
   "danceFeedbackNeedEveryTwoMeasures": "Zorg ervoor dat je het blok 'elke 2 maten' gebruikt",
   "danceFeedbackNeedMakeANewDancer": "Gebruik het blok 'nieuwe maken' om een tweede danser te maken.",
-  "danceFeedbackKeyEvent": "",
+  "danceFeedbackKeyEvent": "Zorg dat je wat code toevoegt aan de \"wanneer toets\" en druk op de de toets terwijl je dans afspeelt.",
   "measure": "Maten:"
 }

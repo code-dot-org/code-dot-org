@@ -21,7 +21,7 @@ const STUDENT_ONLY_FIELDS = [
 // Values loaded from scriptData are always initial values, not the latest
 // (possibly unsaved) user-edited values on the form.
 const scriptData = getScriptData('signup');
-const {usIp, signUpUID} = scriptData;
+const {usIp, signUpUID, provider} = scriptData;
 
 // Auto-fill country and countryCode if we detect a US IP address.
 let schoolData = {
@@ -36,6 +36,7 @@ $(document).ready(() => {
   function init() {
     setUserType(getUserType());
     renderSchoolInfo();
+    trackPageLoadInOptimizely();
   }
 
   let alreadySubmitted = false;
@@ -149,6 +150,21 @@ $(document).ready(() => {
         schoolInfoMountPoint
       );
     }
+  }
+
+  function trackPageLoadInOptimizely() {
+    // record that we have arrived at this stage in the registration process
+    // with Optimizely for the old vs new signup page A/B test.
+    //
+    // TODO elijah: remove this logic once the A/B test has been completed
+    window['optimizely'] = window['optimizely'] || [];
+    window['optimizely'].push({
+      type: 'event',
+      eventName: 'finishSignUpPageLoad',
+      tags: {
+        provider
+      }
+    });
   }
 
   function onCountryChange(_, event) {

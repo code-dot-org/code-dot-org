@@ -1,5 +1,5 @@
 # Abstract class for DSL types which provide a standard set of content-definition methods.
-class ContentDSL < BaseDSL
+class ContentDSL < LevelDSL
   def initialize
     super
     @hash.merge! options: {}
@@ -33,10 +33,6 @@ class ContentDSL < BaseDSL
   # levels only)
   def pre_title(text) @hash[:pre_title] = text end
 
-  def parse_output
-    {name: @name, properties: @hash}
-  end
-
   def method_missing(key, *args)
     @hash[:options] ||= {}
     @hash[:options][key.to_sym] = args.first
@@ -53,6 +49,6 @@ class ContentDSL < BaseDSL
     ).each do |property|
       strings[property] = @hash[property] unless @hash[property].blank?
     end
-    {@name => strings.stringify_keys}
+    strings.stringify_keys
   end
 end

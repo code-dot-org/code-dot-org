@@ -5,7 +5,7 @@ var tty = require('tty');
 var PORT = process.env.PORT || 9876;
 
 var reporters = ['mocha'];
-if (envConstants.CIRCLECI) {
+if (envConstants.DRONE) {
   reporters.push('junit');
   reporters.push('coverage');
 }

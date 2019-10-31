@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import $ from 'jquery';
+import {connect} from 'react-redux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import CourseScript from './CourseScript';
 import LabeledSectionSelector from '@cdo/apps/code-studio/components/progress/LabeledSectionSelector';
@@ -20,12 +21,16 @@ import {
 import RedirectDialog from '@cdo/apps/code-studio/components/RedirectDialog';
 import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import color from '@cdo/apps/util/color';
-import {assignmentVersionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
+import {
+  assignmentVersionShape,
+  sectionForDropdownShape
+} from '@cdo/apps/templates/teacherDashboard/shapes';
 import AssignmentVersionSelector, {
   setRecommendedAndSelectedVersions
 } from '@cdo/apps/templates/teacherDashboard/AssignmentVersionSelector';
 import StudentFeedbackNotification from '@cdo/apps/templates/feedback/StudentFeedbackNotification';
 import experiments from '@cdo/apps/util/experiments';
+import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 const styles = {
   main: {
@@ -56,7 +61,7 @@ const styles = {
   }
 };
 
-export default class CourseOverview extends Component {
+class CourseOverview extends Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
@@ -81,7 +86,9 @@ export default class CourseOverview extends Component {
     showRedirectWarning: PropTypes.bool,
     redirectToCourseUrl: PropTypes.string,
     showAssignButton: PropTypes.bool,
-    userId: PropTypes.number
+    userId: PropTypes.number,
+    // Redux
+    sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired
   };
 
   constructor(props) {
@@ -136,6 +143,7 @@ export default class CourseOverview extends Component {
       descriptionStudent,
       descriptionTeacher,
       sectionsInfo,
+      sectionsForDropdown,
       teacherResources,
       isTeacher,
       viewAs,
@@ -187,12 +195,7 @@ export default class CourseOverview extends Component {
             redirectButtonText={i18n.goToAssignedVersion()}
           />
         )}
-        {experiments.isEnabled(experiments.FEEDBACK_NOTIFICATION) && userId && (
-          <StudentFeedbackNotification
-            studentId={userId}
-            linkToFeedbackOverview="/"
-          />
-        )}
+        {userId && <StudentFeedbackNotification studentId={userId} />}
         {showRedirectWarning && !dismissedRedirectWarning(name) && (
           <Notification
             type={NotificationType.warning}
@@ -229,9 +232,12 @@ export default class CourseOverview extends Component {
         {showNotification && <VerifiedResourcesNotification />}
         {isTeacher && (
           <div>
-            <LabeledSectionSelector />
+            {!experiments.isEnabled(experiments.ASSIGNMENT_UPDATES) && (
+              <LabeledSectionSelector />
+            )}
             <CourseOverviewTopRow
               sectionsInfo={sectionsInfo}
+              sectionsForDropdown={sectionsForDropdown}
               id={id}
               title={title}
               resources={teacherResources}
@@ -246,9 +252,20 @@ export default class CourseOverview extends Component {
             name={script.name}
             id={script.id}
             description={script.description}
+            assignedSectionId={script.assigned_section_id}
+            courseId={id}
           />
         ))}
       </div>
     );
   }
 }
+
+export const UnconnectedCourseOverview = CourseOverview;
+export default connect((state, ownProps) => ({
+  sectionsForDropdown: sectionsForDropdown(
+    state.teacherSections,
+    null,
+    ownProps.id
+  )
+}))(CourseOverview);

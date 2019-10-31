@@ -1,0 +1,8 @@
+name 'dlp19-hold-mod1'
+title ''
+description 'Used for modules before they are released'
+markdown <<MARKDOWN
+## Deeper Learning modules are released to the schedule available in the [Deeper Learning Overview](https://drive.google.com/open?id=12z7N1kH97ItDAcs1WkCm2cfp3xNv7D7znyK1PWEiAHY).  Feel free to begin your prework and check back here after the release date!
+
+
+MARKDOWN

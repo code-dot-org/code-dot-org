@@ -173,36 +173,38 @@ export default class ChoiceResponses extends React.Component {
 
     return (
       <Panel>
-        {this.props.question}
-        <table style={{marginTop: '1em'}}>
-          <tbody>
-            {this.props.perFacilitator
-              ? this.renderPerFacilitatorAnswerCounts()
-              : this.renderSingleAnswerCounts()}
-            {this.props.otherText && (
-              <tr>
-                <td>
-                  {this.formatPercentage(
-                    otherAnswers.length / this.getTotalRespondents()
-                  )}
-                </td>
-                <td style={{paddingLeft: '20px'}}>{otherAnswers.length}</td>
-                <td style={{paddingLeft: '20px'}}>{this.props.otherText}</td>
-              </tr>
-            )}
-          </tbody>
-        </table>
-        {this.props.otherText && otherAnswers.length > 0 && (
-          <div>
-            <br />
-            {this.props.otherText}
-            <ul>
-              {_.compact(otherAnswers).map((answer, i) => (
-                <li key={i}>{answer}</li>
-              ))}
-            </ul>
-          </div>
-        )}
+        <Panel.Body>
+          {this.props.question}
+          <table style={{marginTop: '1em'}}>
+            <tbody>
+              {this.props.perFacilitator
+                ? this.renderPerFacilitatorAnswerCounts()
+                : this.renderSingleAnswerCounts()}
+              {this.props.otherText && (
+                <tr>
+                  <td>
+                    {this.formatPercentage(
+                      otherAnswers.length / this.getTotalRespondents()
+                    )}
+                  </td>
+                  <td style={{paddingLeft: '20px'}}>{otherAnswers.length}</td>
+                  <td style={{paddingLeft: '20px'}}>{this.props.otherText}</td>
+                </tr>
+              )}
+            </tbody>
+          </table>
+          {this.props.otherText && otherAnswers.length > 0 && (
+            <div>
+              <br />
+              {this.props.otherText}
+              <ul>
+                {_.compact(otherAnswers).map((answer, i) => (
+                  <li key={i}>{answer}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </Panel.Body>
       </Panel>
     );
   }

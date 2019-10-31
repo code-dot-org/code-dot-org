@@ -1,0 +1,16 @@
+name 'csp-u1-exam1-legal-consquences_2020'
+height 'auto'
+
+question 'Lucy is completing a project as part of a science class using materials she found online. Which of the following is MOST LIKELY to lead to legal consequences?'
+wrong ‘Modifying a piece of open source software.’
+wrong ‘Using open access research for which she does not acquire a license.’
+wrong ‘Failing to publish her work under a Creative Commons license.’
+right ‘Using images posted online by another student without permission or citation.’
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
+
+markdown <<MARKDOWN
+
+MARKDOWN

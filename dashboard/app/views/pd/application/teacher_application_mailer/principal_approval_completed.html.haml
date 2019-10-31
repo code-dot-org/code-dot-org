@@ -1,0 +1,13 @@
+%p
+  Dear
+  = @application.principal_greeting + ','
+
+%p
+  Thank you for completing the principal approval form.
+  = @application.first_name + "'s"
+  application is now considered complete and we will review it soon.
+
+%p
+  Best,
+%p
+  = render partial: 'partner_signature'

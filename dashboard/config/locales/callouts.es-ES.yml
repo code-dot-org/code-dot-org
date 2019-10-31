@@ -394,8 +394,6 @@ es-ES:
       courseA_collector_loops3_2019:
         gradek_adventurer_loops2_1: Este número indica cuántos de estos bloques se
           pueden utilizar en este rompecabezas.
-      courseA_collector_preLoops1:
-        courseA_collector_preLoops1_1: "¡Clica aquí para ver el código ejecutado!"
       courseA_collector_preLoops2:
         courseA_collector_loops1_1: "¿Ves algunos bloques nuevos en la caja de herramientas?
           No te preocupes, te mostraremos cómo usarlos más adelante en el escenario."
@@ -531,13 +529,13 @@ es-ES:
       courseC_artist_loops1b_2019:
         sticker2: Añade esto en el medio de tu programa.
       courseC_artist_loopsPrePre1a:
-        courseC_artist_loopsPrePre1a_1: Comience usando este bloque para llevar al
+        courseC_artist_loopsPrePre1a_1: Empieza usando este bloque para llevar al
           artista al centro de la pantalla.
       courseC_artist_loopsPrePre1a_2018:
-        courseC_artist_loopsPrePre1a_1: Comience usando este bloque para llevar al
+        courseC_artist_loopsPrePre1a_1: Empieza usando este bloque para llevar al
           artista al centro de la pantalla.
       courseC_artist_loopsPrePre1a_2019:
-        courseC_artist_loopsPrePre1a_1: Comience usando este bloque para llevar al
+        courseC_artist_loopsPrePre1a_1: Empieza usando este bloque para llevar al
           artista al centro de la pantalla.
       courseC_collector_prog1:
         courseC_collector_prog1_1: "¿Ves algunos bloques nuevos en la caja de herramientas?
@@ -550,22 +548,22 @@ es-ES:
           No te preocupes, te mostraremos cómo usarlos más adelante en el escenario."
       courseC_collector_prog7:
         courseC_collector_prog7_1: "¡Puedes coger más bloques de la caja de herramientas
-          si las necesitas!"
+          si los necesitas!"
       courseC_collector_prog7_2018:
         courseC_collector_prog7_1: "¡Puedes coger más bloques de la caja de herramientas
-          si las necesitas!"
+          si los necesitas!"
       courseC_collector_prog7_2019:
         courseC_collector_prog7_1: "¡Puedes coger más bloques de la caja de herramientas
-          si las necesitas!"
+          si los necesitas!"
       courseC_harvester_loops1:
         courseC_harvester_loops1_callout1: El número cuatro en la calabaza te dice
-          que hay cuatro calabazas disponibles para elegir.
+          que hay cuatro calabazas disponibles para recoger.
       courseC_harvester_loops1_2018:
         courseC_harvester_loops1_callout1: El número cuatro en la calabaza te dice
-          que hay cuatro calabazas disponibles para elegir.
+          que hay cuatro calabazas disponibles para recoger.
       courseC_harvester_loops1_2019:
         courseC_harvester_loops1_callout1: El número cuatro en la calabaza te dice
-          que hay cuatro calabazas disponibles para elegir.
+          que hay cuatro calabazas disponibles para recoger.
       courseC_maze_debugging5:
         courseC_maze_debugging5_1: "¡Estos bloques están bloqueados y no pueden ser
           eliminados!"
@@ -617,6 +615,12 @@ es-ES:
       courseC_maze_programming4_2019:
         courseC_maze_programming4_1: Este es el límite de bloques. Te dice cuántos
           bloques te quedan por usar.
+      courseC_maze_programming5:
+        '': Estos bloques no tienen números. ¡Puedes usar tantos como quieras!
+      courseC_maze_programming5_2018:
+        '': Estos bloques no tienen números. ¡Puedes usar tantos como quieras!
+      courseC_maze_programming5_2019:
+        '': Estos bloques no tienen números. ¡Puedes usar tantos como quieras!
       courseC_maze_programming7:
         courseC_maze_programming7_1: "¡Este es tu primer desafío de rompecabezas!
           Estos están hechos para ser díficiles y pueden implicar varios intentos."
@@ -689,6 +693,8 @@ es-ES:
       courseD_maze_intro4_2019:
         courseC_maze_programming4_1: Este es el límite de bloques. Te dice cuántos
           bloques te quedan por usar.
+      courseD_maze_intro5a_2019:
+        '': Estos bloques no tienen números. ¡Puedes usar tantos como quieras!
       courseD_maze_ramp1:
         grade2_CaringForNewPet_0_1: Después de conectar todos los bloques, pulsa "Ejecutar"
           para iniciar el programa.
@@ -728,6 +734,18 @@ es-ES:
       courseD_maze_ramp4_2019:
         courseC_maze_programming4_1: Este es el límite de bloques. Te dice cuántos
           bloques te quedan por usar.
+      courseD_maze_ramp5:
+        '': Estos bloques no tienen números. ¡Puedes usar tantos como quieras!
+      courseD_maze_ramp5_2018:
+        '': Estos bloques no tienen números. ¡Puedes usar tantos como quieras!
+      courseD_maze_ramp5_2019:
+        '': Estos bloques no tienen números. ¡Puedes usar tantos como quieras!
+      courseD_maze_ramp5a:
+        '': Estos bloques no tienen números. ¡Puedes usar tantos como quieras!
+      courseD_maze_ramp5a_2018:
+        '': Estos bloques no tienen números. ¡Puedes usar tantos como quieras!
+      courseD_maze_ramp5a_2019:
+        '': Estos bloques no tienen números. ¡Puedes usar tantos como quieras!
       courseD_maze_ramp6:
         courseD_maze_ramp6_1: Cualquier código que ingrese aquí se repetirá tantas
           veces como le indique, luego continuará ejecutando el resto del programa.
@@ -737,9 +755,6 @@ es-ES:
       courseD_playLab_condFP_2018:
         courseD_playLab_condFP_1: "¡hemos organizado los bloques en categorías para
           darte más código con el que jugar! Haz clic aquí para ver dónde ha ido todo."
-      courseD_scrat_predict1:
-        courseD_maze_ramp6_1: Cualquier código que ingrese aquí se repetirá tantas
-          veces como le indique, luego continuará ejecutando el resto del programa.
       courseD_scrat_ramp1:
         grade2_CaringForNewPet_0_1: Después de conectar todos los bloques, pulsa "Ejecutar"
           para iniciar el programa.
@@ -752,16 +767,17 @@ es-ES:
       courseD_scrat_ramp4:
         courseC_maze_programming4_1: Este es el límite de bloques. Te dice cuántos
           bloques te quedan por usar.
+      courseD_scrat_ramp5:
+        '': Estos bloques no tienen números. ¡Puedes usar tantos como quieras!
       courseD_scrat_ramp6:
         courseD_maze_ramp6_1: Cualquier código que ingrese aquí se repetirá tantas
           veces como le indique, luego continuará ejecutando el resto del programa.
       courseD_scrat_ramp7:
+        courseD_maze_ramp6_1: Cualquier código que ingrese aquí se repetirá tantas
+          veces como le indique, luego continuará ejecutando el resto del programa.
+      courseD_scrat_ramp8:
         courseD_maze_ramp7_1: "¡Este es tu primer desafío de rompecabezas! Estos están
           hechos para ser díficiles y pueden implicar varios intentos."
-      courseD_scrat_ramp8:
-        courseE_artist_ramp8_1: Tu puedes cambiar este número.
-        courseE_artist_ramp8_2: Haz clic aquí para ingresar la cantidad de veces que
-          se repite tu código.
       courseE_artist_functions1:
         courseD_artist_functions1_1: Empieza usando este bloque para ayudar a crear
           el primer cuadrado.

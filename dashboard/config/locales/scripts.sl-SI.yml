@@ -1209,3 +1209,9 @@ sl:
               name: Pogoji
             Functions:
               name: Funkcije
+        peru-2019:
+          stages:
+            Introduction:
+              name: Uvod
+            Nested Loops:
+              name: Gnezdenje zank

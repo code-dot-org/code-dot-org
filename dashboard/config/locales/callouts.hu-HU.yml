@@ -87,6 +87,11 @@ hu-HU:
         Infinity_move_right_runbutton: Itt adj hozzá mozgasd blokkot
       Infinity_repeat:
         Infinity_repeat_callout: Ide húzz be Mozgasd blokkokat
+      MC HOC 2016 Level 2-2:
+        craft2_run_button_callout: Ha készen áll, nyomja meg a "Futtatás" gombot a
+          program kipróbálásához.
+      MC HOC 2016 New Walk:
+        MC_HOC_2016_New_Walk_callout2: Nyomja meg a "Futtatás" gombot a mozgás megkezdéséhez.
       MC_HOC_2017_03_Cole:
         MC_HOC_2017_03_Cole_1: Ez egy "ismétlés" ciklus.  Vidd a munkaterületre, és
           add meg azt a kódot, amelyet újra és újra futtatni szeretnél.
@@ -153,6 +158,10 @@ hu-HU:
         craft_what_is_iron: Bányászd ki a vasat!
       Underground Iron_2019:
         craft_what_is_iron: Bányászd ki a vasat!
+      courseC_maze_debugging5_2019:
+        courseC_maze_debugging5_1: Ezek a blokkok zárolva vannak és nem törölhetők!
+      courseC_maze_debugging9_2019:
+        courseC_maze_debugging9_2019_1: Húzza a blokkokat az eszköztárból a munkaterületre.
       courseD_bee_conditionals2:
         4_5_Bee_Conditionals_2_1: Emlékezz, ellenőrizni kell hogy van-e virág minden
           felhőben. A lépeket nem kell ellenőrizned.
@@ -162,6 +171,8 @@ hu-HU:
       courseD_bee_conditionals2_2019:
         4_5_Bee_Conditionals_2_1: Emlékezz, ellenőrizni kell hogy van-e virág minden
           felhőben. A lépeket nem kell ellenőrizned.
+      express_maze_debugging9_2019:
+        express_maze_debugging9_2019_1: Húzza a blokkokat az eszköztárból a munkaterületre.
       frozen circle function with parameter:
         frozen_circle_function_with_parameter_circle: Használd az "kör létrehozása"
           blokkot, és változtasd meg a méretét.

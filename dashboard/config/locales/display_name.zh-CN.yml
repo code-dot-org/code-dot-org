@@ -2,7 +2,6 @@
 zh-CN:
   data:
     display_name:
-      AB_Debug_Artist1: '小艺术家调试模式 #1 (AB)'
       Alien Defender: 外星人辩护人
       App Lab Intro 8 - Video Design Mode: 视频：设计模式
       App Lab Intro 8 - Video Getting Started: 视频：开始
@@ -13,8 +12,8 @@ zh-CN:
       AppLab Intro 7 - Change Text 2: 更改文本
       AppLab Intro 7 - Full Text: 两个按钮
       AppLab Intro 7 - onEvent intro: 使按钮工作
-      AppLab Intro 7 - onEvent twoButtons: 更多 当事件发生时(onEvent) 的练习
-      AppLab Intro 7 - playSound: 使用 播放声音
+      AppLab Intro 7 - onEvent twoButtons: 更多 当事件发生时（onEvent）的练习
+      AppLab Intro 7 - playSound: 使用 播放声音（playSound）
       AppLab Intro 7 - thisOrThatAddButton: 交替摆臂
       AppLab Intro 7 - thisOrThatAddScreen: 交替摆臂
       AppLab Intro 7 - thisOrThatPersonalize: 交替摆臂
@@ -48,12 +47,11 @@ zh-CN:
       CSD Polling Events Map: 轮询事件
       CSD Polling Events Map_2018: 轮询事件
       CSD Polling Events Map_2019: 轮询事件
-      CSD Problem Solving Process Video: '视频: 问题解决过程'
+      CSD Problem Solving Process Video: 视频：问题解决的方法
       CSD Set Scale Map: 改变传感器的级别
       CSD Set Scale Map_2018: 改变传感器的级别
       CSD Set Scale Map_2019: 改变传感器的级别
       CSD U1L02 TFMD_2018: 课程概述
-      CSD U1L02 TFMD_2019: 课程概述
       CSD U1L03 TFMD_2018: 课程概述
       CSD U1L03 TFMD_2019: 课程概述
       CSD U1L04 TFMD_2018: 课程概述
@@ -125,9 +123,7 @@ zh-CN:
       CSD U2 lists map_2019: HTML 中的列表
       CSD U2 publish video: 发布您的网站
       CSD U2L01 TFMD_2018: 课程概述
-      CSD U2L01 TFMD_2019: 课程概述
       CSD U2L02 TFMD_2018: 课程概述
-      CSD U2L02 TFMD_2019: 课程概述
       CSD U2L03 TFMD_2018: 课程概述
       CSD U2L03 TFMD_2019: 课程概述
       CSD U2L04 TFMD_2018: 课程概述
@@ -237,7 +233,6 @@ zh-CN:
       CSD U3 L9 Freeplay_2019: 自由发挥
       CSD U3 Plotting Shapes Shape Lab: 绘制形状
       CSD U3 Plotting Shapes Shape Lab_2018: 绘制形状
-      CSD U3 Plotting Shapes Shape Lab_2019: 绘制形状
       CSD U3 Random Number Map Level: 随机数
       CSD U3 Random Number Map Level_2018: 随机数
       CSD U3 Random Number Map Level_2019: 随机数
@@ -330,10 +325,7 @@ zh-CN:
       CSD U3 velocity map: 精灵速度
       CSD U3 velocity map_2018: 精灵速度
       CSD U3 velocity map_2019: 精灵速度
-      CSD U3L01 TFMD_2018: 课程概述
-      CSD U3L01 TFMD_2019: 课程概述
       CSD U3L02 TFMD_2018: 课程概述
-      CSD U3L02 TFMD_2019: 课程概述
       CSD U3L03 TFMD_2018: 课程概述
       CSD U3L03 TFMD_2019: 课程概述
       CSD U3L04 TFMD_2018: 课程概述
@@ -396,9 +388,7 @@ zh-CN:
       CSD U4 User Input Map_2018: 响应用户输入
       CSD U4 User Input Map_2019: 响应用户输入
       CSD U4L01 autoSFLP_2018: 课程概述
-      CSD U4L01 autoSFLP_2019: 课程概述
       CSD U4L02 autoSFLP_2018: 课程概述
-      CSD U4L02 autoSFLP_2019: 课程概述
       CSD U4L03 autoSFLP_2018: 课程概述
       CSD U4L03 autoSFLP_2019: 课程概述
       CSD U4L04 autoSFLP_2018: 课程概述
@@ -429,7 +419,7 @@ zh-CN:
       CSD U4L16 autoSFLP_2019: 课程概述
       CSD U5 Amazon Data Video: 收集用户信息
       CSD U5 Amazon Data Video_2018: 收集用户信息
-      CSD U5 Amazon Data Video_2019: 亚马逊如何使用数据
+      CSD U5 Amazon Data Video_2019: Amazon 如何使用数据
       CSD U5 Netflix Data Video_2019: Netflix 如何使用数据
       CSD U5 Waze Data Video: 收集用户信息
       CSD U5 Waze Data Video_2018: 收集用户信息
@@ -453,9 +443,7 @@ zh-CN:
       CSD U5 black white images pixelation_2018: 黑白像素化小工具
       CSD U5 black white images pixelation_2019: 黑白像素化小工具
       CSD U5L01 autoSFLP_2018: 课程概述
-      CSD U5L01 autoSFLP_2019: 课程概述
       CSD U5L02 autoSFLP_2018: 课程概述
-      CSD U5L02 autoSFLP_2019: 课程概述
       CSD U5L03 autoSFLP_2018: 课程概述
       CSD U5L03 autoSFLP_2019: 课程概述
       CSD U5L04 autoSFLP_2018: 课程概述
@@ -542,12 +530,9 @@ zh-CN:
       CSD U6 tugowar final: 让它成为你自己的
       CSD U6 tugowar final_2018: 让它成为你自己的
       CSD U6 tugowar final_2019: 让它成为你自己的
-      CSD U6L01 TFMD: 课程概述
       CSD U6L01 TFMD_2018: 课程概述
-      CSD U6L01 TFMD_2019: 课程概述
       CSD U6L02 TFMD: 课程概述
       CSD U6L02 TFMD_2018: 课程概述
-      CSD U6L02 TFMD_2019: 课程概述
       CSD U6L03 TFMD: 课程概述
       CSD U6L03 TFMD_2018: 课程概述
       CSD U6L03 TFMD_2019: 课程概述
@@ -615,6 +600,7 @@ zh-CN:
       'CSD: Drawing in Game Lab 2_2018': '视频: 在游戏实验室中绘图-第2部分'
       'CSD: Drawing in Game Lab 2_2019': '视频: 在游戏实验室中绘图-第2部分'
       'CSD: For Loop_2018': 计数循环
+      'CSD: For Loop_2019': 视频：计数循环
       'CSD: Introduction to the Draw Loop': '视频: 绘制循环简介'
       'CSD: Introduction to the Draw Loop_2018': '视频: 绘制循环简介'
       'CSD: Introduction to the Draw Loop_2019': '视频: 绘制循环简介'
@@ -636,7 +622,6 @@ zh-CN:
       CSDU4 Project Import: 应用程序项目：屏幕导入
       CSDU4 Project Import_2018: 应用程序项目：屏幕导入
       CSDU4 Project Import_2019: 应用程序项目：屏幕导入
-      CSDU6 - UI and Inputs - getNumber: getNumber
       CSDU6 - board event challenge_2018: 音效主板
       CSDU6 - board event challenge_2019: 音效主板
       CSDU6 buzzer 2d arrays_2018: 二维数组
@@ -666,7 +651,7 @@ zh-CN:
       Dance_Party_extras_every_beat: 四分注释
       Dance_Party_extras_layout: 进入阵型
       Dance_Party_extras_on_beat: 低音、中音和高音
-      Dance_Party_extras_speed: 加速、 减速
+      Dance_Party_extras_speed: 加速、减速
       Dance_Party_extras_visible: 让他们去哪儿？
       Final Personal Website: 最后个人主页
       Final Personal Website_2018: 最后个人主页
@@ -724,6 +709,6 @@ zh-CN:
       csd u5 recommender sample: 示例应用程序
       csd u5 recommender sample_2019: 示例应用程序
       csd-pre-survey-2017-levelgroup_2018: 课程概述
-      csd-pre-survey-2017-levelgroup_2018_2019: 课程概述
+      csd-pre-survey-levelgroup_2019: 课程概述
       scrat_loops_C-F_video: 冰河时代视频中的循环
       scrat_loops_C-F_video_2019: 冰河时代视频中的循环

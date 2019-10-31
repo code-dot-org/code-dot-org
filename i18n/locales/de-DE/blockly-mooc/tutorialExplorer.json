@@ -46,8 +46,9 @@
   "filterHeaderTutorialCountSingle": "1 Ergebnis",
   "filterHeaderTutorialCountPlural": "{tutorial_count} Ergebnisse",
   "roboticsButtonText": "Roboter-Aktivitäten ansehen",
-  "roboticsText": "Hast Roboter? Benutze diese Aktivitäten und mache ein greifbares Hour of Code für Studenten jeden Alters!",
+  "roboticsText": "Verwendest du Roboter? Benutze diese Aktivitäten und mache ein greifbares Hour of Code für Studenten jeden Alters!",
   "tutorialSetNoTutorials": "Ihre Suche hat keine Ergebnisse ergeben.\nBitte Versuchen Sie einige Suchfilter zu entfernen, um mehr Resultate zu erhalten.",
+  "tutorialDetailsMoreResources": "Weitere Ressourcen",
   "tutorialDetailsTeacherNotes": "Hinweise für Lehrer",
   "tutorialDetailsShortLink": "Kurz-link",
   "tutorialDetailInternationalLanguages": "Sprachen",
@@ -57,6 +58,6 @@
   "showAllTutorialsButton": "Zeige Aktivitäten für weitere Sprachen",
   "hideAllTutorialsButton": "Verberge Aktivitäten für andere Sprachen als die ausgewählte",
   "noTutorialsYourLanguage": "In Ihrer Sprache gibt es keine Aktivitäten Suchen Sie Aktivitäten in anderen Sprachen, indem Sie auf die Schaltfläche unten klicken.",
-  "bottomGuidelinesLink": "Hier klicken um die Anmeldebedingungen und Anleitungen für den 'Hour of Code' Tutorials einzusehen.",
+  "bottomGuidelinesLink": "Hier klicken um die Anmeldebedingungen und Anleitungen für die 'Hour of Code' Tutorials einzusehen.",
   "bottomSpecialNeedsLink": "Hier klicken für mehr Informationen, wie Sie Schüler mit geistigen oder körperlichen Beeinträchtigungen unterstützen können."
 }

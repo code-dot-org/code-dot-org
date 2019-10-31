@@ -1798,3 +1798,11 @@ ga:
               name: Treoluas
             Functions:
               name: Feidhmeanna
+            Sprite Properties:
+              name: Airíonna na Spride
+        peru-2019:
+          stages:
+            Introduction:
+              name: Réamhrá
+            Nested Loops:
+              name: Lúba Neadaithe

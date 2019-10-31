@@ -42,6 +42,7 @@ nn:
           opprettelsen av en Code.org konto med <strong>%{provider}</strong> for <strong>%{email}</strong>.
         error:
           future: kan ikkje vere i framtida
+  beta: beta
   hello: Hallo, verda
   welcome_back: Velkommen attende, %{name}
   your_professional_learning_plan: Læringsplanen din
@@ -55,14 +56,9 @@ nn:
   okay: OK
   or: eller
   heading_x_of_y: "%{heading} (side %{x} av %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Legg til ein lærar:'
       placeholder: Seksjonskode (ABCDEF)
-      instructions: Tast inn koda du har fått av din lærar. Det er ei kode med 6 bokstavar
-        som "ABCDEF".
-      instructions_short: Angi din seksjons kode (6 tegn)
-    submit: Legg til lærar
   add_hint_form:
     placeholder: Skriv inn eit hint her
     submit: Legg til eit hint
@@ -91,9 +87,6 @@ nn:
     continue_with: Fortsett med %{provider}
     sign_in_with: Logg inn med %{provider}
     signed_in: Logga inn!
-    signed_out: Du har logga deg av <a href="%{url}">Code.org</a>.
-    sign_out_of: Du nytta %{provider} for å logge inn. <a href="%{url}"> Klikk her</a>
-      for å logge av %{provider}.
     already_signedup: Allereie registrert?
     notyet_signedup: Er du ikkje medlem enno?
     google_oauth2: Google
@@ -153,12 +146,6 @@ nn:
     agree_us_website: Jeg aksepterer å bruke et nettsted som er basert i USA.
     my_data_to_us: Mine data fra bruken av dette nettstedet kan sendes til, lagres
       eller behandles i USA.
-    student_terms: Epostadresser blir ikkje lagra i ein form som tillet at vi kontakter
-      elevar. Elevane vil aldre motta epostar frå Code.org bortsett frå gjenoppretting
-      av passord. Sjå våre <a href='http://code.org/privacy'>vilkår for personvern</a>
-      for meir informasjon.
-    teacher_terms: Eg aksepterer brukarvilkåra til Code.org. Sjå våre <a href='http://code.org/privacy'>vilkår
-      for personvern</a> for meir informasjon om personvern.
     additional_information: Vi treng nokre tilleggsopplysingar for å fortsette registreringa
       di.
     user_type_button: Oppdater kontotype
@@ -214,8 +201,6 @@ nn:
     login: Logg inn
     invalid_login: Feil ved innlogging, ver vennleg og prøv igjen
     pair_programming: Eg sit ved datamaskinen saman med ein partnar
-    student_privacy: Lær meir om kvifor du ikkje ser heile namnet ditt<a href='%{student_privacy_blog}'
-      target='_blank'>her</a>.
   password:
     reset_form:
       title: Har du gløymt passordet ditt?
@@ -470,15 +455,12 @@ nn:
       passord)
     update: Oppdater konto
     account_successfully_updated: Kontoen er oppdatert.
+    update_email: Oppdater
   user_level:
     completed: Fullført
     tried: Forsøkt
   home:
     title: Code Studio
-    description: Code Studio er kvar Code.org sine online kurs finnast
-    lines_of_code: "%{lines_count} LINJER MED KODE SKRIVNE AV ELEVAR"
-    lines_of_code_linebreak: "%{lines_count} LINJER MED KODE<br/>SKRIVNE AV %{students_count}
-      MILLIONAR ELEVAR"
     all_courses: Oversikt over kurs 1, 2 og 3
     lesson_plans: Planer over leksjonane
     signin_message: Alt registrert? %{link}
@@ -515,96 +497,10 @@ nn:
     test_videos_help: Prøv den nye videospelaren på skulen din
     try_beta_courses: Nyheit! Prøv betaversjonar av kursa våre for elevar på barnetrinnet
     use_as_teacher: Bruk denne nettsida som lærar
-    heading_hoc2014: "<h2>Kodetimen for</h2><h1>Alle aldre</h1>"
-    heading_elementary: "<h2>20-timers kurs for</h2><h1>nybyrjarar (alle aldre)</h1>"
-    heading_apps: "<h2>Moro for</h2><h1>Alle</h1>"
-    heading_tools: "<h2>Klar for neste trinn?</h2><h1>Verktøy for vidaregåande skule</h1>"
-    heading_legacy: "<h2>Våre generelle kurs for</h2><h1>Alle aldrar</h1>"
     your_gallery: Galleri
     no_primary_course: Prøv eit kurs frå Code Studio
     choose_next_course: Prøv eit kurs frå Code Studio ved å velje eit nedanfor
     print_certificate: Skriv ut sertifikat
-    announcement_title: Kunngjeringar
-    announcement_message_fall2016_features: Vi har brukt sommeren på å gjere tilbakemeldingane
-      deira til nye funksjonar. Nå kan du <a href="%{pp_url}" target="_blank">følge
-      fleire elevars framgang</a> sjølv om dei parprogrammerer på ein eining. Du kan
-      bruke <a href="%{csp_widgets_url}" target="_blank">de beste interaktive verktøya</a>
-      frå vårt informatikkprinsipper-kurs i <i>kva for helst slags</i> klasserom.
-      Og elevane dine kan <a href="%{unused_code_url}" target="_blank">ta vare på
-      ubrukt kode</a> i deira arbeidsområde for å fremme eksperimentering! Sjekk ut
-      alle våre nye funksjonar gje oss ei tilbakemelding.
-    announcement_csp_widgets_message: Ser du etter en morsom måter å lære klassen
-      hvordan Internett fungerer, hvordan kryptografi holder data sikre, og andre
-      begreper? Vi har tatt de beste interaktive verktøy fra vårt informatikk-prinsipper-kurs,
-      og utgitt frittstående moduler du kan bruke når som helst!
-    announcement_learn_more_button: Lær meir
-    announcement_try_now_button: Lær meir
-    announcement_host_an_hour_button: Ver vert for ein Kodetime
-    announcement_watch_video_button: Sjå videoen
-    announcement_petition: Som lærar, er du del av ei rørsle som ynskjer å gje alle
-      elevar, i alle skular, høve til å lære programmering. No er det på tide å la
-      myndigheitene høyre frå deg. Denne veka gjekk leiarar innan utdanning, 28 guvernørar
-      og administrerande direktørar i dei største selskapa i USA saman og leverte
-      eit ope brev, kor dei ba kongressen finansiere K-12 programmeringsutdanning.
-    announcement_petition_button: Legg til namnet ditt
-    announcement_go_beyond_button: Gå vidare
-    announcement_apply_now: Søk nå
-    announcement_all: Held deg oppdatert med oppdateringar og ny funksjonalitet på
-      lærarbloggen vår. <a href='%{teacher_blog_url}' target='_blank'>Sjå tidligare
-      kunngjeringar.</a>
-    announcement_hoc_launch: Tusener av lærarar i meir enn 180 land vil undervise
-      i programmering under Kodetimen 5.-11. desember. Me reknar med at du vil hjelpe
-      oss å nå fleire elevar enn nokon sinne. <a href='%{signup_url}' target='_blank'>Registrer
-      din Kodetime</a> og la andre lærarar vite at kven som helst kan lære bort programmering.
-    announcement_mc_launch: Eit av våre mest populære opplegg har fått ein oppfølgjar!
-      Heilt nye Kodetimens Minecraft-designer let elevane bestemme reglane i Minecraft.
-      Dei kan skape si helt unike Minecraft-verd, og dele den med venene sine eller
-      spele den på telefonen sin. Gjennomfør opplegget med klassa di i årets Kodetime.
-    announcement_how_code_studio: Du treng inga erfaring for å undervise i programmering
-      i ditt klasserom. Code.org har læreplanar, timeplanar, høykvalitetslæreprogram
-      og fleire verktøy for alle klassetrinn&mdash;alt du treng heilt gratis. Lurer
-      du på kvar du skal begynne? Last ned<a href='%{video_download_url}'>denne videoen</a>!
-    announcement_go_beyond: Fortsett videre fra Kodetimen og utforsk konsepter fra
-      datateknikk med dine elever hver uke. Code.org og LKK tilbyr pensum, timeplaner,
-      profesjonelle høykvalitets læreplaner og tilby tonnevis av gode verktøy for
-      alle klassenivåer&mdash;og alt er gratis. :) Du behøver ikke noen erfaring for
-      å begynne med å lære bort datateknologi i klasserommet ditt. <b>Finn det neste
-      steget som passer for ditt klasserom.</b>
-    announcement_teacher_recruitment: Lærere som deg leder den informasjonsvitenskapelige
-      utdannelsesbevegelsen. Du kan delta i profesjonelle læringsprogrammer av høy
-      kvalitet <strong> uten kostnad for deg eller din skole </strong>. Ta ledelsen
-      innen datavitenskap på din skolen, og søk om profesjonell opplæring.
-    announcement_teacher_recruitment2: Lærere som deg leder den informasjonsvitenskapelige
-      utdanningsbevegelsen. Du kan delta i profesjonelle læringsprogrammer av høy
-      kvalitet <strong> uten kostnad for deg eller din skole </strong>. Ta ledelsen
-      innen IT på din skole, og søk om profesjonell opplæring. Lærere i ungdomskole
-      og videregående skole må søke innen 17. mars.
-    announcement_csf_pilot: "<strong>Grunnskolelærere:</strong> Bli med og oppdater
-      våre grunnleggende Informatikkurs! VI ser etter lærere til å lede arbeidet med
-      å oppgradere læreplanen i Grunnleggende Informatikk i løpet av vinteren og våren
-      2017. Vi ser frem til å høre dine innspill før oppdateringene slippes i august
-      2017."
-    announcement_student_privacy: Hos Code.org tar vi studentenes personvern svært
-      alvorlig. For å beskytte elevenes personvern har vi gjort endringer for din
-      seksjons pålogginsside til ikke å vise fullt navn. Selv om denne oppdateringen
-      forbedrer personvernet, oppfordrer vi likevel brukere til å <i>ikke bruke fullt
-      navn på studentene</i>.
-    announcement_apcsp_recruitment: '<strong>Informatikk lærere:</strong> Dine studenter
-      kan delta i Code.org''s neste virale video for å oppmuntre flere studenter til
-      å ta Prinsipper i Informatikk eksamen i år. Vi inviterer alle Prinsipper i Informatikk
-      studenter til å legge ut en 10-20 sekunders videoklipp på Twitter, Instagram
-      eller Facebook hvor de sier "I''m taking the #APCSP exam because..." De beste
-      videoene vil benyttes i vår video og vinneren vil motta Code.org produkter i
-      premie!'
-    announcement_applab_export: App-lab, vårt web-baserte programmeringsmiljø, støtter
-      nå eksport av kode! Du kan starte å bygge applikasjoner med dra-og-slipp av
-      JavaScript-blokker, eksporter så koden for å fortsette kodingen i ditt foretrukne
-      utviklingsverktøy.
-    announcement_navigation_redesign: "<b>Endringer i nettstednavigering</b> <br/>I
-      sommer skal vi forbedre navigasjonen på siden Code.org, slik at du alltid har
-      tilgang til de beste ressursene dine fra hvor som helst på nettstedet. Så snart
-      du logger på din lærerkonto, vil hver side ha en ny navigasjonslinje med lenker
-      til hjemmesiden din, kursene, prosjektgalleriet, seksjoner og profesjonell læring."
   move_students:
     new_section_dne: Beklagar, men seksjon %{new_section_code} finns ikkje. Legg inn
       ein annan seksjonskode.
@@ -854,11 +750,6 @@ nn:
     header_artist: Kunstnar
     report_abuse: Rapporter misbruk
   landing:
-    prerelease: Dette kurset er i <span class='betatext'> beta</span>.  Det tyder
-      at det ikkje er den endelege versjonen av kurset, men at det blir endra når
-      vi får tilbakemeldingar og forbedtringar har blitt laga.
-    prerelease_hoc2014: Denne leksjonen er i <span class='betatext'> beta</span>.  Den
-      vil kunne bli endres etter kvart som vi mottek tilbakemeldingar og gjer forbetringar.
     report_bug: Rapporter feil
     support: Få hjelp
     support_url: "//support.code.org"
@@ -933,11 +824,6 @@ nn:
   age_interstitial:
     age: Din alder
     header: Oppdatering av kontoinformasjon
-    message: Vi er i ferd med å oppdatere våre erfaringer for å gi deg enda sterkere
-      personvern. Derfor må eksisterende brukere skriver inn sin alder her. <br/>Code.org
-      vil aldri leie ut, selge eller dele denne informasjonen med noen andre.
-    sign_out: Dersom du ikkje ynskjer å oppgi din alder, kan du <a href="%{url}">
-      avslutte</a>.
   terms_interstitial:
     title: Oppdaterte tenestevilkår og retningslinjer for personvern
     intro_desc: 'Vi har oppdatert våre vilkår for teneste og personvern, som du kan
@@ -1070,12 +956,8 @@ nn:
   peer_review:
     accepted:
       name: Godkjent
-      description: "<strong>Ja</strong>, dette bidraget <strong>oppfyller</strong>
-        krava"
     rejected:
       name: Avvist
-      description: "<strong>Nei</strong>, dette bidraget <strong>oppfyller ikkje</strong>
-        krava"
     escalated:
       name: Eskalert
       description: Eg vil gjerne at ein instruktør gjennomgår dette bidraget

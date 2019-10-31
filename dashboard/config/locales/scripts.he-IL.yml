@@ -7,12 +7,12 @@ he:
         math_category_name: מתמטיקה
       name:
         course1:
-          title: קורס 1
+          title: מסלול 1
           description: התחל עם קורס 1 עבור קוראים מתחילים. התלמידים ייצרו תוכנות מחשב
             אשר יעזרו להם ללמוד איך לשתף פעולה עם אחרים, לפתח יכולות פתרון בעיות ולהתמיד
             לפתור בעיות קשות. עד סוף הקורס, התלמידים ייצרו משחק או סיפור משלהם אשר
             יהיה אפשר לשתף אותו עם אחרים. מומלץ עבור תלמידי כיתות א׳.
-          description_short: קורס 1 מתאים לקוראים מתחילים.
+          description_short: מבוא למדעי המחשב לקוראים מתחילים.
           description_audience: גילאי 4-6
           stages:
             'Artist: Loops':
@@ -25,6 +25,8 @@ he:
               name: 'דבורה: לולאות'
             'Bee: Sequence':
               name: 'דבורה: רצף'
+            Getting Loopy:
+              name: עוברים ללולאות
             Happy Maps:
               name: מפות שמחות
             'Jigsaw: Learn to drag and drop':
@@ -46,7 +48,7 @@ he:
             The Big Event:
               name: האירוע הגדול
         course2:
-          title: קורס 2
+          title: מסלול 2
           description: קורס 2 מתאים לסטונדטים קוראים ללא ניסיון קודם בתכנות. בקורס
             זה הסטונדטים יצרו תוכניות על מנת לפתור בעיות ויפתחו משחקים אינטראקטיביים
             וסיפורים אותם יוכלו לשתף. מומלץ לילדים בכיתה ב עד ה.
@@ -73,18 +75,22 @@ he:
               name: תנאים
             Flappy:
               name: פלאפי
+            Getting Loopy:
+              name: עוברים ללולאות
             Graph Paper Programming:
               name: תכנות לנייר משבצות
             'Maze: Loops':
               name: 'מבוך: לולאות'
             'Maze: Sequence':
               name: 'מבוך: רצף'
+            'Real-life Algorithms: Paper Planes':
+              name: 'אלגוריתמים מהחיים: מטוסי נייר'
             'Studio: Create a Story':
               name: 'מעבדת הצעצועים: צור סיפור'
             The Big Event:
               name: האירוע הגדול
         course3:
-          title: קורס 3
+          title: מסלול 3
           description: קורס 3 מיועד לתלמידים אשר למדור את קורס 2. תלמידים יצללו עמוק
             אל תוך נושאים בתכנות אשר הוצגו בקורסים הקודמים כדי ליצור פתרונות דינמיים
             לבעיות מורכבות עוד יותר. עד סוף הקורס, תלמידים יצרו סיפורים אינטראקטיביים
@@ -158,15 +164,15 @@ he:
             Artist:
               name: אמן
         course4:
-          title: קורס 4
+          title: מסלול 4
           description: קורס 4 מיועד עבור תלמידים אשר למדו את קורס 2 ו-3. תלמידים ילמדו
             לפתור חידות עם מורכבות מוגברת כאשר ילמדו איך לשלב מספר עקרונות כשפותרים
             כל אתגר. כאשר הקורס יסתיים, התלמידים יצרו תוכניות אשר יאפשרו להם לתרגל
             מספר מיומנויות הכוללים בין היתר לולאות ופונקציות עם פרמטרים. מומלץ לכיתות
             ד-ו.
-          description_short: בנה תוכניות מורכבות יותר עם שיטות כמו לולאות "עד" ופונקציות
-            עם פרמטרים. זהו קורס המשך לקורס 3.
-          description_audience: גילאי 10-18
+          description_short: בנה תוכניות מורכבות יותר עם עקרונות כמו לולאות "for"
+            ופונקציות עם פרמטרים. זהו קורס המשך לקורס 3.
+          description_audience: גילאי 9-18
           stages:
             Artist:
               name: אמן
@@ -303,13 +309,13 @@ he:
             The Artist:
               name: האמן
             The Artist 2:
-              name: האומן 2
+              name: האמן 2
             The Artist 3:
-              name: האומן 3
+              name: האמן 3
             The Artist 4:
               name: האמן 4
             The Artist 5:
-              name: האומן 5
+              name: האמן 5
             The Farmer:
               name: האיכר
             The Farmer 2:
@@ -474,6 +480,8 @@ he:
               name: ברוכים הבאים!
         K5-OnlinePD:
           stages:
+            Computer Science Fundamentals:
+              name: יסודות מדעי המחשב
             Next Steps:
               name: השלבים הבאים
         ECSPD2:
@@ -550,6 +558,8 @@ he:
           stages:
             Binary Bracelets:
               name: צמידים בינארים
+            Getting Loopy:
+              name: עוברים ללולאות
             Graph Paper Programming:
               name: תכנות לנייר משבצות
             Happy Maps:
@@ -782,6 +792,8 @@ he:
               name: פלאפי
             Binary Bracelets:
               name: צמידים בינארים
+            'Real-life Algorithms: Paper Planes':
+              name: 'אלגוריתמים מהחיים: מטוסי נייר'
             The Big Event:
               name: האירוע הגדול
         k5concepts:
@@ -863,8 +875,8 @@ he:
                 שעליו ימשיכו לעבוד לאורך כל יחידת הלימוד.
         minecraft:
           title: מעצבי מיינקראפט
-          description_short: תכנת חיות ויצורי מיינקרפט נוספים בגרסת מיינקרפט משלך.
-          description: תכנת חיות ויצורי מיינקרפט נוספים בגרסת מיינקרפט משלך.
+          description_short: תכנת חיות ויצורי מיינקרפט נוספים בגרסת מיינקראפט משלך.
+          description: תכנת חיות ויצורי מיינקרפט נוספים בגרסת מיינקראפט משלך.
           stages:
             Minecraft Hour of Code Designer:
               name: מעצבי מיינקראפט
@@ -888,6 +900,8 @@ he:
           stages:
             Programming in Maze:
               name: תכנות במבוך
+            'Real-life Algorithms: Paper Planes':
+              name: 'אלגוריתמים מהחיים: מטוסי נייר'
             Loops in Maze:
               name: לולאות במבוך
             Binary Bracelets:
@@ -1101,6 +1115,8 @@ he:
               name: תכנות במבוך
             Debugging in Maze:
               name: איתור באגים במבוך
+            'Real-life Algorithms: Paper Planes':
+              name: 'אלגוריתמים מהחיים: מטוסי נייר'
             Loops in Maze:
               name: לולאות במבוך
             Binary Bracelets:
@@ -1430,6 +1446,8 @@ he:
               name: תכנות עם ציפורים כועסות
             Debugging in Maze:
               name: ניפוי שגיאות עם סקראט
+            'Loops: Getting Loopy':
+              name: עוברים ללולאות
             Conditionals with Cards:
               name: התניות עם כרטיסים
             'Functions: Songwriting':
@@ -1500,6 +1518,10 @@ he:
               name: תכנות עם ציפורים כועסות
             Debugging in Maze:
               name: איתור באגים עם ציפורים כועסות
+            'Real-life Algorithms: Paper Planes':
+              name: מטוסי נייר
+            'Loops: Getting Loopy':
+              name: עוברים ללולאות
             'Events: The Big Event':
               name: האירוע הגדול
             Binary Bracelets:
@@ -1755,6 +1777,8 @@ he:
               name: תכנות עם ציפורים כועסות
             Debugging in Maze:
               name: איתור באגים במבוך
+            'Real-life Algorithms: Paper Planes':
+              name: 'אלגוריתמים מהחיים: מטוסי נייר'
             'Events: The Big Event':
               name: האירוע הגדול
             Binary Bracelets:
@@ -1789,6 +1813,8 @@ he:
               name: זוזו, זוזו
             Loops in Ice Age:
               name: לולאות בעידן הקרח
+            'Loops: Getting Loopy':
+              name: עוברים ללולאות
             Programming in Maze:
               name: תכנות עם ציפורים כועסות
             Sequencing in Maze:
@@ -1801,6 +1827,8 @@ he:
               name: לולאות עם סקראט
             Spelling Bee:
               name: תחרות איות
+            Programming in Maze:
+              name: תכנות עם ציפורים כועסות
         removed19:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1859,6 +1887,12 @@ he:
           stages:
             While Loops:
               name: לולאות "כל עוד"
+        csp1-pilot:
+          stages:
+            Sending Binary Messages:
+              name: שליחת הודעות בינאריות
+            Sending Binary Messages with the Internet Simulator:
+              name: שליחת הודעות בינאריות עם סימולטור האינטרנט
         time4csdemo:
           stages:
             Conditionals with Cards:
@@ -1905,3 +1939,19 @@ he:
               name: תנאים
             Functions:
               name: פונקציות
+            Sprite Properties:
+              name: מאפייני ספרייט
+        csl-vn:
+          stages:
+            Programming in Maze:
+              name: תכנות במבוך
+            Loops in Ice Age:
+              name: לולאות בעידן הקרח
+        peru-2019:
+          stages:
+            Introduction:
+              name: מבוא
+        dance-2019:
+          stages:
+            Dance Party:
+              name: מסיבת ריקודים

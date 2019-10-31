@@ -1,7 +1,7 @@
 import sinon from 'sinon';
 import ReactDOM from 'react-dom';
-import {expect} from '../../../../util/configuredChai';
-import initPage from '@cdo/apps/sites/studio/pages/levelbuilder_edit_script';
+import {expect} from '../../../../util/deprecatedChai';
+import initPage from '@cdo/apps/sites/studio/pages/scripts/_form';
 
 describe('the level builder page init script', () => {
   let container;
@@ -23,7 +23,8 @@ describe('the level builder page init script', () => {
       levelKeyList: [],
       locales: [['English', 'en-US'], ['French', 'fr-FR']],
       script_families: ['coursea', 'csd1'],
-      version_year_options: ['2017', '2018']
+      version_year_options: ['2017', '2018'],
+      flex_category_map: {}
     });
   });
 

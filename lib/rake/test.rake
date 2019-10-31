@@ -112,6 +112,7 @@ namespace :test do
       ChatClient.wrap('dashboard ruby unit tests') do
         ENV['DISABLE_SPRING'] = '1'
         ENV['UNIT_TEST'] = '1'
+        ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
         ENV['CODECOV_FLAGS'] = 'dashboard'
         ENV['PARALLEL_TEST_FIRST_IS_1'] = '1'
         # Parallel tests don't seem to run more quickly over 16 processes.
@@ -151,6 +152,7 @@ namespace :test do
         database = writer.path[1..-1]
         writer.path = ''
         opts = MysqlConsoleHelper.options(writer)
+        mysqldump_opts = "mysqldump #{opts} --skip-comments --set-gtid-purged=OFF"
 
         if seed_data
           File.write(seed_file, seed_data)
@@ -160,7 +162,7 @@ namespace :test do
           RakeUtils.rake_stream_output 'db:create db:test:prepare'
           ENV.delete 'TEST_ENV_NUMBER'
           # Store new DB contents
-          `mysqldump #{opts} #{database}1 --skip-comments | sed '#{auto_inc}' > #{seed_file.path}`
+          `#{mysqldump_opts} #{database}1 | sed '#{auto_inc}' > #{seed_file.path}`
           gzip_data = Zlib::GzipWriter.wrap(StringIO.new) {|gz| IO.copy_stream(seed_file.path, gz); gz.finish}.tap(&:rewind)
 
           s3_client.put_object(
@@ -172,7 +174,7 @@ namespace :test do
           CDO.log.info "Uploaded seed data to #{s3_key}"
         end
 
-        cloned_data = `mysqldump #{opts} #{database}2 --skip-comments | sed '#{auto_inc}'`
+        cloned_data = `#{mysqldump_opts} #{database}2 | sed '#{auto_inc}'`
         if seed_data.equal?(cloned_data)
           CDO.log.info 'Test data not modified'
         else
@@ -197,12 +199,27 @@ namespace :test do
         TestRunUtils.run_dashboard_tests(parallel: true)
 
         ENV.delete 'UNIT_TEST'
+        ENV.delete 'USE_PEGASUS_UNITTEST_DB'
         ENV.delete 'CODECOV_FLAGS'
       end
     end
   end
 
-  task ci: [:pegasus, :shared, :dashboard_ci, :ui_live]
+  task :shared_ci do
+    # isolate unit tests from the pegasus_test DB
+    ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
+    TestRunUtils.run_shared_tests
+    ENV.delete 'USE_PEGASUS_UNITTEST_DB'
+  end
+
+  task :pegasus_ci do
+    # isolate unit tests from the pegasus_test DB
+    ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
+    TestRunUtils.run_pegasus_tests
+    ENV.delete 'USE_PEGASUS_UNITTEST_DB'
+  end
+
+  task ci: [:shared_ci, :pegasus_ci, :dashboard_ci, :ui_live]
 
   desc 'Runs dashboard tests.'
   task :dashboard do
@@ -232,8 +249,8 @@ namespace :test do
         [
           'apps/**/*',
           'dashboard/config/libraries/*.interpreted.js',
-          'shared/**/*.js',
-          'shared/**/*.css',
+          'shared/js/**/*',
+          'shared/css/**/*',
         ]
       ) do
         TestRunUtils.run_apps_tests

@@ -29,6 +29,10 @@
   .aligned-input-group
     = f.radio_button :text_mode_at_start, 'true'
     = f.label :text_mode_at_start, 'Always start with text', :value => 'true'
+
+.field
+  = f.label :start_libraries,'Libraries'
+  = f.text_area :start_libraries, value: @level.start_libraries
 :ruby
   script_data = {
     pageOptions: {
@@ -39,5 +43,5 @@
       shared_blocks: @level.shared_blocks,
     }.to_json
   }
-%script{src: minifiable_asset_path('js/levels/editors/_droplet.js'),
+%script{src: webpack_asset_path('js/levels/editors/_droplet.js'),
         data: script_data}

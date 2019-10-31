@@ -1742,6 +1742,10 @@ sq:
           stages:
             While Loops:
               name: Përsëritjet Ndërsa
+        csp1-pilot:
+          stages:
+            Number Systems:
+              name: Sistemi Numerik
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -1766,3 +1770,9 @@ sq:
               name: Kushtet
             Functions:
               name: funksione
+        peru-2019:
+          stages:
+            Introduction:
+              name: Hyrja
+            Nested Loops:
+              name: Përsëritjet e Mbivendosura

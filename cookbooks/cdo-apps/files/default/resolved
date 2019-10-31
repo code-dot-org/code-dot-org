@@ -1,0 +1,83 @@
+#
+# Script fragment to make dhclient supply nameserver information to resolvconf
+#
+
+# Tips:
+# * Be careful about changing the environment since this is sourced
+# * This script fragment uses bash features
+# * As of isc-dhcp-client 4.2 the "reason" (for running the script) can be one of the following.
+#   (Listed on man page:) MEDIUM(0) PREINIT(0)  BOUND(M)  RENEW(M)  REBIND(M)  REBOOT(M)         EXPIRE(D)  FAIL(D) RELEASE(D)  STOP(D) NBI(-) TIMEOUT(M)
+#   (Also used in master script:)                                                                                                                         ARPCHECK(0), ARPSEND(0)
+#   (Also used in master script:)   PREINIT6(0) BOUND6(M) RENEW6(M) REBIND6(M)        DEPREF6(0) EXPIRE6(D)         RELEASE6(D) STOP6(D)
+#   (0) = master script does not run make_resolv_conf
+#   (M) = master script runs make_resolv_conf
+#   (D) = master script downs interface
+#   (-) = master script does nothing with this
+
+if [ -x /lib/systemd/systemd-resolved ] ; then
+        # For safety, first undefine the nasty default make_resolv_conf()
+        make_resolv_conf() { : ; }
+        case "$reason" in
+          BOUND|RENEW|REBIND|REBOOT|TIMEOUT|BOUND6|RENEW6|REBIND6)
+                # Define a resolvconf-compatible m_r_c() function
+                # It gets run later (or, in the TIMEOUT case, MAY get run later)
+          make_resolv_conf() {
+              local statedir
+              if [ ! "$interface" ] ; then
+                  return
+              fi
+              statedir="/run/systemd/resolved.conf.d"
+              mkdir -p $statedir
+
+              oldstate="$(mktemp)"
+              md5sum $statedir/isc-dhcp-v4-$interface.conf $statedir/isc-dhcp-v6-$interface.conf > $oldstate 2>&1
+              if [ -n "$new_domain_name_servers" ] ; then
+                  cat <<EOF >$statedir/isc-dhcp-v4-$interface.conf
+[Resolve]
+DNS=$new_domain_name_servers
+EOF
+                  if [ -n "$new_domain_name" ] || [ -n "$new_domain_search" ] ; then
+                      cat <<EOF >>$statedir/isc-dhcp-v4-$interface.conf
+Domains=$new_domain_search $new_domain_name
+EOF
+                  fi
+              fi
+              if [ -n "$new_dhcp6_name_servers" ] ; then
+                  cat <<EOF >$statedir/isc-dhcp-v6-$interface.conf
+[Resolve]
+DNS=$new_dhcp6_name_servers
+EOF
+                  if [ -n "$new_dhcp6_domain_search" ] ; then
+                      cat <<EOF >>$statedir/isc-dhcp-v6-$interface.conf
+Domains=$new_dhcp6_domain_search
+EOF
+                  fi
+              fi
+
+              newstate="$(mktemp)"
+              md5sum $statedir/isc-dhcp-v4-$interface.conf $statedir/isc-dhcp-v6-$interface.conf > $newstate 2>&1
+              if ! cmp --quiet $oldstate $newstate; then
+                  systemctl try-reload-or-restart systemd-resolved.service
+              fi
+
+              rm $oldstate
+              rm $newstate
+          }
+                ;;
+
+          EXPIRE|FAIL|RELEASE|STOP)
+              if [ ! "$interface" ] ; then
+                  return
+              fi
+              rm -f /run/systemd/resolved.conf.d/isc-dhcp-v4-$interface.conf
+              systemctl try-reload-or-restart systemd-resolved.service
+              ;;
+          EXPIRE6|RELEASE6|STOP6)
+              if [ ! "$interface" ] ; then
+                  return
+              fi
+              rm -f /run/systemd/resolved.conf.d/isc-dhcp-v6-$interface.conf
+              systemctl try-reload-or-restart systemd-resolved.service
+              ;;
+        esac
+fi

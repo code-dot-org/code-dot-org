@@ -11,7 +11,7 @@ class TeacherDashboardControllerTest < ActionController::TestCase
 
   test 'index: returns forbidden if no logged in user' do
     get :show, params: {section_id: @section.id}
-    assert_response :forbidden
+    assert_redirected_to_sign_in
   end
 
   test 'index: returns forbidden if logged in user is not a teacher' do
@@ -25,5 +25,12 @@ class TeacherDashboardControllerTest < ActionController::TestCase
     other_teacher_section = create :section
     get :show, params: {section_id: other_teacher_section.id}
     assert_response :forbidden
+  end
+
+  test 'index: returns success if requested section belongs to teacher' do
+    sign_in @teacher
+    section = create :section, user: @teacher
+    get :show, params: {section_id: section.id}
+    assert_response :success
   end
 end

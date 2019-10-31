@@ -82,7 +82,7 @@ module AWS
       CLOUDFRONT_ALIAS_CACHE
     end
 
-    def self.invalidate_caches
+    def self.invalidate_caches(wait: false)
       require 'aws-sdk-cloudfront'
       puts 'Creating CloudFront cache invalidations...'
       cloudfront = Aws::CloudFront::Client.new(
@@ -110,12 +110,14 @@ module AWS
       end
       invalidations.compact!
       puts "Invalidations created: #{invalidations.count}"
-      invalidations.map do |app, id, invalidation|
-        cloudfront.wait_until(:invalidation_completed, distribution_id: id, id: invalidation) do |waiter|
-          waiter.max_attempts = 120 # wait up to 40 minutes for invalidations
-          waiter.before_wait {|_| puts "Waiting for #{app} cache invalidation.."}
+      if wait
+        invalidations.map do |app, id, invalidation|
+          cloudfront.wait_until(:invalidation_completed, distribution_id: id, id: invalidation) do |waiter|
+            waiter.max_attempts = 120 # wait up to 40 minutes for invalidations
+            waiter.before_wait {|_| puts "Waiting for #{app} cache invalidation.."}
+          end
+          puts "#{app} cache invalidated!"
         end
-        puts "#{app} cache invalidated!"
       end
     end
 
@@ -151,7 +153,14 @@ module AWS
               ErrorCode: error,
               ResponseCode: error,
               ResponsePagePath: '/assets/error-pages/site-down.html'
-            }
+            }.tap do |error_response_hash|
+              # Don't use friendly error pages on some environments (such as adhocs and LevelBuilder).
+              unless CDO.custom_error_response
+                error_response_hash[:ErrorCachingMinTTL] = 0
+                error_response_hash.delete(:ResponseCode)
+                error_response_hash.delete(:ResponsePagePath)
+              end
+            end
           end,
         DefaultCacheBehavior: cache_behavior(config[:default]),
         DefaultRootObject: '',

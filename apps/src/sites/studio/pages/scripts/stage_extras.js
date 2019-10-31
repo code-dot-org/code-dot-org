@@ -15,12 +15,14 @@ ReactDOM.render(
   <Provider store={store}>
     <StageExtras
       stageNumber={config.stageNumber}
+      nextStageNumber={config.nextStageNumber}
       nextLevelPath={config.nextLevelPath}
       bonusLevels={config.bonusLevels}
       showProjectWidget={showProjectWidget}
       projectTypes={projectTypes}
       sectionId={viewer.section_id}
       userId={viewer.user_id}
+      showStageExtrasWarning={viewer.show_stage_extras_warning}
     />
   </Provider>,
   document.querySelector('#stage-extras')

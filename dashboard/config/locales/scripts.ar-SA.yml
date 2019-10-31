@@ -3,6 +3,7 @@ ar:
   data:
     script:
       category:
+        csf_category_name: أساسيات علوم الكمبيوتر
         hoc_category_name: ساعة البرمجة
         math_category_name: العمليات الحسابية
       name:
@@ -354,6 +355,8 @@ ar:
           description: تعديل كود البرنامج
           description_short: تعديل كود البرنامج
           stages:
+            Applab:
+              name: معمل التطبيقات
             Play Lab:
               name: مختبر اللعب
             The Artist:
@@ -395,8 +398,23 @@ ar:
           stages:
             Hour of Code 2013:
               name: ساعة من البرمجة 2013
+        CodeStudioPuzzleChallenge:
+          stages:
+            Puzzles:
+              name: ألغاز
+        Tutorial Video - Code Studio Puzzle Challenge:
+          stages:
+            Puzzles:
+              name: ألغاز
         cspunit1:
           description_short: البرمجة
+          stages:
+            Binary Numbers:
+              name: أرقام ثنائية
+            Bytes and File Sizes:
+              name: بايت واحجام الملفات
+            Sending Binary Messages:
+              name: إرسال رسائل بالنظام الثنائي
         algebraPD:
           stages:
             Teacher Dashboard:
@@ -405,6 +423,8 @@ ar:
           stages:
             Booleans:
               name: القيم المنطقية
+            Luigi's Pizza:
+              name: بيتزا لويجي
         cspunit3:
           description_short: البرمجة
           stages:
@@ -435,12 +455,16 @@ ar:
         cspunit2:
           description_short: البرمجة
           stages:
+            Encryption Algorithms:
+              name: المفاتيح وكلمات المرور
             The Internet:
               name: الانترنت
         algebraPD2a:
           stages:
             Booleans:
               name: القيم المنطقية
+            Luigi's Pizza:
+              name: بيتزا لويجي
             The Design Recipe:
               name: وصفه التصميم
         allthethings:
@@ -665,8 +689,16 @@ ar:
               name: لَوْحَة التَحَكُّم
         csp1-2017:
           stages:
+            Binary Numbers:
+              name: أرقام ثنائية
+            Sending Binary Messages:
+              name: إرسال رسائل بالنظام الثنائي
             The Internet:
               name: الانترنت
+        csp2-2017:
+          stages:
+            Bytes and File Sizes:
+              name: بايت واحجام الملفات
         csp3-2017:
           description_short: البرمجة
           stages:
@@ -689,6 +721,10 @@ ar:
           stages:
             Teacher Dashboard:
               name: لَوْحَة التَحَكُّم
+        cspunit1-support:
+          stages:
+            Sending Binary Messages:
+              name: إرسال رسائل بالنظام الثنائي
         MikeTest:
           stages:
             Artist Functions:
@@ -1133,6 +1169,8 @@ ar:
               name: ثنائي الفنان
             Building a Foundation:
               name: بناء قاعدة
+            Loops in Ice Age:
+              name: الحلقات في العصر الجليدي
         new-express:
           stages:
             Introduction:
@@ -1299,6 +1337,8 @@ ar:
               name: صور ثنائية
             Artist Binary:
               name: ثنائي الفنان
+            Loops in Ice Age:
+              name: الحلقات في العصر الجليدي
             Graph Paper Programming:
               name: برمجة ورقة الرسم البياني
             Relay Programming:
@@ -1356,8 +1396,16 @@ ar:
               name: الشرطية مع بطاقات
         csp1-2018:
           stages:
+            Sending Binary Messages:
+              name: إرسال رسائل بالنظام الثنائي
+            Binary Numbers:
+              name: أرقام ثنائية
             The Internet:
               name: الانترنت
+        csp2-2018:
+          stages:
+            Bytes and File Sizes:
+              name: بايت واحجام الملفات
         csp3-2018:
           description_short: البرمجة
           stages:
@@ -1441,6 +1489,8 @@ ar:
               name: برمجة ورقة الرسم البياني
             Relay Programming:
               name: برمجة السباق
+            Loops in Ice Age:
+              name: الحلقات في العصر الجليدي
             Conditionals with Cards:
               name: الشرطية مع بطاقات
             Digital Citizenship:
@@ -1516,6 +1566,8 @@ ar:
               name: حركها , حركها
             Your Digital Footprint:
               name: البصمة الرقمية الخاصة بك
+            Loops in Ice Age:
+              name: الحلقات في العصر الجليدي
             'Loops: Getting Loopy':
               name: القبض على المعتوهون
         pre-express-2019:
@@ -1553,8 +1605,16 @@ ar:
               name: استبيانات
         csp1-2019:
           stages:
+            Sending Binary Messages:
+              name: إرسال رسائل بالنظام الثنائي
+            Binary Numbers:
+              name: أرقام ثنائية
             The Internet:
               name: الانترنت
+        csp2-2019:
+          stages:
+            Bytes and File Sizes:
+              name: بايت واحجام الملفات
         csp3-2019:
           description_short: البرمجة
           stages:
@@ -1564,6 +1624,12 @@ ar:
           stages:
             While Loops:
               name: حلقات بينما
+        csp1-pilot:
+          stages:
+            Sending Binary Messages:
+              name: إرسال رسائل بالنظام الثنائي
+            Binary Numbers:
+              name: أرقام ثنائية
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -1572,6 +1638,10 @@ ar:
               name: الشرطية مع بطاقات
             Building a Foundation:
               name: بناء قاعدة
+        csp7-pilot-staging:
+          stages:
+            Libraries:
+              name: المكتبات
         express-2018-vn:
           stages:
             Graph Paper Programming:
@@ -1589,3 +1659,18 @@ ar:
               name: الجمل الشرطية
             Functions:
               name: دوال
+        csl-vn:
+          stages:
+            Loops in Ice Age:
+              name: الحلقات في العصر الجليدي
+        peru-2019:
+          stages:
+            Introduction:
+              name: مقدمة
+            Nested Loops:
+              name: الحلقات المتداخلة
+        dance-2019:
+          stages:
+            Dance Party:
+              name: حفلة رقص
+          description: برمِج حفلة الرقص الخاصة بك لمشاركتها مع أصدقائك.

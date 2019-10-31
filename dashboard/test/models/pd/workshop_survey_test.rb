@@ -84,7 +84,7 @@ class Pd::WorkshopSurveyTest < ActiveSupport::TestCase
 
   test 'facilitator required fields' do
     facilitator = create :user, name: "Facili"
-    workshop = create :pd_workshop, facilitators: [facilitator]
+    workshop = create :workshop, facilitators: [facilitator]
 
     survey = Pd::WorkshopSurvey.new
     survey.pd_enrollment = create :pd_enrollment,
@@ -182,7 +182,7 @@ class Pd::WorkshopSurveyTest < ActiveSupport::TestCase
 
   test 'empty implementation required fields cause errors when present' do
     user = create :user
-    workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_UNITS_2_3
+    workshop = create :csd_academic_year_workshop
 
     survey = Pd::WorkshopSurvey.new
     survey.pd_enrollment = create :pd_enrollment, user: user, workshop: workshop

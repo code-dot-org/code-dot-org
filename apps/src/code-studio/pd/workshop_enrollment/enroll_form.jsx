@@ -11,13 +11,14 @@ import FieldGroup from '../form_components/FieldGroup';
 import QuestionsTable from '../form_components/QuestionsTable';
 import {isEmail} from '@cdo/apps/util/formatValidation';
 import SchoolAutocompleteDropdownWithCustomFields from '../components/schoolAutocompleteDropdownWithCustomFields';
+import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 const OTHER = 'Other';
 const NOT_TEACHING = "I'm not teaching this year";
 const EXPLAIN = '(Please Explain):';
 
 const CSF = 'CS Fundamentals';
-const DEEP_DIVE = 'Deep Dive';
+const DEEP_DIVE = SubjectNames.SUBJECT_CSF_201;
 
 const VALIDATION_STATE_ERROR = 'error';
 

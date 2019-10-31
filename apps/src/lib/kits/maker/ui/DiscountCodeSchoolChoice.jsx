@@ -4,7 +4,7 @@ import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/SchoolAutocompleteDropdownWithLabel';
 import {styles as censusFormStyles} from '@cdo/apps/templates/census2017/censusFormStyles';
-import UnsafeRenderedMarkdown from '../../../../templates/UnsafeRenderedMarkdown';
+import SafeMarkdown from '../../../../templates/SafeMarkdown';
 
 const styles = {
   confirmed: {
@@ -122,7 +122,7 @@ export default class DiscountCodeSchoolChoice extends Component {
         )}
         {this.state.schoolId === '-1' && (
           <div>
-            <UnsafeRenderedMarkdown markdown={eligibilitySchoolUnknown} />
+            <SafeMarkdown markdown={eligibilitySchoolUnknown} />
           </div>
         )}
         {this.state.errorText && (

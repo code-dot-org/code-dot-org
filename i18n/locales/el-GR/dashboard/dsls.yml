@@ -2,474 +2,1628 @@ el:
   data:
     external:
       Begin planning your project:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
         title: τίτλος
       Begin planning your project_2018:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
       Begin planning your project_2018_2019:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
       CSD U2 Design Project:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
         title: τίτλος
       CSD U2 Design Project_2018:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
         title: τίτλος
       CSD U2 Design Project_2018_2019:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
         title: τίτλος
       CSD U2 L1 Overview:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
         title: τίτλος
       CSD U2 L2 Overview:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
         title: τίτλος
       CSD U2 L3 Overview:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
         title: τίτλος
       CSD U2 L4 Overview:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
         title: τίτλος
       CSD U2 L5 Overview:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
         title: τίτλος
       CSD U2 L6 Overview:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
         title: τίτλος
       CSD U2 Lesson 6 Overview:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
       CSD U2 expand project:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
         title: τίτλος
       CSD U2 expand project_2018:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
         title: τίτλος
       CSD U2 expand project_2018_2019:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
         title: τίτλος
       CSD U2 project guide:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
       CSD U2 project guide_2018:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
       CSD U2 project guide_2018_2019:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
       CSD U3 Card Examples_2018:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
       CSD U3 Card Examples_2018_2019:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
       CSD U3 combining rep:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
         title: τίτλος
       CSD U3 combining rep_2018:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
         title: τίτλος
       CSD U3 combining rep_2018_2019:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
         title: τίτλος
       CSD U3 game intro:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
       CSD U3 game intro_2018:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
       CSD U3 game intro_2018_2019:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
       CSD U3 platform intro:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
       CSD U3 platform intro_2018:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
       CSD U3 platform intro_2018_2019:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
       CSD U5 Encryption 1:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
         title: τίτλος
       CSD U5 Encryption 1_2018:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
         title: τίτλος
       CSD U5 Encryption 1_2018_2019:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
         title: τίτλος
       CSD U5 Encryption 2:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
       CSD U5 Encryption 2_2018:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
       CSD U5 Encryption 2_2018_2019:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
       CSD U5 L13 SFLP Interpreting Data:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
         title: τίτλος
       CSD U5 crosstab warmup:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
       CSD U5 crosstab warmup_2018:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
       CSD U5 crosstab warmup_2018_2019:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
       CSD U5 data visualization:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
         title: τίτλος
       CSD U5 data visualization_2018:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
         title: τίτλος
       CSD U5 data visualization_2018_2019:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
         title: τίτλος
       CSD U5 student record:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
         title: τίτλος
       CSD U5 student record_2018:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
         title: τίτλος
       CSD U5 student record_2018_2019:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
         title: τίτλος
       CSD U6 LED create intro:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
       CSD U6 LED create intro_2018:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
       CSD U6 LED create intro_2018_2019:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
       CSD U6 final intro:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
       CSD U6 final intro_2018:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
       CSD U6 final intro_2018_2019:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
       Internet Simulator Setup:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
       Internet Simulator Setup 2:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
         title: τίτλος
       Internet Simulator Setup 3:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
       Multi-Screen Apps:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
         title: τίτλος
       New Challenge Introduction:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
         title: τίτλος
       OPD-K5 Stage3aGo:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
         title: τίτλος
       Prepare for your presentation:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
         title: τίτλος
       'Technique: Frequency Analysis':
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
       Terminology Recap:
-        description here: περιγραφή εδώ
+        content1: περιγραφή εδώ
     match:
       2-3 Big Event Match 1:
-        Match the button combination to the dance moves.: Ταίριαξε τον συνδυασμό των κουμπιών με τις χορευτικές κινήσεις.
-        Matching: Ταίριαξε
+        content2: Ταίριαξε τον συνδυασμό των κουμπιών με τις χορευτικές κινήσεις.
+        title: Ταίριαξε
       2-3 Binary Match 1:
-        "<strong>N</strong>": "<strong>N</strong>"
-        "<strong>O</strong>": "<strong>Ο</strong>"
-        "<strong>P</strong>": "<strong>P</strong>"
-        "<strong>Q</strong>": "<strong>Q</strong>"
-        Matching: Ταίριαξε
-        Use the key to match each code to its letter: Χρησιμοποιήστε το πλήκτρο για να ταιριάξεις  κάθε κωδικό στο γράμμα του
+        content2: Χρησιμοποιήστε το πλήκτρο για να ταιριάξεις  κάθε κωδικό στο γράμμα του
+        questions:
+          - 
+            text: "<strong>N</strong>"
+          - 
+            text: "<strong>Ο</strong>"
+          - 
+            text: "<strong>P</strong>"
+          - 
+            text: "<strong>Q</strong>"
+        title: Ταίριαξε
       2-3 Graph Paper Match 1:
-        Match the grid to the program.: Ταίριαξε  το πλέγμα στο πρόγραμμα.
-        Matching: Ταίριαξε
+        content1: Ταίριαξε  το πλέγμα στο πρόγραμμα.
+        title: Ταίριαξε
       2-3 Maze Match 2:
-        Instructions: Οδηγίες
-        Match the puzzles to the blocks: Ταίριαξε  τα παζλ στα μπλοκς
-        Maze Match: Λαβύρινθο ταίριαξε
+        content1: Ταίριαξε  τα παζλ στα μπλοκς
+        pre_title: Οδηγίες
+        title: Λαβύρινθο ταίριαξε
       2-3 artist loops match 1:
-        Match the loop to the shape: Ταιριάξτε το βρόχο με το σχήμα
+        content2: Ταιριάξτε το βρόχο με το σχήμα
       2-3 artist match 1:
-        Artist Matching: Καλλιτέχνης που ταιριάζουν
-        Match the shape with the blocks that complete it.: Ταιριάξε  το σχήμα με τα μπλοκς που το ολοκληρώνουν.
+        content1: Ταιριάξε  το σχήμα με τα μπλοκς που το ολοκληρώνουν.
+        title: Καλλιτέχνης που ταιριάζουν
       2-3 maze match 1:
-        Match the puzzles to the blocks: Ταίριαξε  τα παζλ στα μπλοκς
-        Maze Match One: Λαβύρινθο ταίριαξε  ένα
+        content1: Ταίριαξε  τα παζλ στα μπλοκς
+        title: Λαβύρινθο ταίριαξε  ένα
       4-5 Algorithms Match 1:
-        "<h4>1)</h4>": "<h4>1)</h4>"
-        "<h4>2)</h4>": "<h4>2)</h4>"
-        "<h4>3)</h4>": "<h4>3)</h4>"
-        "<h4>4)</h4>": "<h4>4)</h4>"
-        "<h4>Add Player 1 roll to total score</h4>": "<h4>Προσθέστε τη βαθμολογία του Παίκτη 1 στο συνοικό σκορ</h4>"
-        "<h4>Compare player scores to see who wins</h4>": "<h4>Συγκρίνετε βαθμολογίες παικτών για να δούμε ποιος κερδίζει</h4>"
-        "<h4>Player 1 rolls die</h4>": "<h4>Παίκτης 1 ρίξε τα ζάρια</h4>"
-        "<h4>Set Player 1 score to 0</h4>": "<h4>Κάνε Παίκτης 1 σκορ σε 0</h4>"
-        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Ταίριαξε  τα βήματα στο παιχνίδι αγώνα Ζάρια με τη σειρά που πρέπει να εμφανίζονται στον αλγόριθμο.
-        Matching: Ταίριαξε
+        answers:
+          - 
+            text: "<h4>Κάνε Παίκτης 1 σκορ σε 0</h4>"
+          - 
+            text: "<h4>Παίκτης 1 ρίξε τα ζάρια</h4>"
+          - 
+            text: "<h4>Προσθέστε τη βαθμολογία του Παίκτη 1 στο συνοικό σκορ</h4>"
+          - 
+            text: "<h4>Συγκρίνετε βαθμολογίες παικτών για να δούμε ποιος κερδίζει</h4>"
+        content1: Ταίριαξε  τα βήματα στο παιχνίδι αγώνα Ζάρια με τη σειρά που πρέπει να εμφανίζονται στον αλγόριθμο.
+        questions:
+          - 
+            text: "<h4>1)</h4>"
+          - 
+            text: "<h4>2)</h4>"
+          - 
+            text: "<h4>3)</h4>"
+          - 
+            text: "<h4>4)</h4>"
+        title: Ταίριαξε
       4-5 Computational Thinking Match 1:
-        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": "<h3>Τροχούς/πλευρά: 2 <br/>Παράθυρα/πλευρά: 0</h3>"
-        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": "<h3>Τροχούς/πλευρά: 2 <br/>Παράθυρα/πλευρά: 1</h3>"
-        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": "<h3>Τροχούς/πλευρά: 2 <br/>Παράθυρα/πλευρά: 6</h3>"
-        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": "<h3>Τροχούς/πλευρά: 3 <br/>Παράθυρα/πλευρά: 2</h3>"
-        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Κάθε ένα από αυτά τα οχήματα έχει διαλυθεί σε μικρότερα κομμάτια. Ταίριαξε  κάθε όχημα με την λίστα αποσύνθεσης.
-        Matching: Ταίριαξε
+        content1: Κάθε ένα από αυτά τα οχήματα έχει διαλυθεί σε μικρότερα κομμάτια. Ταίριαξε  κάθε όχημα με την λίστα αποσύνθεσης.
+        questions:
+          - 
+            text: "<h3>Τροχούς/πλευρά: 2 <br/>Παράθυρα/πλευρά: 0</h3>"
+          - 
+            text: "<h3>Τροχούς/πλευρά: 2 <br/>Παράθυρα/πλευρά: 1</h3>"
+          - 
+            text: "<h3>Τροχούς/πλευρά: 2 <br/>Παράθυρα/πλευρά: 6</h3>"
+          - 
+            text: "<h3>Τροχούς/πλευρά: 3 <br/>Παράθυρα/πλευρά: 2</h3>"
+        title: Ταίριαξε
       4-5 Suncatchers Match 1:
-        "<h4>RAMP</h4>": "<h4>RAMP</h4>"
-        "<h4>STACK</h4>": "<h4>STACK</h4>"
-        "<h4>STAMP</h4>": "<h4>STAMP</h4>"
-        "<h4>STAR</h4>": "<h4>STAR</h4>"
-        Match each program to the word it makes, using the provided group of skills.: Ταίριαξε  κάθε πρόγραμμα με τη λέξη που σχηματίζει , χρησιμοποιώντας την  παρεχόμενη ομάδα δεξιοτήτων.
-        Matching: Ταίριαξε
+        answers:
+          - 
+            text: "<h4>STACK</h4>"
+          - 
+            text: "<h4>STAMP</h4>"
+          - 
+            text: "<h4>STAR</h4>"
+          - 
+            text: "<h4>RAMP</h4>"
+        content1: Ταίριαξε  κάθε πρόγραμμα με τη λέξη που σχηματίζει , χρησιμοποιώντας την  παρεχόμενη ομάδα δεξιοτήτων.
+        title: Ταίριαξε
       4-5 maze match 1:
-        Instructions: Οδηγίες
-        Match the puzzles to the blocks: Ταίριαξε  τα παζλ στα μπλοκς
-        Maze Match: Λαβύρινθο ταίριαξε
+        content1: Ταίριαξε  τα παζλ στα μπλοκς
+        pre_title: Οδηγίες
+        title: Λαβύρινθο ταίριαξε
       K-1 Artist 2 Match 2:
-        Match the shapes based on type.: Ταίριαξε τα σχήματα βασιζόμενος στο είδος.
-        Matching: Ταίριαξε
+        content2: Ταίριαξε τα σχήματα βασιζόμενος στο είδος.
+        title: Ταίριαξε
       K-1 Bee Loops Match 1:
-        Match the blocks: Ταίριαξε  τα μπλοκ
-        Matching: Ταίριαξε
+        content2: Ταίριαξε  τα μπλοκ
+        title: Ταίριαξε
       K-1 Big Event Match 1:
-        Match the button combination to the dance moves.: Ταίριαξε τον συνδυασμό των κουμπιών με τις χορευτικές κινήσεις.
-        Matching: Ταίριαξε
+        content2: Ταίριαξε τον συνδυασμό των κουμπιών με τις χορευτικές κινήσεις.
+        title: Ταίριαξε
       K-1 Maze Match 1:
-        Instructions: Οδηγίες
-        Match the puzzles and blocks: Ταίριαξε τα πάζλ και τα μπλοκ
-        Matching: Ταίριαξε
+        content2: Ταίριαξε τα πάζλ και τα μπλοκ
+        pre_title: Οδηγίες
+        title: Ταίριαξε
     multi:
       2-3 Algorithms Multi 1:
-        Choose an algorithm for the image provided.: Διάλεξε έναν αλγόριθμο για την εικόνα που δίνεται.
-        Multiple Choice: Πολλαπλή Επιλογή
-        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: Ξεκίνα με ένα τετράγωνο <br/> Βάλε ένα παραλληλόγραμμο πάνω από το τετράγωνο <br/> Βάλε ένα τρίγωνο δεξιά του παραλληλογράμμου
-        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: Ξεκίνα με ένα τετράγωνο <br/> Βάλε ένα τρίγωνο πάνω από το τετράγωνο <br/> Βάλε ένα τρίγωνο κάτω από το από το τετράγωνο
-        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: Ξεκίνα με ένα τετράγωνο <br/> Βάλε ένα τρίγωνο κάτω από το τετράγωνο <br/> Βάλε ένα παραλληλόγραμμο δεξιά του τριγώνου
-        0: '? Ξεκίνα με ένα τετράγωνο <br/> Βάλε ένα τρίγωνο δεξιά του τετραγώνου <br/> Βάλε ένα παραλληλόγραμμο κάτω από το τετράγωνο <br/> Βάλε τρίγωνο δεξιά του παραλληλογράμμου'
-        1: ': Ξεκίνα με ένα τετράγωνο <br/> Βάλε ένα τρίγωνο δεξιά του τετραγώνου <br/> Βάλε ένα παραλληλόγραμμο κάτω από το τετράγωνο <br/> Βάλε τρίγωνο δεξιά του παραλληλογράμμου'
+        answers:
+          - 
+            text: Ξεκίνα με ένα τετράγωνο <br/> Βάλε ένα τρίγωνο πάνω από το τετράγωνο <br/> Βάλε ένα τρίγωνο κάτω από το από το τετράγωνο
+            correct: false
+          - 
+            correct: true
+          - 
+            text: Ξεκίνα με ένα τετράγωνο <br/> Βάλε ένα παραλληλόγραμμο πάνω από το τετράγωνο <br/> Βάλε ένα τρίγωνο δεξιά του παραλληλογράμμου
+            correct: false
+          - 
+            text: Ξεκίνα με ένα τετράγωνο <br/> Βάλε ένα τρίγωνο κάτω από το τετράγωνο <br/> Βάλε ένα παραλληλόγραμμο δεξιά του τριγώνου
+            correct: false
+        questions:
+          - 
+            text: Διάλεξε έναν αλγόριθμο για την εικόνα που δίνεται.
+        title: Πολλαπλή Επιλογή
       2-3 Algorithms Multi 2:
-        Multiple Choice: Πολλαπλή Επιλογή
-        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Ξεκίνα με ένα τρίγωνο <br/> Βάλε ένα τετράγωνο κάτω από το τρίγωνο <br/> Βάλε ένα άλλο τρίγωνο κάτω από το τετράγωνο
-        Which image does <em>not</em> follow this algorithm?: Ποια εικόνα <em>δεν </em> ταιριάζει με τον αλγόριθμο;
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+        content1: Ξεκίνα με ένα τρίγωνο <br/> Βάλε ένα τετράγωνο κάτω από το τρίγωνο <br/> Βάλε ένα άλλο τρίγωνο κάτω από το τετράγωνο
+        questions:
+          - 
+            text: Ποια εικόνα <em>δεν </em> ταιριάζει με τον αλγόριθμο;
+        title: Πολλαπλή Επιλογή
       2-3 Conditionals Multi 1:
-        According to the rules of the game, which set of cards is scored correctly?: Σύμφωνα με τους κανόνες του παιχνιδιού, ποιο σύνολο καρτών έχει βαθμολογηθεί σωστά;
-        Multiple Choice: Πολλαπλή Επιλογή
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+        questions:
+          - 
+            text: Σύμφωνα με τους κανόνες του παιχνιδιού, ποιο σύνολο καρτών έχει βαθμολογηθεί σωστά;
+        title: Πολλαπλή Επιλογή
       2-3 Getting Loopy Multi 1:
-        How would you simplify this sequence with loops?: Πως θα απλοποιούσες αυτή την ακολουθία βρόχων;
-        Multiple Choice: Πολλαπλή Επιλογή
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+        questions:
+          - 
+            text: Πως θα απλοποιούσες αυτή την ακολουθία βρόχων;
+        title: Πολλαπλή Επιλογή
       2-3 Graph Paper Multi 1:
-        Multiple Choice: Πολλαπλή Επιλογή
-        Which program makes this image?: Ποιο πρόγραμμα δημιουργεί την εικόνα;
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+        questions:
+          - 
+            text: Ποιο πρόγραμμα δημιουργεί την εικόνα;
+        title: Πολλαπλή Επιλογή
       2-3 Maze Multi 2:
-        Maze Multiple Choice: Λαβύρινθος Πολλαπλή Επιλογή
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+        title: Λαβύρινθος Πολλαπλή Επιλογή
       2-3 Relay Programming Multi 1:
-        Multiple Choice: Πολλαπλή Επιλογή
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+        title: Πολλαπλή Επιλογή
       2-3 Relay Programming Multi 2:
-        Multiple Choice: Πολλαπλή Επιλογή
-        Which image-program combo does not contain mistakes?: Ποιος συνδυασμός εικόνας - προγράμματος δεν έχει λάθη;
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+        questions:
+          - 
+            text: Ποιος συνδυασμός εικόνας - προγράμματος δεν έχει λάθη;
+        title: Πολλαπλή Επιλογή
+      2-3 artist debug multi 1:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
       2-3 artist functions multi 1:
-        Artist Functions Multiple Choice One: Καλλιτέχνης Συναρτήσεις Πολλαπλή Επιλογή Ένα
-        Pick the correct blocks to draw this image using the given functions: Πάρε τα σωστά μπλοκ για να σχεδιάσεις αυτήν την εικόνα με χρήση των δεδομένων συναρτήσεων
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+        questions:
+          - 
+            text: Πάρε τα σωστά μπλοκ για να σχεδιάσεις αυτήν την εικόνα με χρήση των δεδομένων συναρτήσεων
+        title: Καλλιτέχνης Συναρτήσεις Πολλαπλή Επιλογή Ένα
       2-3 artist loops multi 1:
-        Artist Loops Multiple Choice: Καλλιτέχνης Επαναλήψεις Πολλαπλή Επιλογή
-        Which shape is made by this loop?: Ποιο σχήμα δημιουργείται από αυτόν τον βρόχο;
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+        questions:
+          - 
+            text: Ποιο σχήμα δημιουργείται από αυτόν τον βρόχο;
+        title: Καλλιτέχνης Επαναλήψεις Πολλαπλή Επιλογή
       2-3 artist loops multi 2:
-        Artist Loops Multiple Choice: Καλλιτέχνης Επαναλήψεις Πολλαπλή Επιλογή
-        Which shape is made by this program?: Ποιο σχήμα δημιουργείται από αυτό το πρόγραμμα;
+        answers:
+          - 
+          - 
+          - 
+          - 
+            correct: true
+        questions:
+          - 
+            text: Ποιο σχήμα δημιουργείται από αυτό το πρόγραμμα;
+        title: Καλλιτέχνης Επαναλήψεις Πολλαπλή Επιλογή
       2-3 bee conditionals multi 1:
-        Which comparison below is true?: Ποια από τις παρακάτω συγκρίσεις είναι αληθής;
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+        questions:
+          - 
+            text: Ποια από τις παρακάτω συγκρίσεις είναι αληθής;
       2-3 bee conditionals multi 3:
-        Choose the best blocks.: Επιλέξτε τα καλύτερα μπλοκ.
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+        questions:
+          - 
+            text: Επιλέξτε τα καλύτερα μπλοκ.
       2-3 bee loops multi 1:
-        Bee Loops Multiple Choice One: Μέλισσα Επαναλήψεις Πολλαπλή Επιλογή Ένα
-        Which blocks collect all of the nectar?: Ποια μπλοκ συλλέγουν όλο το νέκταρ;
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+        questions:
+          - 
+            text: Ποια μπλοκ συλλέγουν όλο το νέκταρ;
+        title: Μέλισσα Επαναλήψεις Πολλαπλή Επιλογή Ένα
       2-3 maze multi 1:
-        Maze Multiple Choice One: Λαβύρινθος Πολλαπλή Επιλογή Ένα
-        Which set of blocks is the correct answer?: Ποιό σύνολο μπλοκς είναι η σωστή απάντηση;
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+        questions:
+          - 
+            text: Ποιό σύνολο μπλοκς είναι η σωστή απάντηση;
+        title: Λαβύρινθος Πολλαπλή Επιλογή Ένα
       4-5 Algorithms Multi 1:
-        Baking cookies: Ψήνοντας μπισκότα
-        Banana: Μπανάνα
-        Brushing your teeth: Βουρτσίζοντας τα δόντια σας
-        Multiple Choice: Πολλαπλή Επιλογή
-        Shopping from a grocery list: Αγοράζοντας από μια λίστα του μπακάλη
-        Which one of these items is hardest to describe an algorithm for?: Ποιο από αυτά τα αντικείμενα είναι δύσκολο να περιγραφεί με αλγόριθμο;
+        answers:
+          - 
+            text: Βουρτσίζοντας τα δόντια σας
+            correct: false
+          - 
+            text: Ψήνοντας μπισκότα
+            correct: false
+          - 
+            text: Αγοράζοντας από μια λίστα του μπακάλη
+            correct: false
+          - 
+            text: Μπανάνα
+            correct: true
+        questions:
+          - 
+            text: Ποιο από αυτά τα αντικείμενα είναι δύσκολο να περιγραφεί με αλγόριθμο;
+        title: Πολλαπλή Επιλογή
       4-5 Computational Thinking Multi 1:
-        Eugene is a _____ city.: Eugene είναι μια _____ πόλη.
-        0: '? Εδώ είναι τρεις προτάσεις. Ποιο από τα παρακάτω πρότυπα είναι κατάλληλα αφαιρετικό ώστε και οι τρεις να ταιριάζουν με το ίδιο μοτίβο όπως το πρότυπο;'
-        1: ': Εδώ είναι τρεις προτάσεις. Ποιο από τα παρακάτω πρότυπα είναι κατάλληλα αφαιρετικό ώστε και οι τρεις να ταιριάζουν με το ίδιο μοτίβο όπως το πρότυπο;'
-        Multiple Choice: Πολλαπλή Επιλογή
-        Seattle _____ a _____ _____.: Seattle _____ μια _____ _____.
-        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: Το Σιάτλ είναι μια μεγάλη πόλη. <br/> Eugene είναι μια πόλη μεσαίου <br/> Hillview είναι μια μικρή πόλη.
-        _____ is _____ a _____.: _____ είναι μια _____ _____.
-        _____ is a _____ city.: _____ είναι μια _____ πόλη.
+        answers:
+          - 
+            text: Seattle _____ μια _____ _____.
+            correct: false
+          - 
+            text: _____ είναι μια _____ πόλη.
+            correct: true
+          - 
+            text: _____ είναι μια _____ _____.
+            correct: false
+          - 
+            text: Eugene είναι μια _____ πόλη.
+            correct: false
+        questions:
+          - 
+            text: Το Σιάτλ είναι μια μεγάλη πόλη. <br/> Eugene είναι μια πόλη μεσαίου <br/> Hillview είναι μια μικρή πόλη.
+        title: Πολλαπλή Επιλογή
       4-5 Crowdsourcing Multi 1:
-        Multiple Choice: Πολλαπλή Επιλογή
-        Which of these pictures best represents crowdsourcing?: Ποια από τις παρακάτω εικόνες αναπαριστά καλύτερα το crowdsourcing;
+        answers:
+          - 
+          - 
+            correct: true
+        questions:
+          - 
+            text: Ποια από τις παρακάτω εικόνες αναπαριστά καλύτερα το crowdsourcing;
+        title: Πολλαπλή Επιλογή
       4-5 Crowdsourcing Multi 2:
-        Brushing your hair: Βουρτσίζοντας τα μαλλιά σου
-        Cleaning your room: καθαρίζοντας το δωμάτιο σου
-        Eating your dessert: Τρώγοντας το επίδόρπιο σου
-        Multiple Choice: Πολλαπλή Επιλογή
-        Washing your face: Πλένοντας το πρόσωπό σου
-        Which one of these activities would be best for practicing crowdsourcing?: Ποια από αυτές τις δραστηριότητες θα ήταν καλύτερη για την πραγματοποίηση του crowdsourcing;
+        answers:
+          - 
+            text: καθαρίζοντας το δωμάτιο σου
+            correct: true
+          - 
+            text: Τρώγοντας το επίδόρπιο σου
+            correct: false
+          - 
+            text: Βουρτσίζοντας τα μαλλιά σου
+            correct: false
+          - 
+            text: Πλένοντας το πρόσωπό σου
+            correct: false
+        questions:
+          - 
+            text: Ποια από αυτές τις δραστηριότητες θα ήταν καλύτερη για την πραγματοποίηση του crowdsourcing;
+        title: Πολλαπλή Επιλογή
       4-5 Digital Footprint Multi 1:
-        Multiple Choice: Πολλαπλή Επιλογή
-        Which piece of information listed below is okay to share on the internet?: Ποια από τις παρακάτω πληροφορίες μπορούμε άνετα να μοιραστούμε στο διαδίκτυο;
-        Your address: Η διεύθυνση σου
-        Your birthday: Τα γενέθλιά σου
-        Your favorite food: Η αγαπημένη σου τροφή
-        Your parent's credit card number: Ο αριθμός πιστωτικής κάρτας των γονιών σου
+        answers:
+          - 
+            text: Τα γενέθλιά σου
+            correct: false
+          - 
+            text: Η αγαπημένη σου τροφή
+            correct: true
+          - 
+            text: Η διεύθυνση σου
+            correct: false
+          - 
+            text: Ο αριθμός πιστωτικής κάρτας των γονιών σου
+            correct: false
+        questions:
+          - 
+            text: Ποια από τις παρακάτω πληροφορίες μπορούμε άνετα να μοιραστούμε στο διαδίκτυο;
+        title: Πολλαπλή Επιλογή
       4-5 Internet Multi 1:
-        Multiple Choice: Πολλαπλή Επιλογή
-        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: Όταν συνδέεστε στο code.org, σε ποια διεύθυνση IP είναι πιθανότερο να σας οδηγήσει το DNS;
+        answers:
+          - 
+          - 
+          - 
+          - 
+            correct: true
+        questions:
+          - 
+            text: Όταν συνδέεστε στο code.org, σε ποια διεύθυνση IP είναι πιθανότερο να σας οδηγήσει το DNS;
+        title: Πολλαπλή Επιλογή
       4-5 Internet Multi 2:
-        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: Αν το DNS σας έστειλε στη σελίδα με διεύθυνση IP 100.42.50.110, σε ποιον ιστότοπο είστε;
-        Multiple Choice: Πολλαπλή Επιλογή
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+        questions:
+          - 
+            text: Αν το DNS σας έστειλε στη σελίδα με διεύθυνση IP 100.42.50.110, σε ποιον ιστότοπο είστε;
+        title: Πολλαπλή Επιλογή
       4-5 Songwriting Multi 1:
-        0: '; Η μύγα είν'' στο βούτυρο,<br/>Μπου! μύγα, μπου!<br/>Η μύγα είν'' στο βούτυρο,<br/>Μπου! μύγα, μπου!<br/>Η μύγα είν'' στο βούτυρο,<br/>Μπου! μύγα, μπου!<br/>Πάμε στη Λου, αγάπη μου.'
-        1: '; Η μύγα είν'' στο βούτυρο,<br/>Μπου! μύγα, μπου!,<br/>Η μύγα είν'' στο βούτυρο,<br/>Μπου! μύγα, μπου!,<br/>Η μύγα είν'' στο βούτυρο,<br/>Μπου! μύγα, μπου!,<br/>Πάμε στη Λου, αγάπη μου.'
-        Lou, Lou, skip to my Lou,: Λου, Λου, πάμε στη Λου,
-        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: Λου, Λου, πάμε στη Λου,<br/>Λου, Λου, πάμε στη Λου,<br/>Λου, Λου, πάμε στη Λου,<br/>Πάμε στη Λου, αγάπη μου.
-        2: '; Λου, Λου, πάμε στη Λου,<br/>Λου, Λου, πάμε στη Λου,<br/>Λου, Λου, πάμε στη Λου,<br/>Πάμε στη Λου, αγάπη μου.<br/><br/><p>Η μύγα είν'' στο γάλα,<br/>Μπου! μύγα, μπου!'
-        3: ': Λου, Λου, πάμε στη Λου,<br/>Λου, Λου, πάμε στη Λου,<br/>Λου, Λου, πάμε στη Λου,<br/>Πάμε στη Λου, αγάπη μου.<br/><br/>Η μύγα είν'' στο βούτυρο,<br/>Μπου! μύγα, μπου!'
-        Multiple Choice: Πολλαπλή Επιλογή
-        4: '; Ποιο είναι το μεγαλύτερο τμήμα αυτού του τραγουδιού που μπορείς να ορίσεις ως χορωδία, ώστε η χορωδία να επαναλαμβάνεται ακριβώς μία φορά κάθε φορά που καλείται;'
-        5: ': Ποιο είναι το μεγαλύτερο τμήμα αυτού του τραγουδιού που μπορείς να ορίσεις ως χορωδία, ώστε η χορωδία να επαναλαμβάνεται ακριβώς μία φορά κάθε φορά που καλείται;'
+        answers:
+          - 
+            text: Λου, Λου, πάμε στη Λου,
+            correct: false
+          - 
+            text: Λου, Λου, πάμε στη Λου,<br/>Λου, Λου, πάμε στη Λου,<br/>Λου, Λου, πάμε στη Λου,<br/>Πάμε στη Λου, αγάπη μου.
+            correct: true
+          - 
+          - 
+        title: Πολλαπλή Επιλογή
       4-5 Suncatchers Multi 1:
-        Multiple Choice: Πολλαπλή Επιλογή
-        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: Ποιά από τα παρακάτω προγράμματα <em> δεν κάνουν </em> ακριβώς την ίδια ακολουθία με το πρόγραμμα 1;
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+        questions:
+          - 
+            text: Ποιά από τα παρακάτω προγράμματα <em> δεν κάνουν </em> ακριβώς την ίδια ακολουθία με το πρόγραμμα 1;
+        title: Πολλαπλή Επιλογή
       4-5 artist loops multi 1:
-        Artist Loops Multiple Choice: Καλλιτέχνης Επαναλήψεις Πολλαπλή Επιλογή
-        Which blocks will create the design?: Ποια μπλοκ θα δημιουργήσουν το σχέδιο;
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+        questions:
+          - 
+            text: Ποια μπλοκ θα δημιουργήσουν το σχέδιο;
+        title: Καλλιτέχνης Επαναλήψεις Πολλαπλή Επιλογή
       4-5 artist multi 1:
-        Artist Multiple Choice: Καλλιτέχνης Πολλαπλή Επιλογή
-        Which blocks draw a rectangle with a perimeter of 100?: Ποια μπλοκ σχεδιάζουν ένα ορθογώνιο με περίμετρο από 100;
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+        questions:
+          - 
+            text: Ποια μπλοκ σχεδιάζουν ένα ορθογώνιο με περίμετρο από 100;
+        title: Καλλιτέχνης Πολλαπλή Επιλογή
       4-5 artist multi 2:
-        Artist Multiple Choice: Καλλιτέχνης Πολλαπλή Επιλογή
-        Which drawing is symmetric?: Ποιο σχέδιο είναι συμμετρικό;
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+        questions:
+          - 
+            text: Ποιο σχέδιο είναι συμμετρικό;
+        title: Καλλιτέχνης Πολλαπλή Επιλογή
       4-5 bee conditionals multi 1:
-        0: '? Ένα πορφυρό άνθος μπορεί να έχει 3, 2, ή 1 χυμούς, αλλά δεν ξέρεις πόσους. Ποια μπλοκ ελέγχουν σωστά και συλλέγουν όλο το νέκταρ;'
-        1: ': Ένα μωβ λουλούδι μπορεί να έχει 3, 2, ή 1 νέκταρ αλλά δεν ξέρετε πόσα. Ποια μπλοκ εξετάζουν και συλλέγουν σωστά όλο το νέκταρ ενός μωβ λουλουδιού;'
-        Bee Conditionals Multiple Choice: Μέλισσα Συνθήκες Πολλαπλή Επιλογή
-        Choose the best blocks.: Επιλέξτε τα καλύτερα μπλοκ.
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+        questions:
+          - 
+            text: Επιλέξτε τα καλύτερα μπλοκ.
+        title: Μέλισσα Συνθήκες Πολλαπλή Επιλογή
       4-5 bee debug multi 1:
-        Bee Debug Multiple Choice: Πολλαπλές επιλογές εκσφαλμάτωσης (debug) της μέλισσας
-        Which version of the function will work?: Ποια εκδοχή της συνάρτησης δουλεύει;
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+        questions:
+          - 
+            text: Ποια εκδοχή της συνάρτησης δουλεύει;
+        title: Πολλαπλές επιλογές εκσφαλμάτωσης (debug) της μέλισσας
       4-5 bee loops multi 1:
-        Bee Loops Multiple Choice: Πολλαπλές επιλογές βρόχων μέλισσας
-        Which blocks will solve the puzzle?: Ποια μπλοκ θα λύσουν το γρίφο;
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+        questions:
+          - 
+            text: Ποια μπλοκ θα λύσουν το γρίφο;
+        title: Πολλαπλές επιλογές βρόχων μέλισσας
       4-5 maze conditionals multi 1:
-        Maze Conditionals Multiple Choice: Πολλαπλές επιλογές συνθηκών λαβυρίνθου
-        Which blocks solve the puzzle?: Ποια μπλοκ λύνουν το γρίφο;
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+        questions:
+          - 
+            text: Ποια μπλοκ λύνουν το γρίφο;
+        title: Πολλαπλές επιλογές συνθηκών λαβυρίνθου
       4-5 maze multi 1:
-        Maze Multiple Choice: Λαβύρινθος Πολλαπλή Επιλογή
-        Which blocks solve the puzzle?: Ποια μπλοκ λύνουν το γρίφο;
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+        questions:
+          - 
+            text: Ποια μπλοκ λύνουν το γρίφο;
+        title: Λαβύρινθος Πολλαπλή Επιλογή
+      CSD Header Size MC:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      CSD Header Size MC_2018:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      CSD Header Size MC_2018_2019:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
       CSD U3 Boolean MC:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
         title: τίτλος
       CSD U3 Boolean MC_2018:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
         title: τίτλος
       CSD U3 Boolean MC_2018_2019:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
         title: τίτλος
+      CSD U3 Functions Prediction define first:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      CSD U3 Functions Prediction define first_2018:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      CSD U3 Functions Prediction define first_2018_2019:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      CSD U3 Sprite Movement Predict Multi:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      CSD U3 Sprite Movement Predict Multi_2018:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      CSD U3 Sprite Movement Predict Multi_2018_2019:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      CSD U3 Sprites intro predict multi:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      CSD U3 Sprites intro predict multi_2018:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      CSD U3 Sprites intro predict multi_2018_2019:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      CSD U6 array multi:
+        answers:
+          - 
+          - 
+          - 
+          - 
+            correct: true
+      CSD U6 array multi_2018:
+        answers:
+          - 
+          - 
+          - 
+          - 
+            correct: true
+      CSD U6 array multi_2018_2019:
+        answers:
+          - 
+          - 
+          - 
+          - 
+            correct: true
+      CSD U6 setProperty predict multi:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      CSD U6 setProperty predict multi_2018:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      CSD U6 setProperty predict multi_2018_2019:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
       K-1 Artist 1 Multi 1:
-        Multiple Choice: Πολλαπλή Επιλογή
-        Which blocks solve this puzzle?: Ποια μπλοκ λύνουν αυτό το παζλ;
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+        questions:
+          - 
+            text: Ποια μπλοκ λύνουν αυτό το παζλ;
+        title: Πολλαπλή Επιλογή
       K-1 Artist 1 Multi 2:
-        Multiple Choice: Πολλαπλή Επιλογή
-        Which blocks draw the square?: Ποια μπλοκ σχεδιάζουν το τετράγωνο;
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+        questions:
+          - 
+            text: Ποια μπλοκ σχεδιάζουν το τετράγωνο;
+        title: Πολλαπλή Επιλογή
       K-1 Bee 1 Multi 1:
-        How many nectars is this?: Πόσο νέκταρ είναι αυτό;
-        Multiple Choice: Πολλαπλή Επιλογή
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+        questions:
+          - 
+            text: Πόσο νέκταρ είναι αυτό;
+        title: Πολλαπλή Επιλογή
       K-1 Bee 1 Multi 2:
-        How many nectars is this?: Πόσο νέκταρ είναι αυτό;
-        Multiple Choice: Πολλαπλή Επιλογή
+        answers:
+          - 
+          - 
+          - 
+          - 
+            correct: true
+        questions:
+          - 
+            text: Πόσο νέκταρ είναι αυτό;
+        title: Πολλαπλή Επιλογή
       K-1 Digital Footprint Multi 1:
-        Multiple Choice: Πολλαπλή Επιλογή
-        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: Ποιο ζώο έχει το ψηφιακό αποτύπωμα που το αφήνει <strong>πιο ανασφαλές</strong>;
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+        questions:
+          - 
+            text: Ποιο ζώο έχει το ψηφιακό αποτύπωμα που το αφήνει <strong>πιο ανασφαλές</strong>;
+        title: Πολλαπλή Επιλογή
       K-1 Getting Loopy Multi 1:
-        How would you simplify this sequence with loops?: Πως θα απλοποιούσες αυτή την ακολουθία βρόχων;
-        Multiple Choice: Πολλαπλή Επιλογή
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+        questions:
+          - 
+            text: Πως θα απλοποιούσες αυτή την ακολουθία βρόχων;
+        title: Πολλαπλή Επιλογή
       K-1 Happy Maps Multi 1:
-        Multiple Choice: Πολλαπλή Επιλογή
-        Which arrow gets the Flurb to the treasure?: Ποιο βέλος πάει τον Flurb στο θησαυρό;
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+        questions:
+          - 
+            text: Ποιο βέλος πάει τον Flurb στο θησαυρό;
+        title: Πολλαπλή Επιλογή
       K-1 Keep it Private Multi 1:
-        Multiple Choice: Πολλαπλή Επιλογή
-        Which information should you <strong>not</strong> share online?: Ποια πληροφορία <strong>δεν</strong> πρέπει να μοιράζεσαι στο Internet;
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+        questions:
+          - 
+            text: Ποια πληροφορία <strong>δεν</strong> πρέπει να μοιράζεσαι στο Internet;
+        title: Πολλαπλή Επιλογή
       K-1 Maze Debugging Multi 1:
-        Multiple Choice: Πολλαπλή Επιλογή
-        Which choice should be the final block?: Ποια επιλογή πρέπει να είναι το τελικό μπλοκ;
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+        questions:
+          - 
+            text: Ποια επιλογή πρέπει να είναι το τελικό μπλοκ;
+        title: Πολλαπλή Επιλογή
       K-1 Maze Loops Multi 1:
-        Multiple Choice: Πολλαπλή Επιλογή
-        Which repeat block is the same?: Ποιο μπλοκ επανάληψης είναι το ίδιο;
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+        questions:
+          - 
+            text: Ποιο μπλοκ επανάληψης είναι το ίδιο;
+        title: Πολλαπλή Επιλογή
       K-1 Maze Loops Multi 2:
-        Multiple Choice: Πολλαπλή Επιλογή
-        Pick the correct repeat block.: Επιλέξετε το σωστό μπλοκ επανάληψης.
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+        questions:
+          - 
+            text: Επιλέξετε το σωστό μπλοκ επανάληψης.
+        title: Πολλαπλή Επιλογή
       K-1 Maze Multiple Choice 2:
-        Maze: Λαβύρινθος
-        Which answer solves this level?: Ποια απάντηση λύνει αυτό το επίπεδο;
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+        questions:
+          - 
+            text: Ποια απάντηση λύνει αυτό το επίπεδο;
+        title: Λαβύρινθος
       K-1 Move It Multi 1:
-        Multiple Choice: Πολλαπλή Επιλογή
-        Which algorithm gets the Flurb to the flowers?: Ποιος αλγόριθος πάει τον Flurb στα λουλούδια;
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+        questions:
+          - 
+            text: Ποιος αλγόριθος πάει τον Flurb στα λουλούδια;
+        title: Πολλαπλή Επιλογή
       K-1 Plant a Seed Multi 1:
-        Multiple Choice: Πολλαπλή Επιλογή
-        Which step should go at the beginning of this algorithm?: Ποιο βήμα πρέπει να πάει στην αρχή αυτού του αλγόριθμου;
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+        questions:
+          - 
+            text: Ποιο βήμα πρέπει να πάει στην αρχή αυτού του αλγόριθμου;
+        title: Πολλαπλή Επιλογή
       K-1 Plant a Seed Multi 2:
-        Multiple Choice: Πολλαπλή Επιλογή
-        Which step should fill in the blank for this algorithm?: Ποιο βήμα πρέπει να συμπληρώσεις στο κενό αυτού του αλγόριθμου;
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+        questions:
+          - 
+            text: Ποιο βήμα πρέπει να συμπληρώσεις στο κενό αυτού του αλγόριθμου;
+        title: Πολλαπλή Επιλογή
       K-1 Word Search Multi 1:
-        Multiple Choice: Πολλαπλή Επιλογή
-        Which blocks spell "MOVE"?: Ποια μπλοκ σημαίνουν "ΜΕΤΑΚΙΝΗΣΗ";
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+        questions:
+          - 
+            text: Ποια μπλοκ σημαίνουν "ΜΕΤΑΚΙΝΗΣΗ";
+        title: Πολλαπλή Επιλογή
       K-1 Word Search Multi 3:
-        Multiple Choice: Πολλαπλή Επιλογή
-        SOUTH: ΝΟΤΙΑ
-        Which word is spelled?: Ποια λέξη σχηματίζεται;
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+            text: ΝΟΤΙΑ
+            correct: false
+        questions:
+          - 
+            text: Ποια λέξη σχηματίζεται;
+        title: Πολλαπλή Επιλογή
       behaviors 1 predict:
-        Incorrect: Εσφαλμένο
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+            correct: false
+            feedback: Εσφαλμένο
       behaviors 4 predict:
-        Incorrect: Εσφαλμένο
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+            correct: false
+            feedback: Εσφαλμένο
+      courseC_multi_artist_prog6_predict1:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseC_multi_artist_prog6_predict1_2018:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseC_multi_artist_prog6_predict1_2018_2019:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
       courseC_multi_harvester_loops11_predict1:
-        '12': '12'
-        '15': '15'
-        '4': '4'
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
       courseC_multi_harvester_loops11_predict1_2018:
-        '12': '12'
-        '15': '15'
-        '4': '4'
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
       courseC_multi_harvester_loops11_predict1_2018_2019:
-        '12': '12'
-        '15': '15'
-        '4': '4'
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseC_multi_maze_debugging8_predict1:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseC_multi_maze_debugging8_predict1_2018:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseC_multi_maze_debugging8_predict1_2018_2019:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseC_multi_maze_programming8_predict1:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseC_multi_maze_programming8_predict1_2018:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseC_multi_maze_programming8_predict1_2018_2019:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseC_multi_starWars_predict1:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseC_multi_starWars_predict1_2018:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseC_multi_starWars_predict1_2018_2019:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseC_multi_starWars_predict2:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseC_multi_starWars_predict2_2018:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseC_multi_starWars_predict2_2018_2019:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
       courseD_multi_artist_binary8_predict1:
-        A: Α
-        B: Β
-        C: Γ
-        D: Δ
+        answers:
+          - 
+            text: Α
+            correct: false
+          - 
+            text: Β
+            correct: false
+          - 
+            text: Γ
+            correct: false
+          - 
+            text: Δ
+            correct: true
       courseD_multi_artist_binary8_predict1_2018:
-        A: Α
-        B: Β
-        C: Γ
-        D: Δ
+        answers:
+          - 
+            text: Α
+            correct: false
+          - 
+            text: Β
+            correct: false
+          - 
+            text: Γ
+            correct: false
+          - 
+            text: Δ
+            correct: true
       courseD_multi_artist_binary8_predict1_2018_2019:
-        A: Α
-        B: Β
-        C: Γ
-        D: Δ
+        answers:
+          - 
+            text: Α
+            correct: false
+          - 
+            text: Β
+            correct: false
+          - 
+            text: Γ
+            correct: false
+          - 
+            text: Δ
+            correct: true
       courseD_multi_artist_nestedLoops9_predict1:
-        A: Α
-        B: Β
-        C: Γ
+        answers:
+          - 
+            text: Α
+            correct: true
+          - 
+            text: Β
+            correct: false
+          - 
+            text: Γ
+            correct: false
+          - 
       courseD_multi_artist_nestedLoops9_predict1_2018:
-        A: Α
-        B: Β
-        C: Γ
+        answers:
+          - 
+            text: Α
+            correct: true
+          - 
+            text: Β
+            correct: false
+          - 
+            text: Γ
+            correct: false
+          - 
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
-        A: Α
-        B: Β
-        C: Γ
+        answers:
+          - 
+            text: Α
+            correct: true
+          - 
+            text: Β
+            correct: false
+          - 
+            text: Γ
+            correct: false
+          - 
+      courseD_multi_bee_conditionals1_predict1:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseD_multi_bee_conditionals1_predict1_2018:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseD_multi_bee_conditionals1_predict1_2018_2019:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseD_multi_bee_conditionals7_predict2:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseD_multi_bee_conditionals7_predict2_2018:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseD_multi_bee_conditionals7_predict2_2018_2019:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseD_multi_bee_nestedLoops2_predict1:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseD_multi_bee_nestedLoops2_predict1_2018:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseD_multi_bee_nestedLoops2_predict1_2018_2019:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
       courseD_multi_bee_nestedLoops9_predict2:
-        '12': '12'
-        '4': '4'
-        '8': '8'
-        13: '? Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
-        14: ': Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
-        15: '? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
-        16: ': The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
       courseD_multi_bee_nestedLoops9_predict2_2018:
-        '12': '12'
-        '4': '4'
-        '8': '8'
-        13: '? Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
-        14: ': Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
-        15: '? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
-        16: ': The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
-        '12': '12'
-        '4': '4'
-        '8': '8'
-        13: '? Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
-        14: ': Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
-        15: '? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
-        16: ': The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseD_multi_collector_debugging10_predict1:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseD_multi_farmer_condLoops9_predict1:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseD_multi_farmer_condLoops9_predict1_2018:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseD_multi_farmer_condLoops9_predict1_2018_2019:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseD_multi_farmer_ramp13:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseD_multi_farmer_while10_predict2:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseD_multi_farmer_while10_predict2_2018:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseD_multi_farmer_while10_predict2_2018_2019:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseD_multi_farmer_while4_predict1:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseD_multi_farmer_while4_predict1_2018:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseD_multi_farmer_while4_predict1_2018_2019:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseD_multi_maze_until10_predict2:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseD_multi_maze_until10_predict2_2018:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseD_multi_maze_until10_predict2_2018_2019:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseD_multi_maze_until2_predict1:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseD_multi_maze_until2_predict1_2018:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseD_multi_maze_until2_predict1_2018_2019:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseD_multi_scrat_predict1:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseE_multi_artist_predict1:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseE_multi_bee_functions_predict1:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseE_multi_farmer_functions11_predict:
+        answers:
+          - 
+          - 
+          - 
+          - 
+            correct: true
+      courseE_multi_farmer_functions11_predict_2018:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseE_multi_farmer_functions11_predict_2018_2019:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseE_multi_farmer_predict1:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseE_multi_farmer_predict2:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseE_multi_maze_predict1:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseE_prediction_artistFunction1:
+        answers:
+          - 
+          - 
+          - 
+          - 
+            correct: true
+      courseE_prediction_artistFunction1_2018:
+        answers:
+          - 
+          - 
+          - 
+          - 
+            correct: true
+      courseE_prediction_artistFunction1_2018_2019:
+        answers:
+          - 
+          - 
+          - 
+          - 
+            correct: true
+      courseF_bee_variables_8a_2018:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseF_bee_variables_8a_2018_2019:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseF_multi_artist_for10_predict1:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseF_multi_artist_for10_predict1_2018:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseF_multi_artist_for10_predict1_2018_2019:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseF_multi_artist_fwp2_predict1:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseF_multi_artist_predict1:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseF_multi_artist_variables3a_predict1:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseF_multi_artist_variables3a_predict1_2018:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseF_multi_artist_variables3a_predict1_2018_2019:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseF_multi_bee_conditionals1_predict1:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseF_multi_bee_conditionals7_predict2:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseF_multi_bee_for3_predict1:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseF_multi_bee_for3_predict1_2018:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseF_multi_bee_for3_predict1_2018_2019:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseF_multi_bee_fwp9_predict1:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseF_multi_playlab_variables4c_predictive1:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      coursee_prediction_artistfunction2:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      coursee_prediction_artistfunction2_2018:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      coursee_prediction_artistfunction2_2018_2019:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      grade2_multi_collector_A_predict1:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      grade2_multi_collector_A_predict1_2018:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      grade2_multi_collector_A_predict1_2018_2019:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 

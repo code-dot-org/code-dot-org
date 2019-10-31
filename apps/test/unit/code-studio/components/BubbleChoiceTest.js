@@ -8,13 +8,13 @@ import * as utils from '@cdo/apps/utils';
 const fakeSublevels = [
   {
     id: 1,
-    title: 'Choice 1',
+    display_name: 'Choice 1',
     thumbnail_url: 'some-fake.url/kittens.png',
     url: '/s/script/stage/1/puzzle/2/sublevel/1'
   },
   {
     id: 2,
-    title: 'Choice 2',
+    display_name: 'Choice 2',
     thumbnail_url: null,
     url: '/s/script/stage/1/puzzle/2/sublevel/2'
   }
@@ -22,7 +22,7 @@ const fakeSublevels = [
 
 const DEFAULT_PROPS = {
   level: {
-    title: 'Bubble Choice',
+    display_name: 'Bubble Choice',
     description: 'Choose one or more levels!',
     sublevels: fakeSublevels,
     previous_level_url: '/s/script/stage/1/puzzle/1',
@@ -34,10 +34,10 @@ const DEFAULT_PROPS = {
 describe('BubbleChoice', () => {
   it('renders level information', () => {
     const wrapper = mount(<BubbleChoice {...DEFAULT_PROPS} />);
-    assert.equal(DEFAULT_PROPS.level.title, wrapper.find('h1').text());
+    assert.equal(DEFAULT_PROPS.level.display_name, wrapper.find('h1').text());
     assert.equal(
       DEFAULT_PROPS.level.description,
-      wrapper.find('UnsafeRenderedMarkdown').text()
+      wrapper.find('SafeMarkdown').text()
     );
   });
 

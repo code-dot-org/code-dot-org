@@ -735,6 +735,7 @@ sk:
         csd_applab_parameters: Funkcie s parametrami
         csd_applab_loops: Cykly v App Labe
         CSF_SpriteLab_SpritesInAction_v2: Postavy v akcii
+        csd_debugging: Hľadanie a odstraňovanie chýb
     callout:
       text:
         drag_blocks: Chyť blok "posuň sa" a pripoj ho pod už použitý blok

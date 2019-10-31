@@ -45,13 +45,15 @@ describe('StudentHomepage', () => {
         sections={[]}
         codeOrgUrlPrefix="http://localhost:3000/"
         studentId={123}
+        hasFeedback={false}
       />
     );
     const recentCourses = wrapper.find('RecentCourses');
     assert.deepEqual(recentCourses.props(), {
       courses: courses,
       topCourse: topCourse,
-      isTeacher: false
+      isTeacher: false,
+      hasFeedback: false
     });
   });
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
-import {assert, expect} from '../../../util/configuredChai';
+import {assert, expect} from '../../../util/deprecatedChai';
 import AssignmentSelector from '@cdo/apps/templates/teacherDashboard/AssignmentSelector';
 
 const defaultProps = {
@@ -220,14 +220,14 @@ describe('AssignmentSelector', () => {
         .find('option')
         .at(0)
         .text(),
-      ''
+      'Unit 1: Problem Solving'
     );
     assert.equal(
       secondary
         .find('option')
         .at(1)
         .text(),
-      'Unit 1: Problem Solving'
+      ''
     );
     assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
       courseId: 29,
@@ -488,7 +488,7 @@ describe('AssignmentSelector', () => {
         .find('select')
         .at(0)
         .simulate('change', {target: {value: 'csd'}});
-      spy.reset();
+      spy.resetHistory();
       wrapper
         .find('select')
         .at(1)

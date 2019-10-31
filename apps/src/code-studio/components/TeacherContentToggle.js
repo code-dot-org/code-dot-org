@@ -85,16 +85,16 @@ class TeacherContentToggle extends React.Component {
       if (!hiddenStagesInitialized || !sectionsAreLoaded || hasOverlayFrame) {
         contentStyle.visibility = 'hidden';
       }
+    }
 
-      // In the case where isBlocklyOrDroplet is true, we don't want to actually set
-      // display none, as that causes the editor (be it blockly or droplet) to
-      // misrender. We can get away with just setting visibilityhidden because the editor
-      // is rendered to an absolute position and doesnt affect the layout of this
-      // component. For cases where we don't have an IDE (i.e. multi/match) we
-      // need to set display:none such that it doesnt affect our layout
-      if (hasOverlayFrame && !isBlocklyOrDroplet) {
-        contentStyle.display = 'none';
-      }
+    // In the case where isBlocklyOrDroplet is true, we don't want to actually set
+    // display none, as that causes the editor (be it blockly or droplet) to
+    // misrender. We can get away with just setting visibilityhidden because the editor
+    // is rendered to an absolute position and doesnt affect the layout of this
+    // component. For cases where we don't have an IDE (i.e. multi/match) we
+    // need to set display:none such that it doesnt affect our layout
+    if (hasOverlayFrame && !isBlocklyOrDroplet) {
+      contentStyle.display = 'none';
     }
 
     const showLockedStageMessage = isLockedStage && !isHiddenStage;

@@ -2,6 +2,12 @@
 ro-RO:
   data:
     callouts:
+      2-3 Artist Debugging 1:
+        2-3_Artist_Debugging_1_a: Artistul nu are un buton "Pas", dar poţi trage cursorul
+          în stânga ca să priveşti cu mai multă atenţie cum rulează programul tau.
+      2-3 Bee Conditionals 5:
+        Bee_Cond_5_1a: Florile mov pot avea 1 sau 0 nectar...dar nu vei şti până când
+          nu rulezi programul!
       CSD U3 Draw Loop Plugged wiggle sprite y_2018:
         '': "[șir gol]"
       CSD U3 Draw Loop Plugged wiggle sprite y_2019:
@@ -14,6 +20,10 @@ ro-RO:
           spațiul de lucru
       Course 4 Artist For Loops 4:
         place_counter_variable: Trageți variabila contor înăuntrul acestui block
+      Course 4 Artist Functions challenge:
+        Course_4_Artist_Functions_challenge_1: Observă că am sortat toate blocurile
+          şi le-am pus în categorii pentru a ţine totul ordonat. Apasă aici pentru
+          a găsi toate blocurile de care ai nevoie.
       Course 4 Artist Vars 1:
         repeat_blocks: Utilizaţi blocul "Repetă" şi aduceți-l lângă blocurile din
           spațiul de lucru
@@ -24,6 +34,12 @@ ro-RO:
       Course 4 Artist Vars 6:
         degrees_per_side: Împărțiți 360 la numărul de laturi pentru a obține mărimea
           în grade a fiecărui unghi.
+      Course 4 Bee 1:
+        if_bee_nectar: Folosește blocul "dacă" pentru a decide dacă albina ar trebui
+          să ia nectarul sau să facă miere
+      Course 4 Bee 3:
+        if_else_bee: Utilizează blocul "dacă/altfel", astfel încât albina să ia nectar
+          de la o floare şi să facă miere dacă nu este o floare
       Course 4 Bee Params 2:
         edit_get_nectar: Utilizaţi acest buton pentru a edita funcţia şi pentru a
           schimba direcţia spre care se va întoarce albina ca să obţină nectarul.
@@ -35,6 +51,9 @@ ro-RO:
         edit_add_parameter: Clic editare pentru a adăuga un parametru în funcția ta
       Course 4 Play Lab Vars 1:
         arrows_move_actor: Utilizează săgețile pentru a muta actorul
+      Course 4 Play Lab Vars 9:
+        Course_4_Play_Lab_Vars_9_1: Toate blocurile tale sunt acum aranjate în categorii!
+          Apasă pe o etichetă pentru a vedea piesele din acea categorie.
       CourseD_Dance_Party_01:
         dance_callout_01: Adaugă acest bloc la programul tău!
       CourseD_Dance_Party_02:
@@ -68,6 +87,11 @@ ro-RO:
         Infinity_move_right_runbutton: Adaugă bloc de mutare aici
       Infinity_repeat:
         Infinity_repeat_callout: Plasează blocuri de mutare în interior aici
+      MC HOC 2016 Level 2-2:
+        craft2_run_button_callout: Când eşti gata, apasă "Rulează" pentru a încerca
+          programul.
+      MC HOC 2016 New Walk:
+        MC_HOC_2016_New_Walk_callout2: Apasă "Rulează" pentru a începe mişcarea.
       NEW Course 4 Artist Functions 7:
         edit_function: Click aici pentru a edita funcţia dumneavoastră.
       NEW Course 4 Artist Functions 8:
@@ -82,6 +106,9 @@ ro-RO:
       NEW Course 4 Artist Vars 6:
         place_length_variable: Muta variabila length aici pentru a înlocui semnul
           de interogație
+      NEW Course 4 Bee For Loops 4:
+        bee_for_loop: Introdu cel mai mare număr care să indice de câte ori doreşti
+          ca albina să strângă polen de aici
       NEW Course 4 Bee For Loops 5:
         actions_category: Caseta de instrumente are acum un nou aspect! Blocurile
           "Acţiuni" sunt aici acum.
@@ -113,6 +140,8 @@ ro-RO:
         craft_what_is_iron: Extrage acest fier!
       Underground Iron_2019:
         craft_what_is_iron: Extrage acest fier!
+      courseA_collector_preLoops1:
+        courseA_collector_preLoops1_1: Apasă aici pentru a vedea acest cod rulând!
       frozen circle function with parameter:
         frozen_circle_function_with_parameter_circle: Utilizaţi blocul "crează un
           cerc" şi modificaţi dimensiunea.
@@ -132,6 +161,7 @@ ro-RO:
         snowflake_dropdown: Utilizaţi acest meniu derulant pentru a crea diferiți
           fulgi de zăpadă!
       frozen line:
+        run: Apasă "Rulează" pentru a încerca programul tău!
         move_elsa_forward: Trageţi un bloc de "Mutare înainte" şi fixaţi-l sub blocul
           "Atunci când rulaţi" pentru a o face pe Elsa să avanseze
       frozen perpendicular:

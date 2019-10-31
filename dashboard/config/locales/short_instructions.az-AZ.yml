@@ -2,40 +2,12 @@
 az-AZ:
   data:
     short_instructions:
-      2-3 Artist 1 new: "Salam, mən rəssamam. Siz kod yazmaqla mənə, demək olar ki,
-        hər şey çəkdirə bilərsiniz. Şəkildəki boz xətlərin üzərini cızmağım üçün bir
-        neçə blokdan istifadə edin (Hər xəttin uzunluğu 100 pikseldir)\\\r\n\\\r"
-      2-3 Artist 11: 'Stop işarəsini tərəfinin uzunluğu 100 piksel olan səkkizbucaqlı
-        çəkməklə haşiyəyə al. '
-      2-3 Artist 3new: 'Qırmızı papaq 100 piksel uzunluğundadır. Bundan 70 piksel
-        daha kiçik olan qara papağı çəkməyi bitirin.(Qeyd: Hər bir papaq 50 piksel
-        enindədir)'
       2-3 Artist 4: Bu pişik üçün evi tamamlamağa mənə kömək edin.
-      2-3 Artist 9: Bu çərpələngi bitirin
-      2-3 Artist Assessment 1: |-
-        Vergi: sonuncu disi cekmeyi bitirin.
-        25 piksel en ve 25 piksel uzunlugundadir.
-      2-3 Artist Debugging 1: |-
-        Bu papaq yanliz 50 pixel eninde ola biler.
-        Bunu yapisdira bilersen?
-      2-3 Artist Debugging 2: |-
-        Pisiyin biglari ucun olan bu kod sehvdir.
-        Hamisi eyni uzunluqda olan biglari cekmek ucun bu kodu duzelt.
-      2-3 Artist Debugging 5: |-
-        Qic ve ayaq ucun olan kodumuz sehvdir.
-        Bunu duzelde bilersiniz?
-      2-3 Artist Debugging 6: |-
-        Menim oturdugum kreslo bir qici yox imis kimi gorunur.
-        Sonuncu qicini cekmek ucun kodu daxil et.
-      2-3 Artist Debugging 8: Müəlliməm deyir ki, başladığlm işi başa çatdırmalıyam!
-        Fır-fıramı bitirməkdə mənə kömək edin. Nəyin səhv olduğunu tapa bilərsiniz?
+      2-3 Artist 9 NEW: Bu çərpələngi bitirin
       2-3 Artist Free Play: Sərbəst oyun! Nə istəyirsinizə çəkin.
       2-3 Artist Nested Loops Free Play: Sərbəst oyun, içiçə dövrlərlə fısqırıq bir
         şey çək.
       2-3 Bee Conditionals 9: Hər bir çiçəkdən bütün nektarları topla.
-      2-3 Bee Functions 2: Funksiyalar hər hansı bir tapşırığı yerinə yetirən kodlardan
-        ibarət blokdur. 5 nektar əldə etmək üçün "get 5" funksiyasından istifadə edin.
-        Əlverişli blok sayı əldə etmək üçün dövrlərdən də istifadə edin.
       2-3 Bee Functions 3: Hər bir çiçəkdən bütün nektarları topla.
       2-3 Maze 10: Məni yaşıl ziyankara aparan yola yönləndirin! (Partladıcı TNT qutusundan
         ehtiyatlı olun)
@@ -45,8 +17,6 @@ az-AZ:
         ehtiyatlı olun)
       2-3 Maze 9: Məni yaşıl ziyankara aparan yola yönləndirin! (Partladıcı TNT qutusundan
         ehtiyatlı olun)
-      4-5 Maze Conditionals 9: "\"Əgər-əks halda\" bloklu bir məşq tapmacası daha!\\\r\n\\\r\nBarmağınızı
-        üzərində gəzdirin, görün, birinci cəhddən bunu edə bilərsinizmi."
       Course 4 Artist Binary 7: Bu rəsmi bitirin.
       Course 4 Artist Binary Free Play 2b: İpuclarını görmək üçün buraya basın.
       Course 4 Artist Functions Inspiration: Yenidən ipuclarını görmək üçün buraya

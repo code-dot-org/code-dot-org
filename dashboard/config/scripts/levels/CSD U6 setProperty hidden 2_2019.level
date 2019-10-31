@@ -52,7 +52,7 @@
     "disable_procedure_autopopulate": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
-    "encrypted_examples": "N3oV1z3QWfudzqrrSQPO3CjzneirQJKLrCUS51+H1I0SR60KArWx3xqxTBZj\n+nVg2gnx/Gh0CBzRFBXUE4C02A==\n",
+    "encrypted_examples": "Tob0dQ4jvMv016K5e8lGWYFVdQy+1XDMcnh53qRgHK6NUkCMJMu1RLuwY6ux\n3lJzv2usj4CdSRs3QMwekRWKEQ==\n",
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 12314,
     "name_suffix": "_2019",
@@ -62,17 +62,17 @@
     ],
     "map_reference": "/docs/concepts/app-lab/designing-screens-with-code/",
     "mini_rubric": "true",
-    "preload_asset_list": null,
     "encrypted": "false",
     "rubric_key_concept": "Use events handlers to respond to user interaction",
     "rubric_performance_level_1": "When the \"stopAlarmButton\" is pressed, the status text changes to \"OFF\" and the button disappears.  There is no extra code in the program.",
     "rubric_performance_level_2": "When the \"stopAlarmButton\" is pressed, the program responds in some way, but not necessarily as described in the instructions, or there may be unnecessary code triggered by the event.",
     "rubric_performance_level_3": "A second event has been created, but it may not be triggered at appropriate times, or the program may have created unnecessary events.",
-    "rubric_performance_level_4": "No new events were created."
+    "rubric_performance_level_4": "No new events were created.",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-10-09 21:24:53 +0000\",\"changed\":[\"code_functions\",\"hide_design_mode\",\"hide_view_data_button\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-09 21:26:54 +0000\",\"changed\":[\"code_functions\",\"project_template_level_name\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-09 21:43:10 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-09 21:44:26 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-09 21:49:30 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-02-02 17:17:44 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2019-03-06 19:48:03 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-05-28 19:17:12 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-05-28 19:22:07 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"mini_rubric\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-10-09 21:24:53 +0000\",\"changed\":[\"code_functions\",\"hide_design_mode\",\"hide_view_data_button\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-09 21:26:54 +0000\",\"changed\":[\"code_functions\",\"project_template_level_name\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-09 21:43:10 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-09 21:44:26 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-09 21:49:30 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-02-02 17:17:44 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2019-03-06 19:48:03 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-05-28 19:17:12 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-05-28 19:22:07 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"mini_rubric\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-07-09 16:11:36 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

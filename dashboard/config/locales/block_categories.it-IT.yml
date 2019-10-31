@@ -1,28 +1,46 @@
 ---
-it-IT:
+it:
   data:
     block_categories:
       Actions: Azioni
-      Advanced: Avanzate
-      Behaviors: Comportamenti
-      Brushes: Pennelli
-      Color: Colore
-      Comment: Commento
-      Comments: Commenti
-      Conditionals: Istruzioni condizionali
-      Dancers: Ballerini
-      Default: Impostazione predefinita
-      Events: Eventi
-      Functions: Funzioni
-      'Functions ': 'Funzioni '
-      Games/Score: Gioco/Punteggio
-      Groups: Gruppi
-      Logic: Logica
       Loops: Ripetizioni
+      Functions: Funzioni
+      Color: Colore
+      Brushes: Pennelli
       Math: Matematica
-      Numbers: Numeri
-      Sprites: Personaggi
-      Text: Testo
+      Logic: Logica
       Variables: Variabili
-      'Variables ': 'Variabili '
+      Number: Numero
+      String: Stringa
+      Image: Immagine
+      Boolean: Booleano
+      Conditionals: Istruzioni condizionali
+      Events: Eventi
+      Games/Score: Gioco/Punteggio
+      Comments: Commenti
+      Category: Categoria
+      Text: Testo
+      Picker: Selezione
+      Comment: Commento
       World: Ambiente
+      Sprites: Personaggi
+      Behaviors: Comportamenti
+      'Variables ': 'Variabili '
+      Default: Impostazione predefinita
+      everythingelse: qualunque altra cosa
+      Location: Luogo
+      numbers: numeri
+      Numbers: Numeri
+      Dancers: Ballerini
+      Groups: Gruppi
+      Start: Inizia
+      Music: Musica
+      Dancing: Danza
+      Sprite: Personaggio
+      Brush: Pennello
+      Booleans: Valori Booleani
+      test: test
+      Do Not Use: Non usare
+      Name: Nome
+      'Functions ': 'Funzioni '
+      Function: Funzione

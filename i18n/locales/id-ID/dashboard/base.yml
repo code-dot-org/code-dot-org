@@ -1,3 +1,15 @@
+#Files in the config/locales directory are used for internationalization
+#and are automatically loaded by Rails. If you want to use locales other
+#than English, add the necessary files in this directory.
+#To use the locales, use `I18n.t`:
+#I18n.t 'hello'
+#In views, this is aliased to just `t`:
+#<%= t('hello') %>
+#To use a different locale, set it with `I18n.locale`:
+#I18n.locale = :es
+#This would use the information in config/locales/es.yml.
+#To learn more, please read the Rails Internationalization guide
+#available at http://guides.rubyonrails.org/i18n.html.
 id:
   errors:
     messages:
@@ -32,6 +44,7 @@ id:
         finish_sign_up_subheader_provider: 'Mengisi informasi berikut untuk menyelesaikan membuat akun Code.org dengan <strong>%{provider}</strong> untuk <strong>%{email}</strong>.'
         error:
           future: tidak mungkin di masa depan
+  beta: "Percobaan"
   hello: "Halo dunia"
   welcome_back: "Selamat datang kembali, %{name}"
   your_professional_learning_plan: "Rencana Pembelajaran Profesional Anda"
@@ -45,13 +58,9 @@ id:
   okay: "Oke"
   or: "atau"
   heading_x_of_y: "%{heading} (halaman %{x} dari %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Tambahkan seorang guru:'
       placeholder: "Kode Bagian (ABCDEF)"
-      instructions: "Tolong masukkan kode yang dibagikan oleh gurumu. Kode tersebut adalah sebuah kode 6 huruf seperti \"ABCDEF\"."
-      instructions_short: "Masukkan 6 huruf bagian kode anda"
-    submit: 'Cantumkan nama guru'
   add_hint_form:
     placeholder: 'Masukkan pentunjuk anda disini'
     submit: 'tambah petunjuk'
@@ -80,8 +89,6 @@ id:
     continue_with: 'Lanjutkan dengan %{provider}'
     sign_in_with: 'Masuk pakai akun %{provider}'
     signed_in: 'Masuk!'
-    signed_out: 'Anda telah sign out dari <a href="%{url}">Code.org</a>.'
-    sign_out_of: 'Anda menggunakan %{provider} untuk sign in. <a href="%{url}">Klik disini</a> untuk sign out dari %{provider}.'
     already_signedup: 'Sudah mendaftar?'
     notyet_signedup: "Belum bergabung?"
     google_oauth2: 'Akun Google'
@@ -127,13 +134,10 @@ id:
     valid_password: "Kata sandi valid!"
     invalid_password: "Kata sandi harus minimal 6 karakter"
     mismatch_password: "kedua password yang anda masukkan tidak sama"
-    agree_tos_privacy: "Saya setuju untuk <a href='http://code.org/tos'>Ketentuan Layanan</a> dan <a href='http://code.org/privacy'>kebijakan privasi</a>."
     under_13_consent: "Jika saya di bawah usia 13 tahun, saya mengkonfirmasi bahwa saya telah saya orang tua atau wali hukum izin untuk menggunakan layanan Code.org."
     student_consent: "Saya mengkonfirmasi bahwa saya telah saya orang tua atau wali hukum izin untuk menggunakan layanan Code.org."
     agree_us_website: "Saya setuju untuk menggunakan sebuah situs web yang berbasis di Amerika Serikat."
     my_data_to_us: "Data dari penggunaan situs ini saya dapat dikirimkan ke dan disimpan atau diproses di Amerika Serikat."
-    student_terms: "Saya setuju untuk terikat oleh Code.org <a href='http://code.org/tos'> persyaratan layanan </a>. apabila saya berusia di bawah 13 tahun, saya mengonfirmasi dengan mengirimkan formulir ini bahwa saya memiliki izin orang tua atau wali sah untuk menggunakan layanan Code.org. <br/> <br/> Alamat email tidak disimpan dalam formulir yang memungkinkan kami untuk menghubungi siswa. Siswa tidak akan pernah menerima email dari Code.org kecuali untuk pemulihan kata sandi. Lihat <a href='http://code.org/privacy'> kebijakan privasi </a> kami untuk informasi lebih lanjut."
-    teacher_terms: "Saya setuju untuk terikat dengan persyaratan layanan Code.org. Untuk informasi yang lebih lanjut tentang privasi, lihat <a href='http://code.org/privacy'> kebijakan privasi </a> kami."
     additional_information: "Kami membutuhkan informasi tambahan untuk melanjutkan pendaftaran anda"
     user_type_button: "Perbarui tipe akun"
     user_type_label: "Jenis akun"
@@ -187,7 +191,6 @@ id:
     login: 'Masuk'
     invalid_login: 'Login tidak valid, silahkan coba lagi'
     pair_programming: 'Saya mempunyai rekan di komputer saya'
-    student_privacy: "Pelajari lebih lanjut kenapa anda tidak melihat nama lengkap anda <a href='%{student_privacy_blog}' target='_blank'>disini</a>."
   password:
     reset_form:
       title: 'Lupa kata sandi?'
@@ -283,6 +286,10 @@ id:
       professional_learning: "Belajar profesional"
       documentation: "Dokumentasi"
       tutorials: "Tutorial"
+      app_lab_documentation: "Dokumentasi aplikasi Lab"
+      app_lab_tutorials: "Tutorial aplikasi Lab"
+      game_lab_documentation: "Dokumentasi lab permainan"
+      game_lab_tutorials: "Tutorial lab permainan"
       educate_overview: "Ikhtisar Pendidik"
       educate_elementary: "Sekolah Dasar"
       educate_middle: "Sekolah Menengah Pertama"
@@ -313,6 +320,7 @@ id:
       district_dashboard: 'Wilayah Dashboard'
       label: 'Halo %{username}'
       stats: 'Kode Studio'
+      my_projects: 'Proyek saya'
       settings: 'Akun saya'
       logout: 'Keluar'
       signin: 'Masuk'
@@ -338,13 +346,18 @@ id:
       gumball: 'Dunia Gumball yang menakjubkan'
       iceage: 'Zaman Es'
       infinity: '∞'
+      makerlab: 'Pembuat Toolkit'
       minecraft_adventurer: 'Petualang Minecraft'
+      minecraft_codebuilder: 'Minecraft: Sambungan Kode'
       minecraft_designer: 'Minecraft'
       minecraft_hero: 'Pahlawan Minecraft'
       playlab: 'Play Lab/Lab Permainan'
       playlab_k1: 'Lab bermain (pra-pembaca)'
       starwars: 'Perang Bintang'
+      starwarsblocks: 'Star wars(blok)'
+      starwarsblocks_hour: 'Star wars(blok)'
       weblab: 'Web lab'
+      view_all: 'Lihat semua proyek...'
     popup:
       progress_for_user: "%{name} kemajuan"
       progress: 'Kemajuan Anda'
@@ -414,14 +427,12 @@ id:
     enter_parent_email: "Masukkan alamat surel orang tua atau wali anda (untuk pemulihan sandi)"
     update: "Perbarui Akun"
     account_successfully_updated: "Akun sukses diperbarui."
+    update_email: "Update"
   user_level:
     completed: 'Selesai'
     tried: 'Telah mencoba'
   home:
     title: "Kode Studio"
-    description: 'Kode Studio adalah rumah untuk kursus online yang dibuat oleh Code.org'
-    lines_of_code: "%{lines_count} GARIS KODE DITULIS OLEH PELAJAR"
-    lines_of_code_linebreak: "%{lines_count} baris kode <br/> DITULIS oleh %{students_count} jutaan siswa"
     all_courses: "Tinjauan Kursus 1, 2, dan 3"
     lesson_plans: "Rencana pelajaran"
     signin_message: "Sudah terdaftar? %{link}"
@@ -451,42 +462,10 @@ id:
     test_videos_help: 'Coba pemutar video baru kami di sekolah anda'
     try_beta_courses: 'Baru! Cobalah kelas percobaan kami untuk siswa K-5'
     use_as_teacher: 'Gunakan situs ini sebagai seorang guru'
-    heading_hoc2014: "<h2>The Hour of Code untuk</h2><h1>Segala Usia</h1>"
-    heading_elementary: "<h2>20 jam kursus untuk</h2><h1>Pemula (segala usia)</h1>"
-    heading_apps: "<h2>Menyenagkan bagi</h2><h1>Semua orang</h1>"
-    heading_tools: "<h2>Siap dengan langkah berikutnya?</h2><h1>JavaScript Tools untuk SMA</h1>"
-    heading_legacy: "<h2>Kursus umum kami untuk</h2><h1>Semua Umur</h1>"
     your_gallery: Galeri
     no_primary_course: "Coba kursus di Code Studio"
     choose_next_course: "Coba kursus Code Studio dengan memilih salah satu di bawah ini"
     print_certificate: "Cetak Sertifikat"
-    announcement_title: "Pengumuman"
-    announcement_message_fall2016_features: "Kami menghabiskan musim panas untuk mengubah masukan anda menjadi fitur-fitur baru. Sekarang, anda bisa <a href=\"%{pp_url}\" target=\"_blank\">mengikuti berbagai macam kemajuan para perlajar</a> meskipun mereka terprogram berpasangan pada satu perangkat. Anda bisa menggunakan <a href=\"%{csp_widgets_url}\" target=\"_blank\">peralatan interaktif yang terbaik</a> dari prinsip-prinsip pelajaran Ilmu Komputer kami di <i>setiap</i> kelas. Dan pelajar anda bisa <a href=\"%{unused_code_url}\" target=\"_blank\">menyimpan kode yang tidak digunakan</a> didalam ruang kerja mereka untuk mendorong beruji coba! Periksalah semua fitur-fitur terbaru kami dan beritahu kami bagaimana pendapat anda."
-    announcement_csp_widgets_message: "Mencari beberapa cara yang menyenangkan untuk mengajar kelas anda bagaimana internet bekerja, bagaimana kriptografi (ilmu membuat dan memecahkan sandi) menyimpan data dengan aman, dan konsep-konsep lainnya? Kami telah mengambil peralatan-peralatan interaktif terbaik dari kurikulum prinsip-prinsip Ilmu Komputer kami dan mengeluarkannya sebagai sebuah widgets (acang) yang berdiri sendiri yang bisa anda gunakan setiap saat!"
-    announcement_learn_more_button: "Pelajari lebih banyak"
-    announcement_try_now_button: "Coba sekarang"
-    announcement_host_an_hour_button: "Tuan rumah satu jam"
-    announcement_watch_video_button: "Lihat video"
-    announcement_petition: "Sebagai seorang guru, anda merupakan pemimpin dalam sebuah pergerakan yang memberikan setiap pelajar di setiap sekolah kesempatan untuk belajar ilmu komputer. Sekarang, adalah saatnya perwakilan anda mendengarkan anda. Minggu ini, para pemimpin dunia pendidikan, 28 gubernur, dan pimpinan-pimpinan perusahan-perusahaan terbesar di Amerika bergabung bersama dalam penyampaian surat terbuka meminta kongres Amerika Serikat untuk mendanai pendidikan ilmu komputer K-12."
-    announcement_petition_button: "Tambahkan nama Anda"
-    announcement_go_beyond_button: "Melampaui"
-    announcement_apply_now: "Daftar sekarang"
-    announcement_all: "Ikuti terus perkembangan dengan fitur-fitur baru dan pembaharuan-pembaharuan dalam blog guru kami. <a href='%{teacher_blog_url}' target='_blank'>Lihatlah pengumuman sebelumnya.</a>"
-    announcement_hoc_launch: "Ribuan pengajar dari lebih 180 negara akan mulai mengajarkan ilmu komputer selama kegiatan Hour of Code tanggal 5 s/d 11 Desember ini. Kami sangat bergantung kepada anda untuk membantu kami mencapai lebih banyak pelajar dari pada sebelumnya. <a href='%{signup_url}' target='_blank'>Daftarkan kegiatan Hour of Code anda</a> dan biarkan guru-guru yang lain tahu bahwa setiap orang bisa memulai mengajar ilmu komputer."
-    announcement_mc_launch: "Salah satu tutorial kami yang paling populer sekarang memiki lanjutannya! Perancang Minecraft Hour of Code yang baru memberi kesempatan para pelajar membuat aturan-aturan dunia Minecraft. Mereka bisa menciptakan pengalaman Minecraft yang benar-benar unik, dan kemudian membagikannya dengan teman-teman atau memainkannya di ponsel mereka. Lakukan hal tersebut di dalam kelas anda untuk Hour of Code."
-    announcement_how_code_studio: "Anda tidak memerlukan pengalaman apapun untuk memulai mengajar ilmu komputer di dalam kelas anda. Code.org menawarkan kurikulum, rencana pembelajaran, program-program pembelajaran yang sangat berkualitas dan profesional, dan berbagai macam peralatan-peralatan yang sangat bagus untuk semua tingkatan kelas&mdash;semua yang anda butuhkan, semuanya tanpa biaya (gratis). Penasaran dimana harus memulai? Unduh <a href='%{video_download_url}'>video ini</a>!"
-    announcement_go_beyond: "Lakukan lebih dari hanya satu kegiatan Hour of Code dan jelajahi konsep-konsep ilmu komputer dengan pelajar-pelajar anda setiap minggu. Code.org menawarkan kurikulum, rencana pembelajaran, program-progrm pembelajaran yang sangat berkualitas dan profesional, berbagai macam peralatan-peralatan yang sangat bagus untuk semua tingkatan kelas&mdash;dan semua itu gratis. :) Anda tidak memmerlukan pengalaman apapun untuk memulai mengajar ilmu komputer di dalam kelas anda. <b>Temukan langkah selanjutnya yang tepat untuk kelas anda.</b>"
-    announcement_teacher_recruitment: "Guru-guru seperti anda merupakan pemimpin pergerakan pendidikan ilmu komputer. Anda bisa berpartisipasi dalam program pembelajaran profesional tingkat K-12 (tingkatan kelas di sekolah amerika) yang sangat berkualitas <strong>yang pasti tanpa ada beban biaya bagi anda dan sekolah anda</strong>."
-    announcement_teacher_recruitment2: "Guru-guru seperti anda merupakan pemimpin pergerakan pendidikan ilmu komputer. Anda bisa berpartisipasi dalam program pembelajaran profesional tingkat K-12 (tingkatan kelas di sekolah amerika) yang sangat berkualitas <strong>yang pasti tanpa ada beban biaya bagi anda dan sekolah anda</strong>. Pimpinlah pelajaran ilmu komputer di sekolah anda, dan melamarlah untuk pembelajaran profesional. Guru-guru sekolah menengah dan atas, batas lamaran 17 Maret."
-    announcement_csf_pilot: "<strong>Guru-guru sekolah dasar:</strong> Jadilah bagian dari pembaharuan program-program yang mendasar dari Ilmu Komputer kami! Kami mencari guru-guru untuk merintis sebuah pembaharuan kurikulum ilmu komputer yang mendasar selama musim dingin dan musim semi tahun 2017. Kami sangat berhasrat untuk mendengar masukan dari anda sebelum pembaharuan-pembaharuan tersebut diluncurkan di Agustus 2017."
-    announcement_student_privacy: "Di Code.org, kami memperlakukan kerahasian pelajar dengan sangat serius. Untuk melindungi kerahasian pelajar-pelajar anda, kami telah melakukan perubahan untuk bagian halaman login anda untuk menghindari penayangan nama lengkap. Meskipun pembaharuan ini akan mengurangi kekhawatiran tentang kerahasiaan pada halaman masuk, kami tetap menganjurkan kepada pengguna untuk <i>tidak menggunakan nama-nama lengkap pelajar</i>."
-    announcement_apcsp_recruitment: "<strong>Prinsip Ilmu Pengetahuan Komputer:</strong> pelajar anda dapat ditayangkan dalam video viral Code.org berikutnya yang mendorong pelajar untuk mengikuti ujian AP CS Principles tahun ini. Kami mengundang semua pelajar CS Principles untuk mengirimkan video klip 10-20 detik di Twitter, Instagram, atau Facebook yang mengatakan \"Saya mengikuti ujian #APCSP sebab...\" Pengiriman terbaik akan ditayangkan di video kami dan pelajar yang menang akan menerima Code.org swag!"
-    announcement_apcsp_recruitment2: "Ujian prinsip-prinsip Ilmu Komputer untuk Penempatan Lanjutan pada tahun ini siap memecahkan rekor. Keikutsertaan pelajar dalam ujian tersebut secara dramatis bisa merubah keragaman dalam Penempatan Lanjutan Ilmu Komputer, tetapi kami membutuhkan bantuan anda. Dorong setiap pelajar Prinsip-prinsip Ilmu Komputer untuk mengambil ujian Penempatan Lanjutan Ilmu Komputer dan kami akan <a href='%{gift_url}' target='_blank'>mengirimkan anda sebuah hadiah</a>. Pelajar-pelajar bisa juga mendorong teman-teman sebaya di seluruh negara dalam <a href='%{challenge_url}' target='_blank'>#video tantangan Penempatan Lanjutan Ilmu Komputer kami</a>."
-    announcement_apcsp_recruitment3: "Ujian Prinsip-prinsip Ilmu Komputer untuk Penempatan Lanjutan pada tahun ini siap memecahkan rekor. Keikutsertaan pelajar dalam ujian tersebut secara dramatis akan merubah keragaman dalam Penempatan Lanjutan Ilmu Komputer, tetapi kami butuh bantuan anda. Dorong setiap pelajar Prinsip-prinsip Ilmu Komputer untuk mengikuti ujian Penempatan Lanjutan Ilmu Komputer dan anda bisa memenangkan <a href='%{gift_url}' target='_blank'>kartu hadiah, laptop, atau hadiah keren lainnya</a>! Bagikan <a href='%{video_url}' target='_blank'>video ini</a> sehingga pelajar-pelajar anda bisa mendengan dari teman-teman sebayanya dari seluruh negara yang sedang mengikuti ujian tersebut."
-    announcement_csp_deadline: "Panggilan terakhir untuk pengajar Sma! Ikuti pelajaran ilmu komputer di sekolah anda dan ajukan program pembelajaran profesional berkualitas tinggi <strong>gratis untuk anda atau sekolah anda</strong>. Aplikasi ditutup pada tanggal 14 April."
-    announcement_applab_export: "App Lab, bagian pemrograman berbasis web kami, sekarang mendukung pengiriman kode anda! Anda dapat mulai membuat aplikasi dengan blok JavaScript geser dan letakkan, lalu mengirim kode untuk terus diedit di bagian pengembangan profesional pilihan anda."
-    announcement_csp_survey: "<b>Selamat para guru Prinsip-prinsip Ilmu Komputer!</b><br/>Pelajar-pelajar Prinsip-prinsip Ilmu Komputer anda yang mengikuti ujian Penempatan Lanjutan Prinsip-prinsip Ilmu Komputer akan bergabung dengan lebih dari 50,000 pelajar-pelajar lainnya dalam Ujian Penempatan Lanjutan terbesar yang pernah di lakukan dalam sejarah. Sekarang, biarkan suara pelajar-pelajar anda didengarkan - ingatkan mereka untuk menyelesaikan survei akhir-belajar! Anda akan bisa meninjau jawaban pelajar-pelajar anda kami juga akan berbagi satu laporan nasional secara keseluruhan dengan anda."
-    announcement_navigation_redesign: "<b>Perubahan-perubahan Situs Navigasi yang akan datang</b><br/>Segera hadir musim panas ini, kami meningkatkan navigasi diseluruh situs Code.org sehingga anda selalu bisa mengakses sumber-sumber anda yang terbaik dari mana pun dari situs tersebut. Segera setelah anda masuk ke akun guru anda, setiap halaman akan memiliki panel navigasi yang baru dengan tautan-tautan ke beranda anda, program-program, Galeri Proyek, bagian-bagian naskah, dan Pembejalaran Profesional."
   move_students:
     new_section_dne: "Maaf, tapi bagian %{new_section_code} tidak ada. Harap masukkan kode bagian berbeda."
     section_code_cant_be_current_section: "Bagian saat ini tidak boleh sama dengan bagian yang baru."
@@ -617,6 +596,7 @@ id:
       audience: "Usia 13+"
       cta: "Pelajari caranya"
     hoc-encryption:
+      title: "Enkripsi sederhana"
       body: "Pelajar akan belajar cara untuk membuat dan memecahkan pesan terenkripsi."
     weblab:
       title: "Web Lab (beta)"
@@ -673,8 +653,6 @@ id:
     header_artist: "Artis"
     report_abuse: "Laporkan penyalahgunaan"
   landing:
-    prerelease: "Kursus ini dalam <span class='betatext'>beta</span>.  Ini bukan berarti sebuah kursus final dan ditujukan untuk revisi saat usulan diterima dan pengembangan dibuat."
-    prerelease_hoc2014: "Pedoman ini adalah dalam <span class='betatext'>versi beta</span>. Pedoman ini dapat direvisi seiring diterimanya masukan dan dibuatnya perbaikan."
     report_bug: "Laporkan kesalahan"
     support: "Dapatkan bantuan"
     support_url: "//support.code.org"
@@ -742,8 +720,6 @@ id:
   age_interstitial:
     age: Umur kamu
     header: Update informasi akun
-    message: "Kami dalam proses updating pengalaman kami untuk memberikan anda proteksi privasi yang lebih aman. Untuk melakukan ini, kami membutuhkan pengguna yang ada untuk memasukkan umur mereka di sini.<br/>Seperti biasanya, code.org tidak pernah menyewa, menjual dan membagi informasi ini terhadap pihak lain. "
-    sign_out: 'Jika Anda tidak ingin memasukkan umur kamu bisa<a href="%{url}">sign out</a>.'
   terms_interstitial:
     title: "Ketentuan Layanan dan Kebijakan Privasi yang Diperbarui"
     intro_desc: "Kami memperbarui Syarat dan Ketentuan dan Kebijakan Pribadi kami, seperti yang ditunjukkan di bawah ini. Perubahan tersebut berlaku efektif pada tanggal 24 Agustus 2016. Perubahan terbesar: kami akan <i>tidak lagi menyimpan alamat surel untuk akun siswa di Code Studio.</i> Ini adalah masalah besar bagi kami, dan kami berharap ini akan menjadi standar baru untuk privasi siswa dalam teknologi pendidikan. Kami sudah mengirimkan ringkasan perubahan lainnya melalui surel."
@@ -839,10 +815,8 @@ id:
   peer_review:
     accepted:
       name: 'Diterima'
-      description: '<strong>Ya</strong>, pengajuan ini <strong>memenuhi</strong> persyaratan'
     rejected:
       name: 'Ditolak'
-      description: '<strong>Tidak</strong>, pengajuan ini <strong>tidak memenuhi</strong> persyaratan'
     escalated:
       name: 'Meningkat'
       description: 'Saya ingin seorang instruktur untuk meninjau kiriman ini'
@@ -861,8 +835,10 @@ id:
     csf_f_2: 'Isi kursus F'
     csf_digcit: 'Kewarganegaraaan Digital'
     csf_jigsaw: 'Teka-teki'
+    csf_sequencing: 'Urutan'
     csf_loops: 'Loop'
     csf_events: 'kegiatan'
+    csf_online_safety: 'Keamanan daring'
     csf_binary: 'Biner'
     csf_conditionals: 'Kondisi'
     csf_nested_loops: 'Perulangan bercabang'
@@ -871,6 +847,7 @@ id:
     csf_for_loops: 'Untuk Pengulangan'
     csf_internet: 'Internet'
     csf_impacts: 'Dampak dari Komputasi'
+    csf_warmup: 'Berlatih'
     csd1_1: 'Bab 1: Proses Pemecahan Masalah'
     csd1_2: 'Bab 2: Komputer dan Pemecahan Masalah'
     csd2_1: 'Bab 1: Konten Web dan HTML'
@@ -899,13 +876,24 @@ id:
     csp_ap_3: 'Bab 3: AP Membuat Kinerja Tugas'
     csp_postap_1: 'Bab 1: Memanipulasi dan memvisualisasikan Data'
     csp_postap_2: 'Bab 2: Aplikasi dan Basis data'
+    csp2_1_2018: 'Unit 2: informasi digital'
     csp3_1_2018: 'Unit 3: Pengenalan Pemrograman'
+    csp4_1_2018: 'Unit 4: Big data dan privasi'
     csp_variables: 'variabel'
     csp_conditionals: 'Kondisi'
     csp_functions: 'fungsi'
+    csp_project: 'Proyek'
     csp_lists: 'List'
     csp_loops: 'Loop'
+    csp_traversals: 'Melintang'
+    csp_libraries: 'Perpustakaan'
+    csp_parameters_return_values: 'Parameter dan Nilai Balik'
     dlp: 'Anjuran Refleksi'
+    time4cs_c1: 'Everglades dan Ekosistemnya'
+    time4cs_c2: 'Tantai Makanan di Everglades'
+    time4cs_c3: 'Hidup di Everglades'
+    time4cs_c4: 'Dampak Invasi pada Everglades'
+    time4cs_c5: 'Masyarakat Mempengaruhi Perubahan di Everglades'
   external_links:
     disclaimer: Disclaimer
     leaving_domain: Anda sekarang meninggalkan domain ini, ke situs yang tidak dioperasikan oleh Code.org.
@@ -964,13 +952,15 @@ id:
     download_in_Vietnamese: 'Unduh dalam bahasa Vietnam:'
     windows: 'Windows (64-bit)'
     mac: 'Mac OS X'
-  stage_extras_teacher_message: "Anda memiliki pelajaran tambahan dimatikan untuk beberapa bagian Anda. Siswa Anda tidak akan melihat Halaman ini kecuali Anda hidupkan keduanya. Anda dapat mengaktifkan pelajaran tambahan dengan mengunjungi Anda <a href='http://code.org/teacher-dashboard'>Dashboard guru</a>."
   locked_stage: 'Isi dari tahap ini tidak terlihat karena tahap ini saat ini terkunci. Guru anda dapat membuka tahap ini saat ketika tiba waktu mengerjakannya atau meninjau kembali jawaban anda.'
   hidden_stage: "Guru anda tidak mengharapkan anda berada di sini. Silahkan tanyakan pada guru anda pelajaran mana yang harus anda ikuti."
   hidden_script: "Guru anda tidak mengharapkan anda berada di sini. Silahkan tanyakan pada guru anda ke unit mana anda harus ikuti."
+  no_script_access_student: "Anda tidak punya akses ke unit ini. Silahkan bertanya pada guru unit mana yang harus aktif."
+  no_script_access_teacher: "Anda tidak punya akses ke unit ini. Jika anda percaya anda harus mengakses unit ini,silahkan menulis untuk mendukung @code.org sehingga ketika kita dapat memperbaiki situasi\n"
   return_unit_overview: 'Pergi ke ikhtisar unit'
   return_course_overview: 'Pergi ke ikhtisar kursus'
   view_all_units: 'Melihat semua satuan'
+  view_teacher_guide: 'Lihat petunjuk guru'
   pd:
     form_labels:
       first_name: 'Nama Depan'
@@ -997,6 +987,20 @@ id:
         non_binary: 'Non-biner'
         not_listed: 'Istilah yang disukai tidak terdaftar'
         none: 'Memilih untuk tidak menjawab'
+      school_country:
+        canada: 'Kanada'
+        chile: 'Cili'
+        israel: 'Israel'
+        malaysia: 'Malaysia'
+        mexico: 'Meksiko'
+        thailand: 'Tailand'
+      ages:
+        ages_under_6: '6 tahun'
+        ages_7_8: '7- 8 tahun'
+        ages_9_10: '9-10 tahun'
+        ages_11_12: '11-12 tahun'
+        ages_13_14: '13-14 tahun'
+        ages_15_16: '15-16 tahun'
       subjects:
         cs: 'Ilmu komputer'
         math: 'Matematika'
@@ -1007,9 +1011,13 @@ id:
         lightbot: 'Lightbot'
       robotics:
         kodable: 'Kodable'
+      workshop_course:
+        csd: 'Penemuan CS'
+        csp: 'Aturan CS'
       email_opt_in:
         opt_in_yes: 'Ya'
         opt_in_no: 'Tidak'
+  courses_category: 'Seluruh kursus'
   cookie_banner:
     accept: 'Saya setuju'
   gdpr_dialog:

@@ -3,9 +3,12 @@ en-GB:
   data:
     block_categories:
       Actions: Actions
-      Color: Color
-      Logic: Logic
       Loops: Loops
+      Color: Color
       Math: Mathematics
-      Text: Text
+      Logic: Logic
       Variables: Variables
+      Text: Text
+      test: test
+      Name: Name
+      Function: Function

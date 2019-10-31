@@ -10,6 +10,6 @@
   "danceFeedbackNeedDifferentDance": "Sa pead teist tantsu kasutama.",
   "danceFeedbackNeedEveryTwoMeasures": "Tee kindlaks, et kasutad plokki `iga 2 ühiku järel`",
   "danceFeedbackNeedMakeANewDancer": "Kasuta `tee uus`plokki, et luua teine tantsija.",
-  "danceFeedbackKeyEvent": "",
+  "danceFeedbackKeyEvent": "Veendu, et lisad koodi 'kui võti' plokile ja vajuta võtit kui su tants käib.",
   "measure": "Ühik:"
 }

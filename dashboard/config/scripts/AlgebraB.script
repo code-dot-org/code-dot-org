@@ -1,5 +1,6 @@
 hidden false
 login_required true
+hideable_stages true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/algebra/courseB/{LESSON}'
 

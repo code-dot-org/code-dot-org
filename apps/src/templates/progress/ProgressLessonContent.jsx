@@ -4,7 +4,7 @@ import ProgressLevelSet from './ProgressLevelSet';
 import ProgressBubbleSet from './ProgressBubbleSet';
 import {levelType} from './progressTypes';
 import {progressionsFromLevels} from '@cdo/apps/code-studio/progressRedux';
-import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 const styles = {
   summary: {
@@ -51,7 +51,7 @@ export default class ProgressLessonContent extends React.Component {
     return (
       <div>
         <div style={styles.summary}>
-          <UnsafeRenderedMarkdown markdown={description || ''} />
+          <SafeMarkdown markdown={description || ''} />
         </div>
         {bubbles}
       </div>

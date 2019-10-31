@@ -1,5 +1,8 @@
 ---
 zu:
+  errors:
+    messages:
+      not_saved: 'Please correct the following errors:'
   cancel: Hoxisa
   continue: Qhubeka
   signup_form:

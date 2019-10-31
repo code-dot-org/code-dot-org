@@ -1,71 +1,756 @@
 ---
-bs:
+bs-BA:
   data:
-    external:
+    dsls:
+      2-3 Algorithms Multi 1:
+        title: Višestruki izbor
+        questions:
+        - text: Izaberi algoritam koji odgovara datoj slici.
+        answers:
+        - text: Započni sa kvadratom<br/>Stavi trokut iznad kvadrata<br/>Stavi trokut
+            ispod kvadrata
+        - {}
+        - text: Započnite s kvadratom<br/>Stavi paralelogram ispod kvadrata<br/>Stavite
+            trokut desno od paralelograma
+        - text: Započni sa kvadratom<br/>Stavi trokut ispod kvadrata<br/>Stavi paralelogram
+            desno od trokuta
+      2-3 Algorithms Multi 2:
+        title: Višestruki izbor
+        content1: Započni sa trokutom<br/>Stavi kvadrat ispod trokuta<br/>Stavi još
+          jedan trokut ispod kvadrata
+        questions:
+        - text: Koja slika <em>ne</em>predstavlja rezultat ovog algoritma?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Big Event Match 1:
+        title: Uparivanje
+        content2: Nađi odgovarajuće plesne pokrete za kombinaciju tipki.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Binary Match 1:
+        title: Uparivanje
+        content2: Upotrijebi ključ da nađeš odgovarajuće slovo za svaki kod
+        questions:
+        - text: "<strong>N</strong>"
+        - text: "<strong>O</strong>"
+        - text: "<strong>P</strong>"
+        - text: "<strong>Q</strong>"
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Conditionals Multi 1:
+        title: Višestruki izbor
+        questions:
+        - text: U skladu sa pravilima igre, koji skup karata je ispravno bodovan?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Getting Loopy Multi 1:
+        title: Višestruki izbor
+        questions:
+        - text: Kako bi ti pojednostavio/la ovaj niz sa petljama?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Graph Paper Match 1:
+        title: Uparivanje
+        content1: Uparite mrežu sa programom.
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 Graph Paper Multi 1:
+        title: Višestruki izbor
+        questions:
+        - text: Koji program crta ovu sliku?
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 Maze Match 2:
+        title: Uporedba za Labirint
+        content1: Nađi odgovarajuće blokove za ove zadatke
+        pre_title: Upute
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 Maze Multi 2:
+        title: 'Labirint: Višestruki izbor'
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Relay Programming Multi 1:
+        title: Višestruki izbor
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 Relay Programming Multi 2:
+        title: Višestruki izbor
+        questions:
+        - text: Koji slika-program kombinacija ne sadrži greške?
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 artist debug multi 1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 artist functions multi 1:
+        title: Umjetnik Funkcije Višestruki Izbor Jedan
+        questions:
+        - text: Izaberi ispravno blokove s kojima ćeš nacrtati ovu sliku koristeći
+            date funkcije
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 artist loops match 1:
+        content2: Nađi petlju koja odgovara obliku
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 artist loops multi 1:
+        title: Umjetnik Petlje Višestruki Izbor
+        questions:
+        - text: Koji je oblik napravljen s ovom petljom?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 artist loops multi 2:
+        title: Umjetnik Petlje Višestruki Izbor
+        questions:
+        - text: Koji oblik je napravljen ovim programom?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 artist match 1:
+        title: Podudaranje za Umjetnika
+        content1: Nađi oblik koji odgovara blokovima koji ga dovršavaju.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 bee conditionals multi 1:
+        questions:
+        - text: Koja od usporedbi ispod je tačna?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 bee conditionals multi 3:
+        questions:
+        - text: Odaberi najbolje blokove.
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 bee loops multi 1:
+        title: Pčela Petlje Višestruki Izbor Jedan
+        questions:
+        - text: S kojim blokovima možeš pokupiti sav nektar?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 maze match 1:
+        title: Uporedba za Labirint Jedan
+        content1: Nađi odgovarajuće blokove za ove zadatke
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 maze multi 1:
+        title: 'Labirint: Višestruki Izbor Jedan'
+        questions:
+        - text: Koji je blok naredbi tačan odgovor?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 Algorithms Match 1:
+        title: Uparivanje
+        content1: Uparite korake u igri sa Kockicama prema redoslijedu kojim treba
+          da se pojave u algoritmu.
+        questions:
+        - text: "<h4>1)</h4>"
+        - text: "<h4>2)</h4>"
+        - text: "<h4>3)</h4>"
+        - text: "<h4>4)</h4>"
+        answers:
+        - text: "<h4>Postavi bodove za Igrača 1 na 0</h4>"
+        - text: "<h4>Igrač 1 baca kockicu</h4>"
+        - text: "<h4>Dodaj bacanje kockice Igrača 1 ukupnom rezultatu</h4>"
+        - text: "<h4>Uporedi rezultate igrača da vidiš ko je pobijedio</h4>"
+      4-5 Algorithms Multi 1:
+        title: Višestruki izbor
+        questions:
+        - text: Za koji od ovih elemenata je najteže opisati algoritam?
+        answers:
+        - text: Pranje zubi
+        - text: Pečenje kolača
+        - text: Kupovanje sa liste za kupovinu
+        - text: Banana
+      4-5 Computational Thinking Match 1:
+        title: Uparivanje
+        content1: Svaki od ovih vozila je rastavljen u manje dijelove. Pronađi odgovarajuću
+          rastavljenu listu za svaki od vozila.
+        questions:
+        - text: "<h3>Točkovi/strana 2<br/>Prozor/strana: 0</h3>"
+        - text: "<h3>Točkovi/strana: 2<br/>Prozori/strana: 1</h3>"
+        - text: "<h3>Točkovi/strana: 2<br/>Prozori/strana: 6</h3>"
+        - text: "<h3>Točkovi/strana: 3<br/>Prozori/strana: 2</h3>"
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 Computational Thinking Multi 1:
+        title: Višestruki izbor
+        questions:
+        - text: Seattle je veliki grad.<br/>Eugene je grad srednje veličine<br/>Hillview
+            je mali grad.
+        answers:
+        - text: Seattle _____ jedan _____ _____.
+        - text: _____ je jedan _____ city.
+        - text: _____ je _____ jedan _____.
+        - text: Eugene je jedan _____ grad.
+      4-5 Crowdsourcing Multi 1:
+        title: Višestruki izbor
+        questions:
+        - text: Koja od ovih rečenica predstavlja crowdsourcing (angažovanje javnosti)?
+        answers:
+        - {}
+        - {}
+      4-5 Crowdsourcing Multi 2:
+        title: Višestruki izbor
+        questions:
+        - text: Koja od ovih aktivnosti bi bila najbolja za praktikovanje crowdsourcing-a?
+        answers:
+        - text: Čišćenje tvoje kuće
+        - text: Jedenje tvog deserta
+        - text: Češljanje tvoje kose
+        - text: Pranje tvog lica
+      4-5 Digital Footprint Multi 1:
+        title: Višestruki izbor
+        questions:
+        - text: Koje od navedenih informacija je u redu podijeliti na Internetu?
+        answers:
+        - text: Tvoj rođendan
+        - text: Tvoja omiljena hrana
+        - text: Tvoja adresa
+        - text: Broj kreditne kartice tvojih roditelja
+      4-5 Internet Multi 1:
+        title: Višestruki izbor
+        questions:
+        - text: Kada se pokušaš prijaviti na code.org, na koju IP adresu će te DNS
+            najvjerojatnije odvesti?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 Internet Multi 2:
+        title: Višestruki izbor
+        questions:
+        - text: Ukoliko te DNS odvede na stranicu s IP adresom 100.42.50.110, na kojoj
+            se mrežnoj stranici nalaziš?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 Songwriting Multi 1:
+        title: Višestruki izbor
+        questions:
+        - {}
+        answers:
+        - text: Lou, Lou, skoči do mog Lou,
+        - text: Lou, Lou, skoči do mog Lou, <br/>Lou, Lou, skoči do mog Lou, <br/>Lou,
+            Lou, skoči do mog Lou, <br/>Skoči do mog Lou, moja draga.
+        - {}
+        - {}
+      4-5 Suncatchers Match 1:
+        title: Uparivanje
+        content1: Upari svaki program sa riječju koju stvara koristeći ponuđeni set
+          vještina.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - text: "<h4>STACK</h4>"
+        - text: "<h4>STAMP</h4>"
+        - text: "<h4>STAR</h4>"
+        - text: "<h4>RAMP</h4>"
+      4-5 Suncatchers Multi 1:
+        title: Višestruki izbor
+        questions:
+        - text: Koji od programa dolje <em>ne</em> pravi tačno istu sekvencu kao Program
+            1?
+        answers:
+        - {}
+        - {}
+        - {}
+      4-5 artist loops multi 1:
+        title: Umjetnik Petlje Višestruki Izbor
+        questions:
+        - text: Koji blokovi će kreirati ovaj dizajn?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 artist multi 1:
+        title: Umjetnik Višestruki Izbor
+        questions:
+        - text: Koji  blokovi crtaju pravougaonik sa obimom od 100?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 artist multi 2:
+        title: Umjetnik Višestruki Izbor
+        questions:
+        - text: Koji crtež je simetričan?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 bee conditionals multi 1:
+        title: Pčela Uvjeti Višestruki Izbor
+        questions:
+        - text: Odaberi najbolje blokove.
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 bee debug multi 1:
+        title: Otkrivanje Grešaka za Pčelu Višestruki Izbor
+        questions:
+        - text: Koja verzija funkcije će raditi?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 bee loops multi 1:
+        title: Petlje za Pčelu Višestruki Izbor
+        questions:
+        - text: Koji blokovi će riješiti ovaj zadatak?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 maze conditionals multi 1:
+        title: Labirint Uvjeti Višestruki Izbor
+        questions:
+        - text: Koji blokovi rješavaju ovaj zadatak?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 maze match 1:
+        title: Uporedba za Labirint
+        content1: Nađi odgovarajuće blokove za ove zadatke
+        pre_title: Upute
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      4-5 maze multi 1:
+        title: 'Labirint: Višestruki izbor'
+        questions:
+        - text: Koji blokovi rješavaju ovaj zadatak?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       Begin planning your project:
-        content1: opis ovdje
         title: naslov
+        content1: opis ovdje
       Begin planning your project_2018:
         content1: opis ovdje
       Begin planning your project_2018_2019:
         content1: opis ovdje
+      CSD Header Size MC:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD Header Size MC_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD Header Size MC_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U2 Design Project:
-        content1: opis ovdje
         title: naslov
+        content1: opis ovdje
       CSD U2 Design Project_2018:
-        content1: opis ovdje
         title: naslov
+        content1: opis ovdje
       CSD U2 Design Project_2018_2019:
-        content1: opis ovdje
         title: naslov
-      CSD U2 L1 Overview:
         content1: opis ovdje
-        title: naslov
       CSD U2 L2 Overview:
-        content1: opis ovdje
         title: naslov
+        content1: opis ovdje
       CSD U2 L3 Overview:
-        content1: opis ovdje
         title: naslov
+        content1: opis ovdje
       CSD U2 L4 Overview:
-        content1: opis ovdje
         title: naslov
+        content1: opis ovdje
       CSD U2 L5 Overview:
-        content1: opis ovdje
         title: naslov
+        content1: opis ovdje
       CSD U2 L6 Overview:
-        content1: opis ovdje
         title: naslov
+        content1: opis ovdje
       CSD U2 Lesson 6 Overview:
         content1: opis ovdje
       CSD U2 expand project:
-        content1: opis ovdje
         title: naslov
+        content1: opis ovdje
       CSD U2 expand project_2018:
-        content1: opis ovdje
         title: naslov
+        content1: opis ovdje
       CSD U2 expand project_2018_2019:
-        content1: opis ovdje
         title: naslov
+        content1: opis ovdje
+      CSD U2 image debug match:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 lists match:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 lists match_2018:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 lists match_2018_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U2 project guide:
         content1: opis ovdje
       CSD U2 project guide_2018:
         content1: opis ovdje
       CSD U2 project guide_2018_2019:
         content1: opis ovdje
+      CSD U3 - conditionals - Matching:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 - conditionals - Matching_2018:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 - conditionals - Matching_2018_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC:
+        title: naslov
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018:
+        title: naslov
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018_2019:
+        title: naslov
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U3 Card Examples_2018:
         content1: opis ovdje
       CSD U3 Card Examples_2018_2019:
         content1: opis ovdje
+      CSD U3 Functions Prediction define first:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Functions Prediction define first_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Functions Prediction define first_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Keypress Matching:
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      CSD U3 Keypress Matching_2018:
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      CSD U3 Keypress Matching_2018_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprite Movement Predict Multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprites intro predict multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprites intro predict multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprites intro predict multi_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U3 combining rep:
-        content1: opis ovdje
         title: naslov
+        content1: opis ovdje
       CSD U3 combining rep_2018:
-        content1: opis ovdje
         title: naslov
+        content1: opis ovdje
       CSD U3 combining rep_2018_2019:
-        content1: opis ovdje
         title: naslov
+        content1: opis ovdje
+      CSD U3 drawSprites placement match:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 drawSprites placement match_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U3 game intro:
         content1: opis ovdje
       CSD U3 game intro_2018:
@@ -79,14 +764,14 @@ bs:
       CSD U3 platform intro_2018_2019:
         content1: opis ovdje
       CSD U5 Encryption 1:
-        content1: opis ovdje
         title: naslov
+        content1: opis ovdje
       CSD U5 Encryption 1_2018:
-        content1: opis ovdje
         title: naslov
+        content1: opis ovdje
       CSD U5 Encryption 1_2018_2019:
-        content1: opis ovdje
         title: naslov
+        content1: opis ovdje
       CSD U5 Encryption 2:
         content1: opis ovdje
       CSD U5 Encryption 2_2018:
@@ -94,8 +779,8 @@ bs:
       CSD U5 Encryption 2_2018_2019:
         content1: opis ovdje
       CSD U5 L13 SFLP Interpreting Data:
-        content1: opis ovdje
         title: naslov
+        content1: opis ovdje
       CSD U5 crosstab warmup:
         content1: opis ovdje
       CSD U5 crosstab warmup_2018:
@@ -103,1266 +788,971 @@ bs:
       CSD U5 crosstab warmup_2018_2019:
         content1: opis ovdje
       CSD U5 data visualization:
-        content1: opis ovdje
         title: naslov
+        content1: opis ovdje
       CSD U5 data visualization_2018:
-        content1: opis ovdje
         title: naslov
+        content1: opis ovdje
       CSD U5 data visualization_2018_2019:
-        content1: opis ovdje
         title: naslov
+        content1: opis ovdje
       CSD U5 student record:
-        content1: opis ovdje
         title: naslov
+        content1: opis ovdje
       CSD U5 student record_2018:
-        content1: opis ovdje
         title: naslov
+        content1: opis ovdje
       CSD U5 student record_2018_2019:
-        content1: opis ovdje
         title: naslov
+        content1: opis ovdje
       CSD U6 LED create intro:
         content1: opis ovdje
       CSD U6 LED create intro_2018:
         content1: opis ovdje
       CSD U6 LED create intro_2018_2019:
         content1: opis ovdje
+      CSD U6 array multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U6 array multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U6 array multi_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U6 final intro:
         content1: opis ovdje
       CSD U6 final intro_2018:
         content1: opis ovdje
       CSD U6 final intro_2018_2019:
         content1: opis ovdje
+      CSD U6 setProperty predict multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U6 setProperty predict multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       Internet Simulator Setup:
         content1: opis ovdje
       Internet Simulator Setup 2:
-        content1: opis ovdje
         title: naslov
+        content1: opis ovdje
       Internet Simulator Setup 3:
         content1: opis ovdje
+      K-1 Artist 1 Multi 1:
+        title: Višestruki izbor
+        questions:
+        - text: Koji blokovi rješavaju ovaj zadatak?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Artist 1 Multi 2:
+        title: Višestruki izbor
+        questions:
+        - text: Koji blokovi crtaju ovaj kvadrat?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Artist 2 Match 2:
+        title: Uparivanje
+        content2: Upari oblike na temelju njihovog tipa.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Bee 1 Multi 1:
+        title: Višestruki izbor
+        questions:
+        - text: Koliko je ovo nektara?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Bee 1 Multi 2:
+        title: Višestruki izbor
+        questions:
+        - text: Koliko je ovo nektara?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Bee Loops Match 1:
+        title: Uparivanje
+        content2: Upari blokove.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Big Event Match 1:
+        title: Uparivanje
+        content2: Nađi odgovarajuće plesne pokrete za kombinaciju tipki.
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Digital Footprint Multi 1:
+        title: Višestruki izbor
+        questions:
+        - text: Koja životinja ima digitalni otisak koji je čini <strong>skoro najviše
+            nesigurnom</strong>?
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Getting Loopy Multi 1:
+        title: Višestruki izbor
+        questions:
+        - text: Kako bi ti pojednostavio/la ovaj niz sa petljama?
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Happy Maps Multi 1:
+        title: Višestruki izbor
+        questions:
+        - text: Koja strelica dovodi Flurb-a do blaga?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Keep it Private Multi 1:
+        title: Višestruki izbor
+        questions:
+        - text: Koju informaciju <strong>ne</strong> bi trebao/la dijeliti online?
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Maze Debugging Multi 1:
+        title: Višestruki izbor
+        questions:
+        - text: Koji blok bi trebao biti konačan odabir?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Maze Loops Multi 1:
+        title: Višestruki izbor
+        questions:
+        - text: Koji je blok ponavljanja isti?
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Maze Loops Multi 2:
+        title: Višestruki izbor
+        questions:
+        - text: Izaberi ispravan blok ponavljanja.
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Maze Match 1:
+        title: Uparivanje
+        content2: Upari zadatke i blokove
+        pre_title: Upute
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Maze Multiple Choice 2:
+        title: Labirint
+        questions:
+        - text: Koji odgovor rješava ovaj nivo?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Move It Multi 1:
+        title: Višestruki izbor
+        questions:
+        - text: Koji algoritam dovodi Flurb-a do cvijeća?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Plant a Seed Multi 1:
+        title: Višestruki izbor
+        questions:
+        - text: Koji korak bi trebao ići na početak ovog algorithma?
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Plant a Seed Multi 2:
+        title: Višestruki izbor
+        questions:
+        - text: Koji korak bi trebao popuniti prazninu u ovom algoritmu?
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Word Search Multi 1:
+        title: Višestruki izbor
+        questions:
+        - text: Koji blokovi speluju "MOVE"?
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Word Search Multi 3:
+        title: Višestruki izbor
+        questions:
+        - text: Koja je riječ napisana ili spelovana?
+        answers:
+        - text: POSTAVI
+        - text: KVADRAT
+        - text: JUG
       Multi-Screen Apps:
-        content1: opis ovdje
         title: naslov
+        content1: opis ovdje
       New Challenge Introduction:
-        content1: opis ovdje
         title: naslov
+        content1: opis ovdje
       OPD-K5 Stage3aGo:
-        content1: opis ovdje
         title: naslov
+        content1: opis ovdje
       Prepare for your presentation:
-        content1: opis ovdje
         title: naslov
+        content1: opis ovdje
       'Technique: Frequency Analysis':
         content1: opis ovdje
       Terminology Recap:
         content1: opis ovdje
-    match:
-      2-3 Big Event Match 1:
-        content2: Nađi odgovarajuće plesne pokrete za kombinaciju tipki.
-        title: Uparivanje
-      2-3 Binary Match 1:
-        content2: Upotrijebi ključ da nađeš odgovarajuće slovo za svaki kod
-        questions:
-        - text: "<strong>N</strong>"
-        - text: "<strong>O</strong>"
-        - text: "<strong>P</strong>"
-        - text: "<strong>Q</strong>"
-        title: Uparivanje
-      2-3 Graph Paper Match 1:
-        content1: Uparite mrežu sa programom.
-        title: Uparivanje
-      2-3 Maze Match 2:
-        content1: Nađi odgovarajuće blokove za ove zadatke
-        pre_title: Upute
-        title: Uporedba za Labirint
-      2-3 artist loops match 1:
-        content2: Nađi petlju koja odgovara obliku
-      2-3 artist match 1:
-        content1: Nađi oblik koji odgovara blokovima koji ga dovršavaju.
-        title: Podudaranje za Umjetnika
-      2-3 maze match 1:
-        content1: Nađi odgovarajuće blokove za ove zadatke
-        title: Uporedba za Labirint Jedan
-      4-5 Algorithms Match 1:
-        answers:
-        - text: "<h4>Postavi bodove za Igrača 1 na 0</h4>"
-        - text: "<h4>Igrač 1 baca kockicu</h4>"
-        - text: "<h4>Dodaj bacanje kockice Igrača 1 ukupnom rezultatu</h4>"
-        - text: "<h4>Uporedi rezultate igrača da vidiš ko je pobijedio</h4>"
-        content1: Uparite korake u igri sa Kockicama prema redoslijedu kojim treba
-          da se pojave u algoritmu.
-        questions:
-        - text: "<h4>1)</h4>"
-        - text: "<h4>2)</h4>"
-        - text: "<h4>3)</h4>"
-        - text: "<h4>4)</h4>"
-        title: Uparivanje
-      4-5 Computational Thinking Match 1:
-        content1: Svaki od ovih vozila je rastavljen u manje dijelove. Pronađi odgovarajuću
-          rastavljenu listu za svaki od vozila.
-        questions:
-        - text: "<h3>Točkovi/strana 2<br/>Prozor/strana: 0</h3>"
-        - text: "<h3>Točkovi/strana: 2<br/>Prozori/strana: 1</h3>"
-        - text: "<h3>Točkovi/strana: 2<br/>Prozori/strana: 6</h3>"
-        - text: "<h3>Točkovi/strana: 3<br/>Prozori/strana: 2</h3>"
-        title: Uparivanje
-      4-5 Suncatchers Match 1:
-        answers:
-        - text: "<h4>STACK</h4>"
-        - text: "<h4>STAMP</h4>"
-        - text: "<h4>STAR</h4>"
-        - text: "<h4>RAMP</h4>"
-        content1: Upari svaki program sa riječju koju stvara koristeći ponuđeni set
-          vještina.
-        title: Uparivanje
-      4-5 maze match 1:
-        content1: Nađi odgovarajuće blokove za ove zadatke
-        pre_title: Upute
-        title: Uporedba za Labirint
-      K-1 Artist 2 Match 2:
-        content2: Upari oblike na temelju njihovog tipa.
-        title: Uparivanje
-      K-1 Bee Loops Match 1:
-        content2: Upari blokove.
-        title: Uparivanje
-      K-1 Big Event Match 1:
-        content2: Nađi odgovarajuće plesne pokrete za kombinaciju tipki.
-        title: Uparivanje
-      K-1 Maze Match 1:
-        content2: Upari zadatke i blokove
-        pre_title: Upute
-        title: Uparivanje
-    multi:
-      2-3 Algorithms Multi 1:
-        answers:
-        - text: Započni sa kvadratom<br/>Stavi trokut iznad kvadrata<br/>Stavi trokut
-            ispod kvadrata
-          correct: false
-        - correct: true
-        - text: Započnite s kvadratom<br/>Stavi paralelogram ispod kvadrata<br/>Stavite
-            trokut desno od paralelograma
-          correct: false
-        - text: Započni sa kvadratom<br/>Stavi trokut ispod kvadrata<br/>Stavi paralelogram
-            desno od trokuta
-          correct: false
-        questions:
-        - text: Izaberi algoritam koji odgovara datoj slici.
-        title: Višestruki izbor
-      2-3 Algorithms Multi 2:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        content1: Započni sa trokutom<br/>Stavi kvadrat ispod trokuta<br/>Stavi još
-          jedan trokut ispod kvadrata
-        questions:
-        - text: Koja slika <em>ne</em>predstavlja rezultat ovog algoritma?
-        title: Višestruki izbor
-      2-3 Conditionals Multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: U skladu sa pravilima igre, koji skup karata je ispravno bodovan?
-        title: Višestruki izbor
-      2-3 Getting Loopy Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: Kako bi ti pojednostavio/la ovaj niz sa petljama?
-        title: Višestruki izbor
-      2-3 Graph Paper Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Koji program crta ovu sliku?
-        title: Višestruki izbor
-      2-3 Maze Multi 2:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        title: 'Labirint: Višestruki izbor'
-      2-3 Relay Programming Multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        title: Višestruki izbor
-      2-3 Relay Programming Multi 2:
-        answers:
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Koji slika-program kombinacija ne sadrži greške?
-        title: Višestruki izbor
-      2-3 artist debug multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      2-3 artist functions multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Izaberi ispravno blokove s kojima ćeš nacrtati ovu sliku koristeći
-            date funkcije
-        title: Umjetnik Funkcije Višestruki Izbor Jedan
-      2-3 artist loops multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Koji je oblik napravljen s ovom petljom?
-        title: Umjetnik Petlje Višestruki Izbor
-      2-3 artist loops multi 2:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Koji oblik je napravljen ovim programom?
-        title: Umjetnik Petlje Višestruki Izbor
-      2-3 bee conditionals multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Koja od usporedbi ispod je tačna?
-      2-3 bee conditionals multi 3:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Odaberi najbolje blokove.
-      2-3 bee loops multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: S kojim blokovima možeš pokupiti sav nektar?
-        title: Pčela Petlje Višestruki Izbor Jedan
-      2-3 maze multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Koji je blok naredbi tačan odgovor?
-        title: 'Labirint: Višestruki Izbor Jedan'
-      4-5 Algorithms Multi 1:
-        answers:
-        - text: Pranje zubi
-          correct: false
-        - text: Pečenje kolača
-          correct: false
-        - text: Kupovanje sa liste za kupovinu
-          correct: false
-        - text: Banana
-          correct: true
-        questions:
-        - text: Za koji od ovih elemenata je najteže opisati algoritam?
-        title: Višestruki izbor
-      4-5 Computational Thinking Multi 1:
-        answers:
-        - text: Seattle _____ jedan _____ _____.
-          correct: false
-        - text: _____ je jedan _____ city.
-          correct: true
-        - text: _____ je _____ jedan _____.
-          correct: false
-        - text: Eugene je jedan _____ grad.
-          correct: false
-        questions:
-        - text: Seattle je veliki grad.<br/>Eugene je grad srednje veličine<br/>Hillview
-            je mali grad.
-        title: Višestruki izbor
-      4-5 Crowdsourcing Multi 1:
-        answers:
-        - 
-        - correct: true
-        questions:
-        - text: Koja od ovih rečenica predstavlja crowdsourcing (angažovanje javnosti)?
-        title: Višestruki izbor
-      4-5 Crowdsourcing Multi 2:
-        answers:
-        - text: Čišćenje tvoje kuće
-          correct: true
-        - text: Jedenje tvog deserta
-          correct: false
-        - text: Češljanje tvoje kose
-          correct: false
-        - text: Pranje tvog lica
-          correct: false
-        questions:
-        - text: Koja od ovih aktivnosti bi bila najbolja za praktikovanje crowdsourcing-a?
-        title: Višestruki izbor
-      4-5 Digital Footprint Multi 1:
-        answers:
-        - text: Tvoj rođendan
-          correct: false
-        - text: Tvoja omiljena hrana
-          correct: true
-        - text: Tvoja adresa
-          correct: false
-        - text: Broj kreditne kartice tvojih roditelja
-          correct: false
-        questions:
-        - text: Koje od navedenih informacija je u redu podijeliti na Internetu?
-        title: Višestruki izbor
-      4-5 Internet Multi 1:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Kada se pokušaš prijaviti na code.org, na koju IP adresu će te DNS
-            najvjerojatnije odvesti?
-        title: Višestruki izbor
-      4-5 Internet Multi 2:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Ukoliko te DNS odvede na stranicu s IP adresom 100.42.50.110, na kojoj
-            se mrežnoj stranici nalaziš?
-        title: Višestruki izbor
-      4-5 Songwriting Multi 1:
-        answers:
-        - text: Lou, Lou, skoči do mog Lou,
-          correct: false
-        - text: Lou, Lou, skoči do mog Lou, <br/>Lou, Lou, skoči do mog Lou, <br/>Lou,
-            Lou, skoči do mog Lou, <br/>Skoči do mog Lou, moja draga.
-          correct: true
-        - 
-        - 
-        title: Višestruki izbor
-      4-5 Suncatchers Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Koji od programa dolje <em>ne</em> pravi tačno istu sekvencu kao Program
-            1?
-        title: Višestruki izbor
-      4-5 artist loops multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Koji blokovi će kreirati ovaj dizajn?
-        title: Umjetnik Petlje Višestruki Izbor
-      4-5 artist multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Koji  blokovi crtaju pravougaonik sa obimom od 100?
-        title: Umjetnik Višestruki Izbor
-      4-5 artist multi 2:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Koji crtež je simetričan?
-        title: Umjetnik Višestruki Izbor
-      4-5 bee conditionals multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Odaberi najbolje blokove.
-        title: Pčela Uvjeti Višestruki Izbor
-      4-5 bee debug multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Koja verzija funkcije će raditi?
-        title: Otkrivanje Grešaka za Pčelu Višestruki Izbor
-      4-5 bee loops multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: Koji blokovi će riješiti ovaj zadatak?
-        title: Petlje za Pčelu Višestruki Izbor
-      4-5 maze conditionals multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: Koji blokovi rješavaju ovaj zadatak?
-        title: Labirint Uvjeti Višestruki Izbor
-      4-5 maze multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: Koji blokovi rješavaju ovaj zadatak?
-        title: 'Labirint: Višestruki izbor'
-      CSD Header Size MC:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD Header Size MC_2018:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD Header Size MC_2018_2019:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD U3 Boolean MC:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        title: naslov
-      CSD U3 Boolean MC_2018:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        title: naslov
-      CSD U3 Boolean MC_2018_2019:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        title: naslov
-      CSD U3 Functions Prediction define first:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Functions Prediction define first_2018:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Functions Prediction define first_2018_2019:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Sprite Movement Predict Multi:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Sprite Movement Predict Multi_2018:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Sprite Movement Predict Multi_2018_2019:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Sprites intro predict multi:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD U3 Sprites intro predict multi_2018:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD U3 Sprites intro predict multi_2018_2019:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD U6 array multi:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-      CSD U6 array multi_2018:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-      CSD U6 array multi_2018_2019:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-      CSD U6 setProperty predict multi:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U6 setProperty predict multi_2018:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U6 setProperty predict multi_2018_2019:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      K-1 Artist 1 Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Koji blokovi rješavaju ovaj zadatak?
-        title: Višestruki izbor
-      K-1 Artist 1 Multi 2:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: Koji blokovi crtaju ovaj kvadrat?
-        title: Višestruki izbor
-      K-1 Bee 1 Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Koliko je ovo nektara?
-        title: Višestruki izbor
-      K-1 Bee 1 Multi 2:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Koliko je ovo nektara?
-        title: Višestruki izbor
-      K-1 Digital Footprint Multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Koja životinja ima digitalni otisak koji je čini <strong>skoro najviše
-            nesigurnom</strong>?
-        title: Višestruki izbor
-      K-1 Getting Loopy Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Kako bi ti pojednostavio/la ovaj niz sa petljama?
-        title: Višestruki izbor
-      K-1 Happy Maps Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Koja strelica dovodi Flurb-a do blaga?
-        title: Višestruki izbor
-      K-1 Keep it Private Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Koju informaciju <strong>ne</strong> bi trebao/la dijeliti online?
-        title: Višestruki izbor
-      K-1 Maze Debugging Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: Koji blok bi trebao biti konačan odabir?
-        title: Višestruki izbor
-      K-1 Maze Loops Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Koji je blok ponavljanja isti?
-        title: Višestruki izbor
-      K-1 Maze Loops Multi 2:
-        answers:
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Izaberi ispravan blok ponavljanja.
-        title: Višestruki izbor
-      K-1 Maze Multiple Choice 2:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Koji odgovor rješava ovaj nivo?
-        title: Labirint
-      K-1 Move It Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Koji algoritam dovodi Flurb-a do cvijeća?
-        title: Višestruki izbor
-      K-1 Plant a Seed Multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Koji korak bi trebao ići na početak ovog algorithma?
-        title: Višestruki izbor
-      K-1 Plant a Seed Multi 2:
-        answers:
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Koji korak bi trebao popuniti prazninu u ovom algoritmu?
-        title: Višestruki izbor
-      K-1 Word Search Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Koji blokovi speluju "MOVE"?
-        title: Višestruki izbor
-      K-1 Word Search Multi 3:
-        answers:
-        - text: POSTAVI
-          correct: false
-        - text: KVADRAT
-          correct: true
-        - text: JUG
-          correct: false
-        questions:
-        - text: Koja je riječ napisana ili spelovana?
-        title: Višestruki izbor
       behaviors 1 predict:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - correct: false
-          feedback: Netačno
+        - {}
+        - {}
+        - {}
+        - feedback: Netačno
       behaviors 4 predict:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - correct: false
-          feedback: Netačno
+        - {}
+        - {}
+        - {}
+        - feedback: Netačno
       courseC_multi_artist_prog6_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_artist_prog6_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_artist_prog6_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_harvester_loops11_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_harvester_loops11_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_harvester_loops11_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_maze_debugging8_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_maze_debugging8_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_maze_debugging8_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_maze_programming8_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_maze_programming8_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_maze_programming8_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_starWars_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
         - text: Ne znam
-          correct: false
       courseC_multi_starWars_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
         - text: Ne znam
-          correct: false
       courseC_multi_starWars_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
         - text: Ne znam
-          correct: false
       courseC_multi_starWars_predict2:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_starWars_predict2_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_starWars_predict2_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_artist_binary8_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_artist_binary8_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_artist_binary8_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_artist_nestedLoops9_predict1:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_conditionals1_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_conditionals1_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_conditionals7_predict2:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_conditionals7_predict2_2018:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_conditionals7_predict2_2018_2019:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_nestedLoops2_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_nestedLoops2_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_nestedLoops9_predict2:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_nestedLoops9_predict2_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_collector_debugging10_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_condLoops9_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_ramp13:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_while10_predict2:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_while10_predict2_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_while10_predict2_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_while4_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_while4_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_while4_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_maze_until10_predict2:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_maze_until10_predict2_2018:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_maze_until10_predict2_2018_2019:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_maze_until2_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_maze_until2_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_maze_until2_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_scrat_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseE_multi_artist_predict1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_multi_bee_functions_predict1:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_multi_farmer_functions11_predict:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_multi_farmer_functions11_predict_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_multi_farmer_functions11_predict_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
-      courseE_multi_farmer_predict1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - text: Ne znam
-          correct: false
-      courseE_multi_farmer_predict2:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseE_multi_maze_predict1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_prediction_artistFunction1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_prediction_artistFunction1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_prediction_artistFunction1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_bee_variables_8a_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_bee_variables_8a_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_for10_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_for10_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_for10_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_fwp2_predict1:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
-      courseF_multi_artist_predict1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_variables3a_predict1:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_variables3a_predict1_2018:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_variables3a_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_bee_conditionals1_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_bee_conditionals7_predict2:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_bee_for3_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_bee_for3_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_bee_for3_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_bee_fwp9_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_playlab_variables4c_predictive1:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       coursee_prediction_artistfunction2:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       coursee_prediction_artistfunction2_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       coursee_prediction_artistfunction2_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       grade2_multi_collector_A_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       grade2_multi_collector_A_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       grade2_multi_collector_A_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}

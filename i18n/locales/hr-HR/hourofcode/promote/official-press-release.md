@@ -1,9 +1,8 @@
 ---
-title: <%= hoc_s(:title_press_release).inspect %>
-layout: wide
-nav: promote_nav
+title: Priopćenje za tisak Sata kodiranja za izabrane dužnosnike
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # Uzorak za tisak za izabrane dužnosnike
 
@@ -44,4 +43,4 @@ Over 100 million students worldwide have already tried an Hour of Code. Thanks t
 
 For more information about [**EVENT/PROGRAM/ETC**], visit [**INSERT WEBSITE**] or contact [**INSERT CONTACT INFORMATION**]
 
-<%= view :signup_button %>
+{{ signup_button }}

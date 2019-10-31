@@ -1,5 +1,10 @@
 import Firebase from 'firebase';
-import {loadConfig, getDatabase, showRateLimitAlert} from './firebaseUtils';
+import {
+  loadConfig,
+  getProjectDatabase,
+  showRateLimitAlert
+} from './firebaseUtils';
+import {WarningType} from './constants';
 
 /**
  * @fileoverview
@@ -21,18 +26,20 @@ import {loadConfig, getDatabase, showRateLimitAlert} from './firebaseUtils';
  * @returns {Promise}
  */
 export function enforceTableCount(config, tableName) {
-  const tablesRef = getDatabase().child(`counters/tables`);
+  const tablesRef = getProjectDatabase().child(`counters/tables`);
   return tablesRef.once('value').then(snapshot => {
     if (
       snapshot.numChildren() >= config.maxTableCount &&
       snapshot.child(tableName).val() === null
     ) {
-      return Promise.reject(
-        `Table '${tableName}' cannot be written to because the ` +
+      return Promise.reject({
+        type: WarningType.MAX_TABLES_EXCEEDED,
+        msg:
+          `Table '${tableName}' cannot be written to because the ` +
           `maximum number of tables (${
             config.maxTableCount
           }) has been exceeded.`
-      );
+      });
     }
     return Promise.resolve(config);
   });
@@ -56,7 +63,9 @@ export function updateTableCounters(tableName, rowCountChange, updateNextId) {
       return Promise.resolve(config);
     })
     .then(config => {
-      const tableRef = getDatabase().child(`counters/tables/${tableName}`);
+      const tableRef = getProjectDatabase().child(
+        `counters/tables/${tableName}`
+      );
       return updateTableCountersHelper(
         tableRef,
         updateNextId,
@@ -141,7 +150,7 @@ function updateTableCountersHelper(
  * @returns {Promise}
  */
 function incrementIntervalCounters(maxWriteCount, interval, currentTimeMs) {
-  const limitRef = getDatabase().child(`counters/limits/${interval}`);
+  const limitRef = getProjectDatabase().child(`counters/limits/${interval}`);
   const intervalMs = Number(interval) * 1000;
   return limitRef
     .transaction(limitData => {
@@ -269,7 +278,7 @@ export function incrementRateLimitCounters() {
  * @returns {Promise<number>} The current server time in milliseconds.
  */
 function getCurrentTime() {
-  const serverTimeRef = getDatabase().child('serverTime');
+  const serverTimeRef = getProjectDatabase().child('serverTime');
   return serverTimeRef.set(Firebase.ServerValue.TIMESTAMP).then(() => {
     return serverTimeRef.once('value').then(snapshot => snapshot.val());
   });
@@ -281,7 +290,9 @@ function getCurrentTime() {
  * current table, or 0 if no rows exist in the table or the table does not exist.
  */
 export function getLastRecordId(tableName) {
-  const lastIdRef = getDatabase().child(`counters/tables/${tableName}/lastId`);
+  const lastIdRef = getProjectDatabase().child(
+    `counters/tables/${tableName}/lastId`
+  );
   return lastIdRef.once('value').then(snapshot => {
     return snapshot.val() || 0;
   });

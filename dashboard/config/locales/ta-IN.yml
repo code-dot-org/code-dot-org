@@ -37,8 +37,6 @@ ta:
   next_page: அடுத்த பக்கம்
   cancel: ரத்து செய்
   or: அல்லது
-  add_teacher_form:
-    submit: ஆசிரியரை சேர்
   add_hint_form:
     placeholder: உங்கள் குறிப்பை இங்கே உள்ளிடவும்
     submit: உதவிக்குறிப்பு சேர்
@@ -108,13 +106,14 @@ ta:
   teacher:
     panel:
       student: மாணவர்
+  user:
+    update_email: புதுப்பிக்கவும்
   user_level:
     completed: நிறைவடைந்தது
     tried: முயற்சிக்கப்பட்டது
   home:
     classroom: உங்கள் வகுப்பறை
     trynow: இப்பொழுது முயற்சிக்கவும்
-    announcement_try_now_button: இப்பொழுது முயற்சிக்கவும்
   user_type:
     student: மாணவர்
   dialog:

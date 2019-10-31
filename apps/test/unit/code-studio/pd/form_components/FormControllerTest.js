@@ -214,24 +214,20 @@ describe('FormController', () => {
     });
 
     describe('validateCurrentPageRequiredFields()', () => {
-      let sandbox;
-      before(() => {
-        sandbox = sinon.createSandbox();
-      });
       afterEach(() => {
-        sandbox.restore();
+        sinon.restore();
       });
 
       let render;
       before(() => {
         // Skip rendering
-        render = sandbox.stub(DummyForm.prototype, 'render');
+        render = sinon.stub(DummyForm.prototype, 'render');
         render.returns(null);
       });
 
       let getRequiredFields;
       const stubRequiedFields = requriredFields => {
-        getRequiredFields = sandbox.stub(
+        getRequiredFields = sinon.stub(
           DummyForm.prototype,
           'getRequiredFields'
         );
@@ -285,7 +281,7 @@ describe('FormController', () => {
           page1Field3: 'will be modified'
         };
 
-        const processPageData = sandbox.stub(DummyPage1, 'processPageData');
+        const processPageData = sinon.stub(DummyPage1, 'processPageData');
         processPageData.withArgs(pageData).returns({
           page1Field2: undefined,
           page1Field3: 'modified'

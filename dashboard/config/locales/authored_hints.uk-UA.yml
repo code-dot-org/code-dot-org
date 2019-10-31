@@ -25,8 +25,6 @@ uk-UA:
         2-3_Artist_4_a: Щоб закінчити будинок, все що нам потрібно - це намалювати
           квадрат!
       2-3 Artist 6:
-        2-3_Artist_6_a: 'Щоб зробити ці маленькі кути, тобі потрібно повернути _далі_
-          кожного разу, а не як у випадку із квадратом.   '
         2-3_Artist_6_b: Оскільки я вже стикаюсь праворуч, то найлегше почати шляхом
           переміщення вперед, а потім зробити поворот вліво для створення трикутника.
         2-3_Artist_6_c: У кожної сторони трикутника є довжини, як у кожної сторони
@@ -38,7 +36,7 @@ uk-UA:
       2-3 Artist 8:
         2-3_Artist_8_a: Якщо ви нарізати 200 наполовину, скільки пікселів шириною
           має кожний квадрат бути?
-      2-3 Artist 9:
+      2-3 Artist 9 NEW:
         2-3_Artist_9_a: Цей алмаз дійсно просто квадрат на його боці
       2-3 Artist Debugging 2:
         2-3_Artist_Debugging_2_a: 'Підказка: кожен вусик завдовжки 75 пікселів.'
@@ -49,9 +47,6 @@ uk-UA:
       2-3 Artist Debugging 7:
         2-3_Artist_Debugging_7_a: Що станеться, якщо ви рухаєтеся художником або стрибаєте
           назад, коли малює перший рядок?
-      2-3 Artist Debugging 8:
-        2-3_Artist_Debugging_8_a: Скільки разів моя форма повторювалася? Скільки разів
-          \* має \* форму повторювати? Де ви можете змінити це в програмі?
       2-3 Artist Debugging 9:
         2-3_Artist_Debugging_9_a: Мистецтво потрібно повернути на 60 градусів, перш
           ніж почати малювати!
@@ -235,7 +230,6 @@ uk-UA:
       4-5 Artist 7:
         4-5_Artist_7_a: Який кут є найменшим? На якому куті стоїть художник?
       4-5 Artist 9:
-        4-5_Artist_9_a: 'Коли трикутник є рівностороним, всі сторони і всі кути однакові.  '
         4-5_Artist_9_b: Вам потрібно буде намалювати три трикутника одного розміру.
           Не забудьте перейти на нове місце після кожного.
       4-5 Artist Assessment 1:
@@ -315,9 +309,6 @@ uk-UA:
           половини шестикутника \*\*, а потім \*\* 2/3 трикутника \*\*.
         Course_4_Artist_12_b: Форма одиниці практично така ж, як і в останній головоломці,
           за винятком того, що пів шестигранник трохи більший.
-        Course_4_Artist_12_c: 1.  Перші три рядки мають довжину 60 пікселів, і вам
-          потрібно повернути 60 градусів. 2) Наступні два рядки довжина 80 пікселів,
-          і вам потрібно повернути 120 градусів
       Course 4 Artist 6:
         Course_4_Artist_6_a: Є 3 трикутники в межах 360 градусів обертання ... скільки
           разів 3 йде в 360?
@@ -366,72 +357,6 @@ uk-UA:
       Course 4 Artist Functions Inspiration:
         Course_4_Artist_Functions_Inspiration_b: Спробуйте повернути на більш ніж
           90 градусів за межами `повторного циклу` але всередині `для циклу`.
-        Course_4_Artist_Functions_Inspiration_c: |-
-          \*\* Рішення: \*\*
-
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="controls_for_counter" inline="true">
-          <mutation counter="counter"></mutation>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">14</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="draw_colour" inline="true" id="draw-color">
-          <value name="COLOUR">
-          <block type="colour_random"/>
-          </value>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="procedures_callnoreturn">
-          <mutation name="draw a square 20"></mutation>
-          <next>
-          <block type="jump_by_constant">
-          <title name="DIR">jumpForward</title>
-          <title name="VALUE">20</title>
-          <next>
-          <block type="draw_turn_by_constant">
-          <title name="DIR">turnRight</title>
-          <title name="VALUE">3</title>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          <next>
-          <block type="draw_turn_by_constant">
-          <title name="DIR">turnLeft</title>
-          <title name="VALUE">100</title>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </xml>
       Course 4 Artist Functions challenge:
         Course_4_Artist_Functions_challenge_a: Частина розуміння того, як використовувати
           функції, - з'ясувати, які саме вам потрібні, а які ти не маєте.
@@ -509,14 +434,11 @@ uk-UA:
           (120 пікселів далі, ніж функція переміщення вниз / вперед).
       Course 4 SCF 1a:
         Course_4_SCF_1a_a: Запам'ятайте свої функції зі стадії 16.
-        Course_4_SCF_1a_b: "Подивіться на цей шлях як ваш основний маршрут:  \n\n![](https://images.code.org/1c3feab70af706409b3a05af4dc83c2e-image-1469726967858.png)"
         Course_4_SCF_1a_c: Ви повинні розглянути можливість використання `для циклу`
           Не для кроків, а для параметра функції.
       Course 4 SCF 1b:
         Course_4_SCF_1b_a: Зверніть увагу, що форма всіх медоносних точок аналогічна.
           Гарне місце для функції!
-        Course_4_SCF_1b_b: "Подивіться на цю ідею про те, як бджола може подорожувати:
-          \ \n\n![](https://images.code.org/996ab4a2de6048cbb99b84c56cc4ad61-image-1469726859769.png)"
         Course_4_SCF_1b_c: Ви повинні розглянути можливість використання `для циклу`
           на відстані, яке подорожує бджола.
       Course 4 SCF 2:
@@ -706,10 +628,6 @@ uk-UA:
         brush_width: Ми встановили ширину щітки до 1, а потім колір до синього, перш
           ніж ми зробили що-небудь ще.
         double_loop: Спробуйте вставити "for loop" всередині циклу `repeat`.
-        specifics: "Для циклу \"для циклу\" три до сімнадцяти для кожного з шести
-          \"пелюсток\", перш ніж продовжувати створювати наступні фігури з лише непарною
-          кількістю сторін. \n\nБлок `set alpha` використовує розділ, щоб зменшити
-          колір, оскільки лічильник отримує вищий рівень."
         after: Коли ви закінчите з кожним "пелюстком", переконайтеся, що "переміщаєтеся
           вперед" 20 пікселів перед тим, як зробити 60 градусів обертання.
       Overworld House Frame Chosen:
@@ -1144,6 +1062,11 @@ uk-UA:
         courseC_harvester_loops_challenge2_a: Один із способів вирішити це виглядає
           як зигзаг. Інший спосіб виглядає як спіраль! Існує безліч різних рішень
           для загадки, як це. Бути наполегливим!
+      courseC_maze_debugging1:
+        courseC_maze_debugging1_a: |-
+          -   Чи все працює після першого кроку?
+          -   Чи він все ще працює після другого?
+          -   Звідки пішло не так?
       courseC_maze_debugging1_2018:
         courseC_maze_debugging1_a: |-
           -   Чи все працює після першого кроку?
@@ -1154,6 +1077,13 @@ uk-UA:
           -   Чи все працює після першого кроку?
           -   Чи він все ще працює після другого?
           -   Звідки пішло не так?
+      courseC_maze_debugging2:
+        courseC_maze_debugging2_b: |-
+          -   Чи все працює після першого кроку?
+          -   Чи він все ще працює після другого?
+          -   Звідки пішло не так?
+        courseC_maze_debugging2_c: Не можете зрозуміти, що не так? Спробуйте запустити
+          код кілька разів, щоб побачити, що станеться.
       courseC_maze_debugging2_2018:
         courseC_maze_debugging2_b: |-
           -   Чи все працює після першого кроку?
@@ -1168,15 +1098,20 @@ uk-UA:
           -   Звідки пішло не так?
         courseC_maze_debugging2_c: Не можете зрозуміти, що не так? Спробуйте запустити
           код кілька разів, щоб побачити, що станеться.
+      courseC_maze_debugging3:
+        courseC_maze_debugging3_b: Не можете зрозуміти, що не так? Спробуйте запустити
+          код кілька разів, щоб побачити, що станеться.
       courseC_maze_debugging3_2018:
         courseC_maze_debugging3_b: Не можете зрозуміти, що не так? Спробуйте запустити
           код кілька разів, щоб побачити, що станеться.
       courseC_maze_debugging3_2019:
         courseC_maze_debugging3_b: Не можете зрозуміти, що не так? Спробуйте запустити
           код кілька разів, щоб побачити, що станеться.
-      courseC_maze_debugging5:
-        courseD_collector_debugging5_b: Як тільки у вас є перший цикл так, як ви хочете,
-          що залишилося у вашому коді?
+      courseC_maze_debugging7:
+        courseC_maze_debugging7_a: |-
+          -   Чи все працює на першому кроці?
+          -   Як на рахунок другого кроку?
+          -   Звідки це не так?
       courseC_maze_debugging7_2018:
         courseC_maze_debugging7_a: |-
           -   Чи все працює на першому кроці?
@@ -1614,11 +1549,10 @@ uk-UA:
       courseD_maze_until5:
         courseD_maze_until5_c: Після кожного кроку, зомбі повинні перевірити, чи є
           шлях наліво. Що він повинен зробити, якщо знайде його?
-      courseD_scrat_predict1:
-        courseF_maze_ramp6_a: Існує два способи вирішити цю загадку!
-        courseF_maze_ramp6_c: Не бійся помилятися! Спробуйте додати блоки та запустити
-          код, щоб побачити, що станеться, навіть якщо ви не думаєте, що ви вирішили
-          головоломку ще.
+      courseD_scrat_ramp1:
+        courseC_maze_programming1_b: Не бійся помилятися! Спробуйте додати блоки та
+          запустити код, щоб побачити, що станеться, навіть якщо ви не думаєте, що
+          ви вирішили головоломку ще.
       courseD_scrat_ramp4:
         courseC_maze_programming4_c: Не бійся помилятися! Спробуйте додати блоки та
           запустити код, щоб побачити, що станеться, навіть якщо ви не думаєте, що
@@ -1626,20 +1560,17 @@ uk-UA:
       courseD_scrat_ramp5:
         courseC_maze_programming5_b: Як далеко потрібно рухатися, щоб дістатися до
           кута?
-      courseD_scrat_ramp6:
-        courseC_maze_programming6_a: Існує два способи вирішити цю загадку!
-        courseC_maze_programming6_c: Не бійся помилятися! Спробуйте додати блоки та
-          запустити код, щоб побачити, що станеться, навіть якщо ви не думаєте, що
-          ви вирішили головоломку ще.
       courseD_scrat_ramp7:
+        courseD_scrat_programming6_a: Існує два способи вирішити цю загадку!
+        courseD_scrat_programming6_c: Не бійся помилятися! Спробуйте додати блоки
+          та запустити код, щоб побачити, що станеться, навіть якщо ви не думаєте,
+          що ви вирішили головоломку ще.
+      courseD_scrat_ramp8:
         courseD_maze_ramp7_b: Не забудьте скористатися кнопкою "Крок", щоб пройти
           через блок по блоках і шукати помилки.
         courseD_maze_ramp7_c: Не бійся помилятися! Спробуйте додати блоки та запустити
           код, щоб побачити, що станеться, навіть якщо ви не думаєте, що ви вирішили
           головоломку ще.
-      courseD_video_repeatUntil:
-        courseE_farmer_ramp12c: Не бійся помилятися! Спробуйте додати блоки та запустити
-          код, щоб побачити, що станеться, навіть якщо ви ще не вирішили головоломку.
       courseE_artist_concept4:
         courseE_artist_concept4_c: Після нанесення лінії квадратів ви можете обернутись
           і намалювати чергу лінійки квадратів, що йдуть зліва, або ви можете перейти

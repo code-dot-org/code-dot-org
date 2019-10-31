@@ -1,12 +1,16 @@
 ---
-ta-IN:
+ta:
   data:
     block_categories:
       Actions: செயல்கள்
-      Color: நிறம்
-      Functions: செயல்பாடுகள்
-      Logic: தர்க்கம்
       Loops: சுழற்சிகள்
+      Functions: செயல்பாடுகள்
+      Color: நிறம்
       Math: கணிதம்
-      Text: உரை
+      Logic: தர்க்கம்
       Variables: மாறிலிகள்
+      Text: உரை
+      Start: தொடங்குக
+      test: சோதனை
+      Name: பெயர்
+      Function: இயக்கி

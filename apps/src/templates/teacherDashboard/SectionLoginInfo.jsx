@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import Button from '@cdo/apps/templates/Button';
-import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import oauthSignInButtons from '../../../static/teacherDashboard/oauthSignInButtons.png';
 import googleSignInButton from '../../../static/teacherDashboard/googleSignInButton.png';
 import syncGoogleClassroom from '../../../static/teacherDashboard/syncGoogleClassroom.png';
@@ -111,7 +111,7 @@ class OAuthLogins extends React.Component {
         <br />
         <h1>{i18n.syncingYourStudents()}</h1>
         <div>
-          <UnsafeRenderedMarkdown
+          <SafeMarkdown
             markdown={i18n.syncingYourStudentsDescription({
               loginType: loginTypeLabel,
               url: getManageStudentsUrl(sectionId)
@@ -167,7 +167,7 @@ class EmailLogins extends React.Component {
         <p>{i18n.loginInfo_signingInDescription()}</p>
         <br />
         <h1>{i18n.loginInfo_resetTitle()}</h1>
-        <UnsafeRenderedMarkdown
+        <SafeMarkdown
           markdown={i18n.loginInfo_resetPasswordBody({
             url: getManageStudentsUrl(sectionId)
           })}
@@ -256,7 +256,7 @@ class WordOrPictureLogins extends React.Component {
         </p>
         <br />
         <h1>{i18n.loginInfo_resetTitle()}</h1>
-        <UnsafeRenderedMarkdown
+        <SafeMarkdown
           markdown={i18n.loginInfo_resetSecretBody({
             url: manageStudentsUrl
           })}
@@ -264,7 +264,7 @@ class WordOrPictureLogins extends React.Component {
         <br />
         <h1>{i18n.printLoginCards_title()}</h1>
         {students.length < 1 && (
-          <UnsafeRenderedMarkdown
+          <SafeMarkdown
             markdown={i18n.loginInfo_noStudents({url: manageStudentsUrl})}
           />
         )}

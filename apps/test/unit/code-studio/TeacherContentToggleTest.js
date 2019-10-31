@@ -100,6 +100,58 @@ describe('TeacherContentToggle', () => {
     assert.equal(hiddenStageElement.style.display, 'none');
   });
 
+  it('shows content after async calls when Teacher is authorized', () => {
+    const component = mount(
+      <TeacherContentToggle
+        isBlocklyOrDroplet={false}
+        viewAs="Teacher"
+        hiddenStagesInitialized={true}
+        sectionsAreLoaded={true}
+        isHiddenStage={false}
+        isLockedStage={false}
+      />,
+      {attachTo: renderElement}
+    );
+
+    const root = $(component.html());
+    const [
+      contentElement,
+      lockedStageElement,
+      hiddenStageElement
+    ] = root.children().toArray();
+
+    assert.equal(contentElement.style.display, '');
+    assert.equal(contentElement.style.visibility, '');
+    assert.equal(lockedStageElement.style.display, 'none');
+    assert.equal(hiddenStageElement.style.display, 'none');
+  });
+
+  it('shows lock message after async calls when Teacher is unauthorized', () => {
+    const component = mount(
+      <TeacherContentToggle
+        isBlocklyOrDroplet={false}
+        viewAs="Teacher"
+        hiddenStagesInitialized={true}
+        sectionsAreLoaded={true}
+        isHiddenStage={false}
+        isLockedStage={true}
+      />,
+      {attachTo: renderElement}
+    );
+
+    const root = $(component.html());
+    const [
+      contentElement,
+      lockedStageElement,
+      hiddenStageElement
+    ] = root.children().toArray();
+
+    assert.equal(contentElement.style.display, 'none');
+    assert.equal(contentElement.style.visibility, '');
+    assert.equal(lockedStageElement.style.display, '');
+    assert.equal(hiddenStageElement.style.display, 'none');
+  });
+
   it('does not initially show anything when viewAs Student', () => {
     const component = mount(
       <TeacherContentToggle

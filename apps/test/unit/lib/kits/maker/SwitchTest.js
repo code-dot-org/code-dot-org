@@ -1,4 +1,4 @@
-import {expect} from '../../../../util/configuredChai';
+import {expect} from '../../../../util/deprecatedChai';
 import sinon from 'sinon';
 import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
 import Switch, {
@@ -60,11 +60,14 @@ describe('Switch', () => {
     });
   });
 
-  describe('events', () => {
+  describe('open events', () => {
     let testObj, openSpy, closeSpy, changeSpy;
 
     beforeEach(() => {
       testObj = new Switch({});
+      // When the johnny five switch is initialized,
+      // it emits an event to represent the initial state
+      fakeJohnnyFiveSwitch.emit('close');
       openSpy = sinon.spy();
       closeSpy = sinon.spy();
       changeSpy = sinon.spy();
@@ -82,15 +85,6 @@ describe('Switch', () => {
       );
     });
 
-    it("emits 'close' and 'change' when the first event from the inner controller is 'close'", () => {
-      fakeJohnnyFiveSwitch.emit('close');
-      expect(openSpy).not.to.have.been.called;
-      expect(closeSpy).to.have.been.calledOnce;
-      expect(changeSpy).to.have.been.calledOnce.and.calledWith(
-        testObj.closeValue
-      );
-    });
-
     it("does not emit extra 'open' events", () => {
       fakeJohnnyFiveSwitch.emit('open');
       fakeJohnnyFiveSwitch.emit('open');
@@ -99,6 +93,40 @@ describe('Switch', () => {
       expect(closeSpy).not.to.have.been.called;
       expect(changeSpy).to.have.been.calledOnce.and.calledWith(
         testObj.openValue
+      );
+    });
+
+    it("emits events when changing from 'open' to 'close' or back", () => {
+      fakeJohnnyFiveSwitch.emit('open');
+      fakeJohnnyFiveSwitch.emit('close');
+      fakeJohnnyFiveSwitch.emit('open');
+      fakeJohnnyFiveSwitch.emit('close');
+      expect(openSpy).to.have.been.calledTwice;
+      expect(closeSpy).to.have.been.calledTwice;
+      expect(changeSpy).to.have.callCount(4);
+    });
+  });
+
+  describe('close events', () => {
+    let testObj, openSpy, closeSpy, changeSpy;
+
+    beforeEach(() => {
+      testObj = new Switch({});
+      fakeJohnnyFiveSwitch.emit('open');
+      openSpy = sinon.spy();
+      closeSpy = sinon.spy();
+      changeSpy = sinon.spy();
+      testObj.on('open', openSpy);
+      testObj.on('close', closeSpy);
+      testObj.on('change', changeSpy);
+    });
+
+    it("emits 'close' and 'change' when the first event from the inner controller is 'close'", () => {
+      fakeJohnnyFiveSwitch.emit('close');
+      expect(openSpy).not.to.have.been.called;
+      expect(closeSpy).to.have.been.calledOnce;
+      expect(changeSpy).to.have.been.calledOnce.and.calledWith(
+        testObj.closeValue
       );
     });
 
@@ -111,16 +139,6 @@ describe('Switch', () => {
       expect(changeSpy).to.have.been.calledOnce.and.calledWith(
         testObj.closeValue
       );
-    });
-
-    it("emits events when changing from 'open' to 'close' or back", () => {
-      fakeJohnnyFiveSwitch.emit('open');
-      fakeJohnnyFiveSwitch.emit('close');
-      fakeJohnnyFiveSwitch.emit('open');
-      fakeJohnnyFiveSwitch.emit('close');
-      expect(openSpy).to.have.been.calledTwice;
-      expect(closeSpy).to.have.been.calledTwice;
-      expect(changeSpy).to.have.callCount(4);
     });
   });
 });

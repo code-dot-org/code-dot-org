@@ -25,8 +25,6 @@ lt-LT:
         2-3_Artist_4_a: Norint pabaigti namą, viskas ką mums reikia padaryti, tai
           nupiešti kvadratą!
       2-3 Artist 6:
-        2-3_Artist_6_a: 'Norint padaryti mažesnius kampus, reikia pasisukti _daugiau_
-          laipsnių.   '
         2-3_Artist_6_b: Kadangi aš jau esu atsisukęs į dešinę pusę, lengviausia būtų
           pradėti judinant mane pirmyn, o tada pasukti mane kairėn, kad gautųsi trikampis.
         2-3_Artist_6_c: 'Visos trikampio kraštinės yra vienodo ilgio: 100 pikselių!'
@@ -36,11 +34,9 @@ lt-LT:
           tada piešk antrąjį kvadratą.
       2-3 Artist 8:
         2-3_Artist_8_a: Koks bus kiekvieno kvadrato plotis, jei 200 padalinsi iš dviejų?
-      2-3 Artist 9:
+      2-3 Artist 9 NEW:
         2-3_Artist_9_a: Šis rombas iš tikrųjų yra pasisukęs kvadratas
       2-3 Artist Debugging 10:
-        2-3_Artist_Debugging_10_a: Prisimink, kad tau reikia 10 pikselių _platesnio_
-          pliuso. Taigi, _pridėk_ 10 prie skaičiaus, kurį jau naudoji.
         2-3_Artist_Debugging_10_b: |-
           **Klaidų ieškojimas jau čia!**
           Pradėk ieškoti klaidų pakeisdama(-s) po vieną skaičių.
@@ -55,11 +51,6 @@ lt-LT:
       2-3 Artist Debugging 7:
         2-3_Artist_Debugging_7_a: Kas nutiks, jeigu menininkas pajudės arba peršoks
           atgal, nupiešęs pirmąją liniją?
-      2-3 Artist Debugging 8:
-        2-3_Artist_Debugging_8_a: |-
-          Kiek kartų buvo nupiešta ta pati figūra?
-          Kiek kartų figūra _turėtų_ būti nupiešta?
-          Kurioje programos vietoje tai galima pakeisti?
       2-3 Artist Debugging 9:
         2-3_Artist_Debugging_9_a: Prieš pradėdamas piešti, menininkas turi pasisukti
           į kairę 60 laipsnių daugiau!
@@ -89,49 +80,6 @@ lt-LT:
         2-3_Artist_Functions_4_a: Menininkas turi pasisukti 120 laipsnių, prieš piešdamas
           naują kvadratą.
       2-3 Artist Loops New 11:
-        2-3_Artist_Loops_New_11_a: |-
-          Prisimink, kad paskutinės užduoties kodas buvo:
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="controls_repeat">
-
-          <title name="TIMES">8</title>
-          <statement name="DO">
-          <block type="draw_colour" inline="true">
-          <value name="COLOUR">
-          <block type="colour_random"/>
-          </value>
-          <next>
-          <block type="draw_turn_by_constant_dropdown">
-          <title name="DIR">turnRight</title>
-          <title name="VALUE" config="45,60,90,120,180">45</title>
-          <next>
-          <block type="draw_move_by_constant">
-          <title name="DIR">moveForward</title>
-          <title name="VALUE">50</title>
-          <next>
-          <block type="draw_turn_by_constant_dropdown">
-          <title name="DIR">turnLeft</title>
-          <title name="VALUE" config="45,60,90,120,180">90</title>
-          <next>
-          <block type="draw_move_by_constant">
-          <title name="DIR">moveForward</title>
-          <title name="VALUE">50</title>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </xml>
         2-3_Artist_Loops_New_11_b: Naujas posūkis turi būti _paskutinis_ kartojimo
           viduje.
       2-3 Artist Loops New 12:
@@ -144,14 +92,6 @@ lt-LT:
       2-3 Artist Loops New 13:
         2-3_Artist_Loops_New_13_a: Kai menininkas nubrėžia kiekvieną rombą, jis jau
           žiūri reikiama kryptimi, kuria reikia brėžti kitą rombą.
-        2-3_Artist_Loops_New_13_b: |-
-          Kad nubrėžtų kiekvieną rombą, menininkas turi:
-          – judėti
-          – pasisukti 120 laipsnių
-          – pajudėti
-          – pasisukti 60 laipsnių
-
-          O tada visa tai reikia pakartoti!
       2-3 Artist Loops New 9:
         2-3_Artist_Loops_New_9_a: Prieš pradėdamas piešti, menininkas turi pasisukti
           45 laipsnius dešinėn.

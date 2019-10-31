@@ -1,18 +1,17 @@
 ---
-title: <%= hoc_s(:title_past_posters).inspect %>
-layout: wide
-nav: promote_nav
+title: 往年的编程一小时海报
 ---
-<%= view :signup_button %>
 
-# Past Hour of Code Posters
+{{ signup_button }}
 
-### Find our posters from previous years to print and hang in your classroom! Looking for the newest posters? [Click here](<%= resolve_url('/promote/resources#posters') %>).
+# 往年的编程一小时海报
+
+### Find our posters from previous years to print and hang in your classroom! Looking for the newest posters? [Click here]({{ promote/promote_posters_url }}).
 
 * * *
 
 <br />
 
-<%= view :promote_posters %>
+{{ promote_posters }}
 
-<%= view :signup_button %>
+{{ signup_button }}

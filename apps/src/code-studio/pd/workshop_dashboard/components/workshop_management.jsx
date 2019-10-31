@@ -69,7 +69,7 @@ export class WorkshopManagement extends React.Component {
 
     let new_csf_201 =
       workshop_date >= new Date('2019-05-20') &&
-      this.props.subject === 'Deep Dive';
+      this.props.subject === SubjectNames.SUBJECT_CSF_201;
 
     return (
       new_local_summer_and_teachercon || new_facilitator_weekend || new_csf_201
@@ -165,6 +165,10 @@ export class WorkshopManagement extends React.Component {
   }
 
   render() {
+    const confirmationBodyText =
+      "Are you sure you want to delete this workshop? Once deleted it can't be recovered. " +
+      'Participants will not be notified. Please reach out to them directly before deleting.';
+
     return (
       <div>
         {this.renderViewButton()}
@@ -176,7 +180,7 @@ export class WorkshopManagement extends React.Component {
           onOk={this.handleDeleteConfirmed}
           onCancel={this.handleDeleteCanceled}
           headerText="Delete Workshop"
-          bodyText="Are you sure you want to delete this workshop? Once deleted it can't be recovered."
+          bodyText={confirmationBodyText}
         />
       </div>
     );

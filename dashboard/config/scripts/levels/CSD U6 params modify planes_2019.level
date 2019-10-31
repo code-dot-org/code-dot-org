@@ -120,17 +120,18 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
     "palette_category_at_start": "functions",
-    "encrypted_examples": "FsB52mhQqyOQSQOQPqhParSnHQEM6e/uRBuXo21bclNNDAItyGd1mjA3Fpwo\noZ/MCcyGkyNtsr3/pSC7fG+Qhg==\n",
+    "encrypted_examples": "RGFz5gN7LJVF/0woN4tgHTCyF/48wyhXjZ4Re6TPOKuWZeSQ140IXV1T6dOX\neMRQbZXEv88s/3UJdcd+2lS0ElF1KmNZd8PHwy25IwPmH5MigIHwZvIM3Cfe\nzFALmJtj0sERqB1LcPW3gBLDlU+IHQ==\n",
     "parent_level_id": 12510,
     "name_suffix": "_2019",
-    "preload_asset_list": null,
     "map_reference": "/docs/concepts/javascript/functions/",
     "mini_rubric": "false",
-    "text_mode_at_start": "false"
+    "text_mode_at_start": "false",
+    "preload_asset_list": null,
+    "encrypted": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-01-11 00:04:33 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-02-01 17:51:18 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-02-02 20:45:03 +0000\",\"changed\":[\"code_functions\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-03-16 19:23:12 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2019-03-11 08:21:56 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-11 08:22:34 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"map_reference\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-01-11 00:04:33 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-02-01 17:51:18 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-02-02 20:45:03 +0000\",\"changed\":[\"code_functions\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-03-16 19:23:12 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2019-03-11 08:21:56 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-11 08:22:34 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"map_reference\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-07-17 17:26:08 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

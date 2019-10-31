@@ -24,7 +24,7 @@ namespace :build do
       RakeUtils.npm_rebuild 'phantomjs-prebuilt'
 
       ChatClient.log 'Building <b>apps</b>...'
-      npm_target = (rack_env?(:development) || ENV['CI']) ? 'build' : 'build:dist'
+      npm_target = CDO.optimize_webpack_assets ? 'build:dist' : 'build'
       RakeUtils.system "npm run #{npm_target}"
       File.write(commit_hash, calculate_apps_commit_hash)
     end
@@ -95,9 +95,13 @@ namespace :build do
         end
       end
 
-      # Skip asset precompile in development where `config.assets.digest = false`.
-      # Also skip on CI services (e.g. Circle) where we will precompile assets later, right before UI tests.
-      unless rack_env?(:development) || ENV['CI']
+      # Skip asset precompile in development.
+      if CDO.optimize_rails_assets
+        # If we did not optimize webpack assets, then rails asset precompilation
+        # will add digests to the names of webpack assets, after which webpack
+        # will be unable to find them.
+        raise "do not optimize rails assets without optimized webpack assets" unless CDO.optimize_webpack_assets
+
         ChatClient.log 'Cleaning <b>dashboard</b> assets...'
         RakeUtils.rake 'assets:clean'
         ChatClient.log 'Precompiling <b>dashboard</b> assets...'
@@ -133,17 +137,11 @@ namespace :build do
     end
   end
 
-  task :restart_process_queues do
-    ChatClient.log 'Restarting <b>process_queues</b>...'
-    RakeUtils.restart_service 'process_queues'
-  end
-
   tasks = []
   tasks << :apps if CDO.build_apps
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
   tasks << :tools if rack_env?(:staging)
-  tasks << :restart_process_queues if CDO.process_queues
   task all: tasks
 end
 

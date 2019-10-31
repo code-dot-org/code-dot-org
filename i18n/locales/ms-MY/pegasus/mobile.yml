@@ -291,8 +291,6 @@
   course1_name: "Kursus 1"
   course2_name: "Kursus 2"
   course3_name: "Kursus 3"
-  math_category_name: "Matematik"
-  hoc_category_name: "Hour of Code"
   codeorg_gradelevel: "Peringkat umur 4-104 tahun"
   codeintl_gradelevel: "Peringkat umur 4-104 tahun"
   khan_gradelevel: "Sekolah Menengah +"

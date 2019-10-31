@@ -192,6 +192,7 @@ ko-KR:
       frozen freeplay:
         snowflake_dropdown: 다른 모양의 눈송이를 만들기 위해서 사용해 보세요.
       frozen line:
+        run: '"실행하기"를 눌러 프로그램을 실행시켜보세요'
         move_elsa_forward: '"앞으로 이동" 블럭을 드래그해서 "실행하면" 블럭의 아래에 붙여 엘사가 앞으로 이동하게 해보세요.'
       frozen perpendicular:
         turn_elsa: '"돌기(회전)" 블럭을 사용해 엘사가 방향을 바꾸도록 해보세요. 선택 메뉴에서의 수는 엘사가 회전해야할 정도를

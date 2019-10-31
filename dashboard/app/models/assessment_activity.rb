@@ -6,7 +6,7 @@
 #  user_id         :integer          not null
 #  level_id        :integer          not null
 #  script_id       :integer          not null
-#  level_source_id :integer
+#  level_source_id :integer          unsigned
 #  attempt         :integer
 #  test_result     :integer
 #  created_at      :datetime         not null

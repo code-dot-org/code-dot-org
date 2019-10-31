@@ -1590,3 +1590,11 @@ eu:
               name: Baldintzak
             Functions:
               name: Funtzioak
+            Sprite Properties:
+              name: Sprite-n Propietateak
+        peru-2019:
+          stages:
+            Introduction:
+              name: Sarrera
+            Nested Loops:
+              name: Kabiatutako begiztak

@@ -69,8 +69,6 @@ module Pd::SurveyPipeline
 
             if question[:type] == TYPE_MATRIX && ans.is_a?(Array)
               ans.each do |sub_ans|
-                next if sub_ans[:answer].blank?
-
                 # Create a new question for each sub question and add it to question list.
                 # Its id and name are generated based on the parent's id and name.
                 new_qid = compute_descendant_key(qid, sub_ans[:text])
@@ -84,6 +82,7 @@ module Pd::SurveyPipeline
                 )
                 parsed_questions[form_id][new_qid] = new_question
 
+                next if sub_ans[:answer].blank?
                 # Create flatten question-answer record
                 results << shared_submission_info.
                   merge(new_question).

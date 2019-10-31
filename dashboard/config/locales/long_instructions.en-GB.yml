@@ -2,80 +2,10 @@
 en-GB:
   data:
     long_instructions:
-      2-3 Artist 3.4: |-
-        The jump block moves the artist without drawing.
-        Draw the dashed line using both the `jump forward` and `move forward` blocks.
-        Each line is 50 pixels long.
       2-3 Artist 4: Help me complete the house for this cat.
-      2-3 Artist 9: Finish this kite
-      2-3 Artist Debugging 10: "The direction pad on my game controller\nis too narrow.
-        \\\r\n\\\r\nCan you make it wider by 10 pixels?\\\r\n\\\r\nTry running\nthe
-        code first to see what's wrong."
-      2-3 Artist Debugging 11: "My snowflake is falling apart!\\\r\n\\\r\nCan\nyou
-        figure out what's going wrong?"
-      2-3 Artist Debugging 2: "This code for the cat's whiskers is wrong.\n\\\r\n\\\r\nFix
-        this code to draw whiskers that are all the same length."
-      2-3 Artist Debugging 3: "My boat has a hole! \\\r\n\\\r\nWhat do you\nneed to
-        fix to make the ends meet?"
-      2-3 Artist Debugging 5: "The code that we have for the leg and\nfoot is wrong.
-        \\\r\n\\\r\nCan you fix it?"
-      2-3 Artist Debugging 6: "Looks like I'm sitting on a chair that’s\nmissing a
-        leg!\\\r\n\\\r\nEdit the code to draw the last leg."
-      2-3 Artist Debugging 7: "Looks like the C in code is drawn backwards!\\\r\n\\\r\nCan\nyou
-        make it look like a C again?"
-      2-3 Artist Debugging 8: "My teacher says that I should finish what\nI start!\\\r\n\\\r\nHelp
-        me finish my pinwheel. Can you figure out what's wrong?"
-      2-3 Artist Debugging 9: "Something is off!\\\r\n\\\r\nThe code for\nthis stem
-        is wrong. Can you figure out how to get the artist to trace the\nstem the
-        right way?"
+      2-3 Artist 9 NEW: Finish this kite
       2-3 Artist Free Play: Free-play! Draw anything you'd like.
-      2-3 Artist Functions 11.5: "Here's that same `draw a hexagon`\nfunction. \\\r\n\\\r\nWhat
-        happens if you loop the main program 6 times, turning\n60 degrees each time
-        you loop?"
-      2-3 Artist Functions 12: "Functions are really great for drawing\ncomplex things
-        multiple times. \\\r\n\\\r\nCan you use the `draw a flower` function\nto fill
-        the rest of the planter box?\\\r\nThe plants are all 100 pixels apart."
-      2-3 Artist Functions 2: "Functions let you define new blocks! \\\r\n\\\r\nWe've\nmoved
-        the blocks needed for drawing a square into a function called `draw\na square`.
-        This time, use the `draw a square` function to create the glasses.\n\\\r\n\\\r\nThe
-        squares are 75 pixels apart."
-      2-3 Artist Functions 3: "Edit the function to draw a square with\na side length
-        of 115 to draw the bigger glasses. \\\r\n\\\r\nThe squares are now\n45 pixels
-        apart."
-      2-3 Artist Functions 4: |-
-        Now, put the function inside of a loop
-        to draw these three squares.
-      2-3 Artist Loops New 10: |-
-        Now let's connect a bunch of V's together
-        in a loop.
-      2-3 Artist Loops New 12: Draw a diamond with sides of 100 pixels.
-      2-3 Artist Loops New 13: "We are going to start you with some code\n(in grey)
-        to make one diamond. \\\r\n\\\r\nLoop the grey code to create a fun\npattern!"
-      2-3 Artist Loops New 2: "Here is the same puzzle that we just solved,\nbut this
-        time, we can only use one `move forward` block and one `turn` block\nthis
-        time.\\\r\n\\\r\nCan you use a `repeat` to solve this puzzle?"
-      2-3 Artist Loops New 9: |-
-        Draw a simple V (where both sides are
-        50 pixels) to complete the arrow.
-      2-3 Bee Loops 1: "Those flowers look tasty!\\\r\n\\\r\nCollect nectar\nfrom
-        each of the flowers using the fewest blocks possible."
       2-3 Bee Loops 3A: Use a `repeat` loop to collect all of the nectar.
-      2-3 Bee Loops 3B: |-
-        Now use the `repeat` block to collect all of
-        the nectar and make all of the honey.
-      2-3 Bee Loops 4A: "How many times can loops help you in this puzzle?  \\\r\n\\\r\nLoops\nare
-        your friend! Use a few of them to complete this puzzle with the fewest\nblocks
-        possible."
-      2-3 Bee Loops 8: "These purple flowers have a different amount of\nnectar each
-        time you run the puzzle. \\\r\n\\\r\nUse the `while nectar` loop to\ncollect
-        all of the nectar. \\\r\n\\\r\nThis loop will run as long as the condition\nis
-        true, in this case `nectar > 0`."
-      2-3 Maze 15: |-
-        In this puzzle, two `repeat` loops will help you
-        get to the pig with the fewest number of blocks!
-      2-3 Maze Loops 18: "Get me to the sunflower using the fewest blocks\npossible!
-        \ \\\r\n\\\r\nTry using one `repeat` loop inside of another to cut down\non
-        the amount of code you need."
       CourseE_HOC 2018 Level_4: Let's feed the cod to the **dolphin** ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png).
         Use a repeat block to get across the ocean quicker.
       CourseE_HOC 2018 Level_6: It looks freezing out there! Catch a **salmon** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png)

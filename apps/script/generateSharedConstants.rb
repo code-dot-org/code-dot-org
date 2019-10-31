@@ -84,7 +84,7 @@ def main
   generate_shared_js_file(shared_content, "#{REPO_DIR}/apps/src/util/sharedConstants.js")
   generate_shared_js_file(generate_constants('APPLAB_BLOCKS'), "#{REPO_DIR}/apps/src/applab/sharedApplabBlocks.js")
   generate_shared_js_file(generate_constants('APPLAB_GOAL_BLOCKS'), "#{REPO_DIR}/apps/src/applab/sharedApplabGoalBlocks.js")
-  generate_shared_js_file(generate_constants('GAMELAB_BLOCKS'), "#{REPO_DIR}/apps/src/gamelab/sharedGamelabBlocks.js")
+  generate_shared_js_file(generate_constants('GAMELAB_BLOCKS'), "#{REPO_DIR}/apps/src/p5lab/gamelab/sharedGamelabBlocks.js")
 
   generate_shared_js_file(
     generate_multiple_constants(
@@ -92,6 +92,7 @@ def main
         COURSES
         SUBJECT_NAMES
         SUBJECTS
+        LEGACY_SUBJECTS
         STATES
         WORKSHOP_APPLICATION_STATES
         WORKSHOP_SEARCH_ERRORS
@@ -118,25 +119,25 @@ def main
       source_module: Pd::Facilitator1920ApplicationConstants,
       transform_keys: true
     ),
-    "#{REPO_DIR}/apps/src/generated/pd/facilitator1920ApplicationConstants.js"
+    "#{REPO_DIR}/apps/src/generated/pd/facilitatorApplicationConstants.js"
   )
 
   generate_shared_js_file(
     generate_multiple_constants(
       %w(SECTION_HEADERS PAGE_LABELS VALID_SCORES LABEL_OVERRIDES TEXT_FIELDS MULTI_ANSWER_QUESTION_FIELDS SCOREABLE_QUESTIONS),
-      source_module: Pd::Teacher1920ApplicationConstants,
+      source_module: Pd::Teacher2021ApplicationConstants,
       transform_keys: true
     ),
-    "#{REPO_DIR}/apps/src/generated/pd/teacher1920ApplicationConstants.js"
+    "#{REPO_DIR}/apps/src/generated/pd/teacherApplicationConstants.js"
   )
 
   generate_shared_js_file(
     generate_multiple_constants(
       %w(PAGE_LABELS TEXT_FIELDS),
-      source_module: Pd::PrincipalApproval1920ApplicationConstants,
+      source_module: Pd::PrincipalApproval2021ApplicationConstants,
       transform_keys: true
     ),
-    "#{REPO_DIR}/apps/src/generated/pd/principalApproval1920ApplicationConstants.js"
+    "#{REPO_DIR}/apps/src/generated/pd/principalApprovalApplicationConstants.js"
   )
 
   generate_shared_js_file(

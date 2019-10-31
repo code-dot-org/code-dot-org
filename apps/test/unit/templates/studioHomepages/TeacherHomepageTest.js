@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
-import {assert, expect} from '../../../util/configuredChai';
+import {assert, expect} from '../../../util/deprecatedChai';
 import TeacherHomepage from '@cdo/apps/templates/studioHomepages/TeacherHomepage';
 import TeacherSections from '@cdo/apps/templates/studioHomepages/TeacherSections';
 import {courses, topCourse} from './homepagesTestData';
@@ -96,6 +96,7 @@ describe('TeacherHomepage', () => {
     assert.deepEqual(recentCourses.props(), {
       showAllCoursesLink: true,
       isTeacher: true,
+      hasFeedback: false,
       courses: courses,
       topCourse: topCourse
     });

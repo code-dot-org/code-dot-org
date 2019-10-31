@@ -27,7 +27,8 @@ const styles = {
 class ViewAsToggle extends React.Component {
   static propTypes = {
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
-    changeViewType: PropTypes.func.isRequired
+    changeViewType: PropTypes.func.isRequired,
+    logToFirehose: PropTypes.func
   };
 
   componentDidMount() {
@@ -53,6 +54,10 @@ class ViewAsToggle extends React.Component {
     }
 
     changeViewType(viewType);
+
+    if (this.props.logToFirehose) {
+      this.props.logToFirehose('toggle_view', {view_type: viewType});
+    }
   };
 
   render() {

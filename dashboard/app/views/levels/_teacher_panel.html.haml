@@ -3,11 +3,14 @@
 - data[:script_id] = @script.id
 - data[:section] = @section&.summarize
 - data[:stage_extra] = @stage_extras
+- data[:is_verified_teacher] = @current_user.authorized_teacher?
 
 - if @stage_extras
   - data[:teacher_level] = ScriptLevel.summarize_as_bonus_for_teacher_panel(@stage.script, @bonus_level_ids, @current_user)
+  - data[:page_type] = 'stage_extras'
 - else
   - data[:teacher_level] = @script_level&.summarize_for_teacher_panel(@current_user)
+  - data[:page_type] = 'level' if @level.present?
 
 - if @level && @script_level
   - if @level.try(:examples).present? && current_user.authorized_teacher? # 'solutions' for applab-type levels
@@ -22,7 +25,8 @@
       - elsif @level.is_a?(GamelabJr)
         - send("#{"spritelab"}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
       - elsif @level.is_a?(Artist)
-        - send("#{"artist"}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
+        - artist_type = ['elsa', 'anna'].include?(@level.skin) ? 'frozen' : 'artist'
+        - send("#{artist_type}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
       - elsif @level.is_a?(Studio) # playlab
         - send("#{"playlab"}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
       - else
@@ -41,4 +45,4 @@
       - @script_level&.summarize_for_teacher_panel(student)
 
 - content_for(:head) do
-  %script{src: minifiable_asset_path('js/levels/_teacher_panel.js'), data: {teacherpanel: data.to_json }}
+  %script{src: webpack_asset_path('js/levels/_teacher_panel.js'), data: {teacherpanel: data.to_json }}
