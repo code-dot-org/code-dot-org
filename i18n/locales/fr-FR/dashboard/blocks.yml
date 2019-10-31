@@ -1217,10 +1217,6 @@ fr:
         text: le sprite {SPRITE} arrête de {BEHAVIOR}
       Mikelab_repeatUntilComplete:
         text: répéter à l'infini
-      Mikelab_sendBad:
-        text: déplacer vers la gauche
-      Mikelab_sendGood:
-        text: déplacer vers la droite
       Mikelab_setBG:
         options:
           BG:

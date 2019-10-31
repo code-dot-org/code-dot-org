@@ -1111,6 +1111,8 @@ is:
     time4cs_c3: Líf í Everglades
     time4cs_c4: Utanaðkomandi áhrif í Everglades
     time4cs_c5: Borgarar til hins betra í Everglades
+    k5_getting_started: Fyrstu skrefin
+    k5_next_steps: Næstu skref
   external_links:
     disclaimer: Afsal ábyrgðar
     leaving_domain: Þú ert nú að yfirgefa þetta vefsvæði og fara á svæði sem Code.org
@@ -1336,3 +1338,8 @@ is:
     privacy_policy: persónuverndarstefna
     logout: Útskráning
     true: Já
+  page_not_found_title: Síða finnst ekki
+  page_not_found_header: '404: Síða finnst ekki'
+  page_not_found_description: Síðan sem þú ert að leita að finnst ekki á þessu veffangi.
+    Athugaðu veffangið og prófaðu aftur. Eða farðu aftur á heimasíðu okkar.
+  page_not_found_button: Aftur á heimasíðu

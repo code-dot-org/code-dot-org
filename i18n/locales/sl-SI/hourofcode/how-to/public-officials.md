@@ -1,7 +1,5 @@
 ---
 title: Vodič za javne uslužbence
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

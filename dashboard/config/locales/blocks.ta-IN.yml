@@ -183,10 +183,6 @@ ta:
             '"space"': வெளி
       Mikelab_randomColor:
         text: ஏதாவது ஒரு நிறம்
-      Mikelab_sendBad:
-        text: இடது பக்கம் நகரு
-      Mikelab_sendGood:
-        text: வலது பக்கம் நகரு
       Mikelab_setBG:
         options:
           BG:

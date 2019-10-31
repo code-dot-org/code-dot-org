@@ -1,7 +1,5 @@
 ---
 title: Upute za Sat Kodiranja događaje
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

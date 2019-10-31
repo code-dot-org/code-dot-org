@@ -1049,10 +1049,6 @@ sk:
         text: náhodná farba
       Mikelab_repeatUntilComplete:
         text: opakuj donekonečna
-      Mikelab_sendBad:
-        text: posuň sa doľava
-      Mikelab_sendGood:
-        text: posuň sa doprava
       Mikelab_setBG:
         options:
           BG:

@@ -1,7 +1,5 @@
 ---
 title: Kit para a imprensa
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

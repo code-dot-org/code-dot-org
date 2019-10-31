@@ -11,5 +11,12 @@
   "danceFeedbackNeedEveryTwoMeasures": "確認您正在使用「每 2 個小節」程式積木",
   "danceFeedbackNeedMakeANewDancer": "使用「製作新內容」程式積木來建立第二個舞者。",
   "danceFeedbackKeyEvent": "確認你把一些程式碼連接到`當鑰匙` 程式積木，當按下鑰匙你的舞蹈開始跳動。",
+  "danceFeedbackDidntPress": "",
+  "danceFeedbackPressedKey": "",
+  "danceFeedbackNeedTwoDancers": "",
+  "danceFeedbackOnlyOneDancerMoved": "",
+  "danceFeedbackNeedLead": "",
+  "danceFeedbackNeedBackup": "",
+  "danceFeedbackSetSize": "",
   "measure": "小節："
 }

@@ -1200,10 +1200,6 @@ hu:
         text: sprite {SPRITE} abbahagyja {BEHAVIOR}
       Mikelab_repeatUntilComplete:
         text: ismételd végtelenszer
-      Mikelab_sendBad:
-        text: balra
-      Mikelab_sendGood:
-        text: jobbra
       Mikelab_setBG:
         options:
           BG:

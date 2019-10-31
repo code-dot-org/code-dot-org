@@ -1,7 +1,5 @@
 ---
 title: Jutupunktid ja kasulik statistika
-layout: wide
-nav: promote_nav
 ---
 
 <a id="blurb"></a>

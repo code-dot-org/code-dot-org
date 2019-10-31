@@ -333,6 +333,7 @@ zu:
   meta_tag_twitter_description: 'IHora loKufingqwa lingumjikelezo oyimbulunga ofinyelela amashumi ezigidi zabafundi kumazwe aphezulu ku-180 nezilimi eziphezu kuka 45. Iminyaka 4 ukuya 104.'
   twitter_default_text: "Ngithatha iqhaza ku #iHoraloKufingqwa kulonyaka, wena? @codeorg"
   twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
+  twitter_donor_text_2019: "This year's #HourOfCode is about #CSforGood. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'IMIBUZO EJWAYELEKE UKUBUZWA'
   hoc_faq_what_is_hoc_q: 'Liyini iHora loKufingqwa?'
   hoc_faq_what_is_hoc_a: "IHora loKufingqwa liqale njengehora elilodwa lokwazisa ikhompyutha sayensi, elisongozele ukwenza ukufingqwa kubelula, ukubonisa ukuba yinoma ngubani ongafunda okokuqala ezintweni eziyisisekelo, kanye nokunabisa ukuhlanganyela kwemikhakha yekhompyutha sayensi. Ukusukela lapho ibengumzamo umhlaba wonke wokugubha ikhompyutha sayensi, ukuqala ngehora elilodwa lwemisebenzi yokufingqwa kodwa enwebela kumizamo eyomphakathi ehlukile. Bheka ku <a href='%{tutorials}'>izifundiso kanye nemisebenzi</a>. Lesisekelo somnyakazo sisekelwe abadlulela ku<a href='%{partners}'>400 yabahlanganeli</a> kanye 200,000 yothisha umhlaba wonke."

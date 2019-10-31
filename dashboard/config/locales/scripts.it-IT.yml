@@ -2662,7 +2662,7 @@ it:
             Until Loops in Maze:
               name: Cicli "fino a che" nel labirinto
           title: Corso rapido
-          assignment_family_title: Corso Rapido
+          assignment_family_title: Corso Rapido (2018)
           description_short: 'Introduzione all''informatica: mette a disposizione
             di studenti più grandi, il meglio del nostro curriculum per la scuola
             primaria.'
@@ -3272,7 +3272,7 @@ it:
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stefi e il grande progetto
         express-2018:
-          title: Corso Rapido
+          title: Corso Rapido (2018)
           assignment_family_title: Corso Rapido
           description: Impara le basi dell'informatica e della sicurezza su Internet.
             Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai
@@ -5278,3 +5278,44 @@ it:
               name: Ballando col codice
           title: Ballando col codice (versione 2019)
           description: Crea un ballo tutto tuo e condividilo con i tuoi amici!
+        k5-onlinepd-copy:
+          title: Fondamenti di Informatica - Corso per insegnanti
+          description_short: Guida online gratuita per imparare autonomamente come
+            insegnare l'informatica usando il corso di Code.org "Fondamenti di informatica".
+          stages:
+            Getting Started:
+              name: Per cominciare
+            Computer Science Fundamentals:
+              name: Fondamenti di informatica
+            Looking Ahead:
+              name: Uno sguardo avanti
+            'Mastering the Basics: Sequencing':
+              name: 'I concetti fondamentali: sequenze di istruzioni'
+            'Mastering the Basics: Loops':
+              name: 'I concetti fondamentali: cicli'
+            'Mastering the Basics: Conditionals':
+              name: 'I concetti fondamentali: istruzioni condizionali'
+            'Mastering the Basics: Functions':
+              name: 'I concetti fondamentali: funzioni'
+            'Mastering the Basics: Events':
+              name: 'I concetti fondamentali: eventi'
+            Planning:
+              name: Gestione della classe
+            Next Steps:
+              name: I prossimi passi
+            Sequencing:
+              name: Sequenze
+            Loops:
+              name: Ripetizioni
+            Conditionals:
+              name: Istruzioni condizionali
+            Events:
+              name: Eventi
+            Functions:
+              name: Funzioni
+            Sprite Lab:
+              name: Laboratorio dei Personaggi
+            Variables:
+              name: Variabili
+            For Loops:
+              name: Cicli con contatore

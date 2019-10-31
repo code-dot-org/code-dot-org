@@ -298,10 +298,6 @@ sq:
         text: ngjyrë e rastësishme
       Mikelab_repeatUntilComplete:
         text: përsërit përgjithmonë
-      Mikelab_sendBad:
-        text: lëviz majtas
-      Mikelab_sendGood:
-        text: lëviz djathtas
       Mikelab_setBG:
         options:
           BG:

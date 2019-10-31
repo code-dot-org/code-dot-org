@@ -10,9 +10,9 @@ ja:
   campaign_date_full: "12月 5 − 11日"
   campaign_date_year: "2016"
   campaign_date_full_year: "2016 年 12 月 5 - 11 日"
-  hoc2019_header: 'プログラミングを試してみよう、より良い世界を創れるよ.'
-  hoc2019_header_line1_mobile: 'プログラミングを試してみよう.'
-  hoc2019_header_line2_mobile: 'より良い世界を創れるよ.'
+  hoc2019_header: 'コンピューターサイエンスを学ぼう。世界を変えよう。'
+  hoc2019_header_line1_mobile: 'コンピューターサイエンスを学ぼう。'
+  hoc2019_header_line2_mobile: '世界を変えよう。'
   social_hoc2019_every_sudent: 'Every student has the potential to change the world. Help them get started. #CSforGood'
   social_hoc2019_learn_computer_science: 'Learn computer science. Change the world. #CSforGood #HourOfCode'
   social_hoc_is_coming: 'The Hour of Code is coming!'
@@ -28,15 +28,15 @@ ja:
   codeorg_homepage_hoc2018_musician_before: 'Featuring'
   codeorg_homepage_hoc2018_musician_after: 'and more!'
   codeorg_homepage_hoc2018_video: 'Watch our video'
-  hourofcode_homepage_hoc2018_header_line1: '誰でも、どこででも、Hour of Codeのイベントを開催することができます。45 以上の言語で1時間のチュートリアルを提供。経験は必要ありません。'
-  hourofcode_homepage_hoc2018_header_line2: '歳から104歳まで。'
+  hourofcode_homepage_hoc2018_header_line1: '世界中の誰でもHour of Codeのイベントを開催できます。45以上の言語の1時間のチュートリアルが用意されています。経験は必要ありません。'
+  hourofcode_homepage_hoc2018_header_line2: '4歳から104歳まで。'
   hoc2018_tutorial_mchoc_description: 'コードブロックで、アレックスやスティーブをマインクラフト世界の冒険に連れ出しましょう。'
   cookie_banner_message: 'このサイトの閲覧を継続するか「同意する」をクリックすることで、クッキーがあなたのコンピューターやデバイスに保存されることに同意することになります。'
   cookie_banner_more_information: "Code.orgのプライバシーポリシーを参照する。"
   cookie_banner_accept: '同意する'
   front_header_banner: '%{campaign_date} は、史上最大の学習イベントに参加しよう'
-  front_intro_default: 'Hour of Code は、180カ国以上から数千万人の生徒が参加する世界的なムーブメントです。世界中の誰でもHour of Codeのイベントを開催できます。45以上の言語の1時間のチュートリアルが用意されています。<strong>4歳から104歳まで</strong>、経験は必要ありません。'
-  front_intro_default_2: '180ヵ国以上に渡る世界的な運動。'
+  front_intro_default: 'Hour of Codeは、180カ国以上から数千万人の生徒が参加する世界的な運動です。世界中の誰でもHour of Codeのイベントを開催できます。45以上の言語の1時間のチュートリアルが用意されています。<strong>4歳から104歳まで</strong>、経験は必要ありません。'
+  front_intro_default_2: '180以上の国における世界的な運動です。'
   front_watch_video: '新しいビデオを見る'
   front_watch_regular_video: 'ビデオを見る'
   front_volunteers: 'エンジニアボランティアを募集しています'
@@ -249,7 +249,7 @@ ja:
   front_join_us_support: "支援する。"
   front_join_us_more_info: "詳細については、<a href='https://code.org'> code.org</a> を参照してください。"
   front_join_us_code_info: "詳細については、code.org を参照してください。"
-  front_join_us_n_students_served: "# 人が受講"
+  front_join_us_n_students_served: "#人が受講しました。"
   front_join_us_challenge: "有名人とのあなたの教室のビデオチャットに勝つ！"
   front_join_us_learn_more: "もっと詳しく知る"
   signup_closed: 'Hour of Codeへの登録は終了しています。10月に次回のHour of Codeのサインアップを再開しますのでまた確認してください。'
@@ -333,6 +333,7 @@ ja:
   meta_tag_twitter_description: 'Hour of Codeは、すでに180 以上の国々及び45の言語で数千万人の生徒を対象に行われた、世界的なムーブメントです。4歳から104歳が対象です。'
   twitter_default_text: "私は今年の #HourOfCode に参加します。あなたは? @codeorg"
   twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
+  twitter_donor_text_2019: "This year's #HourOfCode is about #CSforGood. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'よくある質問'
   hoc_faq_what_is_hoc_q: 'Hour of Codeとは何ですか？'
   hoc_faq_what_is_hoc_a: "Hour of Codeは、「コード（プログラム）」の謎を解き明かし、誰もがその基本を学ぶことが可能なことを明らかにして、コンピューターサイエンス分野への参加者を拡大するため、1時間のコンピューターサイエンス入門として始まりました。1時間のコーディング（プログラミング）が、いまや様々なコミュニティの取り組みへと拡大し、コンピューターサイエンスの発展のための世界的な取り組みとなっています。<a href='%{tutorials}'>チュートリアルとアクティビティ</a>をご覧ください。この草の根キャンペーンは、世界中の<a href='%{partners}'>400以上のパートナー</a>と200,000以上の教育者によってサポートされています。"

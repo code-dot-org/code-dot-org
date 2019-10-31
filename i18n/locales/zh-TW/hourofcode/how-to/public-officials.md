@@ -1,7 +1,5 @@
 ---
 title: 給公務部門的活動指引
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

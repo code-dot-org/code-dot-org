@@ -1,7 +1,5 @@
 ---
 title: Πως-να-το-κάνω οδηγός για εθελοντές Κώδικα
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

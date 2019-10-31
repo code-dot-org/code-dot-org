@@ -1,6 +1,5 @@
 ---
 title: Beteiligung der gesamten Schule
-layout: wide
 ---
 
 {{ signup_button }}

@@ -812,6 +812,8 @@ vi:
     csp_functions: 'Các hàm'
     csp_lists: 'Danh sách'
     csp_loops: 'Vòng lặp'
+    k5_getting_started: 'Bắt đầu'
+    k5_next_steps: 'Bước tiếp theo'
   external_links:
     disclaimer: Miễn trừ trách nhiệm
   hoc_download:

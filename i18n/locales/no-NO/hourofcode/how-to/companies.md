@@ -1,7 +1,5 @@
 ---
 title: Hvordan arrangere en Kodetime - Bedrifter
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

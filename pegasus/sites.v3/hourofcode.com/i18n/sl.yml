@@ -221,7 +221,7 @@ sl:
   front_join_us_tutorials: "Izberi tvojo vadnico Ure Za Kodo!"
   front_join_us_tutorials_link: 'Poišči in preglej <i>več kot 200 vadnic in načrtov vaj</i>! Najdi dejavnosti za različna temateska področja, različno strojno opremo in različna nivoja znanj.'
   front_join_us_robotics: 'Win robots or circuits!'
-  front_join_us_robotics_link: 'Do you want a set of robots or physical computing kits to use with your students? Our generous partners are donating sets to over 100 classrooms! Sign up for the Hour of Code to participate. (Classrooms selected by Code.org, US Only)'
+  front_join_us_robotics_link: 'Do you want a set of robots or physical computing kits to use with your students? Our generous partners are donating sets to 75 classrooms! Sign up for the Hour of Code to participate. (Classrooms selected by Code.org, US Only)'
   front_join_us_teacher: 'Ali ste učitelj?'
   front_join_us_inspire: 'Navduši učence z'
   front_join_us_inspire_link: 'Hour of Code v učilnici.'
@@ -333,6 +333,7 @@ sl:
   meta_tag_twitter_description: 'Ura za koda je globalno gibanje, ki je doseglo desetine milijonov učencev, dijakov in študentov, od 4 do 104 let, v več kot 180 državah in več kot 30 jezikih.'
   twitter_default_text: "Sodelujem v #UraZaKodo, kaj pa ti? @codeorg"
   twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
+  twitter_donor_text_2019: "This year's #HourOfCode is about #CSforGood. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'Pogosto zastavljena vprašanja'
   hoc_faq_what_is_hoc_q: 'Kaj je Ura za kodo?'
   hoc_faq_what_is_hoc_a: "Uro za kodo je enourni uvod v računalništvo z namenom demistificirati kodo in pokazati, da se lahko vsakdo nauči osnov. <a href='http://code.org/learn'> Oglejte si vadnice</a>."

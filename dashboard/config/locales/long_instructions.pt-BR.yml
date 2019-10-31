@@ -660,6 +660,20 @@ pt-BR:
         # Jogo grátis
 
         Faça como quiser, faça algo incrível
+      CSD U1 - PixFilter Mario: |-
+        # Combinando Filtros
+
+        Às vezes você terá que filtrar mais do que um pixel para obter a mudança de cor que você deseja.
+
+        # Faça Isto
+
+        Veja o Mário, ele está muito bem com seu chapéu vermelho e jardineiras. Sua missão é ajustar o filtro para que ele fique parecido com o Luigi, com um chapéu verde e jardineiras.
+
+        -   Primeiro, determine qual ou quais bits devem ser alterados para a mudança que você quer
+        -   Quando você descobrir quais bits precisam ser trocados, ajuste os menus suspensos do filtro de forma adequada
+        -   Depois que você conseguiu fazer o filtro funcionar como queria, tente bolar outros filtros que mudam _somente_ o chapéu e jardineiras - quantas cores de roupas diferentes você consegue obter?
+
+        _Quantas tentativas foram necessárias para que você encontrasse o filtro certo?_
       CSD U1 - PixFilter Mushroom: |-
         # Filtrando imagens
 
@@ -11418,6 +11432,21 @@ pt-BR:
         _Verifique com seu professor antes de iniciar qualquer um dos desafios._
 
         Usando apenas os comandos `reta` e`elipse`, você pode desenhar uma nova forma, como este triângulo feito de círculos?
+      CSD U3 collisions bounciness: Até o momento. "bounceOff" tem feito sprites irem
+        para longe de outros objetos assim que batem neles. No mundo real, praticamente
+        tudo fica um pouco mais lento quando quica em algo. Você pode usar o bloco
+        "elasticidade" para dizer o quanto um sprite acelera ou desacelera quando
+        bate em algo
+      CSD U3 collisions bounciness_2018: Até o momento. "bounceOff" tem feito sprites
+        irem para longe de outros objetos assim que batem neles. No mundo real, praticamente
+        tudo fica um pouco mais lento quando quica em algo. Você pode usar o bloco
+        "elasticidade" para dizer o quanto um sprite acelera ou desacelera quando
+        bate em algo
+      CSD U3 collisions bounciness_2019: Até o momento. "bounceOff" tem feito sprites
+        irem para longe de outros objetos assim que batem neles. No mundo real, praticamente
+        tudo fica um pouco mais lento quando quica em algo. Você pode usar o bloco
+        "elasticidade" para dizer o quanto um sprite acelera ou desacelera quando
+        bate em algo
       CSD U3 collisions build isTouching: |-
         # Balão
 
@@ -11883,6 +11912,93 @@ pt-BR:
         -   Na aba animação crie uma nova animação para o seu obstáculo. No exemplo, a imagem de um sol foi escolhida.
         -   Use o bloco `sprite.setAnimation()` para atribuir a imagem que você escolheu ao seu sprite.
         -   Execute o código e certifique-se que o sprite apareça onde você gostaria que estivesse na tela. Você precisará configurar o X, Y e propriedades de escala para que apareça da forma que você quer.
+      CSD U3 collisions flyman bounceOff: |-
+        # Jogo de voo - Interagindo com Obstáculos
+
+        Você não quer que o jogador seja capaz de mover-se através dos obstáculos, então você vai precisar usar uma das interações de sprites.
+
+        # Faça Isto
+
+        \-Adicione código ao seu jogo que evite o seu jogador de mover-se através dos obstáculos.
+        \-Se você usar umas das interações de colisão, escolha se vai querer resetar a elasticidade do personagem.
+        \-Converse com seu vizinho: Qual interação você usou? Existe mais de uma interação que faz o que você queria?
+      CSD U3 collisions flyman bounceOff_2018: |-
+        # Jogo de voo - Interagindo com Obstáculos
+
+        Você não quer que o jogador seja capaz de mover-se através dos obstáculos, então você vai precisar usar uma das interações de sprites.
+
+        # Faça Isto
+
+        \-Adicione código ao seu jogo que evite o seu jogador de mover-se através dos obstáculos.
+        \-Se você usar umas das interações de colisão, escolha se vai querer resetar a elasticidade do personagem.
+        \-Converse com seu vizinho: Qual interação você usou? Existe mais de uma interação que faz o que você queria?
+      CSD U3 collisions flyman bounceOff_2019: |-
+        # Jogo de voo - Interagindo com Obstáculos
+
+        Você não quer que o jogador seja capaz de mover-se através dos obstáculos, então você vai precisar usar uma das interações de sprites.
+
+        # Faça Isto
+
+        \-Adicione código ao seu jogo que evite o seu jogador de mover-se através dos obstáculos.
+        \-Se você usar umas das interações de colisão, escolha se vai querer resetar a elasticidade do personagem.
+        \-Converse com seu vizinho: Qual interação você usou? Existe mais de uma interação que faz o que você queria?
+      CSD U3 collisions flyman change colliders: |-
+        # Jogo do voo - Alterando Colisores
+
+        No momento os seus colisores são todas retangulares. Mude as para círculos e tenha colisões mais interessantes.
+
+        # Faça isto
+
+        -   Use o bloco `sprite.setCollider()` para alterar os colisores dos seus sprites para círculos.
+        -   Defina as propriedades de debug dos seus sprites para `true` para ter certeza que o seu jogo está funcionando conforme o esperado.
+        -   Jogue o seu jogo para ter certeza de que ele está funcionando como você quer.
+      CSD U3 collisions flyman change colliders_2018: |-
+        # Jogo do voo - Alterando Colisores
+
+        No momento os seus colisores são todas retangulares. Mude as para círculos e tenha colisões mais interessantes.
+
+        # Faça isto
+
+        -   Use o bloco `sprite.setCollider()` para alterar os colisores dos seus sprites para círculos.
+        -   Defina as propriedades de debug dos seus sprites para `true` para ter certeza que o seu jogo está funcionando conforme o esperado.
+        -   Jogue o seu jogo para ter certeza de que ele está funcionando como você quer.
+      CSD U3 collisions flyman change colliders_2019: |-
+        # Jogo do voo - Alterando Colisores
+
+        No momento os seus colisores são todas retangulares. Mude as para círculos e tenha colisões mais interessantes.
+
+        # Faça isto
+
+        -   Use o bloco `sprite.setCollider()` para alterar os colisores dos seus sprites para círculos.
+        -   Defina as propriedades de debug dos seus sprites para `true` para ter certeza que o seu jogo está funcionando conforme o esperado.
+        -   Jogue o seu jogo para ter certeza de que ele está funcionando como você quer.
+      CSD U3 collisions flyman displace coin: |-
+        # Jogo de Voo - Moeda atrás do Obstáculo
+
+        No momento a moeda está se movendo para lugares aleatórios. Isso significa que pode acontecer de a moeda aparecer aparecer até mesmo atrás de um obstáculo, nesse caso o personagem não pode alcançar ela. Você pode corrigir isso usando as interações de sprite.
+
+        # Faça Isto
+
+        -   Adicione código que evite a moeda de se mover para trás de um obstáculo. Não tenha medo de testar ideias para saber como funcionam.
+        -   Converse com seu vizinho: Qual interação você usou? Existe alguma outra interação que faça o mesmo?
+      CSD U3 collisions flyman displace coin_2018: |-
+        # Jogo de Voo - Moeda atrás do Obstáculo
+
+        No momento a moeda está se movendo para lugares aleatórios. Isso significa que pode acontecer de a moeda aparecer aparecer até mesmo atrás de um obstáculo, nesse caso o personagem não pode alcançar ela. Você pode corrigir isso usando as interações de sprite.
+
+        # Faça Isto
+
+        -   Adicione código que evite a moeda de se mover para trás de um obstáculo. Não tenha medo de testar ideias para saber como funcionam.
+        -   Converse com seu vizinho: Qual interação você usou? Existe alguma outra interação que faça o mesmo?
+      CSD U3 collisions flyman displace coin_2019: |-
+        # Jogo de Voo - Moeda atrás do Obstáculo
+
+        No momento a moeda está se movendo para lugares aleatórios. Isso significa que pode acontecer de a moeda aparecer aparecer até mesmo atrás de um obstáculo, nesse caso o personagem não pode alcançar ela. Você pode corrigir isso usando as interações de sprite.
+
+        # Faça Isto
+
+        -   Adicione código que evite a moeda de se mover para trás de um obstáculo. Não tenha medo de testar ideias para saber como funcionam.
+        -   Converse com seu vizinho: Qual interação você usou? Existe alguma outra interação que faça o mesmo?
       CSD U3 collisions flyman make it your own: |-
         # Jogo de voo - Faça o seu
 
@@ -12570,11 +12686,11 @@ pt-BR:
         -   Crie o sprite no lugar correto na tela
         -   Defina sua animação (ou cor e tamanho)
         -   Defina sua velocidade e velocidade de rotação, se necessário
-        -   Defina seu colisor e bounciness, se necessário
+        -   Defina seu colisor e elasticidade, se necessário
 
         Depois de criar cada sprite, teste-o antes de fazer o próximo. Se o seu sprite começar a partir da tela, primeiro coloque-o na tela para testá-lo, e mova-o de volta para fora da tela, uma vez que você saiba que está correto.
 
-        Se sua posição de sprites precisar ser redefinida posteriormente no seu jogo, é uma boa idéia fazer uma função que defina a posição desse sprite que você pode usar novamente mais tarde.
+        Se sua posição de sprites precisar ser redefinida posteriormente no seu jogo, é uma boa ideia fazer uma função que defina a posição desse sprite que você pode usar novamente mais tarde.
       CSD U3 game create sprites_2018: |-
         # Crie seus Sprites
 
@@ -12748,6 +12864,34 @@ pt-BR:
         -   Adicione um bloco dentro da terceira declaração `if` para mudar a animação para um animal diferente.
 
         _Dica: você pode usar o coelho que já está na aba Animações ou adicionar uma nova animação._
+      CSD U3 keydown conditional_2018: |-
+        # Mudando Sprites
+
+        Você viu no último nível que `apertarTecla` retorna `verdadeiro` enquanto você mantém pressionada uma tecla e `falso` quando a tecla não é pressionada. A entrada para o comando `apertarTecla` é o nome da chave que você deseja verificar entre aspas. Alguns exemplos são "x", "pra cima" e "espaço".
+
+        Podemos usar o `apertarTecla` como uma entrada para uma declaração`if` para alterar nossas animações com base no pressionamento de teclas!
+
+        # Faça isto
+
+        -   Execute o código e tente pressionar as teclas "p" e "h".
+        -   Olhe dentro da instrução `if` para ver como o código funciona.
+        -   Adicione um bloco dentro da terceira declaração `if` para mudar a animação para um animal diferente.
+
+        \_Desafio: Quando você usa `definirAnimacao`, ele mantém a nova animação até que você a altere novamente. Você pode alterar o código para que o sprite retorne automaticamente a uma girafa quando você não estiver segurando uma das teclas
+      CSD U3 keydown conditional_2018_2019: |-
+        # Mudando Sprites
+
+        Você viu no último nível que `apertarTecla` retorna `verdadeiro` enquanto você mantém pressionada uma tecla e `falso` quando a tecla não é pressionada. A entrada para o comando `apertarTecla` é o nome da chave que você deseja verificar entre aspas. Alguns exemplos são "x", "pra cima" e "espaço".
+
+        Podemos usar o `apertarTecla` como uma entrada para uma declaração`if` para alterar nossas animações com base no pressionamento de teclas!
+
+        # Faça isto
+
+        -   Execute o código e tente pressionar as teclas "p" e "h".
+        -   Olhe dentro da instrução `if` para ver como o código funciona.
+        -   Adicione um bloco dentro da terceira declaração `if` para mudar a animação para um animal diferente.
+
+        \_Desafio: Quando você usa `definirAnimacao`, ele mantém a nova animação até que você a altere novamente. Você pode alterar o código para que o sprite retorne automaticamente a uma girafa quando você não estiver segurando uma das teclas
       CSD U3 picture: |-
         # Desafio: desenhar uma imagem
 
@@ -16046,14 +16190,6 @@ pt-BR:
         # Faça isso
 
         Crie uma função que apague todos os LEDs e adicione um botão "Desligado" ao seu aplicativo e apague todos os LEDs coloridos.
-      CSD U6 light pattern off_2019: |-
-        # Desativando
-
-        Quando você inicia esse aplicativo, as luzes estão apagadas, mas assim que você escolhe um padrão, não há como desligar as luzes!
-
-        # Faça isso
-
-        Crie uma função que apague todos os LEDs e adicione um botão "Desligado" ao seu aplicativo e apague todos os LEDs coloridos.
       CSD U6 light show predict: |-
         # Faça um show de luzes
 
@@ -17214,6 +17350,22 @@ pt-BR:
         style=\"width:200px ; border: solid 1px black\"></td>\n    <td style=\"text-align:center\"><img
         src=\"https://images.code.org/e45fc7d451c071683fd3b59466b106b0-image-1444684677212.png\"
         style=\"width:200px; border: solid 1px black\"></td>\n</tr>\n</table>"
+      CSDU4 - Design Mode - 20: |-
+        # Mudando de Telas
+
+        Você pode definir qual tela será exibida no seu aplicativo com o comando `definirTela()`. Se você estiver trabalhando em blocos, poderá selecionar para qual tela deseja alternar a partir de um menu suspenso.
+
+        ![](<https://images.code.org/615fae136488e1e6d1349e4383388e08-image-1478303858022.13.25 PM.png>)
+
+        # Faça isto
+
+        Você usará um bloco `onEvent()` com `definirTela ()` para fazer com que os dois botões do seu aplicativo alternem entre as duas telas.
+
+        -   Arraste dois blocos `onEvent()`
+        -   Defina os IDs para seus blocos `onEvent()` para cada um dos seus dois botões
+        -   Coloque um bloco `definirTela` dentro de cada um dos blocos`onEvent`.
+        -   Escolha a tela apropriada no menu suspenso de cada bloco `definirTela`.
+        -   Teste seu aplicativo para garantir que seus botões permitam alternar entre as duas telas
       CSDU4 - Design Mode - 21: |-
         # Adicionando imagens
 
@@ -17257,6 +17409,18 @@ pt-BR:
         -   Ao lado do campo "Imagem", clique em "Escolher..."
         -   Clique na guia "Ícones" e selecione um
         -   Certifique-se de dar um bom ID à sua imagem! (ainda precisamos dizer isso?)
+      CSDU4 Connecting Screens: |-
+        # Navegando
+
+        Depois de começar a adicionar várias telas a um aplicativo, você precisa garantir que os usuários sempre cheguem aonde querem ir. Nos próximos dois níveis, você aprenderá como garantir que um usuário sempre possa voltar à "página inicial" do seu aplicativo.
+
+        # Faça isto
+
+        Aqui está um aplicativo com quatro páginas diferentes, mas apenas a tela "vermelha" está vinculada até o momento. Nesse nível, você fará com que os outros dois botões levem o usuário à tela correta.
+
+        -   Adicione dois blocos `onEvent()`, um para os "botaoVerde" e "botaoVermelho"
+        -   Use o bloco `definirTela()` para fazer com que cada botão mude para a tela apropriada
+        -   Teste seu aplicativo para garantir que ambos os botões funcionem. Por exemplo, quando você clica no botão verde, deve ir para a tela verde.
       CSDU4 Crowdsource App Demo: |-
         # Contribuição colaborativa
 
@@ -17609,6 +17773,18 @@ pt-BR:
 
         -   Crie um evento 'up' para o botão esquerdo.
         -   Adicione o código para desligar o LED quando o botão aparecer novamente.
+      CSDU6 - UI and Inputs - get set with text input: |-
+        # definirTexto e obterTexto
+
+        Você já viu como usar obterTexto e definirTexto. Você pode fazer com que este aplicativo obtenha o texto digitado pelo usuário após ele pressionar enter e mostrar o texto na parte inferior?
+
+        \_ Dica: o evento "mudar" é acionado quando o usuário clica em "enter" em um campo. Use um manipulador de eventos para a entrada de texto, observando o evento "mudar".\_
+      CSDU6 - UI and Inputs - getNumber: |-
+        # obterNumero
+
+        \*\* Código Inicial: \*\* Este programa cria uma calculadora simples, mas \*\* existe algo errado com ela. Tente colocar 2 + 2. \*\*
+
+        Podemos corrigir isso usando `obterNumero()` em vez de `obterTexto()`. Você pode consertar o programa alterando `obterTexto ()` para `obterNumero ()`?
       CSDU6 - UI and Inputs - getNumber practice: |-
         # pegarNúmero
 
@@ -17623,6 +17799,27 @@ pt-BR:
         -   Você deseja que o botão de alarme de parada seja oculto quando o programa iniciar. Você pode fazer isso no modo de design.
 
         Dica: ao clicar no botão de alarme de disparo, você deve alterar o texto, ocultar o botão de alarme de disparo, _e_ mostrar o botão de parar alarme.
+      CSDU6 - UI and Inputs - setProperty Image: |-
+        # definirPropriedade imagem
+
+        \*\* Nota: \*\* Este nível inicia no modo Design.
+
+        Existe um elemento de imagem configurado para você, mas ele não aparece quando você sai do Modo de design, porque não foi informado qual imagem exibir.
+
+        -   Use o comando `definirPropriedade()` para definir a imagem do elemento de imagem da interface do usuário na tela.
+      CSDU6 - UI and Inputs - setProperty first level: |-
+        # definirPropriedade
+
+        \*\* Código Inicial: \*\* Há uma chamada para `definirPropriedade()` que define a cor do texto para azul quando você executa o programa.
+
+        Você pode adicionar mais chamadas ao `definirPropriedade()` que alteram outras coisas sobre o texto quando você executa o programa? Tente mudar pelo menos mais 3 coisas.
+      CSDU6 - UI and Inputs - setScreen: |-
+        # definirTela
+
+        Vamos começar com um setter que você usou antes de `definirTela()`.
+
+        -   Faça com que o botão Sobre mim na página inicial vá para a página Sobre mim.
+        -   Faça o botão Voltar em Sobre mim ir para a página inicial.
       CSDU6 - UI and Inputs - setText: |-
         # definirTexto
 
@@ -19799,6 +19996,10 @@ pt-BR:
         Agora que você transmitiu informações representadas como números decimais, é possível mapear esses números para caracteres de texto para enviar e receber informações baseadas em texto. Com um protocolo baseado em texto, você pode representar e comunicar com facilidade todos os tipos de informações.
 
         Seu professor fornecerá instruções mais específicas para esta atividade.
+      OPD-K5 Closing: |-
+        > \*\*Se você gostou deste curso, inscreva-se para um workshop presencial: \*\*
+        >
+        > [Inscreva-se agora](http://code.org/professional-development-workshops) para continuar aprendendo ciência da computação e sua pedagogia. As oficinas presenciais gratuitas são um local valioso para colaborar e interagir com outros educadores apaixonados em sua área.
       OPD-K5 EventsVid: |-
         Assista este vídeo que define "eventos" e mostra como eles funcionam em Fundamentos de CC. Em seguida, você irá tentar alguns quebra-cabeças que requerem que você codifique eventos.
 
@@ -19818,6 +20019,25 @@ pt-BR:
         [Planos de aula do curso F](https://curriculum.code.org/csf-18/coursef/)<br/>
 
         No entanto, você pode querer adaptar essas lições ou criar as suas próprias! O vídeo abaixo explica a estrutura das lições de Fundamentos de CC, mas também fornece dicas, caso você queira desenvolver suas próprias lições.
+      OPD-K5 Problem Solving: |-
+        # Melhories Práticas > Metacognição para Solução de Problemas
+
+        O ensino explícito de estratégias para solução de problemas antes, durante e depois da codificação é extremamente importante para ajudar os alunos a processarem seu aprendizado. A metacognição para solução de problemas envolve pensar sobre o processo de raciocínio em si, e refletir _como_ você resolve problemas. Assista ao vídeo abaixo para aprender como a "Receita para Resolver Quebra-Cabeças" da Code.org pode ajudar os alunos a ter sucesso em problemas difíceis:
+
+        <iframe width="640" height="390" src="https://www.youtube.com/embed/XN0G6bSbQ2M" frameborder="0" allowfullscreen></iframe>
+        [Não consegue ver o vídeo? Clique aqui][0]
+
+        [Esta planilha](https://twitter.com/teachcode) detalha os passos da Receita para Resolver Quebra-Cabeças.
+
+        <img src="https://images.code.org/18ec61f8b911b83ca1cdea404a34c40e-image-1434399798952.png" width="650px" style="margin-right:45px; border-radius:10px;">
+
+        > ## Reflita:
+        >
+        > Como você poderia explicitamente lecionar a resolução de problemas em sala de aula?
+        >
+        > [Compartilhe suas ideias no Twitter][2] e lembre-se de indicar a tag @teachcode no seu tweet para que possamos responder.
+        >
+        > <a href="http://ctt.ec/ic2bx" target="blank"><h4><i class="fa fa-external-link-square" ></i> Compartilhe no Tweeter</h4></a>
       OPD-K5 RepeatBlock: Assista o vídeo abaixo, que explica como laços funcionam
         e introduz o bloco 'Repita' em Fundamentos de CC.
       OPD-K5 WhatIsCS: Você já se perguntou "Exatamente, o que é ciência da computação?"

@@ -72,7 +72,12 @@ class DataVisualizer extends React.Component {
         }
         break;
       case 'Histogram':
-        console.warn(`${this.state.chartType} not yet implemented`);
+        if (this.state.values && this.state.bucketSize) {
+          options.histogram = {bucketSize: this.state.bucketSize};
+          chart = new GoogleChart.Histogram(targetDiv);
+          chartData = this.state.parsedRecords;
+          columns.push(this.state.values);
+        }
         break;
       case 'Cross Tab':
         console.warn(`${this.state.chartType} not yet implemented`);

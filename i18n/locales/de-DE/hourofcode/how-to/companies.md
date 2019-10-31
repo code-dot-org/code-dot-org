@@ -1,7 +1,5 @@
 ---
 title: Wie eine Stunde Code Veranstaltung gehostet wird- für Firmen
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

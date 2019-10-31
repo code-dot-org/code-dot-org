@@ -1,7 +1,5 @@
 ---
 title: 资源
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

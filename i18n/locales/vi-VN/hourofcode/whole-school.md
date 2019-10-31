@@ -1,6 +1,5 @@
 ---
 title: Sự tham gia của toàn bộ trường học
-layout: wide
 ---
 
 {{ signup_button }}

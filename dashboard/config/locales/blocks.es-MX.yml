@@ -1250,10 +1250,6 @@ es-MX:
         text: sprite {SPRITE} detiene {BEHAVIOR}
       Mikelab_repeatUntilComplete:
         text: Repetir para siempre
-      Mikelab_sendBad:
-        text: mover a la izquierda
-      Mikelab_sendGood:
-        text: mover a la derecha
       Mikelab_setBG:
         options:
           BG:

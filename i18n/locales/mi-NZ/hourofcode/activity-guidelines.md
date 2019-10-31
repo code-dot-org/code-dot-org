@@ -1,6 +1,5 @@
 ---
 title: Ngā Aratohu Ngohe
-layout: wide
 ---
 
 <style>

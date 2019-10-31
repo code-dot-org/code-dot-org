@@ -1000,10 +1000,6 @@ fi:
         text: satunnainen väri
       Mikelab_repeatUntilComplete:
         text: toista jatkuvasti
-      Mikelab_sendBad:
-        text: siirrä vasemmalle
-      Mikelab_sendGood:
-        text: siirrä oikealle
       Mikelab_setBG:
         options:
           BG:

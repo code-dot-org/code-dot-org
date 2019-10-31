@@ -7,21 +7,50 @@
   "properties": {
     "encrypted": "false",
     "skin": "gamelab",
-    "show_debug_watch": true,
+    "show_debug_watch": "true",
     "block_pools": [
       "gamelab"
     ],
     "helper_libraries": [
       "GameLabJr"
     ],
-    "use_default_sprites": true,
-    "hide_animation_mode": true,
-    "show_type_hints": true,
-    "include_shared_functions": true,
+    "use_default_sprites": "true",
+    "hide_animation_mode": "true",
+    "show_type_hints": "true",
+    "include_shared_functions": "true",
     "hide_custom_blocks": true,
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "video_key": "loop_for",
+    "embed": "false",
+    "instructions_important": "false",
+    "mini_rubric": "false",
+    "never_autoplay_video": "true",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "use_modal_function_editor": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "free_play": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "pause_animations_by_default": "false",
+    "short_instructions": "Here are the short instructions.",
+    "long_instructions": "Here are the really long instructionsdkfsjd;lkfjs;dlfsj;dlfj;lakdjf;lakjsdf;lakjsdf aldf;aldj lkdjf l ldajf;ldfk lsejrowief rif jwoeinfwo epqwofpwefjpqfs fjwep qpeoj"
   },
-  "published": true
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-10-30 21:25:57 +0000\",\"changed\":[\"notes\",\"show_debug_watch\",\"use_default_sprites\",\"hide_animation_mode\",\"show_type_hints\",\"include_shared_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":890,\"changed_by_email\":\"amanda+levelbuilder@code.org\"},{\"changed_at\":\"2019-10-30 21:44:26 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\",\"instructions_important\",\"never_autoplay_video\"],\"changed_by_id\":890,\"changed_by_email\":\"amanda+levelbuilder@code.org\"},{\"changed_at\":\"2019-10-30 21:45:28 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":890,\"changed_by_email\":\"amanda+levelbuilder@code.org\"},{\"changed_at\":\"2019-10-30 21:46:09 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\",\"instructions_important\"],\"changed_by_id\":890,\"changed_by_email\":\"amanda+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </GamelabJr>

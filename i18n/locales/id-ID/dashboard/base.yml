@@ -894,6 +894,8 @@ id:
     time4cs_c3: 'Hidup di Everglades'
     time4cs_c4: 'Dampak Invasi pada Everglades'
     time4cs_c5: 'Masyarakat Mempengaruhi Perubahan di Everglades'
+    k5_getting_started: 'Dapat Dimulai'
+    k5_next_steps: 'Langkah berikutnya'
   external_links:
     disclaimer: Disclaimer
     leaving_domain: Anda sekarang meninggalkan domain ini, ke situs yang tidak dioperasikan oleh Code.org.
@@ -1022,3 +1024,7 @@ id:
     accept: 'Saya setuju'
   gdpr_dialog:
     yes: 'Ya'
+  page_not_found_title: "Halaman tidak ditemukan"
+  page_not_found_header: '404: halaman tidak ditemukan'
+  page_not_found_description: "Halaman yang anda cari tidak ada di alamat ini. Periksa alamat web dan daftar ulang. Atau, kembali ke homepage."
+  page_not_found_button: "Pulang ke rumah"
