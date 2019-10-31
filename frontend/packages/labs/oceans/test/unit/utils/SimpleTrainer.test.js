@@ -31,8 +31,6 @@ describe('Simple Trainer tests', () => {
     trainer.addExampleTensor(tf.tensor([-1, -1]), 1);
     trainer.addExampleTensor(tf.tensor([-1, -1]), 1);
 
-
-
     const result = await trainer.predictFromTensor(tf.tensor([1, 1]));
     expect(result.predictedClassId).toEqual(0);
     expect(result.confidencesByClassId[0]).toEqual(1);

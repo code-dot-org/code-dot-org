@@ -17,7 +17,7 @@ let trashImages = {};
 // Used to tint the fish components
 let intermediateCanvas;
 // Used to draw the object in order to evaluate it when using mobilenet
-let tmpCanvas;
+let evaluationCanvas;
 let intermediateCtx;
 let mobilenet;
 
@@ -39,7 +39,7 @@ export const loadAllFishPartImages = () => {
   intermediateCtx = intermediateCanvas.getContext('2d');
   intermediateCanvas.width = constants.fishCanvasWidth;
   intermediateCanvas.height = constants.fishCanvasHeight;
-  tmpCanvas = document.createElement('canvas');
+  evaluationCanvas = document.createElement('canvas');
 
   let fishPartImagesToLoad = [];
   Object.keys(fishData)
@@ -103,6 +103,8 @@ export class OceanObject {
   randomize() {
     throw 'Not yet implemented!';
   }
+  // Draws the object to the given canvas and
+  // generates the mobilenet data (logits) if generateLogits is true
   drawToCanvas(canvas, generateLogits = true) {
     throw 'Not yet implemented!';
   }
@@ -115,8 +117,8 @@ export class OceanObject {
   getTensor() {
     if (mobilenet) {
       if (!this.logits) {
-        this.drawToCanvas(tmpCanvas, false);
-        this.generateLogits(tmpCanvas);
+        this.drawToCanvas(evaluationCanvas, false);
+        this.generateLogits(evaluationCanvas);
       }
       return this.logits;
     } else {
@@ -290,11 +292,13 @@ export class TrashOceanObject extends OceanObject {
   }
   drawToCanvas(canvas, generateLogits = true) {
     const ctx = canvas.getContext('2d');
+    ctx.save();
     ctx.translate(canvas.width / 2, canvas.height / 2);
     ctx.rotate(Math.random() * 2 * Math.PI);
     const xpos = (-1 * this.image.width) / 2;
     const ypos = (-1 * this.image.height) / 2;
     ctx.drawImage(this.image, xpos, ypos);
+    ctx.restore();
     this.generateLogitsAsync(canvas);
   }
 }
