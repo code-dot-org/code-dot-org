@@ -507,19 +507,17 @@ class User < ActiveRecord::Base
   # Implement validation that refuses to set admin:true attribute unless
   # there's a Code.org google sso option present.
   def verify_google_sso_for_admin
-    return unless admin?
-
     return false unless migrated?
 
     # return array of authentication options that is google oauth
-    google_oauth = authentication_options.where(credential_type: AuthenticationOption::GOOGLE)
-    if google_oauth.empty?
+    google_oauth = authentication_options&.where(credential_type: AuthenticationOption::GOOGLE)
+    if google_oauth&.empty?
       self.admin = false
       return
     end
 
     # get an array of all email domains
-    email_domains = google_oauth.map {|o| Mail::Address.new(o.email).domain}
+    email_domains = google_oauth&.map {|o| Mail::Address.new(o.email).domain}
     if email_domains.none? {|domain| domain == 'code.org'}
       self.admin = false
     end
