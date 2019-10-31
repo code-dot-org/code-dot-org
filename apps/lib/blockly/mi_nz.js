@@ -40,6 +40,7 @@ Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST_TAIL = "";
 Blockly.Msg.CONTROLS_FOREACH_INPUT_ITEM = "mō ia tuemi";
 Blockly.Msg.CONTROLS_FOREACH_TOOLTIP = "";
 Blockly.Msg.CONTROLS_FOR_HELPURL = "";
+Blockly.Msg.CONTROLS_FOR_INPUT_COUNTER = "for %1 from %2 to %3 count by %4";
 Blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY = "atu i te %1 ki te %2 tātaihia mā te %3";
 Blockly.Msg.CONTROLS_FOR_INPUT_WITH = "mō te";
 Blockly.Msg.CONTROLS_FOR_TOOLTIP = "Me whai te taurangi %1 i ngā uara mai i te tau tīmatanga ki te tau mutunga, e tatauria ana mā te āputa e hāngai ana, ā, ka mahia ngā paraka kua tohua.";

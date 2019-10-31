@@ -1,6 +1,6 @@
 ---
 theme: responsive_wide
-banner: 
+banner:
 layout: wide
 video_player: true
 social:
@@ -15,7 +15,7 @@ style_min: true
 
 =inline_css 'homepage.css'
 
-- cookie_key = '_user_type' + (rack_env == :production ? '' : "_#{rack_env.to_s}")
+- cookie_key = environment_specific_cookie_name '_user_type'
 - user_type = request.cookies[cookie_key]
 - user_type = "student" if user_type == "student_y"
 - if ["student", "teacher"].include?(user_type)

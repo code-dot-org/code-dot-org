@@ -1,8 +1,9 @@
 ---
-title: Како-да се води за јавни функционери
+title: "<%= hoc_s(:title_how_to_officials) %>"
 layout: wide
 nav: how_to_nav
 ---
+
 <%= view :signup_button %>
 
 # How to bring the Hour of Code to your entire community.
