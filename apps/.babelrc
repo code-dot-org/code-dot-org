@@ -1,18 +1,4 @@
 {
-  "env": {
-    "test": {
-      "plugins": [ "istanbul" , {
-        "include": [
-          "./src"
-        ],
-        "exclude": [
-          // we need to turn off instrumentation for this file because we have tests that actually
-          // make assertions about the contents of the compiled version of this file :(
-          "./src/flappy/levels.js"
-        ]
-      }]
-    }
-  },
   "presets": ["env", "react" ],
   "plugins": [
     "add-module-exports",
