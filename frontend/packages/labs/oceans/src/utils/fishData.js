@@ -826,7 +826,7 @@ const fishComponents = {
     wide2: {
       src: Tail_Fin_Wide2,
       knnData: [],
-      type: FishBodyPart.TAILv
+      type: FishBodyPart.TAIL
     }
   },
   // COLOR PALETTE KNN DATA: [...bodyRgb, ...finRgb]
