@@ -1,9 +1,6 @@
 import queryString from 'query-string';
 import {setSectionLockStatus} from './stageLockRedux';
-import {
-  setSections,
-  selectSection
-} from '../templates/teacherDashboard/teacherSectionsRedux';
+import {selectSection} from '../templates/teacherDashboard/teacherSectionsRedux';
 import {Provider} from 'react-redux';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -67,13 +64,6 @@ export function queryLockStatus(store, scriptId) {
     $.ajax('/api/lock_status', {
       data: {script_id: scriptId}
     }).done(data => {
-      // Extract the state that teacherSectionsRedux cares about
-      const teacherSections = Object.values(data).map(section => ({
-        id: section.section_id,
-        name: section.section_name
-      }));
-
-      store.dispatch(setSections(teacherSections));
       store.dispatch(setSectionLockStatus(data));
       const query = queryString.parse(location.search);
       if (query.section_id) {
