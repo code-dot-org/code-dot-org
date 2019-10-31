@@ -2,6 +2,7 @@ require 'cdo/aws/s3'
 require 'rack/csrf'
 require_relative '../shared/middleware/helpers/storage_id'
 require 'cdo/asset_helper'
+require 'cdo/cookie_helpers'
 
 def avatar_image(name, width=320, square_photo=false)
   basename = name.downcase.gsub(/\W/, '_').gsub(/_+/, '_')
