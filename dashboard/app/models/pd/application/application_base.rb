@@ -437,5 +437,35 @@ module Pd::Application
 
       update(status_timestamp_change_log: sanitize_status_timestamp_change_log.append(log_entry).to_json)
     end
+
+    # Locate all applications that are eligible to receive their first workshop registration
+    # reminder email now.
+    def self.needing_first_registration_reminder
+      # The 'registration_sent' email was sent at least two weeks ago
+      # No 'registration_reminder' has been sent yet.
+      # Not enrolled in a workshop since the 'registration_sent' email was sent
+      joins('inner join pd_application_emails on pd_applications.id = pd_application_emails.pd_application_id').
+        where("pd_application_emails.email_type = 'registration_sent'").
+        where("pd_application_emails.sent_at <= ?", 2.weeks.ago).
+        reject {|a| a.emails.where(email_type: 'registration_reminder').exists?}.
+        reject {|a| Pd::Enrollment.where(user: a.user).where('created_at >= ?', a.emails.where(email_type: 'registration_sent').pluck(:sent_at).first).exists?}.
+        uniq
+    end
+
+    # Locate all applications that are eligible to receive their second workshop registration
+    # reminder email now.
+    def self.needing_second_registration_reminder
+      # Both 'registration_sent' and 'registration_reminder' emails were sent.
+      # Only one 'registration_reminder' email has been sent.
+      # The 'registration_reminder' email was sent at least one week ago.
+      # Not enrolled in a workshop since the 'registration_sent' email was sent.
+      joins('inner join pd_application_emails on pd_applications.id = pd_application_emails.pd_application_id').
+        where("pd_application_emails.email_type = 'registration_reminder'").
+        where("pd_application_emails.sent_at <= ?", 1.week.ago).
+        select {|a| a.emails.where(email_type: 'registration_sent').exists?}.
+        reject {|a| a.emails.where(email_type: 'registration_reminder').count > 1}.
+        reject {|a| Pd::Enrollment.where(user: a.user).where('created_at >= ?', a.emails.where(email_type: 'registration_sent').pluck(:sent_at).first).exists?}.
+        uniq
+    end
   end
 end
