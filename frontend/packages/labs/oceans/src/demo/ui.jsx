@@ -354,16 +354,16 @@ class Train extends React.Component {
         <div style={trainQuestionTextStyle}>{questionText}</div>
         <img style={styles.trainBot} src={aiBotClosed} />
         <Button
-          style={styles.trainButtonYes}
-          onClick={() => onClassifyFish(true)}
-        >
-          Yes
-        </Button>
-        <Button
           style={styles.trainButtonNo}
           onClick={() => onClassifyFish(false)}
         >
           No
+        </Button>
+        <Button
+          style={styles.trainButtonYes}
+          onClick={() => onClassifyFish(true)}
+        >
+          Yes
         </Button>
         <Footer>
           <Button
