@@ -103,6 +103,7 @@ export class OceanObject {
   randomize() {
     throw 'Not yet implemented!';
   }
+
   // Draws the object to the given canvas and
   // generates the mobilenet data (logits) if generateLogits is true
   drawToCanvas(canvas, generateLogits = true) {
@@ -112,7 +113,7 @@ export class OceanObject {
     return this.id;
   }
   getKnnData() {
-    return this.knnData
+    return this.knnData;
   }
   getTensor() {
     if (mobilenet) {
@@ -290,6 +291,7 @@ export class TrashOceanObject extends OceanObject {
     const idx = Math.floor(Math.random() * imagePaths.length);
     this.image = trashImages[idx];
   }
+
   drawToCanvas(canvas, generateLogits = true) {
     const ctx = canvas.getContext('2d');
     ctx.save();
