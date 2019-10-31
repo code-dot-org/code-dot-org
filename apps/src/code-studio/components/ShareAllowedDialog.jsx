@@ -23,7 +23,6 @@ import PublishDialog from '../../templates/projects/publishDialog/PublishDialog'
 import {createHiddenPrintWindow} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import experiments from '@cdo/apps/util/experiments';
 import LibraryCreationDialog from './libraries/LibraryCreationDialog';
 import LibraryClientApi from './libraries/LibraryClientApi';
 
@@ -153,6 +152,7 @@ class ShareAllowedDialog extends React.Component {
     }).isRequired,
     allowExportExpo: PropTypes.bool.isRequired,
     exportApp: PropTypes.func,
+    librariesEnabled: PropTypes.bool,
     icon: PropTypes.string,
     shareUrl: PropTypes.string.isRequired,
     // Only applicable to Dance Party projects, used to Tweet at song artist.
@@ -422,7 +422,7 @@ class ShareAllowedDialog extends React.Component {
                       className="no-mc"
                     />
                   )}
-                  {experiments.isEnabled('student-libraries') && isDroplet && (
+                  {this.props.librariesEnabled && (
                     <button
                       type="button"
                       onClick={this.props.openLibraryCreationDialog}
@@ -527,6 +527,7 @@ export default connect(
   state => ({
     allowExportExpo: state.pageConstants.allowExportExpo || false,
     exportApp: state.pageConstants.exportApp,
+    librariesEnabled: state.pageConstants.librariesEnabled,
     isOpen: state.shareDialog.isOpen,
     isUnpublishPending: state.shareDialog.isUnpublishPending
   }),
