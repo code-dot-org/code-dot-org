@@ -13,7 +13,7 @@ const INITIAL_STATE = {
   isVisualizerOpen: false,
   chartTitle: '',
   chartType: '',
-  numBins: 0,
+  bucketSize: 0,
   values: '',
   xValues: '',
   yValues: '',
@@ -165,7 +165,7 @@ class DataVisualizer extends React.Component {
     }
 
     const modalBody = (
-      <div>
+      <div style={{overflow: 'auto', maxHeight: '90%'}}>
         <h1> Explore {this.props.tableName} </h1>
         <h2> Overview </h2>
         <div id="selection-area">
@@ -188,12 +188,14 @@ class DataVisualizer extends React.Component {
           />
 
           {this.state.chartType === 'Histogram' && (
-            <div id="numBinsRow" style={rowStyle.container}>
-              <label style={rowStyle.description}>Bins</label>
+            <div style={rowStyle.container}>
+              <label style={rowStyle.description}>Bucket Size</label>
               <input
                 style={rowStyle.input}
-                value={this.state.numBins}
-                onChange={event => this.setState({numBins: event.target.value})}
+                value={this.state.bucketSize}
+                onChange={event =>
+                  this.setState({bucketSize: event.target.value})
+                }
               />
             </div>
           )}
