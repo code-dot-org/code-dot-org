@@ -4,7 +4,7 @@ import constants, {Modes, ClassType} from './constants';
 import CanvasCache from './canvasCache';
 import {backgroundPathForMode} from './helpers';
 import {predictFish} from './models/predict';
-import {loadAllFishPartImages} from './OceanObject';
+import {loadAllFishPartImages, loadAllTrashImages, initMobilenet} from './OceanObject';
 
 var $time =
   Date.now ||
@@ -22,7 +22,13 @@ let moveTime;
 
 export const initRenderer = () => {
   canvasCache = new CanvasCache();
-  return loadAllFishPartImages();
+  let promises = [];
+  promises.push(loadAllFishPartImages());
+  if (getState().loadTrashImages) {
+    promises.push(loadAllTrashImages());
+    promises.push(initMobilenet());
+  }
+  return Promise.all(promises);
 };
 
 // Render a single frame of the scene.

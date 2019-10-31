@@ -222,7 +222,14 @@ class ActivityIntro extends React.Component {
           <Footer>
             <Button
               style={styles.continueButton}
-              onClick={() => toMode(Modes.Words)}
+              onClick={() => {
+                const state = getState();
+                if (state.loadTrashImages) {
+                  setState({currentMode: Modes.TrainingIntro, word: 'FISHY'});
+                } else {
+                  toMode(Modes.Words);
+                }
+              }}
             >
               Continue
             </Button>

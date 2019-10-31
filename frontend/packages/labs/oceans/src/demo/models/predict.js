@@ -1,16 +1,17 @@
 import 'idempotent-babel-polyfill';
-import {setState} from '../state';
+import {getState, setState} from '../state';
 import {generateOcean} from '../../utils/generateOcean';
 
 export const init = () => {
-  const fishData = generateOcean(100);
+  const state = getState();
+  const fishData = generateOcean(100, state.loadTrashImages);
   setState({isRunning: true, fishData});
 };
 
 export const predictFish = (state, idx) => {
   return new Promise(resolve => {
     const fish = state.fishData[idx];
-    state.trainer.predictFromData(fish.getKnnData()).then(prediction => {
+    state.trainer.predictFromTensor(fish.getTensor()).then(prediction => {
       fish.setResult(prediction);
       resolve(prediction);
     });

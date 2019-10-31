@@ -14,7 +14,8 @@ const initialState = {
   isRunning: false,
   yesCount: 0,
   noCount: 0,
-  canSkipPredict: false
+  canSkipPredict: false,
+  loadTrashImages: null
 };
 let state = {...initialState};
 

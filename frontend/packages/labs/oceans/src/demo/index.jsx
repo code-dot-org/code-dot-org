@@ -19,12 +19,14 @@ $(document).ready(() => {
 
   // Temporarily use URL parameter to set some state.
   const dataSet = queryStrFor('set') && queryStrFor('set').toLowerCase();
+  const loadTrashImages = queryStrFor('mode') && queryStrFor('mode').toLowerCase() === 'fishvtrash';
 
   // Set initial state for UI elements.
   const state = setState({
     currentMode: Modes.Loading,
     canvas,
     backgroundCanvas,
+    loadTrashImages,
     dataSet
   });
 
