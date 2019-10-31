@@ -444,12 +444,13 @@ module Pd::Application
       # The 'registration_sent' email was sent at least two weeks ago
       # No 'registration_reminder' has been sent yet.
       # Not enrolled in a workshop since the 'registration_sent' email was sent
-      joins('inner join pd_application_emails on pd_applications.id = pd_application_emails.pd_application_id').
-        where("pd_application_emails.email_type = 'registration_sent'").
-        where("pd_application_emails.sent_at <= ?", 2.weeks.ago).
-        reject {|a| a.emails.where(email_type: 'registration_reminder').exists?}.
-        reject {|a| Pd::Enrollment.where(user: a.user).where('created_at >= ?', a.emails.where(email_type: 'registration_sent').pluck(:sent_at).first).exists?}.
-        uniq
+      joins("inner join pd_application_emails rs on pd_applications.id = rs.pd_application_id and rs.email_type = 'registration_sent'").
+        joins("left outer join pd_application_emails rr on pd_applications.id = rr.pd_application_id and rr.email_type = 'registration_reminder'").
+        joins("left outer join pd_enrollments e on pd_applications.user_id = e.user_id and e.created_at >= rs.sent_at").
+        where("rs.sent_at <= ?", 2.weeks.ago).
+        where("rr.id is null").
+        where('e.id is null').
+        distinct
     end
 
     # Locate all applications that are eligible to receive their second workshop registration
@@ -459,13 +460,13 @@ module Pd::Application
       # Only one 'registration_reminder' email has been sent.
       # The 'registration_reminder' email was sent at least one week ago.
       # Not enrolled in a workshop since the 'registration_sent' email was sent.
-      joins('inner join pd_application_emails on pd_applications.id = pd_application_emails.pd_application_id').
-        where("pd_application_emails.email_type = 'registration_reminder'").
-        where("pd_application_emails.sent_at <= ?", 1.week.ago).
-        select {|a| a.emails.where(email_type: 'registration_sent').exists?}.
-        reject {|a| a.emails.where(email_type: 'registration_reminder').count > 1}.
-        reject {|a| Pd::Enrollment.where(user: a.user).where('created_at >= ?', a.emails.where(email_type: 'registration_sent').pluck(:sent_at).first).exists?}.
-        uniq
+      joins("inner join pd_application_emails rs on pd_applications.id = rs.pd_application_id and rs.email_type = 'registration_sent'").
+        joins("inner join pd_application_emails rr on pd_applications.id = rr.pd_application_id and rr.email_type = 'registration_reminder'").
+        joins("left outer join pd_enrollments e on pd_applications.user_id = e.user_id and e.created_at >= rs.sent_at").
+        where('rr.sent_at <= ?', 1.week.ago).
+        where('e.id is null').
+        distinct.
+        reject {|a| a.emails.where(email_type: 'registration_reminder').count > 1}
     end
   end
 end
