@@ -981,7 +981,8 @@ export const sectionFromServerSection = serverSection => ({
   scriptId: serverSection.script
     ? serverSection.script.id
     : serverSection.script_id || null,
-  hidden: serverSection.hidden
+  hidden: serverSection.hidden,
+  isAssigned: serverSection.isAssigned
 });
 
 /**
@@ -1096,7 +1097,12 @@ export function sectionsNameAndId(state) {
   }));
 }
 
-export function sectionsForDropdown(state, scriptId, courseId) {
+export function sectionsForDropdown(
+  state,
+  scriptId,
+  courseId,
+  onCourseOverview
+) {
   return state.sectionIds.map(id => ({
     id: parseInt(id, 10),
     name: state.sections[id].name,
@@ -1104,7 +1110,9 @@ export function sectionsForDropdown(state, scriptId, courseId) {
     courseId: state.sections[id].courseId,
     isAssigned:
       (scriptId !== null && state.sections[id].scriptId === scriptId) ||
-      (courseId !== null && state.sections[id].courseId === courseId)
+      (courseId !== null &&
+        state.sections[id].courseId === courseId &&
+        onCourseOverview)
   }));
 }
 

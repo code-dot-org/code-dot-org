@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
@@ -13,6 +14,7 @@ import {
 import experiments from '@cdo/apps/util/experiments';
 import SectionAssigner from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
+import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 export const NOT_STARTED = 'NOT_STARTED';
 export const IN_PROGRESS = 'IN_PROGRESS';
@@ -45,7 +47,7 @@ const styles = {
   }
 };
 
-export default class ScriptOverviewTopRow extends React.Component {
+class ScriptOverviewTopRow extends React.Component {
   static propTypes = {
     sectionsInfo: PropTypes.arrayOf(
       PropTypes.shape({
@@ -150,3 +152,14 @@ export default class ScriptOverviewTopRow extends React.Component {
     );
   }
 }
+
+export const UnconnectedScriptOverviewTopRow = ScriptOverviewTopRow;
+
+export default connect((state, ownProps) => ({
+  sectionsForDropdown: sectionsForDropdown(
+    state.teacherSections,
+    ownProps.scriptId,
+    ownProps.currentCourseId,
+    false
+  )
+}))(ScriptOverviewTopRow);

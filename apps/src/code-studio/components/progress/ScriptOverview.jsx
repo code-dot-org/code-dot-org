@@ -212,6 +212,7 @@ export default connect((state, ownProps) => ({
   sectionsForDropdown: sectionsForDropdown(
     state.teacherSections,
     ownProps.id,
-    ownProps.courseId
+    ownProps.courseId,
+    false
   )
 }))(UnconnectedScriptOverview);

@@ -26,6 +26,7 @@ import {
   queryUserProgress as reduxQueryUserProgress
 } from './progressRedux';
 import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
+import {setSections} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {queryLockStatus, renderTeacherPanel} from './teacherPanelHelpers';
 
 var progress = module.exports;
@@ -153,6 +154,8 @@ progress.renderCourseProgress = function(scriptData) {
   );
 
   store.dispatch(initializeHiddenScripts(scriptData.section_hidden_unit_info));
+  store.dispatch(setSections(scriptData.sections));
+
   const mountPoint = document.createElement('div');
   $('.user-stats-block').prepend(mountPoint);
   ReactDOM.render(
@@ -174,7 +177,6 @@ progress.renderCourseProgress = function(scriptData) {
         locale={scriptData.locale}
         showAssignButton={scriptData.show_assign_button}
         userId={scriptData.user_id}
-        sectionsForDropdown={scriptData.sections}
       />
     </Provider>,
     mountPoint
