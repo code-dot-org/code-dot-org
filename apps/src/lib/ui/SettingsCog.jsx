@@ -13,7 +13,6 @@ import PopUpMenu from './PopUpMenu';
 import ConfirmEnableMakerDialog from './ConfirmEnableMakerDialog';
 import LibraryManagerDialog from '@cdo/apps/code-studio/components/libraries/LibraryManagerDialog';
 import {getStore} from '../../redux';
-import experiments from '@cdo/apps/util/experiments';
 
 const style = {
   iconContainer: {
@@ -138,7 +137,7 @@ class SettingsCog extends Component {
           showTail={true}
         >
           <ManageAssets onClick={this.manageAssets} />
-          {experiments.isEnabled(experiments.STUDENT_LIBRARIES) && (
+          {getStore().getState().pageConstants.librariesEnabled && (
             <ManageLibraries onClick={this.manageLibraries} />
           )}
           {this.props.showMakerToggle && (
