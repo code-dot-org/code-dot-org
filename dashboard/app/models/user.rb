@@ -466,7 +466,9 @@ class User < ActiveRecord::Base
     :normalize_email,
     :hash_email,
     :sanitize_race_data_set_urm,
-    :fix_by_user_type
+    :fix_by_user_type,
+    :verify_google_sso_for_admin
+
   before_save :remove_cleartext_emails, if: -> {student? && migrated? && user_type_changed?}
 
   before_validation :update_share_setting, unless: :under_13?
@@ -500,6 +502,45 @@ class User < ActiveRecord::Base
     # Make sure we explicitly return true here so Rails doesn't interpret a
     # potential `self.urm = false` as us trying to halt the callback chain
     true
+  end
+
+  # Implement validation that refuses to set admin:true attribute unless
+  # there's a Code.org google sso option present.
+  def verify_google_sso_for_admin
+    return unless admin?
+    return false unless Mail::Address.new(email).domain == "code.org"
+    puts "#{Mail::Address.new(email).domain}"
+    # return false unless migrated?
+    # unless migrated?
+    #   puts "#{migrated?}"
+    #   puts "****not migrated"
+    #   self.admin = false
+    #   return
+    # end
+
+    # return array of authentication options that is google oauth 2
+    google_oauth = authentication_options&.where(credential_type: AuthenticationOption::GOOGLE)
+    puts "#{google_oauth}"
+    puts "#{google_oauth.empty?}"
+    if google_oauth.empty?
+      puts "***failing google oauth"
+      self.admin = false
+      return
+    end
+
+    # get an array of all emails
+    email_domains = google_oauth&.map {|o| Mail::Address.new(o.email).domain}
+    if email_domains.none? {|domain| domain == 'code.org'}
+      puts "***failing email domain"
+      self.admin = false
+    end
+
+    unless migrated?
+        puts "#{migrated?}"
+        puts "****not migrated"
+        self.admin = false
+        return
+    end
   end
 
   def fix_by_user_type
