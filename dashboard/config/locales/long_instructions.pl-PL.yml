@@ -53,6 +53,58 @@ pl-PL:
         ::: details [**Jak stworzyć wiele paragrafów?**]
 
         Oto przykład kilku paragrafów znajdujących się w jednym rzędzie.
+      CSD U2 HTML Debug Paragraphs_2019: |-
+        <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
+
+        ::: details [**Czym jest element <p> ?**]
+
+        W języku programowania HTML używamy elementu ( `<p>` ) do rozpoczynania paragrafu, oraz elementu ( `</p>` ) do jego zakończenia. Paragrafy mogą być różnej długości. Mogą składać się z jednego słowa, albo nawet kilku zdań. Paragrafy mają za zadanie oddzielać jedną grupę tekstu od drugiej, wstawiając między nimi wolną przestrzeń.
+
+        :::
+
+        ::: details [**Dlaczego HTML sprawia wrażenie działającego, mimo że nie jest poprawnie napisany?**]
+
+        Przeglądarki internetowe odczytują HTML aby generować strony internetowe. Dlatego, że ludzie często popełniają drobne błędy pisząc strony internetowe,  przeglądarki zostały tak zaprogramowane, aby zgadywać co zamierzaliśmy napisać. Czasami różne przeglądarki  zostają zaprogramowane aby przypuszczać różne możliwości! Jedynym sposobem na zapewnienie, że kod jest taki jaki chcieliśmy, jest upewnienie się, że zawsze używamy poprawnie tagów.
+
+        :::
+
+        :::::: details [**Dlaczego kod zmienia kolor na różowy?**]
+
+        Web Lab został tak zaprogramowany, aby automatycznie wykrywał niektóre błędy w HTML. Jeżeli zauważy błąd, zmienia kolor kodu na różowy. Błąd może być zaznaczony różowy lub może znajdywać się przed różowym kodem. W takim wypadku ważne jest ostrożne debugowanie, aż do momentu znalezienia błędu.
+
+        :::
+
+        </div>
+
+        # Debugowanie: Napraw zepsute tagi.
+
+        Ta prosta strona internetowa zawiera kilka błędów, które uniemożliwiają poprawne wyświetlanie jej zawartości. Znajdź i napraw te błędy. To ćwiczenie nazywamy "debugowaniem" kodu.
+
+        # Zrób to
+
+        -   Napraw uszkodzony kod, tak aby strona wyświetlała się poprawnie
+        -   Porównaj znalezione przez Ciebie błędy z kolegą lub koleżanką
+      CSD U2 Heading Demo_2019: "# Nagłówki\n\n<div class=\"no-pullthrough\" style=\"float:
+        right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\n\n:::
+        details [**Czym są nagłówki?**]\nNagłówki to pojawiające się na stronie internetowej
+        tytuły fragmentów o różnych rozmiarach. Nagłówki dzielą stronę na części oraz
+        sprawiają, że staje się ona łatwiejsza do czytania.\n:::\n\n::: details [**Jak
+        zrobić nagłówki o różnych rozmiarach?**]\nNagłówki występują w 6 rożnych rozmiarach.
+        Na chwilę obecną używałeś głównie największego `<h1>`. Numer '1' w tagu HTML
+        oznacza, że jest to największy nagłówek. Najmniejszy z nich to `<h6>`. Możesz
+        też spróbować tagi `<h2>`, `<h3>`, `<h4>`, and `<h5>` które stają się coraz
+        mniejsze, im większa staje się liczba.\n :::\n\n::: details [**Czym jest HTML?**]\nHTML
+        to skrót od Hypertext Markup Language (hipertekstowy język znaczników). HTML
+        jest używany do tworzenia układu stron internetowych. HTML korzysta z tagów
+        aby określić gdzie konkretne struktury się rozpoczynają i kończą. Tagi są
+        zestawieniem znaków, które nie istnieją w języku angielskim, tak aby zawartość
+        strony jak i jej budowa mogły być rozróżniane. \n:::\n\n::: details [**Czym
+        jest element HTML?**]\nElement HTML to część strony która jest zaznaczona
+        tagiem rozpoczynającym oraz czasami zamykana tagiem kończącym.  Element zawiera
+        też zawartość w środku tagów. Na przykład: \n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"
+        style=\"width:500px\">\n:::\n\n::: details [**Czym jest tag HTML?**]\n\nTag
+        HTML to specjalny zestaw znaków które mówią maszynie gdzie znajduje się początek
+        lub koniec elementu HTML oraz jaki jest to typ elementu.\n\n:::"
       CSD U2 Inspector Warm Up_2019: |-
         <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
         <details>
@@ -74,6 +126,11 @@ pl-PL:
 
         \-Kliknij wskazówkę "Jak używać narzędzia Inspector?" po prawej stronie ekranu aby dowiedzieć się jak z niego korzystać.
         \-Podążaj za instrukcjami umieszczonymi na stronie internetowej aby ją odkryć.  Przedyskutuj z partnerem jak funkcjonuje ta strona.
+      CSD U2 Pair Programming Video_2019: |-
+        ## Pytania do przemyślenia
+
+        -   Jak myślisz, dlaczego profesjonalni programiści używają programowania w parach.?
+        -   W jaki sposób programowanie w parach może pomóc w jeszcze lepszym programowaniu?
       CSD U3 Entertainment Sample 3: "# Animowany Komiks\\\r\n\n\\\r \nŁączenie obrazów,
         tekstu i niektórych subtelnych animacji może naprawdę doprowadzić do ciekawych
         komiksów lub graficznych historii.  Kliknij przycisk \"Uruchom\", aby zobaczyć
@@ -232,9 +289,9 @@ pl-PL:
 
         -   _Jeśli chcesz uzyskać dodatkowe informacje lub potrzebujesz ekstra wyzwań, możesz także kliknąć żarówkę po lewej._
       Dance_Party_02: |-
-        Stwórzmy ten taniec łosi!
+        Stwórzmy taniec łosia!
 
-        Przeciągnij do pola roboczego blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml>. Podłącz go pod blokiem <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> block. Twój tancerz powinien zacząć nowy ruch po czwartym takcie.
+        Przeciągnij do obszaru roboczego blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml>. Umieść go pod blokiem \<<xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Twój tancerz powinien rozpocząć nowy ruch po czwartym takcie.
 
         **Takty** służą w muzyce do odmierzania czasu. W tym samouczku takt składa się z 4 uderzeń.
       Dance_Party_03: |-
@@ -275,16 +332,16 @@ pl-PL:
       Dance_Party_11: |-
         Blok <xml><block type="Dancelab_whenKey"></block></xml> pozwoli Ci uruchomić kod po naciśnięciu strzałki w górę.
 
-        Możesz zmienić ruchy w tańcu, właściwości tancerza lub spowodować szybki ruch dokładnie raz. Bądź twórczy i wypatruj nowych bloków!
+        Możesz zmieniać ruchy w tańcu, właściwości tancerza lub wykonać pojedynczy szybki ruch. Bądź twórczy i rozglądaj się za nowymi blokami!
       Dance_Party_11_5: |-
         Sprawdź ten blok:
 
         <xml>
-        <block type="Dancelab_makeNewDanceSpriteGroup">
-        <title name="N">6</title>
-        <title name="COSTUME">"DUCK"</title>
-        <title name="LAYOUT">"circle"</title>
-        </block></xml>
+          <block type="Dancelab_makeNewDanceSpriteGroup">
+            <title name="N">6</title>
+            <title name="COSTUME">"DUCK"</title>
+            <title name="LAYOUT">"circle"</title>
+          </block></xml>
 
         Teraz możesz utworzyć wielu tancerzy na raz!
 
@@ -298,21 +355,20 @@ pl-PL:
       Dance_Party_extras_battle: |-
         # Grupy taneczne
 
-        To bitwa taneczna pomiędzy dwiema grupami. Klawisze ze strzałkami służą do sterowania pierwszym tancerzem, a klawisze w, a, s, d do kontrolowania drugiego tancerza. Zagraj w taneczną bitwę z przyjacielem, a potem spróbuj udoskonalić ten taniec.
+        To bitwa taneczna pomiędzy dwiema grupami. Klawisze ze strzałkami sterują jednym z tancerzy, a klawisze "w, a, s, d" drugim. Zagraj w taneczną bitwę z przyjacielem, a potem spróbuj udoskonalić ten taniec.
 
-        -   Dodaj kolejne przyciski kontroli tańca
-        -   Spraw, aby tancerze zapasowi reagowali na wciskanie klawiszy
-        -   Zmieniaj tancerza co 4 takty poprzez ustawienia ich widoczności
-      Dance_Party_extras_every_beat: |-
-        # Ćwierćnuty
-
-        Większość naszych tancerzy używało pełnych taktów, ale każdy takt składa się z 4 ćwierćnut. W tym tańcu użyto „co 0,25 taktu”, aby tancerz klaskał na każdą ćwierćnutę.
-
-        W tańcu wykorzystano także blok\_warunkowy do kontrolowania, kiedy blok „co 0,25 taktu” może zmienić taniec. Spróbuj zmieniać liczby w bloku warunkowym i zobaczyć, jak wpływa to na taniec.
-
-        -   Poeksperymentuj z długościami innych nut (np. 0,5 dla półnuty lub 0,125 dla ósemki).
-        -   Dodaj wydarzenia „po takcie”.
-        -   Przełącz „takty” na „sekundy” i spróbuj w ten sposób zmierzyć czas swojego tańca.
+        -   Dodaj kolejne przyciski kontrolujące taniec
+        -   Spraw, aby tancerze wspierający również reagowali na wciskanie klawiszy
+        -   Zmieniaj tancerza co 4 takty, ustawiając jego widoczność
+      Dance_Party_extras_every_beat: "# Ćwierćnuty\n\nWiększość naszych tańców wykorzystuje
+        pełne takty, ale każdy takt składa się z 4 ćwierćnut. Ten taniec używa \"co
+        0,25 taktu\", co sprawia, że tancerz klaszcze w każdej ćwierćnucie. \n\nW
+        tym tańcu wykorzystano także blok _warunkowy_ do kontrolowania, kiedy blok
+        \"co 0,25 taktu\" może zmienić taniec. Spróbuj zmieniać liczby w bloku warunkowym,
+        aby zobaczyć, jak wpływa to na taniec. \n\n-   Eksperymentuj z innymi czasami
+        trwania nut (np. 0,5 dla półnuty lub 0,125 dla ósemki). \n-   Dodaj jakieś
+        zdarzenia \"po zakończeniu taktu\". \n-   Przełącz \"takty\" na \"sekundy\"
+        i spróbuj w ten sposób taktować swoje tańce."
       Dance_Party_extras_layout: |-
         # Przejdźmy do formacji!
 
@@ -330,13 +386,13 @@ pl-PL:
 
         Ten ostatni taniec wykorzystuje blok "ustaw prędkość" do sterowania szybkością poruszania się tancerzy. Spróbuj poeksperymentować z różnymi prędkościami podczas różnych fragmentów piosenki. Nie przestawaj majstrować przy tym tańcu lub powróć do któregokolwiek z poprzednich tańców, aby uczynić je bardziej porywającymi.
       Dance_Party_extras_visible: |-
-        # Dokąd pójdą?
+        # Gdzie oni poszli?
 
         Ten taniec pokazuje i ukrywa dwie różne grupy tancerzy. Sprawdź to, a następnie spróbuj dodać własne ulepszenia.
 
         -   Dodaj kolejną grupę tancerzy
         -   Pokaż i ukryj tancerzy przy użyciu klawiszy strzałek
-        -   Ukryj wszystkich tancerzy i przełącz na super efekty tła
+        -   Ukryj wszystkich tancerzy i przełącz na ekscytujący efekt tła
       Function intro Ryan: "W Twoim polu roboczym znajduje się funkcja o nazwie \"build
         bridget\".  Zawiera ona cały kod potrzebny do przekroczenia rzeki! \\\r\n
         \\\r\nUmieść zielony bloczek dwukrotnie w polu roboczym, aby naprawić ścieżkę,
@@ -498,17 +554,17 @@ pl-PL:
         tej grze klikając na mnie pokaże się mój przyjaciel kot Olive!\"_\\\r\n\\\r\nKlikając
         na Olivie pojawi się Robin! Czy możesz napisać kod aby pokazać również resztę
         postaci?\\\r\n\\\r\nW tej zagadce, koniecznie używaj podpowiedzi! Podpowiedzi
-        pomogą Ci zrobić ten projekt krok po kroku!\\\r\n\\\r\n!\\[](\\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>\nPM.png>)"
+        pomogą Ci zrobić ten projekt krok po kroku!\\\r\n\\\r\n![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png>)"
       courseA_playlab_events_challenge1_2018: "_\"Gdzie ukrywają się moi przyjaciele?
         W tej grze klikając na mnie pokaże się mój przyjaciel kot Olive!\"_\\\r\n\\\r\nKlikając
         na Olivie pojawi się Robin! Czy możesz napisać kod aby pokazać również resztę
         postaci?\\\r\n\\\r\nW tej zagadce, koniecznie używaj podpowiedzi! Podpowiedzi
-        pomogą Ci zrobić ten projekt krok po kroku!\\\r\n\\\r\n!\\[](\\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>\nPM.png>)"
+        pomogą Ci zrobić ten projekt krok po kroku!\\\r\n\\\r\n![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png>)"
       courseA_playlab_events_challenge1_2019: "_\"Gdzie ukrywają się moi przyjaciele?
         W tej grze klikając na mnie pokaże się mój przyjaciel kot Olive!\"_\\\r\n\\\r\nKlikając
         na Olivie pojawi się Robin! Czy możesz napisać kod aby pokazać również resztę
         postaci?\\\r\n\\\r\nW tej zagadce, koniecznie używaj podpowiedzi! Podpowiedzi
-        pomogą Ci zrobić ten projekt krok po kroku!\\\r\n\\\r\n!\\[](\\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>\nPM.png>)"
+        pomogą Ci zrobić ten projekt krok po kroku!\\\r\n\\\r\n![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png>)"
       courseB_artist_loops6: Za krzakami jest piękna winorośl pełna kwiatów. Czy możesz
         wspiąć się na winorośl i zobaczyć dokąd zmierza?
       courseB_artist_loops6_2018: Za krzakami jest piękna winorośl pełna kwiatów.

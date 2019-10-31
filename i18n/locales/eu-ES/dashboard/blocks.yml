@@ -723,10 +723,6 @@ eu:
         text: ausazko kolorea
       Mikelab_repeatUntilComplete:
         text: errepikatu betirako
-      Mikelab_sendBad:
-        text: mugitu ezkerrera
-      Mikelab_sendGood:
-        text: mugitu eskuinera
       Mikelab_setBG:
         options:
           BG:

@@ -1160,6 +1160,8 @@ en:
               name: Bubble Choice
             Contained Levels:
               name: Contained Levels
+            ML Fish:
+              name: ML Fish
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'

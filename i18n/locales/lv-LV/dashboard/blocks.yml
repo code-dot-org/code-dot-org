@@ -361,10 +361,6 @@ lv:
         text: nejauša krāsa
       Mikelab_repeatUntilComplete:
         text: mūžīgi atkārtot
-      Mikelab_sendBad:
-        text: pārvietot pa kreisi
-      Mikelab_sendGood:
-        text: Pārvietot pa labi
       Mikelab_setBG:
         options:
           BG:

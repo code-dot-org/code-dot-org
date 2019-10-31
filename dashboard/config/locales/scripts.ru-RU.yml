@@ -1995,8 +1995,6 @@ ru:
               name: Создание основы
             Nested Loops:
               name: Вложенные циклы
-          title: Экспресс-курс
-          assignment_family_title: Экспресс-курс
           description_audience: 'Возраст: 9-18'
         pre-express-2017:
           stages:
@@ -2969,3 +2967,37 @@ ru:
             Dance Party:
               name: Танцевальная вечеринка
           description: Создавайте свой собственный танец и делитесь им с друзьями.
+        k5-onlinepd-copy:
+          stages:
+            Getting Started:
+              name: Приступить к работе
+            Computer Science Fundamentals:
+              name: Основы программирования
+            'Mastering the Basics: Sequencing':
+              name: 'Освоение основ: последовательности'
+            'Mastering the Basics: Loops':
+              name: 'Освоение основ: циклы'
+            'Mastering the Basics: Conditionals':
+              name: 'Освоение основ: условные операторы'
+            'Mastering the Basics: Functions':
+              name: 'Освоение основ: функции'
+            'Mastering the Basics: Events':
+              name: 'Освоение основ: события'
+            Planning:
+              name: Планирование
+            Next Steps:
+              name: Следующие шаги
+            Sequencing:
+              name: Последовательность действий
+            Loops:
+              name: Циклы
+            Conditionals:
+              name: Условные команды
+            Events:
+              name: События
+            Functions:
+              name: функции
+            Variables:
+              name: переменные
+            For Loops:
+              name: Циклы с параметром

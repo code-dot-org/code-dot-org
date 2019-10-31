@@ -973,10 +973,6 @@ et:
         text: juhuslik värv
       Mikelab_repeatUntilComplete:
         text: korda igavesti
-      Mikelab_sendBad:
-        text: liigu vasakule
-      Mikelab_sendGood:
-        text: liigu paremale
       Mikelab_setBG:
         options:
           BG:

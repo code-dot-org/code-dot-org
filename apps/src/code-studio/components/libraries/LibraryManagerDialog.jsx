@@ -25,7 +25,7 @@ const styles = {
     marginTop: 20
   },
   libraryList: {
-    maxHeight: '162px',
+    maxHeight: '140px',
     overflowY: 'auto'
   },
   message: {
