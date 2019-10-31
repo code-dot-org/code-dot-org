@@ -124,7 +124,8 @@ export function createLibraryJson(
   }
 
   let config = createDropletConfig(selectedFunctions, libraryName);
-  let functions = selectedFunctions.map(func => func.functionName);
+  let functions =
+    selectedFunctions && selectedFunctions.map(func => func.functionName);
   if (!config || !functions) {
     return;
   }
