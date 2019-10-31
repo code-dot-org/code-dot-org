@@ -8,6 +8,7 @@ import libraryParser from './libraryParser';
 import i18n from '@cdo/locale';
 import PadAndCenter from '@cdo/apps/templates/teacherDashboard/PadAndCenter';
 import {Heading1, Heading2} from '@cdo/apps/lib/ui/Headings';
+import annotationList from '@cdo/apps/acemode/annotationList';
 import Spinner from '../../pd/components/spinner';
 import Button from '@cdo/apps/templates/Button';
 
@@ -58,7 +59,9 @@ export const LoadingState = {
   LOADING: 'loading',
   DONE_LOADING: 'done_loading',
   PUBLISHED: 'published',
-  ERROR_PUBLISH: 'error_publish'
+  ERROR_PUBLISH: 'error_publish',
+  CODE_ERROR: 'code_error',
+  NO_FUNCTIONS: 'no_functions'
 };
 
 class LibraryCreationDialog extends React.Component {
@@ -83,7 +86,20 @@ class LibraryCreationDialog extends React.Component {
   }
 
   onOpen = () => {
+    var error = annotationList.getJSLintAnnotations().find(annotation => {
+      return annotation.type === 'error';
+    });
+    if (error) {
+      this.setState({loadingState: LoadingState.CODE_ERROR});
+      return;
+    }
+
     dashboard.project.getUpdatedSourceAndHtml_(response => {
+      let functionsList = libraryParser.getFunctions(response.source);
+      if (!functionsList || functionsList.length === 0) {
+        this.setState({loadingState: LoadingState.NO_FUNCTIONS});
+        return;
+      }
       this.setState({
         libraryName: libraryParser.sanitizeName(
           dashboard.project.getLevelName()
@@ -154,6 +170,14 @@ class LibraryCreationDialog extends React.Component {
     if (isChecked !== this.state.canPublish) {
       this.setState({canPublish: isChecked});
     }
+  };
+
+  displayCodeError = () => {
+    return <div>{i18n.libraryCodeError()}</div>;
+  };
+
+  displayNoFunctionsError = () => {
+    return <div>{i18n.libraryNoFunctonsError()}</div>;
   };
 
   displayLoadingState = () => {
@@ -266,6 +290,12 @@ class LibraryCreationDialog extends React.Component {
         break;
       case LoadingState.PUBLISHED:
         bodyContent = this.displaySuccess();
+        break;
+      case LoadingState.CODE_ERROR:
+        bodyContent = this.displayCodeError();
+        break;
+      case LoadingState.NO_FUNCTIONS:
+        bodyContent = this.displayNoFunctionsError();
         break;
       default:
         bodyContent = this.displayFunctions();
