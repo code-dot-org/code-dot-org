@@ -508,38 +508,20 @@ class User < ActiveRecord::Base
   # there's a Code.org google sso option present.
   def verify_google_sso_for_admin
     return unless admin?
-    return false unless Mail::Address.new(email).domain == "code.org"
-    puts "#{Mail::Address.new(email).domain}"
-    # return false unless migrated?
-    # unless migrated?
-    #   puts "#{migrated?}"
-    #   puts "****not migrated"
-    #   self.admin = false
-    #   return
-    # end
 
-    # return array of authentication options that is google oauth 2
-    google_oauth = authentication_options&.where(credential_type: AuthenticationOption::GOOGLE)
-    puts "#{google_oauth}"
-    puts "#{google_oauth.empty?}"
+    return false unless migrated?
+
+    # return array of authentication options that is google oauth
+    google_oauth = authentication_options.where(credential_type: AuthenticationOption::GOOGLE)
     if google_oauth.empty?
-      puts "***failing google oauth"
       self.admin = false
       return
     end
 
-    # get an array of all emails
-    email_domains = google_oauth&.map {|o| Mail::Address.new(o.email).domain}
+    # get an array of all email domains
+    email_domains = google_oauth.map {|o| Mail::Address.new(o.email).domain}
     if email_domains.none? {|domain| domain == 'code.org'}
-      puts "***failing email domain"
       self.admin = false
-    end
-
-    unless migrated?
-        puts "#{migrated?}"
-        puts "****not migrated"
-        self.admin = false
-        return
     end
   end
 
