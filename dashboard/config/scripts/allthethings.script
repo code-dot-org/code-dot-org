@@ -248,6 +248,9 @@ stage 'Dance Lab'
 level 'allthethings HOC Dance 1'
 level 'allthethings HOC Dance 10 Measures'
 
+stage 'ML Fish'
+level 'allthethings HOC ML Fish 1'
+
 stage 'Mini Rubric'
 level 'allthethings-mini-rubric', assessment: true
 level 'allthethings-mini-rubric-weblab', assessment: true
