@@ -77,7 +77,7 @@ export default class LibraryManagerDialog extends React.Component {
   importLibrary = (channelId, versionId) => {
     // TODO: Check for naming collisions between libraries.
     let libraryClient = new LibraryClientApi(channelId);
-    libraryClient.getVersion(
+    libraryClient.fetchByVersion(
       versionId,
       data => {
         let updatedjson = libraryParser.prepareLibraryForImport(
@@ -99,7 +99,7 @@ export default class LibraryManagerDialog extends React.Component {
 
   addLibrary = channelId => {
     let libraryClient = new LibraryClientApi(channelId);
-    libraryClient.getLatestVersionId(versionId =>
+    libraryClient.fetchLatestVersionId(versionId =>
       this.importLibrary(channelId, versionId)
     );
   };
