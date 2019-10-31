@@ -41,7 +41,7 @@ class DataVisualizer extends React.Component {
   };
 
   handleClose = () => {
-    this.setState({isVisualizerOpen: false});
+    this.setState({...INITIAL_STATE});
   };
 
   aggregateRecordsByColumn = (records, columnName) => {
