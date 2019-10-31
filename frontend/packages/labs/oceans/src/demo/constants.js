@@ -21,3 +21,10 @@ export const ClassType = Object.freeze({
   Like: 0,
   Dislike: 1
 });
+
+// Describes the current data set and whether it is restricted
+// (e.g., if DataSet.Small === true, we will restrict which words
+// or fish the student sees).
+export const DataSet = Object.freeze({
+  Small: 'small'
+});

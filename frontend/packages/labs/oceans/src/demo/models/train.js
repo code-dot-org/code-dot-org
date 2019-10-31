@@ -1,4 +1,4 @@
-import 'babel-polyfill';
+import 'idempotent-babel-polyfill';
 import {setState, getState} from '../state';
 import {ClassType} from '../constants';
 import SimpleTrainer from '../../utils/SimpleTrainer';

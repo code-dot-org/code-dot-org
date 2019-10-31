@@ -1,10 +1,13 @@
 {
   "name": "@code-dot-org/ml-activities",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "dist/main.js",
   "jest": {
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "moduleNameMapper": {
+      ".+\\.(jpg|jpeg|png)$": "identity-obj-proxy"
+    }
   },
   "scripts": {
     "build": "webpack -p",
@@ -19,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/code-dot-org/dance-party.git"
+    "url": "git+ssh://git@github.com/code-dot-org/ml-activities.git"
   },
   "author": "",
   "license": "Apache-2.0",
@@ -45,6 +48,8 @@
     "css-loader": "^3.2.0",
     "eslint": ">=4.18.2",
     "eslint-plugin-react": "^7.11.0",
+    "idempotent-babel-polyfill": "6.26.0-1",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^15.0.0",
     "jquery": "1.12.1",
     "jquery-ui": "^1.12.1",
@@ -53,12 +58,14 @@
     "mem": ">=4.0.0",
     "node-fetch": "^2.6.0",
     "prettier": "1.16.1",
+    "query-string": "4.1.0",
     "react": "~15.4.0",
     "react-bootstrap": "0.30.1",
     "react-color": "^2.17.3",
     "react-dom": "~15.4.0",
     "react-test-renderer": "~15.4.0",
     "style-loader": "^1.0.0",
+    "url-loader": "^2.2.0",
     "webpack": "4.19.1",
     "webpack-cli": "^3.3.6",
     "webpack-dev-server": "^3.1.4",

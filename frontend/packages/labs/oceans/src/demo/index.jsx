@@ -3,6 +3,7 @@ import constants, {Modes} from './constants';
 import {setState, setSetStateCallback} from './state';
 import {init as initModel} from './models';
 import {render as renderCanvas} from './renderer';
+import {queryStrFor} from './helpers';
 
 import 'babel-polyfill';
 import ReactDOM from 'react-dom';
@@ -17,16 +18,16 @@ $(document).ready(() => {
   canvas.height = backgroundCanvas.height = constants.canvasHeight;
 
   // Temporarily use URL parameter to set some state.
-  const smallWordSet = window.location.href.indexOf('words=small') !== -1;
-  const loadTrashImages = window.location.href.indexOf('mode=fishvtrash') !== -1;
+  const dataSet = queryStrFor('set') && queryStrFor('set').toLowerCase();
+  const loadTrashImages = queryStrFor('mode') && queryStrFor('mode').toLowerCase() === 'fishvtrash';
 
   // Set initial state for UI elements.
   const state = setState({
     currentMode: Modes.Loading,
     canvas,
     backgroundCanvas,
-    smallWordSet,
-    loadTrashImages
+    loadTrashImages,
+    dataSet
   });
 
   // Initialize our first model.

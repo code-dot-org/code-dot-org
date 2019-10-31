@@ -2,6 +2,7 @@ let setStateCallback = null;
 
 const initialState = {
   currentMode: null,
+  dataSet: null,
   fishData: [],
   pondFish: [],
   backgroundCanvas: null,
@@ -9,12 +10,6 @@ const initialState = {
   ctx: null,
   trainer: null,
   trainingIndex: 0,
-  uiContainer: null,
-  uiElements: [],
-  headerContainer: null,
-  headerElements: [],
-  footerContainer: null,
-  footerElements: [],
   iterationCount: 0,
   isRunning: false,
   yesCount: 0,
@@ -38,6 +33,6 @@ export const setState = function(newState) {
   return state;
 };
 
-export const setSetStateCallback = (callback) => {
+export const setSetStateCallback = callback => {
   setStateCallback = callback;
-}
+};

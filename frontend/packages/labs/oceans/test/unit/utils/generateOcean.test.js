@@ -1,6 +1,6 @@
-const {initFishData} = require('../../src/utils/fishData');
-const {generateOcean, filterOcean} = require('../../src/utils/generateOcean');
-const SimpleTrainer = require('../../src/utils/SimpleTrainer');
+import {initFishData} from '../../../src/utils/fishData';
+import {generateOcean, filterOcean} from '../../../src/utils/generateOcean';
+import SimpleTrainer from '../../../src/utils/SimpleTrainer';
 
 describe('Generate ocean test', () => {
   beforeAll(() => {

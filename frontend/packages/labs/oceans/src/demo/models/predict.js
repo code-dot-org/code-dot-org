@@ -1,5 +1,5 @@
-import 'babel-polyfill';
-import {setState, getState} from '../state';
+import 'idempotent-babel-polyfill';
+import {getState, setState} from '../state';
 import {generateOcean} from '../../utils/generateOcean';
 
 export const init = () => {

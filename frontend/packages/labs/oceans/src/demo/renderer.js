@@ -1,4 +1,4 @@
-import 'babel-polyfill';
+import 'idempotent-babel-polyfill';
 import {getState, setState} from './state';
 import constants, {Modes, ClassType} from './constants';
 import CanvasCache from './canvasCache';

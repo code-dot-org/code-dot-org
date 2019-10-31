@@ -1,4 +1,4 @@
-const SimpleTrainer = require('../../src/utils/SimpleTrainer');
+import SimpleTrainer from '../../../src/utils/SimpleTrainer';
 import * as tf from '@tensorflow/tfjs';
 
 describe('Simple Trainer tests', () => {
