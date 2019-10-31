@@ -24,7 +24,7 @@ export default class LibraryClientApi {
     );
   }
 
-  getLatest(onSuccess, onError) {
+  fetchLatest(onSuccess, onError) {
     this.libraryApi.fetch(
       this.channelId + '/' + LIBRARY_NAME,
       (error, data) => {
@@ -37,7 +37,7 @@ export default class LibraryClientApi {
     );
   }
 
-  getLatestVersionId(onSuccess, onError) {
+  fetchLatestVersionId(onSuccess, onError) {
     this.libraryApi.fetch(
       this.channelId + '/' + LIBRARY_NAME + '/versions',
       (error, data) => {
@@ -53,7 +53,7 @@ export default class LibraryClientApi {
     );
   }
 
-  getVersion(versionId, onSuccess, onError) {
+  fetchByVersion(versionId, onSuccess, onError) {
     let library;
     this.libraryApi.fetch(
       this.channelId + '/' + LIBRARY_NAME + '?version=' + versionId,
