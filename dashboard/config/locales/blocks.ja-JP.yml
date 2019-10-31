@@ -962,10 +962,6 @@ ja:
         text: てきとうな色
       Mikelab_repeatUntilComplete:
         text: ずっと
-      Mikelab_sendBad:
-        text: 左に うごかす
-      Mikelab_sendGood:
-        text: 右に うごかす
       Mikelab_setBG:
         options:
           BG:

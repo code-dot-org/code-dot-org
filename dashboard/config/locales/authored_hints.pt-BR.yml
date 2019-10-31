@@ -3366,7 +3366,7 @@ pt-BR:
           \ </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title
           name=\"DIR\">moveForward</title>\n                  </block>\n                  \n
           \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n
-          \   <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>"
+          \   <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
         courseD_collector_debugging_challenge2_b: |-
           Em seguida, colete as gemas restantes nessa linha.
 
@@ -11138,6 +11138,8 @@ pt-BR:
           Observe que o caminho mais fácil para chegar a todas as culturas ainda é uma espiral.
 
           ![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)
+        courseD_farmer_condLoops7_b: Experimente usar "enquanto caminho à frente"
+          para manter a colheitadeira se movendo o número correto de passos.
       courseD_farmer_condLoops_challenge1:
         courseD_farmer_condLoops_challenge1_a: O botão "Passo" pode ser muito útil
           neste desafio.

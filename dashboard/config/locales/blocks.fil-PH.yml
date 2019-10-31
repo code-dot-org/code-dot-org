@@ -411,10 +411,6 @@ fil:
         text: iba-ibang kulay
       Mikelab_repeatUntilComplete:
         text: ulitin ng walang katapusan
-      Mikelab_sendBad:
-        text: igalaw pakaliwa
-      Mikelab_sendGood:
-        text: igalaw pakanan
       Mikelab_setBG:
         options:
           BG:

@@ -1120,10 +1120,6 @@ he:
         text: צבע אקראי
       Mikelab_repeatUntilComplete:
         text: חזור לנצח
-      Mikelab_sendBad:
-        text: זוז שמאלה
-      Mikelab_sendGood:
-        text: זוז ימינה
       Mikelab_setBG:
         options:
           BG:

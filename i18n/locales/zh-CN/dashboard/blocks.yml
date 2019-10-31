@@ -1257,10 +1257,6 @@ zh-CN:
         text: 精灵 {SPRITE} 停止 {BEHAVIOR}
       Mikelab_repeatUntilComplete:
         text: 一直重复
-      Mikelab_sendBad:
-        text: 向左移动
-      Mikelab_sendGood:
-        text: 向右移动
       Mikelab_setBG:
         options:
           BG:

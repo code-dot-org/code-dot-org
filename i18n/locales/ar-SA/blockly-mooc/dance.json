@@ -11,5 +11,12 @@
   "danceFeedbackNeedEveryTwoMeasures": "تأكد من أنك تستخدم الكتلة البرمجية \"كل 2 إجراء\"",
   "danceFeedbackNeedMakeANewDancer": "استخدم الكتلة البرمجية \"اصنع جديداً\" لإنشاء راقص ثانٍ.",
   "danceFeedbackKeyEvent": "",
+  "danceFeedbackDidntPress": "",
+  "danceFeedbackPressedKey": "",
+  "danceFeedbackNeedTwoDancers": "",
+  "danceFeedbackOnlyOneDancerMoved": "",
+  "danceFeedbackNeedLead": "",
+  "danceFeedbackNeedBackup": "",
+  "danceFeedbackSetSize": "",
   "measure": ""
 }

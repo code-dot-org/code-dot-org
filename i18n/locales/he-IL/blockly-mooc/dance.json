@@ -11,5 +11,12 @@
   "danceFeedbackNeedEveryTwoMeasures": "ודאו כי אתם משתמשים בבלוק 'כל 2 תיבות'",
   "danceFeedbackNeedMakeANewDancer": "השתמשו בבלוק 'צור חדש' על מנת ליצור רקדן שני.",
   "danceFeedbackKeyEvent": "",
+  "danceFeedbackDidntPress": "",
+  "danceFeedbackPressedKey": "",
+  "danceFeedbackNeedTwoDancers": "",
+  "danceFeedbackOnlyOneDancerMoved": "",
+  "danceFeedbackNeedLead": "",
+  "danceFeedbackNeedBackup": "",
+  "danceFeedbackSetSize": "",
   "measure": "תיבה:"
 }

@@ -1251,10 +1251,6 @@ pt-BR:
         text: personagem {SPRITE} para {BEHAVIOR}
       Mikelab_repeatUntilComplete:
         text: repita infinitamente
-      Mikelab_sendBad:
-        text: mova à esquerda
-      Mikelab_sendGood:
-        text: mova à direita
       Mikelab_setBG:
         options:
           BG:

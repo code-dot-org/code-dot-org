@@ -919,6 +919,7 @@ bg:
     csp_functions: Функции
     csp_lists: Списъци
     csp_loops: Повторения
+    k5_next_steps: Следващи стъпки
   external_links:
     disclaimer: Отказ от отговорност
     leaving_domain: Сега напускате този домейн, преминавайки към сайт, който не се

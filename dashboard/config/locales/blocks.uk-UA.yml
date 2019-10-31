@@ -858,10 +858,6 @@ uk:
         text: випадковий колір
       Mikelab_repeatUntilComplete:
         text: повторювати завжди
-      Mikelab_sendBad:
-        text: рухатись ліворуч
-      Mikelab_sendGood:
-        text: рухатись праворуч
       Mikelab_setBG:
         options:
           BG:

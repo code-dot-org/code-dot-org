@@ -866,6 +866,7 @@ ro:
     csp_functions: 'Funcţii'
     csp_lists: 'Liste'
     csp_loops: 'Bucle'
+    k5_next_steps: 'Pașii următori'
   external_links:
     disclaimer: Act de renuntare
     leaving_domain: Acum parasesti acest domeniu, la un site care nu este operat de Code.org.

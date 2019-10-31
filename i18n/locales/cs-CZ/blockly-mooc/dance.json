@@ -11,5 +11,12 @@
   "danceFeedbackNeedEveryTwoMeasures": "Ujisti se, že používáš blok `každé 2 takty`",
   "danceFeedbackNeedMakeANewDancer": "K vytvoření druhého tanečníka použij blok `vytvořit nový`.",
   "danceFeedbackKeyEvent": "",
+  "danceFeedbackDidntPress": "",
+  "danceFeedbackPressedKey": "",
+  "danceFeedbackNeedTwoDancers": "",
+  "danceFeedbackOnlyOneDancerMoved": "",
+  "danceFeedbackNeedLead": "",
+  "danceFeedbackNeedBackup": "",
+  "danceFeedbackSetSize": "",
   "measure": "Takt:"
 }

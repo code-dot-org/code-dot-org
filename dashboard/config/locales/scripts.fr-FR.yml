@@ -2361,7 +2361,6 @@ fr:
             Nested Loops:
               name: Boucles imbriquées
           title: Cours Express
-          assignment_family_title: Cours Express
         pre-express-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -3535,3 +3534,37 @@ fr:
               name: Fête dansante
           description: Codez votre propre soirée dansante à partager avec vos amis
             !
+        k5-onlinepd-copy:
+          stages:
+            Computer Science Fundamentals:
+              name: Fondamentaux de l'informatique
+            Looking Ahead:
+              name: Regarder en avant
+            'Mastering the Basics: Sequencing':
+              name: 'Maîtriser les bases: Les séquences'
+            'Mastering the Basics: Loops':
+              name: 'Maîtriser les bases: Les boucles'
+            'Mastering the Basics: Conditionals':
+              name: 'Maîtriser les bases: Les conditions'
+            'Mastering the Basics: Functions':
+              name: 'Maîtriser les bases: Les fonctions'
+            'Mastering the Basics: Events':
+              name: 'Maîtriser les bases: Les événements'
+            Planning:
+              name: Planifier
+            Next Steps:
+              name: Prochaines étapes
+            Sequencing:
+              name: Séquençage
+            Loops:
+              name: boucles
+            Conditionals:
+              name: Instructions conditionnelles
+            Events:
+              name: Événements
+            Functions:
+              name: fonctions
+            Variables:
+              name: variables
+            For Loops:
+              name: Boucles « Pour »
