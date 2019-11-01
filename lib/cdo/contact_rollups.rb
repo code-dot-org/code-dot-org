@@ -259,7 +259,7 @@ class ContactRollups
 
       # Continue to advance the destination pointer until the destination email address in question
       # is the same or later alphabetically as the source email address.
-      until contact_rollup_dest.nil? || ((contact_rollup_dest.class == Hash) && (contact_rollup_dest[:email] < email_src))
+      until contact_rollup_dest.nil? || ((contact_rollup_dest.class == Hash) && (contact_rollup_dest[:email] >= email_src))
         unless contact_rollup_dest.class == Hash
           invalid_dest_count += 1
           p "dest_iterator_count = #{dest_iterator_count}; invalid_dest_count = #{invalid_dest_count}"
