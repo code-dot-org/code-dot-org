@@ -43,7 +43,7 @@ export const generateOcean = numFish => {
         shuffleList(eyes);
       }
       object.mouth = mouths[i % mouths.length];
-      if (i % mouths.length === mouths.length) {
+      if (i % mouths.length === mouths.length - 1) {
         shuffleList(mouths);
       }
       object.colorPalette = colorPalettes[i % colorPalettes.length];
