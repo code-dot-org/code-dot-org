@@ -43,10 +43,10 @@ const styles = {
     cursor: 'pointer',
     backgroundColor: colors.white,
     fontSize: '120%',
-    borderRadius: 5,
-    padding: '1%',
-    border: 'none',
-    width: '17%',
+    borderRadius: 8,
+    border: `2px solid ${colors.black}`,
+    minWidth: 160,
+    padding: '16px 30px',
     ':focus': {
       outline: `${colors.white} auto 5px`
     }
@@ -67,8 +67,7 @@ const styles = {
     width: '20%',
     marginLeft: '6%',
     marginRight: '6%',
-    marginTop: '2%',
-    marginBottom: '2%'
+    marginTop: '2%'
   },
   activityIntroText: {
     position: 'absolute',
@@ -114,12 +113,12 @@ const styles = {
   trainButtonYes: {
     position: 'absolute',
     top: '80%',
-    left: '30%'
+    left: '33%'
   },
   trainButtonNo: {
     position: 'absolute',
     top: '80%',
-    left: '60%'
+    left: '50%'
   },
   trainBot: {
     position: 'absolute',
@@ -474,13 +473,13 @@ class Train extends React.Component {
           style={styles.trainButtonNo}
           onClick={() => onClassifyFish(false)}
         >
-          No
+          {`Not ${state.word}`}
         </Button>
         <Button
           style={styles.trainButtonYes}
           onClick={() => onClassifyFish(true)}
         >
-          Yes
+          {state.word}
         </Button>
         <Footer>
           <Button
