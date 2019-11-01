@@ -2493,7 +2493,6 @@ es:
             Nested Loops:
               name: Bucles anidados
           title: Curso Rápido
-          assignment_family_title: Curso Rápido
           description_short: 'Una introducción a la ciencia de la computación: combina lo mejor de nuestro plan de estudios de primaria para estudiantes mayores.'
         pre-express-2017:
           stages:
@@ -3580,3 +3579,39 @@ es:
             Dance Party:
               name: Fiesta para bailar
           description: '¡Programa tu propio baile para compartirlo con tus amigos!'
+        k5-onlinepd-copy:
+          stages:
+            Getting Started:
+              name: Iniciando
+            Computer Science Fundamentals:
+              name: Fundamentos de la informatica
+            Looking Ahead:
+              name: Observando hacia el futuro
+            'Mastering the Basics: Sequencing':
+              name: 'Dominar lo básico: secuenciación'
+            'Mastering the Basics: Loops':
+              name: 'Manejar lo básico: Bucles'
+            'Mastering the Basics: Conditionals':
+              name: 'Manejar lo básico: Condicionales'
+            'Mastering the Basics: Functions':
+              name: 'Manejar lo básico: Funciones'
+            'Mastering the Basics: Events':
+              name: 'Manejar lo básico: Eventos'
+            Best Practices for Teaching Computer Science:
+              name: Los mejores ejercicios para la enseñanza de la informática
+            Next Steps:
+              name: Próximos pasos
+            Sequencing:
+              name: Secuenciando
+            Loops:
+              name: vuelta
+            Conditionals:
+              name: Condicionales
+            Events:
+              name: Eventos
+            Functions:
+              name: funciones
+            Variables:
+              name: variables
+            For Loops:
+              name: Bucles Para

@@ -1508,3 +1508,23 @@ hi:
           stages:
             Dance Party:
               name: डांस पार्टी
+        k5-onlinepd-copy:
+          stages:
+            Getting Started:
+              name: शुरू करें
+            Next Steps:
+              name: अगले चरण
+            Sequencing:
+              name: अनुक्रमण
+            Loops:
+              name: फंदे
+            Conditionals:
+              name: शर्तें
+            Events:
+              name: घटनाएँ
+            Functions:
+              name: कार्य
+            Variables:
+              name: चर
+            For Loops:
+              name: फॉर लूप्स

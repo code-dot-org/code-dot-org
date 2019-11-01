@@ -605,10 +605,6 @@ ka:
         text: შემთხვევითი ფერი
       Mikelab_repeatUntilComplete:
         text: მუდამ გამეორება
-      Mikelab_sendBad:
-        text: გადაადგილება მარცხნივ
-      Mikelab_sendGood:
-        text: მარჯვნივ გადაადგილება
       Mikelab_setBG:
         options:
           BG:
