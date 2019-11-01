@@ -1005,11 +1005,11 @@ Applab.isRunning = function() {
  */
 Applab.toggleDivApplab = function(isVisible) {
   if (isVisible) {
-    $('#divApplab').show();
-    $('#designModeViz').hide();
+    document.querySelector('#divApplab').hidden = false;
+    document.querySelector('#designModeViz').hidden = true;
   } else {
-    $('#divApplab').hide();
-    $('#designModeViz').show();
+    document.querySelector('#divApplab').hidden = true;
+    document.querySelector('#designModeViz').hidden = false;
   }
 };
 
