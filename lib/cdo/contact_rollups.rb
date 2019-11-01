@@ -238,23 +238,37 @@ class ContactRollups
     contact_rollup_dest = grab_next(dest_iterator)
     time_last_output = Time.now
 
-    count = 0
-    p "contact_rollup_dest = #{contact_rollup_src}"
-    p "contact_rollup_dest.class = #{contact_rollup_src.class}"
+    src_iterator_count = 1
+    dest_iterator_count = 1
+    invalid_src_count = 0
+    invalid_dest_count = 0
 
     until contact_rollup_src.nil?
-      p "loop #{count}"
-      p "contact_rollup_src = #{contact_rollup_src}"
-      p "contact_rollup_src.class = #{contact_rollup_src.class}"
+      until contact_rollup_src.nil? || (contact_rollup_src.class == Hash)
+        invalid_src_count += 1
+        p "src_iterator_count = #{src_iterator_count}; invalid_src_count = #{invalid_src_count}"
+        p "contact_rollup_src.class = #{contact_rollup_src.class}"
+        p "contact_rollup_src = #{contact_rollup_src}"
+
+        contact_rollup_src = grab_next(src_iterator)
+        src_iterator_count += 1
+      end
+      break if contact_rollup_src.nil?
 
       email_src = contact_rollup_src[:email]
 
       # Continue to advance the destination pointer until the destination email address in question
       # is the same or later alphabetically as the source email address.
-      while (!contact_rollup_dest.nil?) && (contact_rollup_dest[:email] < email_src)
+      until contact_rollup_dest.nil? || ((contact_rollup_dest.class == Hash) && (contact_rollup_dest[:email] < email_src))
+        unless contact_rollup_dest.class == Hash
+          invalid_dest_count += 1
+          p "dest_iterator_count = #{dest_iterator_count}; invalid_dest_count = #{invalid_dest_count}"
+          p "contact_rollup_dest.class = #{contact_rollup_dest.class}"
+          p "contact_rollup_dest = #{contact_rollup_dest}"
+        end
+
         contact_rollup_dest = grab_next(dest_iterator)
-        p "contact_rollup_dest = #{contact_rollup_src}"
-        p "contact_rollup_dest.class = #{contact_rollup_src.class}"
+        dest_iterator_count += 1
       end
 
       # Determine if this is a new record (email address doesn't exist in destination table) or existing.
@@ -308,11 +322,11 @@ class ContactRollups
 
       # Go on to the next source record
       contact_rollup_src = grab_next(src_iterator)
-
-      count += 1
-      break if count == 10
+      src_iterator_count += 1
     end
 
+    p "src_iterator_count = #{src_iterator_count}; invalid_src_count = #{invalid_src_count}"
+    p "dest_iterator_count = #{dest_iterator_count}; invalid_dest_count = #{invalid_dest_count}"
     log("#{Time.now} Completed. #{num_total} source rows processed. #{num_inserts} insert(s), #{num_updates} update(s), #{num_unchanged} unchanged.")
     log_collector.info("#{num_total} source rows processed. #{num_inserts} insert(s), #{num_updates} update(s), #{num_unchanged} unchanged.")
   end
