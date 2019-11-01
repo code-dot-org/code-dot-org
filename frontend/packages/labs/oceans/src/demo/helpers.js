@@ -108,13 +108,17 @@ export const filterFishComponents = (fishComponents, dataSet) => {
 };
 
 export const getAppMode = () => {
-  const appMode = _.last(queryStrFor('mode').toLowerCase().split('-'));
+  let appMode = null;
   let appModeVariant = null;
 
-  // If the mode is "fishy-instrutions" then we extract "fishy" as the
-  // appModeVariant.
-  if (appMode === "instructions") {
-    appModeVariant = queryStrFor('mode').toLowerCase().split('-')[0];
+  if (queryStrFor('mode')) {
+    appMode = _.last(queryStrFor('mode').toLowerCase().split('-'));
+
+    // If the mode is "fishy-instrutions" then we extract "fishy" as the
+    // appModeVariant.
+    if (appMode === "instructions") {
+      appModeVariant = queryStrFor('mode').toLowerCase().split('-')[0];
+    }
   }
 
   return [appMode, appModeVariant];
