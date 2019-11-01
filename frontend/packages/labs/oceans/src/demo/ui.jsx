@@ -40,7 +40,16 @@ const styles = {
     width: '100%'
   },
   button: {
-    cursor: 'pointer'
+    cursor: 'pointer',
+    backgroundColor: colors.white,
+    fontSize: '120%',
+    borderRadius: 5,
+    padding: '1%',
+    border: 'none',
+    width: '17%',
+    ':focus': {
+      outline: `${colors.white} auto 5px`
+    }
   },
   continueButton: {
     marginLeft: 'auto',
