@@ -11,5 +11,12 @@
   "danceFeedbackNeedEveryTwoMeasures": "Nutze den \"Alle 2 Takte\"-Block",
   "danceFeedbackNeedMakeANewDancer": "Verwende den Block \"einen Neuen erstellen\", um zu einen zweiten Tänzer zu erstellen.",
   "danceFeedbackKeyEvent": "Stelle sicher, dass du Blöcke unter dem \"Wenn Taste gedrückt\"-Block stehen hast. Drücke dann die Taste währenddem dein Tanz läuft.",
+  "danceFeedbackDidntPress": "",
+  "danceFeedbackPressedKey": "",
+  "danceFeedbackNeedTwoDancers": "",
+  "danceFeedbackOnlyOneDancerMoved": "",
+  "danceFeedbackNeedLead": "",
+  "danceFeedbackNeedBackup": "",
+  "danceFeedbackSetSize": "",
   "measure": "Takt:"
 }

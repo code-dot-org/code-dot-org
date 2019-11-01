@@ -978,10 +978,6 @@ ar:
         text: لون عشوائي
       Mikelab_repeatUntilComplete:
         text: التكرار للأبد
-      Mikelab_sendBad:
-        text: تحرك لليسار
-      Mikelab_sendGood:
-        text: تحريك لليمين
       Mikelab_setBG:
         options:
           BG:

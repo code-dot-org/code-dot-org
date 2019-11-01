@@ -926,6 +926,7 @@ fr:
     time4cs_c3: 'Vivre dans les Everglades'
     time4cs_c4: 'Impact Invasif sur les Everglades'
     time4cs_c5: 'Citoyens influent sur les changements dans les Everglades'
+    k5_next_steps: 'Prochaines étapes'
   external_links:
     disclaimer: Clause de non-responsabilité
     leaving_domain: Vous quittez maintenant ce domaine pour un site qui n’est pas géré par Code.org.
@@ -1099,3 +1100,7 @@ fr:
     privacy_policy: 'politique de confidentialité'
     logout: 'Déconnexion'
     yes: 'Oui'
+  page_not_found_title: "Page introuvable"
+  page_not_found_header: '404 : Page introuvable'
+  page_not_found_description: "La page recherchée n’existe pas à cette adresse. Vérifiez l’adresse web et réessayez, ou retournez à notre page d’accueil."
+  page_not_found_button: "Retourner à la page d’accueil"

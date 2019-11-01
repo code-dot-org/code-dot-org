@@ -34,6 +34,9 @@ ro-RO:
       Course 4 Artist Vars 6:
         degrees_per_side: Împărțiți 360 la numărul de laturi pentru a obține mărimea
           în grade a fiecărui unghi.
+      Course 4 Artist Vars 8:
+        Course_4_Artist_Vars_8_a: Ai nevoie de mai mult spaţiu? Trage de această bară
+          pentru a face spaţiul de program mai lat.
       Course 4 Bee 1:
         if_bee_nectar: Folosește blocul "dacă" pentru a decide dacă albina ar trebui
           să ia nectarul sau să facă miere
@@ -45,6 +48,9 @@ ro-RO:
           schimba direcţia spre care se va întoarce albina ca să obţină nectarul.
       Course 4 Maze 4:
         repeat: Pune blocuri în interiorul buclei pentru a repeta comenzi
+      Course 4 Play Lab Params 2:
+        Course_4 _Play_Lab_Params_2_1: Apasă "editează" pentru a actualiza această
+          funcţie pentru a folosi parametrul înălţime.
       Course 4 Play Lab Params 3:
         edit_function: Click aici pentru a edita funcţia dumneavoastră.
       Course 4 Play Lab Params 6:
@@ -54,6 +60,15 @@ ro-RO:
       Course 4 Play Lab Vars 9:
         Course_4_Play_Lab_Vars_9_1: Toate blocurile tale sunt acum aranjate în categorii!
           Apasă pe o etichetă pentru a vedea piesele din acea categorie.
+      Course 4 Playlab For Loops 4b:
+        Course_4_Playlab_For_Loops_4b_1: Observă că variabila `contor` are un nume
+          diferit pentru fiecare caracter? Aceasta este aşa pentru ca fiecare buclă
+          `pentru` să-şi controleze propriul contor.
+        Course_4_Playlab_For_Loops_4b_2: Pentru această problemă, ai voie doar să
+          schimbi "incrementul" buclelor `pentru`.
+      Course 4 SCV 6:
+        Course_4_SCV_6: Acest bloc îţi permite să modifici culoarea cu aproape orice
+          vrei vrei să vezi! Joacă-te cu numerele ca să vezi ce se întamplă!
       CourseD_Dance_Party_01:
         dance_callout_01: Adaugă acest bloc la programul tău!
       CourseD_Dance_Party_02:
@@ -92,6 +107,9 @@ ro-RO:
           programul.
       MC HOC 2016 New Walk:
         MC_HOC_2016_New_Walk_callout2: Apasă "Rulează" pentru a începe mişcarea.
+      NEW Course 4 Artist Functions 3:
+        NEW_Course_4_Artist_Functions_3_1: Apasă aici pentru a edita funcţia nouă
+          astfel încât să creze un pătrat.
       NEW Course 4 Artist Functions 7:
         edit_function: Click aici pentru a edita funcţia dumneavoastră.
       NEW Course 4 Artist Functions 8:

@@ -709,6 +709,7 @@ sv:
     csp_functions: 'funktioner'
     csp_lists: 'Listor'
     csp_loops: 'loopar'
+    k5_next_steps: 'Nästa steg'
   hoc_download:
     capsule_title: 'Har du Internet?'
     instructions_headline: 'Inget Internet?'

@@ -960,10 +960,6 @@ th:
         text: สุ่มสี
       Mikelab_repeatUntilComplete:
         text: ทำซ้ำตลอดไป
-      Mikelab_sendBad:
-        text: ย้ายไปทางซ้าย
-      Mikelab_sendGood:
-        text: ย้ายไปทางขวา
       Mikelab_setBG:
         options:
           BG:

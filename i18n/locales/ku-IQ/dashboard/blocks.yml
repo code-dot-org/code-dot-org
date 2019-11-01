@@ -1100,8 +1100,6 @@ ku:
         text: رەنگێکی هەڕەمەکی
       Mikelab_removeBehaviorSimple:
         text: سپڕایت {SPRITE} دەستپێدەکات {BEHAVIOR}
-      Mikelab_sendGood:
-        text: بڕۆ بۆ دەستە ڕاست
       Mikelab_setBG:
         options:
           BG:

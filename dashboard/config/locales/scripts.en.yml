@@ -1160,6 +1160,8 @@ en:
               name: Bubble Choice
             Contained Levels:
               name: Contained Levels
+            ML Fish:
+              name: ML Fish
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -13513,3 +13515,23 @@ en:
               name: End-of-course projects
             Who is this section for?:
               name: Who is this section for?
+        dance-extras-2019:
+          title: Keep On Dancing
+          description: Go beyond the first hour with extended project ideas.
+          description_short: Go beyond the Hour of Code with this follow-up activity to Code.org's Dance Party tutorial.
+          description_audience: ''
+          stages:
+            Dance Party - Go Further:
+              name: Dance Party - Go Further
+              description_student: ''
+              description_teacher: ''
+        csp10-pilot:
+          stages:
+            new stage:
+              name: new stage
+            'Project: Innovation Simulation Part 1':
+              name: 'Project: Innovation Simulation Part 1'
+          title: Cybersecurity and Global Impacts
+          description_audience: ''
+          description_short: ''
+          description: ''
