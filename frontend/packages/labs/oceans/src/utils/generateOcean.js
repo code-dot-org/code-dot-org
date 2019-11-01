@@ -1,7 +1,6 @@
 import {
   FishOceanObject,
-  TrashOceanObject,
-  generateRandomOceanObject
+  TrashOceanObject
 } from '../demo/OceanObject';
 import {getState} from '../demo/state';
 import {fishData} from './fishData';
@@ -59,23 +58,6 @@ export const generateOcean = numFish => {
     ocean.push(object);
   }
   shuffleList(ocean);
-  return ocean;
-};
-
-export const generateRandomOcean = (numFish, loadTrashImages) => {
-  let possibleObjects = [FishOceanObject];
-  const possibleFishComponents = filterFishComponents(
-    fishData,
-    getState().dataSet
-  );
-  if (loadTrashImages) {
-    possibleObjects.push(TrashOceanObject);
-  }
-
-  const ocean = [];
-  for (var i = 0; i < numFish; ++i) {
-    ocean.push(generateRandomOceanObject(possibleObjects, i, possibleFishComponents));
-  }
   return ocean;
 };
 
