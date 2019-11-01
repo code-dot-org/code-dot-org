@@ -41,7 +41,7 @@ en:
     attributes:
       user:
         name: 'Display Name'
-        name_example: 'Display Name(e.g. Cool Coder or Jane S.)'
+        name_example: 'Display Name (e.g. Cool Coder or Jane S.)'
         email: 'Email'
         parent_email: 'Parent/guardian email'
         personal_email: "Personal email address <a href=\"%{url}\">(click here if you don't have an email address)</a>"
