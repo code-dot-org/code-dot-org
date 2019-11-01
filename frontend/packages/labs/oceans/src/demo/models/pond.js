@@ -1,4 +1,4 @@
-import 'babel-polyfill';
+import 'idempotent-babel-polyfill';
 import _ from 'lodash';
 import {setState, getState} from '../state';
 import constants, {ClassType} from '../constants';
@@ -21,7 +21,7 @@ const predictAllFish = state => {
   return new Promise(resolve => {
     let fishWithConfidence = [];
     state.fishData.map((fish, index) => {
-      state.trainer.predictFromData(fish.getKnnData()).then(res => {
+      state.trainer.predictFromTensor(fish.getTensor()).then(res => {
         if (res.predictedClassId === ClassType.Like) {
           let data = {
             fish,

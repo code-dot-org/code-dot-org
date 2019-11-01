@@ -1,17 +1,22 @@
-import {FishOceanObject, generateOceanObject} from '../demo/OceanObject';
+import {
+  FishOceanObject,
+  TrashOceanObject,
+  generateOceanObject
+} from '../demo/OceanObject';
 import {getState} from '../demo/state';
 import {fishData} from './fishData';
 import {filterFishComponents} from '../demo/helpers';
 
-export const generateOcean = numFish => {
-  // Right now, all ocean objects are FishOceanObjects. This will need to be
-  // refactored when we add other object types.
-  const allowedClasses = [FishOceanObject];
-  const allowedComponents = filterFishComponents(fishData, getState().dataSet);
-
+export const generateOcean = (numFish, loadTrashImages) => {
   const ocean = [];
+  const possibleComponents = filterFishComponents(fishData, getState().dataSet);
+  let possibleObjects = [FishOceanObject];
+  if (loadTrashImages) {
+    possibleObjects.push(TrashOceanObject);
+  }
+
   for (var i = 0; i < numFish; ++i) {
-    ocean.push(generateOceanObject(allowedClasses, i, allowedComponents));
+    ocean.push(generateOceanObject(possibleObjects, i, possibleComponents));
   }
   return ocean;
 };
@@ -21,7 +26,7 @@ export const filterOcean = async (ocean, trainer) => {
   ocean.forEach((fish, idx) => {
     if (!fish.getResult()) {
       predictionPromises.push(
-        trainer.predictFromData(fish.knnData).then(res => {
+        trainer.predictFromTensor(fish.getTensor()).then(res => {
           fish.setResult(res);
         })
       );

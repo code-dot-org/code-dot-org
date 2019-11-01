@@ -6,6 +6,7 @@ import {Modes, DataSet} from './constants';
 import {toMode} from './toMode';
 import {init as initModel} from './models';
 import {onClassifyFish} from './models/train';
+import aiBotClosed from '../../public/images/ai-bot-closed.png';
 
 const styles = {
   header: {
@@ -217,11 +218,18 @@ class ActivityIntro extends React.Component {
             Next, you’re going to teach A.I. a new word just by showing examples
             of that type of fish.
           </div>
-          <img style={styles.activityIntroBot} src="images/ai-bot-closed.png" />
+          <img style={styles.activityIntroBot} src={aiBotClosed} />
           <Footer>
             <Button
               style={styles.continueButton}
-              onClick={() => toMode(Modes.Words)}
+              onClick={() => {
+                const state = getState();
+                if (state.loadTrashImages) {
+                  setState({currentMode: Modes.TrainingIntro, word: 'FISHY'});
+                } else {
+                  toMode(Modes.Words);
+                }
+              }}
             >
               Continue
             </Button>
@@ -318,7 +326,7 @@ class TrainingIntro extends React.Component {
           Now let's teach A.I. what <b>{state.word.toUpperCase()}</b> fish look
           like.
         </div>
-        <img style={styles.trainingIntroBot} src="images/ai-bot-closed.png" />
+        <img style={styles.trainingIntroBot} src={aiBotClosed} />
         <Footer>
           <Button
             style={styles.continueButton}
@@ -344,7 +352,7 @@ class Train extends React.Component {
       <Body>
         <Header>A.I. Training</Header>
         <div style={trainQuestionTextStyle}>{questionText}</div>
-        <img style={styles.trainBot} src="images/ai-bot-closed.png" />
+        <img style={styles.trainBot} src={aiBotClosed} />
         <Button
           style={styles.trainButtonYes}
           onClick={() => onClassifyFish(true)}
@@ -377,7 +385,7 @@ class Predict extends React.Component {
     return (
       <Body>
         <Header>A.I. Sorting</Header>
-        <img style={styles.predictBot} src="images/ai-bot-closed.png" />
+        <img style={styles.predictBot} src={aiBotClosed} />
         <Footer>
           {state.canSkipPredict && (
             <Button
@@ -406,7 +414,7 @@ class Pond extends React.Component {
       <Body>
         <Header>A.I. Results</Header>
         <div style={styles.pondText}>{pondText}</div>
-        <img style={styles.pondBot} src="images/ai-bot-closed.png" />
+        <img style={styles.pondBot} src={aiBotClosed} />
       </Body>
     );
   }

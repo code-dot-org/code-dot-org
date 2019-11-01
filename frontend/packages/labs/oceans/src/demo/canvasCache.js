@@ -38,13 +38,6 @@ export default class CanvasCache {
     if (canvasObject.key !== key) {
       cacheHit = false;
       canvasObject.key = key;
-      const ctx = canvasObject.canvas.getContext('2d');
-      ctx.clearRect(
-        0,
-        0,
-        canvasObject.canvas.width,
-        canvasObject.canvas.height
-      );
     }
     // Add this canvas to the front of the array (most recently used)
     this.canvases.unshift(canvasObject);

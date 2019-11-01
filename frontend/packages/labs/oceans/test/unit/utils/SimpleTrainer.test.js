@@ -1,18 +1,19 @@
 import SimpleTrainer from '../../../src/utils/SimpleTrainer';
+import * as tf from '@tensorflow/tfjs';
 
 describe('Simple Trainer tests', () => {
   test('SimpleTrainer predicts', async () => {
     const trainer = new SimpleTrainer();
     trainer.setTopK(3);
     await trainer.initializeClassifiersWithoutMobilenet();
-    trainer.addExampleData([1, 1], 0);
-    trainer.addExampleData([1, 1], 0);
-    trainer.addExampleData([1, 1], 0);
-    trainer.addExampleData([-1, -1], 1);
-    trainer.addExampleData([-1, -1], 1);
-    trainer.addExampleData([-1, -1], 1);
+    trainer.addExampleTensor(tf.tensor([1, 1]), 0);
+    trainer.addExampleTensor(tf.tensor([1, 1]), 0);
+    trainer.addExampleTensor(tf.tensor([1, 1]), 0);
+    trainer.addExampleTensor(tf.tensor([-1, -1]), 1);
+    trainer.addExampleTensor(tf.tensor([-1, -1]), 1);
+    trainer.addExampleTensor(tf.tensor([-1, -1]), 1);
 
-    const result = await trainer.predictFromData([1, 1]);
+    const result = await trainer.predictFromTensor(tf.tensor([1, 1]));
     expect(result.predictedClassId).toEqual(0);
     expect(result.confidencesByClassId[0]).toEqual(1);
 
@@ -23,14 +24,14 @@ describe('Simple Trainer tests', () => {
     const trainer = new SimpleTrainer();
     trainer.setTopK(3);
     await trainer.initializeClassifiersWithoutMobilenet();
-    trainer.addExampleData([1, 1], 0);
-    trainer.addExampleData([1, 1], 0);
-    trainer.addExampleData([1, 1], 0);
-    trainer.addExampleData([-1, -1], 1);
-    trainer.addExampleData([-1, -1], 1);
-    trainer.addExampleData([-1, -1], 1);
+    trainer.addExampleTensor(tf.tensor([1, 1]), 0);
+    trainer.addExampleTensor(tf.tensor([1, 1]), 0);
+    trainer.addExampleTensor(tf.tensor([1, 1]), 0);
+    trainer.addExampleTensor(tf.tensor([-1, -1]), 1);
+    trainer.addExampleTensor(tf.tensor([-1, -1]), 1);
+    trainer.addExampleTensor(tf.tensor([-1, -1]), 1);
 
-    const result = await trainer.predictFromData([1, 1]);
+    const result = await trainer.predictFromTensor(tf.tensor([1, 1]));
     expect(result.predictedClassId).toEqual(0);
     expect(result.confidencesByClassId[0]).toEqual(1);
 
@@ -40,11 +41,11 @@ describe('Simple Trainer tests', () => {
     const retrainedTrainer = new SimpleTrainer();
     retrainedTrainer.setTopK(3);
     await retrainedTrainer.initializeClassifiersWithoutMobilenet();
-    const untrainedResult = await retrainedTrainer.predictFromData([1, 1]);
+    const untrainedResult = await retrainedTrainer.predictFromTensor(tf.tensor([1, 1]));
     expect(untrainedResult.predictedClassId).toEqual(null);
 
     retrainedTrainer.loadDatasetJSON(classifierDatasetString);
-    const retrainedResult = await retrainedTrainer.predictFromData([1, 1]);
+    const retrainedResult = await retrainedTrainer.predictFromTensor(tf.tensor([1, 1]));
     expect(retrainedResult.predictedClassId).toEqual(0);
     expect(retrainedResult.confidencesByClassId[0]).toEqual(1);
   });
