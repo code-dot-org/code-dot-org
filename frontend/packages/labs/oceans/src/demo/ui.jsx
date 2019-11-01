@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import _ from 'lodash';
 import {getState, setState} from './state';
 import {Modes, DataSet} from './constants';
-import {getAppMode} from './helpers';
 import {toMode} from './toMode';
 import {init as initModel} from './models';
 import {onClassifyFish} from './models/train';
@@ -348,7 +347,7 @@ class Instructions extends React.Component {
   render() {
     const state = getState();
     const currentPage = state.currentInstructionsPage;
-    const [, appModeVariant] = getAppMode();
+    const appModeVariant = state.appModeVariant;
 
     return (
       <Body>

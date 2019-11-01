@@ -3,7 +3,7 @@ import constants, {Modes} from './constants';
 import {setState, setSetStateCallback} from './state';
 import {init as initModel} from './models';
 import {render as renderCanvas} from './renderer';
-import {queryStrFor} from './helpers';
+import {queryStrFor, getAppMode} from './helpers';
 
 import 'babel-polyfill';
 import ReactDOM from 'react-dom';
@@ -20,10 +20,12 @@ $(document).ready(() => {
   // Temporarily use URL parameter to set some state.
   const dataSet = queryStrFor('set') && queryStrFor('set').toLowerCase();
   const loadTrashImages = queryStrFor('mode') && queryStrFor('mode').toLowerCase() === 'fishvtrash';
+  const [appMode, appModeVariant] = getAppMode();
 
   // Set initial state for UI elements.
   const state = setState({
-    appMode: queryStrFor('mode'),
+    appMode: appMode,
+    appModeVariant: appModeVariant,
     currentMode: Modes.Loading,
     canvas,
     backgroundCanvas,
