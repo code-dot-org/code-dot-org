@@ -53,7 +53,7 @@ class DataVisualizer extends React.Component {
     let countMap = {};
 
     // Find all values in columnName - these will be the columns of the pivot table
-    let pivotedColumns = new Set(records.map(record => record[columnName]));
+    const pivotedColumns = new Set(records.map(record => record[columnName]));
 
     // Count occurrences of each row/column pair
     records.forEach(record => {
