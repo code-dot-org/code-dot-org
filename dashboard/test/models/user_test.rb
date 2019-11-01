@@ -4141,7 +4141,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'does set admin to true when google oauth codeorg account' do
-    email = 'simone@code.org'
+    email = 'fernhunt@code.org'
     migrated_teacher = create(:teacher, :with_google_authentication_option, email: email)
 
     migrated_teacher.admin = true
@@ -4151,10 +4151,11 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'does set admin to false when it is not a google oauth codeorg account' do
-    email = 'me+admin@code.org'
+    email = 'annieeasley@code.org'
     migrated_teacher = create(:teacher, email: email)
 
-    migrated_teacher.admin = false
+    migrated_teacher.admin = true
+    migrated_teacher.save!
 
     refute migrated_teacher.admin
   end
@@ -4163,7 +4164,8 @@ class UserTest < ActiveSupport::TestCase
     email = 'milesmorales@gmail.com'
     migrated_teacher = create(:teacher, :with_google_authentication_option, email: email)
 
-    migrated_teacher.admin = false
+    migrated_teacher.admin = true
+    migrated_teacher.save!
 
     refute migrated_teacher.admin
   end
