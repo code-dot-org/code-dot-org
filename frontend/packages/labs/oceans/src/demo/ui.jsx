@@ -292,6 +292,19 @@ class SpeechBubble extends React.Component {
 }
 
 class ActivityIntro extends React.Component {
+  onClickContinue = () => {
+    const state = getState();
+    if (state.loadTrashImages) {
+      setState({
+        currentMode: Modes.TrainingIntro,
+        word: 'Fish',
+        trainingQuestion: 'Is this a fish?'
+      });
+    } else {
+      toMode(Modes.Words);
+    }
+  };
+
   render() {
     return (
       <div>
@@ -310,14 +323,7 @@ class ActivityIntro extends React.Component {
           <Footer>
             <Button
               style={styles.continueButton}
-              onClick={() => {
-                const state = getState();
-                if (state.loadTrashImages) {
-                  setState({currentMode: Modes.TrainingIntro, word: 'FISHY'});
-                } else {
-                  toMode(Modes.Words);
-                }
-              }}
+              onClick={this.onClickContinue}
             >
               Continue
             </Button>
@@ -368,8 +374,11 @@ class Words extends React.Component {
   }
 
   onChangeWord(itemIndex) {
+    const word = this.currentItems()[itemIndex];
+
     const state = setState({
-      word: this.currentItems()[itemIndex],
+      word,
+      trainingQuestion: `Is this fish ${word.toUpperCase()}?`,
       currentMode: Modes.TrainingIntro
     });
     initModel(state);
@@ -446,7 +455,6 @@ class Train extends React.Component {
 
   render() {
     const state = getState();
-    const questionText = `Is this fish ${state.word.toUpperCase()}?`;
     const trainQuestionTextStyle = state.isRunning
       ? styles.trainQuestionTextDisabled
       : styles.trainQuestionText;
@@ -454,7 +462,7 @@ class Train extends React.Component {
     return (
       <Body>
         <Header>A.I. Training</Header>
-        <div style={trainQuestionTextStyle}>{questionText}</div>
+        <div style={trainQuestionTextStyle}>{state.trainingQuestion}</div>
         <img style={styles.trainBot} src={aiBotClosed} />
         {this.renderSpeechBubble(state)}
         <Pill
