@@ -7,7 +7,10 @@ import {getAppMode} from './helpers';
 import {toMode} from './toMode';
 import {init as initModel} from './models';
 import {onClassifyFish} from './models/train';
+import colors from './colors';
 import aiBotClosed from '../../public/images/ai-bot-closed.png';
+import xIcon from '../../public/images/x-icon.png';
+import checkmarkIcon from '../../public/images/checkmark-icon.png';
 
 const styles = {
   header: {
@@ -39,7 +42,16 @@ const styles = {
     width: '100%'
   },
   button: {
-    cursor: 'pointer'
+    cursor: 'pointer',
+    backgroundColor: colors.white,
+    fontSize: '120%',
+    borderRadius: 8,
+    border: `2px solid ${colors.black}`,
+    minWidth: 160,
+    padding: '16px 30px',
+    ':focus': {
+      outline: `${colors.white} auto 5px`
+    }
   },
   continueButton: {
     marginLeft: 'auto',
@@ -57,8 +69,7 @@ const styles = {
     width: '20%',
     marginLeft: '6%',
     marginRight: '6%',
-    marginTop: '2%',
-    marginBottom: '2%'
+    marginTop: '2%'
   },
   instructionsText: {
     position: 'absolute',
@@ -129,12 +140,12 @@ const styles = {
   trainButtonYes: {
     position: 'absolute',
     top: '80%',
-    left: '30%'
+    left: '33%'
   },
   trainButtonNo: {
     position: 'absolute',
     top: '80%',
-    left: '60%'
+    left: '50%'
   },
   trainBot: {
     position: 'absolute',
@@ -155,18 +166,57 @@ const styles = {
     left: '55%',
     transform: 'translateX(-45%)',
     fontSize: 22,
-    lineHeight: '26px',
+    lineHeight: '32px',
     width: '70%',
-    backgroundColor: 'rgba(0,0,0,0.5)',
+    backgroundColor: colors.transparentBlack,
     padding: '2%',
     borderRadius: 10,
-    color: 'white'
+    color: colors.white,
   },
   pondBot: {
     position: 'absolute',
     height: '50%',
     left: 0,
     bottom: 0
+  },
+  pill: {
+    display: 'flex',
+    alignItems: 'center'
+  },
+  pillIcon: {
+    width: 38,
+    padding: 10,
+    border: `4px solid ${colors.black}`,
+    borderRadius: 33,
+    zIndex: 2
+  },
+  pillText: {
+    color: colors.white,
+    backgroundColor: colors.black,
+    padding: '10px 30px',
+    borderRadius: 33,
+    marginLeft: -22,
+    zIndex: 1
+  },
+  bubble: {
+    position: 'absolute',
+    backgroundColor: colors.transparentBlack,
+    color: colors.white,
+    padding: '10px 20px',
+    borderRadius: 10,
+    top: 0,
+    width: 212,
+    textAlign: 'center'
+  },
+  count: {
+    position: 'absolute',
+    top: '5%'
+  },
+  noCount: {
+    right: '16%'
+  },
+  yesCount: {
+    right: '2%'
   }
 };
 
@@ -343,6 +393,44 @@ class Instructions extends React.Component {
   }
 }
 
+class Pill extends React.Component {
+  static propTypes = {
+    text: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+    icon: PropTypes.string,
+    iconBgColor: PropTypes.string,
+    style: PropTypes.object
+  };
+
+  render() {
+    const {text, icon, iconBgColor} = this.props;
+
+    let iconStyle = styles.pillIcon;
+    iconStyle.backgroundColor = iconBgColor || colors.white;
+
+    return (
+      <div style={{...styles.pill, ...(this.props.style || {})}}>
+        {icon && <img src={icon} style={iconStyle} />}
+        <div style={styles.pillText}>{text}</div>
+      </div>
+    );
+  }
+}
+
+class SpeechBubble extends React.Component {
+  static propTypes = {
+    text: PropTypes.string.isRequired,
+    style: PropTypes.object
+  };
+
+  render() {
+    return (
+      <div style={{...styles.bubble, ...(this.props.style || {})}}>
+        {this.props.text}
+      </div>
+    );
+  }
+}
+
 class ActivityIntro extends React.Component {
   render() {
     return (
@@ -481,6 +569,21 @@ class TrainingIntro extends React.Component {
 }
 
 class Train extends React.Component {
+  renderSpeechBubble = state => {
+    const total = state.yesCount + state.noCount;
+    let text = '';
+
+    if (total >= 40) {
+      text = "Great work! You can continue when you're ready.";
+    } else if (total >= 5) {
+      text = 'Keep training!';
+    } else {
+      return null;
+    }
+
+    return <SpeechBubble text={text} style={{top: '70%', right: '5%'}} />;
+  };
+
   render() {
     const state = getState();
     const questionText = `Is this fish ${state.word.toUpperCase()}?`;
@@ -493,17 +596,30 @@ class Train extends React.Component {
         <Header>A.I. Training</Header>
         <div style={trainQuestionTextStyle}>{questionText}</div>
         <img style={styles.trainBot} src={aiBotClosed} />
-        <Button
-          style={styles.trainButtonYes}
-          onClick={() => onClassifyFish(true)}
-        >
-          Yes
-        </Button>
+        {this.renderSpeechBubble(state)}
+        <Pill
+          text={state.noCount}
+          icon={xIcon}
+          iconBgColor={colors.red}
+          style={{...styles.count, ...styles.noCount}}
+        />
+        <Pill
+          text={state.yesCount}
+          icon={checkmarkIcon}
+          iconBgColor={colors.green}
+          style={{...styles.count, ...styles.yesCount}}
+        />
         <Button
           style={styles.trainButtonNo}
           onClick={() => onClassifyFish(false)}
         >
-          No
+          {`Not ${state.word}`}
+        </Button>
+        <Button
+          style={styles.trainButtonYes}
+          onClick={() => onClassifyFish(true)}
+        >
+          {state.word}
         </Button>
         <Footer>
           <Button
