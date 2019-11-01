@@ -44,12 +44,9 @@ const styles = {
     backgroundColor: colors.white,
     fontSize: '120%',
     borderRadius: 8,
-    border: `2px solid ${colors.black}`,
     minWidth: 160,
     padding: '16px 30px',
-    ':focus': {
-      outline: `${colors.white} auto 5px`
-    }
+    outline: 'none'
   },
   continueButton: {
     marginLeft: 'auto',
