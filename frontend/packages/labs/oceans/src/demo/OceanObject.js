@@ -6,8 +6,7 @@ import {
   bodyAnchorFromType,
   colorForFishPart,
   randomInt,
-  clamp,
-  filterFishComponents
+  clamp
 } from './helpers';
 import {imagePaths} from '../utils/trashImages';
 import _ from 'lodash';
@@ -81,14 +80,22 @@ export const loadAllTrashImages = () => {
   });
 };
 
-// Generate a single object with an even change of being
+// Generate a single object with an even chance of being
 // any of the allowed classes
-export const generateOceanObject = (allowedClasses, id, dataSet = null) => {
+export const generateOceanObject = (
+  allowedClasses,
+  id,
+  possibleFishComponents = null
+) => {
   const idx = Math.floor(Math.random() * allowedClasses.length);
-  const newOceanObject = new allowedClasses[idx](
-    id,
-    filterFishComponents(fishData, dataSet)
-  );
+  const OceanObjectType = allowedClasses[idx];
+  let newOceanObject;
+  if (OceanObjectType === FishOceanObject) {
+    newOceanObject = new OceanObjectType(id, possibleFishComponents);
+  } else {
+    newOceanObject = new OceanObjectType(id);
+  }
+
   newOceanObject.randomize();
   return newOceanObject;
 };
@@ -165,7 +172,7 @@ export class OceanObject {
  *
  * */
 export class FishOceanObject extends OceanObject {
-  constructor(id, componentOptions) {
+  constructor(id, componentOptions = fishData) {
     super(id);
     this.bodies = Object.values(componentOptions.bodies);
     this.eyes = Object.values(componentOptions.eyes);
