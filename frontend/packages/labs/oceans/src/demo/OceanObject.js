@@ -80,15 +80,22 @@ export const loadAllTrashImages = () => {
   });
 };
 
-// Generate a single object with an even change of being
+// Generate a single object with an even chance of being
 // any of the allowed classes
 export const generateOceanObject = (
   allowedClasses,
   id,
-  allowedComponents = null
+  possibleFishComponents = null
 ) => {
   const idx = Math.floor(Math.random() * allowedClasses.length);
-  const newOceanObject = new allowedClasses[idx](id, allowedComponents);
+  const OceanObjectType = allowedClasses[idx];
+  let newOceanObject;
+  if (OceanObjectType === FishOceanObject) {
+    newOceanObject = new OceanObjectType(id, possibleFishComponents);
+  } else {
+    newOceanObject = new OceanObjectType(id);
+  }
+
   newOceanObject.randomize();
   return newOceanObject;
 };

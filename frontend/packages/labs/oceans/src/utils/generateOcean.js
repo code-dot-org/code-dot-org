@@ -8,15 +8,18 @@ import {fishData} from './fishData';
 import {filterFishComponents} from '../demo/helpers';
 
 export const generateOcean = (numFish, loadTrashImages) => {
-  const ocean = [];
-  const possibleComponents = filterFishComponents(fishData, getState().dataSet);
   let possibleObjects = [FishOceanObject];
+  const possibleFishComponents = filterFishComponents(
+    fishData,
+    getState().dataSet
+  );
   if (loadTrashImages) {
     possibleObjects.push(TrashOceanObject);
   }
 
+  const ocean = [];
   for (var i = 0; i < numFish; ++i) {
-    ocean.push(generateOceanObject(possibleObjects, i, possibleComponents));
+    ocean.push(generateOceanObject(possibleObjects, i, possibleFishComponents));
   }
   return ocean;
 };
