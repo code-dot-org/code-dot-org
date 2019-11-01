@@ -94,6 +94,13 @@ class Services::RegistrationReminderTest < ActiveSupport::TestCase
     assert_equal 0, Services::RegistrationReminder.applications_needing_first_reminder.count
   end
 
+  test 'applications_needing_first_reminder omits applications prior to October 2019' do
+    # This application was created before these reminder emails were added
+    application = create :pd_teacher1920_application, created_at: DateTime.new(2019, 9, 30)
+    create :pd_application_email, application: application, email_type: 'registration_sent', sent_at: 2.weeks.ago
+    assert_equal 0, Services::RegistrationReminder.applications_needing_first_reminder.count
+  end
+
   test 'applications_needing_first_reminder includes eligible applications' do
     # This application meets all the requirements: A two-week-old registration email
     # and no enrollment or reminder
@@ -159,6 +166,14 @@ class Services::RegistrationReminderTest < ActiveSupport::TestCase
     # This malformed application with a 'registration_reminder' but no 'registration_sent' does
     # not receive another reminder
     application = create :pd_teacher2021_application
+    create :pd_application_email, application: application, email_type: 'registration_reminder', sent_at: 1.week.ago
+    assert_equal 0, Services::RegistrationReminder.applications_needing_second_reminder.count
+  end
+
+  test 'applications_needing_second_reminder omits applications prior to October 2019' do
+    # This application was created before we added these notifications
+    application = create :pd_teacher2021_application, created_at: DateTime.new(2019, 9, 30)
+    create :pd_application_email, application: application, email_type: 'registration_sent', sent_at: 3.weeks.ago
     create :pd_application_email, application: application, email_type: 'registration_reminder', sent_at: 1.week.ago
     assert_equal 0, Services::RegistrationReminder.applications_needing_second_reminder.count
   end
