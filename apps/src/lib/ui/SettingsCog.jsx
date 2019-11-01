@@ -112,6 +112,12 @@ class SettingsCog extends Component {
     };
   }
 
+  librariesAreEnabled() {
+    let experimentOn = experiments.isEnabled(experiments.STUDENT_LIBRARIES);
+    let pageConstants = getStore().getState().pageConstants;
+    return experimentOn || (pageConstants && pageConstants.librariesEnabled);
+  }
+
   render() {
     const {isRunning, runModeIndicators} = this.props;
 
@@ -138,8 +144,7 @@ class SettingsCog extends Component {
           showTail={true}
         >
           <ManageAssets onClick={this.manageAssets} />
-          {(experiments.isEnabled(experiments.STUDENT_LIBRARIES) ||
-            getStore().getState().pageConstants.librariesEnabled) && (
+          {this.librariesAreEnabled() && (
             <ManageLibraries onClick={this.manageLibraries} />
           )}
           {this.props.showMakerToggle && (
