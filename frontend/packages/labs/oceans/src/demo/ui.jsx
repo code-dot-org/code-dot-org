@@ -162,6 +162,16 @@ const styles = {
     borderRadius: 33,
     marginLeft: -22,
     zIndex: 1
+  },
+  count: {
+    position: 'absolute',
+    top: '5%'
+  },
+  noCount: {
+    right: '16%'
+  },
+  yesCount: {
+    right: '2%'
   }
 };
 
@@ -227,9 +237,10 @@ class Button extends React.Component {
 
 class Pill extends React.Component {
   static propTypes = {
-    text: PropTypes.string.isRequired,
+    text: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
     icon: PropTypes.string,
-    iconBgColor: PropTypes.string
+    iconBgColor: PropTypes.string,
+    style: PropTypes.object
   };
 
   render() {
@@ -239,7 +250,7 @@ class Pill extends React.Component {
     iconStyle.backgroundColor = iconBgColor || colors.white;
 
     return (
-      <div style={styles.pill}>
+      <div style={{...styles.pill, ...(this.props.style || {})}}>
         {icon && <img src={icon} style={iconStyle} />}
         <div style={styles.pillText}>{text}</div>
       </div>
@@ -397,6 +408,18 @@ class Train extends React.Component {
         <Header>A.I. Training</Header>
         <div style={trainQuestionTextStyle}>{questionText}</div>
         <img style={styles.trainBot} src={aiBotClosed} />
+        <Pill
+          text={state.noCount}
+          icon={xIcon}
+          iconBgColor={colors.red}
+          style={{...styles.count, ...styles.noCount}}
+        />
+        <Pill
+          text={state.yesCount}
+          icon={checkmarkIcon}
+          iconBgColor={colors.green}
+          style={{...styles.count, ...styles.yesCount}}
+        />
         <Button
           style={styles.trainButtonNo}
           onClick={() => onClassifyFish(false)}
