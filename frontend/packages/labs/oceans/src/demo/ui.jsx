@@ -86,10 +86,10 @@ const styles = {
     width: '100%'
   },
   activeDot: {
-    color: 'white'
+    color: colors.white
   },
   inactiveDot: {
-    color: 'grey',
+    color: colors.grey,
     cursor: 'pointer'
   },
   activityIntroText: {
