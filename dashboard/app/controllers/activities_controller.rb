@@ -226,9 +226,9 @@ class ActivitiesController < ApplicationController
 
     if user_level_info
       # Add past time spent to current time spent on level
-      user_level_info.update(time_spent: [user_level_info.time_spent + [params[:time].to_i, 0].max, MAX_INT_MILESTONE].min)
+      user_level_info.update(time_spent: [user_level_info.time_spent + [params[:timeSinceLastMilestone].to_i, 0].max, MAX_INT_MILESTONE].min)
     else
-      UserLevelInfo.create(user_level_id: user_level.id, time_spent: [[params[:time].to_i, 0].max, MAX_INT_MILESTONE].min)
+      UserLevelInfo.create(user_level_id: user_level.id, time_spent: [[params[:timeSinceLastMilestone].to_i, 0].max, MAX_INT_MILESTONE].min)
     end
   end
 
