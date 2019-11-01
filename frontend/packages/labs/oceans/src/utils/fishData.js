@@ -862,6 +862,14 @@ const fishComponents = {
   }
 };
 
+// https://hackernoon.com/what-is-one-hot-encoding-why-and-when-do-you-have-to-use-it-e3c6186d008f
+const oneHotEncode = (index, numCategories) => {
+  const result = Array(numCategories);
+  result.fill(0, 0, numCategories);
+  result[index] = 1;
+  return result;
+};
+
 // Normalize the KNN data for all components.
 let initialized = false;
 export const initFishData = () => {
@@ -896,8 +904,9 @@ export const initFishData = () => {
         }
         component.index = idx;
         // Add an "id" to each component to train on
-        if (variations.length > 1) {
-          component.knnData.push(idx / (variations.length - 1));
+        const numVariations = Object.keys(variations).length;
+        if (numVariations > 1) {
+          component.knnData.push(...oneHotEncode(idx, numVariations));
         }
       });
     });

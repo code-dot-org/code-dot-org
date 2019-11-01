@@ -1,6 +1,8 @@
 let setStateCallback = null;
 
 const initialState = {
+  appMode: null,
+  appModeVariant: null,
   currentMode: null,
   dataSet: null,
   fishData: [],
@@ -17,7 +19,8 @@ const initialState = {
   canSkipPredict: false,
   loadTrashImages: null,
   word: null,
-  trainingQuestion: null
+  trainingQuestion: null,
+  currentInstructionsPage: 0
 };
 let state = {...initialState};
 

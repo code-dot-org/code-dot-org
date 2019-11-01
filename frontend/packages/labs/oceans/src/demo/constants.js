@@ -14,7 +14,8 @@ export const Modes = Object.freeze({
   TrainingIntro: 3,
   Training: 4,
   Predicting: 5,
-  Pond: 6
+  Pond: 6,
+  Instructions: 7
 });
 
 export const ClassType = Object.freeze({
