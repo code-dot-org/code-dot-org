@@ -16,7 +16,8 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    fontSize: 48
+    fontSize: 48,
+    lineHeight: '52px'
   },
   footer: {
     position: 'absolute',
@@ -61,6 +62,7 @@ const styles = {
   activityIntroText: {
     position: 'absolute',
     fontSize: 22,
+    lineHeight: '26px',
     top: '20%',
     left: '50%',
     width: '80%',
@@ -82,14 +84,17 @@ const styles = {
   wordsText: {
     textAlign: 'center',
     marginTop: 20,
-    fontSize: 22
+    fontSize: 22,
+    lineHeight: '26px'
   },
   trainQuestionText: {
     position: 'absolute',
     top: '18%',
     left: '50%',
     transform: 'translateX(-50%)',
-    fontSize: 22
+    fontSize: 22,
+    lineHeight: '26px'
+
   },
   trainQuestionTextDisabled: {
     position: 'absolute',
@@ -97,6 +102,7 @@ const styles = {
     left: '50%',
     transform: 'translateX(-50%)',
     fontSize: 22,
+    lineHeight: '26px',
     opacity: 0.5
   },
   trainButtonYes: {
@@ -118,7 +124,7 @@ const styles = {
   predictBot: {
     position: 'absolute',
     height: '50%',
-    top: '2%',
+    top: '3%',
     left: '50%',
     transform: 'translateX(-50%)'
   },
@@ -128,12 +134,12 @@ const styles = {
     left: '55%',
     transform: 'translateX(-45%)',
     fontSize: 22,
+    lineHeight: '26px',
     width: '70%',
     backgroundColor: 'rgba(0,0,0,0.5)',
     padding: '2%',
     borderRadius: 10,
-    color: 'white',
-    lineHeight: '32px'
+    color: 'white'
   },
   pondBot: {
     position: 'absolute',
