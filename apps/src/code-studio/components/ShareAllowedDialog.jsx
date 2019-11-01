@@ -23,6 +23,7 @@ import PublishDialog from '../../templates/projects/publishDialog/PublishDialog'
 import {createHiddenPrintWindow} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import experiments from '@cdo/apps/util/experiments';
 import LibraryCreationDialog from './libraries/LibraryCreationDialog';
 import LibraryClientApi from './libraries/LibraryClientApi';
 
@@ -422,7 +423,8 @@ class ShareAllowedDialog extends React.Component {
                       className="no-mc"
                     />
                   )}
-                  {this.props.librariesEnabled && (
+                  {(experiments.isEnabled(experiments.STUDENT_LIBRARIES) ||
+                    this.props.librariesEnabled) && (
                     <button
                       type="button"
                       onClick={this.props.openLibraryCreationDialog}
