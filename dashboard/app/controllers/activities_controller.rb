@@ -165,8 +165,6 @@ class ActivitiesController < ApplicationController
       level_source_id: @level_source.try(:id)
     }
 
-    record_time_spent
-
     allow_activity_writes = Gatekeeper.allows('activities', where: {script_name: @script_level.script.name}, default: true)
     if allow_activity_writes
       @activity = Activity.new(attributes).tap(&:atomic_save!)
@@ -196,6 +194,8 @@ class ActivitiesController < ApplicationController
       end
     end
 
+    record_time_spent(@user_level)
+
     passed = ActivityConstants.passing?(test_result)
     if lines > 0 && passed
       current_user.total_lines += lines
@@ -217,13 +217,7 @@ class ActivitiesController < ApplicationController
 
   # Record the time spent on a level by creating or updating the UserLevelInfo table
   # for the UserLevel for the current user, level, and script
-  def record_time_spent
-    user_level = UserLevel.find_by(
-      user_id: current_user.id,
-      level_id: @script_level.level.id,
-      script_id: @script_level.script.id
-    )
-
+  def record_time_spent(user_level)
     if user_level
       user_level_info = UserLevelInfo.find_by(
         user_level_id: user_level.id
@@ -234,11 +228,6 @@ class ActivitiesController < ApplicationController
       # Add past time spent to current time spent on level
       user_level_info.update(time_spent: [user_level_info.time_spent + [params[:time].to_i, 0].max, MAX_INT_MILESTONE].min)
     else
-      user_level = UserLevel.create(
-        user_id: current_user.id,
-        level_id: @script_level.level.id,
-        script_id: @script_level.script.id
-      )
       UserLevelInfo.create(user_level_id: user_level.id, time_spent: [[params[:time].to_i, 0].max, MAX_INT_MILESTONE].min)
     end
   end
