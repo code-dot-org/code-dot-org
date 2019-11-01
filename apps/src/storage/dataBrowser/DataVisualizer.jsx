@@ -44,6 +44,41 @@ class DataVisualizer extends React.Component {
     this.setState({...INITIAL_STATE});
   };
 
+  /**
+   * @param {Array.<Object>} records
+   * @param {string} rowName
+   * @param {string} columnName
+   */
+  createPivotTable = (records, rowName, columnName) => {
+    let countMap = {};
+
+    // Find all values in columnName - these will be the columns of the pivot table
+    const pivotedColumns = new Set(records.map(record => record[columnName]));
+
+    // Count occurrences of each row/column pair
+    records.forEach(record => {
+      let key = record[rowName];
+      let value = record[columnName];
+      if (!countMap[key]) {
+        countMap[key] = {[rowName]: key};
+        pivotedColumns.forEach(column => (countMap[key][column] = 0));
+      }
+      countMap[key][value]++;
+    });
+
+    // Sort columns
+    let columns;
+    if (this.state.numericColumns.includes(columnName)) {
+      columns = [...pivotedColumns].sort(function(a, b) {
+        return a - b;
+      });
+    } else {
+      columns = [...pivotedColumns].sort();
+    }
+    columns.unshift(rowName);
+    return {chartData: Object.values(countMap), columns: columns};
+  };
+
   aggregateRecordsByColumn = (records, columnName) => {
     const counts = _.countBy(records, r => r[columnName]);
 
@@ -58,7 +93,7 @@ class DataVisualizer extends React.Component {
 
     let chart;
     let chartData;
-    const columns = [];
+    let columns;
     const options = {};
     switch (this.state.chartType) {
       case 'Bar Chart':
@@ -68,7 +103,7 @@ class DataVisualizer extends React.Component {
             this.state.parsedRecords,
             this.state.values
           );
-          columns.push(this.state.values, 'count');
+          columns = [this.state.values, 'count'];
         }
         break;
       case 'Histogram':
@@ -76,11 +111,18 @@ class DataVisualizer extends React.Component {
           options.histogram = {bucketSize: this.state.bucketSize};
           chart = new GoogleChart.Histogram(targetDiv);
           chartData = this.state.parsedRecords;
-          columns.push(this.state.values);
+          columns = [this.state.values];
         }
         break;
       case 'Cross Tab':
-        console.warn(`${this.state.chartType} not yet implemented`);
+        if (this.state.xValues && this.state.yValues) {
+          chart = new GoogleChart.CrossTab(targetDiv);
+          ({chartData, columns} = this.createPivotTable(
+            this.state.parsedRecords,
+            this.state.xValues,
+            this.state.yValues
+          ));
+        }
         break;
       case 'Scatter Plot':
         console.warn(`${this.state.chartType} not yet implemented`);
