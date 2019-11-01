@@ -208,7 +208,7 @@ class ContactRollups
     log_collector.info("#{count} records created in contact_rollups_daily table")
   end
 
-  def self.sync_contact_rollups_to_main(log_collector)
+  def self.sync_contact_rollups_to_main(log_collector, src_row_offset = 0)
     log("#{Time.now} Starting")
 
     num_inserts = 0
@@ -233,42 +233,22 @@ class ContactRollups
     # the differences. Make inserts or updates to make dest match src. Wherever we do an insert or an update,
     # mark the updated_at timestamp so we track what rows have changed at what time, to enable efficient sync
     # into Pardot.
+    log "Skipping #{src_row_offset} rows on (sorted) source table"
+    src_row_offset.times do
+      grab_next(src_iterator)
+    end
 
     contact_rollup_src = grab_next(src_iterator)
     contact_rollup_dest = grab_next(dest_iterator)
     time_last_output = Time.now
 
-    src_iterator_count = 1
-    dest_iterator_count = 1
-    invalid_src_count = 0
-    invalid_dest_count = 0
-
     until contact_rollup_src.nil?
-      until contact_rollup_src.nil? || (contact_rollup_src.class == Hash)
-        invalid_src_count += 1
-        p "src_iterator_count = #{src_iterator_count}; invalid_src_count = #{invalid_src_count}"
-        p "contact_rollup_src.class = #{contact_rollup_src.class}"
-        p "contact_rollup_src = #{contact_rollup_src}"
-
-        contact_rollup_src = grab_next(src_iterator)
-        src_iterator_count += 1
-      end
-      break if contact_rollup_src.nil?
-
       email_src = contact_rollup_src[:email]
 
       # Continue to advance the destination pointer until the destination email address in question
       # is the same or later alphabetically as the source email address.
-      until contact_rollup_dest.nil? || ((contact_rollup_dest.class == Hash) && (contact_rollup_dest[:email] >= email_src))
-        unless contact_rollup_dest.class == Hash
-          invalid_dest_count += 1
-          p "dest_iterator_count = #{dest_iterator_count}; invalid_dest_count = #{invalid_dest_count}"
-          p "contact_rollup_dest.class = #{contact_rollup_dest.class}"
-          p "contact_rollup_dest = #{contact_rollup_dest}"
-        end
-
+      while (!contact_rollup_dest.nil?) && (contact_rollup_dest[:email] < email_src)
         contact_rollup_dest = grab_next(dest_iterator)
-        dest_iterator_count += 1
       end
 
       # Determine if this is a new record (email address doesn't exist in destination table) or existing.
@@ -314,7 +294,7 @@ class ContactRollups
         end
       end
 
-      num_total = num_inserts + num_updates + num_unchanged
+      num_total = num_inserts + num_updates + num_unchanged + src_row_offset
       if Time.now - time_last_output > LOG_OUTPUT_INTERVAL
         log "Total source rows processed: #{num_total}"
         time_last_output = Time.now
@@ -322,13 +302,10 @@ class ContactRollups
 
       # Go on to the next source record
       contact_rollup_src = grab_next(src_iterator)
-      src_iterator_count += 1
     end
 
-    p "src_iterator_count = #{src_iterator_count}; invalid_src_count = #{invalid_src_count}"
-    p "dest_iterator_count = #{dest_iterator_count}; invalid_dest_count = #{invalid_dest_count}"
-    log("#{Time.now} Completed. #{num_total} source rows processed. #{num_inserts} insert(s), #{num_updates} update(s), #{num_unchanged} unchanged.")
-    log_collector.info("#{num_total} source rows processed. #{num_inserts} insert(s), #{num_updates} update(s), #{num_unchanged} unchanged.")
+    log("#{Time.now} Completed. #{num_total} source rows processed. #{num_inserts} insert(s), #{num_updates} update(s), #{num_unchanged} unchanged. #{src_row_offset} skipped.")
+    log_collector.info("#{num_total} source rows processed. #{num_inserts} insert(s), #{num_updates} update(s), #{num_unchanged} unchanged. #{src_row_offset} skipped.")
   end
 
   def self.create_destination_table
