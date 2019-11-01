@@ -6,6 +6,7 @@ import {Modes, DataSet} from './constants';
 import {toMode} from './toMode';
 import {init as initModel} from './models';
 import {onClassifyFish} from './models/train';
+import colors from './colors';
 import aiBotClosed from '../../public/images/ai-bot-closed.png';
 import xIcon from '../../public/images/x-icon.png';
 import checkmarkIcon from '../../public/images/checkmark-icon.png';
@@ -131,10 +132,10 @@ const styles = {
     transform: 'translateX(-45%)',
     fontSize: 22,
     width: '70%',
-    backgroundColor: 'rgba(0,0,0,0.5)',
+    backgroundColor: colors.transparentBlack,
     padding: '2%',
     borderRadius: 10,
-    color: 'white',
+    color: colors.white,
     lineHeight: '32px'
   },
   pondBot: {
@@ -148,16 +149,15 @@ const styles = {
     alignItems: 'center'
   },
   pillIcon: {
-    backgroundColor: 'red',
     width: 38,
     padding: 10,
-    border: '4px solid black',
+    border: `4px solid ${colors.black}`,
     borderRadius: 33,
     zIndex: 2
   },
   pillText: {
-    color: 'white',
-    backgroundColor: 'black',
+    color: colors.white,
+    backgroundColor: colors.black,
     padding: '10px 30px',
     borderRadius: 33,
     marginLeft: -22,
@@ -228,16 +228,20 @@ class Button extends React.Component {
 class Pill extends React.Component {
   static propTypes = {
     text: PropTypes.string.isRequired,
-    icon: PropTypes.string
+    icon: PropTypes.string,
+    iconBgColor: PropTypes.string
   };
 
   render() {
+    const {text, icon, iconBgColor} = this.props;
+
+    let iconStyle = styles.pillIcon;
+    iconStyle.backgroundColor = iconBgColor || colors.white;
+
     return (
       <div style={styles.pill}>
-        {this.props.icon && (
-          <img src={this.props.icon} style={styles.pillIcon} />
-        )}
-        <div style={styles.pillText}>{this.props.text}</div>
+        {icon && <img src={icon} style={iconStyle} />}
+        <div style={styles.pillText}>{text}</div>
       </div>
     );
   }
