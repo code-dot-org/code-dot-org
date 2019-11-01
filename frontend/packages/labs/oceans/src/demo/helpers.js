@@ -115,7 +115,6 @@ export const getAppMode = () => {
   // appModeVariant.
   if (appMode === "instructions") {
     appModeVariant = queryStrFor('mode').toLowerCase().split('-')[0];
-    console.log("appMode:", appMode, "  appModeVariant:", appModeVariant);
   }
 
   return [appMode, appModeVariant];

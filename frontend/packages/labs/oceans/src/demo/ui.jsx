@@ -298,7 +298,7 @@ class Instructions extends React.Component {
   render() {
     const state = getState();
     const currentPage = state.currentInstructionsPage;
-    const [appMode, appModeVariant] = getAppMode();
+    const [, appModeVariant] = getAppMode();
 
     return (
       <Body>
