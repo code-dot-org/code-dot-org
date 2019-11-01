@@ -9,7 +9,6 @@ import {
   clamp
 } from './helpers';
 import {imagePaths} from '../utils/trashImages';
-import _ from 'lodash';
 
 let fishPartImages = {};
 let trashImages = {};
@@ -179,29 +178,44 @@ export class FishOceanObject extends OceanObject {
   }
 
   randomize() {
-    const bodies = Object.values(this.componentOptions.bodies);
-    const eyes = Object.values(this.componentOptions.eyes);
-    const mouths = Object.values(this.componentOptions.mouths);
-    const pectoralFinsFront = Object.values(
-      this.componentOptions.pectoralFinsFront
-    );
-    const pectoralFinsBack = Object.values(
-      this.componentOptions.pectoralFinsBack
-    );
-    const dorsalFins = Object.values(this.componentOptions.dorsalFins);
-    const tails = Object.values(this.componentOptions.tails);
-    const colorPalettes = Object.values(this.componentOptions.colorPalettes);
+    if (!this.body) {
+      const bodies = Object.values(this.componentOptions.bodies);
+      this.body = bodies[Math.floor(Math.random() * bodies.length)];
+    }
+    if (!this.eye) {
+      const eyes = Object.values(this.componentOptions.eyes);
+      this.eye = eyes[Math.floor(Math.random() * eyes.length)];
+    }
+    if (!this.mouth) {
+      const mouths = Object.values(this.componentOptions.mouths);
+      this.mouth = mouths[Math.floor(Math.random() * mouths.length)];
+    }
+    if (!this.pectoralFinFront) {
+      const pectoralFinsFront = Object.values(
+        this.componentOptions.pectoralFinsFront
+      );
+      const pectoralFinsBack = Object.values(
+        this.componentOptions.pectoralFinsBack
+      );
 
-    this.body = bodies[Math.floor(Math.random() * bodies.length)];
-    this.eye = eyes[Math.floor(Math.random() * eyes.length)];
-    this.mouth = mouths[Math.floor(Math.random() * mouths.length)];
-    const finIdx = Math.floor(Math.random() * pectoralFinsFront.length);
-    this.pectoralFinFront = pectoralFinsFront[finIdx];
-    this.pectoralFinBack = pectoralFinsBack[finIdx];
-    this.dorsalFin = dorsalFins[Math.floor(Math.random() * dorsalFins.length)];
-    this.tail = tails[Math.floor(Math.random() * tails.length)];
-    this.colorPalette =
-      colorPalettes[Math.floor(Math.random() * colorPalettes.length)];
+      const finIdx = Math.floor(Math.random() * pectoralFinsFront.length);
+      this.pectoralFinFront = pectoralFinsFront[finIdx];
+      this.pectoralFinBack = pectoralFinsBack[finIdx];
+    }
+    if (!this.dorsalFin) {
+      const dorsalFins = Object.values(this.componentOptions.dorsalFins);
+      this.dorsalFin =
+        dorsalFins[Math.floor(Math.random() * dorsalFins.length)];
+    }
+    if (!this.tail) {
+      const tails = Object.values(this.componentOptions.tails);
+      this.tail = tails[Math.floor(Math.random() * tails.length)];
+    }
+    if (!this.colorPalette) {
+      const colorPalettes = Object.values(this.componentOptions.colorPalettes);
+      this.colorPalette =
+        colorPalettes[Math.floor(Math.random() * colorPalettes.length)];
+    }
     this.knnData = [
       ...this.body.knnData,
       ...this.eye.knnData,
