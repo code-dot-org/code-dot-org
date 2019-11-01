@@ -21,13 +21,6 @@ const styles = {
     justifyContent: 'center',
     fontSize: 48
   },
-  footer: {
-    position: 'absolute',
-    bottom: 0,
-    width: '100%',
-    display: 'flex',
-    justifyContent: 'space-between'
-  },
   body: {
     position: 'relative',
     width: '100%',
@@ -49,9 +42,9 @@ const styles = {
     outline: 'none'
   },
   continueButton: {
-    marginLeft: 'auto',
-    marginRight: 10,
-    marginBottom: 10
+    position: 'absolute',
+    bottom: 10,
+    right: 10
   },
   button1col: {
     width: '20%',
@@ -220,16 +213,6 @@ class Content extends React.Component {
   }
 }
 
-class Footer extends React.Component {
-  static propTypes = {
-    children: PropTypes.node
-  };
-
-  render() {
-    return <div style={styles.footer}>{this.props.children}</div>;
-  }
-}
-
 class Button extends React.Component {
   static propTypes = {
     style: PropTypes.object,
@@ -317,14 +300,9 @@ class ActivityIntro extends React.Component {
             of that type of fish.
           </div>
           <img style={styles.activityIntroBot} src={aiBotClosed} />
-          <Footer>
-            <Button
-              style={styles.continueButton}
-              onClick={this.onClickContinue}
-            >
-              Continue
-            </Button>
-          </Footer>
+          <Button style={styles.continueButton} onClick={this.onClickContinue}>
+            Continue
+          </Button>
         </Body>
       </div>
     );
@@ -421,14 +399,12 @@ class TrainingIntro extends React.Component {
           like.
         </div>
         <img style={styles.trainingIntroBot} src={aiBotClosed} />
-        <Footer>
-          <Button
-            style={styles.continueButton}
-            onClick={() => toMode(Modes.Training)}
-          >
-            Continue
-          </Button>
-        </Footer>
+        <Button
+          style={styles.continueButton}
+          onClick={() => toMode(Modes.Training)}
+        >
+          Continue
+        </Button>
       </Body>
     );
   }
@@ -486,14 +462,12 @@ class Train extends React.Component {
         >
           {state.word}
         </Button>
-        <Footer>
-          <Button
-            style={styles.continueButton}
-            onClick={() => toMode(Modes.Predicting)}
-          >
-            Continue
-          </Button>
-        </Footer>
+        <Button
+          style={styles.continueButton}
+          onClick={() => toMode(Modes.Predicting)}
+        >
+          Continue
+        </Button>
       </Body>
     );
   }
@@ -507,16 +481,14 @@ class Predict extends React.Component {
       <Body>
         <Header>A.I. Sorting</Header>
         <img style={styles.predictBot} src={aiBotClosed} />
-        <Footer>
-          {state.canSkipPredict && (
-            <Button
-              style={styles.continueButton}
-              onClick={() => toMode(Modes.Pond)}
-            >
-              Skip
-            </Button>
-          )}
-        </Footer>
+        {state.canSkipPredict && (
+          <Button
+            style={styles.continueButton}
+            onClick={() => toMode(Modes.Pond)}
+          >
+            Skip
+          </Button>
+        )}
       </Body>
     );
   }
