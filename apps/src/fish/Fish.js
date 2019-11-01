@@ -81,21 +81,19 @@ Fish.prototype.init = function(config) {
 };
 
 Fish.prototype.initMLActivities = function() {
+  const {mode} = this.level;
   // Set up initial state
   const canvas = document.getElementById('activity-canvas');
   const backgroundCanvas = document.getElementById('background-canvas');
   canvas.width = backgroundCanvas.width = constants.canvasWidth;
   canvas.height = backgroundCanvas.height = constants.canvasHeight;
 
-  // Temporarily use URL parameter to set some state.
-  const smallWordSet = window.location.href.indexOf('words=small') !== -1;
-
   // Set initial state for UI elements.
   const state = setState({
     currentMode: Modes.Loading,
     canvas,
     backgroundCanvas,
-    smallWordSet
+    appMode: mode
   });
 
   // Initialize our first model.
