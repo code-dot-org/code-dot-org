@@ -353,77 +353,63 @@ class ContactRollups
 
   def self.insert_from_dashboard_contacts
     start = Time.now
-    query =
-      "INSERT INTO #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME} (email, name, dashboard_user_id, roles, city, state, postal_code, country)
-      -- Use CONCAT+COALESCE to append 'Teacher' to any existing roles
-      SELECT users.email COLLATE utf8_general_ci, users.name, users.id, CONCAT(COALESCE(CONCAT(src.roles, ','), ''), '#{ROLE_TEACHER}'),
-      user_geos.city, user_geos.state, user_geos.postal_code, user_geos.country
-      FROM #{DASHBOARD_DB_NAME}.users_view AS users
-      LEFT OUTER JOIN #{PEGASUS_DB_NAME}.contact_rollups_daily AS src ON src.email = users.email
-      LEFT OUTER JOIN #{DASHBOARD_DB_NAME}.user_geos AS user_geos ON user_geos.user_id = users.id
-      WHERE users.user_type = 'teacher' AND LENGTH(users.email) > 0
-      ON DUPLICATE KEY
-      UPDATE #{DEST_TABLE_NAME}.name = VALUES(name), #{DEST_TABLE_NAME}.dashboard_user_id = VALUES(dashboard_user_id),
-      #{DEST_TABLE_NAME}.roles = VALUES(roles)"
-
     log "Inserting teacher contacts and IP geo data from dashboard.users"
-    log query
-
-    PEGASUS_REPORTING_DB_WRITER.run query
+    PEGASUS_REPORTING_DB_WRITER.run "
+    INSERT INTO #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME} (email, name, dashboard_user_id, roles, city, state, postal_code, country)
+    -- Use CONCAT+COALESCE to append 'Teacher' to any existing roles
+    SELECT users.email COLLATE utf8_general_ci, users.name, users.id, CONCAT(COALESCE(CONCAT(src.roles, ','), ''), '#{ROLE_TEACHER}'),
+    user_geos.city, user_geos.state, user_geos.postal_code, user_geos.country FROM #{DASHBOARD_DB_NAME}.users_view AS users
+    LEFT OUTER JOIN #{PEGASUS_DB_NAME}.contact_rollups_daily AS src ON src.email = users.email
+    LEFT OUTER JOIN #{DASHBOARD_DB_NAME}.user_geos AS user_geos ON user_geos.user_id = users.id
+    WHERE users.user_type = 'teacher' AND LENGTH(users.email) > 0
+    ON DUPLICATE KEY UPDATE #{DEST_TABLE_NAME}.name = VALUES(name), #{DEST_TABLE_NAME}.dashboard_user_id = VALUES(dashboard_user_id),
+    #{DEST_TABLE_NAME}.roles = VALUES(roles)"
     log_completion(start)
   end
 
   def self.insert_from_dashboard_pd_enrollments
     start = Time.now
-    query =
-      "INSERT INTO #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME} (email, name, roles)
-      SELECT email, name, '#{ROLE_TEACHER}'
-      FROM #{DASHBOARD_DB_NAME}.pd_enrollments AS pd_enrollments
-      WHERE LENGTH(pd_enrollments.email) > 0
-      ON DUPLICATE KEY UPDATE name = #{DEST_TABLE_NAME}.name,
-      -- Use LOCATE to determine if this role is already present and CONCAT+COALESCE to add it if it is not.
-      roles =
-      CASE LOCATE(values(roles), COALESCE(#{DEST_TABLE_NAME}.roles,''))
-        WHEN 0 THEN LEFT(CONCAT(COALESCE(CONCAT(#{DEST_TABLE_NAME}.roles, ','), ''),values(roles)),255)
-        ELSE #{DEST_TABLE_NAME}.roles
-      END"
-
     log "Inserting contacts from dashboard.pd_enrollments"
-    log query
-
-    PEGASUS_REPORTING_DB_WRITER.run query
+    PEGASUS_REPORTING_DB_WRITER.run "
+    INSERT INTO #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME} (email, name, roles)
+    SELECT email, name, '#{ROLE_TEACHER}'
+    FROM #{DASHBOARD_DB_NAME}.pd_enrollments AS pd_enrollments
+    WHERE LENGTH(pd_enrollments.email) > 0
+    ON DUPLICATE KEY UPDATE name = #{DEST_TABLE_NAME}.name,
+    -- Use LOCATE to determine if this role is already present and CONCAT+COALESCE to add it if it is not.
+    roles =
+    CASE LOCATE(values(roles), COALESCE(#{DEST_TABLE_NAME}.roles,''))
+      WHEN 0 THEN LEFT(CONCAT(COALESCE(CONCAT(#{DEST_TABLE_NAME}.roles, ','), ''),values(roles)),255)
+      ELSE #{DEST_TABLE_NAME}.roles
+    END"
 
     log_completion(start)
   end
 
   def self.insert_from_dashboard_census_submissions
     start = Time.now
-
-    query =
-      "INSERT INTO #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME} (email, name, roles, forms_submitted, form_roles)
-      SELECT submitter_email_address, submitter_name, '#{ROLE_FORM_SUBMITTER}', '#{CENSUS_FORM_NAME}', lower(submitter_role)
-      FROM #{DASHBOARD_DB_NAME}.census_submissions AS census_submissions
-      WHERE LENGTH(census_submissions.submitter_email_address) > 0
-      ON DUPLICATE KEY
-      UPDATE #{DEST_TABLE_NAME}.forms_submitted =
-      CASE LOCATE(values(forms_submitted), COALESCE(#{DEST_TABLE_NAME}.forms_submitted,''))
-        WHEN 0 THEN LEFT(CONCAT(COALESCE(CONCAT(#{DEST_TABLE_NAME}.forms_submitted, ','), ''),values(forms_submitted)),255)
-        ELSE #{DEST_TABLE_NAME}.forms_submitted
-      END,
-      roles =
-      CASE LOCATE(values(roles), COALESCE(#{DEST_TABLE_NAME}.roles,''))
-        WHEN 0 THEN LEFT(CONCAT(COALESCE(CONCAT(#{DEST_TABLE_NAME}.roles, ','), ''),values(roles)),255)
-        ELSE #{DEST_TABLE_NAME}.roles
-      END,
-      form_roles =
-       CASE LOCATE(values(form_roles), COALESCE(#{DEST_TABLE_NAME}.form_roles,''))
-        WHEN 0 THEN LEFT(CONCAT(COALESCE(CONCAT(#{DEST_TABLE_NAME}.form_roles, ','), ''),values(form_roles)),255)
-        ELSE #{DEST_TABLE_NAME}.form_roles
-      END"
-
     log "Inserting contacts from dashboard.census_submissions"
-    log query
-    PEGASUS_REPORTING_DB_WRITER.run query
+    PEGASUS_REPORTING_DB_WRITER.run "
+    INSERT INTO #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME} (email, name, roles, forms_submitted, form_roles)
+    SELECT submitter_email_address, submitter_name, '#{ROLE_FORM_SUBMITTER}', '#{CENSUS_FORM_NAME}', lower(submitter_role)
+    FROM #{DASHBOARD_DB_NAME}.census_submissions AS census_submissions
+    WHERE LENGTH(census_submissions.submitter_email_address) > 0
+    ON DUPLICATE KEY
+    UPDATE #{DEST_TABLE_NAME}.forms_submitted =
+    CASE LOCATE(values(forms_submitted), COALESCE(#{DEST_TABLE_NAME}.forms_submitted,''))
+      WHEN 0 THEN LEFT(CONCAT(COALESCE(CONCAT(#{DEST_TABLE_NAME}.forms_submitted, ','), ''),values(forms_submitted)),255)
+      ELSE #{DEST_TABLE_NAME}.forms_submitted
+    END,
+    roles =
+    CASE LOCATE(values(roles), COALESCE(#{DEST_TABLE_NAME}.roles,''))
+      WHEN 0 THEN LEFT(CONCAT(COALESCE(CONCAT(#{DEST_TABLE_NAME}.roles, ','), ''),values(roles)),255)
+      ELSE #{DEST_TABLE_NAME}.roles
+    END,
+    form_roles =
+     CASE LOCATE(values(form_roles), COALESCE(#{DEST_TABLE_NAME}.form_roles,''))
+      WHEN 0 THEN LEFT(CONCAT(COALESCE(CONCAT(#{DEST_TABLE_NAME}.form_roles, ','), ''),values(form_roles)),255)
+      ELSE #{DEST_TABLE_NAME}.form_roles
+    END"
 
     log_completion(start)
   end
@@ -435,11 +421,11 @@ class ContactRollups
     # State for schools is stored in state abbreviation. We need to convert
     # to state name, so do this row-by-row using existing Ruby code for that
     # conversion.
-    sql =
-      "SELECT users_view.email, schools.city, schools.state, schools.zip
-      FROM users_view
-      INNER JOIN school_infos ON school_infos.id = users_view.school_info_id
-      INNER JOIN schools ON schools.id = school_infos.school_id"
+    sql = "
+    SELECT users_view.email, schools.city, schools.state, schools.zip
+    FROM users_view
+    INNER JOIN school_infos ON school_infos.id = users_view.school_info_id
+    INNER JOIN schools ON schools.id = school_infos.school_id"
 
     dataset = DASHBOARD_REPORTING_DB_READER[sql]
 
@@ -484,8 +470,7 @@ class ContactRollups
     log "Updating teacher roles based on census submissions"
     PEGASUS_REPORTING_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}
-    INNER JOIN #{DASHBOARD_DB_NAME}.census_submissions
-    ON census_submissions.submitter_email_address = #{DEST_TABLE_NAME}.email
+    INNER JOIN #{DASHBOARD_DB_NAME}.census_submissions on census_submissions.submitter_email_address = #{DEST_TABLE_NAME}.email
     SET roles =
     -- Use LOCATE to determine if this role is already present and CONCAT+COALESCE to add it if it is not.
     CASE LOCATE('#{ROLE_TEACHER}', COALESCE(#{DEST_TABLE_NAME}.roles,''))
@@ -501,10 +486,10 @@ class ContactRollups
     start = Time.now
     log "Inserting contacts from pegasus.contacts"
     PEGASUS_REPORTING_DB_WRITER.run "
-      UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}
-      INNER JOIN #{PEGASUS_DB_NAME}.contacts on contacts.email = #{DEST_TABLE_NAME}.email
-      SET opted_out = true
-      WHERE unsubscribed_at IS NOT NULL"
+    UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}
+    INNER JOIN #{PEGASUS_DB_NAME}.contacts on contacts.email = #{DEST_TABLE_NAME}.email
+    SET opted_out = true
+    WHERE unsubscribed_at IS NOT NULL"
     log_completion(start)
   end
 
@@ -520,24 +505,20 @@ class ContactRollups
 
   def self.insert_from_pegasus_forms
     start = Time.now
-    query =
-      "INSERT INTO #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME} (email, name, roles, forms_submitted, city, state, postal_code, country)
-      SELECT email, name, '#{ROLE_FORM_SUBMITTER}', kind, city, state, postal_code, country
-      FROM #{PEGASUS_DB_NAME}.forms
-      LEFT OUTER JOIN #{PEGASUS_DB_NAME}.form_geos on form_geos.form_id = forms.id
-      ON DUPLICATE KEY UPDATE
-      -- Update forms_submitted with the list of all forms submitted by this email address
-      #{DEST_TABLE_NAME}.forms_submitted =
-      -- Add the form kind for this form to the list for this email address if it is not already present for this email.
-      -- Use LOCATE to determine if this form kind is already present and CONCAT+COALESCE to add it if it is not.
-      CASE LOCATE(VALUES(forms_submitted), COALESCE(#{DEST_TABLE_NAME}.forms_submitted,''))
-        WHEN 0 THEN LEFT(CONCAT(COALESCE(CONCAT(#{DEST_TABLE_NAME}.forms_submitted, ','), ''), VALUES(forms_submitted)),4096)
-        ELSE #{DEST_TABLE_NAME}.forms_submitted
-      END"
-
     log "Inserting contacts and IP geo data from pegasus.forms"
-    log query
-    PEGASUS_REPORTING_DB_WRITER.run query
+    PEGASUS_REPORTING_DB_WRITER.run "
+    INSERT INTO #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME} (email, name, roles, forms_submitted, city, state, postal_code, country)
+    SELECT email, name, '#{ROLE_FORM_SUBMITTER}', kind, city, state, postal_code, country FROM #{PEGASUS_DB_NAME}.forms
+    LEFT OUTER JOIN #{PEGASUS_DB_NAME}.form_geos on form_geos.form_id = forms.id
+    ON DUPLICATE KEY UPDATE
+    -- Update forms_submitted with the list of all forms submitted by this email address
+    #{DEST_TABLE_NAME}.forms_submitted =
+    -- Add the form kind for this form to the list for this email address if it is not already present for this email.
+    -- Use LOCATE to determine if this form kind is already present and CONCAT+COALESCE to add it if it is not.
+    CASE LOCATE(VALUES(forms_submitted), COALESCE(#{DEST_TABLE_NAME}.forms_submitted,''))
+      WHEN 0 THEN LEFT(CONCAT(COALESCE(CONCAT(#{DEST_TABLE_NAME}.forms_submitted, ','), ''), VALUES(forms_submitted)),4096)
+      ELSE #{DEST_TABLE_NAME}.forms_submitted
+    END"
     log_completion(start)
   end
 
@@ -572,7 +553,7 @@ class ContactRollups
     INNER JOIN #{DASHBOARD_DB_NAME}.user_permissions AS user_permissions ON user_permissions.user_id = users.id
     SET roles = CONCAT(COALESCE(CONCAT(roles, ','), ''), '#{dest_value}')
     WHERE LENGTH(users.email) > 0
-      AND user_permissions.permission = '#{permission_name}' AND #{DEST_TABLE_NAME}.id > 0"
+    AND user_permissions.permission = '#{permission_name}' AND #{DEST_TABLE_NAME}.id > 0"
   end
 
   def self.append_to_list_field_from_form(form_kinds, dest_field, dest_value)
@@ -581,8 +562,7 @@ class ContactRollups
 
     PEGASUS_REPORTING_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}
-    INNER JOIN #{PEGASUS_DB_NAME}.forms
-    ON forms.email = #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}.email
+    INNER JOIN #{PEGASUS_DB_NAME}.forms ON forms.email = #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}.email
     SET #{dest_field} = CONCAT(COALESCE(CONCAT(#{dest_field}, ','), ''), #{dest_value})
     WHERE forms.kind IN (#{form_kinds}) AND #{DEST_TABLE_NAME}.id > 0"
     log_completion(start)
@@ -605,8 +585,7 @@ class ContactRollups
           inner join #{DASHBOARD_DB_NAME}.users_view as users on users.id = sections.user_id
         where courses.name = '#{course_name}'
       ) q
-    ) user_ids
-    ON user_ids.id = #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}.dashboard_user_id
+    ) user_ids ON user_ids.id = #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}.dashboard_user_id
     SET roles = CONCAT(COALESCE(CONCAT(roles, ','), ''), '#{role_name}')
     WHERE #{DEST_TABLE_NAME}.id > 0"
   end
@@ -810,8 +789,7 @@ class ContactRollups
     # that have been submitted on forms for this email
     "
       UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}
-      INNER JOIN #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME} AS src
-      ON src.email = #{DEST_TABLE_NAME}.email
+      INNER JOIN #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME} AS src ON src.email = #{DEST_TABLE_NAME}.email
       SET #{DEST_TABLE_NAME}.form_roles =
       -- Use LOCATE to determine if this role is already present and CONCAT+COALESCE to add it if it is not.
       CASE LOCATE('#{role}', COALESCE(src.form_roles,''))
@@ -868,12 +846,9 @@ class ContactRollups
         raise
       end
 
-      # Discard the connection and get a new one after each batch. Currently, if you use multiple
-      # statements in a batch, the first call will succeed; the next call on
-      # the same connection AFTER you do a multi-statement call will fail with a MySQL error that
-      # commands are out of order. The innertubes suggest that this may be a problem in mysql2 gem.
-      # Fortunately, it is fairly cheap to get a new connection for each batch (time to get new
-      # connection is negligible compared to batch time).
+      # Discard the connection and get a new one after each batch. Currently, if you use multiple statements in a batch, the first call will succeed; the next call on
+      # the same connection AFTER you do a multi-statement call will fail with a MySQL error that commands are out of order. The innertubes suggest that this may be a problem in mysql2 gem.
+      # Fortunately, it is fairly cheap to get a new connection for each batch (time to get new connection is negligible compared to batch time).
       conn.disconnect
       conn = mysql_multi_connection
 
@@ -985,22 +960,16 @@ class ContactRollups
 
     start = Time.now
     log "Updating district information from dashboard.pd_enrollments"
-    DASHBOARD_REPORTING_DB_READER[:pd_enrollments].
-      exclude(email: nil).
-      exclude(school_info_id: nil).
-      select_append(:school_districts__name___district_name).
-      select_append(:school_districts__updated_at___district_updated_at).
-      inner_join(:school_infos, id: :school_info_id).
-      inner_join(:school_districts, id: :school_district_id).
-      order_by(:district_updated_at).each do |pd_enrollment|
-      PEGASUS_REPORTING_DB_WRITER[DEST_TABLE_NAME.to_sym].
-        where(email: pd_enrollment[:email]).
-        update(
-          district_name: pd_enrollment[:district_name],
-          district_city: pd_enrollment[:city],
-          district_state: pd_enrollment[:state],
-          district_zip: pd_enrollment[:zip]
-        )
+    DASHBOARD_REPORTING_DB_READER[:pd_enrollments].exclude(email: nil).exclude(school_info_id: nil).
+        select_append(:school_districts__name___district_name).select_append(:school_districts__updated_at___district_updated_at).
+        inner_join(:school_infos, id: :school_info_id).
+        inner_join(:school_districts, id: :school_district_id).order_by(:district_updated_at).each do |pd_enrollment|
+      PEGASUS_REPORTING_DB_WRITER[DEST_TABLE_NAME.to_sym].where(email: pd_enrollment[:email]).update(
+        district_name: pd_enrollment[:district_name],
+        district_city: pd_enrollment[:city],
+        district_state: pd_enrollment[:state],
+        district_zip: pd_enrollment[:zip]
+      )
     end
     log_completion(start)
   end
@@ -1009,9 +978,7 @@ class ContactRollups
     start = Time.now
     log "Updating school information from dashboard.pd_enrollments"
     DASHBOARD_REPORTING_DB_READER[:pd_enrollments].exclude(email: nil).where('length(school) > 0').find do |pd_enrollment|
-      PEGASUS_REPORTING_DB_WRITER[DEST_TABLE_NAME.to_sym].
-        where(email: pd_enrollment[:email]).
-        update(school_name: pd_enrollment[:school])
+      PEGASUS_REPORTING_DB_WRITER[DEST_TABLE_NAME.to_sym].where(email: pd_enrollment[:email]).update(school_name: pd_enrollment[:school])
     end
     log_completion(start)
   end
