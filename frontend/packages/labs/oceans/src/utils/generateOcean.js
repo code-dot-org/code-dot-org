@@ -1,7 +1,7 @@
 import {
   FishOceanObject,
   TrashOceanObject,
-  generateOceanObject
+  generateRandomOceanObject
 } from '../demo/OceanObject';
 import {getState} from '../demo/state';
 
@@ -14,7 +14,7 @@ export const generateOcean = (numFish, loadTrashImages) => {
   }
 
   for (var i = 0; i < numFish; ++i) {
-    ocean.push(generateOceanObject(possibleObjects, i, state.dataSet));
+    ocean.push(generateRandomOceanObject(possibleObjects, i, state.dataSet));
   }
   return ocean;
 };
