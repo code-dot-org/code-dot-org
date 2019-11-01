@@ -2,6 +2,7 @@ import queryString from 'query-string';
 import {Modes} from './constants';
 import {FishBodyPart} from '../utils/fishData';
 import underwaterBackground from '../../public/images/underwater-background.png';
+import _ from 'lodash';
 
 export const backgroundPathForMode = mode => {
   let imgName;
@@ -105,3 +106,17 @@ export const filterFishComponents = (fishComponents, dataSet) => {
 
   return filteredCopy;
 };
+
+export const getAppMode = () => {
+  const appMode = _.last(queryStrFor('mode').toLowerCase().split('-'));
+  let appModeVariant = null;
+
+  // If the mode is "fishy-instrutions" then we extract "fishy" as the
+  // appModeVariant.
+  if (appMode === "instructions") {
+    appModeVariant = queryStrFor('mode').toLowerCase().split('-')[0];
+    console.log("appMode:", appMode, "  appModeVariant:", appModeVariant);
+  }
+
+  return [appMode, appModeVariant];
+}

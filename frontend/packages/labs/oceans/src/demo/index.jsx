@@ -23,6 +23,7 @@ $(document).ready(() => {
 
   // Set initial state for UI elements.
   const state = setState({
+    appMode: queryStrFor('mode'),
     currentMode: Modes.Loading,
     canvas,
     backgroundCanvas,
@@ -49,3 +50,4 @@ export const renderUI = () => {
   const renderElement = document.getElementById('container-react');
   ReactDOM.render(<UI />, renderElement);
 };
+

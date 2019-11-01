@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import _ from 'lodash';
 import {getState, setState} from './state';
 import {Modes, DataSet} from './constants';
+import {getAppMode} from './helpers';
 import {toMode} from './toMode';
 import {init as initModel} from './models';
 import {onClassifyFish} from './models/train';
@@ -59,6 +60,27 @@ const styles = {
     marginTop: '2%',
     marginBottom: '2%'
   },
+  instructionsText: {
+    position: 'absolute',
+    top: '20%',
+    left: '10%',
+    width: '80%'
+  },
+  instructionsDots: {
+    textAlign: 'center',
+    fontSize: 60,
+    position: 'absolute',
+    bottom: '20%',
+    left: 0,
+    width: '100%'
+  },
+  activeDot: {
+    color: 'white'
+  },
+  inactiveDot: {
+    color: 'grey',
+    cursor: 'pointer'
+  },
   activityIntroText: {
     position: 'absolute',
     fontSize: 22,
@@ -94,7 +116,6 @@ const styles = {
     transform: 'translateX(-50%)',
     fontSize: 22,
     lineHeight: '26px'
-
   },
   trainQuestionTextDisabled: {
     position: 'absolute',
@@ -205,6 +226,98 @@ class Button extends React.Component {
       >
         {this.props.children}
       </button>
+    );
+  }
+}
+
+const instructionsText = {
+  intro: [
+    [
+      'In the following activity we’ll learn about artificial intelligence (AI) and machine learning.',
+      'With machine learning we use data to train the computer to recognize patterns.',
+      'Watch the video to learn more!'
+    ]
+  ],
+
+  fishvtrash: [
+    [
+      'Now let’s consider how machine learning can be used for good in the real world.',
+      '1 in 3 people worldwide do not have access to safe drinking water. Access to clean water could reduce global diseases by 10%.',
+      'Garbage dumped in ocean or rivers affects the water health and impacts the marine life in the water.'
+    ],
+    [
+      'In this activity, you will "program" or "train" an artificial intelligence to identify trash to remove from the ocean.'
+    ],
+    [
+      "A.I. can't tell if an object is a fish or a piece of trash yet, but it can process different images and identify patterns.",
+      'To program A.I., label the images we show you as either "fish" or "not fish". This will train A.I. to do it on its own!'
+    ]
+  ],
+
+  short: [
+    [
+      'A.I. needs lots of training data to do its job well. When you train A.I., the data you provide can make a difference!'
+    ],
+    [
+      'We learned how AI and machine learning can be used to do good things like identify trash in the ocean!',
+      'What else can we use AI to do?'
+    ],
+    [
+      'AI and machine learning can also be used to give recommendations, like when a computer suggests videos to watch or products to buy.',
+      'Next, you’re going to teach A.I. a new word just by showing examples of that type of fish.'
+    ]
+  ]
+};
+
+class Instructions extends React.Component {
+  setInstructionsPage(page) {
+    setState({currentInstructionsPage: page});
+  }
+
+  render() {
+    const state = getState();
+    const currentPage = state.currentInstructionsPage;
+    const [appMode, appModeVariant] = getAppMode();
+
+    return (
+      <Body>
+        <Header>Instructions</Header>
+        <div style={styles.instructionsText}>
+          {instructionsText[appModeVariant][currentPage].map(
+            (instruction, index) => {
+              return <p key={index}>{instruction}</p>;
+            }
+          )}
+        </div>
+        {instructionsText[appModeVariant].length > 1 && (
+          <div style={styles.instructionsDots}>
+            {instructionsText[appModeVariant].map((instruction, index) => {
+              return (
+                <span
+                  style={
+                    index === currentPage
+                      ? styles.activeDot
+                      : styles.inactiveDot
+                  }
+                  key={index}
+                  onClick={() =>
+                    index !== currentPage
+                      ? this.setInstructionsPage(index)
+                      : null
+                  }
+                >
+                  {'\u25CF'}
+                </span>
+              );
+            })}
+          </div>
+        )}
+        <Footer>
+          <Button style={styles.continueButton} onClick={() => {}}>
+            Continue
+          </Button>
+        </Footer>
+      </Body>
     );
   }
 }
@@ -428,16 +541,17 @@ class Pond extends React.Component {
 
 export default class UI extends React.Component {
   render() {
-    const mode = getState().currentMode;
+    const currentMode = getState().currentMode;
 
     return (
       <div>
-        {mode === Modes.ActivityIntro && <ActivityIntro />}
-        {mode === Modes.Words && <Words />}
-        {mode === Modes.TrainingIntro && <TrainingIntro />}
-        {mode === Modes.Training && <Train />}
-        {mode === Modes.Predicting && <Predict />}
-        {mode === Modes.Pond && <Pond />}
+        {currentMode === Modes.Instructions && <Instructions />}
+        {currentMode === Modes.ActivityIntro && <ActivityIntro />}
+        {currentMode === Modes.Words && <Words />}
+        {currentMode === Modes.TrainingIntro && <TrainingIntro />}
+        {currentMode === Modes.Training && <Train />}
+        {currentMode === Modes.Predicting && <Predict />}
+        {currentMode === Modes.Pond && <Pond />}
       </div>
     );
   }
