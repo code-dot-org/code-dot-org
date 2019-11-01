@@ -232,40 +232,61 @@ class Button extends React.Component {
 
 const instructionsText = {
   intro: [
-    [
-      'In the following activity we’ll learn about artificial intelligence (AI) and machine learning.',
-      'With machine learning we use data to train the computer to recognize patterns.',
-      'Watch the video to learn more!'
-    ]
+    {
+      heading: 'Introduction',
+      text: [
+        'In the following activity we’ll learn about artificial intelligence (AI) and machine learning.',
+        'With machine learning we use data to train the computer to recognize patterns.',
+        'Watch the video to learn more!'
+      ]
+    }
   ],
 
   fishvtrash: [
-    [
-      'Now let’s consider how machine learning can be used for good in the real world.',
-      '1 in 3 people worldwide do not have access to safe drinking water. Access to clean water could reduce global diseases by 10%.',
-      'Garbage dumped in ocean or rivers affects the water health and impacts the marine life in the water.'
-    ],
-    [
-      'In this activity, you will "program" or "train" an artificial intelligence to identify trash to remove from the ocean.'
-    ],
-    [
-      "A.I. can't tell if an object is a fish or a piece of trash yet, but it can process different images and identify patterns.",
-      'To program A.I., label the images we show you as either "fish" or "not fish". This will train A.I. to do it on its own!'
-    ]
+    {
+      heading: 'Train A.I. to Clean Ocean',
+      text: [
+        'Now let’s consider how machine learning can be used for good in the real world.',
+        '1 in 3 people worldwide do not have access to safe drinking water. Access to clean water could reduce global diseases by 10%.',
+        'Garbage dumped in ocean or rivers affects the water health and impacts the marine life in the water.'
+      ]
+    },
+    {
+      heading: 'Train A.I. to Clean Ocean',
+      text: [
+        'In this activity, you will "program" or "train" an artificial intelligence to identify trash to remove from the ocean.'
+      ]
+    },
+    {
+      heading: 'Meet A.I.',
+      text: [
+        "A.I. can't tell if an object is a fish or a piece of trash yet, but it can process different images and identify patterns.",
+        'To program A.I., label the images we show you as either "fish" or "not fish". This will train A.I. to do it on its own!'
+      ]
+    }
   ],
 
   short: [
-    [
-      'A.I. needs lots of training data to do its job well. When you train A.I., the data you provide can make a difference!'
-    ],
-    [
-      'We learned how AI and machine learning can be used to do good things like identify trash in the ocean!',
-      'What else can we use AI to do?'
-    ],
-    [
-      'AI and machine learning can also be used to give recommendations, like when a computer suggests videos to watch or products to buy.',
-      'Next, you’re going to teach A.I. a new word just by showing examples of that type of fish.'
-    ]
+    {
+      heading: 'Training Data',
+      text: [
+        'A.I. needs lots of training data to do its job well. When you train A.I., the data you provide can make a difference!'
+      ]
+    },
+    {
+      heading: 'Training Data',
+      text: [
+        'We learned how AI and machine learning can be used to do good things like identify trash in the ocean!',
+        'What else can we use AI to do?'
+      ]
+    },
+    {
+      heading: 'Training Data',
+      text: [
+        'AI and machine learning can also be used to give recommendations, like when a computer suggests videos to watch or products to buy.',
+        'Next, you’re going to teach A.I. a new word just by showing examples of that type of fish.'
+      ]
+    }
   ]
 };
 
@@ -281,9 +302,9 @@ class Instructions extends React.Component {
 
     return (
       <Body>
-        <Header>Instructions</Header>
+        <Header>{instructionsText[appModeVariant][currentPage].heading}</Header>
         <div style={styles.instructionsText}>
-          {instructionsText[appModeVariant][currentPage].map(
+          {instructionsText[appModeVariant][currentPage].text.map(
             (instruction, index) => {
               return <p key={index}>{instruction}</p>;
             }
