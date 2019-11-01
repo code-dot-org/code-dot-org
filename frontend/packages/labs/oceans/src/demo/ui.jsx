@@ -426,9 +426,9 @@ class Train extends React.Component {
     let text = '';
 
     if (total >= 40) {
-      text = 'you can stop now';
+      text = "Great work! You can continue when you're ready.";
     } else if (total >= 5) {
-      text = 'keep doin what youre doin';
+      text = 'Keep training!';
     } else {
       return null;
     }
