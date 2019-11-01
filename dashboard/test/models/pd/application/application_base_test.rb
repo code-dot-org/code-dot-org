@@ -369,6 +369,69 @@ module Pd::Application
       end
     end
 
+    test 'queue_registration_reminders!' do
+      # The expected behavior of this method is to find applications needing registration reminder
+      # emails and queue up the emails to be sent at the appropriate times.  It runs on a cronjob.
+      # Here, we walk through the typical flow for an application and verify that emails are queued
+      # at the appropriate moments.
+      #
+      Timecop.freeze do
+        # Initial creation: No reminders
+        application = create :pd_teacher2021_application
+        Pd::Application::ApplicationBase.queue_registration_reminders!
+        assert_empty application.emails.where(email_type: 'registration_reminder')
+
+        # Fake sending first registration email
+        Timecop.travel 1.day
+        create :pd_application_email, application: application, email_type: 'registration_sent', sent_at: DateTime.now
+        Pd::Application::ApplicationBase.queue_registration_reminders!
+        assert_empty application.emails.where(email_type: 'registration_reminder')
+
+        # First email is due in 14 days. At 13 days, no email yet:
+        Timecop.travel 13.days
+        Pd::Application::ApplicationBase.queue_registration_reminders!
+        assert_empty application.emails.where(email_type: 'registration_reminder')
+
+        # At 14 days, email is sent on schedule:
+        Timecop.travel 1.day
+        Pd::Application::ApplicationBase.queue_registration_reminders!
+        assert_equal 1, application.emails.where(email_type: 'registration_reminder').count
+
+        # Immediate re-run does not create another reminder
+        Pd::Application::ApplicationBase.queue_registration_reminders!
+        assert_equal 1, application.emails.where(email_type: 'registration_reminder').count
+
+        # Fake sending the email from the queue
+        application.emails.
+          where(email_type: 'registration_reminder', sent_at: nil).
+          update(sent_at: DateTime.now)
+
+        # Next email is due in 7 days.  At 6 days, only the one reminder has been sent:
+        Timecop.travel 6.days
+        Pd::Application::ApplicationBase.queue_registration_reminders!
+        assert_equal 1, application.emails.where(email_type: 'registration_reminder').count
+
+        # At 7 days, the second reminder is sent on schedule:
+        Timecop.travel 1.day
+        Pd::Application::ApplicationBase.queue_registration_reminders!
+        assert_equal 2, application.emails.where(email_type: 'registration_reminder').count
+
+        # Immediate re-run does not create another reminder
+        Pd::Application::ApplicationBase.queue_registration_reminders!
+        assert_equal 2, application.emails.where(email_type: 'registration_reminder').count
+
+        # Fake sending the email from the queue
+        application.emails.
+          where(email_type: 'registration_reminder', sent_at: nil).
+          update(sent_at: DateTime.now)
+
+        # That's the last one - no more reminders are sent
+        Timecop.travel 30.days
+        Pd::Application::ApplicationBase.queue_registration_reminders!
+        assert_equal 2, application.emails.where(email_type: 'registration_reminder').count
+      end
+    end
+
     test 'needing_first_registration_reminder' do
       # Precondition: No eligible applications in the test database
       assert_equal 0, Pd::Application::TeacherApplicationBase.needing_first_registration_reminder.count
@@ -383,10 +446,10 @@ module Pd::Application
       create :pd_application_email, application: application, email_type: 'registration_sent', sent_at: 13.days.ago
       assert_equal 0, Pd::Application::TeacherApplicationBase.needing_first_registration_reminder.count
 
-      # Does not include applications that already received their first registration_reminder_email
+      # Does not include applications that already created their first registration_reminder_email
       application = create :pd_teacher2021_application
-      create :pd_application_email, application: application, email_type: 'registration_sent', sent_at: 15.days.ago
-      create :pd_application_email, application: application, email_type: 'registration_reminder', sent_at: 1.day.ago
+      create :pd_application_email, application: application, email_type: 'registration_sent', sent_at: 2.weeks.ago
+      create :pd_application_email, application: application, email_type: 'registration_reminder', sent_at: nil
       assert_equal 0, Pd::Application::TeacherApplicationBase.needing_first_registration_reminder.count
 
       # Does not include applications where the teacher already enrolled in a workshop
@@ -429,11 +492,11 @@ module Pd::Application
       create :pd_application_email, application: application, email_type: 'registration_reminder', sent_at: 6.days.ago
       assert_equal 0, Pd::Application::TeacherApplicationBase.needing_second_registration_reminder.count
 
-      # An application that already received its second reminder is not eligible
+      # An application that already created its second reminder is not eligible
       application = create :pd_teacher2021_application
-      create :pd_application_email, application: application, email_type: 'registration_sent', sent_at: 4.weeks.ago
-      create :pd_application_email, application: application, email_type: 'registration_reminder', sent_at: 2.weeks.ago
+      create :pd_application_email, application: application, email_type: 'registration_sent', sent_at: 3.weeks.ago
       create :pd_application_email, application: application, email_type: 'registration_reminder', sent_at: 1.week.ago
+      create :pd_application_email, application: application, email_type: 'registration_reminder', sent_at: nil
       assert_equal 0, Pd::Application::TeacherApplicationBase.needing_second_registration_reminder.count
 
       # Does not include applications where the teacher is already enrolled in a workshop
