@@ -82,6 +82,7 @@ Fish.prototype.init = function(config) {
 
 Fish.prototype.initMLActivities = function() {
   const {mode} = this.level;
+  const {onContinue} = this.studioApp_;
   // Set up initial state
   const canvas = document.getElementById('activity-canvas');
   const backgroundCanvas = document.getElementById('background-canvas');
@@ -93,7 +94,8 @@ Fish.prototype.initMLActivities = function() {
     currentMode: Modes.Loading,
     canvas,
     backgroundCanvas,
-    appMode: mode
+    appMode: mode,
+    onContinue
   });
 
   // Initialize our first model.
