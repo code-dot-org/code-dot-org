@@ -40,11 +40,11 @@ class LogCollector
   end
 
   # Execute a block and time it.
-  # Re-raise execption if caught, do not save. This will disrupt the caller's flow.
+  # Re-raise exception if caught, do not save. This will disrupt the caller's flow.
   #
   # @param action_name [string] friendly name for the given block
   #
-  # @raise [StandardError] error encoutered when executing the given block
+  # @raise [StandardError] error encountered when executing the given block
   def time!(action_name = nil)
     return unless block_given?
     start_time = Time.now
@@ -82,7 +82,7 @@ class LogCollector
 
   def to_s
     str = "#{task_name} task recorded #{errors.size} error(s) and #{logs.size} log message(s)."
-    logs.each {|log| str.concat("\n#{log}")}
+    logs.each {|log| str << "\n#{log}"}
     str
   end
 
