@@ -82,7 +82,7 @@ export const loadAllTrashImages = () => {
 
 // Generate a single object with an even chance of being
 // any of the allowed classes
-export const generateOceanObject = (
+export const generateRandomOceanObject = (
   allowedClasses,
   id,
   possibleFishComponents = null
@@ -107,6 +107,7 @@ export class OceanObject {
     this.logits = null;
     this.result = null;
   }
+
   randomize() {
     throw 'Not yet implemented!';
   }
@@ -174,29 +175,31 @@ export class OceanObject {
 export class FishOceanObject extends OceanObject {
   constructor(id, componentOptions = fishData) {
     super(id);
-    this.bodies = Object.values(componentOptions.bodies);
-    this.eyes = Object.values(componentOptions.eyes);
-    this.mouths = Object.values(componentOptions.mouths);
-    this.pectoralFinsFront = Object.values(componentOptions.pectoralFinsFront);
-    this.pectoralFinsBack = Object.values(componentOptions.pectoralFinsBack);
-    this.dorsalFins = Object.values(componentOptions.dorsalFins);
-    this.tails = Object.values(componentOptions.tails);
-    this.colorPalettes = Object.values(componentOptions.colorPalettes);
+    this.componentOptions = componentOptions;
   }
 
   randomize() {
-    const body = this.bodies[Math.floor(Math.random() * this.bodies.length)];
-    const eye = this.eyes[Math.floor(Math.random() * this.eyes.length)];
-    const mouth = this.mouths[Math.floor(Math.random() * this.mouths.length)];
-    const finIdx = Math.floor(Math.random() * this.pectoralFinsFront.length);
-    const pectoralFinFront = this.pectoralFinsFront[finIdx];
-    const pectoralFinBack = this.pectoralFinsBack[finIdx];
-    const dorsalFin = this.dorsalFins[
-      Math.floor(Math.random() * this.dorsalFins.length)
+    const bodies = Object.values(this.componentOptions.bodies);
+    const eyes = Object.values(this.componentOptions.eyes);
+    const mouths = Object.values(this.componentOptions.mouths);
+    const pectoralFinsFront = Object.values(this.componentOptions.pectoralFinsFront);
+    const pectoralFinsBack = Object.values(this.componentOptions.pectoralFinsBack);
+    const dorsalFins = Object.values(this.componentOptions.dorsalFins);
+    const tails = Object.values(this.componentOptions.tails);
+    const colorPalettes = Object.values(this.componentOptions.colorPalettes);
+
+    const body = bodies[Math.floor(Math.random() * bodies.length)];
+    const eye = eyes[Math.floor(Math.random() * eyes.length)];
+    const mouth = mouths[Math.floor(Math.random() * mouths.length)];
+    const finIdx = Math.floor(Math.random() * pectoralFinsFront.length);
+    const pectoralFinFront = pectoralFinsFront[finIdx];
+    const pectoralFinBack = pectoralFinsBack[finIdx];
+    const dorsalFin = dorsalFins[
+      Math.floor(Math.random() * dorsalFins.length)
     ];
-    const tail = this.tails[Math.floor(Math.random() * this.tails.length)];
-    this.colorPalette = this.colorPalettes[
-      Math.floor(Math.random() * this.colorPalettes.length)
+    const tail = tails[Math.floor(Math.random() * tails.length)];
+    this.colorPalette = colorPalettes[
+      Math.floor(Math.random() * colorPalettes.length)
     ];
     this.knnData = [
       ...body.knnData,
