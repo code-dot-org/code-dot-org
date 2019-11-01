@@ -7,6 +7,8 @@ import {toMode} from './toMode';
 import {init as initModel} from './models';
 import {onClassifyFish} from './models/train';
 import aiBotClosed from '../../public/images/ai-bot-closed.png';
+import xIcon from '../../public/images/x-icon.png';
+import checkmarkIcon from '../../public/images/checkmark-icon.png';
 
 const styles = {
   header: {
@@ -140,6 +142,26 @@ const styles = {
     height: '50%',
     left: 0,
     bottom: 0
+  },
+  pill: {
+    display: 'flex',
+    alignItems: 'center'
+  },
+  pillIcon: {
+    backgroundColor: 'red',
+    width: 38,
+    padding: 10,
+    border: '4px solid black',
+    borderRadius: 33,
+    zIndex: 2
+  },
+  pillText: {
+    color: 'white',
+    backgroundColor: 'black',
+    padding: '10px 30px',
+    borderRadius: 33,
+    marginLeft: -22,
+    zIndex: 1
   }
 };
 
@@ -199,6 +221,24 @@ class Button extends React.Component {
       >
         {this.props.children}
       </button>
+    );
+  }
+}
+
+class Pill extends React.Component {
+  static propTypes = {
+    text: PropTypes.string.isRequired,
+    icon: PropTypes.string
+  };
+
+  render() {
+    return (
+      <div style={styles.pill}>
+        {this.props.icon && (
+          <img src={this.props.icon} style={styles.pillIcon} />
+        )}
+        <div style={styles.pillText}>{this.props.text}</div>
+      </div>
     );
   }
 }
