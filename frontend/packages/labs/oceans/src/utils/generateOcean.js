@@ -79,8 +79,6 @@ export const filterOcean = async (ocean, trainer) => {
 const shuffleList = list => {
   for (var i = 0; i < list.length; ++i) {
     const nextIdx = Math.floor(Math.random() * (list.length - i)) + i;
-    const tmp = list[i];
-    list[i] = list[nextIdx];
-    list[nextIdx] = tmp;
+    [list[i], list[nextIdx]] = [list[nextIdx], list[i]];
   }
 };
