@@ -987,8 +987,8 @@ Applab.scrollToEnd = function() {
 Applab.clearEventHandlersKillTickLoop = function() {
   Applab.whenRunFunc = null;
   Applab.running = false;
-  $('#headers').removeClass('dimmed');
-  $('#codeWorkspace').removeClass('dimmed');
+  document.querySelector('#headers').classList.remove('dimmed');
+  document.querySelector('#codeWorkspace').classList.remove('dimmed');
   Applab.tickCount = 0;
 };
 

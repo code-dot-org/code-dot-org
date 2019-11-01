@@ -535,8 +535,14 @@ describe('applab', () => {
   });
 
   describe('Applab.init()', () => {
-    before(() => sinon.stub(Applab, 'render'));
-    after(() => Applab.render.restore());
+    before(() => {
+      sinon.stub(Applab, 'render');
+      sinon.stub(Applab, 'clearEventHandlersKillTickLoop');
+    });
+    after(() => {
+      Applab.render.restore();
+      Applab.clearEventHandlersKillTickLoop.restore();
+    });
 
     beforeEach(stubRedux);
     afterEach(restoreRedux);
@@ -570,6 +576,27 @@ describe('applab', () => {
         });
         expect(isDebuggerOpen(getStore().getState())).to.be.true;
       });
+    });
+  });
+
+  describe('clearEventHandlersKillTickLoop', () => {
+    before(() => {
+      sinon
+        .stub(document, 'querySelector')
+        .returns({classList: {remove: () => {}}});
+    });
+    after(() => {
+      document.querySelector.restore();
+    });
+    it('resets values', () => {
+      Applab.whenRunFunc = 'not null';
+      Applab.running = true;
+      Applab.tickCount = 100;
+      expect(Applab.whenRunFunc).not.to.be.null;
+      Applab.clearEventHandlersKillTickLoop();
+      expect(Applab.whenRunFunc).to.be.null;
+      expect(Applab.running).to.be.false;
+      expect(Applab.tickCount).to.equal(0);
     });
   });
 
