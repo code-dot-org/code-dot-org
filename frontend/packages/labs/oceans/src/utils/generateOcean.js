@@ -1,7 +1,4 @@
-import {
-  FishOceanObject,
-  TrashOceanObject
-} from '../demo/OceanObject';
+import {FishOceanObject, TrashOceanObject} from '../demo/OceanObject';
 import {getState} from '../demo/state';
 import {fishData} from './fishData';
 import {filterFishComponents} from '../demo/helpers';
