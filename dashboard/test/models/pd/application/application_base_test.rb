@@ -432,105 +432,130 @@ module Pd::Application
       end
     end
 
-    test 'needing_first_registration_reminder' do
-      # Precondition: No eligible applications in the test database
+    test 'needing_first_registration_reminder omits applications with no registration email' do
       assert_equal 0, Pd::Application::TeacherApplicationBase.needing_first_registration_reminder.count
+    end
 
-      # Does not include applications where the registration_sent email has not been sent
+    test 'needing_first_registration_reminder omits applications with unsent registration email' do
       application = create :pd_teacher2021_application
       create :pd_application_email, application: application, email_type: 'registration_sent', sent_at: nil
       assert_equal 0, Pd::Application::TeacherApplicationBase.needing_first_registration_reminder.count
+    end
 
-      # Does not include applications where the registration_sent email was sent less than two weeks ago
+    test 'needing_first_registration_reminder omits applications with recent registration email' do
       application = create :pd_teacher2021_application
       create :pd_application_email, application: application, email_type: 'registration_sent', sent_at: 13.days.ago
       assert_equal 0, Pd::Application::TeacherApplicationBase.needing_first_registration_reminder.count
+    end
 
-      # Does not include applications that already created their first registration_reminder_email
+    test 'needing_first_registration_reminder omits applications that already created a registration reminder' do
       application = create :pd_teacher2021_application
       create :pd_application_email, application: application, email_type: 'registration_sent', sent_at: 2.weeks.ago
       create :pd_application_email, application: application, email_type: 'registration_reminder', sent_at: nil
       assert_equal 0, Pd::Application::TeacherApplicationBase.needing_first_registration_reminder.count
+    end
 
-      # Does not include applications where the teacher already enrolled in a workshop
+    test 'needing_first_registration_reminder omits teachers already enrolled' do
       application = create :pd_teacher2021_application
       create :pd_application_email, application: application, email_type: 'registration_sent', sent_at: 2.weeks.ago
       create :pd_enrollment, user: application.user
       assert_equal 0, Pd::Application::TeacherApplicationBase.needing_first_registration_reminder.count
+    end
 
-      # This application meets all the requirements
+    test 'needing_first_registration_reminder includes eligible applications' do
+      # This application meets all the requirements: A two-week-old registration email
+      # and no enrollment or reminder
       application = create :pd_teacher2021_application
       create :pd_application_email, application: application, email_type: 'registration_sent', sent_at: 2.weeks.ago
       assert_equal 1, Pd::Application::TeacherApplicationBase.needing_first_registration_reminder.count
+    end
 
+    test 'needing_first_registration_reminder old enrollments do not make an application ineligible' do
       # An old enrollment does not render this application ineligible for a reminder email
       application = create :pd_teacher2021_application
       create :pd_application_email, application: application, email_type: 'registration_sent', sent_at: 2.weeks.ago
       create :pd_enrollment, user: application.user, created_at: 1.year.ago
-      assert_equal 2, Pd::Application::TeacherApplicationBase.needing_first_registration_reminder.count
+      assert_equal 1, Pd::Application::TeacherApplicationBase.needing_first_registration_reminder.count
+    end
 
+    test 'needing_first_registration_reminder does not double reminder emails for malformed records' do
       # This malformed application with two registration_sent emails should only produce one result
       application = create :pd_teacher2021_application
       create :pd_application_email, application: application, email_type: 'registration_sent', sent_at: 2.weeks.ago
       create :pd_application_email, application: application, email_type: 'registration_sent', sent_at: 2.weeks.ago
-      assert_equal 3, Pd::Application::TeacherApplicationBase.needing_first_registration_reminder.count
+      assert_equal 1, Pd::Application::TeacherApplicationBase.needing_first_registration_reminder.count
     end
 
-    test 'needing_second_registration_reminder' do
-      # Precondition: No eligible applications in the test database
+    test 'needing_second_registration_reminder omits applications with no emails' do
       assert_equal 0, Pd::Application::TeacherApplicationBase.needing_second_registration_reminder.count
+    end
 
-      # Does not include an application with no reminder emails sent
+    test 'needing_second_registration_reminder omits applications with unsent reminder email' do
       application = create :pd_teacher2021_application
       assert_equal 0, Pd::Application::TeacherApplicationBase.needing_second_registration_reminder.count
       create :pd_application_email, application: application, email_type: 'registration_sent', sent_at: 3.weeks.ago
       create :pd_application_email, application: application, email_type: 'registration_reminder', sent_at: nil
+    end
 
+    test 'needing_second_registration_reminder omits applications with recent reminder email' do
       # Does not include applications where the first reminder was sent less than a week ago
       application = create :pd_teacher2021_application
       create :pd_application_email, application: application, email_type: 'registration_sent', sent_at: 3.weeks.ago
       create :pd_application_email, application: application, email_type: 'registration_reminder', sent_at: 6.days.ago
       assert_equal 0, Pd::Application::TeacherApplicationBase.needing_second_registration_reminder.count
+    end
 
+    test 'needing_second_registration_reminder omits applications with two reminder emails' do
       # An application that already created its second reminder is not eligible
       application = create :pd_teacher2021_application
       create :pd_application_email, application: application, email_type: 'registration_sent', sent_at: 3.weeks.ago
       create :pd_application_email, application: application, email_type: 'registration_reminder', sent_at: 1.week.ago
       create :pd_application_email, application: application, email_type: 'registration_reminder', sent_at: nil
       assert_equal 0, Pd::Application::TeacherApplicationBase.needing_second_registration_reminder.count
+    end
 
+    test 'needing_second_registration_reminder omits teachers who already enrolled' do
       # Does not include applications where the teacher is already enrolled in a workshop
       application = create :pd_teacher2021_application
       create :pd_application_email, application: application, email_type: 'registration_sent', sent_at: 3.weeks.ago
       create :pd_application_email, application: application, email_type: 'registration_reminder', sent_at: 1.week.ago
       create :pd_enrollment, user: application.user
       assert_equal 0, Pd::Application::TeacherApplicationBase.needing_second_registration_reminder.count
+    end
 
+    test 'needing_second_registration_reminder omits malformed applications with no registration email' do
       # This malformed application with a 'registration_reminder' but no 'registration_sent' does
       # not receive another reminder
       application = create :pd_teacher2021_application
       create :pd_application_email, application: application, email_type: 'registration_reminder', sent_at: 1.week.ago
       assert_equal 0, Pd::Application::TeacherApplicationBase.needing_second_registration_reminder.count
+    end
 
-      # This application meets all the requirements
+    test 'needing_second_registration_reminder includes eligible applications' do
+      # This application meets all the requirements: A registration email, a reminder email at least
+      # a week old, and no second reminder or enrollment.
       application = create :pd_teacher2021_application
       create :pd_application_email, application: application, email_type: 'registration_sent', sent_at: 3.weeks.ago
       create :pd_application_email, application: application, email_type: 'registration_reminder', sent_at: 1.week.ago
       assert_equal 1, Pd::Application::TeacherApplicationBase.needing_second_registration_reminder.count
+    end
 
+    test 'needing_second_registration_reminder old enrollments do not make an application ineligible' do
       # An old enrollment does not render this application ineligible for a reminder email
       application = create :pd_teacher2021_application
       create :pd_application_email, application: application, email_type: 'registration_sent', sent_at: 2.weeks.ago
       create :pd_application_email, application: application, email_type: 'registration_reminder', sent_at: 1.week.ago
       create :pd_enrollment, user: application.user, created_at: 1.year.ago
-      assert_equal 2, Pd::Application::TeacherApplicationBase.needing_second_registration_reminder.count
+      assert_equal 1, Pd::Application::TeacherApplicationBase.needing_second_registration_reminder.count
+    end
 
+    test 'needing_second_registration_reminder does not double reminder emails for malformed records' do
       # This malformed application with two 'registration_sent' emails should only produce one result
       application = create :pd_teacher2021_application
       create :pd_application_email, application: application, email_type: 'registration_sent', sent_at: 3.weeks.ago
       create :pd_application_email, application: application, email_type: 'registration_sent', sent_at: 3.weeks.ago
       create :pd_application_email, application: application, email_type: 'registration_reminder', sent_at: 1.week.ago
-      assert_equal 3, Pd::Application::TeacherApplicationBase.needing_second_registration_reminder.count
+      assert_equal 1, Pd::Application::TeacherApplicationBase.needing_second_registration_reminder.count
     end
   end
 end
