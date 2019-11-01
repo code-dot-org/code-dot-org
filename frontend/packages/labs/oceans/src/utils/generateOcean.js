@@ -1,11 +1,25 @@
 import {
   FishOceanObject,
   TrashOceanObject,
-  generateOceanObject
+  generateRandomOceanObject
 } from '../demo/OceanObject';
 import {getState} from '../demo/state';
 import {fishData} from './fishData';
 import {filterFishComponents} from '../demo/helpers';
+
+export const generateBalancedOcean = numFish => {
+  const state = getState();
+  const ocean = [];
+  let possibleObjects = [FishOceanObject];
+  if (state.loadTrashImages) {
+    possibleObjects.push(TrashOceanObject);
+  }
+  for (var i = 0; i < numFish; ++i) {
+    const object = new possibleObject[i % possibleObjects.length](i);
+    ocean.push(generateOceanObject());
+  }
+  return ocean;
+};
 
 export const generateOcean = (numFish, loadTrashImages) => {
   let possibleObjects = [FishOceanObject];
@@ -19,7 +33,7 @@ export const generateOcean = (numFish, loadTrashImages) => {
 
   const ocean = [];
   for (var i = 0; i < numFish; ++i) {
-    ocean.push(generateOceanObject(possibleObjects, i, possibleFishComponents));
+    ocean.push(generateRandomOceanObject(possibleObjects, i, possibleFishComponents));
   }
   return ocean;
 };
@@ -38,3 +52,12 @@ export const filterOcean = async (ocean, trainer) => {
   await Promise.all(predictionPromises);
   return ocean;
 };
+
+const shuffleList = list => {
+  for (var i = 0 ; i < list.length ; ++i) {
+    const nextIdx = Math.floor(Math.random() * (list.length - i)) + i;
+    const tmp = list[i];
+    list[i] = list[nextIdx];
+    list[nextIdx] = tmp;
+  }
+}

@@ -82,7 +82,7 @@ export const loadAllTrashImages = () => {
 
 // Generate a single object with an even chance of being
 // any of the allowed classes
-export const generateOceanObject = (
+export const generateRandomOceanObject = (
   allowedClasses,
   id,
   possibleFishComponents = null
@@ -107,6 +107,7 @@ export class OceanObject {
     this.logits = null;
     this.result = null;
   }
+
   randomize() {
     throw 'Not yet implemented!';
   }
@@ -174,47 +175,41 @@ export class OceanObject {
 export class FishOceanObject extends OceanObject {
   constructor(id, componentOptions = fishData) {
     super(id);
-    this.bodies = Object.values(componentOptions.bodies);
-    this.eyes = Object.values(componentOptions.eyes);
-    this.mouths = Object.values(componentOptions.mouths);
-    this.pectoralFinsFront = Object.values(componentOptions.pectoralFinsFront);
-    this.pectoralFinsBack = Object.values(componentOptions.pectoralFinsBack);
-    this.dorsalFins = Object.values(componentOptions.dorsalFins);
-    this.tails = Object.values(componentOptions.tails);
-    this.colorPalettes = Object.values(componentOptions.colorPalettes);
+    this.componentOptions = componentOptions;
   }
 
   randomize() {
-    const body = this.bodies[Math.floor(Math.random() * this.bodies.length)];
-    const eye = this.eyes[Math.floor(Math.random() * this.eyes.length)];
-    const mouth = this.mouths[Math.floor(Math.random() * this.mouths.length)];
-    const finIdx = Math.floor(Math.random() * this.pectoralFinsFront.length);
-    const pectoralFinFront = this.pectoralFinsFront[finIdx];
-    const pectoralFinBack = this.pectoralFinsBack[finIdx];
-    const dorsalFin = this.dorsalFins[
-      Math.floor(Math.random() * this.dorsalFins.length)
-    ];
-    const tail = this.tails[Math.floor(Math.random() * this.tails.length)];
-    this.colorPalette = this.colorPalettes[
-      Math.floor(Math.random() * this.colorPalettes.length)
-    ];
+    const bodies = Object.values(this.componentOptions.bodies);
+    const eyes = Object.values(this.componentOptions.eyes);
+    const mouths = Object.values(this.componentOptions.mouths);
+    const pectoralFinsFront = Object.values(
+      this.componentOptions.pectoralFinsFront
+    );
+    const pectoralFinsBack = Object.values(
+      this.componentOptions.pectoralFinsBack
+    );
+    const dorsalFins = Object.values(this.componentOptions.dorsalFins);
+    const tails = Object.values(this.componentOptions.tails);
+    const colorPalettes = Object.values(this.componentOptions.colorPalettes);
+
+    this.body = bodies[Math.floor(Math.random() * bodies.length)];
+    this.eye = eyes[Math.floor(Math.random() * eyes.length)];
+    this.mouth = mouths[Math.floor(Math.random() * mouths.length)];
+    const finIdx = Math.floor(Math.random() * pectoralFinsFront.length);
+    this.pectoralFinFront = pectoralFinsFront[finIdx];
+    this.pectoralFinBack = pectoralFinsBack[finIdx];
+    this.dorsalFin = dorsalFins[Math.floor(Math.random() * dorsalFins.length)];
+    this.tail = tails[Math.floor(Math.random() * tails.length)];
+    this.colorPalette =
+      colorPalettes[Math.floor(Math.random() * colorPalettes.length)];
     this.knnData = [
-      ...body.knnData,
-      ...eye.knnData,
-      ...mouth.knnData,
-      ...pectoralFinFront.knnData,
-      ...dorsalFin.knnData,
-      ...tail.knnData,
+      ...this.body.knnData,
+      ...this.eye.knnData,
+      ...this.mouth.knnData,
+      ...this.pectoralFinFront.knnData,
+      ...this.dorsalFin.knnData,
+      ...this.tail.knnData,
       ...this.colorPalette.knnData
-    ];
-    this.parts = [
-      body,
-      eye,
-      mouth,
-      pectoralFinFront,
-      pectoralFinBack,
-      dorsalFin,
-      tail
     ];
   }
 
@@ -222,77 +217,83 @@ export class FishOceanObject extends OceanObject {
     return this.colorPalette;
   }
 
+  drawFishComponent(part, bodyAnchor, ctx) {
+    intermediateCtx.clearRect(
+      0,
+      0,
+      constants.fishCanvasWidth,
+      constants.fishCanvasHeight
+    );
+
+    let anchor = [0, 0];
+    if (part.type !== FishBodyPart.BODY) {
+      const bodyAnchor = bodyAnchorFromType(this.body, part.type);
+      anchor[0] = bodyAnchor[0];
+      anchor[1] = bodyAnchor[1];
+    }
+
+    const img = fishPartImages[part.type][part.index];
+
+    if (part.type === FishBodyPart.TAIL) {
+      anchor[1] -= img.height / 2;
+    }
+
+    const xPos = bodyAnchor[0] + anchor[0];
+    const yPos = bodyAnchor[1] + anchor[1];
+
+    intermediateCtx.drawImage(img, xPos, yPos);
+    const rgb = colorForFishPart(this.colorPalette, part);
+
+    if (rgb) {
+      // Add some random tint to the RGB value.
+      const tintAmount = 20;
+      let newRgb = [];
+      newRgb[0] = clamp(rgb[0] + randomInt(-tintAmount, tintAmount), 0, 255);
+      newRgb[1] = clamp(rgb[1] + randomInt(-tintAmount, tintAmount), 0, 255);
+      newRgb[2] = clamp(rgb[2] + randomInt(-tintAmount, tintAmount), 0, 255);
+
+      let imageData = intermediateCtx.getImageData(
+        xPos,
+        yPos,
+        img.width,
+        img.height
+      );
+      let data = imageData.data;
+
+      for (let i = 0; i < data.length; i += 4) {
+        // Tint any visible pixels
+        if (data[i + 3] > 0) {
+          data[i] = newRgb[0];
+          data[i + 1] = newRgb[1];
+          data[i + 2] = newRgb[2];
+        }
+      }
+
+      intermediateCtx.putImageData(imageData, xPos, yPos);
+    }
+    ctx.drawImage(
+      intermediateCanvas,
+      constants.fishCanvasWidth / 2 - intermediateCanvas.width / 2,
+      constants.fishCanvasHeight / 2 - intermediateCanvas.height / 2,
+      constants.fishCanvasWidth,
+      constants.fishCanvasHeight
+    );
+  }
+
   drawToCanvas(fishCanvas, generateLogits = true) {
     const ctx = fishCanvas.getContext('2d');
     ctx.translate(constants.fishCanvasWidth, 0);
     ctx.scale(-1, 1);
-    const body = this.parts.find(part => part.type === FishBodyPart.BODY);
-    const bodyAnchor = bodyAnchorFromType(body, body.type);
-    const parts = _.orderBy(this.parts, ['type']);
+    const bodyAnchor = bodyAnchorFromType(this.body, this.body.type);
 
-    parts.forEach((part, partIndex) => {
-      intermediateCtx.clearRect(
-        0,
-        0,
-        constants.fishCanvasWidth,
-        constants.fishCanvasHeight
-      );
-
-      let anchor = [0, 0];
-      if (part.type !== FishBodyPart.BODY) {
-        const bodyAnchor = bodyAnchorFromType(body, part.type);
-        anchor[0] = bodyAnchor[0];
-        anchor[1] = bodyAnchor[1];
-      }
-
-      const img = fishPartImages[part.type][part.index];
-
-      if (part.type === FishBodyPart.TAIL) {
-        anchor[1] -= img.height / 2;
-      }
-
-      const xPos = bodyAnchor[0] + anchor[0];
-      const yPos = bodyAnchor[1] + anchor[1];
-
-      intermediateCtx.drawImage(img, xPos, yPos);
-      const rgb = colorForFishPart(this.colorPalette, part);
-
-      if (rgb) {
-        // Add some random tint to the RGB value.
-        const tintAmount = 20;
-        let newRgb = [];
-        newRgb[0] = clamp(rgb[0] + randomInt(-tintAmount, tintAmount), 0, 255);
-        newRgb[1] = clamp(rgb[1] + randomInt(-tintAmount, tintAmount), 0, 255);
-        newRgb[2] = clamp(rgb[2] + randomInt(-tintAmount, tintAmount), 0, 255);
-
-        let imageData = intermediateCtx.getImageData(
-          xPos,
-          yPos,
-          img.width,
-          img.height
-        );
-        let data = imageData.data;
-
-        for (let i = 0; i < data.length; i += 4) {
-          // Tint any visible pixels
-          if (data[i + 3] > 0) {
-            data[i] = newRgb[0];
-            data[i + 1] = newRgb[1];
-            data[i + 2] = newRgb[2];
-          }
-        }
-
-        intermediateCtx.putImageData(imageData, xPos, yPos);
-      }
-      ctx.drawImage(
-        intermediateCanvas,
-        constants.fishCanvasWidth / 2 - intermediateCanvas.width / 2,
-        constants.fishCanvasHeight / 2 - intermediateCanvas.height / 2,
-        constants.fishCanvasWidth,
-        constants.fishCanvasHeight
-      );
-      this.generateLogitsAsync(fishCanvas);
-    });
+    this.drawFishComponent(this.dorsalFin, bodyAnchor, ctx);
+    this.drawFishComponent(this.tail, bodyAnchor, ctx);
+    this.drawFishComponent(this.pectoralFinBack, bodyAnchor, ctx);
+    this.drawFishComponent(this.body, bodyAnchor, ctx);
+    this.drawFishComponent(this.pectoralFinFront, bodyAnchor, ctx);
+    this.drawFishComponent(this.mouth, bodyAnchor, ctx);
+    this.drawFishComponent(this.eye, bodyAnchor, ctx);
+    this.generateLogitsAsync(fishCanvas);
   }
 }
 
