@@ -163,6 +163,16 @@ const styles = {
     marginLeft: -22,
     zIndex: 1
   },
+  bubble: {
+    position: 'absolute',
+    backgroundColor: colors.transparentBlack,
+    color: colors.white,
+    padding: '10px 20px',
+    borderRadius: 10,
+    top: 0,
+    width: 212,
+    textAlign: 'center'
+  },
   count: {
     position: 'absolute',
     top: '5%'
@@ -253,6 +263,21 @@ class Pill extends React.Component {
       <div style={{...styles.pill, ...(this.props.style || {})}}>
         {icon && <img src={icon} style={iconStyle} />}
         <div style={styles.pillText}>{text}</div>
+      </div>
+    );
+  }
+}
+
+class SpeechBubble extends React.Component {
+  static propTypes = {
+    text: PropTypes.string.isRequired,
+    style: PropTypes.object
+  };
+
+  render() {
+    return (
+      <div style={{...styles.bubble, ...(this.props.style || {})}}>
+        {this.props.text}
       </div>
     );
   }
@@ -396,6 +421,21 @@ class TrainingIntro extends React.Component {
 }
 
 class Train extends React.Component {
+  renderSpeechBubble = state => {
+    const total = state.yesCount + state.noCount;
+    let text = '';
+
+    if (total >= 40) {
+      text = 'you can stop now';
+    } else if (total >= 5) {
+      text = 'keep doin what youre doin';
+    } else {
+      return null;
+    }
+
+    return <SpeechBubble text={text} style={{top: '70%', right: '5%'}} />;
+  };
+
   render() {
     const state = getState();
     const questionText = `Is this fish ${state.word.toUpperCase()}?`;
@@ -408,6 +448,7 @@ class Train extends React.Component {
         <Header>A.I. Training</Header>
         <div style={trainQuestionTextStyle}>{questionText}</div>
         <img style={styles.trainBot} src={aiBotClosed} />
+        {this.renderSpeechBubble(state)}
         <Pill
           text={state.noCount}
           icon={xIcon}
