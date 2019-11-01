@@ -437,51 +437,5 @@ module Pd::Application
 
       update(status_timestamp_change_log: sanitize_status_timestamp_change_log.append(log_entry).to_json)
     end
-
-    # This method queues enrollment reminder emails for any applications that are eligible for a
-    # reminder.  It is designed to be called repeatedly (e.g. from a cronjob).
-    #
-    # This is an enrollment reminder email for any teacher that has been accepted, but has not
-    # registered in a workshop. This form will automatically be sent 2 weeks after the first
-    # registration email was sent. If the teacher is still not registered after another 1 week,
-    # a second (and last) email will be sent.
-    def self.queue_registration_reminders!
-      (needing_first_registration_reminder | needing_second_registration_reminder).each do |application|
-        application.queue_email 'registration_reminder'
-      end
-    end
-
-    # Locate all applications that are eligible to receive their first workshop registration
-    # reminder email now.
-    # @return [Enumerable<Pd::Application::ApplicationBase>]
-    def self.needing_first_registration_reminder
-      # The 'registration_sent' email was sent at least two weeks ago
-      # No 'registration_reminder' has been sent yet.
-      # Not enrolled in a workshop since the 'registration_sent' email was sent
-      joins("inner join pd_application_emails rs on pd_applications.id = rs.pd_application_id and rs.email_type = 'registration_sent'").
-        joins("left outer join pd_application_emails rr on pd_applications.id = rr.pd_application_id and rr.email_type = 'registration_reminder'").
-        joins("left outer join pd_enrollments e on pd_applications.user_id = e.user_id and e.created_at >= rs.sent_at").
-        where("rs.sent_at <= ?", 2.weeks.ago).
-        where("rr.id is null").
-        where('e.id is null').
-        distinct
-    end
-
-    # Locate all applications that are eligible to receive their second workshop registration
-    # reminder email now.
-    # @return [Enumerable<Pd::Application::ApplicationBase>]
-    def self.needing_second_registration_reminder
-      # Both 'registration_sent' and 'registration_reminder' emails were sent.
-      # Only one 'registration_reminder' email has been sent.
-      # The 'registration_reminder' email was sent at least one week ago.
-      # Not enrolled in a workshop since the 'registration_sent' email was sent.
-      joins("inner join pd_application_emails rs on pd_applications.id = rs.pd_application_id and rs.email_type = 'registration_sent'").
-        joins("inner join pd_application_emails rr on pd_applications.id = rr.pd_application_id and rr.email_type = 'registration_reminder'").
-        joins("left outer join pd_enrollments e on pd_applications.user_id = e.user_id and e.created_at >= rs.sent_at").
-        where('rr.sent_at <= ?', 1.week.ago).
-        where('e.id is null').
-        distinct.
-        reject {|a| a.emails.where(email_type: 'registration_reminder').count > 1}
-    end
   end
 end
