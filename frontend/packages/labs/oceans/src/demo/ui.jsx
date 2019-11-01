@@ -103,12 +103,12 @@ const styles = {
   trainButtonYes: {
     position: 'absolute',
     top: '80%',
-    left: '33%'
+    left: '50%'
   },
   trainButtonNo: {
     position: 'absolute',
     top: '80%',
-    left: '50%'
+    left: '33%'
   },
   trainBot: {
     position: 'absolute',
