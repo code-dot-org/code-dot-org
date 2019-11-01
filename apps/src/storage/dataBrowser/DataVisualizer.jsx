@@ -13,7 +13,7 @@ const INITIAL_STATE = {
   isVisualizerOpen: false,
   chartTitle: '',
   chartType: '',
-  numBins: 0,
+  bucketSize: 0,
   values: '',
   xValues: '',
   yValues: '',
@@ -41,7 +41,42 @@ class DataVisualizer extends React.Component {
   };
 
   handleClose = () => {
-    this.setState({isVisualizerOpen: false});
+    this.setState({...INITIAL_STATE});
+  };
+
+  /**
+   * @param {Array.<Object>} records
+   * @param {string} rowName
+   * @param {string} columnName
+   */
+  createPivotTable = (records, rowName, columnName) => {
+    let countMap = {};
+
+    // Find all values in columnName - these will be the columns of the pivot table
+    const pivotedColumns = new Set(records.map(record => record[columnName]));
+
+    // Count occurrences of each row/column pair
+    records.forEach(record => {
+      let key = record[rowName];
+      let value = record[columnName];
+      if (!countMap[key]) {
+        countMap[key] = {[rowName]: key};
+        pivotedColumns.forEach(column => (countMap[key][column] = 0));
+      }
+      countMap[key][value]++;
+    });
+
+    // Sort columns
+    let columns;
+    if (this.state.numericColumns.includes(columnName)) {
+      columns = [...pivotedColumns].sort(function(a, b) {
+        return a - b;
+      });
+    } else {
+      columns = [...pivotedColumns].sort();
+    }
+    columns.unshift(rowName);
+    return {chartData: Object.values(countMap), columns: columns};
   };
 
   aggregateRecordsByColumn = (records, columnName) => {
@@ -58,7 +93,7 @@ class DataVisualizer extends React.Component {
 
     let chart;
     let chartData;
-    const columns = [];
+    let columns;
     const options = {};
     switch (this.state.chartType) {
       case 'Bar Chart':
@@ -68,14 +103,26 @@ class DataVisualizer extends React.Component {
             this.state.parsedRecords,
             this.state.values
           );
-          columns.push(this.state.values, 'count');
+          columns = [this.state.values, 'count'];
         }
         break;
       case 'Histogram':
-        console.warn(`${this.state.chartType} not yet implemented`);
+        if (this.state.values && this.state.bucketSize) {
+          options.histogram = {bucketSize: this.state.bucketSize};
+          chart = new GoogleChart.Histogram(targetDiv);
+          chartData = this.state.parsedRecords;
+          columns = [this.state.values];
+        }
         break;
       case 'Cross Tab':
-        console.warn(`${this.state.chartType} not yet implemented`);
+        if (this.state.xValues && this.state.yValues) {
+          chart = new GoogleChart.CrossTab(targetDiv);
+          ({chartData, columns} = this.createPivotTable(
+            this.state.parsedRecords,
+            this.state.xValues,
+            this.state.yValues
+          ));
+        }
         break;
       case 'Scatter Plot':
         console.warn(`${this.state.chartType} not yet implemented`);
@@ -156,7 +203,7 @@ class DataVisualizer extends React.Component {
     }
 
     const modalBody = (
-      <div>
+      <div style={{overflow: 'auto', maxHeight: '90%'}}>
         <h1> Explore {this.props.tableName} </h1>
         <h2> Overview </h2>
         <div id="selection-area">
@@ -179,12 +226,14 @@ class DataVisualizer extends React.Component {
           />
 
           {this.state.chartType === 'Histogram' && (
-            <div id="numBinsRow" style={rowStyle.container}>
-              <label style={rowStyle.description}>Bins</label>
+            <div style={rowStyle.container}>
+              <label style={rowStyle.description}>Bucket Size</label>
               <input
                 style={rowStyle.input}
-                value={this.state.numBins}
-                onChange={event => this.setState({numBins: event.target.value})}
+                value={this.state.bucketSize}
+                onChange={event =>
+                  this.setState({bucketSize: event.target.value})
+                }
               />
             </div>
           )}
