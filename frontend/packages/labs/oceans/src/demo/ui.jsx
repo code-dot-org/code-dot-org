@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Radium from 'radium';
 import _ from 'lodash';
 import {getState, setState} from './state';
 import {Modes, DataSet} from './constants';
@@ -40,7 +41,10 @@ const styles = {
     borderRadius: 8,
     minWidth: 160,
     padding: '16px 30px',
-    outline: 'none'
+    outline: 'none',
+    ':focus': {
+      outline: `${colors.white} auto 5px`
+    }
   },
   continueButton: {
     position: 'absolute',
@@ -258,6 +262,7 @@ class Button extends React.Component {
     );
   }
 }
+Button = Radium(Button);
 
 const instructionsText = {
   intro: [
@@ -327,7 +332,7 @@ class Instructions extends React.Component {
   render() {
     const state = getState();
     const currentPage = state.currentInstructionsPage;
-    const [,appModeVariant] = getAppMode(state);
+    const [, appModeVariant] = getAppMode(state);
 
     return (
       <Body>
