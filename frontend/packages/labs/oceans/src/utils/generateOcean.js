@@ -2,6 +2,7 @@ import {FishOceanObject, TrashOceanObject} from '../demo/OceanObject';
 import {getState} from '../demo/state';
 import {fishData} from './fishData';
 import {filterFishComponents} from '../demo/helpers';
+import _ from 'lodash';
 
 /*
  * Generates a set of ocean objects of size numFish.
@@ -22,13 +23,13 @@ export const generateOcean = numFish => {
     getState().dataSet
   );
   let bodies = Object.values(possibleFishComponents.bodies);
-  shuffleList(bodies);
+  bodies = _.shuffle(bodies);
   let eyes = Object.values(possibleFishComponents.eyes);
-  shuffleList(eyes);
+  eyes = _.shuffle(eyes);
   let mouths = Object.values(possibleFishComponents.mouths);
-  shuffleList(mouths);
+  mouths = _.shuffle(mouths);
   let colorPalettes = Object.values(possibleFishComponents.colorPalettes);
-  shuffleList(colorPalettes);
+  colorPalettes = _.shuffle(colorPalettes);
   for (var i = 0; i < numFish; ++i) {
     const object = new possibleObjects[i % possibleObjects.length](i);
     if (object instanceof FishOceanObject) {
@@ -36,25 +37,25 @@ export const generateOcean = numFish => {
       // Reshuffle the list if we've reached the end to avoid any regularity.
       object.body = bodies[i % bodies.length];
       if (i % bodies.length === bodies.length - 1) {
-        shuffleList(bodies);
+        bodies = _.shuffle(bodies);
       }
       object.eye = eyes[i % eyes.length];
       if (i % eyes.length === eyes.length - 1) {
-        shuffleList(eyes);
+        eyes = _.shuffle(eyes);
       }
       object.mouth = mouths[i % mouths.length];
       if (i % mouths.length === mouths.length - 1) {
-        shuffleList(mouths);
+        mouths = _.shuffle(mouths);
       }
       object.colorPalette = colorPalettes[i % colorPalettes.length];
       if (i % colorPalettes.length === colorPalettes.length - 1) {
-        shuffleList(colorPalettes);
+        colorPalettes = _.shuffle(colorPalettes);
       }
     }
     object.randomize();
     ocean.push(object);
   }
-  shuffleList(ocean);
+  _.shuffle(ocean);
   return ocean;
 };
 
@@ -71,14 +72,4 @@ export const filterOcean = async (ocean, trainer) => {
   });
   await Promise.all(predictionPromises);
   return ocean;
-};
-
-/*
- * Takes a list and shuffles it in place
- */
-const shuffleList = list => {
-  for (var i = 0; i < list.length; ++i) {
-    const nextIdx = Math.floor(Math.random() * (list.length - i)) + i;
-    [list[i], list[nextIdx]] = [list[nextIdx], list[i]];
-  }
 };
