@@ -135,16 +135,18 @@ const styles = {
     position: 'absolute',
     top: '80%',
     left: '50%',
-    ':focus': {
-      backgroundColor: colors.green
+    ':hover': {
+      backgroundColor: colors.green,
+      color: colors.white
     }
   },
   trainButtonNo: {
     position: 'absolute',
     top: '80%',
     left: '33%',
-    ':focus': {
-      backgroundColor: colors.red
+    ':hover': {
+      backgroundColor: colors.red,
+      color: colors.white
     }
   },
   trainBot: {
