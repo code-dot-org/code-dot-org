@@ -467,7 +467,7 @@ class Words extends React.Component {
       word,
       trainingQuestion: `Is this fish ${word.toUpperCase()}?`
     });
-    toMode(Modes.TrainingIntro);
+    toMode(Modes.Training);
   }
 
   render() {
@@ -493,29 +493,6 @@ class Words extends React.Component {
             </Button>
           ))}
         </Content>
-      </Body>
-    );
-  }
-}
-
-class TrainingIntro extends React.Component {
-  render() {
-    const state = getState();
-
-    return (
-      <Body>
-        <Header />
-        <div style={styles.activityIntroText}>
-          Now let's teach A.I. what <b>{state.word.toUpperCase()}</b> fish look
-          like.
-        </div>
-        <img style={styles.trainingIntroBot} src={aiBotClosed} />
-        <Button
-          style={styles.continueButton}
-          onClick={() => toMode(Modes.Training)}
-        >
-          Continue
-        </Button>
       </Body>
     );
   }
@@ -633,7 +610,6 @@ export default class UI extends React.Component {
       <div>
         {currentMode === Modes.Instructions && <Instructions />}
         {currentMode === Modes.Words && <Words />}
-        {currentMode === Modes.TrainingIntro && <TrainingIntro />}
         {currentMode === Modes.Training && <Train />}
         {currentMode === Modes.Predicting && <Predict />}
         {currentMode === Modes.Pond && <Pond />}
