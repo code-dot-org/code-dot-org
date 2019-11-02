@@ -17,6 +17,8 @@ const initialState = {
   noCount: 0,
   canSkipPredict: false,
   loadTrashImages: null,
+  word: null,
+  trainingQuestion: null,
   currentInstructionsPage: 0
 };
 let state = {...initialState};

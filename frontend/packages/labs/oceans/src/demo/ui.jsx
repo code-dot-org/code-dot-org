@@ -5,7 +5,6 @@ import {getState, setState} from './state';
 import {Modes, DataSet} from './constants';
 import {getAppMode} from './helpers';
 import {toMode} from './toMode';
-import {init as initModel} from './models';
 import {onClassifyFish} from './models/train';
 import colors from './colors';
 import aiBotClosed from '../../public/images/ai-bot-closed.png';
@@ -23,13 +22,6 @@ const styles = {
     fontSize: 48,
     lineHeight: '52px'
   },
-  footer: {
-    position: 'absolute',
-    bottom: 0,
-    width: '100%',
-    display: 'flex',
-    justifyContent: 'space-between'
-  },
   body: {
     position: 'relative',
     width: '100%',
@@ -46,17 +38,14 @@ const styles = {
     backgroundColor: colors.white,
     fontSize: '120%',
     borderRadius: 8,
-    border: `2px solid ${colors.black}`,
     minWidth: 160,
     padding: '16px 30px',
-    ':focus': {
-      outline: `${colors.white} auto 5px`
-    }
+    outline: 'none'
   },
   continueButton: {
-    marginLeft: 'auto',
-    marginRight: 10,
-    marginBottom: 10
+    position: 'absolute',
+    bottom: 10,
+    right: 10
   },
   button1col: {
     width: '20%',
@@ -140,12 +129,12 @@ const styles = {
   trainButtonYes: {
     position: 'absolute',
     top: '80%',
-    left: '33%'
+    left: '50%'
   },
   trainButtonNo: {
     position: 'absolute',
     top: '80%',
-    left: '50%'
+    left: '33%'
   },
   trainBot: {
     position: 'absolute',
@@ -171,7 +160,7 @@ const styles = {
     backgroundColor: colors.transparentBlack,
     padding: '2%',
     borderRadius: 10,
-    color: colors.white,
+    color: colors.white
   },
   pondBot: {
     position: 'absolute',
@@ -247,16 +236,6 @@ class Content extends React.Component {
 
   render() {
     return <div style={styles.content}>{this.props.children}</div>;
-  }
-}
-
-class Footer extends React.Component {
-  static propTypes = {
-    children: PropTypes.node
-  };
-
-  render() {
-    return <div style={styles.footer}>{this.props.children}</div>;
   }
 }
 
@@ -383,11 +362,9 @@ class Instructions extends React.Component {
             })}
           </div>
         )}
-        <Footer>
-          <Button style={styles.continueButton} onClick={() => {}}>
-            Continue
-          </Button>
-        </Footer>
+        <Button style={styles.continueButton} onClick={() => {}}>
+          Continue
+        </Button>
       </Body>
     );
   }
@@ -432,6 +409,19 @@ class SpeechBubble extends React.Component {
 }
 
 class ActivityIntro extends React.Component {
+  onClickContinue = () => {
+    const state = getState();
+    if (state.loadTrashImages) {
+      setState({
+        word: 'Fish',
+        trainingQuestion: 'Is this a fish?'
+      });
+      toMode(Modes.TrainingIntro);
+    } else {
+      toMode(Modes.Words);
+    }
+  };
+
   render() {
     return (
       <div>
@@ -447,21 +437,9 @@ class ActivityIntro extends React.Component {
             of that type of fish.
           </div>
           <img style={styles.activityIntroBot} src={aiBotClosed} />
-          <Footer>
-            <Button
-              style={styles.continueButton}
-              onClick={() => {
-                const state = getState();
-                if (state.loadTrashImages) {
-                  setState({currentMode: Modes.TrainingIntro, word: 'FISHY'});
-                } else {
-                  toMode(Modes.Words);
-                }
-              }}
-            >
-              Continue
-            </Button>
-          </Footer>
+          <Button style={styles.continueButton} onClick={this.onClickContinue}>
+            Continue
+          </Button>
         </Body>
       </div>
     );
@@ -508,11 +486,12 @@ class Words extends React.Component {
   }
 
   onChangeWord(itemIndex) {
-    const state = setState({
-      word: this.currentItems()[itemIndex],
-      currentMode: Modes.TrainingIntro
+    const word = this.currentItems()[itemIndex];
+    setState({
+      word,
+      trainingQuestion: `Is this fish ${word.toUpperCase()}?`
     });
-    initModel(state);
+    toMode(Modes.TrainingIntro);
   }
 
   render() {
@@ -555,14 +534,12 @@ class TrainingIntro extends React.Component {
           like.
         </div>
         <img style={styles.trainingIntroBot} src={aiBotClosed} />
-        <Footer>
-          <Button
-            style={styles.continueButton}
-            onClick={() => toMode(Modes.Training)}
-          >
-            Continue
-          </Button>
-        </Footer>
+        <Button
+          style={styles.continueButton}
+          onClick={() => toMode(Modes.Training)}
+        >
+          Continue
+        </Button>
       </Body>
     );
   }
@@ -586,7 +563,6 @@ class Train extends React.Component {
 
   render() {
     const state = getState();
-    const questionText = `Is this fish ${state.word.toUpperCase()}?`;
     const trainQuestionTextStyle = state.isRunning
       ? styles.trainQuestionTextDisabled
       : styles.trainQuestionText;
@@ -594,7 +570,7 @@ class Train extends React.Component {
     return (
       <Body>
         <Header>A.I. Training</Header>
-        <div style={trainQuestionTextStyle}>{questionText}</div>
+        <div style={trainQuestionTextStyle}>{state.trainingQuestion}</div>
         <img style={styles.trainBot} src={aiBotClosed} />
         {this.renderSpeechBubble(state)}
         <Pill
@@ -621,14 +597,12 @@ class Train extends React.Component {
         >
           {state.word}
         </Button>
-        <Footer>
-          <Button
-            style={styles.continueButton}
-            onClick={() => toMode(Modes.Predicting)}
-          >
-            Continue
-          </Button>
-        </Footer>
+        <Button
+          style={styles.continueButton}
+          onClick={() => toMode(Modes.Predicting)}
+        >
+          Continue
+        </Button>
       </Body>
     );
   }
@@ -642,16 +616,14 @@ class Predict extends React.Component {
       <Body>
         <Header>A.I. Sorting</Header>
         <img style={styles.predictBot} src={aiBotClosed} />
-        <Footer>
-          {state.canSkipPredict && (
-            <Button
-              style={styles.continueButton}
-              onClick={() => toMode(Modes.Pond)}
-            >
-              Skip
-            </Button>
-          )}
-        </Footer>
+        {state.canSkipPredict && (
+          <Button
+            style={styles.continueButton}
+            onClick={() => toMode(Modes.Pond)}
+          >
+            Skip
+          </Button>
+        )}
       </Body>
     );
   }
