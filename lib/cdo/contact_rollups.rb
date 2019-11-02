@@ -208,7 +208,7 @@ class ContactRollups
     log_collector.info("#{count} records created in contact_rollups_daily table")
   end
 
-  def self.sync_contact_rollups_to_main(log_collector, src_row_offset = 0)
+  def self.sync_contact_rollups_to_main(log_collector, src_row_offset = 0, row_output_interval = 10)
     log("#{Time.now} Starting")
 
     num_inserts = 0
@@ -233,22 +233,35 @@ class ContactRollups
     # the differences. Make inserts or updates to make dest match src. Wherever we do an insert or an update,
     # mark the updated_at timestamp so we track what rows have changed at what time, to enable efficient sync
     # into Pardot.
-    log "Skipping #{src_row_offset} rows on (sorted) source table"
+    log "#{Time.now} Skipping #{src_row_offset} rows on (sorted) source table"
     src_row_offset.times do
       grab_next(src_iterator)
     end
 
     contact_rollup_src = grab_next(src_iterator)
+    src_row_cnt = src_row_offset + 1
     contact_rollup_dest = grab_next(dest_iterator)
+    dest_row_cnt = 1
     time_last_output = Time.now
 
+    log "#{Time.now} Start comparing rows between source and destination tables"
     until contact_rollup_src.nil?
+      if src_row_cnt % row_output_interval == 0
+        p "#{Time.now} src_row_cnt = #{src_row_cnt}"
+        p "contact_rollup_src = #{contact_rollup_src}"
+      end
       email_src = contact_rollup_src[:email]
 
       # Continue to advance the destination pointer until the destination email address in question
       # is the same or later alphabetically as the source email address.
       while (!contact_rollup_dest.nil?) && (contact_rollup_dest[:email] < email_src)
+        if dest_row_cnt % row_output_interval == 0
+          p "#{Time.now} dest_row_cnt = #{dest_row_cnt}"
+          p "contact_rollup_dest = #{contact_rollup_dest}"
+        end
+
         contact_rollup_dest = grab_next(dest_iterator)
+        dest_row_cnt += 1
       end
 
       # Determine if this is a new record (email address doesn't exist in destination table) or existing.
@@ -296,12 +309,13 @@ class ContactRollups
 
       num_total = num_inserts + num_updates + num_unchanged + src_row_offset
       if Time.now - time_last_output > LOG_OUTPUT_INTERVAL
-        log "Total source rows processed: #{num_total}"
+        log "#{Time.now} Total source rows processed: #{num_total}"
         time_last_output = Time.now
       end
 
       # Go on to the next source record
       contact_rollup_src = grab_next(src_iterator)
+      src_row_cnt += 1
     end
 
     log("#{Time.now} Completed. #{num_total} source rows processed. #{num_inserts} insert(s), #{num_updates} update(s), #{num_unchanged} unchanged. #{src_row_offset} skipped.")
