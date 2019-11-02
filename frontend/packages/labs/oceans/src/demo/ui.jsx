@@ -5,7 +5,6 @@ import {getState, setState} from './state';
 import {Modes, DataSet} from './constants';
 import {getAppMode} from './helpers';
 import {toMode} from './toMode';
-import {init as initModel} from './models';
 import {onClassifyFish} from './models/train';
 import colors from './colors';
 import aiBotClosed from '../../public/images/ai-bot-closed.png';
@@ -488,8 +487,7 @@ class Words extends React.Component {
 
   onChangeWord(itemIndex) {
     const word = this.currentItems()[itemIndex];
-
-    const state = setState({
+    setState({
       word,
       trainingQuestion: `Is this fish ${word.toUpperCase()}?`
     });
