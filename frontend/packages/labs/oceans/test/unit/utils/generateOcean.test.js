@@ -93,4 +93,20 @@ describe('Generate ocean test', () => {
     expect(predictedOcean.length).toEqual(numPredictionFish);
     expect((1.0 * numRoundFish) / likedFish.length).toBeGreaterThanOrEqual(0.7);
   });
+
+  test('Eye variations are evenly distributed', async () => {
+    const oceanSize = 50;
+    const trainingOcean = generateOcean(oceanSize);
+    let eyeCounts = {};
+    trainingOcean.forEach(fish => {
+      if (eyeCounts[fish.eye.index]) {
+        eyeCounts[fish.eye.index]++;
+      } else {
+        eyeCounts[fish.eye.index] = 1;
+      }
+    });
+    Object.keys(eyeCounts).forEach(eye => {
+      expect(eyeCounts[eye]).toBeGreaterThanOrEqual(Math.floor(oceanSize / Object.keys(eyeCounts).length));
+    });
+  });
 });
