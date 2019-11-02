@@ -55,9 +55,7 @@ const styles = {
   button1col: {
     width: '20%',
     display: 'block',
-    margin: '0 auto',
-    marginTop: '2%',
-    marginBottom: '2%'
+    margin: '2% auto'
   },
   button3col: {
     width: '20%',
