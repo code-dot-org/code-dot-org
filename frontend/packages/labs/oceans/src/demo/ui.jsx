@@ -414,10 +414,10 @@ class ActivityIntro extends React.Component {
     const state = getState();
     if (state.loadTrashImages) {
       setState({
-        currentMode: Modes.TrainingIntro,
         word: 'Fish',
         trainingQuestion: 'Is this a fish?'
       });
+      toMode(Modes.TrainingIntro);
     } else {
       toMode(Modes.Words);
     }
@@ -491,10 +491,9 @@ class Words extends React.Component {
 
     const state = setState({
       word,
-      trainingQuestion: `Is this fish ${word.toUpperCase()}?`,
-      currentMode: Modes.TrainingIntro
+      trainingQuestion: `Is this fish ${word.toUpperCase()}?`
     });
-    initModel(state);
+    toMode(Modes.TrainingIntro);
   }
 
   render() {
