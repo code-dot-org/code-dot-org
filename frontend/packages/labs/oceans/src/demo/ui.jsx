@@ -42,6 +42,7 @@ const styles = {
     minWidth: 160,
     padding: '16px 30px',
     outline: 'none',
+    border: 'none',
     ':focus': {
       outline: `${colors.white} auto 5px`
     }
@@ -133,12 +134,18 @@ const styles = {
   trainButtonYes: {
     position: 'absolute',
     top: '80%',
-    left: '50%'
+    left: '50%',
+    ':focus': {
+      backgroundColor: colors.green
+    }
   },
   trainButtonNo: {
     position: 'absolute',
     top: '80%',
-    left: '33%'
+    left: '33%',
+    ':focus': {
+      backgroundColor: colors.red
+    }
   },
   trainBot: {
     position: 'absolute',
@@ -254,7 +261,7 @@ class Button extends React.Component {
     return (
       <button
         type="button"
-        style={{...this.props.style, ...styles.button}}
+        style={[styles.button, this.props.style]}
         onClick={this.props.onClick}
       >
         {this.props.children}
@@ -390,13 +397,14 @@ class Pill extends React.Component {
     iconStyle.backgroundColor = iconBgColor || colors.white;
 
     return (
-      <div style={{...styles.pill, ...(this.props.style || {})}}>
+      <div style={[styles.pill, this.props.style]}>
         {icon && <img src={icon} style={iconStyle} />}
         <div style={styles.pillText}>{text}</div>
       </div>
     );
   }
 }
+Pill = Radium(Pill);
 
 class SpeechBubble extends React.Component {
   static propTypes = {
@@ -406,12 +414,11 @@ class SpeechBubble extends React.Component {
 
   render() {
     return (
-      <div style={{...styles.bubble, ...(this.props.style || {})}}>
-        {this.props.text}
-      </div>
+      <div style={[styles.bubble, this.props.style]}>{this.props.text}</div>
     );
   }
 }
+SpeechBubble = Radium(SpeechBubble);
 
 class ActivityIntro extends React.Component {
   onClickContinue = () => {
@@ -582,13 +589,13 @@ class Train extends React.Component {
           text={state.noCount}
           icon={xIcon}
           iconBgColor={colors.red}
-          style={{...styles.count, ...styles.noCount}}
+          style={[styles.count, styles.noCount]}
         />
         <Pill
           text={state.yesCount}
           icon={checkmarkIcon}
           iconBgColor={colors.green}
-          style={{...styles.count, ...styles.yesCount}}
+          style={[styles.count, styles.yesCount]}
         />
         <Button
           style={styles.trainButtonNo}
@@ -612,6 +619,7 @@ class Train extends React.Component {
     );
   }
 }
+Train = Radium(Train);
 
 class Predict extends React.Component {
   render() {
