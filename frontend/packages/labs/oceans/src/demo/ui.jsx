@@ -155,13 +155,6 @@ const styles = {
     top: '20%',
     left: '70%'
   },
-  predictBot: {
-    position: 'absolute',
-    height: '50%',
-    top: '3%',
-    left: '50%',
-    transform: 'translateX(-50%)'
-  },
   pondText: {
     position: 'absolute',
     bottom: '3%',
@@ -569,7 +562,6 @@ class Predict extends React.Component {
     return (
       <Body>
         <Header>A.I. Sorting</Header>
-        <img style={styles.predictBot} src={aiBotClosed} />
         {state.canSkipPredict && (
           <Button
             style={styles.continueButton}
