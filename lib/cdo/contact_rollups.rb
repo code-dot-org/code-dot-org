@@ -234,12 +234,15 @@ class ContactRollups
     # mark the updated_at timestamp so we track what rows have changed at what time, to enable efficient sync
     # into Pardot.
     log "#{Time.now} Skipping #{src_row_offset} rows on (sorted) source table"
+    src_row_cnt = 0
     src_row_offset.times do
       grab_next(src_iterator)
+      src_row_cnt += 1
+      p src_row_cnt if src_row_cnt % 100000 == 0
     end
 
     contact_rollup_src = grab_next(src_iterator)
-    src_row_cnt = src_row_offset + 1
+    src_row_cnt += 1
     contact_rollup_dest = grab_next(dest_iterator)
     dest_row_cnt = 1
     time_last_output = Time.now
