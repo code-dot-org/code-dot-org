@@ -2,7 +2,6 @@ let setStateCallback = null;
 
 const initialState = {
   appMode: null,
-  appModeVariant: null,
   currentMode: null,
   dataSet: null,
   fishData: [],
