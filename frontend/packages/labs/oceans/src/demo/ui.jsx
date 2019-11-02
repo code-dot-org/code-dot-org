@@ -252,7 +252,7 @@ class Content extends React.Component {
   }
 }
 
-class Button extends React.Component {
+let Button = class Button extends React.Component {
   static propTypes = {
     style: PropTypes.object,
     children: PropTypes.node,
@@ -270,7 +270,7 @@ class Button extends React.Component {
       </button>
     );
   }
-}
+};
 Button = Radium(Button);
 
 const instructionsText = {
@@ -384,7 +384,7 @@ class Instructions extends React.Component {
   }
 }
 
-class Pill extends React.Component {
+let Pill = class Pill extends React.Component {
   static propTypes = {
     text: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
     icon: PropTypes.string,
@@ -405,10 +405,10 @@ class Pill extends React.Component {
       </div>
     );
   }
-}
+};
 Pill = Radium(Pill);
 
-class SpeechBubble extends React.Component {
+let SpeechBubble = class SpeechBubble extends React.Component {
   static propTypes = {
     text: PropTypes.string.isRequired,
     style: PropTypes.object
@@ -419,7 +419,7 @@ class SpeechBubble extends React.Component {
       <div style={[styles.bubble, this.props.style]}>{this.props.text}</div>
     );
   }
-}
+};
 SpeechBubble = Radium(SpeechBubble);
 
 class ActivityIntro extends React.Component {
@@ -559,7 +559,7 @@ class TrainingIntro extends React.Component {
   }
 }
 
-class Train extends React.Component {
+let Train = class Train extends React.Component {
   renderSpeechBubble = state => {
     const total = state.yesCount + state.noCount;
     let text = '';
@@ -620,7 +620,7 @@ class Train extends React.Component {
       </Body>
     );
   }
-}
+};
 Train = Radium(Train);
 
 class Predict extends React.Component {
