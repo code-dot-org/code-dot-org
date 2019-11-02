@@ -422,44 +422,6 @@ let SpeechBubble = class SpeechBubble extends React.Component {
 };
 SpeechBubble = Radium(SpeechBubble);
 
-class ActivityIntro extends React.Component {
-  onClickContinue = () => {
-    const state = getState();
-    if (state.loadTrashImages) {
-      setState({
-        word: 'Fish',
-        trainingQuestion: 'Is this a fish?'
-      });
-      toMode(Modes.TrainingIntro);
-    } else {
-      toMode(Modes.Words);
-    }
-  };
-
-  render() {
-    return (
-      <div>
-        <Body>
-          <Header>Meet A.I.</Header>
-          <div style={styles.activityIntroText}>
-            Machine learning and Artificial Intelligence (AI) can give
-            recommendations, like when a computer suggests videos to watch or
-            products to buy. What else can we teach a computer?
-            <br />
-            <br />
-            Next, you’re going to teach A.I. a new word just by showing examples
-            of that type of fish.
-          </div>
-          <img style={styles.activityIntroBot} src={aiBotClosed} />
-          <Button style={styles.continueButton} onClick={this.onClickContinue}>
-            Continue
-          </Button>
-        </Body>
-      </div>
-    );
-  }
-}
-
 const wordChoices = [
   ['Blue', 'Green', 'Red', 'Round', 'Square'],
   [
@@ -670,7 +632,6 @@ export default class UI extends React.Component {
     return (
       <div>
         {currentMode === Modes.Instructions && <Instructions />}
-        {currentMode === Modes.ActivityIntro && <ActivityIntro />}
         {currentMode === Modes.Words && <Words />}
         {currentMode === Modes.TrainingIntro && <TrainingIntro />}
         {currentMode === Modes.Training && <Train />}
