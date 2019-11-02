@@ -10,8 +10,9 @@ export const init = async () => {
   initFishData();
   await initRenderer();
 
+  const [appModeBase,] = getAppMode(getState());
   const currentMode =
-    getState().appMode === 'instructions' ? Modes.Instructions : Modes.ActivityIntro;
+    appModeBase === 'instructions' ? Modes.Instructions : Modes.ActivityIntro;
 
   const state = setState({currentMode: currentMode});
   initModel(state);

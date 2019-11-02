@@ -107,19 +107,21 @@ export const filterFishComponents = (fishComponents, dataSet) => {
   return filteredCopy;
 };
 
-export const getAppMode = () => {
-  let appMode = null;
+// Get the base appMode (e.g. "instructions") & optional variant (e.g. "fishy")
+// from the appMode string (e.g. "fishy-instructions") stored in the provided state.
+export const getAppMode = state => {
+  let appModeBase = null;
   let appModeVariant = null;
 
-  if (queryStrFor('mode')) {
-    appMode = _.last(queryStrFor('mode').toLowerCase().split('-'));
+  if (state.appMode) {
+    appModeBase = _.last(state.appMode.toLowerCase().split('-'));
 
     // If the mode is "fishy-instrutions" then we extract "fishy" as the
     // appModeVariant.
-    if (appMode === "instructions") {
-      appModeVariant = queryStrFor('mode').toLowerCase().split('-')[0];
+    if (appModeBase === 'instructions') {
+      appModeVariant = state.appMode.toLowerCase().split('-')[0];
     }
   }
 
-  return [appMode, appModeVariant];
-}
+  return [appModeBase, appModeVariant];
+};
