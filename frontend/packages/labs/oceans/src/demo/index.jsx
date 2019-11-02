@@ -5,9 +5,9 @@ import React from 'react';
 import UI from './ui';
 import constants, {Modes} from './constants';
 import {setState, setSetStateCallback} from './state';
-import {init as initModel} from './models';
 import {render as renderCanvas} from './renderer';
 import {queryStrFor} from './helpers';
+import {toMode} from './toMode';
 
 $(document).ready(() => {
   // Set up canvases.
@@ -23,9 +23,8 @@ $(document).ready(() => {
   const appMode = queryStrFor('mode');
 
   // Set initial state for UI elements.
-  const state = setState({
+  setState({
     appMode,
-    currentMode: Modes.Loading,
     canvas,
     backgroundCanvas,
     loadTrashImages,
@@ -33,7 +32,7 @@ $(document).ready(() => {
   });
 
   // Initialize our first model.
-  initModel(state);
+  toMode(Modes.Loading);
 
   // Start the canvas renderer.  It will self-perpetute by calling
   // requestAnimationFrame on itself.
