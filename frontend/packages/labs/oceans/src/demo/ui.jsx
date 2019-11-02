@@ -161,7 +161,7 @@ const styles = {
     backgroundColor: colors.transparentBlack,
     padding: '2%',
     borderRadius: 10,
-    color: colors.white,
+    color: colors.white
   },
   pondBot: {
     position: 'absolute',
@@ -363,11 +363,9 @@ class Instructions extends React.Component {
             })}
           </div>
         )}
-        <Footer>
-          <Button style={styles.continueButton} onClick={() => {}}>
-            Continue
-          </Button>
-        </Footer>
+        <Button style={styles.continueButton} onClick={() => {}}>
+          Continue
+        </Button>
       </Body>
     );
   }
