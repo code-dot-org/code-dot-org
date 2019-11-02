@@ -251,7 +251,7 @@ class ContactRollups
     until contact_rollup_src.nil?
       if src_row_cnt % row_output_interval == 0
         p "#{Time.now} src_row_cnt = #{src_row_cnt}"
-        p "contact_rollup_src = #{contact_rollup_src}"
+        p "contact_rollup_src id = #{contact_rollup_src[:id]}, email = #{contact_rollup_src[:email]}"
       end
       email_src = contact_rollup_src[:email]
 
@@ -260,7 +260,7 @@ class ContactRollups
       while (!contact_rollup_dest.nil?) && (contact_rollup_dest[:email] < email_src)
         if dest_row_cnt % row_output_interval == 0
           p "#{Time.now} dest_row_cnt = #{dest_row_cnt}"
-          p "contact_rollup_dest = #{contact_rollup_dest}"
+          p "contact_rollup_dest id = #{contact_rollup_dest[:id]}, email = #{contact_rollup_dest[:email]}"
         end
 
         contact_rollup_dest = grab_next(dest_iterator)
