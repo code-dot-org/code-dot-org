@@ -915,3 +915,6 @@ export const initFishData = () => {
 };
 
 export const fishData = fishComponents;
+export {
+  MouthExpression,
+}

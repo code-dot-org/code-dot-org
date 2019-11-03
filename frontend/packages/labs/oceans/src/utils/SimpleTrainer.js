@@ -38,11 +38,19 @@ export default class SimpleTrainer {
   }
 
   /**
-   * @param {Array<number>} KNN data
+   * @param {Tensor<number>} KNN data
    * @param {number} classId
    */
   addExampleTensor(tensor, classId) {
     this.knn.addExample(tensor, classId);
+  }
+
+  /**
+   * @param {Array<number>} KNN data
+   * @param {number} classId
+   */
+  addTrainingExample(example, classId) {
+    this.knn.addExample(tf.tensor(example), classId);
   }
 
   /**
@@ -64,8 +72,10 @@ export default class SimpleTrainer {
     }
   }
 
+  train() {} // no training needed for KNN
+
   /**
-   * @param {Array<number>} KNN data
+   * @param {Tensor<number>} KNN data
    * @returns {Promise<{confidencesByClassId: [], predictedClassId: null}>}
    */
   async predictFromTensor(tensor) {
@@ -81,6 +91,14 @@ export default class SimpleTrainer {
       result.confidencesByClassId = res.confidences;
     }
     return result;
+  }
+
+  /**
+   * @param {Array<number>} KNN data
+   * @returns {Promise<{confidencesByClassId: [], predictedClassId: null}>}
+   */
+  async predictFromExample(example) {
+    return this.predictFromTensor(tf.tensor(example));
   }
 
   /**
