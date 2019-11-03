@@ -954,7 +954,7 @@
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@code-dot-org/maze/-/maze-1.1.0.tgz#7c8185adf06a9172e3bde4ccd6f6738a787b2a7c"
 
-"@code-dot-org/ml-activities@^0.0.6":
+"@code-dot-org/ml-activities@0.0.6":
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/@code-dot-org/ml-activities/-/ml-activities-0.0.6.tgz#a9bf4c6dfcabc7ab200a763df50d0f94fe3c51e8"
   integrity sha512-aT3yVESVc0Ph3j+9Eq3rP0x/iK0BNpBlLrbLtTLIYJzDgESEBSmakfr8Dx8xKJ09JIJ/VrKo47KvZc9ySt+dJw==
