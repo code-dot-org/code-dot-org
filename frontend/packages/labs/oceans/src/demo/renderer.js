@@ -232,7 +232,7 @@ const drawMovingFish = state => {
       if (fish.getResult()) {
         const midScreenX =
           constants.canvasWidth / 2 - constants.fishCanvasWidth / 2;
-        if (x > midScreenX) {
+        if (x === midScreenX) {
           drawPrediction(state, fish.getResult().predictedClassId, ctx);
         }
       } else {
@@ -251,37 +251,17 @@ const drawMovingFish = state => {
 // Draw a prediction to the canvas.
 const drawPrediction = (state, predictedClassId, ctx) => {
   let scannerImg;
+  const imgKey =
+    predictedClassId === ClassType.Like ? greenScanner : redScanner;
 
-  if (predictedClassId === ClassType.Like) {
-    if (botImages.greenScanner) {
-      scannerImg = botImages.greenScanner;
-    } else {
-      loadImage(greenScanner).then(img => {
-        botImages.greenScanner = img;
-        scannerImg = img;
-      });
-      return;
-    }
-  } else if (predictedClassId === ClassType.Dislike) {
-    if (botImages.blueScanner) {
-      scannerImg = botImages.blueScanner;
-    } else {
-      loadImage(blueScanner).then(img => {
-        botImages.blueScanner = img;
-        scannerImg = img;
-      });
-      return;
-    }
+  if (botImages[imgKey]) {
+    scannerImg = botImages[imgKey];
   } else {
-    if (botImages.redScanner) {
-      scannerImg = botImages.redScanner;
-    } else {
-      loadImage(redScanner).then(img => {
-        botImages.redScanner = img;
-        scannerImg = img;
-      });
-      return;
-    }
+    loadImage(imgKey).then(img => {
+      botImages[imgKey] = img;
+      scannerImg = img;
+    });
+    return;
   }
 
   const x = state.canvas.width / 2 - scannerImg.width / 2;
