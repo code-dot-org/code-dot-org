@@ -15,7 +15,6 @@ const initialState = {
   isRunning: false,
   yesCount: 0,
   noCount: 0,
-  canSkipPredict: false,
   loadTrashImages: null,
   word: null,
   trainingQuestion: null,

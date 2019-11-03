@@ -4,7 +4,12 @@ import constants, {Modes, ClassType} from './constants';
 import CanvasCache from './canvasCache';
 import {backgroundPathForMode} from './helpers';
 import {predictFish} from './models/predict';
-import {loadAllFishPartImages, loadAllTrashImages, initMobilenet} from './OceanObject';
+import {
+  loadAllFishPartImages,
+  loadAllTrashImages,
+  initMobilenet
+} from './OceanObject';
+import aiBotClosed from '../../public/images/ai-bot-closed.png';
 
 var $time =
   Date.now ||
@@ -19,6 +24,9 @@ let lastPauseTime = 0;
 let lastStartTime;
 let defaultMoveTime = 1000;
 let moveTime;
+let aiBotImages = {
+  closed: null
+};
 
 export const initRenderer = () => {
   canvasCache = new CanvasCache();
@@ -60,10 +68,7 @@ export const render = () => {
       drawMovingFish(state);
       break;
     case Modes.Predicting:
-      setState({
-        canSkipPredict:
-          $time() >= currentModeStartTime + timeBeforeCanSkipPredict
-      });
+      drawAiBot(state);
       drawMovingFish(state);
       break;
     case Modes.Pond:
@@ -105,6 +110,25 @@ const loadImage = imgPath => {
     });
     img.src = imgPath;
   });
+};
+
+const drawAiBot = state => {
+  if (!aiBotImages.closed) {
+    loadImage(aiBotClosed).then(img => (aiBotImages.closed = img));
+    return;
+  }
+
+  let img = aiBotImages.closed;
+  let x = state.canvas.width / 2 - img.width / 2;
+  let y = state.canvas.height / 2 - img.height / 2;
+
+  // TODO: LERP BOT UP TO DESTINATION
+  // Move AI bot above fish parade.
+  if (state.isRunning) {
+    y -= 125;
+  }
+
+  state.canvas.getContext('2d').drawImage(img, x, y);
 };
 
 const currentRunTime = (isRunning, clampTime) => {

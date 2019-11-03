@@ -153,6 +153,12 @@ const styles = {
     top: '20%',
     left: '70%'
   },
+  predictSpeech: {
+    top: '88%',
+    left: '12%',
+    width: '65%',
+    height: 38
+  },
   pondText: {
     position: 'absolute',
     bottom: '3%',
@@ -554,20 +560,32 @@ let Train = class Train extends React.Component {
 Train = Radium(Train);
 
 class Predict extends React.Component {
+  renderSpeechBubble = state => {
+    if (state.isRunning) {
+      return null;
+    } else {
+      const text = 'Now let’s see if A.I. knows what a fish looks like.';
+      return <SpeechBubble text={text} style={styles.predictSpeech} />;
+    }
+  };
+
   render() {
     const state = getState();
+    const btnText = state.isRunning ? 'Continue' : 'Run A.I.';
+    let btnOnClick;
+    if (state.isRunning) {
+      btnOnClick = () => toMode(Modes.Pond);
+    } else {
+      btnOnClick = () => setState({isRunning: true});
+    }
 
     return (
       <Body>
         <Header>A.I. Sorting</Header>
-        {state.canSkipPredict && (
-          <Button
-            style={styles.continueButton}
-            onClick={() => toMode(Modes.Pond)}
-          >
-            Skip
-          </Button>
-        )}
+        {this.renderSpeechBubble(state)}
+        <Button style={styles.continueButton} onClick={btnOnClick}>
+          {btnText}
+        </Button>
       </Body>
     );
   }
