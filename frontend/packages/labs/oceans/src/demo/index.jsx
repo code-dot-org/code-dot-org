@@ -1,14 +1,13 @@
-import $ from 'jquery';
-import constants, {Modes} from './constants';
-import {setState, setSetStateCallback} from './state';
-import {init as initModel} from './models';
-import {render as renderCanvas} from './renderer';
-import {queryStrFor} from './helpers';
-
 import 'babel-polyfill';
+import $ from 'jquery';
 import ReactDOM from 'react-dom';
 import React from 'react';
 import UI from './ui';
+import constants, {Modes} from './constants';
+import {setState, setSetStateCallback} from './state';
+import {render as renderCanvas} from './renderer';
+import {queryStrFor} from './helpers';
+import {toMode} from './toMode';
 
 $(document).ready(() => {
   // Set up canvases.
@@ -19,13 +18,13 @@ $(document).ready(() => {
 
   // Temporarily use URL parameter to set some state.
   const dataSet = queryStrFor('set') && queryStrFor('set').toLowerCase();
-  const loadTrashImages = queryStrFor('mode') && queryStrFor('mode').toLowerCase() === 'fishvtrash';
+  const loadTrashImages =
+    queryStrFor('mode') && queryStrFor('mode').toLowerCase() === 'fishvtrash';
   const appMode = queryStrFor('mode');
 
   // Set initial state for UI elements.
-  const state = setState({
-    appMode: appMode,
-    currentMode: Modes.Loading,
+  setState({
+    appMode,
     canvas,
     backgroundCanvas,
     loadTrashImages,
@@ -33,7 +32,7 @@ $(document).ready(() => {
   });
 
   // Initialize our first model.
-  initModel(state);
+  toMode(Modes.Loading);
 
   // Start the canvas renderer.  It will self-perpetute by calling
   // requestAnimationFrame on itself.
@@ -51,4 +50,3 @@ export const renderUI = () => {
   const renderElement = document.getElementById('container-react');
   ReactDOM.render(<UI />, renderElement);
 };
-
