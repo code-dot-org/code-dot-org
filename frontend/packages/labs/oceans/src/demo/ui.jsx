@@ -71,6 +71,10 @@ const styles = {
     left: '10%',
     width: '80%'
   },
+  instructionsParagraph: {
+    marginTop: 18,
+    marginBottom: 18
+  },
   instructionsDots: {
     textAlign: 'center',
     fontSize: 60,
@@ -165,11 +169,11 @@ const styles = {
   pondText: {
     position: 'absolute',
     bottom: '3%',
-    left: '55%',
+    left: '45%',
     transform: 'translateX(-45%)',
     fontSize: 22,
     lineHeight: '32px',
-    width: '70%',
+    width: '50%',
     backgroundColor: colors.transparentBlack,
     padding: '2%',
     borderRadius: 10,
@@ -349,7 +353,11 @@ class Instructions extends React.Component {
         <div style={styles.instructionsText}>
           {instructionsText[appModeVariant][currentPage].text.map(
             (instruction, index) => {
-              return <p key={index}>{instruction}</p>;
+              return (
+                <div key={index} style={styles.instructionsParagraph}>
+                  {instruction}
+                </div>
+              );
             }
           )}
         </div>
@@ -376,7 +384,14 @@ class Instructions extends React.Component {
             })}
           </div>
         )}
-        <Button style={styles.continueButton} onClick={() => {}}>
+        <Button
+          style={styles.continueButton}
+          onClick={() => {
+            if (state.onContinue) {
+              state.onContinue();
+            }
+          }}
+        >
           Continue
         </Button>
       </Body>
@@ -597,6 +612,16 @@ class Pond extends React.Component {
         <Header>A.I. Results</Header>
         <div style={styles.pondText}>{pondText}</div>
         <img style={styles.pondBot} src={aiBotClosed} />
+        <Button
+          style={styles.continueButton}
+          onClick={() => {
+            if (state.onContinue) {
+              state.onContinue();
+            }
+          }}
+        >
+          Continue
+        </Button>
       </Body>
     );
   }
