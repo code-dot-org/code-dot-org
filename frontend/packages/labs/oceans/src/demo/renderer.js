@@ -60,8 +60,6 @@ export const render = () => {
 
   clearCanvas(state.canvas);
 
-  const timeBeforeCanSkipPredict = 5000;
-
   switch (state.currentMode) {
     case Modes.Training:
       drawFrame(state);
