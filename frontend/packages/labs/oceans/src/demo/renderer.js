@@ -10,6 +10,9 @@ import {
   initMobilenet
 } from './OceanObject';
 import aiBotClosed from '../../public/images/ai-bot-closed.png';
+import blueScanner from '../../public/images/blue-scanner.png';
+import redScanner from '../../public/images/red-scanner.png';
+import greenScanner from '../../public/images/green-scanner.png';
 
 var $time =
   Date.now ||
@@ -24,9 +27,8 @@ let lastPauseTime = 0;
 let lastStartTime;
 let defaultMoveTime = 1000;
 let moveTime;
-let botImages = {
-  closed: null
-};
+let botImages = {};
+let currentPredictionClassId;
 
 export const initRenderer = () => {
   canvasCache = new CanvasCache();
@@ -67,6 +69,8 @@ export const render = () => {
       break;
     case Modes.Predicting:
       drawMovingFish(state);
+      // TODO: ENABLE THIS
+      // drawPrediction();
       drawPredictBot(state);
       break;
     case Modes.Pond:
@@ -229,13 +233,7 @@ const drawMovingFish = state => {
         const midScreenX =
           constants.canvasWidth / 2 - constants.fishCanvasWidth / 2;
         if (x > midScreenX) {
-          drawPrediction(
-            fish.getResult().predictedClassId,
-            state.word,
-            x,
-            y,
-            ctx
-          );
+          drawPrediction(state, fish.getResult().predictedClassId, ctx);
         }
       } else {
         predictFish(state, i).then(prediction => {
@@ -251,17 +249,44 @@ const drawMovingFish = state => {
 };
 
 // Draw a prediction to the canvas.
-const drawPrediction = (predictedClassId, text, x, y, ctx) => {
-  const centeredX = x + constants.fishCanvasWidth / 2;
-  const doesLike = predictedClassId === ClassType.Like;
+const drawPrediction = (state, predictedClassId, ctx) => {
+  let scannerImg;
 
-  ctx.fillStyle = doesLike ? 'green' : 'red';
-  ctx.font = '20px Arial';
-  ctx.textAlign = 'center';
-  if (!doesLike) {
-    text = 'not ' + text;
+  if (predictedClassId === ClassType.Like) {
+    if (botImages.greenScanner) {
+      scannerImg = botImages.greenScanner;
+    } else {
+      loadImage(greenScanner).then(img => {
+        botImages.greenScanner = img;
+        scannerImg = img;
+      });
+      return;
+    }
+  } else if (predictedClassId === ClassType.Dislike) {
+    if (botImages.blueScanner) {
+      scannerImg = botImages.blueScanner;
+    } else {
+      loadImage(blueScanner).then(img => {
+        botImages.blueScanner = img;
+        scannerImg = img;
+      });
+      return;
+    }
+  } else {
+    if (botImages.redScanner) {
+      scannerImg = botImages.redScanner;
+    } else {
+      loadImage(redScanner).then(img => {
+        botImages.redScanner = img;
+        scannerImg = img;
+      });
+      return;
+    }
   }
-  ctx.fillText(text.toUpperCase(), centeredX, y);
+
+  const x = state.canvas.width / 2 - scannerImg.width / 2;
+  const y = botY + 50;
+  ctx.drawImage(scannerImg, x, y);
 };
 
 // Draw AI bot to canvas for predict mode.
