@@ -267,10 +267,10 @@ const drawPrediction = (predictedClassId, text, x, y, ctx) => {
 };
 
 // Draw AI bot to canvas for predict mode.
+const botVelocity = -0.1;
 let totalBotMoveTime = 300;
 let botStartTime;
 let botY;
-const botVelocity = -0.1;
 const drawPredictBot = state => {
   if (!aiBotImages.closed) {
     loadImage(aiBotClosed).then(img => (aiBotImages.closed = img));
@@ -278,10 +278,8 @@ const drawPredictBot = state => {
   }
 
   let img = aiBotImages.closed;
-  let x = state.canvas.width / 2 - img.width / 2;
-  if (!botY) {
-    botY = state.canvas.height / 2 - img.height / 2;
-  }
+  let botX = state.canvas.width / 2 - img.width / 2;
+  botY = botY || state.canvas.height / 2 - img.height / 2;
 
   // Move AI bot above fish parade.
   if (state.isRunning) {
@@ -293,7 +291,7 @@ const drawPredictBot = state => {
     }
   }
 
-  state.canvas.getContext('2d').drawImage(img, x, botY);
+  state.canvas.getContext('2d').drawImage(img, botX, botY);
 };
 
 // Draw frame in the center of the screen.
