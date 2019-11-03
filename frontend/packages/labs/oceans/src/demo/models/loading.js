@@ -11,7 +11,13 @@ export const init = async () => {
   await initRenderer();
 
   const [appModeBase] = getAppMode(getState());
-  const mode =
-    appModeBase === 'instructions' ? Modes.Instructions : Modes.ActivityIntro;
+  let mode;
+  if (appModeBase === 'instructions') {
+    mode = Modes.Instructions;
+  } else if (appModeBase === 'fishvtrash') {
+    mode = Modes.Training;
+  } else {
+    mode = Modes.Words;
+  }
   toMode(mode);
 };

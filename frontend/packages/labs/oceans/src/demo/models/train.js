@@ -6,14 +6,23 @@ import {generateOcean} from '../../utils/generateOcean';
 
 export const init = () => {
   const state = getState();
+
   let fishData = [...state.fishData];
   if (fishData.length === 0) {
     fishData = fishData.concat(generateOcean(100, state.loadTrashImages));
   }
+
   let trainer = state.trainer;
   if (!trainer) {
     trainer = new SimpleTrainer();
     trainer.initializeClassifiersWithoutMobilenet();
+  }
+
+  if (state.appMode === 'fishvtrash') {
+    setState({
+      word: 'Fish',
+      trainingQuestion: 'Is this a fish?'
+    });
   }
 
   setState({
