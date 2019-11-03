@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Radium from 'radium';
 import _ from 'lodash';
 import {getState, setState} from './state';
 import {Modes, DataSet} from './constants';
@@ -40,7 +41,11 @@ const styles = {
     borderRadius: 8,
     minWidth: 160,
     padding: '16px 30px',
-    outline: 'none'
+    outline: 'none',
+    border: 'none',
+    ':focus': {
+      outline: `${colors.white} auto 5px`
+    }
   },
   continueButton: {
     position: 'absolute',
@@ -129,12 +134,20 @@ const styles = {
   trainButtonYes: {
     position: 'absolute',
     top: '80%',
-    left: '50%'
+    left: '50%',
+    ':hover': {
+      backgroundColor: colors.green,
+      color: colors.white
+    }
   },
   trainButtonNo: {
     position: 'absolute',
     top: '80%',
-    left: '33%'
+    left: '33%',
+    ':hover': {
+      backgroundColor: colors.red,
+      color: colors.white
+    }
   },
   trainBot: {
     position: 'absolute',
@@ -239,7 +252,7 @@ class Content extends React.Component {
   }
 }
 
-class Button extends React.Component {
+let Button = class Button extends React.Component {
   static propTypes = {
     style: PropTypes.object,
     children: PropTypes.node,
@@ -250,14 +263,15 @@ class Button extends React.Component {
     return (
       <button
         type="button"
-        style={{...this.props.style, ...styles.button}}
+        style={[styles.button, this.props.style]}
         onClick={this.props.onClick}
       >
         {this.props.children}
       </button>
     );
   }
-}
+};
+Button = Radium(Button);
 
 const instructionsText = {
   intro: [
@@ -327,7 +341,7 @@ class Instructions extends React.Component {
   render() {
     const state = getState();
     const currentPage = state.currentInstructionsPage;
-    const [,appModeVariant] = getAppMode(state);
+    const [, appModeVariant] = getAppMode(state);
 
     return (
       <Body>
@@ -370,7 +384,7 @@ class Instructions extends React.Component {
   }
 }
 
-class Pill extends React.Component {
+let Pill = class Pill extends React.Component {
   static propTypes = {
     text: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
     icon: PropTypes.string,
@@ -385,15 +399,16 @@ class Pill extends React.Component {
     iconStyle.backgroundColor = iconBgColor || colors.white;
 
     return (
-      <div style={{...styles.pill, ...(this.props.style || {})}}>
+      <div style={[styles.pill, this.props.style]}>
         {icon && <img src={icon} style={iconStyle} />}
         <div style={styles.pillText}>{text}</div>
       </div>
     );
   }
-}
+};
+Pill = Radium(Pill);
 
-class SpeechBubble extends React.Component {
+let SpeechBubble = class SpeechBubble extends React.Component {
   static propTypes = {
     text: PropTypes.string.isRequired,
     style: PropTypes.object
@@ -401,12 +416,11 @@ class SpeechBubble extends React.Component {
 
   render() {
     return (
-      <div style={{...styles.bubble, ...(this.props.style || {})}}>
-        {this.props.text}
-      </div>
+      <div style={[styles.bubble, this.props.style]}>{this.props.text}</div>
     );
   }
-}
+};
+SpeechBubble = Radium(SpeechBubble);
 
 class ActivityIntro extends React.Component {
   onClickContinue = () => {
@@ -545,7 +559,7 @@ class TrainingIntro extends React.Component {
   }
 }
 
-class Train extends React.Component {
+let Train = class Train extends React.Component {
   renderSpeechBubble = state => {
     const total = state.yesCount + state.noCount;
     let text = '';
@@ -577,13 +591,13 @@ class Train extends React.Component {
           text={state.noCount}
           icon={xIcon}
           iconBgColor={colors.red}
-          style={{...styles.count, ...styles.noCount}}
+          style={[styles.count, styles.noCount]}
         />
         <Pill
           text={state.yesCount}
           icon={checkmarkIcon}
           iconBgColor={colors.green}
-          style={{...styles.count, ...styles.yesCount}}
+          style={[styles.count, styles.yesCount]}
         />
         <Button
           style={styles.trainButtonNo}
@@ -606,7 +620,8 @@ class Train extends React.Component {
       </Body>
     );
   }
-}
+};
+Train = Radium(Train);
 
 class Predict extends React.Component {
   render() {

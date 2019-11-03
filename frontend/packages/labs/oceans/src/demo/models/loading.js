@@ -1,19 +1,17 @@
 import 'idempotent-babel-polyfill';
 import {initRenderer} from '../renderer';
-import {getState, setState} from '../state';
+import {getState} from '../state';
 import {Modes} from '../constants';
-import {init as initModel} from './index';
 import {initFishData} from '../../utils/fishData';
 import {getAppMode} from '../helpers';
+import {toMode} from '../toMode';
 
 export const init = async () => {
   initFishData();
   await initRenderer();
 
-  const [appModeBase,] = getAppMode(getState());
-  const currentMode =
+  const [appModeBase] = getAppMode(getState());
+  const mode =
     appModeBase === 'instructions' ? Modes.Instructions : Modes.ActivityIntro;
-
-  const state = setState({currentMode: currentMode});
-  initModel(state);
+  toMode(mode);
 };
