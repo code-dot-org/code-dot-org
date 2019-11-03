@@ -24,7 +24,7 @@ let lastPauseTime = 0;
 let lastStartTime;
 let defaultMoveTime = 1000;
 let moveTime;
-let aiBotImages = {
+let botImages = {
   closed: null
 };
 
@@ -270,12 +270,12 @@ let totalBotMoveTime = 300;
 let botStartTime;
 let botY;
 const drawPredictBot = state => {
-  if (!aiBotImages.closed) {
-    loadImage(aiBotClosed).then(img => (aiBotImages.closed = img));
+  if (!botImages.closed) {
+    loadImage(aiBotClosed).then(img => (botImages.closed = img));
     return;
   }
 
-  let img = aiBotImages.closed;
+  let img = botImages.closed;
   let botX = state.canvas.width / 2 - img.width / 2;
   botY = botY || state.canvas.height / 2 - img.height / 2;
 
