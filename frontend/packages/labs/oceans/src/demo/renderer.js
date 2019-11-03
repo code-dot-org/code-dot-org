@@ -68,8 +68,8 @@ export const render = () => {
       drawMovingFish(state);
       break;
     case Modes.Predicting:
-      drawAiBot(state);
       drawMovingFish(state);
+      drawPredictBot(state);
       break;
     case Modes.Pond:
       drawPondFishImages();
@@ -110,25 +110,6 @@ const loadImage = imgPath => {
     });
     img.src = imgPath;
   });
-};
-
-const drawAiBot = state => {
-  if (!aiBotImages.closed) {
-    loadImage(aiBotClosed).then(img => (aiBotImages.closed = img));
-    return;
-  }
-
-  let img = aiBotImages.closed;
-  let x = state.canvas.width / 2 - img.width / 2;
-  let y = state.canvas.height / 2 - img.height / 2;
-
-  // TODO: LERP BOT UP TO DESTINATION
-  // Move AI bot above fish parade.
-  if (state.isRunning) {
-    y -= 125;
-  }
-
-  state.canvas.getContext('2d').drawImage(img, x, y);
 };
 
 const currentRunTime = (isRunning, clampTime) => {
@@ -283,6 +264,35 @@ const drawPrediction = (predictedClassId, text, x, y, ctx) => {
     text = 'not ' + text;
   }
   ctx.fillText(text.toUpperCase(), centeredX, y);
+};
+
+// Draw AI bot to canvas for predict mode.
+let totalBotMoveTime = 300;
+let botStartTime;
+let botY;
+const botVelocity = -0.1;
+const drawPredictBot = state => {
+  if (!aiBotImages.closed) {
+    loadImage(aiBotClosed).then(img => (aiBotImages.closed = img));
+    return;
+  }
+
+  let img = aiBotImages.closed;
+  let x = state.canvas.width / 2 - img.width / 2;
+  if (!botY) {
+    botY = state.canvas.height / 2 - img.height / 2;
+  }
+
+  // Move AI bot above fish parade.
+  if (state.isRunning) {
+    if (!botStartTime) {
+      botStartTime = $time();
+    } else if ($time() - botStartTime < totalBotMoveTime) {
+      botY = botY + botVelocity * ($time() - botStartTime);
+    }
+  }
+
+  state.canvas.getContext('2d').drawImage(img, x, botY);
 };
 
 // Draw frame in the center of the screen.
