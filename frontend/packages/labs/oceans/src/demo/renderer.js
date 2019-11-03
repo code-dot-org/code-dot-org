@@ -10,7 +10,6 @@ import {
   initMobilenet
 } from './OceanObject';
 import aiBotClosed from '../../public/images/ai-bot-closed.png';
-import blueScanner from '../../public/images/blue-scanner.png';
 import redScanner from '../../public/images/red-scanner.png';
 import greenScanner from '../../public/images/green-scanner.png';
 
@@ -232,7 +231,7 @@ const drawMovingFish = state => {
       if (fish.getResult()) {
         const midScreenX =
           constants.canvasWidth / 2 - constants.fishCanvasWidth / 2;
-        if (x === midScreenX) {
+        if (Math.abs(midScreenX - x) <= 50) {
           drawPrediction(state, fish.getResult().predictedClassId, ctx);
         }
       } else {
