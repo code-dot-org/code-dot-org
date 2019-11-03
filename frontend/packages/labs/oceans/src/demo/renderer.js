@@ -285,10 +285,11 @@ const drawPredictBot = state => {
 
   // Move AI bot above fish parade.
   if (state.isRunning) {
-    if (!botStartTime) {
-      botStartTime = $time();
-    } else if ($time() - botStartTime < totalBotMoveTime) {
-      botY = botY + botVelocity * ($time() - botStartTime);
+    botStartTime = botStartTime || $time();
+    let t = $time() - botStartTime;
+
+    if (t < totalBotMoveTime) {
+      botY = botY + botVelocity * t;
     }
   }
 
