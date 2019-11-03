@@ -231,6 +231,7 @@
     "filesaver.js": "0.2.0",
     "jshint": "^2.9.5",
     "jszip": "3.0.0",
+    "node-sass": "^4.13.0",
     "object-fit-images": "^3.2.3",
     "prop-types": "^15.6.2",
     "qrcode.react": "^0.8.0",
