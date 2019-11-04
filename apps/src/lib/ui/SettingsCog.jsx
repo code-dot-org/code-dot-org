@@ -112,7 +112,7 @@ class SettingsCog extends Component {
     };
   }
 
-  librariesAreEnabled() {
+  areLibrariesEnabled() {
     let experimentOn = experiments.isEnabled(experiments.STUDENT_LIBRARIES);
     let pageConstants = getStore().getState().pageConstants;
     return experimentOn || (pageConstants && pageConstants.librariesEnabled);
@@ -144,7 +144,7 @@ class SettingsCog extends Component {
           showTail={true}
         >
           <ManageAssets onClick={this.manageAssets} />
-          {this.librariesAreEnabled() && (
+          {this.areLibrariesEnabled() && (
             <ManageLibraries onClick={this.manageLibraries} />
           )}
           {this.props.showMakerToggle && (
