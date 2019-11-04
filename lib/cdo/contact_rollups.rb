@@ -305,6 +305,7 @@ class ContactRollups
     log "Error iterating through result set stream - #{error.message}"
     log "Current Source Record - #{contact_rollup_src}"
     log "Current Destination Record - #{contact_rollup_dest}"
+    raise error
   end
 
   def self.create_destination_table
