@@ -47,6 +47,7 @@ describe('Library parser', () => {
         JSON.stringify({
           name: emptyLibraryName,
           description: emptyDescription,
+          functions: emptyFunctions,
           dropletConfig: [],
           source: emptyCode
         })
@@ -152,6 +153,7 @@ describe('Library parser', () => {
         JSON.stringify({
           name: emptyLibraryName,
           description: emptyDescription,
+          functions: [functionName],
           dropletConfig: expectedDropletConfig,
           source: emptyCode
         })
@@ -159,29 +161,28 @@ describe('Library parser', () => {
     });
 
     it('is able to parse functions with parameters', () => {
-      let firstFunctionName = 'first';
-      let secondFunctionName = 'second';
+      let functions = ['first', 'second'];
       let params = ['foo', 'bar'];
       let category = 'Functions';
       let selectedFunctions = [
         {
-          functionName: firstFunctionName,
+          functionName: functions[0],
           parameters: params
         },
         {
-          functionName: secondFunctionName
+          functionName: functions[1]
         }
       ];
 
       let expectedDropletConfig = [
         {
-          func: firstFunctionName,
+          func: functions[0],
           category: category,
           params: params,
           paletteParams: params
         },
         {
-          func: secondFunctionName,
+          func: functions[1],
           category: category
         }
       ];
@@ -197,6 +198,7 @@ describe('Library parser', () => {
         JSON.stringify({
           name: emptyLibraryName,
           description: emptyDescription,
+          functions: functions,
           dropletConfig: expectedDropletConfig,
           source: emptyCode
         })
@@ -206,12 +208,9 @@ describe('Library parser', () => {
 
   describe('prepareLibraryForImport', () => {
     let emptyCode = '';
-    let emptyDropletConfig = [];
+    let channelId = '123';
+    let versionId = '456';
     let emptyLibraryName = 'emptyLibrary';
-
-    function closureCreator(libraryName = '', code = '', functions = '') {
-      return `var ${libraryName} = (function() {${code}; return {${functions}}})();`;
-    }
 
     it('given a new name, renames the library', () => {
       let funcName1 = 'one';
@@ -223,36 +222,59 @@ describe('Library parser', () => {
       });
 
       let newName = 'newName';
-      let newJson = parser.prepareLibraryForImport(originalJson, newName);
+      let newJson = parser.prepareLibraryForImport(
+        originalJson,
+        channelId,
+        versionId,
+        newName
+      );
       expect(newJson).to.deep.equal({
         name: newName,
         originalName: emptyLibraryName,
+        channelId: channelId,
         dropletConfig: [
           {func: `${newName}.${funcName1}`},
           {func: `${newName}.${funcName2}`}
         ],
-        source: closureCreator(
-          newName,
-          emptyCode,
-          `${funcName1}: ${funcName1},${funcName2}: ${funcName2}`
-        )
+        versionId: versionId,
+        source: emptyCode
       });
     });
+  });
+
+  describe('createLibraryClosure', () => {
+    let emptyLibraryName = 'emptyLibrary';
+    let emptyFunctions = [];
+
+    function closureCreator(libraryName = '', code = '', functions = '') {
+      return `var ${libraryName} = (function() {${code}; return {${functions}}})();`;
+    }
 
     it('is able to parse code with quotes', () => {
       let code = '`"\'';
-      let originalJson = JSON.stringify({
+      let originalJson = {
         name: emptyLibraryName,
-        dropletConfig: emptyDropletConfig,
+        functions: emptyFunctions,
         source: code
-      });
-      let newJson = parser.prepareLibraryForImport(originalJson);
-      expect(newJson).to.deep.equal({
+      };
+      let newJson = parser.createLibraryClosure(originalJson);
+      expect(newJson).to.deep.equal(closureCreator(emptyLibraryName, code));
+    });
+
+    it('is able to parse functions', () => {
+      let code = '';
+      let firstFunction = 'first';
+      let secondFunction = 'second';
+      let originalJson = {
         name: emptyLibraryName,
-        originalName: emptyLibraryName,
-        dropletConfig: emptyDropletConfig,
-        source: closureCreator(emptyLibraryName, code)
-      });
+        functions: [firstFunction, secondFunction],
+        source: code
+      };
+      let closureFunctions = `${firstFunction}: ${firstFunction},${secondFunction}: ${secondFunction}`;
+      let newJson = parser.createLibraryClosure(originalJson);
+      expect(newJson).to.equal(
+        closureCreator(emptyLibraryName, code, closureFunctions)
+      );
     });
   });
 });
