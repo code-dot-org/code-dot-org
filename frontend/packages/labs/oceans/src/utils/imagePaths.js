@@ -8,7 +8,9 @@ import Trash_Coffee from '../../public/images/trash/Trash_Coffee.png';
 import Trash_Fork from '../../public/images/trash/Trash_Fork.png';
 import Trash_Sock from '../../public/images/trash/Trash_Sock.png';
 
-export const imagePaths = [
+import Seahorse from '../../public/images/seaCreatures/Seahorse.png';
+
+export const trashImagePaths = [
   Trash_6pack,
   Trash_Apple,
   Trash_Banana,
@@ -18,4 +20,8 @@ export const imagePaths = [
   Trash_Coffee,
   Trash_Fork,
   Trash_Sock
+];
+
+export const seaCreatureImagePaths = [
+  Seahorse
 ];

@@ -1,4 +1,4 @@
-import {FishOceanObject, TrashOceanObject} from '../demo/OceanObject';
+import {FishOceanObject, SeaCreatureOceanObject, TrashOceanObject} from '../demo/OceanObject';
 import {getState} from '../demo/state';
 import {fishData} from './fishData';
 import {filterFishComponents} from '../demo/helpers';
@@ -13,10 +13,13 @@ import _ from 'lodash';
  */
 export const generateOcean = numFish => {
   const state = getState();
-  const ocean = [];
+  let ocean = [];
   let possibleObjects = [FishOceanObject];
   if (state.loadTrashImages) {
     possibleObjects.push(TrashOceanObject);
+  }
+  if (state.loadCreatureImages) {
+    possibleObjects.push(SeaCreatureOceanObject);
   }
   const possibleFishComponents = filterFishComponents(
     fishData,
@@ -55,7 +58,7 @@ export const generateOcean = numFish => {
     object.randomize();
     ocean.push(object);
   }
-  _.shuffle(ocean);
+  ocean = _.shuffle(ocean);
   return ocean;
 };
 

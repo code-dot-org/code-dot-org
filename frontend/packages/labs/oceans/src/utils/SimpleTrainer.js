@@ -138,7 +138,7 @@ export default class SimpleTrainer {
    * @param {string} datasetJson
    */
   loadDatasetJSON(datasetJson) {
-    const tensorObj = JSON.parse(datasetJson);
+    const tensorObj = datasetJson;
     Object.keys(tensorObj).forEach(key => {
       tensorObj[key] = tf.tensor(
         Array.from(tensorObj[key].data),

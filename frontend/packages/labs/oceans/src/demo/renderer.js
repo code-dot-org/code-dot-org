@@ -4,7 +4,7 @@ import constants, {Modes, ClassType} from './constants';
 import CanvasCache from './canvasCache';
 import {backgroundPathForMode} from './helpers';
 import {predictFish} from './models/predict';
-import {loadAllFishPartImages, loadAllTrashImages, initMobilenet} from './OceanObject';
+import {loadAllFishPartImages, loadAllSeaCreatureImages, loadAllTrashImages, initMobilenet} from './OceanObject';
 
 var $time =
   Date.now ||
@@ -26,6 +26,7 @@ export const initRenderer = () => {
   promises.push(loadAllFishPartImages());
   if (getState().loadTrashImages) {
     promises.push(loadAllTrashImages());
+    promises.push(loadAllSeaCreatureImages());
     promises.push(initMobilenet());
   }
   return Promise.all(promises);

@@ -534,7 +534,8 @@ let Train = class Train extends React.Component {
     const trainQuestionTextStyle = state.isRunning
       ? styles.trainQuestionTextDisabled
       : styles.trainQuestionText;
-
+    const yesButtonText = state.appMode === 'creaturesvtrash' ? 'Yes' : state.word;
+    const noButtonText = state.appMode === 'creaturesvtrash' ? 'No' : `Not ${state.word}`;
     return (
       <Body>
         <Header>A.I. Training</Header>
@@ -557,13 +558,13 @@ let Train = class Train extends React.Component {
           style={styles.trainButtonNo}
           onClick={() => onClassifyFish(false)}
         >
-          {`Not ${state.word}`}
+          {noButtonText}
         </Button>
         <Button
           style={styles.trainButtonYes}
           onClick={() => onClassifyFish(true)}
         >
-          {state.word}
+          {yesButtonText}
         </Button>
         <Button
           style={styles.continueButton}

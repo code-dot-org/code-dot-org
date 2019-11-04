@@ -24,6 +24,12 @@ export const init = () => {
       trainingQuestion: 'Is this a fish?'
     });
   }
+  if (state.appMode === 'creaturesvtrash') {
+    setState({
+      word: 'Water creature',
+      trainingQuestion: 'Does this belong in the water?'
+    });
+  }
 
   setState({
     fishData,
