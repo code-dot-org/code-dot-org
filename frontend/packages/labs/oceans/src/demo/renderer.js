@@ -223,8 +223,6 @@ const drawMovingFish = state => {
       fish.getResult() ? fish.getResult().predictedClassId : false
     );
 
-    drawSingleFish(fish, x, y, ctx);
-
     if (state.currentMode === Modes.Predicting) {
       if (fish.getResult()) {
         const midScreenX =
@@ -238,6 +236,8 @@ const drawMovingFish = state => {
         });
       }
     }
+
+    drawSingleFish(fish, x, y, ctx);
   }
 
   if (state.currentMode === Modes.Training && runtime === moveTime) {
@@ -268,7 +268,7 @@ const drawPrediction = (state, predictedClassId, ctx) => {
 
 // Draw AI bot to canvas for predict mode.
 const botVelocity = -0.1;
-let totalBotMoveTime = 300;
+let totalBotMoveTime = 200;
 let botStartTime;
 let botY;
 const drawPredictBot = state => {
@@ -286,7 +286,7 @@ const drawPredictBot = state => {
     botStartTime = botStartTime || $time();
     let t = $time() - botStartTime;
 
-    if (t < totalBotMoveTime) {
+    if (t <= totalBotMoveTime) {
       botY = botY + botVelocity * t;
     }
   }
