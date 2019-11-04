@@ -395,7 +395,11 @@ export function getStudentPairing(dataByStudent) {
 }
 
 export function getStudentLevelResult(dataByStudent) {
-  return getInfoByStudentByLevel(dataByStudent, getLevelResult);
+  return _.mapValues(dataByStudent, studentData =>
+    _.mapValues(studentData, level => {
+      return {status: getLevelResult(level), timeSpent: level.time_spent};
+    })
+  );
 }
 
 function getInfoByStudentByLevel(dataByStudent, infoFromLevelData) {
