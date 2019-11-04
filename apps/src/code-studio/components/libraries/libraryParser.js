@@ -57,50 +57,49 @@ function createDropletConfig(functions, libraryName) {
  * The library functions can be called with dot notation:
  * libraryName.myFunc();
  *
- * @param {string} code All the code in the library
- * @param {array} functions All functions that will be exported from the library
- * @param {string} libraryName The name of the library
- * @returns {null,string} null if there is an error. Else, the library closure
+ * @param {object} json The library and all metadata
+ *   json {
+ *     functions: Array<string>
+ *     source: string
+ *     name: string
+ *   }
+ * @returns {string} closure The library closure
  */
-function createLibraryClosure(code, functionNames, libraryName) {
+export function createLibraryClosure(json) {
   let exportedFunctions = [];
-  for (let functionName of functionNames) {
-    exportedFunctions.push(`${functionName}: ${functionName}`);
-  }
-
+  exportedFunctions = json.functions.map(name => `${name}: ${name}`);
   let functionsInClosure = exportedFunctions.join(',');
-  return `var ${libraryName} = (function() {${code}; return {${functionsInClosure}}})();`;
+  return `var ${json.name} = (function() {${
+    json.source
+  }; return {${functionsInClosure}}})();`;
 }
 
 /**
- * Given a library json, migrates it into a consumable format. This function
- * creates the library closure and edits the droplet config so each function
- * references the closure using the correct name of the library.
+ * Given a library json, migrates it into a consumable format. Edits the droplet
+ * config so each function references the correct name of the library. Sets the
+ * versionId and channelId for the library
  *
  * @param {string} json The raw string json of the library as imported from S3
+ * @param {string} channelId The channelId of the library on S3
+ * @param {string} versionId The version of the library on S3
  * @param {string} newName An alternate name for the library if the user renamed
  *                         it on import.
- * @returns {obejct} The json representation of the library with the source
- *                   wrapped in a closure and the functions named Library.func
+ * @returns {object} The json representation of the library with the functions
+ *                   named Library.func
  */
-export function prepareLibraryForImport(json, newName) {
+export function prepareLibraryForImport(json, channelId, versionId, newName) {
   let libraryJson = JSON.parse(json);
   libraryJson.originalName = libraryJson.name;
   if (newName) {
     libraryJson.name = newName;
   }
 
-  let functionNames = [];
   libraryJson.dropletConfig.forEach(functionConfig => {
-    functionNames.push(functionConfig.func);
     functionConfig.func = `${libraryJson.name}.${functionConfig.func}`;
   });
 
-  libraryJson.source = createLibraryClosure(
-    libraryJson.source,
-    functionNames,
-    libraryJson.name
-  );
+  libraryJson.versionId = versionId;
+  libraryJson.channelId = channelId;
   return libraryJson;
 }
 
@@ -130,13 +129,16 @@ export function createLibraryJson(
   }
 
   let config = createDropletConfig(selectedFunctions, libraryName);
-  if (!config) {
+  let functions =
+    selectedFunctions && selectedFunctions.map(func => func.functionName);
+  if (!config || !functions) {
     return;
   }
 
   return JSON.stringify({
     name: libraryName,
     description: libraryDescription,
+    functions: functions,
     dropletConfig: config,
     source: code
   });
@@ -164,5 +166,6 @@ export default {
   prepareLibraryForImport,
   getFunctions,
   createLibraryJson,
-  sanitizeName
+  sanitizeName,
+  createLibraryClosure
 };
