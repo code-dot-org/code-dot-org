@@ -16,7 +16,7 @@ At this point the app will be running at [http://localhost:8080](http://localhos
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/code-dot-org/ml-activities)
 
-# Local integration with https://github.com/code-dot-org/code-dot-org
+### Integration with local [code-dot-org repo](https://github.com/code-dot-org/code-dot-org)
 
 Similar to https://github.com/code-dot-org/dance-party, ml-activities is built from a small repo as an app which is then used by the code.org dashboard to run individual levels in a script.
 
