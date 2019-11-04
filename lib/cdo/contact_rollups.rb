@@ -219,10 +219,19 @@ class ContactRollups
     # MySQL use the email index to sort by email.
 
     # Query all of the contacts in the latest daily contact rollup table (contact_rollups_daily) sorted by email.
-    contact_rollups_src = PEGASUS_REPORTING_DB_READER['SELECT * FROM contact_rollups_daily FORCE INDEX(contact_rollups_email_index) ORDER BY email']
+    src_query =
+      "SELECT * FROM contact_rollups_daily
+      FORCE INDEX(contact_rollups_email_index)
+      ORDER BY email DESC"
+    contact_rollups_src = PEGASUS_REPORTING_DB_READER[src_query]
+
     # Query all of the contacts in the master contact rollup table (contact_rollups_daily) sorted by email.
     # Use MYSQL 5.7 MAX_EXECUTION_TIME optimizer hint to override the production database global query timeout.
-    contact_rollups_dest = PEGASUS_DB_READER["SELECT /*+ MAX_EXECUTION_TIME(#{MAX_EXECUTION_TIME}) */ * FROM contact_rollups FORCE INDEX(contact_rollups_email_index) ORDER BY email"]
+    dest_query =
+      "SELECT /*+ MAX_EXECUTION_TIME(#{MAX_EXECUTION_TIME}) */ * FROM contact_rollups
+      FORCE INDEX(contact_rollups_email_index)
+      ORDER BY email DESC"
+    contact_rollups_dest = PEGASUS_DB_READER[dest_query]
 
     # Create iterators for both queries using the #stream method so we stream the results back rather than
     # trying to load everything in memory
@@ -242,7 +251,7 @@ class ContactRollups
 
       # Continue to advance the destination pointer until the destination email address in question
       # is the same or later alphabetically as the source email address.
-      while (!contact_rollup_dest.nil?) && (contact_rollup_dest[:email] < email_src)
+      while (!contact_rollup_dest.nil?) && (contact_rollup_dest[:email] > email_src)
         contact_rollup_dest = grab_next(dest_iterator)
       end
 
