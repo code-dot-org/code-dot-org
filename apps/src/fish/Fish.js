@@ -3,15 +3,7 @@ import ReactDOM from 'react-dom';
 import FishView from './FishView';
 import {Provider} from 'react-redux';
 import {getStore} from '../redux';
-import {
-  initModel,
-  constants,
-  Modes,
-  setState,
-  setSetStateCallback,
-  renderCanvas,
-  UI
-} from '@code-dot-org/ml-activities';
+import {initAll} from '@code-dot-org/ml-activities';
 import {TestResults} from '@cdo/apps/constants';
 
 /**
@@ -106,36 +98,14 @@ Fish.prototype.initMLActivities = function() {
   // Set up initial state
   const canvas = document.getElementById('activity-canvas');
   const backgroundCanvas = document.getElementById('background-canvas');
-  canvas.width = backgroundCanvas.width = constants.canvasWidth;
-  canvas.height = backgroundCanvas.height = constants.canvasHeight;
 
   // Set initial state for UI elements.
-  const state = setState({
-    currentMode: Modes.Loading,
+  initAll({
     canvas,
     backgroundCanvas,
     appMode: mode,
     onContinue
   });
-
-  // Initialize our first model.
-  initModel(state);
-
-  // Start the canvas renderer.  It will self-perpetute by calling
-  // requestAnimationFrame on itself.
-  renderCanvas();
-
-  // Render the UI.
-  renderUI();
-
-  // And have the render UI handler be called every time state is set.
-  setSetStateCallback(renderUI);
-};
-
-// Tell React to explicitly render the UI.
-export const renderUI = () => {
-  const renderElement = document.getElementById('container-react');
-  ReactDOM.render(<UI />, renderElement);
 };
 
 export default Fish;
