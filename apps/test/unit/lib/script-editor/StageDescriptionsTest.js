@@ -82,16 +82,19 @@ describe('StageDescriptions', () => {
       />
     );
     wrapper.setState({collapsed: false});
+    let descriptions = wrapper.childAt(1).childAt(1);
+
     assert.equal(
-      wrapper.find('button').text(),
+      descriptions.find('button').text(),
       'Import from Curriculum Builder'
     );
 
     // now click import button
-    wrapper.find('button').simulate('click');
+    descriptions.find('button').simulate('click');
 
+    descriptions = wrapper.childAt(1).childAt(1);
     assert.equal(wrapper.state('buttonText'), 'Querying server...');
-    assert.equal(wrapper.find('button').text(), 'Querying server...');
+    assert.equal(descriptions.find('button').text(), 'Querying server...');
   });
 
   it('extracts importedDescriptions/mismatchedStages from response', () => {
@@ -103,7 +106,9 @@ describe('StageDescriptions', () => {
     );
     wrapper.setState({collapsed: false});
     // now click import button
-    wrapper.find('button').simulate('click');
+    const importButton = wrapper.find('button').at(1);
+    assert.equal(importButton.text(), 'Import from Curriculum Builder');
+    importButton.simulate('click');
 
     assert.equal(requests.length, 1);
     assert.equal(
