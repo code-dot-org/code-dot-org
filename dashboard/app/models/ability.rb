@@ -260,20 +260,5 @@ class Ability
     if user.permission?(UserPermission::CENSUS_REVIEWER)
       can :manage, Census::CensusInaccuracyInvestigation
     end
-
-    if user.admin?
-      can :manage, :all
-
-      cannot :manage, [
-        Activity,
-        Game,
-        Level,
-        Course,
-        Script,
-        ScriptLevel,
-        UserLevel,
-        UserScript
-      ]
-    end
   end
 end
