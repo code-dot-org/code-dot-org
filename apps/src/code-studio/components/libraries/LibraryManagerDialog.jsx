@@ -104,10 +104,6 @@ export default class LibraryManagerDialog extends React.Component {
     );
   };
 
-  refreshLibrary = libraryName => {
-    console.log('refreshed ' + libraryName + '!');
-  };
-
   removeLibrary = libraryName => {
     dashboard.project.setProjectLibraries(
       this.state.libraries.filter(library => {
@@ -132,7 +128,7 @@ export default class LibraryManagerDialog extends React.Component {
         <LibraryListItem
           key={library.name}
           library={library}
-          onRefresh={this.refreshLibrary}
+          onRefresh={undefined}
           onRemove={this.removeLibrary}
         />
       );
