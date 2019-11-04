@@ -13,7 +13,7 @@ import _ from 'lodash';
  */
 export const generateOcean = numFish => {
   const state = getState();
-  const ocean = [];
+  let ocean = [];
   let possibleObjects = [FishOceanObject];
   if (state.loadTrashImages) {
     possibleObjects.push(TrashOceanObject);
@@ -55,7 +55,7 @@ export const generateOcean = numFish => {
     object.randomize();
     ocean.push(object);
   }
-  _.shuffle(ocean);
+  ocean = _.shuffle(ocean);
   return ocean;
 };
 
