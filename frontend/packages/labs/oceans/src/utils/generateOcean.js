@@ -13,7 +13,7 @@ import _ from 'lodash';
  */
 export const generateOcean = numFish => {
   const state = getState();
-  const ocean = [];
+  let ocean = [];
   let possibleObjects = [FishOceanObject];
   if (state.loadTrashImages) {
     possibleObjects.push(TrashOceanObject);
