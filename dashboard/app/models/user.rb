@@ -1012,10 +1012,9 @@ class User < ActiveRecord::Base
   # }
   def self.user_levels_by_user_by_level(users, script)
     initial_hash = Hash[users.map {|user| [user.id, {}]}]
-    UserLevel.where(
-      script_id: script.id,
-      user_id: users.map(&:id)
-    ).
+    UserLevel.select('*').
+      joins("JOIN user_level_infos ON user_level_infos.user_level_id = user_levels.id").
+      where(script_id: script.id, user_id: users.map(&:id)).
       group_by(&:user_id).
       inject(initial_hash) do |memo, (user_id, user_levels)|
         memo[user_id] = user_levels.index_by(&:level_id)
