@@ -55,7 +55,7 @@ export const generateOcean = numFish => {
     object.randomize();
     ocean.push(object);
   }
-  _.shuffle(ocean);
+  ocean = _.shuffle(ocean);
   return ocean;
 };
 
