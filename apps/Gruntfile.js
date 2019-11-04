@@ -600,7 +600,7 @@ describe('entry tests', () => {
     'levels/editors/_studio':
       './src/sites/studio/pages/levels/editors/_studio.js',
     'libraries/edit': './src/sites/studio/pages/libraries/edit.js',
-    'scripts/_form': './src/sites/studio/pages/scripts/_form.js',
+    'scripts/edit': './src/sites/studio/pages/scripts/edit.js',
     'scripts/new': './src/sites/studio/pages/scripts/new.js',
     'shared_blockly_functions/edit':
       './src/sites/studio/pages/shared_blockly_functions/edit.js'
