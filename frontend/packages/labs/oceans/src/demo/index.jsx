@@ -16,19 +16,14 @@ $(document).ready(() => {
   canvas.width = backgroundCanvas.width = constants.canvasWidth;
   canvas.height = backgroundCanvas.height = constants.canvasHeight;
 
-  // Temporarily use URL parameter to set some state.
-  const dataSet = queryStrFor('set') && queryStrFor('set').toLowerCase();
-  const loadTrashImages =
-    queryStrFor('mode') && queryStrFor('mode').toLowerCase() === 'fishvtrash';
+  // Use URL parameter to set mode.
   const appMode = queryStrFor('mode');
 
   // Set initial state for UI elements.
   setState({
     appMode,
     canvas,
-    backgroundCanvas,
-    loadTrashImages,
-    dataSet
+    backgroundCanvas
   });
 
   // Initialize our first model.
