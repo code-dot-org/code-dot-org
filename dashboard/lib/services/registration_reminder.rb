@@ -26,7 +26,11 @@ class Services::RegistrationReminder
     # No 'registration_reminder' has been sent yet.
     # Not enrolled in a workshop since the 'registration_sent' email was sent
     applications_awaiting_enrollment.
-      joins("left outer join pd_application_emails registration_reminder on pd_applications.id = registration_reminder.pd_application_id and registration_reminder.email_type = 'registration_reminder'").
+      joins(<<~SQL).
+        left outer join pd_application_emails registration_reminder
+        on pd_applications.id = registration_reminder.pd_application_id
+        and registration_reminder.email_type = 'registration_reminder'
+      SQL
       where("registration_sent.sent_at <= ?", 2.weeks.ago).
       where("registration_reminder.id is null")
   end
@@ -40,7 +44,11 @@ class Services::RegistrationReminder
     # The 'registration_reminder' email was sent at least one week ago.
     # Not enrolled in a workshop since the 'registration_sent' email was sent.
     applications_awaiting_enrollment.
-      joins("inner join pd_application_emails registration_reminder on pd_applications.id = registration_reminder.pd_application_id and registration_reminder.email_type = 'registration_reminder'").
+      joins(<<~SQL).
+        inner join pd_application_emails registration_reminder
+        on pd_applications.id = registration_reminder.pd_application_id
+        and registration_reminder.email_type = 'registration_reminder'
+      SQL
       where('registration_reminder.sent_at <= ?', 1.week.ago).
       reject {|a| a.emails.where(email_type: 'registration_reminder').count > 1}
   end
@@ -53,8 +61,16 @@ class Services::RegistrationReminder
     # - Exclude applications created prior to the fall 2019 application season, when this feature launched.
     # - SELECT DISTINCT since we never want to list an application more than once.
     Pd::Application::ApplicationBase.
-      joins("inner join pd_application_emails registration_sent on pd_applications.id = registration_sent.pd_application_id and registration_sent.email_type = 'registration_sent'").
-      joins("left outer join pd_enrollments on pd_applications.user_id = pd_enrollments.user_id and pd_enrollments.created_at >= registration_sent.sent_at").
+      joins(<<~SQL).
+        inner join pd_application_emails registration_sent
+        on pd_applications.id = registration_sent.pd_application_id
+        and registration_sent.email_type = 'registration_sent'
+      SQL
+      joins(<<~SQL).
+        left outer join pd_enrollments
+        on pd_applications.user_id = pd_enrollments.user_id
+        and pd_enrollments.created_at >= registration_sent.sent_at
+      SQL
       where("pd_applications.created_at >= ?", REMINDER_START_DATE).
       where('pd_enrollments.id is null').
       distinct
