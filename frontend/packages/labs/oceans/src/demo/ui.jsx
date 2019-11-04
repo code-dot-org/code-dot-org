@@ -55,9 +55,7 @@ const styles = {
   button1col: {
     width: '20%',
     display: 'block',
-    margin: '0 auto',
-    marginTop: '2%',
-    marginBottom: '2%'
+    margin: '2% auto'
   },
   button3col: {
     width: '20%',
@@ -159,12 +157,11 @@ const styles = {
     top: '20%',
     left: '70%'
   },
-  predictBot: {
-    position: 'absolute',
-    height: '50%',
-    top: '3%',
-    left: '50%',
-    transform: 'translateX(-50%)'
+  predictSpeech: {
+    top: '88%',
+    left: '12%',
+    width: '65%',
+    height: 38
   },
   pondText: {
     position: 'absolute',
@@ -344,7 +341,7 @@ class Instructions extends React.Component {
 
   onContinueButton = () => {
     const state = getState();
-    const { onContinue, currentInstructionsPage } = state;
+    const {onContinue, currentInstructionsPage} = state;
     const [, appModeVariant] = getAppMode(state);
     const numPages = instructionsText[appModeVariant].length;
 
@@ -399,10 +396,7 @@ class Instructions extends React.Component {
             })}
           </div>
         )}
-        <Button
-          style={styles.continueButton}
-          onClick={this.onContinueButton}
-        >
+        <Button style={styles.continueButton} onClick={this.onContinueButton}>
           Continue
         </Button>
       </Body>
@@ -590,21 +584,42 @@ let Train = class Train extends React.Component {
 Train = Radium(Train);
 
 class Predict extends React.Component {
+  speechBubbleText = state => {
+    if (state.isRunning) {
+      return null;
+    }
+
+    if (state.appMode === 'fishvtrash') {
+      return 'Now let’s see if A.I. knows what a fish looks like.';
+    } else if (state.appMode === 'short' || state.appMode === 'long') {
+      return `Nice work! Your training data has programmed A.I. to recognize ${state.word.toLowerCase()} fish. Let’s run A.I.’s program and see how it works.`;
+    } else {
+      return null;
+    }
+  };
+
   render() {
     const state = getState();
+    const speechBubbleText = this.speechBubbleText(state);
+
+    let btnText, btnOnClick;
+    if (state.isRunning) {
+      btnText = 'Continue';
+      btnOnClick = () => toMode(Modes.Pond);
+    } else {
+      btnText = 'Run A.I.';
+      btnOnClick = () => setState({isRunning: true});
+    }
 
     return (
       <Body>
         <Header>A.I. Sorting</Header>
-        <img style={styles.predictBot} src={aiBotClosed} />
-        {state.canSkipPredict && (
-          <Button
-            style={styles.continueButton}
-            onClick={() => toMode(Modes.Pond)}
-          >
-            Skip
-          </Button>
+        {speechBubbleText && (
+          <SpeechBubble text={speechBubbleText} style={styles.predictSpeech} />
         )}
+        <Button style={styles.continueButton} onClick={btnOnClick}>
+          {btnText}
+        </Button>
       </Body>
     );
   }

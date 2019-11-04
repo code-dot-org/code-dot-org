@@ -5,7 +5,7 @@ import {generateOcean} from '../../utils/generateOcean';
 export const init = () => {
   const state = getState();
   const fishData = generateOcean(100, state.loadTrashImages);
-  setState({isRunning: true, fishData});
+  setState({fishData});
 };
 
 export const predictFish = (state, idx) => {
