@@ -68,8 +68,6 @@ export const render = () => {
       break;
     case Modes.Predicting:
       drawMovingFish(state);
-      // TODO: ENABLE THIS
-      // drawPrediction();
       drawPredictBot(state);
       break;
     case Modes.Pond:
