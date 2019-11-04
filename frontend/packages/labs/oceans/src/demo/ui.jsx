@@ -8,7 +8,7 @@ import {getAppMode} from './helpers';
 import {toMode} from './toMode';
 import {onClassifyFish} from './models/train';
 import colors from './colors';
-import aiBotClosed from '../../public/images/ai-bot-closed.png';
+import aiBotClosed from '../../public/images/ai-bot/ai-bot-closed.png';
 import xIcon from '../../public/images/x-icon.png';
 import checkmarkIcon from '../../public/images/checkmark-icon.png';
 

@@ -9,7 +9,9 @@ import {
   loadAllTrashImages,
   initMobilenet
 } from './OceanObject';
-import aiBotClosed from '../../public/images/ai-bot-closed.png';
+import aiBotClosed from '../../public/images/ai-bot/ai-bot-closed.png';
+import aiBotCheckmark from '../../public/images/ai-bot/ai-bot-checkmark.png';
+import aiBotX from '../../public/images/ai-bot/ai-bot-x.png';
 import redScanner from '../../public/images/red-scanner.png';
 import greenScanner from '../../public/images/green-scanner.png';
 
