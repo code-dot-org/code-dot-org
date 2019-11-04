@@ -560,29 +560,41 @@ let Train = class Train extends React.Component {
 Train = Radium(Train);
 
 class Predict extends React.Component {
-  renderSpeechBubble = state => {
+  speechBubbleText = state => {
     if (state.isRunning) {
       return null;
+    }
+
+    if (state.appMode === 'fishvtrash') {
+      return 'Now let’s see if A.I. knows what a fish looks like.';
+    } else if (state.appMode === 'short') {
+      return `Nice work! Your training data has programmed A.I. to recognize ${
+        state.word
+      } fish. Let’s run A.I.’s program and see how it works.`;
     } else {
-      const text = 'Now let’s see if A.I. knows what a fish looks like.';
-      return <SpeechBubble text={text} style={styles.predictSpeech} />;
+      return null;
     }
   };
 
   render() {
     const state = getState();
-    const btnText = state.isRunning ? 'Continue' : 'Run A.I.';
-    let btnOnClick;
+    const speechBubbleText = this.speechBubbleText(state);
+
+    let btnText, btnOnClick;
     if (state.isRunning) {
+      btnText = 'Continue';
       btnOnClick = () => toMode(Modes.Pond);
     } else {
+      btnText = 'Run A.I.';
       btnOnClick = () => setState({isRunning: true});
     }
 
     return (
       <Body>
         <Header>A.I. Sorting</Header>
-        {this.renderSpeechBubble(state)}
+        {speechBubbleText && (
+          <SpeechBubble text={speechBubbleText} style={styles.predictSpeech} />
+        )}
         <Button style={styles.continueButton} onClick={btnOnClick}>
           {btnText}
         </Button>
