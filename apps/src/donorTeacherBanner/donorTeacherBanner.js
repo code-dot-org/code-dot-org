@@ -10,7 +10,7 @@ import initResponsive from '@cdo/apps/code-studio/responsive';
 
 registerReducers({isRtl, responsive});
 
-$(document).ready(initRegionalPartnerSearch);
+$(document).ready(init);
 
 function showDonorTeacherBanner() {
   const donorTeacherBannerElements = $('.donor-teacher-banner-container');
@@ -52,7 +52,18 @@ function showDonorTeacherBanner() {
     });
 }
 
-function initRegionalPartnerSearch() {
+async function init() {
   initResponsive();
-  showDonorTeacherBanner();
+  if (await hasSchoolDonor('Amazon')) {
+    showDonorTeacherBanner();
+    $('.show-if-eligible').show();
+  } else {
+    $('.show-if-not-eligible').show();
+  }
+}
+
+async function hasSchoolDonor(assertedDonorName) {
+  const response = await fetch('/dashboardapi/v1/users/me/school_donor_name');
+  const realDonorName = await response.json();
+  return realDonorName === assertedDonorName;
 }

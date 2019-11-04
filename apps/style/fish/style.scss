@@ -1,0 +1,28 @@
+#codeWorkspace {
+  border: none !important;
+}
+
+button {
+  background-color: white;
+  font-size: 120%;
+  border-radius: 5px;
+  padding: 1%;
+  border: none;
+  width: 17%;
+}
+button:focus {
+  outline: white auto 5px;
+}
+@media screen and (max-width: 800px) {
+  button {
+    font-size: 90%;
+  }
+  #activity-intro-text {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 600px) {
+  button {
+    font-size: 60%;
+  }
+}

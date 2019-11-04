@@ -25,7 +25,7 @@ const styles = {
     marginTop: 20
   },
   libraryList: {
-    maxHeight: '162px',
+    maxHeight: '140px',
     overflowY: 'auto'
   },
   message: {
@@ -74,12 +74,17 @@ export default class LibraryManagerDialog extends React.Component {
     this.setState({importLibraryId: event.target.value});
   };
 
-  addLibrary = channelId => {
-    let libraryClient = new LibraryClientApi(channelId);
+  importLibrary = (channelId, versionId) => {
     // TODO: Check for naming collisions between libraries.
-    libraryClient.getLatest(
+    let libraryClient = new LibraryClientApi(channelId);
+    libraryClient.fetchByVersion(
+      versionId,
       data => {
-        let updatedjson = libraryParser.prepareLibraryForImport(data);
+        let updatedjson = libraryParser.prepareLibraryForImport(
+          data,
+          channelId,
+          versionId
+        );
         dashboard.project.setProjectLibraries([
           ...this.state.libraries,
           updatedjson
@@ -89,6 +94,13 @@ export default class LibraryManagerDialog extends React.Component {
       error => {
         console.log('ERROR: ' + error);
       }
+    );
+  };
+
+  addLibrary = channelId => {
+    let libraryClient = new LibraryClientApi(channelId);
+    libraryClient.fetchLatestVersionId(versionId =>
+      this.importLibrary(channelId, versionId)
     );
   };
 

@@ -2,7 +2,9 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
 import {expect} from '../../../util/reconfiguredChai';
+import {enforceDocumentBodyCleanup} from '../../../util/testUtils';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
+import GoogleChart from '@cdo/apps/applab/GoogleChart';
 import {UnconnectedDataVisualizer as DataVisualizer} from '@cdo/apps/storage/dataBrowser/DataVisualizer';
 
 const DEFAULT_PROPS = {
@@ -12,19 +14,189 @@ const DEFAULT_PROPS = {
 };
 
 describe('DataVisualizer', () => {
-  var wrapper;
-
   it('The modal starts closed', () => {
-    wrapper = shallow(<DataVisualizer {...DEFAULT_PROPS} />);
+    let wrapper = shallow(<DataVisualizer {...DEFAULT_PROPS} />);
     expect(wrapper.find(BaseDialog).prop('isOpen')).to.be.false;
   });
 
   it('The modal opens when the button is clicked', () => {
-    wrapper = shallow(<DataVisualizer {...DEFAULT_PROPS} />);
+    let wrapper = shallow(<DataVisualizer {...DEFAULT_PROPS} />);
     expect(wrapper.find(BaseDialog).prop('isOpen')).to.be.false;
 
     wrapper.instance().handleOpen();
     expect(wrapper.find(BaseDialog).prop('isOpen')).to.be.true;
+  });
+
+  describe('updateChart', () => {
+    enforceDocumentBodyCleanup({checkEveryTest: false}, () => {
+      let wrapper;
+      let spy;
+      let chartArea;
+      beforeEach(() => {
+        GoogleChart.lib = {};
+        spy = sinon.stub(GoogleChart.prototype, 'drawChart');
+        const STARTING_PROPS = {
+          tableColumns: ['category1', 'category2'],
+          tableName: 'testTable',
+          tableRecords: [
+            '{"category1" : "red", "category2": 1}',
+            '{"category1" : "blue", "category2": 1}',
+            '{"category1" : "red", "category2": 3}',
+            '{"category1" : "green", "category2": 4}'
+          ]
+        };
+        wrapper = shallow(<DataVisualizer {...STARTING_PROPS} />);
+        wrapper.instance().handleOpen();
+        chartArea = document.createElement('div');
+        chartArea.setAttribute('id', 'chart-area');
+        document.body.appendChild(chartArea);
+      });
+
+      afterEach(() => {
+        document.body.removeChild(chartArea);
+        spy.restore();
+      });
+
+      it('can show a bar chart', () => {
+        wrapper
+          .instance()
+          .setState({chartType: 'Bar Chart', values: 'category1'});
+        const expectedChartData = [
+          {category1: 'red', count: 2},
+          {category1: 'blue', count: 1},
+          {category1: 'green', count: 1}
+        ];
+        expect(spy).to.have.been.calledOnce;
+        expect(spy.getCalls()[0].args).to.deep.equal([
+          expectedChartData,
+          ['category1', 'count'],
+          {}
+        ]);
+      });
+
+      it('can show a histogram', () => {
+        wrapper.instance().setState({
+          chartType: 'Histogram',
+          values: 'category2',
+          bucketSize: 2
+        });
+
+        const expectedChartData = [
+          {category1: 'red', category2: 1},
+          {category1: 'blue', category2: 1},
+          {category1: 'red', category2: 3},
+          {category1: 'green', category2: 4}
+        ];
+        expect(spy).to.have.been.calledOnce;
+        expect(spy.getCalls()[0].args).to.deep.equal([
+          expectedChartData,
+          ['category2'],
+          {histogram: {bucketSize: 2}}
+        ]);
+      });
+
+      it('can show a crosstab chart', () => {
+        let originalRecords = [
+          '{"city": "Seattle", "weather": "sunny"}',
+          '{"city": "Seattle", "weather": "rainy"}',
+          '{"city": "Boston", "weather": "rainy"}',
+          '{"city": "Boston", "weather": "cloudy"}',
+          '{"city": "Seattle", "weather": "rainy"}',
+          '{"city": "NYC", "weather": "sunny"}',
+          '{"city": "NYC", "weather": "sunny"}',
+          '{"city": "NYC", "weather": "cloudy"}'
+        ];
+        wrapper.setProps({
+          tableRecords: originalRecords,
+          tableColumns: ['city', 'weather']
+        });
+        wrapper.instance().setState({
+          chartType: 'Cross Tab',
+          xValues: 'city',
+          yValues: 'weather'
+        });
+        const expectedChartData = [
+          {city: 'Seattle', cloudy: 0, rainy: 2, sunny: 1},
+          {city: 'Boston', cloudy: 1, rainy: 1, sunny: 0},
+          {city: 'NYC', cloudy: 1, rainy: 0, sunny: 2}
+        ];
+        expect(spy).to.have.been.calledOnce;
+        expect(spy.getCalls()[0].args).to.deep.equal([
+          expectedChartData,
+          ['city', 'cloudy', 'rainy', 'sunny'],
+          {}
+        ]);
+      });
+    });
+  });
+
+  describe('createPivotTable', () => {
+    let wrapper;
+    beforeEach(() => {
+      wrapper = shallow(<DataVisualizer {...DEFAULT_PROPS} />);
+    });
+
+    it('populates zeroes for all row/column combinations', () => {
+      const records = [
+        {abc: 'a', value: 1},
+        {abc: 'b', value: 2},
+        {abc: 'c', value: 3}
+      ];
+      const expectedPivotData = {
+        chartData: [
+          {abc: 'a', 1: 1, 2: 0, 3: 0},
+          {abc: 'b', 1: 0, 2: 1, 3: 0},
+          {abc: 'c', 1: 0, 2: 0, 3: 1}
+        ],
+        columns: ['abc', 1, 2, 3]
+      };
+      expect(
+        wrapper.instance().createPivotTable(records, 'abc', 'value')
+      ).to.deep.equal(expectedPivotData);
+    });
+
+    it('sorts string columns alphabetically, but with the row column first', () => {
+      const records = [
+        {abc: 'a', value: 'z'},
+        {abc: 'b', value: 'z'},
+        {abc: 'a', value: 'z'},
+        {abc: 'c', value: 'z'},
+        {abc: 'c', value: 'a'}
+      ];
+      const expectedPivotData = {
+        chartData: [
+          {abc: 'a', a: 0, z: 2},
+          {abc: 'b', a: 0, z: 1},
+          {abc: 'c', a: 1, z: 1}
+        ],
+        columns: ['abc', 'a', 'z']
+      };
+      expect(
+        wrapper.instance().createPivotTable(records, 'abc', 'value')
+      ).to.deep.equal(expectedPivotData);
+    });
+
+    it('sorts numeric columns numerically, with the row column first', () => {
+      const records = [
+        {abc: 'a', value: 134},
+        {abc: 'b', value: 134},
+        {abc: 'a', value: 134},
+        {abc: 'c', value: 134},
+        {abc: 'c', value: 18}
+      ];
+      const expectedPivotData = {
+        chartData: [
+          {abc: 'a', 18: 0, 134: 2},
+          {abc: 'b', 18: 0, 134: 1},
+          {abc: 'c', 18: 1, 134: 1}
+        ],
+        columns: ['abc', 18, 134]
+      };
+      wrapper.instance().setState({numericColumns: ['value']});
+      expect(
+        wrapper.instance().createPivotTable(records, 'abc', 'value')
+      ).to.deep.equal(expectedPivotData);
+    });
   });
 
   describe('parseRecords', () => {
