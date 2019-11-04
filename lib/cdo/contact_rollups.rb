@@ -219,18 +219,20 @@ class ContactRollups
     # MySQL use the email index to sort by email.
 
     # Query all of the contacts in the latest daily contact rollup table (contact_rollups_daily) sorted by email.
-    src_query =
-      "SELECT * FROM contact_rollups_daily
+    src_query = <<-SQL.squish
+      SELECT * FROM contact_rollups_daily
       FORCE INDEX(contact_rollups_email_index)
-      ORDER BY email DESC"
+      ORDER BY email DESC
+    SQL
     contact_rollups_src = PEGASUS_REPORTING_DB_READER[src_query]
 
     # Query all of the contacts in the master contact rollup table (contact_rollups_daily) sorted by email.
     # Use MYSQL 5.7 MAX_EXECUTION_TIME optimizer hint to override the production database global query timeout.
-    dest_query =
-      "SELECT /*+ MAX_EXECUTION_TIME(#{MAX_EXECUTION_TIME}) */ * FROM contact_rollups
+    dest_query = <<-SQL.squish
+      SELECT /*+ MAX_EXECUTION_TIME(#{MAX_EXECUTION_TIME}) */ * FROM contact_rollups
       FORCE INDEX(contact_rollups_email_index)
-      ORDER BY email DESC"
+      ORDER BY email DESC
+    SQL
     contact_rollups_dest = PEGASUS_DB_READER[dest_query]
 
     # Create iterators for both queries using the #stream method so we stream the results back rather than
