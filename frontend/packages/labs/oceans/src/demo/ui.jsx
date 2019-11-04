@@ -341,7 +341,7 @@ class Instructions extends React.Component {
 
   onContinueButton = () => {
     const state = getState();
-    const { onContinue, currentInstructionsPage } = state;
+    const {onContinue, currentInstructionsPage} = state;
     const [, appModeVariant] = getAppMode(state);
     const numPages = instructionsText[appModeVariant].length;
 
@@ -396,10 +396,7 @@ class Instructions extends React.Component {
             })}
           </div>
         )}
-        <Button
-          style={styles.continueButton}
-          onClick={this.onContinueButton}
-        >
+        <Button style={styles.continueButton} onClick={this.onContinueButton}>
           Continue
         </Button>
       </Body>
@@ -593,10 +590,8 @@ class Predict extends React.Component {
 
     if (state.appMode === 'fishvtrash') {
       return 'Now let’s see if A.I. knows what a fish looks like.';
-    } else if (state.appMode === 'short') {
-      return `Nice work! Your training data has programmed A.I. to recognize ${
-        state.word
-      } fish. Let’s run A.I.’s program and see how it works.`;
+    } else if (state.appMode === 'short' || state.appMode === 'long') {
+      return `Nice work! Your training data has programmed A.I. to recognize ${state.word.toLowerCase()} fish. Let’s run A.I.’s program and see how it works.`;
     } else {
       return null;
     }
