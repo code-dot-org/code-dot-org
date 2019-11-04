@@ -184,6 +184,8 @@ en:
             '1': "→"
       Dancelab_eval:
         text: eval {CODE}
+      Dancelab_everyMeasuresRange:
+        text: 'repeat every {N} measures after {START} '
       Dancelab_everySeconds:
         text: 'repeat every {N} {UNIT} '
         options:
