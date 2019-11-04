@@ -128,7 +128,7 @@ class DataVisualizer extends React.Component {
         if (this.state.xValues && this.state.yValues) {
           chart = new GoogleChart.MaterialScatterChart(targetDiv);
           chartData = this.state.parsedRecords;
-          columns.push(this.state.xValues, this.state.yValues);
+          columns = [this.state.xValues, this.state.yValues];
         }
         break;
       default:
