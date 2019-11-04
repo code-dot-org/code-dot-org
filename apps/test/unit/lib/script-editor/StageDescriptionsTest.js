@@ -66,6 +66,12 @@ describe('StageDescriptions', () => {
       descriptions.find('button').text(),
       'Import from Curriculum Builder'
     );
+
+    // collapses after subsequent button click
+    button.simulate('click');
+    assert.equal(wrapper.state('collapsed'), true);
+    assert.include(button.text(), 'Collapse');
+    assert.equal(wrapper.childAt(1).children().length, 1);
   });
 
   it('updates button while importing', () => {
