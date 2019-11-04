@@ -37,13 +37,10 @@ describe('StageDescriptions', () => {
     );
     assert.equal(wrapper.state('collapsed'), true);
     assert.equal(wrapper.childAt(1).children().length, 1);
-    assert.equal(
-      wrapper
-        .childAt(1)
-        .childAt(0)
-        .type(),
-      'button'
-    );
+
+    const button = wrapper.childAt(1).childAt(0);
+    assert.equal(button.type(), 'button');
+    assert.include(button.text(), 'Expand');
   });
 
   it('uncollapses on click', () => {
@@ -56,18 +53,17 @@ describe('StageDescriptions', () => {
     wrapper.find('button').simulate('click');
     assert.equal(wrapper.state('collapsed'), false);
 
-    // button replaced by a div
-    assert.equal(wrapper.childAt(1).children().length, 1);
-    assert.equal(
-      wrapper
-        .childAt(1)
-        .childAt(0)
-        .type(),
-      'div'
-    );
+    const button = wrapper.childAt(1).childAt(0);
+    assert.equal(button.type(), 'button');
+    assert.include(button.text(), 'Collapse');
+
+    // button followed by a div
+    assert.equal(wrapper.childAt(1).children().length, 2);
+    const descriptions = wrapper.childAt(1).childAt(1);
+    assert.equal(descriptions.type(), 'div');
 
     assert.equal(
-      wrapper.find('button').text(),
+      descriptions.find('button').text(),
       'Import from Curriculum Builder'
     );
   });
