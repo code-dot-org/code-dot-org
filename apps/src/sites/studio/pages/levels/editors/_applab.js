@@ -1,5 +1,8 @@
 /** @file JavaScript run only on the applab level edit page. */
 import $ from 'jquery';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import datasets from '@cdo/apps/storage/dataBrowser/datasetManifest.json';
 
 $(document).ready(function() {
   const makerBlocks = {
@@ -58,4 +61,14 @@ $(document).ready(function() {
       editor.getDoc().setValue(JSON.stringify(functionsWithMaker, null, ' '));
     }
   });
+  let tableNames = datasets.tables.map(table => table.name).join(',');
+  ReactDOM.render(
+    <div>
+      <b>Options: </b>
+      {tableNames}
+    </div>,
+    $('<div></div>')
+      .insertBefore('#level_data_library_tables')
+      .get(0)
+  );
 });
