@@ -204,7 +204,6 @@ export default class StageDescriptions extends React.Component {
                 />
               )}
               <button
-                id="import-stage-descriptions"
                 type="button"
                 className="btn"
                 disabled={!!this.state.buttonText}
