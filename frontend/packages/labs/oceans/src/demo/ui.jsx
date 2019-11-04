@@ -342,6 +342,21 @@ class Instructions extends React.Component {
     setState({currentInstructionsPage: page});
   }
 
+  onContinueButton = () => {
+    const state = getState();
+    const { onContinue, currentInstructionsPage } = state;
+    const [, appModeVariant] = getAppMode(state);
+    const numPages = instructionsText[appModeVariant].length;
+
+    if (currentInstructionsPage < numPages - 1) {
+      this.setInstructionsPage(currentInstructionsPage + 1);
+      return;
+    }
+    if (onContinue) {
+      onContinue();
+    }
+  };
+
   render() {
     const state = getState();
     const currentPage = state.currentInstructionsPage;
@@ -386,11 +401,7 @@ class Instructions extends React.Component {
         )}
         <Button
           style={styles.continueButton}
-          onClick={() => {
-            if (state.onContinue) {
-              state.onContinue();
-            }
-          }}
+          onClick={this.onContinueButton}
         >
           Continue
         </Button>
