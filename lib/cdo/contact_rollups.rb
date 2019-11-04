@@ -302,9 +302,13 @@ class ContactRollups
     log("#{Time.now} Completed. #{num_total} source rows processed. #{num_inserts} insert(s), #{num_updates} update(s), #{num_unchanged} unchanged.")
     log_collector.info("#{num_total} source rows processed. #{num_inserts} insert(s), #{num_updates} update(s), #{num_unchanged} unchanged.")
   rescue StandardError => error
-    log "Error iterating through result set stream - #{error.message}"
+    log "Error caught and re-raised: #{error.message}"
     log "Current Source Record - #{contact_rollup_src}"
     log "Current Destination Record - #{contact_rollup_dest}"
+
+    log_collector.info("Current source record = #{contact_rollup_src}")
+    log_collector.info("Current destination record = #{contact_rollup_dest}")
+
     raise error
   end
 
@@ -965,8 +969,5 @@ class ContactRollups
     s.next
   rescue StopIteration
     nil
-  rescue StandardError => error
-    log "Error iterating over stream #{s} - #{error}"
-    raise error
   end
 end
