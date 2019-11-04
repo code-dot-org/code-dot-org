@@ -28,14 +28,22 @@ export const getState = function() {
 };
 
 export const setState = function(newState) {
-  state = {...state, ...newState};
+  return setStateInternal({...state, ...newState});
+};
+
+export const setInitialState = function(newState) {
+  return setStateInternal({...initialState, ...newState});
+};
+
+function setStateInternal(newState) {
+  state = newState;
 
   if (setStateCallback) {
     setStateCallback();
   }
 
   return state;
-};
+}
 
 export const setSetStateCallback = callback => {
   setStateCallback = callback;

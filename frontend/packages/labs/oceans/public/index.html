@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>ML Activities Playground</title>
     <style>
+      #level-select {
+        height: 70px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+      }
       #container {
         position: relative;
         width: 100%;
@@ -49,6 +55,16 @@
     </style>
   </head>
   <body>
+    <div id="level-select">
+      <input type="radio" class="level-radio" name="level-radio" id="intro-instructions">
+      <input type="radio" class="level-radio" name="level-radio" id="fishvtrash-instructions">
+      <input type="radio" class="level-radio" name="level-radio" id="fishvtrash">
+      <input type="radio" class="level-radio" name="level-radio" id="creaturesvtrash">
+      <input type="radio" class="level-radio" name="level-radio" id="short-instructions">
+      <input type="radio" class="level-radio" name="level-radio" id="short">
+      <input type="radio" class="level-radio" name="level-radio" id="long">
+      <input type="radio" class="level-radio" name="level-radio" id="pondlab">
+    </div>
     <div id="container">
       <div id="container-react"></div>
       <canvas id="background-canvas"></canvas>

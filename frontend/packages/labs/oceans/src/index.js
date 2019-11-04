@@ -4,3 +4,4 @@ export {Modes} from './demo/constants';
 export * from './demo/state';
 export {render as renderCanvas} from './demo/renderer';
 export {default as UI} from './demo/ui';
+export {initAll} from './demo/init';
