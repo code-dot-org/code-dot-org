@@ -1764,3 +1764,19 @@ pt:
               name: Introdução
             Nested Loops:
               name: Laços aninhados
+        k5-onlinepd-copy:
+          stages:
+            Next Steps:
+              name: Próximos Passos
+            Loops:
+              name: ciclos
+            Conditionals:
+              name: Condicionais
+            Events:
+              name: Eventos
+            Functions:
+              name: Funções
+            Variables:
+              name: variáveis
+            For Loops:
+              name: Ciclos "for"

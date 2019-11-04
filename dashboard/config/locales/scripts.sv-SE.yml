@@ -2065,3 +2065,19 @@ sv:
             Dance Party:
               name: Dansparty
           description: Koda ditt egna dansparty som du kan dela med dina vänner.
+        k5-onlinepd-copy:
+          stages:
+            Next Steps:
+              name: Nästa steg
+            Loops:
+              name: loopar
+            Conditionals:
+              name: Villkor
+            Events:
+              name: Händelser
+            Functions:
+              name: funktioner
+            Variables:
+              name: variabler
+            For Loops:
+              name: "'För' loopar"

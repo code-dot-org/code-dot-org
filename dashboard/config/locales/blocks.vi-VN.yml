@@ -946,10 +946,6 @@ vi:
         text: màu ngẫu nhiên
       Mikelab_repeatUntilComplete:
         text: lặp lại mãi mãi
-      Mikelab_sendBad:
-        text: qua trái
-      Mikelab_sendGood:
-        text: qua phải
       Mikelab_setBG:
         options:
           BG:

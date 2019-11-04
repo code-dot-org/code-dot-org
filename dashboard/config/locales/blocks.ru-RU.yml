@@ -1015,10 +1015,6 @@ ru:
         text: случайный цвет
       Mikelab_repeatUntilComplete:
         text: повторять бесконечно
-      Mikelab_sendBad:
-        text: переместить влево
-      Mikelab_sendGood:
-        text: Переместить вправо
       Mikelab_setBG:
         options:
           BG:

@@ -856,6 +856,8 @@ tr:
     csp_lists: 'Listeler'
     csp_loops: 'Döngüler'
     dlp: 'Yansıma İstemleri'
+    k5_getting_started: 'İlk adım'
+    k5_next_steps: 'Sonraki Adımlar'
   external_links:
     disclaimer: Yasal uyarı
     leaving_domain: Code.org tarafından işletilen site değil. 

@@ -1563,3 +1563,17 @@ eu:
               name: Sarrera
             Nested Loops:
               name: Kabiatutako begiztak
+        k5-onlinepd-copy:
+          stages:
+            Loops:
+              name: Itzuliak
+            Conditionals:
+              name: Baldintzak
+            Events:
+              name: Gertaerak
+            Functions:
+              name: Funtzioak
+            Variables:
+              name: Aldagaiak
+            For Loops:
+              name: For begiztak

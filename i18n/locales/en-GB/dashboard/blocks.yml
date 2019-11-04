@@ -182,10 +182,6 @@ en-GB:
             '"space"': space
       Mikelab_randomColor:
         text: random colour
-      Mikelab_sendBad:
-        text: move left
-      Mikelab_sendGood:
-        text: mova à direita
       Mikelab_setBG:
         options:
           BG:

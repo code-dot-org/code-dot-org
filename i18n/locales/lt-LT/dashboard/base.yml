@@ -656,6 +656,7 @@ lt:
     csp_functions: 'Komandų kūrimas'
     csp_lists: 'Sąrašai'
     csp_loops: 'Kartojimas'
+    k5_next_steps: 'Kiti žingsniai'
   hoc_download:
     title: '„Programavimo valandos” parsisiuntimai'
     capsule_title: 'Ar turite internetą?'

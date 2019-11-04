@@ -277,3 +277,13 @@ ur:
               name: متغیرات
             Conditionals:
               name: شرائط
+        k5-onlinepd-copy:
+          stages:
+            Loops:
+              name: لوپس
+            Conditionals:
+              name: شرائط
+            Events:
+              name: موقعے
+            Variables:
+              name: متغیرات
