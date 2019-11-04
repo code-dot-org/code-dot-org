@@ -392,10 +392,6 @@ az:
         text: ixtiyari rəng
       Mikelab_repeatUntilComplete:
         text: təkrar et sonsuz
-      Mikelab_sendBad:
-        text: sola get
-      Mikelab_sendGood:
-        text: sağa get
       Mikelab_setBG:
         options:
           BG:

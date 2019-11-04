@@ -5651,7 +5651,7 @@ es-MX:
             Until Loops in Maze:
               name: Bucles 'mientras' en el Laberinto
           title: Curso Express
-          assignment_family_title: Curso Express
+          assignment_family_title: Curso Express (2018)
           description_audience: 'Edades: 9 a 18'
           description_short: 'Una introducción a la ciencia de la computación, que combina lo mejor de nuestro plan de estudios de escuela primaria para estudiantes mayores.'
           description: Aprende los fundamentos de las ciencias de la computación y la seguridad en Internet. Al final del curso, crea tu propio juego o historia para compartir.
@@ -11302,12 +11302,24 @@ es-MX:
           stages:
             CS Discoveries Deeper Learning Module 3:
               name: Módulo 3 de Aprendizaje Profundo de Descubrimientos de Ciencias de la Computación
+            Deeper Learning Overview:
+              name: Resumen del aprendizaje profundo
+            'Step 1: Develop Understanding':
+              name: 'Paso 1: desarrollar la comprensión'
+            'Step 2: Demonstrate Understanding':
+              name: 'Paso 2: demostrar la comprensión'
           title: Módulo 3 de Aprendizaje Profundo de Descubrimientos de Ciencias de la Computación
           description_audience: Facilitadores de Descubrimientos de las Ciencias de la Computación en período de formación 2019
         dlp19-csd-mod-w4:
           stages:
             CS Discoveries Deeper Learning Module 4:
               name: Módulo 4 de Aprendizaje Profundo de Descubrimientos de Ciencias de la Computación
+            Deeper Learning Overview:
+              name: Resumen del aprendizaje profundo
+            'Step 1: Develop Understanding':
+              name: 'Paso 1: desarrollar la comprensión'
+            'Step 2: Demonstrate Understanding':
+              name: 'Paso 2: demostrar la comprensión'
           title: Módulo 4 de Aprendizaje Profundo de Descubrimientos de Ciencias de la Computación
           description_audience: Facilitadores de Descubrimientos de las Ciencias de la Computación en período de formación 2019
         dlp19-csp-mod-w1:
@@ -11347,6 +11359,12 @@ es-MX:
           stages:
             CS Principles Deeper Learning Module 4:
               name: Módulo 4 de Aprendizaje Profundo de Principios de Ciencias de la Computación
+            Deeper Learning Overview:
+              name: Resumen del aprendizaje profundo
+            'Step 1: Develop Understanding':
+              name: 'Paso 1: desarrollar la comprensión'
+            'Step 2: Demonstrate Understanding':
+              name: 'Paso 2: demostrar la comprensión'
           title: Módulo 4 de Aprendizaje Profundo de Principios de Ciencias de la Computación
         csd-pilot:
           stages:
@@ -11518,3 +11536,43 @@ es-MX:
             Dance Party:
               name: Fiesta de baile
           description: '¡Programa tu propia fiesta de baile para compartir con tus amigos!'
+        k5-onlinepd-copy:
+          stages:
+            Getting Started:
+              name: Primeros pasos
+            Computer Science Fundamentals:
+              name: Fundamentos de la informática
+            Looking Ahead:
+              name: Mirar hacia adelante
+            'Mastering the Basics: Sequencing':
+              name: 'Dominio de los conceptos básicos: secuencias'
+            'Mastering the Basics: Loops':
+              name: 'Dominio de los conceptos básicos: bucles'
+            'Mastering the Basics: Conditionals':
+              name: 'Dominio de los conceptos básicos: condicionales'
+            'Mastering the Basics: Functions':
+              name: 'Dominio de los conceptos básicos: funciones'
+            'Mastering the Basics: Events':
+              name: 'Dominio de los conceptos básicos: eventos'
+            Best Practices for Teaching Computer Science:
+              name: Mejores prácticas para la enseñanza de ciencias de la computación
+            Planning:
+              name: Planificación
+            Next Steps:
+              name: Próximos pasos
+            Sequencing:
+              name: Secuencias
+            Loops:
+              name: Bucles
+            Conditionals:
+              name: Condicionales
+            Events:
+              name: Eventos
+            Functions:
+              name: Funciones
+            Sprite Lab:
+              name: Laboratorio de sprites
+            Variables:
+              name: Variables
+            For Loops:
+              name: Bucles Para

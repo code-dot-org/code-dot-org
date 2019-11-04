@@ -899,6 +899,8 @@ sk:
     time4cs_c3: 'Život v Everglades'
     time4cs_c4: 'Invazívne vplyvy na Everglades'
     time4cs_c5: 'Občania ovplyvňujú zmeny v Everglades'
+    k5_getting_started: 'Začíname'
+    k5_next_steps: 'Ďalšie kroky'
   external_links:
     disclaimer: Upozornenie
     leaving_domain: Opúštate túto doménu na stránku, ktorá nie je prevádzkovaná spoločnosťou Code.org.
@@ -1066,3 +1068,7 @@ sk:
     privacy_policy: 'Zásady ochrany osobných údajov'
     logout: 'Odhlásiť sa'
     yes: 'Áno'
+  page_not_found_title: "Stránka nebola nájdená"
+  page_not_found_header: '404: Stránka nebola nájdená'
+  page_not_found_description: "Stránka, ktorú hľadáte na tejto adrese neexistuje. Skontrolujte adresu a zadajte ju znova. Alebo prejdite na našu domovskú stránku."
+  page_not_found_button: "Späť na domovskú stránku"

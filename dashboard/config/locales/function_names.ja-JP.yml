@@ -313,6 +313,8 @@ ja-JP:
         my function: my function
       course1_artist_loops_challenge1:
         '"simple" solution': '"simple" solution'
+      course1_artist_loops_challenge2:
+        potential solution: potential solution
       course3_artist_functions_challenge1:
         my design: 私のデザイン
         do something: 何かしてください
@@ -355,13 +357,19 @@ ja-JP:
         draw a square 20: 正方形をかく
         do something: 何かしてください
       course4_bee_for_challenge1:
-        move and get nectar with counter: counterを使って、動いてミツをとる
+        move and get nectar with counter: counterを使って、進んでミツをとる
       course4_bee_fwp_challenge1:
         pick row: pick row
       course4_bee_fwp_challenge2:
         pick row: pick row
       courseA_artist_loops_challenge1:
         '"simple" solution': '"simple" solution'
+      courseB_artist_loops_challenge2:
+        potential solution: potential solution
+      courseB_artist_loops_challenge2_2018:
+        potential solution: potential solution
+      courseB_artist_loops_challenge2_2019:
+        potential solution: potential solution
       courseC_artist_prog3:
         draw flame: 窓わくをかく
         draw fire: ほのおをかく
@@ -784,11 +792,11 @@ ja-JP:
         move and check: 動いて調べる
         check nectar or honey: ミツかハチミツか調べる
       courseF_bee_for_challenge1:
-        move and get nectar with counter: counterを使って、動いてミツをとる
+        move and get nectar with counter: counterを使って、進んでミツをとる
       courseF_bee_for_challenge1_2018:
-        move and get nectar with counter: counterを使って、動いてミツをとる
+        move and get nectar with counter: counterを使って、進んでミツをとる
       courseF_bee_for_challenge1_2019:
-        move and get nectar with counter: counterを使って、動いてミツをとる
+        move and get nectar with counter: counterを使って、進んでミツをとる
       courseF_bee_functions2:
         get only nectar: ミツを集める
       courseF_bee_functions3:
@@ -838,13 +846,39 @@ ja-JP:
         pick row: pick row
       courseF_bee_fwp_challenge2:
         pick row: pick row
+      courseF_bee_variables_1_2018:
+        collect row: 一列分集める
+      courseF_bee_variables_1_2019:
+        collect row: 一列分集める
+      courseF_bee_variables_2_2018:
+        collect row: 一列分集める
+      courseF_bee_variables_2_2019:
+        collect row: 一列分集める
+      courseF_bee_variables_3_2018:
+        collect row: 一列分集める
+      courseF_bee_variables_3_2019:
+        collect row: 一列分集める
+      courseF_bee_variables_4_2018:
+        collect row: 一列分集める
+      courseF_bee_variables_4_2019:
+        collect row: 一列分集める
+      courseF_bee_variables_5_2018:
+        collect row: 一列分集める
+      courseF_bee_variables_5_2019:
+        collect row: 一列分集める
+      courseF_bee_variables_6_2018:
+        collect stairs: 階段状に集める
+      courseF_bee_variables_6_2019:
+        collect stairs: 階段状に集める
       courseF_bee_variables_7_2018:
         collect: あつめる
       courseF_bee_variables_7_2019:
         collect: あつめる
       courseF_bee_variables_8_2018:
+        move and increment: move and increment
         collect: あつめる
       courseF_bee_variables_8_2019:
+        move and increment: move and increment
         collect: あつめる
       grade5_artist_binary11:
         draw: 図形をかく

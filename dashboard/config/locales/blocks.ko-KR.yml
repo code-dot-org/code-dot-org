@@ -962,10 +962,6 @@ ko:
         text: 랜덤 색
       Mikelab_repeatUntilComplete:
         text: 무한반복
-      Mikelab_sendBad:
-        text: 왼쪽으로 이동하기
-      Mikelab_sendGood:
-        text: 오른쪽으로 이동하기
       Mikelab_setBG:
         options:
           BG:

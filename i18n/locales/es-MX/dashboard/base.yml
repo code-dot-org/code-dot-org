@@ -921,6 +921,8 @@ es-MX:
     time4cs_c3: 'Vivir en Everglades'
     time4cs_c4: 'Impactos invasivos en Everglades'
     time4cs_c5: 'Los ciudadanos efectúan cambios en Everglades'
+    k5_getting_started: 'Primeros pasos'
+    k5_next_steps: 'Próximos pasos'
   external_links:
     disclaimer: Descargo de responsabilidad
     leaving_domain: Estás saliendo de este dominio hacia una página que no es operada por Code.org.
@@ -1095,3 +1097,7 @@ es-MX:
     privacy_policy: 'política de privacidad'
     logout: 'Cerrar sesión'
     yes: 'Sí'
+  page_not_found_title: "No se encontró la página"
+  page_not_found_header: '404: no se encontró la página'
+  page_not_found_description: "La página que buscas no existe en esta dirección. Comprueba la dirección web y vuelve a enviarla, o regresa a nuestra página de inicio."
+  page_not_found_button: "Volver a la página de inicio"

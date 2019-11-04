@@ -765,6 +765,7 @@ nl:
     csp_functions: 'Functies'
     csp_lists: 'Lijsten'
     csp_loops: 'Lussen'
+    k5_next_steps: 'Volgende stappen'
   external_links:
     disclaimer: Disclaimer
   hoc_download:

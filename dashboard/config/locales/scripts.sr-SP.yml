@@ -1380,3 +1380,17 @@ sr:
               name: Брзина
             Functions:
               name: Функције
+        k5-onlinepd-copy:
+          stages:
+            Loops:
+              name: Петље
+            Conditionals:
+              name: Кондиционали
+            Events:
+              name: Догађаји
+            Functions:
+              name: Функције
+            Variables:
+              name: Променљиве
+            For Loops:
+              name: Бројачке петље
