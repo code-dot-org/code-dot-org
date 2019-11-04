@@ -12,6 +12,7 @@ import {
   renderCanvas,
   UI
 } from '@code-dot-org/ml-activities';
+import {TestResults} from '@cdo/apps/constants';
 
 /**
  * An instantiable Fish class
@@ -80,22 +81,41 @@ Fish.prototype.init = function(config) {
   );
 };
 
+// Called by the fish app when it wants to go to the next level.
+Fish.prototype.onContinue = function() {
+  const onReportComplete = result => {
+    this.studioApp_.onContinue();
+  };
+
+  this.studioApp_.report({
+    app: 'fish',
+    level: this.level.id,
+    result: true,
+    testResult: TestResults.ALL_PASS,
+    program: '',
+    onComplete: result => {
+      onReportComplete(result);
+    }
+  });
+};
+
 Fish.prototype.initMLActivities = function() {
+  const {mode} = this.level;
+  const onContinue = this.onContinue.bind(this);
+
   // Set up initial state
   const canvas = document.getElementById('activity-canvas');
   const backgroundCanvas = document.getElementById('background-canvas');
   canvas.width = backgroundCanvas.width = constants.canvasWidth;
   canvas.height = backgroundCanvas.height = constants.canvasHeight;
 
-  // Temporarily use URL parameter to set some state.
-  const smallWordSet = window.location.href.indexOf('words=small') !== -1;
-
   // Set initial state for UI elements.
   const state = setState({
     currentMode: Modes.Loading,
     canvas,
     backgroundCanvas,
-    smallWordSet
+    appMode: mode,
+    onContinue
   });
 
   // Initialize our first model.

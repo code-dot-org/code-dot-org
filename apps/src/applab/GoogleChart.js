@@ -148,8 +148,9 @@ export default class GoogleChart {
    */
   static dataTableFromRowsAndColumns(rows, columns) {
     const dataArray = rows.map(row => columns.map(key => row[key]));
+    const columnLabels = columns.map(column => ({label: column}));
     return GoogleChart.lib.visualization.arrayToDataTable(
-      [columns].concat(dataArray)
+      [columnLabels].concat(dataArray)
     );
   }
 
@@ -212,6 +213,23 @@ class Histogram extends GoogleChart {
   }
 }
 GoogleChart.Histogram = Histogram;
+
+class CrossTab extends GoogleChart {
+  render_(dataTable, options) {
+    const apiChart = new GoogleChart.lib.visualization.Table(this.targetDiv_);
+    apiChart.draw(dataTable, options);
+  }
+
+  /**
+   * Array of packages the chart needs to load to render.
+   * @returns {string[]}
+   * @override
+   */
+  getDependencies() {
+    return ['table'];
+  }
+}
+GoogleChart.CrossTab = CrossTab;
 
 /**
  * Google Charts API Bar Chart

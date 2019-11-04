@@ -1884,6 +1884,14 @@ en:
             Hour of Code 2015:
               name: Hour of Code 2015
           description_audience: ''
+        ocean:
+          title: Ocean Hour of Code
+          description: Description TBD.
+          description_short: Short Description TBD.
+          stages:
+            Ocean:
+              name: Ocean
+          description_audience: ''
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'
           description: Online Exploration of CSP Unit 3-- Lesson Challenges
@@ -13515,3 +13523,23 @@ en:
               name: End-of-course projects
             Who is this section for?:
               name: Who is this section for?
+        dance-extras-2019:
+          title: Keep On Dancing
+          description: Go beyond the first hour with extended project ideas.
+          description_short: Go beyond the Hour of Code with this follow-up activity to Code.org's Dance Party tutorial.
+          description_audience: ''
+          stages:
+            Dance Party - Go Further:
+              name: Dance Party - Go Further
+              description_student: ''
+              description_teacher: ''
+        csp10-pilot:
+          stages:
+            new stage:
+              name: new stage
+            'Project: Innovation Simulation Part 1':
+              name: 'Project: Innovation Simulation Part 1'
+          title: Cybersecurity and Global Impacts
+          description_audience: ''
+          description_short: ''
+          description: ''
