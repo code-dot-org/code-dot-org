@@ -27,7 +27,8 @@ let lastStartTime;
 let defaultMoveTime = 1000;
 let moveTime;
 let botImages = {};
-let currentPredictionClassId;
+let botVelocity = 3;
+let botY, botYDestination;
 
 export const initRenderer = () => {
   canvasCache = new CanvasCache();
@@ -51,6 +52,8 @@ export const render = () => {
     currentModeStartTime = $time();
     lastPauseTime = 0;
     lastStartTime = null;
+    botY = null;
+    botYDestination = null;
 
     if (state.currentMode === Modes.Training) {
       moveTime = defaultMoveTime / 2;
@@ -267,10 +270,6 @@ const drawPrediction = (state, predictedClassId, ctx) => {
 };
 
 // Draw AI bot to canvas for predict mode.
-const botVelocity = -0.1;
-let totalBotMoveTime = 200;
-let botStartTime;
-let botY;
 const drawPredictBot = state => {
   if (!botImages.closed) {
     loadImage(aiBotClosed).then(img => (botImages.closed = img));
@@ -283,11 +282,12 @@ const drawPredictBot = state => {
 
   // Move AI bot above fish parade.
   if (state.isRunning) {
-    botStartTime = botStartTime || $time();
-    let t = $time() - botStartTime;
+    botYDestination = botYDestination || botY - 130;
 
-    if (t <= totalBotMoveTime) {
-      botY = botY + botVelocity * t;
+    const distToDestination = Math.abs(botYDestination - botY);
+    if (distToDestination > 1) {
+      const direction = distToDestination === botYDestination - botY ? 1 : -1;
+      botY += direction * botVelocity;
     }
   }
 
