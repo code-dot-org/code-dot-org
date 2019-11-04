@@ -26,11 +26,6 @@ class Services::RegistrationReminder
     # No 'registration_reminder' has been sent yet.
     # Not enrolled in a workshop since the 'registration_sent' email was sent
     applications_awaiting_enrollment.
-      joins(<<~SQL).
-        left outer join pd_application_emails registration_reminder
-        on pd_applications.id = registration_reminder.pd_application_id
-        and registration_reminder.email_type = 'registration_reminder'
-      SQL
       where("registration_sent.sent_at <= ?", 2.weeks.ago).
       where("registration_reminder.id is null")
   end
@@ -44,11 +39,6 @@ class Services::RegistrationReminder
     # The 'registration_reminder' email was sent at least one week ago.
     # Not enrolled in a workshop since the 'registration_sent' email was sent.
     applications_awaiting_enrollment.
-      joins(<<~SQL).
-        inner join pd_application_emails registration_reminder
-        on pd_applications.id = registration_reminder.pd_application_id
-        and registration_reminder.email_type = 'registration_reminder'
-      SQL
       where('registration_reminder.sent_at <= ?', 1.week.ago).
       reject {|a| a.emails.where(email_type: 'registration_reminder').count > 1}
   end
@@ -58,6 +48,7 @@ class Services::RegistrationReminder
   # @return [ActiveRecord::Relation<Pd::Application::ApplicationBase>]
   def self.applications_awaiting_enrollment
     # Additional clauses in this query, shared by the helpers above:
+    # - Join against registration reminders as well, which is useful for filtering later.
     # - Exclude applications created prior to the fall 2019 application season, when this feature launched.
     # - SELECT DISTINCT since we never want to list an application more than once.
     Pd::Application::ApplicationBase.
@@ -65,6 +56,11 @@ class Services::RegistrationReminder
         inner join pd_application_emails registration_sent
         on pd_applications.id = registration_sent.pd_application_id
         and registration_sent.email_type = 'registration_sent'
+      SQL
+      joins(<<~SQL).
+        left outer join pd_application_emails registration_reminder
+        on pd_applications.id = registration_reminder.pd_application_id
+        and registration_reminder.email_type = 'registration_reminder'
       SQL
       joins(<<~SQL).
         left outer join pd_enrollments
