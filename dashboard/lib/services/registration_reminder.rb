@@ -25,15 +25,10 @@ class Services::RegistrationReminder
     # The 'registration_sent' email was sent at least two weeks ago
     # No 'registration_reminder' has been sent yet.
     # Not enrolled in a workshop since the 'registration_sent' email was sent
-    Pd::Application::ApplicationBase.
-      joins("inner join pd_application_emails rs on pd_applications.id = rs.pd_application_id and rs.email_type = 'registration_sent'").
-      joins("left outer join pd_application_emails rr on pd_applications.id = rr.pd_application_id and rr.email_type = 'registration_reminder'").
-      joins("left outer join pd_enrollments e on pd_applications.user_id = e.user_id and e.created_at >= rs.sent_at").
-      where("pd_applications.created_at >= ?", REMINDER_START_DATE).
-      where("rs.sent_at <= ?", 2.weeks.ago).
-      where("rr.id is null").
-      where('e.id is null').
-      distinct
+    applications_awaiting_enrollment.
+      joins("left outer join pd_application_emails registration_reminder on pd_applications.id = registration_reminder.pd_application_id and registration_reminder.email_type = 'registration_reminder'").
+      where("registration_sent.sent_at <= ?", 2.weeks.ago).
+      where("registration_reminder.id is null")
   end
 
   # Locate all applications that are eligible to receive their second workshop registration
@@ -44,14 +39,24 @@ class Services::RegistrationReminder
     # Only one 'registration_reminder' email has been sent.
     # The 'registration_reminder' email was sent at least one week ago.
     # Not enrolled in a workshop since the 'registration_sent' email was sent.
-    Pd::Application::ApplicationBase.
-      joins("inner join pd_application_emails rs on pd_applications.id = rs.pd_application_id and rs.email_type = 'registration_sent'").
-      joins("inner join pd_application_emails rr on pd_applications.id = rr.pd_application_id and rr.email_type = 'registration_reminder'").
-      joins("left outer join pd_enrollments e on pd_applications.user_id = e.user_id and e.created_at >= rs.sent_at").
-      where("pd_applications.created_at >= ?", REMINDER_START_DATE).
-      where('rr.sent_at <= ?', 1.week.ago).
-      where('e.id is null').
-      distinct.
+    applications_awaiting_enrollment.
+      joins("inner join pd_application_emails registration_reminder on pd_applications.id = registration_reminder.pd_application_id and registration_reminder.email_type = 'registration_reminder'").
+      where('registration_reminder.sent_at <= ?', 1.week.ago).
       reject {|a| a.emails.where(email_type: 'registration_reminder').count > 1}
+  end
+
+  # Locate all applications for applicants that have been sent an initial workshop registration
+  # email but have not enrolled in a workshop since that email was sent.
+  # @return [ActiveRecord::Relation<Pd::Application::ApplicationBase>]
+  def self.applications_awaiting_enrollment
+    # Additional clauses in this query, shared by the helpers above:
+    # - Exclude applications created prior to the fall 2019 application season, when this feature launched.
+    # - SELECT DISTINCT since we never want to list an application more than once.
+    Pd::Application::ApplicationBase.
+      joins("inner join pd_application_emails registration_sent on pd_applications.id = registration_sent.pd_application_id and registration_sent.email_type = 'registration_sent'").
+      joins("left outer join pd_enrollments on pd_applications.user_id = pd_enrollments.user_id and pd_enrollments.created_at >= registration_sent.sent_at").
+      where("pd_applications.created_at >= ?", REMINDER_START_DATE).
+      where('pd_enrollments.id is null').
+      distinct
   end
 end
