@@ -2067,6 +2067,8 @@ pt-BR:
               name: Usando comandos simples
             Unit 3 Chapter 1 Assessment:
               name: Unidade 3 Capítulo 1 Avaliação
+            'Anonymous student survey: Taking the AP exam':
+              name: 'Pesquisa anônima com estudantes: Fazer o exame AP'
             Participate in a longitudinal study!:
               name: Participe de um estudo longitudinal!
             CSP Student Post-Course Survey:
@@ -2484,6 +2486,8 @@ pt-BR:
               name: Entendendo seu usuário
             Discovering Users:
               name: Descobrindo Usuários
+            UCD Micro Activity:
+              name: Atividade Micro UCD
             Designing for Social Impact:
               name: Projetando para o impacto social
             Conducting User-Centered Interviews:
@@ -2686,6 +2690,8 @@ pt-BR:
               name: Mais Programação com Scratch
             'New Artist: Functions':
               name: 'Novo Artista: Funções'
+            Scaffolded Project Stage (Loops, Events, Conditionals, Functions):
+              name: Estágio do projeto fases (laços, eventos, condicionais, funções)
             Songwriting:
               name: Composição
         grade1:
@@ -2720,6 +2726,8 @@ pt-BR:
               name: Erros Não Reportados
             'Debugging: Unspotted Bugs':
               name: 'Depuração: Bugs não encontrados'
+            'Events Unplugged: The Big Event':
+              name: 'Eventos desconectados: o grande evento'
         grade5:
           stages:
             'Artist: For Loops':
@@ -2738,6 +2746,8 @@ pt-BR:
               name: Explore ideias de projetos
             Final Project - Presentation Day:
               name: Projeto Final - Dia da Apresentação
+            Final Project - Review/Revise Day:
+              name: Projeto Final - Dia de Revisão / Revisão
             'Final Project - Unplugged: Design Process':
               name: 'Projeto Final - Desconectado: Processo de Design'
             'Final Project - Work Day: Build Project Online':
@@ -2862,12 +2872,22 @@ pt-BR:
               name: Pingue-pongue
             Build a Game:
               name: Crie um jogo
+            Farmer Conditional with Cards:
+              name: Fazendeiro Condicional com Cartões
+            Farmer Debug Relay Programming:
+              name: Programação de retransmissão de depuração do fazendeiro
+            Farmer Graph Paper Programming:
+              name: Programação do papel de gráfico do fazendeiro
+            Farmer Impacts of Computing:
+              name: Impactos dos fazendeiros na computação
             'Farmer: While Loops':
               name: 'Fazendeira: Laços Enquanto'
             'Maze: Conditionals with Loops':
               name: 'Labirinto: Condicionais com laços de repetição'
             'Maze: Nested Loops':
               name: 'Labirinto da Abelha: Laços Aninhados'
+            More Programming with CS4FN:
+              name: Mais programação com CS4FN
             Robot Running the Farm:
               name: Robô Comandando a Fazenda
             Unplugged Conditionals with Loops:
@@ -2968,6 +2988,8 @@ pt-BR:
               name: Projeto - Cartão Interativo
             Project - Design a Game:
               name: Projeto - Projetar um Jogo
+            Parameters and Randomization:
+              name: Parâmetros e Randomização
             Shapes and Randomization:
               name: Formas e Randomização
         grade2:
@@ -2986,6 +3008,12 @@ pt-BR:
               name: Nova casa para meu animal de estimação
             Online Internet Safety:
               name: Segurança na Internet Online
+            Puppy Event:
+              name: Evento do filhote de cachorro
+            Puppy Introduction:
+              name: Introdução do filhote de cachorro
+            Puppy Loops:
+              name: Laços para filhotes de cachorros
             How to behave in the lab_How to use Code_org puzzles:
               name: Como se comportar no laboratório / Como usar os enigmas do Code.org
             Programming at home with my pet:
@@ -2996,6 +3024,18 @@ pt-BR:
               name: 'Algoritmos da vida real: aviões de papel'
             The Big Event:
               name: O grande evento
+        transferring-over:
+          stages:
+            20-hr Stage 2:
+              name: Fase 2 de 20 horas
+            20-hr Stage 9:
+              name: Fase 9 de 20 horas
+            Course 2 Stage 17:
+              name: Curso 2 Fase 17
+            Course 3 Stage 16:
+              name: Curso 3 Fase 16
+            Course 3 Stage 17:
+              name: Curso 3 Fase 17
         k5concepts:
           stages:
             Binary:
@@ -3035,13 +3075,20 @@ pt-BR:
               name: Bem-vindo!
         csp-pre-survey:
           stages:
+            Anonymous student pre-survey:
+              name: Pré-pesquisa anônima de alunos
+            NEW Unit 1 Chapter 1 Assessment:
+              name: NOVA Unidade 1 Capítulo 1 Avaliação
             Unit 1 Chapter 1 Assessment:
               name: Unidade 1 Capítulo 1 Avaliação
             Unit 3 Chapter 1 Assessment:
               name: Unidade 3 Capítulo 1 Avaliação
             Unit 4 Chapter 1 Assessment:
               name: Unidade 4 Capítulo 1 Avaliação
+            'Anonymous student survey: Taking the AP exam':
+              name: 'Pesquisa anônima com estudantes: Fazer o exame AP'
         csd1-2017:
+          title: Unidade 1 de CSD - Solução de problemas ('17 -'18)
           stages:
             Intro to Problem Solving:
               description_teacher: 'Nesta lição, os alunos trabalham em grupos para
@@ -3054,8 +3101,45 @@ pt-BR:
                 refletir sobre suas experiências com a atividade e fazem conexões
                 com os tipos de solução de problemas que irão utilizar no restante
                 do curso. '
+            Exploring Problem Solving:
+              description_teacher: |-
+                Nesta lição, os alunos aplicam o processo de resolução de problemas a três problemas diferentes, a fim de entender melhor o valor de cada etapa. Eles resolverão uma pesquisa por palavras, organizarão assentos para uma festa de aniversário e planejarão uma viagem. Os problemas se tornam cada vez mais complexos e mal definidos para destacar como o processo de solução de problemas é particularmente útil ao lidar com esses tipos de problemas. A lição termina com os alunos refletindo sobre sua experiência com o processo de solução de problemas. Eles justificarão a inclusão de cada etapa e debaterão questões ou estratégias que podem ajudá-los a definir melhor os problemas em aberto, pois esse é geralmente o passo mais crítico.
+
+                Esta lição provavelmente levará dois períodos de aula ou mais para ser concluída. Os dois primeiros problemas podem caber em um período de aula única, mas o terceiro precisará ser transferido para o segundo dia.
+            What is a Computer?:
+              description_teacher: 'Nesta lição, os alunos desenvolvem uma definição
+                preliminar de um computador. Para começar a lição, a classe fará um
+                debate de definições possíveis para um computador e colocará os resultados
+                do debate no quadro. Em seguida, os alunos trabalharão em grupos para
+                classificar as imagens em "é um computador" ou "não é um computador"
+                em pôsteres. Os grupos colocarão seus pôsteres pela sala e explicarão
+                brevemente suas motivações para escolher algumas de suas categorizações
+                mais difíceis. O professor apresentará uma definição do computador
+                e permitirá que os alunos revisem seus pôsteres de acordo com a nova
+                definição.  '
+            Processing with Bits:
+              name: Processando com bits
+            Human vs. Computer Processing:
+              name: Processamento humano versus computador
             Processing:
               name: Processando
+              description_student: Esta lição se aprofunda no conceito de processamento
+                que foi introduzido como parte da definição de um computador. Os pares
+                trabalham juntos para colocar um baralho em ordem, uma forma de processar
+                informações. No final, a classe discute o que significa processamento
+                dentro do contexto da solução de problemas de informação.
+              description_teacher: Os alunos concluem duas atividades de classificação
+                de cartões desconectados para explorar o significado do processamento
+                e sua relação com a solução de problemas. O primeiro tem poucas restrições
+                e é usado para introduzir uma definição de alto nível de processamento.
+                O próximo apresenta mais restrições que obrigam os alunos a desenvolver
+                um algoritmo que sempre processará os cartões com êxito. Os alunos
+                desenvolvem, testam e compartilham seus algoritmos com colegas de
+                classe. Uma discussão de encerramento faz com que os alunos reflitam
+                sobre os diferentes tipos de solução de problemas usados nessas atividades
+                e o valor de produzir um algoritmo para resolver um problema.
+            CS Discoveries Rapid Survey:
+              name: Pesquisa rápida do CS Discoveries
         csp-online-test:
           stages:
             Unit 1 Overview:
@@ -3096,14 +3180,40 @@ pt-BR:
               name: 'Lições 1 - 2: Bytes, Tamanho de Arquivos, e Compreensão de Texto'
             'Lessons 3 - 4 : Encoding Images':
               name: 'Lições 3 - 4: Codificando Imagens'
+            'Lesson 5 - 6: Compression Formats and Developing your own Encoding Scheme':
+              name: 'Lição 5 - 6: Formatos de compactação e desenvolvimento de seu
+                próprio esquema de codificação'
+            'Lessons 7 - 11: Interpreting Visual Data':
+              name: 'Lições 7 - 11: Interpretando dados visuais'
+            'Lessons 12 - 15: Communicating with Visualizations':
+              name: 'Lições 12 - 15: Comunicação com visualizações'
             'Lessons 7 - 10: Interpreting Visual Data':
               name: 'Lições 7 - 10: Interpretando Dados Visuais'
+            'Lessons 11 - 15: Communicating with Visualizations':
+              name: 'Lições 11 - 15: Comunicação com visualizações'
             Unit 2 Overview:
               name: Visão geral da unidade 2
+            'Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme':
+              name: 'Lições 5 - 6: Formatos de compactação e desenvolvimento de seu
+                próprio esquema de codificação'
             Unit 3 Overview:
               name: Visão geral da unidade 3
             'Lessons 1 - 3: Algorithms':
               name: 'Lições 1 - 3: Algoritmos'
+            'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design':
+              name: 'Lições 4 - 6: Abstração procedural e projeto de cima para baixo'
+            'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers':
+              name: 'Lições 7 - 9: Documentação, Laços Simples e Números Aleatórios'
+            Event Driven Programming:
+              name: Programação Orientada a Eventos
+            Variables and Strings:
+              name: Variáveis e Strings
+            Conditionals and Boolean Logic:
+              name: Condicionais e Lógica Booleana
+            While Loops and Introduction to Arrays:
+              name: Laços enquanto e introdução a matrizes
+            Processing Arrays and Functions with Return Values:
+              name: Processando vetores e funções com valores de retorno
             Unit 5 Overview:
               name: Visão geral da unidade 5
         csp1-support:
@@ -3130,6 +3240,8 @@ pt-BR:
               name: Aprendizagem de descoberta
             Measuring Student Learning:
               name: Medindo a Aprendizagem dos Estudantes
+            AP Preparation and Support:
+              name: Preparação e Suporte de AP
         basketball:
           title: Escolha seu time e faça um jogo de basquete
           description_short: Escolha seu time e faça um jogo de basquete
@@ -3152,9 +3264,20 @@ pt-BR:
               name: Pulseiras binárias
             Binary Images:
               name: Imagens binárias
+            Binary Artist Puzzles:
+              name: Quebra-cabeça de artista binário
+            RGB Color:
+              name: Cor RGB
+            Processing with Bits:
+              name: Processando com bits
+            Auto-Run Binary Artist Puzzles:
+              name: Quebra-cabeça de Execução Automática de Artistas Binários
+            Course C EOC 2019:
+              name: Curso C EOC 2019
             Play Lab:
               name: Laboratório
         csd2-2017:
+          title: Unidade 2 de CSD - Desenvolvimento Web ('17 -'18)
           stages:
             new stage:
               name: nova fase
@@ -3198,6 +3321,13 @@ pt-BR:
               name: Introdução a HTML
             Headers:
               name: Cabeçalhos
+              description_teacher: Nesta lição, os alunos continuam usando o HTML
+                para estruturar o texto nas páginas da Web, desta vez com cabeçalhos.
+                Os alunos aprendem como os diferentes elementos do cabeçalho são exibidos
+                por padrão e praticam usá-los para criar títulos de páginas e seções.
+                Os alunos começam a decidir como organizarão seu conteúdo em suas
+                próprias páginas pessoais. No último nível, os alunos iniciam o projeto
+                no qual continuarão trabalhando em toda a unidade.
             Lists:
               name: Listas
         csp2-support:
@@ -3208,8 +3338,13 @@ pt-BR:
               name: 'Lições 1 - 2: Bytes, Tamanho de Arquivos, e Compreensão de Texto'
             'Lessons 3 - 4 : Encoding Images':
               name: 'Lições 3 - 4: Codificando Imagens'
+            'Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme':
+              name: 'Lições 5 - 6: Formatos de compactação e desenvolvimento de seu
+                próprio esquema de codificação'
             'Lessons 7 - 10: Interpreting Visual Data':
               name: 'Lições 7 - 10: Interpretando Dados Visuais'
+            'Lessons 11 - 15: Communicating with Visualizations':
+              name: 'Lições 11 - 15: Comunicação com visualizações'
             Group Work and Peer Learning:
               name: Trabalho em Grupo e Aprendizagem entre Pares
             Balancing Teachers and Tools:
@@ -3218,6 +3353,8 @@ pt-BR:
               name: Aprendizagem de descoberta
             Measuring Student Learning:
               name: Medindo a Aprendizagem dos Estudantes
+            AP Preparation and Support:
+              name: Preparação e Suporte de AP
         csd4-2017:
           stages:
             Analysis of Design:
@@ -3240,6 +3377,8 @@ pt-BR:
               name: Pesquisa de mercado
             Prototype Testing:
               name: Protótipo de Teste
+            Event Driven Programming:
+              name: Programação Orientada a Eventos
             Improving and Iterating:
               name: Improvizando e Interagindo
             App Presentation:
@@ -3318,6 +3457,8 @@ pt-BR:
               name: 'Algoritmos da vida real: aviões de papel'
             Loops in Maze:
               name: Laços no Labirinto
+            Puppy Introduction:
+              name: Introdução do filhote de cachorro
             Online Internet Safety:
               name: Segurança na Internet Online
             Binary Bracelets:
@@ -3332,6 +3473,8 @@ pt-BR:
               name: Laços Aninhados no Labirinto
             Conditionals with Cards:
               name: Condicionais com cartas
+            More Programming with CS4FN:
+              name: Mais programação com CS4FN
             Digital Citizenship:
               name: Cidadania digital
             'Unplugged: Binary':
@@ -3443,6 +3586,10 @@ pt-BR:
               name: Visão geral da unidade 3
             'Lessons 1 - 3: Algorithms':
               name: 'Lições 1 - 3: Algoritmos'
+            'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design':
+              name: 'Lições 4 - 6: Abstração procedural e projeto de cima para baixo'
+            'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers':
+              name: 'Lições 7 - 9: Documentação, Laços Simples e Números Aleatórios'
             Group Work and Peer Learning:
               name: Trabalho em Grupo e Aprendizagem entre Pares
             Balancing Teachers and Tools:
@@ -3451,6 +3598,8 @@ pt-BR:
               name: Aprendizagem de descoberta
             Measuring Student Learning:
               name: Medindo a Aprendizagem dos Estudantes
+            AP Preparation and Support:
+              name: Preparação e Suporte de AP
         csdgraveyard:
           stages:
             new stage:
@@ -3519,6 +3668,16 @@ pt-BR:
           stages:
             Unit 5 Overview:
               name: Visão geral da unidade 5
+            Event Driven Programming:
+              name: Programação Orientada a Eventos
+            Variables and Strings:
+              name: Variáveis e Strings
+            Conditionals and Boolean Logic:
+              name: Condicionais e Lógica Booleana
+            While Loops and Introduction to Arrays:
+              name: Laços enquanto e introdução a matrizes
+            Processing Arrays and Functions with Return Values:
+              name: Processando vetores e funções com valores de retorno
             Group Work and Peer Learning:
               name: Trabalho em Grupo e Aprendizagem entre Pares
             Balancing Teachers and Tools:
@@ -3603,10 +3762,16 @@ pt-BR:
               name: Resolução de Problemas e Dados
             Making Decisions with Data:
               name: Tomando Decisões com Dados
+        applab-1hour:
+          stages:
+            Event Driven Programming:
+              name: Programação Orientada a Eventos
         applab-2hour:
           stages:
             new stage:
               name: nova fase
+            Event Driven Programming:
+              name: Programação Orientada a Eventos
         coursed-ramp:
           stages:
             Introduction:
@@ -3727,6 +3892,10 @@ pt-BR:
               name: O processo de design de jogos
             Using the Game Design Process:
               name: Usando o processo de design de jogos
+        csd1-old:
+          stages:
+            Processing with Bits:
+              name: Processando com bits
         csd2-draft:
           stages:
             Text on the Web:
@@ -4189,8 +4358,6 @@ pt-BR:
               name: Criando uma base
             Nested Loops:
               name: Laços aninhados
-          title: Curso Expresso
-          assignment_family_title: Curso Expresso
           description: Aprenda o básixo de Ciências da Computação e segurança na internet.
             No final deste curso, você irá irá seu próprio jogo ou história, que poderá
             ser compartilhada.
@@ -4273,6 +4440,8 @@ pt-BR:
               name: Pesquisa de mercado
             Prototype Testing:
               name: Protótipo de Teste
+            Event Driven Programming:
+              name: Programação Orientada a Eventos
             Improving and Iterating:
               name: Improvizando e Interagindo
             App Presentation:
@@ -4413,6 +4582,8 @@ pt-BR:
               name: Pesquisa de mercado
             Prototype Testing:
               name: Protótipo de Teste
+            Event Driven Programming:
+              name: Programação Orientada a Eventos
             Improving and Iterating:
               name: Improvizando e Interagindo
             App Presentation:
@@ -6776,3 +6947,43 @@ pt-BR:
             Dance Party:
               name: Festa dançante
           description: Crie sua própria dança para compartilhar com seus amigos.
+        k5-onlinepd-copy:
+          stages:
+            Getting Started:
+              name: Iniciando
+            Computer Science Fundamentals:
+              name: Fundamentos de Ciência da Computação
+            Looking Ahead:
+              name: Olhando para o futuro
+            'Mastering the Basics: Sequencing':
+              name: 'Dominando o básico: Sequenciamento'
+            'Mastering the Basics: Loops':
+              name: 'Dominando o básico: Ciclos'
+            'Mastering the Basics: Conditionals':
+              name: 'Dominando o básico: Condicionais'
+            'Mastering the Basics: Functions':
+              name: 'Dominando o básico: Funções'
+            'Mastering the Basics: Events':
+              name: 'Dominando o básico: Eventos'
+            Best Practices for Teaching Computer Science:
+              name: Melhores Práticas para o Ensino de Ciência da Computação
+            Planning:
+              name: Planejamento
+            Next Steps:
+              name: Próximas etapas
+            Sequencing:
+              name: Sequenciamento
+            Loops:
+              name: laços
+            Conditionals:
+              name: Condições
+            Events:
+              name: Eventos
+            Functions:
+              name: funções
+            Sprite Lab:
+              name: Laboratório de Sprite
+            Variables:
+              name: variáveis
+            For Loops:
+              name: Laços para

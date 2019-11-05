@@ -1,7 +1,7 @@
 name 'OPD-K5 Assessment_copy'
 skip_dialog true
 markdown <<MARKDOWN
-# Planning > Other resources
+# Other resources
 
 When you're logged into Code.org as a teacher, you have access to many features that your students do not. You've already seen how to find a course, create a section, and assign your class to that section. However, you can also: 
 
@@ -18,5 +18,4 @@ When you're logged into Code.org as a teacher, you have access to many features 
 
 > <a href="http://support.code.org" target="blank"><button class="plc">Get help >></button></a>
 
-After commenting in the forum, return here and click below to move on to the next stage.
 MARKDOWN

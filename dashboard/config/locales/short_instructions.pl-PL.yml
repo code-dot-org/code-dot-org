@@ -290,7 +290,7 @@ pl-PL:
         w górę. Wykonuj tupnij-klaśnij tak szybko, jak potrafisz!
       Dance_Party_12: Dobrej zabawy! Utwórz własny taniec i udostępnij go przyjaciołom.
       Dance_Party_extras_battle: Zespoły taneczne (Kliknij Więcej po szczegóły)
-      Dance_Party_extras_every_beat: Ćwierć nuty (Kliknij Więcej po szczegóły)
+      Dance_Party_extras_every_beat: Ćwierćnuty (Kliknij Więcej po szczegóły)
       Dance_Party_extras_layout: Twórzmy formację (Kliknij Więcej po szczegóły)
       Dance_Party_extras_on_beat: Bas, średni i wysoki ton (Kliknij Więcej po szczegóły)
       Dance_Party_extras_speed: Przyspiesz, spowolnij (Kliknij Więcej po szczegóły)
@@ -414,9 +414,9 @@ pl-PL:
         potwory a następnie spowoduj, by robiły to, co chcesz. Baw się dobrze!
       MC HOC 2016 Level 2-2: Kurczak jest zamrożony. Umieść bloki "idź" i "skręć"
         w bloku "kiedy ożywiony", by poruszył się.
-      MC HOC 2016 Level 3: "Świetne, kurczak przesunął się! Ale nagle zatrzymał się.
-        W grach, kurczaki chodzą bez przerwy. Użyj pętli \"bez końca wykonuj\", aby
-        te kurczaki nie zatrzymywały się. \\\r"
+      MC HOC 2016 Level 3: Świetnie, kurczak przesunął się! Ale nagle zatrzymał się.
+        W grach, kurczaki chodzą bez przerwy. Użyj pętli "zawsze", aby utrzymać kurczaki
+        w ruchu.
       MC HOC 2016 Level 4: Teraz kurczaki wyglądają dziwnie poruszając się tak samo.
         Gry korzystają z losowych ruchów, by urzeczywistnić sytuacje. Spowoduj, by
         kurczaki "skręcały losowo".

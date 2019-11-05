@@ -171,10 +171,6 @@ ur:
             MOVES.Rest: کوئی بھی نہیں
       Mikelab_randomColor:
         text: بے ترتیب رنگ
-      Mikelab_sendBad:
-        text: بائیں چلیں
-      Mikelab_sendGood:
-        text: دائیں چلیں
       Mikelab_setBG:
         options:
           BG:

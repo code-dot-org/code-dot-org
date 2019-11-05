@@ -1201,10 +1201,6 @@ el:
         text: χαρακτήρας {SPRITE} σταματάει {BEHAVIOR}
       Mikelab_repeatUntilComplete:
         text: επαναλάμβανε για πάντα
-      Mikelab_sendBad:
-        text: Προχώρησε αριστερά
-      Mikelab_sendGood:
-        text: Προχώρησε δεξιά
       Mikelab_setBG:
         options:
           BG:

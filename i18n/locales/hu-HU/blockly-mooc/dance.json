@@ -11,5 +11,12 @@
   "danceFeedbackNeedEveryTwoMeasures": "Ügyelj rá, hogy használd a „2 ütemenként“ blokkot",
   "danceFeedbackNeedMakeANewDancer": "Második táncos létrehozásához használd az „új készítése“ blokkot.",
   "danceFeedbackKeyEvent": "Bizonyosod meg róla, hogy csatoltál kódot a \"amikor gomb\" blokkhoz, és nyomd meg a gombot, amíg a tánc fut.",
+  "danceFeedbackDidntPress": "",
+  "danceFeedbackPressedKey": "",
+  "danceFeedbackNeedTwoDancers": "",
+  "danceFeedbackOnlyOneDancerMoved": "",
+  "danceFeedbackNeedLead": "",
+  "danceFeedbackNeedBackup": "",
+  "danceFeedbackSetSize": "",
   "measure": "Ütem:"
 }
