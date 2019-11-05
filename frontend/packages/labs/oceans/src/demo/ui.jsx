@@ -111,11 +111,11 @@ const styles = {
   },
   trainQuestionTextDisabled: {
     position: 'absolute',
-    top: '18%',
+    top: '15%',
     left: '50%',
     transform: 'translateX(-50%)',
-    fontSize: 22,
-    lineHeight: '26px',
+    fontSize: 32,
+    lineHeight: '35px',
     opacity: 0.5
   },
   trainButtons: {
