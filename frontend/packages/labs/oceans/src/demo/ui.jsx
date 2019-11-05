@@ -320,12 +320,7 @@ const instructionsText = {
         'In the following activity we’ll learn about artificial intelligence (AI) and machine learning.',
         'Now let’s consider how machine learning can be used for good in the real world.',
         '1 in 3 people worldwide do not have access to safe drinking water. Access to clean water could reduce global diseases by 10%.',
-        'Garbage dumped in ocean or rivers affects the water health and impacts the marine life in the water.'
-      ]
-    },
-    {
-      heading: 'Train AI to Clean the Ocean',
-      text: [
+        'Garbage dumped in ocean or rivers affects the water health and impacts the marine life in the water.',
         'In this activity, you will "program" or "train" an artificial intelligence to identify trash to remove from the ocean.'
       ]
     },
