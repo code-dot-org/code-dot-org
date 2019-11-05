@@ -57,7 +57,9 @@ const styles = {
   backButton: {
     position: 'absolute',
     bottom: 10,
-    left: 10
+    left: 10,
+    backgroundColor: colors.blue,
+    color: colors.white
   },
   button1col: {
     width: '20%',
