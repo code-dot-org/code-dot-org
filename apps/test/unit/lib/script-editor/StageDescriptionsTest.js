@@ -53,7 +53,7 @@ describe('StageDescriptions', () => {
     wrapper.find('button').simulate('click');
     assert.equal(wrapper.state('collapsed'), false);
 
-    const button = wrapper.childAt(1).childAt(0);
+    let button = wrapper.childAt(1).childAt(0);
     assert.equal(button.type(), 'button');
     assert.include(button.text(), 'Collapse');
 
@@ -70,7 +70,8 @@ describe('StageDescriptions', () => {
     // collapses after subsequent button click
     button.simulate('click');
     assert.equal(wrapper.state('collapsed'), true);
-    assert.include(button.text(), 'Collapse');
+    button = wrapper.childAt(1).childAt(0);
+    assert.include(button.text(), 'Expand');
     assert.equal(wrapper.childAt(1).children().length, 1);
   });
 
