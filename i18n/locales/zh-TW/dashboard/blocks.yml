@@ -1230,10 +1230,6 @@ zh-TW:
         text: 角色 {SPRITE} 顏色移除
       Mikelab_repeatUntilComplete:
         text: 重複無限次
-      Mikelab_sendBad:
-        text: 移動-向左
-      Mikelab_sendGood:
-        text: 移動-向右
       Mikelab_setBG:
         text: 背景設為 {BG}
         options:

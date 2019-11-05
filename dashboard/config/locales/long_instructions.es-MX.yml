@@ -13062,11 +13062,6 @@ es-MX:
         a apagar las luces.\n\n# Haz esto\n\nCrea una función que apague todos los
         LEDs, y luego agrega un botón \"Apagado\" a tu aplicación y haz que apague
         todos los LEDs de colores. "
-      CSD U6 light pattern off_2019: "# Apagado\n\nCuando inicias tu aplicación, las
-        luces están apagadas, pero cuando eliges un patrón, no hay forma de volver
-        a apagar las luces.\n\n# Haz esto\n\nCrea una función que apague todos los
-        LEDs, y luego agrega un botón \"Apagado\" a tu aplicación y haz que apague
-        todos los LEDs de colores. "
       CSD U6 light show predict: |-
         # Crear un espectáculo de luces
 

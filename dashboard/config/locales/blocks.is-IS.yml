@@ -1249,10 +1249,6 @@ is:
         text: vera {SPRITE} hættir {BEHAVIOR}
       Mikelab_repeatUntilComplete:
         text: endurtaka endalaust
-      Mikelab_sendBad:
-        text: færa til vinstri
-      Mikelab_sendGood:
-        text: færa til hægri
       Mikelab_setBG:
         options:
           BG:

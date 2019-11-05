@@ -927,6 +927,8 @@ zh-CN:
     time4cs_c3: 生活在湿地
     time4cs_c4: 对湿地的入侵影响
     time4cs_c5: 市民对湿地变化的影响
+    k5_getting_started: 开始
+    k5_next_steps: 下一步
   external_links:
     disclaimer: 免责声明
     leaving_domain: 你现在正在离开 Code.org，访问一个不由我们创建的站点。
@@ -1098,3 +1100,7 @@ zh-CN:
     privacy_policy: 隐私条款
     logout: 注销
     true: 对
+  page_not_found_title: 找不到页面
+  page_not_found_header: 404：找不到页面
+  page_not_found_description: 您要查找的页面地址不存在。检查网址并重新提交。或者返回主页。
+  page_not_found_button: 返回主页

@@ -300,10 +300,6 @@ si:
         text: අහඹු වර්ණයක්
       Mikelab_repeatUntilComplete:
         text: සදහටම නැවත කරන්න
-      Mikelab_sendBad:
-        text: දකුණට චලනය කරන්න
-      Mikelab_sendGood:
-        text: දකුණට චලනය කරන්න
       Mikelab_setBG:
         options:
           BG:

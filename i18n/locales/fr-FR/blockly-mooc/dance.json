@@ -11,5 +11,12 @@
   "danceFeedbackNeedEveryTwoMeasures": "Assure-toi que tu utilises le bloc  `toutes les 2 mesures`",
   "danceFeedbackNeedMakeANewDancer": "Utilise le bloc `créer un nouveau` pour créer un second danseur.",
   "danceFeedbackKeyEvent": "Assure toi d'avoir attribué du code au bloc `quand une touche` et presse une touche pendant que ta danse s'exécute.",
+  "danceFeedbackDidntPress": "",
+  "danceFeedbackPressedKey": "",
+  "danceFeedbackNeedTwoDancers": "",
+  "danceFeedbackOnlyOneDancerMoved": "",
+  "danceFeedbackNeedLead": "",
+  "danceFeedbackNeedBackup": "",
+  "danceFeedbackSetSize": "",
   "measure": "Mesure:"
 }

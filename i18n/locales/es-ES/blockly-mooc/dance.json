@@ -11,5 +11,12 @@
   "danceFeedbackNeedEveryTwoMeasures": "Asegúrate de utilizar el bloque «cada 2 compases»",
   "danceFeedbackNeedMakeANewDancer": "Utiliza el bloque «hacer uno nuevo» para crear un segundo bailarín.",
   "danceFeedbackKeyEvent": "Asegúrate de adjuntar algún código al bloque `cuando la clave` y pulsa la tecla mientras se ejecuta tu baile.",
+  "danceFeedbackDidntPress": "",
+  "danceFeedbackPressedKey": "",
+  "danceFeedbackNeedTwoDancers": "",
+  "danceFeedbackOnlyOneDancerMoved": "",
+  "danceFeedbackNeedLead": "",
+  "danceFeedbackNeedBackup": "",
+  "danceFeedbackSetSize": "",
   "measure": "Compás:"
 }

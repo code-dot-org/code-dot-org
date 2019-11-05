@@ -1818,3 +1818,19 @@ ko:
             Dance Party:
               name: 댄스 파티
           description: 나만의 댄스 파티의 코드를 만들고 친구와 공유하세요!
+        k5-onlinepd-copy:
+          stages:
+            Computer Science Fundamentals:
+              name: 컴퓨터 과학 기초
+            Loops:
+              name: 반복
+            Conditionals:
+              name: 조건
+            Events:
+              name: 이벤트
+            Functions:
+              name: 함수
+            Variables:
+              name: 변수
+            For Loops:
+              name: 반복을 위한
