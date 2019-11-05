@@ -152,16 +152,18 @@ const styles = {
   },
   pondText: {
     position: 'absolute',
-    bottom: '3%',
-    left: '45%',
+    bottom: '4%',
+    left: '43%',
     transform: 'translateX(-45%)',
-    fontSize: 22,
+    fontSize: 18,
     lineHeight: '32px',
+    textAlign: 'center',
     width: '50%',
-    backgroundColor: colors.transparentBlack,
-    padding: '2%',
+    backgroundColor: colors.transparentWhite,
+    border: '4px solid black',
+    padding: '1%',
     borderRadius: 10,
-    color: colors.white
+    color: colors.black
   },
   pondFishDetails: {
     position: 'absolute',
@@ -231,6 +233,12 @@ function Collide(x1, y1, w1, h1, x2, y2, w2, h2) {
   // Otherwise we have a collision.
   return true;
 }
+
+var $time =
+  Date.now ||
+  function() {
+    return +new Date();
+  };
 
 class Body extends React.Component {
   static propTypes = {
@@ -584,24 +592,28 @@ class Predict extends React.Component {
     const state = getState();
     const speechBubbleText = this.speechBubbleText(state);
 
-    let btnText, btnOnClick;
-    if (state.isRunning) {
-      btnText = 'Continue';
-      btnOnClick = () => toMode(Modes.Pond);
-    } else {
-      btnText = 'Run A.I.';
-      btnOnClick = () => setState({isRunning: true});
-    }
-
     return (
       <Body>
         <Header>A.I. Sorting</Header>
         {speechBubbleText && (
           <SpeechBubble text={speechBubbleText} style={styles.predictSpeech} />
         )}
-        <Button style={styles.continueButton} onClick={btnOnClick}>
-          {btnText}
-        </Button>
+        {!state.isRunning && (
+          <Button
+            style={styles.continueButton}
+            onClick={() => setState({isRunning: true, runStartTime: $time()})}
+          >
+            Run A.I.
+          </Button>
+        )}
+        {state.canSkipPredict && (
+          <Button
+            style={styles.continueButton}
+            onClick={() => toMode(Modes.Pond)}
+          >
+            Continue
+          </Button>
+        )}
       </Body>
     );
   }
@@ -624,7 +636,8 @@ class Pond extends React.Component {
         if (
           !fishClicked &&
           !(
-            state.pondClickedFish && fishBound.fishId === state.pondClickedFish.id
+            state.pondClickedFish &&
+            fishBound.fishId === state.pondClickedFish.id
           ) &&
           Collide(
             fishBound.x,
@@ -658,11 +671,13 @@ class Pond extends React.Component {
 
   render() {
     const state = getState();
-    const pondText = `Out of ${
-      state.fishData.length
-    } objects, A.I. identified ${
-      state.pondFish.length
-    } that it classified as ${state.word.toUpperCase()}.`;
+    const pondText = [
+      `Out of ${state.fishData.length} objects, I identified ${
+        state.pondFish.length
+      } that are ${state.word.toUpperCase()}.`,
+      'How did I do?',
+      'Choose to Train More or Continue.'
+    ];
 
     const showFishDetails = !!state.pondClickedFish;
     let pondFishDetailsStyle;
@@ -686,34 +701,44 @@ class Pond extends React.Component {
       };
 
       if (!fish.confidence || !fish.confidence.confidencesByClassId) {
-        confidence = 'Not sure';
+        confidence = 'Not confident';
       } else if (fish.confidence.confidencesByClassId[0] > 0.99) {
-        confidence = 'Very sure';
+        confidence = 'Very confident';
       } else if (fish.confidence.confidencesByClassId[0] > 0.5) {
-        confidence = 'Fairly sure';
+        confidence = 'Fairly confident';
       } else {
-        confidence = 'Not very sure';
+        confidence = 'Not very confident';
       }
     }
 
     return (
       <Body onClick={this.onPondClick}>
         <Header>A.I. Results</Header>
-        <div style={styles.pondText}>{pondText}</div>
+        {state.canSeePondText && <div style={styles.pondText}>
+          {pondText.map((text, index) => {
+            return (
+              <div>
+                {text}
+              </div>
+            );
+          })}
+        </div>}
         <img style={styles.pondBot} src={aiBotClosed} />
         {showFishDetails && (
           <div style={pondFishDetailsStyle}>{confidence}</div>
         )}
-        <Button
-          style={styles.continueButton}
-          onClick={() => {
-            if (state.onContinue) {
-              state.onContinue();
-            }
-          }}
-        >
-          Continue
-        </Button>
+        {state.canSkipPond && (
+          <Button
+            style={styles.continueButton}
+            onClick={() => {
+              if (state.onContinue) {
+                state.onContinue();
+              }
+            }}
+          >
+            Continue
+          </Button>
+        )}
       </Body>
     );
   }
