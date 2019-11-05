@@ -2,6 +2,14 @@ import PropTypes from 'prop-types';
 import Radium from 'radium';
 import React from 'react';
 
+const styles = {
+  cell: {
+    height: '2em',
+    textAlign: 'center',
+    border: '1px solid black'
+  }
+};
+
 class CrossTabChart extends React.Component {
   static propTypes = {
     parsedRecords: PropTypes.array.isRequired,
@@ -50,6 +58,17 @@ class CrossTabChart extends React.Component {
     return {chartData, columns};
   };
 
+  getColorForValue = (value, min, max) => {
+    if (typeof value === 'string') {
+      return 'white';
+    }
+    const lightest = 100;
+    const darkest = 56;
+    const lightness =
+      lightest - ((value - min) / (max - min)) * (lightest - darkest);
+    return `hsl(217, 89%, ${lightness}%)`;
+  };
+
   render() {
     if (
       !this.props.parsedRecords ||
@@ -64,6 +83,15 @@ class CrossTabChart extends React.Component {
       this.props.columnName
     );
 
+    const numericValues = chartData
+      .map(record =>
+        Object.values(record).filter(value => typeof value === 'number')
+      )
+      .flatten();
+
+    const min = Math.min(...numericValues);
+    const max = Math.max(...numericValues);
+
     return (
       <table>
         <tbody>
@@ -74,9 +102,16 @@ class CrossTabChart extends React.Component {
           </tr>
           {chartData.map((record, id) => (
             <tr key={id}>
-              {columns.map(column => (
-                <td key={column}>{record[column]}</td>
-              ))}
+              {columns.map(column => {
+                const value = record[column];
+                const color = this.getColorForValue(value, min, max);
+                const cellStyle = {...styles.cell, backgroundColor: color};
+                return (
+                  <td key={column} style={cellStyle}>
+                    {value}
+                  </td>
+                );
+              })}
             </tr>
           ))}
         </tbody>
