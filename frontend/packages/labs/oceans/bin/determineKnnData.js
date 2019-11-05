@@ -78,7 +78,6 @@ eye_image_files.forEach(fileName => {
 
 const mouthDirectory = 'public/images/fish/mouth/';
 const mouth_image_files = fs.readdirSync(mouthDirectory);
-const mouths = {};
 mouth_image_files.forEach(fileName => {
   const imagePath = mouthDirectory + fileName;
   loadImage(imagePath).then(function(image) {
@@ -107,3 +106,31 @@ mouth_image_files.forEach(fileName => {
     console.log(json);
   });
 });
+
+// Parts without automically calculated KNN data
+const otherParts = {
+  PECTORAL_FIN_FRONT: 'pectoralFin',
+  PECTORAL_FIN_BACK: 'pectoralFin',
+  DORSAL_FIN: 'dorsalFin',
+  TAIL: 'tailFin'
+}
+
+for ([partName, dirName] of Object.entries(otherParts)) {
+  const dirPath = `public/images/fish/${dirName}`;
+  const image_files = fs.readdirSync(dirPath);
+
+  image_files.forEach(fileName => {
+    const imagePath = dirPath + fileName;
+    const name = fileName.split('.')[0];
+    const src = `${name}_image`;
+
+    console.log(`import ${src} from '../../${imagePath}'`);
+
+    const json = `    ${name}: {
+      src: ${src},
+      knnData: [],
+      type: FishBodyPart.${partName}
+    },`;
+    console.log(json);
+  });
+}
