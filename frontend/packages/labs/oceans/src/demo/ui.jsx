@@ -155,19 +155,6 @@ const styles = {
     width: '65%',
     height: 38
   },
-  biasText: {
-    position: 'absolute',
-    bottom: '2%',
-    left: '37%',
-    transform: 'translateX(-45%)',
-    fontSize: 22,
-    lineHeight: '32px',
-    width: '75%',
-    backgroundColor: colors.transparentBlack,
-    padding: '2%',
-    borderRadius: 10,
-    color: colors.white
-  },
   pondText: {
     position: 'absolute',
     bottom: 10,
@@ -596,7 +583,11 @@ class Predict extends React.Component {
     if (state.appMode === 'fishvtrash') {
       return 'Now let’s see if A.I. knows what a fish looks like.';
     } else if (state.appMode === 'creaturesvtrashdemo') {
-      return 'A.I. has learned to remove objects it identifies as  “Not Fish”. What unintended consequences might this lead to?';
+      if (state.isPaused) {
+        return 'There are lots of creatures in the sea who don’t look like fish. But that doesn’t mean they should be removed! A.I. only knows what we teach it!';
+      } else {
+        return 'A.I. has learned to remove objects it identifies as  “Not Fish”. What unintended consequences might this lead to?';
+      }
     } else if (state.appMode === 'creaturesvtrash') {
       return 'Now let’s see if A.I. does a better job separating what should be in the ocean and what shouldn’t.';
     } else if (state.appMode === 'short' || state.appMode === 'long') {
@@ -609,9 +600,6 @@ class Predict extends React.Component {
   render() {
     const state = getState();
     const speechBubbleText = this.speechBubbleText(state);
-
-    const biasText =
-      'There are lots of creatures in the sea who don’t look like fish. But that doesn’t mean they should be removed! A.I. only knows what we teach it!';
 
     return (
       <Body>
@@ -627,23 +615,23 @@ class Predict extends React.Component {
             Run A.I.
           </Button>
         )}
-        {state.isRunning && (state.canSkipPredict || state.showBiasText) && (
-          <Button
-            style={styles.continueButton}
-            onClick={() => {
-              if (state.showBiasText) {
-                if (state.onContinue) {
-                  state.onContinue();
+        {(state.isRunning || state.isPaused) &&
+          (state.canSkipPredict || state.showBiasText) && (
+            <Button
+              style={styles.continueButton}
+              onClick={() => {
+                if (state.showBiasText) {
+                  if (state.onContinue) {
+                    state.onContinue();
+                  }
+                } else {
+                  toMode(Modes.Pond);
                 }
-              } else {
-                toMode(Modes.Pond);
-              }
-            }}
-          >
-            Continue
-          </Button>
-        )}
-        {state.showBiasText && <div style={styles.biasText}>{biasText}</div>}
+              }}
+            >
+              Continue
+            </Button>
+          )}
       </Body>
     );
   }
