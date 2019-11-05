@@ -123,39 +123,6 @@ describe('DataVisualizer', () => {
           {histogram: {bucketSize: 2}}
         ]);
       });
-
-      it('can show a crosstab chart', () => {
-        let originalRecords = [
-          '{"city": "Seattle", "weather": "sunny"}',
-          '{"city": "Seattle", "weather": "rainy"}',
-          '{"city": "Boston", "weather": "rainy"}',
-          '{"city": "Boston", "weather": "cloudy"}',
-          '{"city": "Seattle", "weather": "rainy"}',
-          '{"city": "NYC", "weather": "sunny"}',
-          '{"city": "NYC", "weather": "sunny"}',
-          '{"city": "NYC", "weather": "cloudy"}'
-        ];
-        wrapper.setProps({
-          tableRecords: originalRecords,
-          tableColumns: ['city', 'weather']
-        });
-        wrapper.instance().setState({
-          chartType: 'Cross Tab',
-          xValues: 'city',
-          yValues: 'weather'
-        });
-        const expectedChartData = [
-          {city: 'Seattle', cloudy: 0, rainy: 2, sunny: 1},
-          {city: 'Boston', cloudy: 1, rainy: 1, sunny: 0},
-          {city: 'NYC', cloudy: 1, rainy: 0, sunny: 2}
-        ];
-        expect(spy).to.have.been.calledOnce;
-        expect(spy.getCalls()[0].args).to.deep.equal([
-          expectedChartData,
-          ['city', 'cloudy', 'rainy', 'sunny'],
-          {}
-        ]);
-      });
     });
   });
 

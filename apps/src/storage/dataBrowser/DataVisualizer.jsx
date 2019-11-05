@@ -115,14 +115,7 @@ class DataVisualizer extends React.Component {
         }
         break;
       case 'Cross Tab':
-        if (this.state.xValues && this.state.yValues) {
-          chart = new GoogleChart.CrossTab(targetDiv);
-          ({chartData, columns} = this.createPivotTable(
-            this.state.parsedRecords,
-            this.state.xValues,
-            this.state.yValues
-          ));
-        }
+        // No GoogleChart for Cross Tab
         break;
       case 'Scatter Plot':
         if (this.state.xValues && this.state.yValues) {
