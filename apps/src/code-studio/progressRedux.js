@@ -534,6 +534,11 @@ const levelWithStatus = (
   return {
     ...processedLevel(level),
     status: statusForLevel(level, levelProgress),
+    // IMPORTANT: NOT EVERYTHING THAT USES THIS IS SET UP LIKE THIS
+    // levelProgress[id] = {status: , timeSpent: } SO WE NEED TO FIGURE THAT OUT
+    timeSpent: levelProgress[level.activeId]
+      ? levelProgress[level.activeId].timeSpent
+      : 0,
     isCurrentLevel: isCurrentLevel(currentLevelId, level),
     paired: levelPairing[level.activeId],
     readonlyAnswers: level.readonly_answers
@@ -612,7 +617,10 @@ export function statusForLevel(level, levelProgress) {
   // Worth noting that in the majority of cases, ids will be a single
   // id here
   const id = level.uid || bestResultLevelId(level.ids, levelProgress);
-  let status = activityCssClass(levelProgress[id]);
+  // IMPORTANT: NOT EVERYTHING THAT USES THIS IS SET UP LIKE THIS
+  // levelProgress[id] = {status: , timeSpent: } SO WE NEED TO FIGURE THAT OUT
+  const levelStatus = levelProgress[id] ? levelProgress[id].status : null;
+  let status = activityCssClass(levelStatus);
   if (
     level.uid &&
     level.ids.every(id => levelProgress[id] === TestResults.LOCKED_RESULT)
