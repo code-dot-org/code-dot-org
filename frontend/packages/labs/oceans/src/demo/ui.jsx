@@ -190,19 +190,15 @@ const styles = {
     alignItems: 'center'
   },
   pillIcon: {
-    width: 38,
+    width: 19,
     padding: 10,
-    border: `4px solid ${colors.black}`,
-    borderRadius: 33,
-    zIndex: 2
+    borderRadius: 33
   },
   pillText: {
-    color: colors.white,
-    backgroundColor: colors.black,
+    color: colors.black,
     padding: '10px 30px',
     borderRadius: 33,
-    marginLeft: -22,
-    zIndex: 1
+    marginLeft: -18
   },
   bubble: {
     position: 'absolute',
@@ -216,13 +212,13 @@ const styles = {
   },
   count: {
     position: 'absolute',
-    top: '5%'
+    top: '3%'
   },
   noCount: {
-    right: '16%'
+    right: '9%'
   },
   yesCount: {
-    right: '2%'
+    right: 0
   }
 };
 
