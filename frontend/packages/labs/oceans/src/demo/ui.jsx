@@ -673,7 +673,7 @@ class Pond extends React.Component {
     const state = getState();
     const pondText = [
       `Out of ${state.fishData.length} objects, I identified ${
-        state.pondFish.length
+        state.totalPondFish
       } that are ${state.word.toUpperCase()}.`,
       'How did I do?',
       'Choose to Train More or Continue.'
@@ -714,15 +714,13 @@ class Pond extends React.Component {
     return (
       <Body onClick={this.onPondClick}>
         <Header>A.I. Results</Header>
-        {state.canSeePondText && <div style={styles.pondText}>
-          {pondText.map((text, index) => {
-            return (
-              <div>
-                {text}
-              </div>
-            );
-          })}
-        </div>}
+        {state.canSeePondText && (
+          <div style={styles.pondText}>
+            {pondText.map((text, index) => {
+              return <div key={index}>{text}</div>;
+            })}
+          </div>
+        )}
         <img style={styles.pondBot} src={aiBotClosed} />
         {showFishDetails && (
           <div style={pondFishDetailsStyle}>{confidence}</div>

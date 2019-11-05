@@ -6,6 +6,7 @@ const initialState = {
   dataSet: null,
   fishData: [],
   pondFish: [],
+  totalPondFish: null,
   backgroundCanvas: null,
   canvas: null,
   ctx: null,
