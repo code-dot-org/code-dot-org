@@ -599,6 +599,8 @@ class Predict extends React.Component {
 
     if (state.appMode === 'fishvtrash') {
       return 'Now let’s see if A.I. knows what a fish looks like.';
+    } else if (state.appMode === 'creaturesvtrashdemo') {
+      return 'A.I. has learned to remove objects it identifies as  “Not Fish”. What unintended consequences might this lead to?';
     } else if (state.appMode === 'creaturesvtrash') {
       return 'Now let’s see if A.I. does a better job separating what should be in the ocean and what shouldn’t.';
     } else if (state.appMode === 'short' || state.appMode === 'long') {
