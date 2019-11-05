@@ -196,7 +196,7 @@ function validateReport(report) {
  * @property {number} serverLevelId - ??
  * @property {?} submitted - ??
  * @property {?} time - ??
- * @property {?} timeSinceLastMilestone- The time since navigating to this page. If have posted a milestone since being on
+ * @property {number} timeSinceLastMilestone- The time since navigating to this page. If have posted a milestone since being on
  * the page its the time since that last milestone post. It is used to calculated time spent on a level
  * @property {?} save_to_gallery - ??
  * @property {?} attempt - ??
