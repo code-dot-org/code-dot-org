@@ -9,7 +9,9 @@ Look through the changes in each of the commits and verify that all changes are 
 ### Things to Note:
 
 - We expect translation changes to come in on a regular basis; new strings will be translated, existing translations will be updated, and source string removals will result in translations for those strings also being removed.
+
 - We expect translations to arrive in large batches, so don't worry if you see a large group of changes in a specific language.
+
 - We _do not_ usually expect to see a large number of formatting changes, or batches of changes that apply to strings in every single language. If you see this, it usually means either that a code change went in or that something broke.
 
 ## Known Issues:
