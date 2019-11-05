@@ -858,6 +858,27 @@ const fishComponents = {
       finRgb: [200, 220, 92],
       mouthRgb: [200, 220, 92],
       knnData: [72, 139, 73]
+    },
+    // light + dark lime green
+    palette5: {
+      bodyRgb: [201, 219, 83],
+      finRgb: [143, 194, 63],
+      mouthRgb: [143, 194, 63],
+      knnData: [201, 219, 83]
+    },
+    // red + navy blue
+    palette6: {
+      bodyRgb: [227, 72, 44],
+      finRgb: [15, 36, 55],
+      mouthRgb: [15, 36, 55],
+      knnData: [227, 72, 44]
+    },
+    // purple + pink
+    palette7: {
+      bodyRgb: [94, 121, 188],
+      finRgb: [221, 82, 124],
+      mouthRgb: [221, 82, 124],
+      knnData: [94, 121, 188]
     }
   }
 };
