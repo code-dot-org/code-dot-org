@@ -1,0 +1,20 @@
+name 'CSP 20-21 Phishing'
+title 'That was easy, what\'s next?'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+#Phishing
+
+## Vocabulary
+
+xxx
+
+## Sample
+
+xxx
+
+## Articles
+
+xxx
+
+MARKDOWN

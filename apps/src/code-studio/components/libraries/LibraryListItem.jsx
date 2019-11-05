@@ -10,7 +10,6 @@ const styles = {
     color: color.dark_charcoal,
     textAlign: 'left',
     display: 'flex',
-    backgroundColor: color.offwhite_gray,
     borderBottom: 'inset'
   },
   libraryName: {
@@ -29,14 +28,9 @@ const styles = {
     flexGrow: 1,
     marginRight: 5
   },
-  moreDetails: {
+  viewCode: {
     position: 'absolute',
     right: 0
-  },
-  moreDetailsWithAdd: {
-    position: 'absolute',
-    bottom: 0,
-    right: 50
   },
   addButton: {
     marginLeft: 'auto'
@@ -55,12 +49,8 @@ export default class LibraryListItem extends React.Component {
     onAdd: PropTypes.func
   };
 
-  moreDetails = _ => {
-    return 'See More Details';
-  };
-
-  getMoreDetailsStyle = () => {
-    return this.props.onAdd ? styles.moreDetailsWithAdd : styles.moreDetails;
+  viewCode = _ => {
+    return '';
   };
 
   render() {
@@ -74,7 +64,7 @@ export default class LibraryListItem extends React.Component {
           {library.studentName && (
             <span style={styles.author}>Author: {library.studentName}</span>
           )}
-          <span style={styles.moreDetails}>{this.moreDetails(library)}</span>
+          <span style={styles.viewCode}>{this.viewCode(library)}</span>
         </span>
         {this.props.onAdd && (
           <button

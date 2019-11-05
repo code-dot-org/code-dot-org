@@ -48,29 +48,20 @@ class FormRoutesTest < SequelTestCase
 
     it 'uses reverse chronological order' do
       here = '35.774929,-122.419416'
-      create_volunteer name: 'Oldest', created_at: 3.years.ago, location: here
-      create_volunteer name: 'Middle', created_at: 2.years.ago, location: here
-      create_volunteer name: 'Newest', created_at: 1.year.ago, location: here
+      create_volunteer name: 'Oldest', location: here
+      create_volunteer name: 'Middle', location: here
+      create_volunteer name: 'Newest', location: here
       results = search location: here
       assert_equal %w(Newest Middle Oldest), results.map {|r| r['name_s']}
     end
 
-    # Regression test: Ordering results when trying to retrieve a large number of rows
-    # slowed this query down significantly, so we avoid doing it over a certain size.
-    it 'does not try to order results for large requests' do
-      Sequel::Dataset.any_instance.expects(:order).never
-      # 5000 is the default rows retrieved on initial page load for the volunteer map.
-      search location: '35.774929,-122.419416', num_volunteers: '5000'
-    end
-
-    def create_volunteer(name:, location:, created_at: DateTime.now)
+    def create_volunteer(name:, location:)
       row = insert_or_upsert_form(
         'VolunteerEngineerSubmission2015',
         DEFAULT_DATA.dup.merge(name_s: name)
       )
       Form.find(id: row[:id]).update(
-        processed_data: {location_p: location}.to_json,
-        created_at: created_at
+        processed_data: {location_p: location}.to_json
       )
     end
 
