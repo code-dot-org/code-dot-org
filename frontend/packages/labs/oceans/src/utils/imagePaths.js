@@ -8,7 +8,14 @@ import Trash_Coffee from '../../public/images/trash/Trash_Coffee.png';
 import Trash_Fork from '../../public/images/trash/Trash_Fork.png';
 import Trash_Sock from '../../public/images/trash/Trash_Sock.png';
 
+import Crab from '../../public/images/seaCreatures/Crab.png';
+import Jellyfish from '../../public/images/seaCreatures/Jellyfish.png';
+import Octopus from '../../public/images/seaCreatures/Octopus.png';
 import Seahorse from '../../public/images/seaCreatures/Seahorse.png';
+import Snail from '../../public/images/seaCreatures/Snail.png';
+import Starfish from '../../public/images/seaCreatures/Starfish.png';
+import Turtle from '../../public/images/seaCreatures/Turtle.png';
+import Whale from '../../public/images/seaCreatures/Whale.png';
 
 export const trashImagePaths = [
   Trash_6pack,
@@ -23,5 +30,12 @@ export const trashImagePaths = [
 ];
 
 export const seaCreatureImagePaths = [
-  Seahorse
+  Crab,
+  Jellyfish,
+  Octopus,
+  Seahorse,
+  Snail,
+  Starfish,
+  Turtle,
+  Whale
 ];
