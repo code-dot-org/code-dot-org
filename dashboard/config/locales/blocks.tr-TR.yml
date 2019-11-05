@@ -956,10 +956,6 @@ tr:
         text: rastgele renk
       Mikelab_repeatUntilComplete:
         text: Sonsuza kadar tekrarla
-      Mikelab_sendBad:
-        text: sola ilerle
-      Mikelab_sendGood:
-        text: sağa ilerle
       Mikelab_setBG:
         options:
           BG:

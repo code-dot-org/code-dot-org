@@ -1627,3 +1627,19 @@ fa:
               name: مقدمه
             Nested Loops:
               name: حلقه های تو در تو
+        k5-onlinepd-copy:
+          stages:
+            Computer Science Fundamentals:
+              name: مقدمات علم کامپیوتر
+            Loops:
+              name: حلقه‌ها
+            Conditionals:
+              name: شرطی ها
+            Events:
+              name: رویدادها
+            Functions:
+              name: توابع
+            Variables:
+              name: متغیرها
+            For Loops:
+              name: حلقه های "برای"

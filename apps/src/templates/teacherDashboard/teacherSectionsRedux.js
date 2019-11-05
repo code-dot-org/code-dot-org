@@ -980,7 +980,7 @@ export const sectionFromServerSection = serverSection => ({
   courseId: serverSection.course_id,
   scriptId: serverSection.script
     ? serverSection.script.id
-    : serverSection.script_id,
+    : serverSection.script_id || null,
   hidden: serverSection.hidden
 });
 

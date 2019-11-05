@@ -2369,3 +2369,21 @@ bg:
               name: Въведение
             Nested Loops:
               name: Вмъкнати цикли
+        k5-onlinepd-copy:
+          stages:
+            Computer Science Fundamentals:
+              name: Основи на компютърните науки
+            Next Steps:
+              name: Следващи стъпки
+            Loops:
+              name: Повторения
+            Conditionals:
+              name: Условия
+            Events:
+              name: Събития
+            Functions:
+              name: Функции
+            Variables:
+              name: Променливи
+            For Loops:
+              name: За циклите

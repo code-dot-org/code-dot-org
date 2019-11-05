@@ -724,6 +724,7 @@ pt:
     csp_functions: 'Funções'
     csp_lists: 'Listas'
     csp_loops: 'ciclos'
+    k5_next_steps: 'Próximos Passos'
   hoc_download:
     title: 'Hora das transferências de Código'
     capsule_title: 'Tem Internet?'

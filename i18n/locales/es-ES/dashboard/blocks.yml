@@ -1222,10 +1222,6 @@ es:
         text: gráfico {SPRITE} detiene {BEHAVIOR}
       Mikelab_repeatUntilComplete:
         text: Repetir para siempre
-      Mikelab_sendBad:
-        text: mover hacia la izquierda
-      Mikelab_sendGood:
-        text: mover hacia la derecha
       Mikelab_setBG:
         options:
           BG:

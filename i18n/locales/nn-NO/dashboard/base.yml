@@ -866,6 +866,7 @@ nn:
     csp_lists: 'Lister'
     csp_loops: 'Løkker'
     dlp: 'Spørsmål til refleksjon'
+    k5_next_steps: 'Neste steg'
   external_links:
     disclaimer: Fråskrive seg ansvar
     leaving_domain: Du forlet no dette domenet, til eit område som ikkje blir styrt av Code.org.
@@ -996,3 +997,7 @@ nn:
     message: 'Dine data fra bruken av dette nettstedet kan sendes til, lagres eller behandles i USA.'
     logout: 'Logg ut'
     yes: 'Ja'
+  page_not_found_title: "Finn ikkje sida"
+  page_not_found_header: '404: Finn ikkje sida'
+  page_not_found_description: "Sida du leiter etter finst ikkje på denne adressa. Sjekk nettadressa og send inn på nytt. Eller gå tilbake til heimesida vår."
+  page_not_found_button: "Gå heim"

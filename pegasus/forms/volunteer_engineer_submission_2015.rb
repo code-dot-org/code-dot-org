@@ -127,7 +127,8 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
       ).
       exclude(
         Sequel.function(:coalesce, Forms.json('data.unsubscribed_s'), '') => UNSUBSCRIBE_FOREVER
-      )
+      ).
+      order(Sequel.desc(:id))
 
     # UNSUBSCRIBE_HOC means a volunteer said "I want to unsubscribe until the next Hour of Code".
     # We don't want them to be getting volunteer requests until then.  So, if we're not currently
@@ -184,16 +185,6 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
       query = query.where Sequel.lit(Forms.json('processed_data.location_p'))
       query = query.where {distance_query < distance}
       fl.push distance_query.as(:distance)
-    end
-
-    # The condition here is a workaround for a performance issue introduced in
-    # https://github.com/code-dot-org/code-dot-org/pull/31493
-    # Our initial query on the volunteer map retrieves 5000 rows with a 3000km radius, and this
-    # order clause slowed it down significantly.
-    # Subsequent queries on the page are limited to 50 rows, 32km, and don't have this perf issue
-    # so we still want to make sure we retrieve the more recent sign-ups.
-    if rows <= 50
-      query = query.order(Sequel.desc(:created_at))
     end
 
     docs = query.select(

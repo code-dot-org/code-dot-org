@@ -1034,6 +1034,8 @@ de:
     time4cs_c3: Leben in den Everglades
     time4cs_c4: Invasive Auswirkungen auf die Everglades
     time4cs_c5: Bürger beeinflussen den Wandel in den Everglades
+    k5_getting_started: Erste Schritte
+    k5_next_steps: Nächste Schritte
   external_links:
     disclaimer: Haftungsausschluss
     leaving_domain: |-
@@ -1210,3 +1212,8 @@ de:
     privacy_policy: Datenschutzerklärung
     logout: Abmelden
     true: Ja
+  page_not_found_title: Seite nicht gefunden
+  page_not_found_header: '404: Seite nicht gefunden'
+  page_not_found_description: Die Seite die Sie suchen gibt es nicht unter dieser
+    Adresse. Prüfen Sie die Adresse und versuchen Sie es noch einmal. Oder, gehen
+    Sie zurück zu unserer Webseite.
