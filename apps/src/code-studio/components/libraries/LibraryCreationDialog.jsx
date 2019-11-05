@@ -172,12 +172,8 @@ class LibraryCreationDialog extends React.Component {
     }
   };
 
-  displayCodeError = () => {
-    return <div>{i18n.libraryCodeError()}</div>;
-  };
-
-  displayNoFunctionsError = () => {
-    return <div>{i18n.libraryNoFunctonsError()}</div>;
+  displayError = errorMessage => {
+    return <div>{errorMessage}</div>;
   };
 
   displayLoadingState = () => {
@@ -292,10 +288,10 @@ class LibraryCreationDialog extends React.Component {
         bodyContent = this.displaySuccess();
         break;
       case LoadingState.CODE_ERROR:
-        bodyContent = this.displayCodeError();
+        bodyContent = this.displayError(i18n.libraryCodeError());
         break;
       case LoadingState.NO_FUNCTIONS:
-        bodyContent = this.displayNoFunctionsError();
+        bodyContent = this.displayError(i18n.libraryNoFunctonsError());
         break;
       default:
         bodyContent = this.displayFunctions();
