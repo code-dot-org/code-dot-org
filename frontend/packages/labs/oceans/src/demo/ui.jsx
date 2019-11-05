@@ -181,10 +181,10 @@ const styles = {
     lineHeight: '22px',
     textAlign: 'center',
     width: '45%',
-    backgroundColor: colors.transparentWhite,
+    backgroundColor: colors.transparentBlack,
     padding: '1%',
     borderRadius: 10,
-    color: colors.black
+    color: colors.white
   },
   pondTextParagraph: {
     marginBottom: 4
