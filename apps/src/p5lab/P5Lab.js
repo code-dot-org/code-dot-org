@@ -842,6 +842,12 @@ P5Lab.prototype.onPuzzleComplete = function(submit, testResult, message) {
       ? onSubmitComplete
       : this.onReportComplete.bind(this);
 
+    console.log("onComplete in sendReport in P5Lab: ", onComplete)
+
+    console.log("containedLevelResultsInfo:", containedLevelResultsInfo)
+
+    console.log("submit", submit)
+
     if (containedLevelResultsInfo) {
       // We already reported results when run was clicked. Make sure that call
       // finished, then call onCompelte
