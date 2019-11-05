@@ -260,28 +260,18 @@ let Button = class Button extends React.Component {
 Button = Radium(Button);
 
 const instructionsText = {
-  intro: [
-    {
-      heading: 'Introduction',
-      text: [
-        'In the following activity we’ll learn about artificial intelligence (AI) and machine learning.',
-        'With machine learning we use data to train the computer to recognize patterns.',
-        'Watch the video to learn more!'
-      ]
-    }
-  ],
-
   fishvtrash: [
     {
-      heading: 'Train A.I. to Clean Ocean',
+      heading: 'Train AI to Clean the Ocean',
       text: [
+        'In the following activity we’ll learn about artificial intelligence (AI) and machine learning.',
         'Now let’s consider how machine learning can be used for good in the real world.',
         '1 in 3 people worldwide do not have access to safe drinking water. Access to clean water could reduce global diseases by 10%.',
         'Garbage dumped in ocean or rivers affects the water health and impacts the marine life in the water.'
       ]
     },
     {
-      heading: 'Train A.I. to Clean Ocean',
+      heading: 'Train AI to Clean the Ocean',
       text: [
         'In this activity, you will "program" or "train" an artificial intelligence to identify trash to remove from the ocean.'
       ]
@@ -501,8 +491,10 @@ let Train = class Train extends React.Component {
     const trainQuestionTextStyle = state.isRunning
       ? styles.trainQuestionTextDisabled
       : styles.trainQuestionText;
-    const yesButtonText = state.appMode === 'creaturesvtrash' ? 'Yes' : state.word;
-    const noButtonText = state.appMode === 'creaturesvtrash' ? 'No' : `Not ${state.word}`;
+    const yesButtonText =
+      state.appMode === 'creaturesvtrash' ? 'Yes' : state.word;
+    const noButtonText =
+      state.appMode === 'creaturesvtrash' ? 'No' : `Not ${state.word}`;
     return (
       <Body>
         <Header>A.I. Training</Header>
