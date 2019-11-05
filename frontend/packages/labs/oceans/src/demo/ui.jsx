@@ -52,6 +52,11 @@ const styles = {
     bottom: 10,
     right: 10
   },
+  backButton: {
+    position: 'absolute',
+    bottom: 80,
+    right: 10
+  },
   button1col: {
     width: '20%',
     display: 'block',
@@ -152,8 +157,8 @@ const styles = {
   },
   pondText: {
     position: 'absolute',
-    bottom: '4%',
-    left: '43%',
+    bottom: 10,
+    left: '38%',
     transform: 'translateX(-45%)',
     fontSize: 18,
     lineHeight: '32px',
@@ -174,9 +179,9 @@ const styles = {
   },
   pondBot: {
     position: 'absolute',
-    height: '40%',
-    left: '4%',
-    bottom: 0
+    height: '35%',
+    left: 20,
+    bottom: -10
   },
   pill: {
     display: 'flex',
@@ -672,11 +677,11 @@ class Pond extends React.Component {
   render() {
     const state = getState();
     const pondText = [
-      `Out of ${state.fishData.length} objects, I identified ${
+      `Out of ${state.fishData.length} objects, A.I. identified ${
         state.pondFish.length
       } that are ${state.word.toUpperCase()}.`,
-      'How did I do?',
-      'Choose to Train More or Continue.'
+      'How did A.I. do?',
+      //'Choose to Train More or Continue.'
     ];
 
     const showFishDetails = !!state.pondClickedFish;
@@ -714,30 +719,38 @@ class Pond extends React.Component {
     return (
       <Body onClick={this.onPondClick}>
         <Header>A.I. Results</Header>
-        {state.canSeePondText && <div style={styles.pondText}>
-          {pondText.map((text, index) => {
-            return (
-              <div>
-                {text}
-              </div>
-            );
-          })}
-        </div>}
+        {state.canSeePondText && (
+          <div style={styles.pondText}>
+            {pondText.map((text, index) => {
+              return <div key={index}>{text}</div>;
+            })}
+          </div>
+        )}
         <img style={styles.pondBot} src={aiBotClosed} />
         {showFishDetails && (
           <div style={pondFishDetailsStyle}>{confidence}</div>
         )}
         {state.canSkipPond && (
-          <Button
-            style={styles.continueButton}
-            onClick={() => {
-              if (state.onContinue) {
-                state.onContinue();
-              }
-            }}
-          >
-            Continue
-          </Button>
+          <div>
+            <Button
+              style={styles.continueButton}
+              onClick={() => {
+                if (state.onContinue) {
+                  state.onContinue();
+                }
+              }}
+            >
+              Continue
+            </Button>
+            <Button
+              style={styles.backButton}
+              onClick={() => {
+                toMode(Modes.Training);
+              }}
+            >
+              Train More
+            </Button>
+          </div>
         )}
       </Body>
     );
