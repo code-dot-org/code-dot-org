@@ -230,6 +230,12 @@ function Collide(x1, y1, w1, h1, x2, y2, w2, h2) {
   return true;
 }
 
+var $time =
+  Date.now ||
+  function() {
+    return +new Date();
+  };
+
 class Body extends React.Component {
   static propTypes = {
     children: PropTypes.node,
@@ -528,8 +534,10 @@ let Train = class Train extends React.Component {
     const trainQuestionTextStyle = state.isRunning
       ? styles.trainQuestionTextDisabled
       : styles.trainQuestionText;
-    const yesButtonText = state.appMode === 'creaturesvtrash' ? 'Yes' : state.word;
-    const noButtonText = state.appMode === 'creaturesvtrash' ? 'No' : `Not ${state.word}`;
+    const yesButtonText =
+      state.appMode === 'creaturesvtrash' ? 'Yes' : state.word;
+    const noButtonText =
+      state.appMode === 'creaturesvtrash' ? 'No' : `Not ${state.word}`;
     return (
       <Body>
         <Header>A.I. Training</Header>
@@ -591,24 +599,28 @@ class Predict extends React.Component {
     const state = getState();
     const speechBubbleText = this.speechBubbleText(state);
 
-    let btnText, btnOnClick;
-    if (state.isRunning) {
-      btnText = 'Continue';
-      btnOnClick = () => toMode(Modes.Pond);
-    } else {
-      btnText = 'Run A.I.';
-      btnOnClick = () => setState({isRunning: true});
-    }
-
     return (
       <Body>
         <Header>A.I. Sorting</Header>
         {speechBubbleText && (
           <SpeechBubble text={speechBubbleText} style={styles.predictSpeech} />
         )}
-        <Button style={styles.continueButton} onClick={btnOnClick}>
-          {btnText}
-        </Button>
+        {!state.isRunning && (
+          <Button
+            style={styles.continueButton}
+            onClick={() => setState({isRunning: true, runStartTime: $time()})}
+          >
+            Run A.I.
+          </Button>
+        )}
+        {state.canSkipPredict && (
+          <Button
+            style={styles.continueButton}
+            onClick={() => toMode(Modes.Pond)}
+          >
+            Continue
+          </Button>
+        )}
       </Body>
     );
   }
@@ -631,7 +643,8 @@ class Pond extends React.Component {
         if (
           !fishClicked &&
           !(
-            state.pondClickedFish && fishBound.fishId === state.pondClickedFish.id
+            state.pondClickedFish &&
+            fishBound.fishId === state.pondClickedFish.id
           ) &&
           Collide(
             fishBound.x,

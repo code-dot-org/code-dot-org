@@ -75,6 +75,8 @@ export const render = () => {
 
   clearCanvas(state.canvas);
 
+  const timeBeforeCanSkipPredict = 5000;
+
   switch (state.currentMode) {
     case Modes.Training:
       drawFrame(state);
@@ -83,6 +85,14 @@ export const render = () => {
     case Modes.Predicting:
       drawPredictBot(state);
       drawMovingFish(state);
+
+      if (state.isRunning) {
+        setState({
+          canSkipPredict:
+            $time() >= state.runStartTime + timeBeforeCanSkipPredict
+        });
+      }
+
       break;
     case Modes.Pond:
       drawPondFishImages();
