@@ -7,6 +7,7 @@ import {randomInt} from '../helpers';
 export const init = async () => {
   const state = getState();
   let fishWithConfidence = await predictAllFish(state);
+  setState({totalPondFish: fishWithConfidence.length});
   fishWithConfidence = _.sortBy(fishWithConfidence, ['confidence']);
   const pondFishWithConfidence = fishWithConfidence.splice(0, 20);
   arrangeFish(pondFishWithConfidence);
