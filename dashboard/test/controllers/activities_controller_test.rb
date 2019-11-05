@@ -42,7 +42,6 @@ class ActivitiesControllerTest < ActionController::TestCase
       result: 'true',
       testResult: '100',
       time: '1000',
-      timeSinceLastMilestone: '500',
       app: 'test',
       program: '<hey>'
     }
@@ -146,28 +145,6 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     post :milestone, params: params
     assert_response :success
-  end
-
-  test "milestone creates new UserLevelInfo if none existed" do
-    params = @milestone_params
-
-    post :milestone, params: params
-    assert_response :success
-
-    assert_equal UserLevel.last.id, UserLevelInfo.last.user_level_id
-    assert_equal params[:timeSinceLastMilestone].to_i, UserLevelInfo.last.time_spent
-  end
-
-  test "milestone updates existing UserLevelInfo" do
-    params = @milestone_params
-
-    user_level = UserLevel.create(level: @script_level.level, user: @user, script: @script_level.script)
-    user_level_info = UserLevelInfo.create(user_level_id: user_level.id, time_spent: 1000)
-
-    post :milestone, params: @milestone_params
-    assert_response :success
-
-    assert_equal user_level_info.time_spent + params[:timeSinceLastMilestone].to_i, UserLevelInfo.find_by(user_level_id: user_level.id).time_spent
   end
 
   test "milestone creates userlevel with specified level when scriptlevel has multiple levels" do
