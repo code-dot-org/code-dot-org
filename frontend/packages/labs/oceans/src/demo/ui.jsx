@@ -20,7 +20,7 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    fontSize: 48,
+    fontSize: 28,
     lineHeight: '52px'
   },
   body: {
@@ -103,11 +103,11 @@ const styles = {
   },
   trainQuestionText: {
     position: 'absolute',
-    top: '18%',
+    top: '15%',
     left: '50%',
     transform: 'translateX(-50%)',
-    fontSize: 22,
-    lineHeight: '26px'
+    fontSize: 32,
+    lineHeight: '35px'
   },
   trainQuestionTextDisabled: {
     position: 'absolute',
@@ -118,19 +118,21 @@ const styles = {
     lineHeight: '26px',
     opacity: 0.5
   },
-  trainButtonYes: {
+  trainButtons: {
     position: 'absolute',
     top: '80%',
-    left: '50%',
+    width: '100%',
+    display: 'flex',
+    justifyContent: 'center'
+  },
+  trainButtonYes: {
+    marginLeft: 10,
     ':hover': {
       backgroundColor: colors.green,
       color: colors.white
     }
   },
   trainButtonNo: {
-    position: 'absolute',
-    top: '80%',
-    left: '33%',
     ':hover': {
       backgroundColor: colors.red,
       color: colors.white
@@ -287,28 +289,18 @@ let Button = class Button extends React.Component {
 Button = Radium(Button);
 
 const instructionsText = {
-  intro: [
-    {
-      heading: 'Introduction',
-      text: [
-        'In the following activity we’ll learn about artificial intelligence (AI) and machine learning.',
-        'With machine learning we use data to train the computer to recognize patterns.',
-        'Watch the video to learn more!'
-      ]
-    }
-  ],
-
   fishvtrash: [
     {
-      heading: 'Train A.I. to Clean Ocean',
+      heading: 'Train AI to Clean the Ocean',
       text: [
+        'In the following activity we’ll learn about artificial intelligence (AI) and machine learning.',
         'Now let’s consider how machine learning can be used for good in the real world.',
         '1 in 3 people worldwide do not have access to safe drinking water. Access to clean water could reduce global diseases by 10%.',
         'Garbage dumped in ocean or rivers affects the water health and impacts the marine life in the water.'
       ]
     },
     {
-      heading: 'Train A.I. to Clean Ocean',
+      heading: 'Train AI to Clean the Ocean',
       text: [
         'In this activity, you will "program" or "train" an artificial intelligence to identify trash to remove from the ocean.'
       ]
@@ -326,12 +318,7 @@ const instructionsText = {
     {
       heading: 'Training Data',
       text: [
-        'A.I. needs lots of training data to do its job well. When you train A.I., the data you provide can make a difference!'
-      ]
-    },
-    {
-      heading: 'Training Data',
-      text: [
+        'A.I. needs lots of training data to do its job well. When you train A.I., the data you provide can make a difference!',
         'We learned how AI and machine learning can be used to do good things like identify trash in the ocean!',
         'What else can we use AI to do?'
       ]
@@ -528,8 +515,10 @@ let Train = class Train extends React.Component {
     const trainQuestionTextStyle = state.isRunning
       ? styles.trainQuestionTextDisabled
       : styles.trainQuestionText;
-    const yesButtonText = state.appMode === 'creaturesvtrash' ? 'Yes' : state.word;
-    const noButtonText = state.appMode === 'creaturesvtrash' ? 'No' : `Not ${state.word}`;
+    const yesButtonText =
+      state.appMode === 'creaturesvtrash' ? 'Yes' : state.word;
+    const noButtonText =
+      state.appMode === 'creaturesvtrash' ? 'No' : `Not ${state.word}`;
     return (
       <Body>
         <Header>A.I. Training</Header>
@@ -548,18 +537,20 @@ let Train = class Train extends React.Component {
           iconBgColor={colors.green}
           style={[styles.count, styles.yesCount]}
         />
-        <Button
-          style={styles.trainButtonNo}
-          onClick={() => onClassifyFish(false)}
-        >
-          {noButtonText}
-        </Button>
-        <Button
-          style={styles.trainButtonYes}
-          onClick={() => onClassifyFish(true)}
-        >
-          {yesButtonText}
-        </Button>
+        <div style={styles.trainButtons}>
+          <Button
+            style={styles.trainButtonNo}
+            onClick={() => onClassifyFish(false)}
+          >
+            {noButtonText}
+          </Button>
+          <Button
+            style={styles.trainButtonYes}
+            onClick={() => onClassifyFish(true)}
+          >
+            {yesButtonText}
+          </Button>
+        </div>
         <Button
           style={styles.continueButton}
           onClick={() => toMode(Modes.Predicting)}
@@ -580,6 +571,8 @@ class Predict extends React.Component {
 
     if (state.appMode === 'fishvtrash') {
       return 'Now let’s see if A.I. knows what a fish looks like.';
+    } else if (state.appMode === 'creaturesvtrash') {
+      return 'Now let’s see if A.I. does a better job separating what should be in the ocean and what shouldn’t.';
     } else if (state.appMode === 'short' || state.appMode === 'long') {
       return `Nice work! Your training data has programmed A.I. to recognize ${state.word.toLowerCase()} fish. Let’s run A.I.’s program and see how it works.`;
     } else {
