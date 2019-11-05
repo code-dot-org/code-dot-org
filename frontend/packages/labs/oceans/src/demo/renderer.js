@@ -12,8 +12,9 @@ import {
 import aiBotClosed from '../../public/images/ai-bot/ai-bot-closed.png';
 import aiBotCheckmark from '../../public/images/ai-bot/ai-bot-checkmark.png';
 import aiBotX from '../../public/images/ai-bot/ai-bot-x.png';
-import redScanner from '../../public/images/red-scanner.png';
-import greenScanner from '../../public/images/green-scanner.png';
+import redScanner from '../../public/images/ai-bot/red-scanner.png';
+import greenScanner from '../../public/images/ai-bot/green-scanner.png';
+import blueScanner from '../../public/images/ai-bot/blue-scanner.png';
 
 var $time =
   Date.now ||
