@@ -499,9 +499,18 @@ class Words extends React.Component {
       <Body>
         <Header>Choose Fish Type</Header>
         <Content>
-          <div style={styles.wordsText}>
-            What type of fish do you want to train A.I. to detect?
-          </div>
+          {state.appMode === 'short' && (
+            <div style={styles.wordsText}>
+              What type of fish do you want to train A.I. to detect?
+            </div>
+          )}
+          {state.appMode === 'long' && (
+            <div style={styles.wordsText}>
+              What happens if the words are more subjective?
+              <br />
+              Choose a new word to teach A.I.
+            </div>
+          )}
           {currentItems.map((item, itemIndex) => (
             <Button
               key={itemIndex}
