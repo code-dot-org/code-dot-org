@@ -159,15 +159,15 @@ const styles = {
     position: 'absolute',
     bottom: 10,
     left: '50%',
-    transform: 'translateX(-45%)',
+    transform: 'translateX(-50%)',
     fontSize: 18,
     lineHeight: '22px',
     textAlign: 'center',
     width: '45%',
-    backgroundColor: colors.transparentWhite,
+    backgroundColor: colors.transparentBlack,
     padding: '1%',
     borderRadius: 10,
-    color: colors.black
+    color: colors.white
   },
   pondTextParagraph: {
     marginBottom: 4
@@ -181,9 +181,11 @@ const styles = {
   },
   pondBot: {
     position: 'absolute',
-    height: '25%',
-    left: '23%',
-    bottom: 0
+    height: '40%',
+    top: '23%',
+    left: '50%',
+    bottom: 0,
+    transform: 'translateX(-45%)'
   },
   pill: {
     display: 'flex',
@@ -740,9 +742,9 @@ class Pond extends React.Component {
                 );
               })}
             </div>
-            <img style={styles.pondBot} src={aiBotClosed} />
           </div>
         )}
+        <img style={styles.pondBot} src={aiBotClosed} />
         {showFishDetails && (
           <div style={pondFishDetailsStyle}>{confidence}</div>
         )}
