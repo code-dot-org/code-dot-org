@@ -80,7 +80,7 @@ export const loadAllTrashImages = () => {
   });
 };
 
-// Load all of the trash assets and store them
+// Load all of the sea creature assets and store them
 export const loadAllSeaCreatureImages = () => {
   const loadImagePromises = seaCreatureImagePaths.map((src, idx) => {
     return loadImage({src, idx});
