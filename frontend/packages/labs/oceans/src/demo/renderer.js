@@ -9,6 +9,7 @@ import {
   loadAllSeaCreatureImages,
   loadAllTrashImages,
   initMobilenet,
+  FishOceanObject,
   SeaCreatureOceanObject
 } from './OceanObject';
 import aiBotClosed from '../../public/images/ai-bot/ai-bot-closed.png';
@@ -35,6 +36,8 @@ let botImages = {};
 let botVelocity = 3;
 let botY, botYDestination;
 let currentPredictedClassId;
+
+let numSeaCreaturesMisclassified = 0;
 
 export const initRenderer = () => {
   canvasCache = new CanvasCache();
@@ -191,7 +194,7 @@ const finishMovement = () => {
 };
 
 const pauseMovement = t => {
-  setState({isRunning: false, isPaused:true});
+  setState({isRunning: false, isPaused: true});
   lastPauseTime = t;
   lastStartTime = null;
 };
@@ -293,14 +296,19 @@ const drawMovingFish = state => {
           constants.canvasWidth / 2 - constants.fishCanvasWidth / 2;
         if (Math.abs(midScreenX - x) <= 50) {
           centerFish = fish;
-          if (
-            state.isRunning &&
-            state.appMode === 'creaturesvtrashdemo' &&
-            fish.result.predictedClassId === 1 &&
-            fish instanceof SeaCreatureOceanObject
-          ) {
-            pauseMovement(t);
-            setState({showBiasText: true});
+          if (state.isRunning && state.appMode === 'creaturesvtrashdemo') {
+            if (fish instanceof FishOceanObject) {
+              fish.result.predictedClassId = 0;
+            } else if (fish instanceof SeaCreatureOceanObject) {
+              fish.result.predictedClassId = 1;
+              numSeaCreaturesMisclassified++;
+            } else {
+              fish.result.predictedClassId = 1;
+            }
+            if (i === lastFishIdx) {
+              pauseMovement(t);
+              setState({showBiasText: true});
+            }
           }
         }
       } else {
