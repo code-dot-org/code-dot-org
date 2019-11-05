@@ -42,7 +42,7 @@ const styles = {
     minWidth: 160,
     padding: '16px 30px',
     outline: 'none',
-    border: 'none',
+    border: `2px solid ${colors.black}`,
     ':focus': {
       outline: `${colors.white} auto 5px`
     }
@@ -50,12 +50,16 @@ const styles = {
   continueButton: {
     position: 'absolute',
     bottom: 10,
-    right: 10
+    right: 10,
+    backgroundColor: colors.orange,
+    color: colors.white
   },
   backButton: {
     position: 'absolute',
     bottom: 10,
-    left: 10
+    left: 10,
+    backgroundColor: colors.blue,
+    color: colors.white
   },
   button1col: {
     width: '20%',
@@ -73,6 +77,9 @@ const styles = {
     top: '20%',
     left: '10%',
     width: '80%'
+  },
+  footerText: {
+    textAlign: 'center'
   },
   instructionsParagraph: {
     marginTop: 18,
@@ -164,10 +171,10 @@ const styles = {
     lineHeight: '22px',
     textAlign: 'center',
     width: '45%',
-    backgroundColor: colors.transparentWhite,
+    backgroundColor: colors.transparentBlack,
     padding: '1%',
     borderRadius: 10,
-    color: colors.black
+    color: colors.white
   },
   pondTextParagraph: {
     marginBottom: 4
@@ -309,7 +316,9 @@ const instructionsText = {
         '1 in 3 people worldwide do not have access to safe drinking water. Access to clean water could reduce global diseases by 10%.',
         'Garbage dumped in ocean or rivers affects the water health and impacts the marine life in the water.',
         'In this activity, you will "program" or "train" an artificial intelligence to identify trash to remove from the ocean.'
-      ]
+      ],
+      footer:
+        'Sources <a href="https://www.cdc.gov/healthywater/global/assessing.html" target="_blank">X</a>, <a href="https://unfoundation.org/blog/post/tapping-benefits-clean-water-sanitation-hygiene-achieve-sustainable-development-goals/" target="_blank">Y</a>, <a href="https://www.unwater.org/water-facts/water-sanitation-and-hygiene/" target="_blank">Z</a>'
     },
     {
       heading: 'Meet A.I.',
@@ -376,6 +385,14 @@ class Instructions extends React.Component {
                 </div>
               );
             }
+          )}
+          {instructionsText[appModeVariant][currentPage].footer && (
+            <div
+              style={styles.footerText}
+              dangerouslySetInnerHTML={{
+                __html: instructionsText[appModeVariant][currentPage].footer
+              }}
+            />
           )}
         </div>
         <Button style={styles.continueButton} onClick={this.onContinueButton}>
@@ -482,9 +499,18 @@ class Words extends React.Component {
       <Body>
         <Header>Choose Fish Type</Header>
         <Content>
-          <div style={styles.wordsText}>
-            What type of fish do you want to train A.I. to detect?
-          </div>
+          {state.appMode === 'short' && (
+            <div style={styles.wordsText}>
+              What type of fish do you want to train A.I. to detect?
+            </div>
+          )}
+          {state.appMode === 'long' && (
+            <div style={styles.wordsText}>
+              What happens if the words are more subjective?
+              <br />
+              Choose a new word to teach A.I.
+            </div>
+          )}
           {currentItems.map((item, itemIndex) => (
             <Button
               key={itemIndex}
