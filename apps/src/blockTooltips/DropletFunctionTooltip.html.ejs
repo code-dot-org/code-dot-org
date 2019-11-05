@@ -22,8 +22,14 @@
     </div>
   <% }) %>
 <% } %>
+<% var linkText = "See examples" %>
+<% if (locals.customExamplesLink) { %>
+  <% linkText = "" %>
+<% } %>
 <% if (locals.showExamplesLink) { %>
   <div class="tooltip-example-link">
-    <a href="javascript:void(0);">See examples</a>
+    <a href="javascript:void(0);">
+      <%= linkText %>
+    </a>
   </div>
 <% } %>

@@ -30,6 +30,7 @@ class Fish < Level
     hide_share_and_remix
     is_project_level
     submittable
+    mode
   )
 
   def self.create_from_level_builder(params, level_params)
