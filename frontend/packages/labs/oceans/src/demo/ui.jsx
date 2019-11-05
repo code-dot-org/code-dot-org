@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Radium from 'radium';
 import _ from 'lodash';
 import {getState, setState} from './state';
-import contants, {Modes, DataSet} from './constants';
+import constants, {Modes, DataSet} from './constants';
 import {getAppMode} from './helpers';
 import {toMode} from './toMode';
 import {onClassifyFish} from './models/train';
