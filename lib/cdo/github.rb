@@ -56,6 +56,18 @@ module GitHub
     response['number']
   end
 
+  # Octokit Documentation: http://octokit.github.io/octokit.rb/Octokit/Client/Reviews.html#request_pull_request_review-instance_method
+  # @param id [String | Integer] the numeric id of the pull request for which to request a review
+  # @param reviewers [String | Array[String]] string or array of strings representing the user or users from whom to request a review
+  # @return [Array[String]] the resulting reviewers for the PR
+  def self.request_review(id, reviewers)
+    configure_octokit
+    reviewers = [reviewers] unless reviewers.is_a? Array
+    response = Octokit.request_pull_request_review(REPO, id, reviewers)
+
+    response['reviewers']
+  end
+
   # Octokit Documentation: http://octokit.github.io/octokit.rb/Octokit/Client/Issues.html#update_issue-instance_method
   # @param base [String | Integer] the numeric id of the PR to be updated
   # @param lables [Array[String]] array of strings to be set as new labels for the PR
