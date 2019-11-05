@@ -3197,7 +3197,9 @@ StudioApp.prototype.isNotStartedLevel = function(config) {
 
   //channel backed levels
   if (
-    ['Gamelab', 'Applab', 'Weblab', 'Spritelab', 'Dance'].includes(config.levelGameName)
+    ['Gamelab', 'Applab', 'Weblab', 'Spritelab', 'Dance'].includes(
+      config.levelGameName
+    )
   ) {
     return config.readonlyWorkspace && !config.channel;
   } else if (!config.level.freePlay && !config.level.containedLevelNames) {
