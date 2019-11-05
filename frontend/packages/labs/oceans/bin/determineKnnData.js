@@ -32,7 +32,7 @@ body_image_files.forEach(fileName => {
       dorsalFinAnchor: [null, null],
       tailAnchor: [null, null],
       knnData: [${numPixels}, null],
-      type: 3
+      type: FishBodyPart.BODY
     },`;
     console.log(json);
   });
