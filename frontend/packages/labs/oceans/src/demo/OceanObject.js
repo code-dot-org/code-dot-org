@@ -363,9 +363,15 @@ export class SeaCreatureOceanObject extends OceanObject {
 
   drawToCanvas(canvas, generateLogits = true) {
     const ctx = canvas.getContext('2d');
-    const xpos = canvas.width / 2 - this.image.width / 2;
-    const ypos = canvas.height / 2 - this.image.height / 2;
-    ctx.drawImage(this.image, xpos, ypos);
+    const xpos = canvas.width / 2 - this.image.width;
+    const ypos = canvas.height / 2 - this.image.height;
+    ctx.drawImage(
+      this.image,
+      xpos,
+      ypos,
+      this.image.width * 2,
+      this.image.height * 2
+    );
     if (generateLogits) {
       this.generateLogitsAsync(canvas);
     }
