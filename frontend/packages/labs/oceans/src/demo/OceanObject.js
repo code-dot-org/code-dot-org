@@ -8,10 +8,11 @@ import {
   randomInt,
   clamp
 } from './helpers';
-import {imagePaths} from '../utils/trashImages';
+import {trashImagePaths, seaCreatureImagePaths} from '../utils/imagePaths';
 
 let fishPartImages = {};
-let trashImages = {};
+let trashImages = [];
+let seaCreatureImages = [];
 // Used to tint the fish components
 let intermediateCanvas;
 // Used to draw the object in order to evaluate it when using mobilenet
@@ -69,12 +70,24 @@ export const initMobilenet = () => {
 
 // Load all of the trash assets and store them
 export const loadAllTrashImages = () => {
-  const loadImagePromises = imagePaths.map((src, idx) => {
+  const loadImagePromises = trashImagePaths.map((src, idx) => {
     return loadImage({src, idx});
   });
   return Promise.all(loadImagePromises).then(results => {
     results.forEach(result => {
       trashImages[result.data.idx] = result.img;
+    });
+  });
+};
+
+// Load all of the sea creature assets and store them
+export const loadAllSeaCreatureImages = () => {
+  const loadImagePromises = seaCreatureImagePaths.map((src, idx) => {
+    return loadImage({src, idx});
+  });
+  return Promise.all(loadImagePromises).then(results => {
+    results.forEach(result => {
+      seaCreatureImages[result.data.idx] = result.img;
     });
   });
 };
@@ -307,7 +320,9 @@ export class FishOceanObject extends OceanObject {
     this.drawFishComponent(this.pectoralFinFront, bodyAnchor, ctx);
     this.drawFishComponent(this.mouth, bodyAnchor, ctx);
     this.drawFishComponent(this.eye, bodyAnchor, ctx);
-    this.generateLogitsAsync(fishCanvas);
+    if (generateLogits) {
+      this.generateLogitsAsync(fishCanvas);
+    }
   }
 }
 
@@ -317,7 +332,7 @@ export class FishOceanObject extends OceanObject {
  * */
 export class TrashOceanObject extends OceanObject {
   randomize() {
-    const idx = Math.floor(Math.random() * imagePaths.length);
+    const idx = Math.floor(Math.random() * trashImages.length);
     this.image = trashImages[idx];
   }
 
@@ -330,6 +345,29 @@ export class TrashOceanObject extends OceanObject {
     const ypos = (-1 * this.image.height) / 2;
     ctx.drawImage(this.image, xpos, ypos);
     ctx.restore();
-    this.generateLogitsAsync(canvas);
+    if (generateLogits) {
+      this.generateLogitsAsync(canvas);
+    }
+  }
+}
+
+/*
+ * Sea creatures that use one of the images from SeaCreatureImages
+ *
+ * */
+export class SeaCreatureOceanObject extends OceanObject {
+  randomize() {
+    const idx = Math.floor(Math.random() * seaCreatureImages.length);
+    this.image = seaCreatureImages[idx];
+  }
+
+  drawToCanvas(canvas, generateLogits = true) {
+    const ctx = canvas.getContext('2d');
+    const xpos = canvas.width / 2 - this.image.width / 2;
+    const ypos = canvas.height / 2 - this.image.height / 2;
+    ctx.drawImage(this.image, xpos, ypos);
+    if (generateLogits) {
+      this.generateLogitsAsync(canvas);
+    }
   }
 }

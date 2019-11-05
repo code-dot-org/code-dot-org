@@ -6,9 +6,13 @@ import {backgroundPathForMode} from './helpers';
 import {predictFish} from './models/predict';
 import {
   loadAllFishPartImages,
+  loadAllSeaCreatureImages,
   loadAllTrashImages,
   initMobilenet
 } from './OceanObject';
+import aiBotClosed from '../../public/images/ai-bot-closed.png';
+import redScanner from '../../public/images/red-scanner.png';
+import greenScanner from '../../public/images/green-scanner.png';
 
 var $time =
   Date.now ||
@@ -23,6 +27,9 @@ let lastPauseTime = 0;
 let lastStartTime;
 let defaultMoveTime = 1000;
 let moveTime;
+let botImages = {};
+let botVelocity = 3;
+let botY, botYDestination;
 
 export const initRenderer = () => {
   canvasCache = new CanvasCache();
@@ -30,6 +37,7 @@ export const initRenderer = () => {
   promises.push(loadAllFishPartImages());
   if (getState().loadTrashImages) {
     promises.push(loadAllTrashImages());
+    promises.push(loadAllSeaCreatureImages());
     promises.push(initMobilenet());
   }
   return Promise.all(promises);
@@ -46,6 +54,8 @@ export const render = () => {
     currentModeStartTime = $time();
     lastPauseTime = 0;
     lastStartTime = null;
+    botY = null;
+    botYDestination = null;
 
     if (state.currentMode === Modes.Training) {
       moveTime = defaultMoveTime / 2;
@@ -56,19 +66,14 @@ export const render = () => {
 
   clearCanvas(state.canvas);
 
-  const timeBeforeCanSkipPredict = 5000;
-
   switch (state.currentMode) {
     case Modes.Training:
       drawFrame(state);
       drawMovingFish(state);
       break;
     case Modes.Predicting:
-      setState({
-        canSkipPredict:
-          $time() >= currentModeStartTime + timeBeforeCanSkipPredict
-      });
       drawMovingFish(state);
+      drawPredictBot(state);
       break;
     case Modes.Pond:
       drawPondFishImages();
@@ -223,20 +228,12 @@ const drawMovingFish = state => {
       fish.getResult() ? fish.getResult().predictedClassId : false
     );
 
-    drawSingleFish(fish, x, y, ctx);
-
     if (state.currentMode === Modes.Predicting) {
       if (fish.getResult()) {
         const midScreenX =
           constants.canvasWidth / 2 - constants.fishCanvasWidth / 2;
-        if (x > midScreenX) {
-          drawPrediction(
-            fish.getResult().predictedClassId,
-            state.word,
-            x,
-            y,
-            ctx
-          );
+        if (Math.abs(midScreenX - x) <= 50) {
+          drawPrediction(state, fish.getResult().predictedClassId, ctx);
         }
       } else {
         predictFish(state, i).then(prediction => {
@@ -244,6 +241,8 @@ const drawMovingFish = state => {
         });
       }
     }
+
+    drawSingleFish(fish, x, y, ctx);
   }
 
   if (state.currentMode === Modes.Training && runtime === moveTime) {
@@ -252,17 +251,49 @@ const drawMovingFish = state => {
 };
 
 // Draw a prediction to the canvas.
-const drawPrediction = (predictedClassId, text, x, y, ctx) => {
-  const centeredX = x + constants.fishCanvasWidth / 2;
-  const doesLike = predictedClassId === ClassType.Like;
+const drawPrediction = (state, predictedClassId, ctx) => {
+  let scannerImg;
+  const imgKey =
+    predictedClassId === ClassType.Like ? greenScanner : redScanner;
 
-  ctx.fillStyle = doesLike ? 'green' : 'red';
-  ctx.font = '20px Arial';
-  ctx.textAlign = 'center';
-  if (!doesLike) {
-    text = 'not ' + text;
+  if (botImages[imgKey]) {
+    scannerImg = botImages[imgKey];
+  } else {
+    loadImage(imgKey).then(img => {
+      botImages[imgKey] = img;
+      scannerImg = img;
+    });
+    return;
   }
-  ctx.fillText(text.toUpperCase(), centeredX, y);
+
+  const x = state.canvas.width / 2 - scannerImg.width / 2;
+  const y = botY + 50;
+  ctx.drawImage(scannerImg, x, y);
+};
+
+// Draw AI bot to canvas for predict mode.
+const drawPredictBot = state => {
+  if (!botImages.closed) {
+    loadImage(aiBotClosed).then(img => (botImages.closed = img));
+    return;
+  }
+
+  let img = botImages.closed;
+  let botX = state.canvas.width / 2 - img.width / 2;
+  botY = botY || state.canvas.height / 2 - img.height / 2;
+
+  // Move AI bot above fish parade.
+  if (state.isRunning) {
+    botYDestination = botYDestination || botY - 130;
+
+    const distToDestination = Math.abs(botYDestination - botY);
+    if (distToDestination > 1) {
+      const direction = distToDestination === botYDestination - botY ? 1 : -1;
+      botY += direction * botVelocity;
+    }
+  }
+
+  state.canvas.getContext('2d').drawImage(img, botX, botY);
 };
 
 // Draw frame in the center of the screen.
