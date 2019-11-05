@@ -155,6 +155,19 @@ const styles = {
     width: '65%',
     height: 38
   },
+  biasText: {
+    position: 'absolute',
+    bottom: '2%',
+    left: '37%',
+    transform: 'translateX(-45%)',
+    fontSize: 22,
+    lineHeight: '32px',
+    width: '75%',
+    backgroundColor: colors.transparentBlack,
+    padding: '2%',
+    borderRadius: 10,
+    color: colors.white
+  },
   pondText: {
     position: 'absolute',
     bottom: 10,
@@ -599,13 +612,16 @@ class Predict extends React.Component {
     const state = getState();
     const speechBubbleText = this.speechBubbleText(state);
 
+    const biasText =
+      'There are lots of creatures in the sea who don’t look like fish. But that doesn’t mean they should be removed! A.I. only knows what we teach it!';
+
     return (
       <Body>
         <Header>A.I. Sorting</Header>
         {speechBubbleText && (
           <SpeechBubble text={speechBubbleText} style={styles.predictSpeech} />
         )}
-        {!state.isRunning && (
+        {!state.isRunning && !state.showBiasText && (
           <Button
             style={styles.continueButton}
             onClick={() => setState({isRunning: true, runStartTime: $time()})}
@@ -613,14 +629,23 @@ class Predict extends React.Component {
             Run A.I.
           </Button>
         )}
-        {state.canSkipPredict && (
+        {(state.canSkipPredict || state.showBiasText) && (
           <Button
             style={styles.continueButton}
-            onClick={() => toMode(Modes.Pond)}
+            onClick={() => {
+              if (state.showBiasText) {
+                if (state.onContinue) {
+                  state.onContinue();
+                }
+              } else {
+                toMode(Modes.Pond);
+              }
+            }}
           >
             Continue
           </Button>
         )}
+        {state.showBiasText && <div style={styles.biasText}>{biasText}</div>}
       </Body>
     );
   }
