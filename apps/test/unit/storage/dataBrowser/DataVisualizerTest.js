@@ -57,6 +57,35 @@ describe('DataVisualizer', () => {
         spy.restore();
       });
 
+      it('can show a scatter plot', () => {
+        wrapper.setProps({
+          tableRecords: [
+            '{"category1": "red", "category2": 1, "category3": 10}',
+            '{"category1": "blue", "category2": 1, "category3": 20}',
+            '{"category1": "red", "category2": 3, "category3": 10}',
+            '{"category1": "green", "category2": 4, "category3": 10}'
+          ],
+          tableColumns: ['category1', 'category2', 'category3']
+        });
+        const expectedChartData = [
+          {category1: 'red', category2: 1, category3: 10},
+          {category1: 'blue', category2: 1, category3: 20},
+          {category1: 'red', category2: 3, category3: 10},
+          {category1: 'green', category2: 4, category3: 10}
+        ];
+        wrapper.instance().setState({
+          chartType: 'Scatter Plot',
+          xValues: 'category2',
+          yValues: 'category3'
+        });
+        expect(spy).to.have.been.calledOnce;
+        expect(spy.getCalls()[0].args).to.deep.equal([
+          expectedChartData,
+          ['category2', 'category3'],
+          {}
+        ]);
+      });
+
       it('can show a bar chart', () => {
         wrapper
           .instance()
