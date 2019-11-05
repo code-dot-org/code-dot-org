@@ -2,6 +2,7 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import getScriptData from '@cdo/apps/util/getScriptData';
 import datasets from '@cdo/apps/storage/dataBrowser/datasetManifest.json';
 
 $(document).ready(function() {
@@ -61,14 +62,53 @@ $(document).ready(function() {
       editor.getDoc().setValue(JSON.stringify(functionsWithMaker, null, ' '));
     }
   });
-  let tableNames = datasets.tables.map(table => table.name).join(',');
+
+  const data = getScriptData('applabOptions');
+  class DataLibrary extends React.Component {
+    state = {
+      value: data.data_library_tables.split(','),
+      tableNames: datasets.tables.map(table => table.name)
+    };
+
+    handleChange = event => {
+      let options = event.target.options;
+      let value = [];
+      for (var i = 0; i < options.length; i++) {
+        if (options[i].selected) {
+          value.push(options[i].value);
+        }
+      }
+      this.setState({value: value});
+      $('#level_data_library_tables').val(value);
+    };
+
+    render() {
+      return (
+        <div>
+          (shift-click or cmd-click to select multiple)
+          <br />
+          <select
+            defaultValue={this.state.value}
+            multiple={true}
+            onChange={this.handleChange}
+          >
+            {this.state.tableNames.map(name => {
+              return (
+                <option key={name} value={name}>
+                  {name}
+                </option>
+              );
+            })}
+          </select>
+        </div>
+      );
+    }
+  }
+
   ReactDOM.render(
-    <div>
-      <b>Options: </b>
-      {tableNames}
-    </div>,
+    <DataLibrary />,
     $('<div></div>')
-      .insertBefore('#level_data_library_tables')
+      .insertAfter(`label[for="level_data_library_tables"]`)
       .get(0)
   );
 });
