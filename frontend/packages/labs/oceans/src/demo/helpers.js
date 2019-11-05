@@ -10,11 +10,11 @@ export const backgroundPathForMode = mode => {
     imgName = 'underwater';
   }
 
-  // Temporarily show background for every mode.
-  imgName = 'underwater';
+  // Temporarily disable background everywhere.
+  return null;
 
   // TODO: fix this
-  return imgName ? underwaterBackground : null;
+  // return imgName ? underwaterBackground : null;
 };
 
 export const backgroundPath = imgName => {
