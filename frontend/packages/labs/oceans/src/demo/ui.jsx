@@ -118,19 +118,21 @@ const styles = {
     lineHeight: '26px',
     opacity: 0.5
   },
-  trainButtonYes: {
+  trainButtons: {
     position: 'absolute',
     top: '80%',
-    left: '50%',
+    width: '100%',
+    display: 'flex',
+    justifyContent: 'center'
+  },
+  trainButtonYes: {
+    marginLeft: 10,
     ':hover': {
       backgroundColor: colors.green,
       color: colors.white
     }
   },
   trainButtonNo: {
-    position: 'absolute',
-    top: '80%',
-    left: '33%',
     ':hover': {
       backgroundColor: colors.red,
       color: colors.white
@@ -510,18 +512,20 @@ let Train = class Train extends React.Component {
           iconBgColor={colors.green}
           style={[styles.count, styles.yesCount]}
         />
-        <Button
-          style={styles.trainButtonNo}
-          onClick={() => onClassifyFish(false)}
-        >
-          {noButtonText}
-        </Button>
-        <Button
-          style={styles.trainButtonYes}
-          onClick={() => onClassifyFish(true)}
-        >
-          {yesButtonText}
-        </Button>
+        <div style={styles.trainButtons}>
+          <Button
+            style={styles.trainButtonNo}
+            onClick={() => onClassifyFish(false)}
+          >
+            {noButtonText}
+          </Button>
+          <Button
+            style={styles.trainButtonYes}
+            onClick={() => onClassifyFish(true)}
+          >
+            {yesButtonText}
+          </Button>
+        </div>
         <Button
           style={styles.continueButton}
           onClick={() => toMode(Modes.Predicting)}
