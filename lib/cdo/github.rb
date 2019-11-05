@@ -70,11 +70,12 @@ module GitHub
 
   # Octokit Documentation: http://octokit.github.io/octokit.rb/Octokit/Client/Issues.html#update_issue-instance_method
   # @param base [String | Integer] the numeric id of the PR to be updated
-  # @param lables [Array[String]] array of strings to be set as new labels for the PR
+  # @param lables [String | Array[String]] string or array of strings to be set as new labels for the PR
   # @raise [Exception] From calling Octokit.create_pull_request.
   # @return [Array[String]] the resulting labels for the PR
   def self.label_pull_request(id, labels)
     configure_octokit
+    labels = [labels] unless labels.is_a? Array
     response = Octokit.update_issue(REPO, id, {labels: labels})
 
     response['labels'].map {|label| label[:name]}
