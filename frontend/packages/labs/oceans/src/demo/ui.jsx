@@ -611,7 +611,7 @@ class Predict extends React.Component {
     const speechBubbleText = this.speechBubbleText(state);
 
     const biasText =
-      'There are lots of creatures in the sea who don’t look like fish.\n\nBut that doesn’t mean they should be removed!';
+      'There are lots of creatures in the sea who don’t look like fish. But that doesn’t mean they should be removed! A.I. only knows what we teach it!';
 
     return (
       <Body>
