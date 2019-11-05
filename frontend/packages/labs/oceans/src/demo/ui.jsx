@@ -8,7 +8,7 @@ import {getAppMode} from './helpers';
 import {toMode} from './toMode';
 import {onClassifyFish} from './models/train';
 import colors from './colors';
-import aiBotClosed from '../../public/images/ai-bot-closed.png';
+import aiBotClosed from '../../public/images/ai-bot/ai-bot-closed.png';
 import xIcon from '../../public/images/x-icon.png';
 import checkmarkIcon from '../../public/images/checkmark-icon.png';
 
@@ -72,21 +72,6 @@ const styles = {
   instructionsParagraph: {
     marginTop: 18,
     marginBottom: 18
-  },
-  instructionsDots: {
-    textAlign: 'center',
-    fontSize: 60,
-    position: 'absolute',
-    bottom: '20%',
-    left: 0,
-    width: '100%'
-  },
-  activeDot: {
-    color: colors.white
-  },
-  inactiveDot: {
-    color: colors.grey,
-    cursor: 'pointer'
   },
   activityIntroText: {
     position: 'absolute',
@@ -153,9 +138,9 @@ const styles = {
   },
   trainBot: {
     position: 'absolute',
-    height: '50%',
-    top: '20%',
-    left: '70%'
+    height: '40%',
+    top: '28%',
+    left: '76%'
   },
   predictSpeech: {
     top: '88%',
@@ -185,8 +170,8 @@ const styles = {
   },
   pondBot: {
     position: 'absolute',
-    height: '50%',
-    left: 0,
+    height: '40%',
+    left: '4%',
     bottom: 0
   },
   pill: {
@@ -400,29 +385,6 @@ class Instructions extends React.Component {
             }
           )}
         </div>
-        {instructionsText[appModeVariant].length > 1 && (
-          <div style={styles.instructionsDots}>
-            {instructionsText[appModeVariant].map((instruction, index) => {
-              return (
-                <span
-                  style={
-                    index === currentPage
-                      ? styles.activeDot
-                      : styles.inactiveDot
-                  }
-                  key={index}
-                  onClick={() =>
-                    index !== currentPage
-                      ? this.setInstructionsPage(index)
-                      : null
-                  }
-                >
-                  {'\u25CF'}
-                </span>
-              );
-            })}
-          </div>
-        )}
         <Button style={styles.continueButton} onClick={this.onContinueButton}>
           Continue
         </Button>
