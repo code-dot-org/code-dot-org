@@ -78,7 +78,7 @@ const styles = {
     left: '10%',
     width: '80%'
   },
-  footerText: {
+  instructionsFooter: {
     textAlign: 'center'
   },
   instructionsParagraph: {
@@ -327,7 +327,8 @@ const instructionsText = {
       text: [
         "A.I. can't tell if an object is a fish or a piece of trash yet, but it can process different images and identify patterns.",
         'To program A.I., label the images we show you as either "fish" or "not fish". This will train A.I. to do it on its own!'
-      ]
+      ],
+      image: aiBotClosed
     }
   ],
 
@@ -388,9 +389,14 @@ class Instructions extends React.Component {
               );
             }
           )}
+          {instructionsText[appModeVariant][currentPage].image && (
+            <div style={styles.instructionsFooter}>
+              <img src={instructionsText[appModeVariant][currentPage].image} />
+            </div>
+          )}
           {instructionsText[appModeVariant][currentPage].footer && (
             <div
-              style={styles.footerText}
+              style={styles.instructionsFooter}
               dangerouslySetInnerHTML={{
                 __html: instructionsText[appModeVariant][currentPage].footer
               }}
