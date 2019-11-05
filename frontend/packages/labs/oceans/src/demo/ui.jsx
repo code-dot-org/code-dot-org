@@ -8,7 +8,7 @@ import {getAppMode} from './helpers';
 import {toMode} from './toMode';
 import {onClassifyFish} from './models/train';
 import colors from './colors';
-import aiBotClosed from '../../public/images/ai-bot-closed.png';
+import aiBotClosed from '../../public/images/ai-bot/ai-bot-closed.png';
 import xIcon from '../../public/images/x-icon.png';
 import checkmarkIcon from '../../public/images/checkmark-icon.png';
 
@@ -138,9 +138,9 @@ const styles = {
   },
   trainBot: {
     position: 'absolute',
-    height: '50%',
-    top: '20%',
-    left: '70%'
+    height: '40%',
+    top: '28%',
+    left: '76%'
   },
   predictSpeech: {
     top: '88%',
@@ -163,8 +163,8 @@ const styles = {
   },
   pondBot: {
     position: 'absolute',
-    height: '50%',
-    left: 0,
+    height: '40%',
+    left: '4%',
     bottom: 0
   },
   pill: {
