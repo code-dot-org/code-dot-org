@@ -34,10 +34,15 @@ const predictAllFish = state => {
 
 const arrangeFish = fishes => {
   fishes.forEach(fish => {
-    const x = randomInt(
-      0,
-      constants.canvasWidth - constants.fishCanvasWidth / 2
-    );
+    // Pick a random side of the bot UI.
+    const side = randomInt(0, 1);
+
+    // Generate a location for the fish on that side.
+    const xBounds = [
+      {minX: 0, maxX: 360 - constants.fishCanvasWidth / 2},
+      {minX: 510, maxX: constants.canvasWidth - constants.fishCanvasWidth}
+    ];
+    const x = randomInt(xBounds[side].minX, xBounds[side].maxX);
 
     // Don't put fish at the very bottom of the pond because of UI.
     const bottomAreaHeight = 160;
