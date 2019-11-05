@@ -7,9 +7,5 @@
 #  user_level_id :integer          unsigned
 #
 
-# This model is meant to support the UserLevel model. The UserLevel table has gotten
-# too large and adding new columns to it can cause problems with production so we created
-# this model in order to store further information about a UserLevel.
-
 class UserLevelInfo < ApplicationRecord
 end
