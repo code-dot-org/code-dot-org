@@ -42,7 +42,7 @@ const styles = {
     minWidth: 160,
     padding: '16px 30px',
     outline: 'none',
-    border: 'none',
+    border: `2px solid ${colors.black}`,
     ':focus': {
       outline: `${colors.white} auto 5px`
     }
@@ -50,7 +50,9 @@ const styles = {
   continueButton: {
     position: 'absolute',
     bottom: 10,
-    right: 10
+    right: 10,
+    backgroundColor: colors.orange,
+    color: colors.white
   },
   backButton: {
     position: 'absolute',
