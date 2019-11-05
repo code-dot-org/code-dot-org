@@ -4177,8 +4177,6 @@ class UserTest < ActiveSupport::TestCase
     unmigrated_teacher_without_password.admin = true
     unmigrated_teacher_without_password.save!
 
-    puts "unmigrated #{unmigrated_teacher_without_password.admin}"
-
     refute unmigrated_teacher_without_password.admin
   end
 end
