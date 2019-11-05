@@ -4,6 +4,8 @@ var createStream = require('unified-stream')
 var parse = require('rehype-parse')
 var rehype2remark = require('rehype-remark')
 var stringify = require('remark-stringify')
+var yaml = require('node-yaml')
+
 
 var processor = unified()
   .use(parse)
@@ -13,12 +15,27 @@ var processor = unified()
 var json_file = process.argv[2]
 fs.readFile(json_file, 
   function(err, data) {
-    var json_markdown = {};
     var jsonParsed = JSON.parse(data);
+    var locales = {};
     for (var key in jsonParsed) {
-      if (key.startsWith("en.")) {
+      if (!key.startsWith("ar.")) {
         continue;
       }
+      var key_parts = key.split('.');
+      var locale = key_parts[0];
+      if (locales[locale] === undefined) {
+        locales[locale] = {};
+      }
+      // build up the nested contexts if they don't exist
+      var context = locales[locale];
+      for (var i=0; i<key_parts.length-1; i++) {
+        var key_part = key_parts[i];
+        if (context[key_part] === undefined) {
+          context[key_part] = {};
+        }
+        context = context[key_part];
+      }
+
       var value = jsonParsed[key];
       unified()
         .use(parse)
@@ -29,11 +46,11 @@ fs.readFile(json_file,
             console.error("ERROR: " + err);
           } else {
             markdown_text = String(markdown_text_file).trim();
-            json_markdown[key] = markdown_text;
+            context[key_parts[key_parts.length-1]] = markdown_text;
           }
         });
     }
-    console.log(json_markdown);
+    console.log(JSON.stringify(locales, undefined, '  '));
   }
 );
 
