@@ -150,16 +150,18 @@ const styles = {
   },
   pondText: {
     position: 'absolute',
-    bottom: '3%',
-    left: '45%',
+    bottom: '4%',
+    left: '43%',
     transform: 'translateX(-45%)',
-    fontSize: 22,
+    fontSize: 18,
     lineHeight: '32px',
+    textAlign: 'center',
     width: '50%',
-    backgroundColor: colors.transparentBlack,
-    padding: '2%',
+    backgroundColor: colors.transparentWhite,
+    border: '4px solid black',
+    padding: '1%',
     borderRadius: 10,
-    color: colors.white
+    color: colors.black
   },
   pondFishDetails: {
     position: 'absolute',
@@ -678,11 +680,13 @@ class Pond extends React.Component {
 
   render() {
     const state = getState();
-    const pondText = `Out of ${
-      state.fishData.length
-    } objects, A.I. identified ${
-      state.pondFish.length
-    } that it classified as ${state.word.toUpperCase()}.`;
+    const pondText = [
+      `Out of ${state.fishData.length} objects, I identified ${
+        state.pondFish.length
+      } that are ${state.word.toUpperCase()}.`,
+      'How did I do?',
+      'Choose to Train More or Continue.'
+    ];
 
     const showFishDetails = !!state.pondClickedFish;
     let pondFishDetailsStyle;
@@ -719,9 +723,15 @@ class Pond extends React.Component {
     return (
       <Body onClick={this.onPondClick}>
         <Header>A.I. Results</Header>
-        {state.canSeePondText && (
-          <div style={styles.pondText}>{pondText}</div>
-        )}
+        {state.canSeePondText && <div style={styles.pondText}>
+          {pondText.map((text, index) => {
+            return (
+              <div>
+                {text}
+              </div>
+            );
+          })}
+        </div>}
         <img style={styles.pondBot} src={aiBotClosed} />
         {showFishDetails && (
           <div style={pondFishDetailsStyle}>{confidence}</div>
