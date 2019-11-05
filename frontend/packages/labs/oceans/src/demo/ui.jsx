@@ -153,9 +153,9 @@ const styles = {
   },
   trainBot: {
     position: 'absolute',
-    height: '50%',
-    top: '21%',
-    left: '75%'
+    height: '40%',
+    top: '28%',
+    left: '76%'
   },
   predictSpeech: {
     top: '88%',
@@ -178,8 +178,8 @@ const styles = {
   },
   pondBot: {
     position: 'absolute',
-    height: '50%',
-    left: 0,
+    height: '40%',
+    left: '4%',
     bottom: 0
   },
   pill: {
