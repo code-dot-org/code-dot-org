@@ -505,9 +505,13 @@ class User < ActiveRecord::Base
   end
 
   # Implement validation that refuses to set admin:true attribute unless
-  # there's a Code.org google sso option present.
+  # there's a Code.org google sso option present.  Unmigrated users are
+  # not allowed to be admins.
   def enforce_google_sso_for_admin
-    return unless migrated?
+    unless migrated?
+      self.admin = false
+      return
+    end
 
     google_oauth = google_oauth_authentications
     if google_oauth&.empty?
