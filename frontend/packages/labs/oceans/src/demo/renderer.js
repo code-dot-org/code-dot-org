@@ -76,6 +76,8 @@ export const render = () => {
   clearCanvas(state.canvas);
 
   const timeBeforeCanSkipPredict = 5000;
+  const timeBeforeCanSeePondText = 3000;
+  const timeBeforeCanSkipPond = 5000;
 
   switch (state.currentMode) {
     case Modes.Training:
@@ -96,6 +98,13 @@ export const render = () => {
       break;
     case Modes.Pond:
       drawPondFishImages();
+
+      setState({
+        canSkipPond:
+          $time() >= currentModeStartTime + timeBeforeCanSkipPond,
+        canSeePondText:
+          $time() >= currentModeStartTime + timeBeforeCanSeePondText
+      });
       break;
   }
 

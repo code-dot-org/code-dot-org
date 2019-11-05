@@ -15,6 +15,8 @@ const initialState = {
   isRunning: false,
   runStartTime: null,
   canSkipPredict: null,
+  canSeePondText: null,
+  canSkipPond: null,
   yesCount: 0,
   noCount: 0,
   loadTrashImages: null,

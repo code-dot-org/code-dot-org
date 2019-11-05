@@ -719,21 +719,25 @@ class Pond extends React.Component {
     return (
       <Body onClick={this.onPondClick}>
         <Header>A.I. Results</Header>
-        <div style={styles.pondText}>{pondText}</div>
+        {state.canSeePondText && (
+          <div style={styles.pondText}>{pondText}</div>
+        )}
         <img style={styles.pondBot} src={aiBotClosed} />
         {showFishDetails && (
           <div style={pondFishDetailsStyle}>{confidence}</div>
         )}
-        <Button
-          style={styles.continueButton}
-          onClick={() => {
-            if (state.onContinue) {
-              state.onContinue();
-            }
-          }}
-        >
-          Continue
-        </Button>
+        {state.canSkipPond && (
+          <Button
+            style={styles.continueButton}
+            onClick={() => {
+              if (state.onContinue) {
+                state.onContinue();
+              }
+            }}
+          >
+            Continue
+          </Button>
+        )}
       </Body>
     );
   }
