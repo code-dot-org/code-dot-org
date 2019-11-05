@@ -706,13 +706,13 @@ class Pond extends React.Component {
       };
 
       if (!fish.confidence || !fish.confidence.confidencesByClassId) {
-        confidence = 'Not sure';
+        confidence = 'Not confident';
       } else if (fish.confidence.confidencesByClassId[0] > 0.99) {
-        confidence = 'Very sure';
+        confidence = 'Very confident';
       } else if (fish.confidence.confidencesByClassId[0] > 0.5) {
-        confidence = 'Fairly sure';
+        confidence = 'Fairly confident';
       } else {
-        confidence = 'Not very sure';
+        confidence = 'Not very confident';
       }
     }
 
