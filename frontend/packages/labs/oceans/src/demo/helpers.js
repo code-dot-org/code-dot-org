@@ -1,19 +1,18 @@
 import queryString from 'query-string';
-import {Modes} from './constants';
 import {FishBodyPart} from '../utils/fishData';
-import underwaterBackground from '../../public/images/underwater-background.png';
 import _ from 'lodash';
+// import {Modes} from './constants';
+// import underwaterBackground from '../../public/images/underwater-background.png';
 
 export const backgroundPathForMode = mode => {
-  let imgName;
-  if (mode === Modes.Words || mode === Modes.Pond) {
-    imgName = 'underwater';
-  }
-
   // Temporarily disable background everywhere.
   return null;
 
   // TODO: fix this
+  // let imgName;
+  // if (mode === Modes.Words || mode === Modes.Pond) {
+  //   imgName = 'underwater';
+  // }
   // return imgName ? underwaterBackground : null;
 };
 
