@@ -8,7 +8,7 @@ import dom from './dom';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import DialogButtons from './templates/DialogButtons';
-import {getLastServerResponse} from '@cdo/apps/code-studio/reporting';
+import {getLastServerResponse} from './code-studio/reporting';
 
 // Parameters provided by the calling app.
 let studioApp, onPuzzleComplete, unsubmitUrl;
@@ -42,8 +42,9 @@ export function initializeSubmitHelper(params) {
 /**
  * If submit succeeds, then redirect appropriately.  Called by the app.
  *
- * @param {Object} response
- * @param {string} response.redirect - URL to go to.
+ * @param {string} [response.redirect] - URL to go to.  When not provided, we'll use the
+ *   last server response from reporting.js to pick a redirect.  This sometimes happens on
+ *   contained levels where the milestone post and submit are two separate operations.
  */
 export function onSubmitComplete(response) {
   const redirect = response
