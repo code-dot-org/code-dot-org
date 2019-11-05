@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Radium from 'radium';
 import _ from 'lodash';
 import {getState, setState} from './state';
-import {Modes, DataSet} from './constants';
+import contants, {Modes, DataSet} from './constants';
 import {getAppMode} from './helpers';
 import {toMode} from './toMode';
 import {onClassifyFish} from './models/train';
@@ -11,7 +11,6 @@ import colors from './colors';
 import aiBotClosed from '../../public/images/ai-bot-closed.png';
 import xIcon from '../../public/images/x-icon.png';
 import checkmarkIcon from '../../public/images/checkmark-icon.png';
-import constants from './constants';
 
 const styles = {
   header: {
@@ -238,8 +237,9 @@ function Collide(x1, y1, w1, h1, x2, y2, w2, h2) {
     x1 > x2 + w2 - 1 ||
     y1 + h1 - 1 < y2 ||
     y1 > y2 + h2 - 1
-  )
+  ) {
     return false;
+  }
 
   // Otherwise we have a collision.
   return true;

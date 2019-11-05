@@ -324,9 +324,9 @@ const drawPondFishImages = () => {
     const pondClickedFish = getState().pondClickedFish;
     const pondClickedFishUs = pondClickedFish && fish.id === pondClickedFish.id;
 
-    const swayMultipleX = pondClickedFishUs ? 120 : 120;
     const swayValue =
       (($time() * 360) / (20 * 1000) + (fish.getId() + 1) * 10) % 360;
+    const swayMultipleX = 120;
     const swayOffsetX = Math.sin(((swayValue * Math.PI) / 180) * 2) * swayMultipleX;
     const swayOffsetY = Math.sin(((swayValue * Math.PI) / 180) * 6) * 8;
 
@@ -361,8 +361,6 @@ const drawSingleFish = (fish, fishXPos, fishYPos, ctx, size = 1) => {
     fishCanvas.height = constants.fishCanvasHeight;
     fish.drawToCanvas(fishCanvas);
   }
-
-  const pondClickedFish = getState().pondClickedFish;
 
   // TODO: Does scaling during drawImage have a performance impact on some
   // devices/browsers?  We migth need to pre-cache scaled images.
