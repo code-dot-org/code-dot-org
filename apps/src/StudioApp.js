@@ -3195,11 +3195,12 @@ StudioApp.prototype.isResponsiveFromConfig = function(config) {
 StudioApp.prototype.isNotStartedLevel = function(config) {
   const progress = getStore().getState().progress;
 
+  //channel backed levels
   if (
-    ['Gamelab', 'Applab', 'Weblab', 'Spritelab'].includes(config.levelGameName)
+    ['Gamelab', 'Applab', 'Weblab', 'Spritelab', 'Dance'].includes(config.levelGameName)
   ) {
     return config.readonlyWorkspace && !config.channel;
-  } else if (!config.level.freePlay) {
+  } else if (!config.level.freePlay && !config.level.containedLevelNames) {
     return (
       config.readonlyWorkspace &&
       progress.levelProgress[progress.currentLevelId] === undefined
