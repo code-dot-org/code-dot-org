@@ -266,7 +266,7 @@ const instructionsText = {
     {
       heading: 'Train AI to Clean the Ocean',
       text: [
-        'In the following activity we’ll learn about <b>artificial intelligence</b> (AI) and <b>machine learning</b>.',
+        'In the following activity we’ll learn about artificial intelligence (AI) and machine learning.',
         'Now let’s consider how machine learning can be used for good in the real world.',
         '1 in 3 people worldwide do not have access to safe drinking water. Access to clean water could reduce global diseases by 10%.',
         'Garbage dumped in ocean or rivers affects the water health and impacts the marine life in the water.'
@@ -338,11 +338,9 @@ class Instructions extends React.Component {
           {instructionsText[appModeVariant][currentPage].text.map(
             (instruction, index) => {
               return (
-                <div
-                  key={index}
-                  style={styles.instructionsParagraph}
-                  dangerouslySetInnerHTML={{__html: instruction}}
-                />
+                <div key={index} style={styles.instructionsParagraph}>
+                  {instruction}
+                </div>
               );
             }
           )}
