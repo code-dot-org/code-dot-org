@@ -194,8 +194,6 @@ class ActivitiesController < ApplicationController
       end
     end
 
-    record_time_spent(@user_level)
-
     passed = ActivityConstants.passing?(test_result)
     if lines > 0 && passed
       current_user.total_lines += lines
@@ -212,23 +210,6 @@ class ActivitiesController < ApplicationController
         level_source_id: @level_source_image.level_source_id,
         autosaved: true
       )
-    end
-  end
-
-  # Record the time spent on a level by creating or updating the UserLevelInfo table
-  # for the UserLevel for the current user, level, and script
-  def record_time_spent(user_level)
-    if user_level
-      user_level_info = UserLevelInfo.find_by(
-        user_level_id: user_level.id
-      )
-    end
-
-    if user_level_info
-      # Add past time spent to current time spent on level
-      user_level_info.update(time_spent: [user_level_info.time_spent + [params[:timeSinceLastMilestone].to_i, 0].max, MAX_INT_MILESTONE].min)
-    else
-      UserLevelInfo.create(user_level_id: user_level.id, time_spent: [[params[:timeSinceLastMilestone].to_i, 0].max, MAX_INT_MILESTONE].min)
     end
   end
 
