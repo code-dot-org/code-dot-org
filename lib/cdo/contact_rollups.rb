@@ -295,7 +295,7 @@ class ContactRollups
         else
           # Update the destination record
           # log("#{Time.now} Update #{email_src} (src id: #{contact_rollup_src[:id]}; updated: #{output_row})")
-          PEGASUS_DB_WRITER[:contact_rollups].where(email: email_src).update(output_row)
+          PEGASUS_DB_WRITER[:contact_rollups].where(email: email_dest).update(output_row)
           num_updates += 1
         end
       end
