@@ -270,3 +270,6 @@ level 'PS predictive Applab level test'
 level 'contained_applab_choose2'
 level 'contained_csf_multi2'
 level 'contained_csf_free_response'
+
+stage 'ML Fish'
+level 'allthethings HOC ML Fish 1'

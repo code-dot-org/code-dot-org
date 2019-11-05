@@ -3,15 +3,8 @@ import ReactDOM from 'react-dom';
 import FishView from './FishView';
 import {Provider} from 'react-redux';
 import {getStore} from '../redux';
-import {
-  initModel,
-  constants,
-  Modes,
-  setState,
-  setSetStateCallback,
-  renderCanvas,
-  UI
-} from '@code-dot-org/ml-activities';
+import {initAll} from '@code-dot-org/ml-activities';
+import {TestResults} from '@cdo/apps/constants';
 
 /**
  * An instantiable Fish class
@@ -80,45 +73,39 @@ Fish.prototype.init = function(config) {
   );
 };
 
+// Called by the fish app when it wants to go to the next level.
+Fish.prototype.onContinue = function() {
+  const onReportComplete = result => {
+    this.studioApp_.onContinue();
+  };
+
+  this.studioApp_.report({
+    app: 'fish',
+    level: this.level.id,
+    result: true,
+    testResult: TestResults.ALL_PASS,
+    program: '',
+    onComplete: result => {
+      onReportComplete(result);
+    }
+  });
+};
+
 Fish.prototype.initMLActivities = function() {
+  const {mode} = this.level;
+  const onContinue = this.onContinue.bind(this);
+
   // Set up initial state
   const canvas = document.getElementById('activity-canvas');
   const backgroundCanvas = document.getElementById('background-canvas');
-  canvas.width = backgroundCanvas.width = constants.canvasWidth;
-  canvas.height = backgroundCanvas.height = constants.canvasHeight;
-
-  // Temporarily use URL parameter to set some state.
-  const smallWordSet = window.location.href.indexOf('words=small') !== -1;
 
   // Set initial state for UI elements.
-  const state = setState({
-    currentMode: Modes.Loading,
+  initAll({
     canvas,
     backgroundCanvas,
-    uiContainer: document.getElementById('ui-container'),
-    headerContainer: document.getElementById('header-container'),
-    footerContainer: document.getElementById('footer-container'),
-    smallWordSet
+    appMode: mode,
+    onContinue
   });
-
-  // Initialize our first model.
-  initModel(state);
-
-  // Start the canvas renderer.  It will self-perpetute by calling
-  // requestAnimationFrame on itself.
-  renderCanvas();
-
-  // Render the UI.
-  renderUI();
-
-  // And have the render UI handler be called every time state is set.
-  setSetStateCallback(renderUI);
-};
-
-// Tell React to explicitly render the UI.
-export const renderUI = () => {
-  const renderElement = document.getElementById('container-react');
-  ReactDOM.render(<UI />, renderElement);
 };
 
 export default Fish;

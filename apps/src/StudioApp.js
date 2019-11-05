@@ -57,6 +57,7 @@ import {setIsRunning, setStepSpeed} from './redux/runState';
 import {setPageConstants} from './redux/pageConstants';
 import {setVisualizationScale} from './redux/layout';
 import {mergeProgress} from './code-studio/progressRedux';
+import {createLibraryClosure} from '@cdo/apps/code-studio/components/libraries/libraryParser';
 import {
   setAchievements,
   setBlockLimit,
@@ -2147,7 +2148,7 @@ StudioApp.prototype.loadLibraryBlocks = function(config) {
   config.level.libraryCode = '';
   config.level.libraries.forEach(library => {
     config.dropletConfig.additionalPredefValues.push(library.name);
-    config.level.libraryCode += library.source;
+    config.level.libraryCode += createLibraryClosure(library);
     // TODO: add category management for libraries (blocked on spec)
     // config.dropletConfig.categories['libraryName'] = {
     //   id: 'libraryName',
