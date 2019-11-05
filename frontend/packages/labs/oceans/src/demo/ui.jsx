@@ -78,6 +78,9 @@ const styles = {
     left: '10%',
     width: '80%'
   },
+  footerText: {
+    textAlign: 'center'
+  },
   instructionsParagraph: {
     marginTop: 18,
     marginBottom: 18
@@ -326,7 +329,9 @@ const instructionsText = {
         '1 in 3 people worldwide do not have access to safe drinking water. Access to clean water could reduce global diseases by 10%.',
         'Garbage dumped in ocean or rivers affects the water health and impacts the marine life in the water.',
         'In this activity, you will "program" or "train" an artificial intelligence to identify trash to remove from the ocean.'
-      ]
+      ],
+      footer:
+        'Sources <a href="https://www.cdc.gov/healthywater/global/assessing.html" target="_blank">X</a>, <a href="https://unfoundation.org/blog/post/tapping-benefits-clean-water-sanitation-hygiene-achieve-sustainable-development-goals/" target="_blank">Y</a>, <a href="https://www.unwater.org/water-facts/water-sanitation-and-hygiene/" target="_blank">Z</a>'
     },
     {
       heading: 'Meet A.I.',
@@ -393,6 +398,14 @@ class Instructions extends React.Component {
                 </div>
               );
             }
+          )}
+          {instructionsText[appModeVariant][currentPage].footer && (
+            <div
+              style={styles.footerText}
+              dangerouslySetInnerHTML={{
+                __html: instructionsText[appModeVariant][currentPage].footer
+              }}
+            />
           )}
         </div>
         <Button style={styles.continueButton} onClick={this.onContinueButton}>
