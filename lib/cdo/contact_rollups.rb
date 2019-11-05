@@ -222,7 +222,7 @@ class ContactRollups
     src_query = <<-SQL.squish
       SELECT * FROM contact_rollups_daily
       FORCE INDEX(contact_rollups_email_index)
-      ORDER BY email DESC
+      ORDER BY email
     SQL
     contact_rollups_src = PEGASUS_REPORTING_DB_READER[src_query]
 
@@ -231,7 +231,7 @@ class ContactRollups
     dest_query = <<-SQL.squish
       SELECT /*+ MAX_EXECUTION_TIME(#{MAX_EXECUTION_TIME}) */ * FROM contact_rollups
       FORCE INDEX(contact_rollups_email_index)
-      ORDER BY email DESC
+      ORDER BY email
     SQL
     contact_rollups_dest = PEGASUS_DB_READER[dest_query]
 
@@ -253,7 +253,7 @@ class ContactRollups
 
       # Continue to advance the destination pointer until the destination email address in question
       # is the same or later alphabetically as the source email address.
-      while (!contact_rollup_dest.nil?) && (contact_rollup_dest[:email] > email_src)
+      while (!contact_rollup_dest.nil?) && (contact_rollup_dest[:email] < email_src)
         contact_rollup_dest = grab_next(dest_iterator)
       end
 
