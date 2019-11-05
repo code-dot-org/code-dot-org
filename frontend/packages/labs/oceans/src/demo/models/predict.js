@@ -4,7 +4,9 @@ import {generateOcean} from '../../utils/generateOcean';
 
 export const init = () => {
   const state = getState();
-  const fishData = generateOcean(100, state.loadTrashImages);
+  setState({loadCreatureImages: true})
+  const numFish = state.appMode === 'creaturesvtrashdemo' ? 30 : 100;
+  const fishData = generateOcean(numFish);
   setState({fishData});
 };
 
