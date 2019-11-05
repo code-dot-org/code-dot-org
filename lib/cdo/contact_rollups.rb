@@ -302,7 +302,7 @@ class ContactRollups
 
       num_total = num_inserts + num_updates + num_unchanged
       if Time.now - time_last_output > LOG_OUTPUT_INTERVAL
-        log "Total source rows processed: #{num_total}"
+        log "#{Time.now} Total source rows processed: #{num_total}. #{num_inserts} insert(s), #{num_updates} update(s), #{num_unchanged} unchanged."
         time_last_output = Time.now
       end
 
@@ -313,7 +313,7 @@ class ContactRollups
     log("#{Time.now} Completed. #{num_total} source rows processed. #{num_inserts} insert(s), #{num_updates} update(s), #{num_unchanged} unchanged.")
     log_collector.info("#{num_total} source rows processed. #{num_inserts} insert(s), #{num_updates} update(s), #{num_unchanged} unchanged.")
   rescue StandardError => error
-    log "Error caught and re-raised: #{error.message}"
+    log "#{Time.now} Error caught and re-raised: #{error.message}"
     log "Current Source Record - #{contact_rollup_src}"
     log "Current Destination Record - #{contact_rollup_dest}"
 
