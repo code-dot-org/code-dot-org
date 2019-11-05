@@ -194,7 +194,10 @@ class ActivitiesController < ApplicationController
       end
     end
 
-    record_time_spent(@user_level)
+    is_free_play = @level.try(:free_play) || false
+    if Level::TYPES_WITH_IDEAL_LEVEL_SOURCE.include?(@level.type) && !is_free_play
+      record_time_spent(@user_level)
+    end
 
     passed = ActivityConstants.passing?(test_result)
     if lines > 0 && passed
