@@ -73,21 +73,6 @@ const styles = {
     marginTop: 18,
     marginBottom: 18
   },
-  instructionsDots: {
-    textAlign: 'center',
-    fontSize: 60,
-    position: 'absolute',
-    bottom: '20%',
-    left: 0,
-    width: '100%'
-  },
-  activeDot: {
-    color: colors.white
-  },
-  inactiveDot: {
-    color: colors.grey,
-    cursor: 'pointer'
-  },
   activityIntroText: {
     position: 'absolute',
     fontSize: 22,
@@ -373,29 +358,6 @@ class Instructions extends React.Component {
             }
           )}
         </div>
-        {instructionsText[appModeVariant].length > 1 && (
-          <div style={styles.instructionsDots}>
-            {instructionsText[appModeVariant].map((instruction, index) => {
-              return (
-                <span
-                  style={
-                    index === currentPage
-                      ? styles.activeDot
-                      : styles.inactiveDot
-                  }
-                  key={index}
-                  onClick={() =>
-                    index !== currentPage
-                      ? this.setInstructionsPage(index)
-                      : null
-                  }
-                >
-                  {'\u25CF'}
-                </span>
-              );
-            })}
-          </div>
-        )}
         <Button style={styles.continueButton} onClick={this.onContinueButton}>
           Continue
         </Button>
