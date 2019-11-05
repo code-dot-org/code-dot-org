@@ -509,9 +509,9 @@ let Train = class Train extends React.Component {
       text = "Great work! You can continue when you're ready.";
     } else if (total >= 5) {
       text = 'Keep training!';
-    } else if (total ===0 && state.appMode === 'creaturesvtrash') {
-      text = 'Let’s train A.I. again!'; 
-    }else {
+    } else if (total === 0 && state.appMode === 'creaturesvtrash') {
+      text = 'Let’s train A.I. again!';
+    } else {
       return null;
     }
 
