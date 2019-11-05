@@ -8,7 +8,8 @@ import {
   loadAllFishPartImages,
   loadAllSeaCreatureImages,
   loadAllTrashImages,
-  initMobilenet
+  initMobilenet,
+  SeaCreatureOceanObject
 } from './OceanObject';
 import aiBotClosed from '../../public/images/ai-bot-closed.png';
 import redScanner from '../../public/images/red-scanner.png';
@@ -138,6 +139,12 @@ const finishMovement = () => {
   lastStartTime = null;
 };
 
+const pauseMovement = t => {
+  setState({isRunning: false});
+  lastPauseTime = t;
+  lastStartTime = null;
+};
+
 // Calculate the screen's current X offset.
 const getOffsetForTime = (t, totalFish) => {
   // Normalize the fish movement amount from 0 to 1.
@@ -233,7 +240,18 @@ const drawMovingFish = state => {
         const midScreenX =
           constants.canvasWidth / 2 - constants.fishCanvasWidth / 2;
         if (Math.abs(midScreenX - x) <= 50) {
-          drawPrediction(state, fish.getResult().predictedClassId, ctx);
+          if (
+            state.isRunning &&
+            state.appMode === 'creaturesvtrashdemo' &&
+            fish.result.predictedClassId === 1 &&
+            fish instanceof SeaCreatureOceanObject
+          ) {
+            drawPrediction(state, fish.getResult().predictedClassId, ctx);
+            pauseMovement(t);
+            setState({showBiasText: true});
+          } else {
+            drawPrediction(state, fish.getResult().predictedClassId, ctx);
+          }
         }
       } else {
         predictFish(state, i).then(prediction => {

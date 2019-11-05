@@ -163,6 +163,19 @@ const styles = {
     width: '65%',
     height: 38
   },
+  biasText: {
+    position: 'absolute',
+    bottom: '2%',
+    left: '37%',
+    transform: 'translateX(-45%)',
+    fontSize: 22,
+    lineHeight: '32px',
+    width: '75%',
+    backgroundColor: colors.transparentBlack,
+    padding: '2%',
+    borderRadius: 10,
+    color: colors.white
+  },
   pondText: {
     position: 'absolute',
     bottom: '3%',
@@ -539,8 +552,10 @@ let Train = class Train extends React.Component {
     const trainQuestionTextStyle = state.isRunning
       ? styles.trainQuestionTextDisabled
       : styles.trainQuestionText;
-    const yesButtonText = state.appMode === 'creaturesvtrash' ? 'Yes' : state.word;
-    const noButtonText = state.appMode === 'creaturesvtrash' ? 'No' : `Not ${state.word}`;
+    const yesButtonText =
+      state.appMode === 'creaturesvtrash' ? 'Yes' : state.word;
+    const noButtonText =
+      state.appMode === 'creaturesvtrash' ? 'No' : `Not ${state.word}`;
     return (
       <Body>
         <Header>A.I. Training</Header>
@@ -602,8 +617,19 @@ class Predict extends React.Component {
     const state = getState();
     const speechBubbleText = this.speechBubbleText(state);
 
+    const biasText =
+      'There are lots of creatures in the sea who don’t look like fish.\n\nBut that doesn’t mean they should be removed!';
+
     let btnText, btnOnClick;
-    if (state.isRunning) {
+    if (state.showBiasText) {
+
+      btnText = 'Continue';
+      btnOnClick = () => {  if (state.onContinue) {
+              state.onContinue();
+            }
+      }
+    }
+    else if (state.isRunning) {
       btnText = 'Continue';
       btnOnClick = () => toMode(Modes.Pond);
     } else {
@@ -620,6 +646,7 @@ class Predict extends React.Component {
         <Button style={styles.continueButton} onClick={btnOnClick}>
           {btnText}
         </Button>
+        {state.showBiasText && <div style={styles.biasText}>{biasText}</div>}
       </Body>
     );
   }
