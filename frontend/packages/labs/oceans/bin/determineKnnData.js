@@ -116,7 +116,7 @@ const otherParts = {
 }
 
 for ([partName, dirName] of Object.entries(otherParts)) {
-  const dirPath = `public/images/fish/${dirName}`;
+  const dirPath = `public/images/fish/${dirName}/`;
   const image_files = fs.readdirSync(dirPath);
 
   image_files.forEach(fileName => {
