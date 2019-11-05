@@ -662,6 +662,9 @@ module.exports = class Maze {
       case 'pickup':
         this.controller.scheduleDig();
         break;
+      case 'fail_pickup':
+        this.controller.animatedFail(false);
+        break;
       case 'nectar':
         this.controller.subtype.animateGetNectar();
         break;
