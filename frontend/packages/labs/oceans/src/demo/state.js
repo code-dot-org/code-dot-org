@@ -18,7 +18,9 @@ const initialState = {
   loadTrashImages: null,
   word: null,
   trainingQuestion: null,
-  currentInstructionsPage: 0
+  currentInstructionsPage: 0,
+  pondFishBounds: null,
+  pondClickedFish: null
 };
 let state = {...initialState};
 

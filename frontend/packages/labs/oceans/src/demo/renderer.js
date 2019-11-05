@@ -354,20 +354,44 @@ const drawFrame = state => {
 const drawPondFishImages = () => {
   const canvas = getState().canvas;
   const ctx = canvas.getContext('2d');
+
+  const fishBounds = [];
+
   getState().pondFish.forEach(fish => {
+    const pondClickedFish = getState().pondClickedFish;
+    const pondClickedFishUs = pondClickedFish && fish.id === pondClickedFish.id;
+
     const swayValue =
       (($time() * 360) / (20 * 1000) + (fish.getId() + 1) * 10) % 360;
-    const swayOffsetX = Math.sin(((swayValue * Math.PI) / 180) * 2) * 120;
+    const swayMultipleX = 120;
+    const swayOffsetX = Math.sin(((swayValue * Math.PI) / 180) * 2) * swayMultipleX;
     const swayOffsetY = Math.sin(((swayValue * Math.PI) / 180) * 6) * 8;
 
     const xy = fish.getXY();
-    drawSingleFish(fish, xy.x + swayOffsetX, xy.y + swayOffsetY, ctx);
+    const finalX = xy.x + swayOffsetX;
+    const finalY = xy.y + swayOffsetY;
+
+    const size = pondClickedFishUs ? 1 : 0.5;
+
+    drawSingleFish(fish, finalX, finalY, ctx, size);
+
+    // Record this screen location so that we can separately check for clicks on it.
+    fishBounds.push({
+      fishId: fish.id,
+      x: finalX,
+      y: finalY,
+      w: constants.fishCanvasWidth / 2,
+      h: constants.fishCanvasHeight / 2,
+      confidence: fish.result
+    });
+    setState({pondFishBounds: fishBounds});
   });
 };
 
 // Draw a single fish, preferably from cached canvas.
 // Used by drawMovingFish and drawPondFishImages.
-const drawSingleFish = (fish, fishXPos, fishYPos, ctx) => {
+// Takes an optional size multipler, where 0.5 means fish are half size.
+const drawSingleFish = (fish, fishXPos, fishYPos, ctx, size = 1) => {
   const [fishCanvas, hit] = canvasCache.getCanvas(fish.id);
   if (!hit) {
     fishCanvas.width = constants.fishCanvasWidth;
@@ -375,7 +399,22 @@ const drawSingleFish = (fish, fishXPos, fishYPos, ctx) => {
     fish.drawToCanvas(fishCanvas);
   }
 
-  ctx.drawImage(fishCanvas, Math.round(fishXPos), Math.round(fishYPos));
+  // TODO: Does scaling during drawImage have a performance impact on some
+  // devices/browsers?  We migth need to pre-cache scaled images.
+  const width = fishCanvas.width * size;
+  const height = fishCanvas.height * size;
+
+  // Maintain the center of the fish.
+  const adjustedFishXPos = fishXPos - width/2 + fishCanvas.width/2;
+  const adjustedFishYPos = fishYPos - height/2 + fishCanvas.height/2;
+
+  ctx.drawImage(
+    fishCanvas,
+    Math.round(adjustedFishXPos),
+    Math.round(adjustedFishYPos),
+    width,
+    height
+  );
 };
 
 // Clear the sprite canvas.

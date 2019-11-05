@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Radium from 'radium';
 import _ from 'lodash';
 import {getState, setState} from './state';
-import {Modes, DataSet} from './constants';
+import constants, {Modes, DataSet} from './constants';
 import {getAppMode} from './helpers';
 import {toMode} from './toMode';
 import {onClassifyFish} from './models/train';
@@ -161,6 +161,13 @@ const styles = {
     borderRadius: 10,
     color: colors.white
   },
+  pondFishDetails: {
+    position: 'absolute',
+    backgroundColor: colors.transparentWhite,
+    padding: '2%',
+    borderRadius: 5,
+    color: colors.black
+  },
   pondBot: {
     position: 'absolute',
     height: '40%',
@@ -208,13 +215,33 @@ const styles = {
   }
 };
 
+function Collide(x1, y1, w1, h1, x2, y2, w2, h2) {
+  // Detect a non-collision.
+  if (
+    x1 + w1 - 1 < x2 ||
+    x1 > x2 + w2 - 1 ||
+    y1 + h1 - 1 < y2 ||
+    y1 > y2 + h2 - 1
+  ) {
+    return false;
+  }
+
+  // Otherwise we have a collision.
+  return true;
+}
+
 class Body extends React.Component {
   static propTypes = {
-    children: PropTypes.node
+    children: PropTypes.node,
+    onClick: PropTypes.func
   };
 
   render() {
-    return <div style={styles.body}>{this.props.children}</div>;
+    return (
+      <div style={styles.body} onClick={this.props.onClick}>
+        {this.props.children}
+      </div>
+    );
   }
 }
 
@@ -588,6 +615,54 @@ class Predict extends React.Component {
 }
 
 class Pond extends React.Component {
+  onPondClick(e) {
+    const state = getState();
+    const clickX = e.nativeEvent.offsetX;
+    const clickY = e.nativeEvent.offsetY;
+
+    if (state.pondFishBounds) {
+      let fishClicked = false;
+      // Look through the array in reverse so that we click on a fish that
+      // is rendered topmost.
+      _.reverse(state.pondFishBounds).forEach(fishBound => {
+        // If we haven't already clicked on a fish in this current iteration,
+        // and we're not clicking on a fish that is already actively clicked,
+        // and we have a collision, then we have clicked on a new fish!
+        if (
+          !fishClicked &&
+          !(
+            state.pondClickedFish && fishBound.fishId === state.pondClickedFish.id
+          ) &&
+          Collide(
+            fishBound.x,
+            fishBound.y,
+            fishBound.w,
+            fishBound.h,
+            clickX,
+            clickY,
+            1,
+            1
+          )
+        ) {
+          setState({
+            pondClickedFish: {
+              id: fishBound.fishId,
+              x: fishBound.x,
+              y: fishBound.y,
+              confidence: fishBound.confidence
+            }
+          });
+          console.log('Fish clicked confidence: ', fishBound.confidence);
+          fishClicked = true;
+        }
+      });
+
+      if (!fishClicked) {
+        setState({pondClickedFish: null});
+      }
+    }
+  }
+
   render() {
     const state = getState();
     const pondText = `Out of ${
@@ -596,11 +671,46 @@ class Pond extends React.Component {
       state.pondFish.length
     } that it classified as ${state.word.toUpperCase()}.`;
 
+    const showFishDetails = !!state.pondClickedFish;
+    let pondFishDetailsStyle;
+    let confidence;
+    if (showFishDetails) {
+      const fish = state.pondClickedFish;
+
+      const leftX = Math.min(
+        Math.max(state.pondClickedFish.x + 200, 20),
+        constants.canvasWidth - 210
+      );
+      const topY = Math.min(
+        Math.max(state.pondClickedFish.y, 20),
+        constants.canvasHeight - 50
+      );
+
+      pondFishDetailsStyle = {
+        ...styles.pondFishDetails,
+        left: leftX,
+        top: topY
+      };
+
+      if (!fish.confidence || !fish.confidence.confidencesByClassId) {
+        confidence = 'Not sure';
+      } else if (fish.confidence.confidencesByClassId[0] > 0.99) {
+        confidence = 'Very sure';
+      } else if (fish.confidence.confidencesByClassId[0] > 0.5) {
+        confidence = 'Fairly sure';
+      } else {
+        confidence = 'Not very sure';
+      }
+    }
+
     return (
-      <Body>
+      <Body onClick={this.onPondClick}>
         <Header>A.I. Results</Header>
         <div style={styles.pondText}>{pondText}</div>
         <img style={styles.pondBot} src={aiBotClosed} />
+        {showFishDetails && (
+          <div style={pondFishDetailsStyle}>{confidence}</div>
+        )}
         <Button
           style={styles.continueButton}
           onClick={() => {
