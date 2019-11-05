@@ -4169,4 +4169,16 @@ class UserTest < ActiveSupport::TestCase
 
     refute migrated_teacher.admin
   end
+
+  test 'does set admin to false when unmigrated teacher account' do
+    unmigrated_teacher_without_password = create :teacher, :demigrated
+    unmigrated_teacher_without_password.update_attribute(:encrypted_password, '')
+
+    unmigrated_teacher_without_password.admin = true
+    unmigrated_teacher_without_password.save!
+
+    puts "unmigrated #{unmigrated_teacher_without_password.admin}"
+
+    refute unmigrated_teacher_without_password.admin
+  end
 end
