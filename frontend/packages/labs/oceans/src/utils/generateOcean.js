@@ -29,13 +29,13 @@ export const generateOcean = (
     possibleObjects.push(FishOceanObject);
   }
   if (
-    (loadTrashImages != undefined && loadTrashImages) ||
+    (loadTrashImages !== undefined && loadTrashImages) ||
     (loadTrashImages === undefined && state.loadTrashImages)
   ) {
     possibleObjects.push(TrashOceanObject);
   }
   if (
-    (loadCreatureImages != undefined && loadCreatureImages) ||
+    (loadCreatureImages !== undefined && loadCreatureImages) ||
     (loadCreatureImages === undefined && state.loadCreatureImages)
   ) {
     possibleObjects.push(SeaCreatureOceanObject);

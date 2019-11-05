@@ -4,7 +4,6 @@ import {generateOcean} from '../../utils/generateOcean';
 
 export const init = () => {
   const state = getState();
-  const numFish = state.appMode === 'creaturesvtrashdemo' ? 30 : 100;
   let fishData = [];
   if (state.appMode === 'creaturesvtrashdemo') {
     fishData = fishData.concat(generateOcean(4, true, true, false));

@@ -37,8 +37,6 @@ let botVelocity = 3;
 let botY, botYDestination;
 let currentPredictedClassId;
 
-let numSeaCreaturesMisclassified = 0;
-
 export const initRenderer = () => {
   canvasCache = new CanvasCache();
   let promises = [];
@@ -301,7 +299,6 @@ const drawMovingFish = state => {
               fish.result.predictedClassId = 0;
             } else if (fish instanceof SeaCreatureOceanObject) {
               fish.result.predictedClassId = 1;
-              numSeaCreaturesMisclassified++;
             } else {
               fish.result.predictedClassId = 1;
             }
