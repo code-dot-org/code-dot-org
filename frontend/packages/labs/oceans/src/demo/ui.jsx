@@ -677,10 +677,10 @@ class Pond extends React.Component {
   render() {
     const state = getState();
     const pondText = [
-      `Out of ${state.fishData.length} objects, A.I. identified ${
-        state.pondFish.length
+      `Out of ${state.fishData.length} objects, I identified ${
+        state.totalPondFish
       } that are ${state.word.toUpperCase()}.`,
-      'How did A.I. do?',
+      'How did A.I. do?'
       //'Choose to Train More or Continue.'
     ];
 
