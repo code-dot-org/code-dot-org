@@ -20,7 +20,7 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    fontSize: 48,
+    fontSize: 28,
     lineHeight: '52px'
   },
   body: {
@@ -103,11 +103,11 @@ const styles = {
   },
   trainQuestionText: {
     position: 'absolute',
-    top: '18%',
+    top: '15%',
     left: '50%',
     transform: 'translateX(-50%)',
-    fontSize: 22,
-    lineHeight: '26px'
+    fontSize: 32,
+    lineHeight: '35px'
   },
   trainQuestionTextDisabled: {
     position: 'absolute',
@@ -289,12 +289,7 @@ const instructionsText = {
     {
       heading: 'Training Data',
       text: [
-        'A.I. needs lots of training data to do its job well. When you train A.I., the data you provide can make a difference!'
-      ]
-    },
-    {
-      heading: 'Training Data',
-      text: [
+        'A.I. needs lots of training data to do its job well. When you train A.I., the data you provide can make a difference!',
         'We learned how AI and machine learning can be used to do good things like identify trash in the ocean!',
         'What else can we use AI to do?'
       ]
