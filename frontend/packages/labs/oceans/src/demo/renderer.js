@@ -11,9 +11,12 @@ import {
   initMobilenet,
   SeaCreatureOceanObject
 } from './OceanObject';
-import aiBotClosed from '../../public/images/ai-bot-closed.png';
-import redScanner from '../../public/images/red-scanner.png';
-import greenScanner from '../../public/images/green-scanner.png';
+import aiBotClosed from '../../public/images/ai-bot/ai-bot-closed.png';
+import aiBotCheckmark from '../../public/images/ai-bot/ai-bot-checkmark.png';
+import aiBotX from '../../public/images/ai-bot/ai-bot-x.png';
+import redScanner from '../../public/images/ai-bot/red-scanner.png';
+import greenScanner from '../../public/images/ai-bot/green-scanner.png';
+import blueScanner from '../../public/images/ai-bot/blue-scanner.png';
 
 var $time =
   Date.now ||
@@ -31,6 +34,7 @@ let moveTime;
 let botImages = {};
 let botVelocity = 3;
 let botY, botYDestination;
+let currentPredictedClassId;
 
 export const initRenderer = () => {
   canvasCache = new CanvasCache();
@@ -57,15 +61,24 @@ export const render = () => {
     lastStartTime = null;
     botY = null;
     botYDestination = null;
+    currentPredictedClassId = null;
 
     if (state.currentMode === Modes.Training) {
       moveTime = defaultMoveTime / 2;
     } else {
       moveTime = defaultMoveTime;
     }
+
+    if (state.currentMode === Modes.Predicting) {
+      loadAllBotImages();
+    }
   }
 
   clearCanvas(state.canvas);
+
+  const timeBeforeCanSkipPredict = 5000;
+  const timeBeforeCanSeePondText = 3000;
+  const timeBeforeCanSkipPond = 5000;
 
   switch (state.currentMode) {
     case Modes.Training:
@@ -73,11 +86,25 @@ export const render = () => {
       drawMovingFish(state);
       break;
     case Modes.Predicting:
-      drawMovingFish(state);
       drawPredictBot(state);
+      drawMovingFish(state);
+
+      if (state.isRunning) {
+        setState({
+          canSkipPredict:
+            $time() >= state.runStartTime + timeBeforeCanSkipPredict
+        });
+      }
+
       break;
     case Modes.Pond:
       drawPondFishImages();
+
+      setState({
+        canSkipPond: $time() >= currentModeStartTime + timeBeforeCanSkipPond,
+        canSeePondText:
+          $time() >= currentModeStartTime + timeBeforeCanSeePondText
+      });
       break;
   }
 
@@ -105,7 +132,7 @@ export const drawBackground = state => {
 };
 
 // Load a single image.
-// Used by drawBackground.
+// Used by drawBackground and loadAllBotImages.
 const loadImage = imgPath => {
   return new Promise((resolve, reject) => {
     const img = new Image();
@@ -115,6 +142,30 @@ const loadImage = imgPath => {
     });
     img.src = imgPath;
   });
+};
+
+// Loads all bot + bot scanner images and caches them in botImages.
+const loadAllBotImages = async () => {
+  botImages = {}; // Empty previous cache
+  const imagesToLoad = {
+    defaultBot: aiBotClosed,
+    defaultScanner: blueScanner,
+    likeBot: aiBotCheckmark,
+    likeScanner: greenScanner,
+    dislikeBot: aiBotX,
+    dislikeScanner: redScanner
+  };
+  let imagePromises = [];
+
+  Object.keys(imagesToLoad).forEach(key => {
+    imagePromises.push(
+      loadImage(imagesToLoad[key]).then(img => {
+        botImages[key] = img;
+      })
+    );
+  });
+
+  await Promise.all(imagePromises);
 };
 
 const currentRunTime = (isRunning, clampTime) => {
@@ -140,7 +191,7 @@ const finishMovement = () => {
 };
 
 const pauseMovement = t => {
-  setState({isRunning: false});
+  setState({isRunning: false, isPaused:true});
   lastPauseTime = t;
   lastStartTime = null;
 };
@@ -180,7 +231,7 @@ const getYForFish = (numFish, fishIdx, state, offsetX, predictedClassId) => {
 
   // Move fish down a little on predict screen.
   if (state.currentMode === Modes.Predicting) {
-    y += 130;
+    y += 120;
 
     // And drop the fish down even more if they are not liked.
     const doesLike = predictedClassId === ClassType.Like;
@@ -224,6 +275,7 @@ const drawMovingFish = state => {
   );
   const ctx = state.canvas.getContext('2d');
 
+  let centerFish;
   for (let i = startFishIdx; i <= lastFishIdx; i++) {
     const fish = state.fishData[i];
     const x = getXForFish(state.fishData.length - 1, i, offsetX);
@@ -240,17 +292,15 @@ const drawMovingFish = state => {
         const midScreenX =
           constants.canvasWidth / 2 - constants.fishCanvasWidth / 2;
         if (Math.abs(midScreenX - x) <= 50) {
+          centerFish = fish;
           if (
             state.isRunning &&
             state.appMode === 'creaturesvtrashdemo' &&
             fish.result.predictedClassId === 1 &&
             fish instanceof SeaCreatureOceanObject
           ) {
-            drawPrediction(state, fish.getResult().predictedClassId, ctx);
             pauseMovement(t);
             setState({showBiasText: true});
-          } else {
-            drawPrediction(state, fish.getResult().predictedClassId, ctx);
           }
         }
       } else {
@@ -263,55 +313,58 @@ const drawMovingFish = state => {
     drawSingleFish(fish, x, y, ctx);
   }
 
+  if (state.currentMode === Modes.Predicting) {
+    currentPredictedClassId = centerFish
+      ? centerFish.getResult().predictedClassId
+      : null;
+  }
+
   if (state.currentMode === Modes.Training && runtime === moveTime) {
     finishMovement();
   }
 };
 
-// Draw a prediction to the canvas.
-const drawPrediction = (state, predictedClassId, ctx) => {
-  let scannerImg;
-  const imgKey =
-    predictedClassId === ClassType.Like ? greenScanner : redScanner;
-
-  if (botImages[imgKey]) {
-    scannerImg = botImages[imgKey];
-  } else {
-    loadImage(imgKey).then(img => {
-      botImages[imgKey] = img;
-      scannerImg = img;
-    });
-    return;
-  }
-
-  const x = state.canvas.width / 2 - scannerImg.width / 2;
-  const y = botY + 50;
-  ctx.drawImage(scannerImg, x, y);
-};
-
-// Draw AI bot to canvas for predict mode.
+// Draw AI bot + scanner to canvas for predict mode.
+// *Note:* This will no-op if the expected bot/scanner is not present
+// in the botImages cache. Call loadAllBotImages() to populate the botImages cache.
 const drawPredictBot = state => {
-  if (!botImages.closed) {
-    loadImage(aiBotClosed).then(img => (botImages.closed = img));
+  let botImg, scannerImg;
+  if (currentPredictedClassId === ClassType.Like) {
+    botImg = botImages.likeBot;
+    scannerImg = botImages.likeScanner;
+  } else if (currentPredictedClassId === ClassType.Dislike) {
+    botImg = botImages.dislikeBot;
+    scannerImg = botImages.dislikeScanner;
+  } else {
+    botImg = botImages.defaultBot;
+    scannerImg = botImages.defaultScanner;
+  }
+
+  if (!botImg || !scannerImg) {
     return;
   }
 
-  let img = botImages.closed;
-  let botX = state.canvas.width / 2 - img.width / 2;
-  botY = botY || state.canvas.height / 2 - img.height / 2;
+  let botX = state.canvas.width / 2 - botImg.width / 2;
+  botY = botY || state.canvas.height / 2 - botImg.height / 2;
+  const ctx = state.canvas.getContext('2d');
 
   // Move AI bot above fish parade.
-  if (state.isRunning) {
-    botYDestination = botYDestination || botY - 130;
+  if (state.isRunning || state.isPaused) {
+    botYDestination = botYDestination || botY - 120;
 
     const distToDestination = Math.abs(botYDestination - botY);
     if (distToDestination > 1) {
       const direction = distToDestination === botYDestination - botY ? 1 : -1;
       botY += direction * botVelocity;
     }
+
+    // Draw scanner.
+    const scannerX = state.canvas.width / 2 - scannerImg.width / 2;
+    ctx.drawImage(scannerImg, scannerX, botY + 50);
   }
 
-  state.canvas.getContext('2d').drawImage(img, botX, botY);
+  // Draw bot.
+  ctx.drawImage(botImg, botX, botY);
 };
 
 // Draw frame in the center of the screen.
@@ -335,20 +388,45 @@ const drawFrame = state => {
 const drawPondFishImages = () => {
   const canvas = getState().canvas;
   const ctx = canvas.getContext('2d');
+
+  const fishBounds = [];
+
   getState().pondFish.forEach(fish => {
+    const pondClickedFish = getState().pondClickedFish;
+    const pondClickedFishUs = pondClickedFish && fish.id === pondClickedFish.id;
+
     const swayValue =
       (($time() * 360) / (20 * 1000) + (fish.getId() + 1) * 10) % 360;
-    const swayOffsetX = Math.sin(((swayValue * Math.PI) / 180) * 2) * 120;
+    const swayMultipleX = 120;
+    const swayOffsetX =
+      Math.sin(((swayValue * Math.PI) / 180) * 2) * swayMultipleX;
     const swayOffsetY = Math.sin(((swayValue * Math.PI) / 180) * 6) * 8;
 
     const xy = fish.getXY();
-    drawSingleFish(fish, xy.x + swayOffsetX, xy.y + swayOffsetY, ctx);
+    const finalX = xy.x + swayOffsetX;
+    const finalY = xy.y + swayOffsetY;
+
+    const size = pondClickedFishUs ? 1 : 0.5;
+
+    drawSingleFish(fish, finalX, finalY, ctx, size);
+
+    // Record this screen location so that we can separately check for clicks on it.
+    fishBounds.push({
+      fishId: fish.id,
+      x: finalX,
+      y: finalY,
+      w: constants.fishCanvasWidth / 2,
+      h: constants.fishCanvasHeight / 2,
+      confidence: fish.result
+    });
+    setState({pondFishBounds: fishBounds});
   });
 };
 
 // Draw a single fish, preferably from cached canvas.
-// Used by drawTrainingFish, drawUpcomingFish, drawPredictingFish.
-const drawSingleFish = (fish, fishXPos, fishYPos, ctx) => {
+// Used by drawMovingFish and drawPondFishImages.
+// Takes an optional size multipler, where 0.5 means fish are half size.
+const drawSingleFish = (fish, fishXPos, fishYPos, ctx, size = 1) => {
   const [fishCanvas, hit] = canvasCache.getCanvas(fish.id);
   if (!hit) {
     fishCanvas.width = constants.fishCanvasWidth;
@@ -356,7 +434,22 @@ const drawSingleFish = (fish, fishXPos, fishYPos, ctx) => {
     fish.drawToCanvas(fishCanvas);
   }
 
-  ctx.drawImage(fishCanvas, Math.round(fishXPos), Math.round(fishYPos));
+  // TODO: Does scaling during drawImage have a performance impact on some
+  // devices/browsers?  We migth need to pre-cache scaled images.
+  const width = fishCanvas.width * size;
+  const height = fishCanvas.height * size;
+
+  // Maintain the center of the fish.
+  const adjustedFishXPos = fishXPos - width / 2 + fishCanvas.width / 2;
+  const adjustedFishYPos = fishYPos - height / 2 + fishCanvas.height / 2;
+
+  ctx.drawImage(
+    fishCanvas,
+    Math.round(adjustedFishXPos),
+    Math.round(adjustedFishYPos),
+    width,
+    height
+  );
 };
 
 // Clear the sprite canvas.

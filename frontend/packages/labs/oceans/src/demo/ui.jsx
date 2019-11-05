@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import Radium from 'radium';
 import _ from 'lodash';
 import {getState, setState} from './state';
-import {Modes, DataSet} from './constants';
+import constants, {Modes, DataSet} from './constants';
 import {getAppMode} from './helpers';
 import {toMode} from './toMode';
 import {onClassifyFish} from './models/train';
 import colors from './colors';
-import aiBotClosed from '../../public/images/ai-bot-closed.png';
+import aiBotClosed from '../../public/images/ai-bot/ai-bot-closed.png';
 import xIcon from '../../public/images/x-icon.png';
 import checkmarkIcon from '../../public/images/checkmark-icon.png';
 
@@ -20,7 +20,7 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    fontSize: 48,
+    fontSize: 28,
     lineHeight: '52px'
   },
   body: {
@@ -73,21 +73,6 @@ const styles = {
     marginTop: 18,
     marginBottom: 18
   },
-  instructionsDots: {
-    textAlign: 'center',
-    fontSize: 60,
-    position: 'absolute',
-    bottom: '20%',
-    left: 0,
-    width: '100%'
-  },
-  activeDot: {
-    color: colors.white
-  },
-  inactiveDot: {
-    color: colors.grey,
-    cursor: 'pointer'
-  },
   activityIntroText: {
     position: 'absolute',
     fontSize: 22,
@@ -118,11 +103,11 @@ const styles = {
   },
   trainQuestionText: {
     position: 'absolute',
-    top: '18%',
+    top: '15%',
     left: '50%',
     transform: 'translateX(-50%)',
-    fontSize: 22,
-    lineHeight: '26px'
+    fontSize: 32,
+    lineHeight: '35px'
   },
   trainQuestionTextDisabled: {
     position: 'absolute',
@@ -133,19 +118,21 @@ const styles = {
     lineHeight: '26px',
     opacity: 0.5
   },
-  trainButtonYes: {
+  trainButtons: {
     position: 'absolute',
     top: '80%',
-    left: '50%',
+    width: '100%',
+    display: 'flex',
+    justifyContent: 'center'
+  },
+  trainButtonYes: {
+    marginLeft: 10,
     ':hover': {
       backgroundColor: colors.green,
       color: colors.white
     }
   },
   trainButtonNo: {
-    position: 'absolute',
-    top: '80%',
-    left: '33%',
     ':hover': {
       backgroundColor: colors.red,
       color: colors.white
@@ -153,9 +140,9 @@ const styles = {
   },
   trainBot: {
     position: 'absolute',
-    height: '50%',
-    top: '20%',
-    left: '70%'
+    height: '40%',
+    top: '28%',
+    left: '76%'
   },
   predictSpeech: {
     top: '88%',
@@ -178,21 +165,30 @@ const styles = {
   },
   pondText: {
     position: 'absolute',
-    bottom: '3%',
-    left: '45%',
+    bottom: '4%',
+    left: '43%',
     transform: 'translateX(-45%)',
-    fontSize: 22,
+    fontSize: 18,
     lineHeight: '32px',
+    textAlign: 'center',
     width: '50%',
-    backgroundColor: colors.transparentBlack,
-    padding: '2%',
+    backgroundColor: colors.transparentWhite,
+    border: '4px solid black',
+    padding: '1%',
     borderRadius: 10,
-    color: colors.white
+    color: colors.black
+  },
+  pondFishDetails: {
+    position: 'absolute',
+    backgroundColor: colors.transparentWhite,
+    padding: '2%',
+    borderRadius: 5,
+    color: colors.black
   },
   pondBot: {
     position: 'absolute',
-    height: '50%',
-    left: 0,
+    height: '40%',
+    left: '4%',
     bottom: 0
   },
   pill: {
@@ -236,13 +232,39 @@ const styles = {
   }
 };
 
+function Collide(x1, y1, w1, h1, x2, y2, w2, h2) {
+  // Detect a non-collision.
+  if (
+    x1 + w1 - 1 < x2 ||
+    x1 > x2 + w2 - 1 ||
+    y1 + h1 - 1 < y2 ||
+    y1 > y2 + h2 - 1
+  ) {
+    return false;
+  }
+
+  // Otherwise we have a collision.
+  return true;
+}
+
+var $time =
+  Date.now ||
+  function() {
+    return +new Date();
+  };
+
 class Body extends React.Component {
   static propTypes = {
-    children: PropTypes.node
+    children: PropTypes.node,
+    onClick: PropTypes.func
   };
 
   render() {
-    return <div style={styles.body}>{this.props.children}</div>;
+    return (
+      <div style={styles.body} onClick={this.props.onClick}>
+        {this.props.children}
+      </div>
+    );
   }
 }
 
@@ -288,28 +310,18 @@ let Button = class Button extends React.Component {
 Button = Radium(Button);
 
 const instructionsText = {
-  intro: [
-    {
-      heading: 'Introduction',
-      text: [
-        'In the following activity we’ll learn about artificial intelligence (AI) and machine learning.',
-        'With machine learning we use data to train the computer to recognize patterns.',
-        'Watch the video to learn more!'
-      ]
-    }
-  ],
-
   fishvtrash: [
     {
-      heading: 'Train A.I. to Clean Ocean',
+      heading: 'Train AI to Clean the Ocean',
       text: [
+        'In the following activity we’ll learn about artificial intelligence (AI) and machine learning.',
         'Now let’s consider how machine learning can be used for good in the real world.',
         '1 in 3 people worldwide do not have access to safe drinking water. Access to clean water could reduce global diseases by 10%.',
         'Garbage dumped in ocean or rivers affects the water health and impacts the marine life in the water.'
       ]
     },
     {
-      heading: 'Train A.I. to Clean Ocean',
+      heading: 'Train AI to Clean the Ocean',
       text: [
         'In this activity, you will "program" or "train" an artificial intelligence to identify trash to remove from the ocean.'
       ]
@@ -327,12 +339,7 @@ const instructionsText = {
     {
       heading: 'Training Data',
       text: [
-        'A.I. needs lots of training data to do its job well. When you train A.I., the data you provide can make a difference!'
-      ]
-    },
-    {
-      heading: 'Training Data',
-      text: [
+        'A.I. needs lots of training data to do its job well. When you train A.I., the data you provide can make a difference!',
         'We learned how AI and machine learning can be used to do good things like identify trash in the ocean!',
         'What else can we use AI to do?'
       ]
@@ -386,29 +393,6 @@ class Instructions extends React.Component {
             }
           )}
         </div>
-        {instructionsText[appModeVariant].length > 1 && (
-          <div style={styles.instructionsDots}>
-            {instructionsText[appModeVariant].map((instruction, index) => {
-              return (
-                <span
-                  style={
-                    index === currentPage
-                      ? styles.activeDot
-                      : styles.inactiveDot
-                  }
-                  key={index}
-                  onClick={() =>
-                    index !== currentPage
-                      ? this.setInstructionsPage(index)
-                      : null
-                  }
-                >
-                  {'\u25CF'}
-                </span>
-              );
-            })}
-          </div>
-        )}
         <Button style={styles.continueButton} onClick={this.onContinueButton}>
           Continue
         </Button>
@@ -574,18 +558,20 @@ let Train = class Train extends React.Component {
           iconBgColor={colors.green}
           style={[styles.count, styles.yesCount]}
         />
-        <Button
-          style={styles.trainButtonNo}
-          onClick={() => onClassifyFish(false)}
-        >
-          {noButtonText}
-        </Button>
-        <Button
-          style={styles.trainButtonYes}
-          onClick={() => onClassifyFish(true)}
-        >
-          {yesButtonText}
-        </Button>
+        <div style={styles.trainButtons}>
+          <Button
+            style={styles.trainButtonNo}
+            onClick={() => onClassifyFish(false)}
+          >
+            {noButtonText}
+          </Button>
+          <Button
+            style={styles.trainButtonYes}
+            onClick={() => onClassifyFish(true)}
+          >
+            {yesButtonText}
+          </Button>
+        </div>
         <Button
           style={styles.continueButton}
           onClick={() => toMode(Modes.Predicting)}
@@ -606,6 +592,8 @@ class Predict extends React.Component {
 
     if (state.appMode === 'fishvtrash') {
       return 'Now let’s see if A.I. knows what a fish looks like.';
+    } else if (state.appMode === 'creaturesvtrash') {
+      return 'Now let’s see if A.I. does a better job separating what should be in the ocean and what shouldn’t.';
     } else if (state.appMode === 'short' || state.appMode === 'long') {
       return `Nice work! Your training data has programmed A.I. to recognize ${state.word.toLowerCase()} fish. Let’s run A.I.’s program and see how it works.`;
     } else {
@@ -620,32 +608,36 @@ class Predict extends React.Component {
     const biasText =
       'There are lots of creatures in the sea who don’t look like fish.\n\nBut that doesn’t mean they should be removed!';
 
-    let btnText, btnOnClick;
-    if (state.showBiasText) {
-
-      btnText = 'Continue';
-      btnOnClick = () => {  if (state.onContinue) {
-              state.onContinue();
-            }
-      }
-    }
-    else if (state.isRunning) {
-      btnText = 'Continue';
-      btnOnClick = () => toMode(Modes.Pond);
-    } else {
-      btnText = 'Run A.I.';
-      btnOnClick = () => setState({isRunning: true});
-    }
-
     return (
       <Body>
         <Header>A.I. Sorting</Header>
         {speechBubbleText && (
           <SpeechBubble text={speechBubbleText} style={styles.predictSpeech} />
         )}
-        <Button style={styles.continueButton} onClick={btnOnClick}>
-          {btnText}
-        </Button>
+        {!state.isRunning && !state.showBiasText && (
+          <Button
+            style={styles.continueButton}
+            onClick={() => setState({isRunning: true, runStartTime: $time()})}
+          >
+            Run A.I.
+          </Button>
+        )}
+        {(state.canSkipPredict || state.showBiasText) && (
+          <Button
+            style={styles.continueButton}
+            onClick={() => {
+              if (state.showBiasText) {
+                if (state.onContinue) {
+                  state.onContinue();
+                }
+              } else {
+                toMode(Modes.Pond);
+              }
+            }}
+          >
+            Continue
+          </Button>
+        )}
         {state.showBiasText && <div style={styles.biasText}>{biasText}</div>}
       </Body>
     );
@@ -653,29 +645,123 @@ class Predict extends React.Component {
 }
 
 class Pond extends React.Component {
+  onPondClick(e) {
+    const state = getState();
+    const clickX = e.nativeEvent.offsetX;
+    const clickY = e.nativeEvent.offsetY;
+
+    if (state.pondFishBounds) {
+      let fishClicked = false;
+      // Look through the array in reverse so that we click on a fish that
+      // is rendered topmost.
+      _.reverse(state.pondFishBounds).forEach(fishBound => {
+        // If we haven't already clicked on a fish in this current iteration,
+        // and we're not clicking on a fish that is already actively clicked,
+        // and we have a collision, then we have clicked on a new fish!
+        if (
+          !fishClicked &&
+          !(
+            state.pondClickedFish &&
+            fishBound.fishId === state.pondClickedFish.id
+          ) &&
+          Collide(
+            fishBound.x,
+            fishBound.y,
+            fishBound.w,
+            fishBound.h,
+            clickX,
+            clickY,
+            1,
+            1
+          )
+        ) {
+          setState({
+            pondClickedFish: {
+              id: fishBound.fishId,
+              x: fishBound.x,
+              y: fishBound.y,
+              confidence: fishBound.confidence
+            }
+          });
+          console.log('Fish clicked confidence: ', fishBound.confidence);
+          fishClicked = true;
+        }
+      });
+
+      if (!fishClicked) {
+        setState({pondClickedFish: null});
+      }
+    }
+  }
+
   render() {
     const state = getState();
-    const pondText = `Out of ${
-      state.fishData.length
-    } objects, A.I. identified ${
-      state.pondFish.length
-    } that it classified as ${state.word.toUpperCase()}.`;
+    const pondText = [
+      `Out of ${state.fishData.length} objects, I identified ${
+        state.pondFish.length
+      } that are ${state.word.toUpperCase()}.`,
+      'How did I do?',
+      'Choose to Train More or Continue.'
+    ];
+
+    const showFishDetails = !!state.pondClickedFish;
+    let pondFishDetailsStyle;
+    let confidence;
+    if (showFishDetails) {
+      const fish = state.pondClickedFish;
+
+      const leftX = Math.min(
+        Math.max(state.pondClickedFish.x + 200, 20),
+        constants.canvasWidth - 210
+      );
+      const topY = Math.min(
+        Math.max(state.pondClickedFish.y, 20),
+        constants.canvasHeight - 50
+      );
+
+      pondFishDetailsStyle = {
+        ...styles.pondFishDetails,
+        left: leftX,
+        top: topY
+      };
+
+      if (!fish.confidence || !fish.confidence.confidencesByClassId) {
+        confidence = 'Not confident';
+      } else if (fish.confidence.confidencesByClassId[0] > 0.99) {
+        confidence = 'Very confident';
+      } else if (fish.confidence.confidencesByClassId[0] > 0.5) {
+        confidence = 'Fairly confident';
+      } else {
+        confidence = 'Not very confident';
+      }
+    }
 
     return (
-      <Body>
+      <Body onClick={this.onPondClick}>
         <Header>A.I. Results</Header>
-        <div style={styles.pondText}>{pondText}</div>
+        {state.canSeePondText && (
+          <div style={styles.pondText}>
+            {pondText.map((text, index) => {
+              return <div>{text}</div>;
+            })}
+          </div>
+        )}
         <img style={styles.pondBot} src={aiBotClosed} />
-        <Button
-          style={styles.continueButton}
-          onClick={() => {
-            if (state.onContinue) {
-              state.onContinue();
-            }
-          }}
-        >
-          Continue
-        </Button>
+        {showFishDetails && (
+          <div style={pondFishDetailsStyle}>{confidence}</div>
+        )}
+        {state.canSkipPond && (
+          <Button
+            style={styles.continueButton}
+            onClick={() => {
+              if (state.onContinue) {
+                state.onContinue();
+              }
+            }}
+          >
+            Continue
+          </Button>
+        )}
       </Body>
     );
   }

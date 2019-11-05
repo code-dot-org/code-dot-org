@@ -13,12 +13,18 @@ const initialState = {
   trainingIndex: 0,
   iterationCount: 0,
   isRunning: false,
+  runStartTime: null,
+  canSkipPredict: null,
+  canSeePondText: null,
+  canSkipPond: null,
   yesCount: 0,
   noCount: 0,
   loadTrashImages: null,
   word: null,
   trainingQuestion: null,
-  currentInstructionsPage: 0
+  currentInstructionsPage: 0,
+  pondFishBounds: null,
+  pondClickedFish: null
 };
 let state = {...initialState};
 
