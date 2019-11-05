@@ -2201,7 +2201,7 @@ de:
             Nested Loops:
               name: Verschachtelte Schleifen
           title: Expresskurs
-          assignment_family_title: Expresskurs
+          assignment_family_title: Expresskurs (2018)
           description_audience: 'Alter: 9-18'
         pre-express-2017:
           stages:
@@ -3294,3 +3294,27 @@ de:
               name: Tanzparty
           description: Codiere deine eigene Tanzparty, um sie mit deinen Freunden
             zu teilen!
+        k5-onlinepd-copy:
+          stages:
+            Getting Started:
+              name: Erste Schritte
+            Computer Science Fundamentals:
+              name: Informatik Grundlagen
+            Looking Ahead:
+              name: Nach vorne schauen
+            Planning:
+              name: Planung
+            Next Steps:
+              name: Nächste Schritte
+            Loops:
+              name: Schleifen
+            Conditionals:
+              name: Bedingungen
+            Events:
+              name: Ereignisse
+            Functions:
+              name: Funktionen
+            Variables:
+              name: Variablen
+            For Loops:
+              name: '"Zähle mit"-Schleifen'

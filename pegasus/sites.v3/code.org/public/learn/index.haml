@@ -28,13 +28,9 @@ style_min: false
   }
 
   #fullwidth {
-    background: #0094a3; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#0094a3, #00adbc); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#0094a3, #00adbc); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#0094a3, #00adbc); /* For Firefox 3.6 to 15 */
-    background: background: linear-gradient(#0094a3, #00adbc); /* Standard syntax */
-    background: black;  /* hoc2018 override */
     overflow: hidden;
+    background-size: cover;
+    background-image: url(/images/learn/hoc2019_background.png)
   }
   .banner {
     color: white;
@@ -68,6 +64,16 @@ style_min: false
   }
   #studentImage {
     height: 278px;
+  }
+
+  /* Center the foreground image when it's below the header text. */
+  @media screen and (max-width: 970px) {
+    #studentImage img {
+      position: absolute;
+      transform: translateX(-50%);
+      left: 50%;
+      height: 278px;
+    }
   }
 
 #fullwidth
@@ -133,7 +139,7 @@ style_min: false
     });
     tutorialExplorerManager.renderToElement(document.getElementById('tutorials'));
 
-    var studentImage = '/images/learn/hoc2018_paint.png'; // hoc2018 override
+    var studentImage = '/images/learn/hoc2019_foreground.png';
     var img = $('<img>');
     img.attr('src', studentImage);
     img.attr('style', 'opacity: 0');

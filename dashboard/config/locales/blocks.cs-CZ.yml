@@ -1034,10 +1034,6 @@ cs:
         text: postava {SPRITE} zastaví {BEHAVIOR}
       Mikelab_repeatUntilComplete:
         text: opakuj do nekonečna
-      Mikelab_sendBad:
-        text: pohnout vlevo
-      Mikelab_sendGood:
-        text: pohnout vpravo
       Mikelab_setBG:
         options:
           BG:
