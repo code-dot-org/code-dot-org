@@ -1185,9 +1185,15 @@ var projects = (module.exports = {
     });
   },
   setProjectLibraries(updatedLibrariesList) {
-    // If we're in start_blocks on levelbuilder, reload is disabled, so we need
-    // to set currentSources so it can be saved when the save button is clicked.
-    currentSources.libraries = updatedLibrariesList;
+    if (appOptions.level.editBlocks) {
+      // If we're in start_blocks on levelbuilder, reload is disabled, so we
+      // need to set currentSources so it can be saved when the save button is
+      // clicked.
+      currentSources.libraries = updatedLibrariesList;
+      updatedLibrariesList.forEach(library => {
+        library.fromLevelbuilder = true;
+      });
+    }
     return new Promise(resolve => {
       this.getUpdatedSourceAndHtml_(sourceAndHtml => {
         this.saveSourceAndHtml_(
