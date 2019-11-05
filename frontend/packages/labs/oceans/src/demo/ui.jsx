@@ -627,7 +627,7 @@ class Predict extends React.Component {
             Run A.I.
           </Button>
         )}
-        {(state.canSkipPredict || state.showBiasText) && (
+        {state.isRunning && (state.canSkipPredict || state.showBiasText) && (
           <Button
             style={styles.continueButton}
             onClick={() => {
