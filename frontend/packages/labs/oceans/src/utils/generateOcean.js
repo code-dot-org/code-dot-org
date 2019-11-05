@@ -45,7 +45,6 @@ export const generateOcean = numFish => {
       object.body = bodies[i % bodies.length];
       object.eye = eyes[i % eyes.length];
       object.mouth = mouths[i % mouths.length];
-
       object.colorPalette = colorPalettes[i % colorPalettes.length];
     }
     if (i % bodies.length === bodies.length - 1) {
