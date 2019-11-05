@@ -154,7 +154,7 @@ const styles = {
   trainBot: {
     position: 'absolute',
     height: '50%',
-    top: '25%',
+    top: '21%',
     left: '75%'
   },
   predictSpeech: {

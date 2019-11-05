@@ -204,7 +204,7 @@ const getYForFish = (numFish, fishIdx, state, offsetX, predictedClassId) => {
 
   // Move fish down a little on predict screen.
   if (state.currentMode === Modes.Predicting) {
-    y += 130;
+    y += 120;
 
     // And drop the fish down even more if they are not liked.
     const doesLike = predictedClassId === ClassType.Like;
@@ -314,7 +314,7 @@ const drawPredictBot = state => {
 
   // Move AI bot above fish parade.
   if (state.isRunning) {
-    botYDestination = botYDestination || botY - 130;
+    botYDestination = botYDestination || botY - 120;
 
     const distToDestination = Math.abs(botYDestination - botY);
     if (distToDestination > 1) {
