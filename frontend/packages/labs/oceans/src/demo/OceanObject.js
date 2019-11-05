@@ -92,8 +92,6 @@ export const loadAllSeaCreatureImages = () => {
   });
 };
 
-
-
 // Generate a single object with an even chance of being
 // any of the allowed classes
 export const generateRandomOceanObject = (
@@ -322,7 +320,9 @@ export class FishOceanObject extends OceanObject {
     this.drawFishComponent(this.pectoralFinFront, bodyAnchor, ctx);
     this.drawFishComponent(this.mouth, bodyAnchor, ctx);
     this.drawFishComponent(this.eye, bodyAnchor, ctx);
-    this.generateLogitsAsync(fishCanvas);
+    if (generateLogits) {
+      this.generateLogitsAsync(fishCanvas);
+    }
   }
 }
 
@@ -345,7 +345,9 @@ export class TrashOceanObject extends OceanObject {
     const ypos = (-1 * this.image.height) / 2;
     ctx.drawImage(this.image, xpos, ypos);
     ctx.restore();
-    this.generateLogitsAsync(canvas);
+    if (generateLogits) {
+      this.generateLogitsAsync(canvas);
+    }
   }
 }
 
@@ -364,6 +366,8 @@ export class SeaCreatureOceanObject extends OceanObject {
     const xpos = canvas.width / 2 - this.image.width / 2;
     const ypos = canvas.height / 2 - this.image.height / 2;
     ctx.drawImage(this.image, xpos, ypos);
-    this.generateLogitsAsync(canvas);
+    if (generateLogits) {
+      this.generateLogitsAsync(canvas);
+    }
   }
 }

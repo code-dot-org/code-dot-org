@@ -21,7 +21,7 @@ export const init = async () => {
   if (appModeBase === 'creaturesvtrashdemo') {
     const trainer = new SimpleTrainer();
     trainer.initializeClassifiersWithoutMobilenet();
-    trainer.loadDatasetJSON(savedModel);
+    trainer.loadDataset(savedModel);
     setState({trainer, word: 'fish'});
   }
 
