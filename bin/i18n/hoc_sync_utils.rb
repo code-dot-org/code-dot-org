@@ -51,14 +51,16 @@ class HocSyncUtils
       FileUtils.cp_r File.join(crowdin_dir, '.'), dest_dir
       FileUtils.rm_r crowdin_dir
 
-      # rename yml file from en.yml to code
-      old_path = File.join(dest_dir, "hourofcode/en.yml")
-      new_path = File.join(dest_dir, "hourofcode/#{prop[:unique_language_s]}.yml")
-      File.rename(old_path, new_path)
-
       # replace the crowdin code in the file itself with our own unique
       # language code
-      File.write(new_path, File.read(new_path).gsub(/'#{prop[:crowdin_code_s]}':/, "#{prop[:unique_language_s]}:"))
+      old_path = File.join(dest_dir, "hourofcode/en.yml")
+      crowdin_translation_data = YAML.load_file(old_path)
+      new_translation_data = {}
+      new_translation_data[prop[:unique_language_s]] = crowdin_translation_data.values.first
+
+      # rename yml file from en.yml to code
+      new_path = File.join(dest_dir, "hourofcode/#{prop[:unique_language_s]}.yml")
+      File.write(new_path, new_translation_data.to_yaml)
     end
   end
 
