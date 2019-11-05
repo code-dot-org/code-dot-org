@@ -120,7 +120,8 @@ def create_in_up_pr
     head: IN_UP_BRANCH,
     title: "I18n sync In & Up #{Date.today.strftime('%m/%d')}"
   )
-  GitHub.label_pull_request(in_up_pr, ["i18n"])
+  GitHub.label_pull_request(in_up_pr, "i18n")
+  GitHub.request_review(in_up_pr, "code-dot-org/i18n")
   puts "Created In & Up PR: #{GitHub.url(in_up_pr)}"
 end
 
@@ -188,7 +189,8 @@ def create_down_out_pr
     head: DOWN_OUT_BRANCH,
     title: "I18n sync Down & Out #{Date.today.strftime('%m/%d')}"
   )
-  GitHub.label_pull_request(down_out_pr, ["i18n"])
+  GitHub.label_pull_request(down_out_pr, "i18n")
+  GitHub.request_review(in_up_pr, "code-dot-org/i18n")
 
   puts "Created Down & Out PR: #{GitHub.url(down_out_pr)}"
 
