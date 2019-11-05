@@ -8,6 +8,7 @@ import dom from './dom';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import DialogButtons from './templates/DialogButtons';
+import {getLastServerResponse} from '@cdo/apps/code-studio/reporting';
 
 // Parameters provided by the calling app.
 let studioApp, onPuzzleComplete, unsubmitUrl;
@@ -45,7 +46,10 @@ export function initializeSubmitHelper(params) {
  * @param {string} response.redirect - URL to go to.
  */
 export function onSubmitComplete(response) {
-  window.location.href = response.redirect;
+  const redirect = response
+    ? response.redirect
+    : getLastServerResponse().nextRedirect;
+  window.location.href = redirect;
 }
 
 /**
