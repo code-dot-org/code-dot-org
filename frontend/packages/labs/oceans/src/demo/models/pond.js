@@ -46,7 +46,7 @@ const arrangeFish = fishesWithConfidence => {
     );
     const y = randomInt(
       0,
-      constants.canvasHeight - constants.fishCanvasHeight / 2
+      constants.canvasHeight - constants.fishCanvasHeight / 2 - 160
     );
     fishesWithConfidence.fish.setXY({x, y});
   });

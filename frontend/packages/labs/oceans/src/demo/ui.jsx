@@ -54,8 +54,8 @@ const styles = {
   },
   backButton: {
     position: 'absolute',
-    bottom: 80,
-    right: 10
+    bottom: 10,
+    left: 10
   },
   button1col: {
     width: '20%',
@@ -158,12 +158,12 @@ const styles = {
   pondText: {
     position: 'absolute',
     bottom: 10,
-    left: '38%',
+    left: '50%',
     transform: 'translateX(-45%)',
     fontSize: 18,
     lineHeight: '32px',
     textAlign: 'center',
-    width: '50%',
+    width: '45%',
     backgroundColor: colors.transparentWhite,
     border: '4px solid black',
     padding: '1%',
@@ -179,9 +179,9 @@ const styles = {
   },
   pondBot: {
     position: 'absolute',
-    height: '35%',
-    left: 20,
-    bottom: -10
+    height: '25%',
+    left: '23%',
+    bottom: 0
   },
   pill: {
     display: 'flex',
@@ -681,7 +681,7 @@ class Pond extends React.Component {
         state.pondFish.length
       } that are ${state.word.toUpperCase()}.`,
       'How did A.I. do?',
-      //'Choose to Train More or Continue.'
+      'Choose to Train More or Continue.'
     ];
 
     const showFishDetails = !!state.pondClickedFish;
@@ -720,13 +720,15 @@ class Pond extends React.Component {
       <Body onClick={this.onPondClick}>
         <Header>A.I. Results</Header>
         {state.canSeePondText && (
-          <div style={styles.pondText}>
-            {pondText.map((text, index) => {
-              return <div key={index}>{text}</div>;
-            })}
+          <div>
+            <div style={styles.pondText}>
+              {pondText.map((text, index) => {
+                return <div key={index}>{text}</div>;
+              })}
+            </div>
+            <img style={styles.pondBot} src={aiBotClosed} />
           </div>
         )}
-        <img style={styles.pondBot} src={aiBotClosed} />
         {showFishDetails && (
           <div style={pondFishDetailsStyle}>{confidence}</div>
         )}
