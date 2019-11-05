@@ -52,8 +52,6 @@ export const generateOcean = (
   mouths = _.shuffle(mouths);
   let colorPalettes = Object.values(possibleFishComponents.colorPalettes);
   colorPalettes = _.shuffle(colorPalettes);
-  const exclusions =
-    state.appMode === 'creaturesvtrashdemo' ? 'biasDemo' : state.dataSet;
   for (var i = idStart; i < numFish + idStart; ++i) {
     const object = new possibleObjects[i % possibleObjects.length](
       i,
@@ -80,7 +78,7 @@ export const generateOcean = (
       colorPalettes = _.shuffle(colorPalettes);
     }
 
-    object.randomize(exclusions);
+    object.randomize();
     ocean.push(object);
   }
   ocean = _.shuffle(ocean);
