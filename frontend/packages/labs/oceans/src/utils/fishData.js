@@ -654,309 +654,365 @@ const fishComponents = {
   },
   // PECTORAL FIN KNN DATA: [pointiness rank]
   pectoralFinsFront: {
-    fish2: {
-      src: Pectoral_Fin_Fish2,
-      knnData: [9],
-      type: FishBodyPart.PECTORAL_FIN_FRONT,
-      exclusions: [DataSet.Small]
-    },
-    fish4: {
-      src: Pectoral_Fin_Fish4,
-      knnData: [1],
-      type: FishBodyPart.PECTORAL_FIN_FRONT,
-      exclusions: [DataSet.Small]
-    },
-    fish6: {
-      src: Pectoral_Fin_Fish6,
-      knnData: [15],
-      type: FishBodyPart.PECTORAL_FIN_FRONT,
-      exclusions: [DataSet.Small]
-    },
-    narrow1: {
-      src: Pectoral_Fin_Narrow1,
-      knnData: [4],
+    pectoral_fin_1: {
+      src: pectoral_fin_1_image,
+      knnData: [],
       type: FishBodyPart.PECTORAL_FIN_FRONT
     },
-    narrow2: {
-      src: Pectoral_Fin_Narrow2,
-      knnData: [5],
+    pectoral_fin_10: {
+      src: pectoral_fin_10_image,
+      knnData: [],
       type: FishBodyPart.PECTORAL_FIN_FRONT
     },
-    round2: {
-      src: Pectoral_Fin_Round2,
-      knnData: [7],
+    pectoral_fin_11: {
+      src: pectoral_fin_11_image,
+      knnData: [],
       type: FishBodyPart.PECTORAL_FIN_FRONT
     },
-    sharp1: {
-      src: Pectoral_Fin_Sharp1,
-      knnData: [2],
-      type: FishBodyPart.PECTORAL_FIN_FRONT,
-      exclusions: [DataSet.Small]
+    pectoral_fin_12: {
+      src: pectoral_fin_12_image,
+      knnData: [],
+      type: FishBodyPart.PECTORAL_FIN_FRONT
     },
-    spikey1: {
-      src: Pectoral_Fin_Spikey1,
-      knnData: [3],
-      type: FishBodyPart.PECTORAL_FIN_FRONT,
-      exclusions: [DataSet.Small]
+    pectoral_fin_13: {
+      src: pectoral_fin_13_image,
+      knnData: [],
+      type: FishBodyPart.PECTORAL_FIN_FRONT
     },
-    square2: {
-      src: Pectoral_Fin_Square2,
-      knnData: [10],
-      type: FishBodyPart.PECTORAL_FIN_FRONT,
-      exclusions: [DataSet.Small]
+    pectoral_fin_14: {
+      src: pectoral_fin_14_image,
+      knnData: [],
+      type: FishBodyPart.PECTORAL_FIN_FRONT
     },
-    wide1: {
-      src: Pectoral_Fin_Wide1,
-      knnData: [14],
-      type: FishBodyPart.PECTORAL_FIN_FRONT,
-      exclusions: [DataSet.Small]
-    }
+    pectoral_fin_15: {
+      src: pectoral_fin_15_image,
+      knnData: [],
+      type: FishBodyPart.PECTORAL_FIN_FRONT
+    },
+    pectoral_fin_16: {
+      src: pectoral_fin_16_image,
+      knnData: [],
+      type: FishBodyPart.PECTORAL_FIN_FRONT
+    },
+    pectoral_fin_17: {
+      src: pectoral_fin_17_image,
+      knnData: [],
+      type: FishBodyPart.PECTORAL_FIN_FRONT
+    },
+    pectoral_fin_18: {
+      src: pectoral_fin_18_image,
+      knnData: [],
+      type: FishBodyPart.PECTORAL_FIN_FRONT
+    },
+    pectoral_fin_2: {
+      src: pectoral_fin_2_image,
+      knnData: [],
+      type: FishBodyPart.PECTORAL_FIN_FRONT
+    },
+    pectoral_fin_3: {
+      src: pectoral_fin_3_image,
+      knnData: [],
+      type: FishBodyPart.PECTORAL_FIN_FRONT
+    },
+    pectoral_fin_4: {
+      src: pectoral_fin_4_image,
+      knnData: [],
+      type: FishBodyPart.PECTORAL_FIN_FRONT
+    },
+    pectoral_fin_5: {
+      src: pectoral_fin_5_image,
+      knnData: [],
+      type: FishBodyPart.PECTORAL_FIN_FRONT
+    },
+    pectoral_fin_6: {
+      src: pectoral_fin_6_image,
+      knnData: [],
+      type: FishBodyPart.PECTORAL_FIN_FRONT
+    },
+    pectoral_fin_7: {
+      src: pectoral_fin_7_image,
+      knnData: [],
+      type: FishBodyPart.PECTORAL_FIN_FRONT
+    },
+    pectoral_fin_8: {
+      src: pectoral_fin_8_image,
+      knnData: [],
+      type: FishBodyPart.PECTORAL_FIN_FRONT
+    },
+    pectoral_fin_9: {
+      src: pectoral_fin_9_image,
+      knnData: [],
+      type: FishBodyPart.PECTORAL_FIN_FRONT
+    },
   },
   pectoralFinsBack: {
-    fish2: {
-      src: Pectoral_Fin_Fish2,
-      knnData: [],
-      type: FishBodyPart.PECTORAL_FIN_BACK,
-      exclusions: [DataSet.Small]
-    },
-    fish4: {
-      src: Pectoral_Fin_Fish4,
-      knnData: [],
-      type: FishBodyPart.PECTORAL_FIN_BACK,
-      exclusions: [DataSet.Small]
-    },
-    fish6: {
-      src: Pectoral_Fin_Fish6,
-      knnData: [],
-      type: FishBodyPart.PECTORAL_FIN_BACK,
-      exclusions: [DataSet.Small]
-    },
-    narrow1: {
-      src: Pectoral_Fin_Narrow1,
+    pectoral_fin_1: {
+      src: pectoral_fin_1_image,
       knnData: [],
       type: FishBodyPart.PECTORAL_FIN_BACK
     },
-    narrow2: {
-      src: Pectoral_Fin_Narrow2,
+    pectoral_fin_10: {
+      src: pectoral_fin_10_image,
       knnData: [],
       type: FishBodyPart.PECTORAL_FIN_BACK
     },
-    round2: {
-      src: Pectoral_Fin_Round2,
+    pectoral_fin_11: {
+      src: pectoral_fin_11_image,
       knnData: [],
       type: FishBodyPart.PECTORAL_FIN_BACK
     },
-    sharp1: {
-      src: Pectoral_Fin_Sharp1,
+    pectoral_fin_12: {
+      src: pectoral_fin_12_image,
       knnData: [],
-      type: FishBodyPart.PECTORAL_FIN_BACK,
-      exclusions: [DataSet.Small]
+      type: FishBodyPart.PECTORAL_FIN_BACK
     },
-    spikey1: {
-      src: Pectoral_Fin_Spikey1,
+    pectoral_fin_13: {
+      src: pectoral_fin_13_image,
       knnData: [],
-      type: FishBodyPart.PECTORAL_FIN_BACK,
-      exclusions: [DataSet.Small]
+      type: FishBodyPart.PECTORAL_FIN_BACK
     },
-    square2: {
-      src: Pectoral_Fin_Square2,
+    pectoral_fin_14: {
+      src: pectoral_fin_14_image,
       knnData: [],
-      type: FishBodyPart.PECTORAL_FIN_BACK,
-      exclusions: [DataSet.Small]
+      type: FishBodyPart.PECTORAL_FIN_BACK
     },
-    wide1: {
-      src: Pectoral_Fin_Wide1,
+    pectoral_fin_15: {
+      src: pectoral_fin_15_image,
       knnData: [],
-      type: FishBodyPart.PECTORAL_FIN_BACK,
-      exclusions: [DataSet.Small]
-    }
+      type: FishBodyPart.PECTORAL_FIN_BACK
+    },
+    pectoral_fin_16: {
+      src: pectoral_fin_16_image,
+      knnData: [],
+      type: FishBodyPart.PECTORAL_FIN_BACK
+    },
+    pectoral_fin_17: {
+      src: pectoral_fin_17_image,
+      knnData: [],
+      type: FishBodyPart.PECTORAL_FIN_BACK
+    },
+    pectoral_fin_18: {
+      src: pectoral_fin_18_image,
+      knnData: [],
+      type: FishBodyPart.PECTORAL_FIN_BACK
+    },
+    pectoral_fin_2: {
+      src: pectoral_fin_2_image,
+      knnData: [],
+      type: FishBodyPart.PECTORAL_FIN_BACK
+    },
+    pectoral_fin_3: {
+      src: pectoral_fin_3_image,
+      knnData: [],
+      type: FishBodyPart.PECTORAL_FIN_BACK
+    },
+    pectoral_fin_4: {
+      src: pectoral_fin_4_image,
+      knnData: [],
+      type: FishBodyPart.PECTORAL_FIN_BACK
+    },
+    pectoral_fin_5: {
+      src: pectoral_fin_5_image,
+      knnData: [],
+      type: FishBodyPart.PECTORAL_FIN_BACK
+    },
+    pectoral_fin_6: {
+      src: pectoral_fin_6_image,
+      knnData: [],
+      type: FishBodyPart.PECTORAL_FIN_BACK
+    },
+    pectoral_fin_7: {
+      src: pectoral_fin_7_image,
+      knnData: [],
+      type: FishBodyPart.PECTORAL_FIN_BACK
+    },
+    pectoral_fin_8: {
+      src: pectoral_fin_8_image,
+      knnData: [],
+      type: FishBodyPart.PECTORAL_FIN_BACK
+    },
+    pectoral_fin_9: {
+      src: pectoral_fin_9_image,
+      knnData: [],
+      type: FishBodyPart.PECTORAL_FIN_BACK
+    },
   },
 
   // DORSAL FIN KNN DATA: []
   dorsalFins: {
-    fish1: {
-      src: Dorsal_Fin_Fish1,
+    dorsal_fin_1: {
+      src: dorsal_fin_1_image,
       knnData: [],
       type: FishBodyPart.DORSAL_FIN
     },
-    fish2: {
-      src: Dorsal_Fin_Fish2,
-      knnData: [],
-      type: FishBodyPart.DORSAL_FIN,
-      exclusions: [DataSet.Small]
-    },
-    fish3: {
-      src: Dorsal_Fin_Fish3,
-      knnData: [],
-      type: FishBodyPart.DORSAL_FIN,
-      exclusions: [DataSet.Small]
-    },
-    fish4: {
-      src: Dorsal_Fin_Fish4,
-      knnData: [],
-      type: FishBodyPart.DORSAL_FIN,
-      exclusions: [DataSet.Small]
-    },
-    fish6: {
-      src: Dorsal_Fin_Fish6,
-      knnData: [],
-      type: FishBodyPart.DORSAL_FIN,
-      exclusions: [DataSet.Small]
-    },
-    narrow1: {
-      src: Dorsal_Fin_Narrow1,
-      knnData: [],
-      type: FishBodyPart.DORSAL_FIN,
-      exclusions: [DataSet.Small]
-    },
-    round1: {
-      src: Dorsal_Fin_Round1,
+    dorsal_fin_10: {
+      src: dorsal_fin_10_image,
       knnData: [],
       type: FishBodyPart.DORSAL_FIN
     },
-    round2: {
-      src: Dorsal_Fin_Round2,
-      knnData: [],
-      type: FishBodyPart.DORSAL_FIN,
-      exclusions: [DataSet.Small]
-    },
-    sharp1: {
-      src: Dorsal_Fin_Sharp1,
-      knnData: [],
-      type: FishBodyPart.DORSAL_FIN,
-      exclusions: [DataSet.Small]
-    },
-    sharp2: {
-      src: Dorsal_Fin_Sharp2,
-      knnData: [],
-      type: FishBodyPart.DORSAL_FIN,
-      exclusions: [DataSet.Small]
-    },
-    spikey1: {
-      src: Dorsal_Fin_Spikey1,
-      knnData: [],
-      type: FishBodyPart.DORSAL_FIN,
-      exclusions: [DataSet.Small]
-    },
-    spikey2: {
-      src: Dorsal_Fin_Spikey2,
-      knnData: [],
-      type: FishBodyPart.DORSAL_FIN,
-      exclusions: [DataSet.Small]
-    },
-    square1: {
-      src: Dorsal_Fin_Square1,
-      knnData: [],
-      type: FishBodyPart.DORSAL_FIN,
-      exclusions: [DataSet.Small]
-    },
-    square2: {
-      src: Dorsal_Fin_Square2,
-      knnData: [],
-      type: FishBodyPart.DORSAL_FIN,
-      exclusions: [DataSet.Small]
-    },
-    wide1: {
-      src: Dorsal_Fin_Wide1,
+    dorsal_fin_11: {
+      src: dorsal_fin_11_image,
       knnData: [],
       type: FishBodyPart.DORSAL_FIN
     },
-    wide2: {
-      src: Dorsal_Fin_Wide2,
+    dorsal_fin_12: {
+      src: dorsal_fin_12_image,
       knnData: [],
-      type: FishBodyPart.DORSAL_FIN,
-      exclusions: [DataSet.Small]
-    }
+      type: FishBodyPart.DORSAL_FIN
+    },
+    dorsal_fin_13: {
+      src: dorsal_fin_13_image,
+      knnData: [],
+      type: FishBodyPart.DORSAL_FIN
+    },
+    dorsal_fin_14: {
+      src: dorsal_fin_14_image,
+      knnData: [],
+      type: FishBodyPart.DORSAL_FIN
+    },
+    dorsal_fin_15: {
+      src: dorsal_fin_15_image,
+      knnData: [],
+      type: FishBodyPart.DORSAL_FIN
+    },
+    dorsal_fin_16: {
+      src: dorsal_fin_16_image,
+      knnData: [],
+      type: FishBodyPart.DORSAL_FIN
+    },
+    dorsal_fin_17: {
+      src: dorsal_fin_17_image,
+      knnData: [],
+      type: FishBodyPart.DORSAL_FIN
+    },
+    dorsal_fin_2: {
+      src: dorsal_fin_2_image,
+      knnData: [],
+      type: FishBodyPart.DORSAL_FIN
+    },
+    dorsal_fin_3: {
+      src: dorsal_fin_3_image,
+      knnData: [],
+      type: FishBodyPart.DORSAL_FIN
+    },
+    dorsal_fin_4: {
+      src: dorsal_fin_4_image,
+      knnData: [],
+      type: FishBodyPart.DORSAL_FIN
+    },
+    dorsal_fin_5: {
+      src: dorsal_fin_5_image,
+      knnData: [],
+      type: FishBodyPart.DORSAL_FIN
+    },
+    dorsal_fin_6: {
+      src: dorsal_fin_6_image,
+      knnData: [],
+      type: FishBodyPart.DORSAL_FIN
+    },
+    dorsal_fin_7: {
+      src: dorsal_fin_7_image,
+      knnData: [],
+      type: FishBodyPart.DORSAL_FIN
+    },
+    dorsal_fin_8: {
+      src: dorsal_fin_8_image,
+      knnData: [],
+      type: FishBodyPart.DORSAL_FIN
+    },
+    dorsal_fin_9: {
+      src: dorsal_fin_9_image,
+      knnData: [],
+      type: FishBodyPart.DORSAL_FIN
+    },
   },
   // TAIL KNN DATA: []
   tails: {
-    fish1: {
-      src: Tail_Fin_Fish1,
-      knnData: [],
-      type: FishBodyPart.TAIL,
-      exclusions: [DataSet.Small]
-    },
-    fish2: {
-      src: Tail_Fin_Fish2,
-      knnData: [],
-      type: FishBodyPart.TAIL,
-      exclusions: [DataSet.Small]
-    },
-    fish3: {
-      src: Tail_Fin_Fish3,
+    tail_1: {
+      src: tail_1_image,
       knnData: [],
       type: FishBodyPart.TAIL
     },
-    fish4: {
-      src: Tail_Fin_Fish4,
-      knnData: [],
-      type: FishBodyPart.TAIL,
-      exclusions: [DataSet.Small]
-    },
-    fish6: {
-      src: Tail_Fin_Fish6,
+    tail_10: {
+      src: tail_10_image,
       knnData: [],
       type: FishBodyPart.TAIL
     },
-    narrow1: {
-      src: Tail_Fin_Narrow1,
-      knnData: [],
-      type: FishBodyPart.TAIL,
-      exclusions: [DataSet.Small]
-    },
-    narrow2: {
-      src: Tail_Fin_Narrow2,
-      knnData: [],
-      type: FishBodyPart.TAIL,
-      exclusions: [DataSet.Small]
-    },
-    round1: {
-      src: Tail_Fin_Round1,
-      knnData: [],
-      type: FishBodyPart.TAIL,
-      exclusions: [DataSet.Small]
-    },
-    sharp1: {
-      src: Tail_Fin_Sharp1,
-      knnData: [],
-      type: FishBodyPart.TAIL,
-      exclusions: [DataSet.Small]
-    },
-    sharp2: {
-      src: Tail_Fin_Sharp2,
-      knnData: [],
-      type: FishBodyPart.TAIL,
-      exclusions: [DataSet.Small]
-    },
-    spikey1: {
-      src: Tail_Fin_Spikey1,
-      knnData: [],
-      type: FishBodyPart.TAIL,
-      exclusions: [DataSet.Small]
-    },
-    square1: {
-      src: Tail_Fin_Square1,
-      knnData: [],
-      type: FishBodyPart.TAIL,
-      exclusions: [DataSet.Small]
-    },
-    square2: {
-      src: Tail_Fin_Square2,
-      knnData: [],
-      type: FishBodyPart.TAIL,
-      exclusions: [DataSet.Small]
-    },
-    wide1: {
-      src: Tail_Fin_Wide1,
-      knnData: [],
-      type: FishBodyPart.TAIL,
-      exclusions: [DataSet.Small]
-    },
-    wide2: {
-      src: Tail_Fin_Wide2,
+    tail_11: {
+      src: tail_11_image,
       knnData: [],
       type: FishBodyPart.TAIL
-    }
+    },
+    tail_12: {
+      src: tail_12_image,
+      knnData: [],
+      type: FishBodyPart.TAIL
+    },
+    tail_13: {
+      src: tail_13_image,
+      knnData: [],
+      type: FishBodyPart.TAIL
+    },
+    tail_14: {
+      src: tail_14_image,
+      knnData: [],
+      type: FishBodyPart.TAIL
+    },
+    tail_15: {
+      src: tail_15_image,
+      knnData: [],
+      type: FishBodyPart.TAIL
+    },
+    tail_16: {
+      src: tail_16_image,
+      knnData: [],
+      type: FishBodyPart.TAIL
+    },
+    tail_17: {
+      src: tail_17_image,
+      knnData: [],
+      type: FishBodyPart.TAIL
+    },
+    tail_2: {
+      src: tail_2_image,
+      knnData: [],
+      type: FishBodyPart.TAIL
+    },
+    tail_3: {
+      src: tail_3_image,
+      knnData: [],
+      type: FishBodyPart.TAIL
+    },
+    tail_4: {
+      src: tail_4_image,
+      knnData: [],
+      type: FishBodyPart.TAIL
+    },
+    tail_5: {
+      src: tail_5_image,
+      knnData: [],
+      type: FishBodyPart.TAIL
+    },
+    tail_6: {
+      src: tail_6_image,
+      knnData: [],
+      type: FishBodyPart.TAIL
+    },
+    tail_7: {
+      src: tail_7_image,
+      knnData: [],
+      type: FishBodyPart.TAIL
+    },
+    tail_8: {
+      src: tail_8_image,
+      knnData: [],
+      type: FishBodyPart.TAIL
+    },
+    tail_9: {
+      src: tail_9_image,
+      knnData: [],
+      type: FishBodyPart.TAIL
+    }, 
   },
   // COLOR PALETTE KNN DATA: [...bodyRgb, ...finRgb]
   colorPalettes: {
