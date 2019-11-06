@@ -1,0 +1,21 @@
+name 'CSP 20-21 Keylogging'
+title 'That was easy, what\'s next?'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+##Vocabulary
+
+**Keylogging** is the use of a program to record every keystroke made by a computer user in order to gain fraudulent access to passwords and other confidential information.
+
+## Sample
+
+[Keylogging App](https://studio.code.org/projects/applab/A0gYPPIRfBsS_5fHz6VzZTZoefZe2zwzJcijd4vuGAs)
+
+**Note:** This is an approximation of what a keylogging app does. However, it is not a true keylogger, as it only works when you are directly running the app. If you navigate to another browser tab, notice that it stops logging your keystrokes.
+
+## Articles
+
+[Keyloggers: Beware this hidden threat](https://www.pcworld.com/article/3199020/keyloggers-what-you-need-to-know-about-this-hidden-threat.html)
+
+[What is a Keylogger?](https://www.binance.vision/security/what-is-a-keylogger)
+MARKDOWN

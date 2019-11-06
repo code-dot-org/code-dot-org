@@ -1884,6 +1884,14 @@ en:
             Hour of Code 2015:
               name: Hour of Code 2015
           description_audience: ''
+        ocean:
+          title: Ocean Hour of Code
+          description: Description TBD.
+          description_short: Short Description TBD.
+          stages:
+            Ocean:
+              name: Ocean
+          description_audience: ''
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'
           description: Online Exploration of CSP Unit 3-- Lesson Challenges
@@ -13531,6 +13539,10 @@ en:
               name: new stage
             'Project: Innovation Simulation Part 1':
               name: 'Project: Innovation Simulation Part 1'
+            'Project: Innovation Simulation Part 2':
+              name: 'Project: Innovation Simulation Part 2'
+            Security Risks Part 1:
+              name: Security Risks Part 1
           title: Cybersecurity and Global Impacts
           description_audience: ''
           description_short: ''
