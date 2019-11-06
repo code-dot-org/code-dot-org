@@ -4,7 +4,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import StudioAppWrapper from '../templates/StudioAppWrapper';
 import ProtectedStatefulDiv from '../templates/ProtectedStatefulDiv';
-import InstructionsWithWorkspace from '../templates/instructions/InstructionsWithWorkspace';
+import CodeWorkspaceContainer from '../templates/CodeWorkspaceContainer';
 
 const styles = {
   container: {
@@ -33,7 +33,9 @@ const styles = {
   },
   activityCanvas: {
     width: '100%',
-    borderRadius: '10px'
+    borderRadius: '10px',
+    border: '2px solid black',
+    backgroundColor: 'white'
   }
 };
 
@@ -54,13 +56,13 @@ class FishView extends React.Component {
   render() {
     return (
       <StudioAppWrapper>
-        <InstructionsWithWorkspace>
+        <CodeWorkspaceContainer topMargin={0}>
           <ProtectedStatefulDiv id="container" style={styles.container}>
             <div id="container-react" style={styles.containerReact} />
             <canvas id="background-canvas" style={styles.backgroundCanvas} />
             <canvas id="activity-canvas" style={styles.activityCanvas} />
           </ProtectedStatefulDiv>
-        </InstructionsWithWorkspace>
+        </CodeWorkspaceContainer>
       </StudioAppWrapper>
     );
   }
