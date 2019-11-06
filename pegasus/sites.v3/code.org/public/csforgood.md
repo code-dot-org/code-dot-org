@@ -27,7 +27,7 @@ Here are some themes and questions to spark discussion in your classroom about t
 While large, systemic challenges like poverty and environmental sustainability often require attitude shifts, wide-scale cooperation, and in some cases, personal or collective sacrifice, technology can help jumpstart efforts, detect problems, and ease barriers.
 
 *Questions or prompts for discussion*: 
-- Think of some problems. What are some solutions people have come up with to solve those problems? 
+- Think of some challenges faced by people in your school, neighborhood, city, or anywhere else in the world. What are some solutions people have come up with to solve those problems? 
 - How can computer science be combined with other efforts to address different parts of the problem?
 - Are there any issues you think technology can’t help solve? Why or why not?
 
@@ -57,4 +57,4 @@ The more accessible CS education is, the more students we can reach and the more
 - Why is it important that everyone has access to learn computer science? 
 - What do you think might happen to solutions and programs if only the same kind of person studied computer science?
 - Can you think of what you might say to someone to encourage them to learn computer science? 
-- Do you think you would be a good computer scientist? Why or why not?
+
