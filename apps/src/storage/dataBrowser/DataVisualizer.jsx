@@ -125,7 +125,11 @@ class DataVisualizer extends React.Component {
         }
         break;
       case 'Scatter Plot':
-        console.warn(`${this.state.chartType} not yet implemented`);
+        if (this.state.xValues && this.state.yValues) {
+          chart = new GoogleChart.MaterialScatterChart(targetDiv);
+          chartData = this.state.parsedRecords;
+          columns = [this.state.xValues, this.state.yValues];
+        }
         break;
       default:
         console.warn(`unknown chart type ${this.state.chartType}`);
