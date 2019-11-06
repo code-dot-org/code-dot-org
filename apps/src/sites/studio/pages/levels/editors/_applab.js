@@ -64,10 +64,10 @@ $(document).ready(function() {
   });
 
   const data = getScriptData('applabOptions');
+  const tableNames = datasets.tables.map(table => table.name);
   class DataLibrary extends React.Component {
     state = {
-      value: data.data_library_tables.split(','),
-      tableNames: datasets.tables.map(table => table.name)
+      value: data.data_library_tables ? data.data_library_tables.split(',') : []
     };
 
     handleChange = event => {
@@ -78,6 +78,20 @@ $(document).ready(function() {
           value.push(options[i].value);
         }
       }
+      this.setValue(value);
+    };
+
+    selectAll = event => {
+      event.preventDefault();
+      this.setValue(tableNames);
+    };
+
+    clearAll = event => {
+      event.preventDefault();
+      this.setValue([]);
+    };
+
+    setValue = value => {
       this.setState({value: value});
       $('#level_data_library_tables').val(value);
     };
@@ -85,14 +99,22 @@ $(document).ready(function() {
     render() {
       return (
         <div>
-          (shift-click or cmd-click to select multiple)
-          <br />
+          <div>(shift-click or cmd-click to select multiple)</div>
+          <div>
+            <a href="#" onClick={this.selectAll}>
+              Select All
+            </a>
+            <span> | </span>
+            <a href="#" onClick={this.clearAll}>
+              Select None
+            </a>
+          </div>
           <select
-            defaultValue={this.state.value}
+            value={this.state.value}
             multiple={true}
             onChange={this.handleChange}
           >
-            {this.state.tableNames.map(name => {
+            {tableNames.map(name => {
               return (
                 <option key={name} value={name}>
                   {name}
