@@ -1215,7 +1215,7 @@ FactoryGirl.define do
     association :script_level
   end
 
-  factory :user_level_info do
+  factory :validated_user_level do
     time_spent 10
     user_level_id 1
   end
