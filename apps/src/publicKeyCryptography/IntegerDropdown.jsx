@@ -2,12 +2,11 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import loadable from 'loadable-components';
-const VirtualizedSelect = loadable(() => import('react-virtualized-select'));
+const VirtualizedSelect = loadable(() =>
+  import('../templates/VirtualizedSelect')
+);
 import classNames from 'classnames';
 import {LINE_HEIGHT} from './style';
-import 'react-virtualized/styles.css';
-import 'react-select/dist/react-select.css';
-import 'react-virtualized-select/styles.css';
 
 export default class IntegerDropdown extends React.Component {
   static propTypes = {
