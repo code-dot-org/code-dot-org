@@ -86,7 +86,6 @@ linters:
     exclude:
       - "dashboard/app/views/levels/editors/_grid.html.haml"
       - "dashboard/app/views/levels/editors/_netsim.html.haml"
-      - "dashboard/app/views/scripts/_form.html.haml"
       - "dashboard/test/ui/test_status.haml"
       - "pegasus/sites.v3/code.org/public/manage-professional-development-workshops/index.haml"
       - "pegasus/sites.v3/code.org/public/teacher-dashboard/index.haml"
