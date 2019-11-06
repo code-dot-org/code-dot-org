@@ -7,10 +7,10 @@ var PORT = process.env.PORT || 9876;
 var reporters = ['mocha'];
 if (envConstants.DRONE) {
   reporters.push('junit');
-  reporters.push('coverage');
+  reporters.push('coverage-istanbul');
 }
 if (envConstants.COVERAGE) {
-  reporters.push('coverage');
+  reporters.push('coverage-istanbul');
 }
 
 // Use the babel test env defined in .babelrc
@@ -80,9 +80,10 @@ module.exports = function(config) {
         : '',
       outputFile: 'all.xml'
     },
-    coverageReporter: {
+    coverageIstanbulReporter: {
+      reports: ['html', 'lcovonly'],
       dir: 'coverage',
-      reporters: [{type: 'html'}, {type: 'lcovonly'}]
+      fixWebpackSourcePaths: true
     },
     mochaReporter: {
       output: envConstants.CDO_VERBOSE_TEST_OUTPUT ? 'full' : 'minimal',
