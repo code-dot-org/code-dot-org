@@ -1,7 +1,7 @@
 %link{href: "/css/minecraft2018.css", rel: "stylesheet"}
 
 :ruby
-  aquatic_image = '/images/mc/fill-310x310/mc_landing_2018.jpg'
+  aquatic_image = '/images/mc/mc_aquatic_square_2019.jpg'
   aquatic_title = I18n.t(:hoc2018_mc_aquatic_title)
   aquatic_description = "Explore and build underwater worlds with code."
 
@@ -9,11 +9,11 @@
   hero_title = I18n.t(:minecraft_agent)
   hero_description = I18n.t(:hoc2018_mc_journey)
 
-  adventurer_image = '/images/mc/mc_landing_2015_square.png'
+  adventurer_image = '/images/mc/mc_adventurer_wide_2019.png'
   adventurer_title = I18n.t(:minecraft_adventurer)
   adventurer_description = I18n.t(:minecraft_adventurer_description)
 
-  designer_image = '/images/mc/mc_landing_2016_square.jpg'
+  designer_image = '/images/mc/mc_designer_wide_2019.jpg'
   designer_title = I18n.t(:minecraft_designer)
   designer_description = I18n.t(:minecraft_designer_description)
 
@@ -44,7 +44,7 @@
 
     .tutorial-box{style: "height: 150px; overflow: hidden; margin-bottom: 14px"}
       .img-container
-        %img.mc-img{src: adventurer_image}
+        %img.mc-img{style: "height: initial", src: adventurer_image}
       .mc-tutorial-info
         .mc-tutorial-details
           %h2.mc-h1-second-box= adventurer_title
@@ -53,7 +53,7 @@
 
     .tutorial-box{style: "height: 150px; overflow: hidden"}
       .img-container
-        %img.mc-img{src: designer_image}
+        %img.mc-img{style: "height: initial", src: designer_image}
       .mc-tutorial-info
         .mc-tutorial-details
           %h2.mc-h1-second-box= designer_title
