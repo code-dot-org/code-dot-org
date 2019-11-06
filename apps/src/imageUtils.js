@@ -101,6 +101,7 @@ export function imageFromURI(uri) {
 export function svgToDataURI(svg, imageType) {
   imageType = imageType || 'image/png';
   return new Promise(resolve => {
+    // Use lazy-loading to keep canvg (60KB) out of the initial download.
     import('./util/svgelement-polyfill').then(() => {
       svg.toDataURL(imageType, {callback: resolve});
     });
