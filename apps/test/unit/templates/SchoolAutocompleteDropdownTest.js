@@ -37,7 +37,7 @@ describe('SchoolAutocompleteDropdown', () => {
   });
 
   it('Calls props.onChange when the selection changes', () => {
-    select.simulate('change', {value: '1', label: 'selected school'});
+    select.props().onChange({value: '1', label: 'selected school'});
     expect(handleChange).to.be.calledOnce;
     expect(handleChange).to.be.calledWith({
       value: '1',
