@@ -8,8 +8,8 @@
 #
 # Indexes
 #
-#  index_validated_user_levels_on_user_level_id  (user_level_id)
+#  index_validated_user_levels_on_user_level_id  (user_level_id) UNIQUE
 #
 
-class UserLevelInfo < ApplicationRecord
+class ValidatedUserLevel < ApplicationRecord
 end
