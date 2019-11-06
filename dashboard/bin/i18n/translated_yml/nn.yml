@@ -2,18 +2,18 @@ nn:
   activerecord:
     attributes:
       user:
-        finish_sign_up_subheader_markdown: 'Fyll ut for å gjøre ferdig Code.org-konto for <strong>%{email}</strong>.'
-        finish_sign_up_subheader_provider_markdown: 'Fyll ut følgende informasjon for å fullføre opprettelsen av en Code.org konto med <strong>%{provider}</strong> for <strong>%{email}</strong>.'
+        finish_sign_up_subheader_markdown: 'Fyll ut for å gjøre ferdig Code.org-konto for **%{email}**.'
+        finish_sign_up_subheader_provider_markdown: 'Fyll ut følgende informasjon for å fullføre opprettelsen av en Code.org konto med **%{provider}** for **%{email}**.'
         name_example: Kallenamn (f.eks Kule Knut eller Tøffe Trine)
-        personal_email_markdown: 'Personleg epostadresse<a href="%{url}">(klikk her om du ikkje har ei epostadresse)</a>'
+        personal_email_markdown: 'Personleg epostadresse[(klikk her om du ikkje har ei epostadresse)](%{url})'
   signup_form:
-    hoc_already_signed_up_content_post_hoc_markdown: 'Takk for at du vil arrangere ein kodetime. For å logge deg inn på Code Studio må du lage eit passord til kontoen din. Med ein slik konto, kan du lagre framgongen din og ta kontroll over klasserommet. Du kan sette elevar opp på forskjellige kurs og spore framdrifta deira. <a href="%{studio_url}">Du kan og fortsette å kikke på dei ulike stadiene og oppgåvene</a>utan å lage ein konto.'
-    overview_markdown: 'Registrer deg for å følgje fremdrifta din eller administrere klasserommet. <a href="/">Du kan bla gjennom dei ulike scenane og oppgåvene</a> utan ein konto, men du må registrere deg for å lagre framgang og prosjekt.'
+    hoc_already_signed_up_content_post_hoc_markdown: 'Takk for at du vil arrangere ein kodetime. For å logge deg inn på Code Studio må du lage eit passord til kontoen din. Med ein slik konto, kan du lagre framgongen din og ta kontroll over klasserommet. Du kan sette elevar opp på forskjellige kurs og spore framdrifta deira. [Du kan og fortsette å kikke på dei ulike stadiene og oppgåvene](%{studio_url})utan å lage ein konto.'
+    overview_markdown: 'Registrer deg for å følgje fremdrifta din eller administrere klasserommet. [Du kan bla gjennom dei ulike scenane og oppgåvene](/) utan ein konto, men du må registrere deg for å lagre framgang og prosjekt.'
   terms_interstitial:
-    accept_label_markdown: 'Eg godtar <a href="%{tos_url}" target="_blank">tenestevilkåra</a> og<a href="%{privacy_url}" target="_blank">retningslinjer for personvern</a>.'
-    intro_desc_markdown: 'Vi har oppdatert våre vilkår for teneste og personvern, som du kan sjå nedanfor. Endringane gjeld frå 24 august 2016. Den største endringa: Vi vil <i>ikkje lenger lagre epost-adressene til elevane sine kontoar på Code Studio</i>. Dette er viktig for oss, og vi håpar det set ein ny standard for personvern for elevar innan opplæringsteknologi. Vi har sendt deg ei oppsummering av øvrige endringar via epost.'
-    reminder_desc_markdown: 'Vi har oppdatert våre <a href="%{tos_url}" target="_blank">tenestevilkår</a> og <a href="%{privacy_url}" target="_blank">vilkår for personvern</a>. Ver venleg å les desse nøye før du aksepterer dei. Merk at våre verktøy for å undervise i JavaScript kan vere utilgjengeleg for dine elevar før dei oppdaterte vilkåre er akseptert.'
+    accept_label_markdown: 'Eg godtar [tenestevilkåra](%{tos_url}) og[retningslinjer for personvern](%{privacy_url}).'
+    intro_desc_markdown: 'Vi har oppdatert våre vilkår for teneste og personvern, som du kan sjå nedanfor. Endringane gjeld frå 24 august 2016. Den største endringa: Vi vil _ikkje lenger lagre epost-adressene til elevane sine kontoar på Code Studio_. Dette er viktig for oss, og vi håpar det set ein ny standard for personvern for elevar innan opplæringsteknologi. Vi har sendt deg ei oppsummering av øvrige endringar via epost.'
+    reminder_desc_markdown: 'Vi har oppdatert våre [tenestevilkår](%{tos_url}) og [vilkår for personvern](%{privacy_url}). Ver venleg å les desse nøye før du aksepterer dei. Merk at våre verktøy for å undervise i JavaScript kan vere utilgjengeleg for dine elevar før dei oppdaterte vilkåre er akseptert.'
   user:
-    create_personal_login_email_note_markdown: 'Merk: E-postadresser er ikkje lagra i eit format som gjer det mogleg for oss å kontakte elevar. Dei vil aldri få epost frå Code.org med unntak av for å få lenke til passordgjenoppretting. Sjå våre <a href=''%{privacy_policy_url}'', target=''_blank''>retningsliner for personvern</a> for meir informasjon.'
-    create_personal_login_terms_markdown: 'Ved å lage ei personleg pålogging godtar eg Code.org <a href=''%{terms_of_service_url}'', target=''_blank''>sine vilkår for bruk</a>. Eg stadfester at eg har løyve frå foreldre eller førsette til å bruke Code.org sine tenester, sjølv utan ein lærar tilstade.'
-  zendesk_too_young_message_markdown: 'Beklager, yngre brukarar kan ikkje logge inn på nettstaden for kundestøtte. Du kan bla gjennom <a href="http://support.code.org"> support.code.org</a> uten å logge på eller be ein forelder eller lærer om å kontakte oss for deg.'
+    create_personal_login_email_note_markdown: 'Merk: E-postadresser er ikkje lagra i eit format som gjer det mogleg for oss å kontakte elevar. Dei vil aldri få epost frå Code.org med unntak av for å få lenke til passordgjenoppretting. Sjå våre [retningsliner for personvern](%{privacy_policy_url}) for meir informasjon.'
+    create_personal_login_terms_markdown: 'Ved å lage ei personleg pålogging godtar eg Code.org [sine vilkår for bruk](%{terms_of_service_url}). Eg stadfester at eg har løyve frå foreldre eller førsette til å bruke Code.org sine tenester, sjølv utan ein lærar tilstade.'
+  zendesk_too_young_message_markdown: 'Beklager, yngre brukarar kan ikkje logge inn på nettstaden for kundestøtte. Du kan bla gjennom [support.code.org](http://support.code.org) uten å logge på eller be ein forelder eller lærer om å kontakte oss for deg.'

@@ -2,14 +2,22 @@ sq:
   activerecord:
     attributes:
       user:
-        finish_sign_up_subheader_markdown: 'Plotëso informacionin e mëposhtëm për të përfunduar krijimin e një llogarie në Code.org <strong>%{email}</strong>.'
-        finish_sign_up_subheader_provider_markdown: 'Plotëso informacionin e mëposhtëm për të përfunduar krijimin e një llogarie në Code.org <strong>%{provider}</strong> për <strong>%{email}</strong>.'
+        finish_sign_up_subheader_markdown: 'Plotëso informacionin e mëposhtëm për të përfunduar krijimin e një llogarie në Code.org **%{email}**.'
+        finish_sign_up_subheader_provider_markdown: 'Plotëso informacionin e mëposhtëm për të përfunduar krijimin e një llogarie në Code.org **%{provider}** për **%{email}**.'
         name_example: Shfaq Emrin (Psh. Cool Coder or Jane S.)
-        personal_email_markdown: 'Adresa vetjake e email-it <a href="%{url}">(kliko këtu nëse nuk ke një adresë email-i)</a>'
+        personal_email_markdown: 'Adresa vetjake e email-it [(kliko këtu nëse nuk ke një adresë email-i)](%{url})'
   signup_form:
-    overview_markdown: 'Rregjistrohuni për një llogari për të ndjekur progresin tuaj ose të menaxhuar klasën tuaj. <a href="/"> Ju mund të shfletoni fazat e  ndryshme dhe puzzles </a>   pa një llogari, por do t''ju duhet të rregjistroheni  për të ruajtur progresin dhe projektet tuaja.'
+    overview_markdown: 'Rregjistrohuni për një llogari për të ndjekur progresin tuaj ose të menaxhuar klasën tuaj. [Ju mund të shfletoni fazat e ndryshme dhe puzzles](/) pa një llogari, por do t''ju duhet të rregjistroheni për të ruajtur progresin dhe projektet tuaja.'
   terms_interstitial:
-    accept_label_markdown: 'Unë pajtohem me përditësimet e <a href="%{tos_url}" Kushtet e target="_blank"> Kushteve të Shërbimit </a> dhe <a href="%{privacy_url}" target="_blank"> Politika e Privatësisë </ a>'
-    intro_desc_markdown: 'Ne kemi përditësuar kushtet tona të sherbimit dhe Rregullat e Privatësisë, siç tregohet më poshtë. Ndryshimet janë në fuqi që nga 24 gusht 2016. Ndryshimi më i madh: ne  <i> nuk do të ruajmë me adresat e e-mail për llogaritë e  studentëve në Code Studio </ i> Kjo është një arritje e madhe për ne dhe ne shpresojmë që kjo të përcaktoj një standard i ri për privatësinë e studentëve në shkollat teknologjike. Ne ju kemi  dërguar një përmbledhje të ndryshimeve të tjera përmes emailit.'
-    reminder_desc_markdown: 'Unë pajtohem me përditësimet e <a href="%{tos_url}" Kushtet e target="_blank"> Kushteve të Shërbimit </a> dhe <a href="%{privacy_url}" target="_blank"> Politika e Privatësisë </ a>. Ju lutem lexoni me kujdes këto para pranimit të tyre. Vini re se mjetet tona të mësimdhënies së JavaScript mund të jenë në dispozicion për studentët tuaj para se të pranoni në mënyrë specifike kushtet e përditësuara.'
-  zendesk_too_young_message_markdown: 'Na vjen keq, përdoruesit e vegjël nuk mund të futen tek faqja jonë e suportit. Ju mund të shfletosh në <a href="http://support.code.org">support.code.org</a> pa u loguar ose pyet prindërit ose mësuesit e tu që të na kontaktojnë.'
+    accept_label_markdown: |-
+      Unë pajtohem me përditësimet e [Kushteve të Shërbimit](%{tos_url}) dhe [Politika e Privatësisë](%{privacy_url})
+
+      <!-- a-->
+    intro_desc_markdown: 'Ne kemi përditësuar kushtet tona të sherbimit dhe Rregullat e Privatësisë, siç tregohet më poshtë. Ndryshimet janë në fuqi që nga 24 gusht 2016. Ndryshimi më i madh: ne _nuk do të ruajmë me adresat e e-mail për llogaritë e studentëve në Code Studio<!-- i-->Kjo është një arritje e madhe për ne dhe ne shpresojmë që kjo të përcaktoj një standard i ri për privatësinë e studentëve në shkollat teknologjike. Ne ju kemi dërguar një përmbledhje të ndryshimeve të tjera përmes emailit._'
+    reminder_desc_markdown: |-
+      Unë pajtohem me përditësimet e [Kushteve të Shërbimit](%{tos_url}) dhe [Politika e Privatësisë](%{privacy_url})
+
+      <!-- a-->
+
+      [. Ju lutem lexoni me kujdes këto para pranimit të tyre. Vini re se mjetet tona të mësimdhënies së JavaScript mund të jenë në dispozicion për studentët tuaj para se të pranoni në mënyrë specifike kushtet e përditësuara.](%{privacy_url})
+  zendesk_too_young_message_markdown: 'Na vjen keq, përdoruesit e vegjël nuk mund të futen tek faqja jonë e suportit. Ju mund të shfletosh në [support.code.org](http://support.code.org) pa u loguar ose pyet prindërit ose mësuesit e tu që të na kontaktojnë.'

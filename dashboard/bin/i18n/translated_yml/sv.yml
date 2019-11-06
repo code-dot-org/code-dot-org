@@ -1,10 +1,8 @@
 sv:
   signup_form:
-    overview_markdown: 'Registrera ett konto för att spåra dina framsteg eller hantera ditt klassrum. <a href="/"> Du kan bläddra mellan de olika stadierna och pussel</a> som finns utan ett konto, men du kommer att behöva registrera dig för att spara dina framsteg och projekt.'
+    overview_markdown: 'Registrera ett konto för att spåra dina framsteg eller hantera ditt klassrum. [Du kan bläddra mellan de olika stadierna och pussel](/) som finns utan ett konto, men du kommer att behöva registrera dig för att spara dina framsteg och projekt.'
   terms_interstitial:
-    accept_label_markdown: |-
-      Jag samtycker till att de uppdaterade <a href="%{tos_url}" target="_blank"> Användarvillkoren
-      </a> och <a href="%{privacy_url}" target="_blank"> Sekretesspolicy</a>
-    intro_desc_markdown: 'Vi har uppdaterat våra användarvillkor och sekretesspolicy, som visas nedan. Förändringarna träder i kraft from den 24 Augusti, 2016.  Den största förändringen: vi kommer <i>inte längre att lagra e-postadresser för elevkonton på kod Studio.</i> Detta är en stor sak för oss, och vi hoppas att det sätter en ny standard för elevernas sekretess i teknisk utbildning. Vi har skickat Er en sammanfattning av de övriga förändringarna via e-post.'
-    reminder_desc_markdown: 'Vi har uppdaterat våra <a href="%{tos_url}" target="_blank"> Användarvillkor</a> och <a href="%{privacy_url}" target="_blank"> Sekretesspolicy</a>. Vänligen läs igenom dessa noggrant innan du accepterar dem. Observera att våra verktyg för undervisning i JavaScript kan vara otillgängliga för era elever innan ni uttryckligen accepterar de uppdaterade villkoren.'
-  zendesk_too_young_message_markdown: 'Tyvärr, yngre användare kan inte logga in på vår supportsida. Du kan besöka<a href="http://support.code.org"> support.code.org</a> utan att logga in eller be din förälder eller lärare att kontakta oss.'
+    accept_label_markdown: 'Jag samtycker till att de uppdaterade [Användarvillkoren](%{tos_url}) och [Sekretesspolicy](%{privacy_url})'
+    intro_desc_markdown: 'Vi har uppdaterat våra användarvillkor och sekretesspolicy, som visas nedan. Förändringarna träder i kraft from den 24 Augusti, 2016. Den största förändringen: vi kommer _inte längre att lagra e-postadresser för elevkonton på kod Studio._ Detta är en stor sak för oss, och vi hoppas att det sätter en ny standard för elevernas sekretess i teknisk utbildning. Vi har skickat Er en sammanfattning av de övriga förändringarna via e-post.'
+    reminder_desc_markdown: 'Vi har uppdaterat våra [Användarvillkor](%{tos_url}) och [Sekretesspolicy](%{privacy_url}). Vänligen läs igenom dessa noggrant innan du accepterar dem. Observera att våra verktyg för undervisning i JavaScript kan vara otillgängliga för era elever innan ni uttryckligen accepterar de uppdaterade villkoren.'
+  zendesk_too_young_message_markdown: 'Tyvärr, yngre användare kan inte logga in på vår supportsida. Du kan besöka[support.code.org](http://support.code.org) utan att logga in eller be din förälder eller lärare att kontakta oss.'

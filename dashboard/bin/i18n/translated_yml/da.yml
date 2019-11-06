@@ -2,10 +2,10 @@ da:
   activerecord:
     attributes:
       user:
-        finish_sign_up_subheader_markdown: 'Udfyld følgende oplysninger for at afslutte oprettelsen af en Code.org konto for <strong>%{email}</strong>.'
-        finish_sign_up_subheader_provider_markdown: 'Udfyld følgende oplysninger for at afslutte oprettelsen af en Code.org konto <strong>%{provider}</strong> for <strong>%{email}</strong>.'
+        finish_sign_up_subheader_markdown: 'Udfyld følgende oplysninger for at afslutte oprettelsen af en Code.org konto for **%{email}**.'
+        finish_sign_up_subheader_provider_markdown: 'Udfyld følgende oplysninger for at afslutte oprettelsen af en Code.org konto **%{provider}** for **%{email}**.'
         name_example: Vis navn (f.eks. Cool Coder eller Jane S.)
-        personal_email_markdown: 'Personlig e-mail adresse <a href="%{url}"> (Klik her hvis du ikke har en e-mail-adresse)</a>'
+        personal_email_markdown: 'Personlig e-mail adresse [(Klik her hvis du ikke har en e-mail-adresse)](%{url})'
   signup_form:
-    overview_markdown: 'Tilmeld dig med en konto for at kunne følge dine fremskridt eller administrere dit klasseværelse. <a href="/">du kan gennemse de forskellige faser og gåder</a> uden en konto, men du bliver nødt til at tilmelde dig til at gemme dine fremskridt og projekter.'
-  zendesk_too_young_message_markdown: 'Beklager, yngre brugere kan ikke logge på vores websted. Du kan gennemse <a href="http://support.code.org"> support.code.org</a> uden at logge på eller spørg dine forældre eller lærer om at kontakte os for dig.'
+    overview_markdown: 'Tilmeld dig med en konto for at kunne følge dine fremskridt eller administrere dit klasseværelse. [du kan gennemse de forskellige faser og gåder](/) uden en konto, men du bliver nødt til at tilmelde dig til at gemme dine fremskridt og projekter.'
+  zendesk_too_young_message_markdown: 'Beklager, yngre brugere kan ikke logge på vores websted. Du kan gennemse [support.code.org](http://support.code.org) uden at logge på eller spørg dine forældre eller lærer om at kontakte os for dig.'

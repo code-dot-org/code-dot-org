@@ -2,10 +2,10 @@ nl:
   activerecord:
     attributes:
       user:
-        finish_sign_up_subheader_markdown: 'Vul de volgende informatie in om het aanmaken van een Code.org-account voor <strong>%{email}</strong> te voltooien.'
-        finish_sign_up_subheader_provider_markdown: 'Vul de volgende informatie in om het aanmaken van een Code.org-account met <strong>%{provider}</strong> voor <strong>%{email}</strong> te voltooien.'
-        name_example: Weergavenaam   (bv. Stoere Coder of Emma S.)
-        personal_email_markdown: 'Persoonlijke e-mailadres <a href="%{url}"> (Klik hier als u geen e-mailadres hebt)</a>'
+        finish_sign_up_subheader_markdown: 'Vul de volgende informatie in om het aanmaken van een Code.org-account voor **%{email}** te voltooien.'
+        finish_sign_up_subheader_provider_markdown: 'Vul de volgende informatie in om het aanmaken van een Code.org-account met **%{provider}** voor **%{email}** te voltooien.'
+        name_example: Weergavenaam (bv. Stoere Coder of Emma S.)
+        personal_email_markdown: 'Persoonlijke e-mailadres [(Klik hier als u geen e-mailadres hebt)](%{url})'
   signup_form:
-    overview_markdown: Maak een account aan om je vorderingen te volgen of je klad te managen.<a href="/">Je kan de verschillende stadia en puzzels</a>browsen maar als je je vorderingen en projecten wil opslaan dan moet je ingelogd zijn.
-  zendesk_too_young_message_markdown: 'Sorry, jeugdige gebruikers mogen niet inloggen op onze ondersteuningssite. Je mag <a href="http://support.code.org">support.code.org</a> wel bekijken zonder in te loggen of je ouder of leraar vragen met ons contact op te nemen.'
+    overview_markdown: 'Maak een account aan om je vorderingen te volgen of je klad te managen.[Je kan de verschillende stadia en puzzels](/)browsen maar als je je vorderingen en projecten wil opslaan dan moet je ingelogd zijn.'
+  zendesk_too_young_message_markdown: 'Sorry, jeugdige gebruikers mogen niet inloggen op onze ondersteuningssite. Je mag [support.code.org](http://support.code.org) wel bekijken zonder in te loggen of je ouder of leraar vragen met ons contact op te nemen.'

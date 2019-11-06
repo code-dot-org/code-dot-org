@@ -2,10 +2,10 @@ pt:
   activerecord:
     attributes:
       user:
-        finish_sign_up_subheader_markdown: 'Preencher as seguintes informações para terminar de criar um contar no Code.org para <strong>%{email}</strong>.'
-        finish_sign_up_subheader_provider_markdown: 'Preencher as seguintes informações para terminar de criar um contar no Code.org com <strong>%{provider}</strong> para <strong>%{email}</strong>.'
+        finish_sign_up_subheader_markdown: 'Preencher as seguintes informações para terminar de criar um contar no Code.org para **%{email}**.'
+        finish_sign_up_subheader_provider_markdown: 'Preencher as seguintes informações para terminar de criar um contar no Code.org com **%{provider}** para **%{email}**.'
         name_example: 'Nome a apresentar (exemplo: João S.)'
-        personal_email_markdown: 'Endereço de email pessoal <a href="%{url}">(clique aqui, se não tiver um adereço de email)</a>'
+        personal_email_markdown: 'Endereço de email pessoal [(clique aqui, se não tiver um adereço de email)](%{url})'
   signup_form:
-    overview_markdown: 'És um aluno? Cria uma conta para guardares o teu progresso. Podes <a href="/">explorar as várias etapas dos nossos desafios</a> sem criares uma conta, mas não poderás guardar o teu progresso nem os teus projetos.  É um professor? Crie uma conta para gerir a sua sala de aula e os seus alunos.'
-  zendesk_too_young_message_markdown: 'Pedimos desculpa, mas os utilizadores mais jovens não podem criar uma conta no nosso site. Podes aceder a <a href="http://support.code.org">support.code.org</a> sem criares uma conta ou podes pedir aos teus pais ou a um professor para entrarem em contacto connosco.'
+    overview_markdown: 'És um aluno? Cria uma conta para guardares o teu progresso. Podes [explorar as várias etapas dos nossos desafios](/) sem criares uma conta, mas não poderás guardar o teu progresso nem os teus projetos. É um professor? Crie uma conta para gerir a sua sala de aula e os seus alunos.'
+  zendesk_too_young_message_markdown: 'Pedimos desculpa, mas os utilizadores mais jovens não podem criar uma conta no nosso site. Podes aceder a [support.code.org](http://support.code.org) sem criares uma conta ou podes pedir aos teus pais ou a um professor para entrarem em contacto connosco.'
