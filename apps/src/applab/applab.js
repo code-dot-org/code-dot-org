@@ -688,6 +688,7 @@ Applab.init = function(config) {
     isProjectLevel: !!config.level.isProjectLevel,
     isSubmittable: !!config.level.submittable,
     isSubmitted: !!config.level.submitted,
+    librariesEnabled: !!config.level.librariesEnabled,
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
     showDebugSlider: showDebugConsole,
@@ -1477,6 +1478,8 @@ Applab.onPuzzleComplete = function(submit) {
     Applab.message = results.message;
   } else if (!submit) {
     Applab.testResults = TestResults.FREE_PLAY;
+  } else {
+    Applab.testResults = TestResults.SUBMITTED_RESULT;
   }
 
   // If we're failing due to failOnLintErrors, replace the previous test result

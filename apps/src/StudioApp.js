@@ -57,6 +57,7 @@ import {setIsRunning, setStepSpeed} from './redux/runState';
 import {setPageConstants} from './redux/pageConstants';
 import {setVisualizationScale} from './redux/layout';
 import {mergeProgress} from './code-studio/progressRedux';
+import {createLibraryClosure} from '@cdo/apps/code-studio/components/libraries/libraryParser';
 import {
   setAchievements,
   setBlockLimit,
@@ -2147,7 +2148,7 @@ StudioApp.prototype.loadLibraryBlocks = function(config) {
   config.level.libraryCode = '';
   config.level.libraries.forEach(library => {
     config.dropletConfig.additionalPredefValues.push(library.name);
-    config.level.libraryCode += library.source;
+    config.level.libraryCode += createLibraryClosure(library);
     // TODO: add category management for libraries (blocked on spec)
     // config.dropletConfig.categories['libraryName'] = {
     //   id: 'libraryName',
@@ -3190,12 +3191,20 @@ StudioApp.prototype.isResponsiveFromConfig = function(config) {
 /**
  * Checks if the level a teacher is viewing of a students has
  * not been started.
+ * For contained levels don't show the banner ever.
+ * Otherwise if its a channel backed level check for the channel. Lastly
+ * if its not a channel backed level and its not free play we know it has
+ * not been started if no progress has been made.
  */
 StudioApp.prototype.isNotStartedLevel = function(config) {
   const progress = getStore().getState().progress;
 
-  if (
-    ['Gamelab', 'Applab', 'Weblab', 'Spritelab'].includes(config.levelGameName)
+  if (config.hasContainedLevels) {
+    return false;
+  } else if (
+    ['Gamelab', 'Applab', 'Weblab', 'Spritelab', 'Dance'].includes(
+      config.levelGameName
+    )
   ) {
     return config.readonlyWorkspace && !config.channel;
   } else if (!config.level.freePlay) {

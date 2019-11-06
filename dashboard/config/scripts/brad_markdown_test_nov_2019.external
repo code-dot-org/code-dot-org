@@ -1,0 +1,122 @@
+name 'brad_markdown_test_nov_2019'
+skip_dialog true
+markdown <<MARKDOWN
+# Course outline
+
+The course is divided into four concept chunks, which each have lessons in them. Lessons consists of different "levels", which are colloquially referred to as bubbles, stages, or puzzles by students and teachers. Here's an overview of what you'll learn if you complete the entire course:
+
+## Concept *Chunk* **1**: Getting Started
+And some content here?Trying to swap out our coverage reporter and unblock my classroom map security PR.
+
+### Lesson A: Welcome to 'Teaching Computer Science Fundamentals'
+
+By completing Lesson 1, you will:
+
+- Review the course details
+- Plan your participation in this course
+- Understand what computer science is and differentiate between "coding" and computer science"
+- Identify the benefits of teaching and learning computer science
+
+### Lesson B: Getting to know the Computer Science Fundamentals Courses
+
+By completing Lesson 2, you will:
+
+- Become familiar with the content and organization of the Computer Science Fundamentals courses
+  - Understand different types of [Computer Science Fundamentals](https://code.org/learn/csf) lessons
+- Identify which course is most appropriate for your students
+- Understand the importance of the teacher in the Computer Science Fundamentals curriculum
+
+## Concept Chunk 2: Basic Coding Concepts and Teaching Practices (TIME)
+
+You will want to complete this section if you are teaching any of the CS Fundamentals courses, from A-F. It focuses on basic concepts that show up in all courses.
+
+
+## Concept Chunk 2: Basic Coding Concepts and Teaching Practices (TIME)
+### Lesson C: Sequencing
+
+By completing Lesson 3, you will:
+
+- Define "program" and "algorithm"
+* Use the Code.org visual <b>programming</b> <tt>engine</tt> </p>to write simple programs
+- Explore unplugged lessons on sequencing and reflect on classroom application
+- Understand how to find and utilize Code.org lesson plans
+
+### Lesson D: Loops
+
+By completing Lesson 4, you will:
+
+- Define "loops" and explain their importance
+- Explore unplugged lessons on loops and reflect on classroom application
+- Practice coding simple loops
+- Understand the benefits of pair programming
+
+### Lesson E: Events
+
+By completing Lesson 5, you will:
+
+- Define "events" and explain their importance
+- Explore unplugged lessons on events and reflect on classroom application
+- Practice coding simple events
+- Understand the debugging process
+
+
+
+
+### Lesson F: Conditionals
+
+By completing Lesson 6, you will:
+
+- Define "conditionals" and explain their importance
+- Explore unplugged lessons on conditionals and reflect on classroom application
+- Practice coding simple conditionals
+- Understand the teaching practice of
+
+journaling
+
+
+
+## Concept Chunk 3: Diving Deeper: Courses E and F (TIME)
+
+You will want to complete this section if you are teaching Courses E or F. This section dives into some of the harder concepts covered in these courses for older students.
+
+### Lesson G: Functions
+
+By completing Stage 7, you will:
+
+- Define "functions" and explain their importance
+- Explore unplugged lessons on functions and reflect on classroom application
+- Practice coding simple functions
+- Understand the steps in the problem solving process
+
+### Lesson H: Variables
+
+By completing Stage 8, you will:
+
+- Identify if you will be teaching Courses E or F to students
+- Learn about aspects of these courses that are unique, including working with Sprites, end-of-course projects, and more advanced kinds of loops (nested loops and for loops).
+
+### Lesson I: For Loops for everyone
+
+Need to add content here.  There's a lot of real-time annotation going on in this box and I wonder if it has anything to do with the preview and save issues we're seeing.
+
+### Lesson J: Sprite Lab
+
+[add]
+
+### Lesson K: End-of-course Projects
+
+[add]
+
+## Concept Chunk 4: Next Steps (TIME)
+
+### Lesson L: Next Steps
+
+By completing Lesson 12, you will
+
+- Reflect on your learning
+- Plan for next steps you can take to continue your learning
+- Connect with a global community of fellow educators interested in computer science education
+- Share your takeaways and feedback on this course
+
+> **Note**: Suggested times are provided above to help you plan your learning. Please note that you may want to spend more or less time on a given stage, depending on your prior knowledge, interest and capacity. Keep in mind that this course is entirely self-paced; you can always leave the course and come back or revisit any stage or level at any time.
+MARKDOWN
