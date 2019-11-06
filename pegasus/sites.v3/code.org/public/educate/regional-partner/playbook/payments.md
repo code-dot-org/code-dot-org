@@ -16,7 +16,6 @@ ________________
 - [Community Events](#community)
 - [CS Fairs](#csfair)
 - [Local Summer Workshop Community Building Event](#LSW)
-- [Teacher Recruitment Fund](#recruitment)
 
 ________________
 
@@ -190,12 +189,3 @@ Need an example of an official invoice? Visit [this site](http://www.wikihow.com
 [**Back to the top**](#top)
 ________________
 
-<a id="recruitment"></a>
-
-## Teacher Recruitment Fund
-
-To receive reimbursement for expenses incurred towards your Recruitment Fund, complete the form and attach recripts for [allowable expenses](https://staging.code.org/educate/regional-partner/playbook/teacher-recruitment#recruitment) at [bit.ly/codeinvoices](http://bit.ly/codeinvoices).
-
-Required information for reimbursement will include date, amount, invoice, receipts, a brief explanation of how the expenses supported recruitment in your region, and your best estimate of the number of teachers reached.
-
-[**Back to the top**](#top)
