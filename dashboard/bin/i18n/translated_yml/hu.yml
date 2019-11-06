@@ -1,0 +1,16 @@
+hu:
+  activerecord:
+    attributes:
+      user:
+        finish_sign_up_subheader_markdown: 'Töltsd ki az alábbi adatokat <strong>%{email}</strong> Code.org fiókod létrehozásához.'
+        finish_sign_up_subheader_provider_markdown: 'Töltsd ki az alábbi adatokat a Code.org felhasználó fiókod befejezéséhez <strong>%{provider}</strong><strong>%{email}</strong>.'
+        name_example: 'Megjelenítendő név   (pl. hideg, Coder vagy Jane S.)'
+        personal_email_markdown: 'Személyes elektronikus levél cím <a href="%{url}">(kattintson ide, ha nem rendelkezik e-mail címmel)</a>'
+  signup_form:
+    hoc_already_signed_up_content_post_hoc_markdown: 'Köszönjük, hogy otthont adott egy Kódolás Órájá-nak. A Code Studio szolgáltatásba való bejelentkezéshez jelszót kell beállítania fiókjához. Ezzel elmentheti a haladását és kezelheti az osztálytermét. A hallgatókhoz kurzusokat rendelhet, és nyomon követheti azok előrehaladását. <a href="%{studio_url}"> Továbbra is folytathatja a különböző szakaszok és rejtvények böngészését </a> fiók létrehozása nélkül.'
+    overview_markdown: 'Regisztrálj fiókot, hogy rögzítsd az előremeneteled vagy hogy egy osztály irányíts. <a href="/">Böngészhetsz a különböző szintek és puzzlek között</a> fiók nélkül is, de az állapotod mentéséhez regisztrálnod kell.'
+  terms_interstitial:
+    accept_label_markdown: 'Elfogadom a frissített <a href="%{tos_url}" target="_blank">Felhasználási feltételeket</a> és az <a href="%{privacy_url}" target="_blank">Adatvédelmi irányelveket</a>'
+  user:
+    create_personal_login_email_note_markdown: 'Megjegyzés: a tanulók e-mail címeit olyan módon tároljuk, hogy az nem teszi lehetővé számunkra a kapcsolatfelvételt. A tanulók a jelszóemlékeztető kivételével soha nem fognak e-mailt kapni a Code.org-tól. További információt az<a href=''%{privacy_policy_url}'', target=''_blank''>adatvédelem</a> részben találsz.'
+  zendesk_too_young_message_markdown: 'Elnézést, de kiskorú felhasználók nem iratkozhatnak fel a támogatói oldalunkra. Megnézheted a <a href="http://support.code.org"> support.code.org</a>oldalakat feliratkozás nélkül, illetve kérd meg a szüleidet vagy tanáraidat, hogy lépjenek kapcsolatba velünk a nevedben.'

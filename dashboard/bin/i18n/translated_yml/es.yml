@@ -1,0 +1,19 @@
+es:
+  activerecord:
+    attributes:
+      user:
+        finish_sign_up_subheader_markdown: Llena la siguiente información para completar la creación de tu cuenta en Code.org.
+        finish_sign_up_subheader_provider_markdown: 'Llena la siguiente información para terminar de crear una cuenta de Code.org con <strong>%{provider}</strong> para <strong>%{email}</strong>.'
+        name_example: Nombre para mostrar   (codificador fresco o Jane S.)
+        personal_email_markdown: 'Dirección de email personal <a href="%{url}">(haz click aquí si no tienes una dirección email)</a>'
+  signup_form:
+    hoc_already_signed_up_content_post_hoc_markdown: 'Gracias por hospedar una Hora de Código. Para ingresar en "Code Studio, tienes que establecer una contraseña para tu cuenta. Esto te dejara guardar tu progreso y manejar tu clase. Podrás asignar cursos a estudiantes y ver su progreso. <a href="%{studio_url}">También puedes continuar con los varios niveles y rompecabezas</a> sin crear una cuenta.'
+    overview_markdown: 'Regístrate para darle seguimiento a tu avance o administrar tu salón de clases. <a href="/">Puedes explorar varias etapas y rompecabezas</a> si una cuenta, pero necesitarás registrarte para guardar tus avances y proyectos.'
+  terms_interstitial:
+    accept_label_markdown: 'Estoy de acuerdo con los <a href="%{tos_url}" target="_blank"> Términos de Servcio</a> y la <a href="%{privacy_url}" target="_blank">Política de Privacidad</a> actualizados'
+    intro_desc_markdown: 'Hemos actualizado nuestros Términos de Servicio y Política de Privacidad, como se muestra a continuación. Los cambios son efectivos el 224 de agosto de 2016. El cambio más grande: <i>no almacenaremos direcciones de correo electrónico para cuentas de alumnos en Code Studio.</i>Esto es un gran problema para nosotros, y esperamos que establezca un nuevo estándar para la privacidad de los alumnos en educación tecnológica. Hemos enviado un resumen de los otros cambios por correo electrónico.'
+    reminder_desc_markdown: 'Hemos actualizado nuestros <a href="%{tos_url}" target="_blank">Términos de Servicio</a> y <a href="%{privacy_url}" target="_blank">Política de Privacidad</a>. Por favor lee éstos cuidadosamente antes de aceptarlos. Nota que nuestras herramientas para aprender JavaScript pueden no estar disponibles a tus alumnos antes de aceptar explícitamente estos términos actualizados.'
+  user:
+    create_personal_login_email_note_markdown: 'Nota: las direcciones email no son guardadas en una forma que permite contactar a los estudiantes. Los estudiantes nunca recibirán emails de Code.org excepto para recuperar su contraseña- Mira nuestra <a href=''%{privacy_policy_url}'', target=''_blank''>política de privacidad</a> para más información.'
+    create_personal_login_terms_markdown: 'Al crear un inicio de sesión personal, estoy de acuerdo a verme obligado a cumplir los <a href=''%{terms_of_service_url}'', target=''_blank''>términos y servicios</a> de Code.org. Si soy menor de 13 años de edad, yo confirmo que tengo el permiso de mi padre o tutor legal para usar los servicios de Code.org incluso sin un profesor.'
+  zendesk_too_young_message_markdown: 'Lo sentimos, los usuarios más jóvenes no pueden registrarse en nuestro sitio de soporte. Puedes navegar por <a href="http://support.code.org">support.code.org</a> sin registrarte o pedir a tus padres o profesores que nos contacten en tu nombre.'

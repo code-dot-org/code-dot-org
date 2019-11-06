@@ -1,0 +1,11 @@
+fi:
+  activerecord:
+    attributes:
+      user:
+        finish_sign_up_subheader_markdown: 'Täytä seuraavat tiedot viimeistelläksesi Code.org tilin <strong>%{email}</strong>.'
+        finish_sign_up_subheader_provider_markdown: 'Täytä seuraavat tiedot viimeistelläksesi Code.org -tilin luomisen <strong>%{provider}</strong> -tunnuksella <strong>%{email}</strong>.'
+        name_example: Näyttönimi (Esim. Viileä koodaaja tai Jane S.)
+        personal_email_markdown: 'Henkilökohtainen sähköposti osoite <a href="%{url}"> (Klikkaa tästä jos sinulla ei ole sähköpostiosoitetta)</a>'
+  signup_form:
+    overview_markdown: 'Rekisteröi tili seurataksesi omaa edistymistäsi tai hallitaksesi omaa luokkaasi<a href="/">Voit selata lukuisia tasoja ja tehtäviä </a>ilman tiliä, mutta sinun täytyy rekisteröityä, jotta voit tallentaa edistymisesi.'
+  zendesk_too_young_message_markdown: 'Pahoittelut, nuoremmat käyttäjät eivät voi kirjautua tukisivustollemme. Voit selailla <a href="http://support.code.org">support.code.org</a> -sivuja ilman kirjautumista tai pyytää vanhempiasi tai opettajaasi ottamaan yhteyttä meihin puolestasi.'

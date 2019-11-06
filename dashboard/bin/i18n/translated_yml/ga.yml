@@ -1,0 +1,17 @@
+ga:
+  activerecord:
+    attributes:
+      user:
+        name_example: Ainm Taispeána (m.sh. Sárchódálaí nó Sinéad S.)
+        personal_email_markdown: 'Seoladh ríomhphoist pearsanta <a href="%{url}">(cliceáil anseo mura bhfuil seoladh ríomhphoist agat)</a>'
+  signup_form:
+    hoc_already_signed_up_content_post_hoc_markdown: 'Go raibh maith agat as Uair Chódála a óstáil. Ní mór duit focal faire a shocrú chun logáil isteach sa Stiúideo Códála. Sa chaoi seo beidh tú in ann do dhul chun cinn a shábháil agus do sheomra ranga a bhainistiú. Beidh tú in ann cúrsaí a shannadh agus dul chun cinn na ndaltaí a leanúint. Nó más fearr leat, is féidir <a href="%{studio_url}">na céimeanna agus na dúshláin éagsúla a bhrabhsáil</a> gan cuntas a chruthú.'
+    overview_markdown: 'Cruthaigh cuntas le do sheomra ranga a bhainistiú nó do dhul chun cinn a leanúint. Is féidir leat <a href="/">na cúrsaí agus na dúshláin éagsúla</a> a bhrabhsáil gan chuntas, ach ní mór duit clárú chun do chuid tograí agus do dhul chun cinn a shábháil.'
+  terms_interstitial:
+    accept_label_markdown: 'Glacaim leis na <a href="%{tos_url}" target="_blank">Téarmaí Seirbhíse</a> nua agus leis <a href="%{privacy_url}" target="_blank">an bPolasaí Príobháideachais</a> nua'
+    intro_desc_markdown: 'Táimid tar éis na Téarmaí Seirbhíse agus an Polasaí Príobháideachais a leasú, mar a léirítear thíos. Chuaigh na hathruithe seo i bhfeidhm ar 24 Lúnasa 2016. An t-athrú is mó: <i>ní stórálfaimid seoltaí ríomhphoist mar chuid de chuntais dalta sa Stiúideo Códála.</i> Is mór an rud é seo, agus tá súil againn go leagfaidh sé síos caighdeán nua maidir le príobháideachas i dteicneolaíocht an oideachais. Sheolamar achoimre ar na hathruithe eile i dteachtaireacht r-phoist.'
+    reminder_desc_markdown: 'Rinneamar leasú ar <a href="%{tos_url}" target="_blank">na Téarmaí Seirbhíse</a> agus ar <a href="%{privacy_url}" target="_blank">an bPolasaí Príobháideachais</a>. Léigh na cáipéisí seo go cúramach sula nglacfaidh tú leo. Go dtí go nglacfaidh tú leis an téarmaí nua, seans nach mbeidh do chuid daltaí in ann tairbhe a bhaint as na hacmhainní atá againn a mhúineann JavaScript.'
+  user:
+    create_personal_login_email_note_markdown: 'Nóta: Ní stórálaimid seoltaí ríomhphoist ar bhealach a ligfeadh dúinn dul i dteagmháil le daltaí. Ní bhfaighidh daltaí aon ríomhphost ó Code.org seachas chun focal faire a athshocrú. Féach ár <a href=''%{privacy_policy_url}'', target=''_blank''>bpolasaí príobháideachais</a> chun tuilleadh eolais a fháil.'
+    create_personal_login_terms_markdown: 'Má chruthaíonn tú cuntas pearsanta, glacann tú le <a href=''%{terms_of_service_url}'', target=''_blank''>téarmaí seirbhíse Code.org</a>. Má tá tú níos óige ná 13 bliain d''aois, deimhníonn tú go bhfuair tú cead ó thuismitheoir nó ó chaomhnóir dlíthiúil seirbhísí Code.org a úsáid fiú gan múinteoir i láthair.'
+  zendesk_too_young_message_markdown: 'Ár leithscéal, ach níl cead ag úsáideoirí óga logáil isteach sa suíomh tacaíochta. Is féidir leat cuairt a thabhairt ar <a href="http://support.code.org">support.code.org</a> gan logáil isteach, nó iarr ar thuismitheoir nó ar mhúinteoir dul i dteagmháil linn ar do shon.'

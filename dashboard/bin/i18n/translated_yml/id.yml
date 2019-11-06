@@ -1,0 +1,19 @@
+id:
+  activerecord:
+    attributes:
+      user:
+        finish_sign_up_subheader_markdown: 'Mengisi informasi berikut untuk menyelesaikan membuat akun Code.org untuk <strong>%{email}</strong>.'
+        finish_sign_up_subheader_provider_markdown: 'Mengisi informasi berikut untuk menyelesaikan membuat akun Code.org dengan <strong>%{provider}</strong> untuk <strong>%{email}</strong>.'
+        name_example: Tampilan Nama (e.g. Cool Coder or Jane S.)
+        personal_email_markdown: 'Alamat email pribadi <a href="%{url}">(klik di sini jika Anda tidak memiliki sebuah alamat email)</a>'
+  signup_form:
+    hoc_already_signed_up_content_post_hoc_markdown: 'Terima kasih telah hosting Jam Kode. Untuk masuk ke Studio code, Anda harus menyiapkan kata sandi untuk akun Anda. Ini akan membiarkan Anda menyimpan kemajuan Anda dan mengelola kelas Anda. Anda akan dapat memberikan kursus kepada siswa dan melacak kemajuan mereka. <a href="%{studio_url}"> Anda juga dapat terus menjelajahi berbagai tahap dan teka-teki </a> tanpa membuat akun.'
+    overview_markdown: 'Mendaftar akun untuk melacak kemajuan Anda atau mengelola kelas Anda. <a href="/">Anda dapat menelusuri berbagai tahap dan teka-teki</a> tanpa akun, namun Anda perlu mendaftar untuk menyimpan kemajuan dan proyek Anda.'
+  terms_interstitial:
+    accept_label_markdown: 'Saya menyetujui <a href="%{tos_url}" target="_blank">Syarat dan Ketentuan</a> dan <a href="%{privacy_url}" target="_blank">Kebijakan Pribadi</a>'
+    intro_desc_markdown: 'Kami memperbarui Syarat dan Ketentuan dan Kebijakan Pribadi kami, seperti yang ditunjukkan di bawah ini. Perubahan tersebut berlaku efektif pada tanggal 24 Agustus 2016. Perubahan terbesar: kami akan <i>tidak lagi menyimpan alamat surel untuk akun siswa di Code Studio.</i> Ini adalah masalah besar bagi kami, dan kami berharap ini akan menjadi standar baru untuk privasi siswa dalam teknologi pendidikan. Kami sudah mengirimkan ringkasan perubahan lainnya melalui surel.'
+    reminder_desc_markdown: 'Kami sudah memperbarui <a href="%{tos_url}" target="_blank">Syarat dan Ketentuan</a> dan <a href="%{privacy_url}" target="_blank">Kebijakan Pribadi</a> kami. Silahkan baca ini dengan seksama sebelum menyetujuinya. Catatan bahwa alat kami yang mengajarkan JavaScript mungkin tidak tersedia bagi siswa anda sebelum secara eksplisit menerima persyaratan yang diperbarui.'
+  user:
+    create_personal_login_email_note_markdown: 'Catatan: Alamat surel tidak disimpan didalam bentuk yang memungkinkan kami untuk menghubungi pelajar-pelajar tersebut. Pelajar-pelajar tersebut tidak akan pernah menerima surel dari Code.org kecuali hanya untuk pemulihan sandi. Lihat <a href=''%{privacy_policy_url}'', target=''_blank''>kebijakan kerahasian kami</a> untuk informasi lebih lanjut.'
+    create_personal_login_terms_markdown: 'Dengan membuat login pribadi, Saya setuju untuk terikat dengan<a href=''%{terms_of_service_url}'', target=''_blank''>syarat-syarat layanan Code.org</a>. Jika saya berusia dibawah 13 tahun, Saya mengkonfirmasi bahwa saya sudah mendapatkan persetujuan dari orang tua atau wali sah saya untuk menggunakan layanan-layanan Code.org meskipun tanpa kehadiran seorang guru-pembimbing.'
+  zendesk_too_young_message_markdown: 'Maaf Pengguna lebih muda tidak bisa masuk ke dalam situs pendukung kami. Anda dapat mengakses  <a href="http://support.code.org">support.code.org</a> tanpa masuk atau minta orang tua anda  atau guru anda untuk menghubungi kami. u.'

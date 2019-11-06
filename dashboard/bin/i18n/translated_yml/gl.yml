@@ -1,0 +1,13 @@
+gl:
+  activerecord:
+    attributes:
+      user:
+        finish_sign_up_subheader_markdown: 'Completa a seguinte información para acabar de crear unha conta de Code.org para <strong>%{email}</strong>.'
+        finish_sign_up_subheader_provider_markdown: 'Completa a seguinte información para acabar de crear unha conta de Code.org con <strong>%{provider}</strong> para <strong>%{email}</strong>.'
+        name_example: 'Nome amosado (ex: Antía C. ou Trasno)'
+        personal_email_markdown: 'Enderezo do correo persoal <a href="%{url}">(preme aquí se non tes un enderezo de correo)</a>'
+  signup_form:
+    overview_markdown: 'Rexístrese para seguir os seus progresos ou administrar a súa aula. <a href="/">Pode explorar as etapas e os desafíos</a> sen ter unha conta, pero cómpre un rexistro para gardar os avances e os proxectos.'
+  user:
+    create_personal_login_terms_markdown: 'Ao crear unha conta individual, acepto os <a href=''%{terms_of_service_url}'', target=''_blank''>termos de serviço</a> do Code.org. Se son menor de 13 anos, declaro que teño autorización de meus pais ou responsables legais para usar os servizos de Code.org incluso sen a supervisión dun profesor.'
+  zendesk_too_young_message_markdown: 'Pedimos desculpa, pero os usuarios máis novos non poden crear unha conta no noso sitio Web. Podes acceder a <a href="http://support.code.org">support.code.org</a> sen creares unha conta ou podes pedir aos teus pais ou a un profesor entraren en contacto connosco.'

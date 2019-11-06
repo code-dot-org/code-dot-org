@@ -1,0 +1,19 @@
+is:
+  activerecord:
+    attributes:
+      user:
+        finish_sign_up_subheader_markdown: 'Færðu inn eftirfarandi upplýsingar til að ljúka við að stofna Code.org aðgang fyrir <strong>%{email}</strong>.'
+        finish_sign_up_subheader_provider_markdown: 'Færðu inn eftirfarandi upplýsingar til að ljúka við að stofna Code.org aðgang hjá <strong>%{provider}</strong> fyrir <strong>%{email}</strong>.'
+        name_example: Birtingarnafn (t.d. Kalli kóðari eða Anna J.)
+        personal_email_markdown: 'Einkanetfang <a href="%{url}">(smelltu hér ef þú hefur ekki netfang)</a>'
+  signup_form:
+    hoc_already_signed_up_content_post_hoc_markdown: 'Þakka þér fyrir að hýsa Klukkustund kóðunar. Til að skrá þig inn í Kóðastúdíóið þarft þú að stofna aðgang með lykilorði. Þá getur þú vistað framvindu þína og haft umsjón með bekknum. Þú getur skráð nemendur á námskeið og fylgst með framvindu þeirra. <a href="%{studio_url}">En þú getur líka skoðað hina ýmsu áfanga og þrautir</a> án þess að stofna aðgang.'
+    overview_markdown: 'Skráðu þig til að geta fylgst með framvindu þinni eða haft umsjón með nemendum. <a href="/">Þú getur prófað hin ýmsu borð og þrautir</a> án þess að skrá þig, en þú verður að skrá þig ef þú vilt vista það sem þú gerir.'
+  terms_interstitial:
+    accept_label_markdown: 'Ég samþykki <a href="%{tos_url}" target="_blank">þjónustuskilmálana</a> og <a href="%{privacy_url}" target="_blank">persónuverndarstefnuna</a>.'
+    intro_desc_markdown: 'Frá og með 24. ágúst 2016 hafa gilt nýir þjónustuskilmálar og persónuverndarstefna hjá okkur, sbr. hér fyrir neðan. Stærsta breytingin er að við munum <i>ekki lengur geyma netföng nemenda sem skráðir eru í Kóðastúdíóið.</i> Fyrir okkur er þetta stórmál og við vonum að þetta verði nýtt viðmið í persónuverndun nemenda þar sem tölvutækni er notuð við kennslu. Við höfum sent þér yfirlit annarra breytinga í tölvupósti.'
+    reminder_desc_markdown: 'Við höfum uppfært <a href="%{tos_url}" target="_blank">þjónustuskilmála</a> og <a href="%{privacy_url}" target="_blank">persónuverndarstefnu</a> okkar. Vinsamlegast lestu þetta áður en þú samþykkir. Athugaðu að verkfærin okkar til að kenna JavaScript kunna að verða óaðgengileg nemendum þínum þangað hinir uppfærðu skilmálar eru samþykktir.'
+  user:
+    create_personal_login_email_note_markdown: 'Athugið: Netföng eru ekki vistuð þannig að við getum haft samband við nemendur. Nemendur munu aldrei fá tölvupósta frá Code.org nema þegar þeir þurfa að endurheimta aðgangsorð. Nánari upplýsingar má finna í <a href=''%{privacy_policy_url}'', target=''_blank''>persónuverndarstefnu</a> okkar.'
+    create_personal_login_terms_markdown: 'Með því að stofna minn eigin aðgang, samþykki ég að undirgangast <a href=''%{terms_of_service_url}'', target=''_blank''>þjónustuskilmála</a> Code.org. Ég staðfesti að ég hef leyfi foreldris eða löglegs forráðamanns til að nota þjónustu Code.org án kennara.'
+  zendesk_too_young_message_markdown: 'Því miður mega yngri notendur ekki skrá sig á hjálparvefinn. Þú getur skoðað <a href="http://support.code.org">support.code.org</a> án þess að skrá þig inn eða beðið foreldri eða kennara að hafa samband við okkur fyrir þig.'

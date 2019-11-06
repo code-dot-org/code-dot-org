@@ -1,0 +1,5 @@
+ky:
+  activerecord:
+    attributes:
+      user:
+        name_example: Атын көрсөт (м. Мыкты кодер же Жаңыл)

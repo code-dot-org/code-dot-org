@@ -1,0 +1,17 @@
+tr:
+  activerecord:
+    attributes:
+      user:
+        name_example: Görüntü adı   (Süpe Kodcu veya Irmak K.)
+        personal_email_markdown: 'Kişisel e-posta adresi<a href="%{url}">(eğer kişisel e-posta adresiniz yoksa buraya tıklayın)</a>'
+  signup_form:
+    hoc_already_signed_up_content_post_hoc_markdown: 'Kodlama saati düzenlediğiniz için teşekkür ederiz. Kod stüdyoya kayıt hesabınız için bir parola ayarlamak gerekir. Bu sizin ilerlemenizi kaydetmenizi ve sınıfınızı yönetmenizi sağlar. Öğrenciler için kurslar atama ve ilerlemelerini izleme olanağı bulacaksınız. <a href="%{studio_url}"> Ayrıca çeşitli aşamalara ve bulmacalara gözatmak için hesap oluşturmadan </a> devam edebilirsiniz.'
+    overview_markdown: İlerleme durumunuzu izlemek veya sınıfı yönetmek için bir hesap açın. <a href="/"> Farklı aşamaları ve bulmacaları inceleyebilirsiniz fakat ilerlemenizi ve projelerinizi saklamak için giriş yapmak gerekecektir.
+  terms_interstitial:
+    accept_label_markdown: 'Güncellenme Zamanı <a href="%{tos_url}" target="_blank"> Hizmet şartları</a> ve <a href="%{privacy_url}" target="_blank"> Gizlilik politikasını</a> kabul ediyorum'
+    intro_desc_markdown: 'Kullanıcı sözleşmesini aşağıdaki gibi güncelledik. Değişiklikler 24 Ağustos 2016''dan itibaren uygulanıyor. En büyük değişiklik: <i>Artık Code Studio''daki öğrencilerin email adreslerini artık arşivlemiyoruz.</i> Bu bizim için büyük bir şey, ve umuyoruz eğitim teknolojilerindeki öğrenci mahremiyetine yeni bir standart getirir. Diğer değişikliklerin özetini de size mail olarak gönderdik.'
+    reminder_desc_markdown: '<a href="%{tos_url}" target="_blank"> Hizmet şartları</a> ve <a href="%{privacy_url}" target="_blank"> Gizlilik Politikası</a> güncellendi. Bunlar onları kabul etmeden önce dikkatlice okuyunuz.  JavaScript öğretim özelliği güncellenen Şartları kabul etmeden önce kullanılamıyor olabilir.'
+  user:
+    create_personal_login_email_note_markdown: 'Öğrenci elektronik postaları öğrencilerle iletişim kurmamıza izin verecek bir formda saklanmıyor. Öğrenciler şifrelerini tekrar almak dışında asla Code.org''dan elektronik posta almazlar. Daha fazla bilgi için <a href=''%{privacy_policy_url}'', target=''_blank''>Güvenlik politikamıza</a> bakınız.'
+    create_personal_login_terms_markdown: 'Kişisel hesap oluşturmakla ben, Code.org''un <a href=''%{terms_of_service_url}'', target=''_blank''> hizmet şartlarına bağlı olmayı kabul ediyorum</a>. Eğer 13 yaşının altındaysam, öğretmen olmadan ebeveynlerimin veya yasal vasilerimin izni ile Code.org hizmetlerini kullandığımı onaylıyorum.'
+  zendesk_too_young_message_markdown: 'Üzgünüz, genç kullanıcılarımız destek sitemize üye olamazlar. <a href="http://support.code.org">support.code.org</a> adresini giriş yapmadan kullanın ya da ebeveynlerinize veya öğretmeninize bizimle temasa geçmelerini söyleyin.'

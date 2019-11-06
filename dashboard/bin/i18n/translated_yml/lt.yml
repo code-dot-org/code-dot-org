@@ -1,0 +1,8 @@
+lt:
+  activerecord:
+    attributes:
+      user:
+        name_example: Tavo vardas (jį matys tavo mokytoja(-s))
+  signup_form:
+    overview_markdown: 'Užsiregistruokite paskyrą, kad galėtumėte sekti savo pažangą arba valdyti savo klasę. <a href="/">Galite naršyti įvairius etapus ir galvosūkius</a> be paskyros, tačiau reikės užsiregistruoti, jei norėsite išsaugoti savo progresą ir projektus.'
+  zendesk_too_young_message_markdown: 'Atsiprašome, jaunesnio amžiaus naudotojai negali prisijungti prie mūsų palaikymo svetainės. Galite peržiūrėti <a href="http://support.code.org"> support.code.org</a> nesiregistruojant arba paklausti savo tėvų ar mokytojų, kad susisiektų su mumis už jus.'

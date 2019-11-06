@@ -1,0 +1,17 @@
+mk:
+  activerecord:
+    attributes:
+      user:
+        name_example: Display Name (e.g. Cool Coder or Jane S.)
+        personal_email_markdown: 'Personal email address <a href="%{url}">(click here if you don''t have an email address)</a>'
+  signup_form:
+    hoc_already_signed_up_content_post_hoc_markdown: 'Thank you for hosting an Hour of Code. To sign in to Code Studio, you’ll need to set up a password for your account. This will let you save your progress and manage your classroom. You’ll be able to assign courses to students and track their progress. <a href="%{studio_url}">You can also continue to browse the various stages and puzzles</a> without creating an account.'
+    overview_markdown: 'Sign up for an account to track your progress or manage your classroom. <a href="/">You can browse the various stages and puzzles</a> without an account, but you will need to sign up to save your progress and projects.'
+  terms_interstitial:
+    accept_label_markdown: 'I agree to the updated <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>'
+    intro_desc_markdown: 'We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will <i>no longer store email addresses for student accounts on Code Studio.</i> This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We''ve sent you a summary of the other changes via email.'
+    reminder_desc_markdown: 'We have updated our <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>. Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated terms.'
+  user:
+    create_personal_login_email_note_markdown: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'', target=''_blank''>privacy policy</a> for more information.'
+    create_personal_login_terms_markdown: 'By creating a personal login, I agree to be bound by the Code.org <a href=''%{terms_of_service_url}'', target=''_blank''>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian''s permission to use the Code.org services even without a teacher.'
+  zendesk_too_young_message_markdown: 'Sorry, younger users may not sign in to our support site. You may browse <a href="http://support.code.org">support.code.org</a> without signing in or ask your parent or teacher to contact us for you.'

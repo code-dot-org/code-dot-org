@@ -1,0 +1,18 @@
+zh-TW:
+  activerecord:
+    attributes:
+      user:
+        finish_sign_up_subheader_markdown: '填妥下面的資料以完成 <strong>%{email}</strong> 的帳戶申請。'
+        name_example: 顯示名稱 （例如 Cool Coder 或是 Jane S）
+        personal_email_markdown: '個人電子郵件位址 <a href="%{url}"> (如果您沒有電子郵件位址請按這裡)</a>'
+  signup_form:
+    hoc_already_signed_up_content_post_hoc_markdown: '感謝你舉辦了「一小時玩程式」活動。您需要設定一組密碼來註冊 Code Studio。這樣你就能儲存進度和管理班級，並為學生分配課程並追蹤他們的進度。在沒有註冊帳戶之前，<a href="%{studio_url}">你還是可以繼續使用</a>。'
+    overview_markdown: 註冊一個帳號來追蹤你的進度或管理你的班級。<a href="/">你可以瀏覽不同的階段與關卡</a>而不用註冊，但需要註冊帳號來儲存你的專案與進度。
+  terms_interstitial:
+    accept_label_markdown: '我同意 <a href="%{tos_url}"target="_blank"> 服務條款</a> 和 <a href="%{privacy_url}"target="_blank"> 隱私政策</a>'
+    intro_desc_markdown: 我們已更新了服務條款和隱私政策，如下所示。這些改更自 2016 年 8 月 24 日起生效。最大的變化是：我們將<strong>不再把學生帳戶使用的電子信箱儲存在 Code Studio。</strong>這對我們來說是一大改變，我們希望它在教育技術中為學生隱私起個新的標準。我們已經通過電子郵件給你發送了其他的修改摘要。
+    reminder_desc_markdown: '我們已經更新了<a href="%{tos_url}"target="_blank"> 服務條款</a>和<a href="%{privacy_url}"target="_blank">隱私政策</a>。同意前請仔細閱讀。注意，在你的學生接受更新的條款之前，可能無法使用我們教授 JavaScript 的工具。'
+  user:
+    create_personal_login_email_note_markdown: '注意： 電子郵件位址的儲存形式並不允許我們聯繫學生。學生將永遠不會為收到來自 Code.org 的電子郵件，除了密碼恢復。請參閱我們的 <a href=''%{privacy_policy_url}'', target=''_blank''> 隱私政策</a> 的詳細資訊。'
+    create_personal_login_terms_markdown: '通過創建個人帳戶，我同意接受 Code.org 的<a href=''%{terms_of_service_url}'', target=''_blank''>服務條款</a>。我確認我的父母或監護人已經允許我在沒有老師指導情況下使用 Code.org 的服務。'
+  zendesk_too_young_message_markdown: '抱歉，年紀較小的用戶不能登入到我們的站台，詳情請參見<a href="http://support.code.org">support.code.org</a>，你可以請你的家長或是老師幫忙。'

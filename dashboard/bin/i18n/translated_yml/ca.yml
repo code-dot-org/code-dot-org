@@ -1,0 +1,12 @@
+ca:
+  activerecord:
+    attributes:
+      user:
+        finish_sign_up_subheader_markdown: 'Empleneu la informació següent per acabar creant un compte Code.org per a <strong>%{email}</strong>.'
+        finish_sign_up_subheader_provider_markdown: 'Empleneu la informació següent per acabar creant un compte Code.org amb <strong>%{provider}</strong> per a <strong>%{email}</strong>.'
+        name_example: 'Mostra el nom (ex: Programador fantàstic o Joana S.)'
+        personal_email_markdown: 'Adreça d''e-mail personal <a href="%{url}">(feu clic aquí si teniu una adreça electrònica)</a>'
+  signup_form:
+    hoc_already_signed_up_content_post_hoc_markdown: 'Gracies por allotjar una Hora de Codi. Per entrar a "Code Studio", has de crear una contrasenya per el teu compte. Això et deixarà grabar el teu progrés i organitzar la teva aula. Podras asignar cursos a estudiants i vure el seu progrés. <a href="%{studio_url}">També pots seguir navegant entre els diferents nivells i trencaclosques</a> sense crear un compte.'
+    overview_markdown: 'Inscrigui''s en un compte per tal de seguir el seu progrés o gestionar el seu grup-classe. <a href="/"> podeu navegar per les diferents etapes i trencaclosques</a> sense un compte, però cal tenir compte per guardar les dades del seu progrés i projectes.'
+  zendesk_too_young_message_markdown: 'Lamentablement, els usuaris més joves no poden registrar-se en el nostre lloc de suport. Podeu navegar<a href="http://support.code.org">upport.code.org</a> sense registrar-vos o demanar als vostres pares o mestres que contactin amb nosaltres en representació vostra.'

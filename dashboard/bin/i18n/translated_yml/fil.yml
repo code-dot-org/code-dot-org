@@ -1,0 +1,17 @@
+fil:
+  activerecord:
+    attributes:
+      user:
+        name_example: Naka-display na Pangalan (e.g. Cool Coder o Jane S.)
+        personal_email_markdown: 'Personal na email address <a href="%{url}">(mag-click dito kung wala ka pang email address)</a>'
+  signup_form:
+    hoc_already_signed_up_content_post_hoc_markdown: 'Salamat sa pag-host ng Hour of Code. Para mag-sign in sa Code Studio, kailangan mong mag-set up ng password para sa iyong account. Magagawa nitong i-save ang iyong progreso at i-manage ang iyong silid-aralan. Makapagtatalaga ka ng mga kurso para sa mga mag-aaral at masusundan ang kanilang progreso. <a href="%{studio_url}">Pwede ka ring magpatuloy sa pag-browse ng iba''t ibang stages at palaisipan</a> nang hindi gumagawa ng account.'
+    overview_markdown: 'Mag-sign up para sa isang account upang masundan ang iyong progreso o i-manage ang iyong silid-aralan. <a href="/">Pwede kang mag-browse ng iba''t ibang stages at palaisipan</a> nang walang account, pero kailangan mong mag-sign up para i-save ang iyong progreso at mga proyekto.'
+  terms_interstitial:
+    accept_label_markdown: 'Ako ay sumang-ayon sa updated na <a href="%{tos_url}" target="_blank">mga Palatuntunan</a> at sa <a href="%{privacy_url}" target="_blank">Privacy Policy</a>'
+    intro_desc_markdown: 'Binago namin ang aming mga palatuntunan at privacy policy, gaya ng pinakita namin sa baba. Ang mga pagbabago ay magkaroon ng bisa sa ika-24 ng Agosto, 2016. Ang pinakamalaking pagbabago: kami ay <i>hindi na mag-store ng email address ng mga estudyanteng account sa Code Studio.</i> Ito ay isang malaking bagay para sa amin, at kami ay umaasa na magbibigay ito ng bagong pamantayan para sa privacy ng mga estudyante sa teknolohiya na pang-edukasyon. Kami ay nagpapadala ng buod ng lahat ng mga pagbabago sa pamamagitan ng email.'
+    reminder_desc_markdown: 'Nag-update kami sa aming <a href="%{tos_url}" target="_blank">mga Palatuntunan</a> at <a href="%{privacy_url}" target="_blank">Privacy Policy</a>. Pakibasa ng mabuti ang mga ito bago mo tanggapin. Tandaan na ang aming mga kagamitan na nagtuturo ng Javascript ay maaaring hindi magagamit ng iyong mga estudyante bago mo hayagang tanggapin ang mga binagong pamantayan.'
+  user:
+    create_personal_login_email_note_markdown: 'Tandaan: Ang mga email address ay hindi nakastore sa isang form na magbigay sa atin ng kakayahan na makipag-ugnayan sa mga estudyante. Ang mga estudyante ay hinding-hindi makatanggap ng mga emails mula sa Code.org maliban na lang sa password recovery. Tingnan ang aming <a href=''%{privacy_policy_url}'', target=''_blank''>patakaran sa privacy</a> para sa karagdagan impormasyon.'
+    create_personal_login_terms_markdown: 'Sa paglikha ng personal na login, ako ay sumasang-ayon na masailalaim sa mga <a href=''%{terms_of_service_url}'', target=''_blank''>alituntunin</a> ng Code.org. Kung ako ay nasa baba ng 13 taong gulang, kinukompirma ko na ako ay maayrong pahintulot mula sa aking mga magulang o legal na taga-pangalaga na gumamit sa mga serbisyo ng Code.org kahit na walang guro.'
+  zendesk_too_young_message_markdown: 'Ipagpaumanhin niyo po, ang nakakabatang mga user ay hindi maaring mag-sign in sa aming support na site. Maari kang mag-browse sa <a href="http://support.code.org">support.code.org</a> kahit hindi naka-sign in o magpatulong sa iyong magulang o guro para makipag-ugnayan sa amin para sa iyo.'

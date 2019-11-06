@@ -1,0 +1,8 @@
+mi:
+  signup_form:
+    overview_markdown: 'Waitohungia kia whiwhi pūkete kia āhei koe te whai i tō kauneketanga, ki te whakahaere rānei i tō akomanga. <a href="/"> E āhei ana koe ki te tirotiro ki ngā taumata rerekē me ngā panga </a>, heoi anō, me mātua waitohu kia āhei hoki koe tō kauneketanga me o tūmahi te tiaki.'
+  terms_interstitial:
+    accept_label_markdown: 'E whakaae ana ahau ki ngā whakahoutanga o <a href="%{tos_url}" target="_blank"> Ngā Ture Whakaratonga</a> me <a href="%{privacy_url}" target="_blank"> te Kaupapahere Tūmataitinga</a>'
+    intro_desc_markdown: 'I whakahoungia Ngā Ture Ratonga me te Kaupapahere Tūmataitinga, e whakaaturia ana ki raro iho nei. Ka whai mana ngā panonitanga mai i te 24 o Here-turi-kōkā, 2016. Ko te panonitanga nui: e kore mātou <i>e pupuri ki ngā wāhitau īmēra o ngā pūkete o ngā ākonga ki Code Studio.</i>He mea nui tēnei ki a mātou, ā, e manako ana, mā tēnei whakatau ka eke te tūmataitinga o te ākonga i roto i te marau hangarau ki tētahi taumata anō.'
+    reminder_desc_markdown: 'Kua whakahoungia e mātou ā mātou <a href="%{tos_url}" target="_blank">Ture Ratonga</a> me <a href="%{privacy_url}" target="_blank"> te Kaupapahere Tūmataitinga</a>. Tēnā āta pānuihia i mua i tō whakaae atu. Kia mōhio ai koe, tērā pea kāore tā mātou utauta whakaako JavaScript e wātea ki ō ākonga i mua i tō whakaae mārika ki ngā ture hou.'
+  zendesk_too_young_message_markdown: 'Kia manawanui mai, kāore e whakaae ana mā te tamaiti nohinohi tā mātou pae e tautoko. E whakaae ana kia tirohia te <a href="http://support.code.org">support.code.org</a> me te kore takiuru atu, ki te tono rānei ki tō matua/whaea tō pouako rānei ki te whakapā mai mōu.'
