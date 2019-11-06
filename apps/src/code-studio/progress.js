@@ -154,7 +154,9 @@ progress.renderCourseProgress = function(scriptData) {
   );
 
   store.dispatch(initializeHiddenScripts(scriptData.section_hidden_unit_info));
-  store.dispatch(setSections(scriptData.sections));
+  if (scriptData.sections) {
+    store.dispatch(setSections(scriptData.sections));
+  }
 
   const mountPoint = document.createElement('div');
   $('.user-stats-block').prepend(mountPoint);
