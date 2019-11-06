@@ -1,136 +1,114 @@
 import {DataSet} from '../demo/constants';
 
-// Body images
-import circle_1_image from '../../public/images/fish/body/circle_1.png'
-import circle_2_image from '../../public/images/fish/body/circle_2.png'
-import other_1_image from '../../public/images/fish/body/other_1.png'
-import other_2_image from '../../public/images/fish/body/other_2.png'
-import other_3_image from '../../public/images/fish/body/other_3.png'
-import other_4_image from '../../public/images/fish/body/other_4.png'
-import other_5_image from '../../public/images/fish/body/other_5.png'
-import oval_1_image from '../../public/images/fish/body/oval_1.png'
-import oval_2_image from '../../public/images/fish/body/oval_2.png'
-import oval_3_image from '../../public/images/fish/body/oval_3.png'
-import oval_4_image from '../../public/images/fish/body/oval_4.png'
-import rectangle_1_image from '../../public/images/fish/body/rectangle_1.png'
-import rectangle_2_image from '../../public/images/fish/body/rectangle_2.png'
-import rectangle_3_image from '../../public/images/fish/body/rectangle_3.png'
-import triangle_1_image from '../../public/images/fish/body/triangle_1.png'
-import triangle_2_image from '../../public/images/fish/body/triangle_2.png'
-import triangle_3_image from '../../public/images/fish/body/triangle_3.png'
+import pectoral_fin_1_image from '../../public/images/fish/pectoralFin/pectoral_fin_1.png';
+import pectoral_fin_10_image from '../../public/images/fish/pectoralFin/pectoral_fin_10.png';
+import pectoral_fin_11_image from '../../public/images/fish/pectoralFin/pectoral_fin_11.png';
+import pectoral_fin_12_image from '../../public/images/fish/pectoralFin/pectoral_fin_12.png';
+import pectoral_fin_13_image from '../../public/images/fish/pectoralFin/pectoral_fin_13.png';
+import pectoral_fin_14_image from '../../public/images/fish/pectoralFin/pectoral_fin_14.png';
+import pectoral_fin_15_image from '../../public/images/fish/pectoralFin/pectoral_fin_15.png';
+import pectoral_fin_16_image from '../../public/images/fish/pectoralFin/pectoral_fin_16.png';
+import pectoral_fin_17_image from '../../public/images/fish/pectoralFin/pectoral_fin_17.png';
+import pectoral_fin_2_image from '../../public/images/fish/pectoralFin/pectoral_fin_2.png';
+import pectoral_fin_3_image from '../../public/images/fish/pectoralFin/pectoral_fin_3.png';
+import pectoral_fin_4_image from '../../public/images/fish/pectoralFin/pectoral_fin_4.png';
+import pectoral_fin_5_image from '../../public/images/fish/pectoralFin/pectoral_fin_5.png';
+import pectoral_fin_6_image from '../../public/images/fish/pectoralFin/pectoral_fin_6.png';
+import pectoral_fin_7_image from '../../public/images/fish/pectoralFin/pectoral_fin_7.png';
+import pectoral_fin_8_image from '../../public/images/fish/pectoralFin/pectoral_fin_8.png';
+import pectoral_fin_9_image from '../../public/images/fish/pectoralFin/pectoral_fin_9.png';
 
-// Eye images
-import XD_eyes_1_image from '../../public/images/fish/eyes/XD_eyes_1.png'
-import both_eyebrows_raised_1_image from '../../public/images/fish/eyes/both_eyebrows_raised_1.png'
-import both_eyebrows_raised_2_image from '../../public/images/fish/eyes/both_eyebrows_raised_2.png'
-import cute_1_image from '../../public/images/fish/eyes/cute_1.png'
-import eyebrow_angry_1_image from '../../public/images/fish/eyes/eyebrow_angry_1.png'
-import eyebrow_raise_1_image from '../../public/images/fish/eyes/eyebrow_raise_1.png'
-import eyebrows_looking_left_1_image from '../../public/images/fish/eyes/eyebrows_looking_left_1.png'
-import eyebrows_looking_right_1_image from '../../public/images/fish/eyes/eyebrows_looking_right_1.png'
-import eyelids_1_image from '../../public/images/fish/eyes/eyelids_1.png'
-import eyelids_2_image from '../../public/images/fish/eyes/eyelids_2.png'
-import eyes_closed_1_image from '../../public/images/fish/eyes/eyes_closed_1.png'
-import eyes_closed_eyebrows_1_image from '../../public/images/fish/eyes/eyes_closed_eyebrows_1.png'
-import flat_bottom_1_image from '../../public/images/fish/eyes/flat_bottom_1.png'
-import flat_eyebrows_1_image from '../../public/images/fish/eyes/flat_eyebrows_1.png'
-import flat_eyelids_1_image from '../../public/images/fish/eyes/flat_eyelids_1.png'
-import flat_top_1_image from '../../public/images/fish/eyes/flat_top_1.png'
-import glasses_1_image from '../../public/images/fish/eyes/glasses_1.png'
-import happy_1_image from '../../public/images/fish/eyes/happy_1.png'
-import happy_eyebrows_1_image from '../../public/images/fish/eyes/happy_eyebrows_1.png'
-import large_pupil_1_image from '../../public/images/fish/eyes/large_pupil_1.png'
-import looking_down_1_image from '../../public/images/fish/eyes/looking_down_1.png'
-import looking_up_1_image from '../../public/images/fish/eyes/looking_up_1.png'
-import slanted_corner_down_1_image from '../../public/images/fish/eyes/slanted_corner_down_1.png'
-import slanted_corner_down_2_image from '../../public/images/fish/eyes/slanted_corner_down_2.png'
-import slanted_corner_up_1_image from '../../public/images/fish/eyes/slanted_corner_up_1.png'
-import slanted_corner_up_2_image from '../../public/images/fish/eyes/slanted_corner_up_2.png'
-import small_1_image from '../../public/images/fish/eyes/small_1.png'
+import dorsal_fin_1_image from '../../public/images/fish/dorsalFin/dorsal_fin_1.png';
+import dorsal_fin_10_image from '../../public/images/fish/dorsalFin/dorsal_fin_10.png';
+import dorsal_fin_11_image from '../../public/images/fish/dorsalFin/dorsal_fin_11.png';
+import dorsal_fin_12_image from '../../public/images/fish/dorsalFin/dorsal_fin_12.png';
+import dorsal_fin_13_image from '../../public/images/fish/dorsalFin/dorsal_fin_13.png';
+import dorsal_fin_14_image from '../../public/images/fish/dorsalFin/dorsal_fin_14.png';
+import dorsal_fin_15_image from '../../public/images/fish/dorsalFin/dorsal_fin_15.png';
+import dorsal_fin_16_image from '../../public/images/fish/dorsalFin/dorsal_fin_16.png';
+import dorsal_fin_17_image from '../../public/images/fish/dorsalFin/dorsal_fin_17.png';
+import dorsal_fin_2_image from '../../public/images/fish/dorsalFin/dorsal_fin_2.png';
+import dorsal_fin_3_image from '../../public/images/fish/dorsalFin/dorsal_fin_3.png';
+import dorsal_fin_4_image from '../../public/images/fish/dorsalFin/dorsal_fin_4.png';
+import dorsal_fin_5_image from '../../public/images/fish/dorsalFin/dorsal_fin_5.png';
+import dorsal_fin_6_image from '../../public/images/fish/dorsalFin/dorsal_fin_6.png';
+import dorsal_fin_7_image from '../../public/images/fish/dorsalFin/dorsal_fin_7.png';
+import dorsal_fin_8_image from '../../public/images/fish/dorsalFin/dorsal_fin_8.png';
+import dorsal_fin_9_image from '../../public/images/fish/dorsalFin/dorsal_fin_9.png';
 
-// Mouth images
-import cheeks_frown_1_image from '../../public/images/fish/mouth/cheeks_frown_1.png'
-import cheeks_smile_1_image from '../../public/images/fish/mouth/cheeks_smile_1.png'
-import lips_1_image from '../../public/images/fish/mouth/lips_1.png'
-import lips_2_image from '../../public/images/fish/mouth/lips_2.png'
-import lips_3_image from '../../public/images/fish/mouth/lips_3.png'
-import open_frown_1_image from '../../public/images/fish/mouth/open_frown_1.png'
-import open_frown_2_image from '../../public/images/fish/mouth/open_frown_2.png'
-import open_smile_1_image from '../../public/images/fish/mouth/open_smile_1.png'
-import open_smile_2_image from '../../public/images/fish/mouth/open_smile_2.png'
-import square_teeth_1_image from '../../public/images/fish/mouth/square_teeth_1.png'
-import square_teeth_frown_1_image from '../../public/images/fish/mouth/square_teeth_frown_1.png'
-import square_teeth_smile_1_image from '../../public/images/fish/mouth/square_teeth_smile_1.png'
-import teeth_frown_1_image from '../../public/images/fish/mouth/teeth_frown_1.png'
-import teeth_frown_2_image from '../../public/images/fish/mouth/teeth_frown_2.png'
-import teeth_frown_3_image from '../../public/images/fish/mouth/teeth_frown_3.png'
-import teeth_lips_open_1_image from '../../public/images/fish/mouth/teeth_lips_open_1.png'
-import teeth_lips_open_2_image from '../../public/images/fish/mouth/teeth_lips_open_2.png'
-import teeth_open_1_image from '../../public/images/fish/mouth/teeth_open_1.png'
-import teeth_open_2_image from '../../public/images/fish/mouth/teeth_open_2.png'
-import teeth_smile_1_image from '../../public/images/fish/mouth/teeth_smile_1.png'
-import teeth_smile_2_image from '../../public/images/fish/mouth/teeth_smile_2.png'
-import teeth_smile_3_image from '../../public/images/fish/mouth/teeth_smile_3.png'
-import tongue_frown_1_image from '../../public/images/fish/mouth/tongue_frown_1.png'
-import tongue_out_left_1_image from '../../public/images/fish/mouth/tongue_out_left_1.png'
-import tongue_out_right_1_image from '../../public/images/fish/mouth/tongue_out_right_1.png'
-import tongue_smile_1_image from '../../public/images/fish/mouth/tongue_smile_1.png'
+import tail_1_image from '../../public/images/fish/tailFin/tail_1.png';
+import tail_10_image from '../../public/images/fish/tailFin/tail_10.png';
+import tail_11_image from '../../public/images/fish/tailFin/tail_11.png';
+import tail_12_image from '../../public/images/fish/tailFin/tail_12.png';
+import tail_13_image from '../../public/images/fish/tailFin/tail_13.png';
+import tail_14_image from '../../public/images/fish/tailFin/tail_14.png';
+import tail_15_image from '../../public/images/fish/tailFin/tail_15.png';
+import tail_16_image from '../../public/images/fish/tailFin/tail_16.png';
+import tail_17_image from '../../public/images/fish/tailFin/tail_17.png';
+import tail_2_image from '../../public/images/fish/tailFin/tail_2.png';
+import tail_3_image from '../../public/images/fish/tailFin/tail_3.png';
+import tail_4_image from '../../public/images/fish/tailFin/tail_4.png';
+import tail_5_image from '../../public/images/fish/tailFin/tail_5.png';
+import tail_6_image from '../../public/images/fish/tailFin/tail_6.png';
+import tail_7_image from '../../public/images/fish/tailFin/tail_7.png';
+import tail_8_image from '../../public/images/fish/tailFin/tail_8.png';
+import tail_9_image from '../../public/images/fish/tailFin/tail_9.png';
 
-import pectoral_fin_1_image from '../../public/images/fish/pectoralFin/pectoral_fin_1.png'
-import pectoral_fin_10_image from '../../public/images/fish/pectoralFin/pectoral_fin_10.png'
-import pectoral_fin_11_image from '../../public/images/fish/pectoralFin/pectoral_fin_11.png'
-import pectoral_fin_12_image from '../../public/images/fish/pectoralFin/pectoral_fin_12.png'
-import pectoral_fin_13_image from '../../public/images/fish/pectoralFin/pectoral_fin_13.png'
-import pectoral_fin_14_image from '../../public/images/fish/pectoralFin/pectoral_fin_14.png'
-import pectoral_fin_15_image from '../../public/images/fish/pectoralFin/pectoral_fin_15.png'
-import pectoral_fin_16_image from '../../public/images/fish/pectoralFin/pectoral_fin_16.png'
-import pectoral_fin_17_image from '../../public/images/fish/pectoralFin/pectoral_fin_17.png'
-import pectoral_fin_18_image from '../../public/images/fish/pectoralFin/pectoral_fin_18.png'
-import pectoral_fin_2_image from '../../public/images/fish/pectoralFin/pectoral_fin_2.png'
-import pectoral_fin_3_image from '../../public/images/fish/pectoralFin/pectoral_fin_3.png'
-import pectoral_fin_4_image from '../../public/images/fish/pectoralFin/pectoral_fin_4.png'
-import pectoral_fin_5_image from '../../public/images/fish/pectoralFin/pectoral_fin_5.png'
-import pectoral_fin_6_image from '../../public/images/fish/pectoralFin/pectoral_fin_6.png'
-import pectoral_fin_7_image from '../../public/images/fish/pectoralFin/pectoral_fin_7.png'
-import pectoral_fin_8_image from '../../public/images/fish/pectoralFin/pectoral_fin_8.png'
-import pectoral_fin_9_image from '../../public/images/fish/pectoralFin/pectoral_fin_9.png'
+import circle_1_image from '../../public/images/fish/body/circle_1.png';
+import circle_2_image from '../../public/images/fish/body/circle_2.png';
+import other_1_image from '../../public/images/fish/body/other_1.png';
+import other_2_image from '../../public/images/fish/body/other_2.png';
+import other_3_image from '../../public/images/fish/body/other_3.png';
+import other_4_image from '../../public/images/fish/body/other_4.png';
+import other_5_image from '../../public/images/fish/body/other_5.png';
+import oval_1_image from '../../public/images/fish/body/oval_1.png';
+import oval_2_image from '../../public/images/fish/body/oval_2.png';
+import oval_3_image from '../../public/images/fish/body/oval_3.png';
+import oval_4_image from '../../public/images/fish/body/oval_4.png';
+import rectangle_1_image from '../../public/images/fish/body/rectangle_1.png';
+import rectangle_2_image from '../../public/images/fish/body/rectangle_2.png';
+import rectangle_3_image from '../../public/images/fish/body/rectangle_3.png';
+import triangle2_image from '../../public/images/fish/body/triangle2.png';
+import triangle3_image from '../../public/images/fish/body/triangle3.png';
+import triangle_1_image from '../../public/images/fish/body/triangle_1.png';
+import triangle_2_image from '../../public/images/fish/body/triangle_2.png';
+import triangle_3_image from '../../public/images/fish/body/triangle_3.png';
 
-import dorsal_fin_1_image from '../../public/images/fish/dorsalFin/dorsal_fin_1.png'
-import dorsal_fin_10_image from '../../public/images/fish/dorsalFin/dorsal_fin_10.png'
-import dorsal_fin_11_image from '../../public/images/fish/dorsalFin/dorsal_fin_11.png'
-import dorsal_fin_12_image from '../../public/images/fish/dorsalFin/dorsal_fin_12.png'
-import dorsal_fin_13_image from '../../public/images/fish/dorsalFin/dorsal_fin_13.png'
-import dorsal_fin_14_image from '../../public/images/fish/dorsalFin/dorsal_fin_14.png'
-import dorsal_fin_15_image from '../../public/images/fish/dorsalFin/dorsal_fin_15.png'
-import dorsal_fin_16_image from '../../public/images/fish/dorsalFin/dorsal_fin_16.png'
-import dorsal_fin_17_image from '../../public/images/fish/dorsalFin/dorsal_fin_17.png'
-import dorsal_fin_2_image from '../../public/images/fish/dorsalFin/dorsal_fin_2.png'
-import dorsal_fin_3_image from '../../public/images/fish/dorsalFin/dorsal_fin_3.png'
-import dorsal_fin_4_image from '../../public/images/fish/dorsalFin/dorsal_fin_4.png'
-import dorsal_fin_5_image from '../../public/images/fish/dorsalFin/dorsal_fin_5.png'
-import dorsal_fin_6_image from '../../public/images/fish/dorsalFin/dorsal_fin_6.png'
-import dorsal_fin_7_image from '../../public/images/fish/dorsalFin/dorsal_fin_7.png'
-import dorsal_fin_8_image from '../../public/images/fish/dorsalFin/dorsal_fin_8.png'
-import dorsal_fin_9_image from '../../public/images/fish/dorsalFin/dorsal_fin_9.png'
+import eyebrow_raise_1_image from '../../public/images/fish/eyes/eyebrow_raise_1.png';
+import eyes1_image from '../../public/images/fish/eyes/eyes1.png';
+import eyes10_image from '../../public/images/fish/eyes/eyes10.png';
+import eyes11_image from '../../public/images/fish/eyes/eyes11.png';
+import eyes12_image from '../../public/images/fish/eyes/eyes12.png';
+import eyes13_image from '../../public/images/fish/eyes/eyes13.png';
+import eyes14_image from '../../public/images/fish/eyes/eyes14.png';
+import eyes2_image from '../../public/images/fish/eyes/eyes2.png';
+import eyes3_image from '../../public/images/fish/eyes/eyes3.png';
+import eyes4_image from '../../public/images/fish/eyes/eyes4.png';
+import eyes5_image from '../../public/images/fish/eyes/eyes5.png';
+import eyes6_image from '../../public/images/fish/eyes/eyes6.png';
+import eyes7_image from '../../public/images/fish/eyes/eyes7.png';
+import eyes8_image from '../../public/images/fish/eyes/eyes8.png';
+import eyes9_image from '../../public/images/fish/eyes/eyes9.png';
+import glasses_1_image from '../../public/images/fish/eyes/glasses_1.png';
+import small_1_image from '../../public/images/fish/eyes/small_1.png';
 
-import tail_1_image from '../../public/images/fish/tailFin/tail_1.png'
-import tail_10_image from '../../public/images/fish/tailFin/tail_10.png'
-import tail_11_image from '../../public/images/fish/tailFin/tail_11.png'
-import tail_12_image from '../../public/images/fish/tailFin/tail_12.png'
-import tail_13_image from '../../public/images/fish/tailFin/tail_13.png'
-import tail_14_image from '../../public/images/fish/tailFin/tail_14.png'
-import tail_15_image from '../../public/images/fish/tailFin/tail_15.png'
-import tail_16_image from '../../public/images/fish/tailFin/tail_16.png'
-import tail_17_image from '../../public/images/fish/tailFin/tail_17.png'
-import tail_2_image from '../../public/images/fish/tailFin/tail_2.png'
-import tail_3_image from '../../public/images/fish/tailFin/tail_3.png'
-import tail_4_image from '../../public/images/fish/tailFin/tail_4.png'
-import tail_5_image from '../../public/images/fish/tailFin/tail_5.png'
-import tail_6_image from '../../public/images/fish/tailFin/tail_6.png'
-import tail_7_image from '../../public/images/fish/tailFin/tail_7.png'
-import tail_8_image from '../../public/images/fish/tailFin/tail_8.png'
-import tail_9_image from '../../public/images/fish/tailFin/tail_9.png'
-
+import mouth1_image from '../../public/images/fish/mouth/mouth1.png';
+import mouth10_image from '../../public/images/fish/mouth/mouth10.png';
+import mouth11_image from '../../public/images/fish/mouth/mouth11.png';
+import mouth12_image from '../../public/images/fish/mouth/mouth12.png';
+import mouth13_image from '../../public/images/fish/mouth/mouth13.png';
+import mouth14_image from '../../public/images/fish/mouth/mouth14.png';
+import mouth15_image from '../../public/images/fish/mouth/mouth15.png';
+import mouth16_image from '../../public/images/fish/mouth/mouth16.png';
+import mouth17_image from '../../public/images/fish/mouth/mouth17.png';
+import mouth2_image from '../../public/images/fish/mouth/mouth2.png';
+import mouth3_image from '../../public/images/fish/mouth/mouth3.png';
+import mouth4_image from '../../public/images/fish/mouth/mouth4.png';
+import mouth5_image from '../../public/images/fish/mouth/mouth5.png';
+import mouth6_image from '../../public/images/fish/mouth/mouth6.png';
+import mouth7_image from '../../public/images/fish/mouth/mouth7.png';
+import mouth8_image from '../../public/images/fish/mouth/mouth8.png';
+import mouth9_image from '../../public/images/fish/mouth/mouth9.png';
 
 // Describe the different body parts of the fish. The object
 // is ordered by its render dependency (i.e., dorsalFin should be rendered
@@ -164,505 +142,401 @@ const fishComponents = {
   bodies: {
     circle_1: {
       src: circle_1_image,
-      anchor: [null, null],
-      eyeAnchor: [null, null],
-      mouthAnchor: [null, null],
-      pectoralFinBackAnchor: [null, null],
-      pectoralFinFrontAnchor: [null, null],
-      dorsalFinAnchor: [null, null],
-      tailAnchor: [null, null],
-      knnData: [2032, null],
+      anchor: [50, 50],
+      eyeAnchor: [6, 10],
+      mouthAnchor: [8, 50],
+      pectoralFinBackAnchor: [5, 76],
+      pectoralFinFrontAnchor: [56, 82],
+      dorsalFinAnchor: [40, 14],
+      tailAnchor: [92, 50],
+      knnData: [8004, BodyShape.CIRCLE],
       type: FishBodyPart.BODY
     },
     circle_2: {
       src: circle_2_image,
-      anchor: [null, null],
-      eyeAnchor: [null, null],
-      mouthAnchor: [null, null],
-      pectoralFinBackAnchor: [null, null],
-      pectoralFinFrontAnchor: [null, null],
-      dorsalFinAnchor: [null, null],
-      tailAnchor: [null, null],
-      knnData: [2029, null],
+      anchor: [50, 50],
+      eyeAnchor: [6, 9],
+      mouthAnchor: [11, 42],
+      pectoralFinBackAnchor: [32, 74],
+      pectoralFinFrontAnchor: [70, 74],
+      dorsalFinAnchor: [36, 10],
+      tailAnchor: [88, 53],
+      knnData: [7892, BodyShape.OVAL],
       type: FishBodyPart.BODY
     },
     other_1: {
       src: other_1_image,
-      anchor: [null, null],
-      eyeAnchor: [null, null],
-      mouthAnchor: [null, null],
-      pectoralFinBackAnchor: [null, null],
-      pectoralFinFrontAnchor: [null, null],
-      dorsalFinAnchor: [null, null],
-      tailAnchor: [null, null],
-      knnData: [1827, null],
+      anchor: [50, 50],
+      eyeAnchor: [8, -2],
+      mouthAnchor: [9, 22],
+      pectoralFinBackAnchor: [32, 58],
+      pectoralFinFrontAnchor: [80, 60],
+      dorsalFinAnchor: [33, 15],
+      tailAnchor: [130, 15],
+      knnData: [7150, BodyShape.OTHER],
       type: FishBodyPart.BODY
     },
     other_2: {
       src: other_2_image,
-      anchor: [null, null],
-      eyeAnchor: [null, null],
-      mouthAnchor: [null, null],
-      pectoralFinBackAnchor: [null, null],
-      pectoralFinFrontAnchor: [null, null],
-      dorsalFinAnchor: [null, null],
-      tailAnchor: [null, null],
-      knnData: [2626, null],
+      anchor: [50, 50],
+      eyeAnchor: [25, 29],
+      mouthAnchor: [30, 60],
+      pectoralFinBackAnchor: [22, 100],
+      pectoralFinFrontAnchor: [80, 100],
+      dorsalFinAnchor: [50, 20],
+      tailAnchor: [120, 50],
+      knnData: [10223, BodyShape.SQUARE],
       type: FishBodyPart.BODY
     },
     other_3: {
       src: other_3_image,
-      anchor: [null, null],
-      eyeAnchor: [null, null],
-      mouthAnchor: [null, null],
-      pectoralFinBackAnchor: [null, null],
-      pectoralFinFrontAnchor: [null, null],
-      dorsalFinAnchor: [null, null],
-      tailAnchor: [null, null],
-      knnData: [1488, null],
+      anchor: [50, 40],
+      eyeAnchor: [4, 12],
+      mouthAnchor: [8, 44],
+      pectoralFinBackAnchor: [2, 60],
+      pectoralFinFrontAnchor: [50, 60],
+      dorsalFinAnchor: [46, 14],
+      tailAnchor: [70, 40],
+      knnData: [5782, BodyShape.OTHER],
       type: FishBodyPart.BODY
     },
     other_4: {
       src: other_4_image,
-      anchor: [null, null],
-      eyeAnchor: [null, null],
-      mouthAnchor: [null, null],
-      pectoralFinBackAnchor: [null, null],
-      pectoralFinFrontAnchor: [null, null],
-      dorsalFinAnchor: [null, null],
-      tailAnchor: [null, null],
-      knnData: [2417, null],
+      anchor: [50, 40],
+      eyeAnchor: [15, 17],
+      mouthAnchor: [20, 60],
+      pectoralFinBackAnchor: [22, 88],
+      pectoralFinFrontAnchor: [68, 90],
+      dorsalFinAnchor: [42, 10],
+      tailAnchor: [100, 57],
+      knnData: [9524, BodyShape.OTHER],
       type: FishBodyPart.BODY
     },
     other_5: {
       src: other_5_image,
-      anchor: [null, null],
-      eyeAnchor: [null, null],
-      mouthAnchor: [null, null],
-      pectoralFinBackAnchor: [null, null],
-      pectoralFinFrontAnchor: [null, null],
-      dorsalFinAnchor: [null, null],
-      tailAnchor: [null, null],
-      knnData: [2371, null],
+      anchor: [50, 40],
+      eyeAnchor: [6, 25],
+      mouthAnchor: [2, 45],
+      pectoralFinBackAnchor: [10, 70],
+      pectoralFinFrontAnchor: [62, 70],
+      dorsalFinAnchor: [28, 20],
+      tailAnchor: [110, 50],
+      knnData: [9338, BodyShape.OTHER],
       type: FishBodyPart.BODY
     },
     oval_1: {
       src: oval_1_image,
-      anchor: [null, null],
-      eyeAnchor: [null, null],
-      mouthAnchor: [null, null],
-      pectoralFinBackAnchor: [null, null],
-      pectoralFinFrontAnchor: [null, null],
-      dorsalFinAnchor: [null, null],
-      tailAnchor: [null, null],
-      knnData: [2376, null],
+      anchor: [50, 40],
+      eyeAnchor: [9, 12],
+      mouthAnchor: [13, 46],
+      pectoralFinBackAnchor: [20, 88],
+      pectoralFinFrontAnchor: [60, 84],
+      dorsalFinAnchor: [20, 20],
+      tailAnchor: [110, 50],
+      knnData: [9344, BodyShape.OVAL],
       type: FishBodyPart.BODY
     },
     oval_2: {
       src: oval_2_image,
-      anchor: [null, null],
-      eyeAnchor: [null, null],
-      mouthAnchor: [null, null],
-      pectoralFinBackAnchor: [null, null],
-      pectoralFinFrontAnchor: [null, null],
-      dorsalFinAnchor: [null, null],
-      tailAnchor: [null, null],
-      knnData: [1530, null],
+      anchor: [50, 40],
+      eyeAnchor: [11, 0],
+      mouthAnchor: [11, 30],
+      pectoralFinBackAnchor: [8, 50],
+      pectoralFinFrontAnchor: [60, 50],
+      dorsalFinAnchor: [44, 15],
+      tailAnchor: [105, 42],
+      knnData: [5985, BodyShape.OVAL],
       type: FishBodyPart.BODY
     },
     oval_3: {
       src: oval_3_image,
-      anchor: [null, null],
-      eyeAnchor: [null, null],
-      mouthAnchor: [null, null],
-      pectoralFinBackAnchor: [null, null],
-      pectoralFinFrontAnchor: [null, null],
-      dorsalFinAnchor: [null, null],
-      tailAnchor: [null, null],
-      knnData: [1956, null],
+      anchor: [50, 40],
+      eyeAnchor: [10, 7],
+      mouthAnchor: [12, 40],
+      pectoralFinBackAnchor: [27, 64],
+      pectoralFinFrontAnchor: [60, 64],
+      dorsalFinAnchor: [30, 15],
+      tailAnchor: [130, 39],
+      knnData: [7642, BodyShape.OVAL],
       type: FishBodyPart.BODY
     },
     oval_4: {
       src: oval_4_image,
-      anchor: [null, null],
-      eyeAnchor: [null, null],
-      mouthAnchor: [null, null],
-      pectoralFinBackAnchor: [null, null],
-      pectoralFinFrontAnchor: [null, null],
-      dorsalFinAnchor: [null, null],
-      tailAnchor: [null, null],
-      knnData: [1818, null],
+      anchor: [50, 40],
+      eyeAnchor: [10, 10],
+      mouthAnchor: [15, 40],
+      pectoralFinBackAnchor: [35, 62],
+      pectoralFinFrontAnchor: [80, 60],
+      dorsalFinAnchor: [25, 20],
+      tailAnchor: [120, 40],
+      knnData: [7129, BodyShape.OVAL],
       type: FishBodyPart.BODY
     },
     rectangle_1: {
       src: rectangle_1_image,
-      anchor: [null, null],
-      eyeAnchor: [null, null],
-      mouthAnchor: [null, null],
-      pectoralFinBackAnchor: [null, null],
-      pectoralFinFrontAnchor: [null, null],
-      dorsalFinAnchor: [null, null],
-      tailAnchor: [null, null],
-      knnData: [2330, null],
+      anchor: [50, 40],
+      eyeAnchor: [2, 5],
+      mouthAnchor: [5, 35],
+      pectoralFinBackAnchor: [26, 64],
+      pectoralFinFrontAnchor: [62, 64],
+      dorsalFinAnchor: [42, 20],
+      tailAnchor: [126, 37],
+      knnData: [9588, BodyShape.SQUARE],
       type: FishBodyPart.BODY
     },
     rectangle_2: {
       src: rectangle_2_image,
-      anchor: [null, null],
-      eyeAnchor: [null, null],
-      mouthAnchor: [null, null],
-      pectoralFinBackAnchor: [null, null],
-      pectoralFinFrontAnchor: [null, null],
-      dorsalFinAnchor: [null, null],
-      tailAnchor: [null, null],
-      knnData: [2401, null],
+      anchor: [50, 40],
+      eyeAnchor: [10, 11],
+      mouthAnchor: [8, 40],
+      pectoralFinBackAnchor: [2, 76],
+      pectoralFinFrontAnchor: [60, 80],
+      dorsalFinAnchor: [7, 10],
+      tailAnchor: [100, 45],
+      knnData: [9224, BodyShape.SQUARE],
       type: FishBodyPart.BODY
     },
     rectangle_3: {
       src: rectangle_3_image,
-      anchor: [null, null],
-      eyeAnchor: [null, null],
-      mouthAnchor: [null, null],
-      pectoralFinBackAnchor: [null, null],
-      pectoralFinFrontAnchor: [null, null],
-      dorsalFinAnchor: [null, null],
-      tailAnchor: [null, null],
-      knnData: [1070, null],
+      anchor: [50, 40],
+      eyeAnchor: [2, 1],
+      mouthAnchor: [5, 22],
+      pectoralFinBackAnchor: [40, 28],
+      pectoralFinFrontAnchor: [54, 32],
+      dorsalFinAnchor: [45, 10],
+      tailAnchor: [100, 21],
+      knnData: [4243, BodyShape.OVAL],
+      type: FishBodyPart.BODY
+    },
+    triangle2: {
+      src: triangle2_image,
+      anchor: [50, 40],
+      eyeAnchor: [7, 70],
+      mouthAnchor: [15, 90],
+      pectoralFinBackAnchor: [24, 110],
+      pectoralFinFrontAnchor: [44, 124],
+      dorsalFinAnchor: [66, 10],
+      tailAnchor: [70, 44],
+      knnData: [6902, BodyShape.TRIANGLE],
+      type: FishBodyPart.BODY
+    },
+    triangle3: {
+      src: triangle3_image,
+      anchor: [50, 40],
+      eyeAnchor: [20, 35],
+      mouthAnchor: [26, 68],
+      pectoralFinBackAnchor: [40, 92],
+      pectoralFinFrontAnchor: [62, 94],
+      dorsalFinAnchor: [49, 10],
+      tailAnchor: [80, 60],
+      knnData: [6743, BodyShape.TRIANGLE],
       type: FishBodyPart.BODY
     },
     triangle_1: {
       src: triangle_1_image,
-      anchor: [null, null],
-      eyeAnchor: [null, null],
-      mouthAnchor: [null, null],
-      pectoralFinBackAnchor: [null, null],
-      pectoralFinFrontAnchor: [null, null],
-      dorsalFinAnchor: [null, null],
-      tailAnchor: [null, null],
-      knnData: [2113, null],
+      anchor: [50, 40],
+      eyeAnchor: [14, 46],
+      mouthAnchor: [20, 65],
+      pectoralFinBackAnchor: [56, 101],
+      pectoralFinFrontAnchor: [80, 100],
+      dorsalFinAnchor: [60, 10],
+      tailAnchor: [90, 66],
+      knnData: [8285, BodyShape.TRIANGLE],
       type: FishBodyPart.BODY
-    },
-    triangle_2: {
-      src: triangle_2_image,
-      anchor: [null, null],
-      eyeAnchor: [null, null],
-      mouthAnchor: [null, null],
-      pectoralFinBackAnchor: [null, null],
-      pectoralFinFrontAnchor: [null, null],
-      dorsalFinAnchor: [null, null],
-      tailAnchor: [null, null],
-      knnData: [1802, null],
-      type: FishBodyPart.BODY
-    },
-    triangle_3: {
-      src: triangle_3_image,
-      anchor: [null, null],
-      eyeAnchor: [null, null],
-      mouthAnchor: [null, null],
-      pectoralFinBackAnchor: [null, null],
-      pectoralFinFrontAnchor: [null, null],
-      dorsalFinAnchor: [null, null],
-      tailAnchor: [null, null],
-      knnData: [1727, null],
-      type: FishBodyPart.BODY
-    },
+    }
   },
   // EYE KNN DATA: [eye area, eye:pupil ratio]
   eyes: {
-    XD_eyes_1: {
-      src: XD_eyes_1_image,
-      knnData: [109, 1],
-      type: FishBodyPart.EYE
-    },
-    both_eyebrows_raised_1: {
-      src: both_eyebrows_raised_1_image,
-      knnData: [206, 1.6220472440944882],
-      type: FishBodyPart.EYE
-    },
-    both_eyebrows_raised_2: {
-      src: both_eyebrows_raised_2_image,
-      knnData: [206, 1.6349206349206349],
-      type: FishBodyPart.EYE
-    },
-    cute_1: {
-      src: cute_1_image,
-      knnData: [250, 1.3157894736842106],
-      type: FishBodyPart.EYE
-    },
-    eyebrow_angry_1: {
-      src: eyebrow_angry_1_image,
-      knnData: [120, 1.3043478260869565],
-      type: FishBodyPart.EYE
-    },
     eyebrow_raise_1: {
       src: eyebrow_raise_1_image,
-      knnData: [310, 4.920634920634921],
+      knnData: [1186, 5.647619047619048],
       type: FishBodyPart.EYE
     },
-    eyebrows_looking_left_1: {
-      src: eyebrows_looking_left_1_image,
-      knnData: [216, 1.6488549618320612],
+    eyes1: {
+      src: eyes1_image,
+      knnData: [455, 1.9612068965517242],
       type: FishBodyPart.EYE
     },
-    eyebrows_looking_right_1: {
-      src: eyebrows_looking_right_1_image,
-      knnData: [216, 1.6240601503759398],
+    eyes10: {
+      src: eyes10_image,
+      knnData: [750, 1.8564356435643565],
       type: FishBodyPart.EYE
     },
-    eyelids_1: {
-      src: eyelids_1_image,
-      knnData: [279, 1.7116564417177915],
+    eyes11: {
+      src: eyes11_image,
+      knnData: [437, 1.39171974522293],
       type: FishBodyPart.EYE
     },
-    eyelids_2: {
-      src: eyelids_2_image,
-      knnData: [279, 1.74375],
+    eyes12: {
+      src: eyes12_image,
+      knnData: [717, 4.910958904109589],
       type: FishBodyPart.EYE
     },
-    eyes_closed_1: {
-      src: eyes_closed_1_image,
-      knnData: [40, 1],
+    eyes13: {
+      src: eyes13_image,
+      knnData: [301, 4.703125],
       type: FishBodyPart.EYE
     },
-    eyes_closed_eyebrows_1: {
-      src: eyes_closed_eyebrows_1_image,
-      knnData: [150, 1],
+    eyes14: {
+      src: eyes14_image,
+      knnData: [496, 1.6533333333333333],
       type: FishBodyPart.EYE
     },
-    flat_bottom_1: {
-      src: flat_bottom_1_image,
-      knnData: [126, 1.5555555555555556],
+    eyes2: {
+      src: eyes2_image,
+      knnData: [100, 1],
       type: FishBodyPart.EYE
     },
-    flat_eyebrows_1: {
-      src: flat_eyebrows_1_image,
-      knnData: [125, 1.7123287671232876],
+    eyes3: {
+      src: eyes3_image,
+      knnData: [463, 1.9372384937238494],
       type: FishBodyPart.EYE
     },
-    flat_eyelids_1: {
-      src: flat_eyelids_1_image,
-      knnData: [127, 1.7638888888888888],
+    eyes4: {
+      src: eyes4_image,
+      knnData: [826, 1.7136929460580912],
       type: FishBodyPart.EYE
     },
-    flat_top_1: {
-      src: flat_top_1_image,
-      knnData: [126, 1.5555555555555556],
+    eyes5: {
+      src: eyes5_image,
+      knnData: [472, 1],
+      type: FishBodyPart.EYE
+    },
+    eyes6: {
+      src: eyes6_image,
+      knnData: [972, 2.1315789473684212],
+      type: FishBodyPart.EYE
+    },
+    eyes7: {
+      src: eyes7_image,
+      knnData: [374, 1],
+      type: FishBodyPart.EYE
+    },
+    eyes8: {
+      src: eyes8_image,
+      knnData: [899, 1.4453376205787782],
+      type: FishBodyPart.EYE
+    },
+    eyes9: {
+      src: eyes9_image,
+      knnData: [732, 1.6944444444444444],
       type: FishBodyPart.EYE
     },
     glasses_1: {
       src: glasses_1_image,
-      knnData: [227, 1.5133333333333334],
-      type: FishBodyPart.EYE
-    },
-    happy_1: {
-      src: happy_1_image,
-      knnData: [40, 1],
-      type: FishBodyPart.EYE
-    },
-    happy_eyebrows_1: {
-      src: happy_eyebrows_1_image,
-      knnData: [147, 1],
-      type: FishBodyPart.EYE
-    },
-    large_pupil_1: {
-      src: large_pupil_1_image,
-      knnData: [220, 1.6296296296296295],
-      type: FishBodyPart.EYE
-    },
-    looking_down_1: {
-      src: looking_down_1_image,
-      knnData: [124, 2.7555555555555555],
-      type: FishBodyPart.EYE
-    },
-    looking_up_1: {
-      src: looking_up_1_image,
-      knnData: [113, 3.2285714285714286],
-      type: FishBodyPart.EYE
-    },
-    slanted_corner_down_1: {
-      src: slanted_corner_down_1_image,
-      knnData: [85, 3.269230769230769],
-      type: FishBodyPart.EYE
-    },
-    slanted_corner_down_2: {
-      src: slanted_corner_down_2_image,
-      knnData: [200, 3.389830508474576],
-      type: FishBodyPart.EYE
-    },
-    slanted_corner_up_1: {
-      src: slanted_corner_up_1_image,
-      knnData: [85, 3.5416666666666665],
-      type: FishBodyPart.EYE
-    },
-    slanted_corner_up_2: {
-      src: slanted_corner_up_2_image,
-      knnData: [200, 3.389830508474576],
+      knnData: [841, 1.8402625820568927],
       type: FishBodyPart.EYE
     },
     small_1: {
       src: small_1_image,
-      knnData: [36, 1],
+      knnData: [112, 1.018181818181818],
       type: FishBodyPart.EYE
-    },
+    }
   },
   // MOUTH KNN DATA: [numTeeth, ratio of height:width, MouthExpression]
   mouths: {
-    cheeks_frown_1: {
-      src: cheeks_frown_1_image,
-      knnData: [null, 1.75, null],
-      tinted: foo,
+    mouth1: {
+      src: mouth1_image,
+      knnData: [null, 4.454545454545454, null],
+      tinted: false,
       type: FishBodyPart.MOUTH
     },
-    cheeks_smile_1: {
-      src: cheeks_smile_1_image,
-      knnData: [null, 1.75, null],
-      tinted: foo,
-      type: FishBodyPart.MOUTH
-    },
-    lips_1: {
-      src: lips_1_image,
+    mouth10: {
+      src: mouth10_image,
       knnData: [null, 1.125, null],
-      tinted: foo,
+      tinted: false,
       type: FishBodyPart.MOUTH
     },
-    lips_2: {
-      src: lips_2_image,
-      knnData: [null, 2, null],
-      tinted: foo,
-      type: FishBodyPart.MOUTH
-    },
-    lips_3: {
-      src: lips_3_image,
-      knnData: [null, 0.6428571428571429, null],
-      tinted: foo,
-      type: FishBodyPart.MOUTH
-    },
-    open_frown_1: {
-      src: open_frown_1_image,
-      knnData: [null, 1.6666666666666667, null],
-      tinted: foo,
-      type: FishBodyPart.MOUTH
-    },
-    open_frown_2: {
-      src: open_frown_2_image,
-      knnData: [null, 1.2, null],
-      tinted: foo,
-      type: FishBodyPart.MOUTH
-    },
-    open_smile_1: {
-      src: open_smile_1_image,
-      knnData: [null, 1.6666666666666667, null],
-      tinted: foo,
-      type: FishBodyPart.MOUTH
-    },
-    open_smile_2: {
-      src: open_smile_2_image,
-      knnData: [null, 1.2, null],
-      tinted: foo,
-      type: FishBodyPart.MOUTH
-    },
-    square_teeth_1: {
-      src: square_teeth_1_image,
-      knnData: [null, 2.3333333333333335, null],
-      tinted: foo,
-      type: FishBodyPart.MOUTH
-    },
-    square_teeth_frown_1: {
-      src: square_teeth_frown_1_image,
-      knnData: [null, 1.9, null],
-      tinted: foo,
-      type: FishBodyPart.MOUTH
-    },
-    square_teeth_smile_1: {
-      src: square_teeth_smile_1_image,
-      knnData: [null, 1.9, null],
-      tinted: foo,
-      type: FishBodyPart.MOUTH
-    },
-    teeth_frown_1: {
-      src: teeth_frown_1_image,
-      knnData: [null, 1.9166666666666667, null],
-      tinted: foo,
-      type: FishBodyPart.MOUTH
-    },
-    teeth_frown_2: {
-      src: teeth_frown_2_image,
-      knnData: [null, 1.75, null],
-      tinted: foo,
-      type: FishBodyPart.MOUTH
-    },
-    teeth_frown_3: {
-      src: teeth_frown_3_image,
+    mouth11: {
+      src: mouth11_image,
       knnData: [null, 1.2857142857142858, null],
-      tinted: foo,
+      tinted: false,
       type: FishBodyPart.MOUTH
     },
-    teeth_lips_open_1: {
-      src: teeth_lips_open_1_image,
-      knnData: [null, 1.3333333333333333, null],
-      tinted: foo,
+    mouth12: {
+      src: mouth12_image,
+      knnData: [null, 2.0555555555555554, null],
+      tinted: false,
       type: FishBodyPart.MOUTH
     },
-    teeth_lips_open_2: {
-      src: teeth_lips_open_2_image,
-      knnData: [null, 1.3333333333333333, null],
-      tinted: foo,
+    mouth13: {
+      src: mouth13_image,
+      knnData: [null, 2.3333333333333335, null],
+      tinted: false,
       type: FishBodyPart.MOUTH
     },
-    teeth_open_1: {
-      src: teeth_open_1_image,
-      knnData: [null, 1.2727272727272727, null],
-      tinted: foo,
-      type: FishBodyPart.MOUTH
-    },
-    teeth_open_2: {
-      src: teeth_open_2_image,
+    mouth14: {
+      src: mouth14_image,
       knnData: [null, 2, null],
-      tinted: foo,
+      tinted: false,
       type: FishBodyPart.MOUTH
     },
-    teeth_smile_1: {
-      src: teeth_smile_1_image,
-      knnData: [null, 1.9166666666666667, null],
-      tinted: foo,
+    mouth15: {
+      src: mouth15_image,
+      knnData: [null, 1.263157894736842, null],
+      tinted: false,
       type: FishBodyPart.MOUTH
     },
-    teeth_smile_2: {
-      src: teeth_smile_2_image,
+    mouth16: {
+      src: mouth16_image,
+      knnData: [null, 0.6666666666666666, null],
+      tinted: false,
+      type: FishBodyPart.MOUTH
+    },
+    mouth17: {
+      src: mouth17_image,
+      knnData: [null, 2.25, null],
+      tinted: false,
+      type: FishBodyPart.MOUTH
+    },
+    mouth2: {
+      src: mouth2_image,
+      knnData: [null, 1.3428571428571427, null],
+      tinted: false,
+      type: FishBodyPart.MOUTH
+    },
+    mouth3: {
+      src: mouth3_image,
+      knnData: [null, 1.2727272727272727, null],
+      tinted: false,
+      type: FishBodyPart.MOUTH
+    },
+    mouth4: {
+      src: mouth4_image,
+      knnData: [null, 1.8928571428571428, null],
+      tinted: false,
+      type: FishBodyPart.MOUTH
+    },
+    mouth5: {
+      src: mouth5_image,
+      knnData: [null, 1.8666666666666667, null],
+      tinted: false,
+      type: FishBodyPart.MOUTH
+    },
+    mouth6: {
+      src: mouth6_image,
+      knnData: [null, 2.4, null],
+      tinted: false,
+      type: FishBodyPart.MOUTH
+    },
+    mouth7: {
+      src: mouth7_image,
       knnData: [null, 1.75, null],
-      tinted: foo,
+      tinted: false,
       type: FishBodyPart.MOUTH
     },
-    teeth_smile_3: {
-      src: teeth_smile_3_image,
-      knnData: [null, 1.2, null],
-      tinted: foo,
+    mouth8: {
+      src: mouth8_image,
+      knnData: [null, 1.875, null],
+      tinted: false,
       type: FishBodyPart.MOUTH
     },
-    tongue_frown_1: {
-      src: tongue_frown_1_image,
-      knnData: [null, 1.9285714285714286, null],
-      tinted: foo,
+    mouth9: {
+      src: mouth9_image,
+      knnData: [null, 1.7058823529411764, null],
+      tinted: false,
       type: FishBodyPart.MOUTH
-    },
-    tongue_out_left_1: {
-      src: tongue_out_left_1_image,
-      knnData: [null, 2.375, null],
-      tinted: foo,
-      type: FishBodyPart.MOUTH
-    },
-    tongue_out_right_1: {
-      src: tongue_out_right_1_image,
-      knnData: [null, 2.375, null],
-      tinted: foo,
-      type: FishBodyPart.MOUTH
-    },
-    tongue_smile_1: {
-      src: tongue_smile_1_image,
-      knnData: [null, 1.9285714285714286, null],
-      tinted: foo,
-      type: FishBodyPart.MOUTH
-    },
+    }
   },
   // PECTORAL FIN KNN DATA: [pointiness rank]
   pectoralFinsFront: {
@@ -711,11 +585,6 @@ const fishComponents = {
       knnData: [],
       type: FishBodyPart.PECTORAL_FIN_FRONT
     },
-    pectoral_fin_18: {
-      src: pectoral_fin_18_image,
-      knnData: [],
-      type: FishBodyPart.PECTORAL_FIN_FRONT
-    },
     pectoral_fin_2: {
       src: pectoral_fin_2_image,
       knnData: [],
@@ -755,7 +624,7 @@ const fishComponents = {
       src: pectoral_fin_9_image,
       knnData: [],
       type: FishBodyPart.PECTORAL_FIN_FRONT
-    },
+    }
   },
   pectoralFinsBack: {
     pectoral_fin_1: {
@@ -803,11 +672,6 @@ const fishComponents = {
       knnData: [],
       type: FishBodyPart.PECTORAL_FIN_BACK
     },
-    pectoral_fin_18: {
-      src: pectoral_fin_18_image,
-      knnData: [],
-      type: FishBodyPart.PECTORAL_FIN_BACK
-    },
     pectoral_fin_2: {
       src: pectoral_fin_2_image,
       knnData: [],
@@ -847,7 +711,7 @@ const fishComponents = {
       src: pectoral_fin_9_image,
       knnData: [],
       type: FishBodyPart.PECTORAL_FIN_BACK
-    },
+    }
   },
 
   // DORSAL FIN KNN DATA: []
@@ -936,7 +800,7 @@ const fishComponents = {
       src: dorsal_fin_9_image,
       knnData: [],
       type: FishBodyPart.DORSAL_FIN
-    },
+    }
   },
   // TAIL KNN DATA: []
   tails: {
@@ -1024,7 +888,7 @@ const fishComponents = {
       src: tail_9_image,
       knnData: [],
       type: FishBodyPart.TAIL
-    }, 
+    }
   },
   // COLOR PALETTE KNN DATA: [...bodyRgb, ...finRgb]
   colorPalettes: {
