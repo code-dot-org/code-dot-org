@@ -1,6 +1,6 @@
 Feature: CourseOverview
   Scenario: Viewing course overview signed out
-    Given I am on "http://studio.code.org/courses/csd-2019"
+    Given I am on "http://studio.code.org/courses/csp-2019"
     And I wait to see ".uitest-CourseScript"
 
   Scenario: Viewing course overview as a student not in a section
