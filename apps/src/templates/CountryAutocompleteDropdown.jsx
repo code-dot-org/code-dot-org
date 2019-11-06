@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import loadable from 'loadable-components';
+import loadable from '../util/loadable';
 const VirtualizedSelect = loadable(() => import('./VirtualizedSelect'));
 import i18n from '@cdo/locale';
 import {styles} from './census2017/censusFormStyles';
