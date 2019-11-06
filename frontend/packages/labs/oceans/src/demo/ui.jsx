@@ -720,13 +720,21 @@ class Pond extends React.Component {
 
   render() {
     const state = getState();
-    const pondText = [
-      `Out of ${state.fishData.length} random objects, A.I. identified ${
+    let pondText = [];
+
+    if (state.appMode === 'fishvtrash' || state.appMode === 'creaturesvtrash') {
+      pondText[0] =
+        `Out of ${state.fishData.length} random objects, A.I. identified ${
+          state.totalPondFish
+        } that belong in water.`;
+    } else {
+      pondText[0] =
+        `Out of ${state.fishData.length} objects, I identified ${
         state.totalPondFish
-      } that belong in water.`,
-      'How did A.I. do?',
-      'Choose to Train More or Continue.'
-    ];
+        } that are ${state.word.toUpperCase()}.`;
+    }
+    pondText[1] = 'How did A.I. do?';
+    pondText[2] = 'Choose to Train More or Continue.'
 
     const showFishDetails = !!state.pondClickedFish;
     let pondFishDetailsStyle;
