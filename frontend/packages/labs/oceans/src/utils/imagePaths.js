@@ -30,12 +30,12 @@ export const trashImagePaths = [
 ];
 
 export const seaCreatureImagePaths = [
-  {src: Crab, exclusions: ['biasDemo']},
-  {src: Jellyfish, exclusions: []},
-  {src: Octopus, exclusions: ['biasDemo']},
-  {src: Seahorse, exclusions: []},
-  {src: Snail, exclusions: ['biasDemo']},
-  {src: Starfish, exclusions: ['biasDemo']},
-  {src: Turtle, exclusions: ['biasDemo']},
-  {src: Whale, exclusions: []},
+  Crab,
+  Jellyfish,
+  Octopus,
+  Seahorse,
+  Snail,
+  Starfish,
+  Turtle,
+  Whale
 ];

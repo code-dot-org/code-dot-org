@@ -82,19 +82,12 @@ export const loadAllTrashImages = () => {
 
 // Load all of the sea creature assets and store them
 export const loadAllSeaCreatureImages = () => {
-  const loadImagePromises = seaCreatureImagePaths.map((seaCreature, idx) => {
-    return loadImage({
-      src: seaCreature.src,
-      exclusions: seaCreature.exclusions,
-      idx
-    });
+  const loadImagePromises = seaCreatureImagePaths.map((src, idx) => {
+    return loadImage({src, idx});
   });
   return Promise.all(loadImagePromises).then(results => {
     results.forEach(result => {
-      seaCreatureImages[result.data.idx] = {
-        image: result.img,
-        exclusions: result.data.exclusions
-      };
+      seaCreatureImages[result.data.idx] = result.img;
     });
   });
 };
@@ -363,12 +356,9 @@ export class TrashOceanObject extends OceanObject {
  *
  * */
 export class SeaCreatureOceanObject extends OceanObject {
-  randomize(exclusions) {
-    const possibleSeaCreatures = seaCreatureImages.filter(
-      seaCreature => !seaCreature.exclusions.includes(exclusions)
-    );
-    const idx = Math.floor(Math.random() * possibleSeaCreatures.length);
-    this.image = possibleSeaCreatures[idx].image;
+  randomize() {
+    const idx = Math.floor(Math.random() * seaCreatureImages.length);
+    this.image = seaCreatureImages[idx];
   }
 
   drawToCanvas(canvas, generateLogits = true) {
