@@ -21,5 +21,7 @@ $(document).ready(() => {
   postMilestoneForPageLoad();
 
   // handle click on continue (results in navigating to next puzzle)
-  $('.external').on('click', '.submitButton', onContinue);
+  $('.submitButton').click(function() {
+    onContinue();
+  });
 });
