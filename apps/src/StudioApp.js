@@ -3191,18 +3191,23 @@ StudioApp.prototype.isResponsiveFromConfig = function(config) {
 /**
  * Checks if the level a teacher is viewing of a students has
  * not been started.
+ * For contained levels don't show the banner ever.
+ * Otherwise if its a channel backed level check for the channel. Lastly
+ * if its not a channel backed level and its not free play we know it has
+ * not been started if no progress has been made.
  */
 StudioApp.prototype.isNotStartedLevel = function(config) {
   const progress = getStore().getState().progress;
 
-  //channel backed levels
-  if (
+  if (config.hasContainedLevels) {
+    return false;
+  } else if (
     ['Gamelab', 'Applab', 'Weblab', 'Spritelab', 'Dance'].includes(
       config.levelGameName
     )
   ) {
     return config.readonlyWorkspace && !config.channel;
-  } else if (!config.level.freePlay && !config.level.containedLevelNames) {
+  } else if (!config.level.freePlay) {
     return (
       config.readonlyWorkspace &&
       progress.levelProgress[progress.currentLevelId] === undefined
