@@ -18,7 +18,7 @@ fs.readFile(json_file,
     var jsonParsed = JSON.parse(data);
     var locales = {};
     for (var key in jsonParsed) {
-      if (!key.startsWith("ar.")) {
+      if (key.startsWith("en.")) {
         continue;
       }
       var key_parts = key.split('.');
@@ -50,7 +50,11 @@ fs.readFile(json_file,
           }
         });
     }
-    console.log(JSON.stringify(locales, undefined, '  '));
+    for (var localeCode in locales) {
+      var file_name = "translated_yml/" + localeCode + ".yml";
+      var locale = locales[localeCode];
+      yaml.writeSync(file_name, locale, {"lineWidth": -1});
+    }
   }
 );
 

@@ -24,7 +24,7 @@ def html_to_markdown(string)
   string = string.gsub(/(<strong>|<\/strong>|<b>|<\/b>)/, '**')
   string = string.gsub(/(<i>|<\/i>|<\/ i>)/, '*')
   # I decided strip the br tags because it's less than 1% of the HTML strings
-  string = string.gsub(/(<br>|<br\/>)/, '')
+  string = string.gsub(/(<br>|<br\/>)/, ' ')
   # start loop of converting <a>...</a> to markdown links [...](www...com)
   while has_anchor_tag? string 
     # TODO handle missing " or '?
@@ -111,7 +111,17 @@ I18n.available_locales.each do |locale|
     "zendesk_too_young_message"
   ].each do |key|
     result = find(key, locale)
-    strings[result[:key]] = result[:string] if result
+    if result 
+      markdown_key = result[:key]
+      # this is a special one we are updating because we are stripping just the <br> tags from it
+      if markdown_key != "#{locale}.activerecord.attributes.user.name_example"
+        markdown_key = markdown_key + '_markdown'
+      end
+      string = result[:string]
+      # strip <br/> tags
+      string = string.gsub(/(<br>|<br\/>)/, ' ')
+      strings[markdown_key] = result[:string]
+    end
   end
 end
 puts JSON(strings)
