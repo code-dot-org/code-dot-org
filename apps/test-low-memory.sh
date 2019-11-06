@@ -3,7 +3,7 @@ set -e
 
 NPROC=$(nproc)
 MEM_PER_PROCESS=4096
-GRUNT_CMD="BABEL_ENV=test node --max_old_space_size=${MEM_PER_PROCESS} `npm bin`/grunt"
+GRUNT_CMD="node --max_old_space_size=${MEM_PER_PROCESS} `npm bin`/grunt"
 
 if [ -n "$DRONE" ]; then
   CODECOV=/tmp/codecov.sh
