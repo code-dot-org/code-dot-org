@@ -37,13 +37,10 @@ describe('StageDescriptions', () => {
     );
     assert.equal(wrapper.state('collapsed'), true);
     assert.equal(wrapper.childAt(1).children().length, 1);
-    assert.equal(
-      wrapper
-        .childAt(1)
-        .childAt(0)
-        .type(),
-      'button'
-    );
+
+    const button = wrapper.childAt(1).childAt(0);
+    assert.equal(button.type(), 'button');
+    assert.include(button.text(), 'Expand');
   });
 
   it('uncollapses on click', () => {
@@ -56,20 +53,26 @@ describe('StageDescriptions', () => {
     wrapper.find('button').simulate('click');
     assert.equal(wrapper.state('collapsed'), false);
 
-    // button replaced by a div
-    assert.equal(wrapper.childAt(1).children().length, 1);
-    assert.equal(
-      wrapper
-        .childAt(1)
-        .childAt(0)
-        .type(),
-      'div'
-    );
+    let button = wrapper.childAt(1).childAt(0);
+    assert.equal(button.type(), 'button');
+    assert.include(button.text(), 'Collapse');
+
+    // button followed by a div
+    assert.equal(wrapper.childAt(1).children().length, 2);
+    const descriptions = wrapper.childAt(1).childAt(1);
+    assert.equal(descriptions.type(), 'div');
 
     assert.equal(
-      wrapper.find('button').text(),
+      descriptions.find('button').text(),
       'Import from Curriculum Builder'
     );
+
+    // collapses after subsequent button click
+    button.simulate('click');
+    assert.equal(wrapper.state('collapsed'), true);
+    button = wrapper.childAt(1).childAt(0);
+    assert.include(button.text(), 'Expand');
+    assert.equal(wrapper.childAt(1).children().length, 1);
   });
 
   it('updates button while importing', () => {
@@ -80,16 +83,19 @@ describe('StageDescriptions', () => {
       />
     );
     wrapper.setState({collapsed: false});
+    let descriptions = wrapper.childAt(1).childAt(1);
+
     assert.equal(
-      wrapper.find('button').text(),
+      descriptions.find('button').text(),
       'Import from Curriculum Builder'
     );
 
     // now click import button
-    wrapper.find('button').simulate('click');
+    descriptions.find('button').simulate('click');
 
+    descriptions = wrapper.childAt(1).childAt(1);
     assert.equal(wrapper.state('buttonText'), 'Querying server...');
-    assert.equal(wrapper.find('button').text(), 'Querying server...');
+    assert.equal(descriptions.find('button').text(), 'Querying server...');
   });
 
   it('extracts importedDescriptions/mismatchedStages from response', () => {
@@ -101,7 +107,9 @@ describe('StageDescriptions', () => {
     );
     wrapper.setState({collapsed: false});
     // now click import button
-    wrapper.find('button').simulate('click');
+    const importButton = wrapper.find('button').at(1);
+    assert.equal(importButton.text(), 'Import from Curriculum Builder');
+    importButton.simulate('click');
 
     assert.equal(requests.length, 1);
     assert.equal(
