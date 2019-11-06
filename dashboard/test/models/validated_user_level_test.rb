@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class ValidatedUserLevelTest < ActiveSupport::TestCase
+class UserLevelInfoTest < ActiveSupport::TestCase
   test "can create validated_user_level" do
     validated_user_level = create :validated_user_level
     assert_equal validated_user_level.user_level_id, 1
