@@ -1,7 +1,7 @@
 /** @file Dropdown with positive integer options, used in crypto widget */
 import PropTypes from 'prop-types';
 import React from 'react';
-import loadable from 'loadable-components';
+import loadable from '../util/loadable';
 const VirtualizedSelect = loadable(() =>
   import('../templates/VirtualizedSelect')
 );
