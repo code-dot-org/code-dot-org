@@ -1623,3 +1623,17 @@ hy:
               name: ներածություն
             Nested Loops:
               name: nested Loops
+        k5-onlinepd-copy:
+          stages:
+            Loops:
+              name: loops
+            Conditionals:
+              name: conditionals
+            Events:
+              name: Իրադարձություններ
+            Functions:
+              name: գործառույթները
+            Variables:
+              name: փոփոխականների
+            For Loops:
+              name: For Loops

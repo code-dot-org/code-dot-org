@@ -983,10 +983,6 @@ sv:
         text: slumpad färg
       Mikelab_repeatUntilComplete:
         text: upprepa för evigt
-      Mikelab_sendBad:
-        text: flytta vänster
-      Mikelab_sendGood:
-        text: flytta höger
       Mikelab_setBG:
         options:
           BG:

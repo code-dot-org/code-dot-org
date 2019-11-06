@@ -1124,10 +1124,6 @@
         text: figur {SPRITE} stopper {BEHAVIOR}
       Mikelab_repeatUntilComplete:
         text: gjenta for alltid
-      Mikelab_sendBad:
-        text: flytt til venstre
-      Mikelab_sendGood:
-        text: flytt til høyre
       Mikelab_setBG:
         options:
           BG:

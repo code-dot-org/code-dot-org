@@ -163,9 +163,7 @@ if (envConstants.COVERAGE) {
     loader: 'istanbul-instrumenter-loader',
     include: path.resolve(__dirname, 'src'),
     exclude: [
-      path.resolve(__dirname, 'src', 'lodash.js'),
-
-      // we need to turn off coverage for this file
+      // we need to turn off instrumentation for this file
       // because we have tests that actually make assertions
       // about the contents of the compiled version of this file :(
       path.resolve(__dirname, 'src', 'flappy', 'levels.js')

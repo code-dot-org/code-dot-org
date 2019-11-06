@@ -1082,6 +1082,8 @@ hi:
     time4cs_c3: घासी कच्छ में रहन-सहन
     time4cs_c4: घासी कच्छ पर आक्रामक प्रभाव
     time4cs_c5: घासी कच्छ में नागरिकों पर प्रभाव डालने वाला बदलाव
+    k5_getting_started: शुरू करें
+    k5_next_steps: अगले चरण
   external_links:
     disclaimer: अस्वीकरण
     leaving_domain: अब आप इस डोमेन को ऐसी साइट पर छोड़ रहे हैं, जो Code.org द्वारा
@@ -1289,3 +1291,8 @@ hi:
     privacy_policy: गोपनीयता नीति देखें
     logout: लॉगआउट करें
     true: हाँ
+  page_not_found_title: पृष्ठ नहीं मिला
+  page_not_found_header: '404: पृष्ठ नहीं मिला'
+  page_not_found_description: जो पृष्ठ आप खोज रहे हैं, वह इस पते पर मौजूद नहीं है।
+    वेब पता देखें और दुबारा प्रस्तुत करें। या, हमारे मुख्य पृष्ठ पर जाएं
+  page_not_found_button: मुख्य पृष्ठ पर वापस जाएं

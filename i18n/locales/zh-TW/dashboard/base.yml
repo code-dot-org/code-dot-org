@@ -859,6 +859,8 @@ zh-TW:
     csp_lists: '清單'
     csp_loops: '迴圈'
     dlp: '反思提問'
+    k5_getting_started: '新手上路'
+    k5_next_steps: '下一步'
   external_links:
     disclaimer: 免責聲明
     leaving_domain: 你正要離開這個網域，訪問一個不是由 Code.org 創建的網站。
@@ -1017,3 +1019,5 @@ zh-TW:
     privacy_policy: '隱私權政策'
     logout: '登出'
     yes: '是'
+  page_not_found_title: "找不到頁面"
+  page_not_found_header: ' 404：找不到頁面'

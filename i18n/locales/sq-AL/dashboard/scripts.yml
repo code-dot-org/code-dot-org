@@ -1728,3 +1728,19 @@ sq:
               name: Hyrja
             Nested Loops:
               name: Përsëritjet e Mbivendosura
+        k5-onlinepd-copy:
+          stages:
+            Next Steps:
+              name: Hapat e ardhshme
+            Loops:
+              name: cikle 
+            Conditionals:
+              name: Kushtet
+            Events:
+              name: Ngjarje
+            Functions:
+              name: funksione
+            Variables:
+              name: variabla
+            For Loops:
+              name: Për Ciklet

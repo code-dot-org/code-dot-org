@@ -1222,10 +1222,6 @@ hi:
         text: स्प्राइट {SPRITE} ने{BEHAVIOR} बंद कर दिया
       Mikelab_repeatUntilComplete:
         text: हमेशा दोहराएं
-      Mikelab_sendBad:
-        text: बायें चले
-      Mikelab_sendGood:
-        text: दाहिना चले
       Mikelab_setBG:
         options:
           BG:

@@ -939,10 +939,6 @@ nl:
         text: willekeurige kleur
       Mikelab_repeatUntilComplete:
         text: blijven herhalen
-      Mikelab_sendBad:
-        text: naar links
-      Mikelab_sendGood:
-        text: naar rechts
       Mikelab_setBG:
         options:
           BG:

@@ -270,3 +270,8 @@ level 'PS predictive Applab level test'
 level 'contained_applab_choose2'
 level 'contained_csf_multi2'
 level 'contained_csf_free_response'
+level 'Test GameLab Submittable Free Response'
+level 'Video - The Future of Big Data'
+
+stage 'ML Fish'
+level 'allthethings HOC ML Fish 1'

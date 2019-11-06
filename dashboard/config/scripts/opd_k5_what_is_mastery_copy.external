@@ -4,35 +4,33 @@ markdown <<MARKDOWN
 # Looking Ahead
 
 ## Teaching practices
-In the stages that follow, you will learn about the following teaching practices:
+In the next concept chunk, you will learn about the following teaching practices:
 
 - Finding and utilizing lesson plans
 - Pair programming
 - Debugging
 - Journaling
-- Problem solving process
 
-## Coding concepts
-In the stages that follow, you will practice the following basic core concepts of computer science:
+## Basic coding concepts
+In the next concept chunk, you will practice the following basic core concepts of computer science:
 
 - Sequencing
 - Loops
-- Conditionals
 - Events
-- Functions
+- Conditionals
 
-In these stages, you will: 
+In these lessons, you will: 
 - Define and explain what is meant by the core concept, and why it's important in computer science
 - Write simple programs applying the concept (by using visual programming to solve puzzles)
 - Reflect on how you might integrate the concept into your practice
 
-## How do I know if I should move to the next stage?
+## How do I know if I should move to the next lesson?
 
-As you complete each stage, ask yourself:
+As you complete each lesson, ask yourself:
 
-- Can I define and explain the importance of this particular core concept at a beginner level?
-- Was I able to successfully complete the simple puzzles in this stage?
+- Could I define and explain the importance of this particular core concept to someone without knowledge of computer science?
+- Was I able to successfully complete the simple puzzles in this lesson?
 - Do I have a few ideas on how I might use this in my classroom?
 
-If you answer yes to each question, proceed to the next stage. If you answer no to any of the questions, consider revisiting the stage or exploring more about the topic in the student side of Code Studio before moving on.
+If you answer yes to each question, proceed to the next lesson. If you answer no to any of the questions, consider revisiting the lesson or exploring more about the topic in one of the Computer Science Fundamentals courses before moving on.
 MARKDOWN
