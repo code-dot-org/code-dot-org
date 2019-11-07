@@ -11,6 +11,7 @@
     "start_direction": "1",
     "step_mode": "0",
     "is_k1": "true",
+    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/06_V2.gif",
     "skip_instructions_popup": "true",
     "ideal": "4",
     "never_autoplay_video": "false",
@@ -25,22 +26,9 @@
     "examples_required": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false",
-    "preload_asset_list": null,
-    "encrypted": "false",
-    "instructions_important": "false",
-    "mini_rubric": "false",
-    "disable_procedure_autopopulate": "false",
-    "top_level_procedure_autopopulate": "false",
-    "hide_share_and_remix": "false",
-    "disable_if_else_editing": "false",
-    "show_type_hints": "false",
-    "maze_data": null,
-    "shape_shift": "false"
+    "disable_examples": "false"
   },
-  "published": true,
-  "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-11-06 15:07:35 +0000\",\"changed\":[\"notes\",\"published\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"ani_gif_url\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "published": false,
   "level_concept_difficulty": {
     "sequencing": 2
   }
