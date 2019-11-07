@@ -8,6 +8,7 @@ import libraryParser from './libraryParser';
 import i18n from '@cdo/locale';
 import PadAndCenter from '@cdo/apps/templates/teacherDashboard/PadAndCenter';
 import {Heading1, Heading2} from '@cdo/apps/lib/ui/Headings';
+import annotationList from '@cdo/apps/acemode/annotationList';
 import Spinner from '../../pd/components/spinner';
 import Button from '@cdo/apps/templates/Button';
 
@@ -54,11 +55,13 @@ function select(event) {
  * @readonly
  * @enum {string}
  */
-export const LoadingState = {
+export const PublishState = {
   LOADING: 'loading',
   DONE_LOADING: 'done_loading',
   PUBLISHED: 'published',
-  ERROR_PUBLISH: 'error_publish'
+  ERROR_PUBLISH: 'error_publish',
+  CODE_ERROR: 'code_error',
+  NO_FUNCTIONS: 'no_functions'
 };
 
 class LibraryCreationDialog extends React.Component {
@@ -71,7 +74,7 @@ class LibraryCreationDialog extends React.Component {
   state = {
     librarySource: '',
     sourceFunctionList: [],
-    loadingState: LoadingState.LOADING,
+    publishState: PublishState.LOADING,
     libraryName: '',
     canPublish: false
   };
@@ -83,20 +86,33 @@ class LibraryCreationDialog extends React.Component {
   }
 
   onOpen = () => {
+    var error = annotationList.getJSLintAnnotations().find(annotation => {
+      return annotation.type === 'error';
+    });
+    if (error) {
+      this.setState({publishState: PublishState.CODE_ERROR});
+      return;
+    }
+
     dashboard.project.getUpdatedSourceAndHtml_(response => {
+      let functionsList = libraryParser.getFunctions(response.source);
+      if (!functionsList || functionsList.length === 0) {
+        this.setState({publishState: PublishState.NO_FUNCTIONS});
+        return;
+      }
       this.setState({
         libraryName: libraryParser.sanitizeName(
           dashboard.project.getLevelName()
         ),
         librarySource: response.source,
-        loadingState: LoadingState.DONE_LOADING,
-        sourceFunctionList: libraryParser.getFunctions(response.source)
+        publishState: PublishState.DONE_LOADING,
+        sourceFunctionList: functionsList
       });
     });
   };
 
   handleClose = () => {
-    this.setState({loadingState: LoadingState.LOADING});
+    this.setState({publishState: PublishState.LOADING});
     this.props.onClose();
   };
 
@@ -131,10 +147,10 @@ class LibraryCreationDialog extends React.Component {
       libraryJson,
       error => {
         console.warn(`Error publishing library: ${error}`);
-        this.setState({loadingState: LoadingState.ERROR_PUBLISH});
+        this.setState({publishState: PublishState.ERROR_PUBLISH});
       },
       () => {
-        this.setState({loadingState: LoadingState.PUBLISHED});
+        this.setState({publishState: PublishState.PUBLISHED});
       }
     );
     dashboard.project.setLibraryName(this.state.libraryName);
@@ -154,6 +170,10 @@ class LibraryCreationDialog extends React.Component {
     if (isChecked !== this.state.canPublish) {
       this.setState({canPublish: isChecked});
     }
+  };
+
+  displayError = errorMessage => {
+    return <div>{errorMessage}</div>;
   };
 
   displayLoadingState = () => {
@@ -216,7 +236,7 @@ class LibraryCreationDialog extends React.Component {
               value={i18n.publish()}
               disabled={!this.state.canPublish}
             />
-            {this.state.loadingState === LoadingState.ERROR_PUBLISH && (
+            {this.state.publishState === PublishState.ERROR_PUBLISH && (
               <div>
                 <p id="error-alert" style={styles.alert}>
                   {i18n.libraryPublishFail()}
@@ -260,12 +280,18 @@ class LibraryCreationDialog extends React.Component {
 
   render() {
     let bodyContent;
-    switch (this.state.loadingState) {
-      case LoadingState.LOADING:
+    switch (this.state.publishState) {
+      case PublishState.LOADING:
         bodyContent = this.displayLoadingState();
         break;
-      case LoadingState.PUBLISHED:
+      case PublishState.PUBLISHED:
         bodyContent = this.displaySuccess();
+        break;
+      case PublishState.CODE_ERROR:
+        bodyContent = this.displayError(i18n.libraryCodeError());
+        break;
+      case PublishState.NO_FUNCTIONS:
+        bodyContent = this.displayError(i18n.libraryNoFunctonsError());
         break;
       default:
         bodyContent = this.displayFunctions();
