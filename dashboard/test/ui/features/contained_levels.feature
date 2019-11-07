@@ -29,6 +29,20 @@ Scenario: Applab with free response contained level
   And I wait until current URL contains "/stage/18/puzzle/16"
   Then I close my eyes
 
+Scenario: GameLab with a submittable contained level
+  When I open my eyes to test "gamelab contained level"
+  Given I am on "http://studio.code.org/s/allthethings/stage/41/puzzle/7"
+  And I rotate to landscape
+  And I wait for the page to fully load
+  Then I see no difference for "initial load"
+  Then I press "unchecked_0"
+  And I see no difference for "answer entered"
+  Then I press "runButton"
+  And I see no difference for "level run"
+  And I press "submitButton"
+  And I press "confirm-button"
+  And I wait until current URL contains "/stage/41/puzzle/8"
+
 Scenario: Gamelab with multiple choice contained level
   When I open my eyes to test "gamelab contained level"
   Given I am on "http://studio.code.org/s/allthethings/stage/41/puzzle/2"
