@@ -2,8 +2,8 @@ const svmjs = require('svm'); // https://github.com/karpathy/svmjs
 
 export default class SVMTrainer {
   constructor() {
-  	this.svm = new svmjs.SVM();
-  	this.svmParams = {C: 1.0};
+    this.svm = new svmjs.SVM();
+    this.svmParams = {C: 1.0};
     this.labeledTrainingData = [];
     this.classes = new Set();
   }
@@ -17,8 +17,8 @@ export default class SVMTrainer {
    * @param {number} classId
    */
   addTrainingExample(example, classId) {
-  	// This SVM library only accepts 1 and -1 as labels; convert from our 0/1 labeling scheme
-  	const svmLabel = (classId === 1 ? 1 : -1);
+    // This SVM library only accepts 1 and -1 as labels; convert from our 0/1 labeling scheme
+    const svmLabel = (classId === 1 ? 1 : -1);
     this.labeledTrainingData.push({example: example, label: svmLabel});
     this.classes.add(classId);
   }
@@ -49,7 +49,7 @@ export default class SVMTrainer {
       const res = this.svm.predict([example]);
 
       // This SVM library uses 1 and -1 as labels; convert back to our 0/1 labeling scheme
-      result.predictedClassId = res[0] === 1 ? 1 : 0; 
+      result.predictedClassId = res[0] === 1 ? 1 : 0;
 
       const confidences = {};
       confidences[result.predictedClassId] = 1; // TODO: Not sure if SVM has a concept of confidence (distance from separating hyperplane?)

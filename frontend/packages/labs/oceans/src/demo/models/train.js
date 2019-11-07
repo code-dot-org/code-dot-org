@@ -2,7 +2,6 @@ import 'idempotent-babel-polyfill';
 import {setState, getState} from '../state';
 import {ClassType} from '../constants';
 import SimpleTrainer from '../../utils/SimpleTrainer';
-import SVMTrainer from '../../utils/SVMTrainer';
 import {generateOcean} from '../../utils/generateOcean';
 
 export const init = () => {
