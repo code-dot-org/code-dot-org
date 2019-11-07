@@ -14,13 +14,10 @@ require_relative '../../deployment'
 require 'cdo/pegasus'
 require 'cdo/pardot'
 
-MAX_EXECUTION_TIME = 1_800_000
-MAX_EXECUTION_TIME_SEC = MAX_EXECUTION_TIME / 1000
-
 PEGASUS_DB_READER = sequel_connect(
   CDO.pegasus_db_reader,
   CDO.pegasus_db_reader,
-  query_timeout: MAX_EXECUTION_TIME_SEC
+  query_timeout: 1800.seconds
 )
 
 def all_prospect_fields
@@ -55,6 +52,8 @@ def convert_row_to_prospect(row)
 end
 
 def export_table_to_csv(query, file_path, max_row_count = nil)
+  p "Query = #{query}"
+  p "Destination file = #{file_path}"
   csv_columns = all_prospect_fields
 
   dataset = PEGASUS_DB_READER[query]
@@ -63,7 +62,7 @@ def export_table_to_csv(query, file_path, max_row_count = nil)
   row_written = 0
   file_created = 1
 
-  dataset.each do |row|
+  dataset.stream.each do |row|
     next if row[:email_malformed]
 
     # Create a new csv file if we have reached the maximum row count per file
@@ -82,6 +81,7 @@ def export_table_to_csv(query, file_path, max_row_count = nil)
     row_written += 1
   end
 
+  csv.close
   p "Done! #{row_written} row(s) written to #{file_created} file(s)."
 end
 
@@ -91,14 +91,14 @@ def main
     where pardot_sync_at IS NULL AND pardot_id IS NULL AND opted_out IS NULL
   SQL
 
-  export_table_to_csv(new_contact_query, "pardot_new_contacts.csv", 1_000_000_000)
+  export_table_to_csv(new_contact_query, "pardot_new_contacts.csv", 1_000_000)
 
   updated_contact_query = <<-SQL.squish
     select * from contact_rollups
     where pardot_id IS NOT NULL AND pardot_sync_at < updated_at
   SQL
 
-  export_table_to_csv(updated_contact_query, "pardot_updated_contacts.csv", 1_000_000_000)
+  export_table_to_csv(updated_contact_query, "pardot_updated_contacts.csv", 1_000_000)
 end
 
 def test
