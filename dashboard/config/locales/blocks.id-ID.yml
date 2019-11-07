@@ -324,6 +324,7 @@ id:
             '"scale"': ukuran
             '"height"': tinggi
             '"rotation"': Perputaran
+            '"tint"': Mewarnai
       Dancelab_setPropRandom:
         options:
           PROPERTY:
