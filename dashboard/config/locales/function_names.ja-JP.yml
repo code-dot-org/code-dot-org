@@ -109,36 +109,36 @@ ja-JP:
         starting path: starting path
       Course 4 Artist Binary 1:
         draw: 図形をかく
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
       Course 4 Artist Binary 2:
         draw: 図形をかく
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
       Course 4 Artist Binary 3:
         draw: 図形をかく
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
       Course 4 Artist Binary 4:
         draw: 図形をかく
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
       Course 4 Artist Binary 5:
         draw: 図形をかく
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
       Course 4 Artist Binary 6:
         draw: 図形をかく
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
       Course 4 Artist Binary 7:
         draw: 図形をかく
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
       Course 4 Artist Binary Free Play 2:
         draw: 図形をかく
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
       Course 4 Artist Binary Free Play 2a:
         draw: 図形をかく
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
       Course 4 Artist Binary Free Play 2b:
         draw: 図形をかく
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
       Course 4 Artist Binary pre1:
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
         draw: 図形をかく
       Course 4 Artist Functions Inspiration:
         draw a square 20: 正方形をかく
@@ -188,6 +188,10 @@ ja-JP:
       FoodFight:
         level_up: level_up
         score_points: score_points
+      Function intro Ryan:
+        build bridge: 橋を作る
+      Function intro Ryan_2019:
+        build bridge: 橋を作る
       Geometric Sun:
         draw a door: ドアをかく
         draw grass: 草をかく
@@ -226,12 +230,28 @@ ja-JP:
         draw rectangle: 長方形をかく
       K-1 Artist2 5:
         draw rectangle: 長方形をかく
+      MC_HOC_2017_07_Cole:
+        clear path: 道を作る
+      MC_HOC_2017_07_Cole_2019:
+        clear path: 道を作る
       MC_HOC_2017_10_RETRY:
         fix long path: 長い道を直す
         fix short path: 短い道を直す
       MC_HOC_2017_10_RETRY_2019:
         fix long path: 長い道を直す
         fix short path: 短い道を直す
+      MC_HOC_2017_Ali:
+        build short bridge: 橋をかける
+        build long bridge: 橋をかける
+      MC_HOC_2017_Ali_2019:
+        build short bridge: 橋をかける
+        build long bridge: 橋をかける
+      MC_HOC_2017_FP20x20:
+        function 1: 関数1
+        function 2: 関数2
+      MC_HOC_2017_FP20x20_2019:
+        function 1: 関数1
+        function 2: 関数2
       NEW Course 4 Artist Functions 11:
         draw a square 20: 正方形をかく
         draw a line of squares: draw a line of squares
@@ -342,10 +362,10 @@ ja-JP:
         keep playing: ゲームをつづける
       course4_artist_binary_challenge1:
         draw: 図形をかく
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
       course4_artist_binary_challenge2:
         draw: 図形をかく
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
       course4_artist_concept_challenge2:
         draw pinwheel: 風車をかく
       course4_artist_functions_challenge2:
@@ -388,128 +408,131 @@ ja-JP:
       courseC_data wizard:
         do something: 何かしてください
       courseD_artist_binary1:
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
         draw: 図形をかく
       courseD_artist_binary1_2018:
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
         draw: 図形をかく
       courseD_artist_binary1_2019:
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
         draw: 図形をかく
       courseD_artist_binary2:
         draw: 図形をかく
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
       courseD_artist_binary2_2018:
         draw: 図形をかく
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
       courseD_artist_binary2_2019:
         draw: 図形をかく
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
       courseD_artist_binary3:
         draw: 図形をかく
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
       courseD_artist_binary3_2018:
         draw: 図形をかく
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
       courseD_artist_binary3_2019:
         draw: 図形をかく
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
       courseD_artist_binary4:
         draw: 図形をかく
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
       courseD_artist_binary4_2018:
         draw: 図形をかく
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
       courseD_artist_binary4_2019:
         draw: 図形をかく
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
       courseD_artist_binary5:
         draw: 図形をかく
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
       courseD_artist_binary5_2018:
         draw: 図形をかく
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
       courseD_artist_binary5_2019:
         draw: 図形をかく
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
       courseD_artist_binary6:
         draw: 図形をかく
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
       courseD_artist_binary6_2018:
         draw: 図形をかく
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
       courseD_artist_binary6_2019:
         draw: 図形をかく
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
       courseD_artist_binary7:
         draw: 図形をかく
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
       courseD_artist_binary7_2018:
         draw: 図形をかく
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
       courseD_artist_binary7_2019:
         draw: 図形をかく
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
       courseD_artist_binary8:
         draw: 図形をかく
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
       courseD_artist_binary8_2018:
         draw: 図形をかく
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
       courseD_artist_binary8_2019:
         draw: 図形をかく
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
       courseD_artist_binary8_predict1:
         draw: 図形をかく
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
       courseD_artist_binary8_predict1_2018:
         draw: 図形をかく
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
       courseD_artist_binary8_predict1_2019:
         draw: 図形をかく
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
       courseD_artist_binaryFP_2018:
         draw: 図形をかく
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
       courseD_artist_binaryFP_2019:
         draw: 図形をかく
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
       courseD_artist_binary_challenge1_2018:
         draw: 図形をかく
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
       courseD_artist_binary_challenge1_2019:
         draw: 図形をかく
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
       courseD_artist_binary_challenge2_2018:
         draw: 図形をかく
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
       courseD_artist_binary_challenge2_2019:
         draw: 図形をかく
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
       courseD_autorun_binary2_2019:
         draw: 図形をかく
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
       courseD_autorun_binary3_2019:
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
         draw: 図形をかく
       courseD_autorun_binary4_2019:
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
         draw: 図形をかく
       courseD_autorun_binary5_2019:
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
         draw: 図形をかく
       courseD_autorun_binary6_2019:
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
         draw: 図形をかく
       courseD_autorun_binary7_2019:
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
         draw: 図形をかく
       courseD_autorun_binary8_2019:
         draw: 図形をかく
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
       courseD_autorun_binary8_predict1_2019:
         draw: 図形をかく
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
+      courseE_Dogger_2:
+        stop_everything: すべてを止める
+        lose: 負け
       courseE_artist_concept1:
         do something: 何かしてください
         draw a hexagon: 六角形 を かく
@@ -518,11 +541,11 @@ ja-JP:
       courseE_artist_concept4:
         draw a square: 正方形 を かく
         draw a line of squares: draw a line of squares
-        draw a plane of squares: あみ模様をかく
+        draw a plane of squares: あみ目模様をかく
       courseE_artist_concept4_2018:
         draw a square: 正方形 を かく
         draw a line of squares: draw a line of squares
-        draw a plane of squares: あみ模様をかく
+        draw a plane of squares: あみ目模様をかく
       courseE_artist_concept_challenge1:
         do something: 何かしてください
       courseE_artist_concept_challenge1_2018:
@@ -581,10 +604,12 @@ ja-JP:
         draw square: 正方形を かく
       courseE_artist_functions8_2018:
         do something: 何かしてください
+        staggered squares: ずれた正方形
         draw a line of squares: draw a line of squares
         draw square: 正方形を かく
       courseE_artist_functions8_2019:
         do something: 何かしてください
+        staggered squares: ずれた正方形
         draw a line of squares: draw a line of squares
         draw square: 正方形を かく
       courseE_artist_functions8a_2018:
@@ -605,10 +630,12 @@ ja-JP:
         draw a line of squares: draw a line of squares
         draw square: 正方形を かく
         do something: 何かしてください
+        staggered squares: ずれた正方形
       courseE_artist_functions8c_2019:
         draw a line of squares: draw a line of squares
         draw square: 正方形を かく
         do something: 何かしてください
+        staggered squares: ずれた正方形
       courseE_artist_functions9:
         do something: 何かしてください
         draw triangle: 三角形を かく
@@ -624,11 +651,13 @@ ja-JP:
       courseE_artist_functionsProj_2018:
         draw hexagon: 六角形 を かく
         draw line of hexagons: 六角形の列をかく
+        staggered squares: ずれた正方形
         draw a line of squares: draw a line of squares
         draw square: 正方形を かく
       courseE_artist_functionsProj_2019:
         draw hexagon: 六角形 を かく
         draw line of hexagons: 六角形の列をかく
+        staggered squares: ずれた正方形
         draw a line of squares: draw a line of squares
         draw square: 正方形を かく
       courseE_artist_functions_challenge1:
@@ -709,24 +738,96 @@ ja-JP:
         get pumpkin: カボチャをとる
       courseE_farmer_concept3:
         do something: 何かしてください
+      courseE_farmer_functions10a1_2018:
+        pick along path: 道に沿ってしゅうかくする
+        check square for corn: トウモロコシをしゅうかくする
+        get all pumpkins: カボチャをすべてとる
+        pumpkin square: pumpkin square
+      courseE_farmer_functions10a1_2019:
+        pick along path: 道に沿ってしゅうかくする
+        check square for corn: トウモロコシをしゅうかくする
+        get all pumpkins: カボチャをすべてとる
+        pumpkin square: pumpkin square
       courseE_farmer_functions10b:
         navigate: ナビゲート
       courseE_farmer_functions11_predict:
         check and pick: 調べて しゅうかくする
         find pumpkin: カボチャを見つける
         wander path: 迷路
+      courseE_farmer_functions11_predict_2018:
+        pick along path: 道に沿ってしゅうかくする
+        pumpkin square: pumpkin square
+        check square for corn: トウモロコシをしゅうかくする
+        get produce: get produce
+        get all pumpkins: カボチャをすべてとる
+      courseE_farmer_functions11_predict_2019:
+        pick along path: 道に沿ってしゅうかくする
+        pumpkin square: pumpkin square
+        check square for corn: トウモロコシをしゅうかくする
+        get produce: get produce
+        get all pumpkins: カボチャをすべてとる
+      courseE_farmer_functions13_2018:
+        pick along path: 道に沿ってしゅうかくする
+        check for corn: トウモロコシか調べる
+        corn rectangle: corn rectangle
+        lettuce stairs: lettuce stairs
+      courseE_farmer_functions13_2019:
+        pick along path: 道に沿ってしゅうかくする
+        check for corn: トウモロコシか調べる
+        corn rectangle: corn rectangle
+        lettuce stairs: lettuce stairs
+      courseE_farmer_functions1a_2018:
+        check square for corn: トウモロコシをしゅうかくする
+      courseE_farmer_functions1a_2019:
+        check square for corn: トウモロコシをしゅうかくする
+      courseE_farmer_functions2b_2018:
+        check square for corn: トウモロコシをしゅうかくする
+      courseE_farmer_functions2b_2019:
+        check square for corn: トウモロコシをしゅうかくする
       courseE_farmer_functions2ba:
         corn and pumpkin: トウモロコシとカボチャ
+      courseE_farmer_functions2ba_2018:
+        check square for corn: トウモロコシをしゅうかくする
+        get all pumpkins: カボチャをすべてとる
+      courseE_farmer_functions2ba_2019:
+        check square for corn: トウモロコシをしゅうかくする
+        get all pumpkins: カボチャをすべてとる
       courseE_farmer_functions3c:
         corn and pumpkin: トウモロコシとカボチャ
+      courseE_farmer_functions3c1_2018:
+        pick along path: 道に沿ってしゅうかくする
+        check square for corn: トウモロコシをしゅうかくする
+        get all pumpkins: カボチャをすべてとる
+      courseE_farmer_functions3c1_2019:
+        pick along path: 道に沿ってしゅうかくする
+        check square for corn: トウモロコシをしゅうかくする
+        get all pumpkins: カボチャをすべてとる
+      courseE_farmer_functions3c_2018:
+        check square for corn: トウモロコシをしゅうかくする
+        get all pumpkins: カボチャをすべてとる
+      courseE_farmer_functions3c_2019:
+        check square for corn: トウモロコシをしゅうかくする
+        get all pumpkins: カボチャをすべてとる
       courseE_farmer_functions4b:
         corn and pumpkin: トウモロコシとカボチャ
       courseE_farmer_functions5c:
         corn and pumpkin: トウモロコシとカボチャ
       courseE_farmer_functions6c:
         corn and pumpkin: トウモロコシとカボチャ
+      courseE_farmer_functions7a1_2018:
+        garden square: garden square
+      courseE_farmer_functions7a1_2019:
+        garden square: garden square
+      courseE_farmer_functions8a1_2018:
+        garden square: garden square
+      courseE_farmer_functions8a1_2019:
+        garden square: garden square
       courseE_farmer_functions8b:
         navigate: ナビゲート
+      courseE_farmer_functions9a1_2018:
+        garden square: garden square
+      courseE_farmer_functions9a1_2019:
+        garden square: garden square
       courseE_farmer_functions9b:
         navigate: ナビゲート
       courseE_playLab_challenge1:
@@ -882,16 +983,16 @@ ja-JP:
         collect: あつめる
       grade5_artist_binary11:
         draw: 図形をかく
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
       grade5_artist_binary4:
         draw: 図形をかく
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
       grade5_artist_binary5:
         draw: 図形をかく
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
       grade5_artist_binary8:
         draw: 図形をかく
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
       grade5_artist_binary9:
         draw: 図形をかく
-        draw bit: ０か1でもようをかく
+        draw bit: ０か1で もようを かく
