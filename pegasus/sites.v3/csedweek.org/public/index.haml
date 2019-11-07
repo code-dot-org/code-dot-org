@@ -15,7 +15,6 @@ video_player: true
 -hoc_mode = DCDO.get("hoc_mode", CDO.default_hoc_mode)
 
 %script{:src=>"/js/jquery.placeholder.js"}
-%script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=false&libraries=places,geometry&v=3.37"}
 %script{type: "text/javascript", src: "/js/jquery.geocomplete.min.js"}
 
 #index
@@ -48,7 +47,20 @@ video_player: true
 
   %br
   %div{:style=>'clear:both;'}
-  = view :map
+  #hocmap
+    %h2.mapheader
+      %a{:href=> "https://hourofcode.com/events"}
+        = I18n.t(:csedweek_map_header).gsub('#', format_integer_with_commas(fetch_hoc_metrics['total_hoc_count']))
+      %a{:href=> "https://hourofcode.com/#join"}
+        %button.signup-button
+          = I18n.t(:host_an_hour)
+    = view :map
+    .row
+      .col-sm-12
+        .footnote
+          The Hour of Code map only shows the first 200,000 registered events. All registered events with a valid address can be viewed on
+          %a{href: resolve_url('/events')}
+            the events page.
 
   #columns.desktop-feature{:style=>'clear:both; overflow:hidden'}
     #column1{:style=>'float:left; width: 50%'}
