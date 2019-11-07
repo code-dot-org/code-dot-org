@@ -7,6 +7,7 @@ teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-19/unit3/"],
 has_verified_resources true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csp-19/unit3/{LESSON}'
+script_announcements [{"notice"=>"Make sure your students have registered for the AP exam!", "details"=>"After November 15th, there may be an extra fee for signing up to take an AP test, based on your school’s calendar. If you haven’t done so already, talk to your AP coordinator about getting your students registered for the AP CS Principles exam before it’s too late! ", "link"=>"https://code.org/educate/csp/ap-teachers", "type"=>"information", "visibility"=>"Teacher-only"}, {"notice"=>"Don’t miss the deadline—sign up for the AP exam today! ", "details"=>"After November 15th, there may be an extra fee for signing up to take an AP test, based on your school’s calendar. If you haven’t done so already, ask your teacher about registering for the AP CS Principles exam before it’s too late! ", "link"=>"https://code.org/educate/csp/ap-students", "type"=>"information", "visibility"=>"Student-only"}]
 family_name 'csp3'
 version_year '2019'
 is_stable true
