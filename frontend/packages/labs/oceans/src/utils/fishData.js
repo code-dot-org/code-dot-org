@@ -1,4 +1,5 @@
-import {DataSet} from '../demo/constants';
+// TODO add this back in when we know which components are in which set
+//import {DataSet} from '../demo/constants';
 
 import pectoral_fin_1_image from '../../public/images/fish/pectoralFin/pectoral_fin_1.png';
 import pectoral_fin_10_image from '../../public/images/fish/pectoralFin/pectoral_fin_10.png';
