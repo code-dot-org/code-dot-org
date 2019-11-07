@@ -45,6 +45,7 @@ class Api::V1::Pd::WorkshopSerializer < ActiveModel::Serializer
   def organizer
     {id: object.organizer.id, name: object.organizer.name, email: object.organizer.email}
   rescue StandardError
+    # Fallback value if workshop organizer, who is an user, no longer exists
     {id: nil, name: nil, email: nil}
   end
 
