@@ -28,8 +28,18 @@ $(document).ready(function() {
 
     // Prevent repeatedly adding this iframe if button pressed repeatedly
     if (!$('#iFramePdf').length) {
+      let pdfToPrintHash = {
+        '/privacy/student-privacy': '/files/privacy-policy-csf.pdf',
+        '/privacy/student-privacy-csd': '/files/privacy-policy-csd.pdf',
+        '/privacy/student-privacy-csp': '/files/privacy-policy-csp.pdf'
+      };
+
+      let pdfToPrint = pdfToPrintHash[window.location.pathname];
+
       let iFramePdf = $(
-        '<iframe id="iFramePdf" src="/files/privacy-policy-csp.pdf" style="display:none;"></iframe>'
+        '<iframe id="iFramePdf" src=' +
+          pdfToPrint +
+          ' style="display:none;"></iframe>'
       );
       $('body').append(iFramePdf);
     }
