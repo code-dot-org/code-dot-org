@@ -1,6 +1,9 @@
 import queryString from 'query-string';
 import {setSectionLockStatus} from './stageLockRedux';
-import {selectSection} from '../templates/teacherDashboard/teacherSectionsRedux';
+import {
+  setSections,
+  selectSection
+} from '../templates/teacherDashboard/teacherSectionsRedux';
 import {Provider} from 'react-redux';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -59,11 +62,24 @@ export function renderTeacherPanel(
  * Query the server for lock status of this teacher's students
  * @returns {Promise} when finished
  */
-export function queryLockStatus(store, scriptId) {
+export function queryLockStatus(store, scriptId, pageType) {
   return new Promise((resolve, reject) => {
     $.ajax('/api/lock_status', {
       data: {script_id: scriptId}
     }).done(data => {
+      // Extract the state that teacherSectionsRedux cares about
+      const teacherSections = Object.values(data).map(section => ({
+        id: section.section_id,
+        name: section.section_name
+      }));
+
+      // Don't dispatch setSections on script overview pages because setSections
+      // has already been dispatched on those pages with data specific to which
+      // sections are assigned to the script for the TeacherSectionSeletor.
+      if (pageType !== 'script_overview') {
+        store.dispatch(setSections(teacherSections));
+      }
+
       store.dispatch(setSectionLockStatus(data));
       const query = queryString.parse(location.search);
       if (query.section_id) {

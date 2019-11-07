@@ -595,7 +595,7 @@ export default function teacherSections(state = initialState, action) {
 
     sections.forEach(section => {
       // SET_SECTIONS is called in two different contexts. On some pages it is called
-      // in a way that only provides name/id per section, in other places (homepage)
+      // in a way that only provides name/id per section, in other places (homepage, script overview)
       // it provides more detailed information. There are currently no pages where
       // it should be called in both manners, but we want to make sure that if it
       // were it will throw an error rather than destroy data.
