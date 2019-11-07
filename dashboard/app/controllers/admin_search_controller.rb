@@ -83,6 +83,7 @@ class AdminSearchController < ApplicationController
   def add_to_pilot
     email = params[:email]
     pilot_name = params[:pilot_name]
+    return head :bad_request unless Experiment::PILOT_EXPERIMENTS.include?(pilot_name)
     user = User.find_by_email_or_hashed_email(email)
     if !user
       flash[:alert] = "An account with the email address #{email} does not exist"
