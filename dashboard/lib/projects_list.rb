@@ -15,7 +15,8 @@ module ProjectsList
     minecraft: ['minecraft_adventurer', 'minecraft_designer', 'minecraft_hero', 'minecraft_aquatic'],
     events: %w(starwars starwarsblocks starwarsblocks_hour flappy bounce sports basketball),
     k1: ['artist_k1', 'playlab_k1'],
-    dance: ['dance']
+    dance: ['dance'],
+    library: ['applab', 'gamelab']
   }.freeze
 
   # Sharing of advanced project types to the public gallery is restricted for
@@ -114,6 +115,41 @@ module ProjectsList
         featured_published_projects[project_group].flatten!
       end
       return featured_published_projects
+    end
+
+    def fetch_section_libraries(section)
+      project_types = PUBLISHED_PROJECT_TYPE_GROUPS[:library]
+      section_students = section.students
+      [].tap do |projects_list_data|
+        student_storage_ids = PEGASUS_DB[:user_storage_ids].
+          where(user_id: section_students.pluck(:id)).
+          select_hash(:user_id, :id)
+        section_students.each do |student|
+          next unless student_storage_id = student_storage_ids[student.id]
+          PEGASUS_DB[:storage_apps].
+            where(storage_id: student_storage_id, state: 'active').
+            where(project_type: project_types).
+            where("value->'$.libraryName' IS NOT NULL").
+            each do |project|
+              # The channel id stored in the project's value field may not be reliable
+              # when apps are remixed, so recompute the channel id.
+              channel_id = storage_encrypt_channel_id(student_storage_id, project[:id])
+              project_data = get_library_row_data(project, channel_id, student)
+              projects_list_data << project_data if project_data
+            end
+        end
+      end
+    end
+
+    def get_library_row_data(project, channel_id, student = nil)
+      project_value = project[:value] ? JSON.parse(project[:value]) : {}
+      return nil if project_value['hidden'] == true || project_value['hidden'] == 'true'
+      {
+        channel: channel_id,
+        name: project_value['libraryName'],
+        description: project_value['libraryDescription'],
+        studentName: student&.name,
+      }.with_indifferent_access
     end
 
     def project_and_featured_project_and_user_fields
