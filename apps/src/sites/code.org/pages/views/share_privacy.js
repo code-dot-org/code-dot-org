@@ -28,12 +28,14 @@ $(document).ready(function() {
 
     // Prevent repeatedly adding this iframe if button pressed repeatedly
     if (!$('#iFramePdf').length) {
-      let iFramePdf = $('<iframe id="iFramePdf" src="/files/privacy-policy-csp.pdf" style="display:none;"></iframe>');
+      let iFramePdf = $(
+        '<iframe id="iFramePdf" src="/files/privacy-policy-csp.pdf" style="display:none;"></iframe>'
+      );
       $('body').append(iFramePdf);
     }
 
-    let getMyFrame = document.getElementById("iFramePdf");
-    getMyFrame.focus();
-    getMyFrame.contentWindow.print();
+    let getPrintFrame = document.getElementById('iFramePdf');
+    getPrintFrame.focus();
+    getPrintFrame.contentWindow.print();
   });
 });
