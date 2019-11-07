@@ -9,5 +9,13 @@
     ["transform-regenerator", {"async": true, "asyncGenerators": true}],
     // needed for IE 9/10 support
     ["transform-es2015-classes", {"loose": true}]
-  ]
+  ],
+  "env": {
+    "test": {
+      "plugins": [
+        // make dynamic imports work in unit tests
+        "dynamic-import-node"
+      ]
+    }
+  }
 }
