@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+# JUST TESTING PLEASE REMOVE THIS LINE
+
 # If run with the "interactive" flag, runs all steps necessary for a full i18n
 # update:
 #
