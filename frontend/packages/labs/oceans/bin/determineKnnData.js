@@ -100,7 +100,7 @@ mouth_image_files.forEach(fileName => {
     const json = `    ${name}: {
       src: ${src},
       knnData: [null, ${(1.0 * image.width) / image.height}, null],
-      tinted: foo,
+      tinted: false,
       type: FishBodyPart.MOUTH
     },`;
     console.log(json);
