@@ -11,7 +11,7 @@ class HocSyncUtils
   # source files from pegasus/sites.v3/hourofcode.com and collects them to a
   # single source folder i18n/locales/source.
   def self.sync_in
-    puts "Localizing Hour of Code content"
+    puts "Preparing Hour of Code content"
     orig_dir = "pegasus/sites.v3/hourofcode.com/public"
     dest_dir = File.join(I18N_SOURCE_DIR, "hourofcode")
 
