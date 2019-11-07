@@ -3,6 +3,7 @@ stage_extras_available true
 
 stage 'Jigsaw'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:3'
 
 stage 'Maze'
@@ -12,6 +13,7 @@ level '2-3 Maze 1'
 level '4-5 Maze 4'
 level '4-5 Maze Conditionals 3'
 level 'courseC_maze_programming3', challenge: true
+level 'allthethings-anigif-instructions'
 
 stage 'Artist'
 level 'K-1 Artist1 1'
@@ -156,10 +158,10 @@ level 'Test longassessment levelgroup split new', assessment: true
 stage 'Star wars'
 skin 'hoc2015'
 video_key_for_next_level 'starwars_events'
-level_concept_difficulty '{}'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:StudioEC:js_hoc2015_event_two_items'
 skin 'hoc2015x'
-level_concept_difficulty '{}'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Studio:hoc2015_blockly_5'
 
 stage 'Minecraft'

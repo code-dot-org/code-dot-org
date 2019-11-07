@@ -1,7 +1,7 @@
 <Maze>
   <config><![CDATA[{
   "game_id": 25,
-  "created_at": "2019-10-24T16:55:06.000Z",
+  "created_at": "2019-11-07T19:07:11.000Z",
   "level_num": "custom",
   "user_id": 19,
   "properties": {
@@ -11,6 +11,7 @@
     "start_direction": "1",
     "step_mode": "0",
     "is_k1": "true",
+    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/06_V2.gif",
     "skip_instructions_popup": "true",
     "ideal": "4",
     "never_autoplay_video": "false",
@@ -26,6 +27,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
+    "parent_level_id": 18661,
     "preload_asset_list": null,
     "encrypted": "false",
     "instructions_important": "false",
@@ -40,9 +42,8 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-11-07 14:17:17 -0500\",\"changed\":[\"notes\",\"published\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"ani_gif_url\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"dev@levelbuilder.com\"}]",
+  "audit_log": "[{\"changed_at\":\"2019-11-07 14:07:28 -0500\",\"changed\":[\"notes\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"dev@levelbuilder.com\"}]",
   "level_concept_difficulty": {
-    "sequencing": 2
   }
 }]]></config>
   <blocks>
