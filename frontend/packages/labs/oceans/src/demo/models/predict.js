@@ -18,8 +18,15 @@ export const init = () => {
 export const predictFish = (state, idx) => {
   return new Promise(resolve => {
     const fish = state.fishData[idx];
-    //state.trainer.predictFromTensor(fish.getTensor()).then(prediction => {
-    state.trainer.predictFromExample(fish.knnData).then(prediction => {
+
+    var predictionPromise;
+    if (state.appMode === 'long') {
+      predictionPromise = state.trainer.predictFromExample(fish.knnData);
+    } else {
+      predictionPromise = state.trainer.predictFromTensor(fish.getTensor());
+    }
+
+    predictionPromise.then(prediction => {
       fish.setResult(prediction);
       resolve(prediction);
     });

@@ -47,11 +47,14 @@ export const onClassifyFish = doesLike => {
     return;
   }
 
-  //const knnData = state.fishData[state.trainingIndex].getTensor();
-  const exampleData = state.fishData[state.trainingIndex].knnData;
   const classId = doesLike ? ClassType.Like : ClassType.Dislike;
-  //state.trainer.addExampleTensor(knnData, classId);
-  state.trainer.addTrainingExample(exampleData, classId);
+  if (state.appMode === 'long') {
+    const exampleData = state.fishData[state.trainingIndex].knnData;
+    state.trainer.addTrainingExample(exampleData, classId);
+  } else {
+    const exampleTensor = state.fishData[state.trainingIndex].getTensor();
+    state.trainer.addExampleTensor(exampleTensor, classId);
+  }
 
   let fishData = [...state.fishData];
   if (state.trainingIndex > state.fishData.length - 5) {
