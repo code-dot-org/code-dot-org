@@ -650,6 +650,32 @@ pl-PL:
       CourseE_HOC 2018 Level_9b:
         voyage_aquatic_9a: Cóż za przepiękna rafa koralowa! Niebieski koral jest \*\*
           właściwą drogą, i uważaj, aby czerwony koral nie był po **lewej** stronie!
+      Dance_2019_01:
+        validation: |-
+          **Jak przejdę ten poziom?**
+
+          -   Postaraj się, aby na ekranie pojawił się tancerz.
+
+          -   Ten poziom kończy się po 4 taktach.
+      Dance_2019_04:
+        validation: |-
+          **Jak przejdę ten poziom?**
+
+          -   Ten tancerz musi zmienić ruch po 4 taktach.
+
+          -   Ten poziom kończy się po 7 taktach.
+      Dance_2019_05:
+        validation: |-
+          **Jak przejdę ten poziom?**
+
+          -   Po 6 taktach Twój tancerz musi tańczyć inny taniec niż po 4 taktach.
+
+          -   Ten poziom kończy się po 11 taktach.
+      Dance_2019_07:
+        challenges: |-
+          **Dodatkowe wyzwanie**
+
+          -   Eksperymentuj, zmieniając inne właściwości (szerokość, wysokość, obrót, itp.)
       Dance_Party_01:
         validation: |-
           **Jak przejdę ten poziom?**

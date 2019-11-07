@@ -596,6 +596,7 @@ zh-CN:
             '"rotation"': 旋转
             '"x"': 水平位置
             '"y"': 垂直位置
+            '"tint"': 色调
       Dancelab_setPropRandom:
         text: 随机 {SPRITE} {PROPERTY}
         options:
@@ -831,6 +832,8 @@ zh-CN:
             '1': 中音音量
             '2': 高音音量
       Dancelab_whenSetup:
+        text: 设置
+      Dancelab_whenSetup2:
         text: 设置
       Dancelab_whenSetupSong:
         options:

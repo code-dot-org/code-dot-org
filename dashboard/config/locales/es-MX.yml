@@ -16,6 +16,13 @@ es-MX:
         la programación en pareja e inténtalo nuevamente.
   activerecord:
     errors:
+      models:
+        user:
+          attributes:
+            reset_password_token:
+              invalid: no es válido. Ten en cuenta que cada enlace sólo se puede utilizar
+                una vez para restablecer la contraseña y sólo funcionará el enlace
+                enviado más recientemente.
       messages:
         blank: es obligatorio
         blank_plural: son obligatorios
@@ -24,11 +31,13 @@ es-MX:
     attributes:
       user:
         name: Nombre a mostrar
-        name_example: Nombre a mostrar <br/> (Programador Genial o Juana S.)
+        name_example: Nombre a mostrar (Programador Genial o Juana S.)
         email: Correo electrónico
         parent_email: Correo electrónico del padre o tutor
         personal_email: Correo electrónico personal <a href="%{url}">(haz clic aquí
           si no tienes correo electrónico)</a>
+        personal_email_markdown: Correo electrónico personal [(haz clic aquí si no
+          tienes correo electrónico)](%{url})
         username: Nombre de usuario
         password: Contraseña
         password_confirmation: Confirmación de la contraseña
@@ -40,9 +49,14 @@ es-MX:
         finish_sign_up_header: Termina de crear tu cuenta
         finish_sign_up_subheader: Completa la siguiente información para terminar
           de crear tu cuenta en Code.org para <strong>%{email}</strong>.
+        finish_sign_up_subheader_markdown: Completa la siguiente información para
+          terminar de crear tu cuenta en Code.org para **%{email}**.
         finish_sign_up_subheader_provider: Completa la siguiente información para
           terminar de crear tu cuenta en Code.org con <strong>%{provider}</strong>
           para <strong>%{email}</strong>.
+        finish_sign_up_subheader_provider_markdown: Completa la siguiente información
+          para terminar de crear tu cuenta en Code.org con **%{provider}** para **%{email}**.
+        reset_password_token: El enlace para restablecer la contraseña que has seguido
         error:
           future: no puede ser en el futuro
   beta: beta
@@ -131,6 +145,9 @@ es-MX:
     overview: Crea una cuenta para ver tu progreso o administrar tu aula. <a href="/">Puedes
       explorar varias etapas y desafíos</a> sin una cuenta, pero deberás registrarte
       para guardar tu progreso y tus proyectos.
+    overview_markdown: Crea una cuenta para ver tu progreso o administrar tu aula.
+      [Puedes explorar varias etapas y desafíos](/) sin una cuenta, pero deberás registrarte
+      para guardar tu progreso y tus proyectos.
     hoc_already_signed_up_heading: Empezar sin iniciar sesión
     hoc_already_signed_up_content: ¡Te has registrado para enseñar en la Hora del
       Código! Tú y tus estudiantes no necesitan iniciar sesión en Code Studio para
@@ -144,6 +161,11 @@ es-MX:
       Así podrás guardar tu progreso y administrar tu clase. Podrás asignar cursos
       a estudiantes y ver su progreso. <a href="%{studio_url}">También puedes continuar
       con los demás niveles y desafíos</a> sin crear una cuenta.
+    hoc_already_signed_up_content_post_hoc_markdown: Gracias por apoyar la Hora del
+      Código. Para ingresar en Code Studio, tienes que establecer una contraseña para
+      tu cuenta. Así podrás guardar tu progreso y administrar tu clase. Podrás asignar
+      cursos a estudiantes y ver su progreso. [También puedes continuar con los demás
+      niveles y desafíos](%{studio_url}) sin crear una cuenta.
     teacher_educator_guide: Consulta la guía del educador
     title: Regístrate en Code.org
     school_name: Nombre de la escuela (opcional)
@@ -495,11 +517,20 @@ es-MX:
       con los <a href='%{terms_of_service_url}', target='_blank'>términos de servicio</a>
       de Code.org. Confirmo que tengo el permiso de mis padres o de mi tutor legal
       para usar los servicios de Code.org, incluso sin asistencia de un docente.
+    create_personal_login_terms_markdown: Al crear un inicio de sesión propio, acepto
+      cumplir con los [términos de servicio](%{terms_of_service_url}) de Code.org.
+      Confirmo que tengo el permiso de mis padres o de mi tutor legal para usar los
+      servicios de Code.org, incluso sin asistencia de un docente.
     create_personal_login_email_note: 'Importante: las direcciones de correo electrónico
       no se almacenan de forma tal que nos permitan ponernos en contacto con los estudiantes.
       Los estudiantes nunca recibirán correos electrónicos de Code.org, excepto en
       caso de que necesiten recuperar la contraseña. Consulta nuestra <a href=''%{privacy_policy_url}'',
       target=''_blank''>política de privacidad</a> para obtener más información.'
+    create_personal_login_email_note_markdown: 'Importante: las direcciones de correo
+      electrónico no se almacenan de forma tal que nos permitan ponernos en contacto
+      con los estudiantes. Los estudiantes nunca recibirán correos electrónicos de
+      Code.org, excepto en caso de que necesiten recuperar la contraseña. Consulta
+      nuestra [política de privacidad](%{privacy_policy_url}) para obtener más información.'
     enter_new_login_info: Ingresa tu nueva información de inicio de sesión
     confirm_secret_words: Ingresa tus palabras secretas para confirmar que eres tú
     parent_email_label: Correo electrónico del padre, la madre o el tutor (opcional)
@@ -923,6 +954,13 @@ es-MX:
       algo fundamental para nosotros y esperamos que establezca un nuevo estándar
       para la privacidad de los estudiantes en las tecnologías de la educación. Te
       hemos enviado un resumen de otros cambios por correo electrónico.
+    intro_desc_markdown: Actualizamos nuestros términos de servicio y la política
+      de privacidad, como se muestra a continuación. Los cambios rigen a partir del
+      24 de agosto de 2016. El cambio más importante es que _no guardaremos las direcciones
+      de correo electrónico de las cuentas de los estudiantes en Code Studio_. Es
+      algo fundamental para nosotros y esperamos que establezca un nuevo estándar
+      para la privacidad de los estudiantes en las tecnologías de la educación. Te
+      hemos enviado un resumen de otros cambios por correo electrónico.
     intro_instructions: Si quieres acceder a las últimas características de Code Studio,
       debes aceptar estos nuevos términos para estudiantes menores de 13 años en tu
       aula. Cuando registres una cuenta para un estudiante menor de 13 años, deberás
@@ -934,6 +972,8 @@ es-MX:
     privacy_notice: Aviso de privacidad
     accept_label: Acepto los <a href="%{tos_url}" target="_blank">términos de servicio</a>
       y la <a href="%{privacy_url}" target="_blank">política de privacidad</a>.
+    accept_label_markdown: Acepto los [términos de servicio](%{tos_url}) y la [política
+      de privacidad](%{privacy_url}).
     accept: Acepto
     print: Imprimir
     reminder_desc: Hemos actualizado nuestros <a href="%{tos_url}" target="_blank">términos
@@ -941,6 +981,11 @@ es-MX:
       Por favor, lee con atención antes de aceptarlos. Ten en cuenta que nuestras
       herramientas para aprender JavaScript podrían no estar disponibles para tus
       estudiantes si no aceptas explícitamente los términos actualizados.
+    reminder_desc_markdown: Hemos actualizado nuestros [términos de servicio](%{tos_url})
+      y la [política de privacidad](%{privacy_url}). Por favor, lee con atención antes
+      de aceptarlos. Ten en cuenta que nuestras herramientas para aprender JavaScript
+      podrían no estar disponibles para tus estudiantes si no aceptas explícitamente
+      los términos actualizados.
     review_terms: Revisa los términos actualizados
   school_info_interstitial:
     title: Queremos que cada estudiante pueda acceder a las Ciencias de la Computación.
@@ -966,6 +1011,9 @@ es-MX:
     decline: Cerrar
   zendesk_too_young_message: Lo sentimos, los usuarios más jóvenes no pueden registrarse
     en nuestro sitio de soporte. Puedes navegar <a href="http://support.code.org">support.code.org</a>
+    sin registrarte o pedir a tus padres o docentes que nos contacten en tu nombre.
+  zendesk_too_young_message_markdown: Lo sentimos, los usuarios más jóvenes no pueden
+    registrarse en nuestro sitio de soporte. Puedes navegar [support.code.org](http://support.code.org)
     sin registrarte o pedir a tus padres o docentes que nos contacten en tu nombre.
   progress:
     not_started: no iniciado
@@ -1135,7 +1183,11 @@ es-MX:
     time4cs_c4: Impactos invasivos en Everglades
     time4cs_c5: Los ciudadanos efectúan cambios en Everglades
     k5_getting_started: Primeros pasos
+    k5_csf_intro: Conoce los Cursos de Fundamentos de Ciencias de la Computación
+    k5_coding_concepts: Conceptos de programación y estrategias de enseñanza
     k5_next_steps: Próximos pasos
+    k5_basic_concepts: Conceptos básicos de programación y prácticas de enseñanza
+    k5_diving_deeper: 'Profundizar: cursos E y F'
   external_links:
     disclaimer: Descargo de responsabilidad
     leaving_domain: Estás saliendo de este dominio hacia una página que no es operada

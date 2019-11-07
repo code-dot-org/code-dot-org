@@ -6192,3 +6192,7 @@ ka:
               name: ცვლადები
             For Loops:
               name: '"მიზნისთვის" ციკლები'
+        csp10-pilot:
+          stages:
+            new stage:
+              name: ახალი დონე

@@ -381,7 +381,7 @@
     "TEXT_TRIM_OPERATOR_RIGHT": "將右側的空白字元消除",
     "TEXT_TRIM_TOOLTIP": "回傳消除字串一側或二側多餘空白字元的結果。",
     "UNUSED_CODE": "未使用的代碼",
-    "VARIABLE": "",
+    "VARIABLE": "變數",
     "VARIABLES_DEFAULT_NAME": "項目",
     "VARIABLES_GET_CREATE_SET": "建立「設定%1」的積木",
     "VARIABLES_GET_HELPURL": "",
