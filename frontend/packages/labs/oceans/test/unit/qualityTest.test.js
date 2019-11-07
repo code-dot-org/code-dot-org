@@ -227,7 +227,7 @@ describe('Model quality test', () => {
     const partData = fishData.mouths;
     const partKey = PartKey.MOUTH;
     const trainSize = TRAIN_SIZE;
-    const mouthNames = ['sharp1', 'spikey1'];
+    const mouthNames = ['mouth3', 'mouth7'];
 
     const ids = Object.entries(partData).filter(entry => mouthNames.includes(entry[0])).map(entry => entry[1].index);
     console.log(`mouth names: ${JSON.stringify(mouthNames)} ids: ${JSON.stringify(ids)}`);
