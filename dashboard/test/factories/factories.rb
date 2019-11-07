@@ -355,7 +355,7 @@ FactoryGirl.define do
           email: user.email,
           hashed_email: user.hashed_email,
           credential_type: AuthenticationOption::GOOGLE,
-          authentication_id: 'abcd123',
+          authentication_id: "abcd#{user.id}",
           data: {
             oauth_token: 'some-google-token',
             oauth_refresh_token: 'some-google-refresh-token',
