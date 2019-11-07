@@ -1,5 +1,5 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import {mount} from 'enzyme';
 import {expect} from '../../util/deprecatedChai';
 import sinon from 'sinon';
 import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
@@ -10,13 +10,18 @@ describe('SchoolAutocompleteDropdown', () => {
   let handleChange;
   let select;
 
-  beforeEach(() => {
+  beforeEach(done => {
     handleChange = sinon.spy();
-    schoolAutocompleteDropdown = shallow(
+    schoolAutocompleteDropdown = mount(
       <SchoolAutocompleteDropdown value="12345" onChange={handleChange} />
     );
 
-    select = schoolAutocompleteDropdown.find('VirtualizedSelect');
+    // Wait for VirtualizedSelect to be lazy-loaded
+    setTimeout(() => {
+      schoolAutocompleteDropdown.update();
+      select = schoolAutocompleteDropdown.find('VirtualizedSelect');
+      done();
+    }, 0);
   });
 
   it('renders VirtualizedSelect', () => {
@@ -32,7 +37,7 @@ describe('SchoolAutocompleteDropdown', () => {
   });
 
   it('Calls props.onChange when the selection changes', () => {
-    select.simulate('change', {value: '1', label: 'selected school'});
+    select.props().onChange({value: '1', label: 'selected school'});
     expect(handleChange).to.be.calledOnce;
     expect(handleChange).to.be.calledWith({
       value: '1',
