@@ -701,6 +701,27 @@ no-NO:
       CourseE_HOC 2018 Level_9b:
         voyage_aquatic_9a: Se de røde og blå korall blokkene? Bruk dem for å velge
           høyre eller venstre.
+      Dance_2019_01:
+        validation: |-
+          \*\* Hvordan runder jeg dette nivået? \*\*
+
+          -   Pass på at en danser vises på skjermen.
+
+          -   dette nivået slutter etter 4 takter.\*
+      Dance_2019_04:
+        validation: |-
+          \*\* Hvordan runder jeg dette nivået? \*\*
+
+          -   Danseren må bytte til en ny posisjon etter 4 takter.
+
+          -   Nivået ender etter 7 takter.\*
+      Dance_2019_05:
+        validation: |-
+          \*\* Hvordan runder jeg dette nivået? \*\*
+
+          -   Etter 6 takter må din danser må gjøre en annen dans enn den gjorde etter 4 takter.
+
+          -   Nivået ender etter 11 takter.\*
       Dance_Party_01:
         validation: |-
           \*\* Hvordan runder jeg dette nivået? \*\*
