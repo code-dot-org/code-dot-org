@@ -13,6 +13,9 @@ if (envConstants.COVERAGE) {
   reporters.push('coverage-istanbul');
 }
 
+// Use the babel test env defined in .babelrc
+process.env.BABEL_ENV = 'test';
+
 module.exports = function(config) {
   var browser = envConstants.BROWSER || 'PhantomJS';
   config.set({
