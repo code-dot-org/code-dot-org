@@ -118,6 +118,7 @@ def create_in_up_pr
   in_up_pr = GitHub.create_pull_request(
     base: 'staging',
     head: IN_UP_BRANCH,
+    body: File.read(File.join(__dir__, 'templates/i18n_sync_in_up.md')),
     title: "I18n sync In & Up #{Date.today.strftime('%m/%d')}"
   )
   GitHub.label_pull_request(in_up_pr, ["i18n"])
@@ -186,6 +187,7 @@ def create_down_out_pr
   down_out_pr = GitHub.create_pull_request(
     base: 'staging',
     head: DOWN_OUT_BRANCH,
+    body: File.read(File.join(__dir__, 'templates/i18n_sync_down_out.md')),
     title: "I18n sync Down & Out #{Date.today.strftime('%m/%d')}"
   )
   GitHub.label_pull_request(down_out_pr, ["i18n"])
