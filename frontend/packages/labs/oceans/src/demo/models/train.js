@@ -2,6 +2,7 @@ import 'idempotent-babel-polyfill';
 import {setState, getState} from '../state';
 import {ClassType} from '../constants';
 import SimpleTrainer from '../../utils/SimpleTrainer';
+import SVMTrainer from '../../utils/SVMTrainer';
 import {generateOcean} from '../../utils/generateOcean';
 
 export const init = () => {
@@ -46,9 +47,11 @@ export const onClassifyFish = doesLike => {
     return;
   }
 
-  const knnData = state.fishData[state.trainingIndex].getTensor();
+  //const knnData = state.fishData[state.trainingIndex].getTensor();
+  const exampleData = state.fishData[state.trainingIndex].knnData;
   const classId = doesLike ? ClassType.Like : ClassType.Dislike;
-  state.trainer.addExampleTensor(knnData, classId);
+  //state.trainer.addExampleTensor(knnData, classId);
+  state.trainer.addTrainingExample(exampleData, classId);
 
   let fishData = [...state.fishData];
   if (state.trainingIndex > state.fishData.length - 5) {

@@ -1,6 +1,7 @@
 const {initFishData, fishData, MouthExpression} = require('../../src/utils/fishData');
 const {generateOcean, filterOcean} = require('../../src/utils/generateOcean');
 const SimpleTrainer = require('../../src/utils/SimpleTrainer');
+const SVMTrainer = require('../../src/utils/SVMTrainer');
 
 
 const trial = async function(trainSize, testSize, trainer, labelFn) {
@@ -34,8 +35,7 @@ const performTrials = async function({numTrials, trainSize, testSize, createTrai
 
   if (!createTrainerFn) {
     createTrainerFn = () => {
-      const trainer = new SimpleTrainer();
-      trainer.initializeClassifiersWithoutMobilenet();
+      const trainer = new SVMTrainer();
       return trainer;
     };
   }
@@ -50,7 +50,6 @@ const performTrials = async function({numTrials, trainSize, testSize, createTrai
   const keys = ['truePos', 'falsePos', 'falseNeg', 'trueNeg', 'precision', 'recall', 'accuracy'];
 
   for (const key of keys) {
-    //console.log(`${key} ${JSON.stringify(resultsForCurrentNumberOfTrials.map(result => result[key]))}`)
     const values = trials.map(t => t[key]);
     const avg = average(values);
     averagedConfusionMatrix[key] = avg;
@@ -60,7 +59,6 @@ const performTrials = async function({numTrials, trainSize, testSize, createTrai
 };
 
 const createConfusionMatrix = function(predictedOcean, numTrained, labelFn) {
-  //const confusionMatrix = {truePos: 0, falsePos: 0, falseNeg: 0, trueNeg: 0}
   var truePos, falsePos, falseNeg, trueNeg;
   truePos = falsePos = falseNeg = trueNeg = 0;
 
@@ -132,6 +130,7 @@ describe('Model quality test', () => {
     const roundFishFn = (fish) => fish.body.knnData[1] === 0 ? 1 : 0;
     const trainSize = TRAIN_SIZE;
 
+    console.log('Round fish test');
     const result = await performTrials({
       numTrials: NUM_TRIALS,
       trainSize: trainSize,
@@ -148,7 +147,7 @@ describe('Model quality test', () => {
     const trainSize = TRAIN_SIZE;
 
     for (const [name, data] of Object.entries(partData)) {
-      console.log(name);
+      console.log(`${partKey} ${name}`);
       const id = data.index;
       const labelFn = (fish) => fish[partKey].index === id ? 1 : 0;
       const result = await performTrials({
@@ -168,7 +167,7 @@ describe('Model quality test', () => {
     const trainSize = TRAIN_SIZE;
 
     for (const [name, data] of Object.entries(partData)) {
-      console.log(name);
+      console.log(`${partKey} ${name}`);
       const id = data.index;
       const labelFn = (fish) => fish[partKey].index === id ? 1 : 0;
       const result = await performTrials({
@@ -188,9 +187,12 @@ describe('Model quality test', () => {
     const trainSize = TRAIN_SIZE;
 
     for (const [name, data] of Object.entries(partData)) {
-      console.log(name);
+      console.log(`${partKey} ${name}`);
       const id = data.index;
-      const labelFn = (fish) => fish[partKey].index === id ? 1 : 0;
+      const labelFn = (fish) => {
+        //console.log(JSON.stringify(fish, null, 2));
+        return fish[partKey].index === id ? 1 : 0;
+      }
       const result = await performTrials({
         numTrials: NUM_TRIALS,
         trainSize: trainSize,
@@ -208,7 +210,7 @@ describe('Model quality test', () => {
     const trainSize = TRAIN_SIZE;
 
     for (const [expressionName, expressionId] of Object.entries(MouthExpression)) {
-      console.log(`${expressionName}`);
+      console.log(`${partKey} ${expressionName}`);
       const normalizedId = (1.0 * expressionId) / (Object.keys(MouthExpression).length - 1);
       const labelFn = (fish) => floatEquals(fish[partKey].knnData[knnDataIndex], normalizedId) ? 1 : 0;
       const result = await performTrials({
