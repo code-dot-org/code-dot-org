@@ -517,6 +517,7 @@ et:
             '"rotation"': pööramine
             '"x"': horisontaalne asend
             '"y"': vertikaalne asend
+            '"tint"': toon
       Dancelab_setPropRandom:
         text: juhusliku valiku alusel {SPRITE} {PROPERTY}
         options:
@@ -734,6 +735,8 @@ et:
             '1': keskel
             '2': kõrged helid
       Dancelab_whenSetup:
+        text: seadistus
+      Dancelab_whenSetup2:
         text: seadistus
       gamelab_changePropBy:
         text: muuda {SPRITE} {PROPERTY} {VAL} võrra

@@ -24,11 +24,13 @@ ro:
     attributes:
       user:
         name: Numele afișat
-        name_example: Afişează numele <br/> (de exemplu, Cool Coder sau Jane S.)
+        name_example: Afişează numele (de exemplu, Cool Coder sau Jane S.)
         email: E-mail
         parent_email: E-mail părinte/tutore
         personal_email: Adresă de e-mail personală <a href="%{url}"> (apasă aici dacă
           nu ai o adresă de e-mail)</a>
+        personal_email_markdown: Adresă de e-mail personală [(apasă aici dacă nu ai
+          o adresă de e-mail)](%{url})
         username: nume de utilizator
         password: Parolă
         password_confirmation: Confirmarea parolei
@@ -40,8 +42,12 @@ ro:
         finish_sign_up_header: Finalizează crearea contului tău
         finish_sign_up_subheader: Completează următoarele informații pentru a finaliza
           crearea unui cont Code.org pentru <strong>%{email}</strong>.
+        finish_sign_up_subheader_markdown: Completează următoarele informații pentru
+          a finaliza crearea unui cont Code.org pentru **%{email}**.
         finish_sign_up_subheader_provider: Completează următoarele informații pentru
           a finaliza crearea unui cont Code.org cu <strong>%{provider}</strong> pentru<strong>%{email}</strong>.
+        finish_sign_up_subheader_provider_markdown: Completează următoarele informații
+          pentru a finaliza crearea unui cont Code.org cu **%{provider}** pentru**%{email}**.
         error:
           future: nu poate fi în viitor
   beta: beta
@@ -119,6 +125,9 @@ ro:
     overview: Înscrieţi-vă contul pentru a urmări progresul dumneavoastră sau a gestiona
       clasa dvs. <a href="/"> puteţi parcurge diverse stadii şi puzzle-uri</a> fără
       un cont, dar va trebui să vă înregistrați ca să salvaţi progresul şi proiectele.
+    overview_markdown: Înscrieţi-vă contul pentru a urmări progresul dumneavoastră
+      sau a gestiona clasa dvs. [puteţi parcurge diverse stadii şi puzzle-uri](/)
+      fără un cont, dar va trebui să vă înregistrați ca să salvaţi progresul şi proiectele.
     hoc_already_signed_up_heading: Începe fără logare
     hoc_already_signed_up_content: Esti logat pentru a preda o Oră de Programare!
       Nu e nevoie ca tu și elevii tăi să vă logați in Code Studio pentru a participa
@@ -133,6 +142,12 @@ ro:
       Veți putea repartiza cursuri elevilor, precum și urmări progresul acestora.
       <a href="%{studio_url}"> De asemenea, puteți continua să explorați etape și
       puzzle-uri diverse</a> fără a crea un cont.
+    hoc_already_signed_up_content_post_hoc_markdown: Vă mulțumim că ați găzduit o
+      Oră de Cod. Pentru a vă conecta la Studio-ul Code, va trebui să setați o parolă
+      pentru contul dvs. Acest lucru vă va permite să vă salvați progresul și să vă
+      gestionați clasa. Veți putea repartiza cursuri elevilor, precum și urmări progresul
+      acestora. [De asemenea, puteți continua să explorați etape și puzzle-uri diverse](%{studio_url})
+      fără a crea un cont.
     teacher_educator_guide: Consultă ghidul educatorului
     title: Înregistrați-vă pentru Code.org
     school_name: Numele şcolii (opţional)
@@ -465,11 +480,20 @@ ro:
       și condițiile de utilizare</a> impuse de Code.org. Confirm că am primit permisiunea
       părintelui meu sau a tutorelui meu legal să utilizez serviciile Code.org chiar
       și fără profesor.
+    create_personal_login_terms_markdown: Prin crearea unui cont de utilizator personal,
+      sunt de acord să respect [termenii și condițiile de utilizare](%{terms_of_service_url})
+      impuse de Code.org. Confirm că am primit permisiunea părintelui meu sau a tutorelui
+      meu legal să utilizez serviciile Code.org chiar și fără profesor.
     create_personal_login_email_note: 'Notă: adresele de email nu sunt stocate într-o
       formă care să ne permită să contactăm studenții. Elevii nu vor primi niciodată
       e-mailuri de la Code.org, cu excepția recuperării parolei. Consultați <a href=''%{privacy_policy_url}'',
       target=''_blank''>politicile noastre de confidențialitate</a> pentru mai multe
       informații.'
+    create_personal_login_email_note_markdown: 'Notă: adresele de email nu sunt stocate
+      într-o formă care să ne permită să contactăm studenții. Elevii nu vor primi
+      niciodată e-mailuri de la Code.org, cu excepția recuperării parolei. Consultați
+      [politicile noastre de confidențialitate](%{privacy_policy_url}) pentru mai
+      multe informații.'
     enter_new_login_info: Introduceți noile informații ale dvs. de conectare
     confirm_secret_words: Confirmați-vă identitatea prin introducerea cuvintelor dvs.
       secrete curente
@@ -876,6 +900,12 @@ ro:
       pe Code Studio.</i> Acesta este un mare lucru pentru noi, şi sperăm că el stabileşte
       un nou standard pentru intimitatea studentului în educaţie si tehnologie. V-am
       trimis un rezumat al altor schimbări prin e-mail.'
+    intro_desc_markdown: 'Am actualizat termenii şi politica de confidenţialitate,
+      aşa cum arată mai jos. Modificările sunt efectuate la 24 august 2016. Cea mai
+      mare schimbare: noi _nu vom mai stoca adrese de email pentru conturile de student
+      pe Code Studio._ Acesta este un mare lucru pentru noi, şi sperăm că el stabileşte
+      un nou standard pentru intimitatea studentului în educaţie si tehnologie. V-am
+      trimis un rezumat al altor schimbări prin e-mail.'
     intro_instructions: Trebuie să acceptaţi aceşti termeni noi pentru elevii sub
       vârsta de 13 ani din clasă dvs. pentru a avea acces complet la toate cele mai
       recente caracteristici în Code Studio.  Atunci când înregistrati un cont pentru
@@ -887,10 +917,16 @@ ro:
     privacy_notice: Confidențialitate
     accept_label: Sunt de acord sa actualizez <a href="%{tos_url}" target="_blank">
       Termenii</a> şi <a href="%{privacy_url}" target="_blank"> Politica de confidenţialitate</a>
+    accept_label_markdown: Sunt de acord sa actualizez [Termenii](%{tos_url}) şi [Politica
+      de confidenţialitate](%{privacy_url})
     accept: Accept
     print: Tipărire
     reminder_desc: Am actualizat <a href="%{tos_url}" target="_blank"> Termenii</a>
       şi <a href="%{privacy_url}" target="_blank"> Politica de confidenţialitate</a>.
+      Vă rugăm să citiţi acestea cu atenţie înainte de a le accepta. Reţineţi că instrumentele
+      noastre de predare JavaScript pot fi disponibile pentru studenţii dumneavoastră
+      înainte de a accepta în mod explicit actualizarea de termeni.
+    reminder_desc_markdown: Am actualizat [Termenii](%{tos_url}) şi [Politica de confidenţialitate](%{privacy_url}).
       Vă rugăm să citiţi acestea cu atenţie înainte de a le accepta. Reţineţi că instrumentele
       noastre de predare JavaScript pot fi disponibile pentru studenţii dumneavoastră
       înainte de a accepta în mod explicit actualizarea de termeni.
@@ -919,6 +955,10 @@ ro:
     decline: Închide
   zendesk_too_young_message: Ne pare rău, însă utilizatorii mai tineri nu au voie
     să intre pe site-ul nostru de suport. Poți naviga pe <a href="http://support.code.org">support.code.org</a>
+    fără a te loga sau solicită ajutorul unui părinte sau profesor să ne contacteze
+    în numele tău.
+  zendesk_too_young_message_markdown: Ne pare rău, însă utilizatorii mai tineri nu
+    au voie să intre pe site-ul nostru de suport. Poți naviga pe [support.code.org](http://support.code.org)
     fără a te loga sau solicită ajutorul unui părinte sau profesor să ne contacteze
     în numele tău.
   progress:
