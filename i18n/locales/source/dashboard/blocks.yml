@@ -615,6 +615,7 @@ en:
             '"rotation"': rotation
             '"x"': horizontal position
             '"y"': vertical position
+            '"tint"': tint
       Dancelab_setPropRandom:
         text: randomize [SPRITE][0] [PROPERTY][1]
         options:
@@ -642,6 +643,7 @@ en:
             '"ROBOT"': robots
             '"SHARK"': sharks
             '"UNICORN"': unicorns
+            '"SLOTH"': sloths
           PROPERTY:
             '"scale"': size
             '"width"': width
