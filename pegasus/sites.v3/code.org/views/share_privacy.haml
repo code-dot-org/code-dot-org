@@ -25,7 +25,7 @@
     href: "mailto:?to=&subject=" + URI.encode(email_subject) + "&body=" + URI.encode(email_body), target:'_blank', id: 'email_button'}
     %i.fa.fa-envelope{"aria-hidden": "true"}
     Email
-  %a{class: 'print-button', href: "javascript:window.print()", id: 'print_button'}
+  %a{class: 'print-button', href: "javascript:void(0)", id: 'print_button'}
     %i.fa.fa-print{"aria-hidden": "true"}
     Print
 %div{style: 'clear: both'}
