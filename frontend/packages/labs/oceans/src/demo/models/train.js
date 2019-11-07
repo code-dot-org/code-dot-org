@@ -9,7 +9,7 @@ export const init = () => {
 
   let fishData = [...state.fishData];
   if (fishData.length === 0) {
-    fishData = fishData.concat(generateOcean(100, state.loadTrashImages));
+    fishData = fishData.concat(generateOcean(100));
   }
 
   let trainer = state.trainer;
@@ -52,7 +52,7 @@ export const onClassifyFish = doesLike => {
 
   let fishData = [...state.fishData];
   if (state.trainingIndex > state.fishData.length - 5) {
-    fishData = fishData.concat(generateOcean(100, state.loadTrashImages));
+    fishData = fishData.concat(generateOcean(100));
   }
 
   if (doesLike) {

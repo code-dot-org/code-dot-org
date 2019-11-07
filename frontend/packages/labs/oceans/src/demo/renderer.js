@@ -8,7 +8,9 @@ import {
   loadAllFishPartImages,
   loadAllSeaCreatureImages,
   loadAllTrashImages,
-  initMobilenet
+  initMobilenet,
+  FishOceanObject,
+  SeaCreatureOceanObject
 } from './OceanObject';
 import aiBotClosed from '../../public/images/ai-bot/ai-bot-closed.png';
 import aiBotCheckmark from '../../public/images/ai-bot/ai-bot-checkmark.png';
@@ -100,8 +102,7 @@ export const render = () => {
       drawPondFishImages();
 
       setState({
-        canSkipPond:
-          $time() >= currentModeStartTime + timeBeforeCanSkipPond,
+        canSkipPond: $time() >= currentModeStartTime + timeBeforeCanSkipPond,
         canSeePondText:
           $time() >= currentModeStartTime + timeBeforeCanSeePondText
       });
@@ -187,6 +188,12 @@ const currentRunTime = (isRunning, clampTime) => {
 const finishMovement = () => {
   setState({isRunning: false});
   lastPauseTime += moveTime;
+  lastStartTime = null;
+};
+
+const pauseMovement = t => {
+  setState({isRunning: false, isPaused: true});
+  lastPauseTime = t;
   lastStartTime = null;
 };
 
@@ -287,6 +294,19 @@ const drawMovingFish = state => {
           constants.canvasWidth / 2 - constants.fishCanvasWidth / 2;
         if (Math.abs(midScreenX - x) <= 50) {
           centerFish = fish;
+          if (state.isRunning && state.appMode === 'creaturesvtrashdemo') {
+            if (fish instanceof FishOceanObject) {
+              fish.result.predictedClassId = 0;
+            } else if (fish instanceof SeaCreatureOceanObject) {
+              fish.result.predictedClassId = 1;
+            } else {
+              fish.result.predictedClassId = 1;
+            }
+            if (i === lastFishIdx) {
+              pauseMovement(t);
+              setState({showBiasText: true});
+            }
+          }
         }
       } else {
         predictFish(state, i).then(prediction => {
@@ -334,7 +354,7 @@ const drawPredictBot = state => {
   const ctx = state.canvas.getContext('2d');
 
   // Move AI bot above fish parade.
-  if (state.isRunning) {
+  if (state.isRunning || state.isPaused) {
     botYDestination = botYDestination || botY - 120;
 
     const distToDestination = Math.abs(botYDestination - botY);
@@ -383,7 +403,8 @@ const drawPondFishImages = () => {
     const swayValue =
       (($time() * 360) / (20 * 1000) + (fish.getId() + 1) * 10) % 360;
     const swayMultipleX = 120;
-    const swayOffsetX = Math.sin(((swayValue * Math.PI) / 180) * 2) * swayMultipleX;
+    const swayOffsetX =
+      Math.sin(((swayValue * Math.PI) / 180) * 2) * swayMultipleX;
     const swayOffsetY = Math.sin(((swayValue * Math.PI) / 180) * 6) * 8;
 
     const xy = fish.getXY();
@@ -424,8 +445,8 @@ const drawSingleFish = (fish, fishXPos, fishYPos, ctx, size = 1) => {
   const height = fishCanvas.height * size;
 
   // Maintain the center of the fish.
-  const adjustedFishXPos = fishXPos - width/2 + fishCanvas.width/2;
-  const adjustedFishYPos = fishYPos - height/2 + fishCanvas.height/2;
+  const adjustedFishXPos = fishXPos - width / 2 + fishCanvas.width / 2;
+  const adjustedFishYPos = fishYPos - height / 2 + fishCanvas.height / 2;
 
   ctx.drawImage(
     fishCanvas,

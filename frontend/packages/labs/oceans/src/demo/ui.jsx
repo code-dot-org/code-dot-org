@@ -42,7 +42,7 @@ const styles = {
     minWidth: 160,
     padding: '16px 30px',
     outline: 'none',
-    border: 'none',
+    border: `2px solid ${colors.black}`,
     ':focus': {
       outline: `${colors.white} auto 5px`
     }
@@ -50,7 +50,16 @@ const styles = {
   continueButton: {
     position: 'absolute',
     bottom: 10,
-    right: 10
+    right: 10,
+    backgroundColor: colors.orange,
+    color: colors.white
+  },
+  backButton: {
+    position: 'absolute',
+    bottom: 10,
+    left: 10,
+    backgroundColor: colors.blue,
+    color: colors.white
   },
   button1col: {
     width: '20%',
@@ -68,6 +77,9 @@ const styles = {
     top: '20%',
     left: '10%',
     width: '80%'
+  },
+  instructionsFooter: {
+    textAlign: 'center'
   },
   instructionsParagraph: {
     marginTop: 18,
@@ -111,11 +123,11 @@ const styles = {
   },
   trainQuestionTextDisabled: {
     position: 'absolute',
-    top: '18%',
+    top: '15%',
     left: '50%',
     transform: 'translateX(-50%)',
-    fontSize: 22,
-    lineHeight: '26px',
+    fontSize: 32,
+    lineHeight: '35px',
     opacity: 0.5
   },
   trainButtons: {
@@ -152,18 +164,20 @@ const styles = {
   },
   pondText: {
     position: 'absolute',
-    bottom: '4%',
-    left: '43%',
-    transform: 'translateX(-45%)',
+    bottom: 10,
+    left: '50%',
+    transform: 'translateX(-50%)',
     fontSize: 18,
-    lineHeight: '32px',
+    lineHeight: '22px',
     textAlign: 'center',
-    width: '50%',
-    backgroundColor: colors.transparentWhite,
-    border: '4px solid black',
+    width: '45%',
+    backgroundColor: colors.transparentBlack,
     padding: '1%',
     borderRadius: 10,
-    color: colors.black
+    color: colors.white
+  },
+  pondTextParagraph: {
+    marginBottom: 4
   },
   pondFishDetails: {
     position: 'absolute',
@@ -175,27 +189,25 @@ const styles = {
   pondBot: {
     position: 'absolute',
     height: '40%',
-    left: '4%',
-    bottom: 0
+    top: '23%',
+    left: '50%',
+    bottom: 0,
+    transform: 'translateX(-45%)'
   },
   pill: {
     display: 'flex',
     alignItems: 'center'
   },
   pillIcon: {
-    width: 38,
+    width: 19,
     padding: 10,
-    border: `4px solid ${colors.black}`,
-    borderRadius: 33,
-    zIndex: 2
+    borderRadius: 33
   },
   pillText: {
-    color: colors.white,
-    backgroundColor: colors.black,
+    color: colors.black,
     padding: '10px 30px',
     borderRadius: 33,
-    marginLeft: -22,
-    zIndex: 1
+    marginLeft: -18
   },
   bubble: {
     position: 'absolute',
@@ -209,13 +221,13 @@ const styles = {
   },
   count: {
     position: 'absolute',
-    top: '5%'
+    top: '3%'
   },
   noCount: {
-    right: '16%'
+    right: '9%'
   },
   yesCount: {
-    right: '2%'
+    right: 0
   }
 };
 
@@ -304,21 +316,19 @@ const instructionsText = {
         'In the following activity we’ll learn about artificial intelligence (AI) and machine learning.',
         'Now let’s consider how machine learning can be used for good in the real world.',
         '1 in 3 people worldwide do not have access to safe drinking water. Access to clean water could reduce global diseases by 10%.',
-        'Garbage dumped in ocean or rivers affects the water health and impacts the marine life in the water.'
-      ]
-    },
-    {
-      heading: 'Train AI to Clean the Ocean',
-      text: [
+        'Garbage dumped in ocean or rivers affects the water health and impacts the marine life in the water.',
         'In this activity, you will "program" or "train" an artificial intelligence to identify trash to remove from the ocean.'
-      ]
+      ],
+      footer:
+        'Sources <a href="https://www.cdc.gov/healthywater/global/assessing.html" target="_blank">X</a>, <a href="https://unfoundation.org/blog/post/tapping-benefits-clean-water-sanitation-hygiene-achieve-sustainable-development-goals/" target="_blank">Y</a>, <a href="https://www.unwater.org/water-facts/water-sanitation-and-hygiene/" target="_blank">Z</a>'
     },
     {
       heading: 'Meet A.I.',
       text: [
         "A.I. can't tell if an object is a fish or a piece of trash yet, but it can process different images and identify patterns.",
         'To program A.I., label the images we show you as either "fish" or "not fish". This will train A.I. to do it on its own!'
-      ]
+      ],
+      image: aiBotClosed
     }
   ],
 
@@ -378,6 +388,19 @@ class Instructions extends React.Component {
                 </div>
               );
             }
+          )}
+          {instructionsText[appModeVariant][currentPage].image && (
+            <div style={styles.instructionsFooter}>
+              <img src={instructionsText[appModeVariant][currentPage].image} />
+            </div>
+          )}
+          {instructionsText[appModeVariant][currentPage].footer && (
+            <div
+              style={styles.instructionsFooter}
+              dangerouslySetInnerHTML={{
+                __html: instructionsText[appModeVariant][currentPage].footer
+              }}
+            />
           )}
         </div>
         <Button style={styles.continueButton} onClick={this.onContinueButton}>
@@ -484,9 +507,18 @@ class Words extends React.Component {
       <Body>
         <Header>Choose Fish Type</Header>
         <Content>
-          <div style={styles.wordsText}>
-            What type of fish do you want to train A.I. to detect?
-          </div>
+          {state.appMode === 'short' && (
+            <div style={styles.wordsText}>
+              What type of fish do you want to train A.I. to detect?
+            </div>
+          )}
+          {state.appMode === 'long' && (
+            <div style={styles.wordsText}>
+              What happens if the words are more subjective?
+              <br />
+              Choose a new word to teach A.I.
+            </div>
+          )}
           {currentItems.map((item, itemIndex) => (
             <Button
               key={itemIndex}
@@ -511,6 +543,8 @@ let Train = class Train extends React.Component {
       text = "Great work! You can continue when you're ready.";
     } else if (total >= 5) {
       text = 'Keep training!';
+    } else if (total === 0 && state.appMode === 'creaturesvtrash') {
+      text = 'Let’s train A.I. again!';
     } else {
       return null;
     }
@@ -579,6 +613,12 @@ class Predict extends React.Component {
 
     if (state.appMode === 'fishvtrash') {
       return 'Now let’s see if A.I. knows what a fish looks like.';
+    } else if (state.appMode === 'creaturesvtrashdemo') {
+      if (state.isPaused) {
+        return 'There are lots of creatures in the sea who don’t look like fish. But that doesn’t mean they should be removed! A.I. only knows what we teach it!';
+      } else {
+        return 'A.I. has learned to remove objects it identifies as  “Not Fish”. What unintended consequences might this lead to?';
+      }
     } else if (state.appMode === 'creaturesvtrash') {
       return 'Now let’s see if A.I. does a better job separating what should be in the ocean and what shouldn’t.';
     } else if (state.appMode === 'short' || state.appMode === 'long') {
@@ -598,7 +638,7 @@ class Predict extends React.Component {
         {speechBubbleText && (
           <SpeechBubble text={speechBubbleText} style={styles.predictSpeech} />
         )}
-        {!state.isRunning && (
+        {!state.isRunning && !state.showBiasText && (
           <Button
             style={styles.continueButton}
             onClick={() => setState({isRunning: true, runStartTime: $time()})}
@@ -606,14 +646,23 @@ class Predict extends React.Component {
             Run A.I.
           </Button>
         )}
-        {state.canSkipPredict && (
-          <Button
-            style={styles.continueButton}
-            onClick={() => toMode(Modes.Pond)}
-          >
-            Continue
-          </Button>
-        )}
+        {(state.isRunning || state.isPaused) &&
+          (state.canSkipPredict || state.showBiasText) && (
+            <Button
+              style={styles.continueButton}
+              onClick={() => {
+                if (state.showBiasText) {
+                  if (state.onContinue) {
+                    state.onContinue();
+                  }
+                } else {
+                  toMode(Modes.Pond);
+                }
+              }}
+            >
+              Continue
+            </Button>
+          )}
       </Body>
     );
   }
@@ -671,13 +720,21 @@ class Pond extends React.Component {
 
   render() {
     const state = getState();
-    const pondText = [
-      `Out of ${state.fishData.length} objects, I identified ${
-        state.pondFish.length
-      } that are ${state.word.toUpperCase()}.`,
-      'How did I do?',
-      'Choose to Train More or Continue.'
-    ];
+    let pondText = [];
+
+    if (state.appMode === 'fishvtrash' || state.appMode === 'creaturesvtrash') {
+      pondText[0] =
+        `Out of ${state.fishData.length} random objects, A.I. identified ${
+          state.totalPondFish
+        } that belong in water.`;
+    } else {
+      pondText[0] =
+        `Out of ${state.fishData.length} objects, I identified ${
+        state.totalPondFish
+        } that are ${state.word.toUpperCase()}.`;
+    }
+    pondText[1] = 'How did A.I. do?';
+    pondText[2] = 'Choose to Train More or Continue.'
 
     const showFishDetails = !!state.pondClickedFish;
     let pondFishDetailsStyle;
@@ -714,30 +771,44 @@ class Pond extends React.Component {
     return (
       <Body onClick={this.onPondClick}>
         <Header>A.I. Results</Header>
-        {state.canSeePondText && <div style={styles.pondText}>
-          {pondText.map((text, index) => {
-            return (
-              <div>
-                {text}
-              </div>
-            );
-          })}
-        </div>}
+        {state.canSeePondText && (
+          <div>
+            <div style={styles.pondText}>
+              {pondText.map((text, index) => {
+                return (
+                  <div key={index} style={styles.pondTextParagraph}>
+                    {text}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        )}
         <img style={styles.pondBot} src={aiBotClosed} />
         {showFishDetails && (
           <div style={pondFishDetailsStyle}>{confidence}</div>
         )}
         {state.canSkipPond && (
-          <Button
-            style={styles.continueButton}
-            onClick={() => {
-              if (state.onContinue) {
-                state.onContinue();
-              }
-            }}
-          >
-            Continue
-          </Button>
+          <div>
+            <Button
+              style={styles.continueButton}
+              onClick={() => {
+                if (state.onContinue) {
+                  state.onContinue();
+                }
+              }}
+            >
+              Continue
+            </Button>
+            <Button
+              style={styles.backButton}
+              onClick={() => {
+                toMode(Modes.Training);
+              }}
+            >
+              Train More
+            </Button>
+          </div>
         )}
       </Body>
     );

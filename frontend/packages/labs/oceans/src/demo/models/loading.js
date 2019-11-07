@@ -6,7 +6,6 @@ import {initFishData} from '../../utils/fishData';
 import {getAppMode} from '../helpers';
 import {toMode} from '../toMode';
 import SimpleTrainer from '../../utils/SimpleTrainer';
-import savedModel from '../savedModel.json';
 
 export const init = async () => {
   const [appModeBase] = getAppMode(getState());
@@ -21,7 +20,6 @@ export const init = async () => {
   if (appModeBase === 'creaturesvtrashdemo') {
     const trainer = new SimpleTrainer();
     trainer.initializeClassifiersWithoutMobilenet();
-    trainer.loadDataset(savedModel);
     setState({trainer, word: 'fish'});
   }
 
