@@ -104,7 +104,7 @@ export const FishBodyPart = Object.freeze({
   EYE: 6
 });
 
-const MouthExpression = Object.freeze({
+export const MouthExpression = Object.freeze({
   SMILE: 0,
   NEUTRAL: 1,
   FROWN: 2
@@ -915,6 +915,3 @@ export const initFishData = () => {
 };
 
 export const fishData = fishComponents;
-export {
-  MouthExpression,
-}

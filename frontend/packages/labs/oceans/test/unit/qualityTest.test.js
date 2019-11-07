@@ -132,7 +132,12 @@ describe('Model quality test', () => {
     const roundFishFn = (fish) => fish.body.knnData[1] === 0 ? 1 : 0;
     const trainSize = TRAIN_SIZE;
 
-    const result = await performTrials({numTrials: NUM_TRIALS, trainSize: trainSize, testSize: 100, labelFn: roundFishFn});
+    const result = await performTrials({
+      numTrials: NUM_TRIALS,
+      trainSize: trainSize,
+      testSize: 100,
+      labelFn: roundFishFn
+    });
     analyzeConfusionMatrix(trainSize, result);
   });
 
@@ -146,7 +151,12 @@ describe('Model quality test', () => {
       console.log(name);
       const id = data.index;
       const labelFn = (fish) => fish[partKey].index === id ? 1 : 0;
-      const result = await performTrials({numTrials: NUM_TRIALS, trainSize: trainSize, testSize: 100, labelFn: labelFn});
+      const result = await performTrials({
+        numTrials: NUM_TRIALS,
+        trainSize: trainSize,
+        testSize: 100,
+        labelFn: labelFn
+      });
       analyzeConfusionMatrix(trainSize, result);
     }
   });
@@ -161,7 +171,12 @@ describe('Model quality test', () => {
       console.log(name);
       const id = data.index;
       const labelFn = (fish) => fish[partKey].index === id ? 1 : 0;
-      const result = await performTrials({numTrials: NUM_TRIALS, trainSize: trainSize, testSize: 100, labelFn: labelFn});
+      const result = await performTrials({
+        numTrials: NUM_TRIALS,
+        trainSize: trainSize,
+        testSize: 100,
+        labelFn: labelFn
+      });
       analyzeConfusionMatrix(trainSize, result);
     }
   });
@@ -176,7 +191,12 @@ describe('Model quality test', () => {
       console.log(name);
       const id = data.index;
       const labelFn = (fish) => fish[partKey].index === id ? 1 : 0;
-      const result = await performTrials({numTrials: NUM_TRIALS, trainSize: trainSize, testSize: 100, labelFn: labelFn});
+      const result = await performTrials({
+        numTrials: NUM_TRIALS,
+        trainSize: trainSize,
+        testSize: 100,
+        labelFn: labelFn
+      });
       analyzeConfusionMatrix(trainSize, result);
     }
   });
@@ -191,7 +211,13 @@ describe('Model quality test', () => {
       console.log(`${expressionName}`);
       const normalizedId = (1.0 * expressionId) / (Object.keys(MouthExpression).length - 1);
       const labelFn = (fish) => floatEquals(fish[partKey].knnData[knnDataIndex], normalizedId) ? 1 : 0;
-      const result = await performTrials({numTrials: NUM_TRIALS, trainSize: trainSize, testSize: 100, labelFn: labelFn});
+      const result = await performTrials({
+        numTrials: NUM_TRIALS,
+        trainSize: trainSize,
+        testSize: 100,
+        labelFn:
+        labelFn
+      });
       analyzeConfusionMatrix(trainSize, result);
     }
   });
@@ -207,7 +233,12 @@ describe('Model quality test', () => {
     console.log(`mouth names: ${JSON.stringify(mouthNames)} ids: ${JSON.stringify(ids)}`);
 
     const labelFn = (fish) => ids.includes(fish[partKey].index) ? 1 : 0;
-    const result = await performTrials({numTrials: NUM_TRIALS, trainSize: trainSize, testSize: 100, labelFn: labelFn});
+    const result = await performTrials({
+      numTrials: NUM_TRIALS,
+      trainSize: trainSize,
+      testSize: 100,
+      labelFn: labelFn
+    });
     analyzeConfusionMatrix(trainSize, result);
   });
 
