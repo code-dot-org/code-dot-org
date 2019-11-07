@@ -79,4 +79,8 @@ class AdminSearchController < ApplicationController
     user_ids =  SingleUserExperiment.where(name: @pilot_name).map(&:min_user_id)
     @emails = User.where(id: user_ids).pluck(:email)
   end
+
+  def add_to_pilot
+    puts "ADDING"
+  end
 end
