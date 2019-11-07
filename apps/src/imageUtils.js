@@ -1,5 +1,4 @@
 import artistShareFrame from '../static/turtle/blank_sharing_drawing.png';
-import './util/svgelement-polyfill';
 
 export function fetchURLAsBlob(url, onComplete) {
   let xhr = new XMLHttpRequest();
@@ -102,7 +101,10 @@ export function imageFromURI(uri) {
 export function svgToDataURI(svg, imageType) {
   imageType = imageType || 'image/png';
   return new Promise(resolve => {
-    svg.toDataURL(imageType, {callback: resolve});
+    // Use lazy-loading to keep canvg (60KB) out of the initial download.
+    import('./util/svgelement-polyfill').then(() => {
+      svg.toDataURL(imageType, {callback: resolve});
+    });
   });
 }
 
