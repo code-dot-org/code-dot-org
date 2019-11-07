@@ -801,6 +801,7 @@
   "linesOfCode": "Lines of Code",
   "listVariable": "list",
   "loading": "Loading...",
+  "loadingError": "An error occurred. Please reload the page and try again.",
   "locked": "Locked",
   "lockFollowing": "Lock the following stages that are currently unlocked:",
   "lockAssessment": "Lock assessment",

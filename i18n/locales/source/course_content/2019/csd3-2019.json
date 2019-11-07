@@ -559,7 +559,7 @@
     }
   },
   "https://studio.code.org/s/csd3-2019/stage/11/puzzle/6": {
-    "long_instructions": "# Booleans\n\nIn the past few levels, we have been comparing values of sprites to find out whether something is true or false. Let's start putting that in the context of an animation.\n\n# Do This\n\nThe program draws a race car and a finish line. We are going to figure out when the race car crosses the finish line. The sprites have all been set up for you.\n\n-   Add a `console.log` statement inside the draw loop. ( [Show me where][0] )\n-   Add an Boolean expression inside the `console.log` that asks \"Is the x position of the race car less than the x position of the finish line?\"\n-   Look at the output of the program as the car moves. When does the output change? Why?",
+    "long_instructions": "# Booleans\n\nIn the past few levels, we have been comparing values of sprites to find out whether something is true or false. Let's start putting that in the context of an animation.\n\n# Do This\n\nThe program draws a race car and a finish line. We are going to figure out when the race car crosses the finish line. The sprites have all been set up for you.\n\n-   Add a `console.log` statement inside the draw loop. ( [Show me where][0] )\n-   Add a Boolean expression inside the `console.log` that asks \"Is the x position of the race car less than the x position of the finish line?\"\n-   Look at the output of the program as the car moves. When does the output change? Why?",
     "callouts": {
       "CSD_U3_L8_S6_C1": "Put the console log statement here"
     }
