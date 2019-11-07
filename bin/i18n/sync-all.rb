@@ -131,7 +131,7 @@ def create_down_out_pr
   I18nScriptUtils.git_add_and_commit(
     [
       "pegasus/cache",
-      "i18n/locales/*/pegasus",
+      "i18n/locales/*-*/pegasus",
     ],
     "pegasus i18n updates"
   )
@@ -160,7 +160,7 @@ def create_down_out_pr
   I18nScriptUtils.git_add_and_commit(
     [
       "apps/i18n/*/*.json",
-      "i18n/locales/*/blockly-mooc",
+      "i18n/locales/*-*/blockly-mooc",
     ],
     "apps i18n updates"
   )
@@ -168,14 +168,14 @@ def create_down_out_pr
   I18nScriptUtils.git_add_and_commit(
     [
       "apps/lib/blockly/*.js",
-      "i18n/locales/*/blockly-core",
+      "i18n/locales/*-*/blockly-core",
     ],
     "blockly i18n updates"
   )
 
   I18nScriptUtils.git_add_and_commit(
     [
-      "i18n/locales/*/hourofcode/",
+      "i18n/locales/*-*/hourofcode/",
       "pegasus/sites.v3/hourofcode.com/i18n/*.yml",
       "pegasus/sites.v3/hourofcode.com/i18n/public/*/"
     ],
