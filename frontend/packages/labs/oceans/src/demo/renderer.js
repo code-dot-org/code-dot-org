@@ -78,6 +78,7 @@ export const render = () => {
   clearCanvas(state.canvas);
 
   const timeBeforeCanSkipPredict = 5000;
+  const timeBeforeCanSkipBiasText = 2000;
   const timeBeforeCanSeePondText = 3000;
   const timeBeforeCanSkipPond = 5000;
 
@@ -90,7 +91,14 @@ export const render = () => {
       drawPredictBot(state);
       drawMovingFish(state);
 
-      if (state.isRunning) {
+      if (state.appMode === 'creaturesvtrashdemo') {
+        if (state.showBiasText) {
+          setState({
+            canSkipPredict:
+              $time() >= state.biasTextTime + timeBeforeCanSkipBiasText
+          });
+        }
+      } else if (state.isRunning) {
         setState({
           canSkipPredict:
             $time() >= state.runStartTime + timeBeforeCanSkipPredict
@@ -302,9 +310,9 @@ const drawMovingFish = state => {
             } else {
               fish.result.predictedClassId = 1;
             }
-            if (i === lastFishIdx) {
+            if (i === lastFishIdx && Math.abs(midScreenX - x) <= 1) {
               pauseMovement(t);
-              setState({showBiasText: true});
+              setState({showBiasText: true, biasTextTime: $time()});
             }
           }
         }

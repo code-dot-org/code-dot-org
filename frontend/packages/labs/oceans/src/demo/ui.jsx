@@ -647,7 +647,7 @@ class Predict extends React.Component {
           </Button>
         )}
         {(state.isRunning || state.isPaused) &&
-          (state.canSkipPredict || state.showBiasText) && (
+          (state.canSkipPredict) && (
             <Button
               style={styles.continueButton}
               onClick={() => {
