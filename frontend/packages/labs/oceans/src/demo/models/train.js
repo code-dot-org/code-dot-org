@@ -7,11 +7,6 @@ import {generateOcean} from '../../utils/generateOcean';
 export const init = () => {
   const state = getState();
 
-  let fishData = [...state.fishData];
-  if (fishData.length === 0) {
-    fishData = fishData.concat(generateOcean(100));
-  }
-
   let trainer = state.trainer;
   if (!trainer) {
     trainer = new SimpleTrainer();
@@ -32,7 +27,8 @@ export const init = () => {
   }
 
   setState({
-    fishData,
+    fishData: generateOcean(100),
+    trainingIndex: 0,
     trainer,
     isRunning: true
   });
