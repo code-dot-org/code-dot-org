@@ -60,9 +60,9 @@ class ScriptsController < ApplicationController
   def create
     @script = Script.new(script_params)
     if @script.save && @script.update_text(script_params, params[:script_text], i18n_params, general_params)
-      redirect_to @script, notice: I18n.t('crud.created', model: Script.model_name.human)
+      redirect_to edit_script_url(@script), notice: I18n.t('crud.created', model: Script.model_name.human)
     else
-      render 'new'
+      render json: @script.errors
     end
   end
 
