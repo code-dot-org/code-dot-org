@@ -28,15 +28,21 @@ def sync_out
   I18nScriptUtils.run_standalone_script "dashboard/scripts/update_tts_i18n.rb"
 end
 
-# Files downloaded from Crowdin are organized by language name,
-# rename folders to be organized by locale
+# Files downloaded from Crowdin are organized by language name; rename folders
+# to be organized by locale, and remove any locales that are not in our system.
 def rename_from_crowdin_name_to_locale
+  # Move directories like `i18n/locales/Italian` to `i18n/locales/it-it` for
+  # all languages in our system
   Languages.get_crowdin_name_and_locale.each do |prop|
     if File.directory?("i18n/locales/#{prop[:crowdin_name_s]}/")
-      FileUtils.cp_r "i18n/locales/#{prop[:crowdin_name_s]}/.", "i18n/locales/#{prop[:locale_s]}"
-      FileUtils.rm_r "i18n/locales/#{prop[:crowdin_name_s]}"
+      FileUtils.mv "i18n/locales/#{prop[:crowdin_name_s]}/.", "i18n/locales/#{prop[:locale_s]}"
     end
   end
+
+  # Now, any remaining directories named after the language name (rather than
+  # the four-letter language code) represent languages downloaded from crowdin
+  # that aren't in our system. Remove them.
+  FileUtils.rm_r Dir.glob("i18n/locales/[A-Z]*")
 end
 
 def find_malformed_links_images(locale, file_path)
