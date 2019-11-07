@@ -13,6 +13,7 @@
 require_relative '../../deployment'
 require 'cdo/pegasus'
 require 'cdo/pardot'
+require 'set'
 
 PEGASUS_DB_READER = sequel_connect(
   CDO.pegasus_db_reader,
@@ -26,6 +27,12 @@ def all_prospect_fields
   pardot_fields + special_fields
 end
 
+# The logic in this function comes directly from Pardot.sync_contacts_with_pardot
+# Example input hash:
+#   {:email=>"test@email.com", :roles=>"Form Submitter", :opt_in=>nil}
+# Example output hash:
+#   {"email"=>"test@email.com", "db_Roles_0"=>"Form Submitter", :db_Opt_In=>"No", :db_Imported=>"true"}"
+# The keys in output hash can change depends on values of multi-select fields in the input.
 def convert_row_to_prospect(row)
   prospect = {}
   Pardot::MYSQL_TO_PARDOT_MAP.each do |mysql_key, pardot_info|
@@ -51,14 +58,28 @@ def convert_row_to_prospect(row)
   prospect.transform_keys(&:to_s)
 end
 
-def export_table_to_csv(query, file_path, max_row_count = nil)
+# @return [Array<String>] sorted array of column names
+def get_csv_columns(query)
+  dataset = PEGASUS_DB_READER[query]
+
+  columns = Set.new
+  dataset.stream.each do |row|
+    next if row[:email_malformed]
+    prospect = convert_row_to_prospect(row)
+    columns.merge prospect.keys
+  end
+
+  columns.to_a.sort
+end
+
+def export_table_to_csv(query, file_path, columns, max_row_count = nil)
   p "Query = #{query}"
-  p "Destination file = #{file_path}"
-  csv_columns = all_prospect_fields
+  p "Output CSV file = #{file_path}"
+  p "Output CSV columns = #{columns}"
 
   dataset = PEGASUS_DB_READER[query]
   csv = CSV.open(file_path, 'w')
-  csv << csv_columns
+  csv << columns
   row_written = 0
   file_created = 1
 
@@ -72,12 +93,12 @@ def export_table_to_csv(query, file_path, max_row_count = nil)
       file_name = file_path[0, file_path.rindex(".csv")]
       suffix = row_written / max_row_count
       csv = CSV.open("#{file_name}_#{suffix}.csv", 'w')
-      csv << csv_columns
+      csv << columns
       file_created += 1
     end
 
     prospect = convert_row_to_prospect(row)
-    csv << prospect.values_at(*csv_columns)
+    csv << prospect.values_at(*columns)
     row_written += 1
   end
 
@@ -91,14 +112,16 @@ def main
     where pardot_sync_at IS NULL AND pardot_id IS NULL AND opted_out IS NULL
   SQL
 
-  export_table_to_csv(new_contact_query, "pardot_new_contacts.csv", 1_000_000)
+  new_contact_columns = get_csv_columns(new_contact_query)
+  export_table_to_csv(new_contact_query, "pardot_new_contacts.csv", new_contact_columns, 1_000_000)
 
   updated_contact_query = <<-SQL.squish
     select * from contact_rollups
     where pardot_id IS NOT NULL AND pardot_sync_at < updated_at
   SQL
 
-  export_table_to_csv(updated_contact_query, "pardot_updated_contacts.csv", 1_000_000)
+  updated_contact_columns = get_csv_columns(updated_contact_query)
+  export_table_to_csv(updated_contact_query, "pardot_updated_contacts.csv", updated_contact_columns, 1_000_000)
 end
 
 def test
@@ -106,8 +129,9 @@ def test
     select * from contact_rollups order by id desc limit 10
   SQL
 
-  export_table_to_csv(test_query, "pardot_testa.csv")
-  export_table_to_csv(test_query, "pardot_testb.csv", 2)
+  csv_columns = get_csv_columns(test_query)
+  export_table_to_csv(test_query, "pardot_testa.csv", csv_columns)
+  export_table_to_csv(test_query, "pardot_testb.csv", csv_columns, 2)
 end
 
 # test
