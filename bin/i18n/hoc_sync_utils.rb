@@ -62,6 +62,11 @@ class HocSyncUtils
       new_path = File.join(dest_dir, "hourofcode/#{prop[:unique_language_s]}.yml")
       File.write(new_path, new_translation_data.to_yaml)
     end
+
+    # Now, any remaining directories named after the language name (rather than
+    # the four-letter language code) represent languages downloaded from
+    # crowdin that aren't in our system. Remove them.
+    FileUtils.rm_r(Dir.glob(File.join(I18N_SOURCE_DIR, "hourofcode", "[A-Z]*")))
   end
 
   def self.copy_from_i18n_source_to_hoc
