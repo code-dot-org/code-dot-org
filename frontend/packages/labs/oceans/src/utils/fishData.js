@@ -333,12 +333,12 @@ const fishComponents = {
     triangle_1: {
       src: triangle_1_image,
       anchor: [50, 40],
-      eyeAnchor: [14, 46],
+      eyeAnchor: [10, 43],
       mouthAnchor: [20, 65],
-      pectoralFinBackAnchor: [56, 101],
+      pectoralFinBackAnchor: [40, 95],
       pectoralFinFrontAnchor: [80, 100],
-      dorsalFinAnchor: [60, 10],
-      tailAnchor: [95, 66],
+      dorsalFinAnchor: [80, 10],
+      tailAnchor: [105, 66],
       knnData: [8285, BodyShape.TRIANGLE],
       type: FishBodyPart.BODY
     }
@@ -435,103 +435,103 @@ const fishComponents = {
   mouths: {
     mouth1: {
       src: mouth1_image,
-      knnData: [null, 4.454545454545454, null],
+      knnData: [2, 4.454545454545454, MouthExpression.NEUTRAL],
       tinted: false,
       type: FishBodyPart.MOUTH
     },
     mouth10: {
       src: mouth10_image,
-      knnData: [null, 1.125, null],
+      knnData: [0, 1.125, MouthExpression.NEUTRAL],
       tinted: true,
       type: FishBodyPart.MOUTH
     },
     mouth11: {
       src: mouth11_image,
-      knnData: [null, 1.2857142857142858, null],
+      knnData: [4, 1.2857142857142858, MouthExpression.FROWN],
       tinted: false,
       type: FishBodyPart.MOUTH
     },
     mouth12: {
       src: mouth12_image,
-      knnData: [null, 2.0555555555555554, null],
+      knnData: [4, 2.0555555555555554, MouthExpression.FROWN],
       tinted: false,
       type: FishBodyPart.MOUTH
     },
     mouth13: {
       src: mouth13_image,
-      knnData: [null, 2.3333333333333335, null],
+      knnData: [10, 2.3333333333333335, MouthExpression.NEUTRAL],
       tinted: false,
       type: FishBodyPart.MOUTH
     },
     mouth14: {
       src: mouth14_image,
-      knnData: [null, 2, null],
+      knnData: [1, 2, MouthExpression.NEUTRAL],
       tinted: false,
       type: FishBodyPart.MOUTH
     },
     mouth15: {
       src: mouth15_image,
-      knnData: [null, 1.263157894736842, null],
+      knnData: [1, 1.263157894736842, MouthExpression.SMILE],
       tinted: false,
       type: FishBodyPart.MOUTH
     },
     mouth16: {
       src: mouth16_image,
-      knnData: [null, 0.6666666666666666, null],
+      knnData: [0, 0.6666666666666666, MouthExpression.NEUTRAL],
       tinted: false,
       type: FishBodyPart.MOUTH
     },
     mouth17: {
       src: mouth17_image,
-      knnData: [null, 2.25, null],
+      knnData: [0, 2.25, MouthExpression.NEUTRAL],
       tinted: false,
       type: FishBodyPart.MOUTH
     },
     mouth2: {
       src: mouth2_image,
-      knnData: [null, 1.3428571428571427, null],
+      knnData: [3, 1.3428571428571427, MouthExpression.NEUTRAL],
       tinted: false,
       type: FishBodyPart.MOUTH
     },
     mouth3: {
       src: mouth3_image,
-      knnData: [null, 1.2727272727272727, null],
+      knnData: [7, 1.2727272727272727, MouthExpression.NEUTRAL],
       tinted: false,
       type: FishBodyPart.MOUTH
     },
     mouth4: {
       src: mouth4_image,
-      knnData: [null, 1.8928571428571428, null],
+      knnData: [0, 1.8928571428571428, MouthExpression.SMILE],
       tinted: false,
       type: FishBodyPart.MOUTH
     },
     mouth5: {
       src: mouth5_image,
-      knnData: [null, 1.8666666666666667, null],
+      knnData: [0, 1.8666666666666667, MouthExpression.SMILE],
       tinted: false,
       type: FishBodyPart.MOUTH
     },
     mouth6: {
       src: mouth6_image,
-      knnData: [null, 2.4, null],
+      knnData: [0, 2.4, MouthExpression.FROWN],
       tinted: false,
       type: FishBodyPart.MOUTH
     },
     mouth7: {
       src: mouth7_image,
-      knnData: [null, 1.75, null],
+      knnData: [9, 1.75, MouthExpression.SMILE],
       tinted: false,
       type: FishBodyPart.MOUTH
     },
     mouth8: {
       src: mouth8_image,
-      knnData: [null, 1.875, null],
+      knnData: [4, 1.875, MouthExpression.SMILE],
       tinted: false,
       type: FishBodyPart.MOUTH
     },
     mouth9: {
       src: mouth9_image,
-      knnData: [null, 1.7058823529411764, null],
+      knnData: [1, 1.7058823529411764, MouthExpression.FROWN],
       tinted: false,
       type: FishBodyPart.MOUTH
     }
