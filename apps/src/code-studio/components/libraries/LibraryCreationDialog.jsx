@@ -55,7 +55,7 @@ function select(event) {
  * @readonly
  * @enum {string}
  */
-export const LoadingState = {
+export const PublishState = {
   LOADING: 'loading',
   DONE_LOADING: 'done_loading',
   PUBLISHED: 'published',
@@ -74,7 +74,7 @@ class LibraryCreationDialog extends React.Component {
   state = {
     librarySource: '',
     sourceFunctionList: [],
-    loadingState: LoadingState.LOADING,
+    publishState: PublishState.LOADING,
     libraryName: '',
     canPublish: false
   };
@@ -90,14 +90,14 @@ class LibraryCreationDialog extends React.Component {
       return annotation.type === 'error';
     });
     if (error) {
-      this.setState({loadingState: LoadingState.CODE_ERROR});
+      this.setState({publishState: PublishState.CODE_ERROR});
       return;
     }
 
     dashboard.project.getUpdatedSourceAndHtml_(response => {
       let functionsList = libraryParser.getFunctions(response.source);
       if (!functionsList || functionsList.length === 0) {
-        this.setState({loadingState: LoadingState.NO_FUNCTIONS});
+        this.setState({publishState: PublishState.NO_FUNCTIONS});
         return;
       }
       this.setState({
@@ -105,14 +105,14 @@ class LibraryCreationDialog extends React.Component {
           dashboard.project.getLevelName()
         ),
         librarySource: response.source,
-        loadingState: LoadingState.DONE_LOADING,
+        publishState: PublishState.DONE_LOADING,
         sourceFunctionList: functionsList
       });
     });
   };
 
   handleClose = () => {
-    this.setState({loadingState: LoadingState.LOADING});
+    this.setState({publishState: PublishState.LOADING});
     this.props.onClose();
   };
 
@@ -147,10 +147,10 @@ class LibraryCreationDialog extends React.Component {
       libraryJson,
       error => {
         console.warn(`Error publishing library: ${error}`);
-        this.setState({loadingState: LoadingState.ERROR_PUBLISH});
+        this.setState({publishState: PublishState.ERROR_PUBLISH});
       },
       () => {
-        this.setState({loadingState: LoadingState.PUBLISHED});
+        this.setState({publishState: PublishState.PUBLISHED});
       }
     );
     dashboard.project.setLibraryName(this.state.libraryName);
@@ -236,7 +236,7 @@ class LibraryCreationDialog extends React.Component {
               value={i18n.publish()}
               disabled={!this.state.canPublish}
             />
-            {this.state.loadingState === LoadingState.ERROR_PUBLISH && (
+            {this.state.publishState === PublishState.ERROR_PUBLISH && (
               <div>
                 <p id="error-alert" style={styles.alert}>
                   {i18n.libraryPublishFail()}
@@ -280,17 +280,17 @@ class LibraryCreationDialog extends React.Component {
 
   render() {
     let bodyContent;
-    switch (this.state.loadingState) {
-      case LoadingState.LOADING:
+    switch (this.state.publishState) {
+      case PublishState.LOADING:
         bodyContent = this.displayLoadingState();
         break;
-      case LoadingState.PUBLISHED:
+      case PublishState.PUBLISHED:
         bodyContent = this.displaySuccess();
         break;
-      case LoadingState.CODE_ERROR:
+      case PublishState.CODE_ERROR:
         bodyContent = this.displayError(i18n.libraryCodeError());
         break;
-      case LoadingState.NO_FUNCTIONS:
+      case PublishState.NO_FUNCTIONS:
         bodyContent = this.displayError(i18n.libraryNoFunctonsError());
         break;
       default:
