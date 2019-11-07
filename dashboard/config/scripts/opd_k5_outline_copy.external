@@ -5,7 +5,7 @@ markdown <<MARKDOWN
 
 The course is divided into four concept chunks, which each have lessons in them. Lessons consists of different "levels", which are colloquially referred to as bubbles, stages, or puzzles by students and teachers. Here's an overview of what you'll learn if you complete the entire course:
 
-## Concept Chunk 1: Getting Started (TIME)
+## Getting Started (TIME)
 
 ### Lesson 1: Welcome to 'Teaching Computer Science Fundamentals'
 
@@ -25,7 +25,7 @@ By completing Lesson 2, you will:
 - Identify which course is most appropriate for your students
 - Understand the importance of the teacher in the Computer Science Fundamentals curriculum
 
-## Concept Chunk 2: Basic Coding Concepts and Teaching Practices (TIME)
+## Basic Coding Concepts and Teaching Practices (TIME)
 
 You will want to complete this section if you are teaching any of the CS Fundamentals courses, from A-F. It focuses on basic concepts that show up in all courses.
 
@@ -52,7 +52,7 @@ By completing Lesson 4, you will:
 By completing Lesson 5, you will:
 
 - Define "events" and explain their importance
-- Explore unplugged lessons on events and reflect on classroom application
+- Explore the unplugged lesson on events and reflect on classroom application
 - Practice coding simple events
 - Understand the debugging process
 
@@ -61,11 +61,11 @@ By completing Lesson 5, you will:
 By completing Lesson 6, you will:
 
 - Define "conditionals" and explain their importance
-- Explore unplugged lessons on conditionals and reflect on classroom application
+- Explore the unplugged lesson on conditionals and reflect on classroom application
 - Practice coding simple conditionals
 - Understand the teaching practice of journaling
 
-## Concept Chunk 3: Diving Deeper: Courses E and F (TIME)
+## [Optional] Diving Deeper: Courses E and F (TIME)
 
 You will want to complete this section if you are teaching Courses E or F. This section dives into some of the harder concepts covered in these courses for older students.
 
@@ -73,8 +73,9 @@ You will want to complete this section if you are teaching Courses E or F. This 
 
 By completing Stage 7, you will:
 
+- Identify if you will be teaching Courses E or F to students
 - Define "functions" and explain their importance
-- Explore unplugged lessons on functions and reflect on classroom application
+- Explore the unplugged lesson on functions and reflect on classroom application
 - Practice coding simple functions
 - Understand the steps in the problem solving process
 
@@ -82,12 +83,15 @@ By completing Stage 7, you will:
 
 By completing Stage 8, you will:
 
-- Identify if you will be teaching Courses E or F to students
 - Learn about aspects of these courses that are unique, including working with Sprites, end-of-course projects, and more advanced kinds of loops (nested loops and for loops).
+- Explore the unplugged lesson on variables and reflect on classroom application
+
 
 ### Lesson 9: For Loops
 
 [add]
+- Explore the unplugged lesson on for loops and reflect on classroom application
+
 
 ### Lesson 10: Sprite Lab
 
@@ -97,7 +101,7 @@ By completing Stage 8, you will:
 
 [add]
 
-## Concept Chunk 4: Next Steps (TIME)
+## Next Steps (TIME)
 
 ### Lesson 12: Next Steps
 
