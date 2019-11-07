@@ -1869,3 +1869,19 @@ et:
           stages:
             Dance Party:
               name: Tantsuõhtu
+        k5-onlinepd-copy:
+          stages:
+            Next Steps:
+              name: Järgmised sammud
+            Loops:
+              name: Tsüklid
+            Conditionals:
+              name: Tingimuslaused
+            Events:
+              name: Sündmused
+            Functions:
+              name: Funktsioonid
+            Variables:
+              name: Muutujad
+            For Loops:
+              name: For tsükkel

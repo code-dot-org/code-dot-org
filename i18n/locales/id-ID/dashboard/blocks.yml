@@ -670,10 +670,6 @@ id:
         text: warna acak
       Mikelab_repeatUntilComplete:
         text: Ulangi selamanya
-      Mikelab_sendBad:
-        text: Gerak ke kiri
-      Mikelab_sendGood:
-        text: Gerak ke kanan
       Mikelab_setBG:
         options:
           BG:

@@ -11,5 +11,12 @@
   "danceFeedbackNeedEveryTwoMeasures": "Zorg ervoor dat je het blok 'elke 2 maten' gebruikt",
   "danceFeedbackNeedMakeANewDancer": "Gebruik het blok 'nieuwe maken' om een tweede danser te maken.",
   "danceFeedbackKeyEvent": "Zorg dat je wat code toevoegt aan de \"wanneer toets\" en druk op de de toets terwijl je dans afspeelt.",
+  "danceFeedbackDidntPress": "",
+  "danceFeedbackPressedKey": "",
+  "danceFeedbackNeedTwoDancers": "",
+  "danceFeedbackOnlyOneDancerMoved": "",
+  "danceFeedbackNeedLead": "",
+  "danceFeedbackNeedBackup": "",
+  "danceFeedbackSetSize": "",
   "measure": "Maten:"
 }

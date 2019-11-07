@@ -1098,10 +1098,6 @@ pl:
         text: losowy kolor
       Mikelab_repeatUntilComplete:
         text: powtarzaj w nieskończoność
-      Mikelab_sendBad:
-        text: idź w lewo
-      Mikelab_sendGood:
-        text: idź w prawo
       Mikelab_setBG:
         options:
           BG:

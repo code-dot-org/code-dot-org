@@ -19,6 +19,11 @@ ru:
       pair_programmer: 'Сейчас вы работаете в паре со студентом, у которого нет доступа к этому материалу. Остановите парную работу и попробуйте снова.'
   activerecord:
     errors:
+      models:
+        user:
+          attributes:
+            reset_password_token:
+              invalid: "некорретктна. Обратите внимание, каждая ссылка может быть использована только один раз для восстановления пароля, и только последняя будет работать."
       messages:
         blank: "требуется"
         blank_plural: "необходимы"
@@ -40,8 +45,9 @@ ru:
         gender: 'Пол'
         edit_header: 'Изменить учетные данные'
         finish_sign_up_header: 'Завершите создание учетной записи'
-        finish_sign_up_subheader: 'Заполните следующую информацию для завершения создания учетной в Code.org <strong>%{email}</strong>.'
-        finish_sign_up_subheader_provider: 'Заполните следующую информацию для завершения создания учетной записи в Code.org с <strong>%{provider}</strong> <strong>%{email}</strong>.'
+        finish_sign_up_subheader: 'Заполните следующую информацию для завершения создания учётной записи на Code.org для <strong>%{email}</strong>.'
+        finish_sign_up_subheader_provider: 'Заполните следующую информацию для завершения создания учетной записи на Code.org с <strong>%{provider}</strong> <strong>%{email}</strong>.'
+        reset_password_token: "Ссылка для восстановления пароля, по которой вы перешли,"
         error:
           future: не может быть в будущем
   beta: "бета-версия"
@@ -60,19 +66,23 @@ ru:
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
   join_section:
     code:
+      title: 'Присоединиться к классу на Code.org'
       placeholder: "Код раздела (ABCDEF)"
+      instructions: "Пожалуйста, введите код из 6 букв, который дал вам ваш учитель, чтобы войти в класс. (Пример: \"ABCDEF\")."
+      instructions_short: "Введите код класса из 6 букв"
+      submit: 'Вступить'
   add_hint_form:
     placeholder: 'Введите подсказку здесь'
     submit: 'Добавить подсказку'
   appname: "Code.org"
   stage: "Этап"
-  stage_number: "Этап %{number}"
+  stage_number: "Урок %{number}"
   puzzle: "Головоломка"
   trophies: "трофеи"
   courses: 'курсы'
   courses_page:
-    title_student: "Учиться в студии кода"
-    title_teacher: "Учись со Студией Кода"
+    title_student: "Изучай Информатику"
+    title_teacher: "Учите Информатике"
   unplugged_activity: 'Урок без компьютера'
   of: "из"
   more: "ЕЩЁ"
@@ -81,7 +91,7 @@ ru:
   try_k8intro: "Попробуйте наш курс «Введение в информатику» для учеников до 8 класса (15-25 часов)"
   k8intro: "Курс «Введение в информатику» для учеников до 8 класса (15-25 часов)"
   already_started: "Уже начали? Продолжить здесь >> "
-  demos: "Администратор: Все демоверсии"
+  demos: "Администратор: Все демо"
   continue: 'Продолжить'
   prize: 'подарок'
   more_info: 'Подробнее'
@@ -89,13 +99,15 @@ ru:
     continue_with: 'Продолжить с %{provider}'
     sign_in_with: 'Войти через %{provider}'
     signed_in: 'Вошли!'
+    signed_out_markdown: '### Вы вышли из [Code.org](%{url}).'
+    sign_out_of_markdown: '#### Вы вошли с помощью %{provider}. [Нажмите здесь](%{url}) чтобы выйти из %{provider}.'
     already_signedup: 'Уже зарегистрировались?'
     notyet_signedup: "Еще не присоединились?"
-    google_oauth2: 'Аккаунт Google'
+    google_oauth2: 'Google'
     twitter: 'Twitter'
     facebook: 'Facebook'
-    windowslive: 'Учетная запись Майкрософт'
-    microsoft_v2_auth: 'Учетная запись Майкрософт'
+    windowslive: 'Microsoft'
+    microsoft_v2_auth: 'Microsoft'
     clever: 'Аккаунт Clever'
     powerschool: 'PowerSchool'
     forgot_password: 'Забыли Ваш пароль?'
@@ -104,7 +116,7 @@ ru:
     need_confirmation: "Не получили инструкции по подтверждению?"
     need_unlock: "Не получили инструкции для разблокированию?"
     not_linked: "Извините, но вам надо ввести ваш пароль внизу, чтобы продолжить. Ваша учётная запись не зарегистрирована в %{provider}."
-    use_clever: "Извините, Ваш аккаунт в Code.org не соединён с Вашим %{provider}. Пожалуйста, войдите в Ваш портал Clever."
+    use_clever: "Извините, Ваш аккаунт в Code.org не привязан к %{provider}. Пожалуйста, войдите в Ваш портал Clever."
     unable_to_connect_provider: "Не удается подключить ваш аккаунт Code.org к вашему %{provider} аккаунту. Пожалуйста, попробуйте еще раз."
     already_in_use: "Ваш аккаунт %{provider} уже подключен к другой учетной записи Code.org."
     already_linked: "Ваш аккаунт %{provider} уже связан с вашей учетной записи Code.org."
@@ -890,6 +902,8 @@ ru:
     time4cs_c3: 'Жизнь в Эверглейдс'
     time4cs_c4: 'Инвазивные воздействия на Эверглейдс'
     time4cs_c5: 'Граждане влияют на изменения в Эверглейдс'
+    k5_getting_started: 'Приступить к работе'
+    k5_next_steps: 'Следующие шаги'
   external_links:
     disclaimer: Отказ от ответственности
     leaving_domain: Сейчас вы переходите на сайт, который не управляется Code.org.
@@ -1041,3 +1055,4 @@ ru:
     privacy_policy: 'политика конфиденциальности'
     logout: 'Выйти'
     yes: 'Да'
+  page_not_found_title: "Страница не найдена"
