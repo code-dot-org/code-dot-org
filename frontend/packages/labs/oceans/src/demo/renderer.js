@@ -310,7 +310,7 @@ const drawMovingFish = state => {
             } else {
               fish.result.predictedClassId = 1;
             }
-            if (i === lastFishIdx && Math.abs(midScreenX - x) <= 5) {
+            if (i === lastFishIdx && Math.abs(midScreenX - x) <= 1) {
               pauseMovement(t);
               setState({showBiasText: true, biasTextTime: $time()});
             }
