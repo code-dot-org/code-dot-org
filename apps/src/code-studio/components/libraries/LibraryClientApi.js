@@ -79,7 +79,9 @@ export default class LibraryClientApi {
   async getClassLibraries(onSuccess, onError) {
     let data;
     try {
-      let response = await fetch('/api/libraries/section/all', {method: 'GET'});
+      let response = await fetch('/api/v1/libraries/classmates/all', {
+        method: 'GET'
+      });
       if (!response.ok) {
         onError(response.status + ': ' + response.statusText);
         return;
