@@ -347,18 +347,17 @@ function createNewFirehose(AWS, Firehose) {
 
 let promise;
 function getSingleton() {
-  return Promise.all([
-    import('aws-sdk/lib/core'),
-    import('aws-sdk/clients/firehose'),
-    import('aws-sdk/lib/config')
-  ]).then(([{default: AWS}, {default: Firehose}]) => {
-    if (!promise) {
-      promise = new Promise(resolve =>
-        resolve(new FirehoseClient(AWS, Firehose))
-      );
-    }
-    return promise;
-  });
+  if (!promise) {
+    promise = Promise.all([
+      import('aws-sdk/lib/core'),
+      import('aws-sdk/clients/firehose'),
+      import('aws-sdk/lib/config')
+    ]).then(
+      ([{default: AWS}, {default: Firehose}]) =>
+        new Promise(resolve => resolve(new FirehoseClient(AWS, Firehose)))
+    );
+  }
+  return promise;
 }
 
 function putRecord(data, options) {
