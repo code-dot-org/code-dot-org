@@ -250,7 +250,10 @@ function bestResultLevelId(levelIds, progressData) {
 }
 
 export const getLevelProgress = level => {
-  return {status: getLevelResult(level), timeSpent: level.time_spent};
+  return {
+    status: getLevelResult(level),
+    timeSpent: level.time_spent ? level.time_spent : 0
+  };
 };
 
 /**
@@ -538,8 +541,6 @@ const levelWithStatus = (
   return {
     ...processedLevel(level),
     status: statusForLevel(level, levelProgress),
-    // IMPORTANT: NOT EVERYTHING THAT USES THIS IS SET UP LIKE THIS
-    // levelProgress[id] = {status: , timeSpent: } SO WE NEED TO FIGURE THAT OUT
     timeSpent: levelProgress[level.activeId]
       ? levelProgress[level.activeId].timeSpent
       : 0,
@@ -600,7 +601,7 @@ export const getPercentPerfect = levels => {
  * the status for that level.
  * @param {object} level - Level object from state.stages.levels
  * @param {object<number, TestResult>} levelProgress - Mapping from levelId to
- *   TestResult
+ *   object containing testResult and timeSpent
  */
 export function statusForLevel(level, levelProgress) {
   // Peer Reviews use a level object to track their state, but have some subtle
@@ -621,13 +622,15 @@ export function statusForLevel(level, levelProgress) {
   // Worth noting that in the majority of cases, ids will be a single
   // id here
   const id = level.uid || bestResultLevelId(level.ids, levelProgress);
-  // IMPORTANT: NOT EVERYTHING THAT USES THIS IS SET UP LIKE THIS
-  // levelProgress[id] = {status: , timeSpent: } SO WE NEED TO FIGURE THAT OUT
   const levelStatus = levelProgress[id] ? levelProgress[id].status : null;
   let status = activityCssClass(levelStatus);
   if (
     level.uid &&
-    level.ids.every(id => levelProgress[id] === TestResults.LOCKED_RESULT)
+    level.ids.every(id =>
+      levelProgress[id]
+        ? levelProgress[id].status === TestResults.LOCKED_RESULT
+        : false
+    )
   ) {
     status = LevelStatus.locked;
   }

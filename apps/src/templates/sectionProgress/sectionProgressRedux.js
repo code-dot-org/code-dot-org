@@ -250,7 +250,7 @@ export default function sectionProgress(state = initialState, action) {
 /**
  * Retrieves the progress for the section in the selected script
  * @returns {studentLevelProgressPropType} keys are student ids, values are
- * objects of {levelIds: LevelStatus}
+ * objects of {levelIds: {status: LevelStatus, timeSpent: time}}
  */
 export const getCurrentProgress = state => {
   return state.sectionProgress.studentLevelProgressByScript[
