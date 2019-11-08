@@ -1,7 +1,7 @@
 import 'idempotent-babel-polyfill';
 import {initRenderer} from '../renderer';
 import {getState, setState} from '../state';
-import {AppMode, Modes, DataSet} from '../constants';
+import {AppMode, Modes} from '../constants';
 import {initFishData} from '../../utils/fishData';
 import {getAppMode} from '../helpers';
 import {toMode} from '../toMode';
@@ -10,9 +10,6 @@ import SimpleTrainer from '../../utils/SimpleTrainer';
 export const init = async () => {
   const [appModeBase] = getAppMode(getState());
 
-  // TODO: remove state.dataSet
-  const dataSet =
-    appModeBase === AppMode.FishShort ? DataSet.Small : DataSet.Large;
   const loadTrashImages = [
     AppMode.FishVTrash,
     AppMode.CreaturesVTrash,
@@ -30,7 +27,7 @@ export const init = async () => {
     setState({trainer, word: 'fish'});
   }
 
-  setState({dataSet, loadTrashImages, loadCreatureImages});
+  setState({loadTrashImages, loadCreatureImages});
 
   initFishData();
   await initRenderer();
