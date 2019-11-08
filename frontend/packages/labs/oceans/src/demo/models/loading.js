@@ -6,7 +6,6 @@ import {initFishData} from '../../utils/fishData';
 import {getAppMode} from '../helpers';
 import {toMode} from '../toMode';
 import SimpleTrainer from '../../utils/SimpleTrainer';
-import SVMTrainer from '../../utils/SVMTrainer';
 
 export const init = async () => {
   const [appModeBase] = getAppMode(getState());
@@ -22,10 +21,6 @@ export const init = async () => {
     const trainer = new SimpleTrainer();
     trainer.initializeClassifiersWithoutMobilenet();
     setState({trainer, word: 'fish'});
-  }
-  if (appModeBase === 'long') {
-    console.log('created SVMTrainer');
-    setState({trainer: new SVMTrainer()});
   }
 
   setState({dataSet, loadTrashImages, loadCreatureImages});

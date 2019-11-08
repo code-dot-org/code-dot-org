@@ -19,14 +19,7 @@ export const predictFish = (state, idx) => {
   return new Promise(resolve => {
     const fish = state.fishData[idx];
 
-    var predictionPromise;
-    if (state.appMode === 'long') {
-      predictionPromise = state.trainer.predictFromExample(fish.knnData);
-    } else {
-      predictionPromise = state.trainer.predictFromTensor(fish.getTensor());
-    }
-
-    predictionPromise.then(prediction => {
+    state.trainer.predict(fish).then(prediction => {
       fish.setResult(prediction);
       resolve(prediction);
     });

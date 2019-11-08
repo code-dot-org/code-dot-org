@@ -9,17 +9,16 @@ const trial = async function(trainSize, testSize, trainer, labelFn) {
   const trainingLabels = trainingOcean.map(fish => labelFn(fish));
 
   const testOcean = generateOcean(testSize);
-  const testData = testOcean.map(fish => fish.knnData);
 
   for (const fish of trainingOcean) {
     const label = labelFn(fish);
-    trainer.addTrainingExample(fish.knnData, label);
+    trainer.addTrainingExample(fish, label);
   };
 
   trainer.train();
 
   for (const fish of testOcean) {
-    fish.result = await trainer.predictFromExample(fish.knnData);
+    fish.result = await trainer.predict(fish);
   }
 
   return createConfusionMatrix(testOcean, trainSize, labelFn);
@@ -35,7 +34,7 @@ const performTrials = async function({numTrials, trainSize, testSize, createTrai
 
   if (!createTrainerFn) {
     createTrainerFn = () => {
-      const trainer = new SVMTrainer();
+      const trainer = new SVMTrainer(fish => fish.getKnnData());
       return trainer;
     };
   }
