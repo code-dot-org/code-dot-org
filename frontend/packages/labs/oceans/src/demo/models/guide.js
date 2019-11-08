@@ -48,7 +48,8 @@ const guides = [
     id: 'fishvtrash-predicting-init2',
     text: "Let's see!",
     when: {appMode: AppMode.FishVTrash, currentMode: Modes.Predicting},
-    style: 'BottomRight'
+    style: 'BottomRight',
+    hideBackground: true
   },
   {
     id: 'fishvtrash-pond-init',
@@ -71,7 +72,26 @@ const guides = [
     text: "Try clicking some fish to see how confident A.I. was.",
     when: {appMode: AppMode.FishVTrash, currentMode: Modes.Pond},
     style: 'BottomMiddle'
-  }
+  },
+  {
+    id: 'creaturesvtrash-predicting-init',
+    text: 'A.I. has learned to remove objects it identifies as "Not Fish".',
+    when: {appMode: AppMode.CreaturesVTrashDemo, currentMode: Modes.Predicting},
+    style: 'BottomMiddle'
+  },
+  {
+    id: 'creaturesvtrash-predicting-init2',
+    text: 'What unintended consequences might this lead to?',
+    when: {appMode: AppMode.CreaturesVTrashDemo, currentMode: Modes.Predicting},
+    style: 'BottomMiddle'
+  },
+  {
+    id: 'creaturesvtrash-predicting-init3',
+    text: "Let's see!",
+    when: {appMode: AppMode.CreaturesVTrashDemo, currentMode: Modes.Predicting},
+    style: 'BottomRight',
+    hideBackground: true
+  },
 ];
 
 export function getCurrentGuide() {
@@ -98,10 +118,14 @@ export function getCurrentGuide() {
   return null;
 }
 
-export function dismissGuide(id) {
-  const state = getState();
-  const currentGuideDismissals = state.guideDismissals;
-  let newGuideDismissals = [...currentGuideDismissals];
-  newGuideDismissals.push(id);
-  setState({guideDismissals: newGuideDismissals, guideShowing: false});
+export function dismissCurrentGuide() {
+  const currentGuide = getCurrentGuide();
+
+  if (currentGuide) {
+    const state = getState();
+    const currentGuideDismissals = state.guideDismissals;
+    let newGuideDismissals = [...currentGuideDismissals];
+    newGuideDismissals.push(currentGuide.id);
+    setState({guideDismissals: newGuideDismissals, guideShowing: false});
+  }
 }

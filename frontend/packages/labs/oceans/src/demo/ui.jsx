@@ -12,7 +12,7 @@ import aiBotClosed from '../../public/images/ai-bot/ai-bot-closed.png';
 import xIcon from '../../public/images/x-icon.png';
 import checkmarkIcon from '../../public/images/checkmark-icon.png';
 import Typist from 'react-typist';
-import {getCurrentGuide, dismissGuide} from './models/guide';
+import {getCurrentGuide, dismissCurrentGuide} from './models/guide';
 
 const styles = {
   header: {
@@ -246,6 +246,14 @@ const styles = {
     width: '100%',
     height: '100%'
   },
+  guideBackgroundHidden: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    pointerEvents: 'none'
+  },
   guideArrow: {
     top: '100%',
     left: '50%',
@@ -344,12 +352,17 @@ let Button = class Button extends React.Component {
     onClick: PropTypes.func
   };
 
+  onClick(event) {
+    dismissCurrentGuide();
+    this.props.onClick(event);
+  }
+
   render() {
     return (
       <button
         type="button"
         style={[styles.button, this.props.style]}
-        onClick={this.props.onClick}
+        onClick={(event) => this.onClick(event)}
       >
         {this.props.children}
       </button>
@@ -885,14 +898,20 @@ class Guide extends React.Component {
         {!!currentGuide && (
           <div
             key={currentGuide.id}
-            style={styles.guideBackground}
-            onClick={() => dismissGuide(currentGuide.id)}
+            style={
+              currentGuide.hideBackground
+                ? styles.guideBackgroundHidden
+                : styles.guideBackground
+            }
+            onClick={dismissCurrentGuide}
           >
             <div
               style={{...styles.guide, ...styles[`guide${currentGuide.style}`]}}
             >
               <Typist cursor={{show: false}} onTypingDone={this.onShowing}>
-                {currentGuide.textFn ? currentGuide.textFn(getState()) : currentGuide.text}
+                {currentGuide.textFn
+                  ? currentGuide.textFn(getState())
+                  : currentGuide.text}
               </Typist>
               {getState().guideShowing && (
                 <div>
