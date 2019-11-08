@@ -12,7 +12,7 @@ def sync_down
 
   CROWDIN_PROJECTS.each do |name, options|
     puts "Downloading translations from #{name} project"
-    command = "crowdin --config #{options[:config_file]} --identity #{options[:identity_file]} download translations -l asfd"
+    command = "crowdin --config #{options[:config_file]} --identity #{options[:identity_file]} download translations"
 
     # Filter the output because the crowdin translation download is _super_
     # verbose; it includes not only a progress spinner, but also information
