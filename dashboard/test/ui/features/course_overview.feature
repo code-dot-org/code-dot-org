@@ -24,10 +24,11 @@ Feature: CourseOverview
     And I press "assignment-version-year"
     And I click selector ".assignment-version-title:contains('19-'20)" once I see it
     And I select the "CSP Unit 1 - The Internet ('19-'20)" option in dropdown "uitest-secondary-assignment"
+    And I press the save button to create a new section
+    And I wait for the dialog to close
+    And I should see the section table
     Then I sign in as "Hermione"
-    And I am on "http://studio.code.org/courses/csp-2019"
-    And I wait to see ".uitest-CourseScript"
-    And I am on "http://studio.code.org/courses/csp-2019/?enableExperiments=assignmentUpdates"
+    And I am on "http://studio.code.org/courses/csp-2019?enableExperiments=assignmentUpdates"
     And I wait to see ".uitest-CourseScript"
     And I wait to see ".uitest-assigned"
 
