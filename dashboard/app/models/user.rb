@@ -988,7 +988,9 @@ class User < ActiveRecord::Base
   end
 
   def user_levels_by_level(script)
-    user_levels.
+    UserLevel.
+      select('*').
+      joins("LEFT JOIN validated_user_levels ON validated_user_levels.user_level_id = user_levels.id").
       where(script_id: script.id).
       index_by(&:level_id)
   end

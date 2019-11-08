@@ -256,16 +256,19 @@ function bestResultLevelId(levelIds, progressData) {
  */
 export const getLevelResult = level => {
   if (level.status === LevelStatus.locked) {
-    return TestResults.LOCKED_RESULT;
+    return {status: TestResults.LOCKED_RESULT, timeSpent: level.time_spent};
   }
   if (level.readonly_answers) {
-    return TestResults.READONLY_SUBMISSION_RESULT;
+    return {
+      status: TestResults.READONLY_SUBMISSION_RESULT,
+      timeSpent: level.time_spent
+    };
   }
   if (level.submitted) {
-    return TestResults.SUBMITTED_RESULT;
+    return {status: TestResults.SUBMITTED_RESULT, timeSpent: level.time_spent};
   }
 
-  return level.result;
+  return {status: level.result, timeSpent: level.time_spent};
 };
 
 /**
