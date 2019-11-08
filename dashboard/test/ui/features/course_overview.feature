@@ -27,5 +27,8 @@ Feature: CourseOverview
     Then I sign in as "Hermione"
     And I am on "http://studio.code.org/courses/csp-2019"
     And I wait to see ".uitest-CourseScript"
+    And I am on "http://studio.code.org/courses/csp-2019/?enableExperiments=assignmentUpdates"
+    And I wait to see ".uitest-CourseScript"
+    And I wait to see ".uitest-assigned"
 
     # Viewing course overview as a teacher with sections is covered in teacher_homepage.feature
