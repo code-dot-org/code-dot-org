@@ -1,17 +1,12 @@
 import 'idempotent-babel-polyfill';
 import {setState, getState} from '../state';
-import {ClassType} from '../constants';
+import {ClassType, AppMode} from '../constants';
 import SimpleTrainer from '../../utils/SimpleTrainer';
 import SVMTrainer from '../../utils/SVMTrainer';
 import {generateOcean} from '../../utils/generateOcean';
 
 export const init = () => {
   const state = getState();
-
-  let fishData = [...state.fishData];
-  if (fishData.length === 0) {
-    fishData = fishData.concat(generateOcean(100));
-  }
 
   let trainer = state.trainer;
   if (!trainer) {
@@ -22,13 +17,13 @@ export const init = () => {
     }
   }
 
-  if (state.appMode === 'fishvtrash') {
+  if (state.appMode === AppMode.FishVTrash) {
     setState({
       word: 'Fish',
       trainingQuestion: 'Is this a fish?'
     });
   }
-  if (state.appMode === 'creaturesvtrash') {
+  if (state.appMode === AppMode.CreaturesVTrash) {
     setState({
       word: 'Water creature',
       trainingQuestion: 'Does this belong in the water?'
@@ -36,7 +31,8 @@ export const init = () => {
   }
 
   setState({
-    fishData,
+    fishData: generateOcean(100),
+    trainingIndex: 0,
     trainer,
     isRunning: true
   });

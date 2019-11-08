@@ -14,14 +14,14 @@
       #container {
         position: relative;
         width: 100%;
-        max-width: 970px;
+        min-width: 770px;
         margin: 0 auto;
         user-select: none;
       }
       #container-react {
         position: absolute;
         width: 100%;
-        max-width: 970px;
+        min-width: 770px;
         margin: 0 auto;
         user-select: none;
         font-family: arial, sans-serif;
@@ -34,6 +34,7 @@
         width: 100%;
         z-index: -1;
         border-radius: 10px;
+        border: 2px solid transparent;
       }
       #activity-canvas {
         width: 100%;
@@ -51,6 +52,51 @@
       @media screen and (max-width: 600px) {
         button {
           font-size: 60%;
+        }
+      }
+      @media screen and (max-height: 1350px) {
+        #container {
+          max-width: 2050px;
+        }
+      }
+      @media screen and (max-height: 1260px) {
+        #container {
+          max-width: 1890px;
+        }
+      }
+      @media screen and (max-height: 1170px) {
+        #container {
+          max-width: 1730px;
+        }
+      }
+      @media screen and (max-height: 1080px) {
+        #container {
+          max-width: 1570px;
+        }
+      }
+      @media screen and (max-height: 990px) {
+        #container {
+          max-width: 1410px;
+        }
+      }
+      @media screen and (max-height: 900px) {
+        #container {
+          max-width: 1250px;
+        }
+      }
+      @media screen and (max-height: 810px) {
+        #container {
+          max-width: 1090px;
+        }
+      }
+      @media screen and (max-height: 720px) {
+        #container {
+          max-width: 930px;
+        }
+      }
+      @media screen and (max-height: 630px) {
+        #container {
+          max-width: 770px;
         }
       }
       input[type="radio"] {

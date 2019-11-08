@@ -1,5 +1,5 @@
 import {filterFishComponents} from '../../../src/demo/helpers';
-import {DataSet} from '../../../src/demo/constants';
+import {AppMode} from '../../../src/demo/constants';
 
 describe('filterFishComponents', () => {
   const fishComponents = {
@@ -8,26 +8,26 @@ describe('filterFishComponents', () => {
       body2: {src: 'images/body2.png'},
       body3: {
         src: 'images/body3.png',
-        exclusions: [DataSet.Small, 'other-exclusion']
+        exclusions: [AppMode.FishShort, 'other-exclusion']
       }
     },
     eyes: {
       eye1: {src: 'images/eye1.png'},
-      eye2: {src: 'images/eye2.png', exclusions: [DataSet.Small]}
+      eye2: {src: 'images/eye2.png', exclusions: [AppMode.FishShort]}
     }
   };
 
-  it('returns all components if no dataSet is defined', () => {
+  it('returns all components if no appMode is defined', () => {
     expect(filterFishComponents(fishComponents, null)).toEqual(fishComponents);
     expect(filterFishComponents(fishComponents, undefined)).toEqual(
       fishComponents
     );
   });
 
-  it('filters components that should be excluded in the given dataSet', () => {
+  it('filters components that should be excluded in the given appMode', () => {
     const filteredComponents = filterFishComponents(
       fishComponents,
-      DataSet.Small
+      AppMode.FishShort
     );
 
     expect(Object.keys(filteredComponents)).toEqual(

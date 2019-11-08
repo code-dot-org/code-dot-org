@@ -265,10 +265,24 @@ export class FishOceanObject extends OceanObject {
       anchor[1] -= img.height / 2;
     }
 
+    if (part.type === FishBodyPart.DORSAL_FIN) {
+      anchor[1] -= img.height;
+      if (part.x_adjustment) {
+        anchor[0] += part.x_adjustment;
+      }
+    }
+
     const xPos = bodyAnchor[0] + anchor[0];
     const yPos = bodyAnchor[1] + anchor[1];
+    if (part.type === FishBodyPart.PECTORAL_FIN_BACK) {
+          intermediateCtx.translate(xPos+img.width,yPos);
+      intermediateCtx.scale(-1, 1);
+      intermediateCtx.drawImage(img, 0,0);
+      intermediateCtx.setTransform(1,0,0,1,0,0);
+    } else {
+      intermediateCtx.drawImage(img, xPos, yPos);
+    }
 
-    intermediateCtx.drawImage(img, xPos, yPos);
     const rgb = colorForFishPart(this.colorPalette, part);
 
     if (rgb) {
