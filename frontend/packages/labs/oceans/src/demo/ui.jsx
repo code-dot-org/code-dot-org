@@ -246,14 +246,31 @@ const styles = {
     width: '100%',
     height: '100%'
   },
+  guideArrow: {
+    top: '100%',
+    left: '50%',
+    border: 'solid transparent',
+    height: 0,
+    width: 0,
+    position: 'absolute',
+    pointerEvents: 'none',
+    borderColor: 'none',
+    borderTopColor: colors.darkBlue,
+    borderWidth: 30,
+    marginLeft: -30
+  },
   guideTopLeft: {
     top: '5%',
-    left: '5%',
+    left: '5%'
   },
   guideBottomMiddle: {
-    bottom: '5%',
+    bottom: '25%',
     left: '50%',
     transform: 'translateX(-50%)'
+  },
+  guideBottomRight: {
+    bottom: '25%',
+    right: '5%'
   },
   guideButton: {
     padding: 5,
@@ -871,10 +888,16 @@ class Guide extends React.Component {
             style={styles.guideBackground}
             onClick={() => dismissGuide(currentGuide.id)}
           >
-            <div style={{...styles.guide, ...styles[`guide${currentGuide.style}`]}}>
-              <Typist cursor={{show: false}} onTypingDone={this.onShowing}>{currentGuide.text}</Typist>
+            <div
+              style={{...styles.guide, ...styles[`guide${currentGuide.style}`]}}
+            >
+              <Typist cursor={{show: false}} onTypingDone={this.onShowing}>
+                {currentGuide.textFn ? currentGuide.textFn(getState()) : currentGuide.text}
+              </Typist>
               {getState().guideShowing && (
-                <Button style={styles.guideButton}>OK</Button>
+                <div>
+                  <div style={styles.guideArrow}> </div>
+                </div>
               )}
             </div>
           </div>

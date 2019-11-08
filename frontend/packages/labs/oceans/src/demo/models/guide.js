@@ -10,7 +10,7 @@ const guides = [
   },
   {
     id: 'fishvtrash-training-init2',
-    text: 'Use these two buttons to train A.I.!',
+    text: 'Use these two buttons to train A.I.',
     when: {appMode: AppMode.FishVTrash, currentMode: Modes.Training},
     style: 'BottomMiddle'
   },
@@ -40,8 +40,36 @@ const guides = [
   },
   {
     id: 'fishvtrash-predicting-init',
-    text: "Does A.I. know what a fish looks like?  Let's see!",
+    text: 'Does A.I. know what a fish looks like?',
     when: {appMode: AppMode.FishVTrash, currentMode: Modes.Predicting},
+    style: 'BottomMiddle'
+  },
+  {
+    id: 'fishvtrash-predicting-init2',
+    text: "Let's see!",
+    when: {appMode: AppMode.FishVTrash, currentMode: Modes.Predicting},
+    style: 'BottomRight'
+  },
+  {
+    id: 'fishvtrash-pond-init',
+    textFn: state => {
+      return `Out of ${state.fishData.length} random objects, A.I. identified ${
+        state.totalPondFish
+      } that belong in water.`;
+    },
+    when: {appMode: AppMode.FishVTrash, currentMode: Modes.Pond},
+    style: 'BottomMiddle'
+  },
+  {
+    id: 'fishvtrash-pond-init2',
+    text: "How did A.I do?",
+    when: {appMode: AppMode.FishVTrash, currentMode: Modes.Pond},
+    style: 'BottomMiddle'
+  },
+  {
+    id: 'fishvtrash-pond-init3',
+    text: "Try clicking some fish to see how confident A.I. was.",
+    when: {appMode: AppMode.FishVTrash, currentMode: Modes.Pond},
     style: 'BottomMiddle'
   }
 ];
@@ -53,7 +81,9 @@ export function getCurrentGuide() {
     // If the current state matches the guide's requirements...
     if (
       Object.keys(guide.when).every(key => {
-        return (key === "fn" ? guide.when["fn"](getState()) : guide.when[key] === state[key]);
+        return key === 'fn'
+          ? guide.when['fn'](getState())
+          : guide.when[key] === state[key];
       })
     ) {
       // And if we haven't already dismissed this particular guide...
