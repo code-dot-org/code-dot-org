@@ -3,6 +3,9 @@ import Radium from 'radium';
 import React from 'react';
 
 const styles = {
+  headerCell: {
+    border: '1px solid black'
+  },
   cell: {
     height: '2em',
     textAlign: 'center',
@@ -97,7 +100,9 @@ class CrossTabChart extends React.Component {
         <tbody>
           <tr>
             {columns.map(column => (
-              <th key={column}>{column}</th>
+              <th key={column} style={styles.headerCell}>
+                {column}
+              </th>
             ))}
           </tr>
           {chartData.map((record, id) => (
