@@ -13,7 +13,7 @@ Feature: CourseOverview
     And I am on "http://studio.code.org/courses/csp-2019"
     And I wait to see ".uitest-CourseScript"
 
-  Scenario: Viewing course overview as a student in a section
+  Scenario: Viewing course overview as a student in an assigned section
     Given I create an authorized teacher-associated student named "Hermione"
     Then I sign in as "Teacher_Hermione" and go home
     And I click selector ".ui-test-section-dropdown" once I see it
@@ -27,9 +27,26 @@ Feature: CourseOverview
     And I press the save button to create a new section
     And I wait for the dialog to close
     And I should see the section table
+    Then I am on "http://studio.code.org/home?enableExperiments=assignmentUpdates"
+    Then I am on "http://studio.code.org/courses/csp-2019"
+    And I wait to see ".uitest-CourseScript"
+    And I wait to see ".uitest-unassign"
+    And I wait to see "uitest-assigned"
+    Then I am on "http://studio.code.org/s/csp1-2019"
+    And I wait to see ".uitest-unassign"
+    Then I am on "http://studio.code.org/s/csp2-2019"
+    And I wait to see ".uitest-assign"
+    And I am on "http://studio.code.org/courses/csd-2019"
+    And I wait to see ".uitest-CourseScript"
+    And I wait to see ".uitest-assign"
     Then I sign in as "Hermione"
     And I am on "http://studio.code.org/courses/csp-2019?enableExperiments=assignmentUpdates"
     And I wait to see ".uitest-CourseScript"
     And I wait to see ".uitest-assigned"
+    Then I am on "http://studio.code.org/s/csp1-2019"
+    And I wait to see ".uitest-assigned"
+    Then I am on "http://studio.code.org/s/csp2-2019"
+    And element ".uitest-assigned" is not visible
 
-    # Viewing course overview as a teacher with sections is covered in teacher_homepage.feature
+    # Viewing course overview as a teacher with sections is more thoroughly
+    # covered in teacher_homepage.feature

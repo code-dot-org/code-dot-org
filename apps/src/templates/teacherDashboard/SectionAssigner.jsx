@@ -57,7 +57,10 @@ class SectionAssigner extends Component {
             selectedSection={selectedSection}
           />
           {selectedSection && selectedSection.isAssigned && (
-            <UnassignButton sectionId={selectedSection.id} />
+            <UnassignButton
+              sectionId={selectedSection.id}
+              className="uitest-unassign"
+            />
           )}
           {selectedSection &&
             !selectedSection.isAssigned &&
@@ -66,6 +69,7 @@ class SectionAssigner extends Component {
                 sectionId={selectedSection.id}
                 courseId={courseId}
                 scriptId={scriptId}
+                className="uitest-unassign"
               />
             )}
         </div>
