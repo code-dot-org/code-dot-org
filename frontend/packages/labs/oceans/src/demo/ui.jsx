@@ -235,10 +235,11 @@ const styles = {
     position: 'absolute',
     backgroundColor: colors.darkBlue,
     padding: 15,
-    color: 'white'
+    color: 'white',
+    textAlign: 'center'
   },
   guideBackground: {
-    backgroundColor: colors.transparentBlack,
+    backgroundColor: 'rgba(0,0,0,0.3)',
     position: 'absolute',
     top: 0,
     left: 0,
@@ -253,6 +254,12 @@ const styles = {
     bottom: '5%',
     left: '50%',
     transform: 'translateX(-50%)'
+  },
+  guideButton: {
+    padding: 5,
+    minWidth: 100,
+    marginTop: 20,
+    right: 0
   }
 };
 
@@ -849,6 +856,10 @@ class Pond extends React.Component {
 }
 
 class Guide extends React.Component {
+  onShowing() {
+    setState({guideShowing: true});
+  }
+
   render() {
     const currentGuide = getCurrentGuide();
 
@@ -861,7 +872,10 @@ class Guide extends React.Component {
             onClick={() => dismissGuide(currentGuide.id)}
           >
             <div style={{...styles.guide, ...styles[`guide${currentGuide.style}`]}}>
-              <Typist cursor={{show: false}}>{currentGuide.text}</Typist>
+              <Typist cursor={{show: false}} onTypingDone={this.onShowing}>{currentGuide.text}</Typist>
+              {getState().guideShowing && (
+                <Button style={styles.guideButton}>OK</Button>
+              )}
             </div>
           </div>
         )}

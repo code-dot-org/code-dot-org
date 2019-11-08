@@ -15,6 +15,18 @@ const guides = [
     style: 'BottomMiddle'
   },
   {
+    id: 'fishvtrash-training-keeptraining',
+    text: 'Nice work.  Keep training!',
+    when: {
+      appMode: AppMode.FishVTrash,
+      currentMode: Modes.Training,
+      fn: state => {
+        return state.yesCount + state.noCount >= 5;
+      }
+    },
+    style: 'BottomMiddle'
+  },
+  {
     id: 'fishvtrash-predicting-init',
     text: "Does A.I. know what a fish looks like?  Let's see!",
     when: {appMode: AppMode.FishVTrash, currentMode: Modes.Predicting},
@@ -29,11 +41,13 @@ export function getCurrentGuide() {
     // If the current state matches the guide's requirements...
     if (
       Object.keys(guide.when).every(key => {
-        return guide.when[key] === state[key];
+        return (key === "fn" ? guide.when["fn"](getState()) : guide.when[key] === state[key]);
       })
     ) {
       // And if we haven't already dismissed this particular guide...
-      if (! (state.guideDismissals && state.guideDismissals.includes(guide.id))) {
+      if (
+        !(state.guideDismissals && state.guideDismissals.includes(guide.id))
+      ) {
         return guide;
       }
     }
@@ -47,5 +61,5 @@ export function dismissGuide(id) {
   const currentGuideDismissals = state.guideDismissals;
   let newGuideDismissals = [...currentGuideDismissals];
   newGuideDismissals.push(id);
-  setState({guideDismissals: newGuideDismissals});
+  setState({guideDismissals: newGuideDismissals, guideShowing: false});
 }
