@@ -61,6 +61,7 @@ class HocSyncUtils
       # rename yml file from en.yml to code
       new_path = File.join(dest_dir, "hourofcode/#{prop[:unique_language_s]}.yml")
       File.write(new_path, new_translation_data.to_yaml)
+      FileUtils.rm old_path
     end
   end
 
