@@ -11,6 +11,8 @@ import colors from './colors';
 import aiBotClosed from '../../public/images/ai-bot/ai-bot-closed.png';
 import xIcon from '../../public/images/x-icon.png';
 import checkmarkIcon from '../../public/images/checkmark-icon.png';
+import Typist from 'react-typist';
+import {getCurrentGuide, dismissGuide} from './models/guide';
 
 const styles = {
   header: {
@@ -228,6 +230,29 @@ const styles = {
   },
   yesCount: {
     right: 0
+  },
+  guide: {
+    position: 'absolute',
+    backgroundColor: colors.darkBlue,
+    padding: 15,
+    color: 'white'
+  },
+  guideBackground: {
+    backgroundColor: colors.transparentBlack,
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%'
+  },
+  guideTopLeft: {
+    top: '5%',
+    left: '5%',
+  },
+  guideBottomMiddle: {
+    bottom: '5%',
+    left: '50%',
+    transform: 'translateX(-50%)'
   }
 };
 
@@ -262,6 +287,7 @@ class Body extends React.Component {
     return (
       <div style={styles.body} onClick={this.props.onClick}>
         {this.props.children}
+        <Guide />
       </div>
     );
   }
@@ -723,18 +749,18 @@ class Pond extends React.Component {
     let pondText = [];
 
     if (state.appMode === 'fishvtrash' || state.appMode === 'creaturesvtrash') {
-      pondText[0] =
-        `Out of ${state.fishData.length} random objects, A.I. identified ${
-          state.totalPondFish
-        } that belong in water.`;
-    } else {
-      pondText[0] =
-        `Out of ${state.fishData.length} objects, I identified ${
+      pondText[0] = `Out of ${
+        state.fishData.length
+      } random objects, A.I. identified ${
         state.totalPondFish
-        } that are ${state.word.toUpperCase()}.`;
+      } that belong in water.`;
+    } else {
+      pondText[0] = `Out of ${state.fishData.length} objects, I identified ${
+        state.totalPondFish
+      } that are ${state.word.toUpperCase()}.`;
     }
     pondText[1] = 'How did A.I. do?';
-    pondText[2] = 'Choose to Train More or Continue.'
+    pondText[2] = 'Choose to Train More or Continue.';
 
     const showFishDetails = !!state.pondClickedFish;
     let pondFishDetailsStyle;
@@ -811,6 +837,28 @@ class Pond extends React.Component {
           </div>
         )}
       </Body>
+    );
+  }
+}
+
+class Guide extends React.Component {
+  render() {
+    const currentGuide = getCurrentGuide();
+
+    return (
+      <div>
+        {!!currentGuide && (
+          <div
+            key={currentGuide.id}
+            style={styles.guideBackground}
+            onClick={() => dismissGuide(currentGuide.id)}
+          >
+            <div style={{...styles.guide, ...styles[`guide${currentGuide.style}`]}}>
+              <Typist cursor={{show: false}}>{currentGuide.text}</Typist>
+            </div>
+          </div>
+        )}
+      </div>
     );
   }
 }

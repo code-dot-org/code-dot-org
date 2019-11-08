@@ -6003,6 +6003,13 @@ react-test-renderer@~15.4.0:
     fbjs "^0.8.4"
     object-assign "^4.1.0"
 
+react-typist@^2.0.5:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/react-typist/-/react-typist-2.0.5.tgz#9830395a73a03e6368e1392ecb98edaa3a648e44"
+  integrity sha512-iZCkeqeegO0TlkTMiH2JD1tvMtY9RrXkRylnAI6m8aCVAUUwNzoWTVF7CKLij6THeOMcUDCznLDDvNp55s+YZA==
+  dependencies:
+    prop-types "^15.5.10"
+
 react@~15.4.0:
   version "15.4.2"
   resolved "https://registry.yarnpkg.com/react/-/react-15.4.2.tgz#41f7991b26185392ba9bae96c8889e7e018397ef"

@@ -25,7 +25,8 @@ const initialState = {
   trainingQuestion: null,
   currentInstructionsPage: 0,
   pondFishBounds: null,
-  pondClickedFish: null
+  pondClickedFish: null,
+  guideDismissals: []
 };
 let state = {...initialState};
 
