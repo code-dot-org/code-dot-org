@@ -38,14 +38,14 @@
     "validation_code": "//after 1 measure, make sure there is a sprite. if not, fail immediately\r\nif (nativeAPI.getTime(\"measures\") > 1) {\r\n  if (sprites.length === 0) {\r\n    nativeAPI.fail(\"danceFeedbackNeedNewDancer\");\r\n  }\r\n}\r\n\r\n//go through all sprites\r\nsprites.forEach(function(sprite, index) {\r\n  var currentAnimation=sprite.getAnimationLabel();\r\n  var previousAnimation=World.validationState[index];\r\n  if (currentAnimation!=previousAnimation) {\r\n    if (previousAnimation == 'anim0') {\r\n      //pass, but not right away\r\n      World.validationState.shouldPass = true;\r\n    }\r\n  }\r\n  //store previous animation\r\n  World.validationState[index] = currentAnimation;\r\n});\r\n\r\n\r\nif (nativeAPI.getTime(\"measures\") > 5){\r\n  if(World.validationState.shouldPass){\r\n    nativeAPI.pass();\r\n  }\r\n  else if (World.keysPressed.size > 0){\r\n    nativeAPI.fail(\"danceFeedbackPressedKey\");\r\n  } else {\r\n    nativeAPI.fail(\"danceFeedbackDidntPress\");\r\n  }\r\n}",
     "block_pool": "Dancelab",
     "preload_asset_list": [
-      "https://curriculum.code.org/images/sprites/dance_20181127/bear_04.png",
-      "https://curriculum.code.org/images/sprites/dance_20181127/bear_05.png",
-      "https://curriculum.code.org/images/sprites/dance_20181127/bear_06.png",
-      "https://curriculum.code.org/images/sprites/dance_20181127/bear_07.png",
-      "https://curriculum.code.org/images/sprites/dance_20181120/sloth_00.png",
-      "https://curriculum.code.org/images/sprites/dance_20181120/sloth_01.png",
-      "https://curriculum.code.org/images/sprites/dance_20181120/sloth_02.png",
-      "https://curriculum.code.org/images/sprites/dance_20181120/sloth_03.png"
+      "https://curriculum.code.org/images/sprites/dance_20191106/bear_04.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/bear_05.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/bear_06.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/bear_07.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/sloth_40.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/sloth_41.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/sloth_42.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/sloth_43.png"
     ],
     "soft_buttons": [
       "leftButton",
