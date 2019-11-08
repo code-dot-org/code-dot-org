@@ -30,10 +30,9 @@ describe('Generate ocean test', () => {
   test('Can generate predictions on a random set of fish', async () => {
     const numFish = 25;
     const trainingOcean = generateOcean(numFish);
-    const trainer = new SimpleTrainer();
-    await trainer.initializeClassifiersWithoutMobilenet();
+    const trainer = new SimpleTrainer(fish => fish.getTensor());
     trainingOcean.forEach(fish => {
-      trainer.addExampleTensor(fish.getTensor(), Math.round(Math.random()));
+      trainer.addTrainingExample(fish, Math.round(Math.random()));
     });
     const predictedOcean = await filterOcean(generateOcean(numFish), trainer);
     expect(predictedOcean.length).toEqual(numFish);
@@ -42,11 +41,10 @@ describe('Generate ocean test', () => {
   test('Can predict red fish when only picking red fish', async () => {
     const numPredictionFish = 2000;
     const trainingOcean = generateOcean(50);
-    const trainer = new SimpleTrainer();
-    await trainer.initializeClassifiersWithoutMobilenet();
+    const trainer = new SimpleTrainer(fish => fish.getTensor());
     trainingOcean.forEach(fish => {
-      trainer.addExampleTensor(
-        fish.getTensor(),
+      trainer.addTrainingExample(
+        fish,
         fish.getColorPalette().bodyRgb[0] > 200 ? 1 : 0
       );
     });
@@ -70,12 +68,11 @@ describe('Generate ocean test', () => {
   test('Can predict round fish when only picking round fish', async () => {
     const numPredictionFish = 2000;
     const trainingOcean = generateOcean(50);
-    const trainer = new SimpleTrainer();
+    const trainer = new SimpleTrainer(fish => fish.getTensor());
     trainer.setTopK(5);
-    await trainer.initializeClassifiersWithoutMobilenet();
     trainingOcean.forEach(fish => {
       const cat = fish.getKnnData()[1] === 0 ? 1 : 0;
-      trainer.addExampleTensor(fish.getTensor(), cat);
+      trainer.addTrainingExample(fish, cat);
     });
     const predictedOcean = await filterOcean(
       generateOcean(numPredictionFish),

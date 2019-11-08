@@ -1,16 +1,43 @@
-import * as mobilenetModule from '@tensorflow-models/mobilenet';
 import * as tf from '@tensorflow/tfjs';
 import * as knnClassifier from '@tensorflow-models/knn-classifier';
 
 export default class SimpleTrainer {
-  async initializeClassifiers() {
+  constructor(converterFn) {
+    this.converterFn = converterFn || (input => input); // Default to returning example as-is
     this.knn = knnClassifier.create();
-    this.mobilenet = await mobilenetModule.load();
   }
 
-  initializeClassifiersWithoutMobilenet() {
-    this.knn = knnClassifier.create();
+  /**
+   * @param {Object} training data point
+   * @param {number} classId
+   */
+  addTrainingExample(example, classId) {
+    this.knn.addExample(this.converterFn(example), classId);
   }
+
+  train() {} // no training needed for KNN
+
+  /**
+   * @param {Tensor<number>} KNN data
+   * @returns {Promise<{confidencesByClassId: [], predictedClassId: null}>}
+   */
+  async predict(example) {
+    let result = {
+      predictedClassId: null,
+      confidencesByClassId: []
+    };
+
+    if (this.knn.getNumClasses() === 0) {
+      return result;
+    }
+
+    const res = await this.knn.predictClass(this.converterFn(example), this.TOPK);
+    result.predictedClassId = res.classIndex;
+    result.confidencesByClassId = res.confidences;
+    return result;
+  }
+
+  // SimpleTrainer-specific methods below
 
   setTopK(k) {
     this.TOPK = k;
@@ -35,101 +62,6 @@ export default class SimpleTrainer {
    */
   getExampleCount(classId) {
     return this.knn ? this.knn.getClassExampleCount()[classId] : 0;
-  }
-
-  /**
-   * @param {Tensor<number>} KNN data
-   * @param {number} classId
-   */
-  addExampleTensor(tensor, classId) {
-    this.knn.addExample(tensor, classId);
-  }
-
-  /**
-   * @param {Array<number>} KNN data
-   * @param {number} classId
-   */
-  addTrainingExample(example, classId) {
-    this.knn.addExample(tf.tensor(example), classId);
-  }
-
-  /**
-   * @param {ImageData | HTMLImageElement | HTMLCanvasElement | HTMLVideoElement} imageOrVideoElement
-   * @param {number} classId
-   */
-  addExampleImage(imageOrVideoElement, classId) {
-    const image = tf.fromPixels(imageOrVideoElement);
-    const infer = () => this.mobilenet.infer(image, 'conv_preds');
-
-    let logits;
-    if (classId !== -1) {
-      logits = infer();
-      this.knn.addExample(logits, classId);
-    }
-    image.dispose();
-    if (logits) {
-      logits.dispose();
-    }
-  }
-
-  train() {} // no training needed for KNN
-
-  /**
-   * @param {Tensor<number>} KNN data
-   * @returns {Promise<{confidencesByClassId: [], predictedClassId: null}>}
-   */
-  async predictFromTensor(tensor) {
-    let result = {
-      predictedClassId: null,
-      confidencesByClassId: []
-    };
-    const numClasses = this.knn.getNumClasses();
-    if (numClasses > 0) {
-      const res = await this.knn.predictClass(tensor, this.TOPK);
-
-      result.predictedClassId = res.classIndex;
-      result.confidencesByClassId = res.confidences;
-    }
-    return result;
-  }
-
-  /**
-   * @param {Array<number>} KNN data
-   * @returns {Promise<{confidencesByClassId: [], predictedClassId: null}>}
-   */
-  async predictFromExample(example) {
-    return this.predictFromTensor(tf.tensor(example));
-  }
-
-  /**
-   * @param {HTMLVideoElement} videoElement
-   * @returns {Promise<{confidencesByClassId: [], predictedClassId: null}>}
-   */
-  async predictFromImage(videoElement) {
-    const image = tf.fromPixels(videoElement);
-    const infer = () => this.mobilenet.infer(image, 'conv_preds');
-    let result = {
-      predictedClassId: null,
-      confidencesByClassId: []
-    };
-
-    const numClasses = this.knn.getNumClasses();
-    if (numClasses > 0) {
-      let logits = infer();
-
-      const res = await this.knn.predictClass(logits, this.TOPK);
-
-      result.predictedClassId = res.classIndex;
-      result.confidencesByClassId = res.confidences;
-
-      if (logits) {
-        logits.dispose();
-      }
-    }
-
-    image.dispose();
-
-    return result;
   }
 
   /*
