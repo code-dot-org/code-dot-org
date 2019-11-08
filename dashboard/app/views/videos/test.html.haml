@@ -60,6 +60,9 @@
     \/
     %a{href: '?'} off
 
+- content_for(:head) do
+  %script{src: webpack_asset_path('js/videos/test.js')}
+
 :javascript
   var formLink = {
     template: "https://docs.google.com/forms/d/1yIdim-dyUWcmDQWTV-YeimE9tBUvWK-H7ZULItQ9rR8/viewform?entry.1520933088=browser&entry.515663950=youtubeReachable&entry.1331880569=flashInstalled",

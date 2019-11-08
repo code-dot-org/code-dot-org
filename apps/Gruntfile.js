@@ -571,7 +571,8 @@ describe('entry tests', () => {
     'teacher_dashboard/show':
       './src/sites/studio/pages/teacher_dashboard/show.js',
     'teacher_feedbacks/index':
-      './src/sites/studio/pages/teacher_feedbacks/index.js'
+      './src/sites/studio/pages/teacher_feedbacks/index.js',
+    'videos/test': './src/sites/studio/pages/videos/test.js'
   };
 
   var internalEntries = {
