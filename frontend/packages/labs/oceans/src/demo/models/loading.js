@@ -20,7 +20,6 @@ export const init = async () => {
     AppMode.CreaturesVTrashDemo
   ].includes(appModeBase);
 
-  // TODO: refactor into a model init method
   if (appModeBase === AppMode.CreaturesVTrashDemo) {
     const trainer = new SimpleTrainer();
     trainer.initializeClassifiersWithoutMobilenet();
