@@ -22,7 +22,8 @@ def sync_down
     # ignore any things we identify as "noise" in the output.
     Open3.popen2(command) do |_stdin, stdout, status_thread|
       stdout.each_line do |line|
-        # strip out the progress spinner
+        # strip out the progress spinner, which is implemented as the sequence
+        # \-/| followed by a backspace character
         line.gsub!(/[\|\/\-\\][\b]/, '')
 
         # skip lines detailing individual file extraction
