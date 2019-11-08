@@ -5961,7 +5961,7 @@ supports-hyperlinks@^1.0.1:
 
 svm@uponthesun/svmjs:
   version "0.1.0"
-  resolved "https://codeload.github.com/uponthesun/svmjs/tar.gz/883f68c82ff814a764131f3a773eded757de0ea6"
+  resolved "https://codeload.github.com/uponthesun/svmjs/tar.gz/c58634881d214c854cd2a5bef1b4efd14a8997f8"
 
 symbol-tree@^3.2.1:
   version "3.2.4"
