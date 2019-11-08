@@ -266,6 +266,7 @@ export default connect((state, ownProps) => ({
   sectionsForDropdown: sectionsForDropdown(
     state.teacherSections,
     null,
-    ownProps.id
+    ownProps.id,
+    true
   )
 }))(CourseOverview);
