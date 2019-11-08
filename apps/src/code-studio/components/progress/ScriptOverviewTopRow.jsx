@@ -115,6 +115,23 @@ class ScriptOverviewTopRow extends React.Component {
               assignmentName={scriptTitle}
             />
           )}
+        {experiments.isEnabled(experiments.ASSIGNMENT_UPDATES) &&
+          !professionalLearningCourse &&
+          viewAs === ViewType.Teacher &&
+          resources.length > 0 && (
+            <div style={styles.dropdown}>
+              <DropdownButton
+                text={i18n.teacherResources()}
+                color={Button.ButtonColor.blue}
+              >
+                {resources.map(({type, link}, index) => (
+                  <a key={index} href={link} target="_blank">
+                    {stringForType[type]}
+                  </a>
+                ))}
+              </DropdownButton>
+            </div>
+          )}
         {!professionalLearningCourse &&
           viewAs === ViewType.Teacher &&
           showAssignButton &&
@@ -127,7 +144,8 @@ class ScriptOverviewTopRow extends React.Component {
               scriptId={scriptId}
             />
           )}
-        {!professionalLearningCourse &&
+        {!experiments.isEnabled(experiments.ASSIGNMENT_UPDATES) &&
+          !professionalLearningCourse &&
           viewAs === ViewType.Teacher &&
           resources.length > 0 && (
             <div style={styles.dropdown}>
