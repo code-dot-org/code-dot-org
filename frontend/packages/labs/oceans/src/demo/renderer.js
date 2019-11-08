@@ -1,6 +1,6 @@
 import 'idempotent-babel-polyfill';
 import {getState, setState} from './state';
-import constants, {Modes, ClassType} from './constants';
+import constants, {AppMode, Modes, ClassType} from './constants';
 import CanvasCache from './canvasCache';
 import {backgroundPathForMode} from './helpers';
 import {predictFish} from './models/predict';
@@ -91,7 +91,7 @@ export const render = () => {
       drawPredictBot(state);
       drawMovingFish(state);
 
-      if (state.appMode === 'creaturesvtrashdemo') {
+      if (state.appMode === AppMode.CreaturesVTrashDemo) {
         if (state.showBiasText) {
           setState({
             canSkipPredict:
@@ -302,7 +302,10 @@ const drawMovingFish = state => {
           constants.canvasWidth / 2 - constants.fishCanvasWidth / 2;
         if (Math.abs(midScreenX - x) <= 50) {
           centerFish = fish;
-          if (state.isRunning && state.appMode === 'creaturesvtrashdemo') {
+          if (
+            state.isRunning &&
+            state.appMode === AppMode.CreaturesVTrashDemo
+          ) {
             if (fish instanceof FishOceanObject) {
               fish.result.predictedClassId = 0;
             } else if (fish instanceof SeaCreatureOceanObject) {

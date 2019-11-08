@@ -1,6 +1,6 @@
 import 'idempotent-babel-polyfill';
 import {setState, getState} from '../state';
-import {ClassType} from '../constants';
+import {ClassType, AppMode} from '../constants';
 import SimpleTrainer from '../../utils/SimpleTrainer';
 import {generateOcean} from '../../utils/generateOcean';
 
@@ -13,13 +13,13 @@ export const init = () => {
     trainer.initializeClassifiersWithoutMobilenet();
   }
 
-  if (state.appMode === 'fishvtrash') {
+  if (state.appMode === AppMode.FishVTrash) {
     setState({
       word: 'Fish',
       trainingQuestion: 'Is this a fish?'
     });
   }
-  if (state.appMode === 'creaturesvtrash') {
+  if (state.appMode === AppMode.CreaturesVTrash) {
     setState({
       word: 'Water creature',
       trainingQuestion: 'Does this belong in the water?'

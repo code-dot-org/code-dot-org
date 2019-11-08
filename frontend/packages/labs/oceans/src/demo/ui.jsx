@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Radium from 'radium';
 import _ from 'lodash';
 import {getState, setState} from './state';
-import constants, {Modes, DataSet} from './constants';
+import constants, {AppMode, Modes} from './constants';
 import {getAppMode} from './helpers';
 import {toMode} from './toMode';
 import {onClassifyFish} from './models/train';
@@ -483,7 +483,7 @@ class Words extends React.Component {
 
   currentItems() {
     const state = getState();
-    const itemSet = state.dataSet === DataSet.Small ? 0 : 1;
+    const itemSet = state.appMode === AppMode.FishShort ? 0 : 1;
 
     return this.state.choices[itemSet];
   }
@@ -501,18 +501,20 @@ class Words extends React.Component {
     const state = getState();
     const currentItems = this.currentItems();
     const buttonStyle =
-      state.dataSet === DataSet.Small ? styles.button1col : styles.button3col;
+      state.appMode === AppMode.FishShort
+        ? styles.button1col
+        : styles.button3col;
 
     return (
       <Body>
         <Header>Choose Fish Type</Header>
         <Content>
-          {state.appMode === 'short' && (
+          {state.appMode === AppMode.FishShort && (
             <div style={styles.wordsText}>
               What type of fish do you want to train A.I. to detect?
             </div>
           )}
-          {state.appMode === 'long' && (
+          {state.appMode === AppMode.FishLong && (
             <div style={styles.wordsText}>
               What happens if the words are more subjective?
               <br />
@@ -543,7 +545,7 @@ let Train = class Train extends React.Component {
       text = "Great work! You can continue when you're ready.";
     } else if (total >= 5) {
       text = 'Keep training!';
-    } else if (total === 0 && state.appMode === 'creaturesvtrash') {
+    } else if (total === 0 && state.appMode === AppMode.CreaturesVTrash) {
       text = 'Let’s train A.I. again!';
     } else {
       return null;
@@ -558,9 +560,9 @@ let Train = class Train extends React.Component {
       ? styles.trainQuestionTextDisabled
       : styles.trainQuestionText;
     const yesButtonText =
-      state.appMode === 'creaturesvtrash' ? 'Yes' : state.word;
+      state.appMode === AppMode.CreaturesVTrash ? 'Yes' : state.word;
     const noButtonText =
-      state.appMode === 'creaturesvtrash' ? 'No' : `Not ${state.word}`;
+      state.appMode === AppMode.CreaturesVTrash ? 'No' : `Not ${state.word}`;
     return (
       <Body>
         <Header>A.I. Training</Header>
@@ -611,17 +613,20 @@ class Predict extends React.Component {
       return null;
     }
 
-    if (state.appMode === 'fishvtrash') {
+    if (state.appMode === AppMode.FishVTrash) {
       return 'Now let’s see if A.I. knows what a fish looks like.';
-    } else if (state.appMode === 'creaturesvtrashdemo') {
+    } else if (state.appMode === AppMode.CreaturesVTrashDemo) {
       if (state.isPaused) {
         return 'There are lots of creatures in the sea who don’t look like fish. But that doesn’t mean they should be removed! A.I. only knows what we teach it!';
       } else {
         return 'A.I. has learned to remove objects it identifies as  “Not Fish”. What unintended consequences might this lead to?';
       }
-    } else if (state.appMode === 'creaturesvtrash') {
+    } else if (state.appMode === AppMode.CreaturesVTrash) {
       return 'Now let’s see if A.I. does a better job separating what should be in the ocean and what shouldn’t.';
-    } else if (state.appMode === 'short' || state.appMode === 'long') {
+    } else if (
+      state.appMode === AppMode.FishShort ||
+      state.appMode === AppMode.FishLong
+    ) {
       return `Nice work! Your training data has programmed A.I. to recognize ${state.word.toLowerCase()} fish. Let’s run A.I.’s program and see how it works.`;
     } else {
       return null;
@@ -646,23 +651,22 @@ class Predict extends React.Component {
             Run A.I.
           </Button>
         )}
-        {(state.isRunning || state.isPaused) &&
-          (state.canSkipPredict) && (
-            <Button
-              style={styles.continueButton}
-              onClick={() => {
-                if (state.showBiasText) {
-                  if (state.onContinue) {
-                    state.onContinue();
-                  }
-                } else {
-                  toMode(Modes.Pond);
+        {(state.isRunning || state.isPaused) && state.canSkipPredict && (
+          <Button
+            style={styles.continueButton}
+            onClick={() => {
+              if (state.showBiasText) {
+                if (state.onContinue) {
+                  state.onContinue();
                 }
-              }}
-            >
-              Continue
-            </Button>
-          )}
+              } else {
+                toMode(Modes.Pond);
+              }
+            }}
+          >
+            Continue
+          </Button>
+        )}
       </Body>
     );
   }
@@ -722,19 +726,22 @@ class Pond extends React.Component {
     const state = getState();
     let pondText = [];
 
-    if (state.appMode === 'fishvtrash' || state.appMode === 'creaturesvtrash') {
-      pondText[0] =
-        `Out of ${state.fishData.length} random objects, A.I. identified ${
-          state.totalPondFish
-        } that belong in water.`;
-    } else {
-      pondText[0] =
-        `Out of ${state.fishData.length} objects, I identified ${
+    if (
+      state.appMode === AppMode.FishVTrash ||
+      state.appMode === AppMode.CreaturesVTrash
+    ) {
+      pondText[0] = `Out of ${
+        state.fishData.length
+      } random objects, A.I. identified ${
         state.totalPondFish
-        } that are ${state.word.toUpperCase()}.`;
+      } that belong in water.`;
+    } else {
+      pondText[0] = `Out of ${state.fishData.length} objects, I identified ${
+        state.totalPondFish
+      } that are ${state.word.toUpperCase()}.`;
     }
     pondText[1] = 'How did A.I. do?';
-    pondText[2] = 'Choose to Train More or Continue.'
+    pondText[2] = 'Choose to Train More or Continue.';
 
     const showFishDetails = !!state.pondClickedFish;
     let pondFishDetailsStyle;
