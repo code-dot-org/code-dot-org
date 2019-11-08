@@ -79,4 +79,20 @@ class AdminSearchController < ApplicationController
     user_ids =  SingleUserExperiment.where(name: @pilot_name).map(&:min_user_id)
     @emails = User.where(id: user_ids).pluck(:email)
   end
+
+  def add_to_pilot
+    email = params[:email]
+    pilot_name = params[:pilot_name]
+    return head :bad_request unless Experiment::PILOT_EXPERIMENTS.include?(pilot_name)
+    user = User.find_by_email_or_hashed_email(email)
+    if !user
+      flash[:alert] = "An account with the email address #{email} does not exist"
+    elsif user.student?
+      flash[:alert] = "Cannot add a student to the pilot"
+    else
+      SingleUserExperiment.find_or_create_by!(min_user_id: user.id, name: pilot_name)
+      flash[:notice] = "Successfully added #{email} to #{pilot_name}!"
+    end
+    redirect_to action: 'show_pilot', pilot_name: pilot_name
+  end
 end

@@ -437,6 +437,7 @@ bg:
             '"rotation"': въртене
             '"x"': хоризонтално положение
             '"y"': вертикално положение
+            '"tint"': оттенък
       Dancelab_setPropRandom:
         options:
           PROPERTY:

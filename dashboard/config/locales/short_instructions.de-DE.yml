@@ -251,6 +251,14 @@ de-DE:
       Dance Party 7_2019: Lasse den blauen Außerirdischen einen neuen Tanz beginnen,
         wenn der rosa Außerirdische ihn berührt. Verwenden Sie das Ereignis `wenn
         berührt`.
+      Dance_2019_01: Ziehen Sie den Block "Neuen Block erstellen" in den Arbeitsbereich,
+        und verbinden Sie ihn innerhalb des "Setup" -Blocks.
+      Dance_2019_05: Lassen Sie jetzt den Tänzer nach 6 Takten einen neuen Tanzschritt
+        beginnen.
+      Dance_2019_08: Verwenden Sie den Block "Farbton einstellen", um den Farbton
+        eines Tänzers zu verändern.
+      Dance_2019_10: Grooven Sie los! Erstellen Sie einen eigenen Tanz und teilen
+        Sie ihn mit Ihren Freunden.
       Dance_Party_01: Ziehen Sie den Block "Neuen Block erstellen" in den Arbeitsbereich,
         und verbinden Sie ihn innerhalb des "Setup" -Blocks.
       Dance_Party_02: Lassen Sie den Elch nach 4 Takten einen neuen Tanzschritt beginnen.
@@ -277,15 +285,27 @@ de-DE:
       Dance_Party_12: Grooven Sie los! Erstellen Sie einen eigenen Tanz und teilen
         Sie ihn mit Ihren Freunden.
       Dance_Party_extras_battle: Tanzformation! (Klicke auf "Mehr" für weitere Details)
+      Dance_Party_extras_battle_2019: Tanzformation! (Klicke auf "Mehr" für weitere
+        Details)
       Dance_Party_extras_every_beat: Viertelnoten! (Klicke auf "Mehr" für weitere
+        Details)
+      Dance_Party_extras_every_beat_2019: Viertelnoten! (Klicke auf "Mehr" für weitere
         Details)
       Dance_Party_extras_layout: Stellen wir uns in Formation! (Klicke auf "Mehr"
         für weitere Details)
+      Dance_Party_extras_layout_2019: Stellen wir uns in Formation! (Klicke auf "Mehr"
+        für weitere Details)
       Dance_Party_extras_on_beat: Tiefen, Mitten und Höhen (Klicke auf "Mehr" für
         weitere Details)
+      Dance_Party_extras_on_beat_2019: Tiefen, Mitten und Höhen (Klicke auf "Mehr"
+        für weitere Details)
       Dance_Party_extras_speed: Beschleunigen, verlangsamen (Klicke auf "Mehr" für
         weitere Details)
+      Dance_Party_extras_speed_2019: Beschleunigen, verlangsamen (Klicke auf "Mehr"
+        für weitere Details)
       Dance_Party_extras_visible: Wo sind sie hin? (Klicke auf "Mehr" für weitere
+        Details)
+      Dance_Party_extras_visible_2019: Wo sind sie hin? (Klicke auf "Mehr" für weitere
         Details)
       Fish Tank 2-validated_2019: Verwandle den Steppenläufer in jede Art von Fisch!
       Fish Tank 3-validated_2019: Ändere das Verhalten der Fische so, dass sie nach

@@ -949,6 +949,10 @@ ro-RO:
         Este timpul să dansăm! Pisica va face o mişcare "dab" când apeşi pe tasta săgeată în stânga. Fă robotul să facă o "cădere" când apeşi tasta săgeată în jos, şi să facă "bate din palme" atunci când este apăsată tasta săgeată în sus.
 
         **Utilizează tastele pentru a face robotul să facă mişcările "cădere"-"bate din palme"-"cădere"-"bate din palme" cât de repede poţi!**
+      Dance_2019_05: |-
+        _Acum vom avea ritm!_
+
+        Adaugă un bloc <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"măsuri"</title></block></xml> în spaţiul de lucru. Fă-l pe dansator să înceapă o nouă mişcare după 6 măsuri.
       Dance_Party_01: |-
         _Hai să facem o petrecere cu dans!_
 
@@ -1027,6 +1031,14 @@ ro-RO:
         -   Adaugă mai multe taste să controlezi dansatorii
         -   Fă ca dansatorul de rezervă să răspundă şi el atunci când tastele sunt apăsate
         -   Alternează dansatorul o dată la 4 măsuri configurând vizibilitatea lui
+      Dance_Party_extras_battle_2019: |-
+        # Dans în echipe
+
+        Aici este un dans între 2 echipe. Tastele săgeţi controlează unul dintre dansatori iar tastele "w,a,s,d" controlează celălalt dansator. Fă un dans impreună cu un prieten şi încearcă să îmbunătăţeşti acest dans.
+
+        -   Adaugă mai multe taste să controlezi dansatorii
+        -   Fă ca dansatorul de rezervă să răspundă şi el atunci când tastele sunt apăsate
+        -   Alternează dansatorul o dată la 4 măsuri configurând vizibilitatea lui
       Dance_Party_extras_every_beat: |-
         # Sfert de note
 
@@ -1049,11 +1061,23 @@ ro-RO:
         # Sunete joase, medii şi înalte
 
         Acest dans fooseşte evenimente de tip "vârf" pentru a declanşa nou cod când sunetele se aud mai tare în timpul muzicii. Încearcă să experimentezi cu diferite câtece pentru a vedea cum modifică ele dansul.
+      Dance_Party_extras_on_beat_2019: |-
+        # Sunete joase, medii şi înalte
+
+        Acest dans fooseşte evenimente de tip "vârf" pentru a declanşa nou cod când sunetele se aud mai tare în timpul muzicii. Încearcă să experimentezi cu diferite câtece pentru a vedea cum modifică ele dansul.
       Dance_Party_extras_speed: |-
         # Măreşte viteza, Micşorează viteza
 
         Acest ultim dans utilizează blocul `setează viteza` pentru a controla cât de repede se mişcă fiecare dansator. Încearcă să experimentezi cu diferite viteze în diferite puncte din cântec. Simte-te liber să încerci pe acest dan, sau întoarce-te la oricare dintre dansurile anterioare pentru a le face şi mai interesante.
       Dance_Party_extras_visible: |-
+        # Unde au dispărut?
+
+        Acest dans arată şi ascunde două grupuri diferite de dansatori. Verifică şi apoi încearcă să adaugi după cum crezi tu.
+
+        -   Adaugă un alt grup de dansatori
+        -   Arată şi ascunde dansatori utilizând tastele săgeţi
+        -   Ascunde toţi dansatorii şi schimbă fundalul pentru a creea un efect interesant
+      Dance_Party_extras_visible_2019: |-
         # Unde au dispărut?
 
         Acest dans arată şi ascunde două grupuri diferite de dansatori. Verifică şi apoi încearcă să adaugi după cum crezi tu.

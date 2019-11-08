@@ -758,6 +758,32 @@ nn-NO:
       CourseE_HOC 2018 Level_9b:
         voyage_aquatic_9a: Ser du dei røde og blå korall-blokkene? Bruk dei som guide
           for å snu til høgre og venstre gjennom revet.
+      Dance_2019_01:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          -   Sørg for at det er ein dansar på skjermen.
+
+          _Denne øvinga endar etter 4 taktar._
+      Dance_2019_04:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          -   Dansaren må bytte til ein ny dans etter 4 taktar.
+
+          _Denne øvingar endar etter 8 taktar._
+      Dance_2019_05:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          -   Etter 6 takter må dansaren din danse ein annan dans enn etter 4 takter.
+
+          _Denne øvinga ender etter 12 taktar._
+      Dance_2019_07:
+        challenges: |-
+          **Ekstrautfordring**
+
+          -   Eksperimenter ved å endre andre eigenskapar (breidde, høgde, rotasjon osv.)
       Dance_Party_01:
         validation: |-
           **Korleis klarer eg denne øvinga?**

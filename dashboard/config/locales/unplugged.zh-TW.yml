@@ -217,6 +217,7 @@ zh-TW:
         title: 二進制圖像
         desc: 雖然很多人認為二進制就是一堆的 0 和 1，我們前面的課程教導過學生，訊息是可以用不同的二進制表達法表示。這堂課將更深入這個觀念，並說明電腦如何同樣的以二進制儲存更複雜的訊息（例如圖像和顏色）。
       courseE_unplugged_diceRace:
+        title: 生活中的演算法 - 擲骰子比賽
         desc: 這課展示我們在日常生活中使用的演算法。其中有個部分，學生會發現並寫出擲骰子比大小遊戲的演算法。
       courseE_unplugged_songwritingParameters:
         title: 用參數寫歌
@@ -242,6 +243,8 @@ zh-TW:
       courseF_unplugged_songwritingParameters:
         title: 用參數寫歌
         desc: '在計算機科學世界中，函式（function）可以說是最壯觀的建築物之一。函式，有時候稱為程序，是在龐大的程式中，可以被不斷重複利用的一些程式小片段。這個課程將會幫助學生直觀的了解，把這麼多零碎的代碼組合成函式是非常有用的。  '
+      courseB_unplugged_MRF_2018:
+        title: 我的機器人朋友
       PlantASeed_2018:
         title: 生活中的演算法 - 植物種植
         desc: 這課以種植植物為例，展示我們在日常生活中使用的演算法。同時著重於介紹宏觀的計算機科學，以及演算法在當中扮演著何等重要的角色。
@@ -285,6 +288,8 @@ zh-TW:
         title: 移動它，移動它
       RelayProgramming_2018:
         title: 接力編程
+      courseB_unplugged_MRF_2019:
+        title: 我的機器人朋友
       Conditionals_2019:
         title: 條件判斷（Conditionals）
         desc: 為了學習關於條件判斷陳述式，學生會玩個撲克牌遊戲，建立一些規則，像是「如果我抽到的是紅色的牌，我就得一分」和「如果我抽到的牌是黑色的，你就得一分」。

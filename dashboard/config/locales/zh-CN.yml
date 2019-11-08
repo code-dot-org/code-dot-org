@@ -16,10 +16,11 @@ zh-CN:
     attributes:
       user:
         name: 显示名称
-        name_example: 显示的名字<br/>（如炫酷码农或小明）
+        name_example: 显示的名字 （如炫酷码农或小明）
         email: 电子邮件
         parent_email: 父母/监护人电子邮箱
         personal_email: 个人电子邮箱地址 <a href="%{url}">（如果没有电子邮箱请点击这里）</a>
+        personal_email_markdown: 个人电子邮箱地址 [（如果没有电子邮箱请点击这里）](%{url})
         username: 用户名
         password: '密码:'
         password_confirmation: 密码确认：
@@ -30,8 +31,11 @@ zh-CN:
         edit_header: 编辑用户信息
         finish_sign_up_header: 完成创建帐户
         finish_sign_up_subheader: 填写以下信息为 <strong>%{email}</strong> 创建 Code.org 帐户。
+        finish_sign_up_subheader_markdown: 填写以下信息为 **%{email}** 创建 Code.org 帐户。
         finish_sign_up_subheader_provider: 填写信息，来使用 <strong>%{provider}</strong> 的
           <strong>%{email}</strong> 创建 Code.org 账户。
+        finish_sign_up_subheader_provider_markdown: 填写信息，来使用 **%{provider}** 的 **%{email}**
+          创建 Code.org 账户。
         error:
           future: 不能选择将来的时间
   beta: 测试版
@@ -108,12 +112,15 @@ zh-CN:
     student_count: "%{count} 位学生已经注册。"
     teacher_count: "%{count} 位教师已经注册。"
     overview: 注册一个帐户来跟踪你的进度或管理您的教室。 <a href="/">您可以浏览不同阶段和谜题</a>而不需要一个帐户，但你需要注册以保存进度和项目。
+    overview_markdown: 注册一个帐户来跟踪你的进度或管理您的教室。 [您可以浏览不同阶段和谜题](/)而不需要一个帐户，但你需要注册以保存进度和项目。
     hoc_already_signed_up_heading: 使用访客身份开始
     hoc_already_signed_up_content: 你已经注册教授《编程一小时》！你和你的学生不需要登录到代码工作室来参加该活动。想要开始，为你的班级
       <a href="%{learn_url}">选择一个教程</a> 并将链接分享给他们。<br/><br/>如果你喜欢《编程一小时》并希望更深入地使用，你可以在下面设置一个密码并创建一个代码工作室账号，以为你的学生在我们所有的
       <a href="%{educate_url}">大型课程</a>里注册。
     hoc_already_signed_up_content_post_hoc: 谢谢你主办编程一小时。要登录到代码工作室，你需要设置您的帐户的密码。这将允许您保存您的进展和管理你的教室。你将能够分配课程给学生，并跟踪其进度。<a
       href="%{studio_url}"> 你还可以继续浏览各个阶段和谜题</a> 而无需创建一个帐户。
+    hoc_already_signed_up_content_post_hoc_markdown: 谢谢你主办编程一小时。要登录到代码工作室，你需要设置您的帐户的密码。这将允许您保存您的进展和管理你的教室。你将能够分配课程给学生，并跟踪其进度。[你还可以继续浏览各个阶段和谜题](%{studio_url})
+      而无需创建一个帐户。
     teacher_educator_guide: 请参阅教师指南
     title: 注册 Code.org
     school_name: 学校名称（可选）
@@ -425,8 +432,12 @@ zh-CN:
     create_personal_login_link_account: 也可以在"管理连接的账号"部分下连接到个人账户。
     create_personal_login_terms: 通过创建个人账户，我同意接受 Code.org 的<a href='%{terms_of_service_url}',
       target='_blank'>服务条款</a>。我确认我的父母或法定监护人已经允许我在没有老师的情况下使用 Code.org 的服务。
+    create_personal_login_terms_markdown: 通过创建个人账户，我同意接受 Code.org 的[服务条款](%{terms_of_service_url})。我确认我的父母或法定监护人已经允许我在没有老师的情况下使用
+      Code.org 的服务。
     create_personal_login_email_note: 注意：电子邮箱不会用来与学生进行联系。除了密码恢复的邮件，学生永远不会收到从 Code.org
       寄来的任何邮件。更多信息请查看<a href='%{privacy_policy_url}', target='_blank'>隐私政策</a>。
+    create_personal_login_email_note_markdown: 注意：电子邮箱不会用来与学生进行联系。除了密码恢复的邮件，学生永远不会收到从
+      Code.org 寄来的任何邮件。更多信息请查看[隐私政策](%{privacy_policy_url})。
     enter_new_login_info: 输入新的登录信息
     confirm_secret_words: 输入你当前的秘密单词来确认你的身份
     parent_email_label: 家长/监护人电子邮件 (可选)
@@ -749,16 +760,21 @@ zh-CN:
   terms_interstitial:
     title: 更新的服务条款和隐私政策
     intro_desc: 我们更新了我们的服务条款和隐私政策，如下所示。这些变化自 2016 年 8 月 24 日起生效。 最大的变化是︰ 我们将 <i>不再将学生帐户的电子邮件地址存储在代码工作室。</i>这是对我们来说，一个大改变，我们希望它在教育技术中设置学生隐私的新标准。我们已经通过电子邮件给你发送了其它更改的摘要。
+    intro_desc_markdown: 我们更新了我们的服务条款和隐私政策，如下所示。这些变化自 2016 年 8 月 24 日起生效。 最大的变化是︰
+      我们将 _不再将学生帐户的电子邮件地址存储在代码工作室。_这是对我们来说，一个大改变，我们希望它在教育技术中设置学生隐私的新标准。我们已经通过电子邮件给你发送了其它更改的摘要。
     intro_instructions: 你需要为你教室里的 13 岁以下的学生接受这些新的条款来完全拥有代码工作室访问权限中的所有最新功能。 当你为13岁以下的学生注册帐户，你要确认你的学校有父母的同意来收集学生的个人信息来为学校的所使用，包括代码工作室这样的教育程序。
     tos: 使用条款
     privacy: 隐私政策
     privacy_notice: 隐私声明
     accept_label: 我同意更新的 <a href="%{tos_url}"target="_blank"> 服务条款</a> 和 <a href="%{privacy_url}"target="_blank">
       隐私政策</a>
+    accept_label_markdown: 我同意更新的 [服务条款](%{tos_url}) 和 [隐私政策](%{privacy_url})
     accept: 同意
     print: 打印
     reminder_desc: 我们更新了我们的 <a href="%{tos_url}"target="_blank"> 服务条款</a> 和 <a href="%{privacy_url}"target="_blank">
       隐私政策</a>。请在接受之前仔细阅读。请注意，在你的学生接受更新的条款之前，我们教学 JavaScript 的工具学生可能不能使用。
+    reminder_desc_markdown: 我们更新了我们的 [服务条款](%{tos_url}) 和 [隐私政策](%{privacy_url})。请在接受之前仔细阅读。请注意，在你的学生接受更新的条款之前，我们教学
+      JavaScript 的工具学生可能不能使用。
     review_terms: 查看更新后的条款
   school_info_interstitial:
     title: 我们想将计算机科学带给每一个学生——帮助我们记录进度！
@@ -781,6 +797,8 @@ zh-CN:
     decline: 关闭
   zendesk_too_young_message: 对不起，年轻的用户不能登录到支持站点。你可以不登录来浏览 <a href="http://support.code.org">
     support.code.org</a> 或让你的父母或老师来联系我们。
+  zendesk_too_young_message_markdown: 对不起，年轻的用户不能登录到支持站点。你可以不登录来浏览 [support.code.org](http://support.code.org)
+    或让你的父母或老师来联系我们。
   progress:
     not_started: 未开始
     in_progress: 正在进行
