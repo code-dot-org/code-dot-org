@@ -5,9 +5,9 @@
 
 #hocmap
   %h2.mapheader
-    %a{:href=> "https://hourofcode.com/events"}
+    %a{href: CDO.hourofcode_url('/events')}
       = I18n.t(:csedweek_map_header).gsub('#', format_integer_with_commas(fetch_hoc_metrics['total_hoc_count']))
-    %a{:href=> "https://hourofcode.com/#join"}
+    %a{href: CDO.hourofcode_url('/#join')}
       %button.signup-button
         = I18n.t(:host_an_hour)
 
@@ -15,16 +15,16 @@
 
   %div{id: 'belowmaplegend', class: 'legend'}
     .legend-title= hoc_s(:map_legend_title)
-    .color.orange
+    .color.legend-hoc-event
     %div= hoc_s(:map_legend_hoc_events)
-    .color.red
+    .color.legend-special-event
     %div= hoc_s(:map_legend_cs_tech_jam)
 
   .row
     .col-sm-12
       .footnote
         The Hour of Code map only shows the first 200,000 registered events. All registered events with a valid address can be viewed on
-        %a{href: resolve_url('/events')}
+        %a{href: CDO.hourofcode_url('/events')}
           the events page.
 
 

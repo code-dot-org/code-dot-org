@@ -59,11 +59,11 @@
   float: left;
 }
 
-.red {
+.legend-special-event {
   background: #ff0000;
 }
 
-.orange {
+.legend-hoc-event {
   background: #ffa500
 }
 
