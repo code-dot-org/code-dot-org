@@ -15,6 +15,18 @@ const guides = [
     style: 'BottomMiddle'
   },
   {
+    id: 'fishvtrash-training-done',
+    text: "Great work!  You can continue when you're ready.",
+    when: {
+      appMode: AppMode.FishVTrash,
+      currentMode: Modes.Training,
+      fn: state => {
+        return state.yesCount + state.noCount > 40;
+      }
+    },
+    style: 'BottomMiddle'
+  },
+  {
     id: 'fishvtrash-training-keeptraining',
     text: 'Nice work.  Keep training!',
     when: {
