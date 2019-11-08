@@ -553,6 +553,7 @@ describe('entry tests', () => {
     'levels/_teacher_panel':
       './src/sites/studio/pages/levels/_teacher_panel.js',
     'levels/_text_match': './src/sites/studio/pages/levels/_text_match.js',
+    'levels/_unplug': './src/sites/studio/pages/levels/_unplug.js',
     'levels/_widget': './src/sites/studio/pages/levels/_widget.js',
     'levels/show': './src/sites/studio/pages/levels/show.js',
     'maker/discountcode': './src/sites/studio/pages/maker/discountcode.js',

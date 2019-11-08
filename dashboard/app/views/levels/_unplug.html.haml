@@ -11,6 +11,9 @@
 
 = stylesheet_link_tag '/blockly/video-js/video-js', media: 'all'
 
+- content_for(:head) do
+  %script{src: webpack_asset_path('js/levels/_unplug.js')}
+
 .unplugged
   %h1= try_t("data.unplugged.#{unplugged}.title")
 
