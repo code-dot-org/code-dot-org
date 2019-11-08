@@ -252,7 +252,7 @@ function bestResultLevelId(levelIds, progressData) {
 export const getLevelProgress = level => {
   return {
     status: getLevelResult(level),
-    timeSpent: level.time_spent ? level.time_spent : 0
+    timeSpent: level.time_spent
   };
 };
 
@@ -543,7 +543,7 @@ const levelWithStatus = (
     status: statusForLevel(level, levelProgress),
     timeSpent: levelProgress[level.activeId]
       ? levelProgress[level.activeId].timeSpent
-      : 0,
+      : undefined,
     isCurrentLevel: isCurrentLevel(currentLevelId, level),
     paired: levelPairing[level.activeId],
     readonlyAnswers: level.readonly_answers

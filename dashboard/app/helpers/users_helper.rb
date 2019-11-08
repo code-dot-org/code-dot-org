@@ -293,7 +293,7 @@ module UsersHelper
           readonly_answers: readonly_answers ? true : nil,
           paired: (paired_user_levels.include? ul.try(:id)) ? true : nil,
           locked: locked ? true : nil,
-          time_spent: ul.try(:time_spent) || 0,
+          time_spent: ul.try(:time_spent) || nil,
         }.compact
 
         # Just in case this level has multiple pages, in which case we add an additional
