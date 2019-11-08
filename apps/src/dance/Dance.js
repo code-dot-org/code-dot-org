@@ -401,7 +401,7 @@ Dance.prototype.afterInject_ = function() {
     container: 'divDance',
     i18n: danceMsg,
     resourceLoader: new ResourceLoader(
-      'https://curriculum.code.org/images/sprites/dance_20181127/'
+      'https://curriculum.code.org/images/sprites/dance_20191106/'
     )
   });
 

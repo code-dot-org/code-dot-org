@@ -38,10 +38,10 @@
     "validation_code": "if(World.changedCount == undefined || nativeAPI.getTime(\"measures\") < 2){\r\n  World.changedCount = 0;\r\n}\r\nif(nativeAPI.getTime(\"measures\") > 6){\r\n  sprites.forEach(function(sprite) {\r\n    if (sprite.scale != 1) World.changedCount++;\r\n  });\r\n  if (World.changedCount > 1) {\r\n  \tnativeAPI.pass();\r\n  } else {\r\n    nativeAPI.fail(\"danceFeedbackUseSetSize\");\r\n  }\r\n}",
     "block_pool": "Dancelab",
     "preload_asset_list": [
-      "https://curriculum.code.org/images/sprites/dance_20181127/frog_20.png",
-      "https://curriculum.code.org/images/sprites/dance_20181127/frog_21.png",
-      "https://curriculum.code.org/images/sprites/dance_20181127/frog_22.png",
-      "https://curriculum.code.org/images/sprites/dance_20181127/frog_23.png"
+      "https://curriculum.code.org/images/sprites/dance_20191106/frog_20.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/frog_21.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/frog_22.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/frog_23.png"
     ],
     "custom_helper_library": "World.SPRITE_NAMES = [\"ALIEN\", \"CAT\", \"DUCK\", \"FROG\", \"MOOSE\", \"ROBOT\"];",
     "name_suffix": "_draft",
