@@ -145,7 +145,9 @@ export function processResults(onComplete, beforeHook) {
         }
 
         if (lastServerResponse.videoInfo) {
-          window.dashboard.videos.showVideoDialog(lastServerResponse.videoInfo);
+          import('@cdo/apps/code-studio/videos').then(videos => {
+            videos.showVideoDialog(lastServerResponse.videoInfo);
+          });
         } else if (lastServerResponse.endOfStageExperience) {
           const body = document.createElement('div');
           const stageInfo = lastServerResponse.previousStageInfo;
