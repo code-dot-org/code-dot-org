@@ -21,7 +21,7 @@ import {
   setRunIsStarting
 } from './redux';
 import trackEvent from '../util/trackEvent';
-import {SignInState} from '../code-studio/progressRedux';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import logToCloud from '../logToCloud';
 import {saveReplayLog} from '../code-studio/components/shareDialogRedux';
 import {
@@ -40,6 +40,7 @@ import {
 } from './songs';
 import {SongTitlesToArtistTwitterHandle} from '../code-studio/dancePartySongArtistTags';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import experiments from '@cdo/apps/util/experiments';
 
 const ButtonState = {
   UP: 0,
@@ -181,7 +182,12 @@ Dance.prototype.awaitTimingMetrics = function() {
 };
 
 Dance.prototype.initSongs = async function(config) {
-  const songManifest = await getSongManifest(config.useRestrictedSongs);
+  let is2019Script =
+    config.scriptName === 'dance-2019' && experiments.isEnabled('newSongs');
+  const songManifest = await getSongManifest(
+    config.useRestrictedSongs,
+    is2019Script
+  );
   const songData = parseSongOptions(songManifest);
   const selectedSong = getSelectedSong(songManifest, config);
 
@@ -664,7 +670,7 @@ Dance.prototype.onHandleEvents = function(currentFrameEvents) {
  */
 Dance.prototype.displayFeedback_ = function() {
   const isSignedIn =
-    getStore().getState().progress.signInState === SignInState.SignedIn;
+    getStore().getState().currentUser.signInState === SignInState.SignedIn;
 
   const artistTwitterHandle =
     SongTitlesToArtistTwitterHandle[this.level.selectedSong];

@@ -156,6 +156,8 @@ def certificate_template_for(course)
       else
         'MC_Hour_Of_Code_Certificate.png'
       end
+    elsif course == 'mee'
+      'MC_Hour_Of_Code_Certificate_mee.png'
     else
       'hour_of_code_certificate.jpg'
     end

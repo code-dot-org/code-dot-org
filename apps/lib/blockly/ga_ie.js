@@ -40,6 +40,7 @@ Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST_TAIL = "";
 Blockly.Msg.CONTROLS_FOREACH_INPUT_ITEM = "do gach rud";
 Blockly.Msg.CONTROLS_FOREACH_TOOLTIP = "";
 Blockly.Msg.CONTROLS_FOR_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#count_with";
+Blockly.Msg.CONTROLS_FOR_INPUT_COUNTER = "for %1 from %2 to %3 count by %4";
 Blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY = "ó %1 go %2 ar léim a %3";
 Blockly.Msg.CONTROLS_FOR_INPUT_WITH = "do gach";
 Blockly.Msg.CONTROLS_FOR_TOOLTIP = "Glacfaidh an athróg %1 luachanna idir an chéad uimhir agus an uimhir dheiridh, de réir an eatraimh sonraithe, agus déan na blocanna atá ann.";

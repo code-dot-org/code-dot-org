@@ -40,6 +40,7 @@ Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST_TAIL = "";
 Blockly.Msg.CONTROLS_FOREACH_INPUT_ITEM = ".her aik cheez k liye";
 Blockly.Msg.CONTROLS_FOREACH_TOOLTIP = " Fehrist mein her cheez k liye, her variable ko '%1' ker daein aur phir kuch bayanaat (Statments) daein ";
 Blockly.Msg.CONTROLS_FOR_HELPURL = "";
+Blockly.Msg.CONTROLS_FOR_INPUT_COUNTER = "for %1 from %2 to %3 count by %4";
 Blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY = "1% سے 2% تک 3%  کے فرق سے";
 Blockly.Msg.CONTROLS_FOR_INPUT_WITH = "شمار سے";
 Blockly.Msg.CONTROLS_FOR_TOOLTIP = "کیا متغیر %1 اقدار کےآغازی قیمت سے اختتامی قیمت تک لیتا ہے، جو مخصوص وقفوں کے حساب سے گنتا اور مخصوص رکاوٹ پیدا کرتا ہے۔";

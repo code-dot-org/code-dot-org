@@ -74,6 +74,7 @@ describe('entry tests', () => {
     'craft',
     'dance',
     'eval',
+    'fish',
     'flappy',
     'gamelab',
     'spritelab',
@@ -223,18 +224,19 @@ describe('entry tests', () => {
           src: ['**/*.js'],
           dest: 'build/package/js/ace/'
         },
-        // Pull p5.js and p5.play.js into the package from our forks.
+        // Pull p5.js and p5.play.js into the package from our forks. These are
+        // needed by the gamelab exporter code in production and development.
         {
           expand: true,
           cwd: './node_modules/@code-dot-org/p5/lib',
           src: ['p5.js'],
-          dest: 'build/minifiable-lib/p5play/'
+          dest: 'build/package/js/p5play/'
         },
         {
           expand: true,
           cwd: './node_modules/@code-dot-org/p5.play/lib',
           src: ['p5.play.js'],
-          dest: 'build/minifiable-lib/p5play/'
+          dest: 'build/package/js/p5play/'
         },
         // Piskel must not be minified or digested in order to work properly.
         {
@@ -456,9 +458,8 @@ describe('entry tests', () => {
       }
     },
     unit: {
-      coverageReporter: {
-        dir: 'coverage/unit',
-        reporters: [{type: 'html'}, {type: 'lcovonly'}]
+      coverageIstanbulReporter: {
+        dir: 'coverage/unit'
       },
       junitReporter: Object.assign({}, junitReporterBaseConfig, {
         outputFile: 'unit.xml'
@@ -466,9 +467,8 @@ describe('entry tests', () => {
       files: [{src: ['test/unit-tests.js'], watched: false}]
     },
     integration: {
-      coverageReporter: {
-        dir: 'coverage/integration',
-        reporters: [{type: 'html'}, {type: 'lcovonly'}]
+      coverageIstanbulReporter: {
+        dir: 'coverage/integration'
       },
       junitReporter: Object.assign({}, junitReporterBaseConfig, {
         outputFile: 'integration.xml'
@@ -476,9 +476,8 @@ describe('entry tests', () => {
       files: [{src: ['test/integration-tests.js'], watched: false}]
     },
     scratch: {
-      coverageReporter: {
-        dir: 'coverage/scratch',
-        reporters: [{type: 'html'}, {type: 'lcovonly'}]
+      coverageIstanbulReporter: {
+        dir: 'coverage/scratch'
       },
       junitReporter: Object.assign({}, junitReporterBaseConfig, {
         outputFile: 'scratch.xml'
@@ -486,9 +485,8 @@ describe('entry tests', () => {
       files: [{src: ['test/scratch-tests.js'], watched: false}]
     },
     storybook: {
-      coverageReporter: {
-        dir: 'coverage/storybook',
-        reporters: [{type: 'html'}, {type: 'lcovonly'}]
+      coverageIstanbulReporter: {
+        dir: 'coverage/storybook'
       },
       junitReporter: Object.assign({}, junitReporterBaseConfig, {
         outputFile: 'storybook.xml'
@@ -496,9 +494,8 @@ describe('entry tests', () => {
       files: [{src: ['test/storybook-tests.js'], watched: false}]
     },
     entry: {
-      coverageReporter: {
-        dir: 'coverage/entry',
-        reporters: [{type: 'html'}, {type: 'lcovonly'}]
+      coverageIstanbulReporter: {
+        dir: 'coverage/entry'
       },
       files: [{src: ['test/entry-tests.js'], watched: false}],
       preprocessors: {
@@ -537,6 +534,7 @@ describe('entry tests', () => {
       './src/sites/studio/pages/layouts/_terms_interstitial.js',
     'levels/_bubble_choice':
       './src/sites/studio/pages/levels/_bubble_choice.js',
+    'levels/_content': './src/sites/studio/pages/levels/_content.js',
     'levels/_contract_match':
       './src/sites/studio/pages/levels/_contract_match.js',
     'levels/_curriculum_reference':
@@ -597,7 +595,8 @@ describe('entry tests', () => {
     'levels/editors/_studio':
       './src/sites/studio/pages/levels/editors/_studio.js',
     'libraries/edit': './src/sites/studio/pages/libraries/edit.js',
-    'scripts/_form': './src/sites/studio/pages/scripts/_form.js',
+    'scripts/edit': './src/sites/studio/pages/scripts/edit.js',
+    'scripts/new': './src/sites/studio/pages/scripts/new.js',
     'shared_blockly_functions/edit':
       './src/sites/studio/pages/shared_blockly_functions/edit.js'
   };
@@ -925,17 +924,6 @@ describe('entry tests', () => {
               to: '[path]/[name]wp[contenthash].[ext]',
               toType: 'template'
             },
-            // Always include unminified, unhashed p5.js and p5.play.js as these
-            // are needed by unit tests and gamelab exporter. The order of these
-            // rules is important to ensure that the minified, hashed copy of
-            // these files appear in the manifest when minifying.
-            {
-              context: 'build/minifiable-lib/',
-              from: 'p5play/p5*.js',
-              to: '[path]/[name].[ext]',
-              toType: 'template',
-              ignore: '*.min.js'
-            },
             // Libraries in this directory are assumed to have .js and .min.js
             // copies of each source file. In development mode, copy only foo.js.
             // In production mode, copy only foo.min.js and rename it to foo.js.
@@ -1027,8 +1015,8 @@ describe('entry tests', () => {
       files: _.fromPairs(
         ['p5play/p5.play.js', 'p5play/p5.js'].map(function(src) {
           return [
-            'build/minifiable-lib/' + src.replace(/\.js$/, '.min.js'), // dst
-            'build/minifiable-lib/' + src // src
+            'build/package/js/' + src.replace(/\.js$/, '.min.js'), // dst
+            'build/package/js/' + src // src
           ];
         })
       )

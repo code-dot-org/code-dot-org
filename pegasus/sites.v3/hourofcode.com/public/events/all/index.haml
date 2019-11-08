@@ -1,14 +1,16 @@
 ---
-title: <%= hoc_s(:events_all_title) %>
 layout: wide
 nav: events_nav
 ---
 :ruby
+  @header["title"] = hoc_s(:events_all_title)
+
+:ruby
   require pegasus_dir 'helper_modules/forms'
   hoc_year = DCDO.get("hoc_year", 2017)
-  KIND = "HocSignup#{hoc_year}".freeze
-  events = Forms.events_by_country(KIND)
-  us_events = Forms.events_by_state(KIND)
+  kind = "HocSignup#{hoc_year}".freeze
+  events = Forms.events_by_country(kind)
+  us_events = Forms.events_by_state(kind)
   us_events_count = us_events.inject(0) {|result, element| result + element[:count]}
 
 %h1= hoc_s(:events_all_title)

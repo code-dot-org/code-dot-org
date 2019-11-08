@@ -92,7 +92,7 @@ class CourseBlocksCsfModern extends Component {
           notice={i18n.courseBlocksLegacyNotificationHeading()}
           details={i18n.courseBlocksLegacyNotificationBody()}
           detailsLinkText={i18n.courseBlocksLegacyNotificationDetailsLinkText()}
-          detailsLink="https://docs.google.com/document/d/1MVDfbEzr0o9DqaOYmOOYpsQPTfXUFvCx4Xs9uixrdBE/edit?usp=sharing"
+          detailsLink={pegasus('/educate/curriculum/csf-transition-guide')}
           detailsLinkNewWindow={true}
           dismissible={false}
           buttons={[
