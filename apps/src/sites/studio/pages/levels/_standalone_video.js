@@ -4,7 +4,6 @@ import {
   postMilestoneForPageLoad,
   onContinue
 } from '@cdo/apps/code-studio/levels/postOnLoad';
-import {createVideoWithFallback} from '@cdo/apps/code-studio/videos';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {
@@ -45,10 +44,13 @@ $(document).ready(() => {
   const videoOptions = getScriptData('videoOptions');
   const videoWidth = getScriptData('videoWidth');
   const videoHeight = getScriptData('videoHeight');
-  createVideoWithFallback(
-    $('.video-content'),
-    videoOptions,
-    videoWidth,
-    videoHeight
-  );
+
+  import('@cdo/apps/code-studio/videos').then(({createVideoWithFallback}) => {
+    createVideoWithFallback(
+      $('.video-content'),
+      videoOptions,
+      videoWidth,
+      videoHeight
+    );
+  });
 });
