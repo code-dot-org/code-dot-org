@@ -223,17 +223,17 @@ class ActivitiesController < ApplicationController
   # Record the time spent on a level by creating or updating the ValidatedUserLevel table
   # for the UserLevel for the current user, level, and script
   def record_time_spent(user_level)
-    if user_level
-      validated_user_level = ValidatedUserLevel.find_by(
-        user_level_id: user_level.id
-      )
-    end
+    Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+      if user_level
+        validated_user_level = ValidatedUserLevel.find_by(
+          user_level_id: user_level.id
+        )
+      end
 
-    if validated_user_level
-      # Add past time spent to current time spent on level
-      validated_user_level.update(time_spent: [validated_user_level.time_spent + [params[:timeSinceLastMilestone].to_i, 0].max, MAX_INT_MILESTONE].min)
-    elsif user_level
-      Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+      if validated_user_level
+        # Add past time spent to current time spent on level
+        validated_user_level.update(time_spent: [validated_user_level.time_spent + [params[:timeSinceLastMilestone].to_i, 0].max, MAX_INT_MILESTONE].min)
+      elsif user_level
         ValidatedUserLevel.create(user_level_id: user_level.id, time_spent: [[params[:timeSinceLastMilestone].to_i, 0].max, MAX_INT_MILESTONE].min)
       end
     end
