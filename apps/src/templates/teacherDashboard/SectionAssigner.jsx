@@ -69,7 +69,7 @@ class SectionAssigner extends Component {
                 sectionId={selectedSection.id}
                 courseId={courseId}
                 scriptId={scriptId}
-                className="uitest-unassign"
+                className="uitest-assign"
               />
             )}
         </div>
