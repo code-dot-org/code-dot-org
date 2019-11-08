@@ -233,7 +233,9 @@ class ActivitiesController < ApplicationController
       # Add past time spent to current time spent on level
       validated_user_level.update(time_spent: [validated_user_level.time_spent + [params[:timeSinceLastMilestone].to_i, 0].max, MAX_INT_MILESTONE].min)
     elsif user_level
-      ValidatedUserLevel.create(user_level_id: user_level.id, time_spent: [[params[:timeSinceLastMilestone].to_i, 0].max, MAX_INT_MILESTONE].min)
+      Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+        ValidatedUserLevel.create(user_level_id: user_level.id, time_spent: [[params[:timeSinceLastMilestone].to_i, 0].max, MAX_INT_MILESTONE].min)
+      end
     end
   end
 
