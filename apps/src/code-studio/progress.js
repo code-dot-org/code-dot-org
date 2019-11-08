@@ -14,10 +14,10 @@ import DisabledBubblesAlert from './DisabledBubblesAlert';
 import {getStore} from './redux';
 import {setViewType, ViewType} from './viewAsRedux';
 import {getHiddenStages, initializeHiddenScripts} from './hiddenStageRedux';
-import {TestResults} from '@cdo/apps/constants';
 import {
   initProgress,
   mergeProgress,
+  getLevelProgress,
   disablePostMilestone,
   setIsHocScript,
   setIsAge13Required,
@@ -101,11 +101,7 @@ progress.renderStageProgress = function(
   );
 
   store.dispatch(
-    mergeProgress(
-      _.mapValues(progressData.levels, level =>
-        level.submitted ? TestResults.SUBMITTED_RESULT : level.result
-      )
-    )
+    mergeProgress(_.mapValues(progressData.levels, getLevelProgress))
   );
 
   store.dispatch(setIsHocScript(isHocScript));
