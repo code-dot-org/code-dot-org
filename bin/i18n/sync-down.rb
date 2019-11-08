@@ -18,11 +18,17 @@ def sync_down
     # verbose; it includes not only a progress spinner, but also information
     # about each individual file downloaded in each individual language.
     #
-    # We really only care about general progress monitoring, so we only output
-    # a single (arbitrarily-chosen) line of output for each language
+    # We really only care about general progress monitoring, so we remove or
+    # ignore any things we identify as "noise" in the output.
     Open3.popen2(command) do |_stdin, stdout, status_thread|
       stdout.each_line do |line|
-        puts line if line.start_with? "Building ZIP archive with the latest translations"
+        # strip out the progress spinner
+        line.gsub!(/[\|\/\-\\][\b]/, '')
+
+        # skip lines detailing individual file extraction
+        next if line.start_with? "Extracting: "
+
+        puts line
       end
 
       raise "Sync down failed"  unless status_thread.value.success?
