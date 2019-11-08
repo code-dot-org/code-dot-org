@@ -1,17 +1,16 @@
-# load "../lib/cdo/cr_new.rb"
-# CRNew.connect_db
-# CRNew.test
-# CRNew.main
+#load "../lib/cdo/cr_new.rb"
+#CRNew.test
+#CRNew.main
 
 require_relative '../../deployment'
 require 'cdo/pegasus'
 
 class CRNew
-  MAX_EXECUTION_TIME_SEC = 1800.seconds
-
   PEGASUS_ENV = (Rails.env.production? ? "" : "_#{Rails.env}").freeze
   PEGASUS_DB_NAME = "pegasus#{PEGASUS_ENV}".freeze
   DASHBOARD_DB_NAME = "dashboard_#{Rails.env}".freeze
+
+  MAX_EXECUTION_TIME_SEC = 1800.seconds
 
   # Connection to read from Pegasus production database.
   PEGASUS_DB_READER ||= sequel_connect(
@@ -42,21 +41,41 @@ class CRNew
     # PEGASUS_DB_WRITER[:cr_daily].all
     # PEGASUS_DB_WRITER.drop_table(:cr_daily)
     if PEGASUS_DB_WRITER.table_exists?(:cr_daily)
-      p ":cr_daily already exists"
+      p "cr_daily table already exists"
     else
       PEGASUS_DB_WRITER.create_table :cr_daily do
         primary_key :id
-        String :email # add not null
-        String :source_table  # add not null
+        String :email, null: false
+        String :source_table, null: false
         String :data
-        Date :data_date  # add not null
-        DateTime :created_at  # add not null
+        Date :data_date, null: false
+        DateTime :created_at, null: false
+
+        index :email
         unique [:email, :source_table, :data_date]
       end
-      p "created :cr_daily table"
+      p "created cr_daily table"
     end
 
     # Create cr_all table, index on email. (optimization: index/partition by data_date)
+    if PEGASUS_DB_WRITER.table_exists?(:cr_all)
+      p "cr_all table already exists"
+    else
+      PEGASUS_DB_WRITER.create_table :cr_all do
+        primary_key :id
+        String :email, null: false
+        String :data
+        String :data_raw
+        Integer :pardot_id
+        DateTime :pardot_sync_at
+        DateTime :data_date, null: false
+        DateTime :created_at, null: false
+        DateTime :updated_at, null: false
+
+        unique :email
+      end
+      p "created cr_all table"
+    end
 
     # Create tracker tables:
     # Job tracker: What runs, when, result
@@ -175,6 +194,7 @@ class CRNew
   end
 
   def self.update_data_to_cr_all
+    p "TBI"
   end
 
   def self.sync_to_pardot
