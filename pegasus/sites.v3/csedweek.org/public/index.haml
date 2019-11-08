@@ -47,20 +47,7 @@ video_player: true
 
   %br
   %div{:style=>'clear:both;'}
-  #hocmap
-    %h2.mapheader
-      %a{:href=> "https://hourofcode.com/events"}
-        = I18n.t(:csedweek_map_header).gsub('#', format_integer_with_commas(fetch_hoc_metrics['total_hoc_count']))
-      %a{:href=> "https://hourofcode.com/#join"}
-        %button.signup-button
-          = I18n.t(:host_an_hour)
-    = view :map
-    .row
-      .col-sm-12
-        .footnote
-          The Hour of Code map only shows the first 200,000 registered events. All registered events with a valid address can be viewed on
-          %a{href: resolve_url('/events')}
-            the events page.
+  = view :map
 
   #columns.desktop-feature{:style=>'clear:both; overflow:hidden'}
     #column1{:style=>'float:left; width: 50%'}
