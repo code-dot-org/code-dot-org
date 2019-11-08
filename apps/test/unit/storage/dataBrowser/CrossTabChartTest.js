@@ -11,12 +11,56 @@ const DEFAULT_PROPS = {
 };
 
 describe('CrossTabChart', () => {
-  describe('createPivotTable', () => {
-    let wrapper;
-    beforeEach(() => {
-      wrapper = mount(<CrossTabChart {...DEFAULT_PROPS} />);
+  let wrapper;
+  beforeEach(() => {
+    wrapper = mount(<CrossTabChart {...DEFAULT_PROPS} />);
+  });
+
+  describe('getColorForValue', () => {
+    it('maps the min value to white', () => {
+      expect(wrapper.instance().getColorForValue(19, 19, 100)).to.equal(
+        'hsl(217, 89%, 100%)'
+      );
+
+      expect(wrapper.instance().getColorForValue(4, 4, 25)).to.equal(
+        'hsl(217, 89%, 100%)'
+      );
+
+      expect(wrapper.instance().getColorForValue(0, 0, 3)).to.equal(
+        'hsl(217, 89%, 100%)'
+      );
     });
 
+    it('maps intermediate values proportionately', () => {
+      expect(wrapper.instance().getColorForValue(50, 0, 100)).to.equal(
+        'hsl(217, 89%, 78%)'
+      );
+
+      expect(wrapper.instance().getColorForValue(2, 0, 3)).to.equal(
+        'hsl(217, 89%, 70.66666666666667%)'
+      );
+
+      expect(wrapper.instance().getColorForValue(20, 10, 50)).to.equal(
+        'hsl(217, 89%, 89%)'
+      );
+    });
+
+    it('maps the max value to hsl(217, 89%, 56%)', () => {
+      expect(wrapper.instance().getColorForValue(100, 19, 100)).to.equal(
+        'hsl(217, 89%, 56%)'
+      );
+
+      expect(wrapper.instance().getColorForValue(25, 4, 25)).to.equal(
+        'hsl(217, 89%, 56%)'
+      );
+
+      expect(wrapper.instance().getColorForValue(3, 0, 3)).to.equal(
+        'hsl(217, 89%, 56%)'
+      );
+    });
+  });
+
+  describe('createPivotTable', () => {
     it('populates zeroes for all row/column combinations', () => {
       const records = [
         {abc: 'a', value: 1},
