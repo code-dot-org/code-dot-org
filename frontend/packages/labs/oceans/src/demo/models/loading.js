@@ -1,7 +1,7 @@
 import 'idempotent-babel-polyfill';
 import {initRenderer} from '../renderer';
 import {getState, setState} from '../state';
-import {Modes, DataSet} from '../constants';
+import {AppMode, Modes} from '../constants';
 import {initFishData} from '../../utils/fishData';
 import {getAppMode} from '../helpers';
 import {toMode} from '../toMode';
@@ -10,20 +10,23 @@ import SimpleTrainer from '../../utils/SimpleTrainer';
 export const init = async () => {
   const [appModeBase] = getAppMode(getState());
 
-  const dataSet = appModeBase === 'short' ? DataSet.Small : DataSet.Large;
-  const loadTrashImages =
-    appModeBase === 'fishvtrash' ||
-    appModeBase === 'creaturesvtrash' ||
-    appModeBase === 'creaturesvtrashdemo';
-  const loadCreatureImages =
-    appModeBase === 'creaturesvtrash' || appModeBase === 'creaturesvtrashdemo';
-  if (appModeBase === 'creaturesvtrashdemo') {
+  const loadTrashImages = [
+    AppMode.FishVTrash,
+    AppMode.CreaturesVTrash,
+    AppMode.CreaturesVTrashDemo
+  ].includes(appModeBase);
+  const loadCreatureImages = [
+    AppMode.CreaturesVTrash,
+    AppMode.CreaturesVTrashDemo
+  ].includes(appModeBase);
+
+  if (appModeBase === AppMode.CreaturesVTrashDemo) {
     const trainer = new SimpleTrainer();
     trainer.initializeClassifiersWithoutMobilenet();
     setState({trainer, word: 'fish'});
   }
 
-  setState({dataSet, loadTrashImages, loadCreatureImages});
+  setState({loadTrashImages, loadCreatureImages});
 
   initFishData();
   await initRenderer();
@@ -31,9 +34,11 @@ export const init = async () => {
   let mode;
   if (appModeBase === 'instructions') {
     mode = Modes.Instructions;
-  } else if (appModeBase === 'fishvtrash' || appModeBase === 'creaturesvtrash') {
+  } else if (
+    [AppMode.FishVTrash, AppMode.CreaturesVTrash].includes(appModeBase)
+  ) {
     mode = Modes.Training;
-  } else if (appModeBase === 'creaturesvtrashdemo') {
+  } else if (appModeBase === AppMode.CreaturesVTrashDemo) {
     mode = Modes.Predicting;
   } else {
     mode = Modes.Words;

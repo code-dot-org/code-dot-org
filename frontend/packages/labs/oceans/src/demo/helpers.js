@@ -76,30 +76,30 @@ export const queryStrFor = key => {
 };
 
 /**
- * Given fishComponents and a dataSet, will filter any components that should be excluded in that dataSet.
+ * Given fishComponents and an AppMode, will filter any components that should be excluded in that AppMode.
  * Example input: {
  *   bodies: {
  *     body1: {src: 'images/body1.png'},
  *     body2: {
  *       src: 'images/body2.png',
- *       exclusions: [DataSet.Small]
+ *       exclusions: [AppMode.FishShort]
  *     }
  *   }
- * }, DataSet.Small
+ * }, AppMode.FishShort
  *
  * Example output: {
  *   bodies: [{src: 'images/body1.png'}]
  * }
  */
-export const filterFishComponents = (fishComponents, dataSet) => {
-  if (!dataSet) {
+export const filterFishComponents = (fishComponents, appMode) => {
+  if (!appMode) {
     return fishComponents;
   }
 
   let filteredCopy = {...fishComponents};
   Object.keys(filteredCopy).forEach(key => {
     filteredCopy[key] = Object.values(filteredCopy[key]).filter(
-      option => !(option.exclusions || []).includes(dataSet)
+      option => !(option.exclusions || []).includes(appMode)
     );
   });
 

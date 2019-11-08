@@ -17,7 +17,24 @@ body_image_files.forEach(fileName => {
         numPixels++;
       }
     }
-    console.log(image.src, (1.0 * image.width) / image.height, numPixels);
+    const name = fileName.split('.')[0];
+    const src = `${name}_image`;
+
+    console.log(`import ${src} from '../../${imagePath}'`);
+
+    const json = `    ${name}: {
+      src: ${src},
+      anchor: [null, null],
+      eyeAnchor: [null, null],
+      mouthAnchor: [null, null],
+      pectoralFinBackAnchor: [null, null],
+      pectoralFinFrontAnchor: [null, null],
+      dorsalFinAnchor: [null, null],
+      tailAnchor: [null, null],
+      knnData: [${numPixels}, null],
+      type: FishBodyPart.BODY
+    },`;
+    console.log(json);
   });
 });
 
@@ -44,12 +61,18 @@ eye_image_files.forEach(fileName => {
         }
       }
     }
-    console.log(
-      image.src,
-      (1.0 * image.width) / image.height,
-      numPixels,
-      numPixels / numPupilPixels
-    );
+
+    const name = fileName.split('.')[0];
+    const src = `${name}_image`;
+
+    console.log(`import ${src} from '../../${imagePath}'`);
+
+    const json = `    ${name}: {
+      src: ${src},
+      knnData: [${numPixels}, ${numPixels / numPupilPixels}],
+      type: FishBodyPart.EYE
+    },`;
+    console.log(json);
   });
 });
 
@@ -68,6 +91,46 @@ mouth_image_files.forEach(fileName => {
         numPixels++;
       }
     }
-    console.log(image.src, image.width, image.height, (1.0 * image.width) / image.height);
+
+    const name = fileName.split('.')[0];
+    const src = `${name}_image`;
+
+    console.log(`import ${src} from '../../${imagePath}'`);
+
+    const json = `    ${name}: {
+      src: ${src},
+      knnData: [null, ${(1.0 * image.width) / image.height}, null],
+      tinted: false,
+      type: FishBodyPart.MOUTH
+    },`;
+    console.log(json);
   });
 });
+
+// Parts without automically calculated KNN data
+const otherParts = {
+  PECTORAL_FIN_FRONT: 'pectoralFin',
+  PECTORAL_FIN_BACK: 'pectoralFin',
+  DORSAL_FIN: 'dorsalFin',
+  TAIL: 'tailFin'
+}
+
+for ([partName, dirName] of Object.entries(otherParts)) {
+  const dirPath = `public/images/fish/${dirName}/`;
+  const image_files = fs.readdirSync(dirPath);
+
+  image_files.forEach(fileName => {
+    const imagePath = dirPath + fileName;
+    const name = fileName.split('.')[0];
+    const src = `${name}_image`;
+
+    console.log(`import ${src} from '../../${imagePath}'`);
+
+    const json = `    ${name}: {
+      src: ${src},
+      knnData: [],
+      type: FishBodyPart.${partName}
+    },`;
+    console.log(json);
+  });
+}

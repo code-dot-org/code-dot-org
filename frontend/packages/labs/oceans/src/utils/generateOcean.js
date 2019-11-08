@@ -42,7 +42,7 @@ export const generateOcean = (
   }
   const possibleFishComponents = filterFishComponents(
     fishData,
-    getState().dataSet
+    getState().appMode
   );
   let bodies = Object.values(possibleFishComponents.bodies);
   bodies = _.shuffle(bodies);

@@ -1,23 +1,23 @@
 import {getState, setState} from '../state';
-import {Modes} from '../constants';
+import {AppMode, Modes} from '../constants';
 
 const guides = [
   {
     id: 'fishvtrash-training-init',
     text: 'Welcome to the tutorial!',
-    when: {appMode: 'fishvtrash', currentMode: Modes.Training},
+    when: {appMode: AppMode.FishVTrash, currentMode: Modes.Training},
     style: 'TopLeft'
   },
   {
     id: 'fishvtrash-training-init2',
     text: 'Use these two buttons to train A.I.!',
-    when: {appMode: 'fishvtrash', currentMode: Modes.Training},
+    when: {appMode: AppMode.FishVTrash, currentMode: Modes.Training},
     style: 'BottomMiddle'
   },
   {
     id: 'fishvtrash-predicting-init',
     text: "Does A.I. know what a fish looks like?  Let's see!",
-    when: {appMode: 'fishvtrash', currentMode: Modes.Predicting},
+    when: {appMode: AppMode.FishVTrash, currentMode: Modes.Predicting},
     style: 'BottomMiddle'
   }
 ];

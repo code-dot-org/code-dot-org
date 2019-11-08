@@ -3,7 +3,6 @@ let setStateCallback = null;
 const initialState = {
   appMode: null,
   currentMode: null,
-  dataSet: null,
   fishData: [],
   pondFish: [],
   totalPondFish: null,
