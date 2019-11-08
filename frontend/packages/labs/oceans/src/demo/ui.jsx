@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Radium from 'radium';
 import _ from 'lodash';
 import {getState, setState} from './state';
-import constants, {AppMode, Modes, DataSet} from './constants';
+import constants, {AppMode, Modes} from './constants';
 import {getAppMode} from './helpers';
 import {toMode} from './toMode';
 import {onClassifyFish} from './models/train';
@@ -483,7 +483,7 @@ class Words extends React.Component {
 
   currentItems() {
     const state = getState();
-    const itemSet = state.dataSet === DataSet.Small ? 0 : 1;
+    const itemSet = state.appMode === AppMode.FishShort ? 0 : 1;
 
     return this.state.choices[itemSet];
   }
@@ -501,7 +501,9 @@ class Words extends React.Component {
     const state = getState();
     const currentItems = this.currentItems();
     const buttonStyle =
-      state.dataSet === DataSet.Small ? styles.button1col : styles.button3col;
+      state.appMode === AppMode.FishShort
+        ? styles.button1col
+        : styles.button3col;
 
     return (
       <Body>
