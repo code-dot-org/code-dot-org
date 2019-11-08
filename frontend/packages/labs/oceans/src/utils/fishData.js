@@ -324,7 +324,7 @@ const fishComponents = {
       anchor: [103, 46],
       eyeAnchor: [20, 33],
       mouthAnchor: [26, 70],
-      pectoralFinBackAnchor: [38, 92],
+      pectoralFinBackAnchor: [28, 88],
       pectoralFinFrontAnchor: [62, 94],
       dorsalFinAnchor: [88, 10],
       tailAnchor: [80, 60],
