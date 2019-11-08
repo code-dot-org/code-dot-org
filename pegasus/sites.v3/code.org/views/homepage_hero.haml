@@ -36,8 +36,7 @@
         Two headers with inverse media queries conditionally load the correctly-sized image.
       - response.add_header 'Link', "<#{entry[:image]}>; rel=preload; as=image; media=\"#{css_retina?(false)}\";"
       - response.add_header 'Link', "<#{entry[:image].gsub('.jpg', '_2x.jpg')}>; rel=preload; as=image; media=\"#{css_retina?}\";"
-      .widehero#fullwidth0
-        %iframe{src: "http://localhost:8080/?words=small"}
+      .widehero#fullwidth0{style: "background-position: #{entry[:centering]}; background-image: url(#{entry[:image]});"}
     - else
       .widehero.lazyload{id: "fullwidth#{index}", "data-bg"=> "#{entry[:image]}", style: "background-position: #{entry[:centering]}"}
 
