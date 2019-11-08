@@ -2,10 +2,9 @@ const svmjs = require('svm'); // https://github.com/karpathy/svmjs
 
 export default class SVMTrainer {
   constructor(converterFn) {
-    // Default to returning example as-is
-    this.converterFn = converterFn || (input => input);
+    this.converterFn = converterFn || (input => input); // Default to returning example as-is
     this.svm = new svmjs.SVM();
-    this.svmParams = {C: 1.0};
+    this.svmParams = {}; // See https://github.com/karpathy/svmjs/blob/b75b71289dd81fc909a5b3fb8b1caf20fbe45121/lib/svm.js#L27
     this.labeledTrainingData = [];
   }
 

@@ -4,8 +4,7 @@ import * as knnClassifier from '@tensorflow-models/knn-classifier';
 
 export default class SimpleTrainer {
   constructor(converterFn) {
-    // Default to returning example as-is
-    this.converterFn = converterFn || (input => input);
+    this.converterFn = converterFn || (input => input); // Default to returning example as-is
     this.knn = knnClassifier.create();
   }
 

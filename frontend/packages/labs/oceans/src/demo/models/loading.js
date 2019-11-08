@@ -18,8 +18,7 @@ export const init = async () => {
   const loadCreatureImages =
     appModeBase === 'creaturesvtrash' || appModeBase === 'creaturesvtrashdemo';
   if (appModeBase === 'creaturesvtrashdemo') {
-    const trainer = new SimpleTrainer();
-    trainer.initializeClassifiersWithoutMobilenet();
+    const trainer = new SimpleTrainer(oceanObj => oceanObj.getTensor());
     setState({trainer, word: 'fish'});
   }
 
