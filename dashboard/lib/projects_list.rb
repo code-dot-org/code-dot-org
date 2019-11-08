@@ -117,6 +117,10 @@ module ProjectsList
       return featured_published_projects
     end
 
+    # Retrieve a class set of libraries for a specified class section
+    # @param section The section that has all students whose libraries should
+    #                be returned.
+    # @return [Hash<Array<Hash>>] A hash of lists of published libraries.
     def fetch_section_libraries(section)
       project_types = PUBLISHED_PROJECT_TYPE_GROUPS[:library]
       section_students = section.students
@@ -139,17 +143,6 @@ module ProjectsList
             end
         end
       end
-    end
-
-    def get_library_row_data(project, channel_id, student = nil)
-      project_value = project[:value] ? JSON.parse(project[:value]) : {}
-      return nil if project_value['hidden'] == true || project_value['hidden'] == 'true'
-      {
-        channel: channel_id,
-        name: project_value['libraryName'],
-        description: project_value['libraryDescription'],
-        studentName: student&.name,
-      }.with_indifferent_access
     end
 
     def project_and_featured_project_and_user_fields
@@ -228,6 +221,20 @@ module ProjectsList
         type: project_type(project_value['level']),
         updatedAt: project_value['updatedAt'],
         publishedAt: project[:published_at],
+      }.with_indifferent_access
+    end
+
+    # pull various fields out of the student and project records to populate
+    # a data structure that can be used to populate a UI component displaying a
+    # single library or a list of libraries.
+    def get_library_row_data(project, channel_id, student = nil)
+      project_value = project[:value] ? JSON.parse(project[:value]) : {}
+      return nil if project_value['hidden'] == true || project_value['hidden'] == 'true'
+      {
+        channel: channel_id,
+        name: project_value['libraryName'],
+        description: project_value['libraryDescription'],
+        studentName: student&.name,
       }.with_indifferent_access
     end
 

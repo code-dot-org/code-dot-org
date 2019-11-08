@@ -2,7 +2,7 @@ class Api::V1::SectionLibrariesController < Api::V1::JsonApiController
   check_authorization
 
   # gets the libraries from all members of all sections I am a part of
-  # GET api/libraries/section/all
+  # GET api/v1/libraries/classmates/all
   def get_classmate_published_libraries
     sections = current_user.sections + current_user.sections_as_student
     projects = []
