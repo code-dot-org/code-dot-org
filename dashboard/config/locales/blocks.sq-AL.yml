@@ -297,6 +297,8 @@ sq:
             '"scale"': madhësia
       Mikelab_randomColor:
         text: ngjyrë e rastësishme
+      Mikelab_repeatUntilComplete:
+        text: përsërit përgjithmonë
       Mikelab_setBG:
         options:
           BG:

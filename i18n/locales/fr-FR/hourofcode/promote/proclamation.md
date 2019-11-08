@@ -1,7 +1,5 @@
 ---
 title: Modèle de résolution de soutien aux science de l'informatique et Une Heure de Code
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

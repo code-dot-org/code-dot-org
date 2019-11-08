@@ -177,6 +177,11 @@ cs-CZ:
       CourseE_HOC 2018 Level_9b: Dostal(a) jsi se k útesu, nyní hledej **Srdce moře**
         ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
         ! Dostaň se pomocí modrého a červeného korálu k **truhle** s pokladem ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
+      Dance_2019_05: |-
+        _Nyní to rozhýbeme!_
+
+        Do pracovního prostoru přidej blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">takty</title></block></xml>. Po 6 taktech přiměj tanečníka začít nový pohyb.
+      Dance_2019_10: Roztoč to! Vytvoř si svůj vlastní tanec a sdílej ho s kamarády.
       Dance_Party_01: |-
         _Pojďme uspořádat taneční večírek!_
 
@@ -254,6 +259,14 @@ cs-CZ:
         -   Přidej další klávesy k ovládání tanců
         -   Přiměj záložní tanečníky, aby reagovali také na stisknuté klávesy
         -   Každé 4 takty vyměň tanečníka tak, že nastavíš viditelnost
+      Dance_Party_extras_battle_2019: |-
+        # Taneční skupiny
+
+        Zde je tanec mezi dvěma tanečními skupinami. Klávesy se šipkami ovládají jednoho z tanečníků a klávesy „w, a, s, d“ ovládají ostatní. Zatanči si s kamarádem a poté zkus tento tanec vylepšit.
+
+        -   Přidej další klávesy k ovládání tanců
+        -   Přiměj záložní tanečníky, aby reagovali také na stisknuté klávesy
+        -   Každé 4 takty vyměň tanečníka tak, že nastavíš viditelnost
       Dance_Party_extras_every_beat: |-
         # Čtvrťové noty
 
@@ -276,11 +289,23 @@ cs-CZ:
         # Basy, středy a výšky
 
         Tento tanec používá události „vrchol“ k aktivaci kódu, když jsou jiné části hudby příliš hlasité. Zkus si pohrát s různými písněmi a podívej se, jak mění tanec
+      Dance_Party_extras_on_beat_2019: |-
+        # Basy, středy a výšky
+
+        Tento tanec používá události „vrchol“ k aktivaci kódu, když jsou jiné části hudby příliš hlasité. Zkus si pohrát s různými písněmi a podívej se, jak mění tanec
       Dance_Party_extras_speed: |-
         # Zrychli to, zpomal to
 
         Tento závěrečný tanec používá blok „nastavit rychlost“ k ovládání, jak rychle se každý tanečník pohybuje. Zkus během různých bodů písně experimentovat s různými rychlostmi. Neboj se pohrát si s tímto tancem nebo se vrátit k předchozím tancům, aby byly ještě skvělejší.
       Dance_Party_extras_visible: |-
+        # Kam by šli?
+
+        Tento tanec zobrazuje a skrývá dvě různé skupiny tanečníků. Zkontroluj to a poté zkus přidat svůj vlastní styl.
+
+        -   Přidej další skupinu tanečníků
+        -   Zobraz a skryj tanečníky pomocí šipek s klávesami
+        -   Skryj všechny své tanečníky a přepni se na vzrušující efekt pozadí
+      Dance_Party_extras_visible_2019: |-
         # Kam by šli?
 
         Tento tanec zobrazuje a skrývá dvě různé skupiny tanečníků. Zkontroluj to a poté zkus přidat svůj vlastní styl.

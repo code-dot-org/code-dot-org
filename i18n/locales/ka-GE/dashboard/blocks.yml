@@ -255,6 +255,7 @@ ka:
             '"width"': სიგრძე
             '"height"': სიმაღლე
             '"rotation"': შებრუნება
+            '"tint"': შეფერადება
       Dancelab_setPropRandom:
         options:
           PROPERTY:
@@ -360,6 +361,8 @@ ka:
             '1': საშუალო
             '2': მაღალი
       Dancelab_whenSetup:
+        text: დაყენება
+      Dancelab_whenSetup2:
         text: დაყენება
       gamelab_changePropBy:
         options:
@@ -603,6 +606,8 @@ ka:
             MOVES.Rest: არცერთი
       Mikelab_randomColor:
         text: შემთხვევითი ფერი
+      Mikelab_repeatUntilComplete:
+        text: მუდამ გამეორება
       Mikelab_setBG:
         options:
           BG:

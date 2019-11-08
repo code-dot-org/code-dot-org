@@ -28,6 +28,7 @@ et:
         email: 'E-post'
         parent_email: 'Lapsevanema/hooldaja e-posti aadress'
         personal_email: "Isiklik e-posti aadress <a href=\"%{url}\"> (vajuta siia, kui teil ei ole e-posti aadressi)</a>"
+        personal_email_markdown: "Isiklik e-posti aadress [(vajuta siia, kui teil ei ole e-posti aadressi)](%{url})"
         username: 'Kasutajanimi'
         password: 'Salasõna'
         password_confirmation: 'Salasõna kinnitus'
@@ -98,6 +99,7 @@ et:
     student_count: '%{count} õpilast on juba registreerunud.'
     teacher_count: '%{count} õpetajat on juba registreerunud.'
     overview: 'Registreeri kasutajaks, et oma edusamme jälgida ja tundi planeerida. <a href="/">Mõistatusi ja nende erinevaid etappe on võimalik</a> ilma kasutajakontota sirvida, kuid projektide edusammude salvestamiseks on vaja kasutajat.'
+    overview_markdown: 'Registreeri kasutajaks, et oma edusamme jälgida ja tundi planeerida. [Mõistatusi ja nende erinevaid etappe on võimalik](/) ilma kasutajakontota sirvida, kuid projektide edusammude salvestamiseks on vaja kasutajat.'
     hoc_already_signed_up_heading: 'Alusta ilma sisse logimata'
     hoc_already_signed_up_content: 'Olete registreerinud KoodiTunni külalisõpetajaks! Sina ja sinu õpilased ei pea Code Studiosse sisse logima, et sellest üritusest osa võtta. Alustamiseks<a href="https://code.org/learn">vali oma klassile juhend</a>ja jaga nendega linki.<br/>Kui teile meeldis KoodiTund ja soovite enamat, võite allpool luua Code Studio konto ja registreerida oma õpilased meie<a href="https://code.org/educate">pikematele kursustele.'
     teacher_educator_guide: 'Vaata õpetajate juhendit'
@@ -585,14 +587,17 @@ et:
   terms_interstitial:
     title: "Uuendatud teenusetingimused ja privaatsustingimused"
     intro_desc: "Oleme uuendanud oma Teenusetingimusi ja Privaatsustingimusi. Muudatused kehtivad alates 24. augustist 2016. Suurim muutus: me ei salvesta enam Code Studios <i> õpilaste kasutajakontode jaoks nende e-posti aadresse. </i> See on meile oluline ja me loodame, et sellest saab haridustehnoloogias õpilaste privaatsuse uus standard. Kokkuvõtte teistest muudatustest saatsime teile e-posti aadressile."
+    intro_desc_markdown: "Oleme uuendanud oma Teenusetingimusi ja Privaatsustingimusi. Muudatused kehtivad alates 24. augustist 2016. Suurim muutus: me ei salvesta enam Code Studios _õpilaste kasutajakontode jaoks nende e-posti aadresse._ See on meile oluline ja me loodame, et sellest saab haridustehnoloogias õpilaste privaatsuse uus standard. Kokkuvõtte teistest muudatustest saatsime teile e-posti aadressile."
     intro_instructions: "Selleks, et saada ligipääs kõikidele Code Studio uutele võimalustele pead nõustuma uute tingimustega, mis on seotud alla 13-aastaste õpilastega sinu klassis. Õpilase kontot registreerides palume kinnitada, et teie koolil on vanemate nõusolek õpilaste isiklike andmete kogumiseks ja kasutamiseks kooliga seotud eesmärkidel k. a. hariduslikes programmides nagu Code Studio."
     tos: "Teenuse tingimused"
     privacy: "Privaatsuspoliitika"
     privacy_notice: "Privaatsuse teade"
     accept_label: 'Olen uuendustega nõus<a href="%{tos_url}" target="_blank">Teenusetingimused</a>ja<a href="%{privacy_url}" target="_blank">Privaatsustingimused</a>'
+    accept_label_markdown: Olen uuendustega nõus[Teenusetingimused](%{tos_url})ja[Privaatsustingimused](%{privacy_url})
     accept: "Nõustu"
     print: "Trüki välja"
     reminder_desc: 'Oleme uuendanud oma<a href="%{tos_url}" target="_blank">Teenusetingimusi</a>ja<a href="%{privacy_url}" target="_blank">Privaatsustingimusi</a>. Palun lugege neid hoolikalt enne tingimustega nõustumist. Pange tähele, et meie nõuanded JavaScripti õpetamiseks ei pruugi teie õpilastele olla kättesaadavad enne, kui olete uuendatud tingimustega nõustunud.'
+    reminder_desc_markdown: Oleme uuendanud oma[Teenusetingimusi](%{tos_url})ja[Privaatsustingimusi](%{privacy_url}). Palun lugege neid hoolikalt enne tingimustega nõustumist. Pange tähele, et meie nõuanded JavaScripti õpetamiseks ei pruugi teie õpilastele olla kättesaadavad enne, kui olete uuendatud tingimustega nõustunud.
     review_terms: "Vaata muudetud tingimusi"
   school_info_interstitial:
     save: "Salvesta"
@@ -611,6 +616,7 @@ et:
     submit: "Esita"
     decline: "Sulge"
   zendesk_too_young_message: 'Vabandame, nooremad kasutajad ei saa meie kasutajatoe lehele sisse logida. Võid sirvida <a href="http://support.code.org"> support.code.org</a> ilma sisse logimata või paluda oma emal ja isal või õpetajal meiega ühendust võtta.'
+  zendesk_too_young_message_markdown: 'Vabandame, nooremad kasutajad ei saa meie kasutajatoe lehele sisse logida. Võid sirvida [support.code.org](http://support.code.org) ilma sisse logimata või paluda oma emal ja isal või õpetajal meiega ühendust võtta.'
   progress:
     not_started: pole alustatud
     in_progress: pooleli
@@ -700,6 +706,7 @@ et:
     csp_functions: 'Funktsioonid'
     csp_lists: 'Loendid'
     csp_loops: 'Tsüklid'
+    k5_next_steps: 'Järgmised sammud'
   external_links:
     disclaimer: Lahtiütlemine
     leaving_domain: Olete lahkumas sellest domeenist leheküljele, mida ei halda Code.org.

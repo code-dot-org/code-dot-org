@@ -24,7 +24,8 @@ import {createHiddenPrintWindow} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import experiments from '@cdo/apps/util/experiments';
-import LibraryCreationDialog from './Libraries/LibraryCreationDialog';
+import LibraryCreationDialog from './libraries/LibraryCreationDialog';
+import LibraryClientApi from './libraries/LibraryClientApi';
 
 function recordShare(type) {
   if (!window.dashboard) {
@@ -152,6 +153,7 @@ class ShareAllowedDialog extends React.Component {
     }).isRequired,
     allowExportExpo: PropTypes.bool.isRequired,
     exportApp: PropTypes.func,
+    librariesEnabled: PropTypes.bool,
     icon: PropTypes.string,
     shareUrl: PropTypes.string.isRequired,
     // Only applicable to Dance Party projects, used to Tweet at song artist.
@@ -310,6 +312,7 @@ class ShareAllowedDialog extends React.Component {
       };
     }
     const {canPrint, canPublish, isPublished} = this.props;
+    let libraryClientAPI = new LibraryClientApi(this.props.channelId);
     return (
       <div>
         <BaseDialog
@@ -420,7 +423,8 @@ class ShareAllowedDialog extends React.Component {
                       className="no-mc"
                     />
                   )}
-                  {experiments.isEnabled('student-libraries') && isDroplet && (
+                  {(experiments.isEnabled(experiments.STUDENT_LIBRARIES) ||
+                    this.props.librariesEnabled) && (
                     <button
                       type="button"
                       onClick={this.props.openLibraryCreationDialog}
@@ -513,7 +517,7 @@ class ShareAllowedDialog extends React.Component {
           )}
         </BaseDialog>
         <PublishDialog />
-        <LibraryCreationDialog channelId={this.props.channelId} />
+        <LibraryCreationDialog clientApi={libraryClientAPI} />
       </div>
     );
   }
@@ -525,6 +529,7 @@ export default connect(
   state => ({
     allowExportExpo: state.pageConstants.allowExportExpo || false,
     exportApp: state.pageConstants.exportApp,
+    librariesEnabled: state.pageConstants.librariesEnabled,
     isOpen: state.shareDialog.isOpen,
     isUnpublishPending: state.shareDialog.isUnpublishPending
   }),

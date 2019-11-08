@@ -1729,3 +1729,20 @@ cs:
             Dance Party:
               name: Taneční večírek
           description: Vytvoř si svůj vlastní taneční večírek a sdílej ho s kamarády!
+        k5-onlinepd-copy:
+          stages:
+            Loops:
+              name: Smyčky
+            Conditionals:
+              name: Podmínky
+            Events:
+              name: Události
+            Functions:
+              name: Funkce
+            Variables:
+              name: Proměnné
+            For Loops:
+              name: For cykly
+        dance-extras-2019:
+          title: Nepřestávej tančit
+          description: Pokračuj i po první hodině kódu rozšířením nápadů ve svém projektu.

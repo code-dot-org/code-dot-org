@@ -916,9 +916,13 @@
   coursed-2017_name: Curso D (2017)
   coursee-2017_name: Curso E (2017)
   coursef-2017_name: Curso F (2017)
+  express-2018_name: Curso Rápido (2017)
   pre-express-2018_name: Curso rápido prescolar (2018)
+  express-2019_name: Curso Rápido (2017)
+  pre-express-2019_name: Curso rápido prescolar (2017)
   accelerated_name: "Curso acelerado"
   express_name: "Curso Rápido"
+  pre-express_name: Curso rápido prescolar
   20-hour_name: Curso acelerado
   algebra_name: "CS en Álgebra"
   AlgebraA_name: "CS en Álgebra Curso A"

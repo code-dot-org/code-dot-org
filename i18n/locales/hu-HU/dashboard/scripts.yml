@@ -1966,3 +1966,26 @@ hu:
             Dance Party:
               name: Táncos buli
           description: Kódold le saját táncos bulidat, és oszd meg az ismerőseiddel!
+        k5-onlinepd-copy:
+          stages:
+            Getting Started:
+              name: Első lépések
+            Computer Science Fundamentals:
+              name: A számítógép-tudomány alapjai
+            Loops:
+              name: hurkok
+            Conditionals:
+              name: Feltételek
+            Events:
+              name: Események
+            Functions:
+              name: funkciók
+            Sprite Lab:
+              name: Sprite labor
+            Variables:
+              name: változók
+            For Loops:
+              name: Számláló ciklusok
+        dance-extras-2019:
+          title: Táncolj tovább
+          description: Egy óra elteltével is folytathatod a bulit további projektötletekkel.

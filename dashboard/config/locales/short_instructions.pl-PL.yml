@@ -269,6 +269,11 @@ pl-PL:
         do skarbu.
       Crack Random Substitution: Instrukcje
       Crack a Caesar Cipher: Instrukcje
+      Dance_2019_01: Przeciągnij blok "utwórz nowego" do obszaru roboczego i podłącz
+        go w bloku "układ".
+      Dance_2019_05: Teraz spraw, aby tancerz rozpoczął nowy ruch po 6 taktach!
+      Dance_2019_08: Użyj bloku "ustaw odcień", aby zmienić kolor tancerza.
+      Dance_2019_10: Dobrej zabawy! Utwórz własny taniec i udostępnij go przyjaciołom.
       Dance_Party_01: Przeciągnij blok "utwórz nowego" do obszaru roboczego i podłącz
         go w bloku "układ".
       Dance_Party_02: Spraw, aby łoś rozpoczął nowy ruch po 4 taktach!
@@ -290,11 +295,18 @@ pl-PL:
         w górę. Wykonuj tupnij-klaśnij tak szybko, jak potrafisz!
       Dance_Party_12: Dobrej zabawy! Utwórz własny taniec i udostępnij go przyjaciołom.
       Dance_Party_extras_battle: Zespoły taneczne (Kliknij Więcej po szczegóły)
-      Dance_Party_extras_every_beat: Ćwierć nuty (Kliknij Więcej po szczegóły)
+      Dance_Party_extras_battle_2019: Zespoły taneczne (Kliknij Więcej po szczegóły)
+      Dance_Party_extras_every_beat: Ćwierćnuty (Kliknij Więcej po szczegóły)
+      Dance_Party_extras_every_beat_2019: Ćwierćnuty (Kliknij Więcej po szczegóły)
       Dance_Party_extras_layout: Twórzmy formację (Kliknij Więcej po szczegóły)
+      Dance_Party_extras_layout_2019: Twórzmy formację (Kliknij Więcej po szczegóły)
       Dance_Party_extras_on_beat: Bas, średni i wysoki ton (Kliknij Więcej po szczegóły)
+      Dance_Party_extras_on_beat_2019: Bas, średni i wysoki ton (Kliknij Więcej po
+        szczegóły)
       Dance_Party_extras_speed: Przyspiesz, spowolnij (Kliknij Więcej po szczegóły)
+      Dance_Party_extras_speed_2019: Przyspiesz, spowolnij (Kliknij Więcej po szczegóły)
       Dance_Party_extras_visible: Gdzie oni poszli? (Kliknij Więcej po szczegóły)
+      Dance_Party_extras_visible_2019: Gdzie oni poszli? (Kliknij Więcej po szczegóły)
       Find the Wizard: |-
         Buduj, co chcesz. To jest przykład
         gry w zgadywanie numeru!
@@ -414,9 +426,9 @@ pl-PL:
         potwory a następnie spowoduj, by robiły to, co chcesz. Baw się dobrze!
       MC HOC 2016 Level 2-2: Kurczak jest zamrożony. Umieść bloki "idź" i "skręć"
         w bloku "kiedy ożywiony", by poruszył się.
-      MC HOC 2016 Level 3: "Świetne, kurczak przesunął się! Ale nagle zatrzymał się.
-        W grach, kurczaki chodzą bez przerwy. Użyj pętli \"bez końca wykonuj\", aby
-        te kurczaki nie zatrzymywały się. \\\r"
+      MC HOC 2016 Level 3: Świetnie, kurczak przesunął się! Ale nagle zatrzymał się.
+        W grach, kurczaki chodzą bez przerwy. Użyj pętli "zawsze", aby utrzymać kurczaki
+        w ruchu.
       MC HOC 2016 Level 4: Teraz kurczaki wyglądają dziwnie poruszając się tak samo.
         Gry korzystają z losowych ruchów, by urzeczywistnić sytuacje. Spowoduj, by
         kurczaki "skręcały losowo".
@@ -564,6 +576,10 @@ pl-PL:
       Underground Mining Coal_2019: Najcenniejsze surowce znajdują się pod ziemią,
         ale robi się ciemno. Umieść co najmniej 2 pochodnie i wydobądź węgiel z co
         najmniej 2 bloków.
+      'Widget: Text Compression': Poszukaj wzorców (powtarzające się słowa lub frazy)
+        w tekście. Wprowadź do słownika po prawej stronie wzorce, które widzisz. Podczas
+        ich wpisywania do słownika, symbol wpisu jest wstawiany do tekstu zamiast
+        wzorca.
       bounce_1: Dołącz blok do bloku "kiedy strzałka w lewo" i naciśnij "Uruchom".
         Przesuń paletkę używając lewej strzałki, aby osiągnąć ostateczny cel.
       bounce_10: Cel teraz jest u góry. Dołącz bloki "punkt wyniku" i "punkt wyniku
@@ -593,9 +609,9 @@ pl-PL:
       bounce_12: Utwórz własną grę w odbijanie. Możesz zmienić wszystkie efekty wizualne
         i zasady. Kiedy skończysz, kliknij przycisk "Zakończ", aby Twoi znajomi mogli
         zagrać na swoich telefonach.
-      bounce_12_basketball: Utwórz własną grę w odbijanie. Możesz zmienić wszystkie
-        zasady. Kiedy skończysz, kliknij przycisk "Zakończ", aby Twoi znajomi mogli
-        zagrać w Twoją grę na swoich telefonach.
+      bounce_12_basketball: Stwórz swoją własną grę w Koszykówkę. Możesz zmienić wszystkie
+        zasady. Kiedy skończysz naciśnij "Zakończ", aby Twoi znajomi mogli w nią zagrać
+        na swoich telefonach.
       bounce_12_sports: Utwórz własną grę w odbijanie. Możesz zmienić wszystkie zasady
         i pomieszać różne zawody - bądź kreatywny. Kiedy skończysz, kliknij przycisk
         "Zakończ", aby Twoi znajomi mogli zagrać w Twoją grę na swoich telefonach.

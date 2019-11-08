@@ -447,7 +447,7 @@ sv:
             '"tropical"': Tropisk
             '"warm"': Röda
       Dancelab_setBackgroundEffectWithPalette:
-        text: täll in bakgrundseffekt {EFFECT} {PALETTE}
+        text: täll in bakgrundseffekt {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': Ingen
@@ -571,6 +571,7 @@ sv:
             '"rotation"': rotation
             '"x"': horisontellt läge
             '"y"': vertikalt läge
+            '"tint"': färgton
       Dancelab_setPropRandom:
         text: slumpa {SPRITE} {PROPERTY}
         options:
@@ -768,6 +769,8 @@ sv:
             '1': mellan
             '2': diskant
       Dancelab_whenSetup:
+        text: ställ in
+      Dancelab_whenSetup2:
         text: ställ in
       gamelab_changePropBy:
         text: ändra {SPRITE} {PROPERTY} via {VAL}
@@ -980,6 +983,8 @@ sv:
             MOVES.Rest: Ingen
       Mikelab_randomColor:
         text: slumpad färg
+      Mikelab_repeatUntilComplete:
+        text: upprepa för evigt
       Mikelab_setBG:
         options:
           BG:

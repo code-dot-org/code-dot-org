@@ -462,7 +462,7 @@ el:
             '"vintage"': Βίντατζ
             '"warm"': Κόκκινα
       Dancelab_setBackgroundEffectWithPalette:
-        text: ορισμός εφέ φόντου {EFFECT} {PALETTE}
+        text: ορισμός εφέ φόντου {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': Κανένα
@@ -595,6 +595,7 @@ el:
             '"rotation"': περιστροφή
             '"x"': οριζόντια θέση
             '"y"': κάθετη θέση
+            '"tint"': απόχρωση
       Dancelab_setPropRandom:
         text: κάνε τυχαίο του {SPRITE} το {PROPERTY}
         options:
@@ -813,6 +814,8 @@ el:
             '1': μεσαία
             '2': πρίμα
       Dancelab_whenSetup:
+        text: αρχικοποίηση
+      Dancelab_whenSetup2:
         text: αρχικοποίηση
       gamelab_addBehaviorSimple:
         text: χαρακτήρας {SPRITE} ξεκινάει {BEHAVIOR}
@@ -1197,6 +1200,8 @@ el:
         text: τυχαίο χρώμα
       Mikelab_removeBehaviorSimple:
         text: χαρακτήρας {SPRITE} σταματάει {BEHAVIOR}
+      Mikelab_repeatUntilComplete:
+        text: επαναλάμβανε για πάντα
       Mikelab_setBG:
         options:
           BG:

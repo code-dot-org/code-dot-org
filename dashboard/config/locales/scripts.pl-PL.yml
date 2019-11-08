@@ -4895,3 +4895,47 @@ pl:
               name: Potańcówka
           description: Stwórz kod swojej własnej imprezy tanecznej i udostępnij ją
             swoim znajomym.
+        k5-onlinepd-copy:
+          stages:
+            Getting Started:
+              name: Pierwsze kroki
+            Computer Science Fundamentals:
+              name: Podstawy Informatyki
+            Looking Ahead:
+              name: Patrząc w przyszłość
+            'Mastering the Basics: Sequencing':
+              name: 'Doskonalenie podstaw: Sekwencje'
+            'Mastering the Basics: Loops':
+              name: 'Doskonalenie podstaw: Pętle'
+            'Mastering the Basics: Conditionals':
+              name: 'Doskonalenie podstaw: Warunki'
+            'Mastering the Basics: Functions':
+              name: 'Doskonalenie podstaw: Funkcje'
+            'Mastering the Basics: Events':
+              name: 'Doskonalenie podstaw: Wydarzenia'
+            Planning:
+              name: Planowanie
+            Next Steps:
+              name: Następne Kroki
+            Loops:
+              name: Pętle
+            Conditionals:
+              name: Zdania z warunkami
+            Events:
+              name: Zdarzenia
+            Functions:
+              name: Funkcje
+            Sprite Lab:
+              name: Sprite Lab
+            Variables:
+              name: Zmienne
+            For Loops:
+              name: Pętle dla (for)
+        dance-extras-2019:
+          title: Nie przestawaj tańczyć
+          description: Wyjdź poza pierwszą godzinę dzięki rozszerzonym pomysłom na
+            projekt.
+        csp10-pilot:
+          stages:
+            new stage:
+              name: nowy etap

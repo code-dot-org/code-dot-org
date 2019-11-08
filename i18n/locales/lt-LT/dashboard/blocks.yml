@@ -312,6 +312,8 @@ lt:
             '"y"': y pozicija
       Mikelab_randomColor:
         text: Atsitiktinė spalva
+      Mikelab_repeatUntilComplete:
+        text: kartok visada
       Mikelab_setBG:
         options:
           BG:

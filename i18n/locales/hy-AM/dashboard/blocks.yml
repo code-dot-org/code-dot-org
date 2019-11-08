@@ -296,6 +296,8 @@ hy:
             '"scale"': չափ
       Mikelab_randomColor:
         text: կամայական գույն
+      Mikelab_repeatUntilComplete:
+        text: կրկնել հավերժ
       Mikelab_setBG:
         options:
           BG:

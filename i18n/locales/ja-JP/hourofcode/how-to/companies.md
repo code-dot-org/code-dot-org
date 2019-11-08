@@ -1,7 +1,5 @@
 ---
 title: 企業でHour of Codeを開催する方法
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

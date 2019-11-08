@@ -450,7 +450,7 @@ bs:
       Dancelab_setBackgroundEffectWithPalette:
         text: |-
           podesi efekat pozadine
-          {EFFECT} {PALETTE}
+          {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': Nijedno
@@ -580,6 +580,7 @@ bs:
             '"rotation"': rotacija
             '"x"': vodoravna pozicija
             '"y"': uspravna pozicija
+            '"tint"': nijanse
       Dancelab_setPropRandom:
         text: nasumično {SPRITE} {PROPERTY}
         options:
@@ -793,6 +794,8 @@ bs:
             '2': trebl
       Dancelab_whenSetup:
         text: postavka
+      Dancelab_whenSetup2:
+        text: postavka
       gamelab_changePropBy:
         text: izmjeni {SPRITE} {PROPERTY} za {VAL}
         options:
@@ -987,6 +990,8 @@ bs:
             MOVES.Rest: Nijedno
       Mikelab_randomColor:
         text: nasumična boja
+      Mikelab_repeatUntilComplete:
+        text: ponavljaj zauvijek
       Mikelab_setBG:
         options:
           BG:

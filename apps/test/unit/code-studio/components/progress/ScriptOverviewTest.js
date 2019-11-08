@@ -21,6 +21,7 @@ const defaultProps = {
   viewAs: ViewType.Teacher,
   isRtl: false,
   sectionsInfo: [],
+  sectionsForDropdown: [],
   scriptHasLockableStages: false,
   scriptAllowsHiddenStages: false,
   versions: []
@@ -29,7 +30,7 @@ const defaultProps = {
 describe('ScriptOverview', () => {
   it('includes a ScriptOverviewTopRow/ProgressLegend on overview page', () => {
     const wrapper = shallow(<ScriptOverview {...defaultProps} />);
-    assert.equal(wrapper.find('ScriptOverviewTopRow').length, 1);
+    assert.equal(wrapper.find('Connect(ScriptOverviewTopRow)').length, 1);
     assert.equal(wrapper.find('ProgressLegend').length, 1);
   });
 

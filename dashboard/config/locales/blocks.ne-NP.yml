@@ -287,6 +287,8 @@ ne:
             '"scale"': size
       Mikelab_randomColor:
         text: कुनै एक  रङ
+      Mikelab_repeatUntilComplete:
+        text: repeat forever
       Mikelab_setBG:
         options:
           BG:

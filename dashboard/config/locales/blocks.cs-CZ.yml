@@ -437,7 +437,7 @@ cs:
             '"tropical"': Tropické
             '"warm"': Červené
       Dancelab_setBackgroundEffectWithPalette:
-        text: nastavit efekt pozadí {EFFECT} {PALETTE}
+        text: nastavit efekt pozadí {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': Žádný
@@ -559,6 +559,7 @@ cs:
             '"rotation"': otočení
             '"x"': vodorovná pozice
             '"y"': svislá pozice
+            '"tint"': odstín
       Dancelab_setPropRandom:
         text: náhodně vybrat {SPRITE} {PROPERTY}
         options:
@@ -777,6 +778,8 @@ cs:
             '1': středy
             '2': výšky
       Dancelab_whenSetup:
+        text: nastavení
+      Dancelab_whenSetup2:
         text: nastavení
       gamelab_changePropBy:
         text: změnit {SPRITE} {PROPERTY} o {VAL}
@@ -1032,6 +1035,8 @@ cs:
         text: náhodná barva
       Mikelab_removeBehaviorSimple:
         text: postava {SPRITE} zastaví {BEHAVIOR}
+      Mikelab_repeatUntilComplete:
+        text: opakuj do nekonečna
       Mikelab_setBG:
         options:
           BG:

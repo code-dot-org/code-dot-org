@@ -4,12 +4,19 @@ hi:
     script:
       category:
         csf_category_name: कंप्यूटर साइंस की बुनियादी बातें
+        csf_2018_category_name: CS के मूल सिद्धांत (2018)
         full_course_category_name: Full Courses
         hoc_category_name: आवर ऑफ़ कोड
         math_category_name: गणित
       name:
         course1:
+          title: कोर्स 1
+          description_audience: आयु 4-6
           stages:
+            'Artist: Loops':
+              name: 'कलाकार: लूप्स'
+            'Bee: Loops':
+              name: 'मधुमक्खी: लूप्स'
             Building a Foundation:
               name: नींव का निर्माण करना
             Getting Loopy:
@@ -18,14 +25,31 @@ hi:
               name: सुरक्षित रूप से स्थानों पर जाना
             Happy Maps:
               name: हैप्पी मैप्स
+            'Maze: Debugging':
+              name: 'पहेली: डीबगिंग'
+            'Maze: Loops':
+              name: 'पहेली: लूप्स'
             Move it, Move it:
               name: इसे मूव करें, इसे मूव करें
             'Real-life Algorithms: Plant a Seed':
               name: 'वास्तविक-जीवन की कलन विधियां: पौधा उगाना'
+            Spelling Bee:
+              name: उच्चारण मधुमक्खी
             The Big Event:
               name: विशाल इवेंट
         course2:
+          title: कोर्स 2
           stages:
+            'Artist: Debugging':
+              name: 'कलाकार: डीबगिंग'
+            'Artist: Loops':
+              name: 'कलाकार: लूप्स'
+            'Bee: Conditionals':
+              name: 'मधुमक्खी: शर्तें'
+            'Bee: Debugging':
+              name: 'मधुमक्खी: डीबगिंग'
+            'Bee: Loops':
+              name: 'मधुमक्खी: लूप्स'
             Binary Bracelets:
               name: युग्मक ब्रैस्लेट्स
             Conditionals:
@@ -34,6 +58,8 @@ hi:
               name: लूपी होना
             Graph Paper Programming:
               name: ग्राफ पेपर प्रोग्रामिंग
+            'Maze: Loops':
+              name: 'पहेली: लूप्स'
             'Real-life Algorithms: Paper Planes':
               name: 'वास्तविक-जीवन की कलन विधियां: कागज के जहाज'
             Relay programming:
@@ -43,7 +69,19 @@ hi:
             Your Digital Footprint:
               name: आपका डिजीटल फुटप्रिंट
         course3:
+          title: कोर्स 3
+          description_audience: उम्र 8-18
           stages:
+            'Artist: Functions':
+              name: 'कलाकार: फंक्शन्स'
+            'Bee: Conditionals':
+              name: 'मधुमक्खी: शर्तें'
+            'Bee: Debugging':
+              name: 'मधुमक्खी: डीबगिंग'
+            'Bee: Functions':
+              name: 'मधुमक्खी: फंक्शन्स'
+            'Bee: Nested Loops':
+              name: 'मधुमक्खी: नेस्टड लूप्स'
             Bounce:
               name: उछाल
             Computational Thinking:
@@ -58,13 +96,40 @@ hi:
               name: फंक्शनल सनकैचर्स
             Internet:
               name: इंटरनेट
+            Maze:
+              name: पहेली
+            'Maze: Conditionals':
+              name: 'पहेली: शर्तें'
             Songwriting:
               name: गीत लेखन
+            'Studio: Create a Game':
+              name: 'प्ले लैब: गेम बनाएं'
         hourofcode:
           title: क्लासिक भूलभुलैया
+          stages:
+            Maze:
+              name: पहेली
         frozen:
           description_short: आइए ऐना और एल्सा से जुड़ने के लिए कोड का उपयोग करें,
             जब वे बर्फ के जादू और सुंदरता की पड़ताल करती हैं।
+        course4:
+          stages:
+            'Artist: Functions':
+              name: 'कलाकार: फंक्शन्स'
+            'Unplugged: Songwriting with Parameters':
+              name: 'अनप्लग्ड: मापदंडों के साथ गीत लिखना'
+        Course4pre:
+          stages:
+            'Artist: Functions':
+              name: 'कलाकार: फंक्शन्स'
+            'Artist: Loops':
+              name: 'कलाकार: लूप्स'
+            'Bee: Conditionals':
+              name: 'मधुमक्खी: शर्तें'
+            'Bee: Debugging':
+              name: 'मधुमक्खी: डीबगिंग'
+            'Bee: Nested Loops':
+              name: 'मधुमक्खी: नेस्टड लूप्स'
         usability:
           stages:
             Binary:
@@ -87,11 +152,16 @@ hi:
               name: डिज़ाइन रेसिपी
         K5PD:
           stages:
+            K-5 Courses:
+              name: K-5 कोर्स
+            Next Steps:
+              name: अगले चरण
             Teacher Dashboard:
               name: अध्यापक डैशबोर्ड
         netsim:
           title: इंटरनेट अनुकारक
         20-hour:
+          description_audience: आयु 10-18
           stages:
             Abstraction:
               name: संक्षेपण
@@ -146,6 +216,8 @@ hi:
           stages:
             Bounce:
               name: उछाल
+            Studio:
+              name: स्टूडियो
         flappy:
           title: फ्लैपी कोड
           description: क्या आप 10 मिनट से कम समय में अपनी खुद की गेम लिख सकते हैं?
@@ -158,10 +230,44 @@ hi:
           stages:
             Jigsaw:
               name: पहेली
+        step:
+          title: चरण
+          stages:
+            Step:
+              name: चरण
+        Hour of Code:
+          title: आवर ऑफ़ कोड 2013
+          stages:
+            Hour of Code 2013:
+              name: आवर ऑफ़ कोड 2013
+        CodeStudioPuzzleChallenge:
+          stages:
+            Puzzles:
+              name: पहेलियाँ
+        Tutorial Video - Code Studio Puzzle Challenge:
+          stages:
+            Puzzles:
+              name: पहेलियाँ
         algebraPD:
           stages:
             Teacher Dashboard:
               name: अध्यापक डैशबोर्ड
+        algPDmiami:
+          stages:
+            Booleans:
+              name: बूलियन
+        CSPPD:
+          stages:
+            What is CSP?:
+              name: CSP क्या है?
+        ECSPD:
+          stages:
+            What is ECS?:
+              name: ECS क्या है?
+        rbo-reference:
+          stages:
+            reference:
+              name: संदर्भ
         cspunit3:
           stages:
             Creating Functions:
@@ -170,10 +276,20 @@ hi:
               name: व्हाइल लूप्स
         algebraPD3:
           stages:
+            Next Steps:
+              name: अगले चरण
             Teacher Dashboard:
               name: अध्यापक डैशबोर्ड
             The Design Recipe:
               name: डिज़ाइन रेसिपी
+        ECSPD-NexTech:
+          stages:
+            What is ECS?:
+              name: ECS क्या है?
+        ECSPD-iZone:
+          stages:
+            What is ECS?:
+              name: ECS क्या है?
         algebraPD-NexTech:
           stages:
             Teacher Dashboard:
@@ -188,6 +304,8 @@ hi:
               name: समाप्ति
         algebraPD2a:
           stages:
+            Booleans:
+              name: बूलियन
             The Design Recipe:
               name: डिज़ाइन रेसिपी
         allthethings:
@@ -196,12 +314,24 @@ hi:
               name: उछाल
             Jigsaw:
               name: पहेली
+            Match:
+              name: " मेल"
+            Maze:
+              name: पहेली
             Minecraft:
               name: Minecraft
+            PlayLab:
+              name: प्लेलैब
+            Studio:
+              name: स्टूडियो
             Web Lab:
               name: वेब लैब
         algebraPD2b:
           stages:
+            Booleans:
+              name: बूलियन
+            Next Steps:
+              name: अगले चरण
             Teacher Dashboard:
               name: अध्यापक डैशबोर्ड
         cspfacilitator:
@@ -210,6 +340,12 @@ hi:
               name: ऐप लैब
             Internet Simulator:
               name: इंटरनेट अनुकारक
+        K5-OnlinePD:
+          stages:
+            Getting Started:
+              name: शुरू करें
+            Next Steps:
+              name: अगले चरण
         ECSPD2:
           stages:
             0: |-
@@ -234,6 +370,12 @@ hi:
           stages:
             Wrap-Up:
               name: समाप्ति
+        Equity-OnlinePD:
+          stages:
+            Getting Started:
+              name: शुरू करें
+            Next Steps:
+              name: अगले चरण
         sciencePD2b-iZone:
           stages:
             Wrap-Up:
@@ -258,6 +400,10 @@ hi:
               What Is a Computer?
             Wrap-up:
               name: समाप्ति
+        CSPPD2:
+          stages:
+            Getting Started:
+              name: शुरू करें
         asUnplugged:
           stages:
             Binary Bracelets:
@@ -278,10 +424,46 @@ hi:
               name: गीत लेखन
             The Big Event:
               name: विशाल इवेंट
+        ECSPD3-Unit2:
+          stages:
+            Getting Started:
+              name: शुरू करें
+        ECSPD3-Unit3:
+          stages:
+            Getting Started:
+              name: शुरू करें
+        ECSPD3-Unit4:
+          stages:
+            Getting Started:
+              name: शुरू करें
+        ECSPD3-Unit5:
+          stages:
+            Getting Started:
+              name: शुरू करें
+        ECSPD3-Unit6:
+          stages:
+            Getting Started:
+              name: शुरू करें
         ScienceP3OLPT2:
           stages:
             Wrap-Up:
               name: समाप्ति
+        algebraPD3b:
+          stages:
+            Getting Started:
+              name: शुरू करें
+        CSPPD3-Unit2:
+          stages:
+            Getting Started:
+              name: शुरू करें
+        Special Fun:
+          description_audience: आयु 10-18
+        SpecialSeries:
+          description_audience: आयु 10-18
+        CSPPD3-Unit3:
+          stages:
+            Getting Started:
+              name: शुरू करें
         cspunit3temp:
           stages:
             While Loops:
@@ -299,10 +481,22 @@ hi:
           stages:
             Wrap-Up:
               name: समाप्ति
+        CSPPD3-Unit4:
+          stages:
+            Getting Started:
+              name: शुरू करें
+        CSPPD3-Unit5:
+          stages:
+            Getting Started:
+              name: शुरू करें
         algebraPD1:
           stages:
             Teacher Dashboard:
               name: अध्यापक डैशबोर्ड
+        algebraPD3c:
+          stages:
+            Getting Started:
+              name: शुरू करें
         csp1-2017:
           stages:
             The Internet:
@@ -337,6 +531,12 @@ hi:
               name: कार्य
             Velocity:
               name: वेग
+        CSF_Secret_Sample:
+          description_audience: उम्र 8-18
+        ECSPD1:
+          stages:
+            Wrap Up:
+              name: समाप्ति
         algebraFacilitator:
           stages:
             Teacher Dashboard:
@@ -349,6 +549,12 @@ hi:
           stages:
             Artist Functions:
               name: कलाकार फंक्शन्स
+        artistExemplar:
+          description_audience: उम्र 8-18
+        kinderTest:
+          stages:
+            'Bee: Conditionals':
+              name: 'मधुमक्खी: शर्तें'
         gradeKinder:
           stages:
             Events:
@@ -375,6 +581,8 @@ hi:
           stages:
             Digital Citizenship:
               name: डिजीटल नागरिकता
+            'Unplugged: Songwriting with Parameters':
+              name: 'अनप्लग्ड: मापदंडों के साथ गीत लिखना'
         ecs-unit1:
           stages:
             0: |-
@@ -385,6 +593,26 @@ hi:
               What Is a Computer?
             Wrap-up:
               name: समाप्ति
+        ecs-unit2:
+          stages:
+            Getting Started:
+              name: शुरू करें
+        ecs-unit3:
+          stages:
+            Getting Started:
+              name: शुरू करें
+        ecs-unit4:
+          stages:
+            Getting Started:
+              name: शुरू करें
+        ecs-unit5:
+          stages:
+            Getting Started:
+              name: शुरू करें
+        ecs-unit6:
+          stages:
+            Getting Started:
+              name: शुरू करें
         grade3:
           stages:
             Bee Debugging:
@@ -521,6 +749,14 @@ hi:
               name: मापदंडों के साथ गीत लिखना
             Introduction:
               name: परिचय
+        classic-hoc-impact-study:
+          stages:
+            Hour of Code 2013:
+              name: आवर ऑफ़ कोड 2013
+        hoc-impact-study:
+          stages:
+            Hour of Code 2013:
+              name: आवर ऑफ़ कोड 2013
         2016_sciencePD-phase2b:
           stages:
             Wrap-Up:
@@ -613,6 +849,8 @@ hi:
               name: वेग
             Functions:
               name: कार्य
+            'Chapter 1: Images and Animation':
+              name: 'अध्याय 1: चित्र और एनिमेशंस'
             'null':
               name: शून्य
         coursef-ramp:
@@ -646,6 +884,13 @@ hi:
           assignment_family_title: कोर्स C
         coursed-2017:
           stages:
+            'Algorithms: Graph Paper Programming':
+              description_teacher: तस्वीरें चित्रित करने के लिए एक-दूसरे को प्रोग्रामिंग
+                करके, छात्र यह समझना शुरू करेंगे कि प्रोग्रामिंग वास्तव में किस बारे
+                में है। एक मौजूदा तस्वीर को दुबारा बनाने के प्रयास में ग्राफ पेपर
+                पर वर्गों में रंग भरने के लिए छात्रों द्वारा एक-दूसरे को निर्देश देकर
+                कक्षा शुरू होगी।  यदि समय हो, तो पाठ को ऐसे चित्रों के साथ समाप्ति
+                किया जा सकता है, जो छात्र खुद बनाते हैं।
             Nested Loops:
               name: नेस्टड लूप्स
           title: कोर्स D
@@ -660,6 +905,13 @@ hi:
               name: फॉर लूप फन
             Songwriting with Parameters:
               name: मापदंडों के साथ गीत लिखना
+            'Functions: Songwriting':
+              description_teacher: कंप्यूटर साइंस की दुनिया में सबसे बड़ी संरचनाओं
+                में एक फंक्शन है।  फंक्शन्स (कभी-कभार इन्हें प्रक्रियाएं कहा जाता
+                है) लघु प्रोग्राम हैं, जिन्हें आप अपने बड़े प्रोग्राम के अंदर बार-बार
+                उपयोग कर सकते हैं। यह पाठ सहज ज्ञान से यह समझने में छात्रों की मदद
+                करेगा कि कोड के भागों को फंक्शन में मिलाना इतना उपयोगी अभ्यास क्यों
+                है।
             Building a Foundation:
               name: नींव का निर्माण करना
             Nested Loops:
@@ -676,6 +928,14 @@ hi:
           assignment_family_title: कोर्स F
           description_short: कंप्यूटर साइंस के मूल सिद्धांतों में सभी अवधारणाएं सीखें
             और अपनी खुद की कला, कहानी या गेम बनाएं।
+        csdnovice:
+          stages:
+            Wrap Up:
+              name: समाप्ति
+        cspnovice:
+          stages:
+            Wrap Up:
+              name: समाप्ति
         express-2017:
           stages:
             Introduction:
@@ -700,6 +960,8 @@ hi:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'वास्तविक-जीवन की कलन विधियां: पौधा उगाना'
+            Spelling Bee:
+              name: उच्चारण मधुमक्खी
         subgoal-labels-opt-in:
           stages:
             Thanks:
@@ -931,6 +1193,8 @@ hi:
               name: युग्मक ब्रैस्लेट्स
         csd6-2018:
           stages:
+            Functions with Parameters_:
+              name: मापदंडों के साथ फंक्शन
             Functions with Parameters:
               name: मापदंडों के साथ फंक्शन
         coursee-2018:
@@ -944,6 +1208,12 @@ hi:
               name: परिचय
             'Functions: Songwriting':
               name: गीत लेखन
+              description_teacher: कंप्यूटर साइंस की दुनिया में सबसे बड़ी संरचनाओं
+                में एक फंक्शन है।  फंक्शन्स (कभी-कभार इन्हें प्रक्रियाएं कहा जाता
+                है) लघु प्रोग्राम हैं, जिन्हें आप अपने बड़े प्रोग्राम के अंदर बार-बार
+                उपयोग कर सकते हैं। यह पाठ सहज ज्ञान से यह समझने में छात्रों की मदद
+                करेगा कि कोड के भागों को फंक्शन में मिलाना इतना उपयोगी अभ्यास क्यों
+                है।
             Internet:
               name: इंटरनेट
             Crowdsourcing:
@@ -989,6 +1259,22 @@ hi:
           stages:
             While Loops:
               name: व्हाइल लूप्स
+        csd-novice-18:
+          stages:
+            Wrap Up:
+              name: समाप्ति
+        csd-apprentice-18:
+          stages:
+            Wrap Up:
+              name: समाप्ति
+        csp-novice-18:
+          stages:
+            Wrap Up:
+              name: समाप्ति
+        csp-apprentice-18:
+          stages:
+            Wrap Up:
+              name: समाप्ति
         pre-express-2018:
           stages:
             'Debugging: Unspotted Bugs':
@@ -997,6 +1283,8 @@ hi:
               name: स्टेवी और बड़ा प्रोजेक्ट
             'Real-life Algorithms: Plant a Seed':
               name: 'वास्तविक-जीवन की कलन विधियां: पौधा उगाना'
+            Spelling Bee:
+              name: उच्चारण मधुमक्खी
             Move It, Move It:
               name: इसे मूव करें, इसे मूव करें
             Your Digital Footprint:
@@ -1010,6 +1298,10 @@ hi:
             Dance Party:
               name: डांस पार्टी
           title: डांस पार्टी
+        aquatic:
+          title: 'Minecraft: समुद्री यात्रा जलचर'
+          description_short: पड़ताल के लिए अपनी रचनात्मकता और सवाल हल करने के कौशलों
+            का उपयोग करें और कोड के साथ पानी के नीचे की दुनिया का निर्माण करें।
         dance--draft:
           stages:
             Dance Party:
@@ -1081,6 +1373,12 @@ hi:
               name: कार्डों के साथ सापेक्ष
             'Functions: Songwriting':
               name: गीत लेखन
+              description_teacher: कंप्यूटर साइंस की दुनिया में सबसे बड़ी संरचनाओं
+                में एक फंक्शन है।  फंक्शन्स (कभी-कभार इन्हें प्रक्रियाएं कहा जाता
+                है) लघु प्रोग्राम हैं, जिन्हें आप अपने बड़े प्रोग्राम के अंदर बार-बार
+                उपयोग कर सकते हैं। यह पाठ सहज ज्ञान से यह समझने में छात्रों की मदद
+                करेगा कि कोड के भागों को फंक्शन में मिलाना इतना उपयोगी अभ्यास क्यों
+                है।
             Internet:
               name: इंटरनेट
             Crowdsourcing:
@@ -1153,6 +1451,8 @@ hi:
               name: इसे मूव करें, इसे मूव करें
             Your Digital Footprint:
               name: आपका डिजीटल फुटप्रिंट
+            Spelling Bee:
+              name: उच्चारण मधुमक्खी
         removed19:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1211,6 +1511,14 @@ hi:
           stages:
             Graph Paper Programming:
               name: ग्राफ पेपर प्रोग्रामिंग
+        fit2019-novice:
+          stages:
+            Wrap Up:
+              name: समाप्ति
+        fit2019-apprentice:
+          stages:
+            Wrap Up:
+              name: समाप्ति
         csd2-pilot:
           stages:
             Lists:
@@ -1239,3 +1547,26 @@ hi:
           stages:
             Dance Party:
               name: डांस पार्टी
+        k5-onlinepd-copy:
+          stages:
+            Getting Started:
+              name: शुरू करें
+            Next Steps:
+              name: अगले चरण
+            Sequencing:
+              name: अनुक्रमण
+            Loops:
+              name: फंदे
+            Conditionals:
+              name: शर्तें
+            Events:
+              name: घटनाएँ
+            Functions:
+              name: कार्य
+            Variables:
+              name: चर
+            For Loops:
+              name: फॉर लूप्स
+        dance-extras-2019:
+          title: डांस करते रहें
+          description: विस्तृत परियोजना योजनाओं के साथ पहले घंटे से आगे जाएं।

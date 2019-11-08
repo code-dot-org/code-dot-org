@@ -1,7 +1,5 @@
 ---
 title: Proba de sustinere a Tehnologiei computerelor si programarii si a evenimentului Hour of Code
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

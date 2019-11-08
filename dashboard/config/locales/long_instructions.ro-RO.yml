@@ -332,8 +332,8 @@ ro-RO:
       4-5 Artist Patterns 4: Acest romb are laturi de 50 de pixeli și unghiuri de
         120 și 60 de grade. Folosește o buclă pentru a îl desena.
       4-5 Artist Patterns 5: "Repetă acest program pentru a face un rând de 6 romburi.
-        \n\nObservă ca am schimbat codul pentru diamant ca să se repete de 3 ori în
-        loc de 2 - de ce crezi că am procedat așa?"
+        \n\nObservă ca am schimbat codul pentru romb ca să se repete de 3 ori în loc
+        de 2 - de ce crezi că am procedat așa?"
       4-5 Artist Patterns 6: De câte ori ai nevoie să repeți acest bloc pentru a desena
         întreaga grilă de romburi?
       4-5 Artist Patterns 7: Hai să modificăm codul de la ultimul puzzle pentru a
@@ -464,17 +464,421 @@ ro-RO:
       4-5 While Loops 4: "Oau, priveşte asta! \n\nNu ştiu de câte lopeţi cu pământ
         am nevoie pentru a o umple. \\\nPoţi scrie un program care foloseşte blocul
         \"umple\" ca să umple gaura până la nivelul solului?  "
+      CSD Problem Solving Process Video: |-
+        ## Întrebări de luat în considerare
+
+        -   Cum ați urmat procesul de rezolvare a problemelor în ultima lecție?
+        -   Cum ai putea folosi acest proces pe o problemă din viața ta de zi cu zi?
       CSD U6 iter predict bubbles: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       CSD U6 iter predict bubbles_2018: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       CSD U6 iter predict bubbles_2019: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      CSD What Makes a Computer a Computer Video_2019: |-
+        ## Întrebări la care să te gândești
+
+        -   Ce a făcut computerele diferite de mașinile care erau înaintea lor?
+        -   Gândește-te la ceva ce faci pe computer. Ce fel de intrare, ieșire, stocare și procesare se întâmplă?
+      Course 4 Artist 1: "Ajută-mă să desenez o cutie. \\\n(Fiecare linie are lungimea
+        de 200 pixeli) \n\n<br/><br/>"
+      Course 4 Artist 10: "<img src=\"https://images.code.org/c876143212d195192013582f57c6df04-image-1445625392518.36.18.png\"
+        width=\"150px;\" style=\"mix-blend-mode: multiply;\" />\n\n**Timp de joacă:**
+        Aici este un cod pentru o formă interesantă. \n\nCe se întâmplă când o repeţi
+        de mai multe ori, rotind după fiecare iteraţie? \n\nObservă că rotirile în
+        această formă se adună până la _420 de grade_, ceea ce înseamnă că atunci
+        când artistul tău a terminat de desenat, va fi îndreptat într-o direcţie diferită
+        decât la început. Acea nouă direcţie este cu exact _60 de grade_ la _dreapta_
+        faţă de unde ai pornit.\n\n<hr/>\n\n<h4>\n<details>\n<summary><b>Repetă 4</b></summary>\n<br/><summary>
+        \n\nDacă vrei să te întorci complet în doar 4 repetări, ai nevoie ca artistul
+        să se întoarcă în total **360 grade/4 = 90 grade** de fiecare dată. Poţi face
+        asta adăugând un bloc suplimentar `întoarcere dreapta cu 30 de grade` în bucla
+        exterioară (odată ce **60+30 = 90**.)\n\n<br/>\n<img src=\"https://images.code.org/9da67a628ed72e87520a02a0d917e2af-image-1440132370113.44.12.png\"
+        width=\"500px;\" style=\"mix-blend-mode: multiply;\" />\n<br/><br/>\n</details>\n</h4>\n\n<h4>\n<details>\n<summary><b>Repetă
+        6</b></summary>\n<br/>\n\nCând repeţi forma aşa cum e de 6 ori, obţi o rotaţie
+        totală de **6x60 grade** care reprezintă un cerc complet de **360 de grade**.\n\n<img
+        src=\"https://images.code.org/b79f96b87097ce3afe8a6a5608d04e36-image-1440132287456.44.27.png\"
+        \ width=\"500px;\"  style=\"mix-blend-mode: multiply;\" />\n</details>\n</h4>\n\n<h4>\n<details>\n<summary><b>Repetă12</b></summary>\n\n<br/>\n\nDacă
+        vrei să repeţi imaginea de 12 ori, ai nevoie ca artistul să se rotească în
+        total **360 grade/12 = 30 grade** la fiecare repetare. Asta înseamnă că va
+        trebui să aranjezi artistul la loc cu `întoarce stânga 30 de grade` înainte
+        să repeţi forma din nou.\n\n<br/><br/>\n<img src=\"https://images.code.org/ad254952522674496918561096817c66-image-1440132424792.44.01.png\"
+        width=\"500px;\" style=\"mix-blend-mode: multiply;\" />\n\n</details>\n</h4>\n\nAcum
+        e rândul tău! Poţi recrea fiecare imagine repetând forma iniţială?  "
+      Course 4 Artist 11: "<img src=\"https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png\"
+        width=\"200px\"/>\n\nAcum o provocare!  \n\nAici e un model care foloseşte
+        doar blocuri pe care le-ai văzut deja. Poţi să-şi dai seama cum să-l refaci?
+        Poţi face mai multe încercări. E posibil să nu reuşeşti din prima.\n\nForma
+        repetată e aproape identică cu cea din problema anterioara, cu diferenţa că
+        lungimea folosită în prima buclă e un pic mai mică. "
+      Course 4 Artist 12: |-
+        <img src="https://images.code.org/70795d84048767ae7fb65883f476b27c-image-1440050836837.01.09.png" width="250px"/>
+
+        Inspiraţie pentru joc liber: Acum ai învăţat tot ce ai nevoie să ştii pentru a crea un model ca acesta! Dacă această imagine te inspiră, încearcă să faci ceva similar. Altfel, creează ceva pe cont propriu.
+      Course 4 Artist 13: Te mai joci? Aici este o pânză albă unde poţi schiţa orice
+        doreşti!
+      Course 4 Artist 2: |-
+        Poţi folosi o buclă pentru a desena pătratul gri? \
+        (Fiecare latură are 300 pixeli lungime)
+      Course 4 Artist 20: "Te mai joci? \n\nAici este o pânză albă unde poţi crea
+        orice doreşti!"
+      Course 4 Artist 3: "Încearcă să îţi dai seama ce se întâmplă dacă rulezi acest
+        cod (sau apeşi \"Rulează\" pentru a-l testa).  \n\nApoi, rulează-l câte ori
+        este necesar pentru a termina desenul."
+      Course 4 Artist 4: |-
+        Câte grade are un cerc?\
+        Completaţi construcţia repetitivă cu acel număr necesar pentru a crea un cerc de culori.
+      Course 4 Artist 5: "Desenează cealaltă jumătate a desenului astfel încât să
+        fie simetric. \nTriunghiurile sunt echilaterare cu lungimea de 50 pixeli.
+        \n\nEste posibil să fie necesar să rulezi codul de câteva ori pentru a găsi
+        \ toate blocurile care să fie adăugate."
+      Course 4 Artist 6: Completează codul pentru a desena aceste trei triunghiuri
+        echilaterale.
+      Course 4 Artist 7: 'Acum introdu această buclă în interiorul unei alte bucle
+        pentru a desena 10 triunghiuri. '
+      Course 4 Artist 8: Desenează acest soare prin repetarea de mai multe ori a întregii
+        secvențe de cod.
+      Course 4 Artist 8a: Îți amintești această formă? Acum o să te lăsăm să o construiești
+        fără să îți dăm nici un bloc pentru început!
+      Course 4 Artist 9: 'Repetă acest model de 10 ori şi asigură-te să virezi după
+        fiecare formă care este desenată. '
+      Course 4 Artist Binary 1: "Aici avem o funcție care ia un şir binar format din
+        1 şi 0 şi îndrumă artistul să le urmeze de la stânga la dreapta, de sus în
+        jos. \n\nArtistul va umple spațiile când vede 1 şi le va ignora când vede
+        0.\n\n**Rulează codul pentru a vedea cum artistul folosește şirul binar pentru
+        a desena acest model.**"
+      Course 4 Artist Binary Free Play 2b: "<img src=\"https://images.code.org/0a30f23ff6138828d053267719d34fa8-image-1444435986654.00.22.png\"
+        width=\"250px\"/>\n\n**Inspiraţie pentru joc liber:** Acum ai învăţat tot
+        ce ai nevoie să ştii pentru a crea un model ca acesta! \n\nDacă această imagine
+        te inspiră, încearcă să faci ceva similar. Altfel, creează ceva pe cont propriu.\n<br/>"
+      Course 4 Artist Binary pre1: "Codul binar este o metodă de a reprezenta informaţia
+        folosind doar două opţiuni. În acest caz,, <b>oprit</b> şi <b>pornit</b>.\n<br/>\nAici
+        vom folosi numărul <b>0</b> ca şi cod pentru \"oprit\" şi numărul <b>1</b>
+        ca şi cod pentru \"pornit\".\n\n<hr/>\n\nAm pus la dispoziţie o grilă de pixeli
+        prin care te poţi plimba şi face modele activând doar anumite pătrate. \n\n<b>Foloseşte
+        blocurile de mai jos pentru a face artistul să deseneze \"01010101\" în binar
+        pe prima linie.</b>"
+      Course 4 Artist For Loops 1: Folosește un bloc "repetă" pentru a desena acest
+        triunghi de 50 de pixeli lăţime.
+      Course 4 Artist For Loops 11: "Îți amintești cum am folosit o variabilă pentru
+        a controla numărul laturilor unei forme? Vom face acelaşi lucru acum cu variabila
+        `contor`. \n\nAcest model începe cu un triunghi și adaugă pe rând câte o latură
+        până când desenează un decagon (10 laturi). Fiecare latură trebuie să aibă
+        o lungime de 100 de pixeli. \n\nCum vei folosi variabila `contor` din bucla
+        `pentru` pentru a recrea acest desen?"
+      Course 4 Artist For Loops 11a: "Hai să le punem la un loc! \n\nFolosind cunoştiinţele
+        despre bucle `pentru` şi variabila \"contor\", crează acest desen unde fiecare
+        formă are două laturi în plus faţă de ultima. Asigură-te că fiecare latură
+        este de 10 ori mai lungă ca numărul de laturi ale poligonului.\n\nFoarte puţin
+        din cod este scris deja."
+      Course 4 Artist For Loops 14: "Dacă roteşti puţin mai mult sau mai puţin decât
+        ar trebui în mod normal pentru o formă, vei crea o un efect interesant. \n\nÎncearcă
+        folosind nişte cod de la nivelul anterior, dar rotind 89 grade pentru a crea
+        o spirală pătrată răsucită."
+      Course 4 Artist For Loops 15: '**Joc liber:** Încearcă să faci câteva desene
+        ale tale folosind buclele "pentru". Am adăugat câteva variabile folositoare
+        pentru tine.'
+      Course 4 Artist For Loops 2: "Am pus codul pentru a desena un triunghi într-o
+        buclă care numără de la 50 la 100 din 10 în 10. \n\n**Notă:** Aruncă o privire
+        la cum este construit codul _înainte_ de a apăsa \"Rulează\"."
+      Course 4 Artist For Loops 3: Foloseşte problema anterioara ca un model pentru
+        a rezolva această problemă. Cel mai mic triunghi are laturile de 20 pixeli,
+        cel mai mare are laturile de 200 pixeli şi fiecare triunghi este cu 20 pixeli
+        mai mare decât ultimul.
+      Course 4 Artist For Loops 4: 'Cum ai modifica ce ai învăţat pentru a desena
+        aceste pătrate? Încep cu 15 pixeli lungime, cel mai lung are 300 pixeli şi
+        fiecare pătrat este cu 15 pixeli mai mare decât cel dinainte. '
       Course 4 Artist For Loops 6a: Fă trei modificări mici la codul de la ultimul
         nivel pentru a obţine aceast lucru!
+      Course 4 Artist For Loops 8: "O singură modificare a programului de la imaginea
+        precedentă poate crea acest desen. Poţi să-ţi dai seama ce modificare este?\n\nIndicaţie:
+        Trebuie să ştergi ceva!  "
+      Course 4 Artist For Loops Challenge: |-
+        **Provocare:** Poţi să-ţi dai seama cum să foloseşti toate lucrurile pe care le-ai învăţat pentru a crea această imagine a unor poligoane, toate cu laturi de 40 de pixeli?
+
+        Adu-ţi aminte, pentru a crea o spirală, nu trebuie să închizi poligonul. Aceasta înseamnă că fiecare formă va trebui să aiba cu o latură mai puţin decât de obicei.
+      Course 4 Artist For Loops inspire: |-
+        <br/><br/>
+        <img src="https://images.code.org/9b5897e059bb29bd2faf8504659a3cfc-image-1440719685627.49.33.png" width="250px"/>\
+        <br/><br/>
+
+        **Inspiraţie pentru joc liber:** Acum ai învăţat tot ce ai nevoie să ştii pentru a crea un model ca acesta! Dacă această imagine te inspiră, încearcă să faci ceva similar. Altfel, creează ceva pe cont propriu.
+      Course 4 Artist Functions Inspiration: "<img src=\"https://images.code.org/cf373e03bede480ae54aec72ce823454-image-1442951867535.54.11.png\"
+        width=\"250px\"/>\n\n**Inspiraţie pentru joc liber:** Acum ai învăţat tot
+        ce ai nevoie să ştii pentru a crea un model ca acesta! \n\nDacă această imagine
+        te inspiră, încearcă să faci ceva similar. Altfel, creează ceva pe cont propriu. "
+      Course 4 Artist Functions challenge: "<img src=\"https://images.code.org/69f1c2b415f907c86aaa6ed2534c3682-image-1442870371171.13.38.png\"
+        width=\"250px\"/>\n\n**Nivel provocare:** Foloseşte ce ai învăţat până acum
+        pentru a îţi da seama cum să faci desenul de mai sus.  "
+      Course 4 Artist Inspire: "<img src=\"https://images.code.org/b5e28b084cb331ee030ea3853ed921bd-image-1440060815818.51.21.png\"
+        width=\"250px\"/>\n\n**Inspiraţie pentru joc liber:** Acum ai învăţat tot
+        ce ai nevoie să ştii pentru a crea un model ca acesta! Dacă această imagine
+        te inspiră, încearcă să faci ceva similar. Altfel, creează ceva pe cont propriu. "
+      Course 4 Artist Vars 1: |-
+        Hai să desenăm un triunghi echilateral.
+
+        Trebuie să aibă fiecare latură de exact 100 de pixeli lungime.
+
+        <br/>
+      Course 4 Artist Vars 11: "Iată aici un program mai complicat folosind aceleaşi
+        concepte din problema anterioară - la cât ar trebui să setezi variabila \"laturi\"
+        pentru a desena această imagine formată din pătrate?\n\n<p style=\"font-size:small;
+        padding: 15px 15px 15px 40px; background-color:#dcf3f3; border-radius:10px;\">\n\tPentru
+        distracţie: Încearcă să foloseşti numere diferite pentru a vedea ce se întâmplă
+        cu modelul!\n</p>"
+      Course 4 Artist Vars 12: "Hai să setăm variabila \"laturi\" la 5. Cu cât adăugam
+        mai multe laturi la acest algoritm, cu atât acest model devine mai mare! \n\nObservă
+        că există nouă variabilă numită \"lungime\". \nAcum o putem folosi pe aceasta
+        oriunde avem un \"mută înainte\". \n\nSetează variabila \"lungime\" la 75
+        pentru acestă formă."
+      Course 4 Artist Vars 13: "Când o formă are mai multe laturi, fiecare latură
+        trebuie să fie mai scurtă dacă doriţi ca întregul model să se încapă pe ecran.\n\nHaideţi
+        să recreăm algoritmul pentru acest model extraordinar, dar în loc să adăugăm
+        manual variabila 'lungime', haideţi să folosim un bloc matematic cu variabila
+        \"laturi\" pentru a ne asigura că fiecare formă se potriveşte corect. \n\nPerimetrul
+        fiecărui poligon este 300 de pixeli."
+      Course 4 Artist Vars 14: |-
+        **Joc liber**: Ia te uită! Acum algoritmul tău este cuprins în cadrul unei bucle suplimentare. Experimentează schimbarea valorilor celor două variabile ale tale pentru a desena modele super tari.
+
+        Pentru mai multe rezultate, încearcă să te joci şi cu culori! Foloseşte culori aleatoare în interiorul buclelor ca să vezi cum se schimbă modelul tău.
+      Course 4 Artist Vars 2: În loc de a folosi "mută înainte cu 150", blocul "mută"
+        se va referi acum la variabila numită "lungime". Poți seta "lungime" la 150
+        pentru a desena acest triunghi nou?
+      Course 4 Artist Vars 4: Acum vreau să fac un dreptunghi care este de două ori
+        mai înalt pe cât este de lat. Avem o variabilă numită "lățime" care este setată
+        la 100. Poți folosi blocurile matematice pentru a completa codul?
+      Course 4 Artist Vars 6: |-
+        Aici este un cod care poate desena un poligon regulat.
+
+        Există o nouă variabilă numită "laturi" care e setată cu 4.
+
+        Poţi folosi variabila "laturi" (împreună cu un bloc matematic) ca să virezi cu valoarea corecta indiferent de câte laturi are poligonul?
+      Course 4 Artist Vars 7: "Foloseşte ce ai învăţat în ultima problemă pentru a
+        crea acest hexagon folosind variabila \"laturi\". \n\nVezi cum ai putea modifica
+        o singură valoare pentru a desena un triunghi, pătrat, pentagon sau octogon?"
+      Course 4 Artist Vars 8: "**Joc liber:** Experimentează cu numărul de laturi
+        pe care le are această formă. Poţi schimba algoritmul astfel încât dimensiunea
+        globală a formei să rămână aceeaşi, indiferent de cât de multe laturi are
+        aceasta? "
       Course 4 Bee 1: "Albina nu poate ști ce este sub nor! \n\nFoloseşte blocul `dacă`
         pentru a verifica dacă este o floare sub nor. \n\nStrânge nectarul o dată
         **DOAR** dacă este o floare."
+      Course 4 Bee 2: "Foloseşte blocul \"dacă/altfel\" pentru a verifica fiecare
+        obiect pentru a vedea dacă este o floare sau un fagure. \n\nDacă este o floare,
+        strănge nectarul... altfel, fă miere!"
       Course 4 Bee 3: "Obiectul necunoscut este fie o floare, fie un fagure. \n\nDe
         data aceasta, utilizează blocul `dacă/altfel` pentru a colecta nectar **dacă**
         este o floare, **altfel** fă miere (pentru că atunci va fi un fagure)."
+      Course 4 Bee Params 1: Scrie o secvenţă pentru a strânge tot nectarul folosind
+        `ia de 3 ori nectar` care roteşte, mută pentru a colecta nectar şi apoi întoarce
+        la locaţia de la început.
+      Course 4 Bee Params 2: Modifică funcţia "obţine de 3 ori nectar" astfel încât
+        mă facă să mă întorc la dreapta în loc de stânga către flori.
+      Course 4 Bee Params 3: "Acum sunt flori pe ambele părți! \n\nAm adăugat variabilele
+        \"stânga\" şi \"dreapta\" pentru a le folosi si am adaugat funcției \"strânge
+        de 3 ori nectar\" un parametru numit \"direcție\". \n\n**Editează funcţia
+        astfel încât albina sî se întoarcă în direcţia corectă când variabilele \"stânga\"
+        sau \"dreapta\" sunt transmise funcţiei.**"
+      Course 4 Bee Params 5: Hai să începem de la zero - poți crea o funcție nouă
+        numită "obține de 5 ori nectar" cu un parametru de direcție?
+      Course 4 Bee Params 6: "Nu ar fi frumos dacă am putea strănge tot nectarul cu
+        o singură funcţie? \n\nÎncearcă să adăugi un parametru nou la funcţia ta numit
+        \"unităţi de nectar\" pentru a controla cantitatea de nectar de colectat.
+        Probabil vei dori și să redenumești şi funcţia!"
+      Course 4 Bee Params 7: |-
+        Încearcă să aduni tot nectarul folosind noua funcţie creată de tine.
+
+        <br/>
+      Course 4 Bee Params 8: "**Provocare:** Acum există și miere de care să ne ocupăm!
+        \n\nRescrie funcţia ta să primească atât numărul de unităţi de miere cât şi
+        numărul de unităţi de nectar.  Cum ai folosi aceste numere pentru a decide
+        ce ar trebui să faci?"
+      Course 4 EC 1a: "**Provocare extremă:** Nici o regulă. Nici un indiciu. Doar
+        provocarea!"
+      Course 4 EC 1b: "**Provocare extremă:** Nici o regulă. Nici un indiciu. Doar
+        provocarea!"
+      Course 4 EC 2a: "**Provocare extremă:** Nici o regulă. Nici un indiciu. Doar
+        provocarea!"
+      Course 4 EC 2b: "**Provocare extremă:** Nici o regulă. Nici un indiciu. Doar
+        provocarea!"
+      Course 4 EC 2c: "**Provocare extremă:** Nici o regulă. Nici un indiciu. Doar
+        provocarea!"
+      Course 4 Maze 4: Foloseşte blocul "repetă" pentru a folosi mai puţine blocuri
+        când rezolvi această problemă...
+      Course 4 Play Lab Params 1: "Aici avem o funcţie numită `sari` care determină
+        personajul tău să sară 100 pixeli în sus. \n\nRulează programul şi foloseşte
+        funcţia \"sari\" pentru a strânge toate steagurile mutând câinele cu săgeţile."
+      Course 4 Play Lab Params 10: |-
+        Am adăugat o ultimă funcţie pentru tine.
+
+        <hr/>
+
+        Foloseşte comanda "dacă" pentru a-ţi programa jocul să apeleze funcţia `nivel_următor` doar când `scorul_jucătorului` devine mai mare decât un anumit număr.
+
+        </h4>
+
+        *De exemplu: `scorul_jucătorului` > 6*
+
+        <hr/>
+
+        _Joacă jocul şi treci la nivelul 3 pentru a trece la următoarea problemă._
+      Course 4 Play Lab Params 2: "Acum avem steaguri care sunt prea sus pentru săritura
+        noastră! Haide să folosim ambele săgeți \"sus\" și \"jos\" astfel încât să
+        putem avea mai multe înălțimi pentru sărituri.\n\nTrebuie să adăugăm un parametru
+        \"înălțime\" funcției de sărit. \n\n-   Săgeata sus ar trebui să facă câinele
+        să sară 200 pixeli \n-   Săgeata jos ar trebui să-l facă să sară doar 100
+        pixeli. "
+      Course 4 Play Lab Params 3: "Am adăugat un alt parametru funcţiei de sărit pentru
+        a o putea folosi cu alte personaje. Fiecare personaj este reprezentat de un
+        număr, începând de la unu. \n\nModifică funcţia \"sari\" pentru a folosi parametrul
+        \"actor\" şi a face personajul corect să sară."
+      Course 4 Play Lab Params 4: |-
+        Aici este o funcţie numită `patrulează`.
+
+        Editează funcţia `patrulează` pentru a muta pisica în sus cu 400 pixeli şi apoi în jos cu 400 pixeli.
+      Course 4 Play Lab Params 5: Editează funcţia `patrulează` pentru a adăuga un
+        parametru `actor` pentru a o putea apela pentru fiecare dintre personajele
+        de pe ecran. Aminteşte-ţi, personajele corespund numerelor 1, 2 si 3.
+      Course 4 Play Lab Params 6: Adaugă un alt parametru numit `viteză` în funcţia
+        `patrulare`. Incearcă să utilizezi un bloc `setează viteza` împreună cu noul
+        parametru `viteză` pentru a ajuta pinguinul să ia ambele steaguri înainte
+        ca alte personaje să ia vreunul.
+      Course 4 Play Lab Params 7: "Hai să ne distrăm! Uită-te la codul furnizat pentru
+        a vedea dacă îţi dai seama ce face fiecare bloc de instrucţiuni. \n\nCând
+        eşti gata, foloseşte săgeţile pentru a controla câinele şi a aduna toate steagurile.\n\n**NOTĂ:**
+        Nu trebuie să faci nici o schimbare în program"
+      Course 4 Play Lab Params 8: Foloseşte blocul "când personajul atinge" pentru
+        a trimite câinele înapoi în colţul din stânga-sus DOAR dacă acesta atinge
+        pe oricare dintre celelalte personaje.
+      Course 4 Play Lab Params 9: |-
+        Aici este jocul nostru dintr-o etapa anterioară, dar majoritatea codului este ascuns. Există o funcţie nouă `înscrie_puncte`.
+
+        * * *
+
+        #### Editaţi funcţia astfel încât noul parametru 'puncte' să fie adăugat la variabila `scorul_jucătorului`.
+
+        #### Variabila `scorul_jucătorului` ar trebui să crească de fiecare data când Câinele atinge Pisica cu placinte şi descreşte când pisica nimereşte câinele cu un sandwich.
+
+        * * *
+
+        _Notă: Cand ai terminat, apasă "Rulează" pentru a juca. Când câinele înscrie 6 puncte, vei trece la următorul puzzle._
+      Course 4 Play Lab Vars 1: "De data aceasta nu trebuie să scrii niciun cod, doar
+        apasă \"Rulează\" pentru a juca jocul! \n\nÎn acest joc, tu eşti câinele care
+        încearcă să adune mai multe steaguri decât pisica. Foloseşte săgeata jos pentru
+        a controla câinele. Apăsă \"Termină\" când doreşti terminarea jocului."
+      Course 4 Play Lab Vars 2: Cursa din ultima problemă nu a fost foarte corectă!
+        Schimbă variabila "viteză\_câine" pentru a fi sigur că poţi aduna mai multe
+        steaguri decât pisica. Primul care adună 10 steaguri câştigă!
+      Course 4 Play Lab Vars 3: |-
+        Aici este un nou tip de joc!
+
+        Nu trebuie să schimbi nimic la acest nivel.
+
+        **Instrucţiuni:** Foloseşte săgeţile stânga şi dreapta pentru a mişca şi săgeata sus pentru a sări. Vezi dacă poţi strânge toate steagurile.
+      Course 4 Play Lab Vars 4: 'Acum folosim variabila "înălţime" pentru a controla
+        cât de sus poate sări câinele. Actualizează variabila "înălţime" astfel încât
+        câinele poate sări suficient de sus pentru a ajunge la toate steagurile. '
+      Course 4 Play Lab Vars 6: "În jocul nostru, cum ar trebui să strângem puncte?
+        \n\n1.  Adaugă 1 punct la variabila \"puncte\" de fiecare dată când câinele
+        loveşte pisica cu o bucată de plăcintă. \n\n2.  Foloseşte evenimentul \"când
+        actorul 2 atinge orice\" pentru a actualiza scorul. Poţi să incrementezi variabila
+        setând \"puncte = puncte + 1\". \n\n3.  Creşteţi scorul până la 10 pentru
+        a termina nivelul.\n\n**Notă:** Foloseşte săgeata dreapta pentru a arunca
+        placinta!"
+      Course 4 Play Lab Vars 7: "Frumos, acum hai să ne asigurăm că acest joc nu este
+        prea uşor!\n\nDe fiecare dată când câinele (actor 1) este lovit de pisică
+        (actor 2) cu un sandvich, tu ar trebui să pierzi un punct. \n\nÎncepe cu 10
+        puncte astfel încât să nu fie prea greu. Lasă scorul să scadă de la 10 la
+        0 pentru a trece la nivelul următor."
+      Course 4 Play Lab Vars 9: "Timp pentru joc liber! Aici sunt toate variabilele
+        cu care ne-am jucat până acum în această etapa, şi câteva în plus în caz că
+        ai nevoie de ele. \n\nObservă că acum avem atât de multe blocuri disponibile
+        încât au nevoie de organizare! Aici, Am l-am pus pe fiecare în categoria lui.
+        Petrece puţin timp pentru a explora tot ce e disponibil. Când ai terminat,
+        fă un joc sau o poveste folosind bucle, variabile si evenimente.  \n\n_Indiciu:
+        glisează în jos pentru a vedea toate comenzile din spaţiul de lucru._"
+      Course 4 Play Labs For Loops 1: Hai să facem câinele să pronunțe fiecare număr
+        de la 1 la 100. Foloseşte o buclă `pentru` şi un bloc contor pentru a pronunţa
+        variabila contor de fiecare dată când bucla rulează.
+      Course 4 Playlab For Loop Freeplay: "**Joc liber:** Folosește tot ce ai invățat
+        până acum pentru a crea un joc care include o buclă `pentru`!"
+      Course 4 Playlab For Loops 4b: "Acum cele două personaje se vor întrece!\n\nFiecare
+        dintre ele se va mișca o dată un număr de pași egal cu variabila contor, dar
+        contorul fiecăruia va avea valori diferite din cauza buclelor `pentru`. \n\nPoți
+        schimba **incrementul** într-una dintre bucle, astfel încât cursa să se termine
+        la egalitate?"
+      Course 4 Playlab For Loops 5b: Ajustați intervalul acestor bucle 'pentru' astfel
+        încât cele două personaje să termine în exact același loc.
+      Course 4 Playlab For Loops 6b: "Acum vom folosi buclele `pentru` într-un mod
+        complet diferit!\n\nAcest joc devine greu repede pentru că timpul dintre dispariţii
+        se micşorează rapid!\n\n<hr/>\n\n**Editează aceasta buclă `pentru` pentru
+        a crea un joc care e distractiv de jucat!**  \n\n<hr/>\n\nApasă \"Rulează\"
+        şi apasă pe Doamna Unicorn de câte ori poţi.  Poţi depăşi scorul nostru de
+        24? "
+      Course 4 SCF 1: "**Super Provocare Funcţii:** Utilizează funcţiile sugerate
+        pentru a desena patru rânduri de hexagoane. Observi cum rândurile noastre
+        pare sunt deplasate către dreapta?"
+      Course 4 SCF 1a: "**Super Provocare Funcţii:** Îţi poți da seama cum să strângi
+        tot acest nectar cu cât mai puţine blocuri posibil?"
+      Course 4 SCF 1b: "**Super Provocare Funcţii:** Îţi poți da seama cum să strângi
+        toată această miere cu cât mai puţine blocuri posibil?"
+      Course 4 SCF 2: "**Super Provocare Funcţii:** Utilizează ceea ce ai învățat
+        în cadrul nivelului precedent pentru a desena o imagine ca aceasta. \n\n_Notă:
+        Codul devine mai simplu dacă foloseşti parametri._  "
+      Course 4 SCF 3: "**Super Provocare Funcţii:** Foloseşte ce ai învăţat la nivelele
+        anterioare pentru a desena o imagine ca aceasta.\n\n_Notă: Codul devine mai
+        simplu dacă adaugi parametri._\n\n<br/>\n<img src=\"https://images.code.org/d3d6a51fafdcc0a09a5c6b0e0f3c2b92-image-1446239805818.08.59.png\"
+        width=\"300px\"/>\n<br/>  "
+      Course 4 SCFL 1: "**Super Provocare Bucle Pentru:** Rezolvă această problemă
+        cu numărul minim posibil de blocuri."
+      Course 4 SCFL 1a: "**Super Provocare Bucle Pentru:** Poţi să-l duci pe Scrat
+        la ghinda lui folosind cât mai puţine blocuri posibil?"
+      Course 4 SCFL 1b: "**Super Provocare Bucle Pentru:** Poţi să-l duci pe Scrat
+        la ghinda lui folosind cât mai puţine blocuri posibil?"
+      Course 4 SCFL 2: |-
+        **Super Provocare Bucle Pentru:** Rezolvă această problemă cu numărul minim posibil de blocuri.\
+        <br/>
+      Course 4 SCFL 3: |-
+        **Super Provocare Bucle Pentru:** Poţi să-ţi dai seama cum să recreezi acest desen?
+
+        <img src="https://images.code.org/724b2efa8aefe863bd0d6491a3f1590f-image-1445563707400.26.50.png" width="350px"/>
+      Course 4 SCFL 4: |-
+        **Super Provocare Bucle Pentru:** Poţi să-ţi dai seama cum să recreezi acest desen?
+
+        <img src="https://images.code.org/407f502735beec686187451bdf67aada-image-1446002848700.59.34.png" width="350px"/>
+      Course 4 SCFL 6: "**Super Provocare Bucle Pentru:** Poţi să-ţi dai seama cum
+        să recreezi acest desen cu o singură buclă? \n\n<img src=\"https://images.code.org/b0d15d06465d645c5ca533e5da6387b3-image-1446075597132.36.04.png\"
+        width=\"350px\"/>"
+      Course 4 SCFL 7: |-
+        **Super Provocare Bucle Pentru:** Artistul vrea să prindă nişte valuri! Îţi poți da seama cum să recreezi acest desen?
+
+        <img src="https://images.code.org/fba3423f2e9a405d4d3859de32cdb0f3-image-1446102880655.13.36.png" width="350px"/>
+      Course 4 SCV 1: |-
+        <img src="https://images.code.org/7469d6b9aaaae532d864caecb65bd2cc-image-1444706295435.54.39.png" width="250px"/>
+
+        **Super Provocare Variabile:** Acum ai învăţat tot ceea ce trebuie să ştii pentru a face un model ca acesta! Această problemă este dificilă. Poţi să găseşti soluţia?
+      Course 4 SCV 2: |-
+        <img src="https://images.code.org/85f0b27009edd86eff78692004b9ed52-image-1444712655590.02.32.png" width="250px"/>
+
+        **Super Provocare Variabile:** Acum ai învăţat tot ceea ce trebuie să ştii pentru a face un model ca acesta! Această problemă este dificilă. Poţi să găseşti soluţia?
+      Course 4 SCV 3: |-
+        **Super Provocare Variabile:** Ai învăţat tot ce ar trebui să ştii pentru a rezolva această problemă! Acest joc este dificil.  Poţi să găseşti soluţia?
+
+        * * *
+
+        Acum un joc al atingerilor! Atinge pisica pentru a lua 2 puncte. Atinge pinguinul pentru a lua 3 puncte. Strânge exact 10 puncte pentru a câştiga!
+        Ai grijă, când pisica şi pinguinul se ating, iau puncte înapoi.
+
+        **Adaugă blocurile necesare pentru a face jocul să funcţioneze asa cum e explicat.**
+
+        -   **Cum îl vei face pe câine să se mişte în toate direcţiile folosind săgeţile?**
+        -   **Cum vei adauga puncte când câinele atinge pisica sau pinguinul?**
+        -   **Cum vei scădea puncte când pisica şi pinguinul se ating?**
+      Course 4 SCV 4: "**Super Provocare Variabile:** Rezolvă această problemă cu
+        numărul minim posibil de blocuri."
+      Course 4 SCV 5: "**Super Provocare Variabile:** Rezolvă această problemă cu
+        numărul minim posibil de blocuri."
+      Course 4 SCV 6: "<img src=\"https://images.code.org/499fc71a0a06bacb68a9789ad57f8148-image-1445574373673.16.44.png\"
+        width=\"250px\"/>\n\n**Super Provocare Variabile:** Acum ai învăţat tot ceea
+        ce trebuie să ştii pentru a face un model ca acesta! Această problemă este
+        dificilă. Poţi să găseşti soluţia?  "
       CourseD_Dance_Party_01: |-
         _Hai să facem o petrecere cu dans!_
 
@@ -545,6 +949,10 @@ ro-RO:
         Este timpul să dansăm! Pisica va face o mişcare "dab" când apeşi pe tasta săgeată în stânga. Fă robotul să facă o "cădere" când apeşi tasta săgeată în jos, şi să facă "bate din palme" atunci când este apăsată tasta săgeată în sus.
 
         **Utilizează tastele pentru a face robotul să facă mişcările "cădere"-"bate din palme"-"cădere"-"bate din palme" cât de repede poţi!**
+      Dance_2019_05: |-
+        _Acum vom avea ritm!_
+
+        Adaugă un bloc <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"măsuri"</title></block></xml> în spaţiul de lucru. Fă-l pe dansator să înceapă o nouă mişcare după 6 măsuri.
       Dance_Party_01: |-
         _Hai să facem o petrecere cu dans!_
 
@@ -623,6 +1031,14 @@ ro-RO:
         -   Adaugă mai multe taste să controlezi dansatorii
         -   Fă ca dansatorul de rezervă să răspundă şi el atunci când tastele sunt apăsate
         -   Alternează dansatorul o dată la 4 măsuri configurând vizibilitatea lui
+      Dance_Party_extras_battle_2019: |-
+        # Dans în echipe
+
+        Aici este un dans între 2 echipe. Tastele săgeţi controlează unul dintre dansatori iar tastele "w,a,s,d" controlează celălalt dansator. Fă un dans impreună cu un prieten şi încearcă să îmbunătăţeşti acest dans.
+
+        -   Adaugă mai multe taste să controlezi dansatorii
+        -   Fă ca dansatorul de rezervă să răspundă şi el atunci când tastele sunt apăsate
+        -   Alternează dansatorul o dată la 4 măsuri configurând vizibilitatea lui
       Dance_Party_extras_every_beat: |-
         # Sfert de note
 
@@ -645,6 +1061,10 @@ ro-RO:
         # Sunete joase, medii şi înalte
 
         Acest dans fooseşte evenimente de tip "vârf" pentru a declanşa nou cod când sunetele se aud mai tare în timpul muzicii. Încearcă să experimentezi cu diferite câtece pentru a vedea cum modifică ele dansul.
+      Dance_Party_extras_on_beat_2019: |-
+        # Sunete joase, medii şi înalte
+
+        Acest dans fooseşte evenimente de tip "vârf" pentru a declanşa nou cod când sunetele se aud mai tare în timpul muzicii. Încearcă să experimentezi cu diferite câtece pentru a vedea cum modifică ele dansul.
       Dance_Party_extras_speed: |-
         # Măreşte viteza, Micşorează viteza
 
@@ -657,6 +1077,20 @@ ro-RO:
         -   Adaugă un alt grup de dansatori
         -   Arată şi ascunde dansatori utilizând tastele săgeţi
         -   Ascunde toţi dansatorii şi schimbă fundalul pentru a creea un efect interesant
+      Dance_Party_extras_visible_2019: |-
+        # Unde au dispărut?
+
+        Acest dans arată şi ascunde două grupuri diferite de dansatori. Verifică şi apoi încearcă să adaugi după cum crezi tu.
+
+        -   Adaugă un alt grup de dansatori
+        -   Arată şi ascunde dansatori utilizând tastele săgeţi
+        -   Ascunde toţi dansatorii şi schimbă fundalul pentru a creea un efect interesant
+      HOC 2018 Level_12: Felicitări! Mediul acvatic deschis te aşteaptă. Construieşte
+        un recif de corali! Un vulcan! O epavă! Aşa cum vrei tu.
+      Intro to Web Lab - Part 1_2019: |-
+        ## Întrebare de luat în considerare:
+
+        -   Care sunt părțile diverse ale Web Lab, și pentru ce sunt folosite?
       K-1 Bee Loops 2: Folosește o buclă pentru a muta şi apoi colectează nectarul
         şi fă miere!
       K-1 Bee Loops 3: Foloseşte buclele pentru a coleta nectarul şi produce miere!
@@ -684,11 +1118,151 @@ ro-RO:
         Du-mă la porc!\
         Fi sigur că utilizezi bucle `repetă` (repeat).
       K-1 Maze Loops 8: Du-mă la porc! Foloseşte bucla repetă.
+      K-1 Maze Loops Assessment 1: |-
+        Vezi cât ai învăţat!\
+        Foloseşte o buclă "repetă" pentru a mă duce la porc!
       MC HOC 2016 SCORE LEVEL: "Unele jocuri vă lasă să ţineţi scorul. Jucaţi-vă cu
         aceşti Golem de Fier şi utilizati blocul <xml>  <block type=\"craft_addScore\">\n
         \   <title name=\"SCORE\">1</title>\n  </block></xml> pentru a vă acorda un
         punct de câte ori îi atingeţi. \n\nTrebuie să strângeţi 5 puncte pentru a
         câştiga!"
+      NEW Course 4 Artist Functions 1: Poți desena un pătrat care are lungimea laturii
+        de 100 pixeli, folosind o buclă repetă?
+      NEW Course 4 Artist Functions 11: "Avem vrem să creăm o funcţie nouă numită
+        `desenează o linie de pătrate` care desenează patru pătrate la rând. \n\nPoţi
+        construi această funcţie folosind funcţia `desenează un pătrat 20` pe care
+        am creat-o pentru tine?\n\n<br/><br/>\n\n_Notă: Observă cum am făcut creionul
+        mult mai subţire. Apasă \"editează\" pentru funcţia `desenează un pătrat 20`
+        pentru a vedea cum!_"
+      NEW Course 4 Artist Functions 12: Foloseşte funcţia "desenează o linie de pătrate"
+        din ultima problemă pentru a desena acest model.
+      NEW Course 4 Artist Functions 13: "Poţi desena o formă stea folosind funcţia
+        \"desenează o linie de pătrate\"?  \n\n(Asigură-te că muţi înainte 60 de pixeli
+        înainte de fiecare rotire de 144 de grade!)"
+      NEW Course 4 Artist Functions 14: Este timpul pentru joc liber! Desenează orice
+        vrei tu!
+      NEW Course 4 Artist Functions 2: "Poţi desena 3 pătrate situate la 20 pixeli
+        depărtare unul de celălalt? \n\nFiecare pătrat are latura de 100 pixeli."
+      NEW Course 4 Artist Functions 3: "Aici este un nou tip de bloc de instrucţiuni.
+        Poartă numele de bloc `funcţie`. Apasă \"editează\" apoi umple-l cu codul
+        pentru a desena un pătrat cu laturile de 100 de pixeli. \n\nCând ai terminat
+        de editat funcţia, apasă \"Închide\" şi întoarce-te la programul tau."
+      NEW Course 4 Artist Functions 4: 'Folosește funcția "desenează un pătrat" pentru
+        a realiza acest model. '
+      NEW Course 4 Artist Functions 7: "Începi să-ți dai seama cum să folosești blocurile
+        funcție? Hai să modificăm acest pătrat astfel încât să aiba o dimensiune de
+        200 de pixeli. \n\nApasă pe \"editează\" pentru a putea modifica funcția `desenează
+        un pătrat`. \n\nAmintește-ți să apeşi pe \"Închide\" pentru a ieși din editorul
+        de funcție. "
+      NEW Course 4 Artist Functions 8: Am creat pentru tine o nouă funcţie numită
+        `desenează un triunghi`.  Poți modifica definiţia funcţiei pentru a desena
+        un triunghi cu laturile de 100 de pixeli?
+      NEW Course 4 Artist Functions 9: Poți rezolva această problemă prin adăugarea
+        unui singur bloc?
+      NEW Course 4 Artist Params 1: Hai să definim această funcţie pentru a desena
+        un pătrat cu latura de 50 de pixeli. Apasă pe "editare" pentru a începe.
+      NEW Course 4 Artist Params 10: "Creează un bloc de funcţie \"desenează un hexagon\"
+        cu un parametru pentru lungime. \n\nAcest hexagon are laturi cu dimensiunea
+        de 100 de pixeli."
+      NEW Course 4 Artist Params 11: "Pot să îţi dai seama cum să desenezi această
+        formă? \n\nEditează funcţia pentru a utiliza parametrul \"laturi\"."
+      NEW Course 4 Artist Params 12: "Poţi completa acest desen? \n\nLaturile tuturor
+        formelor sunt de 100 de pixeli lungime."
+      NEW Course 4 Artist Params 12a: "Această imagine este similară ultimei. \n\nPoţi
+        utiliza o \"buclă pentru\" cu funcţia ta pentru a realiza acest model?"
+      NEW Course 4 Artist Params 13: "Hai să edităm această funcţie `desenează un
+        poligon`. \n\nEa are deja un parametru \"laturi\". Acum, hai să adăugam un
+        parametru \"lungime\". \n\nPerimetrul fiecărei forme este de 200 de pixeli.
+        Îţi aduci aminte ecuaţia pentru a face forme de aceeaşi dimensiune când au
+        un număr diferit de laturi?"
+      NEW Course 4 Artist Params 14: "Editează `desenează o margine de spirală` pentru
+        a utiliza parametrii `lungime` şi `laturi`, apoi refă aceste forme.\n\n-   Cea
+        mai mică latură a pătratului are 5 pixeli.\n-   Cea mai mică latură a triunghiului
+        are 10 pixeli.\n-   Cea mai mică latură a hexagonului are 2 pixeli.\n-   Toate
+        vor creşte până la 100 de pixeli.  "
+      NEW Course 4 Artist Params 15: "**Joc liber:** Aici sunt funcțiile pe care le-ai
+        scris și încă câteva în plus cu care să te joci. Joacă-te cu lățimea peniței
+        pentru a vedea cât de diferit arată desenele tale!"
+      NEW Course 4 Artist Params 2: Crează funcţia `desenează triunghi` pentru a face
+        un triunghi cu laturile de 50 de pixeli.
+      NEW Course 4 Artist Params 3: "Acum hai să folosim funcția pentru a desena 5
+        triunghiuri la rând. \n\nFiecare triunghi este situat la 30 de pixeli distanță
+        față de triunghiul anterior."
+      NEW Course 4 Artist Params 4: Observi ceva diferit la aceste blocuri de funcţie?
+        Apasă pe "Rulează" pentru a vedea ce se întâmplă.
+      NEW Course 4 Artist Params 5: "Înlocuieşte `???` în blocul de intrare al parametrului
+        `lungime`. \n\nPentagonul are laturi de 100 de pixeli."
+      NEW Course 4 Artist Params 6: "Completează parametrul \"lungime\" pentru a desena
+        aceste forme prin înlocuirea \"???\" cu numerele corecte. \n\nPătratul şi
+        triunghiul au laturi de 100 de pixeli.\\\nHexagonul are latura de 75 de pixeli. "
+      NEW Course 4 Artist Params 7: "Poţi termina acest desen? \n\nLaturile fiecărui
+        triunghi sunt cu 25 pixeli mai mari decât ale ultimului. \\\nPrimul triunghi
+        are latura de 25 pixeli."
+      NEW Course 4 Artist Params 8: "Codul pentru acest triunghi este stricat. \n\nPoţi
+        să editezi funcţia pentru a-l corecta şi apoi să faci triunghiuri cu laturile
+        de 25, 50 şi 75 pixeli?"
+      NEW Course 4 Artist Params 9: "Apasă pe \"editare\" pentru a completa definiția
+        funcţiei \"desenează un pătrat\" şi pentru a adăuga un parametru.\\\nAr trebui
+        să ia un parametru pentru lungime, la fel ca și triunghiul. \n\n**De această
+        dată, desenează 3 pătrate:** cu 25, 50 și 75 de pixeli lungime. Colţurile
+        din stânga sunt fiecare la distanță de 100 de pixeli față de cel dinainte."
+      NEW Course 4 Artist Params inspire: "<img src=\"https://images.code.org/1df195df9d808f0dd539bef0f5c2958b-image-1443049871563.02.54.png\"
+        width=\"250px\"/>\n\n**Inspiraţie pentru joc liber:** Acum ai învăţat tot
+        ce ai nevoie să ştii pentru a crea un model ca acesta! \n\nDacă această imagine
+        te inspiră, încearcă să faci ceva similar. Altfel, creează ceva propriu și
+        personal.\n\nIndicaţie: Am folosit blocul `setează alfa` pentru a face \"petalele\"
+        să se decoloreze spre exterior."
+      NEW Course 4 Artist Vars 12: Acum, recrează algoritmul de la ultimul nivel şi
+        creează un pentagon cu laturile cu lungimea de 150.
+      NEW Course 4 Artist Vars 2: 'Trage câte un bloc cu număr la blocul "setare lungime"
+        şi la blocul "repetă \_ ori" pentru a desena un set de triunghiuri de 50 de
+        pixeli. '
+      NEW Course 4 Artist Vars 4: "Hai să-l încercăm din nou. \n\nPoți seta variabila
+        \"lungime\" cu valoarea 60 pentru a face acest design interesant cu hexagoane?"
+      NEW Course 4 Artist Vars 6: |-
+        Deseneaza acest model cu pentagoane cu latura de 100 de pixeli setând valoarea corecta pentru "lungime" şi plasând variabila "lungime" în toate locurile unde e necesar.
+
+        Vezi cum trebuie sa setezi valoarea pentru "lungime" o singură dată iar codul foloseşte valoarea corectă peste tot?
+      NEW Course 4 Bee For Loops 10a: "Gata pentru o provocare? Foloseşte ce ai învăţat
+        despre bucle şi încearcă să rezolvi problema aceasta. \n\nAminteşte-ţi: S-ar
+        putea să fie nevoie să faci mai multe încercări înainte să iţi dai seama de
+        toti paşii."
+      NEW Course 4 Bee For Loops 2: "Adauga codul necesar pentru a fii sigur ca albina
+        strânge tot nectarul. \n\nPriveşte câte linii de cod ai nevoie pentru această
+        problemă!\\\n(Vom învaţa un mod mai uşor la problema următoare.)"
+      NEW Course 4 Bee For Loops 3: 'Ah, blocul buclă "pentru" face asta mult mai
+        uşor! Tot codul de care ai nevoie este aici, aruncă o privire şi vezi cum
+        e făcut apoi apasă "Ruleaza" pentru a vedea cum merge. '
+      NEW Course 4 Bee For Loops 4: 'Înlocuiţi ??? în bucla "pentru" cu cea mai mare
+        cantitate de nectar pe care albina trebuie să o strângă. '
+      NEW Course 4 Bee For Loops 4 4: Acum trebuie să ne mutam înainte de "contor"
+        ori şi să culegem nectar de "contor" ori. Poţi folosi două bucle "repetă"
+        pentru a rezolva aceasta provocare?
+      NEW Course 4 Bee For Loops 5: De asemenea, poţi utiliza o buclă "pentru" ca
+        să numere în ordine descrescătoare. Încearcă să strângi acest nectar numărând
+        în ordine descrescătoare de la 5 la 1 din 1 în 1.
+      NEW Course 4 Bee For Loops 6: "Ultimul număr din bucla \"pentru\" este numit
+        \"increment\". De fiecare dată când rulează bucla, variabila se schimbă cu
+        valoarea incrementului. \n\nÎncearcă să strângi aceste flori utilizând incrementul
+        2."
+      NEW Course 4 Bee For Loops 7: "Acum, haideti să combinăm variabila \"contor\"
+        cu un bloc matematic! Cum poţi utiliza variabila pentru a naviga prin gradină
+        cu cât mai puţine blocuri posibil? \n\nCe trebuie să faci pentru a strânge
+        de 3, 6, 9, 12, sau 15 ori nectar de data asta? Secretul este variabila \"contor\"!\n\nAminteste-ţi:
+        Dacă bucla ta numără crescător, incrementul este adăugat variabilei \"contor\"
+        de fiecare dată când se repetă."
+      NEW Course 4 Bee For Loops 8: "Ati prins ideea! \n\nCu cât ar trebui să crească
+        contorul pentru a colecta de 3, 6, 9, 12 sau 15 ori nectar?"
+      NEW Course 4 Play Lab Params 11: "Este timpul pentru joc liber! Distrează-te
+        cu toate blocurile disponibile.\\\n<br/>\n\n<h5>\n<details>\n<summary><b>Cauţi
+        idei?</b></summary>\n\t<br>\n\t<h5>\n\t\t<ul>\n        \t<li><strong>Atinge</strong>
+        - Setează caracterul 2 să patruleze şi folosind săgeţile fă caracterul 1 să
+        urmărească până se ating. </li>\n            <li><strong>Whack-a-Sprite</strong>
+        - Fă un caracter să apară în continuu în locaţii aleatoare. Oferă puncte pentru
+        a apăsa pe personaj înainte să dispară. </li>\n            <li><strong>Ghiceşte</strong>
+        - Fă ambele caractere să dispară, schimbă locaţia cu un loc aleator şi fă-le
+        să reapară ca un caracter aleator. Apasă pe primul şi primeşte un punch...
+        dar dacă apeşi pe al doilea PIERZI un punct! </li>\n        </ul>\n\t</h5>\n\n</details>\n</h5>"
       Overworld Move to Sheep: Adauga din nou instructiunea "Mergi inainte" pentru
         a ajunge la oaie.
       Overworld Move to Sheep_2019: Adauga din nou instructiunea "Mergi inainte" pentru
@@ -702,8 +1276,45 @@ ro-RO:
         de 6 ori?
       Standalone_Artist_5: De câte ori aveți nevoie să repetaţi acest romb pentru
         a desena floarea?
+      Standalone_Artist_5.5: 'Observaţi cum am simplificat codul rombului transformându-l
+        într-o repetiție. Puteți să repetați întreaga secvență de 12 ori pentru a
+        desena floarea. Sugestie: Veţi avea nevoie să rotiți cu 30 de grade după fiecare
+        repetiție a rombului dvs. astfel încât vă nu desenați tot peste acelaşi romb.'
+      Standalone_Artist_6: 'Repetă acest cod hexagon de 6 ori pentru a crea modelul.
+        Cu câte grade va trebui să rotești de fiecare dată? Indiciu: împarte numărul
+        de grade dintr-un cerc la numărul de repetiţii.'
+      Standalone_Artist_7: 'O funcţie este un alt instrument de programare care a
+        vă ajută să evitați repetarea. Această funcţie desenează o floare, astfel
+        încât o puteţi folosi oricând vreţi să desenați o floare. Utilizaţi această
+        funcție şi noul bloc "salt" pentru a desena aceste flori. Sugestie: Florile
+        au 150 pixeli distanţă între ele'
+      Standalone_Artist_8: Aici este o funcţie numită "Desenează o formă", pe care
+        noi am programat-o să deseneze hexagoane. Rulează codul pentru a vedea ce
+        face şi apoi experimentează cu funcția pentru a vedea ce se întâmplă. Poţi
+        să o faci să deseneze un model de pătrate, triunghiuri sau octogoane?
       Standalone_Artist_9: Acum mergeţi mai departe şi creați orice imagine doriţi!
         Ai chiar şi o funcţie goală cu care poți face ce vrei!
+      Vigenere: "# Criptează şi decriptează un mesaj cu cifrul Vigenère\n\nAceasta
+        este o versiune interactivă a cifrului Vigenère care animează criptarea şi
+        decriptarea pe măsură ce se execută, dacă primeşte o bucată de text pentru
+        a-l cripta sau decripta şi cheia.\n\n# Fă asta\n\n### Criptează un mesaj\n\nApasă
+        Pas de câteva ori şi urmăreşte ce se întâmplă. Fi atent la:\n\n-   Cum este
+        creat textul cifrat\n-   Ce se întâmplă când ajungi la ultimul caracter al
+        cheii\n-   După ce ai urmărit câteva caractere, apasă Rulează pentru a vedea
+        restul animaţiei\n-   Apasă Repornire şi rulează animaţia din nou. Poţi folosi
+        bara de viteză pentru a o vedea mai repede sau mai încet \n\n![](https://images.code.org/06858f88ac12997bba73f4f76638a068-image-1443574425185.gif)\n\n###
+        Decriptează un mesaj\n\nCriptează un mesaj ca mai sus, apoi:  \n\n-   Selectează
+        şi copiază textul cifrat\n-   Lipeşte-l în zona cu text in clar. Nota: Nu
+        schimba cheia\n-   Apasă butonul Decriptează\n-   Apasă Pas de câteva ori,
+        apoi Rulează\n\nAr trebui să vezi cum apare textul original.\\\n![](https://images.code.org/dc89d6c19c17adb23b6b5ff9a62c4583-image-1443574425182.gif)\n\nCât
+        de dificil ar fi să spargi un mesaj criptat cu acest cifru? Lungimea cheii
+        poate influienţa dificultatea?"
+      'Widget: Text Compression': Caută modele (cuvinte sau fraze repetate) în text.
+        Introdu modelul pe care îl găseşti in dictionarul din dreapta. Pe măsură ce
+        adaugi intrări in dicţionar, simbolul acelei intrări este inserat in text
+        în locul modelului.
+      course1_artist_loops_challenge2: Hai să jucăm un joc! Desenează cât de multe
+        X-uri poţi! Poţi face 3 la rând?
       course1_artist_loops_challenge3: |-
         **Cip!**
 
@@ -764,8 +1375,38 @@ ro-RO:
       course4_artist_fwp_challenge1: Încearcă să rulezi acest program, şi fă modificări
         pentru a vedea ce se întâmplă. Pot să îţi dai seama cum funcționează? (Sau
         şterge-l şi înlocuiește-l cu ceva total diferit)
+      course4_artist_variables_challenge1: Poţi crea o variabilă `lungime` şi să o
+        foloseşti pentru a crea acest model interesant?
+      course4_bee_for_challenge1: Foloseşte această buclă pentru a strânge tot nectarul.
+        Există câteva acţiuni pe care vei vrea să le repeţi de `contor` ori.
+      course4_bee_fwp_challenge2: |-
+        Hai să vedem cum te descurci cu acest ultim test! Arată tot ce ştii!
+
+        Foloseşte o buclă `pentru` într-o funcţie pentru a strânge toate legumele la rând. Fă astfel încât bucla `pentru` să numere până la valori maxime diferite folosind parametrul `lungime`. Fă programul cât mai scurt posibil folosind o a doua buclă `pentru` în afara funcţiei.
+
+        Mult noroc!
+      courseA_collector_preLoops1: "Acesta este Laurel Aventurierul! \n\nApasă \"Rulează\"
+        pentru a o vedea mergând la comoară şi a o apuca."
+      courseA_collector_preLoops2: "Perfect!  Acum poţi adăuga cod chiar tu!  \n\nAdaugă
+        un bloc ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)
+        în partea de jos a programului şi apoi apasă \"Rulează\"!"
+      courseA_collector_preLoops3: Pentru a apuca comoara, lipeşte două blocuri ![](https://images.code.org/54c206b62a02f1d7ea8f1bee52664ecb-image-1508905670742.25.37.png)
+        şi un bloc ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)
+        în partea de jos a programului şi apoi apasă "Rulează"!
       courseA_maze_seq_challenge2_2019: Urmărește traseul şi condupasărea la porc.
         Evită dinamita (TNT) sau penele vor zbura!
+      courseB_collector_loops_challenge2a: |-
+        _"Hai să luăm comoara!"_
+
+        Ajută-l pe Laurel să ia cel puţin **5** bucăţi din comoară pentru a rezolva această problemă.
+      courseB_collector_loops_challenge2a_2018: |-
+        _"Hai să luăm comoara!"_
+
+        Ajută-l pe Laurel să ia cel puţin **5** bucăţi din comoară pentru a rezolva această problemă.
+      courseB_collector_loops_challenge2a_2019: |-
+        _"Hai să luăm comoara!"_
+
+        Ajută-l pe Laurel să ia cel puţin **5** bucăţi din comoară pentru a rezolva această problemă.
       courseD_bee_nestedLoops8: 'Colectează tot nectarul din fiecare floare și fă
         miere la fiecare fagure. Folosește o buclă imbricată. '
       courseD_bee_nestedLoops8_2018: 'Colectează tot nectarul din fiecare floare și

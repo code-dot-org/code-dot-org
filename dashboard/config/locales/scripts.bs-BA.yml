@@ -2241,3 +2241,24 @@ bs:
           stages:
             Dance Party:
               name: Plesna zabava
+        k5-onlinepd-copy:
+          stages:
+            Planning:
+              name: Planiranje
+            Next Steps:
+              name: Slijedeći Koraci
+            Loops:
+              name: Petlje
+            Conditionals:
+              name: Uvjeti
+            Events:
+              name: Događaji
+            Functions:
+              name: Funkcije
+            Variables:
+              name: Varijable
+            For Loops:
+              name: Od-Do-Za Petlje
+        dance-extras-2019:
+          title: Nastavite plesati
+          description: Izađite iz okvira prvog sata sa proširenim idejama o projektu.

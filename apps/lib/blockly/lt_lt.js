@@ -40,6 +40,7 @@ Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST_TAIL = "";
 Blockly.Msg.CONTROLS_FOREACH_INPUT_ITEM = "kartok su kiekvienu";
 Blockly.Msg.CONTROLS_FOREACH_TOOLTIP = "Kartoti veiksmus su kiekvienu sąrašo elementu, priskirtu kintamajam \"%1\".";
 Blockly.Msg.CONTROLS_FOR_HELPURL = "";
+Blockly.Msg.CONTROLS_FOR_INPUT_COUNTER = "for %1 from %2 to %3 count by %4";
 Blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY = "kinta nuo %1 iki %2 po %3";
 Blockly.Msg.CONTROLS_FOR_INPUT_WITH = "kartok, kai";
 Blockly.Msg.CONTROLS_FOR_TOOLTIP = "Kartoti veiksmus, kai kintamasis %1 gauna reikšmes nuo [pradinės] iki [galutinės], didinant po [žingsnį].";

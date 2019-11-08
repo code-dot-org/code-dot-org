@@ -464,7 +464,7 @@ zh-TW:
             '"vintage"': 復古
             '"warm"': 暖色系
       Dancelab_setBackgroundEffectWithPalette:
-        text: 背景效果設為 {EFFECT} {PALETTE}
+        text: 背景效果設為 {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': 無
@@ -597,6 +597,7 @@ zh-TW:
             '"rotation"': 旋轉
             '"x"': 水平位置
             '"y"': 垂直位置
+            '"tint"': 色調
       Dancelab_setPropRandom:
         text: 角色 {SPRITE} {PROPERTY} 改變 隨機取數
         options:
@@ -831,6 +832,8 @@ zh-TW:
             '1': 中音
             '2': 高音
       Dancelab_whenSetup:
+        text: 設定
+      Dancelab_whenSetup2:
         text: 設定
       gamelab_addBehaviorSimple:
         text: 角色 {SPRITE} 開始 {BEHAVIOR}
@@ -1228,6 +1231,8 @@ zh-TW:
         text: 角色 {SPRITE} 停止 {BEHAVIOR}
       Mikelab_removeTint:
         text: 角色 {SPRITE} 顏色移除
+      Mikelab_repeatUntilComplete:
+        text: 重複無限次
       Mikelab_setBG:
         text: 背景設為 {BG}
         options:
@@ -1295,6 +1300,11 @@ zh-TW:
         text: 當滑鼠按鍵被點擊
       Mikelab_whenTouchesAny:
         text: 當角色 {SPRITE} 碰到其它角色時
+      Mikelab_whenYesNoClicked:
+        options:
+          KEY:
+            '"yes"': 確定
+            '"no"': 'no'
       Mikelab_whileClicked:
         text: 當 {SPRITE} 被點著
       Mikelab_whileKeyPressed:
@@ -1332,6 +1342,10 @@ zh-TW:
         text: 位置設為 {POSITION}
       Vector_vectorNorth:
         text: 南
+      Vector_where:
+        options:
+          PROPERTY:
+            "'shapeColor'": 顏色
       aalab_addBehaviorForDuration:
         text: aalab 角色 {SPRITE} 開始 {BEHAVIOR} 持續 {SECONDS} 秒
       aalab_addBehaviorUntilBoolean:

@@ -1295,7 +1295,6 @@ pt-BR:
   pre-express-2019_name: Curso Pre-reader Express (2019)
   csd3_name: 'Unidade 3: Jogos e Animação'
   accelerated_name: Curso acelerado
-  express_name: Curso Expresso
   20-hour_name: Curso acelerado
   algebra_name: CC na Álgebra Curso Completo
   AlgebraA_name: CC no Curso A de Álgebra
@@ -1534,6 +1533,8 @@ pt-BR:
   coursea_shortdescription_congrats: Uma introdução à ciência da computação para pré-leitores.
   courseb_shortdescription_congrats: Uma introdução à ciência da computação para pré-leitores.
     (Similar ao Curso A, mas com mais variedade para os alunos mais velhos.)
+  coursec_shortdescription_congrats: Aprenda o básico da ciência da computação e crie
+    sua própria arte, histórias e jogos.
   coursed_shortdescription_congrats: Abrange rapidamente conceitos do Curso C e, em
     seguida, vá mais longe com algoritmos, laços aninhados, condicionais e muito mais.
   coursee_shortdescription_congrats: Rapidamente cobrem conceitos de curso C e D e
@@ -1545,6 +1546,8 @@ pt-BR:
   courseb-2017_shortdescription_congrats: Uma introdução à ciência da computação para
     pré-leitores. (Similar ao Curso A, mas com mais variedade para os alunos mais
     velhos.)
+  coursec-2017_shortdescription_congrats: Aprenda o básico da ciência da computação
+    e crie sua própria arte, histórias e jogos.
   coursed-2017_shortdescription_congrats: Abrange rapidamente conceitos do Curso C
     e, em seguida, vá mais longe com algoritmos, laços aninhados, condicionais e muito
     mais.
@@ -1557,6 +1560,8 @@ pt-BR:
   courseb-2018_shortdescription_congrats: Uma introdução à ciência da computação para
     pré-leitores. (Similar ao Curso A, mas com mais variedade para os alunos mais
     velhos.)
+  coursec-2018_shortdescription_congrats: Aprenda o básico da ciência da computação
+    e crie sua própria arte, histórias e jogos.
   coursed-2018_shortdescription_congrats: Abrange rapidamente conceitos do Curso C
     e, em seguida, vá mais longe com algoritmos, laços aninhados, condicionais e muito
     mais.
@@ -1569,6 +1574,8 @@ pt-BR:
   courseb-2019_shortdescription_congrats: Uma introdução à ciência da computação para
     pré-leitores. (Similar ao Curso A, mas com mais variedade para os alunos mais
     velhos.)
+  coursec-2019_shortdescription_congrats: Aprenda o básico da ciência da computação
+    e crie sua própria arte, histórias e jogos.
   coursed-2019_shortdescription_congrats: Abrange rapidamente conceitos do Curso C
     e, em seguida, vá mais longe com algoritmos, laços aninhados, condicionais e muito
     mais.

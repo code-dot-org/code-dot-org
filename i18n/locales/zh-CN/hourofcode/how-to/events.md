@@ -1,7 +1,5 @@
 ---
 title: 编程一小时操作指南
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

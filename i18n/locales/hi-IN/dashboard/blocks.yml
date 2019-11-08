@@ -453,7 +453,7 @@ hi:
             '"vintage"': विंटेज
             '"warm"': गरम
       Dancelab_setBackgroundEffectWithPalette:
-        text: पृष्ठभूमि प्रभाव सेट करें {EFFECT} {PALETTE}
+        text: पृष्ठभूमि प्रभाव सेट करें {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': कोई नहीं
@@ -584,6 +584,7 @@ hi:
             '"rotation"': आवर्तन
             '"x"': क्षैतिज स्थिति
             '"y"': लंबवत स्थिति
+            '"tint"': रंगत
       Dancelab_setPropRandom:
         text: बेतरतीब{SPRITE} {PROPERTY}
         options:
@@ -813,6 +814,8 @@ hi:
             '1': मध्य
             '2': ऊंची ध्वनि
       Dancelab_whenSetup:
+        text: सेटअप
+      Dancelab_whenSetup2:
         text: सेटअप
       gamelab_addBehaviorSimple:
         text: स्प्राइट {SPRITE} {BEHAVIOR} शुरू करता है
@@ -1215,6 +1218,8 @@ hi:
         text: यादृच्छिक रंग
       Mikelab_removeBehaviorSimple:
         text: स्प्राइट {SPRITE} ने{BEHAVIOR} बंद कर दिया
+      Mikelab_repeatUntilComplete:
+        text: हमेशा दोहराएं
       Mikelab_setBG:
         options:
           BG:

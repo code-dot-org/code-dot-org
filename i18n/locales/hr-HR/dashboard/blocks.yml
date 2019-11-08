@@ -312,6 +312,8 @@ hr:
             '"y"': y pozicija
       Mikelab_randomColor:
         text: nasumično odabrana boja
+      Mikelab_repeatUntilComplete:
+        text: ponavljaj zauvijek
       Mikelab_setBG:
         options:
           BG:

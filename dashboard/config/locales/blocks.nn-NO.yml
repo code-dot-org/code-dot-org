@@ -456,7 +456,7 @@ nn:
             '"vintage"': Retro
             '"warm"': Rødfarger
       Dancelab_setBackgroundEffectWithPalette:
-        text: vel bakgrunnseffekt {EFFECT} {PALETTE}
+        text: vel bakgrunnseffekt {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': Ingen
@@ -588,6 +588,7 @@ nn:
             '"rotation"': rotasjon
             '"x"': horisontal posisjon
             '"y"': vertikal posisjon
+            '"tint"': farge
       Dancelab_setPropRandom:
         text: gjer {SPRITE} {PROPERTY} tilfeldig
         options:
@@ -807,6 +808,8 @@ nn:
             '1': mellomtone
             '2': diskant
       Dancelab_whenSetup:
+        text: oppsett
+      Dancelab_whenSetup2:
         text: oppsett
       gamelab_changePropBy:
         text: endre {SPRITE} {PROPERTY} med {VAL}
@@ -1125,6 +1128,8 @@ nn:
         text: tilfeldig farge
       Mikelab_removeBehaviorSimple:
         text: figur {SPRITE} stopper {BEHAVIOR}
+      Mikelab_repeatUntilComplete:
+        text: gjenta for alltid
       Mikelab_setBG:
         options:
           BG:

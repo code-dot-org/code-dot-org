@@ -463,7 +463,7 @@ zh-CN:
             '"vintage"': 复古
             '"warm"': 红色
       Dancelab_setBackgroundEffectWithPalette:
-        text: 设置背景效果 {EFFECT} {PALETTE}
+        text: 设置背景效果 {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': 没有
@@ -596,6 +596,7 @@ zh-CN:
             '"rotation"': 旋转
             '"x"': 水平位置
             '"y"': 垂直位置
+            '"tint"': 色调
       Dancelab_setPropRandom:
         text: 随机 {SPRITE} {PROPERTY}
         options:
@@ -831,6 +832,8 @@ zh-CN:
             '1': 中音音量
             '2': 高音音量
       Dancelab_whenSetup:
+        text: 设置
+      Dancelab_whenSetup2:
         text: 设置
       Dancelab_whenSetupSong:
         options:
@@ -1255,6 +1258,8 @@ zh-CN:
         text: 随机颜色
       Mikelab_removeBehaviorSimple:
         text: 精灵 {SPRITE} 停止 {BEHAVIOR}
+      Mikelab_repeatUntilComplete:
+        text: 一直重复
       Mikelab_setBG:
         options:
           BG:

@@ -461,7 +461,7 @@ he:
             '"vintage"': וינטאג'
             '"warm"': חמים
       Dancelab_setBackgroundEffectWithPalette:
-        text: קבעו אפקט רקע {EFFECT} {PALETTE}
+        text: קבעו אפקט רקע {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': כלום
@@ -594,6 +594,7 @@ he:
             '"rotation"': סיבוב
             '"x"': מיקום אופקי
             '"y"': מיקום אנכי
+            '"tint"': גוון
       Dancelab_setPropRandom:
         text: קבע באקראי את {PROPERTY} של {SPRITE}
         options:
@@ -829,6 +830,8 @@ he:
             '1': אמצע
             '2': טְרֶבֶּל
       Dancelab_whenSetup:
+        text: הגדרה
+      Dancelab_whenSetup2:
         text: הגדרה
       gamelab_addBehaviorSimple:
         text: דמות {SPRITE} מתחילה {BEHAVIOR}
@@ -1118,6 +1121,8 @@ he:
         text: "{LOCATION}"
       Mikelab_randomColor:
         text: צבע אקראי
+      Mikelab_repeatUntilComplete:
+        text: חזור לנצח
       Mikelab_setBG:
         options:
           BG:

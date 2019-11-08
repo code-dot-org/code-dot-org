@@ -1857,6 +1857,30 @@ zh-CN:
         aquatic7: 你可以用“如果路径”模块来帮助你做正确的转弯。
       CourseE_HOC 2018 Level_9b:
         voyage_aquatic_9a: 看见红色和蓝色的珊瑚块了吗？将它们用作向右向左转的路标来通过礁石。
+      Dance_2019_01:
+        validation: |-
+          **我如何通过此关？**
+          \*确保屏幕上出现一个舞者。
+
+          _此关在 4 个小节后结束。_
+      Dance_2019_04:
+        validation: |-
+          **我如何通过此关？**
+          \*舞者需要在 4 个小节后变换到新动作。
+
+          _此关在 8 个小节后结束。_
+      Dance_2019_05:
+        validation: |-
+          **如何通过此关？**
+
+          \*6 个小节后，舞者需要跳与 4 个小节后不同的舞蹈。
+
+          _此关在 12 个小节后结束。_
+      Dance_2019_07:
+        challenges: |-
+          **可选挑战**
+
+          \*通过更改其他属性（宽度、高度、旋转等）来尝试
       Dance_Party_01:
         validation: |-
           **我如何通过此关？**
@@ -6933,9 +6957,6 @@ zh-CN:
       courseC_collector_prog_challenge2_2019:
         courseC_collector_prog_challenge1_a: 你可以使用多个`收集`命令来收集额外的宝藏。
         courseC_collector_prog_challenge1_b: 迷路了？ 请尝试此路径来通过这个关卡!
-      courseC_data wizard:
-        courseA_playLab_events7_a: "使用此块来控制当演员碰撞时会发生什么。 \n\n<xml><block type=\"studio_whenSpriteCollided\">\n\n<title
-          name=\"SPRITE1\">1</title>\n<title name=\"SPRITE2\">0</title>\n</block></xml>"
       courseC_flappy_events1:
         courseC_flappy_events1_a: "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)"
       courseC_flappy_events1_2018:
@@ -9108,7 +9129,6 @@ zh-CN:
           请注意, 获取所有农作物的最简单途径仍然是螺旋形。
 
           ![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)
-        courseD_farmer_condLoops7_b: 尝试使用`当前面有路时`使收割者移动正确的步数。
       courseD_farmer_condLoops_challenge1:
         courseD_farmer_condLoops_challenge1_a: 在这个挑战中, "步进" 按钮可能非常有用。
         courseD_farmer_condLoops_challenge1_b: 通常情况下, 如果你是在南瓜那里, 你只会`摘南瓜`。如果你在南瓜那里,

@@ -360,7 +360,7 @@ uk:
       Dancelab_setBackgroundEffectWithPalette:
         text: |-
           встановити ефект тла
-          {EFFECT} {PALETTE}
+          {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"rand"': "(Випадковий)"
@@ -454,6 +454,7 @@ uk:
             '"rotation"': поворот
             '"x"': горизонтальне положення
             '"y"': вертикальне положення
+            '"tint"': відтінок
       Dancelab_setPropRandom:
         text: випадково {SPRITE} {PROPERTY}
         options:
@@ -657,6 +658,8 @@ uk:
             '2': високі тони
       Dancelab_whenSetup:
         text: налаштування
+      Dancelab_whenSetup2:
+        text: налаштування
       gamelab_changePropBy:
         text: змінити {SPRITE} {PROPERTY} на {VAL}
         options:
@@ -856,6 +859,8 @@ uk:
           {DO1} {DO2}
       Mikelab_randomColor:
         text: випадковий колір
+      Mikelab_repeatUntilComplete:
+        text: повторювати завжди
       Mikelab_setBG:
         options:
           BG:

@@ -11,5 +11,12 @@
   "danceFeedbackNeedEveryTwoMeasures": "`2小節ごとに` ブロックを使っているか確認しましょう。",
   "danceFeedbackNeedMakeANewDancer": "`新しくつくる`ブロックを使って2番目のダンサーを作りましょう。",
   "danceFeedbackKeyEvent": "",
+  "danceFeedbackDidntPress": "",
+  "danceFeedbackPressedKey": "",
+  "danceFeedbackNeedTwoDancers": "ダンサーを2人作りましょう。",
+  "danceFeedbackOnlyOneDancerMoved": "",
+  "danceFeedbackNeedLead": "",
+  "danceFeedbackNeedBackup": "",
+  "danceFeedbackSetSize": "",
   "measure": "小節:"
 }

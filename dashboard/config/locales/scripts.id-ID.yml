@@ -5699,3 +5699,44 @@ id:
               name: Pendahuluan
             Nested Loops:
               name: Perulangan bercabang
+        k5-onlinepd-copy:
+          stages:
+            Getting Started:
+              name: Dapat Dimulai
+            Computer Science Fundamentals:
+              name: Dasar-dasar ilmu komputer
+            Looking Ahead:
+              name: Melihat ke depan
+            'Mastering the Basics: Sequencing':
+              name: 'Menguasai Dasar-dasar: Pengurutan'
+            'Mastering the Basics: Loops':
+              name: 'Menguasai Dasar-dasar: Loop '
+            'Mastering the Basics: Conditionals':
+              name: 'Menguasai Dasar-dasar: Kondisional'
+            'Mastering the Basics: Functions':
+              name: 'Menguasai Dasar-dasar: Fungsi'
+            'Mastering the Basics: Events':
+              name: 'Menguasai Dasar-dasar: Peristiwa'
+            Best Practices for Teaching Computer Science:
+              name: Praktek-praktek Terbaik untuk Pengajaran Ilmu Komputer
+            Planning:
+              name: Perencanaan
+            Next Steps:
+              name: Langkah berikutnya
+            Sequencing:
+              name: Urutan
+            Loops:
+              name: Loop
+            Conditionals:
+              name: Kondisi
+            Events:
+              name: kegiatan
+            Functions:
+              name: fungsi
+            Variables:
+              name: variabel
+            For Loops:
+              name: Untuk Pengulangan
+        dance-extras-2019:
+          title: Tetaplah berdansa
+          description: Lewatilah jam pertama dengan ide ide proyek yang luas.

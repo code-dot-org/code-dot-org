@@ -427,7 +427,7 @@ ku:
       Dancelab_setBackgroundEffectWithPalette:
         text: |-
           ئیفێکتی پاشبنەما دیاریبکە
-          {EFFECT} {PALETTE}
+          {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"rand"': "(هەڕەمەکی)"
@@ -551,6 +551,7 @@ ku:
             '"rotation"': سوڕانەوە
             '"x"': پێگەی ئاسۆیی
             '"y"': پێگەی ستوونی
+            '"tint"': سێبەری ڕەنگ
       Dancelab_setPropRandom:
         text: بە هەڕەمەکی {SPRITE} {PROPERTY} ڕێکبخە
         options:
@@ -762,6 +763,8 @@ ku:
             '1': ناوەند
             '2': سیانی
       Dancelab_whenSetup:
+        text: دامەزراندن
+      Dancelab_whenSetup2:
         text: دامەزراندن
       gamelab_addBehaviorSimple:
         text: سپڕایت {SPRITE} دەستپێدەکات {BEHAVIOR}

@@ -1982,6 +1982,10 @@ sv:
               name: Villkorssatser med kort
             Building a Foundation:
               name: Bygga en grund
+        csp7-pilot-staging:
+          stages:
+            Libraries:
+              name: Bibliotek
         express-2018-vn:
           stages:
             Graph Paper Programming:
@@ -2011,3 +2015,22 @@ sv:
             Dance Party:
               name: Dansparty
           description: Koda ditt egna dansparty som du kan dela med dina vänner.
+        k5-onlinepd-copy:
+          stages:
+            Next Steps:
+              name: Nästa steg
+            Loops:
+              name: loopar
+            Conditionals:
+              name: Villkor
+            Events:
+              name: Händelser
+            Functions:
+              name: funktioner
+            Variables:
+              name: variabler
+            For Loops:
+              name: '''För'' loopar'
+        dance-extras-2019:
+          title: Fortsätt att dansa
+          description: Med ytterligare projektidéer kan du fortsätta efter den första timmen.

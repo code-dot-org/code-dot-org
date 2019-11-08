@@ -57,13 +57,17 @@ We are interested in seeing what's happening in computer science education inter
 ### K-12 education
 
 - The [K-12 Computer Science Framework](https://k12cs.org/) provides a vision for computer science education for all students, including concepts and practices by grade band.
+- The International Society for Technology in Education (ISTE) recently released [guidelines](https://www.iste.org/standards/computational-thinking) regarding the integration of computational thinking across disciplines. 
+- Access to computer science matters! [A longitudinal study described in this article](https://dl.acm.org/citation.cfm?doid=3363561.3343195) and [this summary](https://computinged.wordpress.com/2019/10/14/results-from-longitudinal-study-of-female-persistence-in-cs-ap-cs-matters-after-school-programs-and-internships-do-not/) report that the three best predictors of student persistence in computing-related majors were taking programming in high school, taking a computer science AP exam, and participating in the Aspirations awards program. 
 - The [Pre-College Computer Science Education: A Survey of the Field] (https://services.google.com/fh/files/misc/pre-college-computer-science-education-report.pdf) report from Google reviews the current state of the research into computer science education.
 - [Arkansas has seen a major boost in computer science enrollment and diversity](http://amppob.com/nearly-4000-arkansas-students-enrolled-in-computer-science-in-fall-15/). Arkansas passed a law requiring (and funding) every high school to teach computer science. Months later, Arkansas saw a 260% increase in total CS enrollment, a 300% increase among female students, and a 600% increase among African American female students. This shows the massive impact of state policy on CS, and helps our advocacy efforts in other states.
 - [Low-income](http://ecs.force.com/studies/rstempg?id=a0r0g000009TLeI) or [underrepresented minority students](https://pbs.twimg.com/media/Dls3NzoU8AAASYB.jpg:large) are less likely than other demographic groups to attend a school that offers computer science.
 - 74% of women working in computing were [exposed to computing in junior high](https://www.accenture.com/t20170417T030444Z__w__/us-en/_acnmedia/Accenture/next-gen-3/girls-who-code/Accenture-Cracking-The-Gender-Code-Report.pdfla=en).
 - The [Computational Thinking for a Computational World report] (http://digitalpromise.org/wp-content/uploads/2017/12/dp-comp-thinking-v1r5.pdf) from Digital Promise describes the role of computational thinking and provides recommendations for expanding it in K-12.
 - The [Closing the STEM Gap](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE1UMWz) report from Microsoft explores why girls and women lose interest in STEM subjects and careers, and suggests strategies to reverse the trend.
-- [This](https://www.nap.edu/catalog/24926/assessing-and-responding-to-the-growth-of-computer-science-undergraduate-enrollments) National Academies report describes the growth of computer science undergraduate enrollments.  
+- According to [data from the National Assessment of Educational Progress (NAEP)](https://www.nagb.gov/content/nagb/assets/documents/publications/frameworks/technology/2018-technology-framework.pdf), 27% of middle school girls and 31% of boys have taken CS. 
+- [This National Academies report](https://www.nap.edu/catalog/24926/assessing-and-responding-to-the-growth-of-computer-science-undergraduate-enrollments) describes the growth of computer science undergraduate enrollments.  
+- [This report](https://www.excelined.org/wp-content/uploads/2019/06/ExcelinEdCode.AddressingAmericasGrowingDemandforITandCS.TheCaseforChangeinK12Ed.June2019.pdf) by ExcelinEd describes the relationship between computer science and information technology (see p. 6).
 
 
 ### State policy
@@ -79,6 +83,7 @@ We are interested in seeing what's happening in computer science education inter
 - [Twice as many Americans](http://ecs.force.com/studies/rstempg?id=a0r0g000009TLfB) use computing in their jobs than previously reported, and half of those are in non-STEM fields. Outside of STEM fields, 40% of those doing complex computing work are women.
 - A quarter of all jobs are now "highly digitalized" and they're the highest paying quartile of jobs (up from 5% of jobs in 2002), according to a [Brookings report](https://www.brookings.edu/research/digitalization-and-the-american-workforce/).
 - Computer science skills are [increasingly valued] (https://blogs.oracle.com/certification/five-job-categories-increasingly-requiring-computer-science-skills) in marketing and design jobs.
+- A survey from Microsoft Education and YouGov found that [half of parents believed coding and computer programming to be the most beneficial subject](https://educationblog.microsoft.com/en-us/2018/08/new-survey-what-parents-think-about-technology-in-the-classroom) to their child's future employability.
 
 ### Jobs in computing
 
@@ -89,6 +94,7 @@ We are interested in seeing what's happening in computer science education inter
 - Change the Equation has a [summary](http://ecs.force.com/studies/rstempg?id=a0r0g000009U7Uo) of untapped minority talent in computing.
 - For each new high-tech job in a city, five jobs outside of tech are [ultimately created](http://eml.berkeley.edu//~moretti/book.htm).
 - A [comprehensive framework](https://www.kaporcenter.org/wp-content/uploads/2018/02/KC18001_report_v6-1.pdf) for understanding and addressing the lack of diversity across the tech ecosystem, including the benefits of a diverse workforce.
+- [Surveys from the Kauffman Foundation](https://www.kauffman.org/currents/2019/09/new-survey-highlights-disconnect-between-high-school-and-real-world) found that 88% of students and 85% of adults say that computer science jobs will be in [greater demand in 10 years](https://twitter.com/codeorg/status/1184493205607407619) - moreso than any other job category.
 
 ### Landscape of K-12 Computer Science Education in the US
 This [series of reports](http://csedu.gallup.com/home.aspx) from Gallup and Google describes the landscape of computer science education across the states.

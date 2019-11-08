@@ -226,5 +226,5 @@ export default connect(state => ({
   lessonLockedForSection: lessonId =>
     lessonIsLockedForAllStudents(lessonId, state),
   lessonIsVisible: (lesson, viewAs) => lessonIsVisible(lesson, state, viewAs),
-  selectedSectionId: state.teacherSections.selectedSectionId
+  selectedSectionId: state.teacherSections.selectedSectionId.toString()
 }))(ProgressLesson);

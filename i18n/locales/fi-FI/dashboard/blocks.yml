@@ -428,7 +428,7 @@ fi:
             '"spiral"': Kierre
             '"disco"': Neliöt
       Dancelab_setBackgroundEffectWithPalette:
-        text: aseta taustaefekti {EFFECT} {PALETTE}
+        text: aseta taustaefekti {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': Ei mitään
@@ -525,6 +525,7 @@ fi:
             '"rotation"': kierto
             '"x"': vaaka-asento
             '"y"': pystyasento
+            '"tint"': sävy
       Dancelab_setPropRandom:
         text: satunnaista {SPRITE} {PROPERTY}
         options:
@@ -740,6 +741,8 @@ fi:
             '1': midi
             '2': diskantti
       Dancelab_whenSetup:
+        text: asetukset
+      Dancelab_whenSetup2:
         text: asetukset
       gamelab_changePropBy:
         text: muuta {SPRITE} {PROPERTY} {VAL}
@@ -998,6 +1001,8 @@ fi:
             MOVES.Rest: Ei mitään
       Mikelab_randomColor:
         text: satunnainen väri
+      Mikelab_repeatUntilComplete:
+        text: toista jatkuvasti
       Mikelab_setBG:
         options:
           BG:

@@ -1688,3 +1688,22 @@ da:
             Dance Party:
               name: Dansefest
           description: Lav din egen dansefest sammen med dine venner.
+        k5-onlinepd-copy:
+          stages:
+            Loops:
+              name: Løkker
+            Conditionals:
+              name: Betingelser
+            Events:
+              name: Hændelser
+            Functions:
+              name: Funktioner
+            Sprite Lab:
+              name: SpriteLab
+            Variables:
+              name: Variabler
+            For Loops:
+              name: For Loops
+        dance-extras-2019:
+          title: Bliv ved med at danse
+          description: Overskrid den første time med udvidede projektideer.

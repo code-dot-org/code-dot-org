@@ -426,7 +426,7 @@ ko:
             '"vintage"': 빈티지
             '"warm"': 빨간색
       Dancelab_setBackgroundEffectWithPalette:
-        text: 배경 효과 {EFFECT} {PALETTE} 설정
+        text: 배경 효과 {PALETTE} {EFFECT} 설정
         options:
           EFFECT:
             '"none"': 없음
@@ -549,6 +549,7 @@ ko:
             '"rotation"': 회전
             '"x"': 수평 위치
             '"y"': 수직 위치
+            '"tint"': 색조
       Dancelab_setPropRandom:
         text: "{SPRITE} {PROPERTY} 무작위로 하기"
         options:
@@ -748,6 +749,8 @@ ko:
             '2': 고음
       Dancelab_whenSetup:
         text: 설정
+      Dancelab_whenSetup2:
+        text: 설정
       gamelab_changePropBy:
         text: "{SPRITE}{PROPERTY}을(를) {VAL}만큼 변경"
         options:
@@ -807,7 +810,9 @@ ko:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': 비
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': 물속
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': 겨울
+            undefined: 없음
       gamelab_setProp:
+        text: "{SPRITE} {PROPERTY}을(를) {VAL}(으)로 설정 "
         options:
           PROPERTY:
             '"scale"': 크기
@@ -960,6 +965,8 @@ ko:
             MOVES.Rest: 없음
       Mikelab_randomColor:
         text: 랜덤 색
+      Mikelab_repeatUntilComplete:
+        text: 무한반복
       Mikelab_setBG:
         options:
           BG:
@@ -1027,6 +1034,10 @@ ko:
         text: 오른쪽으로 회전
       Vector_positionCenter:
         text: 중간
+      Vector_where:
+        options:
+          PROPERTY:
+            "'shapeColor'": 색깔
       aalab_goToScene:
         options:
           SCENE:

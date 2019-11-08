@@ -404,7 +404,7 @@ nl:
             '"tropical"': Tropisch
             '"warm"': Warm
       Dancelab_setBackgroundEffectWithPalette:
-        text: stel {EFFECT} {PALETTE} in als achtergrondeffect
+        text: stel {PALETTE} {EFFECT} in als achtergrondeffect
         options:
           EFFECT:
             '"none"': Geen
@@ -938,6 +938,8 @@ nl:
             MOVES.Rest: Geen
       Mikelab_randomColor:
         text: willekeurige kleur
+      Mikelab_repeatUntilComplete:
+        text: blijven herhalen
       Mikelab_setBG:
         options:
           BG:

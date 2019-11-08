@@ -436,6 +436,7 @@
   minecraft_download_adventurer: "Scarica la versione da usare <i>in locale</i> di \"Un'avventura con Minecraft\"."
   minecraft_subtitle: "L'Ora del Codice con Minecraft"
   minecraft_store_camps: "Free Minecraft Hour of Code Camps at the Microsoft Store"
+  minecraft_signup_store_camps: "<a href=\"%{signup_store_camp}\"> Iscriviti</a> gratis alle esercitazioni dell'Ora del codice in un Microsoft Store in Australia, Canada, Puerto Rico o Stati Uniti per imparare come combinare la tua creatività con la programmazione."
   minecraft_host_event: "Organizza un evento dell'Ora del Codice con Minecraft"
   minecraft_teach_resources: "Risorse per l'insegnante e piano di lavoro della lezione."
   minecraft_leader_guide: "Scarica le risorse per aiutarti a pianificare ed organizzare un evento."
@@ -923,11 +924,12 @@
   coursed-2018_name: Corso D (2018)
   coursee-2018_name: Corso E (2018)
   coursef-2018_name: Corso F (2018)
-  express-2018_name: Corso Rapido
+  express-2018_name: Corso Rapido (2018)
   pre-express-2018_name: Corso Rapido pre-scolare (2018)
+  express-2019_name: Corso Rapido (2017)
   pre-express-2019_name: Corso Rapido pre-scolare (2019)
   accelerated_name: "Corso rapido"
-  express_name: "Corso Rapido"
+  express_name: "Corso Rapido (2018)"
   pre-express_name: Corso Rapido pre-scolare
   20-hour_name: Corso rapido
   algebra_name: "L'informatica in algebra"
@@ -1127,25 +1129,25 @@
   courseb_shortdescription_congrats: "Introduzione all'informatica per bambini che stanno appena imparando a leggere. (Simile al Corso A, ma con maggior varietà per bambini leggermente più grandi.)"
   coursec_shortdescription_congrats: "Impara le basi dell'informatica e crea disegni, storie animate o giochi interattivi."
   coursed_shortdescription_congrats: "Vengono ripresi brevemente i concetti del corso C ed aggiunti algoritmi, cicli annidati, istruzioni condizionali e altro ancora."
-  coursee_shortdescription_congrats: "Vengono ripresi brevemente i concetti dei corsi C e D e viene aggiunto il concetto di funzione."
+  coursee_shortdescription_congrats: "Vengono ripresi i concetti dei corsi C e D e viene aggiunto il concetto di funzione."
   coursef_shortdescription_congrats: "Impara tutti i concetti dei corsi di fondamenti di informatica e crea disegni, storie o giochi interattivi."
   coursea-2017_shortdescription_congrats: Introduzione all'informatica per bambini che non leggono ancora.
   courseb-2017_shortdescription_congrats: Introduzione all'informatica per bambini che stanno appena imparando a leggere. (Simile al Corso A, ma con maggior varietà per bambini leggermente più grandi.)
   coursec-2017_shortdescription_congrats: Impara le basi dell'informatica e crea disegni, storie animate o giochi interattivi.
   coursed-2017_shortdescription_congrats: Vengono ripresi brevemente i concetti del corso C ed aggiunti algoritmi, cicli annidati, istruzioni condizionali e altro ancora.
-  coursee-2017_shortdescription_congrats: Vengono ripresi brevemente i concetti dei corsi C e D e viene aggiunto il concetto di funzione.
+  coursee-2017_shortdescription_congrats: Vengono ripresi i concetti dei corsi C e D e viene aggiunto il concetto di funzione.
   coursef-2017_shortdescription_congrats: Impara tutti i concetti dei corsi di fondamenti di informatica e crea disegni, storie o giochi interattivi.
   coursea-2018_shortdescription_congrats: Introduzione all'informatica per bambini che non leggono ancora.
   courseb-2018_shortdescription_congrats: Introduzione all'informatica per bambini che stanno appena imparando a leggere. (Simile al Corso A, ma con maggior varietà per bambini leggermente più grandi.)
   coursec-2018_shortdescription_congrats: Impara le basi dell'informatica e crea disegni, storie animate o giochi interattivi.
   coursed-2018_shortdescription_congrats: Vengono ripresi brevemente i concetti del corso C ed aggiunti algoritmi, cicli annidati, istruzioni condizionali e altro ancora.
-  coursee-2018_shortdescription_congrats: Vengono ripresi brevemente i concetti dei corsi C e D e viene aggiunto il concetto di funzione.
+  coursee-2018_shortdescription_congrats: Vengono ripresi i concetti dei corsi C e D e viene aggiunto il concetto di funzione.
   coursef-2018_shortdescription_congrats: Impara tutti i concetti dei corsi di fondamenti di informatica e crea disegni, storie o giochi interattivi.
   coursea-2019_shortdescription_congrats: Introduzione all'informatica per bambini che non leggono ancora.
   courseb-2019_shortdescription_congrats: Introduzione all'informatica per bambini che stanno appena imparando a leggere. (Simile al Corso A, ma con maggior varietà per bambini leggermente più grandi.)
   coursec-2019_shortdescription_congrats: Impara le basi dell'informatica e crea disegni, storie animate o giochi interattivi.
   coursed-2019_shortdescription_congrats: Vengono ripresi brevemente i concetti del corso C ed aggiunti algoritmi, cicli annidati, istruzioni condizionali e altro ancora.
-  coursee-2019_shortdescription_congrats: Vengono ripresi brevemente i concetti dei corsi C e D e viene aggiunto il concetto di funzione.
+  coursee-2019_shortdescription_congrats: Vengono ripresi i concetti dei corsi C e D e viene aggiunto il concetto di funzione.
   coursef-2019_shortdescription_congrats: Impara tutti i concetti dei corsi di fondamenti di informatica e crea disegni, storie o giochi interattivi.
   codeorg_longdescription: "Impara i concetti di base dell'informatica con la programmazione visuale. Questo è un corso divertente, illustrato da lezioni video di Bill Gates e Mark Zuckerberg, ed ispirato ai giochi \"Angry Birds\" e \"Plants vs Zombies\". Impara le istruzioni di ripetizione, le istruzioni di scelta e gli algoritmi fondamentali. Disponibile in 34 lingue."
   codeintl_longdescription: "Impara i concetti di base dell'informatica con la programmazione visuale. Questo è un corso divertente, illustrato da lezioni video di Bill Gates e Mark Zuckerberg, ed ispirato ai giochi \"Angry Birds\" e \"Plants vs Zombies\". Impara le istruzioni di ripetizione, le istruzioni di scelta e gli algoritmi fondamentali. Disponibile in 34 lingue."
@@ -1438,6 +1440,7 @@
   login_cards: "Schede di accesso"
   print_login_cards: "Stampa le schede di accesso"
   joining_section: "Iscrizione alla tua classe (una tantum)"
+  joining_section_overview: "Se alcuni studenti non si sono ancora iscritti alla tua classe, chiedigli di eseguire i seguenti passaggi. È una procedura una tantum. Iscrivendosi alla tua classe, gli studenti potranno vedere il corso assegnato e tu potrai monitorare i progressi di quanto faranno ogni volta che accederanno con utenza e password."
   joining_section_instruct_website: 'Crea un account su Code.org se non ne hanno già uno. Lo possono fare su https://studio.code.org/users/sign_up. Nota: lo possono anche fare con un indirizzo email ed una password o tramite Google, Facebook o Microsoft premendo su uno di questi pulsanti:'
   joining_section_instruct_account: "Accedere al loro account Code.org."
   joining_section_instruct_code: 'Accedere alla pagina %{code_org_url} ed inserire il codice classe: %{section_code}.'

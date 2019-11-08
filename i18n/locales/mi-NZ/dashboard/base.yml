@@ -92,6 +92,7 @@ mi:
     student_count: '%{count} ngā ākonga kua waitohu kē.'
     teacher_count: '%{count} ngā pouako kua waitohu kē.'
     overview: 'Waitohungia kia whiwhi pūkete kia āhei koe te whai i tō kauneketanga, ki te whakahaere rānei i tō akomanga. <a href="/"> E āhei ana koe ki te tirotiro ki ngā taumata rerekē me ngā panga </a>, heoi anō, me mātua waitohu kia āhei hoki koe tō kauneketanga me o tūmahi te tiaki.'
+    overview_markdown: 'Waitohungia kia whiwhi pūkete kia āhei koe te whai i tō kauneketanga, ki te whakahaere rānei i tō akomanga. [E āhei ana koe ki te tirotiro ki ngā taumata rerekē me ngā panga](/), heoi anō, me mātua waitohu kia āhei hoki koe tō kauneketanga me o tūmahi te tiaki.'
     hoc_already_signed_up_heading: 'Tīmataria me te kore takitaki'
     hoc_already_signed_up_content: 'Kua uru koe ki te whakaako i tētahi Hour of Code! Me takiuru koutou ko ō ākonga ki Code Studio ka whai wāhi ai. Kia tīmata<a href="https://code.org/learn"> kōwhiritia tētahi whakaakoranga</a> mō tō akomanga kātahi me tiritiri i te honongaitua ki a rātou.<br/><br/>Me i ngahau te Hour of Code mōu, ā, e hiahia ana koe ki te haere tonu, e whakaae ana kia tautuhia e koe tētahi kupuhipa me te whakarite i tētahi pūkete ki raro iho nei kia pai ai tō whakauru i ō ākonga ki tētahi o ā mātou <a href="https://code.org/educate"> whakaakoanga roa</a>.'
     teacher_educator_guide: 'Tirohia te aratohu kaiwhakaako'
@@ -530,14 +531,17 @@ mi:
   terms_interstitial:
     title: "Te Whakahoutanga o Ngā Ture Ratonga me te Kaupapahere Tūmataitinga"
     intro_desc: "I whakahoungia Ngā Ture Ratonga me te Kaupapahere Tūmataitinga, e whakaaturia ana ki raro iho nei. Ka whai mana ngā panonitanga mai i te 24 o Here-turi-kōkā, 2016. Ko te panonitanga nui: e kore mātou <i>e pupuri ki ngā wāhitau īmēra o ngā pūkete o ngā ākonga ki Code Studio.</i>He mea nui tēnei ki a mātou, ā, e manako ana, mā tēnei whakatau ka eke te tūmataitinga o te ākonga i roto i te marau hangarau ki tētahi taumata anō."
+    intro_desc_markdown: "I whakahoungia Ngā Ture Ratonga me te Kaupapahere Tūmataitinga, e whakaaturia ana ki raro iho nei. Ka whai mana ngā panonitanga mai i te 24 o Here-turi-kōkā, 2016. Ko te panonitanga nui: e kore mātou _e pupuri ki ngā wāhitau īmēra o ngā pūkete o ngā ākonga ki Code Studio._He mea nui tēnei ki a mātou, ā, e manako ana, mā tēnei whakatau ka eke te tūmataitinga o te ākonga i roto i te marau hangarau ki tētahi taumata anō."
     intro_instructions: "Me whakaae koe ki ēnei ture hou e āhei ai ngā ākonga kei raro i te 13 te pakeke i tō akomanga te whai wāhi ki ngā āhuahira hou kei Code Studio. I a koe ka rēhita i te pūkete mō tētahi ākonga kei raro i te 13 tau, ka uia kia whakaūngia e koe te whakaaetanga mātua i tō kura mō te kohikohi i ngā mōhiohio whaiaro e pā ana ki te ākonga hei whakamahi, hei whai hua hoki te kura, tae atu ki ngā hōtaka ako pēnei i Code Studio."
     tos: "Ngā Ture Ratonga"
     privacy: "Kaupapahere Tūmataitinga"
     privacy_notice: "Pānui Tūmataitinga"
     accept_label: 'E whakaae ana ahau ki ngā whakahoutanga o <a href="%{tos_url}" target="_blank"> Ngā Ture Whakaratonga</a> me <a href="%{privacy_url}" target="_blank"> te Kaupapahere Tūmataitinga</a>'
+    accept_label_markdown: E whakaae ana ahau ki ngā whakahoutanga o [Ngā Ture Whakaratonga](%{tos_url}) me [te Kaupapahere Tūmataitinga](%{privacy_url})
     accept: "Whakaae"
     print: "Tāngia"
     reminder_desc: 'Kua whakahoungia e mātou ā mātou <a href="%{tos_url}" target="_blank">Ture Ratonga</a> me <a href="%{privacy_url}" target="_blank"> te Kaupapahere Tūmataitinga</a>. Tēnā āta pānuihia i mua i tō whakaae atu. Kia mōhio ai koe, tērā pea kāore tā mātou utauta whakaako JavaScript e wātea ki ō ākonga i mua i tō whakaae mārika ki ngā ture hou.'
+    reminder_desc_markdown: Kua whakahoungia e mātou ā mātou [Ture Ratonga](%{tos_url}) me [te Kaupapahere Tūmataitinga](%{privacy_url}). Tēnā āta pānuihia i mua i tō whakaae atu. Kia mōhio ai koe, tērā pea kāore tā mātou utauta whakaako JavaScript e wātea ki ō ākonga i mua i tō whakaae mārika ki ngā ture hou.
     review_terms: "Arotakehia ngā ture hou"
   race_interstitial:
     title: "He kōwhiringa: Tēnā āwhinatia mātou ki te aroturuki i tō mātou whanaketanga ki te whakapai i te kanorautanga o te pūtaiao rorohiko"
@@ -553,6 +557,7 @@ mi:
     submit: "Tāpaetia"
     decline: "Kati"
   zendesk_too_young_message: 'Kia manawanui mai, kāore e whakaae ana mā te tamaiti nohinohi tā mātou pae e tautoko. E whakaae ana kia tirohia te <a href="http://support.code.org">support.code.org</a> me te kore takiuru atu, ki te tono rānei ki tō matua/whaea tō pouako rānei ki te whakapā mai mōu.'
+  zendesk_too_young_message_markdown: 'Kia manawanui mai, kāore e whakaae ana mā te tamaiti nohinohi tā mātou pae e tautoko. E whakaae ana kia tirohia te [support.code.org](http://support.code.org) me te kore takiuru atu, ki te tono rānei ki tō matua/whaea tō pouako rānei ki te whakapā mai mōu.'
   progress:
     not_started: kāore anō kia tīmata
     in_progress: e kauneke ana

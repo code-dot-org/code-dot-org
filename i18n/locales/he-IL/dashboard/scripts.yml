@@ -1777,3 +1777,24 @@ he:
           stages:
             Dance Party:
               name: מסיבת ריקודים
+        k5-onlinepd-copy:
+          stages:
+            Computer Science Fundamentals:
+              name: יסודות מדעי המחשב
+            Next Steps:
+              name: השלבים הבאים
+            Loops:
+              name: חזרות
+            Conditionals:
+              name: תנאים
+            Events:
+              name: אירועים
+            Functions:
+              name: פונקציות
+            Variables:
+              name: משתנים
+            For Loops:
+              name: בשביל לולאות
+        dance-extras-2019:
+          title: המשיכו לרקוד
+          description: המשיכו מעבר לשעה הראשונה עם רעיונות לפרויקטים נוספים.

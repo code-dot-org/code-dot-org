@@ -47,6 +47,7 @@
   "jumpBackward": "skocz do tyłu o",
   "jumpForward": "skocz do przodu o",
   "jumpToOverDown": "przeskocz do %1 ponad %2 w dół",
+  "jumpToPosition": "skocz do pozycji %1",
   "jumpByDirection": "przeskocz %1 o %2 piksele",
   "jumpTooltip": "Przenosi artystę nie zostawiając żadnych śladów.",
   "jumpEastTooltip": "Przenosi artystę na wschód bez zostawiania śladów.",

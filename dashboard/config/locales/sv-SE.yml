@@ -61,6 +61,7 @@ sv:
   courses: kurser
   courses_page:
     title_student: Lär med Code Studio
+    title_teacher: Lär ut Datavetenskap
   unplugged_activity: Ouppkopplad aktivitet
   of: av
   more: MER
@@ -74,8 +75,12 @@ sv:
   prize: pris
   more_info: Mer information
   auth:
+    continue_with: Fortsätt med %{provider}
     sign_in_with: Logga in med %{provider}
     signed_in: Inloggad!
+    signed_out_markdown: "### Du har loggat ut från [Code.org](%{url})."
+    sign_out_of_markdown: "#### Du använde %{provider} för att logga in. [Klicka här](%{url})
+      för att logga ut från %{provider}."
     already_signedup: Redan registrerad?
     notyet_signedup: Har du inte gått  med ännu?
     google_oauth2: Google-konto
@@ -93,6 +98,10 @@ sv:
       klassrum. <a href="/"> Du kan bläddra mellan de olika stadierna och pussel</a>
       som finns utan ett konto, men du kommer att behöva registrera dig för att spara
       dina framsteg och projekt.
+    overview_markdown: Registrera ett konto för att spåra dina framsteg eller hantera
+      ditt klassrum. [Du kan bläddra mellan de olika stadierna och pussel](/) som
+      finns utan ett konto, men du kommer att behöva registrera dig för att spara
+      dina framsteg och projekt.
     hoc_already_signed_up_heading: Kom igång utan att logga in
     hoc_already_signed_up_content: |-
       Du ska ansvara för att undervisa i Hour of Code! Du och dina elever behöver inte logga in i Code Studio för att kunna delta.
@@ -107,6 +116,7 @@ sv:
     age: Ålder
     user_type: Är du elev eller lärare?
     submit: Registrera dig
+    go_to_account: Gå till mitt konto
     teacher: Är du en lärare?
     valid_username: Tillgängligt!
     invalid_username: Användarnamnet måste innehålla minst fem tecken
@@ -121,6 +131,7 @@ sv:
       till och lagras eller bearbetas i USA.
     additional_information: Vi behöver  ytterligare information att fortsätta registrera
       dig.
+    user_type_button: Uppdatera kontotyp
     user_type_label: Kontotyp
     user_type_teacher: Lärare
     user_type_student: Student
@@ -134,7 +145,9 @@ sv:
     school_country: Skolans land
     select_school_type: Skoltyp
     private: Privat
+    public: Offentlig
     other: Annat
+    state: Stat
     district: Distrikt
     district_name: Distriktsnamn
     school: Skola
@@ -143,6 +156,7 @@ sv:
   signin_form:
     title: Har du redan ett konto? Logga in
     login: E-post
+    login_username: Email eller användarnamn
     password: Lösenord
     remember: Kom ihåg mig
     submit: Logga in
@@ -184,8 +198,11 @@ sv:
     your_section:
       one: 'Din sektion:'
       other: 'Dina sektioner:'
+    confirm:
+      remove: Är du säker du vill lämna den här gruppen?
     remove: "(ta bort sektion)"
     type:
+      picture: Bild-lösenord
       word: Hemligt ord
       email: E-post
   follower:
@@ -226,9 +243,11 @@ sv:
     header:
       finished_hoc: Jag är klar med min Kodtimme
       sign_in_to_save: Logga in för att spara framsteg
+      course_catalog: Kurskatalog
       project_gallery: Projekt
       sections: Avsnitt
       help_support: Hjälp och support
+      report_bug: Rapportera ett problem
       professional_learning: Kollaborativt lärande
       documentation: Dokumentation
       educate_overview: Pedagog översikt
@@ -320,6 +339,7 @@ sv:
       example: Exempel lösning
       example_with_number: Exempel lösning %{solution_number}
       submitted_on: 'Inlämnad den %{date} '
+      last_updated: 'Senast uppdaterad:'
       unsubmit: Ångra Inlämnad
       worked_with: Arbetat med
       update_lock_settings: Uppdatera låsinställningar här.
@@ -338,6 +358,11 @@ sv:
       konton bort.'
     delete_confirm: Är du säker du vill ta bort ditt konto?
     deleted_user: borttagen användare
+    create_personal_login_under_13_username: Användarnamn (använd inte ditt riktiga
+      namn!)
+    create_personal_login_under_13_parent_email: Förälder/vårdnadshavares emailadress
+    parent_email_label: Förälder/vårdnadshavares emailadress (valfritt)
+    update: Uppdatera konto
     update_email: Uppdatera
   user_level:
     completed: Avklarade
@@ -406,6 +431,7 @@ sv:
   gender:
     male: Man
     female: Kvinna
+    non_binary: Icke-binär
     none: Föredrar att inte svara
   user_type:
     student: Student
@@ -468,6 +494,7 @@ sv:
     notes_coming_soon: Text till denna video kommer snart.
     autoplay_option: spela upp automatiskt
     download: Ladda ner video
+    show_video: Visa video
   compatibility:
     upgrade:
       unsupported_message: Din webbläsare stöds inte. Uppgradera din webbläsare till
@@ -686,6 +713,12 @@ sv:
       på kod Studio.</i> Detta är en stor sak för oss, och vi hoppas att det sätter
       en ny standard för elevernas sekretess i teknisk utbildning. Vi har skickat
       Er en sammanfattning av de övriga förändringarna via e-post.'
+    intro_desc_markdown: 'Vi har uppdaterat våra användarvillkor och sekretesspolicy,
+      som visas nedan. Förändringarna träder i kraft from den 24 Augusti, 2016. Den
+      största förändringen: vi kommer _inte längre att lagra e-postadresser för elevkonton
+      på kod Studio._ Detta är en stor sak för oss, och vi hoppas att det sätter en
+      ny standard för elevernas sekretess i teknisk utbildning. Vi har skickat Er
+      en sammanfattning av de övriga förändringarna via e-post.'
     intro_instructions: För att elever under 13 år ska kunna få tillgång till de senaste
       funktionerna i Code Studio måste de nya användarvillkoren accepteras. När du
       registrerar ett konto för en student under 13, blir du ombedd att bekräfta att
@@ -698,6 +731,8 @@ sv:
     accept_label: |-
       Jag samtycker till att de uppdaterade <a href="%{tos_url}" target="_blank"> Användarvillkoren
       </a> och <a href="%{privacy_url}" target="_blank"> Sekretesspolicy</a>
+    accept_label_markdown: Jag samtycker till att de uppdaterade [Användarvillkoren](%{tos_url})
+      och [Sekretesspolicy](%{privacy_url})
     accept: Godkänn
     print: Skriv ut
     reminder_desc: Vi har uppdaterat våra <a href="%{tos_url}" target="_blank"> Användarvillkor</a>
@@ -705,6 +740,11 @@ sv:
       läs igenom dessa noggrant innan du accepterar dem. Observera att våra verktyg
       för undervisning i JavaScript kan vara otillgängliga för era elever innan ni
       uttryckligen accepterar de uppdaterade villkoren.
+    reminder_desc_markdown: Vi har uppdaterat våra [Användarvillkor](%{tos_url}) och
+      [Sekretesspolicy](%{privacy_url}). Vänligen läs igenom dessa noggrant innan
+      du accepterar dem. Observera att våra verktyg för undervisning i JavaScript
+      kan vara otillgängliga för era elever innan ni uttryckligen accepterar de uppdaterade
+      villkoren.
     review_terms: Granska uppdaterade villkor
   school_info_interstitial:
     save: Spara
@@ -714,6 +754,9 @@ sv:
     races:
       white: Vit
       black: Svart eller afroamerikansk
+      hispanic: Spansk eller latino
+      asian: Asiat
+      american_indian: Amerikansk indian / Inhemsk från Alaska
       other: Annat
       opt_out: Föredrar att inte svara
     submit: Skicka in
@@ -721,6 +764,9 @@ sv:
   zendesk_too_young_message: Tyvärr, yngre användare kan inte logga in på vår supportsida.
     Du kan besöka<a href="http://support.code.org"> support.code.org</a> utan att
     logga in eller be din förälder eller lärare att kontakta oss.
+  zendesk_too_young_message_markdown: Tyvärr, yngre användare kan inte logga in på
+    vår supportsida. Du kan besöka[support.code.org](http://support.code.org) utan
+    att logga in eller be din förälder eller lärare att kontakta oss.
   progress:
     not_started: inte startat
     in_progress: pågående
@@ -740,6 +786,8 @@ sv:
     new: Skapa ny
     exit: Tillbaka till kursen
     project_gallery: Projekt
+    publish: Publicera
+    unpublish: Avpublicera
     share_title: Dela ditt projekt
     share_copy_link: 'Kopiera länken:'
     share_embed_description: Du kan klistra in inbäddad kod i en HTML-sida att visa
@@ -815,35 +863,69 @@ sv:
     csf_variables: variabler
     csf_for_loops: "'För' loopar"
     csf_internet: Internet
+    csf_warmup: Uppvärmning
+    csd1_1: 'Kapitel 1: Problemlösnings-processen'
+    csd1_2: 'Kapitel 2: Datorer och Problemlösning'
+    csd3_1: 'Kapitel 1: Bilder och Animationer'
+    csd3_2: 'Kapitel 2: Bygga Spel'
+    csp1_2: 'Kapitel 2: Uppfinna Internet'
     csp_variables: variabler
     csp_conditionals: Villkor
     csp_functions: funktioner
+    csp_project: Projekt
     csp_lists: Listor
     csp_loops: loopar
+    csp_libraries: Bibliotek
+    k5_next_steps: Nästa steg
+  external_links:
+    disclaimer: Varning
   hoc_download:
     capsule_title: Har du Internet?
     instructions_headline: Inget Internet?
+    starwars_blocks_name: 'Star Wars: Bygga en Galax Med Kod (Block)'
     starwars_javascript_name: 'Star Wars: Bygg en galax med kod i JavaScript'
     download_message: Hämta %{app_name} för offlineanvändning (136MB)
     download_in_Albanian: 'Ladda ner på albanska:'
+    download_in_Arabic: 'Ladda ner på arabiska:'
+    download_in_Azerbaijani: 'Ladda ner på aseriska:'
+    download_in_Basque: 'Ladda ner på baskiska:'
     download_in_Bosnian: 'Ladda ner på bosniska:'
+    download_in_Bulgarian: 'Ladda ner på bulgariska:'
     download_in_Catalan: 'Ladda ner på katalanska:'
     download_in_Chinese: 'Ladda ner på kinesiska:'
     download_in_Croatian: 'Ladda ner på kroatiska:'
+    download_in_Czech: 'Ladda ner på tjeckiska:'
+    download_in_Danish: 'Ladda ner på danska:'
+    download_in_Dutch: 'Ladda ner på holländska:'
     download_in_English: 'Ladda ner på engelska:'
     download_in_Finnish: 'Ladda ner på finska:'
+    download_in_French: 'Ladda ner på franska:'
+    download_in_German: 'Ladda ner på tyska:'
+    download_in_Greek: 'Ladda ner på grekiska:'
     download_in_Hebrew: 'Ladda ner på hebreiska:'
+    download_in_Hungarian: 'Ladda ner på ungerska:'
+    download_in_Icelandic: 'Ladda ner på isländska:'
+    download_in_Indonesian: 'Ladda ner på indonesiska:'
+    download_in_Irish: 'Ladda ner på irländska:'
     download_in_Italian: 'Ladda ner på italienska:'
     download_in_Japanese: 'Ladda ner på japanska:'
     download_in_Korean: 'Ladda ner på koreanska:'
     download_in_Latvian: 'Ladda ner på lettiska:'
+    download_in_Lithuanian: 'Ladda ner på litauiska:'
+    download_in_Norwegian: 'Ladda ner på norska:'
+    download_in_Norwegian-Nynorsk: 'Ladda ner på norska-nynorsk:'
     download_in_Polish: 'Ladda ner på polska:'
+    download_in_Portuguese-Brazil: 'Ladda ner på portugisiska-Brazilien:'
+    download_in_Portuguese: 'Ladda ner på portugisiska:'
     download_in_Romanian: 'Ladda ner på rumänska:'
     download_in_Russian: 'Ladda ner på ryska:'
     download_in_Serbian: 'Ladda ner på serbiska:'
+    download_in_Slovenian: 'Ladda ner på slovenska:'
     download_in_Spanish: 'Ladda ner på spanska:'
     download_in_Swedish: 'Ladda ner på svenska:'
     download_in_Turkish: 'Ladda ner på turkiska:'
+    download_in_Ukrainian: 'Ladda ner på ukrainska:'
+    download_in_Vietnamese: 'Ladda ner på vietnamesiska:'
     windows: Windows (64-bitars)
     mac: Mac OS X
   locked_stage: Innehållet i detta steg syns inte eftersom det för närvarande är låst.
@@ -851,10 +933,14 @@ sv:
     granska dina svar.
   hidden_stage: Din lärare förväntar sig inte att du är på denna lektion. Fråga gärna
     din lärare vilka lektion som du bör vara på.
+  hidden_script: Din lärare förväntade sig inte att du skulle vara här. Fråga gärna
+    din lärare vilken lektion som du bör vara på.
+  return_unit_overview: Gå till avsnittets översikt
   return_course_overview: Gå till avsnittets översikt
   view_teacher_guide: Visa lärarhandledning
   pd:
     form_labels:
+      first_name: Förnamn
       email: E-post
       school_name: Skolnamn
       school_country: Skolans land
@@ -862,16 +948,26 @@ sv:
       gender:
         male: Man
         female: Kvinna
+        non_binary: Icke-binär
         none: Föredrar att inte svara
       subjects:
         cs: Datavetenskap
         math: Matte
         science: Naturvetenskap
         la: Språk
+        efl: Engelska som utländsk språk
+        music: Musik
+        art: Konst
+        other: 'Övrigt:'
       resources:
+        codecademy: CodeCademy
+        khan: Khan Academy
         kodable: Kodable
+        other: 'Övrigt:'
       robotics:
         kodable: Kodable
+        raspberry: Raspberry Pi
+        other: 'Övrigt:'
       email_opt_in:
         opt_in_yes: Ja
         opt_in_no: Nej
@@ -880,4 +976,6 @@ sv:
   gdpr_dialog:
     message: När du använder denna webbplats kan information om detta skickas till
       och lagras eller bearbetas i USA.
+    privacy_policy: sekretesspolicy
+    logout: Logga ut
     true: Ja

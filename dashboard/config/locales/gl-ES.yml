@@ -23,11 +23,13 @@ gl:
     attributes:
       user:
         name: Nome a mostrar
-        name_example: 'Nome amosado<br/>(ex: Antía C. ou Trasno)'
+        name_example: 'Nome amosado (ex: Antía C. ou Trasno)'
         email: E-mail
         parent_email: Enderezo de correo electrónico da persoa responsable
         personal_email: Enderezo do correo persoal <a href="%{url}">(preme aquí se
           non tes un enderezo de correo)</a>
+        personal_email_markdown: Enderezo do correo persoal [(preme aquí se non tes
+          un enderezo de correo)](%{url})
         username: Nome de usuario
         password: Contrasinal
         password_confirmation: Confirmación do contrasinal
@@ -39,8 +41,12 @@ gl:
         finish_sign_up_header: Remata de crear a túa conta
         finish_sign_up_subheader: Completa a seguinte información para acabar de crear
           unha conta de Code.org para <strong>%{email}</strong>.
+        finish_sign_up_subheader_markdown: Completa a seguinte información para acabar
+          de crear unha conta de Code.org para **%{email}**.
         finish_sign_up_subheader_provider: Completa a seguinte información para acabar
           de crear unha conta de Code.org con <strong>%{provider}</strong> para <strong>%{email}</strong>.
+        finish_sign_up_subheader_provider_markdown: Completa a seguinte información
+          para acabar de crear unha conta de Code.org con **%{provider}** para **%{email}**.
         error:
           future: non pode estar no futuro
   beta: beta
@@ -119,6 +125,9 @@ gl:
     overview: Rexístrese para seguir os seus progresos ou administrar a súa aula.
       <a href="/">Pode explorar as etapas e os desafíos</a> sen ter unha conta, pero
       cómpre un rexistro para gardar os avances e os proxectos.
+    overview_markdown: Rexístrese para seguir os seus progresos ou administrar a súa
+      aula. [Pode explorar as etapas e os desafíos](/) sen ter unha conta, pero cómpre
+      un rexistro para gardar os avances e os proxectos.
     hoc_already_signed_up_heading: Comezar sen iniciar sesión
     teacher_educator_guide: Consultar a guía do profesor
     title: Rexístrese en Code.org
@@ -407,6 +416,10 @@ gl:
       target='_blank'>termos de serviço</a> do Code.org. Se son menor de 13 anos,
       declaro que teño autorización de meus pais ou responsables legais para usar
       os servizos de Code.org incluso sen a supervisión dun profesor.
+    create_personal_login_terms_markdown: Ao crear unha conta individual, acepto os
+      [termos de serviço](%{terms_of_service_url}) do Code.org. Se son menor de 13
+      anos, declaro que teño autorización de meus pais ou responsables legais para
+      usar os servizos de Code.org incluso sen a supervisión dun profesor.
     update_email: Actualizar
   user_level:
     completed: Concluído
@@ -694,6 +707,10 @@ gl:
     decline: Pechar
   zendesk_too_young_message: Pedimos desculpa, pero os usuarios máis novos non poden
     crear unha conta no noso sitio Web. Podes acceder a <a href="http://support.code.org">support.code.org</a>
+    sen creares unha conta ou podes pedir aos teus pais ou a un profesor entraren
+    en contacto connosco.
+  zendesk_too_young_message_markdown: Pedimos desculpa, pero os usuarios máis novos
+    non poden crear unha conta no noso sitio Web. Podes acceder a [support.code.org](http://support.code.org)
     sen creares unha conta ou podes pedir aos teus pais ou a un profesor entraren
     en contacto connosco.
   progress:

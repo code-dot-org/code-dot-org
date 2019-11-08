@@ -334,7 +334,7 @@ pt:
         C3_functional_suncatchers: Caça-sóis funcionais
         C3_songwriting_with_parameters: Escrevendo uma canção com parâmetros
         C4_intro: Introdução
-        C4_loops_zombie: ciclos
+        C4_loops_zombie: Ciclos
         C4_bee_conditional: Condicionais da abelha
         C4_variables_artist: Variáveis - Artista
         C4_variables_playlab: Variáveis - Laboratório
@@ -365,7 +365,7 @@ pt:
         infinity_playlab_repeat_forever: Laboratório - Repetir infinitamente
         csp_applab_functions: Introdução às Funções
         csp_applab_functions_parameters: Funções com parâmetros
-        csp_applab_loops: ciclos
+        csp_applab_loops: Ciclos
         starwars_intro: 'Star Wars: Construindo uma galáxia com código - Introdução'
         starwars_typing: 'Star Wars: Construindo uma galáxia com código - JavaScript'
         starwars_events: 'Star Wars: Construindo uma galáxia com código - Eventos'
@@ -390,7 +390,7 @@ pt:
         mc_2016_spawn: Minecraft Hora de Código - Spawn (Gerar)
         mc_2016_congrats: Minecraft Hora de Código - Parabéns
         mc_2017_congratulations: Minecraft Hora de Código - Parabéns
-        CSF_loops_AB: ciclos
+        CSF_loops_AB: Ciclos
         csd_pair_programming: Programação em duplas
         csd_applab_parameters: Funções com parâmetros
     callout:

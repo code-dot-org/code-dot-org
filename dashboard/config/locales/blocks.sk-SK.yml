@@ -454,7 +454,7 @@ sk:
       Dancelab_setBackgroundEffectWithPalette:
         text: |-
           nastav efekt pozadia
-          {EFFECT} {PALETTE}
+          {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': Žiadne
@@ -586,6 +586,7 @@ sk:
             '"rotation"': otočenie
             '"x"': horizontálna pozícia
             '"y"': vertikálna pozícia
+            '"tint"': sfarbenie
       Dancelab_setPropRandom:
         text: nastav náhodne {SPRITE} {PROPERTY}
         options:
@@ -804,6 +805,8 @@ sk:
             '1': stredy
             '2': výšky
       Dancelab_whenSetup:
+        text: nastavenie
+      Dancelab_whenSetup2:
         text: nastavenie
       gamelab_changePropBy:
         text: zmeň {SPRITE} {PROPERTY} o {VAL}
@@ -1047,6 +1050,8 @@ sk:
             MOVES.Rest: Žiadne
       Mikelab_randomColor:
         text: náhodná farba
+      Mikelab_repeatUntilComplete:
+        text: opakuj donekonečna
       Mikelab_setBG:
         options:
           BG:

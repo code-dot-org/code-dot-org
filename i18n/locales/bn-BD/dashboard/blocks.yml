@@ -286,6 +286,8 @@ bn:
             '"scale"': আকার
       Mikelab_randomColor:
         text: যেকোনো রঙ
+      Mikelab_repeatUntilComplete:
+        text: সবসময় পুনরাবৃত্তি করুন
       Mikelab_setBG:
         options:
           BG:

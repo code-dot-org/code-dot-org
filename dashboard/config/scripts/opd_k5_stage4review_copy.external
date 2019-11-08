@@ -1,0 +1,15 @@
+name 'OPD-K5 Stage4Review_copy'
+skip_dialog true
+markdown <<MARKDOWN
+# Reflect
+
+In this lesson, we explored how loops can be used to make code more efficient. In the next lesson, we'll look at how events can add interactivity into a program.
+
+![](https://images.code.org/c6dca0407f5a517823f7e71b8da3880b-image-1549050118354.jpg)
+
+> Take a moment now to review how loops are introduced in the CS Fundamentals curriculum. Consider how you might implement the suggested activities in your classroom.
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

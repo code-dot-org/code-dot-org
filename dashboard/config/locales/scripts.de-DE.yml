@@ -509,6 +509,20 @@ de:
               name: Binärzahlen
             Bytes and File Sizes:
               name: Bytes und Dateigrößen
+            Encode a Complex Thing:
+              name: Eine Erfahrung kodieren
+            Encoding B&W Images:
+              name: Schwarz-weiß Bilder kodieren
+            Encoding Color Images:
+              name: Farbbilder kodieren
+            Encoding Numbers in the Real World:
+              name: Zahlen in der realen Welt kodieren
+            Encoding and Sending Text:
+              name: Text kodieren und senden
+            Lossy Compression and File Formats:
+              name: Verlustreiche Kompression und Dateitypen
+            Number Systems:
+              name: Zahlensystem
             Sending Binary Messages:
               name: Binäre Nachrichten senden
             Sending Binary Messages with the Internet Simulator:
@@ -531,6 +545,8 @@ de:
               name: Auswertungsbausteine
             Teacher Dashboard:
               name: Lehrer-Dashboard
+            Why Computer Science belongs in Algebra:
+              name: Warum Informatik zur Algebra gehört
         algPDmiami:
           stages:
             Booleans:
@@ -539,12 +555,18 @@ de:
               name: Auswertungsbausteine
             Luigi's Pizza:
               name: Luigis Pizza
+            Rocket-Height:
+              name: Höhe der Rakete
             Sam the Bat:
               name: Sam die Fledermaus
             Strings and Images:
               name: Zeichenfolgen und Bilder
             Your Game - Animation:
               name: Dein Spiel - Animation
+            Your Game - Booleans:
+              name: Dein Spiel - Booleans
+            Your Game - Collision Detection:
+              name: Dein Spiel - Kollisionserkennung
         text-compression:
           title: Text-Kompression
           stages:
@@ -633,6 +655,8 @@ de:
               name: Auswertungsbausteine
             Teacher Dashboard:
               name: Lehrer-Dashboard
+            Why Computer Science belongs in Algebra:
+              name: Warum Informatik zur Algebra gehört
         algebraPD-iZone:
           stages:
             Course Overview:
@@ -641,6 +665,8 @@ de:
               name: Auswertungsbausteine
             Teacher Dashboard:
               name: Lehrer-Dashboard
+            Why Computer Science belongs in Algebra:
+              name: Warum Informatik zur Algebra gehört
         sciencePD-NexTech:
           stages:
             Introduction to Computational Science:
@@ -704,6 +730,8 @@ de:
               name: Freies Spiel
             Luigi's Pizza:
               name: Luigis Pizza
+            Rocket-Height:
+              name: Höhe der Rakete
             Sam the Bat:
               name: Sam die Fledermaus
             Strings and Images:
@@ -768,6 +796,8 @@ de:
               name: Auswertungsbausteine
             Next Steps:
               name: Nächste Schritte
+            Rocket-Height:
+              name: Höhe der Rakete
             Strings and Images:
               name: Zeichenfolgen und Bilder
             Teacher Dashboard:
@@ -1247,6 +1277,8 @@ de:
               name: Auswertungsbausteine
             Teacher Dashboard:
               name: Lehrer-Dashboard
+            Why Computer Science belongs in Algebra:
+              name: Warum Informatik zur Algebra gehört
         algebraPD3c:
           stages:
             Getting Started:
@@ -1256,6 +1288,8 @@ de:
           stages:
             Binary Numbers:
               name: Binärzahlen
+            Number Systems:
+              name: Zahlensystem
             Routers and Redundancy:
               name: Router und Redundanz
             Sending Binary Messages:
@@ -1277,6 +1311,12 @@ de:
               name: Prüfe deine Voraussetzungen
             Creating Summary Tables:
               name: Zusammenfassungstabellen erstellen
+            Encoding B&W Images:
+              name: Schwarz-weiß Bilder kodieren
+            Encoding Color Images:
+              name: Farbbilder kodieren
+            Lossy Compression and File Formats:
+              name: Verlustreiche Kompression und Dateitypen
             Text Compression:
               name: Text-Kompression
         csp3-2017:
@@ -1348,6 +1388,8 @@ de:
               name: Auswertungsbausteine
             Teacher Dashboard:
               name: Lehrer-Dashboard
+            Why Computer Science belongs in Algebra:
+              name: Warum Informatik zur Algebra gehört
         sciencePD1:
           stages:
             Introduction to Computational Science:
@@ -2159,7 +2201,7 @@ de:
             Nested Loops:
               name: Verschachtelte Schleifen
           title: Expresskurs
-          assignment_family_title: Expresskurs
+          assignment_family_title: Expresskurs (2018)
           description_audience: 'Alter: 9-18'
         pre-express-2017:
           stages:
@@ -2607,6 +2649,8 @@ de:
               name: Binäre Nachrichten senden
             Sending Binary Messages with the Internet Simulator:
               name: Binäre Nachrichten mit dem Internet-Simulator senden
+            Number Systems:
+              name: Zahlensystem
             Binary Numbers:
               name: Binärzahlen
             Sending Numbers:
@@ -2636,6 +2680,12 @@ de:
               name: Bytes und Dateigrößen
             Text Compression:
               name: Text-Kompression
+            Encoding B&W Images:
+              name: Schwarz-weiß Bilder kodieren
+            Encoding Color Images:
+              name: Farbbilder kodieren
+            Lossy Compression and File Formats:
+              name: Verlustreiche Kompression und Dateitypen
             Check Your Assumptions:
               name: Prüfe deine Voraussetzungen
             Creating Summary Tables:
@@ -3043,6 +3093,8 @@ de:
               name: Binäre Nachrichten senden
             Sending Binary Messages with the Internet Simulator:
               name: Binäre Nachrichten mit dem Internet-Simulator senden
+            Number Systems:
+              name: Zahlensystem
             Binary Numbers:
               name: Binärzahlen
             Sending Numbers:
@@ -3060,6 +3112,10 @@ de:
               name: Bytes und Dateigrößen
             Text Compression:
               name: Text-Kompression
+            Encoding B&W Images:
+              name: Schwarz-weiß Bilder kodieren
+            Encoding Color Images:
+              name: Farbbilder kodieren
         csp3-2019:
           title: CSP Lektion 3 - Einführung in die Programmierung ('19-'20)
           description_short: Programmierung
@@ -3104,6 +3160,8 @@ de:
               name: Abschließende Herausforderung
         csp1-pilot:
           stages:
+            Number Systems:
+              name: Zahlensystem
             Black and White Images:
               name: Schwarz/Weiß Bilder
             Color Images:
@@ -3236,3 +3294,30 @@ de:
               name: Tanzparty
           description: Codiere deine eigene Tanzparty, um sie mit deinen Freunden
             zu teilen!
+        k5-onlinepd-copy:
+          stages:
+            Getting Started:
+              name: Erste Schritte
+            Computer Science Fundamentals:
+              name: Informatik Grundlagen
+            Looking Ahead:
+              name: Nach vorne schauen
+            Planning:
+              name: Planung
+            Next Steps:
+              name: Nächste Schritte
+            Loops:
+              name: Schleifen
+            Conditionals:
+              name: Bedingungen
+            Events:
+              name: Ereignisse
+            Functions:
+              name: Funktionen
+            Variables:
+              name: Variablen
+            For Loops:
+              name: '"Zähle mit"-Schleifen'
+        dance-extras-2019:
+          title: Tanzt weiter
+          description: Überschreite die erste Stunde mit erweiterten Projektideen.

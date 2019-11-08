@@ -426,7 +426,7 @@ th:
             '"vintage"': วินเทจ
             '"warm"': แดง
       Dancelab_setBackgroundEffectWithPalette:
-        text: กำหนดแบ็กกราวนด์เอฟเฟกต์ {EFFECT} {PALETTE}
+        text: กำหนดแบ็กกราวนด์เอฟเฟกต์ {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': ไม่มี
@@ -549,6 +549,7 @@ th:
             '"rotation"': การหมุน
             '"x"': ตำแหน่งแนวนอน
             '"y"': ตำแหน่งแนวตั้ง
+            '"tint"': ระดับอ่อนสี
       Dancelab_setPropRandom:
         text: การสุ่ม {SPRITE} {PROPERTY}
         options:
@@ -746,6 +747,8 @@ th:
             '1': เสียงกลาง
             '2': เสียงสูง
       Dancelab_whenSetup:
+        text: การตั้งค่า
+      Dancelab_whenSetup2:
         text: การตั้งค่า
       gamelab_changePropBy:
         text: เปลี่ยน {SPRITE} {PROPERTY} โดย {VAL}
@@ -958,6 +961,8 @@ th:
             MOVES.Rest: ไม่มี
       Mikelab_randomColor:
         text: สุ่มสี
+      Mikelab_repeatUntilComplete:
+        text: ทำซ้ำตลอดไป
       Mikelab_setBG:
         options:
           BG:

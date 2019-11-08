@@ -426,6 +426,21 @@ uz-UZ:
         - {}
         - {}
         - {}
+      CSD U1 Lesson 5 Overview:
+        markdown: |
+          # Qisqacha maʼlumot
+
+          Ushbu darsda siz kompyuter orqali axborotlarni qabul qiluvchi va joʻnatuvchi qurilma turlari haqida va ular joʻnatadigan hamda qabul qiladigan axborot turlari haqida bilib olasiz.
+
+          ## Lugʻat
+
+          * **Qabul qiluchi qurilma** - bu kompyuterga maʻlumot kiritishga yordam beruvchi qurilma yoki uning tarkibiy qismi
+          * **Joʻnatuvchi qurilma** - Kompyuterdan maʻlumot olishga yordam beruvchi har qanday qurilma yoki uning tarkibiy qismi
+
+          ## Manbalar
+
+          [Qabul qiluvchi va joʻnatuvchi qurilmalar - foydalanish yoʻriqnomasi]
+          (https://docs.google.com/document/d/1ObS_kxkXoueaotPYFAEkcCDzn690zumqoLLnrU5kY2Q/export?format=pdf)
       CSD U2 image debug match:
         questions:
         - {}

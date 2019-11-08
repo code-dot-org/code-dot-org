@@ -349,6 +349,8 @@ mi:
             '"all"': katoa
       Mikelab_randomColor:
         text: tae matapōkere
+      Mikelab_repeatUntilComplete:
+        text: tōaitia mō ake ake
       Mikelab_setBG:
         options:
           BG:

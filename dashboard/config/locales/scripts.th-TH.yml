@@ -1921,3 +1921,22 @@ th:
             Dance Party:
               name: งานเต้นรำ
           description: เขียนโค้ดสำหรับปาร์ตี้เต้นรำของคุณเอง เพื่อแชร์กับเพื่อนๆ ของคุณ!
+        k5-onlinepd-copy:
+          stages:
+            Computer Science Fundamentals:
+              name: พื้นฐานด้านวิทยาการคอมพิวเตอร์
+            Loops:
+              name: ลูป
+            Conditionals:
+              name: เงื่อนไข
+            Events:
+              name: เหตุการณ์
+            Functions:
+              name: ฟังก์ชัน
+            Variables:
+              name: ตัวแปร
+            For Loops:
+              name: การวนรอบ
+        dance-extras-2019:
+          title: สร้างโค้ดเต้นรำกันต่อไป
+          description: ศึกษาต่อเนื่องจากขั้นพื้นฐานด้วยการใส่ไอเดียเพิ่มเติมให้กับโครงงาน

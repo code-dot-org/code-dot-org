@@ -47,6 +47,7 @@
   "jumpBackward": "sari înapoi cu",
   "jumpForward": "Sari înainte cu",
   "jumpToOverDown": "sari la %1 peste %2 în jos",
+  "jumpToPosition": "sari la poziţia %1",
   "jumpByDirection": "sari %1 cu %2 pixeli",
   "jumpTooltip": "Mută artistul fără a lăsa urme.",
   "jumpEastTooltip": "Mută artistul la est fără a lăsa urme.",

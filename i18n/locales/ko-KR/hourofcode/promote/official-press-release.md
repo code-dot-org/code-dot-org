@@ -1,7 +1,5 @@
 ---
 title: 선출직 공무원을 위한 Hour of Code 보도 자료
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

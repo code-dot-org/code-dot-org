@@ -182,7 +182,7 @@ da:
             '"tropical"': Tropisk
             '"warm"': Rød
       Dancelab_setBackgroundEffectWithPalette:
-        text: indstil baggrundseffekt {EFFECT} {PALETTE}
+        text: indstil baggrundseffekt {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"circles"': Tunnel
@@ -471,6 +471,8 @@ da:
             MOVES.Kick: Stjerne
       Mikelab_randomColor:
         text: tilfældig farve
+      Mikelab_repeatUntilComplete:
+        text: Gentag for evigt
       Mikelab_setBG:
         options:
           BG:

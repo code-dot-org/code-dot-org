@@ -1,7 +1,5 @@
 ---
 title: Hour of Code Press Release for Elected Officials
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

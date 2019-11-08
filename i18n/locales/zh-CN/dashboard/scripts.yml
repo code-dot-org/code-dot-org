@@ -10570,11 +10570,27 @@ zh-CN:
               name: 新的阶段
             Deeper Learning Overview:
               name: 更深的学习概览
+        dlp19-csd-mod-w3:
+          stages:
+            Deeper Learning Overview:
+              name: 更深的学习概览
+        dlp19-csd-mod-w4:
+          stages:
+            Deeper Learning Overview:
+              name: 更深的学习概览
         dlp19-csp-mod-w1:
           stages:
             Deeper Learning Overview:
               name: 更深的学习概览
         dlp19-csp-mod-w2:
+          stages:
+            Deeper Learning Overview:
+              name: 更深的学习概览
+        dlp19-csp-mod-w3:
+          stages:
+            Deeper Learning Overview:
+              name: 更深的学习概览
+        dlp19-csp-mod-w4:
           stages:
             Deeper Learning Overview:
               name: 更深的学习概览
@@ -10627,3 +10643,54 @@ zh-CN:
             Dance Party:
               name: 舞蹈派对
           description: 写出你自己的舞会代码，分享给你的朋友们！
+        k5-onlinepd-copy:
+          stages:
+            Getting Started:
+              name: 开始
+            Computer Science Fundamentals:
+              name: 计算机科学基础
+            Looking Ahead:
+              name: 展望未来
+            'Mastering the Basics: Sequencing':
+              name: '掌握基本知识: 序列'
+            'Mastering the Basics: Loops':
+              name: '掌握基本知识： 循环'
+            'Mastering the Basics: Conditionals':
+              name: '掌握基本知识： 条件语句'
+            'Mastering the Basics: Functions':
+              name: '掌握基本知识： 函数'
+            'Mastering the Basics: Events':
+              name: '掌握基本知识： 事件'
+            Best Practices for Teaching Computer Science:
+              name: 计算机科学教学的最佳实践
+            Planning:
+              name: 规划
+            Next Steps:
+              name: 下一步
+            Sequencing:
+              name: 序列
+            Loops:
+              name: 循环
+            Conditionals:
+              name: 条件语句
+            Events:
+              name: 事件
+            Functions:
+              name: 函数
+            Sprite Lab:
+              name: 精灵实验室
+            Variables:
+              name: 变量
+            For Loops:
+              name: 计数循环
+        dance-extras-2019:
+          title: 继续跳舞
+          description: 通过扩展项目创意，超越第一个小时。
+          description_short: 结束代码一小时活动后，请参照 Code.org 的舞蹈聚会教程完成后续练习。
+          stages:
+            Dance Party - Go Further:
+              name: 舞会 - 继续
+        csp10-pilot:
+          stages:
+            new stage:
+              name: 新的阶段

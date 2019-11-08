@@ -83,6 +83,7 @@ it:
             '"x"': posizione orizzontale
             '"y"': posizione verticale
       Dancelab_changePropEachBy:
+        text: cambia {PROPERTY} di {GROUP} di {VAL}
         options:
           GROUP:
             sprites: tutto
@@ -181,6 +182,8 @@ it:
           DIR:
             '1': "→"
             "-1": "←"
+      Dancelab_everyMeasuresRange:
+        text: 'ripeti ogni {N} battute dopo {START} '
       Dancelab_everySeconds:
         text: 'ogni {N} {UNIT} '
         options:
@@ -268,6 +271,7 @@ it:
             "{x: 300, y: 300}": in basso a destra
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": in un punto casuale
       Dancelab_jumpToEach:
+        text: fai saltare {GROUP} a {LOCATION}
         options:
           GROUP:
             sprites: tutto
@@ -469,7 +473,7 @@ it:
             '"vintage"': Vintage
             '"warm"': Rossi
       Dancelab_setBackgroundEffectWithPalette:
-        text: imposta effetto di sfondo {EFFECT} {PALETTE}
+        text: imposta effetto di sfondo {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': Nessuno
@@ -602,6 +606,7 @@ it:
             '"rotation"': rotazione
             '"x"': posizione orizzontale
             '"y"': posizione verticale
+            '"tint"': tonalità
       Dancelab_setPropRandom:
         text: modifica a caso la {PROPERTY} di {SPRITE}
         options:
@@ -614,6 +619,7 @@ it:
             '"y"': posizione verticale
             '"tint"': tonalità
       Dancelab_setPropRandomEach:
+        text: modifica a caso {PROPERTY} di {GROUP}
         options:
           GROUP:
             sprites: tutto
@@ -698,7 +704,7 @@ it:
             'true': visibile
             'false': invisibile
       Dancelab_startMapping:
-        text: "{SPRITE} inizia a modificare la {PROPERTY} seguendo i {RANGE}"
+        text: "{SPRITE} inizia a modificare la {PROPERTY} seguendo {RANGE}"
         options:
           PROPERTY:
             '"scale"': dimensione
@@ -713,6 +719,7 @@ it:
             '"mid"': toni medi
             '"treble"': toni acuti
       Dancelab_startMappingEach:
+        text: "{GROUP} inizia a modificare {PROPERTY} seguendo {RANGE}"
         options:
           GROUP:
             sprites: tutto
@@ -740,7 +747,7 @@ it:
             '"mid"': toni medi
             '"treble"': toni acuti
       Dancelab_stopMapping:
-        text: "{SPRITE} smette di modificare la {PROPERTY} seguendo i {RANGE}"
+        text: "{SPRITE} smette di modificare la {PROPERTY} seguendo {RANGE}"
         options:
           PROPERTY:
             '"scale"': dimensione
@@ -756,6 +763,7 @@ it:
             '"mid"': toni medi
             '"treble"': toni acuti
       Dancelab_stopMappingEach:
+        text: "{GROUP} smette di modificare {PROPERTY} seguendo {RANGE}"
         options:
           GROUP:
             sprites: tutto
@@ -837,6 +845,8 @@ it:
             '1': toni medi
             '2': toni acuti
       Dancelab_whenSetup:
+        text: quando si clicca su "Esegui"
+      Dancelab_whenSetup2:
         text: quando si clicca su "Esegui"
       gamelab_addBehaviorSimple:
         text: il personaggio {SPRITE} inizia {BEHAVIOR}
@@ -1259,6 +1269,8 @@ it:
         text: colore scelto a caso
       Mikelab_removeBehaviorSimple:
         text: il personaggio {SPRITE} interrompe {BEHAVIOR}
+      Mikelab_repeatUntilComplete:
+        text: ripeti per sempre
       Mikelab_setBG:
         options:
           BG:

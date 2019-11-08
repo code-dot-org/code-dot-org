@@ -1754,3 +1754,24 @@ el:
             Dance Party:
               name: Πάρτι Χορού
           description: Δημιουργήστε ένα δικό σας πάρτι χορού για να το μοιραστείτε με τους φίλους σας.
+        k5-onlinepd-copy:
+          stages:
+            Computer Science Fundamentals:
+              name: Βασικές αρχές της επιστήμης υπολογιστών
+            Loops:
+              name: Βρόχοι
+            Conditionals:
+              name: Συνθήκες
+            Events:
+              name: Συμβάντα
+            Functions:
+              name: Συναρτήσεις
+            Sprite Lab:
+              name: Sprite Lab
+            Variables:
+              name: Μεταβλητές
+            For Loops:
+              name: Βρόχοι Για
+        dance-extras-2019:
+          title: Συνεχίστε να Χορεύετε
+          description: Πηγαίνετε πέρα από την πρώτη ώρα με εκτενείς ιδέες για πρότζεκτ.

@@ -8655,11 +8655,27 @@ fil:
               name: bagong yugto
             Deeper Learning Overview:
               name: Buod ng Mas Malalim na Pag-aaral
+        dlp19-csd-mod-w3:
+          stages:
+            Deeper Learning Overview:
+              name: Buod ng Mas Malalim na Pag-aaral
+        dlp19-csd-mod-w4:
+          stages:
+            Deeper Learning Overview:
+              name: Buod ng Mas Malalim na Pag-aaral
         dlp19-csp-mod-w1:
           stages:
             Deeper Learning Overview:
               name: Buod ng Mas Malalim na Pag-aaral
         dlp19-csp-mod-w2:
+          stages:
+            Deeper Learning Overview:
+              name: Buod ng Mas Malalim na Pag-aaral
+        dlp19-csp-mod-w3:
+          stages:
+            Deeper Learning Overview:
+              name: Buod ng Mas Malalim na Pag-aaral
+        dlp19-csp-mod-w4:
           stages:
             Deeper Learning Overview:
               name: Buod ng Mas Malalim na Pag-aaral
@@ -8697,3 +8713,43 @@ fil:
               name: Mga Pangyayari sa Star Wars
             Nested Loops in Frozen:
               name: Naka-nest na mga Loop sa Frozen
+        k5-onlinepd-copy:
+          stages:
+            Getting Started:
+              name: Pagsisimula
+            Computer Science Fundamentals:
+              name: Mga Batayan ng Computer Science
+            Looking Ahead:
+              name: Masdan ang Hinaharap
+            'Mastering the Basics: Sequencing':
+              name: 'Pag-amo sa mga Pangunahing Kaalaman: Pagsunod-sunod'
+            'Mastering the Basics: Loops':
+              name: 'Pag-amo sa mga Pangunahing Kaalaman: Mga Loop'
+            'Mastering the Basics: Conditionals':
+              name: 'Pag-amo sa mga Pangunahing Kaalaman: Mga Kondisyonal'
+            'Mastering the Basics: Functions':
+              name: 'Pag-amo sa mga Pangunahing Kaalaman: Mga Function'
+            'Mastering the Basics: Events':
+              name: 'Pag-amo sa mga Pangunahing Kaalaman: Mga Kaganapan'
+            Best Practices for Teaching Computer Science:
+              name: Mga Magandang Gawi sa Pagtuturo ng Computer Science
+            Planning:
+              name: Pagpaplano
+            Next Steps:
+              name: Mga susunod na Hakbang
+            Loops:
+              name: Mga loop
+            Conditionals:
+              name: Mga conditional
+            Events:
+              name: Mga event
+            Functions:
+              name: Mga function
+            Variables:
+              name: Mga variable
+            For Loops:
+              name: For Loops
+        csp10-pilot:
+          stages:
+            new stage:
+              name: bagong yugto

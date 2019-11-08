@@ -1,0 +1,9 @@
+name 'OPD-K5 Stage4Start_copy'
+skip_dialog true
+markdown <<MARKDOWN
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

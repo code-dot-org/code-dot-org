@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
@@ -10,6 +11,10 @@ import {
   stringForType,
   resourceShape
 } from '@cdo/apps/templates/courseOverview/resourceType';
+import experiments from '@cdo/apps/util/experiments';
+import SectionAssigner from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
+import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
+import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 export const NOT_STARTED = 'NOT_STARTED';
 export const IN_PROGRESS = 'IN_PROGRESS';
@@ -42,7 +47,7 @@ const styles = {
   }
 };
 
-export default class ScriptOverviewTopRow extends React.Component {
+class ScriptOverviewTopRow extends React.Component {
   static propTypes = {
     sectionsInfo: PropTypes.arrayOf(
       PropTypes.shape({
@@ -50,6 +55,8 @@ export default class ScriptOverviewTopRow extends React.Component {
         name: PropTypes.string.isRequired
       })
     ).isRequired,
+    sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
+    selectedSectionId: PropTypes.number,
     currentCourseId: PropTypes.number,
     professionalLearningCourse: PropTypes.bool,
     scriptProgress: PropTypes.oneOf([NOT_STARTED, IN_PROGRESS, COMPLETED]),
@@ -65,6 +72,8 @@ export default class ScriptOverviewTopRow extends React.Component {
   render() {
     const {
       sectionsInfo,
+      sectionsForDropdown,
+      selectedSectionId,
       currentCourseId,
       professionalLearningCourse,
       scriptProgress,
@@ -97,12 +106,25 @@ export default class ScriptOverviewTopRow extends React.Component {
         )}
         {!professionalLearningCourse &&
           viewAs === ViewType.Teacher &&
-          showAssignButton && (
+          showAssignButton &&
+          !experiments.isEnabled(experiments.ASSIGNMENT_UPDATES) && (
             <AssignToSection
               sectionsInfo={sectionsInfo}
               courseId={currentCourseId}
               scriptId={scriptId}
               assignmentName={scriptTitle}
+            />
+          )}
+        {!professionalLearningCourse &&
+          viewAs === ViewType.Teacher &&
+          showAssignButton &&
+          experiments.isEnabled(experiments.ASSIGNMENT_UPDATES) && (
+            <SectionAssigner
+              sections={sectionsForDropdown}
+              selectedSectionId={selectedSectionId}
+              showAssignButton={showAssignButton}
+              courseId={currentCourseId}
+              scriptId={scriptId}
             />
           )}
         {!professionalLearningCourse &&
@@ -130,3 +152,14 @@ export default class ScriptOverviewTopRow extends React.Component {
     );
   }
 }
+
+export const UnconnectedScriptOverviewTopRow = ScriptOverviewTopRow;
+
+export default connect((state, ownProps) => ({
+  sectionsForDropdown: sectionsForDropdown(
+    state.teacherSections,
+    ownProps.scriptId,
+    ownProps.currentCourseId,
+    false
+  )
+}))(ScriptOverviewTopRow);

@@ -5365,11 +5365,27 @@ vi:
               name: giai đoạn mới
             Deeper Learning Overview:
               name: Tổng quan học tập sâu
+        dlp19-csd-mod-w3:
+          stages:
+            Deeper Learning Overview:
+              name: Tổng quan học tập sâu
+        dlp19-csd-mod-w4:
+          stages:
+            Deeper Learning Overview:
+              name: Tổng quan học tập sâu
         dlp19-csp-mod-w1:
           stages:
             Deeper Learning Overview:
               name: Tổng quan học tập sâu
         dlp19-csp-mod-w2:
+          stages:
+            Deeper Learning Overview:
+              name: Tổng quan học tập sâu
+        dlp19-csp-mod-w3:
+          stages:
+            Deeper Learning Overview:
+              name: Tổng quan học tập sâu
+        dlp19-csp-mod-w4:
           stages:
             Deeper Learning Overview:
               name: Tổng quan học tập sâu
@@ -5398,3 +5414,48 @@ vi:
             Dance Party:
               name: Bữa tiệc khiêu vũ
           description: Viết mã bữa tiệc khiêu vũ của riêng bạn để chia sẻ với bạn bè của mình!
+        k5-onlinepd-copy:
+          stages:
+            Getting Started:
+              name: Bắt đầu
+            Computer Science Fundamentals:
+              name: Máy tính khoa học cơ bản
+            Looking Ahead:
+              name: Nhìn về phía trước
+            'Mastering the Basics: Sequencing':
+              name: 'Nắm vững các khái niệm cơ bản: Trình tự'
+            'Mastering the Basics: Loops':
+              name: 'Nắm vững các khái niệm cơ bản: Các vòng lặp'
+            'Mastering the Basics: Conditionals':
+              name: 'Nắm vững các khái niệm cơ bản: Các điều kiện'
+            'Mastering the Basics: Functions':
+              name: 'Nắm vững các khái niệm cơ bản: Các chức năng'
+            'Mastering the Basics: Events':
+              name: 'Nắm vững các khái niệm cơ bản: Các sự kiện'
+            Best Practices for Teaching Computer Science:
+              name: Những thực hành tốt nhất cho việc dạy Khoa học máy tính
+            Planning:
+              name: Lên kế hoạch
+            Next Steps:
+              name: Bước tiếp theo
+            Sequencing:
+              name: Chuỗi tuần tự
+            Loops:
+              name: Vòng lặp
+            Conditionals:
+              name: Điều kiện
+            Events:
+              name: Các sự kiện
+            Functions:
+              name: Các hàm
+            Variables:
+              name: Các biến
+            For Loops:
+              name: Cho vòng lặp
+        dance-extras-2019:
+          title: Hãy Tiếp tục Nhảy
+          description: Hãy làm nhiều hơn nữa so với giờ đầu tiên với các ý tưởng dự án mở rộng.
+        csp10-pilot:
+          stages:
+            new stage:
+              name: giai đoạn mới

@@ -1795,3 +1795,24 @@
             Dance Party:
               name: Dansefest
           description: Programmer din egen dansefest du kan dele med vennene dine!
+        k5-onlinepd-copy:
+          stages:
+            Computer Science Fundamentals:
+              name: Grunnleggende informatikk
+            Next Steps:
+              name: De Neste Trinnene
+            Loops:
+              name: Løkker
+            Conditionals:
+              name: Betingelser
+            Events:
+              name: Hendelser
+            Functions:
+              name: Funksjoner
+            Variables:
+              name: Variabler
+            For Loops:
+              name: For-løkker
+        dance-extras-2019:
+          title: Fortsett å danse
+          description: Fortsett etter den første timen med større prosjektideer.

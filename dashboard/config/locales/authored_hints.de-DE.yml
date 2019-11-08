@@ -249,6 +249,32 @@ de-DE:
         voyage_aquatic_9a: Was für ein wunderschönes Korallenriff! Die blaue Koralle
           ist der **rechte** Weg. Pass auf, dass die rote Koralle nicht **links**
           ist!
+      Dance_2019_01:
+        validation: |-
+          **Wie schaffe ich diesen Level?**
+
+          -   Sorgen Sie dafür, dass ein Tänzer auf dem Bildschirm erscheint.
+
+          _Dieser Level endet nach 4 Takten._
+      Dance_2019_04:
+        validation: |-
+          **Wie schaffe ich diesen Level?**
+
+          -   Der Tänzer muss nach 4 Takten in einen neuen Tanzschritt wechseln.
+
+          _Dieser Level endet nach 8 Takten._
+      Dance_2019_05:
+        validation: |-
+          **Wie schaffe ich diesen Level?**
+
+          -   Nach 6 Takten muss Ihr Tänzer einen anderen Tanz tun als nach 4 Takten.
+
+          _Dieser Level endet nach 12 Takten._
+      Dance_2019_07:
+        challenges: |-
+          **Optionale Herausforderung**
+
+          -   Experimentieren Sie, indem Sie weitere Eigenschaften (Breite, Höhe, Rotation etc.) ändern
       Dance_Party_01:
         validation: |-
           **Wie schaffe ich diesen Level?**
@@ -2179,14 +2205,6 @@ de-DE:
           auf jedem Feld verwenden.
         courseC_collector_prog_challenge1_b: Hast du dich verlaufen? Versuche diesen
           Weg zu nehmen um die Aufgabe zu lösen!
-      courseC_data wizard:
-        courseA_playLab_events7_a: |-
-          Nimm diesen Block um zu regeln was passiert, wenn die Figuren kollidieren.
-
-          <xml><block type="studio_whenSpriteCollided">
-              <title name="SPRITE1">1</title>
-              <title name="SPRITE2">0</title>
-            </block></xml>
       courseC_maze_debugging2:
         courseC_maze_debugging2_c: Du findest nicht heraus, was schief läuft? Führe
           den Code ein paar mal aus um zu sehen, was passiert.

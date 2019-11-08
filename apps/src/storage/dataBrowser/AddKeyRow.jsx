@@ -6,6 +6,7 @@ import Radium from 'radium';
 import React from 'react';
 import {castValue} from './dataUtils';
 import * as dataStyles from './dataStyles';
+import {WarningType} from '../constants';
 
 const INITIAL_STATE = {
   isAdding: false,
@@ -35,14 +36,14 @@ class AddKeyRow extends React.Component {
         this.state.key,
         castValue(this.state.value),
         () => this.setState(INITIAL_STATE),
-        msg => {
+        err => {
           if (
-            msg.includes('The key is invalid') ||
-            msg.includes('The key was renamed')
+            err.type === WarningType.KEY_INVALID ||
+            err.type === WarningType.KEY_RENAMED
           ) {
-            this.props.onShowWarning(msg);
+            this.props.onShowWarning(err.msg);
           } else {
-            console.warn(msg);
+            console.warn(err.msg ? err.msg : err);
           }
           this.setState(INITIAL_STATE);
         }

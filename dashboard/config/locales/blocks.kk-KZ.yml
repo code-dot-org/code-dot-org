@@ -287,6 +287,8 @@ kk:
             '"scale"': шама
       Mikelab_randomColor:
         text: кездейсоқ түс
+      Mikelab_repeatUntilComplete:
+        text: әрқашан қайтала
       Mikelab_setBG:
         options:
           BG:

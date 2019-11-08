@@ -962,6 +962,81 @@ id-ID:
           <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
 
           </div>
+      Dance_Party_extras_intro_2019:
+        markdown: |
+          #Tetaplah berdansa
+
+          Untuk bagian 2,anda bisa membuat proyek anda sendiri.Tidak ada teka teki di sini-malah banyak proyek yang menampilkan cara cara berbeda untuk membuat pesta dansa yang kompleks.
+
+          Anda bisa melakukan level ini-dalam urutan apapun_melompat untuk melihat bagaimana sesuatu sudah dikerjakan dalam tingkat selanjutnya atau kombinasi konsep diantara proyek. Cobalah semua,ambil yang anda suka dan habiskan waktu anda untuk bekerja untuk menambahkan pada proyek agar menjadi milik anda sendiri.
+
+          <a class="btn btn-large btn-primary next-stage submitButton pull-right">lanjutkan</a>
+
+          <div class="clearfix"></div>
+
+          <div style="float: left; margin: 10px">
+          <a href="2">
+          <h2>
+          Masuk formasi
+          </h2>
+
+          <img src="https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif"></a>
+
+          </div>
+
+          <img src="https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="3">
+          <h2>
+          Mereka hendak kemana?
+          </h2>
+
+          <img src="https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="4">
+          <h2>
+          Kru dansa
+          </h2>
+
+          <img src="https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="5">
+          <h2>
+          Seperempat not
+          </h2>
+
+          <img src="https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="6">
+          <h2>
+          Rendah,menengah,tinggi
+          </h2>
+
+          <img src="https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="7">
+          <h2>
+          Mempercepat,memperlambat
+          </h2>
+
+          <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
+
+          </div>
       DigitalSharing-Unplugged:
         markdown: |
           #Berbagi digital
@@ -977,6 +1052,18 @@ id-ID:
           # Untuk Loop menyenangkan
 
           Kami tahu bahwa loops mengijinkan kita untuk melakukan berbagai hal lagi dan lagi, tetapi sekarang kami akan belajar bagaimana menggunakan loops dengan struktur ekstra yang dibangun dengan tepat.
+      GoingPlacesSafely-unplugged:
+        markdown: |
+          # Going Places Safely
+
+          Internet sangat bermanfaat, tapi kadang menjadi tempat yang berbahaya. Bertindaklah dengan aman saat menjelajah di internet.
+
+          <p align=center>
+      HappyMaps-Unplugged:
+        markdown: |
+          # Happy Maps
+
+          Buat algoritma untuk menggerakkan karakter melalui sebuah maze.
       Internet Simulator Setup:
         title: Internet simulator setup
         content1: desekripsi di sini

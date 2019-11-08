@@ -398,6 +398,8 @@ fr:
               name: Leçons débranchées
             Writing computer programs:
               name: Écrire des logiciels informatiques
+            new stage:
+              name: nouvelle étape
         netsim:
           title: Simulateur d'Internet
           stages:
@@ -1398,6 +1400,8 @@ fr:
         CSDU3-Draft:
           description_short: Programmation
           stages:
+            Collision Detection:
+              name: Détection de collision
             Draw Loop and Randomization:
               name: La boucle draw et la randomisation
             Functions:
@@ -1450,6 +1454,8 @@ fr:
               name: Mode création
         CSDU2-Draft:
           stages:
+            Describing Webpages:
+              name: Décrire des pages Web
             Quality Websites:
               name: Sites Web de qualité
             Text on the Web:
@@ -1614,6 +1620,8 @@ fr:
               name: La boucle draw et la randomisation
             Velocity:
               name: Vitesse
+            Collision Detection:
+              name: Détection de collision
             Functions:
               name: fonctions
             Variables:
@@ -1712,6 +1720,8 @@ fr:
           description_short: "  Apprends à construire ton propre site web avec le
             labo du web."
           stages:
+            new stage:
+              name: nouvelle étape
             Quality Websites:
               name: Sites Web de qualité
             Website Design:
@@ -1911,6 +1921,8 @@ fr:
               name: Introduction
             Ice Age Play Lab:
               name: Labo de jeux Âge de Glace
+            'Algorithms: Tangrams':
+              name: 'Algorithmes: Tangrams'
         classic-hoc-impact-study:
           description_short: Découvre les bases des sciences informatiques grâce a
             de nombreux personnages rigolos !
@@ -1948,6 +1960,8 @@ fr:
               name: Bon retour parmi nous !
         csdgraveyard:
           stages:
+            new stage:
+              name: nouvelle étape
             Introduction to Styling with CSS:
               name: Introduction aux styles avec CSS
             External Style Sheets:
@@ -2042,6 +2056,10 @@ fr:
               name: Introduction
             Input:
               name: Entrée
+        csd5-draft:
+          stages:
+            new stage:
+              name: nouvelle étape
         applab-1hour:
           stages:
             Event Types:
@@ -2050,6 +2068,8 @@ fr:
               name: Accesseurs en lecture et en écriture
         applab-2hour:
           stages:
+            new stage:
+              name: nouvelle étape
             Event Types:
               name: Types d'évènement
             Getters and Setters:
@@ -2086,88 +2106,592 @@ fr:
             se termine par un concours créatif pour réaliser une de vos idées en utilisant
             le Circuit Playground.
           stages:
+            Computing Innovations:
+              description_student: Découvrez une large gamme de plateformes informatiques
+                nouvelles et innovantes, tout en améliorant votre compréhension de
+                ce que peut être un ordinateur.
+              description_teacher: Pour démarrer le dernière partie de ce module,
+                les élèves vont rechercher quelques innovations intéressantes en informatique.
+                Cette leçon montrera aux élèves une grande variété dans la forme des
+                ordinateurs et les activités impactées par l'informatique. Plus tard
+                dans le module, les étudiants pourront comparer le résultat de leur
+                recherche avec leur propre expérimentation sur un microcontrôleur.
+            Input Unplugged:
+              description_student: Expérimentez deux manières différentes pour une
+                application d'obtenir une entrée de l'utilisateur, tout en apprenant
+                plus en détail le modèle de programmation par évènement utilisé dans
+                App Lab.
+              description_teacher: Pour préparer leur immersion dans la programmation
+                avec App Lab, les élèves vont explorer quelques programmes dans Game
+                Lab et App Lab montrant les différentes manières d'obtenir une entrée
+                de l'utilisateur. Après avoir comparer les différentes approches des
+                exemples, les groupes d'élèves joueront avec des deux modèles différents
+                (conditions dans une boucle infinie et évènements asynchrones) pour
+                obtenir une meilleure compréhension de leurs fonctionnements.
             Event Types:
               name: Types d'évènement
+              description_student: Révisez les bases de la programmation dans App
+                Lab et explorez de nouveaux types d'évènements utilisables dans vos
+                programmes.
+              description_teacher: Dans cette leçon, les élèves revoient les points
+                appris dans l'unité 4 pour créer des applications dans App Lab. Ces
+                rappels doivent être adaptés en fonction des élèves, de leur expérience
+                et de leur aisance à utiliser App Lab. En plus des rappels, les élèves
+                vont aussi découvrir de nouveaux types d'évènements probablement inédits
+                pour eux.
             Getters and Setters:
               name: Accesseurs en lecture et en écriture
+              description_student: En lisant et en changeant le contenu de l'écran
+                de l'application, la classe commence à créer une application qui utilise
+                un seul écran. Même avec un seul écran, ces techniques permettes de
+                nombreuses fonctionnalités et interactions avec l'utilisateur.
+              description_teacher: Dans l'unité 4, les élèves ont vu une approche
+                très simple pour développer une application dans App Lab. Celle-ci
+                nécessite un écran séparé pour la plupart des interactions. Pour élargir
+                le type d'applications que les élèves peuvent créer et les encourager
+                à penser à la façon dont l'utilisateur interagit avec l'application,
+                nous avons introduit le concept d'accesseurs en lecture et en écriture.
+                Ce sont des commandes qui permettent de lire ou de changer les propriétés
+                de multiples éléments graphiques. Dans cette leçon, les élèves créent
+                des applications qui ne requiert qu'un seul écran, et dont le contenu
+                est modifié à l'aide de getters et setters.
             The Circuit Playground:
               name: Le Circuit Playground
+              description_student: Découvrez le Circuit Playground, un circuit électronique
+                qui sera utilisé dans la suite de ce module. En utilisant App Lab,
+                développez des programmes qui utilisent le Circuit Playground comme
+                une sortie.
+              description_teacher: Dans cette leçon, les élèves vont avoir la possibilité
+                d'écrire leur premier programme utilisant le Circuit Playground. Après
+                avoir étudier le circuit visuellement et formuler des hypothèses sur
+                ses différentes fonctions, les élèves se connectent et apprennent
+                à écrire des applications qui contrôlent une LED. En utilisant les
+                écrans d'App Lab avec le Circuit Playground, les élèves vont pouvoir
+                commencer à utiliser le circuit comme un appareil de sortie, tout
+                en bénéficiant de App Lab pour les entrées utilisateurs.
             Lists:
               name: Listes
+              description_student: Apprenez comment utiliser les listes pour stocker
+                plusieurs valeurs dans une seule variable.
+              description_teacher: Une liste, aussi appelé tableau, est un type de
+                variable qui peut stocker plusieurs valeurs en une seul fois. Dans
+                cette leçon, les élèves commencent par créer des listes de valeurs
+                dans une seule variable. Après avoir créer des listes de leur choix,
+                les élèvent vont apprendre les différentes méthodes pour retrouver
+                une valeur spécifique ou au hasard en utilisant l'index de la liste.
             Lights:
               name: Lumières
+              description_student: En utilisant le concept de listes de la leçon précédente,
+                la classe écrit un programme qui contrôle les dix LEDs colorées sur
+                le Circuit Playground.
+              description_teacher: Le Circuit Playground est équipé de 10 LEDs colorées
+                réparties en cercle sur le bord du circuit. Ces LEDs sont accessibles
+                dans le code à partir d'une liste appelée `colorLeds`. En utilisant
+                leur compréhension des listes acquise lors de la leçon précédente,
+                les élèves écrivent un programme qui contrôle les LEDs colorées en
+                accédant à une liste.
             For Loops:
               name: Boucles « Pour »
+              description_student: La classe apprend à répéter des instructions en
+                utilisant une boucle _pour_, d'abord en contrôlant un "robot" sur
+                une grille, puis dans App Lab.
+              description_teacher: Dans cette leçon, les élèves apprennent la boucle
+                _pour_ comme moyen de répéter du code un certain nombre de fois. Les
+                élèves commence avec une activité manuelle où ils utilisent un boucle
+                pour déplacer un robot sur une grille. Une fois terminé, les élèves
+                utilisent leur connaissance dans App Lab pour écrire des programmes
+                avec des répétitions utilisant des boucles _pour_.
             Lists and For Loops:
               name: Listes et boucles Pour
+              description_student: En combinant _listes_ et boucles _pour_, vous pouvez
+                écrire des programmes qui utilisent tous les éléments d'une liste,
+                quelle que soit sa longueur. La classe utilise cette structure pour
+                écrire des programmes utilisant tous les éléments dans des listes,
+                y compris la liste des LEDs colorées.
+              description_teacher: 'L''utilisation de boucle _pour_ pour parcourir
+                tous les éléments d''un tableau est une structure très utile dans
+                la plupart des langages de programmation. Dans cette leçon, les élèves
+                combinent ce qu''ils ont appris sur les listes et les boucles pour
+                apprendre cette structure. Les élèves utilisent une boucle for pour
+                parcourir tous les éléments de la liste, un par un, sans avoir à écrire
+                du code pour chaque élément. Vers la fin de la leçon, les élèves vont
+                appliquer cette structure sur la liste `colorLed` du circuit. '
             Timed Loops:
               name: Boucles temporisées
+              description_student: Dans cette leçon, on se base sur la compréhension
+                des boucles for des élèves pour créer une structure plus sophistiquée
+                appelée boucle temporisée. Contrairement aux boucles for, on peut
+                choisir la vitesse de répétition de cette boucle temporisée, laissant
+                la possibilité à d'autres parties du code (comme les gestionnaires
+                d'évènements) de s'exécuter entre chaque répétition. Cela permet de
+                créer des animations intéressantes qui se répètent indéfiniment, tout
+                en laissant la possibilité d'exécuter d'autres séquences de code.
+              description_teacher: Dans cette leçon, on se base sur la compréhension
+                des boucles _pour_ des élèves pour créer une structure plus sophistiquée
+                appelée _boucle temporisée_. Contrairement aux boucles _pour_, on
+                peut choisir la vitesse de répétition de cette boucle temporisée,
+                laissant la possibilité à d'autres parties du code (comme les gestionnaires
+                d'évènements) de s'exécuter entre chaque répétition. Cela permet de
+                créer des animations intéressantes qui se répètent indéfiniment, tout
+                en laissant la possibilité d'exécuter d'autres séquences de code.
             'Project: Board Output':
               name: 'Projet: Utilisation du circuit comme sortie'
+              description_student: Les élèves utilisent leur connaissances acquises
+                au chapitre un, et créent une application de leur invention qui utilise
+                le circuit pour afficher une information.
+              description_teacher: Les élèves utilisent leur connaissances acquises
+                au chapitre un, et créent une application de leur invention qui utilise
+                le circuit pour afficher une information.
             Physical Input:
               name: Entrée physique
+              description_student: En utilisant les boutons et l'interrupteur, la
+                classe crée des programmes utilisant le Circuit Playground comme une
+                entrée.
+              description_teacher: Cette leçon fait la transition pour les élèves
+                entre l'utilisation du Circuit Playground comme une sortie simple
+                vers une utilisation en tant qu'entrée/sortie pour l'application.
+                En commençant avec les boutons et l'interrupteur, les élèves apprennent
+                l'utilisation de `onBoardEvent()`, similaire à `onEvent()`, pour lire
+                les entrées de leur Circuit Playground.
             Analog Input:
               name: Entrée analogique
+              description_student: Découvrez les entrées analogiques du Circuit Playground,
+                et utilisez les capteurs pour écrire des programmes qui réagissent
+                à l'environnement.
+              description_teacher: Dans cette leçon, les élèves découvrent comment
+                les trois capteurs analogiques (son, lumière et température) peuvent
+                être utiliser pour écrire des programmes qui réagissent aux changements
+                d'environnement. L'utilisation de ces capteurs marque une transition
+                dans la façon dont l'utilisateur interagit avec le programme. En utilisant
+                les capteurs comme une entrée, l'utilisateur de l'application n'a
+                plus besoin d'interagir directement avec elle, ou même il peut interagir
+                avec sans s'en rendre compte.
             Sensor Applications:
               name: Utilisations des capteurs
+              description_student: Travaillez ces trois petites applications pour
+                mieux comprendre l'utilisation des capteurs de la leçon précédente.
+              description_teacher: Pour poursuivre sur les capteurs que les étudiants
+                ont vus dans la leçon précédente, nous allons regarder trois applications,
+                une pour chaque capteur. Ces trois applications peuvent servir de
+                point de départ pour le projet final des élèves.
             'Project: Prototype an Innovation':
               name: 'Projet: Réaliser un prototype innovant'
+              description_student: Développez un appareil innovant de votre création,
+                en utilisant tout ce que vous avez appris dans ce cours.
+              description_teacher: 'Pour le projet final de ce cours, les élèves forment
+                des groupes pour développer et tester un prototype innovant basé sur
+                le Circuit Playground. En utilisant les entrées et les sorties disponibles
+                sur le circuit, les groupes vont créer des programmes qui permettent
+                des interactions intéressantes et uniques avec l''utilisateur. '
             Designing Screens with Code:
               name: Dessiner des écrans en codant
+              description_student: En lisant et en changeant le contenu de l'écran
+                de l'application, la classe commence à créer une application qui utilise
+                un seul écran. Même avec un seul écran, ces techniques permettes de
+                nombreuses fonctionnalités et interactions avec l'utilisateur.
+              description_teacher: Dans l'unité 4, les élèves ont vu une approche
+                très simple pour développer un application dans App Lab; celle-ci
+                utilisait une écran séparé pour presque chaque interaction. Pour étendre
+                le type d'application que les élèves peuvent réaliser, et pour les
+                encourager à imaginer de quelles façons un utilisateur interagit avec
+                les applications, nous avons montré le bloc `setProperty()`. Cette
+                commande peut être utilisée pour changer le contenu et les propriétés
+                de plusieurs éléments de l'interface utilisateur; les élèves peuvent
+                donc écrire des programmes qui mettent à jour les informations sur
+                l'écran plutôt que de dupliquer manuellement les écrans. Dans cette
+                leçon, les élèves créent des applications simples avec un seul écran,
+                dont on change le contenu à l'aide de `setProperty()`.
             Board Events:
               name: Évènements en provenance du circuit
+              description_student: En utilisant les boutons et l'interrupteur, la
+                classe crée des programmes utilisant le Circuit Playground comme une
+                entrée.
+              description_teacher: Cette leçon fait la transition pour les élèves
+                entre l'utilisation du Circuit Playground comme une sortie simple
+                vers une utilisation en tant qu'entrée/sortie pour l'application.
+                En commençant avec les boutons et l'interrupteur, les élèves apprennent
+                l'utilisation de `onBoardEvent()`, similaire à `onEvent()`, pour lire
+                les entrées de leur Circuit Playground.
             Getting Properties:
               name: Lire les propriétés
+              description_student: Cette leçon introduit le bloc `getProperty`, qui
+                permet aux élèves d'accéder aux propriétés des différents éléments
+                à partir de leur code. Les élèves commencent par utiliser ce bloc
+                pour déterminer les interactions de l’utilisateur avec les éléments
+                de l'interface. Ensuite les élèves utilisent `getProperty` et `setProperty`
+                ensemble avec la structure de compteur pour faire bouger les éléments
+                sur l'écran. Cette leçon intrduit aussi l'élément slider (ou curseur)
+                et l'événement `onChange`.
+              description_teacher: Cette leçon introduit le bloc `getProperty`, qui
+                permet aux élèves d'accéder aux propriétés des différents éléments
+                à partir de leur code. Les élèves commencent par utiliser ce bloc
+                pour déterminer les interactions de l’utilisateur avec les éléments
+                de l'interface. Ensuite les élèves utilisent `getProperty` et `setProperty`
+                ensemble avec la structure de compteur pour faire bouger les éléments
+                sur l'écran. Cette leçon intrduit aussi l'élément slider (ou curseur)
+                et l'événement `onChange`.
             The Program Design Process:
               name: Le processus de création d'un programme
+              description_student: 'Dans cette leçon, vous allez apprendre comment
+                une méthode pour créer des programmes de votre invention. Cette méthode
+                est basée sur un guide de projet où les points suivants sont abordés
+                avant de commencer à programmer: dessiner sur papier les écrans de
+                l''application, identifier les éléments du Circuit Playground à utiliser,
+                définir les variables, et décrire les évènements. Cette méthode est
+                identique à la méthode de création de jeu utilisée dans l''unité 3.
+                Dans cette leçon, vous commencez en jouant à un genre de tir à la
+                corde où le code est caché. Discutez entre vous des composants utilisés
+                sur le circuit, des évènements et des variables nécessaires pour refaire
+                ce programme. Une fois les discussions terminées, comparez avec la
+                solution décrite sur le guide de projet. Parcourez ensuite le guide.
+                A la fin de la leçon, vous pouvez améliorez le programme.'
+              description_teacher: 'Dans cette leçon, vous allez apprendre comment
+                une méthode pour créer des programmes de votre invention. Cette méthode
+                est basée sur un guide de projet où les points suivants sont abordés
+                avant de commencer à programmer: dessiner sur papier les écrans de
+                l''application, identifier les éléments du Circuit Playground à utiliser,
+                définir les variables, et décrire les évènements. Cette méthode est
+                identique à la méthode de création de jeu utilisée dans l''unité 3.
+                Dans cette leçon, vous commencez en jouant à un genre de tir à la
+                corde où le code est caché. Discutez entre vous des composants utilisés
+                sur le circuit, des évènements et des variables nécessaires pour refaire
+                ce programme. Une fois les discussions terminées, comparez avec la
+                solution décrite sur le guide de projet. Parcourez ensuite le guide.
+                A la fin de la leçon, vous pouvez améliorez le programme.'
             'Project: Make a Game':
               name: 'Projet: Réaliser un jeu'
+              description_student: Les élèves utilisent leur connaissances acquises
+                au chapitre un, et créent une application de leur invention qui utilise
+                le circuit pour afficher une information.
+              description_teacher: Les élèves utilisent leur connaissances acquises
+                au chapitre un, et créent une application de leur invention qui utilise
+                le circuit pour afficher une information.
             Arrays:
               name: Tableaux
+              description_student: Apprenez comment utiliser les listes pour stocker
+                plusieurs valeurs dans une seule variable.
+              description_teacher: Un tableau est une collection ordonnée d'élément,
+                habituellement du même type. Dans cette leçon, les élèves apprennent
+                comment accéder à une valeur spécifique ou à n'importe quelle valeur
+                du tableau par son index. Ils verront ensuite comment accéder au tableau
+                colorLEDs qui contrôle le comportement des LEDs colorées sur le Circuit
+                Playground. Les élèves changeront la couleur et l'intensité de chaque
+                LED, et utiliseront leurs connaissances pour programmer des motifs
+                lumineux sur leur Circuit Playground.
+            Making Music:
+              description_student: Dans cette leçon, vous allez utiliser le buzzer
+                à son potentiel maximum, pour produire des sons, des notes et de la
+                musique. Nous commencerons par un court rappel paramètres du buzzer,
+                la fréquence et la durée, puis nous aborderons le concept de notes.
+                Les notes permettent de se restreindre aux fréquences utilisées dans
+                la musique occidentale, et donner un cadre pour comprendre quelles
+                sont les fréquences qui s'accordent le mieux. Une fois que vous pouvez
+                jouer des notes en utilisant le buzzer, utilisez un tableau pour jouer
+                des séquences de notes représentant une mélodie.
+              description_teacher: Dans cette leçon, vous allez utiliser le buzzer
+                à son potentiel maximum, pour produire des sons, des notes et de la
+                musique. Nous commencerons par un court rappel paramètres du buzzer,
+                la fréquence et la durée, puis nous aborderons le concept de notes.
+                Les notes permettent de se restreindre aux fréquences utilisées dans
+                la musique occidentale, et donner un cadre pour comprendre quelles
+                sont les fréquences qui s'accordent le mieux. Une fois que vous pouvez
+                jouer des notes en utilisant le buzzer, utilisez un tableau pour jouer
+                des séquences de notes représentant une mélodie.
             Arrays and For Loops:
               name: Tableaux et boucles Pour
+              description_student: En combinant _listes_ et boucles _pour_, vous pouvez
+                écrire des programmes qui utilisent tous les éléments d'une liste,
+                quelle que soit sa longueur. La classe utilise cette structure pour
+                écrire des programmes utilisant tous les éléments dans des listes,
+                y compris la liste des LEDs colorées.
+              description_teacher: L'utilisation d'une boucle _pour_ pour parcourir
+                tous les éléments d'un tableau est une construction très utile dans
+                la plupart des langages de programmation. Dans cette leçon, les élèves
+                apprennent les bases pour répéter du code en utilisant la boucle _pour_,
+                et les combinent avec leur connaissance des tableaux pour écrire des
+                programmes qui traitent tous les éléments du tableau. Les élèves utilisent
+                des boucles _pour_ pour accéder aux éléments un par un sans écrire
+                de code pour chaque élément. A la fin de la leçon, les élèves appliqueront
+                cette structure sur la liste `colorLed` pour créer une application
+                qui change toutes les LEDs chaque fois que l'on appuie sur un bouton.
             Accelerometer:
               name: Accéléromètre
+              description_student: Dans cette leçon, vous allez découvrir l'accéléromètre
+                et ses capacités. Vous apprendrez ses évènements et ses propriétés,
+                et vous créerez plusieurs programmes utilisant l'accéléromètre identique
+                à celle des applications réelles.
+              description_teacher: Dans cette leçon, vous allez découvrir l'accéléromètre
+                et ses capacités. Vous apprendrez ses évènements et ses propriétés,
+                et vous créerez plusieurs programmes utilisant l'accéléromètre identique
+                à celle des applications réelles.
             Functions with Parameters:
               name: Fonctions avec Paramètres
+              description_student: Cette leçon commence par un rappel rapide des paramètres,
+                dans le contexte des blocs App Lab, vu récemment. Dans un deuxième
+                temps, nous verrons des exemples de paramètres dans des fonctions
+                créées par l'utilisateur, puis nous passerons à la création de fonctions
+                avec paramètres et comment les utiliser pour contrôler de multiples
+                éléments à l'écran. Ensuite, nous utiliserons des boucles for pour
+                parcourir un tableau, et passer chaque élément à une fonction. Enfin,
+                nous utiliserons les connaissances acquises pour créer un jeu attrape-étoile.
+              description_teacher: Cette leçon commence par un rappel rapide des paramètres,
+                dans le contexte des blocs App Lab, vu récemment. Dans un deuxième
+                temps, nous verrons des exemples de paramètres dans des fonctions
+                créées par l'utilisateur, puis nous passerons à la création de fonctions
+                avec paramètres et comment les utiliser pour contrôler de multiples
+                éléments à l'écran. Ensuite, nous utiliserons des boucles for pour
+                parcourir un tableau, et passer chaque élément à une fonction. Enfin,
+                nous utiliserons les connaissances acquises pour créer un jeu attrape-étoile.
             Circuits and Physical Prototypes:
               name: Circuits et prototypes physiques
+              description_student: Construisez des circuits simples pour créer un
+                prototype d'objet physique, en utilisant des matériaux faciles à trouver
+                et pas chers.
+              description_teacher: Pour préparer le projet final de ce chapitre, les
+                élèves vont appendre à développer un prototype d'objet physique à
+                base du Circuit Playground. En utilisant un guide de gestion de projet
+                prêt à l'emploi, les élèves vont voir comment brancher quelques circuits
+                simples et construire un prototype pour démontrer l'usage d'un objet,
+                le tout réalisé avec des matériaux bon marché et facile à trouver
+                comme du carton et du ruban adhésif.
             Innovations in Computing:
               name: Innovations en informatique
             Arrays and Color LEDs:
               name: Tableaux et LEDs colorées
             Innovations in Computing_:
               name: Innovations en informatique
+              description_student: Découvrez une large gamme de plateformes informatiques
+                nouvelles et innovantes, tout en améliorant votre compréhension de
+                ce que peut être un ordinateur.
+              description_teacher: Pour démarrer le dernière partie de ce module,
+                les élèves vont rechercher quelques innovations intéressantes en informatique.
+                Cette leçon montrera aux élèves une grande variété dans la forme des
+                ordinateurs et les activités impactées par l'informatique. Plus tard
+                dans le module, les étudiants pourront comparer le résultat de leur
+                recherche avec leur propre expérimentation sur un microcontrôleur.
             Designing Screens with Code_:
               name: Dessiner des écrans en codant
+              description_student: En lisant et en changeant le contenu de l'écran
+                de l'application, la classe commence à créer une application qui utilise
+                un seul écran. Même avec un seul écran, ces techniques permettes de
+                nombreuses fonctionnalités et interactions avec l'utilisateur.
+              description_teacher: Dans l'unité 4, les élèves ont vu une approche
+                très simple pour développer un application dans App Lab; celle-ci
+                utilisait une écran séparé pour presque chaque interaction. Pour étendre
+                le type d'application que les élèves peuvent réaliser, et pour les
+                encourager à imaginer de quelles façons un utilisateur interagit avec
+                les applications, nous avons montré le bloc `setProperty()`. Cette
+                commande peut être utilisée pour changer le contenu et les propriétés
+                de plusieurs éléments de l'interface utilisateur; les élèves peuvent
+                donc écrire des programmes qui mettent à jour les informations sur
+                l'écran plutôt que de dupliquer manuellement les écrans. Dans cette
+                leçon, les élèves créent des applications simples avec un seul écran,
+                dont on change le contenu à l'aide de `setProperty()`.
             The Circuit Playground_:
               name: Le Circuit Playground
+              description_student: Découvrez le Circuit Playground, un circuit électronique
+                qui sera utilisé dans la suite de ce module. En utilisant App Lab,
+                développez des programmes qui utilisent le Circuit Playground comme
+                une sortie.
+              description_teacher: Dans cette leçon, les élèves vont avoir la possibilité
+                d'écrire leur premier programme utilisant le Circuit Playground. Après
+                avoir étudier le circuit visuellement et formuler des hypothèses sur
+                ses différentes fonctions, les élèves se connectent et apprennent
+                à écrire des applications qui contrôlent une LED. En utilisant les
+                écrans d'App Lab avec le Circuit Playground, les élèves vont pouvoir
+                commencer à utiliser le circuit comme un appareil de sortie, tout
+                en bénéficiant de App Lab pour les entrées utilisateurs.
+            Input Unplugged_:
+              description_student: Expérimentez deux manières différentes pour une
+                application d'obtenir une entrée de l'utilisateur, tout en apprenant
+                plus en détail le modèle de programmation par évènement utilisé dans
+                App Lab.
+              description_teacher: Pour préparer leur immersion dans la programmation
+                avec App Lab, les élèves vont explorer quelques programmes dans Game
+                Lab et App Lab montrant les différentes manières d'obtenir une entrée
+                de l'utilisateur. Après avoir comparer les différentes approches des
+                exemples, les groupes d'élèves joueront avec des deux modèles différents
+                (conditions dans une boucle infinie et évènements asynchrones) pour
+                obtenir une meilleure compréhension de leurs fonctionnements.
             Board Events_:
               name: Évènements en provenance du circuit
+              description_student: En utilisant les boutons et l'interrupteur, la
+                classe crée des programmes utilisant le Circuit Playground comme une
+                entrée.
+              description_teacher: Cette leçon fait la transition pour les élèves
+                entre l'utilisation du Circuit Playground comme une sortie simple
+                vers une utilisation en tant qu'entrée/sortie pour l'application.
+                En commençant avec les boutons et l'interrupteur, les élèves apprennent
+                l'utilisation de `onBoardEvent()`, similaire à `onEvent()`, pour lire
+                les entrées de leur Circuit Playground.
             Getting Properties_:
               name: Lire les propriétés
+              description_student: Cette leçon introduit le bloc `getProperty`, qui
+                permet aux élèves d'accéder aux propriétés des différents éléments
+                à partir de leur code. Les élèves commencent par utiliser ce bloc
+                pour déterminer les interactions de l’utilisateur avec les éléments
+                de l'interface. Ensuite les élèves utilisent `getProperty` et `setProperty`
+                ensemble avec la structure de compteur pour faire bouger les éléments
+                sur l'écran. Cette leçon intrduit aussi l'élément slider (ou curseur)
+                et l'événement `onChange`.
+              description_teacher: Cette leçon introduit le bloc `getProperty`, qui
+                permet aux élèves d'accéder aux propriétés des différents éléments
+                à partir de leur code. Les élèves commencent par utiliser ce bloc
+                pour déterminer les interactions de l’utilisateur avec les éléments
+                de l'interface. Ensuite les élèves utilisent `getProperty` et `setProperty`
+                ensemble avec la structure de compteur pour faire bouger les éléments
+                sur l'écran. Cette leçon intrduit aussi l'élément slider (ou curseur)
+                et l'événement `onChange`.
             Analog Input_:
               name: Entrée analogique
+              description_student: Découvrez les entrées analogiques du Circuit Playground,
+                et utilisez les capteurs pour écrire des programmes qui réagissent
+                à l'environnement.
+              description_teacher: Dans cette leçon, les élèves découvrent comment
+                les trois capteurs analogiques (son, lumière et température) peuvent
+                être utiliser pour écrire des programmes qui réagissent aux changements
+                d'environnement. L'utilisation de ces capteurs marque une transition
+                dans la façon dont l'utilisateur interagit avec le programme. En utilisant
+                les capteurs comme une entrée, l'utilisateur de l'application n'a
+                plus besoin d'interagir directement avec elle, ou même il peut interagir
+                avec sans s'en rendre compte.
             The Program Design Process_:
               name: Le processus de création d'un programme
+              description_student: 'Dans cette leçon, vous allez apprendre comment
+                une méthode pour créer des programmes de votre invention. Cette méthode
+                est basée sur un guide de projet où les points suivants sont abordés
+                avant de commencer à programmer: dessiner sur papier les écrans de
+                l''application, identifier les éléments du Circuit Playground à utiliser,
+                définir les variables, et décrire les évènements. Cette méthode est
+                identique à la méthode de création de jeu utilisée dans l''unité 3.
+                Dans cette leçon, vous commencez en jouant à un genre de tir à la
+                corde où le code est caché. Discutez entre vous des composants utilisés
+                sur le circuit, des évènements et des variables nécessaires pour refaire
+                ce programme. Une fois les discussions terminées, comparez avec la
+                solution décrite sur le guide de projet. Parcourez ensuite le guide.
+                A la fin de la leçon, vous pouvez améliorez le programme.'
+              description_teacher: 'Dans cette leçon, vous allez apprendre comment
+                une méthode pour créer des programmes de votre invention. Cette méthode
+                est basée sur un guide de projet où les points suivants sont abordés
+                avant de commencer à programmer: dessiner sur papier les écrans de
+                l''application, identifier les éléments du Circuit Playground à utiliser,
+                définir les variables, et décrire les évènements. Cette méthode est
+                identique à la méthode de création de jeu utilisée dans l''unité 3.
+                Dans cette leçon, vous commencez en jouant à un genre de tir à la
+                corde où le code est caché. Discutez entre vous des composants utilisés
+                sur le circuit, des évènements et des variables nécessaires pour refaire
+                ce programme. Une fois les discussions terminées, comparez avec la
+                solution décrite sur le guide de projet. Parcourez ensuite le guide.
+                A la fin de la leçon, vous pouvez améliorez le programme.'
             Arrays and Color LEDs_:
               name: Tableaux et LEDs colorées
             'Project: Make a Game_':
               name: 'Projet: Réaliser un jeu'
+            Making Music_:
+              description_student: Dans cette leçon, vous allez utiliser le buzzer
+                à son potentiel maximum, pour produire des sons, des notes et de la
+                musique. Nous commencerons par un court rappel paramètres du buzzer,
+                la fréquence et la durée, puis nous aborderons le concept de notes.
+                Les notes permettent de se restreindre aux fréquences utilisées dans
+                la musique occidentale, et donner un cadre pour comprendre quelles
+                sont les fréquences qui s'accordent le mieux. Une fois que vous pouvez
+                jouer des notes en utilisant le buzzer, utilisez un tableau pour jouer
+                des séquences de notes représentant une mélodie.
+              description_teacher: Dans cette leçon, vous allez utiliser le buzzer
+                à son potentiel maximum, pour produire des sons, des notes et de la
+                musique. Nous commencerons par un court rappel paramètres du buzzer,
+                la fréquence et la durée, puis nous aborderons le concept de notes.
+                Les notes permettent de se restreindre aux fréquences utilisées dans
+                la musique occidentale, et donner un cadre pour comprendre quelles
+                sont les fréquences qui s'accordent le mieux. Une fois que vous pouvez
+                jouer des notes en utilisant le buzzer, utilisez un tableau pour jouer
+                des séquences de notes représentant une mélodie.
             Arrays and For Loops_:
               name: Tableaux et boucles Pour
+              description_student: En combinant _listes_ et boucles _pour_, vous pouvez
+                écrire des programmes qui utilisent tous les éléments d'une liste,
+                quelle que soit sa longueur. La classe utilise cette structure pour
+                écrire des programmes utilisant tous les éléments dans des listes,
+                y compris la liste des LEDs colorées.
+              description_teacher: L'utilisation d'une boucle _pour_ pour parcourir
+                tous les éléments d'un tableau est une construction très utile dans
+                la plupart des langages de programmation. Dans cette leçon, les élèves
+                apprennent les bases pour répéter du code en utilisant la boucle _pour_,
+                et les combinent avec leur connaissance des tableaux pour écrire des
+                programmes qui traitent tous les éléments du tableau. Les élèves utilisent
+                des boucles _pour_ pour accéder aux éléments un par un sans écrire
+                de code pour chaque élément. A la fin de la leçon, les élèves appliqueront
+                cette structure sur la liste `colorLed` pour créer une application
+                qui change toutes les LEDs chaque fois que l'on appuie sur un bouton.
             Accelerometer_:
               name: Accéléromètre
+              description_student: Dans cette leçon, vous allez découvrir l'accéléromètre
+                et ses capacités. Vous apprendrez ses évènements et ses propriétés,
+                et vous créerez plusieurs programmes utilisant l'accéléromètre identique
+                à celle des applications réelles.
+              description_teacher: Dans cette leçon, vous allez découvrir l'accéléromètre
+                et ses capacités. Vous apprendrez ses évènements et ses propriétés,
+                et vous créerez plusieurs programmes utilisant l'accéléromètre identique
+                à celle des applications réelles.
             Functions with Parameters_:
               name: Fonctions avec Paramètres
+              description_student: Cette leçon commence par un rappel rapide des paramètres,
+                dans le contexte des blocs App Lab, vu récemment. Dans un deuxième
+                temps, nous verrons des exemples de paramètres dans des fonctions
+                créées par l'utilisateur, puis nous passerons à la création de fonctions
+                avec paramètres et comment les utiliser pour contrôler de multiples
+                éléments à l'écran. Ensuite, nous utiliserons des boucles for pour
+                parcourir un tableau, et passer chaque élément à une fonction. Enfin,
+                nous utiliserons les connaissances acquises pour créer un jeu attrape-étoile.
+              description_teacher: Cette leçon commence par un rappel rapide des paramètres,
+                dans le contexte des blocs App Lab, vu récemment. Dans un deuxième
+                temps, nous verrons des exemples de paramètres dans des fonctions
+                créées par l'utilisateur, puis nous passerons à la création de fonctions
+                avec paramètres et comment les utiliser pour contrôler de multiples
+                éléments à l'écran. Ensuite, nous utiliserons des boucles for pour
+                parcourir un tableau, et passer chaque élément à une fonction. Enfin,
+                nous utiliserons les connaissances acquises pour créer un jeu attrape-étoile.
             Circuits and Physical Prototypes_:
               name: Circuits et prototypes physiques
+              description_student: Construisez des circuits simples pour créer un
+                prototype d'objet physique, en utilisant des matériaux faciles à trouver
+                et pas chers.
+              description_teacher: Pour préparer le projet final de ce chapitre, les
+                élèves vont appendre à développer un prototype d'objet physique à
+                base du Circuit Playground. En utilisant un guide de gestion de projet
+                prêt à l'emploi, les élèves vont voir comment brancher quelques circuits
+                simples et construire un prototype pour démontrer l'usage d'un objet,
+                le tout réalisé avec des matériaux bon marché et facile à trouver
+                comme du carton et du ruban adhésif.
             'Project: Prototype an Innovation_':
               name: 'Projet: Réaliser un prototype innovant'
+              description_student: Développez un appareil innovant de votre création,
+                en utilisant tout ce que vous avez appris dans ce cours.
+              description_teacher: 'Pour le projet final de ce cours, les élèves forment
+                des groupes pour développer et tester un prototype innovant basé sur
+                le Circuit Playground. En utilisant les entrées et les sorties disponibles
+                sur le circuit, les groupes vont créer des programmes qui permettent
+                des interactions intéressantes et uniques avec l''utilisateur. '
             'Project: Make a Game__':
               name: 'Projet: Réaliser un jeu'
+              description_student: Les élèves utilisent leur connaissances acquises
+                au chapitre un, et créent une application de leur invention qui utilise
+                le circuit pour afficher une information.
+              description_teacher: Les élèves utilisent leur connaissances acquises
+                au chapitre un, et créent une application de leur invention qui utilise
+                le circuit pour afficher une information.
             Arrays and Color LEDs__:
               name: Tableaux et LEDs colorées
+              description_student: Apprenez comment utiliser les listes pour stocker
+                plusieurs valeurs dans une seule variable.
+              description_teacher: Un tableau est une collection ordonnée d'élément,
+                habituellement du même type. Dans cette leçon, les élèves apprennent
+                comment accéder à une valeur spécifique ou à n'importe quelle valeur
+                du tableau par son index. Ils verront ensuite comment accéder au tableau
+                colorLEDs qui contrôle le comportement des LEDs colorées sur le Circuit
+                Playground. Les élèves changeront la couleur et l'intensité de chaque
+                LED, et utiliseront leurs connaissances pour programmer des motifs
+                lumineux sur leur Circuit Playground.
         csd3-draft:
           stages:
             Variables:
@@ -2178,6 +2702,8 @@ fr:
               name: Instructions conditionnelles
             Velocity:
               name: Vitesse
+            Collision Detection:
+              name: Détection de collision
             Functions:
               name: fonctions
         csd3-old:
@@ -2186,6 +2712,8 @@ fr:
               name: La boucle draw et la randomisation
             Velocity:
               name: Vitesse
+            Collision Detection:
+              name: Détection de collision
             Functions:
               name: fonctions
         csd2-draft:
@@ -2210,12 +2738,18 @@ fr:
               name: Instructions conditionnelles
             Velocity:
               name: Vitesse
+            Collision Detection:
+              name: Détection de collision
             Functions:
               name: fonctions
+            'Chapter 1: Images and Animation':
+              name: 'Chapitre 1 : Images et Animations'
             'null':
               name: invalide
         coursef-ramp:
           stages:
+            'Algorithms: Tangrams':
+              name: 'Algorithmes: Tangrams'
             Introduction:
               name: Introduction
             Ice Age Play Lab:
@@ -2285,6 +2819,13 @@ fr:
             vos propres œuvres d’art, vos histoires et vos jeux.
         coursed-2017:
           stages:
+            'Algorithms: Graph Paper Programming':
+              description_teacher: En programmant les dessins des autres groupes,
+                les élèves commenceront à comprendre ce qu’est vraiment la programmation.
+                La classe débutera avec l’échange d’instructions entre les élèves
+                qui devront colorier des carrés sur du papier millimétré afin de reproduire
+                une image existante.  S’il y a assez de temps, la leçon peut se conclure
+                par la création d’images personnalisés par les élèves.
             Nested Loops:
               name: Boucles imbriquées
           title: Cours D
@@ -2294,6 +2835,8 @@ fr:
             et plus encore.
         coursee-2017:
           stages:
+            'Algorithms: Tangrams':
+              name: 'Algorithmes: Tangrams'
             Ice Age Play Lab:
               name: Labo de jeux Âge de Glace
             Envelope Variables:
@@ -2302,6 +2845,13 @@ fr:
               name: Jouons avec les boucles « Pour »
             Songwriting with Parameters:
               name: La composition de chansons avec des paramètres
+            'Functions: Songwriting':
+              description_teacher: Une des structures les plus magnifiques dans le
+                monde de l’informatique est la fonction.  Les fonctions (parfois appelées
+                procédures) sont des minis programmes que l’on peut utiliser encore
+                et encore à l'intérieur d’un plus grand programme. Cette leçon aidera
+                les élèves à comprendre intuitivement pourquoi associer des morceaux
+                de code à des fonctions est une pratique très utile.
             Building a Foundation:
               name: Construire une fondation
             Nested Loops:
@@ -2312,6 +2862,8 @@ fr:
             plus loin avec les fonctions.
         coursef-2017:
           stages:
+            'Algorithms: Tangrams':
+              name: 'Algorithmes: Tangrams'
             Building a Foundation:
               name: Construire une fondation
           title: Cours F
@@ -2372,8 +2924,14 @@ fr:
           stages:
             Thanks:
               name: Merci
+        csp-pre-survey-test-2017:
+          stages:
+            new stage:
+              name: nouvelle étape
         csp3-research-mxghyt:
           stages:
+            new stage:
+              name: nouvelle étape
             The Need For Programming Languages:
               name: Le besoin de langages de programmation
             Using Simple Commands:
@@ -2413,6 +2971,10 @@ fr:
               name: Construire une fondation
             Loops in Ice Age:
               name: Boucles dans l'Âge de Glace
+        csp3-a:
+          stages:
+            new stage:
+              name: nouvelle étape
         new-express:
           stages:
             Introduction:
@@ -2435,6 +2997,8 @@ fr:
           stages:
             Building a Foundation:
               name: Construire une fondation
+            'Algorithms: Tangrams':
+              name: 'Algorithmes: Tangrams'
             Ice Age Play Lab:
               name: Labo de jeux Âge de Glace
             Envelope Variables:
@@ -2443,6 +3007,10 @@ fr:
               name: Jouons avec les boucles « Pour »
             Songwriting with Parameters:
               name: La composition de chansons avec des paramètres
+        hocali:
+          stages:
+            new stage:
+              name: nouvelle étape
         csp3-staging:
           stages:
             The Need For Programming Languages:
@@ -2457,6 +3025,8 @@ fr:
             stages added.  DO NOT EDIT LIVE LEVELS.\r\n"
         pwc:
           stages:
+            new stage:
+              name: nouvelle étape
             Personal Innovations:
               name: Innovations personnelles
             Simple Encryption:
@@ -2474,12 +3044,22 @@ fr:
             nouvelle activité\_! Exploration de Minecraft avec le code.
         csp-explore-2017:
           stages:
+            new stage:
+              name: nouvelle étape
             Post-Course Survey:
               name: Suivi d'après cours
         csp-create-2017:
           stages:
             Post-Course Survey:
               name: Suivi d'après cours
+        aws-demo:
+          stages:
+            new stage:
+              name: nouvelle étape
+        colehoc17:
+          stages:
+            new stage:
+              name: nouvelle étape
         course-e-2018:
           stages:
             Building a Foundation:
@@ -2498,6 +3078,8 @@ fr:
           stages:
             Building a Foundation:
               name: Construire une fondation
+            'Algorithms: Tangrams':
+              name: 'Algorithmes: Tangrams'
             Introduction:
               name: Introduction
             Ice Age Play Lab:
@@ -2546,9 +3128,15 @@ fr:
               name: Instructions conditionnelles
             Velocity:
               name: Vitesse
+            Collision Detection:
+              name: Détection de collision
             Functions:
               name: fonctions
           description_short: Programmation
+        textbook:
+          stages:
+            new stage:
+              name: nouvelle étape
         csd3-2018:
           description_short: Programmation
           stages:
@@ -2577,6 +3165,8 @@ fr:
               name: Instructions conditionnelles
             Velocity:
               name: Vitesse
+            Collision Detection:
+              name: Détection de collision
             Functions:
               name: fonctions
         csd2-2018:
@@ -2680,6 +3270,7 @@ fr:
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie et le grand projet
         express-2018:
+          title: Cours Express
           assignment_family_title: Cours Express
           stages:
             'Algorithms: Graph Paper Programming':
@@ -2775,6 +3366,22 @@ fr:
             le Circuit Playground.
           description_short: Apprend à programmer des objets.
           stages:
+            Innovations in Computing_:
+              name: Innovations en informatique
+            Designing Screens with Code_:
+              name: Dessiner des écrans en codant
+            The Circuit Playground_:
+              name: Le Circuit Playground
+            The Program Design Process_:
+              name: Le processus de création d'un programme
+            Arrays and For Loops_:
+              name: Tableaux et boucles Pour
+            Functions with Parameters_:
+              name: Fonctions avec Paramètres
+            Circuits and Physical Prototypes_:
+              name: Circuits et prototypes physiques
+            'Project: Prototype an Innovation_':
+              name: 'Projet: Réaliser un prototype innovant'
             Innovations in Computing:
               name: Innovations en informatique
             Designing Screens with Code:
@@ -2814,6 +3421,12 @@ fr:
               name: Introduction
             'Functions: Songwriting':
               name: Écriture de chansons
+              description_teacher: Une des structures les plus magnifiques dans le
+                monde de l’informatique est la fonction.  Les fonctions (parfois appelées
+                procédures) sont des minis programmes que l’on peut utiliser encore
+                et encore à l'intérieur d’un plus grand programme. Cette leçon aidera
+                les élèves à comprendre intuitivement pourquoi associer des morceaux
+                de code à des fonctions est une pratique très utile.
             Internet:
               name: Internet et les réseaux connectés
             Crowdsourcing:
@@ -2833,6 +3446,8 @@ fr:
               name: Mes amis les robots
             Building a Foundation:
               name: Construire une fondation
+            'Algorithms: Tangrams':
+              name: 'Algorithmes: Tangrams'
             Introduction:
               name: Introduction
             Ice Age Play Lab:
@@ -2985,6 +3600,8 @@ fr:
               name: Artiste
         dance:
           stages:
+            new stage:
+              name: nouvelle étape
             Dance Party:
               name: Fête dansante
           title: Fête dansante
@@ -2997,6 +3614,7 @@ fr:
             Artist:
               name: Artiste
         aquatic:
+          title: 'Minecraft : Voyage Aquatique'
           description_short: Utilise ta créativité et tes compétences de résolution
             de problèmes pour explorer et construire des mondes sous-marins avec du
             code !
@@ -3076,6 +3694,12 @@ fr:
               name: Instructions conditionnelles avec des cartes
             'Functions: Songwriting':
               name: Écriture de chansons
+              description_teacher: Une des structures les plus magnifiques dans le
+                monde de l’informatique est la fonction.  Les fonctions (parfois appelées
+                procédures) sont des minis programmes que l’on peut utiliser encore
+                et encore à l'intérieur d’un plus grand programme. Cette leçon aidera
+                les élèves à comprendre intuitivement pourquoi associer des morceaux
+                de code à des fonctions est une pratique très utile.
             Internet:
               name: Internet
             Crowdsourcing:
@@ -3085,6 +3709,7 @@ fr:
             Songwriting:
               name: Écriture de chansons
         express-2019:
+          title: Cour rapide (2017)
           stages:
             Relay Programming:
               name: Programmation de relais
@@ -3108,6 +3733,8 @@ fr:
               name: Fête dansante
         andrea-test:
           stages:
+            new stage:
+              name: nouvelle étape
             'null':
               name: invalide
         dance-extras-gallery:
@@ -3155,6 +3782,10 @@ fr:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algorithmes du monde réel: Planter une graine'
+        dani-test-script:
+          stages:
+            new stage:
+              name: nouvelle étape
         csd2-2019:
           description_short: "  Apprends à construire ton propre site web avec le
             labo du web."
@@ -3256,6 +3887,8 @@ fr:
               name: Instructions conditionnelles
             Velocity:
               name: Vitesse
+            Collision Detection:
+              name: Détection de collision
             Functions:
               name: fonctions
         csd4-2019:
@@ -3380,6 +4013,8 @@ fr:
               name: Introduction sur les Arrays
         csp1-pilot:
           stages:
+            new stage:
+              name: nouvelle étape
             Number Systems:
               name: Systèmes de numération
             Sending Binary Messages:
@@ -3390,6 +4025,10 @@ fr:
               name: Propriété intellectuelle
             Binary Numbers:
               name: Nombres binaires
+        csd-videos:
+          stages:
+            new stage:
+              name: nouvelle étape
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -3398,14 +4037,26 @@ fr:
               name: Instructions conditionnelles avec des cartes
             Building a Foundation:
               name: Construire une fondation
+        csp2-pilot-staging:
+          title: Principes de l'informatique, unité 2
+        csp3-pilot-staging:
+          stages:
+            The Need for Programming Languages:
+              name: Le besoin de langages de programmation
         csp7-pilot-staging:
           stages:
+            new stage:
+              name: nouvelle étape
             Libraries:
               name: Bibliothèques
         express-2018-vn:
           stages:
             Graph Paper Programming:
               name: Programmation sur papier quadrillé
+        csp5-pilot:
+          stages:
+            new stage:
+              name: nouvelle étape
         csd2-pilot:
           description_short: "  Apprends à construire ton propre site web avec le
             labo du web."
@@ -3511,6 +4162,8 @@ fr:
               name: Instructions conditionnelles
             Velocity:
               name: Vitesse
+            Collision Detection:
+              name: Détection de collision
             Functions:
               name: fonctions
             Shapes and Parameters:
@@ -3519,12 +4172,30 @@ fr:
               name: Nombres aléatoires
             Sprite Properties:
               name: Propriétés du sprite
+        maddie-test:
+          stages:
+            new stage:
+              name: nouvelle étape
+        csp3-pilot:
+          stages:
+            The Need for Programming Languages:
+              name: Le besoin de langages de programmation
         csl-vn:
           stages:
             Loops in Ice Age:
               name: Boucles dans l'Âge de Glace
+        dlp19-csd-mod-w2:
+          stages:
+            new stage:
+              name: nouvelle étape
+        csp2-pilot:
+          stages:
+            new stage:
+              name: nouvelle étape
         peru-2019:
           stages:
+            new stage:
+              name: nouvelle étape
             Introduction:
               name: Introduction
             Nested Loops:
@@ -3535,3 +4206,45 @@ fr:
               name: Fête dansante
           description: Codez votre propre soirée dansante à partager avec vos amis
             !
+        k5-onlinepd-copy:
+          stages:
+            Computer Science Fundamentals:
+              name: Fondamentaux de l'informatique
+            Looking Ahead:
+              name: Regarder en avant
+            'Mastering the Basics: Sequencing':
+              name: 'Maîtriser les bases: Les séquences'
+            'Mastering the Basics: Loops':
+              name: 'Maîtriser les bases: Les boucles'
+            'Mastering the Basics: Conditionals':
+              name: 'Maîtriser les bases: Les conditions'
+            'Mastering the Basics: Functions':
+              name: 'Maîtriser les bases: Les fonctions'
+            'Mastering the Basics: Events':
+              name: 'Maîtriser les bases: Les événements'
+            Planning:
+              name: Planifier
+            Next Steps:
+              name: Prochaines étapes
+            Sequencing:
+              name: Séquençage
+            Loops:
+              name: boucles
+            Conditionals:
+              name: Instructions conditionnelles
+            Events:
+              name: Événements
+            Functions:
+              name: fonctions
+            Variables:
+              name: variables
+            For Loops:
+              name: Boucles « Pour »
+        dance-extras-2019:
+          title: Continuez à danser
+          description: Allez au-delà de la première heure avec de longues idées de
+            projets.
+        csp10-pilot:
+          stages:
+            new stage:
+              name: nouvelle étape

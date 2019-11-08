@@ -1,10 +1,5 @@
 ---
 title: Obrigado por se inscrever para promover uma Hora de Código!
-layout: wide
-nav: how_to_nav
-social:
-  "twitter:card": player
-  "twitter:site": "@codeorg"
 ---
 
 # Obrigado por se inscrever para promover uma Hora de Código!

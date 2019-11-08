@@ -1,6 +1,5 @@
 ---
 title: Pokyny k výukovým programům
-layout: wide
 ---
 
 <style>

@@ -73,6 +73,9 @@ class CoursesController < ApplicationController
       return
     end
 
+    sections = current_user.try {|u| u.sections.where(hidden: false).select(:id, :name, :course_id, :script_id)}
+    @sections_with_assigned_info = sections&.map {|section| section.attributes.merge!({"isAssigned" => section[:course_id] == course.id})}
+
     render 'show', locals: {course: course, redirect_warning: params[:redirect_warning] == 'true'}
   end
 
