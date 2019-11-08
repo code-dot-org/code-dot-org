@@ -953,7 +953,16 @@ const fishComponents = {
       mouthRgb: [221, 82, 124],
       knnData: [94, 121, 188]
     }
-  }
+  },
+  colors: [
+    [255, 203, 72],
+    [143, 194, 63],
+    [94, 121, 188],
+    [227, 72, 44],
+    [248, 151, 36],
+    [187, 115, 188],
+    [238, 142, 180]
+  ]
 };
 
 // https://hackernoon.com/what-is-one-hot-encoding-why-and-when-do-you-have-to-use-it-e3c6186d008f
