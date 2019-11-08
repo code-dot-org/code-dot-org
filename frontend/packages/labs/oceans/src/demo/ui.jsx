@@ -449,47 +449,49 @@ let SpeechBubble = class SpeechBubble extends React.Component {
 };
 SpeechBubble = Radium(SpeechBubble);
 
-const wordChoices = [
-  ['Blue', 'Green', 'Red', 'Round', 'Square'],
-  [
-    'Friendly',
-    'Funny',
-    'Bizarre',
-    'Shy',
-    'Glitchy',
-    'Delicious',
-    'Fun',
-    'Angry',
-    'Fast',
-    'Smart',
-    'Brave',
-    'Scary',
-    'Wild',
-    'Fierce',
-    'Tropical'
-  ]
-];
+const wordSet = {
+  short: {
+    text: ['What type of fish do you want to train A.I. to detect?'],
+    choices: ['Blue', 'Green', 'Red', 'Round', 'Square'],
+    style: styles.button1col
+  },
+  long: {
+    text: [
+      'What happens if the words are more subjective?',
+      'Choose a new word to teach A.I.'
+    ],
+    choices: [
+      'Friendly',
+      'Funny',
+      'Bizarre',
+      'Shy',
+      'Glitchy',
+      'Delicious',
+      'Fun',
+      'Angry',
+      'Fast',
+      'Smart',
+      'Brave',
+      'Scary',
+      'Wild',
+      'Fierce',
+      'Tropical'
+    ],
+    style: styles.button3col
+  }
+};
 
 class Words extends React.Component {
   constructor(props) {
     super(props);
 
     // Randomize word choices and set in state.
-    const choices = wordChoices.map(wordSet => {
-      return _.shuffle(wordSet);
-    });
+    const choices = _.shuffle(wordSet[getState().appMode].choices);
     this.state = {choices};
   }
 
-  currentItems() {
-    const state = getState();
-    const itemSet = state.appMode === AppMode.FishShort ? 0 : 1;
-
-    return this.state.choices[itemSet];
-  }
-
   onChangeWord(itemIndex) {
-    const word = this.currentItems()[itemIndex];
+    const word = this.state.choices[itemIndex];
     setState({
       word,
       trainingQuestion: `Is this fish ${word.toUpperCase()}?`
@@ -499,32 +501,22 @@ class Words extends React.Component {
 
   render() {
     const state = getState();
-    const currentItems = this.currentItems();
-    const buttonStyle =
-      state.appMode === AppMode.FishShort
-        ? styles.button1col
-        : styles.button3col;
 
     return (
       <Body>
         <Header>Choose Fish Type</Header>
         <Content>
-          {state.appMode === AppMode.FishShort && (
+          {wordSet[state.appMode].text && (
             <div style={styles.wordsText}>
-              What type of fish do you want to train A.I. to detect?
+              {wordSet[state.appMode].text.map((text, i) => (
+                <div key={i}>{text}</div>
+              ))}
             </div>
           )}
-          {state.appMode === AppMode.FishLong && (
-            <div style={styles.wordsText}>
-              What happens if the words are more subjective?
-              <br />
-              Choose a new word to teach A.I.
-            </div>
-          )}
-          {currentItems.map((item, itemIndex) => (
+          {this.state.choices.map((item, itemIndex) => (
             <Button
               key={itemIndex}
-              style={buttonStyle}
+              style={wordSet[state.appMode].style}
               onClick={() => this.onChangeWord(itemIndex)}
             >
               {item}

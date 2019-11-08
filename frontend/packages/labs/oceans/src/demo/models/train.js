@@ -10,7 +10,7 @@ export const init = () => {
 
   let trainer = state.trainer;
   if (!trainer) {
-    if (['short', 'long'].includes(state.appMode)) {
+    if ([AppMode.FishShort, AppMode.FishLong].includes(state.appMode)) {
       trainer = new SVMTrainer(fish => fish.getKnnData());
     } else {
       trainer = new SimpleTrainer(oceanObj => oceanObj.getTensor());
@@ -47,7 +47,10 @@ export const onClassifyFish = doesLike => {
   }
 
   const classId = doesLike ? ClassType.Like : ClassType.Dislike;
-  state.trainer.addTrainingExample(state.fishData[state.trainingIndex], classId);
+  state.trainer.addTrainingExample(
+    state.fishData[state.trainingIndex],
+    classId
+  );
 
   let fishData = [...state.fishData];
   if (state.trainingIndex > state.fishData.length - 5) {
