@@ -38,10 +38,10 @@
     "validation_code": "if (!World.validationState.changedMoves) {\r\n  World.validationState.changedMoves = new Set();\r\n}\r\n\r\n//after 1 measure, make sure there are 2 sprites. if not, fail immediately\r\nif (nativeAPI.getTime(\"measures\") > 1) {\r\n  if (sprites.length < 2) {\r\n    nativeAPI.fail(\"danceFeedbackNeedTwoDancers\");\r\n  }\r\n}\r\n\r\n//go through all sprites\r\nsprites.forEach(function(sprite, index) {\r\n  //if sprite's current animation is different than previous animation\r\n  var currentAnimation=sprite.getAnimationLabel();\r\n  var previousAnimation=World.validationState[index];\r\n  if (currentAnimation!=previousAnimation) {\r\n    //if previous animation was resting\r\n    if (previousAnimation == 'anim0') {\r\n      //pass, but not right away\r\n      World.validationState.changedMoves.add(index);\r\n    }\r\n  }\r\n  //store previous animation\r\n World.validationState[index]=currentAnimation;\r\n});\r\n\r\nif(nativeAPI.getTime(\"measures\")>5){\r\n    if(World.validationState.changedMoves.size >= 2){\r\n      nativeAPI.pass();\r\n    }else if(World.validationState.changedMoves.size ==1){ \r\n      nativeAPI.fail(\"danceFeedbackOnlyOneDancerMoved\");\r\n    }else if (World.keysPressed.size > 0){\r\n    nativeAPI.fail(\"danceFeedbackPressedKey\");\r\n  } else {\r\n    nativeAPI.fail(\"danceFeedbackDidntPress\");\r\n  }\r\n}\r\n",
     "block_pool": "Dancelab",
     "preload_asset_list": [
-      "https://curriculum.code.org/images/sprites/dance_20181127/shark_36.png",
-      "https://curriculum.code.org/images/sprites/dance_20181127/shark_37.png",
-      "https://curriculum.code.org/images/sprites/dance_20181127/shark_38.png",
-      "https://curriculum.code.org/images/sprites/dance_20181127/shark_39.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/shark_36.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/shark_37.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/shark_38.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/shark_39.png",
       "https://curriculum.code.org/images/DancePartyLoading.gif"
     ],
     "soft_buttons": [
