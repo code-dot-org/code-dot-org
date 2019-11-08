@@ -8,7 +8,6 @@ const constants = {
 export default constants;
 
 export const AppMode = Object.freeze({
-  Instructions: 'instructions',
   FishVTrash: 'fishvtrash',
   CreaturesVTrashDemo: 'creaturesvtrashdemo',
   CreaturesVTrash: 'creaturesvtrash',

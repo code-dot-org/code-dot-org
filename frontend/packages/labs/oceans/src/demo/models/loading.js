@@ -33,7 +33,7 @@ export const init = async () => {
   await initRenderer();
 
   let mode;
-  if (appModeBase === AppMode.Instructions) {
+  if (appModeBase === 'instructions') {
     mode = Modes.Instructions;
   } else if (
     [AppMode.FishVTrash, AppMode.CreaturesVTrash].includes(appModeBase)
