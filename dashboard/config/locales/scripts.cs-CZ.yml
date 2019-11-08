@@ -1781,3 +1781,6 @@ cs:
               name: Proměnné
             For Loops:
               name: For cykly
+        dance-extras-2019:
+          title: Nepřestávej tančit
+          description: Pokračuj i po první hodině kódu rozšířením nápadů ve svém projektu.

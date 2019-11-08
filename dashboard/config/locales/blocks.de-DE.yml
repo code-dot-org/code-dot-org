@@ -595,6 +595,7 @@ de:
             '"rotation"': Rotation
             '"x"': horizontale Position
             '"y"': vertikale Position
+            '"tint"': Farbton
       Dancelab_setPropRandom:
         text: randomisieren Sie {SPRITE} {PROPERTY}
         options:
@@ -830,6 +831,8 @@ de:
             '1': Mitten
             '2': Höhen
       Dancelab_whenSetup:
+        text: Setup
+      Dancelab_whenSetup2:
         text: Setup
       gamelab_addBehaviorSimple:
         text: "{SPRITE} beginnt {BEHAVIOR}"

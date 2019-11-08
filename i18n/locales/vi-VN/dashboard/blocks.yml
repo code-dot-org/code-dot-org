@@ -531,6 +531,7 @@ vi:
             '"rotation"': xoay
             '"x"': vị trí ngang
             '"y"': vị trí dọc
+            '"tint"': sắc thái
       Dancelab_setPropRandom:
         text: ngẫu nhiên hóa {PROPERTY} {SPRITE}
         options:
@@ -728,6 +729,8 @@ vi:
             '1': âm trung
             '2': âm cao
       Dancelab_whenSetup:
+        text: thiết lập
+      Dancelab_whenSetup2:
         text: thiết lập
       gamelab_changePropBy:
         text: thay đổi {PROPERTY} {SPRITE} theo {VAL}

@@ -19,6 +19,11 @@ es:
       pair_programmer: 'Estás trabajando en programación por pares con un alumno que no tiene acceso a este contenido. Para acceder a este contenido, anula la programación por pares e intenta de nuevo.'
   activerecord:
     errors:
+      models:
+        user:
+          attributes:
+            reset_password_token:
+              invalid: "no es válido. Ten en cuenta que cada enlace sólo se puede utilizar una vez para restablecer la contraseña y sólo funcionará el enlace enviado más recientemente."
       messages:
         blank: "es requerido"
         blank_plural: "son requeridos"
@@ -27,10 +32,11 @@ es:
     attributes:
       user:
         name: 'Nombre a mostrar'
-        name_example: 'Nombre para mostrar <br/> (codificador fresco o Jane S.)'
+        name_example: 'Nombre para mostrar (codificador fresco o Jane S.)'
         email: 'Correo electrónico'
         parent_email: 'Email del padre o guardián'
         personal_email: "Dirección de email personal <a href=\"%{url}\">(haz click aquí si no tienes una dirección email)</a>"
+        personal_email_markdown: "Dirección de email personal [(haz click aquí si no tienes una dirección email)](%{url})"
         username: 'nombre de usuario'
         password: 'Contraseña'
         password_confirmation: 'Confirmación de la contraseña'
@@ -41,7 +47,10 @@ es:
         edit_header: 'Editar información de la cuenta'
         finish_sign_up_header: 'Termina la creación de tu cuenta'
         finish_sign_up_subheader: 'Llena la siguiente información para completar la creación de tu cuenta en Code.org.'
+        finish_sign_up_subheader_markdown: 'Llena la siguiente información para completar la creación de tu cuenta en Code.org.'
         finish_sign_up_subheader_provider: 'Llena la siguiente información para terminar de crear una cuenta de Code.org con <strong>%{provider}</strong> para <strong>%{email}</strong>.'
+        finish_sign_up_subheader_provider_markdown: 'Llena la siguiente información para terminar de crear una cuenta de Code.org con **%{provider}** para **%{email}**.'
+        reset_password_token: "El enlace para restablecer la contraseña que has seguido"
         error:
           future: No puede ser en el futuro
   beta: "beta"
@@ -63,6 +72,7 @@ es:
       title: 'Únete a una sección en Code.org'
       placeholder: "Código de sección (ABCDEF)"
       instructions: "Por favor ingresa tu código de 6 letras que tu profesor ha compartido contigo (Ejemplo: \"ABCDEF\") para unirte a su sección."
+      instructions_short: "Introduce tu código de sección de 6 letras"
       submit: 'Únete'
   add_hint_form:
     placeholder: 'Introduce aquí tu pista'
@@ -92,6 +102,8 @@ es:
     continue_with: 'Conectate con %{provider}'
     sign_in_with: 'Iniciar sesión con %{provider}'
     signed_in: '¡Sesión iniciada!'
+    signed_out_markdown: '### Has salido de [Code.org](%{url}).'
+    sign_out_of_markdown: '#### Has usado %{provider} para entrar. [Haz clic aquí](%{url}) para salir de %{provider}.'
     already_signedup: '¿Ya estás registrado?'
     notyet_signedup: "¿Aún no te has unido?"
     google_oauth2: 'Cuenta de Google'
@@ -116,9 +128,11 @@ es:
     student_count: '%{count} estudiantes ya se han registrado.'
     teacher_count: '%{count} profesores ya se han registrado.'
     overview: 'Regístrate para darle seguimiento a tu avance o administrar tu salón de clases. <a href="/">Puedes explorar varias etapas y rompecabezas</a> si una cuenta, pero necesitarás registrarte para guardar tus avances y proyectos.'
+    overview_markdown: 'Regístrate para darle seguimiento a tu avance o administrar tu salón de clases. [Puedes explorar varias etapas y rompecabezas](/) si una cuenta, pero necesitarás registrarte para guardar tus avances y proyectos.'
     hoc_already_signed_up_heading: 'Empezar sin iniciar sesión'
     hoc_already_signed_up_content: '¡Se inscribió a una hora de código! Usted y sus estudiantes no necesitan ingresar a Code Studio para participar en este evento. Para comenzar, <a href="https://code.org/learn">seleccione un tutorial</a> para su clase y comparta el enlace con ellos. <br/><br/>Si le ha gustado la hora de código y quiere ir mas lejos, puede establecer una contraseña y crear una cuenta de Code Studio debajo para inscribir a sus estudiantes en cualquiera de nuestros <a href="https://code.org/educate">cursos más largos</a>.'
     hoc_already_signed_up_content_post_hoc: 'Gracias por hospedar una Hora de Código. Para ingresar en "Code Studio, tienes que establecer una contraseña para tu cuenta. Esto te dejara guardar tu progreso y manejar tu clase. Podrás asignar cursos a estudiantes y ver su progreso. <a href="%{studio_url}">También puedes continuar con los varios niveles y rompecabezas</a> sin crear una cuenta.'
+    hoc_already_signed_up_content_post_hoc_markdown: 'Gracias por hospedar una Hora de Código. Para ingresar en "Code Studio, tienes que establecer una contraseña para tu cuenta. Esto te dejara guardar tu progreso y manejar tu clase. Podrás asignar cursos a estudiantes y ver su progreso. [También puedes continuar con los varios niveles y rompecabezas](%{studio_url}) sin crear una cuenta.'
     teacher_educator_guide: 'Consulta la Guía del educador'
     title: "Regístrate en Code.org"
     school_name: 'Nombre de la escuela (opcional)'
@@ -141,6 +155,7 @@ es:
     student_consent: "Confirmo que tengo la autorización de mis padres o guardianes legales para utilizar los servicios de Code.org."
     agree_us_website: "Estoy de acuerdo con el uso de un sitio web con sede en los Estados Unidos."
     my_data_to_us: "Los datos de mi uso de este sitio pueden ser enviados y almacenados o procesados en los Estados Unidos."
+    student_terms_markdown: "Las direcciones de correo electrónico no se almacenan en un formato que nos permita ponernos en contacto con los estudiantes. Los estudiantes nunca recibirán correos electrónicos de Code.org excepto para la recuperación de la contraseña. Consulte nuestra[política de privacidad] (http://code.org/privacy) para obtener más información."
     additional_information: "Necesitamos alguna información adicional para continuar con tu registro."
     user_type_button: "Actualizar tipo de cuenta de usuario"
     user_type_label: "Tipo de cuenta"
@@ -194,6 +209,7 @@ es:
     login: 'Iniciar Sesión'
     invalid_login: 'Inicio de sesión no válido, por favor intente de nuevo'
     pair_programming: 'Tengo a mi pareja en mi ordenador'
+    student_privacy_markdown: "Aprende más acerca de por qué no estás viendo tu nombre completo [here](%{student_privacy_blog})."
   password:
     reset_form:
       title: '¿Olvidaste tu contraseña?'
@@ -418,7 +434,9 @@ es:
     create_personal_login_info: 'Si quieres seguir usando tu cuenta de Code.org incluso luego del final de tu año escolar, puedes crear tu propio inicio de sesión debajo.'
     create_personal_login_link_account: 'Si quieres puedes escoger conectar una cuenta personal en la sección "administrar cuentas personales".'
     create_personal_login_terms: "Al crear un inicio de sesión personal, estoy de acuerdo a verme obligado a cumplir los <a href='%{terms_of_service_url}', target='_blank'>términos y servicios</a> de Code.org. Si soy menor de 13 años de edad, yo confirmo que tengo el permiso de mi padre o tutor legal para usar los servicios de Code.org incluso sin un profesor."
+    create_personal_login_terms_markdown: "Al crear un inicio de sesión personal, estoy de acuerdo a verme obligado a cumplir los [términos y servicios](%{terms_of_service_url}) de Code.org. Si soy menor de 13 años de edad, yo confirmo que tengo el permiso de mi padre o tutor legal para usar los servicios de Code.org incluso sin un profesor."
     create_personal_login_email_note: "Nota: las direcciones email no son guardadas en una forma que permite contactar a los estudiantes. Los estudiantes nunca recibirán emails de Code.org excepto para recuperar su contraseña- Mira nuestra <a href='%{privacy_policy_url}', target='_blank'>política de privacidad</a> para más información."
+    create_personal_login_email_note_markdown: 'Nota: las direcciones email no son guardadas en una forma que permite contactar a los estudiantes. Los estudiantes nunca recibirán emails de Code.org excepto para recuperar su contraseña- Mira nuestra [política de privacidad](%{privacy_policy_url}) para más información.'
     enter_new_login_info: 'Ingresa tu nueva información de inicio de sesión'
     confirm_secret_words: 'Confirma que eres tú al ingresar tus palabras secretas actuales'
     parent_email_label: "Correo de representante legal"
@@ -461,6 +479,7 @@ es:
     test_videos_help: 'Pruebe nuestro nuevo reproductor de vídeo en su escuela'
     try_beta_courses: '¡Nuevo! Prueba nuestros cursos en beta para estudiantes de 6 a 11 años K-5'
     use_as_teacher: 'Utilizar sitio como profesor'
+    heading_elementary_markdown: "## Cursos de 20 horas para\n\n# Fundamentos de Ciencias de la Computación (todas las edades)"
     your_gallery: Galería
     no_primary_course: "Prueba un curso de Code Studio"
     choose_next_course: "Prueba un curso de Código Studio eligiendo uno a continuación"
@@ -656,6 +675,7 @@ es:
     header_artist: "Artista"
     report_abuse: "Reportar Abuso"
   landing:
+    prerelease_tutorial: "Este tutorial está en **beta**.  Está sujeto a revisión a medida que se reciben comentarios y se realizan mejoras."
     report_bug: "Informar sobre un error"
     support: "Obtener ayuda"
     support_url: "//support.code.org"
@@ -723,17 +743,23 @@ es:
   age_interstitial:
     age: Tu edad
     header: Actualización de la información de tu cuenta
+    warning: "Estamos en proceso de actualizar nuestra experiencia para proporcionarte una mayor protección de privacidad. Para ello, necesitamos que los usuarios existentes introduzcan su edad aquí."
+    disclaimer: "Como siempre, code.org nunca cederá, venderá o compartirá esta información con terceros."
+    sign_out_markdown: 'Si no deseas indicar tu edad, puedes [sign out](%{url}).'
   terms_interstitial:
     title: "Términos de Servicio y Política de Privacidad actualizados"
     intro_desc: "Hemos actualizado nuestros Términos de Servicio y Política de Privacidad, como se muestra a continuación. Los cambios son efectivos el 224 de agosto de 2016. El cambio más grande: <i>no almacenaremos direcciones de correo electrónico para cuentas de alumnos en Code Studio.</i>Esto es un gran problema para nosotros, y esperamos que establezca un nuevo estándar para la privacidad de los alumnos en educación tecnológica. Hemos enviado un resumen de los otros cambios por correo electrónico."
+    intro_desc_markdown: "Hemos actualizado nuestros Términos de Servicio y Política de Privacidad, como se muestra a continuación. Los cambios son efectivos el 224 de agosto de 2016. El cambio más grande: _no almacenaremos direcciones de correo electrónico para cuentas de alumnos en Code Studio._Esto es un gran problema para nosotros, y esperamos que establezca un nuevo estándar para la privacidad de los alumnos en educación tecnológica. Hemos enviado un resumen de los otros cambios por correo electrónico."
     intro_instructions: "Deberás aceptar estos nuevos términos para alumnos menores de 13 años en tu salón de clases para tener acceso a todas las últimas características en Code Studio. Cuando registres una cuenta para un alumno menor de 13 años, se te pedirá que confirmes que tu escuela tiene el permiso de los padres o tutores legales para la recolección de la información personal de los alumnos para uso y beneficio de la escuela, incluyendo programas educativos tales como Code Studio."
     tos: "Términos de uso"
     privacy: "Política de Privacidad"
     privacy_notice: "Aviso de privacidad"
     accept_label: 'Estoy de acuerdo con los <a href="%{tos_url}" target="_blank"> Términos de Servcio</a> y la <a href="%{privacy_url}" target="_blank">Política de Privacidad</a> actualizados'
+    accept_label_markdown: Estoy de acuerdo con los [Términos de Servcio](%{tos_url}) y la [Política de Privacidad](%{privacy_url}) actualizados
     accept: "Acepto"
     print: "Imprimir"
     reminder_desc: 'Hemos actualizado nuestros <a href="%{tos_url}" target="_blank">Términos de Servicio</a> y <a href="%{privacy_url}" target="_blank">Política de Privacidad</a>. Por favor lee éstos cuidadosamente antes de aceptarlos. Nota que nuestras herramientas para aprender JavaScript pueden no estar disponibles a tus alumnos antes de aceptar explícitamente estos términos actualizados.'
+    reminder_desc_markdown: Hemos actualizado nuestros [Términos de Servicio](%{tos_url}) y [Política de Privacidad](%{privacy_url}). Por favor lee éstos cuidadosamente antes de aceptarlos. Nota que nuestras herramientas para aprender JavaScript pueden no estar disponibles a tus alumnos antes de aceptar explícitamente estos términos actualizados.
     review_terms: "Revisa los términos actualizados"
   school_info_interstitial:
     title: "Queremos llevar la Informática a cada estudiante - ¡Ayúdanos a seguir nuestro proyecto!"
@@ -755,6 +781,7 @@ es:
     submit: "Enviar"
     decline: "Cerrar"
   zendesk_too_young_message: 'Lo sentimos, los usuarios más jóvenes no pueden registrarse en nuestro sitio de soporte. Puedes navegar por <a href="http://support.code.org">support.code.org</a> sin registrarte o pedir a tus padres o profesores que nos contacten en tu nombre.'
+  zendesk_too_young_message_markdown: 'Lo sentimos, los usuarios más jóvenes no pueden registrarse en nuestro sitio de soporte. Puedes navegar por [support.code.org](http://support.code.org) sin registrarte o pedir a tus padres o profesores que nos contacten en tu nombre.'
   progress:
     not_started: No iniciado
     in_progress: En progreso
@@ -818,8 +845,10 @@ es:
   peer_review:
     accepted:
       name: 'Aceptado/a'
+      description_markdown: '**Sí**, esta solicitud **cumple** los requisitos'
     rejected:
       name: 'Rechazado/a'
+      description_markdown: '**No**, esta solicitud **no cumple** con los requisitos'
     escalated:
       name: 'Escalado'
       description: 'Me gustaría un instructor para revisar esta presentación.'
@@ -900,7 +929,10 @@ es:
     time4cs_c4: 'Impactos Invasivos en Everglades'
     time4cs_c5: 'Los ciudadanos afectan el cambio en Everglades'
     k5_getting_started: 'Iniciando'
+    k5_csf_intro: 'Conozca los Cursos de Fundamentos de CC'
+    k5_coding_concepts: 'Conceptos de Programación y Estrategias de Enseñanza'
     k5_next_steps: 'Próximos pasos'
+    k5_basic_concepts: 'Conceptos Básicos de Programación y Prácticas de Enseñanza: Cursos A-D'
   external_links:
     disclaimer: Descargo de responsabilidad
     leaving_domain: Estás saliendo de este dominio hacia un sitio que no es operado por Code.org.
@@ -1054,9 +1086,15 @@ es:
       title: 'Asistencia al taller'
       intro: "Gracias por tomar tiempo para recibir entrenamiento en Code.org. nuestra misión de brindar oportunidades de educacion en ciencias de computacion a todos los niños en todas las escuelas alrededor del mundo no seria posible sin ti."
       instructions: "Por favor rellena el formulario para indicar que 1) asististe a un taller asistido por uno de nuestros socios internacionales, y 2) estas de acuerdo en compartir tu información con nuestros socios internacionales en tu país así ellos puedan ayudarte en tu viaje como un profesor de informática."
+      thanks_markdown: "¡Gracias por tu envío! Esperamos poder apoyarte a medida que conozcas el currículum y las herramientas de Code.org. Por favor, sigue compartiendo tus preguntas y comentarios con nosotros escribiéndonos a[support@code.org](%{support_email_url}) o escribiendo en el [teacher forum](%{teacher_forum_url})!"
     logged_out:
       heading: 'Gracias por su interés en el programa de aprendizaje profesional!'
       body: 'Para empezar, primero que nada necesitas entrar en tu cuenta de Code.org. si quieres mas información sobre el programa antes de empezar tu solicitud, por favor revisa el<a href="%{url}">resume des programa</a>.'
+    not_teacher:
+      body_markdown: '¡Gracias por tu interés en el Programa de Aprendizaje Profesional de Code.org! Has iniciado sesión en una cuenta de estudiante. Por favor, crea una cuenta de profesor o [go to your user settings](%{user_settings}) para actualizar tu cuenta de estudiante a profesor.'
+      more_markdown: 'Si deseas obtener más información sobre el programa antes de iniciar tu solicitud, consulta el [Professional Learning Program overview](%{pl_overview}).'
+    no_teacher_email:
+      body_markdown: 'Tu cuenta no tiene una dirección de correo electrónico. Por favor [visit your account settings](%{user_registration}) para agregar tu dirección de correo electrónico antes de completar este formulario.'
   courses_category: 'Cursos Completos'
   cookie_banner:
     message: 'Si continúas navegando en nuestro sitio web o haces clic en "Acepto", aceptas que se almacenes cookies en tu ordenador o dispositivo.'

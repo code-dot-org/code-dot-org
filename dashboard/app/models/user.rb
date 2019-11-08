@@ -466,7 +466,9 @@ class User < ActiveRecord::Base
     :normalize_email,
     :hash_email,
     :sanitize_race_data_set_urm,
-    :fix_by_user_type
+    :fix_by_user_type,
+    :enforce_google_sso_for_admin
+
   before_save :remove_cleartext_emails, if: -> {student? && migrated? && user_type_changed?}
 
   before_validation :update_share_setting, unless: :under_13?
@@ -500,6 +502,31 @@ class User < ActiveRecord::Base
     # Make sure we explicitly return true here so Rails doesn't interpret a
     # potential `self.urm = false` as us trying to halt the callback chain
     true
+  end
+
+  # Implement validation that refuses to set admin:true attribute unless
+  # there's a Code.org google sso option present.  Unmigrated users are
+  # not allowed to be admins.
+  def enforce_google_sso_for_admin
+    unless migrated?
+      self.admin = false
+      return
+    end
+
+    google_oauth = google_oauth_authentications
+    if google_oauth&.empty?
+      self.admin = false
+      return
+    end
+
+    if google_oauth.none?(&:codeorg_email?)
+      self.admin = false
+      return
+    end
+  end
+
+  def google_oauth_authentications
+    authentication_options&.where(credential_type: AuthenticationOption::GOOGLE)
   end
 
   def fix_by_user_type

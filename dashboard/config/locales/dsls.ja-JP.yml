@@ -449,6 +449,7 @@ ja-JP:
           **実行**\n   * 計画に従って、プログラムを作成します\n1. **振り返りと改善**\n   * ほかのグループが作ったプログラムを見て、自分たちのプログラムの改善ポイントを探します。\n1.
           **発表**\n   * できあがったプログラムをみんなの前で発表します！\n"
       Begin planning your project_2018:
+        title: 計画を立てることから始める
         content1: 説明
         markdown: "# 設計のプロセス\nソフトウエアの設計とは、たくさんの小さな問題を解決することです。最も大きな問題は、最初に何を作るか決めることです。\n\nこのプロセスはソフトウエアの設計だけでなく、あるゆることに使うことができます。\n\n<!--
           Translate the terms \"Define\", \"Prepare\", \"Try\", \"Reflect\" and change
@@ -470,6 +471,7 @@ ja-JP:
           **実行**\n   * 計画に従って、プログラムを作成します\n1. **振り返りと改善**\n   * ほかのグループが作ったプログラムを見て、自分たちのプログラムの改善ポイントを探します。\n1.
           **発表**\n   * できあがったプログラムをみんなの前で発表します！\n"
       Begin planning your project_2018_2019:
+        title: 計画を立てることから始める
         content1: 説明
       CSD Header Size MC:
         answers:
@@ -882,6 +884,16 @@ ja-JP:
         - {}
         - {}
         - {}
+      EnvelopeVariables-Unplugged:
+        markdown: |
+          # 変数
+
+          変数を使えば様々なことができるようになります。このレッスンでは、変数とは何か、どのように使うのかを説明します。
+      ForLoopFun-Unplugged:
+        markdown: |
+          # くり返し
+
+          くり返しを使うことで、同じことを何回も実施することができます。これから、くり返しの使い方について、学んでいきます。
       Internet Simulator Setup:
         content1: 説明
       Internet Simulator Setup 2:
@@ -889,6 +901,11 @@ ja-JP:
         content1: 説明
       Internet Simulator Setup 3:
         content1: 説明
+      Internet-Unplugged:
+        markdown: |
+          # インターネット
+
+          紙を使って、教室にインターネットを作ります。
       K-1 Artist 1 Multi 1:
         title: 複数の選択肢
         questions:
@@ -1101,6 +1118,7 @@ ja-JP:
 
           作品発表の時間です！先生が、どのように発表すればいいのか くわしく説明してくれます。
       Prepare for your presentation_2018:
+        title: 発表の準備
         markdown: |
           # 作品発表
 
@@ -1111,12 +1129,16 @@ ja-JP:
         content1: 説明
       behaviors 1 predict:
         questions:
-        - {}
+        - text: '`mystery behavior`がどのように動くか、 "編集"ボタンを押して見てみよう。中を見て、どのように動くか 予測してみよう。'
         answers:
-        - feedback: ふせいかい
-        - feedback: せいかい！
-        - feedback: ふせいかい
-        - feedback: 不正解
+        - text: スプライトはクルクル回る
+          feedback: ふせいかい
+        - text: スプライトは小さくなる
+          feedback: せいかい！
+        - text: スプライトは動く
+          feedback: ふせいかい
+        - text: スプライトの色が変わる
+          feedback: 不正解
       behaviors 4 predict:
         questions:
         - {}
@@ -1145,7 +1167,8 @@ ja-JP:
           feedback: ふせいかい。正方形でした。
         - text: まっすぐな線。
           feedback: ふせいかい。正方形でした。
-        - feedback: せいかい！
+        - text: 正方形
+          feedback: せいかい！
         - text: わかりません
           feedback: 正方形。
       courseC_multi_artist_prog6_predict1_2018_2019:
@@ -1156,7 +1179,8 @@ ja-JP:
           feedback: ふせいかい。正方形でした。
         - text: まっすぐな線。
           feedback: ふせいかい。正方形でした。
-        - feedback: せいかい！
+        - text: 正方形
+          feedback: せいかい！
         - text: わかりません
           feedback: 正方形。
       courseC_multi_harvester_loops11_predict1:
@@ -1331,11 +1355,11 @@ ja-JP:
         - text: わかりません
           feedback: さいしょのくりかえしで ３回前にすすむべきところ、２回しかすすんでいません。
       courseD_external_binary1:
-        title: ０か1でもようをかいてみよう
+        title: ０か1で もようを かいてみよう
       courseD_external_binary1_2018:
-        title: ０か1でもようをかいてみよう
+        title: ０か1で もようを かいてみよう
       courseD_external_binary1_2018_2019:
-        title: ０か1でもようをかいてみよう
+        title: ０か1で もようを かいてみよう
       courseD_multi_artist_binary8_predict1:
         questions:
         - text: '"実行（じっこう）"をクリックしたら、どのパターンが かかれるかな？'
@@ -1485,85 +1509,85 @@ ja-JP:
         - text: '"実行（じっこう）"をクリックしたら どうなりますか？プログラムは くりかえしが 入れ子に なっているよ。'
         answers:
         - text: ハチは、１回だけ 前に 進んで ミツを ゲットする。
-          feedback: ふせいかい、ハチは前に進むとミツをとるのくりかえしをくりかえして、すべてのミツをゲットします。
+          feedback: ふせいかい、ハチは前に進むのと ミツをとるのを くりかえして、すべてのミツをゲットします。
         - text: ハチは ミツを ２つゲットする。
-          feedback: ふせいかい、ハチは前に進むとミツをとるのくりかえしをくりかえして、すべてのミツをゲットします。
+          feedback: ふせいかい、ハチは前に進むのと ミツをとるのを くりかえして、すべてのミツをゲットします。
         - text: ハチは すべてのミツを ゲットする。
           feedback: せいかい！
         - text: わかりません
-          feedback: ハチは前に進むとミツをとるのくりかえしをくりかえして、すべてのミツをゲットします。
+          feedback: ハチは前に進むのと ミツをとるのを くりかえして、すべてのミツをゲットします。
       courseD_multi_bee_nestedLoops2_predict1_2018:
         questions:
         - text: '"実行（じっこう）"をクリックしたら どうなりますか？プログラムは くりかえしが 入れ子に なっているよ。'
         answers:
         - text: ハチは、１回だけ 前に 進んで ミツを ゲットする。
-          feedback: ふせいかい、ハチは前に進むとミツをとるのくりかえしをくりかえして、すべてのミツをゲットします。
+          feedback: ふせいかい、ハチは前に進むのと ミツをとるのを くりかえして、すべてのミツをゲットします。
         - text: ハチは ミツを ２つゲットする。
-          feedback: ふせいかい、ハチは前に進むとミツをとるのくりかえしをくりかえして、すべてのミツをゲットします。
+          feedback: ふせいかい、ハチは前に進むのと ミツをとるのを くりかえして、すべてのミツをゲットします。
         - text: ハチは すべてのミツを ゲットする。
           feedback: せいかい！
         - text: わかりません
-          feedback: ハチは前に進むとミツをとるのくりかえしをくりかえして、すべてのミツをゲットします。
+          feedback: ハチは前に進むのと ミツをとるのを くりかえして、すべてのミツをゲットします。
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
         questions:
         - text: '"実行（じっこう）"をクリックしたら どうなりますか？プログラムは くりかえしが 入れ子に なっているよ。'
         answers:
         - text: ハチは、１回だけ 前に 進んで ミツを ゲットする。
-          feedback: ふせいかい、ハチは前に進むとミツをとるのくりかえしをくりかえして、すべてのミツをゲットします。
+          feedback: ふせいかい、ハチは前に進むのと ミツをとるのを くりかえして、すべてのミツをゲットします。
         - text: ハチは ミツを ２つゲットする。
-          feedback: ふせいかい、ハチは前に進むとミツをとるのくりかえしをくりかえして、すべてのミツをゲットします。
+          feedback: ふせいかい、ハチは前に進むのと ミツをとるのを くりかえして、すべてのミツをゲットします。
         - text: ハチは すべてのミツを ゲットする。
           feedback: せいかい！
         - text: わかりません
-          feedback: ハチは前に進むとミツをとるのくりかえしをくりかえして、すべてのミツをゲットします。
+          feedback: ハチは前に進むのと ミツをとるのを くりかえして、すべてのミツをゲットします。
       courseD_multi_bee_nestedLoops9_predict2:
         questions:
         - text: '"実行（じっこう）"をクリックしたら ハチは いくつミツを 集めることが できますか？'
         answers:
-        - feedback: ふせいかい、ハチはくりかえしのなかにある さいしょのくりかえしで ２つ、うしろのくりかえしで ２つ ミツを 集めます。それを２回
+        - feedback: ふせいかい、ハチはくりかえしの中にある さいしょのくりかえしで ２つ、後ろのくりかえしで ２つ ミツを 集めます。それを２回
             くりかえすので、８つ ミツを 集めることができます。
         - feedback: せいかい！
-        - feedback: ふせいかい、ハチはくりかえしのなかにある さいしょのくりかえしで ２つ、うしろのくりかえしで ２つ ミツを 集めます。それを２回
+        - feedback: ふせいかい、ハチはくりかえしの中にある さいしょのくりかえしで ２つ、後ろのくりかえしで ２つ ミツを 集めます。それを２回
             くりかえすので、８つ ミツを 集めることができます。
         - text: わかりません
-          feedback: ハチはくりかえしのなかにある さいしょのくりかえしで ２つ、うしろのくりかえしで ２つ ミツを 集めます。それを２回 くりかえすので、８つ
+          feedback: ハチはくりかえしの中にある さいしょのくりかえしで ２つ、後ろのくりかえしで ２つ ミツを 集めます。それを２回 くりかえすので、８つ
             ミツを 集めることができます。
       courseD_multi_bee_nestedLoops9_predict2_2018:
         questions:
         - text: '"実行（じっこう）"をクリックしたら ハチは いくつミツを 集めることが できますか？'
         answers:
-        - feedback: ふせいかい、ハチはくりかえしのなかにある さいしょのくりかえしで ２つ、うしろのくりかえしで ２つ ミツを 集めます。それを２回
+        - feedback: ふせいかい、ハチはくりかえしの中にある さいしょのくりかえしで ２つ、後ろのくりかえしで ２つ ミツを 集めます。それを２回
             くりかえすので、８つ ミツを 集めることができます。
         - feedback: せいかい！
-        - feedback: ふせいかい、ハチはくりかえしのなかにある さいしょのくりかえしで ２つ、うしろのくりかえしで ２つ ミツを 集めます。それを２回
+        - feedback: ふせいかい、ハチはくりかえしの中にある さいしょのくりかえしで ２つ、後ろのくりかえしで ２つ ミツを 集めます。それを２回
             くりかえすので、８つ ミツを 集めることができます。
         - text: わかりません
-          feedback: ハチはくりかえしのなかにある さいしょのくりかえしで ２つ、うしろのくりかえしで ２つ ミツを 集めます。それを２回 くりかえすので、８つ
+          feedback: ハチはくりかえしの中にある さいしょのくりかえしで ２つ、後ろのくりかえしで ２つ ミツを 集めます。それを２回 くりかえすので、８つ
             ミツを 集めることができます。
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         questions:
         - text: '"実行（じっこう）"をクリックしたら ハチは いくつミツを 集めることが できますか？'
         answers:
-        - feedback: ふせいかい、ハチはくりかえしのなかにある さいしょのくりかえしで ２つ、うしろのくりかえしで ２つ ミツを 集めます。それを２回
+        - feedback: ふせいかい、ハチはくりかえしの中にある さいしょのくりかえしで ２つ、後ろのくりかえしで ２つ ミツを 集めます。それを２回
             くりかえすので、８つ ミツを 集めることができます。
         - feedback: せいかい！
-        - feedback: ふせいかい、ハチはくりかえしのなかにある さいしょのくりかえしで ２つ、うしろのくりかえしで ２つ ミツを 集めます。それを２回
+        - feedback: ふせいかい、ハチはくりかえしの中にある さいしょのくりかえしで ２つ、後ろのくりかえしで ２つ ミツを 集めます。それを２回
             くりかえすので、８つ ミツを 集めることができます。
         - text: わかりません
-          feedback: ハチはくりかえしのなかにある さいしょのくりかえしで ２つ、うしろのくりかえしで ２つ ミツを 集めます。それを２回 くりかえすので、８つ
+          feedback: ハチはくりかえしの中にある さいしょのくりかえしで ２つ、後ろのくりかえしで ２つ ミツを 集めます。それを２回 くりかえすので、８つ
             ミツを 集めることができます。
       courseD_multi_collector_debugging10_predict1:
         questions:
         - text: '"実行（じっこう）"ボタンをクリックしても、たからものを 全部 集めることができないのは どうして？答えをよくみて、回答してね。'
         answers:
-        - text: ローレルはまちがった方向に曲がろうとするから。
+        - text: 曲がる方向がまちがえているから。
           feedback: ふせいかい、まちがっているのは、そこだけじゃないよ。くりかえしの回数も足りないよ。
-        - text: 'たからものを全部集めるには、くりかえしの回数が足りません。 '
+        - text: 'たからものを全部集めるには、くりかえしの回数が足りないから。 '
           feedback: ふせいかい、まちがっているのは、そこだけじゃないよ。曲がる方向もまちがえてるよ。
-        - text: 曲がる方向*と*くりかえしの回数が まちがっているので、たからものを 全部 集めることは できません。
+        - text: 曲がる方向*と*くりかえしの回数が まちがっているから。
           feedback: せいかい！
         - text: わかりません
-          feedback: 曲がる方向*と*くりかえしの回数が まちがっているので、たからものを 全部 集めることは できません。
+          feedback: 曲がる方向*と*くりかえしの回数が まちがっているから。
       courseD_multi_farmer_condLoops9_predict1:
         questions:
         - text: "”実行（じっこう）”をクリックしたら、どうなるかな？"
@@ -1659,7 +1683,7 @@ ja-JP:
           feedback: ふせいかい、農夫は山がなくなるまで、土をかたづけつづけます。
         - text: 農夫はずっと土を かたづけ つづける。
           feedback: ふせいかい、農夫は山がなくなるまで、土をかたづけつづけます。
-        - text: 農夫は山がなくなるまで、土をかたづけつづけます。
+        - text: 農夫は山がなくなるまで、土をかたづけつづける。
           feedback: せいかい！
         - text: わかりません
           feedback: 農夫は山がなくなるまで、土をかたづけつづけます。
@@ -1671,7 +1695,7 @@ ja-JP:
           feedback: ふせいかい、農夫は山がなくなるまで、土をかたづけつづけます。
         - text: 農夫はずっと土を かたづけ つづける。
           feedback: ふせいかい、農夫は山がなくなるまで、土をかたづけつづけます。
-        - text: 農夫は山がなくなるまで、土をかたづけつづけます。
+        - text: 農夫は山がなくなるまで、土をかたづけつづける。
           feedback: せいかい！
         - text: わかりません
           feedback: 農夫は山がなくなるまで、土をかたづけつづけます。
@@ -1683,7 +1707,7 @@ ja-JP:
           feedback: ふせいかい、農夫は山がなくなるまで、土をかたづけつづけます。
         - text: 農夫はずっと土を かたづけ つづける。
           feedback: ふせいかい、農夫は山がなくなるまで、土をかたづけつづけます。
-        - text: 農夫は山がなくなるまで、土をかたづけつづけます。
+        - text: 農夫は山がなくなるまで、土をかたづけつづける。
           feedback: せいかい！
         - text: わかりません
           feedback: 農夫は山がなくなるまで、土をかたづけつづけます。
@@ -1693,7 +1717,7 @@ ja-JP:
         answers:
         - text: ゾンビは すぐに 右に曲がって、動けなくなる。
           feedback: せいかい！
-        - text: ゾンビは、ひまわりまで行くことができる。
+        - text: ゾンビは、ひまわりに たどり着ける。
           feedback: ふせいかい、まっすぐ 行けるかどうか 調べるより *前に* 右に道があるか 調べるので、まちがった方向に行ってしまいます。
         - text: ゾンビは、右に曲がったら、その一角を回りつづける。
           feedback: ふせいかい、ゾンビは、まっすぐか 右に曲がる しかできません。左に曲がれないので、すぐに動けなくなってしまいます。
@@ -1705,7 +1729,7 @@ ja-JP:
         answers:
         - text: ゾンビは行ったり来たりをくり返す。
           feedback: せいかい！
-        - text: ゾンビは、ひまわりまで行くことができる。
+        - text: ゾンビは、ひまわりに たどり着ける。
           feedback: 不正解、ゾンビは行ったり来たりをくり返す。
         - text: ゾンビは、右に曲がったら、その一角を回りつづける。
           feedback: 不正解、ゾンビは行ったり来たりをくり返す。
@@ -1717,7 +1741,7 @@ ja-JP:
         answers:
         - text: ゾンビは行ったり来たりをくり返す。
           feedback: せいかい！
-        - text: ゾンビは、ひまわりまで行くことができる。
+        - text: ゾンビは、ひまわりに たどり着ける。
           feedback: 不正解、ゾンビは行ったり来たりをくり返す。
         - text: ゾンビは、右に曲がったら、その一角を回りつづける。
           feedback: 不正解、ゾンビは行ったり来たりをくり返す。
@@ -1777,7 +1801,7 @@ ja-JP:
             どうなるかな？
         answers:
         - text: 同じプログラムで このパズルも クリアできるよ。
-          feedback: 正解、作るハチミツの量が変わってもだいじょうぶ。関数は量が変わっても うまくいくように 作られています。
+          feedback: 正解、作るハチミツの量が変わっても だいじょうぶ。関数は量が変わっても うまくいくように 作られています。
         - text: ハチミツを全部作ることはできない。
           feedback: 不正解、関数は 0になるまで ハチミツを作るように 作られています。
         - text: ハチミツをたくさん作ろうとする。
@@ -1801,19 +1825,25 @@ ja-JP:
         - text: 農夫は何をしゅうかくするかな？
         answers:
         - text: カボチャを２つしゅうかくする。
+          feedback: 不正解、農夫は道を最後まで行って、曲がって、もと来た道をもどって レタスを しゅうかくします。
         - text: カボチャを全部しゅうかくする。
+          feedback: 不正解、農夫は道を最後まで行って、曲がって、もと来た道をもどって レタスを しゅうかくします。
         - text: レタスをしゅうかくする。
           feedback: せいかい！
         - text: トウモロコシをしゅうかくする。
+          feedback: 不正解、農夫は道を最後まで行って、曲がって、もと来た道をもどって レタスを しゅうかくします。
       courseE_multi_farmer_functions11_predict_2018_2019:
         questions:
         - text: 農夫は何をしゅうかくするかな？
         answers:
         - text: カボチャを２つしゅうかくする。
+          feedback: 不正解、農夫は道を最後まで行って、曲がって、もと来た道をもどって レタスを しゅうかくします。
         - text: カボチャを全部しゅうかくする。
+          feedback: 不正解、農夫は道を最後まで行って、曲がって、もと来た道をもどって レタスを しゅうかくします。
         - text: レタスをしゅうかくする。
           feedback: せいかい！
         - text: トウモロコシをしゅうかくする。
+          feedback: 不正解、農夫は道を最後まで行って、曲がって、もと来た道をもどって レタスを しゅうかくします。
       courseE_prediction_artistFunction1:
         questions:
         - text: '"実行（じっこう）"をクリックしたら、どんな絵が かかれますか？'
@@ -1822,7 +1852,7 @@ ja-JP:
           feedback: 不正解、関数は２度呼び出されます。
         - text: 正方形を１つかく。
           feedback: 不正解、関数は２度呼び出されます。
-        - text: ２つの正方形が重なりあった絵をかく。
+        - text: ２つの正方形が重なった絵をかく。
           feedback: 不正解、正方形の辺の長さは100ピクセルで、次の正方形をかく前に 175ピクセル ジャンプしています。
         - text: すき間を開けて 正方形を ２つかく。
           feedback: 正解、関数は２回呼び出されて、関数と関数の間でジャンプして移動しています。
@@ -1834,7 +1864,7 @@ ja-JP:
           feedback: 不正解、関数は２度呼び出されます。
         - text: 正方形を１つかく。
           feedback: 不正解、関数は２度呼び出されます。
-        - text: ２つの正方形が重なりあった絵をかく。
+        - text: ２つの正方形が重なった絵をかく。
           feedback: 不正解、正方形の辺の長さは100ピクセルで、次の正方形をかく前に 175ピクセル ジャンプしています。
         - text: すき間を開けて 正方形を ２つかく。
           feedback: 正解、関数は２回呼び出されて、関数と関数の間でジャンプして移動しています。
@@ -1846,10 +1876,13 @@ ja-JP:
           feedback: 不正解、関数は２度呼び出されます。
         - text: 正方形を１つかく。
           feedback: 不正解、関数は２度呼び出されます。
-        - text: ２つの正方形が重なりあった絵をかく。
+        - text: ２つの正方形が重なった絵をかく。
           feedback: 不正解、正方形の辺の長さは100ピクセルで、次の正方形をかく前に 175ピクセル ジャンプしています。
         - text: すき間を開けて 正方形を ２つかく。
           feedback: 正解、関数は２回呼び出されて、関数と関数の間でジャンプして移動しています。
+      courseE_project_exemplars_2019:
+        title: Test Markdown Textbook Page
+        content1: Test Markdown Textbook Page
       courseF_bee_variables_8a_2018:
         title: ハチと変数
         questions:
@@ -1889,10 +1922,14 @@ ja-JP:
           style=\"padding-left: 30px; width:300px; float:right;\"/>\n<h3>決まった値を入れておくための変数の学習は順調に進んでいます！
           \n決まった値を入れておくために変数を使うのであれば、値を入れるのは1回です。変数を使えば、\"実行\"して値を変えたくなった時、1か所変えるだけでプログラムの中で**同じ**値を使うことができます。</h3>\n<br/><hr/>\n<h3>次のパートでは、プログラムの中で値が*変わる*変数をプログラムしてみましょう。</h3>\n\n"
       courseF_markdown_algorithms_end:
+        title: Test Markdown Textbook Page
+        content1: Test Markdown Textbook Page
         markdown: "# **\"アルゴリズム\"について 学びましょう！**  \n\n\n\n### **アルゴリズムは、目的を達成するために必要な仕事を書いたリストです**。アルゴリズムのおもしろいところは、1つ1つ仕事を実行したら、どうなるのか考えなければならないところです。\n\n###
           コンピュータ用のアルゴリズムを書くことが、**プログラミング**です。  \n\n---\n\n## **用語**\n\n* ### **アルゴリズム**
           -目的を達成するために必要な仕事を書いたリスト\n\n* ### **プログラミング** - コンピュータで実行できる言語で書かれたアルゴリズム\n"
       courseF_markdown_algorithms_intro:
+        title: Test Markdown Textbook Page
+        content1: Test Markdown Textbook Page
         markdown: |
           # **レッスンの内容**
 
@@ -1910,11 +1947,15 @@ ja-JP:
 
           ![](https://images.code.org/db76d28bb3dbabdb78edb2cf54c6cb11-image-1524678618646.png)
       courseF_markdown_conditionals_end:
+        title: Test Markdown Textbook Page
+        content1: Test Markdown Textbook Page
         markdown: "# **\"条件文\"について 学びましょう！**\n\n### 条件文は、コンピュータの世界では とてもよく使います。ウエブサイトにログインしようとパスワードを入力するときを思い出して。
           ウエブサイトでは条件文を使って、入力されたパスワードが*あっているかどうか*チェックします。\n\n### `もし` パスワードがあっていれば、ログイン！
           \n\n### `そうでなければ`、エラーメッセージを出す。\n\n---\n\n## **用語**\n\n* ### **条件** - 命令を実行するかどうか決めるためのもの\n\n*
           ### **条件文** - ある条件のときだけ、実行されるもの\n\n"
       courseF_markdown_conditionals_intro:
+        title: Test Markdown Textbook Page
+        content1: Test Markdown Textbook Page
         markdown: |+
           # **レッスンの内容...**
 
@@ -1933,6 +1974,8 @@ ja-JP:
 
 
       courseF_markdown_debugging_end:
+        title: Test Markdown Textbook Page
+        content1: Test Markdown Textbook Page
         markdown: |
           # **"デバッグ"について勉強しよう！**
 
@@ -1950,6 +1993,8 @@ ja-JP:
 
           * ### **しんぼう強く** - あきらめないこと
       courseF_markdown_debugging_intro:
+        title: Test Markdown Textbook Page
+        content1: Test Markdown Textbook Page
         markdown: |
           #レッスンの内容
 
@@ -1969,6 +2014,8 @@ ja-JP:
 
           ![](https://images.code.org/db76d28bb3dbabdb78edb2cf54c6cb11-image-1524678618646.png)
       courseF_markdown_forloops_end:
+        title: Test Markdown Textbook Page
+        content1: Test Markdown Textbook Page
         markdown: |+
           # **"まつ"について、学習します！**
 
@@ -1985,6 +2032,8 @@ ja-JP:
           ### **まつ ループ** - ”まつ”は、あらかじめ決めた始めの値、終わりの値、インクリメント（値を変更する間隔）をもつループです。
 
       courseF_markdown_forloops_end_2019:
+        title: Test Markdown Textbook Page
+        content1: Test Markdown Textbook Page
         markdown: |+
           # **"まつ"について、学習します！**
 
@@ -2001,6 +2050,8 @@ ja-JP:
           ### **まつ ループ** - ”まつ”は、あらかじめ決めた始めの値、終わりの値、インクリメント（値を変更する間隔）をもつループです。
 
       courseF_markdown_forloops_intro:
+        title: Test Markdown Textbook Page
+        content1: Test Markdown Textbook Page
         markdown: |+
           # **レッスンの内容...**
 
@@ -2013,6 +2064,8 @@ ja-JP:
           ![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)
 
       courseF_markdown_forloops_intro_2019:
+        title: Test Markdown Textbook Page
+        content1: Test Markdown Textbook Page
         markdown: |+
           # **レッスンの内容...**
 
@@ -2025,15 +2078,21 @@ ja-JP:
           ![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)
 
       courseF_markdown_loops_end:
+        title: Test Markdown Textbook Page
+        content1: Test Markdown Textbook Page
         markdown: "# **\"ループ\"について 学びましょう！**  \n\n### **ループとは、何回も何回も あることを 行うことです。**
           別の言葉で、もう一度行うことをくり返しといいます。\n\n### ループは、あるパターンをくり返すのにとても便利です。はじめに ループを 使わずにプログラムを書いてみて、それから、パターンを見つけます。\n\n###
           パターンが見つかったら、それを`くりかえし`ブロックの中に入れます！\n\n---\n\n## **用語**\n\n* ### **ループ**
           - あることを何回も何回も行うこと\n\n* ### **くり返し** - もう一度行うこと\n"
       courseF_markdown_loops_intro:
+        title: Test Markdown Textbook Page
+        content1: Test Markdown Textbook Page
         markdown: "# レッスンの内容...\n\n### 前に進むの**5**回実施するときを考えてみて。前にすすむのブロックを**5**回 ドラックして持ってくるだけだから
           かんたん だよね。でも**5,000**回の時は、どうかな？ \n\n### **5,000** ブロック、ドラックして持ってくるのに何時間かかる？\n\n###
           もっと かんたんな方法を 知りたくない？ここに あるよ!\n\n---\n\n## 使うブロック\n\n![](https://images.code.org/2d949be303e653f4ea203cc00f0b06c3-image-1524697677509.png)\n"
       courseF_markdown_nestedloops_end:
+        title: Test Markdown Textbook Page
+        content1: Test Markdown Textbook Page
         markdown: |+
           # **"ループの入れ子"について 学びましょう！**
 
@@ -2048,6 +2107,8 @@ ja-JP:
           ### __入れ子のループ__ - ループの中にあるループ
 
       courseF_markdown_nestedloops_intro:
+        title: Test Markdown Textbook Page
+        content1: Test Markdown Textbook Page
         markdown: |
           # レッスンの内容...
 
@@ -2062,12 +2123,18 @@ ja-JP:
 
           ![](https://images.code.org/cecea12a6973648b56512ff0990da6fb-image-1524759116715.gif)
       courseF_markdown_variables_end:
+        title: Test Markdown Textbook Page
+        content1: Test Markdown Textbook Page
         markdown: "# **\"変数\"について、学習しました！**\n\n### 変数を使うには、名前と値が必要です。名前は後から変えることはできませんが、値はいつでも変えることができます。プログラムで値を入れておくための箱にして、変数の名前を使うことができます！
           \n\n---\n\n## **用語**\n\n### **変数** - 変更可能な情報を入れておくための箱\n\n"
       courseF_markdown_variables_end_2019:
+        title: Test Markdown Textbook Page
+        content1: Test Markdown Textbook Page
         markdown: "# **\"変数\"について、学習しました！**\n\n### 変数を使うには、名前と値が必要です。名前は後から変えることはできませんが、値はいつでも変えることができます。プログラムで値を入れておくための箱にして、変数の名前を使うことができます！
           \n\n---\n\n## **用語**\n\n### **変数** - 変更可能な情報を入れておくための箱\n\n"
       courseF_markdown_variables_intro:
+        title: Test Markdown Textbook Page
+        content1: Test Markdown Textbook Page
         markdown: |+
           # **レッスンの内容...**
 
@@ -2082,6 +2149,8 @@ ja-JP:
 
 
       courseF_markdown_variables_intro_2019:
+        title: Test Markdown Textbook Page
+        content1: Test Markdown Textbook Page
         markdown: |+
           # **レッスンの内容...**
 
@@ -2101,9 +2170,9 @@ ja-JP:
         answers:
         - text: アーティストは だんだん太くなっていく 真っすぐな 線を かく。
           feedback: 不正解、 `まつ`のくり返しのなかで 曲がっています。
-        - text: 'だんだん長くて細くなっていく らせん模様を かく '
+        - text: 'だんだん長くて細くなっていく うずまき模様を かく '
           feedback: 不正解、 `まつ`のくり返しのなかでだんだん長くて 太くなっていく 線をかきます。
-        - text: だんだん長くて 太くなっていく らせん模様を かく 。
+        - text: だんだん長くて 太くなっていく うずまき模様を かく 。
           feedback: せいかい！
         - text: わかりません
           feedback: 不正解、 `まつ`のくり返しのなかでだんだん長くて 太くなっていく 線をかきます。
@@ -2113,9 +2182,9 @@ ja-JP:
         answers:
         - text: アーティストは だんだん太くなっていく 真っすぐな 線を かく。
           feedback: 不正解、 `まつ`のくり返しのなかで 曲がっています。
-        - text: 'だんだん長くて細くなっていく らせん模様を かく '
+        - text: 'だんだん長くて細くなっていく うずまき模様を かく '
           feedback: 不正解、 `まつ`のくり返しのなかでだんだん長くて 太くなっていく 線をかきます。
-        - text: だんだん長くて 太くなっていく らせん模様を かく 。
+        - text: だんだん長くて 太くなっていく うずまき模様を かく 。
           feedback: せいかい！
         - text: わかりません
           feedback: 不正解、 `まつ`のくり返しのなかでだんだん長くて 太くなっていく 線をかきます。
@@ -2125,9 +2194,9 @@ ja-JP:
         answers:
         - text: アーティストは だんだん太くなっていく 真っすぐな 線を かく。
           feedback: 不正解、 `まつ`のくり返しのなかで 曲がっています。
-        - text: 'だんだん長くて細くなっていく らせん模様を かく '
+        - text: 'だんだん長くて細くなっていく うずまき模様を かく '
           feedback: 不正解、 `まつ`のくり返しのなかでだんだん長くて 太くなっていく 線をかきます。
-        - text: だんだん長くて 太くなっていく らせん模様を かく 。
+        - text: だんだん長くて 太くなっていく うずまき模様を かく 。
           feedback: せいかい！
         - text: わかりません
           feedback: 不正解、 `まつ`のくり返しのなかでだんだん長くて 太くなっていく 線をかきます。
@@ -2135,14 +2204,14 @@ ja-JP:
         questions:
         - text: プログラムを実行（じっこう）したら、どうなりますか？
         answers:
-        - text: アーティストは同じ関数を使って、ちがう大きさの四角形を2つかく。
+        - text: アーティストは同じ関数を使って、ちがう大きさの正方形を2つかく。
           feedback: せいかい！
-        - text: アーティストは別々の関数を使って、ちがう大きさの四角形を2つかく。
-          feedback: 不正解、パラメータを変えることで 1つの関数で ちがう大きさの四角形をかいています。
-        - text: アーティストは別々の関数を使って、同じ大きさの四角形を2つかく。
-          feedback: 不正解、パラメータを変えることで 1つの関数で ちがう大きさの四角形をかいています。
+        - text: アーティストは別々の関数を使って、ちがう大きさの正方形を2つかく。
+          feedback: 不正解、パラメータを変えることで 1つの関数で ちがう大きさの正方形をかいています。
+        - text: アーティストは別々の関数を使って、同じ大きさの正方形を2つかく。
+          feedback: 不正解、パラメータを変えることで 1つの関数で ちがう大きさの正方形をかいています。
         - text: わかりません
-          feedback: パラメータを変えることで 1つの関数で ちがう大きさの四角形を2つ かいています。
+          feedback: パラメータを変えることで 1つの関数で ちがう大きさの正方形を2つ かいています。
       courseF_multi_artist_variables3a_predict1:
         questions:
         - text: 変数 "length"に50をセットしました。"実行（じっこう）"をクリックしたら どうなるかな？
@@ -2154,7 +2223,7 @@ ja-JP:
         - text: 50度曲がった線を3本かく
           feedback: 不正解、変数`length`は、`まがる`角度ではありません。
         - text: わかりません
-          feedback: 変数`length`に50をセットして `動く 前に`で使ているので、アーティストは一辺が50ピクセルの三角形をかきます。
+          feedback: "`動く 前に`の前で 変数`length`に50をセットしているので、アーティストは 一辺が 50ピクセルの三角形をかきます。"
       courseF_multi_artist_variables3a_predict1_2018:
         questions:
         - text: 変数 "length"に50をセットしました。"実行（じっこう）"をクリックしたら どうなるかな？
@@ -2166,7 +2235,7 @@ ja-JP:
         - text: 50度曲がった線を3本かく
           feedback: 不正解、変数`length`は、`まがる`角度ではありません。
         - text: わかりません
-          feedback: 変数`length`に50をセットして `動く 前に`で使ているので、アーティストは一辺が50ピクセルの三角形をかきます。
+          feedback: "`動く 前に`の前で 変数`length`に50をセットしているので、アーティストは 一辺が 50ピクセルの三角形をかきます。"
       courseF_multi_artist_variables3a_predict1_2018_2019:
         questions:
         - text: 変数 "length"に50をセットしました。"実行（じっこう）"をクリックしたら どうなるかな？
@@ -2178,7 +2247,7 @@ ja-JP:
         - text: 50度曲がった線を3本かく
           feedback: 不正解、変数`length`は、`まがる`角度ではありません。
         - text: わかりません
-          feedback: 変数`length`に50をセットして `動く 前に`で使ているので、アーティストは一辺が50ピクセルの三角形をかきます。
+          feedback: "`動く 前に`の前で 変数`length`に50をセットしているので、アーティストは 一辺が 50ピクセルの三角形をかきます。"
       courseF_multi_bee_conditionals1_predict1:
         questions:
         - text: 花がなければハチは何もしません。プログラムを実行（じっこう）したら、どうなりますか？
@@ -2243,9 +2312,9 @@ ja-JP:
         questions:
         - text: プログラムを実行（じっこう）したら、どうなりますか？
         answers:
-        - text: ハチは、ミツやハチミツを集めない。
+        - text: ハチは、ミツもハチミツも集めない。
           feedback: 不正解、関数はパラメータにセットした数だけ、ミツかハチミツを集めます。
-        - text: 'ハチは階段状に動いて、最初に3つ、次に2つのミツかハチミツを集めます。 '
+        - text: 'ハチは階段状に動いて、最初に3つ、次に2つのミツかハチミツを集める。 '
           feedback: 不正解、関数はパラメータにセットした数だけ、ミツかハチミツを集めます。
         - text: '1回のくり返しでミツかハチミツを1つ集める。 '
           feedback: 不正解、関数はパラメータにセットした数だけ、ミツかハチミツを集めます。
@@ -2263,13 +2332,16 @@ ja-JP:
           feedback: 不正解、 `つなげる`を使えば、かいぞくのことばと質問の答えをつなげることができます。
         - text: わかりません
           feedback: '不正解、`つなげる`を使えば、かいぞくのことばに質問の答え（Ali）をつなげることができます。 '
+      courseF_project_exemplars_2019:
+        title: Test Markdown Textbook Page
+        content1: Test Markdown Textbook Page
       coursee_prediction_artistfunction2:
         questions:
         - text: '"実行（じっこう）"をクリックしたら、どんな絵が かかれますか？'
         answers:
         - text: アーティストは、ちゃんと絵をかいて、パズルをクリアする。
-          feedback: 不正解、くり返しの中で使うのは、関数"多角形の列をかく"ではなく 関数"多角形をかく" です。
-        - text: アーティストは４つ正方形でできた まど をかく。
+          feedback: 不正解、くり返しの中で呼ばれているのは、関数"多角形の列をかく"ではなく 関数"多角形をかく" です。
+        - text: アーティストは４つの正方形でできた まど をかく。
           feedback: せいかい！
         - text: アーティストは、一番上の列だけかく。
           feedback: 不正解、プログラムの中で関数"多角形の列をかく"を呼んでいません。
@@ -2280,8 +2352,8 @@ ja-JP:
         - text: '"実行（じっこう）"をクリックしたら、どんな絵が かかれますか？'
         answers:
         - text: アーティストは、ちゃんと絵をかいて、パズルをクリアする。
-          feedback: 不正解、くり返しの中で使うのは、関数"多角形の列をかく"ではなく 関数"多角形をかく" です。
-        - text: アーティストは４つ正方形でできた まど をかく。
+          feedback: 不正解、くり返しの中で呼ばれているのは、関数"多角形の列をかく"ではなく 関数"多角形をかく" です。
+        - text: アーティストは４つの正方形でできた まど をかく。
           feedback: せいかい！
         - text: アーティストは、一番上の列だけかく。
           feedback: 不正解、プログラムの中で関数"多角形の列をかく"を呼んでいません。
@@ -2292,8 +2364,8 @@ ja-JP:
         - text: '"実行（じっこう）"をクリックしたら、どんな絵が かかれますか？'
         answers:
         - text: アーティストは、ちゃんと絵をかいて、パズルをクリアする。
-          feedback: 不正解、くり返しの中で使うのは、関数"多角形の列をかく"ではなく 関数"多角形をかく" です。
-        - text: アーティストは４つ正方形でできた まど をかく。
+          feedback: 不正解、くり返しの中で呼ばれているのは、関数"多角形の列をかく"ではなく 関数"多角形をかく" です。
+        - text: アーティストは４つの正方形でできた まど をかく。
           feedback: せいかい！
         - text: アーティストは、一番上の列だけかく。
           feedback: 不正解、プログラムの中で関数"多角形の列をかく"を呼んでいません。
@@ -2313,7 +2385,7 @@ ja-JP:
           feedback: ローレルは たからものが ないところで たからものを あつめようとする。
       grade2_multi_collector_A_predict1_2018:
         questions:
-        - {}
+        - text: プログラムを 実行したら どうなりますか？
         answers:
         - text: ４つ
           feedback: ふせいかい。ローレルは たからものが ないところで たからものを あつめようとします。
@@ -2325,7 +2397,7 @@ ja-JP:
           feedback: ローレルは たからものが ないところで たからものを あつめようとする。
       grade2_multi_collector_A_predict1_2018_2019:
         questions:
-        - {}
+        - text: プログラムを 実行したら どうなりますか？
         answers:
         - text: ４つ
           feedback: ふせいかい。ローレルは たからものが ないところで たからものを あつめようとします。

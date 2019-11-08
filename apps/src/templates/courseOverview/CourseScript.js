@@ -190,7 +190,8 @@ export default connect(
     sectionsForDropdown: sectionsForDropdown(
       state.teacherSections,
       ownProps.id,
-      ownProps.courseId
+      ownProps.courseId,
+      true
     ),
     hiddenStageState: state.hiddenStage,
     hasNoSections:
