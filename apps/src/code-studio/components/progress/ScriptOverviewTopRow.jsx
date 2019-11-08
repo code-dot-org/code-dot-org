@@ -13,6 +13,7 @@ import {
 } from '@cdo/apps/templates/courseOverview/resourceType';
 import experiments from '@cdo/apps/util/experiments';
 import SectionAssigner from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
+import Assigned from '@cdo/apps/templates/Assigned';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
@@ -57,6 +58,7 @@ class ScriptOverviewTopRow extends React.Component {
     ).isRequired,
     sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
     selectedSectionId: PropTypes.number,
+    assignedSectionId: PropTypes.number,
     currentCourseId: PropTypes.number,
     professionalLearningCourse: PropTypes.bool,
     scriptProgress: PropTypes.oneOf([NOT_STARTED, IN_PROGRESS, COMPLETED]),
@@ -83,7 +85,8 @@ class ScriptOverviewTopRow extends React.Component {
       viewAs,
       isRtl,
       resources,
-      showAssignButton
+      showAssignButton,
+      assignedSectionId
     } = this.props;
 
     return (
@@ -102,6 +105,7 @@ class ScriptOverviewTopRow extends React.Component {
               size={Button.ButtonSize.large}
               style={{marginLeft: 10}}
             />
+            {assignedSectionId && <Assigned />}
           </div>
         )}
         {!professionalLearningCourse &&
