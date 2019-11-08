@@ -1,4 +1,3 @@
-import * as mobilenetModule from '@tensorflow-models/mobilenet';
 import * as tf from '@tensorflow/tfjs';
 import * as knnClassifier from '@tensorflow-models/knn-classifier';
 
@@ -9,7 +8,7 @@ export default class SimpleTrainer {
   }
 
   /**
-   * @param {Array<number>} KNN data
+   * @param {Object} training data point
    * @param {number} classId
    */
   addTrainingExample(example, classId) {

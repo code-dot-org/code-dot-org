@@ -90,7 +90,7 @@ export const filterOcean = async (ocean, trainer) => {
   ocean.forEach((fish, idx) => {
     if (!fish.getResult()) {
       predictionPromises.push(
-        trainer.predictFromTensor(fish.getTensor()).then(res => {
+        trainer.predict(fish).then(res => {
           fish.setResult(res);
         })
       );
