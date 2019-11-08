@@ -1,5 +1,5 @@
 - content_for(:head) do
-  %script{src: minifiable_asset_path('js/levels/editors/_grid.js')}
+  %script{src: webpack_asset_path('js/levels/editors/_grid.js')}
 
 = hidden_field_tag :size, 8
 = f.hidden_field :maze_data
