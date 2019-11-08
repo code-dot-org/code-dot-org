@@ -249,26 +249,27 @@ function bestResultLevelId(levelIds, progressData) {
   return bestId;
 }
 
+export const getLevelProgress = level => {
+  return {status: getLevelResult(level), timeSpent: level.time_spent};
+};
+
 /**
  * Given a level that we get from the server using either /api/user_progress or
  * /dashboardapi/section_level_progress, extracts the result, appropriately
  * discerning a locked/submitted result for certain levels.
  */
-export const getLevelResult = level => {
+const getLevelResult = level => {
   if (level.status === LevelStatus.locked) {
-    return {status: TestResults.LOCKED_RESULT, timeSpent: level.time_spent};
+    return TestResults.LOCKED_RESULT;
   }
   if (level.readonly_answers) {
-    return {
-      status: TestResults.READONLY_SUBMISSION_RESULT,
-      timeSpent: level.time_spent
-    };
+    return TestResults.READONLY_SUBMISSION_RESULT;
   }
   if (level.submitted) {
-    return {status: TestResults.SUBMITTED_RESULT, timeSpent: level.time_spent};
+    return TestResults.SUBMITTED_RESULT;
   }
 
-  return {status: level.result, timeSpent: level.time_spent};
+  return level.result;
 };
 
 /**
@@ -348,7 +349,7 @@ const userProgressFromServer = (state, dispatch, userId = null) => {
 
     // Merge progress from server
     if (data.levels) {
-      const levelProgress = _.mapValues(data.levels, getLevelResult);
+      const levelProgress = _.mapValues(data.levels, getLevelProgress);
       dispatch(mergeProgress(levelProgress));
 
       if (data.peerReviewsPerformed) {

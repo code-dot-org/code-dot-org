@@ -1,5 +1,5 @@
 import {
-  getLevelResult,
+  getLevelProgress,
   levelsByLesson
 } from '@cdo/apps/code-studio/progressRedux';
 import {processedLevel} from '@cdo/apps/templates/progress/progressHelpers';
@@ -395,7 +395,7 @@ export function getStudentPairing(dataByStudent) {
 }
 
 export function getStudentLevelResult(dataByStudent) {
-  return getInfoByStudentByLevel(dataByStudent, getLevelResult);
+  return getInfoByStudentByLevel(dataByStudent, getLevelProgress);
 }
 
 function getInfoByStudentByLevel(dataByStudent, infoFromLevelData) {
