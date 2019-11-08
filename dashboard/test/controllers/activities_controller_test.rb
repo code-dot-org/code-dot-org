@@ -148,25 +148,88 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "milestone creates new ValidatedUserLevel if none existed" do
+  test "milestone does not create ValidatedUserLevel if not a CSF script" do
+    @level = create(:level, :blockly, :with_ideal_level_source)
+    @script = create(:script)
+    @script.update(curriculum_umbrella: 'CSD')
+    @script_level = create(:script_level, levels: [@level], script: @script)
+
     params = @milestone_params
+    params[:script_level_id] = @script_level.id
+    assert_does_not_create(ValidatedUserLevel) do
+      post :milestone, params: @milestone_params
+    end
 
-    post :milestone, params: params
     assert_response :success
+  end
 
+  test "milestone does not create ValidatedUserLevel if not a validated level" do
+    @level = create(:level, :blockly) # No ideal source for level
+    @script = create(:script)
+    @script.update(curriculum_umbrella: 'CSF')
+    @script_level = create(:script_level, levels: [@level], script: @script)
+
+    params = @milestone_params
+    params[:script_level_id] = @script_level.id
+    assert_does_not_create(ValidatedUserLevel) do
+      post :milestone, params: @milestone_params
+    end
+
+    assert_response :success
+  end
+
+  test "milestone does not create ValidatedUserLevel if level is a free play level" do
+    @level = create :artist
+    @level.solution_blocks = '<xml></xml>'
+    @level.free_play = 'true'
+    @script = create(:script)
+    @script.update(curriculum_umbrella: 'CSF')
+    @script_level = create(:script_level, levels: [@level], script: @script)
+
+    params = @milestone_params
+    params[:script_level_id] = @script_level.id
+    assert_does_not_create(ValidatedUserLevel) do
+      post :milestone, params: @milestone_params
+    end
+
+    assert_response :success
+  end
+
+  test "milestone creates new ValidatedUserLevel if none existed" do
+    @level = create(:level, :blockly, :with_ideal_level_source)
+    @script = create(:script)
+    @script.update(curriculum_umbrella: 'CSF')
+    @script_level = create(:script_level, levels: [@level], script: @script)
+
+    params = @milestone_params
+    params[:script_level_id] = @script_level.id
+
+    assert_creates(UserLevel, ValidatedUserLevel) do
+      post :milestone, params: @milestone_params
+    end
+
+    assert_response :success
     assert_equal UserLevel.last.id, ValidatedUserLevel.last.user_level_id
     assert_equal params[:timeSinceLastMilestone].to_i, ValidatedUserLevel.last.time_spent
   end
 
   test "milestone updates existing ValidatedUserLevel" do
+    @level = create(:level, :blockly, :with_ideal_level_source)
+    @script = create(:script)
+    @script.update(curriculum_umbrella: 'CSF')
+    @script_level = create(:script_level, levels: [@level], script: @script)
+
     params = @milestone_params
+    params[:script_level_id] = @script_level.id
 
     user_level = UserLevel.create(level: @script_level.level, user: @user, script: @script_level.script)
     validated_user_level = ValidatedUserLevel.create(user_level_id: user_level.id, time_spent: 1000)
 
-    post :milestone, params: @milestone_params
-    assert_response :success
+    assert_does_not_create(UserLevel, ValidatedUserLevel) do
+      post :milestone, params: @milestone_params
+    end
 
+    assert_response :success
     assert_equal validated_user_level.time_spent + params[:timeSinceLastMilestone].to_i, ValidatedUserLevel.find_by(user_level_id: user_level.id).time_spent
   end
 

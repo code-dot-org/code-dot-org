@@ -195,7 +195,7 @@ class ActivitiesController < ApplicationController
     end
 
     is_csf_course = @script_level.try(:script).try(:curriculum_umbrella) == 'CSF'
-    is_free_play = @level.try(:free_play).to_bool || false
+    is_free_play = @level.try(:free_play) ? @level.try(:free_play).to_bool : false
     is_validated_level = Level::TYPES_WITH_IDEAL_LEVEL_SOURCE.include?(@level.type) && @level.try(:ideal_level_source)
     if is_csf_course && is_validated_level && !is_free_play
       record_time_spent(@user_level)
