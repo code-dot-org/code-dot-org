@@ -18,7 +18,7 @@ const predictAllFish = state => {
   return new Promise(resolve => {
     let fishWithConfidence = [];
     state.fishData.map((fish, index) => {
-      state.trainer.predictFromTensor(fish.getTensor()).then(res => {
+      state.trainer.predict(fish).then(res => {
         if (res.predictedClassId === ClassType.Like) {
           fish.setResult(res);
           fishWithConfidence.push(fish);

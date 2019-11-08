@@ -6907,6 +6907,10 @@ supports-hyperlinks@^1.0.1:
     has-flag "^2.0.0"
     supports-color "^5.0.0"
 
+svm@uponthesun/svmjs:
+  version "0.1.0"
+  resolved "https://codeload.github.com/uponthesun/svmjs/tar.gz/c58634881d214c854cd2a5bef1b4efd14a8997f8"
+
 symbol-tree@^3.2.1:
   version "3.2.4"
   resolved "https://registry.yarnpkg.com/symbol-tree/-/symbol-tree-3.2.4.tgz#430637d248ba77e078883951fb9aa0eed7c63fa2"

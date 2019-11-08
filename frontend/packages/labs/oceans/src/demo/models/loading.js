@@ -21,8 +21,7 @@ export const init = async () => {
   ].includes(appModeBase);
 
   if (appModeBase === AppMode.CreaturesVTrashDemo) {
-    const trainer = new SimpleTrainer();
-    trainer.initializeClassifiersWithoutMobilenet();
+    const trainer = new SimpleTrainer(oceanObj => oceanObj.getTensor());
     setState({trainer, word: 'fish'});
   }
 
