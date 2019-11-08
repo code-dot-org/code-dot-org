@@ -105,7 +105,8 @@ class ScriptOverviewTopRow extends React.Component {
               size={Button.ButtonSize.large}
               style={{marginLeft: 10}}
             />
-            {assignedSectionId && <Assigned />}
+            {experiments.isEnabled(experiments.ASSIGNMENT_UPDATES) &&
+              assignedSectionId && <Assigned />}
           </div>
         )}
         {!professionalLearningCourse &&
