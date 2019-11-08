@@ -3,7 +3,7 @@ skip_dialog true
 markdown <<MARKDOWN
 # Unplugged Lesson: The Big Event
 
-> An **event** is an action that causes something to happen.
+> An **event** is a line of code that tells your computer to "listen" for something to happen, then take an action. For example, on web pages, you often can display a drop down menu when you roll over the navigation bar with your mouse. The "mouse rollover" is an event that triggers an action.
 
 ***
 ## **1. Review "[The Big Event](https://curriculum.code.org/csf-19/coursec/14/)" Lesson Plan from Course C.**
