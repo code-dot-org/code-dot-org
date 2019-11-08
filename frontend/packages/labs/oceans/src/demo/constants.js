@@ -7,6 +7,14 @@ const constants = {
 
 export default constants;
 
+export const AppMode = Object.freeze({
+  FishVTrash: 'fishvtrash',
+  CreaturesVTrashDemo: 'creaturesvtrashdemo',
+  CreaturesVTrash: 'creaturesvtrash',
+  FishShort: 'short',
+  FishLong: 'long'
+});
+
 export const Modes = Object.freeze({
   Loading: 0,
   Words: 1,
