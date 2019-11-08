@@ -10,7 +10,7 @@ export const init = () => {
 
   let trainer = state.trainer;
   if (!trainer) {
-    if (state.appMode === AppMode.FishLong) {
+    if ([AppMode.FishShort, AppMode.FishLong].includes(state.appMode)) {
       trainer = new SVMTrainer(fish => fish.getKnnData());
     } else {
       trainer = new SimpleTrainer(oceanObj => oceanObj.getTensor());
