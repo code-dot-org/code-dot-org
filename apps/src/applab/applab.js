@@ -1282,9 +1282,7 @@ Applab.execute = function() {
 
 Applab.beginVisualizationRun = function() {
   // Call change screen on the default screen to ensure it has focus
-  var defaultScreenId = Applab.getScreens()
-    .first()
-    .attr('id');
+  var defaultScreenId = Applab.getScreens()[0].id;
   Applab.changeScreen(defaultScreenId);
 
   Applab.running = true;
@@ -1725,11 +1723,10 @@ Applab.getIdDropdownForCurrentScreenFromDom_ = function(documentRoot) {
  * @returns {HTMLElement} The first "screen" that isn't hidden.
  */
 Applab.activeScreen = function() {
-  return Applab.getScreens()
-    .filter(function() {
-      return this.style.display !== 'none';
-    })
-    .first()[0];
+  let screens = Applab.getScreens();
+  return [...screens].filter(screen => {
+    return screen.style.display !== 'none';
+  })[0];
 };
 
 /**
@@ -1738,11 +1735,12 @@ Applab.activeScreen = function() {
  * focuses the screen.
  */
 Applab.changeScreen = function(screenId) {
-  Applab.getScreens().each(function() {
-    $(this).toggle(this.id === screenId);
-    if (this.id === screenId) {
+  let screens = Applab.getScreens();
+  [...screens].forEach(screen => {
+    toggleElement(screen, this.id === screenId);
+    if (screen.id === screenId) {
       // Allow the active screen to receive keyboard events.
-      this.focus();
+      screen.focus();
     }
   });
 
@@ -1755,8 +1753,9 @@ Applab.changeScreen = function(screenId) {
   }
 };
 
+// Returns a static NodeList of all screen elements
 Applab.getScreens = function() {
-  return $('#divApplab > .screen');
+  return document.querySelectorAll('#divApplab > .screen');
 };
 
 // Wrap design mode function so that we can call from commands
@@ -1772,3 +1771,17 @@ Applab.readProperty = function(element, property) {
 Applab.getAppReducers = function() {
   return reducers;
 };
+
+function toggleElement(element, toDisplay) {
+  // if no value supplied, just toggle the element visibility
+  if (toDisplay === undefined) {
+    if (element.style.display === '' || element.style.display === 'block') {
+      element.style.display = 'none';
+    } else {
+      element.style.display = 'block';
+    }
+  } else {
+    // Set visibility depending on requested display value
+    element.style.display = toDisplay ? 'block' : 'none';
+  }
+}
