@@ -1,4 +1,4 @@
-const {initFishData, fishData, MouthExpression} = require('../../src/utils/fishData');
+const {initFishData, fishData, MouthExpression, BodyShape} = require('../../src/utils/fishData');
 const {generateOcean, filterOcean} = require('../../src/utils/generateOcean');
 const SimpleTrainer = require('../../src/utils/SimpleTrainer');
 const SVMTrainer = require('../../src/utils/SVMTrainer');
@@ -125,20 +125,52 @@ describe('Model quality test', () => {
     initFishData();
   });
 
-  test('Round fish quality test', async () => {
-    const roundFishFn = (fish) => fish.body.knnData[1] === 0 ? 1 : 0;
+  test('Color test', async () => {
     const trainSize = TRAIN_SIZE;
 
-    console.log('Round fish test');
-    const result = await performTrials({
-      numTrials: NUM_TRIALS,
-      trainSize: trainSize,
-      testSize: 100,
-      labelFn: roundFishFn
-    });
-    analyzeConfusionMatrix(trainSize, result);
+    const idsByColor = {
+      red: [2, 5],
+      green: [3, 4],
+      blue: [0, 6]
+    };
+
+    for (const [color, ids] of Object.entries(idsByColor)) {
+      console.log(`${color}`);
+      const labelFn = (fish) => ids.includes(fish.colorPalette.index) ? 1 : 0;
+      const result = await performTrials({
+        numTrials: NUM_TRIALS,
+        trainSize: trainSize,
+        testSize: 100,
+        labelFn: labelFn
+      });
+      analyzeConfusionMatrix(trainSize, result);
+      expect(result.precision).toBeGreaterThanOrEqual(0.9);
+      expect(result.recall).toBeGreaterThanOrEqual(0.6);
+    }
   });
 
+  test('Body shape test', async () => {
+    const partKey = PartKey.BODY;
+    const knnDataIndex = 1;
+    const attribute = BodyShape;
+    const trainSize = TRAIN_SIZE;
+
+    for (const [shape, id] of Object.entries(attribute)) {
+      console.log(`${shape}`);
+      const normalizedId = (1.0 * id) / (Object.keys(attribute).length - 1);
+      const labelFn = (fish) => floatEquals(fish[partKey].knnData[knnDataIndex], normalizedId) ? 1 : 0;
+
+      const result = await performTrials({
+        numTrials: NUM_TRIALS,
+        trainSize: trainSize,
+        testSize: 100,
+        labelFn: labelFn
+      });
+      analyzeConfusionMatrix(trainSize, result);
+      expect(result.precision).toBeGreaterThanOrEqual(0.9);
+      expect(result.recall).toBeGreaterThanOrEqual(0.6);
+    }
+  });
 
   test('test eyes', async () => {
     const partData = fishData.eyes;
@@ -159,7 +191,6 @@ describe('Model quality test', () => {
     }
   });
 
-
   test('test mouths', async () => {
     const partData = fishData.mouths;
     const partKey = PartKey.MOUTH;    
@@ -178,7 +209,6 @@ describe('Model quality test', () => {
       analyzeConfusionMatrix(trainSize, result);
     }
   });
-
 
   test('test tails', async () => {
     const partData = fishData.tails;
@@ -202,7 +232,6 @@ describe('Model quality test', () => {
     }
   });
 
-
   test('test mouth expressions', async () => {
     const partKey = PartKey.MOUTH;
     const knnDataIndex = 2;
@@ -223,7 +252,6 @@ describe('Model quality test', () => {
     }
   });
 
-
   test('test shark teeth', async () => {
     const partData = fishData.mouths;
     const partKey = PartKey.MOUTH;
@@ -242,5 +270,4 @@ describe('Model quality test', () => {
     });
     analyzeConfusionMatrix(trainSize, result);
   });
-
 });

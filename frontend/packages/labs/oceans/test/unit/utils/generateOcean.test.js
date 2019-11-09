@@ -38,59 +38,6 @@ describe('Generate ocean test', () => {
     expect(predictedOcean.length).toEqual(numFish);
   });
 
-  test('Can predict red fish when only picking red fish', async () => {
-    const numPredictionFish = 2000;
-    const trainingOcean = generateOcean(50);
-    const trainer = new SimpleTrainer(fish => fish.getTensor());
-    trainingOcean.forEach(fish => {
-      trainer.addTrainingExample(
-        fish,
-        fish.getColorPalette().bodyRgb[0] > 200 ? 1 : 0
-      );
-    });
-    const predictedOcean = await filterOcean(
-      generateOcean(numPredictionFish),
-      trainer
-    );
-    const likedFish = predictedOcean.filter(fish => {
-      return fish.result.predictedClassId === 1;
-    });
-    var numRedFish = 0;
-    likedFish.forEach(fish => {
-      if (fish.getColorPalette().bodyRgb[0] > 200) {
-        numRedFish++;
-      }
-    });
-    expect(predictedOcean.length).toEqual(numPredictionFish);
-    expect((1.0 * numRedFish) / likedFish.length).toBeGreaterThanOrEqual(0.7);
-  });
-
-  test('Can predict round fish when only picking round fish', async () => {
-    const numPredictionFish = 2000;
-    const trainingOcean = generateOcean(50);
-    const trainer = new SimpleTrainer(fish => fish.getTensor());
-    trainer.setTopK(5);
-    trainingOcean.forEach(fish => {
-      const cat = fish.getKnnData()[1] === 0 ? 1 : 0;
-      trainer.addTrainingExample(fish, cat);
-    });
-    const predictedOcean = await filterOcean(
-      generateOcean(numPredictionFish),
-      trainer
-    );
-    const likedFish = predictedOcean.filter(fish => {
-      return fish.result.predictedClassId === 1;
-    });
-    var numRoundFish = 0;
-    likedFish.forEach(fish => {
-      if (fish.getKnnData()[1] === 0) {
-        numRoundFish++;
-      }
-    });
-    expect(predictedOcean.length).toEqual(numPredictionFish);
-    expect((1.0 * numRoundFish) / likedFish.length).toBeGreaterThanOrEqual(0.7);
-  });
-
   test('Eye variations are evenly distributed', async () => {
     const oceanSize = 50;
     const trainingOcean = generateOcean(oceanSize);

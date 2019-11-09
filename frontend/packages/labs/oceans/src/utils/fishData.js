@@ -128,7 +128,7 @@ export const MouthExpression = Object.freeze({
   FROWN: 2
 });
 
-const BodyShape = Object.freeze({
+export const BodyShape = Object.freeze({
   CIRCLE: 0,
   OVAL: 1,
   TRIANGLE: 2,
