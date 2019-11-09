@@ -13,7 +13,7 @@ const guides = [
     id: 'fishvtrash-training-init2',
     text: 'Use these two buttons to train A.I.',
     when: {appMode: AppMode.FishVTrash, currentMode: Modes.Training},
-    style: 'BottomMiddle'
+    style: 'BottomMiddleButtons'
   },
   {
     id: 'fishvtrash-training-done',
@@ -38,7 +38,7 @@ const guides = [
         return state.yesCount + state.noCount >= 5;
       }
     },
-    style: 'BottomMiddle',
+    style: 'BottomMiddleButtons',
     hideBackground: true
   },
   {
@@ -138,7 +138,7 @@ const guides = [
     id: 'creaturesvtrash-training-init',
     text: 'Let’s train A.I. again!',
     when: {appMode: AppMode.CreaturesVTrash, currentMode: Modes.Training},
-    style: 'BottomMiddle'
+    style: 'BottomMiddleButtons'
   },
   {
     id: 'creaturesvtrash-training-keeptraining',

@@ -166,6 +166,7 @@ const styles = {
     height: 38
   },
   pondText: {
+    display: 'none',
     position: 'absolute',
     bottom: 10,
     left: '50%',
@@ -213,6 +214,7 @@ const styles = {
     marginLeft: -18
   },
   bubble: {
+    display: 'none',
     position: 'absolute',
     backgroundColor: colors.transparentBlack,
     color: colors.white,
@@ -275,6 +277,11 @@ const styles = {
     left: '5%'
   },
   guideBottomMiddle: {
+    bottom: '10%',
+    left: '50%',
+    transform: 'translateX(-50%)'
+  },
+  guideBottomMiddleButtons: {
     bottom: '30%',
     left: '50%',
     transform: 'translateX(-50%)'
