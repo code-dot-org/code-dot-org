@@ -23,7 +23,8 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'center',
     fontSize: 28,
-    lineHeight: '52px'
+    lineHeight: '52px',
+    display: 'none'
   },
   body: {
     position: 'relative',
@@ -233,10 +234,12 @@ const styles = {
   },
   guide: {
     position: 'absolute',
-    backgroundColor: colors.darkBlue,
+    backgroundColor: colors.black,
+    color: colors.white,
     padding: 15,
     color: 'white',
-    textAlign: 'center'
+    textAlign: 'center',
+    lineHeight: '140%'
   },
   guideBackground: {
     backgroundColor: 'rgba(0,0,0,0.3)',
@@ -263,7 +266,7 @@ const styles = {
     position: 'absolute',
     pointerEvents: 'none',
     borderColor: 'none',
-    borderTopColor: colors.darkBlue,
+    borderTopColor: colors.black,
     borderWidth: 30,
     marginLeft: -30
   },
@@ -272,13 +275,18 @@ const styles = {
     left: '5%'
   },
   guideBottomMiddle: {
-    bottom: '25%',
+    bottom: '30%',
     left: '50%',
     transform: 'translateX(-50%)'
   },
   guideBottomRight: {
     bottom: '25%',
     right: '5%'
+  },
+  guideBottomRightNarrow: {
+    bottom: '25%',
+    right: '2%',
+    maxWidth: '25%'
   },
   guideButton: {
     padding: 5,
@@ -362,7 +370,7 @@ let Button = class Button extends React.Component {
       <button
         type="button"
         style={[styles.button, this.props.style]}
-        onClick={(event) => this.onClick(event)}
+        onClick={event => this.onClick(event)}
       >
         {this.props.children}
       </button>
@@ -908,12 +916,17 @@ class Guide extends React.Component {
             <div
               style={{...styles.guide, ...styles[`guide${currentGuide.style}`]}}
             >
-              <Typist cursor={{show: false}} onTypingDone={this.onShowing}>
+              <Typist
+                avgTypingDelay={35}
+                stdTypingDelay={15}
+                cursor={{show: false}}
+                onTypingDone={this.onShowing}
+              >
                 {currentGuide.textFn
                   ? currentGuide.textFn(getState())
                   : currentGuide.text}
               </Typist>
-              {getState().guideShowing && (
+              {getState().guideShowing && currentGuide.arrow !== 'none' && (
                 <div>
                   <div style={styles.guideArrow}> </div>
                 </div>
