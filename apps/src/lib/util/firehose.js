@@ -358,6 +358,9 @@ function getSingleton() {
           new Promise(resolve => resolve(new FirehoseClient(AWS, Firehose)))
       )
       .catch(() => {
+        // If the import() network request failed, make it look like we never
+        // requested the singleton object before so that the next call to
+        // firehose will try the import() call again.
         promise = null;
       });
   }
